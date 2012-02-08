@@ -1,0 +1,142 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="description" content="Clanpage using webSPELL 4 CMS" />
+	<meta name="author" content="webspell.org" />
+	<meta name="keywords" content="webspell, webspell4, clan, cms" />
+	<meta name="copyright" content="Copyright &copy; 2005 - 2011 by webspell.org" />
+	<meta name="generator" content="webSPELL" />
+
+<!-- Head & Title include -->
+	<title>Clanwars</title>
+	<link href="_stylesheet.css" rel="stylesheet" type="text/css" />
+	<script src="js/bbcode.js" language="jscript" type="text/javascript"></script>
+<!-- end Head & Title include -->
+</head>
+<body>
+<script language="JavaScript" type="text/javascript">
+<!--
+function chkFormular() {
+	if(!validbbcode(document.getElementById('message').value)){
+		return false;
+	}
+	squad_box = document.getElementById("squad");
+	if(squad_box.options.length){
+		if(squad_box.options[squad_box.selectedIndex].value== ""){
+			return false;
+		}
+	}
+	else{
+		return false;
+	}
+}
+-->
+</script>
+<form action="clanwars.php?action=saveedit" method="post" name="post" onsubmit="return chkFormular();">
+<table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="$border">
+  <tr>
+    <td class="title" align="center" bgcolor="$bghead">%edit_clanwar%</td>
+  </tr>
+  <tr><td bgcolor="$pagebg"></td></tr>
+  <tr>
+    <td bgcolor="$bg1">
+    <table width="100%" border="0" align="center" cellpadding="2" cellspacing="0">
+      <tr>
+        <td>%date%:</td>
+        <td><select name="day">$day</select>
+        <select name="month">$month</select>
+        <select name="year">$year</select></td>
+        <td>%squad% / %game%:</td>
+        <td><select name="squad" id="squad">$squads</select>
+        <select name="game">$games</select></td>
+      </tr>
+      <tr>
+        <td colspan="4"><hr /></td>
+      </tr>
+      <tr>
+        <td>%league%:</td>
+        <td><input name="league" type="text" value="$league" size="35" /></td>
+        <td>%homepage%:</td>
+        <td><input name="leaguehp" type="text" value="$leaguehp" size="35" /></td>
+      </tr>
+      <tr>
+        <td>%league_match_link%:</td>
+        <td><input name="linkpage" type="text" value="$linkpage" size="35" /></td>
+        <td colspan="2"></td>
+      </tr>
+      <tr>
+        <td colspan="4"><hr /></td>
+      </tr>
+      <tr>
+        <td>%opponent%:</td>
+        <td><input name="opponent" type="text" value="$opponent" size="35" /></td>
+        <td>%clantag%:</td>
+        <td><input name="opptag" type="text" value="$opptag" size="8" /></td>
+      </tr>
+      <tr>
+        <td>%homepage%</td>
+        <td><input name="opphp" type="text" value="$opphp" size="35" /></td>
+        <td>%country%:</td>
+        <td><select name="oppcountry">$countries</select></td>
+      </tr>
+      <tr>
+        <td colspan="4"><hr /></td>
+      </tr>
+      <tr>
+        <td>%server%:</td>
+        <td><input name="server" type="text" value="$server" size="35" /></td>
+        <td>%hltv_server%:</td>
+        <td><input name="hltv" value="$hltv" type="text" size="35" /></td>
+      </tr>
+      <tr>
+        <td colspan="4"><hr /></td>
+      </tr>
+      <tr>
+        <td valign="top">%home_team%:</td>
+        <td valign="top"><select name="hometeam[]" size="8" multiple="multiple">$hometeam</select></td>
+        <td valign="top">%opponent_team%:</td>
+        <td valign="top"><input name="oppteam" type="text" value="$oppteam" size="35" /></td>
+      </tr>
+      <tr>
+        <td colspan="4"><hr /></td>
+      </tr>
+      <tr>
+        <td valign="top">%report%:</td>
+        <td colspan="3" valign="top"><textarea name="message" id="message" cols="110" rows="11">$report</textarea></td>
+      </tr>
+      <tr>
+        <td colspan="4"><hr /></td>
+      </tr>
+      <tr>
+        <td colspan="4">
+        <table width="100%" id="maplist">
+          <tr>
+            <td width="10%">%map% %id%:</td>
+            <td width="25%">%map%:</td>
+            <td width="20%">%score_home%:</td>
+            <td width="20%">%score_opponent%:</td>
+            <td width="25%"><a href="javascript:;" onclick="addRow('edit');" title="add map"><img src="images/icons/expand.gif" border="0" alt="" /></a>
+            <a href="javascript:;" onclick="removeRow();" title="remove map"><img src="images/icons/collapse.gif" border="0" alt="" /></a></td>
+          </tr>
+          $maps
+        </table>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="4"><hr /></td>
+      </tr>
+      <tr>
+        <td colspan="3"></td>
+        <td align="right" valign="bottom">
+        <input name="cwID" type="hidden" value="$cwID" />
+        <select name="comments">$comments</select>
+        <input name="post" type="submit" value="%update_clanwar%" /></td>
+      </tr>
+    </table>
+    </td>
+  </tr>
+</table>
+</form>
+</body>
+</html>

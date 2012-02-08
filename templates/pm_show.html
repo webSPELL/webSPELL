@@ -1,0 +1,26 @@
+<form method="post" action="messenger.php">
+<div align="left">
+<table cellpadding="5" cellspacing="1" bgcolor="$pagebg">
+  <tr>
+    <td bgcolor="$border"><a class="titlelink" href="index.php?site=messenger">%incoming%</a></td>
+    <td bgcolor="$border"><a class="titlelink" href="index.php?site=messenger&amp;action=outgoing">%outgoing%</a></td>
+    <td bgcolor="$border"><a class="titlelink" href="index.php?site=messenger&amp;action=newmessage">%new_message%</a></td>
+    <td bgcolor="$bgcat"><b>&nbsp;%read%&nbsp;</b></td>
+  </tr>
+</table>
+</div>
+<table width="100%" cellpadding="2" cellspacing="1" bgcolor="$pagebg">
+  <tr>
+    <td bgcolor="$bg1">$date %by% $sender<hr width="50%" /><br />
+    <img src="images/icons/pm_new.gif" width="14" height="12" alt="" /> <b>$title</b>
+    <hr />
+    $message</td>
+  </tr>
+</table>
+<br />
+<input type="hidden" name="quickaction" value="true" />
+<input type="hidden" name="quickactiontype" value="delete" />
+<input type="hidden" name="messageID[]" value="$id" />
+<input type="button" value="%reply%" onclick="MM_goToURL('parent','index.php?site=messenger&amp;action=reply&amp;id=$id');return document.MM_returnValue" />
+<input type="submit" value="%delete%" />
+</form>

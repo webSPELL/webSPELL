@@ -1,0 +1,104 @@
+<script language="JavaScript" type="text/javascript">
+<!--
+function chkFormular() {
+	if(document.getElementById('usedfor').value == "") {
+		alert("%enter_usage%");
+		document.getElementById('usedfor').focus();
+   		return false;
+	}
+	
+	if(document.getElementById('day').value == "") {
+		alert("%enter_date%");
+		document.getElementById('day').focus();
+   		return false;
+	}
+	
+	if(document.getElementById('month').value == "") {
+		alert("%enter_date%");
+		document.getElementById('month').focus();
+   		return false;
+	}
+	
+	if(document.getElementById('year').value == "") {
+		alert("%enter_date%");
+		document.getElementById('year').focus();
+   		return false;
+	}
+	
+	if(document.getElementById('euro').value == "" || document.getElementById('euro').value == "0.00") {
+		alert("%enter_total_costs%");
+		document.getElementById('euro').focus();
+   		return false;
+	}
+	
+	if(document.getElementById('usereuro').value == "" || document.getElementById('usereuro').value == "0.00") {
+		alert("%enter_costs_member%");
+		document.getElementById('usereuro').focus();
+   		return false;
+	}
+	
+}
+
+function berechnen() {
+	var anz = document.getElementById('anz').value;
+	var total = document.getElementById('euro').value;
+	
+	var user = total/anz;
+	var rounduser = Math.round(user);
+	
+	document.getElementById('usereuro').value = rounduser;
+	document.getElementById('calculation').value = rounduser + " EUR  (" + total + "/" + anz + "=" + user + ")";
+	
+	document.getElementById('usereuro').focus();
+	return;
+}
+-->
+</script>
+
+<form name="post" method="post" action="cash_box.php" onsubmit="return chkFormular()">
+<table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="$border">
+  <tr>
+    <td class="title" colspan="2" align="center" bgcolor="$bghead">%new_usage%</td>
+  </tr>
+  <tr><td bgcolor="$pagebg" colspan="2"></td></tr>
+  <tr bgcolor="$bg1">
+        <td align="right">%squad%:</td>
+        <td><select name="squad">$squads</select></td>
+      </tr>
+      <tr bgcolor="$bg2">
+        <td align="right">%usage%:</td>
+        <td><input name="usedfor" type="text" id="usedfor" value="" size="55" /></td>
+      </tr>
+      <tr bgcolor="$bg1">
+        <td align="right" valign="top">%info%:</td>
+        <td><textarea name="info" cols="50" rows="7" id="info"></textarea></td>
+      </tr>
+      <tr bgcolor="$bg2">
+        <td align="right" valign="top">%bank_account%:</td>
+        <td><textarea name="konto" cols="50" rows="4" id="konto"></textarea></td>
+      </tr>
+      <tr bgcolor="$bg1">
+        <td align="right">%pay_until%:</td>
+        <td><input type="text" name="day" id="day" size="2" />
+        .
+        <input type="text" name="month" id="month" size="2" />
+        .
+        <input type="text" name="year" id="year" size="4" /> dd.mm.yyyy</td>
+      </tr>
+      <tr bgcolor="$bg2">
+        <td align="right">%total_costs%:</td>
+        <td><input type="text" dir="rtl" name="euro" id="euro" size="8" value="$euro" /> &#8364;</td>
+      </tr>
+      <tr bgcolor="$bg1">
+        <td align="right">%costs_member%:</td>
+        <td><input type="hidden" name="anz" id="anz" value="$anz" />
+        <input type="text" dir="rtl" name="usereuro" id="usereuro" size="8" value="$usereuro" /> &#8364;
+        <input type="button" name="calculate" value="%calculate%" onclick="berechnen()" />
+        <input name="calculation" type="text" id="calculation" class="input" size="50" value="" /></td>
+      </tr>
+      <tr bgcolor="$bg2">
+        <td>&nbsp;</td>
+        <td><input type="submit" name="save" value="%submit%" /></td>
+      </tr>
+</table>
+</form>

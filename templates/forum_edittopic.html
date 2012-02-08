@@ -1,0 +1,71 @@
+<script language="JavaScript" type="text/javascript">
+<!--
+function chkFormular() {
+	if(document.getElementById('topicname').value == "") {
+		alert("%enter_topic%");
+		document.getElementById('topicname').focus();
+   		return false;
+	}
+	
+	if(document.getElementById('message').value == "") {
+		alert("%enter_text%");
+		document.getElementById('message').focus();
+   		return false;
+	}
+	if(!validbbcode(document.getElementById('message').value)){
+		return false;
+	}
+}
+	
+-->
+</script>
+
+<form action="forum_topic.php?board=$board&amp;topic=$topic" method="post" id="post" name="post" onsubmit="return chkFormular()">
+<table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="$border">
+  <tr>
+    <td class="title" align="center" bgcolor="$bghead">%edit_topic%</td>
+  </tr>
+  <tr><td bgcolor="$pagebg"></td></tr>
+  <tr>
+    <td bgcolor="$bg1">
+    <table width="100%" align="center" cellpadding="2" cellspacing="0">
+      <tr>
+        <td colspan="2">
+        <table width="100%" cellpadding="0" cellspacing="0">
+          <tr>
+            <td colspan="15"><b>%topic_icon%:</b></td>
+          </tr>
+          <tr>
+            <td colspan="8"></td>
+          </tr>
+          $iconlist
+        </table>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2"><b>%subject%:</b><br /></td>
+      </tr>
+      <tr>
+        <td colspan="2"><input name="topicname" type="text" id="topicname" style="width:99%;" value="$topicname" size="45" /></td>
+      </tr>
+      <tr>
+        <td colspan="2">$addbbcode</td>
+      </tr>
+      <tr>
+        <td colspan="2"><textarea name="message" id="message" rows="10" cols="35" style="width:99%;">$message</textarea></td>
+      </tr>
+      <tr>
+        <td colspan="2"><small><b>%options%:</b> &#8226; %html_off% &#8226; %bbcode_on% &#8226; %smilies_on%</small></td>
+      </tr>
+      <tr>
+        <td>$notify
+        $chk_sticky</td>
+        <td align="right" valign="bottom"><input type="hidden" name="post" value="$post" />
+        <input type="hidden" name="saveedittopic" value="true" />
+        <input name="updatetopic" type="submit" value="%edit_topic%" /></td>
+      </tr>
+    </table>
+    </td>
+  </tr>
+</table>
+</form>

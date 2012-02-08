@@ -1,0 +1,97 @@
+<script language="JavaScript" type="text/javascript">
+<!--
+function chkFormular() {
+	if(document.getElementById('filename').value == "") {
+		alert("%you_have_to_enter_filename%");
+		document.getElementById('filename').focus();
+   		return false;
+	}
+	if((document.getElementById('upfile').value == "") && (document.getElementById('fileurl').value=="http://")){
+	 	alert("%you_have_to_enter_file%");
+		document.getElementById('upfile').focus();
+		return false;
+	}
+	if((document.getElementById('fileurl').value != "http://") && (document.getElementById('upfile').value == "")){
+		if(url(document.getElementById('fileurl').value) == false){
+			alert("%you_have_to_enter_file%");
+			document.getElementById('fileurl').focus();
+			return false;
+		}
+	}
+	if(!validbbcode(document.getElementById('info').value)){
+		document.getElementById('info').focus();
+		return false;
+	}
+}
+-->
+</script>
+
+<br />
+<form action="index.php?site=files&amp;action=save" method="post" name="post" enctype="multipart/form-data" onsubmit="return chkFormular()">
+<input type="hidden" name="poster" value="$userID" />
+<table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="$border">
+  <tr>
+    <td class="title" align="center" bgcolor="$bghead">%new_file%</td>
+  </tr>
+  <tr><td bgcolor="$pagebg"></td></tr>
+  <tr>
+    <td bgcolor="$bg1">
+    <table align="center" cellpadding="2" cellspacing="0">
+      <tr>
+        <td colspan="2"><b>%file-info%:</b></td>
+      </tr>
+      <tr>
+        <td>%category_cl%:</td>
+        <td><select name="filecat">$filecats</select></td>
+      </tr>
+      <tr>
+        <td width="30%">%filename%:</td>
+        <td width="70%"><input type="text" name="filename" id="filename" size="30" /></td>
+      </tr>
+      <tr>
+        <td valign="top">%info_description%:</td>
+        <td><textarea name="info" id="info" cols="44" rows="7"></textarea></td>
+      </tr>
+      <tr>
+        <td>%accesslevel%:</td>
+        <td><select name="accesslevel">$access</select></td>
+      </tr>
+      <tr>
+        <td valign="top">%file-upload%:</td>
+        <td><input type="file" name="upfile" id="upfile" /></td>
+      </tr>
+      <tr>
+        <td valign="top">%extern-link%:</td>
+        <td><input type="text" name="fileurl" id="fileurl" size="40" value="http://" /></td>
+      </tr>
+      <tr>
+        <td valign="top">%file-size_e%:</td>
+        <td><input name="filesize" type="text" maxlength="4" size="4" />
+        <select name="unit">
+          <option value="b">Byte</option>
+          <option value="kb">KByte</option>
+          <option value="mb" selected="selected">MByte</option>
+          <option value="gb">GByte</option>
+        </select></td>
+      </tr>
+      <tr><td colspan="2">&nbsp;</td></tr>
+      <tr>
+        <td colspan="2"><b>%file-mirrors%:</b></td>
+      </tr>
+      <tr>
+        <td valign="top">%mirror% #2:</td>
+        <td><input type="text" name="mirror2" size="40" /></td>
+      </tr>
+      <tr>
+        <td valign="top">%mirror% #3:</td>
+        <td><input type="text" name="mirror3" size="40" /></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td><input type="submit" name="submit" value="%upload%" /></td>
+      </tr>
+    </table>
+    </td>
+  </tr>
+</table>
+</form>

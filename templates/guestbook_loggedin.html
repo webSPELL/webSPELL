@@ -1,0 +1,40 @@
+<script language="JavaScript" type="text/javascript">
+<!--
+function chkFormular() {
+	if(document.getElementById('guestbookmessage').value == "") {
+		alert("%enter_a_message%");
+		document.getElementById('guestbookmessage').focus();
+   	return false;
+	}
+	if(!validbbcode(document.getElementById('guestbookmessage').value)){
+		return false;
+	}
+}
+-->
+</script>
+
+<form id="post" name="post" method="post" action="guestbook.php" onsubmit="return chkFormular()">
+<table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="$border">
+  <tr>
+    <td class="title" align="center" bgcolor="$bghead">%new_entry%</td>
+  </tr>
+  <tr><td bgcolor="$pagebg"></td></tr>
+  <tr>
+    <td bgcolor="$bg1">
+    <table width="100%" border="0" align="center" cellpadding="2" cellspacing="0">
+      <tr>
+        <td colspan="2">$addbbcode</td>
+      </tr>
+      <tr>
+        <td colspan="2"><b>%your_message%:</b><br />
+        <textarea id="guestbookmessage" name="message" cols="30" rows="5" style="width:99%;">$message</textarea></td>
+      </tr>
+      <tr>
+        <td><small><b>%options%:</b> &#8226; %html% &#8226; %bbcode% &#8226; %smilies%</small></td>
+        <td align="right"><input name="save" type="submit" value="%submit%" /></td>
+      </tr>
+    </table>
+    </td>
+  </tr>
+</table>
+</form>

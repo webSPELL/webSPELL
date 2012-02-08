@@ -1,0 +1,28 @@
+<form method="post" action="index.php?site=usergallery" enctype="multipart/form-data">
+<table width="100%" border="0" cellpadding="2" cellspacing="0">
+  <tr>
+    <td>%name%:</td>
+    <td><input type="text" name="name" /></td>
+  </tr>
+  <tr>
+    <td>%comment%:</td>
+    <td><input type="text" name="comment" size="50" maxlength="255" /></td>
+  </tr>
+  <tr>
+    <td>%visitor_comments%:</td>
+    <td><select name="comments">
+      <option value="0">%disable_comments%</option>
+      <option value="1">%enable_user_comments%</option>
+      <option value="2" selected="selected">%enable_visitor_comments%</option>
+    </select></td>
+  </tr>
+  <tr>
+    <td>%picture%:</td>
+    <td><input name="picture" type="file" /></td>
+  </tr>
+  <tr>
+    <td><input type="hidden" name="galleryID" value="$id" /></td>
+    <td><input type="submit" name="saveform" value="%add_picture%" /></td>
+  </tr>
+</table>
+</form>

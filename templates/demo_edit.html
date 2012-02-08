@@ -1,0 +1,97 @@
+<form action="demos.php" method="post" enctype="multipart/form-data"> 
+<table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="$border">
+  <tr>
+    <td class="title" align="center" bgcolor="$bghead">%edit_demo%</td>
+  </tr>
+  <tr><td bgcolor="$pagebg"></td></tr>
+  <tr>
+    <td bgcolor="$bg1">
+    <table width="100%" border="0" align="center" cellpadding="2" cellspacing="0">
+      <tr>
+        <td align="right">%date%:</td>
+        <td><select name="day">$day</select>
+        <select name="month">$month</select>
+        <select name="year">$year</select></td>
+      </tr>
+      <tr>
+        <td align="right">%game%:</td>
+        <td><select name="game">$games</select></td>
+      </tr>
+      <tr>
+        <td colspan="2" align="right"><hr /></td>
+      </tr>
+      <tr>
+        <td align="right">%clan1_name%:</td>
+        <td><input name="clanname1" type="text" value="$clanname1" size="35" /></td>
+      </tr>
+      <tr>
+        <td align="right">%clan1_tag%:</td>
+        <td><input name="clan1" type="text" value="$clan1" size="8" /></td>
+      </tr>
+      <tr>
+        <td align="right">%clan1_country%:</td>
+        <td><select name="country1">$country1</select></td>
+      </tr>
+      <tr>
+        <td align="right">%clan1_homepage%</td>
+        <td><input name="hp1" type="text" value="$url1" size="35" /></td>
+      </tr>
+      <tr>
+        <td colspan="2" align="right"><hr /></td>
+      </tr>
+      <tr>
+        <td align="right">%clan2_name%:</td>
+        <td><input name="clanname2" type="text" value="$clanname2" size="35" /></td>
+      </tr>
+      <tr>
+        <td align="right">%clan2_tag%:</td>
+        <td><input name="clan2" type="text" value="$clan2" size="8" /></td>
+      </tr>
+      <tr>
+        <td align="right">%clan2_country%:</td>
+        <td><select name="country2">$country2</select></td>
+      </tr>
+      <tr>
+        <td align="right">%clan2_homepage%</td>
+        <td><input name="hp2" type="text" value="$url2" size="35" /></td>
+      </tr>
+      <tr>
+        <td colspan="2" align="right"><hr /></td>
+      </tr>
+      <tr>
+        <td align="right">%league%:</td>
+        <td><input name="league" type="text" value="$league" size="35" /></td>
+      </tr>
+      <tr>
+        <td align="right">%league_homepage%</td>
+        <td><input name="leaguehp" type="text" value="$leaguehp" size="35" /></td>
+      </tr>
+      <tr>
+        <td align="right">%maps%:</td>
+        <td><input name="maps" type="text" value="$maps" size="35" /></td>
+      </tr>
+      <tr>
+        <td align="right">%players%:</td>
+        <td><input name="player" type="text" value="$player" size="35" /></td>
+      </tr>
+      <tr>
+        <td colspan="2" align="right"><hr /></td>
+      </tr>
+      <tr>
+        <td align="right">%demo_upload%:</td>
+        <td><input name="demo" type="file" size="30" /></td>
+      </tr>
+      <tr>
+        <td align="right">%extern_link%:</td>
+        <td><input name="link" type="text" value="$extern" size="35" /></td>
+      </tr>
+      <tr>
+        <td align="right"><input type="hidden" name="demoID" value="$demoID" /></td>
+        <td><select name="comments">$comments</select>
+        <br /><br /><input name="saveedit" type="submit" value="%update_demo%" /></td>
+      </tr>
+    </table>
+    </td>
+  </tr>
+</table>
+</form>

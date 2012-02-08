@@ -1,0 +1,85 @@
+<script language="JavaScript" type="text/javascript">
+<!--
+function chkFormular() {
+	if(document.getElementById('filename').value == "") {
+		alert("%you_have_to_enter_filename%");
+		document.getElementById('filename').focus();
+   		return false;
+	}
+	if((document.getElementById('fileurl').value != "http://")){
+		if(url(document.getElementById('fileurl').value) == false){
+			alert("%you_have_to_enter_file%");
+			document.getElementById('fileurl').focus();
+			return false;
+		}
+	}
+	if(!validbbcode(document.getElementById('info').value)){
+		document.getElementById('info').focus();
+		return false;
+	}
+}
+-->
+</script>
+$adminactions
+<form action="index.php?site=files&amp;action=saveedit" method="post" name="post" enctype="multipart/form-data" onsubmit="return chkFormular()">
+<table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="$border">
+  <tr>
+    <td class="title" align="center" bgcolor="$bghead">%edit_file%</td>
+  </tr>
+  <tr>
+  <td bgcolor="$pagebg"></td></tr>
+  <tr>
+    <td bgcolor="$bg1">
+    <table align="center" cellpadding="2" cellspacing="0">
+      <tr>
+        <td colspan="2"><b>%file-info%:</b></td>
+      </tr>
+      <tr>
+        <td>%category_cl%:</td>
+        <td><select name="filecat">$filecats</select></td>
+      </tr>
+      <tr>
+        <td>%filename%:</td>
+        <td><input type="text" id="filename" name="filename" size="30" value="$name" /></td>
+      </tr>
+      <tr>
+        <td valign="top">%info_description%:</td>
+        <td><textarea name="info" id="info" cols="44" rows="7">$description</textarea></td>
+      </tr>
+      <tr>
+        <td>%accesslevel%:</td>
+        <td><select name="accesslevel">$access</select></td>
+      </tr>
+      <tr>
+        <td valign="top">%file-upload%:</td>
+        <td><input type="file" name="upfile" /></td>
+      </tr>
+      <tr>
+        <td valign="top">%extern-link%:</td>
+        <td><input type="text" name="fileurl" size="40" value="$extern" /></td>
+      </tr>
+      <tr>
+        <td>%file-size_e%:</td>
+        <td><input name="filesize" type="text" value="$filesize" />
+        <select name="unit">$unit</select></td>
+      </tr>
+      <tr>
+        <td colspan="2"><b>%file-mirrors%:</b></td>
+      </tr>
+      <tr>
+        <td valign="top">%mirror% #2:</td>
+        <td><input type="text" name="mirror2" size="40" value="$mirror2" /></td>
+      </tr>
+      <tr>
+        <td valign="top">%mirror% #3:</td>
+        <td><input type="text" name="mirror3" size="40" value="$mirror3" /></td>
+      </tr>
+      <tr>
+        <td><input type="hidden" name="fileID" value="$fileID" /></td>
+        <td><input type="submit" value="%update%" /></td>
+      </tr>
+    </table>
+    </td>
+  </tr>
+</table>
+</form>

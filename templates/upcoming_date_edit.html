@@ -1,0 +1,86 @@
+<script language="JavaScript" type="text/javascript">
+<!--
+function chkFormular() {
+	if(document.getElementById('short').value == "") {
+		alert("%enter_short%");
+		document.getElementById('short').focus();
+   		return false;
+	}
+	
+	if(document.getElementById('title').value == "") {
+		alert("%enter_title%");
+		document.getElementById('title').focus();
+   		return false;
+	}
+	
+	if(document.getElementById('dateinfo').value == "") {
+		alert("%enter_info%");
+		document.getElementById('dateinfo').focus();
+   		return false;
+	}
+	if(!validbbcode(document.getElementById('dateinfo').value)){
+		return false;
+	}
+}
+-->
+</script>
+<form action="calendar.php?action=saveeditdate" method="post" onsubmit="return chkFormular()">
+<table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="$border">
+  <tr>
+    <td class="title" align="center" bgcolor="$bghead">%editevent%</td>
+  </tr>
+  <tr><td bgcolor="$pagebg"></td></tr>
+  <tr>
+    <td bgcolor="$bg1">
+    <table border="0" align="center" cellpadding="2" cellspacing="0">
+      <tr>
+        <td align="right">%start_datetime%</td>
+        <td><select name="day">$day</select>
+        <select name="month">$month</select>
+        <select name="year">$year</select>
+        -
+        <input name="hour" type="text" value="$hour" size="3" />
+        :
+        <input name="minute" type="text" value="$minute" size="3" /></td>
+      </tr>
+      <tr>
+        <td align="right">%end_datetime%</td>
+        <td><select name="endday">$endday</select>
+        <select name="endmonth">$endmonth</select>
+        <select name="endyear">$endyear</select>
+        -
+        <input name="endhour" type="text" value="$endhour" size="3" />
+        :
+        <input name="endminute" type="text" value="$endminute" size="3" /></td>
+      </tr>
+      <tr>
+        <td align="right">%shorttitle%</td>
+        <td><input name="short" id="short" type="text" value="$short" size="35" />
+        <small>%displayed_in%</small></td>
+      </tr>
+      <tr>
+        <td align="right">%longtitle%</td>
+        <td><input name="title" id="title" type="text" value="$title" size="35" /></td>
+      </tr>
+      <tr>
+        <td align="right">%location%</td>
+        <td><select name="country">$countries</select>
+        <input name="location" type="text" value="$location" /></td>
+      </tr>
+      <tr>
+        <td align="right">%homepage%</td>
+        <td><input name="locationhp" type="text" value="$locationhp" size="35" /></td>
+      </tr>
+      <tr>
+        <td align="right" valign="top">%information%</td>
+        <td><textarea name="message" id="dateinfo" cols="45" rows="7">$dateinfo</textarea></td>
+      </tr>
+      <tr>
+        <td align="right"><input type="hidden" name="upID" value="$ds[upID]" /></td>
+        <td><input name="post" type="submit" value="%updateevent%" /></td>
+      </tr>
+    </table>
+    </td>
+  </tr>
+</table>
+</form>

@@ -1,0 +1,74 @@
+<script language="JavaScript" type="text/javascript">
+<!--
+function chkFormular() {
+	if(!validbbcode(document.getElementById('info').value)){
+		document.getElementById('info').focus();
+		return false;
+	}
+	
+}
+-->
+</script>
+<form action="index.php?site=challenge&amp;action=save" method="post" name="post" onsubmit="return chkFormular()">
+<table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="$border">
+  <tr>
+    <td class="title" align="center" bgcolor="$bghead">%challenge%</td>
+  </tr>
+  <tr><td bgcolor="$pagebg"></td></tr>
+  <tr>
+    <td bgcolor="$bg1">
+    <center>$showerror</center>
+    <table border="0" align="center" cellpadding="2" cellspacing="0">
+      <tr>
+        <td align="right">%date%:</td>
+        <td><select name="day">$day</select>
+        <select name="month">$month</select>
+        <select name="year">$year</select></td>
+        <td align="right">%time%:</td>
+        <td><input name="hour" type="text" value="20" size="2" />
+        :
+        <input name="minute" type="text" value="00" size="2" /></td>
+      </tr>
+      <tr>
+        <td align="right">%squad%:</td>
+        <td><select name="squad">$squads</select></td>
+        <td></td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td align="right">%opponent%:</td>
+        <td><input name="opponent" value="$opponent" type="text" /></td>
+        <td align="right">%league%:</td>
+        <td><input name="league" value="$league" type="text" /></td>
+      </tr>
+      <tr> 
+        <td align="right">%homepage%:</td>
+        <td><input name="opphp" value="$opphp" type="text" /></td>
+        <td align="right">%country%:</td>
+        <td><select name="oppcountry">$countries</select></td>
+      </tr>
+      <tr> 
+        <td align="right">%map%:</td>
+        <td><input name="map" value="$map" type="text" /></td>
+        <td align="right">%server%:</td>
+        <td><input name="server" value="$server" type="text" /></td>
+      </tr>
+      <tr> 
+        <td align="right" valign="top">%email%:</td>
+        <td colspan="3"><input name="email" type="text" value="$email" /></td>
+      </tr>
+      <tr> 
+        <td align="right" valign="top">%info%:</td>
+        <td colspan="3"><textarea name="info" id="info" cols="50" rows="5">$info</textarea></td>
+      </tr>
+      <tr> 
+        <td align="right">&nbsp;</td>
+        <td><input name="post" type="submit" value="%submit_challenge%" /></td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+    </table>
+    </td>
+  </tr>
+</table>
+</form>

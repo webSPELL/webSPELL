@@ -1,0 +1,74 @@
+<script language="JavaScript" type="text/javascript">
+<!--
+function chkFormular() {
+	if(document.getElementById('award_name').value == "") {
+		alert("%enter_title%");
+		document.getElementById('award_name').focus();
+   		return false;
+	}
+	message = document.getElementById('message').value;
+	if(message == "") {
+		alert("%enter_text%");
+		document.getElementById('message').focus();
+   		return false;
+	}
+	
+	if(!validbbcode(message)){
+		document.getElementById('message').focus();
+		return false;
+	}
+	
+}
+-->
+</script>
+<form action="awards.php" method="post" id="post" name="post" onsubmit="return chkFormular()">
+<table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="$border">
+  <tr>
+    <td class="title" align="center" bgcolor="$bghead">%edit_award%</td>
+  </tr>
+  <tr><td bgcolor="$pagebg"></td></tr>
+  <tr>
+    <td bgcolor="$bg1">
+    <table width="100%" border="0" align="center" cellpadding="2" cellspacing="0">
+      <tr>
+        <td align="right">%date%:</td>
+        <td><select name="day">$day</select>
+        <select name="month">$month</select>
+        <select name="year">$year</select></td>
+      </tr>
+      <tr>
+        <td align="right">%squad%:</td>
+        <td><select name="squad">$squads</select></td>
+      </tr>
+      <tr>
+        <td align="right">%ranking%:</td>
+        <td><input name="rang" type="text" value="$rang" size="3" /></td>
+      </tr>
+      <tr>
+        <td align="right">%award%:</td>
+        <td><input name="award" type="text" id="award_name" value="$award" size="65" /></td>
+      </tr>
+      <tr>
+        <td align="right">%homepage%:</td>
+        <td>http://<input name="homepage" type="text" value="$homepage" size="65" /></td>
+      </tr>
+      <tr>
+      	<td rowspan="2">&nbsp;</td>
+        <td>$addbbcode</td>
+      </tr>
+      <tr>
+       	<td>$addflags</td>
+      </tr>
+      <tr>
+        <td align="right" valign="top">%info%:</td>
+        <td><textarea name="message" rows="5" cols="30" id="message" style="width:99%;">$info</textarea></td>
+      </tr>
+      <tr>
+        <td><input name="awardID" type="hidden" value="$awardID" /></td>
+        <td><input name="saveedit" type="submit" value="%update_award%" /></td>
+      </tr>
+    </table>
+    </td>
+  </tr>
+</table>
+</form>

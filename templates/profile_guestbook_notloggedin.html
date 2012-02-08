@@ -1,0 +1,79 @@
+<script language="JavaScript" type="text/javascript">
+<!--
+function chkFormular() {
+	if(document.getElementById('gbname').value == "") {
+		alert("%yht_enter_name%");
+		document.getElementById('gbname').focus();
+   		return false;
+	}
+	
+	if(document.getElementById('message').value == "") {
+		alert("%yht_enter_message%");
+		document.getElementById('message').focus();
+   		return false;
+	}
+	if(!validbbcode(document.getElementById('message').value)){
+		return false;
+	}
+}
+-->
+</script>
+
+<form id="post" name="post" method="post" action="index.php?site=profile&amp;action=guestbook&amp;id=$id" onsubmit="return chkFormular()">
+<table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="$border">
+  <tr>
+    <td align="center" bgcolor="$bghead" class="title">%new_entry%</td>
+  </tr>
+  <tr><td bgcolor="$pagebg"></td></tr>
+  <tr>
+    <td bgcolor="$bg1">
+    <table width="100%" border="0" align="center" cellpadding="2" cellspacing="0">
+      <tr>
+        <td colspan="4">
+        <table border="0" cellspacing="0" cellpadding="2">
+          <tr>
+            <td>%your_name%:</td>
+            <td><input name="gbname" id="gbname" type="text" size="40" /></td>
+          </tr>
+          <tr>
+            <td>%your_email%:</td>
+            <td><input name="gbemail" type="text" size="40" /></td>
+          </tr>
+          <tr>
+            <td>ICQ#:</td>
+            <td><input name="icq" type="text" size="40" /></td>
+          </tr>
+          <tr>
+            <td>%your_homepage%:</td>
+            <td><input name="gburl" type="text" value="http://" size="40" /></td>
+          </tr>
+          <tr>
+            <td colspan="2">%security_code%</td>
+          </tr>
+          <tr>
+            <td>$captcha</td>
+            <td><input name="captcha" type="text" value="" size="5" />
+            <input name="captcha_hash" type="hidden" value="$hash" /></td>
+          </tr>
+        </table>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="4">$addbbcode</td>
+      </tr>
+      <tr>
+        <td colspan="4">%your_message%:<br />
+        <textarea name="message" id="message" rows="5" cols="35" style="width:99%;"></textarea></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td valign="bottom" align="right">
+        <input type="hidden" name="id" value="$id" />
+        <input type="hidden" name="action" value="guestbook" />
+        <input name="save" type="submit" value="%submit%" /></td>
+      </tr>
+    </table>
+    </td>
+  </tr>
+</table>
+</form>

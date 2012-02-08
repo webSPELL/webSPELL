@@ -1,0 +1,48 @@
+<script language="JavaScript" type="text/javascript">
+<!--
+function chkFormular() {
+	if(document.getElementById('message').value == "") {
+		alert('%enter_message%');
+		document.getElementById('message').focus();
+   		return false;
+	}
+	if(!validbbcode(document.getElementById('message').value)){
+		return false;
+	}
+	
+}
+-->
+</script>
+
+<form id="post" name="post" action="comments.php" method="post" onsubmit="return chkFormular()">
+<table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="$border">
+	<tr>
+		<td class="title" align="center" bgcolor="$bghead">%title_editcomment%</td>
+	</tr>
+	<tr>
+		<td bgcolor="$pagebg"></td>
+	</tr>
+	<tr>
+		<td bgcolor="$bg1">
+    <table width="100%" border="0" align="center" cellpadding="2" cellspacing="0">
+      <tr>
+        <td>$addbbcode</td>
+      </tr>
+      <tr>
+        <td><textarea name="message" id="message" rows="5" cols="35" style="width:99%;">$message</textarea></td>
+      </tr>
+      <tr>
+        <td><small><b>%options%:</b> &#8226; %html_off% &#8226; %bbcode_on% &#8226; %smilies_on%</small></td>
+      </tr>
+      <tr>
+        <td><input type="hidden" name="authorID" value="$ds[userID]" />
+        <input type="hidden" name="commentID" value="$id" />
+        <input type="hidden" name="referer" value="$referer" />
+        <input type="hidden" name="userID" value="$userID" />
+        <input type="submit" name="saveeditcomment" value="%edit_comment%" /></td>
+      </tr>
+    </table>
+    </td>
+  </tr>
+</table>
+</form>

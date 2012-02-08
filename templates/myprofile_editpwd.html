@@ -1,0 +1,21 @@
+<form method="post" action="index.php?site=myprofile">
+<table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="$border">
+  <tr>
+    <td bgcolor="$bg1" align="right" width="50%">%old_password%:</td>
+    <td bgcolor="$bg2" width="50%"><input type="password" name="oldpwd" /></td>
+  </tr>
+  <tr>
+    <td bgcolor="$bg3" align="right">%new_password%:</td>
+    <td bgcolor="$bg4"><input type="password" name="pwd1" /></td>
+  </tr>
+  <tr>
+    <td bgcolor="$bg1" align="right">%repeat_new_password%:</td>
+    <td bgcolor="$bg2"><input type="password" name="pwd2" /></td>
+  </tr>
+  <tr>
+    <td bgcolor="$bg3"><input type="hidden" name="id" value="$userID" /></td>
+    <td bgcolor="$bg4"><input type="submit" name="savepwd" value="%change_password%" /></td>
+  </tr>
+</table>
+</form>
+<br /><br /><input type="button" onclick="javascript:history.back()" value="%back%" />

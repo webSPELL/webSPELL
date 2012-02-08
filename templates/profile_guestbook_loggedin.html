@@ -1,0 +1,45 @@
+<script language="JavaScript" type="text/javascript">
+<!--
+function chkFormular() {
+	if(document.getElementById('message').value == "") {
+		alert("%yht_enter_message%");
+		document.getElementById('message').focus();
+   		return false;
+	}
+	if(!validbbcode(document.getElementById('message').value)){
+		return false;
+	}
+	
+}
+-->
+</script>
+
+<form id="post" name="post" method="post" action="index.php?site=profile&amp;action=guestbook&amp;id=$id" onsubmit="return chkFormular()">
+<table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="$border">
+  <tr>
+    <td class="title" align="center" bgcolor="$bghead">%new_entry%</td>
+  </tr>
+  <tr><td bgcolor="$pagebg"></td></tr>
+  <tr>
+    <td bgcolor="$bg1">
+    <table width="100%" border="0" align="center" cellpadding="2" cellspacing="0">
+      <tr>
+        <td colspan="4">$addbbcode</td>
+      </tr>
+      <tr>
+        <td colspan="4">%your_message%:<br /> <textarea name="message" id="message" rows="5" cols="35" style="width:99%;"></textarea></td>
+      </tr>
+      <tr>
+        <td><small><b>%options%:</b> &#8226; %html_off% &#8226; <a href="javascript:MM_openBrWindow('code.php','%bbcode%','scrollbars=yes,width=600,height=500')">%bbcode%</a> %is_on% &#8226; <a href="javascript:MM_openBrWindow('smileys.php','%smilies%','scrollbars=yes,width=340,height=500')">%smilies%</a> %are_on%</small></td>
+        <td colspan="-2" valign="bottom" align="right">
+        <input type="hidden" name="gbname" value="$name" />
+        <input type="hidden" name="gbemail" value="$email" />
+        <input type="hidden" name="gburl" value="$url" /> 
+        <input type="hidden" name="icq" value="$icq" />
+        <input name="save" type="submit" value="%submit%" /></td>
+      </tr>
+    </table>
+    </td>
+  </tr>
+</table>
+</form>

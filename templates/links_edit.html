@@ -1,0 +1,38 @@
+<form action="index.php?site=links" method="post" enctype="multipart/form-data" onsubmit="return formcheck_onsend('linkname');">
+<table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="$border">
+  <tr>
+    <td class="title" align="center" bgcolor="$bghead">%edit_link%</td>
+  </tr>
+  <tr><td bgcolor="$pagebg"></td></tr>
+  <tr>
+    <td bgcolor="$bg1">
+    <table border="0" align="center" cellpadding="2" cellspacing="0">
+      <tr>
+        <td align="right">%linkrubric%:</td>
+        <td><select name="cat">$linkcats</select></td>
+      </tr>
+      <tr>
+        <td align="right">%linkname%:</td>
+        <td><input name="name" id="linkname" type="text" value="$name" size="40" /></td>
+      </tr>
+      <tr>
+        <td align="right">%homepage%:</td>
+        <td><input name="url" type="text" value="$url" size="40" /></td>
+      </tr>
+      <tr>
+        <td align="right">%banner%:</td>
+        <td><input name="banner" type="file" /></td>
+      </tr>
+      <tr>
+        <td align="right">%information%:</td>
+        <td><input name="info" type="text" value="$info" size="40" /></td>
+      </tr>
+      <tr>
+        <td align="right"><input type="hidden" name="linkID" value="$linkID" /></td>
+        <td><input name="saveedit" type="submit" value="%update_link%" /></td>
+      </tr>
+    </table>
+    </td>
+  </tr>
+</table>
+</form>

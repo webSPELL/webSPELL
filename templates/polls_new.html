@@ -1,0 +1,136 @@
+<script language="JavaScript" type="text/javascript">
+<!--
+function chkFormular() {
+	if(document.getElementById('title').value == "") {
+		alert("%yht_enter_title%");
+		document.getElementById('title').focus();
+   		return false;
+	}
+	
+	if(document.getElementById('opt1').value == "") {
+		alert("%yht_enter_2_options%");
+		document.getElementById('opt1').focus();
+   		return false;
+	}
+	
+	if(document.getElementById('opt2').value == "") {
+		alert("%yht_enter_2_options%");
+		document.getElementById('opt2').focus();
+   		return false;
+	}
+	
+  if(document.getElementById('laufzeit_hour').value == "hh") {
+		alert("%yht_enter_endingtime%");
+		document.getElementById('laufzeit_hour').focus();
+   		return false;
+	}
+
+  if(document.getElementById('laufzeit_minute').value == "mm") {
+		alert("%yht_enter_endingtime%");
+		document.getElementById('laufzeit_minute').focus();
+   		return false;
+	}
+  if(document.getElementById('laufzeit_day').value == "DD") {
+		alert("%yht_enter_endingtime%");
+		document.getElementById('laufzeit_day').focus();
+   		return false;
+	}
+  if(document.getElementById('laufzeit_month').value == "MM") {
+		alert("%yht_enter_endingtime%");
+		document.getElementById('laufzeit_month').focus();
+   		return false;
+	}
+  if(document.getElementById('laufzeit_year').value == "YY") {
+		alert("%yht_enter_endingtime%");
+		document.getElementById('laufzeit_year').focus();
+   		return false;
+	}
+
+}
+-->
+</script>
+
+<form name="post" method="post" action="polls.php" onsubmit="return chkFormular()">
+<table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="$border">
+  <tr>
+    <td class="title" align="center" bgcolor="$bghead">%new_poll%</td>
+  </tr>
+  <tr><td bgcolor="$pagebg"></td></tr>
+  <tr>
+    <td bgcolor="$bg1">
+    <table align="center" border="0" cellpadding="2" cellspacing="0">
+      <tr>
+        <td align="right">%title%:</td>
+        <td><input name="title" id="title" type="text" size="50" /></td>
+      </tr>
+      <tr>
+        <td align="right">%endingtime%:</td>
+        <td><input type="text" name="laufzeit_hour" id="laufzeit_hour" size="2" value="hh" maxlength="2" />
+        :
+        <input type="text" name="laufzeit_minute" id="laufzeit_minute" size="2" value="mm" maxlength="2" />
+        %on%
+        <input type="text" name="laufzeit_day" id="laufzeit_day" size="2" value="DD" maxlength="2" />
+        <input type="text" name="laufzeit_month" id="laufzeit_month" size="2" value="MM" maxlength="2" />
+        <input type="text" name="laufzeit_year" id="laufzeit_year" size="2" value="YY" maxlength="2" /></td>
+      </tr>
+      <tr>
+        <td align="right">%option% 1:</td>
+        <td><input type="text" name="op1" id="opt1" /></td>
+      </tr>
+      <tr>
+        <td align="right">%option% 2:</td>
+        <td><input type="text" name="op2" id="opt2" /></td>
+      </tr>
+      <tr>
+        <td align="right">%option% 3:</td>
+        <td><input type="text" name="op3" /></td>
+      </tr>
+      <tr>
+        <td align="right">%option% 4:</td>
+        <td><input type="text" name="op4" /></td>
+      </tr>
+      <tr>
+        <td align="right">%option% 5:</td>
+        <td><input type="text" name="op5" /></td>
+      </tr>
+      <tr>
+        <td align="right">%option% 6:</td>
+        <td><input type="text" name="op6" /></td>
+      </tr>
+      <tr>
+        <td align="right">%option% 7:</td>
+        <td><input type="text" name="op7" /></td>
+      </tr>
+      <tr>
+        <td align="right">%option% 8:</td>
+        <td><input type="text" name="op8" /></td>
+      </tr>
+      <tr>
+        <td align="right">%option% 9:</td>
+        <td><input type="text" name="op9" /></td>
+      </tr>
+      <tr>
+        <td align="right">%option% 10:</td>
+        <td><input type="text" name="op10" /></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td><select name="comments">
+          <option value="0">%disable_comments%</option>
+          <option value="1">%enable_user_comments%</option>
+          <option value="2" selected="selected">%enable_visitor_comments%</option>
+        </select></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td><input type="checkbox" name="intern" value="1" /> %intern%?</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td><input name="save" type="submit" value="%save_poll%" /></td>
+      </tr>
+    </table>
+    </td>
+  </tr>
+</table>
+</form>

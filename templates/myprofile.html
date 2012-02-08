@@ -1,0 +1,231 @@
+<script language="JavaScript" type="text/javascript">
+<!--
+function chkFormular() {
+	if(document.getElementById('nickname').value == "") {
+		alert("%you_have_to_nickname%");
+		document.getElementById('nickname').focus();
+   		return false;
+	}
+
+	if(document.getElementById('usernamenew').value == "") {
+		alert("%you_have_to_username%");
+		document.getElementById('usernamenew').focus();
+   		return false;
+	}
+
+	if(document.getElementById('firstname').value == "") {
+		alert("%you_have_to_firstname%");
+		document.getElementById('firstname').focus();
+		return false;
+	}
+
+	if(document.getElementById('b_day').value < 1 || document.getElementById('b_day').value > 31) {
+		alert("%you_have_to_bday%");
+		document.getElementById('b_day').focus();
+		return false;
+	}
+
+	if(document.getElementById('b_month').value < 1 || document.getElementById('b_month').value > 12) {
+		alert("%you_have_to_bday%");
+		document.getElementById('b_month').focus();
+		return false;
+	}
+
+	if(document.getElementById('b_year').value < 1900 || document.getElementById('b_year').value > 2050) {
+		alert("%you_have_to_bday%");
+		document.getElementById('b_year').focus();
+		return false;
+	}
+
+}
+-->
+</script>
+
+<form method="post" name="post" action="index.php?site=myprofile" enctype="multipart/form-data" onsubmit="return chkFormular()">
+<center>$showerror</center>
+<table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="$border">
+  <tr bgcolor="$bghead">
+    <td colspan="2" class="title">&nbsp; &#8226; %profile-info%:</td>
+  </tr>
+  <tr><td colspan="2" bgcolor="$pagebg"></td></tr>
+  <tr>
+    <td align="right" bgcolor="$bg1">%nickname%:*</td>
+    <td bgcolor="$bg2"><input type="text" name="nickname" id="nickname" value="$nickname" maxlength="30" size="30" /></td>
+  </tr>
+  <tr bgcolor="$bg2">
+    <td align="right" bgcolor="$bg3">%username%:*</td>
+    <td bgcolor="$bg4"><input name="usernamenew" type="text" id="usernamenew" value="$username" maxlength="30" size="30" /></td>
+  </tr>
+  <tr>
+    <td align="right" bgcolor="$bg1">%password%:</td>
+    <td bgcolor="$bg2">&#8226; <a href="index.php?site=myprofile&amp;action=editpwd">%edit_password%</a></td>
+  </tr>
+  <tr bgcolor="$bg2">
+    <td align="right" bgcolor="$bg3">%e-mail%:*</td>
+    <td bgcolor="$bg4">$email</td>
+  </tr>
+  <tr bgcolor="$bg2">
+    <td align="right" bgcolor="$bg3"></td>
+    <td bgcolor="$bg4">&#8226; <a href="index.php?site=myprofile&amp;action=editmail">%edit_mail%</a></td>
+  </tr>
+  <tr>
+    <td align="right" bgcolor="$bg1" valign="top">$viewavatar</td>
+    <td bgcolor="$bg2"><input name="avatar" type="file" size="30" />
+    <input class="input" name="delavatar" type="checkbox" value="1" />
+    <small>%delete_max_90_90%</small><br />%or%<br />
+    <input name="avatar_url" type="text" size="30" value="http://" /></td>
+  </tr>
+  <tr bgcolor="$bg4">
+    <td align="right" bgcolor="$bg3" valign="top">$viewpic</td>
+    <td bgcolor="$bg4"><input name="userpic" type="file" size="30" />
+    <input class="input" name="deluserpic" type="checkbox" value="1" />
+    <small>%delete_max_230_210%</small><br />%or%<br />
+    <input name="userpic_url" type="text" size="30" value="http://" /></td>
+  </tr>
+  <tr>
+    <td align="right" valign="top" bgcolor="$bg1">%signature%:</td>
+    <td bgcolor="$bg2"><textarea name="usertext" cols="70" rows="5" style="width:100%">$usertext</textarea></td>
+  </tr>
+  <tr><td colspan="2" bgcolor="$pagebg"></td></tr>
+  <tr bgcolor="$bghead">
+    <td colspan="2" class="title">&nbsp; &#8226; %personal-info%:</td>
+  </tr>
+  <tr><td colspan="2" bgcolor="$pagebg"></td></tr>
+  <tr>
+    <td align="right" bgcolor="$bg1">%first_name%:*</td>
+    <td bgcolor="$bg2"><input type="text" name="firstname" id="firstname" value="$firstname" size="30" /></td>
+  </tr>
+  <tr bgcolor="$bg2">
+    <td align="right" bgcolor="$bg3">%last_name%:</td>
+    <td bgcolor="$bg4"><input type="text" name="lastname" value="$lastname" size="30" /></td>
+  </tr>
+  <tr>
+    <td align="right" bgcolor="$bg1">%date_of_birth%:*</td>
+    <td bgcolor="$bg2"><input type="text" name="b_day" id="b_day" value="$b_day" size="2" />
+    .
+    <input type="text" name="b_month" id="b_month" value="$b_month" size="2" />
+    .
+    <input type="text" name="b_year" id="b_year" value="$b_year" size="4" /></td>
+  </tr>
+  <tr bgcolor="$bg2">
+    <td align="right" bgcolor="$bg3">%sexuality%:</td>
+    <td bgcolor="$bg4"><select name="sex">$sex</select></td>
+  </tr>
+  <tr>
+    <td align="right" bgcolor="$bg1">%country%:</td>
+    <td bgcolor="$bg2"><select name="flag" onchange="document.getElementById('county').src='images/flags/'+this.options[this.selectedIndex].value+'.gif'">$countries</select> $country</td>
+  </tr>
+  <tr>
+    <td align="right" bgcolor="$bg3">%town%:</td>
+    <td bgcolor="$bg4"><input type="text" name="town" size="30" value="$town" /></td>
+  </tr>
+  <tr bgcolor="$bg2">
+    <td align="right" bgcolor="$bg1">Icq#:</td>
+    <td bgcolor="$bg2"><input type="text" name="icq" value="$icq" size="30" /></td>
+  </tr>
+  <tr bgcolor="$bg3">
+    <td align="right" bgcolor="$bg3">%homepage%:</td>
+    <td bgcolor="$bg4"><input type="text" name="homepage" value="$homepage" size="30" maxlength="255" /></td>
+  </tr>
+  <tr bgcolor="$bg2">
+    <td align="right" valign="top" bgcolor="$bg1">%about_myself%:<br /><br />
+    <small><b>%options%:</b><br />%html%<br />%bbcode%<br />%smilies%</small></td>
+    <td bgcolor="$bg2"><textarea name="messageabout" cols="70" rows="8" style="width:100%">$about</textarea></td>
+  </tr>
+  <tr><td colspan="2" bgcolor="$pagebg"></td></tr>
+  <tr bgcolor="$bghead">
+    <td colspan="2" class="title">&nbsp; &#8226; %options%:</td>
+  </tr>
+  <tr><td colspan="2" bgcolor="$pagebg"></td></tr>
+  <tr bgcolor="$bg2">
+    <td align="right" bgcolor="$bg1">%newsletter%</td>
+    <td bgcolor="$bg2"><select name="newsletter">$newsletter</select></td>
+  </tr>
+  <tr bgcolor="$bg2">
+    <td align="right" bgcolor="$bg3">%language%</td>
+    <td bgcolor="$bg4"><select name="language">$langdirs</select></td>
+  </tr>
+  <tr bgcolor="$bg2">
+    <td align="right" bgcolor="$bg1">%mail_on_new_pm%</td>
+    <td bgcolor="$bg2"><select name="pm_mail">$pm_mail</select></td>
+  </tr>
+  <tr bgcolor="$bg2">
+    <td align="right" bgcolor="$bg3">%hide_e-mail%</td>
+    <td bgcolor="$bg4"><input type="checkbox" name="mail_hide" value="1"$email_hide /></td>
+  </tr>
+  <tr><td colspan="2" bgcolor="$pagebg"></td></tr>
+  <tr bgcolor="$bghead">
+    <td colspan="2" class="title">&nbsp; &#8226; %clan-info%:</td>
+  </tr>
+  <tr><td colspan="2" bgcolor="$pagebg"></td></tr>
+  <tr>
+    <td align="right" bgcolor="$bg1">%clan-tag%:</td>
+    <td bgcolor="$bg2"><input type="text" name="clantag" value="$clantag" size="30" /></td>
+  </tr>
+  <tr bgcolor="$bg2">
+    <td align="right" bgcolor="$bg3">%clan-name%:</td>
+    <td bgcolor="$bg4"><input type="text" name="clanname" value="$clanname" size="30" /></td>
+  </tr>
+  <tr>
+    <td align="right" bgcolor="$bg1">%clan-hp%:</td>
+    <td bgcolor="$bg2"><input type="text" name="clanhp" value="$clanhp" size="30" /></td>
+  </tr>
+  <tr bgcolor="$bg2">
+    <td align="right" bgcolor="$bg3">%clan-irc%:</td>
+    <td bgcolor="$bg4"><input type="text" name="clanirc" value="$clanirc" size="30" /></td>
+  </tr>
+  <tr>
+    <td align="right" bgcolor="$bg1">%clan-history%:</td>
+    <td bgcolor="$bg2"><input type="text" name="clanhistory" value="$clanhistory" size="30" /></td>
+  </tr>
+  <tr><td colspan="2" bgcolor="$pagebg"></td></tr>
+  <tr bgcolor="$bghead">
+    <td colspan="2" class="title">&nbsp; &#8226; %equipment-info%:</td>
+   </tr>
+   <tr><td colspan="2" bgcolor="$pagebg"></td></tr>
+   <tr>
+    <td align="right" bgcolor="$bg1">%cpu%:</td>
+    <td bgcolor="$bg2"><input type="text" name="cpu" value="$cpu" size="30" /></td>
+  </tr>
+  <tr>
+    <td align="right" bgcolor="$bg3">%mainboard%:</td>
+    <td bgcolor="$bg4"><input type="text" name="mainboard" value="$mainboard" size="30" /></td>
+  </tr>
+  <tr>
+    <td align="right" bgcolor="$bg1">%ram%:</td>
+    <td bgcolor="$bg2"><input type="text" name="ram" value="$ram" size="30" /></td>
+  </tr>
+  <tr>
+    <td align="right" bgcolor="$bg3">%monitor%:</td>
+    <td bgcolor="$bg4"><input type="text" name="monitor" value="$monitor" size="30" /></td>
+  </tr>
+  <tr>
+    <td align="right" bgcolor="$bg1">%graphiccard%:</td>
+    <td bgcolor="$bg2"><input type="text" name="graphiccard" value="$graphiccard" size="30" /></td>
+  </tr>
+  <tr>
+    <td align="right" bgcolor="$bg3">%soundcard%:</td>
+    <td bgcolor="$bg4"><input type="text" name="soundcard" value="$soundcard" size="30" /></td>
+  </tr>
+  <tr>
+    <td align="right" bgcolor="$bg1">%i-connection%:</td>
+    <td bgcolor="$bg2"><input type="text" name="connection" value="$connection" size="30" /></td>
+  </tr>
+  <tr>
+    <td align="right" bgcolor="$bg3">%keyboard%:</td>
+    <td bgcolor="$bg4"><input type="text" name="keyboard" value="$keyboard" size="30" /></td>
+  </tr>
+  <tr>
+    <td align="right" bgcolor="$bg1">%mouse%:</td>
+    <td bgcolor="$bg2"><input type="text" name="mouse" value="$mouse" size="30" /></td>
+  </tr>
+  <tr>
+    <td align="right" bgcolor="$bg3">%mousepad%:</td>
+    <td bgcolor="$bg4"><input type="text" name="mousepad" value="$mousepad" size="30" /></td>
+  </tr>
+  <tr bgcolor="$bghead">
+    <td bgcolor="$bg1"></td>
+    <td bgcolor="$bg2"><input type="submit" name="submit" value="%update_profile%" /><br /><br />%fields_star_required%</td>
+  </tr>
+</table>
+</form>

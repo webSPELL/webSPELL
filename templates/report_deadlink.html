@@ -1,0 +1,24 @@
+<form action="index.php?site=report" name="report_$type_$id" method="post">
+<input type="hidden" name="mode" value="$mode" />
+<input type="hidden" name="type" value="$type" />
+<input type="hidden" name="id" value="$id" />
+<input type="hidden" name="referer" value="$referer" />
+<table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="$border">
+  <tr>
+    <td align="center" class="title" colspan="3">%report_dead_link%</td>
+  </tr>
+  <tr><td bgcolor="$pagebg"></td></tr>
+  <tr>
+    <td bgcolor="$bg1">%leave_description%</td>
+  </tr>
+  <tr>
+    <td bgcolor="$bg2" align="center"><textarea name="description" cols="60" rows="5"></textarea>
+    <br />$captcha_form</td>
+  </tr>
+  <tr>
+    <td bgcolor="$bg1" align="center">
+    <input type="submit" name="confirm" value="%report%" />
+    <input type="reset" name="reset" value="%reset%" /></td>
+  </tr>
+</table>
+</form>

@@ -1,0 +1,109 @@
+<table width="100%" border="0" cellspacing="0" cellpadding="1" bgcolor="$border">
+  <tr bgcolor="$bghead">
+    <td class="title">&nbsp; &#8226; %userinformations%</td>
+  </tr>
+  <tr><td bgcolor="$pagebg"></td></tr>
+  <tr bgcolor="$bgcat">
+    <td>
+    <table width="100%" border="0" cellspacing="1" cellpadding="2">
+      <tr>
+        <td bgcolor="$bg1" width="20%">%user%:</td>
+        <td bgcolor="$bg2" width="30%">$username</td>
+        <td width="1%" bgcolor="$bgcat"></td>
+        <td bgcolor="$bg3" width="20%">%messenger%:</td>
+        <td bgcolor="$bg4"><a href="index.php?site=messenger">$newmessages</a></td>
+      </tr>
+      <tr>
+        <td bgcolor="$bg3">%last_login%:</td>
+        <td bgcolor="$bg4">$lastlogin</td>
+        <td bgcolor="$bgcat"></td>
+        <td bgcolor="$bg1">%new_topics%:</td>
+        <td bgcolor="$bg2">$new_topics</td>
+      </tr>
+      <tr>
+        <td bgcolor="$bg1">%registered%:</td>
+        <td bgcolor="$bg2">$registerdate</td>
+        <td bgcolor="$bgcat"></td>
+        <td bgcolor="$bg3">%new_posts%:</td>
+        <td bgcolor="$bg4">$new_posts</td>
+      </tr>
+    </table>
+    </td>
+  </tr>
+  $referer_uri
+  <tr><td bgcolor="$pagebg"></td></tr>
+  <tr>
+    <td class="title" bgcolor="$bghead">&nbsp; &#8226; %upcoming%</td>
+  </tr>
+  <tr><td bgcolor="$pagebg"></td></tr>
+  <tr>
+    <td bgcolor="$bgcat" align="center">
+    <table border="0" align="center" width="100%">
+      $clanwars
+      <tr>
+        <td colspan="3"><b>%upcoming_events%</b><br />&nbsp;</td>
+      </tr>
+      <tr>
+        <td align="center">
+        <table border="0" width="98%" cellpadding="2">
+          <tr>
+            <td><b>%name%:</b></td>
+            <td><b>%from%:</b></td>
+            <td><b>%until%:</b></td>
+            <td width="20%"><b>%location%:</b></td>
+            <td width="10%"><b>%info%:</b></td>
+          </tr>
+          $events
+        </table>
+        </td>
+      </tr>
+    </table>
+    </td>
+  </tr>
+  <tr><td bgcolor="$pagebg"></td></tr>
+  <tr bgcolor="$bghead">
+    <td class="title">&nbsp; &#8226; %usermenu%</td>
+  </tr>
+  <tr><td bgcolor="$pagebg"></td></tr>
+  <tr>
+    <td bgcolor="$bgcat" align="center">
+    <table border="0" align="center">
+      <tr>
+        $cashboxpic
+        <td align="right"><a href="index.php?site=buddys"><img src="images/icons/buddys.gif" border="0" alt="Buddys" /></a></td>
+        <td width="10"></td>
+        <td><a href="index.php?site=messenger"><img src="images/icons/messenger.gif" border="0" alt="Messenger" /></a></td>
+      </tr>
+      <tr>
+        $admincenterpic
+        <td align="right"><a href="index.php?site=myprofile"><img src="images/icons/edit_profil.gif" border="0" alt="Edit Profil" /></a></td>
+        <td width="10"></td>
+        <td><a href="logout.php"><img src="images/icons/logout.gif" border="0" alt="Logout" /></a></td>
+      </tr>
+    </table>
+    </td>
+  </tr>
+  <tr><td bgcolor="$pagebg"></td></tr>
+  <tr>
+    <td class="title" bgcolor="$bghead">&nbsp; &#8226; %new_in_forum%</td>
+  </tr>
+  <tr><td bgcolor="$pagebg"></td></tr>
+  <tr>
+    <td width="50%" bgcolor="$bgcat">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr valign="top">
+        <td width="50%"><img src="images/icons/latest_topics.gif" alt="Latest Topics" border="0" /><br /><br />
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          $topiclist
+        </table>
+        </td>
+        <td width="50%"><img src="images/icons/latest_posts.gif" alt="Latest Posts" border="0" /><br /><br />
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          $postlist
+        </table>
+        </td>
+      </tr>
+    </table>
+    </td>
+  </tr>
+</table>

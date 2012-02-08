@@ -1,0 +1,53 @@
+<script language="JavaScript" type="text/javascript">
+<!--
+function chkFormular() {
+	if(document.getElementById('message').value == "") {
+		alert("You have to enter a message!");
+		document.getElementById('message').focus();
+   		return false;
+	}
+}
+-->
+</script>
+
+<form method="post" action="messenger.php" id="post" name="post" onsubmit="return chkFormular()">
+<div align="left">
+<table cellpadding="5" cellspacing="1" bgcolor="$pagebg">
+  <tr>
+    <td bgcolor="$border"><a class="titlelink" href="index.php?site=messenger">%incoming%</a></td>
+    <td bgcolor="$border"><a class="titlelink" href="index.php?site=messenger&action=outgoing">%outgoing%</a></td>
+    <td bgcolor="$bgcat"><b>&nbsp;%new_message%&nbsp;</b></td>
+  </tr>
+</table>
+</div>
+<table width="100%" border="0" cellspacing="1" cellpadding="2" bgcolor="$pagebg">
+  <tr><td bgcolor="$bgcat"></td></tr>
+  <tr>
+    <td bgcolor="$bg1">
+    <table width="100%" border="0" align="center" cellpadding="2" cellspacing="0">
+      <tr>
+        <td colspan="4"><b>%recipient%</b> $tousernick</td>
+      </tr>
+      <tr>
+        <td colspan="4"><b>%title%</b><br /><input name="title" type="text" size="60" /></td>
+      </tr>
+      <tr>
+        <td colspan="4">$addbbcode</td>
+      </tr>
+      <tr>
+        <td colspan="4"><b>%your_message%</b><br /> <textarea name="message" id="message" cols="35" rows="15" style="width:99%;"></textarea></td>
+      </tr>
+      <tr>
+        <td valign="top"><small><b>%options%</b><br />
+        %html%<br />
+        <a href="javascript:MM_openBrWindow('code.php','BBCode','scrollbars=yes,width=600,height=500')">%bbcode%</a><br />
+        <a href="javascript:MM_openBrWindow('smileys.php','Smileys','scrollbars=yes,width=340,height=500')">%smilies%</a></small></td>
+        <td colspan="3" valign="bottom" align="right">
+        <input type="hidden" name="id" value="$touser" />
+        <input name="reply" type="submit" value="%send_message%" /></td>
+      </tr>
+    </table>
+    </td>
+  </tr>
+</table>
+</form>

@@ -1,0 +1,146 @@
+body {
+  margin: 0px;
+  background: #A7A7A7 url(images/bg.gif) repeat-x;
+  font: normal 13px Verdana, Arial, Helvetica, sans-serif;
+  color: #2e2e2e;
+}
+
+a, a:visited, a:active {
+  color: #0e8aea;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #000000;
+  text-decoration: none;
+}
+
+small {
+  font-size: 10px;
+}
+
+.steps {
+  margin:0px 28px 0px 28px;
+}
+
+.steps.start {
+  margin-left:0px;
+}
+
+.steps.end {
+  margin-right:0px;
+}
+
+.steps#active {
+  background: url(images/step.jpg);
+  padding: 4px 5px 3px 5px;
+  color: #ffffff;
+}
+
+img { border: 0px; }
+
+.padding img {
+	padding:0px 2px 0px 2px;
+}
+
+#head {
+  background-image: url(images/1.jpg);
+  padding-left: 287px;
+  height: 92px;
+  font-size: 18px;
+  color: #ffffff;
+}
+
+#step {
+  background-image: url(images/2.jpg);
+  padding: 0 12px;
+  height: 23px;
+  font-weight: bold;
+}
+
+#headline {
+  background-image: url(images/3.jpg);
+  height: 23px;
+  font-weight: bold;
+  color: #ffffff;
+}
+#title {
+  padding-left: 12px;
+}
+
+#content {
+  background-color: #ffffff;
+  padding: 8px 10px;
+}
+
+#links ul {
+  display: inline;
+  list-style-type: none;
+}
+
+#links ul li {
+  float: left;
+  margin-left: 40px;
+}
+
+#links a {
+  display: block;
+  height: 92px;
+  background-position: right bottom;
+  background-repeat: no-repeat;
+}
+
+#links ul li:hover a {
+  background-position: right top;
+}
+
+#links .link1 {
+  background-image: url(images/support.jpg);
+  width: 107px;
+}
+
+#links .link2 {
+  background-image: url(images/licence.jpg);
+  width: 153px;
+}
+
+#links .link3 {
+  background-image: url(images/info.jpg);
+  width: 48px;
+}
+
+a.tooltip, a.tooltip:link, a.tooltip:visited, a.tooltip:active {
+  position: relative;
+  text-decoration: none;
+}
+
+a.tooltip span {
+  display: none;
+  text-decoration: none;
+}
+
+a.tooltip:hover span {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 25px;
+  width: 200px;
+  border-left: 4px solid #0e8aea;
+  padding: 4px 10px;
+  background: #eeeeee;
+  font-size: 10px;
+  z-index: 300;
+}
+
+form {
+  border: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+textarea, input, select, file {
+  border: 1px #bbbbbb solid;
+  color: #666666;
+  padding: 2px;
+  background-color: #ffffff;
+}

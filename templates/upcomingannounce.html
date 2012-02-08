@@ -1,0 +1,10 @@
+<form method="post" action="calendar.php?action=saveannounce">
+%announce_to%
+<select name="status">
+  <option value="y" selected="selected">%yes%</option>
+  <option value="n">%no%</option>
+  <option value="p">%perhaps%</option>
+</select>
+<input type="hidden" name="upID" value="$upID" />
+<input type="submit" name="submit" value="%save_announcement%" />
+</form>

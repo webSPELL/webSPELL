@@ -1,0 +1,82 @@
+<table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="$border">
+  <tr>
+    <td colspan="2" bgcolor="$bghead" class="title">%details%:</td>
+  </tr>
+  <tr><td colspan="2" bgcolor="$pagebg"></td></tr>
+  <tr>
+    <td width="20%" align="right" bgcolor="$bg1">%date%:</td>
+    <td bgcolor="$bg2">$date</td>
+  </tr>
+  <tr>
+    <td bgcolor="$bg3" align="right">%game% / %squad%:</td>
+    <td bgcolor="$bg4">$game $squad</td>
+  </tr>
+  <tr>
+    <td bgcolor="$bg1" align="right">%opponent%:</td>
+    <td bgcolor="$bg2">$opponent</td>
+  </tr>
+  <tr>
+    <td bgcolor="$bg3" align="right">%league%:</td>
+    <td bgcolor="$bg4">$league <a href="http://$linkpage" target="_blank">[%matchlink%]</a></td>
+  </tr>
+  <tr>
+    <td bgcolor="$bg1" align="right">%maps%:</td>
+    <td bgcolor="$bg2">$maps</td>
+  </tr>
+  <tr>
+    <td bgcolor="$bg3" align="right" valign="top">%result%:</td>
+    <td bgcolor="$bg4">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="30%">%map%</td>
+        <td colspan="3">%result%</td>
+        <td width="50%"></td>
+      </tr>
+      $extendedresults
+      <tr>
+        <td colspan="5">&nbsp;</td>
+      </tr>
+      <tr>
+        <td bgcolor="$bg1" width="120">%total%</td>
+        <td bgcolor="$bg2" width="50" align="right"><b>$results_1</b></td>
+	  	<td bgcolor="$bg1" width="5" align="center"><b>:</b></td>
+	  	<td bgcolor="$bg2" width="50" align="left"><b>$results_2</b></td>
+        <td bgcolor="$bg1"></td>
+      </tr>
+    </table>
+    </td>
+  </tr>
+  <tr>
+    <td bgcolor="$bg1" align="right">$myclantag %team%:</td>
+    <td bgcolor="$bg2">$hometeam</td>
+  </tr>
+  <tr>
+    <td bgcolor="$bg3" align="right">$opptag %team%:</td>
+    <td bgcolor="$bg4">$oppteam</td>
+  </tr>
+  <tr>
+    <td bgcolor="$bg1" align="right">%server%:</td>
+    <td bgcolor="$bg2">$server</td>
+  </tr>
+  <tr>
+    <td bgcolor="$bg3" align="right">%hltv_server%:</td>
+    <td bgcolor="$bg4">$hltv</td>
+  </tr>
+  <tr>
+    <td align="right" bgcolor="$bg1">%screenshots%:</td>
+    <td bgcolor="$bg2">$screenshots</td>
+  </tr>
+  <tr><td colspan="2" bgcolor="$pagebg"></td></tr>
+  <tr>
+    <td colspan="2" bgcolor="$bghead" class="title">%report%:</td>
+  </tr>
+  <tr><td bgcolor="$pagebg" colspan="2"></td></tr>
+  <tr>
+    <td bgcolor="$bg1" colspan="2">$report</td>
+  </tr>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="2">
+  <tr>
+    <td align="right">$adminaction</td>
+  </tr>
+</table>

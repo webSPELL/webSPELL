@@ -1,0 +1,59 @@
+<script language="JavaScript" type="text/javascript">
+<!--
+function chkFormular() {
+	if(document.getElementById('message').value == "") {
+		alert("%enter_message%");
+		document.getElementById('message').focus();
+   		return false;
+	}
+	if(!validbbcode(document.getElementById('message').value)){
+		return false;
+	}
+}
+
+-->
+</script>
+
+<form method="post" action="messenger.php" id="post" name="post" onsubmit="return chkFormular()">
+<div align="left">
+<table cellpadding="5" cellspacing="1" bgcolor="$pagebg">
+  <tr>
+    <td bgcolor="$border"><a class="titlelink" href="index.php?site=messenger">%incoming%</a></td>
+    <td bgcolor="$border"><a class="titlelink" href="index.php?site=messenger&amp;action=outgoing">%outgoing%</a></td>
+    <td bgcolor="$bgcat"><b>&nbsp;%new_message%&nbsp;</b></td>
+  </tr>
+</table>
+</div>
+<table width="100%" border="0" cellspacing="1" cellpadding="2" bgcolor="$pagebg">
+  <tr><td bgcolor="$bgcat"></td></tr>
+  <tr>
+    <td bgcolor="$bg1">$error
+    <table width="100%" border="0" align="center" cellpadding="4" cellspacing="0">
+      <tr>
+        <td colspan="2" valign="top"><b>%title%</b><br /><input name="title" value="$subject" type="text" size="60" /></td>
+      </tr>
+      <tr>
+        <td valign="top"><b>%recipient%</b><br /><i>%enter_username%</i><br />
+        <input name="touser_field" type="text" size="60" /></td>
+        <td width="50%" valign="bottom"><i>%select_buddylist%</i><br /><select name="touser[]" size="1">$user</select></td>
+      </tr>
+      <tr>
+        <td colspan="2"><b>%formation%</b><br />$addbbcode</td>
+      </tr>
+      <tr>
+        <td colspan="2"><b>%your_message%</b><br />
+        <textarea name="message" id="message" cols="35" rows="10" style="width:99%;">$message</textarea></td>
+      </tr>
+      <tr>
+        <td valign="top"><small><b>%options%</b><br />
+        %html%<br />
+        <a href="javascript:MM_openBrWindow('code.php','BBCode','scrollbars=yes,width=600,height=500')">%bbcode%</a><br />
+        <a href="javascript:MM_openBrWindow('smileys.php','Smileys','scrollbars=yes,width=340,height=500')">%smilies%</a></small></td>
+        <td align="right" valign="bottom">$admin<br /><br />
+        <input type="submit" name="send" value="%send_message%" /></td>
+      </tr>
+    </table>
+    </td>
+  </tr>
+</table>
+</form>

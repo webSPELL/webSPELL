@@ -1,0 +1,106 @@
+<br />
+<table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="$border">
+  <tr bgcolor="$bghead">
+    <td class="title">%search_title%</td>
+  </tr>
+  <tr><td bgcolor="$pagebg"></td></tr>
+  <tr bgcolor="$bg1">
+    <td>
+    <form name="post" method="get" action="search.php" onsubmit="return formcheck_onsend('text');">
+    <table width="100%" border="0" align="center" cellpadding="2" cellspacing="0">
+      <tr>
+        <td colspan="2"><b>%search_location%</b></td>
+      </tr>
+      <tr>
+        <td>%search_in%</td><td>
+        <input type="checkbox" class="input" name="articles" value="true" checked="checked" />
+        %articles%
+		  <input type="checkbox" class="input" name="faq" value="true" checked="checked" />
+        %faq%
+        <input type="checkbox" class="input" name="forum" value="true" checked="checked" />
+        %forum%
+        <input type="checkbox" class="input" name="news" value="true" checked="checked" />
+        %news%</td>
+      </tr>
+      <tr>
+        <td colspan="2"><hr /></td>
+      </tr>
+      <tr>
+        <td colspan="2"><b>%keyword%</b></td>
+      </tr>
+      <tr>
+        <td>%text_contains%:</td>
+        <td><input id="text" name="text" type="text" style="width: 90%;" value="$text" /></td>
+      </tr>
+      <tr>
+        <td colspan="2"><hr /></td>
+      </tr>
+      <tr>
+        <td colspan="2"><b>%options%</b></td>
+      </tr>
+      <tr>
+        <td>%result_quantity%:</td>
+        <td><select name="r">
+          <option value="100">100</option>
+          <option value="50">50</option>
+          <option value="25">25</option>
+          <option value="10">10</option>
+        </select></td>
+      </tr>
+      <tr>
+        <td>%sort_options%:</td>
+        <td><input type="radio" name="order" value="1" checked="checked" />%descending%
+        <input type="radio" name="order" value="2" />%ascending%</td>
+      </tr>
+      <tr>
+        <td>%date_options%:</td>
+        <td>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="70">%after%</td>
+            <td><input name="ad" type="text" size="2" />
+            .
+            <input name="am" type="text" size="2" />
+            .
+            <input name="ay" type="text" size="4" />
+            dd.mm.yyyy</td>
+          </tr>
+        </table>
+        </td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="70">%before%</td>
+            <td><input name="bd" type="text" size="2" />
+            .
+            <input name="bm" type="text" size="2" />
+            .
+            <input name="by" type="text" size="4" />
+            dd.mm.yyyy</td>
+          </tr>
+        </table>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2"><hr /></td>
+      </tr>
+      <tr> 
+        <td><b>%security_code%:</b></td>
+        <td>$captcha
+        	<br /><input type="text" name="captcha" size="10" /><input name="captcha_hash" type="hidden" value="$hash" /></td>
+      </tr>
+      <tr>
+        <td colspan="2"><hr /></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td><input type="submit" value="%start_search%" /></td>
+      </tr>
+    </table>
+    </form>
+    </td>
+  </tr>
+</table>

@@ -1,0 +1,41 @@
+##########################################################################
+#                                                                        #
+#           Version 4       /                        /   /               #
+#          -----------__---/__---__------__----__---/---/-               #
+#           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
+#          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
+#                       Free Content / Management System                 #
+#                                   /                                    #
+#                                                                        #
+#                                                                        #
+#   Copyright 2005-2011 by webspell.org                                  #
+#                                                                        #
+#   visit webSPELL.org, webspell.info to get webSPELL for free           #
+#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to remove this copyright-tag                      #
+#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
+#                                                                        #
+#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
+#   Far Development by Development Team - webspell.org                   #
+#                                                                        #
+#   visit webspell.org                                                   #
+#                                                                        #
+##########################################################################
+
+Special thanks for translating the language files to:
+
+cz: Masterbill / Jindřich Rubeš (masterbill.nejweb.net) & draxt0rm (www.neotokyo.czde)
+de: webspell.org
+dk: Edgar R. Zakarjan (www.moonblood.dk) & F1skr / Mikkel Oscar Larsen (www.vip-gaming.net)
+es: plater.es & Freeman25 (www.freemansworld.de) 
+fr: Vache / Romain (www.webspell.fr) & BiBou / Dimitri Averty / uRl_ (www.webspell.fr) & webspell.org
+hr: bukse / Ivan Puljić (www.ofp-clan.com)
+hu: Paudics Péter & N\baNci (www.counter-strike.hu)
+it: eXor
+lt: Andrejus Ponomariovas 
+nl: Niek Dam & innovizion (www.innovizion.net)
+se: Senad Sosa (www.blackfade.org)
+sk: Juraj (www.bkmcrew.eu) 
+uk: webspell.org
+pt: SAM|DoDoT (www.sam-clan.com)
+pl: spec8320 & HasH

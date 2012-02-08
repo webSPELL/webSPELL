@@ -1,0 +1,118 @@
+<script language="JavaScript" type="text/javascript">
+<!--
+var topic_submit = false;
+function chkFormular() {
+	if(document.getElementById('topicname').value == "") {
+		alert("%enter_topic%");
+		document.getElementById('topicname').focus();
+   		return false;
+	}
+	
+	if(document.getElementById('message').value == "") {
+		alert("%enter_text%");
+		document.getElementById('message').focus();
+   		return false;
+	}
+	if(!validbbcode(document.getElementById('message').value)){
+		return false;
+	}
+	if(topic_submit == true){
+		return false;
+	}
+	topic_submit = true;
+}
+	
+function ChangeFormAction() {
+	if(document.getElementById('preview').checked == true) {
+		document.post.action = "index.php?site=forum&addtopic=true";
+	}
+	else {
+		document.post.action = "forum.php";
+	}
+}
+-->
+</script>
+
+<form action="forum.php" method="post" id="post" name="post" onsubmit="return chkFormular()">
+<table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="$border">
+  <tr>
+    <td class="title" align="center" bgcolor="$bghead">%new_topic%</td>
+  </tr>
+  <tr><td bgcolor="$pagebg"></td></tr>
+  <tr>
+    <td bgcolor="$bg1">
+    <table width="100%" align="center" cellpadding="2" cellspacing="0">
+      <tr>
+        <td colspan="2">
+        <table width="100%" cellpadding="0" cellspacing="0">
+          <tr>
+            <td colspan="15"><b>%topic_icon%:</b></td>
+          </tr>
+          <tr><td colspan="8"></td></tr>
+          <tr bgcolor="$bg1">
+            <td><input type="radio" class="input" name="icon" value="ausrufezeichen.gif" />
+            <img src="images/icons/topicicons/ausrufezeichen.gif" width="15" height="15" alt="" /></td>
+            <td><input type="radio" class="input" name="icon" value="biggrin.gif" />
+            <img src="images/icons/topicicons/biggrin.gif" width="15" height="15" alt="" /></td>
+            <td><input type="radio" class="input" name="icon" value="boese.gif" />
+            <img src="images/icons/topicicons/boese.gif" width="15" height="15" alt="" /></td>
+            <td><input type="radio" class="input" name="icon" value="bored.gif" />
+            <img src="images/icons/topicicons/bored.gif" width="15" height="15" alt="" /></td>
+            <td><input type="radio" class="input" name="icon" value="cool.gif" />
+            <img src="images/icons/topicicons/cool.gif" width="15" height="15" alt="" /></td>
+            <td><input type="radio" class="input" name="icon" value="eek.gif" />
+            <img src="images/icons/topicicons/eek.gif" width="15" height="15" alt="" /></td>
+            <td><input type="radio" class="input" name="icon" value="frage.gif" />
+            <img src="images/icons/topicicons/frage.gif" width="15" height="15" alt="" /></td>
+            <td><input type="radio" class="input" name="icon" value="frown.gif" />
+            <img src="images/icons/topicicons/frown.gif" width="15" height="15" alt="" /></td>
+          </tr>
+          <tr bgcolor="$bg1">
+            <td><input type="radio" class="input" name="icon" value="lampe.gif" />
+            <img src="images/icons/topicicons/lampe.gif" width="15" height="15" alt="" /></td>
+            <td><input type="radio" class="input" name="icon" value="mad.gif" />
+            <img src="images/icons/topicicons/mad.gif" width="15" height="15" alt="" /></td>
+            <td><input type="radio" class="input" name="icon" value="pfeil.gif" />
+            <img src="images/icons/topicicons/pfeil.gif" width="15" height="15" alt="" /></td>
+            <td><input type="radio" class="input" name="icon" value="smile.gif" />
+            <img src="images/icons/topicicons/smile.gif" width="15" height="15" alt="" /></td>
+            <td><input type="radio" class="input" name="icon" value="text.gif" />
+            <img src="images/icons/topicicons/text.gif" width="15" height="15" alt="" /></td>
+            <td><input type="radio" class="input" name="icon" value="thumb_down.gif" />
+            <img src="images/icons/topicicons/thumb_down.gif" width="15" height="15" alt="" /></td>
+            <td><input type="radio" class="input" name="icon" value="thumb_up.gif" />
+            <img src="images/icons/topicicons/thumb_up.gif" width="15" height="15" alt="" /></td>
+            <td><input type="radio" class="input" name="icon" value="wink.gif" />
+            <img src="images/icons/topicicons/wink.gif" width="15" height="15" alt="" /></td>
+          </tr>
+          <tr bgcolor="$bg1">
+            <td colspan="4"><input type="radio" class="input" name="icon" value="0" checked='checked' /> %no_icon%</td>
+          </tr>
+        </table>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2"><b>%subject%:</b><br /><input name="topicname" type="text" id="topicname" style="width:99%;" value="$topicname" size="45" /></td>
+      </tr>
+      <tr>
+        <td colspan="2">$addbbcode</td>
+      </tr>
+      <tr>
+        <td colspan="2"><textarea name="message" id="message" rows="10" cols="35" style="width:99%;">$message</textarea></td>
+      </tr>
+      <tr>
+        <td colspan="2"><small><b>%options%:</b> &#8226; %html_off% &#8226; %bbcode_on% &#8226; %smilies_on%</small></td>
+      </tr>
+      <tr>
+        <td><input class="input" type="checkbox" name="notify" $notify value="1" /> %notify%<br />
+        <input class="input" type="checkbox" name="preview" id="preview" value="1" onclick="ChangeFormAction()" /> %preview% $chk_sticky</td>
+        <td align="right" valign="bottom"><input type="hidden" name="board" value="$board" />
+        <input type="hidden" name="userID" value="$userID" />
+        <input type="hidden" name="addtopic" value="true" />
+        <input name="newtopic" id="add_topic_submit" type="submit" value="%post_new_topic%" /></td>
+      </tr>
+    </table>
+    </td>
+  </tr>
+</table>
+</form>

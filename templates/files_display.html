@@ -1,0 +1,55 @@
+$adminactions
+<table width="100%" cellpadding="2" cellspacing="0" border="0" bgcolor="$border">
+  <tr>
+    <td bgcolor="$bghead" colspan="2" class="title">&nbsp; &#8226; <a href="index.php?site=files" class="titlelink">%files_cl%</a> >> $category >> $filename</td>
+	</tr>
+  <tr><td bgcolor="$pagebg" colspan="2"></td></tr>
+	<tr>
+		<td bgcolor="$bg2" valign="top" width="25%">%info_description%:</td>
+		<td bgcolor="$bg2" valign="top">$fileinfo</td>
+	</tr>
+	<tr>
+		<td bgcolor="$bg1" valign="top">%category_cl%:</td>
+		<td bgcolor="$bg1" valign="top">$categories</td>
+	</tr>
+	<tr>
+		<td bgcolor="$bg2" valign="top">%uploader%:</td>
+		<td bgcolor="$bg2" valign="top">$uploader</td>
+	</tr>
+	<tr>
+		<td bgcolor="$bg1" valign="top">%uploaded_on%:</td>
+		<td bgcolor="$bg1" valign="top">$date</td>
+	</tr>
+	<tr>
+		<td bgcolor="$bg2" valign="top">%rating%:</td>
+		<td bgcolor="$bg2" valign="top">$ratingpic ($rating$filevotes)</td>
+	</tr>
+	<tr>
+		<td bgcolor="$bg1" valign="top">&nbsp;</td>
+		<td bgcolor="$bg1" valign="top">$rateform</td>
+	</tr>
+	<tr>
+		<td bgcolor="$bg2" valign="top">%size%:</td>
+		<td bgcolor="$bg2" valign="top">$filesize</td>
+	</tr>
+	<tr>
+		<td bgcolor="$bg1" valign="top">%downloads_cl%:</td>
+		<td bgcolor="$bg1" valign="top">$downloads x</td>
+	</tr>
+	<tr>
+		<td bgcolor="$bg2" valign="top">%traffic_cl%:</td>
+		<td bgcolor="$bg2" valign="top">$traffic</td>
+	</tr>
+	<tr>
+		<td bgcolor="$bg1" valign="top">%mirrors%:</td>
+		<td bgcolor="$bg1" valign="top">$mirrorlist</td>
+	</tr>
+	<tr>
+		<td bgcolor="$bg2" valign="top" align="center" colspan="2">$reportlink</td>
+	</tr>
+  <tr><td bgcolor="$pagebg" colspan="2"></td></tr>
+	<tr>
+		<td bgcolor="$bg1" height="25" colspan="2" align="center">$link</td>
+	</tr>
+	$admintools
+</table>

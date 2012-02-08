@@ -1,0 +1,38 @@
+<a name="picture"></a><table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="$border">
+  <tr bgcolor="$bghead">
+    <td class="title">&nbsp; &#8226; <a href="index.php?site=gallery" class="titlelink">%gallery%</a> &gt;&gt; $group &gt;&gt; $gallery &gt;&gt; $picturename</td>
+  </tr>
+  <tr><td bgcolor="$pagebg"></td></tr>
+  <tr bgcolor="$bgcat">
+    <td align="center">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2">
+      <tr bgcolor="$bgcat">
+        <td align="left" width="33%">$backward</td>
+        <td align="center" width="33%"><a href="index.php?site=gallery&amp;galleryID=$ds[galleryID]">[%gallery%]</a></td>
+        <td align="right" width="33%">$forward</td>
+      </tr>
+    </table>
+    </td>
+  </tr>
+  <tr bgcolor="$bgcat">
+    <td align="center"><a href="javascript:MM_openBrWindow('gallery.php?action=window&amp;galleryID=$ds[galleryID]&amp;picID=$picID','webspell_gallery','toolbar=no,status=no,scrollbars=yes,width=$xwindowsize,height=$ywindowsize')"><img src="picture.php?id=$picID" border="0" $width alt="" /></a><br /><small>($views %views%, $xsize x $ysize px, $filesize kByte)</small><br /><br />$comment<br /><br />
+    <table width="100%" border="0" cellspacing="0" cellpadding="2">
+      <tr>
+        <td align="left">%rating%: $ratingpic ($votes %votes%)<br /><br />$rateform</td>
+        <td align="right" valign="bottom">$adminaction</td>
+      </tr>
+    </table>
+    </td>
+  </tr>
+  <tr bgcolor="$bgcat">
+    <td align="center">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2">
+      <tr bgcolor="$bgcat">
+        <td align="left" width="33%">$backward</td>
+        <td align="center" width="33%"><a href="index.php?site=gallery&amp;galleryID=$ds[galleryID]">[%gallery%]</a></td>
+        <td align="right" width="33%">$forward</td>
+      </tr>
+    </table>
+    </td>
+  </tr>
+</table>

@@ -1,0 +1,57 @@
+<table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="$border">
+  <tr bgcolor="$bghead">
+    <td class="title">&nbsp; &#8226; %title_contact%</td>
+  </tr>
+  <tr><td bgcolor="$pagebg"></td></tr>
+  <tr bgcolor="$bg1">
+    <td>
+    <table width="100%" border="0" cellspacing="0" cellpadding="2">
+      <tr>
+        <td>%description%<br /><br />
+        <div align="center">
+        $showerror
+        </div>
+        <form action="index.php?site=contact" method="post">
+        <input type="hidden" name="action" value="send" />
+        <table width="75%" border="0" cellspacing="0" cellpadding="2" align="center">
+          <tr>
+            <td>%receiver%</td>
+            <td><select name="getemail">$getemail</select></td>
+          </tr>
+			 <tr>
+            <td>%name%</td>
+            <td><input name="name" value="$name" size="40" /></td>
+          </tr>
+          <tr>
+            <td>%mail%</td>
+            <td><input name="from" value="$from" size="40" /></td>
+          </tr>
+          <tr>
+            <td>%subject%</td>
+            <td><input name="subject" value="$subject" size="40" /></td>
+          </tr>
+          <tr>
+            <td>%message%</td>
+            <td><textarea name="text" cols="50" rows="6" style="width:99%;">$text</textarea></td>
+          </tr>
+          <tr> 
+            <td>%security_code%:</td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr> 
+            <td>$captcha</td>
+            <td><input type="text" name="captcha" size="10" /><input name="captcha_hash" type="hidden" value="$hash" /></td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+            <td><center><input type="submit" value="%send%" />
+            <input type="reset" value="%reset%" /></center></td>
+          </tr>
+        </table>
+        </form>
+        </td>
+      </tr>
+    </table>
+    </td>
+  </tr>
+</table>

@@ -1,0 +1,49 @@
+<script language="JavaScript" type="text/javascript">
+<!--
+function chkFormular() {
+	if(document.getElementById('message').value == "") {
+		alert("%enter_text%");
+		document.getElementById('message').focus();
+   		return false;
+	}
+	if(!validbbcode(document.getElementById('message').value)){
+		return false;
+	}
+	
+}
+-->
+</script>
+
+<form action="forum_topic.php?board=$dr[boardID]&amp;topic=$topic&amp;page=$page" method="post" id="post" name="post" onsubmit="return chkFormular()">
+<table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="$border">
+  <tr>
+    <td class="title" align="center" bgcolor="$bghead">%edit_reply%</td>
+  </tr>
+  <tr><td bgcolor="$pagebg"></td></tr>
+  <tr>
+    <td bgcolor="$bg1">
+    <table width="100%" border="0" align="center" cellpadding="2" cellspacing="0">
+      <tr>
+        <td colspan="2">$addbbcode</td>
+      </tr>
+      <tr>
+        <td colspan="2"><b>%message%:</b></td>
+      </tr>
+      <tr>
+        <td colspan="2"><textarea name="message" id="message" rows="10" cols="50" style="width:99%;">$dr[message]</textarea></td>
+      </tr>
+      <tr>
+        <td colspan="2" align="left"><small><b>%options%:</b> &#8226; %html_off% &#8226; %bbcode_on% &#8226; %smilies_on%</small></td>
+      </tr>
+      <tr>
+        <td width="70%">$notify
+        $chk_sticky</td>
+        <td align="right"><input type="hidden" name="page" value="$page" />
+        <input type="hidden" name="id" value="$id" />
+        <input type="submit" name="editreply" value="%edit_reply%" /></td>
+      </tr>
+    </table>
+    </td>
+  </tr>
+</table>
+</form>

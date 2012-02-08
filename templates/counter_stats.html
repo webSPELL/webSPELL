@@ -1,0 +1,112 @@
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="50%" valign="top">
+    <table width="100%" cellpadding="2" cellspacing="0" border="0" bgcolor="$border">
+      <tr>
+        <td colspan="2" class="title" bgcolor="$bghead">&nbsp; &#8226; %visits%</td>
+      </tr>
+      <tr><td colspan="2" bgcolor="$pagebg"></td></tr>
+      <tr>
+        <td width="35%" bgcolor="$bg1">%today%</td>
+        <td width="65%" bgcolor="$bg2">$today</td>
+      </tr>
+      <tr>
+        <td width="35%" bgcolor="$bg3">%yesterday%</td>
+        <td width="65%" bgcolor="$bg4">$yesterday</td>
+      </tr>
+      <tr>
+        <td bgcolor="$bg1">%this_month%</td>
+        <td bgcolor="$bg2">$month</td>
+      </tr>
+      <tr>
+        <td bgcolor="$bg3">%total%</td>
+        <td bgcolor="$bg4">$total</td>
+      </tr>
+    </table>
+    <br />
+    <table width="100%" cellpadding="2" cellspacing="0" border="0" bgcolor="$border">
+      <tr>
+        <td colspan="2" class="title" bgcolor="$bghead">&nbsp; &#8226; %this_month%</td>
+      </tr>
+      <tr><td colspan="2" bgcolor="$pagebg"></td></tr>
+      $monatsstat
+    </table>
+    <br />
+    </td>
+    <td width="4">&nbsp;</td>
+    <td width="50%" valign="top">
+    <table width="100%" cellpadding="2" cellspacing="0" border="0" bgcolor="$border">
+      <tr>
+        <td colspan="2" class="title" bgcolor="$bghead">&nbsp; &#8226; %online%</td>
+      </tr>
+      <tr><td colspan="2" bgcolor="$pagebg"></td></tr>
+      <tr>
+        <td width="35%" bgcolor="$bg1">%now%</td>
+        <td width="65%" bgcolor="$bg2">$online ($user_on, $guests_on)</td>
+      </tr>
+      <tr>
+        <td bgcolor="$bg3">%maximum%</td>
+        <td bgcolor="$bg4">$maxonline</td>
+      </tr>
+      <tr>
+        <td bgcolor="$bg1">%lasthour%</td>
+        <td bgcolor="$bg2">$online_lasthour</td>
+      </tr>
+    </table>
+    <br />
+    <table width="100%" cellpadding="2" cellspacing="0" border="0" bgcolor="$border">
+      <tr>
+        <td colspan="2" class="title" bgcolor="$bghead">&nbsp; &#8226; %total_statistic%</td>
+      </tr>
+      <tr><td colspan="2" bgcolor="$pagebg"></td></tr>
+      <tr>
+        <td width="35%" bgcolor="$bg1">%daysonline%</td>
+        <td width="65%" bgcolor="$bg2">$days_online</td>
+      </tr>
+      <tr>
+        <td width="35%" bgcolor="$bg3">%visits_month%</td>
+        <td width="65%" bgcolor="$bg4">$permonth</td>
+      </tr>
+      <tr>
+        <td width="35%" bgcolor="$bg1">%visits_day%</td>
+        <td width="65%" bgcolor="$bg2">$perday</td>
+      </tr>
+      <tr>
+        <td width="35%" bgcolor="$bg3">%visits_hour%</td>
+        <td width="65%" bgcolor="$bg4">$perhour</td>
+      </tr>
+      <tr>
+        <td width="35%" bgcolor="$bg1">%max_day%</td>
+        <td width="65%" bgcolor="$bg2">$maxvisits</td>
+      </tr>
+    </table>
+    <br />
+    <table width="100%" cellpadding="2" cellspacing="0" border="0" bgcolor="$border">
+      <tr>
+        <td colspan="2" class="title" bgcolor="$bghead">&nbsp; &#8226; %user_statistic%</td>
+      </tr>
+      <tr><td colspan="2" bgcolor="$pagebg"></td></tr>
+      <tr>
+        <td width="35%" bgcolor="$bg1">%avg_age%</td>
+        <td width="65%" bgcolor="$bg2">$avg_age_user</td>
+      </tr>
+      <tr>
+        <td width="35%" bgcolor="$bg3">%avg_age_clanmember%</td>
+        <td width="65%" bgcolor="$bg4">$avg_age_member</td>
+      </tr>
+      <tr>
+        <td width="35%" bgcolor="$bg1">%youngest_user%</td>
+        <td width="65%" bgcolor="$bg2"><a href='index.php?site=profile&amp;id=$get_young[userID]'>$get_young[nickname]</a> ($get_young[age] %years%)</td>
+      </tr>
+      <tr>
+        <td width="35%" bgcolor="$bg3">%oldest_user%</td>
+        <td width="65%" bgcolor="$bg4"><a href='index.php?site=profile&amp;id=$get_old[userID]'>$get_old[nickname]</a> ($get_old[age] %years%)</td>
+      </tr>
+      <tr>
+        <td width="35%" bgcolor="$bg1">%registered_users%</td>
+        <td width="65%" bgcolor="$bg2">$us</td>
+      </tr>
+    </table>
+    </td>
+  </tr>
+</table>

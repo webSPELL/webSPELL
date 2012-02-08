@@ -1,0 +1,34 @@
+<form action="gallery.php" method="post" name="ws_gallery">
+<table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="$border">
+  <tr>
+    <td class="title" align="center" bgcolor="$bghead">%edit_picture%</td>
+  </tr>
+  <tr><td bgcolor="$pagebg"></td></tr>
+  <tr>
+    <td bgcolor="$bg1">
+    <table width="100%" border="0" align="center" cellpadding="2" cellspacing="0">
+      <tr>
+        <td align="right">%name%:</td>
+        <td><input name="name" type="text" value="$name" size="35" /></td>
+      </tr>
+      <tr>
+        <td align="right">%comment%:</td>
+        <td><textarea name="comment" cols="70" rows="2">$comment</textarea></td>
+      </tr>
+      <tr>
+        <td align="right">%comments%:</td>
+        <td><select name="comments">$comments</select></td>
+      </tr>
+      <tr>
+        <td align="right"></td>
+        <td><input type="checkbox" name="reset" value="1" /> %reset_views%</td>
+      </tr>
+      <tr>
+        <td align="right"><input type="hidden" name="picID" value="$picID" /></td>
+        <td><input name="saveedit" type="submit" value="%update_picture%" /></td>
+      </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+</form>

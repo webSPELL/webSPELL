@@ -1,0 +1,6 @@
+  <tr bgcolor="$bg">
+    <td align="center"><a href="index.php?site=gallery&amp;galleryID=$galleryID"><b>$name</b></a></td>
+    <td align="center"><input type="button" onclick="MM_goToURL('parent','index.php?site=usergallery&amp;action=upload&amp;upload=form&amp;galleryID=$galleryID');return document.MM_returnValue" value="%add_img%" /></td>
+    <td align="center"><input type="button" onclick="MM_goToURL('parent','index.php?site=usergallery&amp;action=edit&amp;galleryID=$galleryID');return document.MM_returnValue" value="%edit%" /></td>
+    <td align="center"><input type="button" onclick="MM_confirm('%really_delete_gallery%', 'index.php?site=usergallery&amp;delete=true&amp;galleryID=$galleryID')" value="%delete%" /></td>
+  </tr>

@@ -1,0 +1,89 @@
+<script language="JavaScript" type="text/javascript">
+<!--
+function chkFormular() {
+	if(!validbbcode(document.getElementById('message').value)){
+		return false;
+	}
+	squad_box = document.getElementById("squad");
+	if(squad_box.options.length){
+		if(squad_box.options[squad_box.selectedIndex].value== ""){
+			return false;
+		}
+	}
+	else{
+		return false;
+	}
+}
+-->
+</script>
+<form action="calendar.php?action=savewar" method="post" name="post" onsubmit="return chkFormular();">
+<table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="$border">
+  <tr>
+    <td class="title" align="center" bgcolor="$bghead">%new_war%</td>
+  </tr>
+  <tr><td bgcolor="$pagebg"></td></tr>
+  <tr>
+    <td bgcolor="$bg1">
+    <table width="100%" border="0" align="center" cellpadding="2" cellspacing="0">
+      <tr>
+        <td align="right">%date_time%:</td>
+        <td><select name="day">$day</select>
+        <select name="month">$month</select>
+        <select name="year">$year</select>
+        -
+        <input name="hour" type="text" value="$hours" size="2" />
+        :
+        <input name="minute" type="text" value="$minutes" size="2" /></td>
+      </tr>
+      <tr>
+        <td align="right">%squad%</td>
+        <td><select name="squad" id="squad">$squads</select></td>
+      </tr>
+      <tr>
+        <td align="right">%league%</td>
+        <td><input name="league" type="text" value="$league" size="35" /></td>
+      </tr>
+      <tr>
+        <td align="right">%leaguehp%</td>
+        <td><input name="leaguehp" type="text" value="http://" size="35" /></td>
+      </tr>
+      <tr>
+        <td align="right">%opponent%</td>
+        <td><input name="opponent" type="text" value="$opponent" size="35" /></td>
+      </tr>
+      <tr>
+        <td align="right">%opponenttag%</td>
+        <td><input name="opptag" type="text" size="8" /></td>
+      </tr>
+      <tr>
+        <td align="right">%opponentcountry%</td>
+        <td><select name="oppcountry">$countries</select></td>
+      </tr>
+      <tr>
+        <td align="right">%opponenthp%</td>
+        <td><input name="opphp" type="text" value="$opphp" size="35" /></td>
+      </tr>
+      <tr>
+        <td align="right">%maps%</td>
+        <td><input name="maps" type="text" value="$map" size="35" /></td>
+      </tr>
+      <tr>
+        <td align="right">%server%</td>
+        <td><input name="server" type="text" value="$server" size="35" /></td>
+      </tr>
+      <tr>
+        <td align="right" valign="top">%information%</td>
+        <td><textarea id="message" name="message" cols="45" rows="7">$info</textarea></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td><input name="messages" class="input" type="checkbox" value="true" checked="checked" />%send_message%<br />
+        <input type="hidden" name="chID" value="$chID" />
+        <input type="hidden" name="userID" value="$userID" />
+        <input name="post" type="submit" value="%save_war%" /></td>
+      </tr>
+    </table>
+    </td>
+  </tr>
+</table>
+</form>

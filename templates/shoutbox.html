@@ -1,0 +1,30 @@
+<script language="JavaScript" type="text/javascript">
+<!--
+
+function chkFormularShoutBox() {
+	if(document.getElementById('shoutbox_name').value == ""){
+		alert('%enter_name%');
+		document.getElementById('shoutbox_name').focus();
+		return false;
+	}
+	if(document.getElementById('shoutbox_message').value == "" || document.getElementById('shoutbox_message').value == "Message"){
+		alert('%enter_message%');
+		document.getElementById('shoutbox_message').focus();
+		return false;
+	}
+	return true;
+}
+-->
+</script>
+<form name="shout" method="post" action="index.php?site=shoutbox_content&amp;action=save" onsubmit="return chkFormularShoutBox()">
+<script language="JavaScript" type="text/javascript">
+<!--
+fetch('shoutbox_content.php', 'shoutbox', 'replace', 'time', $refresh);
+-->
+</script>
+<div id="shoutbox" style="width: 100%;overflow: hidden; text-align: left;"></div>
+<input type="text" id="shoutbox_name" name="name" size="24" maxlength="255" style="margin: 2px;" $name_settings /><br />
+<input type="text" id="shoutbox_message" name="message" size="24" maxlength="255" style="margin: 2px;" value="Message" onfocus="this.value=''" /><br />
+$captcha_form
+&#8226; <a href="javascript:if(chkFormularShoutBox())+document.shout.submit();">%shout%</a>&nbsp;&nbsp;&nbsp;&#8226; <a href="index.php?site=shoutbox_content&amp;action=showall">%all_messages%</a>
+</form>
