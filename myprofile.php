@@ -184,6 +184,14 @@ else {
 		}
 
 		$birthday = $b_year.'-'.$b_month.'-'.$b_day;
+		
+		
+		if(empty($usernamenew)){
+			$error_array[] = $_language->module['you_have_to_username'];
+		}
+		if(empty($nickname)){
+			$error_array[] = $_language->module['you_have_to_nickname'];
+		}
 
 		$qry = "SELECT userID FROM ".PREFIX."user WHERE username = '".$usernamenew."' AND userID != ".$userID." LIMIT 0,1";
 		if(mysql_num_rows(safe_query($qry))) {
