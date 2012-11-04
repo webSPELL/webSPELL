@@ -242,7 +242,7 @@ elseif(isset($_POST['ban'])) {
 		$reason = $_POST['reason'];
 		
 		if(isset($_POST['remove_ban'])) {
-			safe_query("UPDATE ".PREFIX."user SET banned=(NULL) WHERE userID='$id'");
+			safe_query("UPDATE ".PREFIX."user SET banned=(NULL), ban_reason='' WHERE userID='$id'");
 		}
 		else {
 			if($permanent == "1") {
