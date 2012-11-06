@@ -408,6 +408,10 @@ function cut_urls($link){
 	return str_replace(">".$link[1],">".$new_str,$link[0]);
 }
 
+function removeIllegalCharacerts($string){
+	return preg_replace("/[^a-z0-9#]/si", "", $string);
+}
+
 function replacement($content, $bbcode=true) {
 	$pagebg=PAGEBG;
 	$border=BORDER;
@@ -425,16 +429,16 @@ function replacement($content, $bbcode=true) {
 		$content = preg_replace("#\[email=(.*?)\](.*?)\[/email\]#sie", "'<a href=\"mailto:'.mail_protect(fixJavaEvents('\\1')).'\">\\2</a>'", $content);
 		$content = preg_replace_callback("#<a\b[^>]*>(.*?)</a>#si","cut_urls",$content);
 		while(preg_match("#\[size=(.*?)\](.*?)\[/size\]#si", $content)){
-		  $content = preg_replace("#\[size=(.*?)\](.*?)\[/size\]#si", "<font size=\"\\1\">\\2</font>", $content);
+		  $content = preg_replace("#\[size=(.*?)\](.*?)\[/size\]#sie", "'<font size=\"'.removeIllegalCharacerts('\\1').'\">\\2</font>'", $content);
 		}
 		while(preg_match("#\[color=(.*?)\](.*?)\[/color\]#si", $content)){  
-		  $content = preg_replace("#\[color=(.*?)\](.*?)\[/color\]#si", "<font color=\"\\1\">\\2</font>", $content);
+		  $content = preg_replace("#\[color=(.*?)\](.*?)\[/color\]#sie", "'<font color=\"'.removeIllegalCharacerts('\\1').'\">\\2</font>'", $content);
 		}
 		while(preg_match("#\[font=(.*?)\](.*?)\[/font\]#si", $content)){
-		  $content = preg_replace("#\[font=(.*?)\](.*?)\[/font\]#si", "<font face=\"\\1\">\\2</font>", $content);
+		  $content = preg_replace("#\[font=(.*?)\](.*?)\[/font\]#sie", "'<font face=\"'.removeIllegalCharacerts('\\1').'\">\\2</font>'", $content);
 		}
 		while(preg_match("#\[align=(.*?)\](.*?)\[/align\]#si", $content)){
-		  $content = preg_replace("#\[align=(.*?)\](.*?)\[/align\]#si", "<div align=\"\\1\">\\2</div>", $content);
+		  $content = preg_replace("#\[align=(.*?)\](.*?)\[/align\]#sie", "'<div align=\"'.removeIllegalCharacerts('\\1').'\">\\2</div>'", $content);
 		}
 		$content = preg_replace("#\[b\](.*?)\[/b\]#si", "<b>\\1</b>",$content);
 		$content = preg_replace("#\[i\](.*?)\[/i\]#si", "<i>\\1</i>",$content);
@@ -449,7 +453,7 @@ function replacement($content, $bbcode=true) {
 		$content = preg_replace("#\[center]#si", "<center>", $content);
 		$content = preg_replace("#\[/center]#si", "</center>", $content);
 	}
-	$content = preg_replace("#\[SMILE=(.*?)\](.*?)\[/SMILE\]#si", '<img src="\\2" alt="\\1" border="0" />', $content);
+	$content = preg_replace("#\[SMILE=(.*?)\](.*?)\[/SMILE\]#sie", "'<img src=\"'.removeIllegalCharacerts('\\2').'\" alt=\"'.removeIllegalCharacerts('\\1').'\" border=\"0\" />'", $content);
 
 	return $content;
 }
