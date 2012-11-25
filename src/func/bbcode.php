@@ -170,7 +170,7 @@ function codereplace($content) {
 				}
 			}
 			if($match){
-				$splits[$i] = '<div style="width:'.$picsize_l.'px;height:100%;overflow:auto;background-color:'.$bg1.';border: 1px '.$border.' solid;" class="code"><b>'.$_language->module['code'].':</b><hr /><div class="codeinner">';
+				$splits[$i] = '<div style="width:'.$picsize_l.'px;overflow:auto;background-color:'.$bg1.';border: 1px '.$border.' solid;" class="code"><b>'.$_language->module['code'].':</b><hr /><div class="codeinner">';
 
 				/* concat pieces until arriving closing tag ($z) and save to $i+1 */
 				for($x=($i+2); $x<$z;$x++){
