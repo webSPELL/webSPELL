@@ -148,6 +148,10 @@ $language_array = Array(
   'tooltip_51'=>'A kiemelt hírek max. hossza az "sc_topnews"-ban',
   'transaction_invalid'=>'A művelet azonosítója érvénytelen',
   'upcoming_actions'=>'Közeledő események',
-  'update'=>'Frissítés'
+  'update'=>'Frissítés',
+  'spamfilter'=>'Spamfilter',
+  'spamapikey'=>'Api-Key',
+  'spamapihost'=>'Api-URL',
+  'spammaxposts'=>'Max. Posts'
 );
 ?>

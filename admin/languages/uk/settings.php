@@ -148,6 +148,10 @@ $language_array = Array(
   'tooltip_51'=>'Maximal length of the topnews in sc_topnews',
   'transaction_invalid'=>'Transaction ID invalid',
   'upcoming_actions'=>'upcoming actions',
-  'update'=>'update'
+  'update'=>'update',
+  'spamfilter'=>'Spamfilter',
+  'spamapikey'=>'Api-Key',
+  'spamapihost'=>'Api-URL',
+  'spammaxposts'=>'Max. Posts'
 );
 ?>

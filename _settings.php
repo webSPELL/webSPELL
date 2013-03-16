@@ -241,8 +241,7 @@ $lastBanCheck 				= 	$ds['bancheck'];
 $insertlinks				=	$ds['insertlinks'];
 $spamapikey					=	$ds['spamapikey'];
 $spamapihost				=	$ds['spamapihost'];			if(empty($spamapihost)) $spamapihost = "http://dev.webspell.eu/api/spam.php";
-
-$spamCheckMaxPosts = 30;
+$spamCheckMaxPosts 			=	$ds['spammaxposts'];			if(empty($spamCheckMaxPosts)) $spamCheckMaxPosts = 30;
 $spamCheckRating = 0.95;
 
 $new_chmod = 0666;

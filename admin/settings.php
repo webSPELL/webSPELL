@@ -83,6 +83,9 @@ if(isset($_POST['submit'])) {
 									 captcha_math='".$_POST['captcha_math']."',
 									 captcha_noise='".$_POST['captcha_noise']."',
 									 captcha_linenoise='".$_POST['captcha_linenoise']."',
+									 spamapikey='".$_POST['spamapikey']."',
+									 spamapihost='".$_POST['spamapihost']."',
+									 spammaxposts='".$_POST['spammaxposts']."',
 									 autoresize='".$_POST['autoresize']."'");
 		safe_query("UPDATE ".PREFIX."styles SET title='".$_POST['title']."' ");	
 	  	redirect("admincenter.php?site=settings","",0);
@@ -461,6 +464,22 @@ else {
     <tr>
 	    <td align="right"><input type="text" name="refresh" value="<?php echo $ds['sbrefresh']; ?>" size="3" onmouseover="showWMTT('id39')" onmouseout="hideWMTT()" /></td>
 	    <td><?php echo $_language->module['shoutbox_refresh']; ?></td>
+	  </tr>
+	   <tr>
+	    <td width="50%"><b><?php echo $_language->module['spamfilter']; ?>:</b></td>
+	    <td>&nbsp;</td>
+	  </tr>
+	  <tr>
+	    <td align="right"><input type="text" name="spamapikey" value="<?php echo $ds['spamapikey']; ?>" size="32" /></td>
+	    <td><?php echo $_language->module['spamapikey']; ?></td>
+	  </tr>
+	  <tr>
+	    <td align="right"><input type="text" name="spamapihost" value="<?php echo $ds['spamapihost']; ?>" /></td>
+	    <td><?php echo $_language->module['spamapihost']; ?></td>
+	  </tr>
+	  <tr>
+	    <td align="right"><input type="text" name="spammaxposts" value="<?php echo $ds['spammaxposts']; ?>" size="4" /></td>
+	    <td><?php echo $_language->module['spammaxposts']; ?></td>
 	  </tr>
 	</table>
 </div>

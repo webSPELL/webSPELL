@@ -9,6 +9,9 @@ function validateSpam($message){
 function learnSpamfilter($message, $type){
 	global $spamapikey,$spamapihost;
 	$postdata = array();
+	$postdata["apikey"] = $spamapikey;
+	$postdata["learn"] = json_encode(array("message"=>$message,"mode"=>$type));
+	return post_request($spamapihost,$postdata);
 }
 
 function post_request($url, $data){
