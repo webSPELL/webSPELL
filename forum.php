@@ -849,21 +849,40 @@ if(isset($_POST['submit']) || isset($_POST['movetopic']) || isset($_GET['addtopi
 			else $writer = 1;
 			if(!$writer) die($_language->module['no_access_write']);
 	
-			$date=time();
-			safe_query("INSERT INTO ".PREFIX."forum_topics ( boardID, readgrps, writegrps, userID, date, icon, topic, lastdate, lastposter, replys, views, closed, sticky ) values ( '$board', '".$ds['readgrps']."', '".$ds['writegrps']."', '$userID', '$date', '".$icon."', '".$topicname."', '$date', '$userID', '0', '0', '0', '$topic_sticky' ) ");
-			$id=mysql_insert_id();
-			safe_query("UPDATE ".PREFIX."forum_boards SET topics=topics+1 WHERE boardID='".$board."'");
-			safe_query("INSERT INTO ".PREFIX."forum_posts ( boardID, topicID, date, poster, message ) values( '$board', '$id', '$date', '$userID', '".$message."' ) ");
-	
-			// check if there are more than 1000 unread topics => delete oldest one
-			$dv = safe_query("SELECT topics FROM ".PREFIX."user WHERE userID='".$userID."'");
-			$array = explode('|', $dv['topics']);
-			if(count($array)>=1000) safe_query("UPDATE ".PREFIX."user SET topics='|".implode('|', array_slice($array, 2))."' WHERE userID='".$userID."'");
-			unset($array);
-	
-			safe_query("UPDATE ".PREFIX."user SET topics=CONCAT(topics, '".$id."|')"); // update unread topics, format: |oldstring| => |oldstring|topicID|
-	
-			if($notify) safe_query("INSERT INTO ".PREFIX."forum_notify (topicID, userID) VALUES ('$id', '$userID') ");
+
+			
+			$spam = 0;
+			$request = validateSpam($message);
+			if(!empty($request)){
+				$data = json_decode($request);
+				if($data["response"] == "ok"){
+					$rating = (float)$data["response"];
+					if($rating >= $spamCheckRating){
+						$spam = 1;
+					}
+				}
+			}
+			
+			if($spam == 0){
+				$date=time();
+				safe_query("INSERT INTO ".PREFIX."forum_topics ( boardID, readgrps, writegrps, userID, date, icon, topic, lastdate, lastposter, replys, views, closed, sticky ) values ( '$board', '".$ds['readgrps']."', '".$ds['writegrps']."', '$userID', '$date', '".$icon."', '".$topicname."', '$date', '$userID', '0', '0', '0', '$topic_sticky' ) ");
+				$id=mysql_insert_id();
+				safe_query("UPDATE ".PREFIX."forum_boards SET topics=topics+1 WHERE boardID='".$board."'");
+				safe_query("INSERT INTO ".PREFIX."forum_posts ( boardID, topicID, date, poster, message ) values( '$board', '$id', '$date', '$userID', '".$message."' ) ");
+		
+				// check if there are more than 1000 unread topics => delete oldest one
+				$dv = safe_query("SELECT topics FROM ".PREFIX."user WHERE userID='".$userID."'");
+				$array = explode('|', $dv['topics']);
+				if(count($array)>=1000) safe_query("UPDATE ".PREFIX."user SET topics='|".implode('|', array_slice($array, 2))."' WHERE userID='".$userID."'");
+				unset($array);
+		
+				safe_query("UPDATE ".PREFIX."user SET topics=CONCAT(topics, '".$id."|')"); // update unread topics, format: |oldstring| => |oldstring|topicID|
+		
+				if($notify) safe_query("INSERT INTO ".PREFIX."forum_notify (topicID, userID) VALUES ('$id', '$userID') ");
+			}
+			else{
+				safe_query("INSERT INTO ".PREFIX."forum_topics_spam ( boardID, userID, date, icon, topic, sticky, message) values ( '$board', '$userID', '$date', '".$icon."', '".$topicname."', '$topic_sticky', '".$message."' ) ");
+			}
 			header("Location: index.php?site=forum&board=".$board."");
 		}
 		else{

@@ -239,6 +239,12 @@ $autoresize 				= 	$ds['autoresize']; 			if(!isset($autoresize)) $autoresize = 2
 $max_wrong_pw 				= 	$ds['max_wrong_pw']; 		if(empty($max_wrong_pw)) $max_wrong_pw = 3;
 $lastBanCheck 				= 	$ds['bancheck']; 
 $insertlinks				=	$ds['insertlinks'];
+$spamapikey					=	$ds['spamapikey'];
+$spamapihost				=	$ds['spamapihost'];			if(empty($spamapihost)) $spamapihost = "http://dev.webspell.eu/api/spam.php";
+
+$spamCheckMaxPosts = 30;
+$spamCheckRating = 0.95;
+
 $new_chmod = 0666;
 
 // -- STYLES -- //

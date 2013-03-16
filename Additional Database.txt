@@ -1,0 +1,26 @@
+CREATE TABLE IF NOT EXISTS `forum_posts_spam` (
+  `postID` int(11) NOT NULL AUTO_INCREMENT,
+  `boardID` int(11) NOT NULL DEFAULT '0',
+  `topicID` int(11) NOT NULL DEFAULT '0',
+  `date` int(14) NOT NULL DEFAULT '0',
+  `poster` int(11) NOT NULL DEFAULT '0',
+  `message` text COLLATE utf8_unicode_ci NOT NULL,
+  PRIMARY KEY (`postID`),
+  KEY `boardID` (`boardID`),
+  KEY `topicID` (`topicID`),
+  KEY `poster` (`poster`),
+  KEY `date` (`date`),
+  FULLTEXT KEY `message` (`message`)
+)
+
+CREATE TABLE IF NOT EXISTS `forum_topics_spam` (
+  `topicID` int(11) NOT NULL AUTO_INCREMENT,
+  `boardID` int(11) NOT NULL,
+  `userID` int(11) NOT NULL,
+  `date` int(14) NOT NULL,
+  `icon` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `topic` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `sticky` int(1) NOT NULL,
+  `message` text COLLATE utf8_unicode_ci NOT NULL,
+  PRIMARY KEY (`topicID`)
+)

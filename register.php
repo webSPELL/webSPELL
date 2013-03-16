@@ -75,7 +75,13 @@ if(isset($_POST['save'])) {
 	  
 	  // check captcha
 	  	if(!$CAPCLASS->check_captcha($_POST['captcha'], $_POST['captcha_hash'])) $error[]=$_language->module['wrong_securitycode'];
-	  
+	 
+		// check exisitings accounts from ip with same password
+	  	$get_users = safe_query("SELECT userID FROM ".PREFIX."user WHERE password='$md5pwd' AND ip='".$GLOBALS['ip']."'");
+	  	if(mysql_num_rows($get_users)){
+	  		$error[]='Only one Account per IP';
+	  	}
+	  	
 	  	if(count($error)) {
 	    	$list = implode('<br />&#8226; ', $error);
 	    	$showerror = '<div class="errorbox">

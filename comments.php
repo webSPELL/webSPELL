@@ -70,9 +70,24 @@ if(isset($_POST['savevisitorcomment'])) {
 	}
 	$_SESSION['comments_message'] = $message;
 
+	$spam = 0;
+	$request = validateSpam($message);
+	if(!empty($request)){
+		$data = json_decode($request);
+		if($data["response"] == "ok"){
+			$rating = (float)$data["response"];
+			if($rating >= $spamCheckRating){
+				$spam = 1;
+			}
+		}
+	}
+
 	if(in_array(trim($name), $nicks)) header("Location: ".$_POST['referer']."&error=nickname#addcomment");
 	elseif(!($CAPCLASS->check_captcha($_POST['captcha'], $_POST['captcha_hash']))) header("Location: ".$_POST['referer']."&error=captcha#addcomment");
 	elseif(checkCommentsAllow($type,$parentID) == false ) header("Location: ".$_POST['referer']);
+	elseif($spam == 1){
+		header("Location: ".$_POST['referer']);
+	}
 	else {
 		$date=time();
 		safe_query("INSERT INTO ".PREFIX."comments ( parentID, type, nickname, date, comment, url, email, ip )
@@ -91,7 +106,23 @@ elseif(isset($_POST['saveusercomment'])) {
 	$parentID = $_POST['parentID'];
 	$type = $_POST['type'];
 	$message = $_POST['message'];
-	if(checkCommentsAllow($type,$parentID)){
+
+	$spam = 0;
+	
+	if(getusercomments($userID,$type) < $spamCheckMaxPosts){
+		$request = validateSpam($message);
+	if(!empty($request)){
+		$data = json_decode($request);
+		if($data["response"] == "ok"){
+			$rating = (float)$data["response"];
+			if($rating >= $spamCheckRating){
+				$spam = 1;
+			}
+		}
+	}
+	}
+
+	if(checkCommentsAllow($type,$parentID) && $spam == 0){
 		$date=time();
 		safe_query("INSERT INTO ".PREFIX."comments ( parentID, type, userID, date, comment ) values( '".$parentID."', '".$type."', '".$userID."', '".$date."', '".$message."' ) ");
 	}

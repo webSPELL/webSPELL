@@ -68,50 +68,67 @@ if(isset($_POST['newreply']) && !isset($_POST['preview'])) {
 		$do_sticky = (isset($_POST['sticky'])) ? ', sticky=1' : ', sticky=0';
 	}
 
-	$date=time();
-	safe_query("INSERT INTO ".PREFIX."forum_posts ( boardID, topicID, date, poster, message ) VALUES( '".$_REQUEST['board']."', '$topic', '$date', '$userID', '".$message."' ) ");
-	$lastpostID = mysql_insert_id();
-	safe_query("UPDATE ".PREFIX."forum_boards SET posts=posts+1 WHERE boardID='".$_REQUEST['board']."' ");
-	safe_query("UPDATE ".PREFIX."forum_topics SET lastdate='".$date."', lastposter='".$userID."', lastpostID='".$lastpostID."', replys=replys+1 $do_sticky WHERE topicID='$topic' ");
-
-	// check if there are more than 1000 unread topics => delete oldest one
-	$dv = safe_query("SELECT topics FROM ".PREFIX."user WHERE userID='".$userID."'");
-	$array = explode('|', $dv['topics']);
-	if(count($array)>=1000) safe_query("UPDATE ".PREFIX."user SET topics='|".implode('|', array_slice($array, 2))."' WHERE userID='".$userID."'");
-	unset($array);
-
-	// add this topic to unread
-	safe_query("UPDATE ".PREFIX."user SET topics=CONCAT(topics, '".$topic."|') WHERE topics NOT LIKE '%|".$topic."|%'"); // update unread topics, format: |oldstring| => |oldstring|topicID|
-
-	$emails=array();
-	$ergebnis=safe_query("SELECT f.userID, u.email, u.language FROM ".PREFIX."forum_notify f JOIN ".PREFIX."user u ON u.userID=f.userID WHERE f.topicID=$topic");
-	while($ds=mysql_fetch_array($ergebnis)) {
-		$emails[] = Array('mail'=>$ds['email'], 'lang'=>$ds['language']);
-	}
-	safe_query("DELETE FROM ".PREFIX."forum_notify WHERE topicID='$topic'");
-
-	if(count($emails)) {
-
-		$de=mysql_fetch_array(safe_query("SELECT nickname FROM ".PREFIX."user WHERE userID='$userID'"));
-		$poster=$de['nickname'];
-		$de=mysql_fetch_array(safe_query("SELECT topic FROM ".PREFIX."forum_topics WHERE topicID='$topic'"));
-		$topicname=getinput($de['topic']);
-
-		$link="http://".$hp_url."/index.php?site=forum_topic&topic=".$topic;
-		$maillanguage = new Language;
-		$maillanguage->set_language($default_language);
-		
-		foreach($emails as $email) {
-			$maillanguage->set_language($email['lang']);
-			$maillanguage->read_module('forum');
-			$forum_topic_notify = str_replace(Array('%poster%', '%topic_link%', '%pagetitle%', '%hpurl%'), Array(html_entity_decode($poster), $link, $hp_title, 'http://'.$hp_url), $maillanguage->module['notify_mail']);
-			$header = "From:".$admin_email."\nContent-type: text/plain; charset=utf-8\n";
-			@mail($email['mail'], $maillanguage->module['new_reply'].' ('.$hp_title.')', $forum_topic_notify, $header);
+	$spam = 0;
+	$request = validateSpam($message);
+	if(!empty($request)){
+		$data = json_decode($request);
+		if($data["response"] == "ok"){
+			$rating = (float)$data["response"];
+			if($rating >= $spamCheckRating){
+				$spam = 1;
+			}
 		}
 	}
 
-	if(isset($_POST['notify']) and (bool)$_POST['notify']) {
-		safe_query("INSERT INTO ".PREFIX."forum_notify (topicID, userID) values('".$topic."', '".$userID."') ");
+	$date=time();
+	if($spam == 0){
+		safe_query("INSERT INTO ".PREFIX."forum_posts ( boardID, topicID, date, poster, message ) VALUES( '".$_REQUEST['board']."', '$topic', '$date', '$userID', '".$message."' ) ");
+		$lastpostID = mysql_insert_id();
+		safe_query("UPDATE ".PREFIX."forum_boards SET posts=posts+1 WHERE boardID='".$_REQUEST['board']."' ");
+		safe_query("UPDATE ".PREFIX."forum_topics SET lastdate='".$date."', lastposter='".$userID."', lastpostID='".$lastpostID."', replys=replys+1 $do_sticky WHERE topicID='$topic' ");
+
+		// check if there are more than 1000 unread topics => delete oldest one
+		$dv = safe_query("SELECT topics FROM ".PREFIX."user WHERE userID='".$userID."'");
+		$array = explode('|', $dv['topics']);
+		if(count($array)>=1000) safe_query("UPDATE ".PREFIX."user SET topics='|".implode('|', array_slice($array, 2))."' WHERE userID='".$userID."'");
+		unset($array);
+
+		// add this topic to unread
+		safe_query("UPDATE ".PREFIX."user SET topics=CONCAT(topics, '".$topic."|') WHERE topics NOT LIKE '%|".$topic."|%'"); // update unread topics, format: |oldstring| => |oldstring|topicID|
+
+		$emails=array();
+		$ergebnis=safe_query("SELECT f.userID, u.email, u.language FROM ".PREFIX."forum_notify f JOIN ".PREFIX."user u ON u.userID=f.userID WHERE f.topicID=$topic");
+		while($ds=mysql_fetch_array($ergebnis)) {
+			$emails[] = Array('mail'=>$ds['email'], 'lang'=>$ds['language']);
+		}
+		safe_query("DELETE FROM ".PREFIX."forum_notify WHERE topicID='$topic'");
+
+		if(count($emails)) {
+
+			$de=mysql_fetch_array(safe_query("SELECT nickname FROM ".PREFIX."user WHERE userID='$userID'"));
+			$poster=$de['nickname'];
+			$de=mysql_fetch_array(safe_query("SELECT topic FROM ".PREFIX."forum_topics WHERE topicID='$topic'"));
+			$topicname=getinput($de['topic']);
+
+			$link="http://".$hp_url."/index.php?site=forum_topic&topic=".$topic;
+			$maillanguage = new Language;
+			$maillanguage->set_language($default_language);
+			
+			foreach($emails as $email) {
+				$maillanguage->set_language($email['lang']);
+				$maillanguage->read_module('forum');
+				$forum_topic_notify = str_replace(Array('%poster%', '%topic_link%', '%pagetitle%', '%hpurl%'), Array(html_entity_decode($poster), $link, $hp_title, 'http://'.$hp_url), $maillanguage->module['notify_mail']);
+				$header = "From:".$admin_email."\nContent-type: text/plain; charset=utf-8\n";
+				@mail($email['mail'], $maillanguage->module['new_reply'].' ('.$hp_title.')', $forum_topic_notify, $header);
+			}
+		}
+
+		if(isset($_POST['notify']) and (bool)$_POST['notify']) {
+			safe_query("INSERT INTO ".PREFIX."forum_notify (topicID, userID) values('".$topic."', '".$userID."') ");
+		}
+	}
+	else{
+		safe_query("INSERT INTO ".PREFIX."forum_posts_spam ( boardID, topicID, date, poster, message ) VALUES( '".$_REQUEST['board']."', '$topic', '$date', '$userID', '".$message."' ) ");
 	}
 	header("Location: index.php?site=forum_topic&topic=".$topic."&page=".$page);
 	exit();
