@@ -96,7 +96,7 @@ if(isset($_POST['save'])) {
 			$activationkey = createkey(20);
 			$activationlink='http://'.$hp_url.'/index.php?site=register&key='.$activationkey;
 	
-			safe_query("INSERT INTO `".PREFIX."user` (`registerdate`, `lastlogin`, `username`, `password`, `nickname`, `email`, `newsletter`, `activated`) VALUES ('$registerdate', '$registerdate', '$username', '$md5pwd', '$nickname', '$mail', '1', '".$activationkey."')");
+			safe_query("INSERT INTO `".PREFIX."user` (`registerdate`, `lastlogin`, `username`, `password`, `nickname`, `email`, `newsletter`, `activated`,`ip`) VALUES ('$registerdate', '$registerdate', '$username', '$md5pwd', '$nickname', '$mail', '1', '".$activationkey."','".$GLOBALS['ip']."')");
 	
 			$insertid = mysql_insert_id();
 	
