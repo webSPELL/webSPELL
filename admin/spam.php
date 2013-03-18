@@ -10,10 +10,12 @@ if(isset($_GET['getnickname'])){
 	exit();
 }
 if(!isspamadmin($userID) OR mb_substr(basename($_SERVER['REQUEST_URI']),0,15) != "admincenter.php") die();
+$_language->read_module('spam');
 function deleteSpamUser($spammerID){
+	global $_language;
 	// Delete Comments
 	safe_query("DELETE FROM ".PREFIX."comments WHERE userID='".$spammerID."'");
-	echo mysql_affected_rows()."Kommentare gelöscht<br/>";
+	echo mysql_affected_rows()." ".$_language->module["comments_deleted"]."<br/>";
 	// Delete Forum Topics (update posts / topics)
 	$topics = safe_query("SELECT topicID,boardID FROM ".PREFIX."forum_topics WHERE userID='".$spammerID."'");
 	$topicIDs = array();
@@ -27,10 +29,7 @@ function deleteSpamUser($spammerID){
 		safe_query("DELETE FROM ".PREFIX."forum_topics WHERE topicID IN (".implode(",",$topicIDs).")");
 		safe_query("DELETE FROM ".PREFIX."forum_topics WHERE moveID IN (".implode(",",$topicIDs).")");
 		safe_query("DELETE FROM ".PREFIX."forum_posts WHERE topicID IN (".implode(",",$topicIDs).")");
-		echo count($topicIDs)." Topics gelöscht<br/>";
-	}
-	else{
-		echo "Keine Topics gefunden<br/>";
+		echo count($topicIDs)." ".$_language->module['topics_deleted']."<br/>";
 	}
 	$update_topics = array();
 	$posts = safe_query("SELECT * FROM ".PREFIX."forum_posts WHERE poster='".$spammerID."'");
@@ -39,12 +38,12 @@ function deleteSpamUser($spammerID){
 	}
 	$update_topics = array_unique($update_topics);
 	safe_query("DELETE FROM ".PREFIX."forum_posts WHERE poster='".$spammerID."'");
-	echo mysql_num_rows($posts)." Posts gelöscht<br/>";
+	echo mysql_num_rows($posts)." ".$_language->module["posts_deleted"]."<br/>";
 
 	if(!empty($update_topics)){
 		safe_query("UPDATE ".PREFIX."forum_topics t SET replys 	=  (SELECT COUNT(postID) FROM ".PREFIX."forum_posts p WHERE p.topicID = t.topicID) -1
 																												WHERE t.topicID IN (".implode(",",$update_topics).")");
-		echo count($update_topics)." Topic counts upgedated<br/>";
+		echo count($update_topics)." ".$_language->module["topic_count_updated"]."<br/>";
 	}
 
 	$topic = safe_query("SELECT topicID, boardID FROM ".PREFIX."forum_topics WHERE lastposter = '".$spammerID."'");
@@ -55,13 +54,13 @@ function deleteSpamUser($spammerID){
 		safe_query("UPDATE ".PREFIX."forum_topics SET lastposter='".$topicData['poster']."', lastdate='".$topicData['date']."' WHERE topicID='".$ds['topicID']."'");
 		$boardIDs[] = $ds['boardID'];
 	}
-	echo $num." Topics aktualisiert<br/>";
+	echo $num." ".$_language->module["topics_updated"]."<br/>";
 	if(!empty($boardIDs)){
 		$boardIDs = array_unique($boardIDs);
 		safe_query("UPDATE ".PREFIX."forum_boards b SET topics 	= (SELECT COUNT(topicID) FROM ".PREFIX."forum_topics t WHERE t.boardID = b.boardID),
 																												posts 	= (SELECT COUNT(postID) FROM ".PREFIX."forum_posts p WHERE p.boardID = b.boardID) 
 																												WHERE b.boardID IN (".implode(",",$boardIDs).")");
-		echo count($boardIDs)." Boards aktualisiert<br>";
+		echo count($boardIDs)." ".$_language->module["boards_updated"]."<br>";
 	}
 
 	// Delete Guestbooks
@@ -69,27 +68,15 @@ function deleteSpamUser($spammerID){
 	$spammer = mysql_fetch_assoc($get);
 	//safe_query("DELETE FROM ".PREFIX."guestbook WHERE name='".$spammer['nickname']."' AND email='".$spammer['email']."'");
 	$user_g_book = safe_query("DELETE FROM ".PREFIX."user_gbook WHERE name='".$spammer['nickname']."' AND email='".$spammer['email']."'");
-	echo mysql_affected_rows()." Gästebucheinträge gelöscht<br/>";
+	echo mysql_affected_rows()." ".$_language->module["guestbook_deleted"]."<br/>";
 
 	// Delete Messenges
 	$mess = safe_query("DELETE FROM ".PREFIX."messenger WHERE userID='".$spammerID."' OR fromuser='".$spammerID."'");
-	echo mysql_affected_rows()." Nachrichten gelöscht<br/>";
-
-	$ws_web = safe_query("DELETE FROM ".PREFIX."user_websites WHERE userID=".$spammerID." ");
-	echo mysql_affected_rows()." Webseiten gelöscht<br/>";
-	
-	
-	// Addons
-	$get = safe_query("SELECT addonID FROM ".PREFIX."addons WHERE creator='".$spammerID."'");
-	while($ds = mysql_fetch_assoc($get)){
-		safe_query("DELETE FROM ".PREFIX."addon_versions WHERE addonID='".$ds['addonID']."'");
-	}
-	safe_query("DELETE FROM ".PREFIX."addons WHERE creator='".$spammerID."'");
-	echo mysql_affected_rows()." Addons gelöscht<br/>";
+	echo mysql_affected_rows()." ".$_language->module["messages_deleted"]."<br/>";
 
 	//safe_query("DELETE FROM ".PREFIX."user WHERE userID='".$spammerID."'");
 	safe_query("UPDATE ".PREFIX."user SET banned='perm', ban_reason='Spam',about='' WHERE userID='".$spammerID."'");
-	echo "User gebannt<br/>";
+	echo $_language->module["user_banned"]."<br/>";
 }
 if(isset($_GET['action'])) $action = $_GET['action'];
 else $action = null;
@@ -110,15 +97,15 @@ if($action == "user"){
 	echo '<form method="post" id="post" name="post" action="admincenter.php?site=spam&amp;action=user_ban">';
 	echo '<table width="100%" border="0" cellspacing="0" cellpadding="0">
 		      <tr>
-		        <td valign="top" width="25%">User:</td>
+		        <td valign="top" width="25%">'.$_language->module["userID"].':</td>
 		        <td valign="top"><input type="text" name="id" value="'.$id.'" onchange="fetch(\'spam.php?getnickname=\'+this.value+\'\',\'nick\',\'replace\',\'event\');"/></td>
 		      </tr>
 		      <tr>
-		        <td valign="top">Profile:</td>
+		        <td valign="top">'.$_language->module["profile"].':</td>
 		        <td valign="top"><span id="nick">'.$nick.'</span></td>
 		      </tr>
 		    </table>';
-	echo '<input type="hidden" name="captcha_hash" value="'.$hash.'" /><input type="submit" name="spam" value="Nutzer bannen" />
+	echo '<input type="hidden" name="captcha_hash" value="'.$hash.'" /><input type="submit" name="spam" value="'.$_language->module["ban_user"].'" />
   </form>';
 }
 elseif($action == "user_ban"){
@@ -127,10 +114,10 @@ elseif($action == "user_ban"){
 	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
 		$spammerID = $_POST['id'];
 		if(!is_numeric($spammerID)){
-			echo "UserID must be numeric.";
+			echo $_language->module["userid_must_be_numeric"];
 		}
 		elseif(isclanmember($spammerID)){
-			echo "You can't delete Team members.";
+			echo $_language->module["cant_delete_team_members"];
 		}
 		else{
 			echo "<h3>".getnickname($spammerID)."</h3>";
@@ -138,7 +125,7 @@ elseif($action == "user_ban"){
 		}
 	}
 	else{
-		echo "Invalid TransactionID";
+		echo $_language->module['transaction_invalid'];
 	}
 }
 elseif($action == "multi"){
@@ -150,13 +137,13 @@ elseif($action == "multi"){
 	if(mysql_num_rows($get)){
 		echo '<table border="0" cellspacing="1" cellpadding="3" bgcolor="#DDDDDD" width="100%">
     <tr>
-    <td class="title">userID:</td>
-    <td class="title">Nickname:</td>
-    <td class="title">Register Date:</td>
-    <td class="title">Last Login:</td>
-    <td class="title">Activated:</td>
-    <td class="title">Banned:</td>
-    <td class="title">Posts:</td>
+    <td class="title">'.$_language->module["userID"].':</td>
+    <td class="title">'.$_language->module["nickname"].':</td>
+    <td class="title">'.$_language->module["register_date"].':</td>
+    <td class="title">'.$_language->module["last_login"].':</td>
+    <td class="title">'.$_language->module["activated"].':</td>
+    <td class="title">'.$_language->module["banned"].':</td>
+    <td class="title">'.$_language->module["posts"].':</td>
     </tr>';
 		$i = 0;
 		while($ds = mysql_fetch_assoc($get)){
@@ -164,8 +151,11 @@ elseif($action == "multi"){
 			$passwords = explode(",",$ds['passwords']);
 			if($i%2) { $td='td1'; }
 			else { $td='td2'; }
+			$buttons  = ' - <a href="http://geoip.flagfox.net/?ip='.$ds['ip'].'">'.$_language->module["ip_look_up"].'</a>';
+			$buttons .= ' - <a onclick="MM_confirm(\''.$_language->module["question_delete_all"].'\', \'admincenter.php?site=spam&amp;action=multi_ban&amp;ip='.$ds['ip'].'&amp;captcha_hash='.$hash.'\')">'.$_language->module["ban_and_delete_all"].'</a>';
+			$buttons .= ' - <a onclick="MM_confirm(\''.$_language->module["question_ban_all"].'\', \'admincenter.php?site=spam&amp;action=multi_just_block&amp;ip='.$ds['ip'].'&amp;captcha_hash='.$hash.'\')">'.$_language->module["ban_all"].'</a>';
 			echo '<tr>
- 			<td colspan="7" class="'.$td.'"><b>'.$ds['ip'].'</b> - <a href="http://geoip.flagfox.net/?ip='.$ds['ip'].'">Look up</a> - <a onclick="MM_confirm(\'Ban all & delete all posts?\', \'admincenter.php?site=spam&amp;action=multi_ban&amp;ip='.$ds['ip'].'&amp;captcha_hash='.$hash.'\')">Ban all & delete all posts (for Spam)</a> - <a onclick="MM_confirm(\'Ban all?\', \'admincenter.php?site=spam&amp;action=multi_just_block&amp;ip='.$ds['ip'].'&amp;captcha_hash='.$hash.'\')">Ban all (for Multi Accounts)</a></td>
+ 			<td colspan="7" class="'.$td.'"><b>'.$ds['ip'].'</b>'.$buttons.'</td>
  			</tr>';
 			foreach($ids as $key => $id){
 				if($i%2) { $td='td1'; }
@@ -190,7 +180,7 @@ elseif($action == "multi"){
 					
 				echo '<tr>
  				<td class="'.$td.'">'.$data['userID'].'</td>
- 				<td class="'.$td.'"><a href="../index.php?site=profile&amp;id='.$data['userID'].'" target="_blank">'.$data['nickname'].'</a><br/><small>Password: '.$passwords[$key].'</small></td>
+ 				<td class="'.$td.'"><a href="../index.php?site=profile&amp;id='.$data['userID'].'" target="_blank">'.$data['nickname'].'</a><br/><small>'.$_language->module["password"].': '.$passwords[$key].'</small></td>
  				<td class="'.$td.'">'.date('d.m.Y',$data['registerdate']).'</td>
  				<td class="'.$td.'">'.$last_login.'</td>
  				<td class="'.$td.'">'.$active.'</td>
@@ -204,7 +194,7 @@ elseif($action == "multi"){
 		echo '</table>';
 	}
 	else{
-		echo "No accounts with same IPs";
+		echo $_language->module["no_accounts_with_same_ips"];
 	}
 }
 elseif($action == "multi_ban"){
@@ -219,12 +209,12 @@ elseif($action == "multi_ban"){
 				deleteSpamUser($ds['userID']);
 			}
 			else{
-				echo 'You can\'t delete Team members.';
+				echo $_language->module["cant_delete_team_members"];
 			}
 		}
 	}
 	else{
-		echo "Invalid TransactionID";
+		echo $_language->module['transaction_invalid'];
 	}
 }
 elseif($action == "multi_just_block"){
@@ -237,21 +227,21 @@ elseif($action == "multi_just_block"){
 			echo "<h3>".$ip."</h3>";
 			if(isclanmember($ds['userID']) == false){
 				safe_query("UPDATE ".PREFIX."user SET banned='perm', ban_reason='Multi Accounts (".mysql_real_escape_string($ds['nicknames']).")' WHERE ip='".$ip."'");
-				echo "Users banned (nothing deleted)<br/>".$ds['nicknames'];
+				echo $_language->module["user_banned"]." (".$_language->module["nothing_deleted"].")<br/>".$ds['nicknames'];
 			}
 			else{
-				echo 'You can\'t delete Team members.';
+				echo $_language->module["cant_delete_team_members"];
 			}
 		}
 	}
 	else{
-		echo "Invalid TransactionID";
+		echo $_language->module['transaction_invalid'];
 	}
 }
 elseif($action == "forum_spam"){
 	echo'<h1>&curren; Forum Spam</h1>';
 	
-	echo '<input type="button" onclick="MM_confirm(\'Alles Löschen ?\', \'admincenter.php?site=spam&amp;action=forum_spam&amp;del_option=del_all\')" value="alles Löschen" />';
+	echo '<input type="button" onclick="MM_confirm(\''.$_language->module["question_delete_all"].'\', \'admincenter.php?site=spam&amp;action=forum_spam&amp;del_option=del_all\')" value="'.$_language->module["delete_all"].'" />';
 	
 	if(isset($_GET['del_option']) && $_GET['del_option']== "del_all"){
 		$get = safe_query("SELECT userID FROM ".PREFIX."forum_topics_spam");
@@ -283,11 +273,11 @@ elseif($action == "forum_spam"){
 	if(mysql_num_rows($get)){
 		echo '<table border="0" cellspacing="1" cellpadding="3" bgcolor="#DDDDDD" width="100%">
 		<tr>
-		<td class="title">Nickname:</td>
-		<td class="title">Date:</td>
-		<td class="title">Topic:</td>
-		<td class="title">Message:</td>
-		<td class="title">Options:</td>
+		<td class="title">'.$_language->module["nickname"].':</td>
+		<td class="title">'.$_language->module["date"].':</td>
+		<td class="title">'.$_language->module["topic"].':</td>
+		<td class="title">'.$_language->module["message"].':</td>
+		<td class="title">'.$_language->module["options"].':</td>
 		</tr>';
 		
 		$i = 0;
@@ -299,7 +289,7 @@ elseif($action == "forum_spam"){
 			else { $td='td2';
 			}
 			
-			$options = '<input type="button" onclick="MM_confirm(\'Löschen ?\', \'admincenter.php?site=spam&amp;action=forum_spam&amp;del_option=delete_topic&amp;topicID='.$ds['topicID'].'\')" value="löschen" />';
+			$options = '<input type="button" onclick="MM_confirm(\''.$_language->module["question_delete"].'\', \'admincenter.php?site=spam&amp;action=forum_spam&amp;del_option=delete_topic&amp;topicID='.$ds['topicID'].'\')" value="'.$_language->module["delete"].'" />';
 			
 			echo '<tr>
 			<td class="'.$td.'"><a href="../index.php?site=profile&amp;id='.$ds['userID'].'" target="_blank">'.getnickname($ds['userID']).'</a></td>
@@ -324,10 +314,10 @@ elseif($action == "forum_spam"){
 	if(mysql_num_rows($get)){
 		echo '<table border="0" cellspacing="1" cellpadding="3" bgcolor="#DDDDDD" width="100%">
 		<tr>
-		<td class="title">Nickname:</td>
-		<td class="title">Date:</td>
-		<td class="title">Message:</td>
-		<td class="title">Options:</td>
+		<td class="title">'.$_language->module["nickname"].':</td>
+		<td class="title">'.$_language->module["date"].':</td>
+		<td class="title">'.$_language->module["message"].':</td>
+		<td class="title">'.$_language->module["options"].':</td>
 		</tr>';
 		
 		$i = 0;
@@ -339,7 +329,7 @@ elseif($action == "forum_spam"){
 			else { $td='td2';
 			}
 			
-			$options = '<input type="button" onclick="MM_confirm(\'Löschen ?\', \'admincenter.php?site=spam&amp;action=forum_spam&amp;del_option=delete_post&amp;postID='.$ds['postID'].'\')" value="löschen" />';
+			$options = '<input type="button" onclick="MM_confirm(\''.$_language->module["question_delete"].'\', \'admincenter.php?site=spam&amp;action=forum_spam&amp;del_option=delete_post&amp;postID='.$ds['postID'].'\')" value="'.$_language->module["delete"].'" />';
 			
 			echo '<tr>
 			<td class="'.$td.'"><a href="../index.php?site=profile&amp;id='.$ds['poster'].'" target="_blank">'.getnickname($ds['poster']).'</a></td>
