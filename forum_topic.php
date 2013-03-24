@@ -71,7 +71,7 @@ if(isset($_POST['newreply']) && !isset($_POST['preview'])) {
 	$spam = 0;
 	$request = validateSpam($message);
 	if(!empty($request)){
-		$data = json_decode($request);
+		$data = json_decode($request,true);
 		if($data["response"] == "ok"){
 			$rating = (float)$data["response"];
 			if($rating >= $spamCheckRating){

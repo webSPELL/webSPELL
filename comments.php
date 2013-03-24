@@ -73,7 +73,7 @@ if(isset($_POST['savevisitorcomment'])) {
 	$spam = 0;
 	$request = validateSpam($message);
 	if(!empty($request)){
-		$data = json_decode($request);
+		$data = json_decode($request,true);
 		if($data["response"] == "ok"){
 			$rating = (float)$data["response"];
 			if($rating >= $spamCheckRating){
@@ -112,7 +112,7 @@ elseif(isset($_POST['saveusercomment'])) {
 	if(getusercomments($userID,$type) < $spamCheckMaxPosts){
 		$request = validateSpam($message);
 		if(!empty($request)){
-			$data = json_decode($request);
+			$data = json_decode($request,true);
 			if($data["response"] == "ok"){
 				$rating = (float)$data["response"];
 				if($rating >= $spamCheckRating){
