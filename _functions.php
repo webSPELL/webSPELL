@@ -276,6 +276,10 @@ $_language->set_language($default_language);
 
 systeminc('func/gallery');
 
+// -- SPAM -- //
+
+systeminc('func/spam');
+
 // -- BB CODE -- //
 
 systeminc('func/bbcode');

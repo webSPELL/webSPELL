@@ -111,15 +111,15 @@ elseif(isset($_POST['saveusercomment'])) {
 	
 	if(getusercomments($userID,$type) < $spamCheckMaxPosts){
 		$request = validateSpam($message);
-	if(!empty($request)){
-		$data = json_decode($request);
-		if($data["response"] == "ok"){
-			$rating = (float)$data["response"];
-			if($rating >= $spamCheckRating){
-				$spam = 1;
+		if(!empty($request)){
+			$data = json_decode($request);
+			if($data["response"] == "ok"){
+				$rating = (float)$data["response"];
+				if($rating >= $spamCheckRating){
+					$spam = 1;
+				}
 			}
 		}
-	}
 	}
 
 	if(checkCommentsAllow($type,$parentID) && $spam == 0){

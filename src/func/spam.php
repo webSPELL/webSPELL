@@ -17,28 +17,43 @@ function learnSpamfilter($message, $type){
 function post_request($url, $data){
 	if(function_exists("curl_init")){
 		$ch = curl_init($url);
-
 		curl_setopt($ch, CURLOPT_POST, 1);
 		curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
-		curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+		curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+		curl_setopt($ch, CURLOPT_CAINFO,"src/ca.pem");
 
 		$response = curl_exec($ch);
 		curl_close($ch);
 		return $response;
 	}
+	elseif(include("HTTP/Request2.php") && class_exists("HTTP_Request2")){
+		$request = new HTTP_Request2($url, HTTP_Request2::METHOD_POST);
+		$request->setConfig(array("ssl_cafile"=>"src/ca.pem","ssl_verify_peer"=>false));
+		$url = $request->getUrl();
+		$url->setQueryVariables($data);
+		return $request->send()->getBody();
+	}
 	elseif(class_exists("HttpRequest")){
 		$r = new HttpRequest($url, HttpRequest::METH_POST);
 		$r->addPostFields($data);
 		try {
-			return $r->send()->getBody();
-		} catch (HttpException $ex) {
+			return $r->getBody();
+		} catch (Exception $ex) {
 			return "";
 		}
 	}
-	elseif(ini_get("allow_url_fopen") == "on"){
-		$params = array('http'=>array('method'=>'post','content'=>http_build_query($data)));
+	elseif(ini_get("allow_url_fopen")){
+		$build_data = http_build_query($data);
+		$params = array('http'=>array(
+								'method'=>'POST',
+								'header'=>"Content-type: application/x-www-form-urlencoded",
+								'content'=>$build_data
+								)
+						);
 		$context= stream_context_create($params);
-		return file_get_contents($url, false, $context);
+		$con= file_get_contents($url, false, $context);
+		return $con;
 	}
 	else{
 		return "";
