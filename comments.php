@@ -81,10 +81,16 @@ if(isset($_POST['savevisitorcomment'])) {
 			}
 		}
 		else{
+			if($spamBlockOnError == 1){
+				$spam = 1;
+			}
 			logSpamError($request);
 		}
 	}
 	else{
+		if($spamBlockOnError == 1){
+			$spam = 1;
+		}
 		logSpamError("Can't query Api. No Responnse");
 	}
 
@@ -126,10 +132,16 @@ elseif(isset($_POST['saveusercomment'])) {
 				}
 			}
 			else{
+				if($spamBlockOnError == 1){
+					$spam = 1;
+				}
 				logSpamError($request);
 			}
 		}
 		else{
+			if($spamBlockOnError == 1){
+				$spam = 1;
+			}
 			logSpamError("Can't query Api. No Responnse");
 		}
 	}

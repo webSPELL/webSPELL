@@ -862,10 +862,16 @@ if(isset($_POST['submit']) || isset($_POST['movetopic']) || isset($_GET['addtopi
 					}
 				}
 				else{
+					if($spamBlockOnError == 1){
+						$spam = 1;
+					}
 					logSpamError($request);
 				}
 			}
 			else{
+				if($spamBlockOnError == 1){
+					$spam = 1;
+				}
 				logSpamError("Can't query Api. No Responnse");
 			}
 			

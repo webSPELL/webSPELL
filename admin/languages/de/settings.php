@@ -152,6 +152,7 @@ $language_array = Array(
   'spamfilter'=>'Spamfilter',
   'spamapikey'=>'Api-Key',
   'spamapihost'=>'Api-URL',
-  'spammaxposts'=>'Max. Posts'
+  'spammaxposts'=>'Max. Posts',
+  'spamapiblockerror'=>'Posts blocken bei Fehler'
 );
 ?>
