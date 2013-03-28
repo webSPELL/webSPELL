@@ -861,6 +861,12 @@ if(isset($_POST['submit']) || isset($_POST['movetopic']) || isset($_GET['addtopi
 						$spam = 1;
 					}
 				}
+				else{
+					logSpamError($request);
+				}
+			}
+			else{
+				logSpamError("Can't query Api. No Responnse");
 			}
 			
 			if($spam == 0){

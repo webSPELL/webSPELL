@@ -78,6 +78,12 @@ if(isset($_POST['newreply']) && !isset($_POST['preview'])) {
 				$spam = 1;
 			}
 		}
+		else{
+			logSpamError($request);
+		}
+	}
+	else{
+		logSpamError("Can't query Api. No Responnse");
 	}
 
 	$date=time();

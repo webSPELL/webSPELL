@@ -80,6 +80,12 @@ if(isset($_POST['savevisitorcomment'])) {
 				$spam = 1;
 			}
 		}
+		else{
+			logSpamError($request);
+		}
+	}
+	else{
+		logSpamError("Can't query Api. No Responnse");
 	}
 
 	if(in_array(trim($name), $nicks)) header("Location: ".$_POST['referer']."&error=nickname#addcomment");
@@ -119,6 +125,12 @@ elseif(isset($_POST['saveusercomment'])) {
 					$spam = 1;
 				}
 			}
+			else{
+				logSpamError($request);
+			}
+		}
+		else{
+			logSpamError("Can't query Api. No Responnse");
 		}
 	}
 

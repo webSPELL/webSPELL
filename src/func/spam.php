@@ -14,6 +14,9 @@ function learnSpamfilter($message, $type){
 	return post_request($spamapihost,$postdata);
 }
 
+function logSpamError($message){
+	safe_query("INSERT INTO ".PREFIX."api_log (`message`,`date`) VALUES ('".$message."','".time()."')");
+}
 function post_request($url, $data){
 	if(function_exists("curl_init")){
 		$ch = curl_init($url);
