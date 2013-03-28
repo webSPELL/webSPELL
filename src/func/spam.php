@@ -15,7 +15,7 @@ function learnSpamfilter($message, $type){
 }
 
 function logSpamError($message){
-	safe_query("INSERT INTO ".PREFIX."api_log (`message`,`date`) VALUES ('".$message."','".time()."')");
+	safe_query("INSERT INTO ".PREFIX."api_log (`message`,`date`) VALUES ('".addslashes($message)."','".time()."')");
 }
 function post_request($url, $data){
 	if(function_exists("curl_init")){
