@@ -164,7 +164,7 @@ else {
 <table width="100%" border="0" cellspacing="1" cellpadding="3">
   <tr>
     <td width="15%"><b><?php echo $_language->module['title']; ?></b></td>
-    <td width="85%"><input type="text" name="title" value="<?php echo $title;?>" size="97" /></td>
+    <td width="85%"><input type="text" name="title" value="<?php echo $title;?>" size="95" /></td>
   </tr>
   <tr>
     <td valign="top"><b><?php echo $_language->module['html_mail']; ?></b></td>
