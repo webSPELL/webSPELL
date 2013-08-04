@@ -146,12 +146,15 @@ $language_array = Array(
   'tooltip_49'=>'Number of noise-lines',
   'tooltip_50'=>'Selection of automatic image resize function',
   'tooltip_51'=>'Maximal length of the topnews in sc_topnews',
+  'tooltip_90'=>'Validate Posts against external Database',
   'transaction_invalid'=>'Transaction ID invalid',
   'upcoming_actions'=>'upcoming actions',
   'update'=>'update',
   'spamfilter'=>'Spamfilter',
   'spamapikey'=>'Api-Key',
   'spamapihost'=>'Api-URL',
-  'spammaxposts'=>'Max. Posts'
+  'spammaxposts'=>'Max. Posts',
+  'spam_check'=>'Spamcheck'
+
 );
 ?>

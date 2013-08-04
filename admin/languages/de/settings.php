@@ -146,12 +146,14 @@ $language_array = Array(
   'tooltip_49'=>'Anzahl der Störungslinien',
   'tooltip_50'=>'Auswahl der automatischen Inhaltsgrößenanpassung',
   'tooltip_51'=>'Maximale Länge für die Top Neuigkeiten in sc_topnews',
+  'tooltip_90'=>'Posts mit externer Datenbank validieren',
   'transaction_invalid'=>'Transaktions ID ungültig',
   'upcoming_actions'=>'Kommende Aktionen',
   'update'=>'aktualisieren',
   'spamfilter'=>'Spamfilter',
   'spamapikey'=>'Api-Key',
   'spamapihost'=>'Api-URL',
-  'spammaxposts'=>'Max. Posts'
+  'spammaxposts'=>'Max. Posts',
+  'spam_check'=>'Spamcheck'
 );
 ?>

@@ -9,7 +9,7 @@ if(isset($_GET['getnickname'])){
 	echo "<a target='_blank' href='/index.php?site=profile&id=".$_GET['getnickname']."'>".getnickname($_GET['getnickname']).'</a> since '.getregistered($_GET['getnickname']).'';
 	exit();
 }
-if(!isspamadmin($userID) OR mb_substr(basename($_SERVER['REQUEST_URI']),0,15) != "admincenter.php") die();
+if(!ispageadmin($userID) OR mb_substr(basename($_SERVER['REQUEST_URI']),0,15) != "admincenter.php") die();
 $_language->read_module('spam');
 function deleteSpamUser($spammerID){
 	global $_language;

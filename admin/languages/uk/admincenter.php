@@ -75,6 +75,10 @@ $language_array = Array(
   'update_webspell'=>'webSPELL update',
   'user_administration'=>'User Administration',
   'user_ranks'=>'User-Ranks',
-  'visitor_statistics'=>'Visitor Statistics'
+  'visitor_statistics'=>'Visitor Statistics',
+  'spam'=>'Spam',
+  'spam_forum'=>'Posts / Topics',
+  'spam_user'=>'Remove User',
+  'multiaccounts'=>'Multi-Accounts'
 );
 ?>

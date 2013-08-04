@@ -71,13 +71,15 @@ if(isset($_POST['savevisitorcomment'])) {
 	$_SESSION['comments_message'] = $message;
 
 	$spam = 0;
-	$request = validateSpam($message);
-	if(!empty($request)){
-		$data = json_decode($request,true);
-		if($data["response"] == "ok"){
-			$rating = (float)$data["response"];
-			if($rating >= $spamCheckRating){
-				$spam = 1;
+	if($spamCheckEnabled == 1){
+		$request = validateSpam($message);
+		if(!empty($request)){
+			$data = json_decode($request,true);
+			if($data["response"] == "ok"){
+				$rating = (float)$data["response"];
+				if($rating >= $spamCheckRating){
+					$spam = 1;
+				}
 			}
 		}
 	}
@@ -109,7 +111,7 @@ elseif(isset($_POST['saveusercomment'])) {
 
 	$spam = 0;
 	
-	if(getusercomments($userID,$type) < $spamCheckMaxPosts){
+	if(getusercomments($userID,$type) < $spamCheckMaxPosts && $spamCheckEnabled == 1){
 		$request = validateSpam($message);
 		if(!empty($request)){
 			$data = json_decode($request,true);

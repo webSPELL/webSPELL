@@ -24,3 +24,5 @@ CREATE TABLE IF NOT EXISTS `forum_topics_spam` (
   `message` text COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`topicID`)
 )
+
+ALTER TABLE `ws_vac_settings` ADD `spam_check` INT( 1 ) NOT NULL ;

@@ -852,13 +852,15 @@ if(isset($_POST['submit']) || isset($_POST['movetopic']) || isset($_GET['addtopi
 
 			
 			$spam = 0;
-			$request = validateSpam($message);
-			if(!empty($request)){
-				$data = json_decode($request,true);
-				if($data["response"] == "ok"){
-					$rating = (float)$data["response"];
-					if($rating >= $spamCheckRating){
-						$spam = 1;
+			if($spamCheckEnabled == 1){
+				$request = validateSpam($message);
+				if(!empty($request)){
+					$data = json_decode($request,true);
+					if($data["response"] == "ok"){
+						$rating = (float)$data["response"];
+						if($rating >= $spamCheckRating){
+							$spam = 1;
+						}
 					}
 				}
 			}

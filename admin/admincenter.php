@@ -103,10 +103,19 @@ if(!isset($_SERVER['REQUEST_URI'])) {
       <li><a href="admincenter.php?site=users"><?php echo $_language->module['registered_users']; ?></a></li>
       <li><a href="admincenter.php?site=squads"><?php echo $_language->module['squads']; ?></a></li>
       <li><a href="admincenter.php?site=members"><?php echo $_language->module['clanmembers']; ?></a></li>
-		<li><a href="admincenter.php?site=contact"><?php echo $_language->module['contact']; ?></a></li>
+		  <li><a href="admincenter.php?site=contact"><?php echo $_language->module['contact']; ?></a></li>
       <li><a href="admincenter.php?site=newsletter"><?php echo $_language->module['newsletter']; ?></a></li>
     </ul>
-    <?php } if(isnewsadmin($userID) || isfileadmin($userID) || ispageadmin($userID)) { ?>
+    <?php }
+    if(ispageadmin($userID)) { ?>
+    <h2>&not; <?php echo $_language->module['spam']; ?></h2>
+    <ul>
+      <li><a href="admincenter.php?site=spam&amp;action=forum_spam"><?php echo $_language->module['spam_forum']; ?></a></li>
+      <li><a href="admincenter.php?site=spam&amp;action=user"><?php echo $_language->module['spam_user']; ?></a></li>
+      <li><a href="admincenter.php?site=spam&amp;action=multi"><?php echo $_language->module['multiaccounts']; ?></a></li>
+    </ul>
+    <?php } 
+    if(isnewsadmin($userID) || isfileadmin($userID) || ispageadmin($userID)) { ?>
     <h2>&not; <?php echo $_language->module['rubrics']; ?></h2>
     <ul>
       <?php } if(isnewsadmin($userID)) { ?>

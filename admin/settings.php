@@ -86,6 +86,7 @@ if(isset($_POST['submit'])) {
 									 spamapikey='".$_POST['spamapikey']."',
 									 spamapihost='".$_POST['spamapihost']."',
 									 spammaxposts='".$_POST['spammaxposts']."',
+									 spam_check='".isset($_POST['spam_check'])."',
 									 autoresize='".$_POST['autoresize']."'");
 		safe_query("UPDATE ".PREFIX."styles SET title='".$_POST['title']."' ");	
 	  	redirect("admincenter.php?site=settings","",0);
@@ -102,6 +103,9 @@ else {
 
 	if($ds['gb_info']) $gb_info='<input type="checkbox" name="gb_info" value="1" checked="checked" onmouseover="showWMTT(\'id36\')" onmouseout="hideWMTT()" />';
 	else $gb_info='<input type="checkbox" name="gb_info" value="1" onmouseover="showWMTT(\'id36\')" onmouseout="hideWMTT()" />';
+
+	if($ds['spam_check']) $spam_check='<input type="checkbox" name="spam_check" value="1" checked="checked" onmouseover="showWMTT(\'id90\')" onmouseout="hideWMTT()" />';
+	else $spam_check='<input type="checkbox" name="spam_check" value="1" onmouseover="showWMTT(\'id90\')" onmouseout="hideWMTT()" />';
 
 	if($ds['publicadmin']) $publicadmin = " checked=\"checked\"";
 	else $publicadmin = "";
@@ -188,7 +192,7 @@ else {
 <div class="tooltip" id="id49"><?php echo $_language->module['tooltip_49']; ?></div>
 <div class="tooltip" id="id50"><?php echo $_language->module['tooltip_50']; ?></div>
 <div class="tooltip" id="id51"><?php echo $_language->module['tooltip_51']; ?></div>
-
+<div class="tooltip" id="id90"><?php echo $_language->module['tooltip_90']; ?></div>
 <table width="100%" border="0" cellspacing="1" cellpadding="3">
   <tr>
     <td width="15%"><b><?php echo $_language->module['page_title']; ?></b></td>
@@ -468,6 +472,10 @@ else {
 	   <tr>
 	    <td width="50%"><b><?php echo $_language->module['spamfilter']; ?>:</b></td>
 	    <td>&nbsp;</td>
+	  </tr>
+	  <tr>
+	    <td align="right"><?php echo $spam_check;?></td>
+	    <td><?php echo $_language->module['spam_check']; ?></td>
 	  </tr>
 	  <tr>
 	    <td align="right"><input type="text" name="spamapikey" value="<?php echo $ds['spamapikey']; ?>" size="32" /></td>
