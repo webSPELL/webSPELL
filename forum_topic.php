@@ -79,6 +79,18 @@ if(isset($_POST['newreply']) && !isset($_POST['preview'])) {
 					$spam = 1;
 				}
 			}
+			else{
+				if($spamBlockOnError == 1){
+					$spam = 1;
+				}
+				logSpamError($request);
+			}
+		}
+		else{
+			if($spamBlockOnError == 1){
+				$spam = 1;
+			}
+			logSpamError("Can't query Api. No Responnse");
 		}
 	}
 

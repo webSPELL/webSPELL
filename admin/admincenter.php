@@ -165,6 +165,14 @@ if(!isset($_SERVER['REQUEST_URI'])) {
       <li><a href="admincenter.php?site=gallery&amp;part=groups"><?php echo $_language->module['manage_groups']; ?></a></li>
       <li><a href="admincenter.php?site=gallery&amp;part=gallerys"><?php echo $_language->module['manage_galleries']; ?></a></li>
     </ul>
+    <?php } if(ispageadmin($userID)) { ?>
+    <h2>&not; Spam</h2>
+    <ul>
+      <li><a href="admincenter.php?site=spam&amp;action=api_log">Api-Log</a></li>
+      <li><a href="admincenter.php?site=spam&amp;action=forum_spam">Forum Spam</a></li>
+      <li><a href="admincenter.php?site=spam&amp;action=multi">Multi-User</a></li>
+      <li><a href="admincenter.php?site=spam&amp;action=user">User-Ban</a></li>
+    </ul>
     <?php } ?>
    </div>
    </td>

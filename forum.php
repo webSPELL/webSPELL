@@ -862,9 +862,20 @@ if(isset($_POST['submit']) || isset($_POST['movetopic']) || isset($_GET['addtopi
 							$spam = 1;
 						}
 					}
+					else{
+						if($spamBlockOnError == 1){
+							$spam = 1;
+						}
+						logSpamError($request);
+					}
 				}
-			}
-			
+				else{
+					if($spamBlockOnError == 1){
+						$spam = 1;
+					}
+					logSpamError("Can't query Api. No Responnse");
+				}
+			}		
 			if($spam == 0){
 				$date=time();
 				safe_query("INSERT INTO ".PREFIX."forum_topics ( boardID, readgrps, writegrps, userID, date, icon, topic, lastdate, lastposter, replys, views, closed, sticky ) values ( '$board', '".$ds['readgrps']."', '".$ds['writegrps']."', '$userID', '$date', '".$icon."', '".$topicname."', '$date', '$userID', '0', '0', '0', '$topic_sticky' ) ");

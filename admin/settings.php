@@ -87,6 +87,7 @@ if(isset($_POST['submit'])) {
 									 spamapihost='".$_POST['spamapihost']."',
 									 spammaxposts='".$_POST['spammaxposts']."',
 									 spam_check='".isset($_POST['spam_check'])."',
+									 spamapiblockerror='".(int)isset($_POST['spamapiblockerror'])."',
 									 autoresize='".$_POST['autoresize']."'");
 		safe_query("UPDATE ".PREFIX."styles SET title='".$_POST['title']."' ");	
 	  	redirect("admincenter.php?site=settings","",0);
@@ -111,6 +112,9 @@ else {
 	else $publicadmin = "";
 	if($ds['usergalleries']) $usergalleries = " checked=\"checked\"";
 	else $usergalleries = "";
+
+	if($ds['spamapiblockerror']) $spamapiblockerror = ' checked="checked"';
+	else $spamapiblockerror = '';
 
 	$langdirs = '';
 	$filepath = "../languages/";
@@ -482,12 +486,16 @@ else {
 	    <td><?php echo $_language->module['spamapikey']; ?></td>
 	  </tr>
 	  <tr>
-	    <td align="right"><input type="text" name="spamapihost" value="<?php echo $ds['spamapihost']; ?>" /></td>
+	    <td align="right"><input type="text" name="spamapihost" value="<?php echo $ds['spamapihost']; ?>" size="32"/></td>
 	    <td><?php echo $_language->module['spamapihost']; ?></td>
 	  </tr>
 	  <tr>
 	    <td align="right"><input type="text" name="spammaxposts" value="<?php echo $ds['spammaxposts']; ?>" size="4" /></td>
 	    <td><?php echo $_language->module['spammaxposts']; ?></td>
+	  </tr>
+	  <tr>
+	    <td align="right"><input type="checkbox" name="spamapiblockerror" <?php echo $spamapiblockerror;?> value="1"/></td>
+	    <td><?php echo $_language->module['spamapiblockerror']; ?></td>
 	  </tr>
 	</table>
 </div>

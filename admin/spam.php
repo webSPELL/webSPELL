@@ -238,6 +238,45 @@ elseif($action == "multi_just_block"){
 		echo $_language->module['transaction_invalid'];
 	}
 }
+elseif($action == "api_log"){
+	echo'<h1>&curren; Api-Log</h1>';
+
+	if(isset($_GET['del_option']) && $_GET['del_option']== "del_all"){
+		safe_query("DELETE FROM ".PREFIX."api_log");
+	}
+
+	$get = safe_query("SELECT * FROM ".PREFIX."api_log ORDER BY `date` DESC");
+	if(mysql_num_rows($get)){
+
+		echo '<input type="button" onclick="MM_confirm(\''.$_language->module["question_delete_all"].'\', \'admincenter.php?site=spam&amp;action=api_log&amp;del_option=del_all\')" value="'.$_language->module["delete_all"].'" /><br/><br/>';
+
+		echo '<table border="0" cellspacing="1" cellpadding="3" bgcolor="#DDDDDD" width="100%">
+		<tr>
+		<td class="title">'.$_language->module["message"].':</td>
+		<td class="title">'.$_language->module["date"].':</td>
+		</tr>';
+		while($ds = mysql_fetch_assoc($get)){
+
+			if($i%2) {
+				$td='td1';
+			}
+			else { $td='td2';
+			}
+			
+			echo '<tr>
+			<td class="'.$td.'"><font color="red">'.getinput($ds['message']).'</font></td>
+			<td class="'.$td.'">'.date('d.m.Y',$ds['date']).'</td>
+			</tr>';
+			
+			$i++;
+
+		}
+		echo '</table>';
+	}
+	else{
+		echo "n/a";
+	}
+}
 elseif($action == "forum_spam"){
 	echo'<h1>&curren; Forum Spam</h1>';
 	
