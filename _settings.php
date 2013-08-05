@@ -243,6 +243,7 @@ $spamapikey					=	$ds['spamapikey'];
 $spamapihost				=	$ds['spamapihost'];			if(empty($spamapihost)) $spamapihost = "https://api.webspell.org/";
 $spamCheckMaxPosts 			=	$ds['spammaxposts'];		if(empty($spamCheckMaxPosts)) $spamCheckMaxPosts = 30;
 $spamCheckEnabled 			=	(int)$ds['spam_check'];
+$spamBlockOnError			= 	(int)$ds['spamapiblockerror'];
 $spamCheckRating = 0.95;
 
 $new_chmod = 0666;

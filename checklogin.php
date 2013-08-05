@@ -72,7 +72,20 @@ if(mysql_num_rows($get) == 0){
 					//remove sessiontest variable
 					if(isset($_SESSION['ws_sessiontest'])) unset($_SESSION['ws_sessiontest']);
 					//cookie
-					setcookie("ws_auth", $ds['userID'].":".$ws_pwd, time()+($sessionduration*60*60));					
+					$cookieName = "ws_auth";
+					$cookieValue = $ds['userID'].":".$ws_pwd;
+					$cookieExpire = time()+($sessionduration*60*60);
+					if (version_compare(PHP_VERSION, '5.2.0') >= 0) {
+						$cookieInfo = session_get_cookie_params();
+						setcookie($cookieName,$cookieValue,$cookieExpire,$cookieInfo['path'],$cookieInfo['domain'],$cookieInfo['secure'],true);
+					}
+					else{
+						setcookie($cookieName,$cookieValue,$cookieExpire);	
+					}				
+					unset($cookieName);
+					unset($cookieValue);
+					unset($cookieExpire);
+					unset($cookieInfo);
 					//Delete visitor with same IP from whoisonline
 					safe_query("DELETE FROM ".PREFIX."whoisonline WHERE ip='".$GLOBALS['ip']."'");
 					//Delete IP from failed logins
