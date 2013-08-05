@@ -75,6 +75,7 @@ $language_array = Array(
   'update_webspell'=>'webSPELL frissítés',
   'user_administration'=>'Felhasználói beállítások',
   'user_ranks'=>'Rangok',
-  'visitor_statistics'=>'Látogatói statisztikák'
+  'visitor_statistics'=>'Látogatói statisztikák',
+  'api_log'=>'API Log'
 );
 ?>

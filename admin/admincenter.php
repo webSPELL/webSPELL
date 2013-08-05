@@ -113,6 +113,7 @@ if(!isset($_SERVER['REQUEST_URI'])) {
       <li><a href="admincenter.php?site=spam&amp;action=forum_spam"><?php echo $_language->module['spam_forum']; ?></a></li>
       <li><a href="admincenter.php?site=spam&amp;action=user"><?php echo $_language->module['spam_user']; ?></a></li>
       <li><a href="admincenter.php?site=spam&amp;action=multi"><?php echo $_language->module['multiaccounts']; ?></a></li>
+      <li><a href="admincenter.php?site=spam&amp;action=api_log"><?php echo $_language->module['api_log']; ?></a></li>
     </ul>
     <?php } 
     if(isnewsadmin($userID) || isfileadmin($userID) || ispageadmin($userID)) { ?>

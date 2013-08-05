@@ -75,6 +75,7 @@ $language_array = Array(
   'update_webspell'=>'webSPELL aggiornamento',
   'user_administration'=>'Utenti Amministrazione',
   'user_ranks'=>'Utente Ranks',
-  'visitor_statistics'=>'Statistiche visitatori'
+  'visitor_statistics'=>'Statistiche visitatori',
+  'api_log'=>'API Log'
 );
 ?>

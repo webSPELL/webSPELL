@@ -79,6 +79,7 @@ $language_array = Array(
   'spam'=>'Spam',
   'spam_forum'=>'Posts / Topics',
   'spam_user'=>'Remove User',
-  'multiaccounts'=>'Multi-Accounts'
+  'multiaccounts'=>'Multi-Accounts',
+  'api_log'=>'API Log'
 );
 ?>
