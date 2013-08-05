@@ -53,9 +53,4 @@ if(isset($_SESSION['ws_auth'])) {
 	}
 	else die();
 }
-
-if(!isset($_SESSION['language'])) {
-	$_SESSION['language'] = $default_language;
-}
-
 ?>
