@@ -79,16 +79,16 @@ if($action=="save" && isset($_POST['post'])) {
 		while($ds=mysql_fetch_array($ergebnis)) {
 			$touser[]=$ds['userID'];
 		}
-
-		if($touser[0] != "") {
-			$date = time();
-			$tmp_lang = new Language();
-			foreach($touser as $id) {
-				$tmp_lang->set_language(getuserlanguage($id));
-				$tmp_lang->read_module('challenge');
-				$message = $tmp_lang->module['challenge_message'];
-				sendmessage($id,$tmp_lang->module['message_title'],$message);
-			}
+		if(!count($touser)){
+			$touser[] = 1;
+		}
+		$date = time();
+		$tmp_lang = new Language();
+		foreach($touser as $id) {
+			$tmp_lang->set_language(getuserlanguage($id));
+			$tmp_lang->read_module('challenge');
+			$message = $tmp_lang->module['challenge_message'];
+			sendmessage($id,$tmp_lang->module['message_title'],$message);
 		}
 		echo $_language->module['thank_you'];
 		unset($_POST['opponent'],$_POST['opphp'],$_POST['league'],$_POST['map'],$_POST['server'],$_POST['info'],$_POST['email']);

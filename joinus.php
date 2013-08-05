@@ -76,13 +76,14 @@ if($action=="save" && isset($_POST['post'])) {
 		while($ds=mysql_fetch_array($ergebnis)) {
 			$touser[]=$ds['userID'];
 		}
-
-		if($touser[0] != "") {
-			$tmp_lang = new Language();
-			foreach($touser as $id) {
-				$tmp_lang->set_language(getuserlanguage($id));
-				$tmp_lang->read_module('joinus');
-				$message = '[b]'.$tmp_lang->module['someone_want_to_join_your_squad'].' '.mysql_real_escape_string(getsquadname($squad)).'![/b]
+		if(!count($touser)){
+			$touser[] = 1;
+		}
+		$tmp_lang = new Language();
+		foreach($touser as $id) {
+			$tmp_lang->set_language(getuserlanguage($id));
+			$tmp_lang->read_module('joinus');
+			$message = '[b]'.$tmp_lang->module['someone_want_to_join_your_squad'].' '.mysql_real_escape_string(getsquadname($squad)).'![/b]
 				 '.$tmp_lang->module['nick'].' '.$nick.'
 				 '.$tmp_lang->module['name'].': '.$name.'
 				 '.$tmp_lang->module['age'].': '.$age.'
@@ -95,7 +96,6 @@ if($action=="save" && isset($_POST['post'])) {
 				 '.$info.'
 				 ';
 				sendmessage($id,$tmp_lang->module['message_title'],$message);
-			}
 		}
 		echo $_language->module['thanks_you_will_get_mail'];
 		unset($_POST['nick'], $_POST['name'], $_POST['email'],$_POST['messenger'],$_POST['age'],$_POST['city'],$_POST['clanhistory'],$_POST['info']);
