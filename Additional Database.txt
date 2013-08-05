@@ -26,3 +26,4 @@ CREATE TABLE IF NOT EXISTS `forum_topics_spam` (
 )
 
 ALTER TABLE `ws_vac_settings` ADD `spam_check` INT( 1 ) NOT NULL ;
+ALTER TABLE `ws_8fF_settings` ADD `detect_language` INT( 1 ) NOT NULL ;

@@ -171,4 +171,21 @@ function isonline($userID) {
 	}
 	else return 'offline';
 }
+
+function detectUserLanguage(){
+	if(isset($_SERVER['HTTP_ACCEPT_LANGUAGE'])){
+		preg_match_all("/([a-z]{1,8}(-[a-z]{1,8})?)\s*(;\s*q\s*=\s*(1|0\.[0-9]+))?/i",$_SERVER['HTTP_ACCEPT_LANGUAGE'],$matches);
+		if(count($matches)){
+			$languages_found = array_combine($matches[1], array_map(function($val){if(empty($val)) return 1; else return $val;},$matches[4]));
+			arsort($languages_found, SORT_NUMERIC);
+			$path = $GLOBALS['_language']->language_path;
+			foreach($languages_found as $key => $val){
+				if(is_dir($path.$key)){
+					return $key;
+				}
+			}
+		}
+	}
+	return null;
+}
 ?>

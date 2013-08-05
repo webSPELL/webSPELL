@@ -239,6 +239,7 @@ $autoresize 				= 	$ds['autoresize']; 			if(!isset($autoresize)) $autoresize = 2
 $max_wrong_pw 				= 	$ds['max_wrong_pw']; 		if(empty($max_wrong_pw)) $max_wrong_pw = 3;
 $lastBanCheck 				= 	$ds['bancheck']; 
 $insertlinks				=	$ds['insertlinks'];
+$autoDetectLanguage			=	(int)$ds['detect_language'];		
 $spamapikey					=	$ds['spamapikey'];
 $spamapihost				=	$ds['spamapihost'];			if(empty($spamapihost)) $spamapihost = "https://api.webspell.org/";
 $spamCheckMaxPosts 			=	$ds['spammaxposts'];		if(empty($spamCheckMaxPosts)) $spamCheckMaxPosts = 30;

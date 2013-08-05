@@ -87,7 +87,8 @@ if(isset($_POST['submit'])) {
 									 spamapihost='".$_POST['spamapihost']."',
 									 spammaxposts='".$_POST['spammaxposts']."',
 									 spam_check='".isset($_POST['spam_check'])."',
-									 spamapiblockerror='".(int)isset($_POST['spamapiblockerror'])."',
+									 spamapiblockerror='".isset($_POST['spamapiblockerror'])."',
+									 detect_language='".isset($_POST['detectLanguage'])."',
 									 autoresize='".$_POST['autoresize']."'");
 		safe_query("UPDATE ".PREFIX."styles SET title='".$_POST['title']."' ");	
 	  	redirect("admincenter.php?site=settings","",0);
@@ -107,6 +108,9 @@ else {
 
 	if($ds['spam_check']) $spam_check='<input type="checkbox" name="spam_check" value="1" checked="checked" onmouseover="showWMTT(\'id90\')" onmouseout="hideWMTT()" />';
 	else $spam_check='<input type="checkbox" name="spam_check" value="1" onmouseover="showWMTT(\'id90\')" onmouseout="hideWMTT()" />';
+
+	if($ds['detect_language']) $visitor_language='<input type="checkbox" name="detectLanguage" value="1" checked="checked" />';
+	else $visitor_language='<input type="checkbox" name="detectLanguage" value="1" />';
 
 	if($ds['publicadmin']) $publicadmin = " checked=\"checked\"";
 	else $publicadmin = "";
@@ -451,6 +455,10 @@ else {
     <tr>
 	    <td align="right"><select name="autoresize" onmouseover="showWMTT('id50')" onmouseout="hideWMTT()"><?php echo $autoresize;?></select></td>
 	    <td><?php echo $_language->module['autoresize']; ?></td>
+	  </tr>
+	  <tr>
+	    <td align="right"><?php echo $visitor_language; ?></td>
+	    <td><?php echo $_language->module['detect_visitor_language']; ?></td>
 	  </tr>
 	</table>
 </div>

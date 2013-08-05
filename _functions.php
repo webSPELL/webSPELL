@@ -356,6 +356,14 @@ if($login_per_cookie) {
 	$_SESSION['ws_lastlogin'] = $ll['lastlogin'];
 }
 
+// -- Visitor Language --//
+if($autoDetectLanguage && $loggedin == false){
+	$lang = detectUserLanguage();
+	if(!empty($lang)){
+		$_language->set_language($lang);
+	}
+}
+
 // -- SITE VARIABLE -- //
 
 if(isset($_GET['site'])) $site = $_GET['site'];

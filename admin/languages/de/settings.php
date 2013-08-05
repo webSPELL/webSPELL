@@ -155,6 +155,7 @@ $language_array = Array(
   'spamapihost'=>'Api-URL',
   'spammaxposts'=>'Max. Posts',
   'spam_check'=>'Spamcheck',
-  'spamapiblockerror'=>'Posts blocken bei Fehler'
+  'spamapiblockerror'=>'Posts blocken bei Fehler',
+  'detect_visitor_language'=>'Besuchersprache erkennen'
 );
 ?>
