@@ -145,14 +145,11 @@ function RandPass($length, $type=0) {
 	Example:
 	echo RandPass(7, 1); => 0917432
 	*/
-
+	$pass = '';
 	for ($i = 0; $i < $length; $i++) {
 
 		if($type==0) $rand = rand(1,3);
 		else $rand = $type;
-    
-    if(!isset($pass)) { $pass = ''; }
-
 		switch($rand) {
 			case 1: $pass .= chr(rand(48,57)); break;
 			case 2: $pass .= chr(rand(65,90)); break;

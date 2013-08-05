@@ -93,7 +93,7 @@ if(isset($_POST['save'])) {
 			// insert in db
 			$md5pwd = md5(stripslashes($pwd1));
 			$registerdate=time();
-			$activationkey = createkey(20);
+			$activationkey = md5(RandPass(20));
 			$activationlink='http://'.$hp_url.'/index.php?site=register&key='.$activationkey;
 	
 			safe_query("INSERT INTO `".PREFIX."user` (`registerdate`, `lastlogin`, `username`, `password`, `nickname`, `email`, `newsletter`, `activated`,`ip`) VALUES ('$registerdate', '$registerdate', '$username', '$md5pwd', '$nickname', '$mail', '1', '".$activationkey."','".$GLOBALS['ip']."')");

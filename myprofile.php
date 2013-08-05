@@ -311,7 +311,7 @@ else {
 
 		$bg1 = BG_1;
 		$bg2 = BG_2;
-    $bg3 = BG_3;
+    	$bg3 = BG_3;
 		$bg4 = BG_4;
 		$border = BORDER;
 
@@ -322,7 +322,7 @@ else {
 	
 	elseif(isset($_POST['savemail'])){
 
-		$activationkey = createkey(20);
+		$activationkey = md5(RandPass(20));
 		$activationlink = 'http://'.$hp_url.'/index.php?site=register&mailkey='.$activationkey;
 		$pwd = $_POST['oldpwd'];
 		$mail1 = $_POST['mail1'];
