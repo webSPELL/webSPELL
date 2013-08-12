@@ -74,7 +74,7 @@ elseif($action=="search" AND ($userID OR isset($_GET['captcha']))) {
 			else {
 				if(!$ad) $ad = 1;
 				if(!$am) $am = 1;
-				if(!$ay) $by = date("Y");
+				if(!$ay) $ay = date("Y");
 				$after = mktime(0, 0, 0, $am, $ad, $ay);
 			}
 			if(!($bm and $bd and $by)) {
