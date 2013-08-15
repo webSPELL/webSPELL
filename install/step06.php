@@ -64,6 +64,7 @@ if($_POST['installtype'] == 'update') {
 	update40000_40100();
 	update40100_40101();
 	update40101_40200();
+	update40200_40300();
 
 }
 elseif($_POST['installtype'] == 'full') {
@@ -140,6 +141,7 @@ elseif($_POST['installtype'] == 'full') {
 	update40000_40100();
 	update40100_40101();
 	update40101_40200();
+	update40200_40300();
 
 }
 elseif($_POST['installtype'] == 'update_beta') {
@@ -157,6 +159,7 @@ elseif($_POST['installtype'] == 'update_beta') {
 	update40000_40100();
 	update40100_40101();
 	update40101_40200();
+	update40200_40300();
 
 }
 elseif($_POST['installtype'] == 'update_beta5') {
@@ -173,6 +176,7 @@ elseif($_POST['installtype'] == 'update_beta5') {
 	update40000_40100();
 	update40100_40101();
 	update40101_40200();
+	update40200_40300();
 
 }
 
@@ -189,6 +193,7 @@ elseif($_POST['installtype'] == 'update_beta6') {
 	update40000_40100();
 	update40100_40101();
 	update40101_40200();
+	update40200_40300();
 
 }
 
@@ -204,6 +209,7 @@ elseif($_POST['installtype'] == 'update_final') {
 	update40000_40100();
 	update40100_40101();
 	update40101_40200();
+	update40200_40300();
 
 }
 
@@ -218,6 +224,7 @@ elseif($_POST['installtype'] == 'update_40100') {
 	
 	update40100_40101();
 	update40101_40200();
+	update40200_40300();
 
 }
 elseif($_POST['installtype'] == 'update_40102') {
@@ -230,6 +237,7 @@ elseif($_POST['installtype'] == 'update_40102') {
 	mysql_query("SET NAMES 'utf8'");
 	
 	update40101_40200();
+	update40200_40300();
 
 }
 include("../src/func/filesystem.php");

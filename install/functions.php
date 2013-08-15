@@ -1900,6 +1900,9 @@ function update40101_40200() {
 			$set = substr($string,0,-2);
 			mysql_query("UPDATE ".PREFIX."user SET ".$set." WHERE userID='".$id."'");
 		}
+
+    @ini_set("max_execution_time", "300");
+    @set_time_limit(300);
 		
 		// Fix Userguestbook
 		$get = mysql_query("SELECT gbID, name, email, hp, comment FROM ".PREFIX."user_gbook");
@@ -1916,17 +1919,61 @@ function update40101_40200() {
 		while ($ds = mysql_fetch_assoc($get)) {
 			mysql_query("UPDATE ".PREFIX."messenger SET message='".$ds['message']."' WHERE messageID='".$ds['messageID']."'");
 		}
+
+    @ini_set("max_execution_time", "300");
+    @set_time_limit(300);
 		
 		// Fix Forum
 		$get = mysql_query("SELECT topicID, topic FROM ".PREFIX."forum_topics");
 		while($ds = mysql_fetch_assoc($get)){
 			mysql_query("UPDATE ".PREFIX."forum_topics SET topic='".$ds['topic']."' WHERE topicID='".$ds['topicID']."'");
 		}
+
+    @ini_set("max_execution_time", "300");
+    @set_time_limit(300);
 		
 		$get = mysql_query("SELECT postID, message FROM ".PREFIX."forum_posts");
 		while($ds = mysql_fetch_assoc($get)){
 			mysql_query("UPDATE ".PREFIX."forum_posts SET message='".$ds['message']."' WHERE postID='".$ds['postID']."'");
 		}
 	}
+}
+
+function update40200_40300(){
+  mysql_query("CREATE TABLE `".PREFIX."forum_posts_spam` (
+  `postID` int(11) NOT NULL AUTO_INCREMENT,
+  `boardID` int(11) NOT NULL DEFAULT '0',
+  `topicID` int(11) NOT NULL DEFAULT '0',
+  `date` int(14) NOT NULL DEFAULT '0',
+  `poster` int(11) NOT NULL DEFAULT '0',
+  `message` text COLLATE utf8_unicode_ci NOT NULL,
+  PRIMARY KEY (`postID`),
+  KEY `boardID` (`boardID`),
+  KEY `topicID` (`topicID`),
+  KEY `poster` (`poster`),
+  KEY `date` (`date`),
+  FULLTEXT KEY `message` (`message`)
+  )");
+  mysql_query("CREATE TABLE `".PREFIX."forum_topics_spam` (
+  `topicID` int(11) NOT NULL AUTO_INCREMENT,
+  `boardID` int(11) NOT NULL,
+  `userID` int(11) NOT NULL,
+  `date` int(14) NOT NULL,
+  `icon` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `topic` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `sticky` int(1) NOT NULL,
+  `message` text COLLATE utf8_unicode_ci NOT NULL,
+  PRIMARY KEY (`topicID`)
+  )");
+  mysql_query("CREATE TABLE `".PREFIX."api_log` (
+  `date` int(11) NOT NULL,
+  `message` varchar(255) NOT NULL
+)");
+  mysql_query("ALTER TABLE `".PREFIX."settings` ADD `spam_check` INT( 1 ) NOT NULL ;");
+  mysql_query("ALTER TABLE `".PREFIX."settings` ADD `detect_language` INT( 1 ) NOT NULL ;");
+  mysql_query("ALTER TABLE `".PREFIX."settings` ADD `spamapikey` VARCHAR( 32 ) NOT NULL ;");
+  mysql_query("ALTER TABLE `".PREFIX."settings` ADD `spamapihost` VARCHAR( 255 ) NOT NULL ;");
+  mysql_query("ALTER TABLE `".PREFIX."settings` ADD `spammaxposts` INT( 11 ) NOT NULL ;");
+  mysql_query("ALTER TABLE `".PREFIX."settings` ADD `spamapiblockerror` INT( 1 ) NOT NULL ;");
 }
 ?>
