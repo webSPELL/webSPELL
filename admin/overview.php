@@ -42,7 +42,7 @@ if($wsversion == $version) {
 }*/
 $phpversion = phpversion() < '4.3' ? '<font color="#FF0000">'.phpversion().'</font>' : '<font color="#008000">'.phpversion().'</font>';
 $zendversion = zend_version() < '1.3' ? '<font color="#FF0000">'.zend_version().'</font>' : '<font color="#008000">'.zend_version().'</font>';
-$mysqlversion = mysql_get_server_info() < '4.0' ? '<font color="#FF0000">'.mysql_get_server_info().'</font>' : '<font color="#008000">'.mysql_get_server_info().'</font>';
+$mysqlversion = mysqli_get_server_version($_database) < '40000' ? '<font color="#FF0000">'.mysqli_get_server_info($_database).'</font>' : '<font color="#008000">'.mysqli_get_server_info($_database).'</font>';
 $get_phpini_path = get_cfg_var('cfg_file_path');
 $get_allow_url_fopen= get_cfg_var('allow_url_fopen') ? '<font color="#008000">'.$_language->module['on'].'</font>' : '<font color="#FF0000">'.$_language->module['off'].'</font>';
 $get_allow_url_include= get_cfg_var('allow_url_include') ? '<font color="#FF0000">'.$_language->module['on'].'</font>' : '<font color="#008000">'.$_language->module['off'].'</font>';

@@ -38,12 +38,12 @@ if(isset($_POST['upload'])) {
   			$ret = mysqli_fetch_array($get);
   			$db = $ret[0];
 			//drop all tables from webSPELL DB
-			$result = mysql_list_tables($db);
+			$result = mysqli_query($_database,"SHOW TABLES FROM ".$db);
 			while ($table = mysqli_fetch_array($result)) safe_query("DROP TABLE `".$table[0]."`");
 	
 			move_uploaded_file($upload['tmp_name'], '../tmp/'.$upload['name']);
 			$new_query = file('../tmp/'.$upload['name']);
-			foreach($new_query as $query) @mysql_query($query);
+			foreach($new_query as $query) @mysqli_query($_database,$query);
 			@unlink('../tmp/'.$upload['name']);
 		}
 	} else echo $_language->module['transaction_invalid'];
@@ -75,13 +75,15 @@ if($action=="optimize") {
   
   if(!ispageadmin($userID) or mb_substr(basename($_SERVER['REQUEST_URI']), 0, 15) != "admincenter.php") die($_language->module['access_denied']);
   
-	$get = safe_query("SELECT DATABASE()");
-  $ret = mysqli_fetch_array($get);
-  $db = $ret[0];
+  	$get = safe_query("SELECT DATABASE()");
+  	$ret = mysqli_fetch_array($get);
+  	$db = $ret[0];
   
-  $result = mysql_list_tables($db);
-	while ($table = mysqli_fetch_array($result)) safe_query("OPTIMIZE TABLE `".$table[0]."`");
-  redirect('admincenter.php?site='.$returnto,'',0);
+  	$result = mysqli_query($_database, "SHOW TABLES FROM ".$db);
+	while ($table = mysqli_fetch_array($result)){
+		safe_query("OPTIMIZE TABLE `".$table[0]."`");
+	}
+  	redirect('admincenter.php?site='.$returnto,'',0);
 
 }
 
@@ -89,16 +91,14 @@ elseif($action=="write") {
   include('../_mysql.php');
   include('../_settings.php');
   include('../version.php');
-  
   systeminc("func/captcha");
   
 	$CAPCLASS = new Captcha;
 	if($CAPCLASS->check_captcha(0, $_GET['captcha_hash'])) {
-	if(!isset($db)){
-		$get = safe_query("SELECT DATABASE()");
-		$ret = mysqli_fetch_array($get);
-		$db = $ret[0];
-	}
+	#$get = safe_query("SELECT DATABASE()");
+  	#$ret = mysqli_fetch_array($get);
+  	#$db = $ret[0];
+
 	//Get database information and write SQL-commands
 	$final = "--   #webSPELL ".$version.", visit webspell.org#\n";
 	$final .= "--   webSPELL.org database backup\n";
@@ -106,13 +106,13 @@ elseif($action=="write") {
 	$final .= "--\n";
 	$final .= "--   webSPELL version: ".$version."\n";
 	$final .= "--   PHP version: ".phpversion()."\n";
-	$final .= "--   MySQL version: ".mysql_get_server_info()."\n";
+	$final .= "--   MySQL version: ".mysqli_get_server_info($_database)."\n";
 	$final .= "--   Date: ".date("r")."\n";
 
-	$result = mysql_query("SHOW TABLE STATUS FROM ".$db);
+	$result = mysqli_query($_database,"SHOW TABLES");
 	while ($table = mysqli_fetch_array($result)) {
 		$i = 0;
-		$result2 = mysql_query("SHOW COLUMNS FROM $table[0]");
+		$result2 = mysqli_query($_database,"SHOW COLUMNS FROM $table[0]");
 		$z = mysqli_num_rows($result2);
 		$final .= "\n--\n-- webSPELL DB Export - Table structure for table `".$table[0]."`\n--\n\nCREATE TABLE `".$table[0]."` (";
 		$prikey = false;
@@ -141,8 +141,8 @@ elseif($action=="write") {
 		$charset = explode("_", $table[14]);
 		$final .= ") ENGINE=".$table[1]." DEFAULT CHARSET=".$charset[0]." COLLATE=".$table[14].$auto_inc.";\n\n--\n-- webSPELL DB Export - Dumping data for table `".$table[0]."`\n--\n";
 
-		$inhaltq = mysql_query("SELECT * FROM $table[0]");
-		while($inhalt = mysqli_fetch_array($inhaltq,MYSQL_BOTH)) {
+		$inhaltq = mysqli_query($_database,"SELECT * FROM $table[0]");
+		while($inhalt = mysqli_fetch_array($inhaltq)) {
 			$final .= "\nINSERT INTO `$table[0]` (";
 			$final .= $insert_keys;
 			$final .= ") VALUES (";

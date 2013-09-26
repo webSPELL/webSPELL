@@ -196,7 +196,7 @@ foreach($tables_array as $table){
   </tr>
   <tr>
     <td width="25%" class="td1"><b><?php echo $_language->module['mysql_version']; ?></b></td>
-    <td width="25%" class="td1"><?php echo mysql_get_server_info(); ?></td>
+    <td width="25%" class="td1"><?php echo mysqli_get_server_info($_database); ?></td>
     <td width="25%" class="td1"><b><?php echo $_language->module['overhead']; ?></b></td>
     <td width="25%" class="td1"><?php echo $db_size_op; ?> Bytes
     <?php
