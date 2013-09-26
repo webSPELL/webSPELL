@@ -6,7 +6,7 @@ if(isset($_GET['getnickname'])){
 	include("_functions.php");
 	chdir('admin');
 	if(!ispageadmin($userID)) die();
-	echo "<a target='_blank' href='/index.php?site=profile&id=".$_GET['getnickname']."'>".getnickname($_GET['getnickname']).'</a> since '.getregistered($_GET['getnickname']).'';
+	echo "<a target='_blank' href='../index.php?site=profile&id=".$_GET['getnickname']."'>".getnickname($_GET['getnickname']).'</a> since '.getregistered($_GET['getnickname']).'';
 	exit();
 }
 if(!ispageadmin($userID) OR mb_substr(basename($_SERVER['REQUEST_URI']),0,15) != "admincenter.php") die();
