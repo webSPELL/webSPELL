@@ -6,6 +6,9 @@ function validateSpam($message){
 	return post_request($spamapihost,$postdata);
 }
 
+define("Spamfilter_HAM","ham");
+define("Spamfilter_SPAM","spam");
+
 function learnSpamfilter($message, $type){
 	global $spamapikey,$spamapihost;
 	$postdata = array();
@@ -59,7 +62,7 @@ function post_request($url, $data){
 		return $con;
 	}
 	else{
-		return "";
+		return "No Method available to query Api. Enable Curl or HttpRequest2 or allow_url_fopen.";
 	}
 }
 ?>

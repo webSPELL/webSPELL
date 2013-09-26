@@ -76,6 +76,7 @@ $language_array = Array(
   'user_administration'=>'Benutzer Administration',
   'user_ranks'=>'Benutzer Ränge',
   'visitor_statistics'=>'Besucher Statistiken',
-  'api_log'=>'API Log'
+  'api_log'=>'API Log',
+  'blocked_content'=>'Geblockte Inhalte'
 );
 ?>

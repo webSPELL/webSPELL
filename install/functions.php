@@ -1947,12 +1947,8 @@ function update40200_40300(){
   `date` int(14) NOT NULL DEFAULT '0',
   `poster` int(11) NOT NULL DEFAULT '0',
   `message` text COLLATE utf8_unicode_ci NOT NULL,
-  PRIMARY KEY (`postID`),
-  KEY `boardID` (`boardID`),
-  KEY `topicID` (`topicID`),
-  KEY `poster` (`poster`),
-  KEY `date` (`date`),
-  FULLTEXT KEY `message` (`message`)
+  `rating` varchar(255) COLLATE utf8_unicode_ci NOT NULL DEFAULT '',
+  PRIMARY KEY (`postID`)
   )");
   mysql_query("CREATE TABLE `".PREFIX."forum_topics_spam` (
   `topicID` int(11) NOT NULL AUTO_INCREMENT,
@@ -1963,8 +1959,23 @@ function update40200_40300(){
   `topic` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `sticky` int(1) NOT NULL,
   `message` text COLLATE utf8_unicode_ci NOT NULL,
+  `rating` varchar(255) COLLATE utf8_unicode_ci NOT NULL DEFAULT '',
   PRIMARY KEY (`topicID`)
   )");
+  mysql_query("CREATE TABLE `".PREFIX."comments_spam` (
+  `commentID` int(11) NOT NULL AUTO_INCREMENT,
+  `parentID` int(11) NOT NULL DEFAULT '0',
+  `type` char(2) COLLATE utf8_unicode_ci NOT NULL DEFAULT '',
+  `userID` int(11) NOT NULL DEFAULT '0',
+  `nickname` varchar(255) COLLATE utf8_unicode_ci NOT NULL DEFAULT '',
+  `date` int(14) NOT NULL DEFAULT '0',
+  `comment` text COLLATE utf8_unicode_ci NOT NULL,
+  `url` varchar(255) COLLATE utf8_unicode_ci NOT NULL DEFAULT '',
+  `email` varchar(255) COLLATE utf8_unicode_ci NOT NULL DEFAULT '',
+  `ip` varchar(255) COLLATE utf8_unicode_ci NOT NULL DEFAULT '',
+  `rating` varchar(255) COLLATE utf8_unicode_ci NOT NULL DEFAULT '',
+  PRIMARY KEY (`commentID`)
+)");
   mysql_query("CREATE TABLE `".PREFIX."api_log` (
   `date` int(11) NOT NULL,
   `message` varchar(255) NOT NULL

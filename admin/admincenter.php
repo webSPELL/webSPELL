@@ -110,7 +110,7 @@ if(!isset($_SERVER['REQUEST_URI'])) {
     if(ispageadmin($userID)) { ?>
     <h2>&not; <?php echo $_language->module['spam']; ?></h2>
     <ul>
-      <li><a href="admincenter.php?site=spam&amp;action=forum_spam"><?php echo $_language->module['spam_forum']; ?></a></li>
+      <li><a href="admincenter.php?site=spam&amp;action=forum_spam"><?php echo $_language->module['blocked_content']; ?></a></li>
       <li><a href="admincenter.php?site=spam&amp;action=user"><?php echo $_language->module['spam_user']; ?></a></li>
       <li><a href="admincenter.php?site=spam&amp;action=multi"><?php echo $_language->module['multiaccounts']; ?></a></li>
       <li><a href="admincenter.php?site=spam&amp;action=api_log"><?php echo $_language->module['api_log']; ?></a></li>

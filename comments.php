@@ -104,8 +104,14 @@ if(isset($_POST['savevisitorcomment'])) {
 	}
 	else {
 		$date=time();
-		safe_query("INSERT INTO ".PREFIX."comments ( parentID, type, nickname, date, comment, url, email, ip )
+		if($spam == 1){
+			safe_query("INSERT INTO ".PREFIX."comments_spam ( parentID, type, nickname, date, comment, url, email, ip, rating )
+		            values( '".$parentID."', '".$type."', '".$name."', '".$date."', '".$message."', '".$url."', '".$mail."', '".$ip."', '".$rating."' ) ");
+		}
+		else{
+			safe_query("INSERT INTO ".PREFIX."comments ( parentID, type, nickname, date, comment, url, email, ip )
 		            values( '".$parentID."', '".$type."', '".$name."', '".$date."', '".$message."', '".$url."', '".$mail."', '".$ip."' ) ");
+		}
 		unset($_SESSION['comments_message']);
 		header("Location: ".$_POST['referer']);
 	}
@@ -148,9 +154,14 @@ elseif(isset($_POST['saveusercomment'])) {
 		}
 	}
 
-	if(checkCommentsAllow($type,$parentID) && $spam == 0){
+	if(checkCommentsAllow($type,$parentID)){
 		$date=time();
-		safe_query("INSERT INTO ".PREFIX."comments ( parentID, type, userID, date, comment ) values( '".$parentID."', '".$type."', '".$userID."', '".$date."', '".$message."' ) ");
+		if($spam == 1){
+			safe_query("INSERT INTO ".PREFIX."comments ( parentID, type, userID, date, comment,rating ) values( '".$parentID."', '".$type."', '".$userID."', '".$date."', '".$message."', '".$rating."' ) ");
+		}
+		else{
+			safe_query("INSERT INTO ".PREFIX."comments ( parentID, type, userID, date, comment ) values( '".$parentID."', '".$type."', '".$userID."', '".$date."', '".$message."' ) ");
+		}
 	}
 	header("Location: ".$_POST['referer']);
 }
@@ -337,6 +348,14 @@ else {
 
 			if(isfeedbackadmin($userID)) $actions='<input class="input" type="checkbox" name="commentID[]" value="'.$ds['commentID'].'" />';
 			else $actions='';
+
+			$spam_buttons = "";
+			if(!empty($spamapikey)){
+				if(ispageadmin($userID)){
+					$spam_buttons = '<input type="button" value="Spam" onclick="eventfetch(\'ajax_spamfilter.php?commentID='.$ds['commentID'].'&type=spam\',\'\',\'return\')" />
+	<input type="button" value="Ham" onclick="eventfetch(\'ajax_spamfilter.php?commentID='.$ds['commentID'].'&type=ham\',\'\',\'return\')" />';
+				}
+			}
 
 			eval ("\$comments = \"".gettemplate("comments")."\";");
 			echo $comments;

@@ -894,7 +894,7 @@ if(isset($_POST['submit']) || isset($_POST['movetopic']) || isset($_GET['addtopi
 				if($notify) safe_query("INSERT INTO ".PREFIX."forum_notify (topicID, userID) VALUES ('$id', '$userID') ");
 			}
 			else{
-				safe_query("INSERT INTO ".PREFIX."forum_topics_spam ( boardID, userID, date, icon, topic, sticky, message) values ( '$board', '$userID', '$date', '".$icon."', '".$topicname."', '$topic_sticky', '".$message."' ) ");
+				safe_query("INSERT INTO ".PREFIX."forum_topics_spam ( boardID, userID, date, icon, topic, sticky, message, rating) values ( '$board', '$userID', '$date', '".$icon."', '".$topicname."', '$topic_sticky', '".$message."', '".$rating."') ");
 			}
 			header("Location: index.php?site=forum&board=".$board."");
 		}

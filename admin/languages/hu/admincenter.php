@@ -76,6 +76,7 @@ $language_array = Array(
   'user_administration'=>'Felhasználói beállítások',
   'user_ranks'=>'Rangok',
   'visitor_statistics'=>'Látogatói statisztikák',
-  'api_log'=>'API Log'
+  'api_log'=>'API Log',
+  'blocked_content'=>'Blocked Content'
 );
 ?>

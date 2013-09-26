@@ -5,7 +5,7 @@ if(isset($_GET['getnickname'])){
 	include("_settings.php");
 	include("_functions.php");
 	chdir('admin');
-	if(!isspamadmin($userID)) die();
+	if(!ispageadmin($userID)) die();
 	echo "<a target='_blank' href='/index.php?site=profile&id=".$_GET['getnickname']."'>".getnickname($_GET['getnickname']).'</a> since '.getregistered($_GET['getnickname']).'';
 	exit();
 }
@@ -294,11 +294,9 @@ elseif($action == "forum_spam"){
 			safe_query("UPDATE ".PREFIX."user SET banned='perm', ban_reason='Spam' WHERE userID='".$ds["poster"]."'");
 		}
 		safe_query("DELETE FROM ".PREFIX."forum_posts_spam");
+		safe_query("DELETE FROM ".PREFIX."comments_spam");
 	}
-	
-	echo "<h3>Topics</h3>";
-	
-	if(isset($_GET['del_option']) && $_GET['del_option']== "delete_topic"){
+	elseif(isset($_GET['del_option']) && $_GET['del_option']== "delete_topic"){
 		$topicID = $_GET['topicID'];
 		safe_query("DELETE FROM ".PREFIX."forum_topics_spam WHERE topicID='".$topicID."'");
 	}
@@ -306,7 +304,12 @@ elseif($action == "forum_spam"){
 		$postID = $_GET['postID'];
 		safe_query("DELETE FROM ".PREFIX."forum_posts_spam WHERE postID='".$postID."'");
 	}
+	elseif(isset($_GET['del_option']) && $_GET['del_option'] == "delete_comment"){
+		$commentID = $_GET['commentID'];
+		safe_query("DELETE FROM ".PREFIX."comments_spam WHERE commentID='".$commentID."'");
+	}
 	
+	echo "<h3>Topics</h3>";
 	
 	$get = safe_query("SELECT * FROM ".PREFIX."forum_topics_spam ORDER BY date DESC");
 	if(mysql_num_rows($get)){
@@ -374,6 +377,50 @@ elseif($action == "forum_spam"){
 			<td class="'.$td.'"><a href="../index.php?site=profile&amp;id='.$ds['poster'].'" target="_blank">'.getnickname($ds['poster']).'</a></td>
 			<td class="'.$td.'">'.date('d.m.Y',$ds['date']).'</td>
 			<td class="'.$td.'">'.mb_substr(getinput($ds['message']),0,250).'...</td>
+			<td class="'.$td.'">'.$options.'</td>
+			</tr>';
+			
+			$i++;
+		}
+		
+		echo '</table>';
+	}
+	else{
+		echo "n/a";
+	}
+
+	echo "<h3>Comments</h3>";
+	
+	$get = safe_query("SELECT * FROM ".PREFIX."comments_spam ORDER BY date DESC");
+	if(mysql_num_rows($get)){
+		echo '<table border="0" cellspacing="1" cellpadding="3" bgcolor="#DDDDDD" width="100%">
+		<tr>
+		<td class="title">'.$_language->module["nickname"].':</td>
+		<td class="title">'.$_language->module["date"].':</td>
+		<td class="title">'.$_language->module["message"].':</td>
+		<td class="title">'.$_language->module["options"].':</td>
+		</tr>';
+		
+		$i = 0;
+		
+		while($ds = mysql_fetch_assoc($get)){
+			if($i%2) {
+				$td='td1';
+			}
+			else { $td='td2';
+			}
+			
+			$options = '<input type="button" onclick="MM_confirm(\''.$_language->module["question_delete"].'\', \'admincenter.php?site=spam&amp;action=forum_spam&amp;del_option=delete_comment&amp;commentID='.$ds['commentID'].'\')" value="'.$_language->module["delete"].'" />';
+			if(!empty($ds['userID'])){
+				$nick = '<a href="../index.php?site=profile&amp;id='.$ds['userID'].'" target="_blank">'.getnickname($ds['userID']).'</a>';
+			}
+			else{
+				$nick = $ds['nickname'];
+			}
+			echo '<tr>
+			<td class="'.$td.'">'.$nick.'</a></td>
+			<td class="'.$td.'">'.date('d.m.Y',$ds['date']).'</td>
+			<td class="'.$td.'">'.mb_substr(getinput($ds['comment']),0,250).'...</td>
 			<td class="'.$td.'">'.$options.'</td>
 			</tr>';
 			

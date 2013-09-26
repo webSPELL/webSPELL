@@ -142,7 +142,7 @@ if(isset($_POST['newreply']) && !isset($_POST['preview'])) {
 		}
 	}
 	else{
-		safe_query("INSERT INTO ".PREFIX."forum_posts_spam ( boardID, topicID, date, poster, message ) VALUES( '".$_REQUEST['board']."', '$topic', '$date', '$userID', '".$message."' ) ");
+		safe_query("INSERT INTO ".PREFIX."forum_posts_spam ( boardID, topicID, date, poster, message, rating ) VALUES( '".$_REQUEST['board']."', '$topic', '$date', '$userID', '".$message."', '".$rating."' ) ");
 	}
 	header("Location: index.php?site=forum_topic&topic=".$topic."&page=".$page);
 	exit();
@@ -219,6 +219,7 @@ function showtopic($topic, $edit, $addreply, $quoteID, $type) {
 	global $message;
 	global $picsize_l;
 	global $_language;
+	global $spamapikey;
 
 	$_language->read_module('forum');
 	$_language->read_module('bbcode', true);
@@ -619,6 +620,14 @@ function showtopic($topic, $edit, $addreply, $quoteID, $type) {
 			$ds=mysql_fetch_array($ergebnis);
 			$usertype=$ds['rank'];
 			$rang='<img src="images/icons/ranks/'.$ds['pic'].'" alt="" />';
+		}
+
+		$spam_buttons = "";
+		if(!empty($spamapikey)){
+			if(ispageadmin($userID) || ismoderator($userID,$dt['boardID'])){
+				$spam_buttons = '<input type="button" value="Spam" onclick="eventfetch(\'ajax_spamfilter.php?postID='.$postID.'&type=spam\',\'\',\'return\')" />
+<input type="button" value="Ham" onclick="eventfetch(\'ajax_spamfilter.php?postID='.$postID.'&type=ham\',\'\',\'return\')" />';
+			}
 		}
 
 		$actions='';
