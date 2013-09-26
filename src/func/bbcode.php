@@ -412,6 +412,10 @@ function removeIllegalCharacerts($string){
 	return preg_replace("/[^a-z0-9#]/si", "", $string);
 }
 
+function removeIllegalCharacertsWithoutUrls($string){
+        return preg_replace("/[^a-z0-9#\/\.]/si", "", $string);
+}
+
 function replacement($content, $bbcode=true) {
 	$pagebg=PAGEBG;
 	$border=BORDER;
@@ -453,7 +457,7 @@ function replacement($content, $bbcode=true) {
 		$content = preg_replace("#\[center]#si", "<center>", $content);
 		$content = preg_replace("#\[/center]#si", "</center>", $content);
 	}
-	$content = preg_replace("#\[SMILE=(.*?)\](.*?)\[/SMILE\]#sie", "'<img src=\"'.removeIllegalCharacerts('\\2').'\" alt=\"'.removeIllegalCharacerts('\\1').'\" border=\"0\" />'", $content);
+	$content = preg_replace("#\[SMILE=(.*?)\](.*?)\[/SMILE\]#sie", "'<img src=\"'.removeIllegalCharacertsWithoutUrls('\\2').'\" alt=\"'.removeIllegalCharacerts('\\1').'\" border=\"0\" />'", $content);
 
 	return $content;
 }
