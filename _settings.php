@@ -42,7 +42,7 @@ header('content-type: text/html; charset=utf-8');
 
 $_database = new mysqli($host, $user, $pwd, $db);
 
-if(mysqli_connect_error($_database)) {
+if(!$_database) {
 	system_error('ERROR: Can not connect to MySQL-Server');
 }
 
