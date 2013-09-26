@@ -144,6 +144,7 @@ class SpamApi {
 			}
 		}
 		else{
+			$this->logError("No Method available to query Api.", "Enable Curl or Pear HTTP Request(2) or allow_url_fopen");
 			return "";
 		}
     }
