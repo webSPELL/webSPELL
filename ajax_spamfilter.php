@@ -23,7 +23,7 @@ if(!empty($spamapikey)){
 				$message = $ds['message'];
 
 				if(in_array($type, array("spam","ham"))){
-					learnSpamfilter($message, $type);
+					echo learnSpamfilter($message, $type);
 				}
 			}
 		}
@@ -38,7 +38,7 @@ if(!empty($spamapikey)){
 				$text = $ds['comment'];
 				
 				if(in_array($type, array("spam","ham"))){
-					learnSpamfilter($text, $type);
+					echo learnSpamfilter($text, $type);
 				}
 			}
 		}
