@@ -264,8 +264,8 @@ elseif($action == "api_log"){
 			}
 			
 			echo '<tr>
-			<td class="'.$td.'"><font color="red">'.getinput($ds['message']).'</font></td>
-			<td class="'.$td.'">'.date('d.m.Y',$ds['date']).'</td>
+			<td class="'.$td.'"><font color="red">'.getinput($ds['message']).'</font><br/>'.$ds['data'].'</td>
+			<td class="'.$td.'">'.date('d.m.Y H:i:s',$ds['date']).'</td>
 			</tr>';
 			
 			$i++;
