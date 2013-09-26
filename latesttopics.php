@@ -29,10 +29,10 @@ $usergroups = array();
 if($loggedin){
 	$usergroups[] = 'user';
 	$get = safe_query("SELECT * FROM ".PREFIX."user_forum_groups WHERE userID='".$userID."'");
-	$data = mysql_fetch_row($get);
+	$data = mysqli_fetch_row($get);
 	for($i=2; $i<count($data);$i++){
 		if($data[$i] == 1){
-			$info = mysql_fetch_field($get,$i);
+			$info = mysqli_fetch_field_direct($get, $i);
 			$usergroups[] = $info->name;
 		}
 	}
@@ -41,23 +41,23 @@ $userallowedreadgrps = array();
 $userallowedreadgrps['boardIDs'] = array();
 $userallowedreadgrps['catIDs'] = array();
 $get = safe_query("SELECT boardID FROM ".PREFIX."forum_boards WHERE readgrps = ''");
-while($ds = mysql_fetch_assoc($get)){
+while($ds = mysqli_fetch_assoc($get)){
 	$userallowedreadgrps['boardIDs'][] = $ds['boardID'];
 }
 $get = safe_query("SELECT catID FROM ".PREFIX."forum_categories WHERE readgrps = ''");
-while($ds = mysql_fetch_assoc($get)){
+while($ds = mysqli_fetch_assoc($get)){
 	$userallowedreadgrps['catIDs'][] = $ds['catID'];
 }
 if($loggedin){
 	$get = safe_query("SELECT boardID, readgrps FROM ".PREFIX."forum_boards WHERE readgrps != ''");
-	while($ds = mysql_fetch_assoc($get)){
+	while($ds = mysqli_fetch_assoc($get)){
 		$groups = explode(";",$ds['readgrps']);
 		$allowed = array_intersect($groups,$usergroups);
 		if(!count($allowed)) continue;
 		$userallowedreadgrps['boardIDs'][] = $ds['boardID'];
 	}
 	$get = safe_query("SELECT catID, readgrps FROM ".PREFIX."forum_categories WHERE readgrps != ''");
-	while($ds = mysql_fetch_assoc($get)){
+	while($ds = mysqli_fetch_assoc($get)){
 		$groups = explode(";",$ds['readgrps']);
 		$allowed = array_intersect($groups,$usergroups);
 		if(!count($allowed)) continue;
@@ -79,12 +79,12 @@ $ergebnis=safe_query("SELECT t.*, u.nickname, b.name
 					  		 t.moveID = '0'
 					ORDER BY t.lastdate DESC 
 					   LIMIT 0,".$maxlatesttopics);
-$anz=mysql_num_rows($ergebnis);
+$anz=mysqli_num_rows($ergebnis);
 if($anz) {
 	eval ("\$latesttopics_head = \"".gettemplate("latesttopics_head")."\";");
 	echo $latesttopics_head;
 	$n=1;
-	while($ds=mysql_fetch_array($ergebnis)) {
+	while($ds=mysqli_fetch_array($ergebnis)) {
 		if($ds['readgrps'] != "") {
 			$usergrps = explode(";", $ds['readgrps']);
 			$usergrp = 0;

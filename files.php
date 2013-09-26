@@ -31,10 +31,10 @@ function get_all_sub_cats($parent,$start = 0){
 	if($start==1) $cat_query = "( filecatID='".$parent."' ";
 	else $cat_query = "";
 	$get_catIDs = safe_query("SELECT filecatID FROM ".PREFIX."files_categorys WHERE subcatID='".$parent."'");
-	if(mysql_num_rows($get_catIDs)){
-		while($dc = mysql_fetch_assoc($get_catIDs)){
+	if(mysqli_num_rows($get_catIDs)){
+		while($dc = mysqli_fetch_assoc($get_catIDs)){
 			$cat_query .= " OR filecatID='".$dc['filecatID']."'";
-			$more = mysql_num_rows(safe_query("SELECT filecatID FROM ".PREFIX."files_categorys WHERE subcatID='".$dc['filecatID']."'"));
+			$more = mysqli_num_rows(safe_query("SELECT filecatID FROM ".PREFIX."files_categorys WHERE subcatID='".$dc['filecatID']."'"));
 			if($more>0 )$cat_query .= get_all_sub_cats($dc['filecatID'],0);
 		}
 	}
@@ -115,7 +115,7 @@ if($action=="save") {
 		$date = time();
 		$qry = "INSERT INTO ".PREFIX."files ( filecatID, poster, date, filename, filesize, info, file, mirrors, downloads, accesslevel ) VALUES ( '".$filecat."', '".$poster."', '".$date."', '".$filename."', '".$filesize."', '".$info."', '".$file."', '".$mirrors."', '0', '".$accesslevel."')";
 		if(safe_query($qry)) {
-			redirect("index.php?site=files&amp;file=".mysql_insert_id()."", $_language->module['file_created'], "3");
+			redirect("index.php?site=files&amp;file=".mysqli_insert_id()."", $_language->module['file_created'], "3");
 		}
 		else redirect("index.php?site=files", $_language->module['file_not_created'], "3");
 	}
@@ -183,7 +183,7 @@ elseif($action == "delete") {
 
 	if($file) {
 		$ergebnis = safe_query("SELECT * FROM ".PREFIX."files WHERE fileID='".$file."'");
-		$ds = mysql_fetch_array($ergebnis);
+		$ds = mysqli_fetch_array($ergebnis);
 		
 		if(!stristr($ds['file'],"http://") && !stristr($ds['file'],"ftp://")) @unlink('./downloads/'.$ds['file']);
 
@@ -201,9 +201,9 @@ elseif($action=="newfile") {
 
 		function generate_options($filecats = '', $offset = '', $subcatID = 0) {
 			$rubrics = safe_query("SELECT * FROM ".PREFIX."files_categorys WHERE subcatID = '".$subcatID."' ORDER BY name");
-			while($dr = mysql_fetch_array($rubrics)) {
+			while($dr = mysqli_fetch_array($rubrics)) {
 				$filecats .= '<option value="'.$dr['filecatID'].'">'.$offset.htmlspecialchars($dr['name']).'</option>';
-				if(mysql_num_rows(safe_query("SELECT * FROM ".PREFIX."files_categorys WHERE subcatID = '".$dr['filecatID']."'"))) {
+				if(mysqli_num_rows(safe_query("SELECT * FROM ".PREFIX."files_categorys WHERE subcatID = '".$dr['filecatID']."'"))) {
 					$filecats .= generate_options("", $offset."- ", $dr['filecatID']);
 				}
 			}
@@ -233,9 +233,9 @@ elseif($action=="edit") {
 
 			function generate_options($filecats = '', $offset = '', $subcatID = 0) {
 				$rubrics = safe_query("SELECT * FROM ".PREFIX."files_categorys WHERE subcatID = '".$subcatID."' ORDER BY name");
-				while($dr = mysql_fetch_array($rubrics)) {
+				while($dr = mysqli_fetch_array($rubrics)) {
 					$filecats .= '<option value="'.$dr['filecatID'].'">'.$offset.htmlspecialchars($dr['name']).'</option>';
-					if(mysql_num_rows(safe_query("SELECT * FROM ".PREFIX."files_categorys WHERE subcatID = '".$dr['filecatID']."'"))) {
+					if(mysqli_num_rows(safe_query("SELECT * FROM ".PREFIX."files_categorys WHERE subcatID = '".$dr['filecatID']."'"))) {
 						$filecats .= generate_options("", $offset."- ", $dr['filecatID']);
 					}
 				}
@@ -243,7 +243,7 @@ elseif($action=="edit") {
 			}
 			$filecats = generate_options();
 
-			$file = mysql_fetch_array(safe_query("SELECT * FROM ".PREFIX."files WHERE fileID='".$fileID."'"));
+			$file = mysqli_fetch_array(safe_query("SELECT * FROM ".PREFIX."files WHERE fileID='".$fileID."'"));
 			$filecats = str_replace('value="'.$file['filecatID'].'"', 'value="'.$file['filecatID'].'" selected="selected"', $filecats);
 			$accessmenu = '<option value="0">'.$_language->module['all'].'</option><option value="1">'.$_language->module['registered'].'</option><option value="2">'.$_language->module['clanmember'].'</option>';
 			$access = str_replace('value="'.$file['accesslevel'].'"', 'value="'.$file['accesslevel'].'" selected="selected"', $accessmenu);
@@ -303,12 +303,12 @@ elseif(isset($_GET['cat'])) {
 
 	// CATEGORY
 	$catID = $_GET['cat'];
-	$cat = mysql_fetch_array(safe_query("SELECT filecatID, name, subcatID FROM ".PREFIX."files_categorys WHERE filecatID='".$catID."'"));
+	$cat = mysqli_fetch_array(safe_query("SELECT filecatID, name, subcatID FROM ".PREFIX."files_categorys WHERE filecatID='".$catID."'"));
 	$category = $cat['name'];
 
 	$cat_id = $cat['subcatID'];
 	while($cat_id != 0) {
-		$subcat = mysql_fetch_array(safe_query("SELECT filecatID, name, subcatID FROM ".PREFIX."files_categorys WHERE filecatID='".$cat_id."'"));
+		$subcat = mysqli_fetch_array(safe_query("SELECT filecatID, name, subcatID FROM ".PREFIX."files_categorys WHERE filecatID='".$cat_id."'"));
 		$category = "<a href=\"index.php?site=files&amp;cat=".$subcat['filecatID']."\" class=\"titlelink\">".$subcat['name']."</a> &raquo; ".$category;
 		$cat_id = $subcat['subcatID'];
 	}
@@ -324,7 +324,7 @@ elseif(isset($_GET['cat'])) {
 	// SUBCATEGORIES
 
 	$subcats = safe_query("SELECT * FROM ".PREFIX."files_categorys WHERE subcatID='".$cat['filecatID']."' ORDER BY name");
-	if(mysql_num_rows($subcats)) {
+	if(mysqli_num_rows($subcats)) {
 
 		eval("\$files_category_head = \"".gettemplate("files_category_head")."\";");
 		echo $files_category_head;
@@ -334,7 +334,7 @@ elseif(isset($_GET['cat'])) {
 
 		$n = 0;
 
-		while($subcat = mysql_fetch_array($subcats)) {
+		while($subcat = mysqli_fetch_array($subcats)) {
 
 			$n++;
 			if($n%2) {
@@ -349,11 +349,11 @@ elseif(isset($_GET['cat'])) {
 			$downloads = 0;
 			$sub_cat_qry = get_all_sub_cats($subcat['filecatID'],1);
 			$query = safe_query("SELECT downloads FROM ".PREFIX."files WHERE ".$sub_cat_qry." AND accesslevel <= ".$accesslevel." ORDER BY fileID DESC");
-			$cat_file_total = mysql_num_rows($query);
-			while($ds = mysql_fetch_array($query)) {
+			$cat_file_total = mysqli_num_rows($query);
+			while($ds = mysqli_fetch_array($query)) {
 				$downloads += $ds['downloads'];
 			}
-			$subcategories = mysql_num_rows(safe_query("SELECT filecatID FROM ".PREFIX."files_categorys WHERE subcatID='".$subcat['filecatID']."'"));
+			$subcategories = mysqli_num_rows(safe_query("SELECT filecatID FROM ".PREFIX."files_categorys WHERE subcatID='".$subcat['filecatID']."'"));
 
 			eval("\$files_category_list = \"".gettemplate("files_subcat_list")."\";");
 			echo $files_category_list;
@@ -366,14 +366,14 @@ elseif(isset($_GET['cat'])) {
 	// FILES
 
 	$files = safe_query("SELECT * FROM ".PREFIX."files WHERE filecatID='".$cat['filecatID']."' AND accesslevel<=".$accesslevel." ORDER BY filename");
-	if(mysql_num_rows($files)) {
+	if(mysqli_num_rows($files)) {
 
 		eval("\$files_category_list = \"".gettemplate("files_category_list_head")."\";");
 		echo $files_category_list;
 
 		$n = 0;
 
-		while($file = mysql_fetch_array($files)) {
+		while($file = mysqli_fetch_array($files)) {
 
 			$n++;
 			if($n%2) {
@@ -431,7 +431,7 @@ elseif(isset($_GET['file'])) {
 	}
 
 	// FILE-INFORMATION
-	$file = mysql_fetch_array(safe_query("SELECT * FROM ".PREFIX."files WHERE fileID='".$_GET['file']."'"));
+	$file = mysqli_fetch_array(safe_query("SELECT * FROM ".PREFIX."files WHERE fileID='".$_GET['file']."'"));
 	if($file['accesslevel'] == 2 AND !isclanmember($userID)) die($_language->module['no_access']);
 
 	$fileID = $file['fileID'];
@@ -451,13 +451,13 @@ elseif(isset($_GET['file'])) {
 	$uploader = cleartext('[flag]'.getcountry($file['poster']).'[/flag]').' <a href="index.php?site=profile&amp;id='.$file['poster'].'">'.getnickname($file['poster']).'</a>';
 
 	// FILE-CATEGORY
-	$cat = mysql_fetch_array(safe_query("SELECT * FROM ".PREFIX."files_categorys WHERE filecatID='".$file['filecatID']."'"));
+	$cat = mysqli_fetch_array(safe_query("SELECT * FROM ".PREFIX."files_categorys WHERE filecatID='".$file['filecatID']."'"));
 	$category = '<a href="index.php?site=files&amp;cat='.$cat['filecatID'].'" class="titlelink">'.$cat['name'].'</a>';
 	$categories = '<a href="index.php?site=files&amp;cat='.$cat['filecatID'].'"><b>'.$cat['name'].'</b></a>';
 
 	$cat_id = $cat['subcatID'];
 	while($cat_id != 0) {
-		$subcat = mysql_fetch_array(safe_query("SELECT filecatID, name, subcatID FROM ".PREFIX."files_categorys WHERE filecatID='".$cat_id."'"));
+		$subcat = mysqli_fetch_array(safe_query("SELECT filecatID, name, subcatID FROM ".PREFIX."files_categorys WHERE filecatID='".$cat_id."'"));
 		$category = "<a href=\"index.php?site=files&amp;cat=".$subcat['filecatID']."\" class=\"titlelink\">".$subcat['name']."</a> >> ".$category;
 		$categories = "<a href=\"index.php?site=files&amp;cat=".$subcat['filecatID']."\"><b>".$subcat['name']."</b></a> >> ".$categories;
 		$cat_id = $subcat['subcatID'];
@@ -490,8 +490,8 @@ elseif(isset($_GET['file'])) {
 	if($loggedin) {
 		$getfiles = safe_query("SELECT files FROM ".PREFIX."user WHERE userID='".$userID."'");
 		$found = false;
-		if(mysql_num_rows($getfiles)) {
-			$ga = mysql_fetch_array($getfiles);
+		if(mysqli_num_rows($getfiles)) {
+			$ga = mysqli_fetch_array($getfiles);
 			if($ga['files'] != "") {
 				$string = $ga['files'];
 				$array = explode(":", $string);
@@ -600,18 +600,18 @@ else {
 
 	// categories in database
 	$catQry = safe_query("SELECT * FROM ".PREFIX."files_categorys WHERE subcatID = '0' ORDER BY name");
-	$totalcats = mysql_num_rows($catQry);
+	$totalcats = mysqli_num_rows($catQry);
 	if($totalcats) {
 
 		// files in database
 		$fileQry = safe_query("SELECT * FROM ".PREFIX."files");
-		$totalfiles = mysql_num_rows($fileQry);
+		$totalfiles = mysqli_num_rows($fileQry);
 		if($totalfiles) {
 
 			$hddspace = 0;
 			$traffic = 0;
 			// total traffic caused by downloads
-			while($file = mysql_fetch_array($fileQry)) {
+			while($file = mysqli_fetch_array($fileQry)) {
 				$filesize = $file['filesize'];
 				$fileload = $file['downloads'];
 				$hddspace += $filesize;
@@ -622,7 +622,7 @@ else {
 			$hddspace = detectfilesize($hddspace);
 
 			// last uploaded file
-			$filedata = mysql_fetch_array(safe_query("SELECT * FROM ".PREFIX."files WHERE accesslevel<=".$accesslevel." ORDER BY date DESC LIMIT 0,1"));
+			$filedata = mysqli_fetch_array(safe_query("SELECT * FROM ".PREFIX."files WHERE accesslevel<=".$accesslevel." ORDER BY date DESC LIMIT 0,1"));
 			$filename = $filedata['filename'];
 			if(mb_strlen($filename) > 12) {
 				$filename = mb_substr($filename, 0, 12);
@@ -645,7 +645,7 @@ else {
 			<tr><td bgcolor="'.PAGEBG.'" colspan="3"></td></tr>';
         
 		$n = 1;
-		while($file = mysql_fetch_array($top5qry)) {
+		while($file = mysqli_fetch_array($top5qry)) {
 			$n % 2 ? $bg = BG_1 : $bg = BG_2;
 			$filename = $file['filename'];
 			if(mb_strlen($filename) > 12) {
@@ -680,7 +680,7 @@ else {
 		// FILE-CATEGORIES
 		if($totalcats) {
 			$i = 0;
-			while($cat = mysql_fetch_array($catQry)) {
+			while($cat = mysqli_fetch_array($catQry)) {
 				if($i % 2) {
 					$bg1 = BG_1;
 					$bg2 = BG_2;
@@ -694,17 +694,17 @@ else {
 				$catID = $cat['filecatID'];
 				$sub_cat_qry = get_all_sub_cats($catID,1);
 				$catname = '<a href="index.php?site=files&amp;cat='.$catID.'"><b>'.$cat['name'].'</b></a>';
-				$subcategories = mysql_num_rows(safe_query("SELECT filecatID FROM ".PREFIX."files_categorys WHERE ".$sub_cat_qry)) -1;
+				$subcategories = mysqli_num_rows(safe_query("SELECT filecatID FROM ".PREFIX."files_categorys WHERE ".$sub_cat_qry)) -1;
 
 				// get all files associated to the catID
 				$catFileQry = safe_query("SELECT * FROM ".PREFIX."files WHERE ".$sub_cat_qry." AND accesslevel<=".$accesslevel." ORDER BY fileID DESC");
-				$catFileTotal = mysql_num_rows($catFileQry);
+				$catFileTotal = mysqli_num_rows($catFileQry);
 				if($catFileTotal OR $subcategories) {
 					$i++;
 					$traffic = 0;
 					$downloads = 0;
 					$size = 0;
-					while($file = mysql_fetch_array($catFileQry)) {
+					while($file = mysqli_fetch_array($catFileQry)) {
 						$filename = $file['filename'];
 						$filesize = $file['filesize'];
 						$fileload = $file['downloads'];
@@ -716,7 +716,7 @@ else {
 					$traffic = detectfilesize($traffic);
 
 					// last uploaded file in category
-					$filedata = mysql_fetch_array(safe_query("SELECT * FROM ".PREFIX."files WHERE ".$sub_cat_qry." ORDER BY date DESC LIMIT 0,1"));
+					$filedata = mysqli_fetch_array(safe_query("SELECT * FROM ".PREFIX."files WHERE ".$sub_cat_qry." ORDER BY date DESC LIMIT 0,1"));
 					$filename = $filedata['filename'];
 					if(mb_strlen($filename) > 12) {
 						$filename = mb_substr($filename, 0, 12);

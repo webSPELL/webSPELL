@@ -37,16 +37,16 @@ $db_size = 0;
 $db_size_op = 0;
 if(!isset($db)){
 	$get = safe_query("SELECT DATABASE()");
-	$ret = mysql_fetch_array($get);
+	$ret = mysqli_fetch_array($get);
 	$db = $ret[0];
 }	
 $query = safe_query("SHOW TABLES");
 
-$count_tables = mysql_num_rows($query);
+$count_tables = mysqli_num_rows($query);
 foreach($tables_array as $table){
  	$qs[0] = $table;
 		$sql = safe_query("SHOW TABLE STATUS FROM `".$db."` LIKE '".$qs[0]."'");
-		$data = mysql_fetch_array($sql);
+		$data = mysqli_fetch_array($sql);
 		$db_size += ($data['Data_length'] + $data['Index_length']);
 		if(strtolower($data['Engine']) == "myisam" ){
 			$db_size_op += $data['Data_free'];

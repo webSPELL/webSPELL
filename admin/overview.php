@@ -80,7 +80,7 @@ else {
 	$get_gdtypes = '---';
 }
 $get = safe_query("SELECT DATABASE()");
-$ret = mysql_fetch_array($get);
+$ret = mysqli_fetch_array($get);
 $db = $ret[0];
 
 echo '<h1>&curren; '.$_language->module['welcome'].'</h1>';

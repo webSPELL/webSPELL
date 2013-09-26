@@ -39,7 +39,7 @@ function clear($text) {
 }
 
 $alle = safe_query("SELECT userID FROM ".PREFIX."user");
-$gesamt = mysql_num_rows($alle);
+$gesamt = mysqli_num_rows($alle);
 $pages = ceil($gesamt/$maxusers);
 
 if(isset($_GET['page'])) $page=(int)$_GET['page'];
@@ -69,7 +69,7 @@ else {
 	else $n = ($gesamt+1)-$page*$maxusers+$maxusers;
 }
 
-$anz=mysql_num_rows($ergebnis);
+$anz=mysqli_num_rows($ergebnis);
 if($anz) {
 
 	if($type=="ASC")
@@ -79,7 +79,7 @@ if($anz) {
 	eval ("\$registered_users_head = \"".gettemplate("registered_users_head")."\";");
 	echo $registered_users_head;
 	$n=1;
-	while($ds=mysql_fetch_array($ergebnis)) {
+	while($ds=mysqli_fetch_array($ergebnis)) {
 		if($n%2) {
 			$bg1=BG_1;
 			$bg2=BG_2;

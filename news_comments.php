@@ -40,7 +40,7 @@ echo $post.' <input type="button" onclick="MM_goToURL(\'parent\',\'index.php?sit
 
 if($newsID) {
 	$result=safe_query("SELECT * FROM ".PREFIX."news WHERE newsID='".$newsID."'");
-	$ds=mysql_fetch_array($result);
+	$ds=mysqli_fetch_array($result);
 
 	if($ds['intern'] <= isclanmember($userID) && ($ds['published'] || (isnewsadmin($userID) || (isnewswriter($userID) and $ds['poster'] == $userID)))) {
 
@@ -55,7 +55,7 @@ if($newsID) {
 
 		$message_array = array();
 		$query=safe_query("SELECT n.*, c.short AS `countryCode`, c.country FROM ".PREFIX."news_contents n LEFT JOIN ".PREFIX."countries c ON c.short = n.language WHERE n.newsID='".$newsID."'");
-		while($qs = mysql_fetch_array($query)) {
+		while($qs = mysqli_fetch_array($query)) {
 			$message_array[] = array('lang' => $qs['language'], 'headline' => $qs['headline'], 'message' => $qs['content'], 'country'=> $qs['country'], 'countryShort' => $qs['countryCode']);
 		}
 		if(isset($_GET['lang'])) $showlang = getlanguageid($_GET['lang'], $message_array);

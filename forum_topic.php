@@ -47,7 +47,7 @@ if(isset($_POST['newreply']) && !isset($_POST['preview'])) {
 	$page = (int)$_POST['page'];
 
 	if(!(mb_strlen(trim($message)))) die($_language->module['forgot_message']);
-	$ds=mysql_fetch_array(safe_query("SELECT closed, writegrps, boardID FROM ".PREFIX."forum_topics WHERE topicID='".$topic."'"));
+	$ds=mysqli_fetch_array(safe_query("SELECT closed, writegrps, boardID FROM ".PREFIX."forum_topics WHERE topicID='".$topic."'"));
 	if($ds['closed']) die($_language->module['topic_closed']);
 
 	$writer = 0;
@@ -70,7 +70,7 @@ if(isset($_POST['newreply']) && !isset($_POST['preview'])) {
 
 	$date=time();
 	safe_query("INSERT INTO ".PREFIX."forum_posts ( boardID, topicID, date, poster, message ) VALUES( '".$_REQUEST['board']."', '$topic', '$date', '$userID', '".$message."' ) ");
-	$lastpostID = mysql_insert_id();
+	$lastpostID = mysqli_insert_id();
 	safe_query("UPDATE ".PREFIX."forum_boards SET posts=posts+1 WHERE boardID='".$_REQUEST['board']."' ");
 	safe_query("UPDATE ".PREFIX."forum_topics SET lastdate='".$date."', lastposter='".$userID."', lastpostID='".$lastpostID."', replys=replys+1 $do_sticky WHERE topicID='$topic' ");
 
@@ -85,16 +85,16 @@ if(isset($_POST['newreply']) && !isset($_POST['preview'])) {
 
 	$emails=array();
 	$ergebnis=safe_query("SELECT f.userID, u.email, u.language FROM ".PREFIX."forum_notify f JOIN ".PREFIX."user u ON u.userID=f.userID WHERE f.topicID=$topic");
-	while($ds=mysql_fetch_array($ergebnis)) {
+	while($ds=mysqli_fetch_array($ergebnis)) {
 		$emails[] = Array('mail'=>$ds['email'], 'lang'=>$ds['language']);
 	}
 	safe_query("DELETE FROM ".PREFIX."forum_notify WHERE topicID='$topic'");
 
 	if(count($emails)) {
 
-		$de=mysql_fetch_array(safe_query("SELECT nickname FROM ".PREFIX."user WHERE userID='$userID'"));
+		$de=mysqli_fetch_array(safe_query("SELECT nickname FROM ".PREFIX."user WHERE userID='$userID'"));
 		$poster=$de['nickname'];
-		$de=mysql_fetch_array(safe_query("SELECT topic FROM ".PREFIX."forum_topics WHERE topicID='$topic'"));
+		$de=mysqli_fetch_array(safe_query("SELECT topic FROM ".PREFIX."forum_topics WHERE topicID='$topic'"));
 		$topicname=getinput($de['topic']);
 
 		$link="http://".$hp_url."/index.php?site=forum_topic&topic=".$topic;
@@ -126,7 +126,7 @@ elseif(isset($_POST['editreply']) and (bool)$_POST['editreply']) {
 
 	$message = $_POST['message'];
 	$id = (int)$_POST['id'];
-	$check=mysql_num_rows(safe_query("SELECT postID FROM ".PREFIX."forum_posts WHERE postID='".$id."' AND poster='".$userID."'"));
+	$check=mysqli_num_rows(safe_query("SELECT postID FROM ".PREFIX."forum_posts WHERE postID='".$id."' AND poster='".$userID."'"));
 	if(($check or isforumadmin($userID) or ismoderator($userID,(int)$_GET['board'])) and mb_strlen(trim($message))) {
 		
 		if(isforumadmin($userID) OR isanymoderator($userID, $ds['boardID'])) {
@@ -169,7 +169,7 @@ elseif(isset($_POST['saveedittopic']) and (bool)$_POST['saveedittopic']) {
 	
 		if($notify==1) {
 			$notified = safe_query("SELECT * FROM ".PREFIX."forum_notify WHERE topicID='".$topic."' AND userID='".$userID."'");
-			if(mysql_num_rows($notified)!=1) {
+			if(mysqli_num_rows($notified)!=1) {
 				safe_query("INSERT INTO ".PREFIX."forum_notify (notifyID, topicID, userID) VALUES ('', '$topic', '$userID')");
 			}
 		} else {
@@ -198,7 +198,7 @@ function showtopic($topic, $edit, $addreply, $quoteID, $type) {
 	$bgcat=BGCAT;
 
 	$thread = safe_query("SELECT * FROM ".PREFIX."forum_topics WHERE topicID='$topic' ");
-	$dt = mysql_fetch_array($thread);
+	$dt = mysqli_fetch_array($thread);
 
 	$usergrp = 0;
 	$writer = 0;
@@ -228,7 +228,7 @@ function showtopic($topic, $edit, $addreply, $quoteID, $type) {
 	    	return;
 		}
 	}
-	$gesamt = mysql_num_rows(safe_query("SELECT topicID FROM ".PREFIX."forum_posts WHERE topicID='$topic'"));
+	$gesamt = mysqli_num_rows(safe_query("SELECT topicID FROM ".PREFIX."forum_posts WHERE topicID='$topic'"));
 	if($gesamt==0) die($_language->module['topic_not_found']." <a href=\"javascript:history.back()\">back</a>");
 	$pages=1;
 	if(!isset($page) || $site='') $page=1;
@@ -257,9 +257,9 @@ function showtopic($topic, $edit, $addreply, $quoteID, $type) {
 
 	// viewed topics
 
-	if(mysql_num_rows(safe_query("SELECT userID FROM ".PREFIX."user WHERE topics LIKE '%|".$topic."|%'"))) {
+	if(mysqli_num_rows(safe_query("SELECT userID FROM ".PREFIX."user WHERE topics LIKE '%|".$topic."|%'"))) {
 		
-		$gv=mysql_fetch_array(safe_query("SELECT topics FROM ".PREFIX."user WHERE userID='$userID'"));
+		$gv=mysqli_fetch_array(safe_query("SELECT topics FROM ".PREFIX."user WHERE userID='$userID'"));
 		$array=explode("|", $gv['topics']);
 		$new='|';
 		
@@ -275,7 +275,7 @@ function showtopic($topic, $edit, $addreply, $quoteID, $type) {
 	$topicname=getinput($dt['topic']);
 
 	$ergebnis = safe_query("SELECT * FROM ".PREFIX."forum_boards WHERE boardID='".$dt['boardID']."' ");
-	$db = mysql_fetch_array($ergebnis);
+	$db = mysqli_fetch_array($ergebnis);
 	$boardname = $db['name'];
 
 	$moderators=getmoderators($dt['boardID']);
@@ -300,12 +300,12 @@ function showtopic($topic, $edit, $addreply, $quoteID, $type) {
 	if($edit && !$dt['closed']) {
 
 		$id = $_GET['id'];
-		$dr = mysql_fetch_array(safe_query("SELECT * FROM ".PREFIX."forum_posts WHERE postID='".$id."'"));
+		$dr = mysqli_fetch_array(safe_query("SELECT * FROM ".PREFIX."forum_posts WHERE postID='".$id."'"));
 		$topic = $_GET['topic'];
 		$bg1=BG_1;
 		$_sticky = ($dt['sticky'] == '1') ? 'checked="checked"' : '';
 
-		$anz = mysql_num_rows(safe_query("SELECT * FROM ".PREFIX."forum_posts WHERE topicID='".$dt['topicID']."' AND postID='".$id."' AND poster='".$userID."' ORDER BY date ASC LIMIT 0,1"));
+		$anz = mysqli_num_rows(safe_query("SELECT * FROM ".PREFIX."forum_posts WHERE topicID='".$dt['topicID']."' AND postID='".$id."' AND poster='".$userID."' ORDER BY date ASC LIMIT 0,1"));
 		if($anz OR isforumadmin($userID) OR ismoderator($userID,$dt['boardID'])) {
 			if(istopicpost($dt['topicID'], $id)) {
 				$bg1=BG_1;
@@ -317,7 +317,7 @@ function showtopic($topic, $edit, $addreply, $quoteID, $type) {
 
 				// notification check
 				$notifyqry = safe_query("SELECT * FROM ".PREFIX."forum_notify WHERE topicID='".$topic."' AND userID='".$userID."'");
-				if(mysql_num_rows($notifyqry)) {
+				if(mysqli_num_rows($notifyqry)) {
 					$notify = '<input class="input" type="checkbox" name="notify" value="1" checked="checked" /> '.$_language->module['notify_reply'].'<br />';
 				} else {
 					$notify = '<input class="input" type="checkbox" name="notify" value="1" /> '.$_language->module['notify_reply'].'<br />';
@@ -379,7 +379,7 @@ function showtopic($topic, $edit, $addreply, $quoteID, $type) {
 			else {
 				// notification check
 				$notifyqry = safe_query("SELECT * FROM ".PREFIX."forum_notify WHERE topicID='".$topic."' AND userID='".$userID."'");
-				if(mysql_num_rows($notifyqry)) {
+				if(mysqli_num_rows($notifyqry)) {
 					$notify = '<input class="input" type="checkbox" name="notify" value="1" checked="checked" /> '.$_language->module['notify_reply'];
 				} else {
 					$notify = '<input class="input" type="checkbox" name="notify" value="1" /> '.$_language->module['notify_reply'];
@@ -450,7 +450,7 @@ function showtopic($topic, $edit, $addreply, $quoteID, $type) {
 					$rang='<img src="images/icons/ranks/moderator.gif" alt="" />';
 				} else {
 					$ergebnis=safe_query("SELECT * FROM ".PREFIX."forum_ranks WHERE $posts >= postmin AND $posts <= postmax AND postmax >0");
-					$ds=mysql_fetch_array($ergebnis);
+					$ds=mysqli_fetch_array($ergebnis);
 					$usertype=$ds['rank'];
 					$rang='<img src="images/icons/ranks/'.$ds['pic'].'" alt="" />';
 				}
@@ -476,7 +476,7 @@ function showtopic($topic, $edit, $addreply, $quoteID, $type) {
 			else {
 				if($quoteID) {
 					$ergebnis=safe_query("SELECT poster,message FROM ".PREFIX."forum_posts WHERE postID='$quoteID'");
-					$ds=mysql_fetch_array($ergebnis);
+					$ds=mysqli_fetch_array($ergebnis);
 					$message='[quote='.getnickname($ds['poster']).']'.getinput($ds['message']).'[/quote]';
 				}
 			}
@@ -492,7 +492,7 @@ function showtopic($topic, $edit, $addreply, $quoteID, $type) {
 			
 			if(isset($_POST['notify'])) $post_notify = $_POST['notify'];
 			else $post_notify = null;
-			$mysql_notify = mysql_num_rows(safe_query("SELECT notifyID FROM ".PREFIX."forum_notify WHERE userID='".$userID."' AND topicID='".$topic."'"));
+			$mysql_notify = mysqli_num_rows(safe_query("SELECT notifyID FROM ".PREFIX."forum_notify WHERE userID='".$userID."' AND topicID='".$topic."'"));
 			$notify = ($mysql_notify || $post_notify == '1') ? 'checked="checked"' : '';
 			
 			
@@ -516,7 +516,7 @@ function showtopic($topic, $edit, $addreply, $quoteID, $type) {
 	eval ("\$forum_topic_head = \"".gettemplate("forum_topic_head")."\";");
 	echo $forum_topic_head;
 	$i=1;
-	while($dr=mysql_fetch_array($replys)) {
+	while($dr=mysqli_fetch_array($replys)) {
 		if($i%2) {
 			$bg1=BG_1;
 			$bg2=BG_2;
@@ -585,7 +585,7 @@ function showtopic($topic, $edit, $addreply, $quoteID, $type) {
 			$rang='<img src="images/icons/ranks/moderator.gif" alt="" />';
 		} else {
 			$ergebnis=safe_query("SELECT * FROM ".PREFIX."forum_ranks WHERE $posts >= postmin AND $posts <= postmax AND postmax >0");
-			$ds=mysql_fetch_array($ergebnis);
+			$ds=mysqli_fetch_array($ergebnis);
 			$usertype=$ds['rank'];
 			$rang='<img src="images/icons/ranks/'.$ds['pic'].'" alt="" />';
 		}

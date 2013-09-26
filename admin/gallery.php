@@ -72,7 +72,7 @@ if($part=="groups") {
 	 	$CAPCLASS = new Captcha;
 		if($CAPCLASS->check_captcha(0, $_GET['captcha_hash'])) {
 			$db_result=safe_query("SELECT * FROM ".PREFIX."gallery WHERE groupID='".$_GET['groupID']."'");
-			$any=mysql_num_rows($db_result);
+			$any=mysqli_num_rows($db_result);
 			if($any){
 				echo $_language->module['galleries_available'].'<br /><br />';
 			}
@@ -108,7 +108,7 @@ if($part=="groups") {
     $CAPCLASS->create_transaction();
     $hash = $CAPCLASS->get_hash();
 		$ergebnis=safe_query("SELECT * FROM ".PREFIX."gallery_groups WHERE groupID='".$_GET['groupID']."'");
-		$ds=mysql_fetch_array($ergebnis);
+		$ds=mysqli_fetch_array($ergebnis);
 
 		echo'<h1>&curren; <a href="admincenter.php?site=gallery" class="white">'.$_language->module['gallery'].'</a> &raquo; <a href="admincenter.php?site=gallery&amp;part=groups" class="white">'.$_language->module['groups'].'</a> &raquo; '.$_language->module['edit_group'].'</h1>';
     
@@ -146,12 +146,12 @@ if($part=="groups") {
     $CAPCLASS->create_transaction();
     $hash = $CAPCLASS->get_hash();
     
-    while($ds=mysql_fetch_array($ergebnis)) {
+    while($ds=mysqli_fetch_array($ergebnis)) {
       if($n%2) { $td='td1'; }
 			else { $td='td2'; }
 			
 			$list = '<select name="sortlist[]">';
-			for($i=1;$i<=mysql_num_rows($ergebnis);$i++) {
+			for($i=1;$i<=mysqli_num_rows($ergebnis);$i++) {
 				$list.='<option value="'.$ds['groupID'].'-'.$i.'">'.$i.'</option>';
 			}
 			$list .= '</select>';
@@ -182,7 +182,7 @@ elseif($part=="gallerys") {
 		if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
 			if(checkforempty(Array('name'))) {
 				safe_query("INSERT INTO ".PREFIX."gallery ( name, date, groupID ) values( '".$_POST['name']."', '".time()."', '".$_POST['group']."' ) ");
-				$id = mysql_insert_id();
+				$id = mysqli_insert_id();
 			} else echo $_language->module['information_incomplete'];
 		} else echo $_language->module['transaction_invalid'];
 	}
@@ -220,7 +220,7 @@ elseif($part=="gallerys") {
 					if($name[$i]) $insertname = $name[$i];
 					else $insertname = $picture;
 					safe_query("INSERT INTO ".PREFIX."gallery_pictures ( galleryID, name, comment, comments) VALUES ('".$_POST['galleryID']."', '".$insertname."', '".$comment[$i]."', '".$_POST['comments']."' )");
-					$insertid = mysql_insert_id();
+					$insertid = mysqli_insert_id();
 					copy($dir.$picture, $dir.'large/'.$insertid.$typ);
 					$galclass->savethumb($dir.'large/'.$insertid.$typ, $dir.'thumb/'.$insertid.'.jpg');
 					@unlink($dir.$picture);
@@ -239,7 +239,7 @@ elseif($part=="gallerys") {
 				if($_POST['name']) $insertname = $_POST['name'];
 				else $insertname = $picture['name'];
 				safe_query("INSERT INTO ".PREFIX."gallery_pictures ( galleryID, name, comment, comments) VALUES ('".$_POST['galleryID']."', '".$insertname."', '".$_POST['comment']."', '".$_POST['comments']."' )");
-				$insertid = mysql_insert_id();
+				$insertid = mysqli_insert_id();
 	
 				$typ = getimagesize($picture['tmp_name']);
 				switch ($typ[2]) {
@@ -262,7 +262,7 @@ elseif($part=="gallerys") {
 				//FILES
 
 				$ergebnis=safe_query("SELECT picID FROM ".PREFIX."gallery_pictures WHERE galleryID='".$_GET['galleryID']."'");
-				while($ds=mysql_fetch_array($ergebnis)) {
+				while($ds=mysqli_fetch_array($ergebnis)) {
 					@unlink('../images/gallery/thumb/'.$ds['picID'].'.jpg'); //thumbnails
 	
 					$path = '../images/gallery/large/';
@@ -279,10 +279,10 @@ elseif($part=="gallerys") {
   
 	if($action=="add") {
     $ergebnis=safe_query("SELECT * FROM ".PREFIX."gallery_groups");
-		$any=mysql_num_rows($ergebnis);
+		$any=mysqli_num_rows($ergebnis);
 		if($any){
 			$groups = '<select name="group">';
-			while($ds=mysql_fetch_array($ergebnis)) {
+			while($ds=mysqli_fetch_array($ergebnis)) {
 				$groups.='<option value="'.$ds['groupID'].'">'.getinput($ds['name']).'</option>';
 			}
 			$groups.='</select>';
@@ -328,13 +328,13 @@ elseif($part=="gallerys") {
     $hash = $CAPCLASS->get_hash();
 		$ergebnis=safe_query("SELECT * FROM ".PREFIX."gallery_groups");
 		$groups = '<select name="group">';
-		while($ds=mysql_fetch_array($ergebnis)) {
+		while($ds=mysqli_fetch_array($ergebnis)) {
 			$groups.='<option value="'.$ds['groupID'].'">'.getinput($ds['name']).'</option>';
 		}
 		$groups.='</select>';
 
 		$ergebnis=safe_query("SELECT * FROM ".PREFIX."gallery WHERE galleryID='".$_GET['galleryID']."'");
-		$ds=mysql_fetch_array($ergebnis);
+		$ds=mysqli_fetch_array($ergebnis);
 
 		$groups = str_replace('value="'.$ds['groupID'].'"','value="'.$ds['groupID'].'" selected="selected"',$groups);
 
@@ -488,7 +488,7 @@ elseif($part=="gallerys") {
 
 		$ergebnis=safe_query("SELECT * FROM ".PREFIX."gallery_groups ORDER BY sort");
     
-    while($ds=mysql_fetch_array($ergebnis)) {
+    while($ds=mysqli_fetch_array($ergebnis)) {
 		
     echo'<tr>
       <td class="td_head" colspan="3"><b>'.getinput($ds['name']).'</b></td>
@@ -501,7 +501,7 @@ elseif($part=="gallerys") {
     $hash = $CAPCLASS->get_hash();
     $i=1;
 		
-      while($db=mysql_fetch_array($galleries)) {
+      while($db=mysqli_fetch_array($galleries)) {
 			  if($i%2) { $td='td1'; }
 			  else { $td='td2'; }
       
@@ -534,7 +534,7 @@ elseif($part=="gallerys") {
     $hash = $CAPCLASS->get_hash();
     
 		$i=1;
-    while($ds=mysql_fetch_array($ergebnis)) {
+    while($ds=mysqli_fetch_array($ergebnis)) {
       if($i%2) { $td='td1'; }
 			else { $td='td2'; }
     

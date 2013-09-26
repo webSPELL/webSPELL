@@ -73,7 +73,7 @@ if($action=="save" && isset($_POST['post'])) {
 
 	if(!count($error) and $run) {
 		$ergebnis=safe_query("SELECT userID FROM ".PREFIX."squads_members WHERE joinmember='1' AND squadID='".$squad."'");
-		while($ds=mysql_fetch_array($ergebnis)) {
+		while($ds=mysqli_fetch_assoc($ergebnis)) {
 			$touser[]=$ds['userID'];
 		}
 
@@ -82,7 +82,7 @@ if($action=="save" && isset($_POST['post'])) {
 			foreach($touser as $id) {
 				$tmp_lang->set_language(getuserlanguage($id));
 				$tmp_lang->read_module('joinus');
-				$message = '[b]'.$tmp_lang->module['someone_want_to_join_your_squad'].' '.mysql_real_escape_string(getsquadname($squad)).'![/b]
+				$message = '[b]'.$tmp_lang->module['someone_want_to_join_your_squad'].' '.$_database->escape_string(getsquadname($squad)).'![/b]
 				 '.$tmp_lang->module['nick'].' '.$nick.'
 				 '.$tmp_lang->module['name'].': '.$name.'
 				 '.$tmp_lang->module['age'].': '.$age.'
@@ -119,7 +119,7 @@ if($show == true){
 	if($loggedin) {
 		if(!isset($showerror)) $showerror='';
 		$res = safe_query("SELECT *, DATE_FORMAT(FROM_DAYS(TO_DAYS(NOW()) - TO_DAYS(birthday)), '%y') 'age' FROM ".PREFIX."user WHERE userID = '$userID'");
-    	$ds = mysql_fetch_assoc($res);
+    	$ds = mysqli_fetch_assoc($res);
 		$nickname = getinput($ds['nickname']);
 		$name = getinput($ds['firstname']." ".$ds['lastname']);
 		$email = getinput($ds['email']);

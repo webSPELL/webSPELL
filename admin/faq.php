@@ -84,7 +84,7 @@ if(isset($_GET['action'])) {
 	if($_GET['action']=="add") {
 		$ergebnis=safe_query("SELECT * FROM ".PREFIX."faq_categories ORDER BY sort");
 		$faqcats='<select name="faqcat">';
-		while($ds=mysql_fetch_array($ergebnis)) {
+		while($ds=mysqli_fetch_array($ergebnis)) {
 			$faqcats.='<option value="'.$ds['faqcatID'].'">'.getinput($ds['faqcatname']).'</option>';
 		}
 		$faqcats.='</select>';
@@ -152,11 +152,11 @@ if(isset($_GET['action'])) {
 		$faqID = $_GET['faqID'];
 
 		$ergebnis=safe_query("SELECT * FROM ".PREFIX."faq WHERE faqID='$faqID'");
-		$ds=mysql_fetch_array($ergebnis);
+		$ds=mysqli_fetch_array($ergebnis);
 
 		$faqcategory=safe_query("SELECT * FROM ".PREFIX."faq_categories ORDER BY sort");
 		$faqcats='<select name="faqcat">';
-		while($dc=mysql_fetch_array($faqcategory)) {
+		while($dc=mysqli_fetch_array($faqcategory)) {
 			$selected='';
 			if($dc['faqcatID'] == $ds['faqcatID']) $selected=' selected="selected"';
 			$faqcats.='<option value="'.$dc['faqcatID'].'"'.$selected.'>'.getinput($dc['faqcatname']).'</option>';
@@ -228,25 +228,26 @@ else {
     </tr>';
 
 	$ergebnis=safe_query("SELECT * FROM ".PREFIX."faq_categories ORDER BY sort");
-	$anz=safe_query("SELECT count(faqcatID) FROM ".PREFIX."faq_categories");
-	$anz=mysql_result($anz, 0);
+	$tmp=mysqli_fetch_assoc(safe_query("SELECT count(faqcatID) as cnt FROM ".PREFIX."faq_categories"));
+	$anz=$tmp['cnt'];
   
   $CAPCLASS = new Captcha;
 	$CAPCLASS->create_transaction();
 	$hash = $CAPCLASS->get_hash();
   
-  while($ds=mysql_fetch_array($ergebnis)) {
+  while($ds=mysqli_fetch_array($ergebnis)) {
+
 		echo'<tr>
       <td class="td_head" colspan="3"><b>'.$ds['faqcatname'].'</b>
       <br /><small>'.cleartext($ds['description'],1,'admin').'</small></td>
     </tr>';		 
 
 		$faq=safe_query("SELECT * FROM ".PREFIX."faq WHERE faqcatID='$ds[faqcatID]' ORDER BY sort");
-		$anzfaq=safe_query("SELECT count(faqID) FROM ".PREFIX."faq WHERE faqcatID='$ds[faqcatID]'");
-		$anzfaq=mysql_result($anzfaq, 0);
+		$tmp=mysqli_fetch_assoc(safe_query("SELECT count(faqID) as cnt FROM ".PREFIX."faq WHERE faqcatID='$ds[faqcatID]'"));
+		$anzfaq=$tmp['cnt'];
 
 		$i=1;
-    while($db=mysql_fetch_array($faq)) {
+    while($db=mysqli_fetch_array($faq)) {
       if($i%2) { $td='td1'; }
       else { $td='td2'; }
       

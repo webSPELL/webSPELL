@@ -69,7 +69,7 @@ if($action=="save") {
 								 saved='1',
 								 comments='".$comments."' WHERE articlesID='".$articlesID."'");
 
-	$anzpages = mysql_num_rows(safe_query("SELECT * FROM ".PREFIX."articles_contents WHERE articlesID='".$articlesID."'"));
+	$anzpages = mysqli_num_rows(safe_query("SELECT * FROM ".PREFIX."articles_contents WHERE articlesID='".$articlesID."'"));
 	if($anzpages > count($message)) {
 		safe_query("DELETE FROM `".PREFIX."articles_contents` WHERE `articlesID` = '".$articlesID."' and `page` > ".count($message));
 	}
@@ -101,7 +101,7 @@ elseif(isset($_GET['delete'])) {
 
 	if(!isnewsadmin($userID)) die($_language->module['no_access']);
 
-	$ds=mysql_fetch_array(safe_query("SELECT screens FROM ".PREFIX."articles WHERE articlesID='".$_GET['articlesID']."'"));
+	$ds=mysqli_fetch_array(safe_query("SELECT screens FROM ".PREFIX."articles WHERE articlesID='".$_GET['articlesID']."'"));
 	if($ds['screens']) {
 		$screens=explode("|", $ds['screens']);
 		if(is_array($screens)) {
@@ -142,7 +142,7 @@ function top5() {
   echo $top5_head;
 	
   $n=1;
-	while($ds=mysql_fetch_array($ergebnis)) {
+	while($ds=mysqli_fetch_array($ergebnis)) {
 		if($n%2) {
 			$bg1=BG_1;
 			$bg2=BG_2;
@@ -185,7 +185,7 @@ function top5() {
 	echo $top5_head;
   
 	$n=1;
-	while($ds=mysql_fetch_array($ergebnis)) {
+	while($ds=mysqli_fetch_array($ergebnis)) {
     if($n%2) {
 			$bg1=BG_1;
 			$bg2=BG_2;
@@ -223,7 +223,7 @@ if($action=="new") {
 
 	if(isnewsadmin($userID)) {
 		safe_query("INSERT INTO ".PREFIX."articles ( date, poster, saved ) VALUES( '".time()."', '$userID', '0' ) ");
-		$articlesID=mysql_insert_id();
+		$articlesID=mysqli_insert_id();
 
 		$selects='';
 		for($i=1;$i<100;$i++) {
@@ -258,13 +258,13 @@ elseif($action=="edit") {
 	$bgcat=BGCAT;
 
 	if(isnewsadmin($userID)) {
-		$ds=mysql_fetch_array(safe_query("SELECT * FROM ".PREFIX."articles WHERE articlesID = '".$articlesID."'"));
+		$ds=mysqli_fetch_array(safe_query("SELECT * FROM ".PREFIX."articles WHERE articlesID = '".$articlesID."'"));
 
 		$title=getinput($ds['title']);
 
 		$message = array();
 		$query = safe_query("SELECT content FROM ".PREFIX."articles_contents WHERE articlesID = '".$articlesID."' ORDER BY page ASC");
-		while($qs = mysql_fetch_array($query)) {
+		while($qs = mysqli_fetch_array($query)) {
 			$message[] = $qs['content'];
 		}
 
@@ -333,16 +333,16 @@ elseif($action=="show") {
 	if($page==1) safe_query("UPDATE ".PREFIX."articles SET viewed=viewed+1 WHERE articlesID='".$articlesID."'");
 	$result=safe_query("SELECT * FROM ".PREFIX."articles WHERE articlesID='".$articlesID."'");
 
-	if(mysql_num_rows($result)) {
+	if(mysqli_num_rows($result)) {
 
-		$ds=mysql_fetch_array($result);
+		$ds=mysqli_fetch_array($result);
 		$date = date("d.m.Y", $ds['date']);
 		$time = date("H:i", $ds['date']);
 		$title = clearfromtags($ds['title']);
 
 		$content = array();
 		$query = safe_query("SELECT * FROM ".PREFIX."articles_contents WHERE articlesID = '".$articlesID."' ORDER BY page ASC");
-		while($qs = mysql_fetch_array($query)) {
+		while($qs = mysqli_fetch_array($query)) {
 			$content[] = $qs['content'];
 		}
 
@@ -385,8 +385,8 @@ elseif($action=="show") {
 		if($loggedin) {
 			$getarticles=safe_query("SELECT articles FROM ".PREFIX."user WHERE userID='$userID'");
 			$found=false;
-			if(mysql_num_rows($getarticles)) {
-				$ga=mysql_fetch_array($getarticles);
+			if(mysqli_num_rows($getarticles)) {
+				$ga=mysqli_fetch_array($getarticles);
 				if($ga['articles']!="") {
 					$string=$ga['articles'];
 					$array=explode(":", $string);
@@ -465,7 +465,7 @@ else {
   if(isnewsadmin($userID)) echo'<input type="button" onclick="MM_openBrWindow(\'articles.php?action=new\',\'Articles\',\'toolbar=no,status=no,scrollbars=yes,width=800,height=600\');" value="'.$_language->module['new_article'].'" /><br /><br />';
 
 	$alle=safe_query("SELECT articlesID FROM ".PREFIX."articles WHERE saved='1'");
-	$gesamt = mysql_num_rows($alle);
+	$gesamt = mysqli_num_rows($alle);
 	$pages=1;
 
 	$max=$maxarticles;
@@ -502,7 +502,7 @@ else {
 		echo $articles_head;
     
 		$n=1;
-		while($ds=mysql_fetch_array($ergebnis)) {
+		while($ds=mysqli_fetch_array($ergebnis)) {
 			if($n%2) {
 				$bg1=BG_1;
 				$bg2=BG_2;

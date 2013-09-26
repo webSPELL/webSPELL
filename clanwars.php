@@ -51,15 +51,15 @@ if($action=="new") {
     $hometeam="";
     
     $gamesa=safe_query("SELECT * FROM ".PREFIX."games ORDER BY name");
-		while($ds=mysql_fetch_array($gamesa)) {
+		while($ds=mysqli_fetch_array($gamesa)) {
 			$games.='<option value="'.$ds['tag'].'">'.$ds['name'].'</option>';
 		}
 
 		$gamesquads=safe_query("SELECT * FROM ".PREFIX."squads WHERE gamesquad='1' ORDER BY sort");
-		while($ds=mysql_fetch_array($gamesquads)) {
+		while($ds=mysqli_fetch_array($gamesquads)) {
 			$hometeam.='<option value="0">'.$ds['name'].'</option>';
 			$squadmembers=safe_query("SELECT * FROM ".PREFIX."squads_members WHERE squadID='$ds[squadID]' ORDER BY sort");
-			while($dm=mysql_fetch_array($squadmembers)) {
+			while($dm=mysqli_fetch_array($squadmembers)) {
 				$hometeam.='<option value="'.$dm['userID'].'">&nbsp; - '.getnickname($dm['userID']).'</option>';
 			}
 			$hometeam.='<option value="0" disabled="disabled">-----</option>';
@@ -91,7 +91,7 @@ if($action=="new") {
 		$opptag = "";
 		if(isset($upID)) {
 			$ergebnis=safe_query("SELECT * FROM ".PREFIX."upcoming WHERE upID='$upID'");
-			$ds=mysql_fetch_array($ergebnis);
+			$ds=mysqli_fetch_array($ergebnis);
 			$league=$ds['league'];
 			if($ds['leaguehp'] != $leaguehp) $leaguehp=$ds['leaguehp'];
 			$opponent=$ds['opponent'];
@@ -166,12 +166,8 @@ elseif($action=="save") {
 		}
 	}
 	$backup_theMaps = serialize($maps);
-	if(function_exists("mysql_real_escape_string")) {
-		$theMaps = mysql_real_escape_string($backup_theMaps);
-	}
-	else{
-		$theMaps = addslashes($backup_theMaps);
-	}
+	$theMaps = $_database->escape_string($backup_theMaps);
+
 	$scores = array();
 	if(!empty($homescr)) {
 		if(is_array($homescr)) {
@@ -205,7 +201,7 @@ elseif($action=="save") {
 	safe_query("INSERT INTO ".PREFIX."clanwars ( date, squad, game, league, leaguehp, opponent, opptag, oppcountry, opphp, maps, hometeam, oppteam, server, hltv, homescore, oppscore, report, comments, linkpage)
                  VALUES( '$date', '$squad', '$game', '".$league."', '$leaguehp', '".$opponent."', '".$opptag."', '$oppcountry', '$opphp', '".$theMaps."', '$home_string', '$oppteam', '$server', '$hltv', '$theHomeScore', '$theOppScore', '".$report."', '$comments', '$linkpage' ) ");
 
-	$cwID=mysql_insert_id();
+	$cwID=mysqli_insert_id();
 	$date=date("d.m.Y", $date);
 
 	// INSERT CW-NEWS
@@ -214,18 +210,18 @@ elseif($action=="save") {
 	 	$_language->read_module('bbcode', true);
 	 	
 		safe_query("INSERT INTO ".PREFIX."news (date, poster, saved, cwID) VALUES ('".time()."', '$userID', '0', '$cwID')");
-		$newsID=mysql_insert_id();
+		$newsID=mysqli_insert_id();
 		
 		$rubrics = '';
 		$newsrubrics=safe_query("SELECT rubricID, rubric FROM ".PREFIX."news_rubrics ORDER BY rubric");
-		while($dr=mysql_fetch_array($newsrubrics)) {
+		while($dr=mysqli_fetch_array($newsrubrics)) {
 			$rubrics.='<option value="'.$dr['rubricID'].'">'.$dr['rubric'].'</option>';
 		}
 
 		$count_langs = 0;
 		$lang=safe_query("SELECT lang, language FROM ".PREFIX."news_languages ORDER BY language");
 		$langs='';
-		while($dl=mysql_fetch_array($lang)) {
+		while($dl=mysqli_fetch_array($lang)) {
 			$langs.="news_languages[".$count_langs."] = new Array();\nnews_languages[".$count_langs."][0] = '".$dl['lang']."';\nnews_languages[".$count_langs."][1] = '".$dl['language']."';\n";
 			$count_langs++;
 		}
@@ -333,7 +329,7 @@ elseif($action=="save") {
 		
 		$rubrics='';
 		$newsrubrics=safe_query("SELECT rubricID, rubric FROM ".PREFIX."news_rubrics ORDER BY rubric");
-		while($dr=mysql_fetch_array($newsrubrics)) {
+		while($dr=mysqli_fetch_array($newsrubrics)) {
 			$rubrics.='<option value="'.$dr['rubricID'].'">'.$dr['rubric'].'</option>';
 		}
 		$bg1=BG_1;
@@ -379,10 +375,10 @@ elseif($action=="edit") {
 		$month='';
 		$year='';
     
-    $ds=mysql_fetch_array(safe_query("SELECT * FROM ".PREFIX."clanwars WHERE cwID='$cwID'"));
+    $ds=mysqli_fetch_array(safe_query("SELECT * FROM ".PREFIX."clanwars WHERE cwID='$cwID'"));
 
 		$gamesa=safe_query("SELECT tag, name FROM ".PREFIX."games ORDER BY name");
-		while($dv=mysql_fetch_array($gamesa)) {
+		while($dv=mysqli_fetch_array($gamesa)) {
 			$games.='<option value="'.$dv['tag'].'">'.$dv['name'].'</option>';
 		}
 
@@ -435,10 +431,10 @@ elseif($action=="edit") {
 		}
 
 		$gamesquads=safe_query("SELECT * FROM ".PREFIX."squads WHERE gamesquad='1' ORDER BY sort");
-		while($dq=mysql_fetch_array($gamesquads)) {
+		while($dq=mysqli_fetch_array($gamesquads)) {
 			$hometeam.='<option value="0">'.$dq['name'].'</option>';
 			$squadmembers=safe_query("SELECT * FROM ".PREFIX."squads_members WHERE squadID='$dq[squadID]' ORDER BY sort");
-			while($dm=mysql_fetch_array($squadmembers)) {
+			while($dm=mysqli_fetch_array($squadmembers)) {
 				$hometeam.='<option value="'.$dm['userID'].'">&nbsp; - '.getnickname($dm['userID']).'</option>';
 			}
 			$hometeam.='<option value="0">&nbsp;</option>';
@@ -508,12 +504,8 @@ elseif($action=="saveedit") {
 			}
 		}
 	}
-	if(function_exists("mysql_real_escape_string")) {
-		$theMaps = mysql_real_escape_string(serialize($theMaps));
-	}
-	else{
-		$theMaps = addslashes(serialize($theMaps));
-	}
+	$theMaps = $_database->escape_string(serialize($theMaps));
+
 	$theHomeScore = serialize($theHomeScore);
 	$theOppScore = serialize($theOppScore);
 
@@ -564,7 +556,7 @@ elseif($action=="delete") {
 	if(isset($_POST['cwID'])) $cwID = $_POST['cwID'];
 	if(!isset($cwID)) $cwID = $_GET['cwID'];
 	$ergebnis=safe_query("SELECT screens FROM ".PREFIX."clanwars WHERE cwID='$cwID'");
-	$ds=mysql_fetch_array($ergebnis);
+	$ds=mysqli_fetch_array($ergebnis);
 	$screens=explode("|", $ds['screens']);
 	$filepath = "./images/clanwar-screens/";
 	if(is_array($screens)) {
@@ -588,7 +580,7 @@ elseif(isset($_POST['quickactiontype'])=="delete") {
 		$cwID = $_POST['cwID'];
 		foreach($cwID as $id) {
 			$ergebnis=safe_query("SELECT screens FROM ".PREFIX."clanwars WHERE cwID='$id'");
-			$ds=mysql_fetch_array($ergebnis);
+			$ds=mysqli_fetch_array($ergebnis);
 			$screens=explode("|", $ds['screens']);
 			$filepath = "./images/clanwar-screens/";
 			if(is_array($screens)) {
@@ -628,18 +620,18 @@ elseif($action=="stats") {
 
 	$dp=safe_query("SELECT * FROM ".PREFIX."clanwars");
 	// clanwars gesamt
-	$totaltotal=mysql_num_rows($dp);
+	$totaltotal=mysqli_num_rows($dp);
 
-	while($cwdata = mysql_fetch_array($dp)) {
+	while($cwdata = mysqli_fetch_array($dp)) {
 		// total home points
 		$totalhomeqry=safe_query("SELECT homescore FROM ".PREFIX."clanwars WHERE cwID='$cwdata[cwID]'");
-		while($theHomeData = mysql_fetch_array($totalhomeqry)) {
+		while($theHomeData = mysqli_fetch_array($totalhomeqry)) {
 			$totalHomeScore+=array_sum(unserialize($theHomeData['homescore']));
 			$theHomeScore=array_sum(unserialize($theHomeData['homescore']));
 		}
 		// total opponent points
 		$totaloppqry=safe_query("SELECT oppscore FROM ".PREFIX."clanwars WHERE cwID='$cwdata[cwID]'");
-		while($theOppData = mysql_fetch_array($totaloppqry)) {
+		while($theOppData = mysqli_fetch_array($totaloppqry)) {
 			$totalOppScore+=array_sum(unserialize($theOppData['oppscore']));
 			$theOppScore=array_sum(unserialize($theOppData['oppscore']));
 		}
@@ -683,8 +675,8 @@ elseif($action=="stats") {
 	// SQUADS
 
 	$squads=safe_query("SELECT * FROM ".PREFIX."squads WHERE gamesquad='1' ORDER BY sort");
-	if(mysql_num_rows($squads)) {
-		while($squaddata=mysql_fetch_array($squads)) {
+	if(mysqli_num_rows($squads)) {
+		while($squaddata=mysqli_fetch_array($squads)) {
 			$squad=getsquadname($squaddata['squadID']);
 			
       echo '<h2>'.$squad.' - '.$_language->module['stats'].'</h2>';
@@ -698,19 +690,19 @@ elseif($action=="stats") {
 			// SQUAD STATISTICS
 
 			$squadcws=safe_query("SELECT * FROM ".PREFIX."clanwars WHERE squad='".$squaddata['squadID']."'");
-			$total=mysql_num_rows($squadcws);
+			$total=mysqli_num_rows($squadcws);
 			$totalperc=percent($total, $totaltotal, 2);
 
-			while($squadcwdata=mysql_fetch_array($squadcws)) {
+			while($squadcwdata=mysqli_fetch_array($squadcws)) {
 
 				// SQUAD CLANWAR STATISTICS
 
 				// total squad homescore
-				$sqHomeScoreQry=mysql_fetch_array(safe_query("SELECT homescore FROM ".PREFIX."clanwars WHERE cwID='".$squadcwdata['cwID']."' AND squad='".$squaddata['squadID']."'"));
+				$sqHomeScoreQry=mysqli_fetch_array(safe_query("SELECT homescore FROM ".PREFIX."clanwars WHERE cwID='".$squadcwdata['cwID']."' AND squad='".$squaddata['squadID']."'"));
 				$sqHomeScore=array_sum(unserialize($sqHomeScoreQry['homescore']));
 				$totalHomeScoreSQ+=array_sum(unserialize($sqHomeScoreQry['homescore']));
 				// total squad oppscore
-				$sqOppScoreQry=mysql_fetch_array(safe_query("SELECT oppscore FROM ".PREFIX."clanwars WHERE cwID='".$squadcwdata['cwID']."' AND squad='".$squaddata['squadID']."'"));
+				$sqOppScoreQry=mysqli_fetch_array(safe_query("SELECT oppscore FROM ".PREFIX."clanwars WHERE cwID='".$squadcwdata['cwID']."' AND squad='".$squaddata['squadID']."'"));
 				$sqOppScore=array_sum(unserialize($sqOppScoreQry['oppscore']));
 				$totalOppScoreSQ+=array_sum(unserialize($sqOppScoreQry['oppscore']));
 
@@ -774,13 +766,13 @@ elseif($action=="stats") {
 
 			// get playerlist for squad
 			$squadmembers=safe_query("SELECT * FROM ".PREFIX."squads_members WHERE squadID='".$squaddata['squadID']."'");
-			while($player=mysql_fetch_array($squadmembers)) {
+			while($player=mysqli_fetch_array($squadmembers)) {
 				$playerlist[]=$player['userID'];
 			}
 
 			// get roster for squad and find matches with playerlist
 			$playercws=safe_query("SELECT hometeam FROM ".PREFIX."clanwars WHERE squad='".$squaddata['squadID']."'");
-			while($roster=mysql_fetch_array($playercws)) {
+			while($roster=mysqli_fetch_array($playercws)) {
 				$hometeam = array_merge($hometeam, unserialize($roster['hometeam']));
 			}
 
@@ -862,7 +854,7 @@ elseif($action=="showonly") {
 	eval ("\$title_clanwars = \"".gettemplate("title_clanwars")."\";");
 	echo $title_clanwars;
   
-	$gesamt = mysql_num_rows(safe_query("SELECT cwID FROM ".PREFIX."clanwars WHERE $only='$id'"));
+	$gesamt = mysqli_num_rows(safe_query("SELECT cwID FROM ".PREFIX."clanwars WHERE $only='$id'"));
 	$pages=1;
 	
 	$max=$maxclanwars;
@@ -916,7 +908,7 @@ elseif($action=="showonly") {
 		echo $clanwars_head;
 		$n=1;
 	
-		while($ds=mysql_fetch_array($ergebnis)) {
+		while($ds=mysqli_fetch_array($ergebnis)) {
 			if($n%2) {
 				$bg1=BG_1;
 				$bg2=BG_2;
@@ -992,7 +984,7 @@ elseif(empty($_GET['action'])) {
 	eval ("\$title_clanwars = \"".gettemplate("title_clanwars")."\";");
 	echo $title_clanwars;
 
-	$gesamt = mysql_num_rows(safe_query("SELECT cwID FROM ".PREFIX."clanwars"));
+	$gesamt = mysqli_num_rows(safe_query("SELECT cwID FROM ".PREFIX."clanwars"));
 	$pages=1;
 	if(!isset($page)) $page = 1;
 	if(!isset($sort)) $sort = "date";
@@ -1047,7 +1039,7 @@ elseif(empty($_GET['action'])) {
 		echo $clanwars_head;
 
 		$n=1;
-		while($ds=mysql_fetch_array($ergebnis)) {
+		while($ds=mysqli_fetch_array($ergebnis)) {
 			if($n%2) {
 				$bg1=BG_1;
 				$bg2=BG_2;

@@ -194,12 +194,12 @@ else {
 		}
 
 		$qry = "SELECT userID FROM ".PREFIX."user WHERE username = '".$usernamenew."' AND userID != ".$userID." LIMIT 0,1";
-		if(mysql_num_rows(safe_query($qry))) {
+		if(mysqli_num_rows(safe_query($qry))) {
 			$error_array[] = $_language->module['username_aleady_in_use'];
 		}
 		
 		$qry = "SELECT userID FROM ".PREFIX."user WHERE nickname = '".$nickname."' AND userID!=".$userID." LIMIT 0,1";
-		if(mysql_num_rows(safe_query($qry))) {
+		if(mysqli_num_rows(safe_query($qry))) {
 				$error_array[] = $_language->module['nickname_already_in_use'];
 		}
 
@@ -274,7 +274,7 @@ else {
 		$id = $userID;
 
 		$ergebnis = safe_query("SELECT password FROM ".PREFIX."user WHERE userID='".$id."'");
-		$ds = mysql_fetch_array($ergebnis);
+		$ds = mysqli_fetch_array($ergebnis);
 
 		if(!(mb_strlen(trim($oldpwd)))) {
 			$error = $_language->module['forgot_old_pw'];
@@ -329,7 +329,7 @@ else {
 		$mail2 = $_POST['mail2'];
 
 		$ergebnis = safe_query("SELECT password, username FROM ".PREFIX."user WHERE userID='".$userID."'");
-		$ds = mysql_fetch_array($ergebnis);
+		$ds = mysqli_fetch_array($ergebnis);
 		$username = $ds['username'];
 		if(!(mb_strlen(trim($pwd)))) {
 			$error = $_language->module['forgot_old_pw'];
@@ -371,9 +371,9 @@ else {
 	
 	else {
 		$ergebnis = safe_query("SELECT * FROM ".PREFIX."user WHERE userID='".$userID."'");
-		$anz = mysql_num_rows($ergebnis);
+		$anz = mysqli_num_rows($ergebnis);
 		if($anz) {
-			$ds = mysql_fetch_array($ergebnis);
+			$ds = mysqli_fetch_array($ergebnis);
 			$flag = '[flag]'.$ds['country'].'[/flag]';
 			$country = flags($flag);
 			$country = str_replace("<img","<img id='county'",$country);
@@ -426,7 +426,7 @@ else {
 			// Select all possible languages
 			$mysql_langs = array();
 			$query = safe_query("SELECT lang, language FROM ".PREFIX."news_languages");
-			while($dx = mysql_fetch_assoc($query)){
+			while($dx = mysqli_fetch_assoc($query)){
 				$mysql_langs[$dx['lang']] = $dx['language'];
 			}
 			if($dh = opendir($filepath)) {

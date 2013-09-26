@@ -38,9 +38,9 @@ if($action=="show") {
 	else $getsquad = '';
 
 	$ergebnis=safe_query("SELECT * FROM ".PREFIX."squads ".$getsquad." ORDER BY sort");
-	while($ds=mysql_fetch_array($ergebnis)) {
+	while($ds=mysqli_fetch_array($ergebnis)) {
 
-		$anzmembers=mysql_num_rows(safe_query("SELECT sqmID FROM ".PREFIX."squads_members WHERE squadID='".$ds['squadID']."'"));
+		$anzmembers=mysqli_num_rows(safe_query("SELECT sqmID FROM ".PREFIX."squads_members WHERE squadID='".$ds['squadID']."'"));
 		if($anzmembers == 1) $anzmembers = $anzmembers.' '.$_language->module['member'];
 		else $anzmembers = $anzmembers.' '.$_language->module['members'];
 		$name='&not; <b>'.$ds['name'].'</b>';
@@ -69,7 +69,7 @@ if($action=="show") {
 		echo $squads_head;
 
 		$i=1;
-		while($dm=mysql_fetch_array($member)) {
+		while($dm=mysqli_fetch_array($member)) {
 
 			if($i%2) {
 				$bg1=BG_1;
@@ -140,7 +140,7 @@ else {
 	$ergebnis=safe_query("SELECT * FROM ".PREFIX."squads ".$getsquad." ORDER BY sort");
 	
   $i=1;
-  while($ds=mysql_fetch_array($ergebnis)) {
+  while($ds=mysqli_fetch_array($ergebnis)) {
   
     if($i%2) {
       $bg1=BG_1;
@@ -151,7 +151,7 @@ else {
       $bg2=BG_4;
     }
     
-    $anzmembers=mysql_num_rows(safe_query("SELECT sqmID FROM ".PREFIX."squads_members WHERE squadID='".$ds['squadID']."'"));
+    $anzmembers=mysqli_num_rows(safe_query("SELECT sqmID FROM ".PREFIX."squads_members WHERE squadID='".$ds['squadID']."'"));
 		if($anzmembers == 1) $anzmembers = $anzmembers.' '.$_language->module['member'];
 		else $anzmembers = $anzmembers.' '.$_language->module['members'];
 		$name='&not; <a href="index.php?site=squads&amp;action=show&amp;squadID='.$ds['squadID'].'"><b>'.$ds['name'].'</b></a>';

@@ -38,16 +38,16 @@ if($action=="faqcat" and is_numeric($_GET['faqcatID'])) {
 
 	$faqcatID = $_GET['faqcatID'];
 	$get = safe_query("SELECT faqcatname FROM ".PREFIX."faq_categories WHERE faqcatID='".$faqcatID."'");
-	$dc = mysql_fetch_assoc($get);
+	$dc = mysqli_fetch_assoc($get);
 	$faqcatname = $dc['faqcatname'];
 
 	$faqcat=safe_query("SELECT question,faqID,sort FROM ".PREFIX."faq WHERE faqcatID='".$faqcatID."' ORDER BY sort");
-	if(mysql_num_rows($faqcat)) {
+	if(mysqli_num_rows($faqcat)) {
 
 		eval ("\$faq_question_head = \"".gettemplate("faq_question_head")."\";");
 		echo $faq_question_head;
 		$i=1;
-		while($ds=mysql_fetch_array($faqcat)){
+		while($ds=mysqli_fetch_array($faqcat)){
 			if($i%2) {
 				$bg1=BG_1;
 				$bg2=BG_2;
@@ -75,13 +75,13 @@ elseif($action=="faq") {
 
 	$faqcatID = intval($_GET['faqcatID']);
 	$get = safe_query("SELECT faqcatname FROM ".PREFIX."faq_categories WHERE faqcatID='".$faqcatID."'");
-	$dc = mysql_fetch_assoc($get);
+	$dc = mysqli_fetch_assoc($get);
 	$faqcatname = $dc['faqcatname'];
 	$faqID = intval($_GET['faqID']);
 
 	$faq=safe_query("SELECT faqcatID,date,question,answer FROM ".PREFIX."faq WHERE faqID='$faqID'");
-	if(mysql_num_rows($faq)) {
-		$ds=mysql_fetch_array($faq);
+	if(mysqli_num_rows($faq)) {
+		$ds=mysqli_fetch_array($faq);
 		$backlink='<a href="index.php?site=faq&amp;action=faqcat&amp;faqcatID='.$faqcatID.'" class="titlelink"><b>'.$faqcatname.'</b></a> &raquo; ';
 		$question=$ds['question'];
 		if(mb_strlen($question) > 40) {
@@ -110,14 +110,14 @@ else {
 	if(ispageadmin($userID)) echo'<input type="button" onclick="MM_openBrWindow(\'admin/admincenter.php?site=faq\',\'News\',\'toolbar=yes,status=yes,scrollbars=yes,resizable=yes,width=800,height=600\')" value="'.$_language->module['admin_button'].'" /><br /><br />';
 
 	$faqcats=safe_query("SELECT * FROM ".PREFIX."faq_categories ORDER BY sort");
-	$anzcats=mysql_num_rows($faqcats);
+	$anzcats=mysqli_num_rows($faqcats);
 	if($anzcats) {
 
 		eval ("\$faq_category_head = \"".gettemplate("faq_category_head")."\";");
 		echo $faq_category_head;
 		$i=1;
-		while($ds=mysql_fetch_array($faqcats)) {
-			$anzfaqs=mysql_num_rows(safe_query("SELECT faqID FROM ".PREFIX."faq WHERE faqcatID='".$ds['faqcatID']."'"));
+		while($ds=mysqli_fetch_array($faqcats)) {
+			$anzfaqs=mysqli_num_rows(safe_query("SELECT faqID FROM ".PREFIX."faq WHERE faqcatID='".$ds['faqcatID']."'"));
 			if($i%2) {
 				$bg1=BG_1;
 				$bg2=BG_2;

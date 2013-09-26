@@ -69,7 +69,7 @@ if(isset($_POST['submit'])) {
 
 else {
 	$ergebnis=safe_query("SELECT * FROM ".PREFIX."styles");
-	$ds=mysql_fetch_array($ergebnis);
+	$ds=mysqli_fetch_array($ergebnis);
 
 	$file = ("../_stylesheet.css");
 	$size = filesize($file);

@@ -35,11 +35,11 @@ if(isset($_POST['upload'])) {
 	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
 		if($upload['name'] != "") {
 		 	$get = safe_query("SELECT DATABASE()");
-  			$ret = mysql_fetch_array($get);
+  			$ret = mysqli_fetch_array($get);
   			$db = $ret[0];
 			//drop all tables from webSPELL DB
 			$result = mysql_list_tables($db);
-			while ($table = mysql_fetch_row($result)) safe_query("DROP TABLE `".$table[0]."`");
+			while ($table = mysqli_fetch_array($result)) safe_query("DROP TABLE `".$table[0]."`");
 	
 			move_uploaded_file($upload['tmp_name'], '../tmp/'.$upload['name']);
 			$new_query = file('../tmp/'.$upload['name']);
@@ -76,11 +76,11 @@ if($action=="optimize") {
   if(!ispageadmin($userID) or mb_substr(basename($_SERVER['REQUEST_URI']), 0, 15) != "admincenter.php") die($_language->module['access_denied']);
   
 	$get = safe_query("SELECT DATABASE()");
-  $ret = mysql_fetch_array($get);
+  $ret = mysqli_fetch_array($get);
   $db = $ret[0];
   
   $result = mysql_list_tables($db);
-	while ($table = mysql_fetch_row($result)) safe_query("OPTIMIZE TABLE `".$table[0]."`");
+	while ($table = mysqli_fetch_array($result)) safe_query("OPTIMIZE TABLE `".$table[0]."`");
   redirect('admincenter.php?site='.$returnto,'',0);
 
 }
@@ -96,7 +96,7 @@ elseif($action=="write") {
 	if($CAPCLASS->check_captcha(0, $_GET['captcha_hash'])) {
 	if(!isset($db)){
 		$get = safe_query("SELECT DATABASE()");
-		$ret = mysql_fetch_array($get);
+		$ret = mysqli_fetch_array($get);
 		$db = $ret[0];
 	}
 	//Get database information and write SQL-commands
@@ -110,14 +110,14 @@ elseif($action=="write") {
 	$final .= "--   Date: ".date("r")."\n";
 
 	$result = mysql_query("SHOW TABLE STATUS FROM ".$db);
-	while ($table = mysql_fetch_row($result)) {
+	while ($table = mysqli_fetch_array($result)) {
 		$i = 0;
 		$result2 = mysql_query("SHOW COLUMNS FROM $table[0]");
-		$z = mysql_num_rows($result2);
+		$z = mysqli_num_rows($result2);
 		$final .= "\n--\n-- webSPELL DB Export - Table structure for table `".$table[0]."`\n--\n\nCREATE TABLE `".$table[0]."` (";
 		$prikey = false;
 		$insert_keys = null;
-		while ($row2 = mysql_fetch_assoc($result2)) {
+		while ($row2 = mysqli_fetch_assoc($result2)) {
 			$i++;
 			$insert_keys .="`".$row2['Field']."`";
 			$final .= "`".$row2['Field']."` ".$row2['Type'];
@@ -142,7 +142,7 @@ elseif($action=="write") {
 		$final .= ") ENGINE=".$table[1]." DEFAULT CHARSET=".$charset[0]." COLLATE=".$table[14].$auto_inc.";\n\n--\n-- webSPELL DB Export - Dumping data for table `".$table[0]."`\n--\n";
 
 		$inhaltq = mysql_query("SELECT * FROM $table[0]");
-		while($inhalt = mysql_fetch_array($inhaltq,MYSQL_BOTH)) {
+		while($inhalt = mysqli_fetch_array($inhaltq,MYSQL_BOTH)) {
 			$final .= "\nINSERT INTO `$table[0]` (";
 			$final .= $insert_keys;
 			$final .= ") VALUES (";
@@ -163,7 +163,7 @@ elseif($action=="write") {
 	systeminc('session');
 	systeminc('login');
 
-	$anz=mysql_num_rows(safe_query("SELECT userID FROM ".PREFIX."user_groups WHERE (page='1' OR super='1') AND userID='$userID'"));
+	$anz=mysqli_num_rows(safe_query("SELECT userID FROM ".PREFIX."user_groups WHERE (page='1' OR super='1') AND userID='$userID'"));
 
 	if($anz) {
 		header("Expires: 0");

@@ -33,7 +33,7 @@ if(isset($_POST['save'])) {
 	if(!ispageadmin($userID)) die($_language->module['no_access']);
 
 	safe_query("INSERT INTO ".PREFIX."linkus ( name ) VALUES( '".$_POST['name']."' ) ");
-	$id=mysql_insert_id();
+	$id=mysqli_insert_id();
 	$banner = $_FILES['banner'];
 	$filepath = "./images/linkus/";
 	
@@ -141,7 +141,7 @@ if($action=="new") {
 elseif($action=="edit") {
 	if(ispageadmin($userID)) {
 		$bannerID = $_GET['bannerID'];
-		$ds=mysql_fetch_array(safe_query("SELECT * FROM ".PREFIX."linkus WHERE bannerID='".$bannerID."'"));
+		$ds=mysqli_fetch_array(safe_query("SELECT * FROM ".PREFIX."linkus WHERE bannerID='".$bannerID."'"));
 		$name=getinput($ds['name']);
 		$banner='<img src="images/linkus/'.$ds['file'].'" alt="" />';
 
@@ -156,9 +156,9 @@ else {
 	$filepath2 = "/images/linkus/";
 	if(ispageadmin($userID)) echo'<input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=linkus&amp;action=new\');return document.MM_returnValue" value="'.$_language->module['new_banner'].'" /><br /><br />';
 	$ergebnis=safe_query("SELECT * FROM ".PREFIX."linkus ORDER BY name");
-	if(mysql_num_rows($ergebnis)) {
+	if(mysqli_num_rows($ergebnis)) {
 		$i=1;
-		while($ds=mysql_fetch_array($ergebnis)) {
+		while($ds=mysqli_fetch_array($ergebnis)) {
 			if($i%2) $bg1=BG_1;
 			else $bg1=BG_2;
 

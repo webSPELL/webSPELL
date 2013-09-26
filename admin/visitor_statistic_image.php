@@ -97,7 +97,7 @@ if(isset($_GET['month']))
 	$datemonth = date(".m.Y", mktime(0, 0, 0, $_GET['month'] ? $_GET['month'] : date("n"), 1, $_GET['year'] ? $_GET['year'] : date("Y")));
 	for($i = 1; $i <= date("d", mktime(0, 0, 0, $_GET['month'] ? $_GET['month'] + 1 : date("n") + 1, 0, $_GET['year'] ? $_GET['year'] : date("Y"))); $i++)
 	{
-		$tmp = mysql_fetch_array(safe_query("SELECT count FROM ".PREFIX."counter_stats WHERE dates LIKE '%".$i.$datemonth."'"));
+		$tmp = mysqli_fetch_array(safe_query("SELECT count FROM ".PREFIX."counter_stats WHERE dates LIKE '%".$i.$datemonth."'"));
 		$array[] = $tmp['count'] ? $tmp['count'] : 0;
 	}
 }
@@ -108,7 +108,7 @@ elseif(isset($_GET['year']))
 		$datemonth = date(".m.Y", mktime(0, 0, 0, $i, 1, $_GET['year'] ? $_GET['year'] : date("Y")));
 		$month = 0;
 		$monthquery = safe_query("SELECT count FROM ".PREFIX."counter_stats WHERE dates LIKE '%".$datemonth."'");
-		while($dm = mysql_fetch_array($monthquery)) {
+		while($dm = mysqli_fetch_array($monthquery)) {
 			$month += $dm['count'];
 		}
 		$array[] = $month;
@@ -132,7 +132,7 @@ elseif(isset($_GET['last']))
 		for($i = $count; $i > 0; $i--)
 		{
 			$day = date("d.m.Y", mktime(0, 0, 0, date("m"), date("d") - $i, date("Y")));
-			$tmp = mysql_fetch_array(safe_query("SELECT count FROM ".PREFIX."counter_stats WHERE dates LIKE '%".$day."'"));
+			$tmp = mysqli_fetch_array(safe_query("SELECT count FROM ".PREFIX."counter_stats WHERE dates LIKE '%".$day."'"));
 			$array[] = $tmp['count'] ? $tmp['count'] : 0;
 		}
 	}
@@ -153,7 +153,7 @@ elseif(isset($_GET['last']))
 		{
 			$month = 0;
 			$monthquery = safe_query("SELECT count FROM ".PREFIX."counter_stats WHERE dates LIKE '%".date(".m.Y", mktime(0, 0, 0, date("m") - $i, 1, date("Y")))."'");
-			while($dm = mysql_fetch_array($monthquery)) {
+			while($dm = mysqli_fetch_array($monthquery)) {
 				$month += $dm['count'];
 			}
 			$array[] = $month;

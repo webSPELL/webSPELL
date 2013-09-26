@@ -26,111 +26,111 @@
 */
 
 function getuserid($nickname) {
-	$ds=mysql_fetch_array(safe_query("SELECT userID FROM ".PREFIX."user WHERE nickname='".$nickname."'"));
+	$ds=mysqli_fetch_array(safe_query("SELECT userID FROM ".PREFIX."user WHERE nickname='".$nickname."'"));
 	return $ds['userID'];
 }
 
 function getnickname($userID) {
-	$ds=mysql_fetch_array(safe_query("SELECT nickname FROM ".PREFIX."user WHERE userID='".$userID."'"));
+	$ds=mysqli_fetch_array(safe_query("SELECT nickname FROM ".PREFIX."user WHERE userID='".$userID."'"));
 	return $ds['nickname'];
 }
 
 function getuserdescription($userID) {
-	$ds=mysql_fetch_array(safe_query("SELECT userdescription FROM ".PREFIX."user WHERE userID='".$userID."'"));
+	$ds=mysqli_fetch_array(safe_query("SELECT userdescription FROM ".PREFIX."user WHERE userID='".$userID."'"));
 	return getinput($ds['userdescription']);
 }
 
 function getfirstname($userID) {
-	$ds=mysql_fetch_array(safe_query("SELECT firstname FROM ".PREFIX."user WHERE userID='".$userID."'"));
+	$ds=mysqli_fetch_array(safe_query("SELECT firstname FROM ".PREFIX."user WHERE userID='".$userID."'"));
 	return getinput($ds['firstname']);
 }
 
 function getlastname($userID) {
-	$ds=mysql_fetch_array(safe_query("SELECT lastname FROM ".PREFIX."user WHERE userID='".$userID."'"));
+	$ds=mysqli_fetch_array(safe_query("SELECT lastname FROM ".PREFIX."user WHERE userID='".$userID."'"));
 	return getinput($ds['lastname']);
 }
 
 function getbirthday($userID) {
-	$ds=mysql_fetch_array(safe_query("SELECT birthday FROM ".PREFIX."user WHERE userID='".$userID."'"));
+	$ds=mysqli_fetch_array(safe_query("SELECT birthday FROM ".PREFIX."user WHERE userID='".$userID."'"));
 	return date("d.m.Y", $ds['birthday']);
 }
 
 function gettown($userID) {
-	$ds=mysql_fetch_array(safe_query("SELECT town FROM ".PREFIX."user WHERE userID='".$userID."'"));
+	$ds=mysqli_fetch_array(safe_query("SELECT town FROM ".PREFIX."user WHERE userID='".$userID."'"));
 	return getinput($ds['town']);
 }
 
 function getemail($userID) {
-	$ds=mysql_fetch_array(safe_query("SELECT email FROM ".PREFIX."user WHERE userID='".$userID."'"));
+	$ds=mysqli_fetch_array(safe_query("SELECT email FROM ".PREFIX."user WHERE userID='".$userID."'"));
 	return getinput($ds['email']);
 }
 
 function getemailhide($userID) {
-	$ds=mysql_fetch_array(safe_query("SELECT email_hide FROM ".PREFIX."user WHERE userID='".$userID."'"));
+	$ds=mysqli_fetch_array(safe_query("SELECT email_hide FROM ".PREFIX."user WHERE userID='".$userID."'"));
 	return getinput($ds['email_hide']);
 }
 
 function gethomepage($userID) {
-	$ds=mysql_fetch_array(safe_query("SELECT homepage FROM ".PREFIX."user WHERE userID='".$userID."'"));
+	$ds=mysqli_fetch_array(safe_query("SELECT homepage FROM ".PREFIX."user WHERE userID='".$userID."'"));
 	return str_replace('http://', '', getinput($ds['homepage']));
 }
 
 function geticq($userID) {
-	$ds=mysql_fetch_array(safe_query("SELECT icq FROM ".PREFIX."user WHERE userID='".$userID."'"));
+	$ds=mysqli_fetch_array(safe_query("SELECT icq FROM ".PREFIX."user WHERE userID='".$userID."'"));
 	return getinput($ds['icq']);
 }
 
 function getcountry($userID) {
-	$ds=mysql_fetch_array(safe_query("SELECT country FROM ".PREFIX."user WHERE userID='".$userID."'"));
+	$ds=mysqli_fetch_array(safe_query("SELECT country FROM ".PREFIX."user WHERE userID='".$userID."'"));
 	return getinput($ds['country']);
 }
 
 function getuserlanguage($userID){
-	$ds=mysql_fetch_array(safe_query("SELECT language FROM ".PREFIX."user WHERE userID='".$userID."'"));
+	$ds=mysqli_fetch_array(safe_query("SELECT language FROM ".PREFIX."user WHERE userID='".$userID."'"));
 	return getinput($ds['language']);
 }
 
 function getuserpic($userID) {
-	$ds=mysql_fetch_array(safe_query("SELECT userpic FROM ".PREFIX."user WHERE userID='".$userID."'"));
+	$ds=mysqli_fetch_array(safe_query("SELECT userpic FROM ".PREFIX."user WHERE userID='".$userID."'"));
 	if(!$ds['userpic']) $userpic="nouserpic.gif";
 	else $userpic=$ds['userpic'];
 	return $userpic;
 }
 
 function getavatar($userID) {
-	$ds=mysql_fetch_array(safe_query("SELECT avatar FROM ".PREFIX."user WHERE userID='".$userID."'"));
+	$ds=mysqli_fetch_array(safe_query("SELECT avatar FROM ".PREFIX."user WHERE userID='".$userID."'"));
 	if(!$ds['avatar']) $avatar="noavatar.gif";
 	else $avatar=$ds['avatar'];
 	return $avatar;
 }
 
 function getsignatur($userID) {
-	$ds=mysql_fetch_array(safe_query("SELECT usertext FROM ".PREFIX."user WHERE userID='".$userID."'"));
+	$ds=mysqli_fetch_array(safe_query("SELECT usertext FROM ".PREFIX."user WHERE userID='".$userID."'"));
 	$clearsignatur=strip_tags($ds['usertext']);
 	return $clearsignatur;
 }
 
 function getregistered($userID) {
-	$ds=mysql_fetch_array(safe_query("SELECT registerdate FROM ".PREFIX."user WHERE userID='".$userID."'"));
+	$ds=mysqli_fetch_array(safe_query("SELECT registerdate FROM ".PREFIX."user WHERE userID='".$userID."'"));
 	$date=date("d.m.Y", $ds['registerdate']);
 	return $date;
 }
 
 function usergroupexists($userID) {
-	$anz=mysql_num_rows(safe_query("SELECT userID FROM ".PREFIX."user_groups WHERE userID='".$userID."'"));
+	$anz=mysqli_num_rows(safe_query("SELECT userID FROM ".PREFIX."user_groups WHERE userID='".$userID."'"));
 	return $anz;
 }
 
 function wantmail($userID) {
-	$anz=mysql_num_rows(safe_query("SELECT userID FROM ".PREFIX."user WHERE userID='".$userID."' AND mailonpm='1'"));
+	$anz=mysqli_num_rows(safe_query("SELECT userID FROM ".PREFIX."user WHERE userID='".$userID."' AND mailonpm='1'"));
 	return $anz;
 }
 
 function isbuddy($userID, $buddy) {
-	$anz=mysql_num_rows(safe_query("SELECT userID FROM ".PREFIX."buddys WHERE buddy='".$buddy."' AND userID='".$userID."'"));
+	$anz=mysqli_num_rows(safe_query("SELECT userID FROM ".PREFIX."buddys WHERE buddy='".$buddy."' AND userID='".$userID."'"));
 	if($anz) {
 		$ergebnis=safe_query("SELECT * FROM ".PREFIX."buddys WHERE buddy='".$buddy."' AND userID='".$userID."'");
-		$ds=mysql_fetch_array($ergebnis);
+		$ds=mysqli_fetch_array($ergebnis);
 		if($ds['banned']==0) return 1;
 	}
 	else return 0;
@@ -164,9 +164,9 @@ function RandPass($length, $type=0) {
 
 function isonline($userID) {
 	$ergebnis=safe_query("SELECT site FROM ".PREFIX."whoisonline WHERE userID='$userID'");
-	$anz=mysql_num_rows($ergebnis);
+	$anz=mysqli_num_rows($ergebnis);
 	if($anz) {
-		$ds=mysql_fetch_array($ergebnis);
+		$ds=mysqli_fetch_array($ergebnis);
 		return '<b>online</b> @ <a href="index.php?site='.$ds['site'].'">'.$ds['site'].'</a>';
 	}
 	else return 'offline';

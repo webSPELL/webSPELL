@@ -38,7 +38,7 @@ if(isset($_POST['save'])) {
 		}
 		else {
 			safe_query("INSERT INTO `".PREFIX."static` ( `name`, `accesslevel`,`content` ) values( '".$_POST['name']."', '".$_POST['accesslevel']."','".$_POST['message']."' ) ");
-			$id = mysql_insert_id();
+			$id = mysqli_insert_id();
 		}
 	} else echo $_language->module['transaction_invalid'];
 }
@@ -106,7 +106,7 @@ elseif(isset($_GET['action']) and $_GET['action'] == "edit") {
 	
   $staticID = $_GET['staticID'];
 	$ergebnis=safe_query("SELECT * FROM `".PREFIX."static` WHERE staticID='".$staticID."'");
-	$ds=mysql_fetch_array($ergebnis);
+	$ds=mysqli_fetch_array($ergebnis);
 	$content = getinput($ds['content']);
 	
 	$clanmember = "";
@@ -184,7 +184,7 @@ else {
 	$CAPCLASS->create_transaction();
 	$hash = $CAPCLASS->get_hash();
   
-  while($ds=mysql_fetch_array($ergebnis)) {
+  while($ds=mysqli_fetch_array($ergebnis)) {
     if($i%2) { $td='td1'; }
     else { $td='td2'; }
   

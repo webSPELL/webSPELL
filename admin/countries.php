@@ -64,7 +64,7 @@ if($action=="add") {
 }
 
 elseif($action=="edit") {
-	$ds=mysql_fetch_array(safe_query("SELECT * FROM ".PREFIX."countries WHERE countryID='".$_GET["countryID"]."'"));
+	$ds=mysqli_fetch_array(safe_query("SELECT * FROM ".PREFIX."countries WHERE countryID='".$_GET["countryID"]."'"));
 	$pic='<img src="../images/flags/'.$ds['short'].'.gif" border="0" alt="'.$ds['country'].'" />';
   
   $CAPCLASS = new Captcha;
@@ -174,7 +174,7 @@ else {
     </tr>';
   
 	$ds=safe_query("SELECT * FROM ".PREFIX."countries ORDER BY country");
-	$anz=mysql_num_rows($ds);
+	$anz=mysqli_num_rows($ds);
 	if($anz) {
 		
     $i=1;
@@ -182,7 +182,7 @@ else {
     $CAPCLASS->create_transaction();
     $hash = $CAPCLASS->get_hash();
     
-    while($flags = mysql_fetch_array($ds)) {
+    while($flags = mysqli_fetch_array($ds)) {
       if($i%2) { $td='td1'; }
 			else { $td='td2'; }
 			$pic='<img src="../images/flags/'.$flags['short'].'.gif" border="0" alt="'.$flags['country'].'" />';

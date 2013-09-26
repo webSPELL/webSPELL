@@ -28,7 +28,7 @@
 if(isset($_GET['staticID'])) $staticID = $_GET['staticID'];
 else $staticID = '';
 
-$ds=mysql_fetch_array(safe_query("SELECT * FROM ".PREFIX."static WHERE staticID='".$staticID."'"));
+$ds=mysqli_fetch_array(safe_query("SELECT * FROM ".PREFIX."static WHERE staticID='".$staticID."'"));
 $_language->read_module("static");
 $allowed = false; 
 switch($ds['accesslevel']) {

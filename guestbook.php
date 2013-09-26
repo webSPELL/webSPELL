@@ -38,7 +38,7 @@ if(isset($_POST['save'])) {
 	$run=0;
 
 	if($userID) {
-		$name = mysql_real_escape_string(getnickname($userID));
+		$name = $_database->escape_string(getnickname($userID));
 		if(getemailhide($userID)) $email='';
 		else $email = getemail($userID);
 		$url = gethomepage($userID);
@@ -81,13 +81,13 @@ if(isset($_POST['save'])) {
 			if($gb_info) {
 	
 				$ergebnis=safe_query("SELECT userID FROM ".PREFIX."user_groups WHERE feedback='1'");
-				while($ds=mysql_fetch_array($ergebnis)) {
+				while($ds=mysqli_fetch_array($ergebnis)) {
 					$touser[]=$ds['userID'];
 				}
 	
-				$message = str_replace('%insertid%', 'id_'.mysql_insert_id(), mysql_real_escape_string($_language->module['pmtext_newentry']));
+				$message = str_replace('%insertid%', 'id_'.mysqli_insert_id(), $_database->escape_string($_language->module['pmtext_newentry']));
 				foreach($touser as $id) {
-					sendmessage($id,mysql_real_escape_string($_language->module['pmsubject_newentry']),$message);
+					sendmessage($id,$_database->escape_string($_language->module['pmsubject_newentry']),$message);
 				}
 			}
 			header("Location: index.php?site=guestbook");
@@ -133,7 +133,7 @@ elseif($action == 'comment' AND is_numeric($_GET['guestbookID'])) {
 	if(!isfeedbackadmin($userID)) die($_language->module['no_access']);
 	$ergebnis = safe_query("SELECT admincomment FROM ".PREFIX."guestbook WHERE gbID='".$_GET['guestbookID']."'");
 	$bg1 = BG_1;
-	$ds = mysql_fetch_array($ergebnis);
+	$ds = mysqli_fetch_array($ergebnis);
 	$admincomment = getinput($ds['admincomment']);
 	eval ("\$title_guestbook = \"".gettemplate("title_guestbook")."\";");
 	echo $title_guestbook;
@@ -150,7 +150,7 @@ elseif($action == 'add') {
 	$message='';
 	if(isset($_GET['messageID'])) {
 		if(is_numeric($_GET['messageID'])) {
-			$ds=mysql_fetch_array(safe_query("SELECT comment, name FROM `".PREFIX."guestbook` WHERE gbID='".$_GET['messageID']."'"));
+			$ds=mysqli_fetch_array(safe_query("SELECT comment, name FROM `".PREFIX."guestbook` WHERE gbID='".$_GET['messageID']."'"));
 			$message='[quote='.$ds['name'].']'.getinput($ds['comment']).'[/quote]';
 		}
 	}
@@ -184,7 +184,7 @@ else {
 	eval ("\$title_guestbook = \"".gettemplate("title_guestbook")."\";");
 	echo $title_guestbook;
 
-	$gesamt = mysql_num_rows(safe_query("SELECT gbID FROM ".PREFIX."guestbook"));
+	$gesamt = mysqli_num_rows(safe_query("SELECT gbID FROM ".PREFIX."guestbook"));
 
 	if(isset($_GET['page'])) $page = (int)$_GET['page'];
 	else $page = 1;
@@ -217,7 +217,7 @@ else {
 	eval ("\$guestbook_head = \"".gettemplate("guestbook_head")."\";");
 	echo $guestbook_head;
 
-	while($ds = mysql_fetch_array($ergebnis)) {
+	while($ds = mysqli_fetch_array($ergebnis)) {
 		$n%2 ? $bg1=BG_1 : $bg1=BG_2;
 		$date = date("d.m.Y - H:i", $ds['date']);
 
