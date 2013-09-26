@@ -63,15 +63,16 @@ if(function_exists("gd_info")) {
 	$gdinfo = gd_info();
 	$get_gd_info = '<font color="#008000">'.$_language->module['enable'].'</font>';
 	$get_gdtypes = array();
-	if (isset($gdinfo['FreeType Support'])) { $get_gdtypes[] = "FreeType"; }
-	if (isset($gdinfo['T1Lib Support'])) { $get_gdtypes[] = "T1Lib"; }
-	if (isset($gdinfo['GIF Read Support'])) { $get_gdtypes[] = "*.gif ".$_language->module['read']; }
-	if (isset($gdinfo['GIF Create Support'])) { $get_gdtypes[] = "*.gif ".$_language->module['create']; }
-	if (isset($gdinfo['JPG Support'])) { $get_gdtypes[] = "*.jpg"; }
-	if (isset($gdinfo['PNG Support'])) { $get_gdtypes[] = "*.png"; }
-	if (isset($gdinfo['WBMP Support'])) { $get_gdtypes[] = "*.wbmp"; }
-	if (isset($gdinfo['XBM Support'])) { $get_gdtypes[] = "*.xbm"; }
-	if (isset($gdinfo['XPM Support'])) { $get_gdtypes[] = "*.xpm"; }
+	if (isset($gdinfo['FreeType Support']) && $gdinfo['FreeType Support'] == true) { $get_gdtypes[] = "FreeType"; }
+	if (isset($gdinfo['T1Lib Support']) && $gdinfo['T1Lib Support'] == true) { $get_gdtypes[] = "T1Lib"; }
+	if (isset($gdinfo['GIF Read Support']) && $gdinfo['GIF Read Support'] == true) { $get_gdtypes[] = "*.gif ".$_language->module['read']; }
+	if (isset($gdinfo['GIF Create Support']) && $gdinfo['GIF Create Support'] == true) { $get_gdtypes[] = "*.gif ".$_language->module['create']; }
+	if (isset($gdinfo['JPG Support']) && $gdinfo['JPG Support'] == true) { $get_gdtypes[] = "*.jpg"; }
+  elseif (isset($gdinfo['JPEG Support']) && $gdinfo['JPEG Support'] == true) { $get_gdtypes[] = "*.jpg"; }
+	if (isset($gdinfo['PNG Support']) && $gdinfo['PNG Support'] == true) { $get_gdtypes[] = "*.png"; }
+	if (isset($gdinfo['WBMP Support']) && $gdinfo['WBMP Support'] == true) { $get_gdtypes[] = "*.wbmp"; }
+	if (isset($gdinfo['XBM Support']) && $gdinfo['XBM Support'] == true) { $get_gdtypes[] = "*.xbm"; }
+	if (isset($gdinfo['XPM Support']) && $gdinfo['XPM Support'] == true) { $get_gdtypes[] = "*.xpm"; }
 	$get_gdtypes = implode(", ",$get_gdtypes);
 }
 else {
