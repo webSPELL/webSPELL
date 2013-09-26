@@ -119,7 +119,7 @@ function isjoinusmember($userID) {
 }
 
 function isbanned($userID) {
-  $anz=mysql_num_rows(safe_query("SELECT userID FROM `".PREFIX."user` WHERE userID='$userID' AND (banned='perm' OR banned IS NOT NULL)"));
+  	$anz=mysql_num_rows(safe_query("SELECT userID FROM `".PREFIX."user` WHERE userID='$userID' AND (banned='perm' OR banned IS NOT NULL)"));
 	return $anz;
 }
 
@@ -128,6 +128,10 @@ function getusercomments($userID, $type) {
 	return $anz;
 }
 
+function getallusercomments($userID){
+	$anz=mysql_num_rows(safe_query("SELECT commentID FROM `".PREFIX."comments` WHERE userID='".$userID."'"));
+	return $anz;
+}
 function iscommentposter($userID,$commID) {
 	if(!$userID OR !$commID) return false;
 	else {

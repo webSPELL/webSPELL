@@ -21,9 +21,9 @@ if(!empty($spamapikey)){
 			if(ispageadmin($userID) || ismoderator($userID, $ds['boardID'])){
 		
 				$message = $ds['message'];
-
+				$spamApi = SpamApi::getInstance();
 				if(in_array($type, array("spam","ham"))){
-					echo learnSpamfilter($message, $type);
+					$spamApi->learn($message,$type);
 				}
 			}
 		}
@@ -36,9 +36,9 @@ if(!empty($spamapikey)){
 				$ds=mysql_fetch_array($get);
 				
 				$text = $ds['comment'];
-				
+				$spamApi = SpamApi::getInstance();
 				if(in_array($type, array("spam","ham"))){
-					echo learnSpamfilter($text, $type);
+					$spamApi->learn($text, $type);
 				}
 			}
 		}

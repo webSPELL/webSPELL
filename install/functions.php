@@ -1978,7 +1978,8 @@ function update40200_40300(){
 )");
   mysql_query("CREATE TABLE `".PREFIX."api_log` (
   `date` int(11) NOT NULL,
-  `message` varchar(255) NOT NULL
+  `message` varchar(255) NOT NULL,
+  `data` text NOT NULL
 )");
   mysql_query("ALTER TABLE `".PREFIX."settings` ADD `spam_check` INT( 1 ) NOT NULL ;");
   mysql_query("ALTER TABLE `".PREFIX."settings` ADD `detect_language` INT( 1 ) NOT NULL ;");

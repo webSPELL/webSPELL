@@ -70,41 +70,15 @@ if(isset($_POST['savevisitorcomment'])) {
 	}
 	$_SESSION['comments_message'] = $message;
 
-	$spam = 0;
-	if($spamCheckEnabled == 1){
-		$request = validateSpam($message);
-		if(!empty($request)){
-			$data = json_decode($request,true);
-			if($data["response"] == "ok"){
-				$rating = (float)$data["response"];
-				if($rating >= $spamCheckRating){
-					$spam = 1;
-				}
-			}
-			else{
-				if($spamBlockOnError == 1){
-					$spam = 1;
-				}
-				logSpamError($request);
-			}
-		}
-		else{
-			if($spamBlockOnError == 1){
-				$spam = 1;
-			}
-			logSpamError("Can't query Api. No Responnse");
-		}
-	}
-
+	$spamApi = SpamApi::getInstance();
+	$validation = $spamApi->validate($message);
+	
 	if(in_array(trim($name), $nicks)) header("Location: ".$_POST['referer']."&error=nickname#addcomment");
 	elseif(!($CAPCLASS->check_captcha($_POST['captcha'], $_POST['captcha_hash']))) header("Location: ".$_POST['referer']."&error=captcha#addcomment");
 	elseif(checkCommentsAllow($type,$parentID) == false ) header("Location: ".$_POST['referer']);
-	elseif($spam == 1){
-		header("Location: ".$_POST['referer']);
-	}
 	else {
 		$date=time();
-		if($spam == 1){
+		if($validation == SpamApi::Spam){
 			safe_query("INSERT INTO ".PREFIX."comments_spam ( parentID, type, nickname, date, comment, url, email, ip, rating )
 		            values( '".$parentID."', '".$type."', '".$name."', '".$date."', '".$message."', '".$url."', '".$mail."', '".$ip."', '".$rating."' ) ");
 		}
@@ -127,36 +101,12 @@ elseif(isset($_POST['saveusercomment'])) {
 	$type = $_POST['type'];
 	$message = $_POST['message'];
 
-	$spam = 0;
+	$spamApi = SpamApi::getInstance();
+	$validation = $spamApi->validate($message);
 	
-	if(getusercomments($userID,$type) < $spamCheckMaxPosts && $spamCheckEnabled == 1){
-		$request = validateSpam($message);
-		if(!empty($request)){
-			$data = json_decode($request,true);
-			if($data["response"] == "ok"){
-				$rating = (float)$data["response"];
-				if($rating >= $spamCheckRating){
-					$spam = 1;
-				}
-			}
-			else{
-				if($spamBlockOnError == 1){
-					$spam = 1;
-				}
-				logSpamError($request);
-			}
-		}
-		else{
-			if($spamBlockOnError == 1){
-				$spam = 1;
-			}
-			logSpamError("Can't query Api. No Responnse");
-		}
-	}
-
 	if(checkCommentsAllow($type,$parentID)){
 		$date=time();
-		if($spam == 1){
+		if($validation == SpamApi::Spam){
 			safe_query("INSERT INTO ".PREFIX."comments ( parentID, type, userID, date, comment,rating ) values( '".$parentID."', '".$type."', '".$userID."', '".$date."', '".$message."', '".$rating."' ) ");
 		}
 		else{

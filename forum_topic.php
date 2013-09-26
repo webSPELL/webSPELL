@@ -68,34 +68,12 @@ if(isset($_POST['newreply']) && !isset($_POST['preview'])) {
 		$do_sticky = (isset($_POST['sticky'])) ? ', sticky=1' : ', sticky=0';
 	}
 
-	$spam = 0;
-	if($spamCheckEnabled == 1){
-		$request = validateSpam($message);
-		if(!empty($request)){
-			$data = json_decode($request,true);
-			if($data["response"] == "ok"){
-				$rating = (float)$data["response"];
-				if($rating >= $spamCheckRating){
-					$spam = 1;
-				}
-			}
-			else{
-				if($spamBlockOnError == 1){
-					$spam = 1;
-				}
-				logSpamError($request);
-			}
-		}
-		else{
-			if($spamBlockOnError == 1){
-				$spam = 1;
-			}
-			logSpamError("Can't query Api. No Responnse");
-		}
-	}
+	$spamApi = SpamApi::getInstance();
+	$validation = $spamApi->validate($message);
+
 
 	$date=time();
-	if($spam == 0){
+	if($validation == SpamApi::NoSpam){
 		safe_query("INSERT INTO ".PREFIX."forum_posts ( boardID, topicID, date, poster, message ) VALUES( '".$_REQUEST['board']."', '$topic', '$date', '$userID', '".$message."' ) ");
 		$lastpostID = mysql_insert_id();
 		safe_query("UPDATE ".PREFIX."forum_boards SET posts=posts+1 WHERE boardID='".$_REQUEST['board']."' ");

@@ -876,7 +876,7 @@ if(isset($_POST['submit']) || isset($_POST['movetopic']) || isset($_GET['addtopi
 					logSpamError("Can't query Api. No Responnse");
 				}
 			}		
-			if($spam == 0){
+			if($validation == SpamApi::NoSpam){
 				$date=time();
 				safe_query("INSERT INTO ".PREFIX."forum_topics ( boardID, readgrps, writegrps, userID, date, icon, topic, lastdate, lastposter, replys, views, closed, sticky ) values ( '$board', '".$ds['readgrps']."', '".$ds['writegrps']."', '$userID', '$date', '".$icon."', '".$topicname."', '$date', '$userID', '0', '0', '0', '$topic_sticky' ) ");
 				$id=mysql_insert_id();
