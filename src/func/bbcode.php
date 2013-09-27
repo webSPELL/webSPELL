@@ -61,7 +61,7 @@ function replace_smileys($text, $calledfrom = 'root'){
 	}
 
 	$ergebnis = safe_query("SELECT * FROM `".PREFIX."smileys`");
-	while($ds = mysql_fetch_array($ergebnis)) {
+	while($ds = mysqli_fetch_array($ergebnis)) {
 		$replacements_1[] = $ds['pattern'];
 		$replacements_2[] = '[SMILE='.$ds['alt'].']'.$prefix2.'images/smileys/'.$ds['name'].'[/SMILE]';
 	}
@@ -132,7 +132,7 @@ function flags($text,$calledfrom = 'root') {
 		$prefix = '';
 	}
 	$ergebnis = safe_query("SELECT * FROM `".PREFIX."countries`");
-	while($ds = mysql_fetch_array($ergebnis)) {
+	while($ds = mysqli_fetch_array($ergebnis)) {
 		$text = str_ireplace ("[flag]".$ds['short']."[/flag]", '<img src="'.$prefix.'images/flags/'.$ds['short'].'.gif" width="18" height="12" border="0" alt="'.$ds['country'].'" />', $text);
 	}
 
@@ -390,7 +390,7 @@ function insertlinks($content,$calledfrom = 'root') {
 	
 	if($insertlinks==1) {
 		$ergebnis = safe_query("SELECT us.userID, us.nickname, us.country FROM ".PREFIX."squads_members AS sq, ".PREFIX."user AS us WHERE sq.userID=us.userID GROUP BY us.userID");
-		while($ds = mysql_fetch_array($ergebnis)) {
+		while($ds = mysqli_fetch_array($ergebnis)) {
 			$content = str_replace($ds['nickname'].' ', '[flag]'.$ds['country'].'[/flag] <a href="'.$prefix.'index.php?site=profile&amp;id='.$ds['userID'].'">'.$ds['nickname'].'</a>&nbsp;', $content);
 		}
 		return $content;

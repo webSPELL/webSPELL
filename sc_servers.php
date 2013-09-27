@@ -26,7 +26,7 @@
 */
 $result=safe_query("SELECT * FROM ".PREFIX."servers ORDER BY sort");
 $n=1;
-while($row=mysql_fetch_array($result)) {
+while($row=mysqli_fetch_array($result)) {
 	echo '<table width="100%" cellspacing="0" cellpadding="2" border="0">';
 	
 	$servername = htmloutput($row['name']);

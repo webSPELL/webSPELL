@@ -34,7 +34,7 @@ echo'<input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=clanwa
 
 if(!isset($_GET['action'])) {
 	$cwID = (int)$_GET['cwID'];
-	$ds=mysql_fetch_array(safe_query("SELECT * FROM ".PREFIX."clanwars WHERE cwID='$cwID'"));
+	$ds=mysqli_fetch_array(safe_query("SELECT * FROM ".PREFIX."clanwars WHERE cwID='$cwID'"));
 	$date=date("d.m.Y", $ds['date']);
 	$opponent='<a href="'.getinput($ds['opphp']).'" target="_blank"><b>'.getinput($ds['opptag']).' / '.($ds['opponent']).'</b></a>';
 	$league='<a href="'.getinput($ds['leaguehp']).'" target="_blank">'.getinput($ds['league']).'</a>';

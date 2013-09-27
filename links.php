@@ -35,7 +35,7 @@ if(isset($_POST['save'])) {
 	safe_query("INSERT INTO ".PREFIX."links ( linkcatID, name, url, info )
                values( '".$_POST['cat']."', '".strip_tags($_POST['name'])."', '".$_POST['url']."', '".$_POST['info']."' ) ");
 	
-	$id=mysql_insert_id();
+	$id=mysqli_insert_id();
 	$banner = $_FILES['banner'];
 	$filepath = "./images/links/";
 	
@@ -136,7 +136,7 @@ if($action=="new") {
 	if(ispageadmin($userID) || isnewsadmin($userID)) {
 		$rubrics=safe_query("SELECT * FROM ".PREFIX."links_categorys ORDER BY name");
 		$linkcats='';
-		while($dr=mysql_fetch_array($rubrics)) {
+		while($dr=mysqli_fetch_array($rubrics)) {
 			$linkcats.='<option value="'.$dr['linkcatID'].'">'.htmlspecialchars($dr['name']).'</option>';
 		}
 		$bg1=BG_1;
@@ -149,16 +149,16 @@ if($action=="new") {
 elseif($action=="edit") {
 	$linkID=$_GET['linkID'];
 	if(ispageadmin($userID) || isnewsadmin($userID)) {
-		$ds=mysql_fetch_array(safe_query("SELECT * FROM ".PREFIX."links WHERE linkID='$linkID'"));
+		$ds=mysqli_fetch_array(safe_query("SELECT * FROM ".PREFIX."links WHERE linkID='$linkID'"));
 
 		$name = htmlspecialchars($ds['name']);
 		$url = htmlspecialchars($ds['url']);
 		$info = htmlspecialchars($ds['info']);
 
 		$newsrubrics=safe_query("SELECT * FROM ".PREFIX."links_categorys ORDER BY name");
-		if(mysql_num_rows($newsrubrics)) {
+		if(mysqli_num_rows($newsrubrics)) {
 			$linkcats='';
-			while($dr=mysql_fetch_array($newsrubrics)) {
+			while($dr=mysqli_fetch_array($newsrubrics)) {
 				if($ds['linkcatID']==$dr['linkcatID']) $linkcats.='<option value="'.$dr['linkcatID'].'" selected="selected">'.htmlspecialchars($dr['name']).'</option>';
 				else $linkcats.='<option value="'.$dr['linkcatID'].'">'.htmlspecialchars($dr['name']).'</option>';
 			}
@@ -180,16 +180,16 @@ elseif($action=="show" AND is_numeric($_GET['linkcatID'])) {
 	
 	$linkcatID=$_GET['linkcatID'];
 	$getcat = safe_query("SELECT * FROM ".PREFIX."links_categorys  WHERE linkcatID='$linkcatID'");
-	$ds = mysql_fetch_array($getcat);
+	$ds = mysqli_fetch_array($getcat);
 	$linkcatname = $ds['name'];
 	
 	$linkcat=safe_query("SELECT * FROM ".PREFIX."links WHERE linkcatID='$linkcatID' ORDER BY name");
-	if(mysql_num_rows($linkcat)) {
+	if(mysqli_num_rows($linkcat)) {
 		eval ("\$links_details_head = \"".gettemplate("links_details_head")."\";");
 		echo $links_details_head;
     
 		$i=1;
-		while($ds=mysql_fetch_array($linkcat)) {
+		while($ds=mysqli_fetch_array($linkcat)) {
 			if($i%2) {
 				$bg1=BG_1;
 				$bg2=BG_2;
@@ -227,16 +227,16 @@ else {
 	if(ispageadmin($userID) || isnewsadmin($userID)) echo'<input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=links&amp;action=new\');return document.MM_returnValue" value="'.$_language->module['new_link'].'" /><br /><br />';
 
 	$cats=safe_query("SELECT * FROM ".PREFIX."links_categorys ORDER BY name");
-	if(mysql_num_rows($cats)) {
-		$anzcats=mysql_num_rows(safe_query("SELECT linkcatID FROM ".PREFIX."links_categorys"));			
+	if(mysqli_num_rows($cats)) {
+		$anzcats=mysqli_num_rows(safe_query("SELECT linkcatID FROM ".PREFIX."links_categorys"));			
 		$bg1=BG_1;
 		
 		eval ("\$links_category = \"".gettemplate("links_category")."\";");
 		echo $links_category;
     
 		$i=1;
-		while($ds=mysql_fetch_array($cats)) {
-			$anzlinks=mysql_num_rows(safe_query("SELECT linkID FROM ".PREFIX."links WHERE linkcatID='".$ds['linkcatID']."'"));
+		while($ds=mysqli_fetch_array($cats)) {
+			$anzlinks=mysqli_num_rows(safe_query("SELECT linkID FROM ".PREFIX."links WHERE linkcatID='".$ds['linkcatID']."'"));
 			if($i%2) {
 				$bg1=BG_1;
 				$bg2=BG_2;

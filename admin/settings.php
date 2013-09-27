@@ -98,10 +98,10 @@ if(isset($_POST['submit'])) {
 else {
 
 	$settings=safe_query("SELECT * FROM ".PREFIX."settings");
-	$ds=mysql_fetch_array($settings);
+	$ds=mysqli_fetch_array($settings);
 
 	$styles=safe_query("SELECT * FROM ".PREFIX."styles");
-	$dt=mysql_fetch_array($styles);
+	$dt=mysqli_fetch_array($styles);
 
 	if($ds['gb_info']) $gb_info='<input type="checkbox" name="gb_info" value="1" checked="checked" onmouseover="showWMTT(\'id36\')" onmouseout="hideWMTT()" />';
 	else $gb_info='<input type="checkbox" name="gb_info" value="1" onmouseover="showWMTT(\'id36\')" onmouseout="hideWMTT()" />';

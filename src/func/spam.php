@@ -41,7 +41,7 @@ class SpamApi {
     public function validate($message){
     	if($this->enabled){
     		$run = true;
-    		if($GLOBALS['userID'] > 0){
+    		if($GLOBALS['loggedin']){
     			if(getuserforumposts($GLOBALS['userID']) + getallusercomments($GLOBALS['userID']) > $this->maxPosts ){
     				$run = false;
     			}

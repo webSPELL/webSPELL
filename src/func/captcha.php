@@ -49,7 +49,7 @@ class Captcha {
         return $return;
 	}
 	function captcha() {
-		$ds = mysql_fetch_assoc(safe_query("SELECT captcha_math, captcha_bgcol, captcha_fontcol, captcha_type, captcha_noise, captcha_linenoise FROM ".PREFIX."settings"));
+		$ds = mysqli_fetch_assoc(safe_query("SELECT captcha_math, captcha_bgcol, captcha_fontcol, captcha_type, captcha_noise, captcha_linenoise FROM ".PREFIX."settings"));
 		if(mb_strlen($ds['captcha_bgcol']) == 7)
 			$this->bgcol = $this->hex2rgb($ds['captcha_bgcol']);
 		
@@ -195,7 +195,7 @@ class Captcha {
 	/* check if input fits captcha */
 	function check_captcha($input, $hash) {
 
-		if(mysql_num_rows(safe_query("SELECT hash FROM `".PREFIX."captcha` WHERE captcha='".$input."' AND hash='".$hash."'"))) {
+		if(mysqli_num_rows(safe_query("SELECT hash FROM `".PREFIX."captcha` WHERE captcha='".$input."' AND hash='".$hash."'"))) {
 			safe_query("DELETE FROM `".PREFIX."captcha` WHERE captcha='".$input."' AND hash='".$hash."'");
 			$file='tmp/'.$hash.'.jpg';
 			if(file_exists($file)) unlink($file);
@@ -209,7 +209,7 @@ class Captcha {
 	function clear_oldcaptcha() {
 	 	$time = time();
 		$ergebnis=safe_query("SELECT hash FROM `".PREFIX."captcha` WHERE deltime<".$time);
-		while($ds=mysql_fetch_array($ergebnis)) {
+		while($ds=mysqli_fetch_array($ergebnis)) {
 			$file='tmp/'.$ds['hash'].'.jpg';
 			if(file_exists($file)) unlink($file);
 		}

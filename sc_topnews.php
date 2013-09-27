@@ -28,14 +28,14 @@
 $_language->read_module('news');
 
 $ergebnis=safe_query("SELECT newsID FROM ".PREFIX."news WHERE newsID='".$topnewsID."' AND intern<=".isclanmember($userID)." AND published='1' LIMIT 0,1");
-$anz = mysql_num_rows($ergebnis);
+$anz = mysqli_num_rows($ergebnis);
 if($anz) {
 
-	$dn=mysql_fetch_array($ergebnis);
+	$dn=mysqli_fetch_array($ergebnis);
 
 	$message_array = array();
 	$query=safe_query("SELECT * FROM ".PREFIX."news_contents WHERE newsID='".$dn['newsID']."'");
-	while($qs = mysql_fetch_array($query)) {
+	while($qs = mysqli_fetch_array($query)) {
 		$message_array[] = array('lang' => $qs['language'], 'headline' => $qs['headline'], 'message' => $qs['content']);
 	}
 	$showlang = select_language($message_array);

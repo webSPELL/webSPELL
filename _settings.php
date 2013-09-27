@@ -40,16 +40,19 @@ header('content-type: text/html; charset=utf-8');
 
 // -- CONNECTION TO MYSQL -- //
 
-mysql_connect($host, $user, $pwd) or system_error('ERROR: Can not connect to MySQL-Server');
-mysql_select_db($db) or system_error('ERROR: Can not connect to database "'.$db.'"');
+$_database = new mysqli($host, $user, $pwd, $db);
 
-mysql_query("SET NAMES 'utf8'");
+if(!$_database) {
+	system_error('ERROR: Can not connect to MySQL-Server');
+}
+
+$_database->query("SET NAMES 'utf8'");
 
 // -- GENERAL PROTECTIONS -- //
 
 function globalskiller() {		// kills all non-system variables
 
-  $global = array('GLOBALS', '_POST', '_GET', '_COOKIE', '_FILES', '_SERVER', '_ENV',  '_REQUEST', '_SESSION');
+  $global = array('GLOBALS', '_POST', '_GET', '_COOKIE', '_FILES', '_SERVER', '_ENV',  '_REQUEST', '_SESSION', '_database');
   foreach ($GLOBALS as $key=>$val) {
   	if(!in_array($key, $global)) {
   		if(is_array($val)) unset_array($GLOBALS[$key]);
@@ -82,6 +85,9 @@ if($site!="search") {
 }
 
 function security_slashes(&$array) {
+
+	global $_database;
+
 	foreach($array as $key => $value) {
 		if(is_array($array[$key])) {
 			security_slashes($array[$key]);
@@ -93,8 +99,8 @@ function security_slashes(&$array) {
 			else {
 				$tmp = $value;
 			}
-			if(function_exists("mysql_real_escape_string")) {
-				$array[$key] = mysql_real_escape_string($tmp);
+			if(function_exists("mysqli_real_escape_string")) {
+				$array[$key] = $_database->escape_string($tmp);
 			}
 			else {
 				$array[$key] = addslashes($tmp);
@@ -112,28 +118,35 @@ security_slashes($_REQUEST);
 // -- MYSQL QUERY FUNCTION -- //
 $_mysql_querys = array();
 function safe_query($query="") {
+
+	global $_database;
 	global $_mysql_querys;
+
 	if(stristr(str_replace(' ', '', $query), "unionselect")===FALSE AND stristr(str_replace(' ', '', $query), "union(select")===FALSE){
 		$_mysql_querys[] = $query;
 		if(empty($query)) return false;
-		if(DEBUG == "OFF") $result = mysql_query($query) or die('Query failed!');
+		if(DEBUG == "OFF") $result = $_database->query($query) or die('Query failed!');
 		else {
-			$result = mysql_query($query) or die('Query failed: '
-			.'<li>errorno='.mysql_errno()
-			.'<li>error='.mysql_error()
+			$result = $_database->query($query) or die('Query failed: '
+			.'<li>errorno='.$_database->errno
+			.'<li>error='.$_database->error
 			.'<li>query='.$query);
 		}
 		return $result;
 	}
 	else die();
+
 }
 
 // -- SYSTEM ERROR DISPLAY -- //
 
 function system_error($text,$system=1) {
+
+	global $_database;
+
 	if($system) {
 		include('version.php');
-		$info='webSPELL Version: '.$version.'<br />PHP Version: '.phpversion().'<br />MySQL Version: '.mysql_get_server_info().'<br />';
+		$info='webSPELL Version: '.$version.'<br />PHP Version: '.phpversion().'<br />MySQL Version: '.$_database->server_info.'<br />';
 	} else {
 		$info = '';
 	}
@@ -175,10 +188,10 @@ function systeminc($file) {
 // -- IGNORED USERS -- //
 
 function isignored($userID, $buddy) {
-	$anz=mysql_num_rows(safe_query("SELECT userID FROM ".PREFIX."buddys WHERE buddy='$buddy' AND userID='$userID' "));
+	$anz=mysqli_num_rows(safe_query("SELECT userID FROM ".PREFIX."buddys WHERE buddy='$buddy' AND userID='$userID' "));
 	if($anz) {
 		$ergebnis=safe_query("SELECT * FROM ".PREFIX."buddys WHERE buddy='$buddy' AND userID='$userID' ");
-		$ds=mysql_fetch_array($ergebnis);
+		$ds=mysqli_fetch_array($ergebnis);
 		if($ds['banned']==1) return 1;
 		else return 0;
 	}
@@ -187,7 +200,7 @@ function isignored($userID, $buddy) {
 
 // -- GLOBAL SETTINGS -- //
 
-$ds = mysql_fetch_array(safe_query("SELECT * FROM ".PREFIX."settings"));
+$ds = mysqli_fetch_array(safe_query("SELECT * FROM ".PREFIX."settings"));
 
 $maxshownnews				=	$ds['news']; 				if(empty($maxshownnews)) $maxshownnews = 10;
 $maxnewsarchiv				=	$ds['newsarchiv']; 			if(empty($maxnewsarchiv)) $maxnewsarchiv = 20;
@@ -252,7 +265,7 @@ $new_chmod = 0666;
 // -- STYLES -- //
 
 $ergebnis=safe_query("SELECT * FROM ".PREFIX."styles");
-$ds=mysql_fetch_array($ergebnis);
+$ds=mysqli_fetch_array($ergebnis);
 
 define('PAGEBG', $ds['bgpage']);
 define('BORDER', $ds['border']);

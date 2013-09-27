@@ -37,8 +37,8 @@ function checkCommentsAllow($type, $parentID){
 	$allowed = 0;
 	$modul = $moduls[$type];
 	$get = safe_query("SELECT ".$modul[2]." FROM ".PREFIX.$modul[0]." WHERE ".$modul[1]."='".$parentID."'");
-	if(mysql_num_rows($get)){
-		$data = mysql_fetch_assoc($get);
+	if(mysqli_num_rows($get)){
+		$data = mysqli_fetch_assoc($get);
 		switch($data[$modul[2]]){
 			case 0: $allowed = 0; break;
 			case 1: if($userID) $allowed = 1; break;
@@ -64,7 +64,7 @@ if(isset($_POST['savevisitorcomment'])) {
 
 	setcookie("visitor_info", $name."--||--".$mail."--||--".$url, time()+(3600*24*365));
 	$query = safe_query("SELECT nickname, username FROM ".PREFIX."user ORDER BY nickname");
-	while($ds=mysql_fetch_array($query)) {
+	while($ds=mysqli_fetch_array($query)) {
 		$nicks[] = $ds['nickname'];
 		$nicks[] = $ds['username'];
 	}
@@ -134,8 +134,8 @@ elseif(isset($_GET['editcomment'])) {
 	if(isfeedbackadmin($userID) or iscommentposter($userID,$id)) {
 		if(!empty($id)) {
 			$dt = safe_query("SELECT * FROM ".PREFIX."comments WHERE commentID='".$id."'");
-			if(mysql_num_rows($dt)) {
-				$ds = mysql_fetch_array($dt);
+			if(mysqli_num_rows($dt)) {
+				$ds = mysqli_fetch_array($dt);
 				$poster='<a href="index.php?site=profile&amp;id='.$ds['userID'].'"><b>'.getnickname($ds['userID']).'</b></a>';
 				$message=getinput($ds['comment']);
 				$message=preg_replace("#\n\[br\]\[br\]\[hr]\*\*(.+)#si", '', $message);
@@ -188,7 +188,7 @@ else {
 	if(!isset($type) AND isset($_GET['type'])) $type = mb_substr($_GET['type'], 0, 2);
 
 	$alle=safe_query("SELECT commentID FROM ".PREFIX."comments WHERE parentID='$parentID' AND type='$type'");
-	$gesamt=mysql_num_rows($alle);
+	$gesamt=mysqli_num_rows($alle);
 	$commentspages=ceil($gesamt/$maxfeedback);
 
 	if($commentspages>1) $page_link = makepagelink("$referer&amp;sorttype=$sorttype", $commentspage, $commentspages, 'comments');
@@ -218,7 +218,7 @@ else {
 		eval ("\$comments_head = \"".gettemplate("comments_head")."\";");
 		echo $comments_head;
 
-		while($ds=mysql_fetch_array($ergebnis)) {
+		while($ds=mysqli_fetch_array($ergebnis)) {
 			$n%2 ? $bg1=BG_1 : $bg1=BG_3;
 
 			$date=date("d.m.Y - H:i", $ds['date']);

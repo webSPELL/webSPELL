@@ -73,7 +73,7 @@ if($action=="save" && isset($_POST['post'])) {
 
 	if(!count($error) and $run) {
 		$ergebnis=safe_query("SELECT userID FROM ".PREFIX."squads_members WHERE joinmember='1' AND squadID='".$squad."'");
-		while($ds=mysql_fetch_array($ergebnis)) {
+		while($ds=mysqli_fetch_assoc($ergebnis)) {
 			$touser[]=$ds['userID'];
 		}
 		if(!count($touser)){
@@ -119,7 +119,7 @@ if($show == true){
 	if($loggedin) {
 		if(!isset($showerror)) $showerror='';
 		$res = safe_query("SELECT *, DATE_FORMAT(FROM_DAYS(TO_DAYS(NOW()) - TO_DAYS(birthday)), '%y') 'age' FROM ".PREFIX."user WHERE userID = '$userID'");
-    	$ds = mysql_fetch_assoc($res);
+    	$ds = mysqli_fetch_assoc($res);
 		$nickname = getinput($ds['nickname']);
 		$name = getinput($ds['firstname']." ".$ds['lastname']);
 		$email = getinput($ds['email']);

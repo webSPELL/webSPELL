@@ -31,8 +31,8 @@ eval ("\$title_about = \"".gettemplate("title_about")."\";");
 echo $title_about;
 
 $ergebnis=safe_query("SELECT * FROM ".PREFIX."about");
-if(mysql_num_rows($ergebnis)) {
-	$ds=mysql_fetch_array($ergebnis);
+if(mysqli_num_rows($ergebnis)) {
+	$ds=mysqli_fetch_array($ergebnis);
 
 	$about=htmloutput($ds['about']);
 	$about=toggle($about, 1);

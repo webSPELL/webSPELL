@@ -76,7 +76,7 @@ if($action=="save" && isset($_POST['post'])) {
 		$cwdate=mktime($hour,$minute,0,$month,$day,$year);
 		safe_query("INSERT INTO ".PREFIX."challenge (date, cwdate, squadID, opponent, opphp, oppcountry, league, map, server, email, info) values('$date', '$cwdate', '$squad', '$opponent', '$opphp', '$oppcountry', '$league', '$map', '$server', '$email', '$info')");
 		$ergebnis=safe_query("SELECT userID FROM ".PREFIX."squads_members WHERE warmember='1' AND squadID='".$squad."'");
-		while($ds=mysql_fetch_array($ergebnis)) {
+		while($ds=mysqli_fetch_array($ergebnis)) {
 			$touser[]=$ds['userID'];
 		}
 		if(!count($touser)){
@@ -170,7 +170,7 @@ elseif($action=="delete") {
   
 if(isclanwaradmin($userID)) {
   $ergebnis = safe_query("SELECT * FROM ".PREFIX."challenge ORDER BY date $type");
-	$anz=mysql_num_rows($ergebnis);
+	$anz=mysqli_num_rows($ergebnis);
 	if($anz) {
 		if(!isset($type)) $type = "DESC";
 
@@ -179,7 +179,7 @@ if(isclanwaradmin($userID)) {
 		echo'<br /><br />';
 		
 		$i=0;
-		while ($ds = mysql_fetch_array($ergebnis)) {
+		while ($ds = mysqli_fetch_array($ergebnis)) {
 			$bg1 = ($i%2)? BG_1: BG_1;
 			$date = date("d.m.Y", $ds['date']);
 			$cwdate = date("d.m.Y - H:i", $ds['cwdate']);

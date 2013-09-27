@@ -63,7 +63,7 @@ if(isset($_POST['submit'])) {
 		$file=$id.'_'.time().$file_ext;
 		rename($filepath.$screen['name'], $filepath.$file);
 		$ergebnis=safe_query("SELECT screens FROM ".PREFIX."$table WHERE $tableid='$id'");
-		$ds=mysql_fetch_array($ergebnis);
+		$ds=mysqli_fetch_array($ergebnis);
 		$screens=explode("|", $ds['screens']);
 		$screens[]=$file;
 		$screens_string=implode("|", $screens);
@@ -77,7 +77,7 @@ elseif($action=="delete") {
 	if(file_exists($filepath.$file)) @unlink($filepath.$file);
 
 	$ergebnis=safe_query("SELECT screens FROM ".PREFIX."$table WHERE $tableid='$id'");
-	$ds=mysql_fetch_array($ergebnis);
+	$ds=mysqli_fetch_array($ergebnis);
 	$screens=explode("|", $ds['screens']);
 	foreach($screens as $pic) {
 		if($pic != $file) $newscreens[]=$pic;
@@ -117,7 +117,7 @@ echo'<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.
 
 	$ergebnis=safe_query("SELECT screens FROM ".PREFIX."$table WHERE $tableid='$id'");
 
-	$ds=mysql_fetch_array($ergebnis);
+	$ds=mysqli_fetch_array($ergebnis);
 	$screens = array();
 	if(!empty($ds['screens'])) $screens=explode("|", $ds['screens']);
 	if(is_array($screens)) {

@@ -26,7 +26,7 @@
 */
 $result=safe_query("SELECT * FROM ".PREFIX."user ORDER BY registerdate DESC LIMIT 0,5");
 echo '<table width="100%" cellspacing="4" cellpadding="0">';
-while($row=mysql_fetch_array($result)) {
+while($row=mysqli_fetch_array($result)) {
 	$username='<a href="index.php?site=profile&amp;id='.$row['userID'].'">'.$row['nickname'].'</a>';
 	$country=flags('[flag]'.$row['country'].'[/flag]');
 	$registerdate=date('d.m.y', $row['registerdate']);

@@ -45,7 +45,7 @@ switch ($GLOBALS['site']) {
 		if(isset($_GET['articlesID'])) $articlesID = (int)$_GET['articlesID'];
 		else $articlesID = '';
 		if($action=="show") {
-			$get=mysql_fetch_array(safe_query("SELECT title FROM `".PREFIX."articles` WHERE articlesID='$articlesID'"));
+			$get=mysqli_fetch_array(safe_query("SELECT title FROM `".PREFIX."articles` WHERE articlesID='$articlesID'"));
 			define('PAGETITLE', settitle($_language->module['articles'].'&nbsp; &raquo; &nbsp;'.$get['title']));
 		}
 		else {
@@ -57,7 +57,7 @@ switch ($GLOBALS['site']) {
 		if(isset($_GET['awardID'])) $awardID = (int)$_GET['awardID'];
 		else $awardID = '';		
 		if($action=="details") {
-			$get=mysql_fetch_array(safe_query("SELECT award FROM `".PREFIX."awards` WHERE awardID='$awardID'"));
+			$get=mysqli_fetch_array(safe_query("SELECT award FROM `".PREFIX."awards` WHERE awardID='$awardID'"));
 			define('PAGETITLE', settitle($_language->module['awards'].'&nbsp; &raquo; &nbsp;'.$get['award']));
 		}
 		else {
@@ -93,7 +93,7 @@ switch ($GLOBALS['site']) {
 	case 'clanwars_details':
 		if(isset($_GET['cwID'])) $cwID = (int)$_GET['cwID'];
 		else $cwID = '';
-		$get=mysql_fetch_array(safe_query("SELECT opponent FROM `".PREFIX."clanwars` WHERE cwID='$cwID'"));
+		$get=mysqli_fetch_array(safe_query("SELECT opponent FROM `".PREFIX."clanwars` WHERE cwID='$cwID'"));
 		define('PAGETITLE', settitle($_language->module['clanwars'].'&nbsp; &raquo; &nbsp;'.$_language->module['clanwars_details'].'&nbsp;'.$get['opponent']));
 		break;
 	
@@ -109,7 +109,7 @@ switch ($GLOBALS['site']) {
 		if(isset($_GET['demoID'])) $demoID = (int)$_GET['demoID'];
 		else $demoID = '';
 		if($action=="showdemo") {
-			$get=mysql_fetch_array(safe_query("SELECT game, clan1, clan2 FROM `".PREFIX."demos` WHERE demoID='$demoID'"));
+			$get=mysqli_fetch_array(safe_query("SELECT game, clan1, clan2 FROM `".PREFIX."demos` WHERE demoID='$demoID'"));
 			define('PAGETITLE', settitle($_language->module['demos'].'&nbsp; &raquo; &nbsp;'.$get['game'].' '.$_language->module['demo'].': '.$get['clan1'].' '.$_language->module['versus'].' '.$get['clan2']));
 		}
 		else {
@@ -122,8 +122,8 @@ switch ($GLOBALS['site']) {
 		else $faqcatID = '';
 		if(isset($_GET['faqID'])) $faqID = (int)$_GET['faqID'];
 		else $faqID = '';
-		$get=mysql_fetch_array(safe_query("SELECT faqcatname FROM `".PREFIX."faq_categories` WHERE faqcatID='$faqcatID'"));
-		$get2=mysql_fetch_array(safe_query("SELECT question FROM `".PREFIX."faq` WHERE faqID='$faqID'"));
+		$get=mysqli_fetch_array(safe_query("SELECT faqcatname FROM `".PREFIX."faq_categories` WHERE faqcatID='$faqcatID'"));
+		$get2=mysqli_fetch_array(safe_query("SELECT question FROM `".PREFIX."faq` WHERE faqID='$faqID'"));
 		if($action=="faqcat") {
 			define('PAGETITLE', settitle($_language->module['faq'].'&nbsp; &raquo; &nbsp;'.$get['faqcatname']));
 		}
@@ -141,12 +141,12 @@ switch ($GLOBALS['site']) {
 		if(isset($_GET['file'])) $file = (int)$_GET['file'];
 		else $file = '';
 		if(isset($_GET['cat'])) {
-			$cat = mysql_fetch_array(safe_query("SELECT filecatID, name FROM ".PREFIX."files_categorys WHERE filecatID='".$cat."'"));
+			$cat = mysqli_fetch_array(safe_query("SELECT filecatID, name FROM ".PREFIX."files_categorys WHERE filecatID='".$cat."'"));
 			define('PAGETITLE', settitle($_language->module['files'].'&nbsp; &raquo; &nbsp;'.$cat['name']));
 		}
 		elseif(isset($_GET['file'])) {
-			$file = mysql_fetch_array(safe_query("SELECT fileID, filecatID, filename FROM ".PREFIX."files WHERE fileID='".$file."'"));
-			$catname = mysql_fetch_array(safe_query("SELECT name FROM ".PREFIX."files_categorys WHERE filecatID='".$file['filecatID']."'"));
+			$file = mysqli_fetch_array(safe_query("SELECT fileID, filecatID, filename FROM ".PREFIX."files WHERE fileID='".$file."'"));
+			$catname = mysqli_fetch_array(safe_query("SELECT name FROM ".PREFIX."files_categorys WHERE filecatID='".$file['filecatID']."'"));
 			define('PAGETITLE', settitle($_language->module['files'].'&nbsp; &raquo; &nbsp;'.$catname['name'].'&nbsp; &raquo; &nbsp;'.$file['filename']));
 		}
 		else {
@@ -158,7 +158,7 @@ switch ($GLOBALS['site']) {
 		if(isset($_GET['board'])) $board = (int)$_GET['board'];
 		else $board = '';		
 		if(isset($_GET['board'])) {
-			$board = mysql_fetch_array(safe_query("SELECT boardID, name FROM ".PREFIX."forum_boards WHERE boardID='".$board."'"));
+			$board = mysqli_fetch_array(safe_query("SELECT boardID, name FROM ".PREFIX."forum_boards WHERE boardID='".$board."'"));
 			define('PAGETITLE', settitle($_language->module['forum'].'&nbsp; &raquo; &nbsp;'.$board['name']));
 		}
 		else {
@@ -170,8 +170,8 @@ switch ($GLOBALS['site']) {
 		if(isset($_GET['topic'])) $topic = (int)$_GET['topic'];
 		else $topic = '';
 		if(isset($_GET['topic'])) {
-			$topic = mysql_fetch_array(safe_query("SELECT topicID, boardID, topic FROM ".PREFIX."forum_topics WHERE topicID='".$topic."'"));
-			$boardname = mysql_fetch_array(safe_query("SELECT name FROM ".PREFIX."forum_boards WHERE boardID='".$topic['boardID']."'"));
+			$topic = mysqli_fetch_array(safe_query("SELECT topicID, boardID, topic FROM ".PREFIX."forum_topics WHERE topicID='".$topic."'"));
+			$boardname = mysqli_fetch_array(safe_query("SELECT name FROM ".PREFIX."forum_boards WHERE boardID='".$topic['boardID']."'"));
 			define('PAGETITLE', settitle($_language->module['forum'].'&nbsp; &raquo; &nbsp;'.$boardname['name'].'&nbsp; &raquo; &nbsp;'.$topic['topic']));
 		}
 		else {
@@ -187,20 +187,20 @@ switch ($GLOBALS['site']) {
 		if(isset($_GET['picID'])) $picID = (int)$_GET['picID'];
 		else $picID = '';
 		if(isset($_GET['groupID'])) {
-			$groupID = mysql_fetch_array(safe_query("SELECT groupID, name FROM ".PREFIX."gallery_groups WHERE groupID='".$groupID."'"));
+			$groupID = mysqli_fetch_array(safe_query("SELECT groupID, name FROM ".PREFIX."gallery_groups WHERE groupID='".$groupID."'"));
 			define('PAGETITLE', settitle($_language->module['gallery'].'&nbsp; &raquo; &nbsp;'.$groupID['name']));
 		}
 		elseif(isset($_GET['galleryID'])) {
-			$galleryID = mysql_fetch_array(safe_query("SELECT galleryID, name, groupID FROM ".PREFIX."gallery WHERE galleryID='".$galleryID."'"));
-			$groupname = mysql_fetch_array(safe_query("SELECT name FROM ".PREFIX."gallery_groups WHERE groupID='".$galleryID['groupID']."'"));
+			$galleryID = mysqli_fetch_array(safe_query("SELECT galleryID, name, groupID FROM ".PREFIX."gallery WHERE galleryID='".$galleryID."'"));
+			$groupname = mysqli_fetch_array(safe_query("SELECT name FROM ".PREFIX."gallery_groups WHERE groupID='".$galleryID['groupID']."'"));
 			if($groupname['name'] == "") $groupname['name'] = $_language->module['usergallery'];
 			define('PAGETITLE', settitle($_language->module['gallery'].'&nbsp; &raquo; &nbsp;'.$groupname['name'].'&nbsp; &raquo; &nbsp;'.$galleryID['name']));
 		}
 		elseif(isset($_GET['picID'])) {
-			$getgalleryname = mysql_fetch_array(safe_query("SELECT gal.groupID, gal.galleryID, gal.name FROM ".PREFIX."gallery_pictures as pic, ".PREFIX."gallery as gal WHERE pic.picID='".$_GET['picID']."' AND gal.galleryID=pic.galleryID"));
-			$getgroupname = mysql_fetch_array(safe_query("SELECT name FROM ".PREFIX."gallery_groups WHERE groupID='".$getgalleryname['groupID']."'"));
+			$getgalleryname = mysqli_fetch_array(safe_query("SELECT gal.groupID, gal.galleryID, gal.name FROM ".PREFIX."gallery_pictures as pic, ".PREFIX."gallery as gal WHERE pic.picID='".$_GET['picID']."' AND gal.galleryID=pic.galleryID"));
+			$getgroupname = mysqli_fetch_array(safe_query("SELECT name FROM ".PREFIX."gallery_groups WHERE groupID='".$getgalleryname['groupID']."'"));
 			if($getgroupname['name'] == "") $getgroupname['name'] = $_language->module['usergallery'];
-			$picID = mysql_fetch_array(safe_query("SELECT picID, galleryID, name FROM ".PREFIX."gallery_pictures WHERE picID='".$picID."'"));
+			$picID = mysqli_fetch_array(safe_query("SELECT picID, galleryID, name FROM ".PREFIX."gallery_pictures WHERE picID='".$picID."'"));
 			define('PAGETITLE', settitle($_language->module['gallery'].'&nbsp; &raquo; &nbsp;'.$getgroupname['name'].'&nbsp; &raquo; &nbsp;'.$getgalleryname['name'].'&nbsp; &raquo; &nbsp;'.$picID['name']));
 		}
 		else {
@@ -228,7 +228,7 @@ switch ($GLOBALS['site']) {
 		if(isset($_GET['linkcatID'])) $linkcatID = (int)$_GET['linkcatID'];
 		else $linkcatID = '';
 		if($action=="show") {
-			$get=mysql_fetch_array(safe_query("SELECT name FROM `".PREFIX."links_categorys` WHERE linkcatID='$linkcatID'"));
+			$get=mysqli_fetch_array(safe_query("SELECT name FROM `".PREFIX."links_categorys` WHERE linkcatID='$linkcatID'"));
 			define('PAGETITLE', settitle($_language->module['links'].'&nbsp; &raquo; &nbsp;'.$get['name']));
 		}
 		else {
@@ -256,7 +256,7 @@ switch ($GLOBALS['site']) {
 		if(isset($_GET['squadID'])) $squadID = (int)$_GET['squadID'];
 		else $squadID = '';
 		if($action=="show") {
-			$get=mysql_fetch_array(safe_query("SELECT name FROM `".PREFIX."squads` WHERE squadID='$squadID'"));
+			$get=mysqli_fetch_array(safe_query("SELECT name FROM `".PREFIX."squads` WHERE squadID='$squadID'"));
 			define('PAGETITLE', settitle($_language->module['members'].'&nbsp; &raquo; &nbsp;'.$get['name']));
 		}
 		else {
@@ -287,7 +287,7 @@ switch ($GLOBALS['site']) {
 		
 		$message_array = array();
 		$query=safe_query("SELECT n.* FROM ".PREFIX."news_contents n  WHERE n.newsID='".$newsID."'");
-		while($qs = mysql_fetch_array($query)) {
+		while($qs = mysqli_fetch_array($query)) {
 			$message_array[] = array('lang' => $qs['language'], 'headline' => $qs['headline']);
 		}
 		if(isset($_GET['lang'])) $showlang = getlanguageid($_GET['lang'], $message_array);
@@ -312,11 +312,11 @@ switch ($GLOBALS['site']) {
 		if(isset($_GET['pollID'])) $pollID = (int)$_GET['pollID'];
 		else $pollID = '';
 		if(isset($_GET['vote'])) {
-			$vote = mysql_fetch_array(safe_query("SELECT titel FROM ".PREFIX."poll WHERE pollID='".$vote."'"));
+			$vote = mysqli_fetch_array(safe_query("SELECT titel FROM ".PREFIX."poll WHERE pollID='".$vote."'"));
 			define('PAGETITLE', settitle($_language->module['polls'].'&nbsp; &raquo; &nbsp;'.$vote['titel']));
 		}
 		elseif(isset($_GET['pollID'])) {
-			$pollID = mysql_fetch_array(safe_query("SELECT titel FROM ".PREFIX."poll WHERE pollID='".$pollID."'"));
+			$pollID = mysqli_fetch_array(safe_query("SELECT titel FROM ".PREFIX."poll WHERE pollID='".$pollID."'"));
 			define('PAGETITLE', settitle($_language->module['polls'].'&nbsp; &raquo; &nbsp;'.$pollID['titel']));
 		}
 		else {
@@ -358,7 +358,7 @@ switch ($GLOBALS['site']) {
 		if(isset($_GET['squadID'])) $squadID = (int)$_GET['squadID'];
 		else $squadID = '';
 		if($action=="show") {
-			$get=mysql_fetch_array(safe_query("SELECT name FROM `".PREFIX."squads` WHERE squadID='$squadID'"));
+			$get=mysqli_fetch_array(safe_query("SELECT name FROM `".PREFIX."squads` WHERE squadID='$squadID'"));
 			define('PAGETITLE', settitle($_language->module['squads'].'&nbsp; &raquo; &nbsp;'.$get['name']));
 		}
 		else {
@@ -369,7 +369,7 @@ switch ($GLOBALS['site']) {
 	case 'static':
 		if(isset($_GET['staticID'])) $staticID = (int)$_GET['staticID'];
 		else $staticID = '';
-		$get=mysql_fetch_array(safe_query("SELECT name FROM `".PREFIX."static` WHERE staticID='$staticID'"));
+		$get=mysqli_fetch_array(safe_query("SELECT name FROM `".PREFIX."static` WHERE staticID='$staticID'"));
 		define('PAGETITLE', settitle($get['name']));
 		break;
 	

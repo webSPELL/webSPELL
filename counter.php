@@ -38,27 +38,27 @@ $dateyesterday = date("d.m.Y", time()-(24*3600));
 $datemonth = date(".m.Y", time());
 
 $ergebnis=safe_query("SELECT hits FROM ".PREFIX."counter");
-$ds=mysql_fetch_array($ergebnis);
-$us = mysql_fetch_array(safe_query("SELECT count(*) FROM ".PREFIX."user"));
+$ds=mysqli_fetch_array($ergebnis);
+$us = mysqli_fetch_array(safe_query("SELECT count(*) FROM ".PREFIX."user"));
 $us=$us[0];
 
 $total=$ds['hits'];
-$dt = mysql_fetch_array(safe_query("SELECT count FROM ".PREFIX."counter_stats WHERE dates='$date'"));
+$dt = mysqli_fetch_array(safe_query("SELECT count FROM ".PREFIX."counter_stats WHERE dates='$date'"));
 if($dt['count']) $today = $dt['count'];
 else $today = 0;
 
-$dy = mysql_fetch_array(safe_query("SELECT count FROM ".PREFIX."counter_stats WHERE dates='$dateyesterday'"));
+$dy = mysqli_fetch_array(safe_query("SELECT count FROM ".PREFIX."counter_stats WHERE dates='$dateyesterday'"));
 if($dy['count']) $yesterday = $dy['count'];
 else $yesterday = 0;
 
 $month=0;
 $monthquery = safe_query("SELECT count FROM ".PREFIX."counter_stats WHERE dates LIKE '%$datemonth'");
-while($dm=mysql_fetch_array($monthquery)) {
+while($dm=mysqli_fetch_array($monthquery)) {
 	$month = $month+$dm['count'];
 }
 
-$guests = mysql_fetch_array(safe_query("SELECT COUNT(*) FROM ".PREFIX."whoisonline WHERE userID=''"));
-$user = mysql_fetch_array(safe_query("SELECT COUNT(*) FROM ".PREFIX."whoisonline WHERE ip=''"));
+$guests = mysqli_fetch_array(safe_query("SELECT COUNT(*) FROM ".PREFIX."whoisonline WHERE userID=''"));
+$user = mysqli_fetch_array(safe_query("SELECT COUNT(*) FROM ".PREFIX."whoisonline WHERE ip=''"));
 $useronline = $guests[0] + $user[0];
 
 if($user[0]==1) $user_on='1 '.$_language->module['user'];

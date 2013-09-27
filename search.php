@@ -74,7 +74,7 @@ elseif($action=="search" AND ($userID OR isset($_GET['captcha']))) {
 			else {
 				if(!$ad) $ad = 1;
 				if(!$am) $am = 1;
-				if(!$ay) $by = date("Y");
+				if(!$ay) $ay = date("Y");
 				$after = mktime(0, 0, 0, $am, $ad, $ay);
 			}
 			if(!($bm and $bd and $by)) {
@@ -98,21 +98,21 @@ elseif($action=="search" AND ($userID OR isset($_GET['captcha']))) {
 			if(isset($_GET['articles'])) {
 				$ergebnis_articles=safe_query("SELECT title, articlesID, date FROM ".PREFIX."articles WHERE date between ".$after." AND ".$before);
 		
-				while($ds=mysql_fetch_array($ergebnis_articles)) {
+				while($ds=mysqli_fetch_array($ergebnis_articles)) {
 					$articlesID = $ds['articlesID'];
 		
 					$ergebnis_articles_contents = safe_query("SELECT content FROM ".PREFIX."articles_contents WHERE articlesID = '".$articlesID."' AND content LIKE '%".$text."%'");
-					if(!mysql_num_rows($ergebnis_articles_contents) and substr_count(strtolower($ds['title']), strtolower(stripslashes($text))) == 0) {
+					if(!mysqli_num_rows($ergebnis_articles_contents) and substr_count(strtolower($ds['title']), strtolower(stripslashes($text))) == 0) {
 						continue;
 					}
-					elseif(!mysql_num_rows($ergebnis_articles_contents)) {
-						$query_result = mysql_fetch_array(safe_query("SELECT content FROM ".PREFIX."articles_contents WHERE articlesID = '".$articlesID."' ORDER BY page ASC LIMIT 0, 1"));
+					elseif(!mysqli_num_rows($ergebnis_articles_contents)) {
+						$query_result = mysqli_fetch_array(safe_query("SELECT content FROM ".PREFIX."articles_contents WHERE articlesID = '".$articlesID."' ORDER BY page ASC LIMIT 0, 1"));
 						$res_message[$i] = clearfromtags($query_result['content']);
 						$content = array($query_result['content']);
 					}
 					else {
 						$content = array();
-						while($qs = mysql_fetch_array($ergebnis_articles_contents)) {
+						while($qs = mysqli_fetch_array($ergebnis_articles_contents)) {
 							$content[] = $qs['content'];
 						}
 						$res_message[$i] = clearfromtags($content[0]);
@@ -131,11 +131,11 @@ elseif($action=="search" AND ($userID OR isset($_GET['captcha']))) {
 			if(isset($_GET['faq'])) {
 				$ergebnis_faq=safe_query("SELECT faqID, faqcatID, date FROM ".PREFIX."faq WHERE date between ".$after." AND ".$before." ORDER BY date");
 		
-				while($ds = mysql_fetch_array($ergebnis_faq)) {
+				while($ds = mysqli_fetch_array($ergebnis_faq)) {
 					$ergebnis_faq_contents = safe_query("SELECT question, answer FROM ".PREFIX."faq WHERE faqID = '".$ds['faqID']."' AND (answer LIKE '%".$text."%' or question LIKE '%".$text."%')");
-					if(mysql_num_rows($ergebnis_faq_contents)) {
+					if(mysqli_num_rows($ergebnis_faq_contents)) {
 						$faq_array = array();
-						while($qs = mysql_fetch_array($ergebnis_faq_contents)) {
+						while($qs = mysqli_fetch_array($ergebnis_faq_contents)) {
 							$faq_array[] = array('question' => $qs['question'], 'answer' => $qs['answer']);
 						}
 						$faqID = $ds['faqID'];
@@ -184,7 +184,7 @@ elseif($action=="search" AND ($userID OR isset($_GET['captcha']))) {
 										GROUP BY postID
 										ORDER BY date");
 		
-				while($ds=mysql_fetch_array($ergebnis_forum)) {
+				while($ds=mysqli_fetch_array($ergebnis_forum)) {
 					if($ds['readgrps'] != "") {
 						$usergrps = explode(";", $ds['readgrps']);
 						$usergrp = 0;
@@ -244,11 +244,11 @@ elseif($action=="search" AND ($userID OR isset($_GET['captcha']))) {
 													date between ".$after." AND ".$before."
 												)");
 		
-				while($ds = mysql_fetch_array($ergebnis_news)) {
+				while($ds = mysqli_fetch_array($ergebnis_news)) {
 					$ergebnis_news_contents = safe_query("SELECT language, headline, content FROM ".PREFIX."news_contents WHERE newsID = '".$ds['newsID']."' and (content LIKE '%".$text."%' or headline LIKE '%".$text."%')");
-					if(mysql_num_rows($ergebnis_news_contents)) {
+					if(mysqli_num_rows($ergebnis_news_contents)) {
 						$message_array = array();
-						while($qs = mysql_fetch_array($ergebnis_news_contents)) {
+						while($qs = mysqli_fetch_array($ergebnis_news_contents)) {
 							$message_array[] = array('lang' => $qs['language'], 'headline' => $qs['headline'], 'message' => $qs['content']);
 						}
 						$showlang = select_language($message_array);

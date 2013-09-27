@@ -32,9 +32,9 @@ echo $title_server;
 
 $ergebnis = safe_query("SELECT * FROM ".PREFIX."servers ORDER BY sort");
 
-if(mysql_num_rows($ergebnis)) {
+if(mysqli_num_rows($ergebnis)) {
 	$i = 1;
-	while($ds = mysql_fetch_array($ergebnis)) {
+	while($ds = mysqli_fetch_array($ergebnis)) {
 		if($i % 2) {
 			$bg1 = BG_1;
 			$bg2 = BG_2;

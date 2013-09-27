@@ -59,7 +59,7 @@ else {
 	// Select all possible languages
 	$mysql_langs = array();
 	$query = safe_query("SELECT lang, language FROM ".PREFIX."news_languages");
-	while($ds = mysql_fetch_assoc($query)){
+	while($ds = mysqli_fetch_assoc($query)){
 		$mysql_langs[$ds['lang']] = $ds['language'];
 	}
 	

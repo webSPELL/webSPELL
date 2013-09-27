@@ -101,9 +101,9 @@ hr { margin: 0px; }
 			if(isset($_POST['sendto_clanmembers'])) {
 	
 				$ergebnis=safe_query("SELECT userID FROM ".PREFIX."squads_members GROUP BY userID");
-				$anz=mysql_num_rows($ergebnis);
+				$anz=mysqli_num_rows($ergebnis);
 				if($anz) {
-					while($ds=mysql_fetch_array($ergebnis)) {
+					while($ds=mysqli_fetch_array($ergebnis)) {
 						$emails[] = getemail($ds['userID']);
 					}
 				}
@@ -112,9 +112,9 @@ hr { margin: 0px; }
 			if(isset($_POST['sendto_registered'])) {
 	
 				$ergebnis=safe_query("SELECT * FROM ".PREFIX."user WHERE newsletter='1'");
-				$anz=mysql_num_rows($ergebnis);
+				$anz=mysqli_num_rows($ergebnis);
 				if($anz) {
-					while($ds=mysql_fetch_array($ergebnis)) {
+					while($ds=mysqli_fetch_array($ergebnis)) {
 						$emails[] = $ds['email'];
 					}
 				}
@@ -124,9 +124,9 @@ hr { margin: 0px; }
 			if(isset($_POST['sendto_newsletter'])) {
 	
 				$ergebnis=safe_query("SELECT * FROM ".PREFIX."newsletter");
-				$anz=mysql_num_rows($ergebnis);
+				$anz=mysqli_num_rows($ergebnis);
 				if($anz) {
-					while($ds=mysql_fetch_array($ergebnis)) {
+					while($ds=mysqli_fetch_array($ergebnis)) {
 						$emails[] = $ds['email'];
 					}
 				}
@@ -164,7 +164,7 @@ else {
 <table width="100%" border="0" cellspacing="1" cellpadding="3">
   <tr>
     <td width="15%"><b><?php echo $_language->module['title']; ?></b></td>
-    <td width="85%"><input type="text" name="title" value="<?php echo $title;?>" size="97" /></td>
+    <td width="85%"><input type="text" name="title" value="<?php echo $title;?>" size="95" /></td>
   </tr>
   <tr>
     <td valign="top"><b><?php echo $_language->module['html_mail']; ?></b></td>
@@ -177,9 +177,9 @@ else {
   </tr>
   <tr>
     <td><b><?php echo $_language->module['send_to']; ?></b></td>
-    <td><input type="checkbox" name="sendto_clanmembers" value="1" checked="checked" /> <?php echo $_language->module['user_clanmembers']; ?> [<?php echo mysql_num_rows(safe_query("SELECT userID FROM ".PREFIX."squads_members GROUP BY userID")).'&nbsp;'.$_language->module['users']; ?>]
-    <br /><input type="checkbox" name="sendto_registered" value="1" checked="checked" /> <?php echo $_language->module['user_registered']; ?> [<?php echo mysql_num_rows(safe_query("SELECT * FROM ".PREFIX."user WHERE newsletter='1'")).'&nbsp;'.$_language->module['users']; ?>]
-    <br /><input type="checkbox" name="sendto_newsletter" value="1" checked="checked" /> <?php echo $_language->module['user_newsletter']; ?> [<?php echo mysql_num_rows(safe_query("SELECT * FROM ".PREFIX."newsletter")).'&nbsp;'.$_language->module['users']; ?>]</td>
+    <td><input type="checkbox" name="sendto_clanmembers" value="1" checked="checked" /> <?php echo $_language->module['user_clanmembers']; ?> [<?php echo mysqli_num_rows(safe_query("SELECT userID FROM ".PREFIX."squads_members GROUP BY userID")).'&nbsp;'.$_language->module['users']; ?>]
+    <br /><input type="checkbox" name="sendto_registered" value="1" checked="checked" /> <?php echo $_language->module['user_registered']; ?> [<?php echo mysqli_num_rows(safe_query("SELECT * FROM ".PREFIX."user WHERE newsletter='1'")).'&nbsp;'.$_language->module['users']; ?>]
+    <br /><input type="checkbox" name="sendto_newsletter" value="1" checked="checked" /> <?php echo $_language->module['user_newsletter']; ?> [<?php echo mysqli_num_rows(safe_query("SELECT * FROM ".PREFIX."newsletter")).'&nbsp;'.$_language->module['users']; ?>]</td>
   </tr>
   <tr>
     <td><input type="hidden" name="captcha_hash" value="<?php echo $hash; ?>" /></td>

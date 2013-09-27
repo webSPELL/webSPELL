@@ -34,14 +34,14 @@ if(isset($_POST['submit'])) {
 	$email = trim($_POST['email']);
 	if($email!=''){
 		$ergebnis = safe_query("SELECT * FROM ".PREFIX."user WHERE email = '".$email."'");
-		$anz = mysql_num_rows($ergebnis);
+		$anz = mysqli_num_rows($ergebnis);
 	
 		if($anz) {
 	
 			$newpwd=RandPass(6);
 			$newmd5pwd=md5($newpwd);
 	
-			$ds = mysql_fetch_array($ergebnis);
+			$ds = mysqli_fetch_array($ergebnis);
 			safe_query("UPDATE ".PREFIX."user SET password='".$newmd5pwd."' WHERE userID='".$ds['userID']."'");
 	
 			$ToEmail = $ds['email'];

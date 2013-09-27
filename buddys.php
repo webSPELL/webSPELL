@@ -40,7 +40,7 @@ if($action=="add") {
 			redirect('index.php?site=buddys', $_language->module['add_yourself'], 3);
 			die();
 		}
-		if(mysql_num_rows(safe_query("SELECT userID FROM ".PREFIX."user WHERE userID='".$_GET['id']."'"))) {
+		if(mysqli_num_rows(safe_query("SELECT userID FROM ".PREFIX."user WHERE userID='".$_GET['id']."'"))) {
 			safe_query("INSERT INTO ".PREFIX."buddys (userID, buddy, banned) values ('$userID', '".$_GET['id']."', '0') ");
 			header("Location: index.php?site=buddys");
 		}
@@ -59,7 +59,7 @@ elseif($action=="ignore") {
 			redirect('index.php?site=buddys', $_language->module['add_yourself'], 3);
 			die();
 		}	
-		if(mysql_num_rows(safe_query("SELECT userID FROM ".PREFIX."user WHERE userID='".$_GET['id']."'"))) {
+		if(mysqli_num_rows(safe_query("SELECT userID FROM ".PREFIX."user WHERE userID='".$_GET['id']."'"))) {
 			safe_query("UPDATE ".PREFIX."buddys SET banned='1' WHERE userID='$userID' AND buddy='".$_GET['id']."'");
 			header("Location: index.php?site=buddys");
 		}
@@ -100,10 +100,10 @@ elseif($userID) {
 	eval ("\$buddys_head = \"".gettemplate("buddys_head")."\";");
 	echo $buddys_head;
 	$ergebnis=safe_query("SELECT * FROM ".PREFIX."buddys WHERE userID='$userID' AND banned='0'");
-	$anz=mysql_num_rows($ergebnis);
+	$anz=mysqli_num_rows($ergebnis);
 	if($anz) {
 		$n=1;
-		while($ds=mysql_fetch_array($ergebnis)) {
+		while($ds=mysqli_fetch_array($ergebnis)) {
 			if($n%2) {
 				$bg1=BG_1;
 				$bg2=BG_2;
@@ -133,10 +133,10 @@ elseif($userID) {
 	eval ("\$ignore_head = \"".gettemplate("ignore_head")."\";");
 	echo $ignore_head;
 	$ergebnis=safe_query("SELECT * FROM ".PREFIX."buddys WHERE userID='$userID' AND banned='1'");
-	$anz=mysql_num_rows($ergebnis);
+	$anz=mysqli_num_rows($ergebnis);
 	if($anz) {
 		$n=1;
-		while($ds=mysql_fetch_array($ergebnis)) {
+		while($ds=mysqli_fetch_array($ergebnis)) {
 			if($n%2) {
 				$bg1=BG_1;
 				$bg2=BG_2;

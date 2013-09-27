@@ -33,9 +33,9 @@ eval ("\$title_whoisonline = \"".gettemplate("title_whoisonline")."\";");
 echo $title_whoisonline;
 
 $result_guests = safe_query("SELECT * FROM ".PREFIX."whoisonline WHERE userID=''");
-$guests = mysql_num_rows($result_guests);
+$guests = mysqli_num_rows($result_guests);
 $result_user = safe_query("SELECT * FROM ".PREFIX."whoisonline WHERE ip=''");
-$user = mysql_num_rows($result_user);
+$user = mysqli_num_rows($result_user);
 $useronline = $guests + $user;
 if($user==1) $user_on='<b>1</b> '.$_language->module['registered_user'];
 else $user_on='<b>'.$user.'</b> '.$_language->module['registered_users'];
@@ -70,7 +70,7 @@ eval ("\$whoisonline_head = \"".gettemplate("whoisonline_head")."\";");
 echo $whoisonline_head;
 
 $n=1;
-while($ds=mysql_fetch_array($ergebnis)) {
+while($ds=mysqli_fetch_array($ergebnis)) {
 	if($n%2) {
 		$bg1=BG_1;
 		$bg2=BG_2;
@@ -157,7 +157,7 @@ eval ("\$whowasonline_head = \"".gettemplate("whowasonline_head")."\";");
 echo $whowasonline_head;
 
 $n=1;
-while($ds=mysql_fetch_array($ergebnis)) {
+while($ds=mysqli_fetch_array($ergebnis)) {
 	if($n%2) {
 		$bg1=BG_1;
 		$bg2=BG_2;

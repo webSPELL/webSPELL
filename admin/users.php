@@ -32,7 +32,7 @@ if(!isuseradmin($userID) OR mb_substr(basename($_SERVER['REQUEST_URI']),0,15) !=
 if(isset($_POST['add'])) {
  	$CAPCLASS = new Captcha;
 	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
-		$anz = mysql_num_rows(safe_query("SELECT userID FROM ".PREFIX."squads_members WHERE squadID='".$_POST['squad']."' AND userID='".$_POST['id']."'"));
+		$anz = mysqli_num_rows(safe_query("SELECT userID FROM ".PREFIX."squads_members WHERE squadID='".$_POST['squad']."' AND userID='".$_POST['id']."'"));
 		if(!$anz){
 			safe_query("INSERT INTO ".PREFIX."squads_members (squadID, userID, position, activity, sort) values('".$_POST['squad']."', '".$_POST['id']."', '".$_POST['position']."', '".$_POST['activity']."', '1')");	
 		}
@@ -150,7 +150,7 @@ elseif(isset($_POST['edit'])) {
 	  $birthday = $b_year.'.'.$b_month.'.'.$b_day;
 	  $nickname = htmlspecialchars(mb_substr(trim($_POST['nickname']), 0, 30));
 	  
-	  if(!mysql_num_rows(safe_query("SELECT userID FROM ".PREFIX."user WHERE nickname='".$nickname."' AND userID!=".$_POST['id']))) {
+	  if(!mysqli_num_rows(safe_query("SELECT userID FROM ".PREFIX."user WHERE nickname='".$nickname."' AND userID!=".$_POST['id']))) {
 	  
 	  	safe_query("UPDATE ".PREFIX."user SET nickname='".$nickname."',
 									 email='".$_POST['email']."',
@@ -202,10 +202,10 @@ elseif(isset($_POST['newuser'])) {
 	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
 		$newnickname = htmlspecialchars(mb_substr(trim($_POST['username']), 0, 30));
 		$newusername = mb_substr(trim($_POST['username']), 0, 30);
-		$anz = mysql_num_rows(safe_query("SELECT userID FROM ".PREFIX."user WHERE (username='".$newusername."' OR nickname='".$newnickname."') "));
+		$anz = mysqli_num_rows(safe_query("SELECT userID FROM ".PREFIX."user WHERE (username='".$newusername."' OR nickname='".$newnickname."') "));
 		if(!$anz AND $newusername!=""){
 			safe_query("INSERT INTO ".PREFIX."user ( username, nickname, password, registerdate, activated) VALUES( '".$newusername."', '".$newnickname."', '".md5(stripslashes($_POST['pass']))."', '".time()."', 1) ");
-			safe_query("INSERT INTO ".PREFIX."user_groups ( userID ) values('".mysql_insert_id()."' )");
+			safe_query("INSERT INTO ".PREFIX."user_groups ( userID ) values('".mysqli_insert_id()."' )");
 		} else echo $_language->module['user_exists'];
 	} else echo $_language->module['transaction_invalid'];
 }
@@ -287,7 +287,7 @@ elseif($action=="ban") {
 			$CAPCLASS->create_transaction();
 			$hash = $CAPCLASS->get_hash();
 			$get = safe_query("SELECT nickname,banned,ban_reason FROM ".PREFIX."user WHERE userID='".$id."'");
-			$data = mysql_fetch_assoc($get);
+			$data = mysqli_fetch_assoc($get);
 			$nickname = $data['nickname'];
 		
 			if($data['banned'] == "perm") {
@@ -454,7 +454,7 @@ elseif($action=="profile") {
   echo'<h1>&curren; <a href="admincenter.php?site=users" class="white">'.$_language->module['users'].'</a> &raquo; '.$_language->module['edit_profile'].'</h1>';
   
   $id = $_GET['id'];
-  $ds = mysql_fetch_array(safe_query("SELECT * FROM ".PREFIX."user WHERE userID='$id'"));
+  $ds = mysqli_fetch_array(safe_query("SELECT * FROM ".PREFIX."user WHERE userID='$id'"));
   
   if($ds['userpic']) $viewpic='<a href="javascript:MM_openBrWindow(\'../images/userpics/'.$ds['userpic'].'\',\'userpic\',\'width=250,height=230\')">'.$_language->module['picture'].'</a>';
   else $viewpic=$_language->module['picture'];
@@ -663,7 +663,7 @@ else {
 	
 	if($search!='') $alle = safe_query("SELECT userID FROM ".PREFIX."user WHERE userID=".$search);
 	else $alle = safe_query("SELECT userID FROM ".PREFIX."user");
-	$gesamt = mysql_num_rows($alle);
+	$gesamt = mysqli_num_rows($alle);
 	$pages=1;
 	
 	$max=$maxusers;
@@ -689,7 +689,7 @@ else {
 		$page_link = makepagelink("admincenter.php?site=users&amp;sort=$sort&amp;type=$type&amp;search=$search", $page, $pages);
 		$page_link = str_replace('images/', '../images/', $page_link);
 	}
-	$anz=mysql_num_rows($ergebnis);
+	$anz=mysqli_num_rows($ergebnis);
 	if($anz) {
 	 	$CAPCLASS = new Captcha;
 		$CAPCLASS->create_transaction();
@@ -725,7 +725,7 @@ else {
 
 		$n=1;
 		$i=1;
-		while($ds=mysql_fetch_array($ergebnis)) {
+		while($ds=mysqli_fetch_array($ergebnis)) {
       if($i%2) { $td='td1'; }
       else { $td='td2'; }
 		

@@ -67,7 +67,7 @@ elseif($action=="edit") {
 	$CAPCLASS = new Captcha;
 	$CAPCLASS->create_transaction();
 	$hash = $CAPCLASS->get_hash();
-	$ds=mysql_fetch_array(safe_query("SELECT * FROM ".PREFIX."smileys WHERE smileyID='".$_GET["smileyID"]."'"));
+	$ds=mysqli_fetch_array(safe_query("SELECT * FROM ".PREFIX."smileys WHERE smileyID='".$_GET["smileyID"]."'"));
 	$pic='<img src="../images/smileys/'.$ds['name'].'" border="0" alt="'.getinput($ds['alt']).'" />';
 
 	echo'<h1>&curren; <a href="admincenter.php?site=icons" class="white">'.$_language->module['icons'].'</a> &raquo; <a href="admincenter.php?site=smileys" class="white">'.$_language->module['smilies'].'</a> &raquo; '.$_language->module['edit_smiley'].'</h1>';
@@ -172,13 +172,13 @@ else {
     </tr>';
     
 	$ds=safe_query("SELECT * FROM ".PREFIX."smileys");
-	$anz=mysql_num_rows($ds);
+	$anz=mysqli_num_rows($ds);
 	if($anz) {
 	$CAPCLASS = new Captcha;
 	$CAPCLASS->create_transaction();
 	$hash = $CAPCLASS->get_hash();
     $i=1;
-    while($smileys = mysql_fetch_array($ds)) {
+    while($smileys = mysqli_fetch_array($ds)) {
       if($i%2) { $td='td1'; }
       else { $td='td2'; }
       		
