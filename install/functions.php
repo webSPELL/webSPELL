@@ -1948,7 +1948,7 @@ function update40101_40200() {
 }
 
 function update40200_40300(){
-  mysql_query("CREATE TABLE `".PREFIX."forum_posts_spam` (
+  mysqli_query("CREATE TABLE `".PREFIX."forum_posts_spam` (
   `postID` int(11) NOT NULL AUTO_INCREMENT,
   `boardID` int(11) NOT NULL DEFAULT '0',
   `topicID` int(11) NOT NULL DEFAULT '0',
@@ -1958,7 +1958,7 @@ function update40200_40300(){
   `rating` varchar(255) COLLATE utf8_unicode_ci NOT NULL DEFAULT '',
   PRIMARY KEY (`postID`)
   )");
-  mysql_query("CREATE TABLE `".PREFIX."forum_topics_spam` (
+  mysqli_query("CREATE TABLE `".PREFIX."forum_topics_spam` (
   `topicID` int(11) NOT NULL AUTO_INCREMENT,
   `boardID` int(11) NOT NULL,
   `userID` int(11) NOT NULL,
@@ -1970,7 +1970,7 @@ function update40200_40300(){
   `rating` varchar(255) COLLATE utf8_unicode_ci NOT NULL DEFAULT '',
   PRIMARY KEY (`topicID`)
   )");
-  mysql_query("CREATE TABLE `".PREFIX."comments_spam` (
+  mysqli_query("CREATE TABLE `".PREFIX."comments_spam` (
   `commentID` int(11) NOT NULL AUTO_INCREMENT,
   `parentID` int(11) NOT NULL DEFAULT '0',
   `type` char(2) COLLATE utf8_unicode_ci NOT NULL DEFAULT '',
@@ -1984,16 +1984,16 @@ function update40200_40300(){
   `rating` varchar(255) COLLATE utf8_unicode_ci NOT NULL DEFAULT '',
   PRIMARY KEY (`commentID`)
 )");
-  mysql_query("CREATE TABLE `".PREFIX."api_log` (
+  mysqli_query("CREATE TABLE `".PREFIX."api_log` (
   `date` int(11) NOT NULL,
   `message` varchar(255) NOT NULL,
   `data` text NOT NULL
 )");
-  mysql_query("ALTER TABLE `".PREFIX."settings` ADD `spam_check` INT( 1 ) NOT NULL ;");
-  mysql_query("ALTER TABLE `".PREFIX."settings` ADD `detect_language` INT( 1 ) NOT NULL ;");
-  mysql_query("ALTER TABLE `".PREFIX."settings` ADD `spamapikey` VARCHAR( 32 ) NOT NULL ;");
-  mysql_query("ALTER TABLE `".PREFIX."settings` ADD `spamapihost` VARCHAR( 255 ) NOT NULL ;");
-  mysql_query("ALTER TABLE `".PREFIX."settings` ADD `spammaxposts` INT( 11 ) NOT NULL ;");
-  mysql_query("ALTER TABLE `".PREFIX."settings` ADD `spamapiblockerror` INT( 1 ) NOT NULL ;");
+  mysqli_query("ALTER TABLE `".PREFIX."settings` ADD `spam_check` INT( 1 ) NOT NULL ;");
+  mysqli_query("ALTER TABLE `".PREFIX."settings` ADD `detect_language` INT( 1 ) NOT NULL ;");
+  mysqli_query("ALTER TABLE `".PREFIX."settings` ADD `spamapikey` VARCHAR( 32 ) NOT NULL ;");
+  mysqli_query("ALTER TABLE `".PREFIX."settings` ADD `spamapihost` VARCHAR( 255 ) NOT NULL ;");
+  mysqli_query("ALTER TABLE `".PREFIX."settings` ADD `spammaxposts` INT( 11 ) NOT NULL ;");
+  mysqli_query("ALTER TABLE `".PREFIX."settings` ADD `spamapiblockerror` INT( 1 ) NOT NULL ;");
 }
 ?>

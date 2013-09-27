@@ -78,7 +78,7 @@ if(isset($_POST['save'])) {
 	 
 		// check exisitings accounts from ip with same password
 	  	$get_users = safe_query("SELECT userID FROM ".PREFIX."user WHERE password='$md5pwd' AND ip='".$GLOBALS['ip']."'");
-	  	if(mysql_num_rows($get_users)){
+	  	if(mysqli_num_rows($get_users)){
 	  		$error[]='Only one Account per IP';
 	  	}
 	  	

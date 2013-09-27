@@ -5,8 +5,8 @@ class SpamApi {
 	private static $instance;
 	private function __construct(){
 		$get = safe_query("SELECT spam_check, spamapikey, spamapihost, spamapiblockerror, spammaxposts FROM ".PREFIX."settings LIMIT 0,1");
-		if(mysql_num_rows($get)){
-			$ds = mysql_fetch_assoc($get);
+		if(mysqli_num_rows($get)){
+			$ds = mysqli_fetch_assoc($get);
 			$this->key = $ds['spamapikey'];
 			$this->host = $ds['spamapihost'];
 			$this->enabled = ($ds['spam_check'] == 1);

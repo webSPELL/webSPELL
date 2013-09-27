@@ -83,7 +83,7 @@ if($action=="save" && isset($_POST['post'])) {
 		foreach($touser as $id) {
 			$tmp_lang->set_language(getuserlanguage($id));
 			$tmp_lang->read_module('joinus');
-			$message = '[b]'.$tmp_lang->module['someone_want_to_join_your_squad'].' '.mysql_real_escape_string(getsquadname($squad)).'![/b]
+			$message = '[b]'.$tmp_lang->module['someone_want_to_join_your_squad'].' '.$_database->escape_string(getsquadname($squad)).'![/b]
 				 '.$tmp_lang->module['nick'].' '.$nick.'
 				 '.$tmp_lang->module['name'].': '.$name.'
 				 '.$tmp_lang->module['age'].': '.$age.'

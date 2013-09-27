@@ -15,8 +15,8 @@ if(!empty($spamapikey)){
 		$postID = $_GET['postID'];
 		
 		$get = safe_query("SELECT * FROM ".PREFIX."forum_posts WHERE postID='".$postID."'");
-		if(mysql_num_rows($get)){
-			$ds=mysql_fetch_array($get);
+		if(mysqli_num_rows($get)){
+			$ds=mysqli_fetch_array($get);
 		
 			if(ispageadmin($userID) || ismoderator($userID, $ds['boardID'])){
 		
@@ -32,8 +32,8 @@ if(!empty($spamapikey)){
 		$commentID = $_GET['commentID'];
 		if(ispageadmin($userID) || isfeedbackadmin($userID)){
 			$get = safe_query("SELECT * FROM ".PREFIX."comments WHERE commentID='".$commentID."'");
-			if(mysql_num_rows($get)){
-				$ds=mysql_fetch_array($get);
+			if(mysqli_num_rows($get)){
+				$ds=mysqli_fetch_array($get);
 				
 				$text = $ds['comment'];
 				$spamApi = SpamApi::getInstance();

@@ -15,12 +15,12 @@ function deleteSpamUser($spammerID){
 	global $_language;
 	// Delete Comments
 	safe_query("DELETE FROM ".PREFIX."comments WHERE userID='".$spammerID."'");
-	echo mysql_affected_rows()." ".$_language->module["comments_deleted"]."<br/>";
+	echo mysqli_affected_rows()." ".$_language->module["comments_deleted"]."<br/>";
 	// Delete Forum Topics (update posts / topics)
 	$topics = safe_query("SELECT topicID,boardID FROM ".PREFIX."forum_topics WHERE userID='".$spammerID."'");
 	$topicIDs = array();
 	$boardIDs = array();
-	while($ds = mysql_fetch_assoc($topics)){
+	while($ds = mysqli_fetch_assoc($topics)){
 		$topicIDs[] = $ds['topicID'];
 		$boardIDs[] = $ds['boardID'];
 	}
@@ -33,12 +33,12 @@ function deleteSpamUser($spammerID){
 	}
 	$update_topics = array();
 	$posts = safe_query("SELECT * FROM ".PREFIX."forum_posts WHERE poster='".$spammerID."'");
-	while($ds = mysql_fetch_assoc($posts)){
+	while($ds = mysqli_fetch_assoc($posts)){
 		$update_topics[] = $ds['topicID'];
 	}
 	$update_topics = array_unique($update_topics);
 	safe_query("DELETE FROM ".PREFIX."forum_posts WHERE poster='".$spammerID."'");
-	echo mysql_num_rows($posts)." ".$_language->module["posts_deleted"]."<br/>";
+	echo mysqli_num_rows($posts)." ".$_language->module["posts_deleted"]."<br/>";
 
 	if(!empty($update_topics)){
 		safe_query("UPDATE ".PREFIX."forum_topics t SET replys 	=  (SELECT COUNT(postID) FROM ".PREFIX."forum_posts p WHERE p.topicID = t.topicID) -1
@@ -47,10 +47,10 @@ function deleteSpamUser($spammerID){
 	}
 
 	$topic = safe_query("SELECT topicID, boardID FROM ".PREFIX."forum_topics WHERE lastposter = '".$spammerID."'");
-	$num = mysql_num_rows($topic);
-	while($ds=mysql_fetch_assoc($topic)){
+	$num = mysqli_num_rows($topic);
+	while($ds=mysqli_fetch_assoc($topic)){
 		$get = safe_query("SELECT poster, date FROM ".PREFIX."forum_posts WHERE topicID='".$ds['topicID']."' ORDER BY date DESC LIMIT 0,1");
-		$topicData = mysql_fetch_assoc($get);
+		$topicData = mysqli_fetch_assoc($get);
 		safe_query("UPDATE ".PREFIX."forum_topics SET lastposter='".$topicData['poster']."', lastdate='".$topicData['date']."' WHERE topicID='".$ds['topicID']."'");
 		$boardIDs[] = $ds['boardID'];
 	}
@@ -65,14 +65,14 @@ function deleteSpamUser($spammerID){
 
 	// Delete Guestbooks
 	$get = safe_query("SELECT nickname, email FROM ".PREFIX."user WHERE userID='".$spammerID."'");
-	$spammer = mysql_fetch_assoc($get);
+	$spammer = mysqli_fetch_assoc($get);
 	//safe_query("DELETE FROM ".PREFIX."guestbook WHERE name='".$spammer['nickname']."' AND email='".$spammer['email']."'");
 	$user_g_book = safe_query("DELETE FROM ".PREFIX."user_gbook WHERE name='".$spammer['nickname']."' AND email='".$spammer['email']."'");
-	echo mysql_affected_rows()." ".$_language->module["guestbook_deleted"]."<br/>";
+	echo mysqli_affected_rows()." ".$_language->module["guestbook_deleted"]."<br/>";
 
 	// Delete Messenges
 	$mess = safe_query("DELETE FROM ".PREFIX."messenger WHERE userID='".$spammerID."' OR fromuser='".$spammerID."'");
-	echo mysql_affected_rows()." ".$_language->module["messages_deleted"]."<br/>";
+	echo mysqli_affected_rows()." ".$_language->module["messages_deleted"]."<br/>";
 
 	//safe_query("DELETE FROM ".PREFIX."user WHERE userID='".$spammerID."'");
 	safe_query("UPDATE ".PREFIX."user SET banned='perm', ban_reason='Spam',about='' WHERE userID='".$spammerID."'");
@@ -134,7 +134,7 @@ elseif($action == "multi"){
 	$CAPCLASS->create_transaction();
 	$hash = $CAPCLASS->get_hash();
 	$get = safe_query("SELECT ip, GROUP_CONCAT(userID) AS `ids`, GROUP_CONCAT(password) AS `passwords` FROM ".PREFIX."user WHERE ip !='' AND lastlogin > '".(time()-60*60*24*90)."' GROUP BY ip HAVING COUNT(userID) > 1  ORDER BY lastlogin DESC");
-	if(mysql_num_rows($get)){
+	if(mysqli_num_rows($get)){
 		echo '<table border="0" cellspacing="1" cellpadding="3" bgcolor="#DDDDDD" width="100%">
     <tr>
     <td class="title">'.$_language->module["userID"].':</td>
@@ -146,7 +146,7 @@ elseif($action == "multi"){
     <td class="title">'.$_language->module["posts"].':</td>
     </tr>';
 		$i = 0;
-		while($ds = mysql_fetch_assoc($get)){
+		while($ds = mysqli_fetch_assoc($get)){
 			$ids = explode(",",$ds['ids']);
 			$passwords = explode(",",$ds['passwords']);
 			if($i%2) { $td='td1'; }
@@ -161,7 +161,7 @@ elseif($action == "multi"){
 				if($i%2) { $td='td1'; }
 				else { $td='td2'; }
 				$get_u = safe_query("SELECT * FROM ".PREFIX."user WHERE userID='".$id."'");
-				$data = mysql_fetch_assoc($get_u);
+				$data = mysqli_fetch_assoc($get_u);
 					
 				$active = ($data['activated'] == '1') ? "<font color='green'>&#10004;</font>" : "<font color='red'>&#10006;</font>";
 				$banned = ($data['banned'] != null) ? "<font color='red'>&#10004;</font>" : "<font color='green'>&#10006;</font>";
@@ -203,7 +203,7 @@ elseif($action == "multi_ban"){
 	if($CAPCLASS->check_captcha(0, $_GET['captcha_hash'])) {
 		$ip = $_GET['ip'];
 		$get = safe_query("SELECT userID, nickname FROM ".PREFIX."user WHERE ip='".$ip."'");
-		while($ds = mysql_fetch_assoc($get)){
+		while($ds = mysqli_fetch_assoc($get)){
 			echo "<h3>".$ds['nickname']."</h3>";
 			if(isclanmember($ds['userID']) == false){
 				deleteSpamUser($ds['userID']);
@@ -223,10 +223,10 @@ elseif($action == "multi_just_block"){
 	if($CAPCLASS->check_captcha(0, $_GET['captcha_hash'])) {
 		$ip = $_GET['ip'];
 		$get = safe_query("SELECT userID, nickname,GROUP_CONCAT(nickname) AS `nicknames` FROM ".PREFIX."user WHERE ip='".$ip."' GROUP BY ip");
-		while($ds = mysql_fetch_assoc($get)){
+		while($ds = mysqli_fetch_assoc($get)){
 			echo "<h3>".$ip."</h3>";
 			if(isclanmember($ds['userID']) == false){
-				safe_query("UPDATE ".PREFIX."user SET banned='perm', ban_reason='Multi Accounts (".mysql_real_escape_string($ds['nicknames']).")' WHERE ip='".$ip."'");
+				safe_query("UPDATE ".PREFIX."user SET banned='perm', ban_reason='Multi Accounts (".$_database->escape_string($ds['nicknames']).")' WHERE ip='".$ip."'");
 				echo $_language->module["user_banned"]." (".$_language->module["nothing_deleted"].")<br/>".$ds['nicknames'];
 			}
 			else{
@@ -246,7 +246,7 @@ elseif($action == "api_log"){
 	}
 
 	$get = safe_query("SELECT * FROM ".PREFIX."api_log ORDER BY `date` DESC");
-	if(mysql_num_rows($get)){
+	if(mysqli_num_rows($get)){
 
 		echo '<input type="button" onclick="MM_confirm(\''.$_language->module["question_delete_all"].'\', \'admincenter.php?site=spam&amp;action=api_log&amp;del_option=del_all\')" value="'.$_language->module["delete_all"].'" /><br/><br/>';
 
@@ -255,7 +255,7 @@ elseif($action == "api_log"){
 		<td class="title">'.$_language->module["message"].':</td>
 		<td class="title">'.$_language->module["date"].':</td>
 		</tr>';
-		while($ds = mysql_fetch_assoc($get)){
+		while($ds = mysqli_fetch_assoc($get)){
 
 			if($i%2) {
 				$td='td1';
@@ -284,13 +284,13 @@ elseif($action == "forum_spam"){
 	
 	if(isset($_GET['del_option']) && $_GET['del_option']== "del_all"){
 		$get = safe_query("SELECT userID FROM ".PREFIX."forum_topics_spam");
-		while($ds = mysql_fetch_assoc($get)){
+		while($ds = mysqli_fetch_assoc($get)){
 			safe_query("UPDATE ".PREFIX."user SET banned='perm', ban_reason='Spam' WHERE userID='".$ds["userID"]."'");
 		}
 		safe_query("DELETE FROM ".PREFIX."forum_topics_spam");
 
 		$get = safe_query("SELECT poster FROM ".PREFIX."forum_posts_spam");
-		while($ds = mysql_fetch_assoc($get)){
+		while($ds = mysqli_fetch_assoc($get)){
 			safe_query("UPDATE ".PREFIX."user SET banned='perm', ban_reason='Spam' WHERE userID='".$ds["poster"]."'");
 		}
 		safe_query("DELETE FROM ".PREFIX."forum_posts_spam");
@@ -312,7 +312,7 @@ elseif($action == "forum_spam"){
 	echo "<h3>Topics</h3>";
 	
 	$get = safe_query("SELECT * FROM ".PREFIX."forum_topics_spam ORDER BY date DESC");
-	if(mysql_num_rows($get)){
+	if(mysqli_num_rows($get)){
 		echo '<table border="0" cellspacing="1" cellpadding="3" bgcolor="#DDDDDD" width="100%">
 		<tr>
 		<td class="title">'.$_language->module["nickname"].':</td>
@@ -324,7 +324,7 @@ elseif($action == "forum_spam"){
 		
 		$i = 0;
 		
-		while($ds = mysql_fetch_assoc($get)){
+		while($ds = mysqli_fetch_assoc($get)){
 			if($i%2) {
 				$td='td1';
 			}
@@ -353,7 +353,7 @@ elseif($action == "forum_spam"){
 	echo "<h3>Posts</h3>";
 	
 	$get = safe_query("SELECT * FROM ".PREFIX."forum_posts_spam ORDER BY date DESC");
-	if(mysql_num_rows($get)){
+	if(mysqli_num_rows($get)){
 		echo '<table border="0" cellspacing="1" cellpadding="3" bgcolor="#DDDDDD" width="100%">
 		<tr>
 		<td class="title">'.$_language->module["nickname"].':</td>
@@ -364,7 +364,7 @@ elseif($action == "forum_spam"){
 		
 		$i = 0;
 		
-		while($ds = mysql_fetch_assoc($get)){
+		while($ds = mysqli_fetch_assoc($get)){
 			if($i%2) {
 				$td='td1';
 			}
@@ -392,7 +392,7 @@ elseif($action == "forum_spam"){
 	echo "<h3>Comments</h3>";
 	
 	$get = safe_query("SELECT * FROM ".PREFIX."comments_spam ORDER BY date DESC");
-	if(mysql_num_rows($get)){
+	if(mysqli_num_rows($get)){
 		echo '<table border="0" cellspacing="1" cellpadding="3" bgcolor="#DDDDDD" width="100%">
 		<tr>
 		<td class="title">'.$_language->module["nickname"].':</td>
@@ -403,7 +403,7 @@ elseif($action == "forum_spam"){
 		
 		$i = 0;
 		
-		while($ds = mysql_fetch_assoc($get)){
+		while($ds = mysqli_fetch_assoc($get)){
 			if($i%2) {
 				$td='td1';
 			}
