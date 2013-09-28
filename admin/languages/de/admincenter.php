@@ -76,6 +76,10 @@ $language_array = Array(
   'user_administration'=>'Benutzer Administration',
   'user_ranks'=>'Benutzer Ränge',
   'visitor_statistics'=>'Besucher Statistiken',
+  'spam'=>'Spam',
+  'spam_forum'=>'Posts / Topics',
+  'spam_user'=>'Nutzer löschen',
+  'multiaccounts'=>'Multi-Accounts',
   'api_log'=>'API Log',
   'blocked_content'=>'Geblockte Inhalte'
 );
