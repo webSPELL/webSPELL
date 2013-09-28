@@ -535,6 +535,12 @@ elseif($action=="addwar") {
 
 		$chID=0;
 
+		$countries='';
+		$ergebnis = safe_query("SELECT * FROM `".PREFIX."countries` ORDER BY country");
+		while($ds = mysqli_fetch_array($ergebnis)) {
+			$countries .= '<option value="'.$ds['short'].'">'.$ds['country'].'</option>';
+		}
+
 		if(isset($_GET['chID'])) {
 
 			$chID = (int)$_GET['chID'];
@@ -617,7 +623,11 @@ elseif($action=="editwar") {
 		$maps = htmlspecialchars($ds['maps']);
 		$server = htmlspecialchars($ds['server']);
 		$warinfo = htmlspecialchars($ds['warinfo']);
-		$countries = str_replace('value="at" selected="selected"', 'value="at"', $countries);
+		$countries='';
+		$ergebnis = safe_query("SELECT * FROM `".PREFIX."countries` ORDER BY country");
+		while($ds = mysqli_fetch_array($ergebnis)) {
+			$countries .= '<option value="'.$ds['short'].'">'.$ds['country'].'</option>';
+		}
 		$countries = str_replace('value="'.$ds['oppcountry'].'"', 'value="'.$ds['oppcountry'].'" selected="selected"', $countries);
 		$hour = date("H", $ds['date']);
 		$minutes = date("i", $ds['date']);
@@ -655,6 +665,12 @@ elseif($action=="adddate") {
 			else $year.='<option value="'.$i.'">'.$i.'</option>';
 		}
 		$squads=getgamesquads();
+
+		$countries='';
+		$ergebnis = safe_query("SELECT * FROM `".PREFIX."countries` ORDER BY country");
+		while($ds = mysqli_fetch_array($ergebnis)) {
+			$countries .= '<option value="'.$ds['short'].'">'.$ds['country'].'</option>';
+		}
 
 		$bg1=BG_1;
 		eval ("\$upcoming_date_new = \"".gettemplate("upcoming_date_new")."\";");
@@ -704,6 +720,11 @@ elseif($action=="editdate") {
 		for($i=2000; $i<2016; $i++) {
 			if($i==date("Y", $ds['enddate'])) $endyear.='<option selected="selected">'.$i.'</option>';
 			else $endyear.='<option>'.$i.'</option>';
+		}
+		$countries='';
+		$ergebnis = safe_query("SELECT * FROM `".PREFIX."countries` ORDER BY country");
+		while($ds = mysqli_fetch_array($ergebnis)) {
+			$countries .= '<option value="'.$ds['short'].'">'.$ds['country'].'</option>';
 		}
 		$countries=str_replace(' selected="selected"', '', $countries);
 		$countries=str_replace('value="'.$ds['country'].'"', 'value="'.$ds['country'].'" selected="selected"', $countries);

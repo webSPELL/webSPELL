@@ -134,6 +134,12 @@ elseif($action=="delete") {
 		
 	  	$squads = getgamesquads();
 	  
+	  	$countries='';
+		$ergebnis = safe_query("SELECT * FROM `".PREFIX."countries` ORDER BY country");
+		while($ds = mysqli_fetch_array($ergebnis)) {
+			$countries .= '<option value="'.$ds['short'].'">'.$ds['country'].'</option>';
+		}
+	  
 	  	$bg1 = BG_1;
 	  	
 	  	if(!isset($showerror)) $showerror='';

@@ -448,13 +448,6 @@ if(!mysqli_num_rows(safe_query("SELECT ip FROM ".PREFIX."counter_iplist WHERE ip
 $res=mysqli_fetch_assoc(safe_query("SELECT count(*) as maxuser FROM ".PREFIX."whoisonline"));
 safe_query("UPDATE ".PREFIX."counter SET maxonline = ".$res['maxuser']." WHERE maxonline < ".$res['maxuser']);
 
-// -- COUNTRY LIST -- //
-
-$countries='';
-$ergebnis = safe_query("SELECT * FROM `".PREFIX."countries` ORDER BY country");
-while($ds = mysqli_fetch_array($ergebnis)) {
-	$countries .= '<option value="'.$ds['short'].'">'.$ds['country'].'</option>';
-}
 
 // -- SEARCH ENGINE OPTIMIZATION (SEO) -- //
 if(stristr($_SERVER['PHP_SELF'],"/admin/") == false){

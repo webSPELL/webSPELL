@@ -281,6 +281,11 @@ if($action=="new") {
 			if($i==date("Y", time())) $year.='<option value="'.$i.'" selected="selected">'.date("Y", time()).'</option>';
 			else $year.='<option value="'.$i.'">'.$i.'</option>';
 		}
+		$countries='';
+		$ergebnis = safe_query("SELECT * FROM `".PREFIX."countries` ORDER BY country");
+		while($ds = mysqli_fetch_array($ergebnis)) {
+			$countries .= '<option value="'.$ds['short'].'">'.$ds['country'].'</option>';
+		}
 
 		$bg1=BG_1;
 		eval ("\$demo_new = \"".gettemplate("demo_new")."\";");
@@ -309,7 +314,11 @@ elseif($action=="edit") {
 		}
 		$games=str_replace(' selected="selected"', '', $games);
 		$games=str_replace('value="'.$ds['game'].'"', 'value="'.$ds['game'].'" selected="selected"', $games);
-		$countries=str_replace(' selected="selected"', '', $countries);
+		$countries='';
+		$ergebnis = safe_query("SELECT * FROM `".PREFIX."countries` ORDER BY country");
+		while($ds = mysqli_fetch_array($ergebnis)) {
+			$countries .= '<option value="'.$ds['short'].'">'.$ds['country'].'</option>';
+		}
 		$country1=str_replace('value="'.$ds['country1'].'"', 'value="'.$ds['country1'].'" selected="selected"', $countries);
 		$country2=str_replace('value="'.$ds['country2'].'"', 'value="'.$ds['country2'].'" selected="selected"', $countries);
 		$clanname1=htmlspecialchars($ds['clan1']);
