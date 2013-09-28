@@ -27,13 +27,13 @@ class SpamApi {
     public function learn($message, $type){
     	if($this->enabled && $this->key){
     		$postdata = array();
-			$postdata["apikey"] = $spamapikey;
+			$postdata["apikey"] = $this->key;
 			$postdata["learn"] = json_encode(array("message"=>$message,"type"=>$type));
-			$this->postRequest($postdata);
+			$response = $this->postRequest($postdata);
 			if(!empty($response)){
 				$json = json_decode($response,true);
 				if($json['response'] != "ok"){
-					$this->logError($json, $postdata);
+					$this->logError($response, $postdata);
 				}
 			}
     	}
@@ -54,7 +54,7 @@ class SpamApi {
 				if(!empty($response)){
 					$json = json_decode($response,true);
 					if($json['response'] != "ok"){
-						$this->logError($json, $postdata);
+						$this->logError($response, $postdata);
 						if($this->blockOnError){
 							$ret = self::Spam;
 						}
@@ -78,7 +78,7 @@ class SpamApi {
     	return self::NoSpam;
     }
     private function logError($message, $data){
-    	safe_query("INSERT INTO ".PREFIX."api_log (`message`,`date`, `data`) VALUES ('".addslashes($message)."', '".time()."', '".addslashes(json_encode($data))."')");
+    	safe_query("INSERT INTO ".PREFIX."api_log (`message`,`date`, `data`) VALUES ('".addslashes($message)."', '".time()."', '".json_encode($data)."')");
     }
     private function postRequest($data){
     	if(function_exists("curl_init")){
