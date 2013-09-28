@@ -107,7 +107,7 @@ elseif(isset($_POST['saveusercomment'])) {
 	if(checkCommentsAllow($type,$parentID)){
 		$date=time();
 		if($validation == SpamApi::Spam){
-			safe_query("INSERT INTO ".PREFIX."comments ( parentID, type, userID, date, comment,rating ) values( '".$parentID."', '".$type."', '".$userID."', '".$date."', '".$message."', '".$rating."' ) ");
+			safe_query("INSERT INTO ".PREFIX."comments_spam ( parentID, type, userID, date, comment,rating ) values( '".$parentID."', '".$type."', '".$userID."', '".$date."', '".$message."', '".$rating."' ) ");
 		}
 		else{
 			safe_query("INSERT INTO ".PREFIX."comments ( parentID, type, userID, date, comment ) values( '".$parentID."', '".$type."', '".$userID."', '".$date."', '".$message."' ) ");
