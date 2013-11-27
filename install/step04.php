@@ -52,7 +52,7 @@ if($_POST['hp_url']) {
    <br /><input type="radio" name="installtype" value="update_final" /> <?php echo $_language->module['update_40']; ?>
    <br /><input type="radio" name="installtype" value="update_40100" /> <?php echo $_language->module['update_40100']; ?>
    <br /><input type="radio" name="installtype" value="update_40102" /> <?php echo $_language->module['update_40102']; ?>
-   <br /><input type="radio" name="installtype" value="update_4022" /> <?php echo $_language->module['update_4022']; ?>
+   <br /><input type="radio" name="installtype" value="update_40200" /> <?php echo $_language->module['update_40200']; ?>
    <br /><input type="radio" name="installtype" value="full" checked="checked" /> <?php echo $_language->module['new_install']; ?>
           
    <input type="hidden" name="hp_url" value="<?php echo $_POST['hp_url']; ?>" />
