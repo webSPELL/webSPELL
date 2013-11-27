@@ -38,6 +38,13 @@ function fullinstall() {
   `about` longtext NOT NULL
 )");
 
+	mysqli_query($_database, "DROP TABLE IF EXISTS `".PREFIX."api_log`");
+	mysqli_query($_database, "CREATE TABLE `".PREFIX."api_log` (
+  `date` int(11) NOT NULL,
+  `message` varchar(255) NOT NULL,
+  `data` text NOT NULL
+)");
+
 	mysqli_query($_database, "DROP TABLE IF EXISTS `".PREFIX."articles`");
 	mysqli_query($_database, "CREATE TABLE `".PREFIX."articles` (
   `articlesID` int(11) NOT NULL AUTO_INCREMENT,
@@ -181,6 +188,22 @@ function fullinstall() {
   PRIMARY KEY  (`commentID`)
 ) AUTO_INCREMENT=1 ");
 
+	mysqli_query($_database, "DROP TABLE IF EXISTS `".PREFIX."comments_spam`");
+	mysqli_query($_database, "CREATE TABLE `".PREFIX."comments_spam` (
+  `commentID` int(11) NOT NULL AUTO_INCREMENT,
+  `parentID` int(11) NOT NULL DEFAULT '0',
+  `type` char(2) NOT NULL DEFAULT '',
+  `userID` int(11) NOT NULL DEFAULT '0',
+  `nickname` varchar(255) NOT NULL DEFAULT '',
+  `date` int(14) NOT NULL DEFAULT '0',
+  `comment` text NOT NULL,
+  `url` varchar(255) NOT NULL DEFAULT '',
+  `email` varchar(255) NOT NULL DEFAULT '',
+  `ip` varchar(255) NOT NULL DEFAULT '',
+  `rating` varchar(255) NOT NULL DEFAULT '',
+  PRIMARY KEY (`commentID`)
+) AUTO_INCREMENT=1 ");
+
 	mysqli_query($_database, "DROP TABLE IF EXISTS `".PREFIX."counter`");
 	mysqli_query($_database, "CREATE TABLE `".PREFIX."counter` (
   `hits` int(20) NOT NULL default '0',
@@ -317,6 +340,17 @@ function fullinstall() {
   PRIMARY KEY  (`postID`)
 ) AUTO_INCREMENT=1 ");
 
+	mysqli_query($_database, "DROP TABLE IF EXISTS `".PREFIX."forum_posts_spam`");
+	mysqli_query($_database, "CREATE TABLE `".PREFIX."forum_posts_spam` (
+  `postID` int(11) NOT NULL AUTO_INCREMENT,
+  `boardID` int(11) NOT NULL default '0',
+  `topicID` int(11) NOT NULL default '0',
+  `date` int(14) NOT NULL default '0',
+  `poster` int(11) NOT NULL default '0',
+  `message` text NOT NULL,
+  `rating` varchar(255) NOT NULL default '',
+  PRIMARY KEY (`postID`)
+) AUTO_INCREMENT=1 ");
 
 	mysqli_query($_database, "DROP TABLE IF EXISTS `".PREFIX."forum_ranks`");
 	mysqli_query($_database, "CREATE TABLE `".PREFIX."forum_ranks` (
@@ -353,6 +387,20 @@ function fullinstall() {
   `closed` int(1) NOT NULL default '0',
   `moveID` int(11) NOT NULL default '0',
   PRIMARY KEY  (`topicID`)
+) AUTO_INCREMENT=1 ");
+
+	mysqli_query($_database, "DROP TABLE IF EXISTS `".PREFIX."forum_topics_spam`");
+	mysqli_query($_database, "CREATE TABLE `".PREFIX."forum_topics_spam` (
+  `topicID` int(11) NOT NULL AUTO_INCREMENT,
+  `boardID` int(11) NOT NULL,
+  `userID` int(11) NOT NULL,
+  `date` int(14) NOT NULL,
+  `icon` varchar(255) NOT NULL,
+  `topic` varchar(255) NOT NULL,
+  `sticky` int(1) NOT NULL,
+  `message` text NOT NULL,
+  `rating` varchar(255) NOT NULL DEFAULT '',
+  PRIMARY KEY (`topicID`)
 ) AUTO_INCREMENT=1 ");
 
 	mysqli_query($_database, "DROP TABLE IF EXISTS `".PREFIX."games`");
@@ -591,6 +639,12 @@ function fullinstall() {
   `profilelast` int(11) NOT NULL default '0',
   `topnewsID` int(11) NOT NULL default '0',
   `sessionduration` int(3) NOT NULL default '0',
+  `spam_check` int(1) NOT NULL default '0',
+  `detect_language` int(1) NOT NULL default '0',
+  `spamapikey` varchar(32) NOT NULL default '',
+  `spamapihost` varchar(255) NOT NULL default '',
+  `spammaxposts` int(11) NOT NULL default '',
+  `spamapiblockerror` int(1) NOT NULL default '0',
   PRIMARY KEY  (`settingID`)
 ) AUTO_INCREMENT=2 ");
 
@@ -1947,53 +2001,59 @@ function update40101_40200() {
 	}
 }
 
-function update40200_40300(){
-  mysqli_query("CREATE TABLE `".PREFIX."forum_posts_spam` (
+function update40200_40300() {
+	mysqli_query($_database, "CREATE TABLE `".PREFIX."forum_posts_spam` (
   `postID` int(11) NOT NULL AUTO_INCREMENT,
-  `boardID` int(11) NOT NULL DEFAULT '0',
-  `topicID` int(11) NOT NULL DEFAULT '0',
-  `date` int(14) NOT NULL DEFAULT '0',
-  `poster` int(11) NOT NULL DEFAULT '0',
-  `message` text COLLATE utf8_unicode_ci NOT NULL,
-  `rating` varchar(255) COLLATE utf8_unicode_ci NOT NULL DEFAULT '',
+  `boardID` int(11) NOT NULL default '0',
+  `topicID` int(11) NOT NULL default '0',
+  `date` int(14) NOT NULL default '0',
+  `poster` int(11) NOT NULL default '0',
+  `message` text NOT NULL,
+  `rating` varchar(255) NOT NULL default '',
   PRIMARY KEY (`postID`)
-  )");
-  mysqli_query("CREATE TABLE `".PREFIX."forum_topics_spam` (
+) AUTO_INCREMENT=1 ");
+
+	mysqli_query($_database, "DROP TABLE IF EXISTS `".PREFIX."forum_topics_spam`");
+	mysqli_query($_database, "CREATE TABLE `".PREFIX."forum_topics_spam` (
   `topicID` int(11) NOT NULL AUTO_INCREMENT,
   `boardID` int(11) NOT NULL,
   `userID` int(11) NOT NULL,
   `date` int(14) NOT NULL,
-  `icon` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `topic` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `icon` varchar(255) NOT NULL,
+  `topic` varchar(255) NOT NULL,
   `sticky` int(1) NOT NULL,
-  `message` text COLLATE utf8_unicode_ci NOT NULL,
-  `rating` varchar(255) COLLATE utf8_unicode_ci NOT NULL DEFAULT '',
+  `message` text NOT NULL,
+  `rating` varchar(255) NOT NULL DEFAULT '',
   PRIMARY KEY (`topicID`)
-  )");
-  mysqli_query("CREATE TABLE `".PREFIX."comments_spam` (
+) AUTO_INCREMENT=1 ");
+
+	mysqli_query($_database, "DROP TABLE IF EXISTS `".PREFIX."comments_spam`");
+	mysqli_query($_database, "CREATE TABLE `".PREFIX."comments_spam` (
   `commentID` int(11) NOT NULL AUTO_INCREMENT,
   `parentID` int(11) NOT NULL DEFAULT '0',
-  `type` char(2) COLLATE utf8_unicode_ci NOT NULL DEFAULT '',
+  `type` char(2) NOT NULL DEFAULT '',
   `userID` int(11) NOT NULL DEFAULT '0',
-  `nickname` varchar(255) COLLATE utf8_unicode_ci NOT NULL DEFAULT '',
+  `nickname` varchar(255) NOT NULL DEFAULT '',
   `date` int(14) NOT NULL DEFAULT '0',
-  `comment` text COLLATE utf8_unicode_ci NOT NULL,
-  `url` varchar(255) COLLATE utf8_unicode_ci NOT NULL DEFAULT '',
-  `email` varchar(255) COLLATE utf8_unicode_ci NOT NULL DEFAULT '',
-  `ip` varchar(255) COLLATE utf8_unicode_ci NOT NULL DEFAULT '',
-  `rating` varchar(255) COLLATE utf8_unicode_ci NOT NULL DEFAULT '',
+  `comment` text NOT NULL,
+  `url` varchar(255) NOT NULL DEFAULT '',
+  `email` varchar(255) NOT NULL DEFAULT '',
+  `ip` varchar(255) NOT NULL DEFAULT '',
+  `rating` varchar(255) NOT NULL DEFAULT '',
   PRIMARY KEY (`commentID`)
-)");
-  mysqli_query("CREATE TABLE `".PREFIX."api_log` (
+) AUTO_INCREMENT=1 ");
+
+	mysqli_query($_database, "CREATE TABLE `".PREFIX."api_log` (
   `date` int(11) NOT NULL,
   `message` varchar(255) NOT NULL,
   `data` text NOT NULL
 )");
-  mysqli_query("ALTER TABLE `".PREFIX."settings` ADD `spam_check` INT( 1 ) NOT NULL ;");
-  mysqli_query("ALTER TABLE `".PREFIX."settings` ADD `detect_language` INT( 1 ) NOT NULL ;");
-  mysqli_query("ALTER TABLE `".PREFIX."settings` ADD `spamapikey` VARCHAR( 32 ) NOT NULL ;");
-  mysqli_query("ALTER TABLE `".PREFIX."settings` ADD `spamapihost` VARCHAR( 255 ) NOT NULL ;");
-  mysqli_query("ALTER TABLE `".PREFIX."settings` ADD `spammaxposts` INT( 11 ) NOT NULL ;");
-  mysqli_query("ALTER TABLE `".PREFIX."settings` ADD `spamapiblockerror` INT( 1 ) NOT NULL ;");
+
+  mysqli_query($_database, "ALTER TABLE `".PREFIX."settings` ADD `spam_check` int(1) NOT NULL default '0';");
+  mysqli_query($_database, "ALTER TABLE `".PREFIX."settings` ADD `detect_language` int(1) NOT NULL default '0';");
+  mysqli_query($_database, "ALTER TABLE `".PREFIX."settings` ADD `spamapikey` varchar(32) NOT NULL default '';");
+  mysqli_query($_database, "ALTER TABLE `".PREFIX."settings` ADD `spamapihost` varchar(255) NOT NULL default '';");
+  mysqli_query($_database, "ALTER TABLE `".PREFIX."settings` ADD `spammaxposts` int(11) NOT NULL default '';");
+  mysqli_query($_database, "ALTER TABLE `".PREFIX."settings` ADD `spamapiblockerror` int(1) NOT NULL default '0';");
 }
 ?>
