@@ -2055,5 +2055,20 @@ function update40200_40300() {
   mysqli_query($_database, "ALTER TABLE `".PREFIX."settings` ADD `spamapihost` varchar(255) NOT NULL default '';");
   mysqli_query($_database, "ALTER TABLE `".PREFIX."settings` ADD `spammaxposts` int(11) NOT NULL default '';");
   mysqli_query($_database, "ALTER TABLE `".PREFIX."settings` ADD `spamapiblockerror` int(1) NOT NULL default '0';");
+
+  //add new languages for the existing language system
+  mysqli_query($_database, "INSERT INTO `".PREFIX."news_languages` ( `langID` , `language`, `lang` , `alt` )
+    VALUES
+      ('', 'arabic', 'sa', 'arabic'),
+      ('', 'bosnian', 'ba', 'bosnian'),
+      ('', 'estonian', 'ee', 'estonian'),
+      ('', 'georgian', 'ge', 'georgian'),
+      ('', 'macedonian', 'mk', 'macedonian'),
+      ('', 'persian', 'ir', 'persian'),
+      ('', 'romanian', 'ro', 'romanian'),
+      ('', 'russian', 'ru', 'russian'),
+      ('', 'serbian', 'yu', 'serbian'),
+      ('', 'slovenian', 'si', 'slovenian')");
+
 }
 ?>
