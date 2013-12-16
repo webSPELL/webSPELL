@@ -115,7 +115,7 @@ if($action=="save") {
 		$date = time();
 		$qry = "INSERT INTO ".PREFIX."files ( filecatID, poster, date, filename, filesize, info, file, mirrors, downloads, accesslevel ) VALUES ( '".$filecat."', '".$poster."', '".$date."', '".$filename."', '".$filesize."', '".$info."', '".$file."', '".$mirrors."', '0', '".$accesslevel."')";
 		if(safe_query($qry)) {
-			redirect("index.php?site=files&amp;file=".mysqli_insert_id()."", $_language->module['file_created'], "3");
+			redirect("index.php?site=files&amp;file=".mysqli_insert_id($_database)."", $_language->module['file_created'], "3");
 		}
 		else redirect("index.php?site=files", $_language->module['file_not_created'], "3");
 	}

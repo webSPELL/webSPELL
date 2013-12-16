@@ -35,7 +35,7 @@ if(isset($_POST['save'])) {
 	safe_query("INSERT INTO ".PREFIX."links ( linkcatID, name, url, info )
                values( '".$_POST['cat']."', '".strip_tags($_POST['name'])."', '".$_POST['url']."', '".$_POST['info']."' ) ");
 	
-	$id=mysqli_insert_id();
+	$id=mysqli_insert_id($_database);
 	$banner = $_FILES['banner'];
 	$filepath = "./images/links/";
 	

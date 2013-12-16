@@ -224,7 +224,7 @@ elseif(isset($_POST["save"])) {
 	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
 		safe_query("INSERT INTO ".PREFIX."sponsors (sponsorID, name, url, info, displayed, mainsponsor, date, sort) values('', '".$name."', '".$url."', '".$info."', '".$displayed."', '".$mainsponsor."', '".time()."', '1')");
 		
-		$id=mysqli_insert_id();
+		$id=mysqli_insert_id($_database);
 		
 		if($banner['name'] != "") {
 			move_uploaded_file($banner['tmp_name'], $filepath.$banner['name'].".tmp");

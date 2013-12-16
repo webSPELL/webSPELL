@@ -85,7 +85,7 @@ if(isset($_POST['save'])) {
 			
 			$icon = $_FILES['icon'];
 			$icon_small = $_FILES['icon_small'];
-			$id=mysqli_insert_id();
+			$id=mysqli_insert_id($_database);
 			$filepath = "../images/squadicons/";
 			
 			if($icon['name'] != "") {

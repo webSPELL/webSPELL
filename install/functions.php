@@ -1485,7 +1485,7 @@ function update40101_40200() {
 				( boardID, readgrps, writegrps, userID, date, lastdate, topic, lastposter, sticky)
 				VALUES
 				('".$ds['boardID']."', '".$rules['readgrps']."', '".$rules['writegrps']."', '".$ds['userID']."', '".$ds['date']."', '".$ds['date']."', '".$ds['topic']."', '".$ds['userID']."', '1')");
-		$annID = mysqli_insert_id();
+		$annID = mysqli_insert_id($_database);
 		mysqli_query($_database, "INSERT INTO ".PREFIX."forum_posts
 				( boardID, topicID, date, poster, message)
 				VALUES
@@ -2002,6 +2002,8 @@ function update40101_40200() {
 }
 
 function update40200_40300() {
+	global $_database;
+	
 	mysqli_query($_database, "CREATE TABLE `".PREFIX."forum_posts_spam` (
   `postID` int(11) NOT NULL AUTO_INCREMENT,
   `boardID` int(11) NOT NULL default '0',

@@ -98,7 +98,7 @@ if(isset($_POST['save'])) {
 	
 			safe_query("INSERT INTO `".PREFIX."user` (`registerdate`, `lastlogin`, `username`, `password`, `nickname`, `email`, `newsletter`, `activated`,`ip`) VALUES ('$registerdate', '$registerdate', '$username', '$md5pwd', '$nickname', '$mail', '1', '".$activationkey."','".$GLOBALS['ip']."')");
 	
-			$insertid = mysqli_insert_id();
+			$insertid = mysqli_insert_id($_database);
 	
 			// insert in user_groups
 			safe_query("INSERT INTO ".PREFIX."user_groups ( userID ) values('$insertid' )");

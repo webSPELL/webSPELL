@@ -75,7 +75,7 @@ if(isset($_POST['newreply']) && !isset($_POST['preview'])) {
 	$date=time();
 	if($validation == SpamApi::NoSpam){
 		safe_query("INSERT INTO ".PREFIX."forum_posts ( boardID, topicID, date, poster, message ) VALUES( '".$_REQUEST['board']."', '$topic', '$date', '$userID', '".$message."' ) ");
-		$lastpostID = mysqli_insert_id();
+		$lastpostID = mysqli_insert_id($_database);
 		safe_query("UPDATE ".PREFIX."forum_boards SET posts=posts+1 WHERE boardID='".$_REQUEST['board']."' ");
 		safe_query("UPDATE ".PREFIX."forum_topics SET lastdate='".$date."', lastposter='".$userID."', lastpostID='".$lastpostID."', replys=replys+1 $do_sticky WHERE topicID='$topic' ");
 

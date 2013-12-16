@@ -38,7 +38,7 @@ if(isset($_POST['save'])) {
 		}
 		else {
 			safe_query("INSERT INTO `".PREFIX."static` ( `name`, `accesslevel`,`content` ) values( '".$_POST['name']."', '".$_POST['accesslevel']."','".$_POST['message']."' ) ");
-			$id = mysqli_insert_id();
+			$id = mysqli_insert_id($_database);
 		}
 	} else echo $_language->module['transaction_invalid'];
 }

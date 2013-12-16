@@ -39,7 +39,7 @@ if($action=="new") {
 	if(!isnewswriter($userID)) die($_language->module['no_access']);
 
 	safe_query("INSERT INTO ".PREFIX."news (date, poster, saved) VALUES ('".time()."', '".$userID."', '0')");
-	$newsID=mysqli_insert_id();
+	$newsID=mysqli_insert_id($_database);
 
 	$rubrics='';
 	$newsrubrics=safe_query("SELECT rubricID, rubric FROM ".PREFIX."news_rubrics ORDER BY rubric");

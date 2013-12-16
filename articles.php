@@ -223,7 +223,7 @@ if($action=="new") {
 
 	if(isnewsadmin($userID)) {
 		safe_query("INSERT INTO ".PREFIX."articles ( date, poster, saved ) VALUES( '".time()."', '$userID', '0' ) ");
-		$articlesID=mysqli_insert_id();
+		$articlesID=mysqli_insert_id($_database);
 
 		$selects='';
 		for($i=1;$i<100;$i++) {

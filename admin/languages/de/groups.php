@@ -40,7 +40,7 @@ $language_array = Array(
   'error_groupid'=>'FEHLER: Fehlende fgrID',
   'group_name'=>'Benutzergruppenname',
   'groups'=>'Forum Benutzergruppen',
-  'new_group'=>'neue Bentuzergruppe',
+  'new_group'=>'neue Benutzergruppe',
   'really_delete'=>'Diese Benutzergruppe wirklich löschen?',
   'transaction_invalid'=>'Transaktions ID ungültig'
 );

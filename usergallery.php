@@ -48,7 +48,7 @@ if($userID) {
 			safe_query("INSERT INTO ".PREFIX."gallery_pictures ( galleryID, name, comment, comments) VALUES ('".$_POST['galleryID']."', '".$insertname."', '".$_POST['comment']."', '".$_POST['comments']."' )");
 
 			$typ = getimagesize($picture['tmp_name']);
-			$insertid = mysqli_insert_id();
+			$insertid = mysqli_insert_id($_database);
 			if(is_array($typ)){
 				switch ($typ[2]) {
 					case 1: $endung = '.gif'; break;

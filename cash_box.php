@@ -38,7 +38,7 @@ if(isset($_POST['save']) and $_POST['save']) {
 	$paydate=mktime(0,0,0,$_POST['month'],$_POST['day'],$_POST['year']);
 
 	safe_query("INSERT INTO ".PREFIX."cash_box ( date, paydate, usedfor, info, totalcosts, usercosts, squad, konto ) VALUES ('$date', '$paydate', '".$_POST['usedfor']."', '".$_POST['info']."', '".$_POST['euro']."', '".$_POST['usereuro']."', '".$_POST['squad']."', '".$_POST['konto']."' ) ");
-	$id=mysqli_insert_id();
+	$id=mysqli_insert_id($_database);
 
 	header("Location: index.php?site=cash_box&id=$id");
 }
