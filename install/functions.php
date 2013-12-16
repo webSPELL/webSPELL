@@ -2002,6 +2002,8 @@ function update40101_40200() {
 }
 
 function update40200_40300() {
+	global $_database;
+	
 	mysqli_query($_database, "CREATE TABLE `".PREFIX."forum_posts_spam` (
   `postID` int(11) NOT NULL AUTO_INCREMENT,
   `boardID` int(11) NOT NULL default '0',
