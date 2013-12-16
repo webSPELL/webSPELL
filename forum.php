@@ -860,7 +860,7 @@ if(isset($_POST['submit']) || isset($_POST['movetopic']) || isset($_GET['addtopi
 				safe_query("INSERT INTO ".PREFIX."forum_posts ( boardID, topicID, date, poster, message ) values( '$board', '$id', '$date', '$userID', '".$message."' ) ");
 		
 				// check if there are more than 1000 unread topics => delete oldest one
-				$dv = safe_query("SELECT topics FROM ".PREFIX."user WHERE userID='".$userID."'");
+				$dv = mysqli_fetch_array(safe_query("SELECT topics FROM ".PREFIX."user WHERE userID='".$userID."'"));
 				$array = explode('|', $dv['topics']);
 				if(count($array)>=1000) safe_query("UPDATE ".PREFIX."user SET topics='|".implode('|', array_slice($array, 2))."' WHERE userID='".$userID."'");
 				unset($array);
