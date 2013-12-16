@@ -92,7 +92,7 @@ elseif(isset($_POST['save']))  {
 
 	safe_query("INSERT INTO ".PREFIX."poll (aktiv, titel, o1, o2, o3, o4, o5, o6, o7, o8, o9, o10, comments, laufzeit, intern)
 		         	values( '1', '".$_POST['title']."', '".$_POST['op1']."', '".$_POST['op2']."', '".$_POST['op3']."', '".$_POST['op4']."', '".$_POST['op5']."', '".$_POST['op6']."', '".$_POST['op7']."', '".$_POST['op8']."', '".$_POST['op9']."', '".$_POST['op10']."', '".$_POST['comments']."' ,'".mktime((int)$_POST['laufzeit_hour'], (int)$_POST['laufzeit_minute'], 0, (int)$_POST['laufzeit_month'], (int)$_POST['laufzeit_day'], (int)$_POST['laufzeit_year'])."', '".$intern."')");
-	$id = mysqli_insert_id();
+	$id = mysqli_insert_id($_database);
 
 	safe_query("INSERT INTO ".PREFIX."poll_votes (pollID, o1, o2, o3, o4, o5, o6, o7, o8, o9, o10)
 		         values( '$id', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0' )");
@@ -114,7 +114,7 @@ elseif(isset($_POST['saveedit'])) {
 		safe_query("DELETE FROM ".PREFIX."poll_votes WHERE pollID='$pollID'");
 
 		safe_query("INSERT INTO ".PREFIX."poll (aktiv, titel, o1, o2, o3, o4, o5, o6, o7, o8, o9, o10, comments, laufzeit, intern) values( '1', '".$_POST['title']."', '".$_POST['op1']."', '".$_POST['op2']."', '".$_POST['op3']."', '".$_POST['op4']."', '".$_POST['op5']."', '".$_POST['op6']."', '".$_POST['op7']."', '".$_POST['op8']."', '".$_POST['op9']."', '".$_POST['op10']."', '".$_POST['comments']."', '".mktime((int)$_POST['laufzeit_hour'], (int)$_POST['laufzeit_minute'], 0, (int)$_POST['laufzeit_month'], (int)$_POST['laufzeit_day'], (int)$_POST['laufzeit_year'])."' , '".$intern."')");
-		$id = mysqli_insert_id();
+		$id = mysqli_insert_id($_database);
 		safe_query("INSERT INTO ".PREFIX."poll_votes (pollID, o1, o2, o3, o4, o5, o6, o7, o8, o9, o10) values( '".$id."', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0' )");
 	}
 	else safe_query("UPDATE ".PREFIX."poll SET titel='".$_POST['title']."', o1='".$_POST['op1']."', o2='".$_POST['op2']."', o3='".$_POST['op3']."', o4='".$_POST['op4']."', o5='".$_POST['op5']."', o6='".$_POST['op6']."', o7='".$_POST['op7']."', o8='".$_POST['op8']."', o9='".$_POST['op9']."', o10='".$_POST['op10']."', comments='".$_POST['comments']."', laufzeit='".mktime((int)$_POST['laufzeit_hour'], (int)$_POST['laufzeit_minute'], 0, (int)$_POST['laufzeit_month'], $_POST['laufzeit_day'], (int)$_POST['laufzeit_year'])."', intern='".$intern."' WHERE pollID='$pollID'");

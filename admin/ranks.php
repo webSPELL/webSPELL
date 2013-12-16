@@ -50,7 +50,7 @@ elseif(isset($_POST['save'])) {
 			else $maximum=$max;
 		
 			safe_query("INSERT INTO ".PREFIX."forum_ranks ( rank, postmin, postmax ) values( '$name', '$min', '$maximum' )");
-			$id=mysqli_insert_id();
+			$id=mysqli_insert_id($_database);
 		
 			$filepath = "../images/icons/ranks/";
 			if ($rank['name'] != "") {

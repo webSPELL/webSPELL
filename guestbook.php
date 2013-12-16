@@ -85,7 +85,7 @@ if(isset($_POST['save'])) {
 					$touser[]=$ds['userID'];
 				}
 	
-				$message = str_replace('%insertid%', 'id_'.mysqli_insert_id(), $_database->escape_string($_language->module['pmtext_newentry']));
+				$message = str_replace('%insertid%', 'id_'.mysqli_insert_id($_database), $_database->escape_string($_language->module['pmtext_newentry']));
 				foreach($touser as $id) {
 					sendmessage($id,$_database->escape_string($_language->module['pmsubject_newentry']),$message);
 				}

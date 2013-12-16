@@ -212,7 +212,7 @@ elseif($action=="save") {
 	safe_query("INSERT INTO ".PREFIX."clanwars ( date, squad, game, league, leaguehp, opponent, opptag, oppcountry, opphp, maps, hometeam, oppteam, server, hltv, homescore, oppscore, report, comments, linkpage)
                  VALUES( '$date', '$squad', '$game', '".$league."', '$leaguehp', '".$opponent."', '".$opptag."', '$oppcountry', '$opphp', '".$theMaps."', '$home_string', '$oppteam', '$server', '$hltv', '$theHomeScore', '$theOppScore', '".$report."', '$comments', '$linkpage' ) ");
 
-	$cwID=mysqli_insert_id();
+	$cwID=mysqli_insert_id($_database);
 	$date=date("d.m.Y", $date);
 
 	// INSERT CW-NEWS
@@ -221,7 +221,7 @@ elseif($action=="save") {
 	 	$_language->read_module('bbcode', true);
 	 	
 		safe_query("INSERT INTO ".PREFIX."news (date, poster, saved, cwID) VALUES ('".time()."', '$userID', '0', '$cwID')");
-		$newsID=mysqli_insert_id();
+		$newsID=mysqli_insert_id($_database);
 		
 		$rubrics = '';
 		$newsrubrics=safe_query("SELECT rubricID, rubric FROM ".PREFIX."news_rubrics ORDER BY rubric");

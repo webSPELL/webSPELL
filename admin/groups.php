@@ -70,7 +70,7 @@ elseif($action=="save") {
 	$CAPCLASS = new Captcha;
 	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
 		safe_query("INSERT INTO ".PREFIX."forum_groups ( name ) values( '".$_POST['name']."' ) ");
-		$id = mysqli_insert_id();
+		$id = mysqli_insert_id($_database);
 		if(!safe_query("ALTER TABLE ".PREFIX."user_forum_groups ADD `".$id."` INT( 1 ) NOT NULL ; ")) {
 			safe_query("ALTER TABLE ".PREFIX."user_forum_groups DROP `".$id."`");
 			safe_query("ALTER TABLE ".PREFIX."user_forum_groups ADD `".$id."` INT( 1 ) NOT NULL ; ");

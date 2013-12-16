@@ -64,7 +64,7 @@ elseif(isset($_POST['save'])) {
 	
 		safe_query("INSERT INTO ".PREFIX."partners ( name, url, displayed, date, sort )
 		             values( '$name', '$url', '".$displayed."', '".time()."', '1' )");
-		$id=mysqli_insert_id();
+		$id=mysqli_insert_id($_database);
 	
 		$filepath = "../images/partners/";
 		

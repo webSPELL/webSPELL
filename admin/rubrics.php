@@ -35,7 +35,7 @@ if(isset($_POST['save'])) {
 		$pic = $_FILES['pic'];
 		if(checkforempty(Array('name'))) {
 			safe_query("INSERT INTO ".PREFIX."news_rubrics ( rubric ) values( '".$_POST['name']."' ) ");
-			$id=mysqli_insert_id();
+			$id=mysqli_insert_id($_database);
 		
 			$filepath = "../images/news-rubrics/";
 			

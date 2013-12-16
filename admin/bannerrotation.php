@@ -133,7 +133,7 @@ elseif(isset($_POST["save"])) {
 			$file_ext=strtolower(mb_substr($banner['name'], strrpos($banner['name'], ".")));
 			if($file_ext==".gif" OR $file_ext==".jpg" OR $file_ext==".png") {
 				safe_query("INSERT INTO ".PREFIX."bannerrotation (bannerID, bannername, bannerurl, displayed, date) values('', '".$bannername."', '".$bannerurl."', '".$displayed."', '".time()."')");
-				$id=mysqli_insert_id();
+				$id=mysqli_insert_id($_database);
 				if($banner['name'] != "") {
 					move_uploaded_file($banner['tmp_name'], $filepath.$banner['name']);
 					@chmod($filepath.$banner['name'], 0755);

@@ -33,7 +33,7 @@ if(isset($_POST['save'])) {
 	if(!ispageadmin($userID)) die($_language->module['no_access']);
 
 	safe_query("INSERT INTO ".PREFIX."linkus ( name ) VALUES( '".$_POST['name']."' ) ");
-	$id=mysqli_insert_id();
+	$id=mysqli_insert_id($_database);
 	$banner = $_FILES['banner'];
 	$filepath = "./images/linkus/";
 	

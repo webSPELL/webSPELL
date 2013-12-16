@@ -182,7 +182,7 @@ elseif($part=="gallerys") {
 		if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
 			if(checkforempty(Array('name'))) {
 				safe_query("INSERT INTO ".PREFIX."gallery ( name, date, groupID ) values( '".$_POST['name']."', '".time()."', '".$_POST['group']."' ) ");
-				$id = mysqli_insert_id();
+				$id = mysqli_insert_id($_database);
 			} else echo $_language->module['information_incomplete'];
 		} else echo $_language->module['transaction_invalid'];
 	}
@@ -220,7 +220,7 @@ elseif($part=="gallerys") {
 					if($name[$i]) $insertname = $name[$i];
 					else $insertname = $picture;
 					safe_query("INSERT INTO ".PREFIX."gallery_pictures ( galleryID, name, comment, comments) VALUES ('".$_POST['galleryID']."', '".$insertname."', '".$comment[$i]."', '".$_POST['comments']."' )");
-					$insertid = mysqli_insert_id();
+					$insertid = mysqli_insert_id($_database);
 					copy($dir.$picture, $dir.'large/'.$insertid.$typ);
 					$galclass->savethumb($dir.'large/'.$insertid.$typ, $dir.'thumb/'.$insertid.'.jpg');
 					@unlink($dir.$picture);
@@ -239,7 +239,7 @@ elseif($part=="gallerys") {
 				if($_POST['name']) $insertname = $_POST['name'];
 				else $insertname = $picture['name'];
 				safe_query("INSERT INTO ".PREFIX."gallery_pictures ( galleryID, name, comment, comments) VALUES ('".$_POST['galleryID']."', '".$insertname."', '".$_POST['comment']."', '".$_POST['comments']."' )");
-				$insertid = mysqli_insert_id();
+				$insertid = mysqli_insert_id($_database);
 	
 				$typ = getimagesize($picture['tmp_name']);
 				switch ($typ[2]) {
