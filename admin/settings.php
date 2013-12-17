@@ -531,11 +531,11 @@ else {
 	    <td><?php echo $_language->module['spam_check']; ?></td>
 	  </tr>
 	  <tr>
-	    <td align="right"><input type="text" name="spamapikey" value="<?php echo $ds['spamapikey']; ?>" size="20" onmouseover="showWMTT('id54')" onmouseout="hideWMTT()" /></td>
+	    <td align="right"><input type="text" name="spamapikey" value="<?php echo $ds['spamapikey']; ?>" size="32" onmouseover="showWMTT('id54')" onmouseout="hideWMTT()" /></td>
 	    <td><?php echo $_language->module['spamapikey']; ?></td>
 	  </tr>
 	  <tr>
-	    <td align="right"><input type="text" name="spamapihost" value="<?php echo $ds['spamapihost']; ?>" size="20" onmouseover="showWMTT('id55')" onmouseout="hideWMTT()" /></td>
+	    <td align="right"><input type="text" name="spamapihost" value="<?php echo $ds['spamapihost']; ?>" size="32" onmouseover="showWMTT('id55')" onmouseout="hideWMTT()" /></td>
 	    <td><?php echo $_language->module['spamapihost']; ?></td>
 	  </tr>
 	  <tr>
