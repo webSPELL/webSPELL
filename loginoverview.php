@@ -38,8 +38,8 @@ if($userID && !isset($_GET['userID']) && !isset($_POST['userID'])) {
 
 	$ds=mysqli_fetch_array(safe_query("SELECT registerdate FROM `".PREFIX."user` WHERE userID='".$userID."'"));
 	$username='<a href="index.php?site=profile&amp;id='.$userID.'">'.getnickname($userID).'</a>';
-	$lastlogin = date('d.m.Y, H:i',$_SESSION['ws_lastlogin']);
-	$registerdate = date('d.m.Y, H:i',$ds['registerdate']);
+	$lastlogin = getformatdatetime($_SESSION['ws_lastlogin']);
+	$registerdate = getformatdatetime($ds['registerdate']);
 
 	//messages?
 	$newmessages = getnewmessages($userID);
@@ -87,7 +87,7 @@ if($userID && !isset($_GET['userID']) && !isset($_POST['userID'])) {
 				if(!$usergrp and !ismoderator($userID, $db['boardID'])) continue;
 			}
 			$n%2 ? $bgcolor=BG_1 : $bgcolor=BG_2;
-			$posttime=date("d.m.y H:i",$db['date']);
+			$posttime=getformatdatetime($db['date']);
 
 			$topiclist.='<tr bgcolor="'.$bgcolor.'">
           <td>
@@ -125,7 +125,7 @@ if($userID && !isset($_GET['userID']) && !isset($_POST['userID'])) {
 			}
 			$n%2 ? $bgcolor1=BG_1 : $bgcolor1=BG_2;
 			$n%2 ? $bgcolor2=BG_3 : $bgcolor2=BG_4;
-			$posttime=date("d.m.y H:i",$db['date']);
+			$posttime=getformatdatetime($db['date']);
 			if(mb_strlen($db['message']) > 100) $message=mb_substr($db['message'],0,90+mb_strpos(mb_substr($db['message'],90,mb_strlen($db['message']))," "))."...";
 			else $message = $db['message'];
 
@@ -198,7 +198,7 @@ if($userID && !isset($_GET['userID']) && !isset($_POST['userID'])) {
 				
 				while($ds=mysqli_fetch_array($ergebnis)) {
 					$n%2 ? $bg=BG_1 : $bg=BG_2;
-					$date=date("d.m.y", $ds['date']);
+					$date=getformatdate($ds['date']);
 					
 					$anmeldung=safe_query("SELECT * FROM ".PREFIX."upcoming_announce WHERE upID='".$ds['upID']."'");
 					if(mysqli_num_rows($anmeldung)) {
@@ -249,8 +249,8 @@ if($userID && !isset($_GET['userID']) && !isset($_POST['userID'])) {
 			$n%2 ? $bg=BG_1 : $bg=BG_2;
 			$events.='<tr>
 				<td bgcolor="'.$bg.'">'.$ds['title'].'</td>
-				<td bgcolor="'.$bg.'">'.date('d.m.y, H:i', $ds['date']).'</td>
-				<td bgcolor="'.$bg.'">'.date('d.m.y, H:i', $ds['enddate']).'</td>
+				<td bgcolor="'.$bg.'">'.getformatdatetime($ds['date']).'</td>
+				<td bgcolor="'.$bg.'">'.getformatdatetime($ds['enddate']).'</td>
 				<td bgcolor="'.$bg.'">'.$ds['location'].'</td>
 				<td bgcolor="'.$bg.'"><a href="index.php?site=calendar&amp;tag='.date('d',$ds['date']).'&amp;month='.date('m',$ds['date']).'&amp;year='.date('Y',$ds['date']).'#event">'.$_language->module['click'].'</a></td>
 			</tr>';

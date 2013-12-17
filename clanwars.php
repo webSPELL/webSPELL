@@ -213,7 +213,7 @@ elseif($action=="save") {
                  VALUES( '$date', '$squad', '$game', '".$league."', '$leaguehp', '".$opponent."', '".$opptag."', '$oppcountry', '$opphp', '".$theMaps."', '$home_string', '$oppteam', '$server', '$hltv', '$theHomeScore', '$theOppScore', '".$report."', '$comments', '$linkpage' ) ");
 
 	$cwID=mysqli_insert_id($_database);
-	$date=date("d.m.Y", $date);
+	$date=getformatdate($date);
 
 	// INSERT CW-NEWS
 	if(isset($news)) {
@@ -932,7 +932,7 @@ elseif($action=="showonly") {
 				$bg1=BG_3;
 				$bg2=BG_4;
 			}
-			$date=date("d.m.y", $ds['date']);
+			$date=getformatdate($ds['date']);
 			$league='<a href="'.$ds['leaguehp'].'" target="_blank">'.$ds['league'].'</a>';
 			$oppcountry="[flag]".$ds['oppcountry']."[/flag]";
 			$country=flags($oppcountry);
@@ -1063,7 +1063,7 @@ elseif(empty($_GET['action'])) {
 				$bg1=BG_3;
 				$bg2=BG_4;
 			}
-			$date=date("d.m.y", $ds['date']);
+			$date=getformatdate($ds['date']);
 			$squad='<a href="index.php?site=clanwars&amp;action=showonly&amp;id='.$ds['squad'].'&amp;page='.$page.'&amp;sort=game&amp;type='.$type.'&amp;only=squad"><b>'.$ds['squadname'].'</b></a>';
 			$league='<a href="'.getinput($ds['leaguehp']).'" target="_blank">'.$ds['league'].'</a>';
 			$oppcountry="[flag]".$ds['oppcountry']."[/flag]";

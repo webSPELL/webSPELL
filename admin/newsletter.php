@@ -36,7 +36,7 @@ if(isset($_POST['send']) || isset($_POST['testen'])) {
 	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
 		$title = $_POST['title'];
 		$testmail = $_POST['testmail'];
-		$date=date("d.m.Y", time());
+		$date=getformatdate(time());
 		$message=str_replace('\r\n', "\n", $_POST['message']);
 		$message_html=nl2br($message);
 		$receptionists = $_language->module['receptionists'];

@@ -143,7 +143,7 @@ elseif(isset($_POST['editreply']) and (bool)$_POST['editreply']) {
 			safe_query("UPDATE ".PREFIX."forum_topics SET $do_sticky WHERE topicID='".(int)$_GET['topic']."'");
 		}
 
-		$date=date("d.m.Y - H:i", time());
+		$date=getformatdatetime(time());
 		safe_query("UPDATE ".PREFIX."forum_posts SET message = '".$message."' WHERE postID='$id' ");
 		safe_query("DELETE FROM ".PREFIX."forum_notify WHERE userID='$userID' AND topicID='".(int)$_GET['topic']."'");
 		if(isset($_POST['notify'])) if((bool)$_POST['notify']) safe_query("INSERT INTO ".PREFIX."forum_notify (`notifyID`, `topicID`, `userID`) VALUES ('', '$userID', '".(int)$_GET['topic']."')");
@@ -419,7 +419,7 @@ function showtopic($topic, $edit, $addreply, $quoteID, $type) {
 				$bg1=BG_1;
 				$bg2=BG_2;
 
-				$time=date("H:i", time());
+				$time=getformattime(time());
 				$date=$_language->module['today'];
 
 				$message_preview = getforminput($_POST['message']);
@@ -536,11 +536,11 @@ function showtopic($topic, $edit, $addreply, $quoteID, $type) {
 			$bg2=BG_4;
 		}
 
-		$date=date("d.m.Y", $dr['date']);
-		$time=date("H:i", $dr['date']);
+		$date=getformatdate($dr['date']);
+		$time=getformattime($dr['date']);
 
-		$today=date("d.m.Y", time());
-		$yesterday = date("d.m.Y", time()-3600*24);
+		$today=getformatdate(time());
+		$yesterday = getformatdate(time()-3600*24);
 
 		if($date==$today) $date=$_language->module['today'];
 		elseif($date==$yesterday && $date<$today) $date=$_language->module['yesterday'];

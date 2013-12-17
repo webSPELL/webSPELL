@@ -41,7 +41,7 @@ class Gallery {
 			else $pic['image'] = '<a href="index.php?site=gallery&amp;picID='.$picID.'"><img src="images/nopic.gif" border="0" width="'.$thumbwidth.'" alt="'.$_language->module['no_thumb'].'" /></a>';
 			$pic['comments'] = mysqli_num_rows(safe_query("SELECT commentID FROM ".PREFIX."comments WHERE parentID='".$picID."' AND type='ga'"));
 			$ergebnis = mysqli_fetch_array(safe_query("SELECT date FROM ".PREFIX."gallery as gal, ".PREFIX."gallery_pictures as pic WHERE gal.galleryID=pic.galleryID AND pic.picID='".$picID."'"));
-			$pic['date']=date("d.m.Y",$ergebnis['date']);
+			$pic['date']=getformatdate($ergebnis['date']);
 			$pic['groupID']=$this->getgroupid_by_gallery($pic['galleryID']);
 			$pic['name']=stripslashes(clearfromtags($pic['name']));
 

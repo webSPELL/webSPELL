@@ -219,7 +219,7 @@ else {
 
 	while($ds = mysqli_fetch_array($ergebnis)) {
 		$n%2 ? $bg1=BG_1 : $bg1=BG_2;
-		$date = date("d.m.Y - H:i", $ds['date']);
+		$date = getformatdatetime($ds['date']);
 
 		if(validate_email($ds['email'])) $email = '<a href="mailto:'.mail_protect($ds['email']).'"><img src="images/icons/email.gif" border="0" width="15" height="11" alt="email" /></a>';
 		else $email='';

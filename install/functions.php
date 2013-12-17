@@ -2051,12 +2051,17 @@ function update40200_40300() {
   `data` text NOT NULL
 )");
 
-  mysqli_query($_database, "ALTER TABLE `".PREFIX."settings` ADD `spam_check` int(1) NOT NULL default '0';");
-  mysqli_query($_database, "ALTER TABLE `".PREFIX."settings` ADD `detect_language` int(1) NOT NULL default '0';");
-  mysqli_query($_database, "ALTER TABLE `".PREFIX."settings` ADD `spamapikey` varchar(32) NOT NULL default '';");
-  mysqli_query($_database, "ALTER TABLE `".PREFIX."settings` ADD `spamapihost` varchar(255) NOT NULL default '';");
-  mysqli_query($_database, "ALTER TABLE `".PREFIX."settings` ADD `spammaxposts` int(11) NOT NULL default '';");
-  mysqli_query($_database, "ALTER TABLE `".PREFIX."settings` ADD `spamapiblockerror` int(1) NOT NULL default '0';");
+  mysqli_query($_database, "ALTER TABLE `".PREFIX."settings` ADD `spam_check` int(1) NOT NULL default '0'");
+  mysqli_query($_database, "ALTER TABLE `".PREFIX."settings` ADD `detect_language` int(1) NOT NULL default '0'");
+  mysqli_query($_database, "ALTER TABLE `".PREFIX."settings` ADD `spamapikey` varchar(32) NOT NULL default ''");
+  mysqli_query($_database, "ALTER TABLE `".PREFIX."settings` ADD `spamapihost` varchar(255) NOT NULL default ''");
+  mysqli_query($_database, "ALTER TABLE `".PREFIX."settings` ADD `spammaxposts` int(11) NOT NULL default ''");
+  mysqli_query($_database, "ALTER TABLE `".PREFIX."settings` ADD `spamapiblockerror` int(1) NOT NULL default '0'");
+  mysqli_query($_database, "ALTER TABLE `".PREFIX."settings` ADD `date_format` varchar(255) NOT NULL default 'd.m.Y'");
+  mysqli_query($_database, "ALTER TABLE `".PREFIX."settings` ADD `time_format` varchar(255) NOT NULL default 'H:i'");
+  
+  mysqli_query($_database, "ALTER TABLE `".PREFIX."user` ADD `date_format` varchar(255) NOT NULL default 'd.m.Y'");
+  mysqli_query($_database, "ALTER TABLE `".PREFIX."user` ADD `time_format` varchar(255) NOT NULL default 'H:i'");
 
   //add new languages for the existing language system
   mysqli_query($_database, "INSERT INTO `".PREFIX."news_languages` ( `langID` , `language`, `lang` , `alt` )

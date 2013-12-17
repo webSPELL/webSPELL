@@ -89,6 +89,8 @@ if(isset($_POST['submit'])) {
 									 spam_check='".isset($_POST['spam_check'])."',
 									 spamapiblockerror='".isset($_POST['spamapiblockerror'])."',
 									 detect_language='".isset($_POST['detectLanguage'])."',
+									 date_format='".$_POST['date_format']."',
+									 time_format='".$_POST['time_format']."',
 									 autoresize='".$_POST['autoresize']."'");
 		safe_query("UPDATE ".PREFIX."styles SET title='".$_POST['title']."' ");	
 	  	redirect("admincenter.php?site=settings","",0);
@@ -106,19 +108,19 @@ else {
 	if($ds['gb_info']) $gb_info='<input type="checkbox" name="gb_info" value="1" checked="checked" onmouseover="showWMTT(\'id36\')" onmouseout="hideWMTT()" />';
 	else $gb_info='<input type="checkbox" name="gb_info" value="1" onmouseover="showWMTT(\'id36\')" onmouseout="hideWMTT()" />';
 
-	if($ds['spam_check']) $spam_check='<input type="checkbox" name="spam_check" value="1" checked="checked" onmouseover="showWMTT(\'id90\')" onmouseout="hideWMTT()" />';
-	else $spam_check='<input type="checkbox" name="spam_check" value="1" onmouseover="showWMTT(\'id90\')" onmouseout="hideWMTT()" />';
+	if($ds['spam_check']) $spam_check='<input type="checkbox" name="spam_check" value="1" checked="checked" onmouseover="showWMTT(\'id53\')" onmouseout="hideWMTT()" />';
+	else $spam_check='<input type="checkbox" name="spam_check" value="1" onmouseover="showWMTT(\'id53\')" onmouseout="hideWMTT()" />';
 
-	if($ds['detect_language']) $visitor_language='<input type="checkbox" name="detectLanguage" value="1" checked="checked" />';
-	else $visitor_language='<input type="checkbox" name="detectLanguage" value="1" />';
+	if($ds['detect_language']) $visitor_language='<input type="checkbox" name="detectLanguage" value="1" checked="checked" onmouseover="showWMTT(\'id52\')" onmouseout="hideWMTT()" />';
+	else $visitor_language='<input type="checkbox" name="detectLanguage" value="1" onmouseover="showWMTT(\'id52\')" onmouseout="hideWMTT()" />';
 
 	if($ds['publicadmin']) $publicadmin = " checked=\"checked\"";
 	else $publicadmin = "";
 	if($ds['usergalleries']) $usergalleries = " checked=\"checked\"";
 	else $usergalleries = "";
-
-	if($ds['spamapiblockerror']) $spamapiblockerror = ' checked="checked"';
-	else $spamapiblockerror = '';
+	
+	if($ds['spamapiblockerror']) $spamapiblockerror='<input type="checkbox" name="spamapiblockerror" value="1" checked="checked" onmouseover="showWMTT(\'id57\')" onmouseout="hideWMTT()" />';
+	else $spamapiblockerror='<input type="checkbox" name="spamapiblockerror" value="1" onmouseover="showWMTT(\'id57\')" onmouseout="hideWMTT()" />';
 
 	$langdirs = '';
 	$filepath = "../languages/";
@@ -139,6 +141,30 @@ else {
 	
 	$captcha_type = "<option value='0'>".$_language->module['captcha_text']."</option><option value='2'>".$_language->module['captcha_autodetect']."</option><option value='1'>".$_language->module['captcha_image']."</option>";
 	$captcha_type = str_replace("value='".$ds['captcha_type']."'","value='".$ds['captcha_type']."' selected='selected'",$captcha_type);
+	
+	$format_date = "<option value='d.m.y'>DD.MM.YY</option>
+					<option value='d.m.Y'>DD.MM.YYYY</option>
+					<option value='j.n.y'>D.M.YY</option>
+					<option value='j.n.Y'>D.M.YYYY</option>
+					<option value='y-m-d'>YY-MM-DD</option>
+					<option value='Y-m-d'>YYYY-MM-DD</option>
+					<option value='y/m/d'>YY/MM/DD</option>
+					<option value='Y/m/d'>YYYY/MM/DD</option>";
+	$format_date = str_replace("value='".$ds['date_format']."'","value='".$ds['date_format']."' selected='selected'",$format_date);
+	
+	$format_time = "<option value='G:i'>H:MM</option>
+					<option value='H:i'>HH:MM</option>
+					<option value='G:i a'>H:MM am/pm</option>
+					<option value='H:i a'>HH:MM am/pm</option>
+					<option value='G:i A'>H:MM AM/PM</option>
+					<option value='H:i A'>HH:MM AM/PM</option>
+					<option value='G:i:s'>H:MM:SS</option>
+					<option value='H:i:s'>HH:MM:SS</option>
+					<option value='G:i:s a'>H:MM:SS am/pm</option>
+					<option value='H:i:s a'>HH:MM:SS am/pm</option>
+					<option value='G:i:s A'>H:MM:SS AM/PM</option>
+					<option value='H:i:s A'>HH:MM:SS AM/PM</option>";
+	$format_time = str_replace("value='".$ds['time_format']."'","value='".$ds['time_format']."' selected='selected'",$format_time);
 	
 	$autoresize = "<option value='0'>".$_language->module['autoresize_off']."</option><option value='2'>".$_language->module['autoresize_js']."</option><option value='1'>".$_language->module['autoresize_php']."</option>";
 	$autoresize = str_replace("value='".$ds['autoresize']."'","value='".$ds['autoresize']."' selected='selected'",$autoresize);
@@ -200,7 +226,14 @@ else {
 <div class="tooltip" id="id49"><?php echo $_language->module['tooltip_49']; ?></div>
 <div class="tooltip" id="id50"><?php echo $_language->module['tooltip_50']; ?></div>
 <div class="tooltip" id="id51"><?php echo $_language->module['tooltip_51']; ?></div>
-<div class="tooltip" id="id90"><?php echo $_language->module['tooltip_90']; ?></div>
+<div class="tooltip" id="id52"><?php echo $_language->module['tooltip_52']; ?></div>
+<div class="tooltip" id="id53"><?php echo $_language->module['tooltip_53']; ?></div>
+<div class="tooltip" id="id54"><?php echo $_language->module['tooltip_54']; ?></div>
+<div class="tooltip" id="id55"><?php echo $_language->module['tooltip_55']; ?></div>
+<div class="tooltip" id="id56"><?php echo $_language->module['tooltip_56']; ?></div>
+<div class="tooltip" id="id57"><?php echo $_language->module['tooltip_57']; ?></div>
+<div class="tooltip" id="id58"><?php echo $_language->module['tooltip_58']; ?></div>
+<div class="tooltip" id="id59"><?php echo $_language->module['tooltip_59']; ?></div>
 <table width="100%" border="0" cellspacing="1" cellpadding="3">
   <tr>
     <td width="15%"><b><?php echo $_language->module['page_title']; ?></b></td>
@@ -452,6 +485,14 @@ else {
 	    <td align="right"><input type="text" name="picsize_l" value="<?php echo $ds['picsize_l']; ?>" size="3" onmouseover="showWMTT('id34')" onmouseout="hideWMTT()" /> x <input type="text" name="picsize_h" value="<?php echo $ds['picsize_h']; ?>" size="3" onmouseover="showWMTT('id35')" onmouseout="hideWMTT()" /></td>
 	    <td><?php echo $_language->module['content_size']; ?></td>
 	  </tr>
+      <tr>
+	    <td align="right"><select name="date_format" onmouseover="showWMTT('id58')" onmouseout="hideWMTT()" style="text-align: right;"><?php echo $format_date; ?></select></td>
+	    <td><?php echo $_language->module['format_date']; ?></td>
+	  </tr>
+      <tr>
+	    <td align="right"><select name="time_format" onmouseover="showWMTT('id59')" onmouseout="hideWMTT()" style="text-align: right;"><?php echo $format_time; ?></select></td>
+	    <td><?php echo $_language->module['format_time']; ?></td>
+	  </tr>
     <tr>
 	    <td align="right"><select name="autoresize" onmouseover="showWMTT('id50')" onmouseout="hideWMTT()"><?php echo $autoresize;?></select></td>
 	    <td><?php echo $_language->module['autoresize']; ?></td>
@@ -490,19 +531,19 @@ else {
 	    <td><?php echo $_language->module['spam_check']; ?></td>
 	  </tr>
 	  <tr>
-	    <td align="right"><input type="text" name="spamapikey" value="<?php echo $ds['spamapikey']; ?>" size="32" /></td>
+	    <td align="right"><input type="text" name="spamapikey" value="<?php echo $ds['spamapikey']; ?>" size="20" onmouseover="showWMTT('id54')" onmouseout="hideWMTT()" /></td>
 	    <td><?php echo $_language->module['spamapikey']; ?></td>
 	  </tr>
 	  <tr>
-	    <td align="right"><input type="text" name="spamapihost" value="<?php echo $ds['spamapihost']; ?>" size="32"/></td>
+	    <td align="right"><input type="text" name="spamapihost" value="<?php echo $ds['spamapihost']; ?>" size="20" onmouseover="showWMTT('id55')" onmouseout="hideWMTT()" /></td>
 	    <td><?php echo $_language->module['spamapihost']; ?></td>
 	  </tr>
 	  <tr>
-	    <td align="right"><input type="text" name="spammaxposts" value="<?php echo $ds['spammaxposts']; ?>" size="4" /></td>
+	    <td align="right"><input type="text" name="spammaxposts" value="<?php echo $ds['spammaxposts']; ?>" size="3" onmouseover="showWMTT('id56')" onmouseout="hideWMTT()" /></td>
 	    <td><?php echo $_language->module['spammaxposts']; ?></td>
 	  </tr>
 	  <tr>
-	    <td align="right"><input type="checkbox" name="spamapiblockerror" <?php echo $spamapiblockerror;?> value="1"/></td>
+	    <td align="right"><?php echo $spamapiblockerror;?></td>
 	    <td><?php echo $_language->module['spamapiblockerror']; ?></td>
 	  </tr>
 	</table>

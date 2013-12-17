@@ -32,8 +32,8 @@ if(!isanyadmin($userID) OR mb_substr(basename($_SERVER['REQUEST_URI']),0,15) != 
 echo '<h1>&curren; '.$_language->module['visitor_stats_overall'].'</h1>';
 
 $time = time();
-$date = date("d.m.Y", $time);
-$dateyesterday = date("d.m.Y", $time-(24*3600));
+$date = getformatdate($time);
+$dateyesterday = getformatdate($time-(24*3600));
 $datemonth = date(".m.Y", time());
 
 $ergebnis=safe_query("SELECT hits FROM ".PREFIX."counter");

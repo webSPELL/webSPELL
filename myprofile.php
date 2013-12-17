@@ -75,6 +75,8 @@ else {
 		$avatar = $_FILES['avatar'];
 		$userpic = $_FILES['userpic'];
 		$language = $_POST['language'];
+		$date_format = $_POST['date_format'];
+		$time_format = $_POST['time_format'];
 		$id = $userID;
 		
 		$error_array = array();
@@ -245,6 +247,8 @@ else {
 							newsletter='".$newsletter."',
 							homepage='".$homepage."',
 							about='".$about."',
+							date_format='".$date_format."',
+							time_format='".$time_format."',
 							language='".$language."'
 						WHERE 
 							userID='".$id."'");
@@ -385,6 +389,29 @@ else {
 			else $pm_mail = '<option value="1">'.$_language->module['yes'].'</option><option value="0" selected="selected">'.$_language->module['no'].'</option>';
 			if($ds['email_hide']) $email_hide = ' checked="checked"';
 			else $email_hide = '';
+			$format_date = "<option value='d.m.y'>DD.MM.YY</option>
+							<option value='d.m.Y'>DD.MM.YYYY</option>
+							<option value='j.n.y'>D.M.YY</option>
+							<option value='j.n.Y'>D.M.YYYY</option>
+							<option value='y-m-d'>YY-MM-DD</option>
+							<option value='Y-m-d'>YYYY-MM-DD</option>
+							<option value='y/m/d'>YY/MM/DD</option>
+							<option value='Y/m/d'>YYYY/MM/DD</option>";
+			$format_date = str_replace("value='".$ds['date_format']."'","value='".$ds['date_format']."' selected='selected'",$format_date);
+	
+			$format_time = "<option value='G:i'>H:MM</option>
+							<option value='H:i'>HH:MM</option>
+							<option value='G:i a'>H:MM am/pm</option>
+							<option value='H:i a'>HH:MM am/pm</option>
+							<option value='G:i A'>H:MM AM/PM</option>
+							<option value='H:i A'>HH:MM AM/PM</option>
+							<option value='G:i:s'>H:MM:SS</option>
+							<option value='H:i:s'>HH:MM:SS</option>
+							<option value='G:i:s a'>H:MM:SS am/pm</option>
+							<option value='H:i:s a'>HH:MM:SS am/pm</option>
+							<option value='G:i:s A'>H:MM:SS AM/PM</option>
+							<option value='H:i:s A'>HH:MM:SS AM/PM</option>";
+			$format_time = str_replace("value='".$ds['time_format']."'","value='".$ds['time_format']."' selected='selected'",$format_time);
 			$b_day = mb_substr($ds['birthday'],8,2);
 			$b_month = mb_substr($ds['birthday'],5,2);
 			$b_year = mb_substr($ds['birthday'],0,4);

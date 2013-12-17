@@ -120,7 +120,7 @@ if(isset($id) and getnickname($id) != '') {
 					$commentcount = mysqli_num_rows(safe_query("SELECT * FROM ".PREFIX."comments WHERE parentID='".$ds['galleryID']."' AND type='ga'"));
 
 
-					$gallery['date'] = date("d.m.Y",$ds['date']);
+					$gallery['date'] = getformatdate($ds['date']);
 					$gallery['title'] = cleartext($ds['name']);
 					$gallery['picture'] = $galclass->randompic($ds['galleryID']);
 					$gallery['galleryID'] = $ds['galleryID'];
@@ -167,7 +167,7 @@ if(isset($id) and getnickname($id) != '') {
 					if(!$usergrp and !ismoderator($userID, $db['boardID'])) continue;
 				}
 				$n % 2 ? $bgcolor = BG_1 : $bgcolor = BG_2;
-				$posttime = date("d.m.y H:i", $db['date']);
+				$posttime = getformatdatetime($db['date']);
 
 				$topiclist .= '<tr bgcolor="'.$bgcolor.'">
             <td width="50%">
@@ -206,7 +206,7 @@ if(isset($id) and getnickname($id) != '') {
 
 				$n % 2 ? $bgcolor1 = BG_1 : $bgcolor1 = BG_2;
 				$n % 2 ? $bgcolor2 = BG_3 : $bgcolor2 = BG_4;
-				$posttime = date("d.m.y h:i", $db['date']);
+				$posttime = getformatdatetime($db['date']);
 				if(mb_strlen($db['message']) > 100) $message = mb_substr($db['message'], 0, 90 + mb_strpos(mb_substr($db['message'], 90, mb_strlen($db['message'])), " "))."...";
 				else $message = $db['message'];
 				$postlist.='<tr bgcolor="'.$bgcolor1.'">
@@ -335,7 +335,7 @@ if(isset($id) and getnickname($id) != '') {
 			echo '<form method="post" name="form" action="index.php?site=profile&amp;id='.$id.'&amp;action=guestbook&amp;delete=true">';
 			while ($ds = mysqli_fetch_array($ergebnis)) {
 				$n % 2 ? $bg1 = BG_1 : $bg1 = BG_2;
-				$date = date("d.m.Y - H:i", $ds['date']);
+				$date = getformatdatetime($ds['date']);
 
 				if(validate_email($ds['email'])) $email = '<a href="mailto:'.mail_protect($ds['email']).'"><img src="images/icons/email.gif" border="0" alt="'.$_language->module['email'].'" /></a>';
 				else $email = '';
@@ -429,8 +429,8 @@ if(isset($id) and getnickname($id) != '') {
 		$nickname = $ds['nickname'];
 		if(isclanmember($id)) $member = ' <img src="images/icons/member.gif" alt="'.$_language->module['clanmember'].'" />';
 		else $member = '';
-		$registered = date("d.m.Y - H:i", $ds['registerdate']);
-		$lastlogin = date("d.m.Y - H:i", $ds['lastlogin']);
+		$registered = getformatdatetime($ds['registerdate']);
+		$lastlogin = getformatdatetime($ds['lastlogin']);
 		if($ds['avatar']) $avatar = '<img src="images/avatars/'.$ds['avatar'].'" alt="" />';
 		else $avatar = '<img src="images/avatars/noavatar.gif" border="0" alt="" />';
 		$status = isonline($ds['userID']);
@@ -473,7 +473,7 @@ if(isset($id) and getnickname($id) != '') {
 		$lastname = clearfromtags($ds['lastname']);
 
 		$birthday = mb_substr($ds['birthday'], 0, 10);
-		$birthday = date("d.m.Y",strtotime($birthday));
+		$birthday = getformatdate(strtotime($birthday));
 		
 		$res = safe_query("SELECT birthday, DATE_FORMAT(FROM_DAYS(TO_DAYS(NOW()) - TO_DAYS(birthday)), '%Y') 'age' FROM ".PREFIX."user WHERE userID = '".$id."'");
 		$cur = mysqli_fetch_array($res);
