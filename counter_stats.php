@@ -39,8 +39,8 @@ $bg3=BG_3;
 $bg4=BG_4;
 
 $time = time();
-$date = date("d.m.Y", $time);
-$dateyesterday = date("d.m.Y", $time-(24*3600));
+$date = getformatdate($time);
+$dateyesterday = getformatdate($time-(24*3600));
 $datemonth = date(".m.Y", time());
 
 $ergebnis=safe_query("SELECT hits FROM ".PREFIX."counter");

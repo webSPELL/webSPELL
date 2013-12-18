@@ -222,8 +222,8 @@ else {
 
 				$ergebnis=safe_query("SELECT * FROM ".PREFIX."cash_box WHERE cashID='$id'");
 				$ds=mysqli_fetch_array($ergebnis);
-				$date=date("d.m.Y", $ds['date']);
-				$paydate=date("d.m.Y", $ds['paydate']);
+				$date=getformatdate($ds['date']);
+				$paydate=getformatdate($ds['paydate']);
 
 				$bezahlen = safe_query("SELECT * FROM ".PREFIX."cash_box_payed WHERE cashID='$id' AND payed='1' ");
 				$payed = mysqli_num_rows($bezahlen);
@@ -264,7 +264,7 @@ else {
 						$du=mysqli_fetch_array($ergebnis);
 						$user='<a href="index.php?site=profile&amp;id='.$usID.'"><b>'.getnickname($usID).'</b></a>';
 						if($du['payed']) {
-							$paydate=date("d.m.Y", $du['date']);
+							$paydate=getformatdate($du['date']);
 							$payed='<font color="'.$wincolor.'">'.$_language->module['paid'].': '.$paydate.'</font>';
 						}
 						else {

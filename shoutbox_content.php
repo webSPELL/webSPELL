@@ -114,7 +114,7 @@ elseif($action=="showall") {
 	while($ds=mysqli_fetch_array($ergebnis)) {
 
 		$i%2 ? $bg1=BG_1 : $bg1=BG_2;
-		$date=date("d.m - H:i", $ds['date']);
+		$date=getformatdatetime($ds['date']);
 		$name=$ds['name'];
 		$message=cleartext($ds['message'], false);
 		$ip='logged';
@@ -162,7 +162,7 @@ else {
 
 	$ergebnis=safe_query("SELECT * FROM ".PREFIX."shoutbox ORDER BY date DESC LIMIT 0,".$maxshoutbox);
 	while($ds=mysqli_fetch_array($ergebnis)) {
-		$date=date("H:i", $ds['date']);
+		$date=getformattime($ds['date']);
 		$name=$ds['name'];
 		$message=cleartext($ds['message'], false);
 		$message=str_replace("&amp;amp;","&",$message);

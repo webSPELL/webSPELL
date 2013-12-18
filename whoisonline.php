@@ -167,7 +167,7 @@ while($ds=mysqli_fetch_array($ergebnis)) {
 		$bg2=BG_4;
 	}
 
-	$date=date("d.m.Y - H:i", $ds['time']);
+	$date=getformatdatetime($ds['time']);
 	$nickname='<a href="index.php?site=profile&amp;id='.$ds['userID'].'"><b>'.$ds['nickname'].'</b></a>';
 	if(isclanmember($ds['userID'])) $member=' <img src="images/icons/member.gif" width="6" height="11" alt="Clanmember" />';
 	else $member='';

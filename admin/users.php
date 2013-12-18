@@ -735,7 +735,7 @@ else {
       else { $td='td2'; }
 		
 		$id=$ds['userID'];
-		$registered=date("d.m.Y - H:i", $ds['registerdate']);
+		$registered=getformatdatetime($ds['registerdate']);
 		$nickname_c=getnickname($ds['userID']);
 		$replaced_search=str_replace("%", "", $search);
 		$nickname=str_replace($replaced_search, '<b>'.$replaced_search.'</b>', $nickname_c);

@@ -131,7 +131,7 @@ elseif(isset($_GET['last']))
 		}
 		for($i = $count; $i > 0; $i--)
 		{
-			$day = date("d.m.Y", mktime(0, 0, 0, date("m"), date("d") - $i, date("Y")));
+			$day = getformatdate(mktime(0, 0, 0, date("m"), date("d") - $i, date("Y")));
 			$tmp = mysqli_fetch_array(safe_query("SELECT count FROM ".PREFIX."counter_stats WHERE dates LIKE '%".$day."'"));
 			$array[] = $tmp['count'] ? $tmp['count'] : 0;
 		}

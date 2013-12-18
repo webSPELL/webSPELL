@@ -33,8 +33,8 @@ if(mysqli_num_rows($ergebnis)){
 	echo '<table width="100%" cellspacing="0" cellpadding="2">';
 	$n=1;
 	while($ds=mysqli_fetch_array($ergebnis)) {
-		$date=date("d.m.Y", $ds['date']);
-		$time=date("H:i", $ds['date']);
+		$date=getformatdate($ds['date']);
+		$time=getformattime($ds['date']);
 		$news_id=$ds['newsID'];
 		
 		if($n%2) {

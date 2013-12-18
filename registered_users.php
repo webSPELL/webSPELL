@@ -109,9 +109,9 @@ if($anz) {
 			elseif($userID==$ds['userID']) $buddy='';
 			else $buddy='<a href="buddys.php?action=add&amp;id='.$ds['userID'].'&amp;userID='.$userID.'"><img src="images/icons/buddy_add.gif" width="16" height="16" border="0" alt="add to buddylist" /></a>';
 		}
-		$lastlogindate=date("d.m.Y", $ds['lastlogin']);
-		$lastlogintime=date("H:i", $ds['lastlogin']);
-		$registereddate=date("d.m.Y", $ds['registerdate']);
+		$lastlogindate=getformatdate($ds['lastlogin']);
+		$lastlogintime=getformattime($ds['lastlogin']);
+		$registereddate=getformatdate($ds['registerdate']);
 		$status=isonline($ds['userID']);
 
 		if($status=="offline") $login=$lastlogindate.' - '.$lastlogintime;

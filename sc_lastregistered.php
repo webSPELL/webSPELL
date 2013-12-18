@@ -29,7 +29,7 @@ echo '<table width="100%" cellspacing="4" cellpadding="0">';
 while($row=mysqli_fetch_array($result)) {
 	$username='<a href="index.php?site=profile&amp;id='.$row['userID'].'">'.$row['nickname'].'</a>';
 	$country=flags('[flag]'.$row['country'].'[/flag]');
-	$registerdate=date('d.m.y', $row['registerdate']);
+	$registerdate=getformatdate($row['registerdate']);
 	eval ("\$sc_lastregistered = \"".gettemplate("sc_lastregistered")."\";");
 	echo $sc_lastregistered;
 }

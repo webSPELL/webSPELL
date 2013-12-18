@@ -220,6 +220,10 @@ function checkforempty($valuearray) {
 
 systeminc('func/filesystem');
 
+// -- DATE-TIME INFORMATION -- //
+
+systeminc('func/datetime');
+
 // -- USER INFORMATION -- //
 
 systeminc('func/user');
@@ -428,7 +432,7 @@ if(mb_strlen($site)) {
 // -- COUNTER -- //
 
 $time = time();
-$date = date("d.m.Y", $time);
+$date = getformatdate($time);
 $deltime = $time-(3600*24);
 safe_query("DELETE FROM ".PREFIX."counter_iplist WHERE del<".$deltime);
 

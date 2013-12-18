@@ -115,7 +115,7 @@ if($anz) {
     
 		$last_poster = $ds['nickname'];
 		$board = $ds['name'];
-		$date = date('d.m.Y - H:i', $ds['lastdate']);
+		$date = getformatdatetime($ds['lastdate']);
 		$small_date	= date('d.m H:i', $ds['lastdate']);
 
 		$latesticon	=	'<img src="images/icons/'.$ds['icon'].'" width="15" height="15" alt="" />';

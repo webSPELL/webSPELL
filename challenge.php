@@ -187,8 +187,8 @@ if(isclanwaradmin($userID)) {
 		$i=0;
 		while ($ds = mysqli_fetch_array($ergebnis)) {
 			$bg1 = ($i%2)? BG_1: BG_1;
-			$date = date("d.m.Y", $ds['date']);
-			$cwdate = date("d.m.Y - H:i", $ds['cwdate']);
+			$date = getformatdate($ds['date']);
+			$cwdate = getformatdatetime($ds['cwdate']);
 			$squad= getsquadname($ds['squadID']);
 			$oppcountry="[flag]".$ds['oppcountry']."[/flag]";
 			$country=flags($oppcountry);

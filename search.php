@@ -296,7 +296,7 @@ elseif($action=="search" AND ($userID OR isset($_GET['captcha']))) {
 					$bg2=BG_4;
 				}
 		
-				$date=date("d.m.Y", $res_date[$key]);
+				$date=getformatdate($res_date[$key]);
 				$type=$res_type[$key];
 				if(mb_strlen($res_message[$key]) > 200) {
 					for($z = 0; $z < mb_strlen($res_message[$key]); $z++) {

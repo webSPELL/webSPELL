@@ -198,7 +198,7 @@ elseif($action=="showsquad") {
 				$bg1=BG_3;
 				$bg2=BG_4;
 			}
-			$date=date("d.m.Y", $ds['date']);
+			$date=getformatdate($ds['date']);
 			$squad=getsquadname($ds['squadID']);
 			$award=cleartext($ds['award']);
 			$homepage=$ds['homepage'];
@@ -230,7 +230,7 @@ elseif($action=="showsquad") {
 	if($award=='') $award="-";
 	$squad=getsquadname($ds['squadID']);
 	$squadID=$ds['squadID'];
-	$date=date("d.m.Y", $ds['date']);
+	$date=getformatdate($ds['date']);
 	$info=htmloutput($ds['info']);
 	if($info=='') $info="-";
 	$homepage = '<a href="http://'.getinput(str_replace('http://','',$ds['homepage'])).'" target="_blank">'.$ds['homepage'].'</a>';
@@ -299,7 +299,7 @@ else {
 				$bg2=BG_4;
 			}
 			
-      $date=date("d.m.Y", $ds['date']);
+      		$date=getformatdate($ds['date']);
 			$squad='<a href="index.php?site=members&amp;action=showsquad&amp;squadID='.$ds['squadID'].'&amp;page='.$page.'&amp;sort='.$sort.'&amp;type='.$type.'">'.getsquadname($ds['squadID']).'</a>';
 			$award=cleartext($ds['award']);
 			$homepage=$ds['homepage'];

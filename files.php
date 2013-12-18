@@ -392,7 +392,7 @@ elseif(isset($_GET['cat'])) {
 			$fileload = $file['downloads'];
 			$filevotes = $file['votes'];
 			$filevotes ? $filevotes = ', '.$filevotes.' votes' : $filevotes = ', unrated';
-			$filedate = date("d.M.Y - H:i", $file['date']);
+			$filedate = getformatdatetime($file['date']);
 			$traffic = $filesize * $fileload;
 			$rating = $file['rating'];
 
@@ -445,7 +445,7 @@ elseif(isset($_GET['file'])) {
 	$traffic = detectfilesize($filesize * $downloads);
 	$filesize = detectfilesize($file['filesize']);
 	$reportlink = '<a href="index.php?site=files&amp;action=report&amp;link='.$file['fileID'].'"><b>'.$_language->module['report_dead_link'].'</b></a>';
-	$date = date("d.m.Y", $file['date']);
+	$date = getformatdate($file['date']);
 
 	// FILE-AUTHOR
 	$uploader = cleartext('[flag]'.getcountry($file['poster']).'[/flag]').' <a href="index.php?site=profile&amp;id='.$file['poster'].'">'.getnickname($file['poster']).'</a>';

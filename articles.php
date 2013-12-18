@@ -336,8 +336,7 @@ elseif($action=="show") {
 	if(mysqli_num_rows($result)) {
 
 		$ds=mysqli_fetch_array($result);
-		$date = date("d.m.Y", $ds['date']);
-		$time = date("H:i", $ds['date']);
+		$date_time = getformatdatetime($ds['date']);
 		$title = clearfromtags($ds['title']);
 
 		$content = array();
@@ -511,7 +510,7 @@ else {
 				$bg1=BG_3;
 				$bg2=BG_4;
 			}
-			$date=date("d.m.Y", $ds['date']);
+			$date=getformatdate($ds['date']);
 
 			$title='<a href="index.php?site=articles&amp;action=show&amp;articlesID='.$ds['articlesID'].'">'.clearfromtags($ds['title']).'</a>';
 			$poster='<a href="index.php?site=profile&amp;id='.$ds['poster'].'"><b>'.getnickname($ds['poster']).'</b></a>';

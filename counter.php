@@ -33,8 +33,8 @@ $bg1=BG_1;
 
 $_language->read_module('counter');
 
-$date = date("d.m.Y", time());
-$dateyesterday = date("d.m.Y", time()-(24*3600));
+$date = getformatdate(time());
+$dateyesterday = getformatdate(time()-(24*3600));
 $datemonth = date(".m.Y", time());
 
 $ergebnis=safe_query("SELECT hits FROM ".PREFIX."counter");

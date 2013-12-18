@@ -234,8 +234,8 @@ elseif($action=="preview") {
 	echo $title_news;
 
 	$bgcolor=BG_1;
-	$date = date("d.m.Y", $ds['date']);
-	$time = date("H:i", $ds['date']);
+	$date = getformatdate($ds['date']);
+	$time = getformattime($ds['date']);
 	$rubrikname=getrubricname($ds['rubric']);
 	$rubrikname_link = getinput(getrubricname($ds['rubric']));
 	$rubricpic='<img src="images/news-rubrics/'.getrubricpic($ds['rubric']).'" alt="" />';
@@ -549,7 +549,7 @@ elseif($action=="unpublished") {
 					$bg2=BG_4;
 				}
 
-				$date=date("d.m.Y", $ds['date']);
+				$date=getformatdate($ds['date']);
 				$rubric=getrubricname($ds['rubric']);
 				if(!isset($rubric)) $rubric='';
 				$comms = getanzcomments($ds['newsID'], 'ne');
@@ -669,7 +669,7 @@ elseif($action=="archive") {
 				$bg2=BG_4;
 			}
 
-			$date=date("d.m.Y", $ds['date']);
+			$date=getformatdate($ds['date']);
 			$rubric=getrubricname($ds['rubric']);
 			$comms = getanzcomments($ds['newsID'], 'ne');
 		    if($ds['intern'] == 1) $isintern = '<small>('.$_language->module['intern'].')</small>';
@@ -750,8 +750,8 @@ else {
 		if($i%2) $bg1=BG_1;
 		else $bg1=BG_2;
 
-		$date = date("d.m.Y", $ds['date']);
-		$time = date("H:i", $ds['date']);
+		$date = getformatdate($ds['date']);
+		$time = getformattime($ds['date']);
 		$rubrikname = getrubricname($ds['rubric']);
 		$rubrikname_link = getinput($rubrikname);
 		$rubricpic_path = "images/news-rubrics/".getrubricpic($ds['rubric']);
@@ -803,7 +803,7 @@ else {
 			if($ds['cwID']) {  // CLANWAR-NEWS
 				$anzcomments = getanzcomments($ds['cwID'], 'cw');
 				$replace = Array('$anzcomments', '$url', '$lastposter', '$lastdate');
-				$vars = Array($anzcomments, 'index.php?site=clanwars_details&amp;cwID='.$ds['cwID'], clearfromtags(getlastcommentposter($ds['cwID'], 'cw')), date('d.m.Y - H:i', getlastcommentdate($ds['cwID'], 'cw')));
+				$vars = Array($anzcomments, 'index.php?site=clanwars_details&amp;cwID='.$ds['cwID'], clearfromtags(getlastcommentposter($ds['cwID'], 'cw')), getformatdatetime(getlastcommentdate($ds['cwID'], 'cw')));
 
 				switch($anzcomments) {
 					case 0: $comments = str_replace($replace, $vars, $_language->module['no_comment']); break;
@@ -814,7 +814,7 @@ else {
 			else {
 				$anzcomments = getanzcomments($ds['newsID'], 'ne');
 				$replace = Array('$anzcomments', '$url', '$lastposter', '$lastdate');
-				$vars = Array($anzcomments, 'index.php?site=news_comments&amp;newsID='.$ds['newsID'], clearfromtags(html_entity_decode(getlastcommentposter($ds['newsID'], 'ne'))), date('d.m.Y - H:i', getlastcommentdate($ds['newsID'], 'ne')));
+				$vars = Array($anzcomments, 'index.php?site=news_comments&amp;newsID='.$ds['newsID'], clearfromtags(html_entity_decode(getlastcommentposter($ds['newsID'], 'ne'))), getformatdatetime(getlastcommentdate($ds['newsID'], 'ne')));
 
 				switch($anzcomments) {
 					case 0: $comments = str_replace($replace, $vars, $_language->module['no_comment']); break;

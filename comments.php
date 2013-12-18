@@ -221,7 +221,7 @@ else {
 		while($ds=mysqli_fetch_array($ergebnis)) {
 			$n%2 ? $bg1=BG_1 : $bg1=BG_3;
 
-			$date=date("d.m.Y - H:i", $ds['date']);
+			$date=getformatdatetime($ds['date']);
 
 			if($ds['userID']) {
 				$ip='';

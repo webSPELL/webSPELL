@@ -167,10 +167,10 @@ elseif($action == "multi"){
 				$banned = ($data['banned'] != null) ? "<font color='red'>&#10004;</font>" : "<font color='green'>&#10006;</font>";
 					
 				if($data['lastlogin'] > time() - (60*60*24*10)){
-					$last_login = '<font color="green">'.date('d.m.Y',$data['lastlogin']).'</font>';
+					$last_login = '<font color="green">'.getformatdate($data['lastlogin']).'</font>';
 				}
 				else{
-					$last_login = date('d.m.Y',$data['lastlogin']);
+					$last_login = getformatdate($data['lastlogin']);
 				}
 					
 				$posts = getuserforumposts($data['userID']);
@@ -181,7 +181,7 @@ elseif($action == "multi"){
 				echo '<tr>
  				<td class="'.$td.'">'.$data['userID'].'</td>
  				<td class="'.$td.'"><a href="../index.php?site=profile&amp;id='.$data['userID'].'" target="_blank">'.$data['nickname'].'</a><br/><small>'.$_language->module["password"].': '.$passwords[$key].'</small></td>
- 				<td class="'.$td.'">'.date('d.m.Y',$data['registerdate']).'</td>
+ 				<td class="'.$td.'">'.getformatdate($data['registerdate']).'</td>
  				<td class="'.$td.'">'.$last_login.'</td>
  				<td class="'.$td.'">'.$active.'</td>
  				<td class="'.$td.'">'.$banned.'</td>
@@ -265,7 +265,7 @@ elseif($action == "api_log"){
 			
 			echo '<tr>
 			<td class="'.$td.'"><font color="red">'.getinput($ds['message']).'</font><br/>'.$ds['data'].'</td>
-			<td class="'.$td.'">'.date('d.m.Y H:i:s',$ds['date']).'</td>
+			<td class="'.$td.'">'.getformatdatetime($ds['date']).'</td>
 			</tr>';
 			
 			$i++;
@@ -335,7 +335,7 @@ elseif($action == "forum_spam"){
 			
 			echo '<tr>
 			<td class="'.$td.'"><a href="../index.php?site=profile&amp;id='.$ds['userID'].'" target="_blank">'.getnickname($ds['userID']).'</a></td>
-			<td class="'.$td.'">'.date('d.m.Y',$ds['date']).'</td>
+			<td class="'.$td.'">'.getformatdate($ds['date']).'</td>
 			<td class="'.$td.'">'.getinput($ds['topic']).'</td>
 			<td class="'.$td.'">'.getinput($ds['message']).'</td>
 			<td class="'.$td.'">'.$options.'</td>
@@ -375,7 +375,7 @@ elseif($action == "forum_spam"){
 			
 			echo '<tr>
 			<td class="'.$td.'"><a href="../index.php?site=profile&amp;id='.$ds['poster'].'" target="_blank">'.getnickname($ds['poster']).'</a></td>
-			<td class="'.$td.'">'.date('d.m.Y',$ds['date']).'</td>
+			<td class="'.$td.'">'.getformatdate($ds['date']).'</td>
 			<td class="'.$td.'">'.mb_substr(getinput($ds['message']),0,250).'...</td>
 			<td class="'.$td.'">'.$options.'</td>
 			</tr>';
@@ -419,7 +419,7 @@ elseif($action == "forum_spam"){
 			}
 			echo '<tr>
 			<td class="'.$td.'">'.$nick.'</a></td>
-			<td class="'.$td.'">'.date('d.m.Y',$ds['date']).'</td>
+			<td class="'.$td.'">'.getformatdate($ds['date']).'</td>
 			<td class="'.$td.'">'.mb_substr(getinput($ds['comment']),0,250).'...</td>
 			<td class="'.$td.'">'.$options.'</td>
 			</tr>';

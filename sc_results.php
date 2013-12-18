@@ -31,7 +31,7 @@ if(mysqli_num_rows($ergebnis)){
 	$n=1;
 	while($ds=mysqli_fetch_array($ergebnis)) {
 
-		$date=date("d.m.Y", $ds['date']);
+		$date=getformatdate($ds['date']);
 		$homescr=array_sum(unserialize($ds['homescore']));
 		$oppscr=array_sum(unserialize($ds['oppscore']));
 

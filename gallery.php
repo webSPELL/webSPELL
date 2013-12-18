@@ -406,7 +406,7 @@ elseif(isset($_GET['groupID'])) {
 		$gallery['picID'] = $galclass->randompic($gallery['galleryID']);
 		$gallery['pic'] = $dir.'thumb/'.$gallery['picID'].'.jpg';
 		$gallery['pics'] = mysqli_num_rows(safe_query("SELECT picID FROM ".PREFIX."gallery_pictures WHERE galleryID='".$gallery['galleryID']."'"));
-		$gallery['date'] = date("d.m.Y - H:i",$gallery['date']);
+		$gallery['date'] = getformatdatetime($gallery['date']);
 		if(!file_exists($gallery['pic'])) $gallery['pic'] = 'images/nopic.gif';
 
 		eval ("\$gallery = \"".gettemplate("gallery_showlist_group")."\";");
@@ -467,7 +467,7 @@ else {
 
     $gallery = mysqli_fetch_array(safe_query("SELECT * FROM ".PREFIX."gallery WHERE groupID='".$ds['groupID']."' ORDER BY galleryID DESC LIMIT 0,1"));
 		$gallery['picture'] = $galclass->randompic($gallery['galleryID']);
-		if(isset($gallery['date'])) $gallery['date'] = date('d.m.Y', $gallery['date']);
+		if(isset($gallery['date'])) $gallery['date'] = getformatdate($gallery['date']);
 		if(isset($gallery['galleryID'])) $gallery['count'] = mysqli_num_rows(safe_query("SELECT picID FROM ".PREFIX."gallery_pictures WHERE galleryID='".$gallery['galleryID']."'"));
 
 		if(isset($gallery['count'])) {

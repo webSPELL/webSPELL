@@ -350,7 +350,7 @@ elseif($action=="showdemo") {
 
 	$result=safe_query("SELECT * FROM ".PREFIX."demos WHERE demoID='$demoID'");
 	$ds=mysqli_fetch_array($result);
-	$date = date("d.m.Y", $ds['date']);
+	$date = getformatdate($ds['date']);
 	$league='<a href="'.$ds['leaguehp'].'" target="_blank">'.$ds['league'].'</a>';
 	$country1="[flag]".$ds['country1']."[/flag]";
 	$country1=flags($country1);
@@ -499,7 +499,7 @@ elseif($action=="showgame") {
 				$bg1=BG_3;
 				$bg2=BG_4;
 			}
-			$date=date("d.m.Y", $ds['date']);
+			$date=getformatdate($ds['date']);
 			$league='<a href="'.$ds['leaguehp'].'" target="_blank">'.$ds['league'].'</a>';
 			$country1="[flag]".$ds['country1']."[/flag]";
 			$country1=flags($country1);
@@ -593,7 +593,7 @@ else {
 				$bg1=BG_3;
 				$bg2=BG_4;
 			}
-			$date=date("d.m.Y", $ds['date']);
+			$date=getformatdate($ds['date']);
 			$league='<a href="'.$ds['leaguehp'].'" target="_blank">'.$ds['league'].'</a>';
 			$country1="[flag]".$ds['country1']."[/flag]";
 			$country1=flags($country1);
