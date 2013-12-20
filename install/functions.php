@@ -2070,7 +2070,8 @@ function update40200_40300() {
       ('', 'romanian', 'ro', 'romanian'),
       ('', 'russian', 'ru', 'russian'),
       ('', 'serbian', 'yu', 'serbian'),
-      ('', 'slovenian', 'si', 'slovenian')");
+      ('', 'slovenian', 'si', 'slovenian'),
+      ('', 'latvian', 'lv', 'latvian')");
 
 }
 ?>
