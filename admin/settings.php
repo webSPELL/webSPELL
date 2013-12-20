@@ -124,14 +124,34 @@ else {
 
 	$langdirs = '';
 	$filepath = "../languages/";
-	if ($dh = opendir($filepath)) {
-		while($file = mb_substr(readdir($dh), 0,2)) {
-			if($file!="." AND $file!=".." AND is_dir($filepath.$file)) $langdirs .= '<option value="'.$file.'">'.$file.'</option>';
+
+	$mysql_langs = array();
+	$query = safe_query("SELECT lang, language FROM ".PREFIX."news_languages");
+	while($sql_lang = mysqli_fetch_assoc($query)){
+		$mysql_langs[$sql_lang['lang']] = $sql_lang['language'];
+	}
+	$langs = array();
+	if($dh = opendir($filepath)) {
+		while($file = mb_substr(readdir($dh), 0, 2)) {
+			if($file != "." and $file!=".." and is_dir($filepath.$file)) {
+				if(isset($mysql_langs[$file])){
+					$name = $mysql_langs[$file];
+					$name = ucfirst($name);
+					$langs[$name] = $file;
+				}
+				else{
+					$langs[$file] = $file;
+				}
+			}
 		}
 		closedir($dh);
 	}
-	$lang = $ds['default_language'];
-	$langdirs = str_replace('"'.$lang.'"', '"'.$lang.'" selected="selected"', $langdirs);
+	ksort($langs,SORT_NATURAL);
+	foreach($langs as $lang=>$flag){
+		$langdirs .= '<option value="'.$flag.'">'.$lang.'</option>';
+	}
+	$lang = $default_language;
+	$langdirs = str_replace('value="'.$lang.'"', 'value="'.$lang.'" selected="selected"', $langdirs);
   
   	if($ds['insertlinks']) $insertlinks='<input type="checkbox" name="insertlinks" value="1" checked="checked" onmouseover="showWMTT(\'id41\')" onmouseout="hideWMTT()" />';
 	else $insertlinks='<input type="checkbox" name="insertlinks" value="1" onmouseover="showWMTT(\'id41\')" onmouseout="hideWMTT()" />';
