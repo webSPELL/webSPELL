@@ -32,7 +32,7 @@ $n=1;
 while($ds=mysqli_fetch_array($ergebnis)) {
 	echo'<table width="100%" cellspacing="0" cellpadding="2">';
 	if($ds['type']=="c") {
-		$date=date("d.m.Y", $ds['date']);
+		$date=getformatdate($ds['date']);
 		$upsquad=getsquadname($ds['squad']);
     
     if($n%2) {
@@ -52,7 +52,7 @@ while($ds=mysqli_fetch_array($ergebnis)) {
 		echo $upcomingactions;
 	}
 	else {
-		$date=date("d.m.Y", $ds['date']);
+		$date=getformatdate($ds['date']);
 		$country="[flag]".$ds['country']."[/flag]";
 		$country=flags($country);
     

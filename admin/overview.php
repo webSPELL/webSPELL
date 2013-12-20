@@ -32,7 +32,7 @@ if(!isanyadmin($userID) OR mb_substr(basename($_SERVER['REQUEST_URI']),0,15) != 
 include '../version.php';
 
 $username='<b>'.getnickname($userID).'</b>';
-$lastlogin = date('d.m.Y, H:i',$_SESSION['ws_lastlogin']);
+$lastlogin = getformatdatetime($_SESSION['ws_lastlogin']);
 
 /*$wsversion = file_get_contents("http://update.webspell.org/index.php?show=version");
 if($wsversion == $version) {

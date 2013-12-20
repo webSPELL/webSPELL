@@ -210,7 +210,7 @@ elseif($userID) {
 					$bg1=BG_3;
 					$bg2=BG_4;
 				}
-				$date=date("d.m.Y - H:i", $ds['date']);
+				$date=getformatdatetime($ds['date']);
 
 				if($userID == $ds['fromuser']) $buddy='';
 				elseif(isignored($userID, $ds['fromuser'])) $buddy='<a href="buddys.php?action=readd&amp;id='.$ds['fromuser'].'&amp;userID='.$userID.'"><img src="images/icons/buddy_readd.gif" border="0" alt="%readd_ignored%" /></a>';
@@ -298,7 +298,7 @@ elseif($userID) {
 					$bg1=BG_3;
 					$bg2=BG_4;
 				}
-				$date=date("d.m.Y - H:i", $ds['date']);
+				$date=getformatdatetime($ds['date']);
 
 				if($userID == $ds['fromuser']) $buddy='';
 				elseif(isignored($userID, $ds['touser'])) $buddy='<a href="buddys.php?action=readd&amp;id='.$ds['touser'].'&amp;userID='.$userID.'"><img src="images/icons/buddy_readd.gif" border="0" alt="%readd_ignored%" /></a>';
@@ -336,7 +336,7 @@ elseif($userID) {
 
 		if($ds['touser']==$userID OR $ds['fromuser']==$userID) {
 			safe_query("UPDATE ".PREFIX."messenger SET viewed='1' WHERE messageID='$id'");
-			$date=date("d.m.Y - H:i", $ds['date']);
+			$date=getformatdatetime($ds['date']);
 			$sender='<a href="index.php?site=profile&amp;id='.$ds['fromuser'].'"><b>'.getnickname($ds['fromuser']).'</b></a>';
 			$message = cleartext($ds['message']);
 			$message = toggle($message, $ds['messageID']);
@@ -369,7 +369,7 @@ elseif($userID) {
 		if($ds['touser']==$userID OR $ds['fromuser']==$userID) {
 			$replytouser=$ds['fromuser'];
 			$tousernick=getnickname($replytouser);
-			$date=date("d.m.Y - H:i", $ds['date']);
+			$date=getformatdatetime($ds['date']);
 
 			$title=$ds['title'];
 			if(!preg_match("#Re\[(.*?)\]:#si", $title)) $title="Re[1]: ".$title;

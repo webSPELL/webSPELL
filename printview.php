@@ -88,8 +88,8 @@ if(mysqli_num_rows($thread)) {
 
 	$replys = safe_query("SELECT * FROM ".PREFIX."forum_posts WHERE topicID='$topic' ORDER BY date");
 	while($dr=mysqli_fetch_array($replys)) {
-		$date=date("d.m.Y", $dr['date']);
-		$time=date("H:i", $dr['date']);
+		$date=getformatdate($dr['date']);
+		$time=getformattime($dr['date']);
 
 		$message=cleartext($dr['message']);	$username=getnickname($dr['poster']);
 

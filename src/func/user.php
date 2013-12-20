@@ -52,7 +52,8 @@ function getlastname($userID) {
 
 function getbirthday($userID) {
 	$ds=mysqli_fetch_array(safe_query("SELECT birthday FROM ".PREFIX."user WHERE userID='".$userID."'"));
-	return date("d.m.Y", $ds['birthday']);
+	$birthday = getformatdate($ds['birthday']);
+	return $birthday;
 }
 
 function gettown($userID) {
@@ -112,7 +113,7 @@ function getsignatur($userID) {
 
 function getregistered($userID) {
 	$ds=mysqli_fetch_array(safe_query("SELECT registerdate FROM ".PREFIX."user WHERE userID='".$userID."'"));
-	$date=date("d.m.Y", $ds['registerdate']);
+	$date=getformatdate($ds['registerdate']);
 	return $date;
 }
 

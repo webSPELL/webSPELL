@@ -93,7 +93,7 @@ elseif($action=="faq") {
 		echo $faq_answer_head;
 
 		$bg1=BG_1;
-		$date=date("d.m.Y", $ds['date']);
+		$date=getformatdate($ds['date']);
 		$answer=htmloutput($ds['answer']);
 
 

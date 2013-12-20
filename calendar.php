@@ -165,7 +165,7 @@ function print_calendar($mon,$year) {
 					}
 					else {
 						if($ds['date']>=$start_date && $ds['date']<=$end_date) {
-							$begin = date("H:i", $ds['date']);
+							$begin = getformattime($ds['date']);
 							$termin.='<a href="index.php?site=calendar&amp;tag='.$t.'&amp;month='.$mon.'&amp;year='.$year.'">'.$begin.' '.clearfromtags($ds['opptag']).'</a><br />';
 						}
 					}
@@ -218,8 +218,8 @@ function print_termine($tag,$month,$year) {
 		while ($ds=mysqli_fetch_array($ergebnis)) {
 			if($ds['type']=="c") {
 				if($ds['date']>=$start_date && $ds['date']<=$end_date) {
-					$date = date("d.m.Y", $ds['date']);
-					$time = date("H:i", $ds['date']);
+					$date=getformatdate($ds['date']);
+					$time=getformattime($ds['date']);
 					$squad=getsquadname($ds['squad']);
 					$oppcountry="[flag]".$ds['oppcountry']."[/flag]";
 					$oppcountry=flags($oppcountry);
@@ -269,10 +269,10 @@ function print_termine($tag,$month,$year) {
 			}
 			else {
 				if(($start_date<=$ds['date'] && $end_date>=$ds['date']) || ($start_date>=$ds['date'] && $end_date<=$ds['enddate']) || ($start_date<=$ds['enddate'] && $end_date>=$ds['enddate'])) {
-					$date = date("d.m.Y", $ds['date']);
-					$time = date("H:i", $ds['date']);
-					$enddate = date("d.m.Y", $ds['enddate']);
-					$endtime = date("H:i", $ds['enddate']);
+					$date=getformatdate($ds['date']);
+					$time=getformattime($ds['date']);
+					$enddate=getformatdate($ds['enddate']);
+					$endtime=getformattime($ds['enddate']);
 					$title=clearfromtags($ds['title']);
 					$location='<a href="'.$ds['locationhp'].'" target="_blank">'.clearfromtags($ds['location']).'</a>';
 					$dateinfo=cleartext($ds['dateinfo']);
@@ -360,7 +360,7 @@ if($action=="savewar") {
 	if(isset($chID) and $chID > 0) safe_query("DELETE FROM ".PREFIX."challenge WHERE chID='".$chID."'");
 
 	if($messages) {
-		$replace = array('%date%' => date("d.m.Y", $date),
+		$replace = array('%date%' => getformatdate($date),
 						 '%opponent_flag%' => $oppcountry,
 						 '%opp_hp%' => $opphp,
 						 '%opponent%' => $opponent, 

@@ -81,7 +81,7 @@ else {
 		$hash = $CAPCLASS->get_hash();
     
 		echo'<form method="post" action="admincenter.php?site=lock">
-    '.$_language->module['locked_since'].'&nbsp;'.date("d.m.Y - H:i",$ds['time']).'.<br /><br />
+    '.$_language->module['locked_since'].'&nbsp;'.getformatdatetime($ds['time']).'.<br /><br />
     <input type="checkbox" name="unlock" /> '.$_language->module['unlock_page'].'<br /><br />
     <input type="hidden" name="captcha_hash" value="'.$hash.'" />
     <input type="submit" name="submit" value="'.$_language->module['unlock'].'" />

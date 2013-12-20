@@ -44,8 +44,8 @@ if($newsID) {
 
 	if($ds['intern'] <= isclanmember($userID) && ($ds['published'] || (isnewsadmin($userID) || (isnewswriter($userID) and $ds['poster'] == $userID)))) {
 
-		$date = date("d.m.Y", $ds['date']);
-		$time = date("H:i", $ds['date']);
+		$date = getformatdate($ds['date']);
+		$time = getformattime($ds['date']);
 		$rubrikname=getrubricname($ds['rubric']);
 		$rubrikname_link = getinput($rubrikname);
 		$rubricpic_name = getrubricpic($ds['rubric']);

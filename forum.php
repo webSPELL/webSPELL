@@ -228,15 +228,15 @@ function boardmain() {
 				
 				if($n == 1) {
 
-					$date=date("d.m.Y", $lp['lastdate']);
-					$today=date("d.m.Y", time());
-					$yesterday = date("d.m.Y", time()-3600*24);
+					$date=getformatdate($lp['lastdate']);
+					$today=getformatdate(time());
+					$yesterday = getformatdate(time()-3600*24);
 	
 					if($date==$today) $date=$_language->module['today'];
 					elseif($date==$yesterday && $date<$today) $date=$_language->module['yesterday'];
 					else $date=$date;
 	
-					$time=date("- H:i", $lp['lastdate']);
+					$time=getformattime($lp['lastdate']);
 					$poster='<a href="index.php?site=profile&amp;id='.$lp['lastposter'].'">'.getnickname($lp['lastposter']).'</a>';
 					if(isclanmember($lp['lastposter'])) $member=' <img src="images/icons/member.gif" alt="'.$_language->module['clanmember'].'" />';
 					else $member='';
@@ -336,15 +336,15 @@ function boardmain() {
 				
 				if($n == 1) {
 
-					$date=date("d.m.Y", $lp['lastdate']);
-					$today=date("d.m.Y", time());
-					$yesterday = date("d.m.Y", time()-3600*24);
+					$date=getformatdate($lp['lastdate']);
+					$today=getformatdate(time());
+					$yesterday = getformatdate(time()-3600*24);
 	
 					if($date==$today) $date=$_language->module['today'];
 					elseif($date==$yesterday && $date<$today) $date=$_language->module['yesterday'];
 					else $date=$date;
 	
-					$time=date("- H:i", $lp['lastdate']);
+					$time=getformattime($lp['lastdate']);
 					$poster='<a href="index.php?site=profile&amp;id='.$lp['lastposter'].'">'.getnickname($lp['lastposter']).'</a>';
 					if(isclanmember($lp['lastposter'])) $member=' <img src="images/icons/member.gif" alt="'.$_language->module['clanmember'].'" />';
 					else $member='';
@@ -579,10 +579,10 @@ function showboard($board) {
 				if($dm['replys']) $replys=$dm['replys'];
 				if($dm['views']) $views=$dm['views'];
 
-				$date=date("d.m.y", $dm['lastdate']);
-				$time=date("H:i", $dm['lastdate']);
-				$today=date("d.m.y", time());
-				$yesterday = date("d.m.y", time()-3600*24);
+				$date=getformatdate($dm['lastdate']);
+				$time=getformattime($dm['lastdate']);
+				$today=getformatdate(time());
+				$yesterday = getformatdate(time()-3600*24);
 				if($date==$today) $date=$_language->module['today'].", ".$time;
 				elseif($date==$yesterday && $date<$today) $date=$_language->module['yesterday'].", ".$time;
 				else $date=$date.", ".$time;
@@ -596,10 +596,10 @@ function showboard($board) {
 				if($dt['replys']) $replys=$dt['replys'];
 				if($dt['views']) $views=$dt['views'];
 
-				$date=date("d.m.y", $dt['lastdate']);
-				$time=date("H:i", $dt['lastdate']);
-				$today=date("d.m.y", time());
-				$yesterday = date("d.m.y", time()-3600*24);
+				$date=getformatdate($dt['lastdate']);
+				$time=getformattime($dt['lastdate']);
+				$today=getformatdate(time());
+				$yesterday = getformatdate(time()-3600*24);
 				if($date==$today) $date=$_language->module['today'].", ".$time;
 				elseif($date==$yesterday && $date<$today) $date=$_language->module['yesterday'].", ".$time;
 				else $date=$date.", ".$time;
@@ -921,7 +921,7 @@ if(isset($_POST['submit']) || isset($_POST['movetopic']) || isset($_GET['addtopi
 				$bg2=BG_2;
 
 				
-				$time=date("H:i", time());
+				$time=getformattime(time());
 				$date="today";
 				$message = cleartext(stripslashes(str_replace(array('\r\n', '\n'),array("\n","\n" ), $_POST['message'])));
 				$message = toggle($message, 'xx');
