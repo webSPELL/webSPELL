@@ -451,33 +451,40 @@ else {
 			$email = getinput($ds['email']);
 			$icq = getinput($ds['icq']);
 			$homepage = getinput($ds['homepage']);
-			$langdirs = '';
-			$filepath = "languages/";
-			
+
 			// Select all possible languages
+			$langdirs = '';
+			$filepath = "./languages/";
+
 			$mysql_langs = array();
 			$query = safe_query("SELECT lang, language FROM ".PREFIX."news_languages");
-			while($dx = mysqli_fetch_assoc($query)){
-				$mysql_langs[$dx['lang']] = $dx['language'];
+			while($sql_lang = mysqli_fetch_assoc($query)){
+				$mysql_langs[$sql_lang['lang']] = $sql_lang['language'];
 			}
+			$langs = array();
 			if($dh = opendir($filepath)) {
 				while($file = mb_substr(readdir($dh), 0, 2)) {
 					if($file != "." and $file!=".." and is_dir($filepath.$file)) {
 						if(isset($mysql_langs[$file])){
 							$name = $mysql_langs[$file];
 							$name = ucfirst($name);
-							$langdirs .= '<option value="'.$file.'">'.$name.'</option>';
+							$langs[$name] = $file;
 						}
-						else {
-							$langdirs .= '<option value="'.$file.'">'.$file.'</option>';
+						else{
+							$langs[$file] = $file;
 						}
 					}
 				}
 				closedir($dh);
 			}
-			
+			ksort($langs,SORT_NATURAL);
+			foreach($langs as $lang=>$flag){
+				$langdirs .= '<option value="'.$flag.'">'.$lang.'</option>';
+			}
+
 			if($ds['language']) $langdirs = str_replace('"'.$ds['language'].'"', '"'.$ds['language'].'" selected="selected"', $langdirs);
 			else $langdirs = str_replace('"'.$_language->language.'"', '"'.$_language->language.'" selected="selected"', $langdirs);
+
 			
 			$bg1 = BG_1;
 			$bg2 = BG_2;
