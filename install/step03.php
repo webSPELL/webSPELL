@@ -52,12 +52,12 @@
          <td align="left">&nbsp;</td>
         </tr>
         <tr>
-         <td><?php echo $_language->module['php_version']; ?> &gt;= 4.3.0</td>
-         <td align="left"><?php echo phpversion() < '4.3' ? '<b><font color="red">'.$_language->module['no'].'</font></b>' : '<b><font color="green">'.$_language->module['yes'].'</font></b>';?></td>
+         <td><?php echo $_language->module['php_version']; ?> &gt;= 5.0</td>
+         <td align="left"><?php echo phpversion() < '5' ? '<b><font color="red">'.$_language->module['no'].'</font></b>' : '<b><font color="green">'.$_language->module['yes'].'</font></b>';?></td>
         </tr>
         <tr>
          <td><?php echo $_language->module['mysql_support']; ?></td>
-         <td align="left"><?php echo function_exists( 'mysql_connect' ) ? '<b><font color="green">'.$_language->module['available'].'</font></b>' : '<b><font color="red">'.$_language->module['unavailable'].'</font></b>';?></td>
+         <td align="left"><?php echo function_exists( 'mysqli_connect' ) ? '<b><font color="green">'.$_language->module['available'].'</font></b>' : '<b><font color="red">'.$_language->module['unavailable'].'</font></b>';?></td>
         </tr>
         <tr>
          <td>&nbsp;</td>
