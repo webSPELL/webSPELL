@@ -345,7 +345,7 @@ else {
 		}
 		elseif($comments_allowed == 2) {
     
-			$ip = getenv('REMOTE_ADDR');
+			$ip = $GLOBALS['ip'];
 			
 			if (isset($_COOKIE['visitor_info'])) {
 				$visitor = explode("--||--", $_COOKIE['visitor_info']);
