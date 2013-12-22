@@ -270,6 +270,10 @@ systeminc('func/spam');
 
 systeminc('func/bbcode');
 
+// -- Tags -- //
+
+systeminc('func/tags');
+
 function cleartext($text, $bbcode=true, $calledfrom='root') {
 	$text = htmlspecialchars($text);
 	$text = strip_tags($text);

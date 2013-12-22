@@ -34,6 +34,7 @@ if(isset($_GET['delete'])) {
 	$CAPCLASS = new Captcha;
 	if($CAPCLASS->check_captcha(0, $_GET['captcha_hash'])) {
 		safe_query(" DELETE FROM ".PREFIX."faq WHERE faqID='$faqID' ");
+		Tags::removeTags('faq', $faqID);
 	} else echo $_language->module['transaction_invalid'];
 }
 
@@ -63,6 +64,8 @@ elseif(isset($_POST['save'])) {
 				exit;
 			}
 			safe_query("INSERT INTO ".PREFIX."faq ( faqcatID, date, question, answer, sort ) values( '$faqcat', '".time()."', '$question', '$answer', '1' )");
+			$id = mysqli_insert_id($_database);
+			Tags::setTags('faq', $id, $_POST['tags']);
 		} else echo $_language->module['information_incomplete'];
     } else echo $_language->module['transaction_invalid'];
 }
@@ -76,6 +79,7 @@ elseif(isset($_POST['saveedit'])) {
 	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
 		if(checkforempty(Array('question', 'message'))) {
 			safe_query("UPDATE ".PREFIX."faq SET faqcatID='$faqcat', date='".time()."', question='$question', answer='$answer' WHERE faqID='$faqID' ");
+			Tags::setTags('faq', $faqID, $_POST['tags']);
 		} else echo $_language->module['information_incomplete'];
 	} else echo $_language->module['transaction_invalid'];
 }
@@ -130,6 +134,10 @@ if(isset($_GET['action'])) {
         </td>
       </tr>
       <tr>
+        <td><b>'.$_language->module['tags'].'</b></td><td><input type="text" name="tags" value="" size="97" />
+        </td>
+      </tr>
+      <tr>
         <td colspan="2"><b>'.$_language->module['answer'].'</b><br />
           <table width="99%" border="0" cellspacing="0" cellpadding="0">
 			      <tr>
@@ -163,14 +171,16 @@ if(isset($_GET['action'])) {
 		}
 		$faqcats.='</select>';
     
-    $CAPCLASS = new Captcha;
-    $CAPCLASS->create_transaction();
-    $hash = $CAPCLASS->get_hash();
-    
-    $_language->read_module('bbcode', true);
-    
-    eval ("\$addbbcode = \"".gettemplate("addbbcode", "html", "admin")."\";");
-    eval ("\$addflags = \"".gettemplate("flags_admin", "html", "admin")."\";");
+    	$tags = Tags::getTags('faq', $faqID);
+
+	    $CAPCLASS = new Captcha;
+	    $CAPCLASS->create_transaction();
+	    $hash = $CAPCLASS->get_hash();
+	    
+	    $_language->read_module('bbcode', true);
+	    
+	    eval ("\$addbbcode = \"".gettemplate("addbbcode", "html", "admin")."\";");
+	    eval ("\$addflags = \"".gettemplate("flags_admin", "html", "admin")."\";");
     
 		echo'<h1>&curren; <a href="admincenter.php?site=faq" class="white">'.$_language->module['faq'].'</a> &raquo; '.$_language->module['edit_faq'].'</h1>';
     
@@ -193,6 +203,10 @@ if(isset($_GET['action'])) {
       <tr>
         <td><b>'.$_language->module['faq'].'</b></td>
         <td><input type="text" name="question" value="'.getinput($ds['question']).'" size="97" /></td>
+      </tr>
+      <tr>
+        <td><b>'.$_language->module['tags'].'</b></td>
+        <td><input type="text" name="tags" value="'.$tags.'" size="97" /></td>
       </tr>
       <tr>
         <td colspan="2"><b>'.$_language->module['answer'].'</b>

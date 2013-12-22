@@ -95,13 +95,15 @@ if($newsID) {
 
 		if(empty($related)) $related="n/a";
     
-    if(isnewsadmin($userID) or (isnewswriter($userID) and $ds['poster'] == $userID)) {
+    	if(isnewsadmin($userID) or (isnewswriter($userID) and $ds['poster'] == $userID)) {
 			$adminaction='<input type="button" onclick="MM_openBrWindow(\'news.php?action=edit&amp;newsID='.$ds['newsID'].'\',\'News\',\'toolbar=no,status=no,scrollbars=yes,width=800,height=600\')" value="'.$_language->module['edit'].'" />
 	    <input type="button" onclick="MM_confirm(\''.$_language->module['really_delete'].'\', \'news.php?action=delete&amp;id='.$ds['newsID'].'\')" value="'.$_language->module['delete'].'" />';
 		}
 		else $adminaction='';
 
 		$bg1=BG_1;
+
+		$tags = Tags::getTagsLinked('news',$newsID);
 
 		eval ("\$news = \"".gettemplate("news")."\";");
 		echo $news;
