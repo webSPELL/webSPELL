@@ -32,6 +32,7 @@ $language_array = Array(
 	'chmod_error'=>'<b>Der CHMOD konnte nicht gesetzt werden.</b><br />Bitte gebe den Ordnern CHMOD 777 und den Dateien CHMOD 766 manuell',
 	'mysql_error'=>'_mysql.php muss beschreibbar sein oder webSPELL kann nicht installiert werden.',
 	'mysql_support'=>'MySQL Unterstützung',
+	'multibyte_support'=>'MultiByte Unterstützung',
 	'no'=>'Nein',
 	'php_version'=>'PHP Version',
 	'set_chmod'=>'CHMOD setzen',

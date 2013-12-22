@@ -32,6 +32,7 @@ $language_array = Array(
 	'chmod_error'=>'<b>Il CHMOD non è possibile impostare.</b><br />Inserite ai cartelle CHMOD 777 e und nei dati CHMOD 766 manuello',
 	'mysql_error'=>'_mysql.php deve essere descrivibile o Webspell non si può installare.',
 	'mysql_support'=>'MySQL Assistenza',
+	'multibyte_support'=>'Multibyte Assistenza',
 	'no'=>'No',
 	'php_version'=>'PHP Versione',
 	'set_chmod'=>'CHMOD inserire',
