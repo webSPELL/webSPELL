@@ -435,8 +435,8 @@ function replacement($content, $bbcode=true) {
 		while(preg_match("#\[size=([0-9]*)\](.*?)\[/size\]#si", $content)){
 		  $content = preg_replace("#\[size=([0-9]*)\](.*?)\[/size\]#sie", "'<font size=\"'.removeIllegalCharacerts('\\1').'\">\\2</font>'", $content);
 		}
-		while(preg_match("#\[color=([a-z0-9#]*)\](.*?)\[/color\]#si", $content)){  
-		  $content = preg_replace("#\[color=([a-z0-9#]*)\](.*?)\[/color\]#sie", "'<font color=\"'.removeIllegalCharacerts('\\1').'\">\\2</font>'", $content);
+		while(preg_match("#\[color=([a-z0-9\#]*)\](.*?)\[/color\]#si", $content)){  
+		  $content = preg_replace("#\[color=([a-z0-9\#]*)\](.*?)\[/color\]#sie", "'<font color=\"'.removeIllegalCharacerts('\\1').'\">\\2</font>'", $content);
 		}
 		while(preg_match("#\[font=([a-z0-9]*)\](.*?)\[/font\]#si", $content)){
 		  $content = preg_replace("#\[font=([a-z0-9]*)\](.*?)\[/font\]#sie", "'<font face=\"'.removeIllegalCharacerts('\\1').'\">\\2</font>'", $content);
