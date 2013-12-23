@@ -30,7 +30,7 @@ if(isset($_GET['tag'])){
                 echo "<center><b>".count($data)."</b> ".$_language->module['results_found']."</center><br /><br />";
                 foreach($data as $entry){
                         
-                        $date = date("d.m.Y", $entry['date']);
+                        $date = getformatdate($entry['date']);
                         $type = $entry['type'];
                         $auszug= $entry['content'];
                         $link = $entry['link'];
@@ -41,16 +41,10 @@ if(isset($_GET['tag'])){
                 }
         }
         else{
-                ?>
-<div class="post">
-        <h2 class="title">Tag suche</h2>
-        <div class="entry">
-                <p>
-                        Keine Einträge zu "<?php echo htmlspecialchars($tag); ?>" gefunden
-                </p>
-        </div>
-</div>
-                        <?php
+            $tag = htmlspecialchars($tag);
+            $text = sprintf($_language->module['no_result'],$tag);
+            eval ("\$search_tags_no_result = \"".gettemplate("search_tags_no_result")."\";");
+            echo $search_tags_no_result;
         }
 }
 else{
