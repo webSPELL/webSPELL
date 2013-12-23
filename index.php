@@ -40,7 +40,7 @@ $index_language = $_language->module;
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <meta name="description" content="Clanpage using webSPELL 4 CMS" />
 <meta name="author" content="webspell.org" />
-<meta name="keywords" content="webspell, webspell4, clan, cms" />
+<meta name="keywords" content="webspell, webspell4, clan, cms<?php if(isset($GLOBALS['metatags']['keywords'])){echo ', '.$GLOBALS['metatags']['keywords'] ;}?>" />
 <meta name="copyright" content="Copyright &copy; 2005 - 2011 by webspell.org" />
 <meta name="generator" content="webSPELL" />
 

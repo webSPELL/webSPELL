@@ -460,6 +460,7 @@ safe_query("UPDATE ".PREFIX."counter SET maxonline = ".$res['maxuser']." WHERE m
 // -- SEARCH ENGINE OPTIMIZATION (SEO) -- //
 if(stristr($_SERVER['PHP_SELF'],"/admin/") == false){
 	systeminc('seo');
+	define('PAGETITLE', getPageTitle());
 }
 else{
 	define('PAGETITLE', $GLOBALS['hp_title']);
