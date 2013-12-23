@@ -65,6 +65,7 @@ elseif($action=="search" AND ($userID OR isset($_GET['captcha']))) {
 		isset($_GET['bm']) ? $bm = (int)$_GET['bm'] : $bm = 0;
 		isset($_GET['bd']) ? $bd = (int)$_GET['bd'] : $bd = 0;
 		isset($_GET['by']) ? $by = (int)$_GET['by'] : $by = 0;
+		$keywords = preg_split("/ ,/si", strtolower(str_replace(array('\%','%'),'',$text)));
 		
 		if(mb_strlen(str_replace('%', '', $text))>=$search_min_len){
 
@@ -120,7 +121,7 @@ elseif($action=="search" AND ($userID OR isset($_GET['captcha']))) {
 		
 					$res_title[$i]		=	$ds['title'];
 					$res_link[$i]		=	'<a href="index.php?site=articles&amp;action=show&amp;articlesID='.$articlesID.'">'.$_language->module['articles_link'].'</a>';
-					$res_occurr[$i]		=	substri_count_array($content, stripslashes($text)) + substr_count(strtolower($ds['title']), strtolower(stripslashes($text)));
+					$res_occurr[$i]		=	substri_count_array($content, stripslashes($text)) + substr_count(strtolower($ds['title']), strtolower(stripslashes($text)))+count(array_intersect(Tags::getTags('articles',$articlesID,true), $keywords))*2;
 					$res_date[$i]		=	$ds['date'];
 					$res_type[$i]		=	$_language->module['article'];
 		
@@ -144,7 +145,7 @@ elseif($action=="search" AND ($userID OR isset($_GET['captcha']))) {
 						$res_title[$i]		=	$faq_array[0]['question'];
 						$res_message[$i]	=	clearfromtags($faq_array[0]['answer']);
 						$res_link[$i]		=	'<a href="index.php?site=faq&amp;action=faq&amp;faqID='.$faqID.'&amp;faqcatID='.$faqcatID.'">'.$_language->module['faq_link'].'</a>';
-						$res_occurr[$i]		=	substri_count_array($faq_array, stripslashes($text));
+						$res_occurr[$i]		=	substri_count_array($faq_array, stripslashes($text))+count(array_intersect(Tags::getTags('faq',$ds['faqID'],true), $keywords))*2;
 						$res_date[$i]		=	$ds['date'];
 						$res_type[$i]		=	$_language->module['faq'];
 		
@@ -258,7 +259,7 @@ elseif($action=="search" AND ($userID OR isset($_GET['captcha']))) {
 						$res_title[$i]		=	$message_array[$showlang]['headline'];
 						$res_message[$i]	=	clearfromtags($message_array[$showlang]['message']);
 						$res_link[$i]		=	'<a href="index.php?site=news_comments&amp;newsID='.$newsID.'">'.$_language->module['news_link'].'</a>';
-						$res_occurr[$i]		=	substri_count_array($message_array, stripslashes($text));
+						$res_occurr[$i]		=	substri_count_array($message_array, stripslashes($text))+count(array_intersect(Tags::getTags('news',$ds['newsID'],true), $keywords))*2;
 						$res_date[$i]		=	$ds['date'];
 						$res_type[$i]		=	$_language->module['news'];
 		
