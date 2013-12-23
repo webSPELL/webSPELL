@@ -143,6 +143,11 @@ hr.grey { margin: 3px 0 3px 0;}
 					<center><?php include("sc_sponsors.php"); ?></center>
 					<!-- end sponsors include -->
 					<hr class="grey" />
+					<!-- tags include -->
+					<b><?php echo $myclanname.".".$index_language['tags']; ?></b><br />
+					<center><?php include("sc_tags.php"); ?></center>
+					<!-- end tags include -->
+					<hr class="grey" />
 					<!-- partners include -->
 					<b><?php echo $myclanname.".".$index_language['partners']; ?></b><br />
 					<center><?php include("partners.php"); ?></center>
