@@ -38,12 +38,18 @@ mb_internal_encoding("UTF-8");
 
 header('content-type: text/html; charset=utf-8');
 
+// -- INSTALL CHECK -- //
+
+if(DEBUG=="OFF" && file_exists('install/index.php')){
+	system_error('The install-folder exists. Did you run the <a href="install/">Installer</a>?<br/>If yes, please remove the install-folder.',0);
+}
+
 // -- CONNECTION TO MYSQL -- //
 
-$_database = new mysqli($host, $user, $pwd, $db);
+$_database = @new mysqli($host, $user, $pwd, $db);
 
-if(!$_database) {
-	system_error('ERROR: Can not connect to MySQL-Server');
+if(mysqli_connect_error()) {
+	system_error('ERROR: Can not connect to MySQL-Server<br/>'.mysqli_connect_error());
 }
 
 $_database->query("SET NAMES 'utf8'");
@@ -146,7 +152,10 @@ function system_error($text,$system=1) {
 
 	if($system) {
 		include('version.php');
-		$info='webSPELL Version: '.$version.'<br />PHP Version: '.phpversion().'<br />MySQL Version: '.$_database->server_info.'<br />';
+		$info='webSPELL Version: '.$version.'<br />PHP Version: '.phpversion().'<br />';
+		if(!mysqli_connect_error()){
+			$info .= 'MySQL Version: '.$_database->server_info.'<br />';
+		}
 	} else {
 		$info = '';
 	}

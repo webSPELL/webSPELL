@@ -30,10 +30,6 @@
 systeminc('session');
 systeminc('ip');
 
-// -- INSTALL CHECK -- //
-
-if(DEBUG=="OFF") if(file_exists('install/index.php')) system_error('Please remove the install-folder first.',0);
-
 // -- GLOBAL WEBSPELL FUNCTIONS -- //
 
 function gettemplate($template,$endung="html", $calledfrom="root") {
