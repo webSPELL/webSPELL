@@ -32,24 +32,22 @@ if(isset($_GET['tag'])){
         if($sql->num_rows){
                 $data = array();
                 while($ds = mysqli_fetch_assoc($sql)){
-                        if($ds['rel'] == "news"){
-                                $data_check = Tags::getNews($ds['ID']);
-                                if(is_array($data_check)){
-                                        $data[] = $data_check;
-                                }
-                        }
-                        elseif($ds['rel'] == "articles"){
-                               $data_check = Tags::getArticle($ds['ID']);
-                               if(is_array($data_check)){
-                                        $data[] = $data_check;
-                                }
-                        }
-                        elseif($ds['rel'] == "static"){
-                               $data_check = Tags::getStaticPage($ds['ID']);
-                               if(is_array($data_check)){
-                                        $data[] = $data_check;
-                                }
-                        }
+                    $data_check = null;
+                    if($ds['rel'] == "news"){
+                        $data_check = Tags::getNews($ds['ID']);
+                    }
+                    elseif($ds['rel'] == "articles"){
+                        $data_check = Tags::getArticle($ds['ID']);
+                    }
+                    elseif($ds['rel'] == "static"){
+                        $data_check = Tags::getStaticPage($ds['ID']);
+                    }
+                    elseif($ds['rel'] == "faq"){
+                        $data_check = Tags::getFaq($ds['ID']);
+                    }
+                    if(is_array($data_check)){
+                        $data[] = $data_check;
+                    }
                 }
                 echo "<h1>".$_language->module['search']."</h1>";
                 usort($data,array('Tags','sortByDate'));

@@ -172,6 +172,26 @@ class Tags{
                         return false;
                 }
         }
+        static function getFaq($faqID){
+                global $userID;
+                $get=safe_query("SELECT faqID,faqcatID,date,question,answer FROM ".PREFIX."faq WHERE faqID='$faqID'");
+                if($get->num_rows){
+                        $ds=mysqli_fetch_array($get);
+                        $answer=htmloutput($ds['answer']);
+                        if (mb_strlen($answer) > 255)
+                        {
+                                $string = wordwrap($answer, 255);
+                                $string = substr($answer, 0, strpos($answer, "\n")).'...';
+                        }
+                        else{
+                                $string = $answer;
+                        }
+                        return array('date'=>$ds['date'],'type' =>'StaticPage', 'content'=>$string, 'title'=>$ds['question'], 'link'=>'index.php?site=faq&amp;action=faq&amp;faqID='.$ds['faqID'].'&amp;faqcatID='.$ds['faqcatID']);
+                }
+                else{
+                        return false;
+                }
+        }
         static function sortByDate($tag1, $tag2){
                 if($tag1['date'] == $tag2['date']) return 0;
                 else return ($tag1['date'] < $tag2['date']) ? 1 : -1;
