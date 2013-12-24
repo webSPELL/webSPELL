@@ -29,6 +29,10 @@ function settitle($string){
 	return $GLOBALS['hp_title'].' - '.$string;
 }
 
+function extractFirstElement($element){
+	return $element[0];
+}
+
 function getPageTitle($url = null, $prefix = true){
 	$data = parseWebspellURL($url);
 	if(isset($GLOBALS['metatags'])){
@@ -38,11 +42,7 @@ function getPageTitle($url = null, $prefix = true){
 		$GLOBALS['metatags'] = $data['metatags'];
 	}
 
-	function getFirstElement($element){
-		return $element[0];
-	}
-
-	$titles = array_map("getFirstElement",$data['titles']);
+	$titles = array_map("extractFirstElement",$data['titles']);
 	$title = implode($titles,'&nbsp; &raquo; &nbsp;');
 	if($prefix){
 		$title = settitle($title);
