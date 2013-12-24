@@ -36,34 +36,6 @@ if(DEBUG=="OFF") if(file_exists('install/index.php')) system_error('Please remov
 
 // -- GLOBAL WEBSPELL FUNCTIONS -- //
 
-if(!function_exists('file_get_contents')) {
-	function file_get_contents($filename) {
-		$fd = fopen("$filename", "rb");
-		$content = fread($fd, filesize($filename));
-		fclose($fd);
-		return $content;
-	}
-}
-
-if(!function_exists('str_split')) {
-	function str_split($str,$split_length=1) {
-
-		$cnt = mb_strlen($str);
-
-		for ($i=0;$i<$cnt;$i+=$split_length)
-		$result[]= mb_substr($str,$i,$split_length);
-
-		return $result;
-	}
-}
-
-if(!function_exists('str_ireplace')) {
-	function str_ireplace($search,$replace,$subject) {
-		$search = preg_quote($search, "/");
-		return preg_replace("/".$search."/i", $replace, $subject);
-	}
-}
-
 function gettemplate($template,$endung="html", $calledfrom="root") {
 	$templatefolder = "templates";
 	if($calledfrom=='root') {
