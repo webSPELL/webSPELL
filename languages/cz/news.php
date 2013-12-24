@@ -81,6 +81,7 @@ $language_array = Array(
 	'view_more'=>'vidět víc...',
 	'visitor_comments'=>'povolit komentáře návštěvníků',
 	'written_by'=>'napsal',
-	'yes'=>'ano'
+	'yes'=>'ano',
+	'tags'=>'Tagy'
 );
 ?>

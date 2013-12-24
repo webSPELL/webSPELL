@@ -64,6 +64,7 @@ $language_array = Array(
 	'text_contains'=>'Szöveg tartalmazza',
 	'title_contains'=>'Cím tartalmazza',
 	'too_short'=>'A keresési kritérium túl kevés. Legalább %min_chars% karakter',
-	'wrong_securitycode'=>'Hibás biztonsági kód!'
+	'wrong_securitycode'=>'Hibás biztonsági kód!',
+	'no_result'=>'Nem található "%s"'
 );
 ?>

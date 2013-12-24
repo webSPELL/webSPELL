@@ -71,6 +71,7 @@ $language_array = Array(
 	'upload_images'=>'Atsiųsti vaizdus',
 	'user_comments'=>'Įjungti vartotojo komentarus',
 	'viewed'=>'Peržiūrėta',
-	'visitor_comments'=>'Įjungti lankytojo komentarus'
+	'visitor_comments'=>'Įjungti lankytojo komentarus',
+	'tags'=>'Žymos'
 );
 ?>

@@ -81,7 +81,7 @@ $language_array = Array(
 	'view_more'=>'zie meer...',
 	'visitor_comments'=>'sta bezoekers commentaar toe',
 	'written_by'=>'geschreven door',
-	'yes'=>'ja'
-
+	'yes'=>'ja',
+	'tags'=>'Tags'
 );
 ?>

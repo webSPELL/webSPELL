@@ -81,6 +81,7 @@ $language_array = Array(
 	'view_more'=>'Vis mere...',
 	'visitor_comments'=>'Slå gæst kommentarer til',
 	'written_by'=>'skrevet af',
-	'yes'=>'ja'
+	'yes'=>'ja',
+	'tags'=>'tags'
 );
 ?>

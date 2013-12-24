@@ -82,6 +82,7 @@ $language_array = Array(
   'view_more'=>'Vezi mai mult...',
   'visitor_comments'=>'activează comentarii vizitatori',
   'written_by'=>'scris de',
-  'yes'=>'da'
+  'yes'=>'da',
+  'tags'=>'taguri'
 );
 ?>

@@ -64,6 +64,7 @@ $language_array = Array(
 	'text_contains'=>'Vyhľadať',
 	'title_contains'=>'Názov obsahuje',
 	'too_short'=>'Vyhľadávací reťazec je príliž krátky. Minimálne %min_chars% znakov',
-	'wrong_securitycode'=>'Zadali ste chybný bezpečnostný kód!'
+	'wrong_securitycode'=>'Zadali ste chybný bezpečnostný kód!',
+	'no_result'=>'Pre "%s" Žiadne záznamy'
 );
 ?>

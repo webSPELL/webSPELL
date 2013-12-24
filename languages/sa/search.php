@@ -65,6 +65,7 @@ $language_array = Array(
   'text_contains'=>'يحتوي على النص',
   'title_contains'=>'يحتوي عنوان',
   'too_short'=>'مصطلح البحث قصيرة جدا. على الأقل %min_chars% حرفا',
-  'wrong_securitycode'=>'قمت بإدخال رمز الحماية خطأ!'
+  'wrong_securitycode'=>'قمت بإدخال رمز الحماية خطأ!',
+  'no_result'=>'لا يوجد مقالات تم العثور عليها ل "%s"'
 );
 ?>

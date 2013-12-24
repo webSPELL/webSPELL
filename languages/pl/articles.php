@@ -46,7 +46,7 @@ $language_array = Array(
 	'links'=>'Linki',
 	'login_for_rate'=>'<b>Musisz być zarejestrowany i zalogowany by ocenić artykuł!</b>',
 	'new_article'=>'Nowy artykuł',
-        'new_window'=>'Otwieraj w nowym oknie',
+    'new_window'=>'Otwieraj w nowym oknie',
 	'no_access'=>'Odmowa dostępu',
 	'no_comments'=>'Komentowanie wyłączone',
 	'no_entries'=>'No entries available',
@@ -62,7 +62,7 @@ $language_array = Array(
 	'rating'=>'Ocena',
 	'really_delete'=>'Na pewno chcesz skasować artykuł ?',
 	'save_article'=>'Zapisz artykuł',
-        'self'=>'Otwórz w tym samym oknie',
+    'self'=>'Otwórz w tym samym oknie',
 	'smilies'=>'&#8226; <a href="javascript:MM_openBrWindow(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smilies</a> <b><u>Wł</u></b>',
 	'sort'=>'Sortuj:',
 	'title'=>'Tytuł',
@@ -71,6 +71,7 @@ $language_array = Array(
 	'upload_images'=>'Wgraj obrazki',
 	'user_comments'=>'Użytkownicy mogą komentować',
 	'viewed'=>'Wejść',
-	'visitor_comments'=>'Goście mogą komentować'
+	'visitor_comments'=>'Goście mogą komentować',
+	'tags'=>'tagi'
 );
 ?>

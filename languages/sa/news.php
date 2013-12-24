@@ -82,6 +82,7 @@ $language_array = Array(
   'view_more'=>'عرض المزيد ...',
   'visitor_comments'=>'تمكين تعليقات الزوار',
   'written_by'=>'كتبه',
-  'yes'=>'نعم'
+  'yes'=>'نعم',
+  'tags'=>'الكلمات'
 );
 ?>

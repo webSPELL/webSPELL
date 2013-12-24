@@ -81,6 +81,7 @@ $language_array = Array(
   'view_more'=>'...بیشتر ببینید',
   'visitor_comments'=>'فعال کردن کامنت مهمان',
   'written_by'=>'نوشته شده توسط',
-  'yes'=>'بلی'
+  'yes'=>'بلی',
+  'tags'=>'برچسب ها'
 );
 ?>

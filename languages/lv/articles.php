@@ -72,6 +72,7 @@ $language_array = Array(
   'upload_images'=>'Augšuplādēt attēlus',
   'user_comments'=>'Iespējot lietotāju komentārus',
   'viewed'=>'Skatījumi',
-  'visitor_comments'=>'Iespējot apmeklētāju komentārus'
+  'visitor_comments'=>'Iespējot apmeklētāju komentārus',
+  'tags'=>'tags'
 );
 ?>

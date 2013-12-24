@@ -65,6 +65,7 @@ $language_array = Array(
   'text_contains'=>'Текстот содржи',
   'title_contains'=>'Насловот содржи',
   'too_short'=>'Воведот во претрагата е прекраток. Најмалце %min_chars% ознаки',
-  'wrong_securitycode'=>'Внесивте погрешна сигурносна шифра!'
+  'wrong_securitycode'=>'Внесивте погрешна сигурносна шифра!',
+  'no_result'=>'Нема записи најде за "%s"'
 );
 ?>

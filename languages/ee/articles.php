@@ -72,6 +72,7 @@ $language_array = Array(
   'upload_images'=>'Lae pilte üles',
   'user_comments'=>'Luba kasutajate kommentaarid',
   'viewed'=>'Vaateid',
-  'visitor_comments'=>'Luba külastajate kommentaarid'
+  'visitor_comments'=>'Luba külastajate kommentaarid',
+  'tags'=>'tags'
 );
 ?>

@@ -65,6 +65,7 @@ $language_array = Array(
   'text_contains'=>'Tekst sisaldab',
   'title_contains'=>'Pealkiri sisaldab',
   'too_short'=>'Otsingu märksõna on liiga lühike. Minimaalne pikkus: %min_chars% tähte',
-  'wrong_securitycode'=>'Sa sisestasid vale turvakoodi!'
+  'wrong_securitycode'=>'Sa sisestasid vale turvakoodi!',
+  'no_result'=>'Kandeid ei leitud "%s"'
 );
 ?>

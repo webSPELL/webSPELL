@@ -81,6 +81,7 @@ $language_array = Array(
 	'view_more'=>'Più...',
 	'visitor_comments'=>'Visitatori Commenti attivare',
 	'written_by'=>'scritto da',
-	'yes'=>'SI'
+	'yes'=>'SI',
+	'tags'=>'tags'
 );
 ?>

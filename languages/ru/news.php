@@ -82,6 +82,7 @@ $language_array = Array(
   'view_more'=>'Смотреть далее...',
   'visitor_comments'=>'включить комментарии посетителей',
   'written_by'=>'написано от',
-  'yes'=>'да'
+  'yes'=>'да',
+  'tags'=>'Метки'
 );
 ?>

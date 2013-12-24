@@ -70,6 +70,7 @@ $language_array = Array(
   'text_contains'=>'Besedilo vsebuje',
   'title_contains'=>'Naslov vsebuje',
   'too_short'=>'Iskalni niz je prekratek. Minimalno %min_chars% znakov',
-  'wrong_securitycode'=>'Napačna varnostna koda!'
+  'wrong_securitycode'=>'Napačna varnostna koda!',
+  'no_result'=>'Ni rezultatov za "%s" vpisi'
 );
 ?>

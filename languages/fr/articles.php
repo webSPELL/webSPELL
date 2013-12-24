@@ -71,7 +71,8 @@ $language_array = Array(
 	'upload_images'=>'Envoyer une image',
 	'user_comments'=>'Activer les commentaires pour les membres',
 	'viewed'=>'Vus',
-	'visitor_comments'=>'Activer les commentaires'
+	'visitor_comments'=>'Activer les commentaires',
+	'tags'=>'balises'
 );
 
 ?>

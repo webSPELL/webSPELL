@@ -64,6 +64,7 @@ $language_array = Array(
 	'text_contains'=>'Tekstą sudaro',
 	'title_contains'=>'Pavadinimą sudaro',
 	'too_short'=>'Termino pavadinimas per trumpas. Mažiausiai turi būti %min_chars% simboliai',
-	'wrong_securitycode'=>'Jūs įvedėte blogą apsaugos kodą!'
+	'wrong_securitycode'=>'Jūs įvedėte blogą apsaugos kodą!',
+	'no_result'=>'Nėra įrašų už "%s" rasti'
 );
 ?>

@@ -52,6 +52,7 @@ $language_array = Array(
   'squads'=>'ჯგუფები',
   'statistics'=>'სტატისტიკები',
   'topics'=>'შეტყობინება',
-  'upcoming_events'=>'მომავალი ივენთები'
+  'upcoming_events'=>'მომავალი ივენთები',
+  'tags'=>'tags'
 );
 ?>

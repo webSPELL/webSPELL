@@ -57,6 +57,7 @@ $language_array = Array(
   'squads'=>'ekipe',
   'statistics'=>'statistika',
   'topics'=>'teme',
-  'upcoming_events'=>'prihajajoči dogodki'
+  'upcoming_events'=>'prihajajoči dogodki',
+  'tags'=>'oznake'
 );
 ?>

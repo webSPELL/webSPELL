@@ -82,6 +82,7 @@ $language_array = Array(
   'view_more'=>'Vaata rohkem...',
   'visitor_comments'=>'luba külastajate kommentaarid',
   'written_by'=>'kirjutaja:',
-  'yes'=>'jah'
+  'yes'=>'jah',
+  'tags'=>'tags'
 );
 ?>
