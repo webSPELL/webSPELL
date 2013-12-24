@@ -332,6 +332,10 @@ function cut_middle($str, $max = 50 ){
 	return $str;
 }
 
+function urlreplace_callback_1($match){
+	return '<a href="'.fixJavaEvents($match[1]).'" target="_blank">';
+}
+
 function urlreplace($content){	
  	$starttags = substr_count(strtolower($content), strtolower('[url'));
 	$endtags = substr_count(strtolower($content), strtolower('[/url]'));
@@ -347,7 +351,7 @@ function urlreplace($content){
 		$match_rep = str_replace($match[1],$new_erg[2],$match[0]);
 		$content = str_replace($match[0],$match_rep,$content);
 	}
-	$content = preg_replace("#\[url=((http://|https://|ftp://|mailto:|news:|www\.).*?)\]#ie","'<a href=\"'.fixJavaEvents('\\1').'\" target=\"_blank\">'",$content);
+	$content = preg_replace_callback("#\[url=((http://|https://|ftp://|mailto:|news:|www\.).*?)\]#i","urlreplace_callback_1",$content);
 	$content = preg_replace("#\<a href='www(.*?)' target='_blank'>#i","<a href='http://www\\1' target='_blank'>",$content);
 	$content = str_ireplace("[/url]","</a>",$content);
 	return $content;
@@ -416,6 +420,34 @@ function removeIllegalCharacertsWithoutUrls($string){
         return preg_replace("/[^a-z0-9#\/\.]/si", "", $string);
 }
 
+function emailreplace_callback_1($match){
+	return '<a href="mailto:'.mail_protect(fixJavaEvents($match[1])).'">'.fixJavaEvents($match[1]).'</a>';
+}
+
+function emailreplace_callback_2($match){
+	return '<a href="mailto:'.mail_protect(fixJavaEvents($match[1])).'">'.$match[2].'</a>';
+}
+
+function font_size_callback($match){
+	return '<font size="'.removeIllegalCharacerts($match[1]).'">'.$match[2].'</font>';
+}
+
+function font_color_callback($match){
+	return '<font color="'.removeIllegalCharacerts($match[1]).'">'.$match[2].'</font>';
+}
+
+function font_face_callback($match){
+	return '<font face="'.removeIllegalCharacerts($match[1]).'">'.$match[2].'</font>';
+}
+
+function align_callback($match){
+	return '<div align="'.removeIllegalCharacerts($match[1]).'">'.$match[2].'</div>';
+}
+
+function smiley_callback($match){
+	return '<img src="'.removeIllegalCharacertsWithoutUrls($match[2]).'" alt="'.removeIllegalCharacerts($match[1]).'" border="0" />';
+}
+
 function replacement($content, $bbcode=true) {
 	$pagebg=PAGEBG;
 	$border=BORDER;
@@ -429,20 +461,20 @@ function replacement($content, $bbcode=true) {
 		$content = quotereplace($content);
 		$content = urlreplace($content);
 		$content = preg_replace_callback("#(^|<[^\"=]{1}>|\s|\[b|i|u\]][^<a.*>])(http://|https://|ftp://|mailto:|news:|www.)([^\s<>|$]+)#si","linkreplace",$content);
-		$content = preg_replace("#\[email\](.*?)\[/email\]#sie", "'<a href=\"mailto:'.mail_protect(fixJavaEvents('\\1')).'\">'.fixJavaEvents('\\1').'</a>'", $content);
-		$content = preg_replace("#\[email=(.*?)\](.*?)\[/email\]#sie", "'<a href=\"mailto:'.mail_protect(fixJavaEvents('\\1')).'\">\\2</a>'", $content);
+		$content = preg_replace_callback("#\[email\](.*?)\[/email\]#si", "emailreplace_callback_1", $content);
+		$content = preg_replace_callback("#\[email=(.*?)\](.*?)\[/email\]#si", "emailreplace_callback_2", $content);
 		$content = preg_replace_callback("#<a\b[^>]*>(.*?)</a>#si","cut_urls",$content);
 		while(preg_match("#\[size=([0-9]*)\](.*?)\[/size\]#si", $content)){
-		  $content = preg_replace("#\[size=([0-9]*)\](.*?)\[/size\]#sie", "'<font size=\"'.removeIllegalCharacerts('\\1').'\">\\2</font>'", $content);
+		  $content = preg_replace_callback("#\[size=([0-9]*)\](.*?)\[/size\]#si", "font_size_callback", $content);
 		}
 		while(preg_match("#\[color=([a-z0-9\#]*)\](.*?)\[/color\]#si", $content)){  
-		  $content = preg_replace("#\[color=([a-z0-9\#]*)\](.*?)\[/color\]#sie", "'<font color=\"'.removeIllegalCharacerts('\\1').'\">\\2</font>'", $content);
+		  $content = preg_replace_callback("#\[color=([a-z0-9\#]*)\](.*?)\[/color\]#si", "font_color_callback", $content);
 		}
 		while(preg_match("#\[font=([a-z0-9]*)\](.*?)\[/font\]#si", $content)){
-		  $content = preg_replace("#\[font=([a-z0-9]*)\](.*?)\[/font\]#sie", "'<font face=\"'.removeIllegalCharacerts('\\1').'\">\\2</font>'", $content);
+		  $content = preg_replace_callback("#\[font=([a-z0-9]*)\](.*?)\[/font\]#si", "font_face_callback", $content);
 		}
 		while(preg_match("#\[align=([a-z0-9]*)\](.*?)\[/align\]#si", $content)){
-		  $content = preg_replace("#\[align=([a-z0-9]*)\](.*?)\[/align\]#sie", "'<div align=\"'.removeIllegalCharacerts('\\1').'\">\\2</div>'", $content);
+		  $content = preg_replace_callback("#\[align=([a-z0-9]*)\](.*?)\[/align\]#si", "align_callback", $content);
 		}
 		$content = preg_replace("#\[b\](.*?)\[/b\]#si", "<b>\\1</b>",$content);
 		$content = preg_replace("#\[i\](.*?)\[/i\]#si", "<i>\\1</i>",$content);
@@ -457,7 +489,7 @@ function replacement($content, $bbcode=true) {
 		$content = preg_replace("#\[center]#si", "<center>", $content);
 		$content = preg_replace("#\[/center]#si", "</center>", $content);
 	}
-	$content = preg_replace("#\[SMILE=(.*?)\](.*?)\[/SMILE\]#sie", "'<img src=\"'.removeIllegalCharacertsWithoutUrls('\\2').'\" alt=\"'.removeIllegalCharacerts('\\1').'\" border=\"0\" />'", $content);
+	$content = preg_replace_callback("#\[SMILE=(.*?)\](.*?)\[/SMILE\]#si", "smiley_callback", $content);
 
 	return $content;
 }
