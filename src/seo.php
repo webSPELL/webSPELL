@@ -37,7 +37,12 @@ function getPageTitle($url = null, $prefix = true){
 	else{
 		$GLOBALS['metatags'] = $data['metatags'];
 	}
-	$titles = array_map(function($element) { return $element[0]; },$data['titles']);
+
+	function getFirstElement($element){
+		return $element[0];
+	}
+
+	$titles = array_map("getFirstElement",$data['titles']);
 	$title = implode($titles,'&nbsp; &raquo; &nbsp;');
 	if($prefix){
 		$title = settitle($title);
@@ -433,6 +438,7 @@ function parseWebspellURL($parameters = null){
 			else $staticID = '';
 			$get=mysqli_fetch_array(safe_query("SELECT name FROM `".PREFIX."static` WHERE staticID='$staticID'"));
 			$returned_title[] = array($get['name']);
+			$metadata['keywords'] = Tags::getTags('static',$staticID);
 			break;
 		
 		case 'usergallery':
