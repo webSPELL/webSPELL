@@ -71,6 +71,7 @@ $language_array = Array(
 	'upload_images'=>'Upload billeder',
 	'user_comments'=>'Slå bruger kommentarer til',
 	'viewed'=>'Antal set',
-	'visitor_comments'=>'Slå gæst kommentarer til'
+	'visitor_comments'=>'Slå gæst kommentarer til',
+	'tags'=>'Tags'
 );
 ?>

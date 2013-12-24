@@ -40,12 +40,14 @@ if(isset($_POST['save'])) {
 			safe_query("INSERT INTO `".PREFIX."static` ( `name`, `accesslevel`,`content` ) values( '".$_POST['name']."', '".$_POST['accesslevel']."','".$_POST['message']."' ) ");
 			$id = mysqli_insert_id($_database);
 		}
+		Tags::setTags('static', $id, $_POST['tags']);
 	} else echo $_language->module['transaction_invalid'];
 }
 
 elseif(isset($_GET['delete'])) {
  	$CAPCLASS = new Captcha;
 	if($CAPCLASS->check_captcha(0, $_GET['captcha_hash'])) {
+		Tags::removeTags('static', $_GET['staticID']);
 		safe_query("DELETE FROM `".PREFIX."static` WHERE staticID='".$_GET['staticID']."'");
 	} else echo $_language->module['transaction_invalid'];
 }
@@ -73,6 +75,10 @@ if(isset($_GET['action']) and $_GET['action'] == "add") {
     <tr>
       <td width="15%"><b>'.$_language->module['title'].'</b></td>
       <td width="85%"><input type="text" name="name" size="60" value="new" /></td>
+    </tr>
+    <tr>
+      <td width="15%"><b>'.$_language->module['tags'].'</b></td>
+      <td width="85%"><input type="text" name="tags" size="60" value="" /></td>
     </tr>
     <tr>
       <td><b>'.$_language->module['accesslevel'].'</b></td>
@@ -116,6 +122,8 @@ elseif(isset($_GET['action']) and $_GET['action'] == "edit") {
 	elseif($ds['accesslevel'] == 1) $user = "checked=\"checked\"";
 	else $public = "checked=\"checked\"";
 
+	$tags = Tags::getTags('static', $staticID);
+
 	$CAPCLASS = new Captcha;
 	$CAPCLASS->create_transaction();
 	$hash = $CAPCLASS->get_hash();
@@ -137,6 +145,10 @@ elseif(isset($_GET['action']) and $_GET['action'] == "edit") {
     <tr>
       <td width="15%"><b>'.$_language->module['title'].'</b></td>
       <td width="85%"><input type="text" name="name" size="60" value="'.getinput($ds['name']).'" /></td>
+    </tr>
+    <tr>
+      <td width="15%"><b>'.$_language->module['tags'].'</b></td>
+      <td width="85%"><input type="text" name="tags" size="60" value="'.getinput($tags).'" /></td>
     </tr>
     <tr>
       <td><b>'.$_language->module['accesslevel'].'</b></td>

@@ -82,6 +82,7 @@ $language_array = Array(
   'view_more'=>'Skatīt vairāk...',
   'visitor_comments'=>'iespējot apmeklētāju komentārus',
   'written_by'=>'autors',
-  'yes'=>'jā'
+  'yes'=>'jā',
+  'tags'=>'tags'
 );
 ?>

@@ -64,6 +64,7 @@ $language_array = Array(
   'text_contains'=>'Текст садржи',
   'title_contains'=>'Наслов садржи',
   'too_short'=>'Упит претраге је прекратак. Најмање %min_chars% знака',
-  'wrong_securitycode'=>'Унијели сте криви сигурносни код!'
+  'wrong_securitycode'=>'Унијели сте криви сигурносни код!',
+  'no_result'=>'Нема уноса фоунд фор "%s"'
 );
 ?>

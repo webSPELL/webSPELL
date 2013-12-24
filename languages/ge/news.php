@@ -82,6 +82,7 @@ $language_array = Array(
   'view_more'=>'მეტის ნახვა',
   'visitor_comments'=>'სტუმრის კომენატარის უფლება',
   'written_by'=>'დაწერილია ',
-  'yes'=>'კი'
+  'yes'=>'კი',
+  'tags'=>'tags'
 );
 ?>

@@ -52,6 +52,7 @@ $language_array = Array(
   'squads'=>'rühmad',
   'statistics'=>'statistika',
   'topics'=>'teemad',
-  'upcoming_events'=>'tulevad üritused'
+  'upcoming_events'=>'tulevad üritused',
+  'tags'=>'tags'
 );
 ?>

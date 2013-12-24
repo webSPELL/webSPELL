@@ -45,6 +45,7 @@ $language_array = Array(
   'really_delete'=>'Diese FAQ wirklich löschen?',
   'sort'=>'Sortierung',
   'to_sort'=>'sortieren',
-  'transaction_invalid'=>'Transaktions ID ungültig'
+  'transaction_invalid'=>'Transaktions ID ungültig',
+  'tags'=>'Tags'
 );
 ?>

@@ -82,6 +82,7 @@ $language_array = Array(
   'view_more'=>'Погледај повеќе...',
   'visitor_comments'=>'Овозможи коментари за посетителите',
   'written_by'=>'Напиша',
-  'yes'=>'Да'
+  'yes'=>'Да',
+  'tags'=>'тагови'
 );
 ?>

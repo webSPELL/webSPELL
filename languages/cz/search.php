@@ -64,6 +64,7 @@ $language_array = Array(
 	'text_contains'=>'Text',
 	'title_contains'=>'Nadpis',
 	'too_short'=>'Hledaný termín je příliš krátky. Nejméně %min_chars% znaků',
-	'wrong_securitycode'=>'Bezpečností kód je špatný!'
+	'wrong_securitycode'=>'Bezpečností kód je špatný!',
+	'no_result'=>'Pro "%s" Žádné záznamy'
 );
 ?>

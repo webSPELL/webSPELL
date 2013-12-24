@@ -64,7 +64,7 @@ $language_array = Array(
 	'text_contains'=>'Tekst inhoud',
 	'title_contains'=>'Titel inhoud',
 	'too_short'=>'Zoekterm is te kort. Op zijn minst %min_chars% tekens',
-	'wrong_securitycode'=>'De veiligheids code was verkeerd!'
-
+	'wrong_securitycode'=>'De veiligheids code was verkeerd!',
+	'no_result'=>'Geen data gevonden voor "%s"'
 );
 ?>

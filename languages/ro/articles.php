@@ -72,6 +72,7 @@ $language_array = Array(
   'upload_images'=>'Incarcă imagini',
   'user_comments'=>'Permite comentariile utilizatorilor',
   'viewed'=>'Vizualizări',
-  'visitor_comments'=>'Permite comentariile vizitatorilor'
+  'visitor_comments'=>'Permite comentariile vizitatorilor',
+  'tags'=>'taguri'
 );
 ?>

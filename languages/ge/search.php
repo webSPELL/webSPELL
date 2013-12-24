@@ -65,6 +65,7 @@ $language_array = Array(
   'text_contains'=>'ტექსტი შეიცავს',
   'title_contains'=>'სათაური შეიცავს',
   'too_short'=>'საძიები ტერმინი მოკლეა.მინიმუმ %min_chars% ასოები',
-  'wrong_securitycode'=>'თქვენ შეიყვანეთ არასოწრი უსაფრთხოების კოდი!'
+  'wrong_securitycode'=>'თქვენ შეიყვანეთ არასოწრი უსაფრთხოების კოდი!',
+  'no_result'=>'მასალა არ მოიძებნა "%s"'
 );
 ?>

@@ -70,6 +70,7 @@ $language_array = Array(
   'text_contains'=>'Текст содержит',
   'title_contains'=>'Название содержит',
   'too_short'=>'Условие поиска слишком короткое. Не менее %min_chars% символов',
-  'wrong_securitycode'=>'Вы ввели неверный код проверки!'
+  'wrong_securitycode'=>'Вы ввели неверный код проверки!',
+  'no_result'=>'Записей не найдено для "%s"'
 );
 ?>

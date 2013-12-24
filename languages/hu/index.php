@@ -51,6 +51,7 @@ $language_array = Array(
 	'squads'=>'squadok',
 	'statistics'=>'statisztikák',
 	'topics'=>'topikok',
-	'upcoming_events'=>'közelgő események'
+	'upcoming_events'=>'közelgő események',
+	'tags'=>'címkék'
 );
 ?>

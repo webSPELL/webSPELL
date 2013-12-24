@@ -64,6 +64,7 @@ $language_array = Array(
 	'text_contains'=>'Teksten indeholder',
 	'title_contains'=>'Titlen indeholder',
 	'too_short'=>'Søgeudtrykket er for kort. Mindst %min_chars% tegn',
-	'wrong_securitycode'=>'Du har indtastet en forkert sikkerhedskode!'
+	'wrong_securitycode'=>'Du har indtastet en forkert sikkerhedskode!',
+	'no_result'=>'Ingen oplysningerne fundet for "%s"'
 );
 ?>

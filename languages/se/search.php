@@ -64,6 +64,7 @@ $language_array = Array(
 	'text_contains'=>'Texten innehåller',
 	'title_contains'=>'Titlen innehåller',
 	'too_short'=>'Sökord är för kort. Skriv minst %min_chars% tecken',
-	'wrong_securitycode'=>'Du har skrivit in fel säkerhets kod!'
+	'wrong_securitycode'=>'Du har skrivit in fel säkerhets kod!',
+	'no_result'=>'Inga poster hittades för "%s"'
 );
 ?>

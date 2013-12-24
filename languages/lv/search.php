@@ -65,6 +65,7 @@ $language_array = Array(
   'text_contains'=>'Teksts satur',
   'title_contains'=>'Virsraksts satur',
   'too_short'=>'Meklējamais vārds ir par īsu. Vismaz %min_chars% zīmes',
-  'wrong_securitycode'=>'Nepareizs drošības kods!'
+  'wrong_securitycode'=>'Nepareizs drošības kods!',
+  'no_result'=>'Nav ierakstu vaicājumam "%s"'
 );
 ?>

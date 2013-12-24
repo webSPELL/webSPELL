@@ -88,6 +88,8 @@ if($action=="new") {
 		$selects .= '<option value="'.$i.'">'.$i.'</option>';
 	}
 
+	$tags = '';
+
 	$postform = '';
 	$comments='<option value="0">'.$_language->module['no_comments'].'</option><option value="1">'.$_language->module['user_comments'].'</option><option value="2" selected="selected">'.$_language->module['visitor_comments'].'</option>';
 	
@@ -155,6 +157,8 @@ elseif($action=="save") {
                       saved='1',
                       intern='".$intern."',
                       comments='".$comments."' WHERE newsID='".$newsID."'");
+
+	Tags::setTags('news', $newsID, $_POST['tags']);
 
 	$update_langs = array();
 	$query = safe_query("SELECT language FROM ".PREFIX."news_contents WHERE newsID = '".$newsID."'");
@@ -281,6 +285,8 @@ elseif($action=="preview") {
 	if($ds['link4'] && $ds['url4']!="http://" && $ds['window4']) $related.='&#8226; <a href="'.$ds['url4'].'" target="_blank">'.$ds['link4'].'</a> ';
 	if($ds['link4'] && $ds['url4']!="http://" && !$ds['window4']) $related.='&#8226; <a href="'.$ds['url4'].'">'.$ds['link4'].'</a> ';
 
+	$tags = Tags::getTagsLinked('news',$ds['newsID']);
+
 	eval ("\$news = \"".gettemplate("news")."\";");
 	echo $news;
 
@@ -334,7 +340,7 @@ elseif($quickactiontype=="delete") {
 	include("_settings.php");
 	include("_functions.php");
 	$_language->read_module('news');
-  if(isset($_POST['newsID'])){
+  	if(isset($_POST['newsID'])){
   	$newsID = $_POST['newsID'];
 	
 		foreach($newsID as $id) {
@@ -351,6 +357,7 @@ elseif($quickactiontype=="delete") {
 					}
 				}
 			}
+			Tags::removeTags('news', $id);
 			safe_query("DELETE FROM ".PREFIX."news WHERE newsID='".$id."'");
 			safe_query("DELETE FROM ".PREFIX."news_contents WHERE newsID='".$id."'");
 			safe_query("DELETE FROM ".PREFIX."comments WHERE parentID='".$id."' AND type='ne'");
@@ -384,6 +391,8 @@ elseif($action=="delete") {
 			}
 		}
 	}
+
+	Tags::removeTags('news', $id);
 
 	safe_query("DELETE FROM ".PREFIX."news WHERE newsID='".$id."'");
 	safe_query("DELETE FROM ".PREFIX."news_contents WHERE newsID='".$id."'");
@@ -500,6 +509,8 @@ elseif($action=="edit") {
 		$window4_new = '';
 		$window4_self = 'checked="checked"';
 	}
+
+	$tags = Tags::getTags('news', $newsID);
 
 	$comments='<option value="0">'.$_language->module['no_comments'].'</option><option value="1">'.$_language->module['user_comments'].'</option><option value="2">'.$_language->module['visitor_comments'].'</option>';
 	$comments=str_replace('value="'.$ds['comments'].'"', 'value="'.$ds['comments'].'" selected="selected"', $comments);
@@ -824,6 +835,8 @@ else {
 			}
 		}
 		else $comments='';
+
+		$tags = Tags::getTagsLinked('news',$ds['newsID']);
 
 		$adminaction = '';
 		if(isnewsadmin($userID)) {

@@ -71,6 +71,7 @@ $language_array = Array(
   'upload_images'=>'اپلود عکس',
   'user_comments'=>'فعال کردن کامنت ها',
   'viewed'=>'تماشا',
-  'visitor_comments'=>'فعال کردن کامنت مهمان'
+  'visitor_comments'=>'فعال کردن کامنت مهمان',
+  'tags'=>'برچسب ها'
 );
 ?>

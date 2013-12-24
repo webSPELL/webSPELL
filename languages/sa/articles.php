@@ -72,6 +72,7 @@ $language_array = Array(
   'upload_images'=>'رفع الصور',
   'user_comments'=>'تفعيل التعليقات',
   'viewed'=>'المشاهدات',
-  'visitor_comments'=>'تفعيل تعليقات الزوار'
+  'visitor_comments'=>'تفعيل تعليقات الزوار',
+  'tags'=>'الكلمات'
 );
 ?>

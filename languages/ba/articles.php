@@ -72,6 +72,7 @@ $language_array = Array(
   'upload_images'=>'Uploadaj slike',
   'user_comments'=>'Omogući komentare korisnicima',
   'viewed'=>'Pogleda',
-  'visitor_comments'=>'Omogući komentare posjetiocima'
+  'visitor_comments'=>'Omogući komentare posjetiocima',
+  'tags'=>'Tagovi'
 );
 ?>

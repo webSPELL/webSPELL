@@ -65,6 +65,7 @@ $language_array = Array(
   'text_contains'=>'Textul conţine',
   'title_contains'=>'Titlul conţine',
   'too_short'=>'Termenul de căutare este prea scurt. Cel puţin %min_chars% caractere',
-  'wrong_securitycode'=>'Aţi introdus un cod de siguranţă greşit!'
+  'wrong_securitycode'=>'Aţi introdus un cod de siguranţă greşit!',
+  'no_result'=>'Nu am găsit pentru "%s" intrări'
 );
 ?>

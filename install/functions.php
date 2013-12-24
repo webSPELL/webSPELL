@@ -2072,5 +2072,11 @@ function update40200_40300() {
       ('', 'slovenian', 'si', 'slovenian'),
       ('', 'latvian', 'lv', 'latvian')");
 
+  mysqli_query($_database, "CREATE TABLE `".PREFIX."tags` (
+  `rel` varchar(255) NOT NULL,
+  `ID` int(11) NOT NULL,
+  `tag` varchar(255) NOT NULL
+)");
+
 }
 ?>

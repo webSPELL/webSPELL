@@ -81,6 +81,7 @@ $language_array = Array(
 	'view_more'=>'Tovább...',
 	'visitor_comments'=>'a vendégek is kommentálhatják',
 	'written_by'=>'Írta:',
-	'yes'=>'igen'
+	'yes'=>'igen',
+	'tags'=>'címkék'
 );
 ?>

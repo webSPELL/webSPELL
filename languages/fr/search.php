@@ -64,6 +64,7 @@ $language_array = Array(
 	'text_contains'=>'Contenu du texte',
 	'title_contains'=>'Contenu du titre',
 	'too_short'=>'Le nombre de caractères de la recherche est trop petit. Entrez au moins %min_chars% caractères !',
-	'wrong_securitycode'=>'Le code de sécurité est faux !'
+	'wrong_securitycode'=>'Le code de sécurité est faux !',
+	'no_result'=>'Aucune entrée trouvée pour "%s"'
 );
 ?>

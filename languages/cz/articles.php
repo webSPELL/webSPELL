@@ -71,6 +71,7 @@ $language_array = Array(
 	'upload_images'=>'Nahrát obrázky',
 	'user_comments'=>'Povolit uživatelské komentáře',
 	'viewed'=>'Shlédnuto',
-	'visitor_comments'=>'Povolit komentáře návštěvníků'
+	'visitor_comments'=>'Povolit komentáře návštěvníků',
+	'tags'=>'Tagy'
 );
 ?>

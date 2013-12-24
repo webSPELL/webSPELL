@@ -71,6 +71,7 @@ $language_array = Array(
 	'upload_images'=>'Képek feltöltése',
 	'user_comments'=>'Csak a tagok kommentálhatják',
 	'viewed'=>'Megtekintve',
-	'visitor_comments'=>'A vendégek is kommentálhatják'
+	'visitor_comments'=>'A vendégek is kommentálhatják',
+	'tags'=>'címkék'
 );
 ?>
