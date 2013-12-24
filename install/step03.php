@@ -25,7 +25,7 @@
 ##########################################################################
 */
 $fatal_error = false;
-if (version_compare(PHP_VERSION, '5.0.0', '<')) { 
+if (version_compare(PHP_VERSION, '5.2.0', '<')) { 
   $php_version_check = '<b><font color="red">'.$_language->module['no'].'</font></b>';
   $fatal_error = true;
 } 
@@ -77,7 +77,7 @@ else{
            <td align="left">&nbsp;</td>
          </tr>
          <tr>
-           <td><?php echo $_language->module['php_version']; ?> &gt;= 5.0</td>
+           <td><?php echo $_language->module['php_version']; ?> &gt;= 5.2</td>
            <td align="left"><?php echo $php_version_check;?></td>
          </tr>
          <tr>
