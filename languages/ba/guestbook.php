@@ -56,7 +56,6 @@ $language_array = Array(
   'smilies'=>'<a href="javascript:MM_openBrWindow(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smajlići</a> uključeni',
   'sort'=>'Razvrstaj:',
   'submit'=>'Spremi',
-  'thx'=>'<br /><b>Thanks for your entry!</b><br /><br />The entry will be released after an examination.',
   'update_comment'=>'Spremi komentar',
   'wrote'=>'je napisao',
   'your_message'=>'Vaša poruka'

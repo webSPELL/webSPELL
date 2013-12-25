@@ -32,6 +32,7 @@ $language_array = Array(
 
   'board'=>'Forum',
   'last_post'=>'Zadnji odgovor',
+  'reply'=>'Odgovor',
   'replies'=>'Odgovora'
 );
 ?>

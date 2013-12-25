@@ -48,6 +48,7 @@ $language_array = Array(
   'send_successfull'=>'Vaša poruka je uspješno poslana.',
   'subject'=>'Naslov',
   'title_contact'=>'Kontakt forma',
+  'unknown_receiver'=>'nepoznati prijemnik',
   'wrong_securitycode'=>'Unijeli ste krivi sigurnosni kod!'
 );
 ?>
