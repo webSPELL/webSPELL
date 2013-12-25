@@ -14,7 +14,7 @@ if(in_array($baseLanguage,$all_langs)){
 
 $ref_keys = array();
 $erros = array();
-$all_langs = array($baseLanguage) + $all_langs;
+$all_langs = array_merge(array($baseLanguage),$all_langs);
 
 function checkBom($file){
 	return (false !== strpos($file, BOM));
