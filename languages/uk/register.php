@@ -56,7 +56,7 @@ Thank you for your registration
 %pagetitle% - %homepage_url%',
 	'nickname'=>'Nickname',
 	'nickname_inuse'=>'Nickname allready in use.',
-	'no_register_when_loggedin'=>'You allready have an account at %pagename%',
+	'no_register_when_loggedin'=>'You already have an account at %pagename%',
 	'password'=>'Password',
 	'profile_info'=>'Registration information',
 	'register_now'=>'Register now!',
