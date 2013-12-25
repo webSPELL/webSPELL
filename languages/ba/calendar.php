@@ -41,6 +41,8 @@ $language_array = Array(
   'aug'=>'Avgust',
   'calendar'=>'kalendar',
   'clanwardetails'=>'Detalji meča',
+  'clanwar_message'=>'novi predstojeće Clanwar na %Datum%: [br][br] Protivnik: [flag]%opponent_flag%[/flag] [url=%opp_hp%]%opponent%[/url] [br]Liga:[url=%league_hp%]%league%[/url] [br]Info: %warinfo%[br][br][url=index.php?site=calendar]link na kalendar[/url]?',
+  'clanwar_message_title'=>'novi predstojeće rata u kalendaru!',
   'date_time'=>'Datum - Vrijeme',
   'dec'=>'Decembar',
   'delete'=>'izbriši',

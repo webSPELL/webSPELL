@@ -30,6 +30,7 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'no_access'=>'Pristup zabranjen!'
+  'no_access'=>'Pristup zabranjen!',
+  'just_rate_between_0_10'=>'Molimo da ocijenite samo od 0 do 10 bodova!'
 );
 ?>

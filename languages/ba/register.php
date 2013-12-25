@@ -46,6 +46,7 @@ $language_array = Array(
   'mail_text'=>'Selam %username%!rnrnVaša registracija na %pagetitle% (%homepage_url%) je uspješna. Podaci za prijavu:rnrnKorisničko ime: %username%rnLozinka: %password%rnrnDa bi završili vašu registraciju, morate kliknuti na aktivacijski link:rn%activationlink%rnrnHvala Vam na registracijirn%pagetitle% - %homepage_url%',
   'nickname'=>'Nik',
   'nickname_inuse'=>'Nik već koristi neko drugi.',
+  'no_register_when_loggedin'=>'Već imate račun kod %pagename%',
   'password'=>'Lozinka',
   'profile_info'=>'Registracijske informacije',
   'register_now'=>'Registruj se!',
