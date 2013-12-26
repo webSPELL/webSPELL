@@ -38,15 +38,21 @@ mb_internal_encoding("UTF-8");
 
 header('content-type: text/html; charset=utf-8');
 
+// -- INSTALL CHECK -- //
+
+if(DEBUG=="OFF") if(file_exists('install/index.php')) system_error('The install-folder exists. Did you run the <a href="install/">install</a>?<br/>If so please remove the install-folder.',0);
+
 // -- CONNECTION TO MYSQL -- //
 
-$_database = new mysqli($host, $user, $pwd, $db);
+//if(!isset($GLOBALS['_database'])){
+	$_database = new mysqli($host, $user, $pwd, $db);
 
-if(!$_database) {
-	system_error('ERROR: Can not connect to MySQL-Server');
-}
+	if(!$_database) {
+		system_error('ERROR: Can not connect to MySQL-Server');
+	}
 
-$_database->query("SET NAMES 'utf8'");
+	$_database->query("SET NAMES 'utf8'");
+//}
 
 // -- GENERAL PROTECTIONS -- //
 
@@ -261,6 +267,7 @@ $spamBlockOnError			= 	(int)$ds['spamapiblockerror'];
 $spamCheckRating = 0.95;
 $default_format_date		= 	$ds['date_format']; 		if(empty($default_format_date)) $default_format_date = 'd.m.Y';
 $default_format_time		= 	$ds['time_format']; 		if(empty($default_format_time)) $default_format_time = 'H:i';
+$modRewrite					= 	(bool)$ds['modRewrite']; 		if(empty($modRewrite)) $modRewrite = false;
 
 $new_chmod = 0666;
 

@@ -270,6 +270,14 @@ systeminc('func/spam');
 
 systeminc('func/bbcode');
 
+// -- Mod Rewrite -- //
+
+systeminc('modrewrite');
+$GLOBALS['_modRewrite'] = new ModRewrite();
+if(!stristr($_SERVER['SCRIPT_NAME'],'/admin/') && $modRewrite){
+    $GLOBALS['_modRewrite']->enable();
+}
+
 function cleartext($text, $bbcode=true, $calledfrom='root') {
 	$text = htmlspecialchars($text);
 	$text = strip_tags($text);

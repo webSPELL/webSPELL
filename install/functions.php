@@ -2072,5 +2072,17 @@ function update40200_40300() {
       ('', 'slovenian', 'si', 'slovenian'),
       ('', 'latvian', 'lv', 'latvian')");
 
+  mysqli_query($_database,"CREATE TABLE `".PREFIX."modrewrite` (
+  `ruleID` int(11) NOT NULL AUTO_INCREMENT,
+  `regex` text NOT NULL,
+  `link` text NOT NULL,
+  `fields` text NOT NULL,
+  `replace_regex` text NOT NULL,
+  `replace_result` text NOT NULL,
+  `rebuild_regex` text NOT NULL,
+  `rebuild_result` text NOT NULL,
+  PRIMARY KEY (`ruleID`)
+) AUTO_INCREMENT=1 ");
+
 }
 ?>
