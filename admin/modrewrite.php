@@ -25,6 +25,8 @@
 ##########################################################################
 */
 
+$_language->read_module('modrewrite');
+
 if(!ispageadmin($userID) OR mb_substr(basename($_SERVER['REQUEST_URI']),0,15) != "admincenter.php") die($_language->module['access_denied']);
 
 if(isset($_GET['action'])) $action = $_GET['action'];
@@ -40,7 +42,7 @@ if($action=="add") {
     $CAPCLASS = new Captcha;
     $CAPCLASS->create_transaction();
     $hash = $CAPCLASS->get_hash();
-    echo'<h1>&curren; <a href="admincenter.php?site=modrewrite" class="white">Mod Rewrite</a> &raquo; Add Rule</h1>';
+    echo'<h1>&curren; <a href="admincenter.php?site=modrewrite" class="white">'.$_language->module['modrewrite'].'</a> &raquo; '.$_language->module['add_rule'].'</h1>';
     echo '<script type="text/javascript">
     function addRow(){
         table = document.getElementById("fields");
@@ -53,11 +55,11 @@ if($action=="add") {
     echo'<form method="post" action="admincenter.php?site=modrewrite" enctype="multipart/form-data">
     <table width="100%" border="0" cellspacing="1" cellpadding="3">
     <tr>
-    <td><b>Fields:</b></td>
+    <td><b>'.$_language->module['variables'].':</b></td>
     <td><table id="fields" width="100%">
     <tr>
-    <td class="title">Variable</td>
-    <td>Type:</td>
+    <td class="title">'.$_language->module['variable'].':</td>
+    <td class="title">'.$_language->module['type'].':</td>
     </tr>
     <tr>
     <td><input type="text" name="keys[]" /></td>
@@ -65,21 +67,21 @@ if($action=="add") {
     </tr>
     <tr>
     <td></td>
-    <td><a onclick="javascript:addRow();">More</a></td>
+    <td><a onclick="javascript:addRow();">'.$_language->module['more'].'</a></td>
     </tr>
     </table></td>
     </tr>
     <tr>
-    <td><b>URL:</b></td>
+    <td><b>'.$_language->module['url'].':</b></td>
     <td><input type="text" name="url" style="width:100%;" /></td>
     </tr>
     <tr>
-    <td><b>Replace:</b></td>
+    <td><b>'.$_language->module['replace'].':</b></td>
     <td><input type="text" name="regex" style="width:100%;" /></td>
     </tr>
     <tr>
     <td><input type="hidden" name="captcha_hash" value="'.$hash.'" /></td>
-    <td><input type="submit" name="save" value="add Rule" /></td>
+    <td><input type="submit" name="save" value="'.$_language->module['save_rule'].'" /></td>
     </tr>
     </table>
     </form>';
@@ -91,7 +93,7 @@ elseif($action=="edit") {
     $CAPCLASS = new Captcha;
     $CAPCLASS->create_transaction();
     $hash = $CAPCLASS->get_hash();
-    echo'<h1>&curren; <a href="admincenter.php?site=modrewrite" class="white">ModRewrite</a> &raquo; edit Rule</h1>';
+    echo'<h1>&curren; <a href="admincenter.php?site=modrewrite" class="white">'.$_language->module['modrewrite'].'</a> &raquo; '.$_language->module['edit_rule'].'</h1>';
 
     $rules = '';
     $data = unserialize($ds['fields']);
@@ -121,30 +123,30 @@ elseif($action=="edit") {
     echo'<form method="post" action="admincenter.php?site=modrewrite" enctype="multipart/form-data">
     <table width="100%" border="0" cellspacing="1" cellpadding="3">
     <tr>
-    <td><b>Fields:</b></td>
+    <td><b>'.$_language->module['variables'].':</b></td>
     <td><table id="fields" width="100%">
     <tr>
-    <td class="title">Variable</td>
-    <td>Type:</td>
+    <td class="title">'.$_language->module['variable'].':</td>
+    <td class="title">'.$_language->module['type'].':</td>
     </tr>
     '.$rules.'
     <tr>
     <td></td>
-    <td><a onclick="javascript:addRow();">More</a></td>
+    <td><a onclick="javascript:addRow();">'.$_language->module['more'].'</a></td>
     </tr>
     </table></td>
     </tr>
     <tr>
-    <td><b>URL:</b></td>
+    <td><b>'.$_language->module['url'].':</b></td>
     <td><input type="text" name="url" value="'.$ds['link'].'" style="width:100%;" /></td>
     </tr>
     <tr>
-    <td><b>Replace:</b></td>
+    <td><b>'.$_language->module['replace'].':</b></td>
     <td><input type="text" name="regex" value="'.$ds['regex'].'" style="width:100%;" /></td>
     </tr>
     <tr>
     <td><input type="hidden" name="ruleID" value="'.$ds['ruleID'].'" /><input type="hidden" name="captcha_hash" value="'.$hash.'" /></td>
-    <td><input type="submit" name="saveedit" value="edit Rule" /></td>
+    <td><input type="submit" name="saveedit" value="'.$_language->module['save_rule'].'" /></td>
     </tr>
     </table>
     </form>';
@@ -210,23 +212,23 @@ elseif(isset($_GET["delete"])) {
 }
 
 elseif(isset($_POST['test'])){
-    echo'<h1>&curren; Modrewrite Settings</h1>';
+    echo'<h1>&curren; '.$_language->module['modrewrite_settings'].'</h1>';
     if(function_exists("apache_get_modules")){
-        $info = "Running as Apache 2 Module<br/>";
+        $info = $_language->module['apache_with_module'].'<br/>';
         if(in_array('mod_rewrite',apache_get_modules())){
-            $info .=  "mod_rewrite is enabled<br/>";
+            $info .=  $_language->module['modrewrite_is_enabled'].'<br/>';
             $do_test = true;
         }
         else{
-            $info .=  "mod_rewrite is not enabled in httpd.conf<br/>";
+            $info .=  $_language->module['modrewrite_is_disabled'].'<br/>';
         }
     }
     elseif(stristr($_SERVER['SERVER_SOFTWARE'],'Apache')){
-        $info = "Running with Apache as cgi<br/>";
+        $info = $_language->module['apache_with_cgi'].'<br/>';
         $do_test = true;
     }
     else{
-        $info = "Unsupported webserver";
+        $info = $_language->module['unsupported_webserver'].'<br/>';
     }
 
     if($do_test){
@@ -248,7 +250,7 @@ elseif(isset($_POST['test'])){
         $written = @file_put_contents($folder.'/'.$file, $content);
 
         if($written == false){
-            $info .= "Can't write .htacces<br/>Check chmod and try again";
+            $info .= sprintf($_language->module['can_not_write_file'],$file);
         }
         else{
             $protocol = 'http';
@@ -266,21 +268,21 @@ elseif(isset($_POST['test'])){
             $headers = @get_headers($url, 1);
             $unlink = true;
             if($headers == false){
-                $info .= "url_fopen is disabled. Local test by ajax";
+                $info .= $_language->module['fopen_disabled'];
                 $status = '<div id="result"></div>';
                 $unlink = false;
             }
             elseif(stristr($headers[0],'404')){
-                $status = "ModRewrite failed";
+                $status = $_language->module['modrewrite_failed'];
             }
             elseif(stristr($headers[0],'500')){
-                $status = "Htaccess failed";
+                $status = $_language->module['htaccess_failed'];
             }
             elseif(stristr($headers[0],'200')){
-                $status = "Test successful";
+                $status = $_language->module['test_successful'];
             }
             else{
-                $status = "Unexpected Result:<br/>";
+                $status = $_language->module['unexpected_result'];
                 $info .= var_dump($headers);
             }
         }
@@ -298,11 +300,11 @@ elseif(isset($_POST['test'])){
     echo'<form method="post" action="admincenter.php?site=modrewrite" enctype="multipart/form-data">
     <table width="100%" border="0" cellspacing="1" cellpadding="3">
     <tr>
-    <td width="15%"><b>Result:</b></td>
+    <td width="15%"><b>'.$_language->module['result'].':</b></td>
     <td>'.$status.'</td>
     </tr>
     <tr>
-    <td width="15%"><b>Debug:</b></td>
+    <td width="15%"><b>'.$_language->module['debug'].':</b></td>
     <td>'.$info.'</td>
     </tr>
     <tr>
@@ -328,32 +330,32 @@ elseif(isset($_POST['enable'])){
 
     $info = '';
     if(file_exists($folder.'/'.$file)){
-        $info .= 'There is already a .htaccess. Please merge with .htaccess_ws';
+        $info .= $_language->module['htaccess_exists_merge'];
         $file = '.htaccess_ws';
     }
 
     $written = @file_put_contents($folder.'/'.$file, $content);
 
     if($written == false){
-        $info .= "Can't write ".$file."<br/>Check chmod and try again";
+        $info .= sprintf($_language->module['can_not_write_file'],$file);
         echo $info;
     }
     else{
         safe_query("UPDATE ".PREFIX."settings SET modRewrite='1'");
         echo $info;
-        redirect("admincenter.php?site=modrewrite",'Successful',2);
+        redirect("admincenter.php?site=modrewrite",$_language->module['successful'],2);
     }
 
 }
 
 elseif(isset($_POST['disable'])){
     safe_query("UPDATE ".PREFIX."settings SET modRewrite='0'");
-    redirect("admincenter.php?site=modrewrite",'Successful',2);
+    redirect("admincenter.php?site=modrewrite",$_language->module['successful'],2);
 }
 
 else {
 
-    echo'<h1>&curren; Modrewrite Settings</h1>';
+    echo'<h1>&curren; '.$_language->module['modrewrite_settings'].'</h1>';
     $CAPCLASS = new Captcha;
     $CAPCLASS->create_transaction();
     $hash = $CAPCLASS->get_hash();
@@ -386,16 +388,16 @@ else {
         </form>';
     }
 
-    echo'<h1>&curren; Modrewrite Rules</h1>';
+    echo'<h1>&curren; '.$_language->module['modrewrite_rules'].'</h1>';
 
-    echo'<input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=modrewrite&amp;action=add\');return document.MM_returnValue" value="new Rule" /><br /><br />';
+    echo'<input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=modrewrite&amp;action=add\');return document.MM_returnValue" value="'.$_language->module['new_rule'].'" /><br /><br />';
 
     echo'
     <table width="100%" border="0" cellspacing="1" cellpadding="3" bgcolor="#DDDDDD">
     <tr>
-    <td width="60%" class="title"><b>Rule</b></td>
-    <td width="15%" class="title"><b>Fields</b></td>
-    <td width="25%" class="title"><b>Actions</b></td>
+    <td width="60%" class="title"><b>'.$_language->module['rule'].'</b></td>
+    <td width="15%" class="title"><b>'.$_language->module['variables'].'</b></td>
+    <td width="25%" class="title"><b>'.$_language->module['actions'].'</b></td>
     </tr>';
 
     $ds=safe_query("SELECT * FROM ".PREFIX."modrewrite");
@@ -413,14 +415,14 @@ else {
             echo'<tr>
             <td class="'.$td.'" align="left">'.$flags['regex'].'<br/>'.$flags['link'].'</td>
             <td class="'.$td.'">'.count(unserialize($flags['fields'])).'</td>
-            <td class="'.$td.'" align="center"><input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=modrewrite&amp;action=edit&amp;ruleID='.$flags['ruleID'].'\');return document.MM_returnValue" value="edit" />
-            <input type="button" onclick="MM_confirm(\'Really Delete?\', \'admincenter.php?site=modrewrite&amp;delete=true&amp;ruleID='.$flags['ruleID'].'&amp;captcha_hash='.$hash.'\')" value="delete" /></td>
+            <td class="'.$td.'" align="center"><input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=modrewrite&amp;action=edit&amp;ruleID='.$flags['ruleID'].'\');return document.MM_returnValue" value="'.$_language->module['edit'].'" />
+            <input type="button" onclick="MM_confirm(\''.$_language->module['really_delete'].'\', \'admincenter.php?site=modrewrite&amp;delete=true&amp;ruleID='.$flags['ruleID'].'&amp;captcha_hash='.$hash.'\')" value="'.$_language->module['delete'].'" /></td>
             </tr>';
 
             $i++;
         }
     }
-    else echo'<tr><td class="td1" colspan="5">No entries</td></tr>';
+    else echo'<tr><td class="td1" colspan="5">'.$_language->module['no_entries'].'</td></tr>';
 
     echo '</table>
     </form>';
