@@ -56,7 +56,7 @@ function getformattime($time) {
 		$TimeFormat = date(getuserformattime($userID), $time);
 	}
 	else {
-		$TimeFormat = date($default_format_date ,$time);
+		$TimeFormat = date($default_format_time ,$time);
 	}
 	return $TimeFormat;
 }
