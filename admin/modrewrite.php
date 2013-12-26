@@ -232,7 +232,7 @@ elseif(isset($_POST['test'])){
     if($do_test){
         $folder = 'ht_test';
         if(!is_dir($folder)){
-            mkdir($folder,777);
+            mkdir($folder,0777);
         }
         $file = ".htaccess";
         $module = "mod_rewrite.c";
