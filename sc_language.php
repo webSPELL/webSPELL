@@ -78,7 +78,13 @@ else {
 		}
 		closedir($dh);
 	}
-	ksort($langs,SORT_NATURAL);
+	if(defined("SORT_NATURAL")){
+		$sortMode = SORT_NATURAL;
+	}
+	else{
+		$sortMode = SORT_LOCALE_STRING;
+	}
+	ksort($langs,$sortMode);
 	foreach($langs as $lang=>$flag){
 		$querystring='';
 		if($_SERVER['QUERY_STRING']) $querystring = "&amp;query=".rawurlencode($_SERVER['QUERY_STRING']);
