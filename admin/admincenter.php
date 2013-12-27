@@ -163,14 +163,12 @@ function addonnav() {
       <li><a href="admincenter.php?site=linkcategorys"><?php echo $_language->module['link_categories']; ?></a></li>
       <?php echo admincenternav(4); ?>
     </ul>
-    <?php } if(issuperadmin($userID) || ispageadmin($userID)) { ?>
+    <?php } if(ispageadmin($userID)) { ?>
     <h2>&not; <?php echo $_language->module['settings']; ?></h2>
     <ul>
-      <?php } if(issuperadmin($userID)) { ?>
-      <li><a href="admincenter.php?site=addons"><?php echo $_language->module['addons']; ?></a></li>
-      <?php } if(ispageadmin($userID)) { ?>
       <li><a href="admincenter.php?site=settings"><?php echo $_language->module['settings']; ?></a></li>
       <li><a href="admincenter.php?site=styles"><?php echo $_language->module['styles']; ?></a></li>
+      <li><a href="admincenter.php?site=addons"><?php echo $_language->module['addons']; ?></a></li>
       <li><a href="admincenter.php?site=countries"><?php echo $_language->module['countries']; ?></a></li>
       <li><a href="admincenter.php?site=games"><?php echo $_language->module['games']; ?></a></li>
       <li><a href="admincenter.php?site=smileys"><?php echo $_language->module['smilies']; ?></a></li>

@@ -27,7 +27,7 @@
 
 $_language->read_module('addons');
 
-if(!issuperadmin($userID) OR mb_substr(basename($_SERVER['REQUEST_URI']),0,15) != "admincenter.php") die($_language->module['access_denied']);
+if(!ispageadmin($userID) OR mb_substr(basename($_SERVER['REQUEST_URI']),0,15) != "admincenter.php") die($_language->module['access_denied']);
 
 if(isset($_GET['delete'])) {
 	$linkID = $_GET['linkID'];
