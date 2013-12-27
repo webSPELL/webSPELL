@@ -439,6 +439,7 @@ function fullinstall() {
 
 	mysqli_query($_database, "DROP TABLE IF EXISTS `".PREFIX."links`");
 	mysqli_query($_database, "CREATE TABLE `".PREFIX."links` (
+
   `linkID` int(11) NOT NULL AUTO_INCREMENT,
   `linkcatID` int(11) NOT NULL default '0',
   `name` varchar(255) NOT NULL default '',
@@ -690,6 +691,7 @@ function fullinstall() {
 ) AUTO_INCREMENT=1 ");
 
 
+
 	mysqli_query($_database, "DROP TABLE IF EXISTS `".PREFIX."styles`");
 	mysqli_query($_database, "CREATE TABLE `".PREFIX."styles` (
   `styleID` int(11) NOT NULL AUTO_INCREMENT,
@@ -777,6 +779,7 @@ function fullinstall() {
   `connection` varchar(255) NOT NULL default '',
   `keyboard` varchar(255) NOT NULL default '',
   `mouse` varchar(255) NOT NULL default '',
+
   `mousepad` varchar(255) NOT NULL default '',
   `newsletter` int(1) NOT NULL default '1',
   `about` text NOT NULL,
@@ -2078,5 +2081,32 @@ function update40200_40300() {
   `tag` varchar(255) NOT NULL
 )");
 
+  mysqli_query($_database, "DROP TABLE IF EXISTS `".PREFIX."addon_categories`");
+  mysqli_query($_database, "CREATE TABLE `".PREFIX."addon_categories` (
+  `catID` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) NOT NULL DEFAULT '',
+  `default` int(1) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`catID`)
+) AUTO_INCREMENT=9 ");
+
+  mysqli_query($_database, "INSERT INTO `".PREFIX."addon_categories` ( `catID` , `name`, `default` ) VALUES ('1', 'Main Panel', '1');");
+  mysqli_query($_database, "INSERT INTO `".PREFIX."addon_categories` ( `catID` , `name`, `default` ) VALUES ('2', 'User Administration', '1');");
+  mysqli_query($_database, "INSERT INTO `".PREFIX."addon_categories` ( `catID` , `name`, `default` ) VALUES ('3', 'Spam', '1');");
+  mysqli_query($_database, "INSERT INTO `".PREFIX."addon_categories` ( `catID` , `name`, `default` ) VALUES ('4', 'Rubrics/Categories', '1');");
+  mysqli_query($_database, "INSERT INTO `".PREFIX."addon_categories` ( `catID` , `name`, `default` ) VALUES ('5', 'Settings', '1');");
+  mysqli_query($_database, "INSERT INTO `".PREFIX."addon_categories` ( `catID` , `name`, `default` ) VALUES ('6', 'Content', '1');");
+  mysqli_query($_database, "INSERT INTO `".PREFIX."addon_categories` ( `catID` , `name`, `default` ) VALUES ('7', 'Forum', '1');");
+  mysqli_query($_database, "INSERT INTO `".PREFIX."addon_categories` ( `catID` , `name`, `default` ) VALUES ('8', 'Gallery', '1');");
+  
+  mysqli_query($_database, "DROP TABLE IF EXISTS `".PREFIX."addon_links`");
+  mysqli_query($_database, "CREATE TABLE `".PREFIX."addon_links` (
+  `linkID` int(11) NOT NULL AUTO_INCREMENT,
+  `catID` int(11) NOT NULL DEFAULT '0',
+  `name` varchar(255) NOT NULL DEFAULT '',
+  `url` varchar(255) NOT NULL DEFAULT '',
+  `accesslevel` varchar(255) NOT NULL DEFAULT '',
+  `sort` int(11) NOT NULL DEFAULT '0'
+  PRIMARY KEY (`linkID`)
+) AUTO_INCREMENT=1 ");
 }
 ?>
