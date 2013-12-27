@@ -150,8 +150,7 @@ function addonnav() {
       <li><a href="admincenter.php?site=spam&amp;action=api_log"><?php echo $_language->module['api_log']; ?></a></li>
       <?php echo admincenternav(3); ?>
     </ul>
-    <?php } 
-    if(isnewsadmin($userID) || isfileadmin($userID) || ispageadmin($userID)) { ?>
+    <?php } if(isnewsadmin($userID) || isfileadmin($userID) || ispageadmin($userID)) { ?>
     <h2>&not; <?php echo $_language->module['rubrics']; ?></h2>
     <ul>
       <?php } if(isnewsadmin($userID)) { ?>
@@ -164,9 +163,12 @@ function addonnav() {
       <li><a href="admincenter.php?site=linkcategorys"><?php echo $_language->module['link_categories']; ?></a></li>
       <?php echo admincenternav(4); ?>
     </ul>
-    <?php } if(ispageadmin($userID)) { ?>
+    <?php } if(issuperadmin($userID) || ispageadmin($userID)) { ?>
     <h2>&not; <?php echo $_language->module['settings']; ?></h2>
     <ul>
+      <?php } if(issuperadmin($userID)) { ?>
+      <li><a href="admincenter.php?site=addons"><?php echo $_language->module['addons']; ?></a></li>
+      <?php } if(ispageadmin($userID)) { ?>
       <li><a href="admincenter.php?site=settings"><?php echo $_language->module['settings']; ?></a></li>
       <li><a href="admincenter.php?site=styles"><?php echo $_language->module['styles']; ?></a></li>
       <li><a href="admincenter.php?site=countries"><?php echo $_language->module['countries']; ?></a></li>

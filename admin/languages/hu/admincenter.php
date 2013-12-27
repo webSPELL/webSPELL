@@ -31,6 +31,7 @@ $language_array = Array(
 
   'about_us'=>'Rólunk',
   'access_denied'=>'Hozzáférés megtagadva',
+  'addons'=>'Kiegészítések',
   'bannerrotation'=>'Mozgó bannerek',
   'boards'=>'Témák',
   'clanmembers'=>'Klántagok',

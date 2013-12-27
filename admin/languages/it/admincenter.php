@@ -31,6 +31,7 @@ $language_array = Array(
 
   'about_us'=>'Chi siamo',
   'access_denied'=>'Accesso negato',
+  'addons'=>'Addons',
   'bannerrotation'=>'Banner rotazione',
   'boards'=>'Forum',
   'clanmembers'=>'Membri',

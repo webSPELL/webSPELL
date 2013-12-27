@@ -31,6 +31,7 @@ $language_array = Array(
 
   'about_us'=>'Über uns',
   'access_denied'=>'Zugriff verweigert',
+  'addons'=>'Erweiterungen',
   'bannerrotation'=>'Banner Rotation',
   'boards'=>'Foren',
   'clanmembers'=>'Clanmitglieder',

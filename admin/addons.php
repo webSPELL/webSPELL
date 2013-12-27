@@ -277,9 +277,7 @@ else {
 	$CAPCLASS = new Captcha;
 	$CAPCLASS->create_transaction();
 	$hash = $CAPCLASS->get_hash();
-	while($ds=mysqli_fetch_array($ergebnis)) {
-		if($ds['default']==1) $catactions = '';
-		else $catactions = '<input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=addons&amp;action=editcat&amp;catID='.$ds['catID'].'\');return document.MM_returnValue" value="'.$_language->module['edit'].'" /> <input type="button" onclick="MM_confirm(\''.$_language->module['really_delete_category'].'\', \'admincenter.php?site=addons&amp;delcat=true&amp;catID='.$ds['catID'].'&amp;captcha_hash='.$hash.'\')" value="'.$_language->module['delete'].'" />';
+	while($ds=mysqli_fetch_array($ergebnis)) { 
 		$list = '<select name="sortcat[]">';
 		for($n=1; $n<=$anz; $n++) {
 			if($n<=8) $list .= '';
@@ -287,11 +285,19 @@ else {
 		}
 		$list .= '</select>';
 		$list = str_replace('value="'.$ds['catID'].'-'.$ds['sort'].'"','value="'.$ds['catID'].'-'.$ds['sort'].'" selected="selected"',$list);
-		if($ds['default']==1) $sort = '<b>'.$ds['sort'].'</b>';
-		else $sort = $list;
+		if($ds['default']==1) {
+			$sort = '<b>'.$ds['sort'].'</b>';
+			$catactions = '';
+			$name = $_language->module['cat_'.getinput($ds['name'])];
+		}
+		else {
+			$sort = $list;
+			$catactions = '<input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=addons&amp;action=editcat&amp;catID='.$ds['catID'].'\');return document.MM_returnValue" value="'.$_language->module['edit'].'" /> <input type="button" onclick="MM_confirm(\''.$_language->module['really_delete_category'].'\', \'admincenter.php?site=addons&amp;delcat=true&amp;catID='.$ds['catID'].'&amp;captcha_hash='.$hash.'\')" value="'.$_language->module['delete'].'" />';
+			$name = getinput($ds['name']);
+		}
 		
 	    echo '<tr bgcolor="#CCCCCC">
-			    <td class="td_head" colspan="2"><b>'.getinput($ds['name']).'</b></td>
+			    <td class="td_head" colspan="2"><b>'.$name.'</b></td>
 			    <td class="td_head" align="center">'.$catactions.'</td>
 			    <td class="td_head" align="center">'.$sort.'</td>
 	    	  </tr>';		 
