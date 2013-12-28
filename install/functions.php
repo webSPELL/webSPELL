@@ -2086,6 +2086,7 @@ function update40200_40300() {
   `catID` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(255) NOT NULL DEFAULT '',
   `default` int(1) NOT NULL DEFAULT '0',
+  `sort` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`catID`)
 ) AUTO_INCREMENT=9 ");
 
