@@ -2106,7 +2106,7 @@ function update40200_40300() {
   `name` varchar(255) NOT NULL DEFAULT '',
   `url` varchar(255) NOT NULL DEFAULT '',
   `accesslevel` varchar(255) NOT NULL DEFAULT '',
-  `sort` int(11) NOT NULL DEFAULT '0'
+  `sort` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`linkID`)
 ) AUTO_INCREMENT=1 ");
 }
