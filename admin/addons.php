@@ -103,7 +103,9 @@ if($action=="add") {
   	$ergebnis = safe_query("SELECT * FROM ".PREFIX."addon_categories ORDER BY sort");
 	$cats = '<select name="catID">';
 	while($ds=mysqli_fetch_array($ergebnis)) {
-		$cats .= '<option value="'.$ds['catID'].'">'.getinput($ds['name']).'</option>';
+		if($ds['default']==1) $name = $_language->module['cat_'.getinput($ds['name'])];
+		else $name = getinput($ds['name']);
+		$cats .= '<option value="'.$ds['catID'].'">'.$name.'</option>';
 	}
 	$cats .= '</select>';
 	
@@ -160,9 +162,11 @@ elseif($action=="edit") {
 	$category = safe_query("SELECT * FROM ".PREFIX."addon_categories ORDER BY sort");
 	$cats = '<select name="catID">';
 	while($dc=mysqli_fetch_array($category)) {
+		if($ds['default']==1) $name = $_language->module['cat_'.getinput($dc['name'])];
+		else $name = getinput($dc['name']);
 		if($ds['catID']==$dc['catID']) $selected = " selected=\"selected\"";
 		else $selected = "";
-		$cats .= '<option value="'.$dc['catID'].'"'.$selected.'>'.getinput($dc['name']).'</option>';
+		$cats .= '<option value="'.$dc['catID'].'"'.$selected.'>'.$name.'</option>';
 	}
 	$cats .= '</select>';
 	
