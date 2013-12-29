@@ -117,6 +117,16 @@ function getregistered($userID) {
 	return $date;
 }
 
+function getusercomments($userID, $type) {
+	$anz=mysqli_num_rows(safe_query("SELECT commentID FROM `".PREFIX."comments` WHERE userID='".$userID."' AND type='".$type."'"));
+	return $anz;
+}
+
+function getallusercomments($userID){
+	$anz=mysqli_num_rows(safe_query("SELECT commentID FROM `".PREFIX."comments` WHERE userID='".$userID."'"));
+	return $anz;
+}
+
 function usergroupexists($userID) {
 	$anz=mysqli_num_rows(safe_query("SELECT userID FROM ".PREFIX."user_groups WHERE userID='".$userID."'"));
 	return $anz;

@@ -216,6 +216,10 @@ systeminc('func/game');
 
 systeminc('func/board');
 
+// -- Page INFORMATION -- //
+
+systeminc('func/page');
+
 // -- CAPTCHA -- //
 
 systeminc('func/captcha');

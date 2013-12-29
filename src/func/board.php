@@ -49,18 +49,6 @@ function gettopicname($topicID) {
 	return $ds['topic'];
 }
 
-function redirect($url, $info, $time=1) {
-	if($url=="back" AND $info!='' AND isset($_SERVER['HTTP_REFERER'])) {
-		$url = $_SERVER['HTTP_REFERER'];
-		$info = '';
-	} elseif($url=="back" AND $info!='') {
-		$url = $info;
-		$info = '';
-	}
-	echo'<meta http-equiv="refresh" content="'.$time.';URL='.$url.'" />
-  <br /><p style="color:#000000">'.$info.'</p><br /><br />';
-}
-
 function getmoderators($boardID) {
 	$moderatoren=safe_query("SELECT * FROM ".PREFIX."forum_moderators WHERE boardID='$boardID'");
 	$moderators = '';
