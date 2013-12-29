@@ -73,6 +73,7 @@ class Tags{
                 $data = array();
                 $data['min'] = 999999999999;
                 $data['max'] = 0;
+                $data['tags'] = array();
                 while($ds = mysqli_fetch_assoc($get)){
                         $data['tags'][] = array('name'=>$ds['tag'], 'count'=>$ds['count']);
                         $data['min'] = min($data['min'], $ds['count']);
