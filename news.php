@@ -56,7 +56,8 @@ if($action=="new") {
 		$langs.="news_languages[".$count_langs."] = new Array();\nnews_languages[".$count_langs."][0] = '".$dl['lang']."';\nnews_languages[".$count_langs."][1] = '".$dl['language']."';\n";
 		$count_langs++;
 	}
-
+	
+	$teaser_vars='';
 	$message_vars='';
 	$headline_vars='';
 	$langs_vars='';
@@ -119,6 +120,8 @@ elseif($action=="save") {
 
 	$lang = $_POST['lang'];
 	$headline = $_POST['headline'];
+	$teaser = $_POST['teaser'];
+	$teaser = str_replace('\r\n', "\n", $teaser);
 	$message = $_POST['message'];
 	$message = str_replace('\r\n', "\n", $message);
 
@@ -174,11 +177,11 @@ elseif($action=="save") {
 
 	for($i = 0; $i < count($message); $i++) {
 		if(in_array($lang[$i], $update_langs)) {
-			safe_query("UPDATE ".PREFIX."news_contents SET headline = '".$headline[$i]."', content = '".$message[$i]."' WHERE newsID = '".$newsID."' and language = '".$lang[$i]."'");
+			safe_query("UPDATE ".PREFIX."news_contents SET headline = '".$headline[$i]."', teaser = '".$teaser[$i]."', content = '".$message[$i]."' WHERE newsID = '".$newsID."' and language = '".$lang[$i]."'");
 			unset($update_langs[$lang[$i]]);
 		}
 		else {
-			safe_query("INSERT INTO ".PREFIX."news_contents (newsID, language, headline, content) VALUES ('".$newsID."', '".$lang[$i]."', '".$headline[$i]."', '".$message[$i]."')");
+			safe_query("INSERT INTO ".PREFIX."news_contents (newsID, language, headline, teaser, content) VALUES ('".$newsID."', '".$lang[$i]."', '".$headline[$i]."', '".$teaser[$i]."', '".$message[$i]."')");
 		}
 	}
 
@@ -250,7 +253,7 @@ elseif($action=="preview") {
 	$message_array = array();
 	$query=safe_query("SELECT * FROM ".PREFIX."news_contents WHERE newsID='".$newsID."'");
 	while($qs = mysqli_fetch_array($query)) {
-		$message_array[] = array('lang' => $qs['language'], 'headline' => $qs['headline'], 'message' => $qs['content']);
+		$message_array[] = array('lang' => $qs['language'], 'headline' => $qs['headline'], 'teaser' => $qs['teaser'], 'message' => $qs['content']);
 	}
 	$showlang = select_language($message_array);
 
@@ -263,13 +266,18 @@ elseif($action=="preview") {
 	$langs = flags($langs);
 
 	$headline=$message_array[$showlang]['headline'];
+	$teaser=$message_array[$showlang]['teaser'];
 	$content=$message_array[$showlang]['message'];
 	
 	if($ds['intern'] == 1) $isintern = '('.$_language->module['intern'].')';
     else $isintern = '';
     
+	$teaser = htmloutput($teaser);
+	$teaser = toggle($teaser, $ds['newsID']);
 	$content = htmloutput($content);
 	$content = toggle($content, $ds['newsID']);
+	if(!$teaser) $news_content = $content;
+	else $news_content = '<span class="news-teaser">'.$teaser.'</span><br />'.$content;
 	$poster='<a href="index.php?site=profile&amp;id='.$ds['poster'].'"><b>'.getnickname($ds['poster']).'</b></a>';
 	$related='';
 	$comments="";
@@ -421,7 +429,7 @@ elseif($action=="edit") {
 	$message_array = array();
 	$query=safe_query("SELECT * FROM ".PREFIX."news_contents WHERE newsID='".$newsID."'");
 	while($qs = mysqli_fetch_array($query)) {
-		$message_array[] = array('lang' => $qs['language'], 'headline' => $qs['headline'], 'message' => $qs['content']);
+		$message_array[] = array('lang' => $qs['language'], 'headline' => $qs['headline'], 'teaser' => $qs['teaser'], 'message' => $qs['content']);
 	}
 
 	$count_langs = 0;
@@ -432,11 +440,13 @@ elseif($action=="edit") {
 		$count_langs++;
 	}
 
+	$teaser_vars='';
 	$message_vars='';
 	$headline_vars='';
 	$langs_vars='';
 	$i=0;
 	foreach($message_array as $val) {
+		$teaser_vars .= "teaser[".$i."] = '".js_replace($val['teaser'])."';\n";
 		$message_vars .= "message[".$i."] = '".js_replace($val['message'])."';\n";
 		$headline_vars .= "headline[".$i."] = '".js_replace(htmlspecialchars($val['headline']))."';\n";
 		$langs_vars .= "langs[".$i."] = '".$val['lang']."';\n";
@@ -567,7 +577,7 @@ elseif($action=="unpublished") {
 				$message_array = array();
 				$query=safe_query("SELECT * FROM ".PREFIX."news_contents WHERE newsID='".$ds['newsID']."'");
 				while($qs = mysqli_fetch_array($query)) {
-					$message_array[] = array('lang' => $qs['language'], 'headline' => $qs['headline'], 'message' => $qs['content']);
+					$message_array[] = array('lang' => $qs['language'], 'headline' => $qs['headline'], 'teaser' => $qs['teaser'], 'message' => $qs['content']);
 				}
 
 				$headlines='';
@@ -689,7 +699,7 @@ elseif($action=="archive") {
       $message_array = array();
 			$query=safe_query("SELECT * FROM ".PREFIX."news_contents WHERE newsID='".$ds['newsID']."'");
 			while($qs = mysqli_fetch_array($query)) {
-				$message_array[] = array('lang' => $qs['language'], 'headline' => $qs['headline'], 'message' => $qs['content']);
+				$message_array[] = array('lang' => $qs['language'], 'headline' => $qs['headline'], 'teaser' => $qs['teaser'], 'message' => $qs['content']);
 			}
 
 			$headlines='';
@@ -772,7 +782,7 @@ else {
 		$message_array = array();
 		$query=safe_query("SELECT * FROM ".PREFIX."news_contents WHERE newsID='".$ds['newsID']."'");
 		while($qs = mysqli_fetch_array($query)) {
-			$message_array[] = array('lang' => $qs['language'], 'headline' => $qs['headline'], 'message' => $qs['content']);
+			$message_array[] = array('lang' => $qs['language'], 'headline' => $qs['headline'], 'teaser' => $qs['teaser'], 'message' => $qs['content']);
 		}
 
 		$showlang = select_language($message_array);
@@ -786,17 +796,22 @@ else {
 		$langs = flags($langs);
 
 		$headline=$message_array[$showlang]['headline'];
+		$teaser=$message_array[$showlang]['teaser'];
 		$content=$message_array[$showlang]['message'];
 		$newsID=$ds['newsID'];
     if($ds['intern'] == 1) $isintern = '('.$_language->module['intern'].')';
     else $isintern = '';
-    
-    $content = htmloutput($content);
+    	
+		$teaser = htmloutput($teaser);
+		$teaser = toggle($teaser, $ds['newsID']);
+    	$content = htmloutput($content);
 		$content = toggle($content, $ds['newsID']);
+		if(!$teaser) $news_content = $content;
+		else $news_content = '<span class="news-teaser">'.$teaser.'</span><br /><a href="index.php?site=news_commments&amp;newsID='.$ds['newsID'].'">'.$_language->module['read_more'].'</a>';
 		$headline = clearfromtags($headline);
 		$poster='<a href="index.php?site=profile&amp;id='.$ds['poster'].'"><b>'.getnickname($ds['poster']).'</b></a>';
 		$related="";
-    if($ds['link1'] && $ds['url1']!="http://" && $ds['window1']) $related.='&#8226; <a href="'.$ds['url1'].'" target="_blank">'.$ds['link1'].'</a> ';
+    	if($ds['link1'] && $ds['url1']!="http://" && $ds['window1']) $related.='&#8226; <a href="'.$ds['url1'].'" target="_blank">'.$ds['link1'].'</a> ';
 		if($ds['link1'] && $ds['url1']!="http://" && !$ds['window1']) $related.='&#8226; <a href="'.$ds['url1'].'">'.$ds['link1'].'</a> ';
 
 		if($ds['link2'] && $ds['url2']!="http://" && $ds['window2']) $related.='&#8226; <a href="'.$ds['url2'].'" target="_blank">'.$ds['link2'].'</a> ';

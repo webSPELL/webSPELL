@@ -2112,5 +2112,7 @@ function update40200_40300() {
 ) AUTO_INCREMENT=1 ");
 
   mysqli_query($_database, "ALTER TABLE `".PREFIX."countries` ADD `fav` int(1) NOT NULL default '0'");
+  
+  mysqli_query($_database, "ALTER TABLE `".PREFIX."news_contents` ADD `teaser` text NOT NULL AFTER `headline`");
 }
 ?>
