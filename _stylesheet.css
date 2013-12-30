@@ -120,6 +120,11 @@ input[type="checkbox"]:focus, input[type="checkbox"]:active {
   margin: 2px;
 }
 
+/* News Readmore */
+.news-teaser {
+  font-style: italic;
+}
+
 /* Infomessages - Miscellaneous */
 .tooltip {
   position: absolute;
