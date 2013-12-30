@@ -81,6 +81,20 @@ function geticq($userID) {
 	return getinput($ds['icq']);
 }
 
+function getcountries() {
+	$countries='';
+  	$ergebnis=safe_query("SELECT * FROM ".PREFIX."countries WHERE fav='1' ORDER BY country");
+	while($ds=mysqli_fetch_array($ergebnis)) {
+		$countries.='<option value="'.$ds['short'].'">'.$ds['country'].'</option>';
+	}
+	$countries.='<option value="">----------------------------------</option>';
+	$result=safe_query("SELECT * FROM ".PREFIX."countries WHERE fav='0' ORDER BY country");
+	while($dv=mysqli_fetch_array($result)) {
+		$countries.='<option value="'.$dv['short'].'">'.$dv['country'].'</option>';
+	}
+	return $countries;
+}
+
 function getcountry($userID) {
 	$ds=mysqli_fetch_array(safe_query("SELECT country FROM ".PREFIX."user WHERE userID='".$userID."'"));
 	return getinput($ds['country']);
