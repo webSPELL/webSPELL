@@ -63,6 +63,7 @@ $language_array = Array(
   'preview'=>'Преглед',
   'publish_now'=>'Објави новости',
   'publish_selected'=>'Објави означено',
+  'read_more'=>'Прочитајте више',
   'really_delete'=>'стварно избриши ове новости?',
   'rubric'=>'Рубрика',
   'save_news'=>'Спреми новости',

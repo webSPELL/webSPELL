@@ -64,6 +64,7 @@ $language_array = Array(
   'preview'=>'მიმპხილვა',
   'publish_now'=>'გამოაქვეყნე ახლა',
   'publish_selected'=>'მომიშნულის გამოქვეყნება',
+  'read_more'=>'დაწვრილებით',
   'really_delete'=>'წავშალო ეს სიახლე?',
   'rubric'=>'სახალხო',
   'save_news'=>'სიახლის შენახვა',

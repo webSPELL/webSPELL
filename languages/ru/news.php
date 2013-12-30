@@ -64,6 +64,7 @@ $language_array = Array(
   'preview'=>'предпросмотр',
   'publish_now'=>'Опубликовать сейчас',
   'publish_selected'=>'Опубликовать выбранные',
+  'read_more'=>'подробнее',
   'really_delete'=>'действительно удалить эти новости?',
   'rubric'=>'Рубрика',
   'save_news'=>'сохранить новости',

@@ -63,6 +63,7 @@ $language_array = Array(
 	'preview'=>'preview',
 	'publish_now'=>'plaats nu',
 	'publish_selected'=>'plaats geselecteerden',
+	'read_more'=>'Lees meer',
 	'really_delete'=>'Dit Nieuws echt verwijderen?',
 	'rubric'=>'Rubriek',
 	'save_news'=>'opslaan',

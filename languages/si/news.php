@@ -69,6 +69,7 @@ $language_array = Array(
   'preview'=>'Pregled',
   'publish_now'=>'Objavi novice',
   'publish_selected'=>'Objavi označeno',
+  'read_more'=>'Preberite več',
   'really_delete'=>'res izbrisati to novico?',
   'rubric'=>'Rubrika',
   'save_news'=>'Shrani novice',

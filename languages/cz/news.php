@@ -63,6 +63,7 @@ $language_array = Array(
 	'preview'=>'shlédnuto',
 	'publish_now'=>'publikovat',
 	'publish_selected'=>'publikovat vybrané',
+	'read_more'=>'Přečtěte si více',
 	'really_delete'=>'Opravdu chceš smazat novinku?',
 	'rubric'=>'Rubrika',
 	'save_news'=>'uložit novinku',
