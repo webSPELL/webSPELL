@@ -84,10 +84,11 @@ function geticq($userID) {
 function getcountries() {
 	$countries='';
   	$ergebnis=safe_query("SELECT * FROM ".PREFIX."countries WHERE fav='1' ORDER BY country");
+	$anz=mysqli_num_rows($ergebnis);
 	while($ds=mysqli_fetch_array($ergebnis)) {
 		$countries.='<option value="'.$ds['short'].'">'.$ds['country'].'</option>';
 	}
-	$countries.='<option value="">----------------------------------</option>';
+	if($anz) $countries.='<option value="">----------------------------------</option>';
 	$result=safe_query("SELECT * FROM ".PREFIX."countries WHERE fav='0' ORDER BY country");
 	while($dv=mysqli_fetch_array($result)) {
 		$countries.='<option value="'.$dv['short'].'">'.$dv['country'].'</option>';
