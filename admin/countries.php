@@ -114,9 +114,8 @@ elseif(isset($_POST['save'])) {
 	$icon=$_FILES["icon"];
 	$country=$_POST["country"];
 	$short=$_POST["shorthandle"];
-	if(isset($_POST["fav"])) $fav = $_POST['fav'];
-	else $fav="";
-	if(!$fav) $fav=0;
+	if(isset($POST["fav"])) $fav = (int)$POST['fav'];
+	else $fav=0;
 	$CAPCLASS = new Captcha;
 	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {	
 		if($country AND $short) {
@@ -138,9 +137,8 @@ elseif(isset($_POST["saveedit"])) {
 	$icon=$_FILES["icon"];
 	$country=$_POST["country"];
 	$short=$_POST["shorthandle"];
-	if(isset($_POST["fav"])) $fav = $_POST['fav'];
-	else $fav="";
-	if(!$fav) $fav=0;
+	if(isset($POST["fav"])) $fav = (int)$POST['fav'];
+	else $fav=0;
 	$CAPCLASS = new Captcha;
 	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
 		if($country AND $short) {
@@ -199,7 +197,8 @@ else {
       		if($i%2) { $td='td1'; }
 			else { $td='td2'; }
 			$pic='<img src="../images/flags/'.$flags['short'].'.gif" border="0" alt="'.$flags['country'].'" />';
-			$flags['fav']==1 ? $fav=' <small><font color="green"><b>('.$_language->module['favorite'].')</b></font></small>' : $fav='';
+			if($flags['fav']==1) $fav = ' <small><font color="green"><b>('.$_language->module['favorite'].')</b></font></small>';
+			else $fav = '';
 			
 			echo '<tr>
 					<td class="'.$td.'" align="center">'.$pic.'</td>
