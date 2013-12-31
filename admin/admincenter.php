@@ -217,7 +217,7 @@ function addonnav() {
    $invalide = array('\\','/','//',':','.');
    $site = str_replace($invalide,' ',$site);
    	if(file_exists($site.'.php')) include($site.'.php');
-   	else include('overview.php');
+   	else include('404.php');
    }
    else include('overview.php');
    ?></div>
