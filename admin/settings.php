@@ -26,6 +26,7 @@
 */
 
 $_language->read_module('settings');
+$_language->read_module('modules',true);
 
 if(!ispageadmin($userID) OR mb_substr(basename($_SERVER['REQUEST_URI']),0,15) != "admincenter.php") die($_language->module['access_denied']);
 
