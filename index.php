@@ -183,7 +183,7 @@ hr.grey { margin: 3px 0 3px 0;}
 					if(file_exists($site.'.php')) include($site.'.php');
 					else include('404.php');
 				    }
-				    else include('news.php');
+				    else include($default_page.'.php');
 				    ?>
 					<!-- content include -->
 				</div>

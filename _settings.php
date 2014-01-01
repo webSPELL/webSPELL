@@ -270,6 +270,7 @@ $spamBlockOnError			= 	(int)$ds['spamapiblockerror'];
 $spamCheckRating = 0.95;
 $default_format_date		= 	$ds['date_format']; 		if(empty($default_format_date)) $default_format_date = 'd.m.Y';
 $default_format_time		= 	$ds['time_format']; 		if(empty($default_format_time)) $default_format_time = 'H:i';
+$default_page				= 	$ds['default_page']; 		if(empty($default_page)) $default_page = 'news';
 
 $new_chmod = 0666;
 

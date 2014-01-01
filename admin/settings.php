@@ -91,6 +91,7 @@ if(isset($_POST['submit'])) {
 									 detect_language='".isset($_POST['detectLanguage'])."',
 									 date_format='".$_POST['date_format']."',
 									 time_format='".$_POST['time_format']."',
+									 default_page='".$_POST['default_page']."',
 									 autoresize='".$_POST['autoresize']."'");
 		safe_query("UPDATE ".PREFIX."styles SET title='".$_POST['title']."' ");	
 	  	redirect("admincenter.php?site=settings","",0);
@@ -186,6 +187,19 @@ else {
 					<option value='H:i:s A'>HH:MM:SS AM/PM</option>";
 	$format_time = str_replace("value='".$ds['time_format']."'","value='".$ds['time_format']."' selected='selected'",$format_time);
 	
+	$default_page = '';
+	$filepath_default_pages = '../';
+	$get_default_pages=opendir($filepath_default_pages);
+	$invalid_folders = array(".","..","admin","demos","downloads","images","js","languages","src","templates","tmp");
+	$invalid_files = array("_functions.php","_mysql.php","_settings.php","_stylesheet.css","404.php","ajax_spamfilter.php","asearch.php","buddys.php","cash_box.php","changelog.txt","checklogin.php","clanwars_details.php","code.php","comments.php","counter.php","download.php","flags.php","forum_topic.php","getlang.php","index.php","latesttopics.php","license.txt","login.php","loginoverview.php","logout.php","lostpassword.php","messenger.php","myprofile.php","navigation.php","news_comments.php","out.php","partners.php","picture.php","poll.php","printview.php","profile.php","quicksearch.php","rating.php","README","readme.de.txt","readme.en.txt","report.php","sc_articles.php","sc_bannerrotation.php","sc_demos.php","sc_files.php","sc_headlines.php","sc_language.php","sc_lastregistered.php","sc_newsletter.php","sc_potm.php","sc_randompic.php","sc_results.php","sc_scrolltext.php","sc_servers.php","sc_sponsors.php","sc_squads.php","sc_tags.php","sc_topnews.php","sc_upcoming.php","shoutbox.php","smileys.php","static.php","upload.php","usergallery.php","version.php");
+	while($file=readdir($get_default_pages)) {
+		if(in_array($file,$invalid_folders)) $default_page .= '';
+		elseif(in_array($file,$invalid_files)) $default_page .= '';
+		else $default_page .= '<option value="'.substr($file,0,-4).'">'.$_language->module['module_'.substr($file,0,-4)].'</option>';
+	}
+	closedir($get_default_pages);
+	$default_page = str_replace('value="'.$ds['default_page'].'"','value="'.$ds['default_page'].'" selected="selected"',$default_page);
+	
 	$autoresize = "<option value='0'>".$_language->module['autoresize_off']."</option><option value='2'>".$_language->module['autoresize_js']."</option><option value='1'>".$_language->module['autoresize_php']."</option>";
 	$autoresize = str_replace("value='".$ds['autoresize']."'","value='".$ds['autoresize']."' selected='selected'",$autoresize);
 	
@@ -254,6 +268,7 @@ else {
 <div class="tooltip" id="id57"><?php echo $_language->module['tooltip_57']; ?></div>
 <div class="tooltip" id="id58"><?php echo $_language->module['tooltip_58']; ?></div>
 <div class="tooltip" id="id59"><?php echo $_language->module['tooltip_59']; ?></div>
+<div class="tooltip" id="id60"><?php echo $_language->module['tooltip_60']; ?></div>
 <table width="100%" border="0" cellspacing="1" cellpadding="3">
   <tr>
     <td width="15%"><b><?php echo $_language->module['page_title']; ?></b></td>
@@ -512,6 +527,10 @@ else {
       <tr>
 	    <td align="right"><select name="time_format" onmouseover="showWMTT('id59')" onmouseout="hideWMTT()" style="text-align: right;"><?php echo $format_time; ?></select></td>
 	    <td><?php echo $_language->module['format_time']; ?></td>
+	  </tr>
+      <tr>
+	    <td align="right"><select name="default_page" onmouseover="showWMTT('id60')" onmouseout="hideWMTT()" style="text-align: right;"><?php echo $default_page; ?></select></td>
+	    <td><?php echo $_language->module['default_page']; ?></td>
 	  </tr>
     <tr>
 	    <td align="right"><select name="autoresize" onmouseover="showWMTT('id50')" onmouseout="hideWMTT()"><?php echo $autoresize;?></select></td>
