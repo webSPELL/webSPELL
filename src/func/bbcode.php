@@ -42,7 +42,7 @@ function replace_smileys($text, $calledfrom = 'root'){
 		$prefix = '';
 		$prefix2 = '';
 	}
-	
+
 	$filepath = $prefix."./images/smileys/";
 	unset($files);
 	if ($dh = opendir($filepath)) {
@@ -51,8 +51,8 @@ function replace_smileys($text, $calledfrom = 'root'){
 		}
 	}
 
-	$replacements_1 = Array();	
-	$replacements_2 = Array();	
+	$replacements_1 = Array();
+	$replacements_2 = Array();
 
 	foreach($files as $file) {
 		$smiley = explode(".", $file);
@@ -65,9 +65,9 @@ function replace_smileys($text, $calledfrom = 'root'){
 		$replacements_1[] = $ds['pattern'];
 		$replacements_2[] = '[SMILE='.$ds['alt'].']'.$prefix2.'images/smileys/'.$ds['name'].'[/SMILE]';
 	}
-	
+
 	$text = strtr($text, array_combine($replacements_1, $replacements_2));
-	
+
 	return $text;
 }
 function smileys($text, $specialchars=0, $calledfrom = 'root') {
@@ -94,8 +94,8 @@ function smileys($text, $specialchars=0, $calledfrom = 'root') {
 			$splits[$i] = replace_smileys($splits[$i], $calledfrom);
 		}
 		else {
-			$i = $z;			
-		}		
+			$i = $z;
+		}
 	}
 	$text = implode("",$splits);
 	if($specialchars) $text=htmlspecialchars($text);
@@ -105,10 +105,10 @@ function smileys($text, $specialchars=0, $calledfrom = 'root') {
 function htmlnl($text){
 	preg_match_all('/<(table|form|li|ul|ol|tr|td|dl|dt|dd|dir|menu|th|thead|caption|colgroup|col|tbody|tfoot|div|span*)[^>]*>(.*?)<\/\1>/si',$text,$matches,PREG_SET_ORDER);
 	foreach($matches as $match){
-		if(stristr($match[0],'class="quote"') === false && 
-			 stristr($match[0],'class="code"') === false && 
+		if(stristr($match[0],'class="quote"') === false &&
+			 stristr($match[0],'class="code"') === false &&
 			 stristr($match[0],'align=') === false &&
-			 stristr($match[0],'size=') === false && 
+			 stristr($match[0],'size=') === false &&
 			 stristr($match[0],'color=') === false){
 			$new_str = str_replace(array("\r\n", "\n", "\r"),array("", "", ""),$match[0]);
 			$text = str_replace($match[0],$new_str,$text);
@@ -124,7 +124,7 @@ function fixJavaEvents($string){
 function flags($text,$calledfrom = 'root') {
   global $_language;
 	$_language->read_module('bbcode', true);
-	
+
 	if($calledfrom == 'admin'){
 		$prefix = '../';
 	}
@@ -150,7 +150,7 @@ function codereplace($content) {
 	$_language->read_module('bbcode', true);
 
 	global $picsize_l;
-	
+
 	$border=BORDER;
 	$bg1=BG_1;
 	$splits = preg_split("/(\[[\/]{0,1}code\])/si",$content,-1,PREG_SPLIT_DELIM_CAPTURE);
@@ -180,7 +180,7 @@ function codereplace($content) {
 
 				$splits[($i+1)] = insideCode($splits[($i+1)]);
 				$splits[$z] = '</div></div>';
-				$i=$z;		
+				$i=$z;
 			}
 		}
 	}
@@ -190,7 +190,7 @@ function codereplace($content) {
 
 //replace inside [code]-tags
 function insideCode($content){
-	
+
 	global $userID;
 	$code_entities_match = array(
 		'#"#',
@@ -220,12 +220,12 @@ function insideCode($content){
 		'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;',
 		'&nbsp;'
 	);
-	
+
 	$content = preg_replace($code_entities_match, $code_entities_replace, $content);
-	
+
 	// add line number
 	$splits = preg_split("#\\n#", $content, -1, PREG_SPLIT_NO_EMPTY);
-	
+
 	$i = 0;
 	$codelines='';
 	$codecontent='';
@@ -237,7 +237,7 @@ function insideCode($content){
 		}
 	}
 	$content='<table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td width="20"><div style="text-align: right;">'.$codelines.'</div></td><td valign="top">'.$codecontent.'</td></tr></table>';
-	
+
 	return $content;
 }
 
@@ -266,7 +266,7 @@ function imgreplace($content) {
 				}
 				if(!$picsize_l) $size_l = "9999"; else $size_l=$picsize_l;
 				if(!$picsize_h) $size_h = "9999"; else $size_h=$picsize_h;
-				if($picinfo[0] > $size_l OR $picinfo[1] > $size_h) 
+				if($picinfo[0] > $size_l OR $picinfo[1] > $size_h)
 				$content = str_ireplace('[img]'.$teil[2].'[/img]', '[url='.$teil[2].']<img src="'.fixJavaEvents($teil[2]).'" border="0" width="'.$picsize_l.'" alt="'.$teil[2].'" /><br />([i]'.$_language->module['auto_resize'].': '.$picinfo[1].'x'.$picinfo[0].'px, '.$format.'[/i])[/url]', $content);
 				elseif($picinfo[0] > (2*$size_l) OR $picinfo[1] > (2*$size_h)) $content = str_ireplace('[img]'.$teil[2].'[/img]', '[url='.$teil[2].'][b]'.$_language->module['large_picture'].'[/b]<br />('.$picinfo[1].'x'.$picinfo[0].'px, '.$format.')[/url]', $content);
 				else $content = preg_replace('#\[img\]'.preg_quote($teil[2],"#").'\[/img\]#si', '<img src="'.fixJavaEvents($teil[2]).'" border="0" alt="'.$teil[2].'" />', $content, 1);
@@ -286,7 +286,7 @@ function imgreplace($content) {
 //replace [quote]-tags
 
 function quotereplace($content) {
-  
+
 	global $_language, $picsize_l, $picsize_h;
 	$_language->read_module('bbcode', true);
 	$border=BORDER;
@@ -336,7 +336,7 @@ function urlreplace_callback_1($match){
 	return '<a href="'.fixJavaEvents($match[1]).'" target="_blank">';
 }
 
-function urlreplace($content){	
+function urlreplace($content){
  	$starttags = substr_count(strtolower($content), strtolower('[url'));
 	$endtags = substr_count(strtolower($content), strtolower('[/url]'));
 	$overflow=abs($starttags-$endtags);
@@ -390,8 +390,8 @@ function insertlinks($content,$calledfrom = 'root') {
 	}
 	else{
 		$prefix = '';
-	}	
-	
+	}
+
 	if($insertlinks==1) {
 		$ergebnis = safe_query("SELECT us.userID, us.nickname, us.country FROM ".PREFIX."squads_members AS sq, ".PREFIX."user AS us WHERE sq.userID=us.userID GROUP BY us.userID");
 		while($ds = mysqli_fetch_array($ergebnis)) {
@@ -467,7 +467,7 @@ function replacement($content, $bbcode=true) {
 		while(preg_match("#\[size=([0-9]*)\](.*?)\[/size\]#si", $content)){
 		  $content = preg_replace_callback("#\[size=([0-9]*)\](.*?)\[/size\]#si", "font_size_callback", $content);
 		}
-		while(preg_match("#\[color=([a-z0-9\#]*)\](.*?)\[/color\]#si", $content)){  
+		while(preg_match("#\[color=([a-z0-9\#]*)\](.*?)\[/color\]#si", $content)){
 		  $content = preg_replace_callback("#\[color=([a-z0-9\#]*)\](.*?)\[/color\]#si", "font_color_callback", $content);
 		}
 		while(preg_match("#\[font=([a-z0-9]*)\](.*?)\[/font\]#si", $content)){
@@ -511,9 +511,9 @@ function toggle($content, $id) {
 	while(($pos = mb_strpos(strtolower($content), "[toggle=")) !== false) {
 		$start = mb_substr($content, 0, $pos);
 		$end = mb_substr($content, $pos);
-		
+
 		$toggle_name_end = mb_strpos($end, "]");
-		
+
 		if(($toggle_close_tag = mb_strpos(strtolower($end), "[/toggle]")) === false) {
 			$content = $start.mb_substr($end, $toggle_name_end + 1);
 		}
@@ -526,9 +526,36 @@ function toggle($content, $id) {
 			$n++;
 		}
 	}
-	
+
 	$content = str_ireplace("[/toggle]", "", $content);
 
 	return $content;
 }
-?>
+
+/**
+ * @param string $content
+ * @param int $newsID
+ * @param bool $fulltext
+ * @return string
+ */
+function readMore($content, $newsID, $fulltext = false) {
+    global $_language;
+
+    if(preg_match('/(.+)\[readmore\](.*)\[\/readmore\](.+)/s', $content, $matches) == 1) {
+        list(,$preview, $readmoreText, $last) = $matches;
+
+        if(!$readmoreText) {
+            $readmoreText = $_language->module['read_more'];
+        }
+
+        if($fulltext) {
+            $content = $preview . $last;
+        }
+        else {
+            $content = trim($preview, ' ') . '<a href="index.php?site=news_comments&newsID=' . $newsID . '" class="readmore_link">' . $readmoreText . '</a>';
+        }
+    }
+
+    return $content;
+
+}

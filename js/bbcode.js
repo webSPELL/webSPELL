@@ -177,6 +177,11 @@ function AddToggle() {
 	AddTag("[toggle="+language_array['bbcode']['read_more']+"]", "[/toggle]", '');
 }
 
+// insert [readmore] tag
+function AddReadMore() {
+    AddTag("[readmore]", "[/readmore]", language_array['bbcode']['read_more']);
+}
+
 // toggle function - read more
 function Toggle(id, multi) {
 	

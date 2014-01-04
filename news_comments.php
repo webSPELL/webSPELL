@@ -73,7 +73,8 @@ if($newsID) {
 		
 		if($ds['intern'] == 1) $isintern = '('.$_language->module['intern'].')';
 		else $isintern = '';
-		
+
+        $content = readMore($content, $newsID, true);
 		$content = htmloutput($content);
 		$content = toggle($content, $ds['newsID']);
 		$headline = clearfromtags($headline);

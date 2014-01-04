@@ -92,7 +92,10 @@ if($action=="new") {
 
 	$postform = '';
 	$comments='<option value="0">'.$_language->module['no_comments'].'</option><option value="1">'.$_language->module['user_comments'].'</option><option value="2" selected="selected">'.$_language->module['visitor_comments'].'</option>';
-	
+
+
+    eval ("\$readMore = \"".gettemplate("addbbcode_readmore")."\";");
+
 	eval ("\$addbbcode = \"".gettemplate("addbbcode")."\";");
 	eval ("\$addflags = \"".gettemplate("flags")."\";");
 
@@ -267,7 +270,8 @@ elseif($action=="preview") {
 	
 	if($ds['intern'] == 1) $isintern = '('.$_language->module['intern'].')';
     else $isintern = '';
-    
+
+    $content = readMore($content, $newsID, true);
 	$content = htmloutput($content);
 	$content = toggle($content, $ds['newsID']);
 	$poster='<a href="index.php?site=profile&amp;id='.$ds['poster'].'"><b>'.getnickname($ds['poster']).'</b></a>';
@@ -516,6 +520,8 @@ elseif($action=="edit") {
 	$comments=str_replace('value="'.$ds['comments'].'"', 'value="'.$ds['comments'].'" selected="selected"', $comments);
 
 	$bg1=BG_1;
+
+    eval ("\$readMore = \"".gettemplate("addbbcode_readmore")."\";");
 
 	eval ("\$addbbcode = \"".gettemplate("addbbcode")."\";");
 	eval ("\$addflags = \"".gettemplate("flags")."\";");
@@ -787,12 +793,16 @@ else {
 
 		$headline=$message_array[$showlang]['headline'];
 		$content=$message_array[$showlang]['message'];
+
 		$newsID=$ds['newsID'];
     if($ds['intern'] == 1) $isintern = '('.$_language->module['intern'].')';
     else $isintern = '';
-    
-    $content = htmloutput($content);
+
+
+        $content = readMore($content, $ds['newsID']);
+        $content = htmloutput($content);
 		$content = toggle($content, $ds['newsID']);
+
 		$headline = clearfromtags($headline);
 		$poster='<a href="index.php?site=profile&amp;id='.$ds['poster'].'"><b>'.getnickname($ds['poster']).'</b></a>';
 		$related="";
