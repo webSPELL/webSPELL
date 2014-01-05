@@ -462,11 +462,7 @@ elseif($action=="profile") {
   else $viewavatar=$_language->module['avatar'];
   $sex = '<option value="m">'.$_language->module['male'].'</option><option value="f">'.$_language->module['female'].'</option><option value="u">'.$_language->module['not_available'].'</option>';
   $sex = str_replace('value="'.$ds['sex'].'"','value="'.$ds['sex'].'" selected="selected"',$sex);
-  $countries='';
-	$ergebnis = safe_query("SELECT * FROM `".PREFIX."countries` ORDER BY country");
-	while($ds = mysqli_fetch_array($ergebnis)) {
-		$countries .= '<option value="'.$ds['short'].'">'.$ds['country'].'</option>';
-	}
+  $countries=getcountries();
   $countries = str_replace(" selected=\"selected\"", "", $countries);
   $countries = str_replace('value="'.$ds['country'].'"', 'value="'.$ds['country'].'" selected="selected"', $countries);
   $b_day=mb_substr($ds['birthday'],8,2);

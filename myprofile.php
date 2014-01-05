@@ -415,11 +415,7 @@ else {
 			$b_day = mb_substr($ds['birthday'],8,2);
 			$b_month = mb_substr($ds['birthday'],5,2);
 			$b_year = mb_substr($ds['birthday'],0,4);
-			$countries='';
-			$ergebnis = safe_query("SELECT * FROM `".PREFIX."countries` ORDER BY country");
-			while($ds = mysqli_fetch_array($ergebnis)) {
-				$countries .= '<option value="'.$ds['short'].'">'.$ds['country'].'</option>';
-			}
+			$countries=getcountries();
 			$countries = str_replace('value="'.$ds['country'].'"', 'value="'.$ds['country'].'" selected="selected"', $countries);
 			if($ds['avatar']) $viewavatar = '&#8226; <a href="javascript:MM_openBrWindow(\'images/avatars/'.$ds['avatar'].'\',\'avatar\',\'width=120,height=120\')">'.$_language->module['avatar'].'</a>';
 			else $viewavatar = $_language->module['avatar'];
