@@ -69,7 +69,6 @@ $language_array = Array(
   'preview'=>'Esikatselu',
   'publish_now'=>'Julkaise nyt',
   'publish_selected'=>'Julkaise valitut',
-  'read_more'=>'Lue lisää',
   'really_delete'=>'haluatko poistaa uutisen?',
   'rubric'=>'Ohje',
   'save_news'=>'Tallenna uutinen',

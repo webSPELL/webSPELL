@@ -63,7 +63,6 @@ $language_array = Array(
 	'preview'=>'előnézet',
 	'publish_now'=>'közlés most',
 	'publish_selected'=>'kijelölt közlése',
-	'read_more'=>'Bővebben',
 	'really_delete'=>'Tényleg törölni akarod ezt a hírt?',
 	'rubric'=>'Rovat',
 	'save_news'=>'hírek mentése',

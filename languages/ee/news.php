@@ -64,7 +64,6 @@ $language_array = Array(
   'preview'=>'eelvaade',
   'publish_now'=>'avalda kohe',
   'publish_selected'=>'avalda valitud',
-  'read_more'=>'loe edasi',
   'really_delete'=>'tõesti kustuta need uudised?',
   'rubric'=>'Rubriik',
   'save_news'=>'salvesta uudis',

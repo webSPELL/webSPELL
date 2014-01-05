@@ -63,7 +63,6 @@ $language_array = Array(
 	'preview'=>'Anteprima',
 	'publish_now'=>'Pubblica ora',
 	'publish_selected'=>'Contrassegnato pubblica',
-	'read_more'=>'Per saperne di più',
 	'really_delete'=>'Questa notizia veramente cancellare?',
 	'rubric'=>'Denominazione',
 	'save_news'=>'Salvare News',

@@ -64,7 +64,6 @@ $language_array = Array(
   'preview'=>'عرض',
   'publish_now'=>'نشر الآن',
   'publish_selected'=>'نشر المحدد',
-  'read_more'=>'اقرأ المزيد',
   'really_delete'=>'حذف هذا الخبر؟',
   'rubric'=>'عنوان',
   'save_news'=>'حفظ الأخبار',

@@ -64,7 +64,6 @@ $language_array = Array(
   'preview'=>'previzualizare',
   'publish_now'=>'publică acum',
   'publish_selected'=>'publică selecţia',
-  'read_more'=>'Citește mai mult',
   'really_delete'=>'sigur doriţi ştergerea acestei noutăţi?',
   'rubric'=>'Rubrică',
   'save_news'=>'salvează noutăţi',

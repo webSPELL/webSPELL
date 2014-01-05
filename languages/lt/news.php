@@ -63,7 +63,6 @@ $language_array = Array(
 	'preview'=>'peržiūrėti',
 	'publish_now'=>'paviešinti dabar',
 	'publish_selected'=>'paviešinti pasirinktus',
-	'read_more'=>'Skaityti daugiau',
 	'really_delete'=>'Ar tikrai norite ištrinti šią naujieną?',
 	'rubric'=>'Rubrika',
 	'save_news'=>'išsaugoti naujienas',

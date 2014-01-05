@@ -64,7 +64,6 @@ $language_array = Array(
   'preview'=>'priekšskats',
   'publish_now'=>'publicēt tagad',
   'publish_selected'=>'publicēšana atlasīta',
-  'read_more'=>'Lasīt vairāk',
   'really_delete'=>'izdzēst šīs ziņas?',
   'rubric'=>'Rubrika',
   'save_news'=>'saglabāt ziņas',

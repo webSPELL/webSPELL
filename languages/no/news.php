@@ -63,7 +63,6 @@ $language_array = Array(
 	'preview'=>'forhåndsvisning',
 	'publish_now'=>'publiser nå',
 	'publish_selected'=>'publiser merkede',
-	'read_more'=>'Les mer',
 	'really_delete'=>'really delete this news?',
 	'rubric'=>'Rubrikk',
 	'save_news'=>'lagre nyhet',

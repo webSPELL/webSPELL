@@ -63,7 +63,6 @@ $language_array = Array(
   'preview'=>'نشان دادن',
   'publish_now'=>'عموم',
   'publish_selected'=>'انتخاب عمومی',
-  'read_more'=>'ادامه مطلب',
   'really_delete'=>'ایا میخواهید این خبر را حذف کنید؟',
   'rubric'=>'واژه',
   'save_news'=>'ذخیره اخبار',
