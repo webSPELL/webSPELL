@@ -35,6 +35,11 @@ echo'<h1>&curren; '.$_language->module['settings'].'</h1>';
 if(isset($_POST['submit'])) {
  	$CAPCLASS = new Captcha;
 	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
+		$invalid_files = array("_functions.php","_mysql.php","_settings.php","_stylesheet.css","404.php","ajax_spamfilter.php","asearch.php","buddys.php","cash_box.php","changelog.txt","checklogin.php","clanwars_details.php","code.php","comments.php","counter.php","download.php","flags.php","forum_topic.php","getlang.php","index.php","latesttopics.php","license.txt","login.php","loginoverview.php","logout.php","lostpassword.php","messenger.php","myprofile.php","navigation.php","news_comments.php","out.php","partners.php","picture.php","poll.php","printview.php","profile.php","quicksearch.php","rating.php","readme.de.txt","readme.en.txt","report.php","shoutbox.php","smileys.php","static.php","upload.php","usergallery.php","version.php");
+		if(is_dir($filepath_default_pages.$_POST['default_page'])) $default_page = '';
+		elseif(strpos($_POST['default_page'].'.php',"sc_")===0) $default_page = '';
+		elseif(in_array($_POST['default_page'].'.php',$invalid_files)) $default_page = '';
+		else $default_page = $_POST['default_page'];
 		safe_query("UPDATE ".PREFIX."settings SET hpurl='".$_POST['url']."',
 									 clanname='".$_POST['clanname']."',
 									 clantag='".$_POST['clantag']."',
@@ -92,7 +97,7 @@ if(isset($_POST['submit'])) {
 									 detect_language='".isset($_POST['detectLanguage'])."',
 									 date_format='".$_POST['date_format']."',
 									 time_format='".$_POST['time_format']."',
-									 default_page='".$_POST['default_page']."',
+									 default_page='".$default_page."',
 									 autoresize='".$_POST['autoresize']."'");
 		safe_query("UPDATE ".PREFIX."styles SET title='".$_POST['title']."' ");	
 	  	redirect("admincenter.php?site=settings","",0);
@@ -191,8 +196,7 @@ else {
 	$default_page = '';
 	$filepath_default_pages = '../';
 	$get_default_pages=opendir($filepath_default_pages);
-	$invalid_folders = array(".","..","admin","demos","downloads","images","js","languages","src","templates","tmp");
-	$invalid_files = array("_functions.php","_mysql.php","_settings.php","_stylesheet.css","404.php","ajax_spamfilter.php","asearch.php","buddys.php","cash_box.php","changelog.txt","checklogin.php","clanwars_details.php","code.php","comments.php","counter.php","download.php","flags.php","forum_topic.php","getlang.php","index.php","latesttopics.php","license.txt","login.php","loginoverview.php","logout.php","lostpassword.php","messenger.php","myprofile.php","navigation.php","news_comments.php","out.php","partners.php","picture.php","poll.php","printview.php","profile.php","quicksearch.php","rating.php","readme.de.txt","readme.en.txt","report.php","sc_articles.php","sc_bannerrotation.php","sc_demos.php","sc_files.php","sc_headlines.php","sc_language.php","sc_lastregistered.php","sc_newsletter.php","sc_potm.php","sc_randompic.php","sc_results.php","sc_scrolltext.php","sc_servers.php","sc_sponsors.php","sc_squads.php","sc_tags.php","sc_topnews.php","sc_upcoming.php","shoutbox.php","smileys.php","static.php","upload.php","usergallery.php","version.php");
+	$invalid_files = array("_functions.php","_mysql.php","_settings.php","_stylesheet.css","404.php","ajax_spamfilter.php","asearch.php","buddys.php","cash_box.php","changelog.txt","checklogin.php","clanwars_details.php","code.php","comments.php","counter.php","download.php","flags.php","forum_topic.php","getlang.php","index.php","latesttopics.php","license.txt","login.php","loginoverview.php","logout.php","lostpassword.php","messenger.php","myprofile.php","navigation.php","news_comments.php","out.php","partners.php","picture.php","poll.php","printview.php","profile.php","quicksearch.php","rating.php","readme.de.txt","readme.en.txt","report.php","shoutbox.php","smileys.php","static.php","upload.php","usergallery.php","version.php");
 	while($file=readdir($get_default_pages)) {
 		if($_language->module['module_'.substr($file,0,-4)]=="") {
 			$addon_file = ' style="font-style: italic; font-weight: bold;"';
@@ -202,7 +206,8 @@ else {
 			$addon_file = '';
 			$name = $_language->module['module_'.substr($file,0,-4)];
 		}
-		if(in_array($file,$invalid_folders)) $default_page .= '';
+		if(is_dir($filepath_default_pages.$file)) $default_page .= '';
+		elseif(strpos($file,"sc_")===0) $default_page .= '';
 		elseif(in_array($file,$invalid_files)) $default_page .= '';
 		else $default_page .= '<option'.$addon_file.' value="'.substr($file,0,-4).'">'.$name.'</option>';
 	}
