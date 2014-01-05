@@ -21,7 +21,6 @@ function MM_openBrWindow(theURL,winName,features) { //v2.0
 
 default_language = "de";
 
-teaser = new Array();
 message = new Array();
 headline = new Array();
 langs = new Array();
@@ -94,14 +93,14 @@ function update_textarea(value) {
 	for(var i = 0; i < value; i++) {
 		if(message[i] || headline[i] || langs[i] && langs[i] != default_language)
 		{
-			document.getElementById('news_textarea').innerHTML+='<select name="lang[]" id="lang_' + i + '" onchange="langs['+i+']=this.value; update_language();"></select> %headline% <input name="headline[]" type="text" value="'+headline[i]+'" size="80" onchange="headline['+i+']=this.value;" /><textarea name="teaser[' + i + ']" rows="10" cols="130" style="width: 750px;" onfocus="which=this;textarea = \'teaser[' + i + ']\';" onblur="teaser['+i+']=this.value;" onchange="teaser['+i+']=this.value;">'+teaser[i]+'</textarea><br /><textarea name="message[' + i + ']" rows="20" cols="130" style="width: 750px;" onfocus="which=this;textarea = \'message[' + i + ']\';" onblur="message['+i+']=this.value;" onchange="message['+i+']=this.value;">'+message[i]+'</textarea><br /><br />';
+			document.getElementById('news_textarea').innerHTML+='<select name="lang[]" id="lang_' + i + '" onchange="langs['+i+']=this.value; update_language();"></select> %headline% <input name="headline[]" type="text" value="'+headline[i]+'" size="80" onchange="headline['+i+']=this.value;" /><textarea name="message[' + i + ']" rows="20" cols="130" style="width: 750px;" onfocus="which=this;textarea = \'message[' + i + ']\';" onblur="message['+i+']=this.value;" onchange="message['+i+']=this.value;">'+message[i]+'</textarea><br /><br />';
 		}
 		else
 		{
 			message[i] = '';
 			headline[i] = '';
 			langs[i] = '';
-			document.getElementById('news_textarea').innerHTML+='<select name="lang[]" id="lang_' + i + '" onchange="langs['+i+']=this.value; update_language();"></select> %headline% <input name="headline[]" type="text" value="" size="80" onchange="headline['+i+']=this.value;" /><textarea name="teaser[' + i + ']" rows="10" cols="130" style="width: 750px;" onfocus="which=this;textarea = \'teaser[' + i + ']\';" onblur="teaser['+i+']=this.value;" onchange="teaser['+i+']=this.value;"></textarea><br /><textarea name="message[' + i + ']" rows="20" cols="130" style="width: 750px;" onfocus="which=this;textarea = \'message[' + i + ']\';" onblur="message['+i+']=this.value;" onchange="message['+i+']=this.value;"></textarea><br /><br />';
+			document.getElementById('news_textarea').innerHTML+='<select name="lang[]" id="lang_' + i + '" onchange="langs['+i+']=this.value; update_language();"></select> %headline% <input name="headline[]" type="text" value="" size="80" onchange="headline['+i+']=this.value;" /><textarea name="message[' + i + ']" rows="20" cols="130" style="width: 750px;" onfocus="which=this;textarea = \'message[' + i + ']\';" onblur="message['+i+']=this.value;" onchange="message['+i+']=this.value;"></textarea><br /><br />';
 		}
 	}
 	if(message.length > value) {
@@ -128,22 +127,6 @@ function chkFormular() {
    		return false;
 	}
 	
-	if(teaser[0] == "" || typeof teaser[0] == undefined) {
-		alert("%enter_text%");
-   		return false;
-	}
-	teaser_text = '';
-	x = 0;
-	while(true){
-		if(teaser[x]){
-			teaser_text += teaser[x];
-			x++;
-		}
-		else{
-			break;
-		}
-	}
-	
 	if(message[0] == "" || typeof message[0] == undefined) {
 		alert("%enter_text%");
    		return false;
@@ -159,18 +142,12 @@ function chkFormular() {
 			break;
 		}
 	}
-	
-	if(!validbbcode(teaser_text)){
-		return false;
-	}
-	
 	if(!validbbcode(message_text)){
 		return false;
 	}
 	
 }
 
-$teaser_vars
 $message_vars
 $headline_vars
 $langs_vars
