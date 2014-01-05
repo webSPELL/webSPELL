@@ -56,7 +56,7 @@ if($newsID) {
 		$message_array = array();
 		$query=safe_query("SELECT n.*, c.short AS `countryCode`, c.country FROM ".PREFIX."news_contents n LEFT JOIN ".PREFIX."countries c ON c.short = n.language WHERE n.newsID='".$newsID."'");
 		while($qs = mysqli_fetch_array($query)) {
-			$message_array[] = array('lang' => $qs['language'], 'headline' => $qs['headline'], 'teaser' => $qs['teaser'], 'message' => $qs['content'], 'country'=> $qs['country'], 'countryShort' => $qs['countryCode']);
+			$message_array[] = array('lang' => $qs['language'], 'headline' => $qs['headline'], 'message' => $qs['content'], 'country'=> $qs['country'], 'countryShort' => $qs['countryCode']);
 		}
 		if(isset($_GET['lang'])) $showlang = getlanguageid($_GET['lang'], $message_array);
 		else $showlang = select_language($message_array);
@@ -69,18 +69,13 @@ if($newsID) {
 		}
 		
 		$headline=$message_array[$showlang]['headline'];
-		$teaser=$message_array[$showlang]['teaser'];
 		$content=$message_array[$showlang]['message'];
 		
 		if($ds['intern'] == 1) $isintern = '('.$_language->module['intern'].')';
 		else $isintern = '';
 		
-		$teaser = htmloutput($teaser);
-		$teaser = toggle($teaser, $ds['newsID']);
 		$content = htmloutput($content);
 		$content = toggle($content, $ds['newsID']);
-		if(!$teaser) $news_content = $content;
-		else $news_content = '<span class="news-teaser">'.$teaser.'</span><br />'.$content;
 		$headline = clearfromtags($headline);
 		$comments = '';
 
