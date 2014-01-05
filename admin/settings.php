@@ -194,9 +194,17 @@ else {
 	$invalid_folders = array(".","..","admin","demos","downloads","images","js","languages","src","templates","tmp");
 	$invalid_files = array("_functions.php","_mysql.php","_settings.php","_stylesheet.css","404.php","ajax_spamfilter.php","asearch.php","buddys.php","cash_box.php","changelog.txt","checklogin.php","clanwars_details.php","code.php","comments.php","counter.php","download.php","flags.php","forum_topic.php","getlang.php","index.php","latesttopics.php","license.txt","login.php","loginoverview.php","logout.php","lostpassword.php","messenger.php","myprofile.php","navigation.php","news_comments.php","out.php","partners.php","picture.php","poll.php","printview.php","profile.php","quicksearch.php","rating.php","readme.de.txt","readme.en.txt","report.php","sc_articles.php","sc_bannerrotation.php","sc_demos.php","sc_files.php","sc_headlines.php","sc_language.php","sc_lastregistered.php","sc_newsletter.php","sc_potm.php","sc_randompic.php","sc_results.php","sc_scrolltext.php","sc_servers.php","sc_sponsors.php","sc_squads.php","sc_tags.php","sc_topnews.php","sc_upcoming.php","shoutbox.php","smileys.php","static.php","upload.php","usergallery.php","version.php");
 	while($file=readdir($get_default_pages)) {
+		if($_language->module['module_'.substr($file,0,-4)]=="") {
+			$addon_file = ' style="font-style: italic; font-weight: bold;"';
+			$name = ucfirst(substr($file,0,-4));
+		}
+		else {
+			$addon_file = '';
+			$name = $_language->module['module_'.substr($file,0,-4)];
+		}
 		if(in_array($file,$invalid_folders)) $default_page .= '';
 		elseif(in_array($file,$invalid_files)) $default_page .= '';
-		else $default_page .= '<option value="'.substr($file,0,-4).'">'.$_language->module['module_'.substr($file,0,-4)].'</option>';
+		else $default_page .= '<option'.$addon_file.' value="'.substr($file,0,-4).'">'.$name.'</option>';
 	}
 	closedir($get_default_pages);
 	$default_page = str_replace('value="'.$ds['default_page'].'"','value="'.$ds['default_page'].'" selected="selected"',$default_page);
