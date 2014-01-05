@@ -196,20 +196,19 @@ else {
 	$default_page = '';
 	$filepath_default_pages = '../';
 	$get_default_pages=opendir($filepath_default_pages);
+	$default_files = array("about.php","articles.php","awards.php","calendar.php","challenge.php","clanwars.php","contact.php","counter_stats.php","demos.php","faq.php","files.php","forum.php","gallery.php","guestbook.php","history.php","imprint.php","joinus.php","links.php","linkus.php","members.php","news.php","newsletter.php","polls.php","register.php","registered_users.php","search.php","server.php","shoutbox_content.php","sponsors.php","squads.php","tags.php","whoisonline.php");
 	$invalid_files = array("_functions.php","_mysql.php","_settings.php","_stylesheet.css","404.php","ajax_spamfilter.php","asearch.php","buddys.php","cash_box.php","changelog.txt","checklogin.php","clanwars_details.php","code.php","comments.php","counter.php","download.php","flags.php","forum_topic.php","getlang.php","index.php","latesttopics.php","license.txt","login.php","loginoverview.php","logout.php","lostpassword.php","messenger.php","myprofile.php","navigation.php","news_comments.php","out.php","partners.php","picture.php","poll.php","printview.php","profile.php","quicksearch.php","rating.php","readme.de.txt","readme.en.txt","report.php","shoutbox.php","smileys.php","static.php","upload.php","usergallery.php","version.php");
 	while($file=readdir($get_default_pages)) {
-		if($_language->module['module_'.substr($file,0,-4)]=="") {
-			$addon_file = ' style="font-style: italic; font-weight: bold;"';
+		if(!in_array($file,$default_files)) {
 			$name = ucfirst(substr($file,0,-4));
 		}
 		else {
-			$addon_file = '';
 			$name = $_language->module['module_'.substr($file,0,-4)];
 		}
 		if(is_dir($filepath_default_pages.$file)) $default_page .= '';
 		elseif(strpos($file,"sc_")===0) $default_page .= '';
 		elseif(in_array($file,$invalid_files)) $default_page .= '';
-		else $default_page .= '<option'.$addon_file.' value="'.substr($file,0,-4).'">'.$name.'</option>';
+		else $default_page .= '<option value="'.substr($file,0,-4).'">'.$name.'</option>';
 	}
 	closedir($get_default_pages);
 	$default_page = str_replace('value="'.$ds['default_page'].'"','value="'.$ds['default_page'].'" selected="selected"',$default_page);
