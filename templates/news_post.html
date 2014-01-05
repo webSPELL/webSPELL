@@ -128,6 +128,10 @@ function chkFormular() {
    		return false;
 	}
 	
+	if(teaser[0] == "" || typeof teaser[0] == undefined) {
+		alert("%enter_text%");
+   		return false;
+	}
 	teaser_text = '';
 	x = 0;
 	while(true){
