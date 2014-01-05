@@ -82,11 +82,7 @@ if($action=="new") {
 			else $year.='<option value="'.$i.'">'.$i.'</option>';
 		}
 
-		$countries='';
-		$ergebnis = safe_query("SELECT * FROM `".PREFIX."countries` ORDER BY country");
-		while($ds = mysqli_fetch_array($ergebnis)) {
-			$countries .= '<option value="'.$ds['short'].'">'.$ds['country'].'</option>';
-		}
+		$countries=getcountries();
 
 		$leaguehp="http://";
 		$opphp="http://";
@@ -103,11 +99,7 @@ if($action=="new") {
 			$opponent=$ds['opponent'];
 			$opptag=$ds['opptag'];
 			if($ds['opphp'] != $opphp) $opphp=$ds['opphp'];
-			$countries='';
-			$ergebnis = safe_query("SELECT * FROM `".PREFIX."countries` ORDER BY country");
-			while($ds = mysqli_fetch_array($ergebnis)) {
-				$countries .= '<option value="'.$ds['short'].'">'.$ds['country'].'</option>';
-			}
+			$countries=getcountries();
 			$countries=str_replace(" selected=\"selected\"", "", $countries);
 			$countries=str_replace('value="'.$ds['oppcountry'].'"', 'value="'.$ds['oppcountry'].'" selected="selected"', $countries);
 
@@ -414,11 +406,7 @@ elseif($action=="edit") {
 		$leaguehp=htmlspecialchars($ds['leaguehp']);
 		$opponent=htmlspecialchars($ds['opponent']);
 		$opptag=htmlspecialchars($ds['opptag']);
-		$countries='';
-		$ergebnis = safe_query("SELECT * FROM `".PREFIX."countries` ORDER BY country");
-		while($ds = mysqli_fetch_array($ergebnis)) {
-			$countries .= '<option value="'.$ds['short'].'">'.$ds['country'].'</option>';
-		}
+		$countries=getcountries();
 		$countries=str_replace('value="'.$ds['oppcountry'].'"', 'value="'.$ds['oppcountry'].'" selected="selected"', $countries);
 		$opphp=htmlspecialchars($ds['opphp']);
 		$oppteam=htmlspecialchars($ds['oppteam']);

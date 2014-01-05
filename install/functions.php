@@ -2110,5 +2110,7 @@ function update40200_40300() {
   `sort` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`linkID`)
 ) AUTO_INCREMENT=1 ");
+
+  mysqli_query($_database, "ALTER TABLE `".PREFIX."countries` ADD `fav` int(1) NOT NULL default '0'");
 }
 ?>

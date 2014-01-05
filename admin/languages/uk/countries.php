@@ -38,6 +38,7 @@ $language_array = Array(
   'delete'=>'delete',
   'edit'=>'edit',
   'edit_country'=>'edit Country',
+  'favorite'=>'Favorite',
   'fill_correctly'=>'Please fill in the form correctly.',
   'format_incorrect'=>'The format of the icon was incorrect. Please upload only icons in *.gif format.',
   'icon'=>'Icon',
