@@ -807,7 +807,7 @@ else {
     	$content = htmloutput($content);
 		$content = toggle($content, $ds['newsID']);
 		if(!$teaser) $news_content = $content;
-		else $news_content = $teaser.'<br /><a href="index.php?site=news_commments&amp;newsID='.$ds['newsID'].'">'.$_language->module['read_more'].'</a>';
+		else $news_content = '<span class="news-teaser">'.$teaser.'</span><br /><a href="index.php?site=news_commments&amp;newsID='.$ds['newsID'].'">'.$_language->module['read_more'].'</a>';
 		$headline = clearfromtags($headline);
 		$poster='<a href="index.php?site=profile&amp;id='.$ds['poster'].'"><b>'.getnickname($ds['poster']).'</b></a>';
 		$related="";
