@@ -91,6 +91,7 @@ if(isset($_POST['submit'])) {
 									 detect_language='".isset($_POST['detectLanguage'])."',
 									 date_format='".$_POST['date_format']."',
 									 time_format='".$_POST['time_format']."',
+									 user_guestbook='".$_POST['user_guestbook']."',
 									 autoresize='".$_POST['autoresize']."'");
 		safe_query("UPDATE ".PREFIX."styles SET title='".$_POST['title']."' ");	
 	  	redirect("admincenter.php?site=settings","",0);
@@ -189,6 +190,9 @@ else {
 	$autoresize = "<option value='0'>".$_language->module['autoresize_off']."</option><option value='2'>".$_language->module['autoresize_js']."</option><option value='1'>".$_language->module['autoresize_php']."</option>";
 	$autoresize = str_replace("value='".$ds['autoresize']."'","value='".$ds['autoresize']."' selected='selected'",$autoresize);
 	
+	$user_gbook = "<option value='0'>".$_language->module['deactivated']."</option><option value='1'>".$_language->module['activated']."</option>";
+	$user_gbook = str_replace("value='".$ds['user_guestbook']."'","value='".$ds['user_guestbook']."' selected='selected'",$user_gbook);
+	
 	$CAPCLASS = new Captcha;
 	$CAPCLASS->create_transaction();
 	$hash = $CAPCLASS->get_hash();
@@ -254,6 +258,7 @@ else {
 <div class="tooltip" id="id57"><?php echo $_language->module['tooltip_57']; ?></div>
 <div class="tooltip" id="id58"><?php echo $_language->module['tooltip_58']; ?></div>
 <div class="tooltip" id="id59"><?php echo $_language->module['tooltip_59']; ?></div>
+<div class="tooltip" id="id60"><?php echo $_language->module['tooltip_60']; ?></div>
 <table width="100%" border="0" cellspacing="1" cellpadding="3">
   <tr>
     <td width="15%"><b><?php echo $_language->module['page_title']; ?></b></td>
@@ -460,6 +465,10 @@ else {
     <tr>
 	    <td align="right"><input type="text" name="guestbook" value="<?php echo $ds['guestbook']; ?>" size="3" onmouseover="showWMTT('id25')" onmouseout="hideWMTT()" /></td>
 	    <td><?php echo $_language->module['guestbook']; ?></td>
+	  </tr>
+    <tr>
+	    <td align="right"><select name="user_guestbook" onmouseover="showWMTT('id60')" onmouseout="hideWMTT()"><?php echo $user_gbook; ?></select></td>
+	    <td><?php echo $_language->module['user_guestbook']; ?></td>
 	  </tr>
     <tr>
 	    <td align="right"><input type="text" name="feedback" value="<?php echo $ds['feedback']; ?>" size="3" onmouseover="showWMTT('id26')" onmouseout="hideWMTT()" /></td>
