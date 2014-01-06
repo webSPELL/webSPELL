@@ -36,6 +36,33 @@ if(isset($id) and getnickname($id) != '') {
 	
 	if(isbanned($id)) $banned = '<br /><center><font style="color:red;font-weight:bold;font-size:11px;letter-spacing:1px;">'.$_language->module['is_banned'].'</font></center>';
 	else $banned = '';
+	
+	if($user_guestbook==1) {
+		if(getuserguestbookstatus($id)==1) {
+			$title_user_guestbook = '<td class="title" bgcolor="'.BGHEAD.'" width="20%">&nbsp; <a class="titlelink" href="index.php?site=profile&amp;id='.$id.'&amp;action=guestbook">'.$_language->module['guestbook'].'</a></td>';
+			$title_width_main = 14;
+			$title_width_galleries = 18;
+			$title_width_buddys = 18;
+			$title_width_lastposts = 30;
+			$title_colspan = 5;
+		}
+		else {
+			$title_user_guestbook = '';
+			$title_width_main = 19;
+			$title_width_galleries = 23;
+			$title_width_buddys = 23;
+			$title_width_lastposts = 35;
+			$title_colspan = 5;
+		}
+	}
+	else {
+		$title_user_guestbook = '';
+		$title_width_main = 19;
+		$title_width_galleries = 23;
+		$title_width_buddys = 23;
+		$title_width_lastposts = 35;
+		$title_colspan = 5;	
+	}
 
 	//profil: buddys
 	if($action == "buddys") {
@@ -240,170 +267,177 @@ if(isset($id) and getnickname($id) != '') {
 
 	}
 	elseif($action == "guestbook") {
-
-		//user guestbook
-
-		if(isset($_POST['save'])) {
-
-			$date = time();
-			$ip = $GLOBALS['ip'];
-			$run = 0;
-
-			if($userID) {
-				$name = getnickname($userID);
-				if(getemailhide($userID)) $email='';
-        else $email = getemail($userID);
-				$url = gethomepage($userID);
-				$icq = geticq($userID);
-				$run = 1;
+		if($user_guestbook==1) {
+			if(getuserguestbookstatus($id)==1) { 
+				//user guestbook
+				if(isset($_POST['save'])) {
+		
+					$date = time();
+					$ip = $GLOBALS['ip'];
+					$run = 0;
+		
+					if($userID) {
+						$name = getnickname($userID);
+						if(getemailhide($userID)) $email='';
+						else $email = getemail($userID);
+						$url = gethomepage($userID);
+						$icq = geticq($userID);
+						$run = 1;
+					}
+					else {
+						$name = $_POST['gbname'];
+						$email = $_POST['gbemail'];
+						$url = $_POST['gburl'];
+						$icq = $_POST['icq'];
+						$CAPCLASS = new Captcha;
+						if($CAPCLASS->check_captcha($_POST['captcha'], $_POST['captcha_hash'])) $run = 1;
+					}
+		
+					if($run) {
+		
+						safe_query("INSERT INTO ".PREFIX."user_gbook (userID, date, name, email, hp, icq, ip, comment)
+										values('".$id."', '".$date."', '".$_POST['gbname']."', '".$_POST['gbemail']."', '".$_POST['gburl']."', '".$_POST['icq']."', '".$ip."', '".$_POST['message']."')");
+		
+						if($id != $userID) sendmessage($id, $_language->module['new_guestbook_entry'], str_replace('%guestbook_id%', $id, $_language->module['new_guestbook_entry_msg']));
+					}
+					redirect('index.php?site=profile&amp;id='.$id.'&amp;action=guestbook','',0);
+				}
+				elseif(isset($_GET['delete'])) {
+					if(!isanyadmin($userID) and $id != $userID) die($_language->module['no_access']);
+		
+					foreach($_POST['gbID'] as $gbook_id) {
+						safe_query("DELETE FROM ".PREFIX."user_gbook WHERE gbID='$gbook_id'");
+					}
+					redirect('index.php?site=profile&amp;id='.$id.'&amp;action=guestbook','',0);
+				}
+				else {
+					eval("\$title_profile = \"".gettemplate("title_profile")."\";");
+					echo $title_profile;
+		
+					$bg1 = BG_1;
+					$bg2 = BG_2;
+		
+					$gesamt = mysqli_num_rows(safe_query("SELECT gbID FROM ".PREFIX."user_gbook WHERE userID='".$id."'"));
+		
+					if(isset($_GET['page'])) $page = (int)$_GET['page'];
+					$type="DESC";
+					if(isset($_GET['type'])){
+					  if(($_GET['type']=='ASC') || ($_GET['type']=='DESC')) $type=$_GET['type'];
+					}
+		
+					$pages = 1;
+					if(!isset($page)) $page = 1;
+					if(!isset($type)) $type = "DESC";
+		
+					$max = $maxguestbook;
+					$pages = ceil($gesamt/$max);
+		
+					if($pages > 1) $page_link = makepagelink("index.php?site=profile&amp;id=".$id."&amp;action=guestbook&amp;type=".$type, $page, $pages);
+					else $page_link='';
+		
+					if($page == "1") {
+						$ergebnis = safe_query("SELECT * FROM ".PREFIX."user_gbook WHERE userID='".$id."' ORDER BY date ".$type." LIMIT 0, ".$max);
+						if($type == "DESC") $n = $gesamt;
+						else $n = 1;
+					}
+					else {
+						$start = $page * $max - $max;
+						$ergebnis = safe_query("SELECT * FROM ".PREFIX."user_gbook WHERE userID='".$id."' ORDER BY date ".$type." LIMIT ".$start.", ".$max);
+						if($type == "DESC") $n = $gesamt - ($page - 1) * $max;
+						else $n = ($page - 1) * $max + 1;
+					}
+		
+					if($type=="ASC")
+					$sorter='<a href="index.php?site=profile&amp;id='.$id.'&amp;action=guestbook&amp;page='.$page.'&amp;type=DESC">'.$_language->module['sort'].':</a> <img src="images/icons/asc.gif" width="9" height="7" border="0" alt="" />&nbsp;&nbsp;&nbsp;';
+					else
+					$sorter='<a href="index.php?site=profile&amp;id='.$id.'&amp;action=guestbook&amp;page='.$page.'&amp;type=ASC">'.$_language->module['sort'].':</a> <img src="images/icons/desc.gif" width="9" height="7" border="0" alt="" />&nbsp;&nbsp;&nbsp;';
+		
+					echo'<br /><table width="100%" cellspacing="0" cellpadding="2">
+					  <tr>
+						<td>'.$sorter.' '.$page_link.'</td>
+						<td align="right"><input type="button" onclick="MM_goToURL(\'parent\',\'#addcomment\');return document.MM_returnValue" value="'.$_language->module['new_entry'].'" /></td>
+					  </tr>
+					</table>';
+		
+					echo '<form method="post" name="form" action="index.php?site=profile&amp;id='.$id.'&amp;action=guestbook&amp;delete=true">';
+					while ($ds = mysqli_fetch_array($ergebnis)) {
+						$n % 2 ? $bg1 = BG_1 : $bg1 = BG_2;
+						$date = getformatdatetime($ds['date']);
+		
+						if(validate_email($ds['email'])) $email = '<a href="mailto:'.mail_protect($ds['email']).'"><img src="images/icons/email.gif" border="0" alt="'.$_language->module['email'].'" /></a>';
+						else $email = '';
+		
+						if(validate_url($ds['hp'])) $hp = '<a href="'.$ds['hp'].'" target="_blank"><img src="images/icons/hp.gif" border="0" alt="'.$_language->module['homepage'].'" /></a>';
+						else $hp = '';
+		
+						$sem = '/[0-9]{6,11}/si';
+						$icq_number = str_replace('-', '', $ds['icq']);
+						if(preg_match($sem, $icq_number)) $icq = '<a href="http://www.icq.com/people/about_me.php?uin='.$icq_number.'" target="_blank"><img src="http://online.mirabilis.com/scripts/online.dll?icq='.$icq_number.'&amp;img=5" border="0" alt="icq" /></a>';
+						else $icq = "";
+		
+						$name = strip_tags($ds['name']);
+						$message = cleartext($ds['comment']);
+						$quotemessage = strip_tags($ds['comment']);
+						$quotemessage = str_replace("'", "`", $quotemessage);
+		
+						$actions = '';
+						$ip = $_language->module['logged'];
+						$quote = '<a href="javascript:AddCode(\'[quote='.$name.']'.$quotemessage.'[/quote]\')"><img src="images/icons/quote.gif" border="0" alt="'.$_language->module['quote'].'" /></a>';
+						if(isfeedbackadmin($userID) OR $id == $userID) {
+							$actions = '<input class="input" type="checkbox" name="gbID[]" value="'.$ds['gbID'].'" />';
+							if(isfeedbackadmin($userID)) $ip = $ds['ip'];
+						}
+		
+						eval("\$profile_guestbook = \"".gettemplate("profile_guestbook")."\";");
+						echo $profile_guestbook;
+		
+						if($type == "DESC") $n--;
+						else $n++;
+					}
+		
+					if(isfeedbackadmin($userID) || $userID == $id) $submit='<input class="input" type="checkbox" name="ALL" value="ALL" onclick="SelectAll(this.form);" /> '.$_language->module['select_all'].'
+													  <input type="submit" value="'.$_language->module['delete_selected'].'" />';
+													  else $submit='';
+					echo'<table width="100%" border="0" cellspacing="0" cellpadding="0">
+					<tr>
+					<td>'.$page_link.'</td>
+					<td align="right">'.$submit.'</td>
+					</tr>
+					</table></form>';
+		
+					echo'<a name="addcomment"></a>';
+					if($loggedin) {
+						$name = getnickname($userID);
+						if(getemailhide($userID)) $email='';
+						else $email = getemail($userID);
+						$url = gethomepage($userID);
+						$icq = geticq($userID);
+						$_language->read_module('bbcode', true);
+		
+						eval ("\$addbbcode = \"".gettemplate("addbbcode")."\";");
+						eval("\$profile_guestbook_loggedin = \"".gettemplate("profile_guestbook_loggedin")."\";");
+						echo $profile_guestbook_loggedin;
+					}
+					else {
+						$CAPCLASS = new Captcha;
+						$captcha = $CAPCLASS->create_captcha();
+						$hash = $CAPCLASS->get_hash();
+						$CAPCLASS->clear_oldcaptcha();
+						$_language->read_module('bbcode', true);
+		
+						eval ("\$addbbcode = \"".gettemplate("addbbcode")."\";");
+						eval("\$profile_guestbook_notloggedin = \"".gettemplate("profile_guestbook_notloggedin")."\";");
+						echo $profile_guestbook_notloggedin;
+					}
+				}
 			}
 			else {
-				$name = $_POST['gbname'];
-				$email = $_POST['gbemail'];
-				$url = $_POST['gburl'];
-				$icq = $_POST['icq'];
-				$CAPCLASS = new Captcha;
-				if($CAPCLASS->check_captcha($_POST['captcha'], $_POST['captcha_hash'])) $run = 1;
+				redirect('index.php?site=404','',0);
 			}
-
-			if($run) {
-
-				safe_query("INSERT INTO ".PREFIX."user_gbook (userID, date, name, email, hp, icq, ip, comment)
-								values('".$id."', '".$date."', '".$_POST['gbname']."', '".$_POST['gbemail']."', '".$_POST['gburl']."', '".$_POST['icq']."', '".$ip."', '".$_POST['message']."')");
-
-				if($id != $userID) sendmessage($id, $_language->module['new_guestbook_entry'], str_replace('%guestbook_id%', $id, $_language->module['new_guestbook_entry_msg']));
-			}
-			redirect('index.php?site=profile&amp;id='.$id.'&amp;action=guestbook','',0);
-		}
-		elseif(isset($_GET['delete'])) {
-			if(!isanyadmin($userID) and $id != $userID) die($_language->module['no_access']);
-
-			foreach($_POST['gbID'] as $gbook_id) {
-				safe_query("DELETE FROM ".PREFIX."user_gbook WHERE gbID='$gbook_id'");
-			}
-			redirect('index.php?site=profile&amp;id='.$id.'&amp;action=guestbook','',0);
 		}
 		else {
-			eval("\$title_profile = \"".gettemplate("title_profile")."\";");
-			echo $title_profile;
-
-			$bg1 = BG_1;
-			$bg2 = BG_2;
-
-			$gesamt = mysqli_num_rows(safe_query("SELECT gbID FROM ".PREFIX."user_gbook WHERE userID='".$id."'"));
-
-			if(isset($_GET['page'])) $page = (int)$_GET['page'];
-			$type="DESC";
-			if(isset($_GET['type'])){
-			  if(($_GET['type']=='ASC') || ($_GET['type']=='DESC')) $type=$_GET['type'];
-			}
-
-			$pages = 1;
-			if(!isset($page)) $page = 1;
-			if(!isset($type)) $type = "DESC";
-
-			$max = $maxguestbook;
-			$pages = ceil($gesamt/$max);
-
-			if($pages > 1) $page_link = makepagelink("index.php?site=profile&amp;id=".$id."&amp;action=guestbook&amp;type=".$type, $page, $pages);
-			else $page_link='';
-
-			if($page == "1") {
-				$ergebnis = safe_query("SELECT * FROM ".PREFIX."user_gbook WHERE userID='".$id."' ORDER BY date ".$type." LIMIT 0, ".$max);
-				if($type == "DESC") $n = $gesamt;
-				else $n = 1;
-			}
-			else {
-				$start = $page * $max - $max;
-				$ergebnis = safe_query("SELECT * FROM ".PREFIX."user_gbook WHERE userID='".$id."' ORDER BY date ".$type." LIMIT ".$start.", ".$max);
-				if($type == "DESC") $n = $gesamt - ($page - 1) * $max;
-				else $n = ($page - 1) * $max + 1;
-			}
-
-			if($type=="ASC")
-			$sorter='<a href="index.php?site=profile&amp;id='.$id.'&amp;action=guestbook&amp;page='.$page.'&amp;type=DESC">'.$_language->module['sort'].':</a> <img src="images/icons/asc.gif" width="9" height="7" border="0" alt="" />&nbsp;&nbsp;&nbsp;';
-			else
-			$sorter='<a href="index.php?site=profile&amp;id='.$id.'&amp;action=guestbook&amp;page='.$page.'&amp;type=ASC">'.$_language->module['sort'].':</a> <img src="images/icons/desc.gif" width="9" height="7" border="0" alt="" />&nbsp;&nbsp;&nbsp;';
-
-			echo'<br /><table width="100%" cellspacing="0" cellpadding="2">
-			  <tr>
-			    <td>'.$sorter.' '.$page_link.'</td>
-			    <td align="right"><input type="button" onclick="MM_goToURL(\'parent\',\'#addcomment\');return document.MM_returnValue" value="'.$_language->module['new_entry'].'" /></td>
-			  </tr>
-			</table>';
-
-			echo '<form method="post" name="form" action="index.php?site=profile&amp;id='.$id.'&amp;action=guestbook&amp;delete=true">';
-			while ($ds = mysqli_fetch_array($ergebnis)) {
-				$n % 2 ? $bg1 = BG_1 : $bg1 = BG_2;
-				$date = getformatdatetime($ds['date']);
-
-				if(validate_email($ds['email'])) $email = '<a href="mailto:'.mail_protect($ds['email']).'"><img src="images/icons/email.gif" border="0" alt="'.$_language->module['email'].'" /></a>';
-				else $email = '';
-
-				if(validate_url($ds['hp'])) $hp = '<a href="'.$ds['hp'].'" target="_blank"><img src="images/icons/hp.gif" border="0" alt="'.$_language->module['homepage'].'" /></a>';
-				else $hp = '';
-
-				$sem = '/[0-9]{6,11}/si';
-				$icq_number = str_replace('-', '', $ds['icq']);
-				if(preg_match($sem, $icq_number)) $icq = '<a href="http://www.icq.com/people/about_me.php?uin='.$icq_number.'" target="_blank"><img src="http://online.mirabilis.com/scripts/online.dll?icq='.$icq_number.'&amp;img=5" border="0" alt="icq" /></a>';
-				else $icq = "";
-
-				$name = strip_tags($ds['name']);
-				$message = cleartext($ds['comment']);
-				$quotemessage = strip_tags($ds['comment']);
-				$quotemessage = str_replace("'", "`", $quotemessage);
-
-				$actions = '';
-				$ip = $_language->module['logged'];
-				$quote = '<a href="javascript:AddCode(\'[quote='.$name.']'.$quotemessage.'[/quote]\')"><img src="images/icons/quote.gif" border="0" alt="'.$_language->module['quote'].'" /></a>';
-				if(isfeedbackadmin($userID) OR $id == $userID) {
-					$actions = '<input class="input" type="checkbox" name="gbID[]" value="'.$ds['gbID'].'" />';
-					if(isfeedbackadmin($userID)) $ip = $ds['ip'];
-				}
-
-				eval("\$profile_guestbook = \"".gettemplate("profile_guestbook")."\";");
-				echo $profile_guestbook;
-
-				if($type == "DESC") $n--;
-				else $n++;
-			}
-
-			if(isfeedbackadmin($userID) || $userID == $id) $submit='<input class="input" type="checkbox" name="ALL" value="ALL" onclick="SelectAll(this.form);" /> '.$_language->module['select_all'].'
-											  <input type="submit" value="'.$_language->module['delete_selected'].'" />';
-											  else $submit='';
-			echo'<table width="100%" border="0" cellspacing="0" cellpadding="0">
-			<tr>
-	  		<td>'.$page_link.'</td>
-	   		<td align="right">'.$submit.'</td>
-			</tr>
-			</table></form>';
-
-			echo'<a name="addcomment"></a>';
-			if($loggedin) {
-				$name = getnickname($userID);
-				if(getemailhide($userID)) $email='';
-        else $email = getemail($userID);
-				$url = gethomepage($userID);
-				$icq = geticq($userID);
-				$_language->read_module('bbcode', true);
-
-				eval ("\$addbbcode = \"".gettemplate("addbbcode")."\";");
-				eval("\$profile_guestbook_loggedin = \"".gettemplate("profile_guestbook_loggedin")."\";");
-				echo $profile_guestbook_loggedin;
-			}
-			else {
-				$CAPCLASS = new Captcha;
-				$captcha = $CAPCLASS->create_captcha();
-				$hash = $CAPCLASS->get_hash();
-				$CAPCLASS->clear_oldcaptcha();
-				$_language->read_module('bbcode', true);
-
-				eval ("\$addbbcode = \"".gettemplate("addbbcode")."\";");
-				eval("\$profile_guestbook_notloggedin = \"".gettemplate("profile_guestbook_notloggedin")."\";");
-				echo $profile_guestbook_notloggedin;
-			}
+			redirect('index.php?site=404','',0);
 		}
-
 	}
 	else {
 

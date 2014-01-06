@@ -2,12 +2,12 @@
 <br />
 <table width="100%" cellpadding="2" cellspacing="0" bgcolor="$border">
   <tr style="line-height:30px;">
-    <td class="title" bgcolor="$bghead" width="14%">&nbsp; <a class="titlelink" href="index.php?site=profile&amp;id=$id">%profile%</a></td>
-    <td class="title" bgcolor="$bghead" width="18%">&nbsp; <a class="titlelink" href="index.php?site=profile&amp;id=$id&amp;action=galleries">%galleries%</a></td>
-    <td class="title" bgcolor="$bghead" width="18%">&nbsp; <a class="titlelink" href="index.php?site=profile&amp;id=$id&amp;action=buddys">%buddys%</a></td>
-    <td class="title" bgcolor="$bghead" width="30%">&nbsp; <a class="titlelink" href="index.php?site=profile&amp;id=$id&amp;action=lastposts">%last% $profilelast %posts%</a></td>
-    <td class="title" bgcolor="$bghead" width="20%">&nbsp; <a class="titlelink" href="index.php?site=profile&amp;id=$id&amp;action=guestbook">%guestbook%</a></td>
+    <td class="title" bgcolor="$bghead" width="{$title_width_main}%">&nbsp; <a class="titlelink" href="index.php?site=profile&amp;id=$id">%profile%</a></td>
+    <td class="title" bgcolor="$bghead" width="{$title_width_galleries}%">&nbsp; <a class="titlelink" href="index.php?site=profile&amp;id=$id&amp;action=galleries">%galleries%</a></td>
+    <td class="title" bgcolor="$bghead" width="{$title_width_buddys}%">&nbsp; <a class="titlelink" href="index.php?site=profile&amp;id=$id&amp;action=buddys">%buddys%</a></td>
+    <td class="title" bgcolor="$bghead" width="{$title_width_lastposts}%">&nbsp; <a class="titlelink" href="index.php?site=profile&amp;id=$id&amp;action=lastposts">%last% $profilelast %posts%</a></td>
+    $title_user_guestbook
   </tr>
-  <tr><td bgcolor="$pagebg" colspan="5"></td></tr>
+  <tr><td bgcolor="$pagebg" colspan="$title_colspan"></td></tr>
 </table>
 $banned
