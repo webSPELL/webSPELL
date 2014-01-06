@@ -152,6 +152,11 @@ function wantmail($userID) {
 	return $anz;
 }
 
+function getuserguestbookstatus($userID) {
+	$ds=mysqli_fetch_array(safe_query("SELECT user_guestbook FROM ".PREFIX."user WHERE userID='".$userID."'"));
+	return getinput($ds['user_guestbook']);	
+}
+
 function isbuddy($userID, $buddy) {
 	$anz=mysqli_num_rows(safe_query("SELECT userID FROM ".PREFIX."buddys WHERE buddy='".$buddy."' AND userID='".$userID."'"));
 	if($anz) {
