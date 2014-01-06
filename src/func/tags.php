@@ -39,7 +39,9 @@ class Tags{
                                 $values[] = '("'.$tag.'","'.$relType.'","'.$relID.'")';
                         }
                 }
-                safe_query("INSERT INTO ".PREFIX."tags (tag, rel, ID) VALUES ".implode(",",$values));
+                if(count($values)){
+                        safe_query("INSERT INTO ".PREFIX."tags (tag, rel, ID) VALUES ".implode(",",$values));
+                }
         }
         static function getTags($relType, $relID, $array = false){
                 $tags = array();
