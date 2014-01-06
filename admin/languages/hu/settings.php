@@ -30,6 +30,7 @@ $language_array = Array(
 /* do not edit above this line */
 
   'access_denied'=>'Hozzáférés megtagadva',
+  'activated'=>'aktív',
   'additional_options'=>'További beállítások',
   'admin_email'=>'Admin E-mail',
   'admin_name'=>'Admin neve',
@@ -59,6 +60,7 @@ $language_array = Array(
   'clanwars'=>'Warok',
   'comments'=>'Hozzászólások',
   'content_size'=>'Tartalom mérete',
+  'deactivated'=>'kikapcsolva',
   'default_language'=>'Alapértelmezett nyelv',
   'demos'=>'Demók',
   'detect_visitor_language'=>'Detect látogató nyelv?',
@@ -163,8 +165,10 @@ $language_array = Array(
   'tooltip_57'=>'Blokk Hozzászólások ha hiba történt',
   'tooltip_58'=>'Kimeneti formátum A dátum',
   'tooltip_59'=>'Kimeneti formátum idő',
+  'tooltip_60'=>'Engedélyezze a felhasználói vendégkönyvek az oldalon?',
   'transaction_invalid'=>'A művelet azonosítója érvénytelen',
   'upcoming_actions'=>'Közeledő események',
-  'update'=>'Frissítés'
+  'update'=>'Frissítés',
+  'user_guestbook'=>'Felhasználói vendégkönyvek'
 );
 ?>

@@ -30,6 +30,7 @@ $language_array = Array(
 /* do not edit above this line */
 
   'access_denied'=>'Zugriff verweigert',
+  'activated'=>'aktiviert',
   'additional_options'=>'Zusätzliche Optionen',
   'admin_email'=>'Admin E-Mail',
   'admin_name'=>'Admin Name',
@@ -59,6 +60,7 @@ $language_array = Array(
   'clanwars'=>'Clanwars',
   'comments'=>'Kommentare',
   'content_size'=>'Inhaltsgröße',
+  'deactivated'=>'deaktiviert',
   'default_language'=>'Standardsprache',
   'demos'=>'Demos',
   'detect_visitor_language'=>'Besuchersprache erkennen?',
@@ -163,8 +165,10 @@ $language_array = Array(
   'tooltip_57'=>'Sollen die Beiträge bei einem Fehler blockiert werden?',
   'tooltip_58'=>'Ausgabeformat des Datums',
   'tooltip_59'=>'Ausgabeformat der Zeit',
+  'tooltip_60'=>'Benutzer Gästebücher auf der Seite aktivieren?',
   'transaction_invalid'=>'Transaktions ID ungültig',
   'upcoming_actions'=>'Kommende Aktionen',
-  'update'=>'aktualisieren'
+  'update'=>'aktualisieren',
+  'user_guestbook'=>'Benutzer Gästebucher'
 );
 ?>
