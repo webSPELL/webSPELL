@@ -36,6 +36,7 @@ $language_array = Array(
 /* do not edit above this line */
 
   'about_myself'=>'Minusta itsestä:',
+  'activated'=>'aktivoitu',
   'avatar'=>'Avatar:',
   'back'=>'takaisin',
   'bbcode'=>'<a href="javascript:MM_openBrWindow(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> PÄÄLLÄ',
@@ -51,6 +52,7 @@ $language_array = Array(
   'country'=>'Maa',
   'cpu'=>'CPU',
   'date_of_birth'=>'Syntymäaika',
+  'deactivated'=>'deaktivoitu',
   'delete_max_230_210'=>'Poista (max230/210)',
   'delete_max_90_90'=>'Poista (max90/90)',
   'e-mail'=>'E-mail',
@@ -66,6 +68,7 @@ $language_array = Array(
   'format_date'=>'päivämäärän muoto',
   'format_time'=>'ajan muoto',
   'graphiccard'=>'Grafiikkakortti',
+  'guestbook'=>'Vieraskirja',
   'hide_e-mail'=>'Piilota sähköposti?',
   'homepage'=>'Kotisivu',
   'html'=>'HTML PAIS',

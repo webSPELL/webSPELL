@@ -31,6 +31,7 @@ $language_array = Array(
 /* do not edit above this line */
 
   'about_myself'=>'ჩემს შესახებ',
+  'activated'=>'გააქტიურებული',
   'avatar'=>'ფოტო:',
   'back'=>'უკან',
   'bbcode'=>'<a href="javascript:MM_openBrWindow(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBკოდი</a> ჩართულია',
@@ -46,6 +47,7 @@ $language_array = Array(
   'country'=>'აქვეყანა',
   'cpu'=>'CPU',
   'date_of_birth'=>'დაბადების თარიღი',
+  'deactivated'=>'გათიშვამდე',
   'delete_max_230_210'=>'წაშლა (max230/210)',
   'delete_max_90_90'=>'წაშლა (max90/90)',
   'e-mail'=>'E-mail',
@@ -61,6 +63,7 @@ $language_array = Array(
   'format_date'=>'თარიღის ფორმატი',
   'format_time'=>'დროის ფორმატი',
   'graphiccard'=>'Graphics card',
+  'guestbook'=>'სტუმრის წიგნაკი',
   'hide_e-mail'=>'დავფარო E-mail?',
   'homepage'=>'მთავარი გვერდი',
   'html'=>'HTML გამორთულია',

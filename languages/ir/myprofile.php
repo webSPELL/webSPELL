@@ -30,6 +30,7 @@ $language_array = Array(
 /* do not edit above this line */
 
   'about_myself'=>'در مورد من',
+  'activated'=>'فعال',
   'avatar'=>'اواتار:',
   'back'=>'برگشت',
   'bbcode'=>'<a href="javascript:MM_openBrWindow(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> روشن',
@@ -45,6 +46,7 @@ $language_array = Array(
   'country'=>'کشور',
   'cpu'=>'CPU',
   'date_of_birth'=>'تاریخ تولد',
+  'deactivated'=>'غیر فعال',
   'delete_max_230_210'=>'حذف (max230/210)',
   'delete_max_90_90'=>'حذف (max90/90)',
   'e-mail'=>'ایمیل',
@@ -60,6 +62,7 @@ $language_array = Array(
   'format_date'=>'',
   'format_time'=>'',
   'graphiccard'=>'Graphics card',
+  'guestbook'=>'مهمان',
   'hide_e-mail'=>'ایا میخواهی ایمیل را مخفی کنید؟',
   'homepage'=>'صفحه نخست',
   'html'=>'HTML خاموش است',

@@ -30,6 +30,7 @@ $language_array = Array(
 /* do not edit above this line */
 
 	'about_myself'=>'Su me',
+	'activated'=>'attivato',
 	'avatar'=>'Avatar:',
 	'back'=>'indietro',
 	'bbcode'=>'<a href="javascript:MM_openBrWindow(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> è ATTIVATO',
@@ -45,6 +46,7 @@ $language_array = Array(
 	'country'=>'Paese',
 	'cpu'=>'Processore',
 	'date_of_birth'=>'Data di nascita',
+	'deactivated'=>'disattivato',
 	'delete_max_230_210'=>'cancellare (max 230/210)',
 	'delete_max_90_90'=>'cancellare (max 90/90)',
 	'e-mail'=>'E-Mail',
@@ -60,6 +62,7 @@ $language_array = Array(
 	'format_date'=>'Formato data',
 	'format_time'=>'Formato ora',
 	'graphiccard'=>'Carta grafica',
+	'guestbook'=>'Libro degli ospiti',
 	'hide_e-mail'=>'E-mail nascondere?',
 	'homepage'=>'Sito web',
 	'html'=>'HTML è ACCESO',

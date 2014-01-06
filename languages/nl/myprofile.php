@@ -30,6 +30,7 @@ $language_array = Array(
 /* do not edit above this line */
 
 	'about_myself'=>'Over mezelf',
+	'activated'=>'geactiveerd',
 	'avatar'=>'Avatar:',
 	'back'=>'terug',
 	'bbcode'=>'<a href="javascript:MM_openBrWindow(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> is AAN',
@@ -45,6 +46,7 @@ $language_array = Array(
 	'country'=>'Land',
 	'cpu'=>'CPU',
 	'date_of_birth'=>'Geboortedatum',
+	'deactivated'=>'gedeactiveerd',
 	'delete_max_230_210'=>'verwijder (max230/210)',
 	'delete_max_90_90'=>'verwijder (max90/90)',
 	'e-mail'=>'E-mail',
@@ -60,6 +62,7 @@ $language_array = Array(
   	'format_date'=>'Datum formaat',
   	'format_time'=>'Tijd formaat',
 	'graphiccard'=>'Grafische kaart',
+	'guestbook'=>'Gastenboek',
 	'hide_e-mail'=>'Verstop E-mail?',
 	'homepage'=>'Homepage',
 	'html'=>'HTML is UIT',

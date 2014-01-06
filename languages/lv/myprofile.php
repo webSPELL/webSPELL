@@ -31,6 +31,7 @@ $language_array = Array(
 /* do not edit above this line */
 
   'about_myself'=>'Par sevi',
+  'activated'=>'aktivizēta',
   'avatar'=>'Ikona:',
   'back'=>'atpakaļ',
   'bbcode'=>'<a href="javascript:MM_openBrWindow(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBKods</a> Ieslēgts',
@@ -46,6 +47,7 @@ $language_array = Array(
   'country'=>'Valsts',
   'cpu'=>'CPU',
   'date_of_birth'=>'Dzimšanas datums',
+  'deactivated'=>'deaktivizēts',
   'delete_max_230_210'=>'izdzēst (maks.230/210)',
   'delete_max_90_90'=>'izdzēst (maks.90/90)',
   'e-mail'=>'E-pasts',
@@ -61,6 +63,7 @@ $language_array = Array(
   'format_date'=>'Datuma formāts',
   'format_time'=>'Laika formāts',
   'graphiccard'=>'Video karte',
+  'guestbook'=>'Viesu grāmata',
   'hide_e-mail'=>'Paslēpt e-pastu?',
   'homepage'=>'Mājaslapa',
   'html'=>'HTML atslēgts',
