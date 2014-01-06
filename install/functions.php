@@ -2054,6 +2054,7 @@ function update40200_40300() {
   mysqli_query($_database, "ALTER TABLE `".PREFIX."settings` ADD `spamapihost` varchar(255) NOT NULL default ''");
   mysqli_query($_database, "ALTER TABLE `".PREFIX."settings` ADD `spammaxposts` int(11) NOT NULL default '0'");
   mysqli_query($_database, "ALTER TABLE `".PREFIX."settings` ADD `spamapiblockerror` int(1) NOT NULL default '0'");
+  mysqli_query($_database, "ALTER TABLE `".PREFIX."settings` ADD `default_page` varchar(255) NOT NULL default 'news'");
   mysqli_query($_database, "ALTER TABLE `".PREFIX."settings` ADD `date_format` varchar(255) NOT NULL default 'd.m.Y'");
   mysqli_query($_database, "ALTER TABLE `".PREFIX."settings` ADD `time_format` varchar(255) NOT NULL default 'H:i'");
   

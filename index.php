@@ -32,6 +32,23 @@ include("_functions.php");
 
 $_language->read_module('index');
 $index_language = $_language->module;
+
+if(isset($site) && !empty($site)) {
+    $invalide = array('\\','/','//',':','.');
+    $site = str_replace($invalide,' ',$site);
+
+    if(!file_exists($site.'.php')) {
+        header('HTTP/1.0 404 Not Found');
+        $site = '404';
+    }
+    else {
+        header('HTTP/1.0 200 OK');
+    }
+}
+else {
+    header('Location: index.php?site=' . $default_page);
+}
+
 // end important data include
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -172,13 +189,9 @@ hr.grey { margin: 3px 0 3px 0;}
 					<!-- content include -->
 					<b><?php echo $myclanname.".".$index_language['content']; ?></b><br />
 					<!-- php site include -->
-					<?php
-					if(!isset($site)) $site="news";
-					$invalide = array('\\','/','/\/',':','.');
-					$site = str_replace($invalide,' ',$site);
-					if(!file_exists($site.".php")) $site = "news";
-					include($site.".php");
-					?>
+                    <?php
+                    include $site . '.php';
+				    ?>
 					<!-- content include -->
 				</div>
 			</div>
