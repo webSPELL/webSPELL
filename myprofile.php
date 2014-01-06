@@ -77,7 +77,7 @@ else {
 		$language = $_POST['language'];
 		$date_format = $_POST['date_format'];
 		$time_format = $_POST['time_format'];
-		$user_gbook = $_POST['user_gbook'];
+		$user_gbook = $_POST['user_guestbook'];
 		$id = $userID;
 		
 		$error_array = array();
