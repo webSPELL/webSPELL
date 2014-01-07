@@ -8,6 +8,7 @@ class ModRewrite {
 	public function __construct(){
 		$this->translation['integer'] = array('replace'=>'([0-9]+)','rebuild'=>'([0-9]+?)');
 		$this->translation['string'] = array('replace'=>'(\w*?)','rebuild'=>'(\w*?)');
+		$this->translation['everything'] = array('replace'=>'([^\'\\"]*?)','rebuild'=>'([^\'\\"]*?)');
 	}
 
 	public function getTypes(){
@@ -19,13 +20,27 @@ class ModRewrite {
 		ob_start(array($this,'rewriteBody'));
 
 		/*
-		header_register_callback only works after php 5.5.7 because of 
+		header_register_callback only works after php 5.5.7 and 5.4.23 because of 
 		https://bugs.php.net/bug.php?id=66375
 		fixed in
 		https://github.com/php/php-src/commit/3c3ff434329d2f505b00a79bacfdef95ca96f0d2
 		*/
 
-		if(function_exists("header_register_callback") && version_compare(PHP_VERSION, '5.5.7', '>')){
+		$fixedHeader = false;
+		if(PHP_MAJOR_VERSION == 5){
+			if(PHP_MINOR_VERSION == 4){
+				if(PHP_RELEASE_VERSION > 23){
+					$fixedHeader = true;
+				}
+			}
+			elseif(PHP_MINOR_VERSION == 5){
+				if(PHP_RELEASE_VERSION > 7){
+					$fixedHeader = true;
+				}
+			}
+		}
+
+		if($fixedHeader){
 			header_register_callback(array($this,'rewriteHeaders'));
 		}
 		else{
@@ -72,7 +87,7 @@ class ModRewrite {
 			$regex = $ds['replace_regex'];
 			$replace = $ds['replace_result'];
 			if($headers == true){
-				$content = preg_replace("/Location:".$regex."/si",'Location: '.$replace,$content);
+				$content = preg_replace("/()()Location:".$regex."/si",'Location: '.$replace,$content);
 			}
 			else{
 				$content = preg_replace("/(href|action)=(['\"])".$regex."[\"']/si",'$1=$2'.$replace.'$2',$content);
