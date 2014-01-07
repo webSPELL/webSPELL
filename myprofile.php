@@ -63,12 +63,14 @@ else {
 		$mainboard = $_POST['mainboard'];
 		$monitor = $_POST['monitor'];
 		$ram = $_POST['ram'];
+		$hdd = $_POST['hdd'];
 		$graphiccard = $_POST['graphiccard'];
 		$soundcard = $_POST['soundcard'];
 		$connection = $_POST['connection'];
 		$keyboard = $_POST['keyboard'];
 		$mouse = $_POST['mouse'];
 		$mousepad = $_POST['mousepad'];
+		$headset = $_POST['headset'];
 		$newsletter = $_POST['newsletter'];
 		$homepage = str_replace('http://', '', $_POST['homepage']);
 		$pm_mail = $_POST['pm_mail'];
@@ -236,6 +238,7 @@ else {
 							cpu='".$cpu."',
 							mainboard='".$mainboard."',
 							ram='".$ram."',
+							hdd='".$hdd."',
 							monitor='".$monitor."',
 							graphiccard='".$graphiccard."',
 							soundcard='".$soundcard."',
@@ -243,6 +246,7 @@ else {
 							keyboard='".$keyboard."',
 							mouse='".$mouse."',
 							mousepad='".$mousepad."',
+							headset='".$headset."',
 							mailonpm='".$pm_mail."',
 							newsletter='".$newsletter."',
 							homepage='".$homepage."',
@@ -433,6 +437,7 @@ else {
 			$cpu = clearfromtags($ds['cpu']);
 			$mainboard = clearfromtags($ds['mainboard']);
 			$ram = clearfromtags($ds['ram']);
+			$hdd = clearfromtags($ds['hdd']);
 			$monitor = clearfromtags($ds['monitor']);
 			$graphiccard = clearfromtags($ds['graphiccard']);
 			$soundcard = clearfromtags($ds['soundcard']);
@@ -440,6 +445,7 @@ else {
 			$keyboard = clearfromtags($ds['keyboard']);
 			$mouse = clearfromtags($ds['mouse']);
 			$mousepad = clearfromtags($ds['mousepad']);
+			$headset = clearfromtags($ds['headset']);
 			$clanhp = getinput($ds['clanhp']);
 			$about = getinput($ds['about']);
 			$nickname = $ds['nickname'];
