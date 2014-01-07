@@ -2112,5 +2112,143 @@ function update40200_40300() {
 ) AUTO_INCREMENT=1 ");
 
   mysqli_query($_database, "ALTER TABLE `".PREFIX."countries` ADD `fav` int(1) NOT NULL default '0'");
+  
+  //games
+  mysqli_query($_database, "ALTER TABLE `".PREFIX."clanwars` CHANGE `game` `game` varchar(255) NOT NULL default ''");
+  mysqli_query($_database, "ALTER TABLE `".PREFIX."servers` CHANGE `game` `game` varchar(255) NOT NULL default ''");
+  
+  mysqli_query($_database, "DROP TABLE IF EXISTS `".PREFIX."games_new`");
+  mysqli_query($_database, "CREATE TABLE `".PREFIX."games_new` (
+  `gameID` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) NOT NULL DEFAULT '',
+  `tag` varchar(255) NOT NULL DEFAULT '',
+  PRIMARY KEY (`gameID`)
+) AUTO_INCREMENT=1 ");
+
+  mysqli_query($_database, "INSERT IGNORE INTO `".PREFIX."games_new` ( `gameID` , `name`, `tag` ) VALUES ('1', 'Age of Empires 3', 'aoe3');");
+  mysqli_query($_database, "INSERT IGNORE INTO `".PREFIX."games_new` ( `gameID` , `name`, `tag` ) VALUES ('2', 'Americas Army', 'aa');");
+  mysqli_query($_database, "INSERT IGNORE INTO `".PREFIX."games_new` ( `gameID` , `name`, `tag` ) VALUES ('3', 'Arctic Combat', 'arcticcombat');");
+  mysqli_query($_database, "INSERT IGNORE INTO `".PREFIX."games_new` ( `gameID` , `name`, `tag` ) VALUES ('4', 'Alliance of Valiant Arms', 'ava');");
+  mysqli_query($_database, "INSERT IGNORE INTO `".PREFIX."games_new` ( `gameID` , `name`, `tag` ) VALUES ('5', 'Battlefield 1942', 'bf1942');");
+  mysqli_query($_database, "INSERT IGNORE INTO `".PREFIX."games_new` ( `gameID` , `name`, `tag` ) VALUES ('6', 'Battlefield 2', 'bf2');");
+  mysqli_query($_database, "INSERT IGNORE INTO `".PREFIX."games_new` ( `gameID` , `name`, `tag` ) VALUES ('7', 'Battlefield 2142', 'bf2142');");
+  mysqli_query($_database, "INSERT IGNORE INTO `".PREFIX."games_new` ( `gameID` , `name`, `tag` ) VALUES ('8', 'Battlefield 3', 'bf3');");
+  mysqli_query($_database, "INSERT IGNORE INTO `".PREFIX."games_new` ( `gameID` , `name`, `tag` ) VALUES ('9', 'Battlefield 4', 'bf4');");
+  mysqli_query($_database, "INSERT IGNORE INTO `".PREFIX."games_new` ( `gameID` , `name`, `tag` ) VALUES ('10', 'Battlefield Vietnam', 'bfvietnam');");
+  mysqli_query($_database, "INSERT IGNORE INTO `".PREFIX."games_new` ( `gameID` , `name`, `tag` ) VALUES ('11', 'Blub Game', 'blubgame');");
+  mysqli_query($_database, "INSERT IGNORE INTO `".PREFIX."games_new` ( `gameID` , `name`, `tag` ) VALUES ('12', 'Brick-Force', 'brick-force');");
+  mysqli_query($_database, "INSERT IGNORE INTO `".PREFIX."games_new` ( `gameID` , `name`, `tag` ) VALUES ('13', 'Call of Duty', 'cod');");
+  mysqli_query($_database, "INSERT IGNORE INTO `".PREFIX."games_new` ( `gameID` , `name`, `tag` ) VALUES ('14', 'Call of Duty 2', 'cod2');");
+  mysqli_query($_database, "INSERT IGNORE INTO `".PREFIX."games_new` ( `gameID` , `name`, `tag` ) VALUES ('15', 'Call of Duty 4: Modern Warfare', 'cod4');");
+  mysqli_query($_database, "INSERT IGNORE INTO `".PREFIX."games_new` ( `gameID` , `name`, `tag` ) VALUES ('16', 'Call of Duty: World at War', 'codww');");
+  mysqli_query($_database, "INSERT IGNORE INTO `".PREFIX."games_new` ( `gameID` , `name`, `tag` ) VALUES ('17', 'Call of Duty: Modern Warfare 2', 'mw2');");
+  mysqli_query($_database, "INSERT IGNORE INTO `".PREFIX."games_new` ( `gameID` , `name`, `tag` ) VALUES ('18', 'Call of Duty: Black Ops', 'codbo');");
+  mysqli_query($_database, "INSERT IGNORE INTO `".PREFIX."games_new` ( `gameID` , `name`, `tag` ) VALUES ('19', 'Call of Duty: Modern Warfare 3', 'mw3');");
+  mysqli_query($_database, "INSERT IGNORE INTO `".PREFIX."games_new` ( `gameID` , `name`, `tag` ) VALUES ('20', 'Call of Duty: Black Ops 2', 'codbo2');");
+  mysqli_query($_database, "INSERT IGNORE INTO `".PREFIX."games_new` ( `gameID` , `name`, `tag` ) VALUES ('21', 'Call of Duty: Ghosts', 'codghosts');");
+  mysqli_query($_database, "INSERT IGNORE INTO `".PREFIX."games_new` ( `gameID` , `name`, `tag` ) VALUES ('22', 'Call of Juarez', 'coj');");
+  mysqli_query($_database, "INSERT IGNORE INTO `".PREFIX."games_new` ( `gameID` , `name`, `tag` ) VALUES ('23', 'Call of Juarez: Bound in Blood', 'cojbib');");
+  mysqli_query($_database, "INSERT IGNORE INTO `".PREFIX."games_new` ( `gameID` , `name`, `tag` ) VALUES ('24', 'Carom 3D', 'carom3d');");
+  mysqli_query($_database, "INSERT IGNORE INTO `".PREFIX."games_new` ( `gameID` , `name`, `tag` ) VALUES ('25', 'Combat Arms', 'combatarms');");
+  mysqli_query($_database, "INSERT IGNORE INTO `".PREFIX."games_new` ( `gameID` , `name`, `tag` ) VALUES ('26', 'Command &amp; Conquer', 'cnc');");
+  mysqli_query($_database, "INSERT IGNORE INTO `".PREFIX."games_new` ( `gameID` , `name`, `tag` ) VALUES ('27', 'Company of Heroes', 'coh');");
+  mysqli_query($_database, "INSERT IGNORE INTO `".PREFIX."games_new` ( `gameID` , `name`, `tag` ) VALUES ('28', 'Company of Heroes 2', 'coh2');");
+  mysqli_query($_database, "INSERT IGNORE INTO `".PREFIX."games_new` ( `gameID` , `name`, `tag` ) VALUES ('29', 'Counter-Strike', 'cs');");
+  mysqli_query($_database, "INSERT IGNORE INTO `".PREFIX."games_new` ( `gameID` , `name`, `tag` ) VALUES ('30', 'Counter-Strike: Condition Zero', 'cscz');");
+  mysqli_query($_database, "INSERT IGNORE INTO `".PREFIX."games_new` ( `gameID` , `name`, `tag` ) VALUES ('31', 'Counter-Strike: Global Offensive', 'csgo');");
+  mysqli_query($_database, "INSERT IGNORE INTO `".PREFIX."games_new` ( `gameID` , `name`, `tag` ) VALUES ('32', 'Counter-Strike: Manager', 'csm');");
+  mysqli_query($_database, "INSERT IGNORE INTO `".PREFIX."games_new` ( `gameID` , `name`, `tag` ) VALUES ('33', 'Counter-Strike: Source', 'css');");
+  mysqli_query($_database, "INSERT IGNORE INTO `".PREFIX."games_new` ( `gameID` , `name`, `tag` ) VALUES ('34', 'Crossfire', 'crossfire');");
+  mysqli_query($_database, "INSERT IGNORE INTO `".PREFIX."games_new` ( `gameID` , `name`, `tag` ) VALUES ('35', 'Crysis', 'crysis');");
+  mysqli_query($_database, "INSERT IGNORE INTO `".PREFIX."games_new` ( `gameID` , `name`, `tag` ) VALUES ('36', 'Crysis Wars', 'crysiswars');");
+  mysqli_query($_database, "INSERT IGNORE INTO `".PREFIX."games_new` ( `gameID` , `name`, `tag` ) VALUES ('37', 'Curve Fever', 'curvefever');");
+  mysqli_query($_database, "INSERT IGNORE INTO `".PREFIX."games_new` ( `gameID` , `name`, `tag` ) VALUES ('38', 'Dawn of War', 'dow');");
+  mysqli_query($_database, "INSERT IGNORE INTO `".PREFIX."games_new` ( `gameID` , `name`, `tag` ) VALUES ('39', 'Dawngate', 'dawngate');");
+  mysqli_query($_database, "INSERT IGNORE INTO `".PREFIX."games_new` ( `gameID` , `name`, `tag` ) VALUES ('40', 'Day of Defeat', 'dod');");
+  mysqli_query($_database, "INSERT IGNORE INTO `".PREFIX."games_new` ( `gameID` , `name`, `tag` ) VALUES ('41', 'Day of Defeat: Source', 'dods');");
+  mysqli_query($_database, "INSERT IGNORE INTO `".PREFIX."games_new` ( `gameID` , `name`, `tag` ) VALUES ('42', 'DotA', 'dota');");
+  mysqli_query($_database, "INSERT IGNORE INTO `".PREFIX."games_new` ( `gameID` , `name`, `tag` ) VALUES ('43', 'DotA 2', 'dota2');");
+  mysqli_query($_database, "INSERT IGNORE INTO `".PREFIX."games_new` ( `gameID` , `name`, `tag` ) VALUES ('44', 'Enemy Territory', 'et');");
+  mysqli_query($_database, "INSERT IGNORE INTO `".PREFIX."games_new` ( `gameID` , `name`, `tag` ) VALUES ('45', 'Extraction', 'extraction');");
+  mysqli_query($_database, "INSERT IGNORE INTO `".PREFIX."games_new` ( `gameID` , `name`, `tag` ) VALUES ('46', 'FarCry', 'farcry');");
+  mysqli_query($_database, "INSERT IGNORE INTO `".PREFIX."games_new` ( `gameID` , `name`, `tag` ) VALUES ('47', 'F.E.A.R.', 'fear');");
+  mysqli_query($_database, "INSERT IGNORE INTO `".PREFIX."games_new` ( `gameID` , `name`, `tag` ) VALUES ('48', 'FIFA 13', 'fifa13');");
+  mysqli_query($_database, "INSERT IGNORE INTO `".PREFIX."games_new` ( `gameID` , `name`, `tag` ) VALUES ('49', 'FIFA 14', 'fifa14');");
+  mysqli_query($_database, "INSERT IGNORE INTO `".PREFIX."games_new` ( `gameID` , `name`, `tag` ) VALUES ('50', 'Firefall', 'firefall');");
+  mysqli_query($_database, "INSERT IGNORE INTO `".PREFIX."games_new` ( `gameID` , `name`, `tag` ) VALUES ('51', 'Frontlines: Fuel of War', 'frontlines');");
+  mysqli_query($_database, "INSERT IGNORE INTO `".PREFIX."games_new` ( `gameID` , `name`, `tag` ) VALUES ('52', 'Ghost Recon Online', 'gro');");
+  mysqli_query($_database, "INSERT IGNORE INTO `".PREFIX."games_new` ( `gameID` , `name`, `tag` ) VALUES ('53', 'Grand Theft Auto: San Andreas', 'gtasa');");
+  mysqli_query($_database, "INSERT IGNORE INTO `".PREFIX."games_new` ( `gameID` , `name`, `tag` ) VALUES ('54', 'Grid 2', 'grid2');");
+  mysqli_query($_database, "INSERT IGNORE INTO `".PREFIX."games_new` ( `gameID` , `name`, `tag` ) VALUES ('55', 'Guild Wars 2', 'guildwars2');");
+  mysqli_query($_database, "INSERT IGNORE INTO `".PREFIX."games_new` ( `gameID` , `name`, `tag` ) VALUES ('56', 'Half-Life', 'hl');");
+  mysqli_query($_database, "INSERT IGNORE INTO `".PREFIX."games_new` ( `gameID` , `name`, `tag` ) VALUES ('57', 'Half-Life 2', 'hl2');");
+  mysqli_query($_database, "INSERT IGNORE INTO `".PREFIX."games_new` ( `gameID` , `name`, `tag` ) VALUES ('58', 'HALO', 'halo');");
+  mysqli_query($_database, "INSERT IGNORE INTO `".PREFIX."games_new` ( `gameID` , `name`, `tag` ) VALUES ('59', 'HaxBall', 'haxball');");
+  mysqli_query($_database, "INSERT IGNORE INTO `".PREFIX."games_new` ( `gameID` , `name`, `tag` ) VALUES ('60', 'Hearthstone: Heroes of Warcraft', 'hearthstone');");
+  mysqli_query($_database, "INSERT IGNORE INTO `".PREFIX."games_new` ( `gameID` , `name`, `tag` ) VALUES ('61', 'Infinite Crisis', 'infinitecrisis');");
+  mysqli_query($_database, "INSERT IGNORE INTO `".PREFIX."games_new` ( `gameID` , `name`, `tag` ) VALUES ('62', 'Jedi Knight 2', 'jk2');");
+  mysqli_query($_database, "INSERT IGNORE INTO `".PREFIX."games_new` ( `gameID` , `name`, `tag` ) VALUES ('63', 'Jedi Knight 3: Jedi Academy', 'jkja');");
+  mysqli_query($_database, "INSERT IGNORE INTO `".PREFIX."games_new` ( `gameID` , `name`, `tag` ) VALUES ('64', 'League of Legends', 'lol');");
+  mysqli_query($_database, "INSERT IGNORE INTO `".PREFIX."games_new` ( `gameID` , `name`, `tag` ) VALUES ('65', 'Live for Speed', 'lfs');");
+  mysqli_query($_database, "INSERT IGNORE INTO `".PREFIX."games_new` ( `gameID` , `name`, `tag` ) VALUES ('66', 'LotR: Battle for Middle-Earth', 'bfme');");
+  mysqli_query($_database, "INSERT IGNORE INTO `".PREFIX."games_new` ( `gameID` , `name`, `tag` ) VALUES ('67', 'LotR: Battle for Middle-Earth 2', 'bfme2');");
+  mysqli_query($_database, "INSERT IGNORE INTO `".PREFIX."games_new` ( `gameID` , `name`, `tag` ) VALUES ('68', 'Medal of Honor', 'moh');");
+  mysqli_query($_database, "INSERT IGNORE INTO `".PREFIX."games_new` ( `gameID` , `name`, `tag` ) VALUES ('69', 'Natural Selection 2', 'nase2');");
+  mysqli_query($_database, "INSERT IGNORE INTO `".PREFIX."games_new` ( `gameID` , `name`, `tag` ) VALUES ('70', 'Need for Speed: Most Wanted', 'nfs-mw');");
+  mysqli_query($_database, "INSERT IGNORE INTO `".PREFIX."games_new` ( `gameID` , `name`, `tag` ) VALUES ('71', 'Need for Speed: World', 'nfs-w');");
+  mysqli_query($_database, "INSERT IGNORE INTO `".PREFIX."games_new` ( `gameID` , `name`, `tag` ) VALUES ('72', 'PokerTH', 'pokerth');");
+  mysqli_query($_database, "INSERT IGNORE INTO `".PREFIX."games_new` ( `gameID` , `name`, `tag` ) VALUES ('73', 'Pro Evolution Soccer 2013', 'pes2013');");
+  mysqli_query($_database, "INSERT IGNORE INTO `".PREFIX."games_new` ( `gameID` , `name`, `tag` ) VALUES ('74', 'Pro Evolution Soccer 2014', 'pes2014');");
+  mysqli_query($_database, "INSERT IGNORE INTO `".PREFIX."games_new` ( `gameID` , `name`, `tag` ) VALUES ('75', 'Quake 3', 'q3');");
+  mysqli_query($_database, "INSERT IGNORE INTO `".PREFIX."games_new` ( `gameID` , `name`, `tag` ) VALUES ('76', 'Quake 4', 'q4');");
+  mysqli_query($_database, "INSERT IGNORE INTO `".PREFIX."games_new` ( `gameID` , `name`, `tag` ) VALUES ('77', 'Quakelive', 'quakelive');");
+  mysqli_query($_database, "INSERT IGNORE INTO `".PREFIX."games_new` ( `gameID` , `name`, `tag` ) VALUES ('78', 'Race Driver Grid', 'rdg');");
+  mysqli_query($_database, "INSERT IGNORE INTO `".PREFIX."games_new` ( `gameID` , `name`, `tag` ) VALUES ('79', 'S.K.I.L.L. - Special Force 2', 'skill-sf2');");
+  mysqli_query($_database, "INSERT IGNORE INTO `".PREFIX."games_new` ( `gameID` , `name`, `tag` ) VALUES ('80', 'S4 League', 's4l');");
+  mysqli_query($_database, "INSERT IGNORE INTO `".PREFIX."games_new` ( `gameID` , `name`, `tag` ) VALUES ('81', 'Scrolls', 'scrolls');");
+  mysqli_query($_database, "INSERT IGNORE INTO `".PREFIX."games_new` ( `gameID` , `name`, `tag` ) VALUES ('82', 'ShootMania Storm', 'shootmania');");
+  mysqli_query($_database, "INSERT IGNORE INTO `".PREFIX."games_new` ( `gameID` , `name`, `tag` ) VALUES ('83', 'SMITE', 'smite');");
+  mysqli_query($_database, "INSERT IGNORE INTO `".PREFIX."games_new` ( `gameID` , `name`, `tag` ) VALUES ('84', 'Soldiers of Fortune 2', 'sof2');");
+  mysqli_query($_database, "INSERT IGNORE INTO `".PREFIX."games_new` ( `gameID` , `name`, `tag` ) VALUES ('85', 'Star Wars: Battlefront', 'sw');");
+  mysqli_query($_database, "INSERT IGNORE INTO `".PREFIX."games_new` ( `gameID` , `name`, `tag` ) VALUES ('86', 'Star Wars: Battlefront 2', 'sw2');");
+  mysqli_query($_database, "INSERT IGNORE INTO `".PREFIX."games_new` ( `gameID` , `name`, `tag` ) VALUES ('87', 'Starcraft', 'sc');");
+  mysqli_query($_database, "INSERT IGNORE INTO `".PREFIX."games_new` ( `gameID` , `name`, `tag` ) VALUES ('88', 'Starcraft II', 'sc2');");
+  mysqli_query($_database, "INSERT IGNORE INTO `".PREFIX."games_new` ( `gameID` , `name`, `tag` ) VALUES ('89', 'SWAT 4', 'swat4');");
+  mysqli_query($_database, "INSERT IGNORE INTO `".PREFIX."games_new` ( `gameID` , `name`, `tag` ) VALUES ('90', 'Tactical Ops', 'to');");
+  mysqli_query($_database, "INSERT IGNORE INTO `".PREFIX."games_new` ( `gameID` , `name`, `tag` ) VALUES ('91', 'Tactical Ops', 'toaot');");
+  mysqli_query($_database, "INSERT IGNORE INTO `".PREFIX."games_new` ( `gameID` , `name`, `tag` ) VALUES ('92', 'Team Fortress', 'tf');");
+  mysqli_query($_database, "INSERT IGNORE INTO `".PREFIX."games_new` ( `gameID` , `name`, `tag` ) VALUES ('93', 'Team Fortress 2', 'tf2');");
+  mysqli_query($_database, "INSERT IGNORE INTO `".PREFIX."games_new` ( `gameID` , `name`, `tag` ) VALUES ('94', 'Tetris Friends', 'tetrisfriends');");
+  mysqli_query($_database, "INSERT IGNORE INTO `".PREFIX."games_new` ( `gameID` , `name`, `tag` ) VALUES ('95', 'Titanfall', 'titanfall');");
+  mysqli_query($_database, "INSERT IGNORE INTO `".PREFIX."games_new` ( `gameID` , `name`, `tag` ) VALUES ('96', 'TrackMania 2: Stadium', 'tm2_stadium');");
+  mysqli_query($_database, "INSERT IGNORE INTO `".PREFIX."games_new` ( `gameID` , `name`, `tag` ) VALUES ('97', 'TrackMania 2: Valley', 'tm2_valley');");
+  mysqli_query($_database, "INSERT IGNORE INTO `".PREFIX."games_new` ( `gameID` , `name`, `tag` ) VALUES ('98', 'TrackMania Nations Forever', 'tmnf');");
+  mysqli_query($_database, "INSERT IGNORE INTO `".PREFIX."games_new` ( `gameID` , `name`, `tag` ) VALUES ('99', 'Tribes: Ascend', 'tribes');");
+  mysqli_query($_database, "INSERT IGNORE INTO `".PREFIX."games_new` ( `gameID` , `name`, `tag` ) VALUES ('100', 'Universal Monsters Online', 'umo');");
+  mysqli_query($_database, "INSERT IGNORE INTO `".PREFIX."games_new` ( `gameID` , `name`, `tag` ) VALUES ('101', 'Unreal Tournament', 'ut');");
+  mysqli_query($_database, "INSERT IGNORE INTO `".PREFIX."games_new` ( `gameID` , `name`, `tag` ) VALUES ('102', 'Unreal Tournament 2004', 'ut2004');");
+  mysqli_query($_database, "INSERT IGNORE INTO `".PREFIX."games_new` ( `gameID` , `name`, `tag` ) VALUES ('103', 'Unreal Tournament 3', 'ut3');");
+  mysqli_query($_database, "INSERT IGNORE INTO `".PREFIX."games_new` ( `gameID` , `name`, `tag` ) VALUES ('104', 'War Rock', 'warrock');");
+  mysqli_query($_database, "INSERT IGNORE INTO `".PREFIX."games_new` ( `gameID` , `name`, `tag` ) VALUES ('105', 'Warcraft 3', 'wc3');");
+  mysqli_query($_database, "INSERT IGNORE INTO `".PREFIX."games_new` ( `gameID` , `name`, `tag` ) VALUES ('106', 'Warface', 'warface');");
+  mysqli_query($_database, "INSERT IGNORE INTO `".PREFIX."games_new` ( `gameID` , `name`, `tag` ) VALUES ('107', 'Wargame AirLand Battle', 'wab');");
+  mysqli_query($_database, "INSERT IGNORE INTO `".PREFIX."games_new` ( `gameID` , `name`, `tag` ) VALUES ('108', 'Warsow', 'warsow');");
+  mysqli_query($_database, "INSERT IGNORE INTO `".PREFIX."games_new` ( `gameID` , `name`, `tag` ) VALUES ('109', 'Wolfteam', 'wolfteam');");
+  mysqli_query($_database, "INSERT IGNORE INTO `".PREFIX."games_new` ( `gameID` , `name`, `tag` ) VALUES ('110', 'World in Conflict', 'wic');");
+  mysqli_query($_database, "INSERT IGNORE INTO `".PREFIX."games_new` ( `gameID` , `name`, `tag` ) VALUES ('111', 'World of Tanks', 'wot');");
+  mysqli_query($_database, "INSERT IGNORE INTO `".PREFIX."games_new` ( `gameID` , `name`, `tag` ) VALUES ('112', 'World of Warcraft', 'wow');");
+  mysqli_query($_database, "INSERT IGNORE INTO `".PREFIX."games_new` ( `gameID` , `name`, `tag` ) VALUES ('113', 'World of Warplanes', 'wowp');");
+  
+  //convert old game tags
+  $ergebnis = mysqli_query($_database, "SELECT * FROM ".PREFIX."games");
+  $i=1;
+  while($ds=mysqli_fetch_array($ergebnis)) {
+	  $dv = mysqli_fetch_array(mysqli_query($_database, "SELECT * FROM ".PREFIX."games_new WHERE name='".$ds['name']."'"));
+	  if(($ds['name']==$dv['name']) && $ds['tag']!=$dv['tag']) mysqli_query($_database, "UPDATE ".PREFIX."clanwars SET game='".$dv['tag']."' WHERE game='".$ds['tag']."'");
+	  $i++;	  
+  }
+  
+  mysqli_query($_database, "DROP TABLE IF EXISTS `".PREFIX."games`");
+  mysqli_query($_database, "RENAME TABLE `".PREFIX."games_new` TO `".PREFIX."games`");
 }
 ?>
