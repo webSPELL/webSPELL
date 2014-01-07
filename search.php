@@ -28,14 +28,7 @@
 if(isset($_GET['action'])) $action = $_GET['action'];
 else $action='';
 
-if($action == "quicksearch" OR ((isset($_GET['forum']) OR isset($_GET['news']) OR isset($_GET['articles']) OR isset($_GET['faq'])) AND $action=="")) {
-
-	$getstring='';
-	foreach($_GET as $key=>$val) $getstring .= '&'.$key.'='.stripslashes($val);
-	header("Location: index.php?site=search&action=search".$getstring);
-
-}
-elseif($action=="search" AND ($userID OR isset($_GET['captcha']))) {
+if($action=="search" AND ($userID OR isset($_REQUEST['captcha']))) {
 
 	$_language->read_module('search');
 
@@ -43,7 +36,7 @@ elseif($action=="search" AND ($userID OR isset($_GET['captcha']))) {
 	if($userID) $run = 1;
 	else {
 		$CAPCLASS = new Captcha;
-		if($CAPCLASS->check_captcha($_GET['captcha'], $_GET['captcha_hash'])) $run=1;
+		if($CAPCLASS->check_captcha($_REQUEST['captcha'], $_REQUEST['captcha_hash'])) $run=1;
 	}
 	
 	if($run) {
@@ -51,20 +44,20 @@ elseif($action=="search" AND ($userID OR isset($_GET['captcha']))) {
 		eval ("\$title_search = \"".gettemplate("title_search")."\";");
 		echo $title_search;
 	
-		$text = str_replace(array('%', '*'), array('\%', '%'), $_GET['text']);
-		if(!isset($_GET['r']) or $_GET['r'] < 1 or $_GET['r'] > 100) {
+		$text = str_replace(array('%', '*'), array('\%', '%'), $_REQUEST['text']);
+		if(!isset($_REQUEST['r']) or $_REQUEST['r'] < 1 or $_REQUEST['r'] > 100) {
 			$results = 50;
 		}
 		else {
-			$results = (int)$_GET['r'];
+			$results = (int)$_REQUEST['r'];
 		}
-		isset($_GET['page']) ? $page = (int)$_GET['page'] : $page = 1;
-		isset($_GET['am']) ? $am = (int)$_GET['am'] : $am = 0;
-		isset($_GET['ad']) ? $ad = (int)$_GET['ad'] : $ad = 0;
-		isset($_GET['ay']) ? $ay = (int)$_GET['ay'] : $ay = 0;
-		isset($_GET['bm']) ? $bm = (int)$_GET['bm'] : $bm = 0;
-		isset($_GET['bd']) ? $bd = (int)$_GET['bd'] : $bd = 0;
-		isset($_GET['by']) ? $by = (int)$_GET['by'] : $by = 0;
+		isset($_REQUEST['page']) ? $page = (int)$_REQUEST['page'] : $page = 1;
+		isset($_REQUEST['am']) ? $am = (int)$_REQUEST['am'] : $am = 0;
+		isset($_REQUEST['ad']) ? $ad = (int)$_REQUEST['ad'] : $ad = 0;
+		isset($_REQUEST['ay']) ? $ay = (int)$_REQUEST['ay'] : $ay = 0;
+		isset($_REQUEST['bm']) ? $bm = (int)$_REQUEST['bm'] : $bm = 0;
+		isset($_REQUEST['bd']) ? $bd = (int)$_REQUEST['bd'] : $bd = 0;
+		isset($_REQUEST['by']) ? $by = (int)$_REQUEST['by'] : $by = 0;
 		
 		if(mb_strlen(str_replace('%', '', $text))>=$search_min_len){
 
@@ -95,7 +88,7 @@ elseif($action=="search" AND ($userID OR isset($_GET['captcha']))) {
 			$res_date=array();
 			$res_occurr=array();
 		
-			if(isset($_GET['articles'])) {
+			if(isset($_REQUEST['articles'])) {
 				$ergebnis_articles=safe_query("SELECT title, articlesID, date FROM ".PREFIX."articles WHERE date between ".$after." AND ".$before);
 		
 				while($ds=mysqli_fetch_array($ergebnis_articles)) {
@@ -128,7 +121,7 @@ elseif($action=="search" AND ($userID OR isset($_GET['captcha']))) {
 				}
 		
 			}
-			if(isset($_GET['faq'])) {
+			if(isset($_REQUEST['faq'])) {
 				$ergebnis_faq=safe_query("SELECT faqID, faqcatID, date FROM ".PREFIX."faq WHERE date between ".$after." AND ".$before." ORDER BY date");
 		
 				while($ds = mysqli_fetch_array($ergebnis_faq)) {
@@ -153,7 +146,7 @@ elseif($action=="search" AND ($userID OR isset($_GET['captcha']))) {
 				}
 		
 			}
-			if(isset($_GET['forum'])) {
+			if(isset($_REQUEST['forum'])) {
 		
 				$ergebnis_forum=safe_query("SELECT
 										b.readgrps,
@@ -228,7 +221,7 @@ elseif($action=="search" AND ($userID OR isset($_GET['captcha']))) {
 				}
 		
 			}
-			if(isset($_GET['news'])) {
+			if(isset($_REQUEST['news'])) {
 				$ergebnis_news=safe_query("SELECT 
 												date,
 												poster,
@@ -271,10 +264,10 @@ elseif($action=="search" AND ($userID OR isset($_GET['captcha']))) {
 			echo "<center><b>".$count_results."</b> ".$_language->module['results_found']."</center><br /><br />";
 		
 			$pages = ceil($count_results / $results);
-			if($pages > 1) echo makepagelink("index.php?site=search&amp;action=search&amp;articles=".$_GET['articles']."&amp;faq=".$_GET['faq']."&amp;forum=".$_GET['forum']."&amp;news=".$_GET['news']."&amp;r=".$_GET['r']."&amp;text=".$_GET['text']."&amp;am=".$_GET['am']."&amp;ad=".$_GET['ad']."&amp;ay=".$_GET['ay']."&amp;bm=".$_GET['bm']."&amp;bd=".$_GET['bd']."&amp;by=".$_GET['by']."&amp;order=".$_GET['order'], $page, $pages);
+			if($pages > 1) echo makepagelink("index.php?site=search&amp;action=search&amp;articles=".$_REQUEST['articles']."&amp;faq=".$_REQUEST['faq']."&amp;forum=".$_REQUEST['forum']."&amp;news=".$_REQUEST['news']."&amp;r=".$_REQUEST['r']."&amp;text=".$_REQUEST['text']."&amp;am=".$_REQUEST['am']."&amp;ad=".$_REQUEST['ad']."&amp;ay=".$_REQUEST['ay']."&amp;bm=".$_REQUEST['bm']."&amp;bd=".$_REQUEST['bd']."&amp;by=".$_REQUEST['by']."&amp;order=".$_REQUEST['order'], $page, $pages);
 
 			// sort results
-			if($_GET['order']=='2') asort($res_occurr);
+			if($_REQUEST['order']=='2') asort($res_occurr);
 			else arsort($res_occurr);
 		
 			$i=0;
@@ -328,7 +321,7 @@ elseif($action=="search" AND ($userID OR isset($_GET['captcha']))) {
 
 }
 else {
-	if(!isset($_GET['site'])){
+	if(!isset($_REQUEST['site'])){
 		header("Location: index.php?site=search");
 	}
 	$_language->read_module('search');
