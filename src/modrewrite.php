@@ -8,7 +8,6 @@ class ModRewrite {
 	public function __construct(){
 		$this->translation['integer'] = array('replace'=>'([0-9]+)','rebuild'=>'([0-9]+?)');
 		$this->translation['string'] = array('replace'=>'(\w*?)','rebuild'=>'(\w*?)');
-		$this->buildCache();
 	}
 
 	public function getTypes(){
@@ -16,9 +15,17 @@ class ModRewrite {
 	}
 
 	public function enable(){
+		$this->buildCache();
 		ob_start(array($this,'rewriteBody'));
 
-		if(function_exists("header_register_callback")){
+		/*
+		header_register_callback only works after php 5.5.7 because of 
+		https://bugs.php.net/bug.php?id=66375
+		fixed in
+		https://github.com/php/php-src/commit/3c3ff434329d2f505b00a79bacfdef95ca96f0d2
+		*/
+
+		if(function_exists("header_register_callback") && version_compare(PHP_VERSION, '5.5.7', '>')){
 			header_register_callback(array($this,'rewriteHeaders'));
 		}
 		else{
@@ -68,7 +75,7 @@ class ModRewrite {
 				$content = preg_replace("/Location:".$regex."/si",'Location: '.$replace,$content);
 			}
 			else{
-				$content = preg_replace("/href=(['\"])".$regex."[\"']/si",'href=$1'.$replace.'$1',$content);
+				$content = preg_replace("/(href|action)=(['\"])".$regex."[\"']/si",'$1=$2'.$replace.'$2',$content);
 			}
 		}
 		$needed = microtime(true)-$start_time;
@@ -79,7 +86,7 @@ class ModRewrite {
 	public function buildReplace($regex,$replace,$fields = array()){
 		$regex = str_replace(array('.','?','&','/'),array('\.','\?','[&|&amp;]*','\/'),$regex);
 		if(count($fields)){
-			$i=2;
+			$i=3;
 			foreach($fields as $key => $field){
 				$regex = str_replace("{".$key."}",$this->translation[$field]['replace'],$regex);
 				$replace = str_replace("{".$key."}",'$'.$i,$replace);
