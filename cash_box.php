@@ -106,6 +106,13 @@ elseif(isset($_POST['pay']) and $_POST['pay']) {
 if(!isclanmember($userID) and !iscashadmin($userID)) echo $_language->module['clanmembers_only'];
 else {
 
+	$bg1=BG_1;
+	$bg2=BG_2;
+	$pagebg=PAGEBG;
+	$border=BORDER;
+	$bghead=BGHEAD;
+	$bgcat=BGCAT;
+
 	if(isset($_GET['action']) and $_GET['action']=="new") {
 
 		if(!iscashadmin($userID)) die($_language->module['no_access']);
