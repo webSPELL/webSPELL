@@ -13,7 +13,7 @@ if(basename($_SERVER['SCRIPT_FILENAME']) == basename("_rewrite.php")){
 	if(isset($_GET['url'])){
 		$url_parts = preg_split("/[\._\/-]/", $_GET['url']);
 		$first = $url_parts[0];
-		$get = mysqli_query($_database, "SELECT * FROM ".PREFIX."modrewrite WHERE regex LIKE '%".$first."%' ORDER BY LENGTH(regex) DESC");
+		$get = mysqli_query($_database, "SELECT * FROM ".PREFIX."modrewrite WHERE regex LIKE '%".$first."%' ORDER BY LENGTH(regex) ASC");
 		while($ds = mysqli_fetch_assoc($get)){
 			$replace = $ds['rebuild_result'];
 			$regex = $ds['rebuild_regex'];
@@ -25,6 +25,7 @@ if(basename($_SERVER['SCRIPT_FILENAME']) == basename("_rewrite.php")){
 					foreach($parts as $part){
 						$k = explode("=",$part);
 						$_GET[$k[0]] = $k[1];
+						$_REQUEST[$k[0]] = $k[1];
 					}
 				}
 				$_site = $url['path'];
@@ -32,6 +33,7 @@ if(basename($_SERVER['SCRIPT_FILENAME']) == basename("_rewrite.php")){
 			}
 		}
 	}
+
 	if($_site == null){
 		header("HTTP/1.0 404 Not Found");
 		$_site = "index.php";
@@ -40,6 +42,6 @@ if(basename($_SERVER['SCRIPT_FILENAME']) == basename("_rewrite.php")){
 	}
 	$needed = microtime(true)-$start_time;
 	header('X-Rebuild-Time: '.$needed);
-	include(getcwd().'/'.$_site);
+	require($_site);
 }
 ?>

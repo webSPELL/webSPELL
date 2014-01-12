@@ -151,6 +151,26 @@ elseif($action=="edit") {
     </table>
     </form>';
 }
+elseif($action == 'rebuild'){
+    $ds=safe_query("SELECT * FROM ".PREFIX."modrewrite");
+    $anz=mysqli_num_rows($ds);
+    while($flags = mysqli_fetch_array($ds)) {
+
+        $data = unserialize($flags['fields']);
+        $replace = $GLOBALS['_modRewrite']->buildReplace($flags['link'], $flags['regex'],$data);
+        security_slashes($replace);
+        $rebuild = $GLOBALS['_modRewrite']->buildRebuild($flags['regex'], $flags['link'],$data);
+        security_slashes($rebuild);
+
+        safe_query("UPDATE ".PREFIX."modrewrite SET
+            replace_regex ='".$replace[0]."',
+            replace_result ='".$replace[1]."',
+            rebuild_regex ='".$rebuild[0]."',
+            rebuild_result ='".$rebuild[1]."'
+            WHERE ruleID='".$flags["ruleID"]."'");
+    }
+    echo "Done";
+}
 
 elseif(isset($_POST['save'])) {
     $CAPCLASS = new Captcha;
@@ -391,6 +411,7 @@ else {
     echo'<h1>&curren; '.$_language->module['modrewrite_rules'].'</h1>';
 
     echo'<input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=modrewrite&amp;action=add\');return document.MM_returnValue" value="'.$_language->module['new_rule'].'" /><br /><br />';
+    echo'<input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=modrewrite&amp;action=rebuild\');return document.MM_returnValue" value="'.$_language->module['rebuild'].'" /><br /><br />';
 
     echo'
     <table width="100%" border="0" cellspacing="1" cellpadding="3" bgcolor="#DDDDDD">

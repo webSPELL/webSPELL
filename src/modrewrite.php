@@ -8,7 +8,7 @@ class ModRewrite {
 	public function __construct(){
 		$this->translation['integer'] = array('replace'=>'([0-9]+)','rebuild'=>'([0-9]+?)');
 		$this->translation['string'] = array('replace'=>'(\w*?)','rebuild'=>'(\w*?)');
-		$this->translation['everything'] = array('replace'=>'([^\'\\"]*?)','rebuild'=>'([^\'\\"]*?)');
+		$this->translation['everything'] = array('replace'=>'([^\'\\"]*)','rebuild'=>'([^\'\\"]*)');
 	}
 
 	public function getTypes(){
@@ -20,7 +20,7 @@ class ModRewrite {
 		ob_start(array($this,'rewriteBody'));
 
 		/*
-		header_register_callback only works after php 5.5.7 and 5.4.23 because of 
+		header_register_callback only works after php 5.5.8 and 5.4.24 because of 
 		https://bugs.php.net/bug.php?id=66375
 		fixed in
 		https://github.com/php/php-src/commit/3c3ff434329d2f505b00a79bacfdef95ca96f0d2
@@ -29,12 +29,12 @@ class ModRewrite {
 		$fixedHeader = false;
 		if(PHP_MAJOR_VERSION == 5){
 			if(PHP_MINOR_VERSION == 4){
-				if(PHP_RELEASE_VERSION > 23){
+				if(PHP_RELEASE_VERSION > 24){
 					$fixedHeader = true;
 				}
 			}
 			elseif(PHP_MINOR_VERSION == 5){
-				if(PHP_RELEASE_VERSION > 7){
+				if(PHP_RELEASE_VERSION > 8){
 					$fixedHeader = true;
 				}
 			}
@@ -83,14 +83,25 @@ class ModRewrite {
 
 	private function rewrite($content, $headers = false){
 		$start_time = microtime(true);
+		if(stristr($content, "MM_goToURL") || stristr($content, "MM_openBrWindow")){
+			$onclick_rewrite = true;
+		}
+		else{
+			$onclick_rewrite = false;
+		}
 		foreach($this->cache as $ds){
 			$regex = $ds['replace_regex'];
 			$replace = $ds['replace_result'];
 			if($headers == true){
-				$content = preg_replace("/()()Location:".$regex."/si",'Location: '.$replace,$content);
+				$content = preg_replace("/()()Location:\s".$regex."/si",'Location: '.$this->getRewriteBase().$replace,$content);
+				print_r($content);
 			}
 			else{
 				$content = preg_replace("/(href|action)=(['\"])".$regex."[\"']/si",'$1=$2'.$replace.'$2',$content);
+				if($onclick_rewrite){
+					$content = preg_replace("/onclick=(['\"])(MM_openBrWindow\(|MM_goToURL\('parent',)'".$regex."'/si",'onclick=$1$2\''.$replace.'\'',$content);
+				}
+				//$content = preg_replace("/()onclick=(['\"])MM_goToURL\('parent','".$regex."'/si",'onclick=$2MM_goToURL(\'parent\',\''.$replace.'\'',$content);
 			}
 		}
 		$needed = microtime(true)-$start_time;
