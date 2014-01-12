@@ -2060,6 +2060,8 @@ function update40200_40300() {
   
   mysqli_query($_database, "ALTER TABLE `".PREFIX."user` ADD `date_format` varchar(255) NOT NULL default 'd.m.Y'");
   mysqli_query($_database, "ALTER TABLE `".PREFIX."user` ADD `time_format` varchar(255) NOT NULL default 'H:i'");
+  mysqli_query($_database, "ALTER TABLE `".PREFIX."user` ADD `hdd` varchar(255) NOT NULL default ''");
+  mysqli_query($_database, "ALTER TABLE `".PREFIX."user` ADD `headset` varchar(255) NOT NULL default ''");
   mysqli_query($_database, "ALTER TABLE `".PREFIX."user` ADD `user_guestbook` int(1) NOT NULL default '1'");
 
   //add new languages for the existing language system

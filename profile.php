@@ -540,6 +540,10 @@ if(isset($id) and getnickname($id) != '') {
 		if($mouse == '') $mouse = $_language->module['n_a'];
 		$mousepad = clearfromtags($ds['mousepad']);
 		if($mousepad == '') $mousepad = $_language->module['n_a'];
+		$hdd = clearfromtags($ds['hdd']);
+		if($hdd == '') $hdd = $_language->module['n_a'];
+		$headset = clearfromtags($ds['headset']);
+		if($headset == '') $headset = $_language->module['n_a'];
 
 		$anznewsposts = getusernewsposts($ds['userID']);
 		$anzforumtopics = getuserforumtopics($ds['userID']);
