@@ -143,7 +143,7 @@ function chkFormular() {
   </tr>
   <tr bgcolor="$bg2">
     <td align="right" bgcolor="$bg3">%language%</td>
-    <td bgcolor="$bg4"><select name="language">$langdirs</select></td>
+    <td bgcolor="$bg4"><select name="language" onchange="document.getElementById('lang_county').src='images/flags/'+this.options[this.selectedIndex].value+'.gif'">$langdirs</select> $lang_country</td>
   </tr>
   <tr bgcolor="$bg2">
     <td align="right" bgcolor="$bg1">%mail_on_new_pm%</td>
@@ -204,32 +204,40 @@ function chkFormular() {
     <td bgcolor="$bg2"><input type="text" name="ram" value="$ram" size="30" /></td>
   </tr>
   <tr>
-    <td align="right" bgcolor="$bg3">%monitor%:</td>
-    <td bgcolor="$bg4"><input type="text" name="monitor" value="$monitor" size="30" /></td>
+    <td align="right" bgcolor="$bg3">%hdd%:</td>
+    <td bgcolor="$bg4"><input type="text" name="hdd" value="$hdd" size="30" /></td>
   </tr>
   <tr>
-    <td align="right" bgcolor="$bg1">%graphiccard%:</td>
-    <td bgcolor="$bg2"><input type="text" name="graphiccard" value="$graphiccard" size="30" /></td>
+    <td align="right" bgcolor="$bg1">%monitor%:</td>
+    <td bgcolor="$bg2"><input type="text" name="monitor" value="$monitor" size="30" /></td>
   </tr>
   <tr>
-    <td align="right" bgcolor="$bg3">%soundcard%:</td>
-    <td bgcolor="$bg4"><input type="text" name="soundcard" value="$soundcard" size="30" /></td>
+    <td align="right" bgcolor="$bg3">%graphiccard%:</td>
+    <td bgcolor="$bg4"><input type="text" name="graphiccard" value="$graphiccard" size="30" /></td>
   </tr>
   <tr>
-    <td align="right" bgcolor="$bg1">%i-connection%:</td>
-    <td bgcolor="$bg2"><input type="text" name="connection" value="$connection" size="30" /></td>
+    <td align="right" bgcolor="$bg1">%soundcard%:</td>
+    <td bgcolor="$bg2"><input type="text" name="soundcard" value="$soundcard" size="30" /></td>
   </tr>
   <tr>
-    <td align="right" bgcolor="$bg3">%keyboard%:</td>
-    <td bgcolor="$bg4"><input type="text" name="keyboard" value="$keyboard" size="30" /></td>
+    <td align="right" bgcolor="$bg3">%i-connection%:</td>
+    <td bgcolor="$bg4"><input type="text" name="connection" value="$connection" size="30" /></td>
   </tr>
   <tr>
-    <td align="right" bgcolor="$bg1">%mouse%:</td>
-    <td bgcolor="$bg2"><input type="text" name="mouse" value="$mouse" size="30" /></td>
+    <td align="right" bgcolor="$bg1">%keyboard%:</td>
+    <td bgcolor="$bg2"><input type="text" name="keyboard" value="$keyboard" size="30" /></td>
   </tr>
   <tr>
-    <td align="right" bgcolor="$bg3">%mousepad%:</td>
-    <td bgcolor="$bg4"><input type="text" name="mousepad" value="$mousepad" size="30" /></td>
+    <td align="right" bgcolor="$bg3">%mouse%:</td>
+    <td bgcolor="$bg4"><input type="text" name="mouse" value="$mouse" size="30" /></td>
+  </tr>
+  <tr>
+    <td align="right" bgcolor="$bg1">%mousepad%:</td>
+    <td bgcolor="$bg2"><input type="text" name="mousepad" value="$mousepad" size="30" /></td>
+  </tr>
+  <tr>
+    <td align="right" bgcolor="$bg3">%headset%:</td>
+    <td bgcolor="$bg4"><input type="text" name="headset" value="$headset" size="30" /></td>
   </tr>
   <tr bgcolor="$bghead">
     <td bgcolor="$bg1"></td>
