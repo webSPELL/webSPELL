@@ -486,6 +486,10 @@ else {
 
 			if($ds['language']) $langdirs = str_replace('"'.$ds['language'].'"', '"'.$ds['language'].'" selected="selected"', $langdirs);
 			else $langdirs = str_replace('"'.$_language->language.'"', '"'.$_language->language.'" selected="selected"', $langdirs);
+			
+			$lang_flag = '[flag]'.$ds['language'].'[/flag]';
+			$lang_country = flags($lang_flag);
+			$lang_country = str_replace("<img","<img id='lang_county'",$lang_country);
 
 			
 			$bg1 = BG_1;
