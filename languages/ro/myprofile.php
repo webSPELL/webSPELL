@@ -31,6 +31,7 @@ $language_array = Array(
 /* do not edit above this line */
 
   'about_myself'=>'Despre mine',
+  'activated'=>'activat',
   'avatar'=>'Avatar:',
   'back'=>'Inapoi',
   'bbcode'=>'<a href="javascript:MM_openBrWindow(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> PE',
@@ -46,6 +47,7 @@ $language_array = Array(
   'country'=>'Tara',
   'cpu'=>'CPU',
   'date_of_birth'=>'Data naşterii',
+  'deactivated'=>'dezactivat',
   'delete_max_230_210'=>'şterge (max230/210)',
   'delete_max_90_90'=>'şterge(max90/90)',
   'e-mail'=>'E-mail',
@@ -61,6 +63,7 @@ $language_array = Array(
   'format_date'=>'Format dată',
   'format_time'=>'Format oră',
   'graphiccard'=>'Placa video',
+  'guestbook'=>'Carte de oaspeţi',
   'hide_e-mail'=>'Ascunde E-mail?',
   'homepage'=>'Prima pagină',
   'html'=>'HTML DE PE',

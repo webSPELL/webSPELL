@@ -30,6 +30,7 @@ $language_array = Array(
 /* do not edit above this line */
 
 	'about_myself'=>'Rólam',
+	'activated'=>'aktív',
 	'avatar'=>'Avatar:',
 	'back'=>'vissza',
 	'bbcode'=>'<a href="javascript:MM_openBrWindow(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> Bekapcsolva',
@@ -45,6 +46,7 @@ $language_array = Array(
 	'country'=>'Ország',
 	'cpu'=>'CPU',
 	'date_of_birth'=>'Születésnap',
+	'deactivated'=>'kikapcsolva',
 	'delete_max_230_210'=>'törlés (max230/210)',
 	'delete_max_90_90'=>'törlés (max90/90)',
 	'e-mail'=>'E-mail',
@@ -60,6 +62,7 @@ $language_array = Array(
 	'format_date'=>'Dátum formátum',
 	'format_time'=>'Idő formátum',
 	'graphiccard'=>'Videókártya',
+	'guestbook'=>'Vendégkönyv',
 	'hide_e-mail'=>'E-mail elrejtése?',
 	'homepage'=>'Honlap',
 	'html'=>'HTML Kikapcsolva',

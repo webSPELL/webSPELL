@@ -31,6 +31,7 @@ $language_array = Array(
 /* do not edit above this line */
 
   'about_myself'=>'За мене',
+  'activated'=>'активира',
   'avatar'=>'Aватар:',
   'back'=>'назад',
   'bbcode'=>'<a href="javascript:MM_openBrWindow(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">ББкод</a> е уклучен',
@@ -46,6 +47,7 @@ $language_array = Array(
   'country'=>'Земја',
   'cpu'=>'Процесор',
   'date_of_birth'=>'Датум на раѓање',
+  'deactivated'=>'деактивирана',
   'delete_max_230_210'=>'избриши (макс230/210)',
   'delete_max_90_90'=>'избриши (макс90/90)',
   'e-mail'=>'Е-пошта',
@@ -61,6 +63,7 @@ $language_array = Array(
   'format_date'=>'формат на датумот',
   'format_time'=>'формат на време',
   'graphiccard'=>'Графичка картичка',
+  'guestbook'=>'Книга со гости',
   'hide_e-mail'=>'Сокрија е-поштата?',
   'homepage'=>'Главна страна',
   'html'=>'ХТЛМ е исклучен',

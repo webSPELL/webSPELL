@@ -77,6 +77,7 @@ else {
 		$language = $_POST['language'];
 		$date_format = $_POST['date_format'];
 		$time_format = $_POST['time_format'];
+		$user_gbook = $_POST['user_guestbook'];
 		$id = $userID;
 		
 		$error_array = array();
@@ -249,7 +250,8 @@ else {
 							about='".$about."',
 							date_format='".$date_format."',
 							time_format='".$time_format."',
-							language='".$language."'
+							language='".$language."',
+							user_guestbook='".$user_gbook."'
 						WHERE 
 							userID='".$id."'");
 	
@@ -412,6 +414,15 @@ else {
 							<option value='G:i:s A'>H:MM:SS AM/PM</option>
 							<option value='H:i:s A'>HH:MM:SS AM/PM</option>";
 			$format_time = str_replace("value='".$ds['time_format']."'","value='".$ds['time_format']."' selected='selected'",$format_time);
+			$user_gbook = "<option value='0'>".$_language->module['deactivated']."</option><option value='1'>".$_language->module['activated']."</option>";
+			$user_gbook = str_replace("value='".$ds['user_guestbook']."'","value='".$ds['user_guestbook']."' selected='selected'",$user_gbook);
+			$user_gbook_select = '';
+			if($user_guestbook) {
+				$user_gbook_select = '<tr bgcolor="'.BG_2.'">
+										<td align="right" bgcolor="'.BG_1.'">'.$_language->module['guestbook'].'</td>
+										<td bgcolor="'.BG_2.'"><select name="user_guestbook">'.$user_gbook.'</select></td>
+									  </tr>';
+			}
 			$b_day = mb_substr($ds['birthday'],8,2);
 			$b_month = mb_substr($ds['birthday'],5,2);
 			$b_year = mb_substr($ds['birthday'],0,4);

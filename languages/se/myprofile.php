@@ -30,6 +30,7 @@ $language_array = Array(
 /* do not edit above this line */
 
 	'about_myself'=>'Om mig själv',
+	'activated'=>'aktiverad',
 	'avatar'=>'Avatar:',
 	'back'=>'tillbaka',
 	'bbcode'=>'<a href="javascript:MM_openBrWindow(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> är PÅ',
@@ -45,6 +46,7 @@ $language_array = Array(
 	'country'=>'Land',
 	'cpu'=>'CPU',
 	'date_of_birth'=>'Födelsedag',
+	'deactivated'=>'avaktiverad',
 	'delete_max_230_210'=>'radera (max230/210)',
 	'delete_max_90_90'=>'radera (max90/90)',
 	'edit_mail'=>'edit E-Mail',
@@ -60,6 +62,7 @@ $language_array = Array(
 	'format_date'=>'Datumformat',
 	'format_time'=>'Tidsformat',
 	'graphiccard'=>'Grafikkort',
+	'guestbook'=>'Gästbok',
 	'hide_e-mail'=>'Göm email?',
 	'homepage'=>'Hemsida',
 	'html'=>'HTML är AV',

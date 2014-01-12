@@ -31,6 +31,7 @@ $language_array = Array(
 /* do not edit above this line */
 
   'about_myself'=>'عني',
+  'activated'=>'تنشيط',
   'avatar'=>'الصوره الرمزية:',
   'back'=>'عودة',
   'bbcode'=>'<a href="javascript:MM_openBrWindow(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> is ON',
@@ -46,6 +47,7 @@ $language_array = Array(
   'country'=>'البلد',
   'cpu'=>'المعالج',
   'date_of_birth'=>'تاريخ الميلاد',
+  'deactivated'=>'المعطلة',
   'delete_max_230_210'=>'حذف (max230/210)',
   'delete_max_90_90'=>'حذف (max90/90)',
   'e-mail'=>'العنوان الالكتروني',
@@ -61,6 +63,7 @@ $language_array = Array(
   'format_date'=>'',
   'format_time'=>'',
   'graphiccard'=>'البطاقة الرسومية',
+  'guestbook'=>'سجل الزوار',
   'hide_e-mail'=>'إخفاء البريد الإلكتروني؟',
   'homepage'=>'الصفحة الرئيسية',
   'html'=>'HTML is OFF',

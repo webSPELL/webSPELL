@@ -30,6 +30,7 @@ $language_array = Array(
 /* do not edit above this line */
 
 	'about_myself'=>'Om mig selv',
+	'activated'=>'aktiveret',
 	'avatar'=>'Billede:',
 	'back'=>'tilbage',
 	'bbcode'=>'<a href="javascript:MM_openBrWindow(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> er TIL',
@@ -45,6 +46,7 @@ $language_array = Array(
 	'country'=>'Land',
 	'cpu'=>'CPU',
 	'date_of_birth'=>'Fødselsdato',
+	'deactivated'=>'deaktiveret',
 	'delete_max_230_210'=>'Slet (maks230/210)',
 	'delete_max_90_90'=>'Slet (maks90/90)',
 	'e-mail'=>'E-mail',
@@ -60,6 +62,7 @@ $language_array = Array(
 	'format_date'=>'Dato format',
 	'format_time'=>'Tids format',
 	'graphiccard'=>'Grafikkort',
+	'guestbook'=>'Gæstebog',
 	'hide_e-mail'=>'Skjul E-mail?',
 	'homepage'=>'Hjemmeside',
 	'html'=>'HTML er FRA',

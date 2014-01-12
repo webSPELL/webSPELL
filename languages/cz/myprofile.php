@@ -30,6 +30,7 @@ $language_array = Array(
 /* do not edit above this line */
 
 	'about_myself'=>'O mě',
+	'activated'=>'aktivována',
 	'avatar'=>'Avatar:',
 	'back'=>'zpět',
 	'bbcode'=>'<a href="javascript:MM_openBrWindow(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> je ZAPNUTÝ ',
@@ -45,6 +46,7 @@ $language_array = Array(
 	'country'=>'Národnost',
 	'cpu'=>'CPU',
 	'date_of_birth'=>'Datum narození',
+	'deactivated'=>'deaktivována',
 	'delete_max_230_210'=>'smazat (max230/210)',
 	'delete_max_90_90'=>'smazat (max90/90)',
 	'e-mail'=>'E-mail',
@@ -60,6 +62,7 @@ $language_array = Array(
 	'format_date'=>'Formát data',
 	'format_time'=>'Formát času',
 	'graphiccard'=>'Grafická karta',
+	'guestbook'=>'Kniha hostů',
 	'hide_e-mail'=>'Skrýt E-mail?',
 	'homepage'=>'Domovská stránka',
 	'html'=>'HTML je VYPNUTÉ',

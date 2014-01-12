@@ -30,6 +30,7 @@ $language_array = Array(
 /* do not edit above this line */
 
 	'about_myself'=>'Apie Mane',
+	'activated'=>'įjungta',
 	'avatar'=>'Avataras:',
 	'back'=>'atgal',
 	'bbcode'=>'<a href="javascript:MM_openBrWindow(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBKodas</a> yra ĮJUNGTAS',
@@ -45,6 +46,7 @@ $language_array = Array(
 	'country'=>'Šalis',
 	'cpu'=>'CPU',
 	'date_of_birth'=>'Gimimo metai',
+	'deactivated'=>'išjungta',
 	'delete_max_230_210'=>'ištrinti (maks230/210)',
 	'delete_max_90_90'=>'ištrinti (maks90/90)',
 	'e-mail'=>'E-Paštas',
@@ -60,6 +62,7 @@ $language_array = Array(
 	'format_date'=>'Datos formatas',
 	'format_time'=>'Laiko formatas',	
 	'graphiccard'=>'Vaizdo Plokštė',
+	'guestbook'=>'Svečių knyga',
 	'hide_e-mail'=>'Slėpti E-Paštą?',
 	'homepage'=>'Namų puslapis',
 	'html'=>'HTML yra IŠJUNGTA',

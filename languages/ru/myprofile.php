@@ -31,6 +31,7 @@ $language_array = Array(
 /* do not edit above this line */
 
   'about_myself'=>'О себе',
+  'activated'=>'активированный',
   'avatar'=>'Аватар:',
   'back'=>'назад',
   'bbcode'=>'<a href="javascript:MM_openBrWindow(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">ВВкод</a> Включено',
@@ -46,6 +47,7 @@ $language_array = Array(
   'country'=>'Страна',
   'cpu'=>'CPU',
   'date_of_birth'=>'Дата рождения',
+  'deactivated'=>'дезактивированный',
   'delete_max_230_210'=>'Удалить (макс230/210)',
   'delete_max_90_90'=>'Удалить (макс90/90)',
   'e-mail'=>'E-mail',
@@ -61,6 +63,7 @@ $language_array = Array(
   'format_date'=>'Формат даты',
   'format_time'=>'формат времени',
   'graphiccard'=>'Видеокарта',
+  'guestbook'=>'Гостевая книга',
   'hide_e-mail'=>'Спрятать E-mail?',
   'homepage'=>'Домашняя страница',
   'html'=>'HTML выключен',
