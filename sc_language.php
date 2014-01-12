@@ -87,7 +87,9 @@ else {
 	ksort($langs,$sortMode);
 	foreach($langs as $lang=>$flag){
 		$querystring='';
-		if($_SERVER['QUERY_STRING']) $querystring = "&amp;query=".rawurlencode($_SERVER['QUERY_STRING']);
+		if(isset($_SERVER['QUERY_STRING'])){
+			$querystring = "&amp;query=".rawurlencode($_SERVER['QUERY_STRING']);
+		}
 		echo '<a href="sc_language.php?new_lang='.$flag.$querystring.'" title="'.$lang.'">';
 		if($_language->language == $flag){
 			 echo '<img src="images/haken.gif" alt="'.$lang.'" border="0" style="background-image:url(\'images/flags/'.$flag.'.gif\'); background-position: center;" />';
