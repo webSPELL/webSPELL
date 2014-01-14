@@ -48,7 +48,6 @@ $language_array = Array(
 Reģistrēšanās %pagetitle% (%homepage_url%) bija veiksmīga. Jūsu konta informācija:
 
 Pieslēgšanās vārds: %username%
-Parole: %password%
 
 Lai pabeigtu reģistrāciju, Jums jāaktivizē konts, nospiežot uz sekojošo saiti:
 %activationlink%

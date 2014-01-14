@@ -48,7 +48,6 @@ $language_array = Array(
 تسجيلك %pagetitle% (%homepage_url%) تم بنجاح بيانات حسابك
 
 اسم الدخول: %username%
-كلمة المرور: %password%
 
 لإنهاء تسجيلك عليك تفعيل حسابك بالضغط على الرابط التالي:
 %activationlink%

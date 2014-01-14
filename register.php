@@ -106,8 +106,8 @@ if(isset($_POST['save'])) {
 			// mail to user
 			$ToEmail = $mail;
 			$ToName = $username;
-			$header =  str_replace(Array('%username%', '%password%', '%activationlink%', '%pagetitle%', '%homepage_url%'), Array(stripslashes($username), stripslashes($pwd1), stripslashes($activationlink), $hp_title, $hp_url), $_language->module['mail_subject']);
-			$Message = str_replace(Array('%username%', '%password%', '%activationlink%', '%pagetitle%', '%homepage_url%'), Array(stripslashes($username), stripslashes($pwd1), stripslashes($activationlink), $hp_title, $hp_url), $_language->module['mail_text']);
+			$header =  str_replace(Array('%username%', '%password%', '%activationlink%', '%pagetitle%', '%homepage_url%'), Array(stripslashes($username),  stripslashes($activationlink), $hp_title, $hp_url), $_language->module['mail_subject']);
+			$Message = str_replace(Array('%username%', '%password%', '%activationlink%', '%pagetitle%', '%homepage_url%'), Array(stripslashes($username),  stripslashes($activationlink), $hp_title, $hp_url), $_language->module['mail_text']);
 	
 			if(mail($ToEmail,$header, $Message, "From:".$admin_email."\nContent-type: text/plain; charset=utf-8\n")){
 				redirect("index.php",$_language->module['register_successful'],3);

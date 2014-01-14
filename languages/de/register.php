@@ -47,7 +47,6 @@ $language_array = Array(
 Deine Anmeldung auf %pagetitle% (%homepage_url%) war erfolgreich. Hier noch einmal deine Zugangsdaten:
 
 Dein Benutzername: %username%
-Dein Passwort: %password%
 
 Um deine Registrierung jetzt abzuschließen, aktiviere deinen Account, indem du folgenden Link besuchst:
 %activationlink%

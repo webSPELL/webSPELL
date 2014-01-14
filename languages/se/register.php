@@ -47,7 +47,6 @@ $language_array = Array(
 Din registrerning på %pagetitle% (%homepage_url%) var lyckad. Din inloggnigns information::
 
 Inloggningsnamn: %username%
-Lösenord: %password%
 
 För att slutgöra registrationen måste du aktivera ditt account genom att klicka på följande länk: 
 %activationlink%

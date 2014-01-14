@@ -53,7 +53,6 @@ $language_array = Array(
 Rekisteröintisi %pagetitle% (%homepage_url%) Onnistui Tilisi tiedot:
 
 Kirjautumisnimeä: %username%
-Salasana: %password%
 
 Hyväksyäksesi rekisteröinnin sinun täytyy klikata vieressä olevaa linkkiä:
 %activationlink%

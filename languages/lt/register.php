@@ -47,7 +47,6 @@ $language_array = Array(
 Jūsų registracija %pagetitle% (%homepage_url%) buvo sėkminga. Jūsų profilio duomenys::
 
 Prisijungimo vardas: %username%
-Slaptažodis: %password%
 
 Kad baigti registraciją ir aktivaciją, jums reikia spustelti šią nuorodą:
 %activationlink%

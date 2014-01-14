@@ -47,7 +47,6 @@ $language_array = Array(
 Din registrering på %pagetitle% (%homepage_url%) er vellykket. Din konto data::
 
 Login navn: %username%
-Password: %password%
 
 For at færdiggøre din registrering skal du aktivere din konto ved at klikke på det følgende link:
 %activationlink%

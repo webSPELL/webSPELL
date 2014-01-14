@@ -47,7 +47,6 @@ $language_array = Array(
 Rejestracja na %pagetitle% (%homepage_url%) zakończyła się sukcesem. Dane twojego konta:
 
 Login: %username%
-Hasło: %password%
 
 żeby dokończyć proces rejestracji proszę wejść w ten link:
 %activationlink%

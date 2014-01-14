@@ -47,7 +47,6 @@ $language_array = Array(
 O seu registo em %pagetitle% (%homepage_url%) foi concluído com sucesso. Os dados da sua conta:
 
 Username: %username%
-Password: %password%
 
 Para terminar o seu registo clique no seguinte link:
 %activationlink%

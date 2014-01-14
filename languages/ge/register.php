@@ -48,7 +48,6 @@ $language_array = Array(
 თქვენი რეგისტრაცია %pagetitle% (%homepage_url%) წარმატებულია:
 
 შესვლა სახელი: %username%
-პაროლი: %password%
 
 რომ დაასრულოთ აქციტაცია უნდა გადახვიდეთ შემდეგ ბმულზე:
 %activationlink%

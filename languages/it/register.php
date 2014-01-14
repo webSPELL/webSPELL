@@ -47,7 +47,6 @@ $language_array = Array(
 La tua notifica alla %pagetitle% (%homepage_url%) ha avuto successo. Qui, ancora una volta i tuoi dati di accesso:
 
 Il tuo nome utente: %username%
-La tua password: %password%
 
 Per completare la registrazione adesso, per attivare il tuo account, visita il seguente link da visitare:
 %activationlink%

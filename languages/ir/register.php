@@ -42,7 +42,16 @@ $language_array = Array(
   'mail_failed'=>'.ایمیل فعال سازی نمیتواند فرستاده شود لطفا با ادمین تماس بگرید',
   'mail_inuse'=>'.ایمیل هم اکنون در حا استفاده است',
   'mail_subject'=>'فعال سازی ایمیل برای %homepage_url%',
-  'mail_text'=>'سلام %username%!rnrnشما عضو شدید در %pagetitle% (%homepage_url%) تاریخ اکانت شما.موفقیت امیز:rnrnنام ورود: %username%rnکلمه عبور: %password%rnrnبرای اینکه فرایند عضویت با موفقیت تمام شود باید اکانت خود را فعال سازی کنید:rn%activationlink%rnrnبا تشکرrn%pagetitle% - %homepage_url%',
+  'mail_text'=>'سلام %username%
+  
+  شما عضو شدید در %pagetitle% (%homepage_url%) تاریخ اکانت شما.موفقیت امیز:
+  
+  نام ورود: %username%
+  
+  برای اینکه فرایند عضویت با موفقیت تمام شود باید اکانت خود را فعال سازی کنید:
+  %activationlink%
+  با تشکر
+  %pagetitle% - %homepage_url%',
   'nickname'=>'نام مخفف',
   'nickname_inuse'=>'.این نام هم اکنون در حال استفاده است',
 'no_register_when_loggedin'=>'You allready have an account at %pagename%',

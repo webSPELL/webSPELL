@@ -48,7 +48,6 @@ $language_array = Array(
 Înregistrarea ta la  %pagetitle% (%homepage_url%) a fost efectuată cu succes. Datele contului dumneavoastră:
 
 Nume de logare: %username%
-Parola: %password%
 
 Pentru a încheia înregistrarea trebuie să vă activaţi contul dând click pe următorul link:
 %activationlink%
