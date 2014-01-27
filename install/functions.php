@@ -2081,6 +2081,59 @@ function update40200_40300() {
       ('', 'finnish', 'fi', 'finnish'),
       ('', 'turkish', 'tr', 'turkish')");
 
+//add new countries
+  mysqli_query($_database, "INSERT INTO `".PREFIX."countries` ( `countryID` , `country` , `short` )
+      VALUES
+       ('', 'Afghanistan', 'af'),
+       ('', 'Aland Islands', 'ax'),
+       ('', 'Bahamas', 'bs'),
+       ('', 'Caribbean Netherlands', 'bq'),
+       ('', 'Chad', 'td'),
+       ('', 'Curacao', 'cw'),
+       ('', 'Equatorial Guinea', 'gq'),
+       ('', 'French Guiana', 'gf'),
+       ('', 'Guernsey', 'gg'),
+       ('', 'Isle of Man', 'im'),
+       ('', 'Jersey', 'je'),
+       ('', 'Kosovo', 'ko'),
+       ('', 'Martinique', 'mq'),
+       ('', 'Mayotte', 'yt'),
+       ('', 'Montenegro', 'me'),
+       ('', 'Niger', 'ne'),
+       ('', 'Saint Barthelemy', 'bl'),
+       ('', 'Saint Martin', 'mf'),
+       ('', 'Scotland', 'sco'),
+       ('', 'Serbia', 'rs'),
+       ('', 'Sint Maarten', 'sx'),
+       ('', 'South Sudan', 'ss'),
+       ('', 'Timor-Leste', 'tl'),
+       ('', 'United States Minor Outlying Islands', 'um')");
+  
+  //edit countries
+  mysqli_query($_database, "UPDATE `".PREFIX."countries` SET Name='Bosnia and Herzegowina' WHERE short = 'ba'");
+  mysqli_query($_database, "UPDATE `".PREFIX."countries` SET Name='Brunei' WHERE short = 'bn'");
+  mysqli_query($_database, "UPDATE `".PREFIX."countries` SET Name='Burma' WHERE short = 'mm'");
+  mysqli_query($_database, "UPDATE `".PREFIX."countries` SET Name='Heard Islands and McDonald Islands' WHERE short = 'hm'");
+  mysqli_query($_database, "UPDATE `".PREFIX."countries` SET Name='Ivory Coast' WHERE short = 'ci'");
+  mysqli_query($_database, "UPDATE `".PREFIX."countries` SET Name='Kenya' WHERE short = 'ke'");
+  mysqli_query($_database, "UPDATE `".PREFIX."countries` SET Name='Laos' WHERE short = 'la'");  
+  mysqli_query($_database, "UPDATE `".PREFIX."countries` SET Name='Libya' WHERE short = 'ly'");
+  mysqli_query($_database, "UPDATE `".PREFIX."countries` SET Name='North Korea' WHERE short = 'kp'");
+  mysqli_query($_database, "UPDATE `".PREFIX."countries` SET Name='Russia' WHERE short = 'ru'");
+  mysqli_query($_database, "UPDATE `".PREFIX."countries` SET Name='Seychelles' WHERE short = 'sc'");
+  mysqli_query($_database, "UPDATE `".PREFIX."countries` SET Name='Slovakia' WHERE short = 'sk'");
+  mysqli_query($_database, "UPDATE `".PREFIX."countries` SET Name='South Georgia and the South Sandwich Islands' WHERE short = 'gs'");
+  mysqli_query($_database, "UPDATE `".PREFIX."countries` SET Name='South Korea' WHERE short = 'kr'");
+  mysqli_query($_database, "UPDATE `".PREFIX."countries` SET Name='Svalbard' WHERE short = 'sj'");
+  mysqli_query($_database, "UPDATE `".PREFIX."countries` SET Name='Turks and Caicos Islands' WHERE short = 'tc'");
+  mysqli_query($_database, "UPDATE `".PREFIX."countries` SET Name='Vatican City' WHERE short = 'va'");
+  
+  //delete countries
+  mysqli_query($_database, "DELETE FROM `".PREFIX."countries` WHERE short = 'an'");
+  mysqli_query($_database, "DELETE FROM `".PREFIX."countries` WHERE short = 'tp'");
+  mysqli_query($_database, "DELETE FROM `".PREFIX."countries` WHERE short = 'yu'");
+
+
   mysqli_query($_database, "CREATE TABLE `".PREFIX."tags` (
   `rel` varchar(255) NOT NULL,
   `ID` int(11) NOT NULL,
