@@ -136,7 +136,7 @@ function flags($text,$calledfrom = 'root') {
 		$text = str_ireplace ("[flag]".$ds['short']."[/flag]", '<img src="'.$prefix.'images/flags/'.$ds['short'].'.gif" width="18" height="12" border="0" alt="'.$ds['country'].'" />', $text);
 	}
 
-	$text = str_ireplace ("[flag][/flag]", '<img src="'.$prefix.'images/flags/na.gif" width="18" height="12" border="0" alt="'.$_language->module['na'].'" />', $text);
+	$text = str_ireplace ("[flag][/flag]", '<img src="'.$prefix.'images/flags/unknown.gif" width="18" height="12" border="0" alt="'.$_language->module['na'].'" />', $text);
 	$text = str_ireplace ("[flag]", '', $text);
 	$text = str_ireplace ("[/flag]", '', $text);
 
