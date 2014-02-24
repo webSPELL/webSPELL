@@ -2086,17 +2086,21 @@ function update40200_40300() {
      ('', 'Afghanistan', 'af'),
      ('', 'Aland Islands', 'ax'),
      ('', 'Bahamas', 'bs'),
+     ('', 'Saint Barthelemy', 'bl'),
      ('', 'Caribbean Netherlands', 'bq'),
      ('', 'Chad', 'td'),
      ('', 'Curacao', 'cw'),
      ('', 'French Guiana', 'gf'),
      ('', 'Guernsey', 'gg'),
+     ('', 'Equatorial Guinea', 'gq'),
+     ('', 'Canary Islands', 'ic'),
      ('', 'Isle of Man', 'im'),
      ('', 'Jersey', 'je'),
      ('', 'Kosovo', 'xk'),
      ('', 'Martinique', 'mq'),
      ('', 'Mayotte', 'yt'),
      ('', 'Montenegro', 'me'),
+     ('', 'Namibia', 'na'),
      ('', 'Niger', 'ne'),
      ('', 'Saint Barthelemy', 'bl'),
      ('', 'Saint Martin', 'mf'),
@@ -2107,6 +2111,7 @@ function update40200_40300() {
 
   mysqli_query($_database, "UPDATE `".PREFIX."countries` SET Name='Bosnia and Herzegowina' WHERE short = 'ba'");
   mysqli_query($_database, "UPDATE `".PREFIX."countries` SET Name='Brunei' WHERE short = 'bn'");
+  mysqli_query($_database, "UPDATE `".PREFIX."countries` SET Name='Belize' WHERE short = 'bz'");
   mysqli_query($_database, "UPDATE `".PREFIX."countries` SET Name='Ivory Coast' WHERE short = 'ci'");
   mysqli_query($_database, "UPDATE `".PREFIX."countries` SET Name='South Georgia and the South Sandwich Islands' WHERE short = 'gs'");
   mysqli_query($_database, "UPDATE `".PREFIX."countries` SET Name='Kenya' WHERE short = 'ke'");
