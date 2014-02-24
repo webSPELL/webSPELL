@@ -1126,7 +1126,7 @@ VALUES
 ('', 'United Kingdom', 'uk'),
 ('', 'USA', 'us'),
 ('', 'Venezuela', 've'),
-('', 'Yugoslavia', 'yu'),
+('', 'Yugoslavia', 'rs'),
 ('', 'European Union', 'eu')");
 
 	//smileys
@@ -2075,7 +2075,7 @@ function update40200_40300() {
       ('', 'persian', 'ir', 'persian'),
       ('', 'romanian', 'ro', 'romanian'),
       ('', 'russian', 'ru', 'russian'),
-      ('', 'serbian', 'yu', 'serbian'),
+      ('', 'serbian', 'rs', 'serbian'),
       ('', 'slovenian', 'si', 'slovenian'),
       ('', 'latvian', 'lv', 'latvian'),
       ('', 'finnish', 'fi', 'finnish')");
@@ -2136,7 +2136,7 @@ function update40200_40300() {
   mysqli_query($_database, "DELETE FROM `".PREFIX."countries` WHERE `short` = 'sj'");
   mysqli_query($_database, "DELETE FROM `".PREFIX."countries` WHERE `short` = 'ti'");
   mysqli_query($_database, "DELETE FROM `".PREFIX."countries` WHERE `short` = 'wa'");
-  mysqli_query($_database, "DELETE FROM `".PREFIX."countries` WHERE `short` = 'yu'");
+  mysqli_query($_database, "DELETE FROM `".PREFIX."countries` WHERE `short` = 'rs'");
   mysqli_query($_database, "DELETE FROM `".PREFIX."countries` WHERE `short` = ''");
 
   mysqli_query($_database, "CREATE TABLE `".PREFIX."tags` (
