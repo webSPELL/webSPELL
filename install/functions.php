@@ -2107,7 +2107,7 @@ function update40200_40300() {
       ('', 'persian', 'ir', 'persian'),
       ('', 'romanian', 'ro', 'romanian'),
       ('', 'russian', 'ru', 'russian'),
-      ('', 'serbian', 'yu', 'serbian'),
+      ('', 'serbian', 'rs', 'serbian'),
       ('', 'slovenian', 'si', 'slovenian'),
       ('', 'latvian', 'lv', 'latvian'),
       ('', 'finnish', 'fi', 'finnish'),
