@@ -47,7 +47,6 @@ $language_array = Array(
 Je registratie op %pagetitle% (%homepage_url%) was successvol. Je account informatie::
 
 Login naam: %username%
-Wachtwoord: %password%
 
 Om je registratie te voltooien moet je op de volgende link klikken:
 %activationlink%

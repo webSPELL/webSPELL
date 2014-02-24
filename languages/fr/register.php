@@ -47,7 +47,6 @@ $language_array = Array(
 Votre inscription à %pagetitle% (%homepage_url%) a été prise en compte. Informations sur votre compte:
 
 Pseudo: %username%
-Mot de passe: %password%
 
 Pour compléter votre inscription vous devez activer votre compte en cliquant sur le lien suivant:
 %activationlink%

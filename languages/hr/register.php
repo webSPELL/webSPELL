@@ -47,7 +47,6 @@ $language_array = Array(
 Vaša registracija na %pagetitle% (%homepage_url%) je uspješna. Podaci za prijavu:
 
 Korisničko ime: %username%
-Lozinka: %password%
 
 Da bi završili vašu registraciju, morate kliknuti na aktivacijski link:
 %activationlink%

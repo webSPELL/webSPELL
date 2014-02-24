@@ -48,7 +48,6 @@ $language_array = Array(
 Su registreerimine %pagetitle% (%homepage_url%) lehel oli edukas. Su konto andmed:
 
 Kasutajanimi: %username%
-Parool: %password%
 
 Registreerumise lõpetamiseks pead sa konto aktiveerima klikkides järgmisel lingil:
 %activationlink%

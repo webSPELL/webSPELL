@@ -47,7 +47,6 @@ $language_array = Array(
 Your registering at %pagetitle% (%homepage_url%) was successful. Your account data:
 
 Login name: %username%
-Password: %password%
 
 To finish your registration you have to activate your account by clicking the following link:
 %activationlink%

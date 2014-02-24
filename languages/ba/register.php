@@ -43,7 +43,15 @@ $language_array = Array(
   'mail_failed'=>'Aktivacijski e-mail nije bilo moguće poslati, molimo kontaktirajte webmastera o ovome.',
   'mail_inuse'=>'Navedena e-mail adresa se već koristi.',
   'mail_subject'=>'Aktivacijski mail za račun na %homepage_url%',
-  'mail_text'=>'Selam %username%!rnrnVaša registracija na %pagetitle% (%homepage_url%) je uspješna. Podaci za prijavu:rnrnKorisničko ime: %username%rnLozinka: %password%rnrnDa bi završili vašu registraciju, morate kliknuti na aktivacijski link:rn%activationlink%rnrnHvala Vam na registracijirn%pagetitle% - %homepage_url%',
+  'mail_text'=>'Selam %username%!
+  Vaša registracija na %pagetitle% (%homepage_url%) je uspješna. Podaci za prijavu:
+  Korisničko ime: %username%
+  Lozinka: %password%
+  Da bi završili vašu registraciju, morate kliknuti na aktivacijski link:
+  %activationlink%
+  
+  Hvala Vam na registraciji
+  %pagetitle% - %homepage_url%',
   'nickname'=>'Nik',
   'nickname_inuse'=>'Nik već koristi neko drugi.',
   'no_register_when_loggedin'=>'Već imate račun kod %pagename%',

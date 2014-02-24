@@ -47,7 +47,6 @@ $language_array = Array(
 Sikeresen regisztráltál a(z) %pagetitle% (%homepage_url%) honlapra . A felhasználói adataid:
 
 Felhasználónév: %username%
-Jelszó: %password%
 
 A regisztráció befejezéséhez kattints az alábbi linkre:
 %activationlink%

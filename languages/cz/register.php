@@ -47,7 +47,6 @@ $language_array = Array(
 Tvoje registrace %pagetitle% (%homepage_url%) proběhla úspěšně. Přihlašovací údaje:
 
 Přihlašovací jméno: %username%
-Heslo: %password%
 
 Registrace je úspěšná nyní klikni na následují odkaz pro aktivaci:
 %activationlink%
