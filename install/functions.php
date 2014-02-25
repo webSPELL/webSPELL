@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /*
 ##########################################################################
 #                                                                        #
@@ -2079,7 +2079,8 @@ function update40200_40300() {
       ('', 'slovenian', 'si', 'slovenian'),
       ('', 'latvian', 'lv', 'latvian'),
       ('', 'finnish', 'fi', 'finnish'),
-      ('', 'turkish', 'tr', 'turkish')");
+      ('', 'turkish', 'tr', 'turkish'),
+      ('', 'albanian', 'al', 'albanian')");
 
   mysqli_query($_database, "CREATE TABLE `".PREFIX."tags` (
   `rel` varchar(255) NOT NULL,
