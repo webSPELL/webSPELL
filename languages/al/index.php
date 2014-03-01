@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /*
 ##########################################################################
 #                                                                        #
@@ -57,6 +57,7 @@ $language_array = Array(
   'squads'=>'ekipet',
   'statistics'=>'statistikat',
   'topics'=>'subjektet',
-  'upcoming_events'=>'evenimentet e ardhshme'
+  'upcoming_events'=>'evenimentet e ardhshme',
+  'tags'=>'tags'
 );
 ?>

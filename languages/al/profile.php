@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /*
 ##########################################################################
 #                                                                        #
@@ -63,6 +63,8 @@ $language_array = Array(
   'galleries'=>'Galeritë',
   'graphiccard'=>'Karta grafike',
   'guestbook'=>'Libri vizitorve',
+  'hdd'=>'Hard disku',
+  'headset'=>'Kufje',
   'homepage'=>'Faqja parë',
   'hp'=>'HP',
   'html_off'=>'HTML është FIKUR',

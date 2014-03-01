@@ -36,6 +36,7 @@ $language_array = Array(
 /* do not edit above this line */
 
   'about_myself'=>'Rreth meje',
+  'activated'=>'aktivizuar',
   'avatar'=>'Avatar:',
   'back'=>'mbrapsht',
   'bbcode'=>'<a href="javascript:MM_openBrWindow(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> është NDEZUR',
@@ -51,6 +52,7 @@ $language_array = Array(
   'country'=>'Shteti',
   'cpu'=>'CPU',
   'date_of_birth'=>'Datëlindja',
+  'deactivated'=>'çaktivizuar',
   'delete_max_230_210'=>'fshij (max230/210)',
   'delete_max_90_90'=>'fshij (max90/90)',
   'e-mail'=>'E-mail',
@@ -63,7 +65,12 @@ $language_array = Array(
   'first_name'=>'Emri',
   'forgot_new_pw'=>'harruat të vendosni password!',
   'forgot_old_pw'=>'harruat të vendosni password-in e vjetër!',
+  'format_date'=>'Formati i datës',
+  'format_time'=>'Format koha',
   'graphiccard'=>'Karta grafike',
+  'guestbook'=>'Libri i të ftuarve',
+  'hdd'=>'Hard disku',
+  'headset'=>'Kufje',
   'hide_e-mail'=>'Fshihe E-mail-in?',
   'homepage'=>'Faqja e Parë',
   'html'=>'HTML është FIKUR',

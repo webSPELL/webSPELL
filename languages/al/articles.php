@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /*
 ##########################################################################
 #                                                                        #
@@ -77,6 +77,7 @@ $language_array = Array(
   'upload_images'=>'Uplodoni imazhet',
   'user_comments'=>'Lejoni komentet e perdoruesve',
   'viewed'=>'Shikime',
-  'visitor_comments'=>'Lejoni komentet e vizituesve'
+  'visitor_comments'=>'Lejoni komentet e vizituesve',
+  'tags'=>'tags'
 );
 ?>

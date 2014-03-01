@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /*
 ##########################################################################
 #                                                                        #
@@ -70,6 +70,7 @@ $language_array = Array(
   'text_contains'=>'Teksti përmban',
   'title_contains'=>'Titulli përmban',
   'too_short'=>'Termi kërkimit shumë i shkurtër. Së paku %min_chars% karaktere',
-  'wrong_securitycode'=>'Vendosët një kod sigurie të gabuar!'
+  'wrong_securitycode'=>'Vendosët një kod sigurie të gabuar!',
+  'no_result' =>'Nuk u gjetën për të hyra "%s"'
 );
 ?>

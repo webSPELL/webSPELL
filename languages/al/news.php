@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /*
 ##########################################################################
 #                                                                        #
@@ -87,6 +87,7 @@ $language_array = Array(
   'view_more'=>'Shih më tepër...',
   'visitor_comments'=>'lejo komentet e vizituesve',
   'written_by'=>'shkruar nga',
-  'yes'=>'po'
+  'yes'=>'po',
+  'tags'=>'tags'
 );
 ?>
