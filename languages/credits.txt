@@ -1,4 +1,4 @@
-##########################################################################
+﻿##########################################################################
 #                                                                        #
 #           Version 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
@@ -52,3 +52,4 @@ sa: BVBPOWER & Madooo (www.xel-naga-core.tk)
 si: BVBPOWER & asandrejas & stane (www.xel-naga-core.tk)
 fi: BVBPOWER & Koppex (www.xel-naga-core.tk)
 tr: BVBPOWER & aqrep (www.xel-naga-core.tk)
+al: BVBPOWER & AngryRhino (www.xel-naga-core.tk)
