@@ -70,7 +70,7 @@ $language_array = Array(
   'text_contains'=>'Текстът съдържа',
   'title_contains'=>'Заглавието съдържа',
   'too_short'=>'Терминът за търсене е твърде кратък. Най-малко %min_chars% символа',
-  'wrong_securitycode'=>'Въвели сте грешен код за сигурност!'
+  'wrong_securitycode'=>'Въвели сте грешен код за сигурност!',
   'no_result' =>'Не са намерени записи за "%s"'
 );
 ?>
