@@ -2080,7 +2080,8 @@ function update40200_40300() {
       ('', 'latvian', 'lv', 'latvian'),
       ('', 'finnish', 'fi', 'finnish'),
       ('', 'turkish', 'tr', 'turkish'),
-      ('', 'albanian', 'al', 'albanian')");
+      ('', 'albanian', 'al', 'albanian'),
+      ('', 'bulgarian', 'bg', 'bulgarian')");
 
   mysqli_query($_database, "CREATE TABLE `".PREFIX."tags` (
   `rel` varchar(255) NOT NULL,
