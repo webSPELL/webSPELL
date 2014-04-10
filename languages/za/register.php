@@ -62,7 +62,7 @@ Dankie vir u registrasie
 %pagetitle% - %homepage_url%',
   'nickname'=>'Bynaam',
   'nickname_inuse'=>'Bynaam reeds in gebruik.',
-  'no_register_when_loggedin'=>'Jy het reeds 'n rekening het by %pagename%',
+  'no_register_when_loggedin'=>'Jy het reeds \'n rekening het by %pagename%',
   'password'=>'wagwoord',
   'profile_info'=>'Registratiegegevens',
   'register_now'=>'Registreer nou!',
