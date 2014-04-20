@@ -25,48 +25,30 @@
 ##########################################################################
 */
 
-$language_array = Array(
-	'access_denied'=>'Access denied',
-	'modrewrite'=>'ModRewrite',
-	'add_rule'=>'add rule',
-	'variables'=>'Variables',
-	'variable'=>'Variable',
-	'type'=>'Type',
-	'more'=>'more',
-	'url'=>'URL',
-	'replace'=>'Replace',
-	'save_rule'=>'save rule',
-	'edit_rule'=>'edit rule',
-	'transaction_invalid'=>'Transaction ID invalid',
-	'modrewrite_settings'=>'ModRewrite Settings',
-	'modrewrite_rules'=>'ModRewrite Rules',
-	'apache_with_module'=>'Apache with PHP-Module',
-	'modrewrite_is_enabled'=>'mod_rewrite is enabled in httpd.conf',
-	'modrewrite_is_disabled'=>'mod_rewrite is not enabled in httpd.conf',
-	'apache_with_cgi'=>'Apache with cgi and php',
-	'unsupported_webserver'=>'Unsupported Webserver',
-	'can_not_write_file'=>'Can\'t write %s<br/>Check chmod and try again',
-	'fopen_disabled'=>'url_fopen is disabled. Bypassed by ajax test',
-	'modrewrite_failed'=>'mod_rewrite failed',
-	'htaccess_failed'=>'.htaccess failed / Server error',
-	'test_successful'=>'Test successful',
-	'unexpected_result'=>'unexpected result',
-	'result'=>'Result',
-	'debug'=>'Debug',
-	'enable'=>'enable',
-	'htaccess_exists_merge'=>'There is already a .htaccess. Please merge with .htaccess_ws',
-	'successful'=>'successful',
-	'state'=>'State',
-	'enabled'=>'enabled',
-	'disable'=>'disable',
-	'new_rule'=>'new rule',
-	'rule'=>'rule',
-	'actions'=>'actions',
-	'edit'=>'edit',
-	'delete'=>'delete',
-	'really_delete'=>'Really delete?',
-	'no_entries'=>'no entries',
-	'test_support'=>'test support',
-	'rebuild'=>'Rebuild URLs'
-	);
+function redirect($url, $info, $time=1) {
+	if($url=="back" AND $info!='' AND isset($_SERVER['HTTP_REFERER'])) {
+		$url = $_SERVER['HTTP_REFERER'];
+		$info = '';
+	} elseif($url=="back" AND $info!='') {
+		$url = $info;
+		$info = '';
+	}
+	echo'<meta http-equiv="refresh" content="'.$time.';URL='.$url.'" />
+  <br /><p style="color:#000000">'.$info.'</p><br /><br />';
+}
+
+function isStaticPage($staticID = null){
+	if($GLOBAL['site'] != "static"){
+		return false;
+	}
+
+	if($staticID != null){
+		if($_GET['staticID'] != $staticID){
+			return false;
+		}
+	}
+	
+	return true;
+}
+
 ?>

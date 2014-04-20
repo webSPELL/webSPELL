@@ -127,6 +127,16 @@ function wantmail($userID) {
 	return $anz;
 }
 
+function getusercomments($userID, $type) {
+	$anz=mysqli_num_rows(safe_query("SELECT commentID FROM `".PREFIX."comments` WHERE userID='".$userID."' AND type='".$type."'"));
+	return $anz;
+}
+
+function getallusercomments($userID){
+	$anz=mysqli_num_rows(safe_query("SELECT commentID FROM `".PREFIX."comments` WHERE userID='".$userID."'"));
+	return $anz;
+}
+
 function isbuddy($userID, $buddy) {
 	$anz=mysqli_num_rows(safe_query("SELECT userID FROM ".PREFIX."buddys WHERE buddy='".$buddy."' AND userID='".$userID."'"));
 	if($anz) {

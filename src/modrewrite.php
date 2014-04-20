@@ -5,10 +5,12 @@ class ModRewrite {
 	private $translation = array();
 
 	private $cache = null;
+	private static $rewriteBase;
 	public function __construct(){
 		$this->translation['integer'] = array('replace'=>'([0-9]+)','rebuild'=>'([0-9]+?)');
 		$this->translation['string'] = array('replace'=>'(\w*?)','rebuild'=>'(\w*?)');
 		$this->translation['everything'] = array('replace'=>'([^\'\\"]*)','rebuild'=>'([^\'\\"]*)');
+		$GLOBALS['rewriteBase'] = $this->getRewriteBase();
 	}
 
 	public function getTypes(){
@@ -50,22 +52,25 @@ class ModRewrite {
 
 	private function buildCache(){
 		$this->cache = array();
-		$get = safe_query("SELECT * FROM ".PREFIX."modrewrite ORDER BY link DESC");
+		$get = safe_query("SELECT replace_regex, replace_result FROM ".PREFIX."modrewrite ORDER BY link DESC");
 		while($ds = mysqli_fetch_assoc($get)){
 			$this->cache[] = $ds;
 		}
 	}
 
 	public function getRewriteBase(){
-		$path = str_replace(realpath($_SERVER['DOCUMENT_ROOT']),'',realpath(__DIR__.'/../'));
-		$path = str_replace('\\','/',$path);
-		if($path[0] != '/'){
-			$path = '/'.$path;
+		if(!isset(self::$rewriteBase)){
+			$path = str_replace(realpath($_SERVER['DOCUMENT_ROOT']),'',realpath(__DIR__.'/../'));
+			$path = str_replace('\\','/',$path);
+			if($path[0] != '/'){
+				$path = '/'.$path;
+			}
+			if($path[strlen($path)-1] != '/'){
+				$path = $path.'/';
+			}
+			self::$rewriteBase = $path;
 		}
-		if($path[strlen($path)-1] != '/'){
-			$path = $path.'/';
-		}
-		return $path;
+		return self::$rewriteBase;
 	}
 
 	public function rewriteHeaders(){
@@ -83,23 +88,24 @@ class ModRewrite {
 
 	private function rewrite($content, $headers = false){
 		$start_time = microtime(true);
-		if(stristr($content, "MM_goToURL") || stristr($content, "MM_openBrWindow")){
-			$onclick_rewrite = true;
+		if(stristr($content, "MM_goToURL") || stristr($content, "MM_openBrWindow") || stristr($content,'http-equiv="refresh"')){
+			$extended_replace = true;
 		}
 		else{
-			$onclick_rewrite = false;
+			$extended_replace = false;
 		}
 		foreach($this->cache as $ds){
 			$regex = $ds['replace_regex'];
 			$replace = $ds['replace_result'];
 			if($headers == true){
-				$content = preg_replace("/()()Location:\s".$regex."/si",'Location: '.$this->getRewriteBase().$replace,$content);
-				print_r($content);
+				$content = preg_replace("/()()Location:\s".$regex."/i",'Location: '.$this->getRewriteBase().$replace,$content);
 			}
 			else{
-				$content = preg_replace("/(href|action)=(['\"])".$regex."[\"']/si",'$1=$2'.$replace.'$2',$content);
-				if($onclick_rewrite){
-					$content = preg_replace("/onclick=(['\"])(MM_openBrWindow\(|MM_goToURL\('parent',)'".$regex."'/si",'onclick=$1$2\''.$replace.'\'',$content);
+				$content = preg_replace("/(href|action|option value)=(['\"])".$regex."[\"']/iS",'$1=$2'.$replace.'$2',$content);
+				if($extended_replace){
+					$content = preg_replace("/onclick=(['\"])(MM_openBrWindow\(|MM_goToURL\('parent',|MM_confirm\('.*?',\s)'".$regex."'/Si",'onclick=$1$2\''.$replace.'\'',$content);
+					$content = preg_replace("/href=(['\"])(javascript:MM_openBrWindow\(|MM_openBrWindow\(|MM_goToURL\('parent',)'".$regex."'/Si",'href=$1$2\''.$replace.'\'',$content);
+					$content = preg_replace("/()(<meta .*?;URL=)".$regex."\"/Si",'$2'.$this->getRewriteBase().$replace.'"',$content);
 				}
 				//$content = preg_replace("/()onclick=(['\"])MM_goToURL\('parent','".$regex."'/si",'onclick=$2MM_goToURL(\'parent\',\''.$replace.'\'',$content);
 			}
@@ -113,9 +119,10 @@ class ModRewrite {
 		$regex = str_replace(array('.','?','&','/'),array('\.','\?','[&|&amp;]*','\/'),$regex);
 		if(count($fields)){
 			$i=3;
-			foreach($fields as $key => $field){
-				$regex = str_replace("{".$key."}",$this->translation[$field]['replace'],$regex);
-				$replace = str_replace("{".$key."}",'$'.$i,$replace);
+			preg_match_all("/{(\w*)}/si",$regex,$matches,PREG_SET_ORDER);
+			foreach($matches as $field){
+				$regex = str_replace("{".$field[1]."}",$this->translation[$fields[$field[1]]]['replace'],$regex);
+				$replace = str_replace("{".$field[1]."}",'$'.$i,$replace);
 				$i++;
 			}
 		}

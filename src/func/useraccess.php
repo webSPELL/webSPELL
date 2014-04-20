@@ -123,15 +123,6 @@ function isbanned($userID) {
 	return $anz;
 }
 
-function getusercomments($userID, $type) {
-	$anz=mysqli_num_rows(safe_query("SELECT commentID FROM `".PREFIX."comments` WHERE userID='".$userID."' AND type='".$type."'"));
-	return $anz;
-}
-
-function getallusercomments($userID){
-	$anz=mysqli_num_rows(safe_query("SELECT commentID FROM `".PREFIX."comments` WHERE userID='".$userID."'"));
-	return $anz;
-}
 function iscommentposter($userID,$commID) {
 	if(!$userID OR !$commID) return false;
 	else {

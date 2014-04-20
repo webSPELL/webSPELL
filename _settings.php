@@ -26,9 +26,8 @@
 */
 
 // -- ERROR REPORTING -- //
-
-define('DEBUG', "OFF");
-error_reporting(0); // 0 = public mode, E_ALL = development-mode
+define('DEBUG', "ON");
+error_reporting(E_ALL); // 0 = public mode, E_ALL = development-mode
 
 // -- SET ENCODING FOR MB-FUNCTIONS -- //
 
@@ -56,22 +55,26 @@ if(DEBUG=="OFF") if(file_exists('install/index.php')) system_error('The install-
 
 // -- GENERAL PROTECTIONS -- //
 
-function globalskiller() {		// kills all non-system variables
+if(function_exists("globalskiller") == false){
+	function globalskiller() {		// kills all non-system variables
 
-  $global = array('GLOBALS', '_POST', '_GET', '_COOKIE', '_FILES', '_SERVER', '_ENV',  '_REQUEST', '_SESSION', '_database');
-  foreach ($GLOBALS as $key=>$val) {
-  	if(!in_array($key, $global)) {
-  		if(is_array($val)) unset_array($GLOBALS[$key]);
-  		else unset($GLOBALS[$key]);
-  	}
-  }
+	  $global = array('GLOBALS', '_POST', '_GET', '_COOKIE', '_FILES', '_SERVER', '_ENV',  '_REQUEST', '_SESSION', '_database');
+	  foreach ($GLOBALS as $key=>$val) {
+	  	if(!in_array($key, $global)) {
+	  		if(is_array($val)) unset_array($GLOBALS[$key]);
+	  		else unset($GLOBALS[$key]);
+	  	}
+	  }
+	}
 }
 
-function unset_array($array) {
+if(function_exists("unset_array") == false){
+	function unset_array($array) {
 
-	foreach($array as $key) {
-		if(is_array($key)) unset_array($key);
-		else unset($key);
+		foreach($array as $key) {
+			if(is_array($key)) unset_array($key);
+			else unset($key);
+		}
 	}
 }
 

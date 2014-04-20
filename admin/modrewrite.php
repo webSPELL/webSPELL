@@ -264,9 +264,9 @@ elseif(isset($_POST['test'])){
         RewriteBase '.$path.'
         RewriteCond %{REQUEST_FILENAME} !-f
         RewriteCond %{REQUEST_FILENAME} !-d
-        RewriteRule (.*) index.php?q=$1
-        </IfModule>';
-        file_put_contents($folder.'/index.php','Test successful');
+        RewriteRule (.*) test.php?q=$1
+</IfModule>';
+        file_put_contents($folder.'/test.php','Test successful');
         $written = @file_put_contents($folder.'/'.$file, $content);
 
         if($written == false){
@@ -307,7 +307,7 @@ elseif(isset($_POST['test'])){
             }
         }
         if($unlink){
-            unlink($folder.'/index.php');
+            unlink($folder.'/test.php');
             unlink($folder.'/'.$file);
             rmdir($folder);
         }
@@ -346,7 +346,7 @@ elseif(isset($_POST['enable'])){
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteRule ^(.*)$ _rewrite.php?url=$1 [L,QSA]
-    </IfModule>';
+</IfModule>';
 
     $info = '';
     if(file_exists($folder.'/'.$file)){
@@ -410,7 +410,7 @@ else {
 
     echo'<h1>&curren; '.$_language->module['modrewrite_rules'].'</h1>';
 
-    echo'<input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=modrewrite&amp;action=add\');return document.MM_returnValue" value="'.$_language->module['new_rule'].'" /><br /><br />';
+    echo'<input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=modrewrite&amp;action=add\');return document.MM_returnValue" value="'.$_language->module['new_rule'].'" /> ';
     echo'<input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=modrewrite&amp;action=rebuild\');return document.MM_returnValue" value="'.$_language->module['rebuild'].'" /><br /><br />';
 
     echo'
@@ -421,7 +421,7 @@ else {
     <td width="25%" class="title"><b>'.$_language->module['actions'].'</b></td>
     </tr>';
 
-    $ds=safe_query("SELECT * FROM ".PREFIX."modrewrite");
+    $ds=safe_query("SELECT * FROM ".PREFIX."modrewrite ORDER BY regex");
     $anz=mysqli_num_rows($ds);
     if($anz) {
 
