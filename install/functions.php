@@ -1999,7 +1999,7 @@ function update40200_40300() {
 	global $_database;
 	
   mysqli_query($_database, "DROP TABLE IF EXISTS `".PREFIX."forum_posts_spam`");
-	mysqli_query($_database, "CREATE TABLE `".PREFIX."forum_posts_spam` (
+  mysqli_query($_database, "CREATE TABLE `".PREFIX."forum_posts_spam` (
     `postID` int(11) NOT NULL AUTO_INCREMENT,
     `boardID` int(11) NOT NULL default '0',
     `topicID` int(11) NOT NULL default '0',
@@ -2010,8 +2010,8 @@ function update40200_40300() {
     PRIMARY KEY (`postID`)
     ) AUTO_INCREMENT=1 ");
 
-	mysqli_query($_database, "DROP TABLE IF EXISTS `".PREFIX."forum_topics_spam`");
-	mysqli_query($_database, "CREATE TABLE `".PREFIX."forum_topics_spam` (
+  mysqli_query($_database, "DROP TABLE IF EXISTS `".PREFIX."forum_topics_spam`");
+  mysqli_query($_database, "CREATE TABLE `".PREFIX."forum_topics_spam` (
     `topicID` int(11) NOT NULL AUTO_INCREMENT,
     `boardID` int(11) NOT NULL,
     `userID` int(11) NOT NULL,
@@ -2024,8 +2024,8 @@ function update40200_40300() {
     PRIMARY KEY (`topicID`)
     ) AUTO_INCREMENT=1 ");
 
-	mysqli_query($_database, "DROP TABLE IF EXISTS `".PREFIX."comments_spam`");
-	mysqli_query($_database, "CREATE TABLE `".PREFIX."comments_spam` (
+  mysqli_query($_database, "DROP TABLE IF EXISTS `".PREFIX."comments_spam`");
+  mysqli_query($_database, "CREATE TABLE `".PREFIX."comments_spam` (
     `commentID` int(11) NOT NULL AUTO_INCREMENT,
     `parentID` int(11) NOT NULL DEFAULT '0',
     `type` char(2) NOT NULL DEFAULT '',
@@ -2040,7 +2040,7 @@ function update40200_40300() {
     PRIMARY KEY (`commentID`)
     ) AUTO_INCREMENT=1 ");
 
-	mysqli_query($_database, "CREATE TABLE `".PREFIX."api_log` (
+  mysqli_query($_database, "CREATE TABLE `".PREFIX."api_log` (
     `date` int(11) NOT NULL,
     `message` varchar(255) NOT NULL,
     `data` text NOT NULL
@@ -2166,6 +2166,7 @@ function update40200_40300() {
   mysqli_query($_database,"INSERT INTO `".PREFIX."modrewrite` (`regex`, `link`, `fields`, `replace_regex`, `replace_result`, `rebuild_regex`, `rebuild_result`) VALUES('forum.html','index.php?site=forum','a:0:{}','index\\\\.php\\\\?site=forum','forum.html','forum\\\\.html','index.php?site=forum')");
   mysqli_query($_database,"INSERT INTO `".PREFIX."modrewrite` (`regex`, `link`, `fields`, `replace_regex`, `replace_result`, `rebuild_regex`, `rebuild_result`) VALUES('forum/{action}/board/{board}.html','index.php?site=forum&board={board}&action={action}','a:2:{s:5:\"board\";s:7:\"integer\";s:6:\"action\";s:6:\"string\";}','index\\\\.php\\\\?site=forum[&|&amp;]*board=([0-9]+)[&|&amp;]*action=(\\\\w*?)','forum/$4/board/$3.html','forum\\\\/(\\\\w*?)\\\\/board\\\\/([0-9]+?)\\\\.html','index.php?site=forum&board=$2&action=$1')");
   mysqli_query($_database,"INSERT INTO `".PREFIX."modrewrite` (`regex`, `link`, `fields`, `replace_regex`, `replace_result`, `rebuild_regex`, `rebuild_result`) VALUES('forum/action.html','forum.php','a:0:{}','forum\\\\.php','forum/action.html','forum\\\\/action\\\\.html','forum.php')");
+  mysqli_query($_database,"INSERT INTO `".PREFIX."modrewrite` (`regex`, `link`, `fields`, `replace_regex`, `replace_result`, `rebuild_regex`, `rebuild_result`) VALUES('forum/actions/markall.html','index.php?site=forum&action=markall','a:0:{}','index\\\\.php\\\\?site=forum[&|&amp;]*action=markall','forum/actions/markall.html','forum\\\\/actions\\\\/markall\\\\.html','index.php?site=forum&action=markall')");
   mysqli_query($_database,"INSERT INTO `".PREFIX."modrewrite` (`regex`, `link`, `fields`, `replace_regex`, `replace_result`, `rebuild_regex`, `rebuild_result`) VALUES('forum/board/{board}.html','index.php?site=forum&board={board}','a:1:{s:5:\"board\";s:7:\"integer\";}','index\\\\.php\\\\?site=forum[&|&amp;]*board=([0-9]+)','forum/board/$3.html','forum\\\\/board\\\\/([0-9]+?)\\\\.html','index.php?site=forum&board=$1')");
   mysqli_query($_database,"INSERT INTO `".PREFIX."modrewrite` (`regex`, `link`, `fields`, `replace_regex`, `replace_result`, `rebuild_regex`, `rebuild_result`) VALUES('forum/board/{board}/addtopic.html','index.php?site=forum&addtopic=true&board={board}','a:1:{s:5:\"board\";s:7:\"integer\";}','index\\\\.php\\\\?site=forum[&|&amp;]*addtopic=true[&|&amp;]*board=([0-9]+)','forum/board/$3/addtopic.html','forum\\\\/board\\\\/([0-9]+?)\\\\/addtopic\\\\.html','index.php?site=forum&addtopic=true&board=$1')");
   mysqli_query($_database,"INSERT INTO `".PREFIX."modrewrite` (`regex`, `link`, `fields`, `replace_regex`, `replace_result`, `rebuild_regex`, `rebuild_result`) VALUES('forum/cat/{cat}.html','index.php?site=forum&cat={cat}','a:1:{s:3:\"cat\";s:7:\"integer\";}','index\\\\.php\\\\?site=forum[&|&amp;]*cat=([0-9]+)','forum/cat/$3.html','forum\\\\/cat\\\\/([0-9]+?)\\\\.html','index.php?site=forum&cat=$1')");
@@ -2231,7 +2232,7 @@ function update40200_40300() {
   mysqli_query($_database,"INSERT INTO `".PREFIX."modrewrite` (`regex`, `link`, `fields`, `replace_regex`, `replace_result`, `rebuild_regex`, `rebuild_result`) VALUES('profile/password.html','index.php?site=myprofile&action=editpwd','a:0:{}','index\\\\.php\\\\?site=myprofile[&|&amp;]*action=editpwd','profile/password.html','profile\\\\/password\\\\.html','index.php?site=myprofile&action=editpwd')");
   mysqli_query($_database,"INSERT INTO `".PREFIX."modrewrite` (`regex`, `link`, `fields`, `replace_regex`, `replace_result`, `rebuild_regex`, `rebuild_result`) VALUES('register.html','index.php?site=register','a:0:{}','index\\\\.php\\\\?site=register','register.html','register\\\\.html','index.php?site=register')");
   mysqli_query($_database,"INSERT INTO `".PREFIX."modrewrite` (`regex`, `link`, `fields`, `replace_regex`, `replace_result`, `rebuild_regex`, `rebuild_result`) VALUES('search.html','index.php?site=search','a:0:{}','index\\\\.php\\\\?site=search','search.html','search\\\\.html','index.php?site=search')");
-  mysqli_query($_database,"INSERT INTO `".PREFIX."modrewrite` (`regex`, `link`, `fields`, `replace_regex`, `replace_result`, `rebuild_regex`, `rebuild_result`) VALUES('search/search.html','index.php?site=search&action=search','a:0:{}','index\\\\.php\\\\?site=search[&|&amp;]*action=search','search/search.html','search\\\\/search\\\\.html','index.php?site=search&action=search')");
+  mysqli_query($_database,"INSERT INTO `".PREFIX."modrewrite` (`regex`, `link`, `fields`, `replace_regex`, `replace_result`, `rebuild_regex`, `rebuild_result`) VALUES('search/results.html','index.php?site=search&action=search','a:0:{}','index\\\\.php\\\\?site=search[&|&amp;]*action=search','search/results.html','search\\\\/results\\\\.html','index.php?site=search&action=search')");
   mysqli_query($_database,"INSERT INTO `".PREFIX."modrewrite` (`regex`, `link`, `fields`, `replace_regex`, `replace_result`, `rebuild_regex`, `rebuild_result`) VALUES('search/submit.html','search.php','a:0:{}','search\\\\.php','search/submit.html','search\\\\/submit\\\\.html','search.php')");
   mysqli_query($_database,"INSERT INTO `".PREFIX."modrewrite` (`regex`, `link`, `fields`, `replace_regex`, `replace_result`, `rebuild_regex`, `rebuild_result`) VALUES('server.html','index.php?site=server','a:0:{}','index\\\\.php\\\\?site=server','server.html','server\\\\.html','index.php?site=server')");
   mysqli_query($_database,"INSERT INTO `".PREFIX."modrewrite` (`regex`, `link`, `fields`, `replace_regex`, `replace_result`, `rebuild_regex`, `rebuild_result`) VALUES('shoutbox.html','index.php?site=shoutbox_content&action=showall','a:0:{}','index\\\\.php\\\\?site=shoutbox_content[&|&amp;]*action=showall','shoutbox.html','shoutbox\\\\.html','index.php?site=shoutbox_content&action=showall')");
@@ -2247,8 +2248,8 @@ function update40200_40300() {
   mysqli_query($_database,"INSERT INTO `".PREFIX."modrewrite` (`regex`, `link`, `fields`, `replace_regex`, `replace_result`, `rebuild_regex`, `rebuild_result`) VALUES('users/{type}/{sort}/{page}.html','index.php?site=registered_users&page={page}&sort={sort}&type={type}','a:3:{s:4:\"page\";s:7:\"integer\";s:4:\"sort\";s:6:\"string\";s:4:\"type\";s:6:\"string\";}','index\\\\.php\\\\?site=registered_users[&|&amp;]*page=([0-9]+)[&|&amp;]*sort=(\\\\w*?)[&|&amp;]*type=(\\\\w*?)','users/$5/$4/$3.html','users\\\\/(\\\\w*?)\\\\/(\\\\w*?)\\\\/([0-9]+?)\\\\.html','index.php?site=registered_users&page=$3&sort=$2&type=$1')");
   mysqli_query($_database,"INSERT INTO `".PREFIX."modrewrite` (`regex`, `link`, `fields`, `replace_regex`, `replace_result`, `rebuild_regex`, `rebuild_result`) VALUES('users/ASC/{sort}/{page}.html','index.php?site=registered_users&sort={sort}&page={page}','a:2:{s:4:\"sort\";s:6:\"string\";s:4:\"page\";s:7:\"integer\";}','index\\\\.php\\\\?site=registered_users[&|&amp;]*sort=(\\\\w*?)[&|&amp;]*page=([0-9]+)','users/ASC/$3/$4.html','users\\\\/ASC\\\\/(\\\\w*?)\\\\/([0-9]+?)\\\\.html','index.php?site=registered_users&sort=$1&page=$2')");
   mysqli_query($_database,"INSERT INTO `".PREFIX."modrewrite` (`regex`, `link`, `fields`, `replace_regex`, `replace_result`, `rebuild_regex`, `rebuild_result`) VALUES('whoisonline.html','index.php?site=whoisonline','a:0:{}','index\\\\.php\\\\?site=whoisonline','whoisonline.html','whoisonline\\\\.html','index.php?site=whoisonline')");
+  mysqli_query($_database,"INSERT INTO `".PREFIX."modrewrite` (`regex`, `link`, `fields`, `replace_regex`, `replace_result`, `rebuild_regex`, `rebuild_result`) VALUES('whoisonline.html#was','index.php?site=whoisonline#was','a:0:{}','index\\\\.php\\\\?site=whoisonline#was','whoisonline.html#was','whoisonline\\\\.html#was','index.php?site=whoisonline#was')");
   mysqli_query($_database,"INSERT INTO `".PREFIX."modrewrite` (`regex`, `link`, `fields`, `replace_regex`, `replace_result`, `rebuild_regex`, `rebuild_result`) VALUES('whoisonline/{sort}/{type}.html','index.php?site=whoisonline&sort={sort}&type={type}','a:2:{s:4:\"sort\";s:6:\"string\";s:4:\"type\";s:6:\"string\";}','index\\\\.php\\\\?site=whoisonline[&|&amp;]*sort=(\\\\w*?)[&|&amp;]*type=(\\\\w*?)','whoisonline/$3/$4.html','whoisonline\\\\/(\\\\w*?)\\\\/(\\\\w*?)\\\\.html','index.php?site=whoisonline&sort=$1&type=$2')");
-
 }
 
 ?>
