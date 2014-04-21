@@ -372,6 +372,13 @@ if(!isset($_SERVER['HTTP_REFERER'])) {
 	$_SERVER['HTTP_REFERER'] = "";
 }
 
+if (!isset($_SERVER['REQUEST_URI'])) {
+	$_SERVER['REQUEST_URI'] = $_SERVER['PHP_SELF'];
+	if (isset($_SERVER['QUERY_STRING'])) { 
+		$_SERVER['REQUEST_URI'] .= '?'.$_SERVER['QUERY_STRING'];
+	}
+}
+
 // -- BANNED USERS -- //
 if(date("dh",$lastBanCheck) != date("dh")){
 	$get = safe_query("SELECT userID, banned FROM ".PREFIX."user WHERE banned IS NOT NULL");

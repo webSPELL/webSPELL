@@ -45,7 +45,7 @@ if(isset($_GET['new_lang'])) {
 	if(isset($_GET['query'])) {
 
 		$query = rawurldecode($_GET['query']);
-		header("Location: index.php?".$query);
+		header("Location: ./".$query);
 
 	} else header("Location: index.php");
 
@@ -79,9 +79,14 @@ else {
 		closedir($dh);
 	}
 	ksort($langs,SORT_NATURAL);
+
+	$querystring = '';
+	$path = str_replace($GLOBALS['rewriteBase'],'',$_SERVER['REQUEST_URI']);
+	if(!empty($path)){
+		$querystring = "&amp;query=".rawurlencode($path);
+	}
+
 	foreach($langs as $lang=>$flag){
-		$querystring='';
-		if($_SERVER['QUERY_STRING']) $querystring = "&amp;query=".rawurlencode($_SERVER['QUERY_STRING']);
 		echo '<a href="sc_language.php?new_lang='.$flag.$querystring.'" title="'.$lang.'">';
 		if($_language->language == $flag){
 			 echo '<img src="images/haken.gif" alt="'.$lang.'" border="0" style="background-image:url(\'images/flags/'.$flag.'.gif\'); background-position: center;" />';
