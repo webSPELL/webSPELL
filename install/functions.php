@@ -25,9 +25,27 @@
 ##########################################################################
 */
 
+function updateMySQLConfig(){
+  global $_language;
+  include('../_mysql.php');
+  $new_content = '<?php
+$host = '.var_export($host,true).';
+$user = '.var_export($user,true).';
+$pwd = '.var_export($pwd,true).';
+$db = '.var_export($db,true).';
+if(!defined("PREFIX")){
+  define("PREFIX", \''.var_export(PREFIX,true).'\');
+}
+?>';
+  $ret = file_put_contents('../_mysql.php', $new_content);
+  if($ret === false){
+    echo $_language->module['write_failed'];
+  }
+}
+
 function fullinstall() {
 
-    global $_database;
+  global $_database;
 	global $adminname;
 	global $adminpassword;
 	global $adminmail;
@@ -2250,6 +2268,8 @@ function update40200_40300() {
   mysqli_query($_database,"INSERT INTO `".PREFIX."modrewrite` (`regex`, `link`, `fields`, `replace_regex`, `replace_result`, `rebuild_regex`, `rebuild_result`) VALUES('whoisonline.html','index.php?site=whoisonline','a:0:{}','index\\\\.php\\\\?site=whoisonline','whoisonline.html','whoisonline\\\\.html','index.php?site=whoisonline')");
   mysqli_query($_database,"INSERT INTO `".PREFIX."modrewrite` (`regex`, `link`, `fields`, `replace_regex`, `replace_result`, `rebuild_regex`, `rebuild_result`) VALUES('whoisonline.html#was','index.php?site=whoisonline#was','a:0:{}','index\\\\.php\\\\?site=whoisonline#was','whoisonline.html#was','whoisonline\\\\.html#was','index.php?site=whoisonline#was')");
   mysqli_query($_database,"INSERT INTO `".PREFIX."modrewrite` (`regex`, `link`, `fields`, `replace_regex`, `replace_result`, `rebuild_regex`, `rebuild_result`) VALUES('whoisonline/{sort}/{type}.html','index.php?site=whoisonline&sort={sort}&type={type}','a:2:{s:4:\"sort\";s:6:\"string\";s:4:\"type\";s:6:\"string\";}','index\\\\.php\\\\?site=whoisonline[&|&amp;]*sort=(\\\\w*?)[&|&amp;]*type=(\\\\w*?)','whoisonline/$3/$4.html','whoisonline\\\\/(\\\\w*?)\\\\/(\\\\w*?)\\\\.html','index.php?site=whoisonline&sort=$1&type=$2')");
+
+  updateMySQLConfig();
 }
 
 ?>
