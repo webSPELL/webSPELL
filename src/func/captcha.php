@@ -212,6 +212,7 @@ class Captcha {
 		while($ds=mysqli_fetch_array($ergebnis)) {
 			$file='tmp/'.$ds['hash'].'.jpg';
 			if(file_exists($file)) unlink($file);
+			elseif(file_exists('../'.$file)) unlink('../'.$file);
 		}
 		safe_query("DELETE FROM `".PREFIX."captcha` WHERE deltime<".$time);
 	}
