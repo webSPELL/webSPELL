@@ -67,13 +67,14 @@ function getlanguage($lang) {
 }
 
 function select_language($message_array) {
-	$i=0;
-	foreach($message_array as $val) {
-		if($val['lang'] == $_SESSION['language']) $userlang=$i;
-		$i++;
+	if(isset($_SESSION['language'])){
+		$i=0;
+		foreach($message_array as $val) {
+			if($val['lang'] == $_SESSION['language']) return $i;
+			$i++;
+		}
 	}
-	if(isset($userlang)) return $userlang;
-	else return 0;
+	return 0;
 }
 
 function getlanguageid($lang, $message_array) {

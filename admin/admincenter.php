@@ -172,6 +172,7 @@ function addonnav() {
       <li><a href="admincenter.php?site=countries"><?php echo $_language->module['countries']; ?></a></li>
       <li><a href="admincenter.php?site=games"><?php echo $_language->module['games']; ?></a></li>
       <li><a href="admincenter.php?site=smileys"><?php echo $_language->module['smilies']; ?></a></li>
+       <li><a href="admincenter.php?site=modrewrite"><?php echo $_language->module['modrewrite']; ?></a></li>
       <li><a href="admincenter.php?site=database"><?php echo $_language->module['database']; ?></a></li>
       <?php echo admincenternav(5); ?>
       <li><a href="admincenter.php?site=update&amp;action=update"><?php echo $_language->module['update_webspell']; ?></a></li>

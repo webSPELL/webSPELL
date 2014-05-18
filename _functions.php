@@ -246,6 +246,14 @@ systeminc('func/bbcode');
 
 systeminc('func/tags');
 
+// -- Mod Rewrite -- //
+
+systeminc('modrewrite');
+$GLOBALS['_modRewrite'] = new ModRewrite();
+if(!stristr($_SERVER['SCRIPT_NAME'],'/admin/') && $modRewrite){
+    $GLOBALS['_modRewrite']->enable();
+}
+
 function cleartext($text, $bbcode=true, $calledfrom='root') {
 	$text = htmlspecialchars($text);
 	$text = strip_tags($text);
@@ -338,6 +346,13 @@ if($closed AND !isanyadmin($userID)) {
 }
 if(!isset($_SERVER['HTTP_REFERER'])) {
 	$_SERVER['HTTP_REFERER'] = "";
+}
+
+if (!isset($_SERVER['REQUEST_URI'])) {
+	$_SERVER['REQUEST_URI'] = $_SERVER['PHP_SELF'];
+	if (isset($_SERVER['QUERY_STRING'])) { 
+		$_SERVER['REQUEST_URI'] .= '?'.$_SERVER['QUERY_STRING'];
+	}
 }
 
 // -- BANNED USERS -- //
