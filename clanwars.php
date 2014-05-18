@@ -316,7 +316,7 @@ elseif($action=="save") {
 '.stripslashes($opptag).' '.$_language->module['team'].': '.stripslashes($oppteam).'
 
 '.$more1.'
-<a href="index.php?site=clanwars_details&#38;&#97;&#109;&#112;&#59;cwID='.$cwID.'">'.$_languagepagedefault->module['clanwar_details'].'</a>';
+<a href="index.php?site=clanwars_details&amp;cwID='.$cwID.'">'.$_languagepagedefault->module['clanwar_details'].'</a>';
 		$i = 0;
 		$message_vars = "message[".$i."] = '".js_replace($message)."';\n";
 		$headline_vars = "headline[".$i."] = '".js_replace(htmlspecialchars($headline1))."';\n";

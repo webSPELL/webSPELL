@@ -46,6 +46,7 @@ $index_language = $_language->module;
 
 <!-- Head & Title include -->
 <title><?php echo PAGETITLE; ?></title>
+<base href="<?php echo $GLOBALS['_modRewrite']->getRewriteBase();?>" />
 <link href="_stylesheet.css" rel="stylesheet" type="text/css" />
 <link href="tmp/rss.xml" rel="alternate" type="application/rss+xml" title="<?php echo getinput($myclanname); ?> - RSS Feed" />
 <script src="js/bbcode.js" language="jscript" type="text/javascript"></script>

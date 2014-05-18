@@ -118,12 +118,14 @@ elseif($_POST['installtype'] == 'full') {
 	$file = ('../_mysql.php');
 	if($fp = fopen ($file, 'wb')) {
 		$string='<?php
-	 $host = "'.$host.'";
-	 $user = "'.$user.'";
-	 $pwd = "'.$pwd.'";
-	 $db = "'.$db.'";
-	 define("PREFIX", \''.$prefix.'\');
-	?>';
+$host = "'.$host.'";
+$user = "'.$user.'";
+$pwd = "'.$pwd.'";
+$db = "'.$db.'";
+if(!defined("PREFIX")){
+	define("PREFIX", \''.$prefix.'\');
+}
+?>';
 
 		fwrite($fp, $string);
 		fclose($fp);

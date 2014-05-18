@@ -26,9 +26,8 @@
 */
 
 // -- ERROR REPORTING -- //
-
-define('DEBUG', "OFF");
-error_reporting(0); // 0 = public mode, E_ALL = development-mode
+define('DEBUG', "ON");
+error_reporting(E_ALL); // 0 = public mode, E_ALL = development-mode
 
 // -- SET ENCODING FOR MB-FUNCTIONS -- //
 
@@ -46,32 +45,33 @@ if(DEBUG=="OFF" && file_exists('install/index.php')){
 
 // -- CONNECTION TO MYSQL -- //
 
-$_database = @new mysqli($host, $user, $pwd, $db);
 
-if(mysqli_connect_error()) {
-	system_error('ERROR: Can not connect to MySQL-Server<br/>'.mysqli_connect_error());
-}
 
 $_database->query("SET NAMES 'utf8'");
 
+
 // -- GENERAL PROTECTIONS -- //
 
-function globalskiller() {		// kills all non-system variables
+if(function_exists("globalskiller") == false){
+	function globalskiller() {		// kills all non-system variables
 
-  $global = array('GLOBALS', '_POST', '_GET', '_COOKIE', '_FILES', '_SERVER', '_ENV',  '_REQUEST', '_SESSION', '_database');
-  foreach ($GLOBALS as $key=>$val) {
-  	if(!in_array($key, $global)) {
-  		if(is_array($val)) unset_array($GLOBALS[$key]);
-  		else unset($GLOBALS[$key]);
-  	}
-  }
+	  $global = array('GLOBALS', '_POST', '_GET', '_COOKIE', '_FILES', '_SERVER', '_ENV',  '_REQUEST', '_SESSION', '_database');
+	  foreach ($GLOBALS as $key=>$val) {
+	  	if(!in_array($key, $global)) {
+	  		if(is_array($val)) unset_array($GLOBALS[$key]);
+	  		else unset($GLOBALS[$key]);
+	  	}
+	  }
+	}
 }
 
-function unset_array($array) {
+if(function_exists("unset_array") == false){
+	function unset_array($array) {
 
-	foreach($array as $key) {
-		if(is_array($key)) unset_array($key);
-		else unset($key);
+		foreach($array as $key) {
+			if(is_array($key)) unset_array($key);
+			else unset($key);
+		}
 	}
 }
 
@@ -271,6 +271,7 @@ $spamCheckRating = 0.95;
 $default_format_date		= 	$ds['date_format']; 		if(empty($default_format_date)) $default_format_date = 'd.m.Y';
 $default_format_time		= 	$ds['time_format']; 		if(empty($default_format_time)) $default_format_time = 'H:i';
 $user_guestbook				= 	$ds['user_guestbook']; 		if(!isset($user_guestbook)) $user_guestbook = 1;
+$modRewrite					= 	(bool)$ds['modRewrite']; 		if(empty($modRewrite)) $modRewrite = false;
 
 $new_chmod = 0666;
 

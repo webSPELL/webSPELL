@@ -82,6 +82,7 @@ $language_array = Array(
   'spam_user'=>'Nutzer löschen',
   'multiaccounts'=>'Multi-Accounts',
   'api_log'=>'API Log',
-  'blocked_content'=>'Geblockte Inhalte'
+  'blocked_content'=>'Geblockte Inhalte',
+  'modrewrite'=>'Mod-Rewrite'
 );
 ?>
