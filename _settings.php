@@ -44,11 +44,15 @@ if(DEBUG=="OFF" && file_exists('install/index.php')){
 }
 
 // -- CONNECTION TO MYSQL -- //
+if(!isset($GLOBALS['_database'])){
+	$_database = @new mysqli($host, $user, $pwd, $db);
 
+	if(!$_database) {
+		system_error('ERROR: Can not connect to MySQL-Server');
+	}
 
-
-$_database->query("SET NAMES 'utf8'");
-
+	$_database->query("SET NAMES 'utf8'");
+}
 
 // -- GENERAL PROTECTIONS -- //
 
@@ -131,12 +135,12 @@ function safe_query($query="") {
 	if(stristr(str_replace(' ', '', $query), "unionselect")===FALSE AND stristr(str_replace(' ', '', $query), "union(select")===FALSE){
 		$_mysql_querys[] = $query;
 		if(empty($query)) return false;
-		if(DEBUG == "OFF") $result = $_database->query($query) or die('Query failed!');
+		if(DEBUG == "OFF") $result = $_database->query($query) or system_error('Query failed!');
 		else {
-			$result = $_database->query($query) or die('Query failed: '
-			.'<li>errorno='.$_database->errno
-			.'<li>error='.$_database->error
-			.'<li>query='.$query);
+			$result = $_database->query($query) or system_error('Query failed: '
+			.'<ul><li>errorno='.$_database->errno.'</li>'
+			.'<li>error='.$_database->error.'</li>'
+			.'<li>query='.$query.'</li></ul>');
 		}
 		return $result;
 	}

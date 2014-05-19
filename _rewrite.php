@@ -30,10 +30,10 @@ if(basename($_SERVER['SCRIPT_FILENAME']) == basename("_rewrite.php")){
 	$_database = new mysqli($host, $user, $pwd, $db);
 
 	if(!$_database) {
-		system_error('ERROR: Can not connect to MySQL-Server');
+		die('ERROR: Can not connect to MySQL-Server');
 	}
-
 	$_database->query("SET NAMES 'utf8'");
+
 	$_site = null;
 	$start_time = microtime(true);
 	if(isset($_GET['url'])){
