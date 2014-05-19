@@ -1144,7 +1144,7 @@ VALUES
 ('', 'United Kingdom', 'uk'),
 ('', 'USA', 'us'),
 ('', 'Venezuela', 've'),
-('', 'Yugoslavia', 'yu'),
+('', 'Yugoslavia', 'rs'),
 ('', 'European Union', 'eu')");
 
 	//smileys
@@ -2096,7 +2096,7 @@ function update40200_40300() {
       ('', 'persian', 'ir', 'persian'),
       ('', 'romanian', 'ro', 'romanian'),
       ('', 'russian', 'ru', 'russian'),
-      ('', 'serbian', 'yu', 'serbian'),
+      ('', 'serbian', 'rs', 'serbian'),
       ('', 'slovenian', 'si', 'slovenian'),
       ('', 'latvian', 'lv', 'latvian'),
       ('', 'finnish', 'fi', 'finnish'),
@@ -2104,6 +2104,66 @@ function update40200_40300() {
       ('', 'albanian', 'al', 'albanian'),
       ('', 'bulgarian', 'bg', 'bulgarian'),
       ('', 'afrikaans', 'za', 'afrikaans')");
+
+  //edit countries
+  mysqli_query($_database, "INSERT INTO `".PREFIX."countries` ( `countryID` , `country` , `short` )
+    VALUES
+     ('', 'Afghanistan', 'af'),
+     ('', 'Aland Islands', 'ax'),
+     ('', 'Bahamas', 'bs'),
+     ('', 'Saint Barthelemy', 'bl'),
+     ('', 'Caribbean Netherlands', 'bq'),
+     ('', 'Chad', 'td'),
+     ('', 'Curacao', 'cw'),
+     ('', 'French Guiana', 'gf'),
+     ('', 'Guernsey', 'gg'),
+     ('', 'Equatorial Guinea', 'gq'),
+     ('', 'Canary Islands', 'ic'),
+     ('', 'Isle of Man', 'im'),
+     ('', 'Jersey', 'je'),
+     ('', 'Kosovo', 'xk'),
+     ('', 'Martinique', 'mq'),
+     ('', 'Mayotte', 'yt'),
+     ('', 'Montenegro', 'me'),
+     ('', 'Namibia', 'na'),
+     ('', 'Niger', 'ne'),
+     ('', 'Saint Barthelemy', 'bl'),
+     ('', 'Saint Martin', 'mf'),
+     ('', 'Serbia', 'rs'),
+     ('', 'South Sudan', 'ss'),
+     ('', 'Timor-Leste', 'tl')
+  ");
+
+  mysqli_query($_database, "UPDATE `".PREFIX."countries` SET Name='Bosnia and Herzegowina' WHERE short = 'ba'");
+  mysqli_query($_database, "UPDATE `".PREFIX."countries` SET Name='Brunei' WHERE short = 'bn'");
+  mysqli_query($_database, "UPDATE `".PREFIX."countries` SET Name='Belize' WHERE short = 'bz'");
+  mysqli_query($_database, "UPDATE `".PREFIX."countries` SET Name='Ivory Coast' WHERE short = 'ci'");
+  mysqli_query($_database, "UPDATE `".PREFIX."countries` SET Name='South Georgia and the South Sandwich Islands' WHERE short = 'gs'");
+  mysqli_query($_database, "UPDATE `".PREFIX."countries` SET Name='Kenya' WHERE short = 'ke'");
+  mysqli_query($_database, "UPDATE `".PREFIX."countries` SET Name='North Korea' WHERE short = 'kp'");
+  mysqli_query($_database, "UPDATE `".PREFIX."countries` SET Name='South Korea' WHERE short = 'kr'");
+  mysqli_query($_database, "UPDATE `".PREFIX."countries` SET Name='Burma' WHERE short = 'mm'");
+  mysqli_query($_database, "UPDATE `".PREFIX."countries` SET Name='Laos' WHERE short = 'la'");
+  mysqli_query($_database, "UPDATE `".PREFIX."countries` SET Name='Libya' WHERE short = 'ly'");
+  mysqli_query($_database, "UPDATE `".PREFIX."countries` SET Name='Russia' WHERE short = 'ru'");
+  mysqli_query($_database, "UPDATE `".PREFIX."countries` SET Name='Seychelles' WHERE short = 'sc'");
+  mysqli_query($_database, "UPDATE `".PREFIX."countries` SET Name='Slovakia' WHERE short = 'sk'");
+  mysqli_query($_database, "UPDATE `".PREFIX."countries` SET Name='Turks and Caicos Islands' WHERE short = 'tc'");
+  mysqli_query($_database, "UPDATE `".PREFIX."countries` SET Name='Timor-Leste', short='tl' WHERE short = 'tp'");
+  mysqli_query($_database, "UPDATE `".PREFIX."countries` SET Name='Vatican City' WHERE short = 'va'");
+
+  mysqli_query($_database, "DELETE FROM `".PREFIX."countries` WHERE `short` = 'bv'");
+  mysqli_query($_database, "DELETE FROM `".PREFIX."countries` WHERE `short` = 'gp'");
+  mysqli_query($_database, "DELETE FROM `".PREFIX."countries` WHERE `short` = 'hm'");
+  mysqli_query($_database, "DELETE FROM `".PREFIX."countries` WHERE `short` = 'io'");
+  mysqli_query($_database, "DELETE FROM `".PREFIX."countries` WHERE `short` = 'nb'");
+  mysqli_query($_database, "DELETE FROM `".PREFIX."countries` WHERE `short` = 'nx'");
+  mysqli_query($_database, "DELETE FROM `".PREFIX."countries` WHERE `short` = 'pm'");
+  mysqli_query($_database, "DELETE FROM `".PREFIX."countries` WHERE `short` = 'sj'");
+  mysqli_query($_database, "DELETE FROM `".PREFIX."countries` WHERE `short` = 'ti'");
+  mysqli_query($_database, "DELETE FROM `".PREFIX."countries` WHERE `short` = 'wa'");
+  mysqli_query($_database, "DELETE FROM `".PREFIX."countries` WHERE `short` = 'rs'");
+  mysqli_query($_database, "DELETE FROM `".PREFIX."countries` WHERE `short` = ''");
 
   mysqli_query($_database, "CREATE TABLE `".PREFIX."tags` (
   `rel` varchar(255) NOT NULL,
