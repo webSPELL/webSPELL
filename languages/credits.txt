@@ -40,7 +40,7 @@ uk: webspell.org
 pt: SAM|DoDoT (www.sam-clan.com)
 pl: spec8320 & HasH
 ir: BVBPOWER & NucxX (www.xel-naga-core.tk)
-rs: BVBPOWER & Mahalac (www.xel-naga-core.tk)
+yu: BVBPOWER & Mahalac (www.xel-naga-core.tk)
 ba: BVBPOWER & Mahalac (www.xel-naga-core.tk)
 ee: BVBPOWER & Mikk36 (www.xel-naga-core.tk)
 ge: BVBPOWER & Kacho95 (www.xel-naga-core.tk)
@@ -55,3 +55,4 @@ tr: BVBPOWER & aqrep (www.xel-naga-core.tk)
 al: BVBPOWER & AngryRhino (www.xel-naga-core.tk)
 bg: BVBPOWER & neizvesten (www.xel-naga-core.tk)
 za: BVBPOWER & JAHViking (www.xel-naga-core.tk)
+gr: BVBPOWER & dreamer1984 (www.xel-naga-core.tk)
