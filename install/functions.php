@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /*
 ##########################################################################
 #                                                                        #
@@ -2104,6 +2104,7 @@ function update40200_40300() {
       ('', 'albanian', 'al', 'albanian'),
       ('', 'bulgarian', 'bg', 'bulgarian'),
       ('', 'greek', 'gr', 'greek'),
+      ('', 'ukrainian', 'ua', 'ukrainian'),
       ('', 'afrikaans', 'za', 'afrikaans')");
 
   //edit countries
