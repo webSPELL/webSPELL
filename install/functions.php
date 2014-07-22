@@ -880,12 +880,12 @@ VALUES (1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1)");
   `site` varchar(255) NOT NULL default ''
 )");
 
-	sleep(1);
+  @set_time_limit(300);
 
 }
 
 function update31_4beta4() {
-    global $_database;
+  global $_database;
     
 	mysqli_query($_database, "DROP TABLE IF EXISTS `".PREFIX."about`");
 	mysqli_query($_database, "CREATE TABLE `".PREFIX."about` (
@@ -968,10 +968,12 @@ function update31_4beta4() {
 
 	mysqli_query($_database, "ALTER TABLE `".PREFIX."servers` CHANGE `game` `game` CHAR( 3 ) NOT NULL");
 
+  @set_time_limit(300);
+
 }
 
 function update4beta4_4beta5() {
-    global $_database;
+  global $_database;
 
 	mysqli_query($_database, "ALTER TABLE `".PREFIX."settings` ADD `sessionduration` INT( 3 ) NOT NULL");
 	mysqli_query($_database, "ALTER TABLE `".PREFIX."settings` ADD `closed` INT( 1 ) DEFAULT '0' NOT NULL");
@@ -994,6 +996,8 @@ function update4beta4_4beta5() {
   PRIMARY KEY ( `staticID` )
   );");
 
+  @set_time_limit(300);
+
 }
 
 function update4beta5_4beta6() {
@@ -1013,10 +1017,12 @@ PRIMARY KEY ( `imprintID` )
 	mysqli_query($_database, "ALTER TABLE `".PREFIX."files` CHANGE `info` `info` TEXT NOT NULL");
 	mysqli_query($_database, "ALTER TABLE `".PREFIX."user` ADD `homepage` VARCHAR( 255 ) NOT NULL AFTER `newsletter`");
 
+  @set_time_limit(300);
+
 }
 
 function update4beta6_4final() {
-    global $_database;
+  global $_database;
 
 
 	//files
@@ -1249,10 +1255,12 @@ VALUES
 		mysqli_query($_database, "ALTER TABLE `".PREFIX."clanwars` DROP `homescr2`");
 		mysqli_query($_database, "ALTER TABLE `".PREFIX."clanwars` DROP `oppscr2`");
 	}
+
+  @set_time_limit(300);
 }
 
 function update40000_40100() {
-    global $_database;
+  global $_database;
 
 	// FAQ
 	mysqli_query($_database, "DROP TABLE IF EXISTS `".PREFIX."faq`");
@@ -1289,9 +1297,11 @@ function update40000_40100() {
 	mysqli_query($_database, "ALTER TABLE `".PREFIX."user` DROP `birthday`");
 	mysqli_query($_database, "ALTER TABLE `".PREFIX."user` CHANGE `birthday2` `birthday` DATETIME DEFAULT '0000-00-00 00:00:00' NOT NULL");
 
+  @set_time_limit(300);
+
 }
 function update40100_40101() {
-    global $_database;
+  global $_database;
 
 	//forum speedfix
 	mysqli_query($_database, "ALTER TABLE `".PREFIX."forum_boards` ADD `topics` INT DEFAULT '0' NOT NULL");
@@ -1323,9 +1333,11 @@ function update40100_40101() {
 	//faq
 	mysqli_query($_database, "ALTER TABLE `".PREFIX."faq` CHANGE `answer` `answer` TEXT NOT NULL");
 
+  @set_time_limit(300);
+
 }
 function update40101_40200() {
-    global $_database;
+  global $_database;
 
 	//set default language
 	mysqli_query($_database, "ALTER TABLE `".PREFIX."settings` ADD `default_language` VARCHAR( 2 ) DEFAULT 'uk' NOT NULL");
@@ -2014,6 +2026,7 @@ function update40101_40200() {
 			mysqli_query($_database, "UPDATE ".PREFIX."forum_posts SET message='".$ds['message']."' WHERE postID='".$ds['postID']."'");
 		}
 	}
+  @set_time_limit(300);
 }
 
 function update40200_40300() {
