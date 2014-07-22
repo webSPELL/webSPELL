@@ -85,7 +85,7 @@ class ModRewrite {
 
 	public function getRewriteBase(){
 		if(!isset(self::$rewriteBase)){
-			$path = str_replace(realpath($_SERVER['DOCUMENT_ROOT']),'',realpath(__DIR__.'/../'));
+			$path = str_replace(realpath($_SERVER['DOCUMENT_ROOT']),'',realpath(dirname(__FILE__).'/../'));
 			$path = str_replace('\\','/',$path);
 			if($path[0] != '/'){
 				$path = '/'.$path;
