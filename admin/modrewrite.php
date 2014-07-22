@@ -283,8 +283,7 @@ elseif(isset($_POST['test'])){
                 $port = ":".$_SERVER["SERVER_PORT"];
             }
 
-            $url = $protocol.'://'.$_SERVER["SERVER_NAME"].$port.$_SERVER["REQUEST_URI"].'ht_test/test';
-            
+            $url = $protocol.'://'.$_SERVER["SERVER_NAME"].$port.dirname($_SERVER["REQUEST_URI"]).'/ht_test/not_existing_file';
             $headers = @get_headers($url, 1);
             $unlink = true;
             if($headers == false){
