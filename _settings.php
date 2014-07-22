@@ -26,7 +26,7 @@
 */
 
 // -- ERROR REPORTING -- //
-define('DEBUG', "ON");
+define('DEBUG', "OFF");
 error_reporting(E_ALL); // 0 = public mode, E_ALL = development-mode
 
 // -- SET ENCODING FOR MB-FUNCTIONS -- //
@@ -47,7 +47,7 @@ if(DEBUG=="OFF" && file_exists('install/index.php')){
 if(!isset($GLOBALS['_database'])){
 	$_database = @new mysqli($host, $user, $pwd, $db);
 
-	if(!$_database) {
+	if($_database->connect_error) {
 		system_error('ERROR: Can not connect to MySQL-Server');
 	}
 
