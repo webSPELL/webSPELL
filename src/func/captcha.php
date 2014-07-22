@@ -31,7 +31,7 @@ class Captcha {
 	var $type;
 	var $noise = 100;
 	var $linenoise = 10;
-	var $valide_time = 1440; /* captcha or transaction is valide for x minutes */
+	var $valide_time = 5; /* captcha or transaction is valide for x minutes */
 	var $math;
 	var $math_max = 30;
 	var $bgcol = array("r"=>255,"g"=>255,"b"=>255);
@@ -49,7 +49,7 @@ class Captcha {
         return $return;
 	}
 	function captcha() {
-		$ds = mysql_fetch_assoc(safe_query("SELECT captcha_math, captcha_bgcol, captcha_fontcol, captcha_type, captcha_noise, captcha_linenoise FROM ".PREFIX."settings"));
+		$ds = mysqli_fetch_assoc(safe_query("SELECT captcha_math, captcha_bgcol, captcha_fontcol, captcha_type, captcha_noise, captcha_linenoise FROM ".PREFIX."settings"));
 		if(mb_strlen($ds['captcha_bgcol']) == 7)
 			$this->bgcol = $this->hex2rgb($ds['captcha_bgcol']);
 		
@@ -180,7 +180,7 @@ class Captcha {
 	function create_transaction() {
 		
 		$this->hash = md5(time().rand(0, 10000));
-		safe_query("INSERT INTO `".PREFIX."captcha` (`hash`, `captcha`, `deltime`) VALUES ('".$this->hash."', '0', '".(time()+($this->valide_time*60))."');");
+		safe_query("INSERT INTO `".PREFIX."captcha` (`hash`, `captcha`, `deltime`) VALUES ('".$this->hash."', '0', '".(time()+($this->valide_time*3*60))."');");
 		return true;
 
 	}
@@ -195,7 +195,7 @@ class Captcha {
 	/* check if input fits captcha */
 	function check_captcha($input, $hash) {
 
-		if(mysql_num_rows(safe_query("SELECT hash FROM `".PREFIX."captcha` WHERE captcha='".$input."' AND hash='".$hash."'"))) {
+		if(mysqli_num_rows(safe_query("SELECT hash FROM `".PREFIX."captcha` WHERE captcha='".$input."' AND hash='".$hash."'"))) {
 			safe_query("DELETE FROM `".PREFIX."captcha` WHERE captcha='".$input."' AND hash='".$hash."'");
 			$file='tmp/'.$hash.'.jpg';
 			if(file_exists($file)) unlink($file);
@@ -209,9 +209,10 @@ class Captcha {
 	function clear_oldcaptcha() {
 	 	$time = time();
 		$ergebnis=safe_query("SELECT hash FROM `".PREFIX."captcha` WHERE deltime<".$time);
-		while($ds=mysql_fetch_array($ergebnis)) {
+		while($ds=mysqli_fetch_array($ergebnis)) {
 			$file='tmp/'.$ds['hash'].'.jpg';
 			if(file_exists($file)) unlink($file);
+			elseif(file_exists('../'.$file)) unlink('../'.$file);
 		}
 		safe_query("DELETE FROM `".PREFIX."captcha` WHERE deltime<".$time);
 	}
