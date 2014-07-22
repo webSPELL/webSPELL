@@ -29,7 +29,7 @@ if(basename($_SERVER['SCRIPT_FILENAME']) == basename("_rewrite.php")){
 	include_once("_mysql.php");
 	$_database = new mysqli($host, $user, $pwd, $db);
 
-	if(!$_database) {
+	if($_database->connect_error) {
 		die('ERROR: Can not connect to MySQL-Server');
 	}
 	$_database->query("SET NAMES 'utf8'");

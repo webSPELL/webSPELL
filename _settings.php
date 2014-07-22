@@ -26,8 +26,7 @@
 */
 
 // -- ERROR REPORTING -- //
-
-define('DEBUG', "ON");
+define('DEBUG', "OFF");
 error_reporting(E_ALL); // 0 = public mode, E_ALL = development-mode
 
 // -- SET ENCODING FOR MB-FUNCTIONS -- //
@@ -38,31 +37,45 @@ mb_internal_encoding("UTF-8");
 
 header('content-type: text/html; charset=utf-8');
 
+// -- INSTALL CHECK -- //
+
+if(DEBUG=="OFF" && file_exists('install/index.php')){
+	system_error('The install-folder exists. Did you run the <a href="install/">Installer</a>?<br/>If yes, please remove the install-folder.',0);
+}
+
 // -- CONNECTION TO MYSQL -- //
+if(!isset($GLOBALS['_database'])){
+	$_database = @new mysqli($host, $user, $pwd, $db);
 
-mysql_connect($host, $user, $pwd) or system_error('ERROR: Can not connect to MySQL-Server');
-mysql_select_db($db) or system_error('ERROR: Can not connect to database "'.$db.'"');
+	if($_database->connect_error) {
+		system_error('ERROR: Can not connect to MySQL-Server');
+	}
 
-mysql_query("SET NAMES 'utf8'");
+	$_database->query("SET NAMES 'utf8'");
+}
 
 // -- GENERAL PROTECTIONS -- //
 
-function globalskiller() {		// kills all non-system variables
+if(function_exists("globalskiller") == false){
+	function globalskiller() {		// kills all non-system variables
 
-  $global = array('GLOBALS', '_POST', '_GET', '_COOKIE', '_FILES', '_SERVER', '_ENV',  '_REQUEST', '_SESSION');
-  foreach ($GLOBALS as $key=>$val) {
-  	if(!in_array($key, $global)) {
-  		if(is_array($val)) unset_array($GLOBALS[$key]);
-  		else unset($GLOBALS[$key]);
-  	}
-  }
+	  $global = array('GLOBALS', '_POST', '_GET', '_COOKIE', '_FILES', '_SERVER', '_ENV',  '_REQUEST', '_SESSION', '_database');
+	  foreach ($GLOBALS as $key=>$val) {
+	  	if(!in_array($key, $global)) {
+	  		if(is_array($val)) unset_array($GLOBALS[$key]);
+	  		else unset($GLOBALS[$key]);
+	  	}
+	  }
+	}
 }
 
-function unset_array($array) {
+if(function_exists("unset_array") == false){
+	function unset_array($array) {
 
-	foreach($array as $key) {
-		if(is_array($key)) unset_array($key);
-		else unset($key);
+		foreach($array as $key) {
+			if(is_array($key)) unset_array($key);
+			else unset($key);
+		}
 	}
 }
 
@@ -82,6 +95,9 @@ if($site!="search") {
 }
 
 function security_slashes(&$array) {
+
+	global $_database;
+
 	foreach($array as $key => $value) {
 		if(is_array($array[$key])) {
 			security_slashes($array[$key]);
@@ -93,8 +109,8 @@ function security_slashes(&$array) {
 			else {
 				$tmp = $value;
 			}
-			if(function_exists("mysql_real_escape_string")) {
-				$array[$key] = mysql_real_escape_string($tmp);
+			if(function_exists("mysqli_real_escape_string")) {
+				$array[$key] = $_database->escape_string($tmp);
 			}
 			else {
 				$array[$key] = addslashes($tmp);
@@ -112,28 +128,38 @@ security_slashes($_REQUEST);
 // -- MYSQL QUERY FUNCTION -- //
 $_mysql_querys = array();
 function safe_query($query="") {
+
+	global $_database;
 	global $_mysql_querys;
+
 	if(stristr(str_replace(' ', '', $query), "unionselect")===FALSE AND stristr(str_replace(' ', '', $query), "union(select")===FALSE){
 		$_mysql_querys[] = $query;
 		if(empty($query)) return false;
-		if(DEBUG == "OFF") $result = mysql_query($query) or die('Query failed!');
+		if(DEBUG == "OFF") $result = $_database->query($query) or system_error('Query failed!');
 		else {
-			$result = mysql_query($query) or die('Query failed: '
-			.'<li>errorno='.mysql_errno()
-			.'<li>error='.mysql_error()
-			.'<li>query='.$query);
+			$result = $_database->query($query) or system_error('Query failed: '
+			.'<ul><li>errorno='.$_database->errno.'</li>'
+			.'<li>error='.$_database->error.'</li>'
+			.'<li>query='.$query.'</li></ul>');
 		}
 		return $result;
 	}
 	else die();
+
 }
 
 // -- SYSTEM ERROR DISPLAY -- //
 
 function system_error($text,$system=1) {
+
+	global $_database;
+
 	if($system) {
 		include('version.php');
-		$info='webSPELL Version: '.$version.'<br>PHP Version: '.phpversion().'<br>MySQL Version: '.mysql_get_server_info().'<br>';
+		$info='webSPELL Version: '.$version.'<br />PHP Version: '.phpversion().'<br />';
+		if(!mysqli_connect_error()){
+			$info .= 'MySQL Version: '.$_database->server_info.'<br />';
+		}
 	} else {
 		$info = '';
 	}
@@ -155,7 +181,7 @@ function system_error($text,$system=1) {
       <td><a href="http://www.webspell.org" target="_blank"><img src="images/banner.gif" style="border:none;" alt="webSPELL.org" title="webSPELL.org" /></a></td>
     </tr>
     <tr bgcolor="#ffffff">
-      <td><div style="color:#333333;font-family:Tahoma,Verdana,Arial;font-size:11px;padding:5px;">'.$info.'<br><font color="red">'.$text.'</font><br>&nbsp;</div></td>
+      <td><div style="color:#333333;font-family:Tahoma,Verdana,Arial;font-size:11px;padding:5px;">'.$info.'<br /><font color="red">'.$text.'</font><br />&nbsp;</div></td>
     </tr>
     <tr bgcolor="#ffffff">
       <td><div style="color:#333333;font-family:Tahoma,Verdana,Arial;font-size:11px;padding:5px;">For support visit <a href="http://webspell.org" target="_blank">webspell.org</a></div></td>
@@ -175,10 +201,10 @@ function systeminc($file) {
 // -- IGNORED USERS -- //
 
 function isignored($userID, $buddy) {
-	$anz=mysql_num_rows(safe_query("SELECT userID FROM ".PREFIX."buddys WHERE buddy='$buddy' AND userID='$userID' "));
+	$anz=mysqli_num_rows(safe_query("SELECT userID FROM ".PREFIX."buddys WHERE buddy='$buddy' AND userID='$userID' "));
 	if($anz) {
 		$ergebnis=safe_query("SELECT * FROM ".PREFIX."buddys WHERE buddy='$buddy' AND userID='$userID' ");
-		$ds=mysql_fetch_array($ergebnis);
+		$ds=mysqli_fetch_array($ergebnis);
 		if($ds['banned']==1) return 1;
 		else return 0;
 	}
@@ -187,7 +213,7 @@ function isignored($userID, $buddy) {
 
 // -- GLOBAL SETTINGS -- //
 
-$ds = mysql_fetch_array(safe_query("SELECT * FROM ".PREFIX."settings"));
+$ds = mysqli_fetch_array(safe_query("SELECT * FROM ".PREFIX."settings"));
 
 $maxshownnews				=	$ds['news']; 				if(empty($maxshownnews)) $maxshownnews = 10;
 $maxnewsarchiv				=	$ds['newsarchiv']; 			if(empty($maxnewsarchiv)) $maxnewsarchiv = 20;
@@ -239,12 +265,24 @@ $autoresize 				= 	$ds['autoresize']; 			if(!isset($autoresize)) $autoresize = 2
 $max_wrong_pw 				= 	$ds['max_wrong_pw']; 		if(empty($max_wrong_pw)) $max_wrong_pw = 3;
 $lastBanCheck 				= 	$ds['bancheck']; 
 $insertlinks				=	$ds['insertlinks'];
+$autoDetectLanguage			=	(int)$ds['detect_language'];		
+$spamapikey					=	$ds['spamapikey'];
+$spamapihost				=	$ds['spamapihost'];			if(empty($spamapihost)) $spamapihost = "https://api.webspell.org/";
+$spamCheckMaxPosts 			=	$ds['spammaxposts'];		if(empty($spamCheckMaxPosts)) $spamCheckMaxPosts = 30;
+$spamCheckEnabled 			=	(int)$ds['spam_check'];
+$spamBlockOnError			= 	(int)$ds['spamapiblockerror'];
+$spamCheckRating = 0.95;
+$default_format_date		= 	$ds['date_format']; 		if(empty($default_format_date)) $default_format_date = 'd.m.Y';
+$default_format_time		= 	$ds['time_format']; 		if(empty($default_format_time)) $default_format_time = 'H:i';
+$user_guestbook				= 	$ds['user_guestbook']; 		if(!isset($user_guestbook)) $user_guestbook = 1;
+$modRewrite					= 	(bool)$ds['modRewrite']; 		if(empty($modRewrite)) $modRewrite = false;
+
 $new_chmod = 0666;
 
 // -- STYLES -- //
 
 $ergebnis=safe_query("SELECT * FROM ".PREFIX."styles");
-$ds=mysql_fetch_array($ergebnis);
+$ds=mysqli_fetch_array($ergebnis);
 
 define('PAGEBG', $ds['bgpage']);
 define('BORDER', $ds['border']);
