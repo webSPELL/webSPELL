@@ -31,7 +31,7 @@ class Captcha {
 	var $type;
 	var $noise = 100;
 	var $linenoise = 10;
-	var $valide_time = 1440; /* captcha or transaction is valide for x minutes */
+	var $valide_time = 5; /* captcha or transaction is valide for x minutes */
 	var $math;
 	var $math_max = 30;
 	var $bgcol = array("r"=>255,"g"=>255,"b"=>255);
@@ -180,7 +180,7 @@ class Captcha {
 	function create_transaction() {
 		
 		$this->hash = md5(time().rand(0, 10000));
-		safe_query("INSERT INTO `".PREFIX."captcha` (`hash`, `captcha`, `deltime`) VALUES ('".$this->hash."', '0', '".(time()+($this->valide_time*60))."');");
+		safe_query("INSERT INTO `".PREFIX."captcha` (`hash`, `captcha`, `deltime`) VALUES ('".$this->hash."', '0', '".(time()+($this->valide_time*3*60))."');");
 		return true;
 
 	}
