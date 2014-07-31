@@ -40,7 +40,7 @@ uk: webspell.org
 pt: SAM|DoDoT (www.sam-clan.com)
 pl: spec8320 & HasH
 ir: BVBPOWER & NucxX (www.xnc.bplaced.net)
-yu: BVBPOWER & Mahalac (www.xnc.bplaced.net)
+rs: BVBPOWER & Mahalac (www.xnc.bplaced.net)
 ba: BVBPOWER & Mahalac (www.xnc.bplaced.net)
 ee: BVBPOWER & Mikk36 (www.xnc.bplaced.net)
 ge: BVBPOWER & Kacho95 (www.xnc.bplaced.net)
@@ -57,3 +57,4 @@ bg: BVBPOWER & neizvesten (www.xnc.bplaced.net)
 za: BVBPOWER & JAHViking (www.xnc.bplaced.net)
 gr: BVBPOWER & dreamer1984 (www.xnc.bplaced.net)
 ua: BVBPOWER & Ctulhu (www.xnc.bplaced.net)
+lu: BVBPOWER & Agi86 (www.xnc.bplaced.net)
