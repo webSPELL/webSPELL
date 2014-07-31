@@ -2118,6 +2118,7 @@ function update40200_40300() {
       ('', 'bulgarian', 'bg', 'bulgarian'),
       ('', 'greek', 'gr', 'greek'),
       ('', 'ukrainian', 'ua', 'ukrainian'),
+      ('', 'luxembourgish', 'lu', 'luxembourgish'),
       ('', 'afrikaans', 'za', 'afrikaans')");
 
   //edit countries
@@ -2166,6 +2167,7 @@ function update40200_40300() {
   mysqli_query($_database, "UPDATE `".PREFIX."countries` SET Name='Turks and Caicos Islands' WHERE short = 'tc'");
   mysqli_query($_database, "UPDATE `".PREFIX."countries` SET Name='Timor-Leste', short='tl' WHERE short = 'tp'");
   mysqli_query($_database, "UPDATE `".PREFIX."countries` SET Name='Vatican City' WHERE short = 'va'");
+  mysqli_query($_database, "UPDATE `".PREFIX."countries` SET Name='Luxembourg' WHERE short = 'lu'");
 
   mysqli_query($_database, "DELETE FROM `".PREFIX."countries` WHERE `short` = 'bv'");
   mysqli_query($_database, "DELETE FROM `".PREFIX."countries` WHERE `short` = 'gp'");
@@ -2177,7 +2179,6 @@ function update40200_40300() {
   mysqli_query($_database, "DELETE FROM `".PREFIX."countries` WHERE `short` = 'sj'");
   mysqli_query($_database, "DELETE FROM `".PREFIX."countries` WHERE `short` = 'ti'");
   mysqli_query($_database, "DELETE FROM `".PREFIX."countries` WHERE `short` = 'wa'");
-  mysqli_query($_database, "DELETE FROM `".PREFIX."countries` WHERE `short` = 'rs'");
   mysqli_query($_database, "DELETE FROM `".PREFIX."countries` WHERE `short` = ''");
 
   mysqli_query($_database, "CREATE TABLE `".PREFIX."tags` (
