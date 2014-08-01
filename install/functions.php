@@ -2179,6 +2179,7 @@ function update40200_40300() {
   mysqli_query($_database, "DELETE FROM `".PREFIX."countries` WHERE `short` = 'sj'");
   mysqli_query($_database, "DELETE FROM `".PREFIX."countries` WHERE `short` = 'ti'");
   mysqli_query($_database, "DELETE FROM `".PREFIX."countries` WHERE `short` = 'wa'");
+  mysqli_query($_database, "DELETE FROM `".PREFIX."countries` WHERE `short` = 'yu'");
   mysqli_query($_database, "DELETE FROM `".PREFIX."countries` WHERE `short` = ''");
 
   mysqli_query($_database, "CREATE TABLE `".PREFIX."tags` (
