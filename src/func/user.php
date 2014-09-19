@@ -221,4 +221,10 @@ function detectUserLanguage(){
 	}
 	return null;
 }
+
+function generatePasswordHash($password) {
+	$md5 = hash("md5", $password);
+	return hash("sha512", substr($md5, 0, 14).$md5);
+}
+
 ?>

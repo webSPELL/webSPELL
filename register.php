@@ -91,7 +91,7 @@ if(isset($_POST['save'])) {
 		}
 		else {
 			// insert in db
-			$md5pwd = md5(stripslashes($pwd1));
+			$md5pwd = generatePasswordHash(stripslashes($pwd1));
 			$registerdate=time();
 			$activationkey = md5(RandPass(20));
 			$activationlink='http://'.$hp_url.'/index.php?site=register&key='.$activationkey;

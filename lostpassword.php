@@ -39,7 +39,7 @@ if(isset($_POST['submit'])) {
 		if($anz) {
 	
 			$newpwd=RandPass(6);
-			$newmd5pwd=md5($newpwd);
+			$newmd5pwd=generatePasswordHash($newpwd);
 	
 			$ds = mysqli_fetch_array($ergebnis);
 			safe_query("UPDATE ".PREFIX."user SET password='".$newmd5pwd."' WHERE userID='".$ds['userID']."'");

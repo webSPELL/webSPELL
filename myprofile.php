@@ -290,7 +290,7 @@ else {
 			$error = $_language->module['forgot_old_pw'];
 			die('<b>ERROR: '.$error.'</b><br /><br /><input type="button" onclick="javascript:history.back()" value="'.$_language->module['back'].'" />');
 		}
-		$oldmd5pwd = md5($oldpwd);
+		$oldmd5pwd = generatePasswordHash($oldpwd);
 		if($oldmd5pwd != $ds['password']) {
 			$error = $_language->module['old_pw_not_valid'];
 			die('<b>ERROR: '.$error.'</b><br /><br /><input type="button" onclick="javascript:history.back()" value="'.$_language->module['back'].'" />');
@@ -305,7 +305,7 @@ else {
 			$error = $_language->module['repeated_pw_not_valid'];
 			die('<b>ERROR: '.$error.'</b><br /><br /><input type="button" onclick="javascript:history.back()" value="'.$_language->module['back'].'" />');
 		}
-		$newmd5pwd = md5(stripslashes($pwd1));
+		$newmd5pwd = generatePasswordHash(stripslashes($pwd1));
 		safe_query("UPDATE ".PREFIX."user SET password='".$newmd5pwd."' WHERE userID='".$userID."'");
 
 		//logout
@@ -345,7 +345,7 @@ else {
 			$error = $_language->module['forgot_old_pw'];
 			die('<b>ERROR: '.$error.'</b><br /><br /><input type="button" onclick="javascript:history.back()" value="'.$_language->module['back'].'" />');
 		}
-		$md5pwd = md5(stripslashes($pwd));
+		$md5pwd = generatePasswordHash(stripslashes($pwd));
 		if($md5pwd != $ds['password']) {
 			die('<b>ERROR: '.$error.'</b><br /><br /><input type="button" onclick="javascript:history.back()" value="'.$_language->module['back'].'" />');
 		}

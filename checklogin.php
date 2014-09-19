@@ -43,7 +43,7 @@ $_language->read_module('checklogin');
 
 $get = safe_query("SELECT * FROM ".PREFIX."banned_ips WHERE ip='".$GLOBALS['ip']."'");
 if(mysqli_num_rows($get) == 0){
-	$ws_pwd = md5(stripslashes($_POST['pwd']));
+	$ws_pwd = generatePasswordHash(stripslashes($_POST['pwd']));
 	$ws_user = $_POST['ws_user'];
 	
 	$check = safe_query("SELECT * FROM ".PREFIX."user WHERE username='".$ws_user."'");
