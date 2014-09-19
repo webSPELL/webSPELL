@@ -35,7 +35,7 @@ $language_array = Array(
 	'update_40'=>'Update von webSPELL final/keyless',
 	'update_40100'=>'Update von webSPELL 4.01.00/4.01.01',
 	'update_40102'=>'Update von webSPELL 4.01.02',
-	'update_40200'=>'Update von webSPELL 4.2.0 und höher',
+	'update_420'=>'Update von webSPELL 4.2.0 und höher',
 	'what_to_do'=>'Was möchtest Du tun?'
 );
 ?>

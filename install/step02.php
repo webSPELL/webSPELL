@@ -75,7 +75,7 @@ if($_POST['agree'] == "1") {
    </td>
   </tr>
 
-<?php } else{ ?>
+<?php } else { ?>
 
   <tr>
    <td id="step" align="center" colspan="2">
