@@ -50,7 +50,7 @@ else {
 		$flag = preg_replace("/[^a-zA-Z0-9\s]/", "", $_POST['flag']);
 		$town = $_POST['town'];
 		$icq = $_POST['icq'];
-		$icq = str_replace('-','',$icq); // Replace - 
+		$icq = str_replace('-','',$icq); // Replace -
 		$about = $_POST['messageabout'];
 		$clantag = $_POST['clantag'];
 		$clanname = $_POST['clanname'];
@@ -74,9 +74,9 @@ else {
 		$userpic = $_FILES['userpic'];
 		$language = $_POST['language'];
 		$id = $userID;
-		
+
 		$error_array = array();
-		
+
 		if(isset($_POST['userID']) or isset($_GET['userID']) or $userID=="") die($_language->module['not_logged_in']);
 
 		if(isset($_POST['delavatar'])) {
@@ -181,17 +181,24 @@ else {
 			}
 		}
 
+		if(empty($usernamenew)){
+			$error_array[] = $_language->module['you_have_to_username'];
+		}
+		if(empty($nickname)){
+			$error_array[] = $_language->module['you_have_to_nickname'];
+		}
+
 		$qry = "SELECT userID FROM ".PREFIX."user WHERE username = '".$usernamenew."' AND userID != ".$userID." LIMIT 0,1";
 		if(mysql_num_rows(safe_query($qry))) {
 			$error_array[] = $_language->module['username_aleady_in_use'];
 		}
-		
+
 		$qry = "SELECT userID FROM ".PREFIX."user WHERE nickname = '".$nickname."' AND userID!=".$userID." LIMIT 0,1";
 		if(mysql_num_rows(safe_query($qry))) {
 				$error_array[] = $_language->module['nickname_already_in_use'];
 		}
 
-		if(count($error_array)) 
+		if(count($error_array))
 		{
 			$fehler=implode('<br>&#8226; ', $error_array);
 			$showerror = '<div class="alert alert-danger">
@@ -202,7 +209,7 @@ else {
 		else
 		{
 			safe_query("UPDATE `".PREFIX."user`
-						SET 
+						SET
 							nickname='".$nickname."',
 							username='".$usernamenew."',
 							email_hide='".$mail_hide."',
@@ -233,27 +240,30 @@ else {
 							newsletter='".$newsletter."',
 							homepage='".$homepage."',
 							about='".$about."',
-							language='".$language."'
-						WHERE 
+							date_format='".$date_format."',
+							time_format='".$time_format."',
+							language='".$language."',
+							user_guestbook='".$user_gbook."'
+						WHERE
 							userID='".$id."'");
-	
+
 			redirect("index.php?site=profile&amp;id=$id", $_language->module['profile_updated'],3);
 		}
   }
 
 	if(isset($_GET['action']) AND $_GET['action']=="editpwd") {
-	
+
 		$bg1 = BG_1;
 		$bg2 = BG_2;
 	  	$bg3 = BG_3;
 		$bg4 = BG_4;
 		$border = BORDER;
-	
+
 		eval("\$myprofile_editpwd = \"".gettemplate("myprofile_editpwd")."\";");
 		echo $myprofile_editpwd;
 
-	}	
-	
+	}
+
 	elseif(isset($_POST['savepwd'])) {
 
 		$oldpwd = $_POST['oldpwd'];
@@ -261,40 +271,44 @@ else {
 		$pwd2 = $_POST['pwd2'];
 		$id = $userID;
 
+		$error = "";
+
 		$ergebnis = safe_query("SELECT password FROM ".PREFIX."user WHERE userID='".$id."'");
 		$ds = mysql_fetch_array($ergebnis);
 
 		if(!(mb_strlen(trim($oldpwd)))) {
 			$error = $_language->module['forgot_old_pw'];
-			die('<b>ERROR: '.$error.'</b><br><br><input type="button" onclick="javascript:history.back()" value="'.$_language->module['back'].'" />');
 		}
 		$oldmd5pwd = generatePasswordHash($oldpwd);
 		if($oldmd5pwd != $ds['password']) {
 			$error = $_language->module['old_pw_not_valid'];
-			die('<b>ERROR: '.$error.'</b><br><br><input type="button" onclick="javascript:history.back()" value="'.$_language->module['back'].'" />');
 		}
 		if($pwd1 == $pwd2) {
 			if(!(mb_strlen(trim($pwd1)))) {
 				$error = $_language->module['forgot_new_pw'];
-				die('<b>ERROR: '.$error.'</b><br><br><input type="button" onclick="javascript:history.back()" value="'.$_language->module['back'].'" />');
 			}
 		}
 		else {
 			$error = $_language->module['repeated_pw_not_valid'];
-			die('<b>ERROR: '.$error.'</b><br><br><input type="button" onclick="javascript:history.back()" value="'.$_language->module['back'].'" />');
 		}
-		$newmd5pwd = generatePasswordHash(stripslashes($pwd1));
-		safe_query("UPDATE ".PREFIX."user SET password='".$newmd5pwd."' WHERE userID='".$userID."'");
 
-		//logout
-		unset($_SESSION['ws_auth']);
-		unset($_SESSION['ws_lastlogin']);
-		session_destroy();
+		if(!empty($error)){
+			$newmd5pwd = generatePasswordHash(stripslashes($pwd1));
+			safe_query("UPDATE ".PREFIX."user SET password='".$newmd5pwd."' WHERE userID='".$userID."'");
 
-    redirect('index.php?site=login', $_language->module['pw_changed'],3);
+			//logout
+			unset($_SESSION['ws_auth']);
+			unset($_SESSION['ws_lastlogin']);
+			session_destroy();
 
-	}	
-	
+	    	redirect('index.php?site=login', $_language->module['pw_changed'],3);
+	    }
+	    else{
+	    	echo '<b>ERROR: '.$error.'</b><br /><br /><input type="button" onclick="javascript:history.back()" value="'.$_language->module['back'].'" />';
+	    }
+
+	}
+
 	elseif(isset($_GET['action']) AND $_GET['action']=="editmail") {
 
 		$bg1 = BG_1;
@@ -306,8 +320,8 @@ else {
 		eval("\$myprofile_editmail = \"".gettemplate("myprofile_editmail")."\";");
 		echo $myprofile_editmail;
 
-	}	
-	
+	}
+
 	elseif(isset($_POST['savemail'])){
 
 		$activationkey = createkey(20);
@@ -317,46 +331,50 @@ else {
 		$mail2 = $_POST['mail2'];
 
 		$ergebnis = safe_query("SELECT password, username FROM ".PREFIX."user WHERE userID='".$userID."'");
-		$ds = mysql_fetch_array($ergebnis);
+		$ds = mysqli_fetch_array($ergebnis);
+		$error = "";
 		$username = $ds['username'];
 		if(!(mb_strlen(trim($pwd)))) {
 			$error = $_language->module['forgot_old_pw'];
-			die('<b>ERROR: '.$error.'</b><br><br><input type="button" onclick="javascript:history.back()" value="'.$_language->module['back'].'" />');
 		}
+
 		$md5pwd = generatePasswordHash(stripslashes($pwd));
 		if($md5pwd != $ds['password']) {
-			die('<b>ERROR: '.$error.'</b><br><br><input type="button" onclick="javascript:history.back()" value="'.$_language->module['back'].'" />');
+			$error = $_language->module['wrong_password'];
 		}
 		if($mail1 == $mail2) {
 			if(!(mb_strlen(trim($mail1)))) {
 				$error = $_language->module['mail_not_valid'];
-				die('<b>ERROR: '.$error.'</b><br><br><input type="button" onclick="javascript:history.back()" value="'.$_language->module['back'].'" />');
 			}
 		}
 		else {
-			$error = $_language->module['repeated_pw_not_valid'];
-			die('<b>ERROR: '.$error.'</b><br><br><input type="button" onclick="javascript:history.back()" value="'.$_language->module['back'].'" />');
+			$error = $_language->module['repeated_mail_not_valid'];
 		}
 
 		// check e-mail
-		
-		if(!validate_email($mail1)){ 
+
+		if(!validate_email($mail1)){
 			$error=$_language->module['invalid_mail'];
-			die('<b>ERROR: '.$error.'</b><br><br><input type="button" onclick="javascript:history.back()" value="'.$_language->module['back'].'" />');
 		}
-		
-		safe_query("UPDATE ".PREFIX."user SET email_change = '".$mail1."', email_activate = '".$activationkey."' WHERE userID='".$userID."'");
 
-		$ToEmail = $mail1;
-		$ToName = $username;
-		$header =  str_replace(Array('%homepage_url%'), Array($hp_url), $_language->module['mail_subject']);
-		$Message = str_replace(Array('%username%', '%activationlink%', '%pagetitle%', '%homepage_url%'), Array($username, $activationlink, $hp_title, $hp_url), $_language->module['mail_text']);
+		if(empty($error)){
 
-		if(mail($ToEmail,$header, $Message, "From:".$admin_email."\nContent-type: text/plain; charset=utf-8\n")) echo $_language->module['mail_changed'];
-		else echo $_language->module['mail_failed'];
+			safe_query("UPDATE ".PREFIX."user SET email_change = '".$mail1."', email_activate = '".$activationkey."' WHERE userID='".$userID."'");
 
-	}	
-	
+			$ToEmail = $mail1;
+			$ToName = $username;
+			$header =  str_replace(Array('%homepage_url%'), Array($hp_url), $_language->module['mail_subject']);
+			$Message = str_replace(Array('%username%', '%activationlink%', '%pagetitle%', '%homepage_url%'), Array($username, $activationlink, $hp_title, $hp_url), $_language->module['mail_text']);
+
+			if(mail($ToEmail,$header, $Message, "From:".$admin_email."\nContent-type: text/plain; charset=utf-8\n")) echo $_language->module['mail_changed'];
+			else echo $_language->module['mail_failed'];
+		}
+		else{
+			echo '<b>ERROR: '.$error.'</b><br /><br /><input type="button" onclick="javascript:history.back()" value="'.$_language->module['back'].'" />';
+		}
+
+	}
+
 	else {
 		$ergebnis = safe_query("SELECT * FROM ".PREFIX."user WHERE userID='".$userID."'");
 		$anz = mysql_num_rows($ergebnis);
@@ -373,8 +391,42 @@ else {
 			else $pm_mail = '<option value="1">'.$_language->module['yes'].'</option><option value="0" selected="selected">'.$_language->module['no'].'</option>';
 			if($ds['email_hide']) $email_hide = ' checked="checked"';
 			else $email_hide = '';
-			$b_day = $birthday = mb_substr(trim($ds['birthday']),0,10);
-			$countries = str_replace(" selected=\"selected\"", "", $countries);
+			$format_date = "<option value='d.m.y'>DD.MM.YY</option>
+							<option value='d.m.Y'>DD.MM.YYYY</option>
+							<option value='j.n.y'>D.M.YY</option>
+							<option value='j.n.Y'>D.M.YYYY</option>
+							<option value='y-m-d'>YY-MM-DD</option>
+							<option value='Y-m-d'>YYYY-MM-DD</option>
+							<option value='y/m/d'>YY/MM/DD</option>
+							<option value='Y/m/d'>YYYY/MM/DD</option>";
+			$format_date = str_replace("value='".$ds['date_format']."'","value='".$ds['date_format']."' selected='selected'",$format_date);
+
+			$format_time = "<option value='G:i'>H:MM</option>
+							<option value='H:i'>HH:MM</option>
+							<option value='G:i a'>H:MM am/pm</option>
+							<option value='H:i a'>HH:MM am/pm</option>
+							<option value='G:i A'>H:MM AM/PM</option>
+							<option value='H:i A'>HH:MM AM/PM</option>
+							<option value='G:i:s'>H:MM:SS</option>
+							<option value='H:i:s'>HH:MM:SS</option>
+							<option value='G:i:s a'>H:MM:SS am/pm</option>
+							<option value='H:i:s a'>HH:MM:SS am/pm</option>
+							<option value='G:i:s A'>H:MM:SS AM/PM</option>
+							<option value='H:i:s A'>HH:MM:SS AM/PM</option>";
+			$format_time = str_replace("value='".$ds['time_format']."'","value='".$ds['time_format']."' selected='selected'",$format_time);
+			$user_gbook = "<option value='0'>".$_language->module['deactivated']."</option><option value='1'>".$_language->module['activated']."</option>";
+			$user_gbook = str_replace("value='".$ds['user_guestbook']."'","value='".$ds['user_guestbook']."' selected='selected'",$user_gbook);
+			$user_gbook_select = '';
+			if($user_guestbook) {
+				$user_gbook_select = '<tr bgcolor="'.BG_2.'">
+										<td align="right" bgcolor="'.BG_1.'">'.$_language->module['guestbook'].'</td>
+										<td bgcolor="'.BG_2.'"><select name="user_guestbook">'.$user_gbook.'</select></td>
+									  </tr>';
+			}
+			$b_day = mb_substr($ds['birthday'],8,2);
+			$b_month = mb_substr($ds['birthday'],5,2);
+			$b_year = mb_substr($ds['birthday'],0,4);
+			$countries=getcountries();
 			$countries = str_replace('value="'.$ds['country'].'"', 'value="'.$ds['country'].'" selected="selected"', $countries);
 			if($ds['avatar']) $viewavatar = '&#8226; <a href="javascript:MM_openBrWindow(\'images/avatars/'.$ds['avatar'].'\',\'avatar\',\'width=120,height=120\')">'.$_language->module['avatar'].'</a>';
 			else $viewavatar = $_language->module['avatar'];
@@ -434,6 +486,10 @@ else {
 			if($ds['language']) $langdirs = str_replace('"'.$ds['language'].'"', '"'.$ds['language'].'" selected="selected"', $langdirs);
 			else $langdirs = str_replace('"'.$_language->language.'"', '"'.$_language->language.'" selected="selected"', $langdirs);
 			
+			$lang_flag = '[flag]'.$ds['language'].'[/flag]';
+			$lang_country = flags($lang_flag);
+			$lang_country = str_replace("<img","<img id='lang_county'",$lang_country);
+
 			$bg1 = BG_1;
 			$bg2 = BG_2;
 			$bg3 = BG_3;
