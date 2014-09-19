@@ -26,21 +26,6 @@
 */
 
 if($_POST['installtype']=="full" AND $_POST['hp_url']) {
-
-	function RandPass($length, $type=0) {		
-		$pass = null;
-		for ($i = 0; $i < $length; $i++) {
-			if($type==0) $rand = rand(1,3);
-			else $rand = $type;
-			switch($rand) {
-				case 1: $pass .= chr(rand(48,57)); break;
-				case 2: $pass .= chr(rand(65,90)); break;
-				case 3: $pass .= chr(rand(97,122)); break;
-			}
-		}
-		return $pass;
-	}
-
 ?>
 
   <tr>
