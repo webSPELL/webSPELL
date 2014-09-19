@@ -70,7 +70,7 @@ elseif($action=="save") {
 	$CAPCLASS = new Captcha;
 	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
 		safe_query("INSERT INTO ".PREFIX."forum_groups ( name ) values( '".$_POST['name']."' ) ");
-		$id = mysqli_insert_id($_database);
+		$id = mysql_insert_id();
 		if(!safe_query("ALTER TABLE ".PREFIX."user_forum_groups ADD `".$id."` INT( 1 ) NOT NULL ; ")) {
 			safe_query("ALTER TABLE ".PREFIX."user_forum_groups DROP `".$id."`");
 			safe_query("ALTER TABLE ".PREFIX."user_forum_groups ADD `".$id."` INT( 1 ) NOT NULL ; ");
@@ -95,7 +95,7 @@ elseif($action=="edit") {
   
   if(!$_GET['fgrID']) die('<b>'.$_language->module['error_groupid'].'</b><br /><br /><a href="admincenter.php?site=groups">&laquo; '.$_language->module['back'].'</a>');
 	$ergebnis=safe_query("SELECT * FROM ".PREFIX."forum_groups WHERE fgrID='".$_GET['fgrID']."'");
-	$ds=mysqli_fetch_array($ergebnis);
+	$ds=mysql_fetch_array($ergebnis);
   
   $CAPCLASS = new Captcha;
 	$CAPCLASS->create_transaction();
@@ -134,7 +134,7 @@ else {
 	$CAPCLASS->create_transaction();
 	$hash = $CAPCLASS->get_hash();
   
-	while($ds=mysqli_fetch_array($ergebnis)) {
+	while($ds=mysql_fetch_array($ergebnis)) {
     if($i%2) { $td='td1'; }
     else { $td='td2'; }
   

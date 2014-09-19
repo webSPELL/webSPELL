@@ -124,7 +124,7 @@ if(isset($_GET['action'])) {
 		$faqcatID = $_GET['faqcatID'];
 
 		$ergebnis=safe_query("SELECT * FROM ".PREFIX."faq_categories WHERE faqcatID='$faqcatID'");
-		$ds=mysqli_fetch_array($ergebnis);
+		$ds=mysql_fetch_array($ergebnis);
     
     $CAPCLASS = new Captcha;
     $CAPCLASS->create_transaction();
@@ -187,15 +187,15 @@ else {
     </tr>';
 
 	$ergebnis=safe_query("SELECT * FROM ".PREFIX."faq_categories ORDER BY sort");
-	$tmp=mysqli_fetch_assoc(safe_query("SELECT count(faqcatID) as cnt FROM ".PREFIX."faq_categories"));
-	$anz=$tmp['cnt'];
+	$anz=safe_query("SELECT count(faqcatID) FROM ".PREFIX."faq_categories");
+	$anz=mysql_result($anz, 0);
 
 	$i=1;
 	$CAPCLASS = new Captcha;
 	$CAPCLASS->create_transaction();
 	$hash = $CAPCLASS->get_hash();
   
-  while($ds=mysqli_fetch_array($ergebnis)) {
+  while($ds=mysql_fetch_array($ergebnis)) {
     if($i%2) { $td='td1'; }
     else { $td='td2'; }
   

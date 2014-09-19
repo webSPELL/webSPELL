@@ -28,8 +28,8 @@
 $_language->read_module('sc_scrolltext');
 
 $ergebnis=safe_query("SELECT * FROM ".PREFIX."scrolltext");
-if(mysqli_num_rows($ergebnis)) {
-	$ds=mysqli_fetch_array($ergebnis);
+if(mysql_num_rows($ergebnis)) {
+	$ds=mysql_fetch_array($ergebnis);
 
 	$scrolltext = js_replace($ds['text']);
 	$direction=$ds['direction'];

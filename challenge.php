@@ -46,11 +46,7 @@ if($action=="save" && isset($_POST['post'])) {
 	$server = $_POST['server'];
 	$email = $_POST['email'];
 	$info = $_POST['info'];
-	$hour = (int)$_POST['hour'];
-	$minute = (int)$_POST['minute'];
-	$month = (int)$_POST['month'];
-	$day = (int)$_POST['day'];
-	$year = (int)$_POST['year'];
+	$datetime = (int)$_POST['datetime'];
 	$run=0;
 	
   	$error = array();
@@ -73,22 +69,22 @@ if($action=="save" && isset($_POST['post'])) {
   	if(!count($error) and $run) {
 		$date=time();
 		$touser = array();
-		$cwdate=mktime($hour,$minute,0,$month,$day,$year);
+		$cwdate=mktime($datetime);
 		safe_query("INSERT INTO ".PREFIX."challenge (date, cwdate, squadID, opponent, opphp, oppcountry, league, map, server, email, info) values('$date', '$cwdate', '$squad', '$opponent', '$opphp', '$oppcountry', '$league', '$map', '$server', '$email', '$info')");
 		$ergebnis=safe_query("SELECT userID FROM ".PREFIX."squads_members WHERE warmember='1' AND squadID='".$squad."'");
-		while($ds=mysqli_fetch_array($ergebnis)) {
+		while($ds=mysql_fetch_array($ergebnis)) {
 			$touser[]=$ds['userID'];
 		}
-		if(!count($touser)){
-			$touser[] = 1;
-		}
-		$date = time();
-		$tmp_lang = new Language();
-		foreach($touser as $id) {
-			$tmp_lang->set_language(getuserlanguage($id));
-			$tmp_lang->read_module('challenge');
-			$message = $tmp_lang->module['challenge_message'];
-			sendmessage($id,$tmp_lang->module['message_title'],$message);
+
+		if($touser[0] != "") {
+			$date = time();
+			$tmp_lang = new Language();
+			foreach($touser as $id) {
+				$tmp_lang->set_language(getuserlanguage($id));
+				$tmp_lang->read_module('challenge');
+				$message = $tmp_lang->module['challenge_message'];
+				sendmessage($id,$tmp_lang->module['message_title'],$message);
+			}
 		}
 		echo $_language->module['thank_you'];
 		unset($_POST['opponent'],$_POST['opphp'],$_POST['league'],$_POST['map'],$_POST['server'],$_POST['info'],$_POST['email']);
@@ -133,7 +129,6 @@ elseif($action=="delete") {
 		
 		
 	  	$squads = getgamesquads();
-	  	$countries=getcountries();
 	  
 	  	$bg1 = BG_1;
 	  	
@@ -171,7 +166,7 @@ elseif($action=="delete") {
   
 if(isclanwaradmin($userID)) {
   $ergebnis = safe_query("SELECT * FROM ".PREFIX."challenge ORDER BY date $type");
-	$anz=mysqli_num_rows($ergebnis);
+	$anz=mysql_num_rows($ergebnis);
 	if($anz) {
 		if(!isset($type)) $type = "DESC";
 
@@ -180,10 +175,10 @@ if(isclanwaradmin($userID)) {
 		echo'<br /><br />';
 		
 		$i=0;
-		while ($ds = mysqli_fetch_array($ergebnis)) {
+		while ($ds = mysql_fetch_array($ergebnis)) {
 			$bg1 = ($i%2)? BG_1: BG_1;
-			$date = getformatdate($ds['date']);
-			$cwdate = getformatdatetime($ds['cwdate']);
+			$date = date("d.m.Y", $ds['date']);
+			$cwdate = date("d.m.Y - H:i", $ds['cwdate']);
 			$squad= getsquadname($ds['squadID']);
 			$oppcountry="[flag]".$ds['oppcountry']."[/flag]";
 			$country=flags($oppcountry);
@@ -201,7 +196,7 @@ if(isclanwaradmin($userID)) {
 			if(isset($ds['name'])) $name=cleartext($ds['name']);
       		if(isset($ds['comment'])) $message=cleartext($ds['comment']);
 			
-			$actions='<input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=calendar&amp;action=addwar&amp;chID='.$ds['chID'].'\');return document.MM_returnValue" value="'.$_language->module['insert_in_calendar'].'" /> <input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=challenge&amp;action=delete&amp;chID='.$ds['chID'].'\');return document.MM_returnValue" value="'.$_language->module['delete_challenge'].'" />';
+			$actions='<input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=calendar&amp;action=addwar&amp;chID='.$ds['chID'].'\');return document.MM_returnValue" value="'.$_language->module['insert_in_calendar'].'" class="btn btn-primary"> <input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=challenge&amp;action=delete&amp;chID='.$ds['chID'].'\');return document.MM_returnValue" value="'.$_language->module['delete_challenge'].'" class="btn btn-danger">';
 
 			eval ("\$challenges = \"".gettemplate("challenges")."\";");
 			echo $challenges;

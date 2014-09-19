@@ -34,21 +34,21 @@ $_language->read_module('out');
 //get values
 if(isset($_GET['bannerID'])) {
 	safe_query("UPDATE ".PREFIX."bannerrotation SET hits=hits+1 WHERE bannerID='".$_GET['bannerID']."'");
-	$ds = mysqli_fetch_array(safe_query("SELECT bannerurl FROM ".PREFIX."bannerrotation WHERE bannerID='".$_GET['bannerID']."'"));
+	$ds = mysql_fetch_array(safe_query("SELECT bannerurl FROM ".PREFIX."bannerrotation WHERE bannerID='".$_GET['bannerID']."'"));
 	$target='http://'.str_replace('http://', '', $ds['bannerurl']);
 	$type = "direct";
 }
 
 if(isset($_GET['partnerID'])) {
 	safe_query("UPDATE ".PREFIX."partners SET hits=hits+1 WHERE partnerID='".$_GET['partnerID']."'");
-	$ds = mysqli_fetch_array(safe_query("SELECT url FROM ".PREFIX."partners WHERE partnerID='".$_GET['partnerID']."'"));
+	$ds = mysql_fetch_array(safe_query("SELECT url FROM ".PREFIX."partners WHERE partnerID='".$_GET['partnerID']."'"));
 	$target='http://'.str_replace('http://', '', $ds['url']);
 	$type = "direct";
 }
 
 if(isset($_GET['sponsorID'])) {
 	safe_query("UPDATE ".PREFIX."sponsors SET hits=hits+1 WHERE sponsorID='".$_GET['sponsorID']."'");
-	$ds = mysqli_fetch_array(safe_query("SELECT url FROM ".PREFIX."sponsors WHERE sponsorID='".$_GET['sponsorID']."'"));
+	$ds = mysql_fetch_array(safe_query("SELECT url FROM ".PREFIX."sponsors WHERE sponsorID='".$_GET['sponsorID']."'"));
 	$target='http://'.str_replace('http://', '', $ds['url']);
 	$type = "direct";
 }

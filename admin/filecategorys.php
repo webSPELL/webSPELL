@@ -39,7 +39,7 @@ function generate_overview($filecats = '', $offset = '', $subcatID = 0) {
     $CAPCLASS->create_transaction();
     $hash = $CAPCLASS->get_hash();
 	    
-    while($ds = mysqli_fetch_array($rubrics)) {
+    while($ds = mysql_fetch_array($rubrics)) {
     	if($i%2) { $td='td1'; }
 		else { $td='td2'; }
 				
@@ -51,7 +51,7 @@ function generate_overview($filecats = '', $offset = '', $subcatID = 0) {
 	      
       	$i++;
 	
-		if(mysqli_num_rows(safe_query("SELECT * FROM ".PREFIX."files_categorys WHERE subcatID = '".$ds['filecatID']."'"))) {
+		if(mysql_num_rows(safe_query("SELECT * FROM ".PREFIX."files_categorys WHERE subcatID = '".$ds['filecatID']."'"))) {
 			$filecats .= generate_overview("", $offset.getinput($ds['name'])." &raquo; ", $ds['filecatID']);
     	}
 	}
@@ -61,14 +61,14 @@ function generate_overview($filecats = '', $offset = '', $subcatID = 0) {
 
 function delete_category($filecat){
 	$rubrics = safe_query("SELECT filecatID FROM ".PREFIX."files_categorys WHERE subcatID = '".$filecat."' ORDER BY name");
-	if(mysqli_num_rows($rubrics)){
-		while($ds = mysqli_fetch_assoc($rubrics)){
+	if(mysql_num_rows($rubrics)){
+		while($ds = mysql_fetch_assoc($rubrics)){
 			delete_category($ds['filecatID']);
 		}
 	}
 	safe_query("DELETE FROM ".PREFIX."files_categorys WHERE filecatID='".$filecat."'");
 	$files = safe_query("SELECT * FROM ".PREFIX."files WHERE filecatID='".$filecat."'");
-	while($ds = mysqli_fetch_array($files)) {
+	while($ds = mysql_fetch_array($files)) {
 		if(stristr($ds['file'],"http://") or stristr($ds['file'],"ftp://")) @unlink('../downloads/'.$ds['file']);
 	}
 	safe_query("DELETE FROM ".PREFIX."files WHERE filecatID='".$filecat."'");
@@ -116,9 +116,9 @@ if($_GET['action']=="add") {
 	
 	function generate_options($filecats = '', $offset = '', $subcatID = 0) {
 		$rubrics = safe_query("SELECT * FROM ".PREFIX."files_categorys WHERE subcatID = '".$subcatID."' ORDER BY name");
-		while($dr = mysqli_fetch_array($rubrics)) {
+		while($dr = mysql_fetch_array($rubrics)) {
 			$filecats .= '<option value="'.$dr['filecatID'].'">'.$offset.getinput($dr['name']).'</option>';
-			if(mysqli_num_rows(safe_query("SELECT * FROM ".PREFIX."files_categorys WHERE subcatID = '".$dr['filecatID']."'"))) {
+			if(mysql_num_rows(safe_query("SELECT * FROM ".PREFIX."files_categorys WHERE subcatID = '".$dr['filecatID']."'"))) {
 				$filecats .= generate_options("", $offset."- ", $dr['filecatID']);
 			}
 		}
@@ -153,15 +153,15 @@ elseif($_GET['action']=="edit") {
 
 	$filecatID = $_GET['filecatID'];
 	$ergebnis=safe_query("SELECT * FROM ".PREFIX."files_categorys WHERE filecatID='$filecatID'");
-	$ds=mysqli_fetch_array($ergebnis);
+	$ds=mysql_fetch_array($ergebnis);
 
 	function generate_options($filecats = '', $offset = '', $subcatID = 0) {
 	
 		global $filecatID;
 		$rubrics = safe_query("SELECT * FROM ".PREFIX."files_categorys WHERE subcatID = '".$subcatID."' AND (filecatID !='".$filecatID."' AND subcatID !='".$filecatID."')  ORDER BY name");
-		while($dr = mysqli_fetch_array($rubrics)) {
+		while($dr = mysql_fetch_array($rubrics)) {
 			$filecats .= '<option value="'.$dr['filecatID'].'">'.$offset.getinput($dr['name']).'</option>';
-			if(mysqli_num_rows(safe_query("SELECT * FROM ".PREFIX."files_categorys WHERE subcatID = '".$dr['filecatID']."'"))) {
+			if(mysql_num_rows(safe_query("SELECT * FROM ".PREFIX."files_categorys WHERE subcatID = '".$dr['filecatID']."'"))) {
 				$filecats .= generate_options("", $offset."- ", $dr['filecatID']);
 			}
 		}

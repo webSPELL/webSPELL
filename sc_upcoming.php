@@ -29,10 +29,10 @@ if (isset($site)) $_language->read_module('sc_upcoming');
 $now=time();
 $ergebnis=safe_query("SELECT * FROM ".PREFIX."upcoming WHERE date>= $now ORDER BY date LIMIT 0, ".$maxupcoming);
 $n=1;
-while($ds=mysqli_fetch_array($ergebnis)) {
-	echo'<table width="100%" cellspacing="0" cellpadding="2">';
+while($ds=mysql_fetch_array($ergebnis)) {
+	echo'<ul class="list-group">';
 	if($ds['type']=="c") {
-		$date=getformatdate($ds['date']);
+		$date=date("d.m.Y", $ds['date']);
 		$upsquad=getsquadname($ds['squad']);
     
     if($n%2) {
@@ -52,7 +52,7 @@ while($ds=mysqli_fetch_array($ergebnis)) {
 		echo $upcomingactions;
 	}
 	else {
-		$date=getformatdate($ds['date']);
+		$date=date("d.m.Y", $ds['date']);
 		$country="[flag]".$ds['country']."[/flag]";
 		$country=flags($country);
     
@@ -73,7 +73,7 @@ while($ds=mysqli_fetch_array($ergebnis)) {
 		echo $upcomingevent;
 	}
   $n++;
-  echo'</table>';
+  echo'</ul>';
 }
 $anzahl='';
 ?>

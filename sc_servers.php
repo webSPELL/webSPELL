@@ -26,8 +26,8 @@
 */
 $result=safe_query("SELECT * FROM ".PREFIX."servers ORDER BY sort");
 $n=1;
-while($row=mysqli_fetch_array($result)) {
-	echo '<table width="100%" cellspacing="0" cellpadding="2" border="0">';
+while($row=mysql_fetch_array($result)) {
+	echo'<ul class="list-group">';
 	
 	$servername = htmloutput($row['name']);
 	$serverip=$row['ip'];
@@ -46,6 +46,6 @@ while($row=mysqli_fetch_array($result)) {
 	echo $sc_servers;
   $n++;
   
-  echo '</table>';
+  echo '</ul>';
 }
 ?>

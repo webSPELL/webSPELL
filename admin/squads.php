@@ -34,21 +34,21 @@ if(isset($_GET['delete'])) {
 	if($CAPCLASS->check_captcha(0, $_GET['captcha_hash'])) {
 		$squadID = $_GET['squadID'];
 		$ergebnis=safe_query("SELECT userID FROM ".PREFIX."squads_members WHERE squadID='$squadID'");
-		while($ds=mysqli_fetch_array($ergebnis)) {
-			$squads=mysqli_num_rows(safe_query("SELECT userID FROM ".PREFIX."squads_members WHERE userID='$ds[userID]'"));
+		while($ds=mysql_fetch_array($ergebnis)) {
+			$squads=mysql_num_rows(safe_query("SELECT userID FROM ".PREFIX."squads_members WHERE userID='$ds[userID]'"));
 			if($squads<2 AND !issuperadmin($ds['userID'])) safe_query("DELETE FROM ".PREFIX."user_groups WHERE userID='$ds[userID]'");
 		}
 		safe_query("DELETE FROM ".PREFIX."squads_members WHERE squadID='$squadID' ");
 		safe_query("DELETE FROM ".PREFIX."squads WHERE squadID='$squadID' ");
 	
 		$ergebnis=safe_query("SELECT upID FROM ".PREFIX."upcoming WHERE squad='$squadID'");
-		while($ds=mysqli_fetch_array($ergebnis)) {
+		while($ds=mysql_fetch_array($ergebnis)) {
 			safe_query("DELETE FROM ".PREFIX."upcoming_announce WHERE upID='$ds[upID]'");
 		}
 		safe_query("DELETE FROM ".PREFIX."upcoming WHERE squad='$squadID' ");
 	
 		$ergebnis=safe_query("SELECT cwID FROM ".PREFIX."clanwars WHERE squad='$squadID'");
-		while($ds=mysqli_fetch_array($ergebnis)) {
+		while($ds=mysql_fetch_array($ergebnis)) {
 			safe_query("DELETE FROM ".PREFIX."comments WHERE type='cw' AND parentID='$ds[cwID]'");
 		}
 		safe_query("DELETE FROM ".PREFIX."clanwars WHERE squad='$squadID' ");
@@ -85,7 +85,7 @@ if(isset($_POST['save'])) {
 			
 			$icon = $_FILES['icon'];
 			$icon_small = $_FILES['icon_small'];
-			$id=mysqli_insert_id($_database);
+			$id=mysql_insert_id();
 			$filepath = "../images/squadicons/";
 			
 			if($icon['name'] != "") {
@@ -204,7 +204,7 @@ if($action=="add") {
 	$filepath="../images/squadicons/";
 	$sql=safe_query("SELECT * FROM ".PREFIX."games ORDER BY name");
 	$games='<select name="games[]">';
-	while($db=mysqli_fetch_array($sql)) {
+	while($db=mysql_fetch_array($sql)) {
 		$games.='<option value="'.htmlspecialchars($db['name']).'">'.htmlspecialchars($db['name']).'</option>';
 	}
 	$games.='</select>';
@@ -281,12 +281,12 @@ elseif($action=="edit") {
 	$filepath="../images/squadicons/";
 	
 	$ergebnis=safe_query("SELECT * FROM ".PREFIX."squads WHERE squadID='$squadID'");
-	$ds=mysqli_fetch_array($ergebnis);
+	$ds=mysql_fetch_array($ergebnis);
 	
 	$games_array = explode(";", $ds['games']);
 	$sql=safe_query("SELECT * FROM ".PREFIX."games ORDER BY name");
 	$games='<select name="games[]">';
-	while($db=mysqli_fetch_array($sql)) {
+	while($db=mysql_fetch_array($sql)) {
 		$selected='';
 		if($db['name'] == $ds['games']) $selected=' selected="selected"';
 		$games.='<option value="'.htmlspecialchars($db['name']).'"'.$selected.'>'.htmlspecialchars($db['name']).'</option>';
@@ -397,14 +397,14 @@ else {
     </tr>';
 
 	$squads=safe_query("SELECT * FROM ".PREFIX."squads ORDER BY sort");
-	$anzsquads=mysqli_num_rows($squads);
+	$anzsquads=mysql_num_rows($squads);
 	$CAPCLASS = new Captcha;
 	$CAPCLASS->create_transaction();
 	$hash = $CAPCLASS->get_hash();
   
 	if($anzsquads) {
     $i=1;
-		while($db=mysqli_fetch_array($squads)) {
+		while($db=mysql_fetch_array($squads)) {
 			if($i%2) { $td='td1'; }
       else { $td='td2'; }
       

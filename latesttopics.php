@@ -29,10 +29,10 @@ $usergroups = array();
 if($loggedin){
 	$usergroups[] = 'user';
 	$get = safe_query("SELECT * FROM ".PREFIX."user_forum_groups WHERE userID='".$userID."'");
-	$data = mysqli_fetch_row($get);
+	$data = mysql_fetch_row($get);
 	for($i=2; $i<count($data);$i++){
 		if($data[$i] == 1){
-			$info = mysqli_fetch_field_direct($get, $i);
+			$info = mysql_fetch_field($get,$i);
 			$usergroups[] = $info->name;
 		}
 	}
@@ -41,23 +41,23 @@ $userallowedreadgrps = array();
 $userallowedreadgrps['boardIDs'] = array();
 $userallowedreadgrps['catIDs'] = array();
 $get = safe_query("SELECT boardID FROM ".PREFIX."forum_boards WHERE readgrps = ''");
-while($ds = mysqli_fetch_assoc($get)){
+while($ds = mysql_fetch_assoc($get)){
 	$userallowedreadgrps['boardIDs'][] = $ds['boardID'];
 }
 $get = safe_query("SELECT catID FROM ".PREFIX."forum_categories WHERE readgrps = ''");
-while($ds = mysqli_fetch_assoc($get)){
+while($ds = mysql_fetch_assoc($get)){
 	$userallowedreadgrps['catIDs'][] = $ds['catID'];
 }
 if($loggedin){
 	$get = safe_query("SELECT boardID, readgrps FROM ".PREFIX."forum_boards WHERE readgrps != ''");
-	while($ds = mysqli_fetch_assoc($get)){
+	while($ds = mysql_fetch_assoc($get)){
 		$groups = explode(";",$ds['readgrps']);
 		$allowed = array_intersect($groups,$usergroups);
 		if(!count($allowed)) continue;
 		$userallowedreadgrps['boardIDs'][] = $ds['boardID'];
 	}
 	$get = safe_query("SELECT catID, readgrps FROM ".PREFIX."forum_categories WHERE readgrps != ''");
-	while($ds = mysqli_fetch_assoc($get)){
+	while($ds = mysql_fetch_assoc($get)){
 		$groups = explode(";",$ds['readgrps']);
 		$allowed = array_intersect($groups,$usergroups);
 		if(!count($allowed)) continue;
@@ -79,12 +79,12 @@ $ergebnis=safe_query("SELECT t.*, u.nickname, b.name
 					  		 t.moveID = '0'
 					ORDER BY t.lastdate DESC 
 					   LIMIT 0,".$maxlatesttopics);
-$anz=mysqli_num_rows($ergebnis);
+$anz=mysql_num_rows($ergebnis);
 if($anz) {
 	eval ("\$latesttopics_head = \"".gettemplate("latesttopics_head")."\";");
 	echo $latesttopics_head;
 	$n=1;
-	while($ds=mysqli_fetch_array($ergebnis)) {
+	while($ds=mysql_fetch_array($ergebnis)) {
 		if($ds['readgrps'] != "") {
 			$usergrps = explode(";", $ds['readgrps']);
 			$usergrp = 0;
@@ -115,12 +115,12 @@ if($anz) {
     
 		$last_poster = $ds['nickname'];
 		$board = $ds['name'];
-		$date = getformatdatetime($ds['lastdate']);
+		$date = date('d.m.Y - H:i', $ds['lastdate']);
 		$small_date	= date('d.m H:i', $ds['lastdate']);
 
 		$latesticon	=	'<img src="images/icons/'.$ds['icon'].'" width="15" height="15" alt="" />';
 		$boardlink	=	'<a href="index.php?site=forum&amp;board='.$ds['boardID'].'">'.$board.'</a>';
-		$topiclink	=	'<a href="index.php?site=forum_topic&amp;topic='.$ds['topicID'].'&amp;type=ASC&amp;page='.ceil(($ds['replys']+1)/$maxposts).'" onmouseover="showWMTT(\'latesttopics_'.$n.'\')" onmouseout="hideWMTT()">'.$topictitle.'</a>';
+		$topiclink	=	'index.php?site=forum_topic&amp;topic='.$ds['topicID'].'&amp;type=ASC&amp;page='.ceil(($ds['replys']+1)/$maxposts);
 		$replys			=	$ds['replys'];
 		
 		$replys_text = ($replys == 1) ? $_language->module['reply'] : $_language->module['replies'];

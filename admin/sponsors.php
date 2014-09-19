@@ -107,7 +107,7 @@ elseif($action=="edit") {
 
   echo'<h1>&curren; <a href="admincenter.php?site=sponsors" class="white">'.$_language->module['sponsors'].'</a> &raquo; '.$_language->module['edit_sponsor'].'</h1>';
 
-	$ds=mysqli_fetch_array(safe_query("SELECT * FROM ".PREFIX."sponsors WHERE sponsorID='".$_GET["sponsorID"]."'"));
+	$ds=mysql_fetch_array(safe_query("SELECT * FROM ".PREFIX."sponsors WHERE sponsorID='".$_GET["sponsorID"]."'"));
 	if(!empty($ds['banner'])) $pic='<img src="'.$filepath.$ds['banner'].'" border="0" alt="" />';
 	else $pic=$_language->module['no_upload'];
 	if(!empty($ds['banner_small'])) $pic_small='<img src="'.$filepath.$ds['banner_small'].'" border="0" alt="" />';
@@ -224,7 +224,7 @@ elseif(isset($_POST["save"])) {
 	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
 		safe_query("INSERT INTO ".PREFIX."sponsors (sponsorID, name, url, info, displayed, mainsponsor, date, sort) values('', '".$name."', '".$url."', '".$info."', '".$displayed."', '".$mainsponsor."', '".time()."', '1')");
 		
-		$id=mysqli_insert_id($_database);
+		$id=mysql_insert_id();
 		
 		if($banner['name'] != "") {
 			move_uploaded_file($banner['tmp_name'], $filepath.$banner['name'].".tmp");
@@ -418,10 +418,10 @@ else {
 	$hash = $CAPCLASS->get_hash();
     
 	$qry=safe_query("SELECT * FROM ".PREFIX."sponsors ORDER BY sort");
-	$anz=mysqli_num_rows($qry);
+	$anz=mysql_num_rows($qry);
 	if($anz) {
 		$i=1;
-    while($ds = mysqli_fetch_array($qry)) {
+    while($ds = mysql_fetch_array($qry)) {
       if($i%2) { $td='td1'; }
 			else { $td='td2'; }
       

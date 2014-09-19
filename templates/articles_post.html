@@ -9,8 +9,7 @@
 	<meta name="generator" content="webSPELL" />
 
 <!-- Head & Title include -->
-	<title>%new_article%</title>
-  <base href="$rewriteBase" />
+	<title>Article</title>
 	<link href="_stylesheet.css" rel="stylesheet" type="text/css" />
 	<script src="js/bbcode.js" language="jscript" type="text/javascript"></script>
 <!-- end Head & Title include -->
@@ -59,109 +58,98 @@ function update_textarea(value) {
 
 -->
 </script>
-<style type="text/css">
-	body {margin: 0px;}
-</style>
 </head>
 <body>
 <form action="articles.php?action=save" method="post" id="post" name="post" onsubmit="return chkFormular()">
-<table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="$border">
-  <tr>
-    <td class="title" align="center" bgcolor="$bghead">%new_article%</td>
-  </tr>
-  <tr><td bgcolor="$pagebg"></td></tr>
-  <tr>
-    <td bgcolor="$bg1">
-    <table width="100%" border="0" cellspacing="0" cellpadding="0">
-      <tr>
-        <td valign="top">$addbbcode</td>
-        <td valign="top">$addflags</td>
-      </tr>
-     </table>
-     <hr />
-    <table width="100%" border="0" cellspacing="0" cellpadding="2">
-      <tr align="left">
-        <td colspan="2"><b>%pagecount%</b>&nbsp;&nbsp;&nbsp;%page_select%<hr /></td>
-      </tr>
-      <tr align="left">
-        <td colspan="2"><b>%title%</b><br />
-        <input name="title" type="text" size="80" id='article_title' /></td>
-      </tr>
-      <tr align="left">
-        <td colspan="2"><b>Tags</b><br /> <input name="tags"type="text" size="80" /></td>
-      </tr>
-      <tr align="left">
-        <td colspan="2"><br /><div id="articles_textarea">
-        <script language="JavaScript" type="text/javascript">
-        <!--
-        update_textarea(1);
-        -->
-        </script></div></td>
-      </tr>
-      <tr>
-        <td><small><b>%options%:</b> %html% %bbcode% %smilies%</small></td>
-        <td align="right"><input name="upload" type="button" onclick="MM_openBrWindow('upload.php?articlesID=$articlesID','Upload','scrollbars=yes,width=800,height=600')" value="%upload_images%" /></td>
-      </tr>
-      <tr>
-        <td colspan="2"><hr /></td>
-      </tr>
-    </table>
-    <table width="100%" border="0" cellspacing="0" cellpadding="2">
-      <tr>
-        <td>%link% 1:
-        <input name="link1" type="text" />
-        <input name="url1" type="text" value="http://" />
-        <input class="input" name="window1" type="radio" value="1" checked="checked" />
-        %new_window%
-        <input class="input" type="radio" name="window1" value="0" />
-        %self%</td>
-      </tr>
-      <tr>
-        <td>%link% 2:
-        <input name="link2" type="text" />
-        <input name="url2" type="text" value="http://" />
-        <input class="input" name="window2" type="radio" value="1" checked="checked" />
-        %new_window%
-        <input class="input" type="radio" name="window2" value="0" />
-        %self%</td>
-      </tr>
-      <tr>
-        <td>%link% 3:
-        <input name="link3" type="text" />
-        <input name="url3" type="text" value="http://" />
-        <input class="input" name="window3" type="radio" value="1" checked="checked" />
-        %new_window%
-        <input class="input" type="radio" name="window3" value="0" />
-        %self%</td>
-      </tr>
-      <tr>
-        <td>%link% 4:
-        <input name="link4" type="text" />
-        <input name="url4" type="text" value="http://" />
-        <input class="input" name="window4" type="radio" value="1" checked="checked" />
-        %new_window%
-        <input class="input" type="radio" name="window4" value="0" />
-        %self%</td>
-      </tr>
-      <tr>
-        <td><hr /></td>
-      </tr>
-      <tr>
-        <td align="right">
-        <input type="hidden" name="articlesID" value="$articlesID" />
-        <input type="hidden" name="userID" value="$userID" />
-        <select name="comments">
-          <option value="0">%no_comments%</option>
-          <option value="1">%user_comments%</option>
-          <option value="2" selected="selected">%visitor_comments%</option>
-        </select>
-        <input name="save" type="submit" value="%save_article%" />
-        <input name="button" type="button" onclick="window.close()" value="%cancel%" /></td>
-      </tr>
-    </table>
-    </td>
-  </tr>
-</table>
+    <div class="container">
+        <h2>%edit_article%</h2>
+        <div class="panel-group" id="accordion">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">BBCode and Flags</a>
+                    </h4>
+                </div>
+                <div id="collapseOne" class="panel-collapse collapse in">
+                    <div class="panel-body">
+                        $addbbcode
+                        $addflags
+                    </div>
+                </div>
+            </div>
+
+            <div id="collapseTwo" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <div class="form-horizontal">
+                        <div class="form-group">
+                            <div class="col-xs-1">%link% 1:</div>
+                            <div class="col-xs-4"><input name="link1" type="text" value="" class="form-control"></div>
+                            <div class="col-xs-4"><input name="url1" type="text" value="http://" class="form-control"></div>
+                            <div class="col-xs-3"><input class="input" type="radio" name="window1" value="0"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-xs-1">%link% 2:</div>
+                            <div class="col-xs-4"><input name="link2" type="text" value="" class="form-control"></div>
+                            <div class="col-xs-4"><input name="url2" type="text" value="http://" class="form-control"></div>
+                            <div class="col-xs-3"><input class="input" type="radio" name="window2" value="0" /></div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-xs-1">%link% 3:</div>
+                            <div class="col-xs-4"><input name="link3" type="text" value="" class="form-control"></div>
+                            <div class="col-xs-4"><input name="url3" type="text" value="http://" class="form-control"></div>
+                            <div class="col-xs-3"><input class="input" type="radio" name="window3" value="0" /></div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-xs-1">%link% 4:</div>
+                            <div class="col-xs-4"><input name="link4" type="text" value="" class="form-control"></div>
+                            <div class="col-xs-4"><input name="url4" type="text" value="http://" class="form-control"></div>
+                            <div class="col-xs-3"><input class="input" type="radio" name="window4" value="0" /></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">%options%</a>
+                    </h4>
+                </div>
+                <div id="collapseThree" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <b>%pagecount%</b>
+                        %page_select%
+
+                        <input name="upload" type="button" onclick="MM_openBrWindow('upload.php?articlesID=$articlesID','Upload','scrollbars=yes,width=800,height=600')" value="%upload_images%" class="btn btn-danger">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <div><b>%title%</b></div>
+        <input name="title" type="text" size="80" value="$title" id='article_title' class="form-control">
+        <p class="text-right"><small><b>%options%:</b> %html% %bbcode% %smilies%</small></p>
+        <div id="articles_textarea"></div>
+
+        <script language="javascript" type="text/javascript">
+            <!--
+            update_textarea(1);
+            -->
+        </script>
+    </div>
+
+    <select name="comments">
+      <option value="0">%no_comments%</option>
+      <option value="1">%user_comments%</option>
+      <option value="2" selected="selected">%visitor_comments%</option>
+    </select>
+    <input name="save" type="submit" value="%save_article%" />
+    <input name="button" type="button" onclick="window.close()" value="%cancel%" />
 </form>
 </body>
 </html>

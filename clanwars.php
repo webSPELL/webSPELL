@@ -51,15 +51,15 @@ if($action=="new") {
     $hometeam="";
     
     $gamesa=safe_query("SELECT * FROM ".PREFIX."games ORDER BY name");
-		while($ds=mysqli_fetch_array($gamesa)) {
+		while($ds=mysql_fetch_array($gamesa)) {
 			$games.='<option value="'.$ds['tag'].'">'.$ds['name'].'</option>';
 		}
 
 		$gamesquads=safe_query("SELECT * FROM ".PREFIX."squads WHERE gamesquad='1' ORDER BY sort");
-		while($ds=mysqli_fetch_array($gamesquads)) {
+		while($ds=mysql_fetch_array($gamesquads)) {
 			$hometeam.='<option value="0">'.$ds['name'].'</option>';
 			$squadmembers=safe_query("SELECT * FROM ".PREFIX."squads_members WHERE squadID='$ds[squadID]' ORDER BY sort");
-			while($dm=mysqli_fetch_array($squadmembers)) {
+			while($dm=mysql_fetch_array($squadmembers)) {
 				$hometeam.='<option value="'.$dm['userID'].'">&nbsp; - '.getnickname($dm['userID']).'</option>';
 			}
 			$hometeam.='<option value="0" disabled="disabled">-----</option>';
@@ -82,8 +82,6 @@ if($action=="new") {
 			else $year.='<option value="'.$i.'">'.$i.'</option>';
 		}
 
-		$countries=getcountries();
-
 		$leaguehp="http://";
 		$opphp="http://";
 		$linkpage="http://";
@@ -93,13 +91,12 @@ if($action=="new") {
 		$opptag = "";
 		if(isset($upID)) {
 			$ergebnis=safe_query("SELECT * FROM ".PREFIX."upcoming WHERE upID='$upID'");
-			$ds=mysqli_fetch_array($ergebnis);
+			$ds=mysql_fetch_array($ergebnis);
 			$league=$ds['league'];
 			if($ds['leaguehp'] != $leaguehp) $leaguehp=$ds['leaguehp'];
 			$opponent=$ds['opponent'];
 			$opptag=$ds['opptag'];
 			if($ds['opphp'] != $opphp) $opphp=$ds['opphp'];
-			$countries=getcountries();
 			$countries=str_replace(" selected=\"selected\"", "", $countries);
 			$countries=str_replace('value="'.$ds['oppcountry'].'"', 'value="'.$ds['oppcountry'].'" selected="selected"', $countries);
 
@@ -169,8 +166,12 @@ elseif($action=="save") {
 		}
 	}
 	$backup_theMaps = serialize($maps);
-	$theMaps = $_database->escape_string($backup_theMaps);
-
+	if(function_exists("mysql_real_escape_string")) {
+		$theMaps = mysql_real_escape_string($backup_theMaps);
+	}
+	else{
+		$theMaps = addslashes($backup_theMaps);
+	}
 	$scores = array();
 	if(!empty($homescr)) {
 		if(is_array($homescr)) {
@@ -204,8 +205,8 @@ elseif($action=="save") {
 	safe_query("INSERT INTO ".PREFIX."clanwars ( date, squad, game, league, leaguehp, opponent, opptag, oppcountry, opphp, maps, hometeam, oppteam, server, hltv, homescore, oppscore, report, comments, linkpage)
                  VALUES( '$date', '$squad', '$game', '".$league."', '$leaguehp', '".$opponent."', '".$opptag."', '$oppcountry', '$opphp', '".$theMaps."', '$home_string', '$oppteam', '$server', '$hltv', '$theHomeScore', '$theOppScore', '".$report."', '$comments', '$linkpage' ) ");
 
-	$cwID=mysqli_insert_id($_database);
-	$date=getformatdate($date);
+	$cwID=mysql_insert_id();
+	$date=date("d.m.Y", $date);
 
 	// INSERT CW-NEWS
 	if(isset($news)) {
@@ -213,18 +214,18 @@ elseif($action=="save") {
 	 	$_language->read_module('bbcode', true);
 	 	
 		safe_query("INSERT INTO ".PREFIX."news (date, poster, saved, cwID) VALUES ('".time()."', '$userID', '0', '$cwID')");
-		$newsID=mysqli_insert_id($_database);
+		$newsID=mysql_insert_id();
 		
 		$rubrics = '';
 		$newsrubrics=safe_query("SELECT rubricID, rubric FROM ".PREFIX."news_rubrics ORDER BY rubric");
-		while($dr=mysqli_fetch_array($newsrubrics)) {
+		while($dr=mysql_fetch_array($newsrubrics)) {
 			$rubrics.='<option value="'.$dr['rubricID'].'">'.$dr['rubric'].'</option>';
 		}
 
 		$count_langs = 0;
 		$lang=safe_query("SELECT lang, language FROM ".PREFIX."news_languages ORDER BY language");
 		$langs='';
-		while($dl=mysqli_fetch_array($lang)) {
+		while($dl=mysql_fetch_array($lang)) {
 			$langs.="news_languages[".$count_langs."] = new Array();\nnews_languages[".$count_langs."][0] = '".$dl['lang']."';\nnews_languages[".$count_langs."][1] = '".$dl['language']."';\n";
 			$count_langs++;
 		}
@@ -316,7 +317,7 @@ elseif($action=="save") {
 '.stripslashes($opptag).' '.$_language->module['team'].': '.stripslashes($oppteam).'
 
 '.$more1.'
-<a href="index.php?site=clanwars_details&amp;cwID='.$cwID.'">'.$_languagepagedefault->module['clanwar_details'].'</a>';
+<a href="index.php?site=clanwars_details&#38;&#97;&#109;&#112;&#59;cwID='.$cwID.'">'.$_languagepagedefault->module['clanwar_details'].'</a>';
 		$i = 0;
 		$message_vars = "message[".$i."] = '".js_replace($message)."';\n";
 		$headline_vars = "headline[".$i."] = '".js_replace(htmlspecialchars($headline1))."';\n";
@@ -332,7 +333,7 @@ elseif($action=="save") {
 		
 		$rubrics='';
 		$newsrubrics=safe_query("SELECT rubricID, rubric FROM ".PREFIX."news_rubrics ORDER BY rubric");
-		while($dr=mysqli_fetch_array($newsrubrics)) {
+		while($dr=mysql_fetch_array($newsrubrics)) {
 			$rubrics.='<option value="'.$dr['rubricID'].'">'.$dr['rubric'].'</option>';
 		}
 		$bg1=BG_1;
@@ -350,7 +351,7 @@ elseif($action=="save") {
   <link href="_stylesheet.css" rel="stylesheet" type="text/css">
   <center><br /><br /><br /><br />
   <b>'.$_language->module['clanwar_saved'].'.</b><br /><br />
-  <input type="button" onclick="MM_openBrWindow(\'upload.php?cwID='.$cwID.'\',\'Clanwars\',\'toolbar=no,status=no,scrollbars=yes,width=800,height=600\')" value="'.$_language->module['upload_screenshot'].'" />
+  <input type="button" onclick="MM_openBrWindow(\'upload.php?cwID='.$cwID.'\',\'Clanwars\',\'toolbar=no,status=no,scrollbars=yes,width=800,height=600\')" value="'.$_language->module['upload_screenshot'].'">
   <input type="button" onclick="javascript:self.close()" value="'.$_language->module['close_window'].'" /></center>';
 }
 elseif($action=="edit") {
@@ -378,10 +379,10 @@ elseif($action=="edit") {
 		$month='';
 		$year='';
     
-    $ds=mysqli_fetch_array(safe_query("SELECT * FROM ".PREFIX."clanwars WHERE cwID='$cwID'"));
+    $ds=mysql_fetch_array(safe_query("SELECT * FROM ".PREFIX."clanwars WHERE cwID='$cwID'"));
 
 		$gamesa=safe_query("SELECT tag, name FROM ".PREFIX."games ORDER BY name");
-		while($dv=mysqli_fetch_array($gamesa)) {
+		while($dv=mysql_fetch_array($gamesa)) {
 			$games.='<option value="'.$dv['tag'].'">'.$dv['name'].'</option>';
 		}
 
@@ -406,7 +407,7 @@ elseif($action=="edit") {
 		$leaguehp=htmlspecialchars($ds['leaguehp']);
 		$opponent=htmlspecialchars($ds['opponent']);
 		$opptag=htmlspecialchars($ds['opptag']);
-		$countries=getcountries();
+		$countries=str_replace('value="at" selected="selected"', 'value="at"', $countries);
 		$countries=str_replace('value="'.$ds['oppcountry'].'"', 'value="'.$ds['oppcountry'].'" selected="selected"', $countries);
 		$opphp=htmlspecialchars($ds['opphp']);
 		$oppteam=htmlspecialchars($ds['oppteam']);
@@ -434,10 +435,10 @@ elseif($action=="edit") {
 		}
 
 		$gamesquads=safe_query("SELECT * FROM ".PREFIX."squads WHERE gamesquad='1' ORDER BY sort");
-		while($dq=mysqli_fetch_array($gamesquads)) {
+		while($dq=mysql_fetch_array($gamesquads)) {
 			$hometeam.='<option value="0">'.$dq['name'].'</option>';
 			$squadmembers=safe_query("SELECT * FROM ".PREFIX."squads_members WHERE squadID='$dq[squadID]' ORDER BY sort");
-			while($dm=mysqli_fetch_array($squadmembers)) {
+			while($dm=mysql_fetch_array($squadmembers)) {
 				$hometeam.='<option value="'.$dm['userID'].'">&nbsp; - '.getnickname($dm['userID']).'</option>';
 			}
 			$hometeam.='<option value="0">&nbsp;</option>';
@@ -507,8 +508,12 @@ elseif($action=="saveedit") {
 			}
 		}
 	}
-	$theMaps = $_database->escape_string(serialize($theMaps));
-
+	if(function_exists("mysql_real_escape_string")) {
+		$theMaps = mysql_real_escape_string(serialize($theMaps));
+	}
+	else{
+		$theMaps = addslashes(serialize($theMaps));
+	}
 	$theHomeScore = serialize($theHomeScore);
 	$theOppScore = serialize($theOppScore);
 
@@ -546,8 +551,8 @@ elseif($action=="saveedit") {
 
 	echo'<center><br /><br /><br /><br />
   <b>'.$_language->module['clanwar_updated'].'</b><br /><br />
-  <input type="button" onclick="MM_openBrWindow(\'upload.php?cwID='.$cwID.'\',\'Clanwars\',\'toolbar=no,status=no,scrollbars=yes,width=800,height=600\')" value="'.$_language->module['upload_screenshot'].'" />
-  <input type="button" onclick="javascript:self.close()" value="'.$_language->module['close_window'].'" /></center>';
+  <input type="button" onclick="MM_openBrWindow(\'upload.php?cwID='.$cwID.'\',\'Clanwars\',\'toolbar=no,status=no,scrollbars=yes,width=800,height=600\')" value="'.$_language->module['upload_screenshot'].'">
+  <input type="button" onclick="javascript:self.close()" value="'.$_language->module['close_window'].'"></center>';
 }
 elseif($action=="delete") {
 	include("_mysql.php");
@@ -559,7 +564,7 @@ elseif($action=="delete") {
 	if(isset($_POST['cwID'])) $cwID = $_POST['cwID'];
 	if(!isset($cwID)) $cwID = $_GET['cwID'];
 	$ergebnis=safe_query("SELECT screens FROM ".PREFIX."clanwars WHERE cwID='$cwID'");
-	$ds=mysqli_fetch_array($ergebnis);
+	$ds=mysql_fetch_array($ergebnis);
 	$screens=explode("|", $ds['screens']);
 	$filepath = "./images/clanwar-screens/";
 	if(is_array($screens)) {
@@ -583,7 +588,7 @@ elseif(isset($_POST['quickactiontype'])=="delete") {
 		$cwID = $_POST['cwID'];
 		foreach($cwID as $id) {
 			$ergebnis=safe_query("SELECT screens FROM ".PREFIX."clanwars WHERE cwID='$id'");
-			$ds=mysqli_fetch_array($ergebnis);
+			$ds=mysql_fetch_array($ergebnis);
 			$screens=explode("|", $ds['screens']);
 			$filepath = "./images/clanwar-screens/";
 			if(is_array($screens)) {
@@ -604,7 +609,7 @@ elseif($action=="stats") {
 	eval ("\$title_clanwars = \"".gettemplate("title_clanwars")."\";");
 	echo $title_clanwars;
 
-	echo'<input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=clanwars\');return document.MM_returnValue" value="'.$_language->module['show_clanwars'].'" />';
+	echo'<input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=clanwars\');return document.MM_returnValue" value="'.$_language->module['show_clanwars'].'" class="btn btn-primary">';
 	
   echo'<h2>'.$_language->module['clan_stats'].'</h2>';
 
@@ -623,18 +628,18 @@ elseif($action=="stats") {
 
 	$dp=safe_query("SELECT * FROM ".PREFIX."clanwars");
 	// clanwars gesamt
-	$totaltotal=mysqli_num_rows($dp);
+	$totaltotal=mysql_num_rows($dp);
 
-	while($cwdata = mysqli_fetch_array($dp)) {
+	while($cwdata = mysql_fetch_array($dp)) {
 		// total home points
 		$totalhomeqry=safe_query("SELECT homescore FROM ".PREFIX."clanwars WHERE cwID='$cwdata[cwID]'");
-		while($theHomeData = mysqli_fetch_array($totalhomeqry)) {
+		while($theHomeData = mysql_fetch_array($totalhomeqry)) {
 			$totalHomeScore+=array_sum(unserialize($theHomeData['homescore']));
 			$theHomeScore=array_sum(unserialize($theHomeData['homescore']));
 		}
 		// total opponent points
 		$totaloppqry=safe_query("SELECT oppscore FROM ".PREFIX."clanwars WHERE cwID='$cwdata[cwID]'");
-		while($theOppData = mysqli_fetch_array($totaloppqry)) {
+		while($theOppData = mysql_fetch_array($totaloppqry)) {
 			$totalOppScore+=array_sum(unserialize($theOppData['oppscore']));
 			$theOppScore=array_sum(unserialize($theOppData['oppscore']));
 		}
@@ -678,8 +683,8 @@ elseif($action=="stats") {
 	// SQUADS
 
 	$squads=safe_query("SELECT * FROM ".PREFIX."squads WHERE gamesquad='1' ORDER BY sort");
-	if(mysqli_num_rows($squads)) {
-		while($squaddata=mysqli_fetch_array($squads)) {
+	if(mysql_num_rows($squads)) {
+		while($squaddata=mysql_fetch_array($squads)) {
 			$squad=getsquadname($squaddata['squadID']);
 			
       echo '<h2>'.$squad.' - '.$_language->module['stats'].'</h2>';
@@ -693,19 +698,19 @@ elseif($action=="stats") {
 			// SQUAD STATISTICS
 
 			$squadcws=safe_query("SELECT * FROM ".PREFIX."clanwars WHERE squad='".$squaddata['squadID']."'");
-			$total=mysqli_num_rows($squadcws);
+			$total=mysql_num_rows($squadcws);
 			$totalperc=percent($total, $totaltotal, 2);
 
-			while($squadcwdata=mysqli_fetch_array($squadcws)) {
+			while($squadcwdata=mysql_fetch_array($squadcws)) {
 
 				// SQUAD CLANWAR STATISTICS
 
 				// total squad homescore
-				$sqHomeScoreQry=mysqli_fetch_array(safe_query("SELECT homescore FROM ".PREFIX."clanwars WHERE cwID='".$squadcwdata['cwID']."' AND squad='".$squaddata['squadID']."'"));
+				$sqHomeScoreQry=mysql_fetch_array(safe_query("SELECT homescore FROM ".PREFIX."clanwars WHERE cwID='".$squadcwdata['cwID']."' AND squad='".$squaddata['squadID']."'"));
 				$sqHomeScore=array_sum(unserialize($sqHomeScoreQry['homescore']));
 				$totalHomeScoreSQ+=array_sum(unserialize($sqHomeScoreQry['homescore']));
 				// total squad oppscore
-				$sqOppScoreQry=mysqli_fetch_array(safe_query("SELECT oppscore FROM ".PREFIX."clanwars WHERE cwID='".$squadcwdata['cwID']."' AND squad='".$squaddata['squadID']."'"));
+				$sqOppScoreQry=mysql_fetch_array(safe_query("SELECT oppscore FROM ".PREFIX."clanwars WHERE cwID='".$squadcwdata['cwID']."' AND squad='".$squaddata['squadID']."'"));
 				$sqOppScore=array_sum(unserialize($sqOppScoreQry['oppscore']));
 				$totalOppScoreSQ+=array_sum(unserialize($sqOppScoreQry['oppscore']));
 
@@ -769,13 +774,13 @@ elseif($action=="stats") {
 
 			// get playerlist for squad
 			$squadmembers=safe_query("SELECT * FROM ".PREFIX."squads_members WHERE squadID='".$squaddata['squadID']."'");
-			while($player=mysqli_fetch_array($squadmembers)) {
+			while($player=mysql_fetch_array($squadmembers)) {
 				$playerlist[]=$player['userID'];
 			}
 
 			// get roster for squad and find matches with playerlist
 			$playercws=safe_query("SELECT hometeam FROM ".PREFIX."clanwars WHERE squad='".$squaddata['squadID']."'");
-			while($roster=mysqli_fetch_array($playercws)) {
+			while($roster=mysql_fetch_array($playercws)) {
 				$hometeam = array_merge($hometeam, unserialize($roster['hometeam']));
 			}
 
@@ -809,7 +814,7 @@ elseif($action=="stats") {
           $wars=$anz[$id];
 					if(empty($wars)) $wars='0';
 					$perc=percent($wars, $total, 2);
-					if($perc) $percpic='<img src="images/icons/poll_start.gif" width="1" height="5" alt="" /><img src="images/icons/poll.gif" width="'.round($perc, 0).'" height="5" alt="" /><img src="images/icons/poll_end.gif" width="1" height="5" alt="" /> '.$perc.'%';
+					if($perc) $percpic='<div class="progress"><div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="'.round($perc, 0).'" aria-valuemin="0" aria-valuemax="100" style="width: '.round($perc, 0).'%;"><span class="sr-only">'.round($perc, 0).'% Complete</span></div></div>';
 					else $percpic='<img src="images/icons/poll_start.gif" width="1" height="5" alt="" /><img src="images/icons/poll_end.gif" width="1" height="5" alt="" /> '.$perc.'%';
 
 					eval ("\$clanwars_stats_player_content = \"".gettemplate("clanwars_stats_player_content")."\";");
@@ -852,12 +857,12 @@ elseif($action=="showonly") {
 	$squads=getgamesquads();
 	
   $jumpsquads=str_replace('value="', 'value="index.php?site=clanwars&amp;action=showonly&amp;only=squad&amp;id=', $squads);
-	$jumpmenu='<select name="selectgame" onchange="MM_jumpMenu(\'parent\',this,0)">			   <option value="index.php?site=clanwars">- '.$_language->module['show_all_squads'].' -</option>'.$jumpsquads.'</select> <input type="button" name="Button1" value="'.$_language->module['go'].'" onclick="MM_jumpMenuGo(\'selectgame\',\'parent\',0)" />';		
+	$jumpmenu='<div class="input-group"><select name="selectgame" onchange="MM_jumpMenu(\'parent\',this,0)" class="form-control"><option value="index.php?site=clanwars">- '.$_language->module['show_all_squads'].' -</option>'.$jumpsquads.'</select><span class="input-group-btn"><input type="button" name="Button1" value="'.$_language->module['go'].'" onclick="MM_jumpMenuGo(\'selectgame\',\'parent\',0)" class="btn btn-primary"></span></div>';		
 
 	eval ("\$title_clanwars = \"".gettemplate("title_clanwars")."\";");
 	echo $title_clanwars;
   
-	$gesamt = mysqli_num_rows(safe_query("SELECT cwID FROM ".PREFIX."clanwars WHERE $only='$id'"));
+	$gesamt = mysql_num_rows(safe_query("SELECT cwID FROM ".PREFIX."clanwars WHERE $only='$id'"));
 	$pages=1;
 	
 	$max=$maxclanwars;
@@ -879,26 +884,20 @@ elseif($action=="showonly") {
 	}
 
 	if($type=="ASC")
-	$seiten='<a href="index.php?site=clanwars&amp;action=showonly&amp;id='.$id.'&amp;page='.$page.'&amp;sort='.$sort.'&amp;type=DESC&amp;only='.$only.'">'.$_language->module['sort'].':</a> <img src="images/icons/asc.gif" width="9" height="7" border="0" alt="" /> '.$page_link.'<br /><br />';
+	$seiten='<a href="index.php?site=clanwars&amp;action=showonly&amp;id='.$id.'&amp;page='.$page.'&amp;sort='.$sort.'&amp;type=DESC&amp;only='.$only.'">'.$_language->module['sort'].' <i class="icon-sort-up"></i></a> '.$page_link.'';
 	else
-	$seiten='<a href="index.php?site=clanwars&amp;action=showonly&amp;id='.$id.'&amp;page='.$page.'&amp;sort='.$sort.'&amp;type=ASC&amp;only='.$only.'">'.$_language->module['sort'].':</a> <img src="images/icons/desc.gif" width="9" height="7" border="0" alt="" /> '.$page_link.'<br /><br />';
+	$seiten='<a href="index.php?site=clanwars&amp;action=showonly&amp;id='.$id.'&amp;page='.$page.'&amp;sort='.$sort.'&amp;type=ASC&amp;only='.$only.'">'.$_language->module['sort'].' <i class="icon-sort-down"></i></a>  '.$page_link.'';
 
-	if(isclanwaradmin($userID)) $admin='<input type="button" onclick="MM_openBrWindow(\'clanwars.php?action=new\',\'Clanwars\',\'toolbar=no,status=no,scrollbars=yes,width=800,height=600\')" value="'.$_language->module['new_clanwar'].'" />';
+	if(isclanwaradmin($userID)) $admin='<input type="button" onclick="MM_openBrWindow(\'clanwars.php?action=new\',\'Clanwars\',\'toolbar=no,status=no,scrollbars=yes,width=800,height=600\')" value="'.$_language->module['new_clanwar'].'" class="btn btn-danger">';
   else $admin='';
-	$Statistics='<input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=clanwars&amp;action=stats\');return document.MM_returnValue" value="'.$_language->module['stat'].'" />';
+	$Statistics='<input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=clanwars&amp;action=stats\');return document.MM_returnValue" value="'.$_language->module['stat'].'" class="btn btn-primary">';
 
-	echo'<form name="jump" action="">
-  <table width="100%" border="0" cellspacing="0" cellpadding="2">
-    <tr>
-      <td>'.$admin.' '.$Statistics.'</td>
-      <td align="right">'.$jumpmenu.'</td>
-    </tr>
-    <tr>
-      <td>'.$seiten.'</td>
-      <td></td>
-    </tr>
-  </table>
-  </form>';
+	echo'<form name="jump" action=""><div class="row">
+            <div class="col-xs-6">'.$admin.' '.$Statistics.'</div>
+            <div class="col-xs-6">'.$jumpmenu.'</div>
+        </div>
+        </form>
+        <p>'.$seiten.'</p>';
 
 	if($gesamt) {
 		$headdate='<a class="titlelink" href="index.php?site=clanwars&amp;action=showonly&amp;id='.$id.'&amp;only='.$only.'&amp;page='.$page.'&amp;sort=date&amp;type='.$type.'">'.$_language->module['date'].':</a>';
@@ -911,7 +910,7 @@ elseif($action=="showonly") {
 		echo $clanwars_head;
 		$n=1;
 	
-		while($ds=mysqli_fetch_array($ergebnis)) {
+		while($ds=mysql_fetch_array($ergebnis)) {
 			if($n%2) {
 				$bg1=BG_1;
 				$bg2=BG_2;
@@ -920,7 +919,7 @@ elseif($action=="showonly") {
 				$bg1=BG_3;
 				$bg2=BG_4;
 			}
-			$date=getformatdate($ds['date']);
+			$date=date("d.m.y", $ds['date']);
 			$league='<a href="'.$ds['leaguehp'].'" target="_blank">'.$ds['league'].'</a>';
 			$oppcountry="[flag]".$ds['oppcountry']."[/flag]";
 			$country=flags($oppcountry);
@@ -930,9 +929,9 @@ elseif($action=="showonly") {
 			$oppteam=$ds['oppteam'];
 			$server=$ds['server'];
 
-			$squad='<a href="index.php?site=clanwars&amp;action=showonly&amp;id='.$id.'&amp;page='.$page.'&amp;sort=game&amp;type='.$type.'&amp;only=squad"><b>'.getsquadname($ds['squad']).'</b></a>';
+			$squad='<a href="index.php?site=clanwars&amp;action=showonly&amp;id='.$id.'&amp;page='.$page.'&amp;sort=game&amp;type='.$type.'&amp;only=squad">'.getsquadname($ds['squad']).'</a>';
 			if(file_exists('images/games/'.$ds['game'].'.gif')) $pic = $ds['game'].'.gif';
-			$game='<a href="index.php?site=clanwars&amp;action=showonly&amp;id='.$ds['game'].'&amp;page='.$page.'&amp;sort=game&amp;type='.$type.'&amp;only=game"><img src="images/games/'.$pic.'" width="13" height="13" border="0" alt="" /></a>';
+			$game='<a href="index.php?site=clanwars&amp;action=showonly&amp;id='.$ds['game'].'&amp;page='.$page.'&amp;sort=game&amp;type='.$type.'&amp;only=game"><img src="images/games/'.$pic.'"></a>';
 
 			$homescr=array_sum(unserialize($ds['homescore']));
 			$oppscr=array_sum(unserialize($ds['oppscore']));
@@ -941,8 +940,8 @@ elseif($action=="showonly") {
 			elseif($homescr<$oppscr) $results='<font color="'.$loosecolor.'">'.$homescr.':'.$oppscr.'</font>';
 			else $results='<font color="'.$drawcolor.'">'.$homescr.':'.$oppscr.'</font>';
 
-			if(getanzcwcomments($ds['cwID'])) $details='<a href="index.php?site=clanwars_details&amp;cwID='.$ds['cwID'].'"><img src="images/icons/foldericons/newhotfolder.gif" alt="'.$_language->module['details'].'" border="0" /> ('.getanzcwcomments($ds['cwID']).')</a>';
-			else $details='<a href="index.php?site=clanwars_details&amp;cwID='.$ds['cwID'].'"><img src="images/icons/foldericons/folder.gif" alt="'.$_language->module['details'].'" border="0" /> ('.getanzcwcomments($ds['cwID']).')</a>';
+			if(getanzcwcomments($ds['cwID'])) $details='<a href="index.php?site=clanwars_details&amp;cwID='.$ds['cwID'].'"><img src="images/icons/foldericons/newhotfolder.gif" alt="'.$_language->module['details'].'"> ('.getanzcwcomments($ds['cwID']).')</a>';
+			else $details='<a href="index.php?site=clanwars_details&amp;cwID='.$ds['cwID'].'"><img src="images/icons/foldericons/folder.gif" alt="'.$_language->module['details'].'"> ('.getanzcwcomments($ds['cwID']).')</a>';
 
 			$multiple='';
 			$admdel='';
@@ -953,15 +952,7 @@ elseif($action=="showonly") {
 			unset($result);
 			$n++;
 		}
-    if(isclanwaradmin($userID)) $admdel='<table width="100%" border="0" cellspacing="0" cellpadding="4">
-      <tr>
-        <td><input class="input" type="checkbox" name="ALL" value="ALL" onclick="SelectAll(this.form);" /> '.$_language->module['select_all'].'</td>
-        <td align="right"><select name="quickactiontype">
-        <option value="delete">'.$_language->module['delete_selected'].'</option>
-        </select>
-        <input type="submit" name="quickaction" value="'.$_language->module['go'].'" /></td>
-      </tr>
-    </table>';
+    if(isclanwaradmin($userID)) $admdel='<div class="row"><div class="col-xs-6"><input class="input" type="checkbox" name="ALL" value="ALL" onclick="SelectAll(this.form);"> '.$_language->module['select_all'].'</div><div class="input-group col-xs-6"><select name="quickactiontype" class="form-control"><option value="delete">'.$_language->module['delete_selected'].'</option></select><span class="input-group-btn"><input type="submit" name="quickaction" value="'.$_language->module['go'].'" class="btn btn-danger"></span></div></div>';
 
 		eval ("\$clanwars_foot = \"".gettemplate("clanwars_foot")."\";");
 		echo $clanwars_foot;
@@ -982,12 +973,12 @@ elseif(empty($_GET['action'])) {
 	}
 	$squads=getgamesquads();
 	$jumpsquads=str_replace('value="', 'value="index.php?site=clanwars&amp;action=showonly&amp;only=squad&amp;id=', $squads);
-	$jumpmenu='<select name="selectgame" onchange="MM_jumpMenu(\'parent\',this,0)"><option value="index.php?site=clanwars">- '.$_language->module['show_all_squads'].' -</option>'.$jumpsquads.'</select> <input type="button" name="Button1" value="'.$_language->module['go'].'" onclick="MM_jumpMenuGo(\'selectgame\',\'parent\',0)" />';		
-
+	$jumpmenu='<div class="input-group"><select name="selectgame" onchange="MM_jumpMenu(\'parent\',this,0)" class="form-control"><option value="index.php?site=clanwars">- '.$_language->module['show_all_squads'].' -</option>'.$jumpsquads.'</select> <span class="input-group-btn"><input type="button" name="Button1" value="'.$_language->module['go'].'" onclick="MM_jumpMenuGo(\'selectgame\',\'parent\',0)" class="btn btn-primary"></span></div>';
+    
 	eval ("\$title_clanwars = \"".gettemplate("title_clanwars")."\";");
 	echo $title_clanwars;
 
-	$gesamt = mysqli_num_rows(safe_query("SELECT cwID FROM ".PREFIX."clanwars"));
+	$gesamt = mysql_num_rows(safe_query("SELECT cwID FROM ".PREFIX."clanwars"));
 	$pages=1;
 	if(!isset($page)) $page = 1;
 	if(!isset($sort)) $sort = "date";
@@ -1014,22 +1005,17 @@ elseif(empty($_GET['action'])) {
   if($type=="ASC") $seiten='<a href="index.php?site=clanwars&amp;page='.$page.'&amp;sort='.$sort.'&amp;type=DESC">'.$_language->module['sort'].':</a> <img src="images/icons/asc.gif" width="9" height="7" border="0" alt="" /> '.$page_link.'<br /><br />';
 	else $seiten='<a href="index.php?site=clanwars&amp;page='.$page.'&amp;sort='.$sort.'&amp;type=ASC">'.$_language->module['sort'].':</a> <img src="images/icons/desc.gif" width="9" height="7" border="0" alt="" /> '.$page_link.'<br /><br />';
 
-  if(isclanwaradmin($userID)) $admin='<input type="button" onclick="MM_openBrWindow(\'clanwars.php?action=new\',\'Clanwars\',\'toolbar=no,status=no,scrollbars=yes,width=800,height=600\')" value="'.$_language->module['new_clanwar'].'" />';
+  if(isclanwaradmin($userID)) $admin='<input type="button" onclick="MM_openBrWindow(\'clanwars.php?action=new\',\'Clanwars\',\'toolbar=no,status=no,scrollbars=yes,width=800,height=600\')" value="'.$_language->module['new_clanwar'].'" class="btn btn-danger">';
   else $admin='';
-	$statistics='<input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=clanwars&amp;action=stats\');return document.MM_returnValue" value="'.$_language->module['stat'].'" />';
+	$statistics='<input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=clanwars&amp;action=stats\');return document.MM_returnValue" value="'.$_language->module['stat'].'" class="btn btn-primary">';
 
 	echo'<form name="jump" action="">
-  <table width="100%" border="0" cellspacing="0" cellpadding="2">
-    <tr>
-      <td>'.$admin.' '.$statistics.'</td>
-      <td align="right">'.$jumpmenu.'</td>
-    </tr>
-    <tr>
-      <td>'.$seiten.'</td>
-      <td></td>
-    </tr>
-  </table>
-  </form>';
+            <div class="row">
+                <div class="col-xs-6">'.$admin.' '.$statistics.'</div>
+                <div class="col-xs-6 text-right">'.$jumpmenu.'</div>
+            </div>
+            <div>'.$seiten.'</div>
+        </form>';
 
 	if($gesamt) {
 		$headdate='<a class="titlelink" href="index.php?site=clanwars&amp;page='.$page.'&amp;sort=date&amp;type='.$type.'">'.$_language->module['date'].':</a>';
@@ -1042,7 +1028,7 @@ elseif(empty($_GET['action'])) {
 		echo $clanwars_head;
 
 		$n=1;
-		while($ds=mysqli_fetch_array($ergebnis)) {
+		while($ds=mysql_fetch_array($ergebnis)) {
 			if($n%2) {
 				$bg1=BG_1;
 				$bg2=BG_2;
@@ -1051,7 +1037,7 @@ elseif(empty($_GET['action'])) {
 				$bg1=BG_3;
 				$bg2=BG_4;
 			}
-			$date=getformatdate($ds['date']);
+			$date=date("d.m.y", $ds['date']);
 			$squad='<a href="index.php?site=clanwars&amp;action=showonly&amp;id='.$ds['squad'].'&amp;page='.$page.'&amp;sort=game&amp;type='.$type.'&amp;only=squad"><b>'.$ds['squadname'].'</b></a>';
 			$league='<a href="'.getinput($ds['leaguehp']).'" target="_blank">'.$ds['league'].'</a>';
 			$oppcountry="[flag]".$ds['oppcountry']."[/flag]";
@@ -1061,7 +1047,7 @@ elseif(empty($_GET['action'])) {
 			$oppteam=$ds['oppteam'];
 			$server=$ds['server'];
 			if(file_exists('images/games/'.$ds['game'].'.gif')) $pic = $ds['game'].'.gif';
-			$game='<a href="index.php?site=clanwars&amp;action=showonly&amp;id='.$ds['game'].'&amp;page='.$page.'&amp;sort=game&amp;type='.$type.'&amp;only=game"><img src="images/games/'.$pic.'" width="13" height="13" border="0" alt="" /></a>';
+			$game='<a href="index.php?site=clanwars&amp;action=showonly&amp;id='.$ds['game'].'&amp;page='.$page.'&amp;sort=game&amp;type='.$type.'&amp;only=game"><img src="images/games/'.$pic.'"></a>';
 
 			$homescr=array_sum(unserialize($ds['homescore']));
 			$oppscr=array_sum(unserialize($ds['oppscore']));
@@ -1070,27 +1056,28 @@ elseif(empty($_GET['action'])) {
 			elseif($homescr<$oppscr) $results='<font color="'.$loosecolor.'">'.$homescr.':'.$oppscr.'</font>';
 			else $results='<font color="'.$drawcolor.'">'.$homescr.':'.$oppscr.'</font>';
 
-			if($anzcomments = getanzcwcomments($ds['cwID'])) $details='<a href="index.php?site=clanwars_details&amp;cwID='.$ds['cwID'].'"><img src="images/icons/foldericons/newhotfolder.gif" alt="'.$_language->module['details'].'" border="0" /> ('.$anzcomments.')</a>';
-			else $details='<a href="index.php?site=clanwars_details&amp;cwID='.$ds['cwID'].'"><img src="images/icons/foldericons/folder.gif" alt="'.$_language->module['details'].'" border="0" /> (0)</a>';
+			if($anzcomments = getanzcwcomments($ds['cwID'])) $details='<a href="index.php?site=clanwars_details&amp;cwID='.$ds['cwID'].'"><img src="images/icons/foldericons/newhotfolder.gif" alt="'.$_language->module['details'].'"> ('.$anzcomments.')</a>';
+			else $details='<a href="index.php?site=clanwars_details&amp;cwID='.$ds['cwID'].'"><img src="images/icons/foldericons/folder.gif" alt="'.$_language->module['details'].'"> (0)</a>';
 
 			$multiple='';
 			$admdel='';
-			if(isclanwaradmin($userID)) $multiple='<input class="input" type="checkbox" name="cwID[]" value="'.$ds['cwID'].'" />';
+			if(isclanwaradmin($userID)) $multiple='<input class="input" type="checkbox" name="cwID[]" value="'.$ds['cwID'].'">';
 
 			eval ("\$clanwars_content = \"".gettemplate("clanwars_content")."\";");
 			echo $clanwars_content;
 			unset($result,$anzcomments);
 			$n++;
 		}
-    if(isclanwaradmin($userID)) $admdel='<table width="100%" border="0" cellspacing="0" cellpadding="4">
-      <tr>
-        <td><input class="input" type="checkbox" name="ALL" value="ALL" onclick="SelectAll(this.form);" /> '.$_language->module['select_all'].'</td>
-        <td align="right"><select name="quickactiontype">
-        <option value="delete">'.$_language->module['delete_selected'].'</option>
-        </select>
-        <input type="submit" name="quickaction" value="'.$_language->module['go'].'" /></td>
-      </tr>
-    </table>';
+    if(isclanwaradmin($userID)) $admdel='<div class="row">
+        <div class="col-xs-6">
+            <input class="input" type="checkbox" name="ALL" value="ALL" onclick="SelectAll(this.form);"> '.$_language->module['select_all'].'
+        </div>
+        <div class="col-xs-6 input-group text-right">
+            <select name="quickactiontype" class="form-control">
+                <option value="delete">'.$_language->module['delete_selected'].'</option>
+            </select>
+            <span class="input-group-btn"><input type="submit" name="quickaction" value="'.$_language->module['go'].'" class="btn btn-danger"></span>
+        </div></div>';
 
 		eval ("\$clanwars_foot = \"".gettemplate("clanwars_foot")."\";");
 		echo $clanwars_foot;

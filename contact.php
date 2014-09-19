@@ -50,7 +50,7 @@ if($action == "send") {
 	if(!(mb_strlen(trim($text)))) $fehler[] = $_language->module['enter_message'];
   
 	$ergebnis=safe_query("SELECT * FROM ".PREFIX."contact WHERE email='".$getemail."'");
-	if(mysqli_num_rows($ergebnis) == 0){
+	if(mysql_num_rows($ergebnis) == 0){
 		$fehler[] = $_language->module['unknown_receiver'];
 	}
 	
@@ -77,8 +77,8 @@ if($action == "send") {
 	else {
 		$errors=implode('<br />&#8226; ',$fehler);
 		
-    $showerror = '<div class="errorbox">
-      <b>'.$_language->module['errors_there'].':</b><br /><br />
+    $showerror = '<div class="alert alert-danger">
+      <strong>'.$_language->module['errors_there'].':</strong><br>
       &#8226; '.$errors.'
     </div>';
 	}
@@ -86,7 +86,7 @@ if($action == "send") {
 
 	$getemail = '';
 	$ergebnis=safe_query("SELECT * FROM ".PREFIX."contact ORDER BY sort");
-	while($ds=mysqli_fetch_array($ergebnis)) {
+	while($ds=mysql_fetch_array($ergebnis)) {
 		if($getemail==$ds['email']) $getemail.='<option value="'.$ds['email'].'" selected="selected">'.$ds['name'].'</option>';
 		else $getemail.='<option value="'.$ds['email'].'">'.$ds['name'].'</option>';
 	}

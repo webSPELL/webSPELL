@@ -48,7 +48,7 @@ if($userID) {
 			safe_query("INSERT INTO ".PREFIX."gallery_pictures ( galleryID, name, comment, comments) VALUES ('".$_POST['galleryID']."', '".$insertname."', '".$_POST['comment']."', '".$_POST['comments']."' )");
 
 			$typ = getimagesize($picture['tmp_name']);
-			$insertid = mysqli_insert_id($_database);
+			$insertid = mysql_insert_id();
 			if(is_array($typ)){
 				switch ($typ[2]) {
 					case 1: $endung = '.gif'; break;
@@ -77,7 +77,7 @@ if($userID) {
 		if(safe_query("DELETE FROM ".PREFIX."gallery WHERE galleryID='".$_GET['galleryID']."' AND userID='".$userID."'")) {
 			//FILES
 			$ergebnis=safe_query("SELECT picID FROM ".PREFIX."gallery_pictures WHERE galleryID='".$_GET['galleryID']."'");
-			while($ds=mysqli_fetch_array($ergebnis)) {
+			while($ds=mysql_fetch_array($ergebnis)) {
 				@unlink('images/gallery/thumb/'.$ds['picID'].'.jpg'); //thumbnails
 				$path = 'images/gallery/large/';
 				if(file_exists($path.$ds['picID'].'.jpg')) $path = $path.$ds['picID'].'.jpg';
@@ -102,7 +102,7 @@ if($userID) {
 		elseif($_GET['action'] == "edit") {
 
 			$ergebnis=safe_query("SELECT * FROM ".PREFIX."gallery WHERE galleryID='".$_GET['galleryID']."' AND userID='".$userID."'");
-			$ds=mysqli_fetch_array($ergebnis);
+			$ds=mysql_fetch_array($ergebnis);
 
 			$name = getinput($ds['name']);
 			$galleryID = $ds['galleryID'];
@@ -143,9 +143,9 @@ if($userID) {
 
 		$ergebnis=safe_query("SELECT * FROM ".PREFIX."gallery WHERE userID='".$userID."'");
 
-		if(mysqli_num_rows($ergebnis) == 0) echo '<tr bgcolor="'.$bg1.'"><td colspan="4">'.$_language->module['no_galleries'].'</td></tr>';
+		if(mysql_num_rows($ergebnis) == 0) echo '<tr bgcolor="'.$bg1.'"><td colspan="4">'.$_language->module['no_galleries'].'</td></tr>';
 
-		for($i=1;$ds=mysqli_fetch_array($ergebnis);$i++) {
+		for($i=1;$ds=mysql_fetch_array($ergebnis);$i++) {
 			if($i%2) $bg=$bg1;
 			else $bg=$bg2;
 			$name = clearfromtags($ds['name']);

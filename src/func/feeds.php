@@ -6,8 +6,8 @@
     $_language->set_language($rss_default_language);
     $_language->read_module('feeds');
   	$date=safe_query("SELECT `date` FROM ".PREFIX."news WHERE published = '1' AND intern=0 ORDER BY date DESC LIMIT 0,1");
-	if(mysqli_num_rows($date)){
-		$date = mysqli_fetch_assoc($date);
+	if(mysql_num_rows($date)){
+		$date = mysql_fetch_assoc($date);
 		$updated = $date['date'];
 	}
 	else{
@@ -24,13 +24,13 @@
                     <pubDate>'.date('D, d M Y h:i:s O', $updated).'</pubDate>
                     ';
   	$db_news=safe_query("SELECT * FROM ".PREFIX."news WHERE published = '1' AND intern=0 ORDER BY date DESC LIMIT 0,10");
-  	$any_news=mysqli_num_rows($db_news);
+  	$any_news=mysql_num_rows($db_news);
   	if($any_news){
-  		while($news=mysqli_fetch_array($db_news)){
+  		while($news=mysql_fetch_array($db_news)){
   			$db_newscontent=safe_query("SELECT * FROM ".PREFIX."news_contents WHERE newsID = '".$news['newsID']."' AND language='".$rss_default_language."'");
-  			$any_newscontent=mysqli_num_rows($db_newscontent);
+  			$any_newscontent=mysql_num_rows($db_newscontent);
   			if($any_newscontent){
-  				$newscontent=mysqli_fetch_array($db_newscontent);
+  				$newscontent=mysql_fetch_array($db_newscontent);
 	  			$xmlstring.='<item>
 	                       <title>'.htmlspecialchars(($newscontent['headline'])).'</title>
 	                       <description><![CDATA['.htmloutput($newscontent['content']).']]></description>

@@ -85,7 +85,7 @@ elseif($action=="edit") {
   echo'<h1>&curren; <a href="admincenter.php?site=linkcategorys" class="white">'.$_language->module['link_categories'].'</a> &raquo; '.$_language->module['edit_category'].'</h1>';
 
 	$ergebnis=safe_query("SELECT * FROM ".PREFIX."links_categorys WHERE linkcatID='".$_GET['linkcatID']."'");
-	$ds=mysqli_fetch_array($ergebnis);
+	$ds=mysql_fetch_array($ergebnis);
 
 	echo'<form method="post" action="admincenter.php?site=linkcategorys">
   <table width="100%" border="0" cellspacing="1" cellpadding="3">
@@ -120,7 +120,7 @@ else {
 	$CAPCLASS->create_transaction();
 	$hash = $CAPCLASS->get_hash();
   
-  while($ds=mysqli_fetch_array($ergebnis)) {
+  while($ds=mysql_fetch_array($ergebnis)) {
     if($i%2) { $td='td1'; }
     else { $td='td2'; }
       

@@ -58,7 +58,7 @@ systeminc('func/useraccess');
 
 if(isset($fileID)) {
 	$ergebnis = safe_query("SELECT * FROM ".PREFIX."files WHERE fileID='$fileID' ");
-	$dd=mysqli_fetch_array($ergebnis);
+	$dd=mysql_fetch_array($ergebnis);
 
 	switch($dd['accesslevel']) {
 		case 0: $allowed = 1; break;
@@ -77,7 +77,7 @@ if(isset($fileID)) {
 }
 elseif(isset($demoID)) {
 	$ergebnis = safe_query("SELECT * FROM ".PREFIX."demos WHERE demoID='".$demoID."'");
-	$dd=mysqli_fetch_array($ergebnis);
+	$dd=mysql_fetch_array($ergebnis);
 
 	switch($dd['accesslevel']) {
 		case 0: $allowed = 1; break;

@@ -49,7 +49,7 @@ if(isset($_GET['delete'])) {
 	if($CAPCLASS->check_captcha(0, $_GET['captcha_hash'])) {
 		$id = $_GET['id'];
 		$squadID = $_GET['squadID'];
-		$squads=mysqli_num_rows(safe_query("SELECT userID FROM ".PREFIX."squads_members WHERE userID='$id'"));
+		$squads=mysql_num_rows(safe_query("SELECT userID FROM ".PREFIX."squads_members WHERE userID='$id'"));
 		if($squads<2 AND !issuperadmin($id)) safe_query("DELETE FROM ".PREFIX."user_groups WHERE userID='$id'");
 	
 		safe_query("DELETE FROM ".PREFIX."squads_members WHERE userID='$id' AND squadID='$squadID'");
@@ -86,7 +86,7 @@ if(isset($_POST['saveedit'])) {
 		if($userID != $id OR issuperadmin($userID)) {
 	
 			$ergebnis=safe_query("SELECT * FROM ".PREFIX."user_groups WHERE userID='".$id."'");
-			if(!mysqli_num_rows($ergebnis)) safe_query("INSERT INTO ".PREFIX."user_groups (userID) values ('".$id."')");
+			if(!mysql_num_rows($ergebnis)) safe_query("INSERT INTO ".PREFIX."user_groups (userID) values ('".$id."')");
 			safe_query("UPDATE ".PREFIX."user_groups SET news='$newsadmin',
 													  news_writer='".$newswriter."',
 													  polls='$pollsadmin',
@@ -105,11 +105,11 @@ if(isset($_POST['saveedit'])) {
 			}
 			
 			$sql=safe_query("SELECT * FROM ".PREFIX."forum_groups");
-			while($dc=mysqli_fetch_array($sql)) {
+			while($dc=mysql_fetch_array($sql)) {
 				$name=$dc['name'];
 				$fgrID=$dc['fgrID'];
 				$abc=safe_query("SELECT COUNT(*) as anz FROM ".PREFIX."user_forum_groups WHERE userID='".$id."'");
-				$row = mysqli_fetch_array($abc);
+				$row = mysql_fetch_array($abc);
 				if($row['anz']==1) {
 	        safe_query("UPDATE ".PREFIX."user_forum_groups SET `".$fgrID."`='".isset($_POST[$fgrID])."' WHERE userID='".$id."'");
 				}
@@ -154,9 +154,9 @@ if(isset($_GET['action']) and $_GET['action'] == "edit") {
 	$id = $_GET['id'];
 	$squads = '';
 	$ergebnis=safe_query("SELECT * FROM ".PREFIX."squads_members WHERE userID='$id' AND squadID!='0' GROUP BY squadID");
-	$anz=mysqli_num_rows($ergebnis);
+	$anz=mysql_num_rows($ergebnis);
 	if($anz) {
-		while($ds=mysqli_fetch_array($ergebnis)) {
+		while($ds=mysql_fetch_array($ergebnis)) {
 			if($ds['activity']) $activity=' <select name="activity['.$ds['sqmID'].']"><option value="1" selected="selected">'.$_language->module['active'].'</option><option value="0">'.$_language->module['inactive'].'</option></select>';
 			else $activity=' <select name="activity['.$ds['sqmID'].']"><option value="1">'.$_language->module['active'].'</option><option value="0" selected="selected">'.$_language->module['inactive'].'</option></select>';
 			if($ds['joinmember']) $join='<select name="join['.$ds['sqmID'].']"><option value="1" selected="selected">'.$_language->module['yes'].'</option><option value="0">'.$_language->module['no'].'</option></select>';
@@ -222,7 +222,7 @@ if(isset($_GET['action']) and $_GET['action'] == "edit") {
 	else $super='<input type="checkbox" name="superadmin" value="1" onmouseover="showWMTT(\'id13\')" onmouseout="hideWMTT()" />';
 
 	$ergebnis=safe_query("SELECT * FROM ".PREFIX."forum_groups");
-	while($ds=mysqli_fetch_array($ergebnis)) {
+	while($ds=mysql_fetch_array($ergebnis)) {
 		$name=$ds['name'];
 		$fgrID=$ds['fgrID'];
 		if(isinusergrp($fgrID, $id, 0)) $usergrp[$fgrID]='<input type="checkbox" name="'.$fgrID.'" value="1" checked="checked" />';
@@ -318,7 +318,7 @@ if(isset($_GET['action']) and $_GET['action'] == "edit") {
 	$sql=safe_query("SELECT * FROM ".PREFIX."forum_groups");
   echo '<tr>';
 	$i = 1;
-	while($dc=mysqli_fetch_array($sql)) {
+	while($dc=mysql_fetch_array($sql)) {
     $name=$dc['name'];
 		$fgrID=$dc['fgrID'];
 		echo '<td>'.$usergrp[$fgrID].' '.$name.'</td>';
@@ -349,7 +349,7 @@ else {
   $hash = $CAPCLASS->get_hash();
   $squads=safe_query("SELECT * FROM ".PREFIX."squads ORDER BY sort");
 	echo'<form method="post" action="admincenter.php?site=members">';
-	while($ds=mysqli_fetch_array($squads)) {
+	while($ds=mysql_fetch_array($squads)) {
 		
     echo'<table width="100%" border="0" cellspacing="1" cellpadding="3" bgcolor="#DDDDDD">
       <tr>
@@ -357,8 +357,8 @@ else {
       </tr>';
 
 		$members=safe_query("SELECT * FROM ".PREFIX."squads_members WHERE squadID='".$ds['squadID']."' ORDER BY sort");
-		$tmp=mysqli_fetch_assoc(safe_query("SELECT count(squadID) as cnt FROM ".PREFIX."squads_members WHERE squadID='".$ds['squadID']."'"));
-		$anzmembers=$tmp['cnt'];
+		$anzmembers=safe_query("SELECT count(squadID) FROM ".PREFIX."squads_members WHERE squadID='".$ds['squadID']."'");
+		$anzmembers=mysql_result($anzmembers, 0);
 
 		echo'<tr>
       <td width="30%" class="td_head"><b>'.$_language->module['country_nickname'].'</b></td>
@@ -369,7 +369,7 @@ else {
     </tr>';
 
 		$i=1;
-    while($dm=mysqli_fetch_array($members)) {
+    while($dm=mysql_fetch_array($members)) {
       if($i%2) { $td='td1'; }
       else { $td='td2'; }
       

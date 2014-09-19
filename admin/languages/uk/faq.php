@@ -45,7 +45,6 @@ $language_array = Array(
   'really_delete'=>'Really delete this FAQ?',
   'sort'=>'Sort',
   'to_sort'=>'sort',
-  'transaction_invalid'=>'Transaction ID invalid',
-  'tags'=>'Tags'
+  'transaction_invalid'=>'Transaction ID invalid'
 );
 ?>

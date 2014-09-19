@@ -35,9 +35,9 @@ if($list==1) $list="rating"; else $list="date";
 
 $ergebnis=safe_query("SELECT * FROM ".PREFIX."demos ORDER BY $list DESC LIMIT 0,5");
 $n=1;
-if(mysqli_num_rows($ergebnis)){
-	echo'<table width="100%" cellspacing="0" cellpadding="2">';
-	while($ds=mysqli_fetch_array($ergebnis)) {
+if(mysql_num_rows($ergebnis)){
+	echo'<ul class="list-group">';
+	while($ds=mysql_fetch_array($ergebnis)) {
 		$demoID = $ds['demoID'];
 		$count = $ds['downloads'];
 		$clan1 = $ds['clan1'];
@@ -60,6 +60,6 @@ if(mysqli_num_rows($ergebnis)){
 	
 		$n++;
 	}
-	echo'</table>';
+	echo'</ul>';
 }	
 ?>

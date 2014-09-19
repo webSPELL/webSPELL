@@ -64,7 +64,7 @@ if($action=="add") {
 }
 
 elseif($action=="edit") {
-	$ds=mysqli_fetch_array(safe_query("SELECT * FROM ".PREFIX."games WHERE gameID='".$_GET["gameID"]."'"));
+	$ds=mysql_fetch_array(safe_query("SELECT * FROM ".PREFIX."games WHERE gameID='".$_GET["gameID"]."'"));
 	$pic='<img src="../images/games/'.$ds['tag'].'.gif" border="0" alt="'.$ds['name'].'" />';
   
   $CAPCLASS = new Captcha;
@@ -174,7 +174,7 @@ else {
     </tr>';
   
 	$ergebnis=safe_query("SELECT * FROM ".PREFIX."games ORDER BY name");
-	$anz=mysqli_num_rows($ergebnis);
+	$anz=mysql_num_rows($ergebnis);
 	if($anz) {
 		
     $i=1;
@@ -182,7 +182,7 @@ else {
     $CAPCLASS->create_transaction();
     $hash = $CAPCLASS->get_hash();
     
-    while($ds = mysqli_fetch_array($ergebnis)) {
+    while($ds = mysql_fetch_array($ergebnis)) {
       if($i%2) { $td='td1'; }
       else { $td='td2'; }
       $pic='<img src="../images/games/'.$ds['tag'].'.gif" border="0" alt="" />';

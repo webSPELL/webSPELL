@@ -40,23 +40,11 @@ session_destroy();
 
 // remove login cookie
 if (isset($_COOKIE['ws_auth'])) {
-
-	$cookieName = "ws_auth";
-	$cookieValue = '';
-	$cookieExpire = time()-(24*60*60);
-	if (version_compare(PHP_VERSION, '5.2.0') >= 0) {
-		$cookieInfo = session_get_cookie_params();
-		setcookie($cookieName,$cookieValue,$cookieExpire,$cookieInfo['path'],$cookieInfo['domain'],$cookieInfo['secure'],true);
-	}
-	else{
-		setcookie($cookieName,$cookieValue,$cookieExpire);	
-	}				
-	unset($cookieName);
-	unset($cookieValue);
-	unset($cookieExpire);
-	unset($cookieInfo);
+	setcookie('ws_auth', '', time()-(24*60*60));
 }
 
 header("Location: index.php");
 
 ?>
+
+

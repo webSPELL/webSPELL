@@ -25,6 +25,16 @@
 ##########################################################################
 */
 
+if(phpversion() < "4.3.0") {
+	function file_get_contents($filename)
+	{
+		$fd = fopen("$filename", "rb");
+		$content = fread($fd, filesize($filename));
+		fclose($fd);
+		return $content;
+	}
+}
+
 $pictureID = (int)$_GET['id'];
 
 if(file_exists('images/gallery/large/'.$pictureID.'.jpg')) $file='images/gallery/large/'.$pictureID.'.jpg';

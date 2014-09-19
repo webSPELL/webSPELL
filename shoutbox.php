@@ -30,12 +30,11 @@ if($userID) {
 	$captcha_form = '';
 }
 else {
-	$name_settings = 'value="Name" onfocus="this.value=\'\'"';
 	$CAPCLASS = new Captcha;
 	$captcha = $CAPCLASS->create_captcha();
 	$hash = $CAPCLASS->get_hash();
 	$CAPCLASS->clear_oldcaptcha();
-	$captcha_form = $captcha.' <input type="text" name="captcha" size="5" maxlength="5" /><input name="captcha_hash" type="hidden" value="'.$hash.'" /><br />';
+	$captcha_form = '<div class="form-group"><div class="input-group"><span class="input-group-addon captcha-img">'.$captcha.'</span><input type="number" name="captcha" placeholder="Enter Captcha"  autocomplete="off" class="form-control"><input name="captcha_hash" type="hidden" value="'.$hash.'"></div></div>';
 }
 
 $_language->read_module('shoutbox');

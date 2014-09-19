@@ -36,10 +36,10 @@ if($userID && !isset($_GET['userID']) && !isset($_POST['userID'])) {
 	$bghead=BGHEAD;
 	$bgcat=BGCAT;
 
-	$ds=mysqli_fetch_array(safe_query("SELECT registerdate FROM `".PREFIX."user` WHERE userID='".$userID."'"));
+	$ds=mysql_fetch_array(safe_query("SELECT registerdate FROM `".PREFIX."user` WHERE userID='".$userID."'"));
 	$username='<a href="index.php?site=profile&amp;id='.$userID.'">'.getnickname($userID).'</a>';
-	$lastlogin = getformatdatetime($_SESSION['ws_lastlogin']);
-	$registerdate = getformatdatetime($ds['registerdate']);
+	$lastlogin = date('d.m.Y, H:i',$_SESSION['ws_lastlogin']);
+	$registerdate = date('d.m.Y, H:i',$ds['registerdate']);
 
 	//messages?
 	$newmessages = getnewmessages($userID);
@@ -66,15 +66,15 @@ if($userID && !isset($_GET['userID']) && !isset($_POST['userID'])) {
 					0, 10");
 	$topics=safe_query("SELECT * FROM ".PREFIX."forum_topics WHERE date > ".$_SESSION['ws_lastlogin']." LIMIT 0, 10");
 
-	$new_posts=mysqli_num_rows(safe_query("SELECT p.postID FROM `".PREFIX."forum_posts` AS p, `".PREFIX."forum_topics` AS t WHERE p.date>".$_SESSION['ws_lastlogin']." AND p.topicID = t.topicID"));
-	$new_topics=mysqli_num_rows(safe_query("SELECT * FROM ".PREFIX."forum_topics WHERE date > ".$_SESSION['ws_lastlogin']));
+	$new_posts=mysql_num_rows(safe_query("SELECT p.postID FROM `".PREFIX."forum_posts` AS p, `".PREFIX."forum_topics` AS t WHERE p.date>".$_SESSION['ws_lastlogin']." AND p.topicID = t.topicID"));
+	$new_topics=mysql_num_rows(safe_query("SELECT * FROM ".PREFIX."forum_topics WHERE date > ".$_SESSION['ws_lastlogin']));
 
 	//new topics
 
   $topiclist="";
-	if(mysqli_num_rows($topics)) {
+	if(mysql_num_rows($topics)) {
 		$n=1;
-		while($db=mysqli_fetch_array($topics)) {
+		while($db=mysql_fetch_array($topics)) {
 			if($db['readgrps'] != "") {
 				$usergrps = explode(";", $db['readgrps']);
 				$usergrp = 0;
@@ -87,31 +87,29 @@ if($userID && !isset($_GET['userID']) && !isset($_POST['userID'])) {
 				if(!$usergrp and !ismoderator($userID, $db['boardID'])) continue;
 			}
 			$n%2 ? $bgcolor=BG_1 : $bgcolor=BG_2;
-			$posttime=getformatdatetime($db['date']);
+			$posttime=date("d.m.y H:i",$db['date']);
 
-			$topiclist.='<tr bgcolor="'.$bgcolor.'">
-          <td>
-          <table width="100%" cellpadding="1" cellspacing="1">
+			$topiclist.='
             <tr>
-              <td colspan="3"><a href="index.php?site=forum_topic&amp;topic='.$db['topicID'].'">'.$posttime.'<br /><b>'.str_break(getinput($db['topic']), 34).'</b></a><br /><i>'.$db['views'].' '.$_language->module['views'].' - '.$db['replys'].' '.$_language->module['replys'].'</i></td>
-            </tr>
-          </table>
-          </td>
-        </tr>';
+              <td>'.$posttime.'</td>
+              <td><a href="index.php?site=forum_topic&amp;topic='.$db['topicID'].'">'.str_break(getinput($db['topic']), 34).'</a></td>
+              <td>'.$db['views'].' '.$_language->module['views'].'</td>
+              <td>'.$db['replys'].' '.$_language->module['replys'].'</td>
+            </tr>';
         
 			$n++;
 		}
 	}
 	else $topiclist='<tr>
-      <td bgcolor="'.BG_1.'">'.$_language->module['no_new_topics'].'</td>
+      <td colspan="4">'.$_language->module['no_new_topics'].'</td>
     </tr>';
 
 	//new posts
 
 	$postlist="";
-  if(mysqli_num_rows($posts)) {
+  if(mysql_num_rows($posts)) {
 		$n=1;
-		while($db=mysqli_fetch_array($posts)) {
+		while($db=mysql_fetch_array($posts)) {
 			if($db['readgrps'] != "") {
 				$usergrps = explode(";", $db['readgrps']);
 				$usergrp = 0;
@@ -125,45 +123,34 @@ if($userID && !isset($_GET['userID']) && !isset($_POST['userID'])) {
 			}
 			$n%2 ? $bgcolor1=BG_1 : $bgcolor1=BG_2;
 			$n%2 ? $bgcolor2=BG_3 : $bgcolor2=BG_4;
-			$posttime=getformatdatetime($db['date']);
-			if(mb_strlen($db['message']) > 100) $message=mb_substr($db['message'],0,90+mb_strpos(mb_substr($db['message'],90,mb_strlen($db['message']))," "))."...";
+			$posttime=date("d.m.y H:i",$db['date']);
+			if(mb_strlen($db['message']) > 100) $message=mb_substr($db['message'],0,50+mb_strpos(mb_substr($db['message'],50,mb_strlen($db['message']))," "))."...";
 			else $message = $db['message'];
 
-      $postlist.='<tr bgcolor="'.$bgcolor1.'">
-          <td>
-          <table width="100%" cellpadding="2" cellspacing="1">
-            <tr>
-              <td colspan="3"><a href="index.php?site=forum_topic&amp;topic='.$db['topicID'].'">'.$posttime.' <br /><b>'.str_break(getinput($db['topic']), 34).'</b></a></td>
-            </tr>
-            <tr><td></td></tr>
-            <tr>
-              <td width="1%">&nbsp;</td>
-              <td bgcolor="'.$bgcolor2.'" width="98%"><div style="overflow:hidden;">'.str_break(clearfromtags($message), 34).'</div></td>
-              <td width="1%">&nbsp;</td>
-            </tr>
-          </table>
-          </td>
-         </tr>';
+      $postlist.='<tr>
+      				<td><a href="index.php?site=forum_topic&amp;topic='.$db['topicID'].'">'.str_break(getinput($db['topic']), 34).'</a></td>
+      				<td>'.$posttime.'</td>
+      				<td>'.str_break(clearfromtags($message), 34).'</td>
+      			  </tr>';
           
 			$n++;
 		}
 	}
 	else $postlist='<tr>
-      <td bgcolor="'.BG_1.'" valign="top">'.$_language->module['no_new_posts'].'</td>
+      <td colspan="3">'.$_language->module['no_new_posts'].'</td>
     </tr>';
 
 	//clanmember/admin/referer
 
-	if(isclanmember($userID)) $cashboxpic = '<td><a href="index.php?site=cash_box"><img src="images/icons/cashbox.gif" border="0" alt="Cashbox" /></a></td>
-  <td width="10"></td>';
-	else $cashboxpic = '<td></td><td></td>';
+	if(isclanmember($userID)) $cashboxpic = '<a class="thumbnail" href="index.php?site=cash_box"><img src="images/icons/cashbox.gif" alt="Cashbox"></a>';
+	else $cashboxpic = '';
   
-	if(isanyadmin($userID)) $admincenterpic = '<td><a href="admin/admincenter.php" target="_blank"><img src="images/icons/admincenter.gif" border="0" alt="Admincenter" /></a></td>
-  <td width="10"></td>';
-	else $admincenterpic = '<td></td><td></td>';
+	if(isanyadmin($userID)) $admincenterpic = '<a class="thumbnail" href="admin/admincenter.php" target="_blank"><img src="images/icons/admincenter.gif" alt="Admincenter"></a>';
+
+	else $admincenterpic = '';
   
 	if(isset($_SESSION['referer'])) {
-		$referer_uri = '<tr><td bgcolor="'.$bgcat.'"><br /><a href="'.$_SESSION['referer'].'" style="padding:8px 0;"><b>&laquo; '.$_language->module['back_last_page'].'</b></a><br />&nbsp;</td></tr>';
+		$referer_uri = '<a class="btn" href="'.$_SESSION['referer'].'"><i class="icon-caret-left"></i> '.$_language->module['back_last_page'].'</a>';
 		unset($_SESSION['referer']);
 	}
 	else $referer_uri = '';
@@ -172,45 +159,45 @@ if($userID && !isset($_GET['userID']) && !isset($_POST['userID'])) {
 	$clanwars = '';
 	if(isclanmember($userID)) {
 
-		$clanwars .= '<tr>
-      <td colspan="3"><b>'.$_language->module['upcoming_clanwars'].'</b><br />&nbsp;</td>
-    </tr>';
+		$clanwars .= "<h4>".$_language->module['upcoming_clanwars']."</h4>";
 
 		$squads=safe_query("SELECT squadID FROM `".PREFIX."squads_members` WHERE userID='".$userID."'");
-		while($squad=mysqli_fetch_array($squads)) {
+		while($squad=mysql_fetch_array($squads)) {
 
 			if(isgamesquad($squad['squadID'])) {
 
-				$dn=mysqli_fetch_array(safe_query("SELECT name FROM `".PREFIX."squads` WHERE squadID='".$squad['squadID']."' AND gamesquad='1'"));
-				$clanwars .= '<tr><td><i>'.$_language->module['squad'].': '.$dn['name'].'</i></td></tr><tr><td align="center">';
+				$dn=mysql_fetch_array(safe_query("SELECT name FROM `".PREFIX."squads` WHERE squadID='".$squad['squadID']."' AND gamesquad='1'"));
+				$clanwars .= '<h5>'.$_language->module['squad'].': '.$dn['name'].'</h5>';
 				$n = 1;
 				$ergebnis=safe_query("SELECT * FROM `".PREFIX."upcoming` WHERE type='c' AND squad='".$squad['squadID']."' AND date>".time()." ORDER by date");
-				$anz = mysqli_num_rows($ergebnis);
+				$anz = mysql_num_rows($ergebnis);
 				
         if($anz) {
-			$clanwars .= '<table border="0" width="98%" cellpadding="2">
-				<tr>
-					<td width="20%"><b>'.$_language->module['date'].'</b></td>
-					<td width="20%"><b>'.$_language->module['against'].'</b></td>
-					<td><b>'.$_language->module['announcement'].'</b></td>
-					<td width="10%"><b>'.$_language->module['announce'].'</b></td>
-				</tr>';
+			$clanwars .= '<table class="table table-hover">
+				<thead>
+					<tr>
+						<th>'.$_language->module['date'].'</th>
+						<th>'.$_language->module['against'].'</th>
+						<th>'.$_language->module['announcement'].'</th>
+						<th>'.$_language->module['announce'].'</th>
+					</tr>
+				</thead><tbody>';
 				
-				while($ds=mysqli_fetch_array($ergebnis)) {
+				while($ds=mysql_fetch_array($ergebnis)) {
 					$n%2 ? $bg=BG_1 : $bg=BG_2;
-					$date=getformatdate($ds['date']);
+					$date=date("d.m.y", $ds['date']);
 					
 					$anmeldung=safe_query("SELECT * FROM ".PREFIX."upcoming_announce WHERE upID='".$ds['upID']."'");
-					if(mysqli_num_rows($anmeldung)) {
+					if(mysql_num_rows($anmeldung)) {
 						$i=1;
 						$players = "";
-						while ($da = mysqli_fetch_array($anmeldung)) {
-							if ($da['status'] == "y") $fontcolor = $wincolor;
-							elseif ($da['status'] == "n") $fontcolor = $loosecolor;
-							else $fontcolor = $drawcolor;
+						while ($da = mysql_fetch_array($anmeldung)) {
+							if ($da['status'] == "y") $fontcolor = "label-success";
+							elseif ($da['status'] == "n") $fontcolor = "label-important";
+							else $fontcolor = "label-warning";
 							
-							if($i>1) $players.=', <a href="index.php?site=profile&amp;id='.$da['userID'].'"><font color="'.$fontcolor.'">'.strip_tags(stripslashes(getnickname($da['userID']))).'</font></a>';
-							else $players.='<a href="index.php?site=profile&amp;id='.$da['userID'].'"><font color="'.$fontcolor.'">'.strip_tags(stripslashes(getnickname($da['userID']))).'</font></a>';
+							if($i>1) $players.=', <a href="index.php?site=profile&amp;id='.$da['userID'].'"><span class="label '.$fontcolor.'">'.strip_tags(stripslashes(getnickname($da['userID']))).'</span></a>';
+							else $players.='<a href="index.php?site=profile&amp;id='.$da['userID'].'"><span class="label '.$fontcolor.'">'.strip_tags(stripslashes(getnickname($da['userID']))).'</span></a>';
 							$i++;
 						}
 					}	else $players=$_language->module['no_players_announced'];
@@ -220,18 +207,18 @@ if($userID && !isset($_GET['userID']) && !isset($_POST['userID'])) {
 					$yahr = date("Y", $ds['date']);
 					
 					$clanwars .= '<tr>
-						<td bgcolor="'.$bg.'">'.$date.'</td>
-						<td bgcolor="'.$bg.'"><a href="'.$ds['opphp'].'" target="_blank">'.$ds['opptag'].' / '.$ds['opponent'].'</a></td>
-						<td bgcolor="'.$bg.'">'.$players.'</td>
-						<td bgcolor="'.$bg.'"><a href="index.php?site=calendar&amp;action=announce&amp;upID='.$ds['upID'].'&amp;tag='.$tag.'&amp;month='.$monat.'&amp;year='.$yahr.'#event">'.$_language->module['click'].'</a></td>
+						<td>'.$date.'</td>
+						<td><a href="'.$ds['opphp'].'" target="_blank">'.$ds['opptag'].' / '.$ds['opponent'].'</a></td>
+						<td>'.$players.'</td>
+						<td><a href="index.php?site=calendar&amp;action=announce&amp;upID='.$ds['upID'].'&amp;tag='.$tag.'&amp;month='.$monat.'&amp;year='.$yahr.'#event">'.$_language->module['click'].'</a></td>
 					</tr>';
 					$n++;
 				}
-				$clanwars .= '</table></td></tr>';
-			} else $clanwars .= $_language->module['no_entries'].'</td></tr>';
+				$clanwars .= '</tbody></table>';
+			} else $clanwars .= $_language->module['no_entries'];
 		}
 	}
-	$clanwars.='<tr><td>&nbsp;</td></tr>';
+	$clanwars.="";
 	}
 	unset($events);
 	
@@ -242,23 +229,23 @@ if($userID && !isset($_GET['userID']) && !isset($_POST['userID'])) {
 		
 	$events = '';
 	$ergebnis=safe_query("SELECT * FROM `".PREFIX."upcoming` WHERE type='d' AND date>".time()." ORDER by date");
-	$anz = mysqli_num_rows($ergebnis);
+	$anz = mysql_num_rows($ergebnis);
 	if($anz) {
 		$n=1;
-		while($ds=mysqli_fetch_array($ergebnis)) {
+		while($ds=mysql_fetch_array($ergebnis)) {
 			$n%2 ? $bg=BG_1 : $bg=BG_2;
 			$events.='<tr>
-				<td bgcolor="'.$bg.'">'.$ds['title'].'</td>
-				<td bgcolor="'.$bg.'">'.getformatdatetime($ds['date']).'</td>
-				<td bgcolor="'.$bg.'">'.getformatdatetime($ds['enddate']).'</td>
-				<td bgcolor="'.$bg.'">'.$ds['location'].'</td>
-				<td bgcolor="'.$bg.'"><a href="index.php?site=calendar&amp;tag='.date('d',$ds['date']).'&amp;month='.date('m',$ds['date']).'&amp;year='.date('Y',$ds['date']).'#event">'.$_language->module['click'].'</a></td>
+				<td>'.$ds['title'].'</td>
+				<td>'.date('d.m.y, H:i', $ds['date']).'</td>
+				<td>'.date('d.m.y, H:i', $ds['enddate']).'</td>
+				<td>'.$ds['location'].'</td>
+				<td><a href="index.php?site=calendar&amp;tag='.date('d',$ds['date']).'&amp;month='.date('m',$ds['date']).'&amp;year='.date('Y',$ds['date']).'#event">'.$_language->module['click'].'</a></td>
 			</tr>';
 			$n++;
 		}
 	}
 	else $events='<tr>
-		<td colspan="5" bgcolor="'.$bg1.'"><i>'.$_language->module['no_events'].'</i></td>
+		<td colspan="5"><i>'.$_language->module['no_events'].'</i></td>
 	</tr>';
 
 	eval ("\$loginoverview = \"".gettemplate("loginoverview")."\";");

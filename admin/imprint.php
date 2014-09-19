@@ -37,7 +37,7 @@ if(isset($_POST['submit'])) {
 	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
 		safe_query("UPDATE `".PREFIX."settings` SET imprint='".$_POST['type']."'");
 	
-		if(mysqli_num_rows(safe_query("SELECT * FROM `".PREFIX."imprint`"))) safe_query("UPDATE `".PREFIX."imprint` SET imprint='$imprint'");
+		if(mysql_num_rows(safe_query("SELECT * FROM `".PREFIX."imprint`"))) safe_query("UPDATE `".PREFIX."imprint` SET imprint='$imprint'");
 		else safe_query("INSERT INTO `".PREFIX."imprint` (imprint) values( '$imprint') ");
 		redirect("admincenter.php?site=imprint", "", 0);
 	} else echo $_language->module['transaction_invalid'];
@@ -50,7 +50,7 @@ else {
 	else $type0='checked="checked"';
 
 	$ergebnis=safe_query("SELECT * FROM `".PREFIX."imprint`");
-	$ds=mysqli_fetch_array($ergebnis);
+	$ds=mysql_fetch_array($ergebnis);
 	$CAPCLASS = new Captcha;
 	$CAPCLASS->create_transaction();
 	$hash = $CAPCLASS->get_hash();

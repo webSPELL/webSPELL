@@ -35,17 +35,17 @@ if(isset($_GET['newsID'])) $newsID = $_GET['newsID'];
 if(isset($lang)) unset($lang);
 if(isset($_GET['lang'])) $lang = $_GET['lang'];
 $post = "";
-if(isnewswriter($userID)) $post='<input type="button" onclick="MM_openBrWindow(\'news.php?action=new\',\'News\',\'toolbar=no,status=no,scrollbars=yes,width=800,height=600\')" value="'.$_language->module['post_news'].'" />';
-echo $post.' <input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=news&amp;action=archive\');return document.MM_returnValue" value="'.$_language->module['news_archive'].'" /><hr />';
+if(isnewswriter($userID)) $post='<input type="button" onclick="MM_openBrWindow(\'news.php?action=new\',\'News\',\'toolbar=no,status=no,scrollbars=yes,width=800,height=600\')" value="'.$_language->module['post_news'].'" class="btn btn-danger" />';
+echo $post.' <input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=news&amp;action=archive\');return document.MM_returnValue" value="'.$_language->module['news_archive'].'" class="btn btn-primary" /><hr />';
 
 if($newsID) {
 	$result=safe_query("SELECT * FROM ".PREFIX."news WHERE newsID='".$newsID."'");
-	$ds=mysqli_fetch_array($result);
+	$ds=mysql_fetch_array($result);
 
 	if($ds['intern'] <= isclanmember($userID) && ($ds['published'] || (isnewsadmin($userID) || (isnewswriter($userID) and $ds['poster'] == $userID)))) {
 
-		$date = getformatdate($ds['date']);
-		$time = getformattime($ds['date']);
+		$date = date("d.m.Y", $ds['date']);
+		$time = date("H:i", $ds['date']);
 		$rubrikname=getrubricname($ds['rubric']);
 		$rubrikname_link = getinput($rubrikname);
 		$rubricpic_name = getrubricpic($ds['rubric']);
@@ -55,7 +55,7 @@ if($newsID) {
 
 		$message_array = array();
 		$query=safe_query("SELECT n.*, c.short AS `countryCode`, c.country FROM ".PREFIX."news_contents n LEFT JOIN ".PREFIX."countries c ON c.short = n.language WHERE n.newsID='".$newsID."'");
-		while($qs = mysqli_fetch_array($query)) {
+		while($qs = mysql_fetch_array($query)) {
 			$message_array[] = array('lang' => $qs['language'], 'headline' => $qs['headline'], 'message' => $qs['content'], 'country'=> $qs['country'], 'countryShort' => $qs['countryCode']);
 		}
 		if(isset($_GET['lang'])) $showlang = getlanguageid($_GET['lang'], $message_array);
@@ -95,22 +95,20 @@ if($newsID) {
 
 		if(empty($related)) $related="n/a";
     
-    	if(isnewsadmin($userID) or (isnewswriter($userID) and $ds['poster'] == $userID)) {
-			$adminaction='<input type="button" onclick="MM_openBrWindow(\'news.php?action=edit&amp;newsID='.$ds['newsID'].'\',\'News\',\'toolbar=no,status=no,scrollbars=yes,width=800,height=600\')" value="'.$_language->module['edit'].'" />
-	    <input type="button" onclick="MM_confirm(\''.$_language->module['really_delete'].'\', \'news.php?action=delete&amp;id='.$ds['newsID'].'\')" value="'.$_language->module['delete'].'" />';
+    if(isnewsadmin($userID) or (isnewswriter($userID) and $ds['poster'] == $userID)) {
+			$adminaction='<input type="button" onclick="MM_openBrWindow(\'news.php?action=edit&amp;newsID='.$ds['newsID'].'\',\'News\',\'toolbar=no,status=no,scrollbars=yes,width=800,height=600\')" value="'.$_language->module['edit'].'" class="btn btn-danger" />
+	    <input type="button" onclick="MM_confirm(\''.$_language->module['really_delete'].'\', \'news.php?action=delete&amp;id='.$ds['newsID'].'\')" value="'.$_language->module['delete'].'" class="btn btn-danger" />';
 		}
 		else $adminaction='';
 
 		$bg1=BG_1;
 
-		$tags = Tags::getTagsLinked('news',$newsID);
-
 		eval ("\$news = \"".gettemplate("news")."\";");
 		echo $news;
 
 		if(isnewsadmin($userID)) {
-			if(!$ds['published']) echo '<form method="post" action="news.php?quickactiontype=publish"><input type="hidden" name="newsID[]" value="'.$ds['newsID'].'" /><input type="submit" name="submit" value="'.$_language->module['publish_now'].'" /></form>';
-			else echo '<form method="post" action="news.php?quickactiontype=unpublish"><input type="hidden" name="newsID[]" value="'.$ds['newsID'].'" /><input type="submit" name="submit" value="'.$_language->module['unpublish'].'" /></form>';
+			if(!$ds['published']) echo '<form method="post" action="news.php?quickactiontype=publish"><input type="hidden" name="newsID[]" value="'.$ds['newsID'].'" /><input type="submit" name="submit" value="'.$_language->module['publish_now'].'" class="btn btn-danger" /></form>';
+			else echo '<form method="post" action="news.php?quickactiontype=unpublish"><input type="hidden" name="newsID[]" value="'.$ds['newsID'].'" /><input type="submit" name="submit" value="'.$_language->module['unpublish'].'" class="btn btn-danger" /></form>';
 		}
 
 		$comments_allowed = $ds['comments'];

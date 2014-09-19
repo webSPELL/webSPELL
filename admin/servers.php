@@ -64,7 +64,7 @@ elseif(isset($_GET['delete'])) {
 
 $games='';
 $gamesa=safe_query("SELECT tag, name FROM ".PREFIX."games ORDER BY name");
-while($dv=mysqli_fetch_array($gamesa)) {
+while($dv=mysql_fetch_array($gamesa)) {
   $games.='<option value="'.$dv['tag'].'">'.getinput($dv['name']).'</option>';
 }
 
@@ -140,7 +140,7 @@ elseif($action=="edit") {
 	
   $serverID = $_GET['serverID'];
 	$ergebnis=safe_query("SELECT * FROM ".PREFIX."servers WHERE serverID='".$serverID."'");
-	$ds=mysqli_fetch_array($ergebnis);
+	$ds=mysql_fetch_array($ergebnis);
 
 	$games=str_replace(' selected="selected"', '', $games);
 	$games=str_replace('value="'.$ds['game'].'"', 'value="'.$ds['game'].'" selected="selected"', $games);
@@ -194,7 +194,7 @@ else {
   echo'<input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=servers&amp;action=add\');return document.MM_returnValue" value="'.$_language->module['new_server'].'" /><br /><br />';
 
 	$ergebnis=safe_query("SELECT * FROM ".PREFIX."servers ORDER BY sort");
-	$anz=mysqli_num_rows($ergebnis);
+	$anz=mysql_num_rows($ergebnis);
 	if($anz) {
 	$CAPCLASS = new Captcha;
 	$CAPCLASS->create_transaction();
@@ -209,12 +209,12 @@ else {
       </tr>';
 
 		$i=1;
-    while($ds=mysqli_fetch_array($ergebnis)) {
+    while($ds=mysql_fetch_array($ergebnis)) {
       if($i%2) { $td='td1'; }
       else { $td='td2'; }
     
 			$list = '<select name="sortlist[]">';
-			for($n=1;$n<=mysqli_num_rows($ergebnis);$n++) {
+			for($n=1;$n<=mysql_num_rows($ergebnis);$n++) {
 				$list.='<option value="'.$ds['serverID'].'-'.$n.'">'.$n.'</option>';
 			}
 			$list .= '</select>';

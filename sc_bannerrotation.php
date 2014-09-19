@@ -29,9 +29,9 @@ $_language->read_module('sc_bannerrotation');
 
 //get banner
 $allbanner = safe_query("SELECT * FROM ".PREFIX."bannerrotation WHERE displayed='1' ORDER BY RAND() LIMIT 0,1");
-$total = mysqli_num_rows($allbanner);
+$total = mysql_num_rows($allbanner);
 if($total) {
-	$banner = mysqli_fetch_array($allbanner);
+	$banner = mysql_fetch_array($allbanner);
 	echo '<a href="out.php?bannerID='.$banner['bannerID'].'" target="_blank"><img src="./images/bannerrotation/'.$banner['banner'].'" border="0" alt="'.htmlspecialchars($banner['bannername']).'" /></a>';
 }
 else echo $_language->module['no_banners'];

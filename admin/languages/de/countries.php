@@ -38,7 +38,6 @@ $language_array = Array(
   'delete'=>'löschen',
   'edit'=>'ändern',
   'edit_country'=>'Land ändern',
-  'favorite'=>'Favorit',
   'fill_correctly'=>'Bitte das das Formular korrekt ausfüllen',
   'format_incorrect'=>'Das Format des Symbols war falsch. Bitte lade nur Symbole im *.gif Format hoch',
   'icon'=>'Symbol',

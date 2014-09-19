@@ -52,10 +52,10 @@ if(get_magic_quotes_gpc()){
 }
 
 if($searchtype=='ac_usersearch'){
-	$search = $_database->escape_string(htmlspecialchars(rawurldecode($search)));
+	$search = mysql_real_escape_string(htmlspecialchars(rawurldecode($search)));
 }
 else{
-	$search = $_database->escape_string(rawurldecode($search));
+	$search = mysql_real_escape_string(rawurldecode($search));
 }
 
 $div=$_GET['div'];
@@ -87,13 +87,13 @@ else{
 		$db_results = safe_query("SELECT * FROM ".PREFIX.$table." WHERE ".$column." LIKE '%".$search."%'");
 	}
 }
-$any=mysqli_num_rows($db_results);
+$any=mysql_num_rows($db_results);
 
 if ($any==0) {
 	echo $_language->module['no_result'];
 }
 elseif ($any <= 100) {
-	while ($row = mysqli_fetch_array($db_results)) {
+	while ($row = mysql_fetch_array($db_results)) {
 		$searchresult=stripslashes($row[$column]);
 		$resultidentifier=$row[$identifier];
 		eval ("\$resultemp = \"".gettemplate($searchtemp)."\";");

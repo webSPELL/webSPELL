@@ -26,6 +26,8 @@
 */
 
 $_language->read_module('gallery');
+// 
+$dropboxApiKey = "bcct261mb0g4zt3"; // https://www.dropbox.com/developers/apps/create
 
 if(!isgalleryadmin($userID) OR mb_substr(basename($_SERVER['REQUEST_URI']),0,15) != "admincenter.php") die($_language->module['access_denied']);
 
@@ -72,7 +74,7 @@ if($part=="groups") {
 	 	$CAPCLASS = new Captcha;
 		if($CAPCLASS->check_captcha(0, $_GET['captcha_hash'])) {
 			$db_result=safe_query("SELECT * FROM ".PREFIX."gallery WHERE groupID='".$_GET['groupID']."'");
-			$any=mysqli_num_rows($db_result);
+			$any=mysql_num_rows($db_result);
 			if($any){
 				echo $_language->module['galleries_available'].'<br /><br />';
 			}
@@ -108,7 +110,7 @@ if($part=="groups") {
     $CAPCLASS->create_transaction();
     $hash = $CAPCLASS->get_hash();
 		$ergebnis=safe_query("SELECT * FROM ".PREFIX."gallery_groups WHERE groupID='".$_GET['groupID']."'");
-		$ds=mysqli_fetch_array($ergebnis);
+		$ds=mysql_fetch_array($ergebnis);
 
 		echo'<h1>&curren; <a href="admincenter.php?site=gallery" class="white">'.$_language->module['gallery'].'</a> &raquo; <a href="admincenter.php?site=gallery&amp;part=groups" class="white">'.$_language->module['groups'].'</a> &raquo; '.$_language->module['edit_group'].'</h1>';
     
@@ -146,12 +148,12 @@ if($part=="groups") {
     $CAPCLASS->create_transaction();
     $hash = $CAPCLASS->get_hash();
     
-    while($ds=mysqli_fetch_array($ergebnis)) {
+    while($ds=mysql_fetch_array($ergebnis)) {
       if($n%2) { $td='td1'; }
 			else { $td='td2'; }
 			
 			$list = '<select name="sortlist[]">';
-			for($i=1;$i<=mysqli_num_rows($ergebnis);$i++) {
+			for($i=1;$i<=mysql_num_rows($ergebnis);$i++) {
 				$list.='<option value="'.$ds['groupID'].'-'.$i.'">'.$i.'</option>';
 			}
 			$list .= '</select>';
@@ -182,7 +184,7 @@ elseif($part=="gallerys") {
 		if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
 			if(checkforempty(Array('name'))) {
 				safe_query("INSERT INTO ".PREFIX."gallery ( name, date, groupID ) values( '".$_POST['name']."', '".time()."', '".$_POST['group']."' ) ");
-				$id = mysqli_insert_id($_database);
+				$id = mysql_insert_id();
 			} else echo $_language->module['information_incomplete'];
 		} else echo $_language->module['transaction_invalid'];
 	}
@@ -220,7 +222,7 @@ elseif($part=="gallerys") {
 					if($name[$i]) $insertname = $name[$i];
 					else $insertname = $picture;
 					safe_query("INSERT INTO ".PREFIX."gallery_pictures ( galleryID, name, comment, comments) VALUES ('".$_POST['galleryID']."', '".$insertname."', '".$comment[$i]."', '".$_POST['comments']."' )");
-					$insertid = mysqli_insert_id($_database);
+					$insertid = mysql_insert_id();
 					copy($dir.$picture, $dir.'large/'.$insertid.$typ);
 					$galclass->savethumb($dir.'large/'.$insertid.$typ, $dir.'thumb/'.$insertid.'.jpg');
 					@unlink($dir.$picture);
@@ -239,7 +241,7 @@ elseif($part=="gallerys") {
 				if($_POST['name']) $insertname = $_POST['name'];
 				else $insertname = $picture['name'];
 				safe_query("INSERT INTO ".PREFIX."gallery_pictures ( galleryID, name, comment, comments) VALUES ('".$_POST['galleryID']."', '".$insertname."', '".$_POST['comment']."', '".$_POST['comments']."' )");
-				$insertid = mysqli_insert_id($_database);
+				$insertid = mysql_insert_id();
 	
 				$typ = getimagesize($picture['tmp_name']);
 				switch ($typ[2]) {
@@ -253,6 +255,46 @@ elseif($part=="gallerys") {
 			}
 		} else echo $_language->module['transaction_invalid'];
 	}
+    
+    elseif(isset($_POST['savedropbox'])) {
+
+		$dir = '../images/gallery/';
+		$pictures = array();
+		if(isset($_POST['comment'])) $comment = $_POST['comment'];
+		if(isset($_POST['name'])) $name = $_POST['name'];
+    	if(isset($_POST['pictures'])) $pictures = $_POST['pictures'];
+		$i=0;
+		$CAPCLASS = new Captcha;
+		if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
+		    foreach($pictures as $picture) {
+					$typ = ".".strtolower(substr($picture, -3)); // .png , .jpg, .gif...
+		
+					if($name[$i]) $insertname = $name[$i];
+					else $insertname = $picture;
+					safe_query("INSERT INTO ".PREFIX."gallery_pictures ( galleryID, name, comment, comments) VALUES ('".$_POST['galleryID']."', '".$insertname."', '".$comment[$i]."', '".$_POST['comments']."' )");
+					$insertid = mysql_insert_id();
+                
+					if(function_exists("curl_init")) {
+						$ch = curl_init($picture);
+						curl_setopt($ch, CURLOPT_HEADER, 0);
+						curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+						curl_setopt($ch, CURLOPT_BINARYTRANSFER,1);
+						$rawdata=curl_exec ($ch);
+						curl_close ($ch);
+						
+						$fp = fopen($dir.'large/'.$insertid.$typ,'w');
+						fwrite($fp, $rawdata); 
+						fclose($fp);
+					}
+					elseif(!function_exists("curl_init") && ini_get("allow_url_fopen") == 1) {
+						file_put_contents($dir.'large/'.$insertid.$typ, file_get_contents($picture));
+					}
+					
+					$galclass->savethumb($dir.'large/'.$insertid.$typ, $dir.'thumb/'.$insertid.'.jpg');
+					$i++;
+				}
+		} else echo $_language->module['transaction_invalid'];
+	}
   
 	elseif(isset($_GET['delete'])) {
 		//SQL
@@ -262,7 +304,7 @@ elseif($part=="gallerys") {
 				//FILES
 
 				$ergebnis=safe_query("SELECT picID FROM ".PREFIX."gallery_pictures WHERE galleryID='".$_GET['galleryID']."'");
-				while($ds=mysqli_fetch_array($ergebnis)) {
+				while($ds=mysql_fetch_array($ergebnis)) {
 					@unlink('../images/gallery/thumb/'.$ds['picID'].'.jpg'); //thumbnails
 	
 					$path = '../images/gallery/large/';
@@ -279,10 +321,10 @@ elseif($part=="gallerys") {
   
 	if($action=="add") {
     $ergebnis=safe_query("SELECT * FROM ".PREFIX."gallery_groups");
-		$any=mysqli_num_rows($ergebnis);
+		$any=mysql_num_rows($ergebnis);
 		if($any){
 			$groups = '<select name="group">';
-			while($ds=mysqli_fetch_array($ergebnis)) {
+			while($ds=mysql_fetch_array($ergebnis)) {
 				$groups.='<option value="'.$ds['groupID'].'">'.getinput($ds['name']).'</option>';
 			}
 			$groups.='</select>';
@@ -307,6 +349,7 @@ elseif($part=="gallerys") {
 	        <td><select name="upload">
 	          <option value="ftp">'.$_language->module['ftp'].'</option>
 	          <option value="form">'.$_language->module['formular'].'</option>
+	          <option value="dropbox">Dropbox</option>
 	        </select></td>
 	      </tr>
 	      <tr>
@@ -328,13 +371,13 @@ elseif($part=="gallerys") {
     $hash = $CAPCLASS->get_hash();
 		$ergebnis=safe_query("SELECT * FROM ".PREFIX."gallery_groups");
 		$groups = '<select name="group">';
-		while($ds=mysqli_fetch_array($ergebnis)) {
+		while($ds=mysql_fetch_array($ergebnis)) {
 			$groups.='<option value="'.$ds['groupID'].'">'.getinput($ds['name']).'</option>';
 		}
 		$groups.='</select>';
 
 		$ergebnis=safe_query("SELECT * FROM ".PREFIX."gallery WHERE galleryID='".$_GET['galleryID']."'");
-		$ds=mysqli_fetch_array($ergebnis);
+		$ds=mysql_fetch_array($ergebnis);
 
 		$groups = str_replace('value="'.$ds['groupID'].'"','value="'.$ds['groupID'].'" selected="selected"',$groups);
 
@@ -471,6 +514,55 @@ elseif($part=="gallerys") {
         </tr>
       </table>
       </form>';
+		} elseif($upload_type == "dropbox") {
+    
+      		$CAPCLASS = new Captcha;
+      		$CAPCLASS->create_transaction();
+      		$hash = $CAPCLASS->get_hash();
+			
+            // "Dropbox Chooser" - Include jQuery
+            echo '<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>';
+            
+            // "Dropbox Chooser" - Embed code
+            echo '<script type="text/javascript" src="https://www.dropbox.com/static/api/1/dropins.js" id="dropboxjs" data-app-key="'.$dropboxApiKey.'"></script>';
+            
+            // "Dropbox Chooser - dropbox_chooser.js
+            echo '<script src="js/dropbox_chooser.js"></script>';
+            
+            // "Dropbox Chooser" - Chooser Button
+            echo '<input type="dropbox-chooser" name="selected-file" style="visibility: hidden;" data-link-type="direct" data-multiselect="true" id="db-chooser" />';
+            
+			if(!function_exists("curl_init") && !ini_get("allow_url_fopen")) echo '<b style="color:red">cURL not installed and allow_url_fopen is disabled, this will not work!</b>';
+			
+			echo'<form method="post" action="admincenter.php?site=gallery&amp;part=gallerys">
+		      <table width="100%" border="0" cellspacing="1" cellpadding="3">
+		        <tr>
+		          <td>';
+					
+		    echo '<table border="0" width="100%" cellspacing="1" cellpadding="1" id="dropbox-table">
+		        <tr>
+		          <td></td>
+		          <td><b>'.$_language->module['filename'].'</b></td>
+		          <td><b>'.$_language->module['name'].'</b></td>
+		          <td><b>'.$_language->module['comment'].'</b></td>
+		        </tr>';
+
+			echo '</table></td>
+		          </tr>
+		          <tr>
+		            <td><br /><b>'.$_language->module['visitor_comments'].'</b> &nbsp;
+		            <select name="comments">
+		              <option value="0">'.$_language->module['disable_comments'].'</option>
+		              <option value="1">'.$_language->module['enable_user_comments'].'</option>
+		              <option value="2" selected="selected">'.$_language->module['enable_visitor_comments'].'</option>
+		            </select></td>
+		          </tr>
+		          <tr>
+		            <td><br /><input type="hidden" name="captcha_hash" value="'.$hash.'" /><input type="hidden" name="galleryID" value="'.$id.'" />
+		            <input type="submit" name="savedropbox" value="'.$_language->module['upload'].'" /></td>
+		          </tr>
+		        </table>
+		        </form>';
 		}
 	}
   
@@ -488,7 +580,7 @@ elseif($part=="gallerys") {
 
 		$ergebnis=safe_query("SELECT * FROM ".PREFIX."gallery_groups ORDER BY sort");
     
-    while($ds=mysqli_fetch_array($ergebnis)) {
+    while($ds=mysql_fetch_array($ergebnis)) {
 		
     echo'<tr>
       <td class="td_head" colspan="3"><b>'.getinput($ds['name']).'</b></td>
@@ -501,13 +593,13 @@ elseif($part=="gallerys") {
     $hash = $CAPCLASS->get_hash();
     $i=1;
 		
-      while($db=mysqli_fetch_array($galleries)) {
+      while($db=mysql_fetch_array($galleries)) {
 			  if($i%2) { $td='td1'; }
 			  else { $td='td2'; }
       
         echo'<tr>
           <td class="'.$td.'" width="50%"><a href="../index.php?site=gallery&amp;galleryID='.$db['galleryID'].'" target="_blank">'.getinput($db['name']).'</a></td>
-          <td class="'.$td.'" width="30%" align="center"><input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=gallery&amp;part=gallerys&amp;action=upload&amp;upload=form&amp;galleryID='.$db['galleryID'].'\');return document.MM_returnValue" value="'.$_language->module['add_img'].' ('.$_language->module['per_form'].')" style="margin:1px;" /> <input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=gallery&amp;part=gallerys&amp;action=upload&amp;upload=ftp&amp;galleryID='.$db['galleryID'].'\');return document.MM_returnValue" value="'.$_language->module['add_img'].' ('.$_language->module['per_ftp'].')" style="margin:1px;" /></td>
+          <td class="'.$td.'" width="30%" align="center"><input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=gallery&amp;part=gallerys&amp;action=upload&amp;upload=form&amp;galleryID='.$db['galleryID'].'\');return document.MM_returnValue" value="'.$_language->module['add_img'].' ('.$_language->module['per_form'].')" style="margin:1px;" /> <input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=gallery&amp;part=gallerys&amp;action=upload&amp;upload=ftp&amp;galleryID='.$db['galleryID'].'\');return document.MM_returnValue" value="'.$_language->module['add_img'].' ('.$_language->module['per_ftp'].')" style="margin:1px;" /> <input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=gallery&amp;part=gallerys&amp;action=upload&amp;upload=dropbox&amp;galleryID='.$db['galleryID'].'\');return document.MM_returnValue" value="'.$_language->module['add_img'].' (per Dropbox)" style="margin:1px;" /></td>
           <td class="'.$td.'" width="20%" align="center"><input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=gallery&amp;part=gallerys&amp;action=edit&amp;galleryID='.$db['galleryID'].'\');return document.MM_returnValue" value="'.$_language->module['edit'].'" />
           <input type="button" onclick="MM_confirm(\''.$_language->module['really_delete_gallery'].'\', \'admincenter.php?site=gallery&amp;part=gallerys&amp;delete=true&amp;galleryID='.$db['galleryID'].'&amp;captcha_hash='.$hash.'\')" value="'.$_language->module['delete'].'" /></td>
         </tr>';
@@ -534,7 +626,7 @@ elseif($part=="gallerys") {
     $hash = $CAPCLASS->get_hash();
     
 		$i=1;
-    while($ds=mysqli_fetch_array($ergebnis)) {
+    while($ds=mysql_fetch_array($ergebnis)) {
       if($i%2) { $td='td1'; }
 			else { $td='td2'; }
     

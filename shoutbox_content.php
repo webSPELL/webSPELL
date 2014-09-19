@@ -34,13 +34,13 @@ if($action=="save") {
 	$run=0;
 	if($userID) {
 		$run=1;
-		$name = $_database->escape_string(getnickname($userID));
+		$name = mysql_real_escape_string(getnickname($userID));
 	}
 	else {
 		$CAPCLASS = new Captcha;
 		if($CAPCLASS->check_captcha($_POST['captcha'], $_POST['captcha_hash'])) $run=1;
 
-		if(mysqli_num_rows(safe_query("SELECT * FROM ".PREFIX."user WHERE nickname = '$name' "))) $name = '*'.$name.'*';
+		if(mysql_num_rows(safe_query("SELECT * FROM ".PREFIX."user WHERE nickname = '$name' "))) $name = '*'.$name.'*';
 		$name = clearfromtags($name);
 	}
 
@@ -48,7 +48,7 @@ if($action=="save") {
 		$date=time();
 		$ip = $GLOBALS['ip'];
 		$ergebnis = safe_query("SELECT * FROM ".PREFIX."shoutbox ORDER BY date DESC LIMIT 0,1");
-		$ds=mysqli_fetch_array($ergebnis);
+		$ds=mysql_fetch_array($ergebnis);
 		if(($ds['message'] != $message) OR ($ds['name'] != $name)) safe_query("INSERT INTO ".PREFIX."shoutbox (date, name, message, ip) VALUES ( '$date', '$name', '$message', '$ip' ) ");
 	}
 	redirect('index.php?site=shoutbox_content&action=showall','shoutbox',0);
@@ -75,8 +75,8 @@ elseif($action=="showall") {
 	eval ("\$title_shoutbox = \"".gettemplate("title_shoutbox")."\";");
 	echo $title_shoutbox;
 
-	$tmp = mysqli_fetch_assoc(safe_query("SELECT count(shoutID) as cnt FROM ".PREFIX."shoutbox ORDER BY date"));
-	$gesamt = $tmp['cnt'];
+	$all = safe_query("SELECT count(shoutID) FROM ".PREFIX."shoutbox ORDER BY date");
+	$gesamt = mysql_result($all, 0);
 	$pages=ceil($gesamt/$maxsball);
 	$max=$maxsball;
 	if(!isset($_GET['page'])) $page = 1; else $page = (int)$_GET['page'];
@@ -103,24 +103,24 @@ elseif($action=="showall") {
 	}
 
 	if($type=="ASC")
-	$sorter='<a href="index.php?site=shoutbox_content&amp;action=showall&amp;page='.$page.'&amp;type=DESC">'.$_language->module['sort'].'</a> <img src="images/icons/asc.gif" width="9" height="7" border="0" alt="" />&nbsp;&nbsp;&nbsp;';
+	$sorter='<a href="index.php?site=shoutbox_content&amp;action=showall&amp;page='.$page.'&amp;type=DESC">'.$_language->module['sort'].'</a> <img src="images/icons/asc.gif">';
 	else
-	$sorter='<a href="index.php?site=shoutbox_content&amp;action=showall&amp;page='.$page.'&amp;type=ASC">'.$_language->module['sort'].'</a> <img src="images/icons/desc.gif" width="9" height="7" border="0" alt="" />&nbsp;&nbsp;&nbsp;';
+	$sorter='<a href="index.php?site=shoutbox_content&amp;action=showall&amp;page='.$page.'&amp;type=ASC">'.$_language->module['sort'].'</a> <img src="images/icons/desc.gif">';
 
 	eval ("\$shoutbox_all_head = \"".gettemplate("shoutbox_all_head")."\";");
 	echo $shoutbox_all_head;
 
 	$i=1;
-	while($ds=mysqli_fetch_array($ergebnis)) {
+	while($ds=mysql_fetch_array($ergebnis)) {
 
 		$i%2 ? $bg1=BG_1 : $bg1=BG_2;
-		$date=getformatdatetime($ds['date']);
+		$date=date("d.m - H:i", $ds['date']);
 		$name=$ds['name'];
 		$message=cleartext($ds['message'], false);
 		$ip='logged';
 
 		if(isfeedbackadmin($userID)) {
-			$actions='<input class="input" type="checkbox" name="shoutID[]" value="'.$ds['shoutID'].'" />';
+			$actions='<input class="input" type="checkbox" name="shoutID[]" value="'.$ds['shoutID'].'">';
 			$ip=$ds['ip'];
 		}
 		else $actions='';
@@ -134,15 +134,14 @@ elseif($action=="showall") {
 	eval ("\$shoutbox_all_foot = \"".gettemplate("shoutbox_all_foot")."\";");
 	echo $shoutbox_all_foot;
 
-	if(isfeedbackadmin($userID)) $submit='<input class="input" type="checkbox" name="ALL" value="ALL" onclick="SelectAll(this.form);" /> '.$_language->module['select_all'].'
-											  <input type="submit" value="'.$_language->module['delete_selected'].'" />';
+	if(isfeedbackadmin($userID)) $submit='<input class="input" type="checkbox" name="ALL" value="ALL" onclick="SelectAll(this.form);"> '.$_language->module['select_all'].'
+											  <input type="submit" value="'.$_language->module['delete_selected'].'" class="btn btn-danger">';
 	else $submit='';
-	echo'<table width="100%" border="0" cellspacing="0" cellpadding="0">
-		<tr>
-   		<td>'.$page_link.'</td>
-   		<td align="right">'.$submit.'</td>
-		</tr>
-		</table></form>';
+	echo'<div class="row">
+            <div class="col-md-6">'.$page_link.'</div>
+            <div class="col-md-6 text-right">'.$submit.'</div>
+        </div>
+		</form>';
 
 	if($pages>1) $page_link = makepagelink("index.php?site=shoutbox_content&amp;action=showall", $page, $pages);
 }
@@ -161,8 +160,8 @@ else {
 	$bg1=BG_1;
 
 	$ergebnis=safe_query("SELECT * FROM ".PREFIX."shoutbox ORDER BY date DESC LIMIT 0,".$maxshoutbox);
-	while($ds=mysqli_fetch_array($ergebnis)) {
-		$date=getformattime($ds['date']);
+	while($ds=mysql_fetch_array($ergebnis)) {
+		$date=date("H:i", $ds['date']);
 		$name=$ds['name'];
 		$message=cleartext($ds['message'], false);
 		$message=str_replace("&amp;amp;","&",$message);

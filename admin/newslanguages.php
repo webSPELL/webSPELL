@@ -56,7 +56,7 @@ elseif(isset($_GET['delete'])) {
 
 $langs='';
 $getlangs=safe_query("SELECT country, short FROM ".PREFIX."countries ORDER BY country");
-while($dt=mysqli_fetch_array($getlangs)) {
+while($dt=mysql_fetch_array($getlangs)) {
   $langs.='<option value="'.$dt['short'].'">'.$dt['country'].'</option>';
 }
 
@@ -102,7 +102,7 @@ elseif($action=="edit") {
   echo'<h1>&curren; <a href="admincenter.php?site=newslanguages" class="white">'.$_language->module['news_languages'].'</a> &raquo; '.$_language->module['edit_language'].'</h1>';
 
 	$ergebnis=safe_query("SELECT * FROM ".PREFIX."news_languages WHERE langID='".$_GET['langID']."'");
-	$ds=mysqli_fetch_array($ergebnis);
+	$ds=mysql_fetch_array($ergebnis);
   $flag = '[flag]'.$ds['lang'].'[/flag]';
 $country = flags($flag,'admin');
 $country = str_replace("<img","<img id='getcountry'",$country);
@@ -152,7 +152,7 @@ else {
 	$CAPCLASS->create_transaction();
 	$hash = $CAPCLASS->get_hash();
   
-  while($ds=mysqli_fetch_array($ergebnis)) {
+  while($ds=mysql_fetch_array($ergebnis)) {
     if($i%2) { $td='td1'; }
     else { $td='td2'; }
     

@@ -29,35 +29,24 @@ function ChangeFormAction() {
 </script>
 
 <form action="forum_topic.php" method="post" id="post" name="post" onsubmit="return chkFormular()">
-<table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="$border">
-  <tr>
-    <td class="title" align="center" bgcolor="$bghead">%new_reply%</td>
-  </tr>
-  <tr><td bgcolor="$pagebg"></td></tr>
-  <tr>
-    <td bgcolor="$bg1"><br />
-    <table width="100%" border="0" align="center" cellpadding="2" cellspacing="0">
-      <tr>
-        <td colspan="2">$addbbcode</td>
-      </tr>
-      <tr>
-        <td colspan="2"><textarea name="message" id="message" rows="10" cols="50" style="width:99%;">$message</textarea></td>
-      </tr>
-      <tr>
-        <td colspan="2"><small><b>%options%:</b> &#8226; %html_off% &#8226; %bbcode_on% &#8226; %smilies_on%</small></td>
-      </tr>
-      <tr>
-        <td><input class="input" type="checkbox" name="notify" value="1" $notify /> %notify_reply%<br />
-        <input class="input" type="checkbox" name="preview" id="preview" value="1" onclick="ChangeFormAction()" /> %preview_post% $chk_sticky</td>
-        <td align="right" valign="bottom"><input type="hidden" name="userID" value="$userID" />
+    <h3>%new_reply%</h3>
+    <div class="form-group">
+        $addbbcode
+    </div>
+
+    <div class="form-group">
+        <textarea name="message" id="message" rows="10" class="form-control" autofocus>$message</textarea>
+        <small><b>%options%:</b> %bbcode_on% | %smilies_on%</small>
+        <div class="pull-right"><input class="input" type="checkbox" name="notify" value="1" $notify /> %notify_reply%</div>
+    </div>
+    
+    <div class="form-group text-right">
+        <input class="input" type="checkbox" name="preview" id="preview" value="1" onclick="ChangeFormAction()" /> %preview_post% $chk_sticky
+        <input type="hidden" name="userID" value="$userID" />
         <input type="hidden" name="board" value="$board" />
         <input type="hidden" name="topic" value="$topic" />
         <input type="hidden" name="page" value="$page" />
         <input type="hidden" name="addreply" value="true" />
-        <input name="newreply" id="add_post_submit" type="submit" value="%post_new_reply%" /></td>
-      </tr>
-    </table>
-    </td>
-  </tr>
-</table>
+        <input name="newreply" id="add_post_submit" type="submit" value="%post_new_reply%" class="btn btn-primary">
+    </div>
 </form>

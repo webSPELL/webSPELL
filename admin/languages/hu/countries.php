@@ -38,7 +38,6 @@ $language_array = Array(
   'delete'=>'Törlés',
   'edit'=>'Szerkesztés',
   'edit_country'=>'Ország szerkesztése',
-  'favorite'=>'Kedvenc',
   'fill_correctly'=>'Helyesen töltsd ki az űrlapot!',
   'format_incorrect'=>'A kép formátuma nem megfelelő. A banner kiterjesztése csak *.gif lehet.',
   'icon'=>'Ikon',

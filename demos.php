@@ -50,9 +50,7 @@ if(isset($_POST['save'])) {
 	$maps = $_POST['maps'];
 	$player = $_POST['player'];
 	$comments = $_POST['comments'];
-	$month = $_POST['month'];
-	$day = $_POST['day'];
-	$year = $_POST['year'];
+	$date = strtotime($_POST['date']);
 	$link = $_POST['link'];
 
 	$filepath = "./demos/";
@@ -68,8 +66,6 @@ if(isset($_POST['save'])) {
 	else {
 		if(stristr($link, "http://")) $file=$link;
 	}
-
-	$date=mktime(0,0,0,$month,$day,$year);
 	safe_query("INSERT INTO ".PREFIX."demos ( date, game, clan1, clan2, clantag1, clantag2, url1, url2, country1, country2, league, leaguehp, maps, player, file, downloads, comments )
                 values( '$date', '$game', '$clanname1', '$clanname2', '$clan1', '$clan2', '$hp1', '$hp2', '$country1', '$country2', '$league', '$leaguehp', '$maps', '$player', '$file', '0', '$comments' ) ");
 	header("Location: index.php?site=demos");
@@ -99,6 +95,7 @@ elseif(isset($_POST['saveedit'])) {
 	$maps = $_POST['maps'];
 	$player = $_POST['player'];
 	$comments = $_POST['comments'];
+    $date = strtotime($_POST['date']);
 	$link = $_POST['link'];
 
 	$filepath = "./demos/";
@@ -121,7 +118,6 @@ elseif(isset($_POST['saveedit'])) {
 	else{
 		$mysql_file = "";
 	}
-	$date=mktime(0,0,0,$_POST['month'],$_POST['day'],$_POST['year']);
 	safe_query("UPDATE ".PREFIX."demos SET date='$date',
 	                              game='$game',
 								  clan1='$clanname1',
@@ -151,7 +147,7 @@ elseif(isset($_GET['delete'])) {
 	$demoID = $_GET['demoID'];
 	$filepath = "./demos/";
 	$ergebnis=safe_query("SELECT * FROM ".PREFIX."demos WHERE demoID='$demoID'");
-	$ds=mysqli_fetch_array($ergebnis);
+	$ds=mysql_fetch_array($ergebnis);
 	if(file_exists($filepath.$ds['file'])) @unlink($filepath.$ds['file']);
 	safe_query("DELETE FROM ".PREFIX."demos WHERE demoID='$demoID'");
 	safe_query("DELETE FROM ".PREFIX."comments WHERE parentID='$demoID' AND type='de'");
@@ -163,7 +159,7 @@ echo $title_demos;
 
 $games = null;
 $gamesa=safe_query("SELECT * FROM ".PREFIX."games ORDER BY name");
-while($ds=mysqli_fetch_array($gamesa)) {
+while($ds=mysql_fetch_array($gamesa)) {
 	$games.='<option value="'.$ds['tag'].'">'.$ds['name'].'</option>';
 }
 
@@ -187,7 +183,7 @@ function top5() {
 	echo $top5_head;
 	
   $n=1;
-	while($ds=mysqli_fetch_array($ergebnis)) {
+	while($ds=mysql_fetch_array($ergebnis)) {
 		if($n%2) {
 			$bg1=BG_1;
 			$bg2=BG_2;
@@ -231,7 +227,7 @@ function top5() {
 	eval ("\$top5_head = \"".gettemplate("top5_head")."\";");
 	echo $top5_head;
 	$n=1;
-	while($ds=mysqli_fetch_array($ergebnis)) {
+	while($ds=mysql_fetch_array($ergebnis)) {
 		if($n%2) {
 			$bg1=BG_1;
 			$bg2=BG_2;
@@ -266,24 +262,6 @@ else $action = "";
 
 if($action=="new") {
 	if(isfileadmin($userID)) {
-		$day = "";
-    for($i=1; $i<32; $i++) {
-			if($i==date("d", time())) $day.='<option selected="selected">'.$i.'</option>';
-			else $day.='<option>'.$i.'</option>';
-		}
-		$month = "";
-    for($i=1; $i<13; $i++) {
-			if($i==date("n", time())) $month.='<option value="'.$i.'" selected="selected">'.date("M", time()).'</option>';
-			else $month.='<option value="'.$i.'">'.date("M", mktime(0,0,0,$i,1,2000)).'</option>';
-		}
-		$year = "";
-    for($i=2000; $i<2016; $i++) {
-			if($i==date("Y", time())) $year.='<option value="'.$i.'" selected="selected">'.date("Y", time()).'</option>';
-			else $year.='<option value="'.$i.'">'.$i.'</option>';
-		}
-		$countries=getcountries();
-
-		$bg1=BG_1;
 		eval ("\$demo_new = \"".gettemplate("demo_new")."\";");
 		echo $demo_new;
 	}
@@ -292,25 +270,12 @@ if($action=="new") {
 elseif($action=="edit") {
 	$demoID = $_GET['demoID'];
 	if(isfileadmin($userID)) {
-		$ds=mysqli_fetch_array(safe_query("SELECT * FROM ".PREFIX."demos WHERE demoID='$demoID'"));
-		$day = "";
-    for($i=1; $i<32; $i++) {
-			if($i==date("d", $ds['date'])) $day.='<option selected="selected">'.$i.'</option>';
-			else $day.='<option>'.$i.'</option>';
-		}
-		$month = "";
-    for($i=1; $i<13; $i++) {
-			if($i==date("n", $ds['date'])) $month.='<option value="'.$i.'" selected="selected">'.date("M", $ds['date']).'</option>';
-			else $month.='<option value="'.$i.'">'.date("M", mktime(0,0,0,$i,1,2000)).'</option>';
-		}
-		$year = "";
-    for($i=2000; $i<2016; $i++) {
-			if($i==date("Y", $ds['date'])) $year.='<option selected="selected">'.$i.'</option>';
-			else $year.='<option>'.$i.'</option>';
-		}
+		$ds=mysql_fetch_array(safe_query("SELECT * FROM ".PREFIX."demos WHERE demoID='$demoID'"));
+		
+        $date=date("Y-n-d", $ds['date']);
 		$games=str_replace(' selected="selected"', '', $games);
 		$games=str_replace('value="'.$ds['game'].'"', 'value="'.$ds['game'].'" selected="selected"', $games);
-		$countries=getcountries();
+		$countries=str_replace(' selected="selected"', '', $countries);
 		$country1=str_replace('value="'.$ds['country1'].'"', 'value="'.$ds['country1'].'" selected="selected"', $countries);
 		$country2=str_replace('value="'.$ds['country2'].'"', 'value="'.$ds['country2'].'" selected="selected"', $countries);
 		$clanname1=htmlspecialchars($ds['clan1']);
@@ -337,12 +302,12 @@ elseif($action=="edit") {
 }
 elseif($action=="showdemo") {
 	$demoID = $_GET['demoID'];
-	if(isfileadmin($userID)) echo'<input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=demos&amp;action=new\');return document.MM_returnValue" value="'.$_language->module['new_demo'].'" /> ';
-	echo'<input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=demos\');return document.MM_returnValue" value="'.$_language->module['all_demos'].'" /><br /><br />';
+	if(isfileadmin($userID)) echo'<input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=demos&amp;action=new\');return document.MM_returnValue" value="'.$_language->module['new_demo'].'" class="btn btn-danger"> ';
+	echo'<input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=demos\');return document.MM_returnValue" value="'.$_language->module['all_demos'].'" class="btn btn-primary"><br><br>';
 
 	$result=safe_query("SELECT * FROM ".PREFIX."demos WHERE demoID='$demoID'");
-	$ds=mysqli_fetch_array($result);
-	$date = getformatdate($ds['date']);
+	$ds=mysql_fetch_array($result);
+	$date = date("d.m.Y", $ds['date']);
 	$league='<a href="'.$ds['leaguehp'].'" target="_blank">'.$ds['league'].'</a>';
 	$country1="[flag]".$ds['country1']."[/flag]";
 	$country1=flags($country1);
@@ -366,12 +331,12 @@ elseif($action=="showdemo") {
 	}
 
 	if($loggedin) {
-		$download='<a href="download.php?demoID='.$ds['demoID'].'"><b>'.$_language->module['download_now'].'</b></a>';
+		$download='<a href="download.php?demoID='.$ds['demoID'].'" class="btn btn-lg btn-success"><i class="icon-download icon-large"></i> '.$_language->module['download_now'].'</a>';
 
 		$getdemos=safe_query("SELECT demos FROM ".PREFIX."user WHERE userID='$userID'");
 		$found=false;
-		if(mysqli_num_rows($getdemos)) {
-			$ga=mysqli_fetch_array($getdemos);
+		if(mysql_num_rows($getdemos)) {
+			$ga=mysql_fetch_array($getdemos);
 			if($ga['demos']!="") {
 				$string=$ga['demos'];
 				$array=explode(":", $string);
@@ -381,8 +346,9 @@ elseif($action=="showdemo") {
 				}
 			}
 		}
-		if($found) $rateform='<br /><b>'.$_language->module['allready_rated'].'</b>';
-		else $rateform='('.$_language->module['rate_with'].') <select name="rating">
+		if($found) $rateform='<b>'.$_language->module['allready_rated'].'</b>';
+		else $rateform='<div class="input-group">
+                            <select name="rating" class="form-control">
 							  <option>0 - '.$_language->module['poor'].'</option>
 							  <option>1</option>
 							  <option>2</option>
@@ -395,10 +361,14 @@ elseif($action=="showdemo") {
 							  <option>9</option>
 							  <option>10 - '.$_language->module['perfect'].'</option>
 							</select>
-							<input type="hidden" name="userID" value="'.$userID.'" />
-							<input type="hidden" name="type" value="de" />
-							<input type="hidden" name="id" value="'.$ds['demoID'].'" />
-      							<input type="submit" name="Submit" value="'.$_language->module['rate'].'" />';
+                            
+      						<span class="input-group-btn">
+                              <input type="submit" name="Submit" value="'.$_language->module['rate'].'" class="btn btn-primary">
+                            </span>
+                        </div>
+                        <input type="hidden" name="userID" value="'.$userID.'">
+                        <input type="hidden" name="type" value="de">
+                        <input type="hidden" name="id" value="'.$ds['demoID'].'">';
 	}
 	else {
 		$rateform='<b>'.$_language->module['to_rate'].'</b>';
@@ -407,8 +377,8 @@ elseif($action=="showdemo") {
 
 	$adminaction="";
   if(isfileadmin($userID))
-  $adminaction='<input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=demos&amp;action=edit&amp;demoID='.$ds['demoID'].'\');return document.MM_returnValue" value="'.$_language->module['edit'].'" />
-  <input type="button" onclick="MM_confirm(\'really delete this demo?\', \'demos.php?delete=true&amp;demoID='.$ds['demoID'].'\')" value="'.$_language->module['delete'].'" />';	
+  $adminaction='<input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=demos&amp;action=edit&amp;demoID='.$ds['demoID'].'\');return document.MM_returnValue" value="'.$_language->module['edit'].'" class="btn btn-danger">
+  <input type="button" onclick="MM_confirm(\'really delete this demo?\', \'demos.php?delete=true&amp;demoID='.$ds['demoID'].'\')" value="'.$_language->module['delete'].'" class="btn btn-danger">';	
 
 	$bg1=BG_1;
 	$bg2=BG_2;
@@ -440,10 +410,10 @@ elseif($action=="showgame") {
 	  if(($_GET['type']=='ASC') || ($_GET['type']=='DESC')) $type=$_GET['type'];
 	}
 	
-	if(isfileadmin($userID)) echo'<input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=demos&amp;action=new\');return document.MM_returnValue" value="'.$_language->module['new_demo'].'" /><br /><br />';
+	if(isfileadmin($userID)) echo'<input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=demos&amp;action=new\');return document.MM_returnValue" value="'.$_language->module['new_demo'].'" class="btn btn-danger"><br><br>';
 
 	$alle=safe_query("SELECT demoID FROM ".PREFIX."demos WHERE game='$game'");
-	$gesamt = mysqli_num_rows($alle);
+	$gesamt = mysql_num_rows($alle);
 	$pages=1;
 	
 	$max=$maxdemos;
@@ -482,7 +452,7 @@ elseif($action=="showgame") {
 		eval ("\$demos_head = \"".gettemplate("demos_head")."\";");
 		echo $demos_head;
 		$n=1;
-		while($ds=mysqli_fetch_array($ergebnis)) {
+		while($ds=mysql_fetch_array($ergebnis)) {
 			if($n%2) {
 				$bg1=BG_1;
 				$bg2=BG_2;
@@ -491,7 +461,7 @@ elseif($action=="showgame") {
 				$bg1=BG_3;
 				$bg2=BG_4;
 			}
-			$date=getformatdate($ds['date']);
+			$date=date("d.m.Y", $ds['date']);
 			$league='<a href="'.$ds['leaguehp'].'" target="_blank">'.$ds['league'].'</a>';
 			$country1="[flag]".$ds['country1']."[/flag]";
 			$country1=flags($country1);
@@ -535,9 +505,9 @@ else {
 	  if(($_GET['type']=='ASC') || ($_GET['type']=='DESC')) $type=$_GET['type'];
 	}
 	
-	if(isfileadmin($userID)) echo'<input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=demos&amp;action=new\');return document.MM_returnValue" value="'.$_language->module['new_demo'].'" /><br /><br />';
+	if(isfileadmin($userID)) echo'<input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=demos&amp;action=new\');return document.MM_returnValue" value="'.$_language->module['new_demo'].'" class="btn btn-danger"><br><br>';
 	$alle=safe_query("SELECT demoID FROM ".PREFIX."demos");
-	$gesamt = mysqli_num_rows($alle);
+	$gesamt = mysql_num_rows($alle);
 	$pages=1;
 	
 	$max=$maxdemos;
@@ -576,7 +546,7 @@ else {
 		eval ("\$demos_head = \"".gettemplate("demos_head")."\";");
 		echo $demos_head;
 		$n=1;
-		while($ds=mysqli_fetch_array($ergebnis)) {
+		while($ds=mysql_fetch_array($ergebnis)) {
 			if($n%2) {
 				$bg1=BG_1;
 				$bg2=BG_2;
@@ -585,7 +555,7 @@ else {
 				$bg1=BG_3;
 				$bg2=BG_4;
 			}
-			$date=getformatdate($ds['date']);
+			$date=date("d.m.Y", $ds['date']);
 			$league='<a href="'.$ds['leaguehp'].'" target="_blank">'.$ds['league'].'</a>';
 			$country1="[flag]".$ds['country1']."[/flag]";
 			$country1=flags($country1);

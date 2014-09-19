@@ -27,14 +27,14 @@
 
 $_language->read_module('sponsors');
 $mainsponsors=safe_query("SELECT * FROM ".PREFIX."sponsors WHERE (displayed = '1' AND mainsponsor = '1') ORDER BY sort");
-if(mysqli_num_rows($mainsponsors)) {
+if(mysql_num_rows($mainsponsors)) {
 	
-	if(mysqli_num_rows($mainsponsors) == 1) $main_title = $_language->module['mainsponsor'];
+	if(mysql_num_rows($mainsponsors) == 1) $main_title = $_language->module['mainsponsor'];
 	else $main_title = $_language->module['mainsponsors'];
-	echo '<b>'.$main_title.'</b><br />';
+	echo '<h2>'.$main_title.'</h2>';
 	
-	while($da=mysqli_fetch_array($mainsponsors)) {
-		if(!empty($da['banner_small'])) $sponsor='<img src="images/sponsors/'.$da['banner_small'].'" style="margin:2px 0;" border="0" alt="'.htmlspecialchars($da['name']).'" title="'.htmlspecialchars($da['name']).'" />';
+	while($da=mysql_fetch_array($mainsponsors)) {
+		if(!empty($da['banner_small'])) $sponsor='<img src="images/sponsors/'.$da['banner_small'].'" alt="'.htmlspecialchars($da['name']).'">';
 		else $sponsor=$da['name'];
 		$sponsorID = $da['sponsorID'];
 		
@@ -44,14 +44,14 @@ if(mysqli_num_rows($mainsponsors)) {
 }
 
 $sponsors=safe_query("SELECT * FROM ".PREFIX."sponsors WHERE (displayed = '1' AND mainsponsor = '0') ORDER BY sort");
-if(mysqli_num_rows($sponsors)) {
+if(mysql_num_rows($sponsors)) {
 	
-	if(mysqli_num_rows($sponsors) == 1) $title = $_language->module['sponsor'];
+	if(mysql_num_rows($sponsors) == 1) $title = $_language->module['sponsor'];
 	else $title = $_language->module['sponsors'];
-	echo '<b>'.$title.'</b><br />';
+	echo '<h3>'.$title.'</h3>';
 	
-	while($db=mysqli_fetch_array($sponsors)) {
-		if(!empty($db['banner_small'])) $sponsor='<img src="images/sponsors/'.$db['banner_small'].'" style="margin:2px 0;" border="0" alt="'.htmlspecialchars($db['name']).'" title="'.htmlspecialchars($db['name']).'" />';
+	while($db=mysql_fetch_array($sponsors)) {
+		if(!empty($db['banner_small'])) $sponsor='<img src="images/sponsors/'.$db['banner_small'].'" alt="'.htmlspecialchars($db['name']).'">';
 		else $sponsor=$db['name'];
 		$sponsorID = $db['sponsorID'];
 		

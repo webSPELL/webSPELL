@@ -1,24 +1,19 @@
-<table width="100%" cellpadding="2" cellspacing="0" border="0" bgcolor="$border">
-  <tr bgcolor="$bgcat">
-    <td bgcolor="$bg1">
-    <table border="0" width="100%" cellspacing="0" cellpadding="0">
-      <tr>
-        <td width="1%" valign="top">$icon</td>
-        <td width="15">&nbsp;</td>
-        <td valign="top">
-        <table border="0" width="100%" cellspacing="0" cellpadding="0">
-          <tr>
-            <td><span class="category_big">$name ($anzmembers)</span></td>
-            <td align="right"><small>$results $awards $challenge</small></td>
-          </tr>
-          <tr>
-            <td colspan="2"><br />$info<br /><br />$details</td>
-          </tr>
-        </table>
-        </td>
-      </tr>
-    </table>
-    </td>
-  </tr>
-</table>
-<br /><br />
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <div class="row">    
+            <div class="col-xs-12 col-sm-6">
+                $icon <b>$name</b> ($anzmembers)
+            </div>
+            <div class="col-xs-12 col-sm-6  text-right">
+                <div class="btn-group">
+                    $results $awards $challenge
+                </div>
+            </div>
+            <br class="clearfix">
+        </div>
+    </div>
+    <div class="panel-body">
+        $info
+    </div><!-- panel-body -->
+    <div class="panel-footer hidden">$details</div>
+</div><!-- panel -->

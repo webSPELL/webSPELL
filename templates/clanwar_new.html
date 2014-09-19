@@ -1,6 +1,7 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<meta name="description" content="Clanpage using webSPELL 4 CMS" />
 	<meta name="author" content="webspell.org" />
@@ -9,9 +10,9 @@
 	<meta name="generator" content="webSPELL" />
 
 <!-- Head & Title include -->
-	<title>%new_clanwar%</title>
-  <base href="$rewriteBase" />
-	<link href="_stylesheet.css" rel="stylesheet" type="text/css" />
+	<title>Clanwars</title>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
 	<script src="js/bbcode.js" language="jscript" type="text/javascript"></script>
 <!-- end Head & Title include -->
 </head>
@@ -35,109 +36,81 @@ function chkFormular() {
 -->
 </script>
 <form action="clanwars.php?action=save" method="post" name="post" onsubmit="return chkFormular();">
-<table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="$border">
-  <tr>
-    <td class="title" align="center" bgcolor="$bghead">%new_clanwar%</td>
-  </tr>
-  <tr><td bgcolor="$pagebg"></td></tr>
-  <tr>
-    <td bgcolor="$bg1">
-    <table width="100%" border="0" align="center" cellpadding="2" cellspacing="0">
-      <tr>
-        <td>%date%:</td>
-        <td><select name="day">$day</select>
-        <select name="month">$month</select>
-        <select name="year">$year</select></td>
-        <td>%squad% / %game%:</td>
-        <td><select name="squad" id="squad">$squads</select>
-        <select name="game">$games</select></td>
-      </tr>
-      <tr>
-        <td colspan="4"><hr /></td>
-      </tr>
-      <tr>
-        <td>%league%:</td>
-        <td><input name="league" type="text" value="$league" size="35" /></td>
-        <td>%homepage%:</td>
-        <td><input name="leaguehp" type="text" value="$leaguehp" size="35" /></td>
-      </tr>
-      <tr>
-        <td>%league_match_link%:</td>
-        <td><input name="linkpage" type="text" value="$linkpage" size="35" /></td>
+<h1>%new_clanwar%</h1>
+<table class="table">
+    <tr>
+        <th>%date%:</th>
+        <td><select name="day" class="form-control">$day</select>
+        <select name="month" class="form-control">$month</select>
+        <select name="year" class="form-control">$year</select></td>
+        <th>%squad% / %game%:</th>
+        <td><select name="squad" id="squad" class="form-control">$squads</select>
+        <select name="game" class="form-control">$games</select></td>
+    </tr>
+    <tr>
+        <th>%league%:</th>
+        <td><input name="league" type="text" value="$league" class="form-control"></td>
+        <th>%homepage%:</th>
+        <td><input name="leaguehp" type="text" value="$leaguehp" class="form-control"></td>
+    </tr>
+    <tr>
+        <th>%league_match_link%:</th>
+        <td><input name="linkpage" type="text" value="$linkpage" class="form-control"></td>
         <td colspan="2"></td>
-      </tr>
-      <tr>
-        <td colspan="4"><hr /></td>
-      </tr>
-      <tr>
-        <td>%opponent%:</td>
-        <td><input name="opponent" type="text" value="$opponent" size="35" /></td>
-        <td>%clantag%:</td>
-        <td><input name="opptag" type="text" value="$opptag" size="8" /></td>
-      </tr>
-      <tr>
-        <td>%homepage%</td>
-        <td><input name="opphp" type="text" value="$opphp" size="35" /></td>
-        <td>%country%:</td>
-        <td><select name="oppcountry">$countries</select></td>
-      </tr>
-      <tr>
-        <td colspan="4"><hr /></td>
-      </tr>
-      <tr>
-        <td>%server%:</td>
-        <td><input name="server" type="text" value="$server" size="35" /></td>
-        <td>%hltv_server%:</td>
-        <td><input name="hltv" type="text" size="35" /></td>
-      </tr>
-      <tr>
-        <td colspan="4"><hr /></td>
-      </tr>
-      <tr>
-        <td valign="top">%home_team%:</td>
-        <td valign="top"><select name="hometeam[]" size="8" multiple="multiple">$hometeam</select></td>
-        <td valign="top">%opponent_team%:</td>
-        <td valign="top"><input name="oppteam" type="text" size="35" /></td>
-      </tr>
-      <tr>
-        <td colspan="4"><hr /></td>
-      </tr>
-      <tr>
+    </tr>
+    <tr>
+        <th>%opponent%:</th>
+        <td><input name="opponent" type="text" value="$opponent" class="form-control"></td>
+        <th>%clantag%:</th>
+        <td><input name="opptag" type="text" value="$opptag" class="form-control"></td>
+    </tr>
+    <tr>
+        <th>%homepage%</th>
+        <td><input name="opphp" type="text" value="$opphp" class="form-control"></td>
+        <th>%country%:</th>
+        <td><select name="oppcountry" class="form-control">$countries</select></td>
+    </tr>
+    <tr>
+        <th>%server%:</th>
+        <td><input name="server" type="text" value="$server" class="form-control"></td>
+        <th>%hltv_server%:</th>
+        <td><input name="hltv" type="text" class="form-control"></td>
+    </tr>
+    <tr>
+        <th valign="top">%home_team%:</th>
+        <td valign="top"><select name="hometeam[]" multiple="multiple" class="form-control">$hometeam</select></td>
+        <th valign="top">%opponent_team%:</th>
+        <td valign="top"><input name="oppteam" type="text" class="form-control"></td>
+    </tr>
+    <tr>
         <td colspan="4">
-        <table width="100%" id="maplist">
-          <tr>
-            <td width="15%">%map% %id%:</td>
-            <td width="30%">%map%:</td>
-            <td width="20%">%score_home%:</td>
-            <td width="20%">%score_opponent%:</td>
-            <td><a href="javascript:;" onclick="addRow();" title="add map"><img src="images/icons/expand.gif" border="0" alt="" /></a>
-            <a href="javascript:;" onclick="removeRow();" title="remove map"><img src="images/icons/collapse.gif" border="0" alt="" /></a></td>
-          </tr>
-        </table>
+            <table width="100%" id="maplist">
+                <tr>
+                    <th width="15%">%map% %id%:</th>
+                    <th width="30%">%map%:</th>
+                    <th width="20%">%score_home%:</th>
+                    <th width="20%">%score_opponent%:</th>
+                    <th><a href="javascript:;" onclick="addRow();" title="add map"><img src="images/icons/expand.gif"></a>
+                    <a href="javascript:;" onclick="removeRow();" title="remove map"><img src="images/icons/collapse.gif"></a></th>
+                </tr>
+            </table>
         </td>
-      </tr>
-      <tr>
-        <td colspan="4"><hr /></td>
-      </tr>
-      <tr>
-        <td valign="top">Report:</td>
-        <td colspan="3" valign="top"><textarea name="message" id="message" cols="110" rows="11"></textarea></td>
-      </tr>
-      <tr>
-        <td colspan="4"><hr /></td>
-      </tr>
-      <tr>
-        <td colspan="4" align="right"><input name="news" type="checkbox" class="input" value="true" /> %publish_clanwar_news%?
-        <select name="comments">
-          <option value="0">%disable_comments%</option>
-          <option value="1">%user_comments%</option>
-          <option value="2" selected="selected">%visitor_comments%</option>
-        </select>
-        <input name="post" type="submit" value="%save_clanwar%" /></td>
-      </tr>
-    </table>
-    </td>
-  </tr>
+    </tr>
+    <tr>
+        <th valign="top">Report:</th>
+        <td colspan="3" valign="top"><textarea name="message" id="message"rows="10" class="form-control"></textarea></td>
+    </tr>
+    <tr>
+        <td colspan="4" align="right">
+            <input name="news" type="checkbox" class="input" value="true" class="form-control"> %publish_clanwar_news%?
+            <select name="comments" class="form-control">
+            <option value="0">%disable_comments%</option>
+            <option value="1">%user_comments%</option>
+            <option value="2" selected="selected">%visitor_comments%</option>
+            </select>
+            <input name="post" type="submit" value="%save_clanwar%" class="btn btn-danger">
+        </td>
+    </tr>
 </table>
 </form>
 </body>

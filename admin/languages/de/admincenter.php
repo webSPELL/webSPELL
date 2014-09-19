@@ -31,7 +31,6 @@ $language_array = Array(
 
   'about_us'=>'Über uns',
   'access_denied'=>'Zugriff verweigert',
-  'addons'=>'Erweiterungen',
   'bannerrotation'=>'Banner Rotation',
   'boards'=>'Foren',
   'clanmembers'=>'Clanmitglieder',
@@ -76,13 +75,6 @@ $language_array = Array(
   'update_webspell'=>'webSPELL aktualisieren',
   'user_administration'=>'Benutzer Administration',
   'user_ranks'=>'Benutzer Ränge',
-  'visitor_statistics'=>'Besucher Statistiken',
-  'spam'=>'Spam',
-  'spam_forum'=>'Posts / Topics',
-  'spam_user'=>'Nutzer löschen',
-  'multiaccounts'=>'Multi-Accounts',
-  'api_log'=>'API Log',
-  'blocked_content'=>'Geblockte Inhalte',
-  'modrewrite'=>'Mod-Rewrite'
+  'visitor_statistics'=>'Besucher Statistiken'
 );
 ?>

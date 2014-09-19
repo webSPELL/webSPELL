@@ -37,9 +37,9 @@ if(isclanmember($userID)) $accesslevel = 2;
 
 $ergebnis=safe_query("SELECT * FROM ".PREFIX."files WHERE accesslevel<=".$accesslevel." ORDER BY ".$list." DESC LIMIT 0,5");
 $n=1;
-if(mysqli_num_rows($ergebnis)){
-	echo'<table width="100%" cellspacing="0" cellpadding="2">';
-  while($ds=mysqli_fetch_array($ergebnis)) {
+if(mysql_num_rows($ergebnis)){
+	echo'<ul class="list-group">';
+  while($ds=mysql_fetch_array($ergebnis)) {
 		$fileID = $ds['fileID'];
 		$count = $ds['downloads'];
 		$filename = $ds['filename'];
@@ -59,6 +59,6 @@ if(mysqli_num_rows($ergebnis)){
 	
 		$n++;
 	}
-	echo'</table>';
+	echo'</ul>';
 }
 ?>

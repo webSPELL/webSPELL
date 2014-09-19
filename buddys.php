@@ -40,7 +40,7 @@ if($action=="add") {
 			redirect('index.php?site=buddys', $_language->module['add_yourself'], 3);
 			die();
 		}
-		if(mysqli_num_rows(safe_query("SELECT userID FROM ".PREFIX."user WHERE userID='".$_GET['id']."'"))) {
+		if(mysql_num_rows(safe_query("SELECT userID FROM ".PREFIX."user WHERE userID='".$_GET['id']."'"))) {
 			safe_query("INSERT INTO ".PREFIX."buddys (userID, buddy, banned) values ('$userID', '".$_GET['id']."', '0') ");
 			header("Location: index.php?site=buddys");
 		}
@@ -59,7 +59,7 @@ elseif($action=="ignore") {
 			redirect('index.php?site=buddys', $_language->module['add_yourself'], 3);
 			die();
 		}	
-		if(mysqli_num_rows(safe_query("SELECT userID FROM ".PREFIX."user WHERE userID='".$_GET['id']."'"))) {
+		if(mysql_num_rows(safe_query("SELECT userID FROM ".PREFIX."user WHERE userID='".$_GET['id']."'"))) {
 			safe_query("UPDATE ".PREFIX."buddys SET banned='1' WHERE userID='$userID' AND buddy='".$_GET['id']."'");
 			header("Location: index.php?site=buddys");
 		}
@@ -100,10 +100,10 @@ elseif($userID) {
 	eval ("\$buddys_head = \"".gettemplate("buddys_head")."\";");
 	echo $buddys_head;
 	$ergebnis=safe_query("SELECT * FROM ".PREFIX."buddys WHERE userID='$userID' AND banned='0'");
-	$anz=mysqli_num_rows($ergebnis);
+	$anz=mysql_num_rows($ergebnis);
 	if($anz) {
 		$n=1;
-		while($ds=mysqli_fetch_array($ergebnis)) {
+		while($ds=mysql_fetch_array($ergebnis)) {
 			if($n%2) {
 				$bg1=BG_1;
 				$bg2=BG_2;
@@ -115,17 +115,17 @@ elseif($userID) {
 			$flag = '[flag]'.getcountry($ds['buddy']).'[/flag]';
 			$country=flags($flag);
 			$nickname=getnickname($ds['buddy']);
-			if(isclanmember($ds['buddy'])) $member='<img src="images/icons/member.gif" width="6" height="11" alt="Clanmember" />';
+			if(isclanmember($ds['buddy'])) $member='<img src="images/icons/member.gif" alt="Clanmember">';
 			else $member='';
-			if(isonline($ds['buddy'])=="offline") $statuspic='<img src="images/icons/offline.gif" width="7" height="7" alt="offline" />';
-			else $statuspic='<img src="images/icons/online.gif" width="7" height="7" alt="online" />';
+			if(isonline($ds['buddy'])=="offline") $statuspic='<img src="images/icons/offline.gif" alt="offline">';
+			else $statuspic='<img src="images/icons/online.gif" alt="online">';
 
 			eval ("\$buddys_content = \"".gettemplate("buddys_content")."\";");
 			echo $buddys_content;
 			$n++;
 		}
 	}
-	else echo'<tr><td colspan="4" bgcolor="'.BG_1.'">'.$_language->module['buddy_nousers'].'</td></tr>';
+	else echo $_language->module['buddy_nousers'];
 
 	eval ("\$buddys_foot = \"".gettemplate("buddys_foot")."\";");
 	echo $buddys_foot;
@@ -133,10 +133,10 @@ elseif($userID) {
 	eval ("\$ignore_head = \"".gettemplate("ignore_head")."\";");
 	echo $ignore_head;
 	$ergebnis=safe_query("SELECT * FROM ".PREFIX."buddys WHERE userID='$userID' AND banned='1'");
-	$anz=mysqli_num_rows($ergebnis);
+	$anz=mysql_num_rows($ergebnis);
 	if($anz) {
 		$n=1;
-		while($ds=mysqli_fetch_array($ergebnis)) {
+		while($ds=mysql_fetch_array($ergebnis)) {
 			if($n%2) {
 				$bg1=BG_1;
 				$bg2=BG_2;
@@ -148,16 +148,16 @@ elseif($userID) {
 			$flag = '[flag]'.getcountry($ds['buddy']).'[/flag]';
 			$country=flags($flag);
 			$nickname=getnickname($ds['buddy']);
-			if(isclanmember($ds['buddy'])) $member=' <img src="images/icons/member.gif" width="6" height="11" alt="Clanmember" />';
+			if(isclanmember($ds['buddy'])) $member=' <img src="images/icons/member.gif" alt="Clanmember">';
 			else $member='';
-			if(isonline($ds['buddy'])=="offline") $statuspic='<img src="images/icons/offline.gif" width="7" height="7" alt="offline" />';
-			else $statuspic='<img src="images/icons/online.gif" width="7" height="7" alt="online" />';
+			if(isonline($ds['buddy'])=="offline") $statuspic='<img src="images/icons/offline.gif" alt="offline">';
+			else $statuspic='<img src="images/icons/online.gif" alt="online">';
 			eval ("\$ignore_content = \"".gettemplate("ignore_content")."\";");
 			echo $ignore_content;
 			$n++;
 		}
 	}
-	else echo '<tr><td colspan="4" bgcolor="'.BG_1.'">'.$_language->module['ignore_nousers'].'</td></tr>';
+	else echo $_language->module['ignore_nousers'];
 
 	eval ("\$ignore_foot = \"".gettemplate("ignore_foot")."\";");
 	echo $ignore_foot;

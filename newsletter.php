@@ -37,7 +37,7 @@ if($action=="save") {
 	if(!validate_email($email)) redirect('index.php?site=newsletter', $_language->module['email_not_valid'],3);
 	else {
 		$ergebnis = safe_query("SELECT * FROM ".PREFIX."newsletter WHERE email='".$email."'");
-		if(!mysqli_num_rows($ergebnis)) {
+		if(!mysql_num_rows($ergebnis)) {
       		$pass = RandPass(7);
 
 			safe_query("INSERT INTO ".PREFIX."newsletter ( email, pass) values ('".$email."', '".$pass."')");
@@ -56,9 +56,9 @@ if($action=="save") {
 }
 elseif($action=="delete") {
 	$ergebnis = safe_query("SELECT pass FROM ".PREFIX."newsletter WHERE email='".$_POST['email']."'");
-	$any=mysqli_num_rows($ergebnis);
+	$any=mysql_num_rows($ergebnis);
 	if($any){
-		$dn=mysqli_fetch_array($ergebnis);
+		$dn=mysql_fetch_array($ergebnis);
 	
 		if($_POST['password'] == $dn['pass']) {
 			safe_query("DELETE FROM ".PREFIX."newsletter WHERE email='".$_POST['email']."'");
@@ -74,7 +74,7 @@ elseif($action=="delete") {
 }
 elseif($action=="forgot") {
 	$ergebnis = safe_query("SELECT pass FROM ".PREFIX."newsletter WHERE email='".$_POST['email']."'");
-	$dn=mysqli_fetch_array($ergebnis);
+	$dn=mysql_fetch_array($ergebnis);
 
 	if($dn['pass'] != "") {
 

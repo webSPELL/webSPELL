@@ -69,9 +69,7 @@ if($action=="save") {
 								 saved='1',
 								 comments='".$comments."' WHERE articlesID='".$articlesID."'");
 
-	Tags::setTags('articles', $articlesID, $_POST['tags']);
-
-	$anzpages = mysqli_num_rows(safe_query("SELECT * FROM ".PREFIX."articles_contents WHERE articlesID='".$articlesID."'"));
+	$anzpages = mysql_num_rows(safe_query("SELECT * FROM ".PREFIX."articles_contents WHERE articlesID='".$articlesID."'"));
 	if($anzpages > count($message)) {
 		safe_query("DELETE FROM `".PREFIX."articles_contents` WHERE `articlesID` = '".$articlesID."' and `page` > ".count($message));
 	}
@@ -103,7 +101,7 @@ elseif(isset($_GET['delete'])) {
 
 	if(!isnewsadmin($userID)) die($_language->module['no_access']);
 
-	$ds=mysqli_fetch_array(safe_query("SELECT screens FROM ".PREFIX."articles WHERE articlesID='".$_GET['articlesID']."'"));
+	$ds=mysql_fetch_array(safe_query("SELECT screens FROM ".PREFIX."articles WHERE articlesID='".$_GET['articlesID']."'"));
 	if($ds['screens']) {
 		$screens=explode("|", $ds['screens']);
 		if(is_array($screens)) {
@@ -113,8 +111,6 @@ elseif(isset($_GET['delete'])) {
 			}
 		}
 	}
-
-	Tags::removeTags('articles', $_GET['articlesID']);
 
 	safe_query("DELETE FROM ".PREFIX."articles WHERE articlesID='".$_GET['articlesID']."'");
 	safe_query("DELETE FROM ".PREFIX."articles_contents WHERE articlesID='".$_GET['articlesID']."'");
@@ -133,20 +129,18 @@ function top5() {
 	global $_language;
 
 	$_language->read_module('articles');
-
-	echo'<table width="100%" border="0" cellspacing="0" cellpadding="2">
-    <tr>
-      <td width="49%" valign="top">';
       
 	// RATING
 	$ergebnis=safe_query("SELECT * FROM ".PREFIX."articles WHERE saved='1' ORDER BY rating DESC LIMIT 0,5");
 	$top=$_language->module['top5_rating'];
 	
+  echo '<div class="row">';
+    
   eval ("\$top5_head = \"".gettemplate("top5_head")."\";");
   echo $top5_head;
 	
   $n=1;
-	while($ds=mysqli_fetch_array($ergebnis)) {
+	while($ds=mysql_fetch_array($ergebnis)) {
 		if($n%2) {
 			$bg1=BG_1;
 			$bg2=BG_2;
@@ -163,23 +157,18 @@ function top5() {
 		for($i=0; $i<$ds['rating']; $i++) {
 			$ratings[$i]=1;
 		}
-		$ratingpic='<img src="images/icons/rating_'.$ratings[0].'_start.gif" width="1" height="5" alt="" />';
+		$ratingpic='<img src="images/icons/rating_'.$ratings[0].'_start.gif" width="1" height="5" alt="">';
 		foreach($ratings as $pic) {
-			$ratingpic.='<img src="images/icons/rating_'.$pic.'.gif" width="4" height="5" alt="" />';
+			$ratingpic.='<img src="images/icons/rating_'.$pic.'.gif" width="4" height="5" alt="">';
 		}
 		
-    echo'<tr>
-        <td bgcolor="'.$bg1.'" align="center"><b>'.$n.'.</b></td>
-        <td bgcolor="'.$bg1.'" align="center" style="white-space:nowrap;">'.$ratingpic.'</td>
-        <td bgcolor="'.$bg1.'">'.$title.'</td>
-      </tr>';
+    echo'<li class="list-group-item"><span class="badge">'.$ratingpic.'</span>'.$n.' '.$title.'</li>';
 
 		unset($ratingpic);
 		$n++;
 	}
 	
-  echo'</table>';
-	echo'</td><td width="2%">&nbsp;</td><td width="49%" valign="top">';
+  echo'</ul></div>';
   
 	// POINTS
 	$ergebnis=safe_query("SELECT * FROM ".PREFIX."articles WHERE saved='1' ORDER BY points DESC LIMIT 0,5");
@@ -189,7 +178,7 @@ function top5() {
 	echo $top5_head;
   
 	$n=1;
-	while($ds=mysqli_fetch_array($ergebnis)) {
+	while($ds=mysql_fetch_array($ergebnis)) {
     if($n%2) {
 			$bg1=BG_1;
 			$bg2=BG_2;
@@ -201,15 +190,11 @@ function top5() {
     
 		$title='<a href="index.php?site=articles&amp;action=show&amp;articlesID='.$ds['articlesID'].'">'.clearfromtags($ds['title']).'</a>';
 		$viewed='('.$ds['viewed'].')';
-		echo'<tr>
-        <td bgcolor="'.$bg1.'" align="center"><b>'.$n.'.</b></td>
-        <td bgcolor="'.$bg1.'" align="center">'.$ds['points'].'</td>
-        <td bgcolor="'.$bg1.'">'.$title.'</td>
-      </tr>';
+		echo'<li class="list-group-item"><span class="badge">'.$ds['points'].'</span>'.$n.' '.$title.'</li>';
       
 		$n++;
 	}
-	echo'</table></td></tr></table><br />';
+	echo'</ul></div></div>';
 }
 
 if($action=="new") {
@@ -227,14 +212,12 @@ if($action=="new") {
 
 	if(isnewsadmin($userID)) {
 		safe_query("INSERT INTO ".PREFIX."articles ( date, poster, saved ) VALUES( '".time()."', '$userID', '0' ) ");
-		$articlesID=mysqli_insert_id($_database);
+		$articlesID=mysql_insert_id();
 
 		$selects='';
 		for($i=1;$i<100;$i++) {
 			$selects .= '<option value="'.$i.'">'.$i.'</option>';
 		}
-
-		$tags = '';
 
 		$pages = 1;
 
@@ -264,13 +247,13 @@ elseif($action=="edit") {
 	$bgcat=BGCAT;
 
 	if(isnewsadmin($userID)) {
-		$ds=mysqli_fetch_array(safe_query("SELECT * FROM ".PREFIX."articles WHERE articlesID = '".$articlesID."'"));
+		$ds=mysql_fetch_array(safe_query("SELECT * FROM ".PREFIX."articles WHERE articlesID = '".$articlesID."'"));
 
 		$title=getinput($ds['title']);
 
 		$message = array();
 		$query = safe_query("SELECT content FROM ".PREFIX."articles_contents WHERE articlesID = '".$articlesID."' ORDER BY page ASC");
-		while($qs = mysqli_fetch_array($query)) {
+		while($qs = mysql_fetch_array($query)) {
 			$message[] = $qs['content'];
 		}
 
@@ -298,19 +281,17 @@ elseif($action=="edit") {
 		$url3=getinput($ds['url3']);
 		$url4=getinput($ds['url4']);
 		
-    	if($ds['window1']) $window1='<input class="input" name="window1" type="radio" value="1" checked="checked" /> '.$_language->module['new_window'].' <input class="input" type="radio" name="window1" value="0" /> '.$_language->module['self'].'';
-		else $window1='<input class="input" name="window1" type="radio" value="1" /> '.$_language->module['new_window'].' <input class="input" type="radio" name="window1" value="0" checked="checked" /> '.$_language->module['self'].'';
+    if($ds['window1']) $window1='<input class="input" name="window1" type="radio" value="1" checked="checked"> '.$_language->module['new_window'].' <input class="input" type="radio" name="window1" value="0"> '.$_language->module['self'].'';
+		else $window1='<input class="input" name="window1" type="radio" value="1"> '.$_language->module['new_window'].' <input class="input" type="radio" name="window1" value="0" checked="checked"> '.$_language->module['self'].'';
 
-		if($ds['window2']) $window2='<input class="input" name="window2" type="radio" value="1" checked="checked" /> '.$_language->module['new_window'].' <input class="input" type="radio" name="window2" value="0" /> '.$_language->module['self'].'';
-		else $window2='<input class="input" name="window2" type="radio" value="1" /> '.$_language->module['new_window'].' <input class="input" type="radio" name="window2" value="0" checked="checked" /> '.$_language->module['self'].'';
+		if($ds['window2']) $window2='<input class="input" name="window2" type="radio" value="1" checked="checked"> '.$_language->module['new_window'].' <input class="input" type="radio" name="window2" value="0"> '.$_language->module['self'].'';
+		else $window2='<input class="input" name="window2" type="radio" value="1"> '.$_language->module['new_window'].' <input class="input" type="radio" name="window2" value="0" checked="checked"> '.$_language->module['self'].'';
 
-		if($ds['window3']) $window3='<input class="input" name="window3" type="radio" value="1" checked="checked" /> '.$_language->module['new_window'].' <input class="input" type="radio" name="window3" value="0" /> '.$_language->module['self'].'';
-		else $window3='<input class="input" name="window3" type="radio" value="1" /> '.$_language->module['new_window'].' <input class="input" type="radio" name="window3" value="0" checked="checked" /> '.$_language->module['self'].'';
+		if($ds['window3']) $window3='<input class="input" name="window3" type="radio" value="1" checked="checked"> '.$_language->module['new_window'].' <input class="input" type="radio" name="window3" value="0"> '.$_language->module['self'].'';
+		else $window3='<input class="input" name="window3" type="radio" value="1"> '.$_language->module['new_window'].' <input class="input" type="radio" name="window3" value="0" checked="checked"> '.$_language->module['self'].'';
 
-		if($ds['window4']) $window4='<input class="input" name="window4" type="radio" value="1" checked="checked" /> '.$_language->module['new_window'].' <input class="input" type="radio" name="window4" value="0" /> '.$_language->module['self'].'';
-		else $window4='<input class="input" name="window4" type="radio" value="1" /> '.$_language->module['new_window'].' <input class="input" type="radio" name="window4" value="0" checked="checked" /> '.$_language->module['self'].'';
-
-		$tags = Tags::getTags('articles', $articlesID);
+		if($ds['window4']) $window4='<input class="input" name="window4" type="radio" value="1" checked="checked"> '.$_language->module['new_window'].' <input class="input" type="radio" name="window4" value="0"> '.$_language->module['self'].'';
+		else $window4='<input class="input" name="window4" type="radio" value="1"> '.$_language->module['new_window'].' <input class="input" type="radio" name="window4" value="0" checked="checked"> '.$_language->module['self'].'';
 
 		$comments='<option value="0">'.$_language->module['no_comments'].'</option><option value="1">'.$_language->module['user_comments'].'</option><option value="2">'.$_language->module['visitor_comments'].'</option>';
 		$comments=str_replace('value="'.$ds['comments'].'"', 'value="'.$ds['comments'].'" selected="selected"', $comments);
@@ -328,28 +309,29 @@ elseif($action=="show") {
 
 	$_language->read_module('articles');
 
-	eval ("\$title_articles = \"".gettemplate("title_articles")."\";");
-	echo $title_articles;
+	//eval ("\$title_articles = \"".gettemplate("title_articles")."\";");
+	//echo $title_articles;
 
 	$articlesID = (int)$_GET['articlesID'];
 	if(isset($_GET['page'])) $page = (int)$_GET['page'];
 	else $page = 1;
 
-	if(isnewsadmin($userID)) echo'<input type="button" onclick="MM_openBrWindow(\'articles.php?action=new\',\'Articles\',\'toolbar=no,status=no,scrollbars=yes,width=800,height=600\');" value="'.$_language->module['new_article'].'" /> ';
-	echo'<input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=articles\');return document.MM_returnValue;" value="'.$_language->module['all_articles'].'" /><br /><br />';
+	if(isnewsadmin($userID)) echo'<input type="button" onclick="MM_openBrWindow(\'articles.php?action=new\',\'Articles\',\'toolbar=no,status=no,scrollbars=yes,width=800,height=600\');" value="'.$_language->module['new_article'].'" class="btn btn-danger"> ';
+	echo'<input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=articles\');return document.MM_returnValue;" value="'.$_language->module['all_articles'].'" class="btn btn-primary"><br><br>';
 
 	if($page==1) safe_query("UPDATE ".PREFIX."articles SET viewed=viewed+1 WHERE articlesID='".$articlesID."'");
 	$result=safe_query("SELECT * FROM ".PREFIX."articles WHERE articlesID='".$articlesID."'");
 
-	if(mysqli_num_rows($result)) {
+	if(mysql_num_rows($result)) {
 
-		$ds=mysqli_fetch_array($result);
-		$date_time = getformatdatetime($ds['date']);
+		$ds=mysql_fetch_array($result);
+		$date = date("d.m.Y", $ds['date']);
+		$time = date("H:i", $ds['date']);
 		$title = clearfromtags($ds['title']);
 
 		$content = array();
 		$query = safe_query("SELECT * FROM ".PREFIX."articles_contents WHERE articlesID = '".$articlesID."' ORDER BY page ASC");
-		while($qs = mysqli_fetch_array($query)) {
+		while($qs = mysql_fetch_array($query)) {
 			$content[] = $qs['content'];
 		}
 
@@ -357,11 +339,11 @@ elseif($action=="show") {
 		$content = htmloutput($content[$page-1]);
 		$content = toggle($content, $ds['articlesID']);
 		if($pages>1) $page_link = makepagelink("index.php?site=articles&amp;action=show&amp;articlesID=$articlesID", $page, $pages);
-    	else $page_link='';
+    else $page_link='';
 
 		$poster='<a href="index.php?site=profile&amp;id='.$ds['poster'].'"><b>'.getnickname($ds['poster']).'</b></a>';
 		$related="";
-    	if($ds['link1'] && $ds['url1']!="http://" && $ds['window1']) $related.='&#8226; <a href="'.$ds['url1'].'" target="_blank">'.$ds['link1'].'</a> ';
+    if($ds['link1'] && $ds['url1']!="http://" && $ds['window1']) $related.='&#8226; <a href="'.$ds['url1'].'" target="_blank">'.$ds['link1'].'</a> ';
 		if($ds['link1'] && $ds['url1']!="http://" && !$ds['window1']) $related.='&#8226; <a href="'.$ds['url1'].'">'.$ds['link1'].'</a> ';
 
 		if($ds['link2'] && $ds['url2']!="http://" && $ds['window2']) $related.='&#8226; <a href="'.$ds['url2'].'" target="_blank">'.$ds['link2'].'</a> ';
@@ -380,20 +362,20 @@ elseif($action=="show") {
 		for($i=0; $i<$ds['rating']; $i++) {
 			$ratings[$i]=1;
 		}
-		$ratingpic='<img src="images/icons/rating_'.$ratings[0].'_start.gif" width="1" height="5" alt="" />';
+		$ratingpic='<img src="images/icons/rating_'.$ratings[0].'_start.gif" width="1" height="5">';
 		foreach($ratings as $pic) {
-			$ratingpic.='<img src="images/icons/rating_'.$pic.'.gif" width="4" height="5" alt="" />';
+			$ratingpic.='<img src="images/icons/rating_'.$pic.'.gif" width="4" height="5">';
 		}
 
-		if(isnewsadmin($userID)) $adminaction='<br /><br /><input type="button" onclick="MM_openBrWindow(\'articles.php?action=edit&amp;articlesID='.$ds['articlesID'].'\',\'News\',\'toolbar=no,status=no,scrollbars=yes,width=800,height=600\');" value="'.$_language->module['edit'].'" />
-    <input type="button" onclick="MM_confirm(\''.$_language->module['really_delete'].'\', \'articles.php?delete=true&amp;articlesID='.$ds['articlesID'].'\');" value="'.$_language->module['delete'].'" />';
+		if(isnewsadmin($userID)) $adminaction='<br><br><input type="button" onclick="MM_openBrWindow(\'articles.php?action=edit&amp;articlesID='.$ds['articlesID'].'\',\'News\',\'toolbar=no,status=no,scrollbars=yes,width=800,height=600\');" value="'.$_language->module['edit'].'" class="btn btn-danger">
+    <input type="button" onclick="MM_confirm(\''.$_language->module['really_delete'].'\', \'articles.php?delete=true&amp;articlesID='.$ds['articlesID'].'\');" value="'.$_language->module['delete'].'" class="btn btn-danger">';
 		else $adminaction='';
 
 		if($loggedin) {
 			$getarticles=safe_query("SELECT articles FROM ".PREFIX."user WHERE userID='$userID'");
 			$found=false;
-			if(mysqli_num_rows($getarticles)) {
-				$ga=mysqli_fetch_array($getarticles);
+			if(mysql_num_rows($getarticles)) {
+				$ga=mysql_fetch_array($getarticles);
 				if($ga['articles']!="") {
 					$string=$ga['articles'];
 					$array=explode(":", $string);
@@ -405,34 +387,31 @@ elseif($action=="show") {
 			}
 			if($found) $rateform=$_language->module['already_rated'];
 			else $rateform='<form method="post" action="rating.php">
-      <table cellspacing="0" cellpadding="2" align="right">
-        <tr>
-          <td>'.$_language->module['rate_with'].'
-          <select name="rating">
-            <option>0 - '.$_language->module['poor'].'</option>
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5</option>
-            <option>6</option>
-            <option>7</option>
-            <option>8</option>
-            <option>9</option>
-            <option>10 - '.$_language->module['perfect'].'</option>
-          </select>
-          <input type="hidden" name="userID" value="'.$userID.'" />
-          <input type="hidden" name="type" value="ar" />
-          <input type="hidden" name="id" value="'.$ds['articlesID'].'" />
-          <input type="submit" name="Submit" value="'.$_language->module['rate'].'" /></td>
-        </tr>
-      </table>
-      </form>';
+            <div class="input-group">
+                <select name="rating" class="form-control">
+                  <option>0 - '.$_language->module['poor'].'</option>
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                  <option>6</option>
+                  <option>7</option>
+                  <option>8</option>
+                  <option>9</option>
+                  <option>10 - '.$_language->module['perfect'].'</option>
+                </select>
+                
+                <span class="input-group-btn">
+                  <input type="submit" name="Submit" value="'.$_language->module['rate'].'" class="btn btn-primary">
+                </span>
+            </div>
+            <input type="hidden" name="userID" value="'.$userID.'">
+            <input type="hidden" name="type" value="ar">
+            <input type="hidden" name="id" value="'.$ds['articlesID'].'"></form>';
 		}
 		else $rateform=$_language->module['login_for_rate'];
 
-		$tags = Tags::getTagsLinked('articles',$articlesID);
-		
 		$bg1=BG_1;
 		eval ("\$articles = \"".gettemplate("articles")."\";");
 		echo $articles;
@@ -471,10 +450,10 @@ else {
 	eval ("\$title_articles = \"".gettemplate("title_articles")."\";");
 	echo $title_articles;
 	
-  if(isnewsadmin($userID)) echo'<input type="button" onclick="MM_openBrWindow(\'articles.php?action=new\',\'Articles\',\'toolbar=no,status=no,scrollbars=yes,width=800,height=600\');" value="'.$_language->module['new_article'].'" /><br /><br />';
+  if(isnewsadmin($userID)) echo'<p><input type="button" onclick="MM_openBrWindow(\'articles.php?action=new\',\'Articles\',\'toolbar=no,status=no,scrollbars=yes,width=800,height=600\');" value="'.$_language->module['new_article'].'" class="btn btn-danger"></p>';
 
 	$alle=safe_query("SELECT articlesID FROM ".PREFIX."articles WHERE saved='1'");
-	$gesamt = mysqli_num_rows($alle);
+	$gesamt = mysql_num_rows($alle);
 	$pages=1;
 
 	$max=$maxarticles;
@@ -500,9 +479,9 @@ else {
 	if($gesamt) {
 		top5();
 		if($type=="ASC")
-		echo'<a href="index.php?site=articles&amp;page='.$page.'&amp;sort='.$sort.'&amp;type=DESC">'.$_language->module['sort'].'</a> <img src="images/icons/asc.gif" width="9" height="7" border="0" alt="" />&nbsp;&nbsp;&nbsp;';
+		echo'<a href="index.php?site=articles&amp;page='.$page.'&amp;sort='.$sort.'&amp;type=DESC">'.$_language->module['sort'].'</a> <img src="images/icons/asc.gif" width="9" height="7" border="0" alt="">&nbsp;&nbsp;&nbsp;';
 		else
-		echo'<a href="index.php?site=articles&amp;page='.$page.'&amp;sort='.$sort.'&amp;type=ASC">'.$_language->module['sort'].'</a> <img src="images/icons/desc.gif" width="9" height="7" border="0" alt="" />&nbsp;&nbsp;&nbsp;';
+		echo'<a href="index.php?site=articles&amp;page='.$page.'&amp;sort='.$sort.'&amp;type=ASC">'.$_language->module['sort'].'</a> <img src="images/icons/desc.gif" width="9" height="7" border="0" alt="">&nbsp;&nbsp;&nbsp;';
 
 
 		if($pages>1) echo $page_link;
@@ -511,7 +490,7 @@ else {
 		echo $articles_head;
     
 		$n=1;
-		while($ds=mysqli_fetch_array($ergebnis)) {
+		while($ds=mysql_fetch_array($ergebnis)) {
 			if($n%2) {
 				$bg1=BG_1;
 				$bg2=BG_2;
@@ -520,7 +499,7 @@ else {
 				$bg1=BG_3;
 				$bg2=BG_4;
 			}
-			$date=getformatdate($ds['date']);
+			$date=date("d.m.Y", $ds['date']);
 
 			$title='<a href="index.php?site=articles&amp;action=show&amp;articlesID='.$ds['articlesID'].'">'.clearfromtags($ds['title']).'</a>';
 			$poster='<a href="index.php?site=profile&amp;id='.$ds['poster'].'"><b>'.getnickname($ds['poster']).'</b></a>';
@@ -530,9 +509,9 @@ else {
 			for($i=0; $i<$ds['rating']; $i++) {
 				$ratings[$i]=1;
 			}
-			$ratingpic='<img src="images/icons/rating_'.$ratings[0].'_start.gif" width="1" height="5" alt="" />';
+			$ratingpic='<img src="images/icons/rating_'.$ratings[0].'_start.gif" width="1" height="5" alt="">';
 			foreach($ratings as $pic) {
-				$ratingpic.='<img src="images/icons/rating_'.$pic.'.gif" width="4" height="5" alt="" />';
+				$ratingpic.='<img src="images/icons/rating_'.$pic.'.gif" width="4" height="5" alt="">';
 			}
 
 			eval ("\$articles_content = \"".gettemplate("articles_content")."\";");

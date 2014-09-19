@@ -60,8 +60,8 @@ elseif($type == "ga") {
 
 
 $getarticles = safe_query("SELECT ".$table." FROM ".PREFIX."user WHERE userID='".$userID."'");
-if(mysqli_num_rows($getarticles)) {
-	$ga = mysqli_fetch_array($getarticles);
+if(mysql_num_rows($getarticles)) {
+	$ga = mysql_fetch_array($getarticles);
 	$go = false;
 	if($ga[$table] == ""){
 		$array = array();
@@ -76,7 +76,7 @@ if(mysqli_num_rows($getarticles)) {
 	if($go == true){
 		safe_query("UPDATE ".PREFIX.$table." SET votes=votes+1, points=points+".$rating." WHERE ".$key."='".$id."'");
 		$ergebnis = safe_query("SELECT votes, points FROM ".PREFIX.$table." WHERE ".$key."='".$id."'");
-		$ds = mysqli_fetch_array($ergebnis);
+		$ds = mysql_fetch_array($ergebnis);
 		$rate = round($ds['points'] / $ds['votes']);
 		safe_query("UPDATE ".PREFIX.$table." SET rating='".$rate."' WHERE ".$key."='".$id."'");
 		$array[] = $id;

@@ -173,16 +173,16 @@ if($action=="mods") {
 
 	$moderators=safe_query("SELECT * FROM ".PREFIX."user_groups WHERE moderator='1'");
 	$ergebnis=safe_query("SELECT * FROM ".PREFIX."forum_boards WHERE boardID='$boardID'");
-	$ds=mysqli_fetch_array($ergebnis);
+	$ds=mysql_fetch_array($ergebnis);
 	
   echo $_language->module['choose_moderators'].' <b>'.$ds['name'].'</b><br /><br />';
   
 	echo'<form method="post" action="admincenter.php?site=boards">
   <select name="mods[]" multiple="multiple" size="10">';
 
-	while($dm=mysqli_fetch_array($moderators)) {
+	while($dm=mysql_fetch_array($moderators)) {
 		$nick=getnickname($dm['userID']);
-		$ismod=mysqli_num_rows(safe_query("SELECT * FROM ".PREFIX."forum_moderators WHERE boardID='$boardID' AND userID='".$dm['userID']."'"));
+		$ismod=mysql_num_rows(safe_query("SELECT * FROM ".PREFIX."forum_moderators WHERE boardID='$boardID' AND userID='".$dm['userID']."'"));
 		if($ismod) echo'<option value="'.$dm['userID'].'" selected="selected">'.$nick.'</option>';
 		else echo'<option value="'.$dm['userID'].'">'.$nick.'</option>';
 	}
@@ -203,14 +203,14 @@ elseif($action=="add") {
   
   $ergebnis=safe_query("SELECT * FROM ".PREFIX."forum_categories ORDER BY sort");
 	$cats='<select name="kath">';
-	while($ds=mysqli_fetch_array($ergebnis)) {
+	while($ds=mysql_fetch_array($ergebnis)) {
 		$cats.='<option value="'.$ds['catID'].'">'.getinput($ds['name']).'</option>';
 	}
 	$cats.='</select>';
 
 	$sql=safe_query("SELECT * FROM ".PREFIX."forum_groups");
 	$groups='';
-	while($db=mysqli_fetch_array($sql)) {
+	while($db=mysql_fetch_array($sql)) {
 		$groups.='<option value="'.$db['fgrID'].'">'.getinput($db['name']).'</option>';
 	}
 	$CAPCLASS = new Captcha;
@@ -274,11 +274,11 @@ elseif($action=="edit") {
   $boardID = $_GET['boardID'];
 
 	$ergebnis=safe_query("SELECT * FROM ".PREFIX."forum_boards WHERE boardID='$boardID'");
-	$ds=mysqli_fetch_array($ergebnis);
+	$ds=mysql_fetch_array($ergebnis);
 
 	$category=safe_query("SELECT * FROM ".PREFIX."forum_categories ORDER BY sort");
 	$cats='<select name="kath">';
-	while($dc=mysqli_fetch_array($category)) {
+	while($dc=mysql_fetch_array($category)) {
 		if($ds['category']==$dc['catID']) $selected=" selected=\"selected\"";
 		else $selected="";
 		$cats.='<option value="'.$dc['catID'].'"'.$selected.'>'.getinput($dc['name']).'</option>';
@@ -287,7 +287,7 @@ elseif($action=="edit") {
 
 	$groups=array();
 	$sql=safe_query("SELECT * FROM ".PREFIX."forum_groups");
-	while($db=mysqli_fetch_array($sql)) {
+	while($db=mysql_fetch_array($sql)) {
 		$groups[$db['fgrID']] = $db['name'];
 	}
 
@@ -367,7 +367,7 @@ elseif($action=="addcat") {
   $sql = safe_query("SELECT * FROM ".PREFIX."forum_groups");
 	$groups = '<select id="readgrps" name="readgrps[]" multiple="multiple" size="10">
   <option value="user">'.$_language->module['registered_users'].'</option>';
-	while($db = mysqli_fetch_array($sql)) {
+	while($db = mysql_fetch_array($sql)) {
 		$groups .= '<option value="'.$db['fgrID'].'">'.getinput($db['name']).'</option>';
 	}
 	$groups .= '</select>';
@@ -416,14 +416,14 @@ elseif($action=="editcat") {
 	$catID = $_GET['catID'];
 
 	$ergebnis=safe_query("SELECT * FROM ".PREFIX."forum_categories WHERE catID='$catID'");
-	$ds=mysqli_fetch_array($ergebnis);
+	$ds=mysql_fetch_array($ergebnis);
 
 	$usergrps = explode(";", $ds['readgrps']);
 	$sql=safe_query("SELECT * FROM ".PREFIX."forum_groups");
 	$groups='<select id="readgrps" name="readgrps[]" multiple="multiple" size="10">';
 	if(in_array('user', $usergrps)) $groups.='<option value="user" selected="selected">'.$_language->module['registered_users'].'</option>';
 	else $groups.='<option value="user">'.$_language->module['registered_users'].'</option>';
-	while($db=mysqli_fetch_array($sql)) {
+	while($db=mysql_fetch_array($sql)) {
 		if(in_array($db['fgrID'], $usergrps)) $selected=' selected="selected"';
 		else $selected='';
 		$groups.='<option value="'.$db['fgrID'].'" '.$selected.'>'.getinput($db['name']).'</option>';
@@ -484,13 +484,13 @@ else {
     </tr>';
 
 	$ergebnis=safe_query("SELECT * FROM ".PREFIX."forum_categories ORDER BY sort");
-	$tmp=mysqli_fetch_assoc(safe_query("SELECT count(catID) as cnt FROM ".PREFIX."forum_categories"));
-	$anz=$tmp['cnt'];
+	$anz=safe_query("SELECT count(catID) FROM ".PREFIX."forum_categories");
+	$anz=mysql_result($anz, 0);
 
 	$CAPCLASS = new Captcha;
 	$CAPCLASS->create_transaction();
 	$hash = $CAPCLASS->get_hash();
-	while($ds=mysqli_fetch_array($ergebnis)) {
+	while($ds=mysql_fetch_array($ergebnis)) {
 		
 	    echo'<tr bgcolor="#CCCCCC">
 	      <td class="td_head"><b>'.getinput($ds['name']).'</b><br /><small>'.getinput($ds['info']).'</small></td>
@@ -508,14 +508,14 @@ else {
 	    </tr>';		 
 
 		$boards=safe_query("SELECT * FROM ".PREFIX."forum_boards WHERE category='".$ds['catID']."' ORDER BY sort");
-		$tmp=mysqli_fetch_assoc(safe_query("SELECT count(boardID) as cnt FROM ".PREFIX."forum_boards WHERE category='$ds[catID]'"));
-		$anzboards=$tmp['cnt'];
+		$anzboards=safe_query("SELECT count(boardID) FROM ".PREFIX."forum_boards WHERE category='$ds[catID]'");
+		$anzboards=mysql_result($anzboards, 0);
 
 		$i=1;
 		$CAPCLASS = new Captcha;
 	    $CAPCLASS->create_transaction();
 	    $hash = $CAPCLASS->get_hash();
-	    while($db=mysqli_fetch_array($boards)) {
+	    while($db=mysql_fetch_array($boards)) {
 	      if($i%2) { $td='td1'; }
 	      else { $td='td2'; }
 				
@@ -539,12 +539,12 @@ else {
 	}
 
 	$boards=safe_query("SELECT * FROM ".PREFIX."forum_boards WHERE category='0' ORDER BY sort");
-	$tmp=mysqli_fetch_assoc(safe_query("SELECT count(boardID) as cnt FROM ".PREFIX."forum_boards WHERE category='0'"));
-	$anzboards=$tmp['cnt'];
+	$anzboards=safe_query("SELECT count(boardID) FROM ".PREFIX."forum_boards WHERE category='0'");
+	$anzboards=mysql_result($anzboards, 0);
 	$CAPCLASS = new Captcha;
 	$CAPCLASS->create_transaction();
 	$hash = $CAPCLASS->get_hash();
-	while($db=mysqli_fetch_array($boards)) {
+	while($db=mysql_fetch_array($boards)) {
 
 		echo'<tr bgcolor="#dcdcdc">
       <td bgcolor="#FFFFFF"><b>'.getinput($db['name']).'</b></td>

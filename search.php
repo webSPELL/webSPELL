@@ -28,7 +28,14 @@
 if(isset($_GET['action'])) $action = $_GET['action'];
 else $action='';
 
-if($action=="search" AND ($userID OR isset($_REQUEST['captcha']))) {
+if($action == "quicksearch" OR ((isset($_GET['forum']) OR isset($_GET['news']) OR isset($_GET['articles']) OR isset($_GET['faq'])) AND $action=="")) {
+
+	$getstring='';
+	foreach($_GET as $key=>$val) $getstring .= '&'.$key.'='.stripslashes($val);
+	header("Location: index.php?site=search&action=search".$getstring);
+
+}
+elseif($action=="search" AND ($userID OR isset($_GET['captcha']))) {
 
 	$_language->read_module('search');
 
@@ -36,7 +43,7 @@ if($action=="search" AND ($userID OR isset($_REQUEST['captcha']))) {
 	if($userID) $run = 1;
 	else {
 		$CAPCLASS = new Captcha;
-		if($CAPCLASS->check_captcha($_REQUEST['captcha'], $_REQUEST['captcha_hash'])) $run=1;
+		if($CAPCLASS->check_captcha($_GET['captcha'], $_GET['captcha_hash'])) $run=1;
 	}
 	
 	if($run) {
@@ -44,40 +51,48 @@ if($action=="search" AND ($userID OR isset($_REQUEST['captcha']))) {
 		eval ("\$title_search = \"".gettemplate("title_search")."\";");
 		echo $title_search;
 	
-		$text = str_replace(array('%', '*'), array('\%', '%'), $_REQUEST['text']);
-		if(!isset($_REQUEST['r']) or $_REQUEST['r'] < 1 or $_REQUEST['r'] > 100) {
+		$text = str_replace(array('%', '*'), array('\%', '%'), $_GET['text']);
+		if(!isset($_GET['r']) or $_GET['r'] < 1 or $_GET['r'] > 100) {
 			$results = 50;
 		}
 		else {
-			$results = (int)$_REQUEST['r'];
+			$results = (int)$_GET['r'];
 		}
-		isset($_REQUEST['page']) ? $page = (int)$_REQUEST['page'] : $page = 1;
-		isset($_REQUEST['am']) ? $am = (int)$_REQUEST['am'] : $am = 0;
-		isset($_REQUEST['ad']) ? $ad = (int)$_REQUEST['ad'] : $ad = 0;
-		isset($_REQUEST['ay']) ? $ay = (int)$_REQUEST['ay'] : $ay = 0;
-		isset($_REQUEST['bm']) ? $bm = (int)$_REQUEST['bm'] : $bm = 0;
-		isset($_REQUEST['bd']) ? $bd = (int)$_REQUEST['bd'] : $bd = 0;
-		isset($_REQUEST['by']) ? $by = (int)$_REQUEST['by'] : $by = 0;
-		$keywords = preg_split("/ ,/si", strtolower(str_replace(array('\%','%'),'',$text)));
+		isset($_GET['page']) ? $page = (int)$_GET['page'] : $page = 1;
+//		isset($_GET['bm']) ? $bm = (int)$_GET['bm'] : $bm = 0;
+//		isset($_GET['bd']) ? $bd = (int)$_GET['bd'] : $bd = 0;
+//		isset($_GET['by']) ? $by = (int)$_GET['by'] : $by = 0;
+		isset($_GET['afterdate']) ? $afterdate = $_GET['afterdate'] : $afterdate = 0;
+		isset($_GET['beforedate']) ? $beforedate = $_GET['beforedate'] : $beforedate = 0;
 		
 		if(mb_strlen(str_replace('%', '', $text))>=$search_min_len){
 
-			if(!($am and $ad and $ay)) {
+			if(!$afterdate) {
 				$after = 0;
 			}
 			else {
-				if(!$ad) $ad = 1;
-				if(!$am) $am = 1;
-				if(!$ay) $ay = date("Y");
+                $ad = substr($afterdate, 8, 2); 
+                $am = substr($afterdate, 5, 2); 
+                if($am>12 && $ad < 12) { // User might have mixed up day and month
+                    $oldam = $am;
+                    $am = $ad;
+                    $ad = $oldam;
+                }                
+                $ay = substr($afterdate, 0, 4);
 				$after = mktime(0, 0, 0, $am, $ad, $ay);
 			}
-			if(!($bm and $bd and $by)) {
+			if(!$beforedate) {
 				$before = time();
 			}
 			else {
-				if(!$bd) $bd = 1;
-				if(!$bm) $bm = 1;
-				if(!$by) $by = date("Y");
+				$bd = substr($beforedate, 8, 2);
+				$bm = substr($beforedate, 5, 2); 
+                if($bm>12 && $bd < 12) { // User might have mixed up day and month
+                    $oldbm = $bm;
+                    $bm = $bd;
+                    $bd = $oldbm;
+                }
+				$by = substr($beforedate, 0, 4);
 				$before = mktime(0, 0, 0, $bm, $bd, $by);
 			}
 		
@@ -89,24 +104,24 @@ if($action=="search" AND ($userID OR isset($_REQUEST['captcha']))) {
 			$res_date=array();
 			$res_occurr=array();
 		
-			if(isset($_REQUEST['articles'])) {
+			if(isset($_GET['articles'])) {
 				$ergebnis_articles=safe_query("SELECT title, articlesID, date FROM ".PREFIX."articles WHERE date between ".$after." AND ".$before);
 		
-				while($ds=mysqli_fetch_array($ergebnis_articles)) {
+				while($ds=mysql_fetch_array($ergebnis_articles)) {
 					$articlesID = $ds['articlesID'];
 		
 					$ergebnis_articles_contents = safe_query("SELECT content FROM ".PREFIX."articles_contents WHERE articlesID = '".$articlesID."' AND content LIKE '%".$text."%'");
-					if(!mysqli_num_rows($ergebnis_articles_contents) and substr_count(strtolower($ds['title']), strtolower(stripslashes($text))) == 0) {
+					if(!mysql_num_rows($ergebnis_articles_contents) and substr_count(strtolower($ds['title']), strtolower(stripslashes($text))) == 0) {
 						continue;
 					}
-					elseif(!mysqli_num_rows($ergebnis_articles_contents)) {
-						$query_result = mysqli_fetch_array(safe_query("SELECT content FROM ".PREFIX."articles_contents WHERE articlesID = '".$articlesID."' ORDER BY page ASC LIMIT 0, 1"));
+					elseif(!mysql_num_rows($ergebnis_articles_contents)) {
+						$query_result = mysql_fetch_array(safe_query("SELECT content FROM ".PREFIX."articles_contents WHERE articlesID = '".$articlesID."' ORDER BY page ASC LIMIT 0, 1"));
 						$res_message[$i] = clearfromtags($query_result['content']);
 						$content = array($query_result['content']);
 					}
 					else {
 						$content = array();
-						while($qs = mysqli_fetch_array($ergebnis_articles_contents)) {
+						while($qs = mysql_fetch_array($ergebnis_articles_contents)) {
 							$content[] = $qs['content'];
 						}
 						$res_message[$i] = clearfromtags($content[0]);
@@ -114,7 +129,7 @@ if($action=="search" AND ($userID OR isset($_REQUEST['captcha']))) {
 		
 					$res_title[$i]		=	$ds['title'];
 					$res_link[$i]		=	'<a href="index.php?site=articles&amp;action=show&amp;articlesID='.$articlesID.'">'.$_language->module['articles_link'].'</a>';
-					$res_occurr[$i]		=	substri_count_array($content, stripslashes($text)) + substr_count(strtolower($ds['title']), strtolower(stripslashes($text)))+count(array_intersect(Tags::getTags('articles',$articlesID,true), $keywords))*2;
+					$res_occurr[$i]		=	substri_count_array($content, stripslashes($text)) + substr_count(strtolower($ds['title']), strtolower(stripslashes($text)));
 					$res_date[$i]		=	$ds['date'];
 					$res_type[$i]		=	$_language->module['article'];
 		
@@ -122,14 +137,14 @@ if($action=="search" AND ($userID OR isset($_REQUEST['captcha']))) {
 				}
 		
 			}
-			if(isset($_REQUEST['faq'])) {
+			if(isset($_GET['faq'])) {
 				$ergebnis_faq=safe_query("SELECT faqID, faqcatID, date FROM ".PREFIX."faq WHERE date between ".$after." AND ".$before." ORDER BY date");
 		
-				while($ds = mysqli_fetch_array($ergebnis_faq)) {
+				while($ds = mysql_fetch_array($ergebnis_faq)) {
 					$ergebnis_faq_contents = safe_query("SELECT question, answer FROM ".PREFIX."faq WHERE faqID = '".$ds['faqID']."' AND (answer LIKE '%".$text."%' or question LIKE '%".$text."%')");
-					if(mysqli_num_rows($ergebnis_faq_contents)) {
+					if(mysql_num_rows($ergebnis_faq_contents)) {
 						$faq_array = array();
-						while($qs = mysqli_fetch_array($ergebnis_faq_contents)) {
+						while($qs = mysql_fetch_array($ergebnis_faq_contents)) {
 							$faq_array[] = array('question' => $qs['question'], 'answer' => $qs['answer']);
 						}
 						$faqID = $ds['faqID'];
@@ -138,7 +153,7 @@ if($action=="search" AND ($userID OR isset($_REQUEST['captcha']))) {
 						$res_title[$i]		=	$faq_array[0]['question'];
 						$res_message[$i]	=	clearfromtags($faq_array[0]['answer']);
 						$res_link[$i]		=	'<a href="index.php?site=faq&amp;action=faq&amp;faqID='.$faqID.'&amp;faqcatID='.$faqcatID.'">'.$_language->module['faq_link'].'</a>';
-						$res_occurr[$i]		=	substri_count_array($faq_array, stripslashes($text))+count(array_intersect(Tags::getTags('faq',$ds['faqID'],true), $keywords))*2;
+						$res_occurr[$i]		=	substri_count_array($faq_array, stripslashes($text));
 						$res_date[$i]		=	$ds['date'];
 						$res_type[$i]		=	$_language->module['faq'];
 		
@@ -147,7 +162,7 @@ if($action=="search" AND ($userID OR isset($_REQUEST['captcha']))) {
 				}
 		
 			}
-			if(isset($_REQUEST['forum'])) {
+			if(isset($_GET['forum'])) {
 		
 				$ergebnis_forum=safe_query("SELECT
 										b.readgrps,
@@ -178,7 +193,7 @@ if($action=="search" AND ($userID OR isset($_REQUEST['captcha']))) {
 										GROUP BY postID
 										ORDER BY date");
 		
-				while($ds=mysqli_fetch_array($ergebnis_forum)) {
+				while($ds=mysql_fetch_array($ergebnis_forum)) {
 					if($ds['readgrps'] != "") {
 						$usergrps = explode(";", $ds['readgrps']);
 						$usergrp = 0;
@@ -222,7 +237,7 @@ if($action=="search" AND ($userID OR isset($_REQUEST['captcha']))) {
 				}
 		
 			}
-			if(isset($_REQUEST['news'])) {
+			if(isset($_GET['news'])) {
 				$ergebnis_news=safe_query("SELECT 
 												date,
 												poster,
@@ -238,11 +253,11 @@ if($action=="search" AND ($userID OR isset($_REQUEST['captcha']))) {
 													date between ".$after." AND ".$before."
 												)");
 		
-				while($ds = mysqli_fetch_array($ergebnis_news)) {
+				while($ds = mysql_fetch_array($ergebnis_news)) {
 					$ergebnis_news_contents = safe_query("SELECT language, headline, content FROM ".PREFIX."news_contents WHERE newsID = '".$ds['newsID']."' and (content LIKE '%".$text."%' or headline LIKE '%".$text."%')");
-					if(mysqli_num_rows($ergebnis_news_contents)) {
+					if(mysql_num_rows($ergebnis_news_contents)) {
 						$message_array = array();
-						while($qs = mysqli_fetch_array($ergebnis_news_contents)) {
+						while($qs = mysql_fetch_array($ergebnis_news_contents)) {
 							$message_array[] = array('lang' => $qs['language'], 'headline' => $qs['headline'], 'message' => $qs['content']);
 						}
 						$showlang = select_language($message_array);
@@ -252,7 +267,7 @@ if($action=="search" AND ($userID OR isset($_REQUEST['captcha']))) {
 						$res_title[$i]		=	$message_array[$showlang]['headline'];
 						$res_message[$i]	=	clearfromtags($message_array[$showlang]['message']);
 						$res_link[$i]		=	'<a href="index.php?site=news_comments&amp;newsID='.$newsID.'">'.$_language->module['news_link'].'</a>';
-						$res_occurr[$i]		=	substri_count_array($message_array, stripslashes($text))+count(array_intersect(Tags::getTags('news',$ds['newsID'],true), $keywords))*2;
+						$res_occurr[$i]		=	substri_count_array($message_array, stripslashes($text));
 						$res_date[$i]		=	$ds['date'];
 						$res_type[$i]		=	$_language->module['news'];
 		
@@ -265,10 +280,10 @@ if($action=="search" AND ($userID OR isset($_REQUEST['captcha']))) {
 			echo "<center><b>".$count_results."</b> ".$_language->module['results_found']."</center><br /><br />";
 		
 			$pages = ceil($count_results / $results);
-			if($pages > 1) echo makepagelink("index.php?site=search&amp;action=search&amp;articles=".$_REQUEST['articles']."&amp;faq=".$_REQUEST['faq']."&amp;forum=".$_REQUEST['forum']."&amp;news=".$_REQUEST['news']."&amp;r=".$_REQUEST['r']."&amp;text=".$_REQUEST['text']."&amp;am=".$_REQUEST['am']."&amp;ad=".$_REQUEST['ad']."&amp;ay=".$_REQUEST['ay']."&amp;bm=".$_REQUEST['bm']."&amp;bd=".$_REQUEST['bd']."&amp;by=".$_REQUEST['by']."&amp;order=".$_REQUEST['order'], $page, $pages);
+			if($pages > 1) echo makepagelink("index.php?site=search&amp;action=search&amp;articles=".$_GET['articles']."&amp;faq=".$_GET['faq']."&amp;forum=".$_GET['forum']."&amp;news=".$_GET['news']."&amp;r=".$_GET['r']."&amp;text=".$_GET['text']."&amp;am=".$_GET['am']."&amp;ad=".$_GET['ad']."&amp;ay=".$_GET['ay']."&amp;bm=".$_GET['bm']."&amp;bd=".$_GET['bd']."&amp;by=".$_GET['by']."&amp;order=".$_GET['order'], $page, $pages);
 
 			// sort results
-			if($_REQUEST['order']=='2') asort($res_occurr);
+			if($_GET['order']=='2') asort($res_occurr);
 			else arsort($res_occurr);
 		
 			$i=0;
@@ -280,17 +295,8 @@ if($action=="search" AND ($userID OR isset($_REQUEST['captcha']))) {
 				if($i >= ($results * $page)) {
 					break;
 				}
-				
-				if($i%2) {
-					$bg1=BG_1;
-					$bg2=BG_2;
-				}
-				else {
-					$bg1=BG_3;
-					$bg2=BG_4;
-				}
 		
-				$date=getformatdate($res_date[$key]);
+				$date=date("d.m.Y", $res_date[$key]);
 				$type=$res_type[$key];
 				if(mb_strlen($res_message[$key]) > 200) {
 					for($z = 0; $z < mb_strlen($res_message[$key]); $z++) {
@@ -322,7 +328,7 @@ if($action=="search" AND ($userID OR isset($_REQUEST['captcha']))) {
 
 }
 else {
-	if(!isset($_REQUEST['site'])){
+	if(!isset($_GET['site'])){
 		header("Location: index.php?site=search");
 	}
 	$_language->read_module('search');

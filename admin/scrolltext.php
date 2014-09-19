@@ -38,7 +38,7 @@ if(isset($_POST['submit']) != "") {
 	$color = $_POST['color'];
 	$CAPCLASS = new Captcha;
 	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
-		if(mysqli_num_rows(safe_query("SELECT * FROM ".PREFIX."scrolltext"))) safe_query("UPDATE ".PREFIX."scrolltext SET text='$text', delay='$delay', direction='$direction', color='$color'");
+		if(mysql_num_rows(safe_query("SELECT * FROM ".PREFIX."scrolltext"))) safe_query("UPDATE ".PREFIX."scrolltext SET text='$text', delay='$delay', direction='$direction', color='$color'");
 		else safe_query("INSERT INTO ".PREFIX."scrolltext (text, delay, direction, color) values( '$text', '$delay', '$direction', '$color') ");
 	
 		redirect("admincenter.php?site=scrolltext","",0);
@@ -58,7 +58,7 @@ else {
 	$CAPCLASS->create_transaction();
 	$hash = $CAPCLASS->get_hash();
 	$ergebnis=safe_query("SELECT * FROM ".PREFIX."scrolltext");
-	$ds=mysqli_fetch_array($ergebnis);
+	$ds=mysql_fetch_array($ergebnis);
 
 	$direction = '<option value="left">'.$_language->module['right_to_left'].'</option>
   <option value="right">'.$_language->module['left_to_right'].'</option>';

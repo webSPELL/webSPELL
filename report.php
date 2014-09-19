@@ -50,7 +50,7 @@ if($_POST['mode'] and $run) {
 	//send message to file-admins
 
 	$ergebnis=safe_query("SELECT userID FROM ".PREFIX."user_groups WHERE files='1'");
-	while($ds=mysqli_fetch_array($ergebnis)) sendmessage($ds['userID'], $type.': '.$mode, $message);
+	while($ds=mysql_fetch_array($ergebnis)) sendmessage($ds['userID'], $type.': '.$mode, $message);
 
 	redirect("index.php?site=".$type, $_language->module['report_recognized'], "3");
 }

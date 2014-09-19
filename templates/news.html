@@ -1,47 +1,27 @@
-<table width="100%" border="0" cellspacing="0" cellpadding="2">
-  <tr bgcolor="$bghead">
-    <td class="title">
-    <table width="100%" border="0" cellspacing="0" cellpadding="0">
-      <tr>
-        <td><a href="index.php?site=news&amp;show=$rubrikname_link" style="padding:1px;background-color:$pagebg;"><small>$rubrikname</small></a> &nbsp;<a class="titlelink" href="index.php?site=news_comments&amp;newsID=$newsID">$headline</a> $isintern</td>
-        <td align="right">$langs</td>
-      </tr>
-    </table>
-    </td>
-  </tr>
-  <tr><td bgcolor="$pagebg"></td></tr>
-  <tr bgcolor="$bg1">
-    <td align="center" valign="top">$rubricpic</td>
-  </tr>
-  <tr>
-    <td bgcolor="$bg1" valign="top">
-    <table width="100%" border="0" cellspacing="0" cellpadding="0">
-      <tr>
-        <td valign="top" align="justify">$content</td>
-      </tr>
-      <tr>
-        <td valign="top" align="right">$adminaction</td>
-      </tr>
-    </table>
-    </td>
-  </tr>
-  <tr>
-    <td bgcolor="$pagebg">
-    <table width="100%" border="0" cellspacing="0" cellpadding="0">
-      <tr>
-        <td><span>%links%</span>: $related<br/><span>%tags%</span>: $tags<br /><span>%written_by% $poster - $date - $time</span></td>
-      </tr>
-    </table>
-    </td>
-  </tr>
-  <tr>
-    <td>
-    <table width="100%" border="0" cellpadding="0" cellspacing="0">
-      <tr>
-        <td><span style="overflow:hidden;">$comments</span></td>
-      </tr>
-    </table>
-    </td>
-  </tr>
-</table>
-<br /><br />
+<article>
+    <header class="page-header">
+        <h3>
+            <a href="index.php?site=news_comments&amp;newsID=$newsID">$headline</a> 
+            <a href="index.php?site=news&amp;show=$rubrikname"><small>$rubrikname</small></a>
+        </h3>
+    </header>    
+    
+    <section>        
+        <div>
+            <div class="thumbnail pull-left">$rubricpic</div>
+        </div>
+        <div>      
+            <p><small>$isintern</small> $content<br>$adminaction</p>
+        </div>    
+    </section>
+        
+    <footer class="col-lg-12">
+    <p></p>
+    <p>
+      <i class="icon-user"></i> by $poster
+      | <i class="icon-calendar"></i> $date
+      | <i class="icon-comment"></i> $comments
+    </p>
+  </footer>
+</article>
+<hr>

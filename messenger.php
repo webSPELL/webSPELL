@@ -97,7 +97,7 @@ elseif(isset($_POST['send'])) {
 	if(isset($_POST['eachmember'])) {
 		unset($touser);
 		$ergebnis=safe_query("SELECT userID FROM ".PREFIX."user");
-		while($ds=mysqli_fetch_array($ergebnis)) {
+		while($ds=mysql_fetch_array($ergebnis)) {
 			if(isclanmember($ds['userID'])) $touser[]=$ds['userID'];
 		}
 	}
@@ -105,7 +105,7 @@ elseif(isset($_POST['send'])) {
 	if(isset($_POST['eachuser'])) {
 		unset($touser);
 		$ergebnis=safe_query("SELECT userID FROM ".PREFIX."user");
-		while($ds=mysqli_fetch_array($ergebnis)) {
+		while($ds=mysql_fetch_array($ergebnis)) {
 			$touser[]=$ds['userID'];
 		}
 	}
@@ -158,7 +158,7 @@ elseif($userID) {
 		if(isset($_REQUEST['entries'])) $entries = $_REQUEST['entries'];
 
 		$alle = safe_query("SELECT messageID FROM ".PREFIX."messenger WHERE touser='$userID' AND userID='$userID'");
-		$gesamt = mysqli_num_rows($alle);
+		$gesamt = mysql_num_rows($alle);
 		$pages=1;
 		if(isset($_GET['page'])) $page=(int)$_GET['page'];
 		else $page = 1;
@@ -198,10 +198,10 @@ elseif($userID) {
     eval ("\$pm_incoming_head = \"".gettemplate("pm_incoming_head")."\";");
     echo $pm_incoming_head;
     
-    $anz=mysqli_num_rows($ergebnis);
+    $anz=mysql_num_rows($ergebnis);
 		if($anz) {
       $n=1;
-			while($ds=mysqli_fetch_array($ergebnis)) {
+			while($ds=mysql_fetch_array($ergebnis)) {
 				if($n%2) {
 					$bg1=BG_1;
 					$bg2=BG_2;
@@ -210,7 +210,7 @@ elseif($userID) {
 					$bg1=BG_3;
 					$bg2=BG_4;
 				}
-				$date=getformatdatetime($ds['date']);
+				$date=date("d.m.Y - H:i", $ds['date']);
 
 				if($userID == $ds['fromuser']) $buddy='';
 				elseif(isignored($userID, $ds['fromuser'])) $buddy='<a href="buddys.php?action=readd&amp;id='.$ds['fromuser'].'&amp;userID='.$userID.'"><img src="images/icons/buddy_readd.gif" border="0" alt="%readd_ignored%" /></a>';
@@ -221,18 +221,20 @@ elseif($userID) {
 				else $statuspic='<img src="images/icons/online.gif" width="7" height="7" alt="online" />';
 
 				$sender='<a href="index.php?site=profile&amp;id='.$ds['fromuser'].'"><b>'.getnickname($ds['fromuser']).'</b></a>';
-				if(isclanmember($ds['fromuser'])) $member=' <img src="images/icons/member.gif" width="6" height="11" alt="Clanmember" />';
+				if(isclanmember($ds['fromuser'])) $member='<img src="images/icons/member.gif" width="6" height="11" alt="Clanmember" />';
 				else $member='';
 
 				if(trim($ds['title'])!="") $title=clearfromtags($ds['title']);
 				else $title = $_language->module['no_subject'];
 
+                $new='';
 				if(!$ds['viewed']) {
-					$icon='<img src="images/icons/pm_new.gif" width="14" height="12" alt="" />';
+					$icon='<i class="icon-envelope"></i>';
 					$title = '<b>'.$title.'</b>';
-				}	else $icon='<img src="images/icons/pm_old.gif" width="14" height="12" alt="" />';
+                    $new = 'class="warning"';
+				}	else $icon='';
 		
-				$title='&#8226; <a href="index.php?site=messenger&amp;action=show&amp;id='.$ds['messageID'].'">'.$title.'</a>';
+				$title='<a href="index.php?site=messenger&amp;action=show&amp;id='.$ds['messageID'].'">'.$title.'</a>';
 
 				eval ("\$pm_incoming_content = \"".gettemplate("pm_incoming_content")."\";");
 				echo $pm_incoming_content;
@@ -250,7 +252,7 @@ elseif($userID) {
 		if(isset($_REQUEST['entries'])) $entries = $_REQUEST['entries'];
 
 		$alle=safe_query("SELECT messageID FROM ".PREFIX."messenger WHERE fromuser='$userID' AND userID='$userID'");
-		$gesamt = mysqli_num_rows($alle);
+		$gesamt = mysql_num_rows($alle);
 		$pages=1;
 
 		if(!isset($_GET['page'])) $page = 1; else $page = (int)$_GET['page'];
@@ -286,10 +288,10 @@ elseif($userID) {
     eval ("\$pm_outgoing_head = \"".gettemplate("pm_outgoing_head")."\";");
     echo $pm_outgoing_head;
     
-		$anz=mysqli_num_rows($ergebnis);
+		$anz=mysql_num_rows($ergebnis);
 		if($anz) {
       $n=1;
-			while($ds=mysqli_fetch_array($ergebnis)) {
+			while($ds=mysql_fetch_array($ergebnis)) {
 				if($n%2) {
 					$bg1=BG_1;
 					$bg2=BG_2;
@@ -298,7 +300,7 @@ elseif($userID) {
 					$bg1=BG_3;
 					$bg2=BG_4;
 				}
-				$date=getformatdatetime($ds['date']);
+				$date=date("d.m.Y - H:i", $ds['date']);
 
 				if($userID == $ds['fromuser']) $buddy='';
 				elseif(isignored($userID, $ds['touser'])) $buddy='<a href="buddys.php?action=readd&amp;id='.$ds['touser'].'&amp;userID='.$userID.'"><img src="images/icons/buddy_readd.gif" border="0" alt="%readd_ignored%" /></a>';
@@ -315,7 +317,7 @@ elseif($userID) {
 
 				if(trim($ds['title'])!="") $title=clearfromtags($ds['title']);
 				else $title = $_language->module['no_subject'];
-				$title='&#8226; <a href="index.php?site=messenger&amp;action=show&amp;id='.$ds['messageID'].'">'.$title.'</a>';
+				$title=' <a href="index.php?site=messenger&amp;action=show&amp;id='.$ds['messageID'].'">'.$title.'</a>';
 
 				$icon='<img src="images/icons/pm_old.gif" width="14" height="12" alt="" />';
 				eval ("\$pm_outgoing_content = \"".gettemplate("pm_outgoing_content")."\";");
@@ -332,11 +334,11 @@ elseif($userID) {
 	elseif($action=="show") {
 
 		$id = (int)$_GET['id'];
-		$ds=mysqli_fetch_array(safe_query("SELECT * FROM ".PREFIX."messenger WHERE messageID='".$id."' AND userID='".$userID."'"));
+		$ds=mysql_fetch_array(safe_query("SELECT * FROM ".PREFIX."messenger WHERE messageID='".$id."' AND userID='".$userID."'"));
 
 		if($ds['touser']==$userID OR $ds['fromuser']==$userID) {
 			safe_query("UPDATE ".PREFIX."messenger SET viewed='1' WHERE messageID='$id'");
-			$date=getformatdatetime($ds['date']);
+			$date=date("d.m.Y - H:i", $ds['date']);
 			$sender='<a href="index.php?site=profile&amp;id='.$ds['fromuser'].'"><b>'.getnickname($ds['fromuser']).'</b></a>';
 			$message = cleartext($ds['message']);
 			$message = toggle($message, $ds['messageID']);
@@ -365,11 +367,11 @@ elseif($userID) {
 		$id = $_GET['id'];
 		$_language->read_module('bbcode', true);
 		$ergebnis=safe_query("SELECT * FROM ".PREFIX."messenger WHERE messageID='$id'");
-		$ds=mysqli_fetch_array($ergebnis);
+		$ds=mysql_fetch_array($ergebnis);
 		if($ds['touser']==$userID OR $ds['fromuser']==$userID) {
 			$replytouser=$ds['fromuser'];
 			$tousernick=getnickname($replytouser);
-			$date=getformatdatetime($ds['date']);
+			$date=date("d.m.Y - H:i", $ds['date']);
 
 			$title=$ds['title'];
 			if(!preg_match("#Re\[(.*?)\]:#si", $title)) $title="Re[1]: ".$title;
@@ -393,7 +395,7 @@ elseif($userID) {
 		$_language->read_module('bbcode', true);
 		$ergebnis=safe_query("SELECT buddy FROM ".PREFIX."buddys WHERE userID='$userID'");
 		$user='';
-		while($ds=mysqli_fetch_array($ergebnis)) {
+		while($ds=mysql_fetch_array($ergebnis)) {
 			$user.='<option value="'.$ds['buddy'].'">'.getnickname($ds['buddy']).'</option>';
 		}
 		if($user=="") $user='<option value="">'.$_language->module['no_buddys'].'</option>'; 
@@ -402,7 +404,7 @@ elseif($userID) {
 		if(isset($_SESSION['message_error'])){
 			$subject = getforminput($_SESSION['message_subject']);
 			$message = getforminput($_SESSION['message_body']);
-			$error = "<div class='errorbox' style='margin-left: auto; margin-right: auto;'><b>".$_language->module['error'].":</b><br/>&#8226; ".$_language->module['unknown_user']."</div>";
+			$error = "<div class='alert alert-danger'><b>".$_language->module['error'].":</b><br/>".$_language->module['unknown_user']."</div>";
 			unset($_SESSION['message_subject'],$_SESSION['message_body'],$_SESSION['message_error']);
 		}
 		else{
@@ -419,5 +421,8 @@ elseif($userID) {
 		echo $pm_new;
 	}
 }
-else echo $_language->read_module('messenger').$_language->module['not_logged'];
+else {
+    $_language->read_module('messenger');
+    echo $_language->module['not_logged'];
+}
 ?>

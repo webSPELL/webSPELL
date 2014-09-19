@@ -35,7 +35,6 @@ $_language->read_module('forum');
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<meta name="robots" content="noindex, nofollow" />
 	<title><?php echo PAGETITLE; ?></title>
 	<style type="text/css">
 	<!--
@@ -58,9 +57,9 @@ $_language->read_module('forum');
 $topic = $_GET['topic'];
 $thread = safe_query("SELECT * FROM ".PREFIX."forum_topics WHERE topicID='$topic' ");
 
-if(mysqli_num_rows($thread)) {
+if(mysql_num_rows($thread)) {
 
-	$dt = mysqli_fetch_array($thread);
+	$dt = mysql_fetch_array($thread);
 
 	if($dt['readgrps'] != "") {
 		$usergrps = explode(";", $dt['readgrps']);
@@ -75,7 +74,7 @@ if(mysqli_num_rows($thread)) {
 	}
 
 	$ergebnis = safe_query("SELECT * FROM ".PREFIX."forum_boards WHERE boardID='$dt[boardID]' ");
-	$db = mysqli_fetch_array($ergebnis);
+	$db = mysql_fetch_array($ergebnis);
 	$boardname = $db['name'];
 
 	echo'<div style="width:640px;">
@@ -88,9 +87,9 @@ if(mysqli_num_rows($thread)) {
 	echo'<table width="100%" cellpadding="4" cellspacing="1" border="0">';
 
 	$replys = safe_query("SELECT * FROM ".PREFIX."forum_posts WHERE topicID='$topic' ORDER BY date");
-	while($dr=mysqli_fetch_array($replys)) {
-		$date=getformatdate($dr['date']);
-		$time=getformattime($dr['date']);
+	while($dr=mysql_fetch_array($replys)) {
+		$date=date("d.m.Y", $dr['date']);
+		$time=date("H:i", $dr['date']);
 
 		$message=cleartext($dr['message']);	$username=getnickname($dr['poster']);
 
@@ -109,7 +108,7 @@ if(mysqli_num_rows($thread)) {
 		}
 		else {
 			$ergebnis=safe_query("SELECT * FROM ".PREFIX."forum_ranks WHERE $posts > postmin AND $posts < postmax");
-			$ds=mysqli_fetch_array($ergebnis);
+			$ds=mysql_fetch_array($ergebnis);
 			$usertype=$ds['rank'];
 			$rang='<img src="images/icons/ranks/'.$ds['pic'].'" alt="" />';
 		}

@@ -50,7 +50,7 @@ function forum_stats() {
 	// TODAY birthdays
 	$ergebnis=safe_query("SELECT nickname, userID, YEAR(CURRENT_DATE()) -YEAR(birthday) 'age' FROM ".PREFIX."user WHERE DATE_FORMAT(`birthday`, '%m%d') = DATE_FORMAT(NOW(), '%m%d')");
 	$n=0;
-	while($db=mysqli_fetch_array($ergebnis)) {
+	while($db=mysql_fetch_array($ergebnis)) {
 		$n++;
 		$years=$db['age'];
 		if($n>1) $birthdays.=', <a href="index.php?site=profile&amp;id='.$db['userID'].'"><b>'.$db['nickname'].'</b></a> ('.$years.')';
@@ -62,7 +62,7 @@ function forum_stats() {
 	// WEEK birthdays
 	$ergebnis=safe_query("SELECT nickname, userID, DATE_FORMAT(FROM_DAYS(TO_DAYS(NOW()) - TO_DAYS(birthday)), '%y') + 1 AS age FROM ".PREFIX."user WHERE IF(DAYOFYEAR(NOW())<=358,((DAYOFYEAR(birthday)>DAYOFYEAR(NOW())) AND (DAYOFYEAR(birthday)<=DAYOFYEAR(DATE_ADD(NOW(), INTERVAL 7 DAY)))),(DAYOFYEAR(BIRTHDAY)>DAYOFYEAR(NOW()) OR DAYOFYEAR(birthday)<=DAYOFYEAR(DATE_ADD(NOW(), INTERVAL 7 DAY)))) AND birthday !='0000-00-00 00:00:00' ORDER BY `birthday` ASC");
 	$n=0;
-	while($db=mysqli_fetch_array($ergebnis)) {
+	while($db=mysql_fetch_array($ergebnis)) {
 		$n++;
 		$years=$db['age'];
 		if($n>1) $birthweek.=', <a href="index.php?site=profile&amp;id='.$db['userID'].'"><b>'.$db['nickname'].'</b></a> ('.$years.')';
@@ -71,8 +71,8 @@ function forum_stats() {
 	if(!$n) $birthweek=$_language->module['n_a'];
 
 	// WHOISONLINE
-	$guests = mysqli_num_rows(safe_query("SELECT ip FROM ".PREFIX."whoisonline WHERE userID=''"));
-	$user = mysqli_num_rows(safe_query("SELECT userID FROM ".PREFIX."whoisonline WHERE ip=''"));
+	$guests = mysql_num_rows(safe_query("SELECT ip FROM ".PREFIX."whoisonline WHERE userID=''"));
+	$user = mysql_num_rows(safe_query("SELECT userID FROM ".PREFIX."whoisonline WHERE ip=''"));
 	$useronline = $guests + $user;
 
 	if($user==1) $user_on=$_language->module['registered_user'];
@@ -85,7 +85,7 @@ function forum_stats() {
 	$user_names = "";
 	if($user) {
 		$n=1;
-		while($ds=mysqli_fetch_array($ergebnis)) {
+		while($ds=mysql_fetch_array($ergebnis)) {
 			if(isforumadmin($ds['userID'])) $nickname = '<span style="color:'.$loosecolor.'">'.$ds['nickname'].'</span>';
 			elseif(isanymoderator($ds['userID'])) $nickname = '<span style="color:'.$drawcolor.'">'.$ds['nickname'].'</span>';
 			elseif(isclanmember($ds['userID'])) $nickname = '<span style="color:'.$wincolor.'">'.$ds['nickname'].'</span>';
@@ -96,14 +96,14 @@ function forum_stats() {
 		}
 	}
 
-	$dt=mysqli_fetch_array(safe_query("SELECT sum(topics), sum(posts) FROM ".PREFIX."forum_boards"));
+	$dt=mysql_fetch_array(safe_query("SELECT sum(topics), sum(posts) FROM ".PREFIX."forum_boards"));
 	$topics=$dt[0];
 	$posts=$dt[1];
-	$dt=mysqli_fetch_array(safe_query("SELECT count(userID) FROM ".PREFIX."user WHERE activated='1'"));
+	$dt=mysql_fetch_array(safe_query("SELECT count(userID) FROM ".PREFIX."user WHERE activated='1'"));
 	$registered=$dt[0];
 	$newestuser=safe_query("SELECT userID, nickname FROM ".PREFIX."user WHERE activated='1' ORDER BY registerdate DESC LIMIT 0,1");
-	$dn=mysqli_fetch_array($newestuser);
-	$dm=mysqli_fetch_array(safe_query("SELECT maxonline FROM ".PREFIX."counter"));
+	$dn=mysql_fetch_array($newestuser);
+	$dm=mysql_fetch_array(safe_query("SELECT maxonline FROM ".PREFIX."counter"));
 	$maxonline=$dm['maxonline'];
 
 	$newestmember='<a href="index.php?site=profile&amp;id='.$dn['userID'].'"><b>'.$dn['nickname'].'</b></a>';
@@ -144,7 +144,7 @@ function boardmain() {
 		}
 	}
 	$kath=safe_query("SELECT catID, name, info, readgrps FROM ".PREFIX."forum_categories".$sql_where." ORDER BY sort");
-	while($dk=mysqli_fetch_array($kath)) {
+	while($dk=mysql_fetch_array($kath)) {
 		$kathname = "<a href='index.php?site=forum&amp;cat=".$dk['catID']."'>".$dk['name']."</a>";
 		if($dk['info']) $info=$dk['info'];
 		else $info='';
@@ -168,7 +168,7 @@ function boardmain() {
 		$boards=safe_query("SELECT * FROM ".PREFIX."forum_boards WHERE category='".$dk['catID']."' ORDER BY sort");
 		$i=1;
 
-		while($db=mysqli_fetch_array($boards)) {
+		while($db=mysql_fetch_array($boards)) {
 
 			if($i%2) {
 				$bg1=BG_1;
@@ -208,7 +208,7 @@ function boardmain() {
 			$anztopics=$db['topics'];
 			$anzposts=$db['posts'];
 			$boardname = $db['name'];
-			$boardname ='&#8226; <a href="index.php?site=forum&amp;board='.$board.'"><b>'.$boardname.'</b></a>';
+			$boardname ='<a href="index.php?site=forum&amp;board='.$board.'"><b>'.$boardname.'</b></a>';
 
 			if($db['info']) $boardinfo=$db['info'];
 			else $boardinfo='';
@@ -224,21 +224,21 @@ function boardmain() {
 			$q = safe_query("SELECT topicID, lastdate, lastposter, replys FROM ".PREFIX."forum_topics WHERE boardID='".$db['boardID']."' AND moveID='0' ORDER BY lastdate DESC LIMIT 0,".$maxtopics);
 			$n=1;
 			$board_topics = Array();
-			while($lp = mysqli_fetch_assoc($q)) {
+			while($lp = mysql_fetch_assoc($q)) {
 				
 				if($n == 1) {
 
-					$date=getformatdate($lp['lastdate']);
-					$today=getformatdate(time());
-					$yesterday = getformatdate(time()-3600*24);
+					$date=date("d.m.Y", $lp['lastdate']);
+					$today=date("d.m.Y", time());
+					$yesterday = date("d.m.Y", time()-3600*24);
 	
 					if($date==$today) $date=$_language->module['today'];
 					elseif($date==$yesterday && $date<$today) $date=$_language->module['yesterday'];
 					else $date=$date;
 	
-					$time=getformattime($lp['lastdate']);
+					$time=date("- H:i", $lp['lastdate']);
 					$poster='<a href="index.php?site=profile&amp;id='.$lp['lastposter'].'">'.getnickname($lp['lastposter']).'</a>';
-					if(isclanmember($lp['lastposter'])) $member=' <img src="images/icons/member.gif" alt="'.$_language->module['clanmember'].'" />';
+					if(isclanmember($lp['lastposter'])) $member=' <img src="images/icons/member.gif" alt="'.$_language->module['clanmember'].'">';
 					else $member='';
 					$topic=$lp['topicID'];
 					$postlink='index.php?site=forum_topic&amp;topic='.$topic.'&amp;type=ASC&amp;page='.ceil(($lp['replys']+1)/$maxposts);
@@ -255,7 +255,7 @@ function boardmain() {
 			
 			if($userID) {
 				
-				$gv=mysqli_fetch_array(safe_query("SELECT topics FROM ".PREFIX."user WHERE userID='$userID'"));
+				$gv=mysql_fetch_array(safe_query("SELECT topics FROM ".PREFIX."user WHERE userID='$userID'"));
 				$array=explode("|", $gv['topics']);
 		
 				foreach($array as $split) {
@@ -267,8 +267,8 @@ function boardmain() {
 				}
 			}
 
-			if($found) $icon='<img src="images/icons/boardicons/'.$writer.'on.gif" alt="'.$_language->module['new_posts'].'" />';
-			else $icon='<img src="images/icons/boardicons/'.$writer.'off.gif" alt="'.$_language->module['no_new_posts'].'" />';
+			if($found) $icon='<img src="images/icons/boardicons/'.$writer.'on.gif" alt="'.$_language->module['new_posts'].'">';
+			else $icon='<img src="images/icons/boardicons/'.$writer.'off.gif" alt="'.$_language->module['no_new_posts'].'">';
 
 
 			eval ("\$forum_main_board = \"".gettemplate("forum_main_board")."\";");
@@ -281,7 +281,7 @@ function boardmain() {
 	// BOARDS OHNE KATEGORIE
 	$boards=safe_query("SELECT * FROM ".PREFIX."forum_boards WHERE category='0' ORDER BY sort");
 	$i=1;
-	while($db=mysqli_fetch_array($boards)) {
+	while($db=mysql_fetch_array($boards)) {
 
 		if($i%2) {
 			$bg1=BG_1;
@@ -322,7 +322,7 @@ function boardmain() {
 		$anzposts=$db['posts'];
 
 		$boardname = $db['name'];
-		$boardname='&#8226; <a href="index.php?site=forum&amp;board='.$db['boardID'].'"><b>'.$boardname.'</b></a>';
+		$boardname='<a href="index.php?site=forum&amp;board='.$db['boardID'].'"><b>'.$boardname.'</b></a>';
 
 		$boardinfo='';
 		if($db['info']) $boardinfo=$db['info'];
@@ -332,21 +332,21 @@ function boardmain() {
 			$q = safe_query("SELECT topicID, lastdate, lastposter, replys FROM ".PREFIX."forum_topics WHERE boardID='".$db['boardID']."' AND moveID='0' ORDER BY lastdate DESC LIMIT 0,".$maxtopics);
 			$n=1;
 			$board_topics = Array();
-			while($lp = mysqli_fetch_assoc($q)) {
+			while($lp = mysql_fetch_assoc($q)) {
 				
 				if($n == 1) {
 
-					$date=getformatdate($lp['lastdate']);
-					$today=getformatdate(time());
-					$yesterday = getformatdate(time()-3600*24);
+					$date=date("d.m.Y", $lp['lastdate']);
+					$today=date("d.m.Y", time());
+					$yesterday = date("d.m.Y", time()-3600*24);
 	
 					if($date==$today) $date=$_language->module['today'];
 					elseif($date==$yesterday && $date<$today) $date=$_language->module['yesterday'];
 					else $date=$date;
 	
-					$time=getformattime($lp['lastdate']);
+					$time=date("- H:i", $lp['lastdate']);
 					$poster='<a href="index.php?site=profile&amp;id='.$lp['lastposter'].'">'.getnickname($lp['lastposter']).'</a>';
-					if(isclanmember($lp['lastposter'])) $member=' <img src="images/icons/member.gif" alt="'.$_language->module['clanmember'].'" />';
+					if(isclanmember($lp['lastposter'])) $member=' <img src="images/icons/member.gif" alt="'.$_language->module['clanmember'].'">';
 					else $member='';
 					$topic=$lp['topicID'];
 					$postlink='index.php?site=forum_topic&amp;topic='.$topic.'&amp;type=ASC&amp;page='.ceil(($lp['replys']+1)/$maxposts);
@@ -363,7 +363,7 @@ function boardmain() {
 			
 			if($userID) {
 				
-				$gv=mysqli_fetch_array(safe_query("SELECT topics FROM ".PREFIX."user WHERE userID='$userID'"));
+				$gv=mysql_fetch_array(safe_query("SELECT topics FROM ".PREFIX."user WHERE userID='$userID'"));
 				$array=explode("|", $gv['topics']);
 		
 				foreach($array as $split) {
@@ -375,8 +375,8 @@ function boardmain() {
 				}
 			}
 
-			if($found) $icon='<img src="images/icons/boardicons/'.$writer.'on.gif" alt="'.$_language->module['new_posts'].'" />';
-			else $icon='<img src="images/icons/boardicons/'.$writer.'off.gif" alt="'.$_language->module['no_new_posts'].'" />';
+			if($found) $icon='<img src="images/icons/boardicons/'.$writer.'on.gif" alt="'.$_language->module['new_posts'].'">';
+			else $icon='<img src="images/icons/boardicons/'.$writer.'off.gif" alt="'.$_language->module['no_new_posts'].'">';
 
 		eval ("\$forum_main_board = \"".gettemplate("forum_main_board")."\";");
 		echo $forum_main_board;
@@ -416,13 +416,13 @@ function showboard($board) {
 	echo $title_messageboard;
 
 	$alle = safe_query("SELECT topicID FROM ".PREFIX."forum_topics WHERE boardID='$board'");
-	$gesamt=mysqli_num_rows($alle);
+	$gesamt=mysql_num_rows($alle);
 
 	if($action=="markall" AND $userID) {
-		$gv=mysqli_fetch_array(safe_query("SELECT topics FROM ".PREFIX."user WHERE userID='$userID'"));
+		$gv=mysql_fetch_array(safe_query("SELECT topics FROM ".PREFIX."user WHERE userID='$userID'"));
 		
 		$board_topics = Array();
-		while($ds=mysqli_fetch_array($alle))	$board_topics[] = $ds['topicID'];
+		while($ds=mysql_fetch_array($alle))	$board_topics[] = $ds['topicID'];
 		
 		$array=explode("|", $gv['topics']);
 		$new='|';
@@ -444,7 +444,7 @@ function showboard($board) {
 	if($page==1) $start=0;
 	if($page>1) $start=$page*$max-$max;
 
-	$db = mysqli_fetch_array(safe_query("SELECT * FROM ".PREFIX."forum_boards WHERE boardID='".$board."' "));
+	$db = mysql_fetch_array(safe_query("SELECT * FROM ".PREFIX."forum_boards WHERE boardID='".$board."' "));
 	$boardname = $db['name'];
 
 	$usergrp = 0;
@@ -482,10 +482,10 @@ function showboard($board) {
 	$moderators=getmoderators($board);
 	if($moderators) $moderators='('.$_language->module['moderated_by'].': '.$moderators.')';
 
-	$actions='<a href="index.php?site=search">'.$_language->module['search_image'].'</a>';
+	$actions='<a href="index.php?site=search" class="btn btn-default"><i class="icon-search"></i> Search</a>';
 	if($loggedin) {
-		$mark='&#8226; <a href="index.php?site=forum&amp;board='.$board.'&amp;action=markall">'.$_language->module['mark_topics_read'].'</a>';
-		if($writer) $actions.=' <a href="index.php?site=forum&amp;addtopic=true&amp;board='.$board.'">'.$_language->module['newtopic_image'].'</a>';
+		$mark='<a href="index.php?site=forum&amp;board='.$board.'&amp;action=markall">'.$_language->module['mark_topics_read'].'</a>';
+		if($writer) $actions.=' <a href="index.php?site=forum&amp;addtopic=true&amp;board='.$board.'" class="btn btn-primary"><i class="icon-comment-alt"></i> '.$_language->module['new_topic'].'</a>';
 	} else $mark='';
 	
 	$cat = $db['category'];
@@ -497,14 +497,14 @@ function showboard($board) {
 
 	
 	$topics = safe_query("SELECT * FROM ".PREFIX."forum_topics WHERE boardID='$board' ORDER BY sticky DESC, lastdate DESC LIMIT $start,$max");
-	$anztopics = mysqli_num_rows(safe_query("SELECT boardID FROM ".PREFIX."forum_topics WHERE boardID='$board'"));
+	$anztopics = mysql_num_rows(safe_query("SELECT boardID FROM ".PREFIX."forum_topics WHERE boardID='$board'"));
 
 	$i=1;
 	unset($link);
 	if($anztopics) {
 		eval ("\$forum_topics_head = \"".gettemplate("forum_topics_head")."\";");
 		echo $forum_topics_head;
-		while($dt=mysqli_fetch_array($topics)) {
+		while($dt=mysql_fetch_array($topics)) {
 			if($i%2) {
 				$bg1=BG_1;
 				$bg2=BG_2;
@@ -523,29 +523,29 @@ function showboard($board) {
 			$topicpage_link = '';
 			if($topicpages>1) $topicpage_link = makepagelink("index.php?site=forum_topic&amp;topic=".$dt['topicID'], 1, $topicpages);
 
-			if($dt['icon']) $icon='<img src="images/icons/topicicons/'.$dt['icon'].'" alt="" />';
+			if($dt['icon']) $icon='<img src="images/icons/topicicons/'.$dt['icon'].'">';
 			else $icon='';
 
 			// viewed topics
 
 			if($dt['sticky']) {
-				$onicon = '<img src="images/icons/foldericons/newsticky.gif" alt="'.$_language->module['sticky'].'" />';
-				$officon = '<img src="images/icons/foldericons/sticky.gif" alt="'.$_language->module['sticky'].'" />';
-				$onhoticon = '<img src="images/icons/foldericons/newsticky.gif" alt="'.$_language->module['sticky'].'" />';
-				$offhoticon = '<img src="images/icons/foldericons/sticky.gif" alt="'.$_language->module['sticky'].'" />';
+				$onicon = '<img src="images/icons/foldericons/newsticky.gif" alt="'.$_language->module['sticky'].'">';
+				$officon = '<img src="images/icons/foldericons/sticky.gif" alt="'.$_language->module['sticky'].'">';
+				$onhoticon = '<img src="images/icons/foldericons/newsticky.gif" alt="'.$_language->module['sticky'].'">';
+				$offhoticon = '<img src="images/icons/foldericons/sticky.gif" alt="'.$_language->module['sticky'].'">';
 			}
 			else {
-				$onicon = '<img src="images/icons/foldericons/newfolder.gif" alt="'.$_language->module['new_posts'].'" />';
-				$officon = '<img src="images/icons/foldericons/folder.gif" alt="no '.$_language->module['new_posts'].'" />';
-				$onhoticon = '<img src="images/icons/foldericons/newhotfolder.gif" alt="'.$_language->module['new_posts'].' ['.$_language->module['popular'].']" />';
-				$offhoticon = '<img src="images/icons/foldericons/hotfolder.gif" alt="no '.$_language->module['new_posts'].' ['.$_language->module['popular'].']" />';
+				$onicon = '<img src="images/icons/foldericons/newfolder.gif" alt="'.$_language->module['new_posts'].'">';
+				$officon = '<img src="images/icons/foldericons/folder.gif" alt="no '.$_language->module['new_posts'].'">';
+				$onhoticon = '<img src="images/icons/foldericons/newhotfolder.gif" alt="'.$_language->module['new_posts'].' ['.$_language->module['popular'].']">';
+				$offhoticon = '<img src="images/icons/foldericons/hotfolder.gif" alt="no '.$_language->module['new_posts'].' ['.$_language->module['popular'].']">';
 			}
 
-			if($dt['closed']) $folder='<img src="images/icons/foldericons/lockfolder.gif" alt="'.$_language->module['closed'].'" />';
-			elseif($dt['moveID']) $folder='<img src="images/icons/topicicons/pfeil.gif" alt="'.$_language->module['moved'].'" />';
+			if($dt['closed']) $folder='<img src="images/icons/foldericons/lockfolder.gif" alt="'.$_language->module['closed'].'">';
+			elseif($dt['moveID']) $folder='<img src="images/icons/topicicons/pfeil.gif" alt="'.$_language->module['moved'].'">';
 			elseif($userID) {
 
-				$is_unread = mysqli_num_rows(safe_query("SELECT userID FROM ".PREFIX."user WHERE topics LIKE '%|".$dt['topicID']."|%' AND userID='".$userID."'"));
+				$is_unread = mysql_num_rows(safe_query("SELECT userID FROM ".PREFIX."user WHERE topics LIKE '%|".$dt['topicID']."|%' AND userID='".$userID."'"));
 
 				if($is_unread) {
 					if($dt['replys']>15 || $dt['views']>150) $folder=$onhoticon;
@@ -566,7 +566,7 @@ function showboard($board) {
 			$topictitle=str_break($topictitle, 40);
 
 			$poster='<a href="index.php?site=profile&amp;id='.$dt['userID'].'">'.getnickname($dt['userID']).'</a>';
-			if(isset($posterID) and isclanmember($posterID)) $member1=' <img src="images/icons/member.gif" alt="'.$_language->module['clanmember'].'" />';
+			if(isset($posterID) and isclanmember($posterID)) $member1=' <img src="images/icons/member.gif" alt="'.$_language->module['clanmember'].'">';
 			else $member1='';
 
 			$replys='0';
@@ -574,20 +574,20 @@ function showboard($board) {
 
 			if($dt['moveID']) { // MOVED TOPIC
 				$move=safe_query("SELECT * FROM ".PREFIX."forum_topics WHERE topicID='".$dt['moveID']."'");
-				$dm=mysqli_fetch_array($move);
+				$dm=mysql_fetch_array($move);
 
 				if($dm['replys']) $replys=$dm['replys'];
 				if($dm['views']) $views=$dm['views'];
 
-				$date=getformatdate($dm['lastdate']);
-				$time=getformattime($dm['lastdate']);
-				$today=getformatdate(time());
-				$yesterday = getformatdate(time()-3600*24);
+				$date=date("d.m.y", $dm['lastdate']);
+				$time=date("H:i", $dm['lastdate']);
+				$today=date("d.m.y", time());
+				$yesterday = date("d.m.y", time()-3600*24);
 				if($date==$today) $date=$_language->module['today'].", ".$time;
 				elseif($date==$yesterday && $date<$today) $date=$_language->module['yesterday'].", ".$time;
 				else $date=$date.", ".$time;
 				$lastposter='<a href="index.php?site=profile&amp;id='.$dm['lastposter'].'">'.getnickname($dm['lastposter']).'</a>';
-				if(isclanmember($dm['lastposter'])) $member=' <img src="images/icons/member.gif" alt="'.$_language->module['clanmember'].'" />';
+				if(isclanmember($dm['lastposter'])) $member=' <img src="images/icons/member.gif" alt="'.$_language->module['clanmember'].'">';
 				else $member='';
 				$link='<a href="index.php?site=forum_topic&amp;topic='.$dt['moveID'].'"><b>'.$_language->module['moved'].': '.$topictitle.'</b></a>';
 
@@ -596,15 +596,15 @@ function showboard($board) {
 				if($dt['replys']) $replys=$dt['replys'];
 				if($dt['views']) $views=$dt['views'];
 
-				$date=getformatdate($dt['lastdate']);
-				$time=getformattime($dt['lastdate']);
-				$today=getformatdate(time());
-				$yesterday = getformatdate(time()-3600*24);
+				$date=date("d.m.y", $dt['lastdate']);
+				$time=date("H:i", $dt['lastdate']);
+				$today=date("d.m.y", time());
+				$yesterday = date("d.m.y", time()-3600*24);
 				if($date==$today) $date=$_language->module['today'].", ".$time;
 				elseif($date==$yesterday && $date<$today) $date=$_language->module['yesterday'].", ".$time;
 				else $date=$date.", ".$time;
 				$lastposter='<a href="index.php?site=profile&amp;id='.$dt['lastposter'].'">'.getnickname($dt['lastposter']).'</a>';
-				if(isclanmember($dt['lastposter'])) $member=' <img src="images/icons/member.gif" alt="'.$_language->module['clanmember'].'" />';
+				if(isclanmember($dt['lastposter'])) $member=' <img src="images/icons/member.gif" alt="'.$_language->module['clanmember'].'">';
 				else $member='';
 				$link='<a href="index.php?site=forum_topic&amp;topic='.$dt['topicID'].'"><b>'.$topictitle.'</b></a>';
 			}
@@ -682,7 +682,7 @@ if(isset($_POST['submit']) || isset($_POST['movetopic']) || isset($_GET['addtopi
 
 		if(!isforumadmin($userID) and !ismoderator($userID, $board)) die($_language->module['no_access']);
 		
-		$numposts = mysqli_num_rows(safe_query("SELECT postID FROM ".PREFIX."forum_posts WHERE topicID='".$topicID."'"));
+		$numposts = mysql_num_rows(safe_query("SELECT postID FROM ".PREFIX."forum_posts WHERE topicID='".$topicID."'"));
 		$numposts --;
 		
 		safe_query("UPDATE ".PREFIX."forum_boards SET topics=topics-1, posts=posts-".$numposts." WHERE boardID='".$board."' ");
@@ -732,14 +732,14 @@ if(isset($_POST['submit']) || isset($_POST['movetopic']) || isset($_GET['addtopi
 
 		if(!isforumadmin($userID) and !ismoderator($userID, $board)) die($_language->module['no_access']);
 		$last = safe_query("SELECT * FROM ".PREFIX."forum_posts WHERE topicID = '$topicID' ");
-		$anz = mysqli_num_rows($last);
+		$anz = mysql_num_rows($last);
 		$deleted = false;
 		foreach($postID as $id) {
 			if($anz > 1) {
 				safe_query("DELETE FROM ".PREFIX."forum_posts WHERE postID='".(int)$id."' ");
 				safe_query("UPDATE ".PREFIX."forum_boards SET posts=posts-1 WHERE boardID='".$board."' ");
 				$last = safe_query("SELECT * FROM ".PREFIX."forum_posts WHERE topicID = '$topicID' ORDER BY date DESC LIMIT 0,1 ");
-				$dl = mysqli_fetch_array($last);
+				$dl = mysql_fetch_array($last);
 				safe_query("UPDATE ".PREFIX."forum_topics SET lastdate='".$dl['date']."', lastposter='".$dl['poster']."', lastpostID='".$ds['postID']."', replys=replys-1 WHERE topicID='$topicID' ");
 				$deleted=false;
 			}
@@ -764,16 +764,16 @@ if(isset($_POST['submit']) || isset($_POST['movetopic']) || isset($_GET['addtopi
 
 		if(!isanyadmin($userID) and !ismoderator($userID, getboardid($topicID))) die($_language->module['no_access']);
 
-		$di=mysqli_fetch_array(safe_query("SELECT writegrps, readgrps FROM ".PREFIX."forum_boards WHERE boardID='$toboard'"));
+		$di=mysql_fetch_array(safe_query("SELECT writegrps, readgrps FROM ".PREFIX."forum_boards WHERE boardID='$toboard'"));
 
 		$ergebnis=safe_query("SELECT * FROM ".PREFIX."forum_topics WHERE topicID='$topicID'");
-		$ds=mysqli_fetch_array($ergebnis);
+		$ds=mysql_fetch_array($ergebnis);
 
 		if(isset($_POST['movelink']) and $ds['boardID'] != $toboard) safe_query("INSERT INTO ".PREFIX."forum_topics (boardID, icon, userID, date, topic, lastdate, lastposter, replys, views, closed, moveID) values ('".$ds['boardID']."', '', '".$ds['userID']."', '".$ds['date']."', '".addslashes($ds['topic'])."', '".$ds['lastdate']."', '', '', '', '', '$topicID') ");
 
 		safe_query("UPDATE ".PREFIX."forum_topics SET boardID='$toboard', readgrps='".$di['readgrps']."', writegrps='".$di['writegrps']."' WHERE topicID='$topicID'");
 		safe_query("UPDATE ".PREFIX."forum_posts SET boardID='$toboard' WHERE topicID='$topicID'");
-		$post_num = mysqli_affected_rows()-1;
+		$post_num = mysql_affected_rows()-1;
 		safe_query("UPDATE ".PREFIX."forum_boards SET topics=topics+1 WHERE boardID='$toboard'");
 		safe_query("UPDATE ".PREFIX."forum_boards SET topics=topics-1 WHERE boardID='".$ds['boardID']."'");
 		safe_query("UPDATE ".PREFIX."forum_boards SET posts=posts+".$post_num." WHERE boardID='".$toboard."'");
@@ -790,15 +790,15 @@ if(isset($_POST['submit']) || isset($_POST['movetopic']) || isset($_GET['addtopi
 
 		$boards='';
 		$kath=safe_query("SELECT * FROM ".PREFIX."forum_categories ORDER BY sort");
-		while($dk=mysqli_fetch_array($kath)) {
+		while($dk=mysql_fetch_array($kath)) {
 			$ergebnis=safe_query("SELECT * FROM ".PREFIX."forum_boards WHERE category='$dk[catID]' ORDER BY sort");
-			while($db=mysqli_fetch_array($ergebnis)) {
+			while($db=mysql_fetch_array($ergebnis)) {
 				$boards.='<option value="'.$db['boardID'].'">'.$dk['name'].' - '.$db['name'].'</option>';
 			}
 		}
 
 		$ergebnis=safe_query("SELECT * FROM ".PREFIX."forum_boards WHERE category='0' ORDER BY sort");
-		while($ds=mysqli_fetch_array($ergebnis)) {
+		while($ds=mysql_fetch_array($ergebnis)) {
 			$boards.='<option value="'.$ds['boardID'].'">'.$ds['name'].'</option>';
 		}
 
@@ -833,7 +833,7 @@ if(isset($_POST['submit']) || isset($_POST['movetopic']) || isset($_GET['addtopi
 			$topic_sticky = (isset($_POST['sticky'])) ? '1' : '0';
 			$notify = (isset($_POST['notify'])) ? '1' : '0';
 	
-			$ds=mysqli_fetch_array(safe_query("SELECT readgrps, writegrps FROM ".PREFIX."forum_boards WHERE boardID='$board'"));
+			$ds=mysql_fetch_array(safe_query("SELECT readgrps, writegrps FROM ".PREFIX."forum_boards WHERE boardID='$board'"));
 	
 			$writer = 0;
 			if($ds['writegrps'] != "") {
@@ -848,30 +848,22 @@ if(isset($_POST['submit']) || isset($_POST['movetopic']) || isset($_GET['addtopi
 			}
 			else $writer = 1;
 			if(!$writer) die($_language->module['no_access_write']);
-			
-			$spamApi = SpamApi::getInstance();
-			$validation = $spamApi->validate($message);
 	
-			if($validation == SpamApi::NoSpam){
-				$date=time();
-				safe_query("INSERT INTO ".PREFIX."forum_topics ( boardID, readgrps, writegrps, userID, date, icon, topic, lastdate, lastposter, replys, views, closed, sticky ) values ( '$board', '".$ds['readgrps']."', '".$ds['writegrps']."', '$userID', '$date', '".$icon."', '".$topicname."', '$date', '$userID', '0', '0', '0', '$topic_sticky' ) ");
-				$id=mysqli_insert_id($_database);
-				safe_query("UPDATE ".PREFIX."forum_boards SET topics=topics+1 WHERE boardID='".$board."'");
-				safe_query("INSERT INTO ".PREFIX."forum_posts ( boardID, topicID, date, poster, message ) values( '$board', '$id', '$date', '$userID', '".$message."' ) ");
-		
-				// check if there are more than 1000 unread topics => delete oldest one
-				$dv = mysqli_fetch_array(safe_query("SELECT topics FROM ".PREFIX."user WHERE userID='".$userID."'"));
-				$array = explode('|', $dv['topics']);
-				if(count($array)>=1000) safe_query("UPDATE ".PREFIX."user SET topics='|".implode('|', array_slice($array, 2))."' WHERE userID='".$userID."'");
-				unset($array);
-		
-				safe_query("UPDATE ".PREFIX."user SET topics=CONCAT(topics, '".$id."|')"); // update unread topics, format: |oldstring| => |oldstring|topicID|
-		
-				if($notify) safe_query("INSERT INTO ".PREFIX."forum_notify (topicID, userID) VALUES ('$id', '$userID') ");
-			}
-			else{
-				safe_query("INSERT INTO ".PREFIX."forum_topics_spam ( boardID, userID, date, icon, topic, sticky, message, rating) values ( '$board', '$userID', '$date', '".$icon."', '".$topicname."', '$topic_sticky', '".$message."', '".$rating."') ");
-			}
+			$date=time();
+			safe_query("INSERT INTO ".PREFIX."forum_topics ( boardID, readgrps, writegrps, userID, date, icon, topic, lastdate, lastposter, replys, views, closed, sticky ) values ( '$board', '".$ds['readgrps']."', '".$ds['writegrps']."', '$userID', '$date', '".$icon."', '".$topicname."', '$date', '$userID', '0', '0', '0', '$topic_sticky' ) ");
+			$id=mysql_insert_id();
+			safe_query("UPDATE ".PREFIX."forum_boards SET topics=topics+1 WHERE boardID='".$board."'");
+			safe_query("INSERT INTO ".PREFIX."forum_posts ( boardID, topicID, date, poster, message ) values( '$board', '$id', '$date', '$userID', '".$message."' ) ");
+	
+			// check if there are more than 1000 unread topics => delete oldest one
+			$dv = safe_query("SELECT topics FROM ".PREFIX."user WHERE userID='".$userID."'");
+			$array = explode('|', $dv['topics']);
+			if(count($array)>=1000) safe_query("UPDATE ".PREFIX."user SET topics='|".implode('|', array_slice($array, 2))."' WHERE userID='".$userID."'");
+			unset($array);
+	
+			safe_query("UPDATE ".PREFIX."user SET topics=CONCAT(topics, '".$id."|')"); // update unread topics, format: |oldstring| => |oldstring|topicID|
+	
+			if($notify) safe_query("INSERT INTO ".PREFIX."forum_notify (topicID, userID) VALUES ('$id', '$userID') ");
 			header("Location: index.php?site=forum&board=".$board."");
 		}
 		else{
@@ -886,7 +878,7 @@ if(isset($_POST['submit']) || isset($_POST['movetopic']) || isset($_GET['addtopi
 		echo $title_messageboard;
 
 		$ergebnis = safe_query("SELECT * FROM ".PREFIX."forum_boards WHERE boardID='$board' ");
-		$db = mysqli_fetch_array($ergebnis);
+		$db = mysql_fetch_array($ergebnis);
 		$boardname = $db['name'];
 
 		$writer = 0;
@@ -921,7 +913,7 @@ if(isset($_POST['submit']) || isset($_POST['movetopic']) || isset($_GET['addtopi
 				$bg2=BG_2;
 
 				
-				$time=getformattime(time());
+				$time=date("H:i", time());
 				$date="today";
 				$message = cleartext(stripslashes(str_replace(array('\r\n', '\n'),array("\n","\n" ), $_POST['message'])));
 				$message = toggle($message, 'xx');
@@ -931,35 +923,35 @@ if(isset($_POST['submit']) || isset($_POST['movetopic']) || isset($_GET['addtopi
 				$topicname = stripslashes($_POST['topicname']);
 				if(!isset($postID)) $postID = '';
 
-				if(isclanmember($userID)) $member=' <img src="images/icons/member.gif" alt="'.$_language->module['clanmember'].'" />';
+				if(isclanmember($userID)) $member=' <img src="images/icons/member.gif" alt="'.$_language->module['clanmember'].'">';
 				else $member='';
-				if(getavatar($userID)) $avatar='<img src="images/avatars/'.getavatar($userID).'" alt="" />';
+				if(getavatar($userID)) $avatar='<img src="images/avatars/'.getavatar($userID).'">';
 				else $avatar='';
 				if(getsignatur($userID)) $signatur=cleartext(getsignatur($userID));
 				else $signatur='';
-				if(getemail($userID) and !getemailhide($userID)) $email = '<a href="mailto:'.mail_protect(getemail($userID)).'"><img src="images/icons/email.gif" border="0" alt="email" /></a>';
+				if(getemail($userID) and !getemailhide($userID)) $email = '<a href="mailto:'.mail_protect(getemail($userID)).'"><img src="images/icons/email.gif" border="0" alt="email"></a>';
 				else $email='';
 				
 				$pm='';
 				$buddy='';
-				$statuspic='<img src="images/icons/online.gif" width="7" height="7" alt="online" />';
+				$statuspic='<img src="images/icons/online.gif" width="7" height="7" alt="online">';
 				
 				if(!validate_url(gethomepage($userID))) $hp='';
-				else $hp='<a href="'.gethomepage($userID).'" target="_blank"><img src="images/icons/hp.gif" border="0" width="14" height="14" alt="'.$_language->module['homepage'].'" /></a>';
+				else $hp='<a href="'.gethomepage($userID).'" target="_blank"><img src="images/icons/hp.gif" border="0" width="14" height="14" alt="'.$_language->module['homepage'].'"></a>';
 				
 				$registered = getregistered($userID);
 				$posts = getuserforumposts($userID);
 				if(isforumadmin($userID) || ismoderator($userID, $board)) {
 					if(ismoderator($userID, $board)) {
 						$usertype=$_language->module['moderator'];
-						$rang='<img src="images/icons/ranks/moderator.gif" alt="" />';
+						$rang='<img src="images/icons/ranks/moderator.gif">';
 						if(isset($_POST['sticky'])){
 							$_sticky = 'checked="checked"';
 						}
 					}
 					if(isforumadmin($userID)) {
 						$usertype="Administrator";
-						$rang='<img src="images/icons/ranks/admin.gif" alt="" />';
+						$rang='<img src="images/icons/ranks/admin.gif">';
 						if(isset($_POST['sticky'])){
 							$_sticky = 'checked="checked"';
 						}
@@ -967,9 +959,9 @@ if(isset($_POST['submit']) || isset($_POST['movetopic']) || isset($_GET['addtopi
 				}
 				else {
 					$ergebnis=safe_query("SELECT * FROM ".PREFIX."forum_ranks WHERE $posts >= postmin AND $posts <= postmax");
-					$ds=mysqli_fetch_array($ergebnis);
+					$ds=mysql_fetch_array($ergebnis);
 					$usertype=$ds['rank'];
-					$rang='<img src="images/icons/ranks/'.$ds['pic'].'" alt="" />';
+					$rang='<img src="images/icons/ranks/'.$ds['pic'].'">';
 				}
 				$actions = '';
 				$quote = '';
@@ -995,10 +987,10 @@ if(isset($_POST['submit']) || isset($_POST['movetopic']) || isset($_GET['addtopi
 
 			if(isforumadmin($userID) || ismoderator($userID, $board)) {
 				if(isset($_sticky)){
-					$chk_sticky = '<br />'."\n".' <input class="input" type="checkbox" name="sticky" value="1" '.$_sticky.' /> '.$_language->module['make_sticky'];
+					$chk_sticky = '<input class="input" type="checkbox" name="sticky" value="1" '.$_sticky.'> '.$_language->module['make_sticky'];
 				}
 				else {
-					$chk_sticky = '<br />'."\n".' <input class="input" type="checkbox" name="sticky" value="1" /> '.$_language->module['make_sticky'];
+					$chk_sticky = '<input class="input" type="checkbox" name="sticky" value="1"> '.$_language->module['make_sticky'];
 				}
 			}
 			else {

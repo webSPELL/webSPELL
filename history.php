@@ -31,8 +31,8 @@ eval ("\$title_history = \"".gettemplate("title_history")."\";");
 echo $title_history;
 
 $ergebnis=safe_query("SELECT * FROM ".PREFIX."history");
-if(mysqli_num_rows($ergebnis)) {
-	$ds=mysqli_fetch_array($ergebnis);
+if(mysql_num_rows($ergebnis)) {
+	$ds=mysql_fetch_array($ergebnis);
 
 	$history=htmloutput($ds['history']);
 	$history=toggle($history, 1);

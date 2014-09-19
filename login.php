@@ -29,13 +29,13 @@ $_language->read_module('login');
 
 if($loggedin) {
 	$username='<a href="index.php?site=profile&amp;id='.$userID.'"><b>'.strip_tags(getnickname($userID)).'</b></a>';
-	if(isanyadmin($userID)) $admin='&#8226; <a href="admin/admincenter.php" target="_blank">'.$_language->module['admin'].'</a><br />';
+	if(isanyadmin($userID)) $admin='<li class="divider"></li><li><a href="admin/admincenter.php" target="_blank" class="alert-danger">'.$_language->module['admin'].'</a></li>';
 	else $admin='';
-	if(isclanmember($userID) or iscashadmin($userID)) $cashbox='&#8226; <a href="index.php?site=cash_box">'.$_language->module['cash-box'].'</a><br />';
+	if(isclanmember($userID) or iscashadmin($userID)) $cashbox='<li><a href="index.php?site=cash_box" class="alert-danger">'.$_language->module['cash-box'].'</a></li><li class="divider"></li>';
 	else $cashbox='';
 	$anz=getnewmessages($userID);
 	if($anz) {
-		$newmessages=' (<b>'.$anz.'</b>)';
+		$newmessages=$anz;
 	}
 	else $newmessages='';
 	if($getavatar = getavatar($userID)) $l_avatar='<img src="images/avatars/'.$getavatar.'" alt="Avatar" />';

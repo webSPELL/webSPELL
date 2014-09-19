@@ -36,7 +36,7 @@ function vote($poll) {
 
 	if($poll) $lastpoll = safe_query("SELECT * FROM ".PREFIX."poll WHERE aktiv='1' AND laufzeit>".time()." AND intern<=".isclanmember($userID)." and pollID='".$poll."' LIMIT 0,1");
 	else {
-		$num = mysqli_num_rows(safe_query("SELECT * FROM ".PREFIX."poll WHERE aktiv='1' AND laufzeit>".time()." AND intern<=".isclanmember($userID).""));
+		$num = mysql_num_rows(safe_query("SELECT * FROM ".PREFIX."poll WHERE aktiv='1' AND laufzeit>".time()." AND intern<=".isclanmember($userID).""));
 		if($num) {
 			$start = rand(0,($num-1));
 			$lastpoll = safe_query("SELECT * FROM ".PREFIX."poll WHERE aktiv='1' AND laufzeit>".time()." AND intern<=".isclanmember($userID)." ORDER BY pollID DESC LIMIT ".$start.",".($start+1)."");
@@ -47,11 +47,11 @@ function vote($poll) {
 		}
 	}
 
-	$anz = mysqli_num_rows($lastpoll);
-	$ds = mysqli_fetch_array($lastpoll);
+	$anz = mysql_num_rows($lastpoll);
+	$ds = mysql_fetch_array($lastpoll);
 	if($anz) {
 
-		$anz = mysqli_num_rows(safe_query("SELECT pollID FROM `".PREFIX."poll` WHERE pollID='".$ds['pollID']."' AND hosts LIKE '%".$_SERVER['REMOTE_ADDR']."%' AND intern<=".isclanmember($userID).""));
+		$anz = mysql_num_rows(safe_query("SELECT pollID FROM `".PREFIX."poll` WHERE pollID='".$ds['pollID']."' AND hosts LIKE '%".$_SERVER['REMOTE_ADDR']."%' AND intern<=".isclanmember($userID).""));
 		$anz_user = false;
 		if($userID) {
 			$user_ids = explode(";", $ds['userIDs']);
@@ -74,7 +74,7 @@ function vote($poll) {
 			}
 
 			$votes = safe_query("SELECT * FROM ".PREFIX."poll_votes WHERE pollID='".$ds['pollID']."'");
-			$dv = mysqli_fetch_array($votes);
+			$dv = mysql_fetch_array($votes);
 			$gesamtstimmen = $dv['o1'] + $dv['o2'] + $dv['o3'] + $dv['o4'] + $dv['o5'] + $dv['o6'] + $dv['o7'] + $dv['o8'] + $dv['o9'] + $dv['o10'];
 			
 			eval("\$poll_voted_head = \"".gettemplate("poll_voted_head")."\";");

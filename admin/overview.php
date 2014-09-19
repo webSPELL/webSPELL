@@ -32,7 +32,7 @@ if(!isanyadmin($userID) OR mb_substr(basename($_SERVER['REQUEST_URI']),0,15) != 
 include '../version.php';
 
 $username='<b>'.getnickname($userID).'</b>';
-$lastlogin = getformatdatetime($_SESSION['ws_lastlogin']);
+$lastlogin = date('d.m.Y, H:i',$_SESSION['ws_lastlogin']);
 
 /*$wsversion = file_get_contents("http://update.webspell.org/index.php?show=version");
 if($wsversion == $version) {
@@ -42,7 +42,7 @@ if($wsversion == $version) {
 }*/
 $phpversion = phpversion() < '4.3' ? '<font color="#FF0000">'.phpversion().'</font>' : '<font color="#008000">'.phpversion().'</font>';
 $zendversion = zend_version() < '1.3' ? '<font color="#FF0000">'.zend_version().'</font>' : '<font color="#008000">'.zend_version().'</font>';
-$mysqlversion = mysqli_get_server_version($_database) < '40000' ? '<font color="#FF0000">'.mysqli_get_server_info($_database).'</font>' : '<font color="#008000">'.mysqli_get_server_info($_database).'</font>';
+$mysqlversion = mysql_get_server_info() < '4.0' ? '<font color="#FF0000">'.mysql_get_server_info().'</font>' : '<font color="#008000">'.mysql_get_server_info().'</font>';
 $get_phpini_path = get_cfg_var('cfg_file_path');
 $get_allow_url_fopen= get_cfg_var('allow_url_fopen') ? '<font color="#008000">'.$_language->module['on'].'</font>' : '<font color="#FF0000">'.$_language->module['off'].'</font>';
 $get_allow_url_include= get_cfg_var('allow_url_include') ? '<font color="#FF0000">'.$_language->module['on'].'</font>' : '<font color="#008000">'.$_language->module['off'].'</font>';
@@ -63,16 +63,15 @@ if(function_exists("gd_info")) {
 	$gdinfo = gd_info();
 	$get_gd_info = '<font color="#008000">'.$_language->module['enable'].'</font>';
 	$get_gdtypes = array();
-	if (isset($gdinfo['FreeType Support']) && $gdinfo['FreeType Support'] == true) { $get_gdtypes[] = "FreeType"; }
-	if (isset($gdinfo['T1Lib Support']) && $gdinfo['T1Lib Support'] == true) { $get_gdtypes[] = "T1Lib"; }
-	if (isset($gdinfo['GIF Read Support']) && $gdinfo['GIF Read Support'] == true) { $get_gdtypes[] = "*.gif ".$_language->module['read']; }
-	if (isset($gdinfo['GIF Create Support']) && $gdinfo['GIF Create Support'] == true) { $get_gdtypes[] = "*.gif ".$_language->module['create']; }
-	if (isset($gdinfo['JPG Support']) && $gdinfo['JPG Support'] == true) { $get_gdtypes[] = "*.jpg"; }
-  elseif (isset($gdinfo['JPEG Support']) && $gdinfo['JPEG Support'] == true) { $get_gdtypes[] = "*.jpg"; }
-	if (isset($gdinfo['PNG Support']) && $gdinfo['PNG Support'] == true) { $get_gdtypes[] = "*.png"; }
-	if (isset($gdinfo['WBMP Support']) && $gdinfo['WBMP Support'] == true) { $get_gdtypes[] = "*.wbmp"; }
-	if (isset($gdinfo['XBM Support']) && $gdinfo['XBM Support'] == true) { $get_gdtypes[] = "*.xbm"; }
-	if (isset($gdinfo['XPM Support']) && $gdinfo['XPM Support'] == true) { $get_gdtypes[] = "*.xpm"; }
+	if (isset($gdinfo['FreeType Support'])) { $get_gdtypes[] = "FreeType"; }
+	if (isset($gdinfo['T1Lib Support'])) { $get_gdtypes[] = "T1Lib"; }
+	if (isset($gdinfo['GIF Read Support'])) { $get_gdtypes[] = "*.gif ".$_language->module['read']; }
+	if (isset($gdinfo['GIF Create Support'])) { $get_gdtypes[] = "*.gif ".$_language->module['create']; }
+	if (isset($gdinfo['JPG Support'])) { $get_gdtypes[] = "*.jpg"; }
+	if (isset($gdinfo['PNG Support'])) { $get_gdtypes[] = "*.png"; }
+	if (isset($gdinfo['WBMP Support'])) { $get_gdtypes[] = "*.wbmp"; }
+	if (isset($gdinfo['XBM Support'])) { $get_gdtypes[] = "*.xbm"; }
+	if (isset($gdinfo['XPM Support'])) { $get_gdtypes[] = "*.xpm"; }
 	$get_gdtypes = implode(", ",$get_gdtypes);
 }
 else {
@@ -81,7 +80,7 @@ else {
 	$get_gdtypes = '---';
 }
 $get = safe_query("SELECT DATABASE()");
-$ret = mysqli_fetch_array($get);
+$ret = mysql_fetch_array($get);
 $db = $ret[0];
 
 echo '<h1>&curren; '.$_language->module['welcome'].'</h1>';

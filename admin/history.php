@@ -35,13 +35,13 @@ if(isset($_POST['submit'])) {
 	$history = $_POST['message'];
 	$CAPCLASS = new Captcha;
 	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
-		if(mysqli_num_rows(safe_query("SELECT * FROM ".PREFIX."history")))
+		if(mysql_num_rows(safe_query("SELECT * FROM ".PREFIX."history")))
 			safe_query("UPDATE ".PREFIX."history SET history='".$history."'");
 		else safe_query("INSERT INTO ".PREFIX."history (history) values( '".$history."') ");
 	} else echo $_language->module['transaction_invalid'];
 }
 	$ergebnis=safe_query("SELECT * FROM ".PREFIX."history");
-	$ds=mysqli_fetch_array($ergebnis);
+	$ds=mysql_fetch_array($ergebnis);
 	$CAPCLASS = new Captcha;
 	$CAPCLASS->create_transaction();
 	$hash = $CAPCLASS->get_hash();

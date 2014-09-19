@@ -38,14 +38,14 @@ if($action=="show") {
 	else $getsquad = '';
 
 	$ergebnis=safe_query("SELECT * FROM ".PREFIX."squads ".$getsquad." ORDER BY sort");
-	while($ds=mysqli_fetch_array($ergebnis)) {
+	while($ds=mysql_fetch_array($ergebnis)) {
 
-		$anzmembers=mysqli_num_rows(safe_query("SELECT sqmID FROM ".PREFIX."squads_members WHERE squadID='".$ds['squadID']."'"));
+		$anzmembers=mysql_num_rows(safe_query("SELECT sqmID FROM ".PREFIX."squads_members WHERE squadID='".$ds['squadID']."'"));
 		if($anzmembers == 1) $anzmembers = $anzmembers.' '.$_language->module['member'];
 		else $anzmembers = $anzmembers.' '.$_language->module['members'];
-		$name='&not; <b>'.$ds['name'].'</b>';
+		$name=$ds['name'];
 		$squadID=$ds['squadID'];
-		$backlink='&raquo; <a href="index.php?site=squads"><b>'.$_language->module['back_squad_overview'].'</b></a>';
+		$backlink='<a href="index.php?site=squads">'.$_language->module['back_squad_overview'].'</a>';
 		$results='';
 		$awards='';
 		$challenge='';
@@ -54,9 +54,9 @@ if($action=="show") {
 		$border=BORDER;
 	
 		if($ds['gamesquad']) {
-			$results='[ <a href="index.php?site=clanwars&amp;action=showonly&amp;id='.$squadID.'&amp;sort=date&amp;only=squad">'.$_language->module['results'].'</a> | ';
-			$awards='<a href="index.php?site=awards&amp;action=showsquad&amp;squadID='.$squadID.'&amp;page=1">'.$_language->module['awards'].'</a> | ';
-			$challenge='<a href="index.php?site=challenge">'.$_language->module['challenge'].'</a> ]';
+			$results='<a href="index.php?site=clanwars&amp;action=showonly&amp;id='.$squadID.'&amp;sort=date&amp;only=squad" class="btn btn-primary">'.$_language->module['results'].'</a>';
+			$awards='<a href="index.php?site=awards&amp;action=showsquad&amp;squadID='.$squadID.'&amp;page=1" class="btn btn-primary">'.$_language->module['awards'].'</a>';
+			$challenge='<a href="index.php?site=challenge" class="btn btn-primary">'.$_language->module['challenge'].'</a>';
 			$games = $ds['games'];
 			if($games) {
 				$games = str_replace(";", ", ", $games);
@@ -69,7 +69,7 @@ if($action=="show") {
 		echo $squads_head;
 
 		$i=1;
-		while($dm=mysqli_fetch_array($member)) {
+		while($dm=mysql_fetch_array($member)) {
 
 			if($i%2) {
 				$bg1=BG_1;
@@ -100,16 +100,16 @@ if($action=="show") {
 
 			$icq = $dm['icq'];
 			if(getemailhide($dm['userID'])) $email = '';
-			else $email = '<a href="mailto:'.mail_protect($dm['email']).'"><img src="images/icons/email.gif" border="0" alt="'.$_language->module['email'].'" /></a>';
+			else $email = '<a href="mailto:'.mail_protect($dm['email']).'"><img src="images/icons/email.gif" alt="'.$_language->module['email'].'"></a>';
 
 			$pm = '';
 			$buddy = '';
 			if ($loggedin && $dm['userID'] != $userID) {
-				$pm='<a href="index.php?site=messenger&amp;action=touser&amp;touser='.$dm['userID'].'"><img src="images/icons/pm.gif" border="0" alt="'.$_language->module['messenger'].'" /></a>';
+				$pm='<a href="index.php?site=messenger&amp;action=touser&amp;touser='.$dm['userID'].'"><img src="images/icons/pm.gif" alt="'.$_language->module['messenger'].'"></a>';
 
-				if (isignored($userID, $dm['userID'])) $buddy='<a href="buddys.php?action=readd&amp;id='.$dm['userID'].'&amp;userID='.$userID.'"><img src="images/icons/buddy_readd.gif" border="0" alt="'.$_language->module['back_buddy'].'" /></a>';
-				elseif(isbuddy($userID, $dm['userID'])) $buddy='<a href="buddys.php?action=ignore&amp;id='.$dm['userID'].'&amp;userID='.$userID.'"><img src="images/icons/buddy_ignore.gif" border="0" alt="'.$_language->module['ignore'].'" /></a>';
-				else $buddy='<a href="buddys.php?action=add&amp;id='.$dm['userID'].'&amp;userID='.$userID.'"><img src="images/icons/buddy_add.gif" border="0" alt="'.$_language->module['add_buddy'].'" /></a>';
+				if (isignored($userID, $dm['userID'])) $buddy='<a href="buddys.php?action=readd&amp;id='.$dm['userID'].'&amp;userID='.$userID.'"><img src="images/icons/buddy_readd.gif" alt="'.$_language->module['back_buddy'].'"></a>';
+				elseif(isbuddy($userID, $dm['userID'])) $buddy='<a href="buddys.php?action=ignore&amp;id='.$dm['userID'].'&amp;userID='.$userID.'"><img src="images/icons/buddy_ignore.gif" alt="'.$_language->module['ignore'].'"></a>';
+				else $buddy='<a href="buddys.php?action=add&amp;id='.$dm['userID'].'&amp;userID='.$userID.'"><img src="images/icons/buddy_add.gif" alt="'.$_language->module['add_buddy'].'"></a>';
 			}
 
 			if(isonline($dm['userID'])=="offline") $statuspic='<img src="images/icons/offline.gif" alt="offline" />';
@@ -140,7 +140,7 @@ else {
 	$ergebnis=safe_query("SELECT * FROM ".PREFIX."squads ".$getsquad." ORDER BY sort");
 	
   $i=1;
-  while($ds=mysqli_fetch_array($ergebnis)) {
+  while($ds=mysql_fetch_array($ergebnis)) {
   
     if($i%2) {
       $bg1=BG_1;
@@ -151,23 +151,23 @@ else {
       $bg2=BG_4;
     }
     
-    $anzmembers=mysqli_num_rows(safe_query("SELECT sqmID FROM ".PREFIX."squads_members WHERE squadID='".$ds['squadID']."'"));
+    $anzmembers=mysql_num_rows(safe_query("SELECT sqmID FROM ".PREFIX."squads_members WHERE squadID='".$ds['squadID']."'"));
 		if($anzmembers == 1) $anzmembers = $anzmembers.' '.$_language->module['member'];
 		else $anzmembers = $anzmembers.' '.$_language->module['members'];
-		$name='&not; <a href="index.php?site=squads&amp;action=show&amp;squadID='.$ds['squadID'].'"><b>'.$ds['name'].'</b></a>';
-		if($ds['icon']) $icon='<a href="index.php?site=squads&amp;action=show&amp;squadID='.$ds['squadID'].'"><img src="images/squadicons/'.$ds['icon'].'" border="0" alt="'.htmlspecialchars($ds['name']).'" /></a>';
+		$name='<a href="index.php?site=squads&amp;action=show&amp;squadID='.$ds['squadID'].'">'.$ds['name'].'</a>';
+		if($ds['icon']) $icon='<a href="index.php?site=squads&amp;action=show&amp;squadID='.$ds['squadID'].'"><img src="images/squadicons/'.$ds['icon'].'" alt="'.htmlspecialchars($ds['name']).'"></a>';
 		else $icon='';
 		$info=htmloutput($ds['info']);
-		$details='&raquo; <a href="index.php?site=squads&amp;action=show&amp;squadID='.$ds['squadID'].'"><b>'.$_language->module['show_details'].'</b></a>';
+		$details='<a href="index.php?site=squads&amp;action=show&amp;squadID='.$ds['squadID'].'"><b>'.$_language->module['show_details'].'</b></a>';
 		$squadID=$ds['squadID'];
 		$results='';
 		$awards='';
 		$challenge='';
 
 		if($ds['gamesquad']) {
-			$results='[ <a href="index.php?site=clanwars&amp;action=showonly&amp;id='.$squadID.'&amp;sort=date&amp;only=squad">'.$_language->module['results'].'</a> | ';
-			$awards='<a href="index.php?site=awards&amp;action=showsquad&amp;squadID='.$squadID.'&amp;page=1">'.$_language->module['awards'].'</a> | ';
-			$challenge='<a href="index.php?site=challenge">'.$_language->module['challenge'].'</a> ]';
+			$results='<a href="index.php?site=clanwars&amp;action=showonly&amp;id='.$squadID.'&amp;sort=date&amp;only=squad" class="btn btn-primary">'.$_language->module['results'].'</a>';
+			$awards='<a href="index.php?site=awards&amp;action=showsquad&amp;squadID='.$squadID.'&amp;page=1" class="btn btn-primary">'.$_language->module['awards'].'</a>';
+			$challenge='<a href="index.php?site=challenge" class="btn btn-primary">'.$_language->module['challenge'].'</a>';
 		}
 
 		$bgcat=BGCAT;

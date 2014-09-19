@@ -45,9 +45,7 @@ else {
 		$usertext = $_POST['usertext'];
 		$firstname = $_POST['firstname'];
 		$lastname = $_POST['lastname'];
-		$b_day = $_POST['b_day'];
-		$b_month = $_POST['b_month'];
-		$b_year = $_POST['b_year'];
+		$birthday = date("Y-m-d",strtotime($_POST['b_day']));
 		$sex = $_POST['sex'];
 		$flag = preg_replace("/[^a-zA-Z0-9\s]/", "", $_POST['flag']);
 		$town = $_POST['town'];
@@ -63,23 +61,18 @@ else {
 		$mainboard = $_POST['mainboard'];
 		$monitor = $_POST['monitor'];
 		$ram = $_POST['ram'];
-		$hdd = $_POST['hdd'];
 		$graphiccard = $_POST['graphiccard'];
 		$soundcard = $_POST['soundcard'];
 		$connection = $_POST['connection'];
 		$keyboard = $_POST['keyboard'];
 		$mouse = $_POST['mouse'];
 		$mousepad = $_POST['mousepad'];
-		$headset = $_POST['headset'];
 		$newsletter = $_POST['newsletter'];
 		$homepage = str_replace('http://', '', $_POST['homepage']);
 		$pm_mail = $_POST['pm_mail'];
 		$avatar = $_FILES['avatar'];
 		$userpic = $_FILES['userpic'];
 		$language = $_POST['language'];
-		$date_format = $_POST['date_format'];
-		$time_format = $_POST['time_format'];
-		$user_gbook = $_POST['user_guestbook'];
 		$id = $userID;
 		
 		$error_array = array();
@@ -188,31 +181,21 @@ else {
 			}
 		}
 
-		$birthday = $b_year.'-'.$b_month.'-'.$b_day;
-		
-		
-		if(empty($usernamenew)){
-			$error_array[] = $_language->module['you_have_to_username'];
-		}
-		if(empty($nickname)){
-			$error_array[] = $_language->module['you_have_to_nickname'];
-		}
-
 		$qry = "SELECT userID FROM ".PREFIX."user WHERE username = '".$usernamenew."' AND userID != ".$userID." LIMIT 0,1";
-		if(mysqli_num_rows(safe_query($qry))) {
+		if(mysql_num_rows(safe_query($qry))) {
 			$error_array[] = $_language->module['username_aleady_in_use'];
 		}
 		
 		$qry = "SELECT userID FROM ".PREFIX."user WHERE nickname = '".$nickname."' AND userID!=".$userID." LIMIT 0,1";
-		if(mysqli_num_rows(safe_query($qry))) {
+		if(mysql_num_rows(safe_query($qry))) {
 				$error_array[] = $_language->module['nickname_already_in_use'];
 		}
 
 		if(count($error_array)) 
 		{
 			$fehler=implode('<br />&#8226; ', $error_array);
-			$showerror = '<div class="errorbox">
-			  <b>'.$_language->module['errors_there'].':</b><br /><br />
+			$showerror = '<div class="alert alert-danger">
+			  <b>'.$_language->module['errors_there'].':</b><br><br>
 			  &#8226; '.$fehler.'
 			</div>';
 		}
@@ -239,7 +222,6 @@ else {
 							cpu='".$cpu."',
 							mainboard='".$mainboard."',
 							ram='".$ram."',
-							hdd='".$hdd."',
 							monitor='".$monitor."',
 							graphiccard='".$graphiccard."',
 							soundcard='".$soundcard."',
@@ -247,15 +229,11 @@ else {
 							keyboard='".$keyboard."',
 							mouse='".$mouse."',
 							mousepad='".$mousepad."',
-							headset='".$headset."',
 							mailonpm='".$pm_mail."',
 							newsletter='".$newsletter."',
 							homepage='".$homepage."',
 							about='".$about."',
-							date_format='".$date_format."',
-							time_format='".$time_format."',
-							language='".$language."',
-							user_guestbook='".$user_gbook."'
+							language='".$language."'
 						WHERE 
 							userID='".$id."'");
 	
@@ -284,7 +262,7 @@ else {
 		$id = $userID;
 
 		$ergebnis = safe_query("SELECT password FROM ".PREFIX."user WHERE userID='".$id."'");
-		$ds = mysqli_fetch_array($ergebnis);
+		$ds = mysql_fetch_array($ergebnis);
 
 		if(!(mb_strlen(trim($oldpwd)))) {
 			$error = $_language->module['forgot_old_pw'];
@@ -321,7 +299,7 @@ else {
 
 		$bg1 = BG_1;
 		$bg2 = BG_2;
-    	$bg3 = BG_3;
+    $bg3 = BG_3;
 		$bg4 = BG_4;
 		$border = BORDER;
 
@@ -332,14 +310,14 @@ else {
 	
 	elseif(isset($_POST['savemail'])){
 
-		$activationkey = md5(RandPass(20));
+		$activationkey = createkey(20);
 		$activationlink = 'http://'.$hp_url.'/index.php?site=register&mailkey='.$activationkey;
 		$pwd = $_POST['oldpwd'];
 		$mail1 = $_POST['mail1'];
 		$mail2 = $_POST['mail2'];
 
 		$ergebnis = safe_query("SELECT password, username FROM ".PREFIX."user WHERE userID='".$userID."'");
-		$ds = mysqli_fetch_array($ergebnis);
+		$ds = mysql_fetch_array($ergebnis);
 		$username = $ds['username'];
 		if(!(mb_strlen(trim($pwd)))) {
 			$error = $_language->module['forgot_old_pw'];
@@ -381,9 +359,9 @@ else {
 	
 	else {
 		$ergebnis = safe_query("SELECT * FROM ".PREFIX."user WHERE userID='".$userID."'");
-		$anz = mysqli_num_rows($ergebnis);
+		$anz = mysql_num_rows($ergebnis);
 		if($anz) {
-			$ds = mysqli_fetch_array($ergebnis);
+			$ds = mysql_fetch_array($ergebnis);
 			$flag = '[flag]'.$ds['country'].'[/flag]';
 			$country = flags($flag);
 			$country = str_replace("<img","<img id='county'",$country);
@@ -395,42 +373,8 @@ else {
 			else $pm_mail = '<option value="1">'.$_language->module['yes'].'</option><option value="0" selected="selected">'.$_language->module['no'].'</option>';
 			if($ds['email_hide']) $email_hide = ' checked="checked"';
 			else $email_hide = '';
-			$format_date = "<option value='d.m.y'>DD.MM.YY</option>
-							<option value='d.m.Y'>DD.MM.YYYY</option>
-							<option value='j.n.y'>D.M.YY</option>
-							<option value='j.n.Y'>D.M.YYYY</option>
-							<option value='y-m-d'>YY-MM-DD</option>
-							<option value='Y-m-d'>YYYY-MM-DD</option>
-							<option value='y/m/d'>YY/MM/DD</option>
-							<option value='Y/m/d'>YYYY/MM/DD</option>";
-			$format_date = str_replace("value='".$ds['date_format']."'","value='".$ds['date_format']."' selected='selected'",$format_date);
-	
-			$format_time = "<option value='G:i'>H:MM</option>
-							<option value='H:i'>HH:MM</option>
-							<option value='G:i a'>H:MM am/pm</option>
-							<option value='H:i a'>HH:MM am/pm</option>
-							<option value='G:i A'>H:MM AM/PM</option>
-							<option value='H:i A'>HH:MM AM/PM</option>
-							<option value='G:i:s'>H:MM:SS</option>
-							<option value='H:i:s'>HH:MM:SS</option>
-							<option value='G:i:s a'>H:MM:SS am/pm</option>
-							<option value='H:i:s a'>HH:MM:SS am/pm</option>
-							<option value='G:i:s A'>H:MM:SS AM/PM</option>
-							<option value='H:i:s A'>HH:MM:SS AM/PM</option>";
-			$format_time = str_replace("value='".$ds['time_format']."'","value='".$ds['time_format']."' selected='selected'",$format_time);
-			$user_gbook = "<option value='0'>".$_language->module['deactivated']."</option><option value='1'>".$_language->module['activated']."</option>";
-			$user_gbook = str_replace("value='".$ds['user_guestbook']."'","value='".$ds['user_guestbook']."' selected='selected'",$user_gbook);
-			$user_gbook_select = '';
-			if($user_guestbook) {
-				$user_gbook_select = '<tr bgcolor="'.BG_2.'">
-										<td align="right" bgcolor="'.BG_1.'">'.$_language->module['guestbook'].'</td>
-										<td bgcolor="'.BG_2.'"><select name="user_guestbook">'.$user_gbook.'</select></td>
-									  </tr>';
-			}
-			$b_day = mb_substr($ds['birthday'],8,2);
-			$b_month = mb_substr($ds['birthday'],5,2);
-			$b_year = mb_substr($ds['birthday'],0,4);
-			$countries=getcountries();
+			$b_day = $birthday = mb_substr(trim($ds['birthday']),0,10);
+			$countries = str_replace(" selected=\"selected\"", "", $countries);
 			$countries = str_replace('value="'.$ds['country'].'"', 'value="'.$ds['country'].'" selected="selected"', $countries);
 			if($ds['avatar']) $viewavatar = '&#8226; <a href="javascript:MM_openBrWindow(\'images/avatars/'.$ds['avatar'].'\',\'avatar\',\'width=120,height=120\')">'.$_language->module['avatar'].'</a>';
 			else $viewavatar = $_language->module['avatar'];
@@ -448,7 +392,6 @@ else {
 			$cpu = clearfromtags($ds['cpu']);
 			$mainboard = clearfromtags($ds['mainboard']);
 			$ram = clearfromtags($ds['ram']);
-			$hdd = clearfromtags($ds['hdd']);
 			$monitor = clearfromtags($ds['monitor']);
 			$graphiccard = clearfromtags($ds['graphiccard']);
 			$soundcard = clearfromtags($ds['soundcard']);
@@ -456,7 +399,6 @@ else {
 			$keyboard = clearfromtags($ds['keyboard']);
 			$mouse = clearfromtags($ds['mouse']);
 			$mousepad = clearfromtags($ds['mousepad']);
-			$headset = clearfromtags($ds['headset']);
 			$clanhp = getinput($ds['clanhp']);
 			$about = getinput($ds['about']);
 			$nickname = $ds['nickname'];
@@ -464,44 +406,33 @@ else {
 			$email = getinput($ds['email']);
 			$icq = getinput($ds['icq']);
 			$homepage = getinput($ds['homepage']);
-
-			// Select all possible languages
 			$langdirs = '';
-			$filepath = "./languages/";
-
+			$filepath = "languages/";
+			
+			// Select all possible languages
 			$mysql_langs = array();
 			$query = safe_query("SELECT lang, language FROM ".PREFIX."news_languages");
-			while($sql_lang = mysqli_fetch_assoc($query)){
-				$mysql_langs[$sql_lang['lang']] = $sql_lang['language'];
+			while($dx = mysql_fetch_assoc($query)){
+				$mysql_langs[$dx['lang']] = $dx['language'];
 			}
-			$langs = array();
 			if($dh = opendir($filepath)) {
 				while($file = mb_substr(readdir($dh), 0, 2)) {
 					if($file != "." and $file!=".." and is_dir($filepath.$file)) {
 						if(isset($mysql_langs[$file])){
 							$name = $mysql_langs[$file];
 							$name = ucfirst($name);
-							$langs[$name] = $file;
+							$langdirs .= '<option value="'.$file.'">'.$name.'</option>';
 						}
-						else{
-							$langs[$file] = $file;
+						else {
+							$langdirs .= '<option value="'.$file.'">'.$file.'</option>';
 						}
 					}
 				}
 				closedir($dh);
 			}
-			ksort($langs,SORT_NATURAL);
-			foreach($langs as $lang=>$flag){
-				$langdirs .= '<option value="'.$flag.'">'.$lang.'</option>';
-			}
-
+			
 			if($ds['language']) $langdirs = str_replace('"'.$ds['language'].'"', '"'.$ds['language'].'" selected="selected"', $langdirs);
 			else $langdirs = str_replace('"'.$_language->language.'"', '"'.$_language->language.'" selected="selected"', $langdirs);
-			
-			$lang_flag = '[flag]'.$ds['language'].'[/flag]';
-			$lang_country = flags($lang_flag);
-			$lang_country = str_replace("<img","<img id='lang_county'",$lang_country);
-
 			
 			$bg1 = BG_1;
 			$bg2 = BG_2;

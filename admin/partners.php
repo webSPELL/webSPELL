@@ -64,7 +64,7 @@ elseif(isset($_POST['save'])) {
 	
 		safe_query("INSERT INTO ".PREFIX."partners ( name, url, displayed, date, sort )
 		             values( '$name', '$url', '".$displayed."', '".time()."', '1' )");
-		$id=mysqli_insert_id($_database);
+		$id=mysql_insert_id();
 	
 		$filepath = "../images/partners/";
 		
@@ -194,7 +194,7 @@ elseif($action=="edit") {
   
   $partnerID = $_GET['partnerID'];
   $ergebnis=safe_query("SELECT * FROM ".PREFIX."partners WHERE partnerID='$partnerID'");
-  $ds=mysqli_fetch_array($ergebnis);
+  $ds=mysql_fetch_array($ergebnis);
   
   if($ds['displayed']=='1') $displayed='<input type="checkbox" name="displayed" value="1" checked="checked" />';
   else $displayed='<input type="checkbox" name="displayed" value="1" />';
@@ -246,8 +246,8 @@ else {
     </tr>';
 
 	$partners=safe_query("SELECT * FROM ".PREFIX."partners ORDER BY sort");
-	$tmp=mysqli_fetch_assoc(safe_query("SELECT count(partnerID) as cnt FROM ".PREFIX."partners"));
-	$anzpartners=$tmp['cnt'];
+	$anzpartners=safe_query("SELECT count(partnerID) FROM ".PREFIX."partners");
+	$anzpartners=mysql_result($anzpartners, 0);
 	$CAPCLASS = new Captcha;
 	$CAPCLASS->create_transaction();
 	$hash = $CAPCLASS->get_hash();
@@ -256,7 +256,7 @@ else {
 	$hash_2 = $CAPCLASS->get_hash();
 	
 	$i=1;
-	while($db=mysqli_fetch_array($partners)) {
+	while($db=mysql_fetch_array($partners)) {
     if($i%2) { $td='td1'; }
     else { $td='td2'; }
     
