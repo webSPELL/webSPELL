@@ -2395,6 +2395,12 @@ function update40200_40300() {
   mysqli_query($_database,"INSERT INTO `".PREFIX."modrewrite` (`regex`, `link`, `fields`, `replace_regex`, `replace_result`, `rebuild_regex`, `rebuild_result`) VALUES('whoisonline/{sort}/{type}.html','index.php?site=whoisonline&sort={sort}&type={type}','a:2:{s:4:\"sort\";s:6:\"string\";s:4:\"type\";s:6:\"string\";}','index\\\\.php\\\\?site=whoisonline[&|&amp;]*sort=(\\\\w*?)[&|&amp;]*type=(\\\\w*?)','whoisonline/$3/$4.html','whoisonline\\\\/(\\\\w*?)\\\\/(\\\\w*?)\\\\.html','index.php?site=whoisonline&sort=$1&type=$2')");
 
   updateMySQLConfig();
+
+  // update user passwords for new hashing
+  $q = mysqli_query($_database, "SELECT userID, password FROM `".PREFIX."user`");
+  while($ds = mysqli_fetch_assoc($q)) {
+    mysqli_query($_database, "UPDATE `".PREFIX."user` SET password='".hash('sha512', substr($ds['password'], 0, 14).$ds['password'])."' WHERE userID=".$ds['userID']);
+  }
 }
 
 ?>

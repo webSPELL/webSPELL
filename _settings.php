@@ -26,7 +26,7 @@
 */
 
 // -- ERROR REPORTING -- //
-define('DEBUG', "OFF");
+define('DEBUG', "ON");
 error_reporting(E_ALL); // 0 = public mode, E_ALL = development-mode
 
 // -- SET ENCODING FOR MB-FUNCTIONS -- //
@@ -263,9 +263,9 @@ $rss_default_language		=	$ds['default_language']; 	if(empty($rss_default_languag
 $search_min_len				=	$ds['search_min_len']; 		if(empty($search_min_len)) $search_min_len = '4';
 $autoresize 				= 	$ds['autoresize']; 			if(!isset($autoresize)) $autoresize = 2;
 $max_wrong_pw 				= 	$ds['max_wrong_pw']; 		if(empty($max_wrong_pw)) $max_wrong_pw = 3;
-$lastBanCheck 				= 	$ds['bancheck']; 
+$lastBanCheck 				= 	$ds['bancheck'];
 $insertlinks				=	$ds['insertlinks'];
-$autoDetectLanguage			=	(int)$ds['detect_language'];		
+$autoDetectLanguage			=	(int)$ds['detect_language'];
 $spamapikey					=	$ds['spamapikey'];
 $spamapihost				=	$ds['spamapihost'];			if(empty($spamapihost)) $spamapihost = "https://api.webspell.org/";
 $spamCheckMaxPosts 			=	$ds['spammaxposts'];		if(empty($spamCheckMaxPosts)) $spamCheckMaxPosts = 30;

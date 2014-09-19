@@ -291,7 +291,7 @@ else {
 		if(!(mb_strlen(trim($oldpwd)))) {
 			$error = $_language->module['forgot_old_pw'];
 		}
-		$oldmd5pwd = md5($oldpwd);
+		$oldmd5pwd = generatePasswordHash($oldpwd);
 		if($oldmd5pwd != $ds['password']) {
 			$error = $_language->module['old_pw_not_valid'];
 		}
@@ -305,9 +305,8 @@ else {
 		}
 
 		if(!empty($error)){
-			$newmd5pwd = md5(stripslashes($pwd1));
+			$newmd5pwd = generatePasswordHash(stripslashes($pwd1));
 			safe_query("UPDATE ".PREFIX."user SET password='".$newmd5pwd."' WHERE userID='".$userID."'");
-
 			//logout
 			unset($_SESSION['ws_auth']);
 			unset($_SESSION['ws_lastlogin']);
@@ -350,7 +349,7 @@ else {
 			$error = $_language->module['forgot_old_pw'];
 
 		}
-		$md5pwd = md5(stripslashes($pwd));
+		$md5pwd = generatePasswordHash(stripslashes($pwd));
 		if($md5pwd != $ds['password']) {
 			$error = $_language->module['wrong_password'];
 		}

@@ -204,7 +204,7 @@ elseif(isset($_POST['newuser'])) {
 		$newusername = mb_substr(trim($_POST['username']), 0, 30);
 		$anz = mysqli_num_rows(safe_query("SELECT userID FROM ".PREFIX."user WHERE (username='".$newusername."' OR nickname='".$newnickname."') "));
 		if(!$anz AND $newusername!=""){
-			safe_query("INSERT INTO ".PREFIX."user ( username, nickname, password, registerdate, activated) VALUES( '".$newusername."', '".$newnickname."', '".md5(stripslashes($_POST['pass']))."', '".time()."', 1) ");
+			safe_query("INSERT INTO ".PREFIX."user ( username, nickname, password, registerdate, activated) VALUES( '".$newusername."', '".$newnickname."', '".generatePasswordHash(stripslashes($_POST['pass']))."', '".time()."', 1) ");
 			safe_query("INSERT INTO ".PREFIX."user_groups ( userID ) values('".mysqli_insert_id($_database)."' )");
 		} else echo $_language->module['user_exists'];
 	} else echo $_language->module['transaction_invalid'];
