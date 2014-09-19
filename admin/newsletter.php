@@ -41,7 +41,7 @@ if(isset($_POST['send']) || isset($_POST['testen'])) {
 		$message_html=nl2br($message);
 		$receptionists = $_language->module['receptionists'];
 		$error_send = $_language->module['error_send'];
-		
+
 		//use page's default language for newsletter
 		$_language->set_language($default_language);
 		$_language->read_module('newsletter');
@@ -52,7 +52,7 @@ if(isset($_POST['send']) || isset($_POST['testen'])) {
     	$emailbody = '<!--
 '.$no_htmlmail.'
 '.stripslashes($message).'
- --> 
+ -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
       <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
@@ -87,19 +87,19 @@ hr { margin: 0px; }
 			<span id="footer">'.$remove.' <a href="http://'.$hp_url.'/index.php?site=myprofile">'.$profile.'</a>.</span>
 		</div>
 	</body>
-</html>'; 
-			
+</html>';
+
 		if(isset($_POST['testen'])){
 			$bcc[] = $testmail;
 			$_SESSION['emailbody'] = $message;
 			$_SESSION['title'] = $title;
 		}
 		else {
-	
+
 			//clanmember
-	
+
 			if(isset($_POST['sendto_clanmembers'])) {
-	
+
 				$ergebnis=safe_query("SELECT userID FROM ".PREFIX."squads_members GROUP BY userID");
 				$anz=mysql_num_rows($ergebnis);
 				if($anz) {
@@ -108,9 +108,9 @@ hr { margin: 0px; }
 					}
 				}
 			}
-	
+
 			if(isset($_POST['sendto_registered'])) {
-	
+
 				$ergebnis=safe_query("SELECT * FROM ".PREFIX."user WHERE newsletter='1'");
 				$anz=mysql_num_rows($ergebnis);
 				if($anz) {
@@ -118,11 +118,11 @@ hr { margin: 0px; }
 						$emails[] = $ds['email'];
 					}
 				}
-	
+
 			}
-	
+
 			if(isset($_POST['sendto_newsletter'])) {
-	
+
 				$ergebnis=safe_query("SELECT * FROM ".PREFIX."newsletter");
 				$anz=mysql_num_rows($ergebnis);
 				if($anz) {
@@ -131,14 +131,14 @@ hr { margin: 0px; }
 					}
 				}
 			}
-	
+
 			$bcc=$emails;
 		}
-	
+
 		$header = "From:".addslashes($admin_name)." <$admin_email>\n";
 		$header .= "Reply-To:".addslashes($admin_email)."\n";
 		$header .= "Content-Type: text/html; charset=utf-8\n";
-	
+
 		$success = true;
 		$bcc=array_unique($bcc);
 		foreach($bcc as $mailto) {
@@ -153,7 +153,7 @@ else {
  	$CAPCLASS = new Captcha;
 	$CAPCLASS->create_transaction();
 	$hash = $CAPCLASS->get_hash();
-  
+
 	if(isset($_SESSION['emailbody'])) $message = htmlspecialchars(stripslashes($_SESSION['emailbody']));
 	else $message = null;
 	if(isset($_SESSION['title'])) $title = htmlspecialchars(stripslashes($_SESSION['title']));
@@ -164,7 +164,7 @@ else {
 <table width="100%" border="0" cellspacing="1" cellpadding="3">
   <tr>
     <td width="15%"><b><?php echo $_language->module['title']; ?></b></td>
-    <td width="85%"><input type="text" name="title" value="<?php echo $title;?>" size="97" /></td>
+    <td width="85%"><input type="text" name="title" value="<?php echo $title;?>" size="45" /></td>
   </tr>
   <tr>
     <td valign="top"><b><?php echo $_language->module['html_mail']; ?></b></td>
@@ -186,7 +186,7 @@ else {
     <td><br><input type="submit" name="send" value="<?php echo $_language->module['send']; ?>" /></td>
   </tr>
 </table>
-</form> 
-<?php 
+</form>
+<?php
 }
 ?>
