@@ -119,6 +119,7 @@ Thank you for your interest
 	'repeat_new_email'=>'repeat new E-Mail',
 	'repeat_new_password'=>'repeat new Password',
 	'repeated_pw_not_valid'=>'your repeated password is not valid!',
+	'repeated_mail_not_valid'=>'your repeated e-mail is not equal!',
 	'sexuality'=>'Gender',
 	'signature'=>'Signature',
 	'smilies'=>'<a href="javascript:MM_openBrWindow(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smilies</a> are ON',
@@ -136,6 +137,7 @@ Thank you for your interest
 	'you_have_to_firstname'=>'You have to enter your First-Name!',
 	'you_have_to_nickname'=>'You have to enter a nickname!',
 	'you_have_to_username'=>'You have to enter a username!',
-	'you_have_to_valid_email'=>'Your e-mail is not valid!'
+	'you_have_to_valid_email'=>'Your e-mail is not valid!',
+	'wrong_password'=>'Wrong password'
 );
 ?>
