@@ -269,6 +269,8 @@ elseif(isset($_POST['test'])){
         file_put_contents($folder.'/test.php','Test successful');
         $written = @file_put_contents($folder.'/'.$file, $content);
 
+        $enable = "";
+
         if($written == false){
             $info .= sprintf($_language->module['can_not_write_file'],$file);
         }
@@ -299,6 +301,7 @@ elseif(isset($_POST['test'])){
             }
             elseif(stristr($headers[0],'200')){
                 $status = $_language->module['test_successful'];
+                $enable = '<input type="submit" name="enable" value="'.$_language->module['enable'].'" />';
             }
             else{
                 $status = $_language->module['unexpected_result'];
@@ -328,7 +331,7 @@ elseif(isset($_POST['test'])){
     </tr>
     <tr>
     <td><input type="hidden" name="captcha_hash" value="'.$hash.'" /></td>
-    <td><input type="submit" name="enable" value="'.$_language->module['enable'].'" /></td>
+    <td>'.$enable.'</td>
     </tr>
     </table>
     </form>';
