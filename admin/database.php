@@ -26,9 +26,9 @@
 */
 
 if(isset($_POST['upload'])) {
-  
+
   $_language->read_module('database');
-	
+
   if(!ispageadmin($userID) OR mb_substr(basename($_SERVER['REQUEST_URI']),0,15) != "admincenter.php") die($_language->module['access_denied']);
 	$upload = $_FILES['sql'];
 	$CAPCLASS = new Captcha;
@@ -40,7 +40,7 @@ if(isset($_POST['upload'])) {
 			//drop all tables from webSPELL DB
 			$result = mysqli_query($_database,"SHOW TABLES FROM ".$db);
 			while ($table = mysqli_fetch_array($result)) safe_query("DROP TABLE `".$table[0]."`");
-	
+
 			move_uploaded_file($upload['tmp_name'], '../tmp/'.$upload['name']);
 			$new_query = file('../tmp/'.$upload['name']);
 			foreach($new_query as $query) @mysqli_query($_database,$query);
@@ -68,17 +68,17 @@ if(isset($_GET['back'])) $returnto = $_GET['back'];
 else $returnto = "database";
 
 if($action=="optimize") {
-  
+
   $_language->read_module('database');
-  
+
   echo'<h1>&curren; '.$_language->module['database'].'</h1>';
-  
+
   if(!ispageadmin($userID) or mb_substr(basename($_SERVER['REQUEST_URI']), 0, 15) != "admincenter.php") die($_language->module['access_denied']);
-  
+
   	$get = safe_query("SELECT DATABASE()");
   	$ret = mysqli_fetch_array($get);
   	$db = $ret[0];
-  
+
   	$result = mysqli_query($_database, "SHOW TABLES FROM ".$db);
 	while ($table = mysqli_fetch_array($result)){
 		safe_query("OPTIMIZE TABLE `".$table[0]."`");
@@ -92,7 +92,7 @@ elseif($action=="write") {
   include('../_settings.php');
   include('../version.php');
   systeminc("func/captcha");
-  
+
 	$CAPCLASS = new Captcha;
 	if($CAPCLASS->check_captcha(0, $_GET['captcha_hash'])) {
 	#$get = safe_query("SELECT DATABASE()");
@@ -109,8 +109,8 @@ elseif($action=="write") {
 	$final .= "--   MySQL version: ".mysqli_get_server_info($_database)."\n";
 	$final .= "--   Date: ".date("r")."\n";
 
-	$result = mysqli_query($_database,"SHOW TABLES");
-	while ($table = mysqli_fetch_array($result)) {
+	$result = mysqli_query($_database,"SHOW TABLE STATUS");
+	while ($table = mysqli_fetch_array($result,MYSQLI_BOTH)) {
 		$i = 0;
 		$result2 = mysqli_query($_database,"SHOW COLUMNS FROM $table[0]");
 		$z = mysqli_num_rows($result2);
@@ -142,7 +142,7 @@ elseif($action=="write") {
 		$final .= ") ENGINE=".$table[1]." DEFAULT CHARSET=".$charset[0]." COLLATE=".$table[14].$auto_inc.";\n\n--\n-- webSPELL DB Export - Dumping data for table `".$table[0]."`\n--\n";
 
 		$inhaltq = mysqli_query($_database,"SELECT * FROM $table[0]");
-		while($inhalt = mysqli_fetch_array($inhaltq)) {
+		while($inhalt = mysqli_fetch_array($inhaltq,MYSQLI_BOTH)) {
 			$final .= "\nINSERT INTO `$table[0]` (";
 			$final .= $insert_keys;
 			$final .= ") VALUES (";
@@ -178,17 +178,17 @@ elseif($action=="write") {
 	} else echo $_language->read_module('database').$_language->module['transaction_invalid'];
 }
 else {
-	
+
   $_language->read_module('database');
-  
+
   if(!ispageadmin($userID) OR mb_substr(basename($_SERVER['REQUEST_URI']),0,15) != "admincenter.php") die($_language->module['access_denied']);
-	
+
   $CAPCLASS = new Captcha;
 	$CAPCLASS->create_transaction();
 	$hash = $CAPCLASS->get_hash();
-  
+
   echo'<h1>&curren; '.$_language->module['database'].'</h1>';
-  
+
   echo'<form method="post" action="admincenter.php?site=database" enctype="multipart/form-data">
   <table width="100%" border="0" cellspacing="1" cellpadding="3" bgcolor="#DDDDDD">
     <tr>
@@ -216,7 +216,7 @@ else {
     </tr>
   </table>
   </form>';
-	
+
   /*echo '<br /><br />
   <form method="post" action="admincenter.php?site=database">
   <table width="100%" border="0" cellspacing="1" cellpadding="3" bgcolor="#DDDDDD">
