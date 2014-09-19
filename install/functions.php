@@ -1336,7 +1336,7 @@ function update40100_40101() {
   @set_time_limit(300);
 
 }
-function update40101_40200() {
+function update40101_420() {
   global $_database;
 
 	//set default language
@@ -2029,7 +2029,7 @@ function update40101_40200() {
   @set_time_limit(300);
 }
 
-function update40200_40300() {
+function update420_430() {
 	global $_database;
 	
   mysqli_query($_database, "DROP TABLE IF EXISTS `".PREFIX."forum_posts_spam`");
