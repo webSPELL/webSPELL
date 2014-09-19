@@ -29,6 +29,8 @@ session_name("ws_session");
 session_start();
 header('content-type: text/html; charset=utf-8');
 include("../src/func/language.php");
+include("../src/func/user.php");
+
 $_language = new Language();
 
 if(!isset($_SESSION['language'])){

@@ -32,7 +32,7 @@ if(!isuseradmin($userID) OR mb_substr(basename($_SERVER['REQUEST_URI']),0,15) !=
 if(isset($_POST['add'])) {
  	$CAPCLASS = new Captcha;
 	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
-		$anz = mysql_num_rows(safe_query("SELECT userID FROM ".PREFIX."squads_members WHERE squadID='".$_POST['squad']."' AND userID='".$_POST['id']."'"));
+		$anz = mysqli_num_rows(safe_query("SELECT userID FROM ".PREFIX."squads_members WHERE squadID='".$_POST['squad']."' AND userID='".$_POST['id']."'"));
 		if(!$anz){
 			safe_query("INSERT INTO ".PREFIX."squads_members (squadID, userID, position, activity, sort) values('".$_POST['squad']."', '".$_POST['id']."', '".$_POST['position']."', '".$_POST['activity']."', '1')");	
 		}
@@ -62,7 +62,7 @@ elseif(isset($_POST['edit'])) {
 				$avatar['name'] = strrchr($avatar_url,"/");
 				if(!copy($_POST['avatar_url'],$filepath.$avatar['name'].".tmp")) {
 					$error = $_language->module['can_not_copy'];
-					die('ERROR: '.$error.'<br><br><input type="button" onclick="javascript:history.back()" value="'.$_language->module['back'].'" />');
+					die('ERROR: '.$error.'<br /><br /><input type="button" onclick="javascript:history.back()" value="'.$_language->module['back'].'" />');
 				}
 			}
 			@chmod($filepath.$avatar['name'].".tmp", $new_chmod);
@@ -82,18 +82,18 @@ elseif(isset($_POST['edit'])) {
 				else {
 					if(unlink($filepath.$avatar['name'].".tmp")) {
 						$error = $_language->module['invalid_format'];
-						die('ERROR: '.$error.'<br><br><input type="button" onclick="javascript:history.back()" value="'.$_language->module['back'].'" />');
+						die('ERROR: '.$error.'<br /><br /><input type="button" onclick="javascript:history.back()" value="'.$_language->module['back'].'" />');
 					}
 					else {
 						$error = $_language->module['upload_failed'];
-						die('ERROR: '.$error.'<br><br><input type="button" onclick="javascript:history.back()" value="'.$_language->module['back'].'" />');
+						die('ERROR: '.$error.'<br /><br /><input type="button" onclick="javascript:history.back()" value="'.$_language->module['back'].'" />');
 					}
 				}
 			}
 			else {
 				@unlink($filepath.$avatar['name'].".tmp");
 				$error = $_language->module['error_avatar'];
-				die('ERROR: '.$error.'<br><br><input type="button" onclick="javascript:history.back()" value="'.$_language->module['back'].'" />');
+				die('ERROR: '.$error.'<br /><br /><input type="button" onclick="javascript:history.back()" value="'.$_language->module['back'].'" />');
 			}
 		}
 
@@ -109,7 +109,7 @@ elseif(isset($_POST['edit'])) {
 				$userpic['name'] = strrchr($userpic_url,"/");
 				if(!copy($_POST['userpic_url'],$filepath.$userpic['name'].".tmp")) {
 					$error = $_language->module['can_not_copy'];
-					die('ERROR: '.$error.'<br><br><input type="button" onclick="javascript:history.back()" value="'.$_language->module['back'].'" />');
+					die('ERROR: '.$error.'<br /><br /><input type="button" onclick="javascript:history.back()" value="'.$_language->module['back'].'" />');
 				}
 			}
 			@chmod($filepath.$userpic['name'].".tmp", $new_chmod);
@@ -129,18 +129,18 @@ elseif(isset($_POST['edit'])) {
 				else {
 					if(unlink($filepath.$userpic['name'].".tmp")) {
 						$error = $_language->module['invalid_format'];
-						die('ERROR: '.$error.'<br><br><input type="button" onclick="javascript:history.back()" value="'.$_language->module['back'].'" />');
+						die('ERROR: '.$error.'<br /><br /><input type="button" onclick="javascript:history.back()" value="'.$_language->module['back'].'" />');
 					}
 					else {
 						$error = $_language->module['upload_failed'];
-						die('ERROR: '.$error.'<br><br><input type="button" onclick="javascript:history.back()" value="'.$_language->module['back'].'" />');
+						die('ERROR: '.$error.'<br /><br /><input type="button" onclick="javascript:history.back()" value="'.$_language->module['back'].'" />');
 					}
 				}
 			}
 			else {
 				@unlink($filepath.$userpic['name'].".tmp");
 				$error = $_language->module['error_picture'];
-				die('ERROR: '.$error.'<br><br><input type="button" onclick="javascript:history.back()" value="'.$_language->module['back'].'" />');
+				die('ERROR: '.$error.'<br /><br /><input type="button" onclick="javascript:history.back()" value="'.$_language->module['back'].'" />');
 			}
 		}
 		
@@ -150,7 +150,7 @@ elseif(isset($_POST['edit'])) {
 	  $birthday = $b_year.'.'.$b_month.'.'.$b_day;
 	  $nickname = htmlspecialchars(mb_substr(trim($_POST['nickname']), 0, 30));
 	  
-	  if(!mysql_num_rows(safe_query("SELECT userID FROM ".PREFIX."user WHERE nickname='".$nickname."' AND userID!=".$_POST['id']))) {
+	  if(!mysqli_num_rows(safe_query("SELECT userID FROM ".PREFIX."user WHERE nickname='".$nickname."' AND userID!=".$_POST['id']))) {
 	  
 	  	safe_query("UPDATE ".PREFIX."user SET nickname='".$nickname."',
 									 email='".$_POST['email']."',
@@ -202,10 +202,10 @@ elseif(isset($_POST['newuser'])) {
 	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
 		$newnickname = htmlspecialchars(mb_substr(trim($_POST['username']), 0, 30));
 		$newusername = mb_substr(trim($_POST['username']), 0, 30);
-		$anz = mysql_num_rows(safe_query("SELECT userID FROM ".PREFIX."user WHERE (username='".$newusername."' OR nickname='".$newnickname."') "));
+		$anz = mysqli_num_rows(safe_query("SELECT userID FROM ".PREFIX."user WHERE (username='".$newusername."' OR nickname='".$newnickname."') "));
 		if(!$anz AND $newusername!=""){
-			safe_query("INSERT INTO ".PREFIX."user ( username, nickname, password, registerdate, activated) VALUES( '".$newusername."', '".$newnickname."', '".md5(stripslashes($_POST['pass']))."', '".time()."', 1) ");
-			safe_query("INSERT INTO ".PREFIX."user_groups ( userID ) values('".mysql_insert_id()."' )");
+			safe_query("INSERT INTO ".PREFIX."user ( username, nickname, password, registerdate, activated) VALUES( '".$newusername."', '".$newnickname."', '".generatePasswordHash(stripslashes($_POST['pass']))."', '".time()."', 1) ");
+			safe_query("INSERT INTO ".PREFIX."user_groups ( userID ) values('".mysqli_insert_id($_database)."' )");
 		} else echo $_language->module['user_exists'];
 	} else echo $_language->module['transaction_invalid'];
 }
@@ -242,7 +242,7 @@ elseif(isset($_POST['ban'])) {
 		$reason = $_POST['reason'];
 		
 		if(isset($_POST['remove_ban'])) {
-			safe_query("UPDATE ".PREFIX."user SET banned=(NULL) WHERE userID='$id'");
+			safe_query("UPDATE ".PREFIX."user SET banned=(NULL), ban_reason='' WHERE userID='$id'");
 		}
 		else {
 			if($permanent == "1") {
@@ -287,7 +287,7 @@ elseif($action=="ban") {
 			$CAPCLASS->create_transaction();
 			$hash = $CAPCLASS->get_hash();
 			$get = safe_query("SELECT nickname,banned,ban_reason FROM ".PREFIX."user WHERE userID='".$id."'");
-			$data = mysql_fetch_assoc($get);
+			$data = mysqli_fetch_assoc($get);
 			$nickname = $data['nickname'];
 		
 			if($data['banned'] == "perm") {
@@ -372,17 +372,17 @@ elseif($action=="ban") {
 			}
 			echo '<tr>
 			    <td><input type="hidden" name="captcha_hash" value="'.$hash.'" /><input type="hidden" name="id" value="'.$id.'" /></td>
-			    <td><br><input type="submit" name="ban" value="'.$_language->module['edit_ban'].'" /></td>
+			    <td><br /><input type="submit" name="ban" value="'.$_language->module['edit_ban'].'" /></td>
 			  </tr>
 			</table>
 			</form>';
 		}
 		else {
-			echo $_language->module['you_cant_ban'].'<br><br>&laquo; <a href="javascript:history.back()">'.$_language->module['back'].'</a>';
+			echo $_language->module['you_cant_ban'].'<br /><br />&laquo; <a href="javascript:history.back()">'.$_language->module['back'].'</a>';
 		}
 	}
 	else {
-		echo $_language->module['you_cant_ban_yourself'].'<br><br>&laquo; <a href="javascript:history.back()">'.$_language->module['back'].'</a>';
+		echo $_language->module['you_cant_ban_yourself'].'<br /><br />&laquo; <a href="javascript:history.back()">'.$_language->module['back'].'</a>';
 	}
 }
 
@@ -417,7 +417,7 @@ elseif($action=="addtoclan") {
     </tr>
     <tr>
       <td><input type="hidden" name="captcha_hash" value="'.$hash.'" /><input type="hidden" name="id" value="'.$id.'" /></td>
-      <td><br><input type="submit" name="add" value="'.$_language->module['add_to_clan'].'" /></td>
+      <td><br /><input type="submit" name="add" value="'.$_language->module['add_to_clan'].'" /></td>
     </tr>
   </table>
   </form>';
@@ -454,7 +454,7 @@ elseif($action=="profile") {
   echo'<h1>&curren; <a href="admincenter.php?site=users" class="white">'.$_language->module['users'].'</a> &raquo; '.$_language->module['edit_profile'].'</h1>';
   
   $id = $_GET['id'];
-  $ds = mysql_fetch_array(safe_query("SELECT * FROM ".PREFIX."user WHERE userID='$id'"));
+  $ds = mysqli_fetch_array(safe_query("SELECT * FROM ".PREFIX."user WHERE userID='$id'"));
   
   if($ds['userpic']) $viewpic='<a href="javascript:MM_openBrWindow(\'../images/userpics/'.$ds['userpic'].'\',\'userpic\',\'width=250,height=230\')">'.$_language->module['picture'].'</a>';
   else $viewpic=$_language->module['picture'];
@@ -462,6 +462,7 @@ elseif($action=="profile") {
   else $viewavatar=$_language->module['avatar'];
   $sex = '<option value="m">'.$_language->module['male'].'</option><option value="f">'.$_language->module['female'].'</option><option value="u">'.$_language->module['not_available'].'</option>';
   $sex = str_replace('value="'.$ds['sex'].'"','value="'.$ds['sex'].'" selected="selected"',$sex);
+  $countries=getcountries();
   $countries = str_replace(" selected=\"selected\"", "", $countries);
   $countries = str_replace('value="'.$ds['country'].'"', 'value="'.$ds['country'].'" selected="selected"', $countries);
   $b_day=mb_substr($ds['birthday'],8,2);
@@ -479,7 +480,7 @@ elseif($action=="profile") {
       <td width="85%"><b>'.$ds['userID'].'</b></td>
     </tr>
     <tr>
-      <td colspan="2"><br><i><b>'.$_language->module['general'].'</b></i></td>
+      <td colspan="2"><br /><i><b>'.$_language->module['general'].'</b></i></td>
     </tr>
     <tr>
       <td><b>'.$_language->module['nickname'].'</b></td>
@@ -490,7 +491,7 @@ elseif($action=="profile") {
       <td><input type="text" name="email" value="'.getinput($ds['email']).'" size="60" /></td>
     </tr>
     <tr>
-      <td colspan="2"><br><i><b>'.$_language->module['pictures'].'</b></i></td>
+      <td colspan="2"><br /><i><b>'.$_language->module['pictures'].'</b></i></td>
     </tr>
     <tr>
       <td><b>'.$viewavatar.'</b></td>
@@ -509,7 +510,7 @@ elseif($action=="profile") {
       <td><input type="checkbox" name="userpic" value="1" /> '.$_language->module['delete_picture'].'</td>
     </tr>
     <tr>
-      <td colspan="2"><br><i><b>'.$_language->module['personal'].'</b></i></td>
+      <td colspan="2"><br /><i><b>'.$_language->module['personal'].'</b></i></td>
     </tr>
     <tr>
       <td><b>'.$_language->module['firstname'].'</b></td>
@@ -556,7 +557,7 @@ elseif($action=="profile") {
       <td><textarea name="about" rows="5" cols="" style="width: 60%;">'.getinput($ds['about']).'</textarea></td>
     </tr>
     <tr>
-      <td colspan="2"><br><i><b>'.$_language->module['various'].'</b></i></td>
+      <td colspan="2"><br /><i><b>'.$_language->module['various'].'</b></i></td>
     </tr>
     <tr><td><b>'.$_language->module['clantag'].'</b></td>
       <td><input type="text" name="clantag" value="'.getinput($ds['clantag']).'" size="60" /></td>
@@ -619,7 +620,7 @@ elseif($action=="profile") {
     </tr>
     <tr>
       <td><input type="hidden" name="captcha_hash" value="'.$hash.'" /><input type="hidden" name="id" value="'.$id.'" /></td>
-      <td><br><input type="submit" name="edit" value="'.$_language->module['edit_profile'].'" /></td>
+      <td><br /><input type="submit" name="edit" value="'.$_language->module['edit_profile'].'" /></td>
     </tr>
   </table>
   </form>';
@@ -663,7 +664,7 @@ else {
 	
 	if($search!='') $alle = safe_query("SELECT userID FROM ".PREFIX."user WHERE userID=".$search);
 	else $alle = safe_query("SELECT userID FROM ".PREFIX."user");
-	$gesamt = mysql_num_rows($alle);
+	$gesamt = mysqli_num_rows($alle);
 	$pages=1;
 	
 	$max=$maxusers;
@@ -689,7 +690,7 @@ else {
 		$page_link = makepagelink("admincenter.php?site=users&amp;sort=$sort&amp;type=$type&amp;search=$search", $page, $pages);
 		$page_link = str_replace('images/', '../images/', $page_link);
 	}
-	$anz=mysql_num_rows($ergebnis);
+	$anz=mysqli_num_rows($ergebnis);
 	if($anz) {
 	 	$CAPCLASS = new Captcha;
 		$CAPCLASS->create_transaction();
@@ -705,7 +706,7 @@ else {
 		echo'<table width="100%" border="0" cellspacing="1" cellpadding="3">
       <tr>
         <td>'.$sorter.' '.$page_link.'</td>
-        <td align="right"><b>'.$_language->module['usersearch'].':</b> &nbsp; <input id="exact" type="checkbox" /> '.$_language->module['exactsearch'].' &nbsp; <input type="text" onkeyup=\'overlay(this, "searchresult");search("user","nickname","userID",encodeURIComponent(this.value),"search_user","searchresult","replace", document.getElementById("exact").checked, "ac_usersearch")\' size="25" /><br>
+        <td align="right"><b>'.$_language->module['usersearch'].':</b> &nbsp; <input id="exact" type="checkbox" /> '.$_language->module['exactsearch'].' &nbsp; <input type="text" onkeyup=\'overlay(this, "searchresult");search("user","nickname","userID",encodeURIComponent(this.value),"search_user","searchresult","replace", document.getElementById("exact").checked, "ac_usersearch")\' size="25" /><br />
         <div id="searchresult" style="position:absolute;display:none;border:1px solid black;background-color:#DDDDDD; padding:2px;"></div></td>
       </tr>
       <tr>
@@ -713,7 +714,7 @@ else {
       </tr>
     </table>';
 
-		echo'<br>
+		echo'<br />
     <table width="100%" border="0" cellspacing="1" cellpadding="3" bgcolor="#DDDDDD">
       <tr>
         <td width="16%" class="title"><a href="admincenter.php?site=users&amp;type='.$type.'&amp;sort=registerdate&amp;page='.$page.'&amp;type='.$type.'&amp;search='.$search.'"><b>'.$_language->module['registered_since'].'</b></a></td>
@@ -725,21 +726,21 @@ else {
 
 		$n=1;
 		$i=1;
-		while($ds=mysql_fetch_array($ergebnis)) {
+		while($ds=mysqli_fetch_array($ergebnis)) {
       if($i%2) { $td='td1'; }
       else { $td='td2'; }
 		
 		$id=$ds['userID'];
-		$registered=date("d.m.Y - H:i", $ds['registerdate']);
+		$registered=getformatdatetime($ds['registerdate']);
 		$nickname_c=getnickname($ds['userID']);
 		$replaced_search=str_replace("%", "", $search);
 		$nickname=str_replace($replaced_search, '<b>'.$replaced_search.'</b>', $nickname_c);
 		
-		if(issuperadmin($ds['userID']) && isclanmember($ds['userID'])) $status=$_language->module['superadmin'].'<br>&amp; '.$_language->module['clanmember'];
+		if(issuperadmin($ds['userID']) && isclanmember($ds['userID'])) $status=$_language->module['superadmin'].'<br />&amp; '.$_language->module['clanmember'];
 		elseif(issuperadmin($ds['userID'])) $status=$_language->module['superadmin'];
-		elseif(isanyadmin($ds['userID']) && isclanmember($ds['userID'])) $status=$_language->module['admin'].'<br>&amp; '.$_language->module['clanmember'];
+		elseif(isanyadmin($ds['userID']) && isclanmember($ds['userID'])) $status=$_language->module['admin'].'<br />&amp; '.$_language->module['clanmember'];
 		elseif(isanyadmin($ds['userID'])) $status=$_language->module['admin'];
-		elseif(isanymoderator($ds['userID']) && isclanmember($ds['userID'])) $status=$_language->module['moderator'].'<br>&amp; '.$_language->module['clanmember'];
+		elseif(isanymoderator($ds['userID']) && isclanmember($ds['userID'])) $status=$_language->module['moderator'].'<br />&amp; '.$_language->module['clanmember'];
 		elseif(isanymoderator($ds['userID'])) $status=$_language->module['moderator'];
 		elseif(isclanmember($ds['userID'])) $status=$_language->module['clanmember'];
 		else $status=$_language->module['user'];
@@ -762,7 +763,7 @@ else {
       $i++;
 		}
 		echo'</table>
-    <br><br>&raquo; <a href="admincenter.php?site=users&amp;action=adduser"><b>'.$_language->module['add_new_user'].'</b></a>';
+    <br /><br />&raquo; <a href="admincenter.php?site=users&amp;action=adduser"><b>'.$_language->module['add_new_user'].'</b></a>';
 	}
 	else echo $_language->module['no_users'];
 }
