@@ -886,7 +886,7 @@ VALUES (1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1)");
 
 function update31_4beta4() {
   global $_database;
-    
+
 	mysqli_query($_database, "DROP TABLE IF EXISTS `".PREFIX."about`");
 	mysqli_query($_database, "CREATE TABLE `".PREFIX."about` (
   `about` longtext NOT NULL
@@ -1341,7 +1341,7 @@ function update40101_420() {
 
 	//set default language
 	mysqli_query($_database, "ALTER TABLE `".PREFIX."settings` ADD `default_language` VARCHAR( 2 ) DEFAULT 'uk' NOT NULL");
-	
+
 	//user groups
 	mysqli_query($_database, "DROP TABLE IF EXISTS `".PREFIX."user_forum_groups`");
 	mysqli_query($_database, "CREATE TABLE `".PREFIX."user_forum_groups` (
@@ -1374,7 +1374,7 @@ function update40101_420() {
 			}
 			mysqli_query($_database, "UPDATE ".PREFIX."static SET content='".$content."' WHERE staticID='".$ds['staticID']."'");
 			@unlink($file);
-		}	
+		}
 	}
 	mysqli_query($_database, "ALTER TABLE `".PREFIX."squads` CHANGE `info` `info` TEXT  NOT NULL ");
 	mysqli_query($_database, "ALTER TABLE `".PREFIX."forum_boards` ADD `writegrps` text NOT NULL AFTER `intern`");
@@ -1425,23 +1425,23 @@ function update40101_420() {
 
 	//add userIDs cell to poll
 	mysqli_query($_database, "ALTER TABLE `".PREFIX."poll` ADD `userIDs` TEXT NOT NULL");
-	
+
 	//add table for banned ips
-	mysqli_query($_database, "CREATE TABLE `".PREFIX."banned_ips` (                                                   
-                   `banID` int(11) NOT NULL auto_increment,                                         
-                   `ip` varchar(255) NOT NULL,                        
-                   `deltime` int(15) NOT NULL,                                                      
-                   `reason` varchar(255) NULL,                    
-                   PRIMARY KEY  (`banID`)                                                           
+	mysqli_query($_database, "CREATE TABLE `".PREFIX."banned_ips` (
+                   `banID` int(11) NOT NULL auto_increment,
+                   `ip` varchar(255) NOT NULL,
+                   `deltime` int(15) NOT NULL,
+                   `reason` varchar(255) NULL,
+                   PRIMARY KEY  (`banID`)
                  )");
-	
+
 	//add table for wrong logins
-	mysqli_query($_database, "CREATE TABLE `".PREFIX."failed_login_attempts` (                         
-                              `ip` varchar(255) NOT NULL default '',  
-                              `wrong` int(2) default '0',                                       
-                              PRIMARY KEY  (`ip`)                                               
+	mysqli_query($_database, "CREATE TABLE `".PREFIX."failed_login_attempts` (
+                              `ip` varchar(255) NOT NULL default '',
+                              `wrong` int(2) default '0',
+                              PRIMARY KEY  (`ip`)
                             )");
-	
+
 	//news multilanguage
 	mysqli_query($_database, "CREATE TABLE `".PREFIX."news_contents` (
 	`newsID` INT NOT NULL ,
@@ -1490,25 +1490,25 @@ function update40101_420() {
 		}
 		mysqli_query($_database, "INSERT INTO ".PREFIX."articles_contents (articlesID, content, page) VALUES ('".$ds['articlesID']."', '".$content."', '0')");
 	}
-	
+
 	mysqli_query($_database, "ALTER TABLE `".PREFIX."user` ADD `language` VARCHAR( 2 ) NOT NULL");
-	
+
 	//add news writer right column
 	mysqli_query($_database, "ALTER TABLE `".PREFIX."user_groups` ADD `news_writer` INT( 1 ) NOT NULL AFTER `news`");
-	
+
 	//add sub cat column
 	mysqli_query($_database, "ALTER TABLE `".PREFIX."files_categorys` ADD `subcatID` INT( 11 ) NOT NULL DEFAULT '0'");
-	
+
 	//announcement converter
 	$sql = mysqli_query($_database, "SELECT * FROM ".PREFIX."forum_announcements");
 	while($ds = mysqli_fetch_assoc($sql)){
 		$ds['topic'] = mysqli_real_escape_string($_database, $ds['topic']);
 		$ds['announcement'] = mysqli_real_escape_string($_database, $ds['announcement']);
-		$sql_board = mysqli_query($_database, "SELECT readgrps, writegrps 
-								FROM ".PREFIX."forum_boards 
+		$sql_board = mysqli_query($_database, "SELECT readgrps, writegrps
+								FROM ".PREFIX."forum_boards
 								WHERE boardID = '".$ds['boardID']."'");
-		$rules = mysqli_fetch_assoc($sql_board);	
-		mysqli_query($_database, "INSERT INTO ".PREFIX."forum_topics 
+		$rules = mysqli_fetch_assoc($sql_board);
+		mysqli_query($_database, "INSERT INTO ".PREFIX."forum_topics
 				( boardID, readgrps, writegrps, userID, date, lastdate, topic, lastposter, sticky)
 				VALUES
 				('".$ds['boardID']."', '".$rules['readgrps']."', '".$rules['writegrps']."', '".$ds['userID']."', '".$ds['date']."', '".$ds['date']."', '".$ds['topic']."', '".$ds['userID']."', '1')");
@@ -1517,13 +1517,13 @@ function update40101_420() {
 				( boardID, topicID, date, poster, message)
 				VALUES
 				( '".$ds['boardID']."', '".$annID."', '".$ds['date']."', '".$ds['userID']."', '".$ds['announcement']."')");
-		mysqli_query($_database, "UPDATE ".PREFIX."forum_boards 
-					SET topics=topics+1 
+		mysqli_query($_database, "UPDATE ".PREFIX."forum_boards
+					SET topics=topics+1
 					WHERE boardID = '".$ds['boardID']."' ");
-		mysqli_query($_database, "DELETE FROM ".PREFIX."forum_announcements 
-					WHERE announceID='".$ds['announceID']."' ");						
+		mysqli_query($_database, "DELETE FROM ".PREFIX."forum_announcements
+					WHERE announceID='".$ds['announceID']."' ");
 	}
-	
+
 	// clanwar converter
 	$get = mysqli_query($_database, "SELECT cwID, maps, hometeam, homescore, oppscore FROM ".PREFIX."clanwars");
 	while($ds = mysqli_fetch_assoc($get)){
@@ -1540,39 +1540,39 @@ function update40101_420() {
 		$cwID = $ds['cwID'];
 		mysqli_query($_database, "UPDATE ".PREFIX."clanwars SET maps='".$theMaps."', hometeam='".$hometeam."', homescore='".$homescore."', oppscore='".$oppscore."' WHERE cwID='".$cwID."'");
 	}
-	
+
 	// converter board-speedup :)
-	mysqli_query($_database, "UPDATE ".PREFIX."user SET topics='|'");	
+	mysqli_query($_database, "UPDATE ".PREFIX."user SET topics='|'");
 	mysqli_query($_database, "ALTER TABLE `".PREFIX."user` CHANGE `topics` `topics` TEXT NOT NULL");
-	
+
 	// update for email-change-activation
-	mysqli_query($_database, "ALTER TABLE `".PREFIX."user` ADD `email_change` VARCHAR(255) NOT NULL AFTER `email_hide`, 
+	mysqli_query($_database, "ALTER TABLE `".PREFIX."user` ADD `email_change` VARCHAR(255) NOT NULL AFTER `email_hide`,
 				ADD `email_activate` VARCHAR(255) NOT NULL AFTER `email_change`");
-				
+
 	//add insertlinks cell to settings
 	mysqli_query($_database, "ALTER TABLE `".PREFIX."settings` ADD `insertlinks` INT( 1 ) NOT NULL DEFAULT '1' AFTER `default_language`");
-	
+
 	//add search string min len and max wrong password cell to settings
 	mysqli_query($_database, "ALTER TABLE `".PREFIX."settings` ADD `search_min_len` INT( 3 ) NOT NULL DEFAULT '3' AFTER `insertlinks`");
 	mysqli_query($_database, "ALTER TABLE `".PREFIX."settings` ADD `max_wrong_pw` INT( 2 ) NOT NULL DEFAULT '10' AFTER `search_min_len`");
-	
+
 	//set default sex to u(nknown)
 	mysqli_query($_database, "ALTER TABLE `".PREFIX."user` CHANGE `sex` `sex` CHAR( 1 ) NOT NULL DEFAULT 'u' ");
-	
+
 	// convert banned to varchar
 	mysqli_query($_database, "ALTER TABLE `".PREFIX."user` CHANGE `banned` `banned` VARCHAR(255) NULL DEFAULT NULL ");
 	mysqli_query($_database, "UPDATE `".PREFIX."user` SET banned='perm' WHERE banned='1'");
 	mysqli_query($_database, "UPDATE `".PREFIX."user` SET banned=(NULL) WHERE banned='0'");
 	mysqli_query($_database, "ALTER TABLE `".PREFIX."user` ADD `ban_reason` VARCHAR(255) NOT NULL AFTER `banned`");
-	
+
 	mysqli_query($_database, "ALTER TABLE `".PREFIX."settings` DROP `hideboards`");
-	
+
 	//add lastpostID to topics for latesttopics
 	mysqli_query($_database, "ALTER TABLE `".PREFIX."forum_topics` ADD `lastpostID` INT NOT NULL DEFAULT '0' AFTER `lastposter`");
-	
+
 	//add color parameter for scrolltext
 	mysqli_query($_database, "ALTER TABLE `".PREFIX."scrolltext` ADD `color` VARCHAR(7) NOT NULL DEFAULT '#000000'");
-	
+
 	//add new games
 	mysqli_query($_database, "UPDATE `".PREFIX."games` SET `name` = 'Battlefield 1942' WHERE `name` = 'Battlefield'");
 	mysqli_query($_database, "INSERT INTO `".PREFIX."games` ( `gameID` , `tag` , `name` )
@@ -1629,7 +1629,7 @@ function update40101_420() {
 			('', 'wic', 'World in Conflict'),
 			('', 'wow', 'World of Warcraft'),
 			('', 'wrs', 'Warsow')");
-	
+
 	//add new countries
 	mysqli_query($_database, "INSERT INTO `".PREFIX."countries` ( `countryID` , `country` , `short` )
 		VALUES
@@ -1824,19 +1824,19 @@ function update40101_420() {
 	mysqli_query($_database, "ALTER TABLE `".PREFIX."sponsors` ADD `banner_small` varchar(255) NOT NULL default '', ADD `displayed` varchar(255) NOT NULL default '1', ADD `mainsponsor` varchar(255) NOT NULL default '0', ADD `hits` int(11) default '0', ADD `date` int(14) NOT NULL default '0', ADD `sort` int(11) NOT NULL default '1' AFTER `banner`");
 	mysqli_query($_database, "ALTER TABLE `".PREFIX."sponsors` ADD `displayed` varchar(255) NOT NULL default '1', ADD `hits` int(11) default '0', ADD `date` int(14) NOT NULL default '0', ADD `sort` int(11) NOT NULL default '1' AFTER `banner`");
 	mysqli_query($_database, "UPDATE `".PREFIX."sponsors` SET `date` = '".time()."' WHERE `date` = '0'");
-	
+
 	//add parnters click counter and display choice
 	mysqli_query($_database, "ALTER TABLE `".PREFIX."partners` ADD `displayed` varchar(255) NOT NULL default '1', ADD `hits` int(11) default '0', ADD `date` int(14) NOT NULL default '0' AFTER `banner`");
 	mysqli_query($_database, "UPDATE `".PREFIX."partners` SET `date` = '".time()."' WHERE `date` = '0'");
-	
+
 	//add latesttopicchars to settings
 	mysqli_query($_database, "ALTER TABLE `".PREFIX."settings` ADD `latesttopicchars` int(11) NOT NULL default '0' AFTER `latesttopics`");
 	mysqli_query($_database, "UPDATE `".PREFIX."settings` SET `latesttopicchars` = '18' WHERE `latesttopicchars` = '0'");
-	
+
 	//add maxtopnewschars to settings
 	mysqli_query($_database, "ALTER TABLE `".PREFIX."settings` ADD `topnewschars` int(11) NOT NULL default '0' AFTER `headlineschars`");
 	mysqli_query($_database, "UPDATE `".PREFIX."settings` SET `topnewschars` = '200' WHERE `topnewschars` = '0'");
-	
+
 	//add captcha and bancheck to settings
 	mysqli_query($_database, "ALTER TABLE `".PREFIX."settings` ADD `captcha_math` int(1) NOT NULL default '2' AFTER `max_wrong_pw`");
 	mysqli_query($_database, "ALTER TABLE `".PREFIX."settings` ADD `captcha_bgcol` varchar(7) NOT NULL default '#FFFFFF' AFTER `captcha_math`");
@@ -1845,17 +1845,17 @@ function update40101_420() {
 	mysqli_query($_database, "ALTER TABLE `".PREFIX."settings` ADD `captcha_noise` int(3) NOT NULL default '100' AFTER `captcha_type`");
 	mysqli_query($_database, "ALTER TABLE `".PREFIX."settings` ADD `captcha_linenoise` int(2) NOT NULL default '10' AFTER `captcha_noise`");
 	mysqli_query($_database, "ALTER TABLE `".PREFIX."settings` ADD `bancheck` INT( 13 ) NOT NULL");
-	
+
 	//add small icon to squads
 	mysqli_query($_database, "ALTER TABLE `".PREFIX."squads` ADD `icon_small` varchar(255) NOT NULL default '' AFTER `icon`");
-	 
+
 	// add autoresize to settings
 	mysqli_query($_database, "ALTER TABLE `".PREFIX."settings` ADD `autoresize` int(1) NOT NULL default '2' AFTER `captcha_linenoise`");
-	 
+
 	// add contacts for mail formular
 	$getadminmail=mysqli_fetch_array(mysqli_query($_database, "SELECT adminemail FROM `".PREFIX."settings`"));
 	$adminmail=$getadminmail['adminemail'];
-	
+
 	mysqli_query($_database, "CREATE TABLE IF NOT EXISTS `".PREFIX."contact` (
 	  `contactID` int(11) NOT NULL auto_increment,
 	  `name` varchar(100) NOT NULL,
@@ -1863,18 +1863,18 @@ function update40101_420() {
 	  `sort` int(11) NOT NULL default '0',
 	  	PRIMARY KEY ( `contactID` )
 	  ) AUTO_INCREMENT=2 ;");
-	
+
 	mysqli_query($_database, "INSERT INTO `".PREFIX."contact` (`contactID`, `name`, `email`, `sort`) VALUES
 	  (1, 'Administrator', '".$adminmail."', 1);");
-	
+
 	// add date to faqs
 	mysqli_query($_database, "ALTER TABLE `".PREFIX."faq` ADD `date` int(14) NOT NULL default '0' AFTER `faqcatID`");
 	mysqli_query($_database, "UPDATE `".PREFIX."faq` SET `date` = '".time()."' WHERE `date` = '0'");
-	 
+
 	// remove nickname from who is/was online
 	mysqli_query($_database, "ALTER TABLE `".PREFIX."whoisonline` DROP `nickname`");
 	mysqli_query($_database, "ALTER TABLE `".PREFIX."whowasonline` DROP `nickname`");
-   
+
 	// set default to none in user table
 	mysqli_query($_database, "ALTER TABLE `".PREFIX."user` CHANGE `clantag` `clantag` varchar(255) NOT NULL default ''");
 	mysqli_query($_database, "ALTER TABLE `".PREFIX."user` CHANGE `clanname` `clanname` varchar(255) NOT NULL default ''");
@@ -1891,7 +1891,7 @@ function update40101_420() {
 	mysqli_query($_database, "ALTER TABLE `".PREFIX."user` CHANGE `mouse` `mouse` varchar(255) NOT NULL default ''");
 	mysqli_query($_database, "ALTER TABLE `".PREFIX."user` CHANGE `mousepad` `mousepad` varchar(255) NOT NULL default ''");
 	mysqli_query($_database, "ALTER TABLE `".PREFIX."user` CHANGE `verbindung` `verbindung` VARCHAR( 255 ) NOT NULL default ''");
-	
+
 	mysqli_query($_database, "UPDATE `".PREFIX."user` SET `clantag` = '' WHERE `clantag` = 'n/a'");
 	mysqli_query($_database, "UPDATE `".PREFIX."user` SET `clanname` = '' WHERE `clanname` = 'n/a'");
 	mysqli_query($_database, "UPDATE `".PREFIX."user` SET `clanirc` = '' WHERE `clanirc` = 'n/a'");
@@ -1907,14 +1907,14 @@ function update40101_420() {
 	mysqli_query($_database, "UPDATE `".PREFIX."user` SET `mouse` = '' WHERE `mouse` = 'n/a'");
 	mysqli_query($_database, "UPDATE `".PREFIX."user` SET `mousepad` = '' WHERE `mousepad` = 'n/a'");
 	mysqli_query($_database, "UPDATE `".PREFIX."user` SET `verbindung` = '' WHERE `verbindung` = 'n/a'");
-	
+
 	// Smilie update
 	mysqli_query($_database, "UPDATE `".PREFIX."smileys` SET `pattern` = '=)' WHERE `pattern` = ':))'");
 	mysqli_query($_database, "UPDATE `".PREFIX."smileys` SET `pattern` = ':p' WHERE `pattern` = ':P'");
 	mysqli_query($_database, "UPDATE `".PREFIX."smileys` SET `pattern` = ';p' WHERE `pattern` = ';P'");
-	
+
 	mysqli_query($_database, "INSERT INTO `".PREFIX."smileys` VALUES ('', 'crazy.gif', 'crazy', '^^')");
-	
+
 	mysqli_query($_database, "UPDATE `".PREFIX."smileys` SET `alt` = 'amused' WHERE `pattern` = ':D'");
 	mysqli_query($_database, "UPDATE `".PREFIX."smileys` SET `alt` = 'confused' WHERE `pattern` = '?('");
 	mysqli_query($_database, "UPDATE `".PREFIX."smileys` SET `alt` = 'sad' WHERE `pattern` = ';('");
@@ -1931,37 +1931,37 @@ function update40101_420() {
 	mysqli_query($_database, "UPDATE `".PREFIX."smileys` SET `alt` = 'devilish' WHERE `pattern` = ':evil:'");
 	mysqli_query($_database, "UPDATE `".PREFIX."smileys` SET `alt` = 'angry' WHERE `pattern` = 'X('");
 	mysqli_query($_database, "UPDATE `".PREFIX."smileys` SET `alt` = 'crazy' WHERE `pattern` = '^^'");
-	
+
 	//Reverter of wrong escapes
 	if(get_magic_quotes_gpc()){
-		
+
 		@ini_set("max_execution_time", "300");
 		@set_time_limit(300);
-		
+
 		// Fix About Us
 		$get = mysqli_query($_database, "SELECT about FROM ".PREFIX."about");
 		if(mysqli_num_rows($get)){
 			$ds = mysqli_fetch_assoc($get);
 			mysqli_query($_database, "UPDATE ".PREFIX."about SET about='".$ds['about']."'");
 		}
-		
+
 		// Fix History
 		$get = mysqli_query($_database, "SELECT history FROM ".PREFIX."history");
 		if(mysqli_num_rows($get)){
 			$ds = mysqli_fetch_assoc($get);
-			mysqli_query($_database, "UPDATE ".PREFIX."history SET history='".$ds['history']."'");		
+			mysqli_query($_database, "UPDATE ".PREFIX."history SET history='".$ds['history']."'");
 		}
-		
+
 		// Fix Comments
 		$get = mysqli_query($_database, "SELECT commentID, nickname, comment, url, email FROM ".PREFIX."comments");
 		while ($ds = mysqli_fetch_assoc($get)) {
-			mysqli_query($_database, "UPDATE ".PREFIX."comments SET 	nickname='".$ds['nickname']."', 
-															comment='".$ds['comment']."', 
-															url='".$ds['url']."', 
-															email='".$ds['email']."' 
+			mysqli_query($_database, "UPDATE ".PREFIX."comments SET 	nickname='".$ds['nickname']."',
+															comment='".$ds['comment']."',
+															url='".$ds['url']."',
+															email='".$ds['email']."'
 															WHERE commentID='".$ds['commentID']."'");
 		}
-		
+
 		// Fix Articles
 		$get = mysqli_query($_database, "SELECT articlesID, title, url1, url2, url3, url4 FROM ".PREFIX."articles");
 		while($ds = mysqli_fetch_assoc($get)){
@@ -1972,7 +1972,7 @@ function update40101_420() {
 			$url4	 = $ds['url4'];
 			mysqli_query($_database, "UPDATE ".PREFIX."articles SET title='".$title."', url1='".$url1."', url2='".$url2."', url3='".$url3."', url4='".$url4."' WHERE articlesID='".$ds['articlesID']."'");
 		}
-		
+
 		// Fix Profiles
 		$get = mysqli_query($_database, "SELECT  userID, nickname, email, firstname, lastname, sex, country, town,
 									birthday, icq, usertext, clantag, clanname, clanhp,
@@ -1992,18 +1992,18 @@ function update40101_420() {
 
     @ini_set("max_execution_time", "300");
     @set_time_limit(300);
-		
+
 		// Fix Userguestbook
 		$get = mysqli_query($_database, "SELECT gbID, name, email, hp, comment FROM ".PREFIX."user_gbook");
 		while ($ds = mysqli_fetch_assoc($get)) {
-			mysqli_query($_database, "UPDATE ".PREFIX."user_gbook SET name='".$ds['name']."', 
-															comment='".$ds['comment']."', 
-															hp='".$ds['hp']."', 
-															email='".$ds['email']."' 
+			mysqli_query($_database, "UPDATE ".PREFIX."user_gbook SET name='".$ds['name']."',
+															comment='".$ds['comment']."',
+															hp='".$ds['hp']."',
+															email='".$ds['email']."'
 															WHERE gbID='".$ds['gbID']."'");
 		}
-		
-		// Fix Messenges		
+
+		// Fix Messenges
 		$get = mysqli_query($_database, "SELECT messageID, message FROM ".PREFIX."messenger");
 		while ($ds = mysqli_fetch_assoc($get)) {
 			mysqli_query($_database, "UPDATE ".PREFIX."messenger SET message='".$ds['message']."' WHERE messageID='".$ds['messageID']."'");
@@ -2011,7 +2011,7 @@ function update40101_420() {
 
     @ini_set("max_execution_time", "300");
     @set_time_limit(300);
-		
+
 		// Fix Forum
 		$get = mysqli_query($_database, "SELECT topicID, topic FROM ".PREFIX."forum_topics");
 		while($ds = mysqli_fetch_assoc($get)){
@@ -2020,7 +2020,7 @@ function update40101_420() {
 
     @ini_set("max_execution_time", "300");
     @set_time_limit(300);
-		
+
 		$get = mysqli_query($_database, "SELECT postID, message FROM ".PREFIX."forum_posts");
 		while($ds = mysqli_fetch_assoc($get)){
 			mysqli_query($_database, "UPDATE ".PREFIX."forum_posts SET message='".$ds['message']."' WHERE postID='".$ds['postID']."'");
@@ -2031,7 +2031,7 @@ function update40101_420() {
 
 function update420_430() {
 	global $_database;
-	
+
   mysqli_query($_database, "DROP TABLE IF EXISTS `".PREFIX."forum_posts_spam`");
   mysqli_query($_database, "CREATE TABLE `".PREFIX."forum_posts_spam` (
     `postID` int(11) NOT NULL AUTO_INCREMENT,
@@ -2089,7 +2089,9 @@ function update420_430() {
   mysqli_query($_database, "ALTER TABLE `".PREFIX."settings` ADD `date_format` varchar(255) NOT NULL default 'd.m.Y'");
   mysqli_query($_database, "ALTER TABLE `".PREFIX."settings` ADD `time_format` varchar(255) NOT NULL default 'H:i'");
   mysqli_query($_database, "ALTER TABLE `".PREFIX."settings` ADD `user_guestbook` int(1) NOT NULL default '1'");
-  
+
+  mysqli_query($_database, "UPDATE `".PREFIX."settings` SET spamapihost='https://api.webspell.org/'");
+
   mysqli_query($_database, "ALTER TABLE `".PREFIX."user` ADD `date_format` varchar(255) NOT NULL default 'd.m.Y'");
   mysqli_query($_database, "ALTER TABLE `".PREFIX."user` ADD `time_format` varchar(255) NOT NULL default 'H:i'");
   mysqli_query($_database, "ALTER TABLE `".PREFIX."user` ADD `hdd` varchar(255) NOT NULL default ''");
@@ -2205,7 +2207,7 @@ function update420_430() {
   mysqli_query($_database, "INSERT INTO `".PREFIX."addon_categories` ( `catID` , `name`, `default`, `sort` ) VALUES ('6', 'content', '1', '6');");
   mysqli_query($_database, "INSERT INTO `".PREFIX."addon_categories` ( `catID` , `name`, `default`, `sort` ) VALUES ('7', 'forum', '1', '7');");
   mysqli_query($_database, "INSERT INTO `".PREFIX."addon_categories` ( `catID` , `name`, `default`, `sort` ) VALUES ('8', 'gallery', '1', '8');");
-  
+
   mysqli_query($_database, "DROP TABLE IF EXISTS `".PREFIX."addon_links`");
   mysqli_query($_database, "CREATE TABLE `".PREFIX."addon_links` (
   `linkID` int(11) NOT NULL AUTO_INCREMENT,
