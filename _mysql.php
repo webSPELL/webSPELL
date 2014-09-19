@@ -1,9 +1,9 @@
 <?php
-    $host = 'localhost';
-    $user = 'root';
-    $pwd = 'root';
-    $db = 'webspell';
-    if(!defined("PREFIX")){
-        define("PREFIX", 'ws_c94_');
-    }
+$host = 'localhost';
+$user = '';
+$pwd = '';
+$db = '';
+if(!defined("PREFIX")){
+  define("PREFIX", '');
+}
 ?>
