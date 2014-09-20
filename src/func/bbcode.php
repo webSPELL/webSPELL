@@ -446,7 +446,7 @@ function replacement($content, $bbcode=true) {
 		$content = preg_replace("#\[\*\](.*?)\[/\*\](\s){0,}#si", "<li>\\1</li>", $content);
 		$content = preg_replace("#\[br]#si", "<br>", $content);
 		$content = preg_replace("#\[hr]#si", "<hr />", $content);
-		$content = preg_replace("#\[center]#si", "<p class="text-center">", $content);
+		$content = preg_replace("#\[center]#si", "<p class=\"text-center\">", $content);
 		$content = preg_replace("#\[/center]#si", "</p>", $content);
 	}
 	$content = preg_replace("#\[SMILE=(.*?)\](.*?)\[/SMILE\]#si", '<img src="\\2" alt="\\1" border="0" />', $content);
