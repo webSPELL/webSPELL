@@ -279,7 +279,7 @@ else {
 		if(!(mb_strlen(trim($oldpwd)))) {
 			$error = $_language->module['forgot_old_pw'];
 		}
-		$oldmd5pwd = generatePasswordHash($oldpwd);
+		$oldmd5pwd = generatePasswordHash(stripslashes($oldpwd));
 		if($oldmd5pwd != $ds['password']) {
 			$error = $_language->module['old_pw_not_valid'];
 		}
