@@ -576,7 +576,8 @@ elseif($action=="report") {
 			$captcha = $CAPCLASS->create_captcha();
 			$hash = $CAPCLASS->get_hash();
 			$CAPCLASS->clear_oldcaptcha();
-			$captcha_form = $captcha.' <input type="text" name="captcha" size="5" maxlength="5"><input name="captcha_hash" type="hidden" value="'.$hash.'"><br>';
+                    
+			$captcha_form = '<div class="form-group"><div class="input-group"><span class="input-group-addon captcha-img">'.$captcha.'</span> <input type="number" name="captcha" size="5" maxlength="5" placeholder="Captcha" class="form-control"><input name="captcha_hash" type="hidden" value="'.$hash.'"></div></div>';
 		}
 
 		eval("\$report_deadlink = \"".gettemplate("report_deadlink")."\";");
@@ -658,7 +659,7 @@ else {
 		$bg1 = BG_1;
 		$bg2 = BG_2;
 		
-    eval("\$files_stats = \"".gettemplate("files_stats")."\";");
+        eval("\$files_stats = \"".gettemplate("files_stats")."\";");
 		eval("\$files_overview = \"".gettemplate("files_overview_head")."\";");
 		echo $files_overview;
 
