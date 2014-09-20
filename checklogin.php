@@ -45,26 +45,26 @@ $get = safe_query("SELECT * FROM ".PREFIX."banned_ips WHERE ip='".$GLOBALS['ip']
 if(mysqli_num_rows($get) == 0){
 	$ws_pwd = generatePasswordHash(stripslashes($_POST['pwd']));
 	$ws_user = $_POST['ws_user'];
-	
+
 	$check = safe_query("SELECT * FROM ".PREFIX."user WHERE username='".$ws_user."'");
 	$anz = mysqli_num_rows($check);
 	$login = 0;
-	
+
 	if(!$closed_tmp AND !isset($_SESSION['ws_sessiontest'])) {
 		$error = $_language->module['session_error'];
 	}
 	else {
 		if($anz) {
-		
+
 			$check = safe_query("SELECT * FROM ".PREFIX."user WHERE username='".$ws_user."' AND activated='1'");
 			if(mysqli_num_rows($check)) {
-		
+
 				$ds=mysqli_fetch_array($check);
-		
+
 				// check password
 				$login = 0;
 				if($ws_pwd == $ds['password']) {
-		
+
 					//session
 					$_SESSION['ws_auth'] = $ds['userID'].":".$ws_pwd;
 					$_SESSION['ws_lastlogin'] = $ds['lastlogin'];
@@ -80,8 +80,8 @@ if(mysqli_num_rows($get) == 0){
 						setcookie($cookieName,$cookieValue,$cookieExpire,$cookieInfo['path'],$cookieInfo['domain'],$cookieInfo['secure'],true);
 					}
 					else{
-						setcookie($cookieName,$cookieValue,$cookieExpire);	
-					}				
+						setcookie($cookieName,$cookieValue,$cookieExpire);
+					}
 					unset($cookieName);
 					unset($cookieValue);
 					unset($cookieExpire);
@@ -115,7 +115,7 @@ if(mysqli_num_rows($get) == 0){
 				}
 			}
 			else $error= $_language->module['not_activated'];
-		
+
 		}
 		else $error=str_replace('%username%', htmlspecialchars($ws_user), $_language->module['no_user']);
 	}
@@ -126,6 +126,10 @@ else{
 	$error = str_replace('%reason%', $data['reason'], $_language->module['ip_banned']);
 }
 
+if($login){
+	header("Location: index.php?site=loginoverview");
+}
+else{
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
@@ -138,7 +142,6 @@ else{
 <meta name="generator" content="webSPELL" />
 <title><?php echo PAGETITLE; ?></title>
 <link href="_stylesheet.css" rel="stylesheet" type="text/css" />
-<?php if($login) { echo '<meta http-equiv="refresh" content="1;URL=index.php?site=loginoverview" />'; } ?>
 </head>
 <body bgcolor="<?php echo PAGEBG; ?>">
 <table width="100%" border="0" cellpadding="0" cellspacing="0">
@@ -154,3 +157,6 @@ else{
 </table>
 </body>
 </html>
+<?php
+}
+?>
