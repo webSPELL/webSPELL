@@ -86,16 +86,16 @@ elseif(isset($_POST['save'])) {
 				}  else {
 					if(unlink($filepath.$banner['name'].".tmp")) {
 						$error = $_language->module['format_incorrect'];
-						die('<b>'.$error.'</b><br /><br /><a href="admincenter.php?site=partners&amp;action=edit&amp;partnerID='.$id.'">&laquo; '.$_language->module['back'].'</a>');
+						die('<b>'.$error.'</b><br><br><a href="admincenter.php?site=partners&amp;action=edit&amp;partnerID='.$id.'">&laquo; '.$_language->module['back'].'</a>');
 					} else {
 						$error = $_language->module['format_incorrect'];
-						die('<b>'.$error.'</b><br /><br /><a href="admincenter.php?site=partners&amp;action=edit&amp;partnerID='.$id.'">&laquo; '.$_language->module['back'].'</a>');
+						die('<b>'.$error.'</b><br><br><a href="admincenter.php?site=partners&amp;action=edit&amp;partnerID='.$id.'">&laquo; '.$_language->module['back'].'</a>');
 					}
 				}
 			} else {
 				@unlink($filepath.$banner['name'].".tmp");
 				$error = $_language->module['banner_to_big'];
-				die('<b>'.$error.'</b><br /><br /><a href="admincenter.php?site=partners&amp;action=edit&amp;partnerID='.$id.'">&laquo; '.$_language->module['back'].'</a>');
+				die('<b>'.$error.'</b><br><br><a href="admincenter.php?site=partners&amp;action=edit&amp;partnerID='.$id.'">&laquo; '.$_language->module['back'].'</a>');
 			}
 		}
 	} else echo $_language->module['transaction_invalid'];
@@ -133,16 +133,16 @@ elseif(isset($_POST['saveedit'])) {
 				}  else {
 					if(unlink($filepath.$banner['name'].".tmp")) {
 						$error = $_language->module['format_incorrect'];
-						die('<b>'.$error.'</b><br /><br /><a href="admincenter.php?site=partners&amp;action=edit&amp;partnerID='.$id.'">&laquo; '.$_language->module['back'].'</a>');
+						die('<b>'.$error.'</b><br><br><a href="admincenter.php?site=partners&amp;action=edit&amp;partnerID='.$id.'">&laquo; '.$_language->module['back'].'</a>');
 					} else {
 						$error = $_language->module['format_incorrect'];
-						die('<b>'.$error.'</b><br /><br /><a href="admincenter.php?site=partners&amp;action=edit&amp;partnerID='.$id.'">&laquo; '.$_language->module['back'].'</a>');
+						die('<b>'.$error.'</b><br><br><a href="admincenter.php?site=partners&amp;action=edit&amp;partnerID='.$id.'">&laquo; '.$_language->module['back'].'</a>');
 					}
 				}
 			} else {
 				@unlink($filepath.$banner['name'].".tmp");
 				$error = $_language->module['banner_to_big'];
-				die('<b>'.$error.'</b><br /><br /><a href="admincenter.php?site=partners&amp;action=edit&amp;partnerID='.$id.'">&laquo; '.$_language->module['back'].'</a>');
+				die('<b>'.$error.'</b><br><br><a href="admincenter.php?site=partners&amp;action=edit&amp;partnerID='.$id.'">&laquo; '.$_language->module['back'].'</a>');
 			}
 		}
 		safe_query("UPDATE ".PREFIX."partners SET name='$name', url='$url', displayed='".$displayed."' WHERE partnerID='$partnerID' ");
@@ -233,7 +233,7 @@ else {
 	
   echo'<h1>&curren; '.$_language->module['partners'].'</h1>';
   
-  echo'<input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=partners&amp;action=add\');return document.MM_returnValue" value="'.$_language->module['new_partner'].'" /><br /><br />';
+  echo'<input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=partners&amp;action=add\');return document.MM_returnValue" value="'.$_language->module['new_partner'].'" /><br><br>';
 
 	echo'<form method="post" action="admincenter.php?site=partners">
   <table width="100%" border="0" cellspacing="1" cellpadding="3" bgcolor="#DDDDDD">

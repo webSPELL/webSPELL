@@ -64,6 +64,6 @@ $language_array = Array(
   'usermenu'=>'نام کاربر',
   'views'=>'تعداد تماشاها',
   'x_new_message'=>'پیغام جدید %new_messages% اینجا وجود دارد',
-  'you_have_to_be_logged_in'=>'!شما باید وارد شوید تا بتوانید ببینید<br /><br />rn    &#8226; <a href="index.php?site=register">عضو شوید</a><br />rn    &#8226; <a href="index.php?site=login">ورود</a>'
+  'you_have_to_be_logged_in'=>'!شما باید وارد شوید تا بتوانید ببینید<br><br>rn    &#8226; <a href="index.php?site=register">عضو شوید</a><br>rn    &#8226; <a href="index.php?site=login">ورود</a>'
 );
 ?>

@@ -386,7 +386,7 @@ if(date("dh",$lastBanCheck) != date("dh")){
 
 $banned=safe_query("SELECT userID, banned, ban_reason FROM ".PREFIX."user WHERE (userID='".$userID."' OR ip='".$GLOBALS['ip']."') AND banned IS NOT NULL");
 while($bq=mysql_fetch_array($banned)) {
-	if($bq['ban_reason']) $reason = "<br />".$bq['ban_reason'];
+	if($bq['ban_reason']) $reason = "<br>".$bq['ban_reason'];
 	else $reason = '';
 	if($bq['banned']) system_error('You have been banished.'.$reason,0);
 }

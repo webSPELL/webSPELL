@@ -37,7 +37,7 @@ $language_array = Array(
 Rendszered nem támogatja a HTML-Maileket.
 Az alábbi üzenetet kaptad:',
   'profile'=>'Profil',
-  'receptionists'=>'Hírlevél elküldve!<br /><br />Címzett(ek):',
+  'receptionists'=>'Hírlevél elküldve!<br><br>Címzett(ek):',
   'remove'=>'Itt iratkozhatsz le hírlevelünkről:',
   'send'=>'Hírlevél elküldése',
   'send_to'=>'Címzett(ek):',

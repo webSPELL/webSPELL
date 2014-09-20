@@ -47,7 +47,7 @@ $language_array = Array(
   'mail'=>'Su meiliaadress',
   'name'=>'Su nimi',
   'new_entry'=>'Uus sissekanne',
-  'no_access'=>'Sa pole sisse logitud.<br /><a href="index.php?site=login">Logi sisse</a> | <a href="index.php?site=register">Registreeri</a>',
+  'no_access'=>'Sa pole sisse logitud.<br><a href="index.php?site=login">Logi sisse</a> | <a href="index.php?site=register">Registreeri</a>',
   'options'=>'Sätted',
   'pmsubject_newentry'=>'Uus külalisteraamatu sissekanne',
   'pmtext_newentry'=>'[b]Keegi jättis sulle sõnumi su külalisteraamatusse![/b][br][br] [URL=index.php?site=guestbook#%insertid%]Kliki siia, et sõnumit lugeda[/URL] ',

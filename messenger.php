@@ -404,7 +404,7 @@ elseif($userID) {
 		if(isset($_SESSION['message_error'])){
 			$subject = getforminput($_SESSION['message_subject']);
 			$message = getforminput($_SESSION['message_body']);
-			$error = "<div class='alert alert-danger'><b>".$_language->module['error'].":</b><br/>".$_language->module['unknown_user']."</div>";
+			$error = "<div class='alert alert-danger'><b>".$_language->module['error'].":</b><br>".$_language->module['unknown_user']."</div>";
 			unset($_SESSION['message_subject'],$_SESSION['message_body'],$_SESSION['message_error']);
 		}
 		else{
@@ -413,7 +413,7 @@ elseif($userID) {
 		
 		$bg1=BG_1;
 
-		if(isanyadmin($userID)) $admin='<b>'.$_language->module['adminoptions'].'</b><br />'.$_language->module['sendeachuser'].'<input class="input" type="checkbox" name="eachuser" value="true" /><br />'.$_language->module['sendeachmember'].'<input class="input" type="checkbox" name="eachmember" value="true" />';
+		if(isanyadmin($userID)) $admin='<b>'.$_language->module['adminoptions'].'</b><br>'.$_language->module['sendeachuser'].'<input class="input" type="checkbox" name="eachuser" value="true" /><br>'.$_language->module['sendeachmember'].'<input class="input" type="checkbox" name="eachmember" value="true" />';
 		else $admin = '';
 		
 		eval ("\$addbbcode = \"".gettemplate("addbbcode")."\";");

@@ -212,7 +212,7 @@ foreach($tables_array as $table){
     <td class="td2"><?php echo $count_tables; ?></td>
   </tr>
 </table>
-<br /><br />
+<br><br>
 <table width="100%" border="0" cellspacing="1" cellpadding="3" bgcolor="#DDDDDD">
   <tr>
     <td class="title" colspan="4"><b><?php echo $_language->module['page_stats']; ?></b></td>

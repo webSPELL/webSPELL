@@ -349,10 +349,10 @@ elseif($action=="save") {
 	}
 	else echo'<script src="js/bbcode.js" language="jscript" type="text/javascript"></script>
   <link href="_stylesheet.css" rel="stylesheet" type="text/css">
-  <center><br /><br /><br /><br />
-  <b>'.$_language->module['clanwar_saved'].'.</b><br /><br />
+  <p class="text-center"><br><br><br><br>
+  <b>'.$_language->module['clanwar_saved'].'.</b><br><br>
   <input type="button" onclick="MM_openBrWindow(\'upload.php?cwID='.$cwID.'\',\'Clanwars\',\'toolbar=no,status=no,scrollbars=yes,width=800,height=600\')" value="'.$_language->module['upload_screenshot'].'">
-  <input type="button" onclick="javascript:self.close()" value="'.$_language->module['close_window'].'" /></center>';
+  <input type="button" onclick="javascript:self.close()" value="'.$_language->module['close_window'].'" /></p>';
 }
 elseif($action=="edit") {
 	include("_mysql.php");
@@ -549,10 +549,10 @@ elseif($action=="saveedit") {
 								 comments='$comments',
                  linkpage='$linkpage' WHERE cwID='$cwID'");
 
-	echo'<center><br /><br /><br /><br />
-  <b>'.$_language->module['clanwar_updated'].'</b><br /><br />
+	echo'<p class="text-center"><br><br><br><br>
+  <b>'.$_language->module['clanwar_updated'].'</b><br><br>
   <input type="button" onclick="MM_openBrWindow(\'upload.php?cwID='.$cwID.'\',\'Clanwars\',\'toolbar=no,status=no,scrollbars=yes,width=800,height=600\')" value="'.$_language->module['upload_screenshot'].'">
-  <input type="button" onclick="javascript:self.close()" value="'.$_language->module['close_window'].'"></center>';
+  <input type="button" onclick="javascript:self.close()" value="'.$_language->module['close_window'].'"></p>';
 }
 elseif($action=="delete") {
 	include("_mysql.php");
@@ -664,15 +664,15 @@ elseif($action=="stats") {
 	if(!$totalopp) $totalopp=0;
 
 	$totalwonperc=percent($totalwonall, $totaltotal, 2);
-	if($totalwonperc) $totalwon=$totalwonperc.'%<br /><img src="images/icons/won.gif" width="30" height="'.round($totalwonperc, 0).'" border="1" alt="'.$_language->module['won'].'" />';
+	if($totalwonperc) $totalwon=$totalwonperc.'%<br><img src="images/icons/won.gif" width="30" height="'.round($totalwonperc, 0).'" border="1" alt="'.$_language->module['won'].'" />';
 	else $totalwon=0;
 
 	$totalloseperc=percent($totalloseall, $totaltotal, 2);
-	if($totalloseperc) $totallost=$totalloseperc.'%<br /><img src="images/icons/lost.gif" width="30" height="'.round($totalloseperc, 0).'" border="1" alt="'.$_language->module['lost'].'" />';
+	if($totalloseperc) $totallost=$totalloseperc.'%<br><img src="images/icons/lost.gif" width="30" height="'.round($totalloseperc, 0).'" border="1" alt="'.$_language->module['lost'].'" />';
 	else $totallost=0;
 
 	$totaldrawperc=percent($totaldrawall, $totaltotal, 2);
-	if($totaldrawperc) $totaldraw=$totaldrawperc.'%<br /><img src="images/icons/draw.gif" width="30" height="'.round($totaldrawperc, 0).'" border="1" alt="'.$_language->module['draw'].'" />';
+	if($totaldrawperc) $totaldraw=$totaldrawperc.'%<br><img src="images/icons/draw.gif" width="30" height="'.round($totaldrawperc, 0).'" border="1" alt="'.$_language->module['draw'].'" />';
 	else $totaldraw=0;
 
 	$squad=$_language->module['clan'];
@@ -735,15 +735,15 @@ elseif($action=="stats") {
 			$oppperc=percent($opp, $totalopp, 2);
 			// total squad clanwars won
 			$wonperc=percent($wonall, $totaltotal, 2);
-			if($wonperc) $totalwon=$wonperc.'%<br /><img src="images/icons/won.gif" width="30" height="'.round($wonperc, 0).'" border="1" alt="'.$_language->module['won'].'" />';
+			if($wonperc) $totalwon=$wonperc.'%<br><img src="images/icons/won.gif" width="30" height="'.round($wonperc, 0).'" border="1" alt="'.$_language->module['won'].'" />';
 			else $totalwon='0%';
 			// total squad clanwars lost
 			$loseperc=percent($loseall, $totaltotal, 2);
-			if($loseperc) $totallost=$loseperc.'%<br /><img src="images/icons/lost.gif" width="30" height="'.round($loseperc, 0).'" border="1" alt="'.$_language->module['lost'].'" />';
+			if($loseperc) $totallost=$loseperc.'%<br><img src="images/icons/lost.gif" width="30" height="'.round($loseperc, 0).'" border="1" alt="'.$_language->module['lost'].'" />';
 			else $totallost='0%';
 			// total squad clanwars draw
 			$drawperc=percent($drawall, $totaltotal, 2);
-			if($drawperc) $totaldraw=$drawperc.'%<br /><img src="images/icons/draw.gif" width="30" height="'.round($drawperc, 0).'" border="1" alt="'.$_language->module['draw'].'" />';
+			if($drawperc) $totaldraw=$drawperc.'%<br><img src="images/icons/draw.gif" width="30" height="'.round($drawperc, 0).'" border="1" alt="'.$_language->module['draw'].'" />';
 			else $totaldraw='0%';
 
 			// fill empty vars
@@ -1002,8 +1002,8 @@ elseif(empty($_GET['action'])) {
 		else $n = ($gesamt+1)-$page*$max+$max;
 	}
 
-  if($type=="ASC") $seiten='<a href="index.php?site=clanwars&amp;page='.$page.'&amp;sort='.$sort.'&amp;type=DESC">'.$_language->module['sort'].':</a> <img src="images/icons/asc.gif" width="9" height="7" border="0" alt="" /> '.$page_link.'<br /><br />';
-	else $seiten='<a href="index.php?site=clanwars&amp;page='.$page.'&amp;sort='.$sort.'&amp;type=ASC">'.$_language->module['sort'].':</a> <img src="images/icons/desc.gif" width="9" height="7" border="0" alt="" /> '.$page_link.'<br /><br />';
+  if($type=="ASC") $seiten='<a href="index.php?site=clanwars&amp;page='.$page.'&amp;sort='.$sort.'&amp;type=DESC">'.$_language->module['sort'].':</a> <img src="images/icons/asc.gif" width="9" height="7" border="0" alt="" /> '.$page_link.'<br><br>';
+	else $seiten='<a href="index.php?site=clanwars&amp;page='.$page.'&amp;sort='.$sort.'&amp;type=ASC">'.$_language->module['sort'].':</a> <img src="images/icons/desc.gif" width="9" height="7" border="0" alt="" /> '.$page_link.'<br><br>';
 
   if(isclanwaradmin($userID)) $admin='<input type="button" onclick="MM_openBrWindow(\'clanwars.php?action=new\',\'Clanwars\',\'toolbar=no,status=no,scrollbars=yes,width=800,height=600\')" value="'.$_language->module['new_clanwar'].'" class="btn btn-danger">';
   else $admin='';

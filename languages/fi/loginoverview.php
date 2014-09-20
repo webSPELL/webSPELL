@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 /*
 ##########################################################################
 #                                                                        #
@@ -70,8 +70,8 @@ $language_array = Array(
   'usermenu'=>'Käyttäjävalikko',
   'views'=>'katsojakerrat',
   'x_new_message'=>'Sinula on %new_messages% uutta viestiä.',
-  'you_have_to_be_logged_in'=>'Sinun täytyy olla kirjauttuneena sisään!<br /><br />
-    &#8226; <a href="index.php?site=register">Rekisteröidy nyt</a><br />
+  'you_have_to_be_logged_in'=>'Sinun täytyy olla kirjauttuneena sisään!<br><br>
+    &#8226; <a href="index.php?site=register">Rekisteröidy nyt</a><br>
     &#8226; <a href="index.php?site=login">Kirjaudu sisään</a>'
 );
 ?>

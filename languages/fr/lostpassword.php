@@ -43,8 +43,8 @@ Bonne visite sur notre site
 	'lost_password'=>'Mot de passe perdu',
 	'no_mail_given'=>'Vous n\'avez pas entré d\'adresse mail !',
 	'no_user_found'=>'Aucun utilisateur trouvé !',
-	'successful'=>'Votre compte a été retrouvé<br /><br />
-    Vous allez recevoir un mail avec les données de votre compte dans quelques secondes.<br /><br />
+	'successful'=>'Votre compte a été retrouvé<br><br>
+    Vous allez recevoir un mail avec les données de votre compte dans quelques secondes.<br><br>
     &#8226; <a href="index.php?site=login">S\'enregistrer</a>',
 	'your_email'=>'Votre adresse mail'
 );

@@ -92,10 +92,10 @@ if($action=="save" && isset($_POST['post'])) {
   	}
 	else {
 		$show = true;
-		$fehler=implode('<br />&#8226; ',$error);
+		$fehler=implode('<br>&#8226; ',$error);
     
     	$showerror = '<div class="errorbox">
-      <b>'.$_language->module['problems'].':</b><br /><br />
+      <b>'.$_language->module['problems'].':</b><br><br>
       &#8226; '.$fehler.'
     </div>';
 	}
@@ -172,7 +172,7 @@ if(isclanwaradmin($userID)) {
 
 		if($type=="ASC") echo'<a href="index.php?site=challenge&amp;type=DESC">'.$_language->module['sort'].'</a> <img src="images/icons/asc.gif" width="9" height="7" border="0" alt="" />&nbsp;&nbsp;&nbsp;';
 		else echo'<a href="index.php?site=challenge&amp;type=ASC">'.$_language->module['sort'].'</a> <img src="images/icons/desc.gif" width="9" height="7" border="0" alt="" />&nbsp;&nbsp;&nbsp;';
-		echo'<br /><br />';
+		echo'<br><br>';
 		
 		$i=0;
 		while ($ds = mysql_fetch_array($ergebnis)) {
@@ -202,7 +202,7 @@ if(isclanwaradmin($userID)) {
 			echo $challenges;
 			$i++;
 		}
-		echo'<br />';
+		echo'<br>';
 	}
 	else echo $_language->module['no_entries'];
 }

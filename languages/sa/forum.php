@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 /*
 ##########################################################################
 #                                                                        #
@@ -88,8 +88,8 @@ $language_array = Array(
   'no_new_posts'=>'لا توجد مشاركات جديدة',
   'no_permission'=>'!لا تملك الصلاحية لقرائة هذا القسم',
   'not_logged'=>'.لست مسجل',
-  'not_logged_msg'=>'<br /><br />!للبداية لو الرد يجب التسجيل اولا<br /><br />
-&#8226; <a href="index.php?site=register">سجل الان</a><br />
+  'not_logged_msg'=>'<br><br>!للبداية لو الرد يجب التسجيل اولا<br><br>
+&#8226; <a href="index.php?site=register">سجل الان</a><br>
 &#8226; <a href="index.php?site=login">سجل الدخول</a>',
   'notify'=>'ابلغني في حال الرد على الموضوع',
   'notify_mail'=>'الرد الجديد من %poster% في الموضوع 

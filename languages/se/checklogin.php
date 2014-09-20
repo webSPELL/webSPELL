@@ -29,11 +29,11 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-	'invalid_password'=>'Du har skrivit in fel lösenord<br /><br /><a href="javascript:history.back()">Gå tillbaka och försök igen.</a>',
-	'ip_banned'=>'Din IP är bannad från denna hemsidan.<br/>%reason%<br /><br /><a href="javascript:history.back()">Gå tillbaka</a>',
+	'invalid_password'=>'Du har skrivit in fel lösenord<br><br><a href="javascript:history.back()">Gå tillbaka och försök igen.</a>',
+	'ip_banned'=>'Din IP är bannad från denna hemsidan.<br>%reason%<br><br><a href="javascript:history.back()">Gå tillbaka</a>',
 	'login_successful'=>'Inlogningen lyckad!',
-	'no_user'=>'Användaren <b>%username%</b> är inte tillgänglig.<br /><br /><a href="javascript:history.back()">Gå tillbaka och försök igen!</a>',
-	'not_activated'=>'Ditt konto är inte aktiverat.<br /><br /><a href="javascript:history.back()">Tillbaka</a>',
-	'session_error'=>'Kontrollera att du har aktiverat cookies i din webbläsare.<br />Om problemet kvarstår, kontakta webbmastern.<br /><br /><a href="javascript:history.back()">Tillbaka</a>'
+	'no_user'=>'Användaren <b>%username%</b> är inte tillgänglig.<br><br><a href="javascript:history.back()">Gå tillbaka och försök igen!</a>',
+	'not_activated'=>'Ditt konto är inte aktiverat.<br><br><a href="javascript:history.back()">Tillbaka</a>',
+	'session_error'=>'Kontrollera att du har aktiverat cookies i din webbläsare.<br>Om problemet kvarstår, kontakta webbmastern.<br><br><a href="javascript:history.back()">Tillbaka</a>'
 );
 ?>

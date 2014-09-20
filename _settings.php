@@ -133,7 +133,7 @@ function safe_query($query="") {
 function system_error($text,$system=1) {
 	if($system) {
 		include('version.php');
-		$info='webSPELL Version: '.$version.'<br />PHP Version: '.phpversion().'<br />MySQL Version: '.mysql_get_server_info().'<br />';
+		$info='webSPELL Version: '.$version.'<br>PHP Version: '.phpversion().'<br>MySQL Version: '.mysql_get_server_info().'<br>';
 	} else {
 		$info = '';
 	}
@@ -155,7 +155,7 @@ function system_error($text,$system=1) {
       <td><a href="http://www.webspell.org" target="_blank"><img src="images/banner.gif" style="border:none;" alt="webSPELL.org" title="webSPELL.org" /></a></td>
     </tr>
     <tr bgcolor="#ffffff">
-      <td><div style="color:#333333;font-family:Tahoma,Verdana,Arial;font-size:11px;padding:5px;">'.$info.'<br /><font color="red">'.$text.'</font><br />&nbsp;</div></td>
+      <td><div style="color:#333333;font-family:Tahoma,Verdana,Arial;font-size:11px;padding:5px;">'.$info.'<br><font color="red">'.$text.'</font><br>&nbsp;</div></td>
     </tr>
     <tr bgcolor="#ffffff">
       <td><div style="color:#333333;font-family:Tahoma,Verdana,Arial;font-size:11px;padding:5px;">For support visit <a href="http://webspell.org" target="_blank">webspell.org</a></div></td>

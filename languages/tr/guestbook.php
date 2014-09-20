@@ -52,7 +52,7 @@ $language_array = Array(
   'mail'=>'Mail Adresiniz',
   'name'=>'İsminiz',
   'new_entry'=>'Yeni Giriş',
-  'no_access'=>'Giriş Yapmadınız.<br /><a href="index.php?site=login">Giriş</a> | <a href="index.php?site=register">Kaydetmek</a>',
+  'no_access'=>'Giriş Yapmadınız.<br><a href="index.php?site=login">Giriş</a> | <a href="index.php?site=register">Kaydetmek</a>',
   'options'=>'Seçenekler',
   'pmsubject_newentry'=>'Yeni ziyaretçi defteri girişi',
   'pmtext_newentry'=>'[b]Biri defterinize sizin için mesaj bıraktı![/b][br][br] [URL=index.php?site=guestbook#%insertid%]Mesajı okumak için buraya tıklayınız[/URL] ',

@@ -55,7 +55,7 @@ $language_array = Array(
   'no_incoming'=>'Sissetulevas kaustas pole sõnumeid.',
   'no_outgoing'=>'Väljaminevas kaustas pole sõnumeid.',
   'no_subject'=>'(pole pealkirja)',
-  'not_logged'=>'Sa ei ole sisse logitud.<br /><a href="index.php?site=login">Logi sisse</a> | <a href="index.php?site=register">Registreeri</a>',
+  'not_logged'=>'Sa ei ole sisse logitud.<br><a href="index.php?site=login">Logi sisse</a> | <a href="index.php?site=register">Registreeri</a>',
   'options'=>'Sätted',
   'outgoing'=>'Väljaminev',
   'read'=>'Loe',
@@ -74,7 +74,7 @@ $language_array = Array(
   'title'=>'Pealkiri',
   'your_message'=>'Sinu sõnum:',
   'mail_subject'=>'Sulle on uus privaatsõnum',
-  'mail_body'=>'<b>Tere %nickname%!</b><br /><br />Sulle on webSPELL v4-s uus sõnum (%hp_url%).<br />Kliki <a href="http://%hp_url%?site=messenger">siia</a> sõnumi lugemiseks.<br /><br />(C) webSPELL.org',
+  'mail_body'=>'<b>Tere %nickname%!</b><br><br>Sulle on webSPELL v4-s uus sõnum (%hp_url%).<br>Kliki <a href="http://%hp_url%?site=messenger">siia</a> sõnumi lugemiseks.<br><br>(C) webSPELL.org',
   'error'=>'viga',
   'unknown_user'=>'tundmatu kasutaja'
 );

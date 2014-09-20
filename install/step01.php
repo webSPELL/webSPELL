@@ -44,9 +44,9 @@ include('../version.php');
   </tr>
   <tr>
    <td id="content" colspan="2">
-	<b><?php echo $_language->module['version']; ?>:</b> <?php echo $version; ?><br /><br />
-   <?php echo $_language->module['gpl_info']; ?>:<br /><br />
-   <?php echo $_language->module['more_info']; ?>.<br /><br />
+	<b><?php echo $_language->module['version']; ?>:</b> <?php echo $version; ?><br><br>
+   <?php echo $_language->module['gpl_info']; ?>:<br><br>
+   <?php echo $_language->module['more_info']; ?>.<br><br>
    <textarea rows="10" cols="75">GNU GENERAL PUBLIC LICENSE
 Version 2, June 1991
 
@@ -389,13 +389,13 @@ proprietary programs. If your program is a subroutine library, you may
 consider it more useful to permit linking proprietary applications with the
 library. If this is what you want to do, use the GNU Library General
 Public License instead of this License.</textarea>
-<br /><br />
+<br><br>
 <?php echo $_language->module['please_select']; ?>:
 <select name="agree">
 <option value="0" selected="selected"><?php echo $_language->module['agree_not']; ?></option>
 <option value="1"><?php echo $_language->module['agree']; ?></option>
 </select>
 
-<div align="right"><br /><a href="javascript:document.ws_install.submit()"><img src="images/next.jpg" alt="" /></a></div>
+<div align="right"><br><a href="javascript:document.ws_install.submit()"><img src="images/next.jpg" alt="" /></a></div>
    </td>
   </tr>

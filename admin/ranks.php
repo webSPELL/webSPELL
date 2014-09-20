@@ -132,7 +132,7 @@ else {
 	
   echo'<h1>&curren; '.$_language->module['user_ranks'].'</h1>';
   
-  echo'<input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=ranks&amp;action=add\');return document.MM_returnValue" value="'.$_language->module['new_rank'].'" /><br /><br />';
+  echo'<input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=ranks&amp;action=add\');return document.MM_returnValue" value="'.$_language->module['new_rank'].'" /><br><br>';
 	
   echo'<form method="post" action="admincenter.php?site=ranks">
   <table width="100%" border="0" cellspacing="1" cellpadding="3" bgcolor="#DDDDDD">

@@ -41,7 +41,7 @@ $language_array = Array(
   'buddy_nousers'=>'Potrebujete uporabnika seznam prijateljev',
   'buddys'=>'Prijatelji',
   'ignore_nousers'=>'Ni uporabnikov na ignor listi',
-  'not_logged'=>'Za upravljanje seznama prijateljev, morate biti registrirani in prijavljeni uporabniki.<br /><a href="index.php?site=register">Registriraj se</a> | <a href="index.php?site=login">Prijavi se</a>',
+  'not_logged'=>'Za upravljanje seznama prijateljev, morate biti registrirani in prijavljeni uporabniki.<br><a href="index.php?site=register">Registriraj se</a> | <a href="index.php?site=login">Prijavi se</a>',
   'your_buddylist'=>'Seznam prijateljev',
   'your_ignorelist'=>'Seznam ignoriranih oseb'
 );

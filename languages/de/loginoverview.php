@@ -64,8 +64,8 @@ $language_array = Array(
 	'usermenu'=>'Benutzermenü',
 	'views'=>'Aufrufe',
 	'x_new_message'=>'Du hast %new_messages% neue Nachrichten.',
-	'you_have_to_be_logged_in'=>'Du musst angemeldet sein um diese Seite zu betrachten!<br /><br />
-	 &#8226; <a href="index.php?site=register">registrieren</a><br />
+	'you_have_to_be_logged_in'=>'Du musst angemeldet sein um diese Seite zu betrachten!<br><br>
+	 &#8226; <a href="index.php?site=register">registrieren</a><br>
 	 &#8226; <a href="index.php?site=login">anmelden</a>'
 );
 ?>

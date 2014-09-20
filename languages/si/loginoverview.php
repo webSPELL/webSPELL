@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 /*
 ##########################################################################
 #                                                                        #
@@ -70,8 +70,8 @@ $language_array = Array(
   'usermenu'=>'Uporabniški meni',
   'views'=>'ogledov:',
   'x_new_message'=>'novih sporočil: %new_messages%',
-  'you_have_to_be_logged_in'=>'Morate biti prijavljeni da bi vidjeli stran!<br /><br />
-    &#8226; <a href="index.php?site=register">Registriraj se</a><br />
+  'you_have_to_be_logged_in'=>'Morate biti prijavljeni da bi vidjeli stran!<br><br>
+    &#8226; <a href="index.php?site=register">Registriraj se</a><br>
     &#8226; <a href="index.php?site=login">Prijavi se</a>'
 );
 ?>

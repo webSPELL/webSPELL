@@ -62,7 +62,7 @@ elseif(isset($_POST['edit'])) {
 				$avatar['name'] = strrchr($avatar_url,"/");
 				if(!copy($_POST['avatar_url'],$filepath.$avatar['name'].".tmp")) {
 					$error = $_language->module['can_not_copy'];
-					die('ERROR: '.$error.'<br /><br /><input type="button" onclick="javascript:history.back()" value="'.$_language->module['back'].'" />');
+					die('ERROR: '.$error.'<br><br><input type="button" onclick="javascript:history.back()" value="'.$_language->module['back'].'" />');
 				}
 			}
 			@chmod($filepath.$avatar['name'].".tmp", $new_chmod);
@@ -82,18 +82,18 @@ elseif(isset($_POST['edit'])) {
 				else {
 					if(unlink($filepath.$avatar['name'].".tmp")) {
 						$error = $_language->module['invalid_format'];
-						die('ERROR: '.$error.'<br /><br /><input type="button" onclick="javascript:history.back()" value="'.$_language->module['back'].'" />');
+						die('ERROR: '.$error.'<br><br><input type="button" onclick="javascript:history.back()" value="'.$_language->module['back'].'" />');
 					}
 					else {
 						$error = $_language->module['upload_failed'];
-						die('ERROR: '.$error.'<br /><br /><input type="button" onclick="javascript:history.back()" value="'.$_language->module['back'].'" />');
+						die('ERROR: '.$error.'<br><br><input type="button" onclick="javascript:history.back()" value="'.$_language->module['back'].'" />');
 					}
 				}
 			}
 			else {
 				@unlink($filepath.$avatar['name'].".tmp");
 				$error = $_language->module['error_avatar'];
-				die('ERROR: '.$error.'<br /><br /><input type="button" onclick="javascript:history.back()" value="'.$_language->module['back'].'" />');
+				die('ERROR: '.$error.'<br><br><input type="button" onclick="javascript:history.back()" value="'.$_language->module['back'].'" />');
 			}
 		}
 
@@ -109,7 +109,7 @@ elseif(isset($_POST['edit'])) {
 				$userpic['name'] = strrchr($userpic_url,"/");
 				if(!copy($_POST['userpic_url'],$filepath.$userpic['name'].".tmp")) {
 					$error = $_language->module['can_not_copy'];
-					die('ERROR: '.$error.'<br /><br /><input type="button" onclick="javascript:history.back()" value="'.$_language->module['back'].'" />');
+					die('ERROR: '.$error.'<br><br><input type="button" onclick="javascript:history.back()" value="'.$_language->module['back'].'" />');
 				}
 			}
 			@chmod($filepath.$userpic['name'].".tmp", $new_chmod);
@@ -129,18 +129,18 @@ elseif(isset($_POST['edit'])) {
 				else {
 					if(unlink($filepath.$userpic['name'].".tmp")) {
 						$error = $_language->module['invalid_format'];
-						die('ERROR: '.$error.'<br /><br /><input type="button" onclick="javascript:history.back()" value="'.$_language->module['back'].'" />');
+						die('ERROR: '.$error.'<br><br><input type="button" onclick="javascript:history.back()" value="'.$_language->module['back'].'" />');
 					}
 					else {
 						$error = $_language->module['upload_failed'];
-						die('ERROR: '.$error.'<br /><br /><input type="button" onclick="javascript:history.back()" value="'.$_language->module['back'].'" />');
+						die('ERROR: '.$error.'<br><br><input type="button" onclick="javascript:history.back()" value="'.$_language->module['back'].'" />');
 					}
 				}
 			}
 			else {
 				@unlink($filepath.$userpic['name'].".tmp");
 				$error = $_language->module['error_picture'];
-				die('ERROR: '.$error.'<br /><br /><input type="button" onclick="javascript:history.back()" value="'.$_language->module['back'].'" />');
+				die('ERROR: '.$error.'<br><br><input type="button" onclick="javascript:history.back()" value="'.$_language->module['back'].'" />');
 			}
 		}
 		
@@ -372,17 +372,17 @@ elseif($action=="ban") {
 			}
 			echo '<tr>
 			    <td><input type="hidden" name="captcha_hash" value="'.$hash.'" /><input type="hidden" name="id" value="'.$id.'" /></td>
-			    <td><br /><input type="submit" name="ban" value="'.$_language->module['edit_ban'].'" /></td>
+			    <td><br><input type="submit" name="ban" value="'.$_language->module['edit_ban'].'" /></td>
 			  </tr>
 			</table>
 			</form>';
 		}
 		else {
-			echo $_language->module['you_cant_ban'].'<br /><br />&laquo; <a href="javascript:history.back()">'.$_language->module['back'].'</a>';
+			echo $_language->module['you_cant_ban'].'<br><br>&laquo; <a href="javascript:history.back()">'.$_language->module['back'].'</a>';
 		}
 	}
 	else {
-		echo $_language->module['you_cant_ban_yourself'].'<br /><br />&laquo; <a href="javascript:history.back()">'.$_language->module['back'].'</a>';
+		echo $_language->module['you_cant_ban_yourself'].'<br><br>&laquo; <a href="javascript:history.back()">'.$_language->module['back'].'</a>';
 	}
 }
 
@@ -417,7 +417,7 @@ elseif($action=="addtoclan") {
     </tr>
     <tr>
       <td><input type="hidden" name="captcha_hash" value="'.$hash.'" /><input type="hidden" name="id" value="'.$id.'" /></td>
-      <td><br /><input type="submit" name="add" value="'.$_language->module['add_to_clan'].'" /></td>
+      <td><br><input type="submit" name="add" value="'.$_language->module['add_to_clan'].'" /></td>
     </tr>
   </table>
   </form>';
@@ -479,7 +479,7 @@ elseif($action=="profile") {
       <td width="85%"><b>'.$ds['userID'].'</b></td>
     </tr>
     <tr>
-      <td colspan="2"><br /><i><b>'.$_language->module['general'].'</b></i></td>
+      <td colspan="2"><br><i><b>'.$_language->module['general'].'</b></i></td>
     </tr>
     <tr>
       <td><b>'.$_language->module['nickname'].'</b></td>
@@ -490,7 +490,7 @@ elseif($action=="profile") {
       <td><input type="text" name="email" value="'.getinput($ds['email']).'" size="60" /></td>
     </tr>
     <tr>
-      <td colspan="2"><br /><i><b>'.$_language->module['pictures'].'</b></i></td>
+      <td colspan="2"><br><i><b>'.$_language->module['pictures'].'</b></i></td>
     </tr>
     <tr>
       <td><b>'.$viewavatar.'</b></td>
@@ -509,7 +509,7 @@ elseif($action=="profile") {
       <td><input type="checkbox" name="userpic" value="1" /> '.$_language->module['delete_picture'].'</td>
     </tr>
     <tr>
-      <td colspan="2"><br /><i><b>'.$_language->module['personal'].'</b></i></td>
+      <td colspan="2"><br><i><b>'.$_language->module['personal'].'</b></i></td>
     </tr>
     <tr>
       <td><b>'.$_language->module['firstname'].'</b></td>
@@ -556,7 +556,7 @@ elseif($action=="profile") {
       <td><textarea name="about" rows="5" cols="" style="width: 60%;">'.getinput($ds['about']).'</textarea></td>
     </tr>
     <tr>
-      <td colspan="2"><br /><i><b>'.$_language->module['various'].'</b></i></td>
+      <td colspan="2"><br><i><b>'.$_language->module['various'].'</b></i></td>
     </tr>
     <tr><td><b>'.$_language->module['clantag'].'</b></td>
       <td><input type="text" name="clantag" value="'.getinput($ds['clantag']).'" size="60" /></td>
@@ -619,7 +619,7 @@ elseif($action=="profile") {
     </tr>
     <tr>
       <td><input type="hidden" name="captcha_hash" value="'.$hash.'" /><input type="hidden" name="id" value="'.$id.'" /></td>
-      <td><br /><input type="submit" name="edit" value="'.$_language->module['edit_profile'].'" /></td>
+      <td><br><input type="submit" name="edit" value="'.$_language->module['edit_profile'].'" /></td>
     </tr>
   </table>
   </form>';
@@ -705,7 +705,7 @@ else {
 		echo'<table width="100%" border="0" cellspacing="1" cellpadding="3">
       <tr>
         <td>'.$sorter.' '.$page_link.'</td>
-        <td align="right"><b>'.$_language->module['usersearch'].':</b> &nbsp; <input id="exact" type="checkbox" /> '.$_language->module['exactsearch'].' &nbsp; <input type="text" onkeyup=\'overlay(this, "searchresult");search("user","nickname","userID",encodeURIComponent(this.value),"search_user","searchresult","replace", document.getElementById("exact").checked, "ac_usersearch")\' size="25" /><br />
+        <td align="right"><b>'.$_language->module['usersearch'].':</b> &nbsp; <input id="exact" type="checkbox" /> '.$_language->module['exactsearch'].' &nbsp; <input type="text" onkeyup=\'overlay(this, "searchresult");search("user","nickname","userID",encodeURIComponent(this.value),"search_user","searchresult","replace", document.getElementById("exact").checked, "ac_usersearch")\' size="25" /><br>
         <div id="searchresult" style="position:absolute;display:none;border:1px solid black;background-color:#DDDDDD; padding:2px;"></div></td>
       </tr>
       <tr>
@@ -713,7 +713,7 @@ else {
       </tr>
     </table>';
 
-		echo'<br />
+		echo'<br>
     <table width="100%" border="0" cellspacing="1" cellpadding="3" bgcolor="#DDDDDD">
       <tr>
         <td width="16%" class="title"><a href="admincenter.php?site=users&amp;type='.$type.'&amp;sort=registerdate&amp;page='.$page.'&amp;type='.$type.'&amp;search='.$search.'"><b>'.$_language->module['registered_since'].'</b></a></td>
@@ -735,11 +735,11 @@ else {
 		$replaced_search=str_replace("%", "", $search);
 		$nickname=str_replace($replaced_search, '<b>'.$replaced_search.'</b>', $nickname_c);
 		
-		if(issuperadmin($ds['userID']) && isclanmember($ds['userID'])) $status=$_language->module['superadmin'].'<br />&amp; '.$_language->module['clanmember'];
+		if(issuperadmin($ds['userID']) && isclanmember($ds['userID'])) $status=$_language->module['superadmin'].'<br>&amp; '.$_language->module['clanmember'];
 		elseif(issuperadmin($ds['userID'])) $status=$_language->module['superadmin'];
-		elseif(isanyadmin($ds['userID']) && isclanmember($ds['userID'])) $status=$_language->module['admin'].'<br />&amp; '.$_language->module['clanmember'];
+		elseif(isanyadmin($ds['userID']) && isclanmember($ds['userID'])) $status=$_language->module['admin'].'<br>&amp; '.$_language->module['clanmember'];
 		elseif(isanyadmin($ds['userID'])) $status=$_language->module['admin'];
-		elseif(isanymoderator($ds['userID']) && isclanmember($ds['userID'])) $status=$_language->module['moderator'].'<br />&amp; '.$_language->module['clanmember'];
+		elseif(isanymoderator($ds['userID']) && isclanmember($ds['userID'])) $status=$_language->module['moderator'].'<br>&amp; '.$_language->module['clanmember'];
 		elseif(isanymoderator($ds['userID'])) $status=$_language->module['moderator'];
 		elseif(isclanmember($ds['userID'])) $status=$_language->module['clanmember'];
 		else $status=$_language->module['user'];
@@ -762,7 +762,7 @@ else {
       $i++;
 		}
 		echo'</table>
-    <br /><br />&raquo; <a href="admincenter.php?site=users&amp;action=adduser"><b>'.$_language->module['add_new_user'].'</b></a>';
+    <br><br>&raquo; <a href="admincenter.php?site=users&amp;action=adduser"><b>'.$_language->module['add_new_user'].'</b></a>';
 	}
 	else echo $_language->module['no_users'];
 }

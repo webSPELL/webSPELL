@@ -46,7 +46,7 @@ $language_array = Array(
 	'mail'=>'Din email adress',
 	'name'=>'Ditt namn',
 	'new_entry'=>'Nytt inlägg',
-	'no_access'=>'Du är inte inloggad.<br /><a href="index.php?site=login">Logga in</a> | <a href="index.php?site=register">Registrera</a>',
+	'no_access'=>'Du är inte inloggad.<br><a href="index.php?site=login">Logga in</a> | <a href="index.php?site=register">Registrera</a>',
 	'options'=>'Val',
 	'pmsubject_newentry'=>'Nytt gästboks inlägg',
 	'pmtext_newentry'=>'[b]Någon har lämnat ett nytt inlägg i din gästbok![/b][br][br] [URL=index.php?site=guestbook#%insertid%]Klicka här för att läsa inlägget[/URL] ',

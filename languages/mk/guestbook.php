@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 /*
 ##########################################################################
 #                                                                        #
@@ -47,7 +47,7 @@ $language_array = Array(
   'mail'=>'Ваш е-mail',
   'name'=>'Вашето име',
   'new_entry'=>'Нов влез',
-  'no_access'=>'Несте пријавени.<br /><a href="index.php?site=login">Пријави се</a> | <a href="index.php?site=register">Регистрирај се</a>',
+  'no_access'=>'Несте пријавени.<br><a href="index.php?site=login">Пријави се</a> | <a href="index.php?site=register">Регистрирај се</a>',
   'options'=>'Опции',
   'pmsubject_newentry'=>'Нов влез во книгата со гости',
   'pmtext_newentry'=>'[b]Некој оставил порака во вашата книга со гости![/b][br][br] [URL=admin/admincenter.php?site=guestbook]Кликни за да ја прочиташ пораката[/URL] ',

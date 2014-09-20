@@ -41,7 +41,7 @@ $language_array = Array(
   'faq'=>'FAQ',
   'faqs'=>'FAQs',
   'no_categories'=>'henüz kategori oluşturulmadı',
-  'no_faq'=>'Soru yok.<br /><a href="index.php?site=faq">Geri</a>',
+  'no_faq'=>'Soru yok.<br><a href="index.php?site=faq">Geri</a>',
   'saved_on'=>'kaydet'
 );
 ?>

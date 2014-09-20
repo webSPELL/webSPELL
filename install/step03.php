@@ -100,7 +100,7 @@ else{
            } else if (is_writable( '..' )) {
              echo '<b><font color="green">'.$_language->module['writeable'].'</font></b>';
            } else {
-             echo '<b><font color="red">'.$_language->module['unwriteable'].'</font></b><br />
+             echo '<b><font color="red">'.$_language->module['unwriteable'].'</font></b><br>
              <small>'.$_language->module['mysql_error'].'</small>';
            } ?></td>
          </tr>
@@ -112,7 +112,7 @@ else{
            } else if (is_writable( '..' )) {
              echo '<b><font color="green">'.$_language->module['writeable'].'</font></b>';
            } else {
-             echo '<b><font color="red">'.$_language->module['unwriteable'].'</font></b><br />
+             echo '<b><font color="red">'.$_language->module['unwriteable'].'</font></b><br>
              <small>'.$_language->module['stylesheet_error'].'</small>';
            } ?></td>
          </tr>
@@ -130,8 +130,8 @@ else{
             $error = array();
             foreach($chmodfiles as $file) {
               if(!is_writable('../'.$file)) {
-                echo '-> '.$file.'<br />';
-                if(!@chmod('../'.$file, 0777)) $error[]=$file.'<br />';
+                echo '-> '.$file.'<br>';
+                if(!@chmod('../'.$file, 0777)) $error[]=$file.'<br>';
               }
             }
          ?></td>
@@ -155,7 +155,7 @@ else{
 
 <input type="hidden" name="hp_url" value="<?php echo str_replace('http://','',$_POST['hp_url']); ?>" />
 <?php if(!$fatal_error){?>
-<div align="right"><br /><a href="javascript:document.ws_install.submit()"><img src="images/next.jpg" alt="" /></a></div>
+<div align="right"><br><a href="javascript:document.ws_install.submit()"><img src="images/next.jpg" alt="" /></a></div>
 <?php }?>
 </td>
 </tr>

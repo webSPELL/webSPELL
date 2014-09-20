@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 /*
 ##########################################################################
 #                                                                        #
@@ -60,7 +60,7 @@ $language_array = Array(
   'no_incoming'=>'Ni dohodnih sporočil.',
   'no_outgoing'=>'Ni odhodnih sporočil.',
   'no_subject'=>'(ni naslova)',
-  'not_logged'=>'Niste prijavljeni.<br /><a href="index.php?site=login">Prijavi se</a> | <a href="index.php?site=register">Registriraj se</a>',
+  'not_logged'=>'Niste prijavljeni.<br><a href="index.php?site=login">Prijavi se</a> | <a href="index.php?site=register">Registriraj se</a>',
   'options'=>'Možnosti',
   'outgoing'=>'Odhodna',
   'read'=>'Beri',
@@ -79,7 +79,7 @@ $language_array = Array(
   'title'=>'Naslov',
   'your_message'=>'Vaše sporočilo:',
   'mail_subject'=>'Imate novo sporočilo',
-  'mail_body'=>'<b>Pozdrav %nickname%!</b><br /><br />Imaš novo sporočilo na webSPELL v4 (%hp_url%).<br />Klikni <a href="http://%hp_url%?site=messenger">tu</a> da bi ju prebral.<br /><br />(C) webSPELL.org',
+  'mail_body'=>'<b>Pozdrav %nickname%!</b><br><br>Imaš novo sporočilo na webSPELL v4 (%hp_url%).<br>Klikni <a href="http://%hp_url%?site=messenger">tu</a> da bi ju prebral.<br><br>(C) webSPELL.org',
   'error'=>'error',
   'unknown_user'=>'unknown user'
 );

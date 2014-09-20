@@ -94,13 +94,13 @@ header('X-UA-Compatible: IE=edge,chrome=1');
                 
                 <!-- pic of the moment include -->
                 <b><?php echo $myclanname.".".$index_language['pic_of_the_moment']; ?></b><br>
-                <center><?php include("sc_potm.php"); ?></center>
+                <p class="text-center"><?php include("sc_potm.php"); ?></p>
                 <!-- end pic of the moment include -->
                 <hr class="grey">
                 
                 <!-- language switch include -->
                 <b><?php echo $myclanname.".".$index_language['language_switch']; ?></b><br>
-                <center><?php include("sc_language.php"); ?></center>
+                <p class="text-center"><?php include("sc_language.php"); ?></p>
                 <!-- end language switch include -->
                 <hr class="grey">
                 
@@ -130,13 +130,13 @@ header('X-UA-Compatible: IE=edge,chrome=1');
                 
                 <!-- sponsors include -->
                 <b><?php echo $myclanname.".".$index_language['sponsors']; ?></b><br>
-                <center><?php include("sc_sponsors.php"); ?></center>
+                <p class="text-center"><?php include("sc_sponsors.php"); ?></p>
                 <!-- end sponsors include -->
                 <hr class="grey">
                 
                 <!-- partners include -->
                 <b><?php echo $myclanname.".".$index_language['partners']; ?></b><br>
-                <center><?php include("partners.php"); ?></center>
+                <p class="text-center"><?php include("partners.php"); ?></p>
                 <!-- end partners include -->
             </div>
 <?php } // end of show left column ?>            
@@ -182,7 +182,7 @@ header('X-UA-Compatible: IE=edge,chrome=1');
                 <div class="visible-lg<?php if(in_array($site, $hide1)) echo " hidden"; ?>">
                     <!-- squads include -->
                     <b><?php echo $myclanname.".".$index_language['squads']; ?></b><br>
-                    <center><?php include("sc_squads.php"); ?></center>
+                    <p class="text-center"><?php include("sc_squads.php"); ?></p>
                     <!-- end squads include -->
                     <hr class="grey">
                 </div>
@@ -214,7 +214,7 @@ header('X-UA-Compatible: IE=edge,chrome=1');
                 <div class="visible-lg<?php if(in_array($site, $hide1)) echo " hidden"; ?>">
                     <!-- shoutbox include -->
                     <b><?php echo $myclanname.".".$index_language['shoutbox']; ?></b><br>
-                    <center><?php include("shoutbox.php"); ?></center>
+                    <p class="text-center"><?php include("shoutbox.php"); ?></p>
                     <!-- end shoutbox include -->
                     <hr class="grey">
                 </div>

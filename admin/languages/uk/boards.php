@@ -49,17 +49,17 @@ $language_array = Array(
   'new_board'=>'new Board',
   'new_category'=>'new Category',
   'read_right'=>'Read-Right',
-  'read_right_info_board'=>'This/These user group(s) is/are allowed to see the board and read in the board.<br />If no user group is selected, everybody can see and read this board.<br />Use CTRL for multi select and unselect.',
+  'read_right_info_board'=>'This/These user group(s) is/are allowed to see the board and read in the board.<br>If no user group is selected, everybody can see and read this board.<br>Use CTRL for multi select and unselect.',
   'really_delete_board'=>'Really delete this Board?',
   'really_delete_category'=>'Really delete this Category?',
   'registered_users'=>'registered Users',
-  'right_info_category'=>'This/These user group(s) is/are able to see the category.<br />If no user group is selected, everybody can see the category.<br />Use CTRL for multi select and unselect.',
+  'right_info_category'=>'This/These user group(s) is/are able to see the category.<br>If no user group is selected, everybody can see the category.<br>Use CTRL for multi select and unselect.',
   'select_moderators'=>'select Moderators',
   'sort'=>'Sort',
   'transaction_invalid'=>'Transaction ID invalid',
   'to_sort'=>'sort',
   'unselect_all'=>'unselect all',
   'write_right'=>'Write-Right',
-  'write_right_info_board'=>'This/These user group(s) is/are allowed to write in the board.<br />If no user group is selected, all registered users are allowed write in this board.<br />Use CTRL for multi select and unselect.'
+  'write_right_info_board'=>'This/These user group(s) is/are allowed to write in the board.<br>If no user group is selected, all registered users are allowed write in this board.<br>Use CTRL for multi select and unselect.'
 );
 ?>

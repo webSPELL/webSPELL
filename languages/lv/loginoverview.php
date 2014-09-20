@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 /*
 ##########################################################################
 #                                                                        #
@@ -65,8 +65,8 @@ $language_array = Array(
   'usermenu'=>'Lietotāja izvēlne',
   'views'=>'skatījumi',
   'x_new_message'=>'Pienākušas %new_messages% jaunas ziņas.',
-  'you_have_to_be_logged_in'=>'Jums jāpieslēdzas, lai redzētu pieslēgšanās pārskatu!<br /><br />
-    &#8226; <a href="index.php?site=register">reģistrējies</a><br />
+  'you_have_to_be_logged_in'=>'Jums jāpieslēdzas, lai redzētu pieslēgšanās pārskatu!<br><br>
+    &#8226; <a href="index.php?site=register">reģistrējies</a><br>
     &#8226; <a href="index.php?site=login">pieslēdzies</a>'
 );
 ?>

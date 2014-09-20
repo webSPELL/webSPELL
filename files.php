@@ -414,7 +414,7 @@ elseif(isset($_GET['cat'])) {
 		echo $files_category_list;
 
 	}
-	if(!isset($n)) echo "<br />".$_language->module['cant_display_empty_cat'];
+	if(!isset($n)) echo "<br>".$_language->module['cant_display_empty_cat'];
 }
 elseif(isset($_GET['file'])) {
 	// ADMINACTIONS
@@ -461,7 +461,7 @@ elseif(isset($_GET['file'])) {
 	if($mirrors) {
 		if(stristr($mirrors,"||")) {
 			$secondarymirror = explode("||", $mirrors);
-			$mirrorlist = '&#8226; <a href="'.$secondarymirror[0].'" target="_blank">'.$_language->module['download_via_mirror'].' #2</a><br />&#8226; <a href="'.$secondarymirror[1].'" target="_blank">'.$_language->module['download_via_mirror'].' #3</a>';
+			$mirrorlist = '&#8226; <a href="'.$secondarymirror[0].'" target="_blank">'.$_language->module['download_via_mirror'].' #2</a><br>&#8226; <a href="'.$secondarymirror[1].'" target="_blank">'.$_language->module['download_via_mirror'].' #3</a>';
 		}
 		else $mirrorlist = '&#8226; <a href="'.$mirrors.'" target="_blank">'.$_language->module['download_via_mirror'].' #2</a>';
 	}

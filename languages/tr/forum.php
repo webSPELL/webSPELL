@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 /*
 ##########################################################################
 #                                                                        #
@@ -93,8 +93,8 @@ $language_array = Array(
   'no_new_posts'=>'Yeni mesaj yok',
   'no_permission'=>'stajyer panoları görmek için izniniz yok!',
   'not_logged'=>'Giriş yapmadınız.',
-  'not_logged_msg'=>'<br /><br />Konuya cevap vermek için kayıt yapman gerek!<br /><br />
-&#8226; <a href="index.php?site=register">şimdi üye ol</a><br />
+  'not_logged_msg'=>'<br><br>Konuya cevap vermek için kayıt yapman gerek!<br><br>
+&#8226; <a href="index.php?site=register">şimdi üye ol</a><br>
 &#8226; <a href="index.php?site=login">giriş</a>',
   'notify'=>'Bir yanıt geldiğinde bana bildir',
   'notify_mail'=>'Yeni cevap tarafından %poster% konunun içinde

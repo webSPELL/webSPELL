@@ -76,12 +76,12 @@ if(isset($_GET['action']) and $_GET['action'] == "add") {
     </tr>
     <tr>
       <td><b>'.$_language->module['accesslevel'].'</b></td>
-      <td><input name="accesslevel" type="radio" value="0" checked="checked" /> '.$_language->module['public'].'<br />
-      <input name="accesslevel" type="radio" value="1" /> '.$_language->module['registered_only'].'<br />
+      <td><input name="accesslevel" type="radio" value="0" checked="checked" /> '.$_language->module['public'].'<br>
+      <input name="accesslevel" type="radio" value="1" /> '.$_language->module['registered_only'].'<br>
 		<input name="accesslevel" type="radio" value="2" /> '.$_language->module['clanmember_only'].'</td>
     </tr>
   </table>
-  <br /><b>'.$_language->module['content'].'</b><br /><small>'.$_language->module['you_can_use_html'].'</small><br /><br />';
+  <br><b>'.$_language->module['content'].'</b><br><small>'.$_language->module['you_can_use_html'].'</small><br><br>';
   
   eval ("\$addbbcode = \"".gettemplate("addbbcode", "html", "admin")."\";");
   eval ("\$addflags = \"".gettemplate("flags_admin", "html", "admin")."\";");
@@ -93,9 +93,9 @@ if(isset($_GET['action']) and $_GET['action'] == "add") {
 		      </tr>
 		    </table>';
     
-  echo '<br /><textarea id="message" name="message" rows="20" cols="" style="width: 100%;"></textarea>
+  echo '<br><textarea id="message" name="message" rows="20" cols="" style="width: 100%;"></textarea>
   <input type="hidden" name="captcha_hash" value="'.$hash.'" />
-  <br /><br /><input type="submit" name="save" value="'.$_language->module['add_static_page'].'" />
+  <br><br><input type="submit" name="save" value="'.$_language->module['add_static_page'].'" />
   </form>';
   
 }
@@ -140,12 +140,12 @@ elseif(isset($_GET['action']) and $_GET['action'] == "edit") {
     </tr>
     <tr>
       <td><b>'.$_language->module['accesslevel'].'</b></td>
-      <td><input name="accesslevel" type="radio" value="0" '.$public.' /> '.$_language->module['public'].'<br />
-      <input name="accesslevel" type="radio" value="1" '.$user.' /> '.$_language->module['registered_only'].'<br />
+      <td><input name="accesslevel" type="radio" value="0" '.$public.' /> '.$_language->module['public'].'<br>
+      <input name="accesslevel" type="radio" value="1" '.$user.' /> '.$_language->module['registered_only'].'<br>
       <input name="accesslevel" type="radio" value="2" '.$clanmember.' /> '.$_language->module['clanmember_only'].'</td>
     </tr>
   </table>
-  <br /><b>'.$_language->module['content'].'</b><br /><small>'.$_language->module['you_can_use_html'].'</small><br /><br />';
+  <br><b>'.$_language->module['content'].'</b><br><small>'.$_language->module['you_can_use_html'].'</small><br><br>';
   
 	eval ("\$addbbcode = \"".gettemplate("addbbcode", "html", "admin")."\";");
   eval ("\$addflags = \"".gettemplate("flags_admin", "html", "admin")."\";");
@@ -157,7 +157,7 @@ elseif(isset($_GET['action']) and $_GET['action'] == "edit") {
 		      </tr>
 		</table>
 	<textarea id="message" name="message" rows="20" cols="" style="width: 100%;">'.$content.'</textarea>
-	<br /><br /><input type="hidden" name="captcha_hash" value="'.$hash.'" />
+	<br><br><input type="hidden" name="captcha_hash" value="'.$hash.'" />
 	<input type="hidden" name="staticID" value="'.$staticID.'" />
 	<input type="submit" name="save" value="'.$_language->module['edit_static_page'].'" />
 	</form>';
@@ -167,7 +167,7 @@ else {
 	
   echo'<h1>&curren; '.$_language->module['static_pages'].'</h1>';
   
-  echo'<input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=static&amp;action=add\');return document.MM_returnValue" value="'.$_language->module['new_static_page'].'" /><br /><br />';
+  echo'<input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=static&amp;action=add\');return document.MM_returnValue" value="'.$_language->module['new_static_page'].'" /><br><br>';
 
 	$ergebnis=safe_query("SELECT * FROM ".PREFIX."static ORDER BY staticID");
 	

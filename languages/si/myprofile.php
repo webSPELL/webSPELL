@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 /*
 ##########################################################################
 #                                                                        #
@@ -107,8 +107,8 @@ Zahvaljujemo se vam za vaše zanimanje
   'nickname'=>'Ime',
   'nickname_already_in_use'=>'nick je že v uporabi!',
   'no'=>'Ne',
-  'not_logged_in'=>'Morate biti prijavljeni v, da vidite svoj ​​profil!<br /><br />
-    &#8226; <a href="index.php?site=register">Registriraj se</a><br />
+  'not_logged_in'=>'Morate biti prijavljeni v, da vidite svoj ​​profil!<br><br>
+    &#8226; <a href="index.php?site=register">Registriraj se</a><br>
     &#8226; <a href="index.php?site=login">Prijavi se</a>',
   'old_password'=>'Staro geslo',
   'old_pw_not_valid'=>'vaše staro geslo je nepravilno!',

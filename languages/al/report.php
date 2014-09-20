@@ -38,6 +38,6 @@ $language_array = Array(
   'no_informations'=>'asnjë informacion i vlefshëm',
   'report_message'=>'[b]Ka një të re %s - Raport[/b][br][br]%s-ID: %d[br]Info: %s[br]Referer: [url]index.php?site=files&file=%d[/url]',
   'report_recognized'=>'Raportimi juaj u njoh. Faleminderit.',
-  'wrong_securitycode'=>'Vendosët një kod sigurie të gabuar<br /><br />[<a href="javascript:back();">prapa</a>]'
+  'wrong_securitycode'=>'Vendosët një kod sigurie të gabuar<br><br>[<a href="javascript:back();">prapa</a>]'
 );
 ?>

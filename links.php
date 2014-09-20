@@ -57,16 +57,16 @@ if(isset($_POST['save'])) {
 			}  else {
 				if(unlink($filepath.$banner['name'].".tmp")) {
 					$error = $_language->module['format_incorrect'];
-					die('<b>'.$error.'</b><br /><br /><a href="index.php?site=links&amp;action=edit&amp;linkID='.$id.'">&laquo; '.$_language->module['back'].'</a>');
+					die('<b>'.$error.'</b><br><br><a href="index.php?site=links&amp;action=edit&amp;linkID='.$id.'">&laquo; '.$_language->module['back'].'</a>');
 				} else {
 					$error = $_language->module['format_incorrect'];
-					die('<b>'.$error.'</b><br /><br /><a href="index.php?site=links&amp;action=edit&amp;linkID='.$id.'">&laquo; '.$_language->module['back'].'</a>');
+					die('<b>'.$error.'</b><br><br><a href="index.php?site=links&amp;action=edit&amp;linkID='.$id.'">&laquo; '.$_language->module['back'].'</a>');
 				}
 			}
 		} else {
 			@unlink($filepath.$banner['name'].".tmp");
 			$error = $_language->module['banner_to_big'];
-			die('<b>'.$error.'</b><br /><br /><a href="index.php?site=links&amp;action=edit&amp;linkID='.$id.'">&laquo; '.$_language->module['back'].'</a>');
+			die('<b>'.$error.'</b><br><br><a href="index.php?site=links&amp;action=edit&amp;linkID='.$id.'">&laquo; '.$_language->module['back'].'</a>');
 		}
 	}
 }
@@ -98,16 +98,16 @@ elseif(isset($_POST['saveedit'])) {
 			}  else {
 				if(unlink($filepath.$banner['name'].".tmp")) {
 					$error = $_language->module['format_incorrect'];
-					die('<b>'.$error.'</b><br /><br /><a href="index.php?site=links&amp;action=edit&amp;linkID='.$id.'">&laquo; '.$_language->module['back'].'</a>');
+					die('<b>'.$error.'</b><br><br><a href="index.php?site=links&amp;action=edit&amp;linkID='.$id.'">&laquo; '.$_language->module['back'].'</a>');
 				} else {
 					$error = $_language->module['format_incorrect'];
-					die('<b>'.$error.'</b><br /><br /><a href="index.php?site=links&amp;action=edit&amp;linkID='.$id.'">&laquo; '.$_language->module['back'].'</a>');
+					die('<b>'.$error.'</b><br><br><a href="index.php?site=links&amp;action=edit&amp;linkID='.$id.'">&laquo; '.$_language->module['back'].'</a>');
 				}
 			}
 		} else {
 			@unlink($filepath.$banner['name'].".tmp");
 			$error = $_language->module['banner_to_big'];
-			die('<b>'.$error.'</b><br /><br /><a href="index.php?site=links&amp;action=edit&amp;linkID='.$id.'">&laquo; '.$_language->module['back'].'</a>');
+			die('<b>'.$error.'</b><br><br><a href="index.php?site=links&amp;action=edit&amp;linkID='.$id.'">&laquo; '.$_language->module['back'].'</a>');
 		}
 	}
 }
@@ -176,7 +176,7 @@ elseif($action=="edit") {
 }
 
 elseif($action=="show" AND is_numeric($_GET['linkcatID'])) {
-	if(ispageadmin($userID) || isnewsadmin($userID)) echo'<input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=links&amp;action=new\');return document.MM_returnValue" value="'.$_language->module['new_link'].'" /><br /><br />';
+	if(ispageadmin($userID) || isnewsadmin($userID)) echo'<input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=links&amp;action=new\');return document.MM_returnValue" value="'.$_language->module['new_link'].'" /><br><br>';
 	
 	$linkcatID=$_GET['linkcatID'];
 	$getcat = safe_query("SELECT * FROM ".PREFIX."links_categorys  WHERE linkcatID='$linkcatID'");
@@ -218,13 +218,13 @@ elseif($action=="show" AND is_numeric($_GET['linkcatID'])) {
 		eval ("\$links_foot = \"".gettemplate("links_foot")."\";");
 		echo $links_foot;
 	}
-	else echo $_language->module['no_links'].'<br /><br />
+	else echo $_language->module['no_links'].'<br><br>
   [ <a href="index.php?site=links">'.$_language->module['go_back'].'</a> ]';
 }
 
 else {
 	$_language->read_module('links');
-	if(ispageadmin($userID) || isnewsadmin($userID)) echo'<input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=links&amp;action=new\');return document.MM_returnValue" value="'.$_language->module['new_link'].'" /><br /><br />';
+	if(ispageadmin($userID) || isnewsadmin($userID)) echo'<input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=links&amp;action=new\');return document.MM_returnValue" value="'.$_language->module['new_link'].'" /><br><br>';
 
 	$cats=safe_query("SELECT * FROM ".PREFIX."links_categorys ORDER BY name");
 	if(mysql_num_rows($cats)) {

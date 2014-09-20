@@ -34,7 +34,7 @@ if(isset($_GET['action'])) $action = $_GET['action'];
 else $action='';
 
 if($action=="faqcat" and is_numeric($_GET['faqcatID'])) {
-	if(ispageadmin($userID)) echo'<input type="button" onclick="MM_openBrWindow(\'admin/admincenter.php?site=faq\',\'News\',\'toolbar=yes,status=yes,scrollbars=yes,resizable=yes,width=800,height=600\')" value="'.$_language->module['admin_button'].'" class="btn btn-danger" /><br /><br />';
+	if(ispageadmin($userID)) echo'<input type="button" onclick="MM_openBrWindow(\'admin/admincenter.php?site=faq\',\'News\',\'toolbar=yes,status=yes,scrollbars=yes,resizable=yes,width=800,height=600\')" value="'.$_language->module['admin_button'].'" class="btn btn-danger" /><br><br>';
 
 	$faqcatID = $_GET['faqcatID'];
 	$get = safe_query("SELECT faqcatname FROM ".PREFIX."faq_categories WHERE faqcatID='".$faqcatID."'");

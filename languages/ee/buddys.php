@@ -36,7 +36,7 @@ $language_array = Array(
   'buddy_nousers'=>'Su sõbralistis pole kasutajaid',
   'buddys'=>'sõbrad',
   'ignore_nousers'=>'Sa pole ühtegi kasutajat ignoreerinud',
-  'not_logged'=>'Sõprade haldamiseks pead sa registeeritud ja sisse logitud olema.<br /><a href="index.php?site=register">Registreeri</a> | <a href="index.php?site=login">Logi sisse</a>',
+  'not_logged'=>'Sõprade haldamiseks pead sa registeeritud ja sisse logitud olema.<br><a href="index.php?site=register">Registreeri</a> | <a href="index.php?site=login">Logi sisse</a>',
   'your_buddylist'=>'Su sõbralist',
   'your_ignorelist'=>'Ignoreeritud kasutajad'
 );

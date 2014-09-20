@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 /*
 ##########################################################################
 #                                                                        #
@@ -70,8 +70,8 @@ $language_array = Array(
   'usermenu'=>'Kullanıcı menusu',
   'views'=>'görünüm',
   'x_new_message'=>'Var %new_messages% yeni mesaj.',
-  'you_have_to_be_logged_in'=>'Genel bakısı görmek için giriş yapmak zorundasınız!<br /><br />
-    &#8226; <a href="index.php?site=register">şimdi üye ol</a><br />
+  'you_have_to_be_logged_in'=>'Genel bakısı görmek için giriş yapmak zorundasınız!<br><br>
+    &#8226; <a href="index.php?site=register">şimdi üye ol</a><br>
     &#8226; <a href="index.php?site=login">giriş</a>'
 );
 ?>

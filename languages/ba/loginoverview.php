@@ -65,6 +65,6 @@ $language_array = Array(
   'usermenu'=>'Korisnički izbornik',
   'views'=>'pogleda',
   'x_new_message'=>'Novih poruka: %new_messages%',
-  'you_have_to_be_logged_in'=>'Morate biti prijavljeni da bi vidjeli ovu stranicu!<br /><br />rn    &#8226; <a href="index.php?site=register">Registruj se</a><br />rn    &#8226; <a href="index.php?site=login">Prijavi se</a>'
+  'you_have_to_be_logged_in'=>'Morate biti prijavljeni da bi vidjeli ovu stranicu!<br><br>rn    &#8226; <a href="index.php?site=register">Registruj se</a><br>rn    &#8226; <a href="index.php?site=login">Prijavi se</a>'
 );
 ?>

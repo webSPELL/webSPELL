@@ -101,8 +101,8 @@ Thank you for your interest
 	'nickname'=>'Přezdívka',
 	'nickname_already_in_use'=>'přezdívka už je používána!',
 	'no'=>'Ne',
-	'not_logged_in'=>'Musíš být přihlášený<br /><br />
-    &#8226; <a href="index.php?site=register">nová registrace</a><br />
+	'not_logged_in'=>'Musíš být přihlášený<br><br>
+    &#8226; <a href="index.php?site=register">nová registrace</a><br>
     &#8226; <a href="index.php?site=login">přihlášení</a>',
 	'old_password'=>'staré heslo',
 	'old_pw_not_valid'=>'vaše staré heslo není správné!',
