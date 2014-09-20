@@ -1,55 +1,83 @@
 <form action="index.php?site=joinus&amp;action=save" method="post" name="post">
-<table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="$border">
-  <tr>
-    <td class="title" align="center" bgcolor="$bghead">%joinus_form%</td>
-  </tr>
-  <tr><td bgcolor="$pagebg"></td></tr>
-  <tr>
-    <td bgcolor="$bg1">
-    <center>$showerror</center>
-    <table width="100%" border="0" align="center" cellpadding="2" cellspacing="0">
-      <tr>
-        <td width="20%" align="right">%squad%:</td>
-        <td colspan="3"><select name="squad">$squads</select></td>
-      </tr>
-      <tr>
-        <td align="right">%nick%:</td>
-        <td><input name="nick" type="text" value="$nickname" /></td>
-        <td align="right">%name%:</td>
-        <td><input name="name" type="text" value="$name" /></td>
-      </tr>
-      <tr>
-        <td align="right">%mail%:</td>
-        <td><input name="email" type="text" value="$email" /></td>
-        <td align="right">%icq_msn%:</td>
-        <td><input name="messenger" type="text" value="$messenger" /></td>
-      </tr>
-      <tr>
-        <td align="right">%age%:</td>
-        <td><input name="age" size="2" type="text" value="$age" /></td>
-        <td align="right">%city%:</td>
-        <td><input name="city" type="text" value="$city" /></td>
-      </tr>
-      <tr>
-        <td align="right">%clan_history%:</td>
-        <td colspan="3"><input name="clanhistory" value="$clanhistory" type="text" /></td>
-      </tr>
-      <tr><td colspan="4">&nbsp;</td></tr>
-      <tr>
-        <td align="center" colspan="4">%additional_info%:</td>
-      </tr>
-      <tr>
-        <td></td>
-        <td colspan="3"><textarea name="info" cols="60" rows="5">$info</textarea></td>
-      </tr>
-      <tr>
-        <td>&nbsp;</td>
-        <td><input name="post" type="submit" value="%send%" /></td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-      </tr>
-    </table>
-    </td>
-  </tr>
-</table>
+
+    <div class="text-center">$showerror</div>
+
+    <div class="row">
+
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="squad">%squad%:</label>
+                <select name="squad" id="squad" class="form-control">$squads</select>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="nick">%nick%:</label>
+                <input name="nick" id="nick" value="$nickname" type="text" class="form-control">
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="name">%name%:</label>
+                <input name="name" id="name" value="$name" type="text" class="form-control">
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="mail">%mail%:</label>
+                <input name="mail" id="mail" value="$email" type="text" class="form-control">
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="messenger">%icq_msn%:</label>
+                <input name="messenger" id="messenger" value="$messenger" type="text" class="form-control">
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="age">%age%:</label>
+                <input name="age" id="age" value="$age" type="text" class="form-control">
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="city">%city%:</label>
+                <input name="city" id="city" value="$city" type="text" class="form-control">
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="clanhistory">%clan_history%:</label>
+                <input name="clanhistory" id="clanhistory" value="$clanhistory" type="text" class="form-control">
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="captcha">%security_code%:</label>
+                $captcha
+                <input type="text" id="captcha" name="captcha" size="10" class="form-control">
+                <input name="captcha_hash" type="hidden" value="$hash">
+            </div>
+        </div>
+
+    </div>
+
+    <div class="form-group">
+        <label for="info">%additional_info%:</label>
+        <textarea name="info" id="info" cols="50" rows="5" class="form-control">$info</textarea>
+    </div>
+
+    <div class="form-group text-right">
+        <input name="post" type="submit" value="%send%" class="btn btn-primary">
+    </div>
+
 </form>
