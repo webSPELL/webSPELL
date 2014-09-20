@@ -14,6 +14,8 @@ _mysql.php
  
 /tmp/*
 !/tmp/index.php
+
+/install/*
  
 /images/articles-pics/*
 !/images/articles-pics/index.php
