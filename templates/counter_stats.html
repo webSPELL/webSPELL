@@ -7,14 +7,16 @@
 			<li class="list-group-item"><span class="badge">$month</span> %this_month%</li>
 			<li class="list-group-item"><span class="badge">$total</span> %total%</li>
 		</ul>
-		
-    
-        <b>%this_month%</b>
+        <b>%total_statistic%</b>
         <ul class="list-group">
-            $monatsstat
-        </ul>
+			<li class="list-group-item"><span class="badge">$days_online</span> %daysonline%</li>
+			<li class="list-group-item"><span class="badge">$permonth</span> %visits_month%</li>
+			<li class="list-group-item"><span class="badge">$perday</span> %visits_day%</li>
+			<li class="list-group-item"><span class="badge">$perhour</span> %visits_hour%</li>
+			<li class="list-group-item"><span class="badge">$maxvisits</span> %max_day%</li>
+		</ul>
+        
     </div>
-    
     <div class="col-lg-6">
         <b>%online%</b>
 		<ul class="list-group">
@@ -22,18 +24,8 @@
 			<li class="list-group-item"><span class="badge">$maxonline</span> %maximum%</li>
 			<li class="list-group-item"><span class="badge">$online_lasthour</span> %lasthour%</li>
 		</ul>
-    
+        <b>%user_statistic%</b>
 		<ul class="list-group">
-			<b>%total_statistic%</b>
-			<li class="list-group-item"><span class="badge">$days_online</span> %daysonline%</li>
-			<li class="list-group-item"><span class="badge">$permonth</span> %visits_month%</li>
-			<li class="list-group-item"><span class="badge">$perday</span> %visits_day%</li>
-			<li class="list-group-item"><span class="badge">$perhour</span> %visits_hour%</li>
-			<li class="list-group-item"><span class="badge">$maxvisits</span> %max_day%</li>
-		</ul>
-    
-		<ul class="list-group">
-			<b>%user_statistic%</b>
 			<li class="list-group-item"><span class="badge">$avg_age_user</span> %avg_age%</li>
 			<li class="list-group-item"><span class="badge">$avg_age_member</span> %avg_age_clanmember%</li>
 			<li class="list-group-item">
@@ -48,5 +40,13 @@
             </li>
 			<li class="list-group-item"><span class="badge">$us</span> %registered_users%</li>
 		</ul>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-12">
+        <b>%this_month%</b>
+        <ul class="list-group">
+            $monatsstat
+        </ul>
     </div>
 </div>
