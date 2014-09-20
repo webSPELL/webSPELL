@@ -298,7 +298,7 @@ else {
 			if(isfeedbackadmin($userID)) {
 				$submit='<input type="hidden" name="referer" value="'.$referer.'">
         <input class="input" type="checkbox" name="ALL" value="ALL" onclick="SelectAll(this.form);"> '.$_language->module['select_all'].'
-        <input type="submit" value="'.$_language->module['delete_selected'].'">';
+        <input type="submit" value="'.$_language->module['delete_selected'].'" class="btn btn-danger">';
 			}	else $submit='';
 
 			if($sorttype=="DESC") $n--;
