@@ -60,7 +60,7 @@ if($_POST['installtype'] == 'update') {
     }
 
 	mysqli_query($_database, "SET NAMES 'utf8'");
-	
+
 	update31_4beta4();
 	update4beta4_4beta5();
 	update4beta5_4beta6();
@@ -111,7 +111,7 @@ elseif($_POST['installtype'] == 'full') {
 		die("<b>".$_language->module['error']."<br>".$error."</b><br><br><a href='javascript:history.back()'>".$_language->module['back']."</a>");
 	}
 
-	$adminpassword=md5($adminpwd);
+	$adminpassword=generatePasswordHash($adminpwd);
 
 	//write _mysql.php
 
@@ -142,7 +142,7 @@ if(!defined("PREFIX")){
 
     mysqli_query($_database, "SET NAMES 'utf8'");
 
-	
+
 	define("PREFIX", $prefix);
 
 	fullinstall();
