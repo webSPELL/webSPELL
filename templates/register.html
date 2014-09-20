@@ -5,75 +5,64 @@
         $showerror
     	
         <!-- Nickname -->
-		<div class="control-group">
-			<label class="control-label" for="inputNickname">%nickname%:</label>
+        <div class="form-group">
+			<label class="control-label" for="inputEmail">%nickname%:</label>
 			<div class="controls">
             	<div class="input-prepend">
-                	<span class="add-on"><i class="icon-user"></i></span>
-					<input type="text" id="inputEmail" name="nickname" value="$nickname" maxlength="30" size="30">
+					<input type="text" id="inputEmail" name="nickname" value="$nickname" maxlength="30" size="30" class="form-control">
             	</div>
 			</div>
 		</div>
         
         <!-- Username -->
-		<div class="control-group">
-			<label class="control-label" for="inputUsername">%username%:</label>
-			<div class="controls">
-            	<div class="input-prepend">
-                	<span class="add-on"><i class="icon-user"></i></span>
-					<input type="text" id="inputUsername" name="username" value="$username" size="30">
-            	</div>
-                <span class="help-inline">(%for_login%)</span>
-			</div>
+        <div class="form-group">
+			<label class="control-label" for="inputUsername">%username% (%for_login%):</label>
+            <input type="text" id="inputUsername" name="username" value="$username" size="30" class="form-control">
 		</div>
         
         <!-- Password -->
-		<div class="control-group">
+        <div class="form-group">
 			<label class="control-label" for="inputPassword">%password%:</label>
 			<div class="controls">
             	<div class="input-prepend">
-                	<span class="add-on"><i class="icon-lock"></i></span>
-					<input type="password" id="inputPassword" name="pwd1" value="$pwd1" size="30">
+					<input type="password" id="inputPassword" name="pwd1" value="$pwd1" size="30" class="form-control">
             	</div>
 			</div>
 		</div>
         
         <!-- Password repeat -->
-		<div class="control-group">
+        <div class="form-group">
 			<label class="control-label" for="inputRepeat">%repeat%:</label>
 			<div class="controls">
             	<div class="input-prepend">
-                	<span class="add-on"><i class="icon-lock"></i></span>
-					<input type="password" id="inputRepeat" name="pwd2" value="$pwd2" size="30">
+					<input type="password" id="inputRepeat" name="pwd2" value="$pwd2" size="30" class="form-control">
             	</div>
 			</div>
 		</div>
         
         <!-- E-Mail -->
-		<div class="control-group">
+        <div class="form-group">
 			<label class="control-label" for="inputMail">%mail%:</label>
 			<div class="controls">
             	<div class="input-prepend">
-                	<span class="add-on"><i class="icon-envelope"></i></span>
-					<input type="email" id="inputMail" name="mail" value="$mail" autocomplete="email" size="30">
+					<input type="email" id="inputMail" name="mail" value="$mail" autocomplete="email" size="30" class="form-control">
             	</div>
 			</div>
 		</div>
         
         <!-- Security code -->
-        <div class="control-group">
-        	<label class="control-label" for="inputSecurity_code">%security_code%:</label>
-            <div class="controls">
-        		<div class="input-prepend">
-            		<span class="add-on captcha-img">$captcha</span>
-                	<input type="number" id="inputSecurity_code" name="captcha" maxlength="5" size="5" class="input-small">
-                	<input name="captcha_hash" type="hidden" value="$hash">
-        		</div>
-        	</div>
+        <div class="form-group">
+            <div class="input-group">
+                <span class="input-group-addon captcha-img">$captcha</span>
+                <input type="number" id="inputSecurity_code" name="captcha" maxlength="5" size="5" placeholder="Enter Captcha" class="form-control">
+                <input name="captcha_hash" type="hidden" value="$hash">
+            </div>
         </div>
-        
+
         <!-- Register now -->
-        <input name="save" type="submit" value="%register_now%" class="btn btn-primary">
+        <div class="form-group">
+            <input name="save" type="submit" value="%register_now%" class="btn btn-primary">
+        </div>
         
 	</form>
 </div>

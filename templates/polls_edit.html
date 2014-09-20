@@ -1,145 +1,156 @@
 <script language="JavaScript" type="text/javascript">
-<!--
-function chkFormular() {
-	if(document.getElementById('title').value == "") {
-		alert("%yht_enter_title%");
-		document.getElementById('title').focus();
-   		return false;
-	}
-	
-	if(document.getElementById('opt1').value == "") {
-		alert("%yht_enter_2_options%");
-		document.getElementById('opt1').focus();
-   		return false;
-	}
-	
-	if(document.getElementById('opt2').value == "") {
-		alert("%yht_enter_2_options%");
-		document.getElementById('opt2').focus();
-   		return false;
-	}
-	
-  if(document.getElementById('laufzeit_hour').value == "hh") {
-		alert("%yht_enter_endingtime%");
-		document.getElementById('laufzeit_hour').focus();
-   		return false;
-	}
+    <!--
+    function chkFormular() {
+        if(document.getElementById('title').value == "") {
+            alert("%yht_enter_title%");
+            document.getElementById('title').focus();
+            return false;
+        }
 
-  if(document.getElementById('laufzeit_minute').value == "mm") {
-		alert("%yht_enter_endingtime%");
-		document.getElementById('laufzeit_minute').focus();
-   		return false;
-	}
-  if(document.getElementById('laufzeit_day').value == "DD") {
-		alert("%yht_enter_endingtime%");
-		document.getElementById('laufzeit_day').focus();
-   		return false;
-	}
-  if(document.getElementById('laufzeit_month').value == "MM") {
-		alert("%yht_enter_endingtime%");
-		document.getElementById('laufzeit_month').focus();
-   		return false;
-	}
-  if(document.getElementById('laufzeit_year').value == "YY") {
-		alert("%yht_enter_endingtime%");
-		document.getElementById('laufzeit_year').focus();
-   		return false;
-	}
+        if(document.getElementById('opt1').value == "") {
+            alert("%yht_enter_2_options%");
+            document.getElementById('opt1').focus();
+            return false;
+        }
 
-}
--->
+        if(document.getElementById('opt2').value == "") {
+            alert("%yht_enter_2_options%");
+            document.getElementById('opt2').focus();
+            return false;
+        }
+
+        if(document.getElementById('laufzeit_hour').value == "hh") {
+            alert("%yht_enter_endingtime%");
+            document.getElementById('laufzeit_hour').focus();
+            return false;
+        }
+
+        if(document.getElementById('laufzeit_minute').value == "mm") {
+            alert("%yht_enter_endingtime%");
+            document.getElementById('laufzeit_minute').focus();
+            return false;
+        }
+        if(document.getElementById('laufzeit_day').value == "DD") {
+            alert("%yht_enter_endingtime%");
+            document.getElementById('laufzeit_day').focus();
+            return false;
+        }
+        if(document.getElementById('laufzeit_month').value == "MM") {
+            alert("%yht_enter_endingtime%");
+            document.getElementById('laufzeit_month').focus();
+            return false;
+        }
+        if(document.getElementById('laufzeit_year').value == "YY") {
+            alert("%yht_enter_endingtime%");
+            document.getElementById('laufzeit_year').focus();
+            return false;
+        }
+
+    }
+    -->
 </script>
 
 <form name="post" method="post" action="polls.php" onsubmit="return chkFormular()" class="form-horizontal">
 
-    <h3>%edit_poll%</h3>
-    
-    <div class="form-group">
-        <label for="title">%title%:</label>
-        <div class="forms">
-            <input name="title" id="title" type="text" value="$polltitle" class="form-control">
-        </div>
-    </div>
-    
-    <div class="form-group">
-        <label for="laufzeit_hour">%endingtime%:</label>
-        <div class="row">
-            <div class="col-xs-6">
-                <input type="date" name="runtime_date" value="$runtime_date" class="form-control">
-            </div>
-            <div class="col-xs-6">
-                <input type="time" name="runtime_time" value="$runtime_time" class="form-control">
-            </div>
+    <h3>%new_poll%</h3>
+
+    <div class="control-group">
+        <label class="control-label" for="title">%title%:</label>
+        <div class="controls">
+            <input name="title" id="title" type="text" value="$polltitle" />
         </div>
     </div>
 
-    <div class="form-group">
-        <label for="opt1">%option%: 1</label>
+    <div class="control-group">
+        <label class="control-label" for="laufzeit_hour">%endingtime%:</label>
         <div class="controls">
-            <input type="text" name="op1" id="opt1" value="$option1" class="form-control">
-        </div>
-        
-        <label for="opt2">%option%: 2</label>
-        <div class="controls">
-            <input type="text" name="op2" id="opt2" value="$option2" class="form-control">
-        </div>
-        
-        <label for="opt3">%option%: 3</label>
-        <div class="controls">
-            <input type="text" name="op3" id="opt3" value="$option3" class="form-control">
-        </div>
-        
-        <label for="opt4">%option%: 4</label>
-        <div class="controls">
-            <input type="text" name="op4" id="opt4" value="$option4" class="form-control">
-        </div>
-        
-        <label for="opt5">%option%: 5</label>
-        <div class="controls">
-            <input type="text" name="op5" id="opt5" value="$option5" class="form-control">
-        </div>
-        
-        <label for="opt6">%option%: 6</label>
-        <div class="controls">
-            <input type="text" name="op6" id="opt6" value="$option6" class="form-control">
-        </div>
-        
-        <label for="opt7">%option%: 7</label>
-        <div class="controls">
-            <input type="text" name="op7" id="opt7" value="$option7" class="form-control">
-        </div>
-        
-        <label for="opt8">%option%: 8</label>
-        <div class="controls">
-            <input type="text" name="op8" id="opt8" value="$option8" class="form-control">
-        </div>
-        
-        <label for="opt9">%option%: 9</label>
-        <div class="controls">
-            <input type="text" name="op9" id="opt9" value="$option9" class="form-control">
-        </div>
-        
-        <label for="op10">%option%: 10</label>
-        <div class="controls">
-            <input type="text" name="op10" id="opt10" value="$option10" class="form-control">
+            <input type="number" min="0" max="24" name="laufzeit_hour" id="laufzeit_hour" size="2" maxlength="2" value="$ds[laufzeit_hour]" />
+            <input type="number" min="0" max="59" name="laufzeit_minute" id="laufzeit_minute" size="2" maxlength="2" value="$ds[laufzeit_minute]" />
+
+            <input type="number" min="1" max="31" name="laufzeit_day" id="laufzeit_day" size="2" maxlength="2" value="$ds[laufzeit_day]" />
+            <input type="number" min="1" max="12" name="laufzeit_month" id="laufzeit_month" size="2" maxlength="2" value="$ds[laufzeit_month]" />
+            <input type="number" name="laufzeit_year" id="laufzeit_year" size="2" maxlength="2" value="$ds[laufzeit_year]" />
         </div>
     </div>
 
-    <div class="form-group">
-        <select name="comments" class="form-control">
-          $comments
-        </select>
-    </div>    
+    <div class="control-group">
+        <label class="control-label" for="opt1">%option%: 1</label>
+        <div class="controls">
+            <input type="text" name="op1" id="opt1" value="$option1" />
+        </div>
 
-    <div class="form-group">
-        <input type="checkbox" name="intern" value="1"> <label for="intern">%intern%?</label>
-    </div>    
-    
-    <div class="form-group">
-        <input type="hidden" name="pollID" value="$ds[pollID]" class="form-control">
-        <input name="saveedit" type="submit" value="%update_poll%" class="btn btn-primary" class="form-control">
-        %reset_votes%? <input class="input" type="checkbox" name="reset" value="1" class="form-control">
-        
-    </div> 
+        <label class="control-label" for="opt2">%option%: 2</label>
+        <div class="controls">
+            <input type="text" name="op2" id="opt2" value="$option2" />
+        </div>
+
+        <label class="control-label" for="opt3">%option%: 3</label>
+        <div class="controls">
+            <input type="text" name="op3" id="opt3" value="$option3" />
+        </div>
+
+        <label class="control-label" for="opt4">%option%: 4</label>
+        <div class="controls">
+            <input type="text" name="op4" id="opt4" value="$option4" />
+        </div>
+
+        <label class="control-label" for="opt5">%option%: 5</label>
+        <div class="controls">
+            <input type="text" name="op5" id="opt5" value="$option5" />
+        </div>
+
+        <label class="control-label" for="opt6">%option%: 6</label>
+        <div class="controls">
+            <input type="text" name="op6" id="opt6" value="$option6" />
+        </div>
+
+        <label class="control-label" for="opt7">%option%: 7</label>
+        <div class="controls">
+            <input type="text" name="op7" id="opt7" value="$option7" />
+        </div>
+
+        <label class="control-label" for="opt8">%option%: 8</label>
+        <div class="controls">
+            <input type="text" name="op8" id="opt8" value="$option8" />
+        </div>
+
+        <label class="control-label" for="opt9">%option%: 9</label>
+        <div class="controls">
+            <input type="text" name="op9" id="opt9" value="$option9" />
+        </div>
+
+        <label class="control-label" for="op10">%option%: 10</label>
+        <div class="controls">
+            <input type="text" name="op10" id="opt10" value="$option10" />
+        </div>
+    </div>
+
+    <div class="control-group">
+
+        <div class="controls">
+            <select name="comments">
+                $comments
+            </select>
+        </div>
+
+    </div>
+    <div class="control-group">
+
+        <label class="control-label" for="intern">%intern%?</label>
+        <div class="controls">
+            <input type="checkbox" name="intern" value="1" />
+        </div>
+
+    </div>
+
+    <div class="control-group">
+
+        <div class="controls">
+            <input type="hidden" name="pollID" value="$ds[pollID]" />
+            <input name="saveedit" type="submit" value="%update_poll%" class="btn btn-primary" />
+            %reset_votes%? <input class="input" type="checkbox" name="reset" value="1" />
+        </div>
+
+    </div>
 
 </form>
