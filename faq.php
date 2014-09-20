@@ -64,8 +64,8 @@ if($action=="faqcat" and is_numeric($_GET['faqcatID'])) {
 			eval ("\$faq_question = \"".gettemplate("faq_question")."\";");
 			echo $faq_question;
 		}
-		eval ("\$faq_question_foot = \"".gettemplate("faq_question_foot")."\";");
-		echo $faq_question_foot;
+        eval ("\$faq_foot = \"".gettemplate("faq_foot")."\";");
+		echo $faq_foot;
 	}
 	else echo $_language->module['no_faq'];
 }
@@ -99,9 +99,6 @@ elseif($action=="faq") {
 
 		eval ("\$faq_answer = \"".gettemplate("faq_answer")."\";");
 		echo $faq_answer;
-
-		eval ("\$faq_foot = \"".gettemplate("faq_foot")."\";");
-		echo $faq_foot;
 	}
 	else echo $_language->module['no_faq'];
 }
@@ -133,8 +130,6 @@ else {
 			echo $faq_category;
 			$i++;
 		}
-		eval ("\$faq_foot = \"".gettemplate("faq_foot")."\";");
-		echo $faq_foot;
 	}
 	else echo $_language->module['no_categories'];
 }
