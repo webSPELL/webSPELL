@@ -33,6 +33,6 @@ $language_array = Array(
   'no_informations'=>'informatsioon pole saadaval',
   'report_message'=>'[b]Uus %s raport[/b][br][br]%s-ID: %d[br]Info: %s[br]Allikas: [url]index.php?site=files&file=%d[/url]',
   'report_recognized'=>'Su raport aksepteeriti, täname.',
-  'wrong_securitycode'=>'Sa sisestasid vale turvakoodi<br /><br />[<a href="javascript:back();">tagasi</a>]'
+  'wrong_securitycode'=>'Sa sisestasid vale turvakoodi<br><br>[<a href="javascript:back();">tagasi</a>]'
 );
 ?>

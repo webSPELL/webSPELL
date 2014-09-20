@@ -87,8 +87,8 @@ $language_array = Array(
 	'no_new_posts'=>'ingen nye indlæg',
 	'no_permission'=>'Du har ikke rettigheder til at se interne Boards!',
 	'not_logged'=>'Ikke logget ind',
-	'not_logged_msg'=>'<br /><br />For at starte eller svare i et emne, skal du være registreret og logget ind!<br /><br />
-    &#8226; <a href="index.php?site=register">Registrer nu</a><br />
+	'not_logged_msg'=>'<br><br>For at starte eller svare i et emne, skal du være registreret og logget ind!<br><br>
+    &#8226; <a href="index.php?site=register">Registrer nu</a><br>
     &#8226; <a href="index.php?site=login">log ind</a>',
 	'notify'=>'Meddel mig når der er tilføjet et svar',
 	'notify_mail'=>'nyt svar fra %poster% i emne

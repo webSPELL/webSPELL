@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 /*
 ##########################################################################
 #                                                                        #
@@ -52,7 +52,7 @@ $language_array = Array(
   'mail'=>'Vaš e-mail',
   'name'=>'Vaše ime',
   'new_entry'=>'Novi vnos',
-  'no_access'=>'Niste prijavljeni.<br /><a href="index.php?site=login">Prijavi se</a> | <a href="index.php?site=register">Registriraj se</a>',
+  'no_access'=>'Niste prijavljeni.<br><a href="index.php?site=login">Prijavi se</a> | <a href="index.php?site=register">Registriraj se</a>',
   'options'=>'Možnosti',
   'pmsubject_newentry'=>'Novi vnos v knjigo gostov',
   'pmtext_newentry'=>'[b]Negdo je čečkal v vaši knjigi gostov[/b][br][br] [URL=index.php?site=guestbook#%insertid%]Klikni da prebereš[/URL] ',

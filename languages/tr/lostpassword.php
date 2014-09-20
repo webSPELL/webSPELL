@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 /*
 ##########################################################################
 #                                                                        #
@@ -49,8 +49,8 @@ Yeni Şifreniz: %new_password%
   'lost_password'=>'Şifremi unuttum',
   'no_mail_given'=>'Herhangi bir e-posta adresi girmediniz.',
   'no_user_found'=>'kullanıcı bulunamadı!',
-  'successful'=>'Hesabınız bulundu<br /><br />
-    İrkaç saniye içinde hesap verileriyle birlikte bir e-posta alacaksınız.<br /><br />
+  'successful'=>'Hesabınız bulundu<br><br>
+    İrkaç saniye içinde hesap verileriyle birlikte bir e-posta alacaksınız.<br><br>
     &#8226; <a href="index.php?site=login">giriş</a>',
   'your_email'=>'E-Postanız'
 );

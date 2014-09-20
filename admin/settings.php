@@ -206,7 +206,7 @@ else {
     <td><input type="text" name="admmail" value="<?php echo getinput($ds['adminemail']); ?>" size="35" onmouseover="showWMTT('id6')" onmouseout="hideWMTT()" /></td>
   </tr>
 </table>
-<br /><br />
+<br><br>
 <table width="100%" border="0" cellspacing="1" cellpadding="3">
   <tr>
     <td colspan="2"><b><?php echo $_language->module['additional_options']; ?>:</b></td>
@@ -215,7 +215,7 @@ else {
     <td>&#8226; <a href="admincenter.php?site=lock"><b><?php echo $_language->module['pagelock']; ?></b></a></td>
   </tr>
 </table>
-<br />
+<br>
 
 <div style="width: 45%;float: left;">
 	<table width="100%" border="0" cellspacing="1" cellpadding="3">

@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 /*
 ##########################################################################
 #                                                                        #
@@ -107,8 +107,8 @@ Lütfen e-posta değişikliğini tamamlamak için aşağıdaki linki tıklayarak
   'nickname'=>'Rumuz',
   'nickname_already_in_use'=>'rumuz zaten kullanılıyor!',
   'no'=>'Hayır',
-  'not_logged_in'=>'Profilinizi görüntülemek için oturum açmış olmanız gerekiyor!<br /><br />
-    &#8226; <a href="index.php?site=register">kaydetmek</a><br />
+  'not_logged_in'=>'Profilinizi görüntülemek için oturum açmış olmanız gerekiyor!<br><br>
+    &#8226; <a href="index.php?site=register">kaydetmek</a><br>
     &#8226; <a href="index.php?site=login">giriş</a>',
   'old_password'=>'eski Şifre',
   'old_pw_not_valid'=>'eski şifre geçerli değil!',

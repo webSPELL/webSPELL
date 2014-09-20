@@ -35,7 +35,7 @@ $language_array = Array(
 	'faq'=>'FAQ',
 	'faqs'=>'FAQs',
 	'no_categories'=>'žiadne kategórie neboli vytvorené',
-	'no_faq'=>'Žiadne otázky nie sú vytvorené.<br /><a href="index.php?site=faq">Naspäť</a>',
+	'no_faq'=>'Žiadne otázky nie sú vytvorené.<br><a href="index.php?site=faq">Naspäť</a>',
 	'saved_on'=>'uložené'
 );
 ?>

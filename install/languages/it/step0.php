@@ -30,8 +30,8 @@ $language_array = Array(
 	'webspell_team'=>'Tuo <a href="http://www.webspell.org" target="_blank">webSPELL Sviluppatoro</a> Team',
 	'welcome'=>'Benvenuto',
 	'welcome_text'=>'Questa procedura di installazione ti aiuta, installare webSPELL sul tuo server.
-   Sei semplici passi condurre l`utente attraverso l`installazione.<br /><br />
-   Si prega di prendere in considerazione le seguenti informazioni:<br />
+   Sei semplici passi condurre l`utente attraverso l`installazione.<br><br>
+   Si prega di prendere in considerazione le seguenti informazioni:<br>
 	<ul><li><b>Il tuo indirizzo e-mail</b></li></ul>
 	<ul><li><b>L`URL per la tua pagina Webspell</b></li></ul>
    <ul><li><b>L`accesso ai dati di MySQL per il tuo webspace</b></li></ul>

@@ -100,8 +100,8 @@ Vielen Dank für dein Interesse
 	'nickname'=>'Nickname',
 	'nickname_already_in_use'=>'Nickname wird bereits benutzt!',
 	'no'=>'Nein',
-	'not_logged_in'=>'Du musst angemeldet sein um dein Profil ändern zu können!<br /><br />
-    &#8226; <a href="index.php?site=register">registrieren</a><br />
+	'not_logged_in'=>'Du musst angemeldet sein um dein Profil ändern zu können!<br><br>
+    &#8226; <a href="index.php?site=register">registrieren</a><br>
     &#8226; <a href="index.php?site=login">anmelden</a>',
 	'old_password'=>'altes Passwort',
 	'old_pw_not_valid'=>'Dein altes Passwort ist falsch!',

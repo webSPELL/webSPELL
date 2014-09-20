@@ -49,17 +49,17 @@ $language_array = Array(
   'new_board'=>'neues Forum',
   'new_category'=>'neue Kategorie',
   'read_right'=>'Leserecht',
-  'read_right_info_board'=>'Diese Benutzergruppe(n) hat/haben das Recht, die Foren zu sehen und sie zu lesen.<br />Wenn keine Benutzergruppe ausgewählt ist, kann jeder das Forum sehen und lesen.<br />Benutze STRG um mehrere auszuwählen oder zu deselektieren.',
+  'read_right_info_board'=>'Diese Benutzergruppe(n) hat/haben das Recht, die Foren zu sehen und sie zu lesen.<br>Wenn keine Benutzergruppe ausgewählt ist, kann jeder das Forum sehen und lesen.<br>Benutze STRG um mehrere auszuwählen oder zu deselektieren.',
   'really_delete_board'=>'Dieses Forum wirklich löschen?',
   'really_delete_category'=>'Diese Kategorie wirklich löschen?',
   'registered_users'=>'registrierte Benutzer',
-  'right_info_category'=>'Diese Benutzergruppe(n) hat/haben das Recht, die Foren-Kategorien zu sehen.<br />Wenn keine Benutzergruppe ausgewählt ist, kann jeder die Foren-Kategorien sehen.<br />Benutze STRG um mehrere auszuwählen oder zu deselektieren.',
+  'right_info_category'=>'Diese Benutzergruppe(n) hat/haben das Recht, die Foren-Kategorien zu sehen.<br>Wenn keine Benutzergruppe ausgewählt ist, kann jeder die Foren-Kategorien sehen.<br>Benutze STRG um mehrere auszuwählen oder zu deselektieren.',
   'select_moderators'=>'Moderatoren auswählen',
   'sort'=>'Sortierung',
   'transaction_invalid'=>'Transaktions ID ungültig',
   'to_sort'=>'sortieren',
   'unselect_all'=>'alle deselektieren',
   'write_right'=>'Schreibrecht',
-  'write_right_info_board'=>'Diese Benutzergruppe(n) hat/haben das Recht, im Forum zu schreiben.<br />Wenn keine Benutzergruppe ausgewählt ist, können alle registrieren Benutzer schreiben.<br />Benutze STRG um mehrere auszuwählen oder zu deselektieren.'
+  'write_right_info_board'=>'Diese Benutzergruppe(n) hat/haben das Recht, im Forum zu schreiben.<br>Wenn keine Benutzergruppe ausgewählt ist, können alle registrieren Benutzer schreiben.<br>Benutze STRG um mehrere auszuwählen oder zu deselektieren.'
 );
 ?>

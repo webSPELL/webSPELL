@@ -30,11 +30,11 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'invalid_password'=>'Sa sisestasid vale parooli.<br /><br /><a href="javascript:history.back()">Mine tagasi ja proovi uuesti.</a>',
-  'ip_banned'=>'Su IP aadress on siin saidil keelatud.<br/>%reason%<br /><br /><a href="javascript:history.back()">Mine tagasi</a>',
+  'invalid_password'=>'Sa sisestasid vale parooli.<br><br><a href="javascript:history.back()">Mine tagasi ja proovi uuesti.</a>',
+  'ip_banned'=>'Su IP aadress on siin saidil keelatud.<br>%reason%<br><br><a href="javascript:history.back()">Mine tagasi</a>',
   'login_successful'=>'Edukalt sisse logitud!',
-  'no_user'=>'Kasutaja <b>%username%</b> pole siin süsteemis saadaval.<br /><br /><a href="javascript:history.back()">Mine tagasi ja proovi uuesti!</a>',
-  'not_activated'=>'Su konto pole aktiveeritud.<br /><br /><a href="javascript:history.back()">Tagasi</a>',
-  'session_error'=>'Kontrolli üle, et küpsised oleks su brauseris lubatud.<br />Kui probleem püsib, kontakteeru veebihalduriga.<br /><br /><a href="javascript:history.back()">Tagasi</a>'
+  'no_user'=>'Kasutaja <b>%username%</b> pole siin süsteemis saadaval.<br><br><a href="javascript:history.back()">Mine tagasi ja proovi uuesti!</a>',
+  'not_activated'=>'Su konto pole aktiveeritud.<br><br><a href="javascript:history.back()">Tagasi</a>',
+  'session_error'=>'Kontrolli üle, et küpsised oleks su brauseris lubatud.<br>Kui probleem püsib, kontakteeru veebihalduriga.<br><br><a href="javascript:history.back()">Tagasi</a>'
 );
 ?>

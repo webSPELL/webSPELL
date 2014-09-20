@@ -201,7 +201,7 @@ else {
       <td class="td2" colspan="2">&#8226; <a href="admincenter.php?site=database&amp;action=optimize">'.$_language->module['optimize'].'</a></td>
     </tr>
     <tr>
-      <td class="td1">'.$_language->module['import_info'].'<br /><br />
+      <td class="td1">'.$_language->module['import_info'].'<br><br>
       <table width="100%" border="0" cellspacing="1" cellpadding="3">
         <tr>
           <td width="15%"><b>'.$_language->module['backup_file'].'</b></td>
@@ -217,7 +217,7 @@ else {
   </table>
   </form>';
 	
-  /*echo '<br /><br />
+  /*echo '<br><br>
   <form method="post" action="admincenter.php?site=database">
   <table width="100%" border="0" cellspacing="1" cellpadding="3" bgcolor="#DDDDDD">
     <tr>
@@ -225,9 +225,9 @@ else {
     </tr>
     <tr>
       <td class="td1">'.$_language->module['allowed_commands'].'
-      <br /><br />'.$_language->module['sql_query'].':<br /><br />
+      <br><br>'.$_language->module['sql_query'].':<br><br>
       <textarea name="query" rows="10" cols="" style="width: 100%;"></textarea>
-      <br /><br /><input type="submit" name="submit" value="'.$_language->module['submit'].'" /></td>
+      <br><br><input type="submit" name="submit" value="'.$_language->module['submit'].'" /></td>
     </tr>
   </table>
   </form>';*/

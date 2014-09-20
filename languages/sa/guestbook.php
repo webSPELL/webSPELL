@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 /*
 ##########################################################################
 #                                                                        #
@@ -47,7 +47,7 @@ $language_array = Array(
   'mail'=>'البريد الالكتروني',
   'name'=>'الاسم',
   'new_entry'=>'ادخال جديد',
-  'no_access'=>'.لست مسجل<br /><a href="index.php?site=login">الدخول</a> | <a href="index.php?site=register">تسجيل</a>',
+  'no_access'=>'.لست مسجل<br><a href="index.php?site=login">الدخول</a> | <a href="index.php?site=register">تسجيل</a>',
   'options'=>'خيارات',
   'pmsubject_newentry'=>'ادخال جديد في سجل الزوار',
   'pmtext_newentry'=>'[b]!رسالة لك في سجل الزوار[/b][br][br] [URL=admin/admincenter.php?site=guestbook]اضغط هنا للسماح بعرض الادخال[/URL] ',

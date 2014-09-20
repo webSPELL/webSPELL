@@ -94,7 +94,7 @@ if($_POST['installtype']=="full" AND $_POST['hp_url']) {
       <span><?php echo $_language->module['tooltip_5']; ?></span></a></td>
      </tr>
      <tr>
-      <td colspan="2"><br /><b><?php echo $_language->module['webspell_config']; ?></b></td>
+      <td colspan="2"><br><b><?php echo $_language->module['webspell_config']; ?></b></td>
      </tr>
      <tr>
       <td><?php echo $_language->module['admin_username']; ?>:</td>
@@ -139,6 +139,6 @@ if($_POST['installtype']=="full" AND $_POST['hp_url']) {
    
    <input type="hidden" name="installtype" value="<?php echo $_POST['installtype']; ?>" />
 	
-   <div align="right"><br /><a href="javascript:document.ws_install.submit()"><img src="images/next.jpg" alt="" /></a></div>
+   <div align="right"><br><a href="javascript:document.ws_install.submit()"><img src="images/next.jpg" alt="" /></a></div>
    </td>
   </tr>

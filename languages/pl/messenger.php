@@ -54,7 +54,7 @@ $language_array = Array(
 	'no_incoming'=>'Brak odebranych wiadomości.',
 	'no_outgoing'=>'Brak wysłanych wiadomości.',
 	'no_subject'=>'(brak tematu)',
-	'not_logged'=>'Nie jesteś zalogowany.<br /><a href="index.php?site=login">Login</a> | <a href="index.php?site=register">Register</a>',
+	'not_logged'=>'Nie jesteś zalogowany.<br><a href="index.php?site=login">Login</a> | <a href="index.php?site=register">Register</a>',
 	'options'=>'Opcje',
 	'outgoing'=>'Wysłane',
 	'read'=>'Przeczytaj',
@@ -73,7 +73,7 @@ $language_array = Array(
 	'title'=>'Temat',
 	'your_message'=>'Twoja wiadomość:',
 	'mail_subject'=>'Masz nową prywatną wiadomość',
-	'mail_body'=>'<b>Witaj %nickname%!</b><br /><br />Masz nową wiadomość na '.PAGETITLE.' (%hp_url%).<br />Kliknij <a href="http://%hp_url%?site=messenger">tutaj</a> by przeczytać.<br /><br />(C) webSPELL.org',
+	'mail_body'=>'<b>Witaj %nickname%!</b><br><br>Masz nową wiadomość na '.PAGETITLE.' (%hp_url%).<br>Kliknij <a href="http://%hp_url%?site=messenger">tutaj</a> by przeczytać.<br><br>(C) webSPELL.org',
 	'error'=>'error',
 	'unknown_user'=>'unknown user'
 );

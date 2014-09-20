@@ -93,8 +93,8 @@ $language_array = Array(
   'no_new_posts'=>'Geen nuwe inskrywings',
   'no_permission'=>'Jy het geen toestemming n interne borde te sien!',
   'not_logged'=>'Nie in geteken.',
-  'not_logged_msg'=>'<br /><br />Om mee te begin of om te antwoord op \'n onderwerp wat jy het geregistreer en aangeteken word!<br /><br />
-&#8226; <a href="index.php?site=register">registreer nou</a><br />
+  'not_logged_msg'=>'<br><br>Om mee te begin of om te antwoord op \'n onderwerp wat jy het geregistreer en aangeteken word!<br><br>
+&#8226; <a href="index.php?site=register">registreer nou</a><br>
 &#8226; <a href="index.php?site=login">login</a>',
   'notify'=>'Laat my weet wanneer \'n antwoord geplaas word',
   'notify_mail'=>'Nuwe antwoord deur %poster% in die onderwerp

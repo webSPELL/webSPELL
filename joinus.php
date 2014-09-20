@@ -102,10 +102,10 @@ if($action=="save" && isset($_POST['post'])) {
 		$show = false;
 	}
 	else {
-		$fehler=implode('<br />&#8226; ',$error);
+		$fehler=implode('<br>&#8226; ',$error);
 		$show = true;
     $showerror = '<div class="errorbox">
-      <b>'.$_language->module['problems'].':</b><br /><br />
+      <b>'.$_language->module['problems'].':</b><br><br>
       &#8226; '.$fehler.'
     </div>';
 	}

@@ -36,7 +36,7 @@ $language_array = Array(
   'faq'=>'Întrebări frecvente',
   'faqs'=>'Întrebări frecvente',
   'no_categories'=>'nu au fost create categorii',
-  'no_faq'=>'Întrebari nedisponibile.<br /><a href="index.php?site=faq">Înapoi</a>',
+  'no_faq'=>'Întrebari nedisponibile.<br><a href="index.php?site=faq">Înapoi</a>',
   'saved_on'=>'salvat în'
 );
 ?>

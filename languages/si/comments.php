@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 /*
 ##########################################################################
 #                                                                        #
@@ -41,7 +41,7 @@ $language_array = Array(
   'by'=>'napisal',
   'clanmember_icon'=>' <img src="images/icons/member.gif" width="6" height="11" alt="Clanmember" />',
   'comments'=>'komentajri',
-  'comments_disabled'=>'<br /><br /><b>Komentarji onemogočeni.</b>',
+  'comments_disabled'=>'<br><br><b>Komentarji onemogočeni.</b>',
   'delete_selected'=>'Izbriši označeno',
   'edit_comment'=>'Uredi komentarje',
   'email_link'=>'<a href="mailto:%email%"><img src="images/icons/email.gif" border="0" width="15" height="11" alt="email" /></a>',
@@ -56,7 +56,7 @@ $language_array = Array(
   'ip'=>'IP',
   'mail'=>'E-Mail',
   'name'=>'Ime',
-  'no_access'=>'<br /><br />Morate se prijaviti na stran!<br /><br />&#8226; <a href="index.php?site=register">Registriraj se!</a><br />&#8226; <a href="index.php?site=login">Prijavi se</a>',
+  'no_access'=>'<br><br>Morate se prijaviti na stran!<br><br>&#8226; <a href="index.php?site=register">Registriraj se!</a><br>&#8226; <a href="index.php?site=login">Prijavi se</a>',
   'no_commentid'=>'No commentID specified - redirecting',
   'no_database_entry'=>'No database entry matching commentID - redirecting',
   'options'=>'Možnosti',

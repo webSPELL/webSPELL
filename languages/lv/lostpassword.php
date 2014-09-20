@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 /*
 ##########################################################################
 #                                                                        #
@@ -44,8 +44,8 @@ Gūstiet prieku mūsu mājaslapā!
   'lost_password'=>'pazaudēta parole',
   'no_mail_given'=>'Jūs neesat ievadījis nekādu e-pasta adresi.',
   'no_user_found'=>'lietotājs nav atrasts!',
-  'successful'=>'Jūsu profils ir atrastsbr /><br />
-    Jūs saņemsiet e-pastu ar Jūsu profila datiem pāris sekunžu laikā.<br /><br />
+  'successful'=>'Jūsu profils ir atrastsbr /><br>
+    Jūs saņemsiet e-pastu ar Jūsu profila datiem pāris sekunžu laikā.<br><br>
     &#8226; <a href="index.php?site=login">pieslēgties</a>',
   'your_email'=>'Jūsu e-pasts'
 );

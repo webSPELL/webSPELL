@@ -67,7 +67,7 @@ if($action == "send") {
 		$header="From:$from\n";
 		$header .= "Reply-To: $from\n";
 		$header.="Content-Type: text/html; charset=utf-8\n";
-		mail($getemail, stripslashes($subject), stripslashes('This mail was send over your webSPELL - Website (IP '.$GLOBALS['ip'].'): '.$hp_url.'<br /><br /><b>'.getinput($name).' writes:</b><br />'.clearfromtags($text)), $header);
+		mail($getemail, stripslashes($subject), stripslashes('This mail was send over your webSPELL - Website (IP '.$GLOBALS['ip'].'): '.$hp_url.'<br><br><b>'.getinput($name).' writes:</b><br>'.clearfromtags($text)), $header);
 		redirect('index.php?site=contact',$_language->module['send_successfull'],3);
 		unset($_POST['name']);
 		unset($_POST['from']);
@@ -75,7 +75,7 @@ if($action == "send") {
 		unset($_POST['subject']);
 	}
 	else {
-		$errors=implode('<br />&#8226; ',$fehler);
+		$errors=implode('<br>&#8226; ',$fehler);
 		
     $showerror = '<div class="alert alert-danger">
       <strong>'.$_language->module['errors_there'].':</strong><br>

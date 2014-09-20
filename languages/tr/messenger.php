@@ -60,7 +60,7 @@ $language_array = Array(
   'no_incoming'=>'Gelen klasöründe ileti yok.',
   'no_outgoing'=>'Giden klasörde hiçbir ileti yok.',
   'no_subject'=>'(konu yok)',
-  'not_logged'=>'Giriş Yapmadınız.<br /><a href="index.php?site=login">Giriş</a> | <a href="index.php?site=register">Kaydetmek</a>',
+  'not_logged'=>'Giriş Yapmadınız.<br><a href="index.php?site=login">Giriş</a> | <a href="index.php?site=register">Kaydetmek</a>',
   'options'=>'Seçenekler',
   'outgoing'=>'Giden',
   'read'=>'Oku',
@@ -79,7 +79,7 @@ $language_array = Array(
   'title'=>'Konu',
   'your_message'=>'Mesajınız:',
   'mail_subject'=>'Yeni kişisel mesajınız var',
-  'mail_body'=>'<b>Merhaba %nickname%!</b><br /><br /> BVBPOWER den bir mesajınız var (%hp_url%).<br />Tık <a href="http://%hp_url%?site=messenger">burada</a> kişisel mesajı okuamak icin.<br /><br />(C) webSPELL.org',
+  'mail_body'=>'<b>Merhaba %nickname%!</b><br><br> BVBPOWER den bir mesajınız var (%hp_url%).<br>Tık <a href="http://%hp_url%?site=messenger">burada</a> kişisel mesajı okuamak icin.<br><br>(C) webSPELL.org',
   'error'=>'hata',
   'unknown_user'=>'bilinmeyen kullanıcı'
 );

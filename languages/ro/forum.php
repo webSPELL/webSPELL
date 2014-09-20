@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 /*
 ##########################################################################
 #                                                                        #
@@ -88,8 +88,8 @@ $language_array = Array(
   'no_new_posts'=>'Fără postări noi',
   'no_permission'=>'Nu aveți permisiunea de a vizualiza forumuri interne',
   'not_logged'=>'Nu sunteţi înregistrat.',
-  'not_logged_msg'=>'<br /><br />Pentru a începe sau a răspunde la un subiect trebuie să fiţi înregistrat și autentificat!<br /><br />
-&#8226; <a href="index.php?site=register">inregistreaza-te acum</a><br />
+  'not_logged_msg'=>'<br><br>Pentru a începe sau a răspunde la un subiect trebuie să fiţi înregistrat și autentificat!<br><br>
+&#8226; <a href="index.php?site=register">inregistreaza-te acum</a><br>
 &#8226; <a href="index.php?site=login">login</a>',
   'notify'=>'Anunta-ma cand apare un raspuns',
   'notify_mail'=>'Raspunde cu %poster% la subiect

@@ -32,6 +32,6 @@ $language_array = Array(
   'no_informations'=>'нема доступних информација',
   'report_message'=>'[b]Постоји нови %s - Извештај[/b][br][br]%s-ID: %d[br]Инфо: %s[br]Реферер: [url]index.php?site=files&file=%d[/url]',
   'report_recognized'=>'Ваш извештај је примљен. Хвала.',
-  'wrong_securitycode'=>'Унијели сте криви сигурносни код<br /><br />[<a href="javascript:back();">Назад</a>]'
+  'wrong_securitycode'=>'Унијели сте криви сигурносни код<br><br>[<a href="javascript:back();">Назад</a>]'
 );
 ?>

@@ -87,8 +87,8 @@ $language_array = Array(
 	'no_new_posts'=>'nincs új üzenet',
 	'no_permission'=>'Nincs engedélyed a belso táblák megtekintésére!',
 	'not_logged'=>'Nem vagy bejelentkezve.',
-	'not_logged_msg'=>'<br /><br />Topik nyitásához, vagy válasz írásához be kell jelentkezned!<br /><br />
-  &#8226; <a href="index.php?site=register"><b>regisztrálás most</b></a><br />
+	'not_logged_msg'=>'<br><br>Topik nyitásához, vagy válasz írásához be kell jelentkezned!<br><br>
+  &#8226; <a href="index.php?site=register"><b>regisztrálás most</b></a><br>
   &#8226; <a href="index.php?site=login"><b>bejelentkezés</b></a>',
 	'notify'=>'értesítsen új válasz érkezésekor',
 	'notify_mail'=>'új válasz írója %poster% topikban

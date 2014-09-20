@@ -61,7 +61,7 @@ $language_array = Array(
 	'sort'=>'Rendezés',
 	'squad'=>'Squad',
 	'submit_challenge'=>'Kihívás beküldése',
-	'thank_you'=>'Köszönjük a kérésed!<br />',
+	'thank_you'=>'Köszönjük a kérésed!<br>',
 	'time'=>'Idő',
 	'wrong_security_code'=>'Rossz biztonsági kód.'
 );

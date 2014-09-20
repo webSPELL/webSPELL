@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 /*
 ##########################################################################
 #                                                                        #
@@ -44,8 +44,8 @@ Head ajaviitmist meie lehel
   'lost_password'=>'kaotasin parooli',
   'no_mail_given'=>'Sa pole ühtegi meiliaadressi sisestanud.',
   'no_user_found'=>'kasutajat ei leitud!',
-  'successful'=>'Su konto on leitud<br /><br />
-    E-mail su konto andmetega saadetakse sulle mõne sekundi pärast.<br /><br />
+  'successful'=>'Su konto on leitud<br><br>
+    E-mail su konto andmetega saadetakse sulle mõne sekundi pärast.<br><br>
     &#8226; <a href="index.php?site=login">logi sisse</a>',
   'your_email'=>'Su e-mail'
 );

@@ -193,7 +193,7 @@ else {
 
 		if(count($error_array)) 
 		{
-			$fehler=implode('<br />&#8226; ', $error_array);
+			$fehler=implode('<br>&#8226; ', $error_array);
 			$showerror = '<div class="alert alert-danger">
 			  <b>'.$_language->module['errors_there'].':</b><br><br>
 			  &#8226; '.$fehler.'
@@ -266,22 +266,22 @@ else {
 
 		if(!(mb_strlen(trim($oldpwd)))) {
 			$error = $_language->module['forgot_old_pw'];
-			die('<b>ERROR: '.$error.'</b><br /><br /><input type="button" onclick="javascript:history.back()" value="'.$_language->module['back'].'" />');
+			die('<b>ERROR: '.$error.'</b><br><br><input type="button" onclick="javascript:history.back()" value="'.$_language->module['back'].'" />');
 		}
 		$oldmd5pwd = md5($oldpwd);
 		if($oldmd5pwd != $ds['password']) {
 			$error = $_language->module['old_pw_not_valid'];
-			die('<b>ERROR: '.$error.'</b><br /><br /><input type="button" onclick="javascript:history.back()" value="'.$_language->module['back'].'" />');
+			die('<b>ERROR: '.$error.'</b><br><br><input type="button" onclick="javascript:history.back()" value="'.$_language->module['back'].'" />');
 		}
 		if($pwd1 == $pwd2) {
 			if(!(mb_strlen(trim($pwd1)))) {
 				$error = $_language->module['forgot_new_pw'];
-				die('<b>ERROR: '.$error.'</b><br /><br /><input type="button" onclick="javascript:history.back()" value="'.$_language->module['back'].'" />');
+				die('<b>ERROR: '.$error.'</b><br><br><input type="button" onclick="javascript:history.back()" value="'.$_language->module['back'].'" />');
 			}
 		}
 		else {
 			$error = $_language->module['repeated_pw_not_valid'];
-			die('<b>ERROR: '.$error.'</b><br /><br /><input type="button" onclick="javascript:history.back()" value="'.$_language->module['back'].'" />');
+			die('<b>ERROR: '.$error.'</b><br><br><input type="button" onclick="javascript:history.back()" value="'.$_language->module['back'].'" />');
 		}
 		$newmd5pwd = md5(stripslashes($pwd1));
 		safe_query("UPDATE ".PREFIX."user SET password='".$newmd5pwd."' WHERE userID='".$userID."'");
@@ -321,28 +321,28 @@ else {
 		$username = $ds['username'];
 		if(!(mb_strlen(trim($pwd)))) {
 			$error = $_language->module['forgot_old_pw'];
-			die('<b>ERROR: '.$error.'</b><br /><br /><input type="button" onclick="javascript:history.back()" value="'.$_language->module['back'].'" />');
+			die('<b>ERROR: '.$error.'</b><br><br><input type="button" onclick="javascript:history.back()" value="'.$_language->module['back'].'" />');
 		}
 		$md5pwd = md5(stripslashes($pwd));
 		if($md5pwd != $ds['password']) {
-			die('<b>ERROR: '.$error.'</b><br /><br /><input type="button" onclick="javascript:history.back()" value="'.$_language->module['back'].'" />');
+			die('<b>ERROR: '.$error.'</b><br><br><input type="button" onclick="javascript:history.back()" value="'.$_language->module['back'].'" />');
 		}
 		if($mail1 == $mail2) {
 			if(!(mb_strlen(trim($mail1)))) {
 				$error = $_language->module['mail_not_valid'];
-				die('<b>ERROR: '.$error.'</b><br /><br /><input type="button" onclick="javascript:history.back()" value="'.$_language->module['back'].'" />');
+				die('<b>ERROR: '.$error.'</b><br><br><input type="button" onclick="javascript:history.back()" value="'.$_language->module['back'].'" />');
 			}
 		}
 		else {
 			$error = $_language->module['repeated_pw_not_valid'];
-			die('<b>ERROR: '.$error.'</b><br /><br /><input type="button" onclick="javascript:history.back()" value="'.$_language->module['back'].'" />');
+			die('<b>ERROR: '.$error.'</b><br><br><input type="button" onclick="javascript:history.back()" value="'.$_language->module['back'].'" />');
 		}
 
 		// check e-mail
 		
 		if(!validate_email($mail1)){ 
 			$error=$_language->module['invalid_mail'];
-			die('<b>ERROR: '.$error.'</b><br /><br /><input type="button" onclick="javascript:history.back()" value="'.$_language->module['back'].'" />');
+			die('<b>ERROR: '.$error.'</b><br><br><input type="button" onclick="javascript:history.back()" value="'.$_language->module['back'].'" />');
 		}
 		
 		safe_query("UPDATE ".PREFIX."user SET email_change = '".$mail1."', email_activate = '".$activationkey."' WHERE userID='".$userID."'");

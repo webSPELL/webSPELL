@@ -64,8 +64,8 @@ $language_array = Array(
 	'usermenu'=>'Vartotojo meniu',
 	'views'=>'peržiūrėjimai',
 	'x_new_message'=>'Čia yra %new_messages% naujos žinutės.',
-	'you_have_to_be_logged_in'=>'Jūs turite būti registruoti ir prisijungę, norit peržiūrinėti!<br /><br />
-    &#8226; <a href="index.php?site=register">registruotis dabar</a><br />
+	'you_have_to_be_logged_in'=>'Jūs turite būti registruoti ir prisijungę, norit peržiūrinėti!<br><br>
+    &#8226; <a href="index.php?site=register">registruotis dabar</a><br>
     &#8226; <a href="index.php?site=login">prisijungti</a>'
 );
 ?>

@@ -33,6 +33,6 @@ $language_array = Array(
   'no_informations'=>'لا تتوفر معلومات',
   'report_message'=>'[b]هناك تقرير جديد %s - Report[/b][br][br]%s-ID: %d[br]Info: %s[br]Referer: [url]index.php?site=files&file=%d[/url]',
   'report_recognized'=>'تم الاعتراف بالتقرير الخاص بك. شكرا لك.',
-  'wrong_securitycode'=>'قمت بإدخال رمز الحماية خطأ<br /><br />[<a href="javascript:back();">العوده</a>]'
+  'wrong_securitycode'=>'قمت بإدخال رمز الحماية خطأ<br><br>[<a href="javascript:back();">العوده</a>]'
 );
 ?>

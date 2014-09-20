@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 /*
 ##########################################################################
 #                                                                        #
@@ -49,8 +49,8 @@ hauskaa sivuillemme
   'lost_password'=>'Kadonnut salasana',
   'no_mail_given'=>'Et ole antanut sähköpostiosoitetta.',
   'no_user_found'=>'Käyttäjää  ei löytynyt!',
-  'successful'=>'Käyttäjätilisi on löytynyt<br /><br />
-    Saat sähköpostin koskien tiliäsi, muutaman sekunnin kuluttua.<br /><br />
+  'successful'=>'Käyttäjätilisi on löytynyt<br><br>
+    Saat sähköpostin koskien tiliäsi, muutaman sekunnin kuluttua.<br><br>
     &#8226; <a href="index.php?site=login">Kirjaudu</a>',
   'your_email'=>'Sinun sähköpostisi'
 );

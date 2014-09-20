@@ -60,7 +60,7 @@ $language_array = Array(
   'no_incoming'=>'Geen boodskap in die inkomende lêr.',
   'no_outgoing'=>'Geen boodskap in die uitgaande Ler.',
   'no_subject'=>'(ngeen onderwerp)',
-  'not_logged'=>'Jy is nie in geteken.<br /> <a href="index.php?site=login">Teken</a> | <a href="index.php?site=register">Registreer</a>',
+  'not_logged'=>'Jy is nie in geteken.<br> <a href="index.php?site=login">Teken</a> | <a href="index.php?site=register">Registreer</a>',
   'options'=>'Opsies',
   'outgoing'=>'Uitgaande',
   'read'=>'Lees',
@@ -79,7 +79,7 @@ $language_array = Array(
   'title'=>'Onderwerp',
   'your_message'=>'Jou boodskap:',
   'mail_subject'=>'Jy het die nuwe PM',
-  'mail_body'=>'<b>Hallo %nickname%!</b><br /><br />Jy het \'n nuwe boodskap van BVBPOWER (% hp_url%). <br />Klik <a href = "http://% hp_url%?site=messenger">hier</a> om die PM te lees.<br  /><br />(C)webSPELL.org',
+  'mail_body'=>'<b>Hallo %nickname%!</b><br><br>Jy het \'n nuwe boodskap van BVBPOWER (% hp_url%). <br>Klik <a href = "http://% hp_url%?site=messenger">hier</a> om die PM te lees.<br  /><br>(C)webSPELL.org',
   'error'=>'fout',
   'unknown_user'=>'onbekende gebruiker'
 );

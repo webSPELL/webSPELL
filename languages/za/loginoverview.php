@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 /*
 ##########################################################################
 #                                                                        #
@@ -70,8 +70,8 @@ $language_array = Array(
   'usermenu'=>'Gebruikers Menu',
   'views'=>'uitsig',
   'x_new_message'=>'Daar is %new_messages% nuwe boodskappe.',
-  'you_have_to_be_logged_in'=>'Jy moet ingeteken wees om aanmelding oorsig te sien!<br /><br />
-    &#8226; <a href="index.php?site=register">registreer nou</a><br />
+  'you_have_to_be_logged_in'=>'Jy moet ingeteken wees om aanmelding oorsig te sien!<br><br>
+    &#8226; <a href="index.php?site=register">registreer nou</a><br>
     &#8226; <a href="index.php?site=login">teken aan</a>'
 );
 ?>

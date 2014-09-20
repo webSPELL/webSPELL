@@ -34,7 +34,7 @@ else $action = '';
 
 if(isset($id) and getnickname($id) != '') {
 	
-	if(isbanned($id)) $banned = '<br /><center><font style="color:red;font-weight:bold;font-size:11px;letter-spacing:1px;">'.$_language->module['is_banned'].'</font></center>';
+	if(isbanned($id)) $banned = '<br><p class="text-center"><font style="color:red;font-weight:bold;font-size:11px;letter-spacing:1px;">'.$_language->module['is_banned'].'</font></p>';
 	else $banned = '';
 
 	//profil: buddys
@@ -172,7 +172,7 @@ if(isset($id) and getnickname($id) != '') {
             <td width="50%">
             <table width="100%" cellpadding="2" cellspacing="0">
               <tr>
-                <td colspan="3"><div style="overflow:hidden;"><a href="index.php?site=forum_topic&amp;topic='.$db['topicID'].'">'.$posttime.'<br /><b>'.clearfromtags($db['topic']).'</b></a><br /><i>'.$db['views'].' '.$_language->module['views'].' - '.$db['replys'].' '.$_language->module['replys'].'</i></div></td>
+                <td colspan="3"><div style="overflow:hidden;"><a href="index.php?site=forum_topic&amp;topic='.$db['topicID'].'">'.$posttime.'<br><b>'.clearfromtags($db['topic']).'</b></a><br><i>'.$db['views'].' '.$_language->module['views'].' - '.$db['replys'].' '.$_language->module['replys'].'</i></div></td>
               </tr>
             </table>
             </td>
@@ -212,7 +212,7 @@ if(isset($id) and getnickname($id) != '') {
             <td>
             <table width="100%" cellpadding="2" cellspacing="0">
               <tr>
-                <td colspan="3"><a href="index.php?site=forum_topic&amp;topic='.$db['topicID'].'">'.$posttime.' <br /><b>'.$db['topic'].'</b></a></td>
+                <td colspan="3"><a href="index.php?site=forum_topic&amp;topic='.$db['topicID'].'">'.$posttime.' <br><b>'.$db['topic'].'</b></a></td>
               </tr>
               <tr><td></td></tr>
               <tr>

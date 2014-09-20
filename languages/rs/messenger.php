@@ -54,7 +54,7 @@ $language_array = Array(
   'no_incoming'=>'Нема порука у мапи долазеће.',
   'no_outgoing'=>'Нема порука у мапи одлазеће.',
   'no_subject'=>'(нема наслова)',
-  'not_logged'=>'Нисте пријављени.<br /><a href="index.php?site=login">Пријави се</a> | <a href="index.php?site=register">Региструј се</a>',
+  'not_logged'=>'Нисте пријављени.<br><a href="index.php?site=login">Пријави се</a> | <a href="index.php?site=register">Региструј се</a>',
   'options'=>'Опције',
   'outgoing'=>'Одлазећа',
   'read'=>'Прочитај',
@@ -73,7 +73,7 @@ $language_array = Array(
   'title'=>'Наслов',
   'your_message'=>'Ваша порука:',
   'mail_subject'=>'Имате нову поруку',
-  'mail_body'=>'<b>Поздрав %nickname%!</b><br /><br />Имаш нову поруку на  =BBC= (%hp_url%).<br />Кликни <a href="http://%hp_url%?site=messenger">овдје</a> да би је прочитао.<br /><br />(C) webSPELL.org',
+  'mail_body'=>'<b>Поздрав %nickname%!</b><br><br>Имаш нову поруку на  =BBC= (%hp_url%).<br>Кликни <a href="http://%hp_url%?site=messenger">овдје</a> да би је прочитао.<br><br>(C) webSPELL.org',
   'error'=>'грешка',
   'unknown_user'=>'Непознат корисник'
 );

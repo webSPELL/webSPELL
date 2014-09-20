@@ -87,8 +87,8 @@ $language_array = Array(
 	'no_new_posts'=>'brak nowych postów',
 	'no_permission'=>'Nie masz uprawnieńdo przeglądania wewnętrznych for!',
 	'not_logged'=>'Nie zalogowany.',
-	'not_logged_msg'=>'<br /><br />żeby napisać nowy temat albo odpowiedzieć musisz się zarejestrować i zalogować!<br /><br />
-    &#8226; <a href="index.php?site=register">zarejestruj teraz</a><br />
+	'not_logged_msg'=>'<br><br>żeby napisać nowy temat albo odpowiedzieć musisz się zarejestrować i zalogować!<br><br>
+    &#8226; <a href="index.php?site=register">zarejestruj teraz</a><br>
     &#8226; <a href="index.php?site=login">login</a>',
 	'notify'=>'Poinformuj mnie o odpowiedziach na ten post',
 	'notify_mail'=>'nowa odpowiedź przez %poster% w temacie

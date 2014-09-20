@@ -67,7 +67,7 @@ $language_array = Array(
   'version'=>'Verzió',
   'webspell_version'=>'webSPELL Verzió',
   'welcome'=>'Üdvözlünk a webSPELL AdminCenterben',
-  'welcome_message'=>'Ez az adminisztrációs felület lehetőséget nyújt oldalad beállítására. A bal oldali navigációs sáv segít a rendszer használatában.<br />Bármilyen kérdés felmerülése esetén keresd fel weboldalunk <a href="http://www.webspell.org?site=support" target="_blank">Support</a> részét.<br /><br />Köszönjük, hogy a webSPELL-t választottad.<br /><br />Your <a href="http://www.webspell.org" target="_blank">webSPELL Fejlesztői Csapat</a>',
+  'welcome_message'=>'Ez az adminisztrációs felület lehetőséget nyújt oldalad beállítására. A bal oldali navigációs sáv segít a rendszer használatában.<br>Bármilyen kérdés felmerülése esetén keresd fel weboldalunk <a href="http://www.webspell.org?site=support" target="_blank">Support</a> részét.<br><br>Köszönjük, hogy a webSPELL-t választottad.<br><br>Your <a href="http://www.webspell.org" target="_blank">webSPELL Fejlesztői Csapat</a>',
   'zend_version'=>'Zend Verzió',
   'na'=>'nincs elérhető információ'
 );

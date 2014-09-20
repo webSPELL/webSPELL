@@ -67,7 +67,7 @@ $language_array = Array(
   'version'=>'Version',
   'webspell_version'=>'webSPELL Version',
   'welcome'=>'Welcome to your webSPELL AdminCenter',
-  'welcome_message'=>'This Administration System allows you to manage your Site, use the Navigation on the left.<br />If there are any Questions, please use our <a href="http://www.webspell.org?site=support" target="_blank">Support</a>.<br /><br />Thank you for choosing webSPELL.<br /><br />Your <a href="http://www.webspell.org" target="_blank">webSPELL Development Team</a>',
+  'welcome_message'=>'This Administration System allows you to manage your Site, use the Navigation on the left.<br>If there are any Questions, please use our <a href="http://www.webspell.org?site=support" target="_blank">Support</a>.<br><br>Thank you for choosing webSPELL.<br><br>Your <a href="http://www.webspell.org" target="_blank">webSPELL Development Team</a>',
   'zend_version'=>'Zend Version',
   'na'=>'information not available'
 );

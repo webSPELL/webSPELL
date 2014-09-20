@@ -82,7 +82,7 @@ if(mysql_num_rows($thread)) {
     <tr bgcolor="FFFFFF">
       <td><b>'.$boardname.'</b> &#8226; <b>'.getinput($dt['topic']).'</b></td>
     </tr>
-  </table><hr size="1" /><br />';
+  </table><hr size="1" /><br>';
 
 	echo'<table width="100%" cellpadding="4" cellspacing="1" border="0">';
 
@@ -93,7 +93,7 @@ if(mysql_num_rows($thread)) {
 
 		$message=cleartext($dr['message']);	$username=getnickname($dr['poster']);
 
-		if(getsignatur($dr['poster'])) $signatur='<br /><br />'.getsignatur($dr['poster']);
+		if(getsignatur($dr['poster'])) $signatur='<br><br>'.getsignatur($dr['poster']);
 		else $signatur='';
 		$posts = getuserforumposts($dr['poster']);
 		if(isforumadmin($dr['poster']) || ismoderator($dr['poster'], $dt['boardID'])) {
@@ -115,10 +115,10 @@ if(mysql_num_rows($thread)) {
 
 		echo'<tr bgcolor="FFFFFF">
         <td valign="top"><i>'.$date.', '.$time.' </i> - <b>'.$username.'</b> <font size="1">- '.$usertype.' - '.$posts.' '.$_language->module['posts'].'</font>
-        <br />'.$message.' <font size="1"><i>'.$signatur.'</i></font><br />&nbsp;</td>
+        <br>'.$message.' <font size="1"><i>'.$signatur.'</i></font><br>&nbsp;</td>
       </tr>';
 	}
-	echo'</table><br /></div>';
+	echo'</table><br></div>';
 }
 ?>
 </body>

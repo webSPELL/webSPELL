@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 /*
 ##########################################################################
 #                                                                        #
@@ -65,8 +65,8 @@ $language_array = Array(
   'usermenu'=>'Меню пользователя',
   'views'=>'Просмотры',
   'x_new_message'=>'Есть %new_messages% новые сообщения.',
-  'you_have_to_be_logged_in'=>'Вы должны войти чтобы посмотреть обзор!<br /><br />
-    &#8226; <a href="index.php?site=register">Регистрироваться сейчас</a><br />
+  'you_have_to_be_logged_in'=>'Вы должны войти чтобы посмотреть обзор!<br><br>
+    &#8226; <a href="index.php?site=register">Регистрироваться сейчас</a><br>
     &#8226; <a href="index.php?site=login">Логин</a>'
 );
 ?>

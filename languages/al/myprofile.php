@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 /*
 ##########################################################################
 #                                                                        #
@@ -107,8 +107,8 @@ Faleminderit për interesin tuaj
   'nickname'=>'Pseudonimi',
   'nickname_already_in_use'=>'pseudonim në përdorim tashmë!',
   'no'=>'Jo',
-  'not_logged_in'=>'Duhet të logoheni për të parë profilin tuaj!<br /><br />
-    &#8226; <a href="index.php?site=register">regjistrohu tani</a><br />
+  'not_logged_in'=>'Duhet të logoheni për të parë profilin tuaj!<br><br>
+    &#8226; <a href="index.php?site=register">regjistrohu tani</a><br>
     &#8226; <a href="index.php?site=login">logohuni</a>',
   'old_password'=>'Passwordi vjetër',
   'old_pw_not_valid'=>'passwordi vjetër nuk është i vlefshëm!',

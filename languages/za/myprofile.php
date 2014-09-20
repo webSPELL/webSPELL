@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 /*
 ##########################################################################
 #                                                                        #
@@ -107,8 +107,8 @@ Dankie vir jou belangstelling
   'nickname'=>'Bynaam',
   'nickname_already_in_use'=>'bynaam reeds in gebruik!',
   'no'=>'Nee',
-  'not_logged_in'=>'Jy moet ingeteken wees om jou profiel te sien!<br /><br />
-    &#8226; <a href="index.php?site=register">registreer nou</a><br />
+  'not_logged_in'=>'Jy moet ingeteken wees om jou profiel te sien!<br><br>
+    &#8226; <a href="index.php?site=register">registreer nou</a><br>
     &#8226; <a href="index.php?site=login">teken in</a>',
   'old_password'=>'ou Wagwoord',
   'old_pw_not_valid'=>'jou ou wagwoord is nie geldig nie!',

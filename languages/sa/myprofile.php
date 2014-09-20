@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 /*
 ##########################################################################
 #                                                                        #
@@ -102,8 +102,8 @@ $language_array = Array(
   'nickname'=>'الاسم المستعار',
   'nickname_already_in_use'=>'الإسم المستعار قيد الاستخدام!',
   'no'=>'لا',
-  'not_logged_in'=>'عليك تسجيل الدخول لمشاهدة ملفك الشخصي <br /><br />
-    &#8226; <a href="index.php?site=register">التسجيل الان</a><br />
+  'not_logged_in'=>'عليك تسجيل الدخول لمشاهدة ملفك الشخصي <br><br>
+    &#8226; <a href="index.php?site=register">التسجيل الان</a><br>
     &#8226; <a href="index.php?site=login">تسجيل الدخول</a>',
   'old_password'=>'كلمة المرور القديمة',
   'old_pw_not_valid'=>'كلمة المرور القديمة غير صالحة!',

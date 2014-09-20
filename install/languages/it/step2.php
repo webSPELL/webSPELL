@@ -29,11 +29,11 @@ $language_array = Array(
 	'enter_url'=>'Si prega di inserire l`URL in cui viene installato Webspell',
 	'error'=>'Errore',
 	'licence'=>'accordo di licenza',
-	'php_info'=>'A causa di un grande errore in MySQL fetch funzione in PHP 5.2.6 non è possibile di installare webSPELL.<br />
+	'php_info'=>'A causa di un grande errore in MySQL fetch funzione in PHP 5.2.6 non è possibile di installare webSPELL.<br>
 	Webspell funziona con tutti i più bassi (fino a PHP 4.3) e tutte le più alte versioni di PHP. Prendi contatto con il proprio fornitore di servizi del tuo hosting per cambiare la versione di PHP',
 	'php_version'=>'Versione di PHP incompatibilità',
-	'tooltip'=>'<b>L`URL della pagina</b><br />Questo è l`URL della tua pagina, p.e.
-	(domain.de/percorso/webspell).<br />Metti nessun http:// davanti il percorso e neanche un Slash (/) alla fine.',
+	'tooltip'=>'<b>L`URL della pagina</b><br>Questo è l`URL della tua pagina, p.e.
+	(domain.de/percorso/webspell).<br>Metti nessun http:// davanti il percorso e neanche un Slash (/) alla fine.',
 	'you_have_to_agree'=>'Devi accettare GNU GPL per installare Webspell sul server!',
 	'your_site_url'=>'L`URL della pagina'
 );

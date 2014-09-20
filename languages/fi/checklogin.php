@@ -35,11 +35,11 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'invalid_password'=>'Väärä salasana.<br /><br /><a href="javascript:history.back()">Mene takaisin ja yritä uudelleen.</a>',
-  'ip_banned'=>'IP-osoitteesi on estetty tällä sivulla.<br/>%reason%<br /><br /><a href="javascript:history.back()">Mene takaisin</a>',
+  'invalid_password'=>'Väärä salasana.<br><br><a href="javascript:history.back()">Mene takaisin ja yritä uudelleen.</a>',
+  'ip_banned'=>'IP-osoitteesi on estetty tällä sivulla.<br>%reason%<br><br><a href="javascript:history.back()">Mene takaisin</a>',
   'login_successful'=>'Sisäänkirjautuminen onnistui!',
-  'no_user'=>'Käyttäjä <b>%username%</b> ei ole saatavilla tässä systeemissä.<br /><br /><a href="javascript:history.back()">Mene takaisin ja yritä uudelleen!</a>',
-  'not_activated'=>'Tilisi ei ole aktivoitu.<br /><br /><a href="javascript:history.back()">Takaisin</a>',
-  'session_error'=>'Varmista että evästeet on käytössä selaimessasi.<br />Jos ongelma on vielä olemassa, ota yhteyttä ylläpitäjään.<br /><br /><a href="javascript:history.back()">Takaisin</a>'
+  'no_user'=>'Käyttäjä <b>%username%</b> ei ole saatavilla tässä systeemissä.<br><br><a href="javascript:history.back()">Mene takaisin ja yritä uudelleen!</a>',
+  'not_activated'=>'Tilisi ei ole aktivoitu.<br><br><a href="javascript:history.back()">Takaisin</a>',
+  'session_error'=>'Varmista että evästeet on käytössä selaimessasi.<br>Jos ongelma on vielä olemassa, ota yhteyttä ylläpitäjään.<br><br><a href="javascript:history.back()">Takaisin</a>'
 );
 ?>

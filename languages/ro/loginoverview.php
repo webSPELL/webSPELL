@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 /*
 ##########################################################################
 #                                                                        #
@@ -65,8 +65,8 @@ $language_array = Array(
   'usermenu'=>'Meniu utilizator',
   'views'=>'vizualizări',
   'x_new_message'=>'Acolo sunt %new_messages% mesaje noi.',
-  'you_have_to_be_logged_in'=>'Trebuie să fii logat pentru a avea o vedere de ansamblu!<br /><br />
-    &#8226; <a href="index.php?site=register">inregistreaza-te acum</a><br />
+  'you_have_to_be_logged_in'=>'Trebuie să fii logat pentru a avea o vedere de ansamblu!<br><br>
+    &#8226; <a href="index.php?site=register">inregistreaza-te acum</a><br>
     &#8226; <a href="index.php?site=login">logare</a>'
 );
 ?>

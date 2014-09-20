@@ -116,8 +116,8 @@ elseif(isset($_POST['save'])) {
 					rename($filepath.$icon['name'], $filepath.$file);
 	        redirect("admincenter.php?site=countries","",0);
 				}
-			} else echo'<b>'.$_language->module['format_incorrect'].'</b><br /><br /><a href="javascript:history.back()">&laquo; '.$_language->module['back'].'</a>';
-		} else echo'<b>'.$_language->module['fill_correctly'].'</b><br /><br /><a href="javascript:history.back()">&laquo; '.$_language->module['back'].'</a>';
+			} else echo'<b>'.$_language->module['format_incorrect'].'</b><br><br><a href="javascript:history.back()">&laquo; '.$_language->module['back'].'</a>';
+		} else echo'<b>'.$_language->module['fill_correctly'].'</b><br><br><a href="javascript:history.back()">&laquo; '.$_language->module['back'].'</a>';
 	} else echo $_language->module['transaction_invalid'];	
 }
 
@@ -144,9 +144,9 @@ elseif(isset($_POST["saveedit"])) {
 						
 	          redirect("admincenter.php?site=countries","",0);
 					}
-				} else echo'<b>'.$_language->module['format_incorrect'].'</b><br /><br /><a href="javascript:history.back()">&laquo; '.$_language->module['back'].'</a>';
+				} else echo'<b>'.$_language->module['format_incorrect'].'</b><br><br><a href="javascript:history.back()">&laquo; '.$_language->module['back'].'</a>';
 			}
-		} else echo'<b>'.$_language->module['fill_correctly'].'</b><br /><br /><a href="javascript:history.back()">&laquo; '.$_language->module['back'].'</a>';
+		} else echo'<b>'.$_language->module['fill_correctly'].'</b><br><br><a href="javascript:history.back()">&laquo; '.$_language->module['back'].'</a>';
 	} else echo $_language->module['transaction_invalid'];
 }
 
@@ -162,7 +162,7 @@ else {
 	
   echo'<h1>&curren; <a href="admincenter.php?site=icons" class="white">'.$_language->module['icons'].'</a> &raquo; '.$_language->module['countries'].'</h1>';
   
-  echo'<input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=countries&amp;action=add\');return document.MM_returnValue" value="'.$_language->module['new_country'].'" /><br /><br />';
+  echo'<input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=countries&amp;action=add\');return document.MM_returnValue" value="'.$_language->module['new_country'].'" /><br><br>';
   
   echo'<form method="post" action="admincenter.php?site=countries">
   <table width="100%" border="0" cellspacing="1" cellpadding="3" bgcolor="#DDDDDD">

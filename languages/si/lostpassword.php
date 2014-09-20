@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 /*
 ##########################################################################
 #                                                                        #
@@ -49,8 +49,8 @@ Zabavite se z našimi stranmi,
   'lost_password'=>'izgubljeno geslo',
   'no_mail_given'=>'E-mail ni vnešen.',
   'no_user_found'=>'Uporabnik ni najden!',
-  'successful'=>'Vaš račun je najden<br /><br />
-    Za nekoliko sekund boste prijeli e-mail z Vašimi podatki.<br /><br />
+  'successful'=>'Vaš račun je najden<br><br>
+    Za nekoliko sekund boste prijeli e-mail z Vašimi podatki.<br><br>
     &#8226; <a href="index.php?site=login">Prijavi se</a>',
   'your_email'=>'Vaš E-Mail'
 );

@@ -159,25 +159,25 @@ function print_calendar($mon,$year) {
 				while ($ds = mysql_fetch_array($ergebnis)) {
 					if($ds['type']=="d") {
 						if(($start_date<=$ds['date'] && $end_date>=$ds['date']) || ($start_date>=$ds['date'] && $end_date<=$ds['enddate']) || ($start_date<=$ds['enddate'] && $end_date>=$ds['enddate']))
-						$termin.='<a href="index.php?site=calendar&amp;tag='.$t.'&amp;month='.$mon.'&amp;year='.$year.'#event">'.clearfromtags($ds['short']).'</a><br />';
+						$termin.='<a href="index.php?site=calendar&amp;tag='.$t.'&amp;month='.$mon.'&amp;year='.$year.'#event">'.clearfromtags($ds['short']).'</a><br>';
 					}
 					else {
 						if($ds['date']>=$start_date && $ds['date']<=$end_date) {
 							$begin = date("H:i", $ds['date']);
-							$termin.='<a href="index.php?site=calendar&amp;tag='.$t.'&amp;month='.$mon.'&amp;year='.$year.'">'.$begin.' '.clearfromtags($ds['opptag']).'</a><br />';
+							$termin.='<a href="index.php?site=calendar&amp;tag='.$t.'&amp;month='.$mon.'&amp;year='.$year.'">'.$begin.' '.clearfromtags($ds['opptag']).'</a><br>';
 						}
 					}
 				}
 			}
-			else $termin="<br /><br />";
+			else $termin="<br><br>";
 			// DB ABRUF ENDE
 
 			//If date is today, highlight it
-			if (($t == date("j")) && ($mon == date("n")) && ($year == date("Y"))) echo'<td height="40" valign="top" bgcolor="'.BG_4.'"><b>'.$t.'</b><br />'.$termin.'</td>';
+			if (($t == date("j")) && ($mon == date("n")) && ($year == date("Y"))) echo'<td height="40" valign="top" bgcolor="'.BG_4.'"><b>'.$t.'</b><br>'.$termin.'</td>';
 			//  If the date is absent ie after 31, print space
 			else {
 				if($t==' ') echo'<td height="40" valign="top" style="background-color:'.BG_1.';">&nbsp;</td>';
-				else echo'<td height="40" valign="top" style="background-color:'.BG_2.';">'.$t.'<br />'.$termin.'</td>';
+				else echo'<td height="40" valign="top" style="background-color:'.BG_2.';">'.$t.'<br>'.$termin.'</td>';
 			}
 
 		}
@@ -188,7 +188,7 @@ function print_calendar($mon,$year) {
       <td colspan="7" align="center"><a class="category" href="index.php?site=calendar#event"><b>'.$_language->module['today_events'].'</b></a></td>
     </tr>
   </table>
-  <br /><br />';
+  <br><br>';
 }
 
 function print_termine($tag,$month,$year) {
@@ -667,7 +667,7 @@ elseif($action=="editdate") {
 		echo $title_calendar;
 
 		echo'<input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=calendar&amp;action=addwar\');return document.MM_returnValue" value="'.$_language->module['add_clanwar'].'" class="btn btn-danger">
-    <input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=calendar&amp;action=adddate\');return document.MM_returnValue" value="'.$_language->module['add_event'].'" class="btn btn-danger"><br /><br />';
+    <input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=calendar&amp;action=adddate\');return document.MM_returnValue" value="'.$_language->module['add_event'].'" class="btn btn-danger"><br><br>';
 
 		$upID = $_GET['upID'];
 		$ds=mysql_fetch_array(safe_query("SELECT * FROM ".PREFIX."upcoming WHERE upID='$upID'"));

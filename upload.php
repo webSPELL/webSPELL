@@ -139,7 +139,7 @@ echo'<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.
     </tr>
   </table>
   </form>
-  <br /><br /><input type="button" onclick="javascript:self.close()" value="'.$_language->module['close_window'].'" />
+  <br><br><input type="button" onclick="javascript:self.close()" value="'.$_language->module['close_window'].'" />
   </center>
   </body>
   </html>';

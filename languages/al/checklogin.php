@@ -35,11 +35,11 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'invalid_password'=>'Keni vendosur një kod të gabuar.<br /><br /><a href="javascript:history.back()">Kthehu mbrapsh dhe provo sërisht.</a>',
-  'ip_banned'=>'Ip juaj është i bllokuar ne këtë site.<br/>%reason%<br /><br /><a href="javascript:history.back()">Mbrapsh</a>',
+  'invalid_password'=>'Keni vendosur një kod të gabuar.<br><br><a href="javascript:history.back()">Kthehu mbrapsh dhe provo sërisht.</a>',
+  'ip_banned'=>'Ip juaj është i bllokuar ne këtë site.<br>%reason%<br><br><a href="javascript:history.back()">Mbrapsh</a>',
   'login_successful'=>'Logim i suksesshëm!',
-  'no_user'=>'Ky përdorues <b>%username%</b> nuk është i vlefshëm në këtë sistem.<br /><br /><a href="javascript:history.back()">Shko mbrapa dhe provoni përsëri!</a>',
-  'not_activated'=>'Llogaria juaj nuk është e aktivizuar.<br /><br /><a href="javascript:history.back()">Mbrapsh</a>',
-  'session_error'=>'Ju lutemi sigurohuni që modulele cookie janë aktivizuar në browserin tuaj.<br />Nëse problemet vazhdojnë,kontaktoni një administrator.<br /><br /><a href="javascript:history.back()">Mbrapsh</a>'
+  'no_user'=>'Ky përdorues <b>%username%</b> nuk është i vlefshëm në këtë sistem.<br><br><a href="javascript:history.back()">Shko mbrapa dhe provoni përsëri!</a>',
+  'not_activated'=>'Llogaria juaj nuk është e aktivizuar.<br><br><a href="javascript:history.back()">Mbrapsh</a>',
+  'session_error'=>'Ju lutemi sigurohuni që modulele cookie janë aktivizuar në browserin tuaj.<br>Nëse problemet vazhdojnë,kontaktoni një administrator.<br><br><a href="javascript:history.back()">Mbrapsh</a>'
 );
 ?>

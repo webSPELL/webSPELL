@@ -66,7 +66,7 @@ elseif($action=="add") {
 }
 
 elseif($action=="save") {
-	if(!$_POST['name']) die('<b>'.$_language->module['error_group'].'</b><br /><br /><a href="admincenter.php?site=groups&amp;action=add">&laquo; '.$_language->module['back'].'</a>');
+	if(!$_POST['name']) die('<b>'.$_language->module['error_group'].'</b><br><br><a href="admincenter.php?site=groups&amp;action=add">&laquo; '.$_language->module['back'].'</a>');
 	$CAPCLASS = new Captcha;
 	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
 		safe_query("INSERT INTO ".PREFIX."forum_groups ( name ) values( '".$_POST['name']."' ) ");
@@ -93,7 +93,7 @@ elseif($action=="edit") {
 	
   echo'<h1>&curren; <a href="admincenter.php?site=groups" class="white">'.$_language->module['groups'].'</a> &raquo; '.$_language->module['edit_group'].'</h1>';
   
-  if(!$_GET['fgrID']) die('<b>'.$_language->module['error_groupid'].'</b><br /><br /><a href="admincenter.php?site=groups">&laquo; '.$_language->module['back'].'</a>');
+  if(!$_GET['fgrID']) die('<b>'.$_language->module['error_groupid'].'</b><br><br><a href="admincenter.php?site=groups">&laquo; '.$_language->module['back'].'</a>');
 	$ergebnis=safe_query("SELECT * FROM ".PREFIX."forum_groups WHERE fgrID='".$_GET['fgrID']."'");
 	$ds=mysql_fetch_array($ergebnis);
   
@@ -119,7 +119,7 @@ else {
 	
   echo'<h1>&curren; '.$_language->module['groups'].'</h1>';
   
-  echo'<input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=groups&amp;action=add\');return document.MM_returnValue" value="'.$_language->module['new_group'].'" /><br /><br />';
+  echo'<input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=groups&amp;action=add\');return document.MM_returnValue" value="'.$_language->module['new_group'].'" /><br><br>';
 
 	$ergebnis=safe_query("SELECT * FROM ".PREFIX."forum_groups ORDER BY fgrID");
 	

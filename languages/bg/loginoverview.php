@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 /*
 ##########################################################################
 #                                                                        #
@@ -70,8 +70,8 @@ $language_array = Array(
   'usermenu'=>'Меню на потребителя',
   'views'=>'преглеждания',
   'x_new_message'=>'Има %new_messages% нови съобщения.',
-  'you_have_to_be_logged_in'=>'Трябва да сте влезли, за да видите галерията на влизане!<br /><br />
-    &#8226; <a href="index.php?site=register">Регистрирайте се сега</a><br />
+  'you_have_to_be_logged_in'=>'Трябва да сте влезли, за да видите галерията на влизане!<br><br>
+    &#8226; <a href="index.php?site=register">Регистрирайте се сега</a><br>
     &#8226; <a href="index.php?site=login">влезте</a>'
 );
 ?>

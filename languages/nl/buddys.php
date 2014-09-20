@@ -34,7 +34,7 @@ $language_array = Array(
 	'buddy_nousers'=>'Je hebt geen gebruikers in je vriendenlijst',
 	'buddys'=>'vrienden',
 	'ignore_nousers'=>'Je hebt geen gebruikers in je negeer-lijst',
-	'not_logged'=>'Om je vrienden te managen moet je geregistreerd en ingelogd zijn.<br /><a href="index.php?site=register">Registreer</a> | <a href="index.php?site=login">Log in</a>',
+	'not_logged'=>'Om je vrienden te managen moet je geregistreerd en ingelogd zijn.<br><a href="index.php?site=register">Registreer</a> | <a href="index.php?site=login">Log in</a>',
 	'your_buddylist'=>'Je vriendenlijst',
 	'your_ignorelist'=>'Je negeer-lijst'
 );

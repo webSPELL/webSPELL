@@ -36,7 +36,7 @@ $language_array = Array(
   'faq'=>'Česta pitanja',
   'faqs'=>'Česta pitanja',
   'no_categories'=>'Još nisu stvorene kategorije',
-  'no_faq'=>'Nema unesenih pitanja.<br /><a href="index.php?site=faq">Natrag na prethodnu stranicu</a>',
+  'no_faq'=>'Nema unesenih pitanja.<br><a href="index.php?site=faq">Natrag na prethodnu stranicu</a>',
   'saved_on'=>'Sačuvano'
 );
 ?>

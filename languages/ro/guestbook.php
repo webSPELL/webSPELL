@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 /*
 ##########################################################################
 #                                                                        #
@@ -47,7 +47,7 @@ $language_array = Array(
   'mail'=>'Ardesa ta de mail',
   'name'=>'Numele tău',
   'new_entry'=>'Intrări noi',
-  'no_access'=>'Nu vi se logat.<br /><a href="index.php?site=login">Login</a> | <a href="index.php?site=register">Registrur</a>',
+  'no_access'=>'Nu vi se logat.<br><a href="index.php?site=login">Login</a> | <a href="index.php?site=register">Registrur</a>',
   'options'=>'Opţiuni',
   'pmsubject_newentry'=>'Noi intrări in cartea de oaspeţi',
   'pmtext_newentry'=>'[b]Cineva a lăsat un mesaj pentru tine in cartea de oaspeti![/b][br][br] [URL=admin/admincenter.php?site=guestbook]Click aici pentru a citi mesajul[/URL] ',

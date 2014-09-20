@@ -35,7 +35,7 @@ $language_array = Array(
 	'buddy_nousers'=>'Nemáš žádné přátele',
 	'buddys'=>'přátelé',
 	'ignore_nousers'=>'Nemáš žádné ignorované uživatele',
-	'not_logged'=>'Pokud chceš upravovat své přátele musíš být zaregistrovaný a přihlášený.<br /><a href="index.php?site=register">Registrace/a> | <a href="index.php?site=login">Přihlášení</a>',
+	'not_logged'=>'Pokud chceš upravovat své přátele musíš být zaregistrovaný a přihlášený.<br><a href="index.php?site=register">Registrace/a> | <a href="index.php?site=login">Přihlášení</a>',
 	'your_buddylist'=>'Seznam tvých přátel',
 	'your_ignorelist'=>'Seznam ignorovných uživatelů'
 );

@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 /*
 ##########################################################################
 #                                                                        #
@@ -30,7 +30,7 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'activation_successful'=>'Activarea contului dumneavoastră a fost efectuată cu succes.<br />Acum vă puteţi loga.',
+  'activation_successful'=>'Activarea contului dumneavoastră a fost efectuată cu succes.<br>Acum vă puteţi loga.',
   'back'=>'înapoi',
   'enter_nickname'=>'Vă rugăm introduceţi o poreclă.',
   'enter_password'=>'Vă rugăm introduceţi o parolă.',

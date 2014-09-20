@@ -144,7 +144,7 @@ hr { margin: 0px; }
 		foreach($bcc as $mailto) {
 			if(!mail($mailto, $hp_title." Newsletter",$emailbody,$header)) $succces = false;
 		}
-		if($success) echo '<b>'.$receptionists.'</b><br /><br />'.implode(", ",$bcc);
+		if($success) echo '<b>'.$receptionists.'</b><br><br>'.implode(", ",$bcc);
 		else echo'<b>'.$error_send.'</b>';
 		redirect("admincenter.php?site=newsletter", "", 5);
 	} else echo $_language->module['transaction_invalid'];
@@ -178,12 +178,12 @@ else {
   <tr>
     <td><b><?php echo $_language->module['send_to']; ?></b></td>
     <td><input type="checkbox" name="sendto_clanmembers" value="1" checked="checked" /> <?php echo $_language->module['user_clanmembers']; ?> [<?php echo mysql_num_rows(safe_query("SELECT userID FROM ".PREFIX."squads_members GROUP BY userID")).'&nbsp;'.$_language->module['users']; ?>]
-    <br /><input type="checkbox" name="sendto_registered" value="1" checked="checked" /> <?php echo $_language->module['user_registered']; ?> [<?php echo mysql_num_rows(safe_query("SELECT * FROM ".PREFIX."user WHERE newsletter='1'")).'&nbsp;'.$_language->module['users']; ?>]
-    <br /><input type="checkbox" name="sendto_newsletter" value="1" checked="checked" /> <?php echo $_language->module['user_newsletter']; ?> [<?php echo mysql_num_rows(safe_query("SELECT * FROM ".PREFIX."newsletter")).'&nbsp;'.$_language->module['users']; ?>]</td>
+    <br><input type="checkbox" name="sendto_registered" value="1" checked="checked" /> <?php echo $_language->module['user_registered']; ?> [<?php echo mysql_num_rows(safe_query("SELECT * FROM ".PREFIX."user WHERE newsletter='1'")).'&nbsp;'.$_language->module['users']; ?>]
+    <br><input type="checkbox" name="sendto_newsletter" value="1" checked="checked" /> <?php echo $_language->module['user_newsletter']; ?> [<?php echo mysql_num_rows(safe_query("SELECT * FROM ".PREFIX."newsletter")).'&nbsp;'.$_language->module['users']; ?>]</td>
   </tr>
   <tr>
     <td><input type="hidden" name="captcha_hash" value="<?php echo $hash; ?>" /></td>
-    <td><br /><input type="submit" name="send" value="<?php echo $_language->module['send']; ?>" /></td>
+    <td><br><input type="submit" name="send" value="<?php echo $_language->module['send']; ?>" /></td>
   </tr>
 </table>
 </form> 

@@ -35,7 +35,7 @@ $language_array = Array(
 	'buddy_nousers'=>'Du har inga användare i din vänner lista',
 	'buddys'=>'Vänner',
 	'ignore_nousers'=>'Du har inga användare i din ignore lista',
-	'not_logged'=>'För att kunna behandla dina vänner måste du vara registrerad och inloggad.<br /><a href="index.php?site=register">Registrera/a> | <a href="index.php?site=login">Logga in</a>',
+	'not_logged'=>'För att kunna behandla dina vänner måste du vara registrerad och inloggad.<br><a href="index.php?site=register">Registrera/a> | <a href="index.php?site=login">Logga in</a>',
 	'your_buddylist'=>'Din vänner lista',
 	'your_ignorelist'=>'Din ignore lista'
 );

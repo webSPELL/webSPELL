@@ -195,7 +195,7 @@ elseif($action=="showsquad") {
 		else echo'<a href="index.php?site=awards&amp;action=showsquad&amp;squadID='.$squadID.'&amp;page='.$page.'&amp;sort='.$sort.'&amp;type=ASC">'.$_language->module['sort'].':</a>  <i class="icon-sort-up"></i>';
 
 		echo $page_link;
-		echo'<br /><br />';
+		echo'<br><br>';
 		$headdate='<a class="titlelink" href="index.php?site=awards&amp;action=showsquad&amp;squadID='.$squadID.'&amp;page='.$page.'&amp;sort=date&amp;type='.$type.'">'.$_language->module['date'].':</a>';
 		$headsquad=$_language->module['squad'].':';
 

@@ -42,7 +42,7 @@ function vote($poll) {
 			$lastpoll = safe_query("SELECT * FROM ".PREFIX."poll WHERE aktiv='1' AND laufzeit>".time()." AND intern<=".isclanmember($userID)." ORDER BY pollID DESC LIMIT ".$start.",".($start+1)."");
 		}
 		else {
-			echo $_language->module['no_active_poll'].'<br /><br />&#8226; <a href="index.php?site=polls">'.$_language->module['show_polls'].'</a>';
+			echo $_language->module['no_active_poll'].'<br><br>&#8226; <a href="index.php?site=polls">'.$_language->module['show_polls'].'</a>';
 			return true;
 		}
 	}
@@ -130,7 +130,7 @@ function vote($poll) {
 		}
 	}
 	else{
-		echo $_language->module['no_active_poll'].'<br /><br />&#8226; <a href="index.php?site=polls">'.$_language->module['show_polls'].'</a>';
+		echo $_language->module['no_active_poll'].'<br><br>&#8226; <a href="index.php?site=polls">'.$_language->module['show_polls'].'</a>';
 	}
 }
 
