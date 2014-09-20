@@ -1,0 +1,42 @@
+/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+  padding-top: 60px;
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+  /* Let the jumbotron breathe */
+  .jumbotron {
+    margin-top: 20px;
+  }
+}
+
+.inputselect.btn.btn-danger div a {
+    color:#ccc;
+}
+
+.chromeframe {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: black;
+    padding: 0.2em 0;
+    text-align: center;
+}
+
+.add-on.captcha-img, .input-group-addon.captcha-img {
+    height:25px!important;
+    padding:2px 5px 1px!important;
+}
+
+section .thumbnail.pull-left {
+    margin-right:2em;
+    margin-bottom:2em;
+}
+
+.ws_comments {
+    min-height:90px;   
+}
+                
+.ws_comments .avatar {
+    padding:5px;                    
+}

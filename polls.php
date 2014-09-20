@@ -270,13 +270,17 @@ elseif(isset($_GET['pollID'])) {
 		$picwidth = $perc;
 		settype($picwidth, "integer");
 
-		if($picwidth) $pic = '<table width="100" cellspacing="1" cellpadding="1" bgcolor="'.BORDER.'">
-      <tr bgcolor="'.BG_2.'">
-        <td style="background-image: url(images/icons/poll_bg.gif);"><img src="images/icons/poll.gif" width="'.$picwidth.'" height="5"></td>
-      </tr>
-    </table>';
-    
-		else $pic = '';
+		if($picwidth) $pic = '<div class="progress">
+            <div class="progress-bar" role="progressbar" aria-valuenow="'.$picwidth.'" aria-valuemin="0" aria-valuemax="100" style="width: '.$picwidth.'%;">
+                '.$picwidth.' %
+            </div>
+        </div>';
+
+		else $pic = '<div class="progress">
+            <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
+                0 %
+            </div>
+        </div>';
 
 		eval("\$polls_content = \"".gettemplate("polls_content")."\";");
 		echo $polls_content;
