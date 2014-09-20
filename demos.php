@@ -171,27 +171,16 @@ function top5() {
 	global $_language;
 	$_language->read_module('demos');
 
-	echo'<table width="100%" border="0" cellspacing="0" cellpadding="0">
-    <tr>
-      <td width="49%">';
-         
+	echo '<div class="row">';    
 	// RATING
 	$ergebnis=safe_query("SELECT * FROM ".PREFIX."demos ORDER BY rating DESC LIMIT 0,5");
 	$top='TOP 5 DEMOS ('.$_language->module['rating'].')';
 	
-  eval ("\$top5_head = \"".gettemplate("top5_head")."\";");
+    eval ("\$top5_head = \"".gettemplate("top5_head")."\";");
 	echo $top5_head;
 	
-  $n=1;
+    $n=1;
 	while($ds=mysql_fetch_array($ergebnis)) {
-		if($n%2) {
-			$bg1=BG_1;
-			$bg2=BG_2;
-		}
-		else {
-			$bg1=BG_3;
-			$bg2=BG_4;
-		}
 		$country1="[flag]".$ds['country1']."[/flag]";
 		$country1=flags($country1);
 		$country2="[flag]".$ds['country2']."[/flag]";
@@ -206,20 +195,13 @@ function top5() {
 			$ratingpic.='<img src="images/icons/rating_'.$pic.'.gif" width="4" height="5" alt="" />';
 		}
     
-		echo'<tr>
-        <td bgcolor="'.$bg1.'" align="center"><b>'.$n.'.</b></td>
-        <td bgcolor="'.$bg2.'" align="center">'.$ratingpic.'</td>
-        <td bgcolor="'.$bg1.'">'.$link.'</td>
-      </tr>';
+		echo '<li class="list-group-item"><span class="badge">'.$ratingpic.'</span> '.$n.'. '.$link.'</li>';
       
 		unset($ratingpic);
 		$n++;
 	}
 	
-  echo'</table>
-      </td>
-      <td width="2%">&nbsp;</td>
-      <td width="49%">';
+    echo '</ul></div>';
       
 	// POINTS
 	$ergebnis=safe_query("SELECT * FROM ".PREFIX."demos ORDER BY downloads DESC LIMIT 0,5");
@@ -228,33 +210,18 @@ function top5() {
 	echo $top5_head;
 	$n=1;
 	while($ds=mysql_fetch_array($ergebnis)) {
-		if($n%2) {
-			$bg1=BG_1;
-			$bg2=BG_2;
-		}
-		else {
-			$bg1=BG_3;
-			$bg2=BG_4;
-		}
-
 		$country1="[flag]".$ds['country1']."[/flag]";
 		$country1=flags($country1);
 		$country2="[flag]".$ds['country2']."[/flag]";
 		$country2=flags($country2);
 		$link='<a href="index.php?site=demos&amp;action=showdemo&amp;demoID='.$ds['demoID'].'">'.$country1.' '.$ds['clantag1'].' vs. '.$ds['clantag2'].' '.$country2.'</a>';
 		
-    echo'<tr>
-        <td bgcolor="'.$bg1.'" align="center"><b>'.$n.'.</b></td>
-        <td bgcolor="'.$bg2.'" align="center">'.$ds['downloads'].'</td>
-        <td bgcolor="'.$bg1.'">'.$link.'</td>
-      </tr>';
+        echo '<li class="list-group-item"><span class="badge">'.$ds['downloads'].'</span> '.$n.'. '.$link.'</li>';
       
 		$n++;
 	}
-	echo'</table>
-      </td>
-    </tr>
-  </table><br />';
+	echo '</ul></div>';
+    echo '</div>';
 }
 
 if(isset($_GET['action'])) $action = $_GET['action'];
@@ -493,7 +460,7 @@ elseif($action=="showgame") {
 }
 else {
 
-  if(isset($_GET['page'])) $page=(int)$_GET['page'];
+    if(isset($_GET['page'])) $page=(int)$_GET['page'];
 	else $page = 1;
 	$sort="date";
 	if(isset($_GET['sort'])){
@@ -514,7 +481,7 @@ else {
 	$pages = ceil($gesamt/$max);
 
 	if($pages>1) $page_link = makepagelink("index.php?site=demos&amp;sort=$sort&amp;type=$type", $page, $pages);
-  else $page_link = "";
+    else $page_link = "";
 
 	if ($page == "1") {
 		$ergebnis = safe_query("SELECT * FROM ".PREFIX."demos ORDER BY $sort $type LIMIT 0,$max");
@@ -530,9 +497,9 @@ else {
 	if($gesamt) {
 		top5();
 		if($type=="ASC")
-		echo'<a href="index.php?site=demos&amp;page='.$page.'&amp;sort='.$sort.'&amp;type=DESC">'.$_language->module['sort'].':</a> <img src="images/icons/asc.gif" width="9" height="7" border="0" alt="" />&nbsp;&nbsp;&nbsp;';
+		  echo'<a href="index.php?site=demos&amp;page='.$page.'&amp;sort='.$sort.'&amp;type=DESC">'.$_language->module['sort'].':</a> <img src="images/icons/asc.gif" width="9" height="7" border="0" alt="" />&nbsp;&nbsp;&nbsp;';
 		else
-		echo'<a href="index.php?site=demos&amp;page='.$page.'&amp;sort='.$sort.'&amp;type=ASC">'.$_language->module['sort'].':</a> <img src="images/icons/desc.gif" width="9" height="7" border="0" alt="" />&nbsp;&nbsp;&nbsp;';
+		  echo'<a href="index.php?site=demos&amp;page='.$page.'&amp;sort='.$sort.'&amp;type=ASC">'.$_language->module['sort'].':</a> <img src="images/icons/desc.gif" width="9" height="7" border="0" alt="" />&nbsp;&nbsp;&nbsp;';
 
 		echo $page_link;
 		echo'<br /><br />';
