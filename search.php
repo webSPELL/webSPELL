@@ -277,7 +277,7 @@ elseif($action=="search" AND ($userID OR isset($_GET['captcha']))) {
 		
 			}
 			$count_results = $i;
-			echo "<p class="text-center"><b>".$count_results."</b> ".$_language->module['results_found']."</p><br><br>";
+			echo "<p class=\"text-center\"><b>".$count_results."</b> ".$_language->module['results_found']."</p><br><br>";
 		
 			$pages = ceil($count_results / $results);
 			if($pages > 1) echo makepagelink("index.php?site=search&amp;action=search&amp;articles=".$_GET['articles']."&amp;faq=".$_GET['faq']."&amp;forum=".$_GET['forum']."&amp;news=".$_GET['news']."&amp;r=".$_GET['r']."&amp;text=".$_GET['text']."&amp;am=".$_GET['am']."&amp;ad=".$_GET['ad']."&amp;ay=".$_GET['ay']."&amp;bm=".$_GET['bm']."&amp;bd=".$_GET['bd']."&amp;by=".$_GET['by']."&amp;order=".$_GET['order'], $page, $pages);

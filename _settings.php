@@ -27,8 +27,8 @@
 
 // -- ERROR REPORTING -- //
 
-define('DEBUG', "OFF");
-error_reporting(0); // 0 = public mode, E_ALL = development-mode
+define('DEBUG', "ON");
+error_reporting(E_ALL); // 0 = public mode, E_ALL = development-mode
 
 // -- SET ENCODING FOR MB-FUNCTIONS -- //
 
