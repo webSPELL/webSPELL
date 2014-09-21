@@ -193,3 +193,17 @@ input[type="checkbox"]:focus, input[type="checkbox"]:active {
 	padding-left: 3px;
 	white-space: nowrap;
 }
+
+a.flag img {
+  margin: 1px;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  filter: gray;
+  opacity: 0.5;
+}
+
+a.flag.active img, a.flag:hover img {
+  filter: none;
+  -webkit-filter: none;
+  opacity: 1;
+}

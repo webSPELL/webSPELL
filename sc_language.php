@@ -93,14 +93,12 @@ else {
 	}
 
 	foreach($langs as $lang=>$flag){
-				echo '<a href="sc_language.php?new_lang='.$flag.$querystring.'" title="'.$lang.'">';
-		if($_language->language == $flag){
-			 echo '<img src="images/haken.gif" alt="'.$lang.'" border="0" style="background-image:url(\'images/flags/'.$flag.'.gif\'); background-position: center;" />';
-		}	 
-		else { 
-			echo '<img src="images/flags/'.$flag.'.gif" alt="'.$lang.'" border="0" />';
-		} 	
-		echo "</a> ";
+		$querystring='';
+		if(!empty($_SERVER['QUERY_STRING']))
+			$querystring = "&amp;query=".rawurlencode($_SERVER['QUERY_STRING']);
+
+		echo '<a href="sc_language.php?new_lang='.$flag.$querystring.'" title="'.$lang.'" class="flag'.($_language->language == $flag ? ' active' : '').'"><img src="images/flags/'.$flag.'.gif" alt="'.$lang.'"></a>';
 	}
+
 }
 ?>
