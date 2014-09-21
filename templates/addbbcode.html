@@ -1,74 +1,73 @@
-
-        <div class="btn-toolbar bbcodebuttons">
-            <div class="btn-group">
-                <a href="javascript:void(0)" class="btn" data-toggle="tooltip" title="Bold" onclick="AddB()"><i class="icon-bold"></i></a>
-                <a href="javascript:void(0)" class="btn" data-toggle="tooltip" title="Italic" onclick="AddI()"><i class="icon-italic"></i></a>
-                <a href="javascript:void(0)" class="btn" data-toggle="tooltip" title="Underline" onclick="AddU()"><i class="icon-underline"></i></a>
-                <a href="javascript:void(0)" class="btn" data-toggle="tooltip" title="Line through" onclick="AddS()"><i class="icon-strikethrough"></i></a>
-            </div>
-            <div class="btn-group">
-                <a href="javascript:void(0)" class="btn" data-toggle="tooltip" title="[EMAIL=you@yoursite.com]My email address[/EMAIL]<br>[EMAIL]you@yoursite.com[/EMAIL]" onclick="AddLink('EMAIL')"><i class="icon-envelope"></i></a>
-                <a href="javascript:void(0)" class="btn" data-toggle="tooltip" title="[URL=http://yoursite.com]My website[/URL]<br>[URL]http://yoursite.com[/URL]" onclick="AddLink('URL')"><i class="icon-link"></i></a>
-            </div>
-            <div class="btn-group">
-                <a href="javascript:void(0)" class="btn" data-toggle="tooltip" title="[IMG]http://yoursite.com/image.jpg[IMG]" onclick="AddImg()"><i class="icon-picture"></i></a>
-                <a href="javascript:void(0)" class="btn" data-toggle="tooltip" title="[LIST=a][*]point 1[/*][*]point 2[/*][/LIST]<br>[LIST=1][*]point 1[/*][*]point 2[/*][/LIST]" onclick="AddList()"><i class="icon-list"></i></a>
-                <a href="javascript:void(0)" class="btn" data-toggle="tooltip" title="[QUOTE=Nickname]Quote[/QUOTE]<br>[QUOTE]Quote[/QUOTE]" onclick="AddQuote()"><i class="icon-comment"></i></a>
-                <a href="javascript:void(0)" class="btn" data-toggle="tooltip" title="Code" onclick="AddCodetag()"><i class="icon-list-alt"></i></a>
-                <a href="javascript:void(0)" class="btn" data-toggle="tooltip" title="[TOGGLE=Read more]Full Text[/TOGGLE]" onclick="AddToggle()">Toggle</a>
-            </div>
-            <div class="btn-group">
-                <a href="javascript:void(0)" class="btn" data-toggle="tooltip" title="Align Center" onclick="AddTag('[ALIGN=center]', '[/ALIGN]', '')"><i class="icon-align-center"></i></a>
-                <a href="javascript:void(0)" class="btn" data-toggle="tooltip" title="Align Left" onclick="AddTag('[ALIGN=left]', '[/ALIGN]', '')"><i class="icon-align-left"></i></a>
-                <a href="javascript:void(0)" class="btn" data-toggle="tooltip" title="Align Right" onclick="AddTag('[ALIGN=right]', '[/ALIGN]', '')"><i class="icon-align-right"></i></a>
-                <a href="javascript:void(0)" class="btn" data-toggle="tooltip" title="Align Justify" onclick="AddTag('[ALIGN=justify]', '[/ALIGN]', '')"><i class="icon-align-justify"></i></a>
-            </div>
-        </div>
+<div class="btn-toolbar bbcodebuttons">
+    <div class="btn-group">
+        <a href="javascript:void(0)" class="btn" data-toggle="tooltip" title="Bold" onclick="AddB()"><i class="icon-bold"></i></a>
+        <a href="javascript:void(0)" class="btn" data-toggle="tooltip" title="Italic" onclick="AddI()"><i class="icon-italic"></i></a>
+        <a href="javascript:void(0)" class="btn" data-toggle="tooltip" title="Underline" onclick="AddU()"><i class="icon-underline"></i></a>
+        <a href="javascript:void(0)" class="btn" data-toggle="tooltip" title="Line through" onclick="AddS()"><i class="icon-strikethrough"></i></a>
+    </div>
+    <div class="btn-group">
+        <a href="javascript:void(0)" class="btn" data-toggle="tooltip" title="[EMAIL=you@yoursite.com]My email address[/EMAIL]<br>[EMAIL]you@yoursite.com[/EMAIL]" onclick="AddLink('EMAIL')"><i class="icon-envelope"></i></a>
+        <a href="javascript:void(0)" class="btn" data-toggle="tooltip" title="[URL=http://yoursite.com]My website[/URL]<br>[URL]http://yoursite.com[/URL]" onclick="AddLink('URL')"><i class="icon-link"></i></a>
+    </div>
+    <div class="btn-group">
+        <a href="javascript:void(0)" class="btn" data-toggle="tooltip" title="[IMG]http://yoursite.com/image.jpg[IMG]" onclick="AddImg()"><i class="icon-picture"></i></a>
+        <a href="javascript:void(0)" class="btn" data-toggle="tooltip" title="[LIST=a][*]point 1[/*][*]point 2[/*][/LIST]<br>[LIST=1][*]point 1[/*][*]point 2[/*][/LIST]" onclick="AddList()"><i class="icon-list"></i></a>
+        <a href="javascript:void(0)" class="btn" data-toggle="tooltip" title="[QUOTE=Nickname]Quote[/QUOTE]<br>[QUOTE]Quote[/QUOTE]" onclick="AddQuote()"><i class="icon-comment"></i></a>
+        <a href="javascript:void(0)" class="btn" data-toggle="tooltip" title="Code" onclick="AddCodetag()"><i class="icon-list-alt"></i></a>
+        <a href="javascript:void(0)" class="btn" data-toggle="tooltip" title="[TOGGLE=Read more]Full Text[/TOGGLE]" onclick="AddToggle()">Toggle</a>
+    </div>
+    <div class="btn-group">
+        <a href="javascript:void(0)" class="btn" data-toggle="tooltip" title="Align Center" onclick="AddTag('[ALIGN=center]', '[/ALIGN]', '')"><i class="icon-align-center"></i></a>
+        <a href="javascript:void(0)" class="btn" data-toggle="tooltip" title="Align Left" onclick="AddTag('[ALIGN=left]', '[/ALIGN]', '')"><i class="icon-align-left"></i></a>
+        <a href="javascript:void(0)" class="btn" data-toggle="tooltip" title="Align Right" onclick="AddTag('[ALIGN=right]', '[/ALIGN]', '')"><i class="icon-align-right"></i></a>
+        <a href="javascript:void(0)" class="btn" data-toggle="tooltip" title="Align Justify" onclick="AddTag('[ALIGN=justify]', '[/ALIGN]', '')"><i class="icon-align-justify"></i></a>
+    </div>
+</div>
 	  
 <select name="fontcolor" onchange="AddTag('[COLOR=' + this.options[this.selectedIndex].value + ']', '[/COLOR]', '');this.selectedIndex='0';">
-        <option value="0">%color%</option>
-        <option value="#87CEEB" style="color:#87CEEB;">%skyblue%</option>
-        <option value="#4169E1" style="color:#4169E1;">%royalblue%</option>
-        <option value="#0000FF" style="color:#0000FF;">%blue%</option>
-        <option value="#00008B" style="color:#00008B;">%darkblue%</option>
-        <option value="#FFA500" style="color:#FFA500;">%orange%</option>
-        <option value="#FF4500" style="color:#FF4500;">%orangered%</option>
-        <option value="#DC143C" style="color:#DC143C;">%crimson%</option>
-        <option value="#FF0000" style="color:#FF0000;">%red%</option>
-        <option value="#B22222" style="color:#B22222;">%firebrick%</option>
-        <option value="#8B0000" style="color:#8B0000;">%darkred%</option>
-        <option value="#008000" style="color:#008000;">%green%</option>
-        <option value="#32CD32" style="color:#32CD32;">%limegreen%</option>
-        <option value="#2E8B57" style="color:#2E8B57;">%seagreen%</option>
-        <option value="#FF1493" style="color:#FF1493;">%deeppink%</option>
-        <option value="#FF6347" style="color:#FF6347;">%tomato%</option>
-        <option value="#FF7F50" style="color:#FF7F50;">%coral%</option>
-        <option value="#800080" style="color:#800080;">%purple%</option>
-        <option value="#4B0082" style="color:#4B0082;">%indigo%</option>
-        <option value="#DEB887" style="color:#DEB887;">%burlywood%</option>
-        <option value="#F4A460" style="color:#F4A460;">%sandybrown%</option>
-        <option value="#A0522D" style="color:#A0522D;">%sienna%</option>
-        <option value="#D2691E" style="color:#D2691E;">%chocolate%</option>
-        <option value="#008080" style="color:#008080;">%teal%</option>
-        <option value="#C0C0C0" style="color:#C0C0C0;">%silver%</option>
-      </select> 
-	  
-	  <select name="fontsize" onchange="AddTag('[SIZE=' + this.options[this.selectedIndex].value + ']', '[/SIZE]', '');this.selectedIndex='0';">
-        <option value="0">%size%</option>
-        <option value="1">%tiny%</option>
-        <option value="2">%small%</option>
-        <option value="3">%normal%</option>
-        <option value="4">%large%</option>
-        <option value="5">%huge%</option>
-      </select> 
-	  
-	  <select name="font" onchange="AddTag('[FONT=' + this.options[this.selectedIndex].value + ']', '[/FONT]', '');this.selectedIndex='0';">
-        <option value="0">%font%</option>
-        <option value="arial">Arial</option>
-        <option value="comic sans ms">Comic</option>
-        <option value="courier">Courier</option>
-        <option value="courier new">Courier New</option>
-        <option value="tahoma">Tahoma</option>
-        <option value="times new roman">Times New Roman</option>
-        <option value="verdana">Verdana</option>
-	  </select> 
+    <option value="0">%color%</option>
+    <option value="#87CEEB" style="color:#87CEEB;">%skyblue%</option>
+    <option value="#4169E1" style="color:#4169E1;">%royalblue%</option>
+    <option value="#0000FF" style="color:#0000FF;">%blue%</option>
+    <option value="#00008B" style="color:#00008B;">%darkblue%</option>
+    <option value="#FFA500" style="color:#FFA500;">%orange%</option>
+    <option value="#FF4500" style="color:#FF4500;">%orangered%</option>
+    <option value="#DC143C" style="color:#DC143C;">%crimson%</option>
+    <option value="#FF0000" style="color:#FF0000;">%red%</option>
+    <option value="#B22222" style="color:#B22222;">%firebrick%</option>
+    <option value="#8B0000" style="color:#8B0000;">%darkred%</option>
+    <option value="#008000" style="color:#008000;">%green%</option>
+    <option value="#32CD32" style="color:#32CD32;">%limegreen%</option>
+    <option value="#2E8B57" style="color:#2E8B57;">%seagreen%</option>
+    <option value="#FF1493" style="color:#FF1493;">%deeppink%</option>
+    <option value="#FF6347" style="color:#FF6347;">%tomato%</option>
+    <option value="#FF7F50" style="color:#FF7F50;">%coral%</option>
+    <option value="#800080" style="color:#800080;">%purple%</option>
+    <option value="#4B0082" style="color:#4B0082;">%indigo%</option>
+    <option value="#DEB887" style="color:#DEB887;">%burlywood%</option>
+    <option value="#F4A460" style="color:#F4A460;">%sandybrown%</option>
+    <option value="#A0522D" style="color:#A0522D;">%sienna%</option>
+    <option value="#D2691E" style="color:#D2691E;">%chocolate%</option>
+    <option value="#008080" style="color:#008080;">%teal%</option>
+    <option value="#C0C0C0" style="color:#C0C0C0;">%silver%</option>
+</select>
+
+<select name="fontsize" onchange="AddTag('[SIZE=' + this.options[this.selectedIndex].value + ']', '[/SIZE]', '');this.selectedIndex='0';">
+    <option value="0">%size%</option>
+    <option value="1">%tiny%</option>
+    <option value="2">%small%</option>
+    <option value="3">%normal%</option>
+    <option value="4">%large%</option>
+    <option value="5">%huge%</option>
+</select>
+
+<select name="font" onchange="AddTag('[FONT=' + this.options[this.selectedIndex].value + ']', '[/FONT]', '');this.selectedIndex='0';">
+    <option value="0">%font%</option>
+    <option value="arial">Arial</option>
+    <option value="comic sans ms">Comic</option>
+    <option value="courier">Courier</option>
+    <option value="courier new">Courier New</option>
+    <option value="tahoma">Tahoma</option>
+    <option value="times new roman">Times New Roman</option>
+    <option value="verdana">Verdana</option>
+</select>

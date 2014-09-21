@@ -94,7 +94,7 @@ if($action=="save" && isset($_POST['post'])) {
 		$show = true;
 		$fehler=implode('<br>&#8226; ',$error);
     
-    	$showerror = '<div class="errorbox">
+    	$showerror = '<div class="alert alert-danger" role="alert">
       <b>'.$_language->module['problems'].':</b><br><br>
       &#8226; '.$fehler.'
     </div>';
