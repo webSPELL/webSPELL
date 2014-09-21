@@ -1,35 +1,43 @@
-/* Main Layout */
+/* Move down content because we have a fixed navbar that is 50px tall */
 body {
-  font-family: Verdana, Arial, Helvetica, sans-serif;
-  font-size: 10px;
-  color: #000000;
+  padding-top: 60px;
 }
 
-img { border: none; }
-
-hr {
-  color: #666666;
-  background-color: #666666;
-  border: 0px;
-  border-top: transparent;
-  border-bottom: transparent;
-  margin: 2px 0;
-  height: 1px;
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+  /* Let the jumbotron breathe */
+  .jumbotron {
+    margin-top: 20px;
+  }
 }
 
-/* Links */
-a, a:visited, a:active {
-  color: #265B84;
-  text-decoration: none;
-  font-weight: normal;
+.inputselect.btn.btn-danger div a {
+    color:#ccc;
 }
 
-a:hover {
-  color: #000000;
-  text-decoration: underline;
-  font-weight: normal;
+.add-on.captcha-img, .input-group-addon.captcha-img {
+    height:25px!important;
+    padding:2px 5px 1px!important;
 }
 
+section .thumbnail.pull-left {
+    margin-right:2em;
+    margin-bottom:2em;
+}
+
+.ws_comments {
+    min-height: 90px;
+}
+                
+.ws_comments .avatar {
+    padding: 5px;                
+}
+
+#usermenu > li a > img { 
+  height: 40px;
+}
+
+/* Font types */
 a.titlelink, a.titlelink:visited, a.titlelink:active {
   color: #FFFFFF;
   text-decoration: none;
@@ -50,20 +58,6 @@ a.category, a.category:visited, a.category:active {
 a.category:hover {
   color: #000000;
   text-decoration: underline;
-}
-
-/* Font types */
-h2 {
-  font-family: Verdana, Arial, Helvetica, sans-serif;
-  font-size: 12px;
-  color: #000000;
-  text-transform: uppercase;
-  font-weight: bold;
-}
-
-small {
-  color: #383838;
-  font: normal 9px Verdana, Arial, Helvetica, sans-serif;
 }
 
 .title {
@@ -88,62 +82,6 @@ small {
   font-weight: normal;
 }
 
-/* Forms */
-form {
-  border: none;
-  margin: 0px;
-  padding: 0px;
-}
-
-input, textarea, select {
-  border: 1px solid #989898;
-  background-color: #F0F0F0;
-  font: normal 10px Verdana, Arial, Helvetica, sans-serif;
-  color: #666666;
-}
-
-input:active, textarea:active, select:active, input:focus, textarea:focus, select:focus {
-  border: 1px solid #CCCCCC;
-  background-color: #F6F6F6;
-  color: #2C2C2C;
-}
-
-input[type="radio"], input[type="checkbox"], 
-input[type="radio"]:focus, input[type="radio"]:active,
-input[type="checkbox"]:focus, input[type="checkbox"]:active {
-  border: 0px;
-}
-
-.input {
-  background-color: transparent;
-  border: none;
-  margin: 2px;
-}
-
-/* Infomessages - Miscellaneous */
-.tooltip {
-  position: absolute;
-  display: none;
-  background-color: #FFFFFF;
-  color: #000000;
-  border: 1px solid #DDDDDD;
-  border-left: 4px solid #0E8AEA;
-  padding: 4px 10px;
-  z-index: 100;
-}
-
-.errorbox {
-  background-color: #FFCCCC;
-  border: 1px dashed #D60000;
-  color: #666666;
-  font-size: 10px;
-  width: 350px;
-  padding: 8px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  text-align: left;
-}
-
 /* BBCode Tags */
 .quote {
   color: #383838;
@@ -155,16 +93,17 @@ input[type="checkbox"]:focus, input[type="checkbox"]:active {
 
 .list {
 	list-style-type: disc;
-	list-style-position:outside;
+	list-style-position: outside;
 }
+
 .list_num {
 	list-style-type: decimal;
-	list-style-position:outside;
+	list-style-position: outside;
 }
 
 .list_alpha {
 	list-style-type: lower-latin;
-	list-style-position:outside;
+	list-style-position: outside;
 }
 
 .code {
