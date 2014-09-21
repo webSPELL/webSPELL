@@ -160,18 +160,18 @@ header('X-UA-Compatible: IE=edge,chrome=1');
                     <hr class="grey">
                 </div>
                 
-                <div class="visible-sm<?php if(in_array($site, $hide1)) echo " hidden"; ?>">
+                <div class="visible-sm">
                     <b><?php echo $myclanname.".".$index_language['topics']; ?></b><br>
                     <?php include("latesttopics.php"); ?>
                 </div>
                 
-                <div class="visible-lg<?php if(in_array($site, $hide1)) echo " hidden"; ?>">
+                <div class="visible-lg">
                     <b><?php echo $myclanname.".".$index_language['hotest_news']; ?></b><br>
                     <?php include("sc_topnews.php"); ?>
                     <hr class="grey">
                 </div>
                 
-                <div class="visible-sm<?php if(in_array($site, $hide1)) echo " hidden"; ?>">
+                <div class="visible-sm">
                     <!-- headlines include -->
                     <b><?php echo $myclanname.".".$index_language['latest_news']; ?></b><br>
                     <?php include("sc_headlines.php"); ?>
@@ -179,7 +179,7 @@ header('X-UA-Compatible: IE=edge,chrome=1');
                     <hr class="grey">
                 </div>
                 
-                <div class="visible-lg<?php if(in_array($site, $hide1)) echo " hidden"; ?>">
+                <div class="visible-lg">
                     <!-- squads include -->
                     <b><?php echo $myclanname.".".$index_language['squads']; ?></b><br>
                     <p class="text-center"><?php include("sc_squads.php"); ?></p>
@@ -187,7 +187,7 @@ header('X-UA-Compatible: IE=edge,chrome=1');
                     <hr class="grey">
                 </div>
                 
-                <div class="visible-sm<?php if(in_array($site, $hide1)) echo " hidden"; ?>">
+                <div class="visible-sm">
                     <!-- clanwars include -->
                     <b><?php echo $myclanname.".".$index_language['matches']; ?></b><br>
                     <?php include("sc_results.php"); ?>
@@ -195,7 +195,7 @@ header('X-UA-Compatible: IE=edge,chrome=1');
                     <hr class="grey">
                 </div>
                 
-                <div class="visible-lg<?php if(in_array($site, $hide1)) echo " hidden"; ?>">
+                <div class="visible-lg">
                     <!-- demos include -->
                     <b><?php echo $myclanname.".".$index_language['demos']; ?></b><br>
                     <?php include("sc_demos.php"); ?>
@@ -203,7 +203,7 @@ header('X-UA-Compatible: IE=edge,chrome=1');
                     <hr class="grey">
                 </div>
                 
-                <div class="visible-lg<?php if(in_array($site, $hide1)) echo " hidden"; ?>">
+                <div class="visible-lg">
                     <!-- upcoming events include -->
                     <b><?php echo $myclanname.".".$index_language['upcoming_events']; ?></b><br>
                     <?php include("sc_upcoming.php"); ?>
@@ -211,7 +211,7 @@ header('X-UA-Compatible: IE=edge,chrome=1');
                     <hr class="grey">
                 </div>
                 
-                <div class="visible-lg<?php if(in_array($site, $hide1)) echo " hidden"; ?>">
+                <div class="visible-lg">
                     <!-- shoutbox include -->
                     <b><?php echo $myclanname.".".$index_language['shoutbox']; ?></b><br>
                     <p class="text-center"><?php include("shoutbox.php"); ?></p>
@@ -219,7 +219,7 @@ header('X-UA-Compatible: IE=edge,chrome=1');
                     <hr class="grey">
                 </div>
                 
-                <div class="visible-lg<?php if(in_array($site, $hide1)) echo " hidden"; ?>">
+                <div class="visible-lg">
                     <hr class="grey">
                     <!-- newsletter include -->
                     <b><?php echo $myclanname.".".$index_language['newsletter']; ?></b><br>
@@ -227,7 +227,7 @@ header('X-UA-Compatible: IE=edge,chrome=1');
                     <!-- end newsletter include -->
                 </div>
                 
-                <div class="visible-lg<?php if(in_array($site, $hide1)) echo " hidden"; ?>">
+                <div class="visible-lg">
                     <!-- statistics include -->
                     <b><?php echo $myclanname.".".$index_language['statistics']; ?></b><br>
                     <?php include("counter.php"); ?>
