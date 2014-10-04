@@ -28,11 +28,10 @@
 $_language->read_module('sponsors');
 $mainsponsors=safe_query("SELECT * FROM ".PREFIX."sponsors WHERE (displayed = '1' AND mainsponsor = '1') ORDER BY sort");
 if(mysql_num_rows($mainsponsors)) {
-	
 	if(mysql_num_rows($mainsponsors) == 1) $main_title = $_language->module['mainsponsor'];
 	else $main_title = $_language->module['mainsponsors'];
 	echo '<h2>'.$main_title.'</h2>';
-	
+	echo '<ul class="list-group">';
 	while($da=mysql_fetch_array($mainsponsors)) {
 		if(!empty($da['banner_small'])) $sponsor='<img src="images/sponsors/'.$da['banner_small'].'" alt="'.htmlspecialchars($da['name']).'">';
 		else $sponsor=$da['name'];
@@ -41,6 +40,7 @@ if(mysql_num_rows($mainsponsors)) {
 		eval ("\$sc_sponsors_main = \"".gettemplate("sc_sponsors_main")."\";");
 		echo $sc_sponsors_main;
 	}
+	echo '</ul>';
 }
 
 $sponsors=safe_query("SELECT * FROM ".PREFIX."sponsors WHERE (displayed = '1' AND mainsponsor = '0') ORDER BY sort");
@@ -49,7 +49,7 @@ if(mysql_num_rows($sponsors)) {
 	if(mysql_num_rows($sponsors) == 1) $title = $_language->module['sponsor'];
 	else $title = $_language->module['sponsors'];
 	echo '<h3>'.$title.'</h3>';
-	
+	echo '<ul class="list-group">';
 	while($db=mysql_fetch_array($sponsors)) {
 		if(!empty($db['banner_small'])) $sponsor='<img src="images/sponsors/'.$db['banner_small'].'" alt="'.htmlspecialchars($db['name']).'">';
 		else $sponsor=$db['name'];
@@ -58,6 +58,7 @@ if(mysql_num_rows($sponsors)) {
 		eval ("\$sc_sponsors = \"".gettemplate("sc_sponsors")."\";");
 		echo $sc_sponsors;
 	}
+	echo '</ul>';
 }
 
 ?>

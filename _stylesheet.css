@@ -50,6 +50,14 @@ a.titlelink:hover {
   font-weight: bold;
 }
 
+.panel-default a.titlelink, .panel-default a.titlelink:visited, .panel-default a.titlelink:active {
+  color: #000000;
+}
+
+.panel-default a.titlelink:hover {
+  color: #000000;
+}
+
 a.category, a.category:visited, a.category:active {
   color: #333333;
   text-decoration: none;
@@ -131,4 +139,9 @@ a.category:hover {
 	height: 15px;
 	padding-left: 3px;
 	white-space: nowrap;
+}
+
+/* Center img-responsive */
+.img-responsive.center {
+  margin: 0 auto;
 }
