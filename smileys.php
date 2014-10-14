@@ -28,28 +28,34 @@
 include("_mysql.php");
 include("_settings.php");
 
-echo'<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+echo'<!DOCTYPE html>
+<html lang="en">
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<meta name="description" content="Clanpage using webSPELL 4 CMS" />
-	<meta name="author" content="webspell.org" />
-	<meta name="keywords" content="webspell, webspell4, clan, cms" />
-	<meta name="copyright" content="Copyright &copy; 2005 - 2011 by webspell.org" />
-	<meta name="generator" content="webSPELL" />
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="description" content="Clanpage using webSPELL 4 CMS">
+	<meta name="author" content="webspell.org">
+	<meta name="keywords" content="webspell, webspell4, clan, cms">
+	<meta name="copyright" content="Copyright &copy; 2005 - 2011 by webspell.org">
+	<meta name="generator" content="webSPELL">
 	<title>Smilies</title>
-	<link href="_stylesheet.css" rel="stylesheet" type="text/css" />
-  <script src="js/bbcode.js" language="jscript" type="text/javascript"></script>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+	<link href="_stylesheet.css" rel="stylesheet">
+    <script src="js/bbcode.js" language="jscript" type="text/javascript"></script>
 </head>
 
-<body bgcolor="'.PAGEBG.'">
-<table width="300" cellpadding="2" cellspacing="1" bgcolor="'.BORDER.'">
-  <tr bgcolor="'.BGHEAD.'">
-    <td class="title" align="center">Smiley:</td>
-    <td class="title" align="center">Tag:</td>
-  </tr>
-  <tr><td colspan="2" bgcolor="'.BG_1.'"></td></tr>';
-
+<body>
+<div class="container">
+<div class="page-header">
+    <h1>Smilies</h1>
+</div>
+<table class="table table-striped table-bordered text-center">
+    <thead>
+        <tr>
+            <th>Smiley:</th>
+            <th>Tag:</th>
+        </tr>
+    </thead>
+    <tbody>';
 
 $filepath = "./images/smileys/";
 unset($files);
@@ -66,13 +72,14 @@ if (is_array($files)) {
 		$smiley = explode(".", $file);
 		
     echo'<tr>
-        <td bgcolor="'.BG_1.'" align="center"><a href="javascript:AddCodeFromWindow(\':'.$smiley[0].':\')"><img src="images/smileys/'.$file.'" border="0" alt="" /></a></td>
-        <td bgcolor="'.BG_2.'" align="center"><a href="javascript:AddCodeFromWindow(\':'.$smiley[0].':\')">:'.$smiley[0].':</a></td>
+        <td><a href="javascript:AddCodeFromWindow(\':'.$smiley[0].':\')"><img src="images/smileys/'.$file.'" alt=""></a></td>
+        <td><a href="javascript:AddCodeFromWindow(\':'.$smiley[0].':\')">:'.$smiley[0].':</a></td>
       </tr>';
 	}
-	echo '</table>';
 }
-
 ?>
+    </tbody>
+</table>
+</div>
 </body>
 </html>
