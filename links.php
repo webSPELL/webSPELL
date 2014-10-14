@@ -224,10 +224,11 @@ elseif($action=="show" AND is_numeric($_GET['linkcatID'])) {
 
 else {
 	$_language->read_module('links');
-	if(ispageadmin($userID) || isnewsadmin($userID)) echo'<input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=links&amp;action=new\');return document.MM_returnValue" value="'.$_language->module['new_link'].'" class="btn btn-danger" /><br><br>';
 
 	$cats=safe_query("SELECT * FROM ".PREFIX."links_categorys ORDER BY name");
 	if(mysql_num_rows($cats)) {
+        if(ispageadmin($userID) || isnewsadmin($userID)) echo'<input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=links&amp;action=new\');return document.MM_returnValue" value="'.$_language->module['new_link'].'" class="btn btn-danger" /><br><br>';
+
 		$anzcats=mysql_num_rows(safe_query("SELECT linkcatID FROM ".PREFIX."links_categorys"));			
 		$bg1=BG_1;
 		
@@ -254,6 +255,9 @@ else {
 		eval ("\$links_foot = \"".gettemplate("links_foot")."\";");
 		echo $links_foot;
 	}
-	else echo $_language->module['no_categories'];
+	else {
+        if(ispageadmin($userID) || isnewsadmin($userID)) echo'<input type="button" onclick="MM_goToURL(\'parent\',\'admin/admincenter.php?site=linkcategorys\');return document.MM_returnValue" value="'.$_language->module['new_category'].'" class="btn btn-danger" /><br><br>';
+        echo $_language->module['no_categories'];
+    }
 }
 ?>
