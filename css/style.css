@@ -40,3 +40,7 @@ section .thumbnail.pull-left {
 .ws_comments .avatar {
     padding:5px;                    
 }
+
+#usermenu > li a > img { 
+  height: 40px;
+}
