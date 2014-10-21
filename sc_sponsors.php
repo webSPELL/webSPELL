@@ -33,7 +33,7 @@ if(mysql_num_rows($mainsponsors)) {
 	echo '<h2>'.$main_title.'</h2>';
 	echo '<ul class="list-group">';
 	while($da=mysql_fetch_array($mainsponsors)) {
-		if(!empty($da['banner_small'])) $sponsor='<img src="images/sponsors/'.$da['banner_small'].'" alt="'.htmlspecialchars($da['name']).'">';
+		if(!empty($da['banner_small'])) $sponsor='<img src="images/sponsors/'.$da['banner_small'].'" alt="'.htmlspecialchars($da['name']).'" class="img-responsive">';
 		else $sponsor=$da['name'];
 		$sponsorID = $da['sponsorID'];
 		
@@ -51,7 +51,7 @@ if(mysql_num_rows($sponsors)) {
 	echo '<h3>'.$title.'</h3>';
 	echo '<ul class="list-group">';
 	while($db=mysql_fetch_array($sponsors)) {
-		if(!empty($db['banner_small'])) $sponsor='<img src="images/sponsors/'.$db['banner_small'].'" alt="'.htmlspecialchars($db['name']).'">';
+		if(!empty($db['banner_small'])) $sponsor='<img src="images/sponsors/'.$db['banner_small'].'" alt="'.htmlspecialchars($db['name']).'" class="img-responsive">';
 		else $sponsor=$db['name'];
 		$sponsorID = $db['sponsorID'];
 		
