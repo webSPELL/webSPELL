@@ -153,6 +153,9 @@ function codereplace($content) {
 	
 	$border=BORDER;
 	$bg1=BG_1;
+
+	$content = preg_replace("#\[/code\]([\n\r]*)#si", "[/code]",$content);
+
 	$splits = preg_split("/(\[[\/]{0,1}code\])/si",$content,-1,PREG_SPLIT_DELIM_CAPTURE);
 	$anz = count($splits);
 	for($i=0;$i<$anz;$i++){
@@ -170,7 +173,7 @@ function codereplace($content) {
 				}
 			}
 			if($match){
-				$splits[$i] = '<div style="width:'.$picsize_l.'px;height:100%;overflow:auto;background-color:'.$bg1.';border: 1px '.$border.' solid;" class="code"><b>'.$_language->module['code'].':</b><hr /><div class="codeinner">';
+				$splits[$i] = '<div style="max-width:'.$picsize_l.'px;" class="panel panel-default code"><div class="panel-heading">'.$_language->module['code'].':</div><div class="panel-body">';
 
 				/* concat pieces until arriving closing tag ($z) and save to $i+1 */
 				for($x=($i+2); $x<$z;$x++){
@@ -227,16 +230,14 @@ function insideCode($content){
 	$splits = preg_split("#\\n#", $content, -1, PREG_SPLIT_NO_EMPTY);
 	
 	$i = 0;
-	$codelines='';
 	$codecontent='';
 	foreach($splits as $res) {
 		if($i > 0 OR trim($res) != "") {
-			$codelines.='<div class="codeline'.($i%2).'">'.($i+1).'.</div>';
-			$codecontent.='<div class="codeline'.($i%2).'">'.$res.'</div>';
+			$codecontent.='<li>'.$res.'</li>';
 			$i++;
 		}
 	}
-	$content='<table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td width="20"><div style="text-align: right;">'.$codelines.'</div></td><td valign="top">'.$codecontent.'</td></tr></table>';
+	$content='<ol>'.$codecontent.'</ol>';
 	
 	return $content;
 }
@@ -250,6 +251,8 @@ function imgreplace($content) {
 	global $picsize_l;
 	global $picsize_h;
 	global $autoresize;
+
+	$content = preg_replace("#\[/img\]([\n\r]*)#si", "[/img]",$content);
 
 	if($autoresize>0) {
 		preg_match_all("#(\[img\])(.*?)(png|gif|jpeg|jpg)(\[\/img\])#i", $content, $imgtags, PREG_SET_ORDER);
@@ -292,13 +295,14 @@ function quotereplace($content) {
 	$border=BORDER;
 	$bg1=BG_1;
 
+	$content = preg_replace("#\[/quote\]([\n\r]*)#si", "[/quote]",$content);
+
 	$content = str_ireplace('[quote]', '[quote]', $content);
 	$content = str_ireplace('[/quote]', '[/quote]', $content);
 	$wrote = $_language->module['wrote'];
-	$content = preg_replace("#\[quote=(.*?)\]#si", "[quote][b]\\1 ".$wrote.":[/b][br][hr]",$content);
 
 	//prepare: how often start- and end-tag occurrs
-	$starttags = substr_count($content, '[quote]');
+	$starttags = substr_count($content, '[quote]') + preg_match_all("#\[quote=(.*?)\]#si", $content, $matches);
 	$endtags = substr_count($content, '[/quote]');
 
 	$overflow=abs($starttags-$endtags);
@@ -308,11 +312,13 @@ function quotereplace($content) {
 		elseif($endtags>$starttags) $content='[quote]'.$content;
 	}
 
-	$content = preg_replace("#\[quote\]#s", '<div style="width:'.$picsize_l.'px;max-height:'.$picsize_h.'px;overflow:auto;background-color:'.$bg1.';border: 1px '.$border.' solid;" class="quote">', $content, 10);
-	$content = preg_replace("#\[/quote\]#s", '</div>', $content, 10);
+	$content = preg_replace("#\[quote=(.*?)\]#si", '<blockquote style="max-width:'.$picsize_l.'px;" class="quote"><header>\\1 '.$wrote.':</header>', $content, 10);
+	$content = preg_replace("#\[quote\]#s", '<blockquote style="max-width:'.$picsize_l.'px;" class="quote">', $content, 10);
+	$content = preg_replace("#\[/quote\]#s", '</blockquote>', $content, 20);
 
 	//remove overflowed quote-tags
 
+	$content = preg_replace("#\[quote=(.*?)\]#si", "",$content);
 	$content = str_replace('[quote]','',$content);
 	$content = str_replace('[/quote]','',$content);
 

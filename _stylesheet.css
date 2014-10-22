@@ -91,14 +91,6 @@ a.category:hover {
 }
 
 /* BBCode Tags */
-.quote {
-  color: #383838;
-  text-align: left;
-  font: normal 9px Verdana, Arial, Helvetica, sans-serif;
-  margin: 0 auto;
-  padding: 3px;
-}
-
 .list {
 	list-style-type: disc;
 	list-style-position: outside;
@@ -114,31 +106,27 @@ a.category:hover {
 	list-style-position: outside;
 }
 
-.code {
-  color: #000000;
+.code, .quote {
+  width: 100%;
+}
+
+.quote {
+  color: #383838;
   text-align: left;
-  margin: 0 auto;
-  padding: 3px;
   font: normal 10px Verdana, Arial, Helvetica, sans-serif;
+  padding: 10px 15px;
 }
 
-.codeinner {
-  color: #000000;
+.quote > header {
+  margin-bottom: 10px;
+  color: #999;
+}
+
+.code ol {
+  overflow: auto;
   font: 11px 'Courier New', Courier, monospace;
-}
-
-.codeline0 {
-	background-color: #F3F3F3;
-	height: 15px;
-	padding-left: 3px;
-	white-space: nowrap;
-}
-
-.codeline1 {
-	background-color: #FFFFFF;
-	height: 15px;
-	padding-left: 3px;
-	white-space: nowrap;
+  background-color: #FFFFFF;
+  white-space: nowrap;
 }
 
 /* Center img-responsive */
