@@ -14,6 +14,9 @@
 		"Gaming",
 		"Content Management System"
 	],
+	"ignore": [
+		"components"
+	],
 	"dependencies": {
 		"bootstrap": ">= 3.2.0",
 		"fontawesome": ">= 4.2.0"
