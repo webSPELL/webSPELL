@@ -423,7 +423,7 @@ if(mb_strlen($site)) {
 // -- COUNTER -- //
 
 $time = time();
-$date = getformatdate($time);
+$date = date("d.m.Y",$time);
 $deltime = $time-(3600*24);
 safe_query("DELETE FROM ".PREFIX."counter_iplist WHERE del<".$deltime);
 
