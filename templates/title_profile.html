@@ -1,13 +1,11 @@
-<h2>%profile%</h2>
-<br />
-<table width="100%" cellpadding="2" cellspacing="0" bgcolor="$border">
-  <tr style="line-height:30px;">
-    <td class="title" bgcolor="$bghead" width="{$title_width_main}%">&nbsp; <a class="titlelink" href="index.php?site=profile&amp;id=$id">%profile%</a></td>
-    <td class="title" bgcolor="$bghead" width="{$title_width_galleries}%">&nbsp; <a class="titlelink" href="index.php?site=profile&amp;id=$id&amp;action=galleries">%galleries%</a></td>
-    <td class="title" bgcolor="$bghead" width="{$title_width_buddys}%">&nbsp; <a class="titlelink" href="index.php?site=profile&amp;id=$id&amp;action=buddys">%buddys%</a></td>
-    <td class="title" bgcolor="$bghead" width="{$title_width_lastposts}%">&nbsp; <a class="titlelink" href="index.php?site=profile&amp;id=$id&amp;action=lastposts">%last% $profilelast %posts%</a></td>
-    $title_user_guestbook
-  </tr>
-  <tr><td bgcolor="$pagebg" colspan="$title_colspan"></td></tr>
-</table>
-$banned
+<div class="page-header">
+	<h2>%profile%</h2>
+</div>
+<ul class="nav nav-tabs nav-justified">
+    <li><a href="index.php?site=profile&amp;id=$id" class="btn btn-default navbar-btn">%profile%</a></li>
+    <li><a href="index.php?site=profile&amp;id=$id&amp;action=galleries" class="btn btn-default navbar-btn">%galleries%</a></li>
+    <li><a href="index.php?site=profile&amp;id=$id&amp;action=buddys" class="btn btn-default navbar-btn">%buddys%</a></li>
+    <li><a href="index.php?site=profile&amp;id=$id&amp;action=lastposts" class="btn btn-default navbar-btn">%last% $profilelast %posts%</a></li>
+    <li><a href="index.php?site=profile&amp;id=$id&amp;action=guestbook" class="btn btn-default navbar-btn">%guestbook%</a></li>
+</ul>
+<p>$banned</p>

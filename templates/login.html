@@ -1,8 +1,16 @@
 <form method="post" name="login" action="checklogin.php"> 
-<input name="ws_user" type="text" size="13" value="Username" onfocus="this.value=''" style="margin:2px;" /> 
-<input name="pwd" type="password" size="13" value="Password" onfocus="this.value=''" style="margin:2px;" />
-<input type="submit" name="submit" value="%login%" style="margin:2px;" /><br /> 
-&#8226; <a href="index.php?site=register">%register_now%</a><br />
-&#8226; <a href="index.php?site=lostpassword">%lost_password%</a><br />
-&#8226; <a href="index.php?site=registered_users">%registered_users%</a>
+    <div class="form-group">
+        <input name="ws_user" type="text" placeholder="Username" class="form-control" required>
+    </div>
+    <div class="form-group">
+        <input name="pwd" type="password" placeholder="Password" class="form-control" required>
+    </div>
+    
+    <div class="form-group">
+        <input type="submit" name="submit" value="%login%" class="btn btn-primary" /> 
+        <div class="pull-right">
+            <a href="index.php?site=lostpassword" class="pull-right">%lost_password%</a><br>
+            <a href="index.php?site=register">%register_now%</a>
+        </div>
+    </div>
 </form>
