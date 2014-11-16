@@ -57,19 +57,16 @@ if($imprint_type) {
 
 	$imprint_head='<table border="0" width="96%" align="center">
     <tr>
-      <td colspan="2"><b>'.$_language->module['responsible_persons'].'</b></td>
+      <td width="130" valign="top">'.$_language->module['webmaster'].'</td>
+      <td><a href="mailto:'.mail_protect($admin_email).'">'.$admin_name.'</a></td>
     </tr>
     <tr>
-      <td width="130" valign="top"><br /><b>'.$_language->module['webmaster'].'</b></td>
-      <td><br /><a href="mailto:'.mail_protect($admin_email).'">'.$admin_name.'</a></td>
+      <td valign="top">'.$_language->module['admins'].'</td>
+      <td>'.$administrators.'</td>
     </tr>
     <tr>
-      <td valign="top"><br /><b>'.$_language->module['admins'].'</b></td>
-      <td><br />'.$administrators.'</td>
-    </tr>
-    <tr>
-      <td valign="top"><br /><b>'.$_language->module['mods'].'</b></td>
-      <td><br />'.$moderators.'</td>
+      <td valign="top">'.$_language->module['mods'].'</td>
+      <td>'.$moderators.'</td>
     </tr>
   </table>';
 }

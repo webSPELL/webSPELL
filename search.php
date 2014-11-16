@@ -52,34 +52,41 @@ if($action=="search" AND ($userID OR isset($_REQUEST['captcha']))) {
 			$results = (int)$_REQUEST['r'];
 		}
 		isset($_REQUEST['page']) ? $page = (int)$_REQUEST['page'] : $page = 1;
-		isset($_REQUEST['am']) ? $am = (int)$_REQUEST['am'] : $am = 0;
-		isset($_REQUEST['ad']) ? $ad = (int)$_REQUEST['ad'] : $ad = 0;
-		isset($_REQUEST['ay']) ? $ay = (int)$_REQUEST['ay'] : $ay = 0;
-		isset($_REQUEST['bm']) ? $bm = (int)$_REQUEST['bm'] : $bm = 0;
-		isset($_REQUEST['bd']) ? $bd = (int)$_REQUEST['bd'] : $bd = 0;
-		isset($_REQUEST['by']) ? $by = (int)$_REQUEST['by'] : $by = 0;
+		isset($_REQUEST['afterdate']) ? $afterdate = $_REQUEST['afterdate'] : $afterdate = 0;
+		isset($_REQUEST['beforedate']) ? $beforedate = $_REQUEST['beforedate'] : $beforedate = 0;
 		$keywords = preg_split("/ ,/si", strtolower(str_replace(array('\%','%'),'',$text)));
 		
 		if(mb_strlen(str_replace('%', '', $text))>=$search_min_len){
 
-			if(!($am and $ad and $ay)) {
+			if(!$afterdate) {
 				$after = 0;
 			}
 			else {
-				if(!$ad) $ad = 1;
-				if(!$am) $am = 1;
-				if(!$ay) $ay = date("Y");
+                $ad = substr($afterdate, 8, 2); 
+                $am = substr($afterdate, 5, 2); 
+                if($am>12 && $ad < 12) { // User might have mixed up day and month
+                    $oldam = $am;
+                    $am = $ad;
+                    $ad = $oldam;
+                }                
+                $ay = substr($afterdate, 0, 4);
 				$after = mktime(0, 0, 0, $am, $ad, $ay);
 			}
-			if(!($bm and $bd and $by)) {
+			if(!$beforedate) {
 				$before = time();
 			}
 			else {
-				if(!$bd) $bd = 1;
-				if(!$bm) $bm = 1;
-				if(!$by) $by = date("Y");
+				$bd = substr($beforedate, 8, 2);
+				$bm = substr($beforedate, 5, 2); 
+                if($bm>12 && $bd < 12) { // User might have mixed up day and month
+                    $oldbm = $bm;
+                    $bm = $bd;
+                    $bd = $oldbm;
+                }
+				$by = substr($beforedate, 0, 4);
 				$before = mktime(0, 0, 0, $bm, $bd, $by);
 			}
+
 		
 			$i=0;
 			$res_message=array();
@@ -262,10 +269,10 @@ if($action=="search" AND ($userID OR isset($_REQUEST['captcha']))) {
 		
 			}
 			$count_results = $i;
-			echo "<center><b>".$count_results."</b> ".$_language->module['results_found']."</center><br /><br />";
+			echo "<p class=\"text-center\"><b>".$count_results."</b> ".$_language->module['results_found']."</p><br><br>";
 		
 			$pages = ceil($count_results / $results);
-			if($pages > 1) echo makepagelink("index.php?site=search&amp;action=search&amp;articles=".$_REQUEST['articles']."&amp;faq=".$_REQUEST['faq']."&amp;forum=".$_REQUEST['forum']."&amp;news=".$_REQUEST['news']."&amp;r=".$_REQUEST['r']."&amp;text=".$_REQUEST['text']."&amp;am=".$_REQUEST['am']."&amp;ad=".$_REQUEST['ad']."&amp;ay=".$_REQUEST['ay']."&amp;bm=".$_REQUEST['bm']."&amp;bd=".$_REQUEST['bd']."&amp;by=".$_REQUEST['by']."&amp;order=".$_REQUEST['order'], $page, $pages);
+			if($pages > 1) echo makepagelink("index.php?site=search&amp;action=search&amp;articles=".$_REQUEST['articles']."&amp;faq=".$_REQUEST['faq']."&amp;forum=".$_REQUEST['forum']."&amp;news=".$_REQUEST['news']."&amp;r=".$_REQUEST['r']."&amp;text=".$_REQUEST['text']."&amp;afterdate=".$_REQUEST['afterdate']."&amp;beforedate=".$_REQUEST['beforedate']."&amp;by=".$_REQUEST['by']."&amp;order=".$_REQUEST['order'], $page, $pages);
 
 			// sort results
 			if($_REQUEST['order']=='2') asort($res_occurr);
@@ -280,16 +287,7 @@ if($action=="search" AND ($userID OR isset($_REQUEST['captcha']))) {
 				if($i >= ($results * $page)) {
 					break;
 				}
-				
-				if($i%2) {
-					$bg1=BG_1;
-					$bg2=BG_2;
-				}
-				else {
-					$bg1=BG_3;
-					$bg2=BG_4;
-				}
-		
+						
 				$date=getformatdate($res_date[$key]);
 				$type=$res_type[$key];
 				if(mb_strlen($res_message[$key]) > 200) {

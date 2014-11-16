@@ -221,18 +221,21 @@ elseif($userID) {
 				else $statuspic='<img src="images/icons/online.gif" width="7" height="7" alt="online" />';
 
 				$sender='<a href="index.php?site=profile&amp;id='.$ds['fromuser'].'"><b>'.getnickname($ds['fromuser']).'</b></a>';
-				if(isclanmember($ds['fromuser'])) $member=' <img src="images/icons/member.gif" width="6" height="11" alt="Clanmember" />';
+				if(isclanmember($ds['fromuser'])) $member='<img src="images/icons/member.gif" width="6" height="11" alt="Clanmember" />';
 				else $member='';
 
 				if(trim($ds['title'])!="") $title=clearfromtags($ds['title']);
 				else $title = $_language->module['no_subject'];
 
+				$new='';
+				$icon='';
 				if(!$ds['viewed']) {
-					$icon='<img src="images/icons/pm_new.gif" width="14" height="12" alt="" />';
+					$icon='<i class="icon-envelope"></i>';
 					$title = '<b>'.$title.'</b>';
-				}	else $icon='<img src="images/icons/pm_old.gif" width="14" height="12" alt="" />';
+                    $new = 'class="warning"';
+				}
 		
-				$title='&#8226; <a href="index.php?site=messenger&amp;action=show&amp;id='.$ds['messageID'].'">'.$title.'</a>';
+				$title='<a href="index.php?site=messenger&amp;action=show&amp;id='.$ds['messageID'].'">'.$title.'</a>';
 
 				eval ("\$pm_incoming_content = \"".gettemplate("pm_incoming_content")."\";");
 				echo $pm_incoming_content;
@@ -315,7 +318,7 @@ elseif($userID) {
 
 				if(trim($ds['title'])!="") $title=clearfromtags($ds['title']);
 				else $title = $_language->module['no_subject'];
-				$title='&#8226; <a href="index.php?site=messenger&amp;action=show&amp;id='.$ds['messageID'].'">'.$title.'</a>';
+				$title=' <a href="index.php?site=messenger&amp;action=show&amp;id='.$ds['messageID'].'">'.$title.'</a>';
 
 				$icon='<img src="images/icons/pm_old.gif" width="14" height="12" alt="" />';
 				eval ("\$pm_outgoing_content = \"".gettemplate("pm_outgoing_content")."\";");
@@ -402,7 +405,7 @@ elseif($userID) {
 		if(isset($_SESSION['message_error'])){
 			$subject = getforminput($_SESSION['message_subject']);
 			$message = getforminput($_SESSION['message_body']);
-			$error = "<div class='errorbox' style='margin-left: auto; margin-right: auto;'><b>".$_language->module['error'].":</b><br/>&#8226; ".$_language->module['unknown_user']."</div>";
+			$error = "<div class='alert alert-danger'><b>".$_language->module['error'].":</b><br>".$_language->module['unknown_user']."</div>";
 			unset($_SESSION['message_subject'],$_SESSION['message_body'],$_SESSION['message_error']);
 		}
 		else{
@@ -411,7 +414,7 @@ elseif($userID) {
 		
 		$bg1=BG_1;
 
-		if(isanyadmin($userID)) $admin='<b>'.$_language->module['adminoptions'].'</b><br />'.$_language->module['sendeachuser'].'<input class="input" type="checkbox" name="eachuser" value="true" /><br />'.$_language->module['sendeachmember'].'<input class="input" type="checkbox" name="eachmember" value="true" />';
+		if(isanyadmin($userID)) $admin='<b>'.$_language->module['adminoptions'].'</b><br>'.$_language->module['sendeachuser'].'<input class="input" type="checkbox" name="eachuser" value="true" /><br>'.$_language->module['sendeachmember'].'<input class="input" type="checkbox" name="eachmember" value="true" />';
 		else $admin = '';
 		
 		eval ("\$addbbcode = \"".gettemplate("addbbcode")."\";");
@@ -419,5 +422,8 @@ elseif($userID) {
 		echo $pm_new;
 	}
 }
-else echo $_language->read_module('messenger').$_language->module['not_logged'];
+else {
+    $_language->read_module('messenger');
+    echo $_language->module['not_logged'];
+}
 ?>

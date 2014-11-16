@@ -293,7 +293,7 @@ else {
 			$content = toggle($content, $ds['commentID']);
 
 			if(isfeedbackadmin($userID) or iscommentposter($userID,$ds['commentID'])) {
-				$edit = '<a href="index.php?site=comments&amp;editcomment=true&amp;id='.$ds['commentID'].'&amp;ref='.urlencode($referer).'" title="'.$_language->module['edit_comment'].'"><img src="images/icons/edit.gif" border="0" alt="'.$_language->module['edit_comment'].'" /></a>';
+				$edit = '<a href="index.php?site=comments&amp;editcomment=true&amp;id='.$ds['commentID'].'&amp;ref='.urlencode($referer).'" title="'.$_language->module['edit_comment'].'"><i class="icon-edit"></i></a>';
 			} else $edit='';
 
 			if(isfeedbackadmin($userID)) $actions='<input class="input" type="checkbox" name="commentID[]" value="'.$ds['commentID'].'" />';
@@ -322,9 +322,9 @@ else {
 			unset($edit);
 
 			if(isfeedbackadmin($userID)) {
-				$submit='<input type="hidden" name="referer" value="'.$referer.'" />
-        <input class="input" type="checkbox" name="ALL" value="ALL" onclick="SelectAll(this.form);" /> '.$_language->module['select_all'].'
-        <input type="submit" value="'.$_language->module['delete_selected'].'" />';
+				$submit='<input type="hidden" name="referer" value="'.$referer.'">
+        <input class="input" type="checkbox" name="ALL" value="ALL" onclick="SelectAll(this.form);"> '.$_language->module['select_all'].'
+        <input type="submit" value="'.$_language->module['delete_selected'].'" class="btn btn-danger">';
 			}	else $submit='';
 
 			if($sorttype=="DESC") $n--;

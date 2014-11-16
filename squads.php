@@ -43,9 +43,9 @@ if($action=="show") {
 		$anzmembers=mysqli_num_rows(safe_query("SELECT sqmID FROM ".PREFIX."squads_members WHERE squadID='".$ds['squadID']."'"));
 		if($anzmembers == 1) $anzmembers = $anzmembers.' '.$_language->module['member'];
 		else $anzmembers = $anzmembers.' '.$_language->module['members'];
-		$name='&not; <b>'.$ds['name'].'</b>';
+		$name=$ds['name'];
 		$squadID=$ds['squadID'];
-		$backlink='&raquo; <a href="index.php?site=squads"><b>'.$_language->module['back_squad_overview'].'</b></a>';
+		$backlink='<a href="index.php?site=squads"><b>'.$_language->module['back_squad_overview'].'</b></a>';
 		$results='';
 		$awards='';
 		$challenge='';
@@ -54,9 +54,9 @@ if($action=="show") {
 		$border=BORDER;
 	
 		if($ds['gamesquad']) {
-			$results='[ <a href="index.php?site=clanwars&amp;action=showonly&amp;id='.$squadID.'&amp;sort=date&amp;only=squad">'.$_language->module['results'].'</a> | ';
-			$awards='<a href="index.php?site=awards&amp;action=showsquad&amp;squadID='.$squadID.'&amp;page=1">'.$_language->module['awards'].'</a> | ';
-			$challenge='<a href="index.php?site=challenge">'.$_language->module['challenge'].'</a> ]';
+			$results='<a href="index.php?site=clanwars&amp;action=showonly&amp;id='.$squadID.'&amp;sort=date&amp;only=squad" class="btn btn-primary">'.$_language->module['results'].'</a>';
+			$awards='<a href="index.php?site=awards&amp;action=showsquad&amp;squadID='.$squadID.'&amp;page=1" class="btn btn-primary">'.$_language->module['awards'].'</a>';
+			$challenge='<a href="index.php?site=challenge" class="btn btn-primary">'.$_language->module['challenge'].'</a>';
 			$games = $ds['games'];
 			if($games) {
 				$games = str_replace(";", ", ", $games);
@@ -154,20 +154,20 @@ else {
     $anzmembers=mysqli_num_rows(safe_query("SELECT sqmID FROM ".PREFIX."squads_members WHERE squadID='".$ds['squadID']."'"));
 		if($anzmembers == 1) $anzmembers = $anzmembers.' '.$_language->module['member'];
 		else $anzmembers = $anzmembers.' '.$_language->module['members'];
-		$name='&not; <a href="index.php?site=squads&amp;action=show&amp;squadID='.$ds['squadID'].'"><b>'.$ds['name'].'</b></a>';
+		$name='<a href="index.php?site=squads&amp;action=show&amp;squadID='.$ds['squadID'].'"><b>'.$ds['name'].'</b></a>';
 		if($ds['icon']) $icon='<a href="index.php?site=squads&amp;action=show&amp;squadID='.$ds['squadID'].'"><img src="images/squadicons/'.$ds['icon'].'" border="0" alt="'.htmlspecialchars($ds['name']).'" /></a>';
 		else $icon='';
 		$info=htmloutput($ds['info']);
-		$details='&raquo; <a href="index.php?site=squads&amp;action=show&amp;squadID='.$ds['squadID'].'"><b>'.$_language->module['show_details'].'</b></a>';
+		$details='<a href="index.php?site=squads&amp;action=show&amp;squadID='.$ds['squadID'].'"><b>'.$_language->module['show_details'].'</b></a>';
 		$squadID=$ds['squadID'];
 		$results='';
 		$awards='';
 		$challenge='';
 
 		if($ds['gamesquad']) {
-			$results='[ <a href="index.php?site=clanwars&amp;action=showonly&amp;id='.$squadID.'&amp;sort=date&amp;only=squad">'.$_language->module['results'].'</a> | ';
-			$awards='<a href="index.php?site=awards&amp;action=showsquad&amp;squadID='.$squadID.'&amp;page=1">'.$_language->module['awards'].'</a> | ';
-			$challenge='<a href="index.php?site=challenge">'.$_language->module['challenge'].'</a> ]';
+			$results='<a href="index.php?site=clanwars&amp;action=showonly&amp;id='.$squadID.'&amp;sort=date&amp;only=squad" class="btn btn-primary">'.$_language->module['results'].'</a>';
+			$awards='<a href="index.php?site=awards&amp;action=showsquad&amp;squadID='.$squadID.'&amp;page=1" class="btn btn-primary">'.$_language->module['awards'].'</a>';
+			$challenge='<a href="index.php?site=challenge" class="btn btn-primary">'.$_language->module['challenge'].'</a>';
 		}
 
 		$bgcat=BGCAT;

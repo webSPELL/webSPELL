@@ -157,7 +157,7 @@ elseif($userID) {
 			$n++;
 		}
 	}
-	else echo '<tr><td colspan="4" bgcolor="'.BG_1.'">'.$_language->module['ignore_nousers'].'</td></tr>';
+	else echo $_language->module['ignore_nousers'];
 
 	eval ("\$ignore_foot = \"".gettemplate("ignore_foot")."\";");
 	echo $ignore_foot;

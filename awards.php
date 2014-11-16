@@ -33,10 +33,17 @@ if(isset($_POST['save'])) {
 	$_language->read_module('awards');
 
 	if(!isclanwaradmin($userID) && !isnewsadmin($userID)) die($_language->module['no_access']);
+	
+	$date = $_POST['date'];
+    $day = substr($date, 8, 2); 
+    $month = substr($date, 5, 2); 
+    if($month>12 && $day < 12) { // User might have mixed up day and month
+        $oldmonth = $month;
+        $month = $day;
+        $day = $oldmonth;
+    }                
+    $year = substr($date, 0, 4);
 
-	$month = $_POST['month'];
-	$day = $_POST['day'];
-	$year = $_POST['year'];
 	if(isset($_POST['squad']))$squad = $_POST['squad'];
 	else $squad = 0;
 	$award = $_POST['award'];
@@ -56,9 +63,15 @@ elseif(isset($_POST['saveedit'])) {
 
 	if(!isclanwaradmin($userID) && !isnewsadmin($userID)) die($_language->module['no_access']);
 	$awardID = $_POST['awardID'];
-	$month = $_POST['month'];
-	$day = $_POST['day'];
-	$year = $_POST['year'];
+	$date = $_POST['date'];
+    $day = substr($date, 8, 2); 
+    $month = substr($date, 5, 2); 
+    if($month>12 && $day < 12) { // User might have mixed up day and month
+        $oldmonth = $month;
+        $month = $day;
+        $day = $oldmonth;
+    }                
+    $year = substr($date, 0, 4);
 	if(isset($_POST['squad']))$squad = $_POST['squad'];
 	else $squad = 0;
 	$award = $_POST['award'];
@@ -121,19 +134,18 @@ elseif($action=="edit") {
 		$ds=mysqli_fetch_array(safe_query("SELECT * FROM ".PREFIX."awards WHERE awardID='$awardID'"));
 		$day = "";
 		for($i=1; $i<32; $i++) {
-			if($i==date("d", $ds['date'])) $day.='<option selected="selected">'.$i.'</option>';
-			else $day.='<option>'.$i.'</option>';
+			if($i==date("d", $ds['date'])) $day.=$i;
 		}
 		$month = "";
 		for($i=1; $i<13; $i++) {
-			if($i==date("n", $ds['date'])) $month.='<option value="'.$i.'" selected="selected">'.date("M", $ds['date']).'</option>';
-			else $month.='<option value="'.$i.'">'.date("M", mktime(0,0,0,$i,1,2000)).'</option>';
+			if($i==date("n", $ds['date'])) $month.=date("m", $ds['date']);
 		}
 		$year = "";
 		for($i=2000; $i<2016; $i++) {
-			if($i==date("Y", $ds['date'])) $year.='<option selected="selected">'.$i.'</option>';
-			else $year.='<option>'.$i.'</option>';
+			if($i==date("Y", $ds['date'])) $year.=$i;
 		}
+        
+        $date = $year.'-'.$month.'-'.$day;
 		$squads = getgamesquads();
 		$squads = str_replace('value="'.$ds['squadID'].'"', 'value="'.$ds['squadID'].'" selected="selected"', $squads);
 		$award = htmlspecialchars($ds['award']);
@@ -276,9 +288,9 @@ else {
 	}
 	if($gesamt) {
 		if($type=="ASC")
-		echo'<a href="index.php?site=awards&amp;page='.$page.'&amp;sort='.$sort.'&amp;type=DESC">'.$_language->module['sort'].':</a> <img src="images/icons/asc.gif" width="9" height="7" border="0" alt="" />&nbsp;&nbsp;&nbsp;';
+		echo'<a href="index.php?site=awards&amp;page='.$page.'&amp;sort='.$sort.'&amp;type=DESC">'.$_language->module['sort'].':</a> <i class="icon-sort-down"></i>';
 		else
-		echo'<a href="index.php?site=awards&amp;page='.$page.'&amp;sort='.$sort.'&amp;type=ASC">'.$_language->module['sort'].':</a> <img src="images/icons/desc.gif" width="9" height="7" border="0" alt="" />&nbsp;&nbsp;&nbsp;';
+		echo'<a href="index.php?site=awards&amp;page='.$page.'&amp;sort='.$sort.'&amp;type=ASC">'.$_language->module['sort'].':</a> <i class="icon-sort-up"></i>';
 
 		echo $page_link;
 		echo'<br /><br />';
@@ -306,8 +318,8 @@ else {
 			$rang=$ds['rang'];
 
 			if(isclanwaradmin($userID) || isnewsadmin($userID))
-			$adminaction='<input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=awards&amp;action=edit&amp;awardID='.$ds['awardID'].'\');return document.MM_returnValue" value="'.$_language->module['edit'].'" />
-      <input type="button" onclick="MM_confirm(\'really delete this award?\',\'index.php?site=awards&amp;delete=true&amp;awardID='.$ds['awardID'].'\')" value="'.$_language->module['delete'].'" />';
+			$adminaction='<input type="button" class="btn btn-danger" onclick="MM_goToURL(\'parent\',\'index.php?site=awards&amp;action=edit&amp;awardID='.$ds['awardID'].'\');return document.MM_returnValue" value="'.$_language->module['edit'].'" />
+      <input type="button" class="btn btn-danger" onclick="MM_confirm(\'really delete this award?\',\'index.php?site=awards&amp;delete=true&amp;awardID='.$ds['awardID'].'\')" value="'.$_language->module['delete'].'" />';
 			else $adminaction = '';
 
 			eval ("\$awards_content = \"".gettemplate("awards_content")."\";");

@@ -29,8 +29,8 @@ if (isset($site)) $_language->read_module('clanwars');
 eval ("\$title_clanwars_details = \"".gettemplate("title_clanwars_details")."\";");
 echo $title_clanwars_details;
 
-echo'<input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=clanwars\');return document.MM_returnValue" value="'.$_language->module['show_clanwars'].'" />
-<input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=clanwars&amp;action=stats\');return document.MM_returnValue" value="'.$_language->module['stat'].'" /><br /><br />';
+echo'<p><input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=clanwars\');return document.MM_returnValue" value="'.$_language->module['show_clanwars'].'" class="btn btn-primary">
+<input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=clanwars&amp;action=stats\');return document.MM_returnValue" value="'.$_language->module['stat'].'" class="btn btn-primary"></p>';
 
 if(!isset($_GET['action'])) {
 	$cwID = (int)$_GET['cwID'];
@@ -83,10 +83,10 @@ if(!isset($_GET['action'])) {
 	}
 
 	if(isclanwaradmin($userID))
-	$adminaction='<input type="button" onclick="MM_openBrWindow(\'upload.php?cwID='.$cwID.'\',\'Clanwars\',\'toolbar=no,status=no,scrollbars=yes,width=800,height=600\')" value="'.$_language->module['upload_screenshot'].'" />
-  <input type="button" onclick="MM_openBrWindow(\'clanwars.php?action=edit&amp;cwID='.$ds['cwID'].'\',\'Clanwars\',\'toolbar=no,status=no,scrollbars=yes,width=800,height=600\')" value="'.$_language->module['edit'].'" />
-  <input type="button" onclick="MM_confirm(\''.$_language->module['really_delete_clanwar'].'?\',\'clanwars.php?action=delete&amp;cwID='.$ds['cwID'].'\')" value="'.$_language->module['delete'].'" />';
-  else $adminaction='';
+		$adminaction='<input type="button" onclick="MM_openBrWindow(\'upload.php?cwID='.$cwID.'\',\'Clanwars\',\'toolbar=no,status=no,scrollbars=yes,width=800,height=600\')" value="'.$_language->module['upload_screenshot'].'" class="btn btn-danger">
+  <input type="button" onclick="MM_openBrWindow(\'clanwars.php?action=edit&amp;cwID='.$ds['cwID'].'\',\'Clanwars\',\'toolbar=no,status=no,scrollbars=yes,width=800,height=600\')" value="'.$_language->module['edit'].'" class="btn btn-danger">
+  <input type="button" onclick="MM_confirm(\''.$_language->module['really_delete_clanwar'].'?\',\'clanwars.php?action=delete&amp;cwID='.$ds['cwID'].'\')" value="'.$_language->module['delete'].'" class="btn btn-danger">';
+  	else $adminaction='';
 
 	$report=cleartext($ds['report']);
 	$report = toggle($report, $ds['cwID']);

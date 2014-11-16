@@ -120,7 +120,7 @@ if($anz) {
 
 		$latesticon	=	'<img src="images/icons/'.$ds['icon'].'" width="15" height="15" alt="" />';
 		$boardlink	=	'<a href="index.php?site=forum&amp;board='.$ds['boardID'].'">'.$board.'</a>';
-		$topiclink	=	'<a href="index.php?site=forum_topic&amp;topic='.$ds['topicID'].'&amp;type=ASC&amp;page='.ceil(($ds['replys']+1)/$maxposts).'" onmouseover="showWMTT(\'latesttopics_'.$n.'\')" onmouseout="hideWMTT()">'.$topictitle.'</a>';
+		$topiclink	=	'index.php?site=forum_topic&amp;topic='.$ds['topicID'].'&amp;type=ASC&amp;page='.ceil(($ds['replys']+1)/$maxposts);
 		$replys			=	$ds['replys'];
 		
 		$replys_text = ($replys == 1) ? $_language->module['reply'] : $_language->module['replies'];
