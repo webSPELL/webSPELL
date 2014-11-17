@@ -84,9 +84,10 @@ if(isset($_POST['save'])) {
 	  	
 	  	if(count($error)) {
 	    	$list = implode('<br />&#8226; ', $error);
-	    	$showerror = '<div class="errorbox">
-	      	<b>'.$_language->module['errors_there'].':</b><br /><br />
-	      	&#8226; '.$list.'
+	    	$showerror = '<div class="alert alert-error">
+			  <button data-dismiss="alert" class="close" type="button">×</button>
+	      	  <strong>'.$_language->module['errors_there'].':</strong><br><br>
+	      	  &#8226; '.$list.'
 	    	</div>';
 		}
 		else {

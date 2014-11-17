@@ -45,9 +45,7 @@ else {
 		$usertext = $_POST['usertext'];
 		$firstname = $_POST['firstname'];
 		$lastname = $_POST['lastname'];
-		$b_day = $_POST['b_day'];
-		$b_month = $_POST['b_month'];
-		$b_year = $_POST['b_year'];
+		$birthday = date("Y-m-d",strtotime($_POST['b_day']));
 		$sex = $_POST['sex'];
 		$flag = preg_replace("/[^a-zA-Z0-9\s]/", "", $_POST['flag']);
 		$town = $_POST['town'];
@@ -211,8 +209,8 @@ else {
 		if(count($error_array))
 		{
 			$fehler=implode('<br />&#8226; ', $error_array);
-			$showerror = '<div class="errorbox">
-			  <b>'.$_language->module['errors_there'].':</b><br /><br />
+			$showerror = '<div class="alert alert-danger">
+			  <b>'.$_language->module['errors_there'].':</b><br><br>
 			  &#8226; '.$fehler.'
 			</div>';
 		}
@@ -434,9 +432,7 @@ else {
 										<td bgcolor="'.BG_2.'"><select name="user_guestbook">'.$user_gbook.'</select></td>
 									  </tr>';
 			}
-			$b_day = mb_substr($ds['birthday'],8,2);
-			$b_month = mb_substr($ds['birthday'],5,2);
-			$b_year = mb_substr($ds['birthday'],0,4);
+			$b_day = $birthday = mb_substr(trim($ds['birthday']),0,10);
 			$countries=getcountries();
 			$countries = str_replace('value="'.$ds['country'].'"', 'value="'.$ds['country'].'" selected="selected"', $countries);
 			if($ds['avatar']) $viewavatar = '&#8226; <a href="javascript:MM_openBrWindow(\'images/avatars/'.$ds['avatar'].'\',\'avatar\',\'width=120,height=120\')">'.$_language->module['avatar'].'</a>';

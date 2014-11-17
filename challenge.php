@@ -46,11 +46,7 @@ if($action=="save" && isset($_POST['post'])) {
 	$server = $_POST['server'];
 	$email = $_POST['email'];
 	$info = $_POST['info'];
-	$hour = (int)$_POST['hour'];
-	$minute = (int)$_POST['minute'];
-	$month = (int)$_POST['month'];
-	$day = (int)$_POST['day'];
-	$year = (int)$_POST['year'];
+	$datetime = strtotime($_POST['datetime']);
 	$run=0;
 	
   	$error = array();
@@ -73,8 +69,7 @@ if($action=="save" && isset($_POST['post'])) {
   	if(!count($error) and $run) {
 		$date=time();
 		$touser = array();
-		$cwdate=mktime($hour,$minute,0,$month,$day,$year);
-		safe_query("INSERT INTO ".PREFIX."challenge (date, cwdate, squadID, opponent, opphp, oppcountry, league, map, server, email, info) values('$date', '$cwdate', '$squad', '$opponent', '$opphp', '$oppcountry', '$league', '$map', '$server', '$email', '$info')");
+		safe_query("INSERT INTO ".PREFIX."challenge (date, cwdate, squadID, opponent, opphp, oppcountry, league, map, server, email, info) values('$date', '$datetime', '$squad', '$opponent', '$opphp', '$oppcountry', '$league', '$map', '$server', '$email', '$info')");
 		$ergebnis=safe_query("SELECT userID FROM ".PREFIX."squads_members WHERE warmember='1' AND squadID='".$squad."'");
 		while($ds=mysqli_fetch_array($ergebnis)) {
 			$touser[]=$ds['userID'];
@@ -98,8 +93,8 @@ if($action=="save" && isset($_POST['post'])) {
 		$show = true;
 		$fehler=implode('<br />&#8226; ',$error);
     
-    	$showerror = '<div class="errorbox">
-      <b>'.$_language->module['problems'].':</b><br /><br />
+    	$showerror = '<div class="alert alert-danger" role="alert">
+      <b>'.$_language->module['problems'].':</b><br><br>
       &#8226; '.$fehler.'
     </div>';
 	}
@@ -201,7 +196,7 @@ if(isclanwaradmin($userID)) {
 			if(isset($ds['name'])) $name=cleartext($ds['name']);
       		if(isset($ds['comment'])) $message=cleartext($ds['comment']);
 			
-			$actions='<input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=calendar&amp;action=addwar&amp;chID='.$ds['chID'].'\');return document.MM_returnValue" value="'.$_language->module['insert_in_calendar'].'" /> <input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=challenge&amp;action=delete&amp;chID='.$ds['chID'].'\');return document.MM_returnValue" value="'.$_language->module['delete_challenge'].'" />';
+			$actions='<input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=calendar&amp;action=addwar&amp;chID='.$ds['chID'].'\');return document.MM_returnValue" value="'.$_language->module['insert_in_calendar'].'" class="btn btn-primary"> <input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=challenge&amp;action=delete&amp;chID='.$ds['chID'].'\');return document.MM_returnValue" value="'.$_language->module['delete_challenge'].'" class="btn btn-danger">';
 
 			eval ("\$challenges = \"".gettemplate("challenges")."\";");
 			echo $challenges;

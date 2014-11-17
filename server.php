@@ -35,20 +35,6 @@ $ergebnis = safe_query("SELECT * FROM ".PREFIX."servers ORDER BY sort");
 if(mysqli_num_rows($ergebnis)) {
 	$i = 1;
 	while($ds = mysqli_fetch_array($ergebnis)) {
-		if($i % 2) {
-			$bg1 = BG_1;
-			$bg2 = BG_2;
-			$bg3 = BG_3;
-			$bg4 = BG_4;
-		}
-		else {
-			$bg1 = BG_3;
-			$bg2 = BG_4;
-			$bg3 = BG_1;
-			$bg4 = BG_2;
-
-		}
-
 		if($ds['game'] == "CS") $game = "HL";
 		else $game = $ds['game'];
     

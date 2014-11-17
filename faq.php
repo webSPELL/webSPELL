@@ -34,7 +34,7 @@ if(isset($_GET['action'])) $action = $_GET['action'];
 else $action='';
 
 if($action=="faqcat" and is_numeric($_GET['faqcatID'])) {
-	if(ispageadmin($userID)) echo'<input type="button" onclick="MM_openBrWindow(\'admin/admincenter.php?site=faq\',\'News\',\'toolbar=yes,status=yes,scrollbars=yes,resizable=yes,width=800,height=600\')" value="'.$_language->module['admin_button'].'" /><br /><br />';
+	if(ispageadmin($userID)) echo'<input type="button" onclick="MM_openBrWindow(\'admin/admincenter.php?site=faq\',\'News\',\'toolbar=yes,status=yes,scrollbars=yes,resizable=yes,width=800,height=600\')" value="'.$_language->module['admin_button'].'" class="btn btn-danger" /><br><br>';
 
 	$faqcatID = $_GET['faqcatID'];
 	$get = safe_query("SELECT faqcatname FROM ".PREFIX."faq_categories WHERE faqcatID='".$faqcatID."'");
@@ -59,7 +59,7 @@ if($action=="faqcat" and is_numeric($_GET['faqcatID'])) {
 			$i++;
 
 			$sort=$ds['sort'];
-			$question='<a href="index.php?site=faq&amp;action=faq&amp;faqID='.$ds['faqID'].'&amp;faqcatID='.$faqcatID.'">'.$ds['question'].'</a>';
+			$question='<a href="index.php?site=faq&amp;action=faq&amp;faqID='.$ds['faqID'].'&amp;faqcatID='.$faqcatID.'" class="list-group-item">'.$ds['question'].'</a>';
 
 			eval ("\$faq_question = \"".gettemplate("faq_question")."\";");
 			echo $faq_question;
@@ -71,7 +71,7 @@ if($action=="faqcat" and is_numeric($_GET['faqcatID'])) {
 }
 
 elseif($action=="faq") {
-	if(ispageadmin($userID)) echo'<input type="button" onclick="MM_openBrWindow(\'admin/admincenter.php?site=faq\',\'News\',\'toolbar=yes,status=yes,scrollbars=yes,resizable=yes,width=800,height=600\')" value="'.$_language->module['admin_button'].'" /><br /><br />';
+	if(ispageadmin($userID)) echo'<p><input type="button" onclick="MM_openBrWindow(\'admin/admincenter.php?site=faq\',\'News\',\'toolbar=yes,status=yes,scrollbars=yes,resizable=yes,width=800,height=600\')" value="'.$_language->module['admin_button'].'" class="btn btn-danger" /></p>';
 
 	$faqcatID = intval($_GET['faqcatID']);
 	$get = safe_query("SELECT faqcatname FROM ".PREFIX."faq_categories WHERE faqcatID='".$faqcatID."'");
@@ -82,7 +82,7 @@ elseif($action=="faq") {
 	$faq=safe_query("SELECT faqcatID,date,question,answer FROM ".PREFIX."faq WHERE faqID='$faqID'");
 	if(mysqli_num_rows($faq)) {
 		$ds=mysqli_fetch_array($faq);
-		$backlink='<a href="index.php?site=faq&amp;action=faqcat&amp;faqcatID='.$faqcatID.'" class="titlelink"><b>'.$faqcatname.'</b></a> &raquo; ';
+		$backlink='<a href="index.php?site=faq&amp;action=faqcat&amp;faqcatID='.$faqcatID.'" class="titlelink">'.$faqcatname.'</a>';
 		$question=$ds['question'];
 		if(mb_strlen($question) > 40) {
 			if($question{39} == " ") $question = mb_substr($question, 0, 38)."...";
@@ -99,15 +99,12 @@ elseif($action=="faq") {
 
 		eval ("\$faq_answer = \"".gettemplate("faq_answer")."\";");
 		echo $faq_answer;
-
-		eval ("\$faq_foot = \"".gettemplate("faq_foot")."\";");
-		echo $faq_foot;
 	}
 	else echo $_language->module['no_faq'];
 }
 
 else {
-	if(ispageadmin($userID)) echo'<input type="button" onclick="MM_openBrWindow(\'admin/admincenter.php?site=faq\',\'News\',\'toolbar=yes,status=yes,scrollbars=yes,resizable=yes,width=800,height=600\')" value="'.$_language->module['admin_button'].'" /><br /><br />';
+	if(ispageadmin($userID)) echo'<p><input type="button" onclick="MM_openBrWindow(\'admin/admincenter.php?site=faq\',\'News\',\'toolbar=yes,status=yes,scrollbars=yes,resizable=yes,width=800,height=600\')" value="'.$_language->module['admin_button'].'" class="btn btn-danger" /></p>';
 
 	$faqcats=safe_query("SELECT * FROM ".PREFIX."faq_categories ORDER BY sort");
 	$anzcats=mysqli_num_rows($faqcats);
@@ -126,15 +123,13 @@ else {
 				$bg1=BG_3;
 				$bg2=BG_4;
 			}
-			$faqcatname='&#8226; <a href="index.php?site=faq&amp;action=faqcat&amp;faqcatID='.$ds['faqcatID'].'"><b>'.$ds['faqcatname'].'</b></a>';
+			$faqcatname='<a href="index.php?site=faq&amp;action=faqcat&amp;faqcatID='.$ds['faqcatID'].'">'.$ds['faqcatname'].'</a>';
 			$description=htmloutput($ds['description']);
 
 			eval ("\$faq_category = \"".gettemplate("faq_category")."\";");
 			echo $faq_category;
 			$i++;
 		}
-		eval ("\$faq_foot = \"".gettemplate("faq_foot")."\";");
-		echo $faq_foot;
 	}
 	else echo $_language->module['no_categories'];
 }

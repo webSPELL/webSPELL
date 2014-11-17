@@ -61,11 +61,22 @@ $guests = mysqli_fetch_array(safe_query("SELECT COUNT(*) FROM ".PREFIX."whoisonl
 $user = mysqli_fetch_array(safe_query("SELECT COUNT(*) FROM ".PREFIX."whoisonline WHERE ip=''"));
 $useronline = $guests[0] + $user[0];
 
-if($user[0]==1) $user_on='1 '.$_language->module['user'];
-else $user_on=$user[0].' '.$_language->module['users'];
-
-if($guests[0]==1) $guests_on='1 '.$_language->module['guest'];
-else $guests_on= $guests[0].' '.$_language->module['guests'];
+if($user[0]==1) {
+	$user_on=1;
+	$user_on_text= $_language->module['user']; 
+}    
+else {
+    $user_on=$user[0];
+    $user_on_text=$_language->module['users'];
+}
+if($guests[0]==1) {
+    $guests_on=1;
+    $guests_on_text=$_language->module['guest'];
+}
+else {
+    $guests_on=$guests[0];
+    $guests_on_text=$_language->module['guests'];
+}
 
 eval ("\$stats = \"".gettemplate("stats")."\";");
 echo $stats;

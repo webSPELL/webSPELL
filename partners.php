@@ -27,6 +27,7 @@
 
 $ergebnis=safe_query("SELECT * FROM ".PREFIX."partners WHERE displayed = '1' ORDER BY sort");
 if(mysqli_num_rows($ergebnis)) {
+	echo '<ul class="list-group">';
 	while($db=mysqli_fetch_array($ergebnis)) {
 		$partnerID = $db['partnerID'];
 		$banner = $db['banner'];
@@ -34,7 +35,7 @@ if(mysqli_num_rows($ergebnis)) {
 		$title = htmlspecialchars($db['name']);
 		$img = 'images/partners/'.$db['banner'];
 		$name = $db['name'];
-		$img_str = '<img src="images/partners/'.$db['banner'].'" style="margin:2px 0;" border="0" alt="'.$alt.'" title="'.$title.'" />';
+		$img_str = '<img src="images/partners/'.$db['banner'].'" alt="'.$alt.'" title="'.$title.'">';
 		if(is_file($img) && file_exists($img)){
 			$text = $img_str;
 		}
@@ -42,5 +43,6 @@ if(mysqli_num_rows($ergebnis)) {
 		eval ("\$sc_partners = \"".gettemplate("sc_partners")."\";");
 		echo $sc_partners;
 	}
+	echo '</ul>';
 }
 ?>

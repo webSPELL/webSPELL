@@ -30,7 +30,7 @@ else $only='';
 
 $ergebnis=safe_query("SELECT * FROM ".PREFIX."news WHERE published='1' ".$only." AND intern<=".isclanmember($userID)." ORDER BY date DESC LIMIT 0,".$maxheadlines);
 if(mysqli_num_rows($ergebnis)){
-	echo '<table width="100%" cellspacing="0" cellpadding="2">';
+	echo '<ul class="nav nav-pills">';
 	$n=1;
 	while($ds=mysqli_fetch_array($ergebnis)) {
 		$date=getformatdate($ds['date']);
@@ -76,7 +76,7 @@ if(mysqli_num_rows($ergebnis)){
 		
 		$n++;
 	}
-	echo '</table>';
+	echo '</ul>';
 	unset($rubricID);
 }
 ?>

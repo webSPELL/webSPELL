@@ -348,10 +348,11 @@ elseif($action=="save") {
 	}
 	else echo'<script src="js/bbcode.js" language="jscript" type="text/javascript"></script>
   <link href="_stylesheet.css" rel="stylesheet" type="text/css">
-  <center><br /><br /><br /><br />
-  <b>'.$_language->module['clanwar_saved'].'.</b><br /><br />
-  <input type="button" onclick="MM_openBrWindow(\'upload.php?cwID='.$cwID.'\',\'Clanwars\',\'toolbar=no,status=no,scrollbars=yes,width=800,height=600\')" value="'.$_language->module['upload_screenshot'].'" />
-  <input type="button" onclick="javascript:self.close()" value="'.$_language->module['close_window'].'" /></center>';
+  <p class="text-center"><br><br><br><br>
+  <b>'.$_language->module['clanwar_saved'].'.</b><br><br>
+  <input type="button" onclick="MM_openBrWindow(\'upload.php?cwID='.$cwID.'\',\'Clanwars\',\'toolbar=no,status=no,scrollbars=yes,width=800,height=600\')" value="'.$_language->module['upload_screenshot'].'">
+  <input type="button" onclick="javascript:self.close()" value="'.$_language->module['close_window'].'" /></p>';
+
 }
 elseif($action=="edit") {
 	include("_mysql.php");
@@ -544,10 +545,10 @@ elseif($action=="saveedit") {
 								 comments='$comments',
                  linkpage='$linkpage' WHERE cwID='$cwID'");
 
-	echo'<center><br /><br /><br /><br />
-  <b>'.$_language->module['clanwar_updated'].'</b><br /><br />
-  <input type="button" onclick="MM_openBrWindow(\'upload.php?cwID='.$cwID.'\',\'Clanwars\',\'toolbar=no,status=no,scrollbars=yes,width=800,height=600\')" value="'.$_language->module['upload_screenshot'].'" />
-  <input type="button" onclick="javascript:self.close()" value="'.$_language->module['close_window'].'" /></center>';
+	echo'<p class="text-center"><br><br><br><br>
+  <b>'.$_language->module['clanwar_updated'].'</b><br><br>
+  <input type="button" onclick="MM_openBrWindow(\'upload.php?cwID='.$cwID.'\',\'Clanwars\',\'toolbar=no,status=no,scrollbars=yes,width=800,height=600\')" value="'.$_language->module['upload_screenshot'].'">
+  <input type="button" onclick="javascript:self.close()" value="'.$_language->module['close_window'].'"></p>';
 }
 elseif($action=="delete") {
 	include("_mysql.php");
@@ -604,8 +605,8 @@ elseif($action=="stats") {
 	eval ("\$title_clanwars = \"".gettemplate("title_clanwars")."\";");
 	echo $title_clanwars;
 
-	echo'<input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=clanwars\');return document.MM_returnValue" value="'.$_language->module['show_clanwars'].'" />';
-	
+	echo'<input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=clanwars\');return document.MM_returnValue" value="'.$_language->module['show_clanwars'].'" class="btn btn-primary">';
+
   echo'<h2>'.$_language->module['clan_stats'].'</h2>';
 
 	$bg1=BG_1;
@@ -809,7 +810,7 @@ elseif($action=="stats") {
           $wars=$anz[$id];
 					if(empty($wars)) $wars='0';
 					$perc=percent($wars, $total, 2);
-					if($perc) $percpic='<img src="images/icons/poll_start.gif" width="1" height="5" alt="" /><img src="images/icons/poll.gif" width="'.round($perc, 0).'" height="5" alt="" /><img src="images/icons/poll_end.gif" width="1" height="5" alt="" /> '.$perc.'%';
+					if($perc) $percpic='<div class="progress"><div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="'.round($perc, 0).'" aria-valuemin="0" aria-valuemax="100" style="width: '.round($perc, 0).'%;"><span class="sr-only">'.round($perc, 0).'% Complete</span></div></div>';
 					else $percpic='<img src="images/icons/poll_start.gif" width="1" height="5" alt="" /><img src="images/icons/poll_end.gif" width="1" height="5" alt="" /> '.$perc.'%';
 
 					eval ("\$clanwars_stats_player_content = \"".gettemplate("clanwars_stats_player_content")."\";");
@@ -852,7 +853,7 @@ elseif($action=="showonly") {
 	$squads=getgamesquads();
 	
   $jumpsquads=str_replace('value="', 'value="index.php?site=clanwars&amp;action=showonly&amp;only=squad&amp;id=', $squads);
-	$jumpmenu='<select name="selectgame" onchange="MM_jumpMenu(\'parent\',this,0)">			   <option value="index.php?site=clanwars">- '.$_language->module['show_all_squads'].' -</option>'.$jumpsquads.'</select> <input type="button" name="Button1" value="'.$_language->module['go'].'" onclick="MM_jumpMenuGo(\'selectgame\',\'parent\',0)" />';		
+	$jumpmenu='<div class="input-group"><select name="selectgame" onchange="MM_jumpMenu(\'parent\',this,0)" class="form-control"><option value="index.php?site=clanwars">- '.$_language->module['show_all_squads'].' -</option>'.$jumpsquads.'</select><span class="input-group-btn"><input type="button" name="Button1" value="'.$_language->module['go'].'" onclick="MM_jumpMenuGo(\'selectgame\',\'parent\',0)" class="btn btn-primary"></span></div>';		
 
 	eval ("\$title_clanwars = \"".gettemplate("title_clanwars")."\";");
 	echo $title_clanwars;
@@ -879,26 +880,20 @@ elseif($action=="showonly") {
 	}
 
 	if($type=="ASC")
-	$seiten='<a href="index.php?site=clanwars&amp;action=showonly&amp;id='.$id.'&amp;page='.$page.'&amp;sort='.$sort.'&amp;type=DESC&amp;only='.$only.'">'.$_language->module['sort'].':</a> <img src="images/icons/asc.gif" width="9" height="7" border="0" alt="" /> '.$page_link.'<br /><br />';
+	$seiten='<a href="index.php?site=clanwars&amp;action=showonly&amp;id='.$id.'&amp;page='.$page.'&amp;sort='.$sort.'&amp;type=DESC&amp;only='.$only.'">'.$_language->module['sort'].' <i class="icon-sort-up"></i></a> '.$page_link.'';
 	else
-	$seiten='<a href="index.php?site=clanwars&amp;action=showonly&amp;id='.$id.'&amp;page='.$page.'&amp;sort='.$sort.'&amp;type=ASC&amp;only='.$only.'">'.$_language->module['sort'].':</a> <img src="images/icons/desc.gif" width="9" height="7" border="0" alt="" /> '.$page_link.'<br /><br />';
+	$seiten='<a href="index.php?site=clanwars&amp;action=showonly&amp;id='.$id.'&amp;page='.$page.'&amp;sort='.$sort.'&amp;type=ASC&amp;only='.$only.'">'.$_language->module['sort'].' <i class="icon-sort-down"></i></a>  '.$page_link.'';
 
-	if(isclanwaradmin($userID)) $admin='<input type="button" onclick="MM_openBrWindow(\'clanwars.php?action=new\',\'Clanwars\',\'toolbar=no,status=no,scrollbars=yes,width=800,height=600\')" value="'.$_language->module['new_clanwar'].'" />';
+	if(isclanwaradmin($userID)) $admin='<input type="button" onclick="MM_openBrWindow(\'clanwars.php?action=new\',\'Clanwars\',\'toolbar=no,status=no,scrollbars=yes,width=800,height=600\')" value="'.$_language->module['new_clanwar'].'" class="btn btn-danger">';
   else $admin='';
-	$Statistics='<input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=clanwars&amp;action=stats\');return document.MM_returnValue" value="'.$_language->module['stat'].'" />';
+	$Statistics='<input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=clanwars&amp;action=stats\');return document.MM_returnValue" value="'.$_language->module['stat'].'" class="btn btn-primary">';
 
-	echo'<form name="jump" action="">
-  <table width="100%" border="0" cellspacing="0" cellpadding="2">
-    <tr>
-      <td>'.$admin.' '.$Statistics.'</td>
-      <td align="right">'.$jumpmenu.'</td>
-    </tr>
-    <tr>
-      <td>'.$seiten.'</td>
-      <td></td>
-    </tr>
-  </table>
-  </form>';
+	echo'<form name="jump" action=""><div class="row">
+            <div class="col-xs-6">'.$admin.' '.$Statistics.'</div>
+            <div class="col-xs-6">'.$jumpmenu.'</div>
+        </div>
+        </form>
+        <p>'.$seiten.'</p>';
 
 	if($gesamt) {
 		$headdate='<a class="titlelink" href="index.php?site=clanwars&amp;action=showonly&amp;id='.$id.'&amp;only='.$only.'&amp;page='.$page.'&amp;sort=date&amp;type='.$type.'">'.$_language->module['date'].':</a>';
@@ -941,8 +936,8 @@ elseif($action=="showonly") {
 			elseif($homescr<$oppscr) $results='<font color="'.$loosecolor.'">'.$homescr.':'.$oppscr.'</font>';
 			else $results='<font color="'.$drawcolor.'">'.$homescr.':'.$oppscr.'</font>';
 
-			if(getanzcwcomments($ds['cwID'])) $details='<a href="index.php?site=clanwars_details&amp;cwID='.$ds['cwID'].'"><img src="images/icons/foldericons/newhotfolder.gif" alt="'.$_language->module['details'].'" border="0" /> ('.getanzcwcomments($ds['cwID']).')</a>';
-			else $details='<a href="index.php?site=clanwars_details&amp;cwID='.$ds['cwID'].'"><img src="images/icons/foldericons/folder.gif" alt="'.$_language->module['details'].'" border="0" /> ('.getanzcwcomments($ds['cwID']).')</a>';
+			if(getanzcwcomments($ds['cwID'])) $details='<a href="index.php?site=clanwars_details&amp;cwID='.$ds['cwID'].'"><img src="images/icons/foldericons/newhotfolder.gif" alt="'.$_language->module['details'].'"> ('.getanzcwcomments($ds['cwID']).')</a>';
+			else $details='<a href="index.php?site=clanwars_details&amp;cwID='.$ds['cwID'].'"><img src="images/icons/foldericons/folder.gif" alt="'.$_language->module['details'].'"> ('.getanzcwcomments($ds['cwID']).')</a>';
 
 			$multiple='';
 			$admdel='';
@@ -953,15 +948,8 @@ elseif($action=="showonly") {
 			unset($result);
 			$n++;
 		}
-    if(isclanwaradmin($userID)) $admdel='<table width="100%" border="0" cellspacing="0" cellpadding="4">
-      <tr>
-        <td><input class="input" type="checkbox" name="ALL" value="ALL" onclick="SelectAll(this.form);" /> '.$_language->module['select_all'].'</td>
-        <td align="right"><select name="quickactiontype">
-        <option value="delete">'.$_language->module['delete_selected'].'</option>
-        </select>
-        <input type="submit" name="quickaction" value="'.$_language->module['go'].'" /></td>
-      </tr>
-    </table>';
+
+    	if(isclanwaradmin($userID)) $admdel='<div class="row"><div class="col-xs-6"><input class="input" type="checkbox" name="ALL" value="ALL" onclick="SelectAll(this.form);"> '.$_language->module['select_all'].'</div><div class="input-group col-xs-6"><select name="quickactiontype" class="form-control"><option value="delete">'.$_language->module['delete_selected'].'</option></select><span class="input-group-btn"><input type="submit" name="quickaction" value="'.$_language->module['go'].'" class="btn btn-danger"></span></div></div>';
 
 		eval ("\$clanwars_foot = \"".gettemplate("clanwars_foot")."\";");
 		echo $clanwars_foot;
@@ -982,8 +970,8 @@ elseif(empty($_GET['action'])) {
 	}
 	$squads=getgamesquads();
 	$jumpsquads=str_replace('value="', 'value="index.php?site=clanwars&amp;action=showonly&amp;only=squad&amp;id=', $squads);
-	$jumpmenu='<select name="selectgame" onchange="MM_jumpMenu(\'parent\',this,0)"><option value="index.php?site=clanwars">- '.$_language->module['show_all_squads'].' -</option>'.$jumpsquads.'</select> <input type="button" name="Button1" value="'.$_language->module['go'].'" onclick="MM_jumpMenuGo(\'selectgame\',\'parent\',0)" />';		
-
+	$jumpmenu='<div class="input-group"><select name="selectgame" onchange="MM_jumpMenu(\'parent\',this,0)" class="form-control"><option value="index.php?site=clanwars">- '.$_language->module['show_all_squads'].' -</option>'.$jumpsquads.'</select> <span class="input-group-btn"><input type="button" name="Button1" value="'.$_language->module['go'].'" onclick="MM_jumpMenuGo(\'selectgame\',\'parent\',0)" class="btn btn-primary"></span></div>';
+    
 	eval ("\$title_clanwars = \"".gettemplate("title_clanwars")."\";");
 	echo $title_clanwars;
 
@@ -997,7 +985,7 @@ elseif(empty($_GET['action'])) {
 	$pages = ceil($gesamt/$max);
 
 	if($pages>1) $page_link = makepagelink("index.php?site=clanwars&amp;sort=$sort&amp;type=$type", $page, $pages);
-  else $page_link = "";
+  	else $page_link = "";
 
 	if($page == "1") {
 		$ergebnis = safe_query("SELECT c.*, s.name AS squadname FROM ".PREFIX."clanwars c LEFT JOIN ".PREFIX."squads s ON s.squadID=c.squad ORDER BY c.$sort $type LIMIT 0,$max");
@@ -1011,25 +999,21 @@ elseif(empty($_GET['action'])) {
 		else $n = ($gesamt+1)-$page*$max+$max;
 	}
 
-  if($type=="ASC") $seiten='<a href="index.php?site=clanwars&amp;page='.$page.'&amp;sort='.$sort.'&amp;type=DESC">'.$_language->module['sort'].':</a> <img src="images/icons/asc.gif" width="9" height="7" border="0" alt="" /> '.$page_link.'<br /><br />';
-	else $seiten='<a href="index.php?site=clanwars&amp;page='.$page.'&amp;sort='.$sort.'&amp;type=ASC">'.$_language->module['sort'].':</a> <img src="images/icons/desc.gif" width="9" height="7" border="0" alt="" /> '.$page_link.'<br /><br />';
+  	if($type=="ASC") $seiten='<a href="index.php?site=clanwars&amp;page='.$page.'&amp;sort='.$sort.'&amp;type=DESC">'.$_language->module['sort'].':</a> <img src="images/icons/asc.gif" width="9" height="7" border="0" alt="" /> '.$page_link.'<br><br>';
+	else $seiten='<a href="index.php?site=clanwars&amp;page='.$page.'&amp;sort='.$sort.'&amp;type=ASC">'.$_language->module['sort'].':</a> <img src="images/icons/desc.gif" width="9" height="7" border="0" alt="" /> '.$page_link.'<br><br>';
 
-  if(isclanwaradmin($userID)) $admin='<input type="button" onclick="MM_openBrWindow(\'clanwars.php?action=new\',\'Clanwars\',\'toolbar=no,status=no,scrollbars=yes,width=800,height=600\')" value="'.$_language->module['new_clanwar'].'" />';
-  else $admin='';
-	$statistics='<input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=clanwars&amp;action=stats\');return document.MM_returnValue" value="'.$_language->module['stat'].'" />';
+  	if(isclanwaradmin($userID)) $admin='<input type="button" onclick="MM_openBrWindow(\'clanwars.php?action=new\',\'Clanwars\',\'toolbar=no,status=no,scrollbars=yes,width=800,height=600\')" value="'.$_language->module['new_clanwar'].'" class="btn btn-danger">';
+  	else $admin='';
+
+	$statistics='<input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=clanwars&amp;action=stats\');return document.MM_returnValue" value="'.$_language->module['stat'].'" class="btn btn-primary">';
 
 	echo'<form name="jump" action="">
-  <table width="100%" border="0" cellspacing="0" cellpadding="2">
-    <tr>
-      <td>'.$admin.' '.$statistics.'</td>
-      <td align="right">'.$jumpmenu.'</td>
-    </tr>
-    <tr>
-      <td>'.$seiten.'</td>
-      <td></td>
-    </tr>
-  </table>
-  </form>';
+            <div class="row">
+                <div class="col-xs-6">'.$admin.' '.$statistics.'</div>
+                <div class="col-xs-6 text-right">'.$jumpmenu.'</div>
+            </div>
+            <div>'.$seiten.'</div>
+        </form>';
 
 	if($gesamt) {
 		$headdate='<a class="titlelink" href="index.php?site=clanwars&amp;page='.$page.'&amp;sort=date&amp;type='.$type.'">'.$_language->module['date'].':</a>';
@@ -1082,15 +1066,16 @@ elseif(empty($_GET['action'])) {
 			unset($result,$anzcomments);
 			$n++;
 		}
-    if(isclanwaradmin($userID)) $admdel='<table width="100%" border="0" cellspacing="0" cellpadding="4">
-      <tr>
-        <td><input class="input" type="checkbox" name="ALL" value="ALL" onclick="SelectAll(this.form);" /> '.$_language->module['select_all'].'</td>
-        <td align="right"><select name="quickactiontype">
-        <option value="delete">'.$_language->module['delete_selected'].'</option>
-        </select>
-        <input type="submit" name="quickaction" value="'.$_language->module['go'].'" /></td>
-      </tr>
-    </table>';
+   		if(isclanwaradmin($userID)) $admdel='<div class="row">
+        <div class="col-xs-6">
+            <input class="input" type="checkbox" name="ALL" value="ALL" onclick="SelectAll(this.form);"> '.$_language->module['select_all'].'
+        </div>
+        <div class="col-xs-6 input-group text-right">
+            <select name="quickactiontype" class="form-control">
+                <option value="delete">'.$_language->module['delete_selected'].'</option>
+            </select>
+            <span class="input-group-btn"><input type="submit" name="quickaction" value="'.$_language->module['go'].'" class="btn btn-danger"></span>
+        </div></div>';
 
 		eval ("\$clanwars_foot = \"".gettemplate("clanwars_foot")."\";");
 		echo $clanwars_foot;

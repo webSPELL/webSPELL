@@ -11,30 +11,17 @@ function chkFormular() {
 -->
 </script>
 <form id="post" name="post" method="post" action="guestbook.php" onsubmit="return chkFormular();">
-<table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="$border">
-  <tr>
-    <td class="title" align="center" bgcolor="$bghead">%guestbook_comment%</td>
-  </tr>
-  <tr><td bgcolor="$pagebg"></td></tr>
-  <tr>
-    <td bgcolor="$bg1">
-    <table width="100%" border="0" align="center" cellpadding="2" cellspacing="0">
-      <tr>
-        <td colspan="2">$addbbcode</td>
-      </tr>
-		<tr>
-        <td colspan="2" width="100"><b>%comment%:</b></td>
-      </tr>
-      <tr>
-        <td colspan="2"><textarea name="message" id="message" cols="30" rows="5"  style="width:99%;">$admincomment</textarea></td>
-      </tr>
-      <tr>
-        <td><small><b>%options%:</b> &#8226; %html% &#8226; %bbcode% &#8226; %smilies%</small>
-        <input name="guestbookID" type="hidden" value="$_GET[guestbookID]" /></td>
-        <td align="right"><input name="savecomment" type="submit" value="%update_comment%" /></td>
-      </tr>
-    </table>
-    </td>
-  </tr>
-</table>
+    <h4>%guestbook_comment%</h4>
+    <div class="form-group">
+        $addbbcode
+    </div>
+    <div class="form-group">
+        <label for="message">%comment%:</label>
+        <textarea name="message" id="message" rows="5" class="form-control" autofocus>$admincomment</textarea>
+        <small class="pull-right"><b>%options%:</b> %bbcode% %smilies%</small>
+    </div>
+    <div class="form-group">
+        <input name="guestbookID" type="hidden" value="$_GET[guestbookID]">
+        <input name="savecomment" type="submit" value="%update_comment%" class="btn btn-danger">
+    </div>
 </form>

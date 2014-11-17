@@ -176,7 +176,7 @@ elseif($action=="edit") {
 }
 
 elseif($action=="show" AND is_numeric($_GET['linkcatID'])) {
-	if(ispageadmin($userID) || isnewsadmin($userID)) echo'<input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=links&amp;action=new\');return document.MM_returnValue" value="'.$_language->module['new_link'].'" /><br /><br />';
+	if(ispageadmin($userID) || isnewsadmin($userID)) echo'<input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=links&amp;action=new\');return document.MM_returnValue" value="'.$_language->module['new_link'].'" class="btn btn-danger"><br><br>';
 	
 	$linkcatID=$_GET['linkcatID'];
 	$getcat = safe_query("SELECT * FROM ".PREFIX."links_categorys  WHERE linkcatID='$linkcatID'");
@@ -205,8 +205,8 @@ elseif($action=="show" AND is_numeric($_GET['linkcatID'])) {
 			if($ds['banner']) $banner='<a href="'.$ds['url'].'" target="_blank"><img src="images/links/'.$ds['banner'].'" border="0" alt="" /></a>';
 			else $banner='';
 			if(ispageadmin($userID) || isnewsadmin($userID)) {
-				$adminaction='<input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=links&amp;action=edit&amp;linkID='.$ds['linkID'].'\');return document.MM_returnValue" value="'.$_language->module['edit'].'" />
-				<input type="button" onclick="MM_confirm(\''.$_language->module['really_delete'].'\', \'links.php?action=delete&amp;linkID='.$ds['linkID'].'\')" value="'.$_language->module['delete'].'" />';
+				$adminaction='<input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=links&amp;action=edit&amp;linkID='.$ds['linkID'].'\');return document.MM_returnValue" value="'.$_language->module['edit'].'" class="btn btn-danger" />
+				<input type="button" onclick="MM_confirm(\''.$_language->module['really_delete'].'\', \'links.php?action=delete&amp;linkID='.$ds['linkID'].'\')" value="'.$_language->module['delete'].'" class="btn btn-danger" />';
 			}
 			else $adminaction='';
 			
@@ -224,10 +224,9 @@ elseif($action=="show" AND is_numeric($_GET['linkcatID'])) {
 
 else {
 	$_language->read_module('links');
-	if(ispageadmin($userID) || isnewsadmin($userID)) echo'<input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=links&amp;action=new\');return document.MM_returnValue" value="'.$_language->module['new_link'].'" /><br /><br />';
-
 	$cats=safe_query("SELECT * FROM ".PREFIX."links_categorys ORDER BY name");
 	if(mysqli_num_rows($cats)) {
+		if(ispageadmin($userID) || isnewsadmin($userID)) echo'<input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=links&amp;action=new\');return document.MM_returnValue" value="'.$_language->module['new_link'].'" /><br /><br />';
 		$anzcats=mysqli_num_rows(safe_query("SELECT linkcatID FROM ".PREFIX."links_categorys"));			
 		$bg1=BG_1;
 		
@@ -254,6 +253,9 @@ else {
 		eval ("\$links_foot = \"".gettemplate("links_foot")."\";");
 		echo $links_foot;
 	}
-	else echo $_language->module['no_categories'];
+	else {
+        if(ispageadmin($userID) || isnewsadmin($userID)) echo'<input type="button" onclick="MM_goToURL(\'parent\',\'admin/admincenter.php?site=linkcategorys\');return document.MM_returnValue" value="'.$_language->module['new_category'].'" class="btn btn-danger" /><br><br>';
+        echo $_language->module['no_categories'];
+    }
 }
 ?>

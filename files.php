@@ -194,10 +194,10 @@ elseif($action == "delete") {
 }
 elseif($action=="newfile") {
 	// ADMINACTIONS
-	$adminactions = '<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td align="left">';
-	$adminactions .= '<input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=files\');return document.MM_returnValue" value="'.$_language->module['files'].'" /> ';
+	$adminactions = '<div class="row"><div class="col-xs-6"><input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=files\');return document.MM_returnValue" value="'.$_language->module['files'].'" class="btn btn-primary"></div>';
+	
 	if(isfileadmin($userID)) {
-		$adminactions .= '</td><td align="right"><input type="button" onclick="MM_openBrWindow(\'admin/admincenter.php?site=filecategorys\',\'\')" value="'.$_language->module['new_category'].'" /></td></tr></table>';
+		$adminactions .= '<div class="col-xs-6 text-right"><input type="button" onclick="MM_openBrWindow(\'admin/admincenter.php?site=filecategorys\',\'\')" value="'.$_language->module['new_category'].'" class="btn btn-danger"></div></div>';
 
 		function generate_options($filecats = '', $offset = '', $subcatID = 0) {
 			$rubrics = safe_query("SELECT * FROM ".PREFIX."files_categorys WHERE subcatID = '".$subcatID."' ORDER BY name");
@@ -229,7 +229,7 @@ elseif($action=="edit") {
 	if($fileID) {
 		if(isfileadmin($userID)) {
 			// ADMINACTIONS
-			$adminactions = '<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td align="right"><input type="button" onclick="MM_openBrWindow(\'admin/admincenter.php?site=filecategorys\',\'\')" value="'.$_language->module['new_category'].'" /></td></tr></table><br />';
+			$adminactions = '<input type="button" onclick="MM_openBrWindow(\'admin/admincenter.php?site=filecategorys\',\'\')" value="'.$_language->module['new_category'].'" class="btn btn-danger">';
 
 			function generate_options($filecats = '', $offset = '', $subcatID = 0) {
 				$rubrics = safe_query("SELECT * FROM ".PREFIX."files_categorys WHERE subcatID = '".$subcatID."' ORDER BY name");
@@ -294,10 +294,7 @@ elseif(isset($_GET['cat'])) {
 	// ADMINACTIONS
 	$adminactions = '';
 	if(isfileadmin($userID)) {
-		$adminactions = '<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td align="left">';
-		$adminactions .= '</td><td align="right"><input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=files&amp;action=newfile\');return document.MM_returnValue" value="'.$_language->module['new_file'].'" /> ';
-		$adminactions .= '<input type="button" onclick="MM_openBrWindow(\'admin/admincenter.php?site=filecategorys\',\'\')" value="'.$_language->module['new_category'].'" />';
-		$adminactions .= '</td></tr></table><br />';
+		$adminactions = '<div class="row"><div class="col-xs-6"><input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=files&amp;action=newfile\');return document.MM_returnValue" value="'.$_language->module['new_file'].'" class="btn btn-danger"></div><div class="col-xs-6 text-right"><input type="button" onclick="MM_openBrWindow(\'admin/admincenter.php?site=filecategorys\',\'\')" value="'.$_language->module['new_category'].'" class="btn btn-danger"></div></div><br>';
 	}
 	echo $adminactions;
 
@@ -403,13 +400,13 @@ elseif(isset($_GET['cat'])) {
 			for($i = 0; $i < $file['rating']; $i++) {
 				$ratings[$i] = 1;
 			}
-			$ratingpic='<img src="images/icons/rating_'.$ratings[0].'_start.gif" width="1" height="5" alt="" />';
+			$ratingpic='<img src="images/icons/rating_'.$ratings[0].'_start.gif">';
 			foreach($ratings as $pic) {
-				$ratingpic.='<img src="images/icons/rating_'.$pic.'.gif" width="4" height="5" alt="" />';
+				$ratingpic.='<img src="images/icons/rating_'.$pic.'.gif">';
 			}
 
 			if(!$userID and $file['accesslevel'] >= 1) $link = '(R)';
-			else $link = '<a href="download.php?fileID='.$fileid.'"><img src="images/icons/download.gif" border="0" alt="" /></a>';
+			else $link = '<a href="download.php?fileID='.$fileid.'"><i class="icon-download icon-large"></i></a>';
 
 			eval("\$files_category_list = \"".gettemplate("files_category_list")."\";");
 			echo $files_category_list;
@@ -424,10 +421,7 @@ elseif(isset($_GET['file'])) {
 	// ADMINACTIONS
 	$adminactions = '';
 	if(isfileadmin($userID)) {
-		$adminactions = '<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td align="left">';
-		$adminactions .= '</td><td align="right"><input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=files&amp;action=newfile\');return document.MM_returnValue" value="'.$_language->module['new_file'].'" /> ';
-		$adminactions .= '<input type="button" onclick="MM_openBrWindow(\'admin/admincenter.php?site=filecategorys\',\'\')" value="'.$_language->module['new_category'].'" />';
-		$adminactions .= '</td></tr></table><br />';
+		$adminactions = '<div class="row"><div class="col-xs-6"><input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=files&amp;action=newfile\');return document.MM_returnValue" value="'.$_language->module['new_file'].'" class="btn btn-danger"></div><div class="col-xs-6 text-right"><input type="button" onclick="MM_openBrWindow(\'admin/admincenter.php?site=filecategorys\',\'\')" value="'.$_language->module['new_category'].'" class="btn btn-danger"></div></div><br>';
 	}
 
 	// FILE-INFORMATION
@@ -468,7 +462,7 @@ elseif(isset($_GET['file'])) {
 	if($mirrors) {
 		if(stristr($mirrors,"||")) {
 			$secondarymirror = explode("||", $mirrors);
-			$mirrorlist = '&#8226; <a href="'.$secondarymirror[0].'" target="_blank">'.$_language->module['download_via_mirror'].' #2</a><br />&#8226; <a href="'.$secondarymirror[1].'" target="_blank">'.$_language->module['download_via_mirror'].' #3</a>';
+			$mirrorlist = '&#8226; <a href="'.$secondarymirror[0].'" target="_blank">'.$_language->module['download_via_mirror'].' #2</a><br>&#8226; <a href="'.$secondarymirror[1].'" target="_blank">'.$_language->module['download_via_mirror'].' #3</a>';
 		}
 		else $mirrorlist = '&#8226; <a href="'.$mirrors.'" target="_blank">'.$_language->module['download_via_mirror'].' #2</a>';
 	}
@@ -483,9 +477,9 @@ elseif(isset($_GET['file'])) {
 	for($i = 0; $i < $file['rating']; $i++) {
 		$ratings[$i] = 1;
 	}
-	$ratingpic = '<img src="images/icons/rating_'.$ratings[0].'_start.gif" width="1" height="5" alt="" />';
+	$ratingpic = '<img src="images/icons/rating_'.$ratings[0].'_start.gif">';
 	foreach($ratings as $pic) {
-		$ratingpic .= '<img src="images/icons/rating_'.$pic.'.gif" width="4" height="5" alt="" />';
+		$ratingpic .= '<img src="images/icons/rating_'.$pic.'.gif">';
 	}
 	if($loggedin) {
 		$getfiles = safe_query("SELECT files FROM ".PREFIX."user WHERE userID='".$userID."'");
@@ -503,8 +497,10 @@ elseif(isset($_GET['file'])) {
 		}
 		if($found) $rateform = "<i>".$_language->module['you_have_already_rated']."</i>";
 		else {
-			$rateform = '<form method="post" name="rating_file'.$file['fileID'].'" action="rating.php">'.$_language->module['rate_now'].'
-				<select name="rating">
+			$rateform = '<form method="post" name="rating_file'.$file['fileID'].'" action="rating.php" role="form">
+            <td>'.$_language->module['rate_now'].'</td>
+            <td><div class="input-group">
+				<select name="rating" class="form-control">
 					<option>0 - '.$_language->module['poor'].'</option>
 					<option>1</option>
 					<option>2</option>
@@ -517,10 +513,14 @@ elseif(isset($_GET['file'])) {
 					<option>9</option>
 					<option>10 - '.$_language->module['perfect'].'</option>
 				</select>
-				<input type="hidden" name="userID" value="'.$userID.'" />
-				<input type="hidden" name="type" value="fi" />
-				<input type="hidden" name="id" value="'.$file['fileID'].'" />
-				<input type="submit" name="Submit" value="'.$_language->module['rate'].'" />
+            
+                <span class="input-group-btn">
+                    <input type="submit" name="Submit" value="'.$_language->module['rate'].'" class="btn btn-primary">
+                </span>
+            </div></td>
+            <input type="hidden" name="userID" value="'.$userID.'">
+            <input type="hidden" name="type" value="fi">
+            <input type="hidden" name="id" value="'.$file['fileID'].'">
         </form>';
 		}
 	}
@@ -535,9 +535,9 @@ elseif(isset($_GET['file'])) {
 	$admintools = '';
 	// ADMINTOOLS
 	if(isfileadmin($userID)) {
-		$admintools = '<tr><td bgcolor="'.$pagebg.'" colspan="2"></td></tr><tr><td bgcolor="'.$bg2.'" colspan="2" align="right">';
-		$admintools .= '<input type="button" onclick="MM_goToURL(\'parent\', \'index.php?site=files&amp;action=edit&amp;fileID='.$file['fileID'].'\');return document.MM_returnValue" value="'.$_language->module['edit_file'].'" /> ';
-		$admintools .= '<input type="button" onclick="MM_confirm(\''.$_language->module['really_delete_file'].'\', \'index.php?site=files&amp;action=delete&amp;file='.$file['fileID'].'\')" value="'.$_language->module['delete_file'].'" /> ';
+		$admintools = '<tr><td colspan="2" align="right">';
+		$admintools .= '<input type="button" onclick="MM_goToURL(\'parent\', \'index.php?site=files&amp;action=edit&amp;fileID='.$file['fileID'].'\');return document.MM_returnValue" value="'.$_language->module['edit_file'].'" class="btn btn-danger"> ';
+		$admintools .= '<input type="button" onclick="MM_confirm(\''.$_language->module['really_delete_file'].'\', \'index.php?site=files&amp;action=delete&amp;file='.$file['fileID'].'\')" value="'.$_language->module['delete_file'].'" class="btn btn-danger"> ';
 		$admintools .= '</td></tr>';
 	}
 
@@ -545,8 +545,8 @@ elseif(isset($_GET['file'])) {
 	if($userID) $accesslevel = 1;
 	if(isclanmember($userID)) $accesslevel = 2;
 
-	if($file['accesslevel'] <= $accesslevel) $link = '<a href="download.php?fileID='.$fileID.'"><img src="images/icons/download.gif" border="0" alt="" /> <b><font color="#00AA00">'.str_replace('%filename%', $filename, $_language->module['download_now']).'</font></b> <img src="images/icons/download.gif" border="0" alt="" /></a>';
-	else $link = $_language->module['download_registered_only'].'<br /><a href="index.php?site=login">'.$_language->module['login'].'</a> | <a href="index.php?site=register">'.$_language->module['register'].'</a>';
+	if($file['accesslevel'] <= $accesslevel) $link = '<a href="download.php?fileID='.$fileID.'" class="btn btn-lg btn-success"><i class="icon-download icon-large"></i> '.str_replace('%filename%', $filename, $_language->module['download_now']).'</a>';
+	else $link = $_language->module['download_registered_only'].'<br><a href="index.php?site=login">'.$_language->module['login'].'</a> | <a href="index.php?site=register">'.$_language->module['register'].'</a>';
 
 	eval("\$files_display = \"".gettemplate("files_display")."\";");
 	echo $files_display;
@@ -577,7 +577,7 @@ elseif($action=="report") {
 			$captcha = $CAPCLASS->create_captcha();
 			$hash = $CAPCLASS->get_hash();
 			$CAPCLASS->clear_oldcaptcha();
-			$captcha_form = $captcha.' <input type="text" name="captcha" size="5" maxlength="5" /><input name="captcha_hash" type="hidden" value="'.$hash.'" /><br />';
+			$captcha_form = '<div class="form-group"><div class="input-group"><span class="input-group-addon captcha-img">'.$captcha.'</span> <input type="number" name="captcha" size="5" maxlength="5" placeholder="Captcha" class="form-control"><input name="captcha_hash" type="hidden" value="'.$hash.'"></div></div>';
 		}
 
 		eval("\$report_deadlink = \"".gettemplate("report_deadlink")."\";");
@@ -590,10 +590,7 @@ else {
 	$adminactions = '';
 	if(isclanmember($userID)) $accesslevel = 2;
 	if(isfileadmin($userID)) {
-		$adminactions = '<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td align="right">';
-		$adminactions .= '<input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=files&amp;action=newfile\');return document.MM_returnValue" value="'.$_language->module['new_file'].'" /> ';
-		$adminactions .= '<input type="button" onclick="MM_openBrWindow(\'admin/admincenter.php?site=filecategorys\',\'\')" value="'.$_language->module['new_category'].'" />';
-		$adminactions .= '</td></tr></table><br />';
+		$adminactions = '<div class="text-right"><input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=files&amp;action=newfile\');return document.MM_returnValue" value="'.$_language->module['new_file'].'" class="btn btn-danger"> <input type="button" onclick="MM_openBrWindow(\'admin/admincenter.php?site=filecategorys\',\'\')" value="'.$_language->module['new_category'].'"class="btn btn-danger"></div><br>';
 	}
 
 	// STATS
@@ -638,11 +635,7 @@ else {
 
 		// TOP 5 FILES
 		$top5qry = safe_query("SELECT * FROM ".PREFIX."files WHERE accesslevel <= ".$accesslevel." ORDER BY downloads DESC LIMIT 0,5");
-		$top5 = '<table width="100%" cellspacing="0" cellpadding="2" bgcolor="'.BORDER.'" border="0" align="right">
-			<tr bgcolor="'.BGHEAD.'">
-				<td colspan="3" class="title">&nbsp; &#8226; '.$_language->module['top_5_downloads'].'</td>
-			</tr>
-			<tr><td bgcolor="'.PAGEBG.'" colspan="3"></td></tr>';
+		$top5 = '<b>'.$_language->module['top_5_downloads'].'</b><ul class="list-group">';
         
 		$n = 1;
 		while($file = mysqli_fetch_array($top5qry)) {
@@ -654,15 +647,11 @@ else {
 			}
 			$filename = '<a href="index.php?site=files&amp;file='.$file['fileID'].'"><b>'.$filename.'</b></a>';
 			if($file['downloads'] != '0') {
-				$top5 .= '<tr>
-						<td bgcolor="'.$bg.'" width="20" align="center"><b>'.$n.'.</b></td>
-						<td bgcolor="'.$bg.'">'.$filename.'</td>
-						<td bgcolor="'.$bg.'" width="70" align="right">'.$file['downloads'].'</td>
-					</tr>';
+				$top5 .= '<li class="list-group-item"><span class="badge">'.$file['downloads'].'</span> '.$n.' '.$filename.'</li>';
 			}
 			$n++;
 		}
-		$top5 .= '</table>';
+		$top5 .= '</ul>';
 
 		// FILE-OVERVIEW
 		$pagebg = PAGEBG;
@@ -670,7 +659,7 @@ else {
 		$bg1 = BG_1;
 		$bg2 = BG_2;
 		
-    eval("\$files_stats = \"".gettemplate("files_stats")."\";");
+    	eval("\$files_stats = \"".gettemplate("files_stats")."\";");
 		eval("\$files_overview = \"".gettemplate("files_overview_head")."\";");
 		echo $files_overview;
 

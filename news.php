@@ -291,9 +291,9 @@ elseif($action=="preview") {
 	echo $news;
 
 	echo'<hr />
-  <input type="button" onclick="MM_goToURL(\'parent\',\'news.php?action=edit&amp;newsID='.$newsID.'\');return document.MM_returnValue" value="'.$_language->module['edit'].'" />
-  <input type="button" onclick="javascript:self.close()" value="'.$_language->module['save_news'].'" />
-  <input type="button" onclick="MM_confirm(\''.$_language->module['really_delete'].'\', \'news.php?action=delete&amp;id='.$newsID.'&amp;close=true\')" value="'.$_language->module['delete'].'" /></body></html>';
+  <input type="button" onclick="MM_goToURL(\'parent\',\'news.php?action=edit&amp;newsID='.$newsID.'\');return document.MM_returnValue" value="'.$_language->module['edit'].'" class="btn btn-danger" />
+  <input type="button" onclick="javascript:self.close()" value="'.$_language->module['save_news'].'" class="btn btn-danger" />
+  <input type="button" onclick="MM_confirm(\''.$_language->module['really_delete'].'\', \'news.php?action=delete&amp;id='.$newsID.'&amp;close=true\')" value="'.$_language->module['delete'].'" class="btn btn-danger" /></body></html>';
 }
 elseif($quickactiontype=="publish") {
 	include("_mysql.php");
@@ -530,12 +530,13 @@ elseif(basename($_SERVER['PHP_SELF'])=="news.php"){
 elseif($action=="unpublished") {
 	$_language->read_module('news');
 	
-  eval ("\$title_news = \"".gettemplate("title_news")."\";");
+  	eval ("\$title_news = \"".gettemplate("title_news")."\";");
 	echo $title_news;
+	
+	$post = '';
+	if(isnewsadmin($userID)) $post='<input type="button" onclick="MM_openBrWindow(\'news.php?action=new\',\'News\',\'toolbar=no,status=no,scrollbars=yes,width=800,height=600\');" value="'.$_language->module['post_news'].'" class="btn btn-danger" />';
 
-	if(isnewsadmin($userID)) $post='<input type="button" onclick="MM_openBrWindow(\'news.php?action=new\',\'News\',\'toolbar=no,status=no,scrollbars=yes,width=800,height=600\');" value="'.$_language->module['post_news'].'" />';
-
-	echo $post.' <input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=news\');return document.MM_returnValue;" value="'.$_language->module['show_news'].'" /><hr />';
+	echo $post.' <input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=news\');return document.MM_returnValue;" value="'.$_language->module['show_news'].'" class="btn btn-danger" /><hr />';
 
 	$page='';
 
@@ -581,20 +582,25 @@ elseif($action=="unpublished") {
 				$multiple='';
 				$admdel='';
 				if(isnewsadmin($userID)) {
-					$multiple='<input class="input" type="checkbox" name="newsID[]" value="'.$ds['newsID'].'" />';
-					$admdel='<table width="100%" border="0" cellspacing="0" cellpadding="2">
-            <tr>
-              <td><input class="input" type="checkbox" name="ALL" value="ALL" onclick="SelectAll(this.form);" /> '.$_language->module['select_all'].'</td>
-              <td align="right"><select name="quickactiontype">
-                <option value="publish">'.$_language->module['publish_selected'].'</option>
-                <option value="delete">'.$_language->module['delete_selected'].'</option>
-              </select>
-              <input type="submit" name="quickaction" value="'.$_language->module['go'].'" /></td>
-            </tr>
-          </table>
-          </form>';
-
+					$multiple='<input class="input" type="checkbox" name="newsID[]" value="'.$ds['newsID'].'">';
+					$admdel='<div class="row">
+                        <div class="col-md-6">
+                            <input class="input" type="checkbox" name="ALL" value="ALL" onclick="SelectAll(this.form);"> '.$_language->module['select_all'].'
+                        </div>
+                        <div class="col-md-6">
+                            <div class="input-group">
+                                <select name="quickactiontype" class="form-control">
+                                    <option value="publish">'.$_language->module['publish_selected'].'</option>
+                                    <option value="delete">'.$_language->module['delete_selected'].'</option>
+                                </select>
+                                <span class="input-group-btn">
+                                    <input type="submit" name="quickaction" value="'.$_language->module['go'].'" class="btn btn-danger">
+                                </span>
+                            </div>
+                        </div>
+                    </div></form>';
 				}
+
 				eval ("\$news_archive_content = \"".gettemplate("news_archive_content")."\";");
 				echo $news_archive_content;
 				$i++;
@@ -628,12 +634,12 @@ elseif($action=="archive") {
 	$post='';
 	$publish='';
 	if(isnewsadmin($userID)) {
-		$post='<input type="button" onclick="MM_openBrWindow(\'news.php?action=new\',\'News\',\'toolbar=no,status=no,scrollbars=yes,width=800,height=600\')" value="'.$_language->module['post_news'].'" />';
+		$post='<input type="button" onclick="MM_openBrWindow(\'news.php?action=new\',\'News\',\'toolbar=no,status=no,scrollbars=yes,width=800,height=600\')" value="'.$_language->module['post_news'].'" class="btn btn-danger">';
 		$unpublished=safe_query("SELECT newsID FROM ".PREFIX."news WHERE published='0' AND saved='1'");
 		$unpublished=mysqli_num_rows($unpublished);
-		if($unpublished) $publish='<input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=news&amp;action=unpublished\');return document.MM_returnValue" value="'.$unpublished.' '.$_language->module['unpublished_news'].'" /> ';
+		if($unpublished) $publish='<input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=news&amp;action=unpublished\');return document.MM_returnValue" value="'.$unpublished.' '.$_language->module['unpublished_news'].'" class="btn btn-danger"> ';
 	}
-	echo $post.' '.$publish.' <input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=news\');return document.MM_returnValue" value="'.$_language->module['show_news'].'" /><hr />';
+	echo $post.' '.$publish.' <input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=news\');return document.MM_returnValue" value="'.$_language->module['show_news'].'" class="btn btn-primary"><hr>';
 
 	$all=safe_query("SELECT newsID FROM ".PREFIX."news WHERE published='1' AND intern<=".isclanmember($userID));
 	$gesamt=mysqli_num_rows($all);
@@ -658,9 +664,9 @@ elseif($action=="archive") {
 	}
 	if($all) {
 		if($type=="ASC")
-		echo'<a href="index.php?site=news&amp;action=archive&amp;page='.$page.'&amp;sort='.$sort.'&amp;type=DESC">'.$_language->module['sort'].'</a> <img src="images/icons/asc.gif" width="9" height="7" border="0" alt="" />&nbsp;&nbsp;&nbsp;';
+			echo'<a href="index.php?site=news&amp;action=archive&amp;page='.$page.'&amp;sort='.$sort.'&amp;type=DESC">'.$_language->module['sort'].'</a> <img src="images/icons/asc.gif" width="9" height="7" border="0" alt="">&nbsp;&nbsp;&nbsp;';
 		else
-		echo'<a href="index.php?site=news&amp;action=archive&amp;page='.$page.'&amp;sort='.$sort.'&amp;type=ASC">'.$_language->module['sort'].'</a> <img src="images/icons/desc.gif" width="9" height="7" border="0" alt="" />&nbsp;&nbsp;&nbsp;';
+			echo'<a href="index.php?site=news&amp;action=archive&amp;page='.$page.'&amp;sort='.$sort.'&amp;type=ASC">'.$_language->module['sort'].'</a> <img src="images/icons/desc.gif" width="9" height="7" border="0" alt="">&nbsp;&nbsp;&nbsp;';
 
 
 		if($pages>1) echo $page_link;
@@ -702,24 +708,36 @@ elseif($action=="archive") {
 
 			$multiple='';
 			$admdel='';
-			if(isnewsadmin($userID)) $multiple='<input class="input" type="checkbox" name="newsID[]" value="'.$ds['newsID'].'" />';
+			if(isnewsadmin($userID)) $multiple='<input class="archiveitem-checkb" type="checkbox" name="newsID[]" value="'.$ds['newsID'].'">';
 
 			eval ("\$news_archive_content = \"".gettemplate("news_archive_content")."\";");
 			echo $news_archive_content;
 			$i++;
 		}
 		
-    if(isnewsadmin($userID)) $admdel='<table width="100%" border="0" cellspacing="0" cellpadding="2">
-		  <tr>
-        <td><input class="input" type="checkbox" name="ALL" value="ALL" onclick="SelectAll(this.form);" /> '.$_language->module['select_all'].'</td>
-        <td align="right"><select name="quickactiontype">
-          <option value="delete">'.$_language->module['delete_selected'].'</option>
-          <option value="unpublish">'.$_language->module['unpublish_selected'].'</option>
-        </select>
-        <input type="submit" name="quickaction" value="'.$_language->module['go'].'" /></td>
-      </tr>
-    </table>
-    </form>';
+	    if(isnewsadmin($userID)){
+	    	$admdel='<div class="row">
+			  
+	          <div class="col-md-4">
+	           <input class="input" id="archivecbx" type="checkbox" name="ALL" value="ALL" onclick="SelectAll(this.form);">
+	           <label for="archivecbx">'.$_language->module['select_all'].'</label>
+	          </div>
+	          <div class="col-md-8">
+
+	            <div class="input-group">
+			      <select name="quickactiontype" class="form-control">
+			          <option value="delete">'.$_language->module['delete_selected'].'</option>
+			          <option value="unpublish">'.$_language->module['unpublish_selected'].'</option>
+			      </select>
+
+	              <span class="input-group-btn">
+	                <input type="submit" name="quickaction" value="'.$_language->module['go'].'" class="btn btn-danger">
+	              </span>
+	            </div>
+
+	          </div>
+	    </div></form>';
+		}
 		else $admdel='';
 
 		eval ("\$news_archive_foot = \"".gettemplate("news_archive_foot")."\";");
@@ -738,14 +756,14 @@ else {
 	$post='';
 	$publish='';
 	if(isnewswriter($userID)) {
-		$post='<input type="button" onclick="MM_openBrWindow(\'news.php?action=new\',\'News\',\'toolbar=no,status=no,scrollbars=yes,width=800,height=600\');" value="'.$_language->module['post_news'].'" />';
+		$post='<input type="button" onclick="MM_openBrWindow(\'news.php?action=new\',\'News\',\'toolbar=no,status=no,scrollbars=yes,width=800,height=600\');" value="'.$_language->module['post_news'].'" class="btn btn-danger" />';
 	}
 	if(isnewsadmin($userID)) {
 		$unpublished=safe_query("SELECT newsID FROM ".PREFIX."news WHERE published='0' AND saved='1'");
 		$unpublished=mysqli_num_rows($unpublished);
-		if($unpublished) $publish='<input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=news&amp;action=unpublished\');return document.MM_returnValue;" value="'.$unpublished.' '.$_language->module['unpublished_news'].'" /> ';
+		if($unpublished) $publish='<input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=news&amp;action=unpublished\');return document.MM_returnValue;" value="'.$unpublished.' '.$_language->module['unpublished_news'].'" class="btn btn-danger" /> ';
 	}
-	echo $post.' '.$publish.'<input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=news&amp;action=archive\');return document.MM_returnValue;" value="'.$_language->module['news_archive'].'" /><hr />';
+	echo $post.' '.$publish.'<input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=news&amp;action=archive\');return document.MM_returnValue;" value="'.$_language->module['news_archive'].'" class="btn btn-primary" /><hr />';
 
 	if(isset($_GET['show'])) {
 		$result=safe_query("SELECT rubricID FROM ".PREFIX."news_rubrics WHERE rubric='".$_GET['show']."' LIMIT 0,1");
@@ -840,11 +858,11 @@ else {
 
 		$adminaction = '';
 		if(isnewsadmin($userID)) {
-			$adminaction .= '<input type="button" onclick="MM_goToURL(\'parent\',\'news.php?quickactiontype=unpublish&amp;newsID='.$ds['newsID'].'\');return document.MM_returnValue;" value="'.$_language->module['unpublish'].'" /> ';
+			$adminaction .= '<input type="button" onclick="MM_goToURL(\'parent\',\'news.php?quickactiontype=unpublish&amp;newsID='.$ds['newsID'].'\');return document.MM_returnValue;" value="'.$_language->module['unpublish'].'" class="btn btn-danger" /> ';
 		}
 		if((isnewswriter($userID) and $ds['poster'] == $userID) or isnewsadmin($userID)) {
-			$adminaction .= '<input type="button" onclick="MM_openBrWindow(\'news.php?action=edit&amp;newsID='.$ds['newsID'].'\',\'News\',\'toolbar=no,status=no,scrollbars=yes,width=800,height=600\');" value="'.$_language->module['edit'].'" />
-		  <input type="button" onclick="MM_confirm(\''.$_language->module['really_delete'].'\', \'news.php?action=delete&amp;id='.$ds['newsID'].'\')" value="'.$_language->module['delete'].'" />';
+			$adminaction .= '<input type="button" onclick="MM_openBrWindow(\'news.php?action=edit&amp;newsID='.$ds['newsID'].'\',\'News\',\'toolbar=no,status=no,scrollbars=yes,width=800,height=600\');" value="'.$_language->module['edit'].'" class="btn btn-danger" />
+		  <input type="button" onclick="MM_confirm(\''.$_language->module['really_delete'].'\', \'news.php?action=delete&amp;id='.$ds['newsID'].'\')" value="'.$_language->module['delete'].'" class="btn btn-danger" />';
 		}
 
 		eval ("\$news = \"".gettemplate("news")."\";");
