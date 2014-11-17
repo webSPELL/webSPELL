@@ -52,20 +52,26 @@ if($imprint_type) {
 	$ds=mysqli_fetch_array(safe_query("SELECT imprint FROM `".PREFIX."imprint`"));
 	$imprint_head = htmloutput($ds['imprint'])."<br><br>";
 } else {
-	$imprint_head='<table>
-		<tr>
-			<td style="width: 130px;">'.$_language->module['webmaster'].'</td>
-			<td><a href="mailto:'.mail_protect($admin_email).'">'.$admin_name.'</a></td>
-		</tr>
-		<tr>
-			<td>'.$_language->module['admins'].'</td>
-			<td>'.$administrators.'</td>
-		</tr>
-		<tr>
-			<td>'.$_language->module['mods'].'</td>
-			<td>'.$moderators.'</td>
-		</tr>
-	</table>';
+	$imprint_head='<div class="form-horizontal">
+	  <div class="form-group">
+		<label class="col-sm-3 control-label">'.$_language->module['webmaster'].'</label>
+		<div class="col-sm-9">
+		  <p class="form-control-static"><a href="mailto:'.mail_protect($admin_email).'">'.$admin_name.'</a></p>
+		</div>
+	  </div>
+	  <div class="form-group">
+		<label class="col-sm-3 control-label">'.$_language->module['admins'].'</label>
+		<div class="col-sm-9">
+		  <p class="form-control-static">'.$administrators.'</p>
+		</div>
+	  </div>
+	  <div class="form-group">
+		<label class="col-sm-3 control-label">'.$_language->module['webmaster'].'</label>
+		<div class="col-sm-9">
+		  <p class="form-control-static">'.$moderators.'</p>
+		</div>
+	  </div>
+	</div>';
 }
 
 eval ("\$imprint = \"".gettemplate("imprint")."\";");
