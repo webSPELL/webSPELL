@@ -1,83 +1,104 @@
-<form action="index.php?site=joinus&amp;action=save" method="post" name="post">
-
-    <div class="text-center">$showerror</div>
-
-    <div class="row">
-
-        <div class="col-md-6">
-            <div class="form-group">
-                <label for="squad">%squad%:</label>
-                <select name="squad" id="squad" class="form-control">$squads</select>
-            </div>
-        </div>
-
-        <div class="col-md-6">
-            <div class="form-group">
-                <label for="nick">%nick%:</label>
-                <input name="nick" id="nick" value="$nick" type="text" class="form-control">
-            </div>
-        </div>
-
-        <div class="col-md-6">
-            <div class="form-group">
-                <label for="name">%name%:</label>
-                <input name="name" id="name" value="$name" type="text" class="form-control">
-            </div>
-        </div>
-
-        <div class="col-md-6">
-            <div class="form-group">
-                <label for="name">%mail%:</label>
-                <input name="mail" id="mail" value="$mail" type="text" class="form-control">
-            </div>
-        </div>
-
-        <div class="col-md-6">
-            <div class="form-group">
-                <label for="name">%icq_msn%:</label>
-                <input name="icq_msn" id="icq_msn" value="$icq_msn" type="text" class="form-control">
-            </div>
-        </div>
-
-        <div class="col-md-6">
-            <div class="form-group">
-                <label for="mail">%age%:</label>
-                <input name="age" id="age" value="$age" type="text" class="form-control">
-            </div>
-        </div>
-
-        <div class="col-md-6">
-            <div class="form-group">
-                <label for="city">%city%:</label>
-                <input name="city" id="city" value="$city" type="text" class="form-control">
-            </div>
-        </div>
-
-        <div class="col-md-6">
-            <div class="form-group">
-                <label for="city">%clan_history%:</label>
-                <input name="clan_history" id="clan_history" value="$clan_history" type="text" class="form-control">
-            </div>
-        </div>
-
-        <div class="col-md-6">
-            <div class="form-group">
-                <label for="captcha">%security_code%:</label>
-                $captcha
-                <input type="number" id="captcha" name="captcha" size="10" class="form-control">
-                <input name="captcha_hash" type="hidden" value="$hash">
-            </div>
-        </div>
-
+<div class="panel panel-default">
+    <div class="panel-heading">%joinus_form%</div>
+    <div class="panel-body">
+    	<form action="index.php?site=joinus&amp;action=save" method="post" name="post" role="form" class="form-horizontal">
+        	
+            <!-- Error Box -->
+            $showerror
+            
+            <!-- Squad -->
+			<div class="form-group">
+				<label for="selectSquad" class="col-xs-12 col-md-3 control-label">%squad%:</label>
+				<div class="col-xs-12 col-md-9">
+                    <select name="squad" id="selectSquad" class="form-control">
+                    	$squads
+                    </select>
+				</div>
+			</div>
+            
+            <!-- Nick -->
+			<div class="form-group">
+				<label for="inputNick" class="col-xs-12 col-md-3 control-label">%nick%:</label>
+				<div class="col-xs-12 col-md-9">
+                    <input type="text" name="nick" class="form-control" id="inputNick" placeholder="%nick%">
+				</div>
+			</div>
+            
+            <!-- Name -->
+			<div class="form-group">
+				<label for="inputName" class="col-xs-12 col-md-3 control-label">%name%:</label>
+				<div class="col-xs-12 col-md-9">
+                    <input type="text" name="name" class="form-control" id="inputName" placeholder="%name%">
+				</div>
+			</div>
+            
+            <!-- Mail -->
+			<div class="form-group">
+				<label for="inputMail" class="col-xs-12 col-md-3 control-label">%mail%:</label>
+				<div class="col-xs-12 col-md-9">
+                    <input type="email" name="email" class="form-control" id="inputMail" placeholder="%mail%">
+				</div>
+			</div>
+            
+            <!-- Messenger -->
+			<div class="form-group">
+				<label for="inputMessenger" class="col-xs-12 col-md-3 control-label">%icq_msn%:</label>
+				<div class="col-xs-12 col-md-9">
+                    <input type="text" name="messenger" class="form-control" id="inputMessenger" placeholder="%icq_msn%">
+				</div>
+			</div>
+            
+            <!-- Age -->
+			<div class="form-group">
+				<label for="inputAge" class="col-xs-12 col-md-3 control-label">%age%:</label>
+				<div class="col-xs-12 col-md-9">
+                    <input type="number" name="age" class="form-control" id="inputAge" placeholder="%age%" size="2">
+				</div>
+			</div>
+            
+            <!-- City -->
+			<div class="form-group">
+				<label for="inputCity" class="col-xs-12 col-md-3 control-label">%city%:</label>
+				<div class="col-xs-12 col-md-9">
+                    <input type="text" name="city" class="form-control" id="inputCity" placeholder="%city%">
+				</div>
+			</div>
+            
+            <!-- Clan history -->
+			<div class="form-group">
+				<label for="inputClan_history" class="col-xs-12 col-md-3 control-label">%clan_history%:</label>
+				<div class="col-xs-12 col-md-9">
+                    <input type="text" name="clanhistory" class="form-control" id="inputClan_history" placeholder="%clan_history%">
+				</div>
+			</div>
+            
+            <!-- Info -->
+			<div class="form-group">
+				<div class="col-xs-12 col-md-12">
+                	<label for="textareaInfo">%additional_info%:</label>
+                    <textarea name="info" id="textareaInfo" class="form-control" rows="5">$info</textarea>
+				</div>
+			</div>
+            
+            <!-- Security code -->
+			<div class="form-group">
+            	<label for="inputSecurity_code" class="col-xs-12 col-md-3 control-label">%security_code%:</label>
+            	<div class="col-xs-12 col-md-9">
+					<div class="input-group">
+                		<span class="input-group-addon captcha-img">$captcha</span>
+                  		<input type="number" name="captcha" class="form-control" id="inputSecurity_code" size="10">
+                    	<input name="captcha_hash" type="hidden" value="$hash">
+					</div>
+                </div>
+			</div>
+            
+            <!-- Submit button -->
+			<div class="form-group">
+				<div class="col-xs-12 text-right">
+					<button type="submit" name="post" class="btn btn-primary">%send%</button>
+				</div>
+			</div>
+            
+    	</form>
     </div>
-
-    <div class="form-group">
-        <label for="info">%additional_info%:</label>
-        <textarea name="info" id="info" cols="50" rows="5" class="form-control">$info</textarea>
-    </div>
-
-    <div class="form-group text-right">
-        <input name="post" type="submit" value="%send%" class="btn btn-primary">
-    </div>
-
-</form>
+</div>
