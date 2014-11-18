@@ -499,7 +499,7 @@ function toggle($content, $id) {
 	$_language->read_module('bbcode', true);
 	$replace1='<table width="100%">
     <tr>
-      <td><a href="javascript:Toggle(\''.$id.'_%d\')"><img src="images/icons/expand.gif" border="0" id="ToggleImg_'.$id.'_%d" alt="'.$_language->module['read_more'].'" title="'.$_language->module['read_more'].'" /> %s</a></td>
+      <td><a href="javascript:Toggle(\''.$id.'_%d\')"><img src="images/icons/expand.gif" border="0" id="ToggleImg_'.$id.'_%d" alt="'.$_language->module['readMore'].'" title="'.$_language->module['readMore'].'" /> %s</a></td>
     </tr>
     <tr>
       <td style="padding-left: 16px;"><div id="ToggleRow_'.$id.'_%d" style="display:none">';

@@ -1,0 +1,13 @@
+{
+  "name": "webspell",
+  "version": "4.2.3",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-string-replace": "~0.8.0",
+    "grunt-contrib-jshint": "^0.10.0",
+    "logfile-grunt": "^0.1.5",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-jscs-checker": "^0.8.1",
+    "grunt-jscs": "^0.8.1"
+  }
+}

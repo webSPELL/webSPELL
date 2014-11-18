@@ -853,7 +853,7 @@ elseif($action=="showonly") {
 	$squads=getgamesquads();
 	
   $jumpsquads=str_replace('value="', 'value="index.php?site=clanwars&amp;action=showonly&amp;only=squad&amp;id=', $squads);
-	$jumpmenu='<div class="input-group"><select name="selectgame" onchange="MM_jumpMenu(\'parent\',this,0)" class="form-control"><option value="index.php?site=clanwars">- '.$_language->module['show_all_squads'].' -</option>'.$jumpsquads.'</select><span class="input-group-btn"><input type="button" name="Button1" value="'.$_language->module['go'].'" onclick="MM_jumpMenuGo(\'selectgame\',\'parent\',0)" class="btn btn-primary"></span></div>';		
+	$jumpmenu='<div class="input-group"><select name="selectgame" onchange="MMJumpMenu(\'parent\',this,0)" class="form-control"><option value="index.php?site=clanwars">- '.$_language->module['show_all_squads'].' -</option>'.$jumpsquads.'</select><span class="input-group-btn"><input type="button" name="Button1" value="'.$_language->module['go'].'" onclick="MM_jumpMenuGo(\'selectgame\',\'parent\',0)" class="btn btn-primary"></span></div>';
 
 	eval ("\$title_clanwars = \"".gettemplate("title_clanwars")."\";");
 	echo $title_clanwars;
@@ -970,7 +970,7 @@ elseif(empty($_GET['action'])) {
 	}
 	$squads=getgamesquads();
 	$jumpsquads=str_replace('value="', 'value="index.php?site=clanwars&amp;action=showonly&amp;only=squad&amp;id=', $squads);
-	$jumpmenu='<div class="input-group"><select name="selectgame" onchange="MM_jumpMenu(\'parent\',this,0)" class="form-control"><option value="index.php?site=clanwars">- '.$_language->module['show_all_squads'].' -</option>'.$jumpsquads.'</select> <span class="input-group-btn"><input type="button" name="Button1" value="'.$_language->module['go'].'" onclick="MM_jumpMenuGo(\'selectgame\',\'parent\',0)" class="btn btn-primary"></span></div>';
+	$jumpmenu='<div class="input-group"><select name="selectgame" onchange="MMJumpMenu(\'parent\',this,0)" class="form-control"><option value="index.php?site=clanwars">- '.$_language->module['show_all_squads'].' -</option>'.$jumpsquads.'</select> <span class="input-group-btn"><input type="button" name="Button1" value="'.$_language->module['go'].'" onclick="MM_jumpMenuGo(\'selectgame\',\'parent\',0)" class="btn btn-primary"></span></div>';
     
 	eval ("\$title_clanwars = \"".gettemplate("title_clanwars")."\";");
 	echo $title_clanwars;
