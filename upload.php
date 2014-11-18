@@ -111,7 +111,7 @@ echo'<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.
   <tr bgcolor="'.BG_1.'">
     <td align="center"><input type="file" name="screen" />
     <input type="submit" name="submit" value="'.$_language->module['upload'].'" />
-    <hr />
+    <hr>
     <h2>'.$_language->module['existing_files'].':</h2>
     <table width="100%" border="0" cellspacing="0" cellpadding="2">';
 

@@ -165,7 +165,7 @@ if(isset($_GET['action']) and $_GET['action'] == "edit") {
 			else $fight='<select name="war['.$ds['sqmID'].']"><option value="1">'.$_language->module['yes'].'</option><option value="0" selected="selected">'.$_language->module['no'].'</option></select>';
 
 			$squads.='<tr>
-        <td colspan="2"><hr /></td>
+        <td colspan="2"><hr></td>
       </tr>
       <tr>
         <td><b>'.$_language->module['squad'].'</b></td>
@@ -274,7 +274,7 @@ if(isset($_GET['action']) and $_GET['action'] == "edit") {
     '.$squads.'
     '.$userdes.'
     <tr>
-      <td colspan="2"><hr /></td>
+      <td colspan="2"><hr></td>
     </tr>
   </table>
   <table width="100%" border="0" cellspacing="1" cellpadding="3">
@@ -309,7 +309,7 @@ if(isset($_GET['action']) and $_GET['action'] == "edit") {
    }
    
    echo '<tr>
-    <td colspan="3"><hr /></td>
+    <td colspan="3"><hr></td>
   </tr>
   <tr>
     <td colspan="3"><b>'.$_language->module['group_access'].'</b></td>

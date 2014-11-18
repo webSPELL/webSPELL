@@ -36,7 +36,7 @@ if(isset($lang)) unset($lang);
 if(isset($_GET['lang'])) $lang = $_GET['lang'];
 $post = "";
 if(isnewswriter($userID)) $post='<input type="button" onclick="MM_openBrWindow(\'news.php?action=new\',\'News\',\'toolbar=no,status=no,scrollbars=yes,width=800,height=600\')" value="'.$_language->module['post_news'].'" class="btn btn-danger" />';
-echo $post.' <input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=news&amp;action=archive\');return document.MM_returnValue" value="'.$_language->module['news_archive'].'" class="btn btn-primary" /><hr />';
+echo $post.' <input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=news&amp;action=archive\');return document.MM_returnValue" value="'.$_language->module['news_archive'].'" class="btn btn-primary" /><hr>';
 
 if($newsID) {
 	$result=safe_query("SELECT * FROM ".PREFIX."news WHERE newsID='".$newsID."'");

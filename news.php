@@ -290,7 +290,7 @@ elseif($action=="preview") {
 	eval ("\$news = \"".gettemplate("news")."\";");
 	echo $news;
 
-	echo'<hr />
+	echo'<hr>
   <input type="button" onclick="MM_goToURL(\'parent\',\'news.php?action=edit&amp;newsID='.$newsID.'\');return document.MM_returnValue" value="'.$_language->module['edit'].'" class="btn btn-danger" />
   <input type="button" onclick="javascript:self.close()" value="'.$_language->module['save_news'].'" class="btn btn-danger" />
   <input type="button" onclick="MM_confirm(\''.$_language->module['really_delete'].'\', \'news.php?action=delete&amp;id='.$newsID.'&amp;close=true\')" value="'.$_language->module['delete'].'" class="btn btn-danger" /></body></html>';
@@ -536,7 +536,7 @@ elseif($action=="unpublished") {
 	$post = '';
 	if(isnewsadmin($userID)) $post='<input type="button" onclick="MM_openBrWindow(\'news.php?action=new\',\'News\',\'toolbar=no,status=no,scrollbars=yes,width=800,height=600\');" value="'.$_language->module['post_news'].'" class="btn btn-danger" />';
 
-	echo $post.' <input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=news\');return document.MM_returnValue;" value="'.$_language->module['show_news'].'" class="btn btn-danger" /><hr />';
+	echo $post.' <input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=news\');return document.MM_returnValue;" value="'.$_language->module['show_news'].'" class="btn btn-danger" /><hr>';
 
 	$page='';
 
@@ -763,7 +763,7 @@ else {
 		$unpublished=mysqli_num_rows($unpublished);
 		if($unpublished) $publish='<input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=news&amp;action=unpublished\');return document.MM_returnValue;" value="'.$unpublished.' '.$_language->module['unpublished_news'].'" class="btn btn-danger" /> ';
 	}
-	echo $post.' '.$publish.'<input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=news&amp;action=archive\');return document.MM_returnValue;" value="'.$_language->module['news_archive'].'" class="btn btn-primary" /><hr />';
+	echo $post.' '.$publish.'<input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=news&amp;action=archive\');return document.MM_returnValue;" value="'.$_language->module['news_archive'].'" class="btn btn-primary" /><hr>';
 
 	if(isset($_GET['show'])) {
 		$result=safe_query("SELECT rubricID FROM ".PREFIX."news_rubrics WHERE rubric='".$_GET['show']."' LIMIT 0,1");
