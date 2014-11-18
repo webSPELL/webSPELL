@@ -216,7 +216,7 @@ elseif($action=="add") {
 	$CAPCLASS = new Captcha;
 	$CAPCLASS->create_transaction();
 	$hash = $CAPCLASS->get_hash();
-	echo '<script language="javascript" type="text/javascript">
+	echo '<script>
 	<!--
 	function unselect_all(select_id) {
 		select_element = document.getElementById(select_id);
@@ -315,7 +315,7 @@ elseif($action=="edit") {
 	$CAPCLASS->create_transaction();
 	$hash = $CAPCLASS->get_hash();
 	
-	echo '<script language="javascript" type="text/javascript">
+	echo '<script>
 	<!--
 	function unselect_all(select_id) {
 		select_element = document.getElementById(select_id);
@@ -374,7 +374,7 @@ elseif($action=="addcat") {
 	$CAPCLASS = new Captcha;
 	$CAPCLASS->create_transaction();
 	$hash = $CAPCLASS->get_hash();
-	echo '<script language="javascript" type="text/javascript">
+	echo '<script>
 	<!--
 	function unselect_all(select_id) {
 		select_element = document.getElementById(select_id);
@@ -432,7 +432,7 @@ elseif($action=="editcat") {
   $CAPCLASS = new Captcha;
 	$CAPCLASS->create_transaction();
 	$hash = $CAPCLASS->get_hash();
-	echo '<script language="javascript" type="text/javascript">
+	echo '<script>
 	<!--
 	function unselect_all(select_id) {
 		select_element = document.getElementById(select_id);

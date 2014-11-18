@@ -40,7 +40,7 @@ echo'<!DOCTYPE html>
 	<title>Smilies</title>
     <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
 	<link href="_stylesheet.css" rel="stylesheet">
-    <script src="js/bbcode.js" language="jscript" type="text/javascript"></script>
+    <script src="js/bbcode.js"></script>
 </head>
 
 <body>

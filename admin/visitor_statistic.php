@@ -150,7 +150,7 @@ else {
 }
 
 ?>
-<script language="javascript" type="text/javascript">
+<script>
 <!--
 
 size_x = <?php echo $size_x; ?>;

@@ -346,7 +346,7 @@ elseif($action=="save") {
 		echo $news_post;
 
 	}
-	else echo'<script src="js/bbcode.js" language="jscript" type="text/javascript"></script>
+	else echo'<script src="js/bbcode.js"></script>
   <link href="_stylesheet.css" rel="stylesheet" type="text/css">
   <p class="text-center"><br><br><br><br>
   <b>'.$_language->module['clanwar_saved'].'.</b><br><br>
@@ -513,7 +513,7 @@ elseif($action=="saveedit") {
 	$theHomeScore = serialize($theHomeScore);
 	$theOppScore = serialize($theOppScore);
 
-	echo'<script src="js/bbcode.js" language="jscript" type="text/javascript"></script>
+	echo'<script src="js/bbcode.js"></script>
   <link href="_stylesheet.css" rel="stylesheet" type="text/css">';
 
 	$date=mktime(0,0,0,$month,$day,$year);

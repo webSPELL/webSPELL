@@ -39,7 +39,7 @@ echo'<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.
 	<meta name="generator" content="webSPELL">
 	<title>Flags</title>
 	<link href="_stylesheet.css" rel="stylesheet" type="text/css">
-  <script src="js/bbcode.js" language="jscript" type="text/javascript"></script>
+  <script src="js/bbcode.js"></script>
 </head>
 
 <body bgcolor="'.PAGEBG.'">
