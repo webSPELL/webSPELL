@@ -227,7 +227,7 @@ elseif($action=="preview") {
 <!-- Head & Title include -->
 	<title>'.PAGETITLE.'; ?></title>
 	<link href="_stylesheet.css" rel="stylesheet" type="text/css">
-	<script src="js/bbcode.js" language="jscript" type="text/javascript"></script>
+	<script src="js/bbcode.js"></script>
 <!-- end Head & Title include -->
 </head>
 <body>';

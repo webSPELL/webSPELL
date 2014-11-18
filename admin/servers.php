@@ -83,7 +83,7 @@ if($action=="add") {
 	
   echo '<h1>&curren; <a href="admincenter.php?site=servers" class="white">'.$_language->module['servers'].'</a> &raquo; '.$_language->module['add_server'].'</h1>';
 
-  echo '<script language="JavaScript" type="text/javascript">
+  echo '<script>
 					<!--
 						function chkFormular() {
 							if(!validbbcode(document.getElementById(\'message\').value, \'admin\')){
@@ -145,7 +145,7 @@ elseif($action=="edit") {
 	$games=str_replace(' selected="selected"', '', $games);
 	$games=str_replace('value="'.$ds['game'].'"', 'value="'.$ds['game'].'" selected="selected"', $games);
 	
-	echo '<script language="JavaScript" type="text/javascript">
+	echo '<script>
 					<!--
 						function chkFormular() {
 							if(!validbbcode(document.getElementById(\'message\').value, \'admin\')){

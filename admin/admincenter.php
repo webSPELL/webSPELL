@@ -97,10 +97,10 @@ function addonnav() {
 	.td2 {  height: 18px; }
 	</style>
 	<![endif]-->
-	<script language="JavaScript" type="text/JavaScript">
+	<script>
 	  var calledfrom='admin';
 	</script>
-	<script src="../js/bbcode.js" language="JavaScript" type="text/javascript"></script>
+	<script src="../js/bbcode.js"></script>
 </head>
 <body>
 <table border="0" cellpadding="0" cellspacing="0" width="1000" align="center">

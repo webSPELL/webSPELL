@@ -50,7 +50,7 @@ else {
 	
 	$_language->read_module('bbcode', true);
 
-	echo '<script language="JavaScript" type="text/javascript">
+	echo '<script>
 					<!--
 						function chkFormular() {
 							if(!validbbcode(document.getElementById(\'message\').value, \'admin\')){

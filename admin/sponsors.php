@@ -47,7 +47,7 @@ if($action=="add") {
 	eval ("\$addbbcode = \"".gettemplate("addbbcode", "html", "admin")."\";");
 	eval ("\$addflags = \"".gettemplate("flags_admin", "html", "admin")."\";");
 	
-	echo '<script language="JavaScript" type="text/javascript">
+	echo '<script>
 		<!--
 			function chkFormular() {
 				if(!validbbcode(document.getElementById(\'message\').value, \'admin\')) {
@@ -128,7 +128,7 @@ elseif($action=="edit") {
 	eval ("\$addbbcode = \"".gettemplate("addbbcode", "html", "admin")."\";");
 	eval ("\$addflags = \"".gettemplate("flags_admin", "html", "admin")."\";");
 	
-	echo '<script language="JavaScript" type="text/javascript">
+	echo '<script>
 		<!--
 			function chkFormular() {
 				if(!validbbcode(document.getElementById(\'message\').value, \'admin\')) {

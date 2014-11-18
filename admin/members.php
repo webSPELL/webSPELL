@@ -242,7 +242,7 @@ if(isset($_GET['action']) and $_GET['action'] == "edit") {
   </tr>';
 	else $userdes='';
 
-	echo '<script language="JavaScript" type="text/javascript">
+	echo '<script>
 					<!--
 						function chkFormular() {
 							if(!validbbcode(document.getElementById(\'message\').value, \'admin\')){
