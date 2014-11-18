@@ -234,21 +234,21 @@ elseif(isset($_GET["delete"])) {
 elseif(isset($_POST['test'])){
     echo'<h1>&curren; '.$_language->module['modrewrite_settings'].'</h1>';
     if(function_exists("apache_get_modules")){
-        $info = $_language->module['apache_with_module'].'<br/>';
+        $info = $_language->module['apache_with_module'].'<br>';
         if(in_array('mod_rewrite',apache_get_modules())){
-            $info .=  $_language->module['modrewrite_is_enabled'].'<br/>';
+            $info .=  $_language->module['modrewrite_is_enabled'].'<br>';
             $do_test = true;
         }
         else{
-            $info .=  $_language->module['modrewrite_is_disabled'].'<br/>';
+            $info .=  $_language->module['modrewrite_is_disabled'].'<br>';
         }
     }
     elseif(stristr($_SERVER['SERVER_SOFTWARE'],'Apache')){
-        $info = $_language->module['apache_with_cgi'].'<br/>';
+        $info = $_language->module['apache_with_cgi'].'<br>';
         $do_test = true;
     }
     else{
-        $info = $_language->module['unsupported_webserver'].'<br/>';
+        $info = $_language->module['unsupported_webserver'].'<br>';
     }
 
     if($do_test){
@@ -413,7 +413,7 @@ else {
     echo'<h1>&curren; '.$_language->module['modrewrite_rules'].'</h1>';
 
     echo'<input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=modrewrite&amp;action=add\');return document.MM_returnValue" value="'.$_language->module['new_rule'].'" /> ';
-    echo'<input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=modrewrite&amp;action=rebuild\');return document.MM_returnValue" value="'.$_language->module['rebuild'].'" /><br /><br />';
+    echo'<input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=modrewrite&amp;action=rebuild\');return document.MM_returnValue" value="'.$_language->module['rebuild'].'" /><br><br>';
 
     echo'
     <table width="100%" border="0" cellspacing="1" cellpadding="3" bgcolor="#DDDDDD">
@@ -436,7 +436,7 @@ else {
             if($i%2) { $td='td1'; }
             else { $td='td2'; }
             echo'<tr>
-            <td class="'.$td.'" align="left">'.$flags['regex'].'<br/>'.$flags['link'].'</td>
+            <td class="'.$td.'" align="left">'.$flags['regex'].'<br>'.$flags['link'].'</td>
             <td class="'.$td.'">'.count(unserialize($flags['fields'])).'</td>
             <td class="'.$td.'" align="center"><input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=modrewrite&amp;action=edit&amp;ruleID='.$flags['ruleID'].'\');return document.MM_returnValue" value="'.$_language->module['edit'].'" />
             <input type="button" onclick="MM_confirm(\''.$_language->module['really_delete'].'\', \'admincenter.php?site=modrewrite&amp;delete=true&amp;ruleID='.$flags['ruleID'].'&amp;captcha_hash='.$hash.'\')" value="'.$_language->module['delete'].'" /></td>

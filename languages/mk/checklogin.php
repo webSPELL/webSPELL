@@ -30,11 +30,11 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'invalid_password'=>'Внесовте погрешна шифра.<br /><br /><a href="javascript:history.back()">Вратетесе и обидетесе повторно.</a>',
-  'ip_banned'=>'Вашиот ИП е баниран на овие страници.<br/>%reason%<br /><br /><a href="javascript:history.back()">Вратисе назад</a>',
+  'invalid_password'=>'Внесовте погрешна шифра.<br><br><a href="javascript:history.back()">Вратетесе и обидетесе повторно.</a>',
+  'ip_banned'=>'Вашиот ИП е баниран на овие страници.<br>%reason%<br><br><a href="javascript:history.back()">Вратисе назад</a>',
   'login_successful'=>'Пријавата е успешна!',
-  'no_user'=>'Корисник <b>%username%</b> не е достапен на ови станици.<br /><br /><a href="javascript:history.back()">Вратетесе и обидетесе повторно!</a>',
-  'not_activated'=>'Вашата сметка не е активирана.<br /><br /><a href="javascript:history.back()">Вратисе назад</a>',
-  'session_error'=>'Ве молиме уверетесе дека cookies се дозволени во вашиот пребарувач.<br />Ако проблемот и понатака постои контактирајте со webmaster.<br /><br /><a href="javascript:history.back()">Вратисе назад</a>'
+  'no_user'=>'Корисник <b>%username%</b> не е достапен на ови станици.<br><br><a href="javascript:history.back()">Вратетесе и обидетесе повторно!</a>',
+  'not_activated'=>'Вашата сметка не е активирана.<br><br><a href="javascript:history.back()">Вратисе назад</a>',
+  'session_error'=>'Ве молиме уверетесе дека cookies се дозволени во вашиот пребарувач.<br>Ако проблемот и понатака постои контактирајте со webmaster.<br><br><a href="javascript:history.back()">Вратисе назад</a>'
 );
 ?>

@@ -35,11 +35,11 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'invalid_password'=>'Nepravilno geslo.<br /><br /><a href="javascript:history.back()">Vrnite se in poskusite znova.</a>',
-  'ip_banned'=>'IP je bennan.<br/>%reason%<br /><br /><a href="javascript:history.back()">Pojdi nazaj</a>',
+  'invalid_password'=>'Nepravilno geslo.<br><br><a href="javascript:history.back()">Vrnite se in poskusite znova.</a>',
+  'ip_banned'=>'IP je bennan.<br>%reason%<br><br><a href="javascript:history.back()">Pojdi nazaj</a>',
   'login_successful'=>'Prijavite se uspešno!',
-  'no_user'=>'Uporabnik <b>%username%</b> ni dostopen.<br /><br /><a href="javascript:history.back()">Vrni se in poskušaj ponovno!</a>',
-  'not_activated'=>'Vaš račun ni aktiviran.<br /><br /><a href="javascript:history.back()">Pojdi nazaj</a>',
-  'session_error'=>'Omogočite piškotke v vašem brskalniku.<br />Če so problemi, kontaktirajte webmastera.<br /><br /><a href="javascript:history.back()">Pojdi nazaj</a>'
+  'no_user'=>'Uporabnik <b>%username%</b> ni dostopen.<br><br><a href="javascript:history.back()">Vrni se in poskušaj ponovno!</a>',
+  'not_activated'=>'Vaš račun ni aktiviran.<br><br><a href="javascript:history.back()">Pojdi nazaj</a>',
+  'session_error'=>'Omogočite piškotke v vašem brskalniku.<br>Če so problemi, kontaktirajte webmastera.<br><br><a href="javascript:history.back()">Pojdi nazaj</a>'
 );
 ?>
