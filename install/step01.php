@@ -396,6 +396,6 @@ Public License instead of this License.</textarea>
 <option value="1"><?php echo $_language->module['agree']; ?></option>
 </select>
 
-<div align="right"><br><a href="javascript:document.ws_install.submit()"><img src="images/next.jpg" alt="" /></a></div>
+<div align="right"><br><a href="javascript:document.ws_install.submit()"><img src="images/next.jpg" alt=""></a></div>
    </td>
   </tr>

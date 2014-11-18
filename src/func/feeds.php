@@ -18,7 +18,7 @@
                   <channel>
                     <title>'.$hp_title.' '.$_language->module['news_feed'].'</title>
                     <link>http://'.$hp_url.'</link>
-                    <atom:link href="http://'.$hp_url.'/tmp/rss.xml" rel="self" type="application/rss+xml" />
+                    <atom:link href="http://'.$hp_url.'/tmp/rss.xml" rel="self" type="application/rss+xml">
                     <description>'.$_language->module['latest_news_from'].' http://'.$hp_url.'</description>
                     <language>'.$rss_default_language.'-'.$rss_default_language.'</language>
                     <pubDate>'.date('D, d M Y h:i:s O', $updated).'</pubDate>

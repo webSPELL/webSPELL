@@ -134,19 +134,19 @@ if($action=="add") {
 			</tr>
 			<tr>
 			  <td><b>'.$_language->module['name'].'</b></td>
-			  <td><input type="text" name="name" size="60" /></td>
+			  <td><input type="text" name="name" size="60"></td>
 			</tr>
 			<tr>
 			  <td><b>'.$_language->module['url'].'</b></td>
-			  <td><input type="text" name="url" size="60" /></td>
+			  <td><input type="text" name="url" size="60"></td>
 			</tr>
 			<tr>
 			  <td valign="top"><b>'.$_language->module['accesslevel'].'</b></td>
 			  <td><select name="accesslevel">'.$accesslevel.'</select></td>
 			</tr>
 			<tr>
-			  <td><input type="hidden" name="captcha_hash" value="'.$hash.'" /></td>
-			  <td><input type="submit" name="save" value="'.$_language->module['add_link'].'" /></td>
+			  <td><input type="hidden" name="captcha_hash" value="'.$hash.'"></td>
+			  <td><input type="submit" name="save" value="'.$_language->module['add_link'].'"></td>
 			</tr>
 		  </table>
 		  </form>';
@@ -196,19 +196,19 @@ elseif($action=="edit") {
 			</tr>
 			<tr>
 			  <td><b>'.$_language->module['name'].'</b></td>
-			  <td><input type="text" name="name" value="'.getinput($ds['name']).'" size="60" /></td>
+			  <td><input type="text" name="name" value="'.getinput($ds['name']).'" size="60"></td>
 			</tr>
 			<tr>
 			  <td><b>'.$_language->module['url'].'</b></td>
-			  <td><input type="text" name="url" value="'.getinput($ds['url']).'" size="60" /></td>
+			  <td><input type="text" name="url" value="'.getinput($ds['url']).'" size="60"></td>
 			</tr>
 			<tr>
 			  <td valign="top"><b>'.$_language->module['accesslevel'].'</b></td>
 			  <td><select name="accesslevel">'.$accesslevel.'</select></td>
 			</tr>
 			<tr>
-			  <td><input type="hidden" name="captcha_hash" value="'.$hash.'" /><input type="hidden" name="linkID" value="'.$linkID.'" /></td>
-			  <td><input type="submit" name="saveedit" value="'.$_language->module['edit_link'].'" /></td>
+			  <td><input type="hidden" name="captcha_hash" value="'.$hash.'"><input type="hidden" name="linkID" value="'.$linkID.'"></td>
+			  <td><input type="submit" name="saveedit" value="'.$_language->module['edit_link'].'"></td>
 			</tr>
 		  </table>
 		  </form>';
@@ -225,11 +225,11 @@ elseif($action=="addcat") {
 		  <table width="100%" border="0" cellspacing="1" cellpadding="3">
 			<tr>
 			  <td width="15%"><b>'.$_language->module['name'].'</b></td>
-			  <td width="85%"><input type="text" name="name" size="60" /></td>
+			  <td width="85%"><input type="text" name="name" size="60"></td>
 			</tr>
 			<tr>
-			  <td><input type="hidden" name="captcha_hash" value="'.$hash.'" /></td>
-			  <td><input type="submit" name="savecat" value="'.$_language->module['add_category'].'" /></td>
+			  <td><input type="hidden" name="captcha_hash" value="'.$hash.'"></td>
+			  <td><input type="submit" name="savecat" value="'.$_language->module['add_category'].'"></td>
 			</tr>
 		  </table>
 		  </form>';
@@ -250,11 +250,11 @@ elseif($action=="editcat") {
 		  <table width="100%" border="0" cellspacing="1" cellpadding="3">
 			<tr>
 			  <td width="15%"><b>'.$_language->module['name'].'</b></td>
-			  <td width="85%"><input type="text" name="name" value="'.getinput($ds['name']).'" size="60" /></td>
+			  <td width="85%"><input type="text" name="name" value="'.getinput($ds['name']).'" size="60"></td>
 			</tr>
 			<tr>
-			  <td><input type="hidden" name="captcha_hash" value="'.$hash.'" /><input type="hidden" name="catID" value="'.$catID.'" /></td>
-			  <td><input type="submit" name="saveeditcat" value="'.$_language->module['edit_category'].'" /></td>
+			  <td><input type="hidden" name="captcha_hash" value="'.$hash.'"><input type="hidden" name="catID" value="'.$catID.'"></td>
+			  <td><input type="submit" name="saveeditcat" value="'.$_language->module['edit_category'].'"></td>
 			</tr>
 		  </table>
 		  </form>';
@@ -263,7 +263,7 @@ elseif($action=="editcat") {
 else {
 	echo '<h1>&curren; '.$_language->module['addons'].'</h1>';
 
-	echo '<input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=addons&amp;action=addcat\');return document.MM_returnValue" value="'.$_language->module['new_category'].'" /> <input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=addons&amp;action=add\');return document.MM_returnValue" value="'.$_language->module['new_link'].'" /><br><br>';	
+	echo '<input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=addons&amp;action=addcat\');return document.MM_returnValue" value="'.$_language->module['new_category'].'"> <input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=addons&amp;action=add\');return document.MM_returnValue" value="'.$_language->module['new_link'].'"><br><br>';	
 
 	echo '<form method="post" action="admincenter.php?site=addons">
 		  <table width="100%" border="0" cellspacing="1" cellpadding="3" bgcolor="#DDDDDD">
@@ -296,7 +296,7 @@ else {
 		}
 		else {
 			$sort = $list;
-			$catactions = '<input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=addons&amp;action=editcat&amp;catID='.$ds['catID'].'\');return document.MM_returnValue" value="'.$_language->module['edit'].'" /> <input type="button" onclick="MM_confirm(\''.$_language->module['really_delete_category'].'\', \'admincenter.php?site=addons&amp;delcat=true&amp;catID='.$ds['catID'].'&amp;captcha_hash='.$hash.'\')" value="'.$_language->module['delete'].'" />';
+			$catactions = '<input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=addons&amp;action=editcat&amp;catID='.$ds['catID'].'\');return document.MM_returnValue" value="'.$_language->module['edit'].'"> <input type="button" onclick="MM_confirm(\''.$_language->module['really_delete_category'].'\', \'admincenter.php?site=addons&amp;delcat=true&amp;catID='.$ds['catID'].'&amp;captcha_hash='.$hash.'\')" value="'.$_language->module['delete'].'">';
 			$name = getinput($ds['name']);
 		}
 		
@@ -328,7 +328,7 @@ else {
 	      	echo '<tr>
 				    <td class="'.$td.'"><b>'.$db['name'].'</b><br><small>'.$db['url'].'</small></td>
 					<td class="'.$td.'" align="center"><small><b>'.$_language->module['admin_'.getinput($db['accesslevel'])].'</b></small></td>
-					<td class="'.$td.'" align="center"><input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=addons&amp;action=edit&amp;linkID='.$db['linkID'].'\');return document.MM_returnValue" value="'.$_language->module['edit'].'" /> <input type="button" onclick="MM_confirm(\''.$_language->module['really_delete_link'].'\', \'admincenter.php?site=addons&amp;delete=true&amp;linkID='.$db['linkID'].'&amp;captcha_hash='.$hash.'\')" value="'.$_language->module['delete'].'" /></td>
+					<td class="'.$td.'" align="center"><input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=addons&amp;action=edit&amp;linkID='.$db['linkID'].'\');return document.MM_returnValue" value="'.$_language->module['edit'].'"> <input type="button" onclick="MM_confirm(\''.$_language->module['really_delete_link'].'\', \'admincenter.php?site=addons&amp;delete=true&amp;linkID='.$db['linkID'].'&amp;captcha_hash='.$hash.'\')" value="'.$_language->module['delete'].'"></td>
 					<td class="'.$td.'" align="center">'.$linklist.'</td>
 				  </tr>';
 	      	$i++;
@@ -352,12 +352,12 @@ else {
 		echo '<tr bgcolor="#dcdcdc">
 			    <td bgcolor="#FFFFFF"><b>'.getinput($db['name']).'</b><br><small>'.$db['url'].'</small></td>
 			    <td bgcolor="#FFFFFF"><small><b>'.$_language->module['admin_'.getinput($db['accesslevel'])].'</b></small></td>
-			    <td bgcolor="#FFFFFF"><input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=addons&amp;action=edit&amp;linkID='.$db['linkID'].'\');return document.MM_returnValue" value="'.$_language->module['edit'].'" /> <input type="button" onclick="MM_confirm(\''.$_language->module['really_delete_link'].'\', \'admincenter.php?site=addons&amp;delete=true&amp;linkID='.$db['linkID'].'&amp;captcha_hash='.$hash.'\')" value="delete" /></td>
+			    <td bgcolor="#FFFFFF"><input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=addons&amp;action=edit&amp;linkID='.$db['linkID'].'\');return document.MM_returnValue" value="'.$_language->module['edit'].'"> <input type="button" onclick="MM_confirm(\''.$_language->module['really_delete_link'].'\', \'admincenter.php?site=addons&amp;delete=true&amp;linkID='.$db['linkID'].'&amp;captcha_hash='.$hash.'\')" value="delete"></td>
 			    <td bgcolor="#FFFFFF">'.$noncatlist.'</td>
 			  </tr>';
 	}
 	echo '	<tr>
-		  	  <td class="td_head" colspan="5" align="right"><input type="submit" name="sortieren" value="'.$_language->module['to_sort'].'" /></td>
+		  	  <td class="td_head" colspan="5" align="right"><input type="submit" name="sortieren" value="'.$_language->module['to_sort'].'"></td>
 			</tr>
 	  	  </table>
 	      </form>';

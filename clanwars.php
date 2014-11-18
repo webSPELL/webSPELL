@@ -351,7 +351,7 @@ elseif($action=="save") {
   <p class="text-center"><br><br><br><br>
   <b>'.$_language->module['clanwar_saved'].'.</b><br><br>
   <input type="button" onclick="MM_openBrWindow(\'upload.php?cwID='.$cwID.'\',\'Clanwars\',\'toolbar=no,status=no,scrollbars=yes,width=800,height=600\')" value="'.$_language->module['upload_screenshot'].'">
-  <input type="button" onclick="javascript:self.close()" value="'.$_language->module['close_window'].'" /></p>';
+  <input type="button" onclick="javascript:self.close()" value="'.$_language->module['close_window'].'"></p>';
 
 }
 elseif($action=="edit") {
@@ -426,11 +426,11 @@ elseif($action=="edit") {
 			
       $maps.='
       <tr>
-        <td width="15%"><input type="hidden" name="map_id[]" value="'.$i.'" />map #'.($i+1).'</td>
-				<td width="25%"><input type="text" name="map_name[]" value="'.getinput($map[$i]).'" size="35" /></td>
-				<td width="20%"><input type="text" name="map_result_home[]" value="'.$theHomeScore[$i].'" size="3" /></td>
-				<td width="20%"><input type="text" name="map_result_opp[]" value="'.$theOppScore[$i].'" size="3" /></td>
-				<td width="25%"><input type="checkbox" name="delete['.$i.']" value="1" /> '.$_language->module['delete'].'</td>
+        <td width="15%"><input type="hidden" name="map_id[]" value="'.$i.'">map #'.($i+1).'</td>
+				<td width="25%"><input type="text" name="map_name[]" value="'.getinput($map[$i]).'" size="35"></td>
+				<td width="20%"><input type="text" name="map_result_home[]" value="'.$theHomeScore[$i].'" size="3"></td>
+				<td width="20%"><input type="text" name="map_result_opp[]" value="'.$theOppScore[$i].'" size="3"></td>
+				<td width="25%"><input type="checkbox" name="delete['.$i.']" value="1"> '.$_language->module['delete'].'</td>
 			</tr>';
 		}
 
@@ -660,15 +660,15 @@ elseif($action=="stats") {
 	if(!$totalopp) $totalopp=0;
 
 	$totalwonperc=percent($totalwonall, $totaltotal, 2);
-	if($totalwonperc) $totalwon=$totalwonperc.'%<br><img src="images/icons/won.gif" width="30" height="'.round($totalwonperc, 0).'" border="1" alt="'.$_language->module['won'].'" />';
+	if($totalwonperc) $totalwon=$totalwonperc.'%<br><img src="images/icons/won.gif" width="30" height="'.round($totalwonperc, 0).'" border="1" alt="'.$_language->module['won'].'">';
 	else $totalwon=0;
 
 	$totalloseperc=percent($totalloseall, $totaltotal, 2);
-	if($totalloseperc) $totallost=$totalloseperc.'%<br><img src="images/icons/lost.gif" width="30" height="'.round($totalloseperc, 0).'" border="1" alt="'.$_language->module['lost'].'" />';
+	if($totalloseperc) $totallost=$totalloseperc.'%<br><img src="images/icons/lost.gif" width="30" height="'.round($totalloseperc, 0).'" border="1" alt="'.$_language->module['lost'].'">';
 	else $totallost=0;
 
 	$totaldrawperc=percent($totaldrawall, $totaltotal, 2);
-	if($totaldrawperc) $totaldraw=$totaldrawperc.'%<br><img src="images/icons/draw.gif" width="30" height="'.round($totaldrawperc, 0).'" border="1" alt="'.$_language->module['draw'].'" />';
+	if($totaldrawperc) $totaldraw=$totaldrawperc.'%<br><img src="images/icons/draw.gif" width="30" height="'.round($totaldrawperc, 0).'" border="1" alt="'.$_language->module['draw'].'">';
 	else $totaldraw=0;
 
 	$squad=$_language->module['clan'];
@@ -731,15 +731,15 @@ elseif($action=="stats") {
 			$oppperc=percent($opp, $totalopp, 2);
 			// total squad clanwars won
 			$wonperc=percent($wonall, $totaltotal, 2);
-			if($wonperc) $totalwon=$wonperc.'%<br><img src="images/icons/won.gif" width="30" height="'.round($wonperc, 0).'" border="1" alt="'.$_language->module['won'].'" />';
+			if($wonperc) $totalwon=$wonperc.'%<br><img src="images/icons/won.gif" width="30" height="'.round($wonperc, 0).'" border="1" alt="'.$_language->module['won'].'">';
 			else $totalwon='0%';
 			// total squad clanwars lost
 			$loseperc=percent($loseall, $totaltotal, 2);
-			if($loseperc) $totallost=$loseperc.'%<br><img src="images/icons/lost.gif" width="30" height="'.round($loseperc, 0).'" border="1" alt="'.$_language->module['lost'].'" />';
+			if($loseperc) $totallost=$loseperc.'%<br><img src="images/icons/lost.gif" width="30" height="'.round($loseperc, 0).'" border="1" alt="'.$_language->module['lost'].'">';
 			else $totallost='0%';
 			// total squad clanwars draw
 			$drawperc=percent($drawall, $totaltotal, 2);
-			if($drawperc) $totaldraw=$drawperc.'%<br><img src="images/icons/draw.gif" width="30" height="'.round($drawperc, 0).'" border="1" alt="'.$_language->module['draw'].'" />';
+			if($drawperc) $totaldraw=$drawperc.'%<br><img src="images/icons/draw.gif" width="30" height="'.round($drawperc, 0).'" border="1" alt="'.$_language->module['draw'].'">';
 			else $totaldraw='0%';
 
 			// fill empty vars
@@ -811,7 +811,7 @@ elseif($action=="stats") {
 					if(empty($wars)) $wars='0';
 					$perc=percent($wars, $total, 2);
 					if($perc) $percpic='<div class="progress"><div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="'.round($perc, 0).'" aria-valuemin="0" aria-valuemax="100" style="width: '.round($perc, 0).'%;"><span class="sr-only">'.round($perc, 0).'% Complete</span></div></div>';
-					else $percpic='<img src="images/icons/poll_start.gif" width="1" height="5" alt="" /><img src="images/icons/poll_end.gif" width="1" height="5" alt="" /> '.$perc.'%';
+					else $percpic='<img src="images/icons/poll_start.gif" width="1" height="5" alt=""><img src="images/icons/poll_end.gif" width="1" height="5" alt=""> '.$perc.'%';
 
 					eval ("\$clanwars_stats_player_content = \"".gettemplate("clanwars_stats_player_content")."\";");
 					echo $clanwars_stats_player_content;
@@ -927,7 +927,7 @@ elseif($action=="showonly") {
 
 			$squad='<a href="index.php?site=clanwars&amp;action=showonly&amp;id='.$id.'&amp;page='.$page.'&amp;sort=game&amp;type='.$type.'&amp;only=squad"><b>'.getsquadname($ds['squad']).'</b></a>';
 			if(file_exists('images/games/'.$ds['game'].'.gif')) $pic = $ds['game'].'.gif';
-			$game='<a href="index.php?site=clanwars&amp;action=showonly&amp;id='.$ds['game'].'&amp;page='.$page.'&amp;sort=game&amp;type='.$type.'&amp;only=game"><img src="images/games/'.$pic.'" width="13" height="13" alt="" /></a>';
+			$game='<a href="index.php?site=clanwars&amp;action=showonly&amp;id='.$ds['game'].'&amp;page='.$page.'&amp;sort=game&amp;type='.$type.'&amp;only=game"><img src="images/games/'.$pic.'" width="13" height="13" alt=""></a>';
 
 			$homescr=array_sum(unserialize($ds['homescore']));
 			$oppscr=array_sum(unserialize($ds['oppscore']));
@@ -941,7 +941,7 @@ elseif($action=="showonly") {
 
 			$multiple='';
 			$admdel='';
-			if(isclanwaradmin($userID)) $multiple='<input class="input" type="checkbox" name="cwID[]" value="'.$ds['cwID'].'" />';
+			if(isclanwaradmin($userID)) $multiple='<input class="input" type="checkbox" name="cwID[]" value="'.$ds['cwID'].'">';
 
 			eval ("\$clanwars_content = \"".gettemplate("clanwars_content")."\";");
 			echo $clanwars_content;
@@ -999,8 +999,8 @@ elseif(empty($_GET['action'])) {
 		else $n = ($gesamt+1)-$page*$max+$max;
 	}
 
-  	if($type=="ASC") $seiten='<a href="index.php?site=clanwars&amp;page='.$page.'&amp;sort='.$sort.'&amp;type=DESC">'.$_language->module['sort'].':</a> <img src="images/icons/asc.gif" width="9" height="7" alt="" /> '.$page_link.'<br><br>';
-	else $seiten='<a href="index.php?site=clanwars&amp;page='.$page.'&amp;sort='.$sort.'&amp;type=ASC">'.$_language->module['sort'].':</a> <img src="images/icons/desc.gif" width="9" height="7" alt="" /> '.$page_link.'<br><br>';
+  	if($type=="ASC") $seiten='<a href="index.php?site=clanwars&amp;page='.$page.'&amp;sort='.$sort.'&amp;type=DESC">'.$_language->module['sort'].':</a> <img src="images/icons/asc.gif" width="9" height="7" alt=""> '.$page_link.'<br><br>';
+	else $seiten='<a href="index.php?site=clanwars&amp;page='.$page.'&amp;sort='.$sort.'&amp;type=ASC">'.$_language->module['sort'].':</a> <img src="images/icons/desc.gif" width="9" height="7" alt=""> '.$page_link.'<br><br>';
 
   	if(isclanwaradmin($userID)) $admin='<input type="button" onclick="MM_openBrWindow(\'clanwars.php?action=new\',\'Clanwars\',\'toolbar=no,status=no,scrollbars=yes,width=800,height=600\')" value="'.$_language->module['new_clanwar'].'" class="btn btn-danger">';
   	else $admin='';
@@ -1045,7 +1045,7 @@ elseif(empty($_GET['action'])) {
 			$oppteam=$ds['oppteam'];
 			$server=$ds['server'];
 			if(file_exists('images/games/'.$ds['game'].'.gif')) $pic = $ds['game'].'.gif';
-			$game='<a href="index.php?site=clanwars&amp;action=showonly&amp;id='.$ds['game'].'&amp;page='.$page.'&amp;sort=game&amp;type='.$type.'&amp;only=game"><img src="images/games/'.$pic.'" width="13" height="13" alt="" /></a>';
+			$game='<a href="index.php?site=clanwars&amp;action=showonly&amp;id='.$ds['game'].'&amp;page='.$page.'&amp;sort=game&amp;type='.$type.'&amp;only=game"><img src="images/games/'.$pic.'" width="13" height="13" alt=""></a>';
 
 			$homescr=array_sum(unserialize($ds['homescore']));
 			$oppscr=array_sum(unserialize($ds['oppscore']));
@@ -1054,12 +1054,12 @@ elseif(empty($_GET['action'])) {
 			elseif($homescr<$oppscr) $results='<font color="'.$loosecolor.'">'.$homescr.':'.$oppscr.'</font>';
 			else $results='<font color="'.$drawcolor.'">'.$homescr.':'.$oppscr.'</font>';
 
-			if($anzcomments = getanzcwcomments($ds['cwID'])) $details='<a href="index.php?site=clanwars_details&amp;cwID='.$ds['cwID'].'"><img src="images/icons/foldericons/newhotfolder.gif" alt="'.$_language->module['details'].'" /> ('.$anzcomments.')</a>';
-			else $details='<a href="index.php?site=clanwars_details&amp;cwID='.$ds['cwID'].'"><img src="images/icons/foldericons/folder.gif" alt="'.$_language->module['details'].'" /> (0)</a>';
+			if($anzcomments = getanzcwcomments($ds['cwID'])) $details='<a href="index.php?site=clanwars_details&amp;cwID='.$ds['cwID'].'"><img src="images/icons/foldericons/newhotfolder.gif" alt="'.$_language->module['details'].'"> ('.$anzcomments.')</a>';
+			else $details='<a href="index.php?site=clanwars_details&amp;cwID='.$ds['cwID'].'"><img src="images/icons/foldericons/folder.gif" alt="'.$_language->module['details'].'"> (0)</a>';
 
 			$multiple='';
 			$admdel='';
-			if(isclanwaradmin($userID)) $multiple='<input class="input" type="checkbox" name="cwID[]" value="'.$ds['cwID'].'" />';
+			if(isclanwaradmin($userID)) $multiple='<input class="input" type="checkbox" name="cwID[]" value="'.$ds['cwID'].'">';
 
 			eval ("\$clanwars_content = \"".gettemplate("clanwars_content")."\";");
 			echo $clanwars_content;

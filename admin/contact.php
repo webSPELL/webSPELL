@@ -86,14 +86,14 @@ if(isset($_GET['action'])) {
     <table width="100%" border="0" cellspacing="1" cellpadding="3">
       <tr>
         <td width="15%"><b>'.$_language->module['contact_name'].'</b></td>
-        <td width="85%"><input type="text" name="name" size="60" /></td>
+        <td width="85%"><input type="text" name="name" size="60"></td>
       </tr>
       <tr>
         <td width="15%"><b>'.$_language->module['email'].'</b></td>
-        <td width="85%"><input type="text" name="email" size="60" /></td>
+        <td width="85%"><input type="text" name="email" size="60"></td>
       </tr>
       <tr>
-        <td colspan="2"><input type="hidden" name="captcha_hash" value="'.$hash.'" /><input type="submit" name="save" value="'.$_language->module['add_contact'].'" /></td>
+        <td colspan="2"><input type="hidden" name="captcha_hash" value="'.$hash.'"><input type="submit" name="save" value="'.$_language->module['add_contact'].'"></td>
       </tr>
     </table>
     </form>';
@@ -116,14 +116,14 @@ if(isset($_GET['action'])) {
     <table width="100%" border="0" cellspacing="1" cellpadding="3">
       <tr>
         <td width="15%"><b>'.$_language->module['contact_name'].'</b></td>
-        <td width="85%"><input type="text" name="name" size="60" value="'.getinput($ds['name']).'" /></td>
+        <td width="85%"><input type="text" name="name" size="60" value="'.getinput($ds['name']).'"></td>
       </tr>
       <tr>
         <td width="15%"><b>'.$_language->module['email'].'</b></td>
-        <td width="85%"><input type="text" name="email" size="60" value="'.getinput($ds['email']).'" /></td>
+        <td width="85%"><input type="text" name="email" size="60" value="'.getinput($ds['email']).'"></td>
       </tr>
       <tr>
-        <td colspan="2"><input type="hidden" name="captcha_hash" value="'.$hash.'" /><input type="hidden" name="contactID" value="'.getforminput($contactID).'" /><input type="submit" name="saveedit" value="'.$_language->module['edit_contact'].'" /></td>
+        <td colspan="2"><input type="hidden" name="captcha_hash" value="'.$hash.'"><input type="hidden" name="contactID" value="'.getforminput($contactID).'"><input type="submit" name="saveedit" value="'.$_language->module['edit_contact'].'"></td>
       </tr>
     </table>
     </form>';
@@ -134,7 +134,7 @@ else {
 	
   echo '<h1>&curren; '.$_language->module['contact'].'</h1>';
   
-  echo'<input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=contact&amp;action=add\');return document.MM_returnValue" value="'.$_language->module['new_contact'].'" /><br><br>';	
+  echo'<input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=contact&amp;action=add\');return document.MM_returnValue" value="'.$_language->module['new_contact'].'"><br><br>';	
 
 	echo'<form method="post" action="admincenter.php?site=contact">
   <table width="100%" border="0" cellspacing="1" cellpadding="3" bgcolor="#DDDDDD">
@@ -161,8 +161,8 @@ else {
 		echo'<tr>
       <td class="'.$td.'">'.getinput($ds['name']).'</td>
 		<td class="'.$td.'">'.getinput($ds['email']).'</td>
-      <td class="'.$td.'" align="center"><input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=contact&amp;action=edit&amp;contactID='.$ds['contactID'].'\');return document.MM_returnValue" value="'.$_language->module['edit'].'" />
-      <input type="button" onclick="MM_confirm(\''.$_language->module['really_delete'].'\', \'admincenter.php?site=contact&amp;delete=true&amp;contactID='.$ds['contactID'].'&amp;captcha_hash='.$hash.'\')" value="'.$_language->module['delete'].'" /></td>
+      <td class="'.$td.'" align="center"><input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=contact&amp;action=edit&amp;contactID='.$ds['contactID'].'\');return document.MM_returnValue" value="'.$_language->module['edit'].'">
+      <input type="button" onclick="MM_confirm(\''.$_language->module['really_delete'].'\', \'admincenter.php?site=contact&amp;delete=true&amp;contactID='.$ds['contactID'].'&amp;captcha_hash='.$hash.'\')" value="'.$_language->module['delete'].'"></td>
       <td class="'.$td.'" align="center"><select name="sortcontact[]">';
 		
     for($n=1; $n<=$anz; $n++) {
@@ -176,7 +176,7 @@ else {
     $i++;
 	}
 	echo'<tr>
-      <td class="td_head" colspan="4" align="right"><input type="hidden" name="captcha_hash" value="'.$hash.'" /><input type="submit" name="sortieren" value="'.$_language->module['to_sort'].'" /></td>
+      <td class="td_head" colspan="4" align="right"><input type="hidden" name="captcha_hash" value="'.$hash.'"><input type="submit" name="sortieren" value="'.$_language->module['to_sort'].'"></td>
     </tr>
   </table>
   </form>';

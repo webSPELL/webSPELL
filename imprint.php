@@ -33,12 +33,12 @@ echo $title_imprint;
 $ergebnis=safe_query("SELECT u.firstname, u.lastname, u.nickname, u.userID FROM ".PREFIX."user_groups as g, ".PREFIX."user as u WHERE u.userID = g.userID AND (g.page='1' OR g.forum='1' OR g.user='1' OR g.news='1' OR g.clanwars='1' OR g.feedback='1' OR g.super='1' OR g.gallery='1' OR g.cash='1' OR g.files='1')");
 $administrators='';
 while($ds=mysqli_fetch_array($ergebnis)) {
-	$administrators .= "<a href='index.php?site=profile&amp;id=".$ds['userID']."'>".$ds['firstname']." '".$ds['nickname']."' ".$ds['lastname']."</a><br />";
+	$administrators .= "<a href='index.php?site=profile&amp;id=".$ds['userID']."'>".$ds['firstname']." '".$ds['nickname']."' ".$ds['lastname']."</a><br>";
 }
 $ergebnis=safe_query("SELECT u.firstname, u.lastname, u.nickname, u.userID FROM ".PREFIX."user_groups as g, ".PREFIX."user as u WHERE u.userID = g.userID AND g.moderator='1'");
 $moderators='';
 while($ds=mysqli_fetch_array($ergebnis)) {
-	$moderators .= "<a href='index.php?site=profile&amp;id=".$ds['userID']."'>".$ds['firstname']." '".$ds['nickname']."' ".$ds['lastname']."</a><br />";
+	$moderators .= "<a href='index.php?site=profile&amp;id=".$ds['userID']."'>".$ds['firstname']." '".$ds['nickname']."' ".$ds['lastname']."</a><br>";
 }
 
 // reading version
@@ -51,7 +51,7 @@ $headline2 = $_language->module['coding'];
 if($imprint_type) {
 
 	$ds=mysqli_fetch_array(safe_query("SELECT imprint FROM `".PREFIX."imprint`"));
-	$imprint_head = htmloutput($ds['imprint'])."<br /><br />";
+	$imprint_head = htmloutput($ds['imprint'])."<br><br>";
 
 } else{
 

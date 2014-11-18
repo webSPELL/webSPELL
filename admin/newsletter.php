@@ -58,7 +58,7 @@ if(isset($_POST['send']) || isset($_POST['testen'])) {
       <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 	<head>
 		<title>webSPELL Newsletter</title>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<style type="text/css">
 <!--
 body { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 11px; color: #666666; background-color: #FFFFFF; border: 0px; margin: 5px; }
@@ -80,7 +80,7 @@ hr { margin: 0px; }
 	</head>
 	<body>
 		<div id="newsletter" class="center">
-		<a href="http://'.$hp_url.'" target="_blank" ><img src="http://'.$hp_url.'/images/banner.gif" alt="" class="center" style="display: block;" /></a>
+		<a href="http://'.$hp_url.'" target="_blank" ><img src="http://'.$hp_url.'/images/banner.gif" alt="" class="center" style="display: block;"></a>
 			<h3>'.stripslashes($title).'</h3>
 			<span>'.stripslashes($message_html).'</span>
 			<hr>
@@ -164,7 +164,7 @@ else {
 <table width="100%" border="0" cellspacing="1" cellpadding="3">
   <tr>
     <td width="15%"><b><?php echo $_language->module['title']; ?></b></td>
-    <td width="85%"><input type="text" name="title" value="<?php echo $title;?>" size="45" /></td>
+    <td width="85%"><input type="text" name="title" value="<?php echo $title;?>" size="45"></td>
   </tr>
   <tr>
     <td valign="top"><b><?php echo $_language->module['html_mail']; ?></b></td>
@@ -172,18 +172,18 @@ else {
   </tr>
   <tr>
     <td><b><?php echo $_language->module['test_newsletter']; ?></b></td>
-    <td><input type="text" name="testmail" value="user@inter.net" size="30" />
-    <input type="submit" value="<?php echo $_language->module['test']; ?>" name="testen" /></td>
+    <td><input type="text" name="testmail" value="user@inter.net" size="30">
+    <input type="submit" value="<?php echo $_language->module['test']; ?>" name="testen"></td>
   </tr>
   <tr>
     <td><b><?php echo $_language->module['send_to']; ?></b></td>
-    <td><input type="checkbox" name="sendto_clanmembers" value="1" checked="checked" /> <?php echo $_language->module['user_clanmembers']; ?> [<?php echo mysqli_num_rows(safe_query("SELECT userID FROM ".PREFIX."squads_members GROUP BY userID")).'&nbsp;'.$_language->module['users']; ?>]
-    <br><input type="checkbox" name="sendto_registered" value="1" checked="checked" /> <?php echo $_language->module['user_registered']; ?> [<?php echo mysqli_num_rows(safe_query("SELECT * FROM ".PREFIX."user WHERE newsletter='1'")).'&nbsp;'.$_language->module['users']; ?>]
-    <br><input type="checkbox" name="sendto_newsletter" value="1" checked="checked" /> <?php echo $_language->module['user_newsletter']; ?> [<?php echo mysqli_num_rows(safe_query("SELECT * FROM ".PREFIX."newsletter")).'&nbsp;'.$_language->module['users']; ?>]</td>
+    <td><input type="checkbox" name="sendto_clanmembers" value="1" checked="checked"> <?php echo $_language->module['user_clanmembers']; ?> [<?php echo mysqli_num_rows(safe_query("SELECT userID FROM ".PREFIX."squads_members GROUP BY userID")).'&nbsp;'.$_language->module['users']; ?>]
+    <br><input type="checkbox" name="sendto_registered" value="1" checked="checked"> <?php echo $_language->module['user_registered']; ?> [<?php echo mysqli_num_rows(safe_query("SELECT * FROM ".PREFIX."user WHERE newsletter='1'")).'&nbsp;'.$_language->module['users']; ?>]
+    <br><input type="checkbox" name="sendto_newsletter" value="1" checked="checked"> <?php echo $_language->module['user_newsletter']; ?> [<?php echo mysqli_num_rows(safe_query("SELECT * FROM ".PREFIX."newsletter")).'&nbsp;'.$_language->module['users']; ?>]</td>
   </tr>
   <tr>
-    <td><input type="hidden" name="captcha_hash" value="<?php echo $hash; ?>" /></td>
-    <td><br><input type="submit" name="send" value="<?php echo $_language->module['send']; ?>" /></td>
+    <td><input type="hidden" name="captcha_hash" value="<?php echo $hash; ?>"></td>
+    <td><br><input type="submit" name="send" value="<?php echo $_language->module['send']; ?>"></td>
   </tr>
 </table>
 </form>

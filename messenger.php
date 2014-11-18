@@ -192,8 +192,8 @@ elseif($userID) {
 			else $n = ($gesamt+1)-$page*$max+$max;
 		}
     
-    if($type == "ASC") $sorter='<a href="index.php?site=messenger&amp;action=incoming&amp;page='.$page.'&amp;sort='.$sort.'&amp;type=DESC&amp;entries='.$max.'">'.$_language->module['sort'].'</a> <img src="images/icons/asc.gif" width="9" height="7" alt="" />&nbsp;&nbsp;&nbsp;';
-    else $sorter='<a href="index.php?site=messenger&amp;action=incoming&amp;page='.$page.'&amp;sort='.$sort.'&amp;type=ASC&amp;entries='.$max.'">'.$_language->module['sort'].'</a> <img src="images/icons/desc.gif" width="9" height="7" alt="" />&nbsp;&nbsp;&nbsp;';
+    if($type == "ASC") $sorter='<a href="index.php?site=messenger&amp;action=incoming&amp;page='.$page.'&amp;sort='.$sort.'&amp;type=DESC&amp;entries='.$max.'">'.$_language->module['sort'].'</a> <img src="images/icons/asc.gif" width="9" height="7" alt="">&nbsp;&nbsp;&nbsp;';
+    else $sorter='<a href="index.php?site=messenger&amp;action=incoming&amp;page='.$page.'&amp;sort='.$sort.'&amp;type=ASC&amp;entries='.$max.'">'.$_language->module['sort'].'</a> <img src="images/icons/desc.gif" width="9" height="7" alt="">&nbsp;&nbsp;&nbsp;';
     
     eval ("\$pm_incoming_head = \"".gettemplate("pm_incoming_head")."\";");
     echo $pm_incoming_head;
@@ -213,15 +213,15 @@ elseif($userID) {
 				$date=getformatdatetime($ds['date']);
 
 				if($userID == $ds['fromuser']) $buddy='';
-				elseif(isignored($userID, $ds['fromuser'])) $buddy='<a href="buddys.php?action=readd&amp;id='.$ds['fromuser'].'&amp;userID='.$userID.'"><img src="images/icons/buddy_readd.gif" alt="%readd_ignored%" /></a>';
-				elseif(isbuddy($userID, $ds['fromuser'])) $buddy='<a href="buddys.php?action=ignore&amp;id='.$ds['fromuser'].'&amp;userID='.$userID.'"><img src="images/icons/buddy_ignore.gif" alt="%ignore%" /></a>';
-				else $buddy='<a href="buddys.php?action=add&amp;id='.$ds['fromuser'].'&amp;userID='.$userID.'"><img src="images/icons/buddy_add.gif" alt="%add_buddylist%" /></a>';
+				elseif(isignored($userID, $ds['fromuser'])) $buddy='<a href="buddys.php?action=readd&amp;id='.$ds['fromuser'].'&amp;userID='.$userID.'"><img src="images/icons/buddy_readd.gif" alt="%readd_ignored%"></a>';
+				elseif(isbuddy($userID, $ds['fromuser'])) $buddy='<a href="buddys.php?action=ignore&amp;id='.$ds['fromuser'].'&amp;userID='.$userID.'"><img src="images/icons/buddy_ignore.gif" alt="%ignore%"></a>';
+				else $buddy='<a href="buddys.php?action=add&amp;id='.$ds['fromuser'].'&amp;userID='.$userID.'"><img src="images/icons/buddy_add.gif" alt="%add_buddylist%"></a>';
 
-				if(isonline($ds['fromuser'])=="offline") $statuspic='<img src="images/icons/offline.gif" width="7" height="7" alt="offline" />';
-				else $statuspic='<img src="images/icons/online.gif" width="7" height="7" alt="online" />';
+				if(isonline($ds['fromuser'])=="offline") $statuspic='<img src="images/icons/offline.gif" width="7" height="7" alt="offline">';
+				else $statuspic='<img src="images/icons/online.gif" width="7" height="7" alt="online">';
 
 				$sender='<a href="index.php?site=profile&amp;id='.$ds['fromuser'].'"><b>'.getnickname($ds['fromuser']).'</b></a>';
-				if(isclanmember($ds['fromuser'])) $member='<img src="images/icons/member.gif" width="6" height="11" alt="Clanmember" />';
+				if(isclanmember($ds['fromuser'])) $member='<img src="images/icons/member.gif" width="6" height="11" alt="Clanmember">';
 				else $member='';
 
 				if(trim($ds['title'])!="") $title=clearfromtags($ds['title']);
@@ -283,8 +283,8 @@ elseif($userID) {
 			else $n = ($gesamt+1)-$page*$max+$max;
 		}
     
-    if($type == "ASC") $sorter='<a href="index.php?site=messenger&amp;action=outgoing&amp;page='.$page.'&amp;sort='.$sort.'&amp;type=DESC&amp;entries='.$max.'">'.$_language->module['sort'].'</a> <img src="images/icons/asc.gif" width="9" height="7" alt="" />&nbsp;&nbsp;&nbsp;';
-    else $sorter='<a href="index.php?site=messenger&amp;action=outgoing&amp;page='.$page.'&amp;sort='.$sort.'&amp;type=ASC&amp;entries='.$max.'">'.$_language->module['sort'].'</a> <img src="images/icons/desc.gif" width="9" height="7" alt="" />&nbsp;&nbsp;&nbsp;';
+    if($type == "ASC") $sorter='<a href="index.php?site=messenger&amp;action=outgoing&amp;page='.$page.'&amp;sort='.$sort.'&amp;type=DESC&amp;entries='.$max.'">'.$_language->module['sort'].'</a> <img src="images/icons/asc.gif" width="9" height="7" alt="">&nbsp;&nbsp;&nbsp;';
+    else $sorter='<a href="index.php?site=messenger&amp;action=outgoing&amp;page='.$page.'&amp;sort='.$sort.'&amp;type=ASC&amp;entries='.$max.'">'.$_language->module['sort'].'</a> <img src="images/icons/desc.gif" width="9" height="7" alt="">&nbsp;&nbsp;&nbsp;';
 
     eval ("\$pm_outgoing_head = \"".gettemplate("pm_outgoing_head")."\";");
     echo $pm_outgoing_head;
@@ -304,23 +304,23 @@ elseif($userID) {
 				$date=getformatdatetime($ds['date']);
 
 				if($userID == $ds['fromuser']) $buddy='';
-				elseif(isignored($userID, $ds['touser'])) $buddy='<a href="buddys.php?action=readd&amp;id='.$ds['touser'].'&amp;userID='.$userID.'"><img src="images/icons/buddy_readd.gif" alt="%readd_ignored%" /></a>';
-				elseif(isbuddy($userID, $ds['touser'])) $buddy='<a href="buddys.php?action=ignore&amp;id='.$ds['touser'].'&amp;userID='.$userID.'"><img src="images/icons/buddy_ignore.gif" alt="%ignore%" /></a>';
-				else $buddy='<a href="buddys.php?action=add&amp;id='.$ds['touser'].'&amp;userID='.$userID.'"><img src="images/icons/buddy_add.gif" alt="%add_buddylist%" /></a>';
+				elseif(isignored($userID, $ds['touser'])) $buddy='<a href="buddys.php?action=readd&amp;id='.$ds['touser'].'&amp;userID='.$userID.'"><img src="images/icons/buddy_readd.gif" alt="%readd_ignored%"></a>';
+				elseif(isbuddy($userID, $ds['touser'])) $buddy='<a href="buddys.php?action=ignore&amp;id='.$ds['touser'].'&amp;userID='.$userID.'"><img src="images/icons/buddy_ignore.gif" alt="%ignore%"></a>';
+				else $buddy='<a href="buddys.php?action=add&amp;id='.$ds['touser'].'&amp;userID='.$userID.'"><img src="images/icons/buddy_add.gif" alt="%add_buddylist%"></a>';
 
 				$receptionist='<a href="index.php?site=profile&amp;id='.$ds['touser'].'"><b>'.getnickname($ds['touser']).'</b></a>';
 
-				if(isclanmember($ds['touser'])) $member=' <img src="images/icons/member.gif" width="6" height="11" alt="Clanmember" />';
+				if(isclanmember($ds['touser'])) $member=' <img src="images/icons/member.gif" width="6" height="11" alt="Clanmember">';
 				else $member='';
 
-				if(isonline($ds['touser'])=="offline") $statuspic='<img src="images/icons/offline.gif" alt="offline" />';
-				else $statuspic='<img src="images/icons/online.gif" alt="online" />';
+				if(isonline($ds['touser'])=="offline") $statuspic='<img src="images/icons/offline.gif" alt="offline">';
+				else $statuspic='<img src="images/icons/online.gif" alt="online">';
 
 				if(trim($ds['title'])!="") $title=clearfromtags($ds['title']);
 				else $title = $_language->module['no_subject'];
 				$title=' <a href="index.php?site=messenger&amp;action=show&amp;id='.$ds['messageID'].'">'.$title.'</a>';
 
-				$icon='<img src="images/icons/pm_old.gif" width="14" height="12" alt="" />';
+				$icon='<img src="images/icons/pm_old.gif" width="14" height="12" alt="">';
 				eval ("\$pm_outgoing_content = \"".gettemplate("pm_outgoing_content")."\";");
 				echo $pm_outgoing_content;
 				$n++;
@@ -414,7 +414,7 @@ elseif($userID) {
 		
 		$bg1=BG_1;
 
-		if(isanyadmin($userID)) $admin='<b>'.$_language->module['adminoptions'].'</b><br>'.$_language->module['sendeachuser'].'<input class="input" type="checkbox" name="eachuser" value="true" /><br>'.$_language->module['sendeachmember'].'<input class="input" type="checkbox" name="eachmember" value="true" />';
+		if(isanyadmin($userID)) $admin='<b>'.$_language->module['adminoptions'].'</b><br>'.$_language->module['sendeachuser'].'<input class="input" type="checkbox" name="eachuser" value="true"><br>'.$_language->module['sendeachmember'].'<input class="input" type="checkbox" name="eachmember" value="true">';
 		else $admin = '';
 		
 		eval ("\$addbbcode = \"".gettemplate("addbbcode")."\";");

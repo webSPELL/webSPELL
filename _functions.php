@@ -43,7 +43,7 @@ function gettemplate($template,$endung="html", $calledfrom="root") {
 }
 
 function makepagelink($link, $page, $pages, $sub='') {
-	$page_link = '<span class="pagelink"><img src="images/icons/multipage.gif" width="10" height="12" alt="" /> <small>';
+	$page_link = '<span class="pagelink"><img src="images/icons/multipage.gif" width="10" height="12" alt=""> <small>';
 
 	if($page != 1) $page_link .= '&nbsp;<a href="'.$link.'&amp;'.$sub.'page=1">&laquo;</a>&nbsp;<a href="'.$link.'&amp;'.$sub.'page='.($page-1).'">&lsaquo;</a>';
 	if($page >= 6) $page_link .= '&nbsp;<a href="'.$link.'&amp;'.$sub.'page='.($page-5).'">...</a>';

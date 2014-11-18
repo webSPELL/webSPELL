@@ -174,14 +174,14 @@ if(isset($_GET['action'])) {
 			for($i=0; $i < $groups_anz; $i++) {
 				if(isinusergrp($groups[$i]['fgrID'], $users[$z], 0)) $checked = ' checked="checked"';
 				else $checked = '';
-				echo '<td class="'.$td.'"><input type="checkbox" onchange="javascript:setUser(\''.$users[$z].'\',\''.$groups[$i]['fgrID'].'\', this.checked);" value="'.$users[$z].' => '.$groups[$i]['fgrID'].'"'.$checked.' /></td>';
+				echo '<td class="'.$td.'"><input type="checkbox" onchange="javascript:setUser(\''.$users[$z].'\',\''.$groups[$i]['fgrID'].'\', this.checked);" value="'.$users[$z].' => '.$groups[$i]['fgrID'].'"'.$checked.'></td>';
 			}
 			echo'</tr>';
       $n++;
 		}
 		echo'<tr>
-        <td class="td_head"><input type="checkbox" name="ALL" value="ALL" onclick="SelectAllEval(this.form);" /> '.$_language->module['select_all'].'</td>
-        <td class="td_head" colspan="'.($groups_anz).'" align="right"><input name="grps" type="hidden" value="'.implode(';', $grps).'" /><input name="users" type="hidden" value="'.implode(';', $users).'" />';
+        <td class="td_head"><input type="checkbox" name="ALL" value="ALL" onclick="SelectAllEval(this.form);"> '.$_language->module['select_all'].'</td>
+        <td class="td_head" colspan="'.($groups_anz).'" align="right"><input name="grps" type="hidden" value="'.implode(';', $grps).'"><input name="users" type="hidden" value="'.implode(';', $users).'">';
         
 		if($pages > 1) {
 			$page_select = '<select name="page">';
@@ -191,7 +191,7 @@ if(isset($_GET['action'])) {
 				$page_select .= '<option value="'.$i.'"'.$selected.'>'.$i.'</option>';
 			}
 			$page_select .= '</select>';
-			echo $_language->module['save_and_jump'].'&nbsp;'.$page_select.' <input name="jump" type="submit" value="'.$_language->module['go'].'" /> ';
+			echo $_language->module['save_and_jump'].'&nbsp;'.$page_select.' <input name="jump" type="submit" value="'.$_language->module['go'].'"> ';
 		}
 		
         echo '</td>
@@ -252,13 +252,13 @@ else {
         <option value="3">'.$_language->module['users_from_group'].'</option>
       </select>
       <div id="addfield" style="display:none;">
-      <input name="addfield" style="width:170px; margin-top:5px;" type="text" />
+      <input name="addfield" style="width:170px; margin-top:5px;" type="text">
       '.$_language->module['filter'].'
       </div>
       </td>
     </tr>
 	  <tr>
-      <td class="td_head" colspan="2" align="right"><input type="submit" value="'.$_language->module['show'].'" /></td>
+      <td class="td_head" colspan="2" align="right"><input type="submit" value="'.$_language->module['show'].'"></td>
     </tr>
   </table>
   </form>';

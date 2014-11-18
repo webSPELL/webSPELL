@@ -93,15 +93,15 @@ else {
 echo'<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<meta name="description" content="Clanpage using webSPELL 4 CMS" />
-	<meta name="author" content="webspell.org" />
-	<meta name="keywords" content="webspell, webspell4, clan, cms" />
-	<meta name="copyright" content="Copyright &copy; 2005 - 2011 by webspell.org" />
-	<meta name="generator" content="webSPELL" />
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="description" content="Clanpage using webSPELL 4 CMS">
+	<meta name="author" content="webspell.org">
+	<meta name="keywords" content="webspell, webspell4, clan, cms">
+	<meta name="copyright" content="Copyright &copy; 2005 - 2011 by webspell.org">
+	<meta name="generator" content="webSPELL">
 	<title>'.$_language->module['file_upload'].'</title>
   <script src="js/bbcode.js" language="jscript" type="text/javascript"></script>
-	<link href="_stylesheet.css" rel="stylesheet" type="text/css" />
+	<link href="_stylesheet.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 <center>
@@ -109,8 +109,8 @@ echo'<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.
 <form method="post" action="upload.php?'.$tableid.'='.$id.'" enctype="multipart/form-data">
 <table width="100%" cellpadding="4" cellspacing="1" bgcolor="'.BORDER.'">
   <tr bgcolor="'.BG_1.'">
-    <td align="center"><input type="file" name="screen" />
-    <input type="submit" name="submit" value="'.$_language->module['upload'].'" />
+    <td align="center"><input type="file" name="screen">
+    <input type="submit" name="submit" value="'.$_language->module['upload'].'">
     <hr>
     <h2>'.$_language->module['existing_files'].':</h2>
     <table width="100%" border="0" cellspacing="0" cellpadding="2">';
@@ -126,9 +126,9 @@ echo'<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.
 				
         echo'<tr>
             <td><a href="'.$filepath.$screen.'" target="_blank">'.$screen.'</a></td>
-            <td><input type="text" name="pic" size="70" value="&lt;img src=&quot;'.$filepath.$screen.'&quot; border=&quot;0&quot; align=&quot;left&quot; style=&quot;padding:4px;&quot; alt=&quot;&quot; /&gt;" /></td>
-            <td><input type="button" onclick="AddCodeFromWindow(\'[img]'.$filepath.$screen.'[/img] \')" value="'.$_language->module['add_to_message'].'" /></td>
-            <td><input type="button" onclick="MM_confirm(\''.$_language->module['delete'].'\',\'upload.php?action=delete&amp;'.$tableid.'='.$id.'&amp;file='.basename($screen).'\')" value="'.$_language->module['delete'].'" /></td>
+            <td><input type="text" name="pic" size="70" value="&lt;img src=&quot;'.$filepath.$screen.'&quot; border=&quot;0&quot; align=&quot;left&quot; style=&quot;padding:4px;&quot; alt=&quot;&quot; /&gt;"></td>
+            <td><input type="button" onclick="AddCodeFromWindow(\'[img]'.$filepath.$screen.'[/img] \')" value="'.$_language->module['add_to_message'].'"></td>
+            <td><input type="button" onclick="MM_confirm(\''.$_language->module['delete'].'\',\'upload.php?action=delete&amp;'.$tableid.'='.$id.'&amp;file='.basename($screen).'\')" value="'.$_language->module['delete'].'"></td>
           </tr>';
 			}
 		}
@@ -139,7 +139,7 @@ echo'<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.
     </tr>
   </table>
   </form>
-  <br><br><input type="button" onclick="javascript:self.close()" value="'.$_language->module['close_window'].'" />
+  <br><br><input type="button" onclick="javascript:self.close()" value="'.$_language->module['close_window'].'">
   </center>
   </body>
   </html>';

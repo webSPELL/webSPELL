@@ -98,14 +98,14 @@ if($action == "user"){
 	echo '<table width="100%" border="0" cellspacing="0" cellpadding="0">
 		      <tr>
 		        <td valign="top" width="25%">'.$_language->module["userID"].':</td>
-		        <td valign="top"><input type="text" name="id" value="'.$id.'" onchange="fetch(\'spam.php?getnickname=\'+this.value+\'\',\'nick\',\'replace\',\'event\');"/></td>
+		        <td valign="top"><input type="text" name="id" value="'.$id.'" onchange="fetch(\'spam.php?getnickname=\'+this.value+\'\',\'nick\',\'replace\',\'event\');"></td>
 		      </tr>
 		      <tr>
 		        <td valign="top">'.$_language->module["profile"].':</td>
 		        <td valign="top"><span id="nick">'.$nick.'</span></td>
 		      </tr>
 		    </table>';
-	echo '<input type="hidden" name="captcha_hash" value="'.$hash.'" /><input type="submit" name="spam" value="'.$_language->module["ban_user"].'" />
+	echo '<input type="hidden" name="captcha_hash" value="'.$hash.'"><input type="submit" name="spam" value="'.$_language->module["ban_user"].'">
   </form>';
 }
 elseif($action == "user_ban"){
@@ -248,7 +248,7 @@ elseif($action == "api_log"){
 	$get = safe_query("SELECT * FROM ".PREFIX."api_log ORDER BY `date` DESC");
 	if(mysqli_num_rows($get)){
 
-		echo '<input type="button" onclick="MM_confirm(\''.$_language->module["question_delete_all"].'\', \'admincenter.php?site=spam&amp;action=api_log&amp;del_option=del_all\')" value="'.$_language->module["delete_all"].'" /><br><br>';
+		echo '<input type="button" onclick="MM_confirm(\''.$_language->module["question_delete_all"].'\', \'admincenter.php?site=spam&amp;action=api_log&amp;del_option=del_all\')" value="'.$_language->module["delete_all"].'"><br><br>';
 
 		echo '<table border="0" cellspacing="1" cellpadding="3" bgcolor="#DDDDDD" width="100%">
 		<tr>
@@ -280,7 +280,7 @@ elseif($action == "api_log"){
 elseif($action == "forum_spam"){
 	echo'<h1>&curren; Forum Spam</h1>';
 	
-	echo '<input type="button" onclick="MM_confirm(\''.$_language->module["question_delete_all"].'\', \'admincenter.php?site=spam&amp;action=forum_spam&amp;del_option=del_all\')" value="'.$_language->module["delete_all"].'" />';
+	echo '<input type="button" onclick="MM_confirm(\''.$_language->module["question_delete_all"].'\', \'admincenter.php?site=spam&amp;action=forum_spam&amp;del_option=del_all\')" value="'.$_language->module["delete_all"].'">';
 	
 	if(isset($_GET['del_option']) && $_GET['del_option']== "del_all"){
 		$get = safe_query("SELECT userID FROM ".PREFIX."forum_topics_spam");
@@ -331,7 +331,7 @@ elseif($action == "forum_spam"){
 			else { $td='td2';
 			}
 			
-			$options = '<input type="button" onclick="MM_confirm(\''.$_language->module["question_delete"].'\', \'admincenter.php?site=spam&amp;action=forum_spam&amp;del_option=delete_topic&amp;topicID='.$ds['topicID'].'\')" value="'.$_language->module["delete"].'" />';
+			$options = '<input type="button" onclick="MM_confirm(\''.$_language->module["question_delete"].'\', \'admincenter.php?site=spam&amp;action=forum_spam&amp;del_option=delete_topic&amp;topicID='.$ds['topicID'].'\')" value="'.$_language->module["delete"].'">';
 			
 			echo '<tr>
 			<td class="'.$td.'"><a href="../index.php?site=profile&amp;id='.$ds['userID'].'" target="_blank">'.getnickname($ds['userID']).'</a></td>
@@ -371,7 +371,7 @@ elseif($action == "forum_spam"){
 			else { $td='td2';
 			}
 			
-			$options = '<input type="button" onclick="MM_confirm(\''.$_language->module["question_delete"].'\', \'admincenter.php?site=spam&amp;action=forum_spam&amp;del_option=delete_post&amp;postID='.$ds['postID'].'\')" value="'.$_language->module["delete"].'" />';
+			$options = '<input type="button" onclick="MM_confirm(\''.$_language->module["question_delete"].'\', \'admincenter.php?site=spam&amp;action=forum_spam&amp;del_option=delete_post&amp;postID='.$ds['postID'].'\')" value="'.$_language->module["delete"].'">';
 			
 			echo '<tr>
 			<td class="'.$td.'"><a href="../index.php?site=profile&amp;id='.$ds['poster'].'" target="_blank">'.getnickname($ds['poster']).'</a></td>
@@ -410,7 +410,7 @@ elseif($action == "forum_spam"){
 			else { $td='td2';
 			}
 			
-			$options = '<input type="button" onclick="MM_confirm(\''.$_language->module["question_delete"].'\', \'admincenter.php?site=spam&amp;action=forum_spam&amp;del_option=delete_comment&amp;commentID='.$ds['commentID'].'\')" value="'.$_language->module["delete"].'" />';
+			$options = '<input type="button" onclick="MM_confirm(\''.$_language->module["question_delete"].'\', \'admincenter.php?site=spam&amp;action=forum_spam&amp;del_option=delete_comment&amp;commentID='.$ds['commentID'].'\')" value="'.$_language->module["delete"].'">';
 			if(!empty($ds['userID'])){
 				$nick = '<a href="../index.php?site=profile&amp;id='.$ds['userID'].'" target="_blank">'.getnickname($ds['userID']).'</a>';
 			}

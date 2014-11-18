@@ -29,7 +29,7 @@ $languages = '';
 if ($handle = opendir('./languages/')) {
     while (false !== ($file = readdir($handle))) {
     	if(is_dir('./languages/'.$file) && $file != ".." && $file != "." && $file != ".svn"){
-    		$languages .= '<a href="index.php?lang='.$file.'"><img src="../images/flags/'.$file.'.gif" alt="'.$file.'" /></a>';
+    		$languages .= '<a href="index.php?lang='.$file.'"><img src="../images/flags/'.$file.'.gif" alt="'.$file.'"></a>';
     	}
     }
     closedir($handle);
@@ -60,6 +60,6 @@ if ($handle = opendir('./languages/')) {
    <?php echo $_language->module['webspell_team']; ?><br>
    - <a href="http://www.webspell.org" target="_blank">www.webspell.org</a>
 	
-   <div align="right"><br><a href="javascript:document.ws_install.submit()"><img src="images/next.jpg" alt="" /></a></div>
+   <div align="right"><br><a href="javascript:document.ws_install.submit()"><img src="images/next.jpg" alt=""></a></div>
    </td>
   </tr>

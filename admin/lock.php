@@ -56,8 +56,8 @@ if(!$closed) {
     
 		echo'<form method="post" action="admincenter.php?site=lock">
     <b>'.$_language->module['pagelock'].'</b><br><small>'.$_language->module['you_can_use_html'].'</small><br><br>
-    <textarea name="reason" rows="30" cols="" style="width: 100%;">'.getinput($ds['reason']).'</textarea><br><br><input type="hidden" name="captcha_hash" value="'.$hash.'" />
-    <input type="submit" name="submit" value="'.$_language->module['lock'].'" />
+    <textarea name="reason" rows="30" cols="" style="width: 100%;">'.getinput($ds['reason']).'</textarea><br><br><input type="hidden" name="captcha_hash" value="'.$hash.'">
+    <input type="submit" name="submit" value="'.$_language->module['lock'].'">
     </form>';
 	}
 }
@@ -82,9 +82,9 @@ else {
     
 		echo'<form method="post" action="admincenter.php?site=lock">
     '.$_language->module['locked_since'].'&nbsp;'.getformatdatetime($ds['time']).'.<br><br>
-    <input type="checkbox" name="unlock" /> '.$_language->module['unlock_page'].'<br><br>
-    <input type="hidden" name="captcha_hash" value="'.$hash.'" />
-    <input type="submit" name="submit" value="'.$_language->module['unlock'].'" />
+    <input type="checkbox" name="unlock"> '.$_language->module['unlock_page'].'<br><br>
+    <input type="hidden" name="captcha_hash" value="'.$hash.'">
+    <input type="submit" name="submit" value="'.$_language->module['unlock'].'">
     </form>';
 	}
 }

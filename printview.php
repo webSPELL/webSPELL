@@ -34,8 +34,8 @@ $_language->read_module('forum');
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<meta name="robots" content="noindex, nofollow" />
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="robots" content="noindex, nofollow">
 	<title><?php echo PAGETITLE; ?></title>
 	<style type="text/css">
 	<!--
@@ -100,18 +100,18 @@ if(mysqli_num_rows($thread)) {
 		if(isforumadmin($dr['poster']) || ismoderator($dr['poster'], $dt['boardID'])) {
 			if(ismoderator($dr['poster'], $dt['boardID'])) {
 				$usertype="Moderator";
-				$rang='<img src="images/icons/ranks/moderator.gif" alt="" />';
+				$rang='<img src="images/icons/ranks/moderator.gif" alt="">';
 			}
 			if(isforumadmin($dr['poster'])) {
 				$usertype="Administrator";
-				$rang='<img src="images/icons/ranks/admin.gif" alt="" />';
+				$rang='<img src="images/icons/ranks/admin.gif" alt="">';
 			}
 		}
 		else {
 			$ergebnis=safe_query("SELECT * FROM ".PREFIX."forum_ranks WHERE $posts > postmin AND $posts < postmax");
 			$ds=mysqli_fetch_array($ergebnis);
 			$usertype=$ds['rank'];
-			$rang='<img src="images/icons/ranks/'.$ds['pic'].'" alt="" />';
+			$rang='<img src="images/icons/ranks/'.$ds['pic'].'" alt="">';
 		}
 
 		echo'<tr bgcolor="FFFFFF">

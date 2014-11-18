@@ -37,8 +37,8 @@ class Gallery {
 		$pic = mysqli_fetch_array(safe_query("SELECT * FROM ".PREFIX."gallery_pictures WHERE picID='".$picID."'"));
 		if($pic['picID']) {
 			$pic['gallery'] = str_break(stripslashes($this->getgalleryname($picID)), 45);
-			if(file_exists('images/gallery/thumb/'.$picID.'.jpg')) $pic['image'] = '<a href="index.php?site=gallery&amp;picID='.$picID.'"><img src="images/gallery/thumb/'.$picID.'.jpg" width="'.$thumbwidth.'" alt="" /></a>';
-			else $pic['image'] = '<a href="index.php?site=gallery&amp;picID='.$picID.'"><img src="images/nopic.gif" width="'.$thumbwidth.'" alt="'.$_language->module['no_thumb'].'" /></a>';
+			if(file_exists('images/gallery/thumb/'.$picID.'.jpg')) $pic['image'] = '<a href="index.php?site=gallery&amp;picID='.$picID.'"><img src="images/gallery/thumb/'.$picID.'.jpg" width="'.$thumbwidth.'" alt=""></a>';
+			else $pic['image'] = '<a href="index.php?site=gallery&amp;picID='.$picID.'"><img src="images/nopic.gif" width="'.$thumbwidth.'" alt="'.$_language->module['no_thumb'].'"></a>';
 			$pic['comments'] = mysqli_num_rows(safe_query("SELECT commentID FROM ".PREFIX."comments WHERE parentID='".$picID."' AND type='ga'"));
 			$ergebnis = mysqli_fetch_array(safe_query("SELECT date FROM ".PREFIX."gallery as gal, ".PREFIX."gallery_pictures as pic WHERE gal.galleryID=pic.galleryID AND pic.picID='".$picID."'"));
 			$pic['date']=getformatdate($ergebnis['date']);

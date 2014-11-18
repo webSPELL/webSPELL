@@ -67,11 +67,11 @@ if($action=="add") {
   <table width="100%" border="0" cellspacing="1" cellpadding="3">
     <tr>
       <td width="15%"><b>'.$_language->module['category_name'].'</b></td>
-      <td width="85%"><input type="text" name="name" size="60" /></td>
+      <td width="85%"><input type="text" name="name" size="60"></td>
     </tr>
     <tr>
-      <td><input type="hidden" name="captcha_hash" value="'.$hash.'" /></td>
-      <td><input type="submit" name="save" value="'.$_language->module['add_category'].'" /></td>
+      <td><input type="hidden" name="captcha_hash" value="'.$hash.'"></td>
+      <td><input type="submit" name="save" value="'.$_language->module['add_category'].'"></td>
     </tr>
   </table>
   </form>';
@@ -91,11 +91,11 @@ elseif($action=="edit") {
   <table width="100%" border="0" cellspacing="1" cellpadding="3">
     <tr>
       <td width="15%"><b>'.$_language->module['category_name'].'</b></td>
-      <td width="85%"><input type="text" name="name" value="'.getinput($ds['name']).'" size="60" /></td>
+      <td width="85%"><input type="text" name="name" value="'.getinput($ds['name']).'" size="60"></td>
     </tr>
     <tr>
-      <td><input type="hidden" name="captcha_hash" value="'.$hash.'" /><input type="hidden" name="linkcatID" value="'.$ds['linkcatID'].'" /></td>
-      <td><input type="submit" name="saveedit" value="'.$_language->module['edit_category'].'" /></td>
+      <td><input type="hidden" name="captcha_hash" value="'.$hash.'"><input type="hidden" name="linkcatID" value="'.$ds['linkcatID'].'"></td>
+      <td><input type="submit" name="saveedit" value="'.$_language->module['edit_category'].'"></td>
     </tr>
   </table>
   </form>';
@@ -105,7 +105,7 @@ else {
 	
   echo'<h1>&curren; '.$_language->module['link_categories'].'</h1>';
   
-  echo'<input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=linkcategorys&amp;action=add\');return document.MM_returnValue" value="'.$_language->module['new_category'].'" /><br><br>';
+  echo'<input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=linkcategorys&amp;action=add\');return document.MM_returnValue" value="'.$_language->module['new_category'].'"><br><br>';
 
 	$ergebnis=safe_query("SELECT * FROM ".PREFIX."links_categorys ORDER BY name");
 	
@@ -126,8 +126,8 @@ else {
       
 		echo'<tr>
       <td class="'.$td.'">'.getinput($ds['name']).'</td>
-      <td class="'.$td.'" align="center"><input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=linkcategorys&amp;action=edit&amp;linkcatID='.$ds['linkcatID'].'\');return document.MM_returnValue" value="'.$_language->module['edit'].'" />
-      <input type="button" onclick="MM_confirm(\''.$_language->module['really_delete'].'\', \'admincenter.php?site=linkcategorys&amp;delete=true&amp;linkcatID='.$ds['linkcatID'].'&amp;captcha_hash='.$hash.'\')" value="'.$_language->module['delete'].'" /></td>
+      <td class="'.$td.'" align="center"><input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=linkcategorys&amp;action=edit&amp;linkcatID='.$ds['linkcatID'].'\');return document.MM_returnValue" value="'.$_language->module['edit'].'">
+      <input type="button" onclick="MM_confirm(\''.$_language->module['really_delete'].'\', \'admincenter.php?site=linkcategorys&amp;delete=true&amp;linkcatID='.$ds['linkcatID'].'&amp;captcha_hash='.$hash.'\')" value="'.$_language->module['delete'].'"></td>
     </tr>';
       
       $i++;

@@ -83,14 +83,14 @@ function addonnav() {
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<meta name="description" content="Clanpage using webSPELL 4 CMS" />
-	<meta name="author" content="webspell.org" />
-	<meta name="keywords" content="webspell, webspell4, clan, cms" />
-	<meta name="copyright" content="Copyright &copy; 2005 - 2011 by webspell.org" />
-	<meta name="generator" content="webSPELL" />
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="description" content="Clanpage using webSPELL 4 CMS">
+	<meta name="author" content="webspell.org">
+	<meta name="keywords" content="webspell, webspell4, clan, cms">
+	<meta name="copyright" content="Copyright &copy; 2005 - 2011 by webspell.org">
+	<meta name="generator" content="webSPELL">
 	<title><?php echo $myclanname ?> - webSPELL AdminCenter</title>
-	<link href="_stylesheet.css" rel="stylesheet" type="text/css" />
+	<link href="_stylesheet.css" rel="stylesheet" type="text/css">
 	<!--[if IE]>
 	<style type="text/css">
 	.td1 {  height: 18px; }
@@ -116,7 +116,7 @@ function addonnav() {
    </td>
   </tr>
   <tr>
-   <td colspan="5"><img src="images/2.jpg" width="1000" height="5" alt="" /></td>
+   <td colspan="5"><img src="images/2.jpg" width="1000" height="5" alt=""></td>
   </tr>
   <tr>
    <td style="background-image:url(images/3.jpg);" width="5" valign="top"></td>
@@ -226,7 +226,7 @@ function addonnav() {
    <td style="background-image:url(images/4.jpg);" width="5" valign="top"></td>
   </tr>
   <tr>
-   <td colspan="5"><img src="images/5.jpg" width="1000" height="7" alt="" /></td>
+   <td colspan="5"><img src="images/5.jpg" width="1000" height="7" alt=""></td>
   </tr>
 </table>
 <center><br>&copy; 2005 - 2011 <a href="http://www.webspell.org" target="_blank" class="white"><b>webSPELL.org</b></a> &amp; <a href="http://www.webspell.at" target="_blank" class="white"><b>webSPELL.at</b></a><br>&nbsp;</center>

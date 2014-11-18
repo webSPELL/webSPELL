@@ -106,23 +106,23 @@ if($action=="add") {
   <table width="100%" border="0" cellspacing="1" cellpadding="3">
     <tr>
       <td width="15%"><b>'.$_language->module['rank_icon'].'</b></td>
-      <td width="85%"><input name="rank" type="file" size="40" /></td>
+      <td width="85%"><input name="rank" type="file" size="40"></td>
     </tr>
     <tr>
       <td><b>'.$_language->module['rank_name'].'</b></td>
-      <td><input type="text" name="name" size="60" /></td>
+      <td><input type="text" name="name" size="60"></td>
     </tr>
     <tr>
       <td><b>'.$_language->module['min_posts'].'</b></td>
-      <td><input type="text" name="min" size="4" /></td>
+      <td><input type="text" name="min" size="4"></td>
     </tr>
     <tr>
       <td><b>'.$_language->module['max_posts'].'</b></td>
-      <td><input type="text" name="max" size="4" /></td>
+      <td><input type="text" name="max" size="4"></td>
     </tr>
     <tr>
-      <td><input type="hidden" name="captcha_hash" value="'.$hash.'" /></td>
-      <td><input type="submit" name="save" value="'.$_language->module['add_rank'].'" /></td>
+      <td><input type="hidden" name="captcha_hash" value="'.$hash.'"></td>
+      <td><input type="submit" name="save" value="'.$_language->module['add_rank'].'"></td>
     </tr>
   </table>
   </form>';
@@ -132,7 +132,7 @@ else {
 	
   echo'<h1>&curren; '.$_language->module['user_ranks'].'</h1>';
   
-  echo'<input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=ranks&amp;action=add\');return document.MM_returnValue" value="'.$_language->module['new_rank'].'" /><br><br>';
+  echo'<input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=ranks&amp;action=add\');return document.MM_returnValue" value="'.$_language->module['new_rank'].'"><br><br>';
 	
   echo'<form method="post" action="admincenter.php?site=ranks">
   <table width="100%" border="0" cellspacing="1" cellpadding="3" bgcolor="#DDDDDD">
@@ -154,7 +154,7 @@ else {
     else { $td='td2'; }    
 		if($ds['rank']=="Administrator" || $ds['rank']=="Moderator") {			
       		echo'<tr>
-	        <td class="'.$td.'" align="center"><img src="../images/icons/ranks/'.$ds['pic'].'" alt="" /></td>
+	        <td class="'.$td.'" align="center"><img src="../images/icons/ranks/'.$ds['pic'].'" alt=""></td>
 	        <td class="'.$td.'">'.$ds['rank'].'</td>
 	        <td class="'.$td.'">&nbsp;</td>
 	        <td class="'.$td.'">&nbsp;</td>
@@ -167,17 +167,17 @@ else {
 			else $max=$ds['postmax'];
 			
       		echo'<tr>
-	        <td class="'.$td.'" align="center"><img src="../images/icons/ranks/'.$ds['pic'].'" alt="" /></td>
-	        <td class="'.$td.'"><input type="text" name="rank['.$ds['rankID'].']" value="'.getinput($ds['rank']).'" size="58" /></td>
-	        <td class="'.$td.'" align="center"><input type="text" name="min['.$ds['rankID'].']" value="'.$ds['postmin'].'" size="6" dir="rtl" /></td>
-	        <td class="'.$td.'" align="center"><input type="text" name="max['.$ds['rankID'].']" value="'.$max.'" size="6" dir="rtl" /></td>
-	        <td class="'.$td.'" align="center"><input type="button" onclick="MM_confirm(\''.$_language->module['really_delete'].'\', \'admincenter.php?site=ranks&amp;delete=true&amp;rankID='.$ds['rankID'].'&amp;captcha_hash='.$hash.'\')" value="'.$_language->module['delete'].'" /></td>
+	        <td class="'.$td.'" align="center"><img src="../images/icons/ranks/'.$ds['pic'].'" alt=""></td>
+	        <td class="'.$td.'"><input type="text" name="rank['.$ds['rankID'].']" value="'.getinput($ds['rank']).'" size="58"></td>
+	        <td class="'.$td.'" align="center"><input type="text" name="min['.$ds['rankID'].']" value="'.$ds['postmin'].'" size="6" dir="rtl"></td>
+	        <td class="'.$td.'" align="center"><input type="text" name="max['.$ds['rankID'].']" value="'.$max.'" size="6" dir="rtl"></td>
+	        <td class="'.$td.'" align="center"><input type="button" onclick="MM_confirm(\''.$_language->module['really_delete'].'\', \'admincenter.php?site=ranks&amp;delete=true&amp;rankID='.$ds['rankID'].'&amp;captcha_hash='.$hash.'\')" value="'.$_language->module['delete'].'"></td>
 	      </tr>';
 		}
 		$i++;
 	}
 	echo'<tr>
-      <td class="td_head" colspan="5" align="right"><input type="hidden" name="captcha_hash" value="'.$hash.'" /><input type="submit" name="saveedit" value="'.$_language->module['update'].'" /></td>
+      <td class="td_head" colspan="5" align="right"><input type="hidden" name="captcha_hash" value="'.$hash.'"><input type="submit" name="saveedit" value="'.$_language->module['update'].'"></td>
     </tr>
   </table>
   </form>';

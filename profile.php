@@ -79,15 +79,15 @@ if(isset($id) and getnickname($id) != '') {
 				$flag = '[flag]'.getcountry($db['buddy']).'[/flag]';
 				$country = flags($flag);
 				$nicknamebuddy = getnickname($db['buddy']);
-				$email = "<a href='mailto:".mail_protect(getemail($db['buddy']))."'><img src='images/icons/email.gif' border='0' alt='' /></a>";
+				$email = "<a href='mailto:".mail_protect(getemail($db['buddy']))."'><img src='images/icons/email.gif' border='0' alt=''></a>";
         
-        if(isignored($userID, $db['buddy'])) $buddy = '<a href="buddys.php?action=readd&amp;id='.$db['buddy'].'&amp;userID='.$userID.'"><img src="images/icons/buddy_readd.gif" alt="'.$_language->module['back_buddylist'].'" /></a>';
-				elseif(isbuddy($userID, $db['buddy'])) $buddy = '<a href="buddys.php?action=ignore&amp;id='.$db['buddy'].'&amp;userID='.$userID.'"><img src="images/icons/buddy_ignore.gif" alt="'.$_language->module['ignore_user'].'" /></a>';
+        if(isignored($userID, $db['buddy'])) $buddy = '<a href="buddys.php?action=readd&amp;id='.$db['buddy'].'&amp;userID='.$userID.'"><img src="images/icons/buddy_readd.gif" alt="'.$_language->module['back_buddylist'].'"></a>';
+				elseif(isbuddy($userID, $db['buddy'])) $buddy = '<a href="buddys.php?action=ignore&amp;id='.$db['buddy'].'&amp;userID='.$userID.'"><img src="images/icons/buddy_ignore.gif" alt="'.$_language->module['ignore_user'].'"></a>';
 				elseif($userID == $db['buddy']) $buddy = '';
-				else $buddy = '<a href="buddys.php?action=add&amp;id='.$db['buddy'].'&amp;userID='.$userID.'"><img src="images/icons/buddy_add.gif" alt="'.$_language->module['add_buddylist'].'" /></a>';
+				else $buddy = '<a href="buddys.php?action=add&amp;id='.$db['buddy'].'&amp;userID='.$userID.'"><img src="images/icons/buddy_add.gif" alt="'.$_language->module['add_buddylist'].'"></a>';
 
-        if(isonline($db['buddy']) == "offline") $statuspic = '<img src="images/icons/offline.gif" alt="'.$_language->module['offline'].'" />';
-				else $statuspic = '<img src="images/icons/online.gif" alt="'.$_language->module['online'].'" />';
+        if(isonline($db['buddy']) == "offline") $statuspic = '<img src="images/icons/offline.gif" alt="'.$_language->module['offline'].'">';
+				else $statuspic = '<img src="images/icons/online.gif" alt="'.$_language->module['online'].'">';
         
         $buddylist .= '<tr bgcolor="'.$bgcolor.'">
             <td>
@@ -360,15 +360,15 @@ if(isset($id) and getnickname($id) != '') {
 						$n % 2 ? $bg1 = BG_1 : $bg1 = BG_2;
 						$date = getformatdatetime($ds['date']);
 		
-						if(validate_email($ds['email'])) $email = '<a href="mailto:'.mail_protect($ds['email']).'"><img src="images/icons/email.gif" alt="'.$_language->module['email'].'" /></a>';
+						if(validate_email($ds['email'])) $email = '<a href="mailto:'.mail_protect($ds['email']).'"><img src="images/icons/email.gif" alt="'.$_language->module['email'].'"></a>';
 						else $email = '';
 		
-						if(validate_url($ds['hp'])) $hp = '<a href="'.$ds['hp'].'" target="_blank"><img src="images/icons/hp.gif" alt="'.$_language->module['homepage'].'" /></a>';
+						if(validate_url($ds['hp'])) $hp = '<a href="'.$ds['hp'].'" target="_blank"><img src="images/icons/hp.gif" alt="'.$_language->module['homepage'].'"></a>';
 						else $hp = '';
 		
 						$sem = '/[0-9]{6,11}/si';
 						$icq_number = str_replace('-', '', $ds['icq']);
-						if(preg_match($sem, $icq_number)) $icq = '<a href="http://www.icq.com/people/about_me.php?uin='.$icq_number.'" target="_blank"><img src="http://online.mirabilis.com/scripts/online.dll?icq='.$icq_number.'&amp;img=5" alt="icq" /></a>';
+						if(preg_match($sem, $icq_number)) $icq = '<a href="http://www.icq.com/people/about_me.php?uin='.$icq_number.'" target="_blank"><img src="http://online.mirabilis.com/scripts/online.dll?icq='.$icq_number.'&amp;img=5" alt="icq"></a>';
 						else $icq = "";
 		
 						$name = strip_tags($ds['name']);
@@ -380,7 +380,7 @@ if(isset($id) and getnickname($id) != '') {
 						$ip = $_language->module['logged'];
 						$quote = '<a href="javascript:AddCode(\'[quote='.$name.']'.$quotemessage.'[/quote]\')"> <i class="icon-quote-left"></i></a>';
 						if(isfeedbackadmin($userID) OR $id == $userID) {
-							$actions = '<input class="input" type="checkbox" name="gbID[]" value="'.$ds['gbID'].'" />';
+							$actions = '<input class="input" type="checkbox" name="gbID[]" value="'.$ds['gbID'].'">';
 							if(isfeedbackadmin($userID)) $ip = $ds['ip'];
 						}
 		
@@ -455,27 +455,27 @@ if(isset($id) and getnickname($id) != '') {
 			else safe_query("INSERT INTO ".PREFIX."user_visitors (userID, visitor, date) values ('".$id."', '".$userID."', '".$date."')");
 		}
 		$anzvisits = $ds['visits'];
-		if($ds['userpic']) $userpic = '<img src="images/userpics/'.$ds['userpic'].'" alt="" />';
-		else $userpic = '<img src="images/userpics/nouserpic.gif" alt="" />';
+		if($ds['userpic']) $userpic = '<img src="images/userpics/'.$ds['userpic'].'" alt="">';
+		else $userpic = '<img src="images/userpics/nouserpic.gif" alt="">';
 		$nickname = $ds['nickname'];
-		if(isclanmember($id)) $member = ' <img src="images/icons/member.gif" alt="'.$_language->module['clanmember'].'" />';
+		if(isclanmember($id)) $member = ' <img src="images/icons/member.gif" alt="'.$_language->module['clanmember'].'">';
 		else $member = '';
 		$registered = getformatdatetime($ds['registerdate']);
 		$lastlogin = getformatdatetime($ds['lastlogin']);
-		if($ds['avatar']) $avatar = '<img src="images/avatars/'.$ds['avatar'].'" alt="" />';
-		else $avatar = '<img src="images/avatars/noavatar.gif" alt="" />';
+		if($ds['avatar']) $avatar = '<img src="images/avatars/'.$ds['avatar'].'" alt="">';
+		else $avatar = '<img src="images/avatars/noavatar.gif" alt="">';
 		$status = isonline($ds['userID']);
 		if($ds['email_hide']) $email = $_language->module['n_a'];
-		else $email = '<a href="mailto:'.mail_protect(cleartext($ds['email'])).'"><img src="images/icons/email.gif" alt="'.$_language->module['email'].'" /></a>';
+		else $email = '<a href="mailto:'.mail_protect(cleartext($ds['email'])).'"><img src="images/icons/email.gif" alt="'.$_language->module['email'].'"></a>';
 		$sem = '/[0-9]{4,11}/si';
-		if(preg_match($sem, $ds['icq'])) $icq = '<a href="http://www.icq.com/people/about_me.php?uin='.sprintf('%d', $ds['icq']).'" target="_blank"><img src="http://online.mirabilis.com/scripts/online.dll?icq='.sprintf('%d', $ds['icq']).'&amp;img=5" alt="icq" /></a>';
+		if(preg_match($sem, $ds['icq'])) $icq = '<a href="http://www.icq.com/people/about_me.php?uin='.sprintf('%d', $ds['icq']).'" target="_blank"><img src="http://online.mirabilis.com/scripts/online.dll?icq='.sprintf('%d', $ds['icq']).'&amp;img=5" alt="icq"></a>';
 		else $icq='';
 		if($loggedin && $ds['userID'] != $userID) {
-			$pm = '<a href="index.php?site=messenger&amp;action=touser&amp;touser='.$ds['userID'].'"><img src="images/icons/pm.gif" width="12" height="13" alt="messenger" /></a>';
-			if(isignored($userID, $ds['userID'])) $buddy = '<a href="buddys.php?action=readd&amp;id='.$ds['userID'].'&amp;userID='.$userID.'"><img src="images/icons/buddy_readd.gif" alt="'.$_language->module['back_buddylist'].'" /></a>';
-			elseif(isbuddy($userID, $ds['userID'])) $buddy = '<a href="buddys.php?action=ignore&amp;id='.$ds['userID'].'&amp;userID='.$userID.'"><img src="images/icons/buddy_ignore.gif" alt="'.$_language->module['ignore_user'].'" /></a>';
+			$pm = '<a href="index.php?site=messenger&amp;action=touser&amp;touser='.$ds['userID'].'"><img src="images/icons/pm.gif" width="12" height="13" alt="messenger"></a>';
+			if(isignored($userID, $ds['userID'])) $buddy = '<a href="buddys.php?action=readd&amp;id='.$ds['userID'].'&amp;userID='.$userID.'"><img src="images/icons/buddy_readd.gif" alt="'.$_language->module['back_buddylist'].'"></a>';
+			elseif(isbuddy($userID, $ds['userID'])) $buddy = '<a href="buddys.php?action=ignore&amp;id='.$ds['userID'].'&amp;userID='.$userID.'"><img src="images/icons/buddy_ignore.gif" alt="'.$_language->module['ignore_user'].'"></a>';
 			elseif($userID == $ds['userID']) $buddy = '';
-			else $buddy = '<a href="buddys.php?action=add&amp;id='.$ds['userID'].'&amp;userID='.$userID.'"><img src="images/icons/buddy_add.gif" alt="'.$_language->module['add_buddylist'].'" /></a>';
+			else $buddy = '<a href="buddys.php?action=add&amp;id='.$ds['userID'].'&amp;userID='.$userID.'"><img src="images/icons/buddy_add.gif" alt="'.$_language->module['add_buddylist'].'"></a>';
 		}
 		else $pm = '' & $buddy = '';
 
@@ -563,18 +563,18 @@ if(isset($id) and getnickname($id) != '') {
 
 		if(isforumadmin($ds['userID'])) {
 			$usertype = $_language->module['administrator'];
-			$rang = '<img src="images/icons/ranks/admin.gif" alt="" />';
+			$rang = '<img src="images/icons/ranks/admin.gif" alt="">';
 		}
 		elseif(isanymoderator($ds['userID'])) {
 			$usertype = $_language->module['moderator'];
-			$rang = '<img src="images/icons/ranks/moderator.gif" alt="" />';
+			$rang = '<img src="images/icons/ranks/moderator.gif" alt="">';
 		}
 		else {
 			$posts = getuserforumposts($ds['userID']);
 			$ergebnis = safe_query("SELECT * FROM ".PREFIX."forum_ranks WHERE ".$posts." >= postmin AND ".$posts." <= postmax AND postmax >0");
 			$ds = mysqli_fetch_array($ergebnis);
 			$usertype = $ds['rank'];
-			$rang = '<img src="images/icons/ranks/'.$ds['pic'].'" alt="" />';
+			$rang = '<img src="images/icons/ranks/'.$ds['pic'].'" alt="">';
 		}
 
 		$lastvisits="";
@@ -586,8 +586,8 @@ if(isset($id) and getnickname($id) != '') {
 				$flag = '[flag]'.$dv['country'].'[/flag]';
 				$country = flags($flag);
 				$nicknamevisitor = $dv['nickname'];
-				if(isonline($dv['visitor']) == "offline") $statuspic = '<img src="images/icons/offline.gif" alt="'.$_language->module['offline'].'" />';
-				else $statuspic = '<img src="images/icons/online.gif" alt="'.$_language->module['online'].'" />';
+				if(isonline($dv['visitor']) == "offline") $statuspic = '<img src="images/icons/offline.gif" alt="'.$_language->module['offline'].'">';
+				else $statuspic = '<img src="images/icons/online.gif" alt="'.$_language->module['online'].'">';
 				$time = time();
 				$visittime = $dv['date'];
 

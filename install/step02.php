@@ -65,11 +65,11 @@ if($_POST['agree'] == "1") {
    } 
    else {
 		echo $_language->module['enter_url'].':<br><br>
-           http://<input type="text" name="hp_url" value="'.getwspath().'" size="50" />
-           <a class="tooltip" href="#"><img src="images/tooltip.png" alt="" />
+           http://<input type="text" name="hp_url" value="'.getwspath().'" size="50">
+           <a class="tooltip" href="#"><img src="images/tooltip.png" alt="">
            <span>'.$_language->module['tooltip'].'</span></a>
    
-           <div align="right"><br><a href="javascript:document.ws_install.submit()"><img src="images/next.jpg" alt="" /></a></div>';
+           <div align="right"><br><a href="javascript:document.ws_install.submit()"><img src="images/next.jpg" alt=""></a></div>';
    }
    ?>
    </td>
@@ -95,7 +95,7 @@ if($_POST['agree'] == "1") {
    <td id="content" colspan="2">
    <?php echo $_language->module['you_have_to_agree'];?>
    
-   <div align="left"><br><a href="javascript:history.back()"><img src="images/back.jpg" alt="" /></a></div>
+   <div align="left"><br><a href="javascript:history.back()"><img src="images/back.jpg" alt=""></a></div>
    </td>
   </tr>
 

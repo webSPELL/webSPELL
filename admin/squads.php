@@ -231,19 +231,19 @@ if($action=="add") {
   <table width="100%" border="0" cellspacing="1" cellpadding="3">
       <tr>
         <td width="15%"><b>'.$_language->module['icon_upload'].'</b></td>
-        <td width="85%"><input name="icon" type="file" size="40" /></td>
+        <td width="85%"><input name="icon" type="file" size="40"></td>
       </tr>
 		<tr>
         <td><b>'.$_language->module['icon_upload_small'].'</b></td>
-        <td><input name="icon_small" type="file" size="40" /> <small>('.$_language->module['icon_upload_info'].')</small></td>
+        <td><input name="icon_small" type="file" size="40"> <small>('.$_language->module['icon_upload_info'].')</small></td>
       </tr>
       <tr>
         <td><b>'.$_language->module['squad_name'].'</b></td>
-        <td><input type="text" name="name" size="60" /></td>
+        <td><input type="text" name="name" size="60"></td>
       </tr>
       <tr>
         <td><b>'.$_language->module['squad_type'].'</b></td>
-        <td><input onclick="document.getElementById(\'games\').style.display = \'block\'" type="radio" name="gamesquad" value="1" checked="checked" /> '.$_language->module['gaming_squad'].' &nbsp; <input onclick="document.getElementById(\'games\').style.display = \'none\'" type="radio" name="gamesquad" value="0" /> '.$_language->module['non_gaming_squad'].'</td>
+        <td><input onclick="document.getElementById(\'games\').style.display = \'block\'" type="radio" name="gamesquad" value="1" checked="checked"> '.$_language->module['gaming_squad'].' &nbsp; <input onclick="document.getElementById(\'games\').style.display = \'none\'" type="radio" name="gamesquad" value="0"> '.$_language->module['non_gaming_squad'].'</td>
       </tr>
     </table>
     <div id="games" style="display:block;">
@@ -267,7 +267,7 @@ if($action=="add") {
 		  </td>
       </tr>
       <tr>
-        <td colspan="2"><input type="hidden" name="captcha_hash" value="'.$hash.'" /><input type="submit" name="save" value="'.$_language->module['add_squad'].'" /></td>
+        <td colspan="2"><input type="hidden" name="captcha_hash" value="'.$hash.'"><input type="submit" name="save" value="'.$_language->module['add_squad'].'"></td>
       </tr>
     </table>
     </form>';
@@ -294,17 +294,17 @@ elseif($action=="edit") {
 	$games.='</select>';
 
 	if($ds['gamesquad']) {
-		$type='<input onclick="document.getElementById(\'games\').style.display = \'block\'" type="radio" name="gamesquad" value="1" checked="checked" /> '.$_language->module['gaming_squad'].' &nbsp; <input onclick="document.getElementById(\'games\').style.display = \'none\'" type="radio" name="gamesquad" value="0" /> '.$_language->module['non_gaming_squad'];
+		$type='<input onclick="document.getElementById(\'games\').style.display = \'block\'" type="radio" name="gamesquad" value="1" checked="checked"> '.$_language->module['gaming_squad'].' &nbsp; <input onclick="document.getElementById(\'games\').style.display = \'none\'" type="radio" name="gamesquad" value="0"> '.$_language->module['non_gaming_squad'];
 		$display = 'block';
 	}
 	else {
-		$type='<input onclick="document.getElementById(\'games\').style.display = \'block\'" type="radio" name="gamesquad" value="1" /> '.$_language->module['gaming_squad'].' &nbsp; <input onclick="document.getElementById(\'games\').style.display = \'none\'" type="radio" name="gamesquad" value="0" checked="checked" /> '.$_language->module['non_gaming_squad'];
+		$type='<input onclick="document.getElementById(\'games\').style.display = \'block\'" type="radio" name="gamesquad" value="1"> '.$_language->module['gaming_squad'].' &nbsp; <input onclick="document.getElementById(\'games\').style.display = \'none\'" type="radio" name="gamesquad" value="0" checked="checked"> '.$_language->module['non_gaming_squad'];
 		$display = 'none';
 	}
 	
-	if(!empty($ds['icon'])) $pic='<img src="'.$filepath.$ds['icon'].'" alt="" />';
+	if(!empty($ds['icon'])) $pic='<img src="'.$filepath.$ds['icon'].'" alt="">';
 	else $pic=$_language->module['no_icon'];
-	if(!empty($ds['icon_small'])) $pic_small='<img src="'.$filepath.$ds['icon_small'].'" alt="" />';
+	if(!empty($ds['icon_small'])) $pic_small='<img src="'.$filepath.$ds['icon_small'].'" alt="">';
 	else $pic_small=$_language->module['no_icon'];
 	
 	$CAPCLASS = new Captcha;
@@ -338,15 +338,15 @@ elseif($action=="edit") {
     </tr>
     <tr>
       <td><b>'.$_language->module['icon_upload'].'</b></td>
-      <td><input name="icon" type="file" size="40" /></td>
+      <td><input name="icon" type="file" size="40"></td>
     </tr>
 	 <tr>
       <td><b>'.$_language->module['icon_upload_small'].'</b></td>
-      <td><input name="icon_small" type="file" size="40" /> <small>('.$_language->module['icon_upload_info'].')</small></td>
+      <td><input name="icon_small" type="file" size="40"> <small>('.$_language->module['icon_upload_info'].')</small></td>
     </tr>
     <tr>
       <td><b>'.$_language->module['squad_name'].'</b></td>
-      <td><input type="text" name="name" value="'.getinput($ds['name']).'" size="60" /></td>
+      <td><input type="text" name="name" value="'.getinput($ds['name']).'" size="60"></td>
     </tr>
     <tr>
       <td><b>'.$_language->module['squad_type'].'</b></td>
@@ -374,7 +374,7 @@ elseif($action=="edit") {
       </td>
     </tr>
     <tr>
-      <td colspan="2"><input type="hidden" name="captcha_hash" value="'.$hash.'" /><input type="hidden" name="squadID" value="'.getforminput($squadID).'" /><input type="submit" name="saveedit" value="'.$_language->module['edit_squad'].'" /></td>
+      <td colspan="2"><input type="hidden" name="captcha_hash" value="'.$hash.'"><input type="hidden" name="squadID" value="'.getforminput($squadID).'"><input type="submit" name="saveedit" value="'.$_language->module['edit_squad'].'"></td>
     </tr>
   </table>
   </form>';
@@ -384,7 +384,7 @@ else {
 
   echo'<h1>&curren; '.$_language->module['squads'].'</h1>';
 
-	echo'<input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=squads&amp;action=add\');return document.MM_returnValue" value="'.$_language->module['new_squad'].'" /><br><br>';
+	echo'<input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=squads&amp;action=add\');return document.MM_returnValue" value="'.$_language->module['new_squad'].'"><br><br>';
 
 	echo'<form method="post" action="admincenter.php?site=squads">
   <table width="100%" border="0" cellspacing="1" cellpadding="3" bgcolor="#DDDDDD">
@@ -418,8 +418,8 @@ else {
         <td class="'.$td.'"><a href="../index.php?site=squads&amp;squadID='.$db['squadID'].'" target="_blank">'.getinput($db['name']).'</a></td>
         <td class="'.$td.'" align="center">'.$type.'</td>
         <td class="'.$td.'">'.cleartext($db['info'],1,'admin').'</td>
-        <td class="'.$td.'" align="center"><input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=squads&amp;action=edit&amp;squadID='.$db['squadID'].'\');return document.MM_returnValue" value="'.$_language->module['edit'].'" />
-        <input type="button" onclick="MM_confirm(\''.$_language->module['really_delete'].'\', \'admincenter.php?site=squads&amp;delete=true&amp;squadID='.$db['squadID'].'&amp;captcha_hash='.$hash.'\')" value="'.$_language->module['delete'].'" /></td>
+        <td class="'.$td.'" align="center"><input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=squads&amp;action=edit&amp;squadID='.$db['squadID'].'\');return document.MM_returnValue" value="'.$_language->module['edit'].'">
+        <input type="button" onclick="MM_confirm(\''.$_language->module['really_delete'].'\', \'admincenter.php?site=squads&amp;delete=true&amp;squadID='.$db['squadID'].'&amp;captcha_hash='.$hash.'\')" value="'.$_language->module['delete'].'"></td>
         <td class="'.$td.'" align="center"><select name="sort[]">';
         
 			for($j=1; $j<=$anzsquads; $j++) {
@@ -436,7 +436,7 @@ else {
 	}
 	
   echo'<tr>
-      <td class="td_head" colspan="5" align="right"><input type="hidden" name="captcha_hash" value="'.$hash.'" /><input type="submit" name="sortieren" value="'.$_language->module['to_sort'].'" /></td>
+      <td class="td_head" colspan="5" align="right"><input type="hidden" name="captcha_hash" value="'.$hash.'"><input type="submit" name="sortieren" value="'.$_language->module['to_sort'].'"></td>
     </tr>
   </table>
   </form>';

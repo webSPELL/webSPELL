@@ -39,7 +39,7 @@ if(mysqli_num_rows($ergebnis)) {
 			$bg2=BG_4;
 		}
 		$n++;
-		if(!empty($db['icon_small'])) $squadicon='<img src="images/squadicons/'.$db['icon_small'].'" style="margin:2px 0;" alt="'.getinput($db['name']).'" title="'.getinput($db['name']).'" />';
+		if(!empty($db['icon_small'])) $squadicon='<img src="images/squadicons/'.$db['icon_small'].'" style="margin:2px 0;" alt="'.getinput($db['name']).'" title="'.getinput($db['name']).'">';
 		else $squadicon='';
 		$squadname=getinput($db['name']);
 		eval ("\$sc_squads = \"".gettemplate("sc_squads")."\";");

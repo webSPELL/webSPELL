@@ -54,7 +54,7 @@ if(isset($_POST['submit'])) {
 	    foreach($error as $err) {
 				echo'<li>'.$err.'</li>';
 			}
-			echo'</ul><br><input type="button" onclick="javascript:history.back()" value="'.$_language->module['back'].'" />';
+			echo'</ul><br><input type="button" onclick="javascript:history.back()" value="'.$_language->module['back'].'">';
 		}
 		else {
 			safe_query("UPDATE ".PREFIX."styles SET title='".$_POST['title']."', bgpage='".$_POST['page']."', border='".$_POST['borderc']."', bghead='".$_POST['head']."', bgcat='".$_POST['cat']."', bg1='".$_POST['bg1']."', bg2='".$_POST['bg2']."', bg3='".$_POST['bg3']."', bg4='".$_POST['bg4']."', win='".$_POST['win']."', loose='".$_POST['loose']."', draw='".$_POST['draw']."' ");
@@ -85,63 +85,63 @@ else {
   <table width="50%" border="0" cellspacing="1" cellpadding="3">
     <tr>
       <td align="right"><b>'.$_language->module['page_title'].'</b></td>
-      <td width="37%"><input type="text" name="title" value="'.getinput($ds['title']).'" /></td>
+      <td width="37%"><input type="text" name="title" value="'.getinput($ds['title']).'"></td>
       <td></td>
     </tr>
     <tr><td colspan="3"></td></tr>
     <tr>
       <td align="right"><b>'.$_language->module['page_bg'].'</b></td>
-      <td><input type="text" name="page" value="'.$ds['bgpage'].'" maxlength="7" /></td>
+      <td><input type="text" name="page" value="'.$ds['bgpage'].'" maxlength="7"></td>
       <td style="border: 1px solid #000000;" width="20" bgcolor="'.$ds['bgpage'].'"></td>
     </tr>
     <tr>
       <td align="right"><b>'.$_language->module['bordercolor'].'</b></td>
-      <td><input type="text" name="borderc" value="'.$ds['border'].'" maxlength="7" /></td>
+      <td><input type="text" name="borderc" value="'.$ds['border'].'" maxlength="7"></td>
       <td style="border: 1px solid #000000;" width="20" bgcolor="'.$ds['border'].'"></td>
     </tr>
     <tr>
       <td align="right"><b>'.$_language->module['head_bg'].'</b></td>
-      <td><input type="text" name="head" value="'.$ds['bghead'].'" maxlength="7" /></td>
+      <td><input type="text" name="head" value="'.$ds['bghead'].'" maxlength="7"></td>
       <td style="border: 1px solid #000000;" width="20" bgcolor="'.$ds['bghead'].'"></td>
     </tr>
     <tr>
       <td align="right"><b>'.$_language->module['category_bg'].'</b></td>
-      <td><input type="text" name="cat" value="'.$ds['bgcat'].'" maxlength="7" /></td>
+      <td><input type="text" name="cat" value="'.$ds['bgcat'].'" maxlength="7"></td>
       <td style="border: 1px solid #000000;" width="20" bgcolor="'.$ds['bgcat'].'"></td>
     </tr>
     <tr>
       <td align="right"><b>'.$_language->module['cell_bg1'].'</b></td>
-      <td><input type="text" name="bg1" value="'.$ds['bg1'].'" maxlength="7" /></td>
+      <td><input type="text" name="bg1" value="'.$ds['bg1'].'" maxlength="7"></td>
       <td style="border: 1px solid #000000;" width="20" bgcolor="'.$ds['bg1'].'"></td>
     </tr>
     <tr>
       <td align="right"><b>'.$_language->module['cell_bg2'].'</b></td>
-      <td><input type="text" name="bg2" value="'.$ds['bg2'].'" maxlength="7" /></td>
+      <td><input type="text" name="bg2" value="'.$ds['bg2'].'" maxlength="7"></td>
       <td style="border: 1px solid #000000;" width="20" bgcolor="'.$ds['bg2'].'"></td>
     </tr>
     <tr>
       <td align="right"><b>'.$_language->module['cell_bg3'].'</b></td>
-      <td><input type="text" name="bg3" value="'.$ds['bg3'].'" maxlength="7" /></td>
+      <td><input type="text" name="bg3" value="'.$ds['bg3'].'" maxlength="7"></td>
       <td style="border: 1px solid #000000;" width="20" bgcolor="'.$ds['bg3'].'"></td>
     </tr>
     <tr>
       <td align="right"><b>'.$_language->module['cell_bg4'].'</b></td>
-      <td><input type="text" name="bg4" value="'.$ds['bg4'].'" maxlength="7" /></td>
+      <td><input type="text" name="bg4" value="'.$ds['bg4'].'" maxlength="7"></td>
       <td style="border: 1px solid #000000;" width="20" bgcolor="'.$ds['bg4'].'"></td>
     </tr>
     <tr>
       <td align="right"><b>'.$_language->module['win_color'].'</b></td>
-      <td><input type="text" name="win" value="'.$ds['win'].'" maxlength="7" /></td>
+      <td><input type="text" name="win" value="'.$ds['win'].'" maxlength="7"></td>
       <td style="border: 1px solid #000000;" width="20" bgcolor="'.$ds['win'].'"></td>
     </tr>
     <tr>
       <td align="right"><b>'.$_language->module['loose_color'].'</b></td>
-      <td><input type="text" name="loose" value="'.$ds['loose'].'" maxlength="7" /></td>
+      <td><input type="text" name="loose" value="'.$ds['loose'].'" maxlength="7"></td>
       <td style="border: 1px solid #000000;" width="20" bgcolor="'.$ds['loose'].'"></td>
     </tr>
     <tr>
       <td align="right"><b>'.$_language->module['draw_color'].'</b></td>
-      <td><input type="text" name="draw" value="'.$ds['draw'].'" maxlength="7" /></td>
+      <td><input type="text" name="draw" value="'.$ds['draw'].'" maxlength="7"></td>
       <td style="border: 1px solid #000000;" width="20" bgcolor="'.$ds['draw'].'"></td>
     </tr>
   </table>
@@ -149,8 +149,8 @@ else {
   <b>'.$_language->module['stylesheet'].'</b><br><small>'.$_language->module['stylesheet_info'].'</small><br><br>
   <textarea name="stylesheet" rows="30" cols="" style="width: 100%;">'.$stylesheet.'</textarea>
   <br><br>
-  <input type="hidden" name="captcha_hash" value="'.$hash.'" />
-  <input type="submit" name="submit" value="'.$_language->module['update'].'" />
+  <input type="hidden" name="captcha_hash" value="'.$hash.'">
+  <input type="submit" name="submit" value="'.$_language->module['update'].'">
   </form>';
 }
 ?>

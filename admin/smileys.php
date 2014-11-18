@@ -45,19 +45,19 @@ if($action=="add") {
 	<table width="100%" border="0" cellspacing="1" cellpadding="3">
     <tr>
       <td width="15%"><b>'.$_language->module['icon'].'</b></td>
-      <td width="85%"><input name="icon" type="file" size="40" /></td>
+      <td width="85%"><input name="icon" type="file" size="40"></td>
     </tr>
     <tr>
       <td><b>'.$_language->module['smiley_name'].'</b></td>
-      <td><input type="text" name="alt" size="60" maxlength="255" /></td>
+      <td><input type="text" name="alt" size="60" maxlength="255"></td>
     </tr>
     <tr>
       <td><b>'.$_language->module['pattern'].'</b></td>
-      <td><input type="text" name="pattern" size="60" maxlength="20" /> '.$_language->module['example'].'</td>
+      <td><input type="text" name="pattern" size="60" maxlength="20"> '.$_language->module['example'].'</td>
     </tr>
     <tr>
-      <td><input type="hidden" name="captcha_hash" value="'.$hash.'" /></td>
-      <td><input type="submit" name="save" value="'.$_language->module['add_smiley'].'" /></td>
+      <td><input type="hidden" name="captcha_hash" value="'.$hash.'"></td>
+      <td><input type="submit" name="save" value="'.$_language->module['add_smiley'].'"></td>
     </tr>
   </table>
   </form>';
@@ -68,12 +68,12 @@ elseif($action=="edit") {
 	$CAPCLASS->create_transaction();
 	$hash = $CAPCLASS->get_hash();
 	$ds=mysqli_fetch_array(safe_query("SELECT * FROM ".PREFIX."smileys WHERE smileyID='".$_GET["smileyID"]."'"));
-	$pic='<img src="../images/smileys/'.$ds['name'].'" alt="'.getinput($ds['alt']).'" />';
+	$pic='<img src="../images/smileys/'.$ds['name'].'" alt="'.getinput($ds['alt']).'">';
 
 	echo'<h1>&curren; <a href="admincenter.php?site=icons" class="white">'.$_language->module['icons'].'</a> &raquo; <a href="admincenter.php?site=smileys" class="white">'.$_language->module['smilies'].'</a> &raquo; '.$_language->module['edit_smiley'].'</h1>';
   
   echo'<form method="post" action="admincenter.php?site=smileys" enctype="multipart/form-data">
-		<input type="hidden" name="smileyID" value="'.$ds['smileyID'].'" />
+		<input type="hidden" name="smileyID" value="'.$ds['smileyID'].'">
     <table width="100%" border="0" cellspacing="1" cellpadding="3">
     <tr>
       <td width="15%"><b>'.$_language->module['present_icon'].'</b></td>
@@ -81,19 +81,19 @@ elseif($action=="edit") {
     </tr>
     <tr>
       <td><b>'.$_language->module['icon'].'</b></td>
-      <td><input name="icon" type="file" size="40" /></td>
+      <td><input name="icon" type="file" size="40"></td>
     </tr>
     <tr>
       <td><b>'.$_language->module['smiley_name'].'</b></td>
-      <td><input type="text" name="alt" size="60" maxlength="255" value="'.htmlspecialchars($ds['alt']).'" /></td>
+      <td><input type="text" name="alt" size="60" maxlength="255" value="'.htmlspecialchars($ds['alt']).'"></td>
     </tr>
     <tr>
       <td><b>'.$_language->module['pattern'].'</b></td>
-      <td><input type="text" name="pattern" size="60" maxlength="20" value="'.htmlspecialchars($ds['pattern']).'" /> '.$_language->module['example'].'</td>
+      <td><input type="text" name="pattern" size="60" maxlength="20" value="'.htmlspecialchars($ds['pattern']).'"> '.$_language->module['example'].'</td>
     </tr>
     <tr>
-      <td><input type="hidden" name="captcha_hash" value="'.$hash.'" /></td>
-      <td><input type="submit" name="saveedit" value="'.$_language->module['edit_smiley'].'" /></td>
+      <td><input type="hidden" name="captcha_hash" value="'.$hash.'"></td>
+      <td><input type="submit" name="saveedit" value="'.$_language->module['edit_smiley'].'"></td>
     </tr>
   </table>
   </form>';
@@ -160,7 +160,7 @@ elseif(isset($_GET["delete"])) {
 else {
 	echo'<h1>&curren; <a href="admincenter.php?site=icons" class="white">'.$_language->module['icons'].'</a> &raquo; '.$_language->module['smilies'].'</h1>';
   
-  echo'<input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=smileys&amp;action=add\');return document.MM_returnValue" value="'.$_language->module['new_smiley'].'" /><br><br>';
+  echo'<input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=smileys&amp;action=add\');return document.MM_returnValue" value="'.$_language->module['new_smiley'].'"><br><br>';
   
   echo'<form method="post" action="admincenter.php?site=smileys">
   <table width="100%" border="0" cellspacing="1" cellpadding="3" bgcolor="#DDDDDD">
@@ -182,15 +182,15 @@ else {
       if($i%2) { $td='td1'; }
       else { $td='td2'; }
       		
-			$pic='<img src="../images/smileys/'.$smileys['name'].'" alt="'.getinput($smileys['alt']).'" />';
+			$pic='<img src="../images/smileys/'.$smileys['name'].'" alt="'.getinput($smileys['alt']).'">';
 			if($smileys['alt']=="") $smileys['alt'] = $smileys['name'];
 			
       echo'<tr>
         <td class="'.$td.'" align="center">'.$pic.'</td>
         <td class="'.$td.'">'.$smileys['alt'].'</td>
         <td class="'.$td.'" align="center">'.$smileys['pattern'].'</td>
-        <td class="'.$td.'" align="center"><input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=smileys&amp;action=edit&amp;smileyID='.$smileys['smileyID'].'\');return document.MM_returnValue" value="'.$_language->module['edit'].'" />
-        <input type="button" onclick="MM_confirm(\''.$_language->module['really_delete'].'\', \'admincenter.php?site=smileys&amp;delete=true&amp;smileyID='.$smileys['smileyID'].'&amp;captcha_hash='.$hash.'\')" value="'.$_language->module['delete'].'" /></td>
+        <td class="'.$td.'" align="center"><input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=smileys&amp;action=edit&amp;smileyID='.$smileys['smileyID'].'\');return document.MM_returnValue" value="'.$_language->module['edit'].'">
+        <input type="button" onclick="MM_confirm(\''.$_language->module['really_delete'].'\', \'admincenter.php?site=smileys&amp;delete=true&amp;smileyID='.$smileys['smileyID'].'&amp;captcha_hash='.$hash.'\')" value="'.$_language->module['delete'].'"></td>
       </tr>';
       
       $i++;

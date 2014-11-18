@@ -133,10 +133,10 @@ function flags($text,$calledfrom = 'root') {
 	}
 	$ergebnis = safe_query("SELECT * FROM `".PREFIX."countries`");
 	while($ds = mysqli_fetch_array($ergebnis)) {
-		$text = str_ireplace ("[flag]".$ds['short']."[/flag]", '<img src="'.$prefix.'images/flags/'.$ds['short'].'.gif" alt="'.$ds['country'].'" />', $text);
+		$text = str_ireplace ("[flag]".$ds['short']."[/flag]", '<img src="'.$prefix.'images/flags/'.$ds['short'].'.gif" alt="'.$ds['country'].'">', $text);
 	}
 
-	$text = str_ireplace ("[flag][/flag]", '<img src="'.$prefix.'images/flags/unknown.gif" alt="'.$_language->module['na'].'" />', $text);
+	$text = str_ireplace ("[flag][/flag]", '<img src="'.$prefix.'images/flags/unknown.gif" alt="'.$_language->module['na'].'">', $text);
 	$text = str_ireplace ("[flag]", '', $text);
 	$text = str_ireplace ("[/flag]", '', $text);
 
@@ -267,18 +267,18 @@ function imgreplace($content) {
 				if(!$picsize_l) $size_l = "9999"; else $size_l=$picsize_l;
 				if(!$picsize_h) $size_h = "9999"; else $size_h=$picsize_h;
 				if($picinfo[0] > $size_l OR $picinfo[1] > $size_h) 
-				$content = str_ireplace('[img]'.$teil[2].'[/img]', '[url='.$teil[2].']<img src="'.fixJavaEvents($teil[2]).'" width="'.$picsize_l.'" alt="'.$teil[2].'" /><br>([i]'.$_language->module['auto_resize'].': '.$picinfo[1].'x'.$picinfo[0].'px, '.$format.'[/i])[/url]', $content);
+				$content = str_ireplace('[img]'.$teil[2].'[/img]', '[url='.$teil[2].']<img src="'.fixJavaEvents($teil[2]).'" width="'.$picsize_l.'" alt="'.$teil[2].'"><br>([i]'.$_language->module['auto_resize'].': '.$picinfo[1].'x'.$picinfo[0].'px, '.$format.'[/i])[/url]', $content);
 				elseif($picinfo[0] > (2*$size_l) OR $picinfo[1] > (2*$size_h)) $content = str_ireplace('[img]'.$teil[2].'[/img]', '[url='.$teil[2].'][b]'.$_language->module['large_picture'].'[/b]<br>('.$picinfo[1].'x'.$picinfo[0].'px, '.$format.')[/url]', $content);
-				else $content = preg_replace('#\[img\]'.preg_quote($teil[2],"#").'\[/img\]#si', '<img src="'.fixJavaEvents($teil[2]).'" alt="'.$teil[2].'" />', $content, 1);
+				else $content = preg_replace('#\[img\]'.preg_quote($teil[2],"#").'\[/img\]#si', '<img src="'.fixJavaEvents($teil[2]).'" alt="'.$teil[2].'">', $content, 1);
 			}
 			else {
 				$n = str_replace('.', '', microtime(1)).'_'.$i;
 				$n = str_replace(' ', '', $n);
-				$content = preg_replace('#\[img\]'.preg_quote($teil[2],"#").'\[/img\]#si', '<img src="'.fixJavaEvents($teil[2]).'" id="ws_image_'.$n.'" onload="checkSize(\''.$n.'\', '.$picsize_l.', '.$picsize_h.')" alt="'.fixJavaEvents($teil[2]).'" style="max-width: '.($picsize_l+1).'px; max-height: '.($picsize_h+1).'px;" /><div id="ws_imagediv_'.$n.'" style="display:none;">[url='.fixJavaEvents($teil[2]).'][i]('.$_language->module['auto_resize'].': '.$_language->module['show_original'].')[/i][/url]</div>', $content, 1);
+				$content = preg_replace('#\[img\]'.preg_quote($teil[2],"#").'\[/img\]#si', '<img src="'.fixJavaEvents($teil[2]).'" id="ws_image_'.$n.'" onload="checkSize(\''.$n.'\', '.$picsize_l.', '.$picsize_h.')" alt="'.fixJavaEvents($teil[2]).'" style="max-width: '.($picsize_l+1).'px; max-height: '.($picsize_h+1).'px;"><div id="ws_imagediv_'.$n.'" style="display:none;">[url='.fixJavaEvents($teil[2]).'][i]('.$_language->module['auto_resize'].': '.$_language->module['show_original'].')[/i][/url]</div>', $content, 1);
 			}
 		}
 	}
-	else $content = preg_replace("#\[img\](.*?)(png|gif|jpeg|jpg)\[/img\]#sie", "'<img src=\"'.fixJavaEvents('\\1\\2').'\" border=\"0\" alt=\"'.fixJavaEvents('\\1\\2').'\" />'", $content);
+	else $content = preg_replace("#\[img\](.*?)(png|gif|jpeg|jpg)\[/img\]#sie", "'<img src=\"'.fixJavaEvents('\\1\\2').'\" border=\"0\" alt=\"'.fixJavaEvents('\\1\\2').'\">'", $content);
 
 	return $content;
 }
@@ -445,7 +445,7 @@ function align_callback($match){
 }
 
 function smiley_callback($match){
-	return '<img src="'.removeIllegalCharacertsWithoutUrls($match[2]).'" alt="'.removeIllegalCharacerts($match[1]).'" />';
+	return '<img src="'.removeIllegalCharacertsWithoutUrls($match[2]).'" alt="'.removeIllegalCharacerts($match[1]).'">';
 }
 
 function replacement($content, $bbcode=true) {
@@ -499,7 +499,7 @@ function toggle($content, $id) {
 	$_language->read_module('bbcode', true);
 	$replace1='<table width="100%">
     <tr>
-      <td><a href="javascript:Toggle(\''.$id.'_%d\')"><img src="images/icons/expand.gif" id="ToggleImg_'.$id.'_%d" alt="'.$_language->module['read_more'].'" title="'.$_language->module['read_more'].'" /> %s</a></td>
+      <td><a href="javascript:Toggle(\''.$id.'_%d\')"><img src="images/icons/expand.gif" id="ToggleImg_'.$id.'_%d" alt="'.$_language->module['read_more'].'" title="'.$_language->module['read_more'].'"> %s</a></td>
     </tr>
     <tr>
       <td style="padding-left: 16px;"><div id="ToggleRow_'.$id.'_%d" style="display:none">';

@@ -118,7 +118,7 @@ if($anz) {
 		$date = getformatdatetime($ds['lastdate']);
 		$small_date	= date('d.m H:i', $ds['lastdate']);
 
-		$latesticon	=	'<img src="images/icons/'.$ds['icon'].'" width="15" height="15" alt="" />';
+		$latesticon	=	'<img src="images/icons/'.$ds['icon'].'" width="15" height="15" alt="">';
 		$boardlink	=	'<a href="index.php?site=forum&amp;board='.$ds['boardID'].'">'.$board.'</a>';
 		$topiclink	=	'index.php?site=forum_topic&amp;topic='.$ds['topicID'].'&amp;type=ASC&amp;page='.ceil(($ds['replys']+1)/$maxposts);
 		$replys			=	$ds['replys'];

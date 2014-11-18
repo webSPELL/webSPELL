@@ -191,9 +191,9 @@ if($action=="mods") {
 	$hash = $CAPCLASS->get_hash();
 
 	echo'</select><br><br>
-	<input type="hidden" name="captcha_hash" value="'.$hash.'" />
-  <input type="hidden" name="boardID" value="'.$boardID.'" />
-  <input type="submit" name="savemods" value="'.$_language->module['select_moderators'].'" />
+	<input type="hidden" name="captcha_hash" value="'.$hash.'">
+  <input type="hidden" name="boardID" value="'.$boardID.'">
+  <input type="submit" name="savemods" value="'.$_language->module['select_moderators'].'">
   </form>';
 }
 
@@ -235,11 +235,11 @@ elseif($action=="add") {
     </tr>
     <tr>
       <td><b>'.$_language->module['boardname'].'</b></td>
-      <td><input type="text" name="name" size="60" /></td>
+      <td><input type="text" name="name" size="60"></td>
     </tr>
     <tr>
       <td><b>'.$_language->module['boardinfo'].'</b></td>
-      <td><input type="text" name="boardinfo" size="60" /></td>
+      <td><input type="text" name="boardinfo" size="60"></td>
     </tr>
     <tr>
       <td valign="top"><b>'.$_language->module['read_right'].'</b></td>
@@ -260,8 +260,8 @@ elseif($action=="add") {
       '.$_language->module['write_right_info_board'].'</td>
     </tr>
     <tr>
-      <td><input type="hidden" name="captcha_hash" value="'.$hash.'" /></td>
-      <td><input type="submit" name="save" value="'.$_language->module['add_board'].'" /></td>
+      <td><input type="hidden" name="captcha_hash" value="'.$hash.'"></td>
+      <td><input type="submit" name="save" value="'.$_language->module['add_board'].'"></td>
     </tr>
   </table>
   </form>';
@@ -334,11 +334,11 @@ elseif($action=="edit") {
     </tr>
     <tr>
       <td><b>'.$_language->module['boardname'].'</b></td>
-      <td><input type="text" name="name" value="'.getinput($ds['name']).'" size="60" /></td>
+      <td><input type="text" name="name" value="'.getinput($ds['name']).'" size="60"></td>
     </tr>
     <tr>
       <td><b>'.$_language->module['boardinfo'].'</b></td>
-      <td><input type="text" name="boardinfo" value="'.getinput($ds['info']).'" size="60" /></td>
+      <td><input type="text" name="boardinfo" value="'.getinput($ds['info']).'" size="60"></td>
     </tr>
     <tr>
       <td valign="top"><b>'.$_language->module['read_right'].'</b></td>
@@ -353,8 +353,8 @@ elseif($action=="edit") {
       '.$_language->module['write_right_info_board'].'</td>
     </tr>
     <tr>
-      <td><input type="hidden" name="captcha_hash" value="'.$hash.'" /><input type="hidden" name="boardID" value="'.$boardID.'" /></td>
-      <td><input type="submit" name="saveedit" value="'.$_language->module['edit_board'].'" /></td>
+      <td><input type="hidden" name="captcha_hash" value="'.$hash.'"><input type="hidden" name="boardID" value="'.$boardID.'"></td>
+      <td><input type="submit" name="saveedit" value="'.$_language->module['edit_board'].'"></td>
     </tr>
   </table>
   </form>';
@@ -389,11 +389,11 @@ elseif($action=="addcat") {
   <table width="100%" border="0" cellspacing="1" cellpadding="3">
     <tr>
       <td width="15%"><b>'.$_language->module['category_name'].'</b></td>
-      <td width="85%"><input type="text" name="catname" size="60" /></td>
+      <td width="85%"><input type="text" name="catname" size="60"></td>
     </tr>
     <tr>
       <td><b>'.$_language->module['category_info'].'</b></td>
-      <td><input type="text" name="catinfo" size="60" /></td>
+      <td><input type="text" name="catinfo" size="60"></td>
     </tr>
     <tr>
       <td valign="top"><b>'.$_language->module['read_right'].'</b></td>
@@ -402,8 +402,8 @@ elseif($action=="addcat") {
       '.$_language->module['right_info_category'].'</td>
     </tr>
     <tr>
-      <td><input type="hidden" name="captcha_hash" value="'.$hash.'" /></td>
-      <td><input type="submit" name="savecat" value="'.$_language->module['add_category'].'" /></td>
+      <td><input type="hidden" name="captcha_hash" value="'.$hash.'"></td>
+      <td><input type="submit" name="savecat" value="'.$_language->module['add_category'].'"></td>
     </tr>
   </table>
   </form>';
@@ -447,11 +447,11 @@ elseif($action=="editcat") {
   <table width="100%" border="0" cellspacing="1" cellpadding="3">
     <tr>
       <td width="15%"><b>'.$_language->module['category_name'].'</b></td>
-      <td width="85%"><input type="text" name="catname" value="'.getinput($ds['name']).'" size="60" /></td>
+      <td width="85%"><input type="text" name="catname" value="'.getinput($ds['name']).'" size="60"></td>
     </tr>
     <tr>
       <td><b>'.$_language->module['category_info'].'</b></td>
-      <td><input type="text" name="catinfo" value="'.getinput($ds['info']).'" size="60" /></td>
+      <td><input type="text" name="catinfo" value="'.getinput($ds['info']).'" size="60"></td>
     </tr>
     <tr>
       <td valign="top"><b>'.$_language->module['read_right'].'</b></td>
@@ -460,8 +460,8 @@ elseif($action=="editcat") {
       '.$_language->module['right_info_category'].'</td>
     </tr>
     <tr>
-      <td><input type="hidden" name="captcha_hash" value="'.$hash.'" /><input type="hidden" name="catID" value="'.$catID.'" /></td>
-      <td><input type="submit" name="saveeditcat" value="'.$_language->module['edit_category'].'" /></td>
+      <td><input type="hidden" name="captcha_hash" value="'.$hash.'"><input type="hidden" name="catID" value="'.$catID.'"></td>
+      <td><input type="submit" name="saveeditcat" value="'.$_language->module['edit_category'].'"></td>
     </tr>
   </table>
   </form>';
@@ -471,8 +471,8 @@ else {
 
 	echo'<h1>&curren; '.$_language->module['boards'].'</h1>';
 
-	echo'<input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=boards&amp;action=addcat\');return document.MM_returnValue" value="'.$_language->module['new_category'].'" />
-  <input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=boards&amp;action=add\');return document.MM_returnValue" value="'.$_language->module['new_board'].'" /><br><br>';	
+	echo'<input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=boards&amp;action=addcat\');return document.MM_returnValue" value="'.$_language->module['new_category'].'">
+  <input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=boards&amp;action=add\');return document.MM_returnValue" value="'.$_language->module['new_board'].'"><br><br>';	
 
 	echo'<form method="post" action="admincenter.php?site=boards">
   <table width="100%" border="0" cellspacing="1" cellpadding="3" bgcolor="#DDDDDD">
@@ -495,8 +495,8 @@ else {
 	    echo'<tr bgcolor="#CCCCCC">
 	      <td class="td_head"><b>'.getinput($ds['name']).'</b><br><small>'.getinput($ds['info']).'</small></td>
 	      <td class="td_head"></td>
-	      <td class="td_head" align="center"><input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=boards&amp;action=editcat&amp;catID='.$ds['catID'].'\');return document.MM_returnValue" value="'.$_language->module['edit'].'" /> 
-	      <input type="button" onclick="MM_confirm(\''.$_language->module['really_delete_category'].'\', \'admincenter.php?site=boards&amp;delcat=true&amp;catID='.$ds['catID'].'&amp;captcha_hash='.$hash.'\')" value="'.$_language->module['delete'].'" /></td>
+	      <td class="td_head" align="center"><input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=boards&amp;action=editcat&amp;catID='.$ds['catID'].'\');return document.MM_returnValue" value="'.$_language->module['edit'].'"> 
+	      <input type="button" onclick="MM_confirm(\''.$_language->module['really_delete_category'].'\', \'admincenter.php?site=boards&amp;delcat=true&amp;catID='.$ds['catID'].'&amp;captcha_hash='.$hash.'\')" value="'.$_language->module['delete'].'"></td>
 	      <td class="td_head" align="center"><select name="sortcat[]">';
       
 		for($n=1; $n<=$anz; $n++) {
@@ -521,9 +521,9 @@ else {
 				
 	      echo'<tr>
 	        <td class="'.$td.'">'.$db['name'].'<br><small>'.$db['info'].'</small></td>
-	        <td class="'.$td.'" align="center"><input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=boards&amp;action=mods&amp;boardID='.$db['boardID'].'\');return document.MM_returnValue" value="'.$_language->module['mods'].'" /></td>
-	        <td class="'.$td.'" align="center"><input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=boards&amp;action=edit&amp;boardID='.$db['boardID'].'\');return document.MM_returnValue" value="'.$_language->module['edit'].'" /> 
-	        <input type="button" onclick="MM_confirm(\''.$_language->module['really_delete_board'].'\', \'admincenter.php?site=boards&amp;delete=true&amp;boardID='.$db['boardID'].'&amp;captcha_hash='.$hash.'\')" value="'.$_language->module['delete'].'" /></td>
+	        <td class="'.$td.'" align="center"><input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=boards&amp;action=mods&amp;boardID='.$db['boardID'].'\');return document.MM_returnValue" value="'.$_language->module['mods'].'"></td>
+	        <td class="'.$td.'" align="center"><input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=boards&amp;action=edit&amp;boardID='.$db['boardID'].'\');return document.MM_returnValue" value="'.$_language->module['edit'].'"> 
+	        <input type="button" onclick="MM_confirm(\''.$_language->module['really_delete_board'].'\', \'admincenter.php?site=boards&amp;delete=true&amp;boardID='.$db['boardID'].'&amp;captcha_hash='.$hash.'\')" value="'.$_language->module['delete'].'"></td>
 	        <td class="'.$td.'" align="center"><select name="sortboards[]">';
 	        
 				for($j=1; $j<=$anzboards; $j++) {
@@ -548,9 +548,9 @@ else {
 
 		echo'<tr bgcolor="#dcdcdc">
       <td bgcolor="#FFFFFF"><b>'.getinput($db['name']).'</b></td>
-      <td bgcolor="#FFFFFF"><input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=boards&amp;action=mods&amp;boardID='.$db['boardID'].'\');return document.MM_returnValue" value="'.$_language->module['mods'].'" /></td>
-      <td bgcolor="#FFFFFF"><input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=boards&amp;action=edit&amp;boardID='.$db['boardID'].'\');return document.MM_returnValue" value="'.$_language->module['edit'].'" /> 
-      <input type="button" onclick="MM_confirm(\''.$_language->module['really_delete_board'].'\', \'admincenter.php?site=boards&amp;delete=true&amp;boardID='.$db['boardID'].'&amp;captcha_hash='.$hash.'\')" value="delete" /></td>
+      <td bgcolor="#FFFFFF"><input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=boards&amp;action=mods&amp;boardID='.$db['boardID'].'\');return document.MM_returnValue" value="'.$_language->module['mods'].'"></td>
+      <td bgcolor="#FFFFFF"><input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=boards&amp;action=edit&amp;boardID='.$db['boardID'].'\');return document.MM_returnValue" value="'.$_language->module['edit'].'"> 
+      <input type="button" onclick="MM_confirm(\''.$_language->module['really_delete_board'].'\', \'admincenter.php?site=boards&amp;delete=true&amp;boardID='.$db['boardID'].'&amp;captcha_hash='.$hash.'\')" value="delete"></td>
       <td bgcolor="#FFFFFF"><select name="sort[]">';
       
 		for($n=1; $n<=$anzboards; $n++) {
@@ -561,7 +561,7 @@ else {
 	}
 	
   echo'<tr>
-      <td class="td_head" colspan="5" align="right"><input type="submit" name="sortieren" value="'.$_language->module['to_sort'].'" /></td>
+      <td class="td_head" colspan="5" align="right"><input type="submit" name="sortieren" value="'.$_language->module['to_sort'].'"></td>
     </tr>
   </table>
   </form>';

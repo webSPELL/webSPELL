@@ -115,10 +115,10 @@ elseif($userID) {
 			$flag = '[flag]'.getcountry($ds['buddy']).'[/flag]';
 			$country=flags($flag);
 			$nickname=getnickname($ds['buddy']);
-			if(isclanmember($ds['buddy'])) $member='<img src="images/icons/member.gif" width="6" height="11" alt="Clanmember" />';
+			if(isclanmember($ds['buddy'])) $member='<img src="images/icons/member.gif" width="6" height="11" alt="Clanmember">';
 			else $member='';
-			if(isonline($ds['buddy'])=="offline") $statuspic='<img src="images/icons/offline.gif" width="7" height="7" alt="offline" />';
-			else $statuspic='<img src="images/icons/online.gif" width="7" height="7" alt="online" />';
+			if(isonline($ds['buddy'])=="offline") $statuspic='<img src="images/icons/offline.gif" width="7" height="7" alt="offline">';
+			else $statuspic='<img src="images/icons/online.gif" width="7" height="7" alt="online">';
 
 			eval ("\$buddys_content = \"".gettemplate("buddys_content")."\";");
 			echo $buddys_content;
@@ -148,10 +148,10 @@ elseif($userID) {
 			$flag = '[flag]'.getcountry($ds['buddy']).'[/flag]';
 			$country=flags($flag);
 			$nickname=getnickname($ds['buddy']);
-			if(isclanmember($ds['buddy'])) $member=' <img src="images/icons/member.gif" width="6" height="11" alt="Clanmember" />';
+			if(isclanmember($ds['buddy'])) $member=' <img src="images/icons/member.gif" width="6" height="11" alt="Clanmember">';
 			else $member='';
-			if(isonline($ds['buddy'])=="offline") $statuspic='<img src="images/icons/offline.gif" width="7" height="7" alt="offline" />';
-			else $statuspic='<img src="images/icons/online.gif" width="7" height="7" alt="online" />';
+			if(isonline($ds['buddy'])=="offline") $statuspic='<img src="images/icons/offline.gif" width="7" height="7" alt="offline">';
+			else $statuspic='<img src="images/icons/online.gif" width="7" height="7" alt="online">';
 			eval ("\$ignore_content = \"".gettemplate("ignore_content")."\";");
 			echo $ignore_content;
 			$n++;

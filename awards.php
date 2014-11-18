@@ -166,7 +166,7 @@ elseif($action=="showsquad") {
 	$sort = (isset($_GET['page'])) ? $_GET['page'] : "date";
 	$type = (isset($_GET['type'])) ? $_GET['type'] : "DESC";
 
-	if(isclanwaradmin($userID) || isnewsadmin($userID)) echo'<input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=awards&amp;action=new\');return document.MM_returnValue" value="'.$_language->module['new_award'].'" /><br><br>';
+	if(isclanwaradmin($userID) || isnewsadmin($userID)) echo'<input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=awards&amp;action=new\');return document.MM_returnValue" value="'.$_language->module['new_award'].'"><br><br>';
 	$alle=safe_query("SELECT awardID FROM ".PREFIX."awards WHERE squadID='$squadID'");
 	$gesamt = mysqli_num_rows($alle);
 	$pages=1;
@@ -189,9 +189,9 @@ elseif($action=="showsquad") {
 	}
 	if($gesamt) {
 		if($type=="ASC")
-		echo'<a href="index.php?site=awards&amp;action=showsquad&amp;squadID='.$squadID.'&amp;page='.$page.'&amp;sort='.$sort.'&amp;type=DESC">'.$_language->module['sort'].':</a> <img src="images/icons/asc.gif" width="9" height="7" alt="" />&nbsp;&nbsp;&nbsp;';
+		echo'<a href="index.php?site=awards&amp;action=showsquad&amp;squadID='.$squadID.'&amp;page='.$page.'&amp;sort='.$sort.'&amp;type=DESC">'.$_language->module['sort'].':</a> <img src="images/icons/asc.gif" width="9" height="7" alt="">&nbsp;&nbsp;&nbsp;';
 		else
-		echo'<a href="index.php?site=awards&amp;action=showsquad&amp;squadID='.$squadID.'&amp;page='.$page.'&amp;sort='.$sort.'&amp;type=ASC">'.$_language->module['sort'].':</a> <img src="images/icons/desc.gif" width="9" height="7" alt="" />&nbsp;&nbsp;&nbsp;';
+		echo'<a href="index.php?site=awards&amp;action=showsquad&amp;squadID='.$squadID.'&amp;page='.$page.'&amp;sort='.$sort.'&amp;type=ASC">'.$_language->module['sort'].':</a> <img src="images/icons/desc.gif" width="9" height="7" alt="">&nbsp;&nbsp;&nbsp;';
 
 		echo $page_link;
 		echo'<br><br>';
@@ -217,8 +217,8 @@ elseif($action=="showsquad") {
 			$rang=$ds['rang'];
 
 			if(isclanwaradmin($userID) || isnewsadmin($userID))
-			$adminaction='<input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=awards&amp;action=edit&amp;awardID='.$ds['awardID'].'\');return document.MM_returnValue" value="'.$_language->module['edit'].'" />
-			<input type="button" onclick="MM_confirm(\'really delete this award?\',\'awards.php?delete=true&amp;awardID='.$ds['awardID'].'\')" value="'.$_language->module['delete'].'" />';
+			$adminaction='<input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=awards&amp;action=edit&amp;awardID='.$ds['awardID'].'\');return document.MM_returnValue" value="'.$_language->module['edit'].'">
+			<input type="button" onclick="MM_confirm(\'really delete this award?\',\'awards.php?delete=true&amp;awardID='.$ds['awardID'].'\')" value="'.$_language->module['delete'].'">';
 			else $adminaction = '';				  
 
 			eval ("\$awards_content = \"".gettemplate("awards_content")."\";");
@@ -252,7 +252,7 @@ elseif($action=="showsquad") {
 	$bg3=BG_3;
 	$bg4=BG_4;
 	
-	if(isclanwaradmin($userID) || isnewsadmin($userID)) $adminaction='<br><input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=awards&amp;action=edit&amp;awardID='.$ds['awardID'].'\');return document.MM_returnValue" value="'.$_language->module['edit'].'" /> <input type="button" onclick="MM_confirm(\'really delete this award?\',\'awards.php?delete=true&amp;awardID='.$ds['awardID'].'\')" value="'.$_language->module['delete'].'" />';
+	if(isclanwaradmin($userID) || isnewsadmin($userID)) $adminaction='<br><input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=awards&amp;action=edit&amp;awardID='.$ds['awardID'].'\');return document.MM_returnValue" value="'.$_language->module['edit'].'"> <input type="button" onclick="MM_confirm(\'really delete this award?\',\'awards.php?delete=true&amp;awardID='.$ds['awardID'].'\')" value="'.$_language->module['delete'].'">';
 	else $adminaction = '';
 	
 	eval ("\$awards_info = \"".gettemplate("awards_info")."\";");
@@ -264,7 +264,7 @@ else {
 	$sort = (isset($_GET['sort']) && $_GET['sort']=='squadID') ? "squadID" : "date";
 	$type = (isset($_GET['type']) && $_GET['type']=='ASC') ? "ASC" : "DESC";
 	
-  if(isclanwaradmin($userID) || isnewsadmin($userID)) echo'<input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=awards&amp;action=new\');return document.MM_returnValue" value="'.$_language->module['new_award'].'" /><br><br>';
+  if(isclanwaradmin($userID) || isnewsadmin($userID)) echo'<input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=awards&amp;action=new\');return document.MM_returnValue" value="'.$_language->module['new_award'].'"><br><br>';
 	
   $alle=safe_query("SELECT awardID FROM ".PREFIX."awards");
 	$gesamt = mysqli_num_rows($alle);
@@ -318,8 +318,8 @@ else {
 			$rang=$ds['rang'];
 
 			if(isclanwaradmin($userID) || isnewsadmin($userID))
-			$adminaction='<input type="button" class="btn btn-danger" onclick="MM_goToURL(\'parent\',\'index.php?site=awards&amp;action=edit&amp;awardID='.$ds['awardID'].'\');return document.MM_returnValue" value="'.$_language->module['edit'].'" />
-      <input type="button" class="btn btn-danger" onclick="MM_confirm(\'really delete this award?\',\'index.php?site=awards&amp;delete=true&amp;awardID='.$ds['awardID'].'\')" value="'.$_language->module['delete'].'" />';
+			$adminaction='<input type="button" class="btn btn-danger" onclick="MM_goToURL(\'parent\',\'index.php?site=awards&amp;action=edit&amp;awardID='.$ds['awardID'].'\');return document.MM_returnValue" value="'.$_language->module['edit'].'">
+      <input type="button" class="btn btn-danger" onclick="MM_confirm(\'really delete this award?\',\'index.php?site=awards&amp;delete=true&amp;awardID='.$ds['awardID'].'\')" value="'.$_language->module['delete'].'">';
 			else $adminaction = '';
 
 			eval ("\$awards_content = \"".gettemplate("awards_content")."\";");

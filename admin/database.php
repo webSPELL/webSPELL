@@ -205,11 +205,11 @@ else {
       <table width="100%" border="0" cellspacing="1" cellpadding="3">
         <tr>
           <td width="15%"><b>'.$_language->module['backup_file'].'</b></td>
-          <td width="85%"><input name="sql" type="file" size="40" /></td>
+          <td width="85%"><input name="sql" type="file" size="40"></td>
         </tr>
         <tr>
-          <td><input type="hidden" name="captcha_hash" value="'.$hash.'" /></td>
-          <td><input type="submit" name="upload" value="'.$_language->module['upload'].'" /></td>
+          <td><input type="hidden" name="captcha_hash" value="'.$hash.'"></td>
+          <td><input type="submit" name="upload" value="'.$_language->module['upload'].'"></td>
         </tr>
       </table>
       </td>
@@ -227,7 +227,7 @@ else {
       <td class="td1">'.$_language->module['allowed_commands'].'
       <br><br>'.$_language->module['sql_query'].':<br><br>
       <textarea name="query" rows="10" cols="" style="width: 100%;"></textarea>
-      <br><br><input type="submit" name="submit" value="'.$_language->module['submit'].'" /></td>
+      <br><br><input type="submit" name="submit" value="'.$_language->module['submit'].'"></td>
     </tr>
   </table>
   </form>';*/

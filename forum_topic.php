@@ -429,21 +429,21 @@ function showtopic($topic, $edit, $addreply, $quoteID, $type) {
 				$message = toggle($message, 'xx');
 				$username='<a href="index.php?site=profile&amp;id='.$userID.'"><b>'.getnickname($userID).'</b></a>';
 
-				if(isclanmember($userID)) $member=' <img src="images/icons/member.gif" alt="'.$_language->module['clanmember'].'" />';
+				if(isclanmember($userID)) $member=' <img src="images/icons/member.gif" alt="'.$_language->module['clanmember'].'">';
 				else $member='';
-				if($getavatar = getavatar($userID)) $avatar='<img src="images/avatars/'.$getavatar.'" alt="" />';
+				if($getavatar = getavatar($userID)) $avatar='<img src="images/avatars/'.$getavatar.'" alt="">';
 				else $avatar='';
 				if($getsignatur = getsignatur($userID)) $signatur=cleartext($getsignatur);
 				else $signatur='';
-				if($getemail = getemail($userID) and !getemailhide($userID)) $email = '<a href="mailto:'.mail_protect($getemail).'"><img src="images/icons/email.gif" alt="email" /></a>';
+				if($getemail = getemail($userID) and !getemailhide($userID)) $email = '<a href="mailto:'.mail_protect($getemail).'"><img src="images/icons/email.gif" alt="email"></a>';
 				else $email='';
 				if(isset($_POST['notify'])) $notify = 'checked="checked"';
 				else $notify = '';
 				$pm='';
 				$buddy='';
-				$statuspic='<img src="images/icons/online.gif" alt="online" />';
+				$statuspic='<img src="images/icons/online.gif" alt="online">';
 				if(!validate_url(gethomepage($userID))) $hp='';
-				else $hp='<a href="'.gethomepage($userID).'" target="_blank"><img src="images/icons/hp.gif" alt="'.$_language->module['homepage'].'" /></a>';
+				else $hp='<a href="'.gethomepage($userID).'" target="_blank"><img src="images/icons/hp.gif" alt="'.$_language->module['homepage'].'"></a>';
 				$registered = getregistered($userID);
 				$posts = getuserforumposts($userID);
 				if(isset($_POST['sticky'])) $post_sticky = $_POST['sticky'];
@@ -452,16 +452,16 @@ function showtopic($topic, $edit, $addreply, $quoteID, $type) {
 
 				if(isforumadmin($userID)) {
 					$usertype=$_language->module['admin'];
-					$rang='<img src="images/icons/ranks/admin.gif" alt="" />';
+					$rang='<img src="images/icons/ranks/admin.gif" alt="">';
 				}
 				elseif(isanymoderator($userID)) {
 					$usertype=$_language->module['moderator'];
-					$rang='<img src="images/icons/ranks/moderator.gif" alt="" />';
+					$rang='<img src="images/icons/ranks/moderator.gif" alt="">';
 				} else {
 					$ergebnis=safe_query("SELECT * FROM ".PREFIX."forum_ranks WHERE $posts >= postmin AND $posts <= postmax AND postmax >0");
 					$ds=mysqli_fetch_array($ergebnis);
 					$usertype=$ds['rank'];
-					$rang='<img src="images/icons/ranks/'.$ds['pic'].'" alt="" />';
+					$rang='<img src="images/icons/ranks/'.$ds['pic'].'" alt="">';
 				}
 				
 				if(isforumadmin($userID)) $chk_sticky = '<input class="input" type="checkbox" name="sticky" value="1" '.$_sticky.'> '.$_language->module['make_sticky'];
@@ -551,32 +551,32 @@ function showtopic($topic, $edit, $addreply, $quoteID, $type) {
 
 		$username='<a href="index.php?site=profile&amp;id='.$dr['poster'].'"><b>'.stripslashes(getnickname($dr['poster'])).'</b></a>';
 
-		if(isclanmember($dr['poster'])) $member=' <img src="images/icons/member.gif" alt="'.$_language->module['clanmember'].'" />';
+		if(isclanmember($dr['poster'])) $member=' <img src="images/icons/member.gif" alt="'.$_language->module['clanmember'].'">';
 		else $member='';
 
-		if($getavatar = getavatar($dr['poster'])) $avatar='<img src="images/avatars/'.$getavatar.'" alt="" />';
+		if($getavatar = getavatar($dr['poster'])) $avatar='<img src="images/avatars/'.$getavatar.'" alt="">';
 		else $avatar='';
 
 		if($getsignatur = getsignatur($dr['poster'])) $signatur=cleartext($getsignatur);
 		else $signatur='';
 
-		if($getemail = getemail($dr['poster']) and !getemailhide($dr['poster'])) $email = '<a href="mailto:'.mail_protect($getemail).'"><img src="images/icons/email.gif" alt="email" /></a>';
+		if($getemail = getemail($dr['poster']) and !getemailhide($dr['poster'])) $email = '<a href="mailto:'.mail_protect($getemail).'"><img src="images/icons/email.gif" alt="email"></a>';
 		else $email='';
 
 		$pm='';
 		$buddy='';
 		if($loggedin && $dr['poster']!=$userID) {
-			$pm='<a href="index.php?site=messenger&amp;action=touser&amp;touser='.$dr['poster'].'"><img src="images/icons/pm.gif" width="12" height="13" alt="'.$_language->module['messenger'].'" /></a>';
-			if(isignored($userID, $dr['poster'])) $buddy='<a href="buddys.php?action=readd&amp;id='.$dr['poster'].'&amp;userID='.$userID.'"><img src="images/icons/buddy_readd.gif" alt="'.$_language->module['back_buddy'].'" /></a>';
-			elseif(isbuddy($userID, $dr['poster'])) $buddy='<a href="buddys.php?action=ignore&amp;id='.$dr['poster'].'&amp;userID='.$userID.'"><img src="images/icons/buddy_ignore.gif" alt="'.$_language->module['ignore'].'" /></a>';
-			else $buddy='<a href="buddys.php?action=add&amp;id='.$dr['poster'].'&amp;userID='.$userID.'"><img src="images/icons/buddy_add.gif" alt="'.$_language->module['add_buddy'].'" /></a>';
+			$pm='<a href="index.php?site=messenger&amp;action=touser&amp;touser='.$dr['poster'].'"><img src="images/icons/pm.gif" width="12" height="13" alt="'.$_language->module['messenger'].'"></a>';
+			if(isignored($userID, $dr['poster'])) $buddy='<a href="buddys.php?action=readd&amp;id='.$dr['poster'].'&amp;userID='.$userID.'"><img src="images/icons/buddy_readd.gif" alt="'.$_language->module['back_buddy'].'"></a>';
+			elseif(isbuddy($userID, $dr['poster'])) $buddy='<a href="buddys.php?action=ignore&amp;id='.$dr['poster'].'&amp;userID='.$userID.'"><img src="images/icons/buddy_ignore.gif" alt="'.$_language->module['ignore'].'"></a>';
+			else $buddy='<a href="buddys.php?action=add&amp;id='.$dr['poster'].'&amp;userID='.$userID.'"><img src="images/icons/buddy_add.gif" alt="'.$_language->module['add_buddy'].'"></a>';
 		}
 
-		if(isonline($dr['poster'])=="offline") $statuspic='<img src="images/icons/offline.gif" alt="offline" />';
-		else $statuspic='<img src="images/icons/online.gif" alt="online" />';
+		if(isonline($dr['poster'])=="offline") $statuspic='<img src="images/icons/offline.gif" alt="offline">';
+		else $statuspic='<img src="images/icons/online.gif" alt="online">';
 
 		if(!validate_url(gethomepage($dr['poster']))) $hp='';
-		else $hp='<a href="'.gethomepage($dr['poster']).'" target="_blank"><img src="images/icons/hp.gif" alt="'.$_language->module['homepage'].'" /></a>';
+		else $hp='<a href="'.gethomepage($dr['poster']).'" target="_blank"><img src="images/icons/hp.gif" alt="'.$_language->module['homepage'].'"></a>';
 
 		if(!$dt['closed']) $quote='<a href="index.php?site=forum_topic&amp;addreply=true&amp;board='.$dt['boardID'].'&amp;topic='.$topic.'&amp;quoteID='.$dr['postID'].'&amp;page='.$page.'&amp;type='.$type.'"><i class="icon-quote-left"></i></a>';
 		else $quote = "";
@@ -587,23 +587,23 @@ function showtopic($topic, $edit, $addreply, $quoteID, $type) {
 
 		if(isforumadmin($dr['poster'])) {
 			$usertype=$_language->module['admin'];
-			$rang='<img src="images/icons/ranks/admin.gif" alt="" />';
+			$rang='<img src="images/icons/ranks/admin.gif" alt="">';
 		}
 		elseif(isanymoderator($dr['poster'])) {
 			$usertype=$_language->module['moderator'];
-			$rang='<img src="images/icons/ranks/moderator.gif" alt="" />';
+			$rang='<img src="images/icons/ranks/moderator.gif" alt="">';
 		} else {
 			$ergebnis=safe_query("SELECT * FROM ".PREFIX."forum_ranks WHERE $posts >= postmin AND $posts <= postmax AND postmax >0");
 			$ds=mysqli_fetch_array($ergebnis);
 			$usertype=$ds['rank'];
-			$rang='<img src="images/icons/ranks/'.$ds['pic'].'" alt="" />';
+			$rang='<img src="images/icons/ranks/'.$ds['pic'].'" alt="">';
 		}
 
 		$spam_buttons = "";
 		if(!empty($spamapikey)){
 			if(ispageadmin($userID) || ismoderator($userID,$dt['boardID'])){
-				$spam_buttons = '<input type="button" value="Spam" onclick="eventfetch(\'ajax_spamfilter.php?postID='.$postID.'&type=spam\',\'\',\'return\')" />
-<input type="button" value="Ham" onclick="eventfetch(\'ajax_spamfilter.php?postID='.$postID.'&type=ham\',\'\',\'return\')" />';
+				$spam_buttons = '<input type="button" value="Spam" onclick="eventfetch(\'ajax_spamfilter.php?postID='.$postID.'&type=spam\',\'\',\'return\')">
+<input type="button" value="Ham" onclick="eventfetch(\'ajax_spamfilter.php?postID='.$postID.'&type=ham\',\'\',\'return\')">';
 			}
 		}
 

@@ -55,11 +55,11 @@ elseif($action=="add") {
   <table width="100%" border="0" cellspacing="1" cellpadding="3">
     <tr>
       <td width="15%"><b>'.$_language->module['group_name'].'</b></td>
-      <td width="85%"><input type="text" name="name" size="60" /></td>
+      <td width="85%"><input type="text" name="name" size="60"></td>
     </tr>
     <tr>
-      <td><input type="hidden" name="captcha_hash" value="'.$hash.'" /></td>
-      <td><input type="submit" name="save" value="'.$_language->module['add_group'].'" /></td>
+      <td><input type="hidden" name="captcha_hash" value="'.$hash.'"></td>
+      <td><input type="submit" name="save" value="'.$_language->module['add_group'].'"></td>
     </tr>
   </table>
   </form>';
@@ -105,11 +105,11 @@ elseif($action=="edit") {
   <table width="100%" border="0" cellspacing="1" cellpadding="3">
     <tr>
       <td width="15%"><b>'.$_language->module['group_name'].'</b></td>
-      <td width="85%"><input type="text" name="name" value="'.getinput($ds["name"]).'" size="60" /></td>
+      <td width="85%"><input type="text" name="name" value="'.getinput($ds["name"]).'" size="60"></td>
     </tr>
     <tr>
-      <td><input type="hidden" name="captcha_hash" value="'.$hash.'" /><input name="fgrID" type="hidden" value="'.$ds["fgrID"].'" /></td>
-      <td><input type="submit" name="save" value="'.$_language->module['edit_group'].'" /></td>
+      <td><input type="hidden" name="captcha_hash" value="'.$hash.'"><input name="fgrID" type="hidden" value="'.$ds["fgrID"].'"></td>
+      <td><input type="submit" name="save" value="'.$_language->module['edit_group'].'"></td>
     </tr>
   </table>
   </form>';
@@ -119,7 +119,7 @@ else {
 	
   echo'<h1>&curren; '.$_language->module['groups'].'</h1>';
   
-  echo'<input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=groups&amp;action=add\');return document.MM_returnValue" value="'.$_language->module['new_group'].'" /><br><br>';
+  echo'<input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=groups&amp;action=add\');return document.MM_returnValue" value="'.$_language->module['new_group'].'"><br><br>';
 
 	$ergebnis=safe_query("SELECT * FROM ".PREFIX."forum_groups ORDER BY fgrID");
 	
@@ -140,8 +140,8 @@ else {
   
 		echo'<tr>
       <td class="'.$td.'"><b>'.getinput($ds['name']).'</b></td>
-      <td class="'.$td.'" align="center"><input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=groups&amp;action=edit&amp;fgrID='.$ds["fgrID"].'\');return document.MM_returnValue" value="'.$_language->module['edit'].'" />
-      <input type="button" onclick="MM_confirm(\''.$_language->module['really_delete'].'\', \'admincenter.php?site=groups&amp;action=delete&amp;fgrID='.$ds["fgrID"].'&amp;captcha_hash='.$hash.'\')" value="'.$_language->module['delete'].'" /></td>
+      <td class="'.$td.'" align="center"><input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=groups&amp;action=edit&amp;fgrID='.$ds["fgrID"].'\');return document.MM_returnValue" value="'.$_language->module['edit'].'">
+      <input type="button" onclick="MM_confirm(\''.$_language->module['really_delete'].'\', \'admincenter.php?site=groups&amp;action=delete&amp;fgrID='.$ds["fgrID"].'&amp;captcha_hash='.$hash.'\')" value="'.$_language->module['delete'].'"></td>
 		</tr>';
       
       $i++;

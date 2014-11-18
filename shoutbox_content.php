@@ -120,7 +120,7 @@ elseif($action=="showall") {
 		$ip='logged';
 
 		if(isfeedbackadmin($userID)) {
-			$actions='<input class="input" type="checkbox" name="shoutID[]" value="'.$ds['shoutID'].'" />';
+			$actions='<input class="input" type="checkbox" name="shoutID[]" value="'.$ds['shoutID'].'">';
 			$ip=$ds['ip'];
 		}
 		else $actions='';
