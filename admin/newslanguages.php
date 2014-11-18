@@ -156,7 +156,7 @@ else {
     if($i%2) { $td='td1'; }
     else { $td='td2'; }
     
-    $getflag='<img src="../images/flags/'.$ds['lang'].'.gif" border="0" alt="'.$ds['alt'].'" />';
+    $getflag='<img src="../images/flags/'.$ds['lang'].'.gif" alt="'.$ds['alt'].'" />';
       
 		echo'<tr>
       <td class="'.$td.'" align="center">'.$getflag.'</td>

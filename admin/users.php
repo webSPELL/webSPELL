@@ -699,9 +699,9 @@ else {
 		if($status == true) $sort = "status";
 		elseif(($_GET['sort']=='nickname') || ($_GET['sort']=='registerdate')) $sort=$_GET['sort'];
 		if($type=="ASC")
-		$sorter='<a href="admincenter.php?site=users&amp;page='.$page.'&amp;sort='.$sort.'&amp;type=DESC&amp;search='.$search.'">'.$_language->module['to_sort'].':</a> <img src="../images/icons/asc.gif" width="9" height="7" border="0" alt="" />&nbsp;&nbsp;&nbsp;';
+		$sorter='<a href="admincenter.php?site=users&amp;page='.$page.'&amp;sort='.$sort.'&amp;type=DESC&amp;search='.$search.'">'.$_language->module['to_sort'].':</a> <img src="../images/icons/asc.gif" width="9" height="7" alt="" />&nbsp;&nbsp;&nbsp;';
 		else
-		$sorter='<a href="admincenter.php?site=users&amp;page='.$page.'&amp;sort='.$sort.'&amp;type=ASC&amp;search='.$search.'">'.$_language->module['to_sort'].':</a> <img src="../images/icons/desc.gif" width="9" height="7" border="0" alt="" />&nbsp;&nbsp;&nbsp;';
+		$sorter='<a href="admincenter.php?site=users&amp;page='.$page.'&amp;sort='.$sort.'&amp;type=ASC&amp;search='.$search.'">'.$_language->module['to_sort'].':</a> <img src="../images/icons/desc.gif" width="9" height="7" alt="" />&nbsp;&nbsp;&nbsp;';
 
 		echo'<table width="100%" border="0" cellspacing="1" cellpadding="3">
       <tr>

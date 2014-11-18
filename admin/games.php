@@ -65,7 +65,7 @@ if($action=="add") {
 
 elseif($action=="edit") {
 	$ds=mysqli_fetch_array(safe_query("SELECT * FROM ".PREFIX."games WHERE gameID='".$_GET["gameID"]."'"));
-	$pic='<img src="../images/games/'.$ds['tag'].'.gif" border="0" alt="'.$ds['name'].'" />';
+	$pic='<img src="../images/games/'.$ds['tag'].'.gif" alt="'.$ds['name'].'" />';
   
   $CAPCLASS = new Captcha;
 	$CAPCLASS->create_transaction();
@@ -185,7 +185,7 @@ else {
     while($ds = mysqli_fetch_array($ergebnis)) {
       if($i%2) { $td='td1'; }
       else { $td='td2'; }
-      $pic='<img src="../images/games/'.$ds['tag'].'.gif" border="0" alt="" />';
+      $pic='<img src="../images/games/'.$ds['tag'].'.gif" alt="" />';
       			
       echo'<tr>
         <td class="'.$td.'" align="center">'.$pic.'</td>

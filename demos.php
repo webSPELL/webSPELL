@@ -286,7 +286,7 @@ elseif($action=="showdemo") {
 	$country2="[flag]".$ds['country2']."[/flag]";
 	$country2=flags($country2);
 	$clan2=$country2.' <a href="'.$ds['url2'].'" target="_blank">'.$ds['clan2'].'</a>';
-	$game='<img src="images/games/'.$ds['game'].'.gif" width="13" height="13" border="0" alt="" /> '.$ds['game'];
+	$game='<img src="images/games/'.$ds['game'].'.gif" width="13" height="13" alt="" /> '.$ds['game'];
 
 	$clicks=$ds['downloads'];
 	$player=$ds['player'];
@@ -407,9 +407,9 @@ elseif($action=="showgame") {
 	if($gesamt) {
 		top5();
 		if($type=="ASC")
-		echo'<a href="index.php?site=demos&amp;action=showgame&amp;game='.$game.'&amp;page='.$page.'&amp;sort='.$sort.'&amp;type=DESC">'.$_language->module['sort'].':</a> <img src="images/icons/asc.gif" width="9" height="7" border="0" alt="" />&nbsp;&nbsp;&nbsp;';
+		echo'<a href="index.php?site=demos&amp;action=showgame&amp;game='.$game.'&amp;page='.$page.'&amp;sort='.$sort.'&amp;type=DESC">'.$_language->module['sort'].':</a> <img src="images/icons/asc.gif" width="9" height="7" alt="" />&nbsp;&nbsp;&nbsp;';
 		else
-		echo'<a href="index.php?site=demos&amp;action=showgame&amp;game='.$game.'&amp;page='.$page.'&amp;sort='.$sort.'&amp;type=ASC">'.$_language->module['sort'].':</a> <img src="images/icons/desc.gif" width="9" height="7" border="0" alt="" />&nbsp;&nbsp;&nbsp;';
+		echo'<a href="index.php?site=demos&amp;action=showgame&amp;game='.$game.'&amp;page='.$page.'&amp;sort='.$sort.'&amp;type=ASC">'.$_language->module['sort'].':</a> <img src="images/icons/desc.gif" width="9" height="7" alt="" />&nbsp;&nbsp;&nbsp;';
 
 		echo $page_link;
 		echo'<br /><br />';
@@ -440,7 +440,7 @@ elseif($action=="showgame") {
 			$country2="[flag]".$ds['country2']."[/flag]";
 			$country2=flags($country2);
 			$clan2='<a href="'.$ds['url2'].'" target="_blank">'.$ds['clantag2'].'</a> '.$country2;
-			$game='<img src="images/games/'.$ds['game'].'.gif" width="13" height="13" border="0" alt="" />';
+			$game='<img src="images/games/'.$ds['game'].'.gif" width="13" height="13" alt="" />';
 			$clicks=$ds['downloads'];
 
 			$ratings=array(0,0,0,0,0,0,0,0,0,0);
@@ -501,9 +501,9 @@ else {
 	if($gesamt) {
 		top5();
 		if($type=="ASC")
-			echo'<a href="index.php?site=demos&amp;page='.$page.'&amp;sort='.$sort.'&amp;type=DESC">'.$_language->module['sort'].':</a> <img src="images/icons/asc.gif" width="9" height="7" border="0" alt="" />&nbsp;&nbsp;&nbsp;';
+			echo'<a href="index.php?site=demos&amp;page='.$page.'&amp;sort='.$sort.'&amp;type=DESC">'.$_language->module['sort'].':</a> <img src="images/icons/asc.gif" width="9" height="7" alt="" />&nbsp;&nbsp;&nbsp;';
 		else
-			echo'<a href="index.php?site=demos&amp;page='.$page.'&amp;sort='.$sort.'&amp;type=ASC">'.$_language->module['sort'].':</a> <img src="images/icons/desc.gif" width="9" height="7" border="0" alt="" />&nbsp;&nbsp;&nbsp;';
+			echo'<a href="index.php?site=demos&amp;page='.$page.'&amp;sort='.$sort.'&amp;type=ASC">'.$_language->module['sort'].':</a> <img src="images/icons/desc.gif" width="9" height="7" alt="" />&nbsp;&nbsp;&nbsp;';
 
 		echo $page_link;
 		echo'<br /><br />';
@@ -534,7 +534,7 @@ else {
 			$country2="[flag]".$ds['country2']."[/flag]";
 			$country2=flags($country2);
 			$clan2=$country2.' <a href="'.$ds['url2'].'" target="_blank">'.$ds['clantag2'].'</a> ';
-			$game='<a href="index.php?site=demos&amp;action=showgame&amp;game='.$ds['game'].'"><img src="images/games/'.$ds['game'].'.gif" width="13" height="13" border="0" alt="" /></a>';
+			$game='<a href="index.php?site=demos&amp;action=showgame&amp;game='.$ds['game'].'"><img src="images/games/'.$ds['game'].'.gif" width="13" height="13" alt="" /></a>';
 			$clicks=$ds['downloads'];
 
 			$ratings=array(0,0,0,0,0,0,0,0,0,0);

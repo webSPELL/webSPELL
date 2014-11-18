@@ -202,7 +202,7 @@ elseif($action=="show" AND is_numeric($_GET['linkcatID'])) {
 
 			$link = '<a href="'.$ds['url'].'" target="_blank"><b>'.$ds['name'].'</b></a>';
 			$info = cleartext($ds['info']);
-			if($ds['banner']) $banner='<a href="'.$ds['url'].'" target="_blank"><img src="images/links/'.$ds['banner'].'" border="0" alt="" /></a>';
+			if($ds['banner']) $banner='<a href="'.$ds['url'].'" target="_blank"><img src="images/links/'.$ds['banner'].'" alt="" /></a>';
 			else $banner='';
 			if(ispageadmin($userID) || isnewsadmin($userID)) {
 				$adminaction='<input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=links&amp;action=edit&amp;linkID='.$ds['linkID'].'\');return document.MM_returnValue" value="'.$_language->module['edit'].'" class="btn btn-danger" />

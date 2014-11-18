@@ -108,9 +108,9 @@ elseif($action=="edit") {
   echo'<h1>&curren; <a href="admincenter.php?site=sponsors" class="white">'.$_language->module['sponsors'].'</a> &raquo; '.$_language->module['edit_sponsor'].'</h1>';
 
 	$ds=mysqli_fetch_array(safe_query("SELECT * FROM ".PREFIX."sponsors WHERE sponsorID='".$_GET["sponsorID"]."'"));
-	if(!empty($ds['banner'])) $pic='<img src="'.$filepath.$ds['banner'].'" border="0" alt="" />';
+	if(!empty($ds['banner'])) $pic='<img src="'.$filepath.$ds['banner'].'" alt="" />';
 	else $pic=$_language->module['no_upload'];
-	if(!empty($ds['banner_small'])) $pic_small='<img src="'.$filepath.$ds['banner_small'].'" border="0" alt="" />';
+	if(!empty($ds['banner_small'])) $pic_small='<img src="'.$filepath.$ds['banner_small'].'" alt="" />';
 	else $pic_small=$_language->module['no_upload'];
 
 	if($ds['displayed']=='1') $displayed='<input type="checkbox" name="displayed" value="1" checked="checked" />';
