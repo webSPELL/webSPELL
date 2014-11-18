@@ -484,9 +484,9 @@ else {
 	if($gesamt) {
 		top5();
 		if($type=="ASC")
-		echo'<a href="index.php?site=articles&amp;page='.$page.'&amp;sort='.$sort.'&amp;type=DESC">'.$_language->module['sort'].'</a> <img src="images/icons/asc.gif" width="9" height="7" border="0" alt="" />&nbsp;&nbsp;&nbsp;';
+		echo'<a href="index.php?site=articles&amp;page='.$page.'&amp;sort='.$sort.'&amp;type=DESC">'.$_language->module['sort'].'</a> <img src="images/icons/asc.gif" width="9" height="7" alt="" />&nbsp;&nbsp;&nbsp;';
 		else
-		echo'<a href="index.php?site=articles&amp;page='.$page.'&amp;sort='.$sort.'&amp;type=ASC">'.$_language->module['sort'].'</a> <img src="images/icons/desc.gif" width="9" height="7" border="0" alt="" />&nbsp;&nbsp;&nbsp;';
+		echo'<a href="index.php?site=articles&amp;page='.$page.'&amp;sort='.$sort.'&amp;type=ASC">'.$_language->module['sort'].'</a> <img src="images/icons/desc.gif" width="9" height="7" alt="" />&nbsp;&nbsp;&nbsp;';
 
 
 		if($pages>1) echo $page_link;

@@ -170,8 +170,8 @@ if(isclanwaradmin($userID)) {
 	if($anz) {
 		if(!isset($type)) $type = "DESC";
 
-		if($type=="ASC") echo'<a href="index.php?site=challenge&amp;type=DESC">'.$_language->module['sort'].'</a> <img src="images/icons/asc.gif" width="9" height="7" border="0" alt="" />&nbsp;&nbsp;&nbsp;';
-		else echo'<a href="index.php?site=challenge&amp;type=ASC">'.$_language->module['sort'].'</a> <img src="images/icons/desc.gif" width="9" height="7" border="0" alt="" />&nbsp;&nbsp;&nbsp;';
+		if($type=="ASC") echo'<a href="index.php?site=challenge&amp;type=DESC">'.$_language->module['sort'].'</a> <img src="images/icons/asc.gif" width="9" height="7" alt="" />&nbsp;&nbsp;&nbsp;';
+		else echo'<a href="index.php?site=challenge&amp;type=ASC">'.$_language->module['sort'].'</a> <img src="images/icons/desc.gif" width="9" height="7" alt="" />&nbsp;&nbsp;&nbsp;';
 		echo'<br><br>';
 		
 		$i=0;
@@ -191,7 +191,7 @@ if(isclanwaradmin($userID)) {
 			
 			if(isset($ds['hp']))
      		if(!validate_url($ds['hp'])) $homepage='';
-			else $homepage='<a href="'.$ds['hp'].'" target="_blank"><img src="images/icons/hp.gif" border="0" width="14" height="14" alt="homepage" /></a>';
+			else $homepage='<a href="'.$ds['hp'].'" target="_blank"><img src="images/icons/hp.gif" width="14" height="14" alt="homepage" /></a>';
 			
 			if(isset($ds['name'])) $name=cleartext($ds['name']);
       		if(isset($ds['comment'])) $message=cleartext($ds['comment']);

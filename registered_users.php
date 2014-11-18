@@ -95,19 +95,19 @@ if($anz) {
 		if(isclanmember($ds['userID'])) $member=' <img src="images/icons/member.gif" width="6" height="11" alt="Clanmember" />';
 		else $member='';
 		if($ds['email_hide']) $email = '';
-		else $email='<a href="mailto:'.mail_protect($ds['email']).'"><img src="images/icons/email.gif" border="0" width="15" height="11" alt="e-mail" /></a>';
+		else $email='<a href="mailto:'.mail_protect($ds['email']).'"><img src="images/icons/email.gif" width="15" height="11" alt="e-mail" /></a>';
 		
 		if(!validate_url($ds['homepage'])) $homepage='';
-		else $homepage='<a href="'.$ds['homepage'].'" target="_blank"><img src="images/icons/hp.gif" border="0" width="14" height="14" alt="homepage" /></a>';
+		else $homepage='<a href="'.$ds['homepage'].'" target="_blank"><img src="images/icons/hp.gif" width="14" height="14" alt="homepage" /></a>';
 
 		$pm='';
 		$buddy='';
 		if($loggedin && $ds['userID'] != $userID) {
-			$pm='<a href="index.php?site=messenger&amp;action=touser&amp;touser='.$ds['userID'].'"><img src="images/icons/pm.gif" border="0" width="12" height="13" alt="messenger" /></a>';
-			if(isignored($userID, $ds['userID'])) $buddy='<a href="buddys.php?action=readd&amp;id='.$ds['userID'].'&amp;userID='.$userID.'"><img src="images/icons/buddy_readd.gif" width="16" height="16" border="0" alt="back to buddy-list" /></a>';
-			elseif(isbuddy($userID, $ds['userID'])) $buddy='<a href="buddys.php?action=ignore&amp;id='.$ds['userID'].'&amp;userID='.$userID.'"><img src="images/icons/buddy_ignore.gif" width="16" height="16" border="0" alt="ignore user" /></a>';
+			$pm='<a href="index.php?site=messenger&amp;action=touser&amp;touser='.$ds['userID'].'"><img src="images/icons/pm.gif" width="12" height="13" alt="messenger" /></a>';
+			if(isignored($userID, $ds['userID'])) $buddy='<a href="buddys.php?action=readd&amp;id='.$ds['userID'].'&amp;userID='.$userID.'"><img src="images/icons/buddy_readd.gif" width="16" height="16" alt="back to buddy-list" /></a>';
+			elseif(isbuddy($userID, $ds['userID'])) $buddy='<a href="buddys.php?action=ignore&amp;id='.$ds['userID'].'&amp;userID='.$userID.'"><img src="images/icons/buddy_ignore.gif" width="16" height="16" alt="ignore user" /></a>';
 			elseif($userID==$ds['userID']) $buddy='';
-			else $buddy='<a href="buddys.php?action=add&amp;id='.$ds['userID'].'&amp;userID='.$userID.'"><img src="images/icons/buddy_add.gif" width="16" height="16" border="0" alt="add to buddylist" /></a>';
+			else $buddy='<a href="buddys.php?action=add&amp;id='.$ds['userID'].'&amp;userID='.$userID.'"><img src="images/icons/buddy_add.gif" width="16" height="16" alt="add to buddylist" /></a>';
 		}
 		$lastlogindate=getformatdate($ds['lastlogin']);
 		$lastlogintime=getformattime($ds['lastlogin']);

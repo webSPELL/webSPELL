@@ -66,7 +66,7 @@ if (is_array($files)) {
 		$flag = explode(".", $file);
 		
     echo'<tr>
-        <td bgcolor="'.BG_1.'" align="center"><a href="javascript:AddCodeFromWindow(\'[flag]'.$flag[0].'[/flag]\')"><img src="images/flags/'.$file.'" border="0" alt="" /></a></td>
+        <td bgcolor="'.BG_1.'" align="center"><a href="javascript:AddCodeFromWindow(\'[flag]'.$flag[0].'[/flag]\')"><img src="images/flags/'.$file.'" alt="" /></a></td>
         <td bgcolor="'.BG_2.'" align="center"><a href="javascript:AddCodeFromWindow(\'[flag]'.$flag[0].'[/flag]\')">'.$flag[0].'</a></td>
       </tr>';
 	}

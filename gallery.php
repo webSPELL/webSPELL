@@ -157,7 +157,7 @@ elseif($action == "diashow" OR $action == "window") {
 
 	//output image
 
-	echo '<img src="picture.php?id='.$picID.'" border="0" alt="" /><br><b>'.cleartext($ds['comment'], false).'</b>';
+	echo '<img src="picture.php?id='.$picID.'" alt="" /><br><b>'.cleartext($ds['comment'], false).'</b>';
 
 	if($browse['picID'] or $_GET['action'] == "window") echo '</a>';
 

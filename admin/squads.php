@@ -302,9 +302,9 @@ elseif($action=="edit") {
 		$display = 'none';
 	}
 	
-	if(!empty($ds['icon'])) $pic='<img src="'.$filepath.$ds['icon'].'" border="0" alt="" />';
+	if(!empty($ds['icon'])) $pic='<img src="'.$filepath.$ds['icon'].'" alt="" />';
 	else $pic=$_language->module['no_icon'];
-	if(!empty($ds['icon_small'])) $pic_small='<img src="'.$filepath.$ds['icon_small'].'" border="0" alt="" />';
+	if(!empty($ds['icon_small'])) $pic_small='<img src="'.$filepath.$ds['icon_small'].'" alt="" />';
 	else $pic_small=$_language->module['no_icon'];
 	
 	$CAPCLASS = new Captcha;

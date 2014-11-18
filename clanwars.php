@@ -927,7 +927,7 @@ elseif($action=="showonly") {
 
 			$squad='<a href="index.php?site=clanwars&amp;action=showonly&amp;id='.$id.'&amp;page='.$page.'&amp;sort=game&amp;type='.$type.'&amp;only=squad"><b>'.getsquadname($ds['squad']).'</b></a>';
 			if(file_exists('images/games/'.$ds['game'].'.gif')) $pic = $ds['game'].'.gif';
-			$game='<a href="index.php?site=clanwars&amp;action=showonly&amp;id='.$ds['game'].'&amp;page='.$page.'&amp;sort=game&amp;type='.$type.'&amp;only=game"><img src="images/games/'.$pic.'" width="13" height="13" border="0" alt="" /></a>';
+			$game='<a href="index.php?site=clanwars&amp;action=showonly&amp;id='.$ds['game'].'&amp;page='.$page.'&amp;sort=game&amp;type='.$type.'&amp;only=game"><img src="images/games/'.$pic.'" width="13" height="13" alt="" /></a>';
 
 			$homescr=array_sum(unserialize($ds['homescore']));
 			$oppscr=array_sum(unserialize($ds['oppscore']));
@@ -999,8 +999,8 @@ elseif(empty($_GET['action'])) {
 		else $n = ($gesamt+1)-$page*$max+$max;
 	}
 
-  	if($type=="ASC") $seiten='<a href="index.php?site=clanwars&amp;page='.$page.'&amp;sort='.$sort.'&amp;type=DESC">'.$_language->module['sort'].':</a> <img src="images/icons/asc.gif" width="9" height="7" border="0" alt="" /> '.$page_link.'<br><br>';
-	else $seiten='<a href="index.php?site=clanwars&amp;page='.$page.'&amp;sort='.$sort.'&amp;type=ASC">'.$_language->module['sort'].':</a> <img src="images/icons/desc.gif" width="9" height="7" border="0" alt="" /> '.$page_link.'<br><br>';
+  	if($type=="ASC") $seiten='<a href="index.php?site=clanwars&amp;page='.$page.'&amp;sort='.$sort.'&amp;type=DESC">'.$_language->module['sort'].':</a> <img src="images/icons/asc.gif" width="9" height="7" alt="" /> '.$page_link.'<br><br>';
+	else $seiten='<a href="index.php?site=clanwars&amp;page='.$page.'&amp;sort='.$sort.'&amp;type=ASC">'.$_language->module['sort'].':</a> <img src="images/icons/desc.gif" width="9" height="7" alt="" /> '.$page_link.'<br><br>';
 
   	if(isclanwaradmin($userID)) $admin='<input type="button" onclick="MM_openBrWindow(\'clanwars.php?action=new\',\'Clanwars\',\'toolbar=no,status=no,scrollbars=yes,width=800,height=600\')" value="'.$_language->module['new_clanwar'].'" class="btn btn-danger">';
   	else $admin='';
@@ -1045,7 +1045,7 @@ elseif(empty($_GET['action'])) {
 			$oppteam=$ds['oppteam'];
 			$server=$ds['server'];
 			if(file_exists('images/games/'.$ds['game'].'.gif')) $pic = $ds['game'].'.gif';
-			$game='<a href="index.php?site=clanwars&amp;action=showonly&amp;id='.$ds['game'].'&amp;page='.$page.'&amp;sort=game&amp;type='.$type.'&amp;only=game"><img src="images/games/'.$pic.'" width="13" height="13" border="0" alt="" /></a>';
+			$game='<a href="index.php?site=clanwars&amp;action=showonly&amp;id='.$ds['game'].'&amp;page='.$page.'&amp;sort=game&amp;type='.$type.'&amp;only=game"><img src="images/games/'.$pic.'" width="13" height="13" alt="" /></a>';
 
 			$homescr=array_sum(unserialize($ds['homescore']));
 			$oppscr=array_sum(unserialize($ds['oppscore']));
@@ -1054,8 +1054,8 @@ elseif(empty($_GET['action'])) {
 			elseif($homescr<$oppscr) $results='<font color="'.$loosecolor.'">'.$homescr.':'.$oppscr.'</font>';
 			else $results='<font color="'.$drawcolor.'">'.$homescr.':'.$oppscr.'</font>';
 
-			if($anzcomments = getanzcwcomments($ds['cwID'])) $details='<a href="index.php?site=clanwars_details&amp;cwID='.$ds['cwID'].'"><img src="images/icons/foldericons/newhotfolder.gif" alt="'.$_language->module['details'].'" border="0" /> ('.$anzcomments.')</a>';
-			else $details='<a href="index.php?site=clanwars_details&amp;cwID='.$ds['cwID'].'"><img src="images/icons/foldericons/folder.gif" alt="'.$_language->module['details'].'" border="0" /> (0)</a>';
+			if($anzcomments = getanzcwcomments($ds['cwID'])) $details='<a href="index.php?site=clanwars_details&amp;cwID='.$ds['cwID'].'"><img src="images/icons/foldericons/newhotfolder.gif" alt="'.$_language->module['details'].'" /> ('.$anzcomments.')</a>';
+			else $details='<a href="index.php?site=clanwars_details&amp;cwID='.$ds['cwID'].'"><img src="images/icons/foldericons/folder.gif" alt="'.$_language->module['details'].'" /> (0)</a>';
 
 			$multiple='';
 			$admdel='';
