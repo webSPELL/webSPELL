@@ -143,7 +143,7 @@ elseif($action=="edit") {
 		$bannerID = $_GET['bannerID'];
 		$ds=mysqli_fetch_array(safe_query("SELECT * FROM ".PREFIX."linkus WHERE bannerID='".$bannerID."'"));
 		$name=getinput($ds['name']);
-		$banner='<img src="images/linkus/'.$ds['file'].'" alt="" />';
+		$banner='<img src="images/linkus/'.$ds['file'].'" alt="">';
 
 		$bg1=BG_1;
 		eval ("\$linkus_edit = \"".gettemplate("linkus_edit")."\";");

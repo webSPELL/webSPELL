@@ -72,6 +72,6 @@ if(isset($_POST['submit'])) {
 		    </table>';
 	
 	echo '<br><textarea id="message" rows="30" cols="" name="message" style="width: 100%;">'.getinput($ds['history']).'</textarea>
-  <br><br><input type="hidden" name="captcha_hash" value="'.$hash.'" /><input type="submit" name="submit" value="'.$_language->module['update'].'" />
+  <br><br><input type="hidden" name="captcha_hash" value="'.$hash.'"><input type="submit" name="submit" value="'.$_language->module['update'].'">
   </form>';
 ?>

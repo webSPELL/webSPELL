@@ -101,6 +101,9 @@ if($action=="save" && isset($_POST['post'])) {
 		$show = false;
 	} else {
 		$fehler=implode('<br>&#8226; ',$error);
+	}
+	else {
+		$fehler=implode('<br>&#8226; ',$error);
 		$show = true;
     	$showerror = '<div class="alert alert-danger alert-dismissible" role="alert">
 		  <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>

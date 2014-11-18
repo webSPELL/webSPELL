@@ -74,17 +74,17 @@ if(isset($_GET['action']) and $_GET['action'] == "add") {
   <table width="100%" border="0" cellspacing="1" cellpadding="3">
     <tr>
       <td width="15%"><b>'.$_language->module['title'].'</b></td>
-      <td width="85%"><input type="text" name="name" size="60" value="new" /></td>
+      <td width="85%"><input type="text" name="name" size="60" value="new"></td>
     </tr>
     <tr>
       <td width="15%"><b>'.$_language->module['tags'].'</b></td>
-      <td width="85%"><input type="text" name="tags" size="60" value="" /></td>
+      <td width="85%"><input type="text" name="tags" size="60" value=""></td>
     </tr>
     <tr>
       <td><b>'.$_language->module['accesslevel'].'</b></td>
-      <td><input name="accesslevel" type="radio" value="0" checked="checked" /> '.$_language->module['public'].'<br>
-      <input name="accesslevel" type="radio" value="1" /> '.$_language->module['registered_only'].'<br>
-		<input name="accesslevel" type="radio" value="2" /> '.$_language->module['clanmember_only'].'</td>
+      <td><input name="accesslevel" type="radio" value="0" checked="checked"> '.$_language->module['public'].'<br>
+      <input name="accesslevel" type="radio" value="1"> '.$_language->module['registered_only'].'<br>
+		<input name="accesslevel" type="radio" value="2"> '.$_language->module['clanmember_only'].'</td>
     </tr>
   </table>
   <br><b>'.$_language->module['content'].'</b><br><small>'.$_language->module['you_can_use_html'].'</small><br><br>';
@@ -100,8 +100,8 @@ if(isset($_GET['action']) and $_GET['action'] == "add") {
 		    </table>';
     
   echo '<br><textarea id="message" name="message" rows="20" cols="" style="width: 100%;"></textarea>
-  <input type="hidden" name="captcha_hash" value="'.$hash.'" />
-  <br><br><input type="submit" name="save" value="'.$_language->module['add_static_page'].'" />
+  <input type="hidden" name="captcha_hash" value="'.$hash.'">
+  <br><br><input type="submit" name="save" value="'.$_language->module['add_static_page'].'">
   </form>';
   
 }
@@ -144,17 +144,17 @@ elseif(isset($_GET['action']) and $_GET['action'] == "edit") {
   <table width="100%" border="0" cellspacing="1" cellpadding="3">
     <tr>
       <td width="15%"><b>'.$_language->module['title'].'</b></td>
-      <td width="85%"><input type="text" name="name" size="60" value="'.getinput($ds['name']).'" /></td>
+      <td width="85%"><input type="text" name="name" size="60" value="'.getinput($ds['name']).'"></td>
     </tr>
     <tr>
       <td width="15%"><b>'.$_language->module['tags'].'</b></td>
-      <td width="85%"><input type="text" name="tags" size="60" value="'.getinput($tags).'" /></td>
+      <td width="85%"><input type="text" name="tags" size="60" value="'.getinput($tags).'"></td>
     </tr>
     <tr>
       <td><b>'.$_language->module['accesslevel'].'</b></td>
-      <td><input name="accesslevel" type="radio" value="0" '.$public.' /> '.$_language->module['public'].'<br>
-      <input name="accesslevel" type="radio" value="1" '.$user.' /> '.$_language->module['registered_only'].'<br>
-      <input name="accesslevel" type="radio" value="2" '.$clanmember.' /> '.$_language->module['clanmember_only'].'</td>
+      <td><input name="accesslevel" type="radio" value="0" '.$public.'> '.$_language->module['public'].'<br>
+      <input name="accesslevel" type="radio" value="1" '.$user.'> '.$_language->module['registered_only'].'<br>
+      <input name="accesslevel" type="radio" value="2" '.$clanmember.'> '.$_language->module['clanmember_only'].'</td>
     </tr>
   </table>
   <br><b>'.$_language->module['content'].'</b><br><small>'.$_language->module['you_can_use_html'].'</small><br><br>';
@@ -169,9 +169,9 @@ elseif(isset($_GET['action']) and $_GET['action'] == "edit") {
 		      </tr>
 		</table>
 	<textarea id="message" name="message" rows="20" cols="" style="width: 100%;">'.$content.'</textarea>
-	<br><br><input type="hidden" name="captcha_hash" value="'.$hash.'" />
-	<input type="hidden" name="staticID" value="'.$staticID.'" />
-	<input type="submit" name="save" value="'.$_language->module['edit_static_page'].'" />
+	<br><br><input type="hidden" name="captcha_hash" value="'.$hash.'">
+	<input type="hidden" name="staticID" value="'.$staticID.'">
+	<input type="submit" name="save" value="'.$_language->module['edit_static_page'].'">
 	</form>';
 }
 
@@ -179,7 +179,7 @@ else {
 	
   echo'<h1>&curren; '.$_language->module['static_pages'].'</h1>';
   
-  echo'<input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=static&amp;action=add\');return document.MM_returnValue" value="'.$_language->module['new_static_page'].'" /><br><br>';
+  echo'<input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=static&amp;action=add\');return document.MM_returnValue" value="'.$_language->module['new_static_page'].'"><br><br>';
 
 	$ergebnis=safe_query("SELECT * FROM ".PREFIX."static ORDER BY staticID");
 	
@@ -208,8 +208,8 @@ else {
       <td class="'.$td.'" align="center">'.$ds['staticID'].'</td>
       <td class="'.$td.'"><a href="../index.php?site=static&amp;staticID='.$ds['staticID'].'" target="_blank">'.getinput($ds['name']).'</a></td>
       <td class="'.$td.'">'.$accesslevel.'</td>
-      <td class="'.$td.'" align="center"><input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=static&amp;action=edit&amp;staticID='.$ds['staticID'].'\');return document.MM_returnValue" value="'.$_language->module['edit'].'" />
-      <input type="button" onclick="MM_confirm(\''.$_language->module['really_delete'].'\', \'admincenter.php?site=static&amp;delete=true&amp;staticID='.$ds['staticID'].'&amp;captcha_hash='.$hash.'\')" value="'.$_language->module['delete'].'" /></td>
+      <td class="'.$td.'" align="center"><input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=static&amp;action=edit&amp;staticID='.$ds['staticID'].'\');return document.MM_returnValue" value="'.$_language->module['edit'].'">
+      <input type="button" onclick="MM_confirm(\''.$_language->module['really_delete'].'\', \'admincenter.php?site=static&amp;delete=true&amp;staticID='.$ds['staticID'].'&amp;captcha_hash='.$hash.'\')" value="'.$_language->module['delete'].'"></td>
     </tr>';
     
     $i++;

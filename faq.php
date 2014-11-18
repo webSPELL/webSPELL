@@ -34,7 +34,7 @@ if(isset($_GET['action'])) $action = $_GET['action'];
 else $action='';
 
 if($action=="faqcat" and is_numeric($_GET['faqcatID'])) {
-	if(ispageadmin($userID)) echo'<input type="button" onclick="MM_openBrWindow(\'admin/admincenter.php?site=faq\',\'News\',\'toolbar=yes,status=yes,scrollbars=yes,resizable=yes,width=800,height=600\')" value="'.$_language->module['admin_button'].'" class="btn btn-danger" /><br><br>';
+	if(ispageadmin($userID)) echo'<input type="button" onclick="MM_openBrWindow(\'admin/admincenter.php?site=faq\',\'News\',\'toolbar=yes,status=yes,scrollbars=yes,resizable=yes,width=800,height=600\')" value="'.$_language->module['admin_button'].'" class="btn btn-danger"><br><br>';
 
 	$faqcatID = $_GET['faqcatID'];
 	$get = safe_query("SELECT faqcatname FROM ".PREFIX."faq_categories WHERE faqcatID='".$faqcatID."'");
@@ -71,7 +71,7 @@ if($action=="faqcat" and is_numeric($_GET['faqcatID'])) {
 }
 
 elseif($action=="faq") {
-	if(ispageadmin($userID)) echo'<p><input type="button" onclick="MM_openBrWindow(\'admin/admincenter.php?site=faq\',\'News\',\'toolbar=yes,status=yes,scrollbars=yes,resizable=yes,width=800,height=600\')" value="'.$_language->module['admin_button'].'" class="btn btn-danger" /></p>';
+	if(ispageadmin($userID)) echo'<p><input type="button" onclick="MM_openBrWindow(\'admin/admincenter.php?site=faq\',\'News\',\'toolbar=yes,status=yes,scrollbars=yes,resizable=yes,width=800,height=600\')" value="'.$_language->module['admin_button'].'" class="btn btn-danger"></p>';
 
 	$faqcatID = intval($_GET['faqcatID']);
 	$get = safe_query("SELECT faqcatname FROM ".PREFIX."faq_categories WHERE faqcatID='".$faqcatID."'");
@@ -104,7 +104,7 @@ elseif($action=="faq") {
 }
 
 else {
-	if(ispageadmin($userID)) echo'<p><input type="button" onclick="MM_openBrWindow(\'admin/admincenter.php?site=faq\',\'News\',\'toolbar=yes,status=yes,scrollbars=yes,resizable=yes,width=800,height=600\')" value="'.$_language->module['admin_button'].'" class="btn btn-danger" /></p>';
+	if(ispageadmin($userID)) echo'<p><input type="button" onclick="MM_openBrWindow(\'admin/admincenter.php?site=faq\',\'News\',\'toolbar=yes,status=yes,scrollbars=yes,resizable=yes,width=800,height=600\')" value="'.$_language->module['admin_button'].'" class="btn btn-danger"></p>';
 
 	$faqcats=safe_query("SELECT * FROM ".PREFIX."faq_categories ORDER BY sort");
 	$anzcats=mysqli_num_rows($faqcats);

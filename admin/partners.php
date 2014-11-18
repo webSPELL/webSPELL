@@ -163,23 +163,23 @@ if($action=="add") {
   <table width="100%" border="0" cellspacing="1" cellpadding="3">
     <tr>
       <td width="15%"><b>'.$_language->module['partner_name'].'</b></td>
-      <td width="85%"><input type="text" name="name" size="60" /></td>
+      <td width="85%"><input type="text" name="name" size="60"></td>
     </tr>
     <tr>
       <td><b>'.$_language->module['banner'].'</b></td>
-      <td><input name="banner" type="file" size="40" /> <small>'.$_language->module['max_88x31'].'</small></td>
+      <td><input name="banner" type="file" size="40"> <small>'.$_language->module['max_88x31'].'</small></td>
     </tr>
     <tr>
       <td><b>'.$_language->module['homepage_url'].'</b></td>
-      <td><input type="text" name="url" size="60" value="http://" /></td>
+      <td><input type="text" name="url" size="60" value="http://"></td>
     </tr>
     <tr>
       <td><b>'.$_language->module['is_displayed'].'</b></td>
-      <td><input type="checkbox" name="displayed" value="1" checked="checked" /></td>
+      <td><input type="checkbox" name="displayed" value="1" checked="checked"></td>
     </tr>
     <tr>
-      <td><input type="hidden" name="captcha_hash" value="'.$hash.'" /></td>
-      <td><input type="submit" name="save" value="'.$_language->module['add_partner'].'" /></td>
+      <td><input type="hidden" name="captcha_hash" value="'.$hash.'"></td>
+      <td><input type="submit" name="save" value="'.$_language->module['add_partner'].'"></td>
     </tr>
   </table>
   </form>';
@@ -196,34 +196,34 @@ elseif($action=="edit") {
   $ergebnis=safe_query("SELECT * FROM ".PREFIX."partners WHERE partnerID='$partnerID'");
   $ds=mysqli_fetch_array($ergebnis);
   
-  if($ds['displayed']=='1') $displayed='<input type="checkbox" name="displayed" value="1" checked="checked" />';
-  else $displayed='<input type="checkbox" name="displayed" value="1" />';
+  if($ds['displayed']=='1') $displayed='<input type="checkbox" name="displayed" value="1" checked="checked">';
+  else $displayed='<input type="checkbox" name="displayed" value="1">';
   
 	echo'<form method="post" action="admincenter.php?site=partners" enctype="multipart/form-data">
   <table width="100%" border="0" cellspacing="1" cellpadding="3">
     <tr>
       <td width="15%"><b>'.$_language->module['current_banner'].'</b></td>
-      <td width="85%"><img src="../images/partners/'.$ds['banner'].'" alt="" /></td>
+      <td width="85%"><img src="../images/partners/'.$ds['banner'].'" alt=""></td>
     </tr>
     <tr>
       <td width="15%"><b>'.$_language->module['partner_name'].'</b></td>
-      <td width="85%"><input type="text" name="name" size="60" value="'.getinput($ds['name']).'" /></td>
+      <td width="85%"><input type="text" name="name" size="60" value="'.getinput($ds['name']).'"></td>
     </tr>
     <tr>
       <td><b>'.$_language->module['banner'].'</b></td>
-      <td><input name="banner" type="file" size="40" /> <small>'.$_language->module['max_88x31'].'</small></td>
+      <td><input name="banner" type="file" size="40"> <small>'.$_language->module['max_88x31'].'</small></td>
     </tr>
     <tr>
       <td><b>'.$_language->module['homepage_url'].'</b></td>
-      <td><input type="text" name="url" size="60" value="'.getinput($ds['url']).'" /></td>
+      <td><input type="text" name="url" size="60" value="'.getinput($ds['url']).'"></td>
     </tr>
     <tr>
       <td><b>'.$_language->module['is_displayed'].'</b></td>
       <td>'.$displayed.'</td>
     </tr>
     <tr>
-      <td><input type="hidden" name="captcha_hash" value="'.$hash.'" /><input type="hidden" name="partnerID" value="'.$partnerID.'" /></td>
-      <td><input type="submit" name="saveedit" value="'.$_language->module['edit_partner'].'" /></td>
+      <td><input type="hidden" name="captcha_hash" value="'.$hash.'"><input type="hidden" name="partnerID" value="'.$partnerID.'"></td>
+      <td><input type="submit" name="saveedit" value="'.$_language->module['edit_partner'].'"></td>
     </tr>
   </table>
   </form>';
@@ -233,7 +233,7 @@ else {
 	
   echo'<h1>&curren; '.$_language->module['partners'].'</h1>';
   
-  echo'<input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=partners&amp;action=add\');return document.MM_returnValue" value="'.$_language->module['new_partner'].'" /><br><br>';
+  echo'<input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=partners&amp;action=add\');return document.MM_returnValue" value="'.$_language->module['new_partner'].'"><br><br>';
 
 	echo'<form method="post" action="admincenter.php?site=partners">
   <table width="100%" border="0" cellspacing="1" cellpadding="3" bgcolor="#DDDDDD">
@@ -270,8 +270,8 @@ else {
       <td class="'.$td.'"><a href="'.getinput($db['url']).'" target="_blank">'.getinput($db['name']).'</a></td>
       <td class="'.$td.'">'.$db['hits'].' ('.$perday.')</td>
       <td class="'.$td.'" align="center">'.$displayed.'</td>
-      <td class="'.$td.'" align="center"><input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=partners&amp;action=edit&amp;partnerID='.$db['partnerID'].'\');return document.MM_returnValue" value="'.$_language->module['edit'].'" />
-      <input type="button" onclick="MM_confirm(\''.$_language->module['really_delete'].'\', \'admincenter.php?site=partners&amp;delete=true&amp;partnerID='.$db['partnerID'].'&amp;captcha_hash='.$hash.'\')" value="'.$_language->module['delete'].'" /></td>
+      <td class="'.$td.'" align="center"><input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=partners&amp;action=edit&amp;partnerID='.$db['partnerID'].'\');return document.MM_returnValue" value="'.$_language->module['edit'].'">
+      <input type="button" onclick="MM_confirm(\''.$_language->module['really_delete'].'\', \'admincenter.php?site=partners&amp;delete=true&amp;partnerID='.$db['partnerID'].'&amp;captcha_hash='.$hash.'\')" value="'.$_language->module['delete'].'"></td>
       <td class="'.$td.'" align="center">
       <select name="sort[]">';
       
@@ -287,7 +287,7 @@ else {
          
 	}
 	echo'<tr class="td_head">
-      <td colspan="5" align="right"><input type="hidden" name="captcha_hash" value="'.$hash_2.'" /><input type="submit" name="sortieren" value="'.$_language->module['to_sort'].'" /></td>
+      <td colspan="5" align="right"><input type="hidden" name="captcha_hash" value="'.$hash_2.'"><input type="submit" name="sortieren" value="'.$_language->module['to_sort'].'"></td>
     </tr>
   </table>
   </form>';

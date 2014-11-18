@@ -76,19 +76,19 @@ $country = str_replace("<img","<img id='getcountry'",$country);
   <table width="100%" border="0" cellspacing="1" cellpadding="3">
     <tr>
       <td width="15%"><b>'.$_language->module['language'].'</b></td>
-      <td width="85%"><input type="text" name="language" size="60" /></td>
+      <td width="85%"><input type="text" name="language" size="60"></td>
     </tr>
     <tr>
       <td width="15%"><b>'.$_language->module['title'].'</b></td>
-      <td width="85%"><input type="text" name="alt" size="60" /></td>
+      <td width="85%"><input type="text" name="alt" size="60"></td>
     </tr>
     <tr>
       <td><b>'.$_language->module['flag'].'</b></td>
       <td><select name="lang" onchange="document.getElementById(\'getcountry\').src=\'../images/flags/\'+this.options[this.selectedIndex].value+\'.gif\'">'.$langs.'</select> &nbsp; '.$_language->module['preview'].': '.$country.'</td>
     </tr>
     <tr>
-      <td><input type="hidden" name="captcha_hash" value="'.$hash.'" /></td>
-      <td><input type="submit" name="save" value="'.$_language->module['add_language'].'" /></td>
+      <td><input type="hidden" name="captcha_hash" value="'.$hash.'"></td>
+      <td><input type="submit" name="save" value="'.$_language->module['add_language'].'"></td>
     </tr>
   </table>
   </form>';
@@ -113,19 +113,19 @@ $country = str_replace("<img","<img id='getcountry'",$country);
   <table width="100%" border="0" cellspacing="1" cellpadding="3">
     <tr>
       <td width="15%"><b>'.$_language->module['language'].'</b></td>
-      <td width="85%"><input type="text" name="language" value="'.getinput($ds['language']).'" size="60" /></td>
+      <td width="85%"><input type="text" name="language" value="'.getinput($ds['language']).'" size="60"></td>
     </tr>
     <tr>
       <td width="15%"><b>'.$_language->module['title'].'</b></td>
-      <td width="85%"><input type="text" name="alt" value="'.getinput($ds['alt']).'" size="60" /></td>
+      <td width="85%"><input type="text" name="alt" value="'.getinput($ds['alt']).'" size="60"></td>
     </tr>
     <tr>
       <td><b>'.$_language->module['flag'].'</b></td>
       <td><select name="lang" onchange="document.getElementById(\'getcountry\').src=\'../images/flags/\'+this.options[this.selectedIndex].value+\'.gif\'">'.$langs.'</select> &nbsp; '.$_language->module['preview'].': '.$country.'</td>
     </tr>
     <tr>
-      <td><input type="hidden" name="captcha_hash" value="'.$hash.'" /><input type="hidden" name="langID" value="'.$ds['langID'].'" /></td>
-      <td><input type="submit" name="saveedit" value="'.$_language->module['edit_language'].'" /></td>
+      <td><input type="hidden" name="captcha_hash" value="'.$hash.'"><input type="hidden" name="langID" value="'.$ds['langID'].'"></td>
+      <td><input type="submit" name="saveedit" value="'.$_language->module['edit_language'].'"></td>
     </tr>
   </table>
   </form>';
@@ -135,7 +135,7 @@ else {
 	
   echo'<h1>&curren; '.$_language->module['news_languages'].'</h1>';
   
-  echo'<input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=newslanguages&amp;action=add\');return document.MM_returnValue" value="'.$_language->module['new_language'].'" /><br><br>';
+  echo'<input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=newslanguages&amp;action=add\');return document.MM_returnValue" value="'.$_language->module['new_language'].'"><br><br>';
 
 	$ergebnis=safe_query("SELECT * FROM ".PREFIX."news_languages ORDER BY language");
 	
@@ -156,14 +156,14 @@ else {
     if($i%2) { $td='td1'; }
     else { $td='td2'; }
     
-    $getflag='<img src="../images/flags/'.$ds['lang'].'.gif" alt="'.$ds['alt'].'" />';
+    $getflag='<img src="../images/flags/'.$ds['lang'].'.gif" alt="'.$ds['alt'].'">';
       
 		echo'<tr>
       <td class="'.$td.'" align="center">'.$getflag.'</td>
       <td class="'.$td.'">'.getinput($ds['language']).'</td>
       <td class="'.$td.'">'.getinput($ds['alt']).'</td>
-      <td class="'.$td.'" align="center"><input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=newslanguages&amp;action=edit&amp;langID='.$ds['langID'].'\');return document.MM_returnValue" value="'.$_language->module['edit'].'" />
-      <input type="button" onclick="MM_confirm(\''.$_language->module['really_delete'].'\', \'admincenter.php?site=newslanguages&amp;delete=true&amp;langID='.$ds['langID'].'&amp;captcha_hash='.$hash.'\')" value="'.$_language->module['delete'].'" /></td>
+      <td class="'.$td.'" align="center"><input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=newslanguages&amp;action=edit&amp;langID='.$ds['langID'].'\');return document.MM_returnValue" value="'.$_language->module['edit'].'">
+      <input type="button" onclick="MM_confirm(\''.$_language->module['really_delete'].'\', \'admincenter.php?site=newslanguages&amp;delete=true&amp;langID='.$ds['langID'].'&amp;captcha_hash='.$hash.'\')" value="'.$_language->module['delete'].'"></td>
     </tr>';
       
       $i++;

@@ -296,7 +296,7 @@ function print_termine($tag,$month,$year) {
 						if(isclanmember($userID) AND $ds['date']>time()) $announce='&#8226; <a href="index.php?site=calendar&amp;action=announce&amp;upID='.$ds['upID'].'">'.$_language->module['announce_here'].'</a>';
 						else $announce='';
 
-						if(isclanwaradmin($userID)) $adminaction='<div align="right"><input type="button" class="btn btn-danger" onclick="MM_goToURL(\'parent\',\'index.php?site=calendar&amp;action=editdate&amp;upID='.$ds['upID'].'\');return document.MM_returnValue" value="'.$_language->module['edit'].'" /><input type="button" class="btn btn-danger" onclick="MM_confirm(\''.$_language->module['really_delete'].'\', \'calendar.php?action=delete&amp;upID='.$ds['upID'].'\')" value="'.$_language->module['delete'].'" /></div>';
+						if(isclanwaradmin($userID)) $adminaction='<div align="right"><input type="button" class="btn btn-danger" onclick="MM_goToURL(\'parent\',\'index.php?site=calendar&amp;action=editdate&amp;upID='.$ds['upID'].'\');return document.MM_returnValue" value="'.$_language->module['edit'].'"><input type="button" class="btn btn-danger" onclick="MM_confirm(\''.$_language->module['really_delete'].'\', \'calendar.php?action=delete&amp;upID='.$ds['upID'].'\')" value="'.$_language->module['delete'].'"></div>';
 						else $adminaction='';
 					} else {
 						$players = $_language->module['access_member'];

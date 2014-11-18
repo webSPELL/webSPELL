@@ -45,23 +45,23 @@ if($action=="add") {
 		  <table width="100%" border="0" cellspacing="1" cellpadding="3">
 			<tr>
 			  <td width="15%"><b>'.$_language->module['icon_upload'].'</b></td>
-			  <td width="85%"><input name="icon" type="file" size="40" /> <small>'.$_language->module['max_18x12'].'</small></td>
+			  <td width="85%"><input name="icon" type="file" size="40"> <small>'.$_language->module['max_18x12'].'</small></td>
 			</tr>
 			<tr>
 			  <td><b>'.$_language->module['country'].'</b></td>
-			  <td><input type="text" name="country" size="60" maxlength="255" /></td>
+			  <td><input type="text" name="country" size="60" maxlength="255"></td>
 			</tr>
 			<tr>
 			  <td><b>'.$_language->module['shorthandle'].'</b></td>
-			  <td><input type="text" name="shorthandle" size="5" maxlength="3" /></td>
+			  <td><input type="text" name="shorthandle" size="5" maxlength="3"></td>
 			</tr>
 			<tr>
 			  <td><b>'.$_language->module['favorite'].'</b></td>
-			  <td><input type="checkbox" name="fav" value="1" /></td>
+			  <td><input type="checkbox" name="fav" value="1"></td>
 			</tr>
 			<tr>
-			  <td><input type="hidden" name="captcha_hash" value="'.$hash.'" /></td>
-			  <td><input type="submit" name="save" value="'.$_language->module['add_country'].'" /></td>
+			  <td><input type="hidden" name="captcha_hash" value="'.$hash.'"></td>
+			  <td><input type="submit" name="save" value="'.$_language->module['add_country'].'"></td>
 			</tr>
 		  </table>
 		  </form>';
@@ -69,9 +69,9 @@ if($action=="add") {
 
 elseif($action=="edit") {
 	$ds=mysqli_fetch_array(safe_query("SELECT * FROM ".PREFIX."countries WHERE countryID='".$_GET["countryID"]."'"));
-	$pic='<img src="../images/flags/'.$ds['short'].'.gif" alt="'.$ds['country'].'" />';
-	if($ds['fav']=='1') $fav='<input type="checkbox" name="fav" value="1" checked="checked" />';
-  	else $fav='<input type="checkbox" name="fav" value="1" />';
+	$pic='<img src="../images/flags/'.$ds['short'].'.gif" alt="'.$ds['country'].'">';
+	if($ds['fav']=='1') $fav='<input type="checkbox" name="fav" value="1" checked="checked">';
+  	else $fav='<input type="checkbox" name="fav" value="1">';
   
   	$CAPCLASS = new Captcha;
 	$CAPCLASS->create_transaction();
@@ -80,7 +80,7 @@ elseif($action=="edit") {
   	echo '<h1>&curren; <a href="admincenter.php?site=icons" class="white">'.$_language->module['icons'].'</a> &raquo; <a href="admincenter.php?site=countries" class="white">'.$_language->module['countries'].'</a> &raquo; '.$_language->module['edit_country'].'</h1>';
 
 	echo '<form method="post" action="admincenter.php?site=countries" enctype="multipart/form-data">
-		  <input type="hidden" name="countryID" value="'.$ds['countryID'].'" />
+		  <input type="hidden" name="countryID" value="'.$ds['countryID'].'">
 		  <table width="100%" border="0" cellspacing="1" cellpadding="3">
 			<tr>
 			  <td width="15%"><b>'.$_language->module['present_icon'].'</b></td>
@@ -88,23 +88,23 @@ elseif($action=="edit") {
 			</tr>
 			<tr>
 			  <td><b>'.$_language->module['icon_upload'].'</b></td>
-			  <td><input name="icon" type="file" size="40" /> <small>'.$_language->module['max_18x12'].'</small></td>
+			  <td><input name="icon" type="file" size="40"> <small>'.$_language->module['max_18x12'].'</small></td>
 			</tr>
 			<tr>
 			  <td><b>'.$_language->module['country'].'</b></td>
-			  <td><input type="text" name="country" size="60" maxlength="255" value="'.getinput($ds['country']).'" /></td>
+			  <td><input type="text" name="country" size="60" maxlength="255" value="'.getinput($ds['country']).'"></td>
 			</tr>
 			<tr>
 			  <td><b>'.$_language->module['shorthandle'].'</b></td>
-			  <td><input type="text" name="shorthandle" size="5" maxlength="3" value="'.getinput($ds['short']).'" /></td>
+			  <td><input type="text" name="shorthandle" size="5" maxlength="3" value="'.getinput($ds['short']).'"></td>
 			</tr>
 			<tr>
 			  <td><b>'.$_language->module['favorite'].'</b></td>
 			  <td>'.$fav.'</td>
 			</tr>
 			<tr>
-			  <td><input type="hidden" name="captcha_hash" value="'.$hash.'" /></td>
-			  <td><input type="submit" name="saveedit" value="'.$_language->module['edit_country'].'" /></td>
+			  <td><input type="hidden" name="captcha_hash" value="'.$hash.'"></td>
+			  <td><input type="submit" name="saveedit" value="'.$_language->module['edit_country'].'"></td>
 			</tr>
 		  </table>
 		  </form>';
@@ -174,7 +174,7 @@ elseif(isset($_GET["delete"])) {
 else {
 	echo '<h1>&curren; <a href="admincenter.php?site=icons" class="white">'.$_language->module['icons'].'</a> &raquo; '.$_language->module['countries'].'</h1>';
   
-  	echo '<input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=countries&amp;action=add\');return document.MM_returnValue" value="'.$_language->module['new_country'].'" /><br><br>';
+  	echo '<input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=countries&amp;action=add\');return document.MM_returnValue" value="'.$_language->module['new_country'].'"><br><br>';
   
 	echo '<form method="post" action="admincenter.php?site=countries">
 		  <table width="100%" border="0" cellspacing="1" cellpadding="3" bgcolor="#DDDDDD">
@@ -196,7 +196,7 @@ else {
 		while($flags = mysqli_fetch_array($ds)) {
       		if($i%2) { $td='td1'; }
 			else { $td='td2'; }
-			$pic='<img src="../images/flags/'.$flags['short'].'.gif" alt="'.$flags['country'].'" />';
+			$pic='<img src="../images/flags/'.$flags['short'].'.gif" alt="'.$flags['country'].'">';
 			if($flags['fav']==1) $fav = ' <small><font color="green"><b>('.$_language->module['favorite'].')</b></font></small>';
 			else $fav = '';
 			
@@ -204,7 +204,7 @@ else {
 					<td class="'.$td.'" align="center">'.$pic.'</td>
 					<td class="'.$td.'">'.getinput($flags['country']).$fav.'</td>
 					<td class="'.$td.'" align="center">'.getinput($flags['short']).'</td>
-					<td class="'.$td.'" align="center"><input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=countries&amp;action=edit&amp;countryID='.$flags['countryID'].'\');return document.MM_returnValue" value="'.$_language->module['edit'].'" /> <input type="button" onclick="MM_confirm(\''.$_language->module['really_delete'].'\', \'admincenter.php?site=countries&amp;delete=true&amp;countryID='.$flags['countryID'].'&amp;captcha_hash='.$hash.'\')" value="'.$_language->module['delete'].'" /></td>
+					<td class="'.$td.'" align="center"><input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=countries&amp;action=edit&amp;countryID='.$flags['countryID'].'\');return document.MM_returnValue" value="'.$_language->module['edit'].'"> <input type="button" onclick="MM_confirm(\''.$_language->module['really_delete'].'\', \'admincenter.php?site=countries&amp;delete=true&amp;countryID='.$flags['countryID'].'&amp;captcha_hash='.$hash.'\')" value="'.$_language->module['delete'].'"></td>
 				  </tr>';
       
       		$i++;

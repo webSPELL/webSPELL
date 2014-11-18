@@ -238,7 +238,7 @@ function boardmain() {
 	
 					$time=getformattime($lp['lastdate']);
 					$poster='<a href="index.php?site=profile&amp;id='.$lp['lastposter'].'">'.getnickname($lp['lastposter']).'</a>';
-					if(isclanmember($lp['lastposter'])) $member=' <img src="images/icons/member.gif" alt="'.$_language->module['clanmember'].'" />';
+					if(isclanmember($lp['lastposter'])) $member=' <img src="images/icons/member.gif" alt="'.$_language->module['clanmember'].'">';
 					else $member='';
 					$topic=$lp['topicID'];
 					$postlink='index.php?site=forum_topic&amp;topic='.$topic.'&amp;type=ASC&amp;page='.ceil(($lp['replys']+1)/$maxposts);
@@ -267,8 +267,8 @@ function boardmain() {
 				}
 			}
 
-			if($found) $icon='<img src="images/icons/boardicons/'.$writer.'on.gif" alt="'.$_language->module['new_posts'].'" />';
-			else $icon='<img src="images/icons/boardicons/'.$writer.'off.gif" alt="'.$_language->module['no_new_posts'].'" />';
+			if($found) $icon='<img src="images/icons/boardicons/'.$writer.'on.gif" alt="'.$_language->module['new_posts'].'">';
+			else $icon='<img src="images/icons/boardicons/'.$writer.'off.gif" alt="'.$_language->module['no_new_posts'].'">';
 
 
 			eval ("\$forum_main_board = \"".gettemplate("forum_main_board")."\";");
@@ -346,7 +346,7 @@ function boardmain() {
 	
 					$time=getformattime($lp['lastdate']);
 					$poster='<a href="index.php?site=profile&amp;id='.$lp['lastposter'].'">'.getnickname($lp['lastposter']).'</a>';
-					if(isclanmember($lp['lastposter'])) $member=' <img src="images/icons/member.gif" alt="'.$_language->module['clanmember'].'" />';
+					if(isclanmember($lp['lastposter'])) $member=' <img src="images/icons/member.gif" alt="'.$_language->module['clanmember'].'">';
 					else $member='';
 					$topic=$lp['topicID'];
 					$postlink='index.php?site=forum_topic&amp;topic='.$topic.'&amp;type=ASC&amp;page='.ceil(($lp['replys']+1)/$maxposts);
@@ -375,8 +375,8 @@ function boardmain() {
 				}
 			}
 
-			if($found) $icon='<img src="images/icons/boardicons/'.$writer.'on.gif" alt="'.$_language->module['new_posts'].'" />';
-			else $icon='<img src="images/icons/boardicons/'.$writer.'off.gif" alt="'.$_language->module['no_new_posts'].'" />';
+			if($found) $icon='<img src="images/icons/boardicons/'.$writer.'on.gif" alt="'.$_language->module['new_posts'].'">';
+			else $icon='<img src="images/icons/boardicons/'.$writer.'off.gif" alt="'.$_language->module['no_new_posts'].'">';
 
 		eval ("\$forum_main_board = \"".gettemplate("forum_main_board")."\";");
 		echo $forum_main_board;
@@ -523,26 +523,26 @@ function showboard($board) {
 			$topicpage_link = '';
 			if($topicpages>1) $topicpage_link = makepagelink("index.php?site=forum_topic&amp;topic=".$dt['topicID'], 1, $topicpages);
 
-			if($dt['icon']) $icon='<img src="images/icons/topicicons/'.$dt['icon'].'" alt="" />';
+			if($dt['icon']) $icon='<img src="images/icons/topicicons/'.$dt['icon'].'" alt="">';
 			else $icon='';
 
 			// viewed topics
 
 			if($dt['sticky']) {
-				$onicon = '<img src="images/icons/foldericons/newsticky.gif" alt="'.$_language->module['sticky'].'" />';
-				$officon = '<img src="images/icons/foldericons/sticky.gif" alt="'.$_language->module['sticky'].'" />';
-				$onhoticon = '<img src="images/icons/foldericons/newsticky.gif" alt="'.$_language->module['sticky'].'" />';
-				$offhoticon = '<img src="images/icons/foldericons/sticky.gif" alt="'.$_language->module['sticky'].'" />';
+				$onicon = '<img src="images/icons/foldericons/newsticky.gif" alt="'.$_language->module['sticky'].'">';
+				$officon = '<img src="images/icons/foldericons/sticky.gif" alt="'.$_language->module['sticky'].'">';
+				$onhoticon = '<img src="images/icons/foldericons/newsticky.gif" alt="'.$_language->module['sticky'].'">';
+				$offhoticon = '<img src="images/icons/foldericons/sticky.gif" alt="'.$_language->module['sticky'].'">';
 			}
 			else {
-				$onicon = '<img src="images/icons/foldericons/newfolder.gif" alt="'.$_language->module['new_posts'].'" />';
-				$officon = '<img src="images/icons/foldericons/folder.gif" alt="no '.$_language->module['new_posts'].'" />';
-				$onhoticon = '<img src="images/icons/foldericons/newhotfolder.gif" alt="'.$_language->module['new_posts'].' ['.$_language->module['popular'].']" />';
-				$offhoticon = '<img src="images/icons/foldericons/hotfolder.gif" alt="no '.$_language->module['new_posts'].' ['.$_language->module['popular'].']" />';
+				$onicon = '<img src="images/icons/foldericons/newfolder.gif" alt="'.$_language->module['new_posts'].'">';
+				$officon = '<img src="images/icons/foldericons/folder.gif" alt="no '.$_language->module['new_posts'].'">';
+				$onhoticon = '<img src="images/icons/foldericons/newhotfolder.gif" alt="'.$_language->module['new_posts'].' ['.$_language->module['popular'].']">';
+				$offhoticon = '<img src="images/icons/foldericons/hotfolder.gif" alt="no '.$_language->module['new_posts'].' ['.$_language->module['popular'].']">';
 			}
 
-			if($dt['closed']) $folder='<img src="images/icons/foldericons/lockfolder.gif" alt="'.$_language->module['closed'].'" />';
-			elseif($dt['moveID']) $folder='<img src="images/icons/topicicons/pfeil.gif" alt="'.$_language->module['moved'].'" />';
+			if($dt['closed']) $folder='<img src="images/icons/foldericons/lockfolder.gif" alt="'.$_language->module['closed'].'">';
+			elseif($dt['moveID']) $folder='<img src="images/icons/topicicons/pfeil.gif" alt="'.$_language->module['moved'].'">';
 			elseif($userID) {
 
 				$is_unread = mysqli_num_rows(safe_query("SELECT userID FROM ".PREFIX."user WHERE topics LIKE '%|".$dt['topicID']."|%' AND userID='".$userID."'"));
@@ -566,7 +566,7 @@ function showboard($board) {
 			$topictitle=str_break($topictitle, 40);
 
 			$poster='<a href="index.php?site=profile&amp;id='.$dt['userID'].'">'.getnickname($dt['userID']).'</a>';
-			if(isset($posterID) and isclanmember($posterID)) $member1=' <img src="images/icons/member.gif" alt="'.$_language->module['clanmember'].'" />';
+			if(isset($posterID) and isclanmember($posterID)) $member1=' <img src="images/icons/member.gif" alt="'.$_language->module['clanmember'].'">';
 			else $member1='';
 
 			$replys='0';
@@ -587,7 +587,7 @@ function showboard($board) {
 				elseif($date==$yesterday && $date<$today) $date=$_language->module['yesterday'].", ".$time;
 				else $date=$date.", ".$time;
 				$lastposter='<a href="index.php?site=profile&amp;id='.$dm['lastposter'].'">'.getnickname($dm['lastposter']).'</a>';
-				if(isclanmember($dm['lastposter'])) $member=' <img src="images/icons/member.gif" alt="'.$_language->module['clanmember'].'" />';
+				if(isclanmember($dm['lastposter'])) $member=' <img src="images/icons/member.gif" alt="'.$_language->module['clanmember'].'">';
 				else $member='';
 				$link='<a href="index.php?site=forum_topic&amp;topic='.$dt['moveID'].'"><b>'.$_language->module['moved'].': '.$topictitle.'</b></a>';
 
@@ -604,7 +604,7 @@ function showboard($board) {
 				elseif($date==$yesterday && $date<$today) $date=$_language->module['yesterday'].", ".$time;
 				else $date=$date.", ".$time;
 				$lastposter='<a href="index.php?site=profile&amp;id='.$dt['lastposter'].'">'.getnickname($dt['lastposter']).'</a>';
-				if(isclanmember($dt['lastposter'])) $member=' <img src="images/icons/member.gif" alt="'.$_language->module['clanmember'].'" />';
+				if(isclanmember($dt['lastposter'])) $member=' <img src="images/icons/member.gif" alt="'.$_language->module['clanmember'].'">';
 				else $member='';
 				$link='<a href="index.php?site=forum_topic&amp;topic='.$dt['topicID'].'"><b>'.$topictitle.'</b></a>';
 			}
@@ -931,35 +931,35 @@ if(isset($_POST['submit']) || isset($_POST['movetopic']) || isset($_GET['addtopi
 				$topicname = stripslashes($_POST['topicname']);
 				if(!isset($postID)) $postID = '';
 
-				if(isclanmember($userID)) $member=' <img src="images/icons/member.gif" alt="'.$_language->module['clanmember'].'" />';
+				if(isclanmember($userID)) $member=' <img src="images/icons/member.gif" alt="'.$_language->module['clanmember'].'">';
 				else $member='';
-				if(getavatar($userID)) $avatar='<img src="images/avatars/'.getavatar($userID).'" alt="" />';
+				if(getavatar($userID)) $avatar='<img src="images/avatars/'.getavatar($userID).'" alt="">';
 				else $avatar='';
 				if(getsignatur($userID)) $signatur=cleartext(getsignatur($userID));
 				else $signatur='';
-				if(getemail($userID) and !getemailhide($userID)) $email = '<a href="mailto:'.mail_protect(getemail($userID)).'"><img src="images/icons/email.gif" alt="email" /></a>';
+				if(getemail($userID) and !getemailhide($userID)) $email = '<a href="mailto:'.mail_protect(getemail($userID)).'"><img src="images/icons/email.gif" alt="email"></a>';
 				else $email='';
 				
 				$pm='';
 				$buddy='';
-				$statuspic='<img src="images/icons/online.gif" width="7" height="7" alt="online" />';
+				$statuspic='<img src="images/icons/online.gif" width="7" height="7" alt="online">';
 				
 				if(!validate_url(gethomepage($userID))) $hp='';
-				else $hp='<a href="'.gethomepage($userID).'" target="_blank"><img src="images/icons/hp.gif" width="14" height="14" alt="'.$_language->module['homepage'].'" /></a>';
+				else $hp='<a href="'.gethomepage($userID).'" target="_blank"><img src="images/icons/hp.gif" width="14" height="14" alt="'.$_language->module['homepage'].'"></a>';
 				
 				$registered = getregistered($userID);
 				$posts = getuserforumposts($userID);
 				if(isforumadmin($userID) || ismoderator($userID, $board)) {
 					if(ismoderator($userID, $board)) {
 						$usertype=$_language->module['moderator'];
-						$rang='<img src="images/icons/ranks/moderator.gif" alt="" />';
+						$rang='<img src="images/icons/ranks/moderator.gif" alt="">';
 						if(isset($_POST['sticky'])){
 							$_sticky = 'checked="checked"';
 						}
 					}
 					if(isforumadmin($userID)) {
 						$usertype="Administrator";
-						$rang='<img src="images/icons/ranks/admin.gif" alt="" />';
+						$rang='<img src="images/icons/ranks/admin.gif" alt="">';
 						if(isset($_POST['sticky'])){
 							$_sticky = 'checked="checked"';
 						}
@@ -969,7 +969,7 @@ if(isset($_POST['submit']) || isset($_POST['movetopic']) || isset($_GET['addtopi
 					$ergebnis=safe_query("SELECT * FROM ".PREFIX."forum_ranks WHERE $posts >= postmin AND $posts <= postmax");
 					$ds=mysqli_fetch_array($ergebnis);
 					$usertype=$ds['rank'];
-					$rang='<img src="images/icons/ranks/'.$ds['pic'].'" alt="" />';
+					$rang='<img src="images/icons/ranks/'.$ds['pic'].'" alt="">';
 				}
 				$actions = '';
 				$quote = '';
@@ -995,10 +995,10 @@ if(isset($_POST['submit']) || isset($_POST['movetopic']) || isset($_GET['addtopi
 
 			if(isforumadmin($userID) || ismoderator($userID, $board)) {
 				if(isset($_sticky)){
-					$chk_sticky = '<br>'."\n".' <input class="input" type="checkbox" name="sticky" value="1" '.$_sticky.' /> '.$_language->module['make_sticky'];
+					$chk_sticky = '<br>'."\n".' <input class="input" type="checkbox" name="sticky" value="1" '.$_sticky.'> '.$_language->module['make_sticky'];
 				}
 				else {
-					$chk_sticky = '<br>'."\n".' <input class="input" type="checkbox" name="sticky" value="1" /> '.$_language->module['make_sticky'];
+					$chk_sticky = '<br>'."\n".' <input class="input" type="checkbox" name="sticky" value="1"> '.$_language->module['make_sticky'];
 				}
 			}
 			else {

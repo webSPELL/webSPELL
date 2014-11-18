@@ -130,20 +130,20 @@ elseif($action == "diashow" OR $action == "window") {
 	echo '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<meta name="description" content="Clanpage using webSPELL 4 CMS" />
-<meta name="author" content="webspell.org" />
-<meta name="keywords" content="webspell, webspell4, clan, cms" />
-<meta name="copyright" content="Copyright &copy; 2005 - 2011 by webspell.org" />
-<meta name="generator" content="webSPELL" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="description" content="Clanpage using webSPELL 4 CMS">
+<meta name="author" content="webspell.org">
+<meta name="keywords" content="webspell, webspell4, clan, cms">
+<meta name="copyright" content="Copyright &copy; 2005 - 2011 by webspell.org">
+<meta name="generator" content="webSPELL">
 <title>'.$_language->module['webs_diashow'].' '.$ds['name'].'</title>
-<link href="_stylesheet.css" rel="stylesheet" type="text/css" />';
+<link href="_stylesheet.css" rel="stylesheet" type="text/css">';
 
 	//get next
 
 	$browse = mysqli_fetch_array(safe_query("SELECT picID FROM ".PREFIX."gallery_pictures WHERE galleryID='".(int)$_GET['galleryID']."' AND picID>".$picID." ORDER BY picID ASC LIMIT 0,1"));
 	
-  if($browse['picID'] and $_GET['action'] == "diashow") echo '<meta http-equiv="refresh" content="2;URL=gallery.php?action=diashow&amp;galleryID='.(int)$_GET['galleryID'].'&amp;picID='.$browse['picID'].'" />';
+  if($browse['picID'] and $_GET['action'] == "diashow") echo '<meta http-equiv="refresh" content="2;URL=gallery.php?action=diashow&amp;galleryID='.(int)$_GET['galleryID'].'&amp;picID='.$browse['picID'].'">';
 
 	echo '</head><body><center>';
 
@@ -157,7 +157,7 @@ elseif($action == "diashow" OR $action == "window") {
 
 	//output image
 
-	echo '<img src="picture.php?id='.$picID.'" alt="" /><br><b>'.cleartext($ds['comment'], false).'</b>';
+	echo '<img src="picture.php?id='.$picID.'" alt=""><br><b>'.cleartext($ds['comment'], false).'</b>';
 
 	if($browse['picID'] or $_GET['action'] == "window") echo '</a>';
 

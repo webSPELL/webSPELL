@@ -225,19 +225,19 @@ function update_count(new_days, new_months)
 </script>
 
 <p><b><?php echo $_language->module['settings']; ?>:</b></p>
-<?php echo $_language->module['last']; ?> <input type="text" id="count_days" value="<?php echo $count_days; ?>" style="width:20px;" /> <?php echo $_language->module['days']; ?><br><br>
-<?php echo $_language->module['last']; ?> <input type="text" id="count_months" value="<?php echo $count_months; ?>" style="width:20px;" /> <?php echo $_language->module['months']; ?> <input type="button" onclick="update_count(document.getElementById('count_days').value, document.getElementById('count_months').value);" value="<?php echo $_language->module['show']; ?>" /><br><br>
+<?php echo $_language->module['last']; ?> <input type="text" id="count_days" value="<?php echo $count_days; ?>" style="width:20px;"> <?php echo $_language->module['days']; ?><br><br>
+<?php echo $_language->module['last']; ?> <input type="text" id="count_months" value="<?php echo $count_months; ?>" style="width:20px;"> <?php echo $_language->module['months']; ?> <input type="button" onclick="update_count(document.getElementById('count_days').value, document.getElementById('count_months').value);" value="<?php echo $_language->module['show']; ?>"><br><br>
 
 <p><b><?php echo $_language->module['change_size']; ?>:</b></p>
-<input type="text" id="new_x" value="<?php echo $size_x; ?>" style="width:40px;" /> x <input type="text" id="new_y" value="<?php echo $size_y; ?>" style="width:40px;" /> <input type="button" onclick="update_size(document.getElementById('new_x').value, document.getElementById('new_y').value);" value="<?php echo $_language->module['show']; ?>" /> <?php echo $_language->module['width_height']; ?><br><br>
+<input type="text" id="new_x" value="<?php echo $size_x; ?>" style="width:40px;"> x <input type="text" id="new_y" value="<?php echo $size_y; ?>" style="width:40px;"> <input type="button" onclick="update_size(document.getElementById('new_x').value, document.getElementById('new_y').value);" value="<?php echo $_language->module['show']; ?>"> <?php echo $_language->module['width_height']; ?><br><br>
 
 <p><b><?php echo $_language->module['show_year_month']; ?>:</b></p>
-<input type="text" id="year" style="width:40px;" /> <input type="button" onclick="display_stat(document.getElementById('year').value, 0);" value="<?php echo $_language->module['show']; ?>" /> <?php echo $_language->module['yyyy']; ?><br><br>
-<input type="text" id="year2" style="width:40px;" />.<input type="text" id="month" style="width:20px;" /> <input type="button" onclick="display_stat(document.getElementById('year2').value, document.getElementById('month').value);" value="<?php echo $_language->module['show']; ?>" /> <?php echo $_language->module['yyyy_mm']; ?><br><br>
+<input type="text" id="year" style="width:40px;"> <input type="button" onclick="display_stat(document.getElementById('year').value, 0);" value="<?php echo $_language->module['show']; ?>"> <?php echo $_language->module['yyyy']; ?><br><br>
+<input type="text" id="year2" style="width:40px;">.<input type="text" id="month" style="width:20px;"> <input type="button" onclick="display_stat(document.getElementById('year2').value, document.getElementById('month').value);" value="<?php echo $_language->module['show']; ?>"> <?php echo $_language->module['yyyy_mm']; ?><br><br>
 <h1 id="h2" style="display:none;"></h1>
-<img id="img" style="display:none;" src="" alt="" />
+<img id="img" style="display:none;" src="" alt="">
 
 <h1 id="last_days_h2">&curren; <?php echo $_language->module['last']; ?> <?php echo $count_days; ?> <?php echo $_language->module['days']; ?></h1>
-<img id="last_days" src="visitor_statistic_image.php?last=days&amp;count=<?php echo $count_days; ?>" alt="" />
+<img id="last_days" src="visitor_statistic_image.php?last=days&amp;count=<?php echo $count_days; ?>" alt="">
 <h1 id="last_months_h2">&curren; <?php echo $_language->module['last']; ?> <?php echo $count_months; ?> <?php echo $_language->module['months']; ?></h1>
-<img id="last_months" src="visitor_statistic_image.php?last=months&amp;count=<?php echo $count_months; ?>" alt="" />
+<img id="last_months" src="visitor_statistic_image.php?last=months&amp;count=<?php echo $count_months; ?>" alt="">

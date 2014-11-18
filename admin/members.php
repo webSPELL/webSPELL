@@ -173,7 +173,7 @@ if(isset($_GET['action']) and $_GET['action'] == "edit") {
       </tr>
       <tr>
         <td><b>'.$_language->module['position'].'</b></td>
-        <td><input type="text" name="position['.$ds['sqmID'].']" value="'.getinput($ds['position']).'" size="60" />'.$activity.'</td>						   
+        <td><input type="text" name="position['.$ds['sqmID'].']" value="'.getinput($ds['position']).'" size="60">'.$activity.'</td>						   
       </tr>
       <tr>
         <td><b>'.$_language->module['access_rights'].'</b></td>
@@ -182,51 +182,51 @@ if(isset($_GET['action']) and $_GET['action'] == "edit") {
 		}
 	}
   
-	if(isnewsadmin($id)) $news='<input type="checkbox" name="newsadmin" value="1" onmouseover="showWMTT(\'id1\')" onmouseout="hideWMTT()" checked="checked" />';
-	else $news='<input type="checkbox" name="newsadmin" value="1" onmouseover="showWMTT(\'id1\')" onmouseout="hideWMTT()" />';
+	if(isnewsadmin($id)) $news='<input type="checkbox" name="newsadmin" value="1" onmouseover="showWMTT(\'id1\')" onmouseout="hideWMTT()" checked="checked">';
+	else $news='<input type="checkbox" name="newsadmin" value="1" onmouseover="showWMTT(\'id1\')" onmouseout="hideWMTT()">';
 	
-	if(isnewswriter($id)) $newswriter='<input type="checkbox" name="newswriter" value="1" onmouseover="showWMTT(\'id2\')" onmouseout="hideWMTT()" checked="checked" />';
-	else $newswriter='<input type="checkbox" name="newswriter" onmouseover="showWMTT(\'id2\')" onmouseout="hideWMTT()" value="1" />';
+	if(isnewswriter($id)) $newswriter='<input type="checkbox" name="newswriter" value="1" onmouseover="showWMTT(\'id2\')" onmouseout="hideWMTT()" checked="checked">';
+	else $newswriter='<input type="checkbox" name="newswriter" onmouseover="showWMTT(\'id2\')" onmouseout="hideWMTT()" value="1">';
 
-	if(ispollsadmin($id)) $polls='<input type="checkbox" name="pollsadmin" value="1" onmouseover="showWMTT(\'id3\')" onmouseout="hideWMTT()" checked="checked" />';
-	else $polls='<input type="checkbox" name="pollsadmin" value="1" onmouseover="showWMTT(\'id3\')" onmouseout="hideWMTT()" />';
+	if(ispollsadmin($id)) $polls='<input type="checkbox" name="pollsadmin" value="1" onmouseover="showWMTT(\'id3\')" onmouseout="hideWMTT()" checked="checked">';
+	else $polls='<input type="checkbox" name="pollsadmin" value="1" onmouseover="showWMTT(\'id3\')" onmouseout="hideWMTT()">';
 
-	if(isfeedbackadmin($id)) $feedback='<input type="checkbox" name="feedbackadmin" value="1" onmouseover="showWMTT(\'id4\')" onmouseout="hideWMTT()" checked="checked" />';
-	else $feedback='<input type="checkbox" name="feedbackadmin" value="1" onmouseover="showWMTT(\'id4\')" onmouseout="hideWMTT()" />';
+	if(isfeedbackadmin($id)) $feedback='<input type="checkbox" name="feedbackadmin" value="1" onmouseover="showWMTT(\'id4\')" onmouseout="hideWMTT()" checked="checked">';
+	else $feedback='<input type="checkbox" name="feedbackadmin" value="1" onmouseover="showWMTT(\'id4\')" onmouseout="hideWMTT()">';
 
-	if(isuseradmin($id)) $useradmin='<input type="checkbox" name="useradmin" value="1" onmouseover="showWMTT(\'id5\')" onmouseout="hideWMTT()" checked="checked" />';
-	else $useradmin='<input type="checkbox" name="useradmin" value="1" onmouseover="showWMTT(\'id5\')" onmouseout="hideWMTT()" />';
+	if(isuseradmin($id)) $useradmin='<input type="checkbox" name="useradmin" value="1" onmouseover="showWMTT(\'id5\')" onmouseout="hideWMTT()" checked="checked">';
+	else $useradmin='<input type="checkbox" name="useradmin" value="1" onmouseover="showWMTT(\'id5\')" onmouseout="hideWMTT()">';
 
-	if(isclanwaradmin($id)) $cwadmin='<input type="checkbox" name="cwadmin" value="1" onmouseover="showWMTT(\'id6\')" onmouseout="hideWMTT()" checked="checked" />';
-	else $cwadmin='<input type="checkbox" name="cwadmin" value="1" onmouseover="showWMTT(\'id6\')" onmouseout="hideWMTT()" />';
+	if(isclanwaradmin($id)) $cwadmin='<input type="checkbox" name="cwadmin" value="1" onmouseover="showWMTT(\'id6\')" onmouseout="hideWMTT()" checked="checked">';
+	else $cwadmin='<input type="checkbox" name="cwadmin" value="1" onmouseover="showWMTT(\'id6\')" onmouseout="hideWMTT()">';
 
-	if(isforumadmin($id)) $board='<input type="checkbox" name="boardadmin" value="1" onmouseover="showWMTT(\'id7\')" onmouseout="hideWMTT()" checked="checked" />';
-	else $board='<input type="checkbox" name="boardadmin" value="1" onmouseover="showWMTT(\'id7\')" onmouseout="hideWMTT()" />';
+	if(isforumadmin($id)) $board='<input type="checkbox" name="boardadmin" value="1" onmouseover="showWMTT(\'id7\')" onmouseout="hideWMTT()" checked="checked">';
+	else $board='<input type="checkbox" name="boardadmin" value="1" onmouseover="showWMTT(\'id7\')" onmouseout="hideWMTT()">';
 
-	if(isanymoderator($id)) $mod='<input type="checkbox" name="moderator" value="1" onmouseover="showWMTT(\'id8\')" onmouseout="hideWMTT()" checked="checked" />';
-	else $mod='<input type="checkbox" name="moderator" value="1" onmouseover="showWMTT(\'id8\')" onmouseout="hideWMTT()" />';
+	if(isanymoderator($id)) $mod='<input type="checkbox" name="moderator" value="1" onmouseover="showWMTT(\'id8\')" onmouseout="hideWMTT()" checked="checked">';
+	else $mod='<input type="checkbox" name="moderator" value="1" onmouseover="showWMTT(\'id8\')" onmouseout="hideWMTT()">';
 
-	if(ispageadmin($id)) $page='<input type="checkbox" name="pageadmin" value="1" onmouseover="showWMTT(\'id9\')" onmouseout="hideWMTT()" checked="checked" />';
-	else $page='<input type="checkbox" name="pageadmin" value="1" onmouseover="showWMTT(\'id9\')" onmouseout="hideWMTT()" />';
+	if(ispageadmin($id)) $page='<input type="checkbox" name="pageadmin" value="1" onmouseover="showWMTT(\'id9\')" onmouseout="hideWMTT()" checked="checked">';
+	else $page='<input type="checkbox" name="pageadmin" value="1" onmouseover="showWMTT(\'id9\')" onmouseout="hideWMTT()">';
 
-	if(isfileadmin($id)) $file='<input type="checkbox" name="fileadmin" value="1" onmouseover="showWMTT(\'id10\')" onmouseout="hideWMTT()" checked="checked" />';
-	else $file='<input type="checkbox" name="fileadmin" value="1" onmouseover="showWMTT(\'id10\')" onmouseout="hideWMTT()" />';
+	if(isfileadmin($id)) $file='<input type="checkbox" name="fileadmin" value="1" onmouseover="showWMTT(\'id10\')" onmouseout="hideWMTT()" checked="checked">';
+	else $file='<input type="checkbox" name="fileadmin" value="1" onmouseover="showWMTT(\'id10\')" onmouseout="hideWMTT()">';
 
-	if(iscashadmin($id)) $cash='<input type="checkbox" name="cashadmin" value="1" onmouseover="showWMTT(\'id11\')" onmouseout="hideWMTT()" checked="checked" />';
-	else $cash='<input type="checkbox" name="cashadmin" value="1" onmouseover="showWMTT(\'id11\')" onmouseout="hideWMTT()" />';
+	if(iscashadmin($id)) $cash='<input type="checkbox" name="cashadmin" value="1" onmouseover="showWMTT(\'id11\')" onmouseout="hideWMTT()" checked="checked">';
+	else $cash='<input type="checkbox" name="cashadmin" value="1" onmouseover="showWMTT(\'id11\')" onmouseout="hideWMTT()">';
 
-	if(isgalleryadmin($id)) $gallery='<input type="checkbox" name="galleryadmin" value="1" onmouseover="showWMTT(\'id12\')" onmouseout="hideWMTT()" checked="checked" />';
-	else $gallery='<input type="checkbox" name="galleryadmin" value="1" onmouseover="showWMTT(\'id12\')" onmouseout="hideWMTT()" />';
+	if(isgalleryadmin($id)) $gallery='<input type="checkbox" name="galleryadmin" value="1" onmouseover="showWMTT(\'id12\')" onmouseout="hideWMTT()" checked="checked">';
+	else $gallery='<input type="checkbox" name="galleryadmin" value="1" onmouseover="showWMTT(\'id12\')" onmouseout="hideWMTT()">';
 
-	if(issuperadmin($id)) $super='<input type="checkbox" name="superadmin" value="1" onmouseover="showWMTT(\'id13\')" onmouseout="hideWMTT()" checked="checked" />';
-	else $super='<input type="checkbox" name="superadmin" value="1" onmouseover="showWMTT(\'id13\')" onmouseout="hideWMTT()" />';
+	if(issuperadmin($id)) $super='<input type="checkbox" name="superadmin" value="1" onmouseover="showWMTT(\'id13\')" onmouseout="hideWMTT()" checked="checked">';
+	else $super='<input type="checkbox" name="superadmin" value="1" onmouseover="showWMTT(\'id13\')" onmouseout="hideWMTT()">';
 
 	$ergebnis=safe_query("SELECT * FROM ".PREFIX."forum_groups");
 	while($ds=mysqli_fetch_array($ergebnis)) {
 		$name=$ds['name'];
 		$fgrID=$ds['fgrID'];
-		if(isinusergrp($fgrID, $id, 0)) $usergrp[$fgrID]='<input type="checkbox" name="'.$fgrID.'" value="1" checked="checked" />';
-		else $usergrp[$fgrID]='<input type="checkbox" name="'.$fgrID.'" value="1" />';
+		if(isinusergrp($fgrID, $id, 0)) $usergrp[$fgrID]='<input type="checkbox" name="'.$fgrID.'" value="1" checked="checked">';
+		else $usergrp[$fgrID]='<input type="checkbox" name="'.$fgrID.'" value="1">';
 	}
 
 	if(isclanmember($id)) $userdes='<tr>
@@ -331,8 +331,8 @@ if(isset($_GET['action']) and $_GET['action'] == "edit") {
 	echo '<td></td></tr>';
   
   echo '<tr>
-      <td><input type="hidden" name="id" value="'.$id.'" /><input type="hidden" name="captcha_hash" value="'.$hash.'" />
-      <input type="submit" name="saveedit" value="'.$_language->module['edit_member'].'" /></td>
+      <td><input type="hidden" name="id" value="'.$id.'"><input type="hidden" name="captcha_hash" value="'.$hash.'">
+      <input type="submit" name="saveedit" value="'.$_language->module['edit_member'].'"></td>
     </tr>
   </table>
   </form>';
@@ -384,8 +384,8 @@ else {
         <td class="'.$td.'">'.$country.' '.$nickname.'</td>
         <td class="'.$td.'">'.$dm['position'].'</td>
         <td class="'.$td.'" align="center">'.$activity.'</td>
-        <td class="'.$td.'" align="center"><input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=members&amp;action=edit&amp;id='.$dm['userID'].'\');return document.MM_returnValue" value="'.$_language->module['edit'].'" />
-        <input type="button" onclick="MM_confirm(\''.$_language->module['really_delete'].'\', \'admincenter.php?site=members&amp;delete=true&amp;id='.$dm['userID'].'&amp;squadID='.$dm['squadID'].'&amp;captcha_hash='.$hash.'\')" value="'.$_language->module['delete'].'" /></td>
+        <td class="'.$td.'" align="center"><input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=members&amp;action=edit&amp;id='.$dm['userID'].'\');return document.MM_returnValue" value="'.$_language->module['edit'].'">
+        <input type="button" onclick="MM_confirm(\''.$_language->module['really_delete'].'\', \'admincenter.php?site=members&amp;delete=true&amp;id='.$dm['userID'].'&amp;squadID='.$dm['squadID'].'&amp;captcha_hash='.$hash.'\')" value="'.$_language->module['delete'].'"></td>
         <td class="'.$td.'" align="center"><select name="sort[]">';
            
 			for($j=1; $j<=$anzmembers; $j++) {
@@ -399,6 +399,6 @@ else {
 		}
 		echo'</table><br>';
 	}
-	echo'<div align="right"><input type="hidden" name="captcha_hash" value="'.$hash.'" /><input type="submit" name="sortieren" value="'.$_language->module['to_sort'].'" /></div></form>';
+	echo'<div align="right"><input type="hidden" name="captcha_hash" value="'.$hash.'"><input type="submit" name="sortieren" value="'.$_language->module['to_sort'].'"></div></form>';
 }
 ?>

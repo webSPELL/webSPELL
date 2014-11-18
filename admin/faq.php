@@ -130,11 +130,11 @@ if(isset($_GET['action'])) {
         <td width="15%"><b>'.$_language->module['category'].'</b></td><td width="85%">'.$faqcats.'</td>
       </tr>
       <tr>
-        <td><b>'.$_language->module['faq'].'</b></td><td><input type="text" name="question" value="'.$question.'" size="97" />
+        <td><b>'.$_language->module['faq'].'</b></td><td><input type="text" name="question" value="'.$question.'" size="97">
         </td>
       </tr>
       <tr>
-        <td><b>'.$_language->module['tags'].'</b></td><td><input type="text" name="tags" value="" size="97" />
+        <td><b>'.$_language->module['tags'].'</b></td><td><input type="text" name="tags" value="" size="97">
         </td>
       </tr>
       <tr>
@@ -149,7 +149,7 @@ if(isset($_GET['action'])) {
         </td>
       </tr>
       <tr>
-        <td colspan="2"><input type="hidden" name="captcha_hash" value="'.$hash.'" /><br><input type="submit" name="save" value="'.$_language->module['add_faq'].'" /></td>
+        <td colspan="2"><input type="hidden" name="captcha_hash" value="'.$hash.'"><br><input type="submit" name="save" value="'.$_language->module['add_faq'].'"></td>
       </tr>
     </table>
     </form>';
@@ -202,11 +202,11 @@ if(isset($_GET['action'])) {
       </tr>
       <tr>
         <td><b>'.$_language->module['faq'].'</b></td>
-        <td><input type="text" name="question" value="'.getinput($ds['question']).'" size="97" /></td>
+        <td><input type="text" name="question" value="'.getinput($ds['question']).'" size="97"></td>
       </tr>
       <tr>
         <td><b>'.$_language->module['tags'].'</b></td>
-        <td><input type="text" name="tags" value="'.$tags.'" size="97" /></td>
+        <td><input type="text" name="tags" value="'.$tags.'" size="97"></td>
       </tr>
       <tr>
         <td colspan="2"><b>'.$_language->module['answer'].'</b>
@@ -220,7 +220,7 @@ if(isset($_GET['action'])) {
         </td>
       </tr>
       <tr>
-        <td colspan="2"><input type="hidden" name="captcha_hash" value="'.$hash.'" /><input type="hidden" name="faqID" value="'.$faqID.'" /><input type="submit" name="saveedit" value="'.$_language->module['edit_faq'].'" /></td>
+        <td colspan="2"><input type="hidden" name="captcha_hash" value="'.$hash.'"><input type="hidden" name="faqID" value="'.$faqID.'"><input type="submit" name="saveedit" value="'.$_language->module['edit_faq'].'"></td>
       </tr>
     </table>
     </form>';
@@ -231,7 +231,7 @@ else {
 	
   echo '<h1>&curren; '.$_language->module['faq'].'</h1>';
   
-  echo'<input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=faq&amp;action=add\');return document.MM_returnValue" value="'.$_language->module['new_faq'].'" /><br><br>';	
+  echo'<input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=faq&amp;action=add\');return document.MM_returnValue" value="'.$_language->module['new_faq'].'"><br><br>';	
 
 	echo'<form method="post" action="admincenter.php?site=faq">
   <table width="100%" border="0" cellspacing="1" cellpadding="3" bgcolor="#DDDDDD">
@@ -267,8 +267,8 @@ else {
       
 			echo'<tr>
         <td class="'.$td.'"><b>- '.getinput($db['question']).'</b></td>
-        <td class="'.$td.'" align="center"><input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=faq&amp;action=edit&amp;faqID='.$db['faqID'].'\');return document.MM_returnValue" value="'.$_language->module['edit'].'" />
-        <input type="button" onclick="MM_confirm(\''.$_language->module['really_delete'].'\', \'admincenter.php?site=faq&amp;delete=true&amp;faqID='.$db['faqID'].'&amp;captcha_hash='.$hash.'\')" value="'.$_language->module['delete'].'" /></td>
+        <td class="'.$td.'" align="center"><input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=faq&amp;action=edit&amp;faqID='.$db['faqID'].'\');return document.MM_returnValue" value="'.$_language->module['edit'].'">
+        <input type="button" onclick="MM_confirm(\''.$_language->module['really_delete'].'\', \'admincenter.php?site=faq&amp;delete=true&amp;faqID='.$db['faqID'].'&amp;captcha_hash='.$hash.'\')" value="'.$_language->module['delete'].'"></td>
         <td class="'.$td.'" align="center"><select name="sortfaq[]">';
         
 			for($j=1; $j<=$anzfaq; $j++) {
@@ -283,7 +283,7 @@ else {
 	}
 
 	echo'<tr>
-      <td class="td_head" colspan="3" align="right"><input type="hidden" name="captcha_hash" value="'.$hash.'" /><input type="submit" name="sortieren" value="'.$_language->module['to_sort'].'" /></td>
+      <td class="td_head" colspan="3" align="right"><input type="hidden" name="captcha_hash" value="'.$hash.'"><input type="submit" name="sortieren" value="'.$_language->module['to_sort'].'"></td>
     </tr>
   </table>
   </form>';

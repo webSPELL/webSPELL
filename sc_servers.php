@@ -31,7 +31,7 @@ while($row=mysqli_fetch_array($result)) {
 	
 	$servername = htmloutput($row['name']);
 	$serverip=$row['ip'];
-	$servergame='<img src="images/games/'.$row['game'].'.gif" alt="" />';
+	$servergame='<img src="images/games/'.$row['game'].'.gif" alt="">';
   
   if($n%2) {
     $bg1=BG_1;

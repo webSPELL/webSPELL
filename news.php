@@ -217,16 +217,16 @@ elseif($action=="preview") {
 	echo '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<meta name="description" content="Clanpage using webSPELL 4 CMS" />
-	<meta name="author" content="webspell.org" />
-	<meta name="keywords" content="webspell, webspell4, clan, cms" />
-	<meta name="copyright" content="Copyright &copy; 2005 - 2011 by webspell.org" />
-	<meta name="generator" content="webSPELL" />
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="description" content="Clanpage using webSPELL 4 CMS">
+	<meta name="author" content="webspell.org">
+	<meta name="keywords" content="webspell, webspell4, clan, cms">
+	<meta name="copyright" content="Copyright &copy; 2005 - 2011 by webspell.org">
+	<meta name="generator" content="webSPELL">
 
 <!-- Head & Title include -->
 	<title>'.PAGETITLE.'; ?></title>
-	<link href="_stylesheet.css" rel="stylesheet" type="text/css" />
+	<link href="_stylesheet.css" rel="stylesheet" type="text/css">
 	<script src="js/bbcode.js" language="jscript" type="text/javascript"></script>
 <!-- end Head & Title include -->
 </head>
@@ -242,7 +242,7 @@ elseif($action=="preview") {
 	$time = getformattime($ds['date']);
 	$rubrikname=getrubricname($ds['rubric']);
 	$rubrikname_link = getinput(getrubricname($ds['rubric']));
-	$rubricpic='<img src="images/news-rubrics/'.getrubricpic($ds['rubric']).'" alt="" />';
+	$rubricpic='<img src="images/news-rubrics/'.getrubricpic($ds['rubric']).'" alt="">';
 	if(!file_exists($rubricpic)) $rubricpic = '';
 
 	$adminaction='';
@@ -291,9 +291,9 @@ elseif($action=="preview") {
 	echo $news;
 
 	echo'<hr>
-  <input type="button" onclick="MM_goToURL(\'parent\',\'news.php?action=edit&amp;newsID='.$newsID.'\');return document.MM_returnValue" value="'.$_language->module['edit'].'" class="btn btn-danger" />
-  <input type="button" onclick="javascript:self.close()" value="'.$_language->module['save_news'].'" class="btn btn-danger" />
-  <input type="button" onclick="MM_confirm(\''.$_language->module['really_delete'].'\', \'news.php?action=delete&amp;id='.$newsID.'&amp;close=true\')" value="'.$_language->module['delete'].'" class="btn btn-danger" /></body></html>';
+  <input type="button" onclick="MM_goToURL(\'parent\',\'news.php?action=edit&amp;newsID='.$newsID.'\');return document.MM_returnValue" value="'.$_language->module['edit'].'" class="btn btn-danger">
+  <input type="button" onclick="javascript:self.close()" value="'.$_language->module['save_news'].'" class="btn btn-danger">
+  <input type="button" onclick="MM_confirm(\''.$_language->module['really_delete'].'\', \'news.php?action=delete&amp;id='.$newsID.'&amp;close=true\')" value="'.$_language->module['delete'].'" class="btn btn-danger"></body></html>';
 }
 elseif($quickactiontype=="publish") {
 	include("_mysql.php");
@@ -534,9 +534,9 @@ elseif($action=="unpublished") {
 	echo $title_news;
 	
 	$post = '';
-	if(isnewsadmin($userID)) $post='<input type="button" onclick="MM_openBrWindow(\'news.php?action=new\',\'News\',\'toolbar=no,status=no,scrollbars=yes,width=800,height=600\');" value="'.$_language->module['post_news'].'" class="btn btn-danger" />';
+	if(isnewsadmin($userID)) $post='<input type="button" onclick="MM_openBrWindow(\'news.php?action=new\',\'News\',\'toolbar=no,status=no,scrollbars=yes,width=800,height=600\');" value="'.$_language->module['post_news'].'" class="btn btn-danger">';
 
-	echo $post.' <input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=news\');return document.MM_returnValue;" value="'.$_language->module['show_news'].'" class="btn btn-danger" /><hr>';
+	echo $post.' <input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=news\');return document.MM_returnValue;" value="'.$_language->module['show_news'].'" class="btn btn-danger"><hr>';
 
 	$page='';
 
@@ -756,14 +756,14 @@ else {
 	$post='';
 	$publish='';
 	if(isnewswriter($userID)) {
-		$post='<input type="button" onclick="MM_openBrWindow(\'news.php?action=new\',\'News\',\'toolbar=no,status=no,scrollbars=yes,width=800,height=600\');" value="'.$_language->module['post_news'].'" class="btn btn-danger" />';
+		$post='<input type="button" onclick="MM_openBrWindow(\'news.php?action=new\',\'News\',\'toolbar=no,status=no,scrollbars=yes,width=800,height=600\');" value="'.$_language->module['post_news'].'" class="btn btn-danger">';
 	}
 	if(isnewsadmin($userID)) {
 		$unpublished=safe_query("SELECT newsID FROM ".PREFIX."news WHERE published='0' AND saved='1'");
 		$unpublished=mysqli_num_rows($unpublished);
-		if($unpublished) $publish='<input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=news&amp;action=unpublished\');return document.MM_returnValue;" value="'.$unpublished.' '.$_language->module['unpublished_news'].'" class="btn btn-danger" /> ';
+		if($unpublished) $publish='<input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=news&amp;action=unpublished\');return document.MM_returnValue;" value="'.$unpublished.' '.$_language->module['unpublished_news'].'" class="btn btn-danger"> ';
 	}
-	echo $post.' '.$publish.'<input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=news&amp;action=archive\');return document.MM_returnValue;" value="'.$_language->module['news_archive'].'" class="btn btn-primary" /><hr>';
+	echo $post.' '.$publish.'<input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=news&amp;action=archive\');return document.MM_returnValue;" value="'.$_language->module['news_archive'].'" class="btn btn-primary"><hr>';
 
 	if(isset($_GET['show'])) {
 		$result=safe_query("SELECT rubricID FROM ".PREFIX."news_rubrics WHERE rubric='".$_GET['show']."' LIMIT 0,1");
@@ -784,7 +784,7 @@ else {
 		$rubrikname = getrubricname($ds['rubric']);
 		$rubrikname_link = getinput($rubrikname);
 		$rubricpic_path = "images/news-rubrics/".getrubricpic($ds['rubric']);
-		$rubricpic='<img src="'.$rubricpic_path.'" alt="" />';
+		$rubricpic='<img src="'.$rubricpic_path.'" alt="">';
 		if(!is_file($rubricpic_path)) $rubricpic='';
 
 		$message_array = array();
@@ -858,11 +858,11 @@ else {
 
 		$adminaction = '';
 		if(isnewsadmin($userID)) {
-			$adminaction .= '<input type="button" onclick="MM_goToURL(\'parent\',\'news.php?quickactiontype=unpublish&amp;newsID='.$ds['newsID'].'\');return document.MM_returnValue;" value="'.$_language->module['unpublish'].'" class="btn btn-danger" /> ';
+			$adminaction .= '<input type="button" onclick="MM_goToURL(\'parent\',\'news.php?quickactiontype=unpublish&amp;newsID='.$ds['newsID'].'\');return document.MM_returnValue;" value="'.$_language->module['unpublish'].'" class="btn btn-danger"> ';
 		}
 		if((isnewswriter($userID) and $ds['poster'] == $userID) or isnewsadmin($userID)) {
-			$adminaction .= '<input type="button" onclick="MM_openBrWindow(\'news.php?action=edit&amp;newsID='.$ds['newsID'].'\',\'News\',\'toolbar=no,status=no,scrollbars=yes,width=800,height=600\');" value="'.$_language->module['edit'].'" class="btn btn-danger" />
-		  <input type="button" onclick="MM_confirm(\''.$_language->module['really_delete'].'\', \'news.php?action=delete&amp;id='.$ds['newsID'].'\')" value="'.$_language->module['delete'].'" class="btn btn-danger" />';
+			$adminaction .= '<input type="button" onclick="MM_openBrWindow(\'news.php?action=edit&amp;newsID='.$ds['newsID'].'\',\'News\',\'toolbar=no,status=no,scrollbars=yes,width=800,height=600\');" value="'.$_language->module['edit'].'" class="btn btn-danger">
+		  <input type="button" onclick="MM_confirm(\''.$_language->module['really_delete'].'\', \'news.php?action=delete&amp;id='.$ds['newsID'].'\')" value="'.$_language->module['delete'].'" class="btn btn-danger">';
 		}
 
 		eval ("\$news = \"".gettemplate("news")."\";");

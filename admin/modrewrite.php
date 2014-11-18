@@ -62,7 +62,7 @@ if($action=="add") {
     <td class="title">'.$_language->module['type'].':</td>
     </tr>
     <tr>
-    <td><input type="text" name="keys[]" /></td>
+    <td><input type="text" name="keys[]"></td>
     <td><select name="values[]">'.$types.'</select></td>
     </tr>
     <tr>
@@ -73,15 +73,15 @@ if($action=="add") {
     </tr>
     <tr>
     <td><b>'.$_language->module['url'].':</b></td>
-    <td><input type="text" name="url" style="width:100%;" /></td>
+    <td><input type="text" name="url" style="width:100%;"></td>
     </tr>
     <tr>
     <td><b>'.$_language->module['replace'].':</b></td>
-    <td><input type="text" name="regex" style="width:100%;" /></td>
+    <td><input type="text" name="regex" style="width:100%;"></td>
     </tr>
     <tr>
-    <td><input type="hidden" name="captcha_hash" value="'.$hash.'" /></td>
-    <td><input type="submit" name="save" value="'.$_language->module['save_rule'].'" /></td>
+    <td><input type="hidden" name="captcha_hash" value="'.$hash.'"></td>
+    <td><input type="submit" name="save" value="'.$_language->module['save_rule'].'"></td>
     </tr>
     </table>
     </form>';
@@ -100,14 +100,14 @@ elseif($action=="edit") {
     if(count($data)){
         foreach($data as $key => $field){
             $rules .= '<tr>
-            <td><input type="text" value="'.$key.'" name="keys[]" /></td>
+            <td><input type="text" value="'.$key.'" name="keys[]"></td>
             <td><select name="values[]">'.str_replace('value="'.$field.'"','value="'.$field.'" selected="selected"',$types).'</select></td>
             </tr>';
         }
     }
     else{
         $rules .= '<tr>
-        <td><input type="text" value="" name="keys[]" /></td>
+        <td><input type="text" value="" name="keys[]"></td>
         <td><select name="values[]">'.$types.'</select></td>
         </tr>';
     }
@@ -138,15 +138,15 @@ elseif($action=="edit") {
     </tr>
     <tr>
     <td><b>'.$_language->module['url'].':</b></td>
-    <td><input type="text" name="url" value="'.$ds['link'].'" style="width:100%;" /></td>
+    <td><input type="text" name="url" value="'.$ds['link'].'" style="width:100%;"></td>
     </tr>
     <tr>
     <td><b>'.$_language->module['replace'].':</b></td>
-    <td><input type="text" name="regex" value="'.$ds['regex'].'" style="width:100%;" /></td>
+    <td><input type="text" name="regex" value="'.$ds['regex'].'" style="width:100%;"></td>
     </tr>
     <tr>
-    <td><input type="hidden" name="ruleID" value="'.$ds['ruleID'].'" /><input type="hidden" name="captcha_hash" value="'.$hash.'" /></td>
-    <td><input type="submit" name="saveedit" value="'.$_language->module['save_rule'].'" /></td>
+    <td><input type="hidden" name="ruleID" value="'.$ds['ruleID'].'"><input type="hidden" name="captcha_hash" value="'.$hash.'"></td>
+    <td><input type="submit" name="saveedit" value="'.$_language->module['save_rule'].'"></td>
     </tr>
     </table>
     </form>';
@@ -301,7 +301,7 @@ elseif(isset($_POST['test'])){
             }
             elseif(stristr($headers[0],'200')){
                 $status = $_language->module['test_successful'];
-                $enable = '<input type="submit" name="enable" value="'.$_language->module['enable'].'" />';
+                $enable = '<input type="submit" name="enable" value="'.$_language->module['enable'].'">';
             }
             else{
                 $status = $_language->module['unexpected_result'];
@@ -330,7 +330,7 @@ elseif(isset($_POST['test'])){
     <td>'.$info.'</td>
     </tr>
     <tr>
-    <td><input type="hidden" name="captcha_hash" value="'.$hash.'" /></td>
+    <td><input type="hidden" name="captcha_hash" value="'.$hash.'"></td>
     <td>'.$enable.'</td>
     </tr>
     </table>
@@ -386,11 +386,11 @@ else {
         <table width="100%" border="0" cellspacing="1" cellpadding="3">
         <tr>
         <td width="15%"><b>RewriteBase:</b></td>
-        <td><input type="text" name="base" value="'.$GLOBALS['_modRewrite']->getRewriteBase().'" style="width:70%;" /></td>
+        <td><input type="text" name="base" value="'.$GLOBALS['_modRewrite']->getRewriteBase().'" style="width:70%;"></td>
         </tr>
         <tr>
-        <td><input type="hidden" name="captcha_hash" value="'.$hash.'" /></td>
-        <td><input type="submit" name="test" value="'.$_language->module['test_support'].'" /></td>
+        <td><input type="hidden" name="captcha_hash" value="'.$hash.'"></td>
+        <td><input type="submit" name="test" value="'.$_language->module['test_support'].'"></td>
         </tr>
         </table>
         </form>';
@@ -403,8 +403,8 @@ else {
         <td>'.$_language->module['enabled'].'</td>
         </tr>
         <tr>
-        <td><input type="hidden" name="captcha_hash" value="'.$hash.'" /></td>
-        <td><input type="submit" name="disable" value="'.$_language->module['disable'].'" /></td>
+        <td><input type="hidden" name="captcha_hash" value="'.$hash.'"></td>
+        <td><input type="submit" name="disable" value="'.$_language->module['disable'].'"></td>
         </tr>
         </table>
         </form>';
@@ -412,8 +412,8 @@ else {
 
     echo'<h1>&curren; '.$_language->module['modrewrite_rules'].'</h1>';
 
-    echo'<input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=modrewrite&amp;action=add\');return document.MM_returnValue" value="'.$_language->module['new_rule'].'" /> ';
-    echo'<input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=modrewrite&amp;action=rebuild\');return document.MM_returnValue" value="'.$_language->module['rebuild'].'" /><br><br>';
+    echo'<input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=modrewrite&amp;action=add\');return document.MM_returnValue" value="'.$_language->module['new_rule'].'"> ';
+    echo'<input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=modrewrite&amp;action=rebuild\');return document.MM_returnValue" value="'.$_language->module['rebuild'].'"><br><br>';
 
     echo'
     <table width="100%" border="0" cellspacing="1" cellpadding="3" bgcolor="#DDDDDD">
@@ -438,8 +438,8 @@ else {
             echo'<tr>
             <td class="'.$td.'" align="left">'.$flags['regex'].'<br>'.$flags['link'].'</td>
             <td class="'.$td.'">'.count(unserialize($flags['fields'])).'</td>
-            <td class="'.$td.'" align="center"><input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=modrewrite&amp;action=edit&amp;ruleID='.$flags['ruleID'].'\');return document.MM_returnValue" value="'.$_language->module['edit'].'" />
-            <input type="button" onclick="MM_confirm(\''.$_language->module['really_delete'].'\', \'admincenter.php?site=modrewrite&amp;delete=true&amp;ruleID='.$flags['ruleID'].'&amp;captcha_hash='.$hash.'\')" value="'.$_language->module['delete'].'" /></td>
+            <td class="'.$td.'" align="center"><input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=modrewrite&amp;action=edit&amp;ruleID='.$flags['ruleID'].'\');return document.MM_returnValue" value="'.$_language->module['edit'].'">
+            <input type="button" onclick="MM_confirm(\''.$_language->module['really_delete'].'\', \'admincenter.php?site=modrewrite&amp;delete=true&amp;ruleID='.$flags['ruleID'].'&amp;captcha_hash='.$hash.'\')" value="'.$_language->module['delete'].'"></td>
             </tr>';
 
             $i++;

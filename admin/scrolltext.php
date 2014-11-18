@@ -73,7 +73,7 @@ else {
   <table width="100%" border="0" cellspacing="1" cellpadding="3">
     <tr>
       <td colspan="2"><b>'.$_language->module['scrolltext'].'</b><br><small>'.$_language->module['you_can_use_html'].'</small><br><br>
-      <input type="text" size="110" name="text" value="'.getinput($ds['text']).'" /></td>
+      <input type="text" size="110" name="text" value="'.getinput($ds['text']).'"></td>
     </tr>
     <tr>
       <td width="15%"><b>'.$_language->module['direction'].'</b></td>
@@ -85,11 +85,11 @@ else {
     </tr>
     <tr>
       <td><b>'.$_language->module['color'].'</b></td>
-      <td><input type="text" name="color" value="'.$ds['color'].'" maxlength="7" /> '.$_language->module['example'].'</td>
+      <td><input type="text" name="color" value="'.$ds['color'].'" maxlength="7"> '.$_language->module['example'].'</td>
     </tr>
     <tr>
-      <td colspan="2"><br><input type="hidden" name="captcha_hash" value="'.$hash.'" /><input type="submit" name="submit" value="'.$_language->module['update'].'" />
-      <input type="submit" name="delete" value="'.$_language->module['delete'].'" /></td>
+      <td colspan="2"><br><input type="hidden" name="captcha_hash" value="'.$hash.'"><input type="submit" name="submit" value="'.$_language->module['update'].'">
+      <input type="submit" name="delete" value="'.$_language->module['delete'].'"></td>
     </tr>
   </table>
   </form>';

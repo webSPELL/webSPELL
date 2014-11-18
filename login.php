@@ -38,7 +38,7 @@ if($loggedin) {
 		$newmessages=$anz;
 	}
 	else $newmessages='';
-	if($getavatar = getavatar($userID)) $l_avatar='<img src="images/avatars/'.$getavatar.'" alt="Avatar" />';
+	if($getavatar = getavatar($userID)) $l_avatar='<img src="images/avatars/'.$getavatar.'" alt="Avatar">';
 	else $l_avatar=$_language->module['n_a'];
 
 

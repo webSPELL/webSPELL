@@ -106,22 +106,22 @@ else {
 	$styles=safe_query("SELECT * FROM ".PREFIX."styles");
 	$dt=mysqli_fetch_array($styles);
 
-	if($ds['gb_info']) $gb_info='<input type="checkbox" name="gb_info" value="1" checked="checked" onmouseover="showWMTT(\'id36\')" onmouseout="hideWMTT()" />';
-	else $gb_info='<input type="checkbox" name="gb_info" value="1" onmouseover="showWMTT(\'id36\')" onmouseout="hideWMTT()" />';
+	if($ds['gb_info']) $gb_info='<input type="checkbox" name="gb_info" value="1" checked="checked" onmouseover="showWMTT(\'id36\')" onmouseout="hideWMTT()">';
+	else $gb_info='<input type="checkbox" name="gb_info" value="1" onmouseover="showWMTT(\'id36\')" onmouseout="hideWMTT()">';
 
-	if($ds['spam_check']) $spam_check='<input type="checkbox" name="spam_check" value="1" checked="checked" onmouseover="showWMTT(\'id53\')" onmouseout="hideWMTT()" />';
-	else $spam_check='<input type="checkbox" name="spam_check" value="1" onmouseover="showWMTT(\'id53\')" onmouseout="hideWMTT()" />';
+	if($ds['spam_check']) $spam_check='<input type="checkbox" name="spam_check" value="1" checked="checked" onmouseover="showWMTT(\'id53\')" onmouseout="hideWMTT()">';
+	else $spam_check='<input type="checkbox" name="spam_check" value="1" onmouseover="showWMTT(\'id53\')" onmouseout="hideWMTT()">';
 
-	if($ds['detect_language']) $visitor_language='<input type="checkbox" name="detectLanguage" value="1" checked="checked" onmouseover="showWMTT(\'id52\')" onmouseout="hideWMTT()" />';
-	else $visitor_language='<input type="checkbox" name="detectLanguage" value="1" onmouseover="showWMTT(\'id52\')" onmouseout="hideWMTT()" />';
+	if($ds['detect_language']) $visitor_language='<input type="checkbox" name="detectLanguage" value="1" checked="checked" onmouseover="showWMTT(\'id52\')" onmouseout="hideWMTT()">';
+	else $visitor_language='<input type="checkbox" name="detectLanguage" value="1" onmouseover="showWMTT(\'id52\')" onmouseout="hideWMTT()">';
 
 	if($ds['publicadmin']) $publicadmin = " checked=\"checked\"";
 	else $publicadmin = "";
 	if($ds['usergalleries']) $usergalleries = " checked=\"checked\"";
 	else $usergalleries = "";
 	
-	if($ds['spamapiblockerror']) $spamapiblockerror='<input type="checkbox" name="spamapiblockerror" value="1" checked="checked" onmouseover="showWMTT(\'id57\')" onmouseout="hideWMTT()" />';
-	else $spamapiblockerror='<input type="checkbox" name="spamapiblockerror" value="1" onmouseover="showWMTT(\'id57\')" onmouseout="hideWMTT()" />';
+	if($ds['spamapiblockerror']) $spamapiblockerror='<input type="checkbox" name="spamapiblockerror" value="1" checked="checked" onmouseover="showWMTT(\'id57\')" onmouseout="hideWMTT()">';
+	else $spamapiblockerror='<input type="checkbox" name="spamapiblockerror" value="1" onmouseover="showWMTT(\'id57\')" onmouseout="hideWMTT()">';
 
 	$langdirs = '';
 	$filepath = "../languages/";
@@ -154,8 +154,8 @@ else {
 	$lang = $default_language;
 	$langdirs = str_replace('value="'.$lang.'"', 'value="'.$lang.'" selected="selected"', $langdirs);
   
-  	if($ds['insertlinks']) $insertlinks='<input type="checkbox" name="insertlinks" value="1" checked="checked" onmouseover="showWMTT(\'id41\')" onmouseout="hideWMTT()" />';
-	else $insertlinks='<input type="checkbox" name="insertlinks" value="1" onmouseover="showWMTT(\'id41\')" onmouseout="hideWMTT()" />';
+  	if($ds['insertlinks']) $insertlinks='<input type="checkbox" name="insertlinks" value="1" checked="checked" onmouseover="showWMTT(\'id41\')" onmouseout="hideWMTT()">';
+	else $insertlinks='<input type="checkbox" name="insertlinks" value="1" onmouseover="showWMTT(\'id41\')" onmouseout="hideWMTT()">';
   	
 	$captcha_style = "<option value='0'>".$_language->module['captcha_only_text']."</option><option value='2'>".$_language->module['captcha_both']."</option><option value='1'>".$_language->module['captcha_only_math']."</option>";
 	$captcha_style = str_replace("value='".$ds['captcha_math']."'","value='".$ds['captcha_math']."' selected='selected'",$captcha_style);
@@ -262,21 +262,21 @@ else {
 <table width="100%" border="0" cellspacing="1" cellpadding="3">
   <tr>
     <td width="15%"><b><?php echo $_language->module['page_title']; ?></b></td>
-    <td width="35%"><input name="title" type="text" value="<?php echo getinput($dt['title']); ?>" size="35" onmouseover="showWMTT('id2')" onmouseout="hideWMTT()" /></td>
+    <td width="35%"><input name="title" type="text" value="<?php echo getinput($dt['title']); ?>" size="35" onmouseover="showWMTT('id2')" onmouseout="hideWMTT()"></td>
     <td width="15%"><b><?php echo $_language->module['page_url']; ?></b></td>
-    <td width="35%"><input type="text" name="url" value="<?php echo getinput($ds['hpurl']); ?>" size="35" onmouseover="showWMTT('id1')" onmouseout="hideWMTT()" /></td>
+    <td width="35%"><input type="text" name="url" value="<?php echo getinput($ds['hpurl']); ?>" size="35" onmouseover="showWMTT('id1')" onmouseout="hideWMTT()"></td>
   </tr>
   <tr>
     <td><b><?php echo $_language->module['clan_name']; ?></b></td>
-    <td><input type="text" name="clanname" value="<?php echo getinput($ds['clanname']); ?>" size="35" onmouseover="showWMTT('id3')" onmouseout="hideWMTT()" /></td>
+    <td><input type="text" name="clanname" value="<?php echo getinput($ds['clanname']); ?>" size="35" onmouseover="showWMTT('id3')" onmouseout="hideWMTT()"></td>
     <td><b><?php echo $_language->module['clan_tag']; ?></b></td>
-    <td><input type="text" name="clantag" value="<?php echo getinput($ds['clantag']); ?>" size="35" onmouseover="showWMTT('id4')" onmouseout="hideWMTT()" /></td>
+    <td><input type="text" name="clantag" value="<?php echo getinput($ds['clantag']); ?>" size="35" onmouseover="showWMTT('id4')" onmouseout="hideWMTT()"></td>
   </tr>
   <tr>
     <td><b><?php echo $_language->module['admin_name']; ?></b></td>
-    <td><input type="text" name="admname" value="<?php echo getinput($ds['adminname']); ?>" size="35" onmouseover="showWMTT('id5')" onmouseout="hideWMTT()" /></td>
+    <td><input type="text" name="admname" value="<?php echo getinput($ds['adminname']); ?>" size="35" onmouseover="showWMTT('id5')" onmouseout="hideWMTT()"></td>
     <td><b><?php echo $_language->module['admin_email']; ?></b></td>
-    <td><input type="text" name="admmail" value="<?php echo getinput($ds['adminemail']); ?>" size="35" onmouseover="showWMTT('id6')" onmouseout="hideWMTT()" /></td>
+    <td><input type="text" name="admmail" value="<?php echo getinput($ds['adminemail']); ?>" size="35" onmouseover="showWMTT('id6')" onmouseout="hideWMTT()"></td>
   </tr>
 </table>
 <br><br>
@@ -297,23 +297,23 @@ else {
 	    <td>&nbsp;</td>
 	  </tr>
     <tr>
-	    <td align="right"><input name="news" type="text" value="<?php echo $ds['news']; ?>" size="3" onmouseover="showWMTT('id7')" onmouseout="hideWMTT()" /></td>
+	    <td align="right"><input name="news" type="text" value="<?php echo $ds['news']; ?>" size="3" onmouseover="showWMTT('id7')" onmouseout="hideWMTT()"></td>
 	    <td><?php echo $_language->module['news']; ?></td>
 	  </tr>
 	  <tr>
-	    <td align="right"><input name="newsarchiv" type="text" value="<?php echo $ds['newsarchiv']; ?>" size="3" onmouseover="showWMTT('id10')" onmouseout="hideWMTT()" /></td>
+	    <td align="right"><input name="newsarchiv" type="text" value="<?php echo $ds['newsarchiv']; ?>" size="3" onmouseover="showWMTT('id10')" onmouseout="hideWMTT()"></td>
 	    <td><?php echo $_language->module['archive']; ?></td>
 	  </tr>
     <tr>
-    	<td align="right"><input type="text" name="headlines" value="<?php echo $ds['headlines']; ?>" size="3" onmouseover="showWMTT('id13')" onmouseout="hideWMTT()" /></td>
+    	<td align="right"><input type="text" name="headlines" value="<?php echo $ds['headlines']; ?>" size="3" onmouseover="showWMTT('id13')" onmouseout="hideWMTT()"></td>
 	    <td><?php echo $_language->module['headlines']; ?></td>
 	  </tr>
     <tr>
-	    <td align="right"><input type="text" name="headlineschars" value="<?php echo $ds['headlineschars']; ?>" size="3" onmouseover="showWMTT('id16')" onmouseout="hideWMTT()" /></td>
+	    <td align="right"><input type="text" name="headlineschars" value="<?php echo $ds['headlineschars']; ?>" size="3" onmouseover="showWMTT('id16')" onmouseout="hideWMTT()"></td>
 	    <td><?php echo $_language->module['max_length_headlines']; ?></td>
 	  </tr>
   	  <tr>
-	    <td align="right"><input type="text" name="topnewschars" value="<?php echo $ds['topnewschars']; ?>" size="3" onmouseover="showWMTT('id51')" onmouseout="hideWMTT()" /></td>
+	    <td align="right"><input type="text" name="topnewschars" value="<?php echo $ds['topnewschars']; ?>" size="3" onmouseover="showWMTT('id51')" onmouseout="hideWMTT()"></td>
 	    <td><?php echo $_language->module['max_length_topnews']; ?></td>
 	  </tr>
 	</table>
@@ -330,11 +330,11 @@ else {
 	    <td><?php echo $_language->module['captcha_type']; ?></td>
 	  </tr>
 	  <tr>
-	    <td align="right"><input type="text" name="captcha_bgcol" size="7" value="<?php echo $ds['captcha_bgcol']; ?>" onmouseover="showWMTT('id45')" onmouseout="hideWMTT()" /></td>
+	    <td align="right"><input type="text" name="captcha_bgcol" size="7" value="<?php echo $ds['captcha_bgcol']; ?>" onmouseover="showWMTT('id45')" onmouseout="hideWMTT()"></td>
 	  	<td><?php echo $_language->module['captcha_bgcol']; ?></td>
 	  </tr>
     <tr>
-	    <td align="right"><input type="text" name="captcha_fontcol" size="7" value="<?php echo $ds['captcha_fontcol']; ?>" onmouseover="showWMTT('id46')" onmouseout="hideWMTT()" /></td>
+	    <td align="right"><input type="text" name="captcha_fontcol" size="7" value="<?php echo $ds['captcha_fontcol']; ?>" onmouseover="showWMTT('id46')" onmouseout="hideWMTT()"></td>
 	  	<td><?php echo $_language->module['captcha_fontcol']; ?></td>
 	  </tr>
     <tr>
@@ -342,11 +342,11 @@ else {
 	    <td><?php echo $_language->module['captcha_style']; ?></td>
 	  </tr>
     <tr>
-	    <td align="right"><input type="text" name="captcha_noise" size="3" value="<?php echo $ds['captcha_noise']; ?>" onmouseover="showWMTT('id48')" onmouseout="hideWMTT()" /></td>
+	    <td align="right"><input type="text" name="captcha_noise" size="3" value="<?php echo $ds['captcha_noise']; ?>" onmouseover="showWMTT('id48')" onmouseout="hideWMTT()"></td>
 	    <td><?php echo $_language->module['captcha_noise']; ?></td>
 	  </tr>
     <tr>
-	    <td align="right"><input type="text" name="captcha_linenoise" size="3" value="<?php echo $ds['captcha_linenoise']; ?>" onmouseover="showWMTT('id49')" onmouseout="hideWMTT()" /></td>
+	    <td align="right"><input type="text" name="captcha_linenoise" size="3" value="<?php echo $ds['captcha_linenoise']; ?>" onmouseover="showWMTT('id49')" onmouseout="hideWMTT()"></td>
 	    <td><?php echo $_language->module['captcha_linenoise']; ?></td>
 	  </tr>
 	</table>
@@ -359,19 +359,19 @@ else {
 	    <td>&nbsp;</td>
 	  </tr>
     <tr>
-	    <td align="right"><input type="text" name="topics" value="<?php echo $ds['topics']; ?>" size="3" onmouseover="showWMTT('id8')" onmouseout="hideWMTT()" /></td>
+	    <td align="right"><input type="text" name="topics" value="<?php echo $ds['topics']; ?>" size="3" onmouseover="showWMTT('id8')" onmouseout="hideWMTT()"></td>
 	    <td><?php echo $_language->module['forum_topics']; ?></td>
 	  </tr>
 	  <tr>
-	    <td align="right"><input type="text" name="posts" value="<?php echo $ds['posts']; ?>" size="3" onmouseover="showWMTT('id11')" onmouseout="hideWMTT()" /></td>
+	    <td align="right"><input type="text" name="posts" value="<?php echo $ds['posts']; ?>" size="3" onmouseover="showWMTT('id11')" onmouseout="hideWMTT()"></td>
 	    <td><?php echo $_language->module['forum_posts']; ?></td>
 	  </tr>
     <tr>
-	    <td align="right"><input type="text" name="latesttopics" value="<?php echo $ds['latesttopics']; ?>" size="3" onmouseover="showWMTT('id14')" onmouseout="hideWMTT()" /></td>
+	    <td align="right"><input type="text" name="latesttopics" value="<?php echo $ds['latesttopics']; ?>" size="3" onmouseover="showWMTT('id14')" onmouseout="hideWMTT()"></td>
 	    <td><?php echo $_language->module['latest_topics']; ?></td>
 	  </tr>
   	  <tr>
-	    <td align="right"><input type="text" name="latesttopicchars" value="<?php echo $ds['latesttopicchars']; ?>" size="3" onmouseover="showWMTT('id42')" onmouseout="hideWMTT()" /></td>
+	    <td align="right"><input type="text" name="latesttopicchars" value="<?php echo $ds['latesttopicchars']; ?>" size="3" onmouseover="showWMTT('id42')" onmouseout="hideWMTT()"></td>
 	    <td><?php echo $_language->module['max_length_latest_topics']; ?></td>
 	  </tr>
 	</table>
@@ -384,23 +384,23 @@ else {
 	    <td>&nbsp;</td>
 	  </tr>
 	  <tr>
-	    <td align="right"><input type="text" name="pictures" value="<?php echo $ds['pictures']; ?>" size="3" onmouseover="showWMTT('id9')" onmouseout="hideWMTT()" /></td>
+	    <td align="right"><input type="text" name="pictures" value="<?php echo $ds['pictures']; ?>" size="3" onmouseover="showWMTT('id9')" onmouseout="hideWMTT()"></td>
 	    <td><?php echo $_language->module['pictures']; ?></td>
 	  </tr>
 	  <tr>
-	    <td align="right"><input type="text" name="thumbwidth" value="<?php echo $ds['thumbwidth']; ?>" size="3" onmouseover="showWMTT('id12')" onmouseout="hideWMTT()" /></td>
+	    <td align="right"><input type="text" name="thumbwidth" value="<?php echo $ds['thumbwidth']; ?>" size="3" onmouseover="showWMTT('id12')" onmouseout="hideWMTT()"></td>
 	    <td><?php echo $_language->module['thumb_width']; ?></td>
 	  </tr>
     <tr>
-	    <td align="right"><input type="text" name="maxusergalleries" value="<?php echo ($ds['maxusergalleries']/(1024*1024)); ?>" size="3" onmouseover="showWMTT('id15')" onmouseout="hideWMTT()" /></td>
+	    <td align="right"><input type="text" name="maxusergalleries" value="<?php echo ($ds['maxusergalleries']/(1024*1024)); ?>" size="3" onmouseover="showWMTT('id15')" onmouseout="hideWMTT()"></td>
 	    <td><?php echo $_language->module['space_user']; ?></td>
 	  </tr>
     <tr>
-	    <td align="right"><input type="checkbox" name="usergalleries" value="1" <?php echo $usergalleries; ?> onmouseover="showWMTT('id18')" onmouseout="hideWMTT()" /></td>
+	    <td align="right"><input type="checkbox" name="usergalleries" value="1" <?php echo $usergalleries; ?> onmouseover="showWMTT('id18')" onmouseout="hideWMTT()"></td>
 	    <td><?php echo $_language->module['allow_usergalleries']; ?></td>
 	  </tr>
     <tr>
-	    <td align="right"><input type="checkbox" name="publicadmin" value="1" <?php echo $publicadmin; ?> onmouseover="showWMTT('id19')" onmouseout="hideWMTT()" /></td>
+	    <td align="right"><input type="checkbox" name="publicadmin" value="1" <?php echo $publicadmin; ?> onmouseover="showWMTT('id19')" onmouseout="hideWMTT()"></td>
 	    <td><?php echo $_language->module['public_admin']; ?></td>
 	  </tr>
 	</table>
@@ -413,15 +413,15 @@ else {
 	    <td>&nbsp;</td>
 	  </tr>
     <tr>
-	    <td align="right"><input name="articles" type="text" value="<?php echo $ds['articles']; ?>" size="3" onmouseover="showWMTT('id20')" onmouseout="hideWMTT()" /></td>
+	    <td align="right"><input name="articles" type="text" value="<?php echo $ds['articles']; ?>" size="3" onmouseover="showWMTT('id20')" onmouseout="hideWMTT()"></td>
 	    <td><?php echo $_language->module['articles']; ?></td>
 	  </tr>
 	  <tr>
-	    <td align="right"><input name="latestart" type="text" id="latestart" value="<?php echo $ds['latestarticles']; ?>" size="3" onmouseover="showWMTT('id22')" onmouseout="hideWMTT()" /></td>
+	    <td align="right"><input name="latestart" type="text" id="latestart" value="<?php echo $ds['latestarticles']; ?>" size="3" onmouseover="showWMTT('id22')" onmouseout="hideWMTT()"></td>
 	    <td><?php echo $_language->module['latest_articles']; ?></td>
 	  </tr>
     <tr>
-	    <td align="right"><input name="articlesch" type="text" id="articlesch" value="<?php echo $ds['articleschars']; ?>" size="3" onmouseover="showWMTT('id24')" onmouseout="hideWMTT()" /></td>
+	    <td align="right"><input name="articlesch" type="text" id="articlesch" value="<?php echo $ds['articleschars']; ?>" size="3" onmouseover="showWMTT('id24')" onmouseout="hideWMTT()"></td>
 	    <td><?php echo $_language->module['max_length_latest_articles']; ?></td>
 	  </tr>
 	</table>
@@ -434,15 +434,15 @@ else {
 	    <td>&nbsp;</td>
 	  </tr>
 	  <tr>
-	    <td align="right"><input type="text" name="clanwars" value="<?php echo $ds['clanwars']; ?>" size="3" onmouseover="showWMTT('id28')" onmouseout="hideWMTT()" /></td>
+	    <td align="right"><input type="text" name="clanwars" value="<?php echo $ds['clanwars']; ?>" size="3" onmouseover="showWMTT('id28')" onmouseout="hideWMTT()"></td>
 	    <td><?php echo $_language->module['clanwars']; ?></td>
 	  </tr>
     <tr>
-	    <td align="right"><input name="results" type="text" value="<?php echo $ds['results']; ?>" size="3" onmouseover="showWMTT('id30')" onmouseout="hideWMTT()" /></td>
+	    <td align="right"><input name="results" type="text" value="<?php echo $ds['results']; ?>" size="3" onmouseover="showWMTT('id30')" onmouseout="hideWMTT()"></td>
 	    <td><?php echo $_language->module['latest_results']; ?></td>
 	  </tr>
     <tr>
-	    <td align="right"><input type="text" name="upcoming" value="<?php echo $ds['upcoming']; ?>" size="3" onmouseover="showWMTT('id32')" onmouseout="hideWMTT()" /></td>
+	    <td align="right"><input type="text" name="upcoming" value="<?php echo $ds['upcoming']; ?>" size="3" onmouseover="showWMTT('id32')" onmouseout="hideWMTT()"></td>
 	    <td><?php echo $_language->module['upcoming_actions']; ?></td>
 	  </tr>
 	</table>
@@ -455,15 +455,15 @@ else {
 	    <td>&nbsp;</td>
 	  </tr>
     <tr>
-	    <td align="right"><input name="awards" type="text" value="<?php echo $ds['awards']; ?>" size="3" onmouseover="showWMTT('id21')" onmouseout="hideWMTT()" /></td>
+	    <td align="right"><input name="awards" type="text" value="<?php echo $ds['awards']; ?>" size="3" onmouseover="showWMTT('id21')" onmouseout="hideWMTT()"></td>
 	    <td><?php echo $_language->module['awards']; ?></td>
 	  </tr>
     <tr>
-	    <td align="right"><input name="demos" type="text" value="<?php echo $ds['demos']; ?>" size="3" onmouseover="showWMTT('id23')" onmouseout="hideWMTT()" /></td>
+	    <td align="right"><input name="demos" type="text" value="<?php echo $ds['demos']; ?>" size="3" onmouseover="showWMTT('id23')" onmouseout="hideWMTT()"></td>
 	    <td><?php echo $_language->module['demos']; ?></td>
 	  </tr>
     <tr>
-	    <td align="right"><input type="text" name="guestbook" value="<?php echo $ds['guestbook']; ?>" size="3" onmouseover="showWMTT('id25')" onmouseout="hideWMTT()" /></td>
+	    <td align="right"><input type="text" name="guestbook" value="<?php echo $ds['guestbook']; ?>" size="3" onmouseover="showWMTT('id25')" onmouseout="hideWMTT()"></td>
 	    <td><?php echo $_language->module['guestbook']; ?></td>
 	  </tr>
     <tr>
@@ -471,23 +471,23 @@ else {
 	    <td><?php echo $_language->module['user_guestbook']; ?></td>
 	  </tr>
     <tr>
-	    <td align="right"><input type="text" name="feedback" value="<?php echo $ds['feedback']; ?>" size="3" onmouseover="showWMTT('id26')" onmouseout="hideWMTT()" /></td>
+	    <td align="right"><input type="text" name="feedback" value="<?php echo $ds['feedback']; ?>" size="3" onmouseover="showWMTT('id26')" onmouseout="hideWMTT()"></td>
 	    <td><?php echo $_language->module['comments']; ?></td>
 	  </tr>
     <tr>
-	    <td align="right"><input type="text" name="messages" value="<?php echo $ds['messages']; ?>" size="3" onmouseover="showWMTT('id27')" onmouseout="hideWMTT()" /></td>
+	    <td align="right"><input type="text" name="messages" value="<?php echo $ds['messages']; ?>" size="3" onmouseover="showWMTT('id27')" onmouseout="hideWMTT()"></td>
 	    <td><?php echo $_language->module['messenger']; ?></td>
 	  </tr>
     <tr>
-	    <td align="right"><input type="text" name="users" value="<?php echo $ds['users']; ?>" size="3" onmouseover="showWMTT('id29')" onmouseout="hideWMTT()" /></td>
+	    <td align="right"><input type="text" name="users" value="<?php echo $ds['users']; ?>" size="3" onmouseover="showWMTT('id29')" onmouseout="hideWMTT()"></td>
 	    <td><?php echo $_language->module['registered_users']; ?></td>
 	  </tr>
     <tr>
-	    <td align="right"><input name="lastposts" type="text" id="lastposts" value="<?php echo $ds['profilelast']; ?>" size="3" onmouseover="showWMTT('id31')" onmouseout="hideWMTT()" /></td>
+	    <td align="right"><input name="lastposts" type="text" id="lastposts" value="<?php echo $ds['profilelast']; ?>" size="3" onmouseover="showWMTT('id31')" onmouseout="hideWMTT()"></td>
 	    <td><?php echo $_language->module['profile_last_posts']; ?></td>
 	  </tr>
     <tr>
-	    <td align="right"><input type="text" name="sessionduration" value="<?php echo $ds['sessionduration']; ?>" size="3" onmouseover="showWMTT('id33')" onmouseout="hideWMTT()" /></td>
+	    <td align="right"><input type="text" name="sessionduration" value="<?php echo $ds['sessionduration']; ?>" size="3" onmouseover="showWMTT('id33')" onmouseout="hideWMTT()"></td>
 	    <td><?php echo $_language->module['login_duration']; ?></td>
 	  </tr>
     <tr>
@@ -503,15 +503,15 @@ else {
 	    <td><?php echo $_language->module['insert_links']; ?></td>
 	  </tr>
     <tr>
-	    <td align="right"><input type="text" name="searchminlen" value="<?php echo $ds['search_min_len']; ?>" size="3" onmouseover="showWMTT('id17')" onmouseout="hideWMTT()" /></td>
+	    <td align="right"><input type="text" name="searchminlen" value="<?php echo $ds['search_min_len']; ?>" size="3" onmouseover="showWMTT('id17')" onmouseout="hideWMTT()"></td>
 	    <td><?php echo $_language->module['search_min_length']; ?></td>
 	  </tr>
     <tr>
-	    <td align="right"><input type="text" name="max_wrong_pw" value="<?php echo $ds['max_wrong_pw']; ?>" size="3" onmouseover="showWMTT('id43')" onmouseout="hideWMTT()" /></td>
+	    <td align="right"><input type="text" name="max_wrong_pw" value="<?php echo $ds['max_wrong_pw']; ?>" size="3" onmouseover="showWMTT('id43')" onmouseout="hideWMTT()"></td>
 	    <td><?php echo $_language->module['max_wrong_pw']; ?></td>
 	  </tr>
 	  <tr>
-	    <td align="right"><input type="text" name="picsize_l" value="<?php echo $ds['picsize_l']; ?>" size="3" onmouseover="showWMTT('id34')" onmouseout="hideWMTT()" /> x <input type="text" name="picsize_h" value="<?php echo $ds['picsize_h']; ?>" size="3" onmouseover="showWMTT('id35')" onmouseout="hideWMTT()" /></td>
+	    <td align="right"><input type="text" name="picsize_l" value="<?php echo $ds['picsize_l']; ?>" size="3" onmouseover="showWMTT('id34')" onmouseout="hideWMTT()"> x <input type="text" name="picsize_h" value="<?php echo $ds['picsize_h']; ?>" size="3" onmouseover="showWMTT('id35')" onmouseout="hideWMTT()"></td>
 	    <td><?php echo $_language->module['content_size']; ?></td>
 	  </tr>
       <tr>
@@ -540,15 +540,15 @@ else {
 	    <td>&nbsp;</td>
 	  </tr>
     <tr>
-	    <td align="right"><input type="text" name="shoutbox" value="<?php echo $ds['shoutbox']; ?>" size="3" onmouseover="showWMTT('id37')" onmouseout="hideWMTT()" /></td>
+	    <td align="right"><input type="text" name="shoutbox" value="<?php echo $ds['shoutbox']; ?>" size="3" onmouseover="showWMTT('id37')" onmouseout="hideWMTT()"></td>
 	    <td><?php echo $_language->module['shoutbox']; ?></td>
 	  </tr>
 	  <tr>
-	    <td align="right"><input type="text" name="sball" value="<?php echo $ds['sball']; ?>" size="3" onmouseover="showWMTT('id38')" onmouseout="hideWMTT()" /></td>
+	    <td align="right"><input type="text" name="sball" value="<?php echo $ds['sball']; ?>" size="3" onmouseover="showWMTT('id38')" onmouseout="hideWMTT()"></td>
 	    <td><?php echo $_language->module['shoutbox_all_messages']; ?></td>
 	  </tr>
     <tr>
-	    <td align="right"><input type="text" name="refresh" value="<?php echo $ds['sbrefresh']; ?>" size="3" onmouseover="showWMTT('id39')" onmouseout="hideWMTT()" /></td>
+	    <td align="right"><input type="text" name="refresh" value="<?php echo $ds['sbrefresh']; ?>" size="3" onmouseover="showWMTT('id39')" onmouseout="hideWMTT()"></td>
 	    <td><?php echo $_language->module['shoutbox_refresh']; ?></td>
 	  </tr>
 	   <tr>
@@ -560,15 +560,15 @@ else {
 	    <td><?php echo $_language->module['spam_check']; ?></td>
 	  </tr>
 	  <tr>
-	    <td align="right"><input type="text" name="spamapikey" value="<?php echo $ds['spamapikey']; ?>" size="32" onmouseover="showWMTT('id54')" onmouseout="hideWMTT()" /></td>
+	    <td align="right"><input type="text" name="spamapikey" value="<?php echo $ds['spamapikey']; ?>" size="32" onmouseover="showWMTT('id54')" onmouseout="hideWMTT()"></td>
 	    <td><?php echo $_language->module['spamapikey']; ?></td>
 	  </tr>
 	  <tr>
-	    <td align="right"><input type="text" name="spamapihost" value="<?php echo $ds['spamapihost']; ?>" size="32" onmouseover="showWMTT('id55')" onmouseout="hideWMTT()" /></td>
+	    <td align="right"><input type="text" name="spamapihost" value="<?php echo $ds['spamapihost']; ?>" size="32" onmouseover="showWMTT('id55')" onmouseout="hideWMTT()"></td>
 	    <td><?php echo $_language->module['spamapihost']; ?></td>
 	  </tr>
 	  <tr>
-	    <td align="right"><input type="text" name="spammaxposts" value="<?php echo $ds['spammaxposts']; ?>" size="3" onmouseover="showWMTT('id56')" onmouseout="hideWMTT()" /></td>
+	    <td align="right"><input type="text" name="spammaxposts" value="<?php echo $ds['spammaxposts']; ?>" size="3" onmouseover="showWMTT('id56')" onmouseout="hideWMTT()"></td>
 	    <td><?php echo $_language->module['spammaxposts']; ?></td>
 	  </tr>
 	  <tr>
@@ -579,8 +579,8 @@ else {
 </div>
 
 <div style="clear: both; text-align: right; padding-top: 20px;">
-  <input type="hidden" name="captcha_hash" value="<?php echo $hash; ?>" />
-  <input type="submit" name="submit" value="<?php echo $_language->module['update']; ?>" />
+  <input type="hidden" name="captcha_hash" value="<?php echo $hash; ?>">
+  <input type="submit" name="submit" value="<?php echo $_language->module['update']; ?>">
 </div>
 </form>
 <?php

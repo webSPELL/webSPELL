@@ -45,19 +45,19 @@ if($action=="add") {
   <table width="100%" border="0" cellspacing="1" cellpadding="3">
     <tr>
       <td width="15%"><b>'.$_language->module['game_icon'].'</b></td>
-      <td width="85%"><input name="icon" type="file" size="40" /></td>
+      <td width="85%"><input name="icon" type="file" size="40"></td>
     </tr>
     <tr>
       <td><b>'.$_language->module['game_name'].'</b></td>
-      <td><input type="text" name="name" size="60" maxlength="255" /></td>
+      <td><input type="text" name="name" size="60" maxlength="255"></td>
     </tr>
     <tr>
       <td><b>'.$_language->module['game_tag'].'</b></td>
-      <td><input type="text" name="tag" size="5" maxlength="3" /></td>
+      <td><input type="text" name="tag" size="5" maxlength="3"></td>
     </tr>
     <tr>
-      <td><input type="hidden" name="captcha_hash" value="'.$hash.'" /></td>
-      <td><input type="submit" name="save" value="'.$_language->module['add_game'].'" /></td>
+      <td><input type="hidden" name="captcha_hash" value="'.$hash.'"></td>
+      <td><input type="submit" name="save" value="'.$_language->module['add_game'].'"></td>
     </tr>
   </table>
   </form>';
@@ -65,7 +65,7 @@ if($action=="add") {
 
 elseif($action=="edit") {
 	$ds=mysqli_fetch_array(safe_query("SELECT * FROM ".PREFIX."games WHERE gameID='".$_GET["gameID"]."'"));
-	$pic='<img src="../images/games/'.$ds['tag'].'.gif" alt="'.$ds['name'].'" />';
+	$pic='<img src="../images/games/'.$ds['tag'].'.gif" alt="'.$ds['name'].'">';
   
   $CAPCLASS = new Captcha;
 	$CAPCLASS->create_transaction();
@@ -74,7 +74,7 @@ elseif($action=="edit") {
   echo'<h1>&curren; <a href="admincenter.php?site=icons" class="white">'.$_language->module['icons'].'</a> &raquo; <a href="admincenter.php?site=games" class="white">'.$_language->module['games'].'</a> &raquo; '.$_language->module['edit_game'].'</h1>';
 
 	echo'<form method="post" action="admincenter.php?site=games" enctype="multipart/form-data">
-  <input type="hidden" name="gameID" value="'.$ds['gameID'].'" />
+  <input type="hidden" name="gameID" value="'.$ds['gameID'].'">
   <table width="100%" border="0" cellspacing="1" cellpadding="3">
     <tr>
       <td width="15%"><b>'.$_language->module['present_icon'].'</b></td>
@@ -82,19 +82,19 @@ elseif($action=="edit") {
     </tr>
     <tr>
       <td><b>'.$_language->module['game_icon'].'</b></td>
-      <td><input name="icon" type="file" size="40" /></td>
+      <td><input name="icon" type="file" size="40"></td>
     </tr>
     <tr>
       <td><b>'.$_language->module['game_name'].'</b></td>
-      <td><input type="text" name="name" size="60" maxlength="255" value="'.getinput($ds['name']).'" /></td>
+      <td><input type="text" name="name" size="60" maxlength="255" value="'.getinput($ds['name']).'"></td>
     </tr>
     <tr>
       <td><b>'.$_language->module['game_tag'].'</b></td>
-      <td><input type="text" name="tag" size="5" maxlength="3" value="'.getinput($ds['tag']).'" /></td>
+      <td><input type="text" name="tag" size="5" maxlength="3" value="'.getinput($ds['tag']).'"></td>
     </tr>
     <tr>
-      <td><input type="hidden" name="captcha_hash" value="'.$hash.'" /></td>
-      <td><input type="submit" name="saveedit" value="'.$_language->module['edit_game'].'" /></td>
+      <td><input type="hidden" name="captcha_hash" value="'.$hash.'"></td>
+      <td><input type="submit" name="saveedit" value="'.$_language->module['edit_game'].'"></td>
     </tr>
   </table>
   </form>';
@@ -162,7 +162,7 @@ else {
 	
   echo'<h1>&curren; <a href="admincenter.php?site=icons" class="white">'.$_language->module['icons'].'</a> &raquo; '.$_language->module['games'].'</h1>';
   
-  echo'<input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=games&amp;action=add\');return document.MM_returnValue" value="'.$_language->module['new_game'].'" /><br><br>';
+  echo'<input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=games&amp;action=add\');return document.MM_returnValue" value="'.$_language->module['new_game'].'"><br><br>';
   
   echo'<form method="post" action="admincenter.php?site=games">
   <table width="100%" border="0" cellspacing="1" cellpadding="3" bgcolor="#DDDDDD">
@@ -185,14 +185,14 @@ else {
     while($ds = mysqli_fetch_array($ergebnis)) {
       if($i%2) { $td='td1'; }
       else { $td='td2'; }
-      $pic='<img src="../images/games/'.$ds['tag'].'.gif" alt="" />';
+      $pic='<img src="../images/games/'.$ds['tag'].'.gif" alt="">';
       			
       echo'<tr>
         <td class="'.$td.'" align="center">'.$pic.'</td>
         <td class="'.$td.'">'.getinput($ds['name']).'</td>
         <td class="'.$td.'" align="center">'.getinput($ds['tag']).'</td>
-        <td class="'.$td.'" align="center"><input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=games&amp;action=edit&amp;gameID='.$ds['gameID'].'\');return document.MM_returnValue" value="'.$_language->module['edit'].'" />
-        <input type="button" onclick="MM_confirm(\''.$_language->module['really_delete'].'\', \'admincenter.php?site=games&amp;delete=true&amp;gameID='.$ds['gameID'].'&amp;captcha_hash='.$hash.'\')" value="'.$_language->module['delete'].'" /></td>
+        <td class="'.$td.'" align="center"><input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=games&amp;action=edit&amp;gameID='.$ds['gameID'].'\');return document.MM_returnValue" value="'.$_language->module['edit'].'">
+        <input type="button" onclick="MM_confirm(\''.$_language->module['really_delete'].'\', \'admincenter.php?site=games&amp;delete=true&amp;gameID='.$ds['gameID'].'&amp;captcha_hash='.$hash.'\')" value="'.$_language->module['delete'].'"></td>
       </tr>';
       
       $i++;

@@ -153,9 +153,9 @@ else{
 </tr>
 </table>
 
-<input type="hidden" name="hp_url" value="<?php echo str_replace('http://','',$_POST['hp_url']); ?>" />
+<input type="hidden" name="hp_url" value="<?php echo str_replace('http://','',$_POST['hp_url']); ?>">
 <?php if(!$fatal_error){?>
-<div align="right"><br><a href="javascript:document.ws_install.submit()"><img src="images/next.jpg" alt="" /></a></div>
+<div align="right"><br><a href="javascript:document.ws_install.submit()"><img src="images/next.jpg" alt=""></a></div>
 <?php }?>
 </td>
 </tr>

@@ -74,7 +74,7 @@ else {
 		    </table>';
   
   echo '<br><textarea id="message" name="message" rows="30" cols="" style="width: 100%;">'.getinput($ds['about']).'</textarea>
-  <br><br><input type="hidden" name="captcha_hash" value="'.$hash.'" /><input type="submit" name="submit" value="'.$_language->module['update'].'" />
+  <br><br><input type="hidden" name="captcha_hash" value="'.$hash.'"><input type="submit" name="submit" value="'.$_language->module['update'].'">
   </form>';
 }
 ?>

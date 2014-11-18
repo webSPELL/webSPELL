@@ -45,8 +45,8 @@ function generate_overview($filecats = '', $offset = '', $subcatID = 0) {
 				
 		$filecats .= '<tr>
         <td class="'.$td.'">'.$offset.getinput($ds['name']).'</td>
-        <td class="'.$td.'" align="center"><input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=filecategorys&amp;action=edit&amp;filecatID='.$ds['filecatID'].'\');return document.MM_returnValue" value="'.$_language->module['edit'].'" />
-        <input type="button" onclick="MM_confirm(\''.$_language->module['really_delete'].'\', \'admincenter.php?site=filecategorys&amp;delete=true&amp;filecatID='.$ds['filecatID'].'&amp;captcha_hash='.$hash.'\')" value="'.$_language->module['delete'].'" /></td>
+        <td class="'.$td.'" align="center"><input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=filecategorys&amp;action=edit&amp;filecatID='.$ds['filecatID'].'\');return document.MM_returnValue" value="'.$_language->module['edit'].'">
+        <input type="button" onclick="MM_confirm(\''.$_language->module['really_delete'].'\', \'admincenter.php?site=filecategorys&amp;delete=true&amp;filecatID='.$ds['filecatID'].'&amp;captcha_hash='.$hash.'\')" value="'.$_language->module['delete'].'"></td>
     	</tr>';
 	      
       	$i++;
@@ -135,15 +135,15 @@ if($_GET['action']=="add") {
   <table width="100%" border="0" cellspacing="1" cellpadding="3">
     <tr>
       <td width="15%"><b>'.$_language->module['category_name'].'</b></td>
-      <td width="85%"><input type="text" name="name" size="60" /></td>
+      <td width="85%"><input type="text" name="name" size="60"></td>
     </tr>
     <tr>
       <td><b>'.$_language->module['sub_category'].'</b></td>
       <td><select name="subcat">'.$filecats.'</select></td>
     </tr>
     <tr>
-      <td><input type="hidden" name="captcha_hash" value="'.$hash.'" /></td>
-      <td><input type="submit" name="save" value="'.$_language->module['add_category'].'" /></td>
+      <td><input type="hidden" name="captcha_hash" value="'.$hash.'"></td>
+      <td><input type="submit" name="save" value="'.$_language->module['add_category'].'"></td>
     </tr>
   </table>
   </form>';
@@ -181,15 +181,15 @@ elseif($_GET['action']=="edit") {
   <table width="100%" border="0" cellspacing="1" cellpadding="3">
     <tr>
       <td width="15%"><b>'.$_language->module['category_name'].'</b></td>
-      <td width="85%"><input type="text" name="name" size="60" value="'.getinput($ds['name']).'" /></td>
+      <td width="85%"><input type="text" name="name" size="60" value="'.getinput($ds['name']).'"></td>
     </tr>
     <tr>
       <td><b>'.$_language->module['sub_category'].'</b></td>
       <td><select name="subcat">'.$filecats.'</select></td>
     </tr>
     <tr>
-      <td><input type="hidden" name="captcha_hash" value="'.$hash.'" /><input type="hidden" name="filecatID" value="'.$ds['filecatID'].'" /></td>
-      <td><input type="submit" name="saveedit" value="'.$_language->module['edit_category'].'" /></td>
+      <td><input type="hidden" name="captcha_hash" value="'.$hash.'"><input type="hidden" name="filecatID" value="'.$ds['filecatID'].'"></td>
+      <td><input type="submit" name="saveedit" value="'.$_language->module['edit_category'].'"></td>
     </tr>
   </table>
   </form>';
@@ -199,7 +199,7 @@ else {
 	
   echo'<h1>&curren; '.$_language->module['file_categories'].'</h1>';
   
-  echo'<input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=filecategorys&amp;action=add\');return document.MM_returnValue" value="'.$_language->module['new_category'].'" /><br><br>';
+  echo'<input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=filecategorys&amp;action=add\');return document.MM_returnValue" value="'.$_language->module['new_category'].'"><br><br>';
 
 	echo'<table width="100%" border="0" cellspacing="1" cellpadding="3" bgcolor="#DDDDDD">
     <tr>

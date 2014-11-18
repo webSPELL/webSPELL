@@ -11,7 +11,7 @@
 
     <!-- Head & Title include -->
 	<title>%new_post%</title>
-	<base href="$rewriteBase" />
+	<base href="$rewriteBase">
 	<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
 	<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
     
@@ -100,14 +100,14 @@ function update_textarea(value) {
 	for(var i = 0; i < value; i++) {
 		if(message[i] || headline[i] || langs[i] && langs[i] != default_language)
 		{
-			document.getElementById('news_textarea').innerHTML+='<select name="lang[]" id="lang_' + i + '" onchange="langs['+i+']=this.value; update_language();"></select> %headline% <input name="headline[]" type="text" value="'+headline[i]+'" size="80" onchange="headline['+i+']=this.value;" /><textarea name="message[' + i + ']" rows="20" cols="130" style="width: 750px;" onfocus="which=this;textarea = \'message[' + i + ']\';" onblur="message['+i+']=this.value;" onchange="message['+i+']=this.value;">'+message[i]+'</textarea><br><br>';
+			document.getElementById('news_textarea').innerHTML+='<select name="lang[]" id="lang_' + i + '" onchange="langs['+i+']=this.value; update_language();"></select> %headline% <input name="headline[]" type="text" value="'+headline[i]+'" size="80" onchange="headline['+i+']=this.value;"><textarea name="message[' + i + ']" rows="20" cols="130" style="width: 750px;" onfocus="which=this;textarea = \'message[' + i + ']\';" onblur="message['+i+']=this.value;" onchange="message['+i+']=this.value;">'+message[i]+'</textarea><br><br>';
 		}
 		else
 		{
 			message[i] = '';
 			headline[i] = '';
 			langs[i] = '';
-			document.getElementById('news_textarea').innerHTML+='<select name="lang[]" id="lang_' + i + '" onchange="langs['+i+']=this.value; update_language();"></select> %headline% <input name="headline[]" type="text" value="" size="80" onchange="headline['+i+']=this.value;" /><textarea name="message[' + i + ']" rows="20" cols="130" style="width: 750px;" onfocus="which=this;textarea = \'message[' + i + ']\';" onblur="message['+i+']=this.value;" onchange="message['+i+']=this.value;"></textarea><br><br>';
+			document.getElementById('news_textarea').innerHTML+='<select name="lang[]" id="lang_' + i + '" onchange="langs['+i+']=this.value; update_language();"></select> %headline% <input name="headline[]" type="text" value="" size="80" onchange="headline['+i+']=this.value;"><textarea name="message[' + i + ']" rows="20" cols="130" style="width: 750px;" onfocus="which=this;textarea = \'message[' + i + ']\';" onblur="message['+i+']=this.value;" onchange="message['+i+']=this.value;"></textarea><br><br>';
 		}
 	}
 	if(message.length > value) {
@@ -184,7 +184,7 @@ $langs_vars
     <table width="100%" border="0" cellspacing="0" cellpadding="2">
       <tr>
         <td><b>%rubric%:</b> <select name="rubric">$rubrics</select>
-        <input name="button" type="button" onclick="MM_openBrWindow('upload.php?newsID=$newsID','Upload','scrollbars=yes,width=800,height=600')" value="%upload_images%" />
+        <input name="button" type="button" onclick="MM_openBrWindow('upload.php?newsID=$newsID','Upload','scrollbars=yes,width=800,height=600')" value="%upload_images%">
         &nbsp;&nbsp;&nbsp; <small><b>%options%:</b> &#8226; %html% &#8226; <a href="javascript:MM_openBrWindow('code.php','BBCode','scrollbars=yes,width=600,height=500')">%bbcode%</a> &#8226; <a href="javascript:MM_openBrWindow('smileys.php','Smileys','scrollbars=yes,width=340,height=500')">%smilies%</a></small></td>
       </tr>
       <tr>
@@ -203,7 +203,7 @@ $langs_vars
             <td>%post_languages%</td>
           </tr>
           <tr>
-          	<td colspan="2"><b>Tags:</b> <input type="text" name="tags" value="$tags" /></td>
+          	<td colspan="2"><b>Tags:</b> <input type="text" name="tags" value="$tags"></td>
           </tr>
         </table>
         </td>
@@ -222,35 +222,35 @@ $langs_vars
     <table width="100%" border="0" cellpadding="0" cellspacing="2">
       <tr>
         <td valign="top">%link% 1:
-        <input name="link1" type="text" value="$link1" />
-        <input name="url1" type="text" value="$url1" />
-        <input class="input" name="window1" type="radio" value="1" $window1_new />
+        <input name="link1" type="text" value="$link1">
+        <input name="url1" type="text" value="$url1">
+        <input class="input" name="window1" type="radio" value="1" $window1_new>
         %new_window%
-        <input class="input" type="radio" name="window1" value="0" $window1_self/>
+        <input class="input" type="radio" name="window1" value="0" $window1_self>
         %self%
         <br>
         %link% 2:
-        <input name="link2" type="text" value="$link2" />
-        <input name="url2" type="text" value="$url2" />
-        <input class="input" name="window2" type="radio" value="1" $window2_new/>
+        <input name="link2" type="text" value="$link2">
+        <input name="url2" type="text" value="$url2">
+        <input class="input" name="window2" type="radio" value="1" $window2_new>
         %new_window%
-        <input class="input" type="radio" name="window2" value="0" $window2_self />
+        <input class="input" type="radio" name="window2" value="0" $window2_self>
         %self%
         <br>
         %link% 3:
-        <input name="link3" type="text" value="$link3" />
-        <input name="url3" type="text" value="$url3" />
-        <input class="input" name="window3" type="radio" value="1" $window3_new/>
+        <input name="link3" type="text" value="$link3">
+        <input name="url3" type="text" value="$url3">
+        <input class="input" name="window3" type="radio" value="1" $window3_new>
         %new_window%
-        <input class="input" type="radio" name="window3" value="0" $window3_self />
+        <input class="input" type="radio" name="window3" value="0" $window3_self>
         %self%
         <br>
         %link% 4:
-        <input name="link4" type="text" value="$link4" />
-        <input name="url4" type="text" value="$url4" />
-        <input class="input" name="window4" type="radio" value="1" $window4_new/>
+        <input name="link4" type="text" value="$link4">
+        <input name="url4" type="text" value="$url4">
+        <input class="input" name="window4" type="radio" value="1" $window4_new>
         %new_window%
-        <input class="input" type="radio" name="window4" value="0" $window4_self />
+        <input class="input" type="radio" name="window4" value="0" $window4_self>
         %self%</td>
         <td valign="top"><br>&nbsp;</td>
       </tr>
@@ -259,12 +259,12 @@ $langs_vars
       </tr>
       <tr align="right">
         <td colspan="2">
-        <input type="hidden" name="userID" value="$userID" />
-        <input type="hidden" name="newsID" value="$newsID" />
+        <input type="hidden" name="userID" value="$userID">
+        <input type="hidden" name="newsID" value="$newsID">
         <select name="comments">$comments</select>
-        <input type="submit" name="preview" value="%preview%" />
-        <input type="submit" name="save" value="%save_news%" />
-        <input type="button" onclick="window.close()" value="%cancel%" /></td>
+        <input type="submit" name="preview" value="%preview%">
+        <input type="submit" name="save" value="%save_news%">
+        <input type="button" onclick="window.close()" value="%cancel%"></td>
       </tr>
     </table>
     </td>

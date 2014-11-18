@@ -210,9 +210,9 @@ else {
 		echo $title_comments;
 
 		if($sorttype=="ASC") {
-			$sorter='<a href="'.$referer.'&amp;commentspage='.$commentspage.'&amp;sorttype=DESC">'.$_language->module['sort'].'</a> <img src="images/icons/asc.gif" width="9" height="7" alt="'.$_language->module['sort_desc'].'" />&nbsp;&nbsp;&nbsp;';
+			$sorter='<a href="'.$referer.'&amp;commentspage='.$commentspage.'&amp;sorttype=DESC">'.$_language->module['sort'].'</a> <img src="images/icons/asc.gif" width="9" height="7" alt="'.$_language->module['sort_desc'].'">&nbsp;&nbsp;&nbsp;';
 		} else {
-			$sorter='<a href="'.$referer.'&amp;commentspage='.$commentspage.'&amp;sorttype=ASC">'.$_language->module['sort'].'</a> <img src="images/icons/desc.gif" width="9" height="7" alt="'.$_language->module['sort_asc'].'" />&nbsp;&nbsp;&nbsp;';
+			$sorter='<a href="'.$referer.'&amp;commentspage='.$commentspage.'&amp;sorttype=ASC">'.$_language->module['sort'].'</a> <img src="images/icons/desc.gif" width="9" height="7" alt="'.$_language->module['sort_asc'].'">&nbsp;&nbsp;&nbsp;';
 		}
 
 		eval ("\$comments_head = \"".gettemplate("comments_head")."\";");
@@ -240,20 +240,20 @@ else {
 				if ($email = getemail($ds['userID']) AND !getemailhide($ds['userID'])) $email = str_replace('%email%', mail_protect($email), $_language->module['email_link']);
 				else $email='';
 				$gethomepage = gethomepage($ds['userID']);
-				if ($gethomepage != "" && $gethomepage != "http://" && $gethomepage != "http:///" && $gethomepage != "n/a") $hp = '<a href="http://'.$gethomepage.'" target="_blank"><img src="images/icons/hp.gif" width="14" height="14" alt="'.$_language->module['homepage'].'" /></a>';
+				if ($gethomepage != "" && $gethomepage != "http://" && $gethomepage != "http:///" && $gethomepage != "n/a") $hp = '<a href="http://'.$gethomepage.'" target="_blank"><img src="images/icons/hp.gif" width="14" height="14" alt="'.$_language->module['homepage'].'"></a>';
 				else $hp='';
 				
-				if(isonline($ds['userID'])=="offline") $statuspic='<img src="images/icons/offline.gif" width="7" height="7" alt="offline" />';
-				else $statuspic='<img src="images/icons/online.gif" width="7" height="7" alt="online" />';
+				if(isonline($ds['userID'])=="offline") $statuspic='<img src="images/icons/offline.gif" width="7" height="7" alt="offline">';
+				else $statuspic='<img src="images/icons/online.gif" width="7" height="7" alt="online">';
 
-				$avatar='<img src="images/avatars/'.getavatar($ds['userID']).'" align="left" alt="Avatar" />';
+				$avatar='<img src="images/avatars/'.getavatar($ds['userID']).'" align="left" alt="Avatar">';
 
 				if($loggedin && $ds['userID'] != $userID) {
-					$pm='<a href="index.php?site=messenger&amp;action=touser&amp;touser='.$ds['userID'].'"><img src="images/icons/pm.gif" width="12" height="13" alt="'.$_language->module['send_message'].'" /></a>';
-					if(isignored($userID, $ds['userID'])) $buddy='<a href="buddys.php?action=readd&amp;id='.$ds['userID'].'&amp;userID='.$userID.'"><img src="images/icons/buddy_readd.gif" width="16" height="16" alt="'.$_language->module['readd_buddy'].'" /></a>';
-					elseif(isbuddy($userID, $ds['userID'])) $buddy='<a href="buddys.php?action=ignore&amp;id='.$ds['userID'].'&amp;userID='.$userID.'"><img src="images/icons/buddy_ignore.gif" width="16" height="16" alt="'.$_language->module['ignore_user'].'" /></a>';
+					$pm='<a href="index.php?site=messenger&amp;action=touser&amp;touser='.$ds['userID'].'"><img src="images/icons/pm.gif" width="12" height="13" alt="'.$_language->module['send_message'].'"></a>';
+					if(isignored($userID, $ds['userID'])) $buddy='<a href="buddys.php?action=readd&amp;id='.$ds['userID'].'&amp;userID='.$userID.'"><img src="images/icons/buddy_readd.gif" width="16" height="16" alt="'.$_language->module['readd_buddy'].'"></a>';
+					elseif(isbuddy($userID, $ds['userID'])) $buddy='<a href="buddys.php?action=ignore&amp;id='.$ds['userID'].'&amp;userID='.$userID.'"><img src="images/icons/buddy_ignore.gif" width="16" height="16" alt="'.$_language->module['ignore_user'].'"></a>';
 					elseif($userID==$ds['userID']) $buddy='';
-					else $buddy='<a href="buddys.php?action=add&amp;id='.$ds['userID'].'&amp;userID='.$userID.'"><img src="images/icons/buddy_add.gif" width="16" height="16" alt="'.$_language->module['add_buddy'].'" /></a>';
+					else $buddy='<a href="buddys.php?action=add&amp;id='.$ds['userID'].'&amp;userID='.$userID.'"><img src="images/icons/buddy_add.gif" width="16" height="16" alt="'.$_language->module['add_buddy'].'"></a>';
 				} else {
 					$pm='';
 					$buddy='';
@@ -261,7 +261,7 @@ else {
 			}
 			else {
 				$member='';
-				$avatar='<img src="images/avatars/noavatar.gif" align="left" alt="Avatar" />';
+				$avatar='<img src="images/avatars/noavatar.gif" align="left" alt="Avatar">';
 				$country='';
 				$pm='';
 				$buddy='';
@@ -278,7 +278,7 @@ else {
 				$ds['url'] = strip_tags($ds['url']);
 				$ds['url'] = htmlspecialchars($ds['url']);
 				if(!stristr($ds['url'],'http://')) $ds['url'] = "http://".$ds['url'];
-				if($ds['url']!="http://" && $ds['url']!="") $hp = '<a href="'.$ds['url'].'" target="_blank"><img src="images/icons/hp.gif" width="14" height="14" alt="'.$_language->module['homepage'].'" /></a>';
+				if($ds['url']!="http://" && $ds['url']!="") $hp = '<a href="'.$ds['url'].'" target="_blank"><img src="images/icons/hp.gif" width="14" height="14" alt="'.$_language->module['homepage'].'"></a>';
 				else $hp='';
 				$ip = 'IP: ';
 				if(isfeedbackadmin($userID)) $ip.=$ds['ip'];
@@ -296,14 +296,14 @@ else {
 				$edit = '<a href="index.php?site=comments&amp;editcomment=true&amp;id='.$ds['commentID'].'&amp;ref='.urlencode($referer).'" title="'.$_language->module['edit_comment'].'"><i class="icon-edit"></i></a>';
 			} else $edit='';
 
-			if(isfeedbackadmin($userID)) $actions='<input class="input" type="checkbox" name="commentID[]" value="'.$ds['commentID'].'" />';
+			if(isfeedbackadmin($userID)) $actions='<input class="input" type="checkbox" name="commentID[]" value="'.$ds['commentID'].'">';
 			else $actions='';
 
 			$spam_buttons = "";
 			if(!empty($spamapikey)){
 				if(ispageadmin($userID)){
-					$spam_buttons = '<input type="button" value="Spam" onclick="eventfetch(\'ajax_spamfilter.php?commentID='.$ds['commentID'].'&type=spam\',\'\',\'return\')" />
-	<input type="button" value="Ham" onclick="eventfetch(\'ajax_spamfilter.php?commentID='.$ds['commentID'].'&type=ham\',\'\',\'return\')" />';
+					$spam_buttons = '<input type="button" value="Spam" onclick="eventfetch(\'ajax_spamfilter.php?commentID='.$ds['commentID'].'&type=spam\',\'\',\'return\')">
+	<input type="button" value="Ham" onclick="eventfetch(\'ajax_spamfilter.php?commentID='.$ds['commentID'].'&type=ham\',\'\',\'return\')">';
 				}
 			}
 
