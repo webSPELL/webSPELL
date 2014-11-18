@@ -40,7 +40,7 @@ if(isset($_GET['action'])) $action = $_GET['action'];
 else $action = "";
 $show = true;
 if($action=="save" && isset($_POST['post'])) {
-
+	
 	if(isset($_POST['squad'])) $squad = $_POST['squad'];
 	else $squad = 0;
 	$nick = $_POST['nick'];
@@ -52,7 +52,7 @@ if($action=="save" && isset($_POST['post'])) {
 	$clanhistory = $_POST['clanhistory'];
 	$info = $_POST['info'];
 	$run=0;
-  
+	
   	$error = array();
 	if(!(mb_strlen(trim($nick)))) $error[]=$_language->module['forgot_nickname'];
 	if(!(mb_strlen(trim($name)))) $error[]=$_language->module['forgot_realname'];
@@ -61,16 +61,15 @@ if($action=="save" && isset($_POST['post'])) {
   	if(!(mb_strlen(trim($age)))) $error[]=$_language->module['forgot_age'];
 	if(!(mb_strlen(trim($city)))) $error[]=$_language->module['forgot_city'];
 	if(!(mb_strlen(trim($clanhistory)))) $error[]=$_language->module['forgot_history'];
-  
+	
   if($userID) {
 		$run=1;
-	}
-	else {
+	} else {
 		$CAPCLASS = new Captcha;
 		if(!$CAPCLASS->check_captcha($_POST['captcha'], $_POST['captcha_hash'])) $error[]=$_language->module['wrong_security_code'];
 		else $run=1;
 	}
-
+	
 	if(!count($error) and $run) {
 		$ergebnis=safe_query("SELECT userID FROM ".PREFIX."squads_members WHERE joinmember='1' AND squadID='".$squad."'");
 		while($ds=mysqli_fetch_assoc($ergebnis)) {
@@ -100,22 +99,23 @@ if($action=="save" && isset($_POST['post'])) {
 		echo $_language->module['thanks_you_will_get_mail'];
 		unset($_POST['nick'], $_POST['name'], $_POST['email'],$_POST['messenger'],$_POST['age'],$_POST['city'],$_POST['clanhistory'],$_POST['info']);
 		$show = false;
-	}
-	else {
-		$fehler=implode('<br />&#8226; ',$error);
+	} else {
+		$fehler=implode('<br>&#8226; ',$error);
 		$show = true;
-    	$showerror = '<div class="alert alert-danger" role="alert">
-      <b>'.$_language->module['problems'].':</b><br><br>
-      &#8226; '.$fehler.'
-    </div>';
+    	$showerror = '<div class="alert alert-danger alert-dismissible" role="alert">
+		  <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+		  <strong>'.$_language->module['problems'].':</strong><br>
+		  <br>
+		  &#8226; '.$fehler.'
+		</div>';
 	}
 }
-if($show == true){
+if($show == true) {
 	if($showonlygamingsquads) $squads=getgamesquads();
 	else $squads=getsquads();
 	
   	$bg1 = BG_1;
-
+	
 	if($loggedin) {
 		if(!isset($showerror)) $showerror='';
 		$res = safe_query("SELECT *, DATE_FORMAT(FROM_DAYS(TO_DAYS(NOW()) - TO_DAYS(birthday)), '%y') 'age' FROM ".PREFIX."user WHERE userID = '$userID'");
@@ -131,11 +131,10 @@ if($show == true){
 	    else $clanhistory='';
 	    if(isset($_POST['info'])) $info=getforminput($_POST['info']);
 	    else $info='';
-
+		
 		eval ("\$joinus_loggedin = \"".gettemplate("joinus_loggedin")."\";");
 		echo $joinus_loggedin;
-	}
-	else {
+	} else {
 		$CAPCLASS = new Captcha;
 		$captcha = $CAPCLASS->create_captcha();
 		$hash = $CAPCLASS->get_hash();
@@ -158,9 +157,9 @@ if($show == true){
 	    else $clanhistory='';
 	    if(isset($_POST['info'])) $info= getforminput($_POST['info']);
 	    else $info='';
-
+		
 		eval ("\$joinus_notloggedin = \"".gettemplate("joinus_notloggedin")."\";");
 		echo $joinus_notloggedin;
 	}
 }
-?>
+?> 
