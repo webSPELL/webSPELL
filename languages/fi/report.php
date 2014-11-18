@@ -38,6 +38,6 @@ $language_array = Array(
   'no_informations'=>'ei tietoa saatavilla',
   'report_message'=>'[b]On uusi %s - Raportti[/b][br][br]%s-ID: %d[br]Tiedot: %s[br]Referer: [url]index.php?site=files&file=%d[/url]',
   'report_recognized'=>'Raporttisi on huomioitu. Kiitoksia.',
-  'wrong_securitycode'=>'Syötit väärän turvallisuuskoodin<br /><br />[<a href="javascript:back();">Takaisin</a>]'
+  'wrong_securitycode'=>'Syötit väärän turvallisuuskoodin<br><br>[<a href="javascript:back();">Takaisin</a>]'
 );
 ?>

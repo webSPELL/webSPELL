@@ -101,8 +101,8 @@ Muchas gracias para su interés
 	'nickname'=>'Apodo',
 	'nickname_already_in_use'=>'apodo ya en uso!',
 	'no'=>'No',
-	'not_logged_in'=>'Tienes que estar conectado para ver tu perfil!<br /><br />
-   &#8226; <a href="index.php?site=register">registrar</a><br />
+	'not_logged_in'=>'Tienes que estar conectado para ver tu perfil!<br><br>
+   &#8226; <a href="index.php?site=register">registrar</a><br>
    &#8226; <a href="index.php?site=login">conectar</a>',
 	'old_password'=>'antigua contraseña',
 	'old_pw_not_valid'=>'tu contraseña antigua no es válida!',

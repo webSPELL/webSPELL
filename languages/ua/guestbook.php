@@ -52,7 +52,7 @@ $language_array = Array(
   'mail'=>'Ваша поштова скринька',
   'name'=>'Ваше ім\'я',
   'new_entry'=>'Новий запис',
-  'no_access'=>'Ви не ввійшли в систему.<br /><a Href="index.php?site=login">Ввійти</a> | <a href="index.php?site=register">Реєструватися</a>',
+  'no_access'=>'Ви не ввійшли в систему.<br><a Href="index.php?site=login">Ввійти</a> | <a href="index.php?site=register">Реєструватися</a>',
   'options'=>'Налаштування',
   'pmsubject_newentry'=>'Новий запис в гостьовій книзі',
   'pmtext_newentry'=>'[b]Хтось залишив вам повідомлення в гостьовій книзі![/b][br][br][URL=admin/admincenter.php?site=guestbook]Натисніть тут щоб прочитати повідомлення[/URL]',

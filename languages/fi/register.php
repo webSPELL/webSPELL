@@ -35,7 +35,7 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'activation_successful'=>'Tilisi aktivointi onnistui.<br />Voit kirjautua sisään.',
+  'activation_successful'=>'Tilisi aktivointi onnistui.<br>Voit kirjautua sisään.',
   'back'=>'takaisin',
   'enter_nickname'=>'Kirjoita kutsumanimesi.',
   'enter_password'=>'Kirjoita salasana.',

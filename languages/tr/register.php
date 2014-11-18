@@ -35,7 +35,7 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'activation_successful'=>'Hesabınızın aktivasyonu başarılı oldu.<br />Artık oturum açabilirsiniz.',
+  'activation_successful'=>'Hesabınızın aktivasyonu başarılı oldu.<br>Artık oturum açabilirsiniz.',
   'back'=>'geri',
   'enter_nickname'=>'Lütfen rumuz giriniz.',
   'enter_password'=>'Lütfen şifrenizi giriniz.',

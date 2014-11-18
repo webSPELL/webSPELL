@@ -29,11 +29,11 @@ $language_array = Array(
 	'enter_url'=>'Bitte gebe die URL an, wohin webSPELL installiert wird',
 	'error'=>'Fehler',
 	'licence'=>'Lizenzvereinbarung',
-	'php_info'=>'Aufgrund eines großen Fehlers in den MySQL fetch Funktionen in PHP 5.2.6 ist die Installation von webSPELL nicht möglich.<br />
+	'php_info'=>'Aufgrund eines großen Fehlers in den MySQL fetch Funktionen in PHP 5.2.6 ist die Installation von webSPELL nicht möglich.<br>
 	webSPELL läuft mit allen niedrigeren (bis zu PHP 4.3) und allen höheren PHP-Versionen. Nehm Kontakt mit Deinem Hoster auf, um die PHP-Version zu ändern',
 	'php_version'=>'PHP Version Inkompatibilität',
-	'tooltip'=>'<b>Die URL zur Seite</b><br />Das ist die URL von deiner Seite, z.B.
-	(domain.de/pfad/webspell).<br />Kein http:// vor dem Pfad mit eingeben und nicht mit einem Schrägstrich (Slash) enden.',
+	'tooltip'=>'<b>Die URL zur Seite</b><br>Das ist die URL von deiner Seite, z.B.
+	(domain.de/pfad/webspell).<br>Kein http:// vor dem Pfad mit eingeben und nicht mit einem Schrägstrich (Slash) enden.',
 	'you_have_to_agree'=>'Du musst die GNU GPL akzeptieren, um webSPELL auf Deinem Server zu installieren!',
 	'your_site_url'=>'Die URL zur Seite'
 );

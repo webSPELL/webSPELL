@@ -70,8 +70,8 @@ $language_array = Array(
   'usermenu'=>'Меню користувача',
   'views'=>'Перегляди',
   'x_new_message'=>'Є% new_messages% нові повідомлення.',
-  'you_have_to_be_logged_in'=>'Ви повинні увійти щоб ​​подивитися огляд!<br /><br />
-     &#8226; <a href="index.php?site=register">Реєструватися зараз</a><br />
+  'you_have_to_be_logged_in'=>'Ви повинні увійти щоб ​​подивитися огляд!<br><br>
+     &#8226; <a href="index.php?site=register">Реєструватися зараз</a><br>
      &#8226; <a href="index.php?site=login">Логін</ a>'
 );
 ?>

@@ -38,6 +38,6 @@ $language_array = Array(
   'no_informations'=>'geen inligting beskikbaar',
   'report_message'=>'[b]Daar is \'n nuwe %s - Verslag[/b][br][br]%s-ID: %d[br]Info: %s[br]Referer: [url]index.php?site=files&file=%d[/url]',
   'report_recognized'=>'Jou verslag is erken. Dankie.',
-  'wrong_securitycode'=>'Jy het verkeerde sekuriteit kode ingevoer<br /><br />[<a href="javascript:back();">back</a>]'
+  'wrong_securitycode'=>'Jy het verkeerde sekuriteit kode ingevoer<br><br>[<a href="javascript:back();">back</a>]'
 );
 ?>

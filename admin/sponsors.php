@@ -84,7 +84,7 @@ if($action=="add") {
 		        <td valign="top">'.$addflags.'</td>
 		      </tr>
 		    </table>
-        <br /><textarea id="message" rows="5" cols="" name="message" style="width: 100%;"></textarea>
+        <br><textarea id="message" rows="5" cols="" name="message" style="width: 100%;"></textarea>
       </td>
     </tr>
     <tr>
@@ -174,7 +174,7 @@ elseif($action=="edit") {
 		        <td valign="top">'.$addflags.'</td>
 		      </tr>
 		    </table>
-        <br /><textarea id="message" rows="5" cols="" name="message" style="width: 100%;">'.getinput($ds['info']).'</textarea>
+        <br><textarea id="message" rows="5" cols="" name="message" style="width: 100%;">'.getinput($ds['info']).'</textarea>
       </td>
     </tr>
     <tr>
@@ -244,16 +244,16 @@ elseif(isset($_POST["save"])) {
 				}  else {
 					if(unlink($filepath.$banner['name'].".tmp")) {
 						$error = $_language->module['format_incorrect'];
-						die('<b>'.$error.'</b><br /><br /><a href="admincenter.php?site=sponsors&amp;action=edit&amp;sponsorID='.$id.'">&laquo; '.$_language->module['back'].'</a>');
+						die('<b>'.$error.'</b><br><br><a href="admincenter.php?site=sponsors&amp;action=edit&amp;sponsorID='.$id.'">&laquo; '.$_language->module['back'].'</a>');
 					} else {
 						$error = $_language->module['format_incorrect'];
-						die('<b>'.$error.'</b><br /><br /><a href="admincenter.php?site=sponsors&amp;action=edit&amp;sponsorID='.$id.'">&laquo; '.$_language->module['back'].'</a>');
+						die('<b>'.$error.'</b><br><br><a href="admincenter.php?site=sponsors&amp;action=edit&amp;sponsorID='.$id.'">&laquo; '.$_language->module['back'].'</a>');
 					}
 				}
 			} else {
 				@unlink($filepath.$banner['name'].".tmp");
 				$error = $_language->module['icon_to_big'];
-				die('<b>'.$error.'</b><br /><br /><a href="admincenter.php?site=sponsors&amp;action=edit&amp;sponsorID='.$id.'">&laquo; '.$_language->module['back'].'</a>');
+				die('<b>'.$error.'</b><br><br><a href="admincenter.php?site=sponsors&amp;action=edit&amp;sponsorID='.$id.'">&laquo; '.$_language->module['back'].'</a>');
 			}
 		}
 		
@@ -275,16 +275,16 @@ elseif(isset($_POST["save"])) {
 				}  else {
 					if(unlink($filepath.$banner_small['name'].".tmp")) {
 						$error = $_language->module['format_incorrect'];
-						die('<b>'.$error.'</b><br /><br /><a href="admincenter.php?site=sponsors&amp;action=edit&amp;sponsorID='.$id.'">&laquo; '.$_language->module['back'].'</a>');
+						die('<b>'.$error.'</b><br><br><a href="admincenter.php?site=sponsors&amp;action=edit&amp;sponsorID='.$id.'">&laquo; '.$_language->module['back'].'</a>');
 					} else {
 						$error = $_language->module['format_incorrect'];
-						die('<b>'.$error.'</b><br /><br /><a href="admincenter.php?site=sponsors&amp;action=edit&amp;sponsorID='.$id.'">&laquo; '.$_language->module['back'].'</a>');
+						die('<b>'.$error.'</b><br><br><a href="admincenter.php?site=sponsors&amp;action=edit&amp;sponsorID='.$id.'">&laquo; '.$_language->module['back'].'</a>');
 					}
 				}
 			} else {
 				@unlink($filepath.$banner_small['name'].".tmp");
 				$error = $_language->module['banner_to_big'];
-				die('<b>'.$error.'</b><br /><br /><a href="admincenter.php?site=sponsors&amp;action=edit&amp;sponsorID='.$id.'">&laquo; '.$_language->module['back'].'</a>');
+				die('<b>'.$error.'</b><br><br><a href="admincenter.php?site=sponsors&amp;action=edit&amp;sponsorID='.$id.'">&laquo; '.$_language->module['back'].'</a>');
 			}
 		}
 		redirect("admincenter.php?site=sponsors","",0);
@@ -332,16 +332,16 @@ elseif(isset($_POST["saveedit"])) {
 				}  else {
 					if(unlink($filepath.$banner['name'].".tmp")) {
 						$error = $_language->module['format_incorrect'];
-						die('<b>'.$error.'</b><br /><br /><a href="admincenter.php?site=sponsors&amp;action=edit&amp;sponsorID='.$id.'">&laquo; '.$_language->module['back'].'</a>');
+						die('<b>'.$error.'</b><br><br><a href="admincenter.php?site=sponsors&amp;action=edit&amp;sponsorID='.$id.'">&laquo; '.$_language->module['back'].'</a>');
 					} else {
 						$error = $_language->module['format_incorrect'];
-						die('<b>'.$error.'</b><br /><br /><a href="admincenter.php?site=sponsors&amp;action=edit&amp;sponsorID='.$id.'">&laquo; '.$_language->module['back'].'</a>');
+						die('<b>'.$error.'</b><br><br><a href="admincenter.php?site=sponsors&amp;action=edit&amp;sponsorID='.$id.'">&laquo; '.$_language->module['back'].'</a>');
 					}
 				}
 			} else {
 				@unlink($filepath.$banner['name'].".tmp");
 				$error = $_language->module['icon_to_big'];
-				die('<b>'.$error.'</b><br /><br /><a href="admincenter.php?site=sponsors&amp;action=edit&amp;sponsorID='.$id.'">&laquo; '.$_language->module['back'].'</a>');
+				die('<b>'.$error.'</b><br><br><a href="admincenter.php?site=sponsors&amp;action=edit&amp;sponsorID='.$id.'">&laquo; '.$_language->module['back'].'</a>');
 			}
 		}
 		
@@ -363,16 +363,16 @@ elseif(isset($_POST["saveedit"])) {
 				}  else {
 					if(unlink($filepath.$banner_small['name'].".tmp")) {
 						$error = $_language->module['format_incorrect'];
-						die('<b>'.$error.'</b><br /><br /><a href="admincenter.php?site=sponsors&amp;action=edit&amp;squadID='.$id.'">&laquo; '.$_language->module['back'].'</a>');
+						die('<b>'.$error.'</b><br><br><a href="admincenter.php?site=sponsors&amp;action=edit&amp;squadID='.$id.'">&laquo; '.$_language->module['back'].'</a>');
 					} else {
 						$error = $_language->module['format_incorrect'];
-						die('<b>'.$error.'</b><br /><br /><a href="admincenter.php?site=sponsors&amp;action=edit&amp;squadID='.$id.'">&laquo; '.$_language->module['back'].'</a>');
+						die('<b>'.$error.'</b><br><br><a href="admincenter.php?site=sponsors&amp;action=edit&amp;squadID='.$id.'">&laquo; '.$_language->module['back'].'</a>');
 					}
 				}
 			} else {
 				@unlink($filepath.$banner_small['name'].".tmp");
 				$error = $_language->module['banner_to_big'];
-				die('<b>'.$error.'</b><br /><br /><a href="admincenter.php?site=sponsors&amp;action=edit&amp;sponsorID='.$id.'">&laquo; '.$_language->module['back'].'</a>');
+				die('<b>'.$error.'</b><br><br><a href="admincenter.php?site=sponsors&amp;action=edit&amp;sponsorID='.$id.'">&laquo; '.$_language->module['back'].'</a>');
 			}
 		}
 		redirect("admincenter.php?site=sponsors","",0);
@@ -400,7 +400,7 @@ else {
 
   echo'<h1>&curren; '.$_language->module['sponsors'].'</h1>';
   
-  echo'<input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=sponsors&amp;action=add\');return document.MM_returnValue" value="'.$_language->module['new_sponsor'].'" /><br /><br />';
+  echo'<input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=sponsors&amp;action=add\');return document.MM_returnValue" value="'.$_language->module['new_sponsor'].'" /><br><br>';
   
   echo'<form method="post" action="admincenter.php?site=sponsors">
   <table width="100%" border="0" cellspacing="1" cellpadding="3" bgcolor="#DDDDDD">

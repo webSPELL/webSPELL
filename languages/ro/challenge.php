@@ -62,7 +62,7 @@ $language_array = Array(
   'sort'=>'sortează:',
   'squad'=>'echipă',
   'submit_challenge'=>'trimite provocarea',
-  'thank_you'=>'Vă mulţumim pentru cerere!<br />',
+  'thank_you'=>'Vă mulţumim pentru cerere!<br>',
   'time'=>'timp',
   'wrong_security_code'=>'Codul de securitate a fost introdus greşit.'
 );

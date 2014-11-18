@@ -41,7 +41,7 @@ $language_array = Array(
   'buddy_nousers'=>'Du hues keng Benotzer an denger Frëndslescht',
   'buddys'=>'Frënn',
   'ignore_nousers'=>'Du hues keng Benotzer ob der Ignoréierenlescht',
-  'not_logged'=>'Fir den Frënn ze Verwalten muss du registréiert an ugemellt sinn.<br /><a href="index.php?site=register">registréieren</a> | <a href="index.php?site=login">umellen</a>',
+  'not_logged'=>'Fir den Frënn ze Verwalten muss du registréiert an ugemellt sinn.<br><a href="index.php?site=register">registréieren</a> | <a href="index.php?site=login">umellen</a>',
   'your_buddylist'=>'Deng Frëndeslescht',
   'your_ignorelist'=>'Deng Ignoréierenlescht'
 );

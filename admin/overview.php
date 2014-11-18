@@ -85,9 +85,9 @@ $ret = mysqli_fetch_array($get);
 $db = $ret[0];
 
 echo '<h1>&curren; '.$_language->module['welcome'].'</h1>';
-echo $_language->module['hello'].'&nbsp;'.$username.',&nbsp;'.$_language->module['last_login'].'&nbsp;'.$lastlogin.'.<br /><br />';
+echo $_language->module['hello'].'&nbsp;'.$username.',&nbsp;'.$_language->module['last_login'].'&nbsp;'.$lastlogin.'.<br><br>';
 echo $_language->module['welcome_message']; ?>
-<br /><iframe src="http://update.webspell.org/index.php?new&amp;v=<?php echo $version;?>&amp;h=<?php echo $_SERVER['SERVER_NAME'];?>" height="70" frameborder="0" scrolling="no" width="100%"></iframe><br/><br/>
+<br><iframe src="http://update.webspell.org/index.php?new&amp;v=<?php echo $version;?>&amp;h=<?php echo $_SERVER['SERVER_NAME'];?>" height="70" frameborder="0" scrolling="no" width="100%"></iframe><br><br>
 <h1>&curren; <?php echo $_language->module['serverinfo']; ?></h1>
 <table width="100%" border="0" cellspacing="1" cellpadding="3" bgcolor="#DDDDDD">
   <tr>
@@ -124,7 +124,7 @@ echo $_language->module['welcome_message']; ?>
     <td class="td1"><?php echo (($php_m = @php_uname('m')) ? $php_m : $info_na); ?></td>
   </tr>
 </table>
-<br /><br />
+<br><br>
 <table width="100%" border="0" cellspacing="1" cellpadding="3" bgcolor="#DDDDDD">
   <tr>
     <td class="title" colspan="4"><b><?php echo $_language->module['interface']; ?></b></td>
@@ -142,7 +142,7 @@ echo $_language->module['welcome_message']; ?>
     <td class="td1"><?php if(function_exists("apache_get_modules")){if(count(apache_get_modules()) > 1) $get_apache_modules = implode(", ",apache_get_modules()); echo $get_apache_modules;} else{ echo $_language->module['na'];} ?></td>
   </tr>
 </table>
-<br /><br />
+<br><br>
 <table width="100%" border="0" cellspacing="1" cellpadding="3" bgcolor="#DDDDDD">
   <tr>
     <td class="title" colspan="4"><b><?php echo $_language->module['php_settings']; ?></b></td>
@@ -197,7 +197,7 @@ echo $_language->module['welcome_message']; ?>
     <td class="td1"><?php echo $get_short_open_tag; ?></td>
   </tr>
 </table>
-<br /><br />
+<br><br>
 <table width="100%" border="0" cellspacing="1" cellpadding="3" bgcolor="#DDDDDD">
   <tr>
     <td class="title" colspan="4"><b>GD Graphics Library</b></td>

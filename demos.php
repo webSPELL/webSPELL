@@ -412,7 +412,7 @@ elseif($action=="showgame") {
 		echo'<a href="index.php?site=demos&amp;action=showgame&amp;game='.$game.'&amp;page='.$page.'&amp;sort='.$sort.'&amp;type=ASC">'.$_language->module['sort'].':</a> <img src="images/icons/desc.gif" width="9" height="7" border="0" alt="" />&nbsp;&nbsp;&nbsp;';
 
 		echo $page_link;
-		echo'<br /><br />';
+		echo'<br><br>';
 
 		$headdate='<a class="titlelink" href="index.php?site=demos&amp;action=showgame&amp;game='.$game.'&amp;page='.$page.'&amp;sort=date&amp;type='.$type.'">'.$_language->module['date'].':</a>';
 		$headgame=''.$_language->module['game'].':';
@@ -506,7 +506,7 @@ else {
 			echo'<a href="index.php?site=demos&amp;page='.$page.'&amp;sort='.$sort.'&amp;type=ASC">'.$_language->module['sort'].':</a> <img src="images/icons/desc.gif" width="9" height="7" border="0" alt="" />&nbsp;&nbsp;&nbsp;';
 
 		echo $page_link;
-		echo'<br /><br />';
+		echo'<br><br>';
 
 		$headdate='<a class="titlelink" href="index.php?site=demos&amp;page='.$page.'&amp;sort=date&amp;type='.$type.'">'.$_language->module['date'].':</a>';
 		$headgame='<a class="titlelink" href="index.php?site=demos&amp;page='.$page.'&amp;sort=game&amp;type='.$type.'">'.$_language->module['game'].':</a>';

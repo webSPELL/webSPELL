@@ -74,7 +74,7 @@ if($part=="groups") {
 			$db_result=safe_query("SELECT * FROM ".PREFIX."gallery WHERE groupID='".$_GET['groupID']."'");
 			$any=mysqli_num_rows($db_result);
 			if($any){
-				echo $_language->module['galleries_available'].'<br /><br />';
+				echo $_language->module['galleries_available'].'<br><br>';
 			}
 			else{
 				safe_query("DELETE FROM ".PREFIX."gallery_groups WHERE groupID='".$_GET['groupID']."'");
@@ -129,7 +129,7 @@ if($part=="groups") {
 	else {
 		echo'<h1>&curren; <a href="admincenter.php?site=gallery" class="white">'.$_language->module['gallery'].'</a> &raquo; '.$_language->module['groups'].'</h1>';
 
-    echo'<input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=gallery&amp;part=groups&amp;action=add\');return document.MM_returnValue" value="'.$_language->module['new_group'].'" /><br /><br />';
+    echo'<input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=gallery&amp;part=groups&amp;action=add\');return document.MM_returnValue" value="'.$_language->module['new_group'].'" /><br><br>';
 
 		$ergebnis=safe_query("SELECT * FROM ".PREFIX."gallery_groups ORDER BY sort");
 		
@@ -315,7 +315,7 @@ elseif($part=="gallerys") {
 	      </tr>
 	    </table>
 	    </form>
-	    <br /><small>'.$_language->module['ftp_info'].' "http://'.$hp_url.'/images/gallery"</small>';
+	    <br><small>'.$_language->module['ftp_info'].' "http://'.$hp_url.'/images/gallery"</small>';
 	  }
 	  else{
 	  	echo '<br>'.$_language->module['need_group'];
@@ -423,7 +423,7 @@ elseif($part=="gallerys") {
 			echo '</table></td>
 		          </tr>
 		          <tr>
-		            <td><br /><b>'.$_language->module['visitor_comments'].'</b> &nbsp;
+		            <td><br><b>'.$_language->module['visitor_comments'].'</b> &nbsp;
 		            <select name="comments">
 		              <option value="0">'.$_language->module['disable_comments'].'</option>
 		              <option value="1">'.$_language->module['enable_user_comments'].'</option>
@@ -431,7 +431,7 @@ elseif($part=="gallerys") {
 		            </select></td>
 		          </tr>
 		          <tr>
-		            <td><br /><input type="hidden" name="captcha_hash" value="'.$hash.'" /><input type="hidden" name="galleryID" value="'.$id.'" />
+		            <td><br><input type="hidden" name="captcha_hash" value="'.$hash.'" /><input type="hidden" name="galleryID" value="'.$id.'" />
 		            <input type="submit" name="saveftp" value="'.$_language->module['upload'].'" /></td>
 		          </tr>
 		        </table>
@@ -477,7 +477,7 @@ elseif($part=="gallerys") {
 	else {
 		echo'<h1>&curren; <a href="admincenter.php?site=gallery" class="white">'.$_language->module['gallery'].'</a> &raquo; '.$_language->module['galleries'].'</h1>';
     
-    echo'<input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=gallery&amp;part=gallerys&amp;action=add\');return document.MM_returnValue" value="'.$_language->module['new_gallery'].'" /><br /><br />';
+    echo'<input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=gallery&amp;part=gallerys&amp;action=add\');return document.MM_returnValue" value="'.$_language->module['new_gallery'].'" /><br><br>';
 
 		echo'<form method="post" name="ws_gallery" action="admincenter.php?site=gallery&amp;part=gallerys">
 		<table width="100%" border="0" cellspacing="1" cellpadding="3" bgcolor="#DDDDDD">
@@ -515,7 +515,7 @@ elseif($part=="gallerys") {
       $i++;
 		  }
     }
-		echo'</table></form><br /><br />';
+		echo'</table></form><br><br>';
     
     echo'<h1>&curren; <a href="admincenter.php?site=gallery" class="white">'.$_language->module['gallery'].'</a> &raquo; '.$_language->module['usergalleries'].'</h1>';
 

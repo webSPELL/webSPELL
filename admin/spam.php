@@ -15,7 +15,7 @@ function deleteSpamUser($spammerID){
 	global $_language;
 	// Delete Comments
 	safe_query("DELETE FROM ".PREFIX."comments WHERE userID='".$spammerID."'");
-	echo mysqli_affected_rows()." ".$_language->module["comments_deleted"]."<br/>";
+	echo mysqli_affected_rows()." ".$_language->module["comments_deleted"]."<br>";
 	// Delete Forum Topics (update posts / topics)
 	$topics = safe_query("SELECT topicID,boardID FROM ".PREFIX."forum_topics WHERE userID='".$spammerID."'");
 	$topicIDs = array();
@@ -29,7 +29,7 @@ function deleteSpamUser($spammerID){
 		safe_query("DELETE FROM ".PREFIX."forum_topics WHERE topicID IN (".implode(",",$topicIDs).")");
 		safe_query("DELETE FROM ".PREFIX."forum_topics WHERE moveID IN (".implode(",",$topicIDs).")");
 		safe_query("DELETE FROM ".PREFIX."forum_posts WHERE topicID IN (".implode(",",$topicIDs).")");
-		echo count($topicIDs)." ".$_language->module['topics_deleted']."<br/>";
+		echo count($topicIDs)." ".$_language->module['topics_deleted']."<br>";
 	}
 	$update_topics = array();
 	$posts = safe_query("SELECT * FROM ".PREFIX."forum_posts WHERE poster='".$spammerID."'");
@@ -38,12 +38,12 @@ function deleteSpamUser($spammerID){
 	}
 	$update_topics = array_unique($update_topics);
 	safe_query("DELETE FROM ".PREFIX."forum_posts WHERE poster='".$spammerID."'");
-	echo mysqli_num_rows($posts)." ".$_language->module["posts_deleted"]."<br/>";
+	echo mysqli_num_rows($posts)." ".$_language->module["posts_deleted"]."<br>";
 
 	if(!empty($update_topics)){
 		safe_query("UPDATE ".PREFIX."forum_topics t SET replys 	=  (SELECT COUNT(postID) FROM ".PREFIX."forum_posts p WHERE p.topicID = t.topicID) -1
 																												WHERE t.topicID IN (".implode(",",$update_topics).")");
-		echo count($update_topics)." ".$_language->module["topic_count_updated"]."<br/>";
+		echo count($update_topics)." ".$_language->module["topic_count_updated"]."<br>";
 	}
 
 	$topic = safe_query("SELECT topicID, boardID FROM ".PREFIX."forum_topics WHERE lastposter = '".$spammerID."'");
@@ -54,7 +54,7 @@ function deleteSpamUser($spammerID){
 		safe_query("UPDATE ".PREFIX."forum_topics SET lastposter='".$topicData['poster']."', lastdate='".$topicData['date']."' WHERE topicID='".$ds['topicID']."'");
 		$boardIDs[] = $ds['boardID'];
 	}
-	echo $num." ".$_language->module["topics_updated"]."<br/>";
+	echo $num." ".$_language->module["topics_updated"]."<br>";
 	if(!empty($boardIDs)){
 		$boardIDs = array_unique($boardIDs);
 		safe_query("UPDATE ".PREFIX."forum_boards b SET topics 	= (SELECT COUNT(topicID) FROM ".PREFIX."forum_topics t WHERE t.boardID = b.boardID),
@@ -68,15 +68,15 @@ function deleteSpamUser($spammerID){
 	$spammer = mysqli_fetch_assoc($get);
 	//safe_query("DELETE FROM ".PREFIX."guestbook WHERE name='".$spammer['nickname']."' AND email='".$spammer['email']."'");
 	$user_g_book = safe_query("DELETE FROM ".PREFIX."user_gbook WHERE name='".$spammer['nickname']."' AND email='".$spammer['email']."'");
-	echo mysqli_affected_rows()." ".$_language->module["guestbook_deleted"]."<br/>";
+	echo mysqli_affected_rows()." ".$_language->module["guestbook_deleted"]."<br>";
 
 	// Delete Messenges
 	$mess = safe_query("DELETE FROM ".PREFIX."messenger WHERE userID='".$spammerID."' OR fromuser='".$spammerID."'");
-	echo mysqli_affected_rows()." ".$_language->module["messages_deleted"]."<br/>";
+	echo mysqli_affected_rows()." ".$_language->module["messages_deleted"]."<br>";
 
 	//safe_query("DELETE FROM ".PREFIX."user WHERE userID='".$spammerID."'");
 	safe_query("UPDATE ".PREFIX."user SET banned='perm', ban_reason='Spam',about='' WHERE userID='".$spammerID."'");
-	echo $_language->module["user_banned"]."<br/>";
+	echo $_language->module["user_banned"]."<br>";
 }
 if(isset($_GET['action'])) $action = $_GET['action'];
 else $action = null;
@@ -180,7 +180,7 @@ elseif($action == "multi"){
 					
 				echo '<tr>
  				<td class="'.$td.'">'.$data['userID'].'</td>
- 				<td class="'.$td.'"><a href="../index.php?site=profile&amp;id='.$data['userID'].'" target="_blank">'.$data['nickname'].'</a><br/><small>'.$_language->module["password"].': '.$passwords[$key].'</small></td>
+ 				<td class="'.$td.'"><a href="../index.php?site=profile&amp;id='.$data['userID'].'" target="_blank">'.$data['nickname'].'</a><br><small>'.$_language->module["password"].': '.$passwords[$key].'</small></td>
  				<td class="'.$td.'">'.getformatdate($data['registerdate']).'</td>
  				<td class="'.$td.'">'.$last_login.'</td>
  				<td class="'.$td.'">'.$active.'</td>
@@ -227,7 +227,7 @@ elseif($action == "multi_just_block"){
 			echo "<h3>".$ip."</h3>";
 			if(isclanmember($ds['userID']) == false){
 				safe_query("UPDATE ".PREFIX."user SET banned='perm', ban_reason='Multi Accounts (".$_database->escape_string($ds['nicknames']).")' WHERE ip='".$ip."'");
-				echo $_language->module["user_banned"]." (".$_language->module["nothing_deleted"].")<br/>".$ds['nicknames'];
+				echo $_language->module["user_banned"]." (".$_language->module["nothing_deleted"].")<br>".$ds['nicknames'];
 			}
 			else{
 				echo $_language->module["cant_delete_team_members"];
@@ -248,7 +248,7 @@ elseif($action == "api_log"){
 	$get = safe_query("SELECT * FROM ".PREFIX."api_log ORDER BY `date` DESC");
 	if(mysqli_num_rows($get)){
 
-		echo '<input type="button" onclick="MM_confirm(\''.$_language->module["question_delete_all"].'\', \'admincenter.php?site=spam&amp;action=api_log&amp;del_option=del_all\')" value="'.$_language->module["delete_all"].'" /><br/><br/>';
+		echo '<input type="button" onclick="MM_confirm(\''.$_language->module["question_delete_all"].'\', \'admincenter.php?site=spam&amp;action=api_log&amp;del_option=del_all\')" value="'.$_language->module["delete_all"].'" /><br><br>';
 
 		echo '<table border="0" cellspacing="1" cellpadding="3" bgcolor="#DDDDDD" width="100%">
 		<tr>
@@ -264,7 +264,7 @@ elseif($action == "api_log"){
 			}
 			
 			echo '<tr>
-			<td class="'.$td.'"><font color="red">'.getinput($ds['message']).'</font><br/>'.$ds['data'].'</td>
+			<td class="'.$td.'"><font color="red">'.getinput($ds['message']).'</font><br>'.$ds['data'].'</td>
 			<td class="'.$td.'">'.getformatdatetime($ds['date']).'</td>
 			</tr>';
 			

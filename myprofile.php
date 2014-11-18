@@ -208,7 +208,7 @@ else {
 
 		if(count($error_array))
 		{
-			$fehler=implode('<br />&#8226; ', $error_array);
+			$fehler=implode('<br>&#8226; ', $error_array);
 			$showerror = '<div class="alert alert-danger">
 			  <b>'.$_language->module['errors_there'].':</b><br><br>
 			  &#8226; '.$fehler.'
@@ -313,7 +313,7 @@ else {
 	    	redirect('index.php?site=login', $_language->module['pw_changed'],3);
 	    }
 	    else{
-	    	echo '<b>ERROR: '.$error.'</b><br /><br /><input type="button" onclick="javascript:history.back()" value="'.$_language->module['back'].'" />';
+	    	echo '<b>ERROR: '.$error.'</b><br><br><input type="button" onclick="javascript:history.back()" value="'.$_language->module['back'].'" />';
 	    }
 
 	}
@@ -379,7 +379,7 @@ else {
 			else echo $_language->module['mail_failed'];
 		}
 		else{
-			echo '<b>ERROR: '.$error.'</b><br /><br /><input type="button" onclick="javascript:history.back()" value="'.$_language->module['back'].'" />';
+			echo '<b>ERROR: '.$error.'</b><br><br><input type="button" onclick="javascript:history.back()" value="'.$_language->module['back'].'" />';
 		}
 
 	}

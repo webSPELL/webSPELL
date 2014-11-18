@@ -102,8 +102,8 @@ $language_array = Array(
   'nickname'=>'მეტსახელი',
   'nickname_already_in_use'=>'მეტსახელი უკვე დაკავებულია',
   'no'=>'არა',
-  'not_logged_in'=>'თქვენ უნდა იყოთ ავტორიზირებული რომ ნახოთ თქვენი პროფილი!<br /><br />
-    &#8226; <a href="index.php?site=register">დარეგისტრიდი ახლა</a><br />
+  'not_logged_in'=>'თქვენ უნდა იყოთ ავტორიზირებული რომ ნახოთ თქვენი პროფილი!<br><br>
+    &#8226; <a href="index.php?site=register">დარეგისტრიდი ახლა</a><br>
     &#8226; <a href="index.php?site=login">ავტორიზაცია</a>',
   'old_password'=>'ძველი პაროლი',
   'old_pw_not_valid'=>'ძველი პაროლი არასწორია!',

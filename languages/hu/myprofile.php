@@ -101,8 +101,8 @@ Köszönjük érdeklődésed
 	'nickname'=>'Becenév',
 	'nickname_already_in_use'=>'a becenév már használatban van!',
 	'no'=>'Nem',
-	'not_logged_in'=>'Jelentkezz be a profilod megtekintéséhez!<br /><br />
-  &#8226; <a href="index.php?site=register">regisztráció</a><br />
+	'not_logged_in'=>'Jelentkezz be a profilod megtekintéséhez!<br><br>
+  &#8226; <a href="index.php?site=register">regisztráció</a><br>
   &#8226; <a href="index.php?site=login">bejelentkezés</a>',
 	'old_password'=>'régi jelszó',
 	'old_pw_not_valid'=>'a régi jelszavad nem érvényes!',

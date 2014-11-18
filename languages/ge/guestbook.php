@@ -47,7 +47,7 @@ $language_array = Array(
   'mail'=>'თქვენი mail მისამართი',
   'name'=>'თქვენი სახელი',
   'new_entry'=>'ახალი ჩანაწერი',
-  'no_access'=>'თქვენ არ ხართ ავტორიზირებული.<br /><a href="index.php?site=login">შესვლა</a> | <a href="index.php?site=register">რეგისტრაცია</a>',
+  'no_access'=>'თქვენ არ ხართ ავტორიზირებული.<br><a href="index.php?site=login">შესვლა</a> | <a href="index.php?site=register">რეგისტრაცია</a>',
   'options'=>'სეთინგები',
   'pmsubject_newentry'=>'ახალი სტუმრების სიის ჩანაწერი',
   'pmtext_newentry'=>'[b]ვიღაცამ დატოვა კომენტარი თქვენთვის სტუმრების წიგნში![/b][br][br] [URL=index.php?site=guestbook#%insertid%]დააჭირე აქ რომ წაიკითხო შეტყობინება[/URL] ',

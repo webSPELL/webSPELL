@@ -49,8 +49,8 @@ $language_array = Array(
   'lost_password'=>'χαμενος κωδικος',
   'no_mail_given'=>'Δεν εχετε εισαγει email.',
   'no_user_found'=>'δε βρεθηκε χρηστης!',
-  'successful'=>'Ο λογαριασμος σας βρεθηκε<br /><br />
-    Θα λαβετε email με τα στοιχια σας σε λιγα δευτερολεπτα.<br /><br />
+  'successful'=>'Ο λογαριασμος σας βρεθηκε<br><br>
+    Θα λαβετε email με τα στοιχια σας σε λιγα δευτερολεπτα.<br><br>
     &#8226; <a href="index.php?site=login">εισοδος</a>',
   'your_email'=>'Το E-Mail σας'
 );

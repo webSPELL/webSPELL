@@ -36,7 +36,7 @@ $language_array = Array(
   'faq'=>'FAQ',
   'faqs'=>'FAQs',
   'no_categories'=>'არ არის კატეგორიები შექმნილი ჯერ',
-  'no_faq'=>'არ არის პასუხები ხელმისაწვდომი.<br /><a href="index.php?site=faq">უკან</a>',
+  'no_faq'=>'არ არის პასუხები ხელმისაწვდომი.<br><a href="index.php?site=faq">უკან</a>',
   'saved_on'=>'შენახულია '
 );
 ?>

@@ -101,8 +101,8 @@ Ačiū jums
 	'nickname'=>'Slapyvardis',
 	'nickname_already_in_use'=>'slapyvardis jau naudojamas!',
 	'no'=>'Ne',
-	'not_logged_in'=>'Jūs turite būti prisijungę, kad žiūrėti savo profilį!<br /><br />
-    &#8226; <a href="index.php?site=register">registruotis dabar</a><br />
+	'not_logged_in'=>'Jūs turite būti prisijungę, kad žiūrėti savo profilį!<br><br>
+    &#8226; <a href="index.php?site=register">registruotis dabar</a><br>
     &#8226; <a href="index.php?site=login">prisijungti</a>',
 	'old_password'=>'senas Slaptažodis',
 	'old_pw_not_valid'=>'jūsų senas slaptažodis blogas!',

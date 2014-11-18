@@ -230,14 +230,14 @@ if(isset($_GET['action']) and $_GET['action'] == "edit") {
 	}
 
 	if(isclanmember($id)) $userdes='<tr>
-    <td colspan="2"><b>'.$_language->module['description'].'</b><br />
+    <td colspan="2"><b>'.$_language->module['description'].'</b><br>
       <table width="99%" border="0" cellspacing="0" cellpadding="0">
 		      <tr>
 		        <td valign="top">'.$addbbcode.'</td>
 		        <td valign="top">'.$addflags.'</td>
 		      </tr>
 		    </table>
-      <br /><textarea id="message" rows="5" cols="" name="message" style="width: 100%;">'.getuserdescription($id).'</textarea>
+      <br><textarea id="message" rows="5" cols="" name="message" style="width: 100%;">'.getuserdescription($id).'</textarea>
     </td>
   </tr>';
 	else $userdes='';
@@ -397,7 +397,7 @@ else {
          
          $i++;
 		}
-		echo'</table><br />';
+		echo'</table><br>';
 	}
 	echo'<div align="right"><input type="hidden" name="captcha_hash" value="'.$hash.'" /><input type="submit" name="sortieren" value="'.$_language->module['to_sort'].'" /></div></form>';
 }

@@ -43,8 +43,8 @@ Viel Spass auf unserer Webseite
 	'lost_password'=>'Passwort verloren',
 	'no_mail_given'=>'Du hast keine E-Mail Adresse eingegeben.',
 	'no_user_found'=>'Benutzer nicht gefunden!',
-	'successful'=>'Dein Konto wurde gefunden!<br /><br />
-    Du wirst in wenigen Sekunden eine E-Mail mit deinen Daten erhalten.<br /><br />
+	'successful'=>'Dein Konto wurde gefunden!<br><br>
+    Du wirst in wenigen Sekunden eine E-Mail mit deinen Daten erhalten.<br><br>
     &#8226; <a href="index.php?site=login">anmelden</a>',
 	'your_email'=>'Deine E-Mail'
 );

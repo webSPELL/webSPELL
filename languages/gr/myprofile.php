@@ -107,8 +107,8 @@ $language_array = Array(
   'nickname'=>'Ψευδονυμο',
   'nickname_already_in_use'=>'Το ψευδονυμο υπαρχει ηδη!',
   'no'=>'οχι',
-  'not_logged_in'=>'Πρεπει να συνδεθειτε για να δειτε το προφιλ σας!<br /><br />
-    &#8226; <a href="index.php?site=register">Εγγραφη</a><br />
+  'not_logged_in'=>'Πρεπει να συνδεθειτε για να δειτε το προφιλ σας!<br><br>
+    &#8226; <a href="index.php?site=register">Εγγραφη</a><br>
     &#8226; <a href="index.php?site=login">Συνδεση</a>',
   'old_password'=>'Παλιος κωδικος',
   'old_pw_not_valid'=>'Ο παλιος σας κωδικος ειναι λαθος!',

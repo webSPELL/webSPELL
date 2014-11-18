@@ -41,7 +41,7 @@ $language_array = Array(
   'buddy_nousers'=>'У вас немає друзів',
   'buddys'=>'Друзі',
   'ignore_nousers'=>'У вас немає користувачів в ігнорі',
-  'not_logged'=>'Щоб керувати списком друзів, ви повинні бути зарєестрованих і зайти за свій профіль.<br /><a href="index.php?site=register">Зареєструватися</a> | <a href="index.php?site=login">Войти</a>',
+  'not_logged'=>'Щоб керувати списком друзів, ви повинні бути зарєестрованих і зайти за свій профіль.<br><a href="index.php?site=register">Зареєструватися</a> | <a href="index.php?site=login">Войти</a>',
   'your_buddylist'=>'Ваш список друзів',
   'your_ignorelist'=>'Ваш список ігнорованих користувачів'
 );

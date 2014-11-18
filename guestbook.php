@@ -238,7 +238,7 @@ else {
 		unset($admincomment);
 		if($ds['admincomment'] != "") {
 			$admincomment = '<hr />
-			<small><b>'.$_language->module['admin_comment'].':</b><br />'.cleartext($ds['admincomment']).'</small>';
+			<small><b>'.$_language->module['admin_comment'].':</b><br>'.cleartext($ds['admincomment']).'</small>';
 		} else $admincomment = '';
 
 		$actions='';

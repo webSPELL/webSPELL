@@ -46,7 +46,7 @@ $language_array = Array(
 	'mail'=>'Mail címed',
 	'name'=>'Neved',
 	'new_entry'=>'Új bejegyzés',
-	'no_access'=>'Nem jelentkeztél be.<br /><a href="index.php?site=login">Bejelentkezés</a> | <a href="index.php?site=register">Regisztráció</a>',
+	'no_access'=>'Nem jelentkeztél be.<br><a href="index.php?site=login">Bejelentkezés</a> | <a href="index.php?site=register">Regisztráció</a>',
 	'options'=>'Lehetőségek',
 	'pmsubject_newentry'=>'Új vendégkönyv bejegyzés',
 	'pmtext_newentry'=>'[b]Valaki üzenetet hagyott a vendégkönyvedben![/b][br][br] [URL=index.php?site=guestbook#%insertid%]Kattints ide az elolvasásához![/URL] ',

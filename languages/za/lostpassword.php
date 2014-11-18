@@ -49,8 +49,8 @@ om pret te hê op ons bladsy
   'lost_password'=>'verlore wagwoord',
   'no_mail_given'=>'U het geen epos adress in ingevoer nie.',
   'no_user_found'=>'Geen gebruiker gevind!',
-  'successful'=>'Jou rekening is gevind<br /><br />
-    Jy sal \'n e-pos met jou rekening data in \'n paar sekondes ontvang.<br /><br />
+  'successful'=>'Jou rekening is gevind<br><br>
+    Jy sal \'n e-pos met jou rekening data in \'n paar sekondes ontvang.<br><br>
     &#8226; <a href="index.php?site=login">teken</a>',
   'your_email'=>'Jou e-pos'
 );

@@ -41,7 +41,7 @@ $language_array = Array(
   'faq'=>'Vrae',
   'faqs'=>'Gereelde vrae',
   'no_categories'=>'nog Geen kategorieë geskep nie',
-  'no_faq'=>'Geen vrae beskikbaar.<br /><a href="index.php?site=faq">Terug</a>',
+  'no_faq'=>'Geen vrae beskikbaar.<br><a href="index.php?site=faq">Terug</a>',
   'saved_on'=>'spaar op'
 );
 ?>

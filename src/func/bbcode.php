@@ -267,8 +267,8 @@ function imgreplace($content) {
 				if(!$picsize_l) $size_l = "9999"; else $size_l=$picsize_l;
 				if(!$picsize_h) $size_h = "9999"; else $size_h=$picsize_h;
 				if($picinfo[0] > $size_l OR $picinfo[1] > $size_h) 
-				$content = str_ireplace('[img]'.$teil[2].'[/img]', '[url='.$teil[2].']<img src="'.fixJavaEvents($teil[2]).'" border="0" width="'.$picsize_l.'" alt="'.$teil[2].'" /><br />([i]'.$_language->module['auto_resize'].': '.$picinfo[1].'x'.$picinfo[0].'px, '.$format.'[/i])[/url]', $content);
-				elseif($picinfo[0] > (2*$size_l) OR $picinfo[1] > (2*$size_h)) $content = str_ireplace('[img]'.$teil[2].'[/img]', '[url='.$teil[2].'][b]'.$_language->module['large_picture'].'[/b]<br />('.$picinfo[1].'x'.$picinfo[0].'px, '.$format.')[/url]', $content);
+				$content = str_ireplace('[img]'.$teil[2].'[/img]', '[url='.$teil[2].']<img src="'.fixJavaEvents($teil[2]).'" border="0" width="'.$picsize_l.'" alt="'.$teil[2].'" /><br>([i]'.$_language->module['auto_resize'].': '.$picinfo[1].'x'.$picinfo[0].'px, '.$format.'[/i])[/url]', $content);
+				elseif($picinfo[0] > (2*$size_l) OR $picinfo[1] > (2*$size_h)) $content = str_ireplace('[img]'.$teil[2].'[/img]', '[url='.$teil[2].'][b]'.$_language->module['large_picture'].'[/b]<br>('.$picinfo[1].'x'.$picinfo[0].'px, '.$format.')[/url]', $content);
 				else $content = preg_replace('#\[img\]'.preg_quote($teil[2],"#").'\[/img\]#si', '<img src="'.fixJavaEvents($teil[2]).'" border="0" alt="'.$teil[2].'" />', $content, 1);
 			}
 			else {
@@ -484,7 +484,7 @@ function replacement($content, $bbcode=true) {
 		$content = preg_replace("#\[list=1\][\s]{0,}(.*?)\[/list=1\]#si", "<ol class='list_num'>\\1</ol>", $content);
 		$content = preg_replace("#\[list=a\][\s]{0,}(.*?)\[/list=a\]#si", "<ol type=\"a\" class='list_alpha'>\\1</ol>", $content);
 		$content = preg_replace("#\[\*\](.*?)\[/\*\](\s){0,}#si", "<li>\\1</li>", $content);
-		$content = preg_replace("#\[br]#si", "<br />", $content);
+		$content = preg_replace("#\[br]#si", "<br>", $content);
 		$content = preg_replace("#\[hr]#si", "<hr />", $content);
 		$content = preg_replace("#\[center]#si", "<center>", $content);
 		$content = preg_replace("#\[/center]#si", "</center>", $content);

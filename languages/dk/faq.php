@@ -35,7 +35,7 @@ $language_array = Array(
 	'faq'=>'FAQ',
 	'faqs'=>'FAQs',
 	'no_categories'=>'Ingen kategorier oprettet endnu',
-	'no_faq'=>'Ingen spørgsmål tilgængelige<br /><a href="index.php?site=faq">Tilbage</a>',
+	'no_faq'=>'Ingen spørgsmål tilgængelige<br><a href="index.php?site=faq">Tilbage</a>',
 	'saved_on'=>'Gemt den'
 );
 ?>

@@ -574,7 +574,7 @@ elseif($action=="unpublished") {
 				$headlines='';
 				
 				foreach($message_array as $val) {
-					$headlines.='<a href="index.php?site=news_comments&amp;newsID='.$ds['newsID'].'&amp;lang='.$val['lang'].'">'.flags('[flag]'.$val['lang'].'[/flag]').' '.clearfromtags($val['headline']).'</a><br />';
+					$headlines.='<a href="index.php?site=news_comments&amp;newsID='.$ds['newsID'].'&amp;lang='.$val['lang'].'">'.flags('[flag]'.$val['lang'].'[/flag]').' '.clearfromtags($val['headline']).'</a><br>';
 				}
 
 				$poster='<a href="index.php?site=profile&amp;id='.$ds['poster'].'">'.getnickname($ds['poster']).'</a>';
@@ -701,7 +701,7 @@ elseif($action=="archive") {
 			$headlines='';
 
 			foreach($message_array as $val) {
-				$headlines.='<a href="index.php?site=news_comments&amp;newsID='.$ds['newsID'].'&amp;lang='.$val['lang'].'">'.flags('[flag]'.$val['lang'].'[/flag]').' '.clearfromtags($val['headline']).'</a> '.$isintern.'<br />';
+				$headlines.='<a href="index.php?site=news_comments&amp;newsID='.$ds['newsID'].'&amp;lang='.$val['lang'].'">'.flags('[flag]'.$val['lang'].'[/flag]').' '.clearfromtags($val['headline']).'</a> '.$isintern.'<br>';
 			}
 
 			$poster='<a href="index.php?site=profile&amp;id='.$ds['poster'].'">'.getnickname($ds['poster']).'</a>';

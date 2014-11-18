@@ -38,6 +38,6 @@ $language_array = Array(
   'no_informations'=>'немає інформації',
   'report_message'=>'[b]Нова %s - скарга[/b][br][br]%s-Ідентифікаційний номер: %d[br]Інформація: %s[br]Referer: [url] index.php?site=files&file=%d[/url]',
   'report_recognized'=>'Ваша скарга прийнята. Дякуємо.',
-  'wrong_securitycode'=>'Ви ввели невірний код безпеки<br /><br />[<a href="javascript:back();">назад</a>]'
+  'wrong_securitycode'=>'Ви ввели невірний код безпеки<br><br>[<a href="javascript:back();">назад</a>]'
 );
 ?>

@@ -61,7 +61,7 @@ $language_array = Array(
   'sort'=>'دسته بندى:',
   'squad'=>'گروه',
   'submit_challenge'=>'اعلام دعوت به مبارزه',
-  'thank_you'=>'!با تشکر از شما<br />',
+  'thank_you'=>'!با تشکر از شما<br>',
   'time'=>'زمان',
   'wrong_security_code'=>'.کد مهرمانه اشتباه است'
 );

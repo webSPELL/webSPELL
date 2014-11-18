@@ -43,8 +43,8 @@ nog veel plezier op onze site
 	'lost_password'=>'wachtwoord vergeten',
 	'no_mail_given'=>'You have not entered any mail adress.',
 	'no_user_found'=>'geen gebruiker gevonden!',
-	'successful'=>'Je account is gevonden<br /><br />
-	zal een mailtje krijgen met je accountgegevens in een paar seconden.<br /><br />
+	'successful'=>'Je account is gevonden<br><br>
+	zal een mailtje krijgen met je accountgegevens in een paar seconden.<br><br>
 	&#8226; <a href="index.php?site=login">log in</a>',
 	'your_email'=>'Je E-Mail'
 

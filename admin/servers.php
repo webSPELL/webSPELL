@@ -115,7 +115,7 @@ if($action=="add") {
 		        <td valign="top">'.$addflags.'</td>
 		      </tr>
 		    </table>
-        <br /><textarea id="message" name="message" rows="5" cols="" style="width: 100%;"></textarea>
+        <br><textarea id="message" name="message" rows="5" cols="" style="width: 100%;"></textarea>
       </td>
     </tr>
     <tr>
@@ -177,7 +177,7 @@ elseif($action=="edit") {
 		        <td valign="top">'.$addflags.'</td>
 		      </tr>
 		    </table>
-        <br /><textarea id="message" name="message" rows="5" cols="" style="width: 100%;">'.getinput($ds['info']).'</textarea>
+        <br><textarea id="message" name="message" rows="5" cols="" style="width: 100%;">'.getinput($ds['info']).'</textarea>
       </td>
     </tr>
     <tr>
@@ -191,7 +191,7 @@ else {
 	
   echo'<h1>&curren; '.$_language->module['servers'].'</h1>';
   
-  echo'<input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=servers&amp;action=add\');return document.MM_returnValue" value="'.$_language->module['new_server'].'" /><br /><br />';
+  echo'<input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=servers&amp;action=add\');return document.MM_returnValue" value="'.$_language->module['new_server'].'" /><br><br>';
 
 	$ergebnis=safe_query("SELECT * FROM ".PREFIX."servers ORDER BY sort");
 	$anz=mysqli_num_rows($ergebnis);
@@ -221,7 +221,7 @@ else {
 			$list = str_replace('value="'.$ds['serverID'].'-'.$ds['sort'].'"','value="'.$ds['serverID'].'-'.$ds['sort'].'" selected="selected"',$list);
 
 			echo'<tr>
-        <td class="'.$td.'"><img src="../images/games/'.$ds['game'].'.gif" width="13" height="13" border="0" alt="" /> <a href="hlsw://'.$ds['ip'].'"><b>'.$ds['ip'].'</b></a><br /><b>'.getinput($ds['name']).'</b><br />'.cleartext($ds['info'],1,'admin').'</td>
+        <td class="'.$td.'"><img src="../images/games/'.$ds['game'].'.gif" width="13" height="13" border="0" alt="" /> <a href="hlsw://'.$ds['ip'].'"><b>'.$ds['ip'].'</b></a><br><b>'.getinput($ds['name']).'</b><br>'.cleartext($ds['info'],1,'admin').'</td>
         <td class="'.$td.'" align="center"><input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=servers&amp;action=edit&amp;serverID='.$ds['serverID'].'\');return document.MM_returnValue" value="'.$_language->module['edit'].'" />
         <input type="button" onclick="MM_confirm(\''.$_language->module['really_delete'].'\', \'admincenter.php?site=servers&amp;delete=true&amp;serverID='.$ds['serverID'].'&amp;captcha_hash='.$hash.'\')" value="'.$_language->module['delete'].'" /></td>
         <td class="'.$td.'" align="center">'.$list.'</td>

@@ -67,7 +67,7 @@ $language_array = Array(
   'sort'=>'Kısa:',
   'squad'=>'Takım',
   'submit_challenge'=>'davet gönderin',
-  'thank_you'=>'İstek için teşekkürler!<br />',
+  'thank_you'=>'İstek için teşekkürler!<br>',
   'time'=>'Zaman',
   'wrong_security_code'=>'Yanlış güvenlik kodu.'
 );

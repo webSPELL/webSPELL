@@ -46,7 +46,7 @@ $language_array = Array(
 	'mail'=>'Vaš e-mail',
 	'name'=>'Vaše ime',
 	'new_entry'=>'Novi unos',
-	'no_access'=>'Niste prijavljeni.<br /><a href="index.php?site=login">Prijavi se</a> | <a href="index.php?site=register">Registriraj se</a>',
+	'no_access'=>'Niste prijavljeni.<br><a href="index.php?site=login">Prijavi se</a> | <a href="index.php?site=register">Registriraj se</a>',
 	'options'=>'Opcije',
 	'pmsubject_newentry'=>'Novi unos u knjigu gostiju',
 	'pmtext_newentry'=>'[b]Netko je ostavio poruku u Vašoj knjizi gostiju![/b][br][br] [URL=index.php?site=guestbook#%insertid%]Klikni da pročitaš poruku[/URL] ',

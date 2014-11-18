@@ -88,8 +88,8 @@ $language_array = Array(
   'no_new_posts'=>'nav jaunu ierakstu',
   'no_permission'=>'Jums nav atļaujas skatīt šo forumu!',
   'not_logged'=>'Jūs neesat pieslēdzies.',
-  'not_logged_msg'=>'<br /><br />Lai iesāktu jaunu tēmu vai atbildētu, Jums jāreģistrējas un jāpieslēdzas!<br /><br />
-&#8226; <a href="index.php?site=register">reģistrēties</a><br />
+  'not_logged_msg'=>'<br><br>Lai iesāktu jaunu tēmu vai atbildētu, Jums jāreģistrējas un jāpieslēdzas!<br><br>
+&#8226; <a href="index.php?site=register">reģistrēties</a><br>
 &#8226; <a href="index.php?site=login">pieslēgties</a>',
   'notify'=>'Paziņot, kad publicēta atbilde',
   'notify_mail'=>'Jauna atbilde %poster% tēmā

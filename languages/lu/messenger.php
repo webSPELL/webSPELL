@@ -60,7 +60,7 @@ $language_array = Array(
   'no_incoming'=>'Keng Noriichten am Postagang.',
   'no_outgoing'=>'Keng Noriichten am Postausgang.',
   'no_subject'=>'(keen Betreff)',
-  'not_logged'=>'Du bass net ugemellt.<br /><a href="index.php?site=login">umellen</a> | <a href="index.php?site=register">registréieren</a>',
+  'not_logged'=>'Du bass net ugemellt.<br><a href="index.php?site=login">umellen</a> | <a href="index.php?site=register">registréieren</a>',
   'options'=>'Optiounen',
   'outgoing'=>'Postausgang',
   'read'=>'Liesen',
@@ -79,7 +79,7 @@ $language_array = Array(
   'title'=>'Betreff',
   'your_message'=>'Deng Noriicht:',
   'mail_subject'=>'Du hues eng nei Noriicht',
-  'mail_body'=>'<b>Hallo %nickname%!</b><br /><br />Du hues eng nei Noriicht op BVBPOWER (%hp_url%) Kritt.<br />Klick <a href="http://%hp_url%?site=messenger">hei</a> fir d\'Noriicht ze liesen.<br /><br />(C) webSPELL.org',
+  'mail_body'=>'<b>Hallo %nickname%!</b><br><br>Du hues eng nei Noriicht op BVBPOWER (%hp_url%) Kritt.<br>Klick <a href="http://%hp_url%?site=messenger">hei</a> fir d\'Noriicht ze liesen.<br><br>(C) webSPELL.org',
   'error'=>'Fehler',
   'unknown_user'=>'Onbekannten Benotzer'
 );

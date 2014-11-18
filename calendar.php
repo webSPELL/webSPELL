@@ -158,25 +158,25 @@ function print_calendar($mon,$year) {
 				while ($ds = mysqli_fetch_array($ergebnis)) {
 					if($ds['type']=="d") {
 						if(($start_date<=$ds['date'] && $end_date>=$ds['date']) || ($start_date>=$ds['date'] && $end_date<=$ds['enddate']) || ($start_date<=$ds['enddate'] && $end_date>=$ds['enddate']))
-						$termin.='<a href="index.php?site=calendar&amp;tag='.$t.'&amp;month='.$mon.'&amp;year='.$year.'#event">'.clearfromtags($ds['short']).'</a><br />';
+						$termin.='<a href="index.php?site=calendar&amp;tag='.$t.'&amp;month='.$mon.'&amp;year='.$year.'#event">'.clearfromtags($ds['short']).'</a><br>';
 					}
 					else {
 						if($ds['date']>=$start_date && $ds['date']<=$end_date) {
 							$begin = getformattime($ds['date']);
-							$termin.='<a href="index.php?site=calendar&amp;tag='.$t.'&amp;month='.$mon.'&amp;year='.$year.'">'.$begin.' '.clearfromtags($ds['opptag']).'</a><br />';
+							$termin.='<a href="index.php?site=calendar&amp;tag='.$t.'&amp;month='.$mon.'&amp;year='.$year.'">'.$begin.' '.clearfromtags($ds['opptag']).'</a><br>';
 						}
 					}
 				}
 			}
-			else $termin="<br /><br />";
+			else $termin="<br><br>";
 			// DB ABRUF ENDE
 
 			//If date is today, highlight it
-			if (($t == date("j")) && ($mon == date("n")) && ($year == date("Y"))) echo'<td height="40" valign="top" bgcolor="'.BG_4.'"><b>'.$t.'</b><br />'.$termin.'</td>';
+			if (($t == date("j")) && ($mon == date("n")) && ($year == date("Y"))) echo'<td height="40" valign="top" bgcolor="'.BG_4.'"><b>'.$t.'</b><br>'.$termin.'</td>';
 			//  If the date is absent ie after 31, print space
 			else {
 				if($t==' ') echo'<td height="40" valign="top" style="background-color:'.BG_1.';">&nbsp;</td>';
-				else echo'<td height="40" valign="top" style="background-color:'.BG_2.';">'.$t.'<br />'.$termin.'</td>';
+				else echo'<td height="40" valign="top" style="background-color:'.BG_2.';">'.$t.'<br>'.$termin.'</td>';
 			}
 
 		}

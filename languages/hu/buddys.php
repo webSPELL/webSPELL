@@ -35,7 +35,7 @@ $language_array = Array(
 	'buddy_nousers'=>'Nincs ismerősöd.',
 	'buddys'=>'Ismerősök',
 	'ignore_nousers'=>'Nem tiltottál le egyetlen tagot sem.',
-	'not_logged'=>'Az ismerőseid kezeléséhez be kell jelentkezned.<br /><a href="index.php?site=register">Regisztráció</a> | <a href="index.php?site=login">Bejelentkezés</a>',
+	'not_logged'=>'Az ismerőseid kezeléséhez be kell jelentkezned.<br><a href="index.php?site=register">Regisztráció</a> | <a href="index.php?site=login">Bejelentkezés</a>',
 	'your_buddylist'=>'Ismerőseid listája',
 	'your_ignorelist'=>'Letiltott tagok listája'
 );

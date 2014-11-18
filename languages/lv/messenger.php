@@ -55,7 +55,7 @@ $language_array = Array(
   'no_incoming'=>'Nav ziņu ienākošajā mapē.',
   'no_outgoing'=>'Nav ziņu izejošajā mapē.',
   'no_subject'=>'(nav virsraksta)',
-  'not_logged'=>'Jūs neesat pieslēdzies.<br /><a href="index.php?site=login">Pieslēgties</a> | <a href="index.php?site=register">Reģistrēties</a>',
+  'not_logged'=>'Jūs neesat pieslēdzies.<br><a href="index.php?site=login">Pieslēgties</a> | <a href="index.php?site=register">Reģistrēties</a>',
   'options'=>'Izvēlnes',
   'outgoing'=>'Izejošie',
   'read'=>'Lasīt',
@@ -74,7 +74,7 @@ $language_array = Array(
   'title'=>'Virsraksts',
   'your_message'=>'Jūsu ziņa:',
   'mail_subject'=>'Jums ir jauna ziņa',
-  'mail_body'=>'<b>Sveiki %nickname%!</b><br /><br />Jums ir jauna ziņa webSPELL v4 (%hp_url%).<br />Nospiest <a href="http://%hp_url%?site=messenger">šeit</a> lai izlasītu ziņu.<br /><br />(C) webSPELL.org',
+  'mail_body'=>'<b>Sveiki %nickname%!</b><br><br>Jums ir jauna ziņa webSPELL v4 (%hp_url%).<br>Nospiest <a href="http://%hp_url%?site=messenger">šeit</a> lai izlasītu ziņu.<br><br>(C) webSPELL.org',
   'error'=>'kļūme',
   'unknown_user'=>'nezināms lietotājs'
 );

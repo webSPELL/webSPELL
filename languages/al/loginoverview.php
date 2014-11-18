@@ -70,8 +70,8 @@ $language_array = Array(
   'usermenu'=>'menuja përdoruesit',
   'views'=>'shikime',
   'x_new_message'=>'Janë %new_messages%mesazhe të reja.',
-  'you_have_to_be_logged_in'=>'Ju duhet të keni hyrë brenda për të parë në pasqyrë login!<br /><br />
-    &#8226; <a href="index.php?site=register">regjistrohu tani</a><br />
+  'you_have_to_be_logged_in'=>'Ju duhet të keni hyrë brenda për të parë në pasqyrë login!<br><br>
+    &#8226; <a href="index.php?site=register">regjistrohu tani</a><br>
     &#8226; <a href="index.php?site=login">logim</a>'
 );
 ?>

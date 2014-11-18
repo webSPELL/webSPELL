@@ -119,7 +119,7 @@ if(!isset($_GET['action'])) {
 				$screenshots.='<a href="images/clanwar-screens/'.$screen.'" target="_blank"><img src="images/clanwar-screens/'.$screen.'" width="150" height="100" border="0" style="padding-top:3px; padding-right:3px;" alt="" /></a>';
 				if($nbr==2) {
 					$nbr=1;
-					$screenshots.='<br />';
+					$screenshots.='<br>';
 				} else {
 					$nbr=2;
 				}

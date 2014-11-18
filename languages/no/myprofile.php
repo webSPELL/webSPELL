@@ -101,8 +101,8 @@ Thank you for your interest
 	'nickname'=>'Nickname',
 	'nickname_already_in_use'=>'nickname already in use!',
 	'no'=>'No',
-	'not_logged_in'=>'You have to be logged in to view your profile!<br /><br />
-    &#8226; <a href="index.php?site=register">register now</a><br />
+	'not_logged_in'=>'You have to be logged in to view your profile!<br><br>
+    &#8226; <a href="index.php?site=register">register now</a><br>
     &#8226; <a href="index.php?site=login">log in</a>',
 	'old_password'=>'old Password',
 	'old_pw_not_valid'=>'your old password is not valid!',

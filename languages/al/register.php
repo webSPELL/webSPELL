@@ -35,7 +35,7 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'activation_successful'=>'Aktivizimi accountit tuaj qe i suksesshëm.<br />Tani mund të logoheni.',
+  'activation_successful'=>'Aktivizimi accountit tuaj qe i suksesshëm.<br>Tani mund të logoheni.',
   'back'=>'mbrapsht',
   'enter_nickname'=>'Lutemi vendosni një pseudonim.',
   'enter_password'=>'Lutemi vendosni një password.',

@@ -60,7 +60,7 @@ $language_array = Array(
   'no_incoming'=>'Немає повідомлень в папці вхідні.',
   'no_outgoing'=>'Немає повідомлень в папці вихідні.',
   'no_subject'=>'(Немає заголовка)',
-  'not_logged'=>'Вы не вошли.<br /><a href="index.php?site=login">Ввійти</a> | <a href="index.php?site=register">Регистрироваться</a>',
+  'not_logged'=>'Вы не вошли.<br><a href="index.php?site=login">Ввійти</a> | <a href="index.php?site=register">Регистрироваться</a>',
   'options'=>'Налаштування',
   'outgoing'=>'Вихідні',
   'read'=>'Читати',
@@ -79,7 +79,7 @@ $language_array = Array(
   'title'=>'Тема',
   'your_message'=>'Ваше повідомлення:',
   'mail_subject'=>'Ви отримаєте нове повідомлення у ПП',
-  'mail_body'=>'<b>Привіт %nickname%!</b><br /><br />Ви отримали повідомлення в XNC (% hp_url%).<br />Натиснути <a href="http://%hp_url%?site=messenger">тут</a> щоб прочитати ПП.<br /><br />(C) webSPELL.org',
+  'mail_body'=>'<b>Привіт %nickname%!</b><br><br>Ви отримали повідомлення в XNC (% hp_url%).<br>Натиснути <a href="http://%hp_url%?site=messenger">тут</a> щоб прочитати ПП.<br><br>(C) webSPELL.org',
   'error'=>'помилка',
   'unknown_user'=>'невідомий користувач'
 );

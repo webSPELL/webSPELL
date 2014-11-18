@@ -41,7 +41,7 @@ $language_array = Array(
   'buddy_nousers'=>'Ystävälistassasi ei ole käyttäjiä',
   'buddys'=>'kaverit',
   'ignore_nousers'=>'Vihamieslistassasi ei ole käyttäjiä',
-  'not_logged'=>'Sinun täytyy olla rekisteröitynyt ja kirjautunut sisään hallitaksesi ystäviäsi.<br /><a href="index.php?site=register">Rekisteröi</a> | <a href="index.php?site=login">Kirjaudu sisään</a>',
+  'not_logged'=>'Sinun täytyy olla rekisteröitynyt ja kirjautunut sisään hallitaksesi ystäviäsi.<br><a href="index.php?site=register">Rekisteröi</a> | <a href="index.php?site=login">Kirjaudu sisään</a>',
   'your_buddylist'=>'Ystävälistasi',
   'your_ignorelist'=>'Vihamieslistasi'
 );

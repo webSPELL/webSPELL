@@ -65,8 +65,8 @@ $language_array = Array(
   'usermenu'=>'Корисничко мени',
   'views'=>'гледачи',
   'x_new_message'=>'Нови пораки: %new_messages%',
-  'you_have_to_be_logged_in'=>'Морате да бидете пријавени за да можете да ја видите оваа страница!<br /><br />
-    &#8226; <a href="index.php?site=register">Регистрирај се</a><br />
+  'you_have_to_be_logged_in'=>'Морате да бидете пријавени за да можете да ја видите оваа страница!<br><br>
+    &#8226; <a href="index.php?site=register">Регистрирај се</a><br>
     &#8226; <a href="index.php?site=login">Пријави се</a>'
 );
 ?>

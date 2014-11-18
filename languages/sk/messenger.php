@@ -54,7 +54,7 @@ $language_array = Array(
 	'no_incoming'=>'Žiadna správa v žložke prijatých správ.',
 	'no_outgoing'=>'Žiadna správa v žložke odoslaných správ.',
 	'no_subject'=>'(žiaden predmet)',
-	'not_logged'=>'Nie ste prihlásený.<br /><a href="index.php?site=login">Prihlásenie</a> | <a href="index.php?site=register">Registrácia</a>',
+	'not_logged'=>'Nie ste prihlásený.<br><a href="index.php?site=login">Prihlásenie</a> | <a href="index.php?site=register">Registrácia</a>',
 	'options'=>'Možnosti',
 	'outgoing'=>'Odoslané',
 	'read'=>'Prečítať',
@@ -73,7 +73,7 @@ $language_array = Array(
 	'title'=>'Predmet',
 	'your_message'=>'Vaša správa:',
 	'mail_subject'=>'Máte novú správu.',
-	'mail_body'=>'<b>Ahoj %nickname%!</b><br /><br />Máte novú správu na '.PAGETITLE.' (%hp_url%).<br />Kliknite <a href="http://%hp_url%?site=messenger">sem</a> pre prečítanie správy.<br /><br />(C) webSPELL.org',
+	'mail_body'=>'<b>Ahoj %nickname%!</b><br><br>Máte novú správu na '.PAGETITLE.' (%hp_url%).<br>Kliknite <a href="http://%hp_url%?site=messenger">sem</a> pre prečítanie správy.<br><br>(C) webSPELL.org',
 	'error'=>'error',
 	'unknown_user'=>'unknown user'
 );
