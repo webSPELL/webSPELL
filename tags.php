@@ -51,7 +51,7 @@ if(isset($_GET['tag'])){
                 }
                 echo "<h1>".$_language->module['search']."</h1>";
                 usort($data,array('Tags','sortByDate'));
-                echo "<center><b>".count($data)."</b> ".$_language->module['results_found']."</center><br /><br />";
+                echo "<p class=\"text-center\"><b>".count($data)."</b> ".$_language->module['results_found']."</p><br><br>";
                 foreach($data as $entry){
                         
                         $date = getformatdate($entry['date']);

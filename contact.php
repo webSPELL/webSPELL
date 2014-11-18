@@ -77,8 +77,8 @@ if($action == "send") {
 	else {
 		$errors=implode('<br />&#8226; ',$fehler);
 		
-    $showerror = '<div class="errorbox">
-      <b>'.$_language->module['errors_there'].':</b><br /><br />
+    $showerror = '<div class="alert alert-danger">
+      <strong>'.$_language->module['errors_there'].':</strong><br>
       &#8226; '.$errors.'
     </div>';
 	}

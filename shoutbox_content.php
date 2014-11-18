@@ -103,9 +103,9 @@ elseif($action=="showall") {
 	}
 
 	if($type=="ASC")
-	$sorter='<a href="index.php?site=shoutbox_content&amp;action=showall&amp;page='.$page.'&amp;type=DESC">'.$_language->module['sort'].'</a> <img src="images/icons/asc.gif" width="9" height="7" border="0" alt="" />&nbsp;&nbsp;&nbsp;';
+		$sorter='<a href="index.php?site=shoutbox_content&amp;action=showall&amp;page='.$page.'&amp;type=DESC">'.$_language->module['sort'].'</a> <img src="images/icons/asc.gif">';
 	else
-	$sorter='<a href="index.php?site=shoutbox_content&amp;action=showall&amp;page='.$page.'&amp;type=ASC">'.$_language->module['sort'].'</a> <img src="images/icons/desc.gif" width="9" height="7" border="0" alt="" />&nbsp;&nbsp;&nbsp;';
+		$sorter='<a href="index.php?site=shoutbox_content&amp;action=showall&amp;page='.$page.'&amp;type=ASC">'.$_language->module['sort'].'</a> <img src="images/icons/desc.gif">';
 
 	eval ("\$shoutbox_all_head = \"".gettemplate("shoutbox_all_head")."\";");
 	echo $shoutbox_all_head;
@@ -134,15 +134,14 @@ elseif($action=="showall") {
 	eval ("\$shoutbox_all_foot = \"".gettemplate("shoutbox_all_foot")."\";");
 	echo $shoutbox_all_foot;
 
-	if(isfeedbackadmin($userID)) $submit='<input class="input" type="checkbox" name="ALL" value="ALL" onclick="SelectAll(this.form);" /> '.$_language->module['select_all'].'
-											  <input type="submit" value="'.$_language->module['delete_selected'].'" />';
+	if(isfeedbackadmin($userID)) $submit='<input class="input" type="checkbox" name="ALL" value="ALL" onclick="SelectAll(this.form);"> '.$_language->module['select_all'].'
+											  <input type="submit" value="'.$_language->module['delete_selected'].'" class="btn btn-danger">';
 	else $submit='';
-	echo'<table width="100%" border="0" cellspacing="0" cellpadding="0">
-		<tr>
-   		<td>'.$page_link.'</td>
-   		<td align="right">'.$submit.'</td>
-		</tr>
-		</table></form>';
+	echo'<div class="row">
+            <div class="col-md-6">'.$page_link.'</div>
+            <div class="col-md-6 text-right">'.$submit.'</div>
+        </div>
+		</form>';
 
 	if($pages>1) $page_link = makepagelink("index.php?site=shoutbox_content&amp;action=showall", $page, $pages);
 }

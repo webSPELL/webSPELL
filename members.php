@@ -55,15 +55,15 @@ if($action=="show") {
 
 		$border=BORDER;
     
-    if($ds['gamesquad']) {
-				$results='[ <a href="index.php?site=clanwars&amp;action=showonly&amp;id='.$squadID.'&amp;sort=date&amp;only=squad">'.$_language->module['results'].'</a>';
-				$awards='| <a href="index.php?site=awards&amp;action=showsquad&amp;squadID='.$squadID.'&amp;page=1">'.$_language->module['awards'].'</a>';
-				$challenge='| <a href="index.php?site=challenge">'.$_language->module['challenge'].'</a> ]';
-			} else {
-				$results='';
-				$awards='';
-				$challenge='';
-			}
+    	if($ds['gamesquad']) {
+			$results='<a href="index.php?site=clanwars&amp;action=showonly&amp;id='.$squadID.'&amp;sort=date&amp;only=squad" class="btn btn-primary">'.$_language->module['results'].'</a>';
+			$awards='<a href="index.php?site=awards&amp;action=showsquad&amp;squadID='.$squadID.'&amp;page=1" class="btn btn-primary">'.$_language->module['awards'].'</a>';
+			$challenge='<a href="index.php?site=challenge" class="btn btn-primary" class="btn btn-primary">'.$_language->module['challenge'].'</a>';
+		} else {
+			$results='';
+			$awards='';
+			$challenge='';
+		}
 
 		$member=safe_query("SELECT * FROM ".PREFIX."squads_members s, ".PREFIX."user u WHERE s.squadID='".$ds['squadID']."' AND s.userID = u.userID ORDER BY sort");
 		
@@ -172,9 +172,9 @@ else {
 			$details=str_replace('%squadID%', $squadID, $_language->module['show_details']);
 
 			if($ds['gamesquad']) {
-				$results='[ <a href="index.php?site=clanwars&amp;action=showonly&amp;id='.$squadID.'&amp;sort=date&amp;only=squad">'.$_language->module['results'].'</a>';
-				$awards='| <a href="index.php?site=awards&amp;action=showsquad&amp;squadID='.$squadID.'&amp;page=1">'.$_language->module['awards'].'</a>';
-				$challenge='| <a href="index.php?site=challenge">'.$_language->module['challenge'].'</a> ]';
+				$results='<a href="index.php?site=clanwars&amp;action=showonly&amp;id='.$squadID.'&amp;sort=date&amp;only=squad" class="btn btn-primary">'.$_language->module['results'].'</a>';
+				$awards='<a href="index.php?site=awards&amp;action=showsquad&amp;squadID='.$squadID.'&amp;page=1" class="btn btn-primary">'.$_language->module['awards'].'</a>';
+				$challenge='<a href="index.php?site=challenge" class="btn btn-primary">'.$_language->module['challenge'].'</a>';
 			} else {
 				$results='';
 				$awards='';
@@ -192,7 +192,7 @@ else {
 
 			$member=safe_query("SELECT * FROM ".PREFIX."squads_members s, ".PREFIX."user u WHERE s.squadID='".$ds['squadID']."' AND s.userID = u.userID ORDER BY sort");
 			
-      eval ("\$members_head = \"".gettemplate("members_head")."\";");
+      		eval ("\$members_head = \"".gettemplate("members_head")."\";");
 			echo $members_head;
 
 			$i=1;

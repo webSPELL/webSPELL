@@ -82,43 +82,40 @@ function print_calendar($mon,$year) {
 		$next = 1;
 	}
 
-	echo'<table width="100%" border="0" cellspacing="1" cellpadding="2" bgcolor="'.PAGEBG.'">
+	echo'<table class="table">
     <tr>
-      <td bgcolor="'.BGCAT.'" align="center"><a class="category" href="index.php?site=calendar&amp;month=01">'.mb_substr($_language->module['jan'], 0, 3).'</a></td>
-      <td bgcolor="'.BGCAT.'" align="center"><a class="category" href="index.php?site=calendar&amp;month=02">'.mb_substr($_language->module['feb'], 0, 3).'</a></td>
-      <td bgcolor="'.BGCAT.'" align="center"><a class="category" href="index.php?site=calendar&amp;month=03">'.mb_substr($_language->module['mar'], 0, 3).'</a></td>
-      <td bgcolor="'.BGCAT.'" align="center"><a class="category" href="index.php?site=calendar&amp;month=04">'.mb_substr($_language->module['apr'], 0, 3).'</a></td>
-      <td bgcolor="'.BGCAT.'" align="center"><a class="category" href="index.php?site=calendar&amp;month=05">'.mb_substr($_language->module['may'], 0, 3).'</a></td>
-      <td bgcolor="'.BGCAT.'" align="center"><a class="category" href="index.php?site=calendar&amp;month=06">'.mb_substr($_language->module['jun'], 0, 3).'</a></td>
+      <td align="center"><a class="category" href="index.php?site=calendar&amp;month=01">'.mb_substr($_language->module['jan'], 0, 3).'</a></td>
+      <td align="center"><a class="category" href="index.php?site=calendar&amp;month=02">'.mb_substr($_language->module['feb'], 0, 3).'</a></td>
+      <td align="center"><a class="category" href="index.php?site=calendar&amp;month=03">'.mb_substr($_language->module['mar'], 0, 3).'</a></td>
+      <td align="center"><a class="category" href="index.php?site=calendar&amp;month=04">'.mb_substr($_language->module['apr'], 0, 3).'</a></td>
+      <td align="center"><a class="category" href="index.php?site=calendar&amp;month=05">'.mb_substr($_language->module['may'], 0, 3).'</a></td>
+      <td align="center"><a class="category" href="index.php?site=calendar&amp;month=06">'.mb_substr($_language->module['jun'], 0, 3).'</a></td>
     </tr>
     <tr>
-      <td bgcolor="'.BGCAT.'" align="center"><a class="category" href="index.php?site=calendar&amp;month=07">'.mb_substr($_language->module['jul'], 0, 3).'</a></td>
-      <td bgcolor="'.BGCAT.'" align="center"><a class="category" href="index.php?site=calendar&amp;month=08">'.mb_substr($_language->module['aug'], 0, 3).'</a></td>
-      <td bgcolor="'.BGCAT.'" align="center"><a class="category" href="index.php?site=calendar&amp;month=09">'.mb_substr($_language->module['sep'], 0, 3).'</a></td>
-      <td bgcolor="'.BGCAT.'" align="center"><a class="category" href="index.php?site=calendar&amp;month=10">'.mb_substr($_language->module['oct'], 0, 3).'</a></td>
-      <td bgcolor="'.BGCAT.'" align="center"><a class="category" href="index.php?site=calendar&amp;month=11">'.mb_substr($_language->module['nov'], 0, 3).'</a></td>
-      <td bgcolor="'.BGCAT.'" align="center"><a class="category" href="index.php?site=calendar&amp;month=12">'.mb_substr($_language->module['dec'], 0, 3).'</a></td>
+      <td align="center"><a class="category" href="index.php?site=calendar&amp;month=07">'.mb_substr($_language->module['jul'], 0, 3).'</a></td>
+      <td align="center"><a class="category" href="index.php?site=calendar&amp;month=08">'.mb_substr($_language->module['aug'], 0, 3).'</a></td>
+      <td align="center"><a class="category" href="index.php?site=calendar&amp;month=09">'.mb_substr($_language->module['sep'], 0, 3).'</a></td>
+      <td align="center"><a class="category" href="index.php?site=calendar&amp;month=10">'.mb_substr($_language->module['oct'], 0, 3).'</a></td>
+      <td align="center"><a class="category" href="index.php?site=calendar&amp;month=11">'.mb_substr($_language->module['nov'], 0, 3).'</a></td>
+      <td align="center"><a class="category" href="index.php?site=calendar&amp;month=12">'.mb_substr($_language->module['dec'], 0, 3).'</a></td>
     </tr>
-    </table>
-    <br />';	 
+    </table>';	 
 
-	echo'<a name="event"></a><table width="100%" cellspacing="1" border="0" cellpadding="2" bgcolor="'.PAGEBG.'">
+	echo'<a name="event"></a><table class="table table-bordered">
     <tr>
       <td class="title" align="center">&laquo; <a class="titlelink" href="index.php?site=calendar&amp;month='.$prev.'&amp;year='.$prev_yr.'">'.mb_substr($_language->module[strtolower(date('M', mktime(0, 0, 0, $prev, 1, $prev_yr)))], 0, 3).'</a></td>
       <td class="title" align="center" colspan="5">'.$_language->module[strtolower(date("M",$first_day))].' '.$temp_yr.'</td>
       <td class="title" align="center"><a class="titlelink" href="index.php?site=calendar&amp;month='.$next.'&amp;year='.$next_yr.'">'.mb_substr($_language->module[strtolower(date('M', mktime(0, 0, 0, $next, 1, $next_yr)))], 0, 3).'</a> &raquo;</td>
     </tr>
-    <tr><td colspan="7" bgcolor="'.PAGEBG.'"></td></tr>
     <tr>
-      <td bgcolor="'.BGCAT.'" width="14%" align="center">'.$_language->module['mon'].'</td>
-      <td bgcolor="'.BGCAT.'" width="14%" align="center">'.$_language->module['tue'].'</td>
-      <td bgcolor="'.BGCAT.'" width="14%" align="center">'.$_language->module['wed'].'</td>
-      <td bgcolor="'.BGCAT.'" width="14%" align="center">'.$_language->module['thu'].'</td>
-      <td bgcolor="'.BGCAT.'" width="14%" align="center">'.$_language->module['fri'].'</td>
-      <td bgcolor="'.BGCAT.'" width="14%" align="center">'.$_language->module['sat'].'</td>
-      <td bgcolor="'.BGCAT.'" width="16%" align="center">'.$_language->module['sun'].'</td>
+      <td width="14%" align="center">'.$_language->module['mon'].'</td>
+      <td width="14%" align="center">'.$_language->module['tue'].'</td>
+      <td width="14%" align="center">'.$_language->module['wed'].'</td>
+      <td width="14%" align="center">'.$_language->module['thu'].'</td>
+      <td width="14%" align="center">'.$_language->module['fri'].'</td>
+      <td width="14%" align="center">'.$_language->module['sat'].'</td>
+      <td width="16%" align="center">'.$_language->module['sun'].'</td>
     </tr>
-    <tr><td colspan="7" bgcolor="'.BG_1.'"></td></tr>
     <tr>';
 
 	$days = date("t", mktime(0, 0, 0, $mon, 1, $year)); //days of selected month
@@ -186,12 +183,11 @@ function print_calendar($mon,$year) {
 		if (($row + 1) != ($end+1)) echo'</tr><tr>';
 		else echo'</tr>';
 	}
-	echo'<tr><td colspan="7" bgcolor="'.PAGEBG.'"></td></tr>
-    <tr>
-      <td bgcolor="'.BGCAT.'" colspan="7" align="center"><a class="category" href="index.php?site=calendar#event"><b>'.$_language->module['today_events'].'</b></a></td>
+	echo'<tr>
+      <td colspan="7" align="center"><a class="category" href="index.php?site=calendar#event"><b>'.$_language->module['today_events'].'</b></a></td>
     </tr>
   </table>
-  <br /><br />';
+  <br><br>';
 }
 
 function print_termine($tag,$month,$year) {
@@ -251,10 +247,10 @@ function print_termine($tag,$month,$year) {
 						if(issquadmember($userID, $ds['squad']) AND $ds['date']>time()) $announce='&#8226; <a href="index.php?site=calendar&amp;action=announce&amp;upID='.$ds['upID'].'">'.$_language->module['announce_here'].'</a>';
 						else $announce = "";
 
-						if(isclanwaradmin($userID)) $adminaction='<div align="right">
-            <input type="button" onclick="MM_openBrWindow(\'clanwars.php?action=new&amp;upID='.$ds['upID'].'\',\'Clanwars\',\'toolbar=no,status=no,scrollbars=yes,width=800,height=490\')" value="'.$_language->module['add_clanwars'].'" />
-            <input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=calendar&amp;action=editwar&amp;upID='.$ds['upID'].'\');return document.MM_returnValue" value="'.$_language->module['edit'].'" />
-            <input type="button" onclick="MM_confirm(\''.$_language->module['really_delete'].'\', \'calendar.php?action=delete&amp;upID='.$ds['upID'].'\')" value="'.$_language->module['delete'].'" /></div>';
+						if(isclanwaradmin($userID)) $adminaction='<div class="text-right">
+            <input type="button" onclick="MM_openBrWindow(\'clanwars.php?action=new&amp;upID='.$ds['upID'].'\',\'Clanwars\',\'toolbar=no,status=no,scrollbars=yes,width=800,height=490\')" value="'.$_language->module['add_clanwars'].'" class="btn btn-danger">
+            <input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=calendar&amp;action=editwar&amp;upID='.$ds['upID'].'\');return document.MM_returnValue" value="'.$_language->module['edit'].'" class="btn btn-danger">
+            <input type="button" onclick="MM_confirm(\''.$_language->module['really_delete'].'\', \'calendar.php?action=delete&amp;upID='.$ds['upID'].'\')" value="'.$_language->module['delete'].'" class="btn btn-danger"></div>';
 						else $adminaction = '';
 					} else $players = $_language->module['access_member'];
 
@@ -300,7 +296,7 @@ function print_termine($tag,$month,$year) {
 						if(isclanmember($userID) AND $ds['date']>time()) $announce='&#8226; <a href="index.php?site=calendar&amp;action=announce&amp;upID='.$ds['upID'].'">'.$_language->module['announce_here'].'</a>';
 						else $announce='';
 
-						if(isclanwaradmin($userID)) $adminaction='<div align="right"><input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=calendar&amp;action=editdate&amp;upID='.$ds['upID'].'\');return document.MM_returnValue" value="'.$_language->module['edit'].'" /><input type="button" onclick="MM_confirm(\''.$_language->module['really_delete'].'\', \'calendar.php?action=delete&amp;upID='.$ds['upID'].'\')" value="'.$_language->module['delete'].'" /></div>';
+						if(isclanwaradmin($userID)) $adminaction='<div align="right"><input type="button" class="btn btn-danger" onclick="MM_goToURL(\'parent\',\'index.php?site=calendar&amp;action=editdate&amp;upID='.$ds['upID'].'\');return document.MM_returnValue" value="'.$_language->module['edit'].'" /><input type="button" class="btn btn-danger" onclick="MM_confirm(\''.$_language->module['really_delete'].'\', \'calendar.php?action=delete&amp;upID='.$ds['upID'].'\')" value="'.$_language->module['delete'].'" /></div>';
 						else $adminaction='';
 					} else {
 						$players = $_language->module['access_member'];
@@ -422,11 +418,11 @@ elseif($action=="saveeditdate") {
 	$_language->read_module('calendar');
 	if(!isclanwaradmin($userID)) die($_language->module['no_access']);
 
-	$hour = $_POST['hour'];
-	$minute = $_POST['minute'];
-	$day = $_POST['day'];
-	$month = $_POST['month'];
-	$year = $_POST['year'];
+	$starttime_date = $_POST['starttime_date'];
+    $starttime_time = $_POST['starttime_time'];
+    
+    $endtime_date = $_POST['endtime_date'];
+    $endtime_time = $_POST['endtime_time'];
 
 	$date=mktime($hour,$minute,0,$month,$day,$year);
 	$enddate=mktime($_POST['endhour'],$_POST['endminute'],0,$_POST['endmonth'],$_POST['endday'],$_POST['endyear']);
@@ -508,8 +504,8 @@ elseif($action=="addwar") {
 		eval ("\$title_calendar = \"".gettemplate("title_calendar")."\";");
 		echo $title_calendar;
 
-		echo'<input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=calendar&amp;action=addwar\');return document.MM_returnValue" value="'.$_language->module['add_clanwar'].'" />
-    <input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=calendar&amp;action=adddate\');return document.MM_returnValue" value="'.$_language->module['add_event'].'" /><br /><br />';
+		echo'<input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=calendar&amp;action=addwar\');return document.MM_returnValue" value="'.$_language->module['add_clanwar'].'" class="btn btn-danger">
+    <input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=calendar&amp;action=adddate\');return document.MM_returnValue" value="'.$_language->module['add_event'].'" class="btn btn-danger"><br><br>';
 
 		$day='';
 		$month='';
@@ -588,8 +584,8 @@ elseif($action=="editwar") {
 		eval ("\$title_calendar = \"".gettemplate("title_calendar")."\";");
 		echo $title_calendar;
 
-		echo'<input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=calendar&amp;action=addwar\');return document.MM_returnValue" value="'.$_language->module['add_clanwar'].'" />
-    <input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=calendar&amp;action=adddate\');return document.MM_returnValue" value="'.$_language->module['add_event'].'" /><br /><br />';
+		echo'<input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=calendar&amp;action=addwar\');return document.MM_returnValue" value="'.$_language->module['add_clanwar'].'" class="btn btn-danger">
+    <input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=calendar&amp;action=adddate\');return document.MM_returnValue" value="'.$_language->module['add_event'].'" class="btn btn-danger"><br><br>';
 
 		$day='';
 		$month='';
@@ -637,8 +633,8 @@ elseif($action=="adddate") {
 		eval ("\$title_calendar = \"".gettemplate("title_calendar")."\";");
 		echo $title_calendar;
 
-		echo'<input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=calendar&amp;action=addwar\');return document.MM_returnValue" value="'.$_language->module['add_clanwar'].'" />
-    <input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=calendar&amp;action=adddate\');return document.MM_returnValue" value="'.$_language->module['add_event'].'" /><br /><br />';
+		echo'<input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=calendar&amp;action=addwar\');return document.MM_returnValue" value="'.$_language->module['add_clanwar'].'" class="btn btn-danger">
+    <input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=calendar&amp;action=adddate\');return document.MM_returnValue" value="'.$_language->module['add_event'].'" class="btn btn-danger"><br><br>';
 
 		$day = '';
 		$month = '';
@@ -672,50 +668,22 @@ elseif($action=="editdate") {
 		eval ("\$title_calendar = \"".gettemplate("title_calendar")."\";");
 		echo $title_calendar;
 
-		echo'<input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=calendar&amp;action=addwar\');return document.MM_returnValue" value="'.$_language->module['add_clanwar'].'" />
-    <input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=calendar&amp;action=adddate\');return document.MM_returnValue" value="'.$_language->module['add_event'].'" /><br /><br />';
+		echo'<input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=calendar&amp;action=addwar\');return document.MM_returnValue" value="'.$_language->module['add_clanwar'].'" class="btn btn-danger">
+    <input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=calendar&amp;action=adddate\');return document.MM_returnValue" value="'.$_language->module['add_event'].'" class="btn btn-danger"><br><br>';
 
-		$day='';
-		$month='';
-		$year='';
-		$endday='';
-		$endmonth='';
-		$endyear='';
 
 		$upID = $_GET['upID'];
 		$ds=mysqli_fetch_array(safe_query("SELECT * FROM ".PREFIX."upcoming WHERE upID='$upID'"));
-		for($i=1; $i<32; $i++) {
-			if($i==date("d", $ds['date'])) $day.='<option selected="selected">'.$i.'</option>';
-			else $day.='<option>'.$i.'</option>';
-		}
-		for($i=1; $i<13; $i++) {
-			if($i==date("n", $ds['date'])) $month.='<option value="'.$i.'" selected="selected">'.date("M", $ds['date']).'</option>';
-			else $month.='<option value="'.$i.'">'.date("M", mktime(0,0,0,$i,1,2000)).'</option>';
-		}
-		for($i=2000; $i<2016; $i++) {
-			if($i==date("Y", $ds['date'])) $year.='<option selected="selected">'.$i.'</option>';
-			else $year.='<option>'.$i.'</option>';
-		}
-		for($i=1; $i<32; $i++) {
-			if($i==date("d", $ds['enddate'])) $endday.='<option selected="selected">'.$i.'</option>';
-			else $endday.='<option>'.$i.'</option>';
-		}
-		for($i=1; $i<13; $i++) {
-			if($i==date("n", $ds['enddate'])) $endmonth.='<option value="'.$i.'" selected="selected">'.date("M", $ds['enddate']).'</option>';
-			else $endmonth.='<option value="'.$i.'">'.date("M", mktime(0,0,0,$i,1,2000)).'</option>';
-		}
-		for($i=2000; $i<2016; $i++) {
-			if($i==date("Y", $ds['enddate'])) $endyear.='<option selected="selected">'.$i.'</option>';
-			else $endyear.='<option>'.$i.'</option>';
-		}
+
+		$starttime_date = date("Y",$ds["date"]).'-'.date("m",$ds["date"]).'-'.date("d",$ds["date"]);
+        $starttime_time = date("H",$ds["date"]).':'.date("i",$ds["date"]).':00';
+        
+        $endtime_date = date("Y",$ds["enddate"]).'-'.date("m",$ds["enddate"]).'-'.date("d",$ds["enddate"]);
+        $endtime_time = date("H",$ds["enddate"]).':'.date("i",$ds["enddate"]).':00';
+
 		$countries=getcountries();
 		$countries=str_replace(' selected="selected"', '', $countries);
 		$countries=str_replace('value="'.$ds['country'].'"', 'value="'.$ds['country'].'" selected="selected"', $countries);
-
-		$hour=date("H", $ds['date']);
-		$endhour=date("H", $ds['enddate']);
-		$minute=date("i", $ds['date']);
-		$endminute=date("i", $ds['enddate']);
 
 		$short = htmlspecialchars($ds['short']);
 		$title = htmlspecialchars($ds['title']);
@@ -752,8 +720,8 @@ else {
 	eval ("\$title_calendar = \"".gettemplate("title_calendar")."\";");
 	echo $title_calendar;
 
-	if(isclanwaradmin($userID)) echo '<input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=calendar&amp;action=addwar\');return document.MM_returnValue" value="'.$_language->module['add_clanwar'].'" />
-  <input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=calendar&amp;action=adddate\');return document.MM_returnValue" value="'.$_language->module['add_event'].'" /><br /><br />';
+	if(isclanwaradmin($userID)) echo '<input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=calendar&amp;action=addwar\');return document.MM_returnValue" value="'.$_language->module['add_clanwar'].'" class="btn btn-danger">
+  <input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=calendar&amp;action=adddate\');return document.MM_returnValue" value="'.$_language->module['add_event'].'" class="btn btn-danger"><br><br>';
 	
 	if(isset($_GET['month'])) $month = (int)$_GET['month'];
 	else $month = date("m");

@@ -208,7 +208,7 @@ function boardmain() {
 			$anztopics=$db['topics'];
 			$anzposts=$db['posts'];
 			$boardname = $db['name'];
-			$boardname ='&#8226; <a href="index.php?site=forum&amp;board='.$board.'"><b>'.$boardname.'</b></a>';
+			$boardname ='<a href="index.php?site=forum&amp;board='.$board.'"><b>'.$boardname.'</b></a>';
 
 			if($db['info']) $boardinfo=$db['info'];
 			else $boardinfo='';
@@ -322,7 +322,7 @@ function boardmain() {
 		$anzposts=$db['posts'];
 
 		$boardname = $db['name'];
-		$boardname='&#8226; <a href="index.php?site=forum&amp;board='.$db['boardID'].'"><b>'.$boardname.'</b></a>';
+		$boardname='<a href="index.php?site=forum&amp;board='.$db['boardID'].'"><b>'.$boardname.'</b></a>';
 
 		$boardinfo='';
 		if($db['info']) $boardinfo=$db['info'];
@@ -482,10 +482,10 @@ function showboard($board) {
 	$moderators=getmoderators($board);
 	if($moderators) $moderators='('.$_language->module['moderated_by'].': '.$moderators.')';
 
-	$actions='<a href="index.php?site=search">'.$_language->module['search_image'].'</a>';
+	$actions='<a href="index.php?site=search" class="btn btn-default"><i class="icon-search"></i> Search</a>';
 	if($loggedin) {
-		$mark='&#8226; <a href="index.php?site=forum&amp;board='.$board.'&amp;action=markall">'.$_language->module['mark_topics_read'].'</a>';
-		if($writer) $actions.=' <a href="index.php?site=forum&amp;addtopic=true&amp;board='.$board.'">'.$_language->module['newtopic_image'].'</a>';
+		$mark='<a href="index.php?site=forum&amp;board='.$board.'&amp;action=markall">'.$_language->module['mark_topics_read'].'</a>';
+		if($writer) $actions.=' <a href="index.php?site=forum&amp;addtopic=true&amp;board='.$board.'" class="btn btn-primary"><i class="icon-comment-alt"></i> '.$_language->module['new_topic'].'</a>';
 	} else $mark='';
 	
 	$cat = $db['category'];

@@ -35,7 +35,7 @@ if(isset($_POST['save']) and $_POST['save']) {
 	if(!iscashadmin($userID)) die($_language->module['no_access']);
 
 	$date=time();
-	$paydate=mktime(0,0,0,$_POST['month'],$_POST['day'],$_POST['year']);
+	$paydate=strtotime($_POST['date']);
 
 	safe_query("INSERT INTO ".PREFIX."cash_box ( date, paydate, usedfor, info, totalcosts, usercosts, squad, konto ) VALUES ('$date', '$paydate', '".$_POST['usedfor']."', '".$_POST['info']."', '".$_POST['euro']."', '".$_POST['usereuro']."', '".$_POST['squad']."', '".$_POST['konto']."' ) ");
 	$id=mysqli_insert_id($_database);
@@ -50,7 +50,7 @@ elseif(isset($_POST['saveedit']) and $_POST['saveedit']) {
 	if(!iscashadmin($userID)) die($_language->module['no_access']);
 
 	$date=time();
-	$paydate=mktime(0,0,0,$_POST['month'],$_POST['day'],$_POST['year']);
+	$paydate=strtotime($_POST['date']);
 
 	$id = $_POST['id'];
 
@@ -105,13 +105,6 @@ elseif(isset($_POST['pay']) and $_POST['pay']) {
 
 if(!isclanmember($userID) and !iscashadmin($userID)) echo $_language->module['clanmembers_only'];
 else {
-
-	$bg1=BG_1;
-	$bg2=BG_2;
-	$pagebg=PAGEBG;
-	$border=BORDER;
-	$bghead=BGHEAD;
-	$bgcat=BGCAT;
 
 	if(isset($_GET['action']) and $_GET['action']=="new") {
 
@@ -211,17 +204,8 @@ else {
 			}
 			$ergebnis=safe_query("SELECT * FROM ".PREFIX."cash_box WHERE squad='".$squadID."' ORDER BY paydate DESC LIMIT 0,1");
 
-			echo'<br /><br /><table width="100%" border="0" cellspacing="0" cellpadding="0">
-        <tr>
-          <td valign="top" width="180"><b>'.$usersquad.$costs_squad.'</b></td>
-        </tr>
-        <tr>
-          <td height="1" bgcolor="'.BG_1.'" width="100%" colspan="4"></td>
-        </tr>
-        <tr><td height="15"></td></tr>';
-
-			echo '<tr>
-							<td valign="top" width="180">';
+			echo'<div class="col-md-6">
+			<b>'.$usersquad.$costs_squad.'</b>';
 
 			if(mysqli_num_rows($ergebnis)) {
 				$ds=mysqli_fetch_array($ergebnis);
@@ -239,19 +223,17 @@ else {
 				$usage=$ds['usedfor'];
 
 
-				if(iscashadmin($userID)) $adminaction='<input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=cash_box&amp;action=edit&amp;id='.$id.'\');return document.MM_returnValue" value="'.$_language->module['edit'].'" /> <input type="button" onclick="MM_confirm(\''.$_language->module['really_delete'].'\', \'cash_box.php?delete=true&amp;id='.$id.'\')" value="'.$_language->module['delete'].'" />';
+				if(iscashadmin($userID)) $adminaction='<input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=cash_box&amp;action=edit&amp;id='.$id.'\');return document.MM_returnValue" value="'.$_language->module['edit'].'" class="btn btn-danger"> <input type="button" onclick="MM_confirm(\''.$_language->module['really_delete'].'\', \'cash_box.php?delete=true&amp;id='.$id.'\')" value="'.$_language->module['delete'].'" class="btn btn-danger">';
 
 				eval ("\$cash_box_usage = \"".gettemplate("cash_box_usage")."\";");
 				echo $cash_box_usage;
 
 				$all=safe_query("SELECT * FROM ".PREFIX."cash_box WHERE squad='".$squadID."' ORDER BY paydate DESC");
-				echo'<br /><br />';
 				while($ds=mysqli_fetch_array($all)) {
 					echo'&#8226; <a href="index.php?site=cash_box&amp;id='.$ds['cashID'].'&amp;squad='.$squadID.'"><b>'.$ds['usedfor'].'</b></a><br />';
 				}
 
-				echo'</td><td width="10">&nbsp;</td>
-					<td valign="top">';
+				echo'</div><div class="col-md-6">';
 
 				$members = array();
 				$ergebnis = safe_query("SELECT * FROM ".PREFIX."user ORDER BY nickname");
@@ -287,7 +269,7 @@ else {
 								$costs="";
 								$bg=BG_2;
 							}
-							$payment='<input type="text" size="7" name="payid['.$usID.']" value="'.$costs.'" dir="rtl" /> &#8364;';
+							$payment='<input type="text" size="7" name="payid['.$usID.']" value="'.$costs.'" dir="rtl" class="form-control">';
 						}
 						else {
 							if($du['costs']) {
@@ -306,14 +288,14 @@ else {
 					}
 				}
 
-				if(iscashadmin($userID)) $admin='<input type="hidden" name="id" value="'.$id.'" /><input type="submit" name="pay" value="'.$_language->module['update'].'" />';
+				if(iscashadmin($userID)) $admin='<input type="hidden" name="id" value="'.$id.'"><input type="submit" name="pay" value="'.$_language->module['update'].'" class="btn btn-danger">';
 				eval ("\$cash_box_foot = \"".gettemplate("cash_box_foot")."\";");
 				echo $cash_box_foot;
 
 			}
 			else echo $_language->module['no_entries'];
 			
-      echo'</td></tr></table>';
+      	echo'</div>';
 		}
 
 		$ergebnis = safe_query("SELECT * FROM ".PREFIX."cash_box_payed WHERE payed='1'");
@@ -339,7 +321,7 @@ else {
 		$bg1=BG_1;
 		$bg2=BG_2;
 
-		if(iscashadmin($userID)) $cashadmin='<input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=cash_box&amp;action=new\');return document.MM_returnValue" value="'.$_language->module['add_payment'].'" />';
+		if(iscashadmin($userID)) $cashadmin='<input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=cash_box&amp;action=new\');return document.MM_returnValue" value="'.$_language->module['add_payment'].'" class="btn btn-danger">';
 
 
 		eval ("\$cash_box_top = \"".gettemplate("cash_box_top")."\";");

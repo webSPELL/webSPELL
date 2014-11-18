@@ -49,32 +49,50 @@
         <option value="#C0C0C0" style="color:#C0C0C0;">%silver%</option>
       </select> 
 	  
-	  <select name="fontsize" onchange="AddTag('[SIZE=' + this.options[this.selectedIndex].value + ']', '[/SIZE]', '');this.selectedIndex='0';">
-        <option value="0">%size%</option>
-        <option value="1">%tiny%</option>
-        <option value="2">%small%</option>
-        <option value="3">%normal%</option>
-        <option value="4">%large%</option>
-        <option value="5">%huge%</option>
-      </select> 
-	  
-	  <select name="font" onchange="AddTag('[FONT=' + this.options[this.selectedIndex].value + ']', '[/FONT]', '');this.selectedIndex='0';">
-        <option value="0">%font%</option>
-        <option value="arial">Arial</option>
-        <option value="comic sans ms">Comic</option>
-        <option value="courier">Courier</option>
-        <option value="courier new">Courier New</option>
-        <option value="tahoma">Tahoma</option>
-        <option value="times new roman">Times New Roman</option>
-        <option value="verdana">Verdana</option>
-	  </select> 
-		
-		<select name="align" onchange="AddTag('[ALIGN=' + this.options[this.selectedIndex].value + ']', '[/ALIGN]', '');this.selectedIndex='0';">
-        <option value="0">%align%</option>
-        <option value="center">%center%</option>
-        <option value="left">%left%</option>
-        <option value="right">%right%</option>
-        <option value="justify">%justify%</option>
-	  </select></td>
-  </tr>
-</table>
+<select name="fontcolor" onchange="AddTag('[COLOR=' + this.options[this.selectedIndex].value + ']', '[/COLOR]', '');this.selectedIndex='0';">
+    <option value="0">%color%</option>
+    <option value="#87CEEB" style="color:#87CEEB;">%skyblue%</option>
+    <option value="#4169E1" style="color:#4169E1;">%royalblue%</option>
+    <option value="#0000FF" style="color:#0000FF;">%blue%</option>
+    <option value="#00008B" style="color:#00008B;">%darkblue%</option>
+    <option value="#FFA500" style="color:#FFA500;">%orange%</option>
+    <option value="#FF4500" style="color:#FF4500;">%orangered%</option>
+    <option value="#DC143C" style="color:#DC143C;">%crimson%</option>
+    <option value="#FF0000" style="color:#FF0000;">%red%</option>
+    <option value="#B22222" style="color:#B22222;">%firebrick%</option>
+    <option value="#8B0000" style="color:#8B0000;">%darkred%</option>
+    <option value="#008000" style="color:#008000;">%green%</option>
+    <option value="#32CD32" style="color:#32CD32;">%limegreen%</option>
+    <option value="#2E8B57" style="color:#2E8B57;">%seagreen%</option>
+    <option value="#FF1493" style="color:#FF1493;">%deeppink%</option>
+    <option value="#FF6347" style="color:#FF6347;">%tomato%</option>
+    <option value="#FF7F50" style="color:#FF7F50;">%coral%</option>
+    <option value="#800080" style="color:#800080;">%purple%</option>
+    <option value="#4B0082" style="color:#4B0082;">%indigo%</option>
+    <option value="#DEB887" style="color:#DEB887;">%burlywood%</option>
+    <option value="#F4A460" style="color:#F4A460;">%sandybrown%</option>
+    <option value="#A0522D" style="color:#A0522D;">%sienna%</option>
+    <option value="#D2691E" style="color:#D2691E;">%chocolate%</option>
+    <option value="#008080" style="color:#008080;">%teal%</option>
+    <option value="#C0C0C0" style="color:#C0C0C0;">%silver%</option>
+</select>
+
+<select name="fontsize" onchange="AddTag('[SIZE=' + this.options[this.selectedIndex].value + ']', '[/SIZE]', '');this.selectedIndex='0';">
+    <option value="0">%size%</option>
+    <option value="1">%tiny%</option>
+    <option value="2">%small%</option>
+    <option value="3">%normal%</option>
+    <option value="4">%large%</option>
+    <option value="5">%huge%</option>
+</select>
+
+<select name="font" onchange="AddTag('[FONT=' + this.options[this.selectedIndex].value + ']', '[/FONT]', '');this.selectedIndex='0';">
+    <option value="0">%font%</option>
+    <option value="arial">Arial</option>
+    <option value="comic sans ms">Comic</option>
+    <option value="courier">Courier</option>
+    <option value="courier new">Courier New</option>
+    <option value="tahoma">Tahoma</option>
+    <option value="times new roman">Times New Roman</option>
+    <option value="verdana">Verdana</option>
+</select>

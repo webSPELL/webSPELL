@@ -27,7 +27,7 @@
 
 $ergebnis=safe_query("SELECT * FROM ".PREFIX."squads WHERE gamesquad = '1' ORDER BY sort");
 if(mysqli_num_rows($ergebnis)) {
-	echo '<table width="100%" cellspacing="0" cellpadding="2">';
+	echo '<ul class="list-group">';
 	$n=1;
 	while($db=mysqli_fetch_array($ergebnis)) {
 		if($n%2) {
@@ -45,6 +45,6 @@ if(mysqli_num_rows($ergebnis)) {
 		eval ("\$sc_squads = \"".gettemplate("sc_squads")."\";");
 		echo $sc_squads;
 	}
-	echo '</table>';
+	echo '</ul>';
 }
 ?>

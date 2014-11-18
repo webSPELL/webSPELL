@@ -22,53 +22,53 @@ function chkFormular() {
 -->
 </script>
 <form action="awards.php" method="post" id="post" name="post" onsubmit="return chkFormular()">
-<table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="$border">
-  <tr>
-    <td class="title" align="center" bgcolor="$bghead">%edit_award%</td>
-  </tr>
-  <tr><td bgcolor="$pagebg"></td></tr>
-  <tr>
-    <td bgcolor="$bg1">
-    <table width="100%" border="0" align="center" cellpadding="2" cellspacing="0">
-      <tr>
-        <td align="right">%date%:</td>
-        <td><select name="day">$day</select>
-        <select name="month">$month</select>
-        <select name="year">$year</select></td>
-      </tr>
-      <tr>
-        <td align="right">%squad%:</td>
-        <td><select name="squad">$squads</select></td>
-      </tr>
-      <tr>
-        <td align="right">%ranking%:</td>
-        <td><input name="rang" type="text" value="$rang" size="3" /></td>
-      </tr>
-      <tr>
-        <td align="right">%award%:</td>
-        <td><input name="award" type="text" id="award_name" value="$award" size="65" /></td>
-      </tr>
-      <tr>
-        <td align="right">%homepage%:</td>
-        <td>http://<input name="homepage" type="text" value="$homepage" size="65" /></td>
-      </tr>
-      <tr>
-      	<td rowspan="2">&nbsp;</td>
-        <td>$addbbcode</td>
-      </tr>
-      <tr>
-       	<td>$addflags</td>
-      </tr>
-      <tr>
-        <td align="right" valign="top">%info%:</td>
-        <td><textarea name="message" rows="5" cols="30" id="message" style="width:99%;">$info</textarea></td>
-      </tr>
-      <tr>
-        <td><input name="awardID" type="hidden" value="$awardID" /></td>
-        <td><input name="saveedit" type="submit" value="%update_award%" /></td>
-      </tr>
-    </table>
-    </td>
-  </tr>
-</table>
+    <h3>%edit_award%</h3>
+   <div class="form-group row">
+        <label class="col-lg-2">%date% (yyyy-mm-dd):</label>
+        <div class="col-lg-10">
+            <input name="date" type="date" value="$date" class="form-control">
+        </div>
+    </div>    
+        
+    <div class="form-group row">
+        <label class="col-lg-2">%squad%:</label>
+        <div class="col-lg-10">
+            <select name="squad" class="form-control">$squads</select>
+        </div>
+    </div>
+        
+    <div class="form-group row">
+        <label class="col-lg-2">%ranking%:</label>
+        <div class="col-lg-10">
+            <input name="rang" type="number" value="$rang" class="form-control">
+        </div>
+    </div>
+        
+    <div class="form-group row">
+        <label class="col-lg-2">%award%:</label>
+        <div class="col-lg-10">
+            <input name="award" type="text" value="$award" class="form-control">
+        </div>
+    </div>
+        
+    <div class="form-group row">
+        <label class="col-lg-2">%homepage%:</label>
+        <div class="col-lg-10">
+            <input name="homepage" type="url" value="$homepage" class="form-control">
+        </div>
+    </div>
+        
+    <div class="form-group">
+    $addbbcode    
+    $addflags
+    </div>
+        
+    <div class="form-group">
+        <textarea name="message" id="message" rows="5" class="form-control">$info</textarea>
+    </div>
+    
+    <div class="form-group">
+        <input name="awardID" type="hidden" value="$awardID" />
+        <input type="submit" name="saveedit" value="%update_award%" class="btn btn-danger" />
+    </div>
 </form>

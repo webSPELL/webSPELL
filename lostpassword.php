@@ -66,8 +66,12 @@ if(isset($_POST['submit'])) {
 	}
 }
 else {
-	echo'<form method="post" action="index.php?site=lostpassword">
-		 '.$_language->module['your_email'].': <input type="text" name="email" size="25" /> <input type="submit" name="submit" value="'.$_language->module['get_password'].'" />
+	echo'<form method="post" action="index.php?site=lostpassword" class="form-inline" role="form">
+            <div class="form-group">
+                <label class="sr-only" for="email">'.$_language->module['your_email'].'</label>
+                <input type="email" name="email" class="form-control" placeholder="'.$_language->module['your_email'].'" required>
+            </div>
+            <input type="submit" name="submit" value="'.$_language->module['get_password'].'" class="btn btn-danger">
 		 </form>';
 }
 

@@ -210,9 +210,9 @@ else {
 	}
 
 	if($type=="ASC")
-	$sorter='<a href="index.php?site=guestbook&amp;page='.$page.'&amp;type=DESC">'.$_language->module['sort'].'</a> <img src="images/icons/asc.gif" width="9" height="7" border="0" alt="Sort DESC" />&nbsp;&nbsp;&nbsp;';
+	$sorter='<a href="index.php?site=guestbook&amp;page='.$page.'&amp;type=DESC">'.$_language->module['sort'].' <i class="icon-sort-down"></i></a>';
 	else
-	$sorter='<a href="index.php?site=guestbook&amp;page='.$page.'&amp;type=ASC">'.$_language->module['sort'].'</a> <img src="images/icons/desc.gif" width="9" height="7" border="0" alt="Sort ASC" />&nbsp;&nbsp;&nbsp;';
+	$sorter='<a href="index.php?site=guestbook&amp;page='.$page.'&amp;type=ASC">'.$_language->module['sort'].' <i class="icon-sort-up"></i></a>';
 
 	eval ("\$guestbook_head = \"".gettemplate("guestbook_head")."\";");
 	echo $guestbook_head;
@@ -245,7 +245,7 @@ else {
 		$ip='logged';
 		$quote='<a href="index.php?site=guestbook&amp;action=add&amp;messageID='.$ds['gbID'].'"><img src="images/icons/quote.gif" border="0" alt="quote" /></a>';
 		if(isfeedbackadmin($userID)) {
-			$actions=' <a href="index.php?site=guestbook&amp;action=comment&amp;guestbookID='.$ds['gbID'].'"><img src="images/icons/admincomment.gif" border="0" alt="Admincomment" /></a> <input class="input" type="checkbox" name="gbID[]" value="'.$ds['gbID'].'" />';
+			$actions='<input class="input" type="checkbox" name="gbID[]" value="'.$ds['gbID'].'"> <a href="index.php?site=guestbook&amp;action=comment&amp;guestbookID='.$ds['gbID'].'" class="btn btn-danger">Add Admincomment</a>';
 			$ip=$ds['ip'];
 		}
 
@@ -256,8 +256,8 @@ else {
 		else $n++;
 	}
 
-	if(isfeedbackadmin($userID)) $submit='<input class="input" type="checkbox" name="ALL" value="ALL" onclick="SelectAll(this.form);" /> '.$_language->module['select_all'].'
-  <input type="submit" value="'.$_language->module['delete_selected'].'" />';
+	if(isfeedbackadmin($userID)) $submit='<input class="input" type="checkbox" name="ALL" value="ALL" onclick="SelectAll(this.form);"> '.$_language->module['select_all'].'
+  <input type="submit" value="'.$_language->module['delete_selected'].'" class="btn btn-danger">';
 	else $submit='';
 
 	eval ("\$guestbook_foot = \"".gettemplate("guestbook_foot")."\";");

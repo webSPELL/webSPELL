@@ -21,65 +21,82 @@ function chkFormular() {
 -->
 </script>
 $adminactions
-<form action="index.php?site=files&amp;action=saveedit" method="post" name="post" enctype="multipart/form-data" onsubmit="return chkFormular()">
-<table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="$border">
-  <tr>
-    <td class="title" align="center" bgcolor="$bghead">%edit_file%</td>
-  </tr>
-  <tr>
-  <td bgcolor="$pagebg"></td></tr>
-  <tr>
-    <td bgcolor="$bg1">
-    <table align="center" cellpadding="2" cellspacing="0">
-      <tr>
-        <td colspan="2"><b>%file-info%:</b></td>
-      </tr>
-      <tr>
-        <td>%category_cl%:</td>
-        <td><select name="filecat">$filecats</select></td>
-      </tr>
-      <tr>
-        <td>%filename%:</td>
-        <td><input type="text" id="filename" name="filename" size="30" value="$name" /></td>
-      </tr>
-      <tr>
-        <td valign="top">%info_description%:</td>
-        <td><textarea name="info" id="info" cols="44" rows="7">$description</textarea></td>
-      </tr>
-      <tr>
-        <td>%accesslevel%:</td>
-        <td><select name="accesslevel">$access</select></td>
-      </tr>
-      <tr>
-        <td valign="top">%file-upload%:</td>
-        <td><input type="file" name="upfile" /></td>
-      </tr>
-      <tr>
-        <td valign="top">%extern-link%:</td>
-        <td><input type="text" name="fileurl" size="40" value="$extern" /></td>
-      </tr>
-      <tr>
-        <td>%file-size_e%:</td>
-        <td><input name="filesize" type="text" value="$filesize" />
-        <select name="unit">$unit</select></td>
-      </tr>
-      <tr>
-        <td colspan="2"><b>%file-mirrors%:</b></td>
-      </tr>
-      <tr>
-        <td valign="top">%mirror% #2:</td>
-        <td><input type="text" name="mirror2" size="40" value="$mirror2" /></td>
-      </tr>
-      <tr>
-        <td valign="top">%mirror% #3:</td>
-        <td><input type="text" name="mirror3" size="40" value="$mirror3" /></td>
-      </tr>
-      <tr>
-        <td><input type="hidden" name="fileID" value="$fileID" /></td>
-        <td><input type="submit" value="%update%" /></td>
-      </tr>
-    </table>
-    </td>
-  </tr>
-</table>
+<form action="index.php?site=files&amp;action=saveedit" method="post" name="post" enctype="multipart/form-data" onsubmit="return chkFormular()" class="form-horizontal">
+<h2>%edit_file%</h2>        
+
+	<div class="form-group">
+        <label for="filename" class="col-lg-4 control-label">%filename%:</label>
+        <div class="col-lg-8">
+			<input type="text" id="filename" name="filename" size="30" value="$name" class="form-control" autofocus>
+        </div>
+    </div>
+    
+	<div class="form-group">
+        <label for="filecat" class="col-lg-4 control-label">%category_cl%:</label>
+        <div class="col-lg-8">
+			<select name="filecat" class="form-control">$filecats</select>
+        </div>
+    </div>
+    
+	<div class="form-group">
+        <label for="info" class="col-lg-4 control-label">%info_description%:</label>
+        <div class="col-lg-8">
+			<textarea name="info" id="info" cols="44" rows="7" class="form-control">$description</textarea>
+        </div>
+    </div>
+    
+	<div class="form-group">
+        <label for="accesslevel" class="col-lg-4 control-label">%accesslevel%:</label>
+        <div class="col-lg-8">
+			<select name="accesslevel" class="form-control">$access</select>
+        </div>
+    </div>
+    
+	<div class="form-group">
+        <label for="upfile" class="col-lg-4 control-label">%file-upload%:</label>
+        <div class="col-lg-8">
+			<input type="file" name="upfile" class="form-control">
+        </div>
+    </div>
+    
+	<div class="form-group">
+        <label for="fileurl" class="col-lg-4 control-label">%extern-link%:</label>
+        <div class="col-lg-8">
+			<input type="url" name="fileurl" size="40" value="$extern" class="form-control">
+        </div>
+    </div>
+    
+    <div class="form-group">
+        <label for="filesize" class="col-lg-4 control-label">%file-size_e%:</label>
+        <div class="col-lg-8">
+            <div class="input-group">
+                <input name="filesize" type="text" maxlength="4" size="4" class="form-control">
+                <span class="input-group-addon">
+                    <select name="unit">$unit</select>
+                </span>
+            </div>
+        </div>
+    </div>
+    
+	<div class="form-group">
+        <label for="mirror2" class="col-lg-4 control-label">%mirror% #2:</label>
+		<div class="col-lg-8">
+			<input type="url" name="mirror2" size="40" value="$mirror2" class="form-control">
+        </div>
+    </div>
+    
+	<div class="form-group">
+        <label for="mirror3" class="col-lg-4 control-label">%mirror% #3:</label>
+		<div class="col-lg-8">
+			<input type="url" name="mirror3" size="40" value="$mirror3" class="form-control">
+        </div>
+    </div>
+    
+	<div class="form-group">
+		<div class="col-lg-12 text-right">
+			<input type="submit" value="%update%" class="btn btn-danger">
+		</div>
+	</div>
+    
+	<input type="hidden" name="fileID" value="$fileID">
 </form>

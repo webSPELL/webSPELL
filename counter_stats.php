@@ -30,14 +30,6 @@ $_language->read_module('counter');
 eval ("\$title_counter_stats = \"".gettemplate("title_counter_stats")."\";");
 echo $title_counter_stats;
 
-$pagebg=PAGEBG;
-$border=BORDER;
-$bghead=BGHEAD;
-$bg1=BG_1;
-$bg2=BG_2;
-$bg3=BG_3;
-$bg4=BG_4;
-
 $time = time();
 $date = getformatdate($time);
 $dateyesterday = getformatdate($time-(24*3600));
@@ -74,11 +66,8 @@ for($i = date("d",time());$i>0;$i--) {
 
 	$i%2 ? $backgroundcolor1=BG_1 : $backgroundcolor1=BG_2;
 	$i%2 ? $backgroundcolor2=BG_3 : $backgroundcolor2=BG_4;
-	$prozent = $visits*95/$month_max;
-  $monatsstat .= '<tr>
-    <td width="35%" bgcolor="'.$backgroundcolor1.'">'.$i.$datemonth.':</td>
-    <td width="65%" bgcolor="'.$backgroundcolor2.'">'.$visits.'&nbsp;<img src="images/icons/poll.gif" height="5" width="'.(round($prozent)+1).'%" alt="'.$_language->module['visits'].'" title="'.$_language->module['visits'].'" /></td>
-  </tr>';
+	$prozent = $visits*100/$month_max;
+  	$monatsstat .= '<li class="list-group-item"><span class="badge">'.$visits.'</span> '.$i.$datemonth.'<div class="progress"><div class="progress-bar progress-bar-info" style="width: '.(round($prozent)).'%"></div></div></li>';
 
 }
 

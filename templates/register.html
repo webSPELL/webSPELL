@@ -1,48 +1,62 @@
-<form method="post" name="post" action="index.php?site=register">
-<table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="$border">
-  <tr bgcolor="$bghead">
-    <td colspan="2" height="20" class="title">&nbsp; &#8226; %profile_info%</td>
-  </tr>
-  <tr>
-    <td colspan="2" bgcolor="$pagebg"></td>
-  </tr>
-  <tr>
-    <td colspan="2" bgcolor="$bg1"><center>$showerror</center></td>
-  </tr>
-  <tr>
-    <td width="150" align="right" bgcolor="$bg1">%nickname%:</td>
-    <td bgcolor="$bg1"><input type="text" name="nickname" value="$nickname"  maxlength="30" size="30" /></td>
-  </tr>
-  <tr>
-    <td align="right" bgcolor="$bg2">%username%:</td>
-    <td bgcolor="$bg2"><input type="text" name="username" value="$username" size="30" /> (%for_login%)</td>
-  </tr>
-  <tr>
-    <td align="right" bgcolor="$bg1">%password%:</td>
-    <td bgcolor="$bg1"><input type="password" name="pwd1" value="$pwd1" size="30" /></td>
-  </tr>
-  <tr>
-    <td align="right" bgcolor="$bg2">%repeat%:</td>
-    <td bgcolor="$bg2"><input type="password" name="pwd2" value="$pwd2" size="30" /></td>
-  </tr>
-  <tr>
-    <td align="right" bgcolor="$bg1">%mail%:</td>
-    <td bgcolor="$bg1"><input type="text" name="mail" value="$mail" size="30" /></td>
-  </tr>
-  <tr>
-    <td  align="right" bgcolor="$bg2">%security_code%:</td>
-    <td bgcolor="$bg2">&nbsp;</td>
-  </tr>
-  <tr>
-    <td align="right" bgcolor="$bg1">$captcha</td>
-    <td bgcolor="$bg1"><input type="text" name="captcha" size="10" /><input name="captcha_hash" type="hidden" value="$hash" /></td>
-  </tr>
-  <tr>
-    <td colspan="2" bgcolor="$pagebg"></td>
-  </tr>
-  <tr bgcolor="$bg1">
-    <td>&nbsp;</td>
-    <td><input name="save" type="submit" value="%register_now%" /></td>
-  </tr>
-</table>
-</form>
+<div class="login">
+	<form method="post" name="post" action="index.php?site=register" class="form-horizontal" role="form">
+    	
+        <!-- Error Box -->
+        $showerror
+    	
+        <!-- Nickname -->
+        <div class="form-group">
+			<label class="col-sm-4 control-label" for="inputEmail">%nickname%</label>
+			<div class="col-sm-8">
+                <input type="text" id="inputEmail" name="nickname" value="$nickname" maxlength="30" size="30" class="form-control">
+			</div>
+		</div>
+        
+        <!-- Username -->
+        <div class="form-group">
+			<label class="col-sm-4 control-label" for="inputUsername">%username%</label>
+            <div class="col-sm-8">
+                <input type="text" id="inputUsername" name="username" placeholder="%for_login%" value="$username" size="30" class="form-control">
+            </div>
+		</div>
+        
+        <!-- Password -->
+        <div class="form-group">
+			<label class="col-sm-4 control-label" for="inputPassword">%password%</label>
+			<div class="col-sm-8">
+                <input type="password" id="inputPassword" name="pwd1" value="$pwd1" size="30" class="form-control">
+			</div>
+		</div>
+        
+        <!-- Password repeat -->
+        <div class="form-group">
+			<label class="col-sm-4 control-label" for="inputRepeat">%repeat%</label>
+			<div class="col-sm-8">
+                <input type="password" id="inputRepeat" name="pwd2" value="$pwd2" size="30" class="form-control">
+			</div>
+		</div>
+        
+        <!-- E-Mail -->
+        <div class="form-group">
+			<label class="col-sm-4 control-label" for="inputMail">%mail%</label>
+			<div class="col-sm-8">
+                <input type="email" id="inputMail" name="mail" value="$mail" autocomplete="email" size="30" class="form-control">
+			</div>
+		</div>
+        
+        <!-- Security code -->
+        <div class="form-group">
+            <div class="col-sm-offset-4 col-sm-8 input-group">
+                <span class="input-group-addon captcha-img">$captcha</span>
+                <input type="number" id="inputSecurity_code" name="captcha" maxlength="5" size="5" placeholder="Enter Captcha" class="form-control">
+                <input name="captcha_hash" type="hidden" value="$hash">
+            </div>
+        </div>
+
+        <!-- Register now -->
+        <div class="form-group">
+            <p class="col-sm-12 text-right"><input name="save" type="submit" value="%register_now%" class="btn btn-primary"></p>
+        </div>
+        
+	</form>
+</div>

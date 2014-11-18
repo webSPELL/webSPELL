@@ -27,7 +27,7 @@
 
 $ergebnis=safe_query("SELECT * FROM ".PREFIX."clanwars ORDER BY date DESC LIMIT 0, ".$maxresults);
 if(mysqli_num_rows($ergebnis)){
-	echo'<table width="100%" cellspacing="0" cellpadding="2">';
+	echo'<ul class="list-group">';
 	$n=1;
 	while($ds=mysqli_fetch_array($ergebnis)) {
 
@@ -56,6 +56,6 @@ if(mysqli_num_rows($ergebnis)){
 		echo $results;
 		$n++;
 	}
-	echo'</table>';
+	echo'</ul>';
 }
 ?>

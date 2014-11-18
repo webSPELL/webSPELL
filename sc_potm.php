@@ -30,5 +30,5 @@ $galclass = new Gallery;
 $_language->read_module('sc_potm');
 
 $randomid = $galclass->randompic();
-if($randomid) echo '<a href="index.php?site=gallery&amp;picID='.$randomid.'"><img src="images/gallery/thumb/'.$randomid.'.jpg" border="0" alt="'.$_language->module['random_picture'].'" /></a>';
+if($randomid) echo '<a href="index.php?site=gallery&amp;picID='.$randomid.'"><img src="images/gallery/thumb/'.$randomid.'.jpg" alt="'.$_language->module['random_picture'].'" class="img-responsive" /></a>';
 ?>

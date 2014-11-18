@@ -1,7 +1,11 @@
-      <tr>
-        <td width="15%">%option% $n:</td>
-        <td>$option</td>
-        <td width="30%" align="right">$stimmen %votes%</td>
-        <td width="15%" align="right">$perc %</td>
-        <td width="40%">$pic</td>
-      </tr>
+<p>$option</p>
+<div class="row">
+    <div class="col-xs-10">
+        <div class="progress">
+            <div class="progress-bar" style="width: $perc%;"></div>
+        </div>
+    </div>
+    <div class="col-xs-2">
+        <span class="badge">{$perc}%</span>
+    </div>
+</div>

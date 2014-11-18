@@ -73,9 +73,9 @@ $anz=mysqli_num_rows($ergebnis);
 if($anz) {
 
 	if($type=="ASC")
-	$sorter = '<a href="index.php?site=registered_users&amp;page='.$page.'&amp;sort='.$sort.'&amp;type=DESC">'.$_language->module['sort'].'</a> <img src="images/icons/asc.gif" width="9" height="7" border="0" alt="Sort DESC" />&nbsp;&nbsp;&nbsp;';
+		$sorter = '<a href="index.php?site=registered_users&amp;page='.$page.'&amp;sort='.$sort.'&amp;type=DESC">'.$_language->module['sort'].' <i class="icon-sort-down"></i></a>';
 	else
-	$sorter = '<a href="index.php?site=registered_users&amp;page='.$page.'&amp;sort='.$sort.'&amp;type=ASC">'.$_language->module['sort'].'</a> <img src="images/icons/desc.gif" width="9" height="7" border="0" alt="Sort ASC" />&nbsp;&nbsp;&nbsp;';
+		$sorter = '<a href="index.php?site=registered_users&amp;page='.$page.'&amp;sort='.$sort.'&amp;type=ASC">'.$_language->module['sort'].' <i class="icon-sort-up"></i';
 	eval ("\$registered_users_head = \"".gettemplate("registered_users_head")."\";");
 	echo $registered_users_head;
 	$n=1;
