@@ -83,7 +83,7 @@ if(mysqli_num_rows($thread)) {
     <tr bgcolor="FFFFFF">
       <td><b>'.$boardname.'</b> &#8226; <b>'.getinput($dt['topic']).'</b></td>
     </tr>
-  </table><hr size="1" /><br>';
+  </table><hr size="1"><br>';
 
 	echo'<table width="100%" cellpadding="4" cellspacing="1" border="0">';
 

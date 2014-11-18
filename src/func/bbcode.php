@@ -170,7 +170,7 @@ function codereplace($content) {
 				}
 			}
 			if($match){
-				$splits[$i] = '<div style="width:'.$picsize_l.'px;overflow:auto;background-color:'.$bg1.';border: 1px '.$border.' solid;" class="code"><b>'.$_language->module['code'].':</b><hr /><div class="codeinner">';
+				$splits[$i] = '<div style="width:'.$picsize_l.'px;overflow:auto;background-color:'.$bg1.';border: 1px '.$border.' solid;" class="code"><b>'.$_language->module['code'].':</b><hr><div class="codeinner">';
 
 				/* concat pieces until arriving closing tag ($z) and save to $i+1 */
 				for($x=($i+2); $x<$z;$x++){
@@ -485,7 +485,7 @@ function replacement($content, $bbcode=true) {
 		$content = preg_replace("#\[list=a\][\s]{0,}(.*?)\[/list=a\]#si", "<ol type=\"a\" class='list_alpha'>\\1</ol>", $content);
 		$content = preg_replace("#\[\*\](.*?)\[/\*\](\s){0,}#si", "<li>\\1</li>", $content);
 		$content = preg_replace("#\[br]#si", "<br>", $content);
-		$content = preg_replace("#\[hr]#si", "<hr />", $content);
+		$content = preg_replace("#\[hr]#si", "<hr>", $content);
 		$content = preg_replace("#\[center]#si", "<center>", $content);
 		$content = preg_replace("#\[/center]#si", "</center>", $content);
 	}

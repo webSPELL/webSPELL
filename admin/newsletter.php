@@ -83,7 +83,7 @@ hr { margin: 0px; }
 		<a href="http://'.$hp_url.'" target="_blank" ><img src="http://'.$hp_url.'/images/banner.gif" alt="" class="center" style="display: block;" /></a>
 			<h3>'.stripslashes($title).'</h3>
 			<span>'.stripslashes($message_html).'</span>
-			<hr />
+			<hr>
 			<span id="footer">'.$remove.' <a href="http://'.$hp_url.'/index.php?site=myprofile">'.$profile.'</a>.</span>
 		</div>
 	</body>

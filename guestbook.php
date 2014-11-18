@@ -237,7 +237,7 @@ else {
 		$message = toggle($message,$ds['gbID']);
 		unset($admincomment);
 		if($ds['admincomment'] != "") {
-			$admincomment = '<hr />
+			$admincomment = '<hr>
 			<small><b>'.$_language->module['admin_comment'].':</b><br>'.cleartext($ds['admincomment']).'</small>';
 		} else $admincomment = '';
 
