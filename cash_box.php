@@ -230,7 +230,7 @@ else {
 
 				$all=safe_query("SELECT * FROM ".PREFIX."cash_box WHERE squad='".$squadID."' ORDER BY paydate DESC");
 				while($ds=mysqli_fetch_array($all)) {
-					echo'&#8226; <a href="index.php?site=cash_box&amp;id='.$ds['cashID'].'&amp;squad='.$squadID.'"><b>'.$ds['usedfor'].'</b></a><br />';
+					echo'&#8226; <a href="index.php?site=cash_box&amp;id='.$ds['cashID'].'&amp;squad='.$squadID.'"><b>'.$ds['usedfor'].'</b></a><br>';
 				}
 
 				echo'</div><div class="col-md-6">';

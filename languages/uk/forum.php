@@ -87,8 +87,8 @@ $language_array = Array(
 	'no_new_posts'=>'no new posts',
 	'no_permission'=>'You have no permission to view intern boards!',
 	'not_logged'=>'Not logged in.',
-	'not_logged_msg'=>'<br /><br />To start or to reply to a topic you have to be registered and logged in!<br /><br />
-    &#8226; <a href="index.php?site=register">register now</a><br />
+	'not_logged_msg'=>'<br><br>To start or to reply to a topic you have to be registered and logged in!<br><br>
+    &#8226; <a href="index.php?site=register">register now</a><br>
     &#8226; <a href="index.php?site=login">login</a>',
 	'notify'=>'Notify me when a reply is posted',
 	'notify_mail'=>'New reply by %poster% in topic

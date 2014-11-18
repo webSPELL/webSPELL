@@ -36,7 +36,7 @@ $language_array = Array(
   'buddy_nousers'=>'თქვებ არ გყავთ მომხმარებლები მეგობრების სიაში',
   'buddys'=>'მეგობრები',
   'ignore_nousers'=>'თქვენ არ გყავთ მომხმარებლები იგნორის სიაშ',
-  'not_logged'=>'რომ აკონტროლოთ თქვენი მეგობრების სია თქვენ უნდა იყოთ ავტორიზირებული.<br /><a href="index.php?site=register">დარეგისტრირებაr</a> | <a href="index.php?site=login">შესვლაზე</a>',
+  'not_logged'=>'რომ აკონტროლოთ თქვენი მეგობრების სია თქვენ უნდა იყოთ ავტორიზირებული.<br><a href="index.php?site=register">დარეგისტრირებაr</a> | <a href="index.php?site=login">შესვლაზე</a>',
   'your_buddylist'=>'მეგობრების სია',
   'your_ignorelist'=>'იგნორის სია'
 );

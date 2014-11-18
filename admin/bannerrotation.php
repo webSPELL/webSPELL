@@ -145,8 +145,8 @@ elseif(isset($_POST["save"])) {
 						redirect("admincenter.php?site=bannerrotation","",0);
 					}
 				}
-			} else echo'<b>'.$_language->module['format_incorrect'].'</b><br /><br /><a href="javascript:history.back()">&laquo; '.$_language->module['back'].'</a>';
-		} else echo'<b>'.$_language->module['fill_correctly'].'</b><br /><br /><a href="javascript:history.back()">&laquo; '.$_language->module['back'].'</a>';
+			} else echo'<b>'.$_language->module['format_incorrect'].'</b><br><br><a href="javascript:history.back()">&laquo; '.$_language->module['back'].'</a>';
+		} else echo'<b>'.$_language->module['fill_correctly'].'</b><br><br><a href="javascript:history.back()">&laquo; '.$_language->module['back'].'</a>';
 	} else echo $_language->module['transaction_invalid'];
 }
 
@@ -178,9 +178,9 @@ elseif(isset($_POST["saveedit"])) {
 					if(safe_query("UPDATE ".PREFIX."bannerrotation SET banner='".$file."', bannername='".$bannername."', bannerurl='".$bannerurl."', displayed='".$displayed."' WHERE bannerID='".$_POST["bannerID"]."'")) {
 						redirect("admincenter.php?site=bannerrotation","",0);
 					}
-				} else echo'<b>'.$_language->module['format_incorrect'].'</b><br /><br /><a href="javascript:history.back()">&laquo; '.$_language->module['back'].'</a>';
+				} else echo'<b>'.$_language->module['format_incorrect'].'</b><br><br><a href="javascript:history.back()">&laquo; '.$_language->module['back'].'</a>';
 			}
-		} else echo'<b>'.$_language->module['fill_correctly'].'</b><br /><br /><a href="javascript:history.back()">&laquo; '.$_language->module['back'].'</a>';
+		} else echo'<b>'.$_language->module['fill_correctly'].'</b><br><br><a href="javascript:history.back()">&laquo; '.$_language->module['back'].'</a>';
 	} else echo $_language->module['transaction_invalid'];
 }
 
@@ -202,7 +202,7 @@ else {
 
   echo'<h1>&curren; '.$_language->module['bannerrotation'].'</h1>';
   
-  echo'<input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=bannerrotation&amp;action=add\');return document.MM_returnValue" value="'.$_language->module['new_banner'].'" /><br /><br />';
+  echo'<input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=bannerrotation&amp;action=add\');return document.MM_returnValue" value="'.$_language->module['new_banner'].'" /><br><br>';
   
   echo'<form method="post" action="admincenter.php?site=bannerrotation">
   <table width="100%" border="0" cellspacing="1" cellpadding="3" bgcolor="#DDDDDD">

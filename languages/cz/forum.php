@@ -87,8 +87,8 @@ $language_array = Array(
 	'no_new_posts'=>'nové příspěvky neexistují',
 	'no_permission'=>'Nemáš povolení dívat se do interního fóra!',
 	'not_logged'=>'Nejsi přihlášen.',
-	'not_logged_msg'=>'<br /><br />Než začneš odpovídat musíš se zaregistrovat!<br /><br />
-    &#8226; <a href="index.php?site=register">registrace</a><br />
+	'not_logged_msg'=>'<br><br>Než začneš odpovídat musíš se zaregistrovat!<br><br>
+    &#8226; <a href="index.php?site=register">registrace</a><br>
     &#8226; <a href="index.php?site=login">přihlášení</a>',
 	'notify'=>'Upozornění na odpoveď',
 	'notify_mail'=>'nová odpověď od %poster% v_tématu

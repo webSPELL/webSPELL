@@ -60,7 +60,7 @@ $language_array = Array(
   'no_incoming'=>'Δεν υπαρχουν μηνυματα στα εισερχομενα.',
   'no_outgoing'=>'Δεν υπαρχουν μηνυματα στα εξερχομενα.',
   'no_subject'=>'(Χωρις τιτλο)',
-  'not_logged'=>'Δεν εχετε εισελθει.<br /><a href="index.php?site=login">Εισοδος</a> | <a href="index.php?site=register">Εγγραφη</a>',
+  'not_logged'=>'Δεν εχετε εισελθει.<br><a href="index.php?site=login">Εισοδος</a> | <a href="index.php?site=register">Εγγραφη</a>',
   'options'=>'Επιλογες',
   'outgoing'=>'Εξερχομενα',
   'read'=>'Αναγνωσμενα',
@@ -79,7 +79,7 @@ $language_array = Array(
   'title'=>'Θεμα',
   'your_message'=>'Το μηνυμα σας:',
   'mail_subject'=>'Εχετε νεο προσωπικο μηνυμα',
-  'mail_body'=>'<b>Γεια σου %nickname%!</b><br /><br />Εχεις ενα νεο μηνυμα στο BVBPOWER (%hp_url%).<br />Κανε click <a href="http://%hp_url%?site=messenger">εδω</a> για να διαβάσετε το PM.<br /><br />(C) webSPELL.org',
+  'mail_body'=>'<b>Γεια σου %nickname%!</b><br><br>Εχεις ενα νεο μηνυμα στο BVBPOWER (%hp_url%).<br>Κανε click <a href="http://%hp_url%?site=messenger">εδω</a> για να διαβάσετε το PM.<br><br>(C) webSPELL.org',
   'error'=>'σφαλμα',
   'unknown_user'=>'Αγνωστος χρηστης'
 );

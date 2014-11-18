@@ -28,7 +28,7 @@
 $language_array = Array(
 	'agree'=>'I agree',
 	'agree_not'=>'I do not agree',
-	'gpl_info'=>'To install webSPELL on your Server, you have to accept the<br /><a href="http://www.gnu.org/licenses/licenses.html" target="_blank">GNU GENERAL PUBLIC LICENCE</a>',
+	'gpl_info'=>'To install webSPELL on your Server, you have to accept the<br><a href="http://www.gnu.org/licenses/licenses.html" target="_blank">GNU GENERAL PUBLIC LICENCE</a>',
 	'licence'=>'Licence Agreement',
 	'more_info'=>'Get more Licence Informations at the <a href="http://www.webspell.org/index.php?site=license" target="_blank">webSPELL Page</a>',
 	'please_select'=>'Please select',

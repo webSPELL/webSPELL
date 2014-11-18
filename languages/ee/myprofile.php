@@ -102,8 +102,8 @@ Täname huvi üles näitamise eest
   'nickname'=>'Hüüdnimi',
   'nickname_already_in_use'=>'hüüdnimi on juba kasutuses!',
   'no'=>'Ei',
-  'not_logged_in'=>'Oma profiili nägemiseks pead sa sisse logitud olema!<br /><br />
-    &#8226; <a href="index.php?site=register">registreeri kohe</a><br />
+  'not_logged_in'=>'Oma profiili nägemiseks pead sa sisse logitud olema!<br><br>
+    &#8226; <a href="index.php?site=register">registreeri kohe</a><br>
     &#8226; <a href="index.php?site=login">logi sisse</a>',
   'old_password'=>'vana parool',
   'old_pw_not_valid'=>'su vana parool pole korrektne!',

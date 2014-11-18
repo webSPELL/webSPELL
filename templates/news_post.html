@@ -100,14 +100,14 @@ function update_textarea(value) {
 	for(var i = 0; i < value; i++) {
 		if(message[i] || headline[i] || langs[i] && langs[i] != default_language)
 		{
-			document.getElementById('news_textarea').innerHTML+='<select name="lang[]" id="lang_' + i + '" onchange="langs['+i+']=this.value; update_language();"></select> %headline% <input name="headline[]" type="text" value="'+headline[i]+'" size="80" onchange="headline['+i+']=this.value;" /><textarea name="message[' + i + ']" rows="20" cols="130" style="width: 750px;" onfocus="which=this;textarea = \'message[' + i + ']\';" onblur="message['+i+']=this.value;" onchange="message['+i+']=this.value;">'+message[i]+'</textarea><br /><br />';
+			document.getElementById('news_textarea').innerHTML+='<select name="lang[]" id="lang_' + i + '" onchange="langs['+i+']=this.value; update_language();"></select> %headline% <input name="headline[]" type="text" value="'+headline[i]+'" size="80" onchange="headline['+i+']=this.value;" /><textarea name="message[' + i + ']" rows="20" cols="130" style="width: 750px;" onfocus="which=this;textarea = \'message[' + i + ']\';" onblur="message['+i+']=this.value;" onchange="message['+i+']=this.value;">'+message[i]+'</textarea><br><br>';
 		}
 		else
 		{
 			message[i] = '';
 			headline[i] = '';
 			langs[i] = '';
-			document.getElementById('news_textarea').innerHTML+='<select name="lang[]" id="lang_' + i + '" onchange="langs['+i+']=this.value; update_language();"></select> %headline% <input name="headline[]" type="text" value="" size="80" onchange="headline['+i+']=this.value;" /><textarea name="message[' + i + ']" rows="20" cols="130" style="width: 750px;" onfocus="which=this;textarea = \'message[' + i + ']\';" onblur="message['+i+']=this.value;" onchange="message['+i+']=this.value;"></textarea><br /><br />';
+			document.getElementById('news_textarea').innerHTML+='<select name="lang[]" id="lang_' + i + '" onchange="langs['+i+']=this.value; update_language();"></select> %headline% <input name="headline[]" type="text" value="" size="80" onchange="headline['+i+']=this.value;" /><textarea name="message[' + i + ']" rows="20" cols="130" style="width: 750px;" onfocus="which=this;textarea = \'message[' + i + ']\';" onblur="message['+i+']=this.value;" onchange="message['+i+']=this.value;"></textarea><br><br>';
 		}
 	}
 	if(message.length > value) {
@@ -180,7 +180,7 @@ $langs_vars
         <td valign="top">$addflags</td>
       </tr>
     </table>
-    <hr />
+    <hr>
     <table width="100%" border="0" cellspacing="0" cellpadding="2">
       <tr>
         <td><b>%rubric%:</b> <select name="rubric">$rubrics</select>
@@ -188,7 +188,7 @@ $langs_vars
         &nbsp;&nbsp;&nbsp; <small><b>%options%:</b> &#8226; %html% &#8226; <a href="javascript:MM_openBrWindow('code.php','BBCode','scrollbars=yes,width=600,height=500')">%bbcode%</a> &#8226; <a href="javascript:MM_openBrWindow('smileys.php','Smileys','scrollbars=yes,width=340,height=500')">%smilies%</a></small></td>
       </tr>
       <tr>
-        <td><hr /></td>
+        <td><hr></td>
       </tr>
       <tr>
         <td>
@@ -209,7 +209,7 @@ $langs_vars
         </td>
       </tr>
       <tr>
-        <td><hr /></td>
+        <td><hr></td>
       </tr>
     </table>
     <div id="news_textarea"></div>
@@ -218,7 +218,7 @@ $langs_vars
       update_textarea($langcount);
       /* ]]> */
       </script>
-    <hr />
+    <hr>
     <table width="100%" border="0" cellpadding="0" cellspacing="2">
       <tr>
         <td valign="top">%link% 1:
@@ -228,7 +228,7 @@ $langs_vars
         %new_window%
         <input class="input" type="radio" name="window1" value="0" $window1_self/>
         %self%
-        <br />
+        <br>
         %link% 2:
         <input name="link2" type="text" value="$link2" />
         <input name="url2" type="text" value="$url2" />
@@ -236,7 +236,7 @@ $langs_vars
         %new_window%
         <input class="input" type="radio" name="window2" value="0" $window2_self />
         %self%
-        <br />
+        <br>
         %link% 3:
         <input name="link3" type="text" value="$link3" />
         <input name="url3" type="text" value="$url3" />
@@ -244,7 +244,7 @@ $langs_vars
         %new_window%
         <input class="input" type="radio" name="window3" value="0" $window3_self />
         %self%
-        <br />
+        <br>
         %link% 4:
         <input name="link4" type="text" value="$link4" />
         <input name="url4" type="text" value="$url4" />
@@ -252,10 +252,10 @@ $langs_vars
         %new_window%
         <input class="input" type="radio" name="window4" value="0" $window4_self />
         %self%</td>
-        <td valign="top"><br />&nbsp;</td>
+        <td valign="top"><br>&nbsp;</td>
       </tr>
       <tr>
-        <td colspan="5"><hr /></td>
+        <td colspan="5"><hr></td>
       </tr>
       <tr align="right">
         <td colspan="2">

@@ -102,8 +102,8 @@ Paldies par Jūsu interesi
   'nickname'=>'Segvārds',
   'nickname_already_in_use'=>'segvārds jau ir aizņemts!',
   'no'=>'Nē',
-  'not_logged_in'=>'Jums jāpieslēdzas, lai redzētu savu profilu<br /><br />
-    &#8226; <a href="index.php?site=register">reģistrēties</a><br />
+  'not_logged_in'=>'Jums jāpieslēdzas, lai redzētu savu profilu<br><br>
+    &#8226; <a href="index.php?site=register">reģistrēties</a><br>
     &#8226; <a href="index.php?site=login">pieslēgties</a>',
   'old_password'=>'vecā parole',
   'old_pw_not_valid'=>'Jūsu vecā parole nav derīga!',

@@ -229,6 +229,6 @@ function addonnav() {
    <td colspan="5"><img src="images/5.jpg" width="1000" height="7" alt="" /></td>
   </tr>
 </table>
-<center><br />&copy; 2005 - 2011 <a href="http://www.webspell.org" target="_blank" class="white"><b>webSPELL.org</b></a> &amp; <a href="http://www.webspell.at" target="_blank" class="white"><b>webSPELL.at</b></a><br />&nbsp;</center>
+<center><br>&copy; 2005 - 2011 <a href="http://www.webspell.org" target="_blank" class="white"><b>webSPELL.org</b></a> &amp; <a href="http://www.webspell.at" target="_blank" class="white"><b>webSPELL.at</b></a><br>&nbsp;</center>
 </body>
 </html>

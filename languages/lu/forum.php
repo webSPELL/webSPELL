@@ -93,8 +93,8 @@ $language_array = Array(
   'no_new_posts'=>'keng nei Bäiträg',
   'no_permission'=>'Du hues keen Zourëff op dësen Forum!',
   'not_logged'=>'Net ugemellt.',
-  'not_logged_msg'=>'<br /><br />Fir en Thema op ze machen muss du ugemellt an registréiert sinn!<br /><br />
-&#8226; <a href="index.php?site=register">registréieren</a><br />
+  'not_logged_msg'=>'<br><br>Fir en Thema op ze machen muss du ugemellt an registréiert sinn!<br><br>
+&#8226; <a href="index.php?site=register">registréieren</a><br>
 &#8226; <a href="index.php?site=login">umellen</a>',
   'notify'=>'mech iwwer nei Bäiträg benoriichtegen',
   'notify_mail'=>'Nei Äntwert vun %poster% zum Thema

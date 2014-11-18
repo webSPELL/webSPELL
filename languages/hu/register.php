@@ -29,7 +29,7 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-	'activation_successful'=>'Felhasználói profilod aktiválása sikeresen befejeződött.<br />Most már bejelentkezhetsz.',
+	'activation_successful'=>'Felhasználói profilod aktiválása sikeresen befejeződött.<br>Most már bejelentkezhetsz.',
 	'back'=>'back',
 	'enter_nickname'=>'Írj be becenevet.',
 	'enter_password'=>'Írj be jelszót.',

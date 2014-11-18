@@ -92,7 +92,7 @@ $language_array = Array(
   'nickname'=>'Ник',
   'nickname_already_in_use'=>'ник се већ користи!',
   'no'=>'Не',
-  'not_logged_in'=>'Морате бити пријављени да би видјели свој профил!<br /><br />rn    &#8226; <a href="index.php?site=register">Региструј се</a><br />rn    &#8226; <a href="index.php?site=login">Пријави се</a>',
+  'not_logged_in'=>'Морате бити пријављени да би видјели свој профил!<br><br>rn    &#8226; <a href="index.php?site=register">Региструј се</a><br>rn    &#8226; <a href="index.php?site=login">Пријави се</a>',
   'old_password'=>'Стара лозинка',
   'old_pw_not_valid'=>'ваша стара лозинка није исправна!',
   'options'=>'Опције',

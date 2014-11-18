@@ -93,7 +93,7 @@ $language_array = Array(
   'no_new_posts'=>'Ei uusia viestejä',
   'no_permission'=>'Sinulla ei ole lupaa tarkastella tätä palstaa!',
   'not_logged'=>'Et ole kirjautuneena sisään.',
-  'not_logged_msg'=>'<br /><br />Aloittaaksesi sinun täytyy olla kirjautuneena sisään!<br /><br />rn    &#8226; <a href="index.php?site=register">rekisteröidy</a><br />rn    &#8226; <a href="index.php?site=login">käyttäjätunnus</a>',
+  'not_logged_msg'=>'<br><br>Aloittaaksesi sinun täytyy olla kirjautuneena sisään!<br><br>rn    &#8226; <a href="index.php?site=register">rekisteröidy</a><br>rn    &#8226; <a href="index.php?site=login">käyttäjätunnus</a>',
   'notify'=>'Ilmoita kun viesti lähetetty',
   'notify_mail'=>'Uusi vastaus %poster% aiheestarn%topic_link%rnrn%pagetitle% - %hpurl%',
   'notify_reply'=>'Ilmoita kun vastaus on saatu',

@@ -52,7 +52,7 @@ $language_array = Array(
   'mail'=>'Adresa e-mail-it',
   'name'=>'Emri juaj',
   'new_entry'=>'Hyrje e re',
-  'no_access'=>'Nuk jeni i loguar.<br /><a href="index.php?site=login">Login</a> | <a href="index.php?site=register">Regjistrohuni</a>',
+  'no_access'=>'Nuk jeni i loguar.<br><a href="index.php?site=login">Login</a> | <a href="index.php?site=register">Regjistrohuni</a>',
   'options'=>'Opsionet',
   'pmsubject_newentry'=>'Hyrje re në librin e vizituesve',
   'pmtext_newentry'=>'[b]Dikush la një mesazh për ju në librin e vizituesve![/b][br][br] [URL=index.php?site=guestbook#%insertid%]Kliko këtu për të lexuar mesazhin[/URL] ',

@@ -995,10 +995,10 @@ if(isset($_POST['submit']) || isset($_POST['movetopic']) || isset($_GET['addtopi
 
 			if(isforumadmin($userID) || ismoderator($userID, $board)) {
 				if(isset($_sticky)){
-					$chk_sticky = '<br />'."\n".' <input class="input" type="checkbox" name="sticky" value="1" '.$_sticky.' /> '.$_language->module['make_sticky'];
+					$chk_sticky = '<br>'."\n".' <input class="input" type="checkbox" name="sticky" value="1" '.$_sticky.' /> '.$_language->module['make_sticky'];
 				}
 				else {
-					$chk_sticky = '<br />'."\n".' <input class="input" type="checkbox" name="sticky" value="1" /> '.$_language->module['make_sticky'];
+					$chk_sticky = '<br>'."\n".' <input class="input" type="checkbox" name="sticky" value="1" /> '.$_language->module['make_sticky'];
 				}
 			}
 			else {

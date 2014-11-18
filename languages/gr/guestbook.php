@@ -52,7 +52,7 @@ $language_array = Array(
   'mail'=>'Το email σας',
   'name'=>'Το ονομα σας',
   'new_entry'=>'Νεα εγγραφη',
-  'no_access'=>'Δεν ειστε συνδεδεμενοι.<br /><a href="index.php?site=login">Συνδεση</a> | <a href="index.php?site=register">Εγγραφη</a>',
+  'no_access'=>'Δεν ειστε συνδεδεμενοι.<br><a href="index.php?site=login">Συνδεση</a> | <a href="index.php?site=register">Εγγραφη</a>',
   'options'=>'Επιλογες',
   'pmsubject_newentry'=>'Νεα καταχωρηση στο βιβλιο επισκεπτων',
   'pmtext_newentry'=>'[b]Καποιος αφησε ενα μηνυμα για εσας στο βιβλιο επισκεπτων![/b][br][br] [URL=index.php?site=guestbook#%insertid%]Καντε Click εδω για να διαβασετε το μηνυμα[/URL] ',

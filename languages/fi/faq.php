@@ -41,7 +41,7 @@ $language_array = Array(
   'faq'=>'FAQ',
   'faqs'=>'FAQs',
   'no_categories'=>'ei vielä luotu kategoriaa',
-  'no_faq'=>'Ei kysymyksiä saatavilla<br /><a href="index.php?site=faq">Takaisin</a>',
+  'no_faq'=>'Ei kysymyksiä saatavilla<br><a href="index.php?site=faq">Takaisin</a>',
   'saved_on'=>'Tallennettu'
 );
 ?>

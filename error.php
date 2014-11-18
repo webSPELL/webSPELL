@@ -66,7 +66,7 @@ foreach($urlparts as $tag){
 if(count($results)){
     echo "<h1>".$_language->module['alternative_results']."</h1>";
     usort($results,array('Tags','sortByDate'));
-    echo "<center><b>".count($data)."</b> ".$_language->module['results_found']."</center><br /><br />";
+    echo "<center><b>".count($data)."</b> ".$_language->module['results_found']."</center><br><br>";
     foreach($results as $entry){
 
         $date = getformatdate($entry['date']);

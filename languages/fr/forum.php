@@ -87,8 +87,8 @@ $language_array = Array(
 	'no_new_posts'=>'Aucun nouveaux messages',
 	'no_permission'=>'Vous n\'avez pas la permission de voir les forums privés !',
 	'not_logged'=>'Pas connecté.',
-	'not_logged_msg'=>'<br /><br />Pour lancer un nouveau sujet ou répondre à un sujet, vous devez être enregistré et connectée !<br /><br />
-    &#8226; <a href="index.php?site=register">S\'enregistrer</a><br />
+	'not_logged_msg'=>'<br><br>Pour lancer un nouveau sujet ou répondre à un sujet, vous devez être enregistré et connectée !<br><br>
+    &#8226; <a href="index.php?site=register">S\'enregistrer</a><br>
     &#8226; <a href="index.php?site=login">Connexion</a>',
 	'notify'=>'M\'indiquer quand il y a une réponse',
 	'notify_mail'=>'Nouvelle réponse par %poster% dans le sujet

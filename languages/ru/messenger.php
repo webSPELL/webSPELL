@@ -55,7 +55,7 @@ $language_array = Array(
   'no_incoming'=>'Нет сообщений в папке входящие.',
   'no_outgoing'=>'Нет сообщений в папке исходящие.',
   'no_subject'=>'(Нет заголовка)',
-  'not_logged'=>'Вы не вошли.<br /><a href="index.php?site=login">Login</a> | <a href="index.php?site=register">Регистрироваться</a>',
+  'not_logged'=>'Вы не вошли.<br><a href="index.php?site=login">Login</a> | <a href="index.php?site=register">Регистрироваться</a>',
   'options'=>'Настройки',
   'outgoing'=>'Исходящие',
   'read'=>'Читать',
@@ -74,7 +74,7 @@ $language_array = Array(
   'title'=>'Заголовок',
   'your_message'=>'Ваше сообщение:',
   'mail_subject'=>'Вы получили новое ЛС',
-  'mail_body'=>'<b>Привет %nickname%!</b><br /><br />Вы получили сообщение в  =BBC= (%hp_url%).<br />Нажать <a href="http://%hp_url%?site=messenger">здесь</a> чтобы прочитать ЛС.<br /><br />(C) webSPELL.org',
+  'mail_body'=>'<b>Привет %nickname%!</b><br><br>Вы получили сообщение в  =BBC= (%hp_url%).<br>Нажать <a href="http://%hp_url%?site=messenger">здесь</a> чтобы прочитать ЛС.<br><br>(C) webSPELL.org',
   'error'=>'ошибка',
   'unknown_user'=>'неизвестный пользователь'
 );

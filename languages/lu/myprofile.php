@@ -98,7 +98,7 @@ $language_array = Array(
   'nickname'=>'Nicknumm',
   'nickname_already_in_use'=>'Nicknumm gëtt schon benotzt!',
   'no'=>'Nee',
-  'not_logged_in'=>'Du muss ugemellt sinn fir däin Profil änneren ze kënnen!<br /><br />rn    &#8226; <a href="index.php?site=register">registréieren</a><br />rn    &#8226; <a href="index.php?site=login">umellen</a>',
+  'not_logged_in'=>'Du muss ugemellt sinn fir däin Profil änneren ze kënnen!<br><br>rn    &#8226; <a href="index.php?site=register">registréieren</a><br>rn    &#8226; <a href="index.php?site=login">umellen</a>',
   'old_password'=>'aalt Passwuert',
   'old_pw_not_valid'=>'Däin aalt Passwuert ass falsch!',
   'options'=>'Optiounen',

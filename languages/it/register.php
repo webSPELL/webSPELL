@@ -29,7 +29,7 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-	'activation_successful'=>'La tua richiesta è stata completata con successo.<br />Puoi registrarti ora.',
+	'activation_successful'=>'La tua richiesta è stata completata con successo.<br>Puoi registrarti ora.',
 	'back'=>'indietro',
 	'enter_nickname'=>'Si prega di inserire un nickname.',
 	'enter_password'=>'Si prega di inserire una password.',

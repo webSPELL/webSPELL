@@ -87,8 +87,8 @@ $language_array = Array(
 	'no_new_posts'=>'inga nya inlägg',
 	'no_permission'=>'Du har ingen tillåtelse att skriva i denna brädan!',
 	'not_logged'=>'Inte inloggad',
-	'not_logged_msg'=>'<br /><br />För att starta eller svara på ett inlägg måste du vara registrerad och inloggad!<br /><br />
-    &#8226; <a href="index.php?site=register">registrera nu</a><br />
+	'not_logged_msg'=>'<br><br>För att starta eller svara på ett inlägg måste du vara registrerad och inloggad!<br><br>
+    &#8226; <a href="index.php?site=register">registrera nu</a><br>
     &#8226; <a href="index.php?site=login">logga in</a>',
 	'notify'=>'Meddela mig när ett svar är skickat',
 	'notify_mail'=>'nytt svar av %poster% i topic

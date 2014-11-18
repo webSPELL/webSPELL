@@ -87,7 +87,7 @@ $language_array = Array(
   'no_new_posts'=>'هیچ پست جدیدی',
   'no_permission'=>'!شما اجازه مشاهده این صفحه را ندارید',
   'not_logged'=>'.لطفا وارد شوید',
-  'not_logged_msg'=>'<br /><br />!برای اینکه بتوانید در فروم فعالیت کنید باید عضو شوید<br /><br />rn    &#8226; <a href="index.php?site=register">عضو شوید</a><br />rn    &#8226; <a href="index.php?site=login">ورود</a>',
+  'not_logged_msg'=>'<br><br>!برای اینکه بتوانید در فروم فعالیت کنید باید عضو شوید<br><br>rn    &#8226; <a href="index.php?site=register">عضو شوید</a><br>rn    &#8226; <a href="index.php?site=login">ورود</a>',
   'notify'=>'من را با خبر کن وقتی که به پست پاسخ داده شد',
   'notify_mail'=>'پاسخ جدید توسط %poster% در تاپیکrn%topic_link%rn	rn%pagetitle% - %hpurl%',
   'notify_reply'=>'من را با خبر کن وقتی که به پست پاسخ داده شد',

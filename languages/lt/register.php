@@ -29,7 +29,7 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-	'activation_successful'=>'Jūsų profilio aktivacija sėkminga.<br />Dabar jūs jau galite prisijungti.',
+	'activation_successful'=>'Jūsų profilio aktivacija sėkminga.<br>Dabar jūs jau galite prisijungti.',
 	'back'=>'atgal',
 	'enter_nickname'=>'Prašome įrašykite slapyvardį.',
 	'enter_password'=>'Prašome įrašykite slaptažodį.',

@@ -35,7 +35,7 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'activation_successful'=>'Die aktivering van jou rekening was suksesvol.<br />Jy kan nou aanteken.',
+  'activation_successful'=>'Die aktivering van jou rekening was suksesvol.<br>Jy kan nou aanteken.',
   'back'=>'terug',
   'enter_nickname'=>'Tik in \'n bynaam.',
   'enter_password'=>'Tik in \'n wagwoord.',

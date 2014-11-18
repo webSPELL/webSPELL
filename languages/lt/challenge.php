@@ -61,7 +61,7 @@ $language_array = Array(
 	'sort'=>'Rykiuoti:',
 	'squad'=>'Būrys',
 	'submit_challenge'=>'Pateikti iššūkį',
-	'thank_you'=>'Ačiū už jūsų užklausą!<br />',
+	'thank_you'=>'Ačiū už jūsų užklausą!<br>',
 	'time'=>'Laikas',
 	'wrong_security_code'=>'Apsaugos kodas blogas.'
 );

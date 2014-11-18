@@ -61,7 +61,7 @@ $language_array = Array(
 	'sort'=>'sorter:',
 	'squad'=>'lag',
 	'submit_challenge'=>'Send',
-	'thank_you'=>'Takk for utfordringen!<br />',
+	'thank_you'=>'Takk for utfordringen!<br>',
 	'time'=>'tid',
 	'wrong_security_code'=>'Sikkerhets koden var feil.'
 );

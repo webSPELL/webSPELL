@@ -41,7 +41,7 @@ $language_array = Array(
   'faq'=>'FAQ',
   'faqs'=>'FAQs',
   'no_categories'=>'δεν εχουν δημιουργηθει κατηγοριες',
-  'no_faq'=>'Δεν υπαρχουν ερωτησεις.<br /><a href="index.php?site=faq">Πισω</a>',
+  'no_faq'=>'Δεν υπαρχουν ερωτησεις.<br><a href="index.php?site=faq">Πισω</a>',
   'saved_on'=>'αποθηκευμενο στις'
 );
 ?>

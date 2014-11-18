@@ -70,8 +70,8 @@ $language_array = Array(
   'usermenu'=>'Benotzermenü',
   'views'=>'Opriff',
   'x_new_message'=>'Du hues %new_messages% nei Noriichten.',
-  'you_have_to_be_logged_in'=>'Du muss ugemellt sinn fir dës Säit ze beaarbechten!<br /><br />
-    &#8226; <a href="index.php?site=register">registréieren</a><br />
+  'you_have_to_be_logged_in'=>'Du muss ugemellt sinn fir dës Säit ze beaarbechten!<br><br>
+    &#8226; <a href="index.php?site=register">registréieren</a><br>
     &#8226; <a href="index.php?site=login">umellen</a>'
 );
 ?>

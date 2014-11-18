@@ -43,8 +43,8 @@ Buon divertimento sul nostro sito
 	'lost_password'=>'Ho perso la password',
 	'no_mail_given'=>'Tu non ha nessun indirizzo e-mail inserito.',
 	'no_user_found'=>'Utente non trovato!',
-	'successful'=>'Il tuo account è stato trovato!!<br /><br />
-    Sarà in pochi secondi, un messaggio e-mail con i tuoi dati.<br /><br />
+	'successful'=>'Il tuo account è stato trovato!!<br><br>
+    Sarà in pochi secondi, un messaggio e-mail con i tuoi dati.<br><br>
     &#8226; <a href="index.php?site=login">accesso</a>',
 	'your_email'=>'La tua E-Mail'
 );

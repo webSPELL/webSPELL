@@ -30,7 +30,7 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'activation_successful'=>'Su konto aktiveerimine oli edukas.<br />Sa saad nüüd sisse logida.',
+  'activation_successful'=>'Su konto aktiveerimine oli edukas.<br>Sa saad nüüd sisse logida.',
   'back'=>'tagasi',
   'enter_nickname'=>'Palun sisesta oma hüüdnimi.',
   'enter_password'=>'Palun sisesta parool.',

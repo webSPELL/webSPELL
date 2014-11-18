@@ -107,8 +107,8 @@ Kiitoksia yhteydenotosta!
   'nickname'=>'Kutsumanimi',
   'nickname_already_in_use'=>'kutsumanimi on jo käytössä!',
   'no'=>'No',
-  'not_logged_in'=>'Sinun täytyy olla kirjautuneena voidaksesi katsoa profiilia!<br /><br />
-    &#8226; <a href="index.php?site=register">Rekisteröidy</a><br />
+  'not_logged_in'=>'Sinun täytyy olla kirjautuneena voidaksesi katsoa profiilia!<br><br>
+    &#8226; <a href="index.php?site=register">Rekisteröidy</a><br>
     &#8226; <a href="index.php?site=login">Kirjaudu sisään</a>',
   'old_password'=>'vanha salasana',
   'old_pw_not_valid'=>'vanha salasanasi on väärä!',

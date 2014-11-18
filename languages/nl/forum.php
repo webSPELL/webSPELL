@@ -87,8 +87,8 @@ $language_array = Array(
 	'no_new_posts'=>'geen nieuwe berichten',
 	'no_permission'=>'Je hebt geen toegang tot het internet forum!',
 	'not_logged'=>'Niet ingelogd.',
-	'not_logged_msg'=>'<br /><br />Je moet geregistreerd en ingelogd zijn om te kunnen antwoorden in een onderwerp!<br /><br />
-	&#8226; <a href="index.php?site=register"><b>registreer nu</b></a><br />
+	'not_logged_msg'=>'<br><br>Je moet geregistreerd en ingelogd zijn om te kunnen antwoorden in een onderwerp!<br><br>
+	&#8226; <a href="index.php?site=register"><b>registreer nu</b></a><br>
 	&#8226; <a href="index.php?site=login"><b>log in</b></a>',
 	'notify'=>'Geef melding bij nieuw bericht',
 	'notify_mail'=>'nieuwe reactie door %poster% in onderwerp

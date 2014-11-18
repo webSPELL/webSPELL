@@ -92,7 +92,7 @@ $language_array = Array(
   'nickname'=>'نام مخفف',
   'nickname_already_in_use'=>'!این نام مخفف هم اکنون وجود دارد',
   'no'=>'خیر',
-  'not_logged_in'=>'!شما باید وارد شوید تا بتوانید پروفایل را ببینید<br /><br />rn    &#8226; <a href="index.php?site=register">عضو شوید</a><br />rn    &#8226; <a href="index.php?site=login">ورود</a>',
+  'not_logged_in'=>'!شما باید وارد شوید تا بتوانید پروفایل را ببینید<br><br>rn    &#8226; <a href="index.php?site=register">عضو شوید</a><br>rn    &#8226; <a href="index.php?site=login">ورود</a>',
   'old_password'=>'پسورد قدیمی',
   'old_pw_not_valid'=>'!پسورد قدیمی شما معتبر نیست',
   'options'=>'تنظیمات',

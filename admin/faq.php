@@ -138,18 +138,18 @@ if(isset($_GET['action'])) {
         </td>
       </tr>
       <tr>
-        <td colspan="2"><b>'.$_language->module['answer'].'</b><br />
+        <td colspan="2"><b>'.$_language->module['answer'].'</b><br>
           <table width="99%" border="0" cellspacing="0" cellpadding="0">
 			      <tr>
 			        <td valign="top">'.$addbbcode.'</td>
 			        <td valign="top">'.$addflags.'</td>
 			      </tr>
 			    </table>
-          <br /><textarea id="message" rows="10" cols="" name="message" style="width: 100%;">'.$answer.'</textarea>
+          <br><textarea id="message" rows="10" cols="" name="message" style="width: 100%;">'.$answer.'</textarea>
         </td>
       </tr>
       <tr>
-        <td colspan="2"><input type="hidden" name="captcha_hash" value="'.$hash.'" /><br /><input type="submit" name="save" value="'.$_language->module['add_faq'].'" /></td>
+        <td colspan="2"><input type="hidden" name="captcha_hash" value="'.$hash.'" /><br><input type="submit" name="save" value="'.$_language->module['add_faq'].'" /></td>
       </tr>
     </table>
     </form>';
@@ -231,7 +231,7 @@ else {
 	
   echo '<h1>&curren; '.$_language->module['faq'].'</h1>';
   
-  echo'<input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=faq&amp;action=add\');return document.MM_returnValue" value="'.$_language->module['new_faq'].'" /><br /><br />';	
+  echo'<input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=faq&amp;action=add\');return document.MM_returnValue" value="'.$_language->module['new_faq'].'" /><br><br>';	
 
 	echo'<form method="post" action="admincenter.php?site=faq">
   <table width="100%" border="0" cellspacing="1" cellpadding="3" bgcolor="#DDDDDD">
@@ -253,7 +253,7 @@ else {
 
 		echo'<tr>
       <td class="td_head" colspan="3"><b>'.$ds['faqcatname'].'</b>
-      <br /><small>'.cleartext($ds['description'],1,'admin').'</small></td>
+      <br><small>'.cleartext($ds['description'],1,'admin').'</small></td>
     </tr>';		 
 
 		$faq=safe_query("SELECT * FROM ".PREFIX."faq WHERE faqcatID='$ds[faqcatID]' ORDER BY sort");

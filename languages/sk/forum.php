@@ -87,8 +87,8 @@ $language_array = Array(
 	'no_new_posts'=>'žiadne nové príspevky',
 	'no_permission'=>'Nemáte povolenie vidieť interné boardy!',
 	'not_logged'=>'Neprihlásený.',
-	'not_logged_msg'=>'<br /><br />Pre odpovedanie, alebo začatie témy musíte byť zaregistrovaný a prihlásený!<br /><br />
-    &#8226; <a href="index.php?site=register">registrovať</a><br />
+	'not_logged_msg'=>'<br><br>Pre odpovedanie, alebo začatie témy musíte byť zaregistrovaný a prihlásený!<br><br>
+    &#8226; <a href="index.php?site=register">registrovať</a><br>
     &#8226; <a href="index.php?site=login">prihlásiť</a>',
 	'notify'=>'Upozorni ma keď niekto odpovie',
 	'notify_mail'=>'nová odpoveď od %poster% v téme

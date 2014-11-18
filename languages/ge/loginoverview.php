@@ -65,8 +65,8 @@ $language_array = Array(
   'usermenu'=>'მომხმარებლის მენიუ',
   'views'=>'ხედები',
   'x_new_message'=>'არის %new_messages% ახალი შეტყობინებები.',
-  'you_have_to_be_logged_in'=>'შენ უნდა იყო ავტორიზირებული რომ მიმოიხილო!<br /><br />
-    &#8226; <a href="index.php?site=register">დარეგისტრირდი</a><br />
+  'you_have_to_be_logged_in'=>'შენ უნდა იყო ავტორიზირებული რომ მიმოიხილო!<br><br>
+    &#8226; <a href="index.php?site=register">დარეგისტრირდი</a><br>
     &#8226; <a href="index.php?site=login">გაიარე ავტორიზაცია</a>'
 );
 ?>

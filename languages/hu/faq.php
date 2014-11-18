@@ -35,7 +35,7 @@ $language_array = Array(
 	'faq'=>'FAQ',
 	'faqs'=>'Kérdés',
 	'no_categories'=>'Nincs létrehozott kategória',
-	'no_faq'=>'Nincs elérhető kérdés<br /><a href="index.php?site=faq">Vissza</a>',
+	'no_faq'=>'Nincs elérhető kérdés<br><a href="index.php?site=faq">Vissza</a>',
 	'saved_on'=>'Megtakarítva'
 );
 ?>

@@ -87,8 +87,8 @@ $language_array = Array(
 	'no_new_posts'=>'Nema novih odgovors',
 	'no_permission'=>'Nemate dopuštenje vidjeti interne podforume!',
 	'not_logged'=>'Niste prijavljeni.',
-	'not_logged_msg'=>'<br /><br />Da bi kreirali novu temu ili odgovorili na postojeću morate biti registrirani i prijavljeni!<br /><br />
-    &#8226; <a href="index.php?site=register">Registriraj se</a><br />
+	'not_logged_msg'=>'<br><br>Da bi kreirali novu temu ili odgovorili na postojeću morate biti registrirani i prijavljeni!<br><br>
+    &#8226; <a href="index.php?site=register">Registriraj se</a><br>
     &#8226; <a href="index.php?site=login">Prijavi se</a>',
 	'notify'=>'Obavijesti me o odgovoru',
 	'notify_mail'=>'Novi odgovor napisao %poster% u temi

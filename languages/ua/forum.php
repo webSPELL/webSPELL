@@ -93,8 +93,8 @@ $language_array = Array(
   'no_new_posts'=>'Немає нових публікацій',
   'no_permission'=>'У вас немає прав для перегляду цього форуму!',
   'not_logged'=>'Ви не увійшли.',
-  'not_logged_msg'=>'<br /><br />Щоб почати або відповісти в тему, ви повинні зареєструватися і увійти!<br /> <br />
-&#8226; <a href="index.php?site=register">зареєструватися зараз</a><br />
+  'not_logged_msg'=>'<br><br>Щоб почати або відповісти в тему, ви повинні зареєструватися і увійти!<br> <br>
+&#8226; <a href="index.php?site=register">зареєструватися зараз</a><br>
 &#8226; <a href="index.php?site=login">ввійти</a>',
   'notify'=>'Повідомити мене про відповіді на цей пост',
   'notify_mail'=>'%poster% відповів в тему
