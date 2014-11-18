@@ -46,7 +46,7 @@ $language_array = Array(
 	'mail'=>'Váš e-mail',
 	'name'=>'Vaše meno',
 	'new_entry'=>'Pridať príspevok',
-	'no_access'=>'Nie ste prihlásený.<br /><a href="index.php?site=login">Prihlásenie</a> | <a href="index.php?site=register">Registrácia</a>',
+	'no_access'=>'Nie ste prihlásený.<br><a href="index.php?site=login">Prihlásenie</a> | <a href="index.php?site=register">Registrácia</a>',
 	'options'=>'Možnosti',
 	'pmsubject_newentry'=>'Nový guestbook príspevok',
 	'pmtext_newentry'=>'[b]Niekto vám nechal správu v guestbook-u![/b][br][br] [URL=index.php?site=guestbook#$insertid]Kliknite sem pre prečítanie[/URL] ',

@@ -64,8 +64,8 @@ $language_array = Array(
 	'usermenu'=>'Felhasználói menü',
 	'views'=>'Megtekintve',
 	'x_new_message'=>'%new_messages% új üzeneted van.',
-	'you_have_to_be_logged_in'=>'Be kell jelentkezned az áttekintéshez!<br /><br />
-	 &#8226; <a href="index.php?site=register">regisztráció most</a><br />
+	'you_have_to_be_logged_in'=>'Be kell jelentkezned az áttekintéshez!<br><br>
+	 &#8226; <a href="index.php?site=register">regisztráció most</a><br>
 	 &#8226; <a href="index.php?site=login">bejelentkezés</a>'
 );
 ?>

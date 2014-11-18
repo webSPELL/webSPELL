@@ -67,7 +67,7 @@ $language_array = Array(
   'sort'=>'grupo:',
   'squad'=>'skuadër',
   'submit_challenge'=>'pranoje sfidën',
-  'thank_you'=>'Ju falenderojmë për kërkesën tuaj!<br />',
+  'thank_you'=>'Ju falenderojmë për kërkesën tuaj!<br>',
   'time'=>'koha',
   'wrong_security_code'=>'Kodi sigurisë ishte i gabuar.'
 );

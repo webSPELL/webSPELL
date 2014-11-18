@@ -52,7 +52,7 @@ $language_array = Array(
   'mail'=>'Sähköposti',
   'name'=>'Nimesi',
   'new_entry'=>'Uusi aihe',
-  'no_access'=>'Et ole kirjautuneena sisään.<br /><a href="index.php?site=login">Käyttäjätunnus</a> | <a href="index.php?site=register">Ilmoittautua</a>',
+  'no_access'=>'Et ole kirjautuneena sisään.<br><a href="index.php?site=login">Käyttäjätunnus</a> | <a href="index.php?site=register">Ilmoittautua</a>',
   'options'=>'Asetukset',
   'pmsubject_newentry'=>'Vieraskirjassa uusi aihe',
   'pmtext_newentry'=>'[b]Joku on jättänyt viestin vieraskirjaan![/b][br][br] [URL=index.php?site=guestbook#%insertid%]Klikkaa nähdäksesi viestin[/URL] ',

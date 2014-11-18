@@ -35,7 +35,7 @@ $language_array = Array(
   'buddy_nousers'=>'Немате корисника на листи пријатеља',
   'buddys'=>'Пријатељи',
   'ignore_nousers'=>'Немате корисника на листи игнорисања пријатеља',
-  'not_logged'=>'Да би управљали листом пријатеља, морате бити регистровани и пријављен корисник.<br /><a href="index.php?site=register">Региструј се</a> | <a href="index.php?site=login">Пријави се</a>',
+  'not_logged'=>'Да би управљали листом пријатеља, морате бити регистровани и пријављен корисник.<br><a href="index.php?site=register">Региструј се</a> | <a href="index.php?site=login">Пријави се</a>',
   'your_buddylist'=>'Твоја листа пријатеља',
   'your_ignorelist'=>'Твоја листа игнорисања'
 );

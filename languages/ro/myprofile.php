@@ -102,8 +102,8 @@ Vă mulțumim pentru interesul dumneavoastră
   'nickname'=>'Porecla',
   'nickname_already_in_use'=>'Porecla e deja in uz!',
   'no'=>'Nu',
-  'not_logged_in'=>'Trebuie sa fi logat pentru a vă putea vizualiza profilul !<br /><br />
-    &#8226; <a href="index.php?site=register">inregistreaza-te acum</a><br />
+  'not_logged_in'=>'Trebuie sa fi logat pentru a vă putea vizualiza profilul !<br><br>
+    &#8226; <a href="index.php?site=register">inregistreaza-te acum</a><br>
     &#8226; <a href="index.php?site=login">login</a>',
   'old_password'=>'Parola veche',
   'old_pw_not_valid'=>'vechea parolă nu este validă!',

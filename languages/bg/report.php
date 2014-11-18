@@ -38,6 +38,6 @@ $language_array = Array(
   'no_informations'=>'няма налична информация',
   'report_message'=>'[b]Има ново %s - Оплакване[/b][br][br]%s-ID: %d[br]Инфо: %s[br]Препратили: [url]index.php?site=files&file=%d[/url]',
   'report_recognized'=>'Вашето оплакване беше разпознато. Благодарим Ви.',
-  'wrong_securitycode'=>'Въвели сте грешен код за сигурност<br /><br />[<a href="javascript:back();">назад</a>]'
+  'wrong_securitycode'=>'Въвели сте грешен код за сигурност<br><br>[<a href="javascript:back();">назад</a>]'
 );
 ?>

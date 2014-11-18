@@ -88,8 +88,8 @@ $language_array = Array(
   'no_new_posts'=>'pole uusi postitusi',
   'no_permission'=>'Sul pole õigust vaadata kinniseid foorumeid!',
   'not_logged'=>'Pole sisse logitud.',
-  'not_logged_msg'=>'<br /><br />Teema loomiseks või sellele vastamiseks pead sa registreeritud ja sisse logitud olema!<br /><br />
-&#8226; <a href="index.php?site=register">registreeri kohe</a><br />
+  'not_logged_msg'=>'<br><br>Teema loomiseks või sellele vastamiseks pead sa registreeritud ja sisse logitud olema!<br><br>
+&#8226; <a href="index.php?site=register">registreeri kohe</a><br>
 &#8226; <a href="index.php?site=login">logi sisse</a>',
   'notify'=>'Teavita mind, kui vastus postitatakse',
   'notify_mail'=>'Uus vastus %poster% poolt teemas

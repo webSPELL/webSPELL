@@ -199,7 +199,7 @@ else {
 	
   echo'<h1>&curren; '.$_language->module['file_categories'].'</h1>';
   
-  echo'<input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=filecategorys&amp;action=add\');return document.MM_returnValue" value="'.$_language->module['new_category'].'" /><br /><br />';
+  echo'<input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=filecategorys&amp;action=add\');return document.MM_returnValue" value="'.$_language->module['new_category'].'" /><br><br>';
 
 	echo'<table width="100%" border="0" cellspacing="1" cellpadding="3" bgcolor="#DDDDDD">
     <tr>

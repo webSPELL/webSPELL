@@ -49,8 +49,8 @@ të argëtohen në faqen tonë
   'lost_password'=>'password i humbur',
   'no_mail_given'=>'Nuk keni vendosur adresë mail.',
   'no_user_found'=>'nuk u gjet përdorues!',
-  'successful'=>'Account-i juaj u gjet<br /><br />
-    Do merrni një e-mail me të dhënat e account-it tuaj.<br /><br />
+  'successful'=>'Account-i juaj u gjet<br><br>
+    Do merrni një e-mail me të dhënat e account-it tuaj.<br><br>
     &#8226; <a href="index.php?site=login">logim</a>',
   'your_email'=>'E-Mail juaj'
 );

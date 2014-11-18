@@ -415,7 +415,7 @@ elseif(isset($_GET['cat'])) {
 		echo $files_category_list;
 
 	}
-	if(!isset($n)) echo "<br />".$_language->module['cant_display_empty_cat'];
+	if(!isset($n)) echo "<br>".$_language->module['cant_display_empty_cat'];
 }
 elseif(isset($_GET['file'])) {
 	// ADMINACTIONS

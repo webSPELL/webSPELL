@@ -55,16 +55,16 @@ if(isset($_POST['save'])) {
 			}  else {
 				if(unlink($filepath.$banner['name'].".tmp")) {
 					$error = $_language->module['format_incorrect'];
-					die('<b>'.$error.'</b><br /><br /><a href="index.php?site=linkus&amp;action=edit&amp;bannerID='.$id.'">&laquo; '.$_language->module['back'].'</a>');
+					die('<b>'.$error.'</b><br><br><a href="index.php?site=linkus&amp;action=edit&amp;bannerID='.$id.'">&laquo; '.$_language->module['back'].'</a>');
 				} else {
 					$error = $_language->module['format_incorrect'];
-					die('<b>'.$error.'</b><br /><br /><a href="index.php?site=linkus&amp;action=edit&amp;bannerID='.$id.'">&laquo; '.$_language->module['back'].'</a>');
+					die('<b>'.$error.'</b><br><br><a href="index.php?site=linkus&amp;action=edit&amp;bannerID='.$id.'">&laquo; '.$_language->module['back'].'</a>');
 				}
 			}
 		} else {
 			@unlink($filepath.$banner['name'].".tmp");
 			$error = $_language->module['banner_to_big'];
-			die('<b>'.$error.'</b><br /><br /><a href="index.php?site=linkus&amp;action=edit&amp;bannerID='.$id.'">&laquo; '.$_language->module['back'].'</a>');
+			die('<b>'.$error.'</b><br><br><a href="index.php?site=linkus&amp;action=edit&amp;bannerID='.$id.'">&laquo; '.$_language->module['back'].'</a>');
 		}
 	}
 }
@@ -96,16 +96,16 @@ elseif(isset($_POST['saveedit'])) {
 			}  else {
 				if(unlink($filepath.$banner['name'].".tmp")) {
 					$error = $_language->module['format_incorrect'];
-					die('<b>'.$error.'</b><br /><br /><a href="index.php?site=linkus&amp;action=edit&amp;bannerID='.$id.'">&laquo; '.$_language->module['back'].'</a>');
+					die('<b>'.$error.'</b><br><br><a href="index.php?site=linkus&amp;action=edit&amp;bannerID='.$id.'">&laquo; '.$_language->module['back'].'</a>');
 				} else {
 					$error = $_language->module['format_incorrect'];
-					die('<b>'.$error.'</b><br /><br /><a href="index.php?site=linkus&amp;action=edit&amp;bannerID='.$id.'">&laquo; '.$_language->module['back'].'</a>');
+					die('<b>'.$error.'</b><br><br><a href="index.php?site=linkus&amp;action=edit&amp;bannerID='.$id.'">&laquo; '.$_language->module['back'].'</a>');
 				}
 			}
 		} else {
 			@unlink($filepath.$banner['name'].".tmp");
 			$error = $_language->module['banner_to_big'];
-			die('<b>'.$error.'</b><br /><br /><a href="index.php?site=linkus&amp;action=edit&amp;bannerID='.$id.'">&laquo; '.$_language->module['back'].'</a>');
+			die('<b>'.$error.'</b><br><br><a href="index.php?site=linkus&amp;action=edit&amp;bannerID='.$id.'">&laquo; '.$_language->module['back'].'</a>');
 		}
 	}
 }

@@ -60,7 +60,7 @@ $language_array = Array(
   'no_incoming'=>'Ei viestejä saapuneissa.',
   'no_outgoing'=>'Ei viestejä lähtevissä.',
   'no_subject'=>'(Ei aihetta)',
-  'not_logged'=>'Et ole kirjautuneena.<br /><a href="index.php?site=login">Käyttäjätunnus</a> | <a href="index.php?site=register">Rekisteröidy</a>',
+  'not_logged'=>'Et ole kirjautuneena.<br><a href="index.php?site=login">Käyttäjätunnus</a> | <a href="index.php?site=register">Rekisteröidy</a>',
   'options'=>'Asetukset',
   'outgoing'=>'Lähtevät',
   'read'=>'Lue',
@@ -79,7 +79,7 @@ $language_array = Array(
   'title'=>'Aihe',
   'your_message'=>'Sinun viestisi:',
   'mail_subject'=>'Sinulle on uusi viesti',
-  'mail_body'=>'<b>Terve! %nickname%!</b><br /><br />Sinulle on uusi viesti BVBPOWER (%hp_url%).<br />Klikkaa <a href="http://%hp_url%?site=messenger">tästä</a> lukea viesti.<br /><br />(C) webSPELL.org',
+  'mail_body'=>'<b>Terve! %nickname%!</b><br><br>Sinulle on uusi viesti BVBPOWER (%hp_url%).<br>Klikkaa <a href="http://%hp_url%?site=messenger">tästä</a> lukea viesti.<br><br>(C) webSPELL.org',
   'error'=>'virhe',
   'unknown_user'=>'tuntematon käyttäjä'
 );

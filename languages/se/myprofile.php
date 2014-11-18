@@ -101,8 +101,8 @@ Tackar för dina intressen
 	'nickname'=>'Smeknamn',
 	'nickname_already_in_use'=>'Smeknamnet används redan!',
 	'no'=>'Nej',
-	'not_logged_in'=>'Du måste vara inloggad för att kolla på din profil!<br /><br />
-    &#8226; <a href="index.php?site=register">registrera nu</a><br />
+	'not_logged_in'=>'Du måste vara inloggad för att kolla på din profil!<br><br>
+    &#8226; <a href="index.php?site=register">registrera nu</a><br>
     &#8226; <a href="index.php?site=login">logga in</a>',
 	'old_password'=>'gammalt lösenord',
 	'old_pw_not_valid'=>'Ditt gammla lösenord är inte giltigt!',

@@ -64,8 +64,8 @@ $language_array = Array(
 	'usermenu'=>'Menu utilisateur',
 	'views'=>'Visualisations',
 	'x_new_message'=>'Il y %new_messages% nouveau(x) message(s).',
-	'you_have_to_be_logged_in'=>'Vous devez être connecter !<br /><br />
-    &#8226; <a href="index.php?site=register">S\'enregistrer</a><br />
+	'you_have_to_be_logged_in'=>'Vous devez être connecter !<br><br>
+    &#8226; <a href="index.php?site=register">S\'enregistrer</a><br>
     &#8226; <a href="index.php?site=login">Connexion</a>'
 );
 ?>

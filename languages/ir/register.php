@@ -29,7 +29,7 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'activation_successful'=>'.فعال سازی اکانت شما با موفقیت انجام گرفت<br />.شما میتوانید وارد شوید',
+  'activation_successful'=>'.فعال سازی اکانت شما با موفقیت انجام گرفت<br>.شما میتوانید وارد شوید',
   'back'=>'برگشت',
   'enter_nickname'=>'.لطفا نام مخفف خود را وارد کنید',
   'enter_password'=>'.لطفا کلمه عبور را وارد کنید',

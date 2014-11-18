@@ -101,8 +101,8 @@ Bedankt voor je interesse
 	'nickname'=>'Bijnaam',
 	'nickname_already_in_use'=>'Bijnaam al in gebruik!',
 	'no'=>'Nee',
-	'not_logged_in'=>'Je moet ingelogd zijn om je profiel te bekijken!<br /><br />
-    &#8226; <a href="index.php?site=register">registreer nu</a><br />
+	'not_logged_in'=>'Je moet ingelogd zijn om je profiel te bekijken!<br><br>
+    &#8226; <a href="index.php?site=register">registreer nu</a><br>
     &#8226; <a href="index.php?site=login">log in</a>',
 	'old_password'=>'oude Wachtwoord',
 	'old_pw_not_valid'=>'Je oude wachtwoord is niet geldig!',

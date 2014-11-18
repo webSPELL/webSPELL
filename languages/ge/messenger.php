@@ -55,7 +55,7 @@ $language_array = Array(
   'no_incoming'=>'არ არის შეტყობინება შემოსულებში.',
   'no_outgoing'=>'არ არის შეტყობინება გაგზავნილებში.',
   'no_subject'=>'(არ არის საგანი)',
-  'not_logged'=>'არ ხართ ავტორიზირებული.<br /><a href="index.php?site=login">შესვლა</a> | <a href="index.php?site=register">დარეგისტრირდი</a>',
+  'not_logged'=>'არ ხართ ავტორიზირებული.<br><a href="index.php?site=login">შესვლა</a> | <a href="index.php?site=register">დარეგისტრირდი</a>',
   'options'=>'ფუნქციები',
   'outgoing'=>'გამომდინარე',
   'read'=>'წაკითხვა',
@@ -74,7 +74,7 @@ $language_array = Array(
   'title'=>'საგანი',
   'your_message'=>'თქვენი შეტყობინება:',
   'mail_subject'=>'თქვენ გაქვთ ახალი პირადი შეტყობინება',
-  'mail_body'=>'<b>გამარჯობა %nickname%!</b><br /><br />თქვენ მიიღეთ შეტყობინება BVBPOWER (%hp_url%).<br />დაკლიკეთ <a href="http://%hp_url%?site=messenger">აქ</a> რომ წაიკითხოთ შეტყობინება.<br /><br />(C) webSPELL.org',
+  'mail_body'=>'<b>გამარჯობა %nickname%!</b><br><br>თქვენ მიიღეთ შეტყობინება BVBPOWER (%hp_url%).<br>დაკლიკეთ <a href="http://%hp_url%?site=messenger">აქ</a> რომ წაიკითხოთ შეტყობინება.<br><br>(C) webSPELL.org',
   'error'=>'შეცდომა',
   'unknown_user'=>'უცნობი მომხმარებელი'
 );

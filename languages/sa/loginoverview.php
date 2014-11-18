@@ -65,8 +65,8 @@ $language_array = Array(
   'usermenu'=>'قائمة المستخدم',
   'views'=>'المشاهدات',
   'x_new_message'=>'رسالة جديده %new_messages% هناك.',
-  'you_have_to_be_logged_in'=>'يوجد عليك تسجيل الدخول لمشاهدة نظرة عامة<br /><br />
-    &#8226; <a href="index.php?site=register">سجل الان</a><br />
+  'you_have_to_be_logged_in'=>'يوجد عليك تسجيل الدخول لمشاهدة نظرة عامة<br><br>
+    &#8226; <a href="index.php?site=register">سجل الان</a><br>
     &#8226; <a href="index.php?site=login">تسجيل الدخول</a>'
 );
 ?>

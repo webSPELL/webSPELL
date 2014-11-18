@@ -108,7 +108,7 @@ if(isset($_GET['action'])) {
 		if(in_array(3, $_POST['users'])) {
 			$fgrID=mysqli_fetch_array(safe_query("SELECT fgrID FROM `".PREFIX."forum_groups` WHERE name = '".$_POST['addfield']."'"));
 			if(!$fgrID['fgrID']) {
-				echo '<b>'.$_language->module['error_group'].'</b><br /><br /><a href="admincenter.php?site=group-users">&laquo; '.$_language->module['back'].'</a>';
+				echo '<b>'.$_language->module['error_group'].'</b><br><br><a href="admincenter.php?site=group-users">&laquo; '.$_language->module['back'].'</a>';
 				break;
 			}
 			$query=safe_query("SELECT userID FROM `".PREFIX."user_forum_groups` WHERE `".$fgrID['fgrID']."` = '1'");

@@ -36,7 +36,7 @@ $language_array = Array(
   'buddy_nousers'=>'لايوجد احد في قائمة الاصدقاء',
   'buddys'=>'الاصدقاء',
   'ignore_nousers'=>'لايوجد احد في قائمة التجاهل',
-  'not_logged'=>'.للتحكم باصدقائك يجب عليك التسجيل وتسجيل الدخول<br /><a href="index.php?site=register">التسجيل</a> | <a href="index.php?site=login">تسجيل الدخول</a>',
+  'not_logged'=>'.للتحكم باصدقائك يجب عليك التسجيل وتسجيل الدخول<br><a href="index.php?site=register">التسجيل</a> | <a href="index.php?site=login">تسجيل الدخول</a>',
   'your_buddylist'=>'قائمة الاصدقاء',
   'your_ignorelist'=>'قائمة التجاهل'
 );

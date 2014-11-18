@@ -88,27 +88,27 @@ elseif($_POST['installtype'] == 'full') {
 
 	if(!(mb_strlen(trim($host)))) {
 		$error=$_language->module['verify_data'];
-		die("<b>".$_language->module['error']."<br />".$error."</b><br /><br /><a href='javascript:history.back()'>".$_language->module['back']."</a>");
+		die("<b>".$_language->module['error']."<br>".$error."</b><br><br><a href='javascript:history.back()'>".$_language->module['back']."</a>");
 	}
 	if(!(mb_strlen(trim($db)))) {
 		$error=$_language->module['verify_data'];
-		die("<b>".$_language->module['error']."<br />".$error."</b><br /><br /><a href='javascript:history.back()'>".$_language->module['back']."</a>");
+		die("<b>".$_language->module['error']."<br>".$error."</b><br><br><a href='javascript:history.back()'>".$_language->module['back']."</a>");
 	}
 	if(!(mb_strlen(trim($adminname)))) {
 		$error=$_language->module['verify_data'];
-		die("<b>".$_language->module['error']."<br />".$error."</b><br /><br /><a href='javascript:history.back()'>".$_language->module['back']."</a>");
+		die("<b>".$_language->module['error']."<br>".$error."</b><br><br><a href='javascript:history.back()'>".$_language->module['back']."</a>");
 	}
 	if(!(mb_strlen(trim($adminpwd)))) {
 		$error=$_language->module['verify_data'];
-		die("<b>".$_language->module['error']."<br />".$error."</b><br /><br /><a href='javascript:history.back()'>".$_language->module['back']."</a>");
+		die("<b>".$_language->module['error']."<br>".$error."</b><br><br><a href='javascript:history.back()'>".$_language->module['back']."</a>");
 	}
 	if(!(mb_strlen(trim($adminmail)))) {
 		$error=$_language->module['verify_data'];
-		die("<b>".$_language->module['error']."<br />".$error."</b><br /><br /><a href='javascript:history.back()'>".$_language->module['back']."</a>");
+		die("<b>".$_language->module['error']."<br>".$error."</b><br><br><a href='javascript:history.back()'>".$_language->module['back']."</a>");
 	}
 	if(!(mb_strlen(trim($url)))) {
 		$error=$_language->module['verify_data'];
-		die("<b>".$_language->module['error']."<br />".$error."</b><br /><br /><a href='javascript:history.back()'>".$_language->module['back']."</a>");
+		die("<b>".$_language->module['error']."<br>".$error."</b><br><br><a href='javascript:history.back()'>".$_language->module['back']."</a>");
 	}
 
 	$adminpassword=generatePasswordHash($adminpwd);
@@ -298,9 +298,9 @@ else $delete_info = $_language->module['delete_folder'];
 ?>
 
    <center>
-   <?php echo $type; ?><br /><br />
-   <?php echo $delete_info; ?><br /><br />
-   <?php echo $info; ?><br /><br /><br />
+   <?php echo $type; ?><br><br>
+   <?php echo $delete_info; ?><br><br>
+   <?php echo $info; ?><br><br><br>
    <a href="../index.php"><b><?php echo $_language->module['view_site']; ?></b></a>
    </center>
    </td>

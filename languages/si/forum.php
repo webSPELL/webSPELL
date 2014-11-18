@@ -93,8 +93,8 @@ $language_array = Array(
   'no_new_posts'=>'Nema novih odgovorov',
   'no_permission'=>'Nimate dostopa',
   'not_logged'=>'Niste prijavljeni.',
-  'not_logged_msg'=>'<br /><br />Da bi ustvarili novo temo ali odgovorili na obstoječo morate biti registrirani in prijavljeni!<br /><br />
-&#8226; <a href="index.php?site=register">Registriraj se</a><br />
+  'not_logged_msg'=>'<br><br>Da bi ustvarili novo temo ali odgovorili na obstoječo morate biti registrirani in prijavljeni!<br><br>
+&#8226; <a href="index.php?site=register">Registriraj se</a><br>
 &#8226; <a href="index.php?site=login">Prijavi se</a>',
   'notify'=>'Obvesti me',
   'notify_mail'=>'Novi odgovor napisl %poster% v temi

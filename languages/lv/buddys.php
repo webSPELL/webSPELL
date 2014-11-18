@@ -36,7 +36,7 @@ $language_array = Array(
   'buddy_nousers'=>'Draugu sarakstā nav lietotāji',
   'buddys'=>'draugi',
   'ignore_nousers'=>'Ignorēto sarakstā nav lietotāji',
-  'not_logged'=>'Lai pārvaldītu draugus, jāreģistrējas un jāpieslēdzas.<br /><a href="index.php?site=register">Reģistrēties</a> | <a href="index.php?site=login">Pieslēgties</a>',
+  'not_logged'=>'Lai pārvaldītu draugus, jāreģistrējas un jāpieslēdzas.<br><a href="index.php?site=register">Reģistrēties</a> | <a href="index.php?site=login">Pieslēgties</a>',
   'your_buddylist'=>'Draugu saraksts',
   'your_ignorelist'=>'Ignorēto saraksts'
 );

@@ -29,11 +29,11 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'invalid_password'=>'Унијели сте криву лозинку.<br /><br /><a href="javascript:history.back()">Вратите се и покушајте поново.</a>',
-  'ip_banned'=>'Вас ИП је баннан на овим страницама.<br/>%reason%<br /><br /><a href="javascript:history.back()">Иди натраг</a>',
+  'invalid_password'=>'Унијели сте криву лозинку.<br><br><a href="javascript:history.back()">Вратите се и покушајте поново.</a>',
+  'ip_banned'=>'Вас ИП је баннан на овим страницама.<br>%reason%<br><br><a href="javascript:history.back()">Иди натраг</a>',
   'login_successful'=>'Пријава успијешна!',
-  'no_user'=>'Корисник <b>%username%</b> није доступан на овим страницама.<br /><br /><a href="javascript:history.back()">Врати се и покусај поново!</a>',
-  'not_activated'=>'Ваш рацун није активан.<br /><br /><a href="javascript:history.back()">Иди натраг</a>',
-  'session_error'=>'Молимо увјерите се да су коокиеси омогуцени у Вашем прегледнику.<br />Ако проблем и далје постоји,контактирајте Вебмастера.<br /><br /><a href="javascript:history.back()">Иди натраг</a>'
+  'no_user'=>'Корисник <b>%username%</b> није доступан на овим страницама.<br><br><a href="javascript:history.back()">Врати се и покусај поново!</a>',
+  'not_activated'=>'Ваш рацун није активан.<br><br><a href="javascript:history.back()">Иди натраг</a>',
+  'session_error'=>'Молимо увјерите се да су коокиеси омогуцени у Вашем прегледнику.<br>Ако проблем и далје постоји,контактирајте Вебмастера.<br><br><a href="javascript:history.back()">Иди натраг</a>'
 );
 ?>

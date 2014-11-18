@@ -56,7 +56,7 @@ if(isset($_POST['save'])) {
 				}  else {
 					@unlink($filepath.$pic['name'].".tmp");
 					$error = $_language->module['format_incorrect'];
-					die('<b>'.$error.'</b><br /><br /><a href="admincenter.php?site=rubrics&amp;action=edit&amp;rubricID='.$id.'">&laquo; '.$_language->module['back'].'</a>');
+					die('<b>'.$error.'</b><br><br><a href="admincenter.php?site=rubrics&amp;action=edit&amp;rubricID='.$id.'">&laquo; '.$_language->module['back'].'</a>');
 				}
 			}
 		} else echo $_language->module['information_incomplete'];
@@ -90,7 +90,7 @@ elseif(isset($_POST['saveedit'])) {
 				}  else {
 					@unlink($filepath.$pic['name'].".tmp");
 					$error = $_language->module['format_incorrect'];
-					die('<b>'.$error.'</b><br /><br /><a href="admincenter.php?site=rubrics&amp;action=edit&amp;rubricID='.$id.'">&laquo; '.$_language->module['back'].'</a>');
+					die('<b>'.$error.'</b><br><br><a href="admincenter.php?site=rubrics&amp;action=edit&amp;rubricID='.$id.'">&laquo; '.$_language->module['back'].'</a>');
 				}
 			}
 		} else echo $_language->module['information_incomplete'];
@@ -172,7 +172,7 @@ else {
 
   echo'<h1>&curren; '.$_language->module['news_rubrics'].'</h1>';
 
-	echo'<input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=rubrics&amp;action=add\');return document.MM_returnValue" value="'.$_language->module['new_rubric'].'" /><br /><br />';
+	echo'<input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=rubrics&amp;action=add\');return document.MM_returnValue" value="'.$_language->module['new_rubric'].'" /><br><br>';
 
 	$ergebnis=safe_query("SELECT * FROM ".PREFIX."news_rubrics ORDER BY rubric");
 	

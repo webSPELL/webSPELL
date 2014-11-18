@@ -49,8 +49,8 @@ $language_array = Array(
   'lost_password'=>'Забули пароль',
   'no_mail_given'=>'Ви не ввели ніякої e-mail адреси.',
   'no_user_found'=>'Користувач не знайден!',
-  'successful'=>'Ваш профіль знайдений<br /><br />
-    Ви отримаєте e-mail з даними свого профілю через кілька секунд.<br /> <br /> 
+  'successful'=>'Ваш профіль знайдений<br><br>
+    Ви отримаєте e-mail з даними свого профілю через кілька секунд.<br> <br> 
     &#8226; <a href="index.php?site=login">Логін</a>',
   'your_email'=>'Ваш E-Mail'
 );

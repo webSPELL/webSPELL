@@ -43,8 +43,8 @@ Ha det så kul på våran hemsida
 	'lost_password'=>'tappat lösenord',
 	'no_mail_given'=>'You have not entered any mail adress.',
 	'no_user_found'=>'ingen användare hittades!',
-	'successful'=>'Ditt account hittades<br /><br />
-					Du kommer att få ett mail med dina inloggnings uppgifter.<br /><br />
+	'successful'=>'Ditt account hittades<br><br>
+					Du kommer att få ett mail med dina inloggnings uppgifter.<br><br>
 			 		&#8226; <a href="index.php?site=login">logga in</a>',
 	'your_email'=>'Din email'
 );

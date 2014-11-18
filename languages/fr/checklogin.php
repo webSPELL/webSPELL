@@ -29,11 +29,11 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-	'invalid_password'=>'Votre mot de passe est invalide.<br /><br /><a href="javascript:history.back()">Retour</a>',
-	'ip_banned'=>'Votre adresse IP est bannie de ce site.<br />%reason%<br /><br /><a href="javascript:history.back()">Retour</a>',
+	'invalid_password'=>'Votre mot de passe est invalide.<br><br><a href="javascript:history.back()">Retour</a>',
+	'ip_banned'=>'Votre adresse IP est bannie de ce site.<br>%reason%<br><br><a href="javascript:history.back()">Retour</a>',
 	'login_successful'=>'Connexion réussie !',
-	'no_user'=>'Le membre <b>%username%</b> n\'a pas été trouvé dans la base de données.<br /><br /><a href="javascript:history.back()">Retour</a>',
-	'not_activated'=>'Votre compte n\'est pas activé.<br /><br /><a href="javascript:history.back()">Retour</a>',
-	'session_error'=>'Assurez-vous que votre navigateur accepte les cookies.<br />Si le problème persiste, contactez le webmaster.<br /><br /><a href="javascript:history.back()">Retour</a>'
+	'no_user'=>'Le membre <b>%username%</b> n\'a pas été trouvé dans la base de données.<br><br><a href="javascript:history.back()">Retour</a>',
+	'not_activated'=>'Votre compte n\'est pas activé.<br><br><a href="javascript:history.back()">Retour</a>',
+	'session_error'=>'Assurez-vous que votre navigateur accepte les cookies.<br>Si le problème persiste, contactez le webmaster.<br><br><a href="javascript:history.back()">Retour</a>'
 );
 ?>

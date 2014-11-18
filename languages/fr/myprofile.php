@@ -101,8 +101,8 @@ Merci pour votre intérêt
 	'nickname'=>'Pseudo',
 	'nickname_already_in_use'=>'Pseudo déjà utilisé !',
 	'no'=>'Non',
-	'not_logged_in'=>'Vous devez être connecté pour pouvoir éditer votre profil !<br /><br />
-    &#8226; <a href="index.php?site=register">S\'enregistrer</a><br />
+	'not_logged_in'=>'Vous devez être connecté pour pouvoir éditer votre profil !<br><br>
+    &#8226; <a href="index.php?site=register">S\'enregistrer</a><br>
     &#8226; <a href="index.php?site=login">Connexion</a>',
 	'old_password'=>'Ancien mot de passe',
 	'old_pw_not_valid'=>'Votre ancien mot de passe n\`est pas valide !',

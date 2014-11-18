@@ -60,7 +60,7 @@ $language_array = Array(
   'no_incoming'=>'Nuk ka mesazh ne folderin që vijon.',
   'no_outgoing'=>'Nuk ka mesazh në folderin që po del.',
   'no_subject'=>'(pa subjekt)',
-  'not_logged'=>'Nuk je i loguar.<br /><a href="index.php?site=login">Logim</a> | <a href="index.php?site=register">Regjistër</a>',
+  'not_logged'=>'Nuk je i loguar.<br><a href="index.php?site=login">Logim</a> | <a href="index.php?site=register">Regjistër</a>',
   'options'=>'Opsionet',
   'outgoing'=>'Që po dergohet',
   'read'=>'Lexo',
@@ -79,7 +79,7 @@ $language_array = Array(
   'title'=>'Subjekt',
   'your_message'=>'Mesazhi juaj:',
   'mail_subject'=>'Morët PM të re',
-  'mail_body'=>'<b>Përshëndetje %nickname%!</b><br /><br />Keni mesazh të ri tek BVBPOWER (%hp_url%).<br />Kliko <a href="http://%hp_url%?site=messenger">këtu</a> të lexosh PM.<br /><br />(C) webSPELL.org',
+  'mail_body'=>'<b>Përshëndetje %nickname%!</b><br><br>Keni mesazh të ri tek BVBPOWER (%hp_url%).<br>Kliko <a href="http://%hp_url%?site=messenger">këtu</a> të lexosh PM.<br><br>(C) webSPELL.org',
   'error'=>'gabim',
   'unknown_user'=>'përdorues i panjohur'
 );

@@ -40,7 +40,7 @@ header('content-type: text/html; charset=utf-8');
 // -- INSTALL CHECK -- //
 
 if(DEBUG=="OFF" && file_exists('install/index.php')){
-	system_error('The install-folder exists. Did you run the <a href="install/">Installer</a>?<br/>If yes, please remove the install-folder.',0);
+	system_error('The install-folder exists. Did you run the <a href="install/">Installer</a>?<br>If yes, please remove the install-folder.',0);
 }
 
 // -- CONNECTION TO MYSQL -- //
@@ -156,9 +156,9 @@ function system_error($text,$system=1) {
 
 	if($system) {
 		include('version.php');
-		$info='webSPELL Version: '.$version.'<br />PHP Version: '.phpversion().'<br />';
+		$info='webSPELL Version: '.$version.'<br>PHP Version: '.phpversion().'<br>';
 		if(!mysqli_connect_error()){
-			$info .= 'MySQL Version: '.$_database->server_info.'<br />';
+			$info .= 'MySQL Version: '.$_database->server_info.'<br>';
 		}
 	} else {
 		$info = '';
@@ -181,7 +181,7 @@ function system_error($text,$system=1) {
       <td><a href="http://www.webspell.org" target="_blank"><img src="images/banner.gif" style="border:none;" alt="webSPELL.org" title="webSPELL.org" /></a></td>
     </tr>
     <tr bgcolor="#ffffff">
-      <td><div style="color:#333333;font-family:Tahoma,Verdana,Arial;font-size:11px;padding:5px;">'.$info.'<br /><font color="red">'.$text.'</font><br />&nbsp;</div></td>
+      <td><div style="color:#333333;font-family:Tahoma,Verdana,Arial;font-size:11px;padding:5px;">'.$info.'<br><font color="red">'.$text.'</font><br>&nbsp;</div></td>
     </tr>
     <tr bgcolor="#ffffff">
       <td><div style="color:#333333;font-family:Tahoma,Verdana,Arial;font-size:11px;padding:5px;">For support visit <a href="http://webspell.org" target="_blank">webspell.org</a></div></td>

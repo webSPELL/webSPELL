@@ -62,7 +62,7 @@ if(isset($_POST['submit'])) {
 				</script>';
   
 	echo'<form method="post" id="post" name="post" action="admincenter.php?site=history" onsubmit="return chkFormular();">
-  <b>'.$_language->module['history'].'</b><br /><small>'.$_language->module['you_can_use_html'].'</small><br /><br />';
+  <b>'.$_language->module['history'].'</b><br><small>'.$_language->module['you_can_use_html'].'</small><br><br>';
   
 	echo '<table width="100%" border="0" cellspacing="0" cellpadding="0">
 		      <tr>
@@ -71,7 +71,7 @@ if(isset($_POST['submit'])) {
 		      </tr>
 		    </table>';
 	
-	echo '<br /><textarea id="message" rows="30" cols="" name="message" style="width: 100%;">'.getinput($ds['history']).'</textarea>
-  <br /><br /><input type="hidden" name="captcha_hash" value="'.$hash.'" /><input type="submit" name="submit" value="'.$_language->module['update'].'" />
+	echo '<br><textarea id="message" rows="30" cols="" name="message" style="width: 100%;">'.getinput($ds['history']).'</textarea>
+  <br><br><input type="hidden" name="captcha_hash" value="'.$hash.'" /><input type="submit" name="submit" value="'.$_language->module['update'].'" />
   </form>';
 ?>

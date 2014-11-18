@@ -87,8 +87,8 @@ $language_array = Array(
 	'no_new_posts'=>'jokio naujo pranešimo',
 	'no_permission'=>'Jūs neturite teisių peržiūrinėti V.I.P lentos!',
 	'not_logged'=>'Neprisijungę.',
-	'not_logged_msg'=>'<br /><br />Norint rašyti temą ar atsakyti į pranešimus, turite užsiregistruoti ir prisijungti!<br /><br />
-    &#8226; <a href="index.php?site=register">registruotis dabar</a><br />
+	'not_logged_msg'=>'<br><br>Norint rašyti temą ar atsakyti į pranešimus, turite užsiregistruoti ir prisijungti!<br><br>
+    &#8226; <a href="index.php?site=register">registruotis dabar</a><br>
     &#8226; <a href="index.php?site=login">prisijungti</a>',
 	'notify'=>'Pranešti mane, kada ateis atsakymas',
 	'notify_mail'=>'naujas atsakymas pagal %poster% temoje

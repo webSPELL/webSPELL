@@ -43,8 +43,8 @@ have fun on our page
 	'lost_password'=>'lost password',
 	'no_mail_given'=>'You have not entered any mail adress.',
 	'no_user_found'=>'no user found!',
-	'successful'=>'Your account has been found<br /><br />
-    You will get an e-mail with your account data in a few seconds.<br /><br />
+	'successful'=>'Your account has been found<br><br>
+    You will get an e-mail with your account data in a few seconds.<br><br>
     &#8226; <a href="index.php?site=login">login</a>',
 	'your_email'=>'Your E-Mail'
 );

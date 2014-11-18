@@ -29,7 +29,7 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'activation_successful'=>'Ваш рачун је успјешно активиран.<br />Сада се можете пријавити на странице.',
+  'activation_successful'=>'Ваш рачун је успјешно активиран.<br>Сада се можете пријавити на странице.',
   'back'=>'Натраг',
   'enter_nickname'=>'Молимо унесите ник.',
   'enter_password'=>'Молимо унесите лозинку.',

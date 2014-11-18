@@ -134,7 +134,7 @@ else {
 	
   echo '<h1>&curren; '.$_language->module['contact'].'</h1>';
   
-  echo'<input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=contact&amp;action=add\');return document.MM_returnValue" value="'.$_language->module['new_contact'].'" /><br /><br />';	
+  echo'<input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=contact&amp;action=add\');return document.MM_returnValue" value="'.$_language->module['new_contact'].'" /><br><br>';	
 
 	echo'<form method="post" action="admincenter.php?site=contact">
   <table width="100%" border="0" cellspacing="1" cellpadding="3" bgcolor="#DDDDDD">

@@ -660,15 +660,15 @@ elseif($action=="stats") {
 	if(!$totalopp) $totalopp=0;
 
 	$totalwonperc=percent($totalwonall, $totaltotal, 2);
-	if($totalwonperc) $totalwon=$totalwonperc.'%<br /><img src="images/icons/won.gif" width="30" height="'.round($totalwonperc, 0).'" border="1" alt="'.$_language->module['won'].'" />';
+	if($totalwonperc) $totalwon=$totalwonperc.'%<br><img src="images/icons/won.gif" width="30" height="'.round($totalwonperc, 0).'" border="1" alt="'.$_language->module['won'].'" />';
 	else $totalwon=0;
 
 	$totalloseperc=percent($totalloseall, $totaltotal, 2);
-	if($totalloseperc) $totallost=$totalloseperc.'%<br /><img src="images/icons/lost.gif" width="30" height="'.round($totalloseperc, 0).'" border="1" alt="'.$_language->module['lost'].'" />';
+	if($totalloseperc) $totallost=$totalloseperc.'%<br><img src="images/icons/lost.gif" width="30" height="'.round($totalloseperc, 0).'" border="1" alt="'.$_language->module['lost'].'" />';
 	else $totallost=0;
 
 	$totaldrawperc=percent($totaldrawall, $totaltotal, 2);
-	if($totaldrawperc) $totaldraw=$totaldrawperc.'%<br /><img src="images/icons/draw.gif" width="30" height="'.round($totaldrawperc, 0).'" border="1" alt="'.$_language->module['draw'].'" />';
+	if($totaldrawperc) $totaldraw=$totaldrawperc.'%<br><img src="images/icons/draw.gif" width="30" height="'.round($totaldrawperc, 0).'" border="1" alt="'.$_language->module['draw'].'" />';
 	else $totaldraw=0;
 
 	$squad=$_language->module['clan'];
@@ -731,15 +731,15 @@ elseif($action=="stats") {
 			$oppperc=percent($opp, $totalopp, 2);
 			// total squad clanwars won
 			$wonperc=percent($wonall, $totaltotal, 2);
-			if($wonperc) $totalwon=$wonperc.'%<br /><img src="images/icons/won.gif" width="30" height="'.round($wonperc, 0).'" border="1" alt="'.$_language->module['won'].'" />';
+			if($wonperc) $totalwon=$wonperc.'%<br><img src="images/icons/won.gif" width="30" height="'.round($wonperc, 0).'" border="1" alt="'.$_language->module['won'].'" />';
 			else $totalwon='0%';
 			// total squad clanwars lost
 			$loseperc=percent($loseall, $totaltotal, 2);
-			if($loseperc) $totallost=$loseperc.'%<br /><img src="images/icons/lost.gif" width="30" height="'.round($loseperc, 0).'" border="1" alt="'.$_language->module['lost'].'" />';
+			if($loseperc) $totallost=$loseperc.'%<br><img src="images/icons/lost.gif" width="30" height="'.round($loseperc, 0).'" border="1" alt="'.$_language->module['lost'].'" />';
 			else $totallost='0%';
 			// total squad clanwars draw
 			$drawperc=percent($drawall, $totaltotal, 2);
-			if($drawperc) $totaldraw=$drawperc.'%<br /><img src="images/icons/draw.gif" width="30" height="'.round($drawperc, 0).'" border="1" alt="'.$_language->module['draw'].'" />';
+			if($drawperc) $totaldraw=$drawperc.'%<br><img src="images/icons/draw.gif" width="30" height="'.round($drawperc, 0).'" border="1" alt="'.$_language->module['draw'].'" />';
 			else $totaldraw='0%';
 
 			// fill empty vars

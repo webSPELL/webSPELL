@@ -37,7 +37,7 @@ $language_array = Array(
 Dein System unterstützt keine HTML Mails.
 Du hast folgende Nachricht erhalten:',
   'profile'=>'Profil',
-  'receptionists'=>'Newsletter versandt!<br /><br />Empfänger:',
+  'receptionists'=>'Newsletter versandt!<br><br>Empfänger:',
   'remove'=>'Du kannst dich in deinem Profil selbst von der Versandliste löschen',
   'send'=>'Newsletter senden',
   'send_to'=>'Senden an',

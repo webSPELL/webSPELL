@@ -62,7 +62,7 @@ $language_array = Array(
   'sort'=>'დაფასოება:',
   'squad'=>'რიგი',
   'submit_challenge'=>'გამოწვევის მიღება',
-  'thank_you'=>'მადლობა მოთხოვნისთვის!<br />',
+  'thank_you'=>'მადლობა მოთხოვნისთვის!<br>',
   'time'=>'დრო',
   'wrong_security_code'=>'უსაფრთხოების კოდი არასწორია.'
 );

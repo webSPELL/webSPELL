@@ -101,8 +101,8 @@ Pre potrvrdenie zmeny, prosím kliknite na nasledujúci odkaz:
 	'nickname'=>'Prezývka',
 	'nickname_already_in_use'=>'prezývka je už používaná!',
 	'no'=>'Nie',
-	'not_logged_in'=>'Musíte byť prihlásený aby ste mohli vidieť svoj profil!<br /><br />
-	&#8226; <a href="index.php?site=register">registrácia</a><br />
+	'not_logged_in'=>'Musíte byť prihlásený aby ste mohli vidieť svoj profil!<br><br>
+	&#8226; <a href="index.php?site=register">registrácia</a><br>
 	&#8226; <a href="index.php?site=login">prihlásenie</a>',
 	'old_password'=>'staré heslo',
 	'old_pw_not_valid'=>'vaše staré heslo nie je spráne!',

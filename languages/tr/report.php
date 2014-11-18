@@ -38,6 +38,6 @@ $language_array = Array(
   'no_informations'=>'hiçbir bilgi yok',
   'report_message'=>'[b]Yeni var %s - Rapor[/b][br][br]%s-ID: %d[br]Bilgi: %s[br]Referans: [url]index.php?site=files&file=%d[/url]',
   'report_recognized'=>'Rapor kabul edildi. Teşekkür ederim.',
-  'wrong_securitycode'=>'Yanlış güvenlik kodu girildi. <br /><br />[<a href="javascript:back();">geri</a>]'
+  'wrong_securitycode'=>'Yanlış güvenlik kodu girildi. <br><br>[<a href="javascript:back();">geri</a>]'
 );
 ?>

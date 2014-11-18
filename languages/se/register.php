@@ -29,7 +29,7 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-	'activation_successful'=>'Ditt account lyckades aktivera.<br />Du kan nu logga in.',
+	'activation_successful'=>'Ditt account lyckades aktivera.<br>Du kan nu logga in.',
 	'back'=>'tillbaka',
 	'enter_nickname'=>'Snälla skriv in ett smeknamn',
 	'enter_password'=>'Snälla skriv in ett lösenord',

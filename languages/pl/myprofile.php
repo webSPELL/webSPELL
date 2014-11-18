@@ -101,8 +101,8 @@ Thank you for your interest
 	'nickname'=>'Nick',
 	'nickname_already_in_use'=>'nick już w użyciu!',
 	'no'=>'Nie',
-	'not_logged_in'=>'Musisz być zalogowany by przeglądać profil!<br /><br />
-    &#8226; <a href="index.php?site=register">Rejestracja</a><br />
+	'not_logged_in'=>'Musisz być zalogowany by przeglądać profil!<br><br>
+    &#8226; <a href="index.php?site=register">Rejestracja</a><br>
     &#8226; <a href="index.php?site=login">Zaloguj</a>',
 	'old_password'=>'stare hasło',
 	'old_pw_not_valid'=>'Stare hasło jest niepoprawne!',

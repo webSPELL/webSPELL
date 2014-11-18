@@ -61,7 +61,7 @@ else {
 				</script>';
 	
 	echo '<form method="post" id="post" name="post" action="admincenter.php?site=about" onsubmit="return chkFormular();">
-  <b>'.$_language->module['about'].'</b><br /><small>'.$_language->module['you_can_use_html'].'</small><br /><br />';
+  <b>'.$_language->module['about'].'</b><br><small>'.$_language->module['you_can_use_html'].'</small><br><br>';
 	
 	eval ("\$addbbcode = \"".gettemplate("addbbcode", "html", "admin")."\";");
   eval ("\$addflags = \"".gettemplate("flags_admin", "html", "admin")."\";");
@@ -73,8 +73,8 @@ else {
 		      </tr>
 		    </table>';
   
-  echo '<br /><textarea id="message" name="message" rows="30" cols="" style="width: 100%;">'.getinput($ds['about']).'</textarea>
-  <br /><br /><input type="hidden" name="captcha_hash" value="'.$hash.'" /><input type="submit" name="submit" value="'.$_language->module['update'].'" />
+  echo '<br><textarea id="message" name="message" rows="30" cols="" style="width: 100%;">'.getinput($ds['about']).'</textarea>
+  <br><br><input type="hidden" name="captcha_hash" value="'.$hash.'" /><input type="submit" name="submit" value="'.$_language->module['update'].'" />
   </form>';
 }
 ?>

@@ -73,7 +73,7 @@ $language_array = Array(
 	'title'=>'Assunto',
 	'your_message'=>'A sua mensagem:',
 	'mail_subject'=>'Tem uma nova Mensagem',
-	'mail_body'=>'<b>Olá %nickname%!</b><br /><br />Tem uma nova mensagem em '.PAGETITLE.' (%hp_url%).<br />Clique <a href="http://%hp_url%?site=messenger">aqui</a> para a ler.<br /><br />(C) webSPELL.org',
+	'mail_body'=>'<b>Olá %nickname%!</b><br><br>Tem uma nova mensagem em '.PAGETITLE.' (%hp_url%).<br>Clique <a href="http://%hp_url%?site=messenger">aqui</a> para a ler.<br><br>(C) webSPELL.org',
 	'error'=>'error',
 	'unknown_user'=>'unknown user'
 );

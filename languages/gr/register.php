@@ -35,7 +35,7 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'activation_successful'=>'<b>Η ενεργοποιηση του λογαριασμου σας ηταν επιτυχης.<br />Μπορειτε να εισελθετε αμεσα.</b>',
+  'activation_successful'=>'<b>Η ενεργοποιηση του λογαριασμου σας ηταν επιτυχης.<br>Μπορειτε να εισελθετε αμεσα.</b>',
   'back'=>'πισω',
   'enter_nickname'=>'Παρακαλω εισαγετε ενα ψευδώνυμο.',
   'enter_password'=>'Παρακαλω εισαγετε κωδικο.',

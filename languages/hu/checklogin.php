@@ -29,11 +29,11 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-	'invalid_password'=>'Érvénytelen jelszót adtál meg.<br /><br /><a href="javascript:history.back()">Menj vissza és próbáld újra.</a>',
-	'ip_banned'=>'Az IP-d bannolva van erről az oldalról.<br/>%reason%<br /><br /><a href="javascript:history.back()">Go back</a>',
+	'invalid_password'=>'Érvénytelen jelszót adtál meg.<br><br><a href="javascript:history.back()">Menj vissza és próbáld újra.</a>',
+	'ip_banned'=>'Az IP-d bannolva van erről az oldalról.<br>%reason%<br><br><a href="javascript:history.back()">Go back</a>',
 	'login_successful'=>'Sikeres bejelentkezés!',
-	'no_user'=>'A <b>%username%</b> nevű felhasználó nincs a rendszerben.<br /><br /><a href="javascript:history.back()">Menj vissza és próbáld újra!</a>',
-	'not_activated'=>'Nem aktiváltad a felhasználód.<br /><br /><a href="javascript:history.back()">Vissza</a>',
-	'session_error'=>'Bizonyosodj meg róla, hogy a cookie-k engedélyzve vannak a böngésződben.<br />Ha a probléma továbbra is fennáll, lépj kapcsolatba a webmesterrel.<br /><br /><a href="javascript:history.back()">Back</a>'
+	'no_user'=>'A <b>%username%</b> nevű felhasználó nincs a rendszerben.<br><br><a href="javascript:history.back()">Menj vissza és próbáld újra!</a>',
+	'not_activated'=>'Nem aktiváltad a felhasználód.<br><br><a href="javascript:history.back()">Vissza</a>',
+	'session_error'=>'Bizonyosodj meg róla, hogy a cookie-k engedélyzve vannak a böngésződben.<br>Ha a probléma továbbra is fennáll, lépj kapcsolatba a webmesterrel.<br><br><a href="javascript:history.back()">Back</a>'
 );
 ?>

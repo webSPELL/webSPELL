@@ -52,7 +52,7 @@ $language_array = Array(
   'mail'=>'Deng Mailadresse',
   'name'=>'Däin Name',
   'new_entry'=>'Néien Antrag',
-  'no_access'=>'Du bass net ugemellt.<br /><a href="index.php?site=login">umellen</a> | <a href="index.php?site=register">registréieren</a>',
+  'no_access'=>'Du bass net ugemellt.<br><a href="index.php?site=login">umellen</a> | <a href="index.php?site=register">registréieren</a>',
   'options'=>'Optiounen',
   'pmsubject_newentry'=>'Néien Gäschtbuchantrag',
   'pmtext_newentry'=>'[b]Et huet een eng Noriicht am Gäschtbuch hannerlooss![/b][br][br] [URL=index.php?site=guestbook#%insertid%]Hei geet et bei d\'Noriicht[/URL] ',

@@ -37,7 +37,7 @@ $language_array = Array(
 Il sistema non supporta HTML email.
 Lei ha recevuto un questo messaggio:',
   'profile'=>'Profilo',
-  'receptionists'=>'Newsletter inviata!<br /><br />Ricevitore:',
+  'receptionists'=>'Newsletter inviata!<br><br>Ricevitore:',
   'remove'=>'è possibile cancellare della lista nel profilo',
   'send'=>'Newsletter inviare',
   'send_to'=>'Invia a',

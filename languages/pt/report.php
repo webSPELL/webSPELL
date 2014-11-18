@@ -32,6 +32,6 @@ $language_array = Array(
 	'no_informations'=>'sem informações disponíveis',
 	'report_message'=>'[b]Existe um novo %s - Relatório [/b][br][br]%s-ID: %d[br]Info: %s[br]Referinte: [url]index.php?site=files&file=%d[/url]',
 	'report_recognized'=>'O seu relatório foi reconhecido. Obrigado.',
-	'wrong_securitycode'=>'Inseriu um código de segurança errado<br /><br />[<a href="javascript:back();">voltar</a>]'
+	'wrong_securitycode'=>'Inseriu um código de segurança errado<br><br>[<a href="javascript:back();">voltar</a>]'
 );
 ?>

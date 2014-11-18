@@ -29,7 +29,7 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-	'activation_successful'=>'Aktiveringen af din konto er vellykket.<br />Du kan logge ind nu.',
+	'activation_successful'=>'Aktiveringen af din konto er vellykket.<br>Du kan logge ind nu.',
 	'back'=>'tilbage',
 	'enter_nickname'=>'Indtast et øgenavn.',
 	'enter_password'=>'Indtast et password.',

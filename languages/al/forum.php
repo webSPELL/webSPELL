@@ -93,8 +93,8 @@ $language_array = Array(
   'no_new_posts'=>'pa postime të reja',
   'no_permission'=>'Nuk keni leje të shihni forumet e brendshme!',
   'not_logged'=>'Nuk je loguar.',
-  'not_logged_msg'=>'<br /><br />Të fillosh ose të përgjigjesh në një topik duhet të jesh i regjistruar!<br /><br />
-&#8226; <a href="index.php?site=register">regjistrohu tani</a><br />
+  'not_logged_msg'=>'<br><br>Të fillosh ose të përgjigjesh në një topik duhet të jesh i regjistruar!<br><br>
+&#8226; <a href="index.php?site=register">regjistrohu tani</a><br>
 &#8226; <a href="index.php?site=login">login</a>',
   'notify'=>'Lajmero kur shfaqet një përgjigje',
   'notify_mail'=>'Përgjigju me %poster% në topik

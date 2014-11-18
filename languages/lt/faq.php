@@ -35,7 +35,7 @@ $language_array = Array(
 	'faq'=>'D.U.K',
 	'faqs'=>'D.U.K',
 	'no_categories'=>'jokių kategorijų nėra sukurta',
-	'no_faq'=>'Nėra jokių klaisymų.<br /><a href="index.php?site=faq">Grįžti</a>',
+	'no_faq'=>'Nėra jokių klaisymų.<br><a href="index.php?site=faq">Grįžti</a>',
 	'saved_on'=>'išsaugota'
 );
 ?>

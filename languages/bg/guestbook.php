@@ -52,7 +52,7 @@ $language_array = Array(
   'mail'=>'Tвоя email адрес',
   'name'=>'Име',
   'new_entry'=>'Hово въвеждане',
-  'no_access'=>'Не сте логнати.<br /><a href="index.php?site=login">влизане</a> | <a href="index.php?site=register">регистър</a>',
+  'no_access'=>'Не сте логнати.<br><a href="index.php?site=login">влизане</a> | <a href="index.php?site=register">регистър</a>',
   'options'=>'Hастройки',
   'pmsubject_newentry'=>'Hов коментар в книгата за гости',
   'pmtext_newentry'=>'[b]Някой е написал коментар в книгата за гости![/b][br][br] [URL=index.php?site=guestbook#%insertid%]Натиснете тук за да видите съобщението[/URL] ',
