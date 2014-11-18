@@ -54,7 +54,7 @@ $language_array = Array(
 	'no_incoming'=>'Joks pranešimas įeinančiame aplanke.',
 	'no_outgoing'=>'Joks pranešimas įšeinančiame aplanke.',
 	'no_subject'=>'(nėra subjekto)',
-	'not_logged'=>'Jūs neesate prisijungę.<br /><a href="index.php?site=login">Prisijungti</a> | <a href="index.php?site=register">Registruotis</a>',
+	'not_logged'=>'Jūs neesate prisijungę.<br><a href="index.php?site=login">Prisijungti</a> | <a href="index.php?site=register">Registruotis</a>',
 	'options'=>'Pasirinkimai',
 	'outgoing'=>'Įšeinantys',
 	'read'=>'Skaityti',
@@ -73,7 +73,7 @@ $language_array = Array(
 	'title'=>'Subjektas',
 	'your_message'=>'Jūsų žinutė:',
 	'mail_subject'=>'Jūs turite naują AŽ',
-	'mail_body'=>'<b>Sveiki %nickname%!</b><br /><br />Jūs turite naują žinutę puslapyje - '.PAGETITLE.' (%hp_url%).<br />Spustelkite <a href="http://%hp_url%?site=messenger">čia</a>, kad perskaityti žinutę.<br /><br />(C) webSPELL.org',
+	'mail_body'=>'<b>Sveiki %nickname%!</b><br><br>Jūs turite naują žinutę puslapyje - '.PAGETITLE.' (%hp_url%).<br>Spustelkite <a href="http://%hp_url%?site=messenger">čia</a>, kad perskaityti žinutę.<br><br>(C) webSPELL.org',
 	'error'=>'error',
 	'unknown_user'=>'unknown user'
 );

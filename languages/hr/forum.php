@@ -78,8 +78,8 @@ $language_array = Array(
 	'new_reply'=>'Novi odgovor',
 	'new_topic'=>'Nova tema',
 	'newest_member'=>'Najnoviji korisnik',
-	'newreply_image'=>'<img src="images/icons/newreply.gif" border="0" alt="Odgovor" />',
-	'newtopic_image'=>'<img src="images/icons/newtopic.gif" border="0" alt="Nova tema" />',
+	'newreply_image'=>'<img src="images/icons/newreply.gif" alt="Odgovor" />',
+	'newtopic_image'=>'<img src="images/icons/newtopic.gif" alt="Nova tema" />',
 	'next_7_days'=>'Sljedećih 7 dana',
 	'no_access'=>'Nemate pristup',
 	'no_access_write'=>'Nemate dopuštenje pisat u ovoj temi.',
@@ -87,8 +87,8 @@ $language_array = Array(
 	'no_new_posts'=>'Nema novih odgovors',
 	'no_permission'=>'Nemate dopuštenje vidjeti interne podforume!',
 	'not_logged'=>'Niste prijavljeni.',
-	'not_logged_msg'=>'<br /><br />Da bi kreirali novu temu ili odgovorili na postojeću morate biti registrirani i prijavljeni!<br /><br />
-    &#8226; <a href="index.php?site=register">Registriraj se</a><br />
+	'not_logged_msg'=>'<br><br>Da bi kreirali novu temu ili odgovorili na postojeću morate biti registrirani i prijavljeni!<br><br>
+    &#8226; <a href="index.php?site=register">Registriraj se</a><br>
     &#8226; <a href="index.php?site=login">Prijavi se</a>',
 	'notify'=>'Obavijesti me o odgovoru',
 	'notify_mail'=>'Novi odgovor napisao %poster% u temi
@@ -113,7 +113,7 @@ $language_array = Array(
 	'registered_users'=>'korisnika',
 	'reopen_topic'=>'Ponovno otvori temu',
 	'replies'=>'Odgovori',
-	'search_image'=>'<img src="images/icons/search.gif" border="0" alt="Traži" />',
+	'search_image'=>'<img src="images/icons/search.gif" alt="Traži" />',
 	'select_all'=>'Označi sve',
 	'smilies_on'=>'<a href="javascript:MM_openBrWindow(\'smileys.php\',\'Smajlići\',\'scrollbars=yes,width=340,height=500\')">Smajlići</a> uključeni',
 	'sort'=>'Razvrstaj',

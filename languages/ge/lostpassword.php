@@ -44,8 +44,8 @@ $language_array = Array(
   'lost_password'=>'პაროლის დავიწყება',
   'no_mail_given'=>'თქვენ არ შეგიყვანიათ Mail ი.',
   'no_user_found'=>'არ არის მომხმარებელი ნაპოვნი!',
-  'successful'=>'თქვენი ექქაუნტი მოიძებნა<br /><br />
-    თქვენ მიიღევთ Email ს თქვენი ექქაუნტის მონაცემთა ბაზით.<br /><br />
+  'successful'=>'თქვენი ექქაუნტი მოიძებნა<br><br>
+    თქვენ მიიღევთ Email ს თქვენი ექქაუნტის მონაცემთა ბაზით.<br><br>
     &#8226; <a href="index.php?site=login">ავტორიზაცია</a>',
   'your_email'=>'თქვენი E-Mail'
 );

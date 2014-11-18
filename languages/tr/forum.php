@@ -84,8 +84,8 @@ $language_array = Array(
   'new_reply'=>'yeni Yanıt',
   'new_topic'=>'yeni Konu',
   'newest_member'=>'yeni Üye',
-  'newreply_image'=>'<img src="images/icons/newreply.gif" border="0" alt="reply" />',
-  'newtopic_image'=>'<img src="images/icons/newtopic.gif" border="0" alt="new topic" />',
+  'newreply_image'=>'<img src="images/icons/newreply.gif" alt="reply" />',
+  'newtopic_image'=>'<img src="images/icons/newtopic.gif" alt="new topic" />',
   'next_7_days'=>'sonraki 7 gün',
   'no_access'=>'Erişim Yok',
   'no_access_write'=>'Bu mesaj panosuna yazmak için erişim yok.',
@@ -93,8 +93,8 @@ $language_array = Array(
   'no_new_posts'=>'Yeni mesaj yok',
   'no_permission'=>'stajyer panoları görmek için izniniz yok!',
   'not_logged'=>'Giriş yapmadınız.',
-  'not_logged_msg'=>'<br /><br />Konuya cevap vermek için kayıt yapman gerek!<br /><br />
-&#8226; <a href="index.php?site=register">şimdi üye ol</a><br />
+  'not_logged_msg'=>'<br><br>Konuya cevap vermek için kayıt yapman gerek!<br><br>
+&#8226; <a href="index.php?site=register">şimdi üye ol</a><br>
 &#8226; <a href="index.php?site=login">giriş</a>',
   'notify'=>'Bir yanıt geldiğinde bana bildir',
   'notify_mail'=>'Yeni cevap tarafından %poster% konunun içinde
@@ -119,7 +119,7 @@ $language_array = Array(
   'registered_users'=>'kayıtlı kullanıcılar',
   'reopen_topic'=>'konuyu yeniden',
   'replies'=>'Cevaplar',
-  'search_image'=>'<img src="images/icons/search.gif" border="0" alt="" />',
+  'search_image'=>'<img src="images/icons/search.gif" alt="" />',
   'select_all'=>'tümünü seç',
   'smilies_on'=>'<a href="javascript:MM_openBrWindow(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">İfadeler</a> AÇIK',
   'sort'=>'Tür',

@@ -101,8 +101,8 @@ Hvala vam na Vašem interesu
 	'nickname'=>'Nick',
 	'nickname_already_in_use'=>'nick se već koristi!',
 	'no'=>'Ne',
-	'not_logged_in'=>'Morate biti prijavljeni da bi vidjeli svoj profil!<br /><br />
-    &#8226; <a href="index.php?site=register">Registriraj se</a><br />
+	'not_logged_in'=>'Morate biti prijavljeni da bi vidjeli svoj profil!<br><br>
+    &#8226; <a href="index.php?site=register">Registriraj se</a><br>
     &#8226; <a href="index.php?site=login">Prijavi se</a>',
 	'old_password'=>'Stara lozinka',
 	'old_pw_not_valid'=>'vaša stara lozinka nije ispravna!',

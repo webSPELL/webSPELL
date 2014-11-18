@@ -84,8 +84,8 @@ $language_array = Array(
   'new_reply'=>'Нові відповіді',
   'new_topic'=>'Новий топік',
   'newest_member'=>'Новий користувач',
-  'newreply_image'=>'<img src="images/icons/newreply.gif" border="0" alt="Відповісти" />',
-  'newtopic_image'=>'<img src="images/icons/newtopic.gif" border="0" alt="Новий топік" />',
+  'newreply_image'=>'<img src="images/icons/newreply.gif" alt="Відповісти" />',
+  'newtopic_image'=>'<img src="images/icons/newtopic.gif" alt="Новий топік" />',
   'next_7_days'=>'Наступні 7 днів',
   'no_access'=>'Немає доступу',
   'no_access_write'=>'Немає доступу на цей форум.',
@@ -93,8 +93,8 @@ $language_array = Array(
   'no_new_posts'=>'Немає нових публікацій',
   'no_permission'=>'У вас немає прав для перегляду цього форуму!',
   'not_logged'=>'Ви не увійшли.',
-  'not_logged_msg'=>'<br /><br />Щоб почати або відповісти в тему, ви повинні зареєструватися і увійти!<br /> <br />
-&#8226; <a href="index.php?site=register">зареєструватися зараз</a><br />
+  'not_logged_msg'=>'<br><br>Щоб почати або відповісти в тему, ви повинні зареєструватися і увійти!<br> <br>
+&#8226; <a href="index.php?site=register">зареєструватися зараз</a><br>
 &#8226; <a href="index.php?site=login">ввійти</a>',
   'notify'=>'Повідомити мене про відповіді на цей пост',
   'notify_mail'=>'%poster% відповів в тему
@@ -119,7 +119,7 @@ $language_array = Array(
   'registered_users'=>'зареєстрований користувач',
   'reopen_topic'=>'Відкрити тему',
   'replies'=>'Відповіді',
-  'search_image'=>'<img src="images/icons/search.gif" border="0" alt="" />',
+  'search_image'=>'<img src="images/icons/search.gif" alt="" />',
   'select_all'=>'Вибрати всі',
   'smilies_on'=>'<a href="javascript:MM_openBrWindow(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Смайлы</a> включено',
   'sort'=>'Сортувати',

@@ -62,7 +62,7 @@ $language_array = Array(
   'sort'=>'kārtot:',
   'squad'=>'vads',
   'submit_challenge'=>'pieteikt izaicinājumu',
-  'thank_you'=>'Paldies par Jūsu pieprasījumu!<br />',
+  'thank_you'=>'Paldies par Jūsu pieprasījumu!<br>',
   'time'=>'laiks',
   'wrong_security_code'=>'Drošības kods ir nepareizs.'
 );

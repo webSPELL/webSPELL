@@ -78,8 +78,8 @@ $language_array = Array(
 	'new_reply'=>'nowe odpowiedź',
 	'new_topic'=>'nowy temat',
 	'newest_member'=>'najnowszy użytkownik',
-	'newreply_image'=>'<img src="images/icons/newreply.gif" border="0" alt="reply" />',
-	'newtopic_image'=>'<img src="images/icons/newtopic.gif" border="0" alt="new topic" />',
+	'newreply_image'=>'<img src="images/icons/newreply.gif" alt="reply" />',
+	'newtopic_image'=>'<img src="images/icons/newtopic.gif" alt="new topic" />',
 	'next_7_days'=>'następne 7 dni',
 	'no_access'=>'Brak dostępu',
 	'no_access_write'=>'Brak uprawnieńżeby pisać w tym forum.',
@@ -87,8 +87,8 @@ $language_array = Array(
 	'no_new_posts'=>'brak nowych postów',
 	'no_permission'=>'Nie masz uprawnieńdo przeglądania wewnętrznych for!',
 	'not_logged'=>'Nie zalogowany.',
-	'not_logged_msg'=>'<br /><br />żeby napisać nowy temat albo odpowiedzieć musisz się zarejestrować i zalogować!<br /><br />
-    &#8226; <a href="index.php?site=register">zarejestruj teraz</a><br />
+	'not_logged_msg'=>'<br><br>żeby napisać nowy temat albo odpowiedzieć musisz się zarejestrować i zalogować!<br><br>
+    &#8226; <a href="index.php?site=register">zarejestruj teraz</a><br>
     &#8226; <a href="index.php?site=login">login</a>',
 	'notify'=>'Poinformuj mnie o odpowiedziach na ten post',
 	'notify_mail'=>'nowa odpowiedź przez %poster% w temacie
@@ -113,7 +113,7 @@ $language_array = Array(
 	'registered_users'=>'zerejestrowanych użytkowników',
 	'reopen_topic'=>'otwórz znowu temat',
 	'replies'=>'Odpowiedzi',
-	'search_image'=>'<img src="images/icons/search.gif" border="0" alt="" />',
+	'search_image'=>'<img src="images/icons/search.gif" alt="" />',
 	'select_all'=>'zaznacz wszystko',
 	'smilies_on'=>'<a href="javascript:MM_openBrWindow(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Emotki</a> są WŁ&#26CZONE',
 	'sort'=>'Sortuj',

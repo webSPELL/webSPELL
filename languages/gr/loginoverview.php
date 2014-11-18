@@ -70,8 +70,8 @@ $language_array = Array(
   'usermenu'=>'Μενου χρηστη',
   'views'=>'προβολες',
   'x_new_message'=>'Εχετε %new_messages% νεα μηνυματα.',
-  'you_have_to_be_logged_in'=>'Πρεπει να πραγματοποιησετε συνδεση για να δειτε τη συνοψη συνδεσεων σας!<br /><br />
-    &#8226; <a href="index.php?site=register">εγγραφειτε τωρα</a><br />
+  'you_have_to_be_logged_in'=>'Πρεπει να πραγματοποιησετε συνδεση για να δειτε τη συνοψη συνδεσεων σας!<br><br>
+    &#8226; <a href="index.php?site=register">εγγραφειτε τωρα</a><br>
     &#8226; <a href="index.php?site=login">εισοδος</a>'
 );
 ?>

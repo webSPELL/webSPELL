@@ -29,7 +29,7 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-	'activation_successful'=>'Aktivování účtu proběhlo úspěšně.<br />Nyní se mùžeš přihlásit do systému.',
+	'activation_successful'=>'Aktivování účtu proběhlo úspěšně.<br>Nyní se mùžeš přihlásit do systému.',
 	'back'=>'zpět',
 	'enter_nickname'=>'Prosím vyplňte přezdívku.',
 	'enter_password'=>'Prosím vyplňte heslo.',

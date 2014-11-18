@@ -263,7 +263,7 @@ elseif($action=="editcat") {
 else {
 	echo '<h1>&curren; '.$_language->module['addons'].'</h1>';
 
-	echo '<input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=addons&amp;action=addcat\');return document.MM_returnValue" value="'.$_language->module['new_category'].'" /> <input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=addons&amp;action=add\');return document.MM_returnValue" value="'.$_language->module['new_link'].'" /><br /><br />';	
+	echo '<input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=addons&amp;action=addcat\');return document.MM_returnValue" value="'.$_language->module['new_category'].'" /> <input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=addons&amp;action=add\');return document.MM_returnValue" value="'.$_language->module['new_link'].'" /><br><br>';	
 
 	echo '<form method="post" action="admincenter.php?site=addons">
 		  <table width="100%" border="0" cellspacing="1" cellpadding="3" bgcolor="#DDDDDD">
@@ -326,7 +326,7 @@ else {
 			$linklist = str_replace('value="'.$db['linkID'].'-'.$db['sort'].'"','value="'.$db['linkID'].'-'.$db['sort'].'" selected="selected"',$linklist);
 				
 	      	echo '<tr>
-				    <td class="'.$td.'"><b>'.$db['name'].'</b><br /><small>'.$db['url'].'</small></td>
+				    <td class="'.$td.'"><b>'.$db['name'].'</b><br><small>'.$db['url'].'</small></td>
 					<td class="'.$td.'" align="center"><small><b>'.$_language->module['admin_'.getinput($db['accesslevel'])].'</b></small></td>
 					<td class="'.$td.'" align="center"><input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=addons&amp;action=edit&amp;linkID='.$db['linkID'].'\');return document.MM_returnValue" value="'.$_language->module['edit'].'" /> <input type="button" onclick="MM_confirm(\''.$_language->module['really_delete_link'].'\', \'admincenter.php?site=addons&amp;delete=true&amp;linkID='.$db['linkID'].'&amp;captcha_hash='.$hash.'\')" value="'.$_language->module['delete'].'" /></td>
 					<td class="'.$td.'" align="center">'.$linklist.'</td>
@@ -350,7 +350,7 @@ else {
 		$noncatlist .= '</select>';
 		$noncatlist = str_replace('value="'.$db['linkID'].'-'.$db['sort'].'"','value="'.$db['linkID'].'-'.$db['sort'].'" selected="selected"',$noncatlist);
 		echo '<tr bgcolor="#dcdcdc">
-			    <td bgcolor="#FFFFFF"><b>'.getinput($db['name']).'</b><br /><small>'.$db['url'].'</small></td>
+			    <td bgcolor="#FFFFFF"><b>'.getinput($db['name']).'</b><br><small>'.$db['url'].'</small></td>
 			    <td bgcolor="#FFFFFF"><small><b>'.$_language->module['admin_'.getinput($db['accesslevel'])].'</b></small></td>
 			    <td bgcolor="#FFFFFF"><input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=addons&amp;action=edit&amp;linkID='.$db['linkID'].'\');return document.MM_returnValue" value="'.$_language->module['edit'].'" /> <input type="button" onclick="MM_confirm(\''.$_language->module['really_delete_link'].'\', \'admincenter.php?site=addons&amp;delete=true&amp;linkID='.$db['linkID'].'&amp;captcha_hash='.$hash.'\')" value="delete" /></td>
 			    <td bgcolor="#FFFFFF">'.$noncatlist.'</td>

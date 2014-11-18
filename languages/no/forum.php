@@ -78,8 +78,8 @@ $language_array = Array(
 	'new_reply'=>'new reply',
 	'new_topic'=>'new topic',
 	'newest_member'=>'newest member',
-	'newreply_image'=>'<img src="images/icons/newreply.gif" border="0" alt="reply" />',
-	'newtopic_image'=>'<img src="images/icons/newtopic.gif" border="0" alt="new topic" />',
+	'newreply_image'=>'<img src="images/icons/newreply.gif" alt="reply" />',
+	'newtopic_image'=>'<img src="images/icons/newtopic.gif" alt="new topic" />',
 	'next_7_days'=>'next 7 days',
 	'no_access'=>'No access',
 	'no_access_write'=>'No accses to write in this board.',
@@ -87,8 +87,8 @@ $language_array = Array(
 	'no_new_posts'=>'no new posts',
 	'no_permission'=>'You have no permission to view intern boards!',
 	'not_logged'=>'Not logged in.',
-	'not_logged_msg'=>'<br /><br />To start or to reply to a topic you have to be registered and logged in!<br /><br />
-    &#8226; <a href="index.php?site=register">register now</a><br />
+	'not_logged_msg'=>'<br><br>To start or to reply to a topic you have to be registered and logged in!<br><br>
+    &#8226; <a href="index.php?site=register">register now</a><br>
     &#8226; <a href="index.php?site=login">login</a>',
 	'notify'=>'Notify me when a reply is posted',
 	'notify_mail'=>'New reply by %poster% in topic
@@ -113,7 +113,7 @@ $language_array = Array(
 	'registered_users'=>'registered users',
 	'reopen_topic'=>'reopen topic',
 	'replies'=>'Replies',
-	'search_image'=>'<img src="images/icons/search.gif" border="0" alt="" />',
+	'search_image'=>'<img src="images/icons/search.gif" alt="" />',
 	'select_all'=>'select all',
 	'smilies_on'=>'<a href="javascript:MM_openBrWindow(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smilies</a> are ON',
 	'sort'=>'Sort',

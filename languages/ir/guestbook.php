@@ -46,7 +46,7 @@ $language_array = Array(
   'mail'=>'ادرس میل شما',
   'name'=>'نام شما',
   'new_entry'=>'موضوع جدید',
-  'no_access'=>'.شما وارد نشدید<br /><a href="index.php?site=login">ورود</a> | <a href="index.php?site=register">نام نویسی</a>',
+  'no_access'=>'.شما وارد نشدید<br><a href="index.php?site=login">ورود</a> | <a href="index.php?site=register">نام نویسی</a>',
   'options'=>'تنظیمات',
   'pmsubject_newentry'=>'مهمان جدید وارد شده',
   'pmtext_newentry'=>'[b]!برای شما پیغام جدیدی وجود دارد[/b][br][br] [URL=admin/admincenter.php?site=guestbook]اینجا کلیک کنید تا پیغام نمایش داده شود[/URL] ',

@@ -41,7 +41,7 @@ $language_array = Array(
   'buddy_nousers'=>'Arkadaş listenizde bir kullanıcı yok',
   'buddys'=>'Arkadaşlar',
   'ignore_nousers'=>'Reddedilenler listesinde kimse yok',
-  'not_logged'=>'Arkadaşlarınızı yönetmek için üye olmanız ya da giriş yapmanız gerekmektedir.<br /><a href="index.php?site=register">Kaydetmek</a> | <a href="index.php?site=login">Giriş</a>',
+  'not_logged'=>'Arkadaşlarınızı yönetmek için üye olmanız ya da giriş yapmanız gerekmektedir.<br><a href="index.php?site=register">Kaydetmek</a> | <a href="index.php?site=login">Giriş</a>',
   'your_buddylist'=>'Arkadaş listeniz',
   'your_ignorelist'=>'Engellenenler listeniz'
 );

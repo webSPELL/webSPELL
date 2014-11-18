@@ -79,8 +79,8 @@ $language_array = Array(
   'new_reply'=>'uus vastus',
   'new_topic'=>'uus teema',
   'newest_member'=>'uusim liige',
-  'newreply_image'=>'<img src="images/icons/newreply.gif" border="0" alt="vasta" />',
-  'newtopic_image'=>'<img src="images/icons/newtopic.gif" border="0" alt="uus teema" />',
+  'newreply_image'=>'<img src="images/icons/newreply.gif" alt="vasta" />',
+  'newtopic_image'=>'<img src="images/icons/newtopic.gif" alt="uus teema" />',
   'next_7_days'=>'järgmised 7 päeva',
   'no_access'=>'Puudub ligipääs',
   'no_access_write'=>'Puudub õigus siin foorumis kirjutada.',
@@ -88,8 +88,8 @@ $language_array = Array(
   'no_new_posts'=>'pole uusi postitusi',
   'no_permission'=>'Sul pole õigust vaadata kinniseid foorumeid!',
   'not_logged'=>'Pole sisse logitud.',
-  'not_logged_msg'=>'<br /><br />Teema loomiseks või sellele vastamiseks pead sa registreeritud ja sisse logitud olema!<br /><br />
-&#8226; <a href="index.php?site=register">registreeri kohe</a><br />
+  'not_logged_msg'=>'<br><br>Teema loomiseks või sellele vastamiseks pead sa registreeritud ja sisse logitud olema!<br><br>
+&#8226; <a href="index.php?site=register">registreeri kohe</a><br>
 &#8226; <a href="index.php?site=login">logi sisse</a>',
   'notify'=>'Teavita mind, kui vastus postitatakse',
   'notify_mail'=>'Uus vastus %poster% poolt teemas
@@ -114,7 +114,7 @@ $language_array = Array(
   'registered_users'=>'registreeritud kasutajaid',
   'reopen_topic'=>'taasava teema',
   'replies'=>'Vastuseid',
-  'search_image'=>'<img src="images/icons/search.gif" border="0" alt="" />',
+  'search_image'=>'<img src="images/icons/search.gif" alt="" />',
   'select_all'=>'vali kõik',
   'smilies_on'=>'<a href="javascript:MM_openBrWindow(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smilies</a> PEAL',
   'sort'=>'Sorteerimine',

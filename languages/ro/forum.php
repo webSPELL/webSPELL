@@ -79,8 +79,8 @@ $language_array = Array(
   'new_reply'=>'răspuns nou',
   'new_topic'=>'subiect nou',
   'newest_member'=>'cel mai nou membru',
-  'newreply_image'=>'<img src="images/icons/newreply.gif" border="0" alt="răspuns" />',
-  'newtopic_image'=>'<img src="images/icons/newtopic.gif" border="0" alt="noua subiect" />',
+  'newreply_image'=>'<img src="images/icons/newreply.gif" alt="răspuns" />',
+  'newtopic_image'=>'<img src="images/icons/newtopic.gif" alt="noua subiect" />',
   'next_7_days'=>'următoarele 7 zile',
   'no_access'=>'Fără acces',
   'no_access_write'=>'Fără accses la scriere.',
@@ -88,8 +88,8 @@ $language_array = Array(
   'no_new_posts'=>'Fără postări noi',
   'no_permission'=>'Nu aveți permisiunea de a vizualiza forumuri interne',
   'not_logged'=>'Nu sunteţi înregistrat.',
-  'not_logged_msg'=>'<br /><br />Pentru a începe sau a răspunde la un subiect trebuie să fiţi înregistrat și autentificat!<br /><br />
-&#8226; <a href="index.php?site=register">inregistreaza-te acum</a><br />
+  'not_logged_msg'=>'<br><br>Pentru a începe sau a răspunde la un subiect trebuie să fiţi înregistrat și autentificat!<br><br>
+&#8226; <a href="index.php?site=register">inregistreaza-te acum</a><br>
 &#8226; <a href="index.php?site=login">login</a>',
   'notify'=>'Anunta-ma cand apare un raspuns',
   'notify_mail'=>'Raspunde cu %poster% la subiect
@@ -114,7 +114,7 @@ $language_array = Array(
   'registered_users'=>'utilizatori înregistraţi',
   'reopen_topic'=>'Redeschidere subiect',
   'replies'=>'Răspunsuri',
-  'search_image'=>'<img src="images/icons/search.gif" border="0" alt="" />',
+  'search_image'=>'<img src="images/icons/search.gif" alt="" />',
   'select_all'=>'selectare tot',
   'smilies_on'=>'<a href="javascript:MM_openBrWindow(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smileurile</a> sunt PE',
   'sort'=>'Sortare',

@@ -175,7 +175,7 @@ if($action=="mods") {
 	$ergebnis=safe_query("SELECT * FROM ".PREFIX."forum_boards WHERE boardID='$boardID'");
 	$ds=mysqli_fetch_array($ergebnis);
 	
-  echo $_language->module['choose_moderators'].' <b>'.$ds['name'].'</b><br /><br />';
+  echo $_language->module['choose_moderators'].' <b>'.$ds['name'].'</b><br><br>';
   
 	echo'<form method="post" action="admincenter.php?site=boards">
   <select name="mods[]" multiple="multiple" size="10">';
@@ -190,7 +190,7 @@ if($action=="mods") {
 	$CAPCLASS->create_transaction();
 	$hash = $CAPCLASS->get_hash();
 
-	echo'</select><br /><br />
+	echo'</select><br><br>
 	<input type="hidden" name="captcha_hash" value="'.$hash.'" />
   <input type="hidden" name="boardID" value="'.$boardID.'" />
   <input type="submit" name="savemods" value="'.$_language->module['select_moderators'].'" />
@@ -216,7 +216,7 @@ elseif($action=="add") {
 	$CAPCLASS = new Captcha;
 	$CAPCLASS->create_transaction();
 	$hash = $CAPCLASS->get_hash();
-	echo '<script language="javascript" type="text/javascript">
+	echo '<script type="text/javascript">
 	<!--
 	function unselect_all(select_id) {
 		select_element = document.getElementById(select_id);
@@ -246,8 +246,8 @@ elseif($action=="add") {
       <td><select id="readgrps" name="readgrps[]" multiple="multiple" size="10">
         <option value="user">'.$_language->module['registered_users'].'</option>
         '.$groups.'
-      </select><br />
-      <a href="javascript:unselect_all(\'readgrps\');">'.$_language->module['unselect_all'].'</a><br /><br />
+      </select><br>
+      <a href="javascript:unselect_all(\'readgrps\');">'.$_language->module['unselect_all'].'</a><br><br>
       '.$_language->module['read_right_info_board'].'</td>
     </tr>
     <tr>
@@ -255,8 +255,8 @@ elseif($action=="add") {
       <td><select id="writegrps" name="writegrps[]" multiple="multiple" size="10">
         <option value="user" selected="selected">'.$_language->module['registered_users'].'</option>
         '.$groups.'
-      </select><br />
-      <a href="javascript:unselect_all(\'writegrps\');">'.$_language->module['unselect_all'].'</a><br /><br />
+      </select><br>
+      <a href="javascript:unselect_all(\'writegrps\');">'.$_language->module['unselect_all'].'</a><br><br>
       '.$_language->module['write_right_info_board'].'</td>
     </tr>
     <tr>
@@ -315,7 +315,7 @@ elseif($action=="edit") {
 	$CAPCLASS->create_transaction();
 	$hash = $CAPCLASS->get_hash();
 	
-	echo '<script language="javascript" type="text/javascript">
+	echo '<script type="text/javascript">
 	<!--
 	function unselect_all(select_id) {
 		select_element = document.getElementById(select_id);
@@ -342,14 +342,14 @@ elseif($action=="edit") {
     </tr>
     <tr>
       <td valign="top"><b>'.$_language->module['read_right'].'</b></td>
-      <td><select id="readgrps" name="readgrps[]" multiple="multiple" size="10">'.$readgrps.'</select><br />
-      <a href="javascript:unselect_all(\'readgrps\');">'.$_language->module['unselect_all'].'</a><br /><br />
+      <td><select id="readgrps" name="readgrps[]" multiple="multiple" size="10">'.$readgrps.'</select><br>
+      <a href="javascript:unselect_all(\'readgrps\');">'.$_language->module['unselect_all'].'</a><br><br>
       '.$_language->module['read_right_info_board'].'</td>
     </tr>
     <tr>
       <td valign="top"><b>'.$_language->module['write_right'].'</b></td>
-      <td><select id="writegrps" name="writegrps[]" multiple="multiple" size="10">'.$writegrps.'</select><br />
-      <a href="javascript:unselect_all(\'writegrps\');">'.$_language->module['unselect_all'].'</a><br /><br />
+      <td><select id="writegrps" name="writegrps[]" multiple="multiple" size="10">'.$writegrps.'</select><br>
+      <a href="javascript:unselect_all(\'writegrps\');">'.$_language->module['unselect_all'].'</a><br><br>
       '.$_language->module['write_right_info_board'].'</td>
     </tr>
     <tr>
@@ -374,7 +374,7 @@ elseif($action=="addcat") {
 	$CAPCLASS = new Captcha;
 	$CAPCLASS->create_transaction();
 	$hash = $CAPCLASS->get_hash();
-	echo '<script language="javascript" type="text/javascript">
+	echo '<script type="text/javascript">
 	<!--
 	function unselect_all(select_id) {
 		select_element = document.getElementById(select_id);
@@ -397,8 +397,8 @@ elseif($action=="addcat") {
     </tr>
     <tr>
       <td valign="top"><b>'.$_language->module['read_right'].'</b></td>
-      <td>'.$groups.'<br />
-      <a href="javascript:unselect_all(\'readgrps\');">'.$_language->module['unselect_all'].'</a><br /><br />
+      <td>'.$groups.'<br>
+      <a href="javascript:unselect_all(\'readgrps\');">'.$_language->module['unselect_all'].'</a><br><br>
       '.$_language->module['right_info_category'].'</td>
     </tr>
     <tr>
@@ -432,7 +432,7 @@ elseif($action=="editcat") {
   $CAPCLASS = new Captcha;
 	$CAPCLASS->create_transaction();
 	$hash = $CAPCLASS->get_hash();
-	echo '<script language="javascript" type="text/javascript">
+	echo '<script type="text/javascript">
 	<!--
 	function unselect_all(select_id) {
 		select_element = document.getElementById(select_id);
@@ -455,8 +455,8 @@ elseif($action=="editcat") {
     </tr>
     <tr>
       <td valign="top"><b>'.$_language->module['read_right'].'</b></td>
-      <td>'.$groups.'<br />
-      <a href="javascript:unselect_all(\'readgrps\');">'.$_language->module['unselect_all'].'</a><br /><br />
+      <td>'.$groups.'<br>
+      <a href="javascript:unselect_all(\'readgrps\');">'.$_language->module['unselect_all'].'</a><br><br>
       '.$_language->module['right_info_category'].'</td>
     </tr>
     <tr>
@@ -472,7 +472,7 @@ else {
 	echo'<h1>&curren; '.$_language->module['boards'].'</h1>';
 
 	echo'<input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=boards&amp;action=addcat\');return document.MM_returnValue" value="'.$_language->module['new_category'].'" />
-  <input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=boards&amp;action=add\');return document.MM_returnValue" value="'.$_language->module['new_board'].'" /><br /><br />';	
+  <input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=boards&amp;action=add\');return document.MM_returnValue" value="'.$_language->module['new_board'].'" /><br><br>';	
 
 	echo'<form method="post" action="admincenter.php?site=boards">
   <table width="100%" border="0" cellspacing="1" cellpadding="3" bgcolor="#DDDDDD">
@@ -493,7 +493,7 @@ else {
 	while($ds=mysqli_fetch_array($ergebnis)) {
 		
 	    echo'<tr bgcolor="#CCCCCC">
-	      <td class="td_head"><b>'.getinput($ds['name']).'</b><br /><small>'.getinput($ds['info']).'</small></td>
+	      <td class="td_head"><b>'.getinput($ds['name']).'</b><br><small>'.getinput($ds['info']).'</small></td>
 	      <td class="td_head"></td>
 	      <td class="td_head" align="center"><input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=boards&amp;action=editcat&amp;catID='.$ds['catID'].'\');return document.MM_returnValue" value="'.$_language->module['edit'].'" /> 
 	      <input type="button" onclick="MM_confirm(\''.$_language->module['really_delete_category'].'\', \'admincenter.php?site=boards&amp;delcat=true&amp;catID='.$ds['catID'].'&amp;captcha_hash='.$hash.'\')" value="'.$_language->module['delete'].'" /></td>
@@ -520,7 +520,7 @@ else {
 	      else { $td='td2'; }
 				
 	      echo'<tr>
-	        <td class="'.$td.'">'.$db['name'].'<br /><small>'.$db['info'].'</small></td>
+	        <td class="'.$td.'">'.$db['name'].'<br><small>'.$db['info'].'</small></td>
 	        <td class="'.$td.'" align="center"><input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=boards&amp;action=mods&amp;boardID='.$db['boardID'].'\');return document.MM_returnValue" value="'.$_language->module['mods'].'" /></td>
 	        <td class="'.$td.'" align="center"><input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=boards&amp;action=edit&amp;boardID='.$db['boardID'].'\');return document.MM_returnValue" value="'.$_language->module['edit'].'" /> 
 	        <input type="button" onclick="MM_confirm(\''.$_language->module['really_delete_board'].'\', \'admincenter.php?site=boards&amp;delete=true&amp;boardID='.$db['boardID'].'&amp;captcha_hash='.$hash.'\')" value="'.$_language->module['delete'].'" /></td>

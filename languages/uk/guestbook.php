@@ -46,7 +46,7 @@ $language_array = Array(
 	'mail'=>'Your mail adress',
 	'name'=>'Your name',
 	'new_entry'=>'New entry',
-	'no_access'=>'You are no logged in.<br /><a href="index.php?site=login">Login</a> | <a href="index.php?site=register">Register</a>',
+	'no_access'=>'You are no logged in.<br><a href="index.php?site=login">Login</a> | <a href="index.php?site=register">Register</a>',
 	'options'=>'Options',
 	'pmsubject_newentry'=>'New guestbook entry',
 	'pmtext_newentry'=>'[b]Somebody left a message for you in your guestbook![/b][br][br] [URL=index.php?site=guestbook#%insertid%]Click here for reading the message[/URL] ',

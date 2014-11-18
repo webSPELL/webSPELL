@@ -105,7 +105,7 @@ if(isset($_POST['save'])) {
 				}  else {
 					@unlink($filepath.$icon['name'].".tmp");
 					$error = $_language->module['format_incorrect'];
-					die('<b>'.$error.'</b><br /><br /><a href="admincenter.php?site=squads&amp;action=edit&amp;squadID='.$id.'">&laquo; '.$_language->module['back'].'</a>');
+					die('<b>'.$error.'</b><br><br><a href="admincenter.php?site=squads&amp;action=edit&amp;squadID='.$id.'">&laquo; '.$_language->module['back'].'</a>');
 				}
 			}
 			
@@ -127,7 +127,7 @@ if(isset($_POST['save'])) {
 				}  else {
 					@unlink($filepath.$icon_small['name'].".tmp");
 					$error = $_language->module['format_incorrect'];
-					die('<b>'.$error.'</b><br /><br /><a href="admincenter.php?site=squads&amp;action=edit&amp;squadID='.$id.'">&laquo; '.$_language->module['back'].'</a>');
+					die('<b>'.$error.'</b><br><br><a href="admincenter.php?site=squads&amp;action=edit&amp;squadID='.$id.'">&laquo; '.$_language->module['back'].'</a>');
 				}
 			}
 		} else echo $_language->module['information_incomplete'];
@@ -165,7 +165,7 @@ if(isset($_POST['saveedit'])) {
 				}  else {
 					@unlink($filepath.$icon['name'].".tmp");
 					$error = $_language->module['format_incorrect'];
-					die('<b>'.$error.'</b><br /><br /><a href="admincenter.php?site=squads&amp;action=edit&amp;squadID='.$id.'">&laquo; '.$_language->module['back'].'</a>');
+					die('<b>'.$error.'</b><br><br><a href="admincenter.php?site=squads&amp;action=edit&amp;squadID='.$id.'">&laquo; '.$_language->module['back'].'</a>');
 				}
 			}
 			
@@ -186,7 +186,7 @@ if(isset($_POST['saveedit'])) {
 					}  else {
 						@unlink($filepath.$icon_small['name'].".tmp");
 						$error = $_language->module['format_incorrect'];
-						die('<b>'.$error.'</b><br /><br /><a href="admincenter.php?site=squads&amp;action=edit&amp;squadID='.$id.'">&laquo; '.$_language->module['back'].'</a>');
+						die('<b>'.$error.'</b><br><br><a href="admincenter.php?site=squads&amp;action=edit&amp;squadID='.$id.'">&laquo; '.$_language->module['back'].'</a>');
 					}
 			}
 
@@ -217,7 +217,7 @@ if($action=="add") {
 	eval ("\$addbbcode = \"".gettemplate("addbbcode", "html", "admin")."\";");
 	eval ("\$addflags = \"".gettemplate("flags_admin", "html", "admin")."\";");
 	
-	echo '<script language="JavaScript" type="text/javascript">
+	echo '<script type="text/javascript">
 		<!--
 			function chkFormular() {
 				if(!validbbcode(document.getElementById(\'message\').value, \'admin\')) {
@@ -256,14 +256,14 @@ if($action=="add") {
     </div>
     <table width="100%" border="0" cellspacing="1" cellpadding="3">
       <tr>
-        <td colspan="2"><b>'.$_language->module['squad_info'].'</b><br />
+        <td colspan="2"><b>'.$_language->module['squad_info'].'</b><br>
 		  <table width="99%" border="0" cellspacing="0" cellpadding="0">
 		    <tr>
 			   <td valign="top">'.$addbbcode.'</td>
 				<td valign="top">'.$addflags.'</td>
 		    </tr>
 		  </table>
-		  <br /><textarea id="message" rows="5" cols="" name="message" style="width: 100%;">'.$ds['info'].'</textarea>
+		  <br><textarea id="message" rows="5" cols="" name="message" style="width: 100%;">'.$ds['info'].'</textarea>
 		  </td>
       </tr>
       <tr>
@@ -302,9 +302,9 @@ elseif($action=="edit") {
 		$display = 'none';
 	}
 	
-	if(!empty($ds['icon'])) $pic='<img src="'.$filepath.$ds['icon'].'" border="0" alt="" />';
+	if(!empty($ds['icon'])) $pic='<img src="'.$filepath.$ds['icon'].'" alt="" />';
 	else $pic=$_language->module['no_icon'];
-	if(!empty($ds['icon_small'])) $pic_small='<img src="'.$filepath.$ds['icon_small'].'" border="0" alt="" />';
+	if(!empty($ds['icon_small'])) $pic_small='<img src="'.$filepath.$ds['icon_small'].'" alt="" />';
 	else $pic_small=$_language->module['no_icon'];
 	
 	$CAPCLASS = new Captcha;
@@ -316,7 +316,7 @@ elseif($action=="edit") {
 	eval ("\$addbbcode = \"".gettemplate("addbbcode", "html", "admin")."\";");
 	eval ("\$addflags = \"".gettemplate("flags_admin", "html", "admin")."\";");
 	
-	echo '<script language="JavaScript" type="text/javascript">
+	echo '<script type="text/javascript">
 		<!--
 			function chkFormular() {
 				if(!validbbcode(document.getElementById(\'message\').value, \'admin\')) {
@@ -370,7 +370,7 @@ elseif($action=="edit") {
           <td valign="top">'.$addflags.'</td>
         </tr>
       </table>
-      <br /><textarea rows="5" cols="" name="message" style="width: 100%;">'.getinput($ds['info']).'</textarea>
+      <br><textarea rows="5" cols="" name="message" style="width: 100%;">'.getinput($ds['info']).'</textarea>
       </td>
     </tr>
     <tr>
@@ -384,7 +384,7 @@ else {
 
   echo'<h1>&curren; '.$_language->module['squads'].'</h1>';
 
-	echo'<input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=squads&amp;action=add\');return document.MM_returnValue" value="'.$_language->module['new_squad'].'" /><br /><br />';
+	echo'<input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=squads&amp;action=add\');return document.MM_returnValue" value="'.$_language->module['new_squad'].'" /><br><br>';
 
 	echo'<form method="post" action="admincenter.php?site=squads">
   <table width="100%" border="0" cellspacing="1" cellpadding="3" bgcolor="#DDDDDD">
@@ -411,7 +411,7 @@ else {
       $games = explode(";", $db['games']);
 			$games = implode(", ", $games);
 			if($games) $games = "(".$games.")";
-			if($db['gamesquad']) $type=$_language->module['gaming_squad'].'<br /><small>'.$games.'</small>';
+			if($db['gamesquad']) $type=$_language->module['gaming_squad'].'<br><small>'.$games.'</small>';
 			else $type=$_language->module['non_gaming_squad'];
 			
       echo'<tr>

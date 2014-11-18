@@ -69,7 +69,7 @@ if($action=="add") {
 
 elseif($action=="edit") {
 	$ds=mysqli_fetch_array(safe_query("SELECT * FROM ".PREFIX."countries WHERE countryID='".$_GET["countryID"]."'"));
-	$pic='<img src="../images/flags/'.$ds['short'].'.gif" border="0" alt="'.$ds['country'].'" />';
+	$pic='<img src="../images/flags/'.$ds['short'].'.gif" alt="'.$ds['country'].'" />';
 	if($ds['fav']=='1') $fav='<input type="checkbox" name="fav" value="1" checked="checked" />';
   	else $fav='<input type="checkbox" name="fav" value="1" />';
   
@@ -128,8 +128,8 @@ elseif(isset($_POST['save'])) {
 					rename($filepath.$icon['name'], $filepath.$file);
 	        		redirect("admincenter.php?site=countries","",0);
 				}
-			} else echo'<b>'.$_language->module['format_incorrect'].'</b><br /><br /><a href="javascript:history.back()">&laquo; '.$_language->module['back'].'</a>';
-		} else echo'<b>'.$_language->module['fill_correctly'].'</b><br /><br /><a href="javascript:history.back()">&laquo; '.$_language->module['back'].'</a>';
+			} else echo'<b>'.$_language->module['format_incorrect'].'</b><br><br><a href="javascript:history.back()">&laquo; '.$_language->module['back'].'</a>';
+		} else echo'<b>'.$_language->module['fill_correctly'].'</b><br><br><a href="javascript:history.back()">&laquo; '.$_language->module['back'].'</a>';
 	} else echo $_language->module['transaction_invalid'];	
 }
 
@@ -157,9 +157,9 @@ elseif(isset($_POST["saveedit"])) {
 					if(safe_query("UPDATE ".PREFIX."countries SET country='".$country."', short='".$short."' WHERE countryID='".$_POST["countryID"]."'")) {
 	          			redirect("admincenter.php?site=countries","",0);
 					}
-				} else echo'<b>'.$_language->module['format_incorrect'].'</b><br /><br /><a href="javascript:history.back()">&laquo; '.$_language->module['back'].'</a>';
+				} else echo'<b>'.$_language->module['format_incorrect'].'</b><br><br><a href="javascript:history.back()">&laquo; '.$_language->module['back'].'</a>';
 			}
-		} else echo'<b>'.$_language->module['fill_correctly'].'</b><br /><br /><a href="javascript:history.back()">&laquo; '.$_language->module['back'].'</a>';
+		} else echo'<b>'.$_language->module['fill_correctly'].'</b><br><br><a href="javascript:history.back()">&laquo; '.$_language->module['back'].'</a>';
 	} else echo $_language->module['transaction_invalid'];
 }
 
@@ -174,7 +174,7 @@ elseif(isset($_GET["delete"])) {
 else {
 	echo '<h1>&curren; <a href="admincenter.php?site=icons" class="white">'.$_language->module['icons'].'</a> &raquo; '.$_language->module['countries'].'</h1>';
   
-  	echo '<input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=countries&amp;action=add\');return document.MM_returnValue" value="'.$_language->module['new_country'].'" /><br /><br />';
+  	echo '<input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=countries&amp;action=add\');return document.MM_returnValue" value="'.$_language->module['new_country'].'" /><br><br>';
   
 	echo '<form method="post" action="admincenter.php?site=countries">
 		  <table width="100%" border="0" cellspacing="1" cellpadding="3" bgcolor="#DDDDDD">
@@ -196,7 +196,7 @@ else {
 		while($flags = mysqli_fetch_array($ds)) {
       		if($i%2) { $td='td1'; }
 			else { $td='td2'; }
-			$pic='<img src="../images/flags/'.$flags['short'].'.gif" border="0" alt="'.$flags['country'].'" />';
+			$pic='<img src="../images/flags/'.$flags['short'].'.gif" alt="'.$flags['country'].'" />';
 			if($flags['fav']==1) $fav = ' <small><font color="green"><b>('.$_language->module['favorite'].')</b></font></small>';
 			else $fav = '';
 			

@@ -35,7 +35,7 @@ $language_array = Array(
   'buddy_nousers'=>'نام کاربری در لیست دوستانتان موجود نمی باشد',
   'buddys'=>'دوستان',
   'ignore_nousers'=>'نام هیچ کاربری در لیست افراد رد شده نیست',
-  'not_logged'=>'.برای اینکه لیست دوستانتان را تغییر دهید باید ثبت نام کنید<br /><a href="index.php?site=register">ثبت نام</a> | <a href="index.php?site=login">ورود</a>',
+  'not_logged'=>'.برای اینکه لیست دوستانتان را تغییر دهید باید ثبت نام کنید<br><a href="index.php?site=register">ثبت نام</a> | <a href="index.php?site=login">ورود</a>',
   'your_buddylist'=>'لیست دوستانتان',
   'your_ignorelist'=>'لیست افراد رد شده'
 );

@@ -62,7 +62,7 @@ $language_array = Array(
   'sort'=>'ترتيب:',
   'squad'=>'الفرقة',
   'submit_challenge'=>'ارسل التحدي',
-  'thank_you'=>'!شكرا لك على تقديم الطلب<br />',
+  'thank_you'=>'!شكرا لك على تقديم الطلب<br>',
   'time'=>'الوقت',
   'wrong_security_code'=>'.خطا في الرمز الامني'
 );

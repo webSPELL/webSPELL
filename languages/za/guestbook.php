@@ -52,7 +52,7 @@ $language_array = Array(
   'mail'=>'Jou e-pos adres',
   'name'=>'Jou naam',
   'new_entry'=>'Nuwe inskrywing',
-  'no_access'=>'Jy is nie aangemeld.<br /><a href="index.php?site=login">Teken</a> | <a href="index.php?site=register">Registreer</a>',
+  'no_access'=>'Jy is nie aangemeld.<br><a href="index.php?site=login">Teken</a> | <a href="index.php?site=register">Registreer</a>',
   'options'=>'Opsies',
   'pmsubject_newentry'=>'Nuwe gasteboek inskrywing',
   'pmtext_newentry'=>'[b]Iemand het \'n boodskap vir jou gelos in jou gasteboek![/b][br][br] [URL=admin/admincenter.php?site=guestbook]Klik hier vir die vrystelling van die inskrywing[/URL] ',

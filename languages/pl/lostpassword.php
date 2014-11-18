@@ -43,8 +43,8 @@ Zapraszamy na stronę
 	'lost_password'=>'odzyskiwanie hasła',
 	'no_mail_given'=>'Musisz wpisać adres email.',
 	'no_user_found'=>'brak takiego użytkownika!',
-	'successful'=>'Konto zostało znalezione<br /><br />
-    Dostaniesz email ze szczegółami twojego konta, nowym hasłem za kilka minut.<br /><br />
+	'successful'=>'Konto zostało znalezione<br><br>
+    Dostaniesz email ze szczegółami twojego konta, nowym hasłem za kilka minut.<br><br>
     &#8226; <a href="index.php?site=login">login</a>',
 	'your_email'=>'Twój E-Mail'
 );

@@ -55,7 +55,7 @@ $language_array = Array(
   'no_incoming'=>'لا يوجد رسائل في صندق الوارد',
   'no_outgoing'=>'لا يوجد رسائل في صندوق الصادر',
   'no_subject'=>'لا موضوع',
-  'not_logged'=>'لم يتم تسجيل دخولك.<br /><a href="index.php?site=login">Login</a> | <a href="index.php?site=register">Register</a>',
+  'not_logged'=>'لم يتم تسجيل دخولك.<br><a href="index.php?site=login">Login</a> | <a href="index.php?site=register">Register</a>',
   'options'=>'الاعدادات',
   'outgoing'=>'الصادرة',
   'read'=>'قرائه',
@@ -74,7 +74,7 @@ $language_array = Array(
   'title'=>'موضوع',
   'your_message'=>'رسالتك:',
   'mail_subject'=>'لقد حصلت على رساله جديده',
-  'mail_body'=>'<b>Hello %nickname%!</b><br /><br />webSPELL v4 لقد حصلت على رسالة جديدة في (%hp_url%).<br />Click <a href="http://%hp_url%?site=messenger">here</a> to read the PM.<br /><br />(C) webSPELL.org',
+  'mail_body'=>'<b>Hello %nickname%!</b><br><br>webSPELL v4 لقد حصلت على رسالة جديدة في (%hp_url%).<br>Click <a href="http://%hp_url%?site=messenger">here</a> to read the PM.<br><br>(C) webSPELL.org',
   'error'=>'خطا',
   'unknown_user'=>'مستخدم مجهول'
 );

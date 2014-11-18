@@ -937,7 +937,7 @@ if(isset($_POST['submit']) || isset($_POST['movetopic']) || isset($_GET['addtopi
 				else $avatar='';
 				if(getsignatur($userID)) $signatur=cleartext(getsignatur($userID));
 				else $signatur='';
-				if(getemail($userID) and !getemailhide($userID)) $email = '<a href="mailto:'.mail_protect(getemail($userID)).'"><img src="images/icons/email.gif" border="0" alt="email" /></a>';
+				if(getemail($userID) and !getemailhide($userID)) $email = '<a href="mailto:'.mail_protect(getemail($userID)).'"><img src="images/icons/email.gif" alt="email" /></a>';
 				else $email='';
 				
 				$pm='';
@@ -945,7 +945,7 @@ if(isset($_POST['submit']) || isset($_POST['movetopic']) || isset($_GET['addtopi
 				$statuspic='<img src="images/icons/online.gif" width="7" height="7" alt="online" />';
 				
 				if(!validate_url(gethomepage($userID))) $hp='';
-				else $hp='<a href="'.gethomepage($userID).'" target="_blank"><img src="images/icons/hp.gif" border="0" width="14" height="14" alt="'.$_language->module['homepage'].'" /></a>';
+				else $hp='<a href="'.gethomepage($userID).'" target="_blank"><img src="images/icons/hp.gif" width="14" height="14" alt="'.$_language->module['homepage'].'" /></a>';
 				
 				$registered = getregistered($userID);
 				$posts = getuserforumposts($userID);
@@ -995,10 +995,10 @@ if(isset($_POST['submit']) || isset($_POST['movetopic']) || isset($_GET['addtopi
 
 			if(isforumadmin($userID) || ismoderator($userID, $board)) {
 				if(isset($_sticky)){
-					$chk_sticky = '<br />'."\n".' <input class="input" type="checkbox" name="sticky" value="1" '.$_sticky.' /> '.$_language->module['make_sticky'];
+					$chk_sticky = '<br>'."\n".' <input class="input" type="checkbox" name="sticky" value="1" '.$_sticky.' /> '.$_language->module['make_sticky'];
 				}
 				else {
-					$chk_sticky = '<br />'."\n".' <input class="input" type="checkbox" name="sticky" value="1" /> '.$_language->module['make_sticky'];
+					$chk_sticky = '<br>'."\n".' <input class="input" type="checkbox" name="sticky" value="1" /> '.$_language->module['make_sticky'];
 				}
 			}
 			else {

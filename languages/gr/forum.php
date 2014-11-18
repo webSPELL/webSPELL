@@ -84,8 +84,8 @@ $language_array = Array(
   'new_reply'=>'Νεα απαντηση',
   'new_topic'=>'Νεο θεμα',
   'newest_member'=>'Νεοτερο μελος',
-  'newreply_image'=>'<img src="images/icons/newreply.gif" border="0" alt="reply" />',
-  'newtopic_image'=>'<img src="images/icons/newtopic.gif" border="0" alt="new topic" />',
+  'newreply_image'=>'<img src="images/icons/newreply.gif" alt="reply" />',
+  'newtopic_image'=>'<img src="images/icons/newtopic.gif" alt="new topic" />',
   'next_7_days'=>'επομενες 7 ημερες',
   'no_access'=>'Απαγορευεται η προσβαση',
   'no_access_write'=>'Απαγορευεται να δημοσιευσετε σε αυτον τον πινακα.',
@@ -93,8 +93,8 @@ $language_array = Array(
   'no_new_posts'=>'δεν υπαρχουν νεα μηνηματα',
   'no_permission'=>'Δεν εχετε αδεια να δειτε εσωτερικους πινακες μηνυματων!',
   'not_logged'=>'Δεν εχετε εισελθει.',
-  'not_logged_msg'=>'<br /><br />Για να ξεκινησετε η να απαντησετε σε ενα θεμα πρεπει να ειστε εγγεγραμενοι και συνδεδεμενοι!<br /><br />
-    &#8226; <a href="index.php?site=register">εγγραφη τωρα</a><br />
+  'not_logged_msg'=>'<br><br>Για να ξεκινησετε η να απαντησετε σε ενα θεμα πρεπει να ειστε εγγεγραμενοι και συνδεδεμενοι!<br><br>
+    &#8226; <a href="index.php?site=register">εγγραφη τωρα</a><br>
     &#8226; <a href="index.php?site=login">εισοδος</a>',
   'notify'=>'Ενημερωστε με οταν δημοσιευτει απαντηση',
   'notify_mail'=>'Νεα απαντηση απο τον %poster% στο θεμα
@@ -119,7 +119,7 @@ $language_array = Array(
   'registered_users'=>'εγγεγραμενοι χρηστες',
   'reopen_topic'=>'ανοιγμα παλαιοτερου θεματος',
   'replies'=>'Απαντησεις',
-  'search_image'=>'<img src="images/icons/search.gif" border="0" alt="" />',
+  'search_image'=>'<img src="images/icons/search.gif" alt="" />',
   'select_all'=>'επιλογη ολων',
   'smilies_on'=>'<a href="javascript:MM_openBrWindow(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smilies</a> ειναι ενεργο',
   'sort'=>'Ταξινομηση',

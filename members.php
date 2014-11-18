@@ -44,7 +44,7 @@ if($action=="show") {
 
 		$anzmembers=mysqli_num_rows(safe_query("SELECT sqmID FROM ".PREFIX."squads_members WHERE squadID='".$ds['squadID']."'"));
 		$name='<b>'.$ds['name'].'</b>';
-		if($ds['icon']) $icon='<img src="images/squadicons/'.$ds['icon'].'" border="0" alt="'.htmlspecialchars($ds['name']).'" />';
+		if($ds['icon']) $icon='<img src="images/squadicons/'.$ds['icon'].'" alt="'.htmlspecialchars($ds['name']).'" />';
 		else $icon='';
 		$info=htmloutput($ds['info']);
 		$squadID=$ds['squadID'];
@@ -112,19 +112,19 @@ if($action=="show") {
 
 			$icq = $dm['icq'];
 			if(getemailhide($dm['userID'])) $email = '';
-			else $email = '<a href="mailto:'.mail_protect($dm['email']).'"><img src="images/icons/email.gif" border="0" width="15" height="11" alt="email" /></a>';
+			else $email = '<a href="mailto:'.mail_protect($dm['email']).'"><img src="images/icons/email.gif" width="15" height="11" alt="email" /></a>';
 			$emaill = $dm['email'];
 
 			$pm = '';
 			$buddy = '';
 			if ($loggedin && $dm['userID'] != $userID)
 			{
-				$pm='<a href="index.php?site=messenger&amp;action=touser&amp;touser='.$dm['userID'].'"><img src="images/icons/pm.gif" border="0" width="12" height="13" alt="messenger" /></a>';
+				$pm='<a href="index.php?site=messenger&amp;action=touser&amp;touser='.$dm['userID'].'"><img src="images/icons/pm.gif" width="12" height="13" alt="messenger" /></a>';
 
-				if (isignored($userID, $dm['userID'])) $buddy='<a href="buddys.php?action=readd&amp;id='.$dm['userID'].'&amp;userID='.$userID.'"><img src="images/icons/buddy_readd.gif" width="16" height="16" border="0" alt="back to buddy-list" /></a>';
-				elseif(isbuddy($userID, $dm['userID'])) $buddy='<a href="buddys.php?action=ignore&amp;id='.$dm['userID'].'&amp;userID='.$userID.'"><img src="images/icons/buddy_ignore.gif" width="16" height="16" border="0" alt="ignore user" /></a>';
+				if (isignored($userID, $dm['userID'])) $buddy='<a href="buddys.php?action=readd&amp;id='.$dm['userID'].'&amp;userID='.$userID.'"><img src="images/icons/buddy_readd.gif" width="16" height="16" alt="back to buddy-list" /></a>';
+				elseif(isbuddy($userID, $dm['userID'])) $buddy='<a href="buddys.php?action=ignore&amp;id='.$dm['userID'].'&amp;userID='.$userID.'"><img src="images/icons/buddy_ignore.gif" width="16" height="16" alt="ignore user" /></a>';
 				elseif($userID==$dm['userID']) $buddy="";
-				else $buddy='<a href="buddys.php?action=add&amp;id='.$dm['userID'].'&amp;userID='.$userID.'"><img src="images/icons/buddy_add.gif" width="16" height="16" border="0" alt="add to buddylist" /></a>';
+				else $buddy='<a href="buddys.php?action=add&amp;id='.$dm['userID'].'&amp;userID='.$userID.'"><img src="images/icons/buddy_add.gif" width="16" height="16" alt="add to buddylist" /></a>';
 			}
 
 			if (isonline($dm['userID'])=="offline") $statuspic='<img src="images/icons/offline.gif" width="7" height="7" alt="offline" />';
@@ -164,7 +164,7 @@ else {
 			$anzmembers=mysqli_num_rows(safe_query("SELECT sqmID FROM ".PREFIX."squads_members WHERE squadID='".$ds['squadID']."'"));
 			$name='<a href="index.php?site=members&amp;action=show&amp;squadID='.$ds['squadID'].'"><b>'.$ds['name'].'</b></a>';
 
-			if($ds['icon']) $icon='<img src="images/squadicons/'.$ds['icon'].'" border="0" alt="'.htmlspecialchars($ds['name']).'" />';
+			if($ds['icon']) $icon='<img src="images/squadicons/'.$ds['icon'].'" alt="'.htmlspecialchars($ds['name']).'" />';
 			else $icon='';
 
 			$info=htmloutput($ds['info']);
@@ -214,19 +214,19 @@ else {
 
 				$icq = $dm['icq'];
 				if(getemailhide($dm['userID'])) $email = '';
-				else $email = '<a href="mailto:'.mail_protect($dm['email']).'"><img src="images/icons/email.gif" border="0" width="15" height="11" alt="email" /></a>';
+				else $email = '<a href="mailto:'.mail_protect($dm['email']).'"><img src="images/icons/email.gif" width="15" height="11" alt="email" /></a>';
 				$emaill = $dm['email'];
 
 				$pm = '';
 				$buddy = '';
 				if ($loggedin && $dm['userID'] != $userID)
 				{
-					$pm='<a href="index.php?site=messenger&amp;action=touser&amp;touser='.$dm['userID'].'"><img src="images/icons/pm.gif" border="0" width="12" height="13" alt="messenger" /></a>';
+					$pm='<a href="index.php?site=messenger&amp;action=touser&amp;touser='.$dm['userID'].'"><img src="images/icons/pm.gif" width="12" height="13" alt="messenger" /></a>';
 
-					if (isignored($userID, $dm['userID'])) $buddy='<a href="buddys.php?action=readd&amp;id='.$dm['userID'].'&amp;userID='.$userID.'"><img src="images/icons/buddy_readd.gif" width="16" height="16" border="0" alt="back to buddy-list" /></a>';
-					elseif(isbuddy($userID, $dm['userID'])) $buddy='<a href="buddys.php?action=ignore&amp;id='.$dm['userID'].'&amp;userID='.$userID.'"><img src="images/icons/buddy_ignore.gif" width="16" height="16" border="0" alt="ignore user" /></a>';
+					if (isignored($userID, $dm['userID'])) $buddy='<a href="buddys.php?action=readd&amp;id='.$dm['userID'].'&amp;userID='.$userID.'"><img src="images/icons/buddy_readd.gif" width="16" height="16" alt="back to buddy-list" /></a>';
+					elseif(isbuddy($userID, $dm['userID'])) $buddy='<a href="buddys.php?action=ignore&amp;id='.$dm['userID'].'&amp;userID='.$userID.'"><img src="images/icons/buddy_ignore.gif" width="16" height="16" alt="ignore user" /></a>';
 					elseif($userID==$dm['userID']) $buddy="";
-					else $buddy='<a href="buddys.php?action=add&amp;id='.$dm['userID'].'&amp;userID='.$userID.'"><img src="images/icons/buddy_add.gif" width="16" height="16" border="0" alt="add to buddylist" /></a>';
+					else $buddy='<a href="buddys.php?action=add&amp;id='.$dm['userID'].'&amp;userID='.$userID.'"><img src="images/icons/buddy_add.gif" width="16" height="16" alt="add to buddylist" /></a>';
 				}
 
 				if (isonline($dm['userID'])=="offline") $statuspic='<img src="images/icons/offline.gif" width="7" height="7" alt="offline" />';

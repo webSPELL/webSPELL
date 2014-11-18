@@ -79,8 +79,8 @@ $language_array = Array(
   'new_reply'=>'jauna atbilde',
   'new_topic'=>'jauna tēma',
   'newest_member'=>'jaunākais biedrs',
-  'newreply_image'=>'<img src="images/icons/newreply.gif" border="0" alt="atbildēt" />',
-  'newtopic_image'=>'<img src="images/icons/newtopic.gif" border="0" alt="jauna tēma" />',
+  'newreply_image'=>'<img src="images/icons/newreply.gif" alt="atbildēt" />',
+  'newtopic_image'=>'<img src="images/icons/newtopic.gif" alt="jauna tēma" />',
   'next_7_days'=>'nākamās 7 dienas',
   'no_access'=>'Nav pieejas',
   'no_access_write'=>'Nav pieejas, lai rakstītu šajā forumā.',
@@ -88,8 +88,8 @@ $language_array = Array(
   'no_new_posts'=>'nav jaunu ierakstu',
   'no_permission'=>'Jums nav atļaujas skatīt šo forumu!',
   'not_logged'=>'Jūs neesat pieslēdzies.',
-  'not_logged_msg'=>'<br /><br />Lai iesāktu jaunu tēmu vai atbildētu, Jums jāreģistrējas un jāpieslēdzas!<br /><br />
-&#8226; <a href="index.php?site=register">reģistrēties</a><br />
+  'not_logged_msg'=>'<br><br>Lai iesāktu jaunu tēmu vai atbildētu, Jums jāreģistrējas un jāpieslēdzas!<br><br>
+&#8226; <a href="index.php?site=register">reģistrēties</a><br>
 &#8226; <a href="index.php?site=login">pieslēgties</a>',
   'notify'=>'Paziņot, kad publicēta atbilde',
   'notify_mail'=>'Jauna atbilde %poster% tēmā
@@ -114,7 +114,7 @@ $language_array = Array(
   'registered_users'=>'reģistrēti lietotāji',
   'reopen_topic'=>'atsākt tēmu',
   'replies'=>'Atbildes',
-  'search_image'=>'<img src="images/icons/search.gif" border="0" alt="" />',
+  'search_image'=>'<img src="images/icons/search.gif" alt="" />',
   'select_all'=>'atlasīt visu',
   'smilies_on'=>'<a href="javascript:MM_openBrWindow(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Sejiņas</a> ieslēgts',
   'sort'=>'Kārtot',

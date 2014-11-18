@@ -30,7 +30,7 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'activation_successful'=>'Konta aktivizācija veiksmīga.<br />Jūs tagad varat pieslēgties.',
+  'activation_successful'=>'Konta aktivizācija veiksmīga.<br>Jūs tagad varat pieslēgties.',
   'back'=>'atpakaļ',
   'enter_nickname'=>'Ievadiet segvārdu.',
   'enter_password'=>'Ievadiet paroli.',

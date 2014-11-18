@@ -329,7 +329,7 @@ elseif(isset($_GET['vote'])) {
 			echo'<form method="post" action="polls.php?action=vote">
 			<table cellspacing="2" cellpadding="0">
 				<tr>
-					<td><b>'.$ds['titel'].'</b><br /><br /></td>
+					<td><b>'.$ds['titel'].'</b><br><br></td>
 				</tr>
 				<tr>
 					<td>';

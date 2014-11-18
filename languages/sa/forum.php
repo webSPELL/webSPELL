@@ -79,8 +79,8 @@ $language_array = Array(
   'new_reply'=>'مشاركة جديدة',
   'new_topic'=>'موضوع جديد',
   'newest_member'=>'اخر الاعضاء',
-  'newreply_image'=>'<img src="images/icons/newreply.gif" border="0" alt="الرد" />',
-  'newtopic_image'=>'<img src="images/icons/newtopic.gif" border="0" alt="موضوع جديد" />',
+  'newreply_image'=>'<img src="images/icons/newreply.gif" alt="الرد" />',
+  'newtopic_image'=>'<img src="images/icons/newtopic.gif" alt="موضوع جديد" />',
   'next_7_days'=>'الاسبوع القادم',
   'no_access'=>'ممنوع الدخول',
   'no_access_write'=>'.لا تملك صلاحية الكتابة في هذا القسم',
@@ -88,8 +88,8 @@ $language_array = Array(
   'no_new_posts'=>'لا توجد مشاركات جديدة',
   'no_permission'=>'!لا تملك الصلاحية لقرائة هذا القسم',
   'not_logged'=>'.لست مسجل',
-  'not_logged_msg'=>'<br /><br />!للبداية لو الرد يجب التسجيل اولا<br /><br />
-&#8226; <a href="index.php?site=register">سجل الان</a><br />
+  'not_logged_msg'=>'<br><br>!للبداية لو الرد يجب التسجيل اولا<br><br>
+&#8226; <a href="index.php?site=register">سجل الان</a><br>
 &#8226; <a href="index.php?site=login">سجل الدخول</a>',
   'notify'=>'ابلغني في حال الرد على الموضوع',
   'notify_mail'=>'الرد الجديد من %poster% في الموضوع 
@@ -114,7 +114,7 @@ $language_array = Array(
   'registered_users'=>'الاعضاء المسجلين',
   'reopen_topic'=>'اعادة فتح الموضوع',
   'replies'=>'الردود',
-  'search_image'=>'<img src="images/icons/search.gif" border="0" alt="" />',
+  'search_image'=>'<img src="images/icons/search.gif" alt="" />',
   'select_all'=>'اختيار الكل',
   'smilies_on'=>'<a href="javascript:MM_openBrWindow(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">الابتسامات</a> مسموح',
   'sort'=>'ترتيب',

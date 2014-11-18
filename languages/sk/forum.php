@@ -78,8 +78,8 @@ $language_array = Array(
 	'new_reply'=>'nová odpoveď',
 	'new_topic'=>'nová téma',
 	'newest_member'=>'najnovší člen',
-	'newreply_image'=>'<img src="images/icons/newreply.gif" border="0" alt="odpoveď" />',
-	'newtopic_image'=>'<img src="images/icons/newtopic.gif" border="0" alt="nová téma" />',
+	'newreply_image'=>'<img src="images/icons/newreply.gif" alt="odpoveď" />',
+	'newtopic_image'=>'<img src="images/icons/newtopic.gif" alt="nová téma" />',
 	'next_7_days'=>'nasledujúcich 7 dní',
 	'no_access'=>'Žiaden prístup',
 	'no_access_write'=>'Nemáte prístup písať do tohto boardu.',
@@ -87,8 +87,8 @@ $language_array = Array(
 	'no_new_posts'=>'žiadne nové príspevky',
 	'no_permission'=>'Nemáte povolenie vidieť interné boardy!',
 	'not_logged'=>'Neprihlásený.',
-	'not_logged_msg'=>'<br /><br />Pre odpovedanie, alebo začatie témy musíte byť zaregistrovaný a prihlásený!<br /><br />
-    &#8226; <a href="index.php?site=register">registrovať</a><br />
+	'not_logged_msg'=>'<br><br>Pre odpovedanie, alebo začatie témy musíte byť zaregistrovaný a prihlásený!<br><br>
+    &#8226; <a href="index.php?site=register">registrovať</a><br>
     &#8226; <a href="index.php?site=login">prihlásiť</a>',
 	'notify'=>'Upozorni ma keď niekto odpovie',
 	'notify_mail'=>'nová odpoveď od %poster% v téme
@@ -113,7 +113,7 @@ $language_array = Array(
 	'registered_users'=>'registrovaných užívateľov',
 	'reopen_topic'=>'znovuotvoriť tému',
 	'replies'=>'Odpovede',
-	'search_image'=>'<img src="images/icons/search.gif" border="0" alt="" />',
+	'search_image'=>'<img src="images/icons/search.gif" alt="" />',
 	'select_all'=>'vyznačiť všetko',
 	'smilies_on'=>'<a href="javascript:MM_openBrWindow(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smilíci</a> sí ZAPNUTÝ',
 	'sort'=>'Triediť',

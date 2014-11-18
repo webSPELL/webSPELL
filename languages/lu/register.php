@@ -35,7 +35,7 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'activation_successful'=>'Deng Umellung ass erfollegräich ofgeschloss ginn.<br />Du kanns dech lo umellen.',
+  'activation_successful'=>'Deng Umellung ass erfollegräich ofgeschloss ginn.<br>Du kanns dech lo umellen.',
   'back'=>'zeréck',
   'enter_nickname'=>'Wann ech gelift en Nicknumm aginn.',
   'enter_password'=>'Wann ech gelift en Passwuert aginn.',

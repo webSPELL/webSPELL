@@ -37,7 +37,7 @@ $language_array = Array(
   'lost_password'=>'izgubljena lozinka',
   'no_mail_given'=>'Niste unijeli e-mail adresu.',
   'no_user_found'=>'Korisnik nije naden!',
-  'successful'=>'Vaš racun je pronaden<br /><br />rn    Za nekoliko sekundi primit cete e-mail sa Vašim podacima.<br /><br />rn    &#8226; <a href="index.php?site=login">Prijavi se</a>',
+  'successful'=>'Vaš racun je pronaden<br><br>rn    Za nekoliko sekundi primit cete e-mail sa Vašim podacima.<br><br>rn    &#8226; <a href="index.php?site=login">Prijavi se</a>',
   'your_email'=>'Vaš E-Mail'
 );
 ?>

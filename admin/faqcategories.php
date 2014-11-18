@@ -85,7 +85,7 @@ if(isset($_GET['action'])) {
     
     echo'<h1>&curren; <a href="admincenter.php?site=faqcategories" class="white">'.$_language->module['faq_categories'].'</a> &raquo; '.$_language->module['add_category'].'</h1>';
     
-    echo '<script language="JavaScript" type="text/javascript">
+    echo '<script type="text/javascript">
 					<!--
 						function chkFormular() {
 							if(!validbbcode(document.getElementById(\'message\').value, \'admin\')){
@@ -109,7 +109,7 @@ if(isset($_GET['action'])) {
 			        <td valign="top">'.$addflags.'</td>
 			      </tr>
 			    </table>
-	        <br /><textarea id="message" rows="10" cols="" name="message" style="width: 100%;"></textarea>
+	        <br><textarea id="message" rows="10" cols="" name="message" style="width: 100%;"></textarea>
 	      </td>
       </tr>
       <tr>
@@ -137,7 +137,7 @@ if(isset($_GET['action'])) {
     
     echo'<h1>&curren; <a href="admincenter.php?site=faqcategories" class="white">'.$_language->module['faq_categories'].'</a> &raquo; '.$_language->module['edit_category'].'</h1>';
 
-    echo '<script language="JavaScript" type="text/javascript">
+    echo '<script type="text/javascript">
 					<!--
 						function chkFormular() {
 							if(!validbbcode(document.getElementById(\'message\').value, \'admin\')){
@@ -161,7 +161,7 @@ if(isset($_GET['action'])) {
 			        <td valign="top">'.$addflags.'</td>
 			      </tr>
 			    </table>
-	        <br /><textarea id="message" rows="10" cols="" name="message" style="width: 100%;">'.getinput($ds['description']).'</textarea>
+	        <br><textarea id="message" rows="10" cols="" name="message" style="width: 100%;">'.getinput($ds['description']).'</textarea>
 	      </td>
       </tr>
       <tr>
@@ -176,7 +176,7 @@ else {
 	
   echo '<h1>&curren; '.$_language->module['faq_categories'].'</h1>';
   
-  echo'<input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=faqcategories&amp;action=addcat\');return document.MM_returnValue" value="'.$_language->module['new_category'].'" /><br /><br />';	
+  echo'<input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=faqcategories&amp;action=addcat\');return document.MM_returnValue" value="'.$_language->module['new_category'].'" /><br><br>';	
 
 	echo'<form method="post" action="admincenter.php?site=faqcategories">
   <table width="100%" border="0" cellspacing="1" cellpadding="3" bgcolor="#DDDDDD">
@@ -201,7 +201,7 @@ else {
   
 		echo'<tr>
       <td class="'.$td.'"><b>'.getinput($ds['faqcatname']).'</b>
-      <br />'.cleartext($ds['description'],1,'admin').'</td>
+      <br>'.cleartext($ds['description'],1,'admin').'</td>
       <td class="'.$td.'" align="center"><input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=faqcategories&amp;action=editcat&amp;faqcatID='.$ds['faqcatID'].'\');return document.MM_returnValue" value="'.$_language->module['edit'].'" />
       <input type="button" onclick="MM_confirm(\''.$_language->module['really_delete'].'\', \'admincenter.php?site=faqcategories&amp;delcat=true&amp;faqcatID='.$ds['faqcatID'].'&amp;captcha_hash='.$hash.'\')" value="'.$_language->module['delete'].'" /></td>
       <td class="'.$td.'" align="center"><select name="sortfaqcat[]">';

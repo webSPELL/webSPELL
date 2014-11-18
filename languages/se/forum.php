@@ -78,8 +78,8 @@ $language_array = Array(
 	'new_reply'=>'nytt svar',
 	'new_topic'=>'ny ämne',
 	'newest_member'=>'nyaste medlem',
-	'newreply_image'=>'<img src="images/icons/newreply.gif" border="0" alt="svara" />',
-	'newtopic_image'=>'<img src="images/icons/newtopic.gif" border="0" alt="nytt ämne" />',
+	'newreply_image'=>'<img src="images/icons/newreply.gif" alt="svara" />',
+	'newtopic_image'=>'<img src="images/icons/newtopic.gif" alt="nytt ämne" />',
 	'next_7_days'=>'de nästa 7 dagarna',
 	'no_access'=>'Ingen tillåtelse',
 	'no_access_write'=>'Ingen tillåtelse att skriva i denna brädan.',
@@ -87,8 +87,8 @@ $language_array = Array(
 	'no_new_posts'=>'inga nya inlägg',
 	'no_permission'=>'Du har ingen tillåtelse att skriva i denna brädan!',
 	'not_logged'=>'Inte inloggad',
-	'not_logged_msg'=>'<br /><br />För att starta eller svara på ett inlägg måste du vara registrerad och inloggad!<br /><br />
-    &#8226; <a href="index.php?site=register">registrera nu</a><br />
+	'not_logged_msg'=>'<br><br>För att starta eller svara på ett inlägg måste du vara registrerad och inloggad!<br><br>
+    &#8226; <a href="index.php?site=register">registrera nu</a><br>
     &#8226; <a href="index.php?site=login">logga in</a>',
 	'notify'=>'Meddela mig när ett svar är skickat',
 	'notify_mail'=>'nytt svar av %poster% i topic
@@ -113,7 +113,7 @@ $language_array = Array(
 	'registered_users'=>'registrerade användare',
 	'reopen_topic'=>'öppna inlägget på nytt',
 	'replies'=>'Svar',
-	'search_image'=>'<img src="images/icons/search.gif" border="0" alt="" />',
+	'search_image'=>'<img src="images/icons/search.gif" alt="" />',
 	'select_all'=>'markera alla',
 	'smilies_on'=>'<a href="javascript:MM_openBrWindow(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smilies</a> är PÅ',
 	'sort'=>'Sort',

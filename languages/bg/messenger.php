@@ -60,7 +60,7 @@ $language_array = Array(
   'no_incoming'=>'Няма съобщения във входящата кутия.',
   'no_outgoing'=>'Няма съобщения в изходящата кутия.',
   'no_subject'=>'(без тема)',
-  'not_logged'=>'Не сте въвели регистрацията си в сайта.<br /><a href="index.php?site=login">Влез</a> | <a href="index.php?site=register">Регистрация</a>',
+  'not_logged'=>'Не сте въвели регистрацията си в сайта.<br><a href="index.php?site=login">Влез</a> | <a href="index.php?site=register">Регистрация</a>',
   'options'=>'Опции',
   'outgoing'=>'Изходящ',
   'read'=>'Прочети',
@@ -79,7 +79,7 @@ $language_array = Array(
   'title'=>'Тема',
   'your_message'=>'Вашето съобщение:',
   'mail_subject'=>'Имате нов PM',
-  'mail_body'=>'<b>Здравейте %nickname%!</b><br /><br />Имате ново съобщение в BVBPOWER (%hp_url%).<br />Кликнете <a href="http://%hp_url%?site=messenger">тук</a> за да прочетете PM.<br /><br />(C) webSPELL.org',
+  'mail_body'=>'<b>Здравейте %nickname%!</b><br><br>Имате ново съобщение в BVBPOWER (%hp_url%).<br>Кликнете <a href="http://%hp_url%?site=messenger">тук</a> за да прочетете PM.<br><br>(C) webSPELL.org',
   'error'=>'грешка',
   'unknown_user'=>'неразпознат потребител'
 );

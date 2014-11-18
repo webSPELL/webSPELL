@@ -35,11 +35,11 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'invalid_password'=>'Въвели сте грешна парола.<br /><br /><a href="javascript:history.back()">Въведете паролата отново</a>',
-  'ip_banned'=>'IP адресът Ви е блокиран от страницата.<br/>%reason%<br /><br /><a href="javascript:history.back()">Oбратно</a>',
+  'invalid_password'=>'Въвели сте грешна парола.<br><br><a href="javascript:history.back()">Въведете паролата отново</a>',
+  'ip_banned'=>'IP адресът Ви е блокиран от страницата.<br>%reason%<br><br><a href="javascript:history.back()">Oбратно</a>',
   'login_successful'=>'Вие се логнахте успешно',
-  'no_user'=>'Потребител <b>%username%</b> не е открит в системата.<br /><br /><a href="javascript:history.back()">Въведи отново</a>',
-  'not_activated'=>'Акаунтът Ви не е активиран.<br /><br /><a href="javascript:history.back()">Oбратно</a>',
-  'session_error'=>'Трябва да имате активирани Бисквитки (Cookies) за да влезете в сайта.<br />Ако вече сте ги активирали моля обърнете се към системния администратор.<br /><br /><a href="javascript:history.back()">Oбратно</a>'
+  'no_user'=>'Потребител <b>%username%</b> не е открит в системата.<br><br><a href="javascript:history.back()">Въведи отново</a>',
+  'not_activated'=>'Акаунтът Ви не е активиран.<br><br><a href="javascript:history.back()">Oбратно</a>',
+  'session_error'=>'Трябва да имате активирани Бисквитки (Cookies) за да влезете в сайта.<br>Ако вече сте ги активирали моля обърнете се към системния администратор.<br><br><a href="javascript:history.back()">Oбратно</a>'
 );
 ?>

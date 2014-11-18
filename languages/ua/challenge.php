@@ -67,7 +67,7 @@ $language_array = Array(
   'sort'=>'Сортувати:',
   'squad'=>'Загін',
   'submit_challenge'=>'Додати виклик на бій',
-  'thank_you'=>'Дякуємо за ваш запит!<br />',
+  'thank_you'=>'Дякуємо за ваш запит!<br>',
   'time'=>'Час',
   'wrong_security_code'=>'Код перевірки введений неправильно.'
 );

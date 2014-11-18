@@ -321,7 +321,7 @@ elseif($action=="show") {
 	else $page = 1;
 
 	if(isnewsadmin($userID)) echo'<input type="button" onclick="MM_openBrWindow(\'articles.php?action=new\',\'Articles\',\'toolbar=no,status=no,scrollbars=yes,width=800,height=600\');" value="'.$_language->module['new_article'].'" class="btn btn-danger" /> ';
-	echo'<input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=articles\');return document.MM_returnValue;" value="'.$_language->module['all_articles'].'" class="btn btn-primary"/><br /><br />';
+	echo'<input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=articles\');return document.MM_returnValue;" value="'.$_language->module['all_articles'].'" class="btn btn-primary"/><br><br>';
 
 	if($page==1) safe_query("UPDATE ".PREFIX."articles SET viewed=viewed+1 WHERE articlesID='".$articlesID."'");
 	$result=safe_query("SELECT * FROM ".PREFIX."articles WHERE articlesID='".$articlesID."'");
@@ -370,7 +370,7 @@ elseif($action=="show") {
 			$ratingpic.='<img src="images/icons/rating_'.$pic.'.gif" width="4" height="5" alt="" />';
 		}
 
-		if(isnewsadmin($userID)) $adminaction='<br /><br /><input type="button" onclick="MM_openBrWindow(\'articles.php?action=edit&amp;articlesID='.$ds['articlesID'].'\',\'News\',\'toolbar=no,status=no,scrollbars=yes,width=800,height=600\');" value="'.$_language->module['edit'].'" class="btn btn-danger" />
+		if(isnewsadmin($userID)) $adminaction='<br><br><input type="button" onclick="MM_openBrWindow(\'articles.php?action=edit&amp;articlesID='.$ds['articlesID'].'\',\'News\',\'toolbar=no,status=no,scrollbars=yes,width=800,height=600\');" value="'.$_language->module['edit'].'" class="btn btn-danger" />
     <input type="button" onclick="MM_confirm(\''.$_language->module['really_delete'].'\', \'articles.php?delete=true&amp;articlesID='.$ds['articlesID'].'\');" value="'.$_language->module['delete'].'" class="btn btn-danger" />';
 		else $adminaction='';
 
@@ -484,9 +484,9 @@ else {
 	if($gesamt) {
 		top5();
 		if($type=="ASC")
-		echo'<a href="index.php?site=articles&amp;page='.$page.'&amp;sort='.$sort.'&amp;type=DESC">'.$_language->module['sort'].'</a> <img src="images/icons/asc.gif" width="9" height="7" border="0" alt="" />&nbsp;&nbsp;&nbsp;';
+		echo'<a href="index.php?site=articles&amp;page='.$page.'&amp;sort='.$sort.'&amp;type=DESC">'.$_language->module['sort'].'</a> <img src="images/icons/asc.gif" width="9" height="7" alt="" />&nbsp;&nbsp;&nbsp;';
 		else
-		echo'<a href="index.php?site=articles&amp;page='.$page.'&amp;sort='.$sort.'&amp;type=ASC">'.$_language->module['sort'].'</a> <img src="images/icons/desc.gif" width="9" height="7" border="0" alt="" />&nbsp;&nbsp;&nbsp;';
+		echo'<a href="index.php?site=articles&amp;page='.$page.'&amp;sort='.$sort.'&amp;type=ASC">'.$_language->module['sort'].'</a> <img src="images/icons/desc.gif" width="9" height="7" alt="" />&nbsp;&nbsp;&nbsp;';
 
 
 		if($pages>1) echo $page_link;

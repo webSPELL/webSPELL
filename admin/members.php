@@ -165,7 +165,7 @@ if(isset($_GET['action']) and $_GET['action'] == "edit") {
 			else $fight='<select name="war['.$ds['sqmID'].']"><option value="1">'.$_language->module['yes'].'</option><option value="0" selected="selected">'.$_language->module['no'].'</option></select>';
 
 			$squads.='<tr>
-        <td colspan="2"><hr /></td>
+        <td colspan="2"><hr></td>
       </tr>
       <tr>
         <td><b>'.$_language->module['squad'].'</b></td>
@@ -230,19 +230,19 @@ if(isset($_GET['action']) and $_GET['action'] == "edit") {
 	}
 
 	if(isclanmember($id)) $userdes='<tr>
-    <td colspan="2"><b>'.$_language->module['description'].'</b><br />
+    <td colspan="2"><b>'.$_language->module['description'].'</b><br>
       <table width="99%" border="0" cellspacing="0" cellpadding="0">
 		      <tr>
 		        <td valign="top">'.$addbbcode.'</td>
 		        <td valign="top">'.$addflags.'</td>
 		      </tr>
 		    </table>
-      <br /><textarea id="message" rows="5" cols="" name="message" style="width: 100%;">'.getuserdescription($id).'</textarea>
+      <br><textarea id="message" rows="5" cols="" name="message" style="width: 100%;">'.getuserdescription($id).'</textarea>
     </td>
   </tr>';
 	else $userdes='';
 
-	echo '<script language="JavaScript" type="text/javascript">
+	echo '<script type="text/javascript">
 					<!--
 						function chkFormular() {
 							if(!validbbcode(document.getElementById(\'message\').value, \'admin\')){
@@ -274,7 +274,7 @@ if(isset($_GET['action']) and $_GET['action'] == "edit") {
     '.$squads.'
     '.$userdes.'
     <tr>
-      <td colspan="2"><hr /></td>
+      <td colspan="2"><hr></td>
     </tr>
   </table>
   <table width="100%" border="0" cellspacing="1" cellpadding="3">
@@ -309,7 +309,7 @@ if(isset($_GET['action']) and $_GET['action'] == "edit") {
    }
    
    echo '<tr>
-    <td colspan="3"><hr /></td>
+    <td colspan="3"><hr></td>
   </tr>
   <tr>
     <td colspan="3"><b>'.$_language->module['group_access'].'</b></td>
@@ -397,7 +397,7 @@ else {
          
          $i++;
 		}
-		echo'</table><br />';
+		echo'</table><br>';
 	}
 	echo'<div align="right"><input type="hidden" name="captcha_hash" value="'.$hash.'" /><input type="submit" name="sortieren" value="'.$_language->module['to_sort'].'" /></div></form>';
 }

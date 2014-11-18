@@ -36,7 +36,7 @@ $language_array = Array(
   'faq'=>'KKK',
   'faqs'=>'KKKd',
   'no_categories'=>'ühtegi kategooriat pole veel loodud',
-  'no_faq'=>'Pole ühtegi küsimust.<br /><a href="index.php?site=faq">Tagasi</a>',
+  'no_faq'=>'Pole ühtegi küsimust.<br><a href="index.php?site=faq">Tagasi</a>',
   'saved_on'=>'salvestatud'
 );
 ?>

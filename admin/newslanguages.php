@@ -135,7 +135,7 @@ else {
 	
   echo'<h1>&curren; '.$_language->module['news_languages'].'</h1>';
   
-  echo'<input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=newslanguages&amp;action=add\');return document.MM_returnValue" value="'.$_language->module['new_language'].'" /><br /><br />';
+  echo'<input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=newslanguages&amp;action=add\');return document.MM_returnValue" value="'.$_language->module['new_language'].'" /><br><br>';
 
 	$ergebnis=safe_query("SELECT * FROM ".PREFIX."news_languages ORDER BY language");
 	
@@ -156,7 +156,7 @@ else {
     if($i%2) { $td='td1'; }
     else { $td='td2'; }
     
-    $getflag='<img src="../images/flags/'.$ds['lang'].'.gif" border="0" alt="'.$ds['alt'].'" />';
+    $getflag='<img src="../images/flags/'.$ds['lang'].'.gif" alt="'.$ds['alt'].'" />';
       
 		echo'<tr>
       <td class="'.$td.'" align="center">'.$getflag.'</td>

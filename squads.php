@@ -100,16 +100,16 @@ if($action=="show") {
 
 			$icq = $dm['icq'];
 			if(getemailhide($dm['userID'])) $email = '';
-			else $email = '<a href="mailto:'.mail_protect($dm['email']).'"><img src="images/icons/email.gif" border="0" alt="'.$_language->module['email'].'" /></a>';
+			else $email = '<a href="mailto:'.mail_protect($dm['email']).'"><img src="images/icons/email.gif" alt="'.$_language->module['email'].'" /></a>';
 
 			$pm = '';
 			$buddy = '';
 			if ($loggedin && $dm['userID'] != $userID) {
-				$pm='<a href="index.php?site=messenger&amp;action=touser&amp;touser='.$dm['userID'].'"><img src="images/icons/pm.gif" border="0" alt="'.$_language->module['messenger'].'" /></a>';
+				$pm='<a href="index.php?site=messenger&amp;action=touser&amp;touser='.$dm['userID'].'"><img src="images/icons/pm.gif" alt="'.$_language->module['messenger'].'" /></a>';
 
-				if (isignored($userID, $dm['userID'])) $buddy='<a href="buddys.php?action=readd&amp;id='.$dm['userID'].'&amp;userID='.$userID.'"><img src="images/icons/buddy_readd.gif" border="0" alt="'.$_language->module['back_buddy'].'" /></a>';
-				elseif(isbuddy($userID, $dm['userID'])) $buddy='<a href="buddys.php?action=ignore&amp;id='.$dm['userID'].'&amp;userID='.$userID.'"><img src="images/icons/buddy_ignore.gif" border="0" alt="'.$_language->module['ignore'].'" /></a>';
-				else $buddy='<a href="buddys.php?action=add&amp;id='.$dm['userID'].'&amp;userID='.$userID.'"><img src="images/icons/buddy_add.gif" border="0" alt="'.$_language->module['add_buddy'].'" /></a>';
+				if (isignored($userID, $dm['userID'])) $buddy='<a href="buddys.php?action=readd&amp;id='.$dm['userID'].'&amp;userID='.$userID.'"><img src="images/icons/buddy_readd.gif" alt="'.$_language->module['back_buddy'].'" /></a>';
+				elseif(isbuddy($userID, $dm['userID'])) $buddy='<a href="buddys.php?action=ignore&amp;id='.$dm['userID'].'&amp;userID='.$userID.'"><img src="images/icons/buddy_ignore.gif" alt="'.$_language->module['ignore'].'" /></a>';
+				else $buddy='<a href="buddys.php?action=add&amp;id='.$dm['userID'].'&amp;userID='.$userID.'"><img src="images/icons/buddy_add.gif" alt="'.$_language->module['add_buddy'].'" /></a>';
 			}
 
 			if(isonline($dm['userID'])=="offline") $statuspic='<img src="images/icons/offline.gif" alt="offline" />';
@@ -155,7 +155,7 @@ else {
 		if($anzmembers == 1) $anzmembers = $anzmembers.' '.$_language->module['member'];
 		else $anzmembers = $anzmembers.' '.$_language->module['members'];
 		$name='<a href="index.php?site=squads&amp;action=show&amp;squadID='.$ds['squadID'].'"><b>'.$ds['name'].'</b></a>';
-		if($ds['icon']) $icon='<a href="index.php?site=squads&amp;action=show&amp;squadID='.$ds['squadID'].'"><img src="images/squadicons/'.$ds['icon'].'" border="0" alt="'.htmlspecialchars($ds['name']).'" /></a>';
+		if($ds['icon']) $icon='<a href="index.php?site=squads&amp;action=show&amp;squadID='.$ds['squadID'].'"><img src="images/squadicons/'.$ds['icon'].'" alt="'.htmlspecialchars($ds['name']).'" /></a>';
 		else $icon='';
 		$info=htmloutput($ds['info']);
 		$details='<a href="index.php?site=squads&amp;action=show&amp;squadID='.$ds['squadID'].'"><b>'.$_language->module['show_details'].'</b></a>';

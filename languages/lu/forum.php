@@ -84,8 +84,8 @@ $language_array = Array(
   'new_reply'=>'nei Äntwert',
   'new_topic'=>'néit Thema',
   'newest_member'=>'néisten Benotzer',
-  'newreply_image'=>'<img src="images/icons/newreply.gif" border="0" alt="nei Äntwert" />',
-  'newtopic_image'=>'<img src="images/icons/newtopic.gif" border="0" alt="néit Thema" />',
+  'newreply_image'=>'<img src="images/icons/newreply.gif" alt="nei Äntwert" />',
+  'newtopic_image'=>'<img src="images/icons/newtopic.gif" alt="néit Thema" />',
   'next_7_days'=>'an den nächste 7 Deeg',
   'no_access'=>'Kenn Zougrëff',
   'no_access_write'=>'Du däerfs an dësem Forum net schreiwen.',
@@ -93,8 +93,8 @@ $language_array = Array(
   'no_new_posts'=>'keng nei Bäiträg',
   'no_permission'=>'Du hues keen Zourëff op dësen Forum!',
   'not_logged'=>'Net ugemellt.',
-  'not_logged_msg'=>'<br /><br />Fir en Thema op ze machen muss du ugemellt an registréiert sinn!<br /><br />
-&#8226; <a href="index.php?site=register">registréieren</a><br />
+  'not_logged_msg'=>'<br><br>Fir en Thema op ze machen muss du ugemellt an registréiert sinn!<br><br>
+&#8226; <a href="index.php?site=register">registréieren</a><br>
 &#8226; <a href="index.php?site=login">umellen</a>',
   'notify'=>'mech iwwer nei Bäiträg benoriichtegen',
   'notify_mail'=>'Nei Äntwert vun %poster% zum Thema
@@ -119,7 +119,7 @@ $language_array = Array(
   'registered_users'=>'registréiert Benotzer',
   'reopen_topic'=>'Thema rëm opmaachen',
   'replies'=>'Äntwerten',
-  'search_image'=>'<img src="images/icons/search.gif" border="0" alt="sichen" />',
+  'search_image'=>'<img src="images/icons/search.gif" alt="sichen" />',
   'select_all'=>'All auswielen',
   'smilies_on'=>'<a href="javascript:MM_openBrWindow(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smilies</a> sinn UN',
   'sort'=>'Sortéierung',

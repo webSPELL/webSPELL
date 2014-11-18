@@ -44,8 +44,8 @@ distra pe pagina noastră
   'lost_password'=>'parolă uitată',
   'no_mail_given'=>'Nu aţi introdus nici o adresă de mail.',
   'no_user_found'=>'Nu s-a găsit nici un utilizator!',
-  'successful'=>'Contul dvs. a fost găsit<br /><br />
-    Veţi primi un mail cu datele contului dvs. in câteva momente.<br /><br />
+  'successful'=>'Contul dvs. a fost găsit<br><br>
+    Veţi primi un mail cu datele contului dvs. in câteva momente.<br><br>
     &#8226; <a href="index.php?site=login">logare</a>',
   'your_email'=>'Mail-ul dvs.'
 );

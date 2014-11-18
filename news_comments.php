@@ -36,7 +36,7 @@ if(isset($lang)) unset($lang);
 if(isset($_GET['lang'])) $lang = $_GET['lang'];
 $post = "";
 if(isnewswriter($userID)) $post='<input type="button" onclick="MM_openBrWindow(\'news.php?action=new\',\'News\',\'toolbar=no,status=no,scrollbars=yes,width=800,height=600\')" value="'.$_language->module['post_news'].'" class="btn btn-danger" />';
-echo $post.' <input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=news&amp;action=archive\');return document.MM_returnValue" value="'.$_language->module['news_archive'].'" class="btn btn-primary" /><hr />';
+echo $post.' <input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=news&amp;action=archive\');return document.MM_returnValue" value="'.$_language->module['news_archive'].'" class="btn btn-primary" /><hr>';
 
 if($newsID) {
 	$result=safe_query("SELECT * FROM ".PREFIX."news WHERE newsID='".$newsID."'");
@@ -51,7 +51,7 @@ if($newsID) {
 		$rubricpic_name = getrubricpic($ds['rubric']);
 		$rubricpic='images/news-rubrics/'.$rubricpic_name;
 		if(!file_exists($rubricpic) OR $rubricpic_name=='') $rubricpic = ''; 
-		else $rubricpic = '<img src="'.$rubricpic.'" border="0" alt="" />';
+		else $rubricpic = '<img src="'.$rubricpic.'" alt="" />';
 
 		$message_array = array();
 		$query=safe_query("SELECT n.*, c.short AS `countryCode`, c.country FROM ".PREFIX."news_contents n LEFT JOIN ".PREFIX."countries c ON c.short = n.language WHERE n.newsID='".$newsID."'");
@@ -64,7 +64,7 @@ if($newsID) {
 		$langs='';
 		$i=0;
 		foreach($message_array as $val) {
-			if($showlang!=$i)	$langs.='<span style="padding-left:2px"><a href="index.php?site=news_comments&amp;newsID='.$ds['newsID'].'&amp;lang='.$val['lang'].'"><img src="images/flags/'.$val['countryShort'].'.gif" width="18" height="12" border="0" alt="'.$val['country'].'" /></a></span>';
+			if($showlang!=$i)	$langs.='<span style="padding-left:2px"><a href="index.php?site=news_comments&amp;newsID='.$ds['newsID'].'&amp;lang='.$val['lang'].'"><img src="images/flags/'.$val['countryShort'].'.gif" width="18" height="12" alt="'.$val['country'].'" /></a></span>';
 			$i++;
 		}
 		

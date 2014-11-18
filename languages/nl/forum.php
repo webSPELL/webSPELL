@@ -41,7 +41,7 @@ $language_array = Array(
 	'clanmember'=>'Clanleden',
 	'close_topic'=>'sluit onderwerp',
 	'closed'=>'gesloten',
-	'closed_image'=>'<img src="images/icons/closed.gif" border="0" alt="" />',
+	'closed_image'=>'<img src="images/icons/closed.gif" alt="" />',
 	'default_topic_title'=>'(geen titel)',
 	'delete_posts'=>'verwijder geselecteerde berichten',
 	'delete_topic'=>'verwijder onderwerp',
@@ -78,8 +78,8 @@ $language_array = Array(
 	'new_reply'=>'nieuwe reactie',
 	'new_topic'=>'nieuw onderwerp',
 	'newest_member'=>'nieuwste lid',
-	'newreply_image'=>'<img src="images/icons/newreply.gif" border="0" alt="antwoord" />',
-	'newtopic_image'=>'<img src="images/icons/newtopic.gif" border="0" alt="nieuw onderwerp" />',
+	'newreply_image'=>'<img src="images/icons/newreply.gif" alt="antwoord" />',
+	'newtopic_image'=>'<img src="images/icons/newtopic.gif" alt="nieuw onderwerp" />',
 	'next_7_days'=>'volgende 7 dagen',
 	'no_access'=>'Toegang geweigerd',
 	'no_access_write'=>'Geen toegang om te schrijven in dit deel.',
@@ -87,8 +87,8 @@ $language_array = Array(
 	'no_new_posts'=>'geen nieuwe berichten',
 	'no_permission'=>'Je hebt geen toegang tot het internet forum!',
 	'not_logged'=>'Niet ingelogd.',
-	'not_logged_msg'=>'<br /><br />Je moet geregistreerd en ingelogd zijn om te kunnen antwoorden in een onderwerp!<br /><br />
-	&#8226; <a href="index.php?site=register"><b>registreer nu</b></a><br />
+	'not_logged_msg'=>'<br><br>Je moet geregistreerd en ingelogd zijn om te kunnen antwoorden in een onderwerp!<br><br>
+	&#8226; <a href="index.php?site=register"><b>registreer nu</b></a><br>
 	&#8226; <a href="index.php?site=login"><b>log in</b></a>',
 	'notify'=>'Geef melding bij nieuw bericht',
 	'notify_mail'=>'nieuwe reactie door %poster% in onderwerp
@@ -113,7 +113,7 @@ $language_array = Array(
 	'registered_users'=>'gebruikers',
 	'reopen_topic'=>'heropen onderwerp',
 	'replies'=>'Reacties',
-	'search_image'=>'<img src="images/icons/search.gif" border="0" alt="" />',
+	'search_image'=>'<img src="images/icons/search.gif" alt="" />',
 	'select_all'=>'selecteer alles',
 	'smilies_on'=>'<a href="javascript:MM_openBrWindow(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smilies</a> zijn AAN',
 	'sort'=>'Sorteer',

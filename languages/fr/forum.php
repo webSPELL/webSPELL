@@ -78,8 +78,8 @@ $language_array = Array(
 	'new_reply'=>'Nouvelle réponse',
 	'new_topic'=>'Nouveau sujet',
 	'newest_member'=>'Nouveau membre',
-	'newreply_image'=>'<img src="images/icons/newreply.gif" border="0" alt="reply" />',
-	'newtopic_image'=>'<img src="images/icons/newtopic.gif" border="0" alt="new topic" />',
+	'newreply_image'=>'<img src="images/icons/newreply.gif" alt="reply" />',
+	'newtopic_image'=>'<img src="images/icons/newtopic.gif" alt="new topic" />',
 	'next_7_days'=>'7 prochains jours',
 	'no_access'=>'Accès refusé !',
 	'no_access_write'=>'Vous n\'avez pas la permission d\'écrire sur ce forum !',
@@ -87,8 +87,8 @@ $language_array = Array(
 	'no_new_posts'=>'Aucun nouveaux messages',
 	'no_permission'=>'Vous n\'avez pas la permission de voir les forums privés !',
 	'not_logged'=>'Pas connecté.',
-	'not_logged_msg'=>'<br /><br />Pour lancer un nouveau sujet ou répondre à un sujet, vous devez être enregistré et connectée !<br /><br />
-    &#8226; <a href="index.php?site=register">S\'enregistrer</a><br />
+	'not_logged_msg'=>'<br><br>Pour lancer un nouveau sujet ou répondre à un sujet, vous devez être enregistré et connectée !<br><br>
+    &#8226; <a href="index.php?site=register">S\'enregistrer</a><br>
     &#8226; <a href="index.php?site=login">Connexion</a>',
 	'notify'=>'M\'indiquer quand il y a une réponse',
 	'notify_mail'=>'Nouvelle réponse par %poster% dans le sujet
@@ -113,7 +113,7 @@ $language_array = Array(
 	'registered_users'=>'Membres enregistrés',
 	'reopen_topic'=>'Réouvrir le sujet',
 	'replies'=>'Réponses',
-	'search_image'=>'<img src="images/icons/search.gif" border="0" alt="" />',
+	'search_image'=>'<img src="images/icons/search.gif" alt="" />',
 	'select_all'=>'Tout sélectionner',
 	'smilies_on'=>'<a href="javascript:MM_openBrWindow(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smileys</a> activés',
 	'sort'=>'Ordre',

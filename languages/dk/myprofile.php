@@ -101,8 +101,8 @@ Tak for din interesse
 	'nickname'=>'Øgenavn',
 	'nickname_already_in_use'=>'Øgenavn allerede i brug!',
 	'no'=>'Nej',
-	'not_logged_in'=>'Du skal være logget ind for at se din profil!<br /><br />
-   &#8226; <a href="index.php?site=register">registrer nu</a><br />
+	'not_logged_in'=>'Du skal være logget ind for at se din profil!<br><br>
+   &#8226; <a href="index.php?site=register">registrer nu</a><br>
    &#8226; <a href="index.php?site=login">log ind</a>',
 	'old_password'=>'gamle kodeord',
 	'old_pw_not_valid'=>'dit gamle kodeord er ikke korrekt',

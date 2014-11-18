@@ -55,7 +55,7 @@ $language_array = Array(
   'no_incoming'=>'Nici un mesaj in folderul de intrare.',
   'no_outgoing'=>'nici un mesaj in folderul de ieşire.',
   'no_subject'=>'(fără subiect)',
-  'not_logged'=>'Nu sunte-ţi logat.<br /><a href="index.php?site=login">Login</a> | <a href="index.php?site=register">Registru</a>',
+  'not_logged'=>'Nu sunte-ţi logat.<br><a href="index.php?site=login">Login</a> | <a href="index.php?site=register">Registru</a>',
   'options'=>'Optiuni',
   'outgoing'=>'De expediere',
   'read'=>'Citeste',
@@ -74,7 +74,7 @@ $language_array = Array(
   'title'=>'Subiect',
   'your_message'=>'Masajul tău:',
   'mail_subject'=>'Ai primit un nou PM',
-  'mail_body'=>'<b>Alo %nickname%!</b><br /><br />Ai primit un nou mesaj de la  webSPELL v4 (%hp_url%).<br />Click <a href="http://%hp_url%?site=messenger">aici</a> pentru a citi PM.<br /><br />(C) webSPELL.org',
+  'mail_body'=>'<b>Alo %nickname%!</b><br><br>Ai primit un nou mesaj de la  webSPELL v4 (%hp_url%).<br>Click <a href="http://%hp_url%?site=messenger">aici</a> pentru a citi PM.<br><br>(C) webSPELL.org',
   'error'=>'eroare',
   'unknown_user'=>'utilizator necunoscut'
 );

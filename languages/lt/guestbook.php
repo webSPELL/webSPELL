@@ -46,7 +46,7 @@ $language_array = Array(
 	'mail'=>'Jūsų E-Pašto adresas',
 	'name'=>'Jūsų vardas',
 	'new_entry'=>'Nauja žinutė',
-	'no_access'=>'Jūs neesate prisijungę.<br /><a href="index.php?site=login">Prisijungti</a> | <a href="index.php?site=register">Registruotis</a>',
+	'no_access'=>'Jūs neesate prisijungę.<br><a href="index.php?site=login">Prisijungti</a> | <a href="index.php?site=register">Registruotis</a>',
 	'options'=>'Pasirinkimai',
 	'pmsubject_newentry'=>'Nauja svečių knygos žinutė',
 	'pmtext_newentry'=>'[b]Kažkas paliko jums žinutę Svečių Knygoje![/b][br][br] [URL=index.php?site=guestbook#%insertid%]Spustelkite čia, norit peržiūrėti žinutę[/URL] ',

@@ -79,8 +79,8 @@ $language_array = Array(
   'new_reply'=>'Новые ответы',
   'new_topic'=>'Новый топик',
   'newest_member'=>'Новый пользователь',
-  'newreply_image'=>'<img src="images/icons/newreply.gif" border="0" alt="Ответить" />',
-  'newtopic_image'=>'<img src="images/icons/newtopic.gif" border="0" alt="Новый топик" />',
+  'newreply_image'=>'<img src="images/icons/newreply.gif" alt="Ответить" />',
+  'newtopic_image'=>'<img src="images/icons/newtopic.gif" alt="Новый топик" />',
   'next_7_days'=>'Следующие 7 дней',
   'no_access'=>'Нет доступа',
   'no_access_write'=>'Нет доступа на этот форум.',
@@ -88,8 +88,8 @@ $language_array = Array(
   'no_new_posts'=>'Нет новых публикаций',
   'no_permission'=>'У вас нет прав для просмотра этого форума!',
   'not_logged'=>'Вы не вошли.',
-  'not_logged_msg'=>'<br /><br />Чтобы начать или ответить в тему вы должны зарегистрироваться и войти!<br /><br />
-&#8226; <a href="index.php?site=register">Зарегистрироваться сейчас</a><br />
+  'not_logged_msg'=>'<br><br>Чтобы начать или ответить в тему вы должны зарегистрироваться и войти!<br><br>
+&#8226; <a href="index.php?site=register">Зарегистрироваться сейчас</a><br>
 &#8226; <a href="index.php?site=login">Войти</a>',
   'notify'=>'Уведомить меня об ответах на этот пост',
   'notify_mail'=>'%poster% ответил в тему
@@ -114,7 +114,7 @@ $language_array = Array(
   'registered_users'=>'зарегистрированный пользователь',
   'reopen_topic'=>'Открыть тему',
   'replies'=>'Ответы',
-  'search_image'=>'<img src="images/icons/search.gif" border="0" alt="" />',
+  'search_image'=>'<img src="images/icons/search.gif" alt="" />',
   'select_all'=>'Выбрать все',
   'smilies_on'=>'<a href="javascript:MM_openBrWindow(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Смайлы</a> Включено',
   'sort'=>'Сортировать',

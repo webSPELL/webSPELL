@@ -46,7 +46,7 @@ $language_array = Array(
 	'mail'=>'Email',
 	'name'=>'Pseudo / Nom',
 	'new_entry'=>'Nouveau message',
-	'no_access'=>'Vous n\'êtes pas identifié.<br /><a href="index.php?site=login">Se connecter</a> | <a href="index.php?site=register">S\'enregistrer</a>',
+	'no_access'=>'Vous n\'êtes pas identifié.<br><a href="index.php?site=login">Se connecter</a> | <a href="index.php?site=register">S\'enregistrer</a>',
 	'options'=>'Options',
 	'pmsubject_newentry'=>'Nouveau message dans le livre d\'or',
 	'pmtext_newentry'=>'[b]Quelqu\'un vous a laissé un message dans le livre d\'or ![/b][br][br] [URL=index.php?site=guestbook#%insertid%]Cliquez ici pour lire le message[/URL] ',

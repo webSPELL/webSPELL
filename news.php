@@ -290,7 +290,7 @@ elseif($action=="preview") {
 	eval ("\$news = \"".gettemplate("news")."\";");
 	echo $news;
 
-	echo'<hr />
+	echo'<hr>
   <input type="button" onclick="MM_goToURL(\'parent\',\'news.php?action=edit&amp;newsID='.$newsID.'\');return document.MM_returnValue" value="'.$_language->module['edit'].'" class="btn btn-danger" />
   <input type="button" onclick="javascript:self.close()" value="'.$_language->module['save_news'].'" class="btn btn-danger" />
   <input type="button" onclick="MM_confirm(\''.$_language->module['really_delete'].'\', \'news.php?action=delete&amp;id='.$newsID.'&amp;close=true\')" value="'.$_language->module['delete'].'" class="btn btn-danger" /></body></html>';
@@ -536,7 +536,7 @@ elseif($action=="unpublished") {
 	$post = '';
 	if(isnewsadmin($userID)) $post='<input type="button" onclick="MM_openBrWindow(\'news.php?action=new\',\'News\',\'toolbar=no,status=no,scrollbars=yes,width=800,height=600\');" value="'.$_language->module['post_news'].'" class="btn btn-danger" />';
 
-	echo $post.' <input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=news\');return document.MM_returnValue;" value="'.$_language->module['show_news'].'" class="btn btn-danger" /><hr />';
+	echo $post.' <input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=news\');return document.MM_returnValue;" value="'.$_language->module['show_news'].'" class="btn btn-danger" /><hr>';
 
 	$page='';
 
@@ -574,7 +574,7 @@ elseif($action=="unpublished") {
 				$headlines='';
 				
 				foreach($message_array as $val) {
-					$headlines.='<a href="index.php?site=news_comments&amp;newsID='.$ds['newsID'].'&amp;lang='.$val['lang'].'">'.flags('[flag]'.$val['lang'].'[/flag]').' '.clearfromtags($val['headline']).'</a><br />';
+					$headlines.='<a href="index.php?site=news_comments&amp;newsID='.$ds['newsID'].'&amp;lang='.$val['lang'].'">'.flags('[flag]'.$val['lang'].'[/flag]').' '.clearfromtags($val['headline']).'</a><br>';
 				}
 
 				$poster='<a href="index.php?site=profile&amp;id='.$ds['poster'].'">'.getnickname($ds['poster']).'</a>';
@@ -664,9 +664,9 @@ elseif($action=="archive") {
 	}
 	if($all) {
 		if($type=="ASC")
-			echo'<a href="index.php?site=news&amp;action=archive&amp;page='.$page.'&amp;sort='.$sort.'&amp;type=DESC">'.$_language->module['sort'].'</a> <img src="images/icons/asc.gif" width="9" height="7" border="0" alt="">&nbsp;&nbsp;&nbsp;';
+			echo'<a href="index.php?site=news&amp;action=archive&amp;page='.$page.'&amp;sort='.$sort.'&amp;type=DESC">'.$_language->module['sort'].'</a> <img src="images/icons/asc.gif" width="9" height="7" alt="">&nbsp;&nbsp;&nbsp;';
 		else
-			echo'<a href="index.php?site=news&amp;action=archive&amp;page='.$page.'&amp;sort='.$sort.'&amp;type=ASC">'.$_language->module['sort'].'</a> <img src="images/icons/desc.gif" width="9" height="7" border="0" alt="">&nbsp;&nbsp;&nbsp;';
+			echo'<a href="index.php?site=news&amp;action=archive&amp;page='.$page.'&amp;sort='.$sort.'&amp;type=ASC">'.$_language->module['sort'].'</a> <img src="images/icons/desc.gif" width="9" height="7" alt="">&nbsp;&nbsp;&nbsp;';
 
 
 		if($pages>1) echo $page_link;
@@ -701,7 +701,7 @@ elseif($action=="archive") {
 			$headlines='';
 
 			foreach($message_array as $val) {
-				$headlines.='<a href="index.php?site=news_comments&amp;newsID='.$ds['newsID'].'&amp;lang='.$val['lang'].'">'.flags('[flag]'.$val['lang'].'[/flag]').' '.clearfromtags($val['headline']).'</a> '.$isintern.'<br />';
+				$headlines.='<a href="index.php?site=news_comments&amp;newsID='.$ds['newsID'].'&amp;lang='.$val['lang'].'">'.flags('[flag]'.$val['lang'].'[/flag]').' '.clearfromtags($val['headline']).'</a> '.$isintern.'<br>';
 			}
 
 			$poster='<a href="index.php?site=profile&amp;id='.$ds['poster'].'">'.getnickname($ds['poster']).'</a>';
@@ -763,7 +763,7 @@ else {
 		$unpublished=mysqli_num_rows($unpublished);
 		if($unpublished) $publish='<input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=news&amp;action=unpublished\');return document.MM_returnValue;" value="'.$unpublished.' '.$_language->module['unpublished_news'].'" class="btn btn-danger" /> ';
 	}
-	echo $post.' '.$publish.'<input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=news&amp;action=archive\');return document.MM_returnValue;" value="'.$_language->module['news_archive'].'" class="btn btn-primary" /><hr />';
+	echo $post.' '.$publish.'<input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=news&amp;action=archive\');return document.MM_returnValue;" value="'.$_language->module['news_archive'].'" class="btn btn-primary" /><hr>';
 
 	if(isset($_GET['show'])) {
 		$result=safe_query("SELECT rubricID FROM ".PREFIX."news_rubrics WHERE rubric='".$_GET['show']."' LIMIT 0,1");
@@ -784,7 +784,7 @@ else {
 		$rubrikname = getrubricname($ds['rubric']);
 		$rubrikname_link = getinput($rubrikname);
 		$rubricpic_path = "images/news-rubrics/".getrubricpic($ds['rubric']);
-		$rubricpic='<img src="'.$rubricpic_path.'" border="0" alt="" />';
+		$rubricpic='<img src="'.$rubricpic_path.'" alt="" />';
 		if(!is_file($rubricpic_path)) $rubricpic='';
 
 		$message_array = array();

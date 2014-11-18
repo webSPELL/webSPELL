@@ -64,8 +64,8 @@ $language_array = Array(
 	'usermenu'=>'Brugermenu',
 	'views'=>'visninger',
 	'x_new_message'=>'Der er %new_messages% nye beskeder.',
-	'you_have_to_be_logged_in'=>'Du skal være logget ind, for at se brugeroversigten!<br /><br />
-    &#8226; <a href="index.php?site=register">registrer nu</a><br />
+	'you_have_to_be_logged_in'=>'Du skal være logget ind, for at se brugeroversigten!<br><br>
+    &#8226; <a href="index.php?site=register">registrer nu</a><br>
     &#8226; <a href="index.php?site=login">log ind</a>'
 );
 ?>

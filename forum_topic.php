@@ -435,7 +435,7 @@ function showtopic($topic, $edit, $addreply, $quoteID, $type) {
 				else $avatar='';
 				if($getsignatur = getsignatur($userID)) $signatur=cleartext($getsignatur);
 				else $signatur='';
-				if($getemail = getemail($userID) and !getemailhide($userID)) $email = '<a href="mailto:'.mail_protect($getemail).'"><img src="images/icons/email.gif" border="0" alt="email" /></a>';
+				if($getemail = getemail($userID) and !getemailhide($userID)) $email = '<a href="mailto:'.mail_protect($getemail).'"><img src="images/icons/email.gif" alt="email" /></a>';
 				else $email='';
 				if(isset($_POST['notify'])) $notify = 'checked="checked"';
 				else $notify = '';
@@ -443,7 +443,7 @@ function showtopic($topic, $edit, $addreply, $quoteID, $type) {
 				$buddy='';
 				$statuspic='<img src="images/icons/online.gif" alt="online" />';
 				if(!validate_url(gethomepage($userID))) $hp='';
-				else $hp='<a href="'.gethomepage($userID).'" target="_blank"><img src="images/icons/hp.gif" border="0" alt="'.$_language->module['homepage'].'" /></a>';
+				else $hp='<a href="'.gethomepage($userID).'" target="_blank"><img src="images/icons/hp.gif" alt="'.$_language->module['homepage'].'" /></a>';
 				$registered = getregistered($userID);
 				$posts = getuserforumposts($userID);
 				if(isset($_POST['sticky'])) $post_sticky = $_POST['sticky'];
@@ -560,23 +560,23 @@ function showtopic($topic, $edit, $addreply, $quoteID, $type) {
 		if($getsignatur = getsignatur($dr['poster'])) $signatur=cleartext($getsignatur);
 		else $signatur='';
 
-		if($getemail = getemail($dr['poster']) and !getemailhide($dr['poster'])) $email = '<a href="mailto:'.mail_protect($getemail).'"><img src="images/icons/email.gif" border="0" alt="email" /></a>';
+		if($getemail = getemail($dr['poster']) and !getemailhide($dr['poster'])) $email = '<a href="mailto:'.mail_protect($getemail).'"><img src="images/icons/email.gif" alt="email" /></a>';
 		else $email='';
 
 		$pm='';
 		$buddy='';
 		if($loggedin && $dr['poster']!=$userID) {
-			$pm='<a href="index.php?site=messenger&amp;action=touser&amp;touser='.$dr['poster'].'"><img src="images/icons/pm.gif" border="0" width="12" height="13" alt="'.$_language->module['messenger'].'" /></a>';
-			if(isignored($userID, $dr['poster'])) $buddy='<a href="buddys.php?action=readd&amp;id='.$dr['poster'].'&amp;userID='.$userID.'"><img src="images/icons/buddy_readd.gif" border="0" alt="'.$_language->module['back_buddy'].'" /></a>';
-			elseif(isbuddy($userID, $dr['poster'])) $buddy='<a href="buddys.php?action=ignore&amp;id='.$dr['poster'].'&amp;userID='.$userID.'"><img src="images/icons/buddy_ignore.gif" border="0" alt="'.$_language->module['ignore'].'" /></a>';
-			else $buddy='<a href="buddys.php?action=add&amp;id='.$dr['poster'].'&amp;userID='.$userID.'"><img src="images/icons/buddy_add.gif" border="0" alt="'.$_language->module['add_buddy'].'" /></a>';
+			$pm='<a href="index.php?site=messenger&amp;action=touser&amp;touser='.$dr['poster'].'"><img src="images/icons/pm.gif" width="12" height="13" alt="'.$_language->module['messenger'].'" /></a>';
+			if(isignored($userID, $dr['poster'])) $buddy='<a href="buddys.php?action=readd&amp;id='.$dr['poster'].'&amp;userID='.$userID.'"><img src="images/icons/buddy_readd.gif" alt="'.$_language->module['back_buddy'].'" /></a>';
+			elseif(isbuddy($userID, $dr['poster'])) $buddy='<a href="buddys.php?action=ignore&amp;id='.$dr['poster'].'&amp;userID='.$userID.'"><img src="images/icons/buddy_ignore.gif" alt="'.$_language->module['ignore'].'" /></a>';
+			else $buddy='<a href="buddys.php?action=add&amp;id='.$dr['poster'].'&amp;userID='.$userID.'"><img src="images/icons/buddy_add.gif" alt="'.$_language->module['add_buddy'].'" /></a>';
 		}
 
 		if(isonline($dr['poster'])=="offline") $statuspic='<img src="images/icons/offline.gif" alt="offline" />';
 		else $statuspic='<img src="images/icons/online.gif" alt="online" />';
 
 		if(!validate_url(gethomepage($dr['poster']))) $hp='';
-		else $hp='<a href="'.gethomepage($dr['poster']).'" target="_blank"><img src="images/icons/hp.gif" border="0" alt="'.$_language->module['homepage'].'" /></a>';
+		else $hp='<a href="'.gethomepage($dr['poster']).'" target="_blank"><img src="images/icons/hp.gif" alt="'.$_language->module['homepage'].'" /></a>';
 
 		if(!$dt['closed']) $quote='<a href="index.php?site=forum_topic&amp;addreply=true&amp;board='.$dt['boardID'].'&amp;topic='.$topic.'&amp;quoteID='.$dr['postID'].'&amp;page='.$page.'&amp;type='.$type.'"><i class="icon-quote-left"></i></a>';
 		else $quote = "";

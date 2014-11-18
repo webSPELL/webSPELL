@@ -84,8 +84,8 @@ $language_array = Array(
   'new_reply'=>'nuwe antwoord',
   'new_topic'=>'nuwe onderwerp',
   'newest_member'=>'nuutste lid',
-  'newreply_image'=>'<img src="images/icons/newreply.gif" border="0" alt="antwoord" />',
-  'newtopic_image'=>'<img src="images/icons/newtopic.gif" border="0" alt="n nuwe onderwerp" />',
+  'newreply_image'=>'<img src="images/icons/newreply.gif" alt="antwoord" />',
+  'newtopic_image'=>'<img src="images/icons/newtopic.gif" alt="n nuwe onderwerp" />',
   'next_7_days'=>'volgende 7 dae',
   'no_access'=>'Geen toegang',
   'no_access_write'=>'Geen toegang om in hierdie bord te skryf.',
@@ -93,8 +93,8 @@ $language_array = Array(
   'no_new_posts'=>'Geen nuwe inskrywings',
   'no_permission'=>'Jy het geen toestemming n interne borde te sien!',
   'not_logged'=>'Nie in geteken.',
-  'not_logged_msg'=>'<br /><br />Om mee te begin of om te antwoord op \'n onderwerp wat jy het geregistreer en aangeteken word!<br /><br />
-&#8226; <a href="index.php?site=register">registreer nou</a><br />
+  'not_logged_msg'=>'<br><br>Om mee te begin of om te antwoord op \'n onderwerp wat jy het geregistreer en aangeteken word!<br><br>
+&#8226; <a href="index.php?site=register">registreer nou</a><br>
 &#8226; <a href="index.php?site=login">login</a>',
   'notify'=>'Laat my weet wanneer \'n antwoord geplaas word',
   'notify_mail'=>'Nuwe antwoord deur %poster% in die onderwerp
@@ -119,7 +119,7 @@ $language_array = Array(
   'registered_users'=>'geregistreerde gebruikers',
   'reopen_topic'=>'heropen onderwerp',
   'replies'=>'Antwoorde',
-  'search_image'=>'<img src="images/icons/search.gif" border="0" alt="" />',
+  'search_image'=>'<img src="images/icons/search.gif" alt="" />',
   'select_all'=>'selekteer alles',
   'smilies_on'=>'<a href="javascript:MM_openBrWindow(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smilies</a> is AAN',
   'sort'=>'Sorteer',

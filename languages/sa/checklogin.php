@@ -30,11 +30,11 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'invalid_password'=>'.كلمة المرور غير صحيحة<br /><br /><a href="javascript:history.back()">.الرجوع والمحاولة من جديد</a>',
-  'ip_banned'=>'.(رقم الاي بي محضور من هذا الموقع (باند<br/>%reason%<br /><br /><a href="javascript:history.back()">الرجوع</a>',
+  'invalid_password'=>'.كلمة المرور غير صحيحة<br><br><a href="javascript:history.back()">.الرجوع والمحاولة من جديد</a>',
+  'ip_banned'=>'.(رقم الاي بي محضور من هذا الموقع (باند<br>%reason%<br><br><a href="javascript:history.back()">الرجوع</a>',
   'login_successful'=>'!تم تسجيل الدخول بنجاح',
-  'no_user'=>'المستخدم <b>%username%</b> غير موجود على هذا النظام.<br /><br /><a href="javascript:history.back()">!الرجوع والمحاولة من جديد</a>',
-  'not_activated'=>'.حسابك غير مفعل<br /><br /><a href="javascript:history.back()">الرجوع</a>',
-  'session_error'=>'.الرجاع التاكد من تفعيل الكوكيز في المتصفح<br />.اذا استمرت المشكلة الرجاء الاتصال بادارة الموقع<br /><br /><a href="javascript:history.back()">الرجوع</a>'
+  'no_user'=>'المستخدم <b>%username%</b> غير موجود على هذا النظام.<br><br><a href="javascript:history.back()">!الرجوع والمحاولة من جديد</a>',
+  'not_activated'=>'.حسابك غير مفعل<br><br><a href="javascript:history.back()">الرجوع</a>',
+  'session_error'=>'.الرجاع التاكد من تفعيل الكوكيز في المتصفح<br>.اذا استمرت المشكلة الرجاء الاتصال بادارة الموقع<br><br><a href="javascript:history.back()">الرجوع</a>'
 );
 ?>

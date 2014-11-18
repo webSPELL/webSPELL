@@ -79,8 +79,8 @@ $language_array = Array(
   'new_reply'=>'ახალი პასუხი',
   'new_topic'=>'ახალი თემა',
   'newest_member'=>'უახლესი მონაწილე',
-  'newreply_image'=>'<img src="images/icons/newreply.gif" border="0" alt="პასუხი" />',
-  'newtopic_image'=>'<img src="images/icons/newtopic.gif" border="0" alt="ახალი თემა" />',
+  'newreply_image'=>'<img src="images/icons/newreply.gif" alt="პასუხი" />',
+  'newtopic_image'=>'<img src="images/icons/newtopic.gif" alt="ახალი თემა" />',
   'next_7_days'=>'შემდეგი 7 დღე',
   'no_access'=>'არ არის ხელმისაწვდომი',
   'no_access_write'=>'არ არის შესაძლებლობა ამ დაფაზე წერის.',
@@ -88,8 +88,8 @@ $language_array = Array(
   'no_new_posts'=>'არ არის ახალი პოსტები',
   'no_permission'=>'თქვენ არ გაქვთ ნახვის უფლება შიდა დაფები!',
   'not_logged'=>'არ ხართ შემოსული.',
-  'not_logged_msg'=>'<br /><br />იმისათვის, რომ დაიწყოს ან უპასუხონ თემა, უნდა რეგისტრაციისა და ავტორიზაციის გავლის შემდეგ!<br /><br />
-&#8226; <a href="index.php?site=register">დარეგისტრირდი</a><br />
+  'not_logged_msg'=>'<br><br>იმისათვის, რომ დაიწყოს ან უპასუხონ თემა, უნდა რეგისტრაციისა და ავტორიზაციის გავლის შემდეგ!<br><br>
+&#8226; <a href="index.php?site=register">დარეგისტრირდი</a><br>
 &#8226; <a href="index.php?site=login">შესვლაზე</a>',
   'notify'=>'შემატყობინე როცა პასუხი იქნება პოსტზე',
   'notify_mail'=>'ახალი პასუხი %poster% თემაში
@@ -114,7 +114,7 @@ $language_array = Array(
   'registered_users'=>'დარეგისტირებული მონაწილეები',
   'reopen_topic'=>'თემის გახსლა',
   'replies'=>'პასუხები',
-  'search_image'=>'<img src="images/icons/search.gif" border="0" alt="" />',
+  'search_image'=>'<img src="images/icons/search.gif" alt="" />',
   'select_all'=>'ყველას მონიშვნა',
   'smilies_on'=>'<a href="javascript:MM_openBrWindow(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">სმაილები</a> ჩართულია',
   'sort'=>'დაფასოება',

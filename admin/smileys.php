@@ -68,7 +68,7 @@ elseif($action=="edit") {
 	$CAPCLASS->create_transaction();
 	$hash = $CAPCLASS->get_hash();
 	$ds=mysqli_fetch_array(safe_query("SELECT * FROM ".PREFIX."smileys WHERE smileyID='".$_GET["smileyID"]."'"));
-	$pic='<img src="../images/smileys/'.$ds['name'].'" border="0" alt="'.getinput($ds['alt']).'" />';
+	$pic='<img src="../images/smileys/'.$ds['name'].'" alt="'.getinput($ds['alt']).'" />';
 
 	echo'<h1>&curren; <a href="admincenter.php?site=icons" class="white">'.$_language->module['icons'].'</a> &raquo; <a href="admincenter.php?site=smileys" class="white">'.$_language->module['smilies'].'</a> &raquo; '.$_language->module['edit_smiley'].'</h1>';
   
@@ -116,8 +116,8 @@ elseif(isset($_POST["save"])) {
 					safe_query("INSERT INTO ".PREFIX."smileys (smileyID, name, alt, pattern) values('', '".$file."', '".$alt."', '".$pattern."')");
 					redirect('admincenter.php?site=smileys','',0);
 				}
-			} else echo'<b>'.$_language->module['format_incorrect'].'</b><br /><br /><a href="javascript:history.back()">&laquo; '.$_language->module['back'].'</a>';
-		} else echo'<b>'.$_language->module['fill_form'].'</b><br /><br /><a href="javascript:history.back()">&laquo; '.$_language->module['back'].'</a>';
+			} else echo'<b>'.$_language->module['format_incorrect'].'</b><br><br><a href="javascript:history.back()">&laquo; '.$_language->module['back'].'</a>';
+		} else echo'<b>'.$_language->module['fill_form'].'</b><br><br><a href="javascript:history.back()">&laquo; '.$_language->module['back'].'</a>';
 	} else echo $_language->module['transaction_invalid'];
 }
 
@@ -143,9 +143,9 @@ elseif(isset($_POST["saveedit"])) {
 					if(safe_query("UPDATE ".PREFIX."smileys SET name='".$file."', alt='".$alt."', pattern='".$pattern."' WHERE smileyID='".$_POST["smileyID"]."'")) {
 						redirect('admincenter.php?site=smileys','',0);
 					}
-				} else echo'<b>'.$_language->module['format_incorrect'].'</b><br /><br /><a href="javascript:history.back()">&laquo; '.$_language->module['back'].'</a>';
+				} else echo'<b>'.$_language->module['format_incorrect'].'</b><br><br><a href="javascript:history.back()">&laquo; '.$_language->module['back'].'</a>';
 			}
-		} else echo'<b>'.$_language->module['fill_form'].'</b><br /><br /><a href="javascript:history.back()">&laquo; '.$_language->module['back'].'</a>';
+		} else echo'<b>'.$_language->module['fill_form'].'</b><br><br><a href="javascript:history.back()">&laquo; '.$_language->module['back'].'</a>';
 	} else echo $_language->module['transaction_invalid'];
 }
 
@@ -160,7 +160,7 @@ elseif(isset($_GET["delete"])) {
 else {
 	echo'<h1>&curren; <a href="admincenter.php?site=icons" class="white">'.$_language->module['icons'].'</a> &raquo; '.$_language->module['smilies'].'</h1>';
   
-  echo'<input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=smileys&amp;action=add\');return document.MM_returnValue" value="'.$_language->module['new_smiley'].'" /><br /><br />';
+  echo'<input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=smileys&amp;action=add\');return document.MM_returnValue" value="'.$_language->module['new_smiley'].'" /><br><br>';
   
   echo'<form method="post" action="admincenter.php?site=smileys">
   <table width="100%" border="0" cellspacing="1" cellpadding="3" bgcolor="#DDDDDD">
@@ -182,7 +182,7 @@ else {
       if($i%2) { $td='td1'; }
       else { $td='td2'; }
       		
-			$pic='<img src="../images/smileys/'.$smileys['name'].'" border="0" alt="'.getinput($smileys['alt']).'" />';
+			$pic='<img src="../images/smileys/'.$smileys['name'].'" alt="'.getinput($smileys['alt']).'" />';
 			if($smileys['alt']=="") $smileys['alt'] = $smileys['name'];
 			
       echo'<tr>

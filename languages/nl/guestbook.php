@@ -46,7 +46,7 @@ $language_array = Array(
 	'mail'=>'Je mail adres',
 	'name'=>'Je naam',
 	'new_entry'=>'Nieuw bericht',
-	'no_access'=>'Je bent niet ingelogd.<br /><a href="index.php?site=login">Log in</a> | <a href="index.php?site=register">Registreer</a>',
+	'no_access'=>'Je bent niet ingelogd.<br><a href="index.php?site=login">Log in</a> | <a href="index.php?site=register">Registreer</a>',
 	'options'=>'Opties',
 	'pmsubject_newentry'=>'Nieuw bericht in het gastenboek',
 	'pmtext_newentry'=>'[b]Iemand liet een bericht achter in het gastenboek![/b][br][br] [URL=index.php?site=guestbook#%insertid%]Klik hier om het bericht te lezen[/URL] ',

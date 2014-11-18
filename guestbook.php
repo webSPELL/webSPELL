@@ -221,15 +221,15 @@ else {
 		$n%2 ? $bg1=BG_1 : $bg1=BG_2;
 		$date = getformatdatetime($ds['date']);
 
-		if(validate_email($ds['email'])) $email = '<a href="mailto:'.mail_protect($ds['email']).'"><img src="images/icons/email.gif" border="0" width="15" height="11" alt="email" /></a>';
+		if(validate_email($ds['email'])) $email = '<a href="mailto:'.mail_protect($ds['email']).'"><img src="images/icons/email.gif" width="15" height="11" alt="email" /></a>';
 		else $email='';
 
-		if(validate_url($ds['hp'])) $hp='<a href="'.$ds['hp'].'" target="_blank"><img src="images/icons/hp.gif" border="0" width="14" height="14" alt="homepage" /></a>';
+		if(validate_url($ds['hp'])) $hp='<a href="'.$ds['hp'].'" target="_blank"><img src="images/icons/hp.gif" width="14" height="14" alt="homepage" /></a>';
 		else $hp='';
 
 		$sem = '/[0-9]{6,11}/si';
 		$icq_number = str_replace('-','',$ds['icq']);
-		if(preg_match($sem, $ds['icq'])) $icq = '<a href="http://www.icq.com/people/about_me.php?uin='.$icq_number.'" target="_blank"><img src="http://online.mirabilis.com/scripts/online.dll?icq='.$ds['icq'].'&amp;img=5" border="0" alt="icq" /></a>';
+		if(preg_match($sem, $ds['icq'])) $icq = '<a href="http://www.icq.com/people/about_me.php?uin='.$icq_number.'" target="_blank"><img src="http://online.mirabilis.com/scripts/online.dll?icq='.$ds['icq'].'&amp;img=5" alt="icq" /></a>';
 		else $icq="";
 		$guestbookID = 'id_'.$ds['gbID'];
 		$name = strip_tags($ds['name']);
@@ -237,13 +237,13 @@ else {
 		$message = toggle($message,$ds['gbID']);
 		unset($admincomment);
 		if($ds['admincomment'] != "") {
-			$admincomment = '<hr />
-			<small><b>'.$_language->module['admin_comment'].':</b><br />'.cleartext($ds['admincomment']).'</small>';
+			$admincomment = '<hr>
+			<small><b>'.$_language->module['admin_comment'].':</b><br>'.cleartext($ds['admincomment']).'</small>';
 		} else $admincomment = '';
 
 		$actions='';
 		$ip='logged';
-		$quote='<a href="index.php?site=guestbook&amp;action=add&amp;messageID='.$ds['gbID'].'"><img src="images/icons/quote.gif" border="0" alt="quote" /></a>';
+		$quote='<a href="index.php?site=guestbook&amp;action=add&amp;messageID='.$ds['gbID'].'"><img src="images/icons/quote.gif" alt="quote" /></a>';
 		if(isfeedbackadmin($userID)) {
 			$actions='<input class="input" type="checkbox" name="gbID[]" value="'.$ds['gbID'].'"> <a href="index.php?site=guestbook&amp;action=comment&amp;guestbookID='.$ds['gbID'].'" class="btn btn-danger">Add Admincomment</a>';
 			$ip=$ds['ip'];

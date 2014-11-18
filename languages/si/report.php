@@ -38,6 +38,6 @@ $language_array = Array(
   'no_informations'=>'ni informacij',
   'report_message'=>'[b]Obstaja novo %s - Poročilo[/b][br][br]%s-ID: %d[br]Info: %s[br]Referer: [url]index.php?site=files&file=%d[/url]',
   'report_recognized'=>'Vaše obvestilo je sprejeto. Hvala.',
-  'wrong_securitycode'=>'Napačna varnostna koda!<br /><br />[<a href="javascript:back();">Nazaj</a>]'
+  'wrong_securitycode'=>'Napačna varnostna koda!<br><br>[<a href="javascript:back();">Nazaj</a>]'
 );
 ?>

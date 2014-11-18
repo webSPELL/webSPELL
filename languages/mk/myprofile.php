@@ -102,8 +102,8 @@ $language_array = Array(
   'nickname'=>'Ник-име',
   'nickname_already_in_use'=>'ник-името веќе се користи!',
   'no'=>'Не',
-  'not_logged_in'=>'Морате да бидете пријавени за да го видете својот профил!<br /><br />
-    &#8226; <a href="index.php?site=register">Регистрирај се</a><br />
+  'not_logged_in'=>'Морате да бидете пријавени за да го видете својот профил!<br><br>
+    &#8226; <a href="index.php?site=register">Регистрирај се</a><br>
     &#8226; <a href="index.php?site=login">Пријави се</a>',
   'old_password'=>'Стара лозинка',
   'old_pw_not_valid'=>'Ваша лозинка не е исправна!',

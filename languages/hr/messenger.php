@@ -54,7 +54,7 @@ $language_array = Array(
 	'no_incoming'=>'Nema poruka u mapi dolazeće.',
 	'no_outgoing'=>'Nema poruka u mapi odlazeće.',
 	'no_subject'=>'(nema naslova)',
-	'not_logged'=>'Niste prijavljeni.<br /><a href="index.php?site=login">Prijavi se</a> | <a href="index.php?site=register">Registriraj se</a>',
+	'not_logged'=>'Niste prijavljeni.<br><a href="index.php?site=login">Prijavi se</a> | <a href="index.php?site=register">Registriraj se</a>',
 	'options'=>'Opcije',
 	'outgoing'=>'Odlazeća',
 	'read'=>'Pročitaj',
@@ -73,7 +73,7 @@ $language_array = Array(
 	'title'=>'Naslov',
 	'your_message'=>'Vaša poruka:',
 	'mail_subject'=>'Imate novu poruku',
-	'mail_body'=>'<b>Pozdrav %nickname%!</b><br /><br />Imaš novu poruku na '.PAGETITLE.' (%hp_url%).<br />Klikni <a href="http://%hp_url%?site=messenger">ovdje</a> da bi ju pročitao.<br /><br />(C) webSPELL.org',
+	'mail_body'=>'<b>Pozdrav %nickname%!</b><br><br>Imaš novu poruku na '.PAGETITLE.' (%hp_url%).<br>Klikni <a href="http://%hp_url%?site=messenger">ovdje</a> da bi ju pročitao.<br><br>(C) webSPELL.org',
 	'error'=>'error',
 	'unknown_user'=>'unknown user'
 );

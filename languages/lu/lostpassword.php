@@ -49,7 +49,7 @@ Vill Spaass op eiser Websäit
   'lost_password'=>'Passwuert verluer',
   'no_mail_given'=>'Du hues keng E-Mail Adress aginn.',
   'no_user_found'=>'Benotzer net fonnt!',
-  'successful'=>'Däin Konto ass fonnt ginn!<br /><br />rn    Du wäerts an e pur Sekonnen eng E-Mail mat denger Daten kréien.<br /><br />rn    &#8226; <a href="index.php?site=login">umellen</a>',
+  'successful'=>'Däin Konto ass fonnt ginn!<br><br>rn    Du wäerts an e pur Sekonnen eng E-Mail mat denger Daten kréien.<br><br>rn    &#8226; <a href="index.php?site=login">umellen</a>',
   'your_email'=>'Deng E-Mail'
 );
 ?>

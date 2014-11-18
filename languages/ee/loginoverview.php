@@ -65,8 +65,8 @@ $language_array = Array(
   'usermenu'=>'Kasutajamenüü',
   'views'=>'vaatamisi',
   'x_new_message'=>'Postkastis on  %new_messages% uut sõnumit.',
-  'you_have_to_be_logged_in'=>'Ülevaate nägemiseks pead sa sisse logitud olema!<br /><br />
-    &#8226; <a href="index.php?site=register">registreeri kohe</a><br />
+  'you_have_to_be_logged_in'=>'Ülevaate nägemiseks pead sa sisse logitud olema!<br><br>
+    &#8226; <a href="index.php?site=register">registreeri kohe</a><br>
     &#8226; <a href="index.php?site=login">logi sisse</a>'
 );
 ?>
