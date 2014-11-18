@@ -97,7 +97,7 @@ function addonnav() {
 	.td2 {  height: 18px; }
 	</style>
 	<![endif]-->
-	<script language="JavaScript" type="text/JavaScript">
+	<script type="text/javascript">
 	  var calledfrom='admin';
 	</script>
 	<script src="../js/bbcode.js" language="JavaScript" type="text/javascript"></script>

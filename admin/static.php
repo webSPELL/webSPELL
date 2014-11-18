@@ -60,7 +60,7 @@ if(isset($_GET['action']) and $_GET['action'] == "add") {
 	
   echo'<h1>&curren; <a href="admincenter.php?site=static" class="white">'.$_language->module['static_pages'].'</a> &raquo; '.$_language->module['add_static_page'].'</h1>';
   
-  echo '<script language="JavaScript" type="text/javascript">
+  echo '<script type="text/javascript">
 					<!--
 						function chkFormular() {
 							if(!validbbcode(document.getElementById(\'message\').value, \'admin\')){
@@ -130,7 +130,7 @@ elseif(isset($_GET['action']) and $_GET['action'] == "edit") {
 	
 	echo'<h1>&curren; <a href="admincenter.php?site=static" class="white">'.$_language->module['static_pages'].'</a> &raquo; '.$_language->module['edit_static_page'].'</h1>';
 	
-	echo '<script language="JavaScript" type="text/javascript">
+	echo '<script type="text/javascript">
 					<!--
 						function chkFormular() {
 							if(!validbbcode(document.getElementById(\'message\').value, \'admin\')){

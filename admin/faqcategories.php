@@ -85,7 +85,7 @@ if(isset($_GET['action'])) {
     
     echo'<h1>&curren; <a href="admincenter.php?site=faqcategories" class="white">'.$_language->module['faq_categories'].'</a> &raquo; '.$_language->module['add_category'].'</h1>';
     
-    echo '<script language="JavaScript" type="text/javascript">
+    echo '<script type="text/javascript">
 					<!--
 						function chkFormular() {
 							if(!validbbcode(document.getElementById(\'message\').value, \'admin\')){
@@ -137,7 +137,7 @@ if(isset($_GET['action'])) {
     
     echo'<h1>&curren; <a href="admincenter.php?site=faqcategories" class="white">'.$_language->module['faq_categories'].'</a> &raquo; '.$_language->module['edit_category'].'</h1>';
 
-    echo '<script language="JavaScript" type="text/javascript">
+    echo '<script type="text/javascript">
 					<!--
 						function chkFormular() {
 							if(!validbbcode(document.getElementById(\'message\').value, \'admin\')){

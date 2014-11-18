@@ -51,7 +51,7 @@ if(isset($_POST['submit'])) {
 	eval ("\$addbbcode = \"".gettemplate("addbbcode", "html", "admin")."\";");
   eval ("\$addflags = \"".gettemplate("flags_admin", "html", "admin")."\";");
 	
-  echo '<script language="JavaScript" type="text/javascript">
+  echo '<script type="text/javascript">
 					<!--
 						function chkFormular() {
 							if(!validbbcode(document.getElementById(\'message\').value, \'admin\')){
