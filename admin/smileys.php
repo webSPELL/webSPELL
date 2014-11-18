@@ -68,7 +68,7 @@ elseif($action=="edit") {
 	$CAPCLASS->create_transaction();
 	$hash = $CAPCLASS->get_hash();
 	$ds=mysqli_fetch_array(safe_query("SELECT * FROM ".PREFIX."smileys WHERE smileyID='".$_GET["smileyID"]."'"));
-	$pic='<img src="../images/smileys/'.$ds['name'].'" border="0" alt="'.getinput($ds['alt']).'" />';
+	$pic='<img src="../images/smileys/'.$ds['name'].'" alt="'.getinput($ds['alt']).'" />';
 
 	echo'<h1>&curren; <a href="admincenter.php?site=icons" class="white">'.$_language->module['icons'].'</a> &raquo; <a href="admincenter.php?site=smileys" class="white">'.$_language->module['smilies'].'</a> &raquo; '.$_language->module['edit_smiley'].'</h1>';
   
@@ -182,7 +182,7 @@ else {
       if($i%2) { $td='td1'; }
       else { $td='td2'; }
       		
-			$pic='<img src="../images/smileys/'.$smileys['name'].'" border="0" alt="'.getinput($smileys['alt']).'" />';
+			$pic='<img src="../images/smileys/'.$smileys['name'].'" alt="'.getinput($smileys['alt']).'" />';
 			if($smileys['alt']=="") $smileys['alt'] = $smileys['name'];
 			
       echo'<tr>

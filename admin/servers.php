@@ -221,7 +221,7 @@ else {
 			$list = str_replace('value="'.$ds['serverID'].'-'.$ds['sort'].'"','value="'.$ds['serverID'].'-'.$ds['sort'].'" selected="selected"',$list);
 
 			echo'<tr>
-        <td class="'.$td.'"><img src="../images/games/'.$ds['game'].'.gif" width="13" height="13" border="0" alt="" /> <a href="hlsw://'.$ds['ip'].'"><b>'.$ds['ip'].'</b></a><br><b>'.getinput($ds['name']).'</b><br>'.cleartext($ds['info'],1,'admin').'</td>
+        <td class="'.$td.'"><img src="../images/games/'.$ds['game'].'.gif" width="13" height="13" alt="" /> <a href="hlsw://'.$ds['ip'].'"><b>'.$ds['ip'].'</b></a><br><b>'.getinput($ds['name']).'</b><br>'.cleartext($ds['info'],1,'admin').'</td>
         <td class="'.$td.'" align="center"><input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=servers&amp;action=edit&amp;serverID='.$ds['serverID'].'\');return document.MM_returnValue" value="'.$_language->module['edit'].'" />
         <input type="button" onclick="MM_confirm(\''.$_language->module['really_delete'].'\', \'admincenter.php?site=servers&amp;delete=true&amp;serverID='.$ds['serverID'].'&amp;captcha_hash='.$hash.'\')" value="'.$_language->module['delete'].'" /></td>
         <td class="'.$td.'" align="center">'.$list.'</td>

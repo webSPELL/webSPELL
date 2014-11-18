@@ -51,7 +51,7 @@ if($newsID) {
 		$rubricpic_name = getrubricpic($ds['rubric']);
 		$rubricpic='images/news-rubrics/'.$rubricpic_name;
 		if(!file_exists($rubricpic) OR $rubricpic_name=='') $rubricpic = ''; 
-		else $rubricpic = '<img src="'.$rubricpic.'" border="0" alt="" />';
+		else $rubricpic = '<img src="'.$rubricpic.'" alt="" />';
 
 		$message_array = array();
 		$query=safe_query("SELECT n.*, c.short AS `countryCode`, c.country FROM ".PREFIX."news_contents n LEFT JOIN ".PREFIX."countries c ON c.short = n.language WHERE n.newsID='".$newsID."'");
@@ -64,7 +64,7 @@ if($newsID) {
 		$langs='';
 		$i=0;
 		foreach($message_array as $val) {
-			if($showlang!=$i)	$langs.='<span style="padding-left:2px"><a href="index.php?site=news_comments&amp;newsID='.$ds['newsID'].'&amp;lang='.$val['lang'].'"><img src="images/flags/'.$val['countryShort'].'.gif" width="18" height="12" border="0" alt="'.$val['country'].'" /></a></span>';
+			if($showlang!=$i)	$langs.='<span style="padding-left:2px"><a href="index.php?site=news_comments&amp;newsID='.$ds['newsID'].'&amp;lang='.$val['lang'].'"><img src="images/flags/'.$val['countryShort'].'.gif" width="18" height="12" alt="'.$val['country'].'" /></a></span>';
 			$i++;
 		}
 		

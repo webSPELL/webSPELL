@@ -56,7 +56,7 @@ if(mysqli_num_rows($ergebnis)){
 		$languages='';
 		$i=0;
 		foreach($message_array as $val) {
-			if($showlang!=$i)	$languages.='<span style="padding-left:2px"><a href="index.php?site=news_comments&amp;newsID='.$ds['newsID'].'&amp;lang='.$val['lang'].'"><img src="images/flags/'.$val['countryShort'].'.gif" width="18" height="12" border="0" alt="'.$val['country'].'" /></a></span>';
+			if($showlang!=$i)	$languages.='<span style="padding-left:2px"><a href="index.php?site=news_comments&amp;newsID='.$ds['newsID'].'&amp;lang='.$val['lang'].'"><img src="images/flags/'.$val['countryShort'].'.gif" width="18" height="12" alt="'.$val['country'].'" /></a></span>';
 			$i++;
 		}
 	  

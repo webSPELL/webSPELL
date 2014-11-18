@@ -73,9 +73,9 @@ elseif($action=="edit") {
   echo'<h1>&curren; <a href="admincenter.php?site=bannerrotation" class="white">'.$_language->module['bannerrotation'].'</a> &raquo; '.$_language->module['edit_banner'].'</h1>';
 
 	$ds=mysqli_fetch_array(safe_query("SELECT * FROM ".PREFIX."bannerrotation WHERE bannerID='".$_GET["bannerID"]."'"));
-	if(file_exists($filepath.$ds['bannerID'].'.gif'))	$pic='<img src="../images/bannerrotation/'.$ds['bannerID'].'.gif" border="0" alt="'.$ds['banner'].'" />';
-	elseif(file_exists($filepath.$ds['bannerID'].'.jpg'))	$pic='<img src="../images/bannerrotation/'.$ds['bannerID'].'.jpg" border="0" alt="'.$ds['banner'].'" />';
-	elseif(file_exists($filepath.$ds['bannerID'].'.png'))	$pic='<img src="../images/bannerrotation/'.$ds['bannerID'].'.png" border="0" alt="'.$ds['banner'].'" />';
+	if(file_exists($filepath.$ds['bannerID'].'.gif'))	$pic='<img src="../images/bannerrotation/'.$ds['bannerID'].'.gif" alt="'.$ds['banner'].'" />';
+	elseif(file_exists($filepath.$ds['bannerID'].'.jpg'))	$pic='<img src="../images/bannerrotation/'.$ds['bannerID'].'.jpg" alt="'.$ds['banner'].'" />';
+	elseif(file_exists($filepath.$ds['bannerID'].'.png'))	$pic='<img src="../images/bannerrotation/'.$ds['bannerID'].'.png" alt="'.$ds['banner'].'" />';
   
 	else $pic=$_language->module['no_upload'];
 

@@ -163,7 +163,7 @@ class Captcha {
 
 			imageJPEG($imgziel, 'tmp/'.$this->hash.'.jpg');
 			@chmod('tmp/'.$this->hash.'.jpg', $new_chmod);
-			$captcha = '<img src="tmp/'.$this->hash.'.jpg" border="0" alt="'.$_language->module['security_code'].'" />';
+			$captcha = '<img src="tmp/'.$this->hash.'.jpg" alt="'.$_language->module['security_code'].'" />';
 
 		} elseif($this->type=='t') {
 			$captcha = '';

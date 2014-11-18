@@ -39,7 +39,7 @@ if(!isset($_GET['action'])) {
 	$opponent='<a href="'.getinput($ds['opphp']).'" target="_blank"><b>'.getinput($ds['opptag']).' / '.($ds['opponent']).'</b></a>';
 	$league='<a href="'.getinput($ds['leaguehp']).'" target="_blank">'.getinput($ds['league']).'</a>';
 	if(file_exists('images/games/'.$ds['game'].'.gif')) $game_ico = 'images/games/'.$ds['game'].'.gif';
-	$game='<img src="'.$game_ico.'" width="13" height="13" border="0" alt="" />';
+	$game='<img src="'.$game_ico.'" width="13" height="13" alt="" />';
 	$maps="";
 	$hometeam="";
 	$screens="";
@@ -116,7 +116,7 @@ if(!isset($_GET['action'])) {
 		$n=1;
 		foreach($screens as $screen) {
 			if(!empty($screen)) {
-				$screenshots.='<a href="images/clanwar-screens/'.$screen.'" target="_blank"><img src="images/clanwar-screens/'.$screen.'" width="150" height="100" border="0" style="padding-top:3px; padding-right:3px;" alt="" /></a>';
+				$screenshots.='<a href="images/clanwar-screens/'.$screen.'" target="_blank"><img src="images/clanwar-screens/'.$screen.'" width="150" height="100" style="padding-top:3px; padding-right:3px;" alt="" /></a>';
 				if($nbr==2) {
 					$nbr=1;
 					$screenshots.='<br>';

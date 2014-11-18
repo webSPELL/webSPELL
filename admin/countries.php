@@ -69,7 +69,7 @@ if($action=="add") {
 
 elseif($action=="edit") {
 	$ds=mysqli_fetch_array(safe_query("SELECT * FROM ".PREFIX."countries WHERE countryID='".$_GET["countryID"]."'"));
-	$pic='<img src="../images/flags/'.$ds['short'].'.gif" border="0" alt="'.$ds['country'].'" />';
+	$pic='<img src="../images/flags/'.$ds['short'].'.gif" alt="'.$ds['country'].'" />';
 	if($ds['fav']=='1') $fav='<input type="checkbox" name="fav" value="1" checked="checked" />';
   	else $fav='<input type="checkbox" name="fav" value="1" />';
   
@@ -196,7 +196,7 @@ else {
 		while($flags = mysqli_fetch_array($ds)) {
       		if($i%2) { $td='td1'; }
 			else { $td='td2'; }
-			$pic='<img src="../images/flags/'.$flags['short'].'.gif" border="0" alt="'.$flags['country'].'" />';
+			$pic='<img src="../images/flags/'.$flags['short'].'.gif" alt="'.$flags['country'].'" />';
 			if($flags['fav']==1) $fav = ' <small><font color="green"><b>('.$_language->module['favorite'].')</b></font></small>';
 			else $fav = '';
 			

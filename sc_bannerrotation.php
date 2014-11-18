@@ -32,7 +32,7 @@ $allbanner = safe_query("SELECT * FROM ".PREFIX."bannerrotation WHERE displayed=
 $total = mysqli_num_rows($allbanner);
 if($total) {
 	$banner = mysqli_fetch_array($allbanner);
-	echo '<a href="out.php?bannerID='.$banner['bannerID'].'" target="_blank"><img src="./images/bannerrotation/'.$banner['banner'].'" border="0" alt="'.htmlspecialchars($banner['bannername']).'" /></a>';
+	echo '<a href="out.php?bannerID='.$banner['bannerID'].'" target="_blank"><img src="./images/bannerrotation/'.$banner['banner'].'" alt="'.htmlspecialchars($banner['bannername']).'" /></a>';
 }
 else echo $_language->module['no_banners'];
 unset($banner);
