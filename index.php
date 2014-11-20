@@ -49,8 +49,8 @@ header('X-UA-Compatible: IE=edge,chrome=1');
 
 <!-- Head & Title include -->
 <title><?php echo PAGETITLE; ?></title>
-<link href="components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-<link href="components/fontawesome/css/font-awesome.min.css" rel="stylesheet">
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
 <link href="_stylesheet.css" rel="stylesheet">
 <link href="tmp/rss.xml" rel="alternate" type="application/rss+xml" title="<?php echo getinput($myclanname); ?> - RSS Feed">
 
@@ -238,8 +238,9 @@ header('X-UA-Compatible: IE=edge,chrome=1');
         </div>
     </div>
 </div>
-<script src="components/jquery/dist/jquery.min.js"></script>
-<script src="components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 <script src="js/wSBs.js" type="text/javascript"></script>
+
 </body>
 </html>
