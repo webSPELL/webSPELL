@@ -40,7 +40,7 @@
 		if($_language->read_module($modul)){
 			if($mode=='array'){
 				foreach($_language->module as $key => $value){
-					echo 'language_array["'.$modul.'"]["'.$key.'"]="'.preg_replace("/\r?\n/", "\\n", addslashes($value)).'";';
+					echo 'languageArray["'.$modul.'"]["'.$key.'"]="'.preg_replace("/\r?\n/", "\\n", addslashes($value)).'";';
 				}
 			}
 			else{

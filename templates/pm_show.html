@@ -19,6 +19,6 @@
 <input type="hidden" name="quickaction" value="true">
 <input type="hidden" name="quickactiontype" value="delete">
 <input type="hidden" name="messageID[]" value="$id">
-<input type="button" value="%reply%" onclick="MM_goToURL('parent','index.php?site=messenger&amp;action=reply&amp;id=$id');return document.MM_returnValue" class="btn btn-primary">
+<a href="index.php?site=messenger&action=reply&id=$id" class="btn btn-primary">%reply%</a>
 <input type="submit" value="%delete%" class="btn btn-danger">
 </form>
