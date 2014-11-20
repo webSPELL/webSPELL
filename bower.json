@@ -1,0 +1,24 @@
+{
+	"name": "webspell",
+	"version": "4.2.3",
+	"homepage": "http://webspell.org",
+	"authors": [
+		"webSPELL e.V. <root@webspell.org>"
+	],
+	"description": "webSPELL is a free Content Management System which was especially developed for the needs of esport related communities.",
+	"license": "GNU GPL",
+	"keywords " : [
+		"webSPELL",
+		"eSports",
+		"CMS",
+		"Gaming",
+		"Content Management System"
+	],
+	"ignore": [
+		"components"
+	],
+	"dependencies": {
+		"bootstrap": ">= 3.2.0",
+		"fontawesome": ">= 4.2.0"
+	}
+}
