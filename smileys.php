@@ -38,8 +38,9 @@ echo'<!DOCTYPE html>
 	<meta name="copyright" content="Copyright &copy; 2005 - 2011 by webspell.org">
 	<meta name="generator" content="webSPELL">
 	<title>Smilies</title>
-    <link href="components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
 	<link href="_stylesheet.css" rel="stylesheet">
+    <script src="js/bbcode.js" language="jscript" type="text/javascript"></script>
 </head>
 
 <body>
@@ -80,6 +81,5 @@ if (is_array($files)) {
     </tbody>
 </table>
 </div>
-<script src="js/bbcode.js" language="jscript" type="text/javascript"></script>
 </body>
 </html>
