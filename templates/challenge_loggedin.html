@@ -1,92 +1,114 @@
 <script>
-<!--
-function chkFormular() {
-	if(!validbbcode(document.getElementById('info').value)){
-		document.getElementById('info').focus();
-		return false;
-	}
-	
-}
--->
+	<!--
+		function chkFormular() {
+			if(!validbbcode(document.getElementById('textareaInfo').value)) {
+				document.getElementById('textareaInfo').focus();
+				return false;
+			}
+		}
+	-->
 </script>
-<form action="index.php?site=challenge&amp;action=save" method="post" name="post" onsubmit="return chkFormular()" role="form">
-
-    <h3>%challenge%</h3>
-    $showerror
-
-    <div class="row">
-        <div class="col-sm-6">
-            <div class="form-group">
-                <label for="date">%date%:</label>
-                <input name="datetime" id="date" type="datetime-local" class="form-control">
-            </div>
-        </div>
-
-        <div class="col-sm-6">
-            <div class="form-group">
-                <label for="squad">%squad%:</label>
-                <select name="squad" id="squad" class="form-control">$squads</select>
-            </div>
-        </div>
-
-        <div class="col-sm-6">
-            <div class="form-group">
-                <label for="opponent">%opponent%:</label>
-                <input name="opponent" id="opponent" value="$opponent" type="text" class="form-control">
-            </div>
-        </div>
-
-        <div class="col-sm-6">
-            <div class="form-group">
-                <label for="league">%league%:</label>
-                <input name="league" id="league" value="$league" type="text" class="form-control">
-            </div>
-        </div>
-
-        <div class="col-sm-6">
-            <div class="form-group">
-                <label for="opphp">%homepage%:</label>
-                <input name="opphp" id="opphp" value="$opphp" type="text" class="form-control">
-            </div>
-        </div>
-
-        <div class="col-sm-6">
-            <div class="form-group">
-                <label for="oppcountry">%country%:</label>
-                <select name="oppcountry" id="oppcountry" class="form-control">$countries</select>
-            </div>
-        </div>
-
-        <div class="col-sm-6">
-            <div class="form-group">
-                <label for="map">%map%:</label>
-                <input name="map" id="map" value="$map" type="text" class="form-control">
-            </div>
-        </div>
-
-        <div class="col-sm-6">
-            <div class="form-group">
-                <label for="server">%server%:</label>
-                <input name="server" id="server" value="$server" type="text" class="form-control">
-            </div>
-        </div>
-
-        <div class="col-sm-6">
-            <div class="form-group">
-                <label for="email">%email%:</label>
-                <input name="email" id="email" type="text" value="$email" class="form-control">
-            </div>
-        </div>
-    </div>
-
-    <div class="form-group">
-        <label for="info">%info%:</label>
-        <textarea name="info" id="info" cols="50" rows="5" class="form-control">$info</textarea>
-    </div>
-
-
-    <div class="form-group text-right">
-        <input name="post" type="submit" value="%submit_challenge%" class="btn btn-primary">
-    </div>
-
-</form>
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h3 class="panel-title">%challenge%</h3>
+	</div>
+	<div class="panel-body">
+		<form action="index.php?site=challenge&amp;action=save" method="post" name="post" role="form" class="form-horizontal">
+			
+			<!-- Error Box -->
+			$showerror
+			
+			<!-- Datetime -->
+			<div class="form-group">
+				<label for="inputDatetime" class="col-xs-12 col-md-3 control-label">%date%:</label>
+				<div class="col-xs-12 col-md-9">
+					<input type="datetime-local" name="datetime" class="form-control" id="inputDatetime" value="$datetime">
+				</div>
+			</div>
+			
+			<!-- Squad -->
+			<div class="form-group">
+				<label for="selectSquad" class="col-xs-12 col-md-3 control-label">%squad%:</label>
+				<div class="col-xs-12 col-md-9">
+					<select name="squad" id="selectSquad" class="form-control">
+						$squads
+					</select>
+				</div>
+			</div>
+			
+			<!-- Opponent -->
+			<div class="form-group">
+				<label for="inputOpponent" class="col-xs-12 col-md-3 control-label">%opponent%:</label>
+				<div class="col-xs-12 col-md-9">
+					<input type="text" name="opponent" class="form-control" id="inputOpponent" value="$opponent">
+				</div>
+			</div>
+			
+			<!-- Homepage -->
+			<div class="form-group">
+				<label for="inputHomepage" class="col-xs-12 col-md-3 control-label">%homepage%:</label>
+				<div class="col-xs-12 col-md-9">
+					<input type="url" name="opphp" class="form-control" id="inputHomepage" value="$opphp">
+				</div>
+			</div>
+			
+			<!-- League -->
+			<div class="form-group">
+				<label for="inputLeague" class="col-xs-12 col-md-3 control-label">%league%:</label>
+				<div class="col-xs-12 col-md-9">
+					<input type="text" name="league" class="form-control" id="inputLeague" value="$league">
+				</div>
+			</div>
+			
+			<!-- Country -->
+			<div class="form-group">
+				<label for="selectOppcountry" class="col-xs-12 col-md-3 control-label">%country%:</label>
+				<div class="col-xs-12 col-md-9">
+					<select name="oppcountry" id="selectOppcountry" class="form-control">
+						$countries
+					</select>
+				</div>
+			</div>
+			
+			<!-- Map -->
+			<div class="form-group">
+				<label for="inputMap" class="col-xs-12 col-md-3 control-label">%map%:</label>
+				<div class="col-xs-12 col-md-9">
+					<input type="text" name="map" class="form-control" id="inputMap" value="$map">
+				</div>
+			</div>
+			
+			<!-- Server -->
+			<div class="form-group">
+				<label for="inputServer" class="col-xs-12 col-md-3 control-label">%server%:</label>
+				<div class="col-xs-12 col-md-9">
+					<input type="text" name="server" class="form-control" id="inputServer" value="$server">
+				</div>
+			</div>
+			
+			<!-- Email -->
+			<div class="form-group">
+				<label for="inputEmail" class="col-xs-12 col-md-3 control-label">%email%:</label>
+				<div class="col-xs-12 col-md-9">
+					<input type="email" name="email" class="form-control" id="inputEmail" value="$email">
+				</div>
+			</div>
+			
+			<!-- Info -->
+			<div class="form-group">
+				<label for="textareaInfo" class="col-xs-12 col-md-3 control-label">%info%:</label>
+				<div class="col-xs-12 col-md-9">
+					<textarea name="info" id="textareaInfo" class="form-control" rows="5">$info</textarea>
+				</div>
+			</div>
+			
+			<!-- Submit button -->
+			<div class="form-group">
+				<div class="col-xs-12 text-right">
+					<button type="submit" name="post" class="btn btn-primary">%submit_challenge%</button>
+				</div>
+			</div>
+			
+		</form>
+	</div>
+</div>
