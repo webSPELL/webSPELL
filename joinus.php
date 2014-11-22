@@ -101,11 +101,8 @@ if($action=="save" && isset($_POST['post'])) {
 		$show = false;
 	} else {
 		$fehler=implode('<br>&#8226; ',$error);
-	}
-	else {
-		$fehler=implode('<br>&#8226; ',$error);
 		$show = true;
-    	$showerror = '<div class="alert alert-danger alert-dismissible" role="alert">
+		$showerror = '<div class="alert alert-danger alert-dismissible" role="alert">
 		  <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
 		  <strong>'.$_language->module['problems'].':</strong><br>
 		  <br>
@@ -122,7 +119,7 @@ if($show == true) {
 	if($loggedin) {
 		if(!isset($showerror)) $showerror='';
 		$res = safe_query("SELECT *, DATE_FORMAT(FROM_DAYS(TO_DAYS(NOW()) - TO_DAYS(birthday)), '%y') 'age' FROM ".PREFIX."user WHERE userID = '$userID'");
-    	$ds = mysqli_fetch_assoc($res);
+		$ds = mysqli_fetch_assoc($res);
 		$nickname = getinput($ds['nickname']);
 		$name = getinput($ds['firstname']." ".$ds['lastname']);
 		$email = getinput($ds['email']);
@@ -130,10 +127,10 @@ if($show == true) {
 		$age = $ds['age'];
 		$city = getinput($ds['town']);
 		
-	    if(isset($_POST['clanhistory'])) $clanhistory=getforminput($_POST['clanhistory']);
-	    else $clanhistory='';
-	    if(isset($_POST['info'])) $info=getforminput($_POST['info']);
-	    else $info='';
+		if(isset($_POST['clanhistory'])) $clanhistory=getforminput($_POST['clanhistory']);
+		else $clanhistory='';
+		if(isset($_POST['info'])) $info=getforminput($_POST['info']);
+		else $info='';
 		
 		eval ("\$joinus_loggedin = \"".gettemplate("joinus_loggedin")."\";");
 		echo $joinus_loggedin;
@@ -143,23 +140,23 @@ if($show == true) {
 		$hash = $CAPCLASS->get_hash();
 		$CAPCLASS->clear_oldcaptcha();
 		
-	    if(!isset($showerror)) $showerror='';
-	    if(isset($_POST['nick'])) $nick= getforminput($_POST['nick']);
-	    else $nick='';
-	    if(isset($_POST['name'])) $name= getforminput($_POST['name']);
-	    else $name='';
-	    if(isset($_POST['email'])) $email= getforminput($_POST['email']);
-	    else $email='';
-	    if(isset($_POST['messenger'])) $messenger= getforminput($_POST['messenger']);
-	    else $messenger='';
-	    if(isset($_POST['age'])) $age= getforminput($_POST['age']);
-	    else $age='';
-	    if(isset($_POST['city'])) $city= getforminput($_POST['city']);
-	    else $city='';
-	    if(isset($_POST['clanhistory'])) $clanhistory= getforminput($_POST['clanhistory']);
-	    else $clanhistory='';
-	    if(isset($_POST['info'])) $info= getforminput($_POST['info']);
-	    else $info='';
+		if(!isset($showerror)) $showerror='';
+		if(isset($_POST['nick'])) $nick= getforminput($_POST['nick']);
+		else $nick='';
+		if(isset($_POST['name'])) $name= getforminput($_POST['name']);
+		else $name='';
+		if(isset($_POST['email'])) $email= getforminput($_POST['email']);
+		else $email='';
+		if(isset($_POST['messenger'])) $messenger= getforminput($_POST['messenger']);
+		else $messenger='';
+		if(isset($_POST['age'])) $age= getforminput($_POST['age']);
+		else $age='';
+		if(isset($_POST['city'])) $city= getforminput($_POST['city']);
+		else $city='';
+		if(isset($_POST['clanhistory'])) $clanhistory= getforminput($_POST['clanhistory']);
+		else $clanhistory='';
+		if(isset($_POST['info'])) $info= getforminput($_POST['info']);
+		else $info='';
 		
 		eval ("\$joinus_notloggedin = \"".gettemplate("joinus_notloggedin")."\";");
 		echo $joinus_notloggedin;
