@@ -1,42 +1,80 @@
-$showerror
-
-<form action="index.php?site=contact" method="post">
-	<input type="hidden" name="action" value="send">
-
-	<div class="form-group">
-		<label for="getemail">%receiver%</label>
-		<select name="getemail" class="form-control">$getemail</select>
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h3 class="panel-title">%title_contact%</h3>
 	</div>
+	<div class="panel-body">
 
-	<div class="form-group">
-		<label for="name">%name%</label>
-		<input name="name" value="$name" class="form-control">
-	</div>
+		<!-- Description -->
+		<p>%description%</p>
 
-	<div class="form-group">
-		<label for="from">%mail%</label>
-		<input name="from" value="$from" class="form-control">
-	</div>
+		<!-- Error Box -->
+		$showerror
 
-	<div class="form-group">
-		<label for="subject">%subject%</label>
-		<input name="subject" value="$subject" class="form-control">
-	</div>
+		<form action="index.php?site=contact" method="post" role="form" class="form-horizontal">
 
-	<div class="form-group">
-		<label for="text">%message%</label>
-		<textarea name="text" cols="50" rows="6" class="form-control">$text</textarea>
-	</div>
+			<input type="hidden" name="action" value="send">
 
-	<div class="form-group">
-		<div class="input-group">
-			<span class="input-group-addon captcha-img">$captcha</span>
-			<input type="number" name="captcha" placeholder="Enter Captcha" autocomplete="off"
-					class="form-control"><input name="captcha_hash" type="hidden" value="$hash">
-		</div>
-	</div>
+			<!-- Receiver -->
+			<div class="form-group">
+				<label for="selectReceiver" class="col-xs-12 col-md-3 control-label">%receiver%:</label>
+				<div class="col-xs-12 col-md-9">
+					<select name="getemail" id="selectReceiver" class="form-control">
+						$getemail
+					</select>
+				</div>
+			</div>
 
-	<div class="form-group text-right">
-		<input type="submit" value="%send%" class="btn btn-primary">
+			<!-- Name -->
+			<div class="form-group">
+				<label for="inputName" class="col-xs-12 col-md-3 control-label">%name%:</label>
+				<div class="col-xs-12 col-md-9">
+					<input type="text" name="name" class="form-control" id="inputName" value="$name">
+				</div>
+			</div>
+
+			<!-- Mail -->
+			<div class="form-group">
+				<label for="inputMail" class="col-xs-12 col-md-3 control-label">%mail%:</label>
+				<div class="col-xs-12 col-md-9">
+					<input type="email" name="from" class="form-control" id="inputMail" value="$from">
+				</div>
+			</div>
+
+			<!-- Subject -->
+			<div class="form-group">
+				<label for="inputSubject" class="col-xs-12 col-md-3 control-label">%subject%:</label>
+				<div class="col-xs-12 col-md-9">
+					<input type="text" name="subject" class="form-control" id="inputSubject" value="$subject">
+				</div>
+			</div>
+
+			<!-- Message -->
+			<div class="form-group">
+				<label for="textareaMessage" class="col-xs-12 col-md-3 control-label">%message%:</label>
+				<div class="col-xs-12 col-md-9">
+					<textarea name="text" id="textareaMessage" class="form-control" rows="5">$text</textarea>
+				</div>
+			</div>
+
+			<!-- Security code -->
+			<div class="form-group">
+				<label for="inputSecurity_code" class="col-xs-12 col-md-3 control-label">%security_code%:</label>
+				<div class="col-xs-12 col-md-9">
+					<div class="input-group">
+						<span class="input-group-addon captcha-img">$captcha</span>
+						<input type="number" name="captcha" class="form-control" id="inputSecurity_code">
+						<input name="captcha_hash" type="hidden" value="$hash">
+					</div>
+				</div>
+			</div>
+
+			<!-- Submit button -->
+			<div class="form-group">
+				<div class="col-xs-12 text-right">
+					<button type="submit" class="btn btn-primary">%send%</button>
+				</div>
+			</div>
+
+		</form>
 	</div>
-</form>
+</div>
