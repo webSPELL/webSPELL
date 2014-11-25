@@ -7,6 +7,7 @@
     "logfile-grunt": "^0.1.5",
     "grunt-contrib-watch": "^0.6.1",
     "grunt-jscs-checker": "^0.8.1",
-    "grunt-jscs": "^0.8.1"
+    "grunt-jscs": "^0.8.1",
+    "grunt-lintspaces": "^0.6.0"
   }
 }
