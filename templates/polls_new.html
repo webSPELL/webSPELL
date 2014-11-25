@@ -1,95 +1,99 @@
 <script>
-<!--
-function chkFormular() {
-	if(document.getElementById('title').value == "") {
-		alert("%yht_enter_title%");
-		document.getElementById('title').focus();
-   		return false;
+	<!--
+	function chkFormular() {
+		if (document.getElementById('title').value === "") {
+			alert("%yht_enter_title%");
+			document.getElementById('title').focus();
+
+			return false;
+		}
+
+		if (document.getElementById('opt1').value === "") {
+			alert("%yht_enter_2_options%");
+			document.getElementById('opt1').focus();
+
+			return false;
+		}
+
+		if (document.getElementById('opt2').value === "") {
+			alert("%yht_enter_2_options%");
+			document.getElementById('opt2').focus();
+
+			return false;
+		}
 	}
-	
-	if(document.getElementById('opt1').value == "") {
-		alert("%yht_enter_2_options%");
-		document.getElementById('opt1').focus();
-   		return false;
-	}
-	
-	if(document.getElementById('opt2').value == "") {
-		alert("%yht_enter_2_options%");
-		document.getElementById('opt2').focus();
-   		return false;
-	}
-}
--->
+	-->
 </script>
 
-<form name="post" method="post" action="polls.php" onsubmit="return chkFormular()" class="form-horizontal">
+<form name="post" method="post" action="polls.php" onsubmit="return chkFormular()"
+		class="form-horizontal">
 
-    <h3>%new_poll%</h3>
-    
-    <div class="form-group">
-        <label for="title">%title%:</label>
-        <input name="title" id="title" type="text" class="form-control" autofocus>
-    </div>
-    
+	<h3>%new_poll%</h3>
 
-    <div class="form-group">
-        <label for="laufzeit_hour">%endingtime%:</label>
-        <div class="row">
-            <div class="col-xs-6">
-                <input type="date" name="runtime_date" class="form-control">
-            </div>
-            <div class="col-xs-6">
-                <input type="time" name="runtime_time" class="form-control">
-            </div>
-        </div>
-    </div>
+	<div class="form-group">
+		<label for="title">%title%:</label>
+		<input name="title" id="title" type="text" class="form-control" autofocus>
+	</div>
 
-    <div class="form-group">
-        <label for="opt1">%option%: 1</label>
-        <input type="text" name="op1" id="opt1" class="form-control">
-        
-        <label for="opt2">%option%: 2</label>
-        <input type="text" name="op2" id="opt2" class="form-control">
-        
-        <label for="opt3">%option%: 3</label>
-        <input type="text" name="op3" id="opt3" class="form-control">
-        
-        <label for="opt4">%option%: 4</label>
-        <input type="text" name="op4" id="opt4" class="form-control">
-        
-        <label for="opt5">%option%: 5</label>
-        <input type="text" name="op5" id="opt5" class="form-control">
-        
-        <label for="opt6">%option%: 6</label>
-        <input type="text" name="op6" id="opt6" class="form-control">
-        
-        <label for="opt7">%option%: 7</label>
-        <input type="text" name="op7" id="opt7" class="form-control">
+	<div class="form-group">
+		<label for="laufzeit_hour">%endingtime%:</label>
 
-        <label for="opt8">%option%: 8</label>
-        <input type="text" name="op8" id="opt8" class="form-control">
-        
-        <label for="opt9">%option%: 9</label>
-        <input type="text" name="op9" id="opt9" class="form-control">
+		<div class="row">
+			<div class="col-xs-6">
+				<input type="date" name="runtime_date" class="form-control">
+			</div>
+			<div class="col-xs-6">
+				<input type="time" name="runtime_time" class="form-control">
+			</div>
+		</div>
+	</div>
 
-        <label for="op10">%option%: 10</label>
-        <input type="text" name="op10" id="opt10" class="form-control">
-    </div>
+	<div class="form-group">
+		<label for="opt1">%option%: 1</label>
+		<input type="text" name="op1" id="opt1" class="form-control">
 
-    <div class="form-group">
-        <select name="comments" class="form-control">
-          <option value="0">%disable_comments%</option>
-          <option value="1">%enable_user_comments%</option>
-          <option value="2" selected="selected">%enable_visitor_comments%</option>
-        </select>
-    </div>
-    
-    <div class="form-group">    
-        <label for="intern">%intern%?</label>
-        <input type="checkbox" name="intern" value="1">
-    </div>
-    <div class="form-group">
-        <input name="save" type="submit" value="%save_poll%" class="btn btn-primary">
-    </div>
-    
+		<label for="opt2">%option%: 2</label>
+		<input type="text" name="op2" id="opt2" class="form-control">
+
+		<label for="opt3">%option%: 3</label>
+		<input type="text" name="op3" id="opt3" class="form-control">
+
+		<label for="opt4">%option%: 4</label>
+		<input type="text" name="op4" id="opt4" class="form-control">
+
+		<label for="opt5">%option%: 5</label>
+		<input type="text" name="op5" id="opt5" class="form-control">
+
+		<label for="opt6">%option%: 6</label>
+		<input type="text" name="op6" id="opt6" class="form-control">
+
+		<label for="opt7">%option%: 7</label>
+		<input type="text" name="op7" id="opt7" class="form-control">
+
+		<label for="opt8">%option%: 8</label>
+		<input type="text" name="op8" id="opt8" class="form-control">
+
+		<label for="opt9">%option%: 9</label>
+		<input type="text" name="op9" id="opt9" class="form-control">
+
+		<label for="op10">%option%: 10</label>
+		<input type="text" name="op10" id="opt10" class="form-control">
+	</div>
+
+	<div class="form-group">
+		<select name="comments" class="form-control">
+			<option value="0">%disable_comments%</option>
+			<option value="1">%enable_user_comments%</option>
+			<option value="2" selected="selected">%enable_visitor_comments%</option>
+		</select>
+	</div>
+
+	<div class="form-group">
+		<label for="intern">%intern%?</label>
+		<input type="checkbox" name="intern" value="1">
+	</div>
+	<div class="form-group">
+		<input name="save" type="submit" value="%save_poll%" class="btn btn-primary">
+	</div>
+
 </form>

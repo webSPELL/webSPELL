@@ -1,35 +1,36 @@
-<form action="index.php?site=links" method="post" enctype="multipart/form-data" onsubmit="return formcheckOnsend('linkname');">
-    <h3>%new_link%</h3>
+<form action="index.php?site=links" method="post" enctype="multipart/form-data"
+		onsubmit="return formcheckOnsend('linkname');">
+	<h3>%new_link%</h3>
 
-    <div class="form-group">
-        <label for="links_cat">%linkrubric%</label>
-        <select name="cat" id="links_cat" class="form-control">$linkcats</select>
+	<div class="form-group">
+		<label for="links_cat">%linkrubric%</label>
+		<select name="cat" id="links_cat" class="form-control">$linkcats</select>
 
-    </div>
+	</div>
 
-    <div class="form-group">
-        <label for="links_cat">%linkname%</label>
-        <input name="name" id="links_linkname" type="text"l size="40" class="form-control">
-    </div>
+	<div class="form-group">
+		<label for="links_cat">%linkname%</label>
+		<input name="name" id="links_linkname" type="text" l size="40" class="form-control">
+	</div>
 
-    <div class="form-group">
-        <label for="links_cat">%homepage%</label>
-        <input name="url" type="text" value="http://" id="links_url" size="40" class="form-control">
-    </div>
+	<div class="form-group">
+		<label for="links_cat">%homepage%</label>
+		<input name="url" type="text" value="http://" id="links_url" size="40" class="form-control">
+	</div>
 
-    <div class="form-group">
-        <label for="links_cat">%banner%</label>
-        <input name="banner" type="file" id="links_banner" class="form-control">
-    </div>
+	<div class="form-group">
+		<label for="links_cat">%banner%</label>
+		<input name="banner" type="file" id="links_banner" class="form-control">
+	</div>
 
-    <div class="form-group">
-        <label for="links_cat">%information%</label>
-        <input name="info" type="text" size="40" id="links_info" class="form-control">
-    </div>
+	<div class="form-group">
+		<label for="links_cat">%information%</label>
+		<input name="info" type="text" size="40" id="links_info" class="form-control">
+	</div>
 
-    <div class="form-group">
-        <input type="hidden" name="linkID" value="$linkID">
-        <input name="save" type="submit" value="%save_link%" class="btn btn-danger">
-    </div>
+	<div class="form-group">
+		<input type="hidden" name="linkID" value="$linkID">
+		<input name="save" type="submit" value="%save_link%" class="btn btn-danger">
+	</div>
 </form>
 

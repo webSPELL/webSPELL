@@ -1,37 +1,42 @@
 <form method="post" action="index.php?site=myprofile" class="form-horizontal" role="form">
-    <h2>%edit_mail%</h2>
-    
-    <div class="form-group">
-        <label for="oldpwd" class="col-lg-2 control-label">%password%:</label>
-        <div class="col-lg-10">
-            <input type="password" name="oldpwd" class="form-control">
-        </div>
-    </div>
-    
-    <div class="form-group">
-        <div class="row">
-            <div class="col-md-6">
-                <label for="mail1" class="col-lg-2 control-label">%new_email%:</label>
-                <div class="col-lg-10">
-                    <input type="email" name="mail1" autocomplete="email" class="form-control">
-                </div>
-            </div>
-            <div class="col-md-6">
-                <label for="mail2" class="col-lg-2 control-label">%repeat_new_email%:</label>
-                <div class="col-lg-10">
-                    <input type="email" name="mail2" autocomplete="email" class="form-control">
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <div class="form-group">
-        <div class="col-xs-6">
-            <a href="index.php?site=myprofile" class="btn btn-primary"><i class="icon icon-reply"></i> %back%</a>
-        </div>
-        <div class="col-xs-6 text-right">
-            <input type="hidden" name="userid" value="$userID">
-            <input type="submit" name="savemail" value="%change_mail%" class="btn btn-danger">
-        </div>
-    </div>
+	<h2>%edit_mail%</h2>
+
+	<div class="form-group">
+		<label for="oldpwd" class="col-lg-2 control-label">%password%:</label>
+
+		<div class="col-lg-10">
+			<input type="password" name="oldpwd" class="form-control">
+		</div>
+	</div>
+
+	<div class="form-group">
+		<div class="row">
+			<div class="col-md-6">
+				<label for="mail1" class="col-lg-2 control-label">%new_email%:</label>
+
+				<div class="col-lg-10">
+					<input type="email" name="mail1" autocomplete="email" class="form-control">
+				</div>
+			</div>
+			<div class="col-md-6">
+				<label for="mail2" class="col-lg-2 control-label">%repeat_new_email%:</label>
+
+				<div class="col-lg-10">
+					<input type="email" name="mail2" autocomplete="email" class="form-control">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="form-group">
+		<div class="col-xs-6">
+			<a href="index.php?site=myprofile" class="btn btn-primary">
+				<i class="icon icon-reply"></i> %back%
+			</a>
+		</div>
+		<div class="col-xs-6 text-right">
+			<input type="hidden" name="userid" value="$userID">
+			<input type="submit" name="savemail" value="%change_mail%" class="btn btn-danger">
+		</div>
+	</div>
 </form>

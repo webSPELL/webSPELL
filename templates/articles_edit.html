@@ -11,150 +11,195 @@
 	<!-- Head & Title include -->
 	<title>Edit Article</title>
 	<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
-	<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
-    
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
-    
+	<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css"
+			rel="stylesheet">
+
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+	<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+
 	<script src="js/bbcode.js"></script>
 	<!-- end Head & Title include -->
 	<script>
-	<!--
+		<!--
 
-	message = new Array();
+		message = new Array();
 
-	function chkFormular() {
-		if(document.getElementById('article_title').value == "") {
-			alert("%enter_title%");
-			document.post.title.focus();
-			return false;
-		}
-		if(message[0] == "" || typeof message[0] == undefined) {
-			alert("%enter_text%");
-			return false;
-		}
-		message_text = '';
-		x = 0;
-		while(true){
-			if(message[x]){
-				message_text += message[x];
-				x++;
+		function chkFormular() {
+			if (document.getElementById('article_title').value == "") {
+				alert("%enter_title%");
+				document.post.title.focus();
+				return false;
 			}
-			else{
-				break;
+			if (message[0] == "" || typeof message[0] == undefined) {
+				alert("%enter_text%");
+				return false;
+			}
+			message_text = '';
+			x = 0;
+			while (true) {
+				if (message[x]) {
+					message_text += message[x];
+					x++;
+				} else {
+					break;
+				}
+			}
+			if (!validbbcode(message_text)) {
+				return false;
+			}
+
+		}
+
+		function update_textarea(value) {
+			document.getElementById('articles_textarea').innerHTML = '';
+			for (i = 0; i < value; ++i) {
+				if (message[i]) {
+					document.getElementById('articles_textarea')
+							.innerHTML += '%page% ' + (i + 1) + '<br>' +
+					'<textarea name="message[' + i + ']" ' +
+					'rows="20" ' +
+					'cols="130" ' +
+					'onfocus="textarea = "message[' + i + ']";" ' +
+					'onblur="message[' + i + ']=this.value;" ' +
+					'onchange="message[' + i + ']=this.value;" ' +
+					'class="form-control">' + message[i] + '</textarea><br><br>';
+				}
+				else {
+					document.getElementById('articles_textarea')
+							.innerHTML += '%page% ' + (i + 1) + '<br>' +
+					'<textarea name="message[' + i + ']" ' +
+					'rows="20" ' +
+					'cols="130" ' +
+					'onfocus="textarea = "message[' + i + ']";" ' +
+					'onblur="message[' + i + ']=this.value;" ' +
+					'onchange="message[' + i + ']=this.value;" ' +
+					'class="form-control"></textarea><br><br>';
+				}
 			}
 		}
-		if(!validbbcode(message_text)){
-			return false;
-		}
-		
-	}
 
-	function update_textarea(value) {
-		document.getElementById('articles_textarea').innerHTML='';
-		for(i=0;i<value;++i) {
-			if(message[i]) document.getElementById('articles_textarea').innerHTML+='%page% '+(i + 1)+'<br><textarea name="message['+i+']" rows="20" cols="130" onfocus="textarea = \'message[' + i + ']\';" onblur="message['+i+']=this.value;" onchange="message['+i+']=this.value;" class="form-control">'+message[i]+'</textarea><br><br>';
-			else document.getElementById('articles_textarea').innerHTML+='%page% '+(i + 1)+'<br><textarea name="message['+i+']" rows="20" cols="130" onfocus="textarea = \'message[' + i + ']\';" onblur="message['+i+']=this.value;" onchange="message['+i+']=this.value;" class="form-control"></textarea><br><br>';
-		}
-	}
+		$message_vars
 
-	$message_vars
-
-	-->
+		-->
 	</script>
 </head>
 <body>
-<form action="articles.php?action=save" method="post" id="post" name="post" onsubmit="return chkFormular()">
-    <div class="container">
-        <h2>%edit_article%</h2>
-        <div class="panel-group" id="accordion">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h4 class="panel-title">
-                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">BBCode and Flags</a>
-                    </h4>
-                </div>
-                <div id="collapseOne" class="panel-collapse collapse in">
-                    <div class="panel-body">
-                        $addbbcode
-                        $addflags
-                    </div>
-                </div>
-            </div>
-            
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h4 class="panel-title">
-                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">%link%</a>
-                    </h4>
-                </div>
-                <div id="collapseTwo" class="panel-collapse collapse">
-                    <div class="panel-body">
-                        <div class="form-horizontal">
-                            <div class="form-group">
-                                <div class="col-xs-1">%link% 1:</div>
-                                <div class="col-xs-4"><input name="link1" type="text" value="$link1" class="form-control"></div>
-                                <div class="col-xs-4"><input name="url1" type="text" value="$url1" class="form-control"></div>
-                                <div class="col-xs-3">$window1</div>  
-                            </div>
-                            
-                            <div class="form-group">
-                                <div class="col-xs-1">%link% 2:</div>
-                                <div class="col-xs-4"><input name="link2" type="text" value="$link2" class="form-control"></div>
-                                <div class="col-xs-4"><input name="url2" type="text" value="$url2" class="form-control"></div>
-                                <div class="col-xs-3">$window2</div>
-                            </div>
-                            
-                            <div class="form-group">
-                                <div class="col-xs-1">%link% 3:</div>
-                                <div class="col-xs-4"><input name="link3" type="text" value="$link3" class="form-control"></div>
-                                <div class="col-xs-4"><input name="url3" type="text" value="$url3" class="form-control"></div>
-                                <div class="col-xs-3">$window3</div>
-                            </div>
-                            
-                            <div class="form-group">
-                                <div class="col-xs-1">%link% 4:</div>
-                                <div class="col-xs-4"><input name="link4" type="text" value="$link4" class="form-control"></div>
-                                <div class="col-xs-4"><input name="url4" type="text" value="$url4" class="form-control"></div>
-                                <div class="col-xs-3">$window4</div>
-                            </div>
-                            
-                            <input type="hidden" name="articlesID" value="$articlesID">
-                            <input type="hidden" name="userID" value="$userID">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h4 class="panel-title">
-                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">%options%</a>
-                    </h4>
-                </div>
-                <div id="collapseThree" class="panel-collapse collapse">
-                    <div class="panel-body">
-                        <b>%pagecount%</b>
-                        %page_select%
-            
-                        <input name="upload" type="button" onclick="MM_openBrWindow('upload.php?articlesID=$articlesID','Upload','scrollbars=yes,width=800,height=600')" value="%upload_images%" class="btn btn-danger">
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <div>
-            <div><b>%title%</b></div>
-            <input name="title" type="text" size="80" value="$title" id='article_title' class="form-control">
-            <p class="text-right"><small><b>%options%:</b> %html% %bbcode% %smilies%</small></p>
-            <div id="articles_textarea"></div>
-            
-            <script>
-            <!--
-            update_textarea($pages);
-            -->
-            </script>
-        </div>
+<form action="articles.php?action=save" method="post" id="post" name="post"
+		onsubmit="return chkFormular()">
+	<div class="container">
+		<h2>%edit_article%</h2>
+
+		<div class="panel-group" id="accordion">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title">
+						<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion"
+								href="#collapseOne">BBCode and Flags</a>
+					</h4>
+				</div>
+				<div id="collapseOne" class="panel-collapse collapse in">
+					<div class="panel-body">
+						$addbbcode
+						$addflags
+					</div>
+				</div>
+			</div>
+
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title">
+						<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion"
+								href="#collapseTwo">%link%</a>
+					</h4>
+				</div>
+				<div id="collapseTwo" class="panel-collapse collapse">
+					<div class="panel-body">
+						<div class="form-horizontal">
+							<div class="form-group">
+								<div class="col-xs-1">%link% 1:</div>
+								<div class="col-xs-4"><input name="link1" type="text" value="$link1"
+										class="form-control"></div>
+								<div class="col-xs-4"><input name="url1" type="text" value="$url1"
+										class="form-control">
+								</div>
+								<div class="col-xs-3">$window1</div>
+							</div>
+
+							<div class="form-group">
+								<div class="col-xs-1">%link% 2:</div>
+								<div class="col-xs-4"><input name="link2" type="text" value="$link2"
+										class="form-control"></div>
+								<div class="col-xs-4"><input name="url2" type="text" value="$url2"
+										class="form-control">
+								</div>
+								<div class="col-xs-3">$window2</div>
+							</div>
+
+							<div class="form-group">
+								<div class="col-xs-1">%link% 3:</div>
+								<div class="col-xs-4"><input name="link3" type="text" value="$link3"
+										class="form-control"></div>
+								<div class="col-xs-4"><input name="url3" type="text" value="$url3"
+										class="form-control">
+								</div>
+								<div class="col-xs-3">$window3</div>
+							</div>
+
+							<div class="form-group">
+								<div class="col-xs-1">%link% 4:</div>
+								<div class="col-xs-4"><input name="link4" type="text" value="$link4"
+										class="form-control"></div>
+								<div class="col-xs-4"><input name="url4" type="text" value="$url4"
+										class="form-control">
+								</div>
+								<div class="col-xs-3">$window4</div>
+							</div>
+
+							<input type="hidden" name="articlesID" value="$articlesID">
+							<input type="hidden" name="userID" value="$userID">
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title">
+						<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion"
+								href="#collapseThree">%options%</a>
+					</h4>
+				</div>
+				<div id="collapseThree" class="panel-collapse collapse">
+					<div class="panel-body">
+						<b>%pagecount%</b>
+						%page_select%
+
+						<input name="upload" type="button" onclick="MM_openBrWindow(
+							   'upload.php?articlesID=$articlesID',
+							   'Upload',
+							   'scrollbars=yes,width=800,height=600')" value="%upload_images%"
+								class="btn btn-danger">
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div>
+			<div><b>%title%</b></div>
+			<input name="title" type="text" size="80" value="$title" id='article_title'
+					class="form-control">
+
+			<p class="text-right">
+				<small><b>%options%:</b> %html% %bbcode% %smilies%</small>
+			</p>
+			<div id="articles_textarea"></div>
+
+			<script>
+				<!--
+				update_textarea($pages);
+				-->
+			</script>
+		</div>
 	</div>
 </form>
 </body>

@@ -1,48 +1,52 @@
 <script>
-<!--
-function chkFormular() {
-	if(document.getElementById('topicname').value == "") {
-		alert("%enter_topic%");
-		document.getElementById('topicname').focus();
-   		return false;
+	<!--
+	function chkFormular() {
+		if (document.getElementById('topicname').value === "") {
+			alert("%enter_topic%");
+			document.getElementById('topicname').focus();
+			return false;
+		}
+
+		if (document.getElementById('message').value === "") {
+			alert("%enter_text%");
+			document.getElementById('message').focus();
+			return false;
+		}
+		if (!validbbcode(document.getElementById('message').value)) {
+			return false;
+		}
 	}
-	
-	if(document.getElementById('message').value == "") {
-		alert("%enter_text%");
-		document.getElementById('message').focus();
-   		return false;
-	}
-	if(!validbbcode(document.getElementById('message').value)){
-		return false;
-	}
-}
-	
--->
+
+	-->
 </script>
 
-<form action="forum_topic.php?board=$board&amp;topic=$topic" method="post" id="post" name="post" onsubmit="return chkFormular()">
-    <h3>%edit_topic%</h3>
-    <b>%topic_icon%:</b>
-    $iconlist
-    
-    <div class="form-group">
-        <label for="topicname">%subject%:</label>
-        <input name="topicname" type="text" id="topicname" value="$topicname" class="form-control">
-    </div>
-    
-    <div class="form-group">
-        $addbbcode
-    </div>
-    <div class="form-group">
-        <textarea name="message" id="message" rows="10" class="form-control" autofocus>$message</textarea>
-        <div class="pull-right">$notify</div>
-        <small><b>%options%:</b> &#8226; %html_off% &#8226; %bbcode_on% &#8226; %smilies_on%</small>
-    </div>
-    
-    <div class="form-group text-right">
-        $chk_sticky
-        <input type="hidden" name="post" value="$post">
-        <input type="hidden" name="saveedittopic" value="true">
-        <input name="updatetopic" type="submit" value="%edit_topic%" class="btn btn-primary">
-    </div>
+<form action="forum_topic.php?board=$board&amp;topic=$topic" method="post" id="post" name="post"
+		onsubmit="return chkFormular()">
+	<h3>%edit_topic%</h3>
+	<b>%topic_icon%:</b>
+	$iconlist
+
+	<div class="form-group">
+		<label for="topicname">%subject%:</label>
+		<input name="topicname" type="text" id="topicname" value="$topicname" class="form-control">
+	</div>
+
+	<div class="form-group">
+		$addbbcode
+	</div>
+	<div class="form-group">
+		<textarea name="message" id="message" rows="10" class="form-control" autofocus>
+			$message
+		</textarea>
+
+		<div class="pull-right">$notify</div>
+		<small><b>%options%:</b> &#8226; %html_off% &#8226; %bbcode_on% &#8226; %smilies_on%</small>
+	</div>
+
+	<div class="form-group text-right">
+		$chk_sticky
+		<input type="hidden" name="post" value="$post">
+		<input type="hidden" name="saveedittopic" value="true">
+		<input name="updatetopic" type="submit" value="%edit_topic%" class="btn btn-primary">
+	</div>
 </form>

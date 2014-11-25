@@ -1,60 +1,76 @@
 <script>
-<!--
-function chkFormular() {
-	if(document.getElementById('message').value == "") {
-		alert("%enter_message%");
-		document.getElementById('message').focus();
-   		return false;
-	}
-	if(!validbbcode(document.getElementById('message').value)){
-		return false;
-	}
-}
+	<!--
+	function chkFormular() {
+		if (document.getElementById('message').value == "") {
+			alert("%enter_message%");
+			document.getElementById('message').focus();
 
--->
+			return false;
+		}
+		if (!validbbcode(document.getElementById('message').value)) {
+
+			return false;
+		}
+	}
+
+	-->
 </script>
 
 <form method="post" action="messenger.php" id="post" name="post" onsubmit="return chkFormular()">
-    <div class="btn-group btn-group-justified">
-        <a href="index.php?site=messenger" class="btn btn-default">%incoming%</a>
-        <a href="index.php?site=messenger&amp;action=outgoing" class="btn btn-default">%outgoing%</a>
-        <span class="btn btn-primary">%new_message%</span>
-    </div><br>
+	<div class="btn-group btn-group-justified">
+		<a href="index.php?site=messenger" class="btn btn-default">%incoming%</a>
+		<a href="index.php?site=messenger&amp;action=outgoing"
+				class="btn btn-default">%outgoing%</a>
+		<span class="btn btn-primary">%new_message%</span>
+	</div>
+	<br>
 
-    $error <!-- <div class="alert alert-danger"><b>Error:</b><br>Error message</div> -->
+	$error <!-- <div class="alert alert-danger"><b>Error:</b><br>Error message</div> -->
 
-    <div class="form-group">
-        <label for="title">%title%</label>
-        <input name="title" value="$subject" type="text" class="form-control" autofocus>
-    </div>
-    
-    <div class="form-group">
-        <label>%recipient%</label>
-        <div class="row">
-            <div class="col-md-6">
-                <input name="touser_field" type="text" class="form-control" placeholder="%enter_username%">
-            </div>
-            <div class="col-md-6">
-                <select name="touser[]" size="1" class="form-control">$user</select>
-            </div>
-        </div>
-    </div>
+	<div class="form-group">
+		<label for="title">%title%</label>
+		<input name="title" value="$subject" type="text" class="form-control" autofocus>
+	</div>
 
-    <div class="form-group">
-        <b>%formation%</b><br>$addbbcode
-    </div>
+	<div class="form-group">
+		<label>%recipient%</label>
 
-    <div class="form-group">
-        <b>%your_message%</b><br>
-        <textarea name="message" id="message" rows="10" class="form-control">$message</textarea>
-    </div>
+		<div class="row">
+			<div class="col-md-6">
+				<input name="touser_field" type="text" class="form-control"
+						placeholder="%enter_username%">
+			</div>
+			<div class="col-md-6">
+				<select name="touser[]" size="1" class="form-control">$user</select>
+			</div>
+		</div>
+	</div>
 
-    <div class="form-group text-right">
-        <small><b>%options%</b> <a href="javascript:MM_openBrWindow('code.php','BBCode','scrollbars=yes,width=600,height=500')">%bbcode%</a> | <a href="javascript:MM_openBrWindow('smileys.php','Smileys','scrollbars=yes,width=340,height=500')">%smilies%</a></small>
-    </div>
-    
-    <div class="form-group">
-        <input type="submit" name="send" value="%send_message%" class="btn btn-danger pull-right">
-    </div>
-    $admin
+	<div class="form-group">
+		<b>%formation%</b><br>$addbbcode
+	</div>
+
+	<div class="form-group">
+		<b>%your_message%</b><br>
+		<textarea name="message" id="message" rows="10" class="form-control">$message</textarea>
+	</div>
+
+	<div class="form-group text-right">
+		<small><b>%options%</b> <a
+				href="javascript:MM_openBrWindow(
+				'code.php',
+				'BBCode',
+				'scrollbars=yes,width=600,height=500')">%bbcode%</a>
+			|
+			<a href="javascript:MM_openBrWindow(
+			'smileys.php',
+			'Smileys',
+			'scrollbars=yes,width=340,height=500')">%smilies%</a>
+		</small>
+	</div>
+
+	<div class="form-group">
+		<input type="submit" name="send" value="%send_message%" class="btn btn-danger pull-right">
+	</div>
+	$admin
 </form>

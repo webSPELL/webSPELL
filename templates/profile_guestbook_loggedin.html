@@ -1,33 +1,48 @@
 <script>
-<!--
-function chkFormular() {
-	if(document.getElementById('message').value == "") {
-		alert("%yht_enter_message%");
-		document.getElementById('message').focus();
-   		return false;
+	<!--
+	function chkFormular() {
+		if (document.getElementById('message').value == "") {
+			alert("%yht_enter_message%");
+			document.getElementById('message').focus();
+
+			return false;
+		}
+		if (!validbbcode(document.getElementById('message').value)) {
+
+			return false;
+		}
+
 	}
-	if(!validbbcode(document.getElementById('message').value)){
-		return false;
-	}
-	
-}
--->
+	-->
 </script>
 
-<form id="post" name="post" method="post" action="index.php?site=profile&amp;action=guestbook&amp;id=$id" onsubmit="return chkFormular()">
-    <h4>%new_entry%</h4>
-    <div class="form-group">
-        $addbbcode
-    </div>
-    <div class="form-group">
-        <textarea name="message" id="message" rows="5" class="form-control" autofocus></textarea>
-        <small class="pull-right"><b>%options%:</b> <a href="javascript:MM_openBrWindow('code.php','%bbcode%','scrollbars=yes,width=600,height=500')">%bbcode%</a> | <a href="javascript:MM_openBrWindow('smileys.php','%smilies%','scrollbars=yes,width=340,height=500')">%smilies%</a></small>
-    </div>
-    <div class="form-group">
-        <input type="hidden" name="gbname" value="$name">
-        <input type="hidden" name="gbemail" value="$email">
-        <input type="hidden" name="gburl" value="$url"> 
-        <input type="hidden" name="icq" value="$icq">
-        <input name="save" type="submit" value="%submit%" class="btn btn-primary">
-    </div>
+<form id="post" name="post" method="post"
+		action="index.php?site=profile&amp;action=guestbook&amp;id=$id"
+		onsubmit="return chkFormular()">
+	<h4>%new_entry%</h4>
+
+	<div class="form-group">
+		$addbbcode
+	</div>
+	<div class="form-group">
+		<textarea name="message" id="message" rows="5" class="form-control" autofocus></textarea>
+		<small class="pull-right"><b>%options%:</b> <a
+				href="javascript:MM_openBrWindow(
+				'code.php',
+				'%bbcode%',
+				'scrollbars=yes,width=600,height=500')">%bbcode%</a>
+			|
+			<a href="javascript:MM_openBrWindow(
+			'smileys.php',
+			'%smilies%',
+			'scrollbars=yes,width=340,height=500')">%smilies%</a>
+		</small>
+	</div>
+	<div class="form-group">
+		<input type="hidden" name="gbname" value="$name">
+		<input type="hidden" name="gbemail" value="$email">
+		<input type="hidden" name="gburl" value="$url">
+		<input type="hidden" name="icq" value="$icq">
+		<input name="save" type="submit" value="%submit%" class="btn btn-primary">
+	</div>
 </form>
