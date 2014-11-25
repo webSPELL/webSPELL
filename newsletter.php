@@ -31,73 +31,64 @@ if(isset($_GET['action'])) $action = $_GET['action'];
 else $action='';
 
 if($action=="save") {
-
+	
 	$email = $_POST['email'];
-
-	if(!validate_email($email)) redirect('index.php?site=newsletter', $_language->module['email_not_valid'],3);
+	
+	if(!validate_email($email)) redirect('index.php?site=newsletter', '<div class="alert alert-danger" role="alert">'.$_language->module['email_not_valid'].'</div>',3);
 	else {
 		$ergebnis = safe_query("SELECT * FROM ".PREFIX."newsletter WHERE email='".$email."'");
 		if(!mysqli_num_rows($ergebnis)) {
-      		$pass = RandPass(7);
-
+			$pass = RandPass(7);
+			
 			safe_query("INSERT INTO ".PREFIX."newsletter ( email, pass) values ('".$email."', '".$pass."')");
-
+			
 			$header="From:".$hp_title."<".$admin_email.">\n";
 			$header .= "Reply-To: ".$admin_email."\n";
 			$header.= "Content-Type: text/html; charset=utf-8\n";
 			$vars = Array('%delete_key%', '%homepage_url%', '%mail%');
 			$repl = Array($pass, $hp_url, $email);
 			mail($email, $hp_title.": ".$_language->module['newsletter_registration'], str_replace($vars, $repl, $_language->module['success_mail']), $header);
-
-			redirect('index.php?site=newsletter', $_language->module['thank_you_for_registration'],3);
-		}
-		else redirect('index.php?site=newsletter', $_language->module['you_are_already_registered'],3);
+			
+			redirect('index.php?site=newsletter', '<div class="alert alert-success" role="alert">'.$_language->module['thank_you_for_registration'].'</div>',3);
+		} else redirect('index.php?site=newsletter', '<div class="alert alert-danger" role="alert">'.$_language->module['you_are_already_registered'].'</div>',3);
 	}
 }
 elseif($action=="delete") {
 	$ergebnis = safe_query("SELECT pass FROM ".PREFIX."newsletter WHERE email='".$_POST['email']."'");
 	$any=mysqli_num_rows($ergebnis);
-	if($any){
+	if($any) {
 		$dn=mysqli_fetch_array($ergebnis);
-	
+		
 		if($_POST['password'] == $dn['pass']) {
 			safe_query("DELETE FROM ".PREFIX."newsletter WHERE email='".$_POST['email']."'");
-			redirect('index.php?site=newsletter', $_language->module['your_mail_adress_deleted'],3);
+			redirect('index.php?site=newsletter', '<div class="alert alert-success" role="alert">'.$_language->module['your_mail_adress_deleted'].'</div>',3);
+		} else {
+			redirect('index.php?site=newsletter', '<div class="alert alert-danger" role="alert">'.$_language->module['mail_pw_didnt_match'].'</div>',3);
 		}
-		else {
-			redirect('index.php?site=newsletter', $_language->module['mail_pw_didnt_match'],3);
-		}
-	}
-	else {
-		redirect('index.php?site=newsletter', $_language->module['mail_not_in_db'],3);
+	} else {
+		redirect('index.php?site=newsletter', '<div class="alert alert-danger" role="alert">'.$_language->module['mail_not_in_db'].'</div>',3);
 	}
 }
 elseif($action=="forgot") {
 	$ergebnis = safe_query("SELECT pass FROM ".PREFIX."newsletter WHERE email='".$_POST['email']."'");
 	$dn=mysqli_fetch_array($ergebnis);
-
+	
 	if($dn['pass'] != "") {
-
+		
 		$email = $_POST['email'];
 		$pass = $dn['pass'];
-
+		
 		$header="From:".$hp_title."<".$admin_email.">\n";
 		$header .= "Reply-To: ".$admin_email."\n";
 		$header.= "Content-Type: text/html; charset=utf-8\n";
 		$vars = Array('%delete_key%', '%homepage_url%', '%mail%');
 		$repl = Array($pass, $hp_url, $email);
 		mail($email, $hp_title.": ".$_language->module['deletion_key'], str_replace($vars, $repl, $_language->module['request_mail']), $header);
-
-		redirect('index.php?site=newsletter', $_language->module['password_had_been_send'],3);
-	}
-	else redirect('index.php?site=newsletter', $_language->module['no_such_mail_adress'],3);
-}
-else {
-
-	$bg1=BG_1;
-	$bg2=BG_2;
-	$bg3=BG_3;
-	$bg4=BG_4;
+		
+		redirect('index.php?site=newsletter', '<div class="alert alert-success" role="alert">'.$_language->module['password_had_been_send'].'</div>',3);
+	} else redirect('index.php?site=newsletter', '<div class="alert alert-danger" role="alert">'.$_language->module['no_such_mail_adress'].'</div>',3);
+	
+} else {
 
 	$usermail = getemail($userID);
 	if(isset($_GET['mail'])) $get_mail = getforminput($_GET['mail']);
@@ -114,4 +105,4 @@ else {
 	echo $newsletter;
 
 }
-?>
+?> 
