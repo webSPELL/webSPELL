@@ -1,23 +1,40 @@
-module.exports = function (grunt) {
+module.exports = function(grunt) {
+	var javascripts = [
+			"Gruntfile.js",
+			"js/bbcode.js"
+		],
+		templates = [
+			"templates/*.html"
+		];
 
-	require('logfile-grunt')(grunt, {
-		filePath: './grunt-log.txt',
+	require("logfile-grunt")(grunt, {
+		filePath: "./grunt-log.txt",
 		clearLogFile: true
 	});
 
 	// Project configuration.
 	grunt.initConfig({
+		lintspaces: {
+			all: {
+				src: [
+					//"*.php",
+					javascripts,
+					templates
+				],
+				options: {
+					editorconfig: ".editorconfig"
+				}
+			}
+		},
 		jshint: {
-			all: ['Gruntfile.js', 'js/bbcode.js']
+			all: [ javascripts ]
 		},
 		jscs: {
 			options: {
-				preset: 'jquery', // See: https://contribute.jquery.org/style-guide/js/
-				validateLineBreaks: null, // Needs to be set because of Windows machines
+				preset: "jquery", // See: https://contribute.jquery.org/style-guide/js/
+				validateLineBreaks: null // Needs to be set because of Windows machines
 			},
-			src: [
-				'js/bbcode.js',
-			]
+			src: [ javascripts ]
 		},
 		watch: {
 			options: {
@@ -25,22 +42,28 @@ module.exports = function (grunt) {
 			},
 			js: {
 				files: [
-					'js/*.js'
+					"js/*.js"
 				],
 				tasks: [
-					'js'
+					"js"
 				]
-			},
+			}
 		}
 	});
 
 	// These plugins provide necessary tasks.
-	grunt.loadNpmTasks('grunt-contrib-watch');
-	grunt.loadNpmTasks('grunt-contrib-jshint');
+	grunt.loadNpmTasks("grunt-contrib-watch");
+	grunt.loadNpmTasks("grunt-contrib-jshint");
 	grunt.loadNpmTasks("grunt-jscs");
+	grunt.loadNpmTasks("grunt-lintspaces");
 
-	grunt.registerTask('js', [
-		'jshint',
-		'jscs'
+	grunt.registerTask("codecheck", [
+		"lintspaces",
+		"jshint",
+		"jscs"
+	]);
+	grunt.registerTask("js", [
+		"jshint",
+		"jscs"
 	]);
 };

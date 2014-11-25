@@ -29,7 +29,7 @@
 		}
 		squad_box = document.getElementById("squad");
 		if (squad_box.options.length) {
-			if (squad_box.options[squad_box.selectedIndex].value == "") {
+			if (squad_box.options[ squad_box.selectedIndex ].value == "") {
 
 				return false;
 			}
@@ -115,9 +115,8 @@
 		</tr>
 		<tr>
 			<td colspan="4" align="right">
-				<input name="news" type="checkbox" class="input" value="true" class="form-control">
-				%publish_clanwar_news%?
-
+				<input name="news" type="checkbox" class="input" value="true"
+						class="form-control">%publish_clanwar_news%?
 				<select name="comments" class="form-control">
 					<option value="0">%disable_comments%</option>
 					<option value="1">%user_comments%</option>

@@ -5,43 +5,51 @@
 			<input type="button" accesskey="u" value="U" style="width: 30px;" onclick="AddU()">
 			<input type="button" accesskey="i" value="I" style="width: 30px;" onclick="AddI()">
 			<input type="button" accesskey="s" value="S" style="width: 30px;" onclick="AddS()">
-			<input type="button" accesskey="e" value=" @ " style="width: 30px;" onclick="AddLink('EMAIL')"
-				   onmouseover="showWMTT('tooltip_email')" onmouseout="hideWMTT()">
-			<input type="button" accesskey="w" value="URL" style="width: 45px;" onclick="AddLink('URL')"
-				   onmouseover="showWMTT('tooltip_url')" onmouseout="hideWMTT()">
+			<input type="button" accesskey="e" value=" @ " style="width: 30px;"
+					onclick="AddLink('EMAIL')" onmouseover="showWMTT('tooltip_email')"
+					onmouseout="hideWMTT()">
+			<input type="button" accesskey="w" value="URL" style="width: 45px;"
+					onclick="AddLink('URL')" onmouseover="showWMTT('tooltip_url')"
+					onmouseout="hideWMTT()">
 			<input type="button" accesskey="p" value="IMG" style="width: 35px;" onclick="AddImg()"
-				   onmouseover="showWMTT('tooltip_img')" onmouseout="hideWMTT()">
+					onmouseover="showWMTT('tooltip_img')" onmouseout="hideWMTT()">
 			<input type="button" accesskey="l" value="List" style="width: 35px" onclick="AddList()"
-				   onmouseover="showWMTT('tooltip_list')" onmouseout="hideWMTT()">
-			<input type="button" accesskey="q" value="Quote" style="width: 45px" onclick="AddQuote()"
-				   onmouseover="showWMTT('tooltip_quote')" onmouseout="hideWMTT()">
-			<input type="button" accesskey="c" value="Code" style="width: 50px" onclick="AddCodetag()">
-			<input type="button" accesskey="t" value="Toggle" style="width: 50px" onclick="AddToggle()"
-				   onmouseover="showWMTT('tooltip_toggle')" onmouseout="hideWMTT()">
+					onmouseover="showWMTT('tooltip_list')" onmouseout="hideWMTT()">
+			<input type="button" accesskey="q" value="Quote" style="width: 45px"
+					onclick="AddQuote()" onmouseover="showWMTT('tooltip_quote')"
+					onmouseout="hideWMTT()">
+			<input type="button" accesskey="c" value="Code" style="width: 50px"
+					onclick="AddCodetag()">
+			<input type="button" accesskey="t" value="Toggle" style="width: 50px"
+					onclick="AddToggle()" onmouseover="showWMTT('tooltip_toggle')"
+					onmouseout="hideWMTT()">
 
-			<div class="tooltip" style="width: 315px; text-align: center;" id="tooltip_email">[EMAIL=you@yoursite.com]My
+			<div class="tooltip" style="width: 315px; text-align: center;" id="tooltip_email">
+				[EMAIL=you@yoursite.com]My
 				email address[/EMAIL]<br>[EMAIL]you@yoursite.com[/EMAIL]
 			</div>
-			<div class="tooltip" style="width: 265px; text-align: center;" id="tooltip_url">[URL=http://yoursite.com]My
+			<div class="tooltip" style="width: 265px; text-align: center;" id="tooltip_url">
+				[URL=http://yoursite.com]My
 				website[/URL]<br>[URL]http://yoursite.com[/URL]
 			</div>
 			<div class="tooltip" style="width: 250px; text-align: center;" id="tooltip_img">
 				[IMG]http://yoursite.com/image.jpg[IMG]
 			</div>
-			<div class="tooltip" style="width: 310px; text-align: center;" id="tooltip_list">[LIST=a][*]point
+			<div class="tooltip" style="width: 310px; text-align: center;" id="tooltip_list">
+				[LIST=a][*]point
 				1[/*][*]point 2[/*][/LIST]<br>[LIST=1][*]point 1[/*][*]point 2[/*][/LIST]
 			</div>
 			<div class="tooltip" style="width: 220px; text-align: center;" id="tooltip_quote">
 				[QUOTE=Nickname]Quote[/QUOTE]<br>[QUOTE]Quote[/QUOTE]
 			</div>
-			<div class="tooltip" style="width: 250px; text-align: center;" id="tooltip_toggle">[TOGGLE=Read more]Full
+			<div class="tooltip" style="width: 250px; text-align: center;" id="tooltip_toggle">
+				[TOGGLE=Read more]Full
 				Text[/TOGGLE]
 			</div>
 		</td>
 	</tr>
 	<tr>
-		<td><select name="fontcolor"
-					onchange="AddTag(
+		<td><select name="fontcolor" onchange="AddTag(
 						'[COLOR=' + this.options[this.selectedIndex].value + ']',
 						'[/COLOR]',
 						''
@@ -73,8 +81,7 @@
 			<option value="#C0C0C0" style="color:#C0C0C0;">%silver%</option>
 		</select>
 
-			<select name="fontcolor"
-					onchange="AddTag(
+			<select name="fontcolor" onchange="AddTag(
 					'[COLOR=' + this.options[this.selectedIndex].value + ']',
 					'[/COLOR]',
 					'');this.selectedIndex='0';">
@@ -105,8 +112,7 @@
 				<option value="#C0C0C0" style="color:#C0C0C0;">%silver%</option>
 			</select>
 
-			<select name="fontsize"
-					onchange="AddTag('[SIZE=' + this.options[this.selectedIndex].value + ']',
+			<select name="fontsize" onchange="AddTag('[SIZE=' + this.options[this.selectedIndex].value + ']',
 					'[/SIZE]',
 					'');this.selectedIndex='0';">
 				<option value="0">%size%</option>
@@ -117,8 +123,7 @@
 				<option value="5">%huge%</option>
 			</select>
 
-			<select name="font"
-					onchange="AddTag('[FONT=' + this.options[this.selectedIndex].value + ']',
+			<select name="font" onchange="AddTag('[FONT=' + this.options[this.selectedIndex].value + ']',
 					'[/FONT]',
 					'');this.selectedIndex='0';">
 				<option value="0">%font%</option>

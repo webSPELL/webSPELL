@@ -295,10 +295,10 @@ function addRow(action) {
 // function removeRow() ** removes the last row of a table
 function removeRow() {
 	var table = document.getElementById("maplist"),
-	  theRows = table.rows.length;
+		theRows = table.rows.length;
 
 	if (theRows != 1) {
-	  table.deleteRow(theRows - 1);
+		table.deleteRow(theRows - 1);
 	}
 }
 
@@ -342,7 +342,7 @@ function AddCode(code) {
 /* tooltip */
 function updateWMTT(e) {
 	var x = (document.all) ? window.event.x + document.body.scrollLeft : e.pageX,
-		y = (document.all) ? window.event.y + document.body.scrollTop  : e.pageY;
+		y = (document.all) ? window.event.y + document.body.scrollTop : e.pageY;
 
 	if (wmtt) {
 		wmtt.style.left = (x + 20) + "px";
@@ -374,7 +374,7 @@ function postRequest(strURL, id, action) {
 	xmlHttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 	xmlHttp.onreadystatechange = function() {
 		if (xmlHttp.readyState === 4) {
-		  updatepage(xmlHttp.responseText, id, action);
+			updatepage(xmlHttp.responseText, id, action);
 		}
 	};
 	xmlHttp.send(strURL);
@@ -390,9 +390,10 @@ function updatepage(str, id, action) {
 		document.getElementById(id).value = trim(str);
 	} else if (action === "return") {
 		return str;
-	}/* else if (action === "execute"){
-		eval(str);
-	}*/
+	}
+	//else if (action === "execute") {
+	//	eval(str);
+	//}
 }
 
 //fetch data for onclick/onchange events
@@ -448,7 +449,7 @@ function getposOffset(overlay, offsettype) {
 		parentEl = overlay.offsetParent;
 	while (parentEl !== null) {
 		totaloffset = (offsettype === "left") ?
-			totaloffset + parentEl.offsetLeft : totaloffset + parentEl.offsetTop;
+		totaloffset + parentEl.offsetLeft : totaloffset + parentEl.offsetTop;
 		parentEl = parentEl.offsetParent;
 	}
 	return totaloffset;
@@ -488,11 +489,11 @@ function formcheckOnsend(id) {
 //bbcode checker
 function validbbcode(txt) {
 	var searchregexp = /\[(B|\/B|U|\/U|I|\/I|S|\/S|code|\/code|LIST|LIST[a1=]*|\/LIST[a1=]*|\*|\/\*|\/LIST|EMAIL[a-zA-Z0-9=#@\._-]*|\/EMAIL|URL[a-zA-Z0-9=#,;+@&?%:\/\._-]*|\/URL|IMG|\/IMG|QUOTE[^\]]*|\/QUOTE|TOGGLE[^\]]*|\/TOGGLE|SIZE=[1-5]{1}|\/SIZE|COLOR[^\]]*|\/COLOR|ALIGN[^\]]*|\/ALIGN|FONT[^\]]*|\/FONT)\]/ig,
-	resulttemp = txt.match(searchregexp),
-	result = [],
-	ocode = 0,
-	putincounter = 0,
-	c;
+		resulttemp = txt.match(searchregexp),
+		result = [],
+		ocode = 0,
+		putincounter = 0,
+		c;
 
 	if (resulttemp) {
 		resulttemp = [];
