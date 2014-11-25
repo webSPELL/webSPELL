@@ -44,33 +44,32 @@ while($ds=mysqli_fetch_array($ergebnis)) {
 // reading version
 include('version.php');
 
-$bg1=BG_1;
 $headline1 = $_language->module['imprint'];
 $headline2 = $_language->module['coding'];
 
 if($imprint_type) {
 	$ds=mysqli_fetch_array(safe_query("SELECT imprint FROM `".PREFIX."imprint`"));
-	$imprint_head = htmloutput($ds['imprint'])."<br><br>";
+	$imprint_head = htmloutput($ds['imprint']);
 } else {
 	$imprint_head='<div class="form-horizontal">
-	  <div class="form-group">
-		<label class="col-sm-3 control-label">'.$_language->module['webmaster'].'</label>
-		<div class="col-sm-9">
-		  <p class="form-control-static"><a href="mailto:'.mail_protect($admin_email).'">'.$admin_name.'</a></p>
+		<div class="form-group">
+			<label class="col-sm-3 control-label">'.$_language->module['webmaster'].'</label>
+			<div class="col-sm-9">
+				<p class="form-control-static"><a href="mailto:'.mail_protect($admin_email).'">'.$admin_name.'</a></p>
+			</div>
 		</div>
-	  </div>
-	  <div class="form-group">
-		<label class="col-sm-3 control-label">'.$_language->module['admins'].'</label>
-		<div class="col-sm-9">
-		  <p class="form-control-static">'.$administrators.'</p>
+		<div class="form-group">
+			<label class="col-sm-3 control-label">'.$_language->module['admins'].'</label>
+			<div class="col-sm-9">
+				<p class="form-control-static">'.$administrators.'</p>
+			</div>
 		</div>
-	  </div>
-	  <div class="form-group">
-		<label class="col-sm-3 control-label">'.$_language->module['webmaster'].'</label>
-		<div class="col-sm-9">
-		  <p class="form-control-static">'.$moderators.'</p>
+		<div class="form-group">
+			<label class="col-sm-3 control-label">'.$_language->module['webmaster'].'</label>
+			<div class="col-sm-9">
+				<p class="form-control-static">'.$moderators.'</p>
+			</div>
 		</div>
-	  </div>
 	</div>';
 }
 
