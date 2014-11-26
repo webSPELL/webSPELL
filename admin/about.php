@@ -47,7 +47,7 @@ else {
 	$CAPCLASS = new Captcha;
 	$CAPCLASS->create_transaction();
 	$hash = $CAPCLASS->get_hash();
-	
+
 	$_language->read_module('bbcode', true);
 
 	echo '<script>
@@ -59,22 +59,22 @@ else {
 						}
 					-->
 				</script>';
-	
+
 	echo '<form method="post" id="post" name="post" action="admincenter.php?site=about" onsubmit="return chkFormular();">
   <b>'.$_language->module['about'].'</b><br><small>'.$_language->module['you_can_use_html'].'</small><br><br>';
-	
+
 	eval ("\$addbbcode = \"".gettemplate("addbbcode", "html", "admin")."\";");
   eval ("\$addflags = \"".gettemplate("flags_admin", "html", "admin")."\";");
-  
+
   echo '<table width="100%" border="0" cellspacing="0" cellpadding="0">
 		      <tr>
 		        <td valign="top">'.$addbbcode.'</td>
 		        <td valign="top">'.$addflags.'</td>
 		      </tr>
 		    </table>';
-  
+
   echo '<br><textarea id="message" name="message" rows="30" cols="" style="width: 100%;">'.getinput($ds['about']).'</textarea>
-  <br><br><input type="hidden" name="captcha_hash" value="'.$hash.'"><input type="submit" name="submit" value="'.$_language->module['update'].'">
+  <br /><br /><input type="hidden" name="captcha_hash" value="'.$hash.'" /><input type="submit" name="submit" value="'.$_language->module['update'].'" />
   </form>';
 }
 ?>

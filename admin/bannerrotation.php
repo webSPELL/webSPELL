@@ -37,11 +37,11 @@ else $action = '';
 if($action=="add") {
 
   echo'<h1>&curren; <a href="admincenter.php?site=bannerrotation" class="white">'.$_language->module['bannerrotation'].'</a> &raquo; '.$_language->module['add_banner'].'</h1>';
-	
+
 	$CAPCLASS = new Captcha;
 	$CAPCLASS->create_transaction();
 	$hash = $CAPCLASS->get_hash();
-	
+
   echo'<form method="post" action="admincenter.php?site=bannerrotation" enctype="multipart/form-data">
   <table width="100%" border="0" cellspacing="1" cellpadding="3">
     <tr>
@@ -76,12 +76,12 @@ elseif($action=="edit") {
 	if(file_exists($filepath.$ds['bannerID'].'.gif'))	$pic='<img src="../images/bannerrotation/'.$ds['bannerID'].'.gif" alt="'.$ds['banner'].'">';
 	elseif(file_exists($filepath.$ds['bannerID'].'.jpg'))	$pic='<img src="../images/bannerrotation/'.$ds['bannerID'].'.jpg" alt="'.$ds['banner'].'">';
 	elseif(file_exists($filepath.$ds['bannerID'].'.png'))	$pic='<img src="../images/bannerrotation/'.$ds['bannerID'].'.png" alt="'.$ds['banner'].'">';
-  
+
 	else $pic=$_language->module['no_upload'];
 
 	if($ds['displayed']=='1') $displayed='<input type="checkbox" name="displayed" value="1" checked="checked">';
 	else $displayed='<input type="checkbox" name="displayed" value="1">';
-	
+
   $CAPCLASS = new Captcha;
 	$CAPCLASS->create_transaction();
 	$hash = $CAPCLASS->get_hash();
@@ -123,13 +123,13 @@ elseif(isset($_POST["save"])) {
 	if(isset($_POST["displayed"])) $displayed = $_POST['displayed'];
   	else $displayed="";
   	if(!$displayed) $displayed=0;
-  	
+
   	$CAPCLASS = new Captcha;
 	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
 		if($bannername AND $bannerurl AND $banner) {
 			if(stristr($bannerurl,'http://')) $bannerurl=$bannerurl;
 			else $bannerurl='http://'.$bannerurl;
-	
+
 			$file_ext=strtolower(mb_substr($banner['name'], strrpos($banner['name'], ".")));
 			if($file_ext==".gif" OR $file_ext==".jpg" OR $file_ext==".png") {
 				safe_query("INSERT INTO ".PREFIX."bannerrotation (bannerID, bannername, bannerurl, displayed, date) values('', '".$bannername."', '".$bannerurl."', '".$displayed."', '".time()."')");
@@ -158,14 +158,14 @@ elseif(isset($_POST["saveedit"])) {
 	else $displayed="";
 	if(!$displayed) $displayed=0;
 	$CAPCLASS = new Captcha;
-	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {	
+	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
 		if($banner AND $bannername AND $bannerurl) {
 			if(stristr($bannerurl,'http://')) $bannerurl=$bannerurl;
 			else $bannerurl='http://'.$bannerurl;
-	
+
 			if($banner['name']=="") {
 				if(safe_query("UPDATE ".PREFIX."bannerrotation SET bannername='".$bannername."', bannerurl='".$bannerurl."', displayed='".$displayed."' WHERE bannerID='".$_POST["bannerID"]."'"))
-					redirect("admincenter.php?site=bannerrotation","",0);			
+					redirect("admincenter.php?site=bannerrotation","",0);
 	    	} else {
 				$file_ext=strtolower(mb_substr($banner['name'], strrpos($banner['name'], ".")));
 				if($file_ext==".gif" OR $file_ext==".jpg" OR $file_ext==".png") {
@@ -174,7 +174,7 @@ elseif(isset($_POST["saveedit"])) {
 					$file=$_POST['bannerID'].$file_ext;
 					unlink($filepath.$file);
 					rename($filepath.$banner['name'], $filepath.$file);
-	
+
 					if(safe_query("UPDATE ".PREFIX."bannerrotation SET banner='".$file."', bannername='".$bannername."', bannerurl='".$bannerurl."', displayed='".$displayed."' WHERE bannerID='".$_POST["bannerID"]."'")) {
 						redirect("admincenter.php?site=bannerrotation","",0);
 					}
@@ -201,9 +201,9 @@ elseif(isset($_GET["delete"])) {
 else {
 
   echo'<h1>&curren; '.$_language->module['bannerrotation'].'</h1>';
-  
-  echo'<input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=bannerrotation&amp;action=add\');return document.MM_returnValue" value="'.$_language->module['new_banner'].'"><br><br>';
-  
+
+  echo'<input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=bannerrotation&amp;action=add\');return document.MM_returnValue" value="'.$_language->module['new_banner'].'" /><br /><br />';
+
   echo'<form method="post" action="admincenter.php?site=bannerrotation">
   <table width="100%" border="0" cellspacing="1" cellpadding="3" bgcolor="#DDDDDD">
     <tr>
@@ -213,11 +213,11 @@ else {
       <td width="15%" class="title"><b>'.$_language->module['is_displayed'].'</b></td>
       <td width="20%" class="title"><b>'.$_language->module['actions'].'</b></td>
     </tr>';
-  
+
   $CAPCLASS = new Captcha;
 	$CAPCLASS->create_transaction();
 	$hash = $CAPCLASS->get_hash();
-    
+
 	$qry=safe_query("SELECT * FROM ".PREFIX."bannerrotation ORDER BY bannerID");
 	$anz=mysqli_num_rows($qry);
 	if($anz) {
@@ -225,7 +225,7 @@ else {
     while($ds = mysqli_fetch_array($qry)) {
       if($i%2) { $td='td1'; }
 			else { $td='td2'; }
-      
+
 			$ds['displayed']==1 ? $displayed='<font color="green"><b>'.$_language->module['yes'].'</b></font>' : $displayed='<font color="red"><b>'.$_language->module['no'].'</b></font>';
 
 			if(stristr($ds['bannerurl'],'http://')) $bannerurl='<a href="'.getinput($ds['bannerurl']).'" target="_blank">'.getinput($ds['bannerurl']).'</a>';
@@ -234,7 +234,7 @@ else {
 			$days=round((time()-$ds['date'])/(60*60*24));
 			if($days) $perday=round($ds['hits']/$days,2);
 			else $perday=$ds['hits'];
-      
+
 			echo'<tr>
         <td class="'.$td.'">'.getinput($ds['bannername']).'</td>
         <td class="'.$td.'">'.$bannerurl.'</td>
@@ -243,12 +243,12 @@ else {
         <td class="'.$td.'" align="center"><input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=bannerrotation&amp;action=edit&amp;bannerID='.$ds['bannerID'].'\');return document.MM_returnValue" value="'.$_language->module['edit'].'">
         <input type="button" onclick="MM_confirm(\''.$_language->module['really_delete'].'\', \'admincenter.php?site=bannerrotation&amp;delete=true&amp;bannerID='.$ds['bannerID'].'&amp;captcha_hash='.$hash.'\')" value="'.$_language->module['delete'].'"></td>
       </tr>';
-      
+
       $i++;
 		}
 	}
   else echo'<tr><td class="td1" colspan="5">'.$_language->module['no_entries'].'</td></tr>';
-	
+
   echo '</table></form>';
 }
 ?>

@@ -36,7 +36,7 @@ if(isset($_POST['submit'])) {
 	$CAPCLASS = new Captcha;
 	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
 		safe_query("UPDATE `".PREFIX."settings` SET imprint='".$_POST['type']."'");
-	
+
 		if(mysqli_num_rows(safe_query("SELECT * FROM `".PREFIX."imprint`"))) safe_query("UPDATE `".PREFIX."imprint` SET imprint='$imprint'");
 		else safe_query("INSERT INTO `".PREFIX."imprint` (imprint) values( '$imprint') ");
 		redirect("admincenter.php?site=imprint", "", 0);
@@ -54,12 +54,12 @@ else {
 	$CAPCLASS = new Captcha;
 	$CAPCLASS->create_transaction();
 	$hash = $CAPCLASS->get_hash();
-	
+
 	$_language->read_module('bbcode', true);
-	
+
 	eval ("\$addbbcode = \"".gettemplate("addbbcode", "html", "admin")."\";");
   eval ("\$addflags = \"".gettemplate("flags_admin", "html", "admin")."\";");
-	
+
   echo '<script>
 					<!--
 						function chkFormular() {
@@ -69,20 +69,20 @@ else {
 						}
 					-->
 				</script>';
-  
+
 	echo'<form method="post" id="post" name="post" action="admincenter.php?site=imprint" onsubmit="return chkFormular();">
-  <input type="radio" name="type" value="0" '.$type0.'> '.$_language->module['automatic'].'<br>
-  <input type="radio" name="type" value="1" '.$type1.'> '.$_language->module['manual'].'<br><br><b>'.$_language->module['imprint'].'</b><br><small>'.$_language->module['you_can_use_html'].'</small><br><br>';
-	
+  <input type="radio" name="type" value="0" '.$type0.' /> '.$_language->module['automatic'].'<br />
+  <input type="radio" name="type" value="1" '.$type1.' /> '.$_language->module['manual'].'<br /><br /><b>'.$_language->module['imprint'].'</b><br /><small>'.$_language->module['you_can_use_html'].'</small><br /><br />';
+
 	echo '<table width="100%" border="0" cellspacing="0" cellpadding="0">
 		      <tr>
 		        <td valign="top">'.$addbbcode.'</td>
 		        <td valign="top">'.$addflags.'</td>
 		      </tr>
 		    </table>';
-	
-  echo '<br><textarea id="message" name="message" rows="30" cols="" style="width: 100%;">'.getinput($ds['imprint']).'</textarea><br><br><input type="hidden" name="captcha_hash" value="'.$hash.'">
-  <input type="submit" name="submit" value="'.$_language->module['update'].'">
+
+  echo '<br /><textarea id="message" name="message" rows="30" cols="" style="width: 100%;">'.getinput($ds['imprint']).'</textarea><br /><br /><input type="hidden" name="captcha_hash" value="'.$hash.'" />
+  <input type="submit" name="submit" value="'.$_language->module['update'].'" />
   </form>';
 }
 ?>

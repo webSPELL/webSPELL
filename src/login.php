@@ -40,7 +40,7 @@ if(isset($_SESSION['ws_auth'])) {
 		if(isset($ws_user) and isset($ws_pwd)) {
 			$check = safe_query("SELECT userID, language FROM ".PREFIX."user WHERE userID='".$ws_user."' AND password='".$ws_pwd."'");
 
-			while($ds = mysqli_fetch_array($check)) {
+			while($ds = mysql_fetch_array($check)) {
 				$loggedin = true;
 				$userID = $ds['userID'];
 				if(!empty($ds['language']) AND isset($_language)) {
@@ -53,4 +53,9 @@ if(isset($_SESSION['ws_auth'])) {
 	}
 	else die();
 }
+
+if(!isset($_SESSION['language'])) {
+	$_SESSION['language'] = $default_language;
+}
+
 ?>

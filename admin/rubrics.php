@@ -36,9 +36,9 @@ if(isset($_POST['save'])) {
 		if(checkforempty(Array('name'))) {
 			safe_query("INSERT INTO ".PREFIX."news_rubrics ( rubric ) values( '".$_POST['name']."' ) ");
 			$id=mysqli_insert_id($_database);
-		
+
 			$filepath = "../images/news-rubrics/";
-			
+
 			if($pic['name'] != "") {
 				move_uploaded_file($pic['tmp_name'], $filepath.$pic['name'].".tmp");
 				@chmod($filepath.$pic['name'].".tmp", 0755);
@@ -56,7 +56,7 @@ if(isset($_POST['save'])) {
 				}  else {
 					@unlink($filepath.$pic['name'].".tmp");
 					$error = $_language->module['format_incorrect'];
-					die('<b>'.$error.'</b><br><br><a href="admincenter.php?site=rubrics&amp;action=edit&amp;rubricID='.$id.'">&laquo; '.$_language->module['back'].'</a>');
+					die('<b>'.$error.'</b><br /><br /><a href="admincenter.php?site=rubrics&amp;action=edit&amp;rubricID='.$id.'">&laquo; '.$_language->module['back'].'</a>');
 				}
 			}
 		} else echo $_language->module['information_incomplete'];
@@ -69,10 +69,10 @@ elseif(isset($_POST['saveedit'])) {
 		$pic = $_FILES['pic'];
 		if(checkforempty(Array('name'))) {
 			safe_query("UPDATE ".PREFIX."news_rubrics SET rubric='".$_POST['name']."' WHERE rubricID='".$_POST['rubricID']."'");
-		
+
 			$id=$_POST['rubricID'];
 			$filepath = "../images/news-rubrics/";
-			
+
 			if($pic['name'] != "") {
 				move_uploaded_file($pic['tmp_name'], $filepath.$pic['name'].".tmp");
 				@chmod($filepath.$pic['name'].".tmp", 0755);
@@ -90,7 +90,7 @@ elseif(isset($_POST['saveedit'])) {
 				}  else {
 					@unlink($filepath.$pic['name'].".tmp");
 					$error = $_language->module['format_incorrect'];
-					die('<b>'.$error.'</b><br><br><a href="admincenter.php?site=rubrics&amp;action=edit&amp;rubricID='.$id.'">&laquo; '.$_language->module['back'].'</a>');
+					die('<b>'.$error.'</b><br /><br /><a href="admincenter.php?site=rubrics&amp;action=edit&amp;rubricID='.$id.'">&laquo; '.$_language->module['back'].'</a>');
 				}
 			}
 		} else echo $_language->module['information_incomplete'];
@@ -122,15 +122,15 @@ if($action=="add") {
   <table width="100%" border="0" cellspacing="1" cellpadding="3">
     <tr>
       <td width="15%"><b>'.$_language->module['rubric_name'].'</b></td>
-      <td width="85%"><input type="text" name="name" size="60"></td>
+      <td width="85%"><input type="text" name="name" size="60" /></td>
     </tr>
     <tr>
       <td><b>'.$_language->module['picture_upload'].'</b></td>
-      <td><input name="pic" type="file" size="40"></td>
+      <td><input name="pic" type="file" size="40" /></td>
     </tr>
     <tr>
-      <td><input type="hidden" name="captcha_hash" value="'.$hash.'"></td>
-      <td><input type="submit" name="save" value="'.$_language->module['add_rubric'].'"></td>
+      <td><input type="hidden" name="captcha_hash" value="'.$hash.'" /></td>
+      <td><input type="submit" name="save" value="'.$_language->module['add_rubric'].'" /></td>
     </tr>
   </table>
   </form>';
@@ -150,7 +150,7 @@ elseif($action=="edit") {
   <table width="100%" border="0" cellspacing="1" cellpadding="3">
     <tr>
       <td width="15%"><b>'.$_language->module['rubric_name'].'</b></td>
-      <td width="85%"><input type="text" name="name" size="60" value="'.getinput($ds['rubric']).'"></td>
+      <td width="85%"><input type="text" name="name" size="60" value="'.getinput($ds['rubric']).'" /></td>
     </tr>
     <tr>
       <td><b>'.$_language->module['picture'].'</b></td>
@@ -158,11 +158,11 @@ elseif($action=="edit") {
     </tr>
     <tr>
 		   <td><b>'.$_language->module['picture_upload'].'</b></td>
-       <td><input name="pic" type="file" size="40"></td>
+       <td><input name="pic" type="file" size="40" /></td>
      </tr>
      <tr>
-      <td><input type="hidden" name="captcha_hash" value="'.$hash.'"><input type="hidden" name="rubricID" value="'.$ds['rubricID'].'"></td>
-      <td><input type="submit" name="saveedit" value="'.$_language->module['edit_rubric'].'"></td>
+      <td><input type="hidden" name="captcha_hash" value="'.$hash.'" /><input type="hidden" name="rubricID" value="'.$ds['rubricID'].'" /></td>
+      <td><input type="submit" name="saveedit" value="'.$_language->module['edit_rubric'].'" /></td>
     </tr>
   </table>
   </form>';
@@ -172,10 +172,10 @@ else {
 
   echo'<h1>&curren; '.$_language->module['news_rubrics'].'</h1>';
 
-	echo'<input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=rubrics&amp;action=add\');return document.MM_returnValue" value="'.$_language->module['new_rubric'].'"><br><br>';
+	echo'<input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=rubrics&amp;action=add\');return document.MM_returnValue" value="'.$_language->module['new_rubric'].'" /><br /><br />';
 
 	$ergebnis=safe_query("SELECT * FROM ".PREFIX."news_rubrics ORDER BY rubric");
-	
+
   echo'<table width="100%" border="0" cellspacing="1" cellpadding="3" bgcolor="#DDDDDD">
     <tr>
       <td width="25%" class="title"><b>'.$_language->module['rubric_name'].'</b></td>
@@ -189,14 +189,14 @@ else {
   while($ds=mysqli_fetch_array($ergebnis)) {
     if($i%2) { $td='td1'; }
     else { $td='td2'; }
-    
+
 		echo'<tr>
       <td class="'.$td.'">'.getinput($ds['rubric']).'</td>
       <td class="'.$td.'" align="center"><img src="../images/news-rubrics/'.$ds['pic'].'" alt=""></td>
-      <td class="'.$td.'" align="center"><input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=rubrics&amp;action=edit&amp;rubricID='.$ds['rubricID'].'\');return document.MM_returnValue" value="'.$_language->module['edit'].'">
-      <input type="button" onclick="MM_confirm(\''.$_language->module['really_delete'].'\', \'admincenter.php?site=rubrics&amp;delete=true&amp;rubricID='.$ds['rubricID'].'&amp;captcha_hash='.$hash.'\')" value="'.$_language->module['delete'].'"></td>
+      <td class="'.$td.'" align="center"><input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=rubrics&amp;action=edit&amp;rubricID='.$ds['rubricID'].'\');return document.MM_returnValue" value="'.$_language->module['edit'].'" />
+      <input type="button" onclick="MM_confirm(\''.$_language->module['really_delete'].'\', \'admincenter.php?site=rubrics&amp;delete=true&amp;rubricID='.$ds['rubricID'].'&amp;captcha_hash='.$hash.'\')" value="'.$_language->module['delete'].'" /></td>
     </tr>';
-      
+
       $i++;
 	}
 	echo'</table>';

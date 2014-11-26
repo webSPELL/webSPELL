@@ -41,7 +41,7 @@ if(isset($_POST['savemods'])) {
 					safe_query("INSERT INTO ".PREFIX."forum_moderators (boardID, userID) values ('$boardID', '$id') ");
 				}
 			}
-		} 
+		}
 		else {
 			echo $_language->module['transaction_invalid'];
 		}
@@ -63,8 +63,8 @@ elseif(isset($_GET['delete'])) {
 	if($CAPCLASS->check_captcha(0, $_GET['captcha_hash'])) {
 		safe_query("DELETE FROM ".PREFIX."forum_posts WHERE boardID='$boardID' ");
 		safe_query("
-			DELETE `topics`.*, `moved`.* 
-			FROM `".PREFIX."forum_topics` AS `topics` 
+			DELETE `topics`.*, `moved`.*
+			FROM `".PREFIX."forum_topics` AS `topics`
 			LEFT JOIN `".PREFIX."forum_topics` AS `moved` ON (`topics`.`topicID` = `moved`.`moveID`)
 			WHERE `topics`.`boardID` = '".$boardID."'");
 		safe_query("DELETE FROM ".PREFIX."forum_boards WHERE boardID='$boardID' ");
@@ -138,7 +138,7 @@ elseif(isset($_POST['saveedit'])) {
 	else $readgrps='';
 	if(isset($_POST['writegrps'])) $writegrps = implode(";", $_POST['writegrps']);
 	else $writegrps='';
-	
+
 	$CAPCLASS = new Captcha;
 	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
 		safe_query("UPDATE ".PREFIX."forum_boards SET category='$kath',
@@ -168,15 +168,15 @@ else $action = '';
 if($action=="mods") {
 
 	echo'<h1>&curren; <a href="admincenter.php?site=boards" class="white">'.$_language->module['boards'].'</a> &raquo; '.$_language->module['moderators'].'</h1>';
-  
+
   $boardID = $_GET['boardID'];
 
 	$moderators=safe_query("SELECT * FROM ".PREFIX."user_groups WHERE moderator='1'");
 	$ergebnis=safe_query("SELECT * FROM ".PREFIX."forum_boards WHERE boardID='$boardID'");
 	$ds=mysqli_fetch_array($ergebnis);
-	
+
   echo $_language->module['choose_moderators'].' <b>'.$ds['name'].'</b><br><br>';
-  
+
 	echo'<form method="post" action="admincenter.php?site=boards">
   <select name="mods[]" multiple="multiple" size="10">';
 
@@ -190,17 +190,17 @@ if($action=="mods") {
 	$CAPCLASS->create_transaction();
 	$hash = $CAPCLASS->get_hash();
 
-	echo'</select><br><br>
-	<input type="hidden" name="captcha_hash" value="'.$hash.'">
-  <input type="hidden" name="boardID" value="'.$boardID.'">
-  <input type="submit" name="savemods" value="'.$_language->module['select_moderators'].'">
-  </form>';
+	echo'</select><br /><br />
+	<input type="hidden" name="captcha_hash" value="'.$hash.'" />
+	<input type="hidden" name="boardID" value="'.$boardID.'" />
+	<input type="submit" name="savemods" value="'.$_language->module['select_moderators'].'" />
+	</form>';
 }
 
 elseif($action=="add") {
-	
+
   echo'<h1>&curren; <a href="admincenter.php?site=boards" class="white">'.$_language->module['boards'].'</a> &raquo; '.$_language->module['add_board'].'</h1>';
-  
+
   $ergebnis=safe_query("SELECT * FROM ".PREFIX."forum_categories ORDER BY sort");
 	$cats='<select name="kath">';
 	while($ds=mysqli_fetch_array($ergebnis)) {
@@ -226,7 +226,7 @@ elseif($action=="add") {
 	}
 	-->
 	</script>';
-	
+
   echo'<form method="post" action="admincenter.php?site=boards">
   <table width="100%" border="0" cellspacing="1" cellpadding="3">
     <tr>
@@ -235,11 +235,11 @@ elseif($action=="add") {
     </tr>
     <tr>
       <td><b>'.$_language->module['boardname'].'</b></td>
-      <td><input type="text" name="name" size="60"></td>
+      <td><input type="text" name="name" size="60" /></td>
     </tr>
     <tr>
       <td><b>'.$_language->module['boardinfo'].'</b></td>
-      <td><input type="text" name="boardinfo" size="60"></td>
+      <td><input type="text" name="boardinfo" size="60" /></td>
     </tr>
     <tr>
       <td valign="top"><b>'.$_language->module['read_right'].'</b></td>
@@ -260,8 +260,8 @@ elseif($action=="add") {
       '.$_language->module['write_right_info_board'].'</td>
     </tr>
     <tr>
-      <td><input type="hidden" name="captcha_hash" value="'.$hash.'"></td>
-      <td><input type="submit" name="save" value="'.$_language->module['add_board'].'"></td>
+      <td><input type="hidden" name="captcha_hash" value="'.$hash.'" /></td>
+      <td><input type="submit" name="save" value="'.$_language->module['add_board'].'" /></td>
     </tr>
   </table>
   </form>';
@@ -270,7 +270,7 @@ elseif($action=="add") {
 elseif($action=="edit") {
 
   echo'<h1>&curren; <a href="admincenter.php?site=boards" class="white">'.$_language->module['boards'].'</a> &raquo; '.$_language->module['edit_board'].'</h1>';
-  
+
   $boardID = $_GET['boardID'];
 
 	$ergebnis=safe_query("SELECT * FROM ".PREFIX."forum_boards WHERE boardID='$boardID'");
@@ -314,7 +314,7 @@ elseif($action=="edit") {
 	$CAPCLASS = new Captcha;
 	$CAPCLASS->create_transaction();
 	$hash = $CAPCLASS->get_hash();
-	
+
 	echo '<script>
 	<!--
 	function unselect_all(select_id) {
@@ -325,7 +325,7 @@ elseif($action=="edit") {
 	}
 	-->
 	</script>';
-	
+
   echo'<form method="post" action="admincenter.php?site=boards">
   <table width="100%" border="0" cellspacing="1" cellpadding="3">
     <tr>
@@ -334,11 +334,11 @@ elseif($action=="edit") {
     </tr>
     <tr>
       <td><b>'.$_language->module['boardname'].'</b></td>
-      <td><input type="text" name="name" value="'.getinput($ds['name']).'" size="60"></td>
+      <td><input type="text" name="name" value="'.getinput($ds['name']).'" size="60" /></td>
     </tr>
     <tr>
       <td><b>'.$_language->module['boardinfo'].'</b></td>
-      <td><input type="text" name="boardinfo" value="'.getinput($ds['info']).'" size="60"></td>
+      <td><input type="text" name="boardinfo" value="'.getinput($ds['info']).'" size="60" /></td>
     </tr>
     <tr>
       <td valign="top"><b>'.$_language->module['read_right'].'</b></td>
@@ -353,8 +353,8 @@ elseif($action=="edit") {
       '.$_language->module['write_right_info_board'].'</td>
     </tr>
     <tr>
-      <td><input type="hidden" name="captcha_hash" value="'.$hash.'"><input type="hidden" name="boardID" value="'.$boardID.'"></td>
-      <td><input type="submit" name="saveedit" value="'.$_language->module['edit_board'].'"></td>
+      <td><input type="hidden" name="captcha_hash" value="'.$hash.'" /><input type="hidden" name="boardID" value="'.$boardID.'" /></td>
+      <td><input type="submit" name="saveedit" value="'.$_language->module['edit_board'].'" /></td>
     </tr>
   </table>
   </form>';
@@ -363,7 +363,7 @@ elseif($action=="edit") {
 elseif($action=="addcat") {
 
   echo'<h1>&curren; <a href="admincenter.php?site=boards" class="white">'.$_language->module['boards'].'</a> &raquo; '.$_language->module['add_category'].'</h1>';
-	
+
   $sql = safe_query("SELECT * FROM ".PREFIX."forum_groups");
 	$groups = '<select id="readgrps" name="readgrps[]" multiple="multiple" size="10">
   <option value="user">'.$_language->module['registered_users'].'</option>';
@@ -384,16 +384,16 @@ elseif($action=="addcat") {
 	}
 	-->
 	</script>';
-	
+
   echo'<form method="post" action="admincenter.php?site=boards" enctype="multipart/form-data">
   <table width="100%" border="0" cellspacing="1" cellpadding="3">
     <tr>
       <td width="15%"><b>'.$_language->module['category_name'].'</b></td>
-      <td width="85%"><input type="text" name="catname" size="60"></td>
+      <td width="85%"><input type="text" name="catname" size="60" /></td>
     </tr>
     <tr>
       <td><b>'.$_language->module['category_info'].'</b></td>
-      <td><input type="text" name="catinfo" size="60"></td>
+      <td><input type="text" name="catinfo" size="60" /></td>
     </tr>
     <tr>
       <td valign="top"><b>'.$_language->module['read_right'].'</b></td>
@@ -402,8 +402,8 @@ elseif($action=="addcat") {
       '.$_language->module['right_info_category'].'</td>
     </tr>
     <tr>
-      <td><input type="hidden" name="captcha_hash" value="'.$hash.'"></td>
-      <td><input type="submit" name="savecat" value="'.$_language->module['add_category'].'"></td>
+      <td><input type="hidden" name="captcha_hash" value="'.$hash.'" /></td>
+      <td><input type="submit" name="savecat" value="'.$_language->module['add_category'].'" /></td>
     </tr>
   </table>
   </form>';
@@ -442,16 +442,16 @@ elseif($action=="editcat") {
 	}
 	-->
 	</script>';
-	
+
   echo'<form method="post" action="admincenter.php?site=boards">
   <table width="100%" border="0" cellspacing="1" cellpadding="3">
     <tr>
       <td width="15%"><b>'.$_language->module['category_name'].'</b></td>
-      <td width="85%"><input type="text" name="catname" value="'.getinput($ds['name']).'" size="60"></td>
+      <td width="85%"><input type="text" name="catname" value="'.getinput($ds['name']).'" size="60" /></td>
     </tr>
     <tr>
       <td><b>'.$_language->module['category_info'].'</b></td>
-      <td><input type="text" name="catinfo" value="'.getinput($ds['info']).'" size="60"></td>
+      <td><input type="text" name="catinfo" value="'.getinput($ds['info']).'" size="60" /></td>
     </tr>
     <tr>
       <td valign="top"><b>'.$_language->module['read_right'].'</b></td>
@@ -460,8 +460,8 @@ elseif($action=="editcat") {
       '.$_language->module['right_info_category'].'</td>
     </tr>
     <tr>
-      <td><input type="hidden" name="captcha_hash" value="'.$hash.'"><input type="hidden" name="catID" value="'.$catID.'"></td>
-      <td><input type="submit" name="saveeditcat" value="'.$_language->module['edit_category'].'"></td>
+      <td><input type="hidden" name="captcha_hash" value="'.$hash.'" /><input type="hidden" name="catID" value="'.$catID.'" /></td>
+      <td><input type="submit" name="saveeditcat" value="'.$_language->module['edit_category'].'" /></td>
     </tr>
   </table>
   </form>';
@@ -471,8 +471,8 @@ else {
 
 	echo'<h1>&curren; '.$_language->module['boards'].'</h1>';
 
-	echo'<input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=boards&amp;action=addcat\');return document.MM_returnValue" value="'.$_language->module['new_category'].'">
-  <input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=boards&amp;action=add\');return document.MM_returnValue" value="'.$_language->module['new_board'].'"><br><br>';	
+	echo'<input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=boards&amp;action=addcat\');return document.MM_returnValue" value="'.$_language->module['new_category'].'" />
+  <input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=boards&amp;action=add\');return document.MM_returnValue" value="'.$_language->module['new_board'].'" /><br /><br />';	
 
 	echo'<form method="post" action="admincenter.php?site=boards">
   <table width="100%" border="0" cellspacing="1" cellpadding="3" bgcolor="#DDDDDD">
@@ -491,21 +491,21 @@ else {
 	$CAPCLASS->create_transaction();
 	$hash = $CAPCLASS->get_hash();
 	while($ds=mysqli_fetch_array($ergebnis)) {
-		
+
 	    echo'<tr bgcolor="#CCCCCC">
 	      <td class="td_head"><b>'.getinput($ds['name']).'</b><br><small>'.getinput($ds['info']).'</small></td>
 	      <td class="td_head"></td>
-	      <td class="td_head" align="center"><input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=boards&amp;action=editcat&amp;catID='.$ds['catID'].'\');return document.MM_returnValue" value="'.$_language->module['edit'].'"> 
-	      <input type="button" onclick="MM_confirm(\''.$_language->module['really_delete_category'].'\', \'admincenter.php?site=boards&amp;delcat=true&amp;catID='.$ds['catID'].'&amp;captcha_hash='.$hash.'\')" value="'.$_language->module['delete'].'"></td>
+	      <td class="td_head" align="center"><input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=boards&amp;action=editcat&amp;catID='.$ds['catID'].'\');return document.MM_returnValue" value="'.$_language->module['edit'].'" /> 
+	      <input type="button" onclick="MM_confirm(\''.$_language->module['really_delete_category'].'\', \'admincenter.php?site=boards&amp;delcat=true&amp;catID='.$ds['catID'].'&amp;captcha_hash='.$hash.'\')" value="'.$_language->module['delete'].'" /></td>
 	      <td class="td_head" align="center"><select name="sortcat[]">';
-      
+
 		for($n=1; $n<=$anz; $n++) {
 			if($ds['sort'] == $n) echo'<option value="'.$ds['catID'].'-'.$n.'" selected="selected">'.$n.'</option>';
 			else echo'<option value="'.$ds['catID'].'-'.$n.'">'.$n.'</option>';
 		}
-		
+
 	    echo'</select></td>
-	    </tr>';		 
+	    </tr>';
 
 		$boards=safe_query("SELECT * FROM ".PREFIX."forum_boards WHERE category='".$ds['catID']."' ORDER BY sort");
 		$tmp=mysqli_fetch_assoc(safe_query("SELECT count(boardID) as cnt FROM ".PREFIX."forum_boards WHERE category='$ds[catID]'"));
@@ -518,22 +518,22 @@ else {
 	    while($db=mysqli_fetch_array($boards)) {
 	      if($i%2) { $td='td1'; }
 	      else { $td='td2'; }
-				
+
 	      echo'<tr>
 	        <td class="'.$td.'">'.$db['name'].'<br><small>'.$db['info'].'</small></td>
-	        <td class="'.$td.'" align="center"><input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=boards&amp;action=mods&amp;boardID='.$db['boardID'].'\');return document.MM_returnValue" value="'.$_language->module['mods'].'"></td>
-	        <td class="'.$td.'" align="center"><input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=boards&amp;action=edit&amp;boardID='.$db['boardID'].'\');return document.MM_returnValue" value="'.$_language->module['edit'].'"> 
-	        <input type="button" onclick="MM_confirm(\''.$_language->module['really_delete_board'].'\', \'admincenter.php?site=boards&amp;delete=true&amp;boardID='.$db['boardID'].'&amp;captcha_hash='.$hash.'\')" value="'.$_language->module['delete'].'"></td>
+	        <td class="'.$td.'" align="center"><input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=boards&amp;action=mods&amp;boardID='.$db['boardID'].'\');return document.MM_returnValue" value="'.$_language->module['mods'].'" /></td>
+	        <td class="'.$td.'" align="center"><input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=boards&amp;action=edit&amp;boardID='.$db['boardID'].'\');return document.MM_returnValue" value="'.$_language->module['edit'].'" /> 
+	        <input type="button" onclick="MM_confirm(\''.$_language->module['really_delete_board'].'\', \'admincenter.php?site=boards&amp;delete=true&amp;boardID='.$db['boardID'].'&amp;captcha_hash='.$hash.'\')" value="'.$_language->module['delete'].'" /></td>
 	        <td class="'.$td.'" align="center"><select name="sortboards[]">';
-	        
+
 				for($j=1; $j<=$anzboards; $j++) {
 					if($db['sort'] == $j) echo'<option value="'.$db['boardID'].'-'.$j.'" selected="selected">'.$j.'</option>';
 					else echo'<option value="'.$db['boardID'].'-'.$j.'">'.$j.'</option>';
 				}
-				
+
 	      echo'</select></td>
 	      </tr>';
-	      
+
 	      $i++;
 		}
 	}
@@ -548,20 +548,20 @@ else {
 
 		echo'<tr bgcolor="#dcdcdc">
       <td bgcolor="#FFFFFF"><b>'.getinput($db['name']).'</b></td>
-      <td bgcolor="#FFFFFF"><input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=boards&amp;action=mods&amp;boardID='.$db['boardID'].'\');return document.MM_returnValue" value="'.$_language->module['mods'].'"></td>
-      <td bgcolor="#FFFFFF"><input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=boards&amp;action=edit&amp;boardID='.$db['boardID'].'\');return document.MM_returnValue" value="'.$_language->module['edit'].'"> 
-      <input type="button" onclick="MM_confirm(\''.$_language->module['really_delete_board'].'\', \'admincenter.php?site=boards&amp;delete=true&amp;boardID='.$db['boardID'].'&amp;captcha_hash='.$hash.'\')" value="delete"></td>
+      <td bgcolor="#FFFFFF"><input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=boards&amp;action=mods&amp;boardID='.$db['boardID'].'\');return document.MM_returnValue" value="'.$_language->module['mods'].'" /></td>
+      <td bgcolor="#FFFFFF"><input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=boards&amp;action=edit&amp;boardID='.$db['boardID'].'\');return document.MM_returnValue" value="'.$_language->module['edit'].'" /> 
+      <input type="button" onclick="MM_confirm(\''.$_language->module['really_delete_board'].'\', \'admincenter.php?site=boards&amp;delete=true&amp;boardID='.$db['boardID'].'&amp;captcha_hash='.$hash.'\')" value="delete" /></td>
       <td bgcolor="#FFFFFF"><select name="sort[]">';
-      
+
 		for($n=1; $n<=$anzboards; $n++) {
 			if($ds['sort'] == $n) echo'<option value="'.$db['boardID'].'-'.$n.'" selected="selected">'.$n.'</option>';
 			else echo'<option value="'.$db['boardID'].'-'.$n.'">'.$n.'</option>';
 		}
 		echo'</select></td></tr>';
 	}
-	
+
   echo'<tr>
-      <td class="td_head" colspan="5" align="right"><input type="submit" name="sortieren" value="'.$_language->module['to_sort'].'"></td>
+      <td class="td_head" colspan="5" align="right"><input type="submit" name="sortieren" value="'.$_language->module['to_sort'].'" /></td>
     </tr>
   </table>
   </form>';

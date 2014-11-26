@@ -40,7 +40,7 @@ if(isset($_GET['delete'])) {
 
 elseif(isset($_POST['sortieren'])) {
 	$sortfaq = $_POST['sortfaq'];
-	
+
 	$CAPCLASS = new Captcha;
 	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
 		if(is_array($sortfaq)) {
@@ -102,18 +102,18 @@ if(isset($_GET['action'])) {
 			$question = "";
 			$answer = "";
 		}
-    
+
     $CAPCLASS = new Captcha;
     $CAPCLASS->create_transaction();
     $hash = $CAPCLASS->get_hash();
-    
+
     $_language->read_module('bbcode', true);
-    
+
     eval ("\$addbbcode = \"".gettemplate("addbbcode", "html", "admin")."\";");
     eval ("\$addflags = \"".gettemplate("flags_admin", "html", "admin")."\";");
-    
+
 		echo'<h1>&curren; <a href="admincenter.php?site=faq" class="white">'.$_language->module['faq'].'</a> &raquo; '.$_language->module['add_faq'].'</h1>';
-    
+
 		echo '<script>
 					<!--
 						function chkFormular() {
@@ -123,33 +123,33 @@ if(isset($_GET['action'])) {
 						}
 					-->
 				</script>';
-		
+
     echo'<form method="post" id="post" name="post" action="admincenter.php?site=faq" onsubmit="return chkFormular();">
     <table width="100%" border="0" cellspacing="1" cellpadding="3">
       <tr>
         <td width="15%"><b>'.$_language->module['category'].'</b></td><td width="85%">'.$faqcats.'</td>
       </tr>
       <tr>
-        <td><b>'.$_language->module['faq'].'</b></td><td><input type="text" name="question" value="'.$question.'" size="97">
+        <td><b>'.$_language->module['faq'].'</b></td><td><input type="text" name="question" value="'.$question.'" size="97" />
         </td>
       </tr>
       <tr>
-        <td><b>'.$_language->module['tags'].'</b></td><td><input type="text" name="tags" value="" size="97">
+        <td><b>'.$_language->module['tags'].'</b></td><td><input type="text" name="tags" value="" size="97" />
         </td>
       </tr>
       <tr>
-        <td colspan="2"><b>'.$_language->module['answer'].'</b><br>
+        <td colspan="2"><b>'.$_language->module['answer'].'</b><br />
           <table width="99%" border="0" cellspacing="0" cellpadding="0">
 			      <tr>
 			        <td valign="top">'.$addbbcode.'</td>
 			        <td valign="top">'.$addflags.'</td>
 			      </tr>
 			    </table>
-          <br><textarea id="message" rows="10" cols="" name="message" style="width: 100%;">'.$answer.'</textarea>
+          <br /><textarea id="message" rows="10" cols="" name="message" style="width: 100%;">'.$answer.'</textarea>
         </td>
       </tr>
       <tr>
-        <td colspan="2"><input type="hidden" name="captcha_hash" value="'.$hash.'"><br><input type="submit" name="save" value="'.$_language->module['add_faq'].'"></td>
+        <td colspan="2"><input type="hidden" name="captcha_hash" value="'.$hash.'" /><br /><input type="submit" name="save" value="'.$_language->module['add_faq'].'" /></td>
       </tr>
     </table>
     </form>';
@@ -170,20 +170,20 @@ if(isset($_GET['action'])) {
 			$faqcats.='<option value="'.$dc['faqcatID'].'"'.$selected.'>'.getinput($dc['faqcatname']).'</option>';
 		}
 		$faqcats.='</select>';
-    
+
     	$tags = Tags::getTags('faq', $faqID);
 
 	    $CAPCLASS = new Captcha;
 	    $CAPCLASS->create_transaction();
 	    $hash = $CAPCLASS->get_hash();
-	    
+
 	    $_language->read_module('bbcode', true);
-	    
+
 	    eval ("\$addbbcode = \"".gettemplate("addbbcode", "html", "admin")."\";");
 	    eval ("\$addflags = \"".gettemplate("flags_admin", "html", "admin")."\";");
-    
+
 		echo'<h1>&curren; <a href="admincenter.php?site=faq" class="white">'.$_language->module['faq'].'</a> &raquo; '.$_language->module['edit_faq'].'</h1>';
-    
+
 		echo '<script>
 					<!--
 						function chkFormular() {
@@ -193,7 +193,7 @@ if(isset($_GET['action'])) {
 						}
 					-->
 				</script>';
-		
+
     echo '<form method="post" id="post" name="post" action="admincenter.php?site=faq" onsubmit="return chkFormular();">
     <table width="100%" border="0" cellspacing="1" cellpadding="3">
       <tr>
@@ -202,11 +202,11 @@ if(isset($_GET['action'])) {
       </tr>
       <tr>
         <td><b>'.$_language->module['faq'].'</b></td>
-        <td><input type="text" name="question" value="'.getinput($ds['question']).'" size="97"></td>
+        <td><input type="text" name="question" value="'.getinput($ds['question']).'" size="97" /></td>
       </tr>
       <tr>
         <td><b>'.$_language->module['tags'].'</b></td>
-        <td><input type="text" name="tags" value="'.$tags.'" size="97"></td>
+        <td><input type="text" name="tags" value="'.$tags.'" size="97" /></td>
       </tr>
       <tr>
         <td colspan="2"><b>'.$_language->module['answer'].'</b>
@@ -220,7 +220,7 @@ if(isset($_GET['action'])) {
         </td>
       </tr>
       <tr>
-        <td colspan="2"><input type="hidden" name="captcha_hash" value="'.$hash.'"><input type="hidden" name="faqID" value="'.$faqID.'"><input type="submit" name="saveedit" value="'.$_language->module['edit_faq'].'"></td>
+        <td colspan="2"><input type="hidden" name="captcha_hash" value="'.$hash.'" /><input type="hidden" name="faqID" value="'.$faqID.'" /><input type="submit" name="saveedit" value="'.$_language->module['edit_faq'].'" /></td>
       </tr>
     </table>
     </form>';
@@ -228,10 +228,10 @@ if(isset($_GET['action'])) {
 }
 
 else {
-	
+
   echo '<h1>&curren; '.$_language->module['faq'].'</h1>';
-  
-  echo'<input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=faq&amp;action=add\');return document.MM_returnValue" value="'.$_language->module['new_faq'].'"><br><br>';	
+
+  echo'<input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=faq&amp;action=add\');return document.MM_returnValue" value="'.$_language->module['new_faq'].'" /><br /><br />';
 
 	echo'<form method="post" action="admincenter.php?site=faq">
   <table width="100%" border="0" cellspacing="1" cellpadding="3" bgcolor="#DDDDDD">
@@ -244,17 +244,17 @@ else {
 	$ergebnis=safe_query("SELECT * FROM ".PREFIX."faq_categories ORDER BY sort");
 	$tmp=mysqli_fetch_assoc(safe_query("SELECT count(faqcatID) as cnt FROM ".PREFIX."faq_categories"));
 	$anz=$tmp['cnt'];
-  
+
   $CAPCLASS = new Captcha;
 	$CAPCLASS->create_transaction();
 	$hash = $CAPCLASS->get_hash();
-  
+
   while($ds=mysqli_fetch_array($ergebnis)) {
 
 		echo'<tr>
       <td class="td_head" colspan="3"><b>'.$ds['faqcatname'].'</b>
-      <br><small>'.cleartext($ds['description'],1,'admin').'</small></td>
-    </tr>';		 
+      <br /><small>'.cleartext($ds['description'],1,'admin').'</small></td>
+    </tr>';
 
 		$faq=safe_query("SELECT * FROM ".PREFIX."faq WHERE faqcatID='$ds[faqcatID]' ORDER BY sort");
 		$tmp=mysqli_fetch_assoc(safe_query("SELECT count(faqID) as cnt FROM ".PREFIX."faq WHERE faqcatID='$ds[faqcatID]'"));
@@ -264,26 +264,26 @@ else {
     while($db=mysqli_fetch_array($faq)) {
       if($i%2) { $td='td1'; }
       else { $td='td2'; }
-      
+
 			echo'<tr>
         <td class="'.$td.'"><b>- '.getinput($db['question']).'</b></td>
-        <td class="'.$td.'" align="center"><input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=faq&amp;action=edit&amp;faqID='.$db['faqID'].'\');return document.MM_returnValue" value="'.$_language->module['edit'].'">
-        <input type="button" onclick="MM_confirm(\''.$_language->module['really_delete'].'\', \'admincenter.php?site=faq&amp;delete=true&amp;faqID='.$db['faqID'].'&amp;captcha_hash='.$hash.'\')" value="'.$_language->module['delete'].'"></td>
+        <td class="'.$td.'" align="center"><input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=faq&amp;action=edit&amp;faqID='.$db['faqID'].'\');return document.MM_returnValue" value="'.$_language->module['edit'].'" />
+        <input type="button" onclick="MM_confirm(\''.$_language->module['really_delete'].'\', \'admincenter.php?site=faq&amp;delete=true&amp;faqID='.$db['faqID'].'&amp;captcha_hash='.$hash.'\')" value="'.$_language->module['delete'].'" /></td>
         <td class="'.$td.'" align="center"><select name="sortfaq[]">';
-        
+
 			for($j=1; $j<=$anzfaq; $j++) {
 				if($db['sort'] == $j) echo'<option value="'.$db['faqID'].'-'.$j.'" selected="selected">'.$j.'</option>';
 				else echo'<option value="'.$db['faqID'].'-'.$j.'">'.$j.'</option>';
 			}
 			echo'</select></td>
       </tr>';
-      
+
       $i++;
 		}
 	}
 
 	echo'<tr>
-      <td class="td_head" colspan="3" align="right"><input type="hidden" name="captcha_hash" value="'.$hash.'"><input type="submit" name="sortieren" value="'.$_language->module['to_sort'].'"></td>
+      <td class="td_head" colspan="3" align="right"><input type="hidden" name="captcha_hash" value="'.$hash.'" /><input type="submit" name="sortieren" value="'.$_language->module['to_sort'].'" /></td>
     </tr>
   </table>
   </form>';

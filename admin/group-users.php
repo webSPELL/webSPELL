@@ -38,7 +38,7 @@ if(isset($_GET['ajax'])){
 			$group = $_GET['group'];
 			if($_GET['state'] == "true") $state = "1";
 			else $state = "0";
-			
+
 			$anz=mysqli_num_rows(safe_query("SELECT userID FROM ".PREFIX."user_forum_groups WHERE userID='".$user."'"));
 			if(!$anz) {
 				safe_query("INSERT INTO ".PREFIX."user_forum_groups ( userID ) VALUES ('".$user."')");
@@ -70,7 +70,7 @@ if(isset($_GET['action'])) {
 		else {
 			$page = 1;
 		}
-		
+
 		if(isset($_GET['users'])) {
 			$_POST['users'] = explode("-", $_GET['users']);
 		}
@@ -130,11 +130,11 @@ if(isset($_GET['action'])) {
 			if(in_array($ds['fgrID'], $grps)) $groups[] = array('fgrID' => $ds['fgrID'], 'name' => getinput($ds['name']));
 		}
 		$groups_anz = count($groups);
-		
+
 		$anz_users = count($users);
 		$pages = ceil($anz_users / $anz_users_page);
 		if($pages > 1) echo makepagelink("admincenter.php?site=group-users&amp;action=show&amp;users=".implode("-", $_POST['users'])."&amp;groups=".implode("-", $_POST['groups'])."&amp;addfield=".$_POST['addfield'], $page, $pages);
-		
+
     echo'<h1>&curren; <a href="admincenter.php?site=group-users" class="white">'.$_language->module['group_users'].'</a> &raquo; '.$_language->module['edit_group_users'].'</h1>';
     echo'<script type="text/javascript">
     function setUser(userID,group,status){
@@ -162,7 +162,7 @@ if(isset($_GET['action'])) {
 		}
 
 		echo '</tr>';
-    
+
     $n=1;
     $skip = $anz_users_page * ($page - 1);
 		for($z = $skip; $z < ($skip + $anz_users_page) and $z < $anz_users; $z++) {
@@ -174,14 +174,14 @@ if(isset($_GET['action'])) {
 			for($i=0; $i < $groups_anz; $i++) {
 				if(isinusergrp($groups[$i]['fgrID'], $users[$z], 0)) $checked = ' checked="checked"';
 				else $checked = '';
-				echo '<td class="'.$td.'"><input type="checkbox" onchange="javascript:setUser(\''.$users[$z].'\',\''.$groups[$i]['fgrID'].'\', this.checked);" value="'.$users[$z].' => '.$groups[$i]['fgrID'].'"'.$checked.'></td>';
+				echo '<td class="'.$td.'"><input type="checkbox" onchange="javascript:setUser(\''.$users[$z].'\',\''.$groups[$i]['fgrID'].'\', this.checked);" value="'.$users[$z].' => '.$groups[$i]['fgrID'].'"'.$checked.' /></td>';
 			}
 			echo'</tr>';
       $n++;
 		}
 		echo'<tr>
-        <td class="td_head"><input type="checkbox" name="ALL" value="ALL" onclick="SelectAllEval(this.form);"> '.$_language->module['select_all'].'</td>
-        <td class="td_head" colspan="'.($groups_anz).'" align="right"><input name="grps" type="hidden" value="'.implode(';', $grps).'"><input name="users" type="hidden" value="'.implode(';', $users).'">';
+        <td class="td_head"><input type="checkbox" name="ALL" value="ALL" onclick="SelectAllEval(this.form);" /> '.$_language->module['select_all'].'</td>
+        <td class="td_head" colspan="'.($groups_anz).'" align="right"><input name="grps" type="hidden" value="'.implode(';', $grps).'" /><input name="users" type="hidden" value="'.implode(';', $users).'" />';
         
 		if($pages > 1) {
 			$page_select = '<select name="page">';
@@ -191,9 +191,9 @@ if(isset($_GET['action'])) {
 				$page_select .= '<option value="'.$i.'"'.$selected.'>'.$i.'</option>';
 			}
 			$page_select .= '</select>';
-			echo $_language->module['save_and_jump'].'&nbsp;'.$page_select.' <input name="jump" type="submit" value="'.$_language->module['go'].'"> ';
+			echo $_language->module['save_and_jump'].'&nbsp;'.$page_select.' <input name="jump" type="submit" value="'.$_language->module['go'].'" /> ';
 		}
-		
+
         echo '</td>
 		  </tr>
     </table>
@@ -207,7 +207,7 @@ else {
 	$groups = '';
 	$ergebnis=safe_query("SELECT * FROM ".PREFIX."forum_groups");
 	$selector=0;
-	while($ds=mysqli_fetch_array($ergebnis)) {	
+	while($ds=mysqli_fetch_array($ergebnis)) {
 		if($selector==0){
 			$groups .= "\t\t".'<option value="'.$ds['fgrID'].'" selected="selected">'.getinput($ds['name']).'</option>'."\n";
 		}
@@ -218,7 +218,7 @@ else {
 	}
 
 	echo'<h1>&curren; '.$_language->module['group_users'].'</h1>';
-  
+
   echo '<script type="text/javascript">
   /*<![CDATA[*/
   	function checkForFilter(select){
@@ -229,7 +229,7 @@ else {
   			document.getElementById(\'addfield\').style.display = \'none\';
   		}
   	}
-  /*]]>*/ 
+  /*]]>*/
   </script>
   <form method="post" name="post" action="admincenter.php?site=group-users&amp;action=show">
   <table width="100%" border="0" cellspacing="1" cellpadding="3" bgcolor="#DDDDDD">

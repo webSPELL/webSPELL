@@ -33,29 +33,29 @@ function generate_overview($filecats = '', $offset = '', $subcatID = 0) {
 
 	global $_language;
 	$rubrics = safe_query("SELECT * FROM ".PREFIX."files_categorys WHERE subcatID = '".$subcatID."' ORDER BY name");
-		
+
     $i=1;
     $CAPCLASS = new Captcha;
     $CAPCLASS->create_transaction();
     $hash = $CAPCLASS->get_hash();
-	    
+
     while($ds = mysqli_fetch_array($rubrics)) {
     	if($i%2) { $td='td1'; }
 		else { $td='td2'; }
-				
+
 		$filecats .= '<tr>
         <td class="'.$td.'">'.$offset.getinput($ds['name']).'</td>
-        <td class="'.$td.'" align="center"><input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=filecategorys&amp;action=edit&amp;filecatID='.$ds['filecatID'].'\');return document.MM_returnValue" value="'.$_language->module['edit'].'">
-        <input type="button" onclick="MM_confirm(\''.$_language->module['really_delete'].'\', \'admincenter.php?site=filecategorys&amp;delete=true&amp;filecatID='.$ds['filecatID'].'&amp;captcha_hash='.$hash.'\')" value="'.$_language->module['delete'].'"></td>
+        <td class="'.$td.'" align="center"><input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=filecategorys&amp;action=edit&amp;filecatID='.$ds['filecatID'].'\');return document.MM_returnValue" value="'.$_language->module['edit'].'" />
+        <input type="button" onclick="MM_confirm(\''.$_language->module['really_delete'].'\', \'admincenter.php?site=filecategorys&amp;delete=true&amp;filecatID='.$ds['filecatID'].'&amp;captcha_hash='.$hash.'\')" value="'.$_language->module['delete'].'" /></td>
     	</tr>';
-	      
+
       	$i++;
-	
+
 		if(mysqli_num_rows(safe_query("SELECT * FROM ".PREFIX."files_categorys WHERE subcatID = '".$ds['filecatID']."'"))) {
 			$filecats .= generate_overview("", $offset.getinput($ds['name'])." &raquo; ", $ds['filecatID']);
     	}
 	}
-	
+
 	return $filecats;
 }
 
@@ -75,7 +75,7 @@ function delete_category($filecat){
 }
 
 /* start processing */
-	
+
 if(isset($_POST['save'])) {
  	if(mb_strlen($_POST['name'])>0){
  	 	$CAPCLASS = new Captcha;
@@ -113,7 +113,7 @@ if(!isset($_GET['action'])) {
 }
 
 if($_GET['action']=="add") {
-	
+
 	function generate_options($filecats = '', $offset = '', $subcatID = 0) {
 		$rubrics = safe_query("SELECT * FROM ".PREFIX."files_categorys WHERE subcatID = '".$subcatID."' ORDER BY name");
 		while($dr = mysqli_fetch_array($rubrics)) {
@@ -128,22 +128,22 @@ if($_GET['action']=="add") {
 	$CAPCLASS = new Captcha;
 	$CAPCLASS->create_transaction();
 	$hash = $CAPCLASS->get_hash();
-  
+
   echo'<h1>&curren; <a href="admincenter.php?site=filecategorys" class="white">'.$_language->module['file_categories'].'</a> &raquo; '.$_language->module['add_category'].'</h1>';
-  
+
 	echo'<form method="post" action="admincenter.php?site=filecategorys">
   <table width="100%" border="0" cellspacing="1" cellpadding="3">
     <tr>
       <td width="15%"><b>'.$_language->module['category_name'].'</b></td>
-      <td width="85%"><input type="text" name="name" size="60"></td>
+      <td width="85%"><input type="text" name="name" size="60" /></td>
     </tr>
     <tr>
       <td><b>'.$_language->module['sub_category'].'</b></td>
       <td><select name="subcat">'.$filecats.'</select></td>
     </tr>
     <tr>
-      <td><input type="hidden" name="captcha_hash" value="'.$hash.'"></td>
-      <td><input type="submit" name="save" value="'.$_language->module['add_category'].'"></td>
+      <td><input type="hidden" name="captcha_hash" value="'.$hash.'" /></td>
+      <td><input type="submit" name="save" value="'.$_language->module['add_category'].'" /></td>
     </tr>
   </table>
   </form>';
@@ -156,7 +156,7 @@ elseif($_GET['action']=="edit") {
 	$ds=mysqli_fetch_array($ergebnis);
 
 	function generate_options($filecats = '', $offset = '', $subcatID = 0) {
-	
+
 		global $filecatID;
 		$rubrics = safe_query("SELECT * FROM ".PREFIX."files_categorys WHERE subcatID = '".$subcatID."' AND (filecatID !='".$filecatID."' AND subcatID !='".$filecatID."')  ORDER BY name");
 		while($dr = mysqli_fetch_array($rubrics)) {
@@ -167,39 +167,39 @@ elseif($_GET['action']=="edit") {
 		}
 		return $filecats;
 	}
-	
+
 	$filecats = generate_options('<option value="0">'.$_language->module['main'].'</option>', '- ');
-	
+
 	$filecats = str_replace('value="'.$ds['subcatID'].'"', 'value="'.$ds['subcatID'].'" selected="selected"', $filecats);
 	$CAPCLASS = new Captcha;
 	$CAPCLASS->create_transaction();
 	$hash = $CAPCLASS->get_hash();
-	
+
 	echo'<h1>&curren; <a href="admincenter.php?site=filecategorys" class="white">'.$_language->module['file_categories'].'</a> &raquo; '.$_language->module['edit_category'].'</h1>';
-  
+
   echo'<form method="post" action="admincenter.php?site=filecategorys" enctype="multipart/form-data">
   <table width="100%" border="0" cellspacing="1" cellpadding="3">
     <tr>
       <td width="15%"><b>'.$_language->module['category_name'].'</b></td>
-      <td width="85%"><input type="text" name="name" size="60" value="'.getinput($ds['name']).'"></td>
+      <td width="85%"><input type="text" name="name" size="60" value="'.getinput($ds['name']).'" /></td>
     </tr>
     <tr>
       <td><b>'.$_language->module['sub_category'].'</b></td>
       <td><select name="subcat">'.$filecats.'</select></td>
     </tr>
     <tr>
-      <td><input type="hidden" name="captcha_hash" value="'.$hash.'"><input type="hidden" name="filecatID" value="'.$ds['filecatID'].'"></td>
-      <td><input type="submit" name="saveedit" value="'.$_language->module['edit_category'].'"></td>
+      <td><input type="hidden" name="captcha_hash" value="'.$hash.'" /><input type="hidden" name="filecatID" value="'.$ds['filecatID'].'" /></td>
+      <td><input type="submit" name="saveedit" value="'.$_language->module['edit_category'].'" /></td>
     </tr>
   </table>
   </form>';
 }
 
 else {
-	
+
   echo'<h1>&curren; '.$_language->module['file_categories'].'</h1>';
-  
-  echo'<input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=filecategorys&amp;action=add\');return document.MM_returnValue" value="'.$_language->module['new_category'].'"><br><br>';
+
+  echo'<input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=filecategorys&amp;action=add\');return document.MM_returnValue" value="'.$_language->module['new_category'].'" /><br /><br />';
 
 	echo'<table width="100%" border="0" cellspacing="1" cellpadding="3" bgcolor="#DDDDDD">
     <tr>

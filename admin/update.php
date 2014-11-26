@@ -88,7 +88,7 @@ if($action=="update") {
 			}
 		}
 		echo'</table>
-    <br><br>&raquo; <a href="'.$updateserver.'?get=true" target="_blank"><b>'.$_language->module['get_new_version'].'</b></a>';
+    <br /><br />&raquo; <a href="'.$updateserver.'?get=true" target="_blank"><b>'.$_language->module['get_new_version'].'</b></a>';
 	}
 }
 ?>

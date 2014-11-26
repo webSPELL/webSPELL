@@ -51,9 +51,9 @@ if(isset($_GET['delete'])) {
 		$squadID = $_GET['squadID'];
 		$squads=mysqli_num_rows(safe_query("SELECT userID FROM ".PREFIX."squads_members WHERE userID='$id'"));
 		if($squads<2 AND !issuperadmin($id)) safe_query("DELETE FROM ".PREFIX."user_groups WHERE userID='$id'");
-	
+
 		safe_query("DELETE FROM ".PREFIX."squads_members WHERE userID='$id' AND squadID='$squadID'");
-	} else echo $_language->module['transaction_invalid'];		
+	} else echo $_language->module['transaction_invalid'];
 }
 
 if(isset($_POST['saveedit'])) {
@@ -82,16 +82,16 @@ if(isset($_POST['saveedit'])) {
 		if(isset($_POST['war'])) $war = $_POST['war'];
 		else $war = array();
 		$gallery = isset($_POST['galleryadmin']);
-	
+
 		if($userID != $id OR issuperadmin($userID)) {
-	
+
 			$ergebnis=safe_query("SELECT * FROM ".PREFIX."user_groups WHERE userID='".$id."'");
 			if(!mysqli_num_rows($ergebnis)) safe_query("INSERT INTO ".PREFIX."user_groups (userID) values ('".$id."')");
 			safe_query("UPDATE ".PREFIX."user_groups SET news='$newsadmin',
 													  news_writer='".$newswriter."',
 													  polls='$pollsadmin',
 													  feedback='$feedbackadmin',
-													  user='$useradmin', 
+													  user='$useradmin',
 													  clanwars='$cwadmin',
 													  forum='$boardadmin',
 													  moderator='$moderator',
@@ -103,7 +103,7 @@ if(isset($_POST['saveedit'])) {
 			if($moderator == false){
 				safe_query("DELETE FROM ".PREFIX."forum_moderators WHERE userID='".$id."'");
 			}
-			
+
 			$sql=safe_query("SELECT * FROM ".PREFIX."forum_groups");
 			while($dc=mysqli_fetch_array($sql)) {
 				$name=$dc['name'];
@@ -145,12 +145,12 @@ if(isset($_GET['action']) and $_GET['action'] == "edit") {
 	$CAPCLASS = new Captcha;
 	$CAPCLASS->create_transaction();
 	$hash = $CAPCLASS->get_hash();
-	
+
 	$_language->read_module('bbcode', true);
-	
+
 	eval ("\$addbbcode = \"".gettemplate("addbbcode", "html", "admin")."\";");
   eval ("\$addflags = \"".gettemplate("flags_admin", "html", "admin")."\";");
-	
+
 	$id = $_GET['id'];
 	$squads = '';
 	$ergebnis=safe_query("SELECT * FROM ".PREFIX."squads_members WHERE userID='$id' AND squadID!='0' GROUP BY squadID");
@@ -165,7 +165,7 @@ if(isset($_GET['action']) and $_GET['action'] == "edit") {
 			else $fight='<select name="war['.$ds['sqmID'].']"><option value="1">'.$_language->module['yes'].'</option><option value="0" selected="selected">'.$_language->module['no'].'</option></select>';
 
 			$squads.='<tr>
-        <td colspan="2"><hr></td>
+        <td colspan="2"><hr /></td>
       </tr>
       <tr>
         <td><b>'.$_language->module['squad'].'</b></td>
@@ -173,7 +173,7 @@ if(isset($_GET['action']) and $_GET['action'] == "edit") {
       </tr>
       <tr>
         <td><b>'.$_language->module['position'].'</b></td>
-        <td><input type="text" name="position['.$ds['sqmID'].']" value="'.getinput($ds['position']).'" size="60">'.$activity.'</td>						   
+        <td><input type="text" name="position['.$ds['sqmID'].']" value="'.getinput($ds['position']).'" size="60" />'.$activity.'</td>
       </tr>
       <tr>
         <td><b>'.$_language->module['access_rights'].'</b></td>
@@ -181,63 +181,63 @@ if(isset($_GET['action']) and $_GET['action'] == "edit") {
       </tr>';
 		}
 	}
-  
-	if(isnewsadmin($id)) $news='<input type="checkbox" name="newsadmin" value="1" onmouseover="showWMTT(\'id1\')" onmouseout="hideWMTT()" checked="checked">';
-	else $news='<input type="checkbox" name="newsadmin" value="1" onmouseover="showWMTT(\'id1\')" onmouseout="hideWMTT()">';
-	
-	if(isnewswriter($id)) $newswriter='<input type="checkbox" name="newswriter" value="1" onmouseover="showWMTT(\'id2\')" onmouseout="hideWMTT()" checked="checked">';
-	else $newswriter='<input type="checkbox" name="newswriter" onmouseover="showWMTT(\'id2\')" onmouseout="hideWMTT()" value="1">';
 
-	if(ispollsadmin($id)) $polls='<input type="checkbox" name="pollsadmin" value="1" onmouseover="showWMTT(\'id3\')" onmouseout="hideWMTT()" checked="checked">';
-	else $polls='<input type="checkbox" name="pollsadmin" value="1" onmouseover="showWMTT(\'id3\')" onmouseout="hideWMTT()">';
+	if(isnewsadmin($id)) $news='<input type="checkbox" name="newsadmin" value="1" onmouseover="showWMTT(\'id1\')" onmouseout="hideWMTT()" checked="checked" />';
+	else $news='<input type="checkbox" name="newsadmin" value="1" onmouseover="showWMTT(\'id1\')" onmouseout="hideWMTT()" />';
 
-	if(isfeedbackadmin($id)) $feedback='<input type="checkbox" name="feedbackadmin" value="1" onmouseover="showWMTT(\'id4\')" onmouseout="hideWMTT()" checked="checked">';
-	else $feedback='<input type="checkbox" name="feedbackadmin" value="1" onmouseover="showWMTT(\'id4\')" onmouseout="hideWMTT()">';
+	if(isnewswriter($id)) $newswriter='<input type="checkbox" name="newswriter" value="1" onmouseover="showWMTT(\'id2\')" onmouseout="hideWMTT()" checked="checked" />';
+	else $newswriter='<input type="checkbox" name="newswriter" onmouseover="showWMTT(\'id2\')" onmouseout="hideWMTT()" value="1" />';
 
-	if(isuseradmin($id)) $useradmin='<input type="checkbox" name="useradmin" value="1" onmouseover="showWMTT(\'id5\')" onmouseout="hideWMTT()" checked="checked">';
-	else $useradmin='<input type="checkbox" name="useradmin" value="1" onmouseover="showWMTT(\'id5\')" onmouseout="hideWMTT()">';
+	if(ispollsadmin($id)) $polls='<input type="checkbox" name="pollsadmin" value="1" onmouseover="showWMTT(\'id3\')" onmouseout="hideWMTT()" checked="checked" />';
+	else $polls='<input type="checkbox" name="pollsadmin" value="1" onmouseover="showWMTT(\'id3\')" onmouseout="hideWMTT()" />';
 
-	if(isclanwaradmin($id)) $cwadmin='<input type="checkbox" name="cwadmin" value="1" onmouseover="showWMTT(\'id6\')" onmouseout="hideWMTT()" checked="checked">';
-	else $cwadmin='<input type="checkbox" name="cwadmin" value="1" onmouseover="showWMTT(\'id6\')" onmouseout="hideWMTT()">';
+	if(isfeedbackadmin($id)) $feedback='<input type="checkbox" name="feedbackadmin" value="1" onmouseover="showWMTT(\'id4\')" onmouseout="hideWMTT()" checked="checked" />';
+	else $feedback='<input type="checkbox" name="feedbackadmin" value="1" onmouseover="showWMTT(\'id4\')" onmouseout="hideWMTT()" />';
 
-	if(isforumadmin($id)) $board='<input type="checkbox" name="boardadmin" value="1" onmouseover="showWMTT(\'id7\')" onmouseout="hideWMTT()" checked="checked">';
-	else $board='<input type="checkbox" name="boardadmin" value="1" onmouseover="showWMTT(\'id7\')" onmouseout="hideWMTT()">';
+	if(isuseradmin($id)) $useradmin='<input type="checkbox" name="useradmin" value="1" onmouseover="showWMTT(\'id5\')" onmouseout="hideWMTT()" checked="checked" />';
+	else $useradmin='<input type="checkbox" name="useradmin" value="1" onmouseover="showWMTT(\'id5\')" onmouseout="hideWMTT()" />';
 
-	if(isanymoderator($id)) $mod='<input type="checkbox" name="moderator" value="1" onmouseover="showWMTT(\'id8\')" onmouseout="hideWMTT()" checked="checked">';
-	else $mod='<input type="checkbox" name="moderator" value="1" onmouseover="showWMTT(\'id8\')" onmouseout="hideWMTT()">';
+	if(isclanwaradmin($id)) $cwadmin='<input type="checkbox" name="cwadmin" value="1" onmouseover="showWMTT(\'id6\')" onmouseout="hideWMTT()" checked="checked" />';
+	else $cwadmin='<input type="checkbox" name="cwadmin" value="1" onmouseover="showWMTT(\'id6\')" onmouseout="hideWMTT()" />';
 
-	if(ispageadmin($id)) $page='<input type="checkbox" name="pageadmin" value="1" onmouseover="showWMTT(\'id9\')" onmouseout="hideWMTT()" checked="checked">';
-	else $page='<input type="checkbox" name="pageadmin" value="1" onmouseover="showWMTT(\'id9\')" onmouseout="hideWMTT()">';
+	if(isforumadmin($id)) $board='<input type="checkbox" name="boardadmin" value="1" onmouseover="showWMTT(\'id7\')" onmouseout="hideWMTT()" checked="checked" />';
+	else $board='<input type="checkbox" name="boardadmin" value="1" onmouseover="showWMTT(\'id7\')" onmouseout="hideWMTT()" />';
 
-	if(isfileadmin($id)) $file='<input type="checkbox" name="fileadmin" value="1" onmouseover="showWMTT(\'id10\')" onmouseout="hideWMTT()" checked="checked">';
-	else $file='<input type="checkbox" name="fileadmin" value="1" onmouseover="showWMTT(\'id10\')" onmouseout="hideWMTT()">';
+	if(isanymoderator($id)) $mod='<input type="checkbox" name="moderator" value="1" onmouseover="showWMTT(\'id8\')" onmouseout="hideWMTT()" checked="checked" />';
+	else $mod='<input type="checkbox" name="moderator" value="1" onmouseover="showWMTT(\'id8\')" onmouseout="hideWMTT()" />';
 
-	if(iscashadmin($id)) $cash='<input type="checkbox" name="cashadmin" value="1" onmouseover="showWMTT(\'id11\')" onmouseout="hideWMTT()" checked="checked">';
-	else $cash='<input type="checkbox" name="cashadmin" value="1" onmouseover="showWMTT(\'id11\')" onmouseout="hideWMTT()">';
+	if(ispageadmin($id)) $page='<input type="checkbox" name="pageadmin" value="1" onmouseover="showWMTT(\'id9\')" onmouseout="hideWMTT()" checked="checked" />';
+	else $page='<input type="checkbox" name="pageadmin" value="1" onmouseover="showWMTT(\'id9\')" onmouseout="hideWMTT()" />';
 
-	if(isgalleryadmin($id)) $gallery='<input type="checkbox" name="galleryadmin" value="1" onmouseover="showWMTT(\'id12\')" onmouseout="hideWMTT()" checked="checked">';
-	else $gallery='<input type="checkbox" name="galleryadmin" value="1" onmouseover="showWMTT(\'id12\')" onmouseout="hideWMTT()">';
+	if(isfileadmin($id)) $file='<input type="checkbox" name="fileadmin" value="1" onmouseover="showWMTT(\'id10\')" onmouseout="hideWMTT()" checked="checked" />';
+	else $file='<input type="checkbox" name="fileadmin" value="1" onmouseover="showWMTT(\'id10\')" onmouseout="hideWMTT()" />';
 
-	if(issuperadmin($id)) $super='<input type="checkbox" name="superadmin" value="1" onmouseover="showWMTT(\'id13\')" onmouseout="hideWMTT()" checked="checked">';
-	else $super='<input type="checkbox" name="superadmin" value="1" onmouseover="showWMTT(\'id13\')" onmouseout="hideWMTT()">';
+	if(iscashadmin($id)) $cash='<input type="checkbox" name="cashadmin" value="1" onmouseover="showWMTT(\'id11\')" onmouseout="hideWMTT()" checked="checked" />';
+	else $cash='<input type="checkbox" name="cashadmin" value="1" onmouseover="showWMTT(\'id11\')" onmouseout="hideWMTT()" />';
+
+	if(isgalleryadmin($id)) $gallery='<input type="checkbox" name="galleryadmin" value="1" onmouseover="showWMTT(\'id12\')" onmouseout="hideWMTT()" checked="checked" />';
+	else $gallery='<input type="checkbox" name="galleryadmin" value="1" onmouseover="showWMTT(\'id12\')" onmouseout="hideWMTT()" />';
+
+	if(issuperadmin($id)) $super='<input type="checkbox" name="superadmin" value="1" onmouseover="showWMTT(\'id13\')" onmouseout="hideWMTT()" checked="checked" />';
+	else $super='<input type="checkbox" name="superadmin" value="1" onmouseover="showWMTT(\'id13\')" onmouseout="hideWMTT()" />';
 
 	$ergebnis=safe_query("SELECT * FROM ".PREFIX."forum_groups");
 	while($ds=mysqli_fetch_array($ergebnis)) {
 		$name=$ds['name'];
 		$fgrID=$ds['fgrID'];
-		if(isinusergrp($fgrID, $id, 0)) $usergrp[$fgrID]='<input type="checkbox" name="'.$fgrID.'" value="1" checked="checked">';
-		else $usergrp[$fgrID]='<input type="checkbox" name="'.$fgrID.'" value="1">';
+		if(isinusergrp($fgrID, $id, 0)) $usergrp[$fgrID]='<input type="checkbox" name="'.$fgrID.'" value="1" checked="checked" />';
+		else $usergrp[$fgrID]='<input type="checkbox" name="'.$fgrID.'" value="1" />';
 	}
 
 	if(isclanmember($id)) $userdes='<tr>
-    <td colspan="2"><b>'.$_language->module['description'].'</b><br>
+    <td colspan="2"><b>'.$_language->module['description'].'</b><br />
       <table width="99%" border="0" cellspacing="0" cellpadding="0">
 		      <tr>
 		        <td valign="top">'.$addbbcode.'</td>
 		        <td valign="top">'.$addflags.'</td>
 		      </tr>
 		    </table>
-      <br><textarea id="message" rows="5" cols="" name="message" style="width: 100%;">'.getuserdescription($id).'</textarea>
+      <br /><textarea id="message" rows="5" cols="" name="message" style="width: 100%;">'.getuserdescription($id).'</textarea>
     </td>
   </tr>';
 	else $userdes='';
@@ -251,7 +251,7 @@ if(isset($_GET['action']) and $_GET['action'] == "edit") {
 						}
 					-->
 				</script>';
-	
+
 	echo '<form method="post" id="post" name="post" action="admincenter.php?site=members" onsubmit="return chkFormular();">
   <div class="tooltip" id="id1">'.$_language->module['tooltip_1'].'</div>
   <div class="tooltip" id="id2">'.$_language->module['tooltip_2'].'</div>
@@ -274,7 +274,7 @@ if(isset($_GET['action']) and $_GET['action'] == "edit") {
     '.$squads.'
     '.$userdes.'
     <tr>
-      <td colspan="2"><hr></td>
+      <td colspan="2"><hr /></td>
     </tr>
   </table>
   <table width="100%" border="0" cellspacing="1" cellpadding="3">
@@ -301,20 +301,20 @@ if(isset($_GET['action']) and $_GET['action'] == "edit") {
       <td>'.$page.' '.$_language->module['page_admin'].'</td>
       <td>'.$file.' '.$_language->module['file_admin'].'</td>
     </tr>';
-    
+
 	if(issuperadmin($userID)) {
     echo '<tr>
       <td colspan="3">'.$super.' <b>'.$_language->module['super_admin'].'</b></td>
      </tr>';
    }
-   
+
    echo '<tr>
-    <td colspan="3"><hr></td>
+    <td colspan="3"><hr /></td>
   </tr>
   <tr>
     <td colspan="3"><b>'.$_language->module['group_access'].'</b></td>
   </tr>';
-  
+
 	$sql=safe_query("SELECT * FROM ".PREFIX."forum_groups");
   echo '<tr>';
 	$i = 1;
@@ -329,20 +329,20 @@ if(isset($_GET['action']) and $_GET['action'] == "edit") {
 		$i++;
 	}
 	echo '<td></td></tr>';
-  
+
   echo '<tr>
-      <td><input type="hidden" name="id" value="'.$id.'"><input type="hidden" name="captcha_hash" value="'.$hash.'">
-      <input type="submit" name="saveedit" value="'.$_language->module['edit_member'].'"></td>
+      <td><input type="hidden" name="id" value="'.$id.'" /><input type="hidden" name="captcha_hash" value="'.$hash.'" />
+      <input type="submit" name="saveedit" value="'.$_language->module['edit_member'].'" /></td>
     </tr>
   </table>
   </form>';
-  
+
 	unset($squads);
   unset($userdes);
 }
 
 else {
-	
+
   echo'<h1>&curren; '.$_language->module['members'].'</h1>';
   $CAPCLASS = new Captcha;
   $CAPCLASS->create_transaction();
@@ -350,7 +350,7 @@ else {
   $squads=safe_query("SELECT * FROM ".PREFIX."squads ORDER BY sort");
 	echo'<form method="post" action="admincenter.php?site=members">';
 	while($ds=mysqli_fetch_array($squads)) {
-		
+
     echo'<table width="100%" border="0" cellspacing="1" cellpadding="3" bgcolor="#DDDDDD">
       <tr>
         <td class="title" colspan="5"><b>'.$ds['name'].'</b></td>
@@ -372,33 +372,33 @@ else {
     while($dm=mysqli_fetch_array($members)) {
       if($i%2) { $td='td1'; }
       else { $td='td2'; }
-      
+
 			$country = '[flag]'.getcountry($dm['userID']).'[/flag]';
 			$country=flags($country);
 			$country=str_replace("images/", "../images/", $country);
 			$nickname='<a href="../index.php?site=profile&amp;id='.$dm['userID'].'" target="_blank">'.strip_tags(stripslashes(getnickname($dm['userID']))).'</a>';
 			if($dm['activity']) $activity='<font color="green">'.$_language->module['active'].'</font>';
 			else $activity='<font color="red">'.$_language->module['inactive'].'</font>';
-			
+
       echo'<tr>
         <td class="'.$td.'">'.$country.' '.$nickname.'</td>
         <td class="'.$td.'">'.$dm['position'].'</td>
         <td class="'.$td.'" align="center">'.$activity.'</td>
-        <td class="'.$td.'" align="center"><input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=members&amp;action=edit&amp;id='.$dm['userID'].'\');return document.MM_returnValue" value="'.$_language->module['edit'].'">
-        <input type="button" onclick="MM_confirm(\''.$_language->module['really_delete'].'\', \'admincenter.php?site=members&amp;delete=true&amp;id='.$dm['userID'].'&amp;squadID='.$dm['squadID'].'&amp;captcha_hash='.$hash.'\')" value="'.$_language->module['delete'].'"></td>
+        <td class="'.$td.'" align="center"><input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=members&amp;action=edit&amp;id='.$dm['userID'].'\');return document.MM_returnValue" value="'.$_language->module['edit'].'" />
+        <input type="button" onclick="MM_confirm(\''.$_language->module['really_delete'].'\', \'admincenter.php?site=members&amp;delete=true&amp;id='.$dm['userID'].'&amp;squadID='.$dm['squadID'].'&amp;captcha_hash='.$hash.'\')" value="'.$_language->module['delete'].'" /></td>
         <td class="'.$td.'" align="center"><select name="sort[]">';
-           
+
 			for($j=1; $j<=$anzmembers; $j++) {
 				if($dm['sort'] == $j) echo'<option value="'.$dm['sqmID'].'-'.$j.'" selected="selected">'.$j.'</option>';
 				else echo'<option value="'.$dm['sqmID'].'-'.$j.'">'.$j.'</option>';
 			}
 			echo'</select></td>
       </tr>';
-         
+
          $i++;
 		}
-		echo'</table><br>';
+		echo'</table><br />';
 	}
-	echo'<div align="right"><input type="hidden" name="captcha_hash" value="'.$hash.'"><input type="submit" name="sortieren" value="'.$_language->module['to_sort'].'"></div></form>';
+	echo'<div align="right"><input type="hidden" name="captcha_hash" value="'.$hash.'" /><input type="submit" name="sortieren" value="'.$_language->module['to_sort'].'" /></div></form>';
 }
 ?>

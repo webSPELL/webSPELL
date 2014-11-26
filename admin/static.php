@@ -57,9 +57,9 @@ if(isset($_GET['action']) and $_GET['action'] == "add") {
 	$CAPCLASS->create_transaction();
 	$hash = $CAPCLASS->get_hash();
   $_language->read_module('bbcode', true);
-	
+
   echo'<h1>&curren; <a href="admincenter.php?site=static" class="white">'.$_language->module['static_pages'].'</a> &raquo; '.$_language->module['add_static_page'].'</h1>';
-  
+
   echo '<script>
 					<!--
 						function chkFormular() {
@@ -69,52 +69,52 @@ if(isset($_GET['action']) and $_GET['action'] == "add") {
 						}
 					-->
 				</script>';
-  
+
   echo'<form method="post" id="post" name="post" action="admincenter.php?site=static" enctype="post" onsubmit="return chkFormular();">
   <table width="100%" border="0" cellspacing="1" cellpadding="3">
     <tr>
       <td width="15%"><b>'.$_language->module['title'].'</b></td>
-      <td width="85%"><input type="text" name="name" size="60" value="new"></td>
+      <td width="85%"><input type="text" name="name" size="60" value="new" /></td>
     </tr>
     <tr>
       <td width="15%"><b>'.$_language->module['tags'].'</b></td>
-      <td width="85%"><input type="text" name="tags" size="60" value=""></td>
+      <td width="85%"><input type="text" name="tags" size="60" value="" /></td>
     </tr>
     <tr>
-      <td><b>'.$_language->module['accesslevel'].'</b></td>
-      <td><input name="accesslevel" type="radio" value="0" checked="checked"> '.$_language->module['public'].'<br>
-      <input name="accesslevel" type="radio" value="1"> '.$_language->module['registered_only'].'<br>
-		<input name="accesslevel" type="radio" value="2"> '.$_language->module['clanmember_only'].'</td>
+		<td><b>'.$_language->module['accesslevel'].'</b></td>
+		<td><input name="accesslevel" type="radio" value="0" checked="checked" /> '.$_language->module['public'].'<br />
+		<input name="accesslevel" type="radio" value="1" /> '.$_language->module['registered_only'].'<br />
+		<input name="accesslevel" type="radio" value="2" /> '.$_language->module['clanmember_only'].'</td>
     </tr>
   </table>
-  <br><b>'.$_language->module['content'].'</b><br><small>'.$_language->module['you_can_use_html'].'</small><br><br>';
-  
+  <br /><b>'.$_language->module['content'].'</b><br /><small>'.$_language->module['you_can_use_html'].'</small><br /><br />';
+
   eval ("\$addbbcode = \"".gettemplate("addbbcode", "html", "admin")."\";");
   eval ("\$addflags = \"".gettemplate("flags_admin", "html", "admin")."\";");
-  
+
   echo '<table width="100%" border="0" cellspacing="0" cellpadding="0">
 		      <tr>
 		        <td valign="top">'.$addbbcode.'</td>
 		        <td valign="top">'.$addflags.'</td>
 		      </tr>
 		    </table>';
-    
-  echo '<br><textarea id="message" name="message" rows="20" cols="" style="width: 100%;"></textarea>
-  <input type="hidden" name="captcha_hash" value="'.$hash.'">
-  <br><br><input type="submit" name="save" value="'.$_language->module['add_static_page'].'">
+
+  echo '<br /><textarea id="message" name="message" rows="20" cols="" style="width: 100%;"></textarea>
+  <input type="hidden" name="captcha_hash" value="'.$hash.'" />
+  <br /><br /><input type="submit" name="save" value="'.$_language->module['add_static_page'].'" />
   </form>';
-  
+
 }
 
 elseif(isset($_GET['action']) and $_GET['action'] == "edit") {
-	
+
 	$_language->read_module('bbcode', true);
-	
+
   $staticID = $_GET['staticID'];
 	$ergebnis=safe_query("SELECT * FROM `".PREFIX."static` WHERE staticID='".$staticID."'");
 	$ds=mysqli_fetch_array($ergebnis);
 	$content = getinput($ds['content']);
-	
+
 	$clanmember = "";
 	$user = "";
 	$public = "";
@@ -127,9 +127,9 @@ elseif(isset($_GET['action']) and $_GET['action'] == "edit") {
 	$CAPCLASS = new Captcha;
 	$CAPCLASS->create_transaction();
 	$hash = $CAPCLASS->get_hash();
-	
+
 	echo'<h1>&curren; <a href="admincenter.php?site=static" class="white">'.$_language->module['static_pages'].'</a> &raquo; '.$_language->module['edit_static_page'].'</h1>';
-	
+
 	echo '<script>
 					<!--
 						function chkFormular() {
@@ -144,24 +144,24 @@ elseif(isset($_GET['action']) and $_GET['action'] == "edit") {
   <table width="100%" border="0" cellspacing="1" cellpadding="3">
     <tr>
       <td width="15%"><b>'.$_language->module['title'].'</b></td>
-      <td width="85%"><input type="text" name="name" size="60" value="'.getinput($ds['name']).'"></td>
+      <td width="85%"><input type="text" name="name" size="60" value="'.getinput($ds['name']).'" /></td>
     </tr>
     <tr>
       <td width="15%"><b>'.$_language->module['tags'].'</b></td>
-      <td width="85%"><input type="text" name="tags" size="60" value="'.getinput($tags).'"></td>
+      <td width="85%"><input type="text" name="tags" size="60" value="'.getinput($tags).'" /></td>
     </tr>
     <tr>
       <td><b>'.$_language->module['accesslevel'].'</b></td>
-      <td><input name="accesslevel" type="radio" value="0" '.$public.'> '.$_language->module['public'].'<br>
-      <input name="accesslevel" type="radio" value="1" '.$user.'> '.$_language->module['registered_only'].'<br>
-      <input name="accesslevel" type="radio" value="2" '.$clanmember.'> '.$_language->module['clanmember_only'].'</td>
+      <td><input name="accesslevel" type="radio" value="0" '.$public.' /> '.$_language->module['public'].'<br />
+      <input name="accesslevel" type="radio" value="1" '.$user.' /> '.$_language->module['registered_only'].'<br />
+      <input name="accesslevel" type="radio" value="2" '.$clanmember.' /> '.$_language->module['clanmember_only'].'</td>
     </tr>
   </table>
-  <br><b>'.$_language->module['content'].'</b><br><small>'.$_language->module['you_can_use_html'].'</small><br><br>';
-  
+  <br /><b>'.$_language->module['content'].'</b><br /><small>'.$_language->module['you_can_use_html'].'</small><br /><br />';
+
 	eval ("\$addbbcode = \"".gettemplate("addbbcode", "html", "admin")."\";");
   eval ("\$addflags = \"".gettemplate("flags_admin", "html", "admin")."\";");
-  
+
   echo '<table width="100%" border="0" cellspacing="0" cellpadding="0">
 		      <tr>
 		        <td valign="top">'.$addbbcode.'</td>
@@ -169,20 +169,20 @@ elseif(isset($_GET['action']) and $_GET['action'] == "edit") {
 		      </tr>
 		</table>
 	<textarea id="message" name="message" rows="20" cols="" style="width: 100%;">'.$content.'</textarea>
-	<br><br><input type="hidden" name="captcha_hash" value="'.$hash.'">
-	<input type="hidden" name="staticID" value="'.$staticID.'">
-	<input type="submit" name="save" value="'.$_language->module['edit_static_page'].'">
+	<br /><br /><input type="hidden" name="captcha_hash" value="'.$hash.'" />
+	<input type="hidden" name="staticID" value="'.$staticID.'" />
+	<input type="submit" name="save" value="'.$_language->module['edit_static_page'].'" />
 	</form>';
 }
 
 else {
-	
+
   echo'<h1>&curren; '.$_language->module['static_pages'].'</h1>';
-  
-  echo'<input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=static&amp;action=add\');return document.MM_returnValue" value="'.$_language->module['new_static_page'].'"><br><br>';
+
+  echo'<input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=static&amp;action=add\');return document.MM_returnValue" value="'.$_language->module['new_static_page'].'" /><br /><br />';
 
 	$ergebnis=safe_query("SELECT * FROM ".PREFIX."static ORDER BY staticID");
-	
+
   echo'<table width="100%" border="0" cellspacing="1" cellpadding="3" bgcolor="#DDDDDD">
     <tr>
       <td width="8%" class="title"><b>'.$_language->module['id'].'</b></td>
@@ -195,23 +195,23 @@ else {
 	$CAPCLASS = new Captcha;
 	$CAPCLASS->create_transaction();
 	$hash = $CAPCLASS->get_hash();
-  
+
   while($ds=mysqli_fetch_array($ergebnis)) {
     if($i%2) { $td='td1'; }
     else { $td='td2'; }
-  
+
     if($ds['accesslevel'] == 2) $accesslevel = $_language->module['clanmember_only'];
 	  elseif($ds['accesslevel'] == 1) $accesslevel = $_language->module['registered_only'];
 	  elseif($ds['accesslevel'] == 0) $accesslevel = $_language->module['public'];
-  
+
 		echo'<tr>
       <td class="'.$td.'" align="center">'.$ds['staticID'].'</td>
       <td class="'.$td.'"><a href="../index.php?site=static&amp;staticID='.$ds['staticID'].'" target="_blank">'.getinput($ds['name']).'</a></td>
       <td class="'.$td.'">'.$accesslevel.'</td>
-      <td class="'.$td.'" align="center"><input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=static&amp;action=edit&amp;staticID='.$ds['staticID'].'\');return document.MM_returnValue" value="'.$_language->module['edit'].'">
-      <input type="button" onclick="MM_confirm(\''.$_language->module['really_delete'].'\', \'admincenter.php?site=static&amp;delete=true&amp;staticID='.$ds['staticID'].'&amp;captcha_hash='.$hash.'\')" value="'.$_language->module['delete'].'"></td>
+      <td class="'.$td.'" align="center"><input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=static&amp;action=edit&amp;staticID='.$ds['staticID'].'\');return document.MM_returnValue" value="'.$_language->module['edit'].'" />
+      <input type="button" onclick="MM_confirm(\''.$_language->module['really_delete'].'\', \'admincenter.php?site=static&amp;delete=true&amp;staticID='.$ds['staticID'].'&amp;captcha_hash='.$hash.'\')" value="'.$_language->module['delete'].'" /></td>
     </tr>';
-    
+
     $i++;
 	}
 	echo'</table>';

@@ -42,16 +42,16 @@ elseif(isset($_POST['save'])) {
 	$rank = $_FILES['rank'];
 	$max = $_POST['max'];
   	$min = $_POST['min'];
-  	
+
 	$CAPCLASS = new Captcha;
 	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
 		if(checkforempty(Array('min', 'max'))) {
 			if($max=="MAX") $maximum=2147483647;
 			else $maximum=$max;
-		
+
 			safe_query("INSERT INTO ".PREFIX."forum_ranks ( rank, postmin, postmax ) values( '$name', '$min', '$maximum' )");
 			$id=mysqli_insert_id($_database);
-		
+
 			$filepath = "../images/icons/ranks/";
 			if ($rank['name'] != "") {
 				move_uploaded_file($rank['tmp_name'], $filepath.$rank['name']);
@@ -70,9 +70,9 @@ elseif(isset($_POST['saveedit'])) {
 	$rank = $_POST['rank'];
 	$min = $_POST['min'];
 	$max = $_POST['max'];
-	
+
 	$CAPCLASS = new Captcha;
-	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {	 
+	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
 		if(checkforempty(Array('min', 'max'))) {
 			$ergebnis = safe_query("SELECT * FROM ".PREFIX."forum_ranks ORDER BY rankID");
 			$anz=mysqli_num_rows($ergebnis);
@@ -99,41 +99,41 @@ if($action=="add") {
 	$CAPCLASS = new Captcha;
 	$CAPCLASS->create_transaction();
 	$hash = $CAPCLASS->get_hash();
-  
+
   echo'<h1>&curren; <a href="admincenter.php?site=ranks" class="white">'.$_language->module['user_ranks'].'</a> &raquo; '.$_language->module['add_rank'].'</h1>';
 
   echo'<form method="post" action="admincenter.php?site=ranks" enctype="multipart/form-data">
   <table width="100%" border="0" cellspacing="1" cellpadding="3">
     <tr>
       <td width="15%"><b>'.$_language->module['rank_icon'].'</b></td>
-      <td width="85%"><input name="rank" type="file" size="40"></td>
+      <td width="85%"><input name="rank" type="file" size="40" /></td>
     </tr>
     <tr>
       <td><b>'.$_language->module['rank_name'].'</b></td>
-      <td><input type="text" name="name" size="60"></td>
+      <td><input type="text" name="name" size="60" /></td>
     </tr>
     <tr>
       <td><b>'.$_language->module['min_posts'].'</b></td>
-      <td><input type="text" name="min" size="4"></td>
+      <td><input type="text" name="min" size="4" /></td>
     </tr>
     <tr>
       <td><b>'.$_language->module['max_posts'].'</b></td>
-      <td><input type="text" name="max" size="4"></td>
+      <td><input type="text" name="max" size="4" /></td>
     </tr>
     <tr>
-      <td><input type="hidden" name="captcha_hash" value="'.$hash.'"></td>
-      <td><input type="submit" name="save" value="'.$_language->module['add_rank'].'"></td>
+      <td><input type="hidden" name="captcha_hash" value="'.$hash.'" /></td>
+      <td><input type="submit" name="save" value="'.$_language->module['add_rank'].'" /></td>
     </tr>
   </table>
   </form>';
 }
 
 else {
-	
+
   echo'<h1>&curren; '.$_language->module['user_ranks'].'</h1>';
-  
-  echo'<input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=ranks&amp;action=add\');return document.MM_returnValue" value="'.$_language->module['new_rank'].'"><br><br>';
-	
+
+  echo'<input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=ranks&amp;action=add\');return document.MM_returnValue" value="'.$_language->module['new_rank'].'" /><br /><br />';
+
   echo'<form method="post" action="admincenter.php?site=ranks">
   <table width="100%" border="0" cellspacing="1" cellpadding="3" bgcolor="#DDDDDD">
     <tr>
@@ -151,8 +151,8 @@ else {
   $i=1;
   while($ds=mysqli_fetch_array($ergebnis)) {
     if($i%2) { $td='td1'; }
-    else { $td='td2'; }    
-		if($ds['rank']=="Administrator" || $ds['rank']=="Moderator") {			
+    else { $td='td2'; }
+		if($ds['rank']=="Administrator" || $ds['rank']=="Moderator") {
       		echo'<tr>
 	        <td class="'.$td.'" align="center"><img src="../images/icons/ranks/'.$ds['pic'].'" alt=""></td>
 	        <td class="'.$td.'">'.$ds['rank'].'</td>
@@ -161,23 +161,23 @@ else {
 	        <td class="'.$td.'">&nbsp;</td>
 	      </tr>';
 		}
-    
+
 		else {
 			if(mb_strlen(trim($ds['postmax']))>8) $max="MAX";
 			else $max=$ds['postmax'];
-			
+
       		echo'<tr>
 	        <td class="'.$td.'" align="center"><img src="../images/icons/ranks/'.$ds['pic'].'" alt=""></td>
-	        <td class="'.$td.'"><input type="text" name="rank['.$ds['rankID'].']" value="'.getinput($ds['rank']).'" size="58"></td>
-	        <td class="'.$td.'" align="center"><input type="text" name="min['.$ds['rankID'].']" value="'.$ds['postmin'].'" size="6" dir="rtl"></td>
-	        <td class="'.$td.'" align="center"><input type="text" name="max['.$ds['rankID'].']" value="'.$max.'" size="6" dir="rtl"></td>
-	        <td class="'.$td.'" align="center"><input type="button" onclick="MM_confirm(\''.$_language->module['really_delete'].'\', \'admincenter.php?site=ranks&amp;delete=true&amp;rankID='.$ds['rankID'].'&amp;captcha_hash='.$hash.'\')" value="'.$_language->module['delete'].'"></td>
+	        <td class="'.$td.'"><input type="text" name="rank['.$ds['rankID'].']" value="'.getinput($ds['rank']).'" size="58" /></td>
+	        <td class="'.$td.'" align="center"><input type="text" name="min['.$ds['rankID'].']" value="'.$ds['postmin'].'" size="6" dir="rtl" /></td>
+	        <td class="'.$td.'" align="center"><input type="text" name="max['.$ds['rankID'].']" value="'.$max.'" size="6" dir="rtl" /></td>
+	        <td class="'.$td.'" align="center"><input type="button" onclick="MM_confirm(\''.$_language->module['really_delete'].'\', \'admincenter.php?site=ranks&amp;delete=true&amp;rankID='.$ds['rankID'].'&amp;captcha_hash='.$hash.'\')" value="'.$_language->module['delete'].'" /></td>
 	      </tr>';
 		}
 		$i++;
 	}
 	echo'<tr>
-      <td class="td_head" colspan="5" align="right"><input type="hidden" name="captcha_hash" value="'.$hash.'"><input type="submit" name="saveedit" value="'.$_language->module['update'].'"></td>
+      <td class="td_head" colspan="5" align="right"><input type="hidden" name="captcha_hash" value="'.$hash.'"><input type="submit" name="saveedit" value="'.$_language->module['update'].'" /></td>
     </tr>
   </table>
   </form>';

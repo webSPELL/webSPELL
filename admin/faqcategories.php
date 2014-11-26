@@ -77,14 +77,14 @@ if(isset($_GET['action'])) {
     $CAPCLASS = new Captcha;
     $CAPCLASS->create_transaction();
     $hash = $CAPCLASS->get_hash();
-    
+
     $_language->read_module('bbcode', true);
-    
+
     eval ("\$addbbcode = \"".gettemplate("addbbcode", "html", "admin")."\";");
     eval ("\$addflags = \"".gettemplate("flags_admin", "html", "admin")."\";");
-    
+
     echo'<h1>&curren; <a href="admincenter.php?site=faqcategories" class="white">'.$_language->module['faq_categories'].'</a> &raquo; '.$_language->module['add_category'].'</h1>';
-    
+
     echo '<script>
 					<!--
 						function chkFormular() {
@@ -94,12 +94,12 @@ if(isset($_GET['action'])) {
 						}
 					-->
 				</script>';
-    
+
     echo '<form method="post" action="admincenter.php?site=faqcategories" id="post" name="post" enctype="multipart/form-data" onsubmit="return chkFormular();">
     <table width="100%" border="0" cellspacing="1" cellpadding="3">
       <tr>
         <td width="15%"><b>'.$_language->module['category_name'].'</b></td>
-        <td width="85%"><input type="text" name="faqcatname" size="60"></td>
+        <td width="85%"><input type="text" name="faqcatname" size="60" /></td>
       </tr>
       <tr>
         <td colspan="2"><b>'.$_language->module['description'].'</b>
@@ -109,11 +109,11 @@ if(isset($_GET['action'])) {
 			        <td valign="top">'.$addflags.'</td>
 			      </tr>
 			    </table>
-	        <br><textarea id="message" rows="10" cols="" name="message" style="width: 100%;"></textarea>
+	        <br /><textarea id="message" rows="10" cols="" name="message" style="width: 100%;"></textarea>
 	      </td>
       </tr>
       <tr>
-        <td colspan="2"><input type="hidden" name="captcha_hash" value="'.$hash.'"><input type="submit" name="savecat" value="'.$_language->module['add_category'].'"></td>
+        <td colspan="2"><input type="hidden" name="captcha_hash" value="'.$hash.'" /><input type="submit" name="savecat" value="'.$_language->module['add_category'].'" /></td>
       </tr>
     </table>
     </form>';
@@ -125,16 +125,16 @@ if(isset($_GET['action'])) {
 
 		$ergebnis=safe_query("SELECT * FROM ".PREFIX."faq_categories WHERE faqcatID='$faqcatID'");
 		$ds=mysqli_fetch_array($ergebnis);
-    
+
     $CAPCLASS = new Captcha;
     $CAPCLASS->create_transaction();
     $hash = $CAPCLASS->get_hash();
-    
+
     $_language->read_module('bbcode', true);
-    
+
     eval ("\$addbbcode = \"".gettemplate("addbbcode", "html", "admin")."\";");
     eval ("\$addflags = \"".gettemplate("flags_admin", "html", "admin")."\";");
-    
+
     echo'<h1>&curren; <a href="admincenter.php?site=faqcategories" class="white">'.$_language->module['faq_categories'].'</a> &raquo; '.$_language->module['edit_category'].'</h1>';
 
     echo '<script>
@@ -146,12 +146,12 @@ if(isset($_GET['action'])) {
 						}
 					-->
 				</script>';
-    
+
     echo '<form method="post" action="admincenter.php?site=faqcategories" id="post" name="post" onsubmit="return chkFormular();">
     <table width="100%" border="0" cellspacing="1" cellpadding="3">
       <tr>
         <td width="15%"><b>'.$_language->module['category_name'].'</b></td>
-        <td width="85%"><input type="text" name="faqcatname" size="60" value="'.getinput($ds['faqcatname']).'"></td>
+        <td width="85%"><input type="text" name="faqcatname" size="60" value="'.getinput($ds['faqcatname']).'" /></td>
       </tr>
       <tr>
         <td colspan="2"><b>'.$_language->module['description'].'</b>
@@ -161,11 +161,11 @@ if(isset($_GET['action'])) {
 			        <td valign="top">'.$addflags.'</td>
 			      </tr>
 			    </table>
-	        <br><textarea id="message" rows="10" cols="" name="message" style="width: 100%;">'.getinput($ds['description']).'</textarea>
+	        <br /><textarea id="message" rows="10" cols="" name="message" style="width: 100%;">'.getinput($ds['description']).'</textarea>
 	      </td>
       </tr>
       <tr>
-        <td colspan="2"><input type="hidden" name="captcha_hash" value="'.$hash.'"><input type="hidden" name="faqcatID" value="'.$faqcatID.'"><input type="submit" name="saveeditcat" value="'.$_language->module['edit_category'].'"></td>
+        <td colspan="2"><input type="hidden" name="captcha_hash" value="'.$hash.'" /><input type="hidden" name="faqcatID" value="'.$faqcatID.'" /><input type="submit" name="saveeditcat" value="'.$_language->module['edit_category'].'" /></td>
       </tr>
     </table>
     </form>';
@@ -173,10 +173,10 @@ if(isset($_GET['action'])) {
 }
 
 else {
-	
+
   echo '<h1>&curren; '.$_language->module['faq_categories'].'</h1>';
-  
-  echo'<input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=faqcategories&amp;action=addcat\');return document.MM_returnValue" value="'.$_language->module['new_category'].'"><br><br>';	
+
+  echo'<input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=faqcategories&amp;action=addcat\');return document.MM_returnValue" value="'.$_language->module['new_category'].'" /><br /><br />';
 
 	echo'<form method="post" action="admincenter.php?site=faqcategories">
   <table width="100%" border="0" cellspacing="1" cellpadding="3" bgcolor="#DDDDDD">
@@ -194,30 +194,30 @@ else {
 	$CAPCLASS = new Captcha;
 	$CAPCLASS->create_transaction();
 	$hash = $CAPCLASS->get_hash();
-  
+
   while($ds=mysqli_fetch_array($ergebnis)) {
     if($i%2) { $td='td1'; }
     else { $td='td2'; }
-  
+
 		echo'<tr>
       <td class="'.$td.'"><b>'.getinput($ds['faqcatname']).'</b>
-      <br>'.cleartext($ds['description'],1,'admin').'</td>
-      <td class="'.$td.'" align="center"><input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=faqcategories&amp;action=editcat&amp;faqcatID='.$ds['faqcatID'].'\');return document.MM_returnValue" value="'.$_language->module['edit'].'">
-      <input type="button" onclick="MM_confirm(\''.$_language->module['really_delete'].'\', \'admincenter.php?site=faqcategories&amp;delcat=true&amp;faqcatID='.$ds['faqcatID'].'&amp;captcha_hash='.$hash.'\')" value="'.$_language->module['delete'].'"></td>
+      <br />'.cleartext($ds['description'],1,'admin').'</td>
+      <td class="'.$td.'" align="center"><input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=faqcategories&amp;action=editcat&amp;faqcatID='.$ds['faqcatID'].'\');return document.MM_returnValue" value="'.$_language->module['edit'].'" />
+      <input type="button" onclick="MM_confirm(\''.$_language->module['really_delete'].'\', \'admincenter.php?site=faqcategories&amp;delcat=true&amp;faqcatID='.$ds['faqcatID'].'&amp;captcha_hash='.$hash.'\')" value="'.$_language->module['delete'].'" /></td>
       <td class="'.$td.'" align="center"><select name="sortfaqcat[]">';
-		
+
     for($n=1; $n<=$anz; $n++) {
 			if($ds['sort'] == $n) echo'<option value="'.$ds['faqcatID'].'-'.$n.'" selected="selected">'.$n.'</option>';
 			else echo'<option value="'.$ds['faqcatID'].'-'.$n.'">'.$n.'</option>';
 		}
-    
+
 		echo'</select></td>
     </tr>';
-    
+
     $i++;
 	}
 	echo'<tr>
-      <td class="td_head" colspan="3" align="right"><input type="hidden" name="captcha_hash" value="'.$hash.'"><input type="submit" name="sortieren" value="'.$_language->module['to_sort'].'"></td>
+      <td class="td_head" colspan="3" align="right"><input type="hidden" name="captcha_hash" value="'.$hash.'" /><input type="submit" name="sortieren" value="'.$_language->module['to_sort'].'" /></td>
     </tr>
   </table>
   </form>';

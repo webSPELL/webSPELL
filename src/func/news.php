@@ -26,55 +26,54 @@
 */
 
 function getanzcomments($id, $type) {
-	$anz=mysqli_num_rows(safe_query("SELECT commentID FROM `".PREFIX."comments` WHERE parentID='$id' AND type='$type'"));
+	$anz=mysql_num_rows(safe_query("SELECT commentID FROM `".PREFIX."comments` WHERE parentID='$id' AND type='$type'"));
 	return $anz;
 }
 
 function getlastcommentposter($id, $type) {
-	$ds=mysqli_fetch_array(safe_query("SELECT userID, nickname FROM `".PREFIX."comments` WHERE parentID='$id' AND type='$type' ORDER BY date DESC LIMIT 0,1"));
+	$ds=mysql_fetch_array(safe_query("SELECT userID, nickname FROM `".PREFIX."comments` WHERE parentID='$id' AND type='$type' ORDER BY date DESC LIMIT 0,1"));
 	if($ds['userID']) return getnickname($ds['userID']);
 	else return htmlspecialchars($ds['nickname']);
 }
 
 function getlastcommentdate($id, $type) {
-	$ds=mysqli_fetch_array(safe_query("SELECT date FROM `".PREFIX."comments` WHERE parentID='$id' AND type='$type' ORDER BY date DESC LIMIT 0,1"));
+	$ds=mysql_fetch_array(safe_query("SELECT date FROM `".PREFIX."comments` WHERE parentID='$id' AND type='$type' ORDER BY date DESC LIMIT 0,1"));
 	return $ds['date'];
 }
 
 function getusernewsposts($userID) {
-	$anz=mysqli_num_rows(safe_query("SELECT newsID FROM `".PREFIX."news` WHERE poster='$userID' "));
+	$anz=mysql_num_rows(safe_query("SELECT newsID FROM `".PREFIX."news` WHERE poster='$userID' "));
 	return $anz;
 }
 
 function getusernewscomments($userID) {
-	$anz=mysqli_num_rows(safe_query("SELECT commentID FROM `".PREFIX."comments` WHERE userID='$userID' AND type='ne'"));
+	$anz=mysql_num_rows(safe_query("SELECT commentID FROM `".PREFIX."comments` WHERE userID='$userID' AND type='ne'"));
 	return $anz;
 }
 
 function getrubricname($rubricID) {
-	$ds=mysqli_fetch_array(safe_query("SELECT rubric FROM `".PREFIX."news_rubrics` WHERE rubricID='$rubricID'"));
+	$ds=mysql_fetch_array(safe_query("SELECT rubric FROM `".PREFIX."news_rubrics` WHERE rubricID='$rubricID'"));
 	return $ds['rubric'];
 }
 
 function getrubricpic($rubricID) {
-	$ds=mysqli_fetch_array(safe_query("SELECT pic FROM `".PREFIX."news_rubrics` WHERE rubricID='$rubricID'"));
+	$ds=mysql_fetch_array(safe_query("SELECT pic FROM `".PREFIX."news_rubrics` WHERE rubricID='$rubricID'"));
 	return $ds['pic'];
 }
 
 function getlanguage($lang) {
-	$ds=mysqli_fetch_array(safe_query("SELECT language FROM `".PREFIX."news_languages` WHERE lang='$lang'"));
+	$ds=mysql_fetch_array(safe_query("SELECT language FROM `".PREFIX."news_languages` WHERE lang='$lang'"));
 	return $ds['language'];
 }
 
 function select_language($message_array) {
-	if(isset($_SESSION['language'])){
-		$i=0;
-		foreach($message_array as $val) {
-			if($val['lang'] == $_SESSION['language']) return $i;
-			$i++;
-		}
+	$i=0;
+	foreach($message_array as $val) {
+		if($val['lang'] == $_SESSION['language']) $userlang=$i;
+		$i++;
 	}
-	return 0;
+	if(isset($userlang)) return $userlang;
+	else return 0;
 }
 
 function getlanguageid($lang, $message_array) {

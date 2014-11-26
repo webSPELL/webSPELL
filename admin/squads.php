@@ -40,13 +40,13 @@ if(isset($_GET['delete'])) {
 		}
 		safe_query("DELETE FROM ".PREFIX."squads_members WHERE squadID='$squadID' ");
 		safe_query("DELETE FROM ".PREFIX."squads WHERE squadID='$squadID' ");
-	
+
 		$ergebnis=safe_query("SELECT upID FROM ".PREFIX."upcoming WHERE squad='$squadID'");
 		while($ds=mysqli_fetch_array($ergebnis)) {
 			safe_query("DELETE FROM ".PREFIX."upcoming_announce WHERE upID='$ds[upID]'");
 		}
 		safe_query("DELETE FROM ".PREFIX."upcoming WHERE squad='$squadID' ");
-	
+
 		$ergebnis=safe_query("SELECT cwID FROM ".PREFIX."clanwars WHERE squad='$squadID'");
 		while($ds=mysqli_fetch_array($ergebnis)) {
 			safe_query("DELETE FROM ".PREFIX."comments WHERE type='cw' AND parentID='$ds[cwID]'");
@@ -78,16 +78,16 @@ if(isset($_POST['sortieren'])) {
 if(isset($_POST['save'])) {
  	$CAPCLASS = new Captcha;
 	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
-		
+
 		if(checkforempty(Array('name'))) {
 			$games=implode(";", $_POST['games']);
 			safe_query("INSERT INTO ".PREFIX."squads ( gamesquad, games, name, info, sort ) VALUES ( '".$_POST['gamesquad']."', '".$games."', '".$_POST['name']."', '".$_POST['message']."', '1' )");
-			
+
 			$icon = $_FILES['icon'];
 			$icon_small = $_FILES['icon_small'];
 			$id=mysqli_insert_id($_database);
 			$filepath = "../images/squadicons/";
-			
+
 			if($icon['name'] != "") {
 				move_uploaded_file($icon['tmp_name'], $filepath.$icon['name'].".tmp");
 				@chmod($filepath.$icon['name'].".tmp", 0755);
@@ -105,15 +105,15 @@ if(isset($_POST['save'])) {
 				}  else {
 					@unlink($filepath.$icon['name'].".tmp");
 					$error = $_language->module['format_incorrect'];
-					die('<b>'.$error.'</b><br><br><a href="admincenter.php?site=squads&amp;action=edit&amp;squadID='.$id.'">&laquo; '.$_language->module['back'].'</a>');
+					die('<b>'.$error.'</b><br /><br /><a href="admincenter.php?site=squads&amp;action=edit&amp;squadID='.$id.'">&laquo; '.$_language->module['back'].'</a>');
 				}
 			}
-			
+
 			if($icon_small['name'] != "") {
 				move_uploaded_file($icon_small['tmp_name'], $filepath.$icon_small['name'].".tmp");
 				@chmod($filepath.$icon_small['name'].".tmp", 0755);
 				$getimg = getimagesize($filepath.$icon_small['name'].".tmp");
-				
+
 				$pic = '';
 				if($getimg[2] == IMAGETYPE_GIF) $pic=$id.'_small.gif';
 				elseif($getimg[2] == IMAGETYPE_JPEG) $pic=$id.'_small.jpg';
@@ -127,11 +127,11 @@ if(isset($_POST['save'])) {
 				}  else {
 					@unlink($filepath.$icon_small['name'].".tmp");
 					$error = $_language->module['format_incorrect'];
-					die('<b>'.$error.'</b><br><br><a href="admincenter.php?site=squads&amp;action=edit&amp;squadID='.$id.'">&laquo; '.$_language->module['back'].'</a>');
+					die('<b>'.$error.'</b><br /><br /><a href="admincenter.php?site=squads&amp;action=edit&amp;squadID='.$id.'">&laquo; '.$_language->module['back'].'</a>');
 				}
 			}
 		} else echo $_language->module['information_incomplete'];
-		
+
 	} else echo $_language->module['transaction_invalid'];
 }
 
@@ -146,7 +146,7 @@ if(isset($_POST['saveedit'])) {
 			$icon = $_FILES['icon'];
 			$icon_small = $_FILES['icon_small'];
 			$id=$_POST['squadID'];
-			
+
 			if($icon['name'] != "") {
 				move_uploaded_file($icon['tmp_name'], $filepath.$icon['name'].".tmp");
 				@chmod($filepath.$icon['name'].".tmp", 0755);
@@ -165,10 +165,10 @@ if(isset($_POST['saveedit'])) {
 				}  else {
 					@unlink($filepath.$icon['name'].".tmp");
 					$error = $_language->module['format_incorrect'];
-					die('<b>'.$error.'</b><br><br><a href="admincenter.php?site=squads&amp;action=edit&amp;squadID='.$id.'">&laquo; '.$_language->module['back'].'</a>');
+					die('<b>'.$error.'</b><br /><br /><a href="admincenter.php?site=squads&amp;action=edit&amp;squadID='.$id.'">&laquo; '.$_language->module['back'].'</a>');
 				}
 			}
-			
+
 			if($icon_small['name'] != "") {
 				move_uploaded_file($icon_small['tmp_name'], $filepath.$icon_small['name'].".tmp");
 				@chmod($filepath.$icon_small['name'].".tmp", 0755);
@@ -186,7 +186,7 @@ if(isset($_POST['saveedit'])) {
 					}  else {
 						@unlink($filepath.$icon_small['name'].".tmp");
 						$error = $_language->module['format_incorrect'];
-						die('<b>'.$error.'</b><br><br><a href="admincenter.php?site=squads&amp;action=edit&amp;squadID='.$id.'">&laquo; '.$_language->module['back'].'</a>');
+						die('<b>'.$error.'</b><br /><br /><a href="admincenter.php?site=squads&amp;action=edit&amp;squadID='.$id.'">&laquo; '.$_language->module['back'].'</a>');
 					}
 			}
 
@@ -211,12 +211,12 @@ if($action=="add") {
 	$CAPCLASS = new Captcha;
 	$CAPCLASS->create_transaction();
 	$hash = $CAPCLASS->get_hash();
-	
+
 	$_language->read_module('bbcode', true);
-	
+
 	eval ("\$addbbcode = \"".gettemplate("addbbcode", "html", "admin")."\";");
 	eval ("\$addflags = \"".gettemplate("flags_admin", "html", "admin")."\";");
-	
+
 	echo '<script>
 		<!--
 			function chkFormular() {
@@ -226,24 +226,24 @@ if($action=="add") {
 			}
 		-->
 	</script>';
-  
+
 	echo '<form method="post" id="post" name="post" action="admincenter.php?site=squads" enctype="multipart/form-data" onsubmit="return chkFormular();">
   <table width="100%" border="0" cellspacing="1" cellpadding="3">
       <tr>
         <td width="15%"><b>'.$_language->module['icon_upload'].'</b></td>
-        <td width="85%"><input name="icon" type="file" size="40"></td>
+        <td width="85%"><input name="icon" type="file" size="40" /></td>
       </tr>
 		<tr>
         <td><b>'.$_language->module['icon_upload_small'].'</b></td>
-        <td><input name="icon_small" type="file" size="40"> <small>('.$_language->module['icon_upload_info'].')</small></td>
+        <td><input name="icon_small" type="file" size="40" /> <small>('.$_language->module['icon_upload_info'].')</small></td>
       </tr>
       <tr>
         <td><b>'.$_language->module['squad_name'].'</b></td>
-        <td><input type="text" name="name" size="60"></td>
+        <td><input type="text" name="name" size="60" /></td>
       </tr>
       <tr>
         <td><b>'.$_language->module['squad_type'].'</b></td>
-        <td><input onclick="document.getElementById(\'games\').style.display = \'block\'" type="radio" name="gamesquad" value="1" checked="checked"> '.$_language->module['gaming_squad'].' &nbsp; <input onclick="document.getElementById(\'games\').style.display = \'none\'" type="radio" name="gamesquad" value="0"> '.$_language->module['non_gaming_squad'].'</td>
+        <td><input onclick="document.getElementById(\'games\').style.display = \'block\'" type="radio" name="gamesquad" value="1" checked="checked" /> '.$_language->module['gaming_squad'].' &nbsp; <input onclick="document.getElementById(\'games\').style.display = \'none\'" type="radio" name="gamesquad" value="0" /> '.$_language->module['non_gaming_squad'].'</td>
       </tr>
     </table>
     <div id="games" style="display:block;">
@@ -256,18 +256,18 @@ if($action=="add") {
     </div>
     <table width="100%" border="0" cellspacing="1" cellpadding="3">
       <tr>
-        <td colspan="2"><b>'.$_language->module['squad_info'].'</b><br>
+        <td colspan="2"><b>'.$_language->module['squad_info'].'</b><br />
 		  <table width="99%" border="0" cellspacing="0" cellpadding="0">
 		    <tr>
 			   <td valign="top">'.$addbbcode.'</td>
 				<td valign="top">'.$addflags.'</td>
 		    </tr>
 		  </table>
-		  <br><textarea id="message" rows="5" cols="" name="message" style="width: 100%;">'.$ds['info'].'</textarea>
+		  <br /><textarea id="message" rows="5" cols="" name="message" style="width: 100%;">'.$ds['info'].'</textarea>
 		  </td>
       </tr>
       <tr>
-        <td colspan="2"><input type="hidden" name="captcha_hash" value="'.$hash.'"><input type="submit" name="save" value="'.$_language->module['add_squad'].'"></td>
+        <td colspan="2"><input type="hidden" name="captcha_hash" value="'.$hash.'" /><input type="submit" name="save" value="'.$_language->module['add_squad'].'" /></td>
       </tr>
     </table>
     </form>';
@@ -279,10 +279,10 @@ elseif($action=="edit") {
 
 	$squadID = (int)$_GET['squadID'];
 	$filepath="../images/squadicons/";
-	
+
 	$ergebnis=safe_query("SELECT * FROM ".PREFIX."squads WHERE squadID='$squadID'");
 	$ds=mysqli_fetch_array($ergebnis);
-	
+
 	$games_array = explode(";", $ds['games']);
 	$sql=safe_query("SELECT * FROM ".PREFIX."games ORDER BY name");
 	$games='<select name="games[]">';
@@ -294,28 +294,28 @@ elseif($action=="edit") {
 	$games.='</select>';
 
 	if($ds['gamesquad']) {
-		$type='<input onclick="document.getElementById(\'games\').style.display = \'block\'" type="radio" name="gamesquad" value="1" checked="checked"> '.$_language->module['gaming_squad'].' &nbsp; <input onclick="document.getElementById(\'games\').style.display = \'none\'" type="radio" name="gamesquad" value="0"> '.$_language->module['non_gaming_squad'];
+		$type='<input onclick="document.getElementById(\'games\').style.display = \'block\'" type="radio" name="gamesquad" value="1" checked="checked" /> '.$_language->module['gaming_squad'].' &nbsp; <input onclick="document.getElementById(\'games\').style.display = \'none\'" type="radio" name="gamesquad" value="0" /> '.$_language->module['non_gaming_squad'];
 		$display = 'block';
 	}
 	else {
-		$type='<input onclick="document.getElementById(\'games\').style.display = \'block\'" type="radio" name="gamesquad" value="1"> '.$_language->module['gaming_squad'].' &nbsp; <input onclick="document.getElementById(\'games\').style.display = \'none\'" type="radio" name="gamesquad" value="0" checked="checked"> '.$_language->module['non_gaming_squad'];
+		$type='<input onclick="document.getElementById(\'games\').style.display = \'block\'" type="radio" name="gamesquad" value="1" /> '.$_language->module['gaming_squad'].' &nbsp; <input onclick="document.getElementById(\'games\').style.display = \'none\'" type="radio" name="gamesquad" value="0" checked="checked" /> '.$_language->module['non_gaming_squad'];
 		$display = 'none';
 	}
-	
+
 	if(!empty($ds['icon'])) $pic='<img src="'.$filepath.$ds['icon'].'" alt="">';
 	else $pic=$_language->module['no_icon'];
 	if(!empty($ds['icon_small'])) $pic_small='<img src="'.$filepath.$ds['icon_small'].'" alt="">';
 	else $pic_small=$_language->module['no_icon'];
-	
+
 	$CAPCLASS = new Captcha;
 	$CAPCLASS->create_transaction();
 	$hash = $CAPCLASS->get_hash();
-	
+
 	$_language->read_module('bbcode', true);
-	
+
 	eval ("\$addbbcode = \"".gettemplate("addbbcode", "html", "admin")."\";");
 	eval ("\$addflags = \"".gettemplate("flags_admin", "html", "admin")."\";");
-	
+
 	echo '<script>
 		<!--
 			function chkFormular() {
@@ -325,7 +325,7 @@ elseif($action=="edit") {
 			}
 		-->
 	</script>';
-  
+
 	echo '<form method="post" id="post" name="post" action="admincenter.php?site=squads" enctype="multipart/form-data" onsubmit="return chkFormular();">
   <table width="100%" border="0" cellspacing="1" cellpadding="3">
     <tr>
@@ -338,15 +338,15 @@ elseif($action=="edit") {
     </tr>
     <tr>
       <td><b>'.$_language->module['icon_upload'].'</b></td>
-      <td><input name="icon" type="file" size="40"></td>
+      <td><input name="icon" type="file" size="40" /></td>
     </tr>
 	 <tr>
       <td><b>'.$_language->module['icon_upload_small'].'</b></td>
-      <td><input name="icon_small" type="file" size="40"> <small>('.$_language->module['icon_upload_info'].')</small></td>
+      <td><input name="icon_small" type="file" size="40" /> <small>('.$_language->module['icon_upload_info'].')</small></td>
     </tr>
     <tr>
       <td><b>'.$_language->module['squad_name'].'</b></td>
-      <td><input type="text" name="name" value="'.getinput($ds['name']).'" size="60"></td>
+      <td><input type="text" name="name" value="'.getinput($ds['name']).'" size="60" /></td>
     </tr>
     <tr>
       <td><b>'.$_language->module['squad_type'].'</b></td>
@@ -370,11 +370,11 @@ elseif($action=="edit") {
           <td valign="top">'.$addflags.'</td>
         </tr>
       </table>
-      <br><textarea rows="5" cols="" name="message" style="width: 100%;">'.getinput($ds['info']).'</textarea>
+      <br /><textarea rows="5" cols="" name="message" style="width: 100%;">'.getinput($ds['info']).'</textarea>
       </td>
     </tr>
     <tr>
-      <td colspan="2"><input type="hidden" name="captcha_hash" value="'.$hash.'"><input type="hidden" name="squadID" value="'.getforminput($squadID).'"><input type="submit" name="saveedit" value="'.$_language->module['edit_squad'].'"></td>
+      <td colspan="2"><input type="hidden" name="captcha_hash" value="'.$hash.'" /><input type="hidden" name="squadID" value="'.getforminput($squadID).'" /><input type="submit" name="saveedit" value="'.$_language->module['edit_squad'].'" /></td>
     </tr>
   </table>
   </form>';
@@ -384,7 +384,7 @@ else {
 
   echo'<h1>&curren; '.$_language->module['squads'].'</h1>';
 
-	echo'<input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=squads&amp;action=add\');return document.MM_returnValue" value="'.$_language->module['new_squad'].'"><br><br>';
+	echo'<input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=squads&amp;action=add\');return document.MM_returnValue" value="'.$_language->module['new_squad'].'" /><br /><br />';
 
 	echo'<form method="post" action="admincenter.php?site=squads">
   <table width="100%" border="0" cellspacing="1" cellpadding="3" bgcolor="#DDDDDD">
@@ -401,42 +401,42 @@ else {
 	$CAPCLASS = new Captcha;
 	$CAPCLASS->create_transaction();
 	$hash = $CAPCLASS->get_hash();
-  
+
 	if($anzsquads) {
     $i=1;
 		while($db=mysqli_fetch_array($squads)) {
 			if($i%2) { $td='td1'; }
       else { $td='td2'; }
-      
+
       $games = explode(";", $db['games']);
 			$games = implode(", ", $games);
 			if($games) $games = "(".$games.")";
-			if($db['gamesquad']) $type=$_language->module['gaming_squad'].'<br><small>'.$games.'</small>';
+			if($db['gamesquad']) $type=$_language->module['gaming_squad'].'<br /><small>'.$games.'</small>';
 			else $type=$_language->module['non_gaming_squad'];
-			
+
       echo'<tr>
         <td class="'.$td.'"><a href="../index.php?site=squads&amp;squadID='.$db['squadID'].'" target="_blank">'.getinput($db['name']).'</a></td>
         <td class="'.$td.'" align="center">'.$type.'</td>
         <td class="'.$td.'">'.cleartext($db['info'],1,'admin').'</td>
-        <td class="'.$td.'" align="center"><input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=squads&amp;action=edit&amp;squadID='.$db['squadID'].'\');return document.MM_returnValue" value="'.$_language->module['edit'].'">
-        <input type="button" onclick="MM_confirm(\''.$_language->module['really_delete'].'\', \'admincenter.php?site=squads&amp;delete=true&amp;squadID='.$db['squadID'].'&amp;captcha_hash='.$hash.'\')" value="'.$_language->module['delete'].'"></td>
+        <td class="'.$td.'" align="center"><input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=squads&amp;action=edit&amp;squadID='.$db['squadID'].'\');return document.MM_returnValue" value="'.$_language->module['edit'].'" />
+        <input type="button" onclick="MM_confirm(\''.$_language->module['really_delete'].'\', \'admincenter.php?site=squads&amp;delete=true&amp;squadID='.$db['squadID'].'&amp;captcha_hash='.$hash.'\')" value="'.$_language->module['delete'].'" /></td>
         <td class="'.$td.'" align="center"><select name="sort[]">';
-        
+
 			for($j=1; $j<=$anzsquads; $j++) {
 				if($db['sort'] == $j) echo'<option value="'.$db['squadID'].'-'.$j.'" selected="selected">'.$j.'</option>';
-				
+
         else echo'<option value="'.$db['squadID'].'-'.$j.'">'.$j.'</option>';
 			}
 			echo'</select>
         </td>
       </tr>';
-      
+
       $i++;
 		}
 	}
-	
+
   echo'<tr>
-      <td class="td_head" colspan="5" align="right"><input type="hidden" name="captcha_hash" value="'.$hash.'"><input type="submit" name="sortieren" value="'.$_language->module['to_sort'].'"></td>
+      <td class="td_head" colspan="5" align="right"><input type="hidden" name="captcha_hash" value="'.$hash.'"><input type="submit" name="sortieren" value="'.$_language->module['to_sort'].'" /></td>
     </tr>
   </table>
   </form>';

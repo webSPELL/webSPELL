@@ -75,12 +75,12 @@ if($action=="add") {
 	$CAPCLASS = new Captcha;
 	$CAPCLASS->create_transaction();
 	$hash = $CAPCLASS->get_hash();
-  
+
 	$_language->read_module('bbcode', true);
-	
+
 	eval ("\$addbbcode = \"".gettemplate("addbbcode", "html", "admin")."\";");
   eval ("\$addflags = \"".gettemplate("flags_admin", "html", "admin")."\";");
-	
+
   echo '<h1>&curren; <a href="admincenter.php?site=servers" class="white">'.$_language->module['servers'].'</a> &raquo; '.$_language->module['add_server'].'</h1>';
 
   echo '<script>
@@ -92,12 +92,12 @@ if($action=="add") {
 						}
 					-->
 				</script>';
-  
+
 	echo '<form method="post" id="post" name="post" action="admincenter.php?site=servers" onsubmit="return chkFormular();">
   <table width="100%" border="0" cellspacing="1" cellpadding="3">
     <tr>
       <td width="15%"><b>'.$_language->module['server_name'].'</b></td>
-      <td width="85%"><input type="text" name="name" size="60"></td>
+      <td width="85%"><input type="text" name="name" size="60" /></td>
     </tr>
     <tr>
       <td><b>'.$_language->module['game'].'</b></td>
@@ -105,7 +105,7 @@ if($action=="add") {
     </tr>
     <tr>
       <td><b>'.$_language->module['ip_port'].'</b></td>
-      <td><input type="text" name="serverip" size="60"></td>
+      <td><input type="text" name="serverip" size="60" /></td>
     </tr>
     <tr>
       <td colspan="2" valign="top"><b>'.$_language->module['info'].'</b>
@@ -115,36 +115,36 @@ if($action=="add") {
 		        <td valign="top">'.$addflags.'</td>
 		      </tr>
 		    </table>
-        <br><textarea id="message" name="message" rows="5" cols="" style="width: 100%;"></textarea>
+        <br /><textarea id="message" name="message" rows="5" cols="" style="width: 100%;"></textarea>
       </td>
     </tr>
     <tr>
-      <td colspan="2"><input type="hidden" name="captcha_hash" value="'.$hash.'"><input type="submit" name="save" value="'.$_language->module['add_server'].'"></td>
+      <td colspan="2"><input type="hidden" name="captcha_hash" value="'.$hash.'" /><input type="submit" name="save" value="'.$_language->module['add_server'].'" /></td>
     </tr>
   </table>
   </form>';
 }
 
 elseif($action=="edit") {
-	
+
   echo'<h1>&curren; <a href="admincenter.php?site=servers" class="white">'.$_language->module['servers'].'</a> &raquo; '.$_language->module['edit_server'].'</h1>';
 
   $CAPCLASS = new Captcha;
 	$CAPCLASS->create_transaction();
 	$hash = $CAPCLASS->get_hash();
-	
+
 	$_language->read_module('bbcode', true);
-	
+
 	eval ("\$addbbcode = \"".gettemplate("addbbcode", "html", "admin")."\";");
   eval ("\$addflags = \"".gettemplate("flags_admin", "html", "admin")."\";");
-	
+
   $serverID = $_GET['serverID'];
 	$ergebnis=safe_query("SELECT * FROM ".PREFIX."servers WHERE serverID='".$serverID."'");
 	$ds=mysqli_fetch_array($ergebnis);
 
 	$games=str_replace(' selected="selected"', '', $games);
 	$games=str_replace('value="'.$ds['game'].'"', 'value="'.$ds['game'].'" selected="selected"', $games);
-	
+
 	echo '<script>
 					<!--
 						function chkFormular() {
@@ -154,12 +154,12 @@ elseif($action=="edit") {
 						}
 					-->
 				</script>';
-	
+
   echo '<form method="post" id="post" name="post" action="admincenter.php?site=servers" onsubmit="return chkFormular();">
   <table width="100%" border="0" cellspacing="1" cellpadding="3">
     <tr>
       <td width="15%"><b>'.$_language->module['server_name'].'</b></td>
-      <td width="85%"><input type="text" name="name" size="60" value="'.getinput($ds['name']).'"></td>
+      <td width="85%"><input type="text" name="name" size="60" value="'.getinput($ds['name']).'" /></td>
     </tr>
     <tr>
       <td><b>'.$_language->module['game'].'</b></td>
@@ -167,7 +167,7 @@ elseif($action=="edit") {
     </tr>
     <tr>
       <td><b>'.$_language->module['ip_port'].'</b></td>
-      <td><input type="text" name="serverip" size="60" value="'.getinput($ds['ip']).'"></td>
+      <td><input type="text" name="serverip" size="60" value="'.getinput($ds['ip']).'" /></td>
     </tr>
     <tr>
       <td colspan="2" valign="top"><b>'.$_language->module['info'].'</b>
@@ -177,21 +177,21 @@ elseif($action=="edit") {
 		        <td valign="top">'.$addflags.'</td>
 		      </tr>
 		    </table>
-        <br><textarea id="message" name="message" rows="5" cols="" style="width: 100%;">'.getinput($ds['info']).'</textarea>
+        <br /><textarea id="message" name="message" rows="5" cols="" style="width: 100%;">'.getinput($ds['info']).'</textarea>
       </td>
     </tr>
     <tr>
-      <td colspan="2"><input type="hidden" name="serverID" value="'.$serverID.'"><input type="hidden" name="captcha_hash" value="'.$hash.'"><input type="submit" name="saveedit" value="'.$_language->module['edit_server'].'"></td>
+      <td colspan="2"><input type="hidden" name="serverID" value="'.$serverID.'" /><input type="hidden" name="captcha_hash" value="'.$hash.'" /><input type="submit" name="saveedit" value="'.$_language->module['edit_server'].'" /></td>
     </tr>
   </table>
   </form>';
 }
 
 else {
-	
+
   echo'<h1>&curren; '.$_language->module['servers'].'</h1>';
-  
-  echo'<input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=servers&amp;action=add\');return document.MM_returnValue" value="'.$_language->module['new_server'].'"><br><br>';
+
+  echo'<input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=servers&amp;action=add\');return document.MM_returnValue" value="'.$_language->module['new_server'].'" /><br /><br />';
 
 	$ergebnis=safe_query("SELECT * FROM ".PREFIX."servers ORDER BY sort");
 	$anz=mysqli_num_rows($ergebnis);
@@ -199,7 +199,7 @@ else {
 	$CAPCLASS = new Captcha;
 	$CAPCLASS->create_transaction();
 	$hash = $CAPCLASS->get_hash();
-  
+
   echo'<form method="post" name="ws_servers" action="admincenter.php?site=servers">
     <table width="100%" border="0" cellspacing="1" cellpadding="3" bgcolor="#DDDDDD">
       <tr>
@@ -212,7 +212,7 @@ else {
     while($ds=mysqli_fetch_array($ergebnis)) {
       if($i%2) { $td='td1'; }
       else { $td='td2'; }
-    
+
 			$list = '<select name="sortlist[]">';
 			for($n=1;$n<=mysqli_num_rows($ergebnis);$n++) {
 				$list.='<option value="'.$ds['serverID'].'-'.$n.'">'.$n.'</option>';
@@ -221,16 +221,16 @@ else {
 			$list = str_replace('value="'.$ds['serverID'].'-'.$ds['sort'].'"','value="'.$ds['serverID'].'-'.$ds['sort'].'" selected="selected"',$list);
 
 			echo'<tr>
-        <td class="'.$td.'"><img src="../images/games/'.$ds['game'].'.gif" width="13" height="13" alt=""> <a href="hlsw://'.$ds['ip'].'"><b>'.$ds['ip'].'</b></a><br><b>'.getinput($ds['name']).'</b><br>'.cleartext($ds['info'],1,'admin').'</td>
-        <td class="'.$td.'" align="center"><input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=servers&amp;action=edit&amp;serverID='.$ds['serverID'].'\');return document.MM_returnValue" value="'.$_language->module['edit'].'">
-        <input type="button" onclick="MM_confirm(\''.$_language->module['really_delete'].'\', \'admincenter.php?site=servers&amp;delete=true&amp;serverID='.$ds['serverID'].'&amp;captcha_hash='.$hash.'\')" value="'.$_language->module['delete'].'"></td>
+        <td class="'.$td.'"><img src="../images/games/'.$ds['game'].'.gif" width="13" height="13" alt=""> <a href="hlsw://'.$ds['ip'].'"><b>'.$ds['ip'].'</b></a><br /><b>'.getinput($ds['name']).'</b><br />'.cleartext($ds['info'],1,'admin').'</td>
+        <td class="'.$td.'" align="center"><input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=servers&amp;action=edit&amp;serverID='.$ds['serverID'].'\');return document.MM_returnValue" value="'.$_language->module['edit'].'" />
+        <input type="button" onclick="MM_confirm(\''.$_language->module['really_delete'].'\', \'admincenter.php?site=servers&amp;delete=true&amp;serverID='.$ds['serverID'].'&amp;captcha_hash='.$hash.'\')" value="'.$_language->module['delete'].'" /></td>
         <td class="'.$td.'" align="center">'.$list.'</td>
       </tr>';
-        
+
         $i++;
 		}
 		echo'<tr>
-        <td colspan="3" class="td_head" align="right"><input type="hidden" name="captcha_hash" value="'.$hash.'"><input type="submit" name="sort" value="'.$_language->module['to_sort'].'"></td>
+        <td colspan="3" class="td_head" align="right"><input type="hidden" name="captcha_hash" value="'.$hash.'"><input type="submit" name="sort" value="'.$_language->module['to_sort'].'" /></td>
       </tr>
     </table>
     </form>';

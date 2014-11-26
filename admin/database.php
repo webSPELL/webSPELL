@@ -88,10 +88,10 @@ if($action=="optimize") {
 }
 
 elseif($action=="write") {
-  include('../_mysql.php');
-  include('../_settings.php');
-  include('../version.php');
-  systeminc("func/captcha");
+	include('../_mysql.php');
+	include('../_settings.php');
+	include('../version.php');
+	systeminc("func/captcha");
 
 	$CAPCLASS = new Captcha;
 	if($CAPCLASS->check_captcha(0, $_GET['captcha_hash'])) {
@@ -102,7 +102,6 @@ elseif($action=="write") {
 	//Get database information and write SQL-commands
 	$final = "--   #webSPELL ".$version.", visit webspell.org#\n";
 	$final .= "--   webSPELL.org database backup\n";
-	$final .= "--   Code: Florian Siegmund and Thomas Preusse (webspell.org)\n";
 	$final .= "--\n";
 	$final .= "--   webSPELL version: ".$version."\n";
 	$final .= "--   PHP version: ".phpversion()."\n";
@@ -205,11 +204,11 @@ else {
       <table width="100%" border="0" cellspacing="1" cellpadding="3">
         <tr>
           <td width="15%"><b>'.$_language->module['backup_file'].'</b></td>
-          <td width="85%"><input name="sql" type="file" size="40"></td>
+          <td width="85%"><input name="sql" type="file" size="40" /></td>
         </tr>
         <tr>
-          <td><input type="hidden" name="captcha_hash" value="'.$hash.'"></td>
-          <td><input type="submit" name="upload" value="'.$_language->module['upload'].'"></td>
+          <td><input type="hidden" name="captcha_hash" value="'.$hash.'" /></td>
+          <td><input type="submit" name="upload" value="'.$_language->module['upload'].'" /></td>
         </tr>
       </table>
       </td>
@@ -217,19 +216,5 @@ else {
   </table>
   </form>';
 
-  /*echo '<br><br>
-  <form method="post" action="admincenter.php?site=database">
-  <table width="100%" border="0" cellspacing="1" cellpadding="3" bgcolor="#DDDDDD">
-    <tr>
-      <td class="title"><b>'.$_language->module['sql_query'].'</b></td>
-    </tr>
-    <tr>
-      <td class="td1">'.$_language->module['allowed_commands'].'
-      <br><br>'.$_language->module['sql_query'].':<br><br>
-      <textarea name="query" rows="10" cols="" style="width: 100%;"></textarea>
-      <br><br><input type="submit" name="submit" value="'.$_language->module['submit'].'"></td>
-    </tr>
-  </table>
-  </form>';*/
 }
 ?>

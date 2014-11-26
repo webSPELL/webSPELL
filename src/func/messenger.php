@@ -26,7 +26,7 @@
 */
 
 function getnewmessages($userID) {
-	$anz=mysqli_num_rows(safe_query("SELECT messageID FROM `".PREFIX."messenger` WHERE touser='$userID' AND userID='$userID' AND viewed='0'"));
+	$anz=mysql_num_rows(safe_query("SELECT messageID FROM `".PREFIX."messenger` WHERE touser='$userID' AND userID='$userID' AND viewed='0'"));
 	return $anz;
 }
 
@@ -47,7 +47,7 @@ function sendmessage($touser,$title,$message,$from='0') {
 		}
 		safe_query("UPDATE ".PREFIX."user SET pmgot=pmgot+1 WHERE userID='$touser'"); 
 		if(wantmail($touser) AND isonline($touser)=="offline") {
-			$ds=mysqli_fetch_array(safe_query("SELECT email, language FROM ".PREFIX."user WHERE userID='$touser'"));
+			$ds=mysql_fetch_array(safe_query("SELECT email, language FROM ".PREFIX."user WHERE userID='$touser'"));
 			$_language_tmp->set_language($ds['language']);
 			$_language_tmp->read_module('messenger');
 			$mail_body = str_replace("%nickname%",getnickname($touser),$_language_tmp->module['mail_body']);

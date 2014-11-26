@@ -45,7 +45,7 @@ if($part=="groups") {
 			else echo $_language->module['information_incomplete'];
 		} else echo $_language->module['transaction_invalid'];
 	}
-  
+
 	elseif(isset($_POST['saveedit'])) {
 	 	$CAPCLASS = new Captcha;
 		if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
@@ -53,7 +53,7 @@ if($part=="groups") {
 			else echo $_language->module['information_incomplete'];
 		} else echo $_language->module['transaction_invalid'];
 	}
-  
+
 	elseif(isset($_POST['sort'])) {
 	 	$CAPCLASS = new Captcha;
 		if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
@@ -67,14 +67,14 @@ if($part=="groups") {
 			}
 		} else echo $_language->module['transaction_invalid'];
 	}
-  
+
 	elseif(isset($_GET['delete'])) {
 	 	$CAPCLASS = new Captcha;
 		if($CAPCLASS->check_captcha(0, $_GET['captcha_hash'])) {
 			$db_result=safe_query("SELECT * FROM ".PREFIX."gallery WHERE groupID='".$_GET['groupID']."'");
 			$any=mysqli_num_rows($db_result);
 			if($any){
-				echo $_language->module['galleries_available'].'<br><br>';
+				echo $_language->module['galleries_available'].'<br /><br />';
 			}
 			else{
 				safe_query("DELETE FROM ".PREFIX."gallery_groups WHERE groupID='".$_GET['groupID']."'");
@@ -86,23 +86,23 @@ if($part=="groups") {
     $CAPCLASS = new Captcha;
     $CAPCLASS->create_transaction();
     $hash = $CAPCLASS->get_hash();
-    
+
     echo'<h1>&curren; <a href="admincenter.php?site=gallery" class="white">'.$_language->module['gallery'].'</a> &raquo; <a href="admincenter.php?site=gallery&amp;part=groups" class="white">'.$_language->module['groups'].'</a> &raquo; '.$_language->module['add_group'].'</h1>';
-    
+
     echo'<form method="post" action="admincenter.php?site=gallery&amp;part=groups">
     <table width="100%" border="0" cellspacing="1" cellpadding="3">
       <tr>
         <td width="15%"><b>'.$_language->module['group_name'].'</b></td>
-        <td width="85%"><input type="text" name="name" size="60"></td>
+        <td width="85%"><input type="text" name="name" size="60" /></td>
       </tr>
       <tr>
-        <td><input type="hidden" name="captcha_hash" value="'.$hash.'"></td>
-        <td><input type="submit" name="save" value="'.$_language->module['add_group'].'"></td>
+        <td><input type="hidden" name="captcha_hash" value="'.$hash.'" /></td>
+        <td><input type="submit" name="save" value="'.$_language->module['add_group'].'" /></td>
       </tr>
     </table>
     </form>';
 	}
-  
+
 	elseif($action=="edit") {
     $CAPCLASS = new Captcha;
     $CAPCLASS->create_transaction();
@@ -111,28 +111,28 @@ if($part=="groups") {
 		$ds=mysqli_fetch_array($ergebnis);
 
 		echo'<h1>&curren; <a href="admincenter.php?site=gallery" class="white">'.$_language->module['gallery'].'</a> &raquo; <a href="admincenter.php?site=gallery&amp;part=groups" class="white">'.$_language->module['groups'].'</a> &raquo; '.$_language->module['edit_group'].'</h1>';
-    
+
     echo'<form method="post" action="admincenter.php?site=gallery&amp;part=groups">
     <table width="100%" border="0" cellspacing="1" cellpadding="3">
       <tr>
         <td width="15%"><b>'.$_language->module['group_name'].'</b></td>
-        <td><input type="text" name="name" size="60" value="'.getinput($ds['name']).'"></td>
+        <td><input type="text" name="name" size="60" value="'.getinput($ds['name']).'" /></td>
       </tr>
       <tr>
-        <td><input type="hidden" name="captcha_hash" value="'.$hash.'"><input type="hidden" name="groupID" value="'.$ds['groupID'].'"></td>
-        <td><input type="submit" name="saveedit" value="'.$_language->module['edit_group'].'"></td>
+        <td><input type="hidden" name="captcha_hash" value="'.$hash.'" /><input type="hidden" name="groupID" value="'.$ds['groupID'].'" /></td>
+        <td><input type="submit" name="saveedit" value="'.$_language->module['edit_group'].'" /></td>
       </tr>
     </table>
     </form>';
 	}
-  
+
 	else {
 		echo'<h1>&curren; <a href="admincenter.php?site=gallery" class="white">'.$_language->module['gallery'].'</a> &raquo; '.$_language->module['groups'].'</h1>';
 
-    echo'<input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=gallery&amp;part=groups&amp;action=add\');return document.MM_returnValue" value="'.$_language->module['new_group'].'"><br><br>';
+    echo'<input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=gallery&amp;part=groups&amp;action=add\');return document.MM_returnValue" value="'.$_language->module['new_group'].'" /><br /><br />';
 
 		$ergebnis=safe_query("SELECT * FROM ".PREFIX."gallery_groups ORDER BY sort");
-		
+
     echo'<form method="post" name="ws_gallery" action="admincenter.php?site=gallery&amp;part=groups">
     <table width="100%" border="0" cellspacing="1" cellpadding="3" bgcolor="#DDDDDD">
       <tr>
@@ -140,16 +140,16 @@ if($part=="groups") {
         <td width="20%" class="title"><b>'.$_language->module['actions'].'</b></td>
         <td width="10%" class="title"><b>'.$_language->module['sort'].'</b></td>
       </tr>';
-      
+
 		$n=1;
 		$CAPCLASS = new Captcha;
     $CAPCLASS->create_transaction();
     $hash = $CAPCLASS->get_hash();
-    
+
     while($ds=mysqli_fetch_array($ergebnis)) {
       if($n%2) { $td='td1'; }
 			else { $td='td2'; }
-			
+
 			$list = '<select name="sortlist[]">';
 			for($i=1;$i<=mysqli_num_rows($ergebnis);$i++) {
 				$list.='<option value="'.$ds['groupID'].'-'.$i.'">'.$i.'</option>';
@@ -159,14 +159,14 @@ if($part=="groups") {
 
 			echo'<tr>
         <td class="'.$td.'">'.$ds['name'].'</td>
-        <td class="'.$td.'" align="center"><input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=gallery&amp;part=groups&amp;action=edit&amp;groupID='.$ds['groupID'].'\');return document.MM_returnValue" value="'.$_language->module['edit'].'">
-        <input type="button" onclick="MM_confirm(\''.$_language->module['really_delete_group'].'\', \'admincenter.php?site=gallery&amp;part=groups&amp;delete=true&amp;groupID='.$ds['groupID'].'&amp;captcha_hash='.$hash.'\')" value="'.$_language->module['delete'].'"></td>
+        <td class="'.$td.'" align="center"><input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=gallery&amp;part=groups&amp;action=edit&amp;groupID='.$ds['groupID'].'\');return document.MM_returnValue" value="'.$_language->module['edit'].'" />
+        <input type="button" onclick="MM_confirm(\''.$_language->module['really_delete_group'].'\', \'admincenter.php?site=gallery&amp;part=groups&amp;delete=true&amp;groupID='.$ds['groupID'].'&amp;captcha_hash='.$hash.'\')" value="'.$_language->module['delete'].'" /></td>
         <td class="'.$td.'" align="center">'.$list.'</td>
 		 	</tr>';
       $n++;
 		}
 		echo'<tr>
-      <td class="td_head" colspan="3" align="right"><input type="hidden" name="captcha_hash" value="'.$hash.'"><input type="submit" name="sort" value="'.$_language->module['to_sort'].'"></td>
+      <td class="td_head" colspan="3" align="right"><input type="hidden" name="captcha_hash" value="'.$hash.'"><input type="submit" name="sort" value="'.$_language->module['to_sort'].'" /></td>
       </tr>
     </table>
     </form>';
@@ -186,7 +186,7 @@ elseif($part=="gallerys") {
 			} else echo $_language->module['information_incomplete'];
 		} else echo $_language->module['transaction_invalid'];
 	}
-  
+
 	elseif(isset($_POST['saveedit'])) {
 	 	$CAPCLASS = new Captcha;
 		if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
@@ -198,7 +198,7 @@ elseif($part=="gallerys") {
 			} else echo $_language->module['information_incomplete'];
 		} else echo $_language->module['transaction_invalid'];
 	}
-  
+
 	elseif(isset($_POST['saveftp'])) {
 
 		$dir = '../images/gallery/';
@@ -216,7 +216,7 @@ elseif($part=="gallerys") {
 						case 2: $typ = '.jpg'; break;
 						case 3: $typ = '.png'; break;
 					}
-		
+
 					if($name[$i]) $insertname = $name[$i];
 					else $insertname = $picture;
 					safe_query("INSERT INTO ".PREFIX."gallery_pictures ( galleryID, name, comment, comments) VALUES ('".$_POST['galleryID']."', '".$insertname."', '".$comment[$i]."', '".$_POST['comments']."' )");
@@ -228,7 +228,7 @@ elseif($part=="gallerys") {
 				}
 		} else echo $_language->module['transaction_invalid'];
 	}
-  
+
 	elseif(isset($_POST['saveform'])) {
 
 		$dir = '../images/gallery/';
@@ -240,20 +240,20 @@ elseif($part=="gallerys") {
 				else $insertname = $picture['name'];
 				safe_query("INSERT INTO ".PREFIX."gallery_pictures ( galleryID, name, comment, comments) VALUES ('".$_POST['galleryID']."', '".$insertname."', '".$_POST['comment']."', '".$_POST['comments']."' )");
 				$insertid = mysqli_insert_id($_database);
-	
+
 				$typ = getimagesize($picture['tmp_name']);
 				switch ($typ[2]) {
 					case 1: $typ = '.gif'; break;
 					case 2: $typ = '.jpg'; break;
 					case 3: $typ = '.png'; break;
 				}
-	
+
 				move_uploaded_file($picture['tmp_name'], $dir.'large/'.$insertid.$typ);
 				$galclass->savethumb($dir.'large/'.$insertid.$typ, $dir.'thumb/'.$insertid.'.jpg');
 			}
 		} else echo $_language->module['transaction_invalid'];
 	}
-  
+
 	elseif(isset($_GET['delete'])) {
 		//SQL
 		$CAPCLASS = new Captcha;
@@ -264,7 +264,7 @@ elseif($part=="gallerys") {
 				$ergebnis=safe_query("SELECT picID FROM ".PREFIX."gallery_pictures WHERE galleryID='".$_GET['galleryID']."'");
 				while($ds=mysqli_fetch_array($ergebnis)) {
 					@unlink('../images/gallery/thumb/'.$ds['picID'].'.jpg'); //thumbnails
-	
+
 					$path = '../images/gallery/large/';
 					if(file_exists($path.$ds['picID'].'.jpg')) $path = $path.$ds['picID'].'.jpg';
 					elseif(file_exists($path.$ds['picID'].'.png')) $path = $path.$ds['picID'].'.png';
@@ -276,7 +276,7 @@ elseif($part=="gallerys") {
 			}
 		} else echo $_language->module['transaction_invalid'];
 	}
-  
+
 	if($action=="add") {
     $ergebnis=safe_query("SELECT * FROM ".PREFIX."gallery_groups");
 		$any=mysqli_num_rows($ergebnis);
@@ -289,14 +289,14 @@ elseif($part=="gallerys") {
 	    $CAPCLASS = new Captcha;
 	    $CAPCLASS->create_transaction();
 	    $hash = $CAPCLASS->get_hash();
-	    
+
 			echo'<h1>&curren; <a href="admincenter.php?site=gallery" class="white">'.$_language->module['gallery'].'</a> &raquo; <a href="admincenter.php?site=gallery&amp;part=gallerys" class="white">'.$_language->module['galleries'].'</a> &raquo; '.$_language->module['add_gallery'].'</h1>';
-	    
+
 	    echo'<form method="post" action="admincenter.php?site=gallery&amp;part=gallerys&amp;action=upload">
 	    <table width="100%" border="0" cellspacing="1" cellpadding="3">
 	      <tr>
 	        <td width="15%"><b>'.$_language->module['gallery_name'].'</b></td>
-	        <td width="85%"><input type="text" name="name" size="60"></td>
+	        <td width="85%"><input type="text" name="name" size="60" /></td>
 	      </tr>
 	      <tr>
 	        <td><b>'.$_language->module['group'].'</b></td>
@@ -310,18 +310,18 @@ elseif($part=="gallerys") {
 	        </select></td>
 	      </tr>
 	      <tr>
-	        <td><input type="hidden" name="captcha_hash" value="'.$hash.'"></td>
-	        <td><input type="submit" name="save" value="'.$_language->module['add_gallery'].'"></td>
+	        <td><input type="hidden" name="captcha_hash" value="'.$hash.'" /></td>
+	        <td><input type="submit" name="save" value="'.$_language->module['add_gallery'].'" /></td>
 	      </tr>
 	    </table>
 	    </form>
-	    <br><small>'.$_language->module['ftp_info'].' "http://'.$hp_url.'/images/gallery"</small>';
+	    <br /><small>'.$_language->module['ftp_info'].' "http://'.$hp_url.'/images/gallery"</small>';
 	  }
 	  else{
-	  	echo '<br>'.$_language->module['need_group'];
+	  	echo '<br />'.$_language->module['need_group'];
 	  }
 	}
-  
+
 	elseif($action=="edit") {
     $CAPCLASS = new Captcha;
     $CAPCLASS->create_transaction();
@@ -339,14 +339,14 @@ elseif($part=="gallerys") {
 		$groups = str_replace('value="'.$ds['groupID'].'"','value="'.$ds['groupID'].'" selected="selected"',$groups);
 
 		echo'<h1>&curren; <a href="admincenter.php?site=gallery" class="white">'.$_language->module['gallery'].'</a> &raquo; <a href="admincenter.php?site=gallery&amp;part=gallerys" class="white">'.$_language->module['galleries'].'</a> &raquo; '.$_language->module['edit_gallery'].'</h1>';
-    
+
     echo'<form method="post" action="admincenter.php?site=gallery&amp;part=gallerys">
     <table width="100%" border="0" cellspacing="1" cellpadding="3">
       <tr>
         <td width="15%"><b>'.$_language->module['gallery_name'].'</b></td>
-        <td width="85%"><input type="text" name="name" value="'.getinput($ds['name']).'"></td>
+        <td width="85%"><input type="text" name="name" value="'.getinput($ds['name']).'" /></td>
       </tr>';
-      
+
 		if($ds['userID'] != 0) echo '
       <tr>
         <td><b>'.$_language->module['usergallery_of'].'</b></td>
@@ -357,15 +357,15 @@ elseif($part=="gallerys") {
         <td>'.$groups.'</td>
       </tr>';
 		echo'<tr>
-        <td><input type="hidden" name="captcha_hash" value="'.$hash.'"><input type="hidden" name="galleryID" value="'.$ds['galleryID'].'"></td>
-        <td><input type="submit" name="saveedit" value="'.$_language->module['edit_gallery'].'"></td>
+        <td><input type="hidden" name="captcha_hash" value="'.$hash.'"><input type="hidden" name="galleryID" value="'.$ds['galleryID'].'" /></td>
+        <td><input type="submit" name="saveedit" value="'.$_language->module['edit_gallery'].'" /></td>
       </tr>
     </table>
     </form>';
 	}
-  
+
 	elseif($action=="upload") {
-  
+
 		echo'<h1>&curren; <a href="admincenter.php?site=gallery" class="white">'.$_language->module['gallery'].'</a> &raquo; <a href="admincenter.php?site=gallery&amp;part=gallerys" class="white">'.$_language->module['galleries'].'</a> &raquo; '.$_language->module['upload'].'</h1>';
 
 		$dir = '../images/gallery/';
@@ -373,17 +373,17 @@ elseif($part=="gallerys") {
     	elseif(isset($_GET['upload'])) $upload_type = $_GET['upload'];
     	else $upload_type = null;
 		if(isset($_GET['galleryID'])) $id=$_GET['galleryID'];
-    	
+
 		if($upload_type == "ftp") {
       		$CAPCLASS = new Captcha;
       		$CAPCLASS->create_transaction();
       		$hash = $CAPCLASS->get_hash();
-			
+
       		echo'<form method="post" action="admincenter.php?site=gallery&amp;part=gallerys">
 		      <table width="100%" border="0" cellspacing="1" cellpadding="3">
 		        <tr>
 		          <td>';
-		
+
 			$pics = Array();
 			$picdir = opendir($dir);
 			while (false !== ($file = readdir($picdir))) {
@@ -398,7 +398,7 @@ elseif($part=="gallerys") {
 			closedir($picdir);
 			natcasesort ($pics);
 			reset ($pics);
-					
+
 		    echo '<table border="0" width="100%" cellspacing="1" cellpadding="1">
 		        <tr>
 		          <td></td>
@@ -406,24 +406,24 @@ elseif($part=="gallerys") {
 		          <td><b>'.$_language->module['name'].'</b></td>
 		          <td><b>'.$_language->module['comment'].'</b></td>
 		        </tr>';
-		
+
 			foreach($pics as $val) {
 				if(is_file($dir.$val)) {
-							
+
 					echo '<tr>
-		            <td><input type="checkbox" value="'.$val.'" name="pictures[]" checked="checked"></td>
+		            <td><input type="checkbox" value="'.$val.'" name="pictures[]" checked="checked" /></td>
 		            <td><a href="'.$dir.$val.'" target="_blank">'.$val.'</a></td>
-		            <td><input type="text" name="name[]" size="40"></td>
-		            <td><input type="text" name="comment[]" size="40"></td>
+		            <td><input type="text" name="name[]" size="40" /></td>
+		            <td><input type="text" name="comment[]" size="40" /></td>
 		          </tr>';
-		
+
 				}
 			}
 
 			echo '</table></td>
 		          </tr>
 		          <tr>
-		            <td><br><b>'.$_language->module['visitor_comments'].'</b> &nbsp;
+		            <td><br /><b>'.$_language->module['visitor_comments'].'</b> &nbsp;
 		            <select name="comments">
 		              <option value="0">'.$_language->module['disable_comments'].'</option>
 		              <option value="1">'.$_language->module['enable_user_comments'].'</option>
@@ -431,14 +431,14 @@ elseif($part=="gallerys") {
 		            </select></td>
 		          </tr>
 		          <tr>
-		            <td><br><input type="hidden" name="captcha_hash" value="'.$hash.'"><input type="hidden" name="galleryID" value="'.$id.'">
-		            <input type="submit" name="saveftp" value="'.$_language->module['upload'].'"></td>
+		            <td><br /><input type="hidden" name="captcha_hash" value="'.$hash.'" /><input type="hidden" name="galleryID" value="'.$id.'" />
+		            <input type="submit" name="saveftp" value="'.$_language->module['upload'].'" /></td>
 		          </tr>
 		        </table>
 		        </form>';
-        
+
 		} elseif($upload_type == "form") {
-    
+
       		$CAPCLASS = new Captcha;
       		$CAPCLASS->create_transaction();
       		$hash = $CAPCLASS->get_hash();
@@ -447,11 +447,11 @@ elseif($part=="gallerys") {
 			<table width="100%" border="0" cellspacing="1" cellpadding="3">
         <tr>
           <td width="15%"><b>'.$_language->module['name'].'</b></td>
-          <td width="85%"><input type="text" name="name" size="60"></td>
+          <td width="85%"><input type="text" name="name" size="60" /></td>
         </tr>
         <tr>
           <td><b>'.$_language->module['comment'].'</b></td>
-          <td><input type="text" name="comment" size="60" maxlength="255"></td>
+          <td><input type="text" name="comment" size="60" maxlength="255" /></td>
         </tr>
         <tr>
           <td><b>'.$_language->module['visitor_comments'].'</b></td>
@@ -463,21 +463,21 @@ elseif($part=="gallerys") {
         </tr>
         <tr>
           <td><b>'.$_language->module['picture'].'</b></td>
-          <td><input name="picture" type="file" size="40"></td>
+          <td><input name="picture" type="file" size="40" /></td>
         </tr>
         <tr>
-          <td><input type="hidden" name="captcha_hash" value="'.$hash.'"><input type="hidden" name="galleryID" value="'.$id.'"></td>
-          <td><input type="submit" name="saveform" value="'.$_language->module['upload'].'"></td>
+          <td><input type="hidden" name="captcha_hash" value="'.$hash.'" /><input type="hidden" name="galleryID" value="'.$id.'" /></td>
+          <td><input type="submit" name="saveform" value="'.$_language->module['upload'].'" /></td>
         </tr>
       </table>
       </form>';
 		}
 	}
-  
+
 	else {
 		echo'<h1>&curren; <a href="admincenter.php?site=gallery" class="white">'.$_language->module['gallery'].'</a> &raquo; '.$_language->module['galleries'].'</h1>';
-    
-    echo'<input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=gallery&amp;part=gallerys&amp;action=add\');return document.MM_returnValue" value="'.$_language->module['new_gallery'].'"><br><br>';
+
+    echo'<input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=gallery&amp;part=gallerys&amp;action=add\');return document.MM_returnValue" value="'.$_language->module['new_gallery'].'" /><br /><br />';
 
 		echo'<form method="post" name="ws_gallery" action="admincenter.php?site=gallery&amp;part=gallerys">
 		<table width="100%" border="0" cellspacing="1" cellpadding="3" bgcolor="#DDDDDD">
@@ -487,40 +487,40 @@ elseif($part=="gallerys") {
       </tr>';
 
 		$ergebnis=safe_query("SELECT * FROM ".PREFIX."gallery_groups ORDER BY sort");
-    
+
     while($ds=mysqli_fetch_array($ergebnis)) {
-		
+
     echo'<tr>
       <td class="td_head" colspan="3"><b>'.getinput($ds['name']).'</b></td>
-    </tr>';		 
+    </tr>';
 
 		$galleries=safe_query("SELECT * FROM ".PREFIX."gallery WHERE groupID='$ds[groupID]' AND userID='0' ORDER BY date");
-    
+
     $CAPCLASS = new Captcha;
     $CAPCLASS->create_transaction();
     $hash = $CAPCLASS->get_hash();
     $i=1;
-		
+
       while($db=mysqli_fetch_array($galleries)) {
 			  if($i%2) { $td='td1'; }
 			  else { $td='td2'; }
-      
+
         echo'<tr>
           <td class="'.$td.'" width="50%"><a href="../index.php?site=gallery&amp;galleryID='.$db['galleryID'].'" target="_blank">'.getinput($db['name']).'</a></td>
-          <td class="'.$td.'" width="30%" align="center"><input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=gallery&amp;part=gallerys&amp;action=upload&amp;upload=form&amp;galleryID='.$db['galleryID'].'\');return document.MM_returnValue" value="'.$_language->module['add_img'].' ('.$_language->module['per_form'].')" style="margin:1px;"> <input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=gallery&amp;part=gallerys&amp;action=upload&amp;upload=ftp&amp;galleryID='.$db['galleryID'].'\');return document.MM_returnValue" value="'.$_language->module['add_img'].' ('.$_language->module['per_ftp'].')" style="margin:1px;"></td>
-          <td class="'.$td.'" width="20%" align="center"><input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=gallery&amp;part=gallerys&amp;action=edit&amp;galleryID='.$db['galleryID'].'\');return document.MM_returnValue" value="'.$_language->module['edit'].'">
-          <input type="button" onclick="MM_confirm(\''.$_language->module['really_delete_gallery'].'\', \'admincenter.php?site=gallery&amp;part=gallerys&amp;delete=true&amp;galleryID='.$db['galleryID'].'&amp;captcha_hash='.$hash.'\')" value="'.$_language->module['delete'].'"></td>
+          <td class="'.$td.'" width="30%" align="center"><input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=gallery&amp;part=gallerys&amp;action=upload&amp;upload=form&amp;galleryID='.$db['galleryID'].'\');return document.MM_returnValue" value="'.$_language->module['add_img'].' ('.$_language->module['per_form'].')" style="margin:1px;"> <input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=gallery&amp;part=gallerys&amp;action=upload&amp;upload=ftp&amp;galleryID='.$db['galleryID'].'\');return document.MM_returnValue" value="'.$_language->module['add_img'].' ('.$_language->module['per_ftp'].')" style="margin:1px;" /></td>
+          <td class="'.$td.'" width="20%" align="center"><input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=gallery&amp;part=gallerys&amp;action=edit&amp;galleryID='.$db['galleryID'].'\');return document.MM_returnValue" value="'.$_language->module['edit'].'" />
+          <input type="button" onclick="MM_confirm(\''.$_language->module['really_delete_gallery'].'\', \'admincenter.php?site=gallery&amp;part=gallerys&amp;delete=true&amp;galleryID='.$db['galleryID'].'&amp;captcha_hash='.$hash.'\')" value="'.$_language->module['delete'].'" /></td>
         </tr>';
-      
+
       $i++;
 		  }
     }
-		echo'</table></form><br><br>';
-    
+		echo'</table></form><br /><br />';
+
     echo'<h1>&curren; <a href="admincenter.php?site=gallery" class="white">'.$_language->module['gallery'].'</a> &raquo; '.$_language->module['usergalleries'].'</h1>';
 
 		$ergebnis=safe_query("SELECT * FROM ".PREFIX."gallery WHERE userID!='0'");
-		
+
     echo'<form method="post" name="ws_gallery" action="admincenter.php?site=gallery&amp;part=gallerys">
     <table width="100%" border="0" cellspacing="1" cellpadding="3" bgcolor="#DDDDDD">
       <tr>
@@ -528,23 +528,23 @@ elseif($part=="gallerys") {
         <td width="30%" class="title"><b>'.$_language->module['usergallery_of'].'</b></td>
         <td width="20%" class="title"><b>'.$_language->module['actions'].'</b></td>
       </tr>';
-      
+
     $CAPCLASS = new Captcha;
     $CAPCLASS->create_transaction();
     $hash = $CAPCLASS->get_hash();
-    
+
 		$i=1;
     while($ds=mysqli_fetch_array($ergebnis)) {
       if($i%2) { $td='td1'; }
 			else { $td='td2'; }
-    
+
 			echo'<tr>
         <td class="'.$td.'"><a href="../index.php?site=gallery&amp;galleryID='.$ds['galleryID'].'" target="_blank">'.getinput($ds['name']).'</a></td>
         <td class="'.$td.'"><a href="../index.php?site=profile&amp;id='.$userID.'" target="_blank">'.getnickname($ds['userID']).'</a></td>
-        <td class="'.$td.'" align="center"><input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=gallery&amp;part=gallerys&amp;action=edit&amp;galleryID='.$ds['galleryID'].'\');return document.MM_returnValue" value="'.$_language->module['edit'].'">
-        <input type="button" onclick="MM_confirm(\''.$_language->module['really_delete_gallery'].'\', \'admincenter.php?site=gallery&amp;part=gallerys&amp;delete=true&amp;galleryID='.$ds['galleryID'].'&amp;captcha_hash='.$hash.'\')" value="'.$_language->module['delete'].'"></td>
+        <td class="'.$td.'" align="center"><input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=gallery&amp;part=gallerys&amp;action=edit&amp;galleryID='.$ds['galleryID'].'\');return document.MM_returnValue" value="'.$_language->module['edit'].'" />
+        <input type="button" onclick="MM_confirm(\''.$_language->module['really_delete_gallery'].'\', \'admincenter.php?site=gallery&amp;part=gallerys&amp;delete=true&amp;galleryID='.$ds['galleryID'].'&amp;captcha_hash='.$hash.'\')" value="'.$_language->module['delete'].'" /></td>
       </tr>';
-      
+
       $i++;
 		}
 		echo'</table></form>';

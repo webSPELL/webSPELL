@@ -119,7 +119,7 @@ echo '<table width="100%" border="0" cellspacing="1" cellpadding="3" bgcolor="#D
     <td class="td1">'.$maxvisits.' ('.$maxvisits_date.')</td>
   </tr>
 </table>
-<br><br>';
+<br /><br />';
 
 echo '<h1>&curren; '.$_language->module['visitor_stats_graphics'].'</h1>';
 
@@ -184,7 +184,7 @@ function update_size(new_x, new_y)
 {
 	size_x = new_x;
 	size_y = new_y;
-	
+
 	if(size_x <= 0) {
 		size_x = 1;
 		document.getElementById('new_x').value = 1;
@@ -193,11 +193,11 @@ function update_size(new_x, new_y)
 		size_y = 1;
 		document.getElementById('new_y').value = 1;
 	}
-	
+
 	if(year) {
 		display_stat(year, month);
 	}
-	
+
 	document.getElementById('last_days').src = 'visitor_statistic_image.php?last=days&count=' + count_days + '&size_x=' + size_x + '&size_y=' + size_y;
 	document.getElementById('last_months').src = 'visitor_statistic_image.php?last=months&count=' + count_months + '&size_x=' + size_x + '&size_y=' + size_y;
 }
@@ -205,7 +205,7 @@ function update_count(new_days, new_months)
 {
 	count_days = new_days;
 	count_months = new_months;
-	
+
 	if(count_days <= 1) {
 		count_days = 2;
 		document.getElementById('count_days').value = 2;
@@ -214,10 +214,10 @@ function update_count(new_days, new_months)
 		count_months = 2;
 		document.getElementById('count_months').value = 2;
 	}
-	
+
 	document.getElementById('last_days_h2').innerHTML = '&curren; <?php echo $_language->module['last']; ?> ' + count_days + ' <?php echo $_language->module['days']; ?>';
 	document.getElementById('last_months_h2').innerHTML = '&curren; <?php echo $_language->module['last']; ?> ' + count_months + ' <?php echo $_language->module['months']; ?>';
-	
+
 	document.getElementById('last_days').src = 'visitor_statistic_image.php?last=days&count=' + count_days + '&size_x=' + size_x + '&size_y=' + size_y;
 	document.getElementById('last_months').src = 'visitor_statistic_image.php?last=months&count=' + count_months + '&size_x=' + size_x + '&size_y=' + size_y;
 }
@@ -225,15 +225,15 @@ function update_count(new_days, new_months)
 </script>
 
 <p><b><?php echo $_language->module['settings']; ?>:</b></p>
-<?php echo $_language->module['last']; ?> <input type="text" id="count_days" value="<?php echo $count_days; ?>" style="width:20px;"> <?php echo $_language->module['days']; ?><br><br>
-<?php echo $_language->module['last']; ?> <input type="text" id="count_months" value="<?php echo $count_months; ?>" style="width:20px;"> <?php echo $_language->module['months']; ?> <input type="button" onclick="update_count(document.getElementById('count_days').value, document.getElementById('count_months').value);" value="<?php echo $_language->module['show']; ?>"><br><br>
+<?php echo $_language->module['last']; ?> <input type="text" id="count_days" value="<?php echo $count_days; ?>" style="width:20px;"> <?php echo $_language->module['days']; ? /><br /><br />
+<?php echo $_language->module['last']; ?> <input type="text" id="count_months" value="<?php echo $count_months; ?>" style="width:20px;" /> <?php echo $_language->module['months']; ?> <input type="button" onclick="update_count(document.getElementById('count_days').value, document.getElementById('count_months').value);" value="<?php echo $_language->module['show']; ?>" /><br /><br />
 
 <p><b><?php echo $_language->module['change_size']; ?>:</b></p>
-<input type="text" id="new_x" value="<?php echo $size_x; ?>" style="width:40px;"> x <input type="text" id="new_y" value="<?php echo $size_y; ?>" style="width:40px;"> <input type="button" onclick="update_size(document.getElementById('new_x').value, document.getElementById('new_y').value);" value="<?php echo $_language->module['show']; ?>"> <?php echo $_language->module['width_height']; ?><br><br>
+<input type="text" id="new_x" value="<?php echo $size_x; ?>" style="width:40px;" /> x <input type="text" id="new_y" value="<?php echo $size_y; ?>" style="width:40px;" /> <input type="button" onclick="update_size(document.getElementById('new_x').value, document.getElementById('new_y').value);" value="<?php echo $_language->module['show']; ?>" /> <?php echo $_language->module['width_height']; ?><br /><br />
 
 <p><b><?php echo $_language->module['show_year_month']; ?>:</b></p>
-<input type="text" id="year" style="width:40px;"> <input type="button" onclick="display_stat(document.getElementById('year').value, 0);" value="<?php echo $_language->module['show']; ?>"> <?php echo $_language->module['yyyy']; ?><br><br>
-<input type="text" id="year2" style="width:40px;">.<input type="text" id="month" style="width:20px;"> <input type="button" onclick="display_stat(document.getElementById('year2').value, document.getElementById('month').value);" value="<?php echo $_language->module['show']; ?>"> <?php echo $_language->module['yyyy_mm']; ?><br><br>
+<input type="text" id="year" style="width:40px;" /> <input type="button" onclick="display_stat(document.getElementById('year').value, 0);" value="<?php echo $_language->module['show']; ?>" /> <?php echo $_language->module['yyyy']; ?><br /><br />
+<input type="text" id="year2" style="width:40px;" />.<input type="text" id="month" style="width:20px;" /> <input type="button" onclick="display_stat(document.getElementById('year2').value, document.getElementById('month').value);" value="<?php echo $_language->module['show']; ?>" /> <?php echo $_language->module['yyyy_mm']; ?><br /><br />
 <h1 id="h2" style="display:none;"></h1>
 <img id="img" style="display:none;" src="" alt="">
 

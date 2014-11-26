@@ -39,7 +39,7 @@ if(!isset($db)){
 	$get = safe_query("SELECT DATABASE()");
 	$ret = mysqli_fetch_array($get);
 	$db = $ret[0];
-}	
+}
 $query = safe_query("SHOW TABLES");
 
 $count_tables = mysqli_num_rows($query);
@@ -212,7 +212,7 @@ foreach($tables_array as $table){
     <td class="td2"><?php echo $count_tables; ?></td>
   </tr>
 </table>
-<br><br>
+<br /><br />
 <table width="100%" border="0" cellspacing="1" cellpadding="3" bgcolor="#DDDDDD">
   <tr>
     <td class="title" colspan="4"><b><?php echo $_language->module['page_stats']; ?></b></td>
@@ -228,8 +228,8 @@ foreach($tables_array as $table){
     <?php if(isset($count_array[$i + 1])) { ?>
     <td width="25%" class="<?php echo $td; ?>"><b><?php echo $count_array[$i + 1][0]; ?></b></td>
     <td width="25%" class="<?php echo $td; ?>"><?php echo $count_array[$i + 1][1]; ?></td>
-    <?php 
-		} 
+    <?php
+		}
   	else { ?>
     <td width="25" class="<?php echo $td; ?>"></td>
     <td width="25" class="<?php echo $td; ?>"></td>

@@ -68,7 +68,7 @@ if(function_exists("gd_info")) {
 	if (isset($gdinfo['GIF Read Support']) && $gdinfo['GIF Read Support'] == true) { $get_gdtypes[] = "*.gif ".$_language->module['read']; }
 	if (isset($gdinfo['GIF Create Support']) && $gdinfo['GIF Create Support'] == true) { $get_gdtypes[] = "*.gif ".$_language->module['create']; }
 	if (isset($gdinfo['JPG Support']) && $gdinfo['JPG Support'] == true) { $get_gdtypes[] = "*.jpg"; }
-  elseif (isset($gdinfo['JPEG Support']) && $gdinfo['JPEG Support'] == true) { $get_gdtypes[] = "*.jpg"; }
+	elseif (isset($gdinfo['JPEG Support']) && $gdinfo['JPEG Support'] == true) { $get_gdtypes[] = "*.jpg"; }
 	if (isset($gdinfo['PNG Support']) && $gdinfo['PNG Support'] == true) { $get_gdtypes[] = "*.png"; }
 	if (isset($gdinfo['WBMP Support']) && $gdinfo['WBMP Support'] == true) { $get_gdtypes[] = "*.wbmp"; }
 	if (isset($gdinfo['XBM Support']) && $gdinfo['XBM Support'] == true) { $get_gdtypes[] = "*.xbm"; }
@@ -85,131 +85,131 @@ $ret = mysqli_fetch_array($get);
 $db = $ret[0];
 
 echo '<h1>&curren; '.$_language->module['welcome'].'</h1>';
-echo $_language->module['hello'].'&nbsp;'.$username.',&nbsp;'.$_language->module['last_login'].'&nbsp;'.$lastlogin.'.<br><br>';
+echo $_language->module['hello'].'&nbsp;'.$username.',&nbsp;'.$_language->module['last_login'].'&nbsp;'.$lastlogin.'.<br /><br />';
 echo $_language->module['welcome_message']; ?>
-<br><iframe src="http://update.webspell.org/index.php?new&amp;v=<?php echo $version;?>&amp;h=<?php echo $_SERVER['SERVER_NAME'];?>" height="70" frameborder="0" scrolling="no" width="100%"></iframe><br><br>
+<br /><iframe src="http://update.webspell.org/index.php?new&amp;v=<?php echo $version;?>&amp;h=<?php echo $_SERVER['SERVER_NAME'];?>" height="70" frameborder="0" scrolling="no" width="100%"></iframe><br /><br />
 <h1>&curren; <?php echo $_language->module['serverinfo']; ?></h1>
 <table width="100%" border="0" cellspacing="1" cellpadding="3" bgcolor="#DDDDDD">
-  <tr>
-    <td class="title" colspan="4"><b><?php echo $_language->module['serverinfo']; ?></b></td>
-  </tr>
-  <tr>
-    <td width="25%" class="td1"><b><?php echo $_language->module['webspell_version']; ?></b></td>
-    <td width="25%" class="td1"><font color="#008000"><?php echo $version; ?></font></td>
-    <td width="25%" class="td1"><b><?php echo $_language->module['server_os']; ?></b></td>
-    <td width="25%" class="td1"><?php echo (($php_s = @php_uname('s')) ? $php_s : $info_na); ?></td>
-  </tr>
-  <tr>
-    <td class="td2"><b><?php echo $_language->module['php_version']; ?></b></td>
-    <td class="td2"><?php echo $phpversion; ?></td>
-    <td class="td2"><b><?php echo $_language->module['server_host']; ?></b></td>
-    <td class="td2"><?php echo (($php_n = @php_uname('n')) ? $php_n : $info_na); ?></td>
-  </tr>
-  <tr>
-    <td class="td1"><b><?php echo $_language->module['zend_version']; ?></b></td>
-    <td class="td1"><?php echo $zendversion; ?></td>
-    <td class="td1"><b><?php echo $_language->module['server_release']; ?></b></td>
-    <td class="td1"><?php echo (($php_r = @php_uname('r')) ? $php_r : $info_na); ?></td>
-  </tr>
-  <tr>
-    <td class="td2"><b><?php echo $_language->module['mysql_version']; ?></b></td>
-    <td class="td2"><?php echo $mysqlversion; ?></td>
-    <td class="td2"><b><?php echo $_language->module['server_version']; ?></b></td>
-    <td class="td2"><?php echo (($php_v = @php_uname('v')) ? $php_v : $info_na); ?></td>
-  </tr>
-  <tr>
-    <td class="td1"><b><?php echo $_language->module['databasename']; ?></b></td>
-    <td class="td1"><?php echo $db; ?></td>
-    <td class="td1"><b><?php echo $_language->module['server_machine']; ?></b></td>
-    <td class="td1"><?php echo (($php_m = @php_uname('m')) ? $php_m : $info_na); ?></td>
-  </tr>
+	<tr>
+		<td class="title" colspan="4"><b><?php echo $_language->module['serverinfo']; ?></b></td>
+	</tr>
+	<tr>
+		<td width="25%" class="td1"><b><?php echo $_language->module['webspell_version']; ?></b></td>
+		<td width="25%" class="td1"><font color="#008000"><?php echo $version; ?></font></td>
+		<td width="25%" class="td1"><b><?php echo $_language->module['server_os']; ?></b></td>
+		<td width="25%" class="td1"><?php echo (($php_s = @php_uname('s')) ? $php_s : $info_na); ?></td>
+	</tr>
+	<tr>
+		<td class="td2"><b><?php echo $_language->module['php_version']; ?></b></td>
+		<td class="td2"><?php echo $phpversion; ?></td>
+		<td class="td2"><b><?php echo $_language->module['server_host']; ?></b></td>
+		<td class="td2"><?php echo (($php_n = @php_uname('n')) ? $php_n : $info_na); ?></td>
+	</tr>
+	<tr>
+		<td class="td1"><b><?php echo $_language->module['zend_version']; ?></b></td>
+		<td class="td1"><?php echo $zendversion; ?></td>
+		<td class="td1"><b><?php echo $_language->module['server_release']; ?></b></td>
+		<td class="td1"><?php echo (($php_r = @php_uname('r')) ? $php_r : $info_na); ?></td>
+	</tr>
+	<tr>
+		<td class="td2"><b><?php echo $_language->module['mysql_version']; ?></b></td>
+		<td class="td2"><?php echo $mysqlversion; ?></td>
+		<td class="td2"><b><?php echo $_language->module['server_version']; ?></b></td>
+		<td class="td2"><?php echo (($php_v = @php_uname('v')) ? $php_v : $info_na); ?></td>
+	</tr>
+	<tr>
+		<td class="td1"><b><?php echo $_language->module['databasename']; ?></b></td>
+		<td class="td1"><?php echo $db; ?></td>
+		<td class="td1"><b><?php echo $_language->module['server_machine']; ?></b></td>
+		<td class="td1"><?php echo (($php_m = @php_uname('m')) ? $php_m : $info_na); ?></td>
+	</tr>
 </table>
-<br><br>
+<br /><br />
 <table width="100%" border="0" cellspacing="1" cellpadding="3" bgcolor="#DDDDDD">
-  <tr>
-    <td class="title" colspan="4"><b><?php echo $_language->module['interface']; ?></b></td>
-  </tr>
-  <tr>
-    <td width="25%" class="td1"><b><?php echo $_language->module['server_api']; ?></b></td>
-    <td width="75%" class="td1"><?php echo php_sapi_name(); ?></td>
-  </tr>
-  <tr>
-    <td class="td2"><b><?php echo $_language->module['apache']; ?></b></td>
-    <td class="td2"><?php if(function_exists("apache_get_version")) echo apache_get_version(); else echo $_language->module['na']; ?></td>
-  </tr>
-  <tr>
-    <td class="td1"><b><?php echo $_language->module['apache_modules']; ?></b></td>
-    <td class="td1"><?php if(function_exists("apache_get_modules")){if(count(apache_get_modules()) > 1) $get_apache_modules = implode(", ",apache_get_modules()); echo $get_apache_modules;} else{ echo $_language->module['na'];} ?></td>
-  </tr>
+	<tr>
+		<td class="title" colspan="4"><b><?php echo $_language->module['interface']; ?></b></td>
+	</tr>
+	<tr>
+		<td width="25%" class="td1"><b><?php echo $_language->module['server_api']; ?></b></td>
+		<td width="75%" class="td1"><?php echo php_sapi_name(); ?></td>
+	</tr>
+	<tr>
+		<td class="td2"><b><?php echo $_language->module['apache']; ?></b></td>
+		<td class="td2"><?php if(function_exists("apache_get_version")) echo apache_get_version(); else echo $_language->module['na']; ?></td>
+	</tr>
+	<tr>
+		<td class="td1"><b><?php echo $_language->module['apache_modules']; ?></b></td>
+		<td class="td1"><?php if(function_exists("apache_get_modules")){if(count(apache_get_modules()) > 1) $get_apache_modules = implode(", ",apache_get_modules()); echo $get_apache_modules;} else{ echo $_language->module['na'];} ?></td>
+	</tr>
 </table>
-<br><br>
+<br /><br />
 <table width="100%" border="0" cellspacing="1" cellpadding="3" bgcolor="#DDDDDD">
-  <tr>
-    <td class="title" colspan="4"><b><?php echo $_language->module['php_settings']; ?></b></td>
-  </tr>
-  <tr>
-    <td class="td1" colspan="4"><b><?php echo $_language->module['legend']; ?>:</b>&nbsp; &nbsp;<font color="#008000"><?php echo $_language->module['green']; ?>:</font> <?php echo $_language->module['setting_ok']; ?>&nbsp; - &nbsp;<font color="#FFA500"><?php echo $_language->module['orange']; ?>:</font> <?php echo $_language->module['setting_notice']; ?>&nbsp; - &nbsp;<font color="#FF0000"><?php echo $_language->module['red']; ?>:</font> <?php echo $_language->module['setting_error']; ?></td>
-  </tr>
-  <tr>
-    <td width="25%" class="td2"><b>php.ini <?php echo $_language->module['path']; ?></b></td>
-    <td width="75%" class="td2" colspan="3"><?php echo $get_phpini_path; ?></td>
-  </tr>
-  <tr>
-    <td width="25%" class="td1"><b>Allow URL fopen</b></td>
-    <td width="25%" class="td1"><?php echo $get_allow_url_fopen; ?></td>
-    <td width="25%" class="td1"><b>Open Basedir</b></td>
-    <td width="25%" class="td1"><?php echo $get_open_basedir; ?></td>
-  </tr>
-  <tr>
-    <td class="td2"><b>Allow URL Include</b></td>
-    <td class="td2"><?php echo $get_allow_url_include; ?></td>
-    <td class="td2"><b>max. Upload (Filesize)</b></td>
-    <td class="td2"><?php echo $get_upload_max_filesize; ?></td>
-  </tr>
-  <tr>
-    <td class="td1"><b>Display Errors</b></td>
-    <td class="td1"><?php echo $get_display_errors; ?></td>
-    <td class="td1"><b>Memory Limit</b></td>
-    <td class="td1"><?php echo $get_memory_limit; ?></td>
-  </tr>
-  <tr>
-    <td class="td2"><b>Error Log</b></td>
-    <td class="td2"><?php echo $get_log_errors; ?></td>
-    <td class="td2"><b>Post max Size</b></td>
-    <td class="td2"><?php echo $get_post_max_size; ?></td>
-  </tr>
-  <tr>
-    <td class="td1"><b>File Uploads</b></td>
-    <td class="td1"><?php echo $get_file_uploads; ?></td>
-    <td class="td1"><b>Register Globals</b></td>
-    <td class="td1"><?php echo $get_register_globals; ?></td>
-  </tr>
-  <tr>
-    <td class="td2"><b>Magic Quotes</b></td>
-    <td class="td2"><?php echo $get_magic_quotes; ?></td>
-    <td class="td2"><b>Safe Mode</b></td>
-    <td class="td2"><?php echo $get_safe_mode; ?></td>
-  </tr>
-  <tr>
-    <td class="td1"><b>max. Execution Time</b></td>
-    <td class="td1"><?php echo $get_max_execution_time; ?></td>
-    <td class="td1"><b>Short Open Tag</b></td>
-    <td class="td1"><?php echo $get_short_open_tag; ?></td>
-  </tr>
+	<tr>
+		<td class="title" colspan="4"><b><?php echo $_language->module['php_settings']; ?></b></td>
+	</tr>
+	<tr>
+		<td class="td1" colspan="4"><b><?php echo $_language->module['legend']; ?>:</b>&nbsp; &nbsp;<font color="#008000"><?php echo $_language->module['green']; ?>:</font> <?php echo $_language->module['setting_ok']; ?>&nbsp; - &nbsp;<font color="#FFA500"><?php echo $_language->module['orange']; ?>:</font> <?php echo $_language->module['setting_notice']; ?>&nbsp; - &nbsp;<font color="#FF0000"><?php echo $_language->module['red']; ?>:</font> <?php echo $_language->module['setting_error']; ?></td>
+	</tr>
+	<tr>
+		<td width="25%" class="td2"><b>php.ini <?php echo $_language->module['path']; ?></b></td>
+		<td width="75%" class="td2" colspan="3"><?php echo $get_phpini_path; ?></td>
+	</tr>
+	<tr>
+		<td width="25%" class="td1"><b>Allow URL fopen</b></td>
+		<td width="25%" class="td1"><?php echo $get_allow_url_fopen; ?></td>
+		<td width="25%" class="td1"><b>Open Basedir</b></td>
+		<td width="25%" class="td1"><?php echo $get_open_basedir; ?></td>
+	</tr>
+	<tr>
+		<td class="td2"><b>Allow URL Include</b></td>
+		<td class="td2"><?php echo $get_allow_url_include; ?></td>
+		<td class="td2"><b>max. Upload (Filesize)</b></td>
+		<td class="td2"><?php echo $get_upload_max_filesize; ?></td>
+	</tr>
+	<tr>
+		<td class="td1"><b>Display Errors</b></td>
+		<td class="td1"><?php echo $get_display_errors; ?></td>
+		<td class="td1"><b>Memory Limit</b></td>
+		<td class="td1"><?php echo $get_memory_limit; ?></td>
+	</tr>
+	<tr>
+		<td class="td2"><b>Error Log</b></td>
+		<td class="td2"><?php echo $get_log_errors; ?></td>
+		<td class="td2"><b>Post max Size</b></td>
+		<td class="td2"><?php echo $get_post_max_size; ?></td>
+	</tr>
+	<tr>
+		<td class="td1"><b>File Uploads</b></td>
+		<td class="td1"><?php echo $get_file_uploads; ?></td>
+		<td class="td1"><b>Register Globals</b></td>
+		<td class="td1"><?php echo $get_register_globals; ?></td>
+	</tr>
+	<tr>
+		<td class="td2"><b>Magic Quotes</b></td>
+		<td class="td2"><?php echo $get_magic_quotes; ?></td>
+		<td class="td2"><b>Safe Mode</b></td>
+		<td class="td2"><?php echo $get_safe_mode; ?></td>
+	</tr>
+	<tr>
+		<td class="td1"><b>max. Execution Time</b></td>
+		<td class="td1"><?php echo $get_max_execution_time; ?></td>
+		<td class="td1"><b>Short Open Tag</b></td>
+		<td class="td1"><?php echo $get_short_open_tag; ?></td>
+	</tr>
 </table>
-<br><br>
+<br /><br />
 <table width="100%" border="0" cellspacing="1" cellpadding="3" bgcolor="#DDDDDD">
-  <tr>
-    <td class="title" colspan="4"><b>GD Graphics Library</b></td>
-  </tr>
-  <tr>
-    <td width="25%" class="td1"><b>GD Graphics Library</b></td>
-    <td width="25%" class="td1"><?php echo $get_gd_info; ?></td>
-    <td width="25%" class="td1"><b>GD Lib <?php echo $_language->module['version']; ?></b></td>
-    <td width="25%" class="td1"><?php echo $gdinfo['GD Version']; ?></td>
-  </tr>
-  <tr>
-    <td width="25%" class="td2"><b><?php echo $_language->module['supported_types']; ?></b></td>
-    <td width="75%" colspan="3" class="td2"><?php echo $get_gdtypes; ?></td>
-  </tr>
+	<tr>
+		<td class="title" colspan="4"><b>GD Graphics Library</b></td>
+	</tr>
+	<tr>
+		<td width="25%" class="td1"><b>GD Graphics Library</b></td>
+		<td width="25%" class="td1"><?php echo $get_gd_info; ?></td>
+		<td width="25%" class="td1"><b>GD Lib <?php echo $_language->module['version']; ?></b></td>
+		<td width="25%" class="td1"><?php echo $gdinfo['GD Version']; ?></td>
+	</tr>
+	<tr>
+		<td width="25%" class="td2"><b><?php echo $_language->module['supported_types']; ?></b></td>
+		<td width="75%" colspan="3" class="td2"><?php echo $get_gdtypes; ?></td>
+	</tr>
 </table>

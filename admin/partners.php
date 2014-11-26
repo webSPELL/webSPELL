@@ -61,13 +61,13 @@ elseif(isset($_POST['save'])) {
 		if(isset($_POST["displayed"])) $displayed = $_POST['displayed'];
 		else $displayed="";
 		if(!$displayed) $displayed=0;
-	
+
 		safe_query("INSERT INTO ".PREFIX."partners ( name, url, displayed, date, sort )
 		             values( '$name', '$url', '".$displayed."', '".time()."', '1' )");
 		$id=mysqli_insert_id($_database);
-	
+
 		$filepath = "../images/partners/";
-		
+
 		if($banner['name'] != "") {
 			move_uploaded_file($banner['tmp_name'], $filepath.$banner['name'].".tmp");
 			@chmod($filepath.$banner['name'].".tmp", 0755);
@@ -86,16 +86,16 @@ elseif(isset($_POST['save'])) {
 				}  else {
 					if(unlink($filepath.$banner['name'].".tmp")) {
 						$error = $_language->module['format_incorrect'];
-						die('<b>'.$error.'</b><br><br><a href="admincenter.php?site=partners&amp;action=edit&amp;partnerID='.$id.'">&laquo; '.$_language->module['back'].'</a>');
+						die('<b>'.$error.'</b><br /><br /><a href="admincenter.php?site=partners&amp;action=edit&amp;partnerID='.$id.'">&laquo; '.$_language->module['back'].'</a>');
 					} else {
 						$error = $_language->module['format_incorrect'];
-						die('<b>'.$error.'</b><br><br><a href="admincenter.php?site=partners&amp;action=edit&amp;partnerID='.$id.'">&laquo; '.$_language->module['back'].'</a>');
+						die('<b>'.$error.'</b><br /><br /><a href="admincenter.php?site=partners&amp;action=edit&amp;partnerID='.$id.'">&laquo; '.$_language->module['back'].'</a>');
 					}
 				}
 			} else {
 				@unlink($filepath.$banner['name'].".tmp");
 				$error = $_language->module['banner_to_big'];
-				die('<b>'.$error.'</b><br><br><a href="admincenter.php?site=partners&amp;action=edit&amp;partnerID='.$id.'">&laquo; '.$_language->module['back'].'</a>');
+				die('<b>'.$error.'</b><br /><br /><a href="admincenter.php?site=partners&amp;action=edit&amp;partnerID='.$id.'">&laquo; '.$_language->module['back'].'</a>');
 			}
 		}
 	} else echo $_language->module['transaction_invalid'];
@@ -112,9 +112,9 @@ elseif(isset($_POST['saveedit'])) {
 		if(!$displayed) $displayed=0;
 		$partnerID = $_POST['partnerID'];
 		$id=$partnerID;
-		
+
 		$filepath = "../images/partners/";
-		
+
 		if($banner['name'] != "") {
 			move_uploaded_file($banner['tmp_name'], $filepath.$banner['name'].".tmp");
 			@chmod($filepath.$banner['name'].".tmp", 0755);
@@ -133,16 +133,16 @@ elseif(isset($_POST['saveedit'])) {
 				}  else {
 					if(unlink($filepath.$banner['name'].".tmp")) {
 						$error = $_language->module['format_incorrect'];
-						die('<b>'.$error.'</b><br><br><a href="admincenter.php?site=partners&amp;action=edit&amp;partnerID='.$id.'">&laquo; '.$_language->module['back'].'</a>');
+						die('<b>'.$error.'</b><br /><br /><a href="admincenter.php?site=partners&amp;action=edit&amp;partnerID='.$id.'">&laquo; '.$_language->module['back'].'</a>');
 					} else {
 						$error = $_language->module['format_incorrect'];
-						die('<b>'.$error.'</b><br><br><a href="admincenter.php?site=partners&amp;action=edit&amp;partnerID='.$id.'">&laquo; '.$_language->module['back'].'</a>');
+						die('<b>'.$error.'</b><br /><br /><a href="admincenter.php?site=partners&amp;action=edit&amp;partnerID='.$id.'">&laquo; '.$_language->module['back'].'</a>');
 					}
 				}
 			} else {
 				@unlink($filepath.$banner['name'].".tmp");
 				$error = $_language->module['banner_to_big'];
-				die('<b>'.$error.'</b><br><br><a href="admincenter.php?site=partners&amp;action=edit&amp;partnerID='.$id.'">&laquo; '.$_language->module['back'].'</a>');
+				die('<b>'.$error.'</b><br /><br /><a href="admincenter.php?site=partners&amp;action=edit&amp;partnerID='.$id.'">&laquo; '.$_language->module['back'].'</a>');
 			}
 		}
 		safe_query("UPDATE ".PREFIX."partners SET name='$name', url='$url', displayed='".$displayed."' WHERE partnerID='$partnerID' ");
@@ -156,30 +156,30 @@ if($action=="add") {
 	$CAPCLASS = new Captcha;
 	$CAPCLASS->create_transaction();
 	$hash = $CAPCLASS->get_hash();
-	
+
 	echo'<h1>&curren; <a href="admincenter.php?site=partners" class="white">'.$_language->module['partners'].'</a> &raquo; '.$_language->module['add_partner'].'</h1>';
 
 	echo'<form method="post" action="admincenter.php?site=partners" enctype="multipart/form-data">
   <table width="100%" border="0" cellspacing="1" cellpadding="3">
     <tr>
       <td width="15%"><b>'.$_language->module['partner_name'].'</b></td>
-      <td width="85%"><input type="text" name="name" size="60"></td>
+      <td width="85%"><input type="text" name="name" size="60" /></td>
     </tr>
     <tr>
       <td><b>'.$_language->module['banner'].'</b></td>
-      <td><input name="banner" type="file" size="40"> <small>'.$_language->module['max_88x31'].'</small></td>
+      <td><input name="banner" type="file" size="40" /> <small>'.$_language->module['max_88x31'].'</small></td>
     </tr>
     <tr>
       <td><b>'.$_language->module['homepage_url'].'</b></td>
-      <td><input type="text" name="url" size="60" value="http://"></td>
+      <td><input type="text" name="url" size="60" value="http://" /></td>
     </tr>
     <tr>
       <td><b>'.$_language->module['is_displayed'].'</b></td>
-      <td><input type="checkbox" name="displayed" value="1" checked="checked"></td>
+      <td><input type="checkbox" name="displayed" value="1" checked="checked" /></td>
     </tr>
     <tr>
-      <td><input type="hidden" name="captcha_hash" value="'.$hash.'"></td>
-      <td><input type="submit" name="save" value="'.$_language->module['add_partner'].'"></td>
+      <td><input type="hidden" name="captcha_hash" value="'.$hash.'" /></td>
+      <td><input type="submit" name="save" value="'.$_language->module['add_partner'].'" /></td>
     </tr>
   </table>
   </form>';
@@ -189,16 +189,16 @@ elseif($action=="edit") {
 	$CAPCLASS = new Captcha;
 	$CAPCLASS->create_transaction();
 	$hash = $CAPCLASS->get_hash();
-  
+
   echo'<h1>&curren; <a href="admincenter.php?site=partners" class="white">'.$_language->module['partners'].'</a> &raquo; '.$_language->module['edit_partner'].'</h1>';
-  
+
   $partnerID = $_GET['partnerID'];
   $ergebnis=safe_query("SELECT * FROM ".PREFIX."partners WHERE partnerID='$partnerID'");
   $ds=mysqli_fetch_array($ergebnis);
-  
-  if($ds['displayed']=='1') $displayed='<input type="checkbox" name="displayed" value="1" checked="checked">';
-  else $displayed='<input type="checkbox" name="displayed" value="1">';
-  
+
+  if($ds['displayed']=='1') $displayed='<input type="checkbox" name="displayed" value="1" checked="checked" />';
+  else $displayed='<input type="checkbox" name="displayed" value="1" />';
+
 	echo'<form method="post" action="admincenter.php?site=partners" enctype="multipart/form-data">
   <table width="100%" border="0" cellspacing="1" cellpadding="3">
     <tr>
@@ -207,33 +207,33 @@ elseif($action=="edit") {
     </tr>
     <tr>
       <td width="15%"><b>'.$_language->module['partner_name'].'</b></td>
-      <td width="85%"><input type="text" name="name" size="60" value="'.getinput($ds['name']).'"></td>
+      <td width="85%"><input type="text" name="name" size="60" value="'.getinput($ds['name']).'" /></td>
     </tr>
     <tr>
       <td><b>'.$_language->module['banner'].'</b></td>
-      <td><input name="banner" type="file" size="40"> <small>'.$_language->module['max_88x31'].'</small></td>
+      <td><input name="banner" type="file" size="40" /> <small>'.$_language->module['max_88x31'].'</small></td>
     </tr>
     <tr>
       <td><b>'.$_language->module['homepage_url'].'</b></td>
-      <td><input type="text" name="url" size="60" value="'.getinput($ds['url']).'"></td>
+      <td><input type="text" name="url" size="60" value="'.getinput($ds['url']).'" /></td>
     </tr>
     <tr>
       <td><b>'.$_language->module['is_displayed'].'</b></td>
       <td>'.$displayed.'</td>
     </tr>
     <tr>
-      <td><input type="hidden" name="captcha_hash" value="'.$hash.'"><input type="hidden" name="partnerID" value="'.$partnerID.'"></td>
-      <td><input type="submit" name="saveedit" value="'.$_language->module['edit_partner'].'"></td>
+      <td><input type="hidden" name="captcha_hash" value="'.$hash.'" /><input type="hidden" name="partnerID" value="'.$partnerID.'" /></td>
+      <td><input type="submit" name="saveedit" value="'.$_language->module['edit_partner'].'" /></td>
     </tr>
   </table>
   </form>';
 }
 
 else {
-	
+
   echo'<h1>&curren; '.$_language->module['partners'].'</h1>';
-  
-  echo'<input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=partners&amp;action=add\');return document.MM_returnValue" value="'.$_language->module['new_partner'].'"><br><br>';
+
+  echo'<input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=partners&amp;action=add\');return document.MM_returnValue" value="'.$_language->module['new_partner'].'" /><br /><br />';
 
 	echo'<form method="post" action="admincenter.php?site=partners">
   <table width="100%" border="0" cellspacing="1" cellpadding="3" bgcolor="#DDDDDD">
@@ -251,43 +251,43 @@ else {
 	$CAPCLASS = new Captcha;
 	$CAPCLASS->create_transaction();
 	$hash = $CAPCLASS->get_hash();
-	
+
 	$CAPCLASS->create_transaction();
 	$hash_2 = $CAPCLASS->get_hash();
-	
+
 	$i=1;
 	while($db=mysqli_fetch_array($partners)) {
     if($i%2) { $td='td1'; }
     else { $td='td2'; }
-    
+
     $db['displayed']==1 ? $displayed='<font color="green"><b>'.$_language->module['yes'].'</b></font>' : $displayed='<font color="red"><b>'.$_language->module['no'].'</b></font>';
-    
+
     $days=round((time()-$db['date'])/(60*60*24));
     if($days) $perday=round($db['hits']/$days,2);
     else $perday=$db['hits'];
-    
+
 		echo'<tr>
       <td class="'.$td.'"><a href="'.getinput($db['url']).'" target="_blank">'.getinput($db['name']).'</a></td>
       <td class="'.$td.'">'.$db['hits'].' ('.$perday.')</td>
       <td class="'.$td.'" align="center">'.$displayed.'</td>
-      <td class="'.$td.'" align="center"><input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=partners&amp;action=edit&amp;partnerID='.$db['partnerID'].'\');return document.MM_returnValue" value="'.$_language->module['edit'].'">
-      <input type="button" onclick="MM_confirm(\''.$_language->module['really_delete'].'\', \'admincenter.php?site=partners&amp;delete=true&amp;partnerID='.$db['partnerID'].'&amp;captcha_hash='.$hash.'\')" value="'.$_language->module['delete'].'"></td>
+      <td class="'.$td.'" align="center"><input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=partners&amp;action=edit&amp;partnerID='.$db['partnerID'].'\');return document.MM_returnValue" value="'.$_language->module['edit'].'" />
+      <input type="button" onclick="MM_confirm(\''.$_language->module['really_delete'].'\', \'admincenter.php?site=partners&amp;delete=true&amp;partnerID='.$db['partnerID'].'&amp;captcha_hash='.$hash.'\')" value="'.$_language->module['delete'].'" /></td>
       <td class="'.$td.'" align="center">
       <select name="sort[]">';
-      
+
 		for($j=1; $j<=$anzpartners; $j++) {
 			if($db['sort'] == $j) echo'<option value="'.$db['partnerID'].'-'.$j.'" selected="selected">'.$j.'</option>';
 			else echo'<option value="'.$db['partnerID'].'-'.$j.'">'.$j.'</option>';
 		}
-    
+
 		echo'</select>
       </td>
     </tr>';
     $i++;
-         
+
 	}
 	echo'<tr class="td_head">
-      <td colspan="5" align="right"><input type="hidden" name="captcha_hash" value="'.$hash_2.'"><input type="submit" name="sortieren" value="'.$_language->module['to_sort'].'"></td>
+      <td colspan="5" align="right"><input type="hidden" name="captcha_hash" value="'.$hash_2.'"><input type="submit" name="sortieren" value="'.$_language->module['to_sort'].'" /></td>
     </tr>
   </table>
   </form>';
