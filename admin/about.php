@@ -27,54 +27,60 @@
 
 $_language->read_module('about');
 
-if(!ispageadmin($userID) OR mb_substr(basename($_SERVER['REQUEST_URI']),0,15) != "admincenter.php") die($_language->module['access_denied']);
-
-echo'<h1>&curren; '.$_language->module['about'].'</h1>';
-
-if(isset($_POST['submit']) != "") {
-	$about = $_POST['message'];
-	$CAPCLASS = new Captcha;
-	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
-		if(mysqli_num_rows(safe_query("SELECT * FROM ".PREFIX."about")))	safe_query("UPDATE ".PREFIX."about SET about='".$about."'");
-		else safe_query("INSERT INTO ".PREFIX."about (about) values( '".$about."') ");
-		redirect("admincenter.php?site=about", "", 0);
-	} else echo $_language->module['transaction_invalid'];
+if (!ispageadmin($userID) || mb_substr(basename($_SERVER[ 'REQUEST_URI' ]), 0, 15) !== "admincenter.php") {
+    die($_language->module[ 'access_denied' ]);
 }
-else {
-	$ergebnis=safe_query("SELECT * FROM ".PREFIX."about");
-	$ds=mysqli_fetch_array($ergebnis);
 
-	$CAPCLASS = new Captcha;
-	$CAPCLASS->create_transaction();
-	$hash = $CAPCLASS->get_hash();
+echo '<h1>&curren; ' . $_language->module[ 'about' ] . '</h1>';
 
-	$_language->read_module('bbcode', true);
+if (isset($_POST[ 'submit' ]) != "") {
+    $about = $_POST[ 'message' ];
+    $CAPCLASS = new Captcha;
+    if ($CAPCLASS->check_captcha(0, $_POST[ 'captcha_hash' ])) {
+        if (mysqli_num_rows(safe_query("SELECT * FROM " . PREFIX . "about"))) {
+            safe_query("UPDATE " . PREFIX . "about SET about='" . $about . "'");
+        } else {
+            safe_query("INSERT INTO " . PREFIX . "about (about) values( '" . $about . "') ");
+        }
+        redirect("admincenter.php?site=about", "", 0);
+    } else {
+        echo $_language->module[ 'transaction_invalid' ];
+    }
+} else {
+    $ergebnis = safe_query("SELECT * FROM " . PREFIX . "about");
+    $ds = mysqli_fetch_array($ergebnis);
 
-	echo '<script>
-					<!--
-						function chkFormular() {
-							if(!validbbcode(document.getElementById(\'message\').value, \'admin\')){
-								return false;
-							}
-						}
-					-->
-				</script>';
+    $CAPCLASS = new Captcha;
+    $CAPCLASS->create_transaction();
+    $hash = $CAPCLASS->get_hash();
 
-	echo '<form method="post" id="post" name="post" action="admincenter.php?site=about" onsubmit="return chkFormular();">
-  <b>'.$_language->module['about'].'</b><br><small>'.$_language->module['you_can_use_html'].'</small><br><br>';
+    $_language->read_module('bbcode', true);
 
-	eval ("\$addbbcode = \"".gettemplate("addbbcode", "html", "admin")."\";");
-  eval ("\$addflags = \"".gettemplate("flags_admin", "html", "admin")."\";");
+    echo '<script>
+        function chkFormular() {
+            if(!validbbcode(document.getElementById(\'message\').value, \'admin\')){
+                return false;
+            }
+        }
+    </script>';
 
-  echo '<table width="100%" border="0" cellspacing="0" cellpadding="0">
-		      <tr>
-		        <td valign="top">'.$addbbcode.'</td>
-		        <td valign="top">'.$addflags.'</td>
-		      </tr>
-		    </table>';
+    echo '<form method="post" id="post" name="post" action="admincenter.php?site=about"
+            onsubmit="return chkFormular();">
+        <b>' . $_language->module[ 'about' ] . '</b><br><small>' . $_language->module[ 'you_can_use_html' ] .
+        '</small><br><br>';
 
-  echo '<br><textarea id="message" name="message" rows="30" cols="" style="width: 100%;">'.getinput($ds['about']).'</textarea>
-  <br /><br /><input type="hidden" name="captcha_hash" value="'.$hash.'" /><input type="submit" name="submit" value="'.$_language->module['update'].'" />
-  </form>';
+    eval ("\$addbbcode = \"" . gettemplate("addbbcode", "html", "admin") . "\";");
+    eval ("\$addflags = \"" . gettemplate("flags_admin", "html", "admin") . "\";");
+
+    echo '<table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+            <td valign="top">' . $addbbcode . '</td>
+            <td valign="top">' . $addflags . '</td>
+        </tr>
+    </table>';
+
+    echo
+        '<br><textarea id="message" name="message" rows="30" cols="" style="width: 100%;">' . getinput($ds[ 'about' ]) .
+        '</textarea><br><br><input type="hidden" name="captcha_hash" value="' . $hash .
+        '" /><input type="submit" name="submit" value="' . $_language->module[ 'update' ] . '" /></form>';
 }
-?>
