@@ -85,7 +85,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks("grunt-lintspaces");
 
     grunt.registerTask("codecheck", [
-        //"lintspaces",
+        "lintspaces",
         "jshint",
         "jscs",
         "phplint",
