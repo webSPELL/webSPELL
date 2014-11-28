@@ -31,12 +31,12 @@ class Captcha {
 	var $type;
 	var $noise = 100;
 	var $linenoise = 10;
-	var $valide_time = 5; /* captcha or transaction is valide for x minutes */
+	var $valide_time = 20; /* captcha or transaction is valide for x minutes */
 	var $math;
 	var $math_max = 30;
 	var $bgcol = array("r"=>255,"g"=>255,"b"=>255);
 	var $fontcol = array("r"=>0,"g"=>0,"b"=>0);
-
+	
 	/* constructor: set captcha type */
 	function hex2rgb($col){
 		$col = str_replace("#","",$col);
@@ -52,21 +52,21 @@ class Captcha {
 		$ds = mysqli_fetch_assoc(safe_query("SELECT captcha_math, captcha_bgcol, captcha_fontcol, captcha_type, captcha_noise, captcha_linenoise FROM ".PREFIX."settings"));
 		if(mb_strlen($ds['captcha_bgcol']) == 7)
 			$this->bgcol = $this->hex2rgb($ds['captcha_bgcol']);
-
+		
 		if(mb_strlen($ds['captcha_fontcol']) == 7)
 			$this->fontcol = $this->hex2rgb($ds['captcha_fontcol']);
 
 		if($ds['captcha_math'] == 1) $this->math = 1;
 		elseif($ds['captcha_math'] == 2) $this->math = rand(0,1);
 		else $this->math = 0;
-
+		
 		if($ds['captcha_type'] == 1) $this->type='g';
 		elseif(function_exists('imagecreatetruecolor') && ($ds['captcha_type'] == 2)) $this->type='g';
 		else $this->type='t';
-
+		
 		$this->noise = $ds['captcha_noise'];
 		$this->linenoise = $ds['captcha_linenoise'];
-
+		
 		$this->clear_oldcaptcha();
 	}
 
@@ -99,7 +99,7 @@ class Captcha {
 			}
 
 			/* create captcha string */
-
+			
 			// math captcha
 			if($this->math == 1){
 				$first = rand(1,$this->math_max);
@@ -150,9 +150,9 @@ class Captcha {
 					}
 				}
 			}
-
+			
 			// numeric captcha
-
+			
 			else{
 				for($i=0;$i<$this->length;$i++) {
 					$int=rand(0,9);
@@ -163,7 +163,7 @@ class Captcha {
 
 			imageJPEG($imgziel, 'tmp/'.$this->hash.'.jpg');
 			@chmod('tmp/'.$this->hash.'.jpg', $new_chmod);
-			$captcha = '<img src="tmp/'.$this->hash.'.jpg" alt="'.$_language->module['security_code'].'">';
+			$captcha = '<img src="tmp/'.$this->hash.'.jpg" border="0" alt="'.$_language->module['security_code'].'" />';
 
 		} elseif($this->type=='t') {
 			$captcha = '';
@@ -178,7 +178,7 @@ class Captcha {
 
 	/* create transaction hash for formulars */
 	function create_transaction() {
-
+		
 		$this->hash = md5(time().rand(0, 10000));
 		safe_query("INSERT INTO `".PREFIX."captcha` (`hash`, `captcha`, `deltime`) VALUES ('".$this->hash."', '0', '".(time()+($this->valide_time*60))."');");
 		return true;

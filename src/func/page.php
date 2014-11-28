@@ -33,8 +33,7 @@ function redirect($url, $info, $time=1) {
 		$url = $info;
 		$info = '';
 	}
-	echo'<meta http-equiv="refresh" content="'.$time.';URL='.$url.'">
-  <br><p style="color:#000000">'.$info.'</p><br><br>';
+	echo '<meta http-equiv="refresh" content="'.$time.';URL='.$url.'"><br /><p style="color:#000000">'.$info.'</p><br /><br />';
 }
 
 function isStaticPage($staticID = null){
@@ -47,7 +46,7 @@ function isStaticPage($staticID = null){
 			return false;
 		}
 	}
-	
+
 	return true;
 }
 

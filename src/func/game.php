@@ -26,14 +26,13 @@
 */
 
 function getanzcwcomments($cwID) {
-	$anz=mysql_num_rows(safe_query("SELECT commentID FROM `".PREFIX."comments` WHERE parentID='$cwID' AND type='cw'"));
-	return $anz;
+	return mysqli_num_rows(safe_query("SELECT commentID FROM `".PREFIX."comments` WHERE parentID='$cwID' AND type='cw'"));
 }
 
 function getsquads() {
 	$squads="";
-  $ergebnis=safe_query("SELECT * FROM ".PREFIX."squads");
-	while($ds=mysql_fetch_array($ergebnis)) {
+	$ergebnis=safe_query("SELECT * FROM ".PREFIX."squads");
+	while($ds=mysqli_fetch_array($ergebnis)) {
 		$squads.='<option value="'.$ds['squadID'].'">'.$ds['name'].'</option>';
 	}
 	return $squads;
@@ -42,33 +41,30 @@ function getsquads() {
 function getgamesquads() {
 	$squads = '';
 	$ergebnis=safe_query("SELECT * FROM ".PREFIX."squads WHERE gamesquad='1'");
-	while($ds=mysql_fetch_array($ergebnis)) {
+	while($ds=mysqli_fetch_array($ergebnis)) {
 		$squads.='<option value="'.$ds['squadID'].'">'.$ds['name'].'</option>';
 	}
 	return $squads;
 }
 
 function getsquadname($squadID) {
-	$ds=mysql_fetch_array(safe_query("SELECT name FROM ".PREFIX."squads WHERE squadID='$squadID'"));
+	$ds=mysqli_fetch_array(safe_query("SELECT name FROM ".PREFIX."squads WHERE squadID='$squadID'"));
 	return $ds['name'];
 }
 
 function issquadmember($userID, $squadID) {
-	$anz=mysql_num_rows(safe_query("SELECT sqmID FROM ".PREFIX."squads_members WHERE userID='$userID' AND squadID='$squadID'"));
-	return $anz;
+	return (mysqli_num_rows(safe_query("SELECT sqmID FROM ".PREFIX."squads_members WHERE userID='$userID' AND squadID='$squadID'")) > 0);
 }
 
 function isgamesquad($squadID) {
-	$anz=mysql_num_rows(safe_query("SELECT squadID FROM ".PREFIX."squads WHERE squadID='".$squadID."' AND gamesquad='1'"));
-	return $anz;
+	return (mysqli_num_rows(safe_query("SELECT squadID FROM ".PREFIX."squads WHERE squadID='".$squadID."' AND gamesquad='1'")) > 0);
 }
 
 function getgamename($tag) {
-	$ds=mysql_fetch_array(safe_query("SELECT name FROM `".PREFIX."games` WHERE tag='$tag'"));
+	$ds=mysqli_fetch_array(safe_query("SELECT name FROM `".PREFIX."games` WHERE tag='$tag'"));
 	return $ds['name'];
 }
 function is_gametag($tag){
-	$anz = mysql_num_rows(safe_query("SELECT name FROM `".PREFIX."games` WHERE tag='$tag'"));
-	return $anz;
+	return (mysqli_num_rows(safe_query("SELECT name FROM `".PREFIX."games` WHERE tag='$tag'")) > 0);
 }
 ?>

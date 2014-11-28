@@ -37,7 +37,7 @@ function getuserformattime($userID) {
 
 function getformatdate($date) {
 	global $userID, $default_format_date;
-	
+
 	$DateFormat = '';
 	if($userID && !isset($_GET['userID']) && !isset($_POST['userID'])) {
 		$DateFormat = date(getuserformatdate($userID), $date);
@@ -50,27 +50,27 @@ function getformatdate($date) {
 
 function getformattime($time) {
 	global $userID, $default_format_time;
-	
-	$TimeFormat = '';
+
+	$timeFormat = '';
 	if($userID && !isset($_GET['userID']) && !isset($_POST['userID'])) {
-		$TimeFormat = date(getuserformattime($userID), $time);
+		$timeFormat = date(getuserformattime($userID), $time);
 	}
 	else {
-		$TimeFormat = date($default_format_time ,$time);
+		$timeFormat = date($default_format_time ,$time);
 	}
-	return $TimeFormat;
+	return $timeFormat;
 }
 
 function getformatdatetime($date_time) {
 	global $userID, $default_format_date, $default_format_time;
-	
-	$DateTimeFormat = '';
+
+	$datetimeFormat = '';
 	if($userID && !isset($_GET['userID']) && !isset($_POST['userID'])) {
-		$DateTimeFormat = date((getuserformatdate($userID)." - ".getuserformattime($userID)), $date_time);
+		$datetimeFormat = date((getuserformatdate($userID)." - ".getuserformattime($userID)), $date_time);
 	}
 	else {
-		$DateTimeFormat = date(($default_format_date." - ".$default_format_time), $date_time);
+		$datetimeFormat = date(($default_format_date." - ".$default_format_time), $date_time);
 	}
-	return $DateTimeFormat;
+	return $datetimeFormat;
 }
 ?>

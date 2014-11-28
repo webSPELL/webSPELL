@@ -61,7 +61,7 @@ function replace_smileys($text, $calledfrom = 'root'){
 	}
 
 	$ergebnis = safe_query("SELECT * FROM `".PREFIX."smileys`");
-	while($ds = mysql_fetch_array($ergebnis)) {
+	while($ds = mysqli_fetch_array($ergebnis)) {
 		$replacements_1[] = $ds['pattern'];
 		$replacements_2[] = '[SMILE='.$ds['alt'].']'.$prefix2.'images/smileys/'.$ds['name'].'[/SMILE]';
 	}
@@ -132,11 +132,11 @@ function flags($text,$calledfrom = 'root') {
 		$prefix = '';
 	}
 	$ergebnis = safe_query("SELECT * FROM `".PREFIX."countries`");
-	while($ds = mysql_fetch_array($ergebnis)) {
-		$text = str_ireplace ("[flag]".$ds['short']."[/flag]", '<img src="'.$prefix.'images/flags/'.$ds['short'].'.gif" width="18" height="12" border="0" alt="'.$ds['country'].'" />', $text);
+	while($ds = mysqli_fetch_array($ergebnis)) {
+		$text = str_ireplace ("[flag]".$ds['short']."[/flag]", '<img src="'.$prefix.'images/flags/'.$ds['short'].'.gif" alt="'.$ds['country'].'" />', $text);
 	}
 
-	$text = str_ireplace ("[flag][/flag]", '<img src="'.$prefix.'images/flags/na.gif" width="18" height="12" border="0" alt="'.$_language->module['na'].'" />', $text);
+	$text = str_ireplace ("[flag][/flag]", '<img src="'.$prefix.'images/flags/unknown.gif" alt="'.$_language->module['na'].'" />', $text);
 	$text = str_ireplace ("[flag]", '', $text);
 	$text = str_ireplace ("[/flag]", '', $text);
 
@@ -153,9 +153,6 @@ function codereplace($content) {
 	
 	$border=BORDER;
 	$bg1=BG_1;
-
-	$content = preg_replace("#\[/code\]([\n\r]*)#si", "[/code]",$content);
-
 	$splits = preg_split("/(\[[\/]{0,1}code\])/si",$content,-1,PREG_SPLIT_DELIM_CAPTURE);
 	$anz = count($splits);
 	for($i=0;$i<$anz;$i++){
@@ -270,8 +267,8 @@ function imgreplace($content) {
 				if(!$picsize_l) $size_l = "9999"; else $size_l=$picsize_l;
 				if(!$picsize_h) $size_h = "9999"; else $size_h=$picsize_h;
 				if($picinfo[0] > $size_l OR $picinfo[1] > $size_h) 
-				$content = str_ireplace('[img]'.$teil[2].'[/img]', '[url='.$teil[2].']<img src="'.fixJavaEvents($teil[2]).'" border="0" width="'.$picsize_l.'" alt="'.$teil[2].'" /><br>([i]'.$_language->module['auto_resize'].': '.$picinfo[1].'x'.$picinfo[0].'px, '.$format.'[/i])[/url]', $content);
-				elseif($picinfo[0] > (2*$size_l) OR $picinfo[1] > (2*$size_h)) $content = str_ireplace('[img]'.$teil[2].'[/img]', '[url='.$teil[2].'][b]'.$_language->module['large_picture'].'[/b]<br>('.$picinfo[1].'x'.$picinfo[0].'px, '.$format.')[/url]', $content);
+				$content = str_ireplace('[img]'.$teil[2].'[/img]', '[url='.$teil[2].']<img src="'.fixJavaEvents($teil[2]).'" border="0" width="'.$picsize_l.'" alt="'.$teil[2].'" /><br />([i]'.$_language->module['auto_resize'].': '.$picinfo[1].'x'.$picinfo[0].'px, '.$format.'[/i])[/url]', $content);
+				elseif($picinfo[0] > (2*$size_l) OR $picinfo[1] > (2*$size_h)) $content = str_ireplace('[img]'.$teil[2].'[/img]', '[url='.$teil[2].'][b]'.$_language->module['large_picture'].'[/b]<br />('.$picinfo[1].'x'.$picinfo[0].'px, '.$format.')[/url]', $content);
 				else $content = preg_replace('#\[img\]'.preg_quote($teil[2],"#").'\[/img\]#si', '<img src="'.fixJavaEvents($teil[2]).'" border="0" alt="'.$teil[2].'" />', $content, 1);
 			}
 			else {
@@ -338,6 +335,10 @@ function cut_middle($str, $max = 50 ){
 	return $str;
 }
 
+function urlreplace_callback_1($match){
+	return '<a href="'.fixJavaEvents($match[1]).'" target="_blank">';
+}
+
 function urlreplace($content){	
  	$starttags = substr_count(strtolower($content), strtolower('[url'));
 	$endtags = substr_count(strtolower($content), strtolower('[/url]'));
@@ -353,7 +354,7 @@ function urlreplace($content){
 		$match_rep = str_replace($match[1],$new_erg[2],$match[0]);
 		$content = str_replace($match[0],$match_rep,$content);
 	}
-	$content = preg_replace("#\[url=(.*?)\]#ie","'<a href=\"'.fixJavaEvents('\\1').'\" target=\"_blank\">'",$content);
+	$content = preg_replace_callback("#\[url=((http://|https://|ftp://|mailto:|news:|www\.).*?)\]#i","urlreplace_callback_1",$content);
 	$content = preg_replace("#\<a href='www(.*?)' target='_blank'>#i","<a href='http://www\\1' target='_blank'>",$content);
 	$content = str_ireplace("[/url]","</a>",$content);
 	return $content;
@@ -396,7 +397,7 @@ function insertlinks($content,$calledfrom = 'root') {
 	
 	if($insertlinks==1) {
 		$ergebnis = safe_query("SELECT us.userID, us.nickname, us.country FROM ".PREFIX."squads_members AS sq, ".PREFIX."user AS us WHERE sq.userID=us.userID GROUP BY us.userID");
-		while($ds = mysql_fetch_array($ergebnis)) {
+		while($ds = mysqli_fetch_array($ergebnis)) {
 			$content = str_replace($ds['nickname'].' ', '[flag]'.$ds['country'].'[/flag] <a href="'.$prefix.'index.php?site=profile&amp;id='.$ds['userID'].'">'.$ds['nickname'].'</a>&nbsp;', $content);
 		}
 		return $content;
@@ -414,6 +415,42 @@ function cut_urls($link){
 	return str_replace(">".$link[1],">".$new_str,$link[0]);
 }
 
+function removeIllegalCharacerts($string){
+	return preg_replace("/[^a-z0-9#]/si", "", $string);
+}
+
+function removeIllegalCharacertsWithoutUrls($string){
+        return preg_replace("/[^a-z0-9#\/\.]/si", "", $string);
+}
+
+function emailreplace_callback_1($match){
+	return '<a href="mailto:'.mail_protect(fixJavaEvents($match[1])).'">'.fixJavaEvents($match[1]).'</a>';
+}
+
+function emailreplace_callback_2($match){
+	return '<a href="mailto:'.mail_protect(fixJavaEvents($match[1])).'">'.$match[2].'</a>';
+}
+
+function font_size_callback($match){
+	return '<font size="'.removeIllegalCharacerts($match[1]).'">'.$match[2].'</font>';
+}
+
+function font_color_callback($match){
+	return '<font color="'.removeIllegalCharacerts($match[1]).'">'.$match[2].'</font>';
+}
+
+function font_face_callback($match){
+	return '<font face="'.removeIllegalCharacerts($match[1]).'">'.$match[2].'</font>';
+}
+
+function align_callback($match){
+	return '<div align="'.removeIllegalCharacerts($match[1]).'">'.$match[2].'</div>';
+}
+
+function smiley_callback($match){
+	return '<img src="'.removeIllegalCharacertsWithoutUrls($match[2]).'" alt="'.removeIllegalCharacerts($match[1]).'" border="0" />';
+}
+
 function replacement($content, $bbcode=true) {
 	$pagebg=PAGEBG;
 	$border=BORDER;
@@ -427,20 +464,20 @@ function replacement($content, $bbcode=true) {
 		$content = quotereplace($content);
 		$content = urlreplace($content);
 		$content = preg_replace_callback("#(^|<[^\"=]{1}>|\s|\[b|i|u\]][^<a.*>])(http://|https://|ftp://|mailto:|news:|www.)([^\s<>|$]+)#si","linkreplace",$content);
-		$content = preg_replace("#\[email\](.*?)\[/email\]#sie", "'<a href=\"mailto:'.mail_protect(fixJavaEvents('\\1')).'\">'.fixJavaEvents('\\1').'</a>'", $content);
-		$content = preg_replace("#\[email=(.*?)\](.*?)\[/email\]#sie", "'<a href=\"mailto:'.mail_protect(fixJavaEvents('\\1')).'\">\\2</a>'", $content);
+		$content = preg_replace_callback("#\[email\](.*?)\[/email\]#si", "emailreplace_callback_1", $content);
+		$content = preg_replace_callback("#\[email=(.*?)\](.*?)\[/email\]#si", "emailreplace_callback_2", $content);
 		$content = preg_replace_callback("#<a\b[^>]*>(.*?)</a>#si","cut_urls",$content);
-		while(preg_match("#\[size=(.*?)\](.*?)\[/size\]#si", $content)){
-		  $content = preg_replace("#\[size=(.*?)\](.*?)\[/size\]#si", "<font size=\"\\1\">\\2</font>", $content);
+		while(preg_match("#\[size=([0-9]*)\](.*?)\[/size\]#si", $content)){
+		  $content = preg_replace_callback("#\[size=([0-9]*)\](.*?)\[/size\]#si", "font_size_callback", $content);
 		}
-		while(preg_match("#\[color=(.*?)\](.*?)\[/color\]#si", $content)){  
-		  $content = preg_replace("#\[color=(.*?)\](.*?)\[/color\]#si", "<font color=\"\\1\">\\2</font>", $content);
+		while(preg_match("#\[color=([a-z0-9\#]*)\](.*?)\[/color\]#si", $content)){  
+		  $content = preg_replace_callback("#\[color=([a-z0-9\#]*)\](.*?)\[/color\]#si", "font_color_callback", $content);
 		}
-		while(preg_match("#\[font=(.*?)\](.*?)\[/font\]#si", $content)){
-		  $content = preg_replace("#\[font=(.*?)\](.*?)\[/font\]#si", "<font face=\"\\1\">\\2</font>", $content);
+		while(preg_match("#\[font=([a-z0-9]*)\](.*?)\[/font\]#si", $content)){
+		  $content = preg_replace_callback("#\[font=([a-z0-9]*)\](.*?)\[/font\]#si", "font_face_callback", $content);
 		}
-		while(preg_match("#\[align=(.*?)\](.*?)\[/align\]#si", $content)){
-		  $content = preg_replace("#\[align=(.*?)\](.*?)\[/align\]#si", "<div align=\"\\1\">\\2</div>", $content);
+		while(preg_match("#\[align=([a-z0-9]*)\](.*?)\[/align\]#si", $content)){
+		  $content = preg_replace_callback("#\[align=([a-z0-9]*)\](.*?)\[/align\]#si", "align_callback", $content);
 		}
 		$content = preg_replace("#\[b\](.*?)\[/b\]#si", "<b>\\1</b>",$content);
 		$content = preg_replace("#\[i\](.*?)\[/i\]#si", "<i>\\1</i>",$content);
@@ -450,12 +487,12 @@ function replacement($content, $bbcode=true) {
 		$content = preg_replace("#\[list=1\][\s]{0,}(.*?)\[/list=1\]#si", "<ol class='list_num'>\\1</ol>", $content);
 		$content = preg_replace("#\[list=a\][\s]{0,}(.*?)\[/list=a\]#si", "<ol type=\"a\" class='list_alpha'>\\1</ol>", $content);
 		$content = preg_replace("#\[\*\](.*?)\[/\*\](\s){0,}#si", "<li>\\1</li>", $content);
-		$content = preg_replace("#\[br]#si", "<br>", $content);
+		$content = preg_replace("#\[br]#si", "<br />", $content);
 		$content = preg_replace("#\[hr]#si", "<hr />", $content);
 		$content = preg_replace("#\[center]#si", "<p class=\"text-center\">", $content);
 		$content = preg_replace("#\[/center]#si", "</p>", $content);
 	}
-	$content = preg_replace("#\[SMILE=(.*?)\](.*?)\[/SMILE\]#si", '<img src="\\2" alt="\\1" border="0" />', $content);
+	$content = preg_replace_callback("#\[SMILE=(.*?)\](.*?)\[/SMILE\]#si", "smiley_callback", $content);
 
 	return $content;
 }
