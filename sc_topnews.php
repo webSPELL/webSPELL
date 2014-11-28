@@ -27,7 +27,7 @@
 
 $_language->read_module('news');
 
-$ergebnis=safe_query("SELECT newsID FROM ".PREFIX."news WHERE newsID='".$topnewsID."' AND intern<=".isclanmember($userID)." AND published='1' LIMIT 0,1");
+$ergebnis=safe_query("SELECT newsID FROM ".PREFIX."news WHERE newsID='".$topnewsID."' AND intern<=".(int)isclanmember($userID)." AND published='1' LIMIT 0,1");
 $anz = mysqli_num_rows($ergebnis);
 if($anz) {
 
@@ -42,7 +42,7 @@ if($anz) {
 
 	$headline=clearfromtags($message_array[$showlang]['headline']);
 	$content=$message_array[$showlang]['message'];
-	
+
 	if(mb_strlen($content)>$maxtopnewschars) {
 		$content=mb_substr($content, 0, $maxtopnewschars);
 		$content.='...';

@@ -92,7 +92,7 @@ if($action=="new") {
 
 	$postform = '';
 	$comments='<option value="0">'.$_language->module['no_comments'].'</option><option value="1">'.$_language->module['user_comments'].'</option><option value="2" selected="selected">'.$_language->module['visitor_comments'].'</option>';
-	
+
 	eval ("\$addbbcode = \"".gettemplate("addbbcode")."\";");
 	eval ("\$addflags = \"".gettemplate("flags")."\";");
 
@@ -264,10 +264,10 @@ elseif($action=="preview") {
 
 	$headline=$message_array[$showlang]['headline'];
 	$content=$message_array[$showlang]['message'];
-	
+
 	if($ds['intern'] == 1) $isintern = '('.$_language->module['intern'].')';
     else $isintern = '';
-    
+
 	$content = htmloutput($content);
 	$content = toggle($content, $ds['newsID']);
 	$poster='<a href="index.php?site=profile&amp;id='.$ds['poster'].'"><b>'.getnickname($ds['poster']).'</b></a>';
@@ -322,15 +322,15 @@ elseif($quickactiontype=="unpublish") {
 	include("_functions.php");
 	$_language->read_module('news');
 	if(!isnewsadmin($userID)) die($_language->module['no_access']);
-	
+
 	if(isset($_REQUEST['newsID'])){
 		$newsID = $_REQUEST['newsID'];
 		if(is_array($newsID)) {
 			foreach($newsID as $id) {
 				safe_query("UPDATE ".PREFIX."news SET published='0' WHERE newsID='".(int)$id."'");
 			}
-		}	
-		else safe_query("UPDATE ".PREFIX."news SET published='0' WHERE newsID='".(int)$newsID."'");	
+		}
+		else safe_query("UPDATE ".PREFIX."news SET published='0' WHERE newsID='".(int)$newsID."'");
 		generate_rss2();
 	}
 	header("Location: index.php?site=news");
@@ -342,7 +342,7 @@ elseif($quickactiontype=="delete") {
 	$_language->read_module('news');
   	if(isset($_POST['newsID'])){
   	$newsID = $_POST['newsID'];
-	
+
 		foreach($newsID as $id) {
 			$ds=mysqli_fetch_array(safe_query("SELECT screens, poster FROM ".PREFIX."news WHERE newsID='".$id."'"));
 			if(($ds['poster'] != $userID or !isnewswriter($userID)) and !isnewsadmin($userID)) {
@@ -397,7 +397,7 @@ elseif($action=="delete") {
 	safe_query("DELETE FROM ".PREFIX."news WHERE newsID='".$id."'");
 	safe_query("DELETE FROM ".PREFIX."news_contents WHERE newsID='".$id."'");
 	safe_query("DELETE FROM ".PREFIX."comments WHERE parentID='".$id."' AND type='ne'");
-  
+
 	generate_rss2();
 	if(isset($_GET['close'])) echo'<body onload="window.close()"></body>';
 	else header("Location: index.php?site=news");
@@ -529,10 +529,10 @@ elseif(basename($_SERVER['PHP_SELF'])=="news.php"){
 }
 elseif($action=="unpublished") {
 	$_language->read_module('news');
-	
+
   	eval ("\$title_news = \"".gettemplate("title_news")."\";");
 	echo $title_news;
-	
+
 	$post = '';
 	if(isnewsadmin($userID)) $post='<input type="button" onclick="MM_openBrWindow(\'news.php?action=new\',\'News\',\'toolbar=no,status=no,scrollbars=yes,width=800,height=600\');" value="'.$_language->module['post_news'].'" class="btn btn-danger">';
 
@@ -572,7 +572,7 @@ elseif($action=="unpublished") {
 				}
 
 				$headlines='';
-				
+
 				foreach($message_array as $val) {
 					$headlines.='<a href="index.php?site=news_comments&amp;newsID='.$ds['newsID'].'&amp;lang='.$val['lang'].'">'.flags('[flag]'.$val['lang'].'[/flag]').' '.clearfromtags($val['headline']).'</a><br>';
 				}
@@ -615,7 +615,7 @@ elseif($action=="unpublished") {
 elseif($action=="archive") {
 
 	$_language->read_module('news');
-  
+
 	eval ("\$title_news = \"".gettemplate("title_news")."\";");
 	echo $title_news;
 
@@ -625,12 +625,12 @@ elseif($action=="archive") {
 	if(isset($_GET['sort'])){
 	  if(($_GET['sort']=='date') || ($_GET['sort']=='poster') || ($_GET['sort']=='rubric')) $sort=$_GET['sort'];
 	}
-	
+
 	$type="DESC";
 	if(isset($_GET['type'])){
 	  if(($_GET['type']=='ASC') || ($_GET['type']=='DESC')) $type=$_GET['type'];
 	}
-	
+
 	$post='';
 	$publish='';
 	if(isnewsadmin($userID)) {
@@ -641,7 +641,7 @@ elseif($action=="archive") {
 	}
 	echo $post.' '.$publish.' <input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=news\');return document.MM_returnValue" value="'.$_language->module['show_news'].'" class="btn btn-primary"><hr>';
 
-	$all=safe_query("SELECT newsID FROM ".PREFIX."news WHERE published='1' AND intern<=".isclanmember($userID));
+	$all=safe_query("SELECT newsID FROM ".PREFIX."news WHERE published='1' AND intern<=".(int)isclanmember($userID));
 	$gesamt=mysqli_num_rows($all);
 	$pages=1;
 
@@ -652,13 +652,13 @@ elseif($action=="archive") {
 	else $page_link='';
 
 	if($page == "1") {
-		$ergebnis = safe_query("SELECT * FROM ".PREFIX."news WHERE published='1' AND intern<=".isclanmember($userID)." ORDER BY ".$sort." ".$type." LIMIT 0,".$max);
+		$ergebnis = safe_query("SELECT * FROM ".PREFIX."news WHERE published='1' AND intern<=".(int)isclanmember($userID)." ORDER BY ".$sort." ".$type." LIMIT 0,".$max);
 		if($type=="DESC") $n=$gesamt;
 		else $n=1;
 	}
 	else {
 		$start=$page*$max-$max;
-		$ergebnis = safe_query("SELECT * FROM ".PREFIX."news WHERE published='1' AND intern<=".isclanmember($userID)." ORDER BY ".$sort." ".$type." LIMIT ".$start.",".$max);
+		$ergebnis = safe_query("SELECT * FROM ".PREFIX."news WHERE published='1' AND intern<=".(int)isclanmember($userID)." ORDER BY ".$sort." ".$type." LIMIT ".$start.",".$max);
 		if($type=="DESC") $n = ($gesamt)-$page*$max+$max;
 		else $n = ($gesamt+1)-$page*$max+$max;
 	}
@@ -671,10 +671,10 @@ elseif($action=="archive") {
 
 		if($pages>1) echo $page_link;
 		if(isnewsadmin($userID)) echo'<form method="post" name="form" action="news.php">';
-		
+
     eval ("\$news_archive_head = \"".gettemplate("news_archive_head")."\";");
 		echo $news_archive_head;
-    
+
 		$i=1;
 		while($ds=mysqli_fetch_array($ergebnis)) {
 			if($i%2) {
@@ -691,7 +691,7 @@ elseif($action=="archive") {
 			$comms = getanzcomments($ds['newsID'], 'ne');
 		    if($ds['intern'] == 1) $isintern = '<small>('.$_language->module['intern'].')</small>';
 		    else $isintern = '';
-      
+
       $message_array = array();
 			$query=safe_query("SELECT * FROM ".PREFIX."news_contents WHERE newsID='".$ds['newsID']."'");
 			while($qs = mysqli_fetch_array($query)) {
@@ -714,10 +714,10 @@ elseif($action=="archive") {
 			echo $news_archive_content;
 			$i++;
 		}
-		
+
 	    if(isnewsadmin($userID)){
 	    	$admdel='<div class="row">
-			  
+
 	          <div class="col-md-4">
 	           <input class="input" id="archivecbx" type="checkbox" name="ALL" value="ALL" onclick="SelectAll(this.form);">
 	           <label for="archivecbx">'.$_language->module['select_all'].'</label>
@@ -749,7 +749,7 @@ elseif($action=="archive") {
 }
 else {
 	$_language->read_module('news');
-  
+
 	eval ("\$title_news = \"".gettemplate("title_news")."\";");
 	echo $title_news;
 
@@ -772,7 +772,7 @@ else {
 	}
 	else $showonly = '';
 
-	$result=safe_query("SELECT * FROM ".PREFIX."news WHERE published='1' AND intern<=".isclanmember($userID)." ".$showonly." ORDER BY date DESC LIMIT 0,".$maxshownnews);
+	$result=safe_query("SELECT * FROM ".PREFIX."news WHERE published='1' AND intern<=".(int)isclanmember($userID)." ".$showonly." ORDER BY date DESC LIMIT 0,".$maxshownnews);
 
 	$i=1;
 	while($ds=mysqli_fetch_array($result)) {
@@ -808,7 +808,7 @@ else {
 		$newsID=$ds['newsID'];
     if($ds['intern'] == 1) $isintern = '('.$_language->module['intern'].')';
     else $isintern = '';
-    
+
     $content = htmloutput($content);
 		$content = toggle($content, $ds['newsID']);
 		$headline = clearfromtags($headline);
