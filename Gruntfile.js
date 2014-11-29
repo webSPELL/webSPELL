@@ -55,9 +55,9 @@ module.exports = function(grunt) {
             //"articles.php",
             //"asearch.php",
             //"awards.php",
-            "buddies.php"
-            //"calendar.php",
-            //"cashbox.php",
+            "buddies.php",
+            "calendar.php",
+            "cashbox.php"
             //"challenge.php",
             //"checklogin.php",
             //"clanwars.php",
