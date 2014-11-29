@@ -35,7 +35,7 @@ if ($action == "add") {
     include("_mysql.php");
     include("_settings.php");
     include("_functions.php");
-    $_language->read_module('buddys');
+    $_language->readModule('buddys');
     if (!$userID) {
         redirect('index.php?site=buddies', $_language->module[ 'not_logged' ], 3);
     } elseif (!isset($_GET[ 'id' ]) || !is_numeric($_GET[ 'id' ])) {
@@ -61,7 +61,7 @@ if ($action == "add") {
     include("_mysql.php");
     include("_settings.php");
     include("_functions.php");
-    $_language->read_module('buddys');
+    $_language->readModule('buddys');
     if (!$userID) {
         redirect('index.php?site=buddies', $_language->module[ 'not_logged' ], 3);
     } elseif (!isset($_GET[ 'id' ]) || !is_numeric($_GET[ 'id' ])) {
@@ -84,7 +84,7 @@ if ($action == "add") {
     include("_mysql.php");
     include("_settings.php");
     include("_functions.php");
-    $_language->read_module('buddys');
+    $_language->readModule('buddys');
     if (!$userID) {
         redirect('index.php?site=buddies', $_language->module[ 'not_logged' ], 3);
     } elseif (!isset($_GET[ 'id' ]) || !is_numeric($_GET[ 'id' ])) {
@@ -99,7 +99,7 @@ if ($action == "add") {
     include("_mysql.php");
     include("_settings.php");
     include("_functions.php");
-    $_language->read_module('buddys');
+    $_language->readModule('buddys');
     if (!$userID) {
         redirect('index.php?site=buddies', $_language->module[ 'not_logged' ], 3);
     } elseif (!isset($_GET[ 'id' ]) || !is_numeric($_GET[ 'id' ])) {
@@ -112,7 +112,7 @@ if ($action == "add") {
     }
 } elseif ($userID) {
 
-    $_language->read_module('buddys');
+    $_language->readModule('buddys');
 
     eval ("\$title_buddys = \"" . gettemplate("title_buddys") . "\";");
     echo $title_buddys;
@@ -195,7 +195,7 @@ if ($action == "add") {
     echo $ignore_foot;
 } else {
 
-    $_language->read_module('buddys');
+    $_language->readModule('buddys');
     if (!$userID) {
         redirect('index.php?site=buddies', $_language->module[ 'not_logged' ], 3);
     }

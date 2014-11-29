@@ -25,7 +25,7 @@
 ##########################################################################
 */
 
-$_language->read_module('filecategorys');
+$_language->readModule('filecategorys');
 
 if (!isfileadmin($userID) or mb_substr(basename($_SERVER[ 'REQUEST_URI' ]), 0, 15) != "admincenter.php") {
     die($_language->module[ 'access_denied' ]);
@@ -39,9 +39,9 @@ function generate_overview($filecats = '', $offset = '', $subcatID = 0)
         safe_query("SELECT * FROM " . PREFIX . "files_categorys WHERE subcatID = '" . $subcatID . "' ORDER BY name");
 
     $i = 1;
-    $CAPCLASS = new Captcha;
-    $CAPCLASS->create_transaction();
-    $hash = $CAPCLASS->get_hash();
+    $CAPCLASS = new \webspell\Captcha;
+    $CAPCLASS->createTransaction();
+    $hash = $CAPCLASS->getHash();
 
     while ($ds = mysqli_fetch_array($rubrics)) {
         if ($i % 2) {
@@ -94,7 +94,7 @@ function delete_category($filecat)
 
 if (isset($_POST[ 'save' ])) {
     if (mb_strlen($_POST[ 'name' ]) > 0) {
-        $CAPCLASS = new Captcha;
+        $CAPCLASS = new \webspell\Captcha;
         if ($CAPCLASS->check_captcha(0, $_POST[ 'captcha_hash' ])) {
             safe_query("INSERT INTO " . PREFIX . "files_categorys ( name, subcatID ) values( '" . $_POST[ 'name' ] .
                 "', '" . $_POST[ 'subcat' ] . "' ) ");
@@ -106,7 +106,7 @@ if (isset($_POST[ 'save' ])) {
     }
 } elseif (isset($_POST[ 'saveedit' ])) {
     if (mb_strlen($_POST[ 'name' ]) > 0) {
-        $CAPCLASS = new Captcha;
+        $CAPCLASS = new \webspell\Captcha;
         if ($CAPCLASS->check_captcha(0, $_POST[ 'captcha_hash' ])) {
             safe_query("UPDATE " . PREFIX . "files_categorys SET name='" . $_POST[ 'name' ] . "', subcatID = '" .
                 $_POST[ 'subcat' ] . "' WHERE filecatID='" . $_POST[ 'filecatID' ] . "'");
@@ -119,7 +119,7 @@ if (isset($_POST[ 'save' ])) {
     }
 } elseif (isset($_GET[ 'delete' ])) {
     $filecatID = $_GET[ 'filecatID' ];
-    $CAPCLASS = new Captcha;
+    $CAPCLASS = new \webspell\Captcha;
     if ($CAPCLASS->check_captcha(0, $_GET[ 'captcha_hash' ])) {
         delete_category($filecatID);
     } else {
@@ -149,9 +149,9 @@ if ($_GET[ 'action' ] == "add") {
     }
 
     $filecats = generate_options('<option value="0">' . $_language->module[ 'main' ] . '</option>', '- ');
-    $CAPCLASS = new Captcha;
-    $CAPCLASS->create_transaction();
-    $hash = $CAPCLASS->get_hash();
+    $CAPCLASS = new \webspell\Captcha;
+    $CAPCLASS->createTransaction();
+    $hash = $CAPCLASS->getHash();
 
     echo '<h1>&curren; <a href="admincenter.php?site=filecategories" class="white">' .
         $_language->module[ 'file_categories' ] . '</a> &raquo; ' . $_language->module[ 'add_category' ] . '</h1>';
@@ -200,9 +200,9 @@ if ($_GET[ 'action' ] == "add") {
     $filecats =
         str_replace('value="' . $ds[ 'subcatID' ] . '"', 'value="' . $ds[ 'subcatID' ] . '" selected="selected"',
             $filecats);
-    $CAPCLASS = new Captcha;
-    $CAPCLASS->create_transaction();
-    $hash = $CAPCLASS->get_hash();
+    $CAPCLASS = new \webspell\Captcha;
+    $CAPCLASS->createTransaction();
+    $hash = $CAPCLASS->getHash();
 
     echo '<h1>&curren; <a href="admincenter.php?site=filecategories" class="white">' .
         $_language->module[ 'file_categories' ] . '</a> &raquo; ' . $_language->module[ 'edit_category' ] . '</h1>';

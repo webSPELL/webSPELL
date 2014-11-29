@@ -58,9 +58,9 @@ if($userID) {
 
 				move_uploaded_file($picture['tmp_name'], $dir.'large/'.$insertid.$endung);
 				@chmod($dir.'large/'.$insertid.$endung, $new_chmod);
-				$galclass->savethumb($dir.'large/'.$insertid.$endung, $dir.'thumb/'.$insertid.'.jpg');
+				$galclass->saveThumb($dir.'large/'.$insertid.$endung, $dir.'thumb/'.$insertid.'.jpg');
 
-				if( ($galclass->getuserspace($userID)+filesize($dir.'large/'.$insertid.$endung) + filesize($dir.'thumb/'.$insertid.'.jpg')) > $maxusergalleries ) {
+				if( ($galclass->getUserSpace($userID)+filesize($dir.'large/'.$insertid.$endung) + filesize($dir.'thumb/'.$insertid.'.jpg')) > $maxusergalleries ) {
 					@unlink($dir.'large/'.$insertid.$endung);
 					@unlink($dir.'thumb/'.$insertid.'.jpg');
 					safe_query("DELETE FROM ".PREFIX."gallery_pictures WHERE picID='".$insertid."'");
@@ -120,7 +120,7 @@ if($userID) {
 	}
 	else {
 
-		$size = $galclass->getuserspace($userID);
+		$size = $galclass->getUserSpace($userID);
 		$percent = percent($size, $maxusergalleries, 0);
 
 		if($percent>95) $color = $loosecolor;

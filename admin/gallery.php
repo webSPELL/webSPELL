@@ -222,7 +222,7 @@ elseif($part=="gallerys") {
 					safe_query("INSERT INTO ".PREFIX."gallery_pictures ( galleryID, name, comment, comments) VALUES ('".$_POST['galleryID']."', '".$insertname."', '".$comment[$i]."', '".$_POST['comments']."' )");
 					$insertid = mysqli_insert_id($_database);
 					copy($dir.$picture, $dir.'large/'.$insertid.$typ);
-					$galclass->savethumb($dir.'large/'.$insertid.$typ, $dir.'thumb/'.$insertid.'.jpg');
+					$galclass->saveThumb($dir.'large/'.$insertid.$typ, $dir.'thumb/'.$insertid.'.jpg');
 					@unlink($dir.$picture);
 					$i++;
 				}
@@ -249,7 +249,7 @@ elseif($part=="gallerys") {
 				}
 
 				move_uploaded_file($picture['tmp_name'], $dir.'large/'.$insertid.$typ);
-				$galclass->savethumb($dir.'large/'.$insertid.$typ, $dir.'thumb/'.$insertid.'.jpg');
+				$galclass->saveThumb($dir.'large/'.$insertid.$typ, $dir.'thumb/'.$insertid.'.jpg');
 			}
 		} else echo $_language->module['transaction_invalid'];
 	}

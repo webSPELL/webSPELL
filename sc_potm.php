@@ -29,6 +29,6 @@ $galclass = new \webspell\Gallery;
 
 $_language->readModule('sc_potm');
 
-$randomid = $galclass->randompic();
+$randomid = $galclass->randomPic();
 if($randomid) echo '<a href="index.php?site=gallery&amp;picID='.$randomid.'"><img src="images/gallery/thumb/'.$randomid.'.jpg" alt="'.$_language->module['random_picture'].'" class="img-responsive"></a>';
 ?>

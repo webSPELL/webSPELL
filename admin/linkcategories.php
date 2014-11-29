@@ -25,14 +25,14 @@
 ##########################################################################
 */
 
-$_language->read_module('linkcategories');
+$_language->readModule('linkcategories');
 
 if (!ispageadmin($userID) || mb_substr(basename($_SERVER[ 'REQUEST_URI' ]), 0, 15) !== "admincenter.php") {
     die($_language->module[ 'access_denied' ]);
 }
 
 if (isset($_POST[ 'save' ])) {
-    $CAPCLASS = new Captcha;
+    $CAPCLASS = new \webspell\Captcha;
     if ($CAPCLASS->check_captcha(0, $_POST[ 'captcha_hash' ])) {
         if (checkforempty(['name'])) {
             safe_query("INSERT INTO " . PREFIX . "links_categorys ( name ) values( '" . $_POST[ 'name' ] . "' ) ");
@@ -43,7 +43,7 @@ if (isset($_POST[ 'save' ])) {
         echo $_language->module[ 'transaction_invalid' ];
     }
 } elseif (isset($_POST[ 'saveedit' ])) {
-    $CAPCLASS = new Captcha;
+    $CAPCLASS = new \webspell\Captcha;
     if ($CAPCLASS->check_captcha(0, $_POST[ 'captcha_hash' ])) {
         if (checkforempty(['name'])) {
             safe_query("UPDATE " . PREFIX . "links_categorys SET name='" . $_POST[ 'name' ] . "' WHERE linkcatID='" .
@@ -55,7 +55,7 @@ if (isset($_POST[ 'save' ])) {
         echo $_language->module[ 'transaction_invalid' ];
     }
 } elseif (isset($_GET[ 'delete' ])) {
-    $CAPCLASS = new Captcha;
+    $CAPCLASS = new \webspell\Captcha;
     if ($CAPCLASS->check_captcha(0, $_GET[ 'captcha_hash' ])) {
         safe_query("DELETE FROM " . PREFIX . "links_categorys WHERE linkcatID='" . $_GET[ 'linkcatID' ] . "'");
         safe_query("DELETE FROM " . PREFIX . "links WHERE linkcatID='" . $_GET[ 'linkcatID' ] . "'");
@@ -71,9 +71,9 @@ if (isset($_GET[ 'action' ])) {
 }
 
 if ($action == "add") {
-    $CAPCLASS = new Captcha;
-    $CAPCLASS->create_transaction();
-    $hash = $CAPCLASS->get_hash();
+    $CAPCLASS = new \webspell\Captcha;
+    $CAPCLASS->createTransaction();
+    $hash = $CAPCLASS->getHash();
 
     echo '<h1>&curren; <a href="admincenter.php?site=linkcategories" class="white">' .
         $_language->module[ 'link_categories' ] . '</a> &raquo; ' . $_language->module[ 'add_category' ] . '</h1>';
@@ -91,9 +91,9 @@ if ($action == "add") {
 	</table>
 	</form>';
 } elseif ($action == "edit") {
-    $CAPCLASS = new Captcha;
-    $CAPCLASS->create_transaction();
-    $hash = $CAPCLASS->get_hash();
+    $CAPCLASS = new \webspell\Captcha;
+    $CAPCLASS->createTransaction();
+    $hash = $CAPCLASS->getHash();
 
     echo '<h1>&curren; <a href="admincenter.php?site=linkcategories" class="white">' .
         $_language->module[ 'link_categories' ] . '</a> &raquo; ' . $_language->module[ 'edit_category' ] . '</h1>';
@@ -132,9 +132,9 @@ if ($action == "add") {
 		</tr>';
 
     $i = 1;
-    $CAPCLASS = new Captcha;
-    $CAPCLASS->create_transaction();
-    $hash = $CAPCLASS->get_hash();
+    $CAPCLASS = new \webspell\Captcha;
+    $CAPCLASS->createTransaction();
+    $hash = $CAPCLASS->getHash();
 
     while ($ds = mysqli_fetch_array($ergebnis)) {
         if ($i % 2) {

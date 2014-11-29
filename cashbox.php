@@ -26,14 +26,14 @@
 */
 
 if (isset($site)) {
-    $_language->read_module('cash_box');
+    $_language->readModule('cash_box');
 }
 
 if (isset($_POST[ 'save' ]) and $_POST[ 'save' ]) {
     include("_mysql.php");
     include("_settings.php");
     include("_functions.php");
-    $_language->read_module('cash_box');
+    $_language->readModule('cash_box');
     if (!iscashadmin($userID)) {
         die($_language->module[ 'no_access' ]);
     }
@@ -71,7 +71,7 @@ if (isset($_POST[ 'save' ]) and $_POST[ 'save' ]) {
     include("_mysql.php");
     include("_settings.php");
     include("_functions.php");
-    $_language->read_module('cash_box');
+    $_language->readModule('cash_box');
     if (!iscashadmin($userID)) {
         die($_language->module[ 'no_access' ]);
     }
@@ -102,7 +102,7 @@ if (isset($_POST[ 'save' ]) and $_POST[ 'save' ]) {
     include("_mysql.php");
     include("_settings.php");
     include("_functions.php");
-    $_language->read_module('cash_box');
+    $_language->readModule('cash_box');
     if (!iscashadmin($userID)) {
         die($_language->module[ 'no_access' ]);
     }
@@ -115,7 +115,7 @@ if (isset($_POST[ 'save' ]) and $_POST[ 'save' ]) {
     include("_mysql.php");
     include("_settings.php");
     include("_functions.php");
-    $_language->read_module('cash_box');
+    $_language->readModule('cash_box');
     if (!iscashadmin($userID)) {
         die($_language->module[ 'no_access' ]);
     }
@@ -247,7 +247,7 @@ if (!isclanmember($userID) and !iscashadmin($userID)) {
         function print_cashbox($squadID, $id)
         {
             global $_language;
-            $_language->read_module('cash_box');
+            $_language->readModule('cash_box');
 
             $bg1 = BG_1;
             $bg2 = BG_2;

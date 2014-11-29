@@ -258,7 +258,7 @@ function print_termine($tag, $month, $year)
     global $userID;
     global $_language;
 
-    $_language->read_module('calendar');
+    $_language->readModule('calendar');
 
     $pagebg = PAGEBG;
     $border = BORDER;
@@ -472,7 +472,7 @@ if ($action === "savewar") {
     include("_mysql.php");
     include("_settings.php");
     include("_functions.php");
-    $_language->read_module('calendar');
+    $_language->readModule('calendar');
     if (!isclanwaradmin($userID)) {
         die($_language->module[ 'no_access' ]);
     }
@@ -563,7 +563,7 @@ if ($action === "savewar") {
     include("_mysql.php");
     include("_settings.php");
     include("_functions.php");
-    $_language->read_module('calendar');
+    $_language->readModule('calendar');
     if (!isclanwaradmin($userID)) {
         die($_language->module[ 'no_access' ]);
     }
@@ -576,7 +576,7 @@ if ($action === "savewar") {
     include("_mysql.php");
     include("_settings.php");
     include("_functions.php");
-    $_language->read_module('calendar');
+    $_language->readModule('calendar');
     if (!isclanmember($userID)) {
         die($_language->module[ 'no_access' ]);
     }
@@ -635,7 +635,7 @@ if ($action === "savewar") {
     include("_mysql.php");
     include("_settings.php");
     include("_functions.php");
-    $_language->read_module('calendar');
+    $_language->readModule('calendar');
     if (!isclanwaradmin($userID)) {
         die($_language->module[ 'no_access' ]);
     }
@@ -676,7 +676,7 @@ if ($action === "savewar") {
     include("_mysql.php");
     include("_settings.php");
     include("_functions.php");
-    $_language->read_module('calendar');
+    $_language->readModule('calendar');
     if (!isclanwaradmin($userID)) {
         die($_language->module[ 'no_access' ]);
     }
@@ -743,7 +743,7 @@ if ($action === "savewar") {
     include("_mysql.php");
     include("_settings.php");
     include("_functions.php");
-    $_language->read_module('calendar');
+    $_language->readModule('calendar');
     if (!isclanwaradmin($userID)) {
         die($_language->module[ 'no_access' ]);
     }
@@ -788,7 +788,7 @@ if ($action === "savewar") {
 
     header("Location: index.php?site=calendar&tag=$day&month=$month&year=$year");
 } elseif ($action === "addwar") {
-    $_language->read_module('calendar');
+    $_language->readModule('calendar');
     if (isclanwaradmin($userID)) {
 
         eval ("\$title_calendar = \"" . gettemplate("title_calendar") . "\";");
@@ -901,7 +901,7 @@ if ($action === "savewar") {
         redirect('index.php?site=calendar', $_language->module[ 'no_access' ]);
     }
 } elseif ($action === "editwar") {
-    $_language->read_module('calendar');
+    $_language->readModule('calendar');
     if (isclanwaradmin($userID)) {
 
         eval ("\$title_calendar = \"" . gettemplate("title_calendar") . "\";");
@@ -971,7 +971,7 @@ if ($action === "savewar") {
         redirect('index.php?site=calendar', $_language->module[ 'no_access' ]);
     }
 } elseif ($action === "adddate") {
-    $_language->read_module('calendar');
+    $_language->readModule('calendar');
     if (isclanwaradmin($userID)) {
 
         eval ("\$title_calendar = \"" . gettemplate("title_calendar") . "\";");
@@ -1020,7 +1020,7 @@ if ($action === "savewar") {
         redirect('index.php?site=calendar', $_language->module[ 'no_access' ]);
     }
 } elseif ($action === "editdate") {
-    $_language->read_module('calendar');
+    $_language->readModule('calendar');
     if (isclanwaradmin($userID)) {
 
         eval ("\$title_calendar = \"" . gettemplate("title_calendar") . "\";");
@@ -1067,7 +1067,7 @@ if ($action === "savewar") {
     }
 } elseif ($action === "announce" && isclanmember($userID)) {
 
-    $_language->read_module('calendar');
+    $_language->readModule('calendar');
 
     eval ("\$title_calendar = \"" . gettemplate("title_calendar") . "\";");
     echo $title_calendar;
@@ -1081,7 +1081,7 @@ if ($action === "savewar") {
     }
 } else {
 
-    $_language->read_module('calendar');
+    $_language->readModule('calendar');
 
     eval ("\$title_calendar = \"" . gettemplate("title_calendar") . "\";");
     echo $title_calendar;
