@@ -96,10 +96,10 @@ while($ds=mysqli_fetch_array($ergebnis)) {
 		$buddy='';
 		if($loggedin && $ds['userID'] != $userID) {
 			$pm='<a href="index.php?site=messenger&amp;action=touser&amp;touser='.$ds['userID'].'"><img src="images/icons/pm.gif" width="12" height="13" alt="messenger"></a>';
-			if(isignored($userID, $ds['userID'])) $buddy='<a href="buddys.php?action=readd&amp;id='.$ds['userID'].'&amp;userID='.$userID.'"><img src="images/icons/buddy_readd.gif" width="16" height="16" alt="back to buddy-list"></a>';
-			elseif(isbuddy($userID, $ds['userID'])) $buddy='<a href="buddys.php?action=ignore&amp;id='.$ds['userID'].'&amp;userID='.$userID.'"><img src="images/icons/buddy_ignore.gif" width="16" height="16" alt="ignore user"></a>';
+			if(isignored($userID, $ds['userID'])) $buddy='<a href="buddies.php?action=readd&amp;id='.$ds['userID'].'&amp;userID='.$userID.'"><img src="images/icons/buddy_readd.gif" width="16" height="16" alt="back to buddy-list"></a>';
+			elseif(isbuddy($userID, $ds['userID'])) $buddy='<a href="buddies.php?action=ignore&amp;id='.$ds['userID'].'&amp;userID='.$userID.'"><img src="images/icons/buddy_ignore.gif" width="16" height="16" alt="ignore user"></a>';
 			elseif($userID==$ds['userID']) $buddy='';
-			else $buddy='<a href="buddys.php?action=add&amp;id='.$ds['userID'].'&amp;userID='.$userID.'"><img src="images/icons/buddy_add.gif" width="16" height="16" alt="add to buddylist"></a>';
+			else $buddy='<a href="buddies.php?action=add&amp;id='.$ds['userID'].'&amp;userID='.$userID.'"><img src="images/icons/buddy_add.gif" width="16" height="16" alt="add to buddylist"></a>';
 		}
 	}
 	else {
@@ -123,7 +123,7 @@ while($ds=mysqli_fetch_array($ergebnis)) {
 	{
 		$status = $_language->module['is_reading_the'].' <a href="index.php?site='.$ds['site'].'">'.$_language->module[$ds['site']].'</a>';
 	}
-	elseif($ds['site']=="buddys") $status=$_language->module['is_watching_his'].' <a href="index.php?site=buddys">'.$_language->module['buddys'].'</a>';
+	elseif($ds['site']=="buddies") $status=$_language->module['is_watching_his'].' <a href="index.php?site=buddies">'.$_language->module['buddys'].'</a>';
 	elseif($ds['site']=="clanwars_details") $status=$_language->module['is_watching_details_clanwar'];
 	elseif($ds['site']=="forum_topic") $status=$_language->module['is_reading_forum'];
 	elseif($ds['site']=="messenger") $status=$_language->module['is_watching_his'].' <a href="index.php?site=messenger">'.$_language->module['messenger'].'</a>';
@@ -184,10 +184,10 @@ while($ds=mysqli_fetch_array($ergebnis)) {
 	$buddy='';
 	if($loggedin && $ds['userID'] != $userID) {
 		$pm='<a href="index.php?site=messenger&amp;action=touser&amp;touser='.$ds['userID'].'"><img src="images/icons/pm.gif" width="12" height="13" alt="messenger"></a>';
-		if(isignored($userID, $ds['userID'])) $buddy='<a href="buddys.php?action=readd&amp;id='.$ds['userID'].'&amp;userID='.$userID.'"><img src="images/icons/buddy_readd.gif" width="16" height="16" alt="back to buddy-list"></a>';
-		elseif(isbuddy($userID, $ds['userID'])) $buddy='<a href="buddys.php?action=ignore&amp;id='.$ds['userID'].'&amp;userID='.$userID.'"><img src="images/icons/buddy_ignore.gif" width="16" height="16" alt="ignore user"></a>';
+		if(isignored($userID, $ds['userID'])) $buddy='<a href="buddies.php?action=readd&amp;id='.$ds['userID'].'&amp;userID='.$userID.'"><img src="images/icons/buddy_readd.gif" width="16" height="16" alt="back to buddy-list"></a>';
+		elseif(isbuddy($userID, $ds['userID'])) $buddy='<a href="buddies.php?action=ignore&amp;id='.$ds['userID'].'&amp;userID='.$userID.'"><img src="images/icons/buddy_ignore.gif" width="16" height="16" alt="ignore user"></a>';
 		elseif($userID==$ds['userID']) $buddy='';
-		else $buddy='<a href="buddys.php?action=add&amp;id='.$ds['userID'].'&amp;userID='.$userID.'"><img src="images/icons/buddy_add.gif" width="16" height="16" alt="add to buddylist"></a>';
+		else $buddy='<a href="buddies.php?action=add&amp;id='.$ds['userID'].'&amp;userID='.$userID.'"><img src="images/icons/buddy_add.gif" width="16" height="16" alt="add to buddylist"></a>';
 	}
 
 	$array_watching = array('about', 'awards', 'calendar', 'clanwars', 'counter_stats', 'demos', 'files', 'forum', 'gallery', 'links', 'linkus', 'loginoverview', 'members', 'polls', 'registered_users', 'server', 'sponsors', 'squads', 'whoisonline', 'newsletter');
@@ -201,7 +201,7 @@ while($ds=mysqli_fetch_array($ergebnis)) {
 	{
 		$status = $_language->module['was_reading_the'].' <a href="index.php?site='.$ds['site'].'">'.$_language->module[$ds['site']].'</a>';
 	}
-	elseif($ds['site']=="buddys") $status=$_language->module['was_watching_his'].' <a href="index.php?site=buddys">'.$_language->module['buddys'].'</a>';
+	elseif($ds['site']=="buddies") $status=$_language->module['was_watching_his'].' <a href="index.php?site=buddies">'.$_language->module['buddys'].'</a>';
 	elseif($ds['site']=="clanwars_details") $status=$_language->module['was_watching_details_clanwar'];
 	elseif($ds['site']=="forum_topic") $status=$_language->module['was_reading_forum'];
 	elseif($ds['site']=="messenger") $status=$_language->module['was_watching_his'].' <a href="index.php?site=messenger">'.$_language->module['messenger'].'</a>';

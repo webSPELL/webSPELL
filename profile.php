@@ -65,7 +65,7 @@ if(isset($id) and getnickname($id) != '') {
 	}
 
 	//profil: buddys
-	if($action == "buddys") {
+	if($action == "buddies") {
 
 		eval("\$title_profile = \"".gettemplate("title_profile")."\";");
 		echo $title_profile;
@@ -81,10 +81,10 @@ if(isset($id) and getnickname($id) != '') {
 				$nicknamebuddy = getnickname($db['buddy']);
 				$email = "<a href='mailto:".mail_protect(getemail($db['buddy']))."'><img src='images/icons/email.gif' border='0' alt=''></a>";
         
-        if(isignored($userID, $db['buddy'])) $buddy = '<a href="buddys.php?action=readd&amp;id='.$db['buddy'].'&amp;userID='.$userID.'"><img src="images/icons/buddy_readd.gif" alt="'.$_language->module['back_buddylist'].'"></a>';
-				elseif(isbuddy($userID, $db['buddy'])) $buddy = '<a href="buddys.php?action=ignore&amp;id='.$db['buddy'].'&amp;userID='.$userID.'"><img src="images/icons/buddy_ignore.gif" alt="'.$_language->module['ignore_user'].'"></a>';
+        if(isignored($userID, $db['buddy'])) $buddy = '<a href="buddies.php?action=readd&amp;id='.$db['buddy'].'&amp;userID='.$userID.'"><img src="images/icons/buddy_readd.gif" alt="'.$_language->module['back_buddylist'].'"></a>';
+				elseif(isbuddy($userID, $db['buddy'])) $buddy = '<a href="buddies.php?action=ignore&amp;id='.$db['buddy'].'&amp;userID='.$userID.'"><img src="images/icons/buddy_ignore.gif" alt="'.$_language->module['ignore_user'].'"></a>';
 				elseif($userID == $db['buddy']) $buddy = '';
-				else $buddy = '<a href="buddys.php?action=add&amp;id='.$db['buddy'].'&amp;userID='.$userID.'"><img src="images/icons/buddy_add.gif" alt="'.$_language->module['add_buddylist'].'"></a>';
+				else $buddy = '<a href="buddies.php?action=add&amp;id='.$db['buddy'].'&amp;userID='.$userID.'"><img src="images/icons/buddy_add.gif" alt="'.$_language->module['add_buddylist'].'"></a>';
 
         if(isonline($db['buddy']) == "offline") $statuspic = '<img src="images/icons/offline.gif" alt="'.$_language->module['offline'].'">';
 				else $statuspic = '<img src="images/icons/online.gif" alt="'.$_language->module['online'].'">';
@@ -104,7 +104,7 @@ if(isset($id) and getnickname($id) != '') {
 			}
 		}
 		else $buddylist = '<tr>
-        <td colspan="2" bgcolor="'.BG_1.'">'.$_language->module['no_buddys'].'</td>
+        <td colspan="2" bgcolor="'.BG_1.'">'.$_language->module['no_buddies'].'</td>
       </tr>';
 
 		eval("\$profile = \"".gettemplate("profile_buddys")."\";");
@@ -472,10 +472,10 @@ if(isset($id) and getnickname($id) != '') {
 		else $icq='';
 		if($loggedin && $ds['userID'] != $userID) {
 			$pm = '<a href="index.php?site=messenger&amp;action=touser&amp;touser='.$ds['userID'].'"><img src="images/icons/pm.gif" width="12" height="13" alt="messenger"></a>';
-			if(isignored($userID, $ds['userID'])) $buddy = '<a href="buddys.php?action=readd&amp;id='.$ds['userID'].'&amp;userID='.$userID.'"><img src="images/icons/buddy_readd.gif" alt="'.$_language->module['back_buddylist'].'"></a>';
-			elseif(isbuddy($userID, $ds['userID'])) $buddy = '<a href="buddys.php?action=ignore&amp;id='.$ds['userID'].'&amp;userID='.$userID.'"><img src="images/icons/buddy_ignore.gif" alt="'.$_language->module['ignore_user'].'"></a>';
+			if(isignored($userID, $ds['userID'])) $buddy = '<a href="buddies.php?action=readd&amp;id='.$ds['userID'].'&amp;userID='.$userID.'"><img src="images/icons/buddy_readd.gif" alt="'.$_language->module['back_buddylist'].'"></a>';
+			elseif(isbuddy($userID, $ds['userID'])) $buddy = '<a href="buddies.php?action=ignore&amp;id='.$ds['userID'].'&amp;userID='.$userID.'"><img src="images/icons/buddy_ignore.gif" alt="'.$_language->module['ignore_user'].'"></a>';
 			elseif($userID == $ds['userID']) $buddy = '';
-			else $buddy = '<a href="buddys.php?action=add&amp;id='.$ds['userID'].'&amp;userID='.$userID.'"><img src="images/icons/buddy_add.gif" alt="'.$_language->module['add_buddylist'].'"></a>';
+			else $buddy = '<a href="buddies.php?action=add&amp;id='.$ds['userID'].'&amp;userID='.$userID.'"><img src="images/icons/buddy_add.gif" alt="'.$_language->module['add_buddylist'].'"></a>';
 		}
 		else $pm = '' & $buddy = '';
 

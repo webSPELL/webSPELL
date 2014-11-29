@@ -567,9 +567,9 @@ function showtopic($topic, $edit, $addreply, $quoteID, $type) {
 		$buddy='';
 		if($loggedin && $dr['poster']!=$userID) {
 			$pm='<a href="index.php?site=messenger&amp;action=touser&amp;touser='.$dr['poster'].'"><img src="images/icons/pm.gif" width="12" height="13" alt="'.$_language->module['messenger'].'"></a>';
-			if(isignored($userID, $dr['poster'])) $buddy='<a href="buddys.php?action=readd&amp;id='.$dr['poster'].'&amp;userID='.$userID.'"><img src="images/icons/buddy_readd.gif" alt="'.$_language->module['back_buddy'].'"></a>';
-			elseif(isbuddy($userID, $dr['poster'])) $buddy='<a href="buddys.php?action=ignore&amp;id='.$dr['poster'].'&amp;userID='.$userID.'"><img src="images/icons/buddy_ignore.gif" alt="'.$_language->module['ignore'].'"></a>';
-			else $buddy='<a href="buddys.php?action=add&amp;id='.$dr['poster'].'&amp;userID='.$userID.'"><img src="images/icons/buddy_add.gif" alt="'.$_language->module['add_buddy'].'"></a>';
+			if(isignored($userID, $dr['poster'])) $buddy='<a href="buddies.php?action=readd&amp;id='.$dr['poster'].'&amp;userID='.$userID.'"><img src="images/icons/buddy_readd.gif" alt="'.$_language->module['back_buddy'].'"></a>';
+			elseif(isbuddy($userID, $dr['poster'])) $buddy='<a href="buddies.php?action=ignore&amp;id='.$dr['poster'].'&amp;userID='.$userID.'"><img src="images/icons/buddy_ignore.gif" alt="'.$_language->module['ignore'].'"></a>';
+			else $buddy='<a href="buddies.php?action=add&amp;id='.$dr['poster'].'&amp;userID='.$userID.'"><img src="images/icons/buddy_add.gif" alt="'.$_language->module['add_buddy'].'"></a>';
 		}
 
 		if(isonline($dr['poster'])=="offline") $statuspic='<img src="images/icons/offline.gif" alt="offline">';

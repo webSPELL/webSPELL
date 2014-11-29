@@ -138,7 +138,7 @@ if($userID && !isset($_GET['userID']) && !isset($_POST['userID'])) {
 
 	//clanmember/admin/referer
 
-	if(isclanmember($userID)) $cashboxpic = '<a class="thumbnail" href="index.php?site=cash_box"><img src="images/icons/cashbox.gif" alt="Cashbox"></a>';
+	if(isclanmember($userID)) $cashboxpic = '<a class="thumbnail" href="index.php?site=cashbox"><img src="images/icons/cashbox.gif" alt="Cashbox"></a>';
 	else $cashboxpic = '';
   
 	if(isanyadmin($userID)) $admincenterpic = '<a class="thumbnail" href="admin/admincenter.php" target="_blank"><img src="images/icons/admincenter.gif" alt="Admincenter"></a>';

@@ -31,7 +31,7 @@ if($loggedin) {
 	$username='<a href="index.php?site=profile&amp;id='.$userID.'"><b>'.strip_tags(getnickname($userID)).'</b></a>';
 	if(isanyadmin($userID)) $admin='<li class="divider"></li><li><a href="admin/admincenter.php" target="_blank" class="alert-danger">'.$_language->module['admin'].'</a></li>';
 	else $admin='';
-	if(isclanmember($userID) or iscashadmin($userID)) $cashbox='<li><a href="index.php?site=cash_box" class="alert-danger">'.$_language->module['cash-box'].'</a></li><li class="divider"></li>';
+	if(isclanmember($userID) or iscashadmin($userID)) $cashbox='<li><a href="index.php?site=cashbox" class="alert-danger">'.$_language->module['cash-box'].'</a></li><li class="divider"></li>';
 	else $cashbox='';
 	$anz=getnewmessages($userID);
 	if($anz) {

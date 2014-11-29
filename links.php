@@ -254,7 +254,7 @@ else {
 		echo $links_foot;
 	}
 	else {
-        if(ispageadmin($userID) || isnewsadmin($userID)) echo'<input type="button" onclick="MM_goToURL(\'parent\',\'admin/admincenter.php?site=linkcategorys\');return document.MM_returnValue" value="'.$_language->module['new_category'].'" class="btn btn-danger"><br><br>';
+        if(ispageadmin($userID) || isnewsadmin($userID)) echo'<input type="button" onclick="MM_goToURL(\'parent\',\'admin/admincenter.php?site=linkcategories\');return document.MM_returnValue" value="'.$_language->module['new_category'].'" class="btn btn-danger"><br><br>';
         echo $_language->module['no_categories'];
     }
 }

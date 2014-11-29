@@ -97,7 +97,7 @@ function parseWebspellURL($parameters = null){
 				}
 				break;
 			
-			case 'buddys':
+			case 'buddies':
 				$returned_title[] = array($_language->module['buddys']);
 				break;
 			
@@ -105,7 +105,7 @@ function parseWebspellURL($parameters = null){
 				$returned_title[] = array($_language->module['calendar']);
 				break;
 			
-			case 'cash_box':
+			case 'cashbox':
 				$returned_title[] = array($_language->module['cash_box']);
 				break;
 			

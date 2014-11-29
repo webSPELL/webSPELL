@@ -1,3 +1,5 @@
+[ ![Codeship Status for webSPELL/webSPELL-4.2.3](https://codeship.com/projects/655247c0-f3d1-0131-ce29-02087275ebc8/status?branch=bs_manual_merge)](https://codeship.com/projects/27970)
+
 ```
                        /                        /   /
       -----------__---/__---__------__----__---/---/-

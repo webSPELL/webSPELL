@@ -229,7 +229,7 @@ elseif($action=="edit") {
 	if($fileID) {
 		if(isfileadmin($userID)) {
 			// ADMINACTIONS
-			$adminactions = '<input type="button" onclick="MM_openBrWindow(\'admin/admincenter.php?site=filecategorys\',\'\')" value="'.$_language->module['new_category'].'" class="btn btn-danger">';
+			$adminactions = '<input type="button" onclick="MM_openBrWindow(\'admin/admincenter.php?site=filecategories\',\'\')" value="'.$_language->module['new_category'].'" class="btn btn-danger">';
 
 			function generate_options($filecats = '', $offset = '', $subcatID = 0) {
 				$rubrics = safe_query("SELECT * FROM ".PREFIX."files_categorys WHERE subcatID = '".$subcatID."' ORDER BY name");

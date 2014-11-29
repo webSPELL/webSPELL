@@ -121,10 +121,10 @@ if($action=="show") {
 			{
 				$pm='<a href="index.php?site=messenger&amp;action=touser&amp;touser='.$dm['userID'].'"><img src="images/icons/pm.gif" width="12" height="13" alt="messenger"></a>';
 
-				if (isignored($userID, $dm['userID'])) $buddy='<a href="buddys.php?action=readd&amp;id='.$dm['userID'].'&amp;userID='.$userID.'"><img src="images/icons/buddy_readd.gif" width="16" height="16" alt="back to buddy-list"></a>';
-				elseif(isbuddy($userID, $dm['userID'])) $buddy='<a href="buddys.php?action=ignore&amp;id='.$dm['userID'].'&amp;userID='.$userID.'"><img src="images/icons/buddy_ignore.gif" width="16" height="16" alt="ignore user"></a>';
+				if (isignored($userID, $dm['userID'])) $buddy='<a href="buddies.php?action=readd&amp;id='.$dm['userID'].'&amp;userID='.$userID.'"><img src="images/icons/buddy_readd.gif" width="16" height="16" alt="back to buddy-list"></a>';
+				elseif(isbuddy($userID, $dm['userID'])) $buddy='<a href="buddies.php?action=ignore&amp;id='.$dm['userID'].'&amp;userID='.$userID.'"><img src="images/icons/buddy_ignore.gif" width="16" height="16" alt="ignore user"></a>';
 				elseif($userID==$dm['userID']) $buddy="";
-				else $buddy='<a href="buddys.php?action=add&amp;id='.$dm['userID'].'&amp;userID='.$userID.'"><img src="images/icons/buddy_add.gif" width="16" height="16" alt="add to buddylist"></a>';
+				else $buddy='<a href="buddies.php?action=add&amp;id='.$dm['userID'].'&amp;userID='.$userID.'"><img src="images/icons/buddy_add.gif" width="16" height="16" alt="add to buddylist"></a>';
 			}
 
 			if (isonline($dm['userID'])=="offline") $statuspic='<img src="images/icons/offline.gif" width="7" height="7" alt="offline">';
@@ -223,10 +223,10 @@ else {
 				{
 					$pm='<a href="index.php?site=messenger&amp;action=touser&amp;touser='.$dm['userID'].'"><img src="images/icons/pm.gif" width="12" height="13" alt="messenger"></a>';
 
-					if (isignored($userID, $dm['userID'])) $buddy='<a href="buddys.php?action=readd&amp;id='.$dm['userID'].'&amp;userID='.$userID.'"><img src="images/icons/buddy_readd.gif" width="16" height="16" alt="back to buddy-list"></a>';
-					elseif(isbuddy($userID, $dm['userID'])) $buddy='<a href="buddys.php?action=ignore&amp;id='.$dm['userID'].'&amp;userID='.$userID.'"><img src="images/icons/buddy_ignore.gif" width="16" height="16" alt="ignore user"></a>';
+					if (isignored($userID, $dm['userID'])) $buddy='<a href="buddies.php?action=readd&amp;id='.$dm['userID'].'&amp;userID='.$userID.'"><img src="images/icons/buddy_readd.gif" width="16" height="16" alt="back to buddy-list"></a>';
+					elseif(isbuddy($userID, $dm['userID'])) $buddy='<a href="buddies.php?action=ignore&amp;id='.$dm['userID'].'&amp;userID='.$userID.'"><img src="images/icons/buddy_ignore.gif" width="16" height="16" alt="ignore user"></a>';
 					elseif($userID==$dm['userID']) $buddy="";
-					else $buddy='<a href="buddys.php?action=add&amp;id='.$dm['userID'].'&amp;userID='.$userID.'"><img src="images/icons/buddy_add.gif" width="16" height="16" alt="add to buddylist"></a>';
+					else $buddy='<a href="buddies.php?action=add&amp;id='.$dm['userID'].'&amp;userID='.$userID.'"><img src="images/icons/buddy_add.gif" width="16" height="16" alt="add to buddylist"></a>';
 				}
 
 				if (isonline($dm['userID'])=="offline") $statuspic='<img src="images/icons/offline.gif" width="7" height="7" alt="offline">';
