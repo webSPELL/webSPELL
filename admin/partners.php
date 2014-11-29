@@ -31,7 +31,7 @@ if(!ispageadmin($userID) OR mb_substr(basename($_SERVER['REQUEST_URI']),0,15) !=
 
 if(isset($_GET['delete'])) {
  	$CAPCLASS = new \webspell\Captcha;
-	if($CAPCLASS->check_captcha(0, $_GET['captcha_hash'])) {
+	if($CAPCLASS->checkCaptcha(0, $_GET['captcha_hash'])) {
 		$partnerID = $_GET['partnerID'];
 		safe_query(" DELETE FROM ".PREFIX."partners WHERE partnerID='$partnerID' ");
 		$filepath = "../images/partners/";
@@ -43,7 +43,7 @@ if(isset($_GET['delete'])) {
 
 elseif(isset($_POST['sortieren'])) {
  	$CAPCLASS = new \webspell\Captcha;
-	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
+	if($CAPCLASS->checkCaptcha(0, $_POST['captcha_hash'])) {
 		$sort = $_POST['sort'];
 		foreach($sort as $sortstring) {
 			$sorter=explode("-", $sortstring);
@@ -54,7 +54,7 @@ elseif(isset($_POST['sortieren'])) {
 
 elseif(isset($_POST['save'])) {
  	$CAPCLASS = new \webspell\Captcha;
-	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
+	if($CAPCLASS->checkCaptcha(0, $_POST['captcha_hash'])) {
 		$name = $_POST['name'];
 		$url = $_POST['url'];
 		$banner = $_FILES['banner'];
@@ -103,7 +103,7 @@ elseif(isset($_POST['save'])) {
 
 elseif(isset($_POST['saveedit'])) {
  	$CAPCLASS = new \webspell\Captcha;
-	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
+	if($CAPCLASS->checkCaptcha(0, $_POST['captcha_hash'])) {
 		$name = $_POST['name'];
 		$url = $_POST['url'];
 		$banner = $_FILES['banner'];

@@ -289,7 +289,7 @@ if(isset($id) and getnickname($id) != '') {
                         $url = $_POST['gburl'];
                         $icq = $_POST['icq'];
                         $CAPCLASS = new \webspell\Captcha;
-                        if($CAPCLASS->check_captcha($_POST['captcha'], $_POST['captcha_hash'])) $run = 1;
+                        if($CAPCLASS->checkCaptcha($_POST['captcha'], $_POST['captcha_hash'])) $run = 1;
                     }
 
                     if($run) {

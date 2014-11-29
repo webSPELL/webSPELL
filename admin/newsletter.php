@@ -33,7 +33,7 @@ echo'<h1>&curren; '.$_language->module['newsletter'].'</h1>';
 
 if(isset($_POST['send']) || isset($_POST['testen'])) {
 	$CAPCLASS = new \webspell\Captcha;
-	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
+	if($CAPCLASS->checkCaptcha(0, $_POST['captcha_hash'])) {
 		$title = $_POST['title'];
 		$testmail = $_POST['testmail'];
 		$date=getformatdate(time());

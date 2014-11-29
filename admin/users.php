@@ -31,7 +31,7 @@ if(!isuseradmin($userID) OR mb_substr(basename($_SERVER['REQUEST_URI']),0,15) !=
 
 if(isset($_POST['add'])) {
  	$CAPCLASS = new \webspell\Captcha;
-	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
+	if($CAPCLASS->checkCaptcha(0, $_POST['captcha_hash'])) {
 		$anz = mysqli_num_rows(safe_query("SELECT userID FROM ".PREFIX."squads_members WHERE squadID='".$_POST['squad']."' AND userID='".$_POST['id']."'"));
 		if(!$anz){
 			safe_query("INSERT INTO ".PREFIX."squads_members (squadID, userID, position, activity, sort) values('".$_POST['squad']."', '".$_POST['id']."', '".$_POST['position']."', '".$_POST['activity']."', '1')");
@@ -44,7 +44,7 @@ if(isset($_POST['add'])) {
 
 elseif(isset($_POST['edit'])) {
  	$CAPCLASS = new \webspell\Captcha;
-	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
+	if($CAPCLASS->checkCaptcha(0, $_POST['captcha_hash'])) {
 		$avatar = $_FILES['avatar'];
 		$userpic = $_FILES['userpic'];
 		$id = $_POST['id'];
@@ -199,7 +199,7 @@ elseif(isset($_POST['edit'])) {
 
 elseif(isset($_POST['newuser'])) {
  	$CAPCLASS = new \webspell\Captcha;
-	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
+	if($CAPCLASS->checkCaptcha(0, $_POST['captcha_hash'])) {
 		$newnickname = htmlspecialchars(mb_substr(trim($_POST['username']), 0, 30));
 		$newusername = mb_substr(trim($_POST['username']), 0, 30);
 		$anz = mysqli_num_rows(safe_query("SELECT userID FROM ".PREFIX."user WHERE (username='".$newusername."' OR nickname='".$newnickname."') "));
@@ -212,7 +212,7 @@ elseif(isset($_POST['newuser'])) {
 
 elseif(isset($_GET['delete'])) {
  	$CAPCLASS = new \webspell\Captcha;
-	if($CAPCLASS->check_captcha(0, $_GET['captcha_hash'])) {
+	if($CAPCLASS->checkCaptcha(0, $_GET['captcha_hash'])) {
 		$id = $_GET['id'];
 		if(!issuperadmin($id) OR (issuperadmin($id) AND issuperadmin($userID))) {
 			safe_query("DELETE FROM ".PREFIX."forum_moderators WHERE userID='$id'");
@@ -231,7 +231,7 @@ elseif(isset($_GET['delete'])) {
 
 elseif(isset($_POST['ban'])) {
 	$CAPCLASS = new \webspell\Captcha;
-	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
+	if($CAPCLASS->checkCaptcha(0, $_POST['captcha_hash'])) {
 		$id = $_POST['id'];
 		if(isset($_POST['permanent'])) $permanent = $_POST['permanent'];
 		else $permanent = 0;
@@ -268,7 +268,7 @@ else $action = '';
 
 if($action=="activate") {
  	$CAPCLASS = new \webspell\Captcha;
-	if($CAPCLASS->check_captcha(0, $_GET['captcha_hash'])) {
+	if($CAPCLASS->checkCaptcha(0, $_GET['captcha_hash'])) {
 		$id = $_GET['id'];
   		safe_query("UPDATE ".PREFIX."user SET activated='1' WHERE userID='$id'");
   		redirect('admincenter.php?site=users','',0);

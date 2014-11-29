@@ -32,7 +32,7 @@ if(!isuseradmin($userID) OR mb_substr(basename($_SERVER['REQUEST_URI']),0,15) !=
 if(isset($_GET['delete'])) {
 	$contactID = $_GET['contactID'];
 	$CAPCLASS = new \webspell\Captcha;
-	if($CAPCLASS->check_captcha(0, $_GET['captcha_hash'])) {
+	if($CAPCLASS->checkCaptcha(0, $_GET['captcha_hash'])) {
 		safe_query("DELETE FROM ".PREFIX."contact WHERE contactID='$contactID'");
 	} else echo $_language->module['transaction_invalid'];
 }
@@ -40,7 +40,7 @@ if(isset($_GET['delete'])) {
 elseif(isset($_POST['sortieren'])) {
 	$sortcontact = $_POST['sortcontact'];
 	$CAPCLASS = new \webspell\Captcha;
-	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
+	if($CAPCLASS->checkCaptcha(0, $_POST['captcha_hash'])) {
 		if(is_array($sortcontact)) {
 			foreach($sortcontact as $sortstring) {
 				$sorter=explode("-", $sortstring);
@@ -54,7 +54,7 @@ elseif(isset($_POST['save'])) {
 	$name = $_POST['name'];
 	$email = $_POST['email'];
 	$CAPCLASS = new \webspell\Captcha;
-	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
+	if($CAPCLASS->checkCaptcha(0, $_POST['captcha_hash'])) {
 		if(checkforempty(Array('name', 'email'))) {
 			safe_query("INSERT INTO ".PREFIX."contact ( name, email, sort )
 							values( '$name', '$email', '1' )");
@@ -67,7 +67,7 @@ elseif(isset($_POST['saveedit'])) {
 	$email = $_POST['email'];
 	$contactID = $_POST['contactID'];
 	$CAPCLASS = new \webspell\Captcha;
-	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
+	if($CAPCLASS->checkCaptcha(0, $_POST['captcha_hash'])) {
 		if(checkforempty(Array('name', 'email'))) {
 			safe_query("UPDATE ".PREFIX."contact SET name='$name', email='$email' WHERE contactID='$contactID' ");
 		} else echo $_language->module['information_incomplete'];

@@ -31,7 +31,7 @@ if(!isnewsadmin($userID) OR mb_substr(basename($_SERVER['REQUEST_URI']),0,15) !=
 
 if(isset($_POST['save'])) {
  	$CAPCLASS = new \webspell\Captcha;
-	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
+	if($CAPCLASS->checkCaptcha(0, $_POST['captcha_hash'])) {
 		$pic = $_FILES['pic'];
 		if(checkforempty(Array('name'))) {
 			safe_query("INSERT INTO ".PREFIX."news_rubrics ( rubric ) values( '".$_POST['name']."' ) ");
@@ -65,7 +65,7 @@ if(isset($_POST['save'])) {
 
 elseif(isset($_POST['saveedit'])) {
  	$CAPCLASS = new \webspell\Captcha;
-	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
+	if($CAPCLASS->checkCaptcha(0, $_POST['captcha_hash'])) {
 		$pic = $_FILES['pic'];
 		if(checkforempty(Array('name'))) {
 			safe_query("UPDATE ".PREFIX."news_rubrics SET rubric='".$_POST['name']."' WHERE rubricID='".$_POST['rubricID']."'");
@@ -99,7 +99,7 @@ elseif(isset($_POST['saveedit'])) {
 
 elseif(isset($_GET['delete'])) {
  	$CAPCLASS = new \webspell\Captcha;
-	if($CAPCLASS->check_captcha(0, $_GET['captcha_hash'])) {
+	if($CAPCLASS->checkCaptcha(0, $_GET['captcha_hash'])) {
 		$rubricID = $_GET['rubricID'];
 		$filepath = "../images/news-rubrics/";
 		safe_query("DELETE FROM ".PREFIX."news_rubrics WHERE rubricID='$rubricID'");

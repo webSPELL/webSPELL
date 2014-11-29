@@ -58,7 +58,7 @@ if($action == "send") {
 		$run=1;
 	} else {
 		$CAPCLASS = new \webspell\Captcha;
-		if(!$CAPCLASS->check_captcha($_POST['captcha'], $_POST['captcha_hash'])) $fehler[] = $_language->module['wrong_securitycode'];
+		if(!$CAPCLASS->checkCaptcha($_POST['captcha'], $_POST['captcha_hash'])) $fehler[] = $_language->module['wrong_securitycode'];
 		else $run=1;
 	}
 

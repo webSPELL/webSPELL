@@ -117,7 +117,7 @@ elseif(isset($_POST['save'])) {
 	if(isset($POST["fav"])) $fav = (int)$POST['fav'];
 	else $fav=0;
 	$CAPCLASS = new \webspell\Captcha;
-	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
+	if($CAPCLASS->checkCaptcha(0, $_POST['captcha_hash'])) {
 		if($country AND $short) {
 			$file_ext=strtolower(mb_substr($icon['name'], strrpos($icon['name'], ".")));
 			if($file_ext==".gif") {
@@ -140,7 +140,7 @@ elseif(isset($_POST["saveedit"])) {
 	if(isset($POST["fav"])) $fav = (int)$POST['fav'];
 	else $fav=0;
 	$CAPCLASS = new \webspell\Captcha;
-	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
+	if($CAPCLASS->checkCaptcha(0, $_POST['captcha_hash'])) {
 		if($country AND $short) {
 			if($icon['name']=="") {
 				if(safe_query("UPDATE ".PREFIX."countries SET country='".$country."', short='".$short."', fav='".$fav."' WHERE countryID='".$_POST["countryID"]."'"))
@@ -165,7 +165,7 @@ elseif(isset($_POST["saveedit"])) {
 
 elseif(isset($_GET["delete"])) {
  	$CAPCLASS = new \webspell\Captcha;
-	if($CAPCLASS->check_captcha(0, $_GET['captcha_hash'])) {
+	if($CAPCLASS->checkCaptcha(0, $_GET['captcha_hash'])) {
 		safe_query("DELETE FROM ".PREFIX."countries WHERE countryID='".$_GET["countryID"]."'");
 		redirect("admincenter.php?site=countries","",0);
 	} else echo $_language->module['transaction_invalid'];

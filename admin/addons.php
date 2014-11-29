@@ -34,7 +34,7 @@ if (!ispageadmin($userID) || mb_substr(basename($_SERVER[ 'REQUEST_URI' ]), 0, 1
 if (isset($_GET[ 'delete' ])) {
     $linkID = $_GET[ 'linkID' ];
     $CAPCLASS = new \webspell\Captcha;
-    if ($CAPCLASS->check_captcha(0, $_GET[ 'captcha_hash' ])) {
+    if ($CAPCLASS->checkCaptcha(0, $_GET[ 'captcha_hash' ])) {
         safe_query("DELETE FROM " . PREFIX . "addon_links WHERE linkID='$linkID' ");
     } else {
         echo $_language->module[ 'transaction_invalid' ];
@@ -42,7 +42,7 @@ if (isset($_GET[ 'delete' ])) {
 } elseif (isset($_GET[ 'delcat' ])) {
     $catID = $_GET[ 'catID' ];
     $CAPCLASS = new \webspell\Captcha;
-    if ($CAPCLASS->check_captcha(0, $_GET[ 'captcha_hash' ])) {
+    if ($CAPCLASS->checkCaptcha(0, $_GET[ 'captcha_hash' ])) {
         safe_query("UPDATE " . PREFIX . "addon_links SET catID='0' WHERE catID='$catID' ");
         safe_query("DELETE FROM " . PREFIX . "addon_categories WHERE catID='$catID' ");
     } else {
@@ -66,7 +66,7 @@ if (isset($_GET[ 'delete' ])) {
     }
 } elseif (isset($_POST[ 'save' ])) {
     $CAPCLASS = new \webspell\Captcha;
-    if ($CAPCLASS->check_captcha(0, $_POST[ 'captcha_hash' ])) {
+    if ($CAPCLASS->checkCaptcha(0, $_POST[ 'captcha_hash' ])) {
         $anz = mysqli_num_rows(
             safe_query("SELECT linkID FROM " . PREFIX . "addon_links WHERE catID='" . $_POST[ 'catID' ] . "'")
         );
@@ -86,7 +86,7 @@ if (isset($_GET[ 'delete' ])) {
 } elseif (isset($_POST[ 'savecat' ])) {
     $CAPCLASS = new \webspell\Captcha;
     if (
-        $CAPCLASS->check_captcha(0, $_POST[ 'captcha_hash' ])
+        $CAPCLASS->checkCaptcha(0, $_POST[ 'captcha_hash' ])
     ) {
         $anz = mysqli_num_rows(safe_query("SELECT catID FROM " . PREFIX . "addon_categories"));
         safe_query(
@@ -98,7 +98,7 @@ if (isset($_GET[ 'delete' ])) {
     }
 } elseif (isset($_POST[ 'saveedit' ])) {
     $CAPCLASS = new \webspell\Captcha;
-    if ($CAPCLASS->check_captcha(0, $_POST[ 'captcha_hash' ])) {
+    if ($CAPCLASS->checkCaptcha(0, $_POST[ 'captcha_hash' ])) {
         safe_query(
             "UPDATE " . PREFIX . "addon_links
             SET catID='" . $_POST[ 'catID' ] . "', name='" . $_POST[ 'name' ] . "', url='" . $_POST[ 'url' ] . "',
@@ -110,7 +110,7 @@ if (isset($_GET[ 'delete' ])) {
     }
 } elseif (isset($_POST[ 'saveeditcat' ])) {
     $CAPCLASS = new \webspell\Captcha;
-    if ($CAPCLASS->check_captcha(0, $_POST[ 'captcha_hash' ])) {
+    if ($CAPCLASS->checkCaptcha(0, $_POST[ 'captcha_hash' ])) {
         safe_query(
             "UPDATE " . PREFIX . "addon_categories SET name='" . $_POST[ 'name' ] . "'
             WHERE catID='" . $_POST[ 'catID' ] . "' "

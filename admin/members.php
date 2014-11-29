@@ -31,7 +31,7 @@ if(!isuseradmin($userID) OR mb_substr(basename($_SERVER['REQUEST_URI']),0,15) !=
 
 if(isset($_POST['sortieren'])) {
  	$CAPCLASS = new \webspell\Captcha;
-	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
+	if($CAPCLASS->checkCaptcha(0, $_POST['captcha_hash'])) {
 	 	if(isset($_POST['sort'])){
 			$sort = $_POST['sort'];
 			if(is_array($sort)) {
@@ -46,7 +46,7 @@ if(isset($_POST['sortieren'])) {
 
 if(isset($_GET['delete'])) {
  	$CAPCLASS = new \webspell\Captcha;
-	if($CAPCLASS->check_captcha(0, $_GET['captcha_hash'])) {
+	if($CAPCLASS->checkCaptcha(0, $_GET['captcha_hash'])) {
 		$id = $_GET['id'];
 		$squadID = $_GET['squadID'];
 		$squads=mysqli_num_rows(safe_query("SELECT userID FROM ".PREFIX."squads_members WHERE userID='$id'"));
@@ -58,7 +58,7 @@ if(isset($_GET['delete'])) {
 
 if(isset($_POST['saveedit'])) {
  	$CAPCLASS = new \webspell\Captcha;
-	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
+	if($CAPCLASS->checkCaptcha(0, $_POST['captcha_hash'])) {
 		$id = $_POST['id'];
     $newswriter = isset($_POST['newswriter']);
 		$newsadmin = isset($_POST['newsadmin']);

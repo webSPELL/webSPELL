@@ -34,7 +34,7 @@ if(isset($_POST['savemods'])) {
 	if(isset($_POST['mods'])){
 		$mods = $_POST['mods'];
 		$CAPCLASS = new \webspell\Captcha;
-		if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
+		if($CAPCLASS->checkCaptcha(0, $_POST['captcha_hash'])) {
 			safe_query("DELETE FROM ".PREFIX."forum_moderators WHERE boardID='$boardID'");
 			if(is_array($mods)) {
 				foreach($mods as $id) {
@@ -48,7 +48,7 @@ if(isset($_POST['savemods'])) {
 	}
 	else{
 		$CAPCLASS = new \webspell\Captcha;
-		if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
+		if($CAPCLASS->checkCaptcha(0, $_POST['captcha_hash'])) {
 			safe_query("DELETE FROM ".PREFIX."forum_moderators WHERE boardID='$boardID'");
 		}
 		else {
@@ -60,7 +60,7 @@ if(isset($_POST['savemods'])) {
 elseif(isset($_GET['delete'])) {
 	$boardID = $_GET['boardID'];
 	$CAPCLASS = new \webspell\Captcha;
-	if($CAPCLASS->check_captcha(0, $_GET['captcha_hash'])) {
+	if($CAPCLASS->checkCaptcha(0, $_GET['captcha_hash'])) {
 		safe_query("DELETE FROM ".PREFIX."forum_posts WHERE boardID='$boardID' ");
 		safe_query("
 			DELETE `topics`.*, `moved`.*
@@ -75,7 +75,7 @@ elseif(isset($_GET['delete'])) {
 elseif(isset($_GET['delcat'])) {
 	$catID = $_GET['catID'];
 	$CAPCLASS = new \webspell\Captcha;
-	if($CAPCLASS->check_captcha(0, $_GET['captcha_hash'])) {
+	if($CAPCLASS->checkCaptcha(0, $_GET['captcha_hash'])) {
 		safe_query("UPDATE ".PREFIX."forum_boards SET category='0' WHERE category='$catID' ");
 		safe_query("DELETE FROM ".PREFIX."forum_categories WHERE catID='$catID' ");
 	} else echo $_language->module['transaction_invalid'];
@@ -112,7 +112,7 @@ elseif(isset($_POST['save'])) {
 
 	if($kath=="") $kath=0;
 	$CAPCLASS = new \webspell\Captcha;
-	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
+	if($CAPCLASS->checkCaptcha(0, $_POST['captcha_hash'])) {
   		safe_query("INSERT INTO ".PREFIX."forum_boards ( category, name, info, readgrps, writegrps, sort )
   values( '$kath', '$name', '$boardinfo', '$readgrps', '$writegrps', '1' )");
   	} else echo $_language->module['transaction_invalid'];
@@ -124,7 +124,7 @@ elseif(isset($_POST['savecat'])) {
 	if(isset($_POST['readgrps'])) $readgrps = implode(";", $_POST['readgrps']);
 	else $readgrps='';
 	$CAPCLASS = new \webspell\Captcha;
-	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
+	if($CAPCLASS->checkCaptcha(0, $_POST['captcha_hash'])) {
 		safe_query("INSERT INTO ".PREFIX."forum_categories ( readgrps, name, info, sort ) values( '$readgrps', '$catname', '$catinfo', '1' )");
 	} else echo $_language->module['transaction_invalid'];
 }
@@ -140,7 +140,7 @@ elseif(isset($_POST['saveedit'])) {
 	else $writegrps='';
 
 	$CAPCLASS = new \webspell\Captcha;
-	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
+	if($CAPCLASS->checkCaptcha(0, $_POST['captcha_hash'])) {
 		safe_query("UPDATE ".PREFIX."forum_boards SET category='$kath',
 		           name='$name',
 	             info='$boardinfo',
@@ -157,7 +157,7 @@ elseif(isset($_POST['saveeditcat'])) {
 	if(isset($_POST['readgrps'])) $readgrps = implode(";", $_POST['readgrps']);
 	else $readgrps='';
 	$CAPCLASS = new \webspell\Captcha;
-	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
+	if($CAPCLASS->checkCaptcha(0, $_POST['captcha_hash'])) {
 		safe_query("UPDATE ".PREFIX."forum_categories SET readgrps='$readgrps', name='$catname', info='$catinfo' WHERE catID='$catID' ");
 	} else echo $_language->module['transaction_invalid'];
 }

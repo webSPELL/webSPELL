@@ -111,7 +111,7 @@ if($action == "user"){
 elseif($action == "user_ban"){
 	echo'<h1>&curren; Spam</h1>';
 	$CAPCLASS = new \webspell\Captcha;
-	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
+	if($CAPCLASS->checkCaptcha(0, $_POST['captcha_hash'])) {
 		$spammerID = $_POST['id'];
 		if(!is_numeric($spammerID)){
 			echo $_language->module["userid_must_be_numeric"];
@@ -200,7 +200,7 @@ elseif($action == "multi"){
 elseif($action == "multi_ban"){
 	echo'<h1>&curren; Multiple Accounts</h1>';
 	$CAPCLASS = new \webspell\Captcha;
-	if($CAPCLASS->check_captcha(0, $_GET['captcha_hash'])) {
+	if($CAPCLASS->checkCaptcha(0, $_GET['captcha_hash'])) {
 		$ip = $_GET['ip'];
 		$get = safe_query("SELECT userID, nickname FROM ".PREFIX."user WHERE ip='".$ip."'");
 		while($ds = mysqli_fetch_assoc($get)){
@@ -220,7 +220,7 @@ elseif($action == "multi_ban"){
 elseif($action == "multi_just_block"){
 	echo'<h1>&curren; Multiple Accounts</h1>';
 	$CAPCLASS = new \webspell\Captcha;
-	if($CAPCLASS->check_captcha(0, $_GET['captcha_hash'])) {
+	if($CAPCLASS->checkCaptcha(0, $_GET['captcha_hash'])) {
 		$ip = $_GET['ip'];
 		$get = safe_query("SELECT userID, nickname,GROUP_CONCAT(nickname) AS `nicknames` FROM ".PREFIX."user WHERE ip='".$ip."' GROUP BY ip");
 		while($ds = mysqli_fetch_assoc($get)){

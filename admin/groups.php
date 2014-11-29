@@ -34,7 +34,7 @@ else $action = '';
 
 if($action=="delete") {
 	$CAPCLASS = new \webspell\Captcha;
-	if($CAPCLASS->check_captcha(0, $_GET['captcha_hash'])) {
+	if($CAPCLASS->checkCaptcha(0, $_GET['captcha_hash'])) {
 		if(!$_GET['fgrID']) die('missing fgrID... <a href="admincenter.php?site=groups">back</a>');
 		safe_query("ALTER TABLE ".PREFIX."user_forum_groups DROP `".$_GET['fgrID']."`");
 		safe_query("DELETE FROM ".PREFIX."forum_groups WHERE fgrID='".$_GET['fgrID']."'");
@@ -68,7 +68,7 @@ elseif($action=="add") {
 elseif($action=="save") {
 	if(!$_POST['name']) die('<b>'.$_language->module['error_group'].'</b><br /><br /><a href="admincenter.php?site=groups&amp;action=add">&laquo; '.$_language->module['back'].'</a>');
 	$CAPCLASS = new \webspell\Captcha;
-	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
+	if($CAPCLASS->checkCaptcha(0, $_POST['captcha_hash'])) {
 		safe_query("INSERT INTO ".PREFIX."forum_groups ( name ) values( '".$_POST['name']."' ) ");
 		$id = mysqli_insert_id($_database);
 		if(!safe_query("ALTER TABLE ".PREFIX."user_forum_groups ADD `".$id."` INT( 1 ) NOT NULL ; ")) {
@@ -83,7 +83,7 @@ elseif($action=="save") {
 elseif($action=="saveedit") {
 	$name=$_POST['name'];
 	$CAPCLASS = new \webspell\Captcha;
-	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
+	if($CAPCLASS->checkCaptcha(0, $_POST['captcha_hash'])) {
 		safe_query("UPDATE ".PREFIX."forum_groups SET name='".$name."' WHERE fgrID='".$_POST['fgrID']."'");
 			redirect("admincenter.php?site=groups","",0);
 	} else echo $_language->module['transaction_invalid'];

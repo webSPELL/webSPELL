@@ -105,7 +105,7 @@ elseif(isset($_POST['save'])) {
 	$name=$_POST["name"];
 	$tag=$_POST["tag"];
 	$CAPCLASS = new \webspell\Captcha;
-	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
+	if($CAPCLASS->checkCaptcha(0, $_POST['captcha_hash'])) {
 		if($name AND $tag) {
 			$file_ext=strtolower(mb_substr($icon['name'], strrpos($icon['name'], ".")));
 			if($file_ext==".gif") {
@@ -126,7 +126,7 @@ elseif(isset($_POST["saveedit"])) {
 	$name=$_POST["name"];
 	$tag=$_POST["tag"];
 	$CAPCLASS = new \webspell\Captcha;
-	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
+	if($CAPCLASS->checkCaptcha(0, $_POST['captcha_hash'])) {
 		if($name AND $tag) {
 			if($icon['name']=="") {
 				if(safe_query("UPDATE ".PREFIX."games SET name='".$name."', tag='".$tag."' WHERE gameID='".$_POST["gameID"]."'"))
@@ -152,7 +152,7 @@ elseif(isset($_POST["saveedit"])) {
 
 elseif(isset($_GET["delete"])) {
 	$CAPCLASS = new \webspell\Captcha();
-	if($CAPCLASS->check_captcha(0, $_GET['captcha_hash'])) {
+	if($CAPCLASS->checkCaptcha(0, $_GET['captcha_hash'])) {
 		safe_query("DELETE FROM ".PREFIX."games WHERE gameID='".$_GET["gameID"]."'");
 		redirect("admincenter.php?site=games","",0);
 	} else echo $_language->module['transaction_invalid'];

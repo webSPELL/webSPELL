@@ -174,7 +174,7 @@ elseif($action == 'rebuild'){
 
 elseif(isset($_POST['save'])) {
     $CAPCLASS = new \webspell\Captcha;
-    if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
+    if($CAPCLASS->checkCaptcha(0, $_POST['captcha_hash'])) {
         $data = array();
         foreach($_POST['keys'] as $key => $val){
             if(!empty($val)){
@@ -196,7 +196,7 @@ elseif(isset($_POST['save'])) {
 
 elseif(isset($_POST["saveedit"])) {
     $CAPCLASS = new \webspell\Captcha;
-    if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
+    if($CAPCLASS->checkCaptcha(0, $_POST['captcha_hash'])) {
         $data = array();
         foreach($_POST['keys'] as $key => $val){
             if(!empty($val)){
@@ -225,7 +225,7 @@ elseif(isset($_POST["saveedit"])) {
 
 elseif(isset($_GET["delete"])) {
     $CAPCLASS = new \webspell\Captcha;
-    if($CAPCLASS->check_captcha(0, $_GET['captcha_hash'])) {
+    if($CAPCLASS->checkCaptcha(0, $_GET['captcha_hash'])) {
         safe_query("DELETE FROM ".PREFIX."modrewrite WHERE ruleID='".$_GET["ruleID"]."'");
         redirect("admincenter.php?site=modrewrite","",0);
     } else echo $_language->module['transaction_invalid'];

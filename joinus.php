@@ -66,7 +66,7 @@ if($action=="save" && isset($_POST['post'])) {
 		$run=1;
 	} else {
 		$CAPCLASS = new \webspell\Captcha;
-		if(!$CAPCLASS->check_captcha($_POST['captcha'], $_POST['captcha_hash'])) $error[]=$_language->module['wrong_security_code'];
+		if(!$CAPCLASS->checkCaptcha($_POST['captcha'], $_POST['captcha_hash'])) $error[]=$_language->module['wrong_security_code'];
 		else $run=1;
 	}
 

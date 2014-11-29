@@ -32,7 +32,7 @@ if(!ispageadmin($userID) OR mb_substr(basename($_SERVER['REQUEST_URI']),0,15) !=
 if(isset($_GET['delcat'])) {
 	$faqcatID = $_GET['faqcatID'];
 	$CAPCLASS = new \webspell\Captcha;
-	if($CAPCLASS->check_captcha(0, $_GET['captcha_hash'])) {
+	if($CAPCLASS->checkCaptcha(0, $_GET['captcha_hash'])) {
 		safe_query("DELETE FROM ".PREFIX."faq WHERE faqcatID='$faqcatID'");
 		safe_query("DELETE FROM ".PREFIX."faq_categories WHERE faqcatID='$faqcatID'");
 	} else echo $_language->module['transaction_invalid'];
@@ -41,7 +41,7 @@ if(isset($_GET['delcat'])) {
 elseif(isset($_POST['sortieren'])) {
 	$sortfaqcat = $_POST['sortfaqcat'];
 	$CAPCLASS = new \webspell\Captcha;
-	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
+	if($CAPCLASS->checkCaptcha(0, $_POST['captcha_hash'])) {
 		if(is_array($sortfaqcat)) {
 			foreach($sortfaqcat as $sortstring) {
 				$sorter=explode("-", $sortstring);
@@ -55,7 +55,7 @@ elseif(isset($_POST['savecat'])) {
 	$faqcatname = $_POST['faqcatname'];
 	$description = $_POST['message'];
 	$CAPCLASS = new \webspell\Captcha;
-	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
+	if($CAPCLASS->checkCaptcha(0, $_POST['captcha_hash'])) {
 		if(checkforempty(Array('faqcatname'))) safe_query("INSERT INTO ".PREFIX."faq_categories ( faqcatname, description, sort ) values( '$faqcatname', '$description', '1' )");
 		else echo $_language->module['information_incomplete'];
 	} else echo $_language->module['transaction_invalid'];
@@ -66,7 +66,7 @@ elseif(isset($_POST['saveeditcat'])) {
 	$description = $_POST['message'];
 	$faqcatID = $_POST['faqcatID'];
 	$CAPCLASS = new \webspell\Captcha;
-	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
+	if($CAPCLASS->checkCaptcha(0, $_POST['captcha_hash'])) {
 		if(checkforempty(Array('faqcatname'))) safe_query("UPDATE ".PREFIX."faq_categories SET faqcatname='$faqcatname', description='$description' WHERE faqcatID='$faqcatID' ");
 		else echo $_language->module['information_incomplete'];
 	} else echo $_language->module['transaction_invalid'];

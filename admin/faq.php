@@ -32,7 +32,7 @@ if(!ispageadmin($userID) OR mb_substr(basename($_SERVER['REQUEST_URI']),0,15) !=
 if(isset($_GET['delete'])) {
 	$faqID = $_GET['faqID'];
 	$CAPCLASS = new \webspell\Captcha;
-	if($CAPCLASS->check_captcha(0, $_GET['captcha_hash'])) {
+	if($CAPCLASS->checkCaptcha(0, $_GET['captcha_hash'])) {
 		safe_query(" DELETE FROM ".PREFIX."faq WHERE faqID='$faqID' ");
 		Tags::removeTags('faq', $faqID);
 	} else echo $_language->module['transaction_invalid'];
@@ -42,7 +42,7 @@ elseif(isset($_POST['sortieren'])) {
 	$sortfaq = $_POST['sortfaq'];
 
 	$CAPCLASS = new \webspell\Captcha;
-	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
+	if($CAPCLASS->checkCaptcha(0, $_POST['captcha_hash'])) {
 		if(is_array($sortfaq)) {
 			foreach($sortfaq as $sortstring) {
 				$sorter=explode("-", $sortstring);
@@ -57,7 +57,7 @@ elseif(isset($_POST['save'])) {
 	$question = $_POST['question'];
 	$answer = $_POST['message'];
 	$CAPCLASS = new \webspell\Captcha;
-	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
+	if($CAPCLASS->checkCaptcha(0, $_POST['captcha_hash'])) {
 		if(checkforempty(Array('question', 'message'))) {
 			if($faqcat=="") {
 				redirect('admincenter.php?site=faq',$_language->module['no_faq_selected'], 3);
@@ -76,7 +76,7 @@ elseif(isset($_POST['saveedit'])) {
 	$answer = $_POST['message'];
 	$faqID = $_POST['faqID'];
 	$CAPCLASS = new \webspell\Captcha;
-	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
+	if($CAPCLASS->checkCaptcha(0, $_POST['captcha_hash'])) {
 		if(checkforempty(Array('question', 'message'))) {
 			safe_query("UPDATE ".PREFIX."faq SET faqcatID='$faqcat', date='".time()."', question='$question', answer='$answer' WHERE faqID='$faqID' ");
 			Tags::setTags('faq', $faqID, $_POST['tags']);

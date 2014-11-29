@@ -36,7 +36,7 @@ echo '<h1>&curren; ' . $_language->module[ 'about' ] . '</h1>';
 if (isset($_POST[ 'submit' ]) != "") {
     $about = $_POST[ 'message' ];
     $CAPCLASS = new \webspell\Captcha;
-    if ($CAPCLASS->check_captcha(0, $_POST[ 'captcha_hash' ])) {
+    if ($CAPCLASS->checkCaptcha(0, $_POST[ 'captcha_hash' ])) {
         if (mysqli_num_rows(safe_query("SELECT * FROM " . PREFIX . "about"))) {
             safe_query("UPDATE " . PREFIX . "about SET about='" . $about . "'");
         } else {

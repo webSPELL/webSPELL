@@ -31,7 +31,7 @@ if(!isforumadmin($userID) OR mb_substr(basename($_SERVER['REQUEST_URI']),0,15) !
 
 if(isset($_GET['delete'])) {
  	$CAPCLASS = new \webspell\Captcha;
-	if($CAPCLASS->check_captcha(0, $_GET['captcha_hash'])) {
+	if($CAPCLASS->checkCaptcha(0, $_GET['captcha_hash'])) {
 		safe_query(" DELETE FROM ".PREFIX."forum_ranks WHERE rankID='".$_GET['rankID']."' ");
 	} else echo $_language->module['transaction_invalid'];
 }
@@ -44,7 +44,7 @@ elseif(isset($_POST['save'])) {
   	$min = $_POST['min'];
 
 	$CAPCLASS = new \webspell\Captcha;
-	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
+	if($CAPCLASS->checkCaptcha(0, $_POST['captcha_hash'])) {
 		if(checkforempty(Array('min', 'max'))) {
 			if($max=="MAX") $maximum=2147483647;
 			else $maximum=$max;
@@ -72,7 +72,7 @@ elseif(isset($_POST['saveedit'])) {
 	$max = $_POST['max'];
 
 	$CAPCLASS = new \webspell\Captcha;
-	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
+	if($CAPCLASS->checkCaptcha(0, $_POST['captcha_hash'])) {
 		if(checkforempty(Array('min', 'max'))) {
 			$ergebnis = safe_query("SELECT * FROM ".PREFIX."forum_ranks ORDER BY rankID");
 			$anz=mysqli_num_rows($ergebnis);

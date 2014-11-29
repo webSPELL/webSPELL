@@ -1,8 +1,8 @@
 <?php
 $host = 'localhost';
-$user = '';
-$pwd = '';
-$db = '';
-if (!defined("PREFIX")) {
-    define("PREFIX", '');
+$user = 'root';
+$pwd = 'root';
+$db = 'webspell_test2';
+if(!defined("PREFIX")){
+  define("PREFIX", 'ws_6T4_');
 }

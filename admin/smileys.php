@@ -104,7 +104,7 @@ elseif(isset($_POST["save"])) {
 	$alt=$_POST["alt"];
 	$pattern=$_POST["pattern"];
 	$CAPCLASS = new \webspell\Captcha;
-	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
+	if($CAPCLASS->checkCaptcha(0, $_POST['captcha_hash'])) {
 		if($pattern) {
 			$file_ext=strtolower(mb_substr($icon['name'], strrpos($icon['name'], ".")));
 			if($file_ext==".gif") {
@@ -126,7 +126,7 @@ elseif(isset($_POST["saveedit"])) {
 	$alt=$_POST["alt"];
 	$pattern=$_POST['pattern'];
 	$CAPCLASS = new \webspell\Captcha;
-	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
+	if($CAPCLASS->checkCaptcha(0, $_POST['captcha_hash'])) {
 		if($pattern) {
 			if($icon['name']=="") {
 				if(safe_query("UPDATE ".PREFIX."smileys SET alt='".$alt."', pattern='".$pattern."' WHERE smileyID='".$_POST["smileyID"]."'"))
@@ -151,7 +151,7 @@ elseif(isset($_POST["saveedit"])) {
 
 elseif(isset($_GET["delete"])) {
  	$CAPCLASS = new \webspell\Captcha;
-	if($CAPCLASS->check_captcha(0, $_GET['captcha_hash'])) {
+	if($CAPCLASS->checkCaptcha(0, $_GET['captcha_hash'])) {
 		safe_query("DELETE FROM ".PREFIX."smileys WHERE smileyID='".$_GET["smileyID"]."'");
 		redirect('admincenter.php?site=smileys','',0);
 	} else redirect('admincenter.php?site=smileys',$_language->module['transaction_invalid'],3);

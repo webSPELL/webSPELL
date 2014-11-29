@@ -74,7 +74,7 @@ if(isset($_POST['save'])) {
 		if($num) $error[]=$_language->module['mail_inuse'];
 
 	  // check captcha
-	  	if(!$CAPCLASS->check_captcha($_POST['captcha'], $_POST['captcha_hash'])) $error[]=$_language->module['wrong_securitycode'];
+	  	if(!$CAPCLASS->checkCaptcha($_POST['captcha'], $_POST['captcha_hash'])) $error[]=$_language->module['wrong_securitycode'];
 
 		// check exisitings accounts from ip with same password
 	  	$get_users = safe_query("SELECT userID FROM ".PREFIX."user WHERE password='$md5pwd' AND ip='".$GLOBALS['ip']."'");

@@ -38,7 +38,7 @@ if($action=="save") {
 	}
 	else {
 		$CAPCLASS = new \webspell\Captcha;
-		if($CAPCLASS->check_captcha($_POST['captcha'], $_POST['captcha_hash'])) $run=1;
+		if($CAPCLASS->checkCaptcha($_POST['captcha'], $_POST['captcha_hash'])) $run=1;
 
 		if(mysqli_num_rows(safe_query("SELECT * FROM ".PREFIX."user WHERE nickname = '$name' "))) $name = '*'.$name.'*';
 		$name = clearfromtags($name);

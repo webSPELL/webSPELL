@@ -33,7 +33,7 @@ if (!ispageadmin($userID) || mb_substr(basename($_SERVER[ 'REQUEST_URI' ]), 0, 1
 
 if (isset($_POST[ 'save' ])) {
     $CAPCLASS = new \webspell\Captcha;
-    if ($CAPCLASS->check_captcha(0, $_POST[ 'captcha_hash' ])) {
+    if ($CAPCLASS->checkCaptcha(0, $_POST[ 'captcha_hash' ])) {
         if (checkforempty(['name'])) {
             safe_query("INSERT INTO " . PREFIX . "links_categorys ( name ) values( '" . $_POST[ 'name' ] . "' ) ");
         } else {
@@ -44,7 +44,7 @@ if (isset($_POST[ 'save' ])) {
     }
 } elseif (isset($_POST[ 'saveedit' ])) {
     $CAPCLASS = new \webspell\Captcha;
-    if ($CAPCLASS->check_captcha(0, $_POST[ 'captcha_hash' ])) {
+    if ($CAPCLASS->checkCaptcha(0, $_POST[ 'captcha_hash' ])) {
         if (checkforempty(['name'])) {
             safe_query("UPDATE " . PREFIX . "links_categorys SET name='" . $_POST[ 'name' ] . "' WHERE linkcatID='" .
                 $_POST[ 'linkcatID' ] . "'");
@@ -56,7 +56,7 @@ if (isset($_POST[ 'save' ])) {
     }
 } elseif (isset($_GET[ 'delete' ])) {
     $CAPCLASS = new \webspell\Captcha;
-    if ($CAPCLASS->check_captcha(0, $_GET[ 'captcha_hash' ])) {
+    if ($CAPCLASS->checkCaptcha(0, $_GET[ 'captcha_hash' ])) {
         safe_query("DELETE FROM " . PREFIX . "links_categorys WHERE linkcatID='" . $_GET[ 'linkcatID' ] . "'");
         safe_query("DELETE FROM " . PREFIX . "links WHERE linkcatID='" . $_GET[ 'linkcatID' ] . "'");
     } else {

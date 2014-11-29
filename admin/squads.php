@@ -31,7 +31,7 @@ if(!isuseradmin($userID) OR mb_substr(basename($_SERVER['REQUEST_URI']),0,15) !=
 
 if(isset($_GET['delete'])) {
  	$CAPCLASS = new \webspell\Captcha;
-	if($CAPCLASS->check_captcha(0, $_GET['captcha_hash'])) {
+	if($CAPCLASS->checkCaptcha(0, $_GET['captcha_hash'])) {
 		$squadID = $_GET['squadID'];
 		$ergebnis=safe_query("SELECT userID FROM ".PREFIX."squads_members WHERE squadID='$squadID'");
 		while($ds=mysqli_fetch_array($ergebnis)) {
@@ -64,7 +64,7 @@ if(isset($_GET['delete'])) {
 
 if(isset($_POST['sortieren'])) {
  	$CAPCLASS = new \webspell\Captcha;
-	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
+	if($CAPCLASS->checkCaptcha(0, $_POST['captcha_hash'])) {
 		$sort = $_POST['sort'];
 		if(is_array($sort)) {
 			foreach($sort as $sortstring) {
@@ -77,7 +77,7 @@ if(isset($_POST['sortieren'])) {
 
 if(isset($_POST['save'])) {
  	$CAPCLASS = new \webspell\Captcha;
-	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
+	if($CAPCLASS->checkCaptcha(0, $_POST['captcha_hash'])) {
 
 		if(checkforempty(Array('name'))) {
 			$games=implode(";", $_POST['games']);
@@ -137,7 +137,7 @@ if(isset($_POST['save'])) {
 
 if(isset($_POST['saveedit'])) {
  	$CAPCLASS = new \webspell\Captcha;
-	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
+	if($CAPCLASS->checkCaptcha(0, $_POST['captcha_hash'])) {
 		if(checkforempty(Array('name'))) {
 
 			$games=implode(";", $_POST['games']);

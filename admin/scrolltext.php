@@ -37,7 +37,7 @@ if(isset($_POST['submit']) != "") {
 	$direction = $_POST['direction'];
 	$color = $_POST['color'];
 	$CAPCLASS = new \webspell\Captcha;
-	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
+	if($CAPCLASS->checkCaptcha(0, $_POST['captcha_hash'])) {
 		if(mysqli_num_rows(safe_query("SELECT * FROM ".PREFIX."scrolltext"))) safe_query("UPDATE ".PREFIX."scrolltext SET text='$text', delay='$delay', direction='$direction', color='$color'");
 		else safe_query("INSERT INTO ".PREFIX."scrolltext (text, delay, direction, color) values( '$text', '$delay', '$direction', '$color') ");
 
@@ -47,7 +47,7 @@ if(isset($_POST['submit']) != "") {
 
 elseif(isset($_POST['delete']) != "") {
 	$CAPCLASS = new \webspell\Captcha;
-	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
+	if($CAPCLASS->checkCaptcha(0, $_POST['captcha_hash'])) {
 			safe_query("DELETE FROM ".PREFIX."scrolltext");
 		redirect("admincenter.php?site=scrolltext","",0);
 	} else redirect("admincenter.php?site=scrolltext",$_language->module['transaction_invalid'],3);

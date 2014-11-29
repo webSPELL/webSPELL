@@ -31,21 +31,21 @@ if(!ispageadmin($userID) OR mb_substr(basename($_SERVER['REQUEST_URI']),0,15) !=
 
 if(isset($_POST['save'])) {
  	$CAPCLASS = new \webspell\Captcha;
-	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
+	if($CAPCLASS->checkCaptcha(0, $_POST['captcha_hash'])) {
 		safe_query("INSERT INTO ".PREFIX."servers ( name, ip, game, info ) values( '".$_POST['name']."', '".$_POST['serverip']."', '".$_POST['game']."', '".$_POST['message']."' ) ");
 	} else echo $_language->module['transaction_invalid'];
 }
 
 elseif(isset($_POST['saveedit'])) {
  	$CAPCLASS = new \webspell\Captcha;
-	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
+	if($CAPCLASS->checkCaptcha(0, $_POST['captcha_hash'])) {
 		safe_query("UPDATE ".PREFIX."servers SET name='".$_POST['name']."', ip='".$_POST['serverip']."', game='".$_POST['game']."', info='".$_POST['message']."' WHERE serverID='".$_POST['serverID']."'");
 	} else echo $_language->module['transaction_invalid'];
 }
 
 elseif(isset($_POST['sort'])) {
  	$CAPCLASS = new \webspell\Captcha;
-	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
+	if($CAPCLASS->checkCaptcha(0, $_POST['captcha_hash'])) {
 		if(is_array($_POST['sortlist'])) {
 			foreach($_POST['sortlist'] as $sortstring) {
 				$sorter=explode("-", $sortstring);
@@ -57,7 +57,7 @@ elseif(isset($_POST['sort'])) {
 
 elseif(isset($_GET['delete'])) {
  	$CAPCLASS = new \webspell\Captcha;
-	if($CAPCLASS->check_captcha(0, $_GET['captcha_hash'])) {
+	if($CAPCLASS->checkCaptcha(0, $_GET['captcha_hash'])) {
 		safe_query("DELETE FROM ".PREFIX."servers WHERE serverID='".$_GET['serverID']."'");
 	} else echo $_language->module['transaction_invalid'];
 }

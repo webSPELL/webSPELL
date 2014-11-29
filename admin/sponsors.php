@@ -195,7 +195,7 @@ elseif($action=="edit") {
 
 elseif(isset($_POST['sortieren'])) {
  	$CAPCLASS = new \webspell\Captcha;
-	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
+	if($CAPCLASS->checkCaptcha(0, $_POST['captcha_hash'])) {
 		$sort = $_POST['sort'];
 		if(is_array($sort)) {
 			foreach($sort as $sortstring) {
@@ -221,7 +221,7 @@ elseif(isset($_POST["save"])) {
 	if(!$mainsponsor) $mainsponsor=0;
 
   	$CAPCLASS = new \webspell\Captcha;
-	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
+	if($CAPCLASS->checkCaptcha(0, $_POST['captcha_hash'])) {
 		safe_query("INSERT INTO ".PREFIX."sponsors (sponsorID, name, url, info, displayed, mainsponsor, date, sort) values('', '".$name."', '".$url."', '".$info."', '".$displayed."', '".$mainsponsor."', '".time()."', '1')");
 
 		$id=mysqli_insert_id($_database);
@@ -305,7 +305,7 @@ elseif(isset($_POST["saveedit"])) {
 	if(!$mainsponsor) $mainsponsor=0;
 
 	$CAPCLASS = new \webspell\Captcha;
-	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
+	if($CAPCLASS->checkCaptcha(0, $_POST['captcha_hash'])) {
 
 		if(stristr($url, 'http://')) $url=$url;
 		else $url='http://'.$url;
@@ -381,7 +381,7 @@ elseif(isset($_POST["saveedit"])) {
 
 elseif(isset($_GET["delete"])) {
  	$CAPCLASS = new \webspell\Captcha;
-	if($CAPCLASS->check_captcha(0, $_GET['captcha_hash'])) {
+	if($CAPCLASS->checkCaptcha(0, $_GET['captcha_hash'])) {
 		if(safe_query("DELETE FROM ".PREFIX."sponsors WHERE sponsorID='".$_GET["sponsorID"]."'")) {
 			if(file_exists($filepath.$_GET["sponsorID"].'.gif')) unlink($filepath.$_GET["sponsorID"].'.gif');
 			if(file_exists($filepath.$_GET["sponsorID"].'.jpg')) unlink($filepath.$_GET["sponsorID"].'.jpg');

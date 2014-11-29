@@ -40,7 +40,7 @@ if($part=="groups") {
 
 	if(isset($_POST['save'])) {
 		$CAPCLASS = new \webspell\Captcha;
-		if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
+		if($CAPCLASS->checkCaptcha(0, $_POST['captcha_hash'])) {
 			if(checkforempty(Array('name'))) safe_query("INSERT INTO ".PREFIX."gallery_groups ( name, sort ) values( '".$_POST['name']."', '1' ) ");
 			else echo $_language->module['information_incomplete'];
 		} else echo $_language->module['transaction_invalid'];
@@ -48,7 +48,7 @@ if($part=="groups") {
 
 	elseif(isset($_POST['saveedit'])) {
 	 	$CAPCLASS = new \webspell\Captcha;
-		if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
+		if($CAPCLASS->checkCaptcha(0, $_POST['captcha_hash'])) {
 			if(checkforempty(Array('name'))) safe_query("UPDATE ".PREFIX."gallery_groups SET name='".$_POST['name']."' WHERE groupID='".$_POST['groupID']."'");
 			else echo $_language->module['information_incomplete'];
 		} else echo $_language->module['transaction_invalid'];
@@ -56,7 +56,7 @@ if($part=="groups") {
 
 	elseif(isset($_POST['sort'])) {
 	 	$CAPCLASS = new \webspell\Captcha;
-		if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
+		if($CAPCLASS->checkCaptcha(0, $_POST['captcha_hash'])) {
 			if(isset($_POST['sortlist'])){
 				if(is_array($_POST['sortlist'])) {
 					foreach($_POST['sortlist'] as $sortstring) {
@@ -70,7 +70,7 @@ if($part=="groups") {
 
 	elseif(isset($_GET['delete'])) {
 	 	$CAPCLASS = new \webspell\Captcha;
-		if($CAPCLASS->check_captcha(0, $_GET['captcha_hash'])) {
+		if($CAPCLASS->checkCaptcha(0, $_GET['captcha_hash'])) {
 			$db_result=safe_query("SELECT * FROM ".PREFIX."gallery WHERE groupID='".$_GET['groupID']."'");
 			$any=mysqli_num_rows($db_result);
 			if($any){
@@ -179,7 +179,7 @@ elseif($part=="gallerys") {
 
 	if(isset($_POST['save'])) {
 	 	$CAPCLASS = new \webspell\Captcha;
-		if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
+		if($CAPCLASS->checkCaptcha(0, $_POST['captcha_hash'])) {
 			if(checkforempty(Array('name'))) {
 				safe_query("INSERT INTO ".PREFIX."gallery ( name, date, groupID ) values( '".$_POST['name']."', '".time()."', '".$_POST['group']."' ) ");
 				$id = mysqli_insert_id($_database);
@@ -189,7 +189,7 @@ elseif($part=="gallerys") {
 
 	elseif(isset($_POST['saveedit'])) {
 	 	$CAPCLASS = new \webspell\Captcha;
-		if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
+		if($CAPCLASS->checkCaptcha(0, $_POST['captcha_hash'])) {
 			if(checkforempty(Array('name'))) {
 				if(!isset($_POST['group'])) {
 					$_POST['group'] = 0;
@@ -208,7 +208,7 @@ elseif($part=="gallerys") {
     	if(isset($_POST['pictures'])) $pictures = $_POST['pictures'];
 		$i=0;
 		$CAPCLASS = new \webspell\Captcha;
-		if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
+		if($CAPCLASS->checkCaptcha(0, $_POST['captcha_hash'])) {
 		    foreach($pictures as $picture) {
 					$typ = getimagesize($dir.$picture);
 					switch ($typ[2]) {
@@ -234,7 +234,7 @@ elseif($part=="gallerys") {
 		$dir = '../images/gallery/';
 		$picture = $_FILES['picture'];
 		$CAPCLASS = new \webspell\Captcha;
-		if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
+		if($CAPCLASS->checkCaptcha(0, $_POST['captcha_hash'])) {
 			if($picture['name'] != "") {
 				if($_POST['name']) $insertname = $_POST['name'];
 				else $insertname = $picture['name'];
@@ -257,7 +257,7 @@ elseif($part=="gallerys") {
 	elseif(isset($_GET['delete'])) {
 		//SQL
 		$CAPCLASS = new \webspell\Captcha;
-		if($CAPCLASS->check_captcha(0, $_GET['captcha_hash'])) {
+		if($CAPCLASS->checkCaptcha(0, $_GET['captcha_hash'])) {
 			if(safe_query("DELETE FROM ".PREFIX."gallery WHERE galleryID='".$_GET['galleryID']."'")) {
 				//FILES
 

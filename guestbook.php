@@ -51,7 +51,7 @@ if(isset($_POST['save'])) {
 		$url = $_POST['gburl'];
 		$icq = $_POST['icq'];
 		$CAPCLASS = new \webspell\Captcha;
-		if($CAPCLASS->check_captcha($_POST['captcha'], $_POST['captcha_hash'])){
+		if($CAPCLASS->checkCaptcha($_POST['captcha'], $_POST['captcha_hash'])){
 			$run=1;
 		}
 	}

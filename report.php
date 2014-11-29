@@ -30,7 +30,7 @@ if(isset($run)) $run=1; else $run=0;
 if($userID) $run=1;
 else {
 	$CAPCLASS = new \webspell\Captcha;
-	if($CAPCLASS->check_captcha($_POST['captcha'], $_POST['captcha_hash'])) $run=1;
+	if($CAPCLASS->checkCaptcha($_POST['captcha'], $_POST['captcha_hash'])) $run=1;
 }
 
 if($_POST['mode'] and $run) {

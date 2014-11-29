@@ -35,7 +35,7 @@ if(!$closed) {
 
 	if(isset($_POST['submit']) != "" AND ispageadmin($userID)) {
 		$CAPCLASS = new \webspell\Captcha;
-		if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
+		if($CAPCLASS->checkCaptcha(0, $_POST['captcha_hash'])) {
 			if(mysqli_num_rows(safe_query("SELECT * FROM `".PREFIX."lock`")))
 			safe_query("UPDATE `".PREFIX."lock` SET reason='".$_POST['reason']."', time='".time()."'");
 			else safe_query("INSERT INTO `".PREFIX."lock` (`time`, `reason`) values( '".time()."', '".$_POST['reason']."') ");
@@ -66,7 +66,7 @@ else {
 
 	if(isset($_POST['submit']) != "" AND isset($_POST['unlock']) AND ispageadmin($userID)) {
 		$CAPCLASS = new \webspell\Captcha;
-		if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
+		if($CAPCLASS->checkCaptcha(0, $_POST['captcha_hash'])) {
 			safe_query("UPDATE `".PREFIX."settings` SET closed='0'");
     		redirect("admincenter.php?site=lock",$_language->module['page_unlocked'],3);
     	} else{

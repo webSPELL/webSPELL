@@ -34,7 +34,7 @@ echo'<h1>&curren; '.$_language->module['imprint'].'</h1>';
 if(isset($_POST['submit'])) {
 	$imprint = $_POST['message'];
 	$CAPCLASS = new \webspell\Captcha;
-	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
+	if($CAPCLASS->checkCaptcha(0, $_POST['captcha_hash'])) {
 		safe_query("UPDATE `".PREFIX."settings` SET imprint='".$_POST['type']."'");
 
 		if(mysqli_num_rows(safe_query("SELECT * FROM `".PREFIX."imprint`"))) safe_query("UPDATE `".PREFIX."imprint` SET imprint='$imprint'");

@@ -31,7 +31,7 @@ if(!ispageadmin($userID) OR mb_substr(basename($_SERVER['REQUEST_URI']),0,15) !=
 
 if(isset($_POST['save'])) {
  	$CAPCLASS = new \webspell\Captcha;
-	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
+	if($CAPCLASS->checkCaptcha(0, $_POST['captcha_hash'])) {
 		if(isset($_POST['staticID']) and $_POST['staticID']) {
 			safe_query("UPDATE `".PREFIX."static` SET name='".$_POST['name']."', accesslevel='".$_POST['accesslevel']."', content='".$_POST['message']."' WHERE staticID='".$_POST['staticID']."'");
 			$id = $_POST['staticID'];
@@ -46,7 +46,7 @@ if(isset($_POST['save'])) {
 
 elseif(isset($_GET['delete'])) {
  	$CAPCLASS = new \webspell\Captcha;
-	if($CAPCLASS->check_captcha(0, $_GET['captcha_hash'])) {
+	if($CAPCLASS->checkCaptcha(0, $_GET['captcha_hash'])) {
 		Tags::removeTags('static', $_GET['staticID']);
 		safe_query("DELETE FROM `".PREFIX."static` WHERE staticID='".$_GET['staticID']."'");
 	} else echo $_language->module['transaction_invalid'];

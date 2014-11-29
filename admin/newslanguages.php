@@ -31,7 +31,7 @@ if(!isnewsadmin($userID) OR mb_substr(basename($_SERVER['REQUEST_URI']),0,15) !=
 
 if(isset($_POST['save'])) {
 	$CAPCLASS = new \webspell\Captcha;
-	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
+	if($CAPCLASS->checkCaptcha(0, $_POST['captcha_hash'])) {
 		if(checkforempty(Array('language', 'lang','alt'))) {
 			safe_query("INSERT INTO ".PREFIX."news_languages ( language, lang, alt ) values( '".$_POST['language']."', '".$_POST['lang']."', '".$_POST['alt']."' ) ");
 		} else echo $_language->module['information_incomplete'];
@@ -40,7 +40,7 @@ if(isset($_POST['save'])) {
 
 elseif(isset($_POST['saveedit'])) {
 	$CAPCLASS = new \webspell\Captcha;
-	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
+	if($CAPCLASS->checkCaptcha(0, $_POST['captcha_hash'])) {
 		if(checkforempty(Array('language', 'lang', 'alt'))) {
 			safe_query("UPDATE ".PREFIX."news_languages SET language='".$_POST['language']."', lang='".$_POST['lang']."', alt='".$_POST['alt']."' WHERE langID='".$_POST['langID']."'");
 		} else echo $_language->module['information_incomplete'];
@@ -49,7 +49,7 @@ elseif(isset($_POST['saveedit'])) {
 
 elseif(isset($_GET['delete'])) {
 	$CAPCLASS = new \webspell\Captcha;
-	if($CAPCLASS->check_captcha(0, $_GET['captcha_hash'])) {
+	if($CAPCLASS->checkCaptcha(0, $_GET['captcha_hash'])) {
 		safe_query("DELETE FROM ".PREFIX."news_languages WHERE langID='".$_GET['langID']."'");
 	} else echo $_language->module['transaction_invalid'];
 }

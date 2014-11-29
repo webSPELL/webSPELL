@@ -125,7 +125,7 @@ elseif(isset($_POST["save"])) {
   	if(!$displayed) $displayed=0;
 
   	$CAPCLASS = new \webspell\Captcha;
-	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
+	if($CAPCLASS->checkCaptcha(0, $_POST['captcha_hash'])) {
 		if($bannername AND $bannerurl AND $banner) {
 			if(stristr($bannerurl,'http://')) $bannerurl=$bannerurl;
 			else $bannerurl='http://'.$bannerurl;
@@ -158,7 +158,7 @@ elseif(isset($_POST["saveedit"])) {
 	else $displayed="";
 	if(!$displayed) $displayed=0;
 	$CAPCLASS = new \webspell\Captcha;
-	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
+	if($CAPCLASS->checkCaptcha(0, $_POST['captcha_hash'])) {
 		if($banner AND $bannername AND $bannerurl) {
 			if(stristr($bannerurl,'http://')) $bannerurl=$bannerurl;
 			else $bannerurl='http://'.$bannerurl;
@@ -186,7 +186,7 @@ elseif(isset($_POST["saveedit"])) {
 
 elseif(isset($_GET["delete"])) {
  	$CAPCLASS = new \webspell\Captcha;
-	if($CAPCLASS->check_captcha(0, $_GET['captcha_hash'])) {
+	if($CAPCLASS->checkCaptcha(0, $_GET['captcha_hash'])) {
 		if(safe_query("DELETE FROM ".PREFIX."bannerrotation WHERE bannerID='".$_GET["bannerID"]."'")) {
 			if(file_exists($filepath.$_GET["bannerID"].'.jpg')) unlink($filepath.$_GET["bannerID"].'.jpg');
 			if(file_exists($filepath.$_GET["bannerID"].'.gif')) unlink($filepath.$_GET["bannerID"].'.gif');

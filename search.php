@@ -36,7 +36,7 @@ if($action=="search" AND ($userID OR isset($_REQUEST['captcha']))) {
 	if($userID) $run = 1;
 	else {
 		$CAPCLASS = new \webspell\Captcha;
-		if($CAPCLASS->check_captcha($_REQUEST['captcha'], $_REQUEST['captcha_hash'])) $run=1;
+		if($CAPCLASS->checkCaptcha($_REQUEST['captcha'], $_REQUEST['captcha_hash'])) $run=1;
 	}
 
 	if($run) {

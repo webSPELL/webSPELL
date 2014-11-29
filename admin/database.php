@@ -32,7 +32,7 @@ if(isset($_POST['upload'])) {
   if(!ispageadmin($userID) OR mb_substr(basename($_SERVER['REQUEST_URI']),0,15) != "admincenter.php") die($_language->module['access_denied']);
 	$upload = $_FILES['sql'];
 	$CAPCLASS = new \webspell\Captcha;
-	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
+	if($CAPCLASS->checkCaptcha(0, $_POST['captcha_hash'])) {
 		if($upload['name'] != "") {
 		 	$get = safe_query("SELECT DATABASE()");
   			$ret = mysqli_fetch_array($get);
@@ -94,7 +94,7 @@ elseif($action=="write") {
 	systeminc("func/captcha");
 
 	$CAPCLASS = new \webspell\Captcha;
-	if($CAPCLASS->check_captcha(0, $_GET['captcha_hash'])) {
+	if($CAPCLASS->checkCaptcha(0, $_GET['captcha_hash'])) {
 	#$get = safe_query("SELECT DATABASE()");
   	#$ret = mysqli_fetch_array($get);
   	#$db = $ret[0];

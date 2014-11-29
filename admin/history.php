@@ -34,7 +34,7 @@ echo'<h1>&curren; '.$_language->module['history'].'</h1>';
 if(isset($_POST['submit'])) {
 	$history = $_POST['message'];
 	$CAPCLASS = new \webspell\Captcha;
-	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
+	if($CAPCLASS->checkCaptcha(0, $_POST['captcha_hash'])) {
 		if(mysqli_num_rows(safe_query("SELECT * FROM ".PREFIX."history")))
 			safe_query("UPDATE ".PREFIX."history SET history='".$history."'");
 		else safe_query("INSERT INTO ".PREFIX."history (history) values( '".$history."') ");

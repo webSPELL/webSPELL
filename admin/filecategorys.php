@@ -79,7 +79,7 @@ function delete_category($filecat){
 if(isset($_POST['save'])) {
  	if(mb_strlen($_POST['name'])>0){
  	 	$CAPCLASS = new \webspell\Captcha;
-		if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
+		if($CAPCLASS->checkCaptcha(0, $_POST['captcha_hash'])) {
 			safe_query("INSERT INTO ".PREFIX."files_categorys ( name, subcatID ) values( '".$_POST['name']."', '".$_POST['subcat']."' ) ");
 		} else echo $_language->module['transaction_invalid'];
 	}
@@ -91,7 +91,7 @@ if(isset($_POST['save'])) {
 elseif(isset($_POST['saveedit'])) {
  	if(mb_strlen($_POST['name'])>0){
 	 	$CAPCLASS = new \webspell\Captcha;
-		if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
+		if($CAPCLASS->checkCaptcha(0, $_POST['captcha_hash'])) {
 			safe_query("UPDATE ".PREFIX."files_categorys SET name='".$_POST['name']."', subcatID = '".$_POST['subcat']."' WHERE filecatID='".$_POST['filecatID']."'");
 		} else echo $_language->module['transaction_invalid'];
 	}
@@ -103,7 +103,7 @@ elseif(isset($_POST['saveedit'])) {
 elseif(isset($_GET['delete'])) {
 	$filecatID = $_GET['filecatID'];
 	$CAPCLASS = new \webspell\Captcha;
-	if($CAPCLASS->check_captcha(0, $_GET['captcha_hash'])) {
+	if($CAPCLASS->checkCaptcha(0, $_GET['captcha_hash'])) {
 		delete_category($filecatID);
 	} else echo $_language->module['transaction_invalid'];
 }

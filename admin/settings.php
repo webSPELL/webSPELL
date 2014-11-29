@@ -33,7 +33,7 @@ echo'<h1>&curren; '.$_language->module['settings'].'</h1>';
 
 if(isset($_POST['submit'])) {
  	$CAPCLASS = new \webspell\Captcha;
-	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
+	if($CAPCLASS->checkCaptcha(0, $_POST['captcha_hash'])) {
 		safe_query("UPDATE ".PREFIX."settings SET hpurl='".$_POST['url']."',
 									 clanname='".$_POST['clanname']."',
 									 clantag='".$_POST['clantag']."',
