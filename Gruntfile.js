@@ -14,14 +14,12 @@ module.exports = function(grunt) {
             "admin/addons.php",
             //"admin/admincenter.php",
             //"admin/bannerrotation.php",
-            //"admin/bannerrotation.php",
             //"admin/boards.php",
             //"admin/contact.php",
             //"admin/countries.php",
             //"admin/database.php",
             //"admin/faq.php",
             //"admin/faqcategories.php",
-            //"admin/filecategories.php",
             //"admin/filecategories.php",
             //"admin/gallery.php",
             //"admin/games.php",
@@ -51,16 +49,13 @@ module.exports = function(grunt) {
             //"admin/users.php",
             //"admin/visitor_statistic.php",
             //"admin/visitor_statistic_image.php",
-            //"_functions.php",
-            //"_mysql.php",
-            //"_rewrite.php",
-            //"_settings.php",
+            "_*.php",
             //"about.php",
             //"ajax_spamfilter.php",
             //"articles.php",
             //"asearch.php",
             //"awards.php",
-            "buddies.php",
+            "buddies.php"
             //"calendar.php",
             //"cashbox.php",
             //"challenge.php",
@@ -143,7 +138,7 @@ module.exports = function(grunt) {
             //"upload.php",
             //"usergallery.php",
             //"version.php",
-            //"whoisonline.php",
+            //"whoisonline.php"
         ];
 
     require("logfile-grunt")(grunt, {

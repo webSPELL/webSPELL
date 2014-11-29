@@ -3,7 +3,6 @@ $host = 'localhost';
 $user = '';
 $pwd = '';
 $db = '';
-if(!defined("PREFIX")){
-  define("PREFIX", '');
+if (!defined("PREFIX")) {
+    define("PREFIX", '');
 }
-?>
