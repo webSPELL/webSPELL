@@ -10,8 +10,7 @@ module.exports = function(grunt) {
             "templates/*.html"
         ],
         phps = [
-            "src/*.php",
-            "src/func/*.php",
+            "src/**/*.php",
             "admin/about.php",
             "admin/addons.php",
             //"admin/admincenter.php",
@@ -141,7 +140,9 @@ module.exports = function(grunt) {
             //"usergallery.php",
             //"version.php",
             //"whoisonline.php"
-        ];
+        ],
+        csss = [ "**/*.css" ],
+        excludes = [ "!node_modules/**/*" ];
 
     require("logfile-grunt")(grunt, {
         filePath: "./grunt-log.txt",
@@ -166,8 +167,7 @@ module.exports = function(grunt) {
         },
         jscs: {
             options: {
-                preset: "jquery", // See: https://contribute.jquery.org/style-guide/js/
-                validateLineBreaks: null // Needs to be set because of Windows machines
+                preset: "jquery" // See: https://contribute.jquery.org/style-guide/js/
             },
             src: [ javascripts ]
         },
@@ -177,7 +177,11 @@ module.exports = function(grunt) {
         },
         phpcs: {
             application: {
-                dir: [ phps ]
+                dir: [
+                    phps,
+                    csss,
+                    excludes
+                ]
             },
             options: {
                 bin: "vendor/bin/phpcs",
