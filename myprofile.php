@@ -25,7 +25,7 @@
 ##########################################################################
 */
 
-$_language->read_module('myprofile');
+$_language->readModule('myprofile');
 
 if(!$userID) echo $_language->module['not_logged_in'];
 

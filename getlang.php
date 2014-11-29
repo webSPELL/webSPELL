@@ -28,16 +28,16 @@
 	include("_mysql.php");
 	include("_settings.php");
 	include("_functions.php");
-  
+
 	if(isset($_GET['modul'])) $modul = strip_tags($_GET['modul']);
 	else $modul = null;
 	if(isset($_GET['var'])) $var = $_GET['var'];
 	else $var = null;
 	if(isset($_GET['mode'])) $mode = $_GET['mode'];
 	else $mode = 'plain';
-	
+
 	if(!is_null($modul)){
-		if($_language->read_module($modul)){
+		if($_language->readModule($modul)){
 			if($mode=='array'){
 				foreach($_language->module as $key => $value){
 					echo 'languageArray["'.$modul.'"]["'.$key.'"]="'.preg_replace("/\r?\n/", "\\n", addslashes($value)).'";';

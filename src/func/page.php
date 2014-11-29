@@ -25,29 +25,31 @@
 ##########################################################################
 */
 
-function redirect($url, $info, $time=1) {
-	if($url=="back" AND $info!='' AND isset($_SERVER['HTTP_REFERER'])) {
-		$url = $_SERVER['HTTP_REFERER'];
-		$info = '';
-	} elseif($url=="back" AND $info!='') {
-		$url = $info;
-		$info = '';
-	}
-	echo '<meta http-equiv="refresh" content="'.$time.';URL='.$url.'"><br /><p style="color:#000000">'.$info.'</p><br /><br />';
+function redirect($url, $info, $time = 1)
+{
+    if ($url == "back" && $info != '' && isset($_SERVER['HTTP_REFERER'])) {
+        $url = $_SERVER['HTTP_REFERER'];
+        $info = '';
+    } elseif ($url == "back" && $info != '') {
+        $url = $info;
+        $info = '';
+    }
+    echo
+        '<meta http-equiv="refresh" content="' . $time . ';URL=' . $url . '"><br />' .
+        '<p style="color:#000000">' . $info . '</p><br /><br />';
 }
 
-function isStaticPage($staticID = null){
-	if($GLOBALS['site'] != "static"){
-		return false;
-	}
+function isStaticPage($staticID = null)
+{
+    if ($GLOBALS['site'] != "static") {
+        return false;
+    }
 
-	if($staticID != null){
-		if($_GET['staticID'] != $staticID){
-			return false;
-		}
-	}
+    if ($staticID != null) {
+        if ($_GET['staticID'] != $staticID) {
+            return false;
+        }
+    }
 
-	return true;
+    return true;
 }
-
-?>

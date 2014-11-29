@@ -37,7 +37,7 @@ if($action=="save") {
 		$name = $_database->escape_string(getnickname($userID));
 	}
 	else {
-		$CAPCLASS = new Captcha;
+		$CAPCLASS = new \webspell\Captcha;
 		if($CAPCLASS->check_captcha($_POST['captcha'], $_POST['captcha_hash'])) $run=1;
 
 		if(mysqli_num_rows(safe_query("SELECT * FROM ".PREFIX."user WHERE nickname = '$name' "))) $name = '*'.$name.'*';
@@ -71,7 +71,7 @@ elseif($action=="delete") {
 
 elseif($action=="showall") {
 
-	$_language->read_module('shoutbox');
+	$_language->readModule('shoutbox');
 	eval ("\$title_shoutbox = \"".gettemplate("title_shoutbox")."\";");
 	echo $title_shoutbox;
 

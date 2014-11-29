@@ -25,7 +25,7 @@
 ##########################################################################
 */
 
-$_language->read_module('page_statistic');
+$_language->readModule('page_statistic');
 
 if(!isanyadmin($userID) OR mb_substr(basename($_SERVER['REQUEST_URI']),0,15) != "admincenter.php") die($_language->module['access_denied']);
 

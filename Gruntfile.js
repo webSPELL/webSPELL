@@ -10,6 +10,8 @@ module.exports = function(grunt) {
             "templates/*.html"
         ],
         phps = [
+            "src/*.php",
+            "src/func/*.php",
             "admin/about.php",
             "admin/addons.php",
             //"admin/admincenter.php",

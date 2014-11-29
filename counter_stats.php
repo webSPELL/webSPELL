@@ -25,7 +25,7 @@
 ##########################################################################
 */
 
-$_language->read_module('counter');
+$_language->readModule('counter');
 
 eval ("\$title_counter_stats = \"".gettemplate("title_counter_stats")."\";");
 echo $title_counter_stats;
@@ -116,12 +116,12 @@ if(mysqli_num_rows($get)){
 }
 // get oldest/youngest member
 $get_young = mysqli_fetch_assoc(safe_query("SELECT DATE_FORMAT(FROM_DAYS(TO_DAYS(NOW()) - TO_DAYS(birthday)), '%y') as 'age', nickname, userID
-FROM  ".PREFIX."user 
+FROM  ".PREFIX."user
 WHERE birthday > 0
 ORDER BY birthday DESC
 LIMIT 0,1"));
 $get_old = mysqli_fetch_assoc(safe_query("SELECT DATE_FORMAT(FROM_DAYS(TO_DAYS(NOW()) - TO_DAYS(birthday)), '%y') as 'age', nickname, userID
-FROM  ".PREFIX."user 
+FROM  ".PREFIX."user
 WHERE birthday > 0
 ORDER BY birthday ASC
 LIMIT 0,1"));

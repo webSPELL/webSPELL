@@ -25,7 +25,7 @@
 ##########################################################################
 */
 
-$_language->read_module('boards');
+$_language->readModule('boards');
 
 if(!isforumadmin($userID) OR mb_substr(basename($_SERVER['REQUEST_URI']),0,15) != "admincenter.php") die($_language->module['access_denied']);
 
@@ -33,7 +33,7 @@ if(isset($_POST['savemods'])) {
 	$boardID = $_POST['boardID'];
 	if(isset($_POST['mods'])){
 		$mods = $_POST['mods'];
-		$CAPCLASS = new Captcha;
+		$CAPCLASS = new \webspell\Captcha;
 		if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
 			safe_query("DELETE FROM ".PREFIX."forum_moderators WHERE boardID='$boardID'");
 			if(is_array($mods)) {
@@ -47,7 +47,7 @@ if(isset($_POST['savemods'])) {
 		}
 	}
 	else{
-		$CAPCLASS = new Captcha;
+		$CAPCLASS = new \webspell\Captcha;
 		if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
 			safe_query("DELETE FROM ".PREFIX."forum_moderators WHERE boardID='$boardID'");
 		}
@@ -59,7 +59,7 @@ if(isset($_POST['savemods'])) {
 
 elseif(isset($_GET['delete'])) {
 	$boardID = $_GET['boardID'];
-	$CAPCLASS = new Captcha;
+	$CAPCLASS = new \webspell\Captcha;
 	if($CAPCLASS->check_captcha(0, $_GET['captcha_hash'])) {
 		safe_query("DELETE FROM ".PREFIX."forum_posts WHERE boardID='$boardID' ");
 		safe_query("
@@ -74,7 +74,7 @@ elseif(isset($_GET['delete'])) {
 
 elseif(isset($_GET['delcat'])) {
 	$catID = $_GET['catID'];
-	$CAPCLASS = new Captcha;
+	$CAPCLASS = new \webspell\Captcha;
 	if($CAPCLASS->check_captcha(0, $_GET['captcha_hash'])) {
 		safe_query("UPDATE ".PREFIX."forum_boards SET category='0' WHERE category='$catID' ");
 		safe_query("DELETE FROM ".PREFIX."forum_categories WHERE catID='$catID' ");
@@ -111,7 +111,7 @@ elseif(isset($_POST['save'])) {
 	else $writegrps='';
 
 	if($kath=="") $kath=0;
-	$CAPCLASS = new Captcha;
+	$CAPCLASS = new \webspell\Captcha;
 	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
   		safe_query("INSERT INTO ".PREFIX."forum_boards ( category, name, info, readgrps, writegrps, sort )
   values( '$kath', '$name', '$boardinfo', '$readgrps', '$writegrps', '1' )");
@@ -123,7 +123,7 @@ elseif(isset($_POST['savecat'])) {
 	$catinfo = $_POST['catinfo'];
 	if(isset($_POST['readgrps'])) $readgrps = implode(";", $_POST['readgrps']);
 	else $readgrps='';
-	$CAPCLASS = new Captcha;
+	$CAPCLASS = new \webspell\Captcha;
 	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
 		safe_query("INSERT INTO ".PREFIX."forum_categories ( readgrps, name, info, sort ) values( '$readgrps', '$catname', '$catinfo', '1' )");
 	} else echo $_language->module['transaction_invalid'];
@@ -139,7 +139,7 @@ elseif(isset($_POST['saveedit'])) {
 	if(isset($_POST['writegrps'])) $writegrps = implode(";", $_POST['writegrps']);
 	else $writegrps='';
 
-	$CAPCLASS = new Captcha;
+	$CAPCLASS = new \webspell\Captcha;
 	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
 		safe_query("UPDATE ".PREFIX."forum_boards SET category='$kath',
 		           name='$name',
@@ -156,7 +156,7 @@ elseif(isset($_POST['saveeditcat'])) {
 	$catID = $_POST['catID'];
 	if(isset($_POST['readgrps'])) $readgrps = implode(";", $_POST['readgrps']);
 	else $readgrps='';
-	$CAPCLASS = new Captcha;
+	$CAPCLASS = new \webspell\Captcha;
 	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
 		safe_query("UPDATE ".PREFIX."forum_categories SET readgrps='$readgrps', name='$catname', info='$catinfo' WHERE catID='$catID' ");
 	} else echo $_language->module['transaction_invalid'];
@@ -186,9 +186,9 @@ if($action=="mods") {
 		if($ismod) echo'<option value="'.$dm['userID'].'" selected="selected">'.$nick.'</option>';
 		else echo'<option value="'.$dm['userID'].'">'.$nick.'</option>';
 	}
-	$CAPCLASS = new Captcha;
-	$CAPCLASS->create_transaction();
-	$hash = $CAPCLASS->get_hash();
+	$CAPCLASS = new \webspell\Captcha;
+	$CAPCLASS->createTransaction();
+	$hash = $CAPCLASS->getHash();
 
 	echo'</select><br /><br />
 	<input type="hidden" name="captcha_hash" value="'.$hash.'" />
@@ -213,9 +213,9 @@ elseif($action=="add") {
 	while($db=mysqli_fetch_array($sql)) {
 		$groups.='<option value="'.$db['fgrID'].'">'.getinput($db['name']).'</option>';
 	}
-	$CAPCLASS = new Captcha;
-	$CAPCLASS->create_transaction();
-	$hash = $CAPCLASS->get_hash();
+	$CAPCLASS = new \webspell\Captcha;
+	$CAPCLASS->createTransaction();
+	$hash = $CAPCLASS->getHash();
 	echo '<script>
 	<!--
 	function unselect_all(select_id) {
@@ -311,9 +311,9 @@ elseif($action=="edit") {
 		else $selected = '';
 		$writegrps .= '<option value="'.$fgrID.'"'.$selected.'>'.getinput($name).'</option>';
 	}
-	$CAPCLASS = new Captcha;
-	$CAPCLASS->create_transaction();
-	$hash = $CAPCLASS->get_hash();
+	$CAPCLASS = new \webspell\Captcha;
+	$CAPCLASS->createTransaction();
+	$hash = $CAPCLASS->getHash();
 
 	echo '<script>
 	<!--
@@ -371,9 +371,9 @@ elseif($action=="addcat") {
 		$groups .= '<option value="'.$db['fgrID'].'">'.getinput($db['name']).'</option>';
 	}
 	$groups .= '</select>';
-	$CAPCLASS = new Captcha;
-	$CAPCLASS->create_transaction();
-	$hash = $CAPCLASS->get_hash();
+	$CAPCLASS = new \webspell\Captcha;
+	$CAPCLASS->createTransaction();
+	$hash = $CAPCLASS->getHash();
 	echo '<script>
 	<!--
 	function unselect_all(select_id) {
@@ -429,9 +429,9 @@ elseif($action=="editcat") {
 		$groups.='<option value="'.$db['fgrID'].'" '.$selected.'>'.getinput($db['name']).'</option>';
 	}
 	$groups.='</select>';
-  $CAPCLASS = new Captcha;
-	$CAPCLASS->create_transaction();
-	$hash = $CAPCLASS->get_hash();
+  $CAPCLASS = new \webspell\Captcha;
+	$CAPCLASS->createTransaction();
+	$hash = $CAPCLASS->getHash();
 	echo '<script>
 	<!--
 	function unselect_all(select_id) {
@@ -472,7 +472,7 @@ else {
 	echo'<h1>&curren; '.$_language->module['boards'].'</h1>';
 
 	echo'<input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=boards&amp;action=addcat\');return document.MM_returnValue" value="'.$_language->module['new_category'].'" />
-  <input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=boards&amp;action=add\');return document.MM_returnValue" value="'.$_language->module['new_board'].'" /><br /><br />';	
+  <input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=boards&amp;action=add\');return document.MM_returnValue" value="'.$_language->module['new_board'].'" /><br /><br />';
 
 	echo'<form method="post" action="admincenter.php?site=boards">
   <table width="100%" border="0" cellspacing="1" cellpadding="3" bgcolor="#DDDDDD">
@@ -487,15 +487,15 @@ else {
 	$tmp=mysqli_fetch_assoc(safe_query("SELECT count(catID) as cnt FROM ".PREFIX."forum_categories"));
 	$anz=$tmp['cnt'];
 
-	$CAPCLASS = new Captcha;
-	$CAPCLASS->create_transaction();
-	$hash = $CAPCLASS->get_hash();
+	$CAPCLASS = new \webspell\Captcha;
+	$CAPCLASS->createTransaction();
+	$hash = $CAPCLASS->getHash();
 	while($ds=mysqli_fetch_array($ergebnis)) {
 
 	    echo'<tr bgcolor="#CCCCCC">
 	      <td class="td_head"><b>'.getinput($ds['name']).'</b><br><small>'.getinput($ds['info']).'</small></td>
 	      <td class="td_head"></td>
-	      <td class="td_head" align="center"><input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=boards&amp;action=editcat&amp;catID='.$ds['catID'].'\');return document.MM_returnValue" value="'.$_language->module['edit'].'" /> 
+	      <td class="td_head" align="center"><input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=boards&amp;action=editcat&amp;catID='.$ds['catID'].'\');return document.MM_returnValue" value="'.$_language->module['edit'].'" />
 	      <input type="button" onclick="MM_confirm(\''.$_language->module['really_delete_category'].'\', \'admincenter.php?site=boards&amp;delcat=true&amp;catID='.$ds['catID'].'&amp;captcha_hash='.$hash.'\')" value="'.$_language->module['delete'].'" /></td>
 	      <td class="td_head" align="center"><select name="sortcat[]">';
 
@@ -512,9 +512,9 @@ else {
 		$anzboards=$tmp['cnt'];
 
 		$i=1;
-		$CAPCLASS = new Captcha;
-	    $CAPCLASS->create_transaction();
-	    $hash = $CAPCLASS->get_hash();
+		$CAPCLASS = new \webspell\Captcha;
+	    $CAPCLASS->createTransaction();
+	    $hash = $CAPCLASS->getHash();
 	    while($db=mysqli_fetch_array($boards)) {
 	      if($i%2) { $td='td1'; }
 	      else { $td='td2'; }
@@ -522,7 +522,7 @@ else {
 	      echo'<tr>
 	        <td class="'.$td.'">'.$db['name'].'<br><small>'.$db['info'].'</small></td>
 	        <td class="'.$td.'" align="center"><input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=boards&amp;action=mods&amp;boardID='.$db['boardID'].'\');return document.MM_returnValue" value="'.$_language->module['mods'].'" /></td>
-	        <td class="'.$td.'" align="center"><input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=boards&amp;action=edit&amp;boardID='.$db['boardID'].'\');return document.MM_returnValue" value="'.$_language->module['edit'].'" /> 
+	        <td class="'.$td.'" align="center"><input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=boards&amp;action=edit&amp;boardID='.$db['boardID'].'\');return document.MM_returnValue" value="'.$_language->module['edit'].'" />
 	        <input type="button" onclick="MM_confirm(\''.$_language->module['really_delete_board'].'\', \'admincenter.php?site=boards&amp;delete=true&amp;boardID='.$db['boardID'].'&amp;captcha_hash='.$hash.'\')" value="'.$_language->module['delete'].'" /></td>
 	        <td class="'.$td.'" align="center"><select name="sortboards[]">';
 
@@ -541,15 +541,15 @@ else {
 	$boards=safe_query("SELECT * FROM ".PREFIX."forum_boards WHERE category='0' ORDER BY sort");
 	$tmp=mysqli_fetch_assoc(safe_query("SELECT count(boardID) as cnt FROM ".PREFIX."forum_boards WHERE category='0'"));
 	$anzboards=$tmp['cnt'];
-	$CAPCLASS = new Captcha;
-	$CAPCLASS->create_transaction();
-	$hash = $CAPCLASS->get_hash();
+	$CAPCLASS = new \webspell\Captcha;
+	$CAPCLASS->createTransaction();
+	$hash = $CAPCLASS->getHash();
 	while($db=mysqli_fetch_array($boards)) {
 
 		echo'<tr bgcolor="#dcdcdc">
       <td bgcolor="#FFFFFF"><b>'.getinput($db['name']).'</b></td>
       <td bgcolor="#FFFFFF"><input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=boards&amp;action=mods&amp;boardID='.$db['boardID'].'\');return document.MM_returnValue" value="'.$_language->module['mods'].'" /></td>
-      <td bgcolor="#FFFFFF"><input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=boards&amp;action=edit&amp;boardID='.$db['boardID'].'\');return document.MM_returnValue" value="'.$_language->module['edit'].'" /> 
+      <td bgcolor="#FFFFFF"><input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=boards&amp;action=edit&amp;boardID='.$db['boardID'].'\');return document.MM_returnValue" value="'.$_language->module['edit'].'" />
       <input type="button" onclick="MM_confirm(\''.$_language->module['really_delete_board'].'\', \'admincenter.php?site=boards&amp;delete=true&amp;boardID='.$db['boardID'].'&amp;captcha_hash='.$hash.'\')" value="delete" /></td>
       <td bgcolor="#FFFFFF"><select name="sort[]">';
 

@@ -25,7 +25,7 @@
 ##########################################################################
 */
 
-$_language->read_module('sponsors');
+$_language->readModule('sponsors');
 
 if(!ispageadmin($userID) OR mb_substr(basename($_SERVER['REQUEST_URI']),0,15) != "admincenter.php") die($_language->module['access_denied']);
 
@@ -38,11 +38,11 @@ if($action=="add") {
 
   echo'<h1>&curren; <a href="admincenter.php?site=sponsors" class="white">'.$_language->module['sponsors'].'</a> &raquo; '.$_language->module['add_sponsor'].'</h1>';
 
-	$CAPCLASS = new Captcha;
-	$CAPCLASS->create_transaction();
-	$hash = $CAPCLASS->get_hash();
+	$CAPCLASS = new \webspell\Captcha;
+	$CAPCLASS->createTransaction();
+	$hash = $CAPCLASS->getHash();
 
-	$_language->read_module('bbcode', true);
+	$_language->readModule('bbcode', true);
 
 	eval ("\$addbbcode = \"".gettemplate("addbbcode", "html", "admin")."\";");
 	eval ("\$addflags = \"".gettemplate("flags_admin", "html", "admin")."\";");
@@ -119,11 +119,11 @@ elseif($action=="edit") {
 	if($ds['mainsponsor']=='1') $mainsponsor='<input type="checkbox" name="mainsponsor" value="1" checked="checked" />';
 	else $mainsponsor='<input type="checkbox" name="mainsponsor" value="1" />';
 
-	$CAPCLASS = new Captcha;
-	$CAPCLASS->create_transaction();
-	$hash = $CAPCLASS->get_hash();
+	$CAPCLASS = new \webspell\Captcha;
+	$CAPCLASS->createTransaction();
+	$hash = $CAPCLASS->getHash();
 
-	$_language->read_module('bbcode', true);
+	$_language->readModule('bbcode', true);
 
 	eval ("\$addbbcode = \"".gettemplate("addbbcode", "html", "admin")."\";");
 	eval ("\$addflags = \"".gettemplate("flags_admin", "html", "admin")."\";");
@@ -194,7 +194,7 @@ elseif($action=="edit") {
 }
 
 elseif(isset($_POST['sortieren'])) {
- 	$CAPCLASS = new Captcha;
+ 	$CAPCLASS = new \webspell\Captcha;
 	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
 		$sort = $_POST['sort'];
 		if(is_array($sort)) {
@@ -220,7 +220,7 @@ elseif(isset($_POST["save"])) {
 	else $mainsponsor="";
 	if(!$mainsponsor) $mainsponsor=0;
 
-  	$CAPCLASS = new Captcha;
+  	$CAPCLASS = new \webspell\Captcha;
 	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
 		safe_query("INSERT INTO ".PREFIX."sponsors (sponsorID, name, url, info, displayed, mainsponsor, date, sort) values('', '".$name."', '".$url."', '".$info."', '".$displayed."', '".$mainsponsor."', '".time()."', '1')");
 
@@ -304,7 +304,7 @@ elseif(isset($_POST["saveedit"])) {
 	else $mainsponsor="";
 	if(!$mainsponsor) $mainsponsor=0;
 
-	$CAPCLASS = new Captcha;
+	$CAPCLASS = new \webspell\Captcha;
 	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
 
 		if(stristr($url, 'http://')) $url=$url;
@@ -380,7 +380,7 @@ elseif(isset($_POST["saveedit"])) {
 }
 
 elseif(isset($_GET["delete"])) {
- 	$CAPCLASS = new Captcha;
+ 	$CAPCLASS = new \webspell\Captcha;
 	if($CAPCLASS->check_captcha(0, $_GET['captcha_hash'])) {
 		if(safe_query("DELETE FROM ".PREFIX."sponsors WHERE sponsorID='".$_GET["sponsorID"]."'")) {
 			if(file_exists($filepath.$_GET["sponsorID"].'.gif')) unlink($filepath.$_GET["sponsorID"].'.gif');
@@ -413,9 +413,9 @@ else {
       <td width="8%" class="title"><b>'.$_language->module['sort'].'</b></td>
     </tr>';
 
-	$CAPCLASS = new Captcha;
-	$CAPCLASS->create_transaction();
-	$hash = $CAPCLASS->get_hash();
+	$CAPCLASS = new \webspell\Captcha;
+	$CAPCLASS->createTransaction();
+	$hash = $CAPCLASS->getHash();
 
 	$qry=safe_query("SELECT * FROM ".PREFIX."sponsors ORDER BY sort");
 	$anz=mysqli_num_rows($qry);

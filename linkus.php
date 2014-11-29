@@ -29,14 +29,14 @@ if(isset($_GET['action'])) $action = $_GET['action'];
 else $action = "";
 
 if(isset($_POST['save'])) {
-	$_language->read_module('linkus');
+	$_language->readModule('linkus');
 	if(!ispageadmin($userID)) die('<div class="alert alert-danger" role="alert">'.$_language->module['no_access'].'</div>');
-	
+
 	safe_query("INSERT INTO ".PREFIX."linkus ( name ) VALUES( '".$_POST['name']."' ) ");
 	$id=mysqli_insert_id($_database);
 	$banner = $_FILES['banner'];
 	$filepath = "./images/linkus/";
-	
+
 	if($banner['name'] != "") {
 		move_uploaded_file($banner['tmp_name'], $filepath.$banner['name'].".tmp");
 		@chmod($filepath.$banner['name'].".tmp", 0755);
@@ -81,15 +81,15 @@ if(isset($_POST['save'])) {
 	}
 }
 elseif(isset($_POST['saveedit'])) {
-	$_language->read_module('linkus');
+	$_language->readModule('linkus');
 	if(!ispageadmin($userID)) die('<div class="alert alert-danger" role="alert">'.$_language->module['no_access'].'</div>');
-	
+
 	safe_query("UPDATE ".PREFIX."linkus SET name='".$_POST['name']."' WHERE bannerID='".$_POST['bannerID']."'");
-	
+
 	$filepath = "./images/linkus/";
 	$id=$_POST['bannerID'];
 	$banner = $_FILES['banner'];
-	
+
 	if($banner['name'] != "") {
 		move_uploaded_file($banner['tmp_name'], $filepath.$banner['name'].".tmp");
 		@chmod($filepath.$banner['name'].".tmp", 0755);
@@ -137,9 +137,9 @@ elseif(isset($_GET['delete'])) {
 	include("_mysql.php");
 	include("_settings.php");
 	include('_functions.php');
-	$_language->read_module('linkus');
+	$_language->readModule('linkus');
 	if(!ispageadmin($userID)) die('<div class="alert alert-danger" role="alert">'.$_language->module['no_access'].'</div>');
-	
+
 	$bannerID = $_GET['bannerID'];
 	$filepath = "./images/linkus/";
 	safe_query("DELETE FROM ".PREFIX."linkus WHERE bannerID='".$bannerID."'");
@@ -149,7 +149,7 @@ elseif(isset($_GET['delete'])) {
 	header("Location: index.php?site=linkus");
 }
 
-$_language->read_module('linkus');
+$_language->readModule('linkus');
 
 eval ("\$title_linkus = \"".gettemplate("title_linkus")."\";");
 echo $title_linkus;
@@ -166,7 +166,7 @@ elseif($action=="edit") {
 		$ds=mysqli_fetch_array(safe_query("SELECT * FROM ".PREFIX."linkus WHERE bannerID='".$bannerID."'"));
 		$name=getinput($ds['name']);
 		$banner='<img src="images/linkus/'.$ds['file'].'" alt="">';
-		
+
 		eval ("\$linkus_edit = \"".gettemplate("linkus_edit")."\";");
 		echo $linkus_edit;
 	} else redirect('index.php?site=linkus', '<div class="alert alert-danger" role="alert">'.$_language->module['no_access'].'</div>');
@@ -179,7 +179,7 @@ else {
 	if(mysqli_num_rows($ergebnis)) {
 		$i=1;
 		while($ds=mysqli_fetch_array($ergebnis)) {
-			
+
 			$name=htmloutput($ds['name']);
 			$fileinfo=getimagesize($filepath.$ds['file']);
 			if($fileinfo[0]>$picsize_l) $width=' width="'.$picsize_l.'"';
@@ -188,7 +188,7 @@ else {
 			else $height='';
 			$banner='<img src="'.$filepath.$ds['file'].'" class="img-responsive">';
 			$code = '&lt;a href=&quot;http://'.$hp_url.'&quot;&gt;&lt;img src=&quot;http://'.$hp_url.$filepath2.$ds['file'].'&quot; alt=&quot;'.$myclanname.'&quot;&gt;&lt;/a&gt;';
-			
+
 			$adminaction='';
 			if(ispageadmin($userID)) {
 				$adminaction='<div class="pull-right">
@@ -196,11 +196,11 @@ else {
 					<a href="linkus.php?delete=true&amp;bannerID='.$ds['bannerID'].'" class="btn btn-danger btn-sm" role="button">'.$_language->module['delete'].'</a>
 				</div>';
 			}
-			
+
 			eval("\$linkus = \"".gettemplate("linkus")."\";");
 			echo $linkus;
 			$i++;
 		}
 	} else echo '<div class="alert alert-info" role="alert">'.$_language->module['no_banner'].'</div>';
 }
-?> 
+?>

@@ -25,7 +25,7 @@
 ##########################################################################
 */
 
-$_language->read_module('sc_randompic');
+$_language->readModule('sc_randompic');
 
 //get files
 $pic_array = Array();
@@ -42,7 +42,7 @@ closedir($picdir);
 natcasesort ($pic_array);
 reset ($pic_array);
 
-//get randompic
+//get randomPic
 $anz = count($pic_array);
 if($anz) {
 	$the_pic = $pic_array[rand(0,($anz-1))];
@@ -54,7 +54,7 @@ if($anz) {
 
   	eval ("\$sc_randompic = \"".gettemplate("sc_randompic")."\";");
 	echo $sc_randompic;
-  
+
 } else echo $_language->module['no_user'];
 
 ?>

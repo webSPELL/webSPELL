@@ -25,7 +25,7 @@
 ##########################################################################
 */
 
-$_language->read_module('newsletter');
+$_language->readModule('newsletter');
 
 if($loggedin){
 	$usermail = getemail($userID);

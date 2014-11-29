@@ -25,7 +25,7 @@
 ##########################################################################
 */
 
-$_language->read_module('news');
+$_language->readModule('news');
 
 $ergebnis=safe_query("SELECT newsID FROM ".PREFIX."news WHERE newsID='".$topnewsID."' AND intern<=".(int)isclanmember($userID)." AND published='1' LIMIT 0,1");
 $anz = mysqli_num_rows($ergebnis);

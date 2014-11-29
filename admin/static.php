@@ -25,12 +25,12 @@
 ##########################################################################
 */
 
-$_language->read_module('static');
+$_language->readModule('static');
 
 if(!ispageadmin($userID) OR mb_substr(basename($_SERVER['REQUEST_URI']),0,15) != "admincenter.php") die($_language->module['access_denied']);
 
 if(isset($_POST['save'])) {
- 	$CAPCLASS = new Captcha;
+ 	$CAPCLASS = new \webspell\Captcha;
 	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
 		if(isset($_POST['staticID']) and $_POST['staticID']) {
 			safe_query("UPDATE `".PREFIX."static` SET name='".$_POST['name']."', accesslevel='".$_POST['accesslevel']."', content='".$_POST['message']."' WHERE staticID='".$_POST['staticID']."'");
@@ -45,7 +45,7 @@ if(isset($_POST['save'])) {
 }
 
 elseif(isset($_GET['delete'])) {
- 	$CAPCLASS = new Captcha;
+ 	$CAPCLASS = new \webspell\Captcha;
 	if($CAPCLASS->check_captcha(0, $_GET['captcha_hash'])) {
 		Tags::removeTags('static', $_GET['staticID']);
 		safe_query("DELETE FROM `".PREFIX."static` WHERE staticID='".$_GET['staticID']."'");
@@ -53,10 +53,10 @@ elseif(isset($_GET['delete'])) {
 }
 
 if(isset($_GET['action']) and $_GET['action'] == "add") {
-	$CAPCLASS = new Captcha;
-	$CAPCLASS->create_transaction();
-	$hash = $CAPCLASS->get_hash();
-  $_language->read_module('bbcode', true);
+	$CAPCLASS = new \webspell\Captcha;
+	$CAPCLASS->createTransaction();
+	$hash = $CAPCLASS->getHash();
+  $_language->readModule('bbcode', true);
 
   echo'<h1>&curren; <a href="admincenter.php?site=static" class="white">'.$_language->module['static_pages'].'</a> &raquo; '.$_language->module['add_static_page'].'</h1>';
 
@@ -108,7 +108,7 @@ if(isset($_GET['action']) and $_GET['action'] == "add") {
 
 elseif(isset($_GET['action']) and $_GET['action'] == "edit") {
 
-	$_language->read_module('bbcode', true);
+	$_language->readModule('bbcode', true);
 
   $staticID = $_GET['staticID'];
 	$ergebnis=safe_query("SELECT * FROM `".PREFIX."static` WHERE staticID='".$staticID."'");
@@ -124,9 +124,9 @@ elseif(isset($_GET['action']) and $_GET['action'] == "edit") {
 
 	$tags = Tags::getTags('static', $staticID);
 
-	$CAPCLASS = new Captcha;
-	$CAPCLASS->create_transaction();
-	$hash = $CAPCLASS->get_hash();
+	$CAPCLASS = new \webspell\Captcha;
+	$CAPCLASS->createTransaction();
+	$hash = $CAPCLASS->getHash();
 
 	echo'<h1>&curren; <a href="admincenter.php?site=static" class="white">'.$_language->module['static_pages'].'</a> &raquo; '.$_language->module['edit_static_page'].'</h1>';
 
@@ -192,9 +192,9 @@ else {
     </tr>';
 
 	$i=1;
-	$CAPCLASS = new Captcha;
-	$CAPCLASS->create_transaction();
-	$hash = $CAPCLASS->get_hash();
+	$CAPCLASS = new \webspell\Captcha;
+	$CAPCLASS->createTransaction();
+	$hash = $CAPCLASS->getHash();
 
   while($ds=mysqli_fetch_array($ergebnis)) {
     if($i%2) { $td='td1'; }

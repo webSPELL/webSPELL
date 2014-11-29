@@ -25,7 +25,7 @@
 ##########################################################################
 */
 
-$_language->read_module('polls');
+$_language->readModule('polls');
 
 function vote($poll) {
 	global $userID, $_language;

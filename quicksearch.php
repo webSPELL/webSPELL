@@ -25,9 +25,9 @@
 ##########################################################################
 */
 
-$_language->read_module('search');
+$_language->readModule('search');
 
 eval ("\$quicksearch = \"".gettemplate("quicksearch")."\";");
 echo $quicksearch;
 
-?>	
+?>

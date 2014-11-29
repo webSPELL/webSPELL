@@ -32,7 +32,7 @@ if($action=="save") {
 	include("_mysql.php");
 	include("_settings.php");
 	include("_functions.php");
-	$_language->read_module('articles');
+	$_language->readModule('articles');
 
 	if(!isnewsadmin($userID)) die($_language->module['no_access']);
 	$title = $_POST['title'];
@@ -75,7 +75,7 @@ if($action=="save") {
 	if($anzpages > count($message)) {
 		safe_query("DELETE FROM `".PREFIX."articles_contents` WHERE `articlesID` = '".$articlesID."' and `page` > ".count($message));
 	}
-	
+
 	for($i = 0; $i <= count($message); $i++) {
 	 	if(isset($message[$i])){
 			if($i >= $anzpages) {
@@ -99,7 +99,7 @@ elseif(isset($_GET['delete'])) {
 	include("_mysql.php");
 	include("_settings.php");
 	include("_functions.php");
-	$_language->read_module('articles');
+	$_language->readModule('articles');
 
 	if(!isnewsadmin($userID)) die($_language->module['no_access']);
 
@@ -132,8 +132,8 @@ function top5() {
 
 	global $_language;
 
-	$_language->read_module('articles');
-      
+	$_language->readModule('articles');
+
 	// RATING
 	$ergebnis=safe_query("SELECT * FROM ".PREFIX."articles WHERE saved='1' ORDER BY rating DESC LIMIT 0,5");
 	$top=$_language->module['top5_rating'];
@@ -141,7 +141,7 @@ function top5() {
 
   	eval ("\$top5_head = \"".gettemplate("top5_head")."\";");
   	echo $top5_head;
-	
+
   	$n=1;
 	while($ds=mysqli_fetch_array($ergebnis)) {
 		if($n%2) {
@@ -164,22 +164,22 @@ function top5() {
 		foreach($ratings as $pic) {
 			$ratingpic.='<img src="images/icons/rating_'.$pic.'.gif" width="4" height="5" alt="">';
 		}
-		
+
     	echo'<li class="list-group-item"><span class="badge">'.$ratingpic.'</span>'.$n.' '.$title.'</li>';
 
 		unset($ratingpic);
 		$n++;
 	}
-	
+
   	echo'</ul></div>';
-  
+
 	// POINTS
 	$ergebnis=safe_query("SELECT * FROM ".PREFIX."articles WHERE saved='1' ORDER BY points DESC LIMIT 0,5");
 	$top=$_language->module['top5_points'];
-	
+
   	eval ("\$top5_head = \"".gettemplate("top5_head")."\";");
 	echo $top5_head;
-  
+
 	$n=1;
 	while($ds=mysqli_fetch_array($ergebnis)) {
     if($n%2) {
@@ -190,11 +190,11 @@ function top5() {
 			$bg1=BG_3;
 			$bg2=BG_4;
 		}
-    
+
 		$title='<a href="index.php?site=articles&amp;action=show&amp;articlesID='.$ds['articlesID'].'">'.clearfromtags($ds['title']).'</a>';
 		$viewed='('.$ds['viewed'].')';
 		echo'<li class="list-group-item"><span class="badge">'.$ds['points'].'</span>'.$n.' '.$title.'</li>';
-      
+
 		$n++;
 	}
 	echo'</ul></div></div>';
@@ -205,8 +205,8 @@ if($action=="new") {
 	include("_settings.php");
 	include("_functions.php");
 
-	$_language->read_module('articles');
-	$_language->read_module('bbcode', true);
+	$_language->readModule('articles');
+	$_language->readModule('bbcode', true);
 
 	$pagebg=PAGEBG;
 	$border=BORDER;
@@ -241,8 +241,8 @@ elseif($action=="edit") {
 	include("_settings.php");
 	include("_functions.php");
 
-	$_language->read_module('articles');
-	$_language->read_module('bbcode', true);
+	$_language->readModule('articles');
+	$_language->readModule('bbcode', true);
 
 	$articlesID = $_GET['articlesID'];
 
@@ -285,7 +285,7 @@ elseif($action=="edit") {
 		$url2=getinput($ds['url2']);
 		$url3=getinput($ds['url3']);
 		$url4=getinput($ds['url4']);
-		
+
     	if($ds['window1']) $window1='<input class="input" name="window1" type="radio" value="1" checked="checked"> '.$_language->module['new_window'].' <input class="input" type="radio" name="window1" value="0"> '.$_language->module['self'].'';
 		else $window1='<input class="input" name="window1" type="radio" value="1"> '.$_language->module['new_window'].' <input class="input" type="radio" name="window1" value="0" checked="checked"> '.$_language->module['self'].'';
 
@@ -314,7 +314,7 @@ elseif($action=="edit") {
 }
 elseif($action=="show") {
 
-	$_language->read_module('articles');
+	$_language->readModule('articles');
 
 	$articlesID = (int)$_GET['articlesID'];
 	if(isset($_GET['page'])) $page = (int)$_GET['page'];
@@ -404,7 +404,7 @@ elseif($action=="show") {
                   <option>9</option>
                   <option>10 - '.$_language->module['perfect'].'</option>
                 </select>
-                
+
                 <span class="input-group-btn">
                   <input type="submit" name="Submit" value="'.$_language->module['rate'].'" class="btn btn-primary">
                 </span>
@@ -416,7 +416,7 @@ elseif($action=="show") {
 		else $rateform=$_language->module['login_for_rate'];
 
 		$tags = Tags::getTagsLinked('articles',$articlesID);
-		
+
 		$bg1=BG_1;
 		eval ("\$articles = \"".gettemplate("articles")."\";");
 		echo $articles;
@@ -439,7 +439,7 @@ elseif($action=="show") {
 }
 else {
 
-	$_language->read_module('articles');
+	$_language->readModule('articles');
 
 	if(isset($_GET['page'])) $page=(int)$_GET['page'];
 	else $page = 1;
@@ -451,10 +451,10 @@ else {
 	if(isset($_GET['type'])){
 	  if(($_GET['type']=='ASC') || ($_GET['type']=='DESC')) $type=$_GET['type'];
 	}
-	
+
 	eval ("\$title_articles = \"".gettemplate("title_articles")."\";");
 	echo $title_articles;
-	
+
   if(isnewsadmin($userID)) echo'<p><input type="button" onclick="MM_openBrWindow(\'articles.php?action=new\',\'Articles\',\'toolbar=no,status=no,scrollbars=yes,width=800,height=600\');" value="'.$_language->module['new_article'].'" class="btn btn-danger"></p>';
 
 	$alle=safe_query("SELECT articlesID FROM ".PREFIX."articles WHERE saved='1'");
@@ -490,10 +490,10 @@ else {
 
 
 		if($pages>1) echo $page_link;
-		
+
     eval ("\$articles_head = \"".gettemplate("articles_head")."\";");
 		echo $articles_head;
-    
+
 		$n=1;
 		while($ds=mysqli_fetch_array($ergebnis)) {
 			if($n%2) {

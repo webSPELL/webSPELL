@@ -25,11 +25,11 @@
 ##########################################################################
 */
 
-$_language->read_module('report');
+$_language->readModule('report');
 if(isset($run)) $run=1; else $run=0;
 if($userID) $run=1;
 else {
-	$CAPCLASS = new Captcha;
+	$CAPCLASS = new \webspell\Captcha;
 	if($CAPCLASS->check_captcha($_POST['captcha'], $_POST['captcha_hash'])) $run=1;
 }
 

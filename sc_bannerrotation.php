@@ -25,7 +25,7 @@
 ##########################################################################
 */
 
-$_language->read_module('sc_bannerrotation');
+$_language->readModule('sc_bannerrotation');
 
 //get banner
 $allbanner = safe_query("SELECT * FROM ".PREFIX."bannerrotation WHERE displayed='1' ORDER BY RAND() LIMIT 0,1");

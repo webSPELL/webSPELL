@@ -30,7 +30,7 @@ include("_mysql.php");
 include("_settings.php");
 include("_functions.php");
 
-$_language->read_module('index');
+$_language->readModule('index');
 $index_language = $_language->module;
 // end important data include
 
@@ -69,18 +69,18 @@ header('X-UA-Compatible: IE=edge,chrome=1');
                 </button>
                 <a class="navbar-brand" href="index.php"><?php echo $myclanname ?></a>
             </div>
-            
-            <div class="navbar-collapse collapse"> 
+
+            <div class="navbar-collapse collapse">
                 <?php include("navigation.php"); ?>
             </div>
-            
+
         </div><!-- container -->
 </div><!-- navbar navbar-inverse navbar-fixed-top -->
 
-<div class="ws_main_wrapper">    
-    
+<div class="ws_main_wrapper">
+
     <div class="container">
-        
+
         <div class="row">
 
 <?php if(!in_array($site, $hide1)) { // show left column ?>
@@ -91,55 +91,55 @@ header('X-UA-Compatible: IE=edge,chrome=1');
                 <?php include("poll.php"); ?>
                 <!-- end poll include -->
                 <hr class="grey">
-                
+
                 <!-- pic of the moment include -->
                 <b><?php echo $myclanname.".".$index_language['pic_of_the_moment']; ?></b><br>
                 <p class="text-center"><?php include("sc_potm.php"); ?></p>
                 <!-- end pic of the moment include -->
                 <hr class="grey">
-                
+
                 <!-- language switch include -->
                 <b><?php echo $myclanname.".".$index_language['language_switch']; ?></b><br>
                 <p class="text-center"><?php include("sc_language.php"); ?></p>
                 <!-- end language switch include -->
                 <hr class="grey">
-                
+
                 <!-- randompic include -->
                 <b><?php echo $myclanname.".".$index_language['random_user']; ?></b><br>
                 <?php include("sc_randompic.php"); ?>
                 <!-- end randompic include -->
                 <hr class="grey">
-                
+
                 <!-- articles include -->
                 <b><?php echo $myclanname.".".$index_language['articles']; ?></b><br>
                 <?php include("sc_articles.php"); ?>
                 <!-- end articles include -->
                 <hr class="grey">
-                
+
                 <!-- downloads include -->
                 <b><?php echo $myclanname.".".$index_language['downloads']; ?></b><br>
                 <?php include("sc_files.php"); ?>
                 <!-- end downloads include -->
                 <hr class="grey">
-                
+
                 <!-- servers include -->
                 <b><?php echo $myclanname.".".$index_language['server']; ?></b><br>
                 <?php include("sc_servers.php"); ?>
                 <!-- end servers include -->
                 <hr class="grey">
-                
+
                 <!-- sponsors include -->
                 <b><?php echo $myclanname.".".$index_language['sponsors']; ?></b><br>
                 <p class="text-center"><?php include("sc_sponsors.php"); ?></p>
                 <!-- end sponsors include -->
                 <hr class="grey">
-                
+
                 <!-- partners include -->
                 <b><?php echo $myclanname.".".$index_language['partners']; ?></b><br>
                 <p class="text-center"><?php include("partners.php"); ?></p>
                 <!-- end partners include -->
             </div>
-<?php } // end of show left column ?>            
+<?php } // end of show left column ?>
             <!-- main content area -->
             <div id="maincol" class="<?php if(in_array($site, $hide1)) echo "col-lg-9 col-sm-9 col-xs-12"; else echo"col-lg-6 col-sm-9 col-xs-12"; ?>">
                 <?php
@@ -150,7 +150,7 @@ header('X-UA-Compatible: IE=edge,chrome=1');
                     include($site.".php");
                 ?>
             </div>
-             
+
             <!-- right column -->
             <div id="rightcol" class="col-md-3 col-sm-3">
                 <!-- login include -->
@@ -159,18 +159,18 @@ header('X-UA-Compatible: IE=edge,chrome=1');
                     <?php include("login.php"); ?>
                     <hr class="grey">
                 </div>
-                
+
                 <div class="visible-sm">
                     <b><?php echo $myclanname.".".$index_language['topics']; ?></b><br>
                     <?php include("latesttopics.php"); ?>
                 </div>
-                
+
                 <div class="visible-lg">
                     <b><?php echo $myclanname.".".$index_language['hotest_news']; ?></b><br>
                     <?php include("sc_topnews.php"); ?>
                     <hr class="grey">
                 </div>
-                
+
                 <div class="visible-sm">
                     <!-- headlines include -->
                     <b><?php echo $myclanname.".".$index_language['latest_news']; ?></b><br>
@@ -178,7 +178,7 @@ header('X-UA-Compatible: IE=edge,chrome=1');
                     <!-- end headlines include -->
                     <hr class="grey">
                 </div>
-                
+
                 <div class="visible-lg">
                     <!-- squads include -->
                     <b><?php echo $myclanname.".".$index_language['squads']; ?></b><br>
@@ -186,7 +186,7 @@ header('X-UA-Compatible: IE=edge,chrome=1');
                     <!-- end squads include -->
                     <hr class="grey">
                 </div>
-                
+
                 <div class="visible-sm">
                     <!-- clanwars include -->
                     <b><?php echo $myclanname.".".$index_language['matches']; ?></b><br>
@@ -194,7 +194,7 @@ header('X-UA-Compatible: IE=edge,chrome=1');
                     <!-- end clanwars include -->
                     <hr class="grey">
                 </div>
-                
+
                 <div class="visible-lg">
                     <!-- demos include -->
                     <b><?php echo $myclanname.".".$index_language['demos']; ?></b><br>
@@ -202,7 +202,7 @@ header('X-UA-Compatible: IE=edge,chrome=1');
                     <!-- end demos include -->
                     <hr class="grey">
                 </div>
-                
+
                 <div class="visible-lg">
                     <!-- upcoming events include -->
                     <b><?php echo $myclanname.".".$index_language['upcoming_events']; ?></b><br>
@@ -210,7 +210,7 @@ header('X-UA-Compatible: IE=edge,chrome=1');
                     <!-- end upcoming events include -->
                     <hr class="grey">
                 </div>
-                
+
                 <div class="visible-lg">
                     <!-- shoutbox include -->
                     <b><?php echo $myclanname.".".$index_language['shoutbox']; ?></b><br>
@@ -218,7 +218,7 @@ header('X-UA-Compatible: IE=edge,chrome=1');
                     <!-- end shoutbox include -->
                     <hr class="grey">
                 </div>
-                
+
                 <div class="visible-lg">
                     <hr class="grey">
                     <!-- newsletter include -->
@@ -226,7 +226,7 @@ header('X-UA-Compatible: IE=edge,chrome=1');
                     <?php include("sc_newsletter.php"); ?>
                     <!-- end newsletter include -->
                 </div>
-                
+
                 <div class="visible-lg">
                     <!-- statistics include -->
                     <b><?php echo $myclanname.".".$index_language['statistics']; ?></b><br>

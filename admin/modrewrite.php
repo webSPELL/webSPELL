@@ -25,7 +25,7 @@
 ##########################################################################
 */
 
-$_language->read_module('modrewrite');
+$_language->readModule('modrewrite');
 
 if(!ispageadmin($userID) OR mb_substr(basename($_SERVER['REQUEST_URI']),0,15) != "admincenter.php") die($_language->module['access_denied']);
 
@@ -39,9 +39,9 @@ foreach($GLOBALS['_modRewrite']->getTypes() as $typ){
 
 if($action=="add") {
 
-    $CAPCLASS = new Captcha;
-    $CAPCLASS->create_transaction();
-    $hash = $CAPCLASS->get_hash();
+    $CAPCLASS = new \webspell\Captcha;
+    $CAPCLASS->createTransaction();
+    $hash = $CAPCLASS->getHash();
     echo'<h1>&curren; <a href="admincenter.php?site=modrewrite" class="white">'.$_language->module['modrewrite'].'</a> &raquo; '.$_language->module['add_rule'].'</h1>';
     echo '<script type="text/javascript">
     function addRow(){
@@ -90,9 +90,9 @@ if($action=="add") {
 elseif($action=="edit") {
     $ds=mysqli_fetch_assoc(safe_query("SELECT * FROM ".PREFIX."modrewrite WHERE ruleID='".$_GET["ruleID"]."'"));
 
-    $CAPCLASS = new Captcha;
-    $CAPCLASS->create_transaction();
-    $hash = $CAPCLASS->get_hash();
+    $CAPCLASS = new \webspell\Captcha;
+    $CAPCLASS->createTransaction();
+    $hash = $CAPCLASS->getHash();
     echo'<h1>&curren; <a href="admincenter.php?site=modrewrite" class="white">'.$_language->module['modrewrite'].'</a> &raquo; '.$_language->module['edit_rule'].'</h1>';
 
     $rules = '';
@@ -173,7 +173,7 @@ elseif($action == 'rebuild'){
 }
 
 elseif(isset($_POST['save'])) {
-    $CAPCLASS = new Captcha;
+    $CAPCLASS = new \webspell\Captcha;
     if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
         $data = array();
         foreach($_POST['keys'] as $key => $val){
@@ -195,7 +195,7 @@ elseif(isset($_POST['save'])) {
 }
 
 elseif(isset($_POST["saveedit"])) {
-    $CAPCLASS = new Captcha;
+    $CAPCLASS = new \webspell\Captcha;
     if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
         $data = array();
         foreach($_POST['keys'] as $key => $val){
@@ -224,7 +224,7 @@ elseif(isset($_POST["saveedit"])) {
 }
 
 elseif(isset($_GET["delete"])) {
-    $CAPCLASS = new Captcha;
+    $CAPCLASS = new \webspell\Captcha;
     if($CAPCLASS->check_captcha(0, $_GET['captcha_hash'])) {
         safe_query("DELETE FROM ".PREFIX."modrewrite WHERE ruleID='".$_GET["ruleID"]."'");
         redirect("admincenter.php?site=modrewrite","",0);
@@ -315,9 +315,9 @@ elseif(isset($_POST['test'])){
         }
     }
 
-    $CAPCLASS = new Captcha;
-    $CAPCLASS->create_transaction();
-    $hash = $CAPCLASS->get_hash();
+    $CAPCLASS = new \webspell\Captcha;
+    $CAPCLASS->createTransaction();
+    $hash = $CAPCLASS->getHash();
 
     echo'<form method="post" action="admincenter.php?site=modrewrite" enctype="multipart/form-data">
     <table width="100%" border="0" cellspacing="1" cellpadding="3">
@@ -378,9 +378,9 @@ elseif(isset($_POST['disable'])){
 else {
 
     echo'<h1>&curren; '.$_language->module['modrewrite_settings'].'</h1>';
-    $CAPCLASS = new Captcha;
-    $CAPCLASS->create_transaction();
-    $hash = $CAPCLASS->get_hash();
+    $CAPCLASS = new \webspell\Captcha;
+    $CAPCLASS->createTransaction();
+    $hash = $CAPCLASS->getHash();
     if($modRewrite == false){
         echo'<form method="post" action="admincenter.php?site=modrewrite" enctype="multipart/form-data">
         <table width="100%" border="0" cellspacing="1" cellpadding="3">
@@ -428,9 +428,9 @@ else {
     if($anz) {
 
         $i=1;
-        $CAPCLASS = new Captcha;
-        $CAPCLASS->create_transaction();
-        $hash = $CAPCLASS->get_hash();
+        $CAPCLASS = new \webspell\Captcha;
+        $CAPCLASS->createTransaction();
+        $hash = $CAPCLASS->getHash();
 
         while($flags = mysqli_fetch_array($ds)) {
             if($i%2) { $td='td1'; }

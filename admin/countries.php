@@ -25,7 +25,7 @@
 ##########################################################################
 */
 
-$_language->read_module('countries');
+$_language->readModule('countries');
 
 if(!ispageadmin($userID) OR mb_substr(basename($_SERVER['REQUEST_URI']),0,15) != "admincenter.php") die($_language->module['access_denied']);
 
@@ -35,9 +35,9 @@ if(isset($_GET['action'])) $action = $_GET['action'];
 else $action = '';
 
 if($action=="add") {
-	$CAPCLASS = new Captcha;
-	$CAPCLASS->create_transaction();
-	$hash = $CAPCLASS->get_hash();
+	$CAPCLASS = new \webspell\Captcha;
+	$CAPCLASS->createTransaction();
+	$hash = $CAPCLASS->getHash();
 
 	echo '<h1>&curren; <a href="admincenter.php?site=icons" class="white">'.$_language->module['icons'].'</a> &raquo; <a href="admincenter.php?site=countries" class="white">'.$_language->module['countries'].'</a> &raquo; '.$_language->module['add_country'].'</h1>';
 
@@ -73,9 +73,9 @@ elseif($action=="edit") {
 	if($ds['fav']=='1') $fav='<input type="checkbox" name="fav" value="1" checked="checked" />';
   	else $fav='<input type="checkbox" name="fav" value="1" />';
 
-  	$CAPCLASS = new Captcha;
-	$CAPCLASS->create_transaction();
-	$hash = $CAPCLASS->get_hash();
+  	$CAPCLASS = new \webspell\Captcha;
+	$CAPCLASS->createTransaction();
+	$hash = $CAPCLASS->getHash();
 
   	echo '<h1>&curren; <a href="admincenter.php?site=icons" class="white">'.$_language->module['icons'].'</a> &raquo; <a href="admincenter.php?site=countries" class="white">'.$_language->module['countries'].'</a> &raquo; '.$_language->module['edit_country'].'</h1>';
 
@@ -116,7 +116,7 @@ elseif(isset($_POST['save'])) {
 	$short=$_POST["shorthandle"];
 	if(isset($POST["fav"])) $fav = (int)$POST['fav'];
 	else $fav=0;
-	$CAPCLASS = new Captcha;
+	$CAPCLASS = new \webspell\Captcha;
 	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
 		if($country AND $short) {
 			$file_ext=strtolower(mb_substr($icon['name'], strrpos($icon['name'], ".")));
@@ -139,7 +139,7 @@ elseif(isset($_POST["saveedit"])) {
 	$short=$_POST["shorthandle"];
 	if(isset($POST["fav"])) $fav = (int)$POST['fav'];
 	else $fav=0;
-	$CAPCLASS = new Captcha;
+	$CAPCLASS = new \webspell\Captcha;
 	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
 		if($country AND $short) {
 			if($icon['name']=="") {
@@ -164,7 +164,7 @@ elseif(isset($_POST["saveedit"])) {
 }
 
 elseif(isset($_GET["delete"])) {
- 	$CAPCLASS = new Captcha;
+ 	$CAPCLASS = new \webspell\Captcha;
 	if($CAPCLASS->check_captcha(0, $_GET['captcha_hash'])) {
 		safe_query("DELETE FROM ".PREFIX."countries WHERE countryID='".$_GET["countryID"]."'");
 		redirect("admincenter.php?site=countries","",0);
@@ -188,9 +188,9 @@ else {
 	$ds=safe_query("SELECT * FROM ".PREFIX."countries ORDER BY country");
 	$anz=mysqli_num_rows($ds);
 	if($anz) {
-		$CAPCLASS = new Captcha;
-		$CAPCLASS->create_transaction();
-		$hash = $CAPCLASS->get_hash();
+		$CAPCLASS = new \webspell\Captcha;
+		$CAPCLASS->createTransaction();
+		$hash = $CAPCLASS->getHash();
 
 		$i=1;
 		while($flags = mysqli_fetch_array($ds)) {

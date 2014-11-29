@@ -25,14 +25,14 @@
 ##########################################################################
 */
 
-$_language->read_module('styles');
+$_language->readModule('styles');
 
 if(!ispageadmin($userID) OR mb_substr(basename($_SERVER['REQUEST_URI']),0,15) != "admincenter.php") die($_language->module['access_denied']);
 
 echo'<h1>&curren; '.$_language->module['styles'].'</h1>';
 
 if(isset($_POST['submit'])) {
-	$CAPCLASS = new Captcha;
+	$CAPCLASS = new \webspell\Captcha;
 	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
 		$error = array();
 		$sem = '/^#[a-fA-F0-9]{6}/';
@@ -77,9 +77,9 @@ else {
 	$stylesheet = fread($fp, $size);
 	fclose($fp);
 
-	$CAPCLASS = new Captcha;
-	$CAPCLASS->create_transaction();
-	$hash = $CAPCLASS->get_hash();
+	$CAPCLASS = new \webspell\Captcha;
+	$CAPCLASS->createTransaction();
+	$hash = $CAPCLASS->getHash();
 
 	echo'<form method="post" action="admincenter.php?site=styles">
 	<table width="50%" border="0" cellspacing="1" cellpadding="3">

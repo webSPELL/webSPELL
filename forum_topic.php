@@ -38,7 +38,7 @@ if(isset($_POST['newreply']) && !isset($_POST['preview'])) {
 	include("_mysql.php");
 	include("_settings.php");
 	include("_functions.php");
-	$_language->read_module('forum');
+	$_language->readModule('forum');
 
 	if(!$userID) die($_language->module['not_logged']);
 
@@ -105,7 +105,7 @@ if(isset($_POST['newreply']) && !isset($_POST['preview'])) {
 			$link="http://".$hp_url."/index.php?site=forum_topic&topic=".$topic;
 			$maillanguage = new Language;
 			$maillanguage->set_language($default_language);
-			
+
 			foreach($emails as $email) {
 				$maillanguage->set_language($email['lang']);
 				$maillanguage->read_module('forum');
@@ -129,7 +129,7 @@ elseif(isset($_POST['editreply']) and (bool)$_POST['editreply']) {
 	include("_mysql.php");
 	include("_settings.php");
 	include("_functions.php");
-	$_language->read_module('forum');
+	$_language->readModule('forum');
 
 	if(!isforumposter($userID,$_POST['id']) and !isforumadmin($userID) and !ismoderator($userID,$_GET['board'])) die($_language->module['no_accses']);
 
@@ -137,7 +137,7 @@ elseif(isset($_POST['editreply']) and (bool)$_POST['editreply']) {
 	$id = (int)$_POST['id'];
 	$check=mysqli_num_rows(safe_query("SELECT postID FROM ".PREFIX."forum_posts WHERE postID='".$id."' AND poster='".$userID."'"));
 	if(($check or isforumadmin($userID) or ismoderator($userID,(int)$_GET['board'])) and mb_strlen(trim($message))) {
-		
+
 		if(isforumadmin($userID) OR isanymoderator($userID, $ds['boardID'])) {
 			$do_sticky = (isset($_POST['sticky'])) ? 'sticky=1' : 'sticky=0';
 			safe_query("UPDATE ".PREFIX."forum_topics SET $do_sticky WHERE topicID='".(int)$_GET['topic']."'");
@@ -154,7 +154,7 @@ elseif(isset($_POST['saveedittopic']) and (bool)$_POST['saveedittopic']) {
 	include("_mysql.php");
 	include("_settings.php");
 	include("_functions.php");
-	$_language->read_module('forum');
+	$_language->readModule('forum');
 
 	if(!isforumadmin($userID) and !isforumposter($userID,$_POST['post']) and !ismoderator($userID,$_GET['board'])) die($_language->module['no_accses']);
 
@@ -172,10 +172,10 @@ elseif(isset($_POST['saveedittopic']) and (bool)$_POST['saveedittopic']) {
 		$do_sticky = (isset($_POST['sticky'])) ? true : false;
 		if($do_sticky AND (isforumadmin($userID) OR isanymoderator($userID, $board))) $do_sticky=true;
 		else $do_sticky=false;
-	
+
 		safe_query("UPDATE ".PREFIX."forum_posts SET message='".$message."' WHERE postID='".$post."'");
 		safe_query("UPDATE ".PREFIX."forum_topics SET topic='".$topicname."', icon='".$icon."', sticky='".$do_sticky."' WHERE topicID='".$topic."'");
-	
+
 		if($notify==1) {
 			$notified = safe_query("SELECT * FROM ".PREFIX."forum_notify WHERE topicID='".$topic."' AND userID='".$userID."'");
 			if(mysqli_num_rows($notified)!=1) {
@@ -199,8 +199,8 @@ function showtopic($topic, $edit, $addreply, $quoteID, $type) {
 	global $_language;
 	global $spamapikey;
 
-	$_language->read_module('forum');
-	$_language->read_module('bbcode', true);
+	$_language->readModule('forum');
+	$_language->readModule('bbcode', true);
 
 	$pagebg=PAGEBG;
 	$border=BORDER;
@@ -232,7 +232,7 @@ function showtopic($topic, $edit, $addreply, $quoteID, $type) {
 				break;
 			}
 		}
-		if(!$usergrp){ 
+		if(!$usergrp){
 			echo $_language->module['no_permission'];
 	    	redirect('index.php?site=forum',$_language->module['no_permission'],2);
 	    	return;
@@ -268,18 +268,18 @@ function showtopic($topic, $edit, $addreply, $quoteID, $type) {
 	// viewed topics
 
 	if(mysqli_num_rows(safe_query("SELECT userID FROM ".PREFIX."user WHERE topics LIKE '%|".$topic."|%'"))) {
-		
+
 		$gv=mysqli_fetch_array(safe_query("SELECT topics FROM ".PREFIX."user WHERE userID='$userID'"));
 		$array=explode("|", $gv['topics']);
 		$new='|';
-		
+
 		foreach($array as $split) {
 			if($split != "" AND $split!=$topic) $new = $new.$split.'|';
 		}
 
 		safe_query("UPDATE ".PREFIX."user SET topics='".$new."' WHERE userID='$userID'");
 	}
-		
+
 	// end viewed topics
 
 	$topicname=getinput($dt['topic']);
@@ -295,7 +295,7 @@ function showtopic($topic, $edit, $addreply, $quoteID, $type) {
 	if($dt['closed']) $closed=$_language->module['closed_image'];
 	else $closed='';
 	$posttype='topic';
-	
+
 	$kathname = getcategoryname($db['category']);
   	eval ("\$forum_topics_title = \"".gettemplate("forum_topics_title")."\";");
 	echo $forum_topics_title;
@@ -425,7 +425,7 @@ function showtopic($topic, $edit, $addreply, $quoteID, $type) {
 				$postID = 0;
 
 				$message = cleartext(getforminput($_POST['message']));
-				
+
 				$message = toggle($message, 'xx');
 				$username='<a href="index.php?site=profile&amp;id='.$userID.'"><b>'.getnickname($userID).'</b></a>';
 
@@ -463,7 +463,7 @@ function showtopic($topic, $edit, $addreply, $quoteID, $type) {
 					$usertype=$ds['rank'];
 					$rang='<img src="images/icons/ranks/'.$ds['pic'].'" alt="">';
 				}
-				
+
 				if(isforumadmin($userID)) $chk_sticky = '<input class="input" type="checkbox" name="sticky" value="1" '.$_sticky.'> '.$_language->module['make_sticky'];
 				elseif(isanymoderator($userID)) $chk_sticky = '<input class="input" type="checkbox" name="sticky" value="1" '.$_sticky.'> '.$_language->module['make_sticky'];
 				else $chk_sticky = '';
@@ -474,10 +474,10 @@ function showtopic($topic, $edit, $addreply, $quoteID, $type) {
             <td colspan="2" class="title" align="center">'.$_language->module['preview'].'</td>
           </tr>
           <tr bgcolor="'.PAGEBG.'"><td colspan="2"></td></tr>';
-          
+
 				eval ("\$forum_topic_content = \"".gettemplate("forum_topic_content")."\";");
 				echo $forum_topic_content;
-        
+
 				echo'</table>';
 
 				$message = $message_preview;
@@ -498,13 +498,13 @@ function showtopic($topic, $edit, $addreply, $quoteID, $type) {
 			else {
 				$chk_sticky = '';
 			}
-			
+
 			if(isset($_POST['notify'])) $post_notify = $_POST['notify'];
 			else $post_notify = null;
 			$mysql_notify = mysqli_num_rows(safe_query("SELECT notifyID FROM ".PREFIX."forum_notify WHERE userID='".$userID."' AND topicID='".$topic."'"));
 			$notify = ($mysql_notify || $post_notify == '1') ? 'checked="checked"' : '';
-			
-			
+
+
 			$bg1=BG_1;
 			$board = $dt['boardID'];
 
@@ -616,7 +616,7 @@ function showtopic($topic, $edit, $addreply, $quoteID, $type) {
 		unset($actions);
 		$i++;
 	}
-	
+
 	$adminactions = "";
 	if(isforumadmin($userID) OR ismoderator($userID,$dt['boardID'])) {
 

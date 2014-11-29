@@ -25,7 +25,7 @@
 ##########################################################################
 */
 
-$_language->read_module('imprint');
+$_language->readModule('imprint');
 
 eval ("\$title_imprint = \"".gettemplate("title_imprint")."\";");
 echo $title_imprint;
@@ -75,4 +75,4 @@ if($imprint_type) {
 
 eval ("\$imprint = \"".gettemplate("imprint")."\";");
 echo $imprint;
-?> 
+?>

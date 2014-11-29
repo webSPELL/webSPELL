@@ -32,7 +32,7 @@ if(isset($_POST['save'])) {
 	include("_mysql.php");
 	include("_settings.php");
 	include("_functions.php");
-	$_language->read_module('guestbook');
+	$_language->readModule('guestbook');
 
 	$date = time();
 	$run=0;
@@ -50,7 +50,7 @@ if(isset($_POST['save'])) {
 		$email = $_POST['gbemail'];
 		$url = $_POST['gburl'];
 		$icq = $_POST['icq'];
-		$CAPCLASS = new Captcha;
+		$CAPCLASS = new \webspell\Captcha;
 		if($CAPCLASS->check_captcha($_POST['captcha'], $_POST['captcha_hash'])){
 			$run=1;
 		}
@@ -60,31 +60,31 @@ if(isset($_POST['save'])) {
 		if(mb_strlen($_POST['message'])){
 			safe_query("INSERT INTO
 							".PREFIX."guestbook (
-								date, 
-								name, 
-								email, 
-								hp, 
-								icq, 
-								ip, 
+								date,
+								name,
+								email,
+								hp,
+								icq,
+								ip,
 								comment
 							)
 			            VALUES (
-			            	'".$date."', 
-			            	'".$name."', 
-			            	'".$email."', 
-			            	'".$url."', 
-			            	'".$icq."', 
-			            	'".$GLOBALS['ip']."', 
+			            	'".$date."',
+			            	'".$name."',
+			            	'".$email."',
+			            	'".$url."',
+			            	'".$icq."',
+			            	'".$GLOBALS['ip']."',
 			            	'".$_POST['message']."'
 			            );");
-	
+
 			if($gb_info) {
-	
+
 				$ergebnis=safe_query("SELECT userID FROM ".PREFIX."user_groups WHERE feedback='1'");
 				while($ds=mysqli_fetch_array($ergebnis)) {
 					$touser[]=$ds['userID'];
 				}
-	
+
 				$message = str_replace('%insertid%', 'id_'.mysqli_insert_id($_database), $_database->escape_string($_language->module['pmtext_newentry']));
 				foreach($touser as $id) {
 					sendmessage($id,$_database->escape_string($_language->module['pmsubject_newentry']),$message);
@@ -99,13 +99,13 @@ if(isset($_POST['save'])) {
 	else {
 		header("Location: index.php?site=guestbook&action=add&error=captcha");
 	}
-	
+
 }
 elseif(isset($_GET['delete'])) {
 	include("_mysql.php");
 	include("_settings.php");
 	include("_functions.php");
-	$_language->read_module('guestbook');
+	$_language->readModule('guestbook');
 	if(!isfeedbackadmin($userID)) die($_language->module['no_access']);
 	if(isset($_POST['gbID'])){
 		foreach($_POST['gbID'] as $id) {
@@ -119,7 +119,7 @@ elseif(isset($_POST['savecomment'])) {
 	include("_settings.php");
 	include("_functions.php");
 
-	$_language->read_module('guestbook');
+	$_language->readModule('guestbook');
 	if(!isfeedbackadmin($userID)) die($_language->module['no_access']);
 
 	safe_query("UPDATE ".PREFIX."guestbook SET admincomment='".$_POST['message']."' WHERE gbID='".$_POST['guestbookID']."' ");
@@ -128,8 +128,8 @@ elseif(isset($_POST['savecomment'])) {
 }
 elseif($action == 'comment' AND is_numeric($_GET['guestbookID'])) {
 
-	$_language->read_module('guestbook');
-	$_language->read_module('bbcode', true);
+	$_language->readModule('guestbook');
+	$_language->readModule('bbcode', true);
 	if(!isfeedbackadmin($userID)) die($_language->module['no_access']);
 	$ergebnis = safe_query("SELECT admincomment FROM ".PREFIX."guestbook WHERE gbID='".$_GET['guestbookID']."'");
 	$bg1 = BG_1;
@@ -144,8 +144,8 @@ elseif($action == 'comment' AND is_numeric($_GET['guestbookID'])) {
 }
 elseif($action == 'add') {
 
-	$_language->read_module('guestbook');
-	$_language->read_module('bbcode', true);
+	$_language->readModule('guestbook');
+	$_language->readModule('bbcode', true);
 
 	$message='';
 	if(isset($_GET['messageID'])) {
@@ -169,10 +169,10 @@ elseif($action == 'add') {
 		echo $guestbook_loggedin;
 	}
 	else {
-		$CAPCLASS = new Captcha;
-		$captcha = $CAPCLASS->create_captcha();
-		$hash = $CAPCLASS->get_hash();
-		$CAPCLASS->clear_oldcaptcha();
+		$CAPCLASS = new \webspell\Captcha;
+		$captcha = $CAPCLASS->createCaptcha();
+		$hash = $CAPCLASS->getHash();
+		$CAPCLASS->clearOldCaptcha();
 
 		eval ("\$guestbook_notloggedin = \"".gettemplate("guestbook_notloggedin")."\";");
 		echo $guestbook_notloggedin;
@@ -180,7 +180,7 @@ elseif($action == 'add') {
 }
 else {
 
-	$_language->read_module('guestbook');
+	$_language->readModule('guestbook');
 	eval ("\$title_guestbook = \"".gettemplate("title_guestbook")."\";");
 	echo $title_guestbook;
 

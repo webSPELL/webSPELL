@@ -27,7 +27,7 @@
 include("_mysql.php");
 include("_settings.php");
 include("_functions.php");
-$_language->read_module('asearch');
+$_language->readModule('asearch');
 
 //allowed tables for search
 $allowed_tables=array("user");

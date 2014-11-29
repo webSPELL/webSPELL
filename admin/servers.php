@@ -25,26 +25,26 @@
 ##########################################################################
 */
 
-$_language->read_module('servers');
+$_language->readModule('servers');
 
 if(!ispageadmin($userID) OR mb_substr(basename($_SERVER['REQUEST_URI']),0,15) != "admincenter.php") die($_language->module['access_denied']);
 
 if(isset($_POST['save'])) {
- 	$CAPCLASS = new Captcha;
+ 	$CAPCLASS = new \webspell\Captcha;
 	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
 		safe_query("INSERT INTO ".PREFIX."servers ( name, ip, game, info ) values( '".$_POST['name']."', '".$_POST['serverip']."', '".$_POST['game']."', '".$_POST['message']."' ) ");
 	} else echo $_language->module['transaction_invalid'];
 }
 
 elseif(isset($_POST['saveedit'])) {
- 	$CAPCLASS = new Captcha;
+ 	$CAPCLASS = new \webspell\Captcha;
 	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
 		safe_query("UPDATE ".PREFIX."servers SET name='".$_POST['name']."', ip='".$_POST['serverip']."', game='".$_POST['game']."', info='".$_POST['message']."' WHERE serverID='".$_POST['serverID']."'");
 	} else echo $_language->module['transaction_invalid'];
 }
 
 elseif(isset($_POST['sort'])) {
- 	$CAPCLASS = new Captcha;
+ 	$CAPCLASS = new \webspell\Captcha;
 	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
 		if(is_array($_POST['sortlist'])) {
 			foreach($_POST['sortlist'] as $sortstring) {
@@ -56,7 +56,7 @@ elseif(isset($_POST['sort'])) {
 }
 
 elseif(isset($_GET['delete'])) {
- 	$CAPCLASS = new Captcha;
+ 	$CAPCLASS = new \webspell\Captcha;
 	if($CAPCLASS->check_captcha(0, $_GET['captcha_hash'])) {
 		safe_query("DELETE FROM ".PREFIX."servers WHERE serverID='".$_GET['serverID']."'");
 	} else echo $_language->module['transaction_invalid'];
@@ -72,11 +72,11 @@ if(isset($_GET['action'])) $action = $_GET['action'];
 else $action = '';
 
 if($action=="add") {
-	$CAPCLASS = new Captcha;
-	$CAPCLASS->create_transaction();
-	$hash = $CAPCLASS->get_hash();
+	$CAPCLASS = new \webspell\Captcha;
+	$CAPCLASS->createTransaction();
+	$hash = $CAPCLASS->getHash();
 
-	$_language->read_module('bbcode', true);
+	$_language->readModule('bbcode', true);
 
 	eval ("\$addbbcode = \"".gettemplate("addbbcode", "html", "admin")."\";");
   eval ("\$addflags = \"".gettemplate("flags_admin", "html", "admin")."\";");
@@ -129,11 +129,11 @@ elseif($action=="edit") {
 
   echo'<h1>&curren; <a href="admincenter.php?site=servers" class="white">'.$_language->module['servers'].'</a> &raquo; '.$_language->module['edit_server'].'</h1>';
 
-  $CAPCLASS = new Captcha;
-	$CAPCLASS->create_transaction();
-	$hash = $CAPCLASS->get_hash();
+  $CAPCLASS = new \webspell\Captcha;
+	$CAPCLASS->createTransaction();
+	$hash = $CAPCLASS->getHash();
 
-	$_language->read_module('bbcode', true);
+	$_language->readModule('bbcode', true);
 
 	eval ("\$addbbcode = \"".gettemplate("addbbcode", "html", "admin")."\";");
   eval ("\$addflags = \"".gettemplate("flags_admin", "html", "admin")."\";");
@@ -196,9 +196,9 @@ else {
 	$ergebnis=safe_query("SELECT * FROM ".PREFIX."servers ORDER BY sort");
 	$anz=mysqli_num_rows($ergebnis);
 	if($anz) {
-	$CAPCLASS = new Captcha;
-	$CAPCLASS->create_transaction();
-	$hash = $CAPCLASS->get_hash();
+	$CAPCLASS = new \webspell\Captcha;
+	$CAPCLASS->createTransaction();
+	$hash = $CAPCLASS->getHash();
 
   echo'<form method="post" name="ws_servers" action="admincenter.php?site=servers">
     <table width="100%" border="0" cellspacing="1" cellpadding="3" bgcolor="#DDDDDD">

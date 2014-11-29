@@ -25,7 +25,7 @@
 ##########################################################################
 */
 
-$_language->read_module('news');
+$_language->readModule('news');
 
 eval ("\$title_news = \"".gettemplate("title_news")."\";");
 echo $title_news;
@@ -50,7 +50,7 @@ if($newsID) {
 		$rubrikname_link = getinput($rubrikname);
 		$rubricpic_name = getrubricpic($ds['rubric']);
 		$rubricpic='images/news-rubrics/'.$rubricpic_name;
-		if(!file_exists($rubricpic) OR $rubricpic_name=='') $rubricpic = ''; 
+		if(!file_exists($rubricpic) OR $rubricpic_name=='') $rubricpic = '';
 		else $rubricpic = '<img src="'.$rubricpic.'" alt="">';
 
 		$message_array = array();
@@ -67,13 +67,13 @@ if($newsID) {
 			if($showlang!=$i)	$langs.='<span style="padding-left:2px"><a href="index.php?site=news_comments&amp;newsID='.$ds['newsID'].'&amp;lang='.$val['lang'].'"><img src="images/flags/'.$val['countryShort'].'.gif" width="18" height="12" alt="'.$val['country'].'"></a></span>';
 			$i++;
 		}
-		
+
 		$headline=$message_array[$showlang]['headline'];
 		$content=$message_array[$showlang]['message'];
-		
+
 		if($ds['intern'] == 1) $isintern = '('.$_language->module['intern'].')';
 		else $isintern = '';
-		
+
 		$content = htmloutput($content);
 		$content = toggle($content, $ds['newsID']);
 		$headline = clearfromtags($headline);
@@ -94,7 +94,7 @@ if($newsID) {
 		if($ds['link4'] && $ds['url4']!="http://" && !$ds['window4']) $related.='&#8226; <a href="'.$ds['url4'].'">'.$ds['link4'].'</a> ';
 
 		if(empty($related)) $related="n/a";
-    
+
     	if(isnewsadmin($userID) or (isnewswriter($userID) and $ds['poster'] == $userID)) {
 			$adminaction='<input type="button" onclick="MM_openBrWindow(\'news.php?action=edit&amp;newsID='.$ds['newsID'].'\',\'News\',\'toolbar=no,status=no,scrollbars=yes,width=800,height=600\')" value="'.$_language->module['edit'].'" class="btn btn-danger">
 	    <input type="button" onclick="MM_confirm(\''.$_language->module['really_delete'].'\', \'news.php?action=delete&amp;id='.$ds['newsID'].'\')" value="'.$_language->module['delete'].'" class="btn btn-danger">';

@@ -176,8 +176,8 @@ input[type="checkbox"]:focus, input[type="checkbox"]:active {
 }
 
 .codeinner {
-  color: #000000;
   font: 11px 'Courier New', Courier, monospace;
+  border-top: 1px solid #000;
 }
 
 .codeline0 {

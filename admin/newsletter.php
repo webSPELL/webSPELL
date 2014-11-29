@@ -25,14 +25,14 @@
 ##########################################################################
 */
 
-$_language->read_module('newsletter');
+$_language->readModule('newsletter');
 
 if(!isuseradmin($userID) OR mb_substr(basename($_SERVER['REQUEST_URI']),0,15) != "admincenter.php") die($_language->module['access_denied']);
 
 echo'<h1>&curren; '.$_language->module['newsletter'].'</h1>';
 
 if(isset($_POST['send']) || isset($_POST['testen'])) {
-	$CAPCLASS = new Captcha;
+	$CAPCLASS = new \webspell\Captcha;
 	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
 		$title = $_POST['title'];
 		$testmail = $_POST['testmail'];
@@ -44,7 +44,7 @@ if(isset($_POST['send']) || isset($_POST['testen'])) {
 
 		//use page's default language for newsletter
 		$_language->set_language($default_language);
-		$_language->read_module('newsletter');
+		$_language->readModule('newsletter');
     	$no_htmlmail = $_language->module['no_htmlmail'];
     	$remove = $_language->module['remove'];
     	$profile = $_language->module['profile'];
@@ -150,9 +150,9 @@ hr { margin: 0px; }
 	} else echo $_language->module['transaction_invalid'];
 }
 else {
- 	$CAPCLASS = new Captcha;
-	$CAPCLASS->create_transaction();
-	$hash = $CAPCLASS->get_hash();
+ 	$CAPCLASS = new \webspell\Captcha;
+	$CAPCLASS->createTransaction();
+	$hash = $CAPCLASS->getHash();
 
 	if(isset($_SESSION['emailbody'])) $message = htmlspecialchars(stripslashes($_SESSION['emailbody']));
 	else $message = null;

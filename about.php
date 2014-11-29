@@ -25,7 +25,7 @@
 ##########################################################################
 */
 
-$_language->read_module('about');
+$_language->readModule('about');
 
 eval ("\$title_about = \"".gettemplate("title_about")."\";");
 echo $title_about;

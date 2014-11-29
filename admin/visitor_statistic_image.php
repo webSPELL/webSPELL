@@ -29,7 +29,7 @@ include("../_mysql.php");
 include("../_settings.php");
 include("../_functions.php");
 
-$_language->read_module('visitor_statistic_image');
+$_language->readModule('visitor_statistic_image');
 
 $admin=isanyadmin($userID);
 if(!$loggedin) die($_language->module['not_logged_in']);

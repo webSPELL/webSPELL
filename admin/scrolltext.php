@@ -25,7 +25,7 @@
 ##########################################################################
 */
 
-$_language->read_module('scrolltext');
+$_language->readModule('scrolltext');
 
 if(!ispageadmin($userID) OR mb_substr(basename($_SERVER['REQUEST_URI']),0,15) != "admincenter.php") die($_language->module['access_denied']);
 
@@ -36,7 +36,7 @@ if(isset($_POST['submit']) != "") {
 	$delay = $_POST['delay'];
 	$direction = $_POST['direction'];
 	$color = $_POST['color'];
-	$CAPCLASS = new Captcha;
+	$CAPCLASS = new \webspell\Captcha;
 	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
 		if(mysqli_num_rows(safe_query("SELECT * FROM ".PREFIX."scrolltext"))) safe_query("UPDATE ".PREFIX."scrolltext SET text='$text', delay='$delay', direction='$direction', color='$color'");
 		else safe_query("INSERT INTO ".PREFIX."scrolltext (text, delay, direction, color) values( '$text', '$delay', '$direction', '$color') ");
@@ -46,7 +46,7 @@ if(isset($_POST['submit']) != "") {
 }
 
 elseif(isset($_POST['delete']) != "") {
-	$CAPCLASS = new Captcha;
+	$CAPCLASS = new \webspell\Captcha;
 	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
 			safe_query("DELETE FROM ".PREFIX."scrolltext");
 		redirect("admincenter.php?site=scrolltext","",0);
@@ -54,9 +54,9 @@ elseif(isset($_POST['delete']) != "") {
 }
 
 else {
-	$CAPCLASS = new Captcha;
-	$CAPCLASS->create_transaction();
-	$hash = $CAPCLASS->get_hash();
+	$CAPCLASS = new \webspell\Captcha;
+	$CAPCLASS->createTransaction();
+	$hash = $CAPCLASS->getHash();
 	$ergebnis=safe_query("SELECT * FROM ".PREFIX."scrolltext");
 	$ds=mysqli_fetch_array($ergebnis);
 

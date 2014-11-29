@@ -24,8 +24,8 @@
 #                                                                        #
 ##########################################################################
 */
-$_language->read_module('usergallery');
-$galclass = new Gallery;
+$_language->readModule('usergallery');
+$galclass = new \webspell\Gallery;
 
 if($userID) {
 
@@ -55,11 +55,11 @@ if($userID) {
 					case 3: $endung = '.png'; break;
 					default: $endung = '.jpg'; break;
 				}
-	
+
 				move_uploaded_file($picture['tmp_name'], $dir.'large/'.$insertid.$endung);
 				@chmod($dir.'large/'.$insertid.$endung, $new_chmod);
 				$galclass->savethumb($dir.'large/'.$insertid.$endung, $dir.'thumb/'.$insertid.'.jpg');
-	
+
 				if( ($galclass->getuserspace($userID)+filesize($dir.'large/'.$insertid.$endung) + filesize($dir.'thumb/'.$insertid.'.jpg')) > $maxusergalleries ) {
 					@unlink($dir.'large/'.$insertid.$endung);
 					@unlink($dir.'thumb/'.$insertid.'.jpg');
@@ -95,7 +95,7 @@ if($userID) {
 
 	if(isset($_GET['action'])) {
 		if($_GET['action'] == "add") {
-			
+
       eval("\$usergallery_add = \"".gettemplate("usergallery_add")."\";");
 			echo $usergallery_add;
 		}

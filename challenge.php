@@ -25,7 +25,7 @@
 ##########################################################################
 */
 
-if(isset($site)) $_language->read_module('challenge');
+if(isset($site)) $_language->readModule('challenge');
 
 eval ("\$title_challenge = \"".gettemplate("title_challenge")."\";");
 echo $title_challenge;
@@ -35,7 +35,7 @@ else $action = "";
 
 $show = true;
 if($action=="save" && isset($_POST['post'])) {
-	
+
 	$opponent = $_POST['opponent'];
 	$opphp = $_POST['opphp'];
 	$oppcountry = $_POST['oppcountry'];
@@ -48,7 +48,7 @@ if($action=="save" && isset($_POST['post'])) {
 	$info = $_POST['info'];
 	$datetime = strtotime($_POST['datetime']);
 	$run=0;
-	
+
 	$error = array();
 	if(!(mb_strlen(trim($opponent)))) $error[]=$_language->module['enter_clanname'];
 	if(!validate_url($opphp)) $error[]=$_language->module['enter_url'];
@@ -56,15 +56,15 @@ if($action=="save" && isset($_POST['post'])) {
 	if(!(mb_strlen(trim($league)))) $error[]=$_language->module['enter_league'];
 	if(!(mb_strlen(trim($map)))) $error[]=$_language->module['enter_map'];
 	if(!(mb_strlen(trim($server)))) $error[]=$_language->module['enter_server'];
-	
+
 	if($userID) {
 		$run=1;
 	} else {
-		$CAPCLASS = new Captcha;
+		$CAPCLASS = new \webspell\Captcha;
 		if(!$CAPCLASS->check_captcha($_POST['captcha'], $_POST['captcha_hash'])) $error[]=$_language->module['wrong_security_code'];
 		else $run=1;
 	}
-	
+
 	if(!count($error) and $run) {
 		$date=time();
 		$touser = array();
@@ -90,7 +90,7 @@ if($action=="save" && isset($_POST['post'])) {
 	} else {
 		$show = true;
 		$fehler=implode('<br>&#8226; ',$error);
-		
+
 		$showerror = '<div class="alert alert-danger alert-dismissible" role="alert">
 			<button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
 			<strong>'.$_language->module['problems'].':</strong><br>
@@ -107,12 +107,12 @@ elseif($action=="delete") {
 	} else redirect('index.php?site=challenge', $_language->module['no_access'],3);
 }
 	$type = (isset($_GET['type']) && $_GET['type']=='ASC') ? "ASC" : "DESC";
-	
+
 	if($show == true) {
-		
+
 		$squads = getgamesquads();
 		$countries=getcountries();
-		
+
 		if(!isset($showerror)) $showerror='';
 		if(isset($_POST['datetime'])) $datetime = getforminput($_POST['datetime']);
 		else $datetime='';
@@ -128,36 +128,36 @@ elseif($action=="delete") {
 		else $server='';
 		if(isset($_POST['info'])) $info = getforminput($_POST['info']);
 		else $info='';
-		
+
 		if($loggedin) {
 			$email = getemail($userID);
 			eval ("\$challenge_loggedin = \"".gettemplate("challenge_loggedin")."\";");
 			echo $challenge_loggedin;
 		} else {
-			$CAPCLASS = new Captcha;
-			$captcha = $CAPCLASS->create_captcha();
-			$hash = $CAPCLASS->get_hash();
-			$CAPCLASS->clear_oldcaptcha();
+			$CAPCLASS = new \webspell\Captcha;
+			$captcha = $CAPCLASS->createCaptcha();
+			$hash = $CAPCLASS->getHash();
+			$CAPCLASS->clearOldCaptcha();
 			if(isset($_POST['email'])) $email = getforminput($_POST['email']);
 			else $email = "";
 			eval ("\$challenge_notloggedin = \"".gettemplate("challenge_notloggedin")."\";");
 			echo $challenge_notloggedin;
 		}
 	}
-  
+
 if(isclanwaradmin($userID)) {
 	$ergebnis = safe_query("SELECT * FROM ".PREFIX."challenge ORDER BY date $type");
 	$anz=mysqli_num_rows($ergebnis);
 	if($anz) {
 		if(!isset($type)) $type = "DESC";
-		
+
 		echo '<p>';
 		if($type=="ASC") echo'<a class="btn btn-default btn-xs" href="index.php?site=challenge&amp;type=DESC">'.$_language->module['sort'].' <span class="glyphicon glyphicon-chevron-down"></span></a>';
 		else echo'
-		
+
 		<a class="btn btn-default btn-xs" href="index.php?site=challenge&amp;type=ASC">'.$_language->module['sort'].' <span class="glyphicon glyphicon-chevron-up"></span></a>';
 		echo '</p>';
-		
+
 		$i=0;
 		while ($ds = mysqli_fetch_array($ergebnis)) {
 			$bg1 = ($i%2)? BG_1: BG_1;
@@ -172,16 +172,16 @@ if(isclanwaradmin($userID)) {
 			$server=clearfromtags($ds['server']);
 			$info=cleartext($ds['info']);
 			$email = '<a href="mailto:'.mail_protect(cleartext($ds['email'])).'">'.$ds['email'].'</a>';
-			
+
 			if(isset($ds['hp']))
 			if(!validate_url($ds['hp'])) $homepage='';
 			else $homepage='<a href="'.$ds['hp'].'" target="_blank"><img src="images/icons/hp.gif" width="14" height="14" alt="homepage"></a>';
-			
+
 			if(isset($ds['name'])) $name=cleartext($ds['name']);
 			if(isset($ds['comment'])) $message=cleartext($ds['comment']);
-			
+
 			$actions='<a href="index.php?site=calendar&amp;action=addwar&amp;chID='.$ds['chID'].'" class="btn btn-primary btn-xs" role="button">'.$_language->module['insert_in_calendar'].'</a> <a href="index.php?site=challenge&amp;action=delete&amp;chID='.$ds['chID'].'" class="btn btn-danger btn-xs" role="button">'.$_language->module['delete_challenge'].'</a>';
-			
+
 			eval ("\$challenges = \"".gettemplate("challenges")."\";");
 			echo $challenges;
 			$i++;
@@ -190,4 +190,4 @@ if(isclanwaradmin($userID)) {
 	}
 	else echo '<div class="alert alert-info" role="alert">'.$_language->module['no_entries'].'</div>';
 }
-?> 
+?>

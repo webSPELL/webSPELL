@@ -31,7 +31,7 @@ include("_settings.php");
 include("_functions.php");
 chdir('admin');
 
-$_language->read_module('admincenter');
+$_language->readModule('admincenter');
 
 if(isset($_GET['site'])) $site = $_GET['site'];
 else

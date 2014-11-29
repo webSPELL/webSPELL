@@ -26,9 +26,9 @@
 */
 
 if(isset($_GET['new_lang'])) {
-	
+
 	if(file_exists('languages/'.$_GET['new_lang'])) {
-	
+
 		include("_mysql.php");
 		include("_settings.php");
 		include("_functions.php");
@@ -52,7 +52,7 @@ if(isset($_GET['new_lang'])) {
 }
 else {
 
-	$_language->read_module('sc_language');
+	$_language->readModule('sc_language');
 
 	$filepath = "languages/";
 	$langs = array();
@@ -62,7 +62,7 @@ else {
 	while($ds = mysqli_fetch_assoc($query)){
 		$mysql_langs[$ds['lang']] = $ds['language'];
 	}
-	
+
 	if($dh = opendir($filepath)) {
 		while($file = mb_substr(readdir($dh), 0, 2)) {
 			if($file != "." and $file!=".." and is_dir($filepath.$file)) {

@@ -25,12 +25,12 @@
 ##########################################################################
 */
 
-$_language->read_module('users');
+$_language->readModule('users');
 
 if(!isuseradmin($userID) OR mb_substr(basename($_SERVER['REQUEST_URI']),0,15) != "admincenter.php") die($_language->module['access_denied']);
 
 if(isset($_POST['add'])) {
- 	$CAPCLASS = new Captcha;
+ 	$CAPCLASS = new \webspell\Captcha;
 	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
 		$anz = mysqli_num_rows(safe_query("SELECT userID FROM ".PREFIX."squads_members WHERE squadID='".$_POST['squad']."' AND userID='".$_POST['id']."'"));
 		if(!$anz){
@@ -43,7 +43,7 @@ if(isset($_POST['add'])) {
 }
 
 elseif(isset($_POST['edit'])) {
- 	$CAPCLASS = new Captcha;
+ 	$CAPCLASS = new \webspell\Captcha;
 	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
 		$avatar = $_FILES['avatar'];
 		$userpic = $_FILES['userpic'];
@@ -198,7 +198,7 @@ elseif(isset($_POST['edit'])) {
 }
 
 elseif(isset($_POST['newuser'])) {
- 	$CAPCLASS = new Captcha;
+ 	$CAPCLASS = new \webspell\Captcha;
 	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
 		$newnickname = htmlspecialchars(mb_substr(trim($_POST['username']), 0, 30));
 		$newusername = mb_substr(trim($_POST['username']), 0, 30);
@@ -211,7 +211,7 @@ elseif(isset($_POST['newuser'])) {
 }
 
 elseif(isset($_GET['delete'])) {
- 	$CAPCLASS = new Captcha;
+ 	$CAPCLASS = new \webspell\Captcha;
 	if($CAPCLASS->check_captcha(0, $_GET['captcha_hash'])) {
 		$id = $_GET['id'];
 		if(!issuperadmin($id) OR (issuperadmin($id) AND issuperadmin($userID))) {
@@ -230,7 +230,7 @@ elseif(isset($_GET['delete'])) {
 }
 
 elseif(isset($_POST['ban'])) {
-	$CAPCLASS = new Captcha;
+	$CAPCLASS = new \webspell\Captcha;
 	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
 		$id = $_POST['id'];
 		if(isset($_POST['permanent'])) $permanent = $_POST['permanent'];
@@ -267,7 +267,7 @@ if(isset($_GET['action'])) $action = $_GET['action'];
 else $action = '';
 
 if($action=="activate") {
- 	$CAPCLASS = new Captcha;
+ 	$CAPCLASS = new \webspell\Captcha;
 	if($CAPCLASS->check_captcha(0, $_GET['captcha_hash'])) {
 		$id = $_GET['id'];
   		safe_query("UPDATE ".PREFIX."user SET activated='1' WHERE userID='$id'");
@@ -283,9 +283,9 @@ elseif($action=="ban") {
 
 	if($userID != $id) {
 		if(!issuperadmin($id) OR (issuperadmin($id) AND issuperadmin($userID))) {
-			$CAPCLASS = new Captcha;
-			$CAPCLASS->create_transaction();
-			$hash = $CAPCLASS->get_hash();
+			$CAPCLASS = new \webspell\Captcha;
+			$CAPCLASS->createTransaction();
+			$hash = $CAPCLASS->getHash();
 			$get = safe_query("SELECT nickname,banned,ban_reason FROM ".PREFIX."user WHERE userID='".$id."'");
 			$data = mysqli_fetch_assoc($get);
 			$nickname = $data['nickname'];
@@ -393,9 +393,9 @@ elseif($action=="addtoclan") {
   $id = $_GET['id'];
   $nickname=getnickname($id);
   $squads = getsquads();
-  $CAPCLASS = new Captcha;
-  $CAPCLASS->create_transaction();
-  $hash = $CAPCLASS->get_hash();
+  $CAPCLASS = new \webspell\Captcha;
+  $CAPCLASS->createTransaction();
+  $hash = $CAPCLASS->getHash();
 
   echo'<form method="post" action="admincenter.php?site=users&amp;page='.(int)$_GET['page'].'&amp;type='.getforminput($_GET['type']).'&amp;sort='.$_GET['sort'].'">
 	<table width="100%" border="0" cellspacing="1" cellpadding="3">
@@ -424,9 +424,9 @@ elseif($action=="addtoclan") {
 }
 
 elseif($action=="adduser") {
-	$CAPCLASS = new Captcha;
-	$CAPCLASS->create_transaction();
-	$hash = $CAPCLASS->get_hash();
+	$CAPCLASS = new \webspell\Captcha;
+	$CAPCLASS->createTransaction();
+	$hash = $CAPCLASS->getHash();
 
 	echo'<h1>&curren; <a href="admincenter.php?site=users" class="white">'.$_language->module['users'].'</a> &raquo; '.$_language->module['add_new_user'].'</h1>';
 
@@ -469,9 +469,9 @@ elseif($action=="profile") {
   $b_month=mb_substr($ds['birthday'],5,2);
   $b_year=mb_substr($ds['birthday'],0,4);
 
-  $CAPCLASS = new Captcha;
-  $CAPCLASS->create_transaction();
-  $hash = $CAPCLASS->get_hash();
+  $CAPCLASS = new \webspell\Captcha;
+  $CAPCLASS->createTransaction();
+  $hash = $CAPCLASS->getHash();
 
   echo'<form method="post" enctype="multipart/form-data" action="admincenter.php?site=users&amp;page='.$_GET['page'].'&amp;type='.$_GET['type'].'&amp;sort='.$_GET['sort'].'">
   <table width="100%" border="0" cellspacing="1" cellpadding="3">
@@ -692,9 +692,9 @@ else {
 	}
 	$anz=mysqli_num_rows($ergebnis);
 	if($anz) {
-	 	$CAPCLASS = new Captcha;
-		$CAPCLASS->create_transaction();
-		$hash = $CAPCLASS->get_hash();
+	 	$CAPCLASS = new \webspell\Captcha;
+		$CAPCLASS->createTransaction();
+		$hash = $CAPCLASS->getHash();
 		if(!isset($_GET['sort'])) $_GET['sort'] = '';
 		if($status == true) $sort = "status";
 		elseif(($_GET['sort']=='nickname') || ($_GET['sort']=='registerdate')) $sort=$_GET['sort'];

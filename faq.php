@@ -25,7 +25,7 @@
 ##########################################################################
 */
 
-$_language->read_module('faq');
+$_language->readModule('faq');
 
 eval ("\$title_faq = \"".gettemplate("title_faq")."\";");
 echo $title_faq;

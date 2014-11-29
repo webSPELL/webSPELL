@@ -30,27 +30,35 @@ global $userID, $loggedin, $_language;
 $userID = 0;
 $loggedin = false;
 
-if(isset($_SESSION['ws_auth'])) {
-	if(stristr($_SESSION['ws_auth'], "userid") === false){
-		$authent = explode(":", $_SESSION['ws_auth']);
+if (isset($_SESSION['ws_auth'])) {
+    if (stristr($_SESSION['ws_auth'], "userid") === false) {
+        $authent = explode(":", $_SESSION['ws_auth']);
 
-		$ws_user = $authent[0];
-		$ws_pwd = $authent[1];
+        $ws_user = $authent[0];
+        $ws_pwd = $authent[1];
 
-		if(isset($ws_user) and isset($ws_pwd)) {
-			$check = safe_query("SELECT userID, language FROM ".PREFIX."user WHERE userID='".$ws_user."' AND password='".$ws_pwd."'");
+        if (isset($ws_user) and isset($ws_pwd)) {
+            $check = safe_query(
+                "SELECT
+                    userID, language
+                FROM
+                    " . PREFIX . "user
+                WHERE
+                    `userID`=" . (int)$ws_user . " AND
+                    `password`='" . mysql_real_escape_string($ws_pwd) . "'"
+            );
 
-			while($ds = mysqli_fetch_array($check)) {
-				$loggedin = true;
-				$userID = $ds['userID'];
-				if(!empty($ds['language']) AND isset($_language)) {
-					if($_language->set_language($ds['language'])) {
-						$_SESSION['language'] = $ds['language'];
-					}
-				}
-			}
-		}
-	}
-	else die();
+            while ($ds = mysqli_fetch_array($check)) {
+                $loggedin = true;
+                $userID = $ds['userID'];
+                if (!empty($ds['language']) && isset($_language)) {
+                    if ($_language->set_language($ds['language'])) {
+                        $_SESSION['language'] = $ds['language'];
+                    }
+                }
+            }
+        }
+    } else {
+        die();
+    }
 }
-?>

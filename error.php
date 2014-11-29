@@ -28,7 +28,7 @@
 if(isset($_GET['type'])) $type = $_GET['type'];
 else $type = null;
 
-$_language->read_module('error');
+$_language->readModule('error');
 
 if($type == 404){
     $error_header = $_language->module['error_404'];

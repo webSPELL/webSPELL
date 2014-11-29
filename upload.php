@@ -28,7 +28,7 @@
 include("_mysql.php");
 include("_settings.php");
 include("_functions.php");
-$_language->read_module('upload');
+$_language->readModule('upload');
 if(!isanyadmin($userID)) die($_language->module['no_access']);
 
 if(isset($_GET['cwID'])) {
@@ -123,7 +123,7 @@ echo'<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.
 	if(is_array($screens)) {
 		foreach($screens as $screen) {
 			if($screen!="") {
-				
+
         echo'<tr>
             <td><a href="'.$filepath.$screen.'" target="_blank">'.$screen.'</a></td>
             <td><input type="text" name="pic" size="70" value="&lt;img src=&quot;'.$filepath.$screen.'&quot; border=&quot;0&quot; align=&quot;left&quot; style=&quot;padding:4px;&quot; alt=&quot;&quot; /&gt;"></td>

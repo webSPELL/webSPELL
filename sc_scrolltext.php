@@ -25,7 +25,7 @@
 ##########################################################################
 */
 
-$_language->read_module('sc_scrolltext');
+$_language->readModule('sc_scrolltext');
 
 $ergebnis=safe_query("SELECT * FROM ".PREFIX."scrolltext");
 if(mysqli_num_rows($ergebnis)) {
@@ -35,7 +35,7 @@ if(mysqli_num_rows($ergebnis)) {
 	$direction=$ds['direction'];
 	$delay=$ds['delay'];
 	$color=$ds['color'];
-	
+
   eval ("\$sc_scrolltext = \"".gettemplate("sc_scrolltext")."\";");
 	echo $sc_scrolltext;
 }

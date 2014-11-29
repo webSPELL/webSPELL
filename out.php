@@ -29,7 +29,7 @@ include("_mysql.php");
 include("_settings.php");
 include("_functions.php");
 
-$_language->read_module('out');
+$_language->readModule('out');
 
 //get values
 if(isset($_GET['bannerID'])) {

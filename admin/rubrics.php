@@ -25,12 +25,12 @@
 ##########################################################################
 */
 
-$_language->read_module('rubrics');
+$_language->readModule('rubrics');
 
 if(!isnewsadmin($userID) OR mb_substr(basename($_SERVER['REQUEST_URI']),0,15) != "admincenter.php") die($_language->module['access_denied']);
 
 if(isset($_POST['save'])) {
- 	$CAPCLASS = new Captcha;
+ 	$CAPCLASS = new \webspell\Captcha;
 	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
 		$pic = $_FILES['pic'];
 		if(checkforempty(Array('name'))) {
@@ -64,7 +64,7 @@ if(isset($_POST['save'])) {
 }
 
 elseif(isset($_POST['saveedit'])) {
- 	$CAPCLASS = new Captcha;
+ 	$CAPCLASS = new \webspell\Captcha;
 	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
 		$pic = $_FILES['pic'];
 		if(checkforempty(Array('name'))) {
@@ -98,7 +98,7 @@ elseif(isset($_POST['saveedit'])) {
 }
 
 elseif(isset($_GET['delete'])) {
- 	$CAPCLASS = new Captcha;
+ 	$CAPCLASS = new \webspell\Captcha;
 	if($CAPCLASS->check_captcha(0, $_GET['captcha_hash'])) {
 		$rubricID = $_GET['rubricID'];
 		$filepath = "../images/news-rubrics/";
@@ -113,9 +113,9 @@ if(isset($_GET['action'])) $action = $_GET['action'];
 else $action = '';
 
 if($action=="add") {
-	$CAPCLASS = new Captcha;
-	$CAPCLASS->create_transaction();
-	$hash = $CAPCLASS->get_hash();
+	$CAPCLASS = new \webspell\Captcha;
+	$CAPCLASS->createTransaction();
+	$hash = $CAPCLASS->getHash();
   echo'<h1>&curren; <a href="admincenter.php?site=rubrics" class="white">'.$_language->module['news_rubrics'].'</a> &raquo; '.$_language->module['add_rubric'].'</h1>';
 
 	echo'<form method="post" action="admincenter.php?site=rubrics" enctype="multipart/form-data">
@@ -137,9 +137,9 @@ if($action=="add") {
 }
 
 elseif($action=="edit") {
-	$CAPCLASS = new Captcha;
-	$CAPCLASS->create_transaction();
-	$hash = $CAPCLASS->get_hash();
+	$CAPCLASS = new \webspell\Captcha;
+	$CAPCLASS->createTransaction();
+	$hash = $CAPCLASS->getHash();
   echo'<h1>&curren; <a href="admincenter.php?site=rubrics" class="white">'.$_language->module['news_rubrics'].'</a> &raquo; '.$_language->module['edit_rubric'].'</h1>';
 
 	$rubricID = $_GET['rubricID'];
@@ -182,9 +182,9 @@ else {
       <td width="55%" class="title"><b>'.$_language->module['picture'].'</b></td>
       <td width="20%" class="title"><b>'.$_language->module['actions'].'</b></td>
    		</tr>';
-	$CAPCLASS = new Captcha;
-	$CAPCLASS->create_transaction();
-	$hash = $CAPCLASS->get_hash();
+	$CAPCLASS = new \webspell\Captcha;
+	$CAPCLASS->createTransaction();
+	$hash = $CAPCLASS->getHash();
 	$i=1;
   while($ds=mysqli_fetch_array($ergebnis)) {
     if($i%2) { $td='td1'; }

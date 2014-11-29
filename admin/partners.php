@@ -25,12 +25,12 @@
 ##########################################################################
 */
 
-$_language->read_module('partners');
+$_language->readModule('partners');
 
 if(!ispageadmin($userID) OR mb_substr(basename($_SERVER['REQUEST_URI']),0,15) != "admincenter.php") die($_language->module['access_denied']);
 
 if(isset($_GET['delete'])) {
- 	$CAPCLASS = new Captcha;
+ 	$CAPCLASS = new \webspell\Captcha;
 	if($CAPCLASS->check_captcha(0, $_GET['captcha_hash'])) {
 		$partnerID = $_GET['partnerID'];
 		safe_query(" DELETE FROM ".PREFIX."partners WHERE partnerID='$partnerID' ");
@@ -42,7 +42,7 @@ if(isset($_GET['delete'])) {
 }
 
 elseif(isset($_POST['sortieren'])) {
- 	$CAPCLASS = new Captcha;
+ 	$CAPCLASS = new \webspell\Captcha;
 	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
 		$sort = $_POST['sort'];
 		foreach($sort as $sortstring) {
@@ -53,7 +53,7 @@ elseif(isset($_POST['sortieren'])) {
 }
 
 elseif(isset($_POST['save'])) {
- 	$CAPCLASS = new Captcha;
+ 	$CAPCLASS = new \webspell\Captcha;
 	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
 		$name = $_POST['name'];
 		$url = $_POST['url'];
@@ -102,7 +102,7 @@ elseif(isset($_POST['save'])) {
 }
 
 elseif(isset($_POST['saveedit'])) {
- 	$CAPCLASS = new Captcha;
+ 	$CAPCLASS = new \webspell\Captcha;
 	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
 		$name = $_POST['name'];
 		$url = $_POST['url'];
@@ -153,9 +153,9 @@ if(isset($_GET['action'])) $action = $_GET['action'];
 else $action = '';
 
 if($action=="add") {
-	$CAPCLASS = new Captcha;
-	$CAPCLASS->create_transaction();
-	$hash = $CAPCLASS->get_hash();
+	$CAPCLASS = new \webspell\Captcha;
+	$CAPCLASS->createTransaction();
+	$hash = $CAPCLASS->getHash();
 
 	echo'<h1>&curren; <a href="admincenter.php?site=partners" class="white">'.$_language->module['partners'].'</a> &raquo; '.$_language->module['add_partner'].'</h1>';
 
@@ -186,9 +186,9 @@ if($action=="add") {
 }
 
 elseif($action=="edit") {
-	$CAPCLASS = new Captcha;
-	$CAPCLASS->create_transaction();
-	$hash = $CAPCLASS->get_hash();
+	$CAPCLASS = new \webspell\Captcha;
+	$CAPCLASS->createTransaction();
+	$hash = $CAPCLASS->getHash();
 
   echo'<h1>&curren; <a href="admincenter.php?site=partners" class="white">'.$_language->module['partners'].'</a> &raquo; '.$_language->module['edit_partner'].'</h1>';
 
@@ -248,12 +248,12 @@ else {
 	$partners=safe_query("SELECT * FROM ".PREFIX."partners ORDER BY sort");
 	$tmp=mysqli_fetch_assoc(safe_query("SELECT count(partnerID) as cnt FROM ".PREFIX."partners"));
 	$anzpartners=$tmp['cnt'];
-	$CAPCLASS = new Captcha;
-	$CAPCLASS->create_transaction();
-	$hash = $CAPCLASS->get_hash();
+	$CAPCLASS = new \webspell\Captcha;
+	$CAPCLASS->createTransaction();
+	$hash = $CAPCLASS->getHash();
 
-	$CAPCLASS->create_transaction();
-	$hash_2 = $CAPCLASS->get_hash();
+	$CAPCLASS->createTransaction();
+	$hash_2 = $CAPCLASS->getHash();
 
 	$i=1;
 	while($db=mysqli_fetch_array($partners)) {

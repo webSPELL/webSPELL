@@ -31,7 +31,7 @@ $bghead=BGHEAD;
 $bgcat=BGCAT;
 $bg1=BG_1;
 
-$_language->read_module('counter');
+$_language->readModule('counter');
 
 $date = getformatdate(time());
 $dateyesterday = getformatdate(time()-(24*3600));
@@ -63,8 +63,8 @@ $useronline = $guests[0] + $user[0];
 
 if($user[0]==1) {
 	$user_on=1;
-	$user_on_text= $_language->module['user']; 
-}    
+	$user_on_text= $_language->module['user'];
+}
 else {
     $user_on=$user[0];
     $user_on_text=$_language->module['users'];

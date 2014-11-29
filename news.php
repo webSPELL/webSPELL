@@ -34,8 +34,8 @@ if($action=="new") {
 	include("_mysql.php");
 	include("_settings.php");
 	include("_functions.php");
-	$_language->read_module('news');
-	$_language->read_module('bbcode', true);
+	$_language->readModule('news');
+	$_language->readModule('bbcode', true);
 	if(!isnewswriter($userID)) die($_language->module['no_access']);
 
 	safe_query("INSERT INTO ".PREFIX."news (date, poster, saved) VALUES ('".time()."', '".$userID."', '0')");
@@ -103,7 +103,7 @@ elseif($action=="save") {
 	include("_mysql.php");
 	include("_settings.php");
 	include("_functions.php");
-	$_language->read_module('news');
+	$_language->readModule('news');
 	$newsID = $_POST['newsID'];
 
 	$ds=mysqli_fetch_array(safe_query("SELECT poster FROM ".PREFIX."news WHERE newsID = '".$newsID."'"));
@@ -203,7 +203,7 @@ elseif($action=="preview") {
 	include("_mysql.php");
 	include("_settings.php");
 	include("_functions.php");
-	$_language->read_module('news');
+	$_language->readModule('news');
 
 	$newsID = $_GET['newsID'];
 
@@ -299,7 +299,7 @@ elseif($quickactiontype=="publish") {
 	include("_mysql.php");
 	include("_settings.php");
 	include("_functions.php");
-	$_language->read_module('news');
+	$_language->readModule('news');
 	if(!isnewsadmin($userID)) die($_language->module['no_access']);
 
 	if(isset($_POST['newsID'])){
@@ -320,7 +320,7 @@ elseif($quickactiontype=="unpublish") {
 	include("_mysql.php");
 	include("_settings.php");
 	include("_functions.php");
-	$_language->read_module('news');
+	$_language->readModule('news');
 	if(!isnewsadmin($userID)) die($_language->module['no_access']);
 
 	if(isset($_REQUEST['newsID'])){
@@ -339,7 +339,7 @@ elseif($quickactiontype=="delete") {
 	include("_mysql.php");
 	include("_settings.php");
 	include("_functions.php");
-	$_language->read_module('news');
+	$_language->readModule('news');
   	if(isset($_POST['newsID'])){
   	$newsID = $_POST['newsID'];
 
@@ -374,7 +374,7 @@ elseif($action=="delete") {
 	include("_mysql.php");
 	include("_settings.php");
 	include("_functions.php");
-	$_language->read_module('news');
+	$_language->readModule('news');
 
 	$id = $_GET['id'];
 
@@ -406,7 +406,7 @@ elseif($action=="edit") {
 	include("_mysql.php");
 	include("_settings.php");
 	include("_functions.php");
-	$_language->read_module('news');
+	$_language->readModule('news');
 
 	$newsID = $_GET['newsID'];
 
@@ -415,7 +415,7 @@ elseif($action=="edit") {
 		die($_language->module['no_access']);
 	}
 
-	$_language->read_module('bbcode', true);
+	$_language->readModule('bbcode', true);
 
 
 	$message_array = array();
@@ -528,7 +528,7 @@ elseif(basename($_SERVER['PHP_SELF'])=="news.php"){
 	header("Location: index.php?site=news");
 }
 elseif($action=="unpublished") {
-	$_language->read_module('news');
+	$_language->readModule('news');
 
   	eval ("\$title_news = \"".gettemplate("title_news")."\";");
 	echo $title_news;
@@ -614,7 +614,7 @@ elseif($action=="unpublished") {
 }
 elseif($action=="archive") {
 
-	$_language->read_module('news');
+	$_language->readModule('news');
 
 	eval ("\$title_news = \"".gettemplate("title_news")."\";");
 	echo $title_news;
@@ -748,7 +748,7 @@ elseif($action=="archive") {
 	else echo'no entries';
 }
 else {
-	$_language->read_module('news');
+	$_language->readModule('news');
 
 	eval ("\$title_news = \"".gettemplate("title_news")."\";");
 	echo $title_news;

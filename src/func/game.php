@@ -25,46 +25,86 @@
 ##########################################################################
 */
 
-function getanzcwcomments($cwID) {
-	return mysqli_num_rows(safe_query("SELECT commentID FROM `".PREFIX."comments` WHERE parentID='$cwID' AND type='cw'"));
+function getanzcwcomments($cwID)
+{
+    return mysqli_num_rows(
+        safe_query(
+            "SELECT commentID FROM `" . PREFIX . "comments` WHERE `parentID` = " . (int)$cwID ." AND `type` = 'cw'"
+        )
+    );
 }
 
-function getsquads() {
-	$squads="";
-	$ergebnis=safe_query("SELECT * FROM ".PREFIX."squads");
-	while($ds=mysqli_fetch_array($ergebnis)) {
-		$squads.='<option value="'.$ds['squadID'].'">'.$ds['name'].'</option>';
-	}
-	return $squads;
+function getsquads()
+{
+    $squads = "";
+    $ergebnis = safe_query("SELECT * FROM `" . PREFIX . "squads`");
+    while ($ds = mysqli_fetch_array($ergebnis)) {
+        $squads .= '<option value="' . $ds['squadID'] . '">' . $ds['name'] . '</option>';
+    }
+    return $squads;
 }
 
-function getgamesquads() {
-	$squads = '';
-	$ergebnis=safe_query("SELECT * FROM ".PREFIX."squads WHERE gamesquad='1'");
-	while($ds=mysqli_fetch_array($ergebnis)) {
-		$squads.='<option value="'.$ds['squadID'].'">'.$ds['name'].'</option>';
-	}
-	return $squads;
+function getgamesquads()
+{
+    $squads = '';
+    $ergebnis = safe_query("SELECT * FROM `" . PREFIX . "squads` WHERE `gamesquad` = 1");
+    while ($ds = mysqli_fetch_array($ergebnis)) {
+        $squads .= '<option value="' . $ds['squadID'] . '">' . $ds['name'] . '</option>';
+    }
+    return $squads;
 }
 
-function getsquadname($squadID) {
-	$ds=mysqli_fetch_array(safe_query("SELECT name FROM ".PREFIX."squads WHERE squadID='$squadID'"));
-	return $ds['name'];
+function getsquadname($squadID)
+{
+    $ds = mysqli_fetch_array(
+        safe_query(
+            "SELECT `name` FROM `" . PREFIX . "squads` WHERE `squadID` = " . (int)$squadID
+        )
+    );
+    return $ds['name'];
 }
 
-function issquadmember($userID, $squadID) {
-	return (mysqli_num_rows(safe_query("SELECT sqmID FROM ".PREFIX."squads_members WHERE userID='$userID' AND squadID='$squadID'")) > 0);
+function issquadmember($userID, $squadID)
+{
+    return (
+        mysqli_num_rows(
+            safe_query(
+                "SELECT
+                    `sqmID`
+                FROM
+                    `" . PREFIX . "squads_members`
+                WHERE
+                    `userID` = " . (int)$userID . " AND
+                    `squadID` = " . (int)$squadID
+            )
+        ) > 0
+    );
 }
 
-function isgamesquad($squadID) {
-	return (mysqli_num_rows(safe_query("SELECT squadID FROM ".PREFIX."squads WHERE squadID='".$squadID."' AND gamesquad='1'")) > 0);
+function isgamesquad($squadID)
+{
+    return (
+        mysqli_num_rows(
+            safe_query(
+                "SELECT
+                    `squadID`
+                FROM
+                    `" . PREFIX . "squads`
+                WHERE
+                    `squadID` = " . (int)$squadID . " AND
+                    gamesquad = 1"
+            )
+        ) > 0
+    );
 }
 
-function getgamename($tag) {
-	$ds=mysqli_fetch_array(safe_query("SELECT name FROM `".PREFIX."games` WHERE tag='$tag'"));
-	return $ds['name'];
+function getgamename($tag)
+{
+    $ds = mysqli_fetch_array(safe_query("SELECT `name` FROM `" . PREFIX . "games` WHERE `tag` = '$tag'"));
+    return $ds['name'];
 }
-function is_gametag($tag){
-	return (mysqli_num_rows(safe_query("SELECT name FROM `".PREFIX."games` WHERE tag='$tag'")) > 0);
+
+function is_gametag($tag)
+{
+    return (mysqli_num_rows(safe_query("SELECT `name` FROM `" . PREFIX . "games` WHERE `tag` = '$tag'")) > 0);
 }
-?>

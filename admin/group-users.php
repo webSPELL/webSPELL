@@ -46,17 +46,17 @@ if(isset($_GET['ajax'])){
 			$do = safe_query("UPDATE ".PREFIX."user_forum_groups SET `".$group."`='".$state."' WHERE userID='".$user."'");
 		}
 		else{
-			$_language->read_module('group-users');
+			$_language->readModule('group-users');
 			echo $_language->module['access_denied'];
 		}
 	}
 	else{
-		$_language->read_module('group-users');
+		$_language->readModule('group-users');
 		echo $_language->module['access_denied'];
 	}
 	exit();
 }
-$_language->read_module('group-users');
+$_language->readModule('group-users');
 
 if(!isforumadmin($userID) or mb_substr(basename($_SERVER['REQUEST_URI']), 0, 15) != "admincenter.php") die($_language->module['access_denied']);
 
@@ -182,7 +182,7 @@ if(isset($_GET['action'])) {
 		echo'<tr>
         <td class="td_head"><input type="checkbox" name="ALL" value="ALL" onclick="SelectAllEval(this.form);" /> '.$_language->module['select_all'].'</td>
         <td class="td_head" colspan="'.($groups_anz).'" align="right"><input name="grps" type="hidden" value="'.implode(';', $grps).'" /><input name="users" type="hidden" value="'.implode(';', $users).'" />';
-        
+
 		if($pages > 1) {
 			$page_select = '<select name="page">';
 			for($i = 1; $i <= $pages; $i++) {

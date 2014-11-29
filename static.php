@@ -29,17 +29,17 @@ if(isset($_GET['staticID'])) $staticID = $_GET['staticID'];
 else $staticID = '';
 
 $ds=mysqli_fetch_array(safe_query("SELECT * FROM ".PREFIX."static WHERE staticID='".$staticID."'"));
-$_language->read_module("static");
-$allowed = false; 
+$_language->readModule("static");
+$allowed = false;
 switch($ds['accesslevel']) {
-	case 0: 
-		$allowed = true; 
+	case 0:
+		$allowed = true;
 		break;
-	case 1: 
-		if($userID) $allowed = true; 
+	case 1:
+		if($userID) $allowed = true;
 		break;
-	case 2: 
-		if(isclanmember($userID)) $allowed = true; 
+	case 2:
+		if(isclanmember($userID)) $allowed = true;
 		break;
 }
 

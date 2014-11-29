@@ -25,14 +25,14 @@
 ##########################################################################
 */
 
-$_language->read_module('settings');
+$_language->readModule('settings');
 
 if(!ispageadmin($userID) OR mb_substr(basename($_SERVER['REQUEST_URI']),0,15) != "admincenter.php") die($_language->module['access_denied']);
 
 echo'<h1>&curren; '.$_language->module['settings'].'</h1>';
 
 if(isset($_POST['submit'])) {
- 	$CAPCLASS = new Captcha;
+ 	$CAPCLASS = new \webspell\Captcha;
 	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
 		safe_query("UPDATE ".PREFIX."settings SET hpurl='".$_POST['url']."',
 									 clanname='".$_POST['clanname']."',
@@ -193,9 +193,9 @@ else {
 	$user_gbook = "<option value='0'>".$_language->module['deactivated']."</option><option value='1'>".$_language->module['activated']."</option>";
 	$user_gbook = str_replace("value='".$ds['user_guestbook']."'","value='".$ds['user_guestbook']."' selected='selected'",$user_gbook);
 
-	$CAPCLASS = new Captcha;
-	$CAPCLASS->create_transaction();
-	$hash = $CAPCLASS->get_hash();
+	$CAPCLASS = new \webspell\Captcha;
+	$CAPCLASS->createTransaction();
+	$hash = $CAPCLASS->getHash();
 ?>
 
 <form method="post" action="admincenter.php?site=settings">

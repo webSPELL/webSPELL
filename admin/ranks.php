@@ -25,12 +25,12 @@
 ##########################################################################
 */
 
-$_language->read_module('ranks');
+$_language->readModule('ranks');
 
 if(!isforumadmin($userID) OR mb_substr(basename($_SERVER['REQUEST_URI']),0,15) != "admincenter.php") die($_language->module['access_denied']);
 
 if(isset($_GET['delete'])) {
- 	$CAPCLASS = new Captcha;
+ 	$CAPCLASS = new \webspell\Captcha;
 	if($CAPCLASS->check_captcha(0, $_GET['captcha_hash'])) {
 		safe_query(" DELETE FROM ".PREFIX."forum_ranks WHERE rankID='".$_GET['rankID']."' ");
 	} else echo $_language->module['transaction_invalid'];
@@ -43,7 +43,7 @@ elseif(isset($_POST['save'])) {
 	$max = $_POST['max'];
   	$min = $_POST['min'];
 
-	$CAPCLASS = new Captcha;
+	$CAPCLASS = new \webspell\Captcha;
 	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
 		if(checkforempty(Array('min', 'max'))) {
 			if($max=="MAX") $maximum=2147483647;
@@ -71,7 +71,7 @@ elseif(isset($_POST['saveedit'])) {
 	$min = $_POST['min'];
 	$max = $_POST['max'];
 
-	$CAPCLASS = new Captcha;
+	$CAPCLASS = new \webspell\Captcha;
 	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
 		if(checkforempty(Array('min', 'max'))) {
 			$ergebnis = safe_query("SELECT * FROM ".PREFIX."forum_ranks ORDER BY rankID");
@@ -96,9 +96,9 @@ if(isset($_GET['action'])) $action = $_GET['action'];
 else $action = '';
 
 if($action=="add") {
-	$CAPCLASS = new Captcha;
-	$CAPCLASS->create_transaction();
-	$hash = $CAPCLASS->get_hash();
+	$CAPCLASS = new \webspell\Captcha;
+	$CAPCLASS->createTransaction();
+	$hash = $CAPCLASS->getHash();
 
   echo'<h1>&curren; <a href="admincenter.php?site=ranks" class="white">'.$_language->module['user_ranks'].'</a> &raquo; '.$_language->module['add_rank'].'</h1>';
 
@@ -145,9 +145,9 @@ else {
     </tr>';
 
 	$ergebnis=safe_query("SELECT * FROM ".PREFIX."forum_ranks ORDER BY postmax");
-	$CAPCLASS = new Captcha;
-	$CAPCLASS->create_transaction();
-	$hash = $CAPCLASS->get_hash();
+	$CAPCLASS = new \webspell\Captcha;
+	$CAPCLASS->createTransaction();
+	$hash = $CAPCLASS->getHash();
   $i=1;
   while($ds=mysqli_fetch_array($ergebnis)) {
     if($i%2) { $td='td1'; }

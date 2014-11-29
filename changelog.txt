@@ -21,7 +21,7 @@
 #   visit webspell.org / webspell.info                                   #
 #                                                                        #
  ########################################################################
- 
+
 ### webspell 4.2.3a ( 2011- 09 - 10 ) changeset 65:bf112d65d66b
 
 * (all or a lot of files/folders):
@@ -30,85 +30,85 @@
 * language/*:
   - language corrections
   - new languages il,ir,sr
-  
+
 * _functions.php
   - performance optimization
 
 * admin/contact.php
   - security fix
-  
+
 * admin/page_statistic.php
   - bugfix for InnoDB
-  
+
 * admin/sponsors.php
   - corrected misspellings in urls
 
 * admin/squads.php
   - security fix
-  
+
 * admin/users.php
   - security fix
-  
+
 * calendar.php
   - added Translation for new clanwar message
-  
+
 * clanwars.php
   - fixed php notice
-  
+
 * getlang.php
   - escape language var
-  
+
 * guestbook.php
   - escape name of existing users
 
 * install/functions.php
   - removed type from create table, because deprecated since mysql4
-  
+
 * install/step03.php
   - lang var fixed
- 
+
 * js/bbcode.js
   - fixed autoresize bug
 
 * news.php
   - renamed variable because of conflict (flags vs background color)
-  
+
 * newsletter.php
   - security fix against xss
-  
+
 * messenger.php
   - allow whitespaces in comma separeted receiver list
   - security fix against xss
-  
+
 * poll.php
   - fix against multiple voting
 
 * polls.php
-  - fix against multiple voting  
-  
+  - fix against multiple voting
+
 * profile.php
   - fixed age of people older than 99
   - fatal error fixed
-  
+
 * src/func/bbcode.php
   - bbcode fix for multiple [quote]
   - bbcode layout fix for [quote]
-  
+
 * src/func/captcha.php
   - fix against 0 as captcha result
-  
+
 * src/func/feeds.php
   - fixed date of feed (now date of latest news)
-  
+
 * src/func/messenger.php
   - added HP Title to notification mails
-  
+
 * src/seo.php
   - change website title on news according to selected language
-  
+
 * version.php:
   - increased version numbering
- 
+
 ### webspell 4.2.2a ( 2010-02-28 ) rev.428 (new svn server)
 
 * (all or a lot of files/folders):
@@ -123,67 +123,67 @@
 
 * _settings.php:
   - security fix: added usage of security_slashes($_REQUEST)
-  
+
 * admin/boards.php:
   - fixed removing of shadow topics on board deletions
-  
+
 * admin/languages/*/squads.php:
   - removed unused language keys
-  
+
 * admin/page_statistics.php:
   - removed E_STRICT/E_DEPRECATED error
   - fixed query failed, if db name contains special characters
   - fixed display of all tables
-  
+
 * admin/squads.php:
   - removed size limitations for squad pics/icons
   - using IMAGETYPE constants instead of their values
-  
+
 * admin/users.php:
   - replaced mysql_query with safe_query
-  
+
 * articles.php:
   - replaced mysql_query with safe_query
-  
+
 * asearch.php:
   - security fix: fixed sql injection possibility
   - limited template usage
-  
+
 * awards.php:
   - fixed save edit when the user is clanwaradmin or newsadmin
-  
+
 * calendar.php:
   - removed double load of language files
   - fixed empty lines in the calendar
-  
+
 * clanwars_details.php:
   - security fix: enforced integer type on cwID
   - fixed information when no screenshot is available
-  
+
 * comments.php:
   - added usage of $GLOBALS['ip']
-  
+
 * contact.php:
   - security fix: fixed possibility to send messages to any email addresses
   - added usage of $GLOBALS['ip']
-  
+
 * counter_stats.php:
   - fixed max width of counter entry
-  
+
 * forum.php:
   - removed double load of language files
   - removed double declared counter variable
-  
+
 * forum_topic.php:
   - fixed forum ranks
   - fixed sticky topic feature
   - fixed posibility to edit topics without headline/content
-  
+
 * guestbook.php:
   - added usage of $GLOBALS['ip']
-  
+
 * index.php:
-  - removed mysql debug information  
+  - removed mysql debug information
 
 * install/index.php:
   - removed unused code
@@ -194,117 +194,117 @@
 
 * install/languages/*/index.php
   - removed unused language keys
-  
+
 * install/languages/fr/*:
   - removed BOM
 
 * install/step*.php:
   - removed language selection flags
   - fixed alignment of steps
-  
+
 * install/step01.php:
   - replaced character > with &gt;
-  
+
 * install/step03.php:
   - replaced character > with &gt;
-  
+
 * install/style.css:
   - fixed alignment of steps
-  
+
 * js/bbcode.js:
   - added additional special characters to the bbcode checkers searchregexp
   - translated comments
-  
+
 * languages/*/contact.php:
   - security fix: fixed possibility to send messages to any email addresses
-  
+
 * languages/*/latesttopics.php:
   - added language variables
-  
+
 * languages/*/rating.php:
   - fixed rating error messages
-  
+
 * languages/*/register.php:
   - fixed possibility to register if you are allready logged in
   - added language variables
-  
+
 * languages/de/countries.php:
   - fixed spelling
-  
+
 * languages/nl/contact.php:
   - fixed spelling
-  
+
 * languages/nl/whoisonline.php:
   - fixed spelling
-  
+
 * languages/uk/articles.php:
   - fixed spelling
-  
+
 * languages/uk/counter.php:
   - fixed spelling
-  
+
 * languages/uk/register.php:
   - fixed spelling
-  
+
 * latesttopics.php:
   - added language variables
-  
+
 * myprofile.php:
   - fixed default language selection
-  
+
 * news.php:
   - fixed news headlines if they contain a username
-  
+
 * out.php:
-  - fixed adding of "http://"  
+  - fixed adding of "http://"
 
 * partners.php:
   - added possibility of text partners instead of images only
-  
+
 * profile.php:
   - added usage of $GLOBALS['ip']
   - replaced mysql_query with safe_query
   - fixed user ranks
-  
+
 * rating.php:
   - fixed rating error messages
-  
+
 * register.php:
   - fixed possibility to register if you are allready logged in
   - added language variables
-  
+
 * sc_headlines.php:
   - fixed rubric usage
-  
+
 * search.php:
   - added strtolower to article title tests
-  
+
 * shoutbox_content.php:
   - security fix: fixed sql injection possibility
   - added usage of $GLOBALS['ip']
-  
+
 * sponsors.php:
   - fixed adding of "http://"
   - fixed redirection
-  
+
 * src/func/bbcode.php:
   - fixed img tag replace
   - fixed png image info
   - fixed disabling of img resizing
   - added form tag to htmlml
-  
+
 * src/seo.php:
   - fixed page title for server.php
-  
+
 * templates/addbbcode.html:
   - fixed selectors
-  
+
 * templates/comments_add_visitor.html:
   - added id="post" to the form tag
-  
+
 * templates/sc_partners.html:
   - added possibility of text partners instead of images only
-  
+
 * version.php:
   - raised version numbering
 
@@ -328,31 +328,31 @@
 
 * admin/admincenter.php:
   - missing </a> added
-  
+
 * admin/gallery.php:
-  - fixed png support  
-  
+  - fixed png support
+
 * admin/filecategorys.php:
-  - fixed deletion of subcategories and files in it on deletion of a category  
-  
+  - fixed deletion of subcategories and files in it on deletion of a category
+
 * admin/group-users.php:
   - changed group user management to an ajax solution
-  - fixed paging  
+  - fixed paging
 
 * admin/languages/de/imprint.php:
   - spelling corrections
-  
+
 * admin/languages/de/partners.php:
-  - spelling corrections  
-  
+  - spelling corrections
+
 * admin/languages/hu/*:
-  - added hungarian language files  
-  
+  - added hungarian language files
+
 * admin/languages/it/*:
   - added italian languages files
-  
+
 * admin/languages/uk/partners.php:
-  - spelling corrections 
+  - spelling corrections
 
 * admin/lock.php:
   - fixed wrong time format
@@ -394,182 +394,182 @@
 
 * gallery.php:
   - security fix: removed possible mysql injection
-  
+
 * getlang.php:
-  - security fix: removed possibility of xss exploits  
-  
+  - security fix: removed possibility of xss exploits
+
 * index.php:
-  - removed old comment  
-  
+  - removed old comment
+
 * install/functions.php:
-  - removed php notices  
+  - removed php notices
   - corrected game names
   - fixed history converter
-  
+
 * install/languages/fr/*:
-  - added french language files  
-  
+  - added french language files
+
 * install/languages/hu/*:
   - added hungarian language files
-  
+
 * install/step03.php:
-  - removed php notices 
-  
+  - removed php notices
+
 * install/step05.php:
-  - removed php notices 
+  - removed php notices
 
 * install/step06.php:
-  - removed php notices 
-  
+  - removed php notices
+
 * joinus.php:
-  added proper escaping of squad names for the dropdown selection  
-  
+  added proper escaping of squad names for the dropdown selection
+
 * js/bbcode.js:
-  - fixed deletion of maps in clanwar reports  
+  - fixed deletion of maps in clanwar reports
   - fixed bbcodechecker url issues
   - fixed wrong function name
-  
-* languages/hr/index.php:  
+
+* languages/hr/index.php:
   - removed BOM chars
-  
-* latesttopics.php:  
+
+* latesttopics.php:
   - fixed breaking special chars
-  - fixed amount of topics 
+  - fixed amount of topics
   - performance optimizations
   - fixed topic title in tooltip
-  
+
 * languages/credits.txt:
-  - updated credits information  
-  
+  - updated credits information
+
 * languages/*/messenger.php
-  - added language variables  
-  
+  - added language variables
+
 * languages/*/static.php:
-  - added translations for error messages if a user does not have access to a specific static page  
-  
+  - added translations for error messages if a user does not have access to a specific static page
+
 * languages/de/forum.php:
-  - spelling corrections  
+  - spelling corrections
 
 * languages/hu/bbcode.php:
-  - corrected translations 
- 
+  - corrected translations
+
 * languages/hu/login.php:
-  - corrected translations  
-  
+  - corrected translations
+
 * languages/lt/bbcode.php:
   - removed BOM chars
-  
+
 * languages/lt/captcha.php:
   - removed BOM chars
-  
+
 * languages/lt/feeds.php:
   - removed BOM chars
-  
+
 * languages/lt/seo.php:
   - removed BOM chars
-  
+
 * languages/se/* (not all, but a lot of them):
-  - updated swedish language files 
-  
+  - updated swedish language files
+
 * languages/uk/loginoverview.php:
-  - spelling corrections  
-  
+  - spelling corrections
+
 * languages/uk/profile.php:
-  - spelling corrections  
-  
+  - spelling corrections
+
 * members.php:
   - fixed singular/plural issues (member/members)
-  - added htmloutput() to userdescriptions  
-  
+  - added htmloutput() to userdescriptions
+
 * messenger.php:
-  - fixed loss of message and title if receiver is unknown  
-  
+  - fixed loss of message and title if receiver is unknown
+
 * news_comments.php:
   - code cleanups
-  - minor optimizations  
-  
+  - minor optimizations
+
 * picture.php:
-  - security fix: removed possibility to access any other files than gallery files  
-  
+  - security fix: removed possibility to access any other files than gallery files
+
 * profile.php:
   - display birthday as d.m.Y instead of Y-m-d
   - optimized mysql queries
-  
+
 * readme.en.txt
-  - removed BOM chars  
-  
+  - removed BOM chars
+
 * register.php:
   - security fix: added mailkey test
-  
+
 * registered_users.php:
-  - changed url regex  
-  
+  - changed url regex
+
 * sc_headlines.php:
   - code cleanups
-  - minor optimizations    
-  
+  - minor optimizations
+
 * squads.php:
-  - fixed singular/plural issues (member/members)  
-  
+  - fixed singular/plural issues (member/members)
+
 * src/func/bbcode.php:
-  - fixed layout breaking urls  
+  - fixed layout breaking urls
   - added css class for [list]
   - security fix: removed xss possibility in url & image replacements
   - optimized performance by replacing a mysql query with the usage of a available global variable
   - fixed quote replacement
-  
+
 * src/func/feeds.php:
   - fixed rss feed title
   - fixed the breaking of feeds when certain special chars are used
-  
+
 * src/func/game.php:
-  - removed unnecessary code  
-  
+  - removed unnecessary code
+
 * src/func/language.php:
-  - security fix: removed possibility of xss exploits   
-  - security fix: removed injection possibility via language cookie 
-  
+  - security fix: removed possibility of xss exploits
+  - security fix: removed injection possibility via language cookie
+
 * src/func/useraccess.php:
   - fixed possible wrong forum moderator rights
-  
+
 * static.php:
-  - fixed toggle support  
+  - fixed toggle support
   - added error message if a user does not have access to a specific static page
-  
+
 * templates/articles_edit.html:
-  - added missing rows attribute at the textarea  
-  
+  - added missing rows attribute at the textarea
+
 * templates/clanwar_edit.html:
-  - added missing doublequotes  
-  
+  - added missing doublequotes
+
 * templates/comments_add_user.html:
   - added js check to prevent double posts
-  
+
 * templates/comments_add_visitor.html:
   - added js check to prevent double posts
   - added bbcode navigation for visitors
-  
+
 * templates/forum_newreply.html:
   - added js check to prevent double posts
-  
+
 * templates/forum_newtopic.html:
   - added js check to prevent double posts
-  
+
 * templates/member_details_head.html:
   - fixed singular/plural issues (member/members)
-  
+
 * templates/member_head_head.html:
   - fixed singular/plural issues (member/members)
-  
+
 * templates/pm_new.html:
-  - fixed loss of message and title if receiver is unknown   
-  
+  - fixed loss of message and title if receiver is unknown
+
 * templates/squads_head.html:
-  - fixed singular/plural issues (member/members)  
-  
+  - fixed singular/plural issues (member/members)
+
 * usergallery.php:
-  - fixed png support  
-  
+  - fixed png support
+
 * version.php:
   - increased version numbering
 
@@ -596,12 +596,12 @@
   - replaced string functions with multibyte capable versions
   - outsourced a lot of html in the php files to template files
   - increased cross browser compatibility
-  
+
 * admin/*:
   - new admincenter design
   - added general admin features protection
   - added js and php form check functions
-  
+
 * admin/about.php:
   - various small bugfixes
   - fixed sql queries
@@ -626,14 +626,14 @@
   - strip tags from catinfo/catname
   - added board information in board overview
   - fixed non displayed category and group names
-  
+
 * admin/contact.php:
   - added contact management
 
 * admin/database.php:
   - added access check in optimize case
   - fixed mysql backup
-  
+
 * admin/filecategorys.php:
   - added unlimited sub-categories
   - fixed lost categories on edit
@@ -645,7 +645,7 @@
   - added addbbcode + flags support
   - added bbcode output in overview
   - removed output of faq answers from the overview
-  
+
 * admin/faqcategories.php:
   - splitted up faq and faq categories
   - fixed bbcode support
@@ -654,13 +654,13 @@
 
 * admin/gallery.php
   - fixed path
-  - added group membership in galleries overview 
+  - added group membership in galleries overview
   - bugfix gallery group edit leads to "new group"
   - added possibility to upload pictures via ftp to allready existing gallerys
   - added direct gallery links
   - forbidded creation of galleries without a gallery group
   - prevented deleting of gallery groups if there are still galleries existing in it
-  
+
 * admin/games.php:
   - fixed confirm dialog
   - added possibility to reupload a game icon on edit
@@ -678,7 +678,7 @@
 
 * admin/icons.php:
   - file deleted
-  
+
 * admin/imprint.php:
   - added title template
   - added addbbcode + flags support
@@ -693,10 +693,10 @@
   - added tooltips in member rights area
   - added addbbcode + flags support
   - fixed revoking of moderator rights
-  
+
 * admin/newslanguages.php:
   - added management of news languages
-  
+
 * admin/newsletter.php:
   - mail title and body are now preserved via sessions during testing
   - setted newsletter language to page default language
@@ -710,21 +710,21 @@
   - added current banner on edit
   - added clickcounter, sort and display choice
   - new partner image upload system
-  
+
 * admin/ranks.php:
   - changed min and max fields
-  
+
 * admin/scrolltext.php:
   - changed to javascript solution
   - new administration
-  - added new options  
-    
+  - added new options
+
 * admin/servers.php
   - added notice to enter the port, otherwise fsockopen for server status will fail
   - fixed bbcode support
   - added addbbcode + flags support
   - added bbcode output in overview
-  
+
 * admin/settings.php:
   - dropdown menu for default language select added
   - tooltip outsourced
@@ -745,7 +745,7 @@
   - added clickcounter, sort and display choice
   - added addbbcode + flags support
   - new sponsor image upload system
-  
+
 * admin/squads.php:
   - added game option for squads
   - added addbbcode + flags support
@@ -761,10 +761,10 @@
   - fixed possibility to add two files with the same name
   - changed from static files to db saved static content
   - added addbbcode + flags support
-  
+
 * admin/styles.php
   - added reg exp check for color codes
-  
+
 * admin/stylesheet.css:
   - renamed to _stylesheet.css
   - new admincenter design
@@ -805,7 +805,7 @@
   - fixed squad links
   - fixed sql queries
   - ceil instead of for-loop
-  
+
 * buddys.php:
   - various small bugfixes
   - fixed sql queries
@@ -876,12 +876,12 @@
   - added email adress validation
   - added name to mail text
   - new error system for formulars
-  - added contact receiver 
+  - added contact receiver
   - fixed several mail problems
 
 * counter_stats.php:
   - expanded stats (oldest/youngest member, avergae age)
-  
+
 * demos.php
   - various small bugfixes
   - bugfix sorting + paging
@@ -972,8 +972,8 @@
   - added groupname "usergalleries" for groupID 0 galleries
 
 * getlang.php:
-  - added ajax language fetch  
-  
+  - added ajax language fetch
+
 * guestbook.php:
   - mail scramble protection added
   - performance optimizations
@@ -983,26 +983,26 @@
   - added toggle support
   - added addbbcode support to admin comments
   - fixed error handling
-  
+
 * html/:
   - folder removed (changed from static files to db saved static content)
-  
+
 * images/flags/:
   - various flags updated
   - added 237 new flags
-  
+
 * images/gallery/large/index.php:
   - fixed redirect
 
 * images/gallery/thumb/index.php:
   - fixed redirect
-  
+
 * images/games/:
   - added 59 new game icons
 
 * imprint.php:
   - added mail protection
-  
+
 * index.php:
   - security fix
   - XHTML conform
@@ -1048,10 +1048,10 @@
   - added new news languages
   - changed default gender to unknown
   - added converters to fix escape problems from older versions
-  
+
 * install/images/*
   - changed install design
-  
+
 * install/languages/*:
   - added install language files
 
@@ -1061,7 +1061,7 @@
 * install/step02.php:
   - use SERVER_NAME instead of SERVER_ADDR for auto path detection
   - prevent the installing on servers running php 5.2.6 cause of major bugs in this php version
-  
+
 * install/step03.php:
   - fixed chmod warnings/detection/settings
   - "html/" removed from chmod array because doesn't exist any more
@@ -1072,11 +1072,11 @@
 * install/step06.php:
   - php short open tags changed to full open tags
   - added attempt to delete the install folder automatically
-  
+
 * joinus.php:
   - captcha for unregistered only
   - new error system for formulars
-  
+
 * js/bbcode.js:
   - added tooltip functions
   - added javascript image autoresize function
@@ -1095,7 +1095,7 @@
 
 * languages/*:
   - various language folders & files added
-  
+
 * languages/credits.txt:
   - added languages credits file
 
@@ -1113,13 +1113,13 @@
   - added usage of $new_chmod for uploaded stuff
   - strip tags from link names
   - added new file upload system incl. png support
-  
+
 * linkus.php:
   - added new file upload system incl. png support
 
 * lock.php:
-  - changed date format  
-  
+  - changed date format
+
 * login.php:
   - added cashbox link again
   - changed session handling
@@ -1129,21 +1129,21 @@
   - limited amount of new topics/posts to display
   - replaced jpgs with gifs
   - bugfix
-  
+
 * logout.php:
   - changed session handling
 
 * lostpassword.php:
-  - added utf-8 mail support  
+  - added utf-8 mail support
   - fixed several mail problems
   - added mail check
-  
+
 * members.php
   - added mail protection
   - fixed details link
   - added mail protection
   - fixed display errors in case no squads were created
-  
+
 * messenger.php:
   - changed layout
   - security fixes
@@ -1177,7 +1177,7 @@
   - fixed unset of top news
   - security fixes
   - added distinction between news writer and news publisher rights
-  - ceil instead of for-loop 
+  - ceil instead of for-loop
   - added new templates
   - fixed link to clanwar details on clanwar news
   - fixed preview
@@ -1187,7 +1187,7 @@
   - added function calls for rss newsfeed generator
   - fixed publish news when no news was selected
   - fixed comment status on edit
-  
+
 * news_comments.php:
   - fixed multi language news function
   - added space between multiple news language flags
@@ -1197,11 +1197,11 @@
   - added $related="n/a" if empty
   - added isintern notice to headline
   - security fixes
-  
+
 * newsletter.php:
   - fixed several mail problems
   - new style
-  
+
 * out.php:
   - fixed hit counting
 
@@ -1221,7 +1221,7 @@
   - added possibility to reopen polls
   - added check if edited poll exists
   - security fixes
-  
+
 * printview.php:
   - added user group rights
   - layout fixes
@@ -1249,12 +1249,12 @@
   - redirect replaced with header location
   - fixed multiple voting possiblity
 
-* readme.de.txt  
+* readme.de.txt
   - updated content
-  
-* readme.en.txt  
+
+* readme.en.txt
   - updated content
-  
+
 * register.php:
   - various small bugfixes
   - error template file added
@@ -1268,7 +1268,7 @@
   - performance optimizations
   - fixed reg exp for homepage links
   - security fixes
-    
+
 * _settings.php:
   - added system include for language system
   - security fix
@@ -1282,17 +1282,17 @@
   - added ip ban on brute force attacks
   - added top news chars length to admincenter settings
   - added utf-8 header
-  
+
 * sc_articles.php:
   - changed sql query
   - fixed usage of wrong settings variable
 
 * sc_bannerrotation.php:
   - added limit for rand banner rotation query
-  
+
 * sc_files.php:
   - template fixes
-  
+
 * sc_headlines.php:
   - changed template filename from headlines.html to sc_headlines.html
   - optimized sql queries
@@ -1302,30 +1302,30 @@
 
 * sc_lastregistered.php
   - added sc_lastregistered.php
-  
+
 * sc_newsletter.php:
   - added sc_newsletter.php
 
 * sc_randompic.php:
   - prevent displaying of unintentionally uploaded Thumbs.db
-  
+
 * sc_results:
   - explode replaced by unserialize
 
 * sc_scrolltext.php:
   - changed to javascript solution
   - added new administration
-  - added new options  
-  
+  - added new options
+
 * sc_servers.php:
   - added servers overview
 
 * sc_sponsors.php:
-  - added sponsors overview  
-  
+  - added sponsors overview
+
 * sc_squads.php:
   - added squads overview
-  
+
 * sc_topnews.php:
   - various small bugfixes
   - added top news chars length to admincenter settings
@@ -1339,7 +1339,7 @@
   - changed the frequency counter to be case-insensitive
   - added page function to search and limited maximum results per page
   - fixed possibility to view intern posts in search results
-  - added minimum search string length 
+  - added minimum search string length
   - added faq to search
   - redirect to search formular if no search location was specified
   - general optimizations
@@ -1349,21 +1349,21 @@
 * server.php:
   - added getgamename function
   - fixed bbcode support
-  
+
 * shoutbox.php
   - added ajax functionality
-  
+
 * shoutbox_content.php
   - added ajax functionality
   - various small bugfixes
   - security fixes
   - bugfix
-  
+
 * sponsors.php:
-  - fixed read_module positions
+  - fixed readModule positions
   - added usage of $new_chmod for uploaded stuff
   - fixed possibility of uploading non image files
-  
+
 * squads.php:
   - added game option for squads
   - added mail protection
@@ -1371,7 +1371,7 @@
 
 * src/seo.php:
   - search engine optimized page titles added
-  
+
 * src/func/bbcode.php:
   - fixed smiley problems in relation with image autoresize
   - fixed content problems with edited smileys
@@ -1410,17 +1410,17 @@
 
 * src/func/feeds.php:
   - added rss 2.0 newsfeed generator
-  
+
 * src/func/filesystem.php:
-  - added recursive delete function  
-  
+  - added recursive delete function
+
 * src/func/gallery.php:
   - added usage of $new_chmod for uploaded stuff
   - corrected nopic path
 
 * src/func/game.php:
   - added getgamename function
-  
+
 * src/func/language.php:
   - language class added
 
@@ -1433,7 +1433,7 @@
 * src/func/user.php:
   - security fix
   - added is_online()
-  
+
 * src/func/useraccess.php:
   - added forum user group functions
   - added distinction between news writer and news publisher rights
@@ -1459,7 +1459,7 @@
   - various layout updates
   - XHTML conformity
   - various files deleted
-  - added new captcha error system on templates with captcha protected forms
+  - added new \webspell\Captcha error system on templates with captcha protected forms
   - changed all js form checkers
 
 * templates/addbbcode.html
@@ -1472,27 +1472,27 @@
 
 * templates/bbcode.html:
   - added charset meta-tag
-  
+
 * templates/cash_box_head:
   - spelling corrections
 
 * templates/cash_box_new.html:
   - various small bugfixes
-  
+
 * templates/challenge_loggedin.html:
-  - new error system for formulars  
-  
+  - new error system for formulars
+
 * templates/challenge_notloggedin.html:
-  - new error system for formulars  
-  
+  - new error system for formulars
+
 * templates/clanwar_new.html:
   - available information is prefilled now on new entries
-  
+
 * templates/contact_loggedin.html:
-  - new error system for formulars  
+  - new error system for formulars
 
 * templates/contact_notloggedin.html:
-  - new error system for formulars  
+  - new error system for formulars
 
 * templates/faq_answer.html:
   - changed faq sub menu
@@ -1511,11 +1511,11 @@
 
 * templates/files_category_list_head.html:
   - added sub-categories
-  - added template head path 
+  - added template head path
 
 * templates/files_display.html:
   - added sub-categories
-  
+
 * templates/files_new.html
   - enhanced js form check
 
@@ -1533,60 +1533,60 @@
 
 * templates/files_edit.html:
   - fixed mirror bugs
-  
+
 * templates/flags_admin.html:
   - added special flags file for admincenter
 
 * templates/forum_newtopic.html
   - various small bugfixes
-  
+
 * templates/forum_head.html:
   - added forum category filter
 
 * templates/forum_topic_content.html:
   - various small bugfixes
   - added named anchor with postID
-  
+
 * templates/forum_topics_title.html:
   - added forum category filter
 
 * templates/gallery_content_categorys_head.html:
-  - added gallery title to template  
-  
+  - added gallery title to template
+
 * templates/gallery_edit.html:
   - added possibility to activate/deactivate gallery comments
-  
+
 * templates/gallery_gallery_head.html:
   - fixed diashow
-  
+
 * templates/gallery_showlist.html:
   - removed comment from overview
-  
+
 * templates/guestbook_comment.html:
-  - added addbbcode support to admin comments  
-  
+  - added addbbcode support to admin comments
+
 * templates/guestbook_notloggedin.html:
-  - bcode select added to posting form  
-  
+  - bcode select added to posting form
+
 * templates/title_imprint.html
   - added imprint title file
-  
+
 * templates/joinus_loggedin.html:
-  - new error system for formulars  
-  
+  - new error system for formulars
+
 * templates/joinus_notloggedin.html:
-  - new error system for formulars  
-  
+  - new error system for formulars
+
 * templates/latesttopics_content.html:
   - added tooltip
   - added named anchor for postIDs
 
 * templates/latesttopics_head.html:
   - added tooltips
-  
+
 * templates/linkus.html:
   - added new file upload system incl. png support
-  
+
 * templates/linkus_edit.html:
   - added new file upload system incl. png support
 
@@ -1595,7 +1595,7 @@
 
 * templates/login.html:
   - various small bugfixes
-  
+
 * templates/loginoverview.html:
   - replaced jpgs with gifs
 
@@ -1603,19 +1603,19 @@
   - added user language switch
   - added javascript to show a preview of the country flag
   - added mailcheck
-  
+
 * templates/myprofile_editmail.html:
   - added mailcheck
 
 * templates/news.html:
   - added isintern notice to headline
   - added rubric link to news title
-  
+
 * templates/news_post.html:
   - various small bugfixes
   - improved javascript
   - fixed related links on edit
-  
+
 * templates/newsletter.html:
   - added clear fields onfocus
 
@@ -1638,23 +1638,23 @@
   - adedd poll template files
 
 * templates/quicksearch.html:
-  - prevent sending of empty quicksearch form  
-  
+  - prevent sending of empty quicksearch form
+
 * templates/profile_guestbook_notloggedin.html:
-  - bbcode select added to posting form    
-  
+  - bbcode select added to posting form
+
 * templates/register_error.html
   - added error template file
 
 * templates/sc_headlines.html:
-  - changed filename from headlines.html to sc_headlines.html  
-  
+  - changed filename from headlines.html to sc_headlines.html
+
 * templates/sc_lastregistered.html:
   - added sc_lastregistered.html
 
 * templates/sc_partners.html:
-  - added template file    
-  
+  - added template file
+
 * templates/sc_scrolltext.html:
   - changed to javascript solution
   - new administration
@@ -1663,30 +1663,30 @@
   - added template file
 
 * templates/sc_sponsors.html:
-  - added template file  
+  - added template file
 
 * templates/sc_sponsors_main.html:
-  - added template file     
-  
+  - added template file
+
 * templates/sc_squads.html:
   - added template file
-  
+
 * templates/search_form.html:
-  - prevent sending of empty search form    
-  
+  - prevent sending of empty search form
+
 * templates/search_result.html:
   - added automated title shortening
   - prevent overflow
 
-* templates/search_form_loggedin.html  
+* templates/search_form_loggedin.html
   - added template file
-  
-* templates/search_form_notloggedin.html  
+
+* templates/search_form_notloggedin.html
   - added template file
-  
+
 * templates/server.html:
   - added $game variable
-  
+
 * templates/shoutbox.html:
   - added ajax functionality
   - added js checks
@@ -1696,13 +1696,13 @@
 
 * templates/upcoming_date_new.html:
   - added js form check to prevent empty entries
-  
+
 * templates/upcomingannounce.html:
   - various small bugfixes
-  
+
 * upload.php:
   - added usage of $new_chmod for uploaded stuff
-  
+
 * usergallery.php:
   - security fixes
   - added usage of $new_chmod for uploaded stuff

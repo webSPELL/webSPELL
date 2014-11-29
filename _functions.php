@@ -32,6 +32,7 @@ systeminc('ip');
 
 // -- GLOBAL WEBSPELL FUNCTIONS -- //
 
+<<<<<<< Updated upstream
 function gettemplate($template, $endung = "html", $calledfrom = "root")
 {
     $templatefolder = "templates";
@@ -211,10 +212,135 @@ if (!function_exists('array_combine')) {
         }
         return $result;
     }
+=======
+function gettemplate($template,$endung="html", $calledfrom="root") {
+	$templatefolder = "templates";
+	if($calledfrom=='root') {
+		return str_replace("\"", "\\\"", $GLOBALS['_language']->replace(file_get_contents($templatefolder."/".$template.".".$endung)));
+	}
+	elseif($calledfrom=='admin') {
+		return str_replace("\"", "\\\"", $GLOBALS['_language']->replace(file_get_contents("../".$templatefolder."/".$template.".".$endung)));
+	}
+}
+
+function makepagelink($link, $page, $pages, $sub='') {
+	$page_link = '<span class="pagelink"><img src="images/icons/multipage.gif" width="10" height="12" alt=""> <small>';
+
+	if($page != 1) $page_link .= '&nbsp;<a href="'.$link.'&amp;'.$sub.'page=1">&laquo;</a>&nbsp;<a href="'.$link.'&amp;'.$sub.'page='.($page-1).'">&lsaquo;</a>';
+	if($page >= 6) $page_link .= '&nbsp;<a href="'.$link.'&amp;'.$sub.'page='.($page-5).'">...</a>';
+	if($page+4 >= $pages) $pagex=$pages;
+	else $pagex = $page+4;
+	for($i=$page-4 ; $i<=$pagex ; $i++) {
+		if($i<=0) $i=1;
+		if($i==$page) $page_link .= '&nbsp;<b><u>'.$i.'</u></b>';
+		else $page_link .= '&nbsp;<a href="'.$link.'&amp;'.$sub.'page='.$i.'">'.$i.'</a>';
+	}
+	if(($pages-$page) >= 5) $page_link .= '&nbsp;<a href="'.$link.'&amp;'.$sub.'page='.($page+5).'">...</a>';
+	if($page != $pages) $page_link .= '&nbsp;<a href="'.$link.'&amp;'.$sub.'page='.($page+1).'">&rsaquo;</a>&nbsp;<a href="'.$link.'&amp;'.$sub.'page='.$pages.'">&raquo;</a>';
+	$page_link .= '</small></span>';
+
+	return $page_link;
+}
+
+function str_break($str, $maxlen) {
+	$nobr = 0;
+	$str_br = '';
+	$len = mb_strlen($str);
+	for ($i = 0; $i<$len; $i++) {
+		$char = mb_substr($str,$i,1);
+		if (($char!=' ') && ($char!='-') && ($char!="\n")) $nobr++;
+		else {
+			$nobr = 0;
+			if($maxlen+$i>$len) {
+				$str_br .= mb_substr($str, $i);
+				break;
+			}
+		}
+		if ($nobr>$maxlen) {
+			$str_br .= '- '.$char;
+			$nobr = 1;
+		}
+		else $str_br .= $char;
+	}
+	return $str_br;
+}
+
+function substri_count_array($haystack, $needle) {
+	$return = 0;
+	foreach($haystack as $value) {
+		if(is_array($value)) {
+			$return += substri_count_array($value, $needle);
+		}
+		else {
+			$return += substr_count(strtolower($value), strtolower($needle));
+		}
+	}
+	return $return;
+}
+
+function js_replace($string){
+	$output=preg_replace("/(\\\)/si", '\\\\\1', $string);
+	$output=str_replace(array("\r\n", "\n", "'", "<script>", "</script>", "<noscript>", "</noscript>"), array("\\n", "\\n", "\'", "\\x3Cscript\\x3E", "\\x3C/script\\x3E", "\\x3Cnoscript\\x3E", "\\x3C/noscript\\x3E"), $output);
+	return $output;
+}
+
+function percent($sub, $total, $dec) {
+	if ($sub) {
+		$perc = $sub / $total * 100;
+		$perc = round($perc, $dec);
+		return $perc;
+	}
+	else return 0;
+}
+
+function showlock($reason, $time) {
+	$gettitle = mysqli_fetch_array(safe_query("SELECT title FROM ".PREFIX."styles"));
+	$pagetitle = $gettitle['title'];
+	eval ("\$lock = \"".gettemplate("lock")."\";");
+	die($lock);
+}
+
+function checkenv($systemvar,$checkfor) {
+	return stristr(ini_get($systemvar),$checkfor);
+}
+
+function mail_protect($mailaddress) {
+	$protected_mail = "";
+	$arr = unpack("C*", $mailaddress);
+	foreach ($arr as $entry) {
+		$protected_mail .= sprintf("%%%X", $entry);
+	}
+	return $protected_mail;
+}
+
+function validate_url($url) {
+	return preg_match("/^(ht|f)tps?:\/\/([^:@]+:[^:@]+@)?(?!\.)(\.?(?!-)[0-9\p{L}-]+(?<!-))+(:[0-9]{2,5})?(\/[^#\?]*(\?[^#\?]*)?(#.*)?)?$/sui", $url);
+}
+function validate_email($email){
+	return preg_match("/^(?!\.)(\.?[\p{L}0-9!#\$%&'\*\+\/=\?^_`\{\|}~-]+)+@(?!\.)(\.?(?!-)[0-9\p{L}-]+(?<!-))+\.[\p{L}0-9]{2,}$/sui",$email);
+}
+if(!function_exists('array_combine')){
+	function array_combine($keyarray, $valuearray){
+		$keys=array();
+		$values=array();
+		$result=array();
+		foreach($keyarray AS $key){
+			$keys[]=$key;
+		}
+		foreach($valuearray AS $value){
+			$values[]=$value;
+		}
+		foreach($keys AS $access => $resultkey){
+			$result[$resultkey]=$values[$access];
+		}
+		return $result;
+	}
+>>>>>>> Stashed changes
 }
 
 /* counts empty variables in an array */
 
+<<<<<<< Updated upstream
 function countempty($checkarray)
 {
 
@@ -229,6 +355,18 @@ function countempty($checkarray)
     }
 
     return $ret;
+=======
+function countempty($checkarray) {
+
+	$ret = 0;
+
+	foreach($checkarray as $value) {
+		if(is_array($value)) $ret += countempty($value);
+		elseif(trim($value) == "") $ret++;
+	}
+
+	return $ret;
+>>>>>>> Stashed changes
 }
 
 /* checks, if given request-variables are empty */
@@ -290,8 +428,8 @@ systeminc('func/captcha');
 // -- LANGUAGE SYSTEM -- //
 
 systeminc('func/language');
-$_language = new Language;
-$_language->set_language($default_language);
+$_language = new \webspell\Language();
+$_language->setLanguage($default_language);
 
 // -- GALLERY -- //
 
@@ -312,9 +450,15 @@ systeminc('func/tags');
 // -- Mod Rewrite -- //
 
 systeminc('modrewrite');
+<<<<<<< Updated upstream
 $GLOBALS[ '_modRewrite' ] = new ModRewrite();
 if (!stristr($_SERVER[ 'SCRIPT_NAME' ], '/admin/') && $modRewrite) {
     $GLOBALS[ '_modRewrite' ]->enable();
+=======
+$GLOBALS['_modRewrite'] = new \webspell\ModRewrite();
+if(!stristr($_SERVER['SCRIPT_NAME'],'/admin/') && $modRewrite){
+    $GLOBALS['_modRewrite']->enable();
+>>>>>>> Stashed changes
 }
 
 function cleartext($text, $bbcode = true, $calledfrom = 'root')
@@ -380,6 +524,7 @@ if (isset($_COOKIE[ 'ws_auth' ]) and !isset($_SESSION[ 'ws_auth' ])) {
 
 systeminc('login');
 
+<<<<<<< Updated upstream
 if ($loggedin == false) {
     if (isset($_COOKIE[ 'language' ])) {
         $_language->set_language($_COOKIE[ 'language' ]);
@@ -392,6 +537,22 @@ if ($loggedin == false) {
             $_SESSION[ 'language' ] = $lang;
         }
     }
+=======
+if($loggedin == false) {
+	if(isset($_COOKIE['language'])) {
+	 	$_language->setLanguage($_COOKIE['language']);
+	}
+	elseif( isset($_SESSION['language']) ) {
+		$_language->setLanguage($_SESSION['language']);
+	}
+	elseif($autoDetectLanguage){
+		$lang = detectUserLanguage();
+		if(!empty($lang)){
+			$_language->setLanguage($lang);
+			$_SESSION['language'] = $lang;
+		}
+	}
+>>>>>>> Stashed changes
 }
 
 if ($login_per_cookie) {
@@ -416,11 +577,19 @@ if (!isset($_SERVER[ 'HTTP_REFERER' ])) {
     $_SERVER[ 'HTTP_REFERER' ] = "";
 }
 
+<<<<<<< Updated upstream
 if (!isset($_SERVER[ 'REQUEST_URI' ])) {
     $_SERVER[ 'REQUEST_URI' ] = $_SERVER[ 'PHP_SELF' ];
     if (isset($_SERVER[ 'QUERY_STRING' ])) {
         $_SERVER[ 'REQUEST_URI' ] .= '?' . $_SERVER[ 'QUERY_STRING' ];
     }
+=======
+if (!isset($_SERVER['REQUEST_URI'])) {
+	$_SERVER['REQUEST_URI'] = $_SERVER['PHP_SELF'];
+	if (isset($_SERVER['QUERY_STRING'])) {
+		$_SERVER['REQUEST_URI'] .= '?'.$_SERVER['QUERY_STRING'];
+	}
+>>>>>>> Stashed changes
 }
 
 // -- BANNED USERS -- //
@@ -476,6 +645,7 @@ systeminc('help');
 
 // -- WHOISONLINE -- //
 
+<<<<<<< Updated upstream
 if (mb_strlen($site)) {
     if ($userID) {
         // IS online
@@ -519,6 +689,27 @@ if (mb_strlen($site)) {
             );
         }
     }
+=======
+if(mb_strlen($site)) {
+	if($userID) {
+		// IS online
+		if(mysqli_num_rows(safe_query("SELECT userID FROM ".PREFIX."whoisonline WHERE userID='$userID'"))) {
+			safe_query("UPDATE ".PREFIX."whoisonline SET time='".time()."', site='$site' WHERE userID='$userID'");
+			safe_query("UPDATE ".PREFIX."user SET lastlogin='".time()."' WHERE userID='$userID'");
+		}
+		else safe_query("INSERT INTO ".PREFIX."whoisonline (time, userID, site) VALUES ('".time()."', '$userID', '$site')");
+
+		// WAS online
+		if(mysqli_num_rows(safe_query("SELECT userID FROM ".PREFIX."whowasonline WHERE userID='$userID'")))
+		safe_query("UPDATE ".PREFIX."whowasonline SET time='".time()."', site='$site' WHERE userID='$userID'");
+		else safe_query("INSERT INTO ".PREFIX."whowasonline (time, userID, site) VALUES ('".time()."', '$userID', '$site')");
+	}
+	else {
+		$anz = mysqli_num_rows(safe_query("SELECT ip FROM ".PREFIX."whoisonline WHERE ip='".$GLOBALS['ip']."'"));
+		if($anz) safe_query("UPDATE ".PREFIX."whoisonline SET time='".time()."', site='$site' WHERE ip='".$GLOBALS['ip']."'");
+		else safe_query("INSERT INTO ".PREFIX."whoisonline (time, ip, site) VALUES ('".time()."','".$GLOBALS['ip']."', '$site')");
+	}
+>>>>>>> Stashed changes
 }
 
 // -- COUNTER -- //
@@ -562,3 +753,7 @@ if (stristr($_SERVER[ 'PHP_SELF' ], "/admin/") == false) {
 // -- RSS FEEDS -- //
 
 systeminc('func/feeds');
+<<<<<<< Updated upstream
+=======
+?>
+>>>>>>> Stashed changes

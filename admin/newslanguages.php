@@ -25,12 +25,12 @@
 ##########################################################################
 */
 
-$_language->read_module('newslanguages');
+$_language->readModule('newslanguages');
 
 if(!isnewsadmin($userID) OR mb_substr(basename($_SERVER['REQUEST_URI']),0,15) != "admincenter.php") die($_language->module['access_denied']);
 
 if(isset($_POST['save'])) {
-	$CAPCLASS = new Captcha;
+	$CAPCLASS = new \webspell\Captcha;
 	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
 		if(checkforempty(Array('language', 'lang','alt'))) {
 			safe_query("INSERT INTO ".PREFIX."news_languages ( language, lang, alt ) values( '".$_POST['language']."', '".$_POST['lang']."', '".$_POST['alt']."' ) ");
@@ -39,7 +39,7 @@ if(isset($_POST['save'])) {
 }
 
 elseif(isset($_POST['saveedit'])) {
-	$CAPCLASS = new Captcha;
+	$CAPCLASS = new \webspell\Captcha;
 	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
 		if(checkforempty(Array('language', 'lang', 'alt'))) {
 			safe_query("UPDATE ".PREFIX."news_languages SET language='".$_POST['language']."', lang='".$_POST['lang']."', alt='".$_POST['alt']."' WHERE langID='".$_POST['langID']."'");
@@ -48,7 +48,7 @@ elseif(isset($_POST['saveedit'])) {
 }
 
 elseif(isset($_GET['delete'])) {
-	$CAPCLASS = new Captcha;
+	$CAPCLASS = new \webspell\Captcha;
 	if($CAPCLASS->check_captcha(0, $_GET['captcha_hash'])) {
 		safe_query("DELETE FROM ".PREFIX."news_languages WHERE langID='".$_GET['langID']."'");
 	} else echo $_language->module['transaction_invalid'];
@@ -64,9 +64,9 @@ if(isset($_GET['action'])) $action = $_GET['action'];
 else $action = '';
 
 if($action=="add") {
-	$CAPCLASS = new Captcha;
-	$CAPCLASS->create_transaction();
-	$hash = $CAPCLASS->get_hash();
+	$CAPCLASS = new \webspell\Captcha;
+	$CAPCLASS->createTransaction();
+	$hash = $CAPCLASS->getHash();
 	$flag = '[flag][/flag]';
 $country = flags($flag,'admin');
 $country = str_replace("<img","<img id='getcountry'",$country);
@@ -95,9 +95,9 @@ $country = str_replace("<img","<img id='getcountry'",$country);
 }
 
 elseif($action=="edit") {
-	$CAPCLASS = new Captcha;
-	$CAPCLASS->create_transaction();
-	$hash = $CAPCLASS->get_hash();
+	$CAPCLASS = new \webspell\Captcha;
+	$CAPCLASS->createTransaction();
+	$hash = $CAPCLASS->getHash();
 
 	echo'<h1>&curren; <a href="admincenter.php?site=newslanguages" class="white">'.$_language->module['news_languages'].'</a> &raquo; '.$_language->module['edit_language'].'</h1>';
 
@@ -148,9 +148,9 @@ else {
 		</tr>';
 
 	$i=1;
-	$CAPCLASS = new Captcha;
-	$CAPCLASS->create_transaction();
-	$hash = $CAPCLASS->get_hash();
+	$CAPCLASS = new \webspell\Captcha;
+	$CAPCLASS->createTransaction();
+	$hash = $CAPCLASS->getHash();
 
 	while($ds=mysqli_fetch_array($ergebnis)) {
 		if($i%2) { $td='td1'; }

@@ -44,10 +44,10 @@ if(isset($_GET['lang'])){
 }
 
 $_language->set_language($_SESSION['language']);
-$_language->read_module('index');
+$_language->readModule('index');
 
-if(isset($_GET['step'])) $_language->read_module('step'.(int)$_GET['step'],true);
-else $_language->read_module('step0',true);
+if(isset($_GET['step'])) $_language->readModule('step'.(int)$_GET['step'],true);
+else $_language->readModule('step0',true);
 
 if(!isset($_GET['step'])){
 	$_GET['step'] = "";

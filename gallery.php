@@ -41,9 +41,9 @@ if(isset($_POST['saveedit'])) {
 	include('_settings.php');
 	include('_functions.php');
 
-	$_language->read_module('gallery');
+	$_language->readModule('gallery');
 
-	$galclass = new Gallery;
+	$galclass = new \webspell\Gallery;
 
 	$ds = mysqli_fetch_array(safe_query("SELECT galleryID FROM ".PREFIX."gallery_pictures WHERE picID='".$_POST['picID']."'"));
 
@@ -60,7 +60,7 @@ if(isset($_POST['saveedit'])) {
 }
 elseif($action == "edit") {
 
-	$_language->read_module('gallery');
+	$_language->readModule('gallery');
 
 	if($_GET['id']) {
 
@@ -84,16 +84,16 @@ elseif($action == "delete") {
 	include('_settings.php');
 	include('_functions.php');
 
-	$galclass = new Gallery;
+	$galclass = new \webspell\Gallery;
 
 	$ds=mysqli_fetch_array(safe_query("SELECT galleryID FROM ".PREFIX."gallery_pictures WHERE picID='".$_GET['id']."'"));
 
 	if((isgalleryadmin($userID) or $galclass->isgalleryowner($ds['galleryID'], $userID)) and $_GET['id']) {
 
 		$ds = mysqli_fetch_array(safe_query("SELECT galleryID FROM ".PREFIX."gallery_pictures WHERE picID='".$_GET['id']."'"));
-		
+
 		$dir='images/gallery/';
-		
+
 		//delete thumb
 
 		@unlink($dir.'thumb/'.$_GET['id'].'.jpg');
@@ -116,7 +116,7 @@ elseif($action == "diashow" OR $action == "window") {
 	include('_settings.php');
 	include('_functions.php');
 
-	$_language->read_module('gallery');
+	$_language->readModule('gallery');
 
 	if(!isset($_GET['picID']))	{
 		$result = mysqli_fetch_array(safe_query("SELECT picID FROM ".PREFIX."gallery_pictures WHERE galleryID='".(int)$_GET['galleryID']."' ORDER BY picID ASC LIMIT 0,1"));
@@ -142,7 +142,7 @@ elseif($action == "diashow" OR $action == "window") {
 	//get next
 
 	$browse = mysqli_fetch_array(safe_query("SELECT picID FROM ".PREFIX."gallery_pictures WHERE galleryID='".(int)$_GET['galleryID']."' AND picID>".$picID." ORDER BY picID ASC LIMIT 0,1"));
-	
+
   if($browse['picID'] and $_GET['action'] == "diashow") echo '<meta http-equiv="refresh" content="2;URL=gallery.php?action=diashow&amp;galleryID='.(int)$_GET['galleryID'].'&amp;picID='.$browse['picID'].'">';
 
 	echo '</head><body><center>';
@@ -166,52 +166,52 @@ elseif($action == "diashow" OR $action == "window") {
 }
 elseif(isset($_GET['picID'])) {
 
-	$_language->read_module('gallery');
+	$_language->readModule('gallery');
 
-	$galclass = new Gallery;
+	$galclass = new \webspell\Gallery;
 
 	eval("\$gallery = \"".gettemplate("title_gallery")."\";");
 	echo $gallery;
 
 	$ergebnis = safe_query("SELECT * FROM ".PREFIX."gallery_pictures WHERE picID='".$_GET['picID']."'");
 	if(mysqli_num_rows($ergebnis)){
-	
+
 		$ds = mysqli_fetch_array(safe_query("SELECT * FROM ".PREFIX."gallery_pictures WHERE picID='".$_GET['picID']."'"));
 		safe_query("UPDATE ".PREFIX."gallery_pictures SET views=views+1 WHERE picID='".$_GET['picID']."'");
-	
+
 		$picturename = clearfromtags($ds['name']);
 		$picID = $ds['picID'];
-	
+
 		$picture=$galclass->getlargefile($picID);
-	
+
 		$picinfo = getimagesize($picture);
 		$xsize = $picinfo[0];
 		$ysize = $picinfo[1];
-	
+
 		$xwindowsize = $xsize+30;
 		$ywindowsize = $ysize+30;
-	
+
 		$comment = cleartext($ds['comment'], false);
 		$views = $ds['views'];
-	
+
 		if($xsize>$picsize_l) $width = 'width="'.$picsize_l.'"';
 		else $width = 'width="'.$xsize.'"';
-	
+
 		$filesize = round(filesize($picture)/1024,1);
-	
+
 		//next picture
 		$browse = mysqli_fetch_array(safe_query("SELECT picID FROM ".PREFIX."gallery_pictures WHERE galleryID='".$ds['galleryID']."' AND picID>".$ds['picID']." ORDER BY picID ASC LIMIT 0,1"));
 		if($browse['picID']) $forward = '<a href="index.php?site=gallery&amp;picID='.$browse['picID'].'#picture">'.$_language->module['next'].' &raquo;</a>';
     else $forward='';
-	
+
 		$browse = mysqli_fetch_array(safe_query("SELECT picID FROM ".PREFIX."gallery_pictures WHERE galleryID='".$ds['galleryID']."' AND picID<".$ds['picID']." ORDER BY picID DESC LIMIT 0,1"));
 		if($browse['picID']) $backward = '<a href="index.php?site=gallery&amp;picID='.$browse['picID'].'#picture">&laquo; '.$_language->module['back'].'</a>';
     else $backward='';
-	
+
 		//rateform
-	
+
 		if($loggedin) {
-	
+
 			$getgallery = safe_query("SELECT gallery_pictures FROM ".PREFIX."user WHERE userID='".$userID."'");
 			$found = false;
 			if(mysqli_num_rows($getgallery)) {
@@ -225,7 +225,7 @@ elseif(isset($_GET['picID'])) {
 					}
 				}
 			}
-	
+
 			if($found) $rateform="<i>".$_language->module['you_have_already_rated']."</i>";
 			else $rateform='<form method="post" name="rating_picture'.$_GET['picID'].'" action="rating.php" class="form-inline">'.$_language->module['rate_now'].'
 								<select name="rating">
@@ -245,12 +245,12 @@ elseif(isset($_GET['picID'])) {
 								<input type="hidden" name="type" value="ga">
 								<input type="hidden" name="id" value="'.$_GET['picID'].'">
 		 						<input type="submit" name="submit" value="'.$_language->module['rate'].'" class="btn btn-primary"></form>';
-	
+
 		}
 		else $rateform = '<i>'.$_language->module['rate_have_to_reg_login'].'</i>';
-	
+
 		$votes = $ds['votes'];
-	
+
 		unset($ratingpic);
 		$ratings = array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 		for($i = 0; $i < $ds['rating']; $i++) {
@@ -260,43 +260,43 @@ elseif(isset($_GET['picID'])) {
 		foreach($ratings as $pic) {
 			$ratingpic .= '<img src="images/icons/rating_'.$pic.'.gif" width="4" height="5" alt="">';
 		}
-	
+
 		//admin
-	
+
 		if((isgalleryadmin($userID) and $publicadmin) or $galclass->isgalleryowner($ds['galleryID'],$userID)) {
 			$adminaction = '<input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=gallery&amp;action=edit&amp;id='.$_GET['picID'].'\');return document.MM_returnValue" value="'.$_language->module['edit'].'" class="btn btn-danger"> <input type="button" onclick="MM_confirm(\''.$_language->module['really_del'].'\', \'gallery.php?action=delete&amp;id='.$_GET['picID'].'\')" value="'.$_language->module['delete'].'" class="btn btn-danger">';
 		}
 		else $adminaction = "";
-	
+
 		//group+gallery
-	
+
 		$gallery = '<a href="index.php?site=gallery&amp;galleryID='.$ds['galleryID'].'" class="titlelink">'.$galclass->getgalleryname($_GET['picID']).'</a>';
 		if($galclass->getgroupid_by_gallery($ds['galleryID'])) $group = '<a href="index.php?site=gallery&amp;groupID='.$galclass->getgroupid_by_gallery($ds['galleryID']).'" class="titlelink">'.$galclass->getgroupname($galclass->getgroupid_by_gallery($ds['galleryID'])).'</a>';
 		else $group = '<a href="index.php?site=gallery&amp;groupID=0" class="titlelink">'.$_language->module['usergalleries'].'</a> &gt;&gt; <a href="index.php?site=profile&amp;action=galleries&amp;id='.$galclass->getgalleryowner($ds['galleryID']).'" class="titlelink">'.getnickname($galclass->getgalleryowner($ds['galleryID'])).'</a>';
-	  
+
 		eval("\$gallery = \"".gettemplate("gallery_comments")."\";");
 		echo $gallery;
-	
+
 		//comments
-	
+
 		$comments_allowed = $ds['comments'];
 		$parentID = $ds['picID'];
 		$type = "ga";
 		$referer = "index.php?site=gallery&amp;picID=".$ds['picID'];
-	
+
 		include("comments.php");
 	}
 }
 elseif(isset($_GET['galleryID'])) {
 
-	$_language->read_module('gallery');
+	$_language->readModule('gallery');
 
-	$galclass = new Gallery;
+	$galclass = new \webspell\Gallery;
 
 	$ds = mysql_fetch_array(safe_query("SELECT name FROM ".PREFIX."gallery WHERE galleryID='".$_GET['galleryID']."'"));
 	$title = str_break(clearfromtags($ds['name']), 45);
 	$pics = mysql_num_rows(safe_query("SELECT picID FROM ".PREFIX."gallery_pictures WHERE galleryID='".$_GET['galleryID']."'"));
-    
+
     $carouselIndicators='<li data-target="#myCarousel" data-slide-to="0" class="active"></li>';
     for($foo=1;$foo<$pics;$foo++) {
         $carouselIndicators .= '<li data-target="#myCarousel" data-slide-to="'.$foo.'"></li>';
@@ -311,7 +311,7 @@ elseif(isset($_GET['galleryID'])) {
 	else $group = '<a href="index.php?site=gallery&amp;groupID=0" class="titlelink">'.$_language->module['usergalleries'].'</a> &gt;&gt; <a href="index.php?site=profile&amp;action=galleries&amp;id='.$galclass->getgalleryowner($_GET['galleryID']).'" class="titlelink">'.getnickname($galclass->getgalleryowner($_GET['galleryID'])).'</a>';
 
 	$ergebnis = safe_query("SELECT * FROM ".PREFIX."gallery_pictures WHERE galleryID='".$_GET['galleryID']."' ORDER BY picID");
-	
+
 	if(mysqli_num_rows($ergebnis)){
 		$diashow = "<strong>- <a href=\"javascript:MM_openBrWindow('gallery.php?action=diashow&amp;galleryID=$galleryID','webspell_diashow','toolbar=no,status=no,scrollbars=yes')\"><small>[".$_language->module['start_diashow']."]</small></a></strong>";
 	}
@@ -329,16 +329,16 @@ elseif(isset($_GET['galleryID'])) {
 
 		if($i % 2) $bg = BG_2;
 		else $bg = BG_1;
-		
+
 		$dir='images/gallery/';
-		
+
 		$firstActive='';
         if($i==1) $firstActive = 'active';
-        
+
 		$pic['pic'] = $pic['picID'].'.jpg';
 		if(!file_exists($dir.'large/'.$pic['pic'])) $pic['pic'] = 'images/nopic.gif';
         list($width, $height, $type, $attr) = getimagesize($dir.'large/'.$pic['pic']);
-    
+
 		$pic['name'] = clearfromtags($pic['name']);
 		$pic['comment'] = cleartext($pic['comment'], false);
 		$pic['comments'] = mysqli_num_rows(safe_query("SELECT commentID FROM ".PREFIX."comments WHERE parentID='".$pic['picID']."' AND type='ga'"));
@@ -359,9 +359,9 @@ elseif(isset($_GET['galleryID'])) {
 }
 elseif(isset($_GET['groupID'])) {
 
-	$_language->read_module('gallery');
+	$_language->readModule('gallery');
 
-	$galclass = new Gallery;
+	$galclass = new \webspell\Gallery;
 
 	eval ("\$gallery = \"".gettemplate("title_gallery")."\";");
 	echo $gallery;
@@ -389,9 +389,9 @@ elseif(isset($_GET['groupID'])) {
 
 		if($i % 2) $bg = BG_2;
 		else $bg = BG_1;
-		
+
 		$dir='images/gallery/';
-		
+
 		$gallery['picID'] = $galclass->randompic($gallery['galleryID']);
 		$gallery['pic'] = $dir.'thumb/'.$gallery['picID'].'.jpg';
 		$gallery['pics'] = mysqli_num_rows(safe_query("SELECT picID FROM ".PREFIX."gallery_pictures WHERE galleryID='".$gallery['galleryID']."'"));
@@ -400,7 +400,7 @@ elseif(isset($_GET['groupID'])) {
 
 		eval ("\$gallery = \"".gettemplate("gallery_showlist_group")."\";");
 		echo $gallery;
-	
+
 		$i++;
 	}
 	echo '<td>&nbsp;</td></tr>';
@@ -411,27 +411,27 @@ elseif(isset($_GET['groupID'])) {
 }
 else {
 
-	$_language->read_module('gallery');
+	$_language->readModule('gallery');
 
-	$galclass = new Gallery;
+	$galclass = new \webspell\Gallery;
 
 	eval("\$gallery = \"".gettemplate("title_gallery")."\";");
 	echo $gallery;
 	/*
 	//latest gallery
 	$ds = mysqli_fetch_array(safe_query("SELECT galleryID FROM ".PREFIX."gallery WHERE userID='0' ORDER BY galleryID DESC LIMIT 0, 1"));
-	$latest = $galclass->showthumb($galclass->randompic($ds['galleryID']));
-	
+	$latest = $galclass->showThumb($galclass->randomPic($ds['galleryID']));
+
 	//random
-	$random = $galclass->showthumb($galclass->randompic());
+	$random = $galclass->showThumb($galclass->randomPic());
 
 	//top comments
 	$ds = mysqli_fetch_array(safe_query("SELECT parentID, COUNT(parentID) as max FROM ".PREFIX."comments WHERE type='ga' GROUP BY parentID ORDER BY max DESC LIMIT 0, 1"));
-	if(!$ds['parentID']) $ds['parentID'] = $galclass->randompic();
-	$most_comments = $galclass->showthumb($ds['parentID']);
+	if(!$ds['parentID']) $ds['parentID'] = $galclass->randomPic();
+	$most_comments = $galclass->showThumb($ds['parentID']);
 	$bg1 = BG_1;
 	$bg2 = BG_2;
-	
+
   eval("\$gallery = \"".gettemplate("gallery_content_head")."\";");
 	echo $gallery;
 	*/
@@ -454,21 +454,21 @@ else {
         $i=0;
         while($ds = mysqli_fetch_array($groups)) {
             $i++;
-            
+
             $ds['picture'] = $galclass->randompic($ds['galleryID']);
             if(isset($ds['date'])) $ds['date'] = date('d.m.Y', $ds['date']);
             if(isset($ds['galleryID'])) $ds['count'] = mysqli_num_rows(safe_query("SELECT picID FROM ".PREFIX."gallery_pictures WHERE galleryID='".$ds['galleryID']."'"));
-            
+
             if(isset($ds['count'])) {
                 eval ("\$gallery_groups = \"".gettemplate("gallery_content_showlist")."\";");
                 echo $gallery_groups;
-                
+
                 // preventing to break Layout if number of groups is odd
                 if($anzgroups % 2 != 0 AND $i==$anzgroups) echo '<div class="span3"></div>';
             }
             else echo '<p class="span6">'.$_language->module['no_gallery_exists'].'</p>';
         }
-        
+
         eval ("\$gallery_content_categorys_foot = \"".gettemplate("gallery_content_categorys_foot")."\";");
         echo $gallery_content_categorys_foot;
 	}

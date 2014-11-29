@@ -24,7 +24,7 @@
 #                                                                        #
 ##########################################################################
 */
-if (isset($site)) $_language->read_module('clanwars');
+if (isset($site)) $_language->readModule('clanwars');
 
 eval ("\$title_clanwars_details = \"".gettemplate("title_clanwars_details")."\";");
 echo $title_clanwars_details;
@@ -176,7 +176,7 @@ if(!isset($_GET['action'])) {
 				$score_1='<font color="'.$drawcolor.'"><b>'.$scoreHome[$d].'</b></font>';
 				$score_2='<font color="'.$drawcolor.'"><b>'.$scoreOpp[$d].'</b></font>';
 			}
-			
+
       		eval ("\$clanwars_details_results = \"".gettemplate("clanwars_details_results")."\";");
       		$extendedresults.=$clanwars_details_results;
 			unset($score);

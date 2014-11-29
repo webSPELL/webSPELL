@@ -27,11 +27,11 @@
 
 if(isset($_POST['upload'])) {
 
-  $_language->read_module('database');
+  $_language->readModule('database');
 
   if(!ispageadmin($userID) OR mb_substr(basename($_SERVER['REQUEST_URI']),0,15) != "admincenter.php") die($_language->module['access_denied']);
 	$upload = $_FILES['sql'];
-	$CAPCLASS = new Captcha;
+	$CAPCLASS = new \webspell\Captcha;
 	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
 		if($upload['name'] != "") {
 		 	$get = safe_query("SELECT DATABASE()");
@@ -69,7 +69,7 @@ else $returnto = "database";
 
 if($action=="optimize") {
 
-  $_language->read_module('database');
+  $_language->readModule('database');
 
   echo'<h1>&curren; '.$_language->module['database'].'</h1>';
 
@@ -93,7 +93,7 @@ elseif($action=="write") {
 	include('../version.php');
 	systeminc("func/captcha");
 
-	$CAPCLASS = new Captcha;
+	$CAPCLASS = new \webspell\Captcha;
 	if($CAPCLASS->check_captcha(0, $_GET['captcha_hash'])) {
 	#$get = safe_query("SELECT DATABASE()");
   	#$ret = mysqli_fetch_array($get);
@@ -174,17 +174,17 @@ elseif($action=="write") {
 		header("Content-Transfer-Encoding: binary");
 		echo $final;
 	}
-	} else echo $_language->read_module('database').$_language->module['transaction_invalid'];
+	} else echo $_language->readModule('database').$_language->module['transaction_invalid'];
 }
 else {
 
-  $_language->read_module('database');
+  $_language->readModule('database');
 
   if(!ispageadmin($userID) OR mb_substr(basename($_SERVER['REQUEST_URI']),0,15) != "admincenter.php") die($_language->module['access_denied']);
 
-  $CAPCLASS = new Captcha;
-	$CAPCLASS->create_transaction();
-	$hash = $CAPCLASS->get_hash();
+  $CAPCLASS = new \webspell\Captcha;
+	$CAPCLASS->createTransaction();
+	$hash = $CAPCLASS->getHash();
 
   echo'<h1>&curren; '.$_language->module['database'].'</h1>';
 

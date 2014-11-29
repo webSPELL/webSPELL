@@ -25,7 +25,7 @@
 ##########################################################################
 */
 
-$_language->read_module('bannerrotation');
+$_language->readModule('bannerrotation');
 
 if(!ispageadmin($userID) OR mb_substr(basename($_SERVER['REQUEST_URI']),0,15) != "admincenter.php") die($_language->module['access_denied']);
 
@@ -38,9 +38,9 @@ if($action=="add") {
 
   echo'<h1>&curren; <a href="admincenter.php?site=bannerrotation" class="white">'.$_language->module['bannerrotation'].'</a> &raquo; '.$_language->module['add_banner'].'</h1>';
 
-	$CAPCLASS = new Captcha;
-	$CAPCLASS->create_transaction();
-	$hash = $CAPCLASS->get_hash();
+	$CAPCLASS = new \webspell\Captcha;
+	$CAPCLASS->createTransaction();
+	$hash = $CAPCLASS->getHash();
 
   echo'<form method="post" action="admincenter.php?site=bannerrotation" enctype="multipart/form-data">
   <table width="100%" border="0" cellspacing="1" cellpadding="3">
@@ -82,9 +82,9 @@ elseif($action=="edit") {
 	if($ds['displayed']=='1') $displayed='<input type="checkbox" name="displayed" value="1" checked="checked">';
 	else $displayed='<input type="checkbox" name="displayed" value="1">';
 
-  $CAPCLASS = new Captcha;
-	$CAPCLASS->create_transaction();
-	$hash = $CAPCLASS->get_hash();
+  $CAPCLASS = new \webspell\Captcha;
+	$CAPCLASS->createTransaction();
+	$hash = $CAPCLASS->getHash();
   echo'<form method="post" action="admincenter.php?site=bannerrotation" enctype="multipart/form-data">
   <input type="hidden" name="bannerID" value="'.$ds['bannerID'].'">
   <table width="100%" border="0" cellspacing="1" cellpadding="3">
@@ -124,7 +124,7 @@ elseif(isset($_POST["save"])) {
   	else $displayed="";
   	if(!$displayed) $displayed=0;
 
-  	$CAPCLASS = new Captcha;
+  	$CAPCLASS = new \webspell\Captcha;
 	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
 		if($bannername AND $bannerurl AND $banner) {
 			if(stristr($bannerurl,'http://')) $bannerurl=$bannerurl;
@@ -157,7 +157,7 @@ elseif(isset($_POST["saveedit"])) {
 	if(isset($_POST["displayed"])) $displayed = $_POST['displayed'];
 	else $displayed="";
 	if(!$displayed) $displayed=0;
-	$CAPCLASS = new Captcha;
+	$CAPCLASS = new \webspell\Captcha;
 	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
 		if($banner AND $bannername AND $bannerurl) {
 			if(stristr($bannerurl,'http://')) $bannerurl=$bannerurl;
@@ -185,7 +185,7 @@ elseif(isset($_POST["saveedit"])) {
 }
 
 elseif(isset($_GET["delete"])) {
- 	$CAPCLASS = new Captcha;
+ 	$CAPCLASS = new \webspell\Captcha;
 	if($CAPCLASS->check_captcha(0, $_GET['captcha_hash'])) {
 		if(safe_query("DELETE FROM ".PREFIX."bannerrotation WHERE bannerID='".$_GET["bannerID"]."'")) {
 			if(file_exists($filepath.$_GET["bannerID"].'.jpg')) unlink($filepath.$_GET["bannerID"].'.jpg');
@@ -214,9 +214,9 @@ else {
       <td width="20%" class="title"><b>'.$_language->module['actions'].'</b></td>
     </tr>';
 
-  $CAPCLASS = new Captcha;
-	$CAPCLASS->create_transaction();
-	$hash = $CAPCLASS->get_hash();
+  $CAPCLASS = new \webspell\Captcha;
+	$CAPCLASS->createTransaction();
+	$hash = $CAPCLASS->getHash();
 
 	$qry=safe_query("SELECT * FROM ".PREFIX."bannerrotation ORDER BY bannerID");
 	$anz=mysqli_num_rows($qry);

@@ -25,7 +25,7 @@
 ##########################################################################
 */
 
-if(isset($site)) $_language->read_module('contact');
+if(isset($site)) $_language->readModule('contact');
 
 eval ("\$title_contact = \"".gettemplate("title_contact")."\";");
 echo $title_contact;
@@ -41,27 +41,27 @@ if($action == "send") {
 	$name = $_POST['name'];
 	$from = $_POST['from'];
 	$run=0;
-	
+
 	$fehler = array();
 	if(!(mb_strlen(trim($name)))) $fehler[] = $_language->module['enter_name'];
-	
+
 	if(!validate_email($from)) $fehler[] = $_language->module['enter_mail'];
 	if(!(mb_strlen(trim($subject)))) $fehler[] = $_language->module['enter_subject'];
 	if(!(mb_strlen(trim($text)))) $fehler[] = $_language->module['enter_message'];
-	
+
 	$ergebnis=safe_query("SELECT * FROM ".PREFIX."contact WHERE email='".$getemail."'");
 	if(mysqli_num_rows($ergebnis) == 0){
 		$fehler[] = $_language->module['unknown_receiver'];
 	}
-	
+
 	if($userID) {
 		$run=1;
 	} else {
-		$CAPCLASS = new Captcha;
+		$CAPCLASS = new \webspell\Captcha;
 		if(!$CAPCLASS->check_captcha($_POST['captcha'], $_POST['captcha_hash'])) $fehler[] = $_language->module['wrong_securitycode'];
 		else $run=1;
 	}
-	
+
 	if(!count($fehler) and $run) {
 		$header="From:$from\n";
 		$header .= "Reply-To: $from\n";
@@ -74,7 +74,7 @@ if($action == "send") {
 		unset($_POST['subject']);
 	} else {
 		$errors=implode('<br>&#8226; ',$fehler);
-		
+
 		$showerror = '<div class="alert alert-danger alert-dismissible" role="alert">
 			<button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
 			<strong>'.$_language->module['errors_there'].':</strong><br>
@@ -99,14 +99,14 @@ if($loggedin) {
 	else $subject='';
 	if(isset($_POST['text'])) $text =  getforminput($_POST['text']);
 	else $text='';
-	
+
 	eval ("\$contact_loggedin = \"".gettemplate("contact_loggedin")."\";");
 	echo $contact_loggedin;
 } else {
-	$CAPCLASS = new Captcha;
-	$captcha = $CAPCLASS->create_captcha();
-	$hash = $CAPCLASS->get_hash();
-	$CAPCLASS->clear_oldcaptcha();
+	$CAPCLASS = new \webspell\Captcha;
+	$captcha = $CAPCLASS->createCaptcha();
+	$hash = $CAPCLASS->getHash();
+	$CAPCLASS->clearOldCaptcha();
 	if(!isset($showerror)) $showerror='';
 	if(isset($_POST['name'])) $name = getforminput($_POST['name']);
 	else $name='';
@@ -116,8 +116,8 @@ if($loggedin) {
 	else $subject='';
 	if(isset($_POST['text'])) $text = getforminput($_POST['text']);
 	else $text='';
-	
+
 	eval ("\$contact_notloggedin = \"".gettemplate("contact_notloggedin")."\";");
 	echo $contact_notloggedin;
 }
-?> 
+?>

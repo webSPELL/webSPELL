@@ -28,7 +28,7 @@
 include("_mysql.php");
 include("_settings.php");
 include("_functions.php");
-$_language->read_module('rating');
+$_language->readModule('rating');
 
 if(!$userID) die($_language->module['no_access']);
 

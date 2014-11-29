@@ -25,7 +25,7 @@
 ##########################################################################
 */
 
-$_language->read_module('lock');
+$_language->readModule('lock');
 
 if(!ispageadmin($userID) OR mb_substr(basename($_SERVER['REQUEST_URI']),0,15) != "admincenter.php") die($_language->module['access_denied']);
 
@@ -34,7 +34,7 @@ echo'<h1>&curren; <a href="admincenter.php?site=settings" class="white">'.$_lang
 if(!$closed) {
 
 	if(isset($_POST['submit']) != "" AND ispageadmin($userID)) {
-		$CAPCLASS = new Captcha;
+		$CAPCLASS = new \webspell\Captcha;
 		if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
 			if(mysqli_num_rows(safe_query("SELECT * FROM `".PREFIX."lock`")))
 			safe_query("UPDATE `".PREFIX."lock` SET reason='".$_POST['reason']."', time='".time()."'");
@@ -50,9 +50,9 @@ if(!$closed) {
 	else {
 		$ergebnis=safe_query("SELECT * FROM `".PREFIX."lock`");
 		$ds=mysqli_fetch_array($ergebnis);
-		$CAPCLASS = new Captcha;
-		$CAPCLASS->create_transaction();
-		$hash = $CAPCLASS->get_hash();
+		$CAPCLASS = new \webspell\Captcha;
+		$CAPCLASS->createTransaction();
+		$hash = $CAPCLASS->getHash();
 
 		echo'<form method="post" action="admincenter.php?site=lock">
     <b>'.$_language->module['pagelock'].'</b><br /><small>'.$_language->module['you_can_use_html'].'</small><br /><br />
@@ -65,7 +65,7 @@ if(!$closed) {
 else {
 
 	if(isset($_POST['submit']) != "" AND isset($_POST['unlock']) AND ispageadmin($userID)) {
-		$CAPCLASS = new Captcha;
+		$CAPCLASS = new \webspell\Captcha;
 		if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
 			safe_query("UPDATE `".PREFIX."settings` SET closed='0'");
     		redirect("admincenter.php?site=lock",$_language->module['page_unlocked'],3);
@@ -76,9 +76,9 @@ else {
 	else {
 		$ergebnis=safe_query("SELECT * FROM `".PREFIX."lock`");
 		$ds=mysqli_fetch_array($ergebnis);
-		$CAPCLASS = new Captcha;
-		$CAPCLASS->create_transaction();
-		$hash = $CAPCLASS->get_hash();
+		$CAPCLASS = new \webspell\Captcha;
+		$CAPCLASS->createTransaction();
+		$hash = $CAPCLASS->getHash();
 
 		echo'<form method="post" action="admincenter.php?site=lock">
     '.$_language->module['locked_since'].'&nbsp;'.date("d.m.Y - H:i",$ds['time']).'.<br /><br />

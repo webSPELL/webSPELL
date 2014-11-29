@@ -39,7 +39,7 @@ include("_functions.php");
 $sleep = 1; //idle status for script if password is wrong?
 
 //settings end
-$_language->read_module('checklogin');
+$_language->readModule('checklogin');
 
 $get = safe_query("SELECT * FROM ".PREFIX."banned_ips WHERE ip='".$GLOBALS['ip']."'");
 if(mysqli_num_rows($get) == 0){

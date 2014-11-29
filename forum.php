@@ -45,7 +45,7 @@ function forum_stats() {
 	global $drawcolor;
 	global $_language;
 
-	$_language->read_module('forum');
+	$_language->readModule('forum');
 
 	// TODAY birthdays
 	$ergebnis=safe_query("SELECT nickname, userID, YEAR(CURRENT_DATE()) -YEAR(birthday) 'age' FROM ".PREFIX."user WHERE DATE_FORMAT(`birthday`, '%m%d') = DATE_FORMAT(NOW(), '%m%d')");
@@ -119,7 +119,7 @@ function boardmain() {
 	global $_language;
 	global $maxtopics;
 
-	$_language->read_module('forum');
+	$_language->readModule('forum');
 
 	$pagebg=PAGEBG;
 	$border=BORDER;
@@ -225,17 +225,17 @@ function boardmain() {
 			$n=1;
 			$board_topics = Array();
 			while($lp = mysqli_fetch_assoc($q)) {
-				
+
 				if($n == 1) {
 
 					$date=getformatdate($lp['lastdate']);
 					$today=getformatdate(time());
 					$yesterday = getformatdate(time()-3600*24);
-	
+
 					if($date==$today) $date=$_language->module['today'];
 					elseif($date==$yesterday && $date<$today) $date=$_language->module['yesterday'];
 					else $date=$date;
-	
+
 					$time=getformattime($lp['lastdate']);
 					$poster='<a href="index.php?site=profile&amp;id='.$lp['lastposter'].'">'.getnickname($lp['lastposter']).'</a>';
 					if(isclanmember($lp['lastposter'])) $member=' <img src="images/icons/member.gif" alt="'.$_language->module['clanmember'].'">';
@@ -246,18 +246,18 @@ function boardmain() {
 				}
 				if($userID) $board_topics[] = $lp['topicID'];
 				else break;
-				$n++;				
+				$n++;
 			}
-			
+
 			// get unviewed topics
-			
+
 			$found = false;
-			
+
 			if($userID) {
-				
+
 				$gv=mysqli_fetch_array(safe_query("SELECT topics FROM ".PREFIX."user WHERE userID='$userID'"));
 				$array=explode("|", $gv['topics']);
-		
+
 				foreach($array as $split) {
 
 					if($split != "" AND in_array($split, $board_topics)) {
@@ -333,17 +333,17 @@ function boardmain() {
 			$n=1;
 			$board_topics = Array();
 			while($lp = mysqli_fetch_assoc($q)) {
-				
+
 				if($n == 1) {
 
 					$date=getformatdate($lp['lastdate']);
 					$today=getformatdate(time());
 					$yesterday = getformatdate(time()-3600*24);
-	
+
 					if($date==$today) $date=$_language->module['today'];
 					elseif($date==$yesterday && $date<$today) $date=$_language->module['yesterday'];
 					else $date=$date;
-	
+
 					$time=getformattime($lp['lastdate']);
 					$poster='<a href="index.php?site=profile&amp;id='.$lp['lastposter'].'">'.getnickname($lp['lastposter']).'</a>';
 					if(isclanmember($lp['lastposter'])) $member=' <img src="images/icons/member.gif" alt="'.$_language->module['clanmember'].'">';
@@ -354,18 +354,18 @@ function boardmain() {
 				}
 				if($userID) $board_topics[] = $ds['topicID'];
 				else break;
-				$n++;				
+				$n++;
 			}
-			
+
 			// get unviewed topics
-			
+
 			$found = false;
-			
+
 			if($userID) {
-				
+
 				$gv=mysqli_fetch_array(safe_query("SELECT topics FROM ".PREFIX."user WHERE userID='$userID'"));
 				$array=explode("|", $gv['topics']);
-		
+
 				foreach($array as $split) {
 
 					if($split != "" AND in_array($split, $board_topics)) {
@@ -405,7 +405,7 @@ function showboard($board) {
 	global $action;
 	global $_language;
 
-	$_language->read_module('forum');
+	$_language->readModule('forum');
 
 	$pagebg=PAGEBG;
 	$border=BORDER;
@@ -420,13 +420,13 @@ function showboard($board) {
 
 	if($action=="markall" AND $userID) {
 		$gv=mysqli_fetch_array(safe_query("SELECT topics FROM ".PREFIX."user WHERE userID='$userID'"));
-		
+
 		$board_topics = Array();
 		while($ds=mysqli_fetch_array($alle))	$board_topics[] = $ds['topicID'];
-		
+
 		$array=explode("|", $gv['topics']);
 		$new='|';
-		
+
 		foreach($array as $split) {
 			if($split != "" AND !in_array($split, $board_topics)) $new .= $split.'|';
 		}
@@ -487,7 +487,7 @@ function showboard($board) {
 		$mark='<a href="index.php?site=forum&amp;board='.$board.'&amp;action=markall">'.$_language->module['mark_topics_read'].'</a>';
 		if($writer) $actions.=' <a href="index.php?site=forum&amp;addtopic=true&amp;board='.$board.'" class="btn btn-primary"><i class="icon-comment-alt"></i> '.$_language->module['new_topic'].'</a>';
 	} else $mark='';
-	
+
 	$cat = $db['category'];
 	$kathname = getcategoryname($cat);
 	eval ("\$forum_head = \"".gettemplate("forum_head")."\";");
@@ -495,7 +495,7 @@ function showboard($board) {
 
 	// TOPICS
 
-	
+
 	$topics = safe_query("SELECT * FROM ".PREFIX."forum_topics WHERE boardID='$board' ORDER BY sticky DESC, lastdate DESC LIMIT $start,$max");
 	$anztopics = mysqli_num_rows(safe_query("SELECT boardID FROM ".PREFIX."forum_topics WHERE boardID='$board'"));
 
@@ -647,7 +647,7 @@ if(isset($_POST['submit']) || isset($_POST['movetopic']) || isset($_GET['addtopi
 		include("_mysql.php");
 		include("_settings.php");
 		include('_functions.php');
-		$_language->read_module('forum');
+		$_language->readModule('forum');
 
 		$topicID = (int)$_POST['topicID'];
 		$board = (int)$_POST['board'];
@@ -661,7 +661,7 @@ if(isset($_POST['submit']) || isset($_POST['movetopic']) || isset($_GET['addtopi
 		include("_mysql.php");
 		include("_settings.php");
 		include('_functions.php');
-		$_language->read_module('forum');
+		$_language->readModule('forum');
 
 		$topicID = (int)$_POST['topicID'];
 		$board = (int)$_POST['board'];
@@ -675,16 +675,16 @@ if(isset($_POST['submit']) || isset($_POST['movetopic']) || isset($_GET['addtopi
 		include("_mysql.php");
 		include("_settings.php");
 		include('_functions.php');
-		$_language->read_module('forum');
+		$_language->readModule('forum');
 
 		$topicID = (int)$_POST['topicID'];
 		$board = (int)$_POST['board'];
 
 		if(!isforumadmin($userID) and !ismoderator($userID, $board)) die($_language->module['no_access']);
-		
+
 		$numposts = mysqli_num_rows(safe_query("SELECT postID FROM ".PREFIX."forum_posts WHERE topicID='".$topicID."'"));
 		$numposts --;
-		
+
 		safe_query("UPDATE ".PREFIX."forum_boards SET topics=topics-1, posts=posts-".$numposts." WHERE boardID='".$board."' ");
 		safe_query("DELETE FROM ".PREFIX."forum_topics WHERE topicID='$topicID' ");
 		safe_query("DELETE FROM ".PREFIX."forum_topics WHERE moveID='$topicID' ");
@@ -695,7 +695,7 @@ if(isset($_POST['submit']) || isset($_POST['movetopic']) || isset($_GET['addtopi
 		include("_mysql.php");
 		include("_settings.php");
 		include('_functions.php');
-		$_language->read_module('forum');
+		$_language->readModule('forum');
 
 		$topicID = (int)$_POST['topicID'];
 		$board = (int)$_POST['board'];
@@ -709,7 +709,7 @@ if(isset($_POST['submit']) || isset($_POST['movetopic']) || isset($_GET['addtopi
 		include("_mysql.php");
 		include("_settings.php");
 		include('_functions.php');
-		$_language->read_module('forum');
+		$_language->readModule('forum');
 
 		$topicID = (int)$_POST['topicID'];
 		$board = (int)$_POST['board'];
@@ -723,7 +723,7 @@ if(isset($_POST['submit']) || isset($_POST['movetopic']) || isset($_GET['addtopi
 		include("_mysql.php");
 		include("_settings.php");
 		include('_functions.php');
-		$_language->read_module('forum');
+		$_language->readModule('forum');
 
 		$topicID = (int)$_POST['topicID'];
 		if(isset($_POST['postID']))$postID = $_POST['postID'];
@@ -757,7 +757,7 @@ if(isset($_POST['submit']) || isset($_POST['movetopic']) || isset($_GET['addtopi
 		include("_mysql.php");
 		include("_settings.php");
 		include('_functions.php');
-		$_language->read_module('forum');
+		$_language->readModule('forum');
 
 		$toboard = (int)$_POST['toboard'];
 		$topicID = (int)$_POST['topicID'];
@@ -785,7 +785,7 @@ if(isset($_POST['submit']) || isset($_POST['movetopic']) || isset($_GET['addtopi
 		include("_mysql.php");
 		include("_settings.php");
 		include('_functions.php');
-		$_language->read_module('forum');
+		$_language->readModule('forum');
 		if(!isanyadmin($userID) and !ismoderator($userID, getboardid($_POST['topicID']))) die($_language->module['no_access']);
 
 		$boards='';
@@ -807,7 +807,7 @@ if(isset($_POST['submit']) || isset($_POST['movetopic']) || isset($_GET['addtopi
 		$border = BORDER;
 		$bghead = BGHEAD;
 		$bg1 = BG_1;
-		
+
 		eval ("\$forum_move_topic = \"".gettemplate("forum_move_topic")."\";");
 		echo $forum_move_topic;
 	}
@@ -815,8 +815,8 @@ if(isset($_POST['submit']) || isset($_POST['movetopic']) || isset($_GET['addtopi
 		include("_mysql.php");
 		include("_settings.php");
 		include('_functions.php');
-		$_language->read_module('forum');
-		$_language->read_module('bbcode', true);
+		$_language->readModule('forum');
+		$_language->readModule('bbcode', true);
 
 		if(!$userID) die($_language->module['not_logged']);
 
@@ -832,9 +832,9 @@ if(isset($_POST['submit']) || isset($_POST['movetopic']) || isset($_GET['addtopi
 			$message = $_POST['message'];
 			$topic_sticky = (isset($_POST['sticky'])) ? '1' : '0';
 			$notify = (isset($_POST['notify'])) ? '1' : '0';
-	
+
 			$ds=mysqli_fetch_array(safe_query("SELECT readgrps, writegrps FROM ".PREFIX."forum_boards WHERE boardID='$board'"));
-	
+
 			$writer = 0;
 			if($ds['writegrps'] != "") {
 				$writegrps = explode(";", $ds['writegrps']);
@@ -848,25 +848,25 @@ if(isset($_POST['submit']) || isset($_POST['movetopic']) || isset($_GET['addtopi
 			}
 			else $writer = 1;
 			if(!$writer) die($_language->module['no_access_write']);
-			
+
 			$spamApi = SpamApi::getInstance();
 			$validation = $spamApi->validate($message);
-	
+
 			if($validation == SpamApi::NoSpam){
 				$date=time();
 				safe_query("INSERT INTO ".PREFIX."forum_topics ( boardID, readgrps, writegrps, userID, date, icon, topic, lastdate, lastposter, replys, views, closed, sticky ) values ( '$board', '".$ds['readgrps']."', '".$ds['writegrps']."', '$userID', '$date', '".$icon."', '".$topicname."', '$date', '$userID', '0', '0', '0', '$topic_sticky' ) ");
 				$id=mysqli_insert_id($_database);
 				safe_query("UPDATE ".PREFIX."forum_boards SET topics=topics+1 WHERE boardID='".$board."'");
 				safe_query("INSERT INTO ".PREFIX."forum_posts ( boardID, topicID, date, poster, message ) values( '$board', '$id', '$date', '$userID', '".$message."' ) ");
-		
+
 				// check if there are more than 1000 unread topics => delete oldest one
 				$dv = mysqli_fetch_array(safe_query("SELECT topics FROM ".PREFIX."user WHERE userID='".$userID."'"));
 				$array = explode('|', $dv['topics']);
 				if(count($array)>=1000) safe_query("UPDATE ".PREFIX."user SET topics='|".implode('|', array_slice($array, 2))."' WHERE userID='".$userID."'");
 				unset($array);
-		
+
 				safe_query("UPDATE ".PREFIX."user SET topics=CONCAT(topics, '".$id."|')"); // update unread topics, format: |oldstring| => |oldstring|topicID|
-		
+
 				if($notify) safe_query("INSERT INTO ".PREFIX."forum_notify (topicID, userID) VALUES ('$id', '$userID') ");
 			}
 			else{
@@ -876,11 +876,11 @@ if(isset($_POST['submit']) || isset($_POST['movetopic']) || isset($_GET['addtopi
 		}
 		else{
 			header("Location: index.php?site=forum");
-		}		
+		}
 	}
 	elseif(isset($_REQUEST['addtopic'])) {
-		$_language->read_module('forum');
-		$_language->read_module('bbcode', true);
+		$_language->readModule('forum');
+		$_language->readModule('bbcode', true);
 
 		eval ("\$title_messageboard = \"".gettemplate("title_messageboard")."\";");
 		echo $title_messageboard;
@@ -906,7 +906,7 @@ if(isset($_POST['submit']) || isset($_POST['movetopic']) || isset($_GET['addtopi
 		$moderators='';
 		$cat = $db['category'];
 		$kathname = getcategoryname($cat);
-		
+
 		eval ("\$forum_head = \"".gettemplate("forum_head")."\";");
 		echo $forum_head;
 
@@ -920,13 +920,13 @@ if(isset($_POST['submit']) || isset($_POST['movetopic']) || isset($_GET['addtopi
 				$bg1=BG_1;
 				$bg2=BG_2;
 
-				
+
 				$time=getformattime(time());
 				$date="today";
 				$message = cleartext(stripslashes(str_replace(array('\r\n', '\n'),array("\n","\n" ), $_POST['message'])));
 				$message = toggle($message, 'xx');
 				$username='<a href="index.php?site=profile&amp;id='.$userID.'"><b>'.getnickname($userID).'</b></a>';
-				
+
 				$board = (int)$_POST['board'];
 				$topicname = stripslashes($_POST['topicname']);
 				if(!isset($postID)) $postID = '';
@@ -939,14 +939,14 @@ if(isset($_POST['submit']) || isset($_POST['movetopic']) || isset($_GET['addtopi
 				else $signatur='';
 				if(getemail($userID) and !getemailhide($userID)) $email = '<a href="mailto:'.mail_protect(getemail($userID)).'"><img src="images/icons/email.gif" alt="email"></a>';
 				else $email='';
-				
+
 				$pm='';
 				$buddy='';
 				$statuspic='<img src="images/icons/online.gif" width="7" height="7" alt="online">';
-				
+
 				if(!validate_url(gethomepage($userID))) $hp='';
 				else $hp='<a href="'.gethomepage($userID).'" target="_blank"><img src="images/icons/hp.gif" width="14" height="14" alt="'.$_language->module['homepage'].'"></a>';
-				
+
 				$registered = getregistered($userID);
 				$posts = getuserforumposts($userID);
 				if(isforumadmin($userID) || ismoderator($userID, $board)) {
@@ -982,10 +982,10 @@ if(isset($_POST['submit']) || isset($_POST['movetopic']) || isset($_GET['addtopi
 
 				eval ("\$forum_topic_content = \"".gettemplate("forum_topic_content")."\";");
 				echo $forum_topic_content;
-				
+
         	echo'</table>';
-        	
-        	
+
+
 			}
 			else{
 				$topicname = "";

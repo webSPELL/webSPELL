@@ -25,7 +25,7 @@
 ##########################################################################
 */
 
-$_language->read_module('navigation');
+$_language->readModule('navigation');
 
 eval ("\$navigation = \"".gettemplate("navigation")."\";");
 echo $navigation;

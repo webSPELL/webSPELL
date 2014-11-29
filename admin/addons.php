@@ -25,7 +25,7 @@
 ##########################################################################
 */
 
-$_language->read_module('addons');
+$_language->readModule('addons');
 
 if (!ispageadmin($userID) || mb_substr(basename($_SERVER[ 'REQUEST_URI' ]), 0, 15) !== "admincenter.php") {
     die($_language->module[ 'access_denied' ]);
@@ -33,7 +33,7 @@ if (!ispageadmin($userID) || mb_substr(basename($_SERVER[ 'REQUEST_URI' ]), 0, 1
 
 if (isset($_GET[ 'delete' ])) {
     $linkID = $_GET[ 'linkID' ];
-    $CAPCLASS = new Captcha;
+    $CAPCLASS = new \webspell\Captcha;
     if ($CAPCLASS->check_captcha(0, $_GET[ 'captcha_hash' ])) {
         safe_query("DELETE FROM " . PREFIX . "addon_links WHERE linkID='$linkID' ");
     } else {
@@ -41,7 +41,7 @@ if (isset($_GET[ 'delete' ])) {
     }
 } elseif (isset($_GET[ 'delcat' ])) {
     $catID = $_GET[ 'catID' ];
-    $CAPCLASS = new Captcha;
+    $CAPCLASS = new \webspell\Captcha;
     if ($CAPCLASS->check_captcha(0, $_GET[ 'captcha_hash' ])) {
         safe_query("UPDATE " . PREFIX . "addon_links SET catID='0' WHERE catID='$catID' ");
         safe_query("DELETE FROM " . PREFIX . "addon_categories WHERE catID='$catID' ");
@@ -65,7 +65,7 @@ if (isset($_GET[ 'delete' ])) {
         }
     }
 } elseif (isset($_POST[ 'save' ])) {
-    $CAPCLASS = new Captcha;
+    $CAPCLASS = new \webspell\Captcha;
     if ($CAPCLASS->check_captcha(0, $_POST[ 'captcha_hash' ])) {
         $anz = mysqli_num_rows(
             safe_query("SELECT linkID FROM " . PREFIX . "addon_links WHERE catID='" . $_POST[ 'catID' ] . "'")
@@ -84,7 +84,7 @@ if (isset($_GET[ 'delete' ])) {
         echo $_language->module[ 'transaction_invalid' ];
     }
 } elseif (isset($_POST[ 'savecat' ])) {
-    $CAPCLASS = new Captcha;
+    $CAPCLASS = new \webspell\Captcha;
     if (
         $CAPCLASS->check_captcha(0, $_POST[ 'captcha_hash' ])
     ) {
@@ -97,7 +97,7 @@ if (isset($_GET[ 'delete' ])) {
         echo $_language->module[ 'transaction_invalid' ];
     }
 } elseif (isset($_POST[ 'saveedit' ])) {
-    $CAPCLASS = new Captcha;
+    $CAPCLASS = new \webspell\Captcha;
     if ($CAPCLASS->check_captcha(0, $_POST[ 'captcha_hash' ])) {
         safe_query(
             "UPDATE " . PREFIX . "addon_links
@@ -109,7 +109,7 @@ if (isset($_GET[ 'delete' ])) {
         echo $_language->module[ 'transaction_invalid' ];
     }
 } elseif (isset($_POST[ 'saveeditcat' ])) {
-    $CAPCLASS = new Captcha;
+    $CAPCLASS = new \webspell\Captcha;
     if ($CAPCLASS->check_captcha(0, $_POST[ 'captcha_hash' ])) {
         safe_query(
             "UPDATE " . PREFIX . "addon_categories SET name='" . $_POST[ 'name' ] . "'
@@ -155,9 +155,9 @@ if ($action == "add") {
     <option value="cash">' . $_language->module[ 'admin_cash' ] . '</option>
     <option value="gallery">' . $_language->module[ 'admin_gallery' ] . '</option>';
 
-    $CAPCLASS = new Captcha;
-    $CAPCLASS->create_transaction();
-    $hash = $CAPCLASS->get_hash();
+    $CAPCLASS = new \webspell\Captcha;
+    $CAPCLASS->createTransaction();
+    $hash = $CAPCLASS->getHash();
 
     echo '<form method="post" action="admincenter.php?site=addons">
             <table width="100%" border="0" cellspacing="1" cellpadding="3">
@@ -227,9 +227,9 @@ if ($action == "add") {
             $accesslevel
         );
 
-    $CAPCLASS = new Captcha;
-    $CAPCLASS->create_transaction();
-    $hash = $CAPCLASS->get_hash();
+    $CAPCLASS = new \webspell\Captcha;
+    $CAPCLASS->createTransaction();
+    $hash = $CAPCLASS->getHash();
 
     echo '<form method="post" action="admincenter.php?site=addons">
         <table width="100%" border="0" cellspacing="1" cellpadding="3">
@@ -260,9 +260,9 @@ if ($action == "add") {
     echo '<h1>&curren; <a href="admincenter.php?site=addons" class="white">' . $_language->module[ 'addons' ] .
         '</a> &raquo; ' . $_language->module[ 'add_category' ] . '</h1>';
 
-    $CAPCLASS = new Captcha;
-    $CAPCLASS->create_transaction();
-    $hash = $CAPCLASS->get_hash();
+    $CAPCLASS = new \webspell\Captcha;
+    $CAPCLASS->createTransaction();
+    $hash = $CAPCLASS->getHash();
 
     echo '<form method="post" action="admincenter.php?site=addons">
         <table width="100%" border="0" cellspacing="1" cellpadding="3">
@@ -284,9 +284,9 @@ if ($action == "add") {
     $ergebnis = safe_query("SELECT * FROM " . PREFIX . "addon_categories WHERE catID='$catID'");
     $ds = mysqli_fetch_array($ergebnis);
 
-    $CAPCLASS = new Captcha;
-    $CAPCLASS->create_transaction();
-    $hash = $CAPCLASS->get_hash();
+    $CAPCLASS = new \webspell\Captcha;
+    $CAPCLASS->createTransaction();
+    $hash = $CAPCLASS->getHash();
 
     echo '<form method="post" action="admincenter.php?site=addons">
         <table width="100%" border="0" cellspacing="1" cellpadding="3">
@@ -330,9 +330,9 @@ if ($action == "add") {
     $tmp = mysqli_fetch_assoc(safe_query("SELECT count(catID) as cnt FROM " . PREFIX . "addon_categories"));
     $anz = $tmp[ 'cnt' ];
 
-    $CAPCLASS = new Captcha;
-    $CAPCLASS->create_transaction();
-    $hash = $CAPCLASS->get_hash();
+    $CAPCLASS = new \webspell\Captcha;
+    $CAPCLASS->createTransaction();
+    $hash = $CAPCLASS->getHash();
     while ($ds = mysqli_fetch_array($ergebnis)) {
         $list = '<select name="sortcat[]">';
         for ($n = 1; $n <= $anz; $n++) {
@@ -385,9 +385,9 @@ if ($action == "add") {
         $anzlinks = $tmp[ 'cnt' ];
 
         $i = 1;
-        $CAPCLASS = new Captcha;
-        $CAPCLASS->create_transaction();
-        $hash = $CAPCLASS->get_hash();
+        $CAPCLASS = new \webspell\Captcha;
+        $CAPCLASS->createTransaction();
+        $hash = $CAPCLASS->getHash();
         while ($db = mysqli_fetch_array($links)) {
             if ($i % 2) {
                 $td = 'td1';
@@ -428,9 +428,9 @@ if ($action == "add") {
     $tmp = mysqli_fetch_assoc(safe_query("SELECT count(linkID) as cnt FROM " . PREFIX . "addon_links WHERE catID='0'"));
     $anzlinks = $tmp[ 'cnt' ];
 
-    $CAPCLASS = new Captcha;
-    $CAPCLASS->create_transaction();
-    $hash = $CAPCLASS->get_hash();
+    $CAPCLASS = new \webspell\Captcha;
+    $CAPCLASS->createTransaction();
+    $hash = $CAPCLASS->getHash();
     while ($db = mysqli_fetch_array($links)) {
         $noncatlist = '<select name="sortlinks[]">';
         for ($n = 1; $n <= $anz; $n++) {

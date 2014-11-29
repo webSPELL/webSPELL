@@ -25,7 +25,7 @@
 ##########################################################################
 */
 
-$_language->read_module('search');
+$_language->readModule('search');
 if(isset($_GET['tag'])){
         $tag = $_GET['tag'];
         $sql = safe_query("SELECT * FROM ".PREFIX."tags WHERE tag='".$tag."'");
@@ -53,7 +53,7 @@ if(isset($_GET['tag'])){
                 usort($data,array('Tags','sortByDate'));
                 echo "<p class=\"text-center\"><b>".count($data)."</b> ".$_language->module['results_found']."</p><br><br>";
                 foreach($data as $entry){
-                        
+
                         $date = getformatdate($entry['date']);
                         $type = $entry['type'];
                         $auszug= $entry['content'];
@@ -61,7 +61,7 @@ if(isset($_GET['tag'])){
                         $title = $entry['title'];
                         eval ("\$search_tags = \"".gettemplate("search_tags")."\";");
                         echo $search_tags;
-                        
+
                 }
         }
         else{

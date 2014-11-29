@@ -25,11 +25,11 @@
 ##########################################################################
 */
 
-$_language->read_module('gallery');
+$_language->readModule('gallery');
 
 if(!isgalleryadmin($userID) OR mb_substr(basename($_SERVER['REQUEST_URI']),0,15) != "admincenter.php") die($_language->module['access_denied']);
 
-$galclass = new Gallery;
+$galclass = new \webspell\Gallery;
 
 if(isset($_GET['part'])) $part = $_GET['part'];
 else $part = '';
@@ -39,7 +39,7 @@ else $action = '';
 if($part=="groups") {
 
 	if(isset($_POST['save'])) {
-		$CAPCLASS = new Captcha;
+		$CAPCLASS = new \webspell\Captcha;
 		if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
 			if(checkforempty(Array('name'))) safe_query("INSERT INTO ".PREFIX."gallery_groups ( name, sort ) values( '".$_POST['name']."', '1' ) ");
 			else echo $_language->module['information_incomplete'];
@@ -47,7 +47,7 @@ if($part=="groups") {
 	}
 
 	elseif(isset($_POST['saveedit'])) {
-	 	$CAPCLASS = new Captcha;
+	 	$CAPCLASS = new \webspell\Captcha;
 		if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
 			if(checkforempty(Array('name'))) safe_query("UPDATE ".PREFIX."gallery_groups SET name='".$_POST['name']."' WHERE groupID='".$_POST['groupID']."'");
 			else echo $_language->module['information_incomplete'];
@@ -55,7 +55,7 @@ if($part=="groups") {
 	}
 
 	elseif(isset($_POST['sort'])) {
-	 	$CAPCLASS = new Captcha;
+	 	$CAPCLASS = new \webspell\Captcha;
 		if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
 			if(isset($_POST['sortlist'])){
 				if(is_array($_POST['sortlist'])) {
@@ -69,7 +69,7 @@ if($part=="groups") {
 	}
 
 	elseif(isset($_GET['delete'])) {
-	 	$CAPCLASS = new Captcha;
+	 	$CAPCLASS = new \webspell\Captcha;
 		if($CAPCLASS->check_captcha(0, $_GET['captcha_hash'])) {
 			$db_result=safe_query("SELECT * FROM ".PREFIX."gallery WHERE groupID='".$_GET['groupID']."'");
 			$any=mysqli_num_rows($db_result);
@@ -83,9 +83,9 @@ if($part=="groups") {
 	}
 
 	if($action=="add") {
-    $CAPCLASS = new Captcha;
-    $CAPCLASS->create_transaction();
-    $hash = $CAPCLASS->get_hash();
+    $CAPCLASS = new \webspell\Captcha;
+    $CAPCLASS->createTransaction();
+    $hash = $CAPCLASS->getHash();
 
     echo'<h1>&curren; <a href="admincenter.php?site=gallery" class="white">'.$_language->module['gallery'].'</a> &raquo; <a href="admincenter.php?site=gallery&amp;part=groups" class="white">'.$_language->module['groups'].'</a> &raquo; '.$_language->module['add_group'].'</h1>';
 
@@ -104,9 +104,9 @@ if($part=="groups") {
 	}
 
 	elseif($action=="edit") {
-    $CAPCLASS = new Captcha;
-    $CAPCLASS->create_transaction();
-    $hash = $CAPCLASS->get_hash();
+    $CAPCLASS = new \webspell\Captcha;
+    $CAPCLASS->createTransaction();
+    $hash = $CAPCLASS->getHash();
 		$ergebnis=safe_query("SELECT * FROM ".PREFIX."gallery_groups WHERE groupID='".$_GET['groupID']."'");
 		$ds=mysqli_fetch_array($ergebnis);
 
@@ -142,9 +142,9 @@ if($part=="groups") {
       </tr>';
 
 		$n=1;
-		$CAPCLASS = new Captcha;
-    $CAPCLASS->create_transaction();
-    $hash = $CAPCLASS->get_hash();
+		$CAPCLASS = new \webspell\Captcha;
+    $CAPCLASS->createTransaction();
+    $hash = $CAPCLASS->getHash();
 
     while($ds=mysqli_fetch_array($ergebnis)) {
       if($n%2) { $td='td1'; }
@@ -178,7 +178,7 @@ if($part=="groups") {
 elseif($part=="gallerys") {
 
 	if(isset($_POST['save'])) {
-	 	$CAPCLASS = new Captcha;
+	 	$CAPCLASS = new \webspell\Captcha;
 		if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
 			if(checkforempty(Array('name'))) {
 				safe_query("INSERT INTO ".PREFIX."gallery ( name, date, groupID ) values( '".$_POST['name']."', '".time()."', '".$_POST['group']."' ) ");
@@ -188,7 +188,7 @@ elseif($part=="gallerys") {
 	}
 
 	elseif(isset($_POST['saveedit'])) {
-	 	$CAPCLASS = new Captcha;
+	 	$CAPCLASS = new \webspell\Captcha;
 		if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
 			if(checkforempty(Array('name'))) {
 				if(!isset($_POST['group'])) {
@@ -207,7 +207,7 @@ elseif($part=="gallerys") {
 		if(isset($_POST['name'])) $name = $_POST['name'];
     	if(isset($_POST['pictures'])) $pictures = $_POST['pictures'];
 		$i=0;
-		$CAPCLASS = new Captcha;
+		$CAPCLASS = new \webspell\Captcha;
 		if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
 		    foreach($pictures as $picture) {
 					$typ = getimagesize($dir.$picture);
@@ -233,7 +233,7 @@ elseif($part=="gallerys") {
 
 		$dir = '../images/gallery/';
 		$picture = $_FILES['picture'];
-		$CAPCLASS = new Captcha;
+		$CAPCLASS = new \webspell\Captcha;
 		if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
 			if($picture['name'] != "") {
 				if($_POST['name']) $insertname = $_POST['name'];
@@ -256,7 +256,7 @@ elseif($part=="gallerys") {
 
 	elseif(isset($_GET['delete'])) {
 		//SQL
-		$CAPCLASS = new Captcha;
+		$CAPCLASS = new \webspell\Captcha;
 		if($CAPCLASS->check_captcha(0, $_GET['captcha_hash'])) {
 			if(safe_query("DELETE FROM ".PREFIX."gallery WHERE galleryID='".$_GET['galleryID']."'")) {
 				//FILES
@@ -286,9 +286,9 @@ elseif($part=="gallerys") {
 				$groups.='<option value="'.$ds['groupID'].'">'.getinput($ds['name']).'</option>';
 			}
 			$groups.='</select>';
-	    $CAPCLASS = new Captcha;
-	    $CAPCLASS->create_transaction();
-	    $hash = $CAPCLASS->get_hash();
+	    $CAPCLASS = new \webspell\Captcha;
+	    $CAPCLASS->createTransaction();
+	    $hash = $CAPCLASS->getHash();
 
 			echo'<h1>&curren; <a href="admincenter.php?site=gallery" class="white">'.$_language->module['gallery'].'</a> &raquo; <a href="admincenter.php?site=gallery&amp;part=gallerys" class="white">'.$_language->module['galleries'].'</a> &raquo; '.$_language->module['add_gallery'].'</h1>';
 
@@ -323,9 +323,9 @@ elseif($part=="gallerys") {
 	}
 
 	elseif($action=="edit") {
-    $CAPCLASS = new Captcha;
-    $CAPCLASS->create_transaction();
-    $hash = $CAPCLASS->get_hash();
+    $CAPCLASS = new \webspell\Captcha;
+    $CAPCLASS->createTransaction();
+    $hash = $CAPCLASS->getHash();
 		$ergebnis=safe_query("SELECT * FROM ".PREFIX."gallery_groups");
 		$groups = '<select name="group">';
 		while($ds=mysqli_fetch_array($ergebnis)) {
@@ -375,9 +375,9 @@ elseif($part=="gallerys") {
 		if(isset($_GET['galleryID'])) $id=$_GET['galleryID'];
 
 		if($upload_type == "ftp") {
-      		$CAPCLASS = new Captcha;
-      		$CAPCLASS->create_transaction();
-      		$hash = $CAPCLASS->get_hash();
+      		$CAPCLASS = new \webspell\Captcha;
+      		$CAPCLASS->createTransaction();
+      		$hash = $CAPCLASS->getHash();
 
       		echo'<form method="post" action="admincenter.php?site=gallery&amp;part=gallerys">
 		      <table width="100%" border="0" cellspacing="1" cellpadding="3">
@@ -439,9 +439,9 @@ elseif($part=="gallerys") {
 
 		} elseif($upload_type == "form") {
 
-      		$CAPCLASS = new Captcha;
-      		$CAPCLASS->create_transaction();
-      		$hash = $CAPCLASS->get_hash();
+      		$CAPCLASS = new \webspell\Captcha;
+      		$CAPCLASS->createTransaction();
+      		$hash = $CAPCLASS->getHash();
 
 			echo'<form method="post" action="admincenter.php?site=gallery&amp;part=gallerys" enctype="multipart/form-data">
 			<table width="100%" border="0" cellspacing="1" cellpadding="3">
@@ -496,9 +496,9 @@ elseif($part=="gallerys") {
 
 		$galleries=safe_query("SELECT * FROM ".PREFIX."gallery WHERE groupID='$ds[groupID]' AND userID='0' ORDER BY date");
 
-    $CAPCLASS = new Captcha;
-    $CAPCLASS->create_transaction();
-    $hash = $CAPCLASS->get_hash();
+    $CAPCLASS = new \webspell\Captcha;
+    $CAPCLASS->createTransaction();
+    $hash = $CAPCLASS->getHash();
     $i=1;
 
       while($db=mysqli_fetch_array($galleries)) {
@@ -529,9 +529,9 @@ elseif($part=="gallerys") {
         <td width="20%" class="title"><b>'.$_language->module['actions'].'</b></td>
       </tr>';
 
-    $CAPCLASS = new Captcha;
-    $CAPCLASS->create_transaction();
-    $hash = $CAPCLASS->get_hash();
+    $CAPCLASS = new \webspell\Captcha;
+    $CAPCLASS->createTransaction();
+    $hash = $CAPCLASS->getHash();
 
 		$i=1;
     while($ds=mysqli_fetch_array($ergebnis)) {

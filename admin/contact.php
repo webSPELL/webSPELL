@@ -25,13 +25,13 @@
 ##########################################################################
 */
 
-$_language->read_module('contact');
+$_language->readModule('contact');
 
 if(!isuseradmin($userID) OR mb_substr(basename($_SERVER['REQUEST_URI']),0,15) != "admincenter.php") die($_language->module['access_denied']);
 
 if(isset($_GET['delete'])) {
 	$contactID = $_GET['contactID'];
-	$CAPCLASS = new Captcha;
+	$CAPCLASS = new \webspell\Captcha;
 	if($CAPCLASS->check_captcha(0, $_GET['captcha_hash'])) {
 		safe_query("DELETE FROM ".PREFIX."contact WHERE contactID='$contactID'");
 	} else echo $_language->module['transaction_invalid'];
@@ -39,7 +39,7 @@ if(isset($_GET['delete'])) {
 
 elseif(isset($_POST['sortieren'])) {
 	$sortcontact = $_POST['sortcontact'];
-	$CAPCLASS = new Captcha;
+	$CAPCLASS = new \webspell\Captcha;
 	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
 		if(is_array($sortcontact)) {
 			foreach($sortcontact as $sortstring) {
@@ -53,7 +53,7 @@ elseif(isset($_POST['sortieren'])) {
 elseif(isset($_POST['save'])) {
 	$name = $_POST['name'];
 	$email = $_POST['email'];
-	$CAPCLASS = new Captcha;
+	$CAPCLASS = new \webspell\Captcha;
 	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
 		if(checkforempty(Array('name', 'email'))) {
 			safe_query("INSERT INTO ".PREFIX."contact ( name, email, sort )
@@ -66,7 +66,7 @@ elseif(isset($_POST['saveedit'])) {
 	$name = $_POST['name'];
 	$email = $_POST['email'];
 	$contactID = $_POST['contactID'];
-	$CAPCLASS = new Captcha;
+	$CAPCLASS = new \webspell\Captcha;
 	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
 		if(checkforempty(Array('name', 'email'))) {
 			safe_query("UPDATE ".PREFIX."contact SET name='$name', email='$email' WHERE contactID='$contactID' ");
@@ -76,9 +76,9 @@ elseif(isset($_POST['saveedit'])) {
 
 if(isset($_GET['action'])) {
 	if($_GET['action']=="add") {
-		$CAPCLASS = new Captcha;
-		$CAPCLASS->create_transaction();
-		$hash = $CAPCLASS->get_hash();
+		$CAPCLASS = new \webspell\Captcha;
+		$CAPCLASS->createTransaction();
+		$hash = $CAPCLASS->getHash();
 
 		echo'<h1>&curren; <a href="admincenter.php?site=contact" class="white">'.$_language->module['contact'].'</a> &raquo; '.$_language->module['add_contact'].'</h1>';
 
@@ -106,9 +106,9 @@ if(isset($_GET['action'])) {
 		$ergebnis=safe_query("SELECT * FROM ".PREFIX."contact WHERE contactID='$contactID'");
 		$ds=mysqli_fetch_array($ergebnis);
 
-		$CAPCLASS = new Captcha;
-		$CAPCLASS->create_transaction();
-		$hash = $CAPCLASS->get_hash();
+		$CAPCLASS = new \webspell\Captcha;
+		$CAPCLASS->createTransaction();
+		$hash = $CAPCLASS->getHash();
 
 		echo'<h1>&curren; <a href="admincenter.php?site=contact" class="white">'.$_language->module['contact'].'</a> &raquo; '.$_language->module['edit_contact'].'</h1>';
 
@@ -150,9 +150,9 @@ else {
 	$anz=$tmp['cnt'];
 
 	$i=1;
-	$CAPCLASS = new Captcha;
-	$CAPCLASS->create_transaction();
-	$hash = $CAPCLASS->get_hash();
+	$CAPCLASS = new \webspell\Captcha;
+	$CAPCLASS->createTransaction();
+	$hash = $CAPCLASS->getHash();
 
 	while($ds=mysqli_fetch_array($ergebnis)) {
 		if($i%2) { $td='td1'; }

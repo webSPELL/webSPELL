@@ -25,7 +25,7 @@
 ##########################################################################
 */
 
-$_language->read_module('about');
+$_language->readModule('about');
 
 if (!ispageadmin($userID) || mb_substr(basename($_SERVER[ 'REQUEST_URI' ]), 0, 15) !== "admincenter.php") {
     die($_language->module[ 'access_denied' ]);
@@ -35,7 +35,7 @@ echo '<h1>&curren; ' . $_language->module[ 'about' ] . '</h1>';
 
 if (isset($_POST[ 'submit' ]) != "") {
     $about = $_POST[ 'message' ];
-    $CAPCLASS = new Captcha;
+    $CAPCLASS = new \webspell\Captcha;
     if ($CAPCLASS->check_captcha(0, $_POST[ 'captcha_hash' ])) {
         if (mysqli_num_rows(safe_query("SELECT * FROM " . PREFIX . "about"))) {
             safe_query("UPDATE " . PREFIX . "about SET about='" . $about . "'");
@@ -50,11 +50,11 @@ if (isset($_POST[ 'submit' ]) != "") {
     $ergebnis = safe_query("SELECT * FROM " . PREFIX . "about");
     $ds = mysqli_fetch_array($ergebnis);
 
-    $CAPCLASS = new Captcha;
-    $CAPCLASS->create_transaction();
-    $hash = $CAPCLASS->get_hash();
+    $CAPCLASS = new \webspell\Captcha;
+    $CAPCLASS->createTransaction();
+    $hash = $CAPCLASS->getHash();
 
-    $_language->read_module('bbcode', true);
+    $_language->readModule('bbcode', true);
 
     echo '<script>
         function chkFormular() {

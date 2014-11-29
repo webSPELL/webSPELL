@@ -25,7 +25,7 @@
 ##########################################################################
 */
 
-$_language->read_module('server');
+$_language->readModule('server');
 
 eval("\$title_server = \"".gettemplate("title_server")."\";");
 echo $title_server;
@@ -37,9 +37,9 @@ if(mysqli_num_rows($ergebnis)) {
 	while($ds = mysqli_fetch_array($ergebnis)) {
 		if($ds['game'] == "CS") $game = "HL";
 		else $game = $ds['game'];
-    
+
     	$showgame = getgamename($ds['game']);
-    
+
     	$serverdata = explode(":", $ds['ip']);
 		$ip = $serverdata[0];
 		if(isset($serverdata[1])) $port = $serverdata[1];

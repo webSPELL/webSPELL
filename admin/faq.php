@@ -25,13 +25,13 @@
 ##########################################################################
 */
 
-$_language->read_module('faq');
+$_language->readModule('faq');
 
 if(!ispageadmin($userID) OR mb_substr(basename($_SERVER['REQUEST_URI']),0,15) != "admincenter.php") die($_language->module['access_denied']);
 
 if(isset($_GET['delete'])) {
 	$faqID = $_GET['faqID'];
-	$CAPCLASS = new Captcha;
+	$CAPCLASS = new \webspell\Captcha;
 	if($CAPCLASS->check_captcha(0, $_GET['captcha_hash'])) {
 		safe_query(" DELETE FROM ".PREFIX."faq WHERE faqID='$faqID' ");
 		Tags::removeTags('faq', $faqID);
@@ -41,7 +41,7 @@ if(isset($_GET['delete'])) {
 elseif(isset($_POST['sortieren'])) {
 	$sortfaq = $_POST['sortfaq'];
 
-	$CAPCLASS = new Captcha;
+	$CAPCLASS = new \webspell\Captcha;
 	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
 		if(is_array($sortfaq)) {
 			foreach($sortfaq as $sortstring) {
@@ -56,7 +56,7 @@ elseif(isset($_POST['save'])) {
 	$faqcat = $_POST['faqcat'];
 	$question = $_POST['question'];
 	$answer = $_POST['message'];
-	$CAPCLASS = new Captcha;
+	$CAPCLASS = new \webspell\Captcha;
 	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
 		if(checkforempty(Array('question', 'message'))) {
 			if($faqcat=="") {
@@ -75,7 +75,7 @@ elseif(isset($_POST['saveedit'])) {
 	$question = $_POST['question'];
 	$answer = $_POST['message'];
 	$faqID = $_POST['faqID'];
-	$CAPCLASS = new Captcha;
+	$CAPCLASS = new \webspell\Captcha;
 	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
 		if(checkforempty(Array('question', 'message'))) {
 			safe_query("UPDATE ".PREFIX."faq SET faqcatID='$faqcat', date='".time()."', question='$question', answer='$answer' WHERE faqID='$faqID' ");
@@ -103,11 +103,11 @@ if(isset($_GET['action'])) {
 			$answer = "";
 		}
 
-    $CAPCLASS = new Captcha;
-    $CAPCLASS->create_transaction();
-    $hash = $CAPCLASS->get_hash();
+    $CAPCLASS = new \webspell\Captcha;
+    $CAPCLASS->createTransaction();
+    $hash = $CAPCLASS->getHash();
 
-    $_language->read_module('bbcode', true);
+    $_language->readModule('bbcode', true);
 
     eval ("\$addbbcode = \"".gettemplate("addbbcode", "html", "admin")."\";");
     eval ("\$addflags = \"".gettemplate("flags_admin", "html", "admin")."\";");
@@ -173,11 +173,11 @@ if(isset($_GET['action'])) {
 
     	$tags = Tags::getTags('faq', $faqID);
 
-	    $CAPCLASS = new Captcha;
-	    $CAPCLASS->create_transaction();
-	    $hash = $CAPCLASS->get_hash();
+	    $CAPCLASS = new \webspell\Captcha;
+	    $CAPCLASS->createTransaction();
+	    $hash = $CAPCLASS->getHash();
 
-	    $_language->read_module('bbcode', true);
+	    $_language->readModule('bbcode', true);
 
 	    eval ("\$addbbcode = \"".gettemplate("addbbcode", "html", "admin")."\";");
 	    eval ("\$addflags = \"".gettemplate("flags_admin", "html", "admin")."\";");
@@ -245,9 +245,9 @@ else {
 	$tmp=mysqli_fetch_assoc(safe_query("SELECT count(faqcatID) as cnt FROM ".PREFIX."faq_categories"));
 	$anz=$tmp['cnt'];
 
-  $CAPCLASS = new Captcha;
-	$CAPCLASS->create_transaction();
-	$hash = $CAPCLASS->get_hash();
+  $CAPCLASS = new \webspell\Captcha;
+	$CAPCLASS->createTransaction();
+	$hash = $CAPCLASS->getHash();
 
   while($ds=mysqli_fetch_array($ergebnis)) {
 

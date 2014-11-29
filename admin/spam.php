@@ -10,7 +10,7 @@ if(isset($_GET['getnickname'])){
 	exit();
 }
 if(!ispageadmin($userID) OR mb_substr(basename($_SERVER['REQUEST_URI']),0,15) != "admincenter.php") die();
-$_language->read_module('spam');
+$_language->readModule('spam');
 function deleteSpamUser($spammerID){
 	global $_language;
 	// Delete Comments
@@ -84,9 +84,9 @@ else $action = null;
 
 if($action == "user"){
 	echo'<h1>&curren; Spam</h1>';
-	$CAPCLASS = new Captcha;
-	$CAPCLASS->create_transaction();
-	$hash = $CAPCLASS->get_hash();
+	$CAPCLASS = new \webspell\Captcha;
+	$CAPCLASS->createTransaction();
+	$hash = $CAPCLASS->getHash();
 	if(isset($_GET['user'])){
 		$id = $_GET['user'];
 		$nick = getnickname($id);
@@ -110,7 +110,7 @@ if($action == "user"){
 }
 elseif($action == "user_ban"){
 	echo'<h1>&curren; Spam</h1>';
-	$CAPCLASS = new Captcha;
+	$CAPCLASS = new \webspell\Captcha;
 	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
 		$spammerID = $_POST['id'];
 		if(!is_numeric($spammerID)){
@@ -130,9 +130,9 @@ elseif($action == "user_ban"){
 }
 elseif($action == "multi"){
 	echo'<h1>&curren; Multiple Accounts</h1>';
-	$CAPCLASS = new Captcha;
-	$CAPCLASS->create_transaction();
-	$hash = $CAPCLASS->get_hash();
+	$CAPCLASS = new \webspell\Captcha;
+	$CAPCLASS->createTransaction();
+	$hash = $CAPCLASS->getHash();
 	$get = safe_query("SELECT ip, GROUP_CONCAT(userID) AS `ids`, GROUP_CONCAT(password) AS `passwords` FROM ".PREFIX."user WHERE ip !='' AND lastlogin > '".(time()-60*60*24*90)."' GROUP BY ip HAVING COUNT(userID) > 1  ORDER BY lastlogin DESC");
 	if(mysqli_num_rows($get)){
 		echo '<table border="0" cellspacing="1" cellpadding="3" bgcolor="#DDDDDD" width="100%">
@@ -199,7 +199,7 @@ elseif($action == "multi"){
 }
 elseif($action == "multi_ban"){
 	echo'<h1>&curren; Multiple Accounts</h1>';
-	$CAPCLASS = new Captcha;
+	$CAPCLASS = new \webspell\Captcha;
 	if($CAPCLASS->check_captcha(0, $_GET['captcha_hash'])) {
 		$ip = $_GET['ip'];
 		$get = safe_query("SELECT userID, nickname FROM ".PREFIX."user WHERE ip='".$ip."'");
@@ -219,7 +219,7 @@ elseif($action == "multi_ban"){
 }
 elseif($action == "multi_just_block"){
 	echo'<h1>&curren; Multiple Accounts</h1>';
-	$CAPCLASS = new Captcha;
+	$CAPCLASS = new \webspell\Captcha;
 	if($CAPCLASS->check_captcha(0, $_GET['captcha_hash'])) {
 		$ip = $_GET['ip'];
 		$get = safe_query("SELECT userID, nickname,GROUP_CONCAT(nickname) AS `nicknames` FROM ".PREFIX."user WHERE ip='".$ip."' GROUP BY ip");

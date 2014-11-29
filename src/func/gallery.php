@@ -1,4 +1,5 @@
 <?php
+
 /*
 ##########################################################################
 #                                                                        #
@@ -25,143 +26,250 @@
 ##########################################################################
 */
 
-class Gallery {
+namespace webspell;
+
+class Gallery
+{
+
+    public function showThumb($picID)
+    {
+
+        global $_language;
+        $_language->readModule('gallery', true);
+        global $thumbwidth, $_language;
+
+        $pic = mysqli_fetch_array(
+            safe_query(
+                "SELECT * FROM `" . PREFIX . "gallery_pictures` WHERE `picID` = " . (int)$picID
+            )
+        );
+        if ($pic['picID']) {
+            $pic['gallery'] = str_break(stripslashes($this->getGalleryName($picID)), 45);
+            if (file_exists('images/gallery/thumb/' . $picID . '.jpg')) {
+                $pic['image'] =
+                    '<a href="index.php?site=gallery&amp;picID=' . $picID . '">' .
+                    '<img src="images/gallery/thumb/' . $picID . '.jpg" width="' . $thumbwidth . '" alt="" /></a>';
+            } else {
+                $pic['image'] =
+                    '<a href="index.php?site=gallery&amp;picID=' . $picID . '">' .
+                    '<img src="images/nopic.gif" width="' . $thumbwidth . '" alt="' .
+                    $_language->module['no_thumb'] . '" /></a>';
+            }
+            $pic['comments'] = mysqli_num_rows(
+                safe_query(
+                    "SELECT
+                        `commentID`
+                    FROM
+                        `" . PREFIX . "comments`
+                    WHERE
+                        `parentID` = " . (int)$picID . " AND
+                        `type` = 'ga'"
+                )
+            );
+            $ergebnis = mysqli_fetch_array(
+                safe_query(
+                    "SELECT
+                        `date`
+                    FROM
+                        `" . PREFIX . "gallery` AS gal,
+                        `" . PREFIX . "gallery_pictures` AS pic
+                    WHERE
+                        gal.`galleryID` = pic.`galleryID` AND
+                        pic.`picID` = " . (int)$picID
+                )
+            );
+            $pic['date'] = getformatdate($ergebnis['date']);
+            $pic['groupID'] = $this->getGroupIdByGallery($pic['galleryID']);
+            $pic['name'] = stripslashes(clearfromtags($pic['name']));
+
+            eval ("\$thumb = \"" . gettemplate("gallery_content_showthumb") . "\";");
+
+        } else {
+            $thumb = '<tr><td colspan="2">' . $_language->module['no_picture'] . '</td></tr>';
+        }
+        return $thumb;
+    }
+
+    public function saveThumb($image, $dest)
+    {
+
+        global $picsize_h;
+        global $thumbwidth;
+        global $new_chmod;
+
+        $max_x = $thumbwidth;
+        $max_y = $picsize_h;
+
+        $ext = getimagesize($image);
+        switch (strtolower($ext[2])) {
+            case '2':
+                $im = imagecreatefromjpeg($image);
+                break;
+            case '1':
+                $im = imagecreatefromgif($image);
+                break;
+            case '3':
+                $im = imagecreatefrompng($image);
+                break;
+            default:
+                $stop = true;
+                break;
+        }
+
+        $result = "";
+        if (!isset($stop)) {
+            $x = imagesx($im);
+            $y = imagesy($im);
 
 
-	function showthumb($picID) {
+            if (($max_x / $max_y) < ($x / $y)) {
+                $save = imagecreatetruecolor($x / ($x / $max_x), $y / ($x / $max_x));
+            } else {
+                $save = imagecreatetruecolor($x / ($y / $max_y), $y / ($y / $max_y));
+            }
+            imagecopyresampled($save, $im, 0, 0, 0, 0, imagesx($save), imagesy($save), $x, $y);
 
-		global $_language;
-		$_language->read_module('gallery', true);
-		global $thumbwidth,$_language;
+            imagejpeg($save, $dest, 80);
+            @chmod($dest, $new_chmod);
 
-		$pic = mysqli_fetch_array(safe_query("SELECT * FROM ".PREFIX."gallery_pictures WHERE picID='".$picID."'"));
-		if($pic['picID']) {
-			$pic['gallery'] = str_break(stripslashes($this->getgalleryname($picID)), 45);
-			if(file_exists('images/gallery/thumb/'.$picID.'.jpg')) $pic['image'] = '<a href="index.php?site=gallery&amp;picID='.$picID.'"><img src="images/gallery/thumb/'.$picID.'.jpg" border="0" width="'.$thumbwidth.'" alt="" /></a>';
-			else $pic['image'] = '<a href="index.php?site=gallery&amp;picID='.$picID.'"><img src="images/nopic.gif" border="0" width="'.$thumbwidth.'" alt="'.$_language->module['no_thumb'].'" /></a>';
-			$pic['comments'] = mysqli_num_rows(safe_query("SELECT commentID FROM ".PREFIX."comments WHERE parentID='".$picID."' AND type='ga'"));
-			$ergebnis = mysqli_fetch_array(safe_query("SELECT date FROM ".PREFIX."gallery as gal, ".PREFIX."gallery_pictures as pic WHERE gal.galleryID=pic.galleryID AND pic.picID='".$picID."'"));
-			$pic['date']=getformatdate($ergebnis['date']);
-			$pic['groupID']=$this->getgroupid_by_gallery($pic['galleryID']);
-			$pic['name']=stripslashes(clearfromtags($pic['name']));
+            imagedestroy($im);
+            imagedestroy($save);
+            return $result;
+        } else {
+            return false;
+        }
+    }
 
-			eval ("\$thumb = \"".gettemplate("gallery_content_showthumb")."\";");
+    public function randomPic($galleryID = 0)
+    {
 
-		} else $thumb='<tr><td colspan="2">'.$_language->module['no_picture'].'</td></tr>';
-		return $thumb;
-	}
+        if ($galleryID) {
+            $only = "WHERE `galleryID` = " . (int)$galleryID;
+        } else {
+            $only = '';
+        }
+        $anz = mysqli_num_rows(safe_query("SELECT picID FROM `" . PREFIX . "gallery_pictures` $only"));
+        $selected = rand(1, $anz);
+        $start = $selected - 1;
+        $pic = mysqli_fetch_array(
+            safe_query(
+                "SELECT `picID` FROM `" . PREFIX . "gallery_pictures` $only LIMIT $start, $anz"
+            )
+        );
 
-	function savethumb($image,$dest) {
+        return $pic['picID'];
+    }
 
-		global $picsize_h;
-		global $thumbwidth;
-		global $new_chmod;
+    public function getGalleryName($picID)
+    {
 
-		$max_x = $thumbwidth;
-		$max_y = $picsize_h;
+        $ds = mysqli_fetch_array(
+            safe_query(
+                "SELECT
+                    gal.name
+                FROM
+                    `" . PREFIX . "gallery_pictures` AS pic,
+                    `" . PREFIX . "gallery` AS gal
+                WHERE
+                    pic.`picID` = " . (int)$picID . " AND
+                    gal.`galleryID` = pic.`galleryID`"
+            )
+        );
+        return htmlspecialchars($ds['name']);
 
-		$ext=getimagesize($image);
-		switch (strtolower($ext[2])) {
-			case '2': $im  = imagecreatefromjpeg ($image);
-			break;
-			case '1' : $im  = imagecreatefromgif  ($image);
-			break;
-			case '3' : $im  = imagecreatefrompng  ($image);
-			break;
-			default    : $stop = true;
-			break;
-		}
+    }
 
-		$result="";
-    if (!isset($stop)) {
-			$x = imagesx($im);
-			$y = imagesy($im);
+    public function getGroupName($groupID)
+    {
 
+        $ds = mysqli_fetch_array(
+            safe_query(
+                "SELECT `name` FROM `" . PREFIX . "gallery_groups` WHERE `groupID` = " . (int)$groupID
+            )
+        );
+        return htmlspecialchars($ds['name']);
 
-			if (($max_x/$max_y) < ($x/$y)) {
-				$save = imagecreatetruecolor($x/($x/$max_x), $y/($x/$max_x));
-			}
-			else {
-				$save = imagecreatetruecolor($x/($y/$max_y), $y/($y/$max_y));
-			}
-			imagecopyresampled($save, $im, 0, 0, 0, 0, imagesx($save), imagesy($save), $x, $y);
+    }
 
-			imagejpeg($save, $dest, 80);
-			@chmod($dest, $new_chmod);
+    public function getGroupIdByGallery($galleryID)
+    {
 
-			imagedestroy($im);
-			imagedestroy($save);
-			return $result;
-		} else return false;
-	}
+        $ds = mysqli_fetch_array(
+            safe_query(
+                "SELECT `groupID` FROM `" . PREFIX . "gallery` WHERE `galleryID` = " . (int)$galleryID
+            )
+        );
+        return $ds['groupID'];
+    }
 
-	function randompic($galleryID=0) {
+    public function isGalleryOwner($galleryID, $userID)
+    {
+        if (empty($userID)) {
+            return false;
+        }
 
-		if($galleryID) $only = "WHERE galleryID='".$galleryID."'";
-		else $only = '';
-		$anz=mysqli_num_rows(safe_query("SELECT picID FROM `".PREFIX."gallery_pictures` $only"));
-		$selected = rand(1,$anz);
-		$start=$selected-1;
-		$pic=mysqli_fetch_array(safe_query("SELECT picID FROM ".PREFIX."gallery_pictures $only LIMIT $start,$anz"));
+        return (
+            mysqli_num_rows(
+                safe_query(
+                    "SELECT
+                        `galleryID`
+                    FROM `" . PREFIX . "gallery`
+                 WHERE
+                    `userID` = " . (int)$userID . " AND
+                    `galleryID` = " . (int)$galleryID
+                )
+            ) > 0
+        );
+    }
 
-		return $pic['picID'];
-	}
+    public function getGalleryOwner($galleryID)
+    {
 
-	function getgalleryname($picID) {
+        $ds = mysqli_fetch_array(
+            safe_query(
+                "SELECT `userID` FROM `" . PREFIX . "gallery` WHERE `galleryID` = " . (int)$galleryID
+            )
+        );
+        return $ds['userID'];
 
-		$ds=mysqli_fetch_array(safe_query("SELECT gal.name FROM ".PREFIX."gallery_pictures as pic, ".PREFIX."gallery as gal WHERE pic.picID='".$picID."' AND gal.galleryID=pic.galleryID"));
-		return htmlspecialchars($ds['name']);
+    }
 
-	}
+    public function getLargeFile($picID)
+    {
 
-	function getgroupname($groupID) {
+        if (file_exists('images/gallery/large/' . $picID . '.jpg')) {
+            $file = 'images/gallery/large/' . $picID . '.jpg';
+        } elseif (file_exists('images/gallery/large/' . $picID . '.gif')) {
+            $file = 'images/gallery/large/' . $picID . '.gif';
+        } elseif (file_exists('images/gallery/large/' . $picID . '.png')) {
+            $file = 'images/gallery/large/' . $picID . '.png';
+        } else {
+            $file = 'images/nopic.gif';
+        }
 
-		$ds=mysqli_fetch_array(safe_query("SELECT name FROM ".PREFIX."gallery_groups WHERE groupID='".$groupID."'"));
-		return htmlspecialchars($ds['name']);
+        return $file;
 
-	}
+    }
 
-	function getgroupid_by_gallery($galleryID) {
+    public function getUserSpace($userID)
+    {
 
-		$ds=mysqli_fetch_array(safe_query("SELECT groupID FROM ".PREFIX."gallery WHERE galleryID='".$galleryID."'"));
-		return $ds['groupID'];
-	}
-
-	function isgalleryowner($galleryID, $userID) {
-		if(empty($userID))
-			return false;
-
-		return (mysqli_num_rows(safe_query("SELECT galleryID FROM ".PREFIX."gallery WHERE userID='".$userID."' AND galleryID='".$galleryID."'")) > 0);
-	}
-
-	function getgalleryowner($galleryID) {
-
-		$ds = mysqli_fetch_array(safe_query("SELECT userID FROM ".PREFIX."gallery WHERE galleryID='".$galleryID."'"));
-		return $ds['userID'];
-
-	}
-
-	function getlargefile($picID) {
-
-		if(file_exists('images/gallery/large/'.$picID.'.jpg')) $file='images/gallery/large/'.$picID.'.jpg';
-		elseif(file_exists('images/gallery/large/'.$picID.'.gif')) $file='images/gallery/large/'.$picID.'.gif';
-		elseif(file_exists('images/gallery/large/'.$picID.'.png')) $file='images/gallery/large/'.$picID.'.png';
-		else $file='images/nopic.gif';
-
-		return $file;
-
-	}
-
-	function getuserspace($userID) {
-
-		$size=0;
-		$ergebnis=safe_query("SELECT pic.picID FROM ".PREFIX."gallery_pictures as pic, ".PREFIX."gallery as gal WHERE gal.userID='".$userID."' AND gal.galleryID=pic.galleryID");
-		while($ds=mysqli_fetch_array($ergebnis)) {
-			$size = $size + filesize('images/gallery/thumb/'.$ds['picID'].'.jpg') + filesize($this->getlargefile($ds['picID']));
-		}
-		return $size;
-	}
-
+        $size = 0;
+        $ergebnis = safe_query(
+            "SELECT
+                pic.picID
+            FROM
+                `" . PREFIX . "gallery_pictures` AS pic,
+                `" . PREFIX . "gallery` AS gal
+            WHERE
+                gal.`userID` = " . (int)$userID . " AND
+                gal.`galleryID` = pic.`galleryID`"
+        );
+        while ($ds = mysqli_fetch_array($ergebnis)) {
+            $size +=
+                filesize('images/gallery/thumb/' . $ds['picID'] . '.jpg') +
+                filesize($this->getLargeFile($ds['picID']));
+        }
+        return $size;
+    }
 }
-
-?>

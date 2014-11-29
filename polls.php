@@ -35,11 +35,11 @@ if($action=="vote") {
 	if(isset($_POST['pollID']) && isset($_POST['vote'])){
 		$pollID = (int)$_POST['pollID'];
     	$vote = (int)$_POST['vote'];
-		$_language->read_module('polls');
-	  
+		$_language->readModule('polls');
+
 		$ds=mysqli_fetch_array(safe_query("SELECT userIDs, hosts FROM `".PREFIX."poll` WHERE pollID='".$pollID."'"));
 		$anz = mysqli_num_rows(safe_query("SELECT pollID FROM `".PREFIX."poll` WHERE pollID='".$pollID."' AND hosts LIKE '%".$_SERVER['REMOTE_ADDR']."%' AND intern<=".isclanmember($userID).""));
-		
+
 		$anz_user = false;
 	  	if($userID) {
 			if($ds['userIDs']){
@@ -50,26 +50,26 @@ if($action=="vote") {
 				$user_ids = array();
 			}
 		}
-		
+
 		$cookie = false;
 		if(isset($_COOKIE['poll']) && is_array($_COOKIE['poll'])){
 			$cookie = in_array($pollID, $_COOKIE['poll']);
 		}
 	  	if(!$cookie and !$anz and !$anz_user and isset($_POST['vote'])) {
-	
+
 			//write cookie
 			$index = count($_COOKIE['poll']);
 			setcookie("poll[".$index."]", $pollID, time() + (3600 * 24 * 365));
-	
+
 			//write ip and userID if logged
 			$add_query = "";
 			if($userID) {
 				$user_ids[] = $userID;
 				$add_query = ", userIDs='".implode(";", $user_ids)."'";
 			}
-			
+
 	    	safe_query("UPDATE ".PREFIX."poll SET hosts='".$ds['hosts']."#".$_SERVER['REMOTE_ADDR']."#'".$add_query." WHERE pollID='".$pollID."'");
-	
+
 			//write vote
 			safe_query("UPDATE ".PREFIX."poll_votes SET o".$vote."=o".$vote."+1 WHERE pollID='".$pollID."'");
 		}
@@ -83,11 +83,11 @@ elseif(isset($_POST['save']))  {
 	include("_mysql.php");
 	include("_settings.php");
 	include('_functions.php');
-	$_language->read_module('polls');
-	
+	$_language->readModule('polls');
+
   if(isset($_POST['intern'])) $intern = $_POST['intern'];
   else $intern="";
-  
+
   if(!ispollsadmin($userID)) die($_language->module['no_access']);
 
 	safe_query("INSERT INTO ".PREFIX."poll (aktiv, titel, o1, o2, o3, o4, o5, o6, o7, o8, o9, o10, comments, laufzeit, intern)
@@ -102,7 +102,7 @@ elseif(isset($_POST['saveedit'])) {
 	include("_mysql.php");
 	include("_settings.php");
 	include('_functions.php');
-	$_language->read_module('polls');
+	$_language->readModule('polls');
 	if(!ispollsadmin($userID)) die($_language->module['no_access']);
 
 	$pollID = $_POST['pollID'];
@@ -110,19 +110,19 @@ elseif(isset($_POST['saveedit'])) {
   	else $intern="";
 
   	$runtime_date = $_POST['runtime_date'];
-    $rd = substr($runtime_date, 8, 2); 
-    $rm = substr($runtime_date, 5, 2); 
+    $rd = substr($runtime_date, 8, 2);
+    $rm = substr($runtime_date, 5, 2);
     if($rm>12 && $rd < 12) { // User might have mixed up day and month
         $oldrm = $am;
         $rm = $rd;
         $rd = $oldrm;
     }
     $ry = substr($runtime_date, 0, 4);
-    
+
     $runtime_time = $_POST['runtime_time'];
     $laufzeit_hour = substr($runtime_date, 0, 2);
     $laufzeit_minute = substr($runtime_date, 3, 2);
-    
+
 	if(isset($_POST['reset'])) {
 		safe_query("DELETE FROM ".PREFIX."poll WHERE pollID='$pollID'");
 		safe_query("DELETE FROM ".PREFIX."poll_votes WHERE pollID='$pollID'");
@@ -138,7 +138,7 @@ elseif(isset($_GET['end']))  {
 	include("_mysql.php");
 	include("_settings.php");
 	include('_functions.php');
-	$_language->read_module('polls');
+	$_language->readModule('polls');
 	if(!ispollsadmin($userID)) die($_language->module['no_access']);
 	$pollID = $_GET['pollID'];
 	safe_query("UPDATE ".PREFIX."poll SET aktiv='0' WHERE pollID='".$pollID."'");
@@ -148,7 +148,7 @@ elseif(isset($_GET['reopen']))  {
 	include("_mysql.php");
 	include("_settings.php");
 	include('_functions.php');
-	$_language->read_module('polls');
+	$_language->readModule('polls');
 	if(!ispollsadmin($userID)) die($_language->module['no_access']);
 	$pollID = $_GET['pollID'];
 	safe_query("UPDATE ".PREFIX."poll SET aktiv='1' WHERE pollID='".$pollID."'");
@@ -158,7 +158,7 @@ elseif(isset($_GET['delete'])) {
 	include("_mysql.php");
 	include("_settings.php");
 	include('_functions.php');
-	$_language->read_module('polls');
+	$_language->readModule('polls');
 	if(!ispollsadmin($userID)) die($_language->module['no_access']);
 
 	$pollID = $_GET['pollID'];
@@ -167,7 +167,7 @@ elseif(isset($_GET['delete'])) {
 	header('Location: index.php?site=polls');
 }
 
-$_language->read_module('polls');
+$_language->readModule('polls');
 eval("\$title_polls = \"".gettemplate("title_polls")."\";");
 echo $title_polls;
 
@@ -184,12 +184,12 @@ elseif($action=="edit") {
 		$pollID = $_GET['pollID'];
 		$ergebnis = safe_query("SELECT * FROM ".PREFIX."poll WHERE pollID='$pollID'");
 		$ds = mysqli_fetch_array($ergebnis);
-		
+
 		if(isset($ds['pollID'])) {
 
 			$runtime_date = date("Y",$ds["laufzeit"]).'-'.date("m",$ds["laufzeit"]).'-'.date("d",$ds["laufzeit"]);
             $runtime_time = date("H",$ds["laufzeit"]).':'.date("i",$ds["laufzeit"]).':00';
-			
+
 			$polltitle = getinput($ds['titel']);
 			$option1 = getinput($ds['o1']);
 			$option2 = getinput($ds['o2']);
@@ -201,7 +201,7 @@ elseif($action=="edit") {
 			$option8 = getinput($ds['o8']);
 			$option9 = getinput($ds['o9']);
 			$option10 = getinput($ds['o10']);
-	
+
 			$comments = '<option value="0">'.$_language->module['disable_comments'].'</option><option value="1">'.$_language->module['enable_user_comments'].'</option><option value="2">'.$_language->module['enable_visitor_comments'].'</option>';
 			$comments = str_replace('value="'.$ds['comments'].'"', 'value="'.$ds['comments'].'" selected="selected"', $comments);
 			if($ds['intern']) $intern = "checked='checked'";
@@ -216,15 +216,15 @@ elseif($action=="edit") {
 elseif(isset($_GET['pollID'])) {
 	$pollID = $_GET['pollID'];
 	if(ispollsadmin($userID)) echo'<div class="form-group"><input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=polls&amp;action=new\');return document.MM_returnValue" value="'.$_language->module['new_poll'].'" class="btn btn-danger"></div>';
-  
+
  	$ergebnis = safe_query("SELECT * FROM ".PREFIX."poll WHERE pollID='$pollID' AND intern<=".isclanmember($userID));
 	$ds = mysqli_fetch_array($ergebnis);
 	$bg1 = BG_1;
 	$title=$ds['titel'];
-  
+
   	if($ds['intern'] == 1) $isintern = '('.$_language->module['intern'].')';
   	else $isintern = '';
-	
+
   	if($ds['laufzeit'] < time() OR $ds['aktiv'] == "0") {
     	$timeleft = $_language->module['poll_ended'];
     	$active = '';
@@ -310,7 +310,7 @@ elseif(isset($_GET['vote'])) {
 	$ds = mysqli_fetch_array($lastpoll);
 	if($anz) {
 		$anz = mysqli_num_rows(safe_query("SELECT pollID FROM `".PREFIX."poll` WHERE pollID='".$ds['pollID']."' AND hosts LIKE '%".$_SERVER['REMOTE_ADDR']."%' AND intern<=".isclanmember($userID).""));
-		
+
 		$anz_user = false;
 		if($userID) {
 			$user_ids = explode(";", $ds['userIDs']);
@@ -320,8 +320,8 @@ elseif(isset($_GET['vote'])) {
 		if(isset($_COOKIE['poll']) && is_array($_COOKIE['poll'])){
 			$cookie = in_array($ds['pollID'], $_COOKIE['poll']);
 		}
-		
-		
+
+
 		if($cookie or $anz or $anz_user){
     		redirect('index.php?site=polls&amp;pollID='.$ds['pollID'], $_language->module['already_voted'],3);
 		}
@@ -353,7 +353,7 @@ elseif(isset($_GET['vote'])) {
         </tr>
       </table>
       </form>';
-      
+
 		}
 	}	else redirect('index.php?site=polls&pollID='.$ds['pollID'], $_language->module['poll_ended'],3);
 }
@@ -369,10 +369,10 @@ else {
 			else $bg1 = BG_2;
 
 			$title = $ds['titel'];
-      
+
       		if($ds['intern'] == 1) $isintern = '('.$_language->module['intern'].')';
       		else $isintern = '';
-      
+
 			if($ds['laufzeit'] < time() or $ds['aktiv'] == "0") {
                 $timeleft = $_language->module['poll_ended'];
                 $active = '';
@@ -402,7 +402,7 @@ else {
 			$dv = mysqli_fetch_array($votes);
 			$gesamtstimmen = $dv['o1'] + $dv['o2'] + $dv['o3'] + $dv['o4'] + $dv['o5'] + $dv['o6'] + $dv['o7'] + $dv['o8'] + $dv['o9'] + $dv['o10'];
 			$n=1;
-      
+
       		eval ("\$polls_head = \"".gettemplate("polls_head")."\";");
 			echo $polls_head;
 
@@ -429,7 +429,7 @@ else {
 
 			eval ("\$polls_foot = \"".gettemplate("polls_foot")."\";");
 			echo $polls_foot;
-			
+
       		$i++;
 
 			unset($options);

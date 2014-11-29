@@ -24,7 +24,7 @@
 #                                                                        #
 ##########################################################################
 */
-if (isset($site)) $_language->read_module('clanwars');
+if (isset($site)) $_language->readModule('clanwars');
 
 if(isset($_GET['action'])) $action = $_GET['action'];
 else $action = "";
@@ -32,7 +32,7 @@ if($action=="new") {
 	include("_mysql.php");
 	include("_settings.php");
 	include("_functions.php");
-	$_language->read_module('clanwars');
+	$_language->readModule('clanwars');
 
 	if(!isanyadmin($userID)) die($_language->module['no_access']);
 
@@ -49,7 +49,7 @@ if($action=="new") {
 
 		$games="";
     $hometeam="";
-    
+
     $gamesa=safe_query("SELECT * FROM ".PREFIX."games ORDER BY name");
 		while($ds=mysqli_fetch_array($gamesa)) {
 			$games.='<option value="'.$ds['tag'].'">'.$ds['name'].'</option>';
@@ -68,7 +68,7 @@ if($action=="new") {
 		$day='';
 		$month='';
 		$year='';
-    
+
     for($i=1; $i<32; $i++) {
 			if($i==date("d", time())) $day.='<option selected="selected">'.$i.'</option>';
 			else $day.='<option>'.$i.'</option>';
@@ -124,7 +124,7 @@ elseif($action=="save") {
 	include("_mysql.php");
 	include("_settings.php");
 	include("_functions.php");
-	$_language->read_module('clanwars');
+	$_language->readModule('clanwars');
 
 	if(!isanyadmin($userID)) die($_language->module['no_access']);
 
@@ -153,7 +153,7 @@ elseif($action=="save") {
 	$comments = $_POST['comments'];
 	$linkpage = $_POST['linkpage'];
 	if(isset($_POST['news'])) $news=$_POST['news'];
-  
+
 
 	// v1.0 -- EXTENDED CLANWAR RESULTS
 	if(isset($_POST['map_name'])) $maplist = $_POST['map_name'];
@@ -180,7 +180,7 @@ elseif($action=="save") {
 		}
 	}
 	$theHomeScore = serialize($scores);
-	
+
 	$results = array();
 	if(!empty($oppscr)) {
 		if(is_array($oppscr)) {
@@ -190,7 +190,7 @@ elseif($action=="save") {
 		}
 	}
 	$theOppScore = serialize($results);
-	
+
 	$team=array();
 	if(is_array($hometeam)) {
 		foreach($hometeam as $player) {
@@ -209,12 +209,12 @@ elseif($action=="save") {
 
 	// INSERT CW-NEWS
 	if(isset($news)) {
-	 	$_language->read_module('news',true);
-	 	$_language->read_module('bbcode', true);
-	 	
+	 	$_language->readModule('news',true);
+	 	$_language->readModule('bbcode', true);
+
 		safe_query("INSERT INTO ".PREFIX."news (date, poster, saved, cwID) VALUES ('".time()."', '$userID', '0', '$cwID')");
 		$newsID=mysqli_insert_id($_database);
-		
+
 		$rubrics = '';
 		$newsrubrics=safe_query("SELECT rubricID, rubric FROM ".PREFIX."news_rubrics ORDER BY rubric");
 		while($dr=mysqli_fetch_array($newsrubrics)) {
@@ -266,7 +266,7 @@ elseif($action=="save") {
 			$results='[color='.$drawcolor.'][b]'.$homescr.':'.$oppscr.'[/b][/color]';
 			$result2='draw';
 		}
-		
+
 		$headline1='War '.stripslashes($squad).' vs. '.stripslashes($opponent).' '.$result2;
 		if($url1!='http://' AND !(empty($url1))) $opponent='[url='.$opphp.'][b]'.$opptag.' / '.$opponent.'[/b][/url]';
 		else $opponent='[b]'.$opptag.' / '.$opponent.'[/b]';
@@ -303,12 +303,12 @@ elseif($action=="save") {
 				}
 			}
 		}
-    
+
   	$_languagepagedefault = new Language;
     $_languagepagedefault->set_language($rss_default_language);
     $_languagepagedefault->read_module('clanwars');
 		$message=$_language->module['clanwar_against'].' [flag]'.$oppcountry.'[/flag] '.stripslashes($opponent).' '.$_language->module['on'].' '.$date.'
-		
+
 '.$_language->module['league'].': '.stripslashes($league).'
 '.$_language->module['result'].': '.$results.'
 '.$results_ext.'
@@ -329,19 +329,19 @@ elseif($action=="save") {
 		}
 		$intern = '<option value="0" selected="selected">'.$_language->module['no'].'</option><option value="1">'.$_language->module['yes'].'</option>';
 		$topnews = '<option value="0" selected="selected">'.$_language->module['no'].'</option><option value="1">'.$_language->module['yes'].'</option>';
-		
+
 		$rubrics='';
 		$newsrubrics=safe_query("SELECT rubricID, rubric FROM ".PREFIX."news_rubrics ORDER BY rubric");
 		while($dr=mysqli_fetch_array($newsrubrics)) {
 			$rubrics.='<option value="'.$dr['rubricID'].'">'.$dr['rubric'].'</option>';
 		}
 		$bg1=BG_1;
-		
+
 		$comments='<option value="0">'.$_language->module['no_comments'].'</option><option value="1">'.$_language->module['user_comments'].'</option><option value="2" selected="selected">'.$_language->module['visitor_comments'].'</option>';
-		
+
 		eval ("\$addbbcode = \"".gettemplate("addbbcode")."\";");
 		eval ("\$addflags = \"".gettemplate("flags")."\";");
-		$_language->read_module('news');
+		$_language->readModule('news');
 		eval ("\$news_post = \"".gettemplate("news_post")."\";");
 		echo $news_post;
 
@@ -358,7 +358,7 @@ elseif($action=="edit") {
 	include("_mysql.php");
 	include("_settings.php");
 	include("_functions.php");
-	$_language->read_module('clanwars');
+	$_language->readModule('clanwars');
 	if(!isanyadmin($userID)) die($_language->module['no_access']);
 
 	$pagebg=PAGEBG;
@@ -378,7 +378,7 @@ elseif($action=="edit") {
     $day='';
 		$month='';
 		$year='';
-    
+
     $ds=mysqli_fetch_array(safe_query("SELECT * FROM ".PREFIX."clanwars WHERE cwID='$cwID'"));
 
 		$gamesa=safe_query("SELECT tag, name FROM ".PREFIX."games ORDER BY name");
@@ -386,8 +386,8 @@ elseif($action=="edit") {
 			$games.='<option value="'.$dv['tag'].'">'.$dv['name'].'</option>';
 		}
 
-		
-    
+
+
     for($i=1; $i<32; $i++) {
 			if($i==date("d", $ds['date'])) $day.='<option selected="selected">'.$i.'</option>';
 			else $day.='<option>'.$i.'</option>';
@@ -423,7 +423,7 @@ elseif($action=="edit") {
 		$theOppScore = unserialize($ds['oppscore']);
 		$i=0;
 		for($i=0; $i<count($map); $i++) {
-			
+
       $maps.='
       <tr>
         <td width="15%"><input type="hidden" name="map_id[]" value="'.$i.'">map #'.($i+1).'</td>
@@ -464,7 +464,7 @@ elseif($action=="saveedit") {
 	include("_mysql.php");
 	include("_settings.php");
 	include("_functions.php");
-	$_language->read_module('clanwars');
+	$_language->readModule('clanwars');
 
 	if(!isanyadmin($userID)) die($_language->module['no_access']);
 
@@ -493,12 +493,12 @@ elseif($action=="saveedit") {
 	$oppscr = $_POST['map_result_opp'];
 	if(isset($_POST['delete'])) $delete = $_POST['delete'];
 	else $delete = array();
-	
+
 	// v1.0 -- MAP-REMOVAL
 	$theMaps = array();
 	$theHomeScore = array();
 	$theOppScore = array();
-	
+
 	if(is_array($maplist)){
 		foreach($maplist as $key=>$map) {
 			if(!isset($delete[$key])) {
@@ -554,7 +554,7 @@ elseif($action=="delete") {
 	include("_mysql.php");
 	include("_settings.php");
 	include("_functions.php");
-	$_language->read_module('clanwars');
+	$_language->readModule('clanwars');
 
 	if(!isanyadmin($userID)) die($_language->module['no_access']);
 	if(isset($_POST['cwID'])) $cwID = $_POST['cwID'];
@@ -577,7 +577,7 @@ elseif(isset($_POST['quickactiontype'])=="delete") {
 	include("_mysql.php");
 	include("_settings.php");
 	include("_functions.php");
-	$_language->read_module('clanwars');
+	$_language->readModule('clanwars');
 
 	if(!isanyadmin($userID)) die('no access!');
 	if(isset($_POST['cwID'])){
@@ -594,7 +594,7 @@ elseif(isset($_POST['quickactiontype'])=="delete") {
 					}
 				}
 			}
-	
+
 			safe_query("DELETE FROM ".PREFIX."clanwars WHERE cwID='$id'");
 			safe_query("DELETE FROM ".PREFIX."comments WHERE parentID='$id' AND type='cw'");
 		}
@@ -619,7 +619,7 @@ elseif($action=="stats") {
   $totaldrawall="";
   $totalwonall="";
   $totalloseall="";
-  
+
   // TOTAL
 
 	$dp=safe_query("SELECT * FROM ".PREFIX."clanwars");
@@ -682,9 +682,9 @@ elseif($action=="stats") {
 	if(mysqli_num_rows($squads)) {
 		while($squaddata=mysqli_fetch_array($squads)) {
 			$squad=getsquadname($squaddata['squadID']);
-			
+
       echo '<h2>'.$squad.' - '.$_language->module['stats'].'</h2>';
-      
+
       $totalHomeScoreSQ="";
       $totalOppScoreSQ="";
       $drawall="";
@@ -760,7 +760,7 @@ elseif($action=="stats") {
 			unset($homeperc); unset($oppperc);
 
 			// PLAYER STATISTICS
-      
+
       $hometeam=array();
       $playerlist="";
 
@@ -844,23 +844,23 @@ elseif($action=="showonly") {
 	if(isset($_GET['sort'])){
 	  if(($_GET['sort']=='date') || ($_GET['sort']=='game') || ($_GET['sort']=='squad') || ($_GET['sort']=='oppcountry') || ($_GET['sort']=='league')) $sort=$_GET['sort'];
 	}
-	
+
 	$type="DESC";
 	if(isset($_GET['type'])){
 	  if(($_GET['type']=='ASC') || ($_GET['type']=='DESC')) $type=$_GET['type'];
 	}
-	
+
 	$squads=getgamesquads();
-	
+
   $jumpsquads=str_replace('value="', 'value="index.php?site=clanwars&amp;action=showonly&amp;only=squad&amp;id=', $squads);
 	$jumpmenu='<div class="input-group"><select name="selectgame" onchange="MMJumpMenu(\'parent\',this,0)" class="form-control"><option value="index.php?site=clanwars">- '.$_language->module['show_all_squads'].' -</option>'.$jumpsquads.'</select><span class="input-group-btn"><input type="button" name="Button1" value="'.$_language->module['go'].'" onclick="MM_jumpMenuGo(\'selectgame\',\'parent\',0)" class="btn btn-primary"></span></div>';
 
 	eval ("\$title_clanwars = \"".gettemplate("title_clanwars")."\";");
 	echo $title_clanwars;
-  
+
 	$gesamt = mysqli_num_rows(safe_query("SELECT cwID FROM ".PREFIX."clanwars WHERE $only='$id'"));
 	$pages=1;
-	
+
 	$max=$maxclanwars;
 	$pages = ceil($gesamt/$max);
 
@@ -905,7 +905,7 @@ elseif($action=="showonly") {
 		eval ("\$clanwars_head = \"".gettemplate("clanwars_head")."\";");
 		echo $clanwars_head;
 		$n=1;
-	
+
 		while($ds=mysqli_fetch_array($ergebnis)) {
 			if($n%2) {
 				$bg1=BG_1;
@@ -963,7 +963,7 @@ elseif(empty($_GET['action'])) {
 	if(isset($_GET['sort'])){
 	  if(($_GET['sort']=='date') || ($_GET['sort']=='game') || ($_GET['sort']=='squad') || ($_GET['sort']=='oppcountry') || ($_GET['sort']=='league')) $sort=$_GET['sort'];
 	}
-	
+
 	$type="DESC";
 	if(isset($_GET['type'])){
 	  if(($_GET['type']=='ASC') || ($_GET['type']=='DESC')) $type=$_GET['type'];
@@ -971,7 +971,7 @@ elseif(empty($_GET['action'])) {
 	$squads=getgamesquads();
 	$jumpsquads=str_replace('value="', 'value="index.php?site=clanwars&amp;action=showonly&amp;only=squad&amp;id=', $squads);
 	$jumpmenu='<div class="input-group"><select name="selectgame" onchange="MMJumpMenu(\'parent\',this,0)" class="form-control"><option value="index.php?site=clanwars">- '.$_language->module['show_all_squads'].' -</option>'.$jumpsquads.'</select> <span class="input-group-btn"><input type="button" name="Button1" value="'.$_language->module['go'].'" onclick="MM_jumpMenuGo(\'selectgame\',\'parent\',0)" class="btn btn-primary"></span></div>';
-    
+
 	eval ("\$title_clanwars = \"".gettemplate("title_clanwars")."\";");
 	echo $title_clanwars;
 

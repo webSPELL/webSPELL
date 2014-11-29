@@ -25,12 +25,12 @@
 ##########################################################################
 */
 
-$_language->read_module('members');
+$_language->readModule('members');
 
 if(!isuseradmin($userID) OR mb_substr(basename($_SERVER['REQUEST_URI']),0,15) != "admincenter.php") die($_language->module['access_denied']);
 
 if(isset($_POST['sortieren'])) {
- 	$CAPCLASS = new Captcha;
+ 	$CAPCLASS = new \webspell\Captcha;
 	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
 	 	if(isset($_POST['sort'])){
 			$sort = $_POST['sort'];
@@ -45,7 +45,7 @@ if(isset($_POST['sortieren'])) {
 }
 
 if(isset($_GET['delete'])) {
- 	$CAPCLASS = new Captcha;
+ 	$CAPCLASS = new \webspell\Captcha;
 	if($CAPCLASS->check_captcha(0, $_GET['captcha_hash'])) {
 		$id = $_GET['id'];
 		$squadID = $_GET['squadID'];
@@ -57,7 +57,7 @@ if(isset($_GET['delete'])) {
 }
 
 if(isset($_POST['saveedit'])) {
- 	$CAPCLASS = new Captcha;
+ 	$CAPCLASS = new \webspell\Captcha;
 	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
 		$id = $_POST['id'];
     $newswriter = isset($_POST['newswriter']);
@@ -142,11 +142,11 @@ if(isset($_GET['action']) and $_GET['action'] == "edit") {
 
   echo'<h1>&curren; <a href="admincenter.php?site=members" class="white">'.$_language->module['members'].'</a> &raquo; '.$_language->module['edit_member'].'</h1>';
 
-	$CAPCLASS = new Captcha;
-	$CAPCLASS->create_transaction();
-	$hash = $CAPCLASS->get_hash();
+	$CAPCLASS = new \webspell\Captcha;
+	$CAPCLASS->createTransaction();
+	$hash = $CAPCLASS->getHash();
 
-	$_language->read_module('bbcode', true);
+	$_language->readModule('bbcode', true);
 
 	eval ("\$addbbcode = \"".gettemplate("addbbcode", "html", "admin")."\";");
   eval ("\$addflags = \"".gettemplate("flags_admin", "html", "admin")."\";");
@@ -344,9 +344,9 @@ if(isset($_GET['action']) and $_GET['action'] == "edit") {
 else {
 
   echo'<h1>&curren; '.$_language->module['members'].'</h1>';
-  $CAPCLASS = new Captcha;
-  $CAPCLASS->create_transaction();
-  $hash = $CAPCLASS->get_hash();
+  $CAPCLASS = new \webspell\Captcha;
+  $CAPCLASS->createTransaction();
+  $hash = $CAPCLASS->getHash();
   $squads=safe_query("SELECT * FROM ".PREFIX."squads ORDER BY sort");
 	echo'<form method="post" action="admincenter.php?site=members">';
 	while($ds=mysqli_fetch_array($squads)) {

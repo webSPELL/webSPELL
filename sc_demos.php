@@ -25,7 +25,7 @@
 ##########################################################################
 */
 
-$_language->read_module('demos');
+$_language->readModule('demos');
 
 //Options:
 $list = 2; //1 = top 5 demos , 2 = latest 5 demos
@@ -45,7 +45,7 @@ if(mysqli_num_rows($ergebnis)){
 		$tag2 = $ds['clantag2'];
 		$clan2 = $ds['clan2'];
 		$number = $n;
-    
+
     	if($n%2) {
 			$bg1=BG_1;
 			$bg2=BG_2;
@@ -54,12 +54,12 @@ if(mysqli_num_rows($ergebnis)){
 			$bg1=BG_3;
 			$bg2=BG_4;
 		}
-	
+
 		eval("\$sc_demos = \"".gettemplate("sc_demos")."\";");
 		echo $sc_demos;
-	
+
 		$n++;
 	}
 	echo'</ul>';
-}	
+}
 ?>

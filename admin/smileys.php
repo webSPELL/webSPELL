@@ -25,7 +25,7 @@
 ##########################################################################
 */
 
-$_language->read_module('smileys');
+$_language->readModule('smileys');
 
 if(!ispageadmin($userID) OR mb_substr(basename($_SERVER['REQUEST_URI']),0,15) != "admincenter.php") die($_language->module['access_denied']);
 
@@ -35,9 +35,9 @@ if(isset($_GET['action'])) $action = $_GET['action'];
 else $action = '';
 
 if($action=="add") {
-	$CAPCLASS = new Captcha;
-	$CAPCLASS->create_transaction();
-	$hash = $CAPCLASS->get_hash();
+	$CAPCLASS = new \webspell\Captcha;
+	$CAPCLASS->createTransaction();
+	$hash = $CAPCLASS->getHash();
 
   echo'<h1>&curren; <a href="admincenter.php?site=icons" class="white">'.$_language->module['icons'].'</a> &raquo; <a href="admincenter.php?site=smileys" class="white">'.$_language->module['smilies'].'</a> &raquo; '.$_language->module['add_smiley'].'</h1>';
 
@@ -64,9 +64,9 @@ if($action=="add") {
 }
 
 elseif($action=="edit") {
-	$CAPCLASS = new Captcha;
-	$CAPCLASS->create_transaction();
-	$hash = $CAPCLASS->get_hash();
+	$CAPCLASS = new \webspell\Captcha;
+	$CAPCLASS->createTransaction();
+	$hash = $CAPCLASS->getHash();
 	$ds=mysqli_fetch_array(safe_query("SELECT * FROM ".PREFIX."smileys WHERE smileyID='".$_GET["smileyID"]."'"));
 	$pic='<img src="../images/smileys/'.$ds['name'].'" alt="'.getinput($ds['alt']).'">';
 
@@ -103,7 +103,7 @@ elseif(isset($_POST["save"])) {
 	$icon=$_FILES["icon"];
 	$alt=$_POST["alt"];
 	$pattern=$_POST["pattern"];
-	$CAPCLASS = new Captcha;
+	$CAPCLASS = new \webspell\Captcha;
 	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
 		if($pattern) {
 			$file_ext=strtolower(mb_substr($icon['name'], strrpos($icon['name'], ".")));
@@ -125,7 +125,7 @@ elseif(isset($_POST["saveedit"])) {
 	$icon=$_FILES["icon"];
 	$alt=$_POST["alt"];
 	$pattern=$_POST['pattern'];
-	$CAPCLASS = new Captcha;
+	$CAPCLASS = new \webspell\Captcha;
 	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
 		if($pattern) {
 			if($icon['name']=="") {
@@ -150,7 +150,7 @@ elseif(isset($_POST["saveedit"])) {
 }
 
 elseif(isset($_GET["delete"])) {
- 	$CAPCLASS = new Captcha;
+ 	$CAPCLASS = new \webspell\Captcha;
 	if($CAPCLASS->check_captcha(0, $_GET['captcha_hash'])) {
 		safe_query("DELETE FROM ".PREFIX."smileys WHERE smileyID='".$_GET["smileyID"]."'");
 		redirect('admincenter.php?site=smileys','',0);
@@ -174,9 +174,9 @@ else {
 	$ds=safe_query("SELECT * FROM ".PREFIX."smileys");
 	$anz=mysqli_num_rows($ds);
 	if($anz) {
-	$CAPCLASS = new Captcha;
-	$CAPCLASS->create_transaction();
-	$hash = $CAPCLASS->get_hash();
+	$CAPCLASS = new \webspell\Captcha;
+	$CAPCLASS->createTransaction();
+	$hash = $CAPCLASS->getHash();
     $i=1;
     while($smileys = mysqli_fetch_array($ds)) {
       if($i%2) { $td='td1'; }

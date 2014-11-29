@@ -25,7 +25,7 @@
 ##########################################################################
 */
 
-$_language->read_module('games');
+$_language->readModule('games');
 
 if(!ispageadmin($userID) OR mb_substr(basename($_SERVER['REQUEST_URI']),0,15) != "admincenter.php") die($_language->module['access_denied']);
 
@@ -36,9 +36,9 @@ else $action = '';
 
 if($action=="add") {
 
-	$CAPCLASS = new Captcha;
-	$CAPCLASS->create_transaction();
-	$hash = $CAPCLASS->get_hash();
+	$CAPCLASS = new \webspell\Captcha;
+	$CAPCLASS->createTransaction();
+	$hash = $CAPCLASS->getHash();
 	echo'<h1>&curren; <a href="admincenter.php?site=icons" class="white">'.$_language->module['icons'].'</a> &raquo; <a href="admincenter.php?site=games" class="white">'.$_language->module['games'].'</a> &raquo; '.$_language->module['add_game'].'</h1>';
 
 	echo'<form method="post" action="admincenter.php?site=games" enctype="multipart/form-data">
@@ -67,9 +67,9 @@ elseif($action=="edit") {
 	$ds=mysqli_fetch_array(safe_query("SELECT * FROM ".PREFIX."games WHERE gameID='".$_GET["gameID"]."'"));
 	$pic='<img src="../images/games/'.$ds['tag'].'.gif" alt="'.$ds['name'].'">';
 
-	$CAPCLASS = new Captcha;
-	$CAPCLASS->create_transaction();
-	$hash = $CAPCLASS->get_hash();
+	$CAPCLASS = new \webspell\Captcha;
+	$CAPCLASS->createTransaction();
+	$hash = $CAPCLASS->getHash();
 
 	echo'<h1>&curren; <a href="admincenter.php?site=icons" class="white">'.$_language->module['icons'].'</a> &raquo; <a href="admincenter.php?site=games" class="white">'.$_language->module['games'].'</a> &raquo; '.$_language->module['edit_game'].'</h1>';
 
@@ -104,7 +104,7 @@ elseif(isset($_POST['save'])) {
 	$icon=$_FILES["icon"];
 	$name=$_POST["name"];
 	$tag=$_POST["tag"];
-	$CAPCLASS = new Captcha;
+	$CAPCLASS = new \webspell\Captcha;
 	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
 		if($name AND $tag) {
 			$file_ext=strtolower(mb_substr($icon['name'], strrpos($icon['name'], ".")));
@@ -125,7 +125,7 @@ elseif(isset($_POST["saveedit"])) {
 	$icon=$_FILES["icon"];
 	$name=$_POST["name"];
 	$tag=$_POST["tag"];
-	$CAPCLASS = new Captcha;
+	$CAPCLASS = new \webspell\Captcha;
 	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
 		if($name AND $tag) {
 			if($icon['name']=="") {
@@ -151,7 +151,7 @@ elseif(isset($_POST["saveedit"])) {
 }
 
 elseif(isset($_GET["delete"])) {
-	$CAPCLASS = new Captcha();
+	$CAPCLASS = new \webspell\Captcha();
 	if($CAPCLASS->check_captcha(0, $_GET['captcha_hash'])) {
 		safe_query("DELETE FROM ".PREFIX."games WHERE gameID='".$_GET["gameID"]."'");
 		redirect("admincenter.php?site=games","",0);
@@ -178,9 +178,9 @@ else {
 	if($anz) {
 
 		$i=1;
-		$CAPCLASS = new Captcha;
-		$CAPCLASS->create_transaction();
-		$hash = $CAPCLASS->get_hash();
+		$CAPCLASS = new \webspell\Captcha;
+		$CAPCLASS->createTransaction();
+		$hash = $CAPCLASS->getHash();
 
 		while($ds = mysqli_fetch_array($ergebnis)) {
 			if($i%2) { $td='td1'; }

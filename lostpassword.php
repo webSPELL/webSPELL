@@ -25,7 +25,7 @@
 ##########################################################################
 */
 
-$_language->read_module('lostpassword');
+$_language->readModule('lostpassword');
 
 eval ("\$title_lostpassword = \"".gettemplate("title_lostpassword")."\";");
 echo $title_lostpassword;
@@ -35,27 +35,27 @@ if(isset($_POST['submit'])) {
 	if($email!=''){
 		$ergebnis = safe_query("SELECT * FROM ".PREFIX."user WHERE email = '".$email."'");
 		$anz = mysqli_num_rows($ergebnis);
-	
+
 		if($anz) {
-	
+
 			$newpwd=RandPass(6);
 			$newmd5pwd=generatePasswordHash($newpwd);
-	
+
 			$ds = mysqli_fetch_array($ergebnis);
 			safe_query("UPDATE ".PREFIX."user SET password='".$newmd5pwd."' WHERE userID='".$ds['userID']."'");
-	
+
 			$ToEmail = $ds['email'];
 			$ToName = $ds['username'];
 			$vars = Array('%pagetitle%', '%username%', '%new_password%', '%homepage_url%');
 			$repl = Array($hp_title, $ds['username'], $newpwd, $hp_url);
 			$header = str_replace($vars, $repl, $_language->module['email_subject']);
 			$Message = str_replace($vars, $repl, $_language->module['email_text']);
-	
+
 			if(mail($ToEmail,$header, $Message, "From:".$admin_email."\nContent-type: text/plain; charset=utf-8\n"))
 			echo str_replace($vars, $repl, $_language->module['successful']);
 			else echo $_language->module['email_failed'];
-	
-	
+
+
 		}
 		else {
 			echo $_language->module['no_user_found'];

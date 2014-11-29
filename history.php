@@ -25,7 +25,7 @@
 ##########################################################################
 */
 
-$_language->read_module('history');
+$_language->readModule('history');
 
 eval ("\$title_history = \"".gettemplate("title_history")."\";");
 echo $title_history;

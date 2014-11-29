@@ -24,24 +24,24 @@
 #                                                                        #
 ##########################################################################
 */
-if (isset($site)) $_language->read_module('awards');
+if (isset($site)) $_language->readModule('awards');
 
 if(isset($_POST['save'])) {
 	include("_mysql.php");
 	include("_settings.php");
 	include("_functions.php");
-	$_language->read_module('awards');
+	$_language->readModule('awards');
 
 	if(!isclanwaradmin($userID) && !isnewsadmin($userID)) die($_language->module['no_access']);
-	
+
 	$date = $_POST['date'];
-    $day = substr($date, 8, 2); 
-    $month = substr($date, 5, 2); 
+    $day = substr($date, 8, 2);
+    $month = substr($date, 5, 2);
     if($month>12 && $day < 12) { // User might have mixed up day and month
         $oldmonth = $month;
         $month = $day;
         $day = $oldmonth;
-    }                
+    }
     $year = substr($date, 0, 4);
 
 	if(isset($_POST['squad']))$squad = $_POST['squad'];
@@ -59,18 +59,18 @@ elseif(isset($_POST['saveedit'])) {
 	include("_mysql.php");
 	include("_settings.php");
 	include("_functions.php");
-	$_language->read_module('awards');
+	$_language->readModule('awards');
 
 	if(!isclanwaradmin($userID) && !isnewsadmin($userID)) die($_language->module['no_access']);
 	$awardID = $_POST['awardID'];
 	$date = $_POST['date'];
-    $day = substr($date, 8, 2); 
-    $month = substr($date, 5, 2); 
+    $day = substr($date, 8, 2);
+    $month = substr($date, 5, 2);
     if($month>12 && $day < 12) { // User might have mixed up day and month
         $oldmonth = $month;
         $month = $day;
         $day = $oldmonth;
-    }                
+    }
     $year = substr($date, 0, 4);
 	if(isset($_POST['squad']))$squad = $_POST['squad'];
 	else $squad = 0;
@@ -99,7 +99,7 @@ else $action = "";
 
 if($action=="new") {
 	if(isclanwaradmin($userID) || isnewsadmin($userID)) {
-		$_language->read_module('bbcode', true);
+		$_language->readModule('bbcode', true);
 	 	$day = "";
 		for($i=1; $i<32; $i++) {
 			if($i==date("d", time())) $day.='<option selected="selected">'.$i.'</option>';
@@ -118,7 +118,7 @@ if($action=="new") {
 		$squads=getgamesquads();
 
 		$bg1=BG_1;
-		
+
 		eval ("\$addbbcode = \"".gettemplate("addbbcode")."\";");
 		eval ("\$addflags = \"".gettemplate("flags")."\";");
 		eval ("\$awards_new = \"".gettemplate("awards_new")."\";");
@@ -130,7 +130,7 @@ elseif($action=="edit") {
 
 	$awardID = $_GET['awardID'];
 	if(isclanwaradmin($userID) || isnewsadmin($userID)) {
-		$_language->read_module('bbcode', true);
+		$_language->readModule('bbcode', true);
 		$ds=mysqli_fetch_array(safe_query("SELECT * FROM ".PREFIX."awards WHERE awardID='$awardID'"));
 		$day = "";
 		for($i=1; $i<32; $i++) {
@@ -144,7 +144,7 @@ elseif($action=="edit") {
 		for($i=2000; $i<2016; $i++) {
 			if($i==date("Y", $ds['date'])) $year.=$i;
 		}
-        
+
         $date = $year.'-'.$month.'-'.$day;
 		$squads = getgamesquads();
 		$squads = str_replace('value="'.$ds['squadID'].'"', 'value="'.$ds['squadID'].'" selected="selected"', $squads);
@@ -171,7 +171,7 @@ elseif($action=="showsquad") {
 	$gesamt = mysqli_num_rows($alle);
 	$pages=1;
 	$max=$maxawards;
-	
+
 	$pages = ceil($gesamt/$max);
 
 	if($pages>1) $page_link = makepagelink("index.php?site=awards&amp;action=showsquad&amp;squadID=$squadID&amp;sort=$sort&amp;type=$type", $page, $pages);
@@ -219,17 +219,17 @@ elseif($action=="showsquad") {
 			if(isclanwaradmin($userID) || isnewsadmin($userID))
 			$adminaction='<input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=awards&amp;action=edit&amp;awardID='.$ds['awardID'].'\');return document.MM_returnValue" value="'.$_language->module['edit'].'">
 			<input type="button" onclick="MM_confirm(\'really delete this award?\',\'awards.php?delete=true&amp;awardID='.$ds['awardID'].'\')" value="'.$_language->module['delete'].'">';
-			else $adminaction = '';				  
+			else $adminaction = '';
 
 			eval ("\$awards_content = \"".gettemplate("awards_content")."\";");
 			echo $awards_content;
-      
+
 			unset($result);
 			$n++;
 		}
 		eval ("\$awards_foot = \"".gettemplate("awards_foot")."\";");
 		echo $awards_foot;
-    
+
 	} else echo $_language->module['no_entries'];
 
 } elseif($action=="details") {
@@ -251,10 +251,10 @@ elseif($action=="showsquad") {
 	$bg2=BG_2;
 	$bg3=BG_3;
 	$bg4=BG_4;
-	
+
 	if(isclanwaradmin($userID) || isnewsadmin($userID)) $adminaction='<br><input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=awards&amp;action=edit&amp;awardID='.$ds['awardID'].'\');return document.MM_returnValue" value="'.$_language->module['edit'].'"> <input type="button" onclick="MM_confirm(\'really delete this award?\',\'awards.php?delete=true&amp;awardID='.$ds['awardID'].'\')" value="'.$_language->module['delete'].'">';
 	else $adminaction = '';
-	
+
 	eval ("\$awards_info = \"".gettemplate("awards_info")."\";");
 	echo $awards_info;
 
@@ -263,9 +263,9 @@ else {
 	$page = (isset($_GET['page'])) ? (int)$_GET['page'] : 1;
 	$sort = (isset($_GET['sort']) && $_GET['sort']=='squadID') ? "squadID" : "date";
 	$type = (isset($_GET['type']) && $_GET['type']=='ASC') ? "ASC" : "DESC";
-	
+
   if(isclanwaradmin($userID) || isnewsadmin($userID)) echo'<input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=awards&amp;action=new\');return document.MM_returnValue" value="'.$_language->module['new_award'].'"><br><br>';
-	
+
   $alle=safe_query("SELECT awardID FROM ".PREFIX."awards");
 	$gesamt = mysqli_num_rows($alle);
 	$pages=1;
@@ -299,7 +299,7 @@ else {
 
 		eval ("\$awards_head = \"".gettemplate("awards_head")."\";");
 		echo $awards_head;
-    
+
 		$n=1;
 		while($ds=mysqli_fetch_array($ergebnis)) {
 			if($n%2) {
@@ -310,7 +310,7 @@ else {
 				$bg1=BG_3;
 				$bg2=BG_4;
 			}
-			
+
       		$date=getformatdate($ds['date']);
 			$squad='<a href="index.php?site=members&amp;action=showsquad&amp;squadID='.$ds['squadID'].'&amp;page='.$page.'&amp;sort='.$sort.'&amp;type='.$type.'">'.getsquadname($ds['squadID']).'</a>';
 			$award=cleartext($ds['award']);

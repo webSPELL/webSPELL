@@ -25,7 +25,7 @@
 ##########################################################################
 */
 
-$_language->read_module('groups');
+$_language->readModule('groups');
 
 if(!isforumadmin($userID) OR mb_substr(basename($_SERVER['REQUEST_URI']),0,15) != "admincenter.php") die($_language->module['access_denied']);
 
@@ -33,7 +33,7 @@ if(isset($_GET['action'])) $action = $_GET['action'];
 else $action = '';
 
 if($action=="delete") {
-	$CAPCLASS = new Captcha;
+	$CAPCLASS = new \webspell\Captcha;
 	if($CAPCLASS->check_captcha(0, $_GET['captcha_hash'])) {
 		if(!$_GET['fgrID']) die('missing fgrID... <a href="admincenter.php?site=groups">back</a>');
 		safe_query("ALTER TABLE ".PREFIX."user_forum_groups DROP `".$_GET['fgrID']."`");
@@ -47,9 +47,9 @@ elseif($action=="add") {
 
 	echo'<h1>&curren; <a href="admincenter.php?site=groups" class="white">'.$_language->module['groups'].'</a> &raquo; '.$_language->module['add_group'].'</h1>';
 
-	$CAPCLASS = new Captcha;
-	$CAPCLASS->create_transaction();
-	$hash = $CAPCLASS->get_hash();
+	$CAPCLASS = new \webspell\Captcha;
+	$CAPCLASS->createTransaction();
+	$hash = $CAPCLASS->getHash();
 
 	echo'<form method="post" action="admincenter.php?site=groups&amp;action=save">
 	<table width="100%" border="0" cellspacing="1" cellpadding="3">
@@ -67,7 +67,7 @@ elseif($action=="add") {
 
 elseif($action=="save") {
 	if(!$_POST['name']) die('<b>'.$_language->module['error_group'].'</b><br /><br /><a href="admincenter.php?site=groups&amp;action=add">&laquo; '.$_language->module['back'].'</a>');
-	$CAPCLASS = new Captcha;
+	$CAPCLASS = new \webspell\Captcha;
 	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
 		safe_query("INSERT INTO ".PREFIX."forum_groups ( name ) values( '".$_POST['name']."' ) ");
 		$id = mysqli_insert_id($_database);
@@ -82,7 +82,7 @@ elseif($action=="save") {
 
 elseif($action=="saveedit") {
 	$name=$_POST['name'];
-	$CAPCLASS = new Captcha;
+	$CAPCLASS = new \webspell\Captcha;
 	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
 		safe_query("UPDATE ".PREFIX."forum_groups SET name='".$name."' WHERE fgrID='".$_POST['fgrID']."'");
 			redirect("admincenter.php?site=groups","",0);
@@ -97,9 +97,9 @@ elseif($action=="edit") {
 	$ergebnis=safe_query("SELECT * FROM ".PREFIX."forum_groups WHERE fgrID='".$_GET['fgrID']."'");
 	$ds=mysqli_fetch_array($ergebnis);
 
-	$CAPCLASS = new Captcha;
-	$CAPCLASS->create_transaction();
-	$hash = $CAPCLASS->get_hash();
+	$CAPCLASS = new \webspell\Captcha;
+	$CAPCLASS->createTransaction();
+	$hash = $CAPCLASS->getHash();
 
 	echo'<form method="post" action="admincenter.php?site=groups&amp;action=saveedit">
 	<table width="100%" border="0" cellspacing="1" cellpadding="3">
@@ -130,9 +130,9 @@ else {
 		</tr>';
 
 	$i=1;
-	$CAPCLASS = new Captcha;
-	$CAPCLASS->create_transaction();
-	$hash = $CAPCLASS->get_hash();
+	$CAPCLASS = new \webspell\Captcha;
+	$CAPCLASS->createTransaction();
+	$hash = $CAPCLASS->getHash();
 
 	while($ds=mysqli_fetch_array($ergebnis)) {
 		if($i%2) { $td='td1'; }

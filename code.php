@@ -29,7 +29,7 @@ include("_mysql.php");
 include("_settings.php");
 include("_functions.php");
 
-$_language->read_module('code');
+$_language->readModule('code');
 
 $bg1 = BG_1;
 $bg2 = BG_2;

@@ -25,7 +25,7 @@
 ##########################################################################
 */
 
-$_language->read_module('imprint');
+$_language->readModule('imprint');
 
 if(!ispageadmin($userID) OR mb_substr(basename($_SERVER['REQUEST_URI']),0,15) != "admincenter.php") die($_language->module['access_denied']);
 
@@ -33,7 +33,7 @@ echo'<h1>&curren; '.$_language->module['imprint'].'</h1>';
 
 if(isset($_POST['submit'])) {
 	$imprint = $_POST['message'];
-	$CAPCLASS = new Captcha;
+	$CAPCLASS = new \webspell\Captcha;
 	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
 		safe_query("UPDATE `".PREFIX."settings` SET imprint='".$_POST['type']."'");
 
@@ -51,11 +51,11 @@ else {
 
 	$ergebnis=safe_query("SELECT * FROM `".PREFIX."imprint`");
 	$ds=mysqli_fetch_array($ergebnis);
-	$CAPCLASS = new Captcha;
-	$CAPCLASS->create_transaction();
-	$hash = $CAPCLASS->get_hash();
+	$CAPCLASS = new \webspell\Captcha;
+	$CAPCLASS->createTransaction();
+	$hash = $CAPCLASS->getHash();
 
-	$_language->read_module('bbcode', true);
+	$_language->readModule('bbcode', true);
 
 	eval ("\$addbbcode = \"".gettemplate("addbbcode", "html", "admin")."\";");
   eval ("\$addflags = \"".gettemplate("flags_admin", "html", "admin")."\";");

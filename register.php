@@ -25,7 +25,7 @@
 ##########################################################################
 */
 
-$_language->read_module('register');
+$_language->readModule('register');
 
 eval("\$title_register = \"".gettemplate("title_register")."\";");
 echo $title_register;
@@ -38,50 +38,50 @@ if(isset($_POST['save'])) {
 		$pwd1 = $_POST['pwd1'];
 		$pwd2 = $_POST['pwd2'];
 		$mail = $_POST['mail'];
-		$CAPCLASS = new Captcha;
-		
+		$CAPCLASS = new \webspell\Captcha;
+
 		$error = array();
-	  	
+
 	  // check nickname
 		if(!(mb_strlen(trim($nickname)))) $error[]=$_language->module['enter_nickname'];
-	  
+
 	  // check nickname inuse
 		$ergebnis = safe_query("SELECT * FROM ".PREFIX."user WHERE nickname = '$nickname' ");
 		$num = mysqli_num_rows($ergebnis);
 		if($num) $error[]=$_language->module['nickname_inuse'];
-	  
+
 	  // check username
 	  	if(!(mb_strlen(trim($username)))) $error[]=$_language->module['enter_username'];
 		elseif(mb_strlen(trim($username)) > 30 ) $error[]=$_language->module['username_toolong'];
-	  
+
 	  // check username inuse
 		$ergebnis = safe_query("SELECT * FROM ".PREFIX."user WHERE username = '$username' ");
 		$num = mysqli_num_rows($ergebnis);
 		if($num) $error[]=$_language->module['username_inuse'];
-	  
+
 	  // check passwort
 		if($pwd1 == $pwd2) {
 			if(!(mb_strlen(trim($pwd1)))) $error[]=$_language->module['enter_password'];
 		}
 		else $error[]=$_language->module['repeat_invalid'];
-	  
+
 	  // check e-mail
 		if(!validate_email($mail)) $error[]=$_language->module['invalid_mail'];
-	  
+
 	  // check e-mail inuse
 		$ergebnis = safe_query("SELECT userID FROM ".PREFIX."user WHERE email = '$mail' ");
 		$num = mysqli_num_rows($ergebnis);
 		if($num) $error[]=$_language->module['mail_inuse'];
-	  
+
 	  // check captcha
 	  	if(!$CAPCLASS->check_captcha($_POST['captcha'], $_POST['captcha_hash'])) $error[]=$_language->module['wrong_securitycode'];
-	 
+
 		// check exisitings accounts from ip with same password
 	  	$get_users = safe_query("SELECT userID FROM ".PREFIX."user WHERE password='$md5pwd' AND ip='".$GLOBALS['ip']."'");
 	  	if(mysqli_num_rows($get_users)){
 	  		$error[]='Only one Account per IP';
 	  	}
-	  	
+
 	  	if(count($error)) {
 	    	$list = implode('<br>&#8226; ', $error);
 	    	$showerror = '<div class="alert alert-error">
@@ -96,20 +96,20 @@ if(isset($_POST['save'])) {
 			$registerdate=time();
 			$activationkey = md5(RandPass(20));
 			$activationlink='http://'.$hp_url.'/index.php?site=register&key='.$activationkey;
-	
+
 			safe_query("INSERT INTO `".PREFIX."user` (`registerdate`, `lastlogin`, `username`, `password`, `nickname`, `email`, `newsletter`, `activated`,`ip`, `date_format`, `time_format`) VALUES ('$registerdate', '$registerdate', '$username', '$md5pwd', '$nickname', '$mail', '0', '".$activationkey."','".$GLOBALS['ip']."', '".$default_format_date."', '".$default_format_time."')");
-	
+
 			$insertid = mysqli_insert_id($_database);
-	
+
 			// insert in user_groups
 			safe_query("INSERT INTO ".PREFIX."user_groups ( userID ) values('$insertid' )");
-	
+
 			// mail to user
 			$ToEmail = $mail;
 			$ToName = $username;
 			$header =  str_replace(Array('%username%', '%activationlink%', '%pagetitle%', '%homepage_url%'), Array(stripslashes($username), stripslashes($activationlink), $hp_title, $hp_url), $_language->module['mail_subject']);
 			$Message = str_replace(Array('%username%', '%activationlink%', '%pagetitle%', '%homepage_url%'), Array(stripslashes($username), stripslashes($activationlink), $hp_title, $hp_url), $_language->module['mail_text']);
-	
+
 			if(mail($ToEmail,$header, $Message, "From:".$admin_email."\nContent-type: text/plain; charset=utf-8\n")){
 				redirect("index.php",$_language->module['register_successful'],3);
 				$show = false;
@@ -145,12 +145,12 @@ else {
 			$bg2=BG_2;
 			$bg3=BG_3;
 			$bg4=BG_4;
-		
-			$CAPCLASS = new Captcha;
-			$captcha = $CAPCLASS->create_captcha();
-			$hash = $CAPCLASS->get_hash();
-			$CAPCLASS->clear_oldcaptcha();
-		
+
+			$CAPCLASS = new \webspell\Captcha;
+			$captcha = $CAPCLASS->createCaptcha();
+			$hash = $CAPCLASS->getHash();
+			$CAPCLASS->clearOldCaptcha();
+
 			if(!isset($showerror)) $showerror='';
 			if(isset($_POST['nickname'])) $nickname=getforminput($_POST['nickname']);
 			else $nickname='';
@@ -162,7 +162,7 @@ else {
 			else $pwd2='';
 			if(isset($_POST['mail'])) $mail=getforminput($_POST['mail']);
 			else $mail='';
-		
+
 			eval("\$register = \"".gettemplate("register")."\";");
 			echo $register;
 		}

@@ -24,7 +24,7 @@
 #                                                                        #
 ##########################################################################
 */
-if (isset($site)) $_language->read_module('latesttopics');
+if (isset($site)) $_language->readModule('latesttopics');
 $usergroups = array();
 if($loggedin){
 	$usergroups[] = 'user';
@@ -71,13 +71,13 @@ if(empty($userallowedreadgrps['boardIDs'])){
 	$userallowedreadgrps['boardIDs'][] = 0;
 }
 $ergebnis=safe_query("SELECT t.*, u.nickname, b.name
-						FROM ".PREFIX."forum_topics t 
+						FROM ".PREFIX."forum_topics t
 				   LEFT JOIN ".PREFIX."user u ON u.userID = t.lastposter
 				   LEFT JOIN ".PREFIX."forum_boards b ON b.boardID = t.boardID
-					   WHERE b.category IN (".implode(",",$userallowedreadgrps['catIDs']).") AND 
-					   		 t.boardID IN (".implode(",",$userallowedreadgrps['boardIDs']).") AND 
+					   WHERE b.category IN (".implode(",",$userallowedreadgrps['catIDs']).") AND
+					   		 t.boardID IN (".implode(",",$userallowedreadgrps['boardIDs']).") AND
 					  		 t.moveID = '0'
-					ORDER BY t.lastdate DESC 
+					ORDER BY t.lastdate DESC
 					   LIMIT 0,".$maxlatesttopics);
 $anz=mysqli_num_rows($ergebnis);
 if($anz) {
@@ -104,7 +104,7 @@ if($anz) {
 			$bg1=BG_3;
 			$bg2=BG_4;
 		}
-    
+
 		$topictitle_full = clearfromtags($ds['topic']);
 		$topictitle	= unhtmlspecialchars($topictitle_full);
 		if(mb_strlen($topictitle)>$maxlatesttopicchars) {
@@ -112,7 +112,7 @@ if($anz) {
 			$topictitle.='...';
 		}
 		$topictitle = htmlspecialchars($topictitle);
-    
+
 		$last_poster = $ds['nickname'];
 		$board = $ds['name'];
 		$date = getformatdatetime($ds['lastdate']);
@@ -122,9 +122,9 @@ if($anz) {
 		$boardlink	=	'<a href="index.php?site=forum&amp;board='.$ds['boardID'].'">'.$board.'</a>';
 		$topiclink	=	'index.php?site=forum_topic&amp;topic='.$ds['topicID'].'&amp;type=ASC&amp;page='.ceil(($ds['replys']+1)/$maxposts);
 		$replys			=	$ds['replys'];
-		
+
 		$replys_text = ($replys == 1) ? $_language->module['reply'] : $_language->module['replies'];
-		
+
 		eval ("\$latesttopics_content = \"".gettemplate("latesttopics_content")."\";");
 		echo $latesttopics_content;
 		$n++;

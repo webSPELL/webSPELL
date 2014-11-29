@@ -25,12 +25,12 @@
 ##########################################################################
 */
 
-$_language->read_module('squads');
+$_language->readModule('squads');
 
 if(!isuseradmin($userID) OR mb_substr(basename($_SERVER['REQUEST_URI']),0,15) != "admincenter.php") die($_language->module['access_denied']);
 
 if(isset($_GET['delete'])) {
- 	$CAPCLASS = new Captcha;
+ 	$CAPCLASS = new \webspell\Captcha;
 	if($CAPCLASS->check_captcha(0, $_GET['captcha_hash'])) {
 		$squadID = $_GET['squadID'];
 		$ergebnis=safe_query("SELECT userID FROM ".PREFIX."squads_members WHERE squadID='$squadID'");
@@ -63,7 +63,7 @@ if(isset($_GET['delete'])) {
 }
 
 if(isset($_POST['sortieren'])) {
- 	$CAPCLASS = new Captcha;
+ 	$CAPCLASS = new \webspell\Captcha;
 	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
 		$sort = $_POST['sort'];
 		if(is_array($sort)) {
@@ -76,7 +76,7 @@ if(isset($_POST['sortieren'])) {
 }
 
 if(isset($_POST['save'])) {
- 	$CAPCLASS = new Captcha;
+ 	$CAPCLASS = new \webspell\Captcha;
 	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
 
 		if(checkforempty(Array('name'))) {
@@ -136,7 +136,7 @@ if(isset($_POST['save'])) {
 }
 
 if(isset($_POST['saveedit'])) {
- 	$CAPCLASS = new Captcha;
+ 	$CAPCLASS = new \webspell\Captcha;
 	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
 		if(checkforempty(Array('name'))) {
 
@@ -208,11 +208,11 @@ if($action=="add") {
 		$games.='<option value="'.htmlspecialchars($db['name']).'">'.htmlspecialchars($db['name']).'</option>';
 	}
 	$games.='</select>';
-	$CAPCLASS = new Captcha;
-	$CAPCLASS->create_transaction();
-	$hash = $CAPCLASS->get_hash();
+	$CAPCLASS = new \webspell\Captcha;
+	$CAPCLASS->createTransaction();
+	$hash = $CAPCLASS->getHash();
 
-	$_language->read_module('bbcode', true);
+	$_language->readModule('bbcode', true);
 
 	eval ("\$addbbcode = \"".gettemplate("addbbcode", "html", "admin")."\";");
 	eval ("\$addflags = \"".gettemplate("flags_admin", "html", "admin")."\";");
@@ -307,11 +307,11 @@ elseif($action=="edit") {
 	if(!empty($ds['icon_small'])) $pic_small='<img src="'.$filepath.$ds['icon_small'].'" alt="">';
 	else $pic_small=$_language->module['no_icon'];
 
-	$CAPCLASS = new Captcha;
-	$CAPCLASS->create_transaction();
-	$hash = $CAPCLASS->get_hash();
+	$CAPCLASS = new \webspell\Captcha;
+	$CAPCLASS->createTransaction();
+	$hash = $CAPCLASS->getHash();
 
-	$_language->read_module('bbcode', true);
+	$_language->readModule('bbcode', true);
 
 	eval ("\$addbbcode = \"".gettemplate("addbbcode", "html", "admin")."\";");
 	eval ("\$addflags = \"".gettemplate("flags_admin", "html", "admin")."\";");
@@ -398,9 +398,9 @@ else {
 
 	$squads=safe_query("SELECT * FROM ".PREFIX."squads ORDER BY sort");
 	$anzsquads=mysqli_num_rows($squads);
-	$CAPCLASS = new Captcha;
-	$CAPCLASS->create_transaction();
-	$hash = $CAPCLASS->get_hash();
+	$CAPCLASS = new \webspell\Captcha;
+	$CAPCLASS->createTransaction();
+	$hash = $CAPCLASS->getHash();
 
 	if($anzsquads) {
     $i=1;
