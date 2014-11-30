@@ -12,7 +12,7 @@ tools:
     php_mess_detector:
         enabled: true
     sensiolabs_security_checker:
-        enabled:true
+        enabled: true
     php_cs_fixer:
         extensions:
             - php
