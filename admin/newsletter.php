@@ -96,6 +96,7 @@ hr { margin: 0px; }
 		}
 		else {
 
+			$emails = array();
 			//clanmember
 
 			if(isset($_POST['sendto_clanmembers'])) {
