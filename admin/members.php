@@ -221,6 +221,7 @@ if(isset($_GET['action']) and $_GET['action'] == "edit") {
 	if(issuperadmin($id)) $super='<input type="checkbox" name="superadmin" value="1" onmouseover="showWMTT(\'id13\')" onmouseout="hideWMTT()" checked="checked" />';
 	else $super='<input type="checkbox" name="superadmin" value="1" onmouseover="showWMTT(\'id13\')" onmouseout="hideWMTT()" />';
 
+	$usergrp = array();
 	$ergebnis=safe_query("SELECT * FROM ".PREFIX."forum_groups");
 	while($ds=mysqli_fetch_array($ergebnis)) {
 		$name=$ds['name'];

@@ -233,6 +233,7 @@ elseif(isset($_GET["delete"])) {
 
 elseif(isset($_POST['test'])){
     echo'<h1>&curren; '.$_language->module['modrewrite_settings'].'</h1>';
+    $do_test = false;
     if(function_exists("apache_get_modules")){
         $info = $_language->module['apache_with_module'].'<br>';
         if(in_array('mod_rewrite',apache_get_modules())){
@@ -250,6 +251,9 @@ elseif(isset($_POST['test'])){
     else{
         $info = $_language->module['unsupported_webserver'].'<br>';
     }
+
+    $enable = "";
+    $status = $_language->module['unexpected_result'];
 
     if($do_test){
         $folder = 'ht_test';
@@ -270,6 +274,7 @@ elseif(isset($_POST['test'])){
         $written = @file_put_contents($folder.'/'.$file, $content);
 
         $enable = "";
+        $unlink = true;
 
         if($written == false){
             $info .= sprintf($_language->module['can_not_write_file'],$file);
@@ -287,7 +292,6 @@ elseif(isset($_POST['test'])){
 
             $url = $protocol.'://'.$_SERVER["SERVER_NAME"].$port.dirname($_SERVER["REQUEST_URI"]).'/ht_test/not_existing_file';
             $headers = @get_headers($url, 1);
-            $unlink = true;
             if($headers == false){
                 $info .= $_language->module['fopen_disabled'];
                 $status = '<div id="result"></div>';
