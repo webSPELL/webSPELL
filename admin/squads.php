@@ -263,7 +263,7 @@ if($action=="add") {
 				<td valign="top">'.$addflags.'</td>
 		    </tr>
 		  </table>
-		  <br /><textarea id="message" rows="5" cols="" name="message" style="width: 100%;">'.$ds['info'].'</textarea>
+		  <br /><textarea id="message" rows="5" cols="" name="message" style="width: 100%;"></textarea>
 		  </td>
       </tr>
       <tr>

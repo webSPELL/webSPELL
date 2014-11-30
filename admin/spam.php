@@ -12,10 +12,10 @@ if(isset($_GET['getnickname'])){
 if(!ispageadmin($userID) OR mb_substr(basename($_SERVER['REQUEST_URI']),0,15) != "admincenter.php") die();
 $_language->readModule('spam');
 function deleteSpamUser($spammerID){
-	global $_language;
+	global $_language,$_database;
 	// Delete Comments
 	safe_query("DELETE FROM ".PREFIX."comments WHERE userID='".$spammerID."'");
-	echo mysqli_affected_rows()." ".$_language->module["comments_deleted"]."<br />";
+	echo mysqli_affected_rows($_database)." ".$_language->module["comments_deleted"]."<br />";
 	// Delete Forum Topics (update posts / topics)
 	$topics = safe_query("SELECT topicID,boardID FROM ".PREFIX."forum_topics WHERE userID='".$spammerID."'");
 	$topicIDs = array();
@@ -68,11 +68,11 @@ function deleteSpamUser($spammerID){
 	$spammer = mysqli_fetch_assoc($get);
 	//safe_query("DELETE FROM ".PREFIX."guestbook WHERE name='".$spammer['nickname']."' AND email='".$spammer['email']."'");
 	$user_g_book = safe_query("DELETE FROM ".PREFIX."user_gbook WHERE name='".$spammer['nickname']."' AND email='".$spammer['email']."'");
-	echo mysqli_affected_rows()." ".$_language->module["guestbook_deleted"]."<br />";
+	echo mysqli_affected_rows($_database)." ".$_language->module["guestbook_deleted"]."<br />";
 
 	// Delete Messenges
 	$mess = safe_query("DELETE FROM ".PREFIX."messenger WHERE userID='".$spammerID."' OR fromuser='".$spammerID."'");
-	echo mysqli_affected_rows()." ".$_language->module["messages_deleted"]."<br />";
+	echo mysqli_affected_rows($_database)." ".$_language->module["messages_deleted"]."<br />";
 
 	//safe_query("DELETE FROM ".PREFIX."user WHERE userID='".$spammerID."'");
 	safe_query("UPDATE ".PREFIX."user SET banned='perm', ban_reason='Spam',about='' WHERE userID='".$spammerID."'");
@@ -255,6 +255,7 @@ elseif($action == "api_log"){
 		<td class="title">'.$_language->module["message"].':</td>
 		<td class="title">'.$_language->module["date"].':</td>
 		</tr>';
+		$i = 0;
 		while($ds = mysqli_fetch_assoc($get)){
 
 			if($i%2) {

@@ -80,6 +80,13 @@ else {
 	$gdinfo['GD Version'] = '---';
 	$get_gdtypes = '---';
 }
+
+if(function_exists("apache_get_modules")){
+	$apache_modules = implode(", ",apache_get_modules());
+} else{
+	$apache_modules = $_language->module['na'];
+}
+
 $get = safe_query("SELECT DATABASE()");
 $ret = mysqli_fetch_array($get);
 $db = $ret[0];
@@ -139,7 +146,7 @@ echo $_language->module['welcome_message']; ?>
 	</tr>
 	<tr>
 		<td class="td1"><b><?php echo $_language->module['apache_modules']; ?></b></td>
-		<td class="td1"><?php if(function_exists("apache_get_modules")){if(count(apache_get_modules()) > 1) $get_apache_modules = implode(", ",apache_get_modules()); echo $get_apache_modules;} else{ echo $_language->module['na'];} ?></td>
+		<td class="td1"><?php echo $apache_modules;?></td>
 	</tr>
 </table>
 <br /><br />

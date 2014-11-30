@@ -202,10 +202,24 @@ elseif($part=="gallerys") {
 	elseif(isset($_POST['saveftp'])) {
 
 		$dir = '../images/gallery/';
-		$pictures = array();
-		if(isset($_POST['comment'])) $comment = $_POST['comment'];
-		if(isset($_POST['name'])) $name = $_POST['name'];
-    	if(isset($_POST['pictures'])) $pictures = $_POST['pictures'];
+		if(isset($_POST['comment'])){
+			$comment = $_POST['comment'];
+		}
+		else{
+			$comment = array();
+		}
+		if(isset($_POST['name'])){
+			$name = $_POST['name'];
+		}
+		else{
+			$name = array();
+		}
+    	if(isset($_POST['pictures'])){
+    		$pictures = $_POST['pictures'];
+    	}
+    	else{
+    		$pictures = array();
+    	}
 		$i=0;
 		$CAPCLASS = new \webspell\Captcha;
 		if($CAPCLASS->checkCaptcha(0, $_POST['captcha_hash'])) {
@@ -217,7 +231,7 @@ elseif($part=="gallerys") {
 						case 3: $typ = '.png'; break;
 					}
 
-					if($name[$i]) $insertname = $name[$i];
+					if(isset($name[$i])) $insertname = $name[$i];
 					else $insertname = $picture;
 					safe_query("INSERT INTO ".PREFIX."gallery_pictures ( galleryID, name, comment, comments) VALUES ('".$_POST['galleryID']."', '".$insertname."', '".$comment[$i]."', '".$_POST['comments']."' )");
 					$insertid = mysqli_insert_id($_database);
@@ -372,7 +386,7 @@ elseif($part=="gallerys") {
     	if(isset($_POST['upload'])) $upload_type = $_POST['upload'];
     	elseif(isset($_GET['upload'])) $upload_type = $_GET['upload'];
     	else $upload_type = null;
-		if(isset($_GET['galleryID'])) $id=$_GET['galleryID'];
+		$id = $_GET['galleryID'];
 
 		if($upload_type == "ftp") {
       		$CAPCLASS = new \webspell\Captcha;
