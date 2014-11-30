@@ -108,6 +108,7 @@ class Captcha
         global $new_chmod;
         $this->hash = md5(time() . rand(0, 10000));
         $captchastring = '';
+        $captcha = '';
 
         if ($this->type == 'g') {
 
@@ -201,7 +202,6 @@ class Captcha
             $captcha = '<img src="tmp/' . $this->hash . '.jpg" alt="' . $_language->module['security_code'] . '" />';
 
         } elseif ($this->type == 't') {
-            $captcha = '';
             for ($i = 0; $i < $this->length; $i++) {
                 $captcha .= rand(0, 9);
             }
