@@ -3,7 +3,7 @@
 nbproject
 
 # mysql-data
-# _mysql.php
+_mysql.php
 
 # file-uploads
 /demos/*
