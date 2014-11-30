@@ -118,7 +118,9 @@ function smileys($text, $specialchars = 0, $calledfrom = 'root')
 function htmlnl($text)
 {
     preg_match_all(
+        // @codingStandardsIgnoreStart
         '/<(table|form|li|ul|ol|tr|td|dl|dt|dd|dir|menu|th|thead|caption|colgroup|col|tbody|tfoot|div|span*)[^>]*>(.*?)<\/\1>/si',
+        // @codingStandardsIgnoreEnd
         $text,
         $matches,
         PREG_SET_ORDER

@@ -1,4 +1,4 @@
-[ ![Codeship Status for webSPELL/webSPELL-4.2.3](https://codeship.com/projects/655247c0-f3d1-0131-ce29-02087275ebc8/status?branch=bs_manual_merge)](https://codeship.com/projects/27970)
+[ ![Codeship Status for webSPELL/webSPELL-4.2.3](https://codeship.com/projects/655247c0-f3d1-0131-ce29-02087275ebc8/status?branch=dev)](https://codeship.com/projects/27970)
 
 ```
                        /                        /   /
@@ -8,36 +8,36 @@
                    Free Content / Management System
                                /
 ```
-  Copyright 2005-2011 by webspell.org visit webSPELL.org to get webSPELL for free
+  Copyright 2005-2011 by webSPELL.org visit webSPELL.org to get webSPELL for free
   * Script runs under the GNU GENERAL PUBLIC LICENSE
   * It's NOT allowed to remove this copyright-tag
   * http://www.fsf.or/licensing/licenses/gpl.html
 
-Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),
-Far Development by Development Team - webspell.org
+Code based on webSPELL Clanpackage (Michael Gruber - webSPELL.at),
+Far Development by Development Team - webSPELL.org
 
 
-webSPELL is a free Content Management System (CMS), which is available for free at www.webspell.org. The following information should should help you getting started and will give you a first impression of the functionality.
+webSPELL is a free Content Management System (CMS), which is available for free at www.webSPELL.org. The following information should should help you getting started and will give you a first impression of the functionality.
 
 
 ### 1. License
 
 	webSPELL is published under GNU General Public License (GPL). It guarantees the free usage, modification and distribution of the webSPELL script withing the rules of the GPL.
-	You are able to find additional information about license at http://www.webspell.org/?site=license
+	You are able to find additional information about license at http://www.webSPELL.org/?site=license
 
 ### 2. Installation
 
 	1. Requirements
-	2. Upload WebSpell to your webspace
+	2. Upload webSPELL to your webspace
 	3. Setting the correct file/folder rights
-	4. Do the WebSpell install
+	4. Do the webSPELL install
 	5. Cleaning up
 
 	1. Requirements
 
 	    * Webspace with PHP and mySQL support (PHP >= 4.3, MySQL >= 4.1)
-	    * WinRAR to extract the downloaded WebSpell release ---> get it here: http://www.win-rar.com
-	    * A FTP program to upload the WebSpell files to your webspace - we recommend SmartFTP
+	    * WinRAR to extract the downloaded webSPELL release ---> get it here: http://www.win-rar.com
+	    * A FTP program to upload the webSPELL files to your webspace - we recommend SmartFTP
 
 
 
@@ -45,7 +45,7 @@ webSPELL is a free Content Management System (CMS), which is available for free 
 
 	    * Start your above downloaded FTP programm
 	    * Connect with this FTP program to your webspace FTP server (you will get the access data for this from your webhoster)
-	    * Upload ALL the extracted WebSpell files and folders to your webspace
+	    * Upload ALL the extracted webSPELL files and folders to your webspace
 
 
 
@@ -66,7 +66,7 @@ webSPELL is a free Content Management System (CMS), which is available for free 
 	    * images/gallery/large
 	    * images/gallery/thumb
 	    * images/games
-		  * images/icons/ranks
+	    * images/icons/ranks
 	    * images/links
 	    * images/linkus
 	    * images/news-pics
@@ -82,10 +82,10 @@ webSPELL is a free Content Management System (CMS), which is available for free 
 
 
 
-	4. Do the WebSpell install
+	4. Do the webSPELL install
 
 	    * Open your webbrowser
-	    * Enter the path to the webspell install folder http://[hostnameofyouwebspace]/install (substitute [hostnameofyouwebspace] with the correct domain name (and maybe additional path name if you uploaded webSPELL to some sub-folder) where you have uploaded webSPELL.
+	    * Enter the path to the webSPELL install folder http://[hostnameofyouwebspace]/install (substitute [hostnameofyouwebspace] with the correct domain name (and maybe additional path name if you uploaded webSPELL to some sub-folder) where you have uploaded webSPELL.
 	    * Follow the installation steps and enter the correct data
 
 
@@ -99,9 +99,7 @@ webSPELL is a free Content Management System (CMS), which is available for free 
 
 ### 3. Related links
 
-	http://www.webspell.org/?site=forum
+	http://www.webSPELL.org/?site=forum
 		Bulletin boards for support and communication between user (problems, modifications, templates, addons, etc.)
-	http://www.webspell.org/?site=faq
+	http://www.webSPELL.org/?site=faq
 		Frequently Asked Questions (FAQ) for webSPELL. Answers and solutions for frequently asked questions and problems
-	http://www.webspell.org/?site=irc
-		Access via browser to webSPELL chat (IRC) for live support. Channel: #webspell @ Quakenet

@@ -181,7 +181,9 @@ function mail_protect($mailaddress)
 function validate_url($url)
 {
     return preg_match(
+        // @codingStandardsIgnoreStart
         "/^(ht|f)tps?:\/\/([^:@]+:[^:@]+@)?(?!\.)(\.?(?!-)[0-9\p{L}-]+(?<!-))+(:[0-9]{2,5})?(\/[^#\?]*(\?[^#\?]*)?(#.*)?)?$/sui",
+        // @codingStandardsIgnoreEnd
         $url
     );
 }
