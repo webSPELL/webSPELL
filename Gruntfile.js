@@ -58,7 +58,7 @@ module.exports = function(grunt) {
             //"awards.php",
             "buddies.php",
             "calendar.php",
-            "cashbox.php"
+            "cashbox.php",
             //"challenge.php",
             //"checklogin.php",
             //"clanwars.php",
@@ -101,7 +101,7 @@ module.exports = function(grunt) {
             //"out.php",
             //"partners.php",
             //"picture.php",
-            //"poll.php",
+            "poll.php"
             //"polls.php",
             //"printview.php",
             //"profile.php",
