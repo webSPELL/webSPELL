@@ -142,7 +142,10 @@ module.exports = function(grunt) {
             //"whoisonline.php"
         ],
         csss = [ "**/*.css" ],
-        excludes = [ "!node_modules/**/*" ];
+        excludes = [
+            "!node_modules/**",
+            "!components/**"
+        ];
 
     require("logfile-grunt")(grunt, {
         filePath: "./grunt-log.txt",
@@ -155,7 +158,8 @@ module.exports = function(grunt) {
             all: {
                 src: [
                     javascripts,
-                    templates
+                    templates,
+                    excludes
                 ],
                 options: {
                     editorconfig: ".editorconfig"
@@ -163,13 +167,19 @@ module.exports = function(grunt) {
             }
         },
         jshint: {
-            all: [ javascripts ]
+            all: [
+                javascripts,
+                excludes
+            ]
         },
         jscs: {
             options: {
                 preset: "jquery" // See: https://contribute.jquery.org/style-guide/js/
             },
-            src: [ javascripts ]
+            src: [
+                javascripts,
+                excludes
+            ]
         },
         phplint: {
             good: [ phps ]
