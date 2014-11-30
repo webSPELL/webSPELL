@@ -5,6 +5,8 @@ var form = "post",
     wmtt = null;
 
 function AddTag(open, close, content) {
+    "use strict";
+
     var textfield,
         toinsert,
         range,
@@ -70,18 +72,30 @@ function AddTag(open, close, content) {
 
 // insert [img] tag
 function AddImg() {
+    "use strict";
+
     AddTag("[IMG]", "[/IMG]", "");
 }
 
 // insert [url] or [email] tag
 function AddLink(thetype) {
+    "use strict";
+
     AddTag("[" + thetype + "]", "[/" + thetype + "]", "");
 }
 
 // insert html list
 function AddList() {
+    "use strict";
+
+    var type,
+        list,
+        listend,
+        entry,
+        addtext;
+
     type = prompt(languageArray.bbcode.listguide, "");
-    if ((type == "a") || (type == "1")) {
+    if ((type === "a") || (type === "1")) {
         list = "[LIST=" + type + "]\n";
         listend = "[/LIST=" + type + "]";
     } else {
@@ -103,6 +117,8 @@ function AddList() {
 
 // insert code from another window
 function AddCodeFromWindow(thecode) {
+    "use strict";
+
     var textfield,
         pos,
         re = new RegExp("^[0-9]{0,3}$"),
@@ -122,13 +138,13 @@ function AddCodeFromWindow(thecode) {
     textfield.focus();
 
     textfield.focus();
-    if (typeof opener.document.selection != "undefined") {
+    if (typeof opener.document.selection !== "undefined") {
         range = opener.document.selection.createRange();
         range.text = thecode;
         range = opener.document.selection.createRange();
         range.moveStart("character", thecode.length);
         range.select();
-    } else if (typeof textfield.selectionStart != "undefined") {
+    } else if (typeof textfield.selectionStart !== "undefined") {
         start = textfield.selectionStart;
         end = textfield.selectionEnd;
         textfield.value = textfield.value.substr(0, start) + thecode + textfield.value.substr(end);
@@ -150,45 +166,65 @@ function AddCodeFromWindow(thecode) {
 
 // insert [b] tag
 function AddB() {
+    "use strict";
+
     AddTag("[B]", "[/B]", "");
 }
 
 // insert [U] tag
 function AddU() {
+    "use strict";
+
     AddTag("[U]", "[/U]", "");
 }
 
 // insert [I] tag
 function AddI() {
+    "use strict";
+
     AddTag("[I]", "[/I]", "");
 }
 
 // insert [S] tag
 function AddS() {
+    "use strict";
+
     AddTag("[S]", "[/S]", "");
 }
 
 // insert [quote] tag
 function AddQuote() {
+    "use strict";
+
     AddTag("[quote]", "[/quote]", "");
 }
 
 // insert [code] tag
 function AddCodetag() {
+    "use strict";
+
     AddTag("[code]", "[/code]", "");
 }
 
 // insert [Toggle] tag
 function AddToggle() {
+    "use strict";
+
     AddTag("[toggle=" + languageArray.bbcode.readMore + "]", "[/toggle]", "");
 }
 
 // toggle function - read more
 function Toggle(id, multi) {
-    var i;
+    "use strict";
 
-    spanid1 = "ToggleRow_" + id;
-    spanid2 = "ToggleImg_" + id;
+    var i,
+        spanid1 = "ToggleRow_" + id,
+        spanid2 = "ToggleImg_" + id,
+        elements,
+        images,
+        anz,
+        elem,
+        val;
 
     if (multi === true) {
         elements = document.getElementsByName(spanid1);
@@ -207,7 +243,7 @@ function Toggle(id, multi) {
             anz = images.length;
             for (i = 0; i < anz; i++) {
                 elem = images[i];
-                if (typeof elem.onload == "function") {
+                if (typeof elem.onload === "function") {
                     elem.onload();
                 }
             }
@@ -230,6 +266,8 @@ function Toggle(id, multi) {
 // function addRow() ** this adds a new row to the table,
 // containing mapname, mapresult_home, mapresult_opponent
 function addRow(action) {
+    "use strict";
+
     var theAction = action,
         table = document.getElementById("maplist"),
         theRows = table.rows.length,
@@ -240,7 +278,7 @@ function addRow(action) {
         ele0, ele1, ele2, ele3, ele4,
         cell1, cell2, cell3, cell4;
 
-    if (theAction == "edit") {
+    if (theAction === "edit") {
         ele0 = document.createElement("input");
         ele0.setAttribute("type", "hidden");
         ele0.setAttribute("name", "map_id[]");
@@ -293,26 +331,32 @@ function addRow(action) {
 
 // function removeRow() ** removes the last row of a table
 function removeRow() {
+    "use strict";
+
     var table = document.getElementById("maplist"),
         theRows = table.rows.length;
 
-    if (theRows != 1) {
+    if (theRows !== 1) {
         table.deleteRow(theRows - 1);
     }
 }
 
 function SelectAll() {
+    "use strict";
+
     var x, y;
 
     for (x = 0; x < document.form.elements.length; x++) {
         y = document.form.elements[x];
-        if (y.name != "ALL") {
+        if (y.name !== "ALL") {
             y.checked = document.form.ALL.checked;
         }
     }
 }
 
 function checkSize(name, xmax, ymax) {
+    "use strict";
+
     var xsize,
         ysize;
 
@@ -331,15 +375,21 @@ function checkSize(name, xmax, ymax) {
 }
 
 function AddText(addtext) {
+    "use strict";
+
     AddTag("", "", addtext);
 }
 
 function AddCode(code) {
+    "use strict";
+
     AddText(code);
 }
 
 /* tooltip */
 function updateWMTT(e) {
+    "use strict";
+
     var x = (document.all) ? window.event.x + document.body.scrollLeft : e.pageX,
         y = (document.all) ? window.event.y + document.body.scrollTop : e.pageY;
 
@@ -350,18 +400,48 @@ function updateWMTT(e) {
 }
 
 function showWMTT(id) {
+    "use strict";
+
     document.onmousemove = updateWMTT;
     wmtt = document.getElementById(id);
     wmtt.style.display = "block";
 }
 
 function hideWMTT() {
+    "use strict";
+
     wmtt.style.display = "none";
     document.onmousemove = "none";
 }
 
+function trim(stringToTrim) {
+    "use strict";
+
+    return stringToTrim.replace(/^\s+|\s+$/g, "");
+}
+
+//update target
+function updatepage(str, id, action) {
+    "use strict";
+
+    if (action === "add") {
+        document.getElementById(id).innerHTML += str;
+    } else if (action === "replace") {
+        document.getElementById(id).innerHTML = str;
+    } else if (action === "formfield") {
+        document.getElementById(id).value = trim(str);
+    } else if (action === "return") {
+        return str;
+    }
+    //else if (action === "execute") {
+    //	eval(str);
+    //}
+}
+
 //ajax functions
 function postRequest(strURL, id, action) {
+    "use strict";
+
     var xmlHttp;
 
     if (window.XMLHttpRequest) {
@@ -379,28 +459,16 @@ function postRequest(strURL, id, action) {
     xmlHttp.send(strURL);
 }
 
-//update target
-function updatepage(str, id, action) {
-    if (action === "add") {
-        document.getElementById(id).innerHTML += str;
-    } else if (action === "replace") {
-        document.getElementById(id).innerHTML = str;
-    } else if (action === "formfield") {
-        document.getElementById(id).value = trim(str);
-    } else if (action === "return") {
-        return str;
-    }
-    //else if (action === "execute") {
-    //	eval(str);
-    //}
-}
-
 //fetch data for onclick/onchange events
 function eventfetch(url, id, action) {
+    "use strict";
+
     postRequest(url, id, action);
 }
 //fetch data for timebased events
 function timefetch(url, id, action, milliseconds) {
+    "use strict";
+
     eventfetch(url, id, action);
     setTimeout(
         function() {
@@ -408,6 +476,7 @@ function timefetch(url, id, action, milliseconds) {
         }, milliseconds
     );
 }
+
 //generic fetch function, accepts 5 parameters (first 4 mandatory).
 //url = script to access on the server
 //id = html id (for example of a div, a form field etc.., works with all tags which accept an id)
@@ -420,6 +489,8 @@ function timefetch(url, id, action, milliseconds) {
 //milliseconds = time in milliseconds till the script should autoexecute itself again
 // (only needed when base==time)
 function fetch(url, id, action, base, milliseconds) {
+    "use strict";
+
     if (base === "event") {
         eventfetch(url, id, action);
     } else if (base === "time") {
@@ -429,6 +500,10 @@ function fetch(url, id, action, base, milliseconds) {
 
 //search & overlay functions
 function search(table, column, identifier, searchqry, searchtemp, id, action, exact, searchtype) {
+    "use strict";
+
+    var searchrequest;
+
     exact = typeof(exact) !== "undefined" ? exact : 0;
     searchtype = typeof(searchtype) !== "undefined" ? searchtype : 0;
     searchrequest = "../asearch.php?table=" + table +
@@ -444,8 +519,11 @@ function search(table, column, identifier, searchqry, searchtemp, id, action, ex
 }
 
 function getposOffset(overlay, offsettype) {
+    "use strict";
+
     var totaloffset = (offsettype === "left") ? overlay.offsetLeft : overlay.offsetTop,
         parentEl = overlay.offsetParent;
+
     while (parentEl !== null) {
         totaloffset = (offsettype === "left") ?
         totaloffset + parentEl.offsetLeft : totaloffset + parentEl.offsetTop;
@@ -453,7 +531,10 @@ function getposOffset(overlay, offsettype) {
     }
     return totaloffset;
 }
+
 function overlay(curobj, subobjstr, optPosition) {
+    "use strict";
+
     if (document.getElementById) {
         var subobj = document.getElementById(subobjstr),
             xpos = getposOffset(curobj, "left") + ((typeof optPosition !== "undefined" &&
@@ -473,26 +554,37 @@ function overlay(curobj, subobjstr, optPosition) {
     }
 }
 
-function trim(stringToTrim) {
-    return stringToTrim.replace(/^\s+|\s+$/g, "");
-}
-
 function formcheckOnsend(id) {
-    valuestring = document.getElementById(id).value;
+    "use strict";
+
+    var valuestring = document.getElementById(id).value;
+
     if (trim(valuestring) === "") {
         return false;
-    } else {
-        return true;
     }
+
+    return true;
 }
+
 //bbcode checker
 function validbbcode(txt) {
+    "use strict";
+
     var searchregexp = /\[(B|\/B|U|\/U|I|\/I|S|\/S|code|\/code|LIST|LIST[a1=]*|\/LIST[a1=]*|\*|\/\*|\/LIST|EMAIL[a-zA-Z0-9=#@\._-]*|\/EMAIL|URL[a-zA-Z0-9=#,;+@&?%:\/\._-]*|\/URL|IMG|\/IMG|QUOTE[^\]]*|\/QUOTE|TOGGLE[^\]]*|\/TOGGLE|SIZE=[1-5]{1}|\/SIZE|COLOR[^\]]*|\/COLOR|ALIGN[^\]]*|\/ALIGN|FONT[^\]]*|\/FONT)\]/ig,
         resulttemp = txt.match(searchregexp),
         result = [],
         ocode = 0,
         putincounter = 0,
-        c;
+        c,
+        i,
+        arraylength,
+        starttest,
+        openingtagcounter,
+        closingtagcounter,
+        temp,
+        openingtags,
+        closingtags,
+        tmpstring;
 
     if (resulttemp) {
         resulttemp = [];
@@ -585,17 +677,20 @@ function validbbcode(txt) {
     }
 }
 
+//test for valid url
+function url(string) {
+    "use strict";
+
+    var regexp = /(ftp|http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?/,
+        result = regexp.test(string);
+
+    return result;
+}
+
 //initialize javascript language array
 languageArray.bbcode = [];
 if (typeof calledfrom === "undefined") {
     fetch("getlang.php?modul=bbcode&mode=array", "none", "execute", "event");
 } else if (calledfrom === "admin") {
     fetch("../getlang.php?modul=bbcode&mode=array", "none", "execute", "event");
-}
-//test for valid url
-function url(string) {
-    regexp = /(ftp|http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?/;
-    result = regexp.test(string);
-
-    return result;
 }

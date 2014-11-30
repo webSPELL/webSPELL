@@ -2,6 +2,8 @@
 // http://24ways.org/2013/grunt-is-not-weird-and-hard/
 
 module.exports = function(grunt) {
+    "use strict";
+
     var javascripts = [
             "Gruntfile.js",
             "js/bbcode.js"
@@ -167,6 +169,9 @@ module.exports = function(grunt) {
             }
         },
         jshint: {
+            options: {
+                jshintrc: ".jshintrc"
+            },
             all: [
                 javascripts,
                 excludes
