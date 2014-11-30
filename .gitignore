@@ -3,7 +3,7 @@
 nbproject
 
 # mysql-data
-_mysql.php
+# _mysql.php
 
 # file-uploads
 /demos/*
@@ -59,12 +59,9 @@ _mysql.php
 /images/userpics/*
 !/images/userpics/nouserpic.gif
 
-<<<<<<< Updated upstream
 # Grunt requires
 node_modules
-vendor
-=======
-node_modules
 
+# Composer
 composer.phar
->>>>>>> Stashed changes
+vendor
