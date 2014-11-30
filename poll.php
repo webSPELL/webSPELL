@@ -68,9 +68,11 @@ function vote($poll) {
       		else $isintern = '';
 
       		$title = $ds['titel'];
-
+      		$options = array();
 			for ($n = 1; $n <= 10; $n++) {
-				if($ds['o'.$n]) $options[] = clearfromtags($ds['o'.$n]);
+				if(!empty($ds['o'.$n])){
+					$options[] = clearfromtags($ds['o'.$n]);
+				}
 			}
 
 			$votes = safe_query("SELECT * FROM ".PREFIX."poll_votes WHERE pollID='".$ds['pollID']."'");

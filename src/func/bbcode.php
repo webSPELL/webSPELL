@@ -46,7 +46,7 @@ function replace_smileys($text, $calledfrom = 'root')
     }
 
     $filepath = $prefix . "./images/smileys/";
-    unset($files);
+    $files = array();
     if ($dh = opendir($filepath)) {
         while ($file = readdir($dh)) {
             if (preg_match("/\.gif/si", $file)) {
