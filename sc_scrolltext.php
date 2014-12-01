@@ -27,18 +27,17 @@
 
 $_language->readModule('sc_scrolltext');
 
-$ergebnis=safe_query("SELECT * FROM ".PREFIX."scrolltext");
-if(mysqli_num_rows($ergebnis)) {
-	$ds=mysqli_fetch_array($ergebnis);
+$ergebnis = safe_query("SELECT * FROM " . PREFIX . "scrolltext");
+if (mysqli_num_rows($ergebnis)) {
+    $ds = mysqli_fetch_array($ergebnis);
 
-	$scrolltext = js_replace($ds['text']);
-	$direction=$ds['direction'];
-	$delay=$ds['delay'];
-	$color=$ds['color'];
+    $scrolltext = js_replace($ds[ 'text' ]);
+    $direction = $ds[ 'direction' ];
+    $delay = $ds[ 'delay' ];
+    $color = $ds[ 'color' ];
 
-  eval ("\$sc_scrolltext = \"".gettemplate("sc_scrolltext")."\";");
-	echo $sc_scrolltext;
+    eval ("\$sc_scrolltext = \"" . gettemplate("sc_scrolltext") . "\";");
+    echo $sc_scrolltext;
+} else {
+    echo $_language->module[ 'no_text' ];
 }
-else echo $_language->module['no_text'];
-
-?>

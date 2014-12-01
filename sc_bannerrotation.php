@@ -28,12 +28,13 @@
 $_language->readModule('sc_bannerrotation');
 
 //get banner
-$allbanner = safe_query("SELECT * FROM ".PREFIX."bannerrotation WHERE displayed='1' ORDER BY RAND() LIMIT 0,1");
+$allbanner = safe_query("SELECT * FROM " . PREFIX . "bannerrotation WHERE displayed='1' ORDER BY RAND() LIMIT 0,1");
 $total = mysqli_num_rows($allbanner);
-if($total) {
-	$banner = mysqli_fetch_array($allbanner);
-	echo '<a href="out.php?bannerID='.$banner['bannerID'].'" target="_blank"><img src="./images/bannerrotation/'.$banner['banner'].'" alt="'.htmlspecialchars($banner['bannername']).'"></a>';
+if ($total) {
+    $banner = mysqli_fetch_array($allbanner);
+    echo '<a href="out.php?bannerID=' . $banner[ 'bannerID' ] . '" target="_blank"><img src="./images/bannerrotation/' .
+        $banner[ 'banner' ] . '" alt="' . htmlspecialchars($banner[ 'bannername' ]) . '"></a>';
+} else {
+    echo $_language->module[ 'no_banners' ];
 }
-else echo $_language->module['no_banners'];
 unset($banner);
-?>

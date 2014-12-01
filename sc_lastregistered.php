@@ -24,14 +24,13 @@
 #                                                                        #
 ##########################################################################
 */
-$result=safe_query("SELECT * FROM ".PREFIX."user ORDER BY registerdate DESC LIMIT 0,5");
+$result = safe_query("SELECT * FROM " . PREFIX . "user ORDER BY registerdate DESC LIMIT 0,5");
 echo '<ul class="list-group">';
-while($row=mysqli_fetch_array($result)) {
-	$username='<a href="index.php?site=profile&amp;id='.$row['userID'].'">'.$row['nickname'].'</a>';
-	$country=flags('[flag]'.$row['country'].'[/flag]');
-	$registerdate=getformatdate($row['registerdate']);
-	eval ("\$sc_lastregistered = \"".gettemplate("sc_lastregistered")."\";");
-	echo $sc_lastregistered;
+while ($row = mysqli_fetch_array($result)) {
+    $username = '<a href="index.php?site=profile&amp;id=' . $row[ 'userID' ] . '">' . $row[ 'nickname' ] . '</a>';
+    $country = flags('[flag]' . $row[ 'country' ] . '[/flag]');
+    $registerdate = getformatdate($row[ 'registerdate' ]);
+    eval ("\$sc_lastregistered = \"" . gettemplate("sc_lastregistered") . "\";");
+    echo $sc_lastregistered;
 }
 echo '</ul>';
-?>

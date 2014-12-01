@@ -30,35 +30,49 @@ $list = 1; //1=top 5 downloads , 2=latest 5 downloads
 
 //dont edit above this line
 
-if($list==1) $list="downloads"; else $list="date";
+if ($list == 1) {
+    $list = "downloads";
+} else {
+    $list = "date";
+}
 
 $accesslevel = 1;
-if(isclanmember($userID)) $accesslevel = 2;
-
-$ergebnis=safe_query("SELECT * FROM ".PREFIX."files WHERE accesslevel<=".$accesslevel." ORDER BY ".$list." DESC LIMIT 0,5");
-$n=1;
-if(mysqli_num_rows($ergebnis)){
-	echo'<ul class="list-group">';
-  	while($ds=mysqli_fetch_array($ergebnis)) {
-		$fileID = $ds['fileID'];
-		$count = $ds['downloads'];
-		$filename = $ds['filename'];
-		$number = $n;
-    
-    	if($n%2) {
-			$bg1=BG_1;
-			$bg2=BG_2;
-		}
-		else {
-			$bg1=BG_3;
-			$bg2=BG_4;
-		}
-    
-		eval ("\$sc_files = \"".gettemplate("sc_files")."\";");
-		echo $sc_files;
-	
-		$n++;
-	}
-	echo'</ul>';
+if (isclanmember($userID)) {
+    $accesslevel = 2;
 }
-?>
+
+$ergebnis = safe_query(
+    "SELECT
+        *
+    FROM
+        " . PREFIX . "files
+    WHERE
+        accesslevel<=" . $accesslevel . "
+    ORDER BY
+        " . $list . " DESC
+    LIMIT 0,5"
+);
+$n = 1;
+if (mysqli_num_rows($ergebnis)) {
+    echo '<ul class="list-group">';
+    while ($ds = mysqli_fetch_array($ergebnis)) {
+        $fileID = $ds[ 'fileID' ];
+        $count = $ds[ 'downloads' ];
+        $filename = $ds[ 'filename' ];
+        $number = $n;
+
+        if ($n % 2) {
+            $bg1 = BG_1;
+            $bg2 = BG_2;
+        } else {
+            $bg1 = BG_3;
+            $bg2 = BG_4;
+        }
+
+        eval ("\$sc_files = \"" . gettemplate("sc_files") . "\";");
+        echo $sc_files;
+
+        $n++;
+    }
+    echo '</ul>';
+}

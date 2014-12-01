@@ -27,14 +27,11 @@
 
 $_language->readModule('newsletter');
 
-if($loggedin){
-	$usermail = getemail($userID);
-}
-else{
-	$usermail = "";
+if ($loggedin) {
+    $usermail = getemail($userID);
+} else {
+    $usermail = "";
 }
 
-eval ("\$sc_newsletter = \"".gettemplate("sc_newsletter")."\";");
+eval ("\$sc_newsletter = \"" . gettemplate("sc_newsletter") . "\";");
 echo $sc_newsletter;
-
-?>

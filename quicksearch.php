@@ -27,7 +27,5 @@
 
 $_language->readModule('search');
 
-eval ("\$quicksearch = \"".gettemplate("quicksearch")."\";");
+eval ("\$quicksearch = \"" . gettemplate("quicksearch") . "\";");
 echo $quicksearch;
-
-?>

@@ -26,9 +26,9 @@
 */
 
 $tags = Tags::getTagCloud();
-shuffle($tags['tags']);
-foreach($tags['tags'] as $tag){
-	$size = Tags::GetTagSizeLogarithmic($tag['count'], $tags['min'], $tags['max'], 10, 15, 0);
-	echo " <a href='index.php?site=tags&amp;tag=".$tag['name']."' style='font-size:".$size."px;'>".$tag['name']."</a> ";
+shuffle($tags[ 'tags' ]);
+foreach ($tags[ 'tags' ] as $tag) {
+    $size = Tags::GetTagSizeLogarithmic($tag[ 'count' ], $tags[ 'min' ], $tags[ 'max' ], 10, 15, 0);
+    echo " <a href='index.php?site=tags&amp;tag=" . $tag[ 'name' ] . "' style='font-size:" . $size . "px;'>" .
+        $tag[ 'name' ] . "</a> ";
 }
-?>

@@ -25,37 +25,41 @@
 ##########################################################################
 */
 
-$ergebnis=safe_query("SELECT * FROM ".PREFIX."clanwars ORDER BY date DESC LIMIT 0, ".$maxresults);
-if(mysqli_num_rows($ergebnis)){
-	echo'<ul class="list-group">';
-	$n=1;
-	while($ds=mysqli_fetch_array($ergebnis)) {
+$ergebnis = safe_query("SELECT * FROM " . PREFIX . "clanwars ORDER BY date DESC LIMIT 0, " . $maxresults);
+if (mysqli_num_rows($ergebnis)) {
+    echo '<ul class="list-group">';
+    $n = 1;
+    while ($ds = mysqli_fetch_array($ergebnis)) {
 
-		$date=getformatdate($ds['date']);
-		$homescr=array_sum(unserialize($ds['homescore']));
-		$oppscr=array_sum(unserialize($ds['oppscore']));
+        $date = getformatdate($ds[ 'date' ]);
+        $homescr = array_sum(unserialize($ds[ 'homescore' ]));
+        $oppscr = array_sum(unserialize($ds[ 'oppscore' ]));
 
-		if($n%2) {
-			$bg1=BG_1;
-			$bg2=BG_2;
-		}
-		else {
-			$bg1=BG_3;
-			$bg2=BG_4;
-		}
+        if ($n % 2) {
+            $bg1 = BG_1;
+            $bg2 = BG_2;
+        } else {
+            $bg1 = BG_3;
+            $bg2 = BG_4;
+        }
 
-		if($homescr>$oppscr) $result='<font color="'.$wincolor.'">'.$homescr.':'.$oppscr.'</font>';
-		elseif($homescr<$oppscr) $result='<font color="'.$loosecolor.'">'.$homescr.':'.$oppscr.'</font>';
-		else $result='<font color="'.$drawcolor.'">'.$homescr.':'.$oppscr.'</font>';
+        if ($homescr > $oppscr) {
+            $result = '<font color="' . $wincolor . '">' . $homescr . ':' . $oppscr . '</font>';
+        } elseif ($homescr < $oppscr) {
+            $result = '<font color="' . $loosecolor . '">' . $homescr . ':' . $oppscr . '</font>';
+        } else {
+            $result = '<font color="' . $drawcolor . '">' . $homescr . ':' . $oppscr . '</font>';
+        }
 
-		$resultID=$ds['cwID'];
-		$gameicon="images/games/";
-		if(file_exists($gameicon.$ds['game'].".gif")) $gameicon = $gameicon.$ds['game'].".gif";
+        $resultID = $ds[ 'cwID' ];
+        $gameicon = "images/games/";
+        if (file_exists($gameicon . $ds[ 'game' ] . ".gif")) {
+            $gameicon = $gameicon . $ds[ 'game' ] . ".gif";
+        }
 
-		eval ("\$results = \"".gettemplate("results")."\";");
-		echo $results;
-		$n++;
-	}
-	echo'</ul>';
+        eval ("\$results = \"" . gettemplate("results") . "\";");
+        echo $results;
+        $n++;
+    }
+    echo '</ul>';
 }
-?>

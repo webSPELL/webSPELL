@@ -27,29 +27,41 @@
 
 $_language->readModule('news');
 
-$ergebnis=safe_query("SELECT newsID FROM ".PREFIX."news WHERE newsID='".$topnewsID."' AND intern<=".(int)isclanmember($userID)." AND published='1' LIMIT 0,1");
+$ergebnis = safe_query(
+    "SELECT
+        newsID
+    FROM
+        " . PREFIX . "news
+    WHERE
+        newsID='" . $topnewsID . "' AND
+        intern<=" . (int)isclanmember($userID) . " AND
+        published='1'
+    LIMIT 0,1"
+);
 $anz = mysqli_num_rows($ergebnis);
-if($anz) {
+if ($anz) {
 
-	$dn=mysqli_fetch_array($ergebnis);
+    $dn = mysqli_fetch_array($ergebnis);
 
-	$message_array = array();
-	$query=safe_query("SELECT * FROM ".PREFIX."news_contents WHERE newsID='".$dn['newsID']."'");
-	while($qs = mysqli_fetch_array($query)) {
-		$message_array[] = array('lang' => $qs['language'], 'headline' => $qs['headline'], 'message' => $qs['content']);
-	}
-	$showlang = select_language($message_array);
+    $message_array = [];
+    $query = safe_query("SELECT * FROM " . PREFIX . "news_contents WHERE newsID='" . $dn[ 'newsID' ] . "'");
+    while ($qs = mysqli_fetch_array($query)) {
+        $message_array[ ] =
+            ['lang' => $qs[ 'language' ], 'headline' => $qs[ 'headline' ], 'message' => $qs[ 'content' ]];
+    }
+    $showlang = select_language($message_array);
 
-	$headline=clearfromtags($message_array[$showlang]['headline']);
-	$content=$message_array[$showlang]['message'];
+    $headline = clearfromtags($message_array[ $showlang ][ 'headline' ]);
+    $content = $message_array[ $showlang ][ 'message' ];
 
-	if(mb_strlen($content)>$maxtopnewschars) {
-		$content=mb_substr($content, 0, $maxtopnewschars);
-		$content.='...';
-	}
-	$content = nl2br(strip_tags($content));
+    if (mb_strlen($content) > $maxtopnewschars) {
+        $content = mb_substr($content, 0, $maxtopnewschars);
+        $content .= '...';
+    }
+    $content = nl2br(strip_tags($content));
 
-	eval ("\$sc_topnews = \"".gettemplate("sc_topnews")."\";");
-	echo $sc_topnews;
-} else echo $_language->module['no_topnews'];
-?>
+    eval ("\$sc_topnews = \"" . gettemplate("sc_topnews") . "\";");
+    echo $sc_topnews;
+} else {
+    echo $_language->module[ 'no_topnews' ];
+}
