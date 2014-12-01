@@ -104,7 +104,7 @@ module.exports = function(grunt) {
             //"partners.php",
             //"picture.php",
             "poll.php",
-            //"polls.php",
+            "polls.php",
             //"printview.php",
             //"profile.php",
             //"quicksearch.php",
