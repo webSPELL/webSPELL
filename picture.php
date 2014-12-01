@@ -25,19 +25,29 @@
 ##########################################################################
 */
 
-$pictureID = (int)$_GET['id'];
+$pictureID = (int)$_GET[ 'id' ];
 
-if(file_exists('images/gallery/large/'.$pictureID.'.jpg')) $file='images/gallery/large/'.$pictureID.'.jpg';
-elseif(file_exists('images/gallery/large/'.$pictureID.'.gif')) $file='images/gallery/large/'.$pictureID.'.gif';
-elseif(file_exists('images/gallery/large/'.$pictureID.'.png')) $file='images/gallery/large/'.$pictureID.'.png';
-else $file='';
+if (file_exists('images/gallery/large/' . $pictureID . '.jpg')) {
+    $file = 'images/gallery/large/' . $pictureID . '.jpg';
+} elseif (file_exists('images/gallery/large/' . $pictureID . '.gif')) {
+    $file = 'images/gallery/large/' . $pictureID . '.gif';
+} elseif (file_exists('images/gallery/large/' . $pictureID . '.png')) {
+    $file = 'images/gallery/large/' . $pictureID . '.png';
+} else {
+    $file = '';
+}
 
-$info=getimagesize($file);
-switch($info[2]) {
-	case 1: Header("Content-type: image/gif"); break;
-	case 2: Header("Content-type: image/jpeg"); break;
-	case 3: Header("Content-type: image/png"); break;
+$info = getimagesize($file);
+switch ($info[ 2 ]) {
+    case 1:
+        Header("Content-type: image/gif");
+        break;
+    case 2:
+        Header("Content-type: image/jpeg");
+        break;
+    case 3:
+        Header("Content-type: image/png");
+        break;
 }
 
 echo file_get_contents($file);
-?>

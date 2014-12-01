@@ -25,24 +25,33 @@
 ##########################################################################
 */
 
-$ergebnis=safe_query("SELECT * FROM ".PREFIX."partners WHERE displayed = '1' ORDER BY sort");
-if(mysqli_num_rows($ergebnis)) {
-	echo '<ul class="list-group">';
-	while($db=mysqli_fetch_array($ergebnis)) {
-		$partnerID = $db['partnerID'];
-		$banner = $db['banner'];
-		$alt = htmlspecialchars($db['name']);
-		$title = htmlspecialchars($db['name']);
-		$img = 'images/partners/'.$db['banner'];
-		$name = $db['name'];
-		$img_str = '<img src="images/partners/'.$db['banner'].'" alt="'.$alt.'" title="'.$title.'">';
-		if(is_file($img) && file_exists($img)){
-			$text = $img_str;
-		}
-		else $text = $name;
-		eval ("\$sc_partners = \"".gettemplate("sc_partners")."\";");
-		echo $sc_partners;
-	}
-	echo '</ul>';
+$ergebnis = safe_query(
+    "SELECT
+        *
+    FROM
+        " . PREFIX . "partners
+    WHERE
+        displayed = '1'
+    ORDER BY
+        sort"
+);
+if (mysqli_num_rows($ergebnis)) {
+    echo '<ul class="list-group">';
+    while ($db = mysqli_fetch_array($ergebnis)) {
+        $partnerID = $db[ 'partnerID' ];
+        $banner = $db[ 'banner' ];
+        $alt = htmlspecialchars($db[ 'name' ]);
+        $title = htmlspecialchars($db[ 'name' ]);
+        $img = 'images/partners/' . $db[ 'banner' ];
+        $name = $db[ 'name' ];
+        $img_str = '<img src="images/partners/' . $db[ 'banner' ] . '" alt="' . $alt . '" title="' . $title . '">';
+        if (is_file($img) && file_exists($img)) {
+            $text = $img_str;
+        } else {
+            $text = $name;
+        }
+        eval ("\$sc_partners = \"" . gettemplate("sc_partners") . "\";");
+        echo $sc_partners;
+    }
+    echo '</ul>';
 }
-?>
