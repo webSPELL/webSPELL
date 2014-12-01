@@ -25,24 +25,29 @@
 ##########################################################################
 */
 
-if($userID) {
-	$name_settings = 'value="'.getinput(getnickname($userID)).'" readonly="readonly" ';
-	$captcha_form = '';
-}
-else {
-	$name_settings = 'value="Name" onfocus="this.value=\'\'"';
-	$CAPCLASS = new \webspell\Captcha;
-	$captcha = $CAPCLASS->createCaptcha();
-	$hash = $CAPCLASS->getHash();
-	$CAPCLASS->clearOldCaptcha();
-	$captcha_form = '<div class="form-group"><div class="input-group"><span class="input-group-addon captcha-img">'.$captcha.'</span><input type="number" name="captcha" placeholder="Enter Captcha"  autocomplete="off" class="form-control"><input name="captcha_hash" type="hidden" value="'.$hash.'"></div></div>';
+if ($userID) {
+    $name_settings = 'value="' . getinput(getnickname($userID)) . '" readonly="readonly" ';
+    $captcha_form = '';
+} else {
+    $name_settings = 'value="Name" onfocus="this.value=\'\'"';
+    $CAPCLASS = new \webspell\Captcha;
+    $captcha = $CAPCLASS->createCaptcha();
+    $hash = $CAPCLASS->getHash();
+    $CAPCLASS->clearOldCaptcha();
+    $captcha_form =
+        '<div class="form-group">
+            <div class="input-group">
+                <span class="input-group-addon captcha-img">' . $captcha . '</span>
+                <input type="number" name="captcha" placeholder="Enter Captcha"  autocomplete="off"
+                    class="form-control">
+                <input name="captcha_hash" type="hidden" value="' . $hash . '">
+            </div>
+        </div>';
 }
 
 $_language->readModule('shoutbox');
 
-$refresh = $sbrefresh*1000;
+$refresh = $sbrefresh * 1000;
 
-eval ("\$shoutbox = \"".gettemplate("shoutbox")."\";");
+eval ("\$shoutbox = \"" . gettemplate("shoutbox") . "\";");
 echo $shoutbox;
-
-?>

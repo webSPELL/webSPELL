@@ -28,7 +28,7 @@
 include("_mysql.php");
 include("_settings.php");
 
-echo'<!DOCTYPE html>
+echo '<!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -61,27 +61,31 @@ echo'<!DOCTYPE html>
 $filepath = "./images/smileys/";
 unset($files);
 if ($dh = opendir($filepath)) {
-	while($file = readdir($dh)) {
-		if (preg_match("/\.gif/si",$file)) $files[] = $file;
-	}
-	closedir($dh);
+    while ($file = readdir($dh)) {
+        if (preg_match("/\.gif/si", $file)) {
+            $files[ ] = $file;
+        }
+    }
+    closedir($dh);
 }
 
 if (is_array($files)) {
-	sort($files);
-	foreach($files as $file) {
-		$smiley = explode(".", $file);
-		
-     echo'<tr>
-        <td><a href="javascript:AddCodeFromWindow(\':'.$smiley[0].':\')"><img src="images/smileys/'.$file.'" alt=""></a></td>
-        <td><a href="javascript:AddCodeFromWindow(\':'.$smiley[0].':\')">:'.$smiley[0].':</a></td>
+    sort($files);
+    foreach ($files as $file) {
+        $smiley = explode(".", $file);
+
+        echo '<tr>
+        <td><a href="javascript:AddCodeFromWindow(\':' . $smiley[ 0 ] . ':\')">
+                <img src="images/smileys/' . $file . '" alt="">
+            </a>
+        </td>
+        <td><a href="javascript:AddCodeFromWindow(\':' . $smiley[ 0 ] . ':\')">:' . $smiley[ 0 ] . ':</a></td>
       </tr>';
-	}
+    }
 }
 
-?>
-</tbody>
+echo '</tbody>
 </table>
 </div>
 </body>
-</html>
+</html>';

@@ -25,29 +25,34 @@
 ##########################################################################
 */
 
-if(isset($_GET['staticID'])) $staticID = $_GET['staticID'];
-else $staticID = '';
+if (isset($_GET[ 'staticID' ])) {
+    $staticID = $_GET[ 'staticID' ];
+} else {
+    $staticID = '';
+}
 
-$ds=mysqli_fetch_array(safe_query("SELECT * FROM ".PREFIX."static WHERE staticID='".$staticID."'"));
+$ds = mysqli_fetch_array(safe_query("SELECT * FROM " . PREFIX . "static WHERE staticID='" . $staticID . "'"));
 $_language->readModule("static");
 $allowed = false;
-switch($ds['accesslevel']) {
-	case 0:
-		$allowed = true;
-		break;
-	case 1:
-		if($userID) $allowed = true;
-		break;
-	case 2:
-		if(isclanmember($userID)) $allowed = true;
-		break;
+switch ($ds[ 'accesslevel' ]) {
+    case 0:
+        $allowed = true;
+        break;
+    case 1:
+        if ($userID) {
+            $allowed = true;
+        }
+        break;
+    case 2:
+        if (isclanmember($userID)) {
+            $allowed = true;
+        }
+        break;
 }
 
-if($allowed) {
- 	$content = $ds['content'];
-	echo toggle(htmloutput($content),1);
+if ($allowed) {
+    $content = $ds[ 'content' ];
+    echo toggle(htmloutput($content), 1);
+} else {
+    redirect("index.php", $_language->module[ 'no_access' ], 3);
 }
-else{
-	redirect("index.php",$_language->module['no_access'],3);
-}
-?>

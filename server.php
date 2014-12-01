@@ -27,38 +27,45 @@
 
 $_language->readModule('server');
 
-eval("\$title_server = \"".gettemplate("title_server")."\";");
+eval("\$title_server = \"" . gettemplate("title_server") . "\";");
 echo $title_server;
 
-$ergebnis = safe_query("SELECT * FROM ".PREFIX."servers ORDER BY sort");
+$ergebnis = safe_query("SELECT * FROM " . PREFIX . "servers ORDER BY sort");
 
-if(mysqli_num_rows($ergebnis)) {
-	$i = 1;
-	while($ds = mysqli_fetch_array($ergebnis)) {
-		if($ds['game'] == "CS") $game = "HL";
-		else $game = $ds['game'];
+if (mysqli_num_rows($ergebnis)) {
+    $i = 1;
+    while ($ds = mysqli_fetch_array($ergebnis)) {
+        if ($ds[ 'game' ] == "CS") {
+            $game = "HL";
+        } else {
+            $game = $ds[ 'game' ];
+        }
 
-    	$showgame = getgamename($ds['game']);
+        $showgame = getgamename($ds[ 'game' ]);
 
-    	$serverdata = explode(":", $ds['ip']);
-		$ip = $serverdata[0];
-		if(isset($serverdata[1])) $port = $serverdata[1];
-		else $port='';
+        $serverdata = explode(":", $ds[ 'ip' ]);
+        $ip = $serverdata[ 0 ];
+        if (isset($serverdata[ 1 ])) {
+            $port = $serverdata[ 1 ];
+        } else {
+            $port = '';
+        }
 
-		if(!checkenv('disable_functions','fsockopen')) {
-			if(!fsockopen("udp://".$ip, $port, $strErrNo, $strErrStr, 30)) $status= "<i>".$_language->module['timeout']."</i>";
-			else $status = "<b>".$_language->module['online']."</b>";
-		}
-		else $status = "<i>".$_language->module['not_supported']."</i>";
-    	$servername=htmloutput($ds['name']);
-		$info=htmloutput($ds['info']);
-		eval("\$server = \"".gettemplate("server")."\";");
-		echo $server;
-		$i++;
-	}
-
+        if (!checkenv('disable_functions', 'fsockopen')) {
+            if (!fsockopen("udp://" . $ip, $port, $strErrNo, $strErrStr, 30)) {
+                $status = "<i>" . $_language->module[ 'timeout' ] . "</i>";
+            } else {
+                $status = "<b>" . $_language->module[ 'online' ] . "</b>";
+            }
+        } else {
+            $status = "<i>" . $_language->module[ 'not_supported' ] . "</i>";
+        }
+        $servername = htmloutput($ds[ 'name' ]);
+        $info = htmloutput($ds[ 'info' ]);
+        eval("\$server = \"" . gettemplate("server") . "\";");
+        echo $server;
+        $i++;
+    }
+} else {
+    echo $_language->module[ 'no_server' ];
 }
-else echo $_language->module['no_server'];
-
-?>
-
