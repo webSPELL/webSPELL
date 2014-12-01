@@ -27,6 +27,5 @@
 
 $_language->readModule('navigation');
 
-eval ("\$navigation = \"".gettemplate("navigation")."\";");
+eval ("\$navigation = \"" . gettemplate("navigation") . "\";");
 echo $navigation;
-?>
