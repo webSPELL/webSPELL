@@ -80,7 +80,6 @@ module.exports = function(grunt) {
             "!getlang.php",
             "!guestbook.php",
             "!history.php",
-            "!imprint.php",
             "!index.php",
             "!joinus.php"
         ],
