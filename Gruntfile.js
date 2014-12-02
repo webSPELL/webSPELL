@@ -53,7 +53,6 @@ module.exports = function(grunt) {
             //"admin/visitor_statistic.php",
             //"admin/visitor_statistic_image.php",
             "*.php",
-            "!articles.php",
             "!asearch.php",
             "!awards.php",
             "!challenge.php",
