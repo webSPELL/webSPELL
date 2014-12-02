@@ -43,4 +43,3 @@ if (mysqli_num_rows($ergebnis)) {
 } else {
     echo $_language->module[ 'no_history' ];
 }
-?>
