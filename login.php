@@ -27,29 +27,38 @@
 
 $_language->readModule('login');
 
-if($loggedin) {
-    $username='<a href="index.php?site=profile&amp;id='.$userID.'"><b>'.strip_tags(getnickname($userID)).'</b></a>';
-    if(isanyadmin($userID)) $admin='<li class="divider"></li><li><a href="admin/admincenter.php" target="_blank" class="alert-danger">'.$_language->module['admin'].'</a></li>';
-    else $admin='';
-    if(isclanmember($userID) or iscashadmin($userID)) $cashbox='<li><a href="index.php?site=cashbox" class="alert-danger">'.$_language->module['cash-box'].'</a></li><li class="divider"></li>';
-    else $cashbox='';
-    $anz=getnewmessages($userID);
-    if($anz) {
-        $newmessages=$anz;
+if ($loggedin) {
+    $username =
+        '<a href="index.php?site=profile&amp;id=' . $userID . '"><b>' . strip_tags(getnickname($userID)) . '</b></a>';
+    if (isanyadmin($userID)) {
+        $admin = '<li class="divider"></li><li><a href="admin/admincenter.php" target="_blank" class="alert-danger">' .
+            $_language->module[ 'admin' ] . '</a></li>';
+    } else {
+        $admin = '';
     }
-    else $newmessages='';
-    if($getavatar = getavatar($userID)) $l_avatar='<img src="images/avatars/'.$getavatar.'" alt="Avatar">';
-    else $l_avatar=$_language->module['n_a'];
+    if (isclanmember($userID) or iscashadmin($userID)) {
+        $cashbox = '<li><a href="index.php?site=cashbox" class="alert-danger">' . $_language->module[ 'cash-box' ] .
+            '</a></li><li class="divider"></li>';
+    } else {
+        $cashbox = '';
+    }
+    $anz = getnewmessages($userID);
+    if ($anz) {
+        $newmessages = $anz;
+    } else {
+        $newmessages = '';
+    }
+    if ($getavatar = getavatar($userID)) {
+        $l_avatar = '<img src="images/avatars/' . $getavatar . '" alt="Avatar">';
+    } else {
+        $l_avatar = $_language->module[ 'n_a' ];
+    }
 
-
-    eval ("\$logged = \"".gettemplate("logged")."\";");
+    eval ("\$logged = \"" . gettemplate("logged") . "\";");
     echo $logged;
-}
-else {
+} else {
     //set sessiontest variable (checks if session works correctly)
-    $_SESSION['ws_sessiontest'] = true;
-    eval ("\$loginform = \"".gettemplate("login")."\";");
+    $_SESSION[ 'ws_sessiontest' ] = true;
+    eval ("\$loginform = \"" . gettemplate("login") . "\";");
     echo $loginform;
 }
-
-?>
