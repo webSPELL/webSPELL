@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2010 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -43,7 +43,7 @@ AANDAG jou wagwoord is verander!
 het jy jou gebruikersnaam: %username%
 jou nuwe wagwoord: %new_password%
 
-om pret te hê op ons bladsy
+om pret te hï¿½ op ons bladsy
 %homepage_url%',
   'get_password'=>'kry wagwoord',
   'lost_password'=>'verlore wagwoord',

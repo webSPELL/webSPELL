@@ -11,6 +11,7 @@
     "grunt-phpcpd": "^0.1.4",
     "grunt-phpcs": "^0.2.3",
     "grunt-phplint": "0.0.5",
+    "grunt-text-replace": "^0.4.0",
     "logfile-grunt": "^0.1.5"
   }
 }

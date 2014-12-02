@@ -144,6 +144,21 @@ module.exports = function(grunt) {
                 showSniffCodes: true
             }
         },
+        replace: {
+            copyright: {
+                src: [
+                    "**/*.{css,html,js,md,php,txt}",
+                    excludes
+                ],
+                overwrite: true,
+                replacements: [
+                    {
+                        from: /(Copyright 2005-2014 by webspell.org)/g,
+                        to: "Copyright 2005-2014 by webspell.org"
+                    }
+                ]
+            }
+        },
         //phpcpd: {
         //    application: {
         //        dir: "admin"
@@ -175,6 +190,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks("grunt-phpcpd");
     grunt.loadNpmTasks("grunt-jscs");
     grunt.loadNpmTasks("grunt-lintspaces");
+    grunt.loadNpmTasks("grunt-text-replace");
 
     grunt.registerTask("codecheck", [
         "lintspaces",
@@ -186,5 +202,8 @@ module.exports = function(grunt) {
     grunt.registerTask("js", [
         "jshint",
         "jscs"
+    ]);
+    grunt.registerTask("release", [
+        "replace"
     ]);
 };

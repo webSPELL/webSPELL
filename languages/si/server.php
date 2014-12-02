@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2010 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -40,7 +40,7 @@ $language_array = Array(
   'ip'=>'IP',
   'link'=>'Link',
   'no_server'=>'Ni serverjev.',
-  'not_supported'=>'Strenik ne podpira te monosti',
+  'not_supported'=>'Streï¿½nik ne podpira te moï¿½nosti',
   'online'=>'online',
   'server'=>'server',
   'status'=>'Status',

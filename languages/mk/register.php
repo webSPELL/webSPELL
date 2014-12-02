@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 /*
 ##########################################################################
 #                                                                        #
@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2009 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
