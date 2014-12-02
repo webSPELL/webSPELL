@@ -66,8 +66,7 @@ module.exports = function(grunt) {
             "!gallery.php",
             "!guestbook.php",
             "!history.php",
-            "!index.php",
-            "!joinus.php"
+            "!index.php"
         ],
         csss = [ "**/*.css" ],
         excludes = [
