@@ -62,7 +62,6 @@ module.exports = function(grunt) {
             "!clanwars_details.php",
             "!comments.php",
             "!contact.php",
-            "!counter.php",
             "!counter_stats.php",
             "!demos.php",
             "!download.php",
