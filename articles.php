@@ -101,22 +101,50 @@ if ($action == "save") {
     for ($i = 0; $i <= count($message); $i++) {
         if (isset($message[ $i ])) {
             if ($i >= $anzpages) {
-                safe_query("INSERT INTO " . PREFIX . "articles_contents (articlesID, content, page) VALUES ('" .
-                    $articlesID . "', '" . $message[ $i ] . "', '" . $i . "')");
+                safe_query(
+                    "INSERT INTO
+                        " . PREFIX . "articles_contents (
+                            `articlesID,
+                            `content`,
+                            `page`
+                        )
+                        VALUES (
+                            '" . $articlesID . "',
+                            '" . $message[ $i ] . "',
+                            '" . $i . "'
+                        )"
+                );
             } else {
-                safe_query("UPDATE " . PREFIX . "articles_contents SET content = '" . $message[ $i ] .
-                    "' WHERE articlesID = '" . $articlesID . "' and page = '" . $i . "'");
+                safe_query(
+                    "UPDATE
+                        `" . PREFIX . "articles_contents`
+                    SET
+                        `content` = '" . $message[ $i ] . "'
+                    WHERE
+                        `articlesID` = '" . $articlesID . "' AND
+                        `page` = '" . (int)$i
+                );
             }
         }
     }
     for ($x = $_POST[ 'language_count' ]; $x < 100; $x++) {
-        safe_query("DELETE FROM " . PREFIX . "articles_contents WHERE articlesID = '" . $articlesID . "' and page = '" .
-            $x . "'");
+        safe_query(
+            "DELETE FROM
+                `" . PREFIX . "articles_contents`
+            WHERE
+                `articlesID` = '" . $articlesID . "' AND
+                `page` = '" . (int)$x
+        );
     }
 
     // delete the entries that are older than 2 hour and contain no text
-    safe_query("DELETE FROM `" . PREFIX . "articles` WHERE `saved` = '0' and " . time() . " - `date` > " .
-        (2 * 60 * 60));
+    safe_query(
+        "DELETE FROM
+            `" . PREFIX . "articles`
+        WHERE
+            `saved` = '0' AND
+            " . time() . " - `date` > " . (2 * 60 * 60)
+    );
 
     die('<body onload="window.close()"></body>');
 } elseif (isset($_GET[ 'delete' ])) {
@@ -129,8 +157,16 @@ if ($action == "save") {
         die($_language->module[ 'no_access' ]);
     }
 
-    $ds = mysqli_fetch_array(safe_query("SELECT screens FROM " . PREFIX . "articles WHERE articlesID='" .
-            $_GET[ 'articlesID' ] . "'"));
+    $ds = mysqli_fetch_array(
+        safe_query(
+            "SELECT
+                  `screens`
+                FROM
+                  `" . PREFIX . "articles`
+                WHERE
+                    `articlesID` = '" . (int)$_GET[ 'articlesID' ]
+        )
+    );
     if ($ds[ 'screens' ]) {
         $screens = explode("|", $ds[ 'screens' ]);
         if (is_array($screens)) {
@@ -145,9 +181,9 @@ if ($action == "save") {
 
     Tags::removeTags('articles', $_GET[ 'articlesID' ]);
 
-    safe_query("DELETE FROM " . PREFIX . "articles WHERE articlesID='" . $_GET[ 'articlesID' ] . "'");
-    safe_query("DELETE FROM " . PREFIX . "articles_contents WHERE articlesID='" . $_GET[ 'articlesID' ] . "'");
-    safe_query("DELETE FROM " . PREFIX . "comments WHERE parentID='" . $_GET[ 'articlesID' ] . "' AND type='ar'");
+    safe_query("DELETE FROM " . PREFIX . "articles WHERE articlesID='" . (int)$_GET[ 'articlesID' ]);
+    safe_query("DELETE FROM " . PREFIX . "articles_contents WHERE articlesID='" . (int)$_GET[ 'articlesID' ]);
+    safe_query("DELETE FROM " . PREFIX . "comments WHERE parentID='" . (int)$_GET[ 'articlesID' ] . "' AND type='ar'");
 
     if (isset($close)) {
         echo '<body onload="window.close()"></body>';
@@ -158,11 +194,6 @@ if ($action == "save") {
 
 function top5()
 {
-    $pagebg = PAGEBG;
-    $border = BORDER;
-    $bghead = BGHEAD;
-    $bgcat = BGCAT;
-
     global $_language;
 
     $_language->readModule('articles');
@@ -249,8 +280,19 @@ if ($action == "new") {
     $bgcat = BGCAT;
 
     if (isnewsadmin($userID)) {
-        safe_query("INSERT INTO " . PREFIX . "articles ( date, poster, saved ) VALUES( '" . time() .
-            "', '$userID', '0' ) ");
+        safe_query(
+            "INSERT INTO
+                " . PREFIX . "articles (
+                    date,
+                    poster,
+                    saved
+                )
+                VALUES(
+                    '" . time() . "',
+                    '$userID',
+                    '0'
+                )"
+        );
         $articlesID = mysqli_insert_id($_database);
 
         $selects = '';
@@ -288,14 +330,23 @@ if ($action == "new") {
     $bgcat = BGCAT;
 
     if (isnewsadmin($userID)) {
-        $ds = mysqli_fetch_array(safe_query("SELECT * FROM " . PREFIX . "articles WHERE articlesID = '" . $articlesID .
-                "'"));
+        $ds = mysqli_fetch_array(
+            safe_query("SELECT * FROM " . PREFIX . "articles WHERE articlesID = '" . (int)$articlesID)
+        );
 
         $title = getinput($ds[ 'title' ]);
 
         $message = [];
-        $query = safe_query("SELECT content FROM " . PREFIX . "articles_contents WHERE articlesID = '" . $articlesID .
-            "' ORDER BY page ASC");
+        $query = safe_query(
+            "SELECT
+                `content`
+            FROM
+                `" . PREFIX . "articles_contents`
+            WHERE
+                `articlesID` = '" . $articlesID . "'
+            ORDER BY
+                `page` ASC"
+        );
         while ($qs = mysqli_fetch_array($query)) {
             $message[ ] = $qs[ 'content' ];
         }
@@ -377,8 +428,11 @@ if ($action == "new") {
             $_language->module[ 'user_comments' ] . '</option><option value="2">' .
             $_language->module[ 'visitor_comments' ] . '</option>';
         $comments =
-            str_replace('value="' . $ds[ 'comments' ] . '"', 'value="' . $ds[ 'comments' ] . '" selected="selected"',
-                $comments);
+            str_replace(
+                'value="' . $ds[ 'comments' ] . '"',
+                'value="' . $ds[ 'comments' ] . '" selected="selected"',
+                $comments
+            );
 
         $bg1 = BG_1;
         eval ("\$addbbcode = \"" . gettemplate("addbbcode") . "\";");
@@ -402,17 +456,21 @@ if ($action == "new") {
 
     if (isnewsadmin($userID)) {
         echo
-            '<input type="button" onclick="MM_openBrWindow(\'articles.php?action=new\',\'Articles\',\'toolbar=no,status=no,scrollbars=yes,width=800,height=600\');" value="' .
-            $_language->module[ 'new_article' ] . '" class="btn btn-danger"> ';
+            '<input type="button" onclick="MM_openBrWindow(
+                \'articles.php?action=new\',
+                \'Articles\',
+                \'toolbar=no,status=no,scrollbars=yes,width=800,height=600\'
+                );" value="' . $_language->module[ 'new_article' ] . '" class="btn btn-danger"> ';
     }
     echo
-        '<input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=articles\');return document.MM_returnValue;" value="' .
-        $_language->module[ 'all_articles' ] . '" class="btn btn-primary"><br><br>';
+        '<a href="index.php?site=articles" class="btn btn-primary">' .
+            $_language->module[ 'all_articles' ] .
+        '</a><br><br>';
 
     if ($page == 1) {
-        safe_query("UPDATE " . PREFIX . "articles SET viewed=viewed+1 WHERE articlesID='" . $articlesID . "'");
+        safe_query("UPDATE `" . PREFIX . "articles` SET `viewed`=viewed+1 WHERE `articlesID` = '" . (int)$articlesID);
     }
-    $result = safe_query("SELECT * FROM " . PREFIX . "articles WHERE articlesID='" . $articlesID . "'");
+    $result = safe_query("SELECT * FROM `" . PREFIX . "articles` WHERE `articlesID` = '" . (int)$articlesID);
 
     if (mysqli_num_rows($result)) {
 
@@ -421,8 +479,16 @@ if ($action == "new") {
         $title = clearfromtags($ds[ 'title' ]);
 
         $content = [];
-        $query = safe_query("SELECT * FROM " . PREFIX . "articles_contents WHERE articlesID = '" . $articlesID .
-            "' ORDER BY page ASC");
+        $query = safe_query(
+            "SELECT
+                *
+            FROM
+                `" . PREFIX . "articles_contents`
+            WHERE
+                `articlesID` = '" . (int)$articlesID . "'
+            ORDER BY
+                `page` ASC"
+        );
         while ($qs = mysqli_fetch_array($query)) {
             $content[ ] = $qs[ 'content' ];
         }
@@ -531,7 +597,8 @@ if ($action == "new") {
                 </select>
 
                 <span class="input-group-btn">
-                  <input type="submit" name="Submit" value="' . $_language->module[ 'rate' ] . '" class="btn btn-primary">
+                  <input type="submit" name="Submit" value="' .
+                    $_language->module[ 'rate' ] . '" class="btn btn-primary">
                 </span>
             </div>
             <input type="hidden" name="userID" value="' . $userID . '">
@@ -593,11 +660,14 @@ if ($action == "new") {
 
     if (isnewsadmin($userID)) {
         echo
-            '<p><input type="button" onclick="MM_openBrWindow(\'articles.php?action=new\',\'Articles\',\'toolbar=no,status=no,scrollbars=yes,width=800,height=600\');" value="' .
-            $_language->module[ 'new_article' ] . '" class="btn btn-danger"></p>';
+            '<p><input type="button" onclick="MM_openBrWindow(
+                \'articles.php?action=new\',
+                \'Articles\',
+                \'toolbar=no,status=no,scrollbars=yes,width=800,height=600\'
+            );" value="' . $_language->module[ 'new_article' ] . '" class="btn btn-danger"></p>';
     }
 
-    $alle = safe_query("SELECT articlesID FROM " . PREFIX . "articles WHERE saved='1'");
+    $alle = safe_query("SELECT `articlesID` FROM `" . PREFIX . "articles` WHERE `saved`='1'");
     $gesamt = mysqli_num_rows($alle);
     $pages = 1;
 
@@ -617,7 +687,17 @@ if ($action == "new") {
 
     if ($page == "1") {
         $ergebnis =
-            safe_query("SELECT * FROM " . PREFIX . "articles WHERE saved='1' ORDER BY $sort $type LIMIT 0,$max");
+            safe_query(
+                "SELECT
+                    *
+                FROM
+                    `" . PREFIX . "articles`
+                WHERE
+                    `saved`='1'
+                ORDER BY
+                    $sort $type
+                LIMIT 0,".(int)$max
+            );
         if ($type == "DESC") {
             $n = $gesamt;
         } else {
@@ -626,7 +706,17 @@ if ($action == "new") {
     } else {
         $start = $page * $max - $max;
         $ergebnis =
-            safe_query("SELECT * FROM " . PREFIX . "articles WHERE saved='1' ORDER BY $sort $type LIMIT $start,$max");
+            safe_query(
+                "SELECT
+                    *
+                FROM
+                    `" . PREFIX . "articles`
+                WHERE
+                    `saved` = '1'
+                ORDER BY
+                    $sort $type
+                LIMIT $start,".(int)$max
+            );
         if ($type == "DESC") {
             $n = ($gesamt) - $page * $max + $max;
         } else {
@@ -691,5 +781,3 @@ if ($action == "new") {
         echo $_language->module[ 'no_entries' ];
     }
 }
-
-?>
