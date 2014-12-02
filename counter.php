@@ -25,12 +25,6 @@
 ##########################################################################
 */
 
-$pagebg = PAGEBG;
-$border = BORDER;
-$bghead = BGHEAD;
-$bgcat = BGCAT;
-$bg1 = BG_1;
-
 $_language->readModule('counter');
 
 $date = getformatdate(time());
