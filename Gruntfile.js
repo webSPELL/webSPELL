@@ -204,6 +204,6 @@ module.exports = function(grunt) {
         "jscs"
     ]);
     grunt.registerTask("release", [
-        "replace"
+        "replace:copyright"
     ]);
 };
