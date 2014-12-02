@@ -96,7 +96,7 @@ module.exports = function(grunt) {
             //"logout.php",
             //"lostpassword.php",
             //"members.php",
-            //"messenger.php",
+            "messenger.php",
             "myprofile.php",
             "n*.php",
             "o*.php",
