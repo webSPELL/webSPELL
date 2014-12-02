@@ -1,0 +1,15 @@
+{
+  "name": "webshim",
+  "homepage": "https://github.com/aFarkas/webshim",
+  "version": "1.15.5",
+  "_release": "1.15.5",
+  "_resolution": {
+    "type": "version",
+    "tag": "1.15.5",
+    "commit": "d18a83db650fc0cdcf2ac52102abdff294f57a62"
+  },
+  "_source": "git://github.com/aFarkas/webshim.git",
+  "_target": "~1.15.5",
+  "_originalSource": "webshim",
+  "_direct": true
+}
