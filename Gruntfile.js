@@ -55,7 +55,7 @@ module.exports = function(grunt) {
             "_*.php",
             "about.php",
             "ajax_spamfilter.php",
-            "articles.php",
+            //"articles.php",
             //"asearch.php",
             //"awards.php",
             "buddies.php",
@@ -97,7 +97,7 @@ module.exports = function(grunt) {
             //"lostpassword.php",
             //"members.php",
             //"messenger.php",
-            //"myprofile.php",
+            "myprofile.php",
             "n*.php",
             "o*.php",
             "p*.php",
@@ -112,7 +112,8 @@ module.exports = function(grunt) {
         csss = [ "**/*.css" ],
         excludes = [
             "!node_modules/**",
-            "!components/**"
+            "!components/**",
+            "!vendor/**"
         ];
 
     require("logfile-grunt")(grunt, {
