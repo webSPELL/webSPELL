@@ -53,18 +53,9 @@ module.exports = function(grunt) {
             //"admin/visitor_statistic.php",
             //"admin/visitor_statistic_image.php",
             "*.php",
-            "!challenge.php",
-            "!clanwars.php",
-            "!challenge.php",
-            "!clanwars.php",
-            "!clanwars_details.php",
-            "!comments.php",
-            "!demos.php",
             "!files.php",
             "!forum.php",
-            "!forum_topic.php",
-            "!gallery.php",
-            "!index.php"
+            "!forum_topic.php"
         ],
         csss = [ "**/*.css" ],
         excludes = [

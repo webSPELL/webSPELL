@@ -34,48 +34,52 @@ $_language->readModule('index');
 $index_language = $_language->module;
 // end important data include
 
-$hide1 = array("forum","forum_topic");
+$hide1 = ["forum", "forum_topic"];
 header('X-UA-Compatible: IE=edge,chrome=1');
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta name="description" content="Clanpage using webSPELL 4 CMS">
-<meta name="author" content="webspell.org">
-<meta name="keywords" content="webspell, webspell4, clan, cms">
-<meta name="generator" content="webSPELL">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="description" content="Clanpage using webSPELL 4 CMS">
+    <meta name="author" content="webspell.org">
+    <meta name="keywords" content="webspell, webspell4, clan, cms">
+    <meta name="generator" content="webSPELL">
 
-<!-- Head & Title include -->
-<title><?php echo PAGETITLE; ?></title>
-<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
-<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
-<link href="_stylesheet.css" rel="stylesheet">
-<link href="tmp/rss.xml" rel="alternate" type="application/rss+xml" title="<?php echo getinput($myclanname); ?> - RSS Feed">
+    <!-- Head & Title include -->
+    <title><?php echo PAGETITLE; ?></title>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
+    <link href="_stylesheet.css" rel="stylesheet">
+    <link href="tmp/rss.xml" rel="alternate" type="application/rss+xml" title="<?php
+    echo getinput($myclanname);
+    ?> - RSS Feed">
 
-<script src="js/bbcode.js"></script>
-<!-- end Head & Title include -->
+    <script src="js/bbcode.js"></script>
+    <!-- end Head & Title include -->
 
 </head>
 <body>
 <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="index.php"><?php echo $myclanname ?></a>
-            </div>
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.php"><?php echo $myclanname ?></a>
+        </div>
 
-            <div class="navbar-collapse collapse">
-                <?php include("navigation.php"); ?>
-            </div>
+        <div class="navbar-collapse collapse">
+            <?php include("navigation.php"); ?>
+        </div>
 
-        </div><!-- container -->
-</div><!-- navbar navbar-inverse navbar-fixed-top -->
+    </div>
+    <!-- container -->
+</div>
+<!-- navbar navbar-inverse navbar-fixed-top -->
 
 <div class="ws_main_wrapper">
 
@@ -83,71 +87,89 @@ header('X-UA-Compatible: IE=edge,chrome=1');
 
         <div class="row">
 
-<?php if(!in_array($site, $hide1)) { // show left column ?>
-            <!-- left column -->
-            <div id="leftcol" class="col-lg-3 visible-lg">
-                <!-- poll include -->
-                <b><?php echo $myclanname.".".$index_language['poll']; ?></b><br>
-                <?php include("poll.php"); ?>
-                <!-- end poll include -->
-                <hr class="grey">
+            <?php // show left column
+            if (!in_array($site, $hide1)) { ?>
+                <!-- left column -->
+                <div id="leftcol" class="col-lg-3 visible-lg">
+                    <!-- poll include -->
+                    <b><?php echo $myclanname . "." . $index_language[ 'poll' ]; ?></b><br>
+                    <?php include("poll.php"); ?>
+                    <!-- end poll include -->
+                    <hr class="grey">
 
-                <!-- pic of the moment include -->
-                <b><?php echo $myclanname.".".$index_language['pic_of_the_moment']; ?></b><br>
-                <p class="text-center"><?php include("sc_potm.php"); ?></p>
-                <!-- end pic of the moment include -->
-                <hr class="grey">
+                    <!-- pic of the moment include -->
+                    <b><?php echo $myclanname . "." . $index_language[ 'pic_of_the_moment' ]; ?></b><br>
 
-                <!-- language switch include -->
-                <b><?php echo $myclanname.".".$index_language['language_switch']; ?></b><br>
-                <p class="text-center"><?php include("sc_language.php"); ?></p>
-                <!-- end language switch include -->
-                <hr class="grey">
+                    <p class="text-center"><?php include("sc_potm.php"); ?></p>
+                    <!-- end pic of the moment include -->
+                    <hr class="grey">
 
-                <!-- randompic include -->
-                <b><?php echo $myclanname.".".$index_language['random_user']; ?></b><br>
-                <?php include("sc_randompic.php"); ?>
-                <!-- end randompic include -->
-                <hr class="grey">
+                    <!-- language switch include -->
+                    <b><?php echo $myclanname . "." . $index_language[ 'language_switch' ]; ?></b><br>
 
-                <!-- articles include -->
-                <b><?php echo $myclanname.".".$index_language['articles']; ?></b><br>
-                <?php include("sc_articles.php"); ?>
-                <!-- end articles include -->
-                <hr class="grey">
+                    <p class="text-center"><?php include("sc_language.php"); ?></p>
+                    <!-- end language switch include -->
+                    <hr class="grey">
 
-                <!-- downloads include -->
-                <b><?php echo $myclanname.".".$index_language['downloads']; ?></b><br>
-                <?php include("sc_files.php"); ?>
-                <!-- end downloads include -->
-                <hr class="grey">
+                    <!-- randompic include -->
+                    <b><?php echo $myclanname . "." . $index_language[ 'random_user' ]; ?></b><br>
+                    <?php include("sc_randompic.php"); ?>
+                    <!-- end randompic include -->
+                    <hr class="grey">
 
-                <!-- servers include -->
-                <b><?php echo $myclanname.".".$index_language['server']; ?></b><br>
-                <?php include("sc_servers.php"); ?>
-                <!-- end servers include -->
-                <hr class="grey">
+                    <!-- articles include -->
+                    <b><?php echo $myclanname . "." . $index_language[ 'articles' ]; ?></b><br>
+                    <?php include("sc_articles.php"); ?>
+                    <!-- end articles include -->
+                    <hr class="grey">
 
-                <!-- sponsors include -->
-                <b><?php echo $myclanname.".".$index_language['sponsors']; ?></b><br>
-                <p class="text-center"><?php include("sc_sponsors.php"); ?></p>
-                <!-- end sponsors include -->
-                <hr class="grey">
+                    <!-- downloads include -->
+                    <b><?php echo $myclanname . "." . $index_language[ 'downloads' ]; ?></b><br>
+                    <?php include("sc_files.php"); ?>
+                    <!-- end downloads include -->
+                    <hr class="grey">
 
-                <!-- partners include -->
-                <b><?php echo $myclanname.".".$index_language['partners']; ?></b><br>
-                <p class="text-center"><?php include("partners.php"); ?></p>
-                <!-- end partners include -->
-            </div>
-<?php } // end of show left column ?>
+                    <!-- servers include -->
+                    <b><?php echo $myclanname . "." . $index_language[ 'server' ]; ?></b><br>
+                    <?php include("sc_servers.php"); ?>
+                    <!-- end servers include -->
+                    <hr class="grey">
+
+                    <!-- sponsors include -->
+                    <b><?php echo $myclanname . "." . $index_language[ 'sponsors' ]; ?></b><br>
+
+                    <p class="text-center"><?php include("sc_sponsors.php"); ?></p>
+                    <!-- end sponsors include -->
+                    <hr class="grey">
+
+                    <!-- partners include -->
+                    <b><?php echo $myclanname . "." . $index_language[ 'partners' ]; ?></b><br>
+
+                    <p class="text-center"><?php include("partners.php"); ?></p>
+                    <!-- end partners include -->
+                </div>
+            <?php
+            // end of show left column
+            } ?>
             <!-- main content area -->
-            <div id="maincol" class="<?php if(in_array($site, $hide1)) echo "col-lg-9 col-sm-9 col-xs-12"; else echo"col-lg-6 col-sm-9 col-xs-12"; ?>">
+            <div id="maincol" class="
+            <?php
+            if (in_array($site, $hide1)) {
+                echo "col-lg-9 col-sm-9 col-xs-12";
+            } else {
+                echo "col-lg-6 col-sm-9 col-xs-12";
+            }
+            ?>">
                 <?php
-                    if(!isset($site)) $site="news";
-                    $invalide = array('\\','/','/\/',':','.');
-                    $site = str_replace($invalide,' ',$site);
-                    if(!file_exists($site.".php")) $site = "news";
-                    include($site.".php");
+                if (!isset($site)) {
+                    $site = "news";
+                }
+                $invalide = ['\\', '/', '/\/', ':', '.'];
+                $site = str_replace($invalide, ' ', $site);
+                if (!file_exists($site . ".php")) {
+                    $site = "news";
+                }
+                include($site . ".php");
                 ?>
             </div>
 
@@ -155,25 +177,25 @@ header('X-UA-Compatible: IE=edge,chrome=1');
             <div id="rightcol" class="col-md-3 col-sm-3">
                 <!-- login include -->
                 <div>
-                    <b><?php echo $myclanname.".".$index_language['login']; ?></b><br>
+                    <b><?php echo $myclanname . "." . $index_language[ 'login' ]; ?></b><br>
                     <?php include("login.php"); ?>
                     <hr class="grey">
                 </div>
 
                 <div class="visible-sm">
-                    <b><?php echo $myclanname.".".$index_language['topics']; ?></b><br>
+                    <b><?php echo $myclanname . "." . $index_language[ 'topics' ]; ?></b><br>
                     <?php include("latesttopics.php"); ?>
                 </div>
 
                 <div class="visible-lg">
-                    <b><?php echo $myclanname.".".$index_language['hotest_news']; ?></b><br>
+                    <b><?php echo $myclanname . "." . $index_language[ 'hotest_news' ]; ?></b><br>
                     <?php include("sc_topnews.php"); ?>
                     <hr class="grey">
                 </div>
 
                 <div class="visible-sm">
                     <!-- headlines include -->
-                    <b><?php echo $myclanname.".".$index_language['latest_news']; ?></b><br>
+                    <b><?php echo $myclanname . "." . $index_language[ 'latest_news' ]; ?></b><br>
                     <?php include("sc_headlines.php"); ?>
                     <!-- end headlines include -->
                     <hr class="grey">
@@ -181,7 +203,8 @@ header('X-UA-Compatible: IE=edge,chrome=1');
 
                 <div class="visible-lg">
                     <!-- squads include -->
-                    <b><?php echo $myclanname.".".$index_language['squads']; ?></b><br>
+                    <b><?php echo $myclanname . "." . $index_language[ 'squads' ]; ?></b><br>
+
                     <p class="text-center"><?php include("sc_squads.php"); ?></p>
                     <!-- end squads include -->
                     <hr class="grey">
@@ -189,7 +212,7 @@ header('X-UA-Compatible: IE=edge,chrome=1');
 
                 <div class="visible-sm">
                     <!-- clanwars include -->
-                    <b><?php echo $myclanname.".".$index_language['matches']; ?></b><br>
+                    <b><?php echo $myclanname . "." . $index_language[ 'matches' ]; ?></b><br>
                     <?php include("sc_results.php"); ?>
                     <!-- end clanwars include -->
                     <hr class="grey">
@@ -197,7 +220,7 @@ header('X-UA-Compatible: IE=edge,chrome=1');
 
                 <div class="visible-lg">
                     <!-- demos include -->
-                    <b><?php echo $myclanname.".".$index_language['demos']; ?></b><br>
+                    <b><?php echo $myclanname . "." . $index_language[ 'demos' ]; ?></b><br>
                     <?php include("sc_demos.php"); ?>
                     <!-- end demos include -->
                     <hr class="grey">
@@ -205,7 +228,7 @@ header('X-UA-Compatible: IE=edge,chrome=1');
 
                 <div class="visible-lg">
                     <!-- upcoming events include -->
-                    <b><?php echo $myclanname.".".$index_language['upcoming_events']; ?></b><br>
+                    <b><?php echo $myclanname . "." . $index_language[ 'upcoming_events' ]; ?></b><br>
                     <?php include("sc_upcoming.php"); ?>
                     <!-- end upcoming events include -->
                     <hr class="grey">
@@ -213,7 +236,8 @@ header('X-UA-Compatible: IE=edge,chrome=1');
 
                 <div class="visible-lg">
                     <!-- shoutbox include -->
-                    <b><?php echo $myclanname.".".$index_language['shoutbox']; ?></b><br>
+                    <b><?php echo $myclanname . "." . $index_language[ 'shoutbox' ]; ?></b><br>
+
                     <p class="text-center"><?php include("shoutbox.php"); ?></p>
                     <!-- end shoutbox include -->
                     <hr class="grey">
@@ -222,14 +246,14 @@ header('X-UA-Compatible: IE=edge,chrome=1');
                 <div class="visible-lg">
                     <hr class="grey">
                     <!-- newsletter include -->
-                    <b><?php echo $myclanname.".".$index_language['newsletter']; ?></b><br>
+                    <b><?php echo $myclanname . "." . $index_language[ 'newsletter' ]; ?></b><br>
                     <?php include("sc_newsletter.php"); ?>
                     <!-- end newsletter include -->
                 </div>
 
                 <div class="visible-lg">
                     <!-- statistics include -->
-                    <b><?php echo $myclanname.".".$index_language['statistics']; ?></b><br>
+                    <b><?php echo $myclanname . "." . $index_language[ 'statistics' ]; ?></b><br>
                     <?php include("counter.php"); ?>
                     <!-- end statistics include -->
                     <hr class="grey">
@@ -244,3 +268,4 @@ header('X-UA-Compatible: IE=edge,chrome=1');
 
 </body>
 </html>
+<?php
