@@ -35,7 +35,7 @@ if(isset($_POST['save'])) {
 		$pic = $_FILES['pic'];
 		if(checkforempty(Array('name'))) {
 			safe_query("INSERT INTO ".PREFIX."news_rubrics ( rubric ) values( '".$_POST['name']."' ) ");
-			$id=mysql_insert_id();
+			$id=mysqli_insert_id($_database);
 		
 			$filepath = "../images/news-rubrics/";
 			
@@ -144,7 +144,7 @@ elseif($action=="edit") {
 
 	$rubricID = $_GET['rubricID'];
 	$ergebnis=safe_query("SELECT * FROM ".PREFIX."news_rubrics WHERE rubricID='$rubricID'");
-	$ds=mysql_fetch_array($ergebnis);
+	$ds=mysqli_fetch_array($ergebnis);
 
 	echo'<form method="post" action="admincenter.php?site=rubrics" enctype="multipart/form-data">
   <table width="100%" border="0" cellspacing="1" cellpadding="3">
@@ -186,7 +186,7 @@ else {
 	$CAPCLASS->create_transaction();
 	$hash = $CAPCLASS->get_hash();
 	$i=1;
-  while($ds=mysql_fetch_array($ergebnis)) {
+  while($ds=mysqli_fetch_array($ergebnis)) {
     if($i%2) { $td='td1'; }
     else { $td='td2'; }
     

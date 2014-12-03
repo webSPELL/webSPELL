@@ -26,8 +26,8 @@
 */
 
 $ergebnis=safe_query("SELECT * FROM ".PREFIX."partners WHERE displayed = '1' ORDER BY sort");
-if(mysql_num_rows($ergebnis)) {
-	while($db=mysql_fetch_array($ergebnis)) {
+if(mysqli_num_rows($ergebnis)) {
+	while($db=mysqli_fetch_array($ergebnis)) {
 		$partnerID = $db['partnerID'];
 		$banner = $db['banner'];
 		$alt = htmlspecialchars($db['name']);

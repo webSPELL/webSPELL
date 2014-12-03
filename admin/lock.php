@@ -36,7 +36,7 @@ if(!$closed) {
 	if(isset($_POST['submit']) != "" AND ispageadmin($userID)) {
 		$CAPCLASS = new Captcha;
 		if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
-			if(mysql_num_rows(safe_query("SELECT * FROM `".PREFIX."lock`")))
+			if(mysqli_num_rows(safe_query("SELECT * FROM `".PREFIX."lock`")))
 			safe_query("UPDATE `".PREFIX."lock` SET reason='".$_POST['reason']."', time='".time()."'");
 			else safe_query("INSERT INTO `".PREFIX."lock` (`time`, `reason`) values( '".time()."', '".$_POST['reason']."') ");
 			safe_query("UPDATE `".PREFIX."settings` SET closed='1'");
@@ -49,7 +49,7 @@ if(!$closed) {
 	}
 	else {
 		$ergebnis=safe_query("SELECT * FROM `".PREFIX."lock`");
-		$ds=mysql_fetch_array($ergebnis);
+		$ds=mysqli_fetch_array($ergebnis);
 		$CAPCLASS = new Captcha;
 		$CAPCLASS->create_transaction();
 		$hash = $CAPCLASS->get_hash();
@@ -75,13 +75,13 @@ else {
 	}
 	else {
 		$ergebnis=safe_query("SELECT * FROM `".PREFIX."lock`");
-		$ds=mysql_fetch_array($ergebnis);
+		$ds=mysqli_fetch_array($ergebnis);
 		$CAPCLASS = new Captcha;
 		$CAPCLASS->create_transaction();
 		$hash = $CAPCLASS->get_hash();
     
 		echo'<form method="post" action="admincenter.php?site=lock">
-    '.$_language->module['locked_since'].'&nbsp;'.date("d.m.Y - H:i",$ds['time']).'.<br /><br />
+    '.$_language->module['locked_since'].'&nbsp;'.getformatdatetime($ds['time']).'.<br /><br />
     <input type="checkbox" name="unlock" /> '.$_language->module['unlock_page'].'<br /><br />
     <input type="hidden" name="captcha_hash" value="'.$hash.'" />
     <input type="submit" name="submit" value="'.$_language->module['unlock'].'" />

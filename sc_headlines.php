@@ -29,12 +29,12 @@ if(isset($rubricID) and $rubricID) $only = "AND rubric='".$rubricID."'";
 else $only='';
 
 $ergebnis=safe_query("SELECT * FROM ".PREFIX."news WHERE published='1' ".$only." AND intern<=".isclanmember($userID)." ORDER BY date DESC LIMIT 0,".$maxheadlines);
-if(mysql_num_rows($ergebnis)){
+if(mysqli_num_rows($ergebnis)){
 	echo '<table width="100%" cellspacing="0" cellpadding="2">';
 	$n=1;
-	while($ds=mysql_fetch_array($ergebnis)) {
-		$date=date("d.m.Y", $ds['date']);
-		$time=date("H:i", $ds['date']);
+	while($ds=mysqli_fetch_array($ergebnis)) {
+		$date=getformatdate($ds['date']);
+		$time=getformattime($ds['date']);
 		$news_id=$ds['newsID'];
 		
 		if($n%2) {
@@ -48,7 +48,7 @@ if(mysql_num_rows($ergebnis)){
 		
 		$message_array = array();
 		$query=safe_query("SELECT n.*, c.short AS `countryCode`, c.country FROM ".PREFIX."news_contents n LEFT JOIN ".PREFIX."countries c ON c.short = n.language WHERE n.newsID='".$ds['newsID']."'");
-		while($qs = mysql_fetch_array($query)) {
+		while($qs = mysqli_fetch_array($query)) {
 			$message_array[] = array('lang' => $qs['language'], 'headline' => $qs['headline'], 'message' => $qs['content'], 'country'=> $qs['country'], 'countryShort' => $qs['countryCode']);
 		}
 		$showlang = select_language($message_array);

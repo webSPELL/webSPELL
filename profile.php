@@ -45,9 +45,9 @@ if(isset($id) and getnickname($id) != '') {
 
     $buddylist="";
     $buddys = safe_query("SELECT buddy FROM ".PREFIX."buddys WHERE userID='".$id."'");
-		if(mysql_num_rows($buddys)) {
+		if(mysqli_num_rows($buddys)) {
 			$n = 1;
-			while($db = mysql_fetch_array($buddys)) {
+			while($db = mysqli_fetch_array($buddys)) {
 				$n % 2 ? $bgcolor = BG_1 : $bgcolor = BG_2;
 				$flag = '[flag]'.getcountry($db['buddy']).'[/flag]';
 				$country = flags($flag);
@@ -111,20 +111,20 @@ if(isset($id) and getnickname($id) != '') {
       </tr>';
 
 		if($usergalleries) {
-			if(mysql_num_rows($galleries)) {
+			if(mysqli_num_rows($galleries)) {
 				$n = 1;
-				while($ds = mysql_fetch_array($galleries)) {
+				while($ds = mysqli_fetch_array($galleries)) {
 					$n % 2 ? $bg = BG_1 : $bg = BG_2;
 
-					$piccount = mysql_num_rows(safe_query("SELECT * FROM ".PREFIX."gallery_pictures WHERE galleryID='".$ds['galleryID']."'"));
-					$commentcount = mysql_num_rows(safe_query("SELECT * FROM ".PREFIX."comments WHERE parentID='".$ds['galleryID']."' AND type='ga'"));
+					$piccount = mysqli_num_rows(safe_query("SELECT * FROM ".PREFIX."gallery_pictures WHERE galleryID='".$ds['galleryID']."'"));
+					$commentcount = mysqli_num_rows(safe_query("SELECT * FROM ".PREFIX."comments WHERE parentID='".$ds['galleryID']."' AND type='ga'"));
 
 
-					$gallery['date'] = date("d.m.Y",$ds['date']);
+					$gallery['date'] = getformatdate($ds['date']);
 					$gallery['title'] = cleartext($ds['name']);
 					$gallery['picture'] = $galclass->randompic($ds['galleryID']);
 					$gallery['galleryID'] = $ds['galleryID'];
-					$gallery['count'] = mysql_num_rows(safe_query("SELECT picID FROM `".PREFIX."gallery_pictures` WHERE galleryID='".$ds['galleryID']."'"));
+					$gallery['count'] = mysqli_num_rows(safe_query("SELECT picID FROM `".PREFIX."gallery_pictures` WHERE galleryID='".$ds['galleryID']."'"));
 
 					eval("\$profile = \"".gettemplate("profile_galleries")."\";");
 					echo $profile;
@@ -152,9 +152,9 @@ if(isset($id) and getnickname($id) != '') {
 
 		$topiclist="";
 		$topics=safe_query("SELECT * FROM ".PREFIX."forum_topics WHERE userID='".$id."' AND moveID=0 ORDER BY date DESC");
-		if(mysql_num_rows($topics)) {
+		if(mysqli_num_rows($topics)) {
 			$n = 1;
-			while($db = mysql_fetch_array($topics)) {
+			while($db = mysqli_fetch_array($topics)) {
 				if($db['readgrps'] != "") {
 					$usergrps = explode(";", $db['readgrps']);
 					$usergrp = 0;
@@ -167,7 +167,7 @@ if(isset($id) and getnickname($id) != '') {
 					if(!$usergrp and !ismoderator($userID, $db['boardID'])) continue;
 				}
 				$n % 2 ? $bgcolor = BG_1 : $bgcolor = BG_2;
-				$posttime = date("d.m.y H:i", $db['date']);
+				$posttime = getformatdatetime($db['date']);
 
 				$topiclist .= '<tr bgcolor="'.$bgcolor.'">
             <td width="50%">
@@ -189,9 +189,9 @@ if(isset($id) and getnickname($id) != '') {
 
 		$postlist="";
 		$posts=safe_query("SELECT ".PREFIX."forum_topics.boardID, ".PREFIX."forum_topics.readgrps, ".PREFIX."forum_topics.topicID, ".PREFIX."forum_topics.topic, ".PREFIX."forum_posts.date, ".PREFIX."forum_posts.message FROM ".PREFIX."forum_posts, ".PREFIX."forum_topics WHERE ".PREFIX."forum_posts.poster='".$id."' AND ".PREFIX."forum_posts.topicID=".PREFIX."forum_topics.topicID ORDER BY date DESC");
-		if(mysql_num_rows($posts)) {
+		if(mysqli_num_rows($posts)) {
 			$n = 1;
-			while($db = mysql_fetch_array($posts)) {
+			while($db = mysqli_fetch_array($posts)) {
 				if($db['readgrps'] != "") {
 					$usergrps = explode(";", $db['readgrps']);
 					$usergrp = 0;
@@ -206,7 +206,7 @@ if(isset($id) and getnickname($id) != '') {
 
 				$n % 2 ? $bgcolor1 = BG_1 : $bgcolor1 = BG_2;
 				$n % 2 ? $bgcolor2 = BG_3 : $bgcolor2 = BG_4;
-				$posttime = date("d.m.y h:i", $db['date']);
+				$posttime = getformatdatetime($db['date']);
 				if(mb_strlen($db['message']) > 100) $message = mb_substr($db['message'], 0, 90 + mb_strpos(mb_substr($db['message'], 90, mb_strlen($db['message'])), " "))."...";
 				else $message = $db['message'];
 				$postlist.='<tr bgcolor="'.$bgcolor1.'">
@@ -290,7 +290,7 @@ if(isset($id) and getnickname($id) != '') {
 			$bg1 = BG_1;
 			$bg2 = BG_2;
 
-			$gesamt = mysql_num_rows(safe_query("SELECT gbID FROM ".PREFIX."user_gbook WHERE userID='".$id."'"));
+			$gesamt = mysqli_num_rows(safe_query("SELECT gbID FROM ".PREFIX."user_gbook WHERE userID='".$id."'"));
 
 			if(isset($_GET['page'])) $page = (int)$_GET['page'];
 			$type="DESC";
@@ -333,9 +333,9 @@ if(isset($id) and getnickname($id) != '') {
 			</table>';
 
 			echo '<form method="post" name="form" action="index.php?site=profile&amp;id='.$id.'&amp;action=guestbook&amp;delete=true">';
-			while ($ds = mysql_fetch_array($ergebnis)) {
+			while ($ds = mysqli_fetch_array($ergebnis)) {
 				$n % 2 ? $bg1 = BG_1 : $bg1 = BG_2;
-				$date = date("d.m.Y - H:i", $ds['date']);
+				$date = getformatdatetime($ds['date']);
 
 				if(validate_email($ds['email'])) $email = '<a href="mailto:'.mail_protect($ds['email']).'"><img src="images/icons/email.gif" border="0" alt="'.$_language->module['email'].'" /></a>';
 				else $email = '';
@@ -414,12 +414,12 @@ if(isset($id) and getnickname($id) != '') {
 
 		$date = time();
 		$ergebnis = safe_query("SELECT * FROM ".PREFIX."user WHERE userID='".$id."'");
-		$anz = mysql_num_rows($ergebnis);
-		$ds = mysql_fetch_array($ergebnis);
+		$anz = mysqli_num_rows($ergebnis);
+		$ds = mysqli_fetch_array($ergebnis);
 
 		if($userID != $id && $userID != 0) {
 			safe_query("UPDATE ".PREFIX."user SET visits=visits+1 WHERE userID='".$id."'");
-			if(mysql_num_rows(safe_query("SELECT visitID FROM ".PREFIX."user_visitors WHERE userID='".$id."' AND visitor='".$userID."'")))
+			if(mysqli_num_rows(safe_query("SELECT visitID FROM ".PREFIX."user_visitors WHERE userID='".$id."' AND visitor='".$userID."'")))
 			safe_query("UPDATE ".PREFIX."user_visitors SET date='".$date."' WHERE userID='".$id."' AND visitor='".$userID."'");
 			else safe_query("INSERT INTO ".PREFIX."user_visitors (userID, visitor, date) values ('".$id."', '".$userID."', '".$date."')");
 		}
@@ -429,8 +429,8 @@ if(isset($id) and getnickname($id) != '') {
 		$nickname = $ds['nickname'];
 		if(isclanmember($id)) $member = ' <img src="images/icons/member.gif" alt="'.$_language->module['clanmember'].'" />';
 		else $member = '';
-		$registered = date("d.m.Y - H:i", $ds['registerdate']);
-		$lastlogin = date("d.m.Y - H:i", $ds['lastlogin']);
+		$registered = getformatdatetime($ds['registerdate']);
+		$lastlogin = getformatdatetime($ds['lastlogin']);
 		if($ds['avatar']) $avatar = '<img src="images/avatars/'.$ds['avatar'].'" alt="" />';
 		else $avatar = '<img src="images/avatars/noavatar.gif" border="0" alt="" />';
 		$status = isonline($ds['userID']);
@@ -473,10 +473,10 @@ if(isset($id) and getnickname($id) != '') {
 		$lastname = clearfromtags($ds['lastname']);
 
 		$birthday = mb_substr($ds['birthday'], 0, 10);
-		$birthday = date("d.m.Y",strtotime($birthday));
+		$birthday = getformatdate(strtotime($birthday));
 		
 		$res = safe_query("SELECT birthday, DATE_FORMAT(FROM_DAYS(TO_DAYS(NOW()) - TO_DAYS(birthday)), '%Y') 'age' FROM ".PREFIX."user WHERE userID = '".$id."'");
-		$cur = mysql_fetch_array($res);
+		$cur = mysqli_fetch_array($res);
 		$birthday = $birthday." (".(int)$cur['age']." ".$_language->module['years'].")";
 
 		if($ds['sex'] == "f") $sex = $_language->module['female'];
@@ -537,16 +537,16 @@ if(isset($id) and getnickname($id) != '') {
 		else {
 			$posts = getuserforumposts($ds['userID']);
 			$ergebnis = safe_query("SELECT * FROM ".PREFIX."forum_ranks WHERE ".$posts." >= postmin AND ".$posts." <= postmax AND postmax >0");
-			$ds = mysql_fetch_array($ergebnis);
+			$ds = mysqli_fetch_array($ergebnis);
 			$usertype = $ds['rank'];
 			$rang = '<img src="images/icons/ranks/'.$ds['pic'].'" alt="" />';
 		}
 
 		$lastvisits="";
 		$visitors = safe_query("SELECT v.*, u.nickname, u.country FROM ".PREFIX."user_visitors v JOIN ".PREFIX."user u ON u.userID = v.visitor WHERE v.userID='".$id."' ORDER BY v.date DESC LIMIT 0,10");
-		if(mysql_num_rows($visitors)) {
+		if(mysqli_num_rows($visitors)) {
 			$n = 1;
-			while($dv = mysql_fetch_array($visitors)) {
+			while($dv = mysqli_fetch_array($visitors)) {
 				$n % 2 ? $bgcolor = BG_1 : $bgcolor = BG_2;
 				$flag = '[flag]'.$dv['country'].'[/flag]';
 				$country = flags($flag);

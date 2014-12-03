@@ -118,7 +118,7 @@ elseif($action=="edit") {
 	$awardID = $_GET['awardID'];
 	if(isclanwaradmin($userID) || isnewsadmin($userID)) {
 		$_language->read_module('bbcode', true);
-		$ds=mysql_fetch_array(safe_query("SELECT * FROM ".PREFIX."awards WHERE awardID='$awardID'"));
+		$ds=mysqli_fetch_array(safe_query("SELECT * FROM ".PREFIX."awards WHERE awardID='$awardID'"));
 		$day = "";
 		for($i=1; $i<32; $i++) {
 			if($i==date("d", $ds['date'])) $day.='<option selected="selected">'.$i.'</option>';
@@ -156,7 +156,7 @@ elseif($action=="showsquad") {
 
 	if(isclanwaradmin($userID) || isnewsadmin($userID)) echo'<input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=awards&amp;action=new\');return document.MM_returnValue" value="'.$_language->module['new_award'].'" /><br /><br />';
 	$alle=safe_query("SELECT awardID FROM ".PREFIX."awards WHERE squadID='$squadID'");
-	$gesamt = mysql_num_rows($alle);
+	$gesamt = mysqli_num_rows($alle);
 	$pages=1;
 	$max=$maxawards;
 	
@@ -189,7 +189,7 @@ elseif($action=="showsquad") {
 		eval ("\$awards_head = \"".gettemplate("awards_head")."\";");
 		echo $awards_head;
 		$n=1;
-		while($ds=mysql_fetch_array($ergebnis)) {
+		while($ds=mysqli_fetch_array($ergebnis)) {
 			if($n%2) {
 				$bg1=BG_1;
 				$bg2=BG_2;
@@ -198,7 +198,7 @@ elseif($action=="showsquad") {
 				$bg1=BG_3;
 				$bg2=BG_4;
 			}
-			$date=date("d.m.Y", $ds['date']);
+			$date=getformatdate($ds['date']);
 			$squad=getsquadname($ds['squadID']);
 			$award=cleartext($ds['award']);
 			$homepage=$ds['homepage'];
@@ -222,7 +222,7 @@ elseif($action=="showsquad") {
 
 } elseif($action=="details") {
 	$awardID = $_GET['awardID'];
-	$ds=mysql_fetch_array(safe_query("SELECT * FROM ".PREFIX."awards WHERE awardID='$awardID'"));
+	$ds=mysqli_fetch_array(safe_query("SELECT * FROM ".PREFIX."awards WHERE awardID='$awardID'"));
 
 	$rang=$ds['rang'];
 	if($rang=='') $rang="-";
@@ -230,7 +230,7 @@ elseif($action=="showsquad") {
 	if($award=='') $award="-";
 	$squad=getsquadname($ds['squadID']);
 	$squadID=$ds['squadID'];
-	$date=date("d.m.Y", $ds['date']);
+	$date=getformatdate($ds['date']);
 	$info=htmloutput($ds['info']);
 	if($info=='') $info="-";
 	$homepage = '<a href="http://'.getinput(str_replace('http://','',$ds['homepage'])).'" target="_blank">'.$ds['homepage'].'</a>';
@@ -255,7 +255,7 @@ else {
   if(isclanwaradmin($userID) || isnewsadmin($userID)) echo'<input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=awards&amp;action=new\');return document.MM_returnValue" value="'.$_language->module['new_award'].'" /><br /><br />';
 	
   $alle=safe_query("SELECT awardID FROM ".PREFIX."awards");
-	$gesamt = mysql_num_rows($alle);
+	$gesamt = mysqli_num_rows($alle);
 	$pages=1;
 	$max=$maxawards;
 	$pages = ceil($gesamt/$max);
@@ -289,7 +289,7 @@ else {
 		echo $awards_head;
     
 		$n=1;
-		while($ds=mysql_fetch_array($ergebnis)) {
+		while($ds=mysqli_fetch_array($ergebnis)) {
 			if($n%2) {
 				$bg1=BG_1;
 				$bg2=BG_2;
@@ -299,7 +299,7 @@ else {
 				$bg2=BG_4;
 			}
 			
-      $date=date("d.m.Y", $ds['date']);
+      		$date=getformatdate($ds['date']);
 			$squad='<a href="index.php?site=members&amp;action=showsquad&amp;squadID='.$ds['squadID'].'&amp;page='.$page.'&amp;sort='.$sort.'&amp;type='.$type.'">'.getsquadname($ds['squadID']).'</a>';
 			$award=cleartext($ds['award']);
 			$homepage=$ds['homepage'];

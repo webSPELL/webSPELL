@@ -47,7 +47,7 @@ if(isset($_POST['save'])) {
 	  
 	  // check nickname inuse
 		$ergebnis = safe_query("SELECT * FROM ".PREFIX."user WHERE nickname = '$nickname' ");
-		$num = mysql_num_rows($ergebnis);
+		$num = mysqli_num_rows($ergebnis);
 		if($num) $error[]=$_language->module['nickname_inuse'];
 	  
 	  // check username
@@ -56,7 +56,7 @@ if(isset($_POST['save'])) {
 	  
 	  // check username inuse
 		$ergebnis = safe_query("SELECT * FROM ".PREFIX."user WHERE username = '$username' ");
-		$num = mysql_num_rows($ergebnis);
+		$num = mysqli_num_rows($ergebnis);
 		if($num) $error[]=$_language->module['username_inuse'];
 	  
 	  // check passwort
@@ -70,12 +70,18 @@ if(isset($_POST['save'])) {
 	  
 	  // check e-mail inuse
 		$ergebnis = safe_query("SELECT userID FROM ".PREFIX."user WHERE email = '$mail' ");
-		$num = mysql_num_rows($ergebnis);
+		$num = mysqli_num_rows($ergebnis);
 		if($num) $error[]=$_language->module['mail_inuse'];
 	  
 	  // check captcha
 	  	if(!$CAPCLASS->check_captcha($_POST['captcha'], $_POST['captcha_hash'])) $error[]=$_language->module['wrong_securitycode'];
-	  
+	 
+		// check exisitings accounts from ip with same password
+	  	$get_users = safe_query("SELECT userID FROM ".PREFIX."user WHERE password='$md5pwd' AND ip='".$GLOBALS['ip']."'");
+	  	if(mysqli_num_rows($get_users)){
+	  		$error[]='Only one Account per IP';
+	  	}
+	  	
 	  	if(count($error)) {
 	    	$list = implode('<br />&#8226; ', $error);
 	    	$showerror = '<div class="errorbox">
@@ -87,12 +93,12 @@ if(isset($_POST['save'])) {
 			// insert in db
 			$md5pwd = md5(stripslashes($pwd1));
 			$registerdate=time();
-			$activationkey = createkey(20);
+			$activationkey = md5(RandPass(20));
 			$activationlink='http://'.$hp_url.'/index.php?site=register&key='.$activationkey;
 	
-			safe_query("INSERT INTO `".PREFIX."user` (`registerdate`, `lastlogin`, `username`, `password`, `nickname`, `email`, `newsletter`, `activated`) VALUES ('$registerdate', '$registerdate', '$username', '$md5pwd', '$nickname', '$mail', '1', '".$activationkey."')");
+			safe_query("INSERT INTO `".PREFIX."user` (`registerdate`, `lastlogin`, `username`, `password`, `nickname`, `email`, `newsletter`, `activated`,`ip`, `date_format`, `time_format`) VALUES ('$registerdate', '$registerdate', '$username', '$md5pwd', '$nickname', '$mail', '1', '".$activationkey."','".$GLOBALS['ip']."', '".$default_format_date."', '".$default_format_time."')");
 	
-			$insertid = mysql_insert_id();
+			$insertid = mysqli_insert_id($_database);
 	
 			// insert in user_groups
 			safe_query("INSERT INTO ".PREFIX."user_groups ( userID ) values('$insertid' )");
@@ -120,14 +126,14 @@ if(isset($_POST['save'])) {
 if(isset($_GET['key'])) {
 
 	safe_query("UPDATE `".PREFIX."user` SET activated='1' WHERE activated='".$_GET['key']."'");
-	if(mysql_affected_rows()) redirect('index.php?site=login',$_language->module['activation_successful'],3);
+	if(mysqli_affected_rows()) redirect('index.php?site=login',$_language->module['activation_successful'],3);
 	else redirect('index.php?site=login',$_language->module['wrong_activationkey'],3);
 
 }
 elseif(isset($_GET['mailkey'])) {
   if(mb_strlen(trim($_GET['mailkey']))==32){
 		safe_query("UPDATE `".PREFIX."user` SET email_activate='1', email=email_change, email_change='' WHERE email_activate='".$_GET['mailkey']."'");
-		if(mysql_affected_rows()) redirect('index.php?site=login',$_language->module['mail_activation_successful'],3);
+		if(mysqli_affected_rows()) redirect('index.php?site=login',$_language->module['mail_activation_successful'],3);
 		else redirect('index.php?site=login',$_language->module['wrong_activationkey'],3);
   }
 }

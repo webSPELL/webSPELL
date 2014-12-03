@@ -36,10 +36,10 @@ if($userID && !isset($_GET['userID']) && !isset($_POST['userID'])) {
 	$bghead=BGHEAD;
 	$bgcat=BGCAT;
 
-	$ds=mysql_fetch_array(safe_query("SELECT registerdate FROM `".PREFIX."user` WHERE userID='".$userID."'"));
+	$ds=mysqli_fetch_array(safe_query("SELECT registerdate FROM `".PREFIX."user` WHERE userID='".$userID."'"));
 	$username='<a href="index.php?site=profile&amp;id='.$userID.'">'.getnickname($userID).'</a>';
-	$lastlogin = date('d.m.Y, H:i',$_SESSION['ws_lastlogin']);
-	$registerdate = date('d.m.Y, H:i',$ds['registerdate']);
+	$lastlogin = getformatdatetime($_SESSION['ws_lastlogin']);
+	$registerdate = getformatdatetime($ds['registerdate']);
 
 	//messages?
 	$newmessages = getnewmessages($userID);
@@ -66,15 +66,15 @@ if($userID && !isset($_GET['userID']) && !isset($_POST['userID'])) {
 					0, 10");
 	$topics=safe_query("SELECT * FROM ".PREFIX."forum_topics WHERE date > ".$_SESSION['ws_lastlogin']." LIMIT 0, 10");
 
-	$new_posts=mysql_num_rows(safe_query("SELECT p.postID FROM `".PREFIX."forum_posts` AS p, `".PREFIX."forum_topics` AS t WHERE p.date>".$_SESSION['ws_lastlogin']." AND p.topicID = t.topicID"));
-	$new_topics=mysql_num_rows(safe_query("SELECT * FROM ".PREFIX."forum_topics WHERE date > ".$_SESSION['ws_lastlogin']));
+	$new_posts=mysqli_num_rows(safe_query("SELECT p.postID FROM `".PREFIX."forum_posts` AS p, `".PREFIX."forum_topics` AS t WHERE p.date>".$_SESSION['ws_lastlogin']." AND p.topicID = t.topicID"));
+	$new_topics=mysqli_num_rows(safe_query("SELECT * FROM ".PREFIX."forum_topics WHERE date > ".$_SESSION['ws_lastlogin']));
 
 	//new topics
 
   $topiclist="";
-	if(mysql_num_rows($topics)) {
+	if(mysqli_num_rows($topics)) {
 		$n=1;
-		while($db=mysql_fetch_array($topics)) {
+		while($db=mysqli_fetch_array($topics)) {
 			if($db['readgrps'] != "") {
 				$usergrps = explode(";", $db['readgrps']);
 				$usergrp = 0;
@@ -87,7 +87,7 @@ if($userID && !isset($_GET['userID']) && !isset($_POST['userID'])) {
 				if(!$usergrp and !ismoderator($userID, $db['boardID'])) continue;
 			}
 			$n%2 ? $bgcolor=BG_1 : $bgcolor=BG_2;
-			$posttime=date("d.m.y H:i",$db['date']);
+			$posttime=getformatdatetime($db['date']);
 
 			$topiclist.='<tr bgcolor="'.$bgcolor.'">
           <td>
@@ -109,9 +109,9 @@ if($userID && !isset($_GET['userID']) && !isset($_POST['userID'])) {
 	//new posts
 
 	$postlist="";
-  if(mysql_num_rows($posts)) {
+  if(mysqli_num_rows($posts)) {
 		$n=1;
-		while($db=mysql_fetch_array($posts)) {
+		while($db=mysqli_fetch_array($posts)) {
 			if($db['readgrps'] != "") {
 				$usergrps = explode(";", $db['readgrps']);
 				$usergrp = 0;
@@ -125,7 +125,7 @@ if($userID && !isset($_GET['userID']) && !isset($_POST['userID'])) {
 			}
 			$n%2 ? $bgcolor1=BG_1 : $bgcolor1=BG_2;
 			$n%2 ? $bgcolor2=BG_3 : $bgcolor2=BG_4;
-			$posttime=date("d.m.y H:i",$db['date']);
+			$posttime=getformatdatetime($db['date']);
 			if(mb_strlen($db['message']) > 100) $message=mb_substr($db['message'],0,90+mb_strpos(mb_substr($db['message'],90,mb_strlen($db['message']))," "))."...";
 			else $message = $db['message'];
 
@@ -177,15 +177,15 @@ if($userID && !isset($_GET['userID']) && !isset($_POST['userID'])) {
     </tr>';
 
 		$squads=safe_query("SELECT squadID FROM `".PREFIX."squads_members` WHERE userID='".$userID."'");
-		while($squad=mysql_fetch_array($squads)) {
+		while($squad=mysqli_fetch_array($squads)) {
 
 			if(isgamesquad($squad['squadID'])) {
 
-				$dn=mysql_fetch_array(safe_query("SELECT name FROM `".PREFIX."squads` WHERE squadID='".$squad['squadID']."' AND gamesquad='1'"));
+				$dn=mysqli_fetch_array(safe_query("SELECT name FROM `".PREFIX."squads` WHERE squadID='".$squad['squadID']."' AND gamesquad='1'"));
 				$clanwars .= '<tr><td><i>'.$_language->module['squad'].': '.$dn['name'].'</i></td></tr><tr><td align="center">';
 				$n = 1;
 				$ergebnis=safe_query("SELECT * FROM `".PREFIX."upcoming` WHERE type='c' AND squad='".$squad['squadID']."' AND date>".time()." ORDER by date");
-				$anz = mysql_num_rows($ergebnis);
+				$anz = mysqli_num_rows($ergebnis);
 				
         if($anz) {
 			$clanwars .= '<table border="0" width="98%" cellpadding="2">
@@ -196,15 +196,15 @@ if($userID && !isset($_GET['userID']) && !isset($_POST['userID'])) {
 					<td width="10%"><b>'.$_language->module['announce'].'</b></td>
 				</tr>';
 				
-				while($ds=mysql_fetch_array($ergebnis)) {
+				while($ds=mysqli_fetch_array($ergebnis)) {
 					$n%2 ? $bg=BG_1 : $bg=BG_2;
-					$date=date("d.m.y", $ds['date']);
+					$date=getformatdate($ds['date']);
 					
 					$anmeldung=safe_query("SELECT * FROM ".PREFIX."upcoming_announce WHERE upID='".$ds['upID']."'");
-					if(mysql_num_rows($anmeldung)) {
+					if(mysqli_num_rows($anmeldung)) {
 						$i=1;
 						$players = "";
-						while ($da = mysql_fetch_array($anmeldung)) {
+						while ($da = mysqli_fetch_array($anmeldung)) {
 							if ($da['status'] == "y") $fontcolor = $wincolor;
 							elseif ($da['status'] == "n") $fontcolor = $loosecolor;
 							else $fontcolor = $drawcolor;
@@ -242,15 +242,15 @@ if($userID && !isset($_GET['userID']) && !isset($_POST['userID'])) {
 		
 	$events = '';
 	$ergebnis=safe_query("SELECT * FROM `".PREFIX."upcoming` WHERE type='d' AND date>".time()." ORDER by date");
-	$anz = mysql_num_rows($ergebnis);
+	$anz = mysqli_num_rows($ergebnis);
 	if($anz) {
 		$n=1;
-		while($ds=mysql_fetch_array($ergebnis)) {
+		while($ds=mysqli_fetch_array($ergebnis)) {
 			$n%2 ? $bg=BG_1 : $bg=BG_2;
 			$events.='<tr>
 				<td bgcolor="'.$bg.'">'.$ds['title'].'</td>
-				<td bgcolor="'.$bg.'">'.date('d.m.y, H:i', $ds['date']).'</td>
-				<td bgcolor="'.$bg.'">'.date('d.m.y, H:i', $ds['enddate']).'</td>
+				<td bgcolor="'.$bg.'">'.getformatdatetime($ds['date']).'</td>
+				<td bgcolor="'.$bg.'">'.getformatdatetime($ds['enddate']).'</td>
 				<td bgcolor="'.$bg.'">'.$ds['location'].'</td>
 				<td bgcolor="'.$bg.'"><a href="index.php?site=calendar&amp;tag='.date('d',$ds['date']).'&amp;month='.date('m',$ds['date']).'&amp;year='.date('Y',$ds['date']).'#event">'.$_language->module['click'].'</a></td>
 			</tr>';

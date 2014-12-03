@@ -37,8 +37,8 @@ function checkCommentsAllow($type, $parentID){
 	$allowed = 0;
 	$modul = $moduls[$type];
 	$get = safe_query("SELECT ".$modul[2]." FROM ".PREFIX.$modul[0]." WHERE ".$modul[1]."='".$parentID."'");
-	if(mysql_num_rows($get)){
-		$data = mysql_fetch_assoc($get);
+	if(mysqli_num_rows($get)){
+		$data = mysqli_fetch_assoc($get);
 		switch($data[$modul[2]]){
 			case 0: $allowed = 0; break;
 			case 1: if($userID) $allowed = 1; break;
@@ -64,19 +64,28 @@ if(isset($_POST['savevisitorcomment'])) {
 
 	setcookie("visitor_info", $name."--||--".$mail."--||--".$url, time()+(3600*24*365));
 	$query = safe_query("SELECT nickname, username FROM ".PREFIX."user ORDER BY nickname");
-	while($ds=mysql_fetch_array($query)) {
+	while($ds=mysqli_fetch_array($query)) {
 		$nicks[] = $ds['nickname'];
 		$nicks[] = $ds['username'];
 	}
 	$_SESSION['comments_message'] = $message;
 
+	$spamApi = SpamApi::getInstance();
+	$validation = $spamApi->validate($message);
+	
 	if(in_array(trim($name), $nicks)) header("Location: ".$_POST['referer']."&error=nickname#addcomment");
 	elseif(!($CAPCLASS->check_captcha($_POST['captcha'], $_POST['captcha_hash']))) header("Location: ".$_POST['referer']."&error=captcha#addcomment");
 	elseif(checkCommentsAllow($type,$parentID) == false ) header("Location: ".$_POST['referer']);
 	else {
 		$date=time();
-		safe_query("INSERT INTO ".PREFIX."comments ( parentID, type, nickname, date, comment, url, email, ip )
+		if($validation == SpamApi::Spam){
+			safe_query("INSERT INTO ".PREFIX."comments_spam ( parentID, type, nickname, date, comment, url, email, ip, rating )
+		            values( '".$parentID."', '".$type."', '".$name."', '".$date."', '".$message."', '".$url."', '".$mail."', '".$ip."', '".$rating."' ) ");
+		}
+		else{
+			safe_query("INSERT INTO ".PREFIX."comments ( parentID, type, nickname, date, comment, url, email, ip )
 		            values( '".$parentID."', '".$type."', '".$name."', '".$date."', '".$message."', '".$url."', '".$mail."', '".$ip."' ) ");
+		}
 		unset($_SESSION['comments_message']);
 		header("Location: ".$_POST['referer']);
 	}
@@ -91,9 +100,18 @@ elseif(isset($_POST['saveusercomment'])) {
 	$parentID = $_POST['parentID'];
 	$type = $_POST['type'];
 	$message = $_POST['message'];
+
+	$spamApi = SpamApi::getInstance();
+	$validation = $spamApi->validate($message);
+	
 	if(checkCommentsAllow($type,$parentID)){
 		$date=time();
-		safe_query("INSERT INTO ".PREFIX."comments ( parentID, type, userID, date, comment ) values( '".$parentID."', '".$type."', '".$userID."', '".$date."', '".$message."' ) ");
+		if($validation == SpamApi::Spam){
+			safe_query("INSERT INTO ".PREFIX."comments_spam ( parentID, type, userID, date, comment,rating ) values( '".$parentID."', '".$type."', '".$userID."', '".$date."', '".$message."', '".$rating."' ) ");
+		}
+		else{
+			safe_query("INSERT INTO ".PREFIX."comments ( parentID, type, userID, date, comment ) values( '".$parentID."', '".$type."', '".$userID."', '".$date."', '".$message."' ) ");
+		}
 	}
 	header("Location: ".$_POST['referer']);
 }
@@ -116,8 +134,8 @@ elseif(isset($_GET['editcomment'])) {
 	if(isfeedbackadmin($userID) or iscommentposter($userID,$id)) {
 		if(!empty($id)) {
 			$dt = safe_query("SELECT * FROM ".PREFIX."comments WHERE commentID='".$id."'");
-			if(mysql_num_rows($dt)) {
-				$ds = mysql_fetch_array($dt);
+			if(mysqli_num_rows($dt)) {
+				$ds = mysqli_fetch_array($dt);
 				$poster='<a href="index.php?site=profile&amp;id='.$ds['userID'].'"><b>'.getnickname($ds['userID']).'</b></a>';
 				$message=getinput($ds['comment']);
 				$message=preg_replace("#\n\[br\]\[br\]\[hr]\*\*(.+)#si", '', $message);
@@ -170,7 +188,7 @@ else {
 	if(!isset($type) AND isset($_GET['type'])) $type = mb_substr($_GET['type'], 0, 2);
 
 	$alle=safe_query("SELECT commentID FROM ".PREFIX."comments WHERE parentID='$parentID' AND type='$type'");
-	$gesamt=mysql_num_rows($alle);
+	$gesamt=mysqli_num_rows($alle);
 	$commentspages=ceil($gesamt/$maxfeedback);
 
 	if($commentspages>1) $page_link = makepagelink("$referer&amp;sorttype=$sorttype", $commentspage, $commentspages, 'comments');
@@ -200,10 +218,10 @@ else {
 		eval ("\$comments_head = \"".gettemplate("comments_head")."\";");
 		echo $comments_head;
 
-		while($ds=mysql_fetch_array($ergebnis)) {
+		while($ds=mysqli_fetch_array($ergebnis)) {
 			$n%2 ? $bg1=BG_1 : $bg1=BG_3;
 
-			$date=date("d.m.Y - H:i", $ds['date']);
+			$date=getformatdatetime($ds['date']);
 
 			if($ds['userID']) {
 				$ip='';
@@ -281,6 +299,14 @@ else {
 			if(isfeedbackadmin($userID)) $actions='<input class="input" type="checkbox" name="commentID[]" value="'.$ds['commentID'].'" />';
 			else $actions='';
 
+			$spam_buttons = "";
+			if(!empty($spamapikey)){
+				if(ispageadmin($userID)){
+					$spam_buttons = '<input type="button" value="Spam" onclick="eventfetch(\'ajax_spamfilter.php?commentID='.$ds['commentID'].'&type=spam\',\'\',\'return\')" />
+	<input type="button" value="Ham" onclick="eventfetch(\'ajax_spamfilter.php?commentID='.$ds['commentID'].'&type=ham\',\'\',\'return\')" />';
+				}
+			}
+
 			eval ("\$comments = \"".gettemplate("comments")."\";");
 			echo $comments;
 
@@ -319,7 +345,7 @@ else {
 		}
 		elseif($comments_allowed == 2) {
     
-			$ip = getenv('REMOTE_ADDR');
+			$ip = $GLOBALS['ip'];
 			
 			if (isset($_COOKIE['visitor_info'])) {
 				$visitor = explode("--||--", $_COOKIE['visitor_info']);

@@ -31,6 +31,7 @@ $language_array = Array(
 
   'about_us'=>'Rólunk',
   'access_denied'=>'Hozzáférés megtagadva',
+  'addons'=>'Kiegészítések',
   'bannerrotation'=>'Mozgó bannerek',
   'boards'=>'Témák',
   'clanmembers'=>'Klántagok',
@@ -75,6 +76,12 @@ $language_array = Array(
   'update_webspell'=>'webSPELL frissítés',
   'user_administration'=>'Felhasználói beállítások',
   'user_ranks'=>'Rangok',
-  'visitor_statistics'=>'Látogatói statisztikák'
+  'visitor_statistics'=>'Látogatói statisztikák',
+  'spam'=>'Spam',
+  'spam_forum'=>'Posts / Topics',
+  'spam_user'=>'Remove User',
+  'multiaccounts'=>'Multi-Accounts',
+  'api_log'=>'API Log',
+  'blocked_content'=>'Blocked Content'
 );
 ?>

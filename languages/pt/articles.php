@@ -71,6 +71,7 @@ $language_array = Array(
 	'upload_images'=>'Carregar imagens',
 	'user_comments'=>'Activar comentários de utilizadores',
 	'viewed'=>'Vistas',
-	'visitor_comments'=>'Activar comentários de visitantes'
+	'visitor_comments'=>'Activar comentários de visitantes',
+	'tags'=>'Marcações'
 );
 ?>

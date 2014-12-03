@@ -35,14 +35,14 @@ if(isset($_POST['submit']) != "") {
 	$about = $_POST['message'];
 	$CAPCLASS = new Captcha;
 	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
-		if(mysql_num_rows(safe_query("SELECT * FROM ".PREFIX."about")))	safe_query("UPDATE ".PREFIX."about SET about='".$about."'");
+		if(mysqli_num_rows(safe_query("SELECT * FROM ".PREFIX."about")))	safe_query("UPDATE ".PREFIX."about SET about='".$about."'");
 		else safe_query("INSERT INTO ".PREFIX."about (about) values( '".$about."') ");
 		redirect("admincenter.php?site=about", "", 0);
 	} else echo $_language->module['transaction_invalid'];
 }
 else {
 	$ergebnis=safe_query("SELECT * FROM ".PREFIX."about");
-	$ds=mysql_fetch_array($ergebnis);
+	$ds=mysqli_fetch_array($ergebnis);
 
 	$CAPCLASS = new Captcha;
 	$CAPCLASS->create_transaction();

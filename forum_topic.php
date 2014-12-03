@@ -47,7 +47,7 @@ if(isset($_POST['newreply']) && !isset($_POST['preview'])) {
 	$page = (int)$_POST['page'];
 
 	if(!(mb_strlen(trim($message)))) die($_language->module['forgot_message']);
-	$ds=mysql_fetch_array(safe_query("SELECT closed, writegrps, boardID FROM ".PREFIX."forum_topics WHERE topicID='".$topic."'"));
+	$ds=mysqli_fetch_array(safe_query("SELECT closed, writegrps, boardID FROM ".PREFIX."forum_topics WHERE topicID='".$topic."'"));
 	if($ds['closed']) die($_language->module['topic_closed']);
 
 	$writer = 0;
@@ -68,50 +68,59 @@ if(isset($_POST['newreply']) && !isset($_POST['preview'])) {
 		$do_sticky = (isset($_POST['sticky'])) ? ', sticky=1' : ', sticky=0';
 	}
 
+	$spamApi = SpamApi::getInstance();
+	$validation = $spamApi->validate($message);
+
+
 	$date=time();
-	safe_query("INSERT INTO ".PREFIX."forum_posts ( boardID, topicID, date, poster, message ) VALUES( '".$_REQUEST['board']."', '$topic', '$date', '$userID', '".$message."' ) ");
-	$lastpostID = mysql_insert_id();
-	safe_query("UPDATE ".PREFIX."forum_boards SET posts=posts+1 WHERE boardID='".$_REQUEST['board']."' ");
-	safe_query("UPDATE ".PREFIX."forum_topics SET lastdate='".$date."', lastposter='".$userID."', lastpostID='".$lastpostID."', replys=replys+1 $do_sticky WHERE topicID='$topic' ");
+	if($validation == SpamApi::NoSpam){
+		safe_query("INSERT INTO ".PREFIX."forum_posts ( boardID, topicID, date, poster, message ) VALUES( '".$_REQUEST['board']."', '$topic', '$date', '$userID', '".$message."' ) ");
+		$lastpostID = mysqli_insert_id($_database);
+		safe_query("UPDATE ".PREFIX."forum_boards SET posts=posts+1 WHERE boardID='".$_REQUEST['board']."' ");
+		safe_query("UPDATE ".PREFIX."forum_topics SET lastdate='".$date."', lastposter='".$userID."', lastpostID='".$lastpostID."', replys=replys+1 $do_sticky WHERE topicID='$topic' ");
 
-	// check if there are more than 1000 unread topics => delete oldest one
-	$dv = safe_query("SELECT topics FROM ".PREFIX."user WHERE userID='".$userID."'");
-	$array = explode('|', $dv['topics']);
-	if(count($array)>=1000) safe_query("UPDATE ".PREFIX."user SET topics='|".implode('|', array_slice($array, 2))."' WHERE userID='".$userID."'");
-	unset($array);
+		// check if there are more than 1000 unread topics => delete oldest one
+		$dv = safe_query("SELECT topics FROM ".PREFIX."user WHERE userID='".$userID."'");
+		$array = explode('|', $dv['topics']);
+		if(count($array)>=1000) safe_query("UPDATE ".PREFIX."user SET topics='|".implode('|', array_slice($array, 2))."' WHERE userID='".$userID."'");
+		unset($array);
 
-	// add this topic to unread
-	safe_query("UPDATE ".PREFIX."user SET topics=CONCAT(topics, '".$topic."|') WHERE topics NOT LIKE '%|".$topic."|%'"); // update unread topics, format: |oldstring| => |oldstring|topicID|
+		// add this topic to unread
+		safe_query("UPDATE ".PREFIX."user SET topics=CONCAT(topics, '".$topic."|') WHERE topics NOT LIKE '%|".$topic."|%'"); // update unread topics, format: |oldstring| => |oldstring|topicID|
 
-	$emails=array();
-	$ergebnis=safe_query("SELECT f.userID, u.email, u.language FROM ".PREFIX."forum_notify f JOIN ".PREFIX."user u ON u.userID=f.userID WHERE f.topicID=$topic");
-	while($ds=mysql_fetch_array($ergebnis)) {
-		$emails[] = Array('mail'=>$ds['email'], 'lang'=>$ds['language']);
-	}
-	safe_query("DELETE FROM ".PREFIX."forum_notify WHERE topicID='$topic'");
+		$emails=array();
+		$ergebnis=safe_query("SELECT f.userID, u.email, u.language FROM ".PREFIX."forum_notify f JOIN ".PREFIX."user u ON u.userID=f.userID WHERE f.topicID=$topic");
+		while($ds=mysqli_fetch_array($ergebnis)) {
+			$emails[] = Array('mail'=>$ds['email'], 'lang'=>$ds['language']);
+		}
+		safe_query("DELETE FROM ".PREFIX."forum_notify WHERE topicID='$topic'");
 
-	if(count($emails)) {
+		if(count($emails)) {
 
-		$de=mysql_fetch_array(safe_query("SELECT nickname FROM ".PREFIX."user WHERE userID='$userID'"));
-		$poster=$de['nickname'];
-		$de=mysql_fetch_array(safe_query("SELECT topic FROM ".PREFIX."forum_topics WHERE topicID='$topic'"));
-		$topicname=getinput($de['topic']);
+			$de=mysqli_fetch_array(safe_query("SELECT nickname FROM ".PREFIX."user WHERE userID='$userID'"));
+			$poster=$de['nickname'];
+			$de=mysqli_fetch_array(safe_query("SELECT topic FROM ".PREFIX."forum_topics WHERE topicID='$topic'"));
+			$topicname=getinput($de['topic']);
 
-		$link="http://".$hp_url."/index.php?site=forum_topic&topic=".$topic;
-		$maillanguage = new Language;
-		$maillanguage->set_language($default_language);
-		
-		foreach($emails as $email) {
-			$maillanguage->set_language($email['lang']);
-			$maillanguage->read_module('forum');
-			$forum_topic_notify = str_replace(Array('%poster%', '%topic_link%', '%pagetitle%', '%hpurl%'), Array(html_entity_decode($poster), $link, $hp_title, 'http://'.$hp_url), $maillanguage->module['notify_mail']);
-			$header = "From:".$admin_email."\nContent-type: text/plain; charset=utf-8\n";
-			@mail($email['mail'], $maillanguage->module['new_reply'].' ('.$hp_title.')', $forum_topic_notify, $header);
+			$link="http://".$hp_url."/index.php?site=forum_topic&topic=".$topic;
+			$maillanguage = new Language;
+			$maillanguage->set_language($default_language);
+			
+			foreach($emails as $email) {
+				$maillanguage->set_language($email['lang']);
+				$maillanguage->read_module('forum');
+				$forum_topic_notify = str_replace(Array('%poster%', '%topic_link%', '%pagetitle%', '%hpurl%'), Array(html_entity_decode($poster), $link, $hp_title, 'http://'.$hp_url), $maillanguage->module['notify_mail']);
+				$header = "From:".$admin_email."\nContent-type: text/plain; charset=utf-8\n";
+				@mail($email['mail'], $maillanguage->module['new_reply'].' ('.$hp_title.')', $forum_topic_notify, $header);
+			}
+		}
+
+		if(isset($_POST['notify']) and (bool)$_POST['notify']) {
+			safe_query("INSERT INTO ".PREFIX."forum_notify (topicID, userID) values('".$topic."', '".$userID."') ");
 		}
 	}
-
-	if(isset($_POST['notify']) and (bool)$_POST['notify']) {
-		safe_query("INSERT INTO ".PREFIX."forum_notify (topicID, userID) values('".$topic."', '".$userID."') ");
+	else{
+		safe_query("INSERT INTO ".PREFIX."forum_posts_spam ( boardID, topicID, date, poster, message, rating ) VALUES( '".$_REQUEST['board']."', '$topic', '$date', '$userID', '".$message."', '".$rating."' ) ");
 	}
 	header("Location: index.php?site=forum_topic&topic=".$topic."&page=".$page);
 	exit();
@@ -126,7 +135,7 @@ elseif(isset($_POST['editreply']) and (bool)$_POST['editreply']) {
 
 	$message = $_POST['message'];
 	$id = (int)$_POST['id'];
-	$check=mysql_num_rows(safe_query("SELECT postID FROM ".PREFIX."forum_posts WHERE postID='".$id."' AND poster='".$userID."'"));
+	$check=mysqli_num_rows(safe_query("SELECT postID FROM ".PREFIX."forum_posts WHERE postID='".$id."' AND poster='".$userID."'"));
 	if(($check or isforumadmin($userID) or ismoderator($userID,(int)$_GET['board'])) and mb_strlen(trim($message))) {
 		
 		if(isforumadmin($userID) OR isanymoderator($userID, $ds['boardID'])) {
@@ -134,7 +143,7 @@ elseif(isset($_POST['editreply']) and (bool)$_POST['editreply']) {
 			safe_query("UPDATE ".PREFIX."forum_topics SET $do_sticky WHERE topicID='".(int)$_GET['topic']."'");
 		}
 
-		$date=date("d.m.Y - H:i", time());
+		$date=getformatdatetime(time());
 		safe_query("UPDATE ".PREFIX."forum_posts SET message = '".$message."' WHERE postID='$id' ");
 		safe_query("DELETE FROM ".PREFIX."forum_notify WHERE userID='$userID' AND topicID='".(int)$_GET['topic']."'");
 		if(isset($_POST['notify'])) if((bool)$_POST['notify']) safe_query("INSERT INTO ".PREFIX."forum_notify (`notifyID`, `topicID`, `userID`) VALUES ('', '$userID', '".(int)$_GET['topic']."')");
@@ -169,7 +178,7 @@ elseif(isset($_POST['saveedittopic']) and (bool)$_POST['saveedittopic']) {
 	
 		if($notify==1) {
 			$notified = safe_query("SELECT * FROM ".PREFIX."forum_notify WHERE topicID='".$topic."' AND userID='".$userID."'");
-			if(mysql_num_rows($notified)!=1) {
+			if(mysqli_num_rows($notified)!=1) {
 				safe_query("INSERT INTO ".PREFIX."forum_notify (notifyID, topicID, userID) VALUES ('', '$topic', '$userID')");
 			}
 		} else {
@@ -188,6 +197,7 @@ function showtopic($topic, $edit, $addreply, $quoteID, $type) {
 	global $message;
 	global $picsize_l;
 	global $_language;
+	global $spamapikey;
 
 	$_language->read_module('forum');
 	$_language->read_module('bbcode', true);
@@ -198,7 +208,7 @@ function showtopic($topic, $edit, $addreply, $quoteID, $type) {
 	$bgcat=BGCAT;
 
 	$thread = safe_query("SELECT * FROM ".PREFIX."forum_topics WHERE topicID='$topic' ");
-	$dt = mysql_fetch_array($thread);
+	$dt = mysqli_fetch_array($thread);
 
 	$usergrp = 0;
 	$writer = 0;
@@ -228,7 +238,7 @@ function showtopic($topic, $edit, $addreply, $quoteID, $type) {
 	    	return;
 		}
 	}
-	$gesamt = mysql_num_rows(safe_query("SELECT topicID FROM ".PREFIX."forum_posts WHERE topicID='$topic'"));
+	$gesamt = mysqli_num_rows(safe_query("SELECT topicID FROM ".PREFIX."forum_posts WHERE topicID='$topic'"));
 	if($gesamt==0) die($_language->module['topic_not_found']." <a href=\"javascript:history.back()\">back</a>");
 	$pages=1;
 	if(!isset($page) || $site='') $page=1;
@@ -257,9 +267,9 @@ function showtopic($topic, $edit, $addreply, $quoteID, $type) {
 
 	// viewed topics
 
-	if(mysql_num_rows(safe_query("SELECT userID FROM ".PREFIX."user WHERE topics LIKE '%|".$topic."|%'"))) {
+	if(mysqli_num_rows(safe_query("SELECT userID FROM ".PREFIX."user WHERE topics LIKE '%|".$topic."|%'"))) {
 		
-		$gv=mysql_fetch_array(safe_query("SELECT topics FROM ".PREFIX."user WHERE userID='$userID'"));
+		$gv=mysqli_fetch_array(safe_query("SELECT topics FROM ".PREFIX."user WHERE userID='$userID'"));
 		$array=explode("|", $gv['topics']);
 		$new='|';
 		
@@ -275,7 +285,7 @@ function showtopic($topic, $edit, $addreply, $quoteID, $type) {
 	$topicname=getinput($dt['topic']);
 
 	$ergebnis = safe_query("SELECT * FROM ".PREFIX."forum_boards WHERE boardID='".$dt['boardID']."' ");
-	$db = mysql_fetch_array($ergebnis);
+	$db = mysqli_fetch_array($ergebnis);
 	$boardname = $db['name'];
 
 	$moderators=getmoderators($dt['boardID']);
@@ -300,12 +310,12 @@ function showtopic($topic, $edit, $addreply, $quoteID, $type) {
 	if($edit && !$dt['closed']) {
 
 		$id = $_GET['id'];
-		$dr = mysql_fetch_array(safe_query("SELECT * FROM ".PREFIX."forum_posts WHERE postID='".$id."'"));
+		$dr = mysqli_fetch_array(safe_query("SELECT * FROM ".PREFIX."forum_posts WHERE postID='".$id."'"));
 		$topic = $_GET['topic'];
 		$bg1=BG_1;
 		$_sticky = ($dt['sticky'] == '1') ? 'checked="checked"' : '';
 
-		$anz = mysql_num_rows(safe_query("SELECT * FROM ".PREFIX."forum_posts WHERE topicID='".$dt['topicID']."' AND postID='".$id."' AND poster='".$userID."' ORDER BY date ASC LIMIT 0,1"));
+		$anz = mysqli_num_rows(safe_query("SELECT * FROM ".PREFIX."forum_posts WHERE topicID='".$dt['topicID']."' AND postID='".$id."' AND poster='".$userID."' ORDER BY date ASC LIMIT 0,1"));
 		if($anz OR isforumadmin($userID) OR ismoderator($userID,$dt['boardID'])) {
 			if(istopicpost($dt['topicID'], $id)) {
 				$bg1=BG_1;
@@ -317,7 +327,7 @@ function showtopic($topic, $edit, $addreply, $quoteID, $type) {
 
 				// notification check
 				$notifyqry = safe_query("SELECT * FROM ".PREFIX."forum_notify WHERE topicID='".$topic."' AND userID='".$userID."'");
-				if(mysql_num_rows($notifyqry)) {
+				if(mysqli_num_rows($notifyqry)) {
 					$notify = '<input class="input" type="checkbox" name="notify" value="1" checked="checked" /> '.$_language->module['notify_reply'].'<br />';
 				} else {
 					$notify = '<input class="input" type="checkbox" name="notify" value="1" /> '.$_language->module['notify_reply'].'<br />';
@@ -379,7 +389,7 @@ function showtopic($topic, $edit, $addreply, $quoteID, $type) {
 			else {
 				// notification check
 				$notifyqry = safe_query("SELECT * FROM ".PREFIX."forum_notify WHERE topicID='".$topic."' AND userID='".$userID."'");
-				if(mysql_num_rows($notifyqry)) {
+				if(mysqli_num_rows($notifyqry)) {
 					$notify = '<input class="input" type="checkbox" name="notify" value="1" checked="checked" /> '.$_language->module['notify_reply'];
 				} else {
 					$notify = '<input class="input" type="checkbox" name="notify" value="1" /> '.$_language->module['notify_reply'];
@@ -409,7 +419,7 @@ function showtopic($topic, $edit, $addreply, $quoteID, $type) {
 				$bg1=BG_1;
 				$bg2=BG_2;
 
-				$time=date("H:i", time());
+				$time=getformattime(time());
 				$date=$_language->module['today'];
 
 				$message_preview = getforminput($_POST['message']);
@@ -450,7 +460,7 @@ function showtopic($topic, $edit, $addreply, $quoteID, $type) {
 					$rang='<img src="images/icons/ranks/moderator.gif" alt="" />';
 				} else {
 					$ergebnis=safe_query("SELECT * FROM ".PREFIX."forum_ranks WHERE $posts >= postmin AND $posts <= postmax AND postmax >0");
-					$ds=mysql_fetch_array($ergebnis);
+					$ds=mysqli_fetch_array($ergebnis);
 					$usertype=$ds['rank'];
 					$rang='<img src="images/icons/ranks/'.$ds['pic'].'" alt="" />';
 				}
@@ -476,7 +486,7 @@ function showtopic($topic, $edit, $addreply, $quoteID, $type) {
 			else {
 				if($quoteID) {
 					$ergebnis=safe_query("SELECT poster,message FROM ".PREFIX."forum_posts WHERE postID='$quoteID'");
-					$ds=mysql_fetch_array($ergebnis);
+					$ds=mysqli_fetch_array($ergebnis);
 					$message='[quote='.getnickname($ds['poster']).']'.getinput($ds['message']).'[/quote]';
 				}
 			}
@@ -492,7 +502,7 @@ function showtopic($topic, $edit, $addreply, $quoteID, $type) {
 			
 			if(isset($_POST['notify'])) $post_notify = $_POST['notify'];
 			else $post_notify = null;
-			$mysql_notify = mysql_num_rows(safe_query("SELECT notifyID FROM ".PREFIX."forum_notify WHERE userID='".$userID."' AND topicID='".$topic."'"));
+			$mysql_notify = mysqli_num_rows(safe_query("SELECT notifyID FROM ".PREFIX."forum_notify WHERE userID='".$userID."' AND topicID='".$topic."'"));
 			$notify = ($mysql_notify || $post_notify == '1') ? 'checked="checked"' : '';
 			
 			
@@ -516,7 +526,7 @@ function showtopic($topic, $edit, $addreply, $quoteID, $type) {
 	eval ("\$forum_topic_head = \"".gettemplate("forum_topic_head")."\";");
 	echo $forum_topic_head;
 	$i=1;
-	while($dr=mysql_fetch_array($replys)) {
+	while($dr=mysqli_fetch_array($replys)) {
 		if($i%2) {
 			$bg1=BG_1;
 			$bg2=BG_2;
@@ -526,11 +536,11 @@ function showtopic($topic, $edit, $addreply, $quoteID, $type) {
 			$bg2=BG_4;
 		}
 
-		$date=date("d.m.Y", $dr['date']);
-		$time=date("H:i", $dr['date']);
+		$date=getformatdate($dr['date']);
+		$time=getformattime($dr['date']);
 
-		$today=date("d.m.Y", time());
-		$yesterday = date("d.m.Y", time()-3600*24);
+		$today=getformatdate(time());
+		$yesterday = getformatdate(time()-3600*24);
 
 		if($date==$today) $date=$_language->module['today'];
 		elseif($date==$yesterday && $date<$today) $date=$_language->module['yesterday'];
@@ -585,9 +595,17 @@ function showtopic($topic, $edit, $addreply, $quoteID, $type) {
 			$rang='<img src="images/icons/ranks/moderator.gif" alt="" />';
 		} else {
 			$ergebnis=safe_query("SELECT * FROM ".PREFIX."forum_ranks WHERE $posts >= postmin AND $posts <= postmax AND postmax >0");
-			$ds=mysql_fetch_array($ergebnis);
+			$ds=mysqli_fetch_array($ergebnis);
 			$usertype=$ds['rank'];
 			$rang='<img src="images/icons/ranks/'.$ds['pic'].'" alt="" />';
+		}
+
+		$spam_buttons = "";
+		if(!empty($spamapikey)){
+			if(ispageadmin($userID) || ismoderator($userID,$dt['boardID'])){
+				$spam_buttons = '<input type="button" value="Spam" onclick="eventfetch(\'ajax_spamfilter.php?postID='.$postID.'&type=spam\',\'\',\'return\')" />
+<input type="button" value="Ham" onclick="eventfetch(\'ajax_spamfilter.php?postID='.$postID.'&type=ham\',\'\',\'return\')" />';
+			}
 		}
 
 		$actions='';

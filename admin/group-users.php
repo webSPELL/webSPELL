@@ -39,7 +39,7 @@ if(isset($_GET['ajax'])){
 			if($_GET['state'] == "true") $state = "1";
 			else $state = "0";
 			
-			$anz=mysql_num_rows(safe_query("SELECT userID FROM ".PREFIX."user_forum_groups WHERE userID='".$user."'"));
+			$anz=mysqli_num_rows(safe_query("SELECT userID FROM ".PREFIX."user_forum_groups WHERE userID='".$user."'"));
 			if(!$anz) {
 				safe_query("INSERT INTO ".PREFIX."user_forum_groups ( userID ) VALUES ('".$user."')");
 			}
@@ -89,36 +89,36 @@ if(isset($_GET['action'])) {
 		$users=array();
 		if(in_array(0, $_POST['users'])) {
 			$query=safe_query("SELECT userID FROM `".PREFIX."squads_members`");
-			while($ds=mysql_fetch_array($query)) {
+			while($ds=mysqli_fetch_array($query)) {
 				if(!in_array($ds['userID'], $users)) $users[] = $ds['userID'];
 			}
 		}
 		if(in_array(1, $_POST['users'])) {
 			$query=safe_query("SELECT userID FROM `".PREFIX."user_groups` WHERE (page='1' OR forum='1' OR user='1' OR news='1' OR clanwars='1' OR feedback='1' OR super='1' OR gallery='1' OR cash='1' OR files='1')");
-			while($ds=mysql_fetch_array($query)) {
+			while($ds=mysqli_fetch_array($query)) {
 				if(!in_array($ds['userID'], $users)) $users[] = $ds['userID'];
 			}
 		}
 		if(in_array(2, $_POST['users'])) {
 			$query=safe_query("SELECT userID FROM `".PREFIX."user_groups` WHERE super='1'");
-			while($ds=mysql_fetch_array($query)) {
+			while($ds=mysqli_fetch_array($query)) {
 				if(!in_array($ds['userID'], $users)) $users[] = $ds['userID'];
 			}
 		}
 		if(in_array(3, $_POST['users'])) {
-			$fgrID=mysql_fetch_array(safe_query("SELECT fgrID FROM `".PREFIX."forum_groups` WHERE name = '".$_POST['addfield']."'"));
+			$fgrID=mysqli_fetch_array(safe_query("SELECT fgrID FROM `".PREFIX."forum_groups` WHERE name = '".$_POST['addfield']."'"));
 			if(!$fgrID['fgrID']) {
 				echo '<b>'.$_language->module['error_group'].'</b><br /><br /><a href="admincenter.php?site=group-users">&laquo; '.$_language->module['back'].'</a>';
 				break;
 			}
 			$query=safe_query("SELECT userID FROM `".PREFIX."user_forum_groups` WHERE `".$fgrID['fgrID']."` = '1'");
-			while($ds=mysql_fetch_array($query)) {
+			while($ds=mysqli_fetch_array($query)) {
 				if(!in_array($ds['userID'], $users)) $users[] = $ds['userID'];
 			}
 		}
 		if(in_array(4, $_POST['users']) or !count($_POST['users']) or empty($_GET['users'])) {
 			$query=safe_query("SELECT userID FROM `".PREFIX."user`");
-			while($ds=mysql_fetch_array($query)) {
+			while($ds=mysqli_fetch_array($query)) {
 				if(!in_array($ds['userID'], $users)) $users[] = $ds['userID'];
 			}
 		}
@@ -126,7 +126,7 @@ if(isset($_GET['action'])) {
 		if(isset($_POST['groups']))$grps = $_POST['groups'];
 		else $grps = array(1);
 		$sql=safe_query("SELECT * FROM ".PREFIX."forum_groups");
-		while($ds=mysql_fetch_array($sql)) {
+		while($ds=mysqli_fetch_array($sql)) {
 			if(in_array($ds['fgrID'], $grps)) $groups[] = array('fgrID' => $ds['fgrID'], 'name' => getinput($ds['name']));
 		}
 		$groups_anz = count($groups);
@@ -207,7 +207,7 @@ else {
 	$groups = '';
 	$ergebnis=safe_query("SELECT * FROM ".PREFIX."forum_groups");
 	$selector=0;
-	while($ds=mysql_fetch_array($ergebnis)) {	
+	while($ds=mysqli_fetch_array($ergebnis)) {	
 		if($selector==0){
 			$groups .= "\t\t".'<option value="'.$ds['fgrID'].'" selected="selected">'.getinput($ds['name']).'</option>'."\n";
 		}

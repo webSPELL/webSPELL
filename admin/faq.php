@@ -34,6 +34,7 @@ if(isset($_GET['delete'])) {
 	$CAPCLASS = new Captcha;
 	if($CAPCLASS->check_captcha(0, $_GET['captcha_hash'])) {
 		safe_query(" DELETE FROM ".PREFIX."faq WHERE faqID='$faqID' ");
+		Tags::removeTags('faq', $faqID);
 	} else echo $_language->module['transaction_invalid'];
 }
 
@@ -63,6 +64,8 @@ elseif(isset($_POST['save'])) {
 				exit;
 			}
 			safe_query("INSERT INTO ".PREFIX."faq ( faqcatID, date, question, answer, sort ) values( '$faqcat', '".time()."', '$question', '$answer', '1' )");
+			$id = mysqli_insert_id($_database);
+			Tags::setTags('faq', $id, $_POST['tags']);
 		} else echo $_language->module['information_incomplete'];
     } else echo $_language->module['transaction_invalid'];
 }
@@ -76,6 +79,7 @@ elseif(isset($_POST['saveedit'])) {
 	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
 		if(checkforempty(Array('question', 'message'))) {
 			safe_query("UPDATE ".PREFIX."faq SET faqcatID='$faqcat', date='".time()."', question='$question', answer='$answer' WHERE faqID='$faqID' ");
+			Tags::setTags('faq', $faqID, $_POST['tags']);
 		} else echo $_language->module['information_incomplete'];
 	} else echo $_language->module['transaction_invalid'];
 }
@@ -84,7 +88,7 @@ if(isset($_GET['action'])) {
 	if($_GET['action']=="add") {
 		$ergebnis=safe_query("SELECT * FROM ".PREFIX."faq_categories ORDER BY sort");
 		$faqcats='<select name="faqcat">';
-		while($ds=mysql_fetch_array($ergebnis)) {
+		while($ds=mysqli_fetch_array($ergebnis)) {
 			$faqcats.='<option value="'.$ds['faqcatID'].'">'.getinput($ds['faqcatname']).'</option>';
 		}
 		$faqcats.='</select>';
@@ -130,6 +134,10 @@ if(isset($_GET['action'])) {
         </td>
       </tr>
       <tr>
+        <td><b>'.$_language->module['tags'].'</b></td><td><input type="text" name="tags" value="" size="97" />
+        </td>
+      </tr>
+      <tr>
         <td colspan="2"><b>'.$_language->module['answer'].'</b><br />
           <table width="99%" border="0" cellspacing="0" cellpadding="0">
 			      <tr>
@@ -152,25 +160,27 @@ if(isset($_GET['action'])) {
 		$faqID = $_GET['faqID'];
 
 		$ergebnis=safe_query("SELECT * FROM ".PREFIX."faq WHERE faqID='$faqID'");
-		$ds=mysql_fetch_array($ergebnis);
+		$ds=mysqli_fetch_array($ergebnis);
 
 		$faqcategory=safe_query("SELECT * FROM ".PREFIX."faq_categories ORDER BY sort");
 		$faqcats='<select name="faqcat">';
-		while($dc=mysql_fetch_array($faqcategory)) {
+		while($dc=mysqli_fetch_array($faqcategory)) {
 			$selected='';
 			if($dc['faqcatID'] == $ds['faqcatID']) $selected=' selected="selected"';
 			$faqcats.='<option value="'.$dc['faqcatID'].'"'.$selected.'>'.getinput($dc['faqcatname']).'</option>';
 		}
 		$faqcats.='</select>';
     
-    $CAPCLASS = new Captcha;
-    $CAPCLASS->create_transaction();
-    $hash = $CAPCLASS->get_hash();
-    
-    $_language->read_module('bbcode', true);
-    
-    eval ("\$addbbcode = \"".gettemplate("addbbcode", "html", "admin")."\";");
-    eval ("\$addflags = \"".gettemplate("flags_admin", "html", "admin")."\";");
+    	$tags = Tags::getTags('faq', $faqID);
+
+	    $CAPCLASS = new Captcha;
+	    $CAPCLASS->create_transaction();
+	    $hash = $CAPCLASS->get_hash();
+	    
+	    $_language->read_module('bbcode', true);
+	    
+	    eval ("\$addbbcode = \"".gettemplate("addbbcode", "html", "admin")."\";");
+	    eval ("\$addflags = \"".gettemplate("flags_admin", "html", "admin")."\";");
     
 		echo'<h1>&curren; <a href="admincenter.php?site=faq" class="white">'.$_language->module['faq'].'</a> &raquo; '.$_language->module['edit_faq'].'</h1>';
     
@@ -193,6 +203,10 @@ if(isset($_GET['action'])) {
       <tr>
         <td><b>'.$_language->module['faq'].'</b></td>
         <td><input type="text" name="question" value="'.getinput($ds['question']).'" size="97" /></td>
+      </tr>
+      <tr>
+        <td><b>'.$_language->module['tags'].'</b></td>
+        <td><input type="text" name="tags" value="'.$tags.'" size="97" /></td>
       </tr>
       <tr>
         <td colspan="2"><b>'.$_language->module['answer'].'</b>
@@ -228,25 +242,26 @@ else {
     </tr>';
 
 	$ergebnis=safe_query("SELECT * FROM ".PREFIX."faq_categories ORDER BY sort");
-	$anz=safe_query("SELECT count(faqcatID) FROM ".PREFIX."faq_categories");
-	$anz=mysql_result($anz, 0);
+	$tmp=mysqli_fetch_assoc(safe_query("SELECT count(faqcatID) as cnt FROM ".PREFIX."faq_categories"));
+	$anz=$tmp['cnt'];
   
   $CAPCLASS = new Captcha;
 	$CAPCLASS->create_transaction();
 	$hash = $CAPCLASS->get_hash();
   
-  while($ds=mysql_fetch_array($ergebnis)) {
+  while($ds=mysqli_fetch_array($ergebnis)) {
+
 		echo'<tr>
       <td class="td_head" colspan="3"><b>'.$ds['faqcatname'].'</b>
       <br /><small>'.cleartext($ds['description'],1,'admin').'</small></td>
     </tr>';		 
 
 		$faq=safe_query("SELECT * FROM ".PREFIX."faq WHERE faqcatID='$ds[faqcatID]' ORDER BY sort");
-		$anzfaq=safe_query("SELECT count(faqID) FROM ".PREFIX."faq WHERE faqcatID='$ds[faqcatID]'");
-		$anzfaq=mysql_result($anzfaq, 0);
+		$tmp=mysqli_fetch_assoc(safe_query("SELECT count(faqID) as cnt FROM ".PREFIX."faq WHERE faqcatID='$ds[faqcatID]'"));
+		$anzfaq=$tmp['cnt'];
 
 		$i=1;
-    while($db=mysql_fetch_array($faq)) {
+    while($db=mysqli_fetch_array($faq)) {
       if($i%2) { $td='td1'; }
       else { $td='td2'; }
       

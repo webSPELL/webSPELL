@@ -69,7 +69,9 @@ if($action=="save") {
 								 saved='1',
 								 comments='".$comments."' WHERE articlesID='".$articlesID."'");
 
-	$anzpages = mysql_num_rows(safe_query("SELECT * FROM ".PREFIX."articles_contents WHERE articlesID='".$articlesID."'"));
+	Tags::setTags('articles', $articlesID, $_POST['tags']);
+
+	$anzpages = mysqli_num_rows(safe_query("SELECT * FROM ".PREFIX."articles_contents WHERE articlesID='".$articlesID."'"));
 	if($anzpages > count($message)) {
 		safe_query("DELETE FROM `".PREFIX."articles_contents` WHERE `articlesID` = '".$articlesID."' and `page` > ".count($message));
 	}
@@ -101,7 +103,7 @@ elseif(isset($_GET['delete'])) {
 
 	if(!isnewsadmin($userID)) die($_language->module['no_access']);
 
-	$ds=mysql_fetch_array(safe_query("SELECT screens FROM ".PREFIX."articles WHERE articlesID='".$_GET['articlesID']."'"));
+	$ds=mysqli_fetch_array(safe_query("SELECT screens FROM ".PREFIX."articles WHERE articlesID='".$_GET['articlesID']."'"));
 	if($ds['screens']) {
 		$screens=explode("|", $ds['screens']);
 		if(is_array($screens)) {
@@ -111,6 +113,8 @@ elseif(isset($_GET['delete'])) {
 			}
 		}
 	}
+
+	Tags::removeTags('articles', $_GET['articlesID']);
 
 	safe_query("DELETE FROM ".PREFIX."articles WHERE articlesID='".$_GET['articlesID']."'");
 	safe_query("DELETE FROM ".PREFIX."articles_contents WHERE articlesID='".$_GET['articlesID']."'");
@@ -142,7 +146,7 @@ function top5() {
   echo $top5_head;
 	
   $n=1;
-	while($ds=mysql_fetch_array($ergebnis)) {
+	while($ds=mysqli_fetch_array($ergebnis)) {
 		if($n%2) {
 			$bg1=BG_1;
 			$bg2=BG_2;
@@ -185,7 +189,7 @@ function top5() {
 	echo $top5_head;
   
 	$n=1;
-	while($ds=mysql_fetch_array($ergebnis)) {
+	while($ds=mysqli_fetch_array($ergebnis)) {
     if($n%2) {
 			$bg1=BG_1;
 			$bg2=BG_2;
@@ -223,12 +227,14 @@ if($action=="new") {
 
 	if(isnewsadmin($userID)) {
 		safe_query("INSERT INTO ".PREFIX."articles ( date, poster, saved ) VALUES( '".time()."', '$userID', '0' ) ");
-		$articlesID=mysql_insert_id();
+		$articlesID=mysqli_insert_id($_database);
 
 		$selects='';
 		for($i=1;$i<100;$i++) {
 			$selects .= '<option value="'.$i.'">'.$i.'</option>';
 		}
+
+		$tags = '';
 
 		$pages = 1;
 
@@ -258,13 +264,13 @@ elseif($action=="edit") {
 	$bgcat=BGCAT;
 
 	if(isnewsadmin($userID)) {
-		$ds=mysql_fetch_array(safe_query("SELECT * FROM ".PREFIX."articles WHERE articlesID = '".$articlesID."'"));
+		$ds=mysqli_fetch_array(safe_query("SELECT * FROM ".PREFIX."articles WHERE articlesID = '".$articlesID."'"));
 
 		$title=getinput($ds['title']);
 
 		$message = array();
 		$query = safe_query("SELECT content FROM ".PREFIX."articles_contents WHERE articlesID = '".$articlesID."' ORDER BY page ASC");
-		while($qs = mysql_fetch_array($query)) {
+		while($qs = mysqli_fetch_array($query)) {
 			$message[] = $qs['content'];
 		}
 
@@ -292,7 +298,7 @@ elseif($action=="edit") {
 		$url3=getinput($ds['url3']);
 		$url4=getinput($ds['url4']);
 		
-    if($ds['window1']) $window1='<input class="input" name="window1" type="radio" value="1" checked="checked" /> '.$_language->module['new_window'].' <input class="input" type="radio" name="window1" value="0" /> '.$_language->module['self'].'';
+    	if($ds['window1']) $window1='<input class="input" name="window1" type="radio" value="1" checked="checked" /> '.$_language->module['new_window'].' <input class="input" type="radio" name="window1" value="0" /> '.$_language->module['self'].'';
 		else $window1='<input class="input" name="window1" type="radio" value="1" /> '.$_language->module['new_window'].' <input class="input" type="radio" name="window1" value="0" checked="checked" /> '.$_language->module['self'].'';
 
 		if($ds['window2']) $window2='<input class="input" name="window2" type="radio" value="1" checked="checked" /> '.$_language->module['new_window'].' <input class="input" type="radio" name="window2" value="0" /> '.$_language->module['self'].'';
@@ -303,6 +309,8 @@ elseif($action=="edit") {
 
 		if($ds['window4']) $window4='<input class="input" name="window4" type="radio" value="1" checked="checked" /> '.$_language->module['new_window'].' <input class="input" type="radio" name="window4" value="0" /> '.$_language->module['self'].'';
 		else $window4='<input class="input" name="window4" type="radio" value="1" /> '.$_language->module['new_window'].' <input class="input" type="radio" name="window4" value="0" checked="checked" /> '.$_language->module['self'].'';
+
+		$tags = Tags::getTags('articles', $articlesID);
 
 		$comments='<option value="0">'.$_language->module['no_comments'].'</option><option value="1">'.$_language->module['user_comments'].'</option><option value="2">'.$_language->module['visitor_comments'].'</option>';
 		$comments=str_replace('value="'.$ds['comments'].'"', 'value="'.$ds['comments'].'" selected="selected"', $comments);
@@ -333,16 +341,15 @@ elseif($action=="show") {
 	if($page==1) safe_query("UPDATE ".PREFIX."articles SET viewed=viewed+1 WHERE articlesID='".$articlesID."'");
 	$result=safe_query("SELECT * FROM ".PREFIX."articles WHERE articlesID='".$articlesID."'");
 
-	if(mysql_num_rows($result)) {
+	if(mysqli_num_rows($result)) {
 
-		$ds=mysql_fetch_array($result);
-		$date = date("d.m.Y", $ds['date']);
-		$time = date("H:i", $ds['date']);
+		$ds=mysqli_fetch_array($result);
+		$date_time = getformatdatetime($ds['date']);
 		$title = clearfromtags($ds['title']);
 
 		$content = array();
 		$query = safe_query("SELECT * FROM ".PREFIX."articles_contents WHERE articlesID = '".$articlesID."' ORDER BY page ASC");
-		while($qs = mysql_fetch_array($query)) {
+		while($qs = mysqli_fetch_array($query)) {
 			$content[] = $qs['content'];
 		}
 
@@ -350,11 +357,11 @@ elseif($action=="show") {
 		$content = htmloutput($content[$page-1]);
 		$content = toggle($content, $ds['articlesID']);
 		if($pages>1) $page_link = makepagelink("index.php?site=articles&amp;action=show&amp;articlesID=$articlesID", $page, $pages);
-    else $page_link='';
+    	else $page_link='';
 
 		$poster='<a href="index.php?site=profile&amp;id='.$ds['poster'].'"><b>'.getnickname($ds['poster']).'</b></a>';
 		$related="";
-    if($ds['link1'] && $ds['url1']!="http://" && $ds['window1']) $related.='&#8226; <a href="'.$ds['url1'].'" target="_blank">'.$ds['link1'].'</a> ';
+    	if($ds['link1'] && $ds['url1']!="http://" && $ds['window1']) $related.='&#8226; <a href="'.$ds['url1'].'" target="_blank">'.$ds['link1'].'</a> ';
 		if($ds['link1'] && $ds['url1']!="http://" && !$ds['window1']) $related.='&#8226; <a href="'.$ds['url1'].'">'.$ds['link1'].'</a> ';
 
 		if($ds['link2'] && $ds['url2']!="http://" && $ds['window2']) $related.='&#8226; <a href="'.$ds['url2'].'" target="_blank">'.$ds['link2'].'</a> ';
@@ -385,8 +392,8 @@ elseif($action=="show") {
 		if($loggedin) {
 			$getarticles=safe_query("SELECT articles FROM ".PREFIX."user WHERE userID='$userID'");
 			$found=false;
-			if(mysql_num_rows($getarticles)) {
-				$ga=mysql_fetch_array($getarticles);
+			if(mysqli_num_rows($getarticles)) {
+				$ga=mysqli_fetch_array($getarticles);
 				if($ga['articles']!="") {
 					$string=$ga['articles'];
 					$array=explode(":", $string);
@@ -424,6 +431,8 @@ elseif($action=="show") {
 		}
 		else $rateform=$_language->module['login_for_rate'];
 
+		$tags = Tags::getTagsLinked('articles',$articlesID);
+		
 		$bg1=BG_1;
 		eval ("\$articles = \"".gettemplate("articles")."\";");
 		echo $articles;
@@ -465,7 +474,7 @@ else {
   if(isnewsadmin($userID)) echo'<input type="button" onclick="MM_openBrWindow(\'articles.php?action=new\',\'Articles\',\'toolbar=no,status=no,scrollbars=yes,width=800,height=600\');" value="'.$_language->module['new_article'].'" /><br /><br />';
 
 	$alle=safe_query("SELECT articlesID FROM ".PREFIX."articles WHERE saved='1'");
-	$gesamt = mysql_num_rows($alle);
+	$gesamt = mysqli_num_rows($alle);
 	$pages=1;
 
 	$max=$maxarticles;
@@ -502,7 +511,7 @@ else {
 		echo $articles_head;
     
 		$n=1;
-		while($ds=mysql_fetch_array($ergebnis)) {
+		while($ds=mysqli_fetch_array($ergebnis)) {
 			if($n%2) {
 				$bg1=BG_1;
 				$bg2=BG_2;
@@ -511,7 +520,7 @@ else {
 				$bg1=BG_3;
 				$bg2=BG_4;
 			}
-			$date=date("d.m.Y", $ds['date']);
+			$date=getformatdate($ds['date']);
 
 			$title='<a href="index.php?site=articles&amp;action=show&amp;articlesID='.$ds['articlesID'].'">'.clearfromtags($ds['title']).'</a>';
 			$poster='<a href="index.php?site=profile&amp;id='.$ds['poster'].'"><b>'.getnickname($ds['poster']).'</b></a>';

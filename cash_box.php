@@ -38,7 +38,7 @@ if(isset($_POST['save']) and $_POST['save']) {
 	$paydate=mktime(0,0,0,$_POST['month'],$_POST['day'],$_POST['year']);
 
 	safe_query("INSERT INTO ".PREFIX."cash_box ( date, paydate, usedfor, info, totalcosts, usercosts, squad, konto ) VALUES ('$date', '$paydate', '".$_POST['usedfor']."', '".$_POST['info']."', '".$_POST['euro']."', '".$_POST['usereuro']."', '".$_POST['squad']."', '".$_POST['konto']."' ) ");
-	$id=mysql_insert_id();
+	$id=mysqli_insert_id($_database);
 
 	header("Location: index.php?site=cash_box&id=$id");
 }
@@ -91,7 +91,7 @@ elseif(isset($_POST['pay']) and $_POST['pay']) {
 	$date=time();
 	foreach ( $payid as $usID => $costs ) {
 		if($costs!="") {
-			if(mysql_num_rows(safe_query("SELECT payedID FROM ".PREFIX."cash_box_payed WHERE userID='$usID' AND cashID='$id'"))) {
+			if(mysqli_num_rows(safe_query("SELECT payedID FROM ".PREFIX."cash_box_payed WHERE userID='$usID' AND cashID='$id'"))) {
 				safe_query("UPDATE ".PREFIX."cash_box_payed SET costs='$costs' WHERE userID='$usID' AND cashID='$id'");
 			}
 			else {
@@ -113,7 +113,7 @@ else {
 
 	    $anz=0;
 		$ergebnis = safe_query("SELECT * FROM ".PREFIX."user ORDER BY nickname");
-		while($du=mysql_fetch_array($ergebnis)) {
+		while($du=mysqli_fetch_array($ergebnis)) {
 			if(isclanmember($du['userID'])) $anz++;
 		}
 	
@@ -132,7 +132,7 @@ else {
 
 		$id = $_GET['id'];
 		$ergebnis=safe_query("SELECT * FROM ".PREFIX."cash_box WHERE cashID='$id'");
-		$ds=mysql_fetch_array($ergebnis);
+		$ds=mysqli_fetch_array($ergebnis);
 
 		$day=date("d", $ds['paydate']);
 		$month=date("m", $ds['paydate']);
@@ -145,7 +145,7 @@ else {
 		$anz=0;
 		$ergebnis = safe_query("SELECT * FROM ".PREFIX."user ORDER BY nickname");
 		
-    	while($du=mysql_fetch_array($ergebnis)) {
+    	while($du=mysqli_fetch_array($ergebnis)) {
 			if(iscashadmin($du['userID'])) $anz++;
 		}
 		$squads = '<option value="0">'.$_language->module['each_squad'].'</option>'.getsquads();
@@ -176,7 +176,7 @@ else {
 
 			if($id) {
 				$squadergebnis=safe_query("SELECT squad FROM ".PREFIX."cash_box WHERE cashID='".$id."'");
-				$dv=mysql_fetch_array($squadergebnis);
+				$dv=mysqli_fetch_array($squadergebnis);
 				$squadID = $dv['squad'];
 			}
 
@@ -184,17 +184,17 @@ else {
 			if($squadID == 0) $usersquad = $_language->module['clan'];
 			else {
 				$ergebnis_squad = safe_query("SELECT * FROM ".PREFIX."cash_box_payed, ".PREFIX."cash_box WHERE ".PREFIX."cash_box_payed.payed='1' AND ".PREFIX."cash_box_payed.cashID=".PREFIX."cash_box.cashID AND ".PREFIX."cash_box.squad = '".$squadID."'");
-				$anz_squad = mysql_num_rows($ergebnis_squad);
+				$anz_squad = mysqli_num_rows($ergebnis_squad);
 				$costs_squad=0.00;
 				if($anz_squad) {
-					while($dss=mysql_fetch_array($ergebnis_squad)) {
+					while($dss=mysqli_fetch_array($ergebnis_squad)) {
 						$costs_squad+=$dss['costs'];
 					}
 				}
 				$ergebnis_squad = safe_query("SELECT * FROM ".PREFIX."cash_box WHERE squad='$squadID'");
-				$anz_squad = mysql_num_rows($ergebnis_squad);
+				$anz_squad = mysqli_num_rows($ergebnis_squad);
 				if($anz_squad) {
-					while($dss=mysql_fetch_array($ergebnis_squad)) {
+					while($dss=mysqli_fetch_array($ergebnis_squad)) {
 						$costs_squad-=$dss['totalcosts'];
 					}
 				}
@@ -216,17 +216,17 @@ else {
 			echo '<tr>
 							<td valign="top" width="180">';
 
-			if(mysql_num_rows($ergebnis)) {
-				$ds=mysql_fetch_array($ergebnis);
+			if(mysqli_num_rows($ergebnis)) {
+				$ds=mysqli_fetch_array($ergebnis);
 				if(!$id) $id = $ds['cashID'];
 
 				$ergebnis=safe_query("SELECT * FROM ".PREFIX."cash_box WHERE cashID='$id'");
-				$ds=mysql_fetch_array($ergebnis);
-				$date=date("d.m.Y", $ds['date']);
-				$paydate=date("d.m.Y", $ds['paydate']);
+				$ds=mysqli_fetch_array($ergebnis);
+				$date=getformatdate($ds['date']);
+				$paydate=getformatdate($ds['paydate']);
 
 				$bezahlen = safe_query("SELECT * FROM ".PREFIX."cash_box_payed WHERE cashID='$id' AND payed='1' ");
-				$payed = mysql_num_rows($bezahlen);
+				$payed = mysqli_num_rows($bezahlen);
 				$konto = cleartext($ds['konto']);
 
 				$usage=$ds['usedfor'];
@@ -239,7 +239,7 @@ else {
 
 				$all=safe_query("SELECT * FROM ".PREFIX."cash_box WHERE squad='".$squadID."' ORDER BY paydate DESC");
 				echo'<br /><br />';
-				while($ds=mysql_fetch_array($all)) {
+				while($ds=mysqli_fetch_array($all)) {
 					echo'&#8226; <a href="index.php?site=cash_box&amp;id='.$ds['cashID'].'&amp;squad='.$squadID.'"><b>'.$ds['usedfor'].'</b></a><br />';
 				}
 
@@ -248,7 +248,7 @@ else {
 
 				$members = array();
 				$ergebnis = safe_query("SELECT * FROM ".PREFIX."user ORDER BY nickname");
-				while($du=mysql_fetch_array($ergebnis)) {
+				while($du=mysqli_fetch_array($ergebnis)) {
 					if($squadID == 0) {
 						if(isclanmember($du['userID'],$squadID)) $members[]=$du['userID'];
 					}
@@ -261,10 +261,10 @@ else {
 				if(count($members)) {
 					foreach($members as $usID) {
 						$ergebnis = safe_query("SELECT * FROM ".PREFIX."cash_box_payed WHERE userID='$usID' AND cashID='$id'");
-						$du=mysql_fetch_array($ergebnis);
+						$du=mysqli_fetch_array($ergebnis);
 						$user='<a href="index.php?site=profile&amp;id='.$usID.'"><b>'.getnickname($usID).'</b></a>';
 						if($du['payed']) {
-							$paydate=date("d.m.Y", $du['date']);
+							$paydate=getformatdate($du['date']);
 							$payed='<font color="'.$wincolor.'">'.$_language->module['paid'].': '.$paydate.'</font>';
 						}
 						else {
@@ -310,18 +310,18 @@ else {
 		}
 
 		$ergebnis = safe_query("SELECT * FROM ".PREFIX."cash_box_payed WHERE payed='1'");
-		$anz = mysql_num_rows($ergebnis);
+		$anz = mysqli_num_rows($ergebnis);
 		$costs=0.00;
 		if($anz) {
-			while($ds=mysql_fetch_array($ergebnis)) {
+			while($ds=mysqli_fetch_array($ergebnis)) {
 				$costs+=$ds['costs'];
 			}
 		}
 
 		$ergebnis = safe_query("SELECT * FROM ".PREFIX."cash_box ");
-		$anz = mysql_num_rows($ergebnis);
+		$anz = mysqli_num_rows($ergebnis);
 		if($anz) {
-			while($ds=mysql_fetch_array($ergebnis)) {
+			while($ds=mysqli_fetch_array($ergebnis)) {
 				$costs-=$ds['totalcosts'];
 			}
 		}
@@ -346,7 +346,7 @@ else {
 			else {
 				$squadergebnis=safe_query("SELECT squadID FROM ".PREFIX."squads_members WHERE userID='".$userID."'");
 			}
-			while($da=mysql_fetch_array($squadergebnis)) {
+			while($da=mysqli_fetch_array($squadergebnis)) {
 				print_cashbox($da['squadID'],0);
 			}
 		}
@@ -366,7 +366,7 @@ else {
 			else {
 				$squadergebnis=safe_query("SELECT squadID FROM ".PREFIX."squads_members WHERE userID='".$userID."'");
 			}
-			while($da=mysql_fetch_array($squadergebnis)) {
+			while($da=mysqli_fetch_array($squadergebnis)) {
 				if($get_squad == $da['squadID']) {
 					print_cashbox($da['squadID'], $id);
 				}

@@ -65,6 +65,7 @@ elseif($action=="search" AND ($userID OR isset($_GET['captcha']))) {
 		isset($_GET['bm']) ? $bm = (int)$_GET['bm'] : $bm = 0;
 		isset($_GET['bd']) ? $bd = (int)$_GET['bd'] : $bd = 0;
 		isset($_GET['by']) ? $by = (int)$_GET['by'] : $by = 0;
+		$keywords = preg_split("/ ,/si", strtolower(str_replace(array('\%','%'),'',$text)));
 		
 		if(mb_strlen(str_replace('%', '', $text))>=$search_min_len){
 
@@ -74,7 +75,7 @@ elseif($action=="search" AND ($userID OR isset($_GET['captcha']))) {
 			else {
 				if(!$ad) $ad = 1;
 				if(!$am) $am = 1;
-				if(!$ay) $by = date("Y");
+				if(!$ay) $ay = date("Y");
 				$after = mktime(0, 0, 0, $am, $ad, $ay);
 			}
 			if(!($bm and $bd and $by)) {
@@ -98,21 +99,21 @@ elseif($action=="search" AND ($userID OR isset($_GET['captcha']))) {
 			if(isset($_GET['articles'])) {
 				$ergebnis_articles=safe_query("SELECT title, articlesID, date FROM ".PREFIX."articles WHERE date between ".$after." AND ".$before);
 		
-				while($ds=mysql_fetch_array($ergebnis_articles)) {
+				while($ds=mysqli_fetch_array($ergebnis_articles)) {
 					$articlesID = $ds['articlesID'];
 		
 					$ergebnis_articles_contents = safe_query("SELECT content FROM ".PREFIX."articles_contents WHERE articlesID = '".$articlesID."' AND content LIKE '%".$text."%'");
-					if(!mysql_num_rows($ergebnis_articles_contents) and substr_count(strtolower($ds['title']), strtolower(stripslashes($text))) == 0) {
+					if(!mysqli_num_rows($ergebnis_articles_contents) and substr_count(strtolower($ds['title']), strtolower(stripslashes($text))) == 0) {
 						continue;
 					}
-					elseif(!mysql_num_rows($ergebnis_articles_contents)) {
-						$query_result = mysql_fetch_array(safe_query("SELECT content FROM ".PREFIX."articles_contents WHERE articlesID = '".$articlesID."' ORDER BY page ASC LIMIT 0, 1"));
+					elseif(!mysqli_num_rows($ergebnis_articles_contents)) {
+						$query_result = mysqli_fetch_array(safe_query("SELECT content FROM ".PREFIX."articles_contents WHERE articlesID = '".$articlesID."' ORDER BY page ASC LIMIT 0, 1"));
 						$res_message[$i] = clearfromtags($query_result['content']);
 						$content = array($query_result['content']);
 					}
 					else {
 						$content = array();
-						while($qs = mysql_fetch_array($ergebnis_articles_contents)) {
+						while($qs = mysqli_fetch_array($ergebnis_articles_contents)) {
 							$content[] = $qs['content'];
 						}
 						$res_message[$i] = clearfromtags($content[0]);
@@ -120,7 +121,7 @@ elseif($action=="search" AND ($userID OR isset($_GET['captcha']))) {
 		
 					$res_title[$i]		=	$ds['title'];
 					$res_link[$i]		=	'<a href="index.php?site=articles&amp;action=show&amp;articlesID='.$articlesID.'">'.$_language->module['articles_link'].'</a>';
-					$res_occurr[$i]		=	substri_count_array($content, stripslashes($text)) + substr_count(strtolower($ds['title']), strtolower(stripslashes($text)));
+					$res_occurr[$i]		=	substri_count_array($content, stripslashes($text)) + substr_count(strtolower($ds['title']), strtolower(stripslashes($text)))+count(array_intersect(Tags::getTags('articles',$articlesID,true), $keywords))*2;
 					$res_date[$i]		=	$ds['date'];
 					$res_type[$i]		=	$_language->module['article'];
 		
@@ -131,11 +132,11 @@ elseif($action=="search" AND ($userID OR isset($_GET['captcha']))) {
 			if(isset($_GET['faq'])) {
 				$ergebnis_faq=safe_query("SELECT faqID, faqcatID, date FROM ".PREFIX."faq WHERE date between ".$after." AND ".$before." ORDER BY date");
 		
-				while($ds = mysql_fetch_array($ergebnis_faq)) {
+				while($ds = mysqli_fetch_array($ergebnis_faq)) {
 					$ergebnis_faq_contents = safe_query("SELECT question, answer FROM ".PREFIX."faq WHERE faqID = '".$ds['faqID']."' AND (answer LIKE '%".$text."%' or question LIKE '%".$text."%')");
-					if(mysql_num_rows($ergebnis_faq_contents)) {
+					if(mysqli_num_rows($ergebnis_faq_contents)) {
 						$faq_array = array();
-						while($qs = mysql_fetch_array($ergebnis_faq_contents)) {
+						while($qs = mysqli_fetch_array($ergebnis_faq_contents)) {
 							$faq_array[] = array('question' => $qs['question'], 'answer' => $qs['answer']);
 						}
 						$faqID = $ds['faqID'];
@@ -144,7 +145,7 @@ elseif($action=="search" AND ($userID OR isset($_GET['captcha']))) {
 						$res_title[$i]		=	$faq_array[0]['question'];
 						$res_message[$i]	=	clearfromtags($faq_array[0]['answer']);
 						$res_link[$i]		=	'<a href="index.php?site=faq&amp;action=faq&amp;faqID='.$faqID.'&amp;faqcatID='.$faqcatID.'">'.$_language->module['faq_link'].'</a>';
-						$res_occurr[$i]		=	substri_count_array($faq_array, stripslashes($text));
+						$res_occurr[$i]		=	substri_count_array($faq_array, stripslashes($text))+count(array_intersect(Tags::getTags('faq',$ds['faqID'],true), $keywords))*2;
 						$res_date[$i]		=	$ds['date'];
 						$res_type[$i]		=	$_language->module['faq'];
 		
@@ -184,7 +185,7 @@ elseif($action=="search" AND ($userID OR isset($_GET['captcha']))) {
 										GROUP BY postID
 										ORDER BY date");
 		
-				while($ds=mysql_fetch_array($ergebnis_forum)) {
+				while($ds=mysqli_fetch_array($ergebnis_forum)) {
 					if($ds['readgrps'] != "") {
 						$usergrps = explode(";", $ds['readgrps']);
 						$usergrp = 0;
@@ -244,11 +245,11 @@ elseif($action=="search" AND ($userID OR isset($_GET['captcha']))) {
 													date between ".$after." AND ".$before."
 												)");
 		
-				while($ds = mysql_fetch_array($ergebnis_news)) {
+				while($ds = mysqli_fetch_array($ergebnis_news)) {
 					$ergebnis_news_contents = safe_query("SELECT language, headline, content FROM ".PREFIX."news_contents WHERE newsID = '".$ds['newsID']."' and (content LIKE '%".$text."%' or headline LIKE '%".$text."%')");
-					if(mysql_num_rows($ergebnis_news_contents)) {
+					if(mysqli_num_rows($ergebnis_news_contents)) {
 						$message_array = array();
-						while($qs = mysql_fetch_array($ergebnis_news_contents)) {
+						while($qs = mysqli_fetch_array($ergebnis_news_contents)) {
 							$message_array[] = array('lang' => $qs['language'], 'headline' => $qs['headline'], 'message' => $qs['content']);
 						}
 						$showlang = select_language($message_array);
@@ -258,7 +259,7 @@ elseif($action=="search" AND ($userID OR isset($_GET['captcha']))) {
 						$res_title[$i]		=	$message_array[$showlang]['headline'];
 						$res_message[$i]	=	clearfromtags($message_array[$showlang]['message']);
 						$res_link[$i]		=	'<a href="index.php?site=news_comments&amp;newsID='.$newsID.'">'.$_language->module['news_link'].'</a>';
-						$res_occurr[$i]		=	substri_count_array($message_array, stripslashes($text));
+						$res_occurr[$i]		=	substri_count_array($message_array, stripslashes($text))+count(array_intersect(Tags::getTags('news',$ds['newsID'],true), $keywords))*2;
 						$res_date[$i]		=	$ds['date'];
 						$res_type[$i]		=	$_language->module['news'];
 		
@@ -296,7 +297,7 @@ elseif($action=="search" AND ($userID OR isset($_GET['captcha']))) {
 					$bg2=BG_4;
 				}
 		
-				$date=date("d.m.Y", $res_date[$key]);
+				$date=getformatdate($res_date[$key]);
 				$type=$res_type[$key];
 				if(mb_strlen($res_message[$key]) > 200) {
 					for($z = 0; $z < mb_strlen($res_message[$key]); $z++) {

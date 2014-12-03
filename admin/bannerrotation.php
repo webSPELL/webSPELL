@@ -72,7 +72,7 @@ elseif($action=="edit") {
 
   echo'<h1>&curren; <a href="admincenter.php?site=bannerrotation" class="white">'.$_language->module['bannerrotation'].'</a> &raquo; '.$_language->module['edit_banner'].'</h1>';
 
-	$ds=mysql_fetch_array(safe_query("SELECT * FROM ".PREFIX."bannerrotation WHERE bannerID='".$_GET["bannerID"]."'"));
+	$ds=mysqli_fetch_array(safe_query("SELECT * FROM ".PREFIX."bannerrotation WHERE bannerID='".$_GET["bannerID"]."'"));
 	if(file_exists($filepath.$ds['bannerID'].'.gif'))	$pic='<img src="../images/bannerrotation/'.$ds['bannerID'].'.gif" border="0" alt="'.$ds['banner'].'" />';
 	elseif(file_exists($filepath.$ds['bannerID'].'.jpg'))	$pic='<img src="../images/bannerrotation/'.$ds['bannerID'].'.jpg" border="0" alt="'.$ds['banner'].'" />';
 	elseif(file_exists($filepath.$ds['bannerID'].'.png'))	$pic='<img src="../images/bannerrotation/'.$ds['bannerID'].'.png" border="0" alt="'.$ds['banner'].'" />';
@@ -133,7 +133,7 @@ elseif(isset($_POST["save"])) {
 			$file_ext=strtolower(mb_substr($banner['name'], strrpos($banner['name'], ".")));
 			if($file_ext==".gif" OR $file_ext==".jpg" OR $file_ext==".png") {
 				safe_query("INSERT INTO ".PREFIX."bannerrotation (bannerID, bannername, bannerurl, displayed, date) values('', '".$bannername."', '".$bannerurl."', '".$displayed."', '".time()."')");
-				$id=mysql_insert_id();
+				$id=mysqli_insert_id($_database);
 				if($banner['name'] != "") {
 					move_uploaded_file($banner['tmp_name'], $filepath.$banner['name']);
 					@chmod($filepath.$banner['name'], 0755);
@@ -219,10 +219,10 @@ else {
 	$hash = $CAPCLASS->get_hash();
     
 	$qry=safe_query("SELECT * FROM ".PREFIX."bannerrotation ORDER BY bannerID");
-	$anz=mysql_num_rows($qry);
+	$anz=mysqli_num_rows($qry);
 	if($anz) {
 		$i=1;
-    while($ds = mysql_fetch_array($qry)) {
+    while($ds = mysqli_fetch_array($qry)) {
       if($i%2) { $td='td1'; }
 			else { $td='td2'; }
       

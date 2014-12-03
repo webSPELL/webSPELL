@@ -76,19 +76,19 @@ if($action=="save" && isset($_POST['post'])) {
 		$cwdate=mktime($hour,$minute,0,$month,$day,$year);
 		safe_query("INSERT INTO ".PREFIX."challenge (date, cwdate, squadID, opponent, opphp, oppcountry, league, map, server, email, info) values('$date', '$cwdate', '$squad', '$opponent', '$opphp', '$oppcountry', '$league', '$map', '$server', '$email', '$info')");
 		$ergebnis=safe_query("SELECT userID FROM ".PREFIX."squads_members WHERE warmember='1' AND squadID='".$squad."'");
-		while($ds=mysql_fetch_array($ergebnis)) {
+		while($ds=mysqli_fetch_array($ergebnis)) {
 			$touser[]=$ds['userID'];
 		}
-
-		if($touser[0] != "") {
-			$date = time();
-			$tmp_lang = new Language();
-			foreach($touser as $id) {
-				$tmp_lang->set_language(getuserlanguage($id));
-				$tmp_lang->read_module('challenge');
-				$message = $tmp_lang->module['challenge_message'];
-				sendmessage($id,$tmp_lang->module['message_title'],$message);
-			}
+		if(!count($touser)){
+			$touser[] = 1;
+		}
+		$date = time();
+		$tmp_lang = new Language();
+		foreach($touser as $id) {
+			$tmp_lang->set_language(getuserlanguage($id));
+			$tmp_lang->read_module('challenge');
+			$message = $tmp_lang->module['challenge_message'];
+			sendmessage($id,$tmp_lang->module['message_title'],$message);
 		}
 		echo $_language->module['thank_you'];
 		unset($_POST['opponent'],$_POST['opphp'],$_POST['league'],$_POST['map'],$_POST['server'],$_POST['info'],$_POST['email']);
@@ -133,6 +133,7 @@ elseif($action=="delete") {
 		
 		
 	  	$squads = getgamesquads();
+	  	$countries=getcountries();
 	  
 	  	$bg1 = BG_1;
 	  	
@@ -170,7 +171,7 @@ elseif($action=="delete") {
   
 if(isclanwaradmin($userID)) {
   $ergebnis = safe_query("SELECT * FROM ".PREFIX."challenge ORDER BY date $type");
-	$anz=mysql_num_rows($ergebnis);
+	$anz=mysqli_num_rows($ergebnis);
 	if($anz) {
 		if(!isset($type)) $type = "DESC";
 
@@ -179,10 +180,10 @@ if(isclanwaradmin($userID)) {
 		echo'<br /><br />';
 		
 		$i=0;
-		while ($ds = mysql_fetch_array($ergebnis)) {
+		while ($ds = mysqli_fetch_array($ergebnis)) {
 			$bg1 = ($i%2)? BG_1: BG_1;
-			$date = date("d.m.Y", $ds['date']);
-			$cwdate = date("d.m.Y - H:i", $ds['cwdate']);
+			$date = getformatdate($ds['date']);
+			$cwdate = getformatdatetime($ds['cwdate']);
 			$squad= getsquadname($ds['squadID']);
 			$oppcountry="[flag]".$ds['oppcountry']."[/flag]";
 			$country=flags($oppcountry);

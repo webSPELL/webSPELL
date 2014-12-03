@@ -81,6 +81,7 @@ $language_array = Array(
 	'view_more'=>'Skaityti daugiau...',
 	'visitor_comments'=>'įjungti lankytojo komentarus',
 	'written_by'=>'parašė',
-	'yes'=>'taip'
+	'yes'=>'taip',
+	'tags'=>'Žymos'
 );
 ?>

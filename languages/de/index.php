@@ -51,6 +51,7 @@ $language_array = Array(
 	'squads'=>'Teams',
 	'statistics'=>'Statistiken',
 	'topics'=>'Themen',
-	'upcoming_events'=>'Kommende Ereignisse'
+	'upcoming_events'=>'Kommende Ereignisse',
+	'tags'=>'Tags'
 );
 ?>

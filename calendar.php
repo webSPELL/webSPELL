@@ -155,17 +155,17 @@ function print_calendar($mon,$year) {
       unset($termin);
 
 			$ergebnis = safe_query("SELECT * FROM ".PREFIX."upcoming");
-			$anz = mysql_num_rows($ergebnis);
+			$anz = mysqli_num_rows($ergebnis);
 			if($anz) {
 				$termin = '';
-				while ($ds = mysql_fetch_array($ergebnis)) {
+				while ($ds = mysqli_fetch_array($ergebnis)) {
 					if($ds['type']=="d") {
 						if(($start_date<=$ds['date'] && $end_date>=$ds['date']) || ($start_date>=$ds['date'] && $end_date<=$ds['enddate']) || ($start_date<=$ds['enddate'] && $end_date>=$ds['enddate']))
 						$termin.='<a href="index.php?site=calendar&amp;tag='.$t.'&amp;month='.$mon.'&amp;year='.$year.'#event">'.clearfromtags($ds['short']).'</a><br />';
 					}
 					else {
 						if($ds['date']>=$start_date && $ds['date']<=$end_date) {
-							$begin = date("H:i", $ds['date']);
+							$begin = getformattime($ds['date']);
 							$termin.='<a href="index.php?site=calendar&amp;tag='.$t.'&amp;month='.$mon.'&amp;year='.$year.'">'.$begin.' '.clearfromtags($ds['opptag']).'</a><br />';
 						}
 					}
@@ -213,13 +213,13 @@ function print_termine($tag,$month,$year) {
 	unset($termin);
 
 	$ergebnis = safe_query("SELECT * FROM ".PREFIX."upcoming");
-	$anz = mysql_num_rows($ergebnis);
+	$anz = mysqli_num_rows($ergebnis);
 	if($anz) {
-		while ($ds=mysql_fetch_array($ergebnis)) {
+		while ($ds=mysqli_fetch_array($ergebnis)) {
 			if($ds['type']=="c") {
 				if($ds['date']>=$start_date && $ds['date']<=$end_date) {
-					$date = date("d.m.Y", $ds['date']);
-					$time = date("H:i", $ds['date']);
+					$date=getformatdate($ds['date']);
+					$time=getformattime($ds['date']);
 					$squad=getsquadname($ds['squad']);
 					$oppcountry="[flag]".$ds['oppcountry']."[/flag]";
 					$oppcountry=flags($oppcountry);
@@ -234,9 +234,9 @@ function print_termine($tag,$month,$year) {
 					$adminaction = '';
 					if(isclanmember($userID) or isanyadmin($userID)) {
 						$anmeldung=safe_query("SELECT * FROM ".PREFIX."upcoming_announce WHERE upID='".$ds['upID']."'");
-						if(mysql_num_rows($anmeldung)) {
+						if(mysqli_num_rows($anmeldung)) {
 							$i=1;
-							while ($da = mysql_fetch_array($anmeldung)) {
+							while ($da = mysqli_fetch_array($anmeldung)) {
 								if ($da['status'] == "y") $fontcolor = $wincolor;
 								elseif ($da['status'] == "n") $fontcolor = $loosecolor;
 								else $fontcolor = $drawcolor;
@@ -269,10 +269,10 @@ function print_termine($tag,$month,$year) {
 			}
 			else {
 				if(($start_date<=$ds['date'] && $end_date>=$ds['date']) || ($start_date>=$ds['date'] && $end_date<=$ds['enddate']) || ($start_date<=$ds['enddate'] && $end_date>=$ds['enddate'])) {
-					$date = date("d.m.Y", $ds['date']);
-					$time = date("H:i", $ds['date']);
-					$enddate = date("d.m.Y", $ds['enddate']);
-					$endtime = date("H:i", $ds['enddate']);
+					$date=getformatdate($ds['date']);
+					$time=getformattime($ds['date']);
+					$enddate=getformatdate($ds['enddate']);
+					$endtime=getformattime($ds['enddate']);
 					$title=clearfromtags($ds['title']);
 					$location='<a href="'.$ds['locationhp'].'" target="_blank">'.clearfromtags($ds['location']).'</a>';
 					$dateinfo=cleartext($ds['dateinfo']);
@@ -283,9 +283,9 @@ function print_termine($tag,$month,$year) {
           
 					if(isclanmember($userID)) {
 						$anmeldung=safe_query("SELECT * FROM ".PREFIX."upcoming_announce WHERE upID='".$ds['upID']."'");
-						if(mysql_num_rows($anmeldung)) {
+						if(mysqli_num_rows($anmeldung)) {
 							$i=1;
-							while ($da = mysql_fetch_array($anmeldung)) {
+							while ($da = mysqli_fetch_array($anmeldung)) {
 								if ($da['status'] == "y") $fontcolor = $wincolor;
 								elseif ($da['status'] == "n") $fontcolor = $loosecolor;
 								else $fontcolor = $drawcolor;
@@ -360,7 +360,7 @@ if($action=="savewar") {
 	if(isset($chID) and $chID > 0) safe_query("DELETE FROM ".PREFIX."challenge WHERE chID='".$chID."'");
 
 	if($messages) {
-		$replace = array('%date%' => date("d.m.Y", $date),
+		$replace = array('%date%' => getformatdate($date),
 						 '%opponent_flag%' => $oppcountry,
 						 '%opp_hp%' => $opphp,
 						 '%opponent%' => $opponent, 
@@ -369,7 +369,7 @@ if($action=="savewar") {
 						 '%warinfo%' => $warinfo);
 		$ergebnis=safe_query("SELECT userID FROM ".PREFIX."squads_members WHERE squadID='$squad'");
 		$tmp_lang = new Language();
-		while($ds=mysql_fetch_array($ergebnis)) {
+		while($ds=mysqli_fetch_array($ergebnis)) {
 			$id=$ds['userID'];
 			$tmp_lang->set_language(getuserlanguage($id));
 			$tmp_lang->read_module('calendar');
@@ -400,15 +400,15 @@ elseif($action=="saveannounce") {
 	$_language->read_module('calendar');
 	if(!isclanmember($userID)) die($_language->module['no_access']);
 
-	$ds=mysql_fetch_assoc(safe_query("SELECT date FROM ".PREFIX."upcoming WHERE upID=".(int)$_POST['upID']." AND date>".time()));
+	$ds=mysqli_fetch_assoc(safe_query("SELECT date FROM ".PREFIX."upcoming WHERE upID=".(int)$_POST['upID']." AND date>".time()));
 	if(isset($ds['date'])) {
 		$tag = date('d',$ds['date']);
 		$month = date('m',$ds['date']);
 		$year = date('y',$ds['date']);
 
 		$ergebnis=safe_query("SELECT annID FROM ".PREFIX."upcoming_announce WHERE upID='".(int)$_POST['upID']."' AND userID='".$userID."'");
-		if(mysql_num_rows($ergebnis)) {
-			$ds=mysql_fetch_array($ergebnis);
+		if(mysqli_num_rows($ergebnis)) {
+			$ds=mysqli_fetch_array($ergebnis);
 			safe_query("UPDATE ".PREFIX."upcoming_announce SET status='".$_POST['status']{0}."' WHERE annID='".$ds['annID']."'");
 		}
 		else safe_query("INSERT INTO ".PREFIX."upcoming_announce ( upID, userID, status ) values( '".(int)$_POST['upID']."', '$userID', '".$_POST['status']{0}."' ) ");
@@ -535,11 +535,13 @@ elseif($action=="addwar") {
 
 		$chID=0;
 
+		$countries=getcountries();
+
 		if(isset($_GET['chID'])) {
 
 			$chID = (int)$_GET['chID'];
 			$ergebnis=safe_query("SELECT * FROM ".PREFIX."challenge WHERE chID='".$chID."'");
-			$ds=mysql_fetch_array($ergebnis);
+			$ds=mysqli_fetch_array($ergebnis);
 			$day=str_replace("<option selected=\"selected\">", "<option>", $day);
 			$day=str_replace("<option>".date("d", $ds['cwdate'])."</option>", "<option selected=\"selected\">".date("d", $ds['cwdate'])."</option>", $day);
 
@@ -594,7 +596,7 @@ elseif($action=="editwar") {
 		$year='';
 
 		$upID = $_GET['upID'];
-		$ds=mysql_fetch_array(safe_query("SELECT * FROM ".PREFIX."upcoming WHERE upID='$upID'"));
+		$ds=mysqli_fetch_array(safe_query("SELECT * FROM ".PREFIX."upcoming WHERE upID='$upID'"));
 		for($i=1; $i<32; $i++) {
 			if($i==date("d", $ds['date'])) $day.='<option selected="selected">'.$i.'</option>';
 			else $day.='<option>'.$i.'</option>';
@@ -617,7 +619,7 @@ elseif($action=="editwar") {
 		$maps = htmlspecialchars($ds['maps']);
 		$server = htmlspecialchars($ds['server']);
 		$warinfo = htmlspecialchars($ds['warinfo']);
-		$countries = str_replace('value="at" selected="selected"', 'value="at"', $countries);
+		$countries=getcountries();
 		$countries = str_replace('value="'.$ds['oppcountry'].'"', 'value="'.$ds['oppcountry'].'" selected="selected"', $countries);
 		$hour = date("H", $ds['date']);
 		$minutes = date("i", $ds['date']);
@@ -655,6 +657,7 @@ elseif($action=="adddate") {
 			else $year.='<option value="'.$i.'">'.$i.'</option>';
 		}
 		$squads=getgamesquads();
+		$countries=getcountries();
 
 		$bg1=BG_1;
 		eval ("\$upcoming_date_new = \"".gettemplate("upcoming_date_new")."\";");
@@ -680,7 +683,7 @@ elseif($action=="editdate") {
 		$endyear='';
 
 		$upID = $_GET['upID'];
-		$ds=mysql_fetch_array(safe_query("SELECT * FROM ".PREFIX."upcoming WHERE upID='$upID'"));
+		$ds=mysqli_fetch_array(safe_query("SELECT * FROM ".PREFIX."upcoming WHERE upID='$upID'"));
 		for($i=1; $i<32; $i++) {
 			if($i==date("d", $ds['date'])) $day.='<option selected="selected">'.$i.'</option>';
 			else $day.='<option>'.$i.'</option>';
@@ -705,6 +708,7 @@ elseif($action=="editdate") {
 			if($i==date("Y", $ds['enddate'])) $endyear.='<option selected="selected">'.$i.'</option>';
 			else $endyear.='<option>'.$i.'</option>';
 		}
+		$countries=getcountries();
 		$countries=str_replace(' selected="selected"', '', $countries);
 		$countries=str_replace('value="'.$ds['country'].'"', 'value="'.$ds['country'].'" selected="selected"', $countries);
 

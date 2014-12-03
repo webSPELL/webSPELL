@@ -40,9 +40,9 @@ if($action=="show") {
 	else $getsquad = '';
 
 	$ergebnis=safe_query("SELECT * FROM ".PREFIX."squads ".$getsquad." ORDER BY sort");
-	while($ds=mysql_fetch_array($ergebnis)) {
+	while($ds=mysqli_fetch_array($ergebnis)) {
 
-		$anzmembers=mysql_num_rows(safe_query("SELECT sqmID FROM ".PREFIX."squads_members WHERE squadID='".$ds['squadID']."'"));
+		$anzmembers=mysqli_num_rows(safe_query("SELECT sqmID FROM ".PREFIX."squads_members WHERE squadID='".$ds['squadID']."'"));
 		$name='<b>'.$ds['name'].'</b>';
 		if($ds['icon']) $icon='<img src="images/squadicons/'.$ds['icon'].'" border="0" alt="'.htmlspecialchars($ds['name']).'" />';
 		else $icon='';
@@ -74,7 +74,7 @@ if($action=="show") {
 		echo $members_details_head;
 
 		$i=1;
-		while($dm=mysql_fetch_array($member)) {
+		while($dm=mysqli_fetch_array($member)) {
 
 			if($i%2) {
 				$bg1=BG_1;
@@ -159,9 +159,9 @@ else {
 	}
 
 	$ergebnis=safe_query("SELECT * FROM ".PREFIX."squads ".$onesquadonly." ORDER BY sort");
-	if(mysql_num_rows($ergebnis)) {
-		while($ds=mysql_fetch_array($ergebnis)) {
-			$anzmembers=mysql_num_rows(safe_query("SELECT sqmID FROM ".PREFIX."squads_members WHERE squadID='".$ds['squadID']."'"));
+	if(mysqli_num_rows($ergebnis)) {
+		while($ds=mysqli_fetch_array($ergebnis)) {
+			$anzmembers=mysqli_num_rows(safe_query("SELECT sqmID FROM ".PREFIX."squads_members WHERE squadID='".$ds['squadID']."'"));
 			$name='<a href="index.php?site=members&amp;action=show&amp;squadID='.$ds['squadID'].'"><b>'.$ds['name'].'</b></a>';
 
 			if($ds['icon']) $icon='<img src="images/squadicons/'.$ds['icon'].'" border="0" alt="'.htmlspecialchars($ds['name']).'" />';
@@ -196,7 +196,7 @@ else {
 			echo $members_head;
 
 			$i=1;
-			while($dm=mysql_fetch_array($member)) {
+			while($dm=mysqli_fetch_array($member)) {
 
 				if($i%2) {
 					$bg1=BG_1;
@@ -250,7 +250,7 @@ else {
     
 		$ergebnis=safe_query("SELECT squadID, name FROM ".PREFIX."squads ORDER BY sort");
 		$squadlist = '';
-		while($ds=mysql_fetch_array($ergebnis)) {
+		while($ds=mysqli_fetch_array($ergebnis)) {
 			$squadlist .= '<option value="'.$ds['squadID'].'">'.$ds['name'].'</option>';
 		}
 

@@ -31,6 +31,7 @@ $language_array = Array(
 
   'about_us'=>'About us',
   'access_denied'=>'Access denied',
+  'addons'=>'Addons',
   'bannerrotation'=>'Bannerrotation',
   'boards'=>'Boards',
   'clanmembers'=>'Clanmembers',
@@ -75,6 +76,12 @@ $language_array = Array(
   'update_webspell'=>'webSPELL update',
   'user_administration'=>'User Administration',
   'user_ranks'=>'User-Ranks',
-  'visitor_statistics'=>'Visitor Statistics'
+  'visitor_statistics'=>'Visitor Statistics',
+  'spam'=>'Spam',
+  'spam_forum'=>'Posts / Topics',
+  'spam_user'=>'Remove User',
+  'multiaccounts'=>'Multi-Accounts',
+  'api_log'=>'API Log',
+  'blocked_content'=>'Blocked Content'
 );
 ?>

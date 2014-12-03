@@ -26,12 +26,12 @@
 */
 
 $ergebnis = safe_query("SELECT date, title, articlesID FROM ".PREFIX."articles WHERE saved='1' ORDER BY date DESC LIMIT 0, ".$latestarticles);
-if(mysql_num_rows($ergebnis)){
+if(mysqli_num_rows($ergebnis)){
 	echo'<table width="100%" cellspacing="0" cellpadding="2">';
   $n=1;
-	while($ds = mysql_fetch_array($ergebnis)) {
-		$date = date("d.m.Y", $ds['date']);
-		$time = date("H:i", $ds['date']);
+	while($ds = mysqli_fetch_array($ergebnis)) {
+		$date = getformatdate($ds['date']);
+		$time = getformattime($ds['date']);
 		$title = $ds['title'];
 		$articlesID = $ds['articlesID'];
     

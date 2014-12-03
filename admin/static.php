@@ -38,14 +38,16 @@ if(isset($_POST['save'])) {
 		}
 		else {
 			safe_query("INSERT INTO `".PREFIX."static` ( `name`, `accesslevel`,`content` ) values( '".$_POST['name']."', '".$_POST['accesslevel']."','".$_POST['message']."' ) ");
-			$id = mysql_insert_id();
+			$id = mysqli_insert_id($_database);
 		}
+		Tags::setTags('static', $id, $_POST['tags']);
 	} else echo $_language->module['transaction_invalid'];
 }
 
 elseif(isset($_GET['delete'])) {
  	$CAPCLASS = new Captcha;
 	if($CAPCLASS->check_captcha(0, $_GET['captcha_hash'])) {
+		Tags::removeTags('static', $_GET['staticID']);
 		safe_query("DELETE FROM `".PREFIX."static` WHERE staticID='".$_GET['staticID']."'");
 	} else echo $_language->module['transaction_invalid'];
 }
@@ -73,6 +75,10 @@ if(isset($_GET['action']) and $_GET['action'] == "add") {
     <tr>
       <td width="15%"><b>'.$_language->module['title'].'</b></td>
       <td width="85%"><input type="text" name="name" size="60" value="new" /></td>
+    </tr>
+    <tr>
+      <td width="15%"><b>'.$_language->module['tags'].'</b></td>
+      <td width="85%"><input type="text" name="tags" size="60" value="" /></td>
     </tr>
     <tr>
       <td><b>'.$_language->module['accesslevel'].'</b></td>
@@ -106,7 +112,7 @@ elseif(isset($_GET['action']) and $_GET['action'] == "edit") {
 	
   $staticID = $_GET['staticID'];
 	$ergebnis=safe_query("SELECT * FROM `".PREFIX."static` WHERE staticID='".$staticID."'");
-	$ds=mysql_fetch_array($ergebnis);
+	$ds=mysqli_fetch_array($ergebnis);
 	$content = getinput($ds['content']);
 	
 	$clanmember = "";
@@ -115,6 +121,8 @@ elseif(isset($_GET['action']) and $_GET['action'] == "edit") {
 	if($ds['accesslevel'] == 2) $clanmember = "checked=\"checked\"";
 	elseif($ds['accesslevel'] == 1) $user = "checked=\"checked\"";
 	else $public = "checked=\"checked\"";
+
+	$tags = Tags::getTags('static', $staticID);
 
 	$CAPCLASS = new Captcha;
 	$CAPCLASS->create_transaction();
@@ -137,6 +145,10 @@ elseif(isset($_GET['action']) and $_GET['action'] == "edit") {
     <tr>
       <td width="15%"><b>'.$_language->module['title'].'</b></td>
       <td width="85%"><input type="text" name="name" size="60" value="'.getinput($ds['name']).'" /></td>
+    </tr>
+    <tr>
+      <td width="15%"><b>'.$_language->module['tags'].'</b></td>
+      <td width="85%"><input type="text" name="tags" size="60" value="'.getinput($tags).'" /></td>
     </tr>
     <tr>
       <td><b>'.$_language->module['accesslevel'].'</b></td>
@@ -184,7 +196,7 @@ else {
 	$CAPCLASS->create_transaction();
 	$hash = $CAPCLASS->get_hash();
   
-  while($ds=mysql_fetch_array($ergebnis)) {
+  while($ds=mysqli_fetch_array($ergebnis)) {
     if($i%2) { $td='td1'; }
     else { $td='td2'; }
   

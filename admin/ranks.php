@@ -50,7 +50,7 @@ elseif(isset($_POST['save'])) {
 			else $maximum=$max;
 		
 			safe_query("INSERT INTO ".PREFIX."forum_ranks ( rank, postmin, postmax ) values( '$name', '$min', '$maximum' )");
-			$id=mysql_insert_id();
+			$id=mysqli_insert_id($_database);
 		
 			$filepath = "../images/icons/ranks/";
 			if ($rank['name'] != "") {
@@ -75,9 +75,9 @@ elseif(isset($_POST['saveedit'])) {
 	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {	 
 		if(checkforempty(Array('min', 'max'))) {
 			$ergebnis = safe_query("SELECT * FROM ".PREFIX."forum_ranks ORDER BY rankID");
-			$anz=mysql_num_rows($ergebnis);
+			$anz=mysqli_num_rows($ergebnis);
 			if($anz) {
-				while($ds=mysql_fetch_array($ergebnis)) {
+				while($ds=mysqli_fetch_array($ergebnis)) {
 					if($ds['rank'] != "Administrator" && $ds['rank'] != "Moderator") {
 						$id=$ds['rankID'];
 						if($max[$id]=="MAX") $maximum=2147483647;
@@ -149,7 +149,7 @@ else {
 	$CAPCLASS->create_transaction();
 	$hash = $CAPCLASS->get_hash();
   $i=1;
-  while($ds=mysql_fetch_array($ergebnis)) {
+  while($ds=mysqli_fetch_array($ergebnis)) {
     if($i%2) { $td='td1'; }
     else { $td='td2'; }    
 		if($ds['rank']=="Administrator" || $ds['rank']=="Moderator") {			

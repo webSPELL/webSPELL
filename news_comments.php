@@ -40,12 +40,12 @@ echo $post.' <input type="button" onclick="MM_goToURL(\'parent\',\'index.php?sit
 
 if($newsID) {
 	$result=safe_query("SELECT * FROM ".PREFIX."news WHERE newsID='".$newsID."'");
-	$ds=mysql_fetch_array($result);
+	$ds=mysqli_fetch_array($result);
 
 	if($ds['intern'] <= isclanmember($userID) && ($ds['published'] || (isnewsadmin($userID) || (isnewswriter($userID) and $ds['poster'] == $userID)))) {
 
-		$date = date("d.m.Y", $ds['date']);
-		$time = date("H:i", $ds['date']);
+		$date = getformatdate($ds['date']);
+		$time = getformattime($ds['date']);
 		$rubrikname=getrubricname($ds['rubric']);
 		$rubrikname_link = getinput($rubrikname);
 		$rubricpic_name = getrubricpic($ds['rubric']);
@@ -55,7 +55,7 @@ if($newsID) {
 
 		$message_array = array();
 		$query=safe_query("SELECT n.*, c.short AS `countryCode`, c.country FROM ".PREFIX."news_contents n LEFT JOIN ".PREFIX."countries c ON c.short = n.language WHERE n.newsID='".$newsID."'");
-		while($qs = mysql_fetch_array($query)) {
+		while($qs = mysqli_fetch_array($query)) {
 			$message_array[] = array('lang' => $qs['language'], 'headline' => $qs['headline'], 'message' => $qs['content'], 'country'=> $qs['country'], 'countryShort' => $qs['countryCode']);
 		}
 		if(isset($_GET['lang'])) $showlang = getlanguageid($_GET['lang'], $message_array);
@@ -95,13 +95,15 @@ if($newsID) {
 
 		if(empty($related)) $related="n/a";
     
-    if(isnewsadmin($userID) or (isnewswriter($userID) and $ds['poster'] == $userID)) {
+    	if(isnewsadmin($userID) or (isnewswriter($userID) and $ds['poster'] == $userID)) {
 			$adminaction='<input type="button" onclick="MM_openBrWindow(\'news.php?action=edit&amp;newsID='.$ds['newsID'].'\',\'News\',\'toolbar=no,status=no,scrollbars=yes,width=800,height=600\')" value="'.$_language->module['edit'].'" />
 	    <input type="button" onclick="MM_confirm(\''.$_language->module['really_delete'].'\', \'news.php?action=delete&amp;id='.$ds['newsID'].'\')" value="'.$_language->module['delete'].'" />';
 		}
 		else $adminaction='';
 
 		$bg1=BG_1;
+
+		$tags = Tags::getTagsLinked('news',$newsID);
 
 		eval ("\$news = \"".gettemplate("news")."\";");
 		echo $news;

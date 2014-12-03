@@ -34,13 +34,13 @@ if($action=="save") {
 	$run=0;
 	if($userID) {
 		$run=1;
-		$name = mysql_real_escape_string(getnickname($userID));
+		$name = $_database->escape_string(getnickname($userID));
 	}
 	else {
 		$CAPCLASS = new Captcha;
 		if($CAPCLASS->check_captcha($_POST['captcha'], $_POST['captcha_hash'])) $run=1;
 
-		if(mysql_num_rows(safe_query("SELECT * FROM ".PREFIX."user WHERE nickname = '$name' "))) $name = '*'.$name.'*';
+		if(mysqli_num_rows(safe_query("SELECT * FROM ".PREFIX."user WHERE nickname = '$name' "))) $name = '*'.$name.'*';
 		$name = clearfromtags($name);
 	}
 
@@ -48,7 +48,7 @@ if($action=="save") {
 		$date=time();
 		$ip = $GLOBALS['ip'];
 		$ergebnis = safe_query("SELECT * FROM ".PREFIX."shoutbox ORDER BY date DESC LIMIT 0,1");
-		$ds=mysql_fetch_array($ergebnis);
+		$ds=mysqli_fetch_array($ergebnis);
 		if(($ds['message'] != $message) OR ($ds['name'] != $name)) safe_query("INSERT INTO ".PREFIX."shoutbox (date, name, message, ip) VALUES ( '$date', '$name', '$message', '$ip' ) ");
 	}
 	redirect('index.php?site=shoutbox_content&action=showall','shoutbox',0);
@@ -75,8 +75,8 @@ elseif($action=="showall") {
 	eval ("\$title_shoutbox = \"".gettemplate("title_shoutbox")."\";");
 	echo $title_shoutbox;
 
-	$all = safe_query("SELECT count(shoutID) FROM ".PREFIX."shoutbox ORDER BY date");
-	$gesamt = mysql_result($all, 0);
+	$tmp = mysqli_fetch_assoc(safe_query("SELECT count(shoutID) as cnt FROM ".PREFIX."shoutbox ORDER BY date"));
+	$gesamt = $tmp['cnt'];
 	$pages=ceil($gesamt/$maxsball);
 	$max=$maxsball;
 	if(!isset($_GET['page'])) $page = 1; else $page = (int)$_GET['page'];
@@ -111,10 +111,10 @@ elseif($action=="showall") {
 	echo $shoutbox_all_head;
 
 	$i=1;
-	while($ds=mysql_fetch_array($ergebnis)) {
+	while($ds=mysqli_fetch_array($ergebnis)) {
 
 		$i%2 ? $bg1=BG_1 : $bg1=BG_2;
-		$date=date("d.m - H:i", $ds['date']);
+		$date=getformatdatetime($ds['date']);
 		$name=$ds['name'];
 		$message=cleartext($ds['message'], false);
 		$ip='logged';
@@ -161,8 +161,8 @@ else {
 	$bg1=BG_1;
 
 	$ergebnis=safe_query("SELECT * FROM ".PREFIX."shoutbox ORDER BY date DESC LIMIT 0,".$maxshoutbox);
-	while($ds=mysql_fetch_array($ergebnis)) {
-		$date=date("H:i", $ds['date']);
+	while($ds=mysqli_fetch_array($ergebnis)) {
+		$date=getformattime($ds['date']);
 		$name=$ds['name'];
 		$message=cleartext($ds['message'], false);
 		$message=str_replace("&amp;amp;","&",$message);

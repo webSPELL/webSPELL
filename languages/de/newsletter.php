@@ -42,7 +42,7 @@ $language_array = Array(
 	'newsletter_registration'=>'Newsletter abonieren',
 	'no_such_mail_adress'=>'Diese E-Mail Adresse ist nicht in der Datenbank',
 	'password_had_been_send'=>'Der Entfernungscode wurde gesendet',
-	'register_newsletter'=>'Für das Newsletter anmelden',
+	'register_newsletter'=>'Für den Newsletter anmelden',
 	'request_mail'=>'<b>Du hast deinen Entfernungscode angefordert.</b><br /><br />Um deine Mailadresse von der Mailing-Liste zu entfernen, klicke folgenden Link an: <a href="http://%homepage_url%/index.php?site=newsletter&mail=%mail%&pass=%delete_key%">Mailadresse entfernen</a><br />Das Passwort zum Entfernen von der Liste lautet: %delete_key%<br /><br />Bis demnächst auf %homepage_url%',
 	'send'=>'senden',
 	'submit'=>'abschicken',

@@ -48,7 +48,7 @@ if(isset($_POST['saveedit'])) {
 
 	$galclass = new Gallery;
 
-	$ds = mysql_fetch_array(safe_query("SELECT galleryID FROM ".PREFIX."gallery_pictures WHERE picID='".$_POST['picID']."'"));
+	$ds = mysqli_fetch_array(safe_query("SELECT galleryID FROM ".PREFIX."gallery_pictures WHERE picID='".$_POST['picID']."'"));
 
 	if((isgalleryadmin($userID) or $galclass->isgalleryowner($ds['galleryID'], $userID)) and $_POST['picID']) {
 
@@ -67,7 +67,7 @@ elseif($action == "edit") {
 
 	if($_GET['id']) {
 
-		$ds = mysql_fetch_array(safe_query("SELECT * FROM ".PREFIX."gallery_pictures WHERE picID='".$_GET['id']."'"));
+		$ds = mysqli_fetch_array(safe_query("SELECT * FROM ".PREFIX."gallery_pictures WHERE picID='".$_GET['id']."'"));
 
 		$picID = $_GET['id'];
 		$bg1 = BG_1;
@@ -89,11 +89,11 @@ elseif($action == "delete") {
 
 	$galclass = new Gallery;
 
-	$ds=mysql_fetch_array(safe_query("SELECT galleryID FROM ".PREFIX."gallery_pictures WHERE picID='".$_GET['id']."'"));
+	$ds=mysqli_fetch_array(safe_query("SELECT galleryID FROM ".PREFIX."gallery_pictures WHERE picID='".$_GET['id']."'"));
 
 	if((isgalleryadmin($userID) or $galclass->isgalleryowner($ds['galleryID'], $userID)) and $_GET['id']) {
 
-		$ds = mysql_fetch_array(safe_query("SELECT galleryID FROM ".PREFIX."gallery_pictures WHERE picID='".$_GET['id']."'"));
+		$ds = mysqli_fetch_array(safe_query("SELECT galleryID FROM ".PREFIX."gallery_pictures WHERE picID='".$_GET['id']."'"));
 		
 		$dir='images/gallery/';
 		
@@ -122,13 +122,13 @@ elseif($action == "diashow" OR $action == "window") {
 	$_language->read_module('gallery');
 
 	if(!isset($_GET['picID']))	{
-		$result = mysql_fetch_array(safe_query("SELECT picID FROM ".PREFIX."gallery_pictures WHERE galleryID='".(int)$_GET['galleryID']."' ORDER BY picID ASC LIMIT 0,1"));
+		$result = mysqli_fetch_array(safe_query("SELECT picID FROM ".PREFIX."gallery_pictures WHERE galleryID='".(int)$_GET['galleryID']."' ORDER BY picID ASC LIMIT 0,1"));
 		$picID = (int)$result['picID'];
 	}
 	else $picID = (int)$_GET['picID'];
 
 	//get name+comment
-	$ds = mysql_fetch_array(safe_query("SELECT name, comment FROM ".PREFIX."gallery_pictures WHERE picID='".$picID."'"));
+	$ds = mysqli_fetch_array(safe_query("SELECT name, comment FROM ".PREFIX."gallery_pictures WHERE picID='".$picID."'"));
 
 	echo '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
@@ -144,7 +144,7 @@ elseif($action == "diashow" OR $action == "window") {
 
 	//get next
 
-	$browse = mysql_fetch_array(safe_query("SELECT picID FROM ".PREFIX."gallery_pictures WHERE galleryID='".(int)$_GET['galleryID']."' AND picID>".$picID." ORDER BY picID ASC LIMIT 0,1"));
+	$browse = mysqli_fetch_array(safe_query("SELECT picID FROM ".PREFIX."gallery_pictures WHERE galleryID='".(int)$_GET['galleryID']."' AND picID>".$picID." ORDER BY picID ASC LIMIT 0,1"));
 	
   if($browse['picID'] and $_GET['action'] == "diashow") echo '<meta http-equiv="refresh" content="2;URL=gallery.php?action=diashow&amp;galleryID='.(int)$_GET['galleryID'].'&amp;picID='.$browse['picID'].'" />';
 
@@ -177,9 +177,9 @@ elseif(isset($_GET['picID'])) {
 	echo $gallery;
 
 	$ergebnis = safe_query("SELECT * FROM ".PREFIX."gallery_pictures WHERE picID='".$_GET['picID']."'");
-	if(mysql_num_rows($ergebnis)){
+	if(mysqli_num_rows($ergebnis)){
 	
-		$ds = mysql_fetch_array(safe_query("SELECT * FROM ".PREFIX."gallery_pictures WHERE picID='".$_GET['picID']."'"));
+		$ds = mysqli_fetch_array(safe_query("SELECT * FROM ".PREFIX."gallery_pictures WHERE picID='".$_GET['picID']."'"));
 		safe_query("UPDATE ".PREFIX."gallery_pictures SET views=views+1 WHERE picID='".$_GET['picID']."'");
 	
 		$picturename = clearfromtags($ds['name']);
@@ -203,11 +203,11 @@ elseif(isset($_GET['picID'])) {
 		$filesize = round(filesize($picture)/1024,1);
 	
 		//next picture
-		$browse = mysql_fetch_array(safe_query("SELECT picID FROM ".PREFIX."gallery_pictures WHERE galleryID='".$ds['galleryID']."' AND picID>".$ds['picID']." ORDER BY picID ASC LIMIT 0,1"));
+		$browse = mysqli_fetch_array(safe_query("SELECT picID FROM ".PREFIX."gallery_pictures WHERE galleryID='".$ds['galleryID']."' AND picID>".$ds['picID']." ORDER BY picID ASC LIMIT 0,1"));
 		if($browse['picID']) $forward = '<a href="index.php?site=gallery&amp;picID='.$browse['picID'].'#picture">'.$_language->module['next'].' &raquo;</a>';
     else $forward='';
 	
-		$browse = mysql_fetch_array(safe_query("SELECT picID FROM ".PREFIX."gallery_pictures WHERE galleryID='".$ds['galleryID']."' AND picID<".$ds['picID']." ORDER BY picID DESC LIMIT 0,1"));
+		$browse = mysqli_fetch_array(safe_query("SELECT picID FROM ".PREFIX."gallery_pictures WHERE galleryID='".$ds['galleryID']."' AND picID<".$ds['picID']." ORDER BY picID DESC LIMIT 0,1"));
 		if($browse['picID']) $backward = '<a href="index.php?site=gallery&amp;picID='.$browse['picID'].'#picture">&laquo; '.$_language->module['back'].'</a>';
     else $backward='';
 	
@@ -217,8 +217,8 @@ elseif(isset($_GET['picID'])) {
 	
 			$getgallery = safe_query("SELECT gallery_pictures FROM ".PREFIX."user WHERE userID='".$userID."'");
 			$found = false;
-			if(mysql_num_rows($getgallery)) {
-				$ga = mysql_fetch_array($getgallery);
+			if(mysqli_num_rows($getgallery)) {
+				$ga = mysqli_fetch_array($getgallery);
 				if($ga['gallery_pictures'] != "") {
 					$string = $ga['gallery_pictures'];
 					$array = explode(":", $string);
@@ -299,9 +299,9 @@ elseif(isset($_GET['galleryID'])) {
 	eval("\$gallery = \"".gettemplate("title_gallery")."\";");
 	echo $gallery;
 
-	$ds = mysql_fetch_array(safe_query("SELECT name FROM ".PREFIX."gallery WHERE galleryID='".$_GET['galleryID']."'"));
+	$ds = mysqli_fetch_array(safe_query("SELECT name FROM ".PREFIX."gallery WHERE galleryID='".$_GET['galleryID']."'"));
 	$title = str_break(clearfromtags($ds['name']), 45);
-	$pics = mysql_num_rows(safe_query("SELECT picID FROM ".PREFIX."gallery_pictures WHERE galleryID='".$_GET['galleryID']."'"));
+	$pics = mysqli_num_rows(safe_query("SELECT picID FROM ".PREFIX."gallery_pictures WHERE galleryID='".$_GET['galleryID']."'"));
 	$pages = ceil($pics/$gallerypictures);
 	$galleryID = $_GET['galleryID'];
 	if($galclass->getgroupid_by_gallery($_GET['galleryID'])) $group = '<a href="index.php?site=gallery&amp;groupID='.$galclass->getgroupid_by_gallery($_GET['galleryID']).'" class="titlelink">'.$galclass->getgroupname($galclass->getgroupid_by_gallery($_GET['galleryID'])).'</a>';
@@ -320,7 +320,7 @@ elseif(isset($_GET['galleryID'])) {
 		$start = $page * $gallerypictures - $gallerypictures;
 		$ergebnis = safe_query("SELECT * FROM ".PREFIX."gallery_pictures WHERE galleryID='".$_GET['galleryID']."' ORDER BY picID LIMIT ".$start.", ".$gallerypictures);
 	}
-	if(mysql_num_rows($ergebnis)){
+	if(mysqli_num_rows($ergebnis)){
 		$diashow = "<strong>- <a href=\"javascript:MM_openBrWindow('gallery.php?action=diashow&amp;galleryID=$galleryID','webspell_diashow','toolbar=no,status=no,scrollbars=yes')\"><small>[".$_language->module['start_diashow']."]</small></a></strong>";
 	}
 	else {
@@ -333,7 +333,7 @@ elseif(isset($_GET['galleryID'])) {
 
 	$percent = 100 / $pics_per_row;
 
-	while($pic = mysql_fetch_array($ergebnis)) {
+	while($pic = mysqli_fetch_array($ergebnis)) {
 
 		if($i % 2) $bg = BG_2;
 		else $bg = BG_1;
@@ -344,7 +344,7 @@ elseif(isset($_GET['galleryID'])) {
 		if(!file_exists($pic['pic'])) $pic['pic'] = 'images/nopic.gif';
 		$pic['name'] = clearfromtags($pic['name']);
 		$pic['comment'] = cleartext($pic['comment'], false);
-		$pic['comments'] = mysql_num_rows(safe_query("SELECT commentID FROM ".PREFIX."comments WHERE parentID='".$pic['picID']."' AND type='ga'"));
+		$pic['comments'] = mysqli_num_rows(safe_query("SELECT commentID FROM ".PREFIX."comments WHERE parentID='".$pic['picID']."' AND type='ga'"));
 
 		eval("\$gallery = \"".gettemplate("gallery_showlist")."\";");
 		echo $gallery;
@@ -370,7 +370,7 @@ elseif(isset($_GET['groupID'])) {
 	eval ("\$gallery = \"".gettemplate("title_gallery")."\";");
 	echo $gallery;
 
-	$galleries = mysql_num_rows(safe_query("SELECT galleryID FROM ".PREFIX."gallery WHERE groupID='".$_GET['groupID']."'"));
+	$galleries = mysqli_num_rows(safe_query("SELECT galleryID FROM ".PREFIX."gallery WHERE groupID='".$_GET['groupID']."'"));
 	$pages = ceil($galleries/$gallerypictures);
 
 	if(!isset($_GET['page'])) $page = 1;
@@ -396,7 +396,7 @@ elseif(isset($_GET['groupID'])) {
 	echo '<tr>';
 	$i = 1;
 
-	while($gallery = mysql_fetch_array($ergebnis)) {
+	while($gallery = mysqli_fetch_array($ergebnis)) {
 
 		if($i % 2) $bg = BG_2;
 		else $bg = BG_1;
@@ -405,8 +405,8 @@ elseif(isset($_GET['groupID'])) {
 		
 		$gallery['picID'] = $galclass->randompic($gallery['galleryID']);
 		$gallery['pic'] = $dir.'thumb/'.$gallery['picID'].'.jpg';
-		$gallery['pics'] = mysql_num_rows(safe_query("SELECT picID FROM ".PREFIX."gallery_pictures WHERE galleryID='".$gallery['galleryID']."'"));
-		$gallery['date'] = date("d.m.Y - H:i",$gallery['date']);
+		$gallery['pics'] = mysqli_num_rows(safe_query("SELECT picID FROM ".PREFIX."gallery_pictures WHERE galleryID='".$gallery['galleryID']."'"));
+		$gallery['date'] = getformatdatetime($gallery['date']);
 		if(!file_exists($gallery['pic'])) $gallery['pic'] = 'images/nopic.gif';
 
 		eval ("\$gallery = \"".gettemplate("gallery_showlist_group")."\";");
@@ -435,14 +435,14 @@ else {
 	echo $gallery;
 
 	//latest gallery
-	$ds = mysql_fetch_array(safe_query("SELECT galleryID FROM ".PREFIX."gallery WHERE userID='0' ORDER BY galleryID DESC LIMIT 0, 1"));
+	$ds = mysqli_fetch_array(safe_query("SELECT galleryID FROM ".PREFIX."gallery WHERE userID='0' ORDER BY galleryID DESC LIMIT 0, 1"));
 	$latest = $galclass->showthumb($galclass->randompic($ds['galleryID']));
 	
 	//random
 	$random = $galclass->showthumb($galclass->randompic());
 
 	//top comments
-	$ds = mysql_fetch_array(safe_query("SELECT parentID, COUNT(parentID) as max FROM ".PREFIX."comments WHERE type='ga' GROUP BY parentID ORDER BY max DESC LIMIT 0, 1"));
+	$ds = mysqli_fetch_array(safe_query("SELECT parentID, COUNT(parentID) as max FROM ".PREFIX."comments WHERE type='ga' GROUP BY parentID ORDER BY max DESC LIMIT 0, 1"));
 	if(!$ds['parentID']) $ds['parentID'] = $galclass->randompic();
 	$most_comments = $galclass->showthumb($ds['parentID']);
 	$bg1 = BG_1;
@@ -453,22 +453,22 @@ else {
 
 	$ergebnis = safe_query("SELECT * FROM ".PREFIX."gallery_groups ORDER BY sort");
 
-	while($ds = mysql_fetch_array($ergebnis)) {
+	while($ds = mysqli_fetch_array($ergebnis)) {
 
 		$groupID = $ds['groupID'];
 		$title = $ds['name'];
-		$gallerys = mysql_num_rows(safe_query("SELECT galleryID FROM ".PREFIX."gallery WHERE groupID='".$ds['groupID']."'"));
-		$pics = mysql_num_rows(safe_query("SELECT picID FROM ".PREFIX."gallery as gal, ".PREFIX."gallery_pictures as pic WHERE gal.groupID='".$ds['groupID']."' AND gal.galleryID=pic.galleryID"));
+		$gallerys = mysqli_num_rows(safe_query("SELECT galleryID FROM ".PREFIX."gallery WHERE groupID='".$ds['groupID']."'"));
+		$pics = mysqli_num_rows(safe_query("SELECT picID FROM ".PREFIX."gallery as gal, ".PREFIX."gallery_pictures as pic WHERE gal.groupID='".$ds['groupID']."' AND gal.galleryID=pic.galleryID"));
 
 		eval ("\$gallery_groups = \"".gettemplate("gallery_content_categorys_head")."\";");
 		echo $gallery_groups;
 
 		$bg = BG_1;
 
-    $gallery = mysql_fetch_array(safe_query("SELECT * FROM ".PREFIX."gallery WHERE groupID='".$ds['groupID']."' ORDER BY galleryID DESC LIMIT 0,1"));
+    $gallery = mysqli_fetch_array(safe_query("SELECT * FROM ".PREFIX."gallery WHERE groupID='".$ds['groupID']."' ORDER BY galleryID DESC LIMIT 0,1"));
 		$gallery['picture'] = $galclass->randompic($gallery['galleryID']);
-		if(isset($gallery['date'])) $gallery['date'] = date('d.m.Y', $gallery['date']);
-		if(isset($gallery['galleryID'])) $gallery['count'] = mysql_num_rows(safe_query("SELECT picID FROM ".PREFIX."gallery_pictures WHERE galleryID='".$gallery['galleryID']."'"));
+		if(isset($gallery['date'])) $gallery['date'] = getformatdate($gallery['date']);
+		if(isset($gallery['galleryID'])) $gallery['count'] = mysqli_num_rows(safe_query("SELECT picID FROM ".PREFIX."gallery_pictures WHERE galleryID='".$gallery['galleryID']."'"));
 
 		if(isset($gallery['count'])) {
 			$gallery['name']=$gallery['name'];

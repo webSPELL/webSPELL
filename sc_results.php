@@ -26,12 +26,12 @@
 */
 
 $ergebnis=safe_query("SELECT * FROM ".PREFIX."clanwars ORDER BY date DESC LIMIT 0, ".$maxresults);
-if(mysql_num_rows($ergebnis)){
+if(mysqli_num_rows($ergebnis)){
 	echo'<table width="100%" cellspacing="0" cellpadding="2">';
 	$n=1;
-	while($ds=mysql_fetch_array($ergebnis)) {
+	while($ds=mysqli_fetch_array($ergebnis)) {
 
-		$date=date("d.m.Y", $ds['date']);
+		$date=getformatdate($ds['date']);
 		$homescr=array_sum(unserialize($ds['homescore']));
 		$oppscr=array_sum(unserialize($ds['oppscore']));
 

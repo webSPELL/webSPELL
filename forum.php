@@ -50,7 +50,7 @@ function forum_stats() {
 	// TODAY birthdays
 	$ergebnis=safe_query("SELECT nickname, userID, YEAR(CURRENT_DATE()) -YEAR(birthday) 'age' FROM ".PREFIX."user WHERE DATE_FORMAT(`birthday`, '%m%d') = DATE_FORMAT(NOW(), '%m%d')");
 	$n=0;
-	while($db=mysql_fetch_array($ergebnis)) {
+	while($db=mysqli_fetch_array($ergebnis)) {
 		$n++;
 		$years=$db['age'];
 		if($n>1) $birthdays.=', <a href="index.php?site=profile&amp;id='.$db['userID'].'"><b>'.$db['nickname'].'</b></a> ('.$years.')';
@@ -62,7 +62,7 @@ function forum_stats() {
 	// WEEK birthdays
 	$ergebnis=safe_query("SELECT nickname, userID, DATE_FORMAT(FROM_DAYS(TO_DAYS(NOW()) - TO_DAYS(birthday)), '%y') + 1 AS age FROM ".PREFIX."user WHERE IF(DAYOFYEAR(NOW())<=358,((DAYOFYEAR(birthday)>DAYOFYEAR(NOW())) AND (DAYOFYEAR(birthday)<=DAYOFYEAR(DATE_ADD(NOW(), INTERVAL 7 DAY)))),(DAYOFYEAR(BIRTHDAY)>DAYOFYEAR(NOW()) OR DAYOFYEAR(birthday)<=DAYOFYEAR(DATE_ADD(NOW(), INTERVAL 7 DAY)))) AND birthday !='0000-00-00 00:00:00' ORDER BY `birthday` ASC");
 	$n=0;
-	while($db=mysql_fetch_array($ergebnis)) {
+	while($db=mysqli_fetch_array($ergebnis)) {
 		$n++;
 		$years=$db['age'];
 		if($n>1) $birthweek.=', <a href="index.php?site=profile&amp;id='.$db['userID'].'"><b>'.$db['nickname'].'</b></a> ('.$years.')';
@@ -71,8 +71,8 @@ function forum_stats() {
 	if(!$n) $birthweek=$_language->module['n_a'];
 
 	// WHOISONLINE
-	$guests = mysql_num_rows(safe_query("SELECT ip FROM ".PREFIX."whoisonline WHERE userID=''"));
-	$user = mysql_num_rows(safe_query("SELECT userID FROM ".PREFIX."whoisonline WHERE ip=''"));
+	$guests = mysqli_num_rows(safe_query("SELECT ip FROM ".PREFIX."whoisonline WHERE userID=''"));
+	$user = mysqli_num_rows(safe_query("SELECT userID FROM ".PREFIX."whoisonline WHERE ip=''"));
 	$useronline = $guests + $user;
 
 	if($user==1) $user_on=$_language->module['registered_user'];
@@ -85,7 +85,7 @@ function forum_stats() {
 	$user_names = "";
 	if($user) {
 		$n=1;
-		while($ds=mysql_fetch_array($ergebnis)) {
+		while($ds=mysqli_fetch_array($ergebnis)) {
 			if(isforumadmin($ds['userID'])) $nickname = '<span style="color:'.$loosecolor.'">'.$ds['nickname'].'</span>';
 			elseif(isanymoderator($ds['userID'])) $nickname = '<span style="color:'.$drawcolor.'">'.$ds['nickname'].'</span>';
 			elseif(isclanmember($ds['userID'])) $nickname = '<span style="color:'.$wincolor.'">'.$ds['nickname'].'</span>';
@@ -96,14 +96,14 @@ function forum_stats() {
 		}
 	}
 
-	$dt=mysql_fetch_array(safe_query("SELECT sum(topics), sum(posts) FROM ".PREFIX."forum_boards"));
+	$dt=mysqli_fetch_array(safe_query("SELECT sum(topics), sum(posts) FROM ".PREFIX."forum_boards"));
 	$topics=$dt[0];
 	$posts=$dt[1];
-	$dt=mysql_fetch_array(safe_query("SELECT count(userID) FROM ".PREFIX."user WHERE activated='1'"));
+	$dt=mysqli_fetch_array(safe_query("SELECT count(userID) FROM ".PREFIX."user WHERE activated='1'"));
 	$registered=$dt[0];
 	$newestuser=safe_query("SELECT userID, nickname FROM ".PREFIX."user WHERE activated='1' ORDER BY registerdate DESC LIMIT 0,1");
-	$dn=mysql_fetch_array($newestuser);
-	$dm=mysql_fetch_array(safe_query("SELECT maxonline FROM ".PREFIX."counter"));
+	$dn=mysqli_fetch_array($newestuser);
+	$dm=mysqli_fetch_array(safe_query("SELECT maxonline FROM ".PREFIX."counter"));
 	$maxonline=$dm['maxonline'];
 
 	$newestmember='<a href="index.php?site=profile&amp;id='.$dn['userID'].'"><b>'.$dn['nickname'].'</b></a>';
@@ -144,7 +144,7 @@ function boardmain() {
 		}
 	}
 	$kath=safe_query("SELECT catID, name, info, readgrps FROM ".PREFIX."forum_categories".$sql_where." ORDER BY sort");
-	while($dk=mysql_fetch_array($kath)) {
+	while($dk=mysqli_fetch_array($kath)) {
 		$kathname = "<a href='index.php?site=forum&amp;cat=".$dk['catID']."'>".$dk['name']."</a>";
 		if($dk['info']) $info=$dk['info'];
 		else $info='';
@@ -168,7 +168,7 @@ function boardmain() {
 		$boards=safe_query("SELECT * FROM ".PREFIX."forum_boards WHERE category='".$dk['catID']."' ORDER BY sort");
 		$i=1;
 
-		while($db=mysql_fetch_array($boards)) {
+		while($db=mysqli_fetch_array($boards)) {
 
 			if($i%2) {
 				$bg1=BG_1;
@@ -224,19 +224,19 @@ function boardmain() {
 			$q = safe_query("SELECT topicID, lastdate, lastposter, replys FROM ".PREFIX."forum_topics WHERE boardID='".$db['boardID']."' AND moveID='0' ORDER BY lastdate DESC LIMIT 0,".$maxtopics);
 			$n=1;
 			$board_topics = Array();
-			while($lp = mysql_fetch_assoc($q)) {
+			while($lp = mysqli_fetch_assoc($q)) {
 				
 				if($n == 1) {
 
-					$date=date("d.m.Y", $lp['lastdate']);
-					$today=date("d.m.Y", time());
-					$yesterday = date("d.m.Y", time()-3600*24);
+					$date=getformatdate($lp['lastdate']);
+					$today=getformatdate(time());
+					$yesterday = getformatdate(time()-3600*24);
 	
 					if($date==$today) $date=$_language->module['today'];
 					elseif($date==$yesterday && $date<$today) $date=$_language->module['yesterday'];
 					else $date=$date;
 	
-					$time=date("- H:i", $lp['lastdate']);
+					$time=getformattime($lp['lastdate']);
 					$poster='<a href="index.php?site=profile&amp;id='.$lp['lastposter'].'">'.getnickname($lp['lastposter']).'</a>';
 					if(isclanmember($lp['lastposter'])) $member=' <img src="images/icons/member.gif" alt="'.$_language->module['clanmember'].'" />';
 					else $member='';
@@ -255,7 +255,7 @@ function boardmain() {
 			
 			if($userID) {
 				
-				$gv=mysql_fetch_array(safe_query("SELECT topics FROM ".PREFIX."user WHERE userID='$userID'"));
+				$gv=mysqli_fetch_array(safe_query("SELECT topics FROM ".PREFIX."user WHERE userID='$userID'"));
 				$array=explode("|", $gv['topics']);
 		
 				foreach($array as $split) {
@@ -281,7 +281,7 @@ function boardmain() {
 	// BOARDS OHNE KATEGORIE
 	$boards=safe_query("SELECT * FROM ".PREFIX."forum_boards WHERE category='0' ORDER BY sort");
 	$i=1;
-	while($db=mysql_fetch_array($boards)) {
+	while($db=mysqli_fetch_array($boards)) {
 
 		if($i%2) {
 			$bg1=BG_1;
@@ -332,19 +332,19 @@ function boardmain() {
 			$q = safe_query("SELECT topicID, lastdate, lastposter, replys FROM ".PREFIX."forum_topics WHERE boardID='".$db['boardID']."' AND moveID='0' ORDER BY lastdate DESC LIMIT 0,".$maxtopics);
 			$n=1;
 			$board_topics = Array();
-			while($lp = mysql_fetch_assoc($q)) {
+			while($lp = mysqli_fetch_assoc($q)) {
 				
 				if($n == 1) {
 
-					$date=date("d.m.Y", $lp['lastdate']);
-					$today=date("d.m.Y", time());
-					$yesterday = date("d.m.Y", time()-3600*24);
+					$date=getformatdate($lp['lastdate']);
+					$today=getformatdate(time());
+					$yesterday = getformatdate(time()-3600*24);
 	
 					if($date==$today) $date=$_language->module['today'];
 					elseif($date==$yesterday && $date<$today) $date=$_language->module['yesterday'];
 					else $date=$date;
 	
-					$time=date("- H:i", $lp['lastdate']);
+					$time=getformattime($lp['lastdate']);
 					$poster='<a href="index.php?site=profile&amp;id='.$lp['lastposter'].'">'.getnickname($lp['lastposter']).'</a>';
 					if(isclanmember($lp['lastposter'])) $member=' <img src="images/icons/member.gif" alt="'.$_language->module['clanmember'].'" />';
 					else $member='';
@@ -363,7 +363,7 @@ function boardmain() {
 			
 			if($userID) {
 				
-				$gv=mysql_fetch_array(safe_query("SELECT topics FROM ".PREFIX."user WHERE userID='$userID'"));
+				$gv=mysqli_fetch_array(safe_query("SELECT topics FROM ".PREFIX."user WHERE userID='$userID'"));
 				$array=explode("|", $gv['topics']);
 		
 				foreach($array as $split) {
@@ -416,13 +416,13 @@ function showboard($board) {
 	echo $title_messageboard;
 
 	$alle = safe_query("SELECT topicID FROM ".PREFIX."forum_topics WHERE boardID='$board'");
-	$gesamt=mysql_num_rows($alle);
+	$gesamt=mysqli_num_rows($alle);
 
 	if($action=="markall" AND $userID) {
-		$gv=mysql_fetch_array(safe_query("SELECT topics FROM ".PREFIX."user WHERE userID='$userID'"));
+		$gv=mysqli_fetch_array(safe_query("SELECT topics FROM ".PREFIX."user WHERE userID='$userID'"));
 		
 		$board_topics = Array();
-		while($ds=mysql_fetch_array($alle))	$board_topics[] = $ds['topicID'];
+		while($ds=mysqli_fetch_array($alle))	$board_topics[] = $ds['topicID'];
 		
 		$array=explode("|", $gv['topics']);
 		$new='|';
@@ -444,7 +444,7 @@ function showboard($board) {
 	if($page==1) $start=0;
 	if($page>1) $start=$page*$max-$max;
 
-	$db = mysql_fetch_array(safe_query("SELECT * FROM ".PREFIX."forum_boards WHERE boardID='".$board."' "));
+	$db = mysqli_fetch_array(safe_query("SELECT * FROM ".PREFIX."forum_boards WHERE boardID='".$board."' "));
 	$boardname = $db['name'];
 
 	$usergrp = 0;
@@ -497,14 +497,14 @@ function showboard($board) {
 
 	
 	$topics = safe_query("SELECT * FROM ".PREFIX."forum_topics WHERE boardID='$board' ORDER BY sticky DESC, lastdate DESC LIMIT $start,$max");
-	$anztopics = mysql_num_rows(safe_query("SELECT boardID FROM ".PREFIX."forum_topics WHERE boardID='$board'"));
+	$anztopics = mysqli_num_rows(safe_query("SELECT boardID FROM ".PREFIX."forum_topics WHERE boardID='$board'"));
 
 	$i=1;
 	unset($link);
 	if($anztopics) {
 		eval ("\$forum_topics_head = \"".gettemplate("forum_topics_head")."\";");
 		echo $forum_topics_head;
-		while($dt=mysql_fetch_array($topics)) {
+		while($dt=mysqli_fetch_array($topics)) {
 			if($i%2) {
 				$bg1=BG_1;
 				$bg2=BG_2;
@@ -545,7 +545,7 @@ function showboard($board) {
 			elseif($dt['moveID']) $folder='<img src="images/icons/topicicons/pfeil.gif" alt="'.$_language->module['moved'].'" />';
 			elseif($userID) {
 
-				$is_unread = mysql_num_rows(safe_query("SELECT userID FROM ".PREFIX."user WHERE topics LIKE '%|".$dt['topicID']."|%' AND userID='".$userID."'"));
+				$is_unread = mysqli_num_rows(safe_query("SELECT userID FROM ".PREFIX."user WHERE topics LIKE '%|".$dt['topicID']."|%' AND userID='".$userID."'"));
 
 				if($is_unread) {
 					if($dt['replys']>15 || $dt['views']>150) $folder=$onhoticon;
@@ -574,15 +574,15 @@ function showboard($board) {
 
 			if($dt['moveID']) { // MOVED TOPIC
 				$move=safe_query("SELECT * FROM ".PREFIX."forum_topics WHERE topicID='".$dt['moveID']."'");
-				$dm=mysql_fetch_array($move);
+				$dm=mysqli_fetch_array($move);
 
 				if($dm['replys']) $replys=$dm['replys'];
 				if($dm['views']) $views=$dm['views'];
 
-				$date=date("d.m.y", $dm['lastdate']);
-				$time=date("H:i", $dm['lastdate']);
-				$today=date("d.m.y", time());
-				$yesterday = date("d.m.y", time()-3600*24);
+				$date=getformatdate($dm['lastdate']);
+				$time=getformattime($dm['lastdate']);
+				$today=getformatdate(time());
+				$yesterday = getformatdate(time()-3600*24);
 				if($date==$today) $date=$_language->module['today'].", ".$time;
 				elseif($date==$yesterday && $date<$today) $date=$_language->module['yesterday'].", ".$time;
 				else $date=$date.", ".$time;
@@ -596,10 +596,10 @@ function showboard($board) {
 				if($dt['replys']) $replys=$dt['replys'];
 				if($dt['views']) $views=$dt['views'];
 
-				$date=date("d.m.y", $dt['lastdate']);
-				$time=date("H:i", $dt['lastdate']);
-				$today=date("d.m.y", time());
-				$yesterday = date("d.m.y", time()-3600*24);
+				$date=getformatdate($dt['lastdate']);
+				$time=getformattime($dt['lastdate']);
+				$today=getformatdate(time());
+				$yesterday = getformatdate(time()-3600*24);
 				if($date==$today) $date=$_language->module['today'].", ".$time;
 				elseif($date==$yesterday && $date<$today) $date=$_language->module['yesterday'].", ".$time;
 				else $date=$date.", ".$time;
@@ -682,7 +682,7 @@ if(isset($_POST['submit']) || isset($_POST['movetopic']) || isset($_GET['addtopi
 
 		if(!isforumadmin($userID) and !ismoderator($userID, $board)) die($_language->module['no_access']);
 		
-		$numposts = mysql_num_rows(safe_query("SELECT postID FROM ".PREFIX."forum_posts WHERE topicID='".$topicID."'"));
+		$numposts = mysqli_num_rows(safe_query("SELECT postID FROM ".PREFIX."forum_posts WHERE topicID='".$topicID."'"));
 		$numposts --;
 		
 		safe_query("UPDATE ".PREFIX."forum_boards SET topics=topics-1, posts=posts-".$numposts." WHERE boardID='".$board."' ");
@@ -732,14 +732,14 @@ if(isset($_POST['submit']) || isset($_POST['movetopic']) || isset($_GET['addtopi
 
 		if(!isforumadmin($userID) and !ismoderator($userID, $board)) die($_language->module['no_access']);
 		$last = safe_query("SELECT * FROM ".PREFIX."forum_posts WHERE topicID = '$topicID' ");
-		$anz = mysql_num_rows($last);
+		$anz = mysqli_num_rows($last);
 		$deleted = false;
 		foreach($postID as $id) {
 			if($anz > 1) {
 				safe_query("DELETE FROM ".PREFIX."forum_posts WHERE postID='".(int)$id."' ");
 				safe_query("UPDATE ".PREFIX."forum_boards SET posts=posts-1 WHERE boardID='".$board."' ");
 				$last = safe_query("SELECT * FROM ".PREFIX."forum_posts WHERE topicID = '$topicID' ORDER BY date DESC LIMIT 0,1 ");
-				$dl = mysql_fetch_array($last);
+				$dl = mysqli_fetch_array($last);
 				safe_query("UPDATE ".PREFIX."forum_topics SET lastdate='".$dl['date']."', lastposter='".$dl['poster']."', lastpostID='".$ds['postID']."', replys=replys-1 WHERE topicID='$topicID' ");
 				$deleted=false;
 			}
@@ -764,16 +764,16 @@ if(isset($_POST['submit']) || isset($_POST['movetopic']) || isset($_GET['addtopi
 
 		if(!isanyadmin($userID) and !ismoderator($userID, getboardid($topicID))) die($_language->module['no_access']);
 
-		$di=mysql_fetch_array(safe_query("SELECT writegrps, readgrps FROM ".PREFIX."forum_boards WHERE boardID='$toboard'"));
+		$di=mysqli_fetch_array(safe_query("SELECT writegrps, readgrps FROM ".PREFIX."forum_boards WHERE boardID='$toboard'"));
 
 		$ergebnis=safe_query("SELECT * FROM ".PREFIX."forum_topics WHERE topicID='$topicID'");
-		$ds=mysql_fetch_array($ergebnis);
+		$ds=mysqli_fetch_array($ergebnis);
 
 		if(isset($_POST['movelink']) and $ds['boardID'] != $toboard) safe_query("INSERT INTO ".PREFIX."forum_topics (boardID, icon, userID, date, topic, lastdate, lastposter, replys, views, closed, moveID) values ('".$ds['boardID']."', '', '".$ds['userID']."', '".$ds['date']."', '".addslashes($ds['topic'])."', '".$ds['lastdate']."', '', '', '', '', '$topicID') ");
 
 		safe_query("UPDATE ".PREFIX."forum_topics SET boardID='$toboard', readgrps='".$di['readgrps']."', writegrps='".$di['writegrps']."' WHERE topicID='$topicID'");
 		safe_query("UPDATE ".PREFIX."forum_posts SET boardID='$toboard' WHERE topicID='$topicID'");
-		$post_num = mysql_affected_rows()-1;
+		$post_num = mysqli_affected_rows()-1;
 		safe_query("UPDATE ".PREFIX."forum_boards SET topics=topics+1 WHERE boardID='$toboard'");
 		safe_query("UPDATE ".PREFIX."forum_boards SET topics=topics-1 WHERE boardID='".$ds['boardID']."'");
 		safe_query("UPDATE ".PREFIX."forum_boards SET posts=posts+".$post_num." WHERE boardID='".$toboard."'");
@@ -790,15 +790,15 @@ if(isset($_POST['submit']) || isset($_POST['movetopic']) || isset($_GET['addtopi
 
 		$boards='';
 		$kath=safe_query("SELECT * FROM ".PREFIX."forum_categories ORDER BY sort");
-		while($dk=mysql_fetch_array($kath)) {
+		while($dk=mysqli_fetch_array($kath)) {
 			$ergebnis=safe_query("SELECT * FROM ".PREFIX."forum_boards WHERE category='$dk[catID]' ORDER BY sort");
-			while($db=mysql_fetch_array($ergebnis)) {
+			while($db=mysqli_fetch_array($ergebnis)) {
 				$boards.='<option value="'.$db['boardID'].'">'.$dk['name'].' - '.$db['name'].'</option>';
 			}
 		}
 
 		$ergebnis=safe_query("SELECT * FROM ".PREFIX."forum_boards WHERE category='0' ORDER BY sort");
-		while($ds=mysql_fetch_array($ergebnis)) {
+		while($ds=mysqli_fetch_array($ergebnis)) {
 			$boards.='<option value="'.$ds['boardID'].'">'.$ds['name'].'</option>';
 		}
 
@@ -833,7 +833,7 @@ if(isset($_POST['submit']) || isset($_POST['movetopic']) || isset($_GET['addtopi
 			$topic_sticky = (isset($_POST['sticky'])) ? '1' : '0';
 			$notify = (isset($_POST['notify'])) ? '1' : '0';
 	
-			$ds=mysql_fetch_array(safe_query("SELECT readgrps, writegrps FROM ".PREFIX."forum_boards WHERE boardID='$board'"));
+			$ds=mysqli_fetch_array(safe_query("SELECT readgrps, writegrps FROM ".PREFIX."forum_boards WHERE boardID='$board'"));
 	
 			$writer = 0;
 			if($ds['writegrps'] != "") {
@@ -848,22 +848,30 @@ if(isset($_POST['submit']) || isset($_POST['movetopic']) || isset($_GET['addtopi
 			}
 			else $writer = 1;
 			if(!$writer) die($_language->module['no_access_write']);
+			
+			$spamApi = SpamApi::getInstance();
+			$validation = $spamApi->validate($message);
 	
-			$date=time();
-			safe_query("INSERT INTO ".PREFIX."forum_topics ( boardID, readgrps, writegrps, userID, date, icon, topic, lastdate, lastposter, replys, views, closed, sticky ) values ( '$board', '".$ds['readgrps']."', '".$ds['writegrps']."', '$userID', '$date', '".$icon."', '".$topicname."', '$date', '$userID', '0', '0', '0', '$topic_sticky' ) ");
-			$id=mysql_insert_id();
-			safe_query("UPDATE ".PREFIX."forum_boards SET topics=topics+1 WHERE boardID='".$board."'");
-			safe_query("INSERT INTO ".PREFIX."forum_posts ( boardID, topicID, date, poster, message ) values( '$board', '$id', '$date', '$userID', '".$message."' ) ");
-	
-			// check if there are more than 1000 unread topics => delete oldest one
-			$dv = safe_query("SELECT topics FROM ".PREFIX."user WHERE userID='".$userID."'");
-			$array = explode('|', $dv['topics']);
-			if(count($array)>=1000) safe_query("UPDATE ".PREFIX."user SET topics='|".implode('|', array_slice($array, 2))."' WHERE userID='".$userID."'");
-			unset($array);
-	
-			safe_query("UPDATE ".PREFIX."user SET topics=CONCAT(topics, '".$id."|')"); // update unread topics, format: |oldstring| => |oldstring|topicID|
-	
-			if($notify) safe_query("INSERT INTO ".PREFIX."forum_notify (topicID, userID) VALUES ('$id', '$userID') ");
+			if($validation == SpamApi::NoSpam){
+				$date=time();
+				safe_query("INSERT INTO ".PREFIX."forum_topics ( boardID, readgrps, writegrps, userID, date, icon, topic, lastdate, lastposter, replys, views, closed, sticky ) values ( '$board', '".$ds['readgrps']."', '".$ds['writegrps']."', '$userID', '$date', '".$icon."', '".$topicname."', '$date', '$userID', '0', '0', '0', '$topic_sticky' ) ");
+				$id=mysqli_insert_id($_database);
+				safe_query("UPDATE ".PREFIX."forum_boards SET topics=topics+1 WHERE boardID='".$board."'");
+				safe_query("INSERT INTO ".PREFIX."forum_posts ( boardID, topicID, date, poster, message ) values( '$board', '$id', '$date', '$userID', '".$message."' ) ");
+		
+				// check if there are more than 1000 unread topics => delete oldest one
+				$dv = mysqli_fetch_array(safe_query("SELECT topics FROM ".PREFIX."user WHERE userID='".$userID."'"));
+				$array = explode('|', $dv['topics']);
+				if(count($array)>=1000) safe_query("UPDATE ".PREFIX."user SET topics='|".implode('|', array_slice($array, 2))."' WHERE userID='".$userID."'");
+				unset($array);
+		
+				safe_query("UPDATE ".PREFIX."user SET topics=CONCAT(topics, '".$id."|')"); // update unread topics, format: |oldstring| => |oldstring|topicID|
+		
+				if($notify) safe_query("INSERT INTO ".PREFIX."forum_notify (topicID, userID) VALUES ('$id', '$userID') ");
+			}
+			else{
+				safe_query("INSERT INTO ".PREFIX."forum_topics_spam ( boardID, userID, date, icon, topic, sticky, message, rating) values ( '$board', '$userID', '$date', '".$icon."', '".$topicname."', '$topic_sticky', '".$message."', '".$rating."') ");
+			}
 			header("Location: index.php?site=forum&board=".$board."");
 		}
 		else{
@@ -878,7 +886,7 @@ if(isset($_POST['submit']) || isset($_POST['movetopic']) || isset($_GET['addtopi
 		echo $title_messageboard;
 
 		$ergebnis = safe_query("SELECT * FROM ".PREFIX."forum_boards WHERE boardID='$board' ");
-		$db = mysql_fetch_array($ergebnis);
+		$db = mysqli_fetch_array($ergebnis);
 		$boardname = $db['name'];
 
 		$writer = 0;
@@ -913,7 +921,7 @@ if(isset($_POST['submit']) || isset($_POST['movetopic']) || isset($_GET['addtopi
 				$bg2=BG_2;
 
 				
-				$time=date("H:i", time());
+				$time=getformattime(time());
 				$date="today";
 				$message = cleartext(stripslashes(str_replace(array('\r\n', '\n'),array("\n","\n" ), $_POST['message'])));
 				$message = toggle($message, 'xx');
@@ -959,7 +967,7 @@ if(isset($_POST['submit']) || isset($_POST['movetopic']) || isset($_GET['addtopi
 				}
 				else {
 					$ergebnis=safe_query("SELECT * FROM ".PREFIX."forum_ranks WHERE $posts >= postmin AND $posts <= postmax");
-					$ds=mysql_fetch_array($ergebnis);
+					$ds=mysqli_fetch_array($ergebnis);
 					$usertype=$ds['rank'];
 					$rang='<img src="images/icons/ranks/'.$ds['pic'].'" alt="" />';
 				}

@@ -30,39 +30,7 @@
 systeminc('session');
 systeminc('ip');
 
-// -- INSTALL CHECK -- //
-
-if(DEBUG=="OFF") if(file_exists('install/index.php')) system_error('Please remove the install-folder first.',0);
-
 // -- GLOBAL WEBSPELL FUNCTIONS -- //
-
-if(!function_exists('file_get_contents')) {
-	function file_get_contents($filename) {
-		$fd = fopen("$filename", "rb");
-		$content = fread($fd, filesize($filename));
-		fclose($fd);
-		return $content;
-	}
-}
-
-if(!function_exists('str_split')) {
-	function str_split($str,$split_length=1) {
-
-		$cnt = mb_strlen($str);
-
-		for ($i=0;$i<$cnt;$i+=$split_length)
-		$result[]= mb_substr($str,$i,$split_length);
-
-		return $result;
-	}
-}
-
-if(!function_exists('str_ireplace')) {
-	function str_ireplace($search,$replace,$subject) {
-		$search = preg_quote($search, "/");
-		return preg_replace("/".$search."/i", $replace, $subject);
-	}
-}
 
 function gettemplate($template,$endung="html", $calledfrom="root") {
 	$templatefolder = "templates";
@@ -145,7 +113,7 @@ function percent($sub, $total, $dec) {
 }
 
 function showlock($reason, $time) {
-	$gettitle = mysql_fetch_array(safe_query("SELECT title FROM ".PREFIX."styles"));
+	$gettitle = mysqli_fetch_array(safe_query("SELECT title FROM ".PREFIX."styles"));
 	$pagetitle = $gettitle['title'];
 	eval ("\$lock = \"".gettemplate("lock")."\";");
 	die($lock);
@@ -153,24 +121,6 @@ function showlock($reason, $time) {
 
 function checkenv($systemvar,$checkfor) {
 	return stristr(ini_get($systemvar),$checkfor);
-}
-
-function createkey($length) {
-	$key='';
-	for($i=0;$i<$length;$i++) {
-		switch(rand(1,3)) {
-			case 1:
-				$key.=chr(rand(48,57));
-				break;
-			case 2:
-				$key.=chr(rand(65,90));
-				break;
-			case 3:
-				$key.=chr(rand(97,122));
-				break;
-		}
-	}
-	return md5($key);
 }
 
 function mail_protect($mailaddress) {
@@ -238,6 +188,10 @@ function checkforempty($valuearray) {
 
 systeminc('func/filesystem');
 
+// -- DATE-TIME INFORMATION -- //
+
+systeminc('func/datetime');
+
 // -- USER INFORMATION -- //
 
 systeminc('func/user');
@@ -262,6 +216,10 @@ systeminc('func/game');
 
 systeminc('func/board');
 
+// -- Page INFORMATION -- //
+
+systeminc('func/page');
+
 // -- CAPTCHA -- //
 
 systeminc('func/captcha');
@@ -276,9 +234,17 @@ $_language->set_language($default_language);
 
 systeminc('func/gallery');
 
+// -- SPAM -- //
+
+systeminc('func/spam');
+
 // -- BB CODE -- //
 
 systeminc('func/bbcode');
+
+// -- Tags -- //
+
+systeminc('func/tags');
 
 function cleartext($text, $bbcode=true, $calledfrom='root') {
 	$text = htmlspecialchars($text);
@@ -345,19 +311,27 @@ if($loggedin == false) {
 	elseif( isset($_SESSION['language']) ) {
 		$_language->set_language($_SESSION['language']);
 	}
+	elseif($autoDetectLanguage){
+		$lang = detectUserLanguage();
+		if(!empty($lang)){
+			$_language->set_language($lang);
+			$_SESSION['language'] = $lang;
+		}
+	}
 }
 
 if($login_per_cookie) {
-	$ll=mysql_fetch_array(safe_query("SELECT lastlogin FROM ".PREFIX."user WHERE userID='$userID'"));
+	$ll=mysqli_fetch_array(safe_query("SELECT lastlogin FROM ".PREFIX."user WHERE userID='$userID'"));
 	$_SESSION['ws_lastlogin'] = $ll['lastlogin'];
 }
+
 
 // -- SITE VARIABLE -- //
 
 if(isset($_GET['site'])) $site = $_GET['site'];
 else $site = '';
 if($closed AND !isanyadmin($userID)) {
-	$dl=mysql_fetch_array(safe_query("SELECT * FROM `".PREFIX."lock` LIMIT 0,1"));
+	$dl=mysqli_fetch_array(safe_query("SELECT * FROM `".PREFIX."lock` LIMIT 0,1"));
 	$reason = $dl['reason'];
 	$time = $dl['time'];
 	showlock($reason, $time);
@@ -370,7 +344,7 @@ if(!isset($_SERVER['HTTP_REFERER'])) {
 if(date("dh",$lastBanCheck) != date("dh")){
 	$get = safe_query("SELECT userID, banned FROM ".PREFIX."user WHERE banned IS NOT NULL");
 	$removeBan = array();
-	while($ds = mysql_fetch_assoc($get)){
+	while($ds = mysqli_fetch_assoc($get)){
 		if($ds['banned'] != "perm"){
 			if($ds['banned'] <= time()){
 				$removeBan[] = 'userID="'.$ds['userID'].'"';
@@ -385,7 +359,7 @@ if(date("dh",$lastBanCheck) != date("dh")){
 }
 
 $banned=safe_query("SELECT userID, banned, ban_reason FROM ".PREFIX."user WHERE (userID='".$userID."' OR ip='".$GLOBALS['ip']."') AND banned IS NOT NULL");
-while($bq=mysql_fetch_array($banned)) {
+while($bq=mysqli_fetch_array($banned)) {
 	if($bq['ban_reason']) $reason = "<br />".$bq['ban_reason'];
 	else $reason = '';
 	if($bq['banned']) system_error('You have been banished.'.$reason,0);
@@ -413,19 +387,19 @@ systeminc('help');
 if(mb_strlen($site)) {
 	if($userID) {
 		// IS online
-		if(mysql_num_rows(safe_query("SELECT userID FROM ".PREFIX."whoisonline WHERE userID='$userID'"))) {
+		if(mysqli_num_rows(safe_query("SELECT userID FROM ".PREFIX."whoisonline WHERE userID='$userID'"))) {
 			safe_query("UPDATE ".PREFIX."whoisonline SET time='".time()."', site='$site' WHERE userID='$userID'");
 			safe_query("UPDATE ".PREFIX."user SET lastlogin='".time()."' WHERE userID='$userID'");
 		}
 		else safe_query("INSERT INTO ".PREFIX."whoisonline (time, userID, site) VALUES ('".time()."', '$userID', '$site')");
 	
 		// WAS online
-		if(mysql_num_rows(safe_query("SELECT userID FROM ".PREFIX."whowasonline WHERE userID='$userID'")))
+		if(mysqli_num_rows(safe_query("SELECT userID FROM ".PREFIX."whowasonline WHERE userID='$userID'")))
 		safe_query("UPDATE ".PREFIX."whowasonline SET time='".time()."', site='$site' WHERE userID='$userID'");
 		else safe_query("INSERT INTO ".PREFIX."whowasonline (time, userID, site) VALUES ('".time()."', '$userID', '$site')");
 	}
 	else {
-		$anz = mysql_num_rows(safe_query("SELECT ip FROM ".PREFIX."whoisonline WHERE ip='".$GLOBALS['ip']."'"));
+		$anz = mysqli_num_rows(safe_query("SELECT ip FROM ".PREFIX."whoisonline WHERE ip='".$GLOBALS['ip']."'"));
 		if($anz) safe_query("UPDATE ".PREFIX."whoisonline SET time='".time()."', site='$site' WHERE ip='".$GLOBALS['ip']."'");
 		else safe_query("INSERT INTO ".PREFIX."whoisonline (time, ip, site) VALUES ('".time()."','".$GLOBALS['ip']."', '$site')");
 	}
@@ -434,37 +408,31 @@ if(mb_strlen($site)) {
 // -- COUNTER -- //
 
 $time = time();
-$date = date("d.m.Y", $time);
+$date = getformatdate($time);
 $deltime = $time-(3600*24);
 safe_query("DELETE FROM ".PREFIX."counter_iplist WHERE del<".$deltime);
 
-if(!mysql_num_rows(safe_query("SELECT ip FROM ".PREFIX."counter_iplist WHERE ip='".$GLOBALS['ip']."'"))) {
+if(!mysqli_num_rows(safe_query("SELECT ip FROM ".PREFIX."counter_iplist WHERE ip='".$GLOBALS['ip']."'"))) {
 	if($userID){
 		safe_query("UPDATE ".PREFIX."user SET ip='".$GLOBALS['ip']."' WHERE userID='".$userID."'");
 	}
 	safe_query("UPDATE ".PREFIX."counter SET hits=hits+1");
 	safe_query("INSERT INTO ".PREFIX."counter_iplist (dates, del, ip) VALUES ('".$date."', '".$time."', '".$GLOBALS['ip']."')");
-	if(!mysql_num_rows(safe_query("SELECT dates FROM ".PREFIX."counter_stats WHERE dates='".$date."'")))
+	if(!mysqli_num_rows(safe_query("SELECT dates FROM ".PREFIX."counter_stats WHERE dates='".$date."'")))
 		safe_query("INSERT INTO `".PREFIX."counter_stats` (`dates`, `count`) VALUES ('".$date."', '1')");
 	else
 		safe_query("UPDATE ".PREFIX."counter_stats SET count=count+1 WHERE dates='".$date."'");
 }
 
 /* update maxonline if necessary */
-$res=mysql_fetch_assoc(safe_query("SELECT count(*) as maxuser FROM ".PREFIX."whoisonline"));
+$res=mysqli_fetch_assoc(safe_query("SELECT count(*) as maxuser FROM ".PREFIX."whoisonline"));
 safe_query("UPDATE ".PREFIX."counter SET maxonline = ".$res['maxuser']." WHERE maxonline < ".$res['maxuser']);
 
-// -- COUNTRY LIST -- //
-
-$countries='';
-$ergebnis = safe_query("SELECT * FROM `".PREFIX."countries` ORDER BY country");
-while($ds = mysql_fetch_array($ergebnis)) {
-	$countries .= '<option value="'.$ds['short'].'">'.$ds['country'].'</option>';
-}
 
 // -- SEARCH ENGINE OPTIMIZATION (SEO) -- //
 if(stristr($_SERVER['PHP_SELF'],"/admin/") == false){
 	systeminc('seo');
+	define('PAGETITLE', getPageTitle());
 }
 else{
 	define('PAGETITLE', $GLOBALS['hp_title']);

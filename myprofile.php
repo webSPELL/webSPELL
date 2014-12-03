@@ -75,6 +75,8 @@ else {
 		$avatar = $_FILES['avatar'];
 		$userpic = $_FILES['userpic'];
 		$language = $_POST['language'];
+		$date_format = $_POST['date_format'];
+		$time_format = $_POST['time_format'];
 		$id = $userID;
 		
 		$error_array = array();
@@ -184,14 +186,22 @@ else {
 		}
 
 		$birthday = $b_year.'-'.$b_month.'-'.$b_day;
+		
+		
+		if(empty($usernamenew)){
+			$error_array[] = $_language->module['you_have_to_username'];
+		}
+		if(empty($nickname)){
+			$error_array[] = $_language->module['you_have_to_nickname'];
+		}
 
 		$qry = "SELECT userID FROM ".PREFIX."user WHERE username = '".$usernamenew."' AND userID != ".$userID." LIMIT 0,1";
-		if(mysql_num_rows(safe_query($qry))) {
+		if(mysqli_num_rows(safe_query($qry))) {
 			$error_array[] = $_language->module['username_aleady_in_use'];
 		}
 		
 		$qry = "SELECT userID FROM ".PREFIX."user WHERE nickname = '".$nickname."' AND userID!=".$userID." LIMIT 0,1";
-		if(mysql_num_rows(safe_query($qry))) {
+		if(mysqli_num_rows(safe_query($qry))) {
 				$error_array[] = $_language->module['nickname_already_in_use'];
 		}
 
@@ -237,6 +247,8 @@ else {
 							newsletter='".$newsletter."',
 							homepage='".$homepage."',
 							about='".$about."',
+							date_format='".$date_format."',
+							time_format='".$time_format."',
 							language='".$language."'
 						WHERE 
 							userID='".$id."'");
@@ -266,7 +278,7 @@ else {
 		$id = $userID;
 
 		$ergebnis = safe_query("SELECT password FROM ".PREFIX."user WHERE userID='".$id."'");
-		$ds = mysql_fetch_array($ergebnis);
+		$ds = mysqli_fetch_array($ergebnis);
 
 		if(!(mb_strlen(trim($oldpwd)))) {
 			$error = $_language->module['forgot_old_pw'];
@@ -303,7 +315,7 @@ else {
 
 		$bg1 = BG_1;
 		$bg2 = BG_2;
-    $bg3 = BG_3;
+    	$bg3 = BG_3;
 		$bg4 = BG_4;
 		$border = BORDER;
 
@@ -314,14 +326,14 @@ else {
 	
 	elseif(isset($_POST['savemail'])){
 
-		$activationkey = createkey(20);
+		$activationkey = md5(RandPass(20));
 		$activationlink = 'http://'.$hp_url.'/index.php?site=register&mailkey='.$activationkey;
 		$pwd = $_POST['oldpwd'];
 		$mail1 = $_POST['mail1'];
 		$mail2 = $_POST['mail2'];
 
 		$ergebnis = safe_query("SELECT password, username FROM ".PREFIX."user WHERE userID='".$userID."'");
-		$ds = mysql_fetch_array($ergebnis);
+		$ds = mysqli_fetch_array($ergebnis);
 		$username = $ds['username'];
 		if(!(mb_strlen(trim($pwd)))) {
 			$error = $_language->module['forgot_old_pw'];
@@ -363,9 +375,9 @@ else {
 	
 	else {
 		$ergebnis = safe_query("SELECT * FROM ".PREFIX."user WHERE userID='".$userID."'");
-		$anz = mysql_num_rows($ergebnis);
+		$anz = mysqli_num_rows($ergebnis);
 		if($anz) {
-			$ds = mysql_fetch_array($ergebnis);
+			$ds = mysqli_fetch_array($ergebnis);
 			$flag = '[flag]'.$ds['country'].'[/flag]';
 			$country = flags($flag);
 			$country = str_replace("<img","<img id='county'",$country);
@@ -377,10 +389,33 @@ else {
 			else $pm_mail = '<option value="1">'.$_language->module['yes'].'</option><option value="0" selected="selected">'.$_language->module['no'].'</option>';
 			if($ds['email_hide']) $email_hide = ' checked="checked"';
 			else $email_hide = '';
+			$format_date = "<option value='d.m.y'>DD.MM.YY</option>
+							<option value='d.m.Y'>DD.MM.YYYY</option>
+							<option value='j.n.y'>D.M.YY</option>
+							<option value='j.n.Y'>D.M.YYYY</option>
+							<option value='y-m-d'>YY-MM-DD</option>
+							<option value='Y-m-d'>YYYY-MM-DD</option>
+							<option value='y/m/d'>YY/MM/DD</option>
+							<option value='Y/m/d'>YYYY/MM/DD</option>";
+			$format_date = str_replace("value='".$ds['date_format']."'","value='".$ds['date_format']."' selected='selected'",$format_date);
+	
+			$format_time = "<option value='G:i'>H:MM</option>
+							<option value='H:i'>HH:MM</option>
+							<option value='G:i a'>H:MM am/pm</option>
+							<option value='H:i a'>HH:MM am/pm</option>
+							<option value='G:i A'>H:MM AM/PM</option>
+							<option value='H:i A'>HH:MM AM/PM</option>
+							<option value='G:i:s'>H:MM:SS</option>
+							<option value='H:i:s'>HH:MM:SS</option>
+							<option value='G:i:s a'>H:MM:SS am/pm</option>
+							<option value='H:i:s a'>HH:MM:SS am/pm</option>
+							<option value='G:i:s A'>H:MM:SS AM/PM</option>
+							<option value='H:i:s A'>HH:MM:SS AM/PM</option>";
+			$format_time = str_replace("value='".$ds['time_format']."'","value='".$ds['time_format']."' selected='selected'",$format_time);
 			$b_day = mb_substr($ds['birthday'],8,2);
 			$b_month = mb_substr($ds['birthday'],5,2);
 			$b_year = mb_substr($ds['birthday'],0,4);
-			$countries = str_replace(" selected=\"selected\"", "", $countries);
+			$countries=getcountries();
 			$countries = str_replace('value="'.$ds['country'].'"', 'value="'.$ds['country'].'" selected="selected"', $countries);
 			if($ds['avatar']) $viewavatar = '&#8226; <a href="javascript:MM_openBrWindow(\'images/avatars/'.$ds['avatar'].'\',\'avatar\',\'width=120,height=120\')">'.$_language->module['avatar'].'</a>';
 			else $viewavatar = $_language->module['avatar'];
@@ -412,33 +447,40 @@ else {
 			$email = getinput($ds['email']);
 			$icq = getinput($ds['icq']);
 			$homepage = getinput($ds['homepage']);
-			$langdirs = '';
-			$filepath = "languages/";
-			
+
 			// Select all possible languages
+			$langdirs = '';
+			$filepath = "./languages/";
+
 			$mysql_langs = array();
 			$query = safe_query("SELECT lang, language FROM ".PREFIX."news_languages");
-			while($dx = mysql_fetch_assoc($query)){
-				$mysql_langs[$dx['lang']] = $dx['language'];
+			while($sql_lang = mysqli_fetch_assoc($query)){
+				$mysql_langs[$sql_lang['lang']] = $sql_lang['language'];
 			}
+			$langs = array();
 			if($dh = opendir($filepath)) {
 				while($file = mb_substr(readdir($dh), 0, 2)) {
 					if($file != "." and $file!=".." and is_dir($filepath.$file)) {
 						if(isset($mysql_langs[$file])){
 							$name = $mysql_langs[$file];
 							$name = ucfirst($name);
-							$langdirs .= '<option value="'.$file.'">'.$name.'</option>';
+							$langs[$name] = $file;
 						}
-						else {
-							$langdirs .= '<option value="'.$file.'">'.$file.'</option>';
+						else{
+							$langs[$file] = $file;
 						}
 					}
 				}
 				closedir($dh);
 			}
-			
+			ksort($langs,SORT_NATURAL);
+			foreach($langs as $lang=>$flag){
+				$langdirs .= '<option value="'.$flag.'">'.$lang.'</option>';
+			}
+
 			if($ds['language']) $langdirs = str_replace('"'.$ds['language'].'"', '"'.$ds['language'].'" selected="selected"', $langdirs);
 			else $langdirs = str_replace('"'.$_language->language.'"', '"'.$_language->language.'" selected="selected"', $langdirs);
+
 			
 			$bg1 = BG_1;
 			$bg2 = BG_2;

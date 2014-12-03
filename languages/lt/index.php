@@ -51,6 +51,7 @@ $language_array = Array(
 	'squads'=>'būriai',
 	'statistics'=>'statistika',
 	'topics'=>'temos',
-	'upcoming_events'=>'ateinantys įvykiai'
+	'upcoming_events'=>'ateinantys įvykiai',
+	'tags'=>'Žymos'
 );
 ?>

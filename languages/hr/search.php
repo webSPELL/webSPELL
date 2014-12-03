@@ -64,6 +64,7 @@ $language_array = Array(
 	'text_contains'=>'Tekst sadrži',
 	'title_contains'=>'Naslov sadrži',
 	'too_short'=>'Upit pretrage je prekratak. Najmanje %min_chars% znaka',
-	'wrong_securitycode'=>'Unijeli ste krivi sigurnosni kod!'
+	'wrong_securitycode'=>'Unijeli ste krivi sigurnosni kod!',
+	'no_result'=>'Nema unosa podataka za "%s"'
 );
 ?>

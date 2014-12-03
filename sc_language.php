@@ -59,7 +59,7 @@ else {
 	// Select all possible languages
 	$mysql_langs = array();
 	$query = safe_query("SELECT lang, language FROM ".PREFIX."news_languages");
-	while($ds = mysql_fetch_assoc($query)){
+	while($ds = mysqli_fetch_assoc($query)){
 		$mysql_langs[$ds['lang']] = $ds['language'];
 	}
 	
@@ -69,25 +69,31 @@ else {
 				if(isset($mysql_langs[$file])){
 					$name = $mysql_langs[$file];
 					$name = ucfirst($name);
-					$langs[] = array($file,$name);
+					$langs[$name] = $file;
 				}
 				else{
-					$langs[] = array($file,$file);
+					$langs[$file] = $file;
 				}
 			}
 		}
 		closedir($dh);
 	}
-	
-	foreach($langs as $lang){
+	if(defined("SORT_NATURAL")){
+		$sortMode = SORT_NATURAL;
+	}
+	else{
+		$sortMode = SORT_LOCALE_STRING;
+	}
+	ksort($langs,$sortMode);
+	foreach($langs as $lang=>$flag){
 		$querystring='';
 		if($_SERVER['QUERY_STRING']) $querystring = "&amp;query=".rawurlencode($_SERVER['QUERY_STRING']);
-		echo '<a href="sc_language.php?new_lang='.$lang[0].$querystring.'" title="'.$lang[1].'">';
-		if($_language->language == $lang[0]){
-			 echo '<img src="images/haken.gif" alt="'.$lang[1].'" border="0" style="background-image:url(\'images/flags/'.$lang[0].'.gif\'); background-position: center;" />';
+		echo '<a href="sc_language.php?new_lang='.$flag.$querystring.'" title="'.$lang.'">';
+		if($_language->language == $flag){
+			 echo '<img src="images/haken.gif" alt="'.$lang.'" border="0" style="background-image:url(\'images/flags/'.$flag.'.gif\'); background-position: center;" />';
 		}	 
 		else { 
-			echo '<img src="images/flags/'.$lang[0].'.gif" alt="'.$lang[1].'" border="0" />';
+			echo '<img src="images/flags/'.$flag.'.gif" alt="'.$lang.'" border="0" />';
 		} 	
 		echo "</a> ";
 	}

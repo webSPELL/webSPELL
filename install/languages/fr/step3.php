@@ -32,6 +32,7 @@ $language_array = Array(
 	'chmod_error'=>'<b>Il y a des erreurs lors de la configuration en chmod.</b><br />Veuillez changer manuellement vos chmod en 777 pour les dossiers et en 766 pour les fichiers',
 	'mysql_error'=>'_mysql.php doit être en écriture libre ou webSPELL ne pourra pas s\installer.',
 	'mysql_support'=>'Support MySQL',
+	'multibyte_support'=>'Support MultiByte',
 	'no'=>'Non',
 	'php_version'=>'Version PHP',
 	'set_chmod'=>'Réglez le CHMOD',

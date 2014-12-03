@@ -46,7 +46,7 @@ $language_array = Array(
 	'links'=>'Odkazy',
 	'login_for_rate'=>'<b>Musíte byť registrovaný a prihlásený, aby ste mohli hodnotiť tento článok!</b>',
 	'new_article'=>'Nový článok',
-  'new_window'=>'nové okno',
+  	'new_window'=>'nové okno',
 	'no_access'=>'Prístup nepovolený',
 	'no_comments'=>'Deaktivovať komentáre',
 	'no_entries'=>'Žiadne záznamy',
@@ -62,7 +62,7 @@ $language_array = Array(
 	'rating'=>'Hodnotenie',
 	'really_delete'=>'Naozaj chcete vymazať tento článok?',
 	'save_article'=>'Uložiť článok',
-  'self'=>'to isté okno',
+  	'self'=>'to isté okno',
 	'smilies'=>'&#8226; <a href="javascript:MM_openBrWindow(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smajlíci</a> <b><u>zapnutí</u></b>',
 	'sort'=>'Triediť:',
 	'title'=>'Nadpis',
@@ -71,6 +71,7 @@ $language_array = Array(
 	'upload_images'=>'Pridaj obrázky',
 	'user_comments'=>'Povoliť komentáre užívaľov',
 	'viewed'=>'Prečítané',
-	'visitor_comments'=>'Povololiť komentáre návštevníkov'
+	'visitor_comments'=>'Povololiť komentáre návštevníkov',
+	'tags'=>'tagy'
 );
 ?>

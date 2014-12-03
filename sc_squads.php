@@ -26,10 +26,10 @@
 */
 
 $ergebnis=safe_query("SELECT * FROM ".PREFIX."squads WHERE gamesquad = '1' ORDER BY sort");
-if(mysql_num_rows($ergebnis)) {
+if(mysqli_num_rows($ergebnis)) {
 	echo '<table width="100%" cellspacing="0" cellpadding="2">';
 	$n=1;
-	while($db=mysql_fetch_array($ergebnis)) {
+	while($db=mysqli_fetch_array($ergebnis)) {
 		if($n%2) {
 			$bg1=BG_1;
 			$bg2=BG_2;

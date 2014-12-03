@@ -39,11 +39,11 @@ if($action=="new") {
 	if(!isnewswriter($userID)) die($_language->module['no_access']);
 
 	safe_query("INSERT INTO ".PREFIX."news (date, poster, saved) VALUES ('".time()."', '".$userID."', '0')");
-	$newsID=mysql_insert_id();
+	$newsID=mysqli_insert_id($_database);
 
 	$rubrics='';
 	$newsrubrics=safe_query("SELECT rubricID, rubric FROM ".PREFIX."news_rubrics ORDER BY rubric");
-	while($dr=mysql_fetch_array($newsrubrics)) {
+	while($dr=mysqli_fetch_array($newsrubrics)) {
 		$rubrics.='<option value="'.$dr['rubricID'].'">'.$dr['rubric'].'</option>';
 	}
 
@@ -52,7 +52,7 @@ if($action=="new") {
 	$count_langs = 0;
 	$lang=safe_query("SELECT lang, language FROM ".PREFIX."news_languages ORDER BY language");
 	$langs='';
-	while($dl=mysql_fetch_array($lang)) {
+	while($dl=mysqli_fetch_array($lang)) {
 		$langs.="news_languages[".$count_langs."] = new Array();\nnews_languages[".$count_langs."][0] = '".$dl['lang']."';\nnews_languages[".$count_langs."][1] = '".$dl['language']."';\n";
 		$count_langs++;
 	}
@@ -88,6 +88,8 @@ if($action=="new") {
 		$selects .= '<option value="'.$i.'">'.$i.'</option>';
 	}
 
+	$tags = '';
+
 	$postform = '';
 	$comments='<option value="0">'.$_language->module['no_comments'].'</option><option value="1">'.$_language->module['user_comments'].'</option><option value="2" selected="selected">'.$_language->module['visitor_comments'].'</option>';
 	
@@ -104,7 +106,7 @@ elseif($action=="save") {
 	$_language->read_module('news');
 	$newsID = $_POST['newsID'];
 
-	$ds=mysql_fetch_array(safe_query("SELECT poster FROM ".PREFIX."news WHERE newsID = '".$newsID."'"));
+	$ds=mysqli_fetch_array(safe_query("SELECT poster FROM ".PREFIX."news WHERE newsID = '".$newsID."'"));
 	if(($ds['poster'] != $userID or !isnewswriter($userID)) and !isnewsadmin($userID)) {
 		die($_language->module['no_access']);
 	}
@@ -156,9 +158,11 @@ elseif($action=="save") {
                       intern='".$intern."',
                       comments='".$comments."' WHERE newsID='".$newsID."'");
 
+	Tags::setTags('news', $newsID, $_POST['tags']);
+
 	$update_langs = array();
 	$query = safe_query("SELECT language FROM ".PREFIX."news_contents WHERE newsID = '".$newsID."'");
-	while($qs = mysql_fetch_array($query)) {
+	while($qs = mysqli_fetch_array($query)) {
 		$update_langs[] = $qs['language'];
 		if(in_array($qs['language'], $lang)) {
 			$update_langs[] = $qs['language'];
@@ -204,7 +208,7 @@ elseif($action=="preview") {
 	$newsID = $_GET['newsID'];
 
 	$result=safe_query("SELECT * FROM ".PREFIX."news WHERE newsID='$newsID'");
-	$ds=mysql_fetch_array($result);
+	$ds=mysqli_fetch_array($result);
 
 	if(($ds['poster'] != $userID or !isnewswriter($userID)) and !isnewsadmin($userID)) {
 		die($_language->module['no_access']);
@@ -234,8 +238,8 @@ elseif($action=="preview") {
 	echo $title_news;
 
 	$bgcolor=BG_1;
-	$date = date("d.m.Y", $ds['date']);
-	$time = date("H:i", $ds['date']);
+	$date = getformatdate($ds['date']);
+	$time = getformattime($ds['date']);
 	$rubrikname=getrubricname($ds['rubric']);
 	$rubrikname_link = getinput(getrubricname($ds['rubric']));
 	$rubricpic='<img src="images/news-rubrics/'.getrubricpic($ds['rubric']).'" alt="" />';
@@ -245,7 +249,7 @@ elseif($action=="preview") {
 
 	$message_array = array();
 	$query=safe_query("SELECT * FROM ".PREFIX."news_contents WHERE newsID='".$newsID."'");
-	while($qs = mysql_fetch_array($query)) {
+	while($qs = mysqli_fetch_array($query)) {
 		$message_array[] = array('lang' => $qs['language'], 'headline' => $qs['headline'], 'message' => $qs['content']);
 	}
 	$showlang = select_language($message_array);
@@ -280,6 +284,8 @@ elseif($action=="preview") {
 
 	if($ds['link4'] && $ds['url4']!="http://" && $ds['window4']) $related.='&#8226; <a href="'.$ds['url4'].'" target="_blank">'.$ds['link4'].'</a> ';
 	if($ds['link4'] && $ds['url4']!="http://" && !$ds['window4']) $related.='&#8226; <a href="'.$ds['url4'].'">'.$ds['link4'].'</a> ';
+
+	$tags = Tags::getTagsLinked('news',$ds['newsID']);
 
 	eval ("\$news = \"".gettemplate("news")."\";");
 	echo $news;
@@ -334,11 +340,11 @@ elseif($quickactiontype=="delete") {
 	include("_settings.php");
 	include("_functions.php");
 	$_language->read_module('news');
-  if(isset($_POST['newsID'])){
+  	if(isset($_POST['newsID'])){
   	$newsID = $_POST['newsID'];
 	
 		foreach($newsID as $id) {
-			$ds=mysql_fetch_array(safe_query("SELECT screens, poster FROM ".PREFIX."news WHERE newsID='".$id."'"));
+			$ds=mysqli_fetch_array(safe_query("SELECT screens, poster FROM ".PREFIX."news WHERE newsID='".$id."'"));
 			if(($ds['poster'] != $userID or !isnewswriter($userID)) and !isnewsadmin($userID)) {
 				die($_language->module['no_access']);
 			}
@@ -351,6 +357,7 @@ elseif($quickactiontype=="delete") {
 					}
 				}
 			}
+			Tags::removeTags('news', $id);
 			safe_query("DELETE FROM ".PREFIX."news WHERE newsID='".$id."'");
 			safe_query("DELETE FROM ".PREFIX."news_contents WHERE newsID='".$id."'");
 			safe_query("DELETE FROM ".PREFIX."comments WHERE parentID='".$id."' AND type='ne'");
@@ -371,7 +378,7 @@ elseif($action=="delete") {
 
 	$id = $_GET['id'];
 
-	$ds=mysql_fetch_array(safe_query("SELECT screens, poster FROM ".PREFIX."news WHERE newsID='".$id."'"));
+	$ds=mysqli_fetch_array(safe_query("SELECT screens, poster FROM ".PREFIX."news WHERE newsID='".$id."'"));
 	if(($ds['poster'] != $userID or !isnewswriter($userID)) and !isnewsadmin($userID)) {
 		die($_language->module['no_access']);
 	}
@@ -384,6 +391,8 @@ elseif($action=="delete") {
 			}
 		}
 	}
+
+	Tags::removeTags('news', $id);
 
 	safe_query("DELETE FROM ".PREFIX."news WHERE newsID='".$id."'");
 	safe_query("DELETE FROM ".PREFIX."news_contents WHERE newsID='".$id."'");
@@ -401,7 +410,7 @@ elseif($action=="edit") {
 
 	$newsID = $_GET['newsID'];
 
-	$ds=mysql_fetch_array(safe_query("SELECT * FROM ".PREFIX."news WHERE newsID='".$newsID."'"));
+	$ds=mysqli_fetch_array(safe_query("SELECT * FROM ".PREFIX."news WHERE newsID='".$newsID."'"));
 	if(($ds['poster'] != $userID or !isnewswriter($userID)) and !isnewsadmin($userID)) {
 		die($_language->module['no_access']);
 	}
@@ -411,14 +420,14 @@ elseif($action=="edit") {
 
 	$message_array = array();
 	$query=safe_query("SELECT * FROM ".PREFIX."news_contents WHERE newsID='".$newsID."'");
-	while($qs = mysql_fetch_array($query)) {
+	while($qs = mysqli_fetch_array($query)) {
 		$message_array[] = array('lang' => $qs['language'], 'headline' => $qs['headline'], 'message' => $qs['content']);
 	}
 
 	$count_langs = 0;
 	$lang=safe_query("SELECT lang, language FROM ".PREFIX."news_languages ORDER BY language");
 	$langs='';
-	while($dl=mysql_fetch_array($lang)) {
+	while($dl=mysqli_fetch_array($lang)) {
 		$langs.="news_languages[".$count_langs."] = new Array();\nnews_languages[".$count_langs."][0] = '".$dl['lang']."';\nnews_languages[".$count_langs."][1] = '".$dl['language']."';\n";
 		$count_langs++;
 	}
@@ -437,7 +446,7 @@ elseif($action=="edit") {
 
 	$newsrubrics=safe_query("SELECT * FROM ".PREFIX."news_rubrics ORDER BY rubric");
 	$rubrics='';
-	while($dr=mysql_fetch_array($newsrubrics)) {
+	while($dr=mysqli_fetch_array($newsrubrics)) {
 		if($ds['rubric']==$dr['rubricID']) $rubrics.='<option value="'.$dr['rubricID'].'" selected="selected">'.getinput($dr['rubric']).'</option>';
 		else $rubrics.='<option value="'.$dr['rubricID'].'">'.getinput($dr['rubric']).'</option>';
 	}
@@ -501,6 +510,8 @@ elseif($action=="edit") {
 		$window4_self = 'checked="checked"';
 	}
 
+	$tags = Tags::getTags('news', $newsID);
+
 	$comments='<option value="0">'.$_language->module['no_comments'].'</option><option value="1">'.$_language->module['user_comments'].'</option><option value="2">'.$_language->module['visitor_comments'].'</option>';
 	$comments=str_replace('value="'.$ds['comments'].'"', 'value="'.$ds['comments'].'" selected="selected"', $comments);
 
@@ -531,7 +542,7 @@ elseif($action=="unpublished") {
 	// Not published News
 	if(isnewsadmin($userID)) {
 		$ergebnis=safe_query("SELECT * FROM ".PREFIX."news WHERE published='0' AND saved='1' ORDER BY date ASC");
-		if(mysql_num_rows($ergebnis)) {
+		if(mysqli_num_rows($ergebnis)) {
 			echo $_language->module['title_unpublished_news'];
 
 			echo '<form method="post" name="form" action="news.php">';
@@ -539,7 +550,7 @@ elseif($action=="unpublished") {
 			echo $news_unpublished_head;
 
 			$i=1;
-			while($ds=mysql_fetch_array($ergebnis)) {
+			while($ds=mysqli_fetch_array($ergebnis)) {
 				if($i%2) {
 					$bg1=BG_1;
 					$bg2=BG_2;
@@ -549,13 +560,13 @@ elseif($action=="unpublished") {
 					$bg2=BG_4;
 				}
 
-				$date=date("d.m.Y", $ds['date']);
+				$date=getformatdate($ds['date']);
 				$rubric=getrubricname($ds['rubric']);
 				if(!isset($rubric)) $rubric='';
 				$comms = getanzcomments($ds['newsID'], 'ne');
 				$message_array = array();
 				$query=safe_query("SELECT * FROM ".PREFIX."news_contents WHERE newsID='".$ds['newsID']."'");
-				while($qs = mysql_fetch_array($query)) {
+				while($qs = mysqli_fetch_array($query)) {
 					$message_array[] = array('lang' => $qs['language'], 'headline' => $qs['headline'], 'message' => $qs['content']);
 				}
 
@@ -619,13 +630,13 @@ elseif($action=="archive") {
 	if(isnewsadmin($userID)) {
 		$post='<input type="button" onclick="MM_openBrWindow(\'news.php?action=new\',\'News\',\'toolbar=no,status=no,scrollbars=yes,width=800,height=600\')" value="'.$_language->module['post_news'].'" />';
 		$unpublished=safe_query("SELECT newsID FROM ".PREFIX."news WHERE published='0' AND saved='1'");
-		$unpublished=mysql_num_rows($unpublished);
+		$unpublished=mysqli_num_rows($unpublished);
 		if($unpublished) $publish='<input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=news&amp;action=unpublished\');return document.MM_returnValue" value="'.$unpublished.' '.$_language->module['unpublished_news'].'" /> ';
 	}
 	echo $post.' '.$publish.' <input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=news\');return document.MM_returnValue" value="'.$_language->module['show_news'].'" /><hr />';
 
 	$all=safe_query("SELECT newsID FROM ".PREFIX."news WHERE published='1' AND intern<=".isclanmember($userID));
-	$gesamt=mysql_num_rows($all);
+	$gesamt=mysqli_num_rows($all);
 	$pages=1;
 
 	$max = empty($maxnewsarchiv) ? 20 : $maxnewsarchiv;
@@ -659,7 +670,7 @@ elseif($action=="archive") {
 		echo $news_archive_head;
     
 		$i=1;
-		while($ds=mysql_fetch_array($ergebnis)) {
+		while($ds=mysqli_fetch_array($ergebnis)) {
 			if($i%2) {
 				$bg1=BG_1;
 				$bg2=BG_2;
@@ -669,7 +680,7 @@ elseif($action=="archive") {
 				$bg2=BG_4;
 			}
 
-			$date=date("d.m.Y", $ds['date']);
+			$date=getformatdate($ds['date']);
 			$rubric=getrubricname($ds['rubric']);
 			$comms = getanzcomments($ds['newsID'], 'ne');
 		    if($ds['intern'] == 1) $isintern = '<small>('.$_language->module['intern'].')</small>';
@@ -677,7 +688,7 @@ elseif($action=="archive") {
       
       $message_array = array();
 			$query=safe_query("SELECT * FROM ".PREFIX."news_contents WHERE newsID='".$ds['newsID']."'");
-			while($qs = mysql_fetch_array($query)) {
+			while($qs = mysqli_fetch_array($query)) {
 				$message_array[] = array('lang' => $qs['language'], 'headline' => $qs['headline'], 'message' => $qs['content']);
 			}
 
@@ -731,14 +742,14 @@ else {
 	}
 	if(isnewsadmin($userID)) {
 		$unpublished=safe_query("SELECT newsID FROM ".PREFIX."news WHERE published='0' AND saved='1'");
-		$unpublished=mysql_num_rows($unpublished);
+		$unpublished=mysqli_num_rows($unpublished);
 		if($unpublished) $publish='<input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=news&amp;action=unpublished\');return document.MM_returnValue;" value="'.$unpublished.' '.$_language->module['unpublished_news'].'" /> ';
 	}
 	echo $post.' '.$publish.'<input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=news&amp;action=archive\');return document.MM_returnValue;" value="'.$_language->module['news_archive'].'" /><hr />';
 
 	if(isset($_GET['show'])) {
 		$result=safe_query("SELECT rubricID FROM ".PREFIX."news_rubrics WHERE rubric='".$_GET['show']."' LIMIT 0,1");
-		$dv=mysql_fetch_array($result);
+		$dv=mysqli_fetch_array($result);
 		$showonly = "AND rubric='".$dv['rubricID']."'";
 	}
 	else $showonly = '';
@@ -746,12 +757,12 @@ else {
 	$result=safe_query("SELECT * FROM ".PREFIX."news WHERE published='1' AND intern<=".isclanmember($userID)." ".$showonly." ORDER BY date DESC LIMIT 0,".$maxshownnews);
 
 	$i=1;
-	while($ds=mysql_fetch_array($result)) {
+	while($ds=mysqli_fetch_array($result)) {
 		if($i%2) $bg1=BG_1;
 		else $bg1=BG_2;
 
-		$date = date("d.m.Y", $ds['date']);
-		$time = date("H:i", $ds['date']);
+		$date = getformatdate($ds['date']);
+		$time = getformattime($ds['date']);
 		$rubrikname = getrubricname($ds['rubric']);
 		$rubrikname_link = getinput($rubrikname);
 		$rubricpic_path = "images/news-rubrics/".getrubricpic($ds['rubric']);
@@ -760,7 +771,7 @@ else {
 
 		$message_array = array();
 		$query=safe_query("SELECT * FROM ".PREFIX."news_contents WHERE newsID='".$ds['newsID']."'");
-		while($qs = mysql_fetch_array($query)) {
+		while($qs = mysqli_fetch_array($query)) {
 			$message_array[] = array('lang' => $qs['language'], 'headline' => $qs['headline'], 'message' => $qs['content']);
 		}
 
@@ -803,7 +814,7 @@ else {
 			if($ds['cwID']) {  // CLANWAR-NEWS
 				$anzcomments = getanzcomments($ds['cwID'], 'cw');
 				$replace = Array('$anzcomments', '$url', '$lastposter', '$lastdate');
-				$vars = Array($anzcomments, 'index.php?site=clanwars_details&amp;cwID='.$ds['cwID'], clearfromtags(getlastcommentposter($ds['cwID'], 'cw')), date('d.m.Y - H:i', getlastcommentdate($ds['cwID'], 'cw')));
+				$vars = Array($anzcomments, 'index.php?site=clanwars_details&amp;cwID='.$ds['cwID'], clearfromtags(getlastcommentposter($ds['cwID'], 'cw')), getformatdatetime(getlastcommentdate($ds['cwID'], 'cw')));
 
 				switch($anzcomments) {
 					case 0: $comments = str_replace($replace, $vars, $_language->module['no_comment']); break;
@@ -814,7 +825,7 @@ else {
 			else {
 				$anzcomments = getanzcomments($ds['newsID'], 'ne');
 				$replace = Array('$anzcomments', '$url', '$lastposter', '$lastdate');
-				$vars = Array($anzcomments, 'index.php?site=news_comments&amp;newsID='.$ds['newsID'], clearfromtags(html_entity_decode(getlastcommentposter($ds['newsID'], 'ne'))), date('d.m.Y - H:i', getlastcommentdate($ds['newsID'], 'ne')));
+				$vars = Array($anzcomments, 'index.php?site=news_comments&amp;newsID='.$ds['newsID'], clearfromtags(html_entity_decode(getlastcommentposter($ds['newsID'], 'ne'))), getformatdatetime(getlastcommentdate($ds['newsID'], 'ne')));
 
 				switch($anzcomments) {
 					case 0: $comments = str_replace($replace, $vars, $_language->module['no_comment']); break;
@@ -824,6 +835,8 @@ else {
 			}
 		}
 		else $comments='';
+
+		$tags = Tags::getTagsLinked('news',$ds['newsID']);
 
 		$adminaction = '';
 		if(isnewsadmin($userID)) {

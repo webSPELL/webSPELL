@@ -64,6 +64,7 @@ $language_array = Array(
 	'text_contains'=>'Tekst zawiera',
 	'title_contains'=>'Tytuł zaiwera',
 	'too_short'=>'Fraza za krótka. Przynajmniej %min_chars% znaków',
-	'wrong_securitycode'=>'Wpisałeś błędny kod zabezpieczający!'
+	'wrong_securitycode'=>'Wpisałeś błędny kod zabezpieczający!',
+	'no_result'=>'Nie znaleziono wyników dla "%s" wpisy'
 );
 ?>

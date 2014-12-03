@@ -71,6 +71,7 @@ $language_array = Array(
 	'upload_images'=>'Upload afbeeldingen',
 	'user_comments'=>'Sta gebruikers commentaar toe',
 	'viewed'=>'Bekeken',
-	'visitor_comments'=>'Sta bezoekers commentaar toe'
+	'visitor_comments'=>'Sta bezoekers commentaar toe',
+	'tags'=>'Tags'
 );
 ?>

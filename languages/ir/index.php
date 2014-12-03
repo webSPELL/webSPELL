@@ -51,6 +51,7 @@ $language_array = Array(
   'squads'=>'گروه ها',
   'statistics'=>'وضعییت',
   'topics'=>'تاپیک ها',
-  'upcoming_events'=>'رخداد ها'
+  'upcoming_events'=>'رخداد ها',
+  'tags'=>'برچسب ها'
 );
 ?>
