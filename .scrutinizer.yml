@@ -1,7 +1,6 @@
 before_commands:
     - composer install --dev
 tools:
-
     php_sim:
         enabled: true
     php_pdepend:
@@ -12,31 +11,23 @@ tools:
         enabled: true
     php_mess_detector:
         enabled: true
-    php_cs_fixer:
-        extensions:
-            - php
-        command: php-cs-fixer
-        enabled: true
-        filter:
-            excluded_paths: ["vendor", "node_modules"]
-            paths: ["*.php"]
-        config:
-            level: psr2
     php_cpd:
         command: phpcpd
         min_lines: 5
         min_tokens: 70
         names:
             - '*.php'
-        excluded_dirs: ["vendor", "node_modules"]
+        excluded_dirs: ["vendor", "node_modules", "components"]
         enabled: true
     php_code_sniffer:
+        config:
+            ruleset: Ruleset.xml
         extensions:
             - php
         command: phpcs
         enabled: true
         filter:
-            excluded_paths: ["vendor", "node_modules"]
+            excluded_paths: ["vendor", "node_modules", "components"]
             paths: ["*.php"]
         config:
             standard: PSR2
