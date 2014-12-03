@@ -1078,7 +1078,7 @@ if ($action == "new") {
         }
 
         $message_array = [];
-        $query = safe_query("SELECT * FROM " . PREFIX . "news_contents WHERE newsID='" . (int)$ds[ 'newsID' ]);
+        $query = safe_query("SELECT * FROM " . PREFIX . "news_contents WHERE newsID='" . (int)$ds[ 'newsID' ] . "'");
         while ($qs = mysqli_fetch_array($query)) {
             $message_array[ ] =
                 ['lang' => $qs[ 'language' ], 'headline' => $qs[ 'headline' ], 'message' => $qs[ 'content' ]];
