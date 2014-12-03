@@ -64,7 +64,6 @@ module.exports = function(grunt) {
             "!forum.php",
             "!forum_topic.php",
             "!gallery.php",
-            "!guestbook.php",
             "!index.php"
         ],
         csss = [ "**/*.css" ],
