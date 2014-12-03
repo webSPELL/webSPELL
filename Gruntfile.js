@@ -123,13 +123,14 @@ module.exports = function(grunt) {
             copyright: {
                 src: [
                     "**/*.{css,html,js,md,php,txt}",
-                    excludes
+                    excludes,
+                    "!Gruntfile.js"
                 ],
                 overwrite: true,
                 replacements: [
                     {
-                        from: /(Copyright 2005-2014 by webspell.org)/g,
-                        to: "Copyright 2005-2014 by webspell.org"
+                        from: /(Copyright).+(webspell.org)/g,
+                        to: "Copyright 2005-<%= grunt.template.today('yyyy') %> by webspell.org"
                     }
                 ]
             }
