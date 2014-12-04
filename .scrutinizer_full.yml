@@ -11,7 +11,7 @@ tools:
         enabled: true
     php_mess_detector:
         enabled: true
-    jshint:
+    js_hint:
         enabled: true
         extensions:
             - js

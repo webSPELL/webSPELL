@@ -1,7 +1,7 @@
 before_commands:
     - composer install --dev
 tools:
-    jshint:
+    js_hint:
         enabled: true
         extensions:
             - js
