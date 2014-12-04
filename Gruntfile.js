@@ -12,7 +12,6 @@ module.exports = function(grunt) {
             "templates/*.html"
         ],
         phps = [
-            "src/**/*.php",
             "admin/about.php",
             "admin/addons.php",
             //"admin/admincenter.php",
@@ -31,7 +30,7 @@ module.exports = function(grunt) {
             //"admin/imprint.php",
             //"admin/index.php",
             //"admin/linkcategories.php",
-            //"admin/lock.php",
+            "admin/lock.php",
             //"admin/members.php",
             //"admin/modrewrite.php",
             //"admin/newsletter.php",
@@ -52,6 +51,7 @@ module.exports = function(grunt) {
             //"admin/users.php",
             //"admin/visitor_statistic.php",
             //"admin/visitor_statistic_image.php",
+            "src/**/*.php",
             "*.php"
         ],
         csss = [ "**/*.css" ],
