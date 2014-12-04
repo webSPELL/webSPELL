@@ -42,7 +42,8 @@ if (!$closed) {
                 safe_query("UPDATE `" . PREFIX . "lock` SET reason='" . $_POST[ 'reason' ] . "', time='" . time() .
                     "'");
             } else {
-                safe_query("INSERT INTO `" . PREFIX . "lock` (`time`, `reason`) values( '" . time() . "', '" . $_POST[ 'reason' ] . "') ");
+                safe_query("INSERT INTO `" . PREFIX . "lock` (`time`, `reason`) values( '" . time() . "', '" .
+                    $_POST[ 'reason' ] . "') ");
             }
             safe_query("UPDATE `" . PREFIX . "settings` SET closed='1'");
 
