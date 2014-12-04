@@ -13,6 +13,7 @@ tools:
         enabled: true
     js_hint:
         enabled: true
+        use_native_config: true
         extensions:
             - js
         filter:

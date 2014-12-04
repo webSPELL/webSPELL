@@ -3,20 +3,13 @@ before_commands:
 tools:
     js_hint:
         enabled: true
+        use_native_config: true
         extensions:
             - js
         filter:
             paths: ["Gruntfile.js", "js/bbcode.js"]
             excluded_paths: ["vendor", "node_modules", "components"]
     php_changetracking:
-        enabled: true
-    php_cpd:
-        command: phpcpd
-        min_lines: 5
-        min_tokens: 70
-        names:
-            - '*.php'
-        excluded_dirs: ["vendor", "node_modules", "components"]
         enabled: true
     php_code_sniffer:
         config:
