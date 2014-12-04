@@ -52,9 +52,7 @@ module.exports = function(grunt) {
             //"admin/users.php",
             //"admin/visitor_statistic.php",
             //"admin/visitor_statistic_image.php",
-            "*.php",
-            "!forum.php",
-            "!forum_topic.php"
+            "*.php"
         ],
         csss = [ "**/*.css" ],
         excludes = [
