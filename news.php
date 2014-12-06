@@ -1027,7 +1027,7 @@ if ($action == "new") {
     }
     echo $post . ' ' . $publish .
         '<a href="index.php?site=news&amp;action=archive" class="btn btn-primary">' .
-        $_language->module[ 'news_archive' ] . '"></a><hr>';
+        $_language->module[ 'news_archive' ] . '</a><hr>';
 
     if (isset($_GET[ 'show' ])) {
         $result = safe_query(
