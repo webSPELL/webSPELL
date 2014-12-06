@@ -110,14 +110,14 @@ if (mysqli_num_rows($get) == 0) {
                         FROM
                             `" . PREFIX . "failed_login_attempts`
                         WHERE
-                            `ip` = '" . $GLOBALS[ 'ip' ]
+                            `ip` = '" . $GLOBALS[ 'ip' ]."'"
                     );
                     if (mysqli_num_rows($get)) {
                         safe_query(
                             "UPDATE
                                 `" . PREFIX . "failed_login_attempts`
                             SET
-                                `wrong` = wrong+1 WHERE ip = '" . $GLOBALS[ 'ip' ]
+                                `wrong` = wrong+1 WHERE ip = '" . $GLOBALS[ 'ip' ]."'"
                         );
                     } else {
                         safe_query(
@@ -138,7 +138,7 @@ if (mysqli_num_rows($get) == 0) {
                         FROM
                             `" . PREFIX . "failed_login_attempts`
                         WHERE
-                            `ip` = '" . $GLOBALS[ 'ip' ]
+                            `ip` = '" . $GLOBALS[ 'ip' ]."'"
                     );
                     if (mysqli_num_rows($get)) {
                         $ban = mysqli_fetch_assoc($get);
@@ -161,7 +161,7 @@ if (mysqli_num_rows($get) == 0) {
                                 "DELETE FROM
                                     `" . PREFIX . "failed_login_attempts`
                                 WHERE
-                                    `ip` = '" . $GLOBALS[ 'ip' ]
+                                    `ip` = '" . $GLOBALS[ 'ip' ]."'"
                             );
                         }
                     }
