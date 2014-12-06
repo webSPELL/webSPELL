@@ -217,8 +217,6 @@ if (!$userID) {
             }
         }
 
-        $birthday = $b_year . '-' . $b_month . '-' . $b_day;
-
         if (empty($usernamenew)) {
             $error_array[ ] = $_language->module[ 'you_have_to_username' ];
         }
