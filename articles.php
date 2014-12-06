@@ -77,15 +77,15 @@ if ($action == "save") {
             saved='1',
             comments='" . $comments . "'
         WHERE
-            articlesID='" . (int)$articlesID
+            articlesID='" . (int)$articlesID."'"
     );
 
-    Tags::setTags('articles', $articlesID, $_POST[ 'tags' ]);
+    webspell\Tags::setTags('articles', $articlesID, $_POST[ 'tags' ]);
 
     $anzpages =
         mysqli_num_rows(
             safe_query(
-                "SELECT * FROM " . PREFIX . "articles_contents WHERE articlesID='" . (int)$articlesID
+                "SELECT * FROM " . PREFIX . "articles_contents WHERE articlesID='" . (int)$articlesID."'"
             )
         );
     if ($anzpages > count($message)) {
@@ -104,7 +104,7 @@ if ($action == "save") {
                 safe_query(
                     "INSERT INTO
                         " . PREFIX . "articles_contents (
-                            `articlesID,
+                            `articlesID`,
                             `content`,
                             `page`
                         )
@@ -122,7 +122,7 @@ if ($action == "save") {
                         `content` = '" . $message[ $i ] . "'
                     WHERE
                         `articlesID` = '" . $articlesID . "' AND
-                        `page` = '" . (int)$i
+                        `page` = '" . (int)$i."'"
                 );
             }
         }
@@ -133,7 +133,7 @@ if ($action == "save") {
                 `" . PREFIX . "articles_contents`
             WHERE
                 `articlesID` = '" . $articlesID . "' AND
-                `page` = '" . (int)$x
+                `page` = '" . (int)$x."'"
         );
     }
 
@@ -302,6 +302,8 @@ if ($action == "new") {
 
         $tags = '';
 
+        $title = '';
+
         $pages = 1;
 
         $bg1 = BG_1;
@@ -422,7 +424,7 @@ if ($action == "new") {
                 $_language->module[ 'self' ] . '';
         }
 
-        $tags = Tags::getTags('articles', $articlesID);
+        $tags = webspell\Tags::getTags('articles', $articlesID);
 
         $comments = '<option value="0">' . $_language->module[ 'no_comments' ] . '</option><option value="1">' .
             $_language->module[ 'user_comments' ] . '</option><option value="2">' .
@@ -468,9 +470,9 @@ if ($action == "new") {
         '</a><br><br>';
 
     if ($page == 1) {
-        safe_query("UPDATE `" . PREFIX . "articles` SET `viewed`=viewed+1 WHERE `articlesID` = '" . (int)$articlesID);
+        safe_query("UPDATE `" . PREFIX . "articles` SET `viewed`=viewed+1 WHERE `articlesID` = '" . (int)$articlesID."'");
     }
-    $result = safe_query("SELECT * FROM `" . PREFIX . "articles` WHERE `articlesID` = '" . (int)$articlesID);
+    $result = safe_query("SELECT * FROM `" . PREFIX . "articles` WHERE `articlesID` = '" . (int)$articlesID."'");
 
     if (mysqli_num_rows($result)) {
 
@@ -609,7 +611,7 @@ if ($action == "new") {
             $rateform = $_language->module[ 'login_for_rate' ];
         }
 
-        $tags = Tags::getTagsLinked('articles', $articlesID);
+        $tags = webspell\Tags::getTagsLinked('articles', $articlesID);
 
         $bg1 = BG_1;
         eval ("\$articles = \"" . gettemplate("articles") . "\";");
