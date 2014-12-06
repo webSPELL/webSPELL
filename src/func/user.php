@@ -303,7 +303,7 @@ function isonline($userID)
 {
     $q = safe_query("SELECT site FROM " . PREFIX . "whoisonline WHERE userID=" . (int)$userID);
     if (mysqli_num_rows($q) > 0) {
-        $ds = mysqli_fetch_array($ergebnis);
+        $ds = mysqli_fetch_array($q);
         return '<b>online</b> @ <a href="index.php?site=' . $ds['site'] . '">' . $ds['site'] . '</a>';
     }
 
