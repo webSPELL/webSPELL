@@ -31,7 +31,7 @@ $language_array = Array(
 /* do not edit above this line */
 
   'admin_comment'=>'Admini kommentaar',
-  'bbcode'=>'<a href="javascript:MM_openBrWindow(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> on PEAL',
+  'bbcode'=>'<a href="javascript:window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> on PEAL',
   'by'=>'',
   'comment'=>'Kommentaar',
   'delete_selected'=>'Kustuta valitud',
@@ -53,7 +53,7 @@ $language_array = Array(
   'pmtext_newentry'=>'[b]Keegi jättis sulle sõnumi su külalisteraamatusse![/b][br][br] [URL=index.php?site=guestbook#%insertid%]Kliki siia, et sõnumit lugeda[/URL] ',
   'security_code'=>'Turvakood',
   'select_all'=>'vali kõik',
-  'smilies'=>'<a href="javascript:MM_openBrWindow(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smailid</a> on PEAL',
+  'smilies'=>'<a href="javascript:window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smailid</a> on PEAL',
   'sort'=>'Sorteerimine:',
   'submit'=>'Edasta',
   'update_comment'=>'Salvesta kommentaar',

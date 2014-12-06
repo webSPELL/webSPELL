@@ -30,7 +30,7 @@ $language_array = Array(
 /* do not edit above this line */
 
 	'admin_comment'=>'Admin komentár',
-  'bbcode'=>'<a href="javascript:MM_openBrWindow(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> zapnutý',
+  'bbcode'=>'<a href="javascript:window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> zapnutý',
 	'by'=>'od',
 	'comment'=>'Komentár',
 	'delete_selected'=>'Vymazať označené',
@@ -52,7 +52,7 @@ $language_array = Array(
 	'pmtext_newentry'=>'[b]Niekto vám nechal správu v guestbook-u![/b][br][br] [URL=index.php?site=guestbook#$insertid]Kliknite sem pre prečítanie[/URL] ',
 	'security_code'=>'Bezpečnostný kód',
 	'select_all'=>'označiť všetko',
-	'smilies'=>'<a href="javascript:MM_openBrWindow(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smajlíci</a> zapnutý',
+	'smilies'=>'<a href="javascript:window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smajlíci</a> zapnutý',
 	'sort'=>'Triediť:',
 	'submit'=>'Potrvdiť',
 	'update_comment'=>'Uložiť komentár',

@@ -31,7 +31,7 @@ $language_array = Array(
 /* do not edit above this line */
 
   'admin_comment'=>'تعليقات المدير',
-  'bbcode'=>'<a href="javascript:MM_openBrWindow(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> مسموحة',
+  'bbcode'=>'<a href="javascript:window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> مسموحة',
   'by'=>'الكاتب',
   'comment'=>'تعليق',
   'delete_selected'=>'حذف المختارات',
@@ -53,7 +53,7 @@ $language_array = Array(
   'pmtext_newentry'=>'[b]!رسالة لك في سجل الزوار[/b][br][br] [URL=admin/admincenter.php?site=guestbook]اضغط هنا للسماح بعرض الادخال[/URL] ',
   'security_code'=>'الرمز الامني',
   'select_all'=>'اختيار الكل',
-  'smilies'=>'<a href="javascript:MM_openBrWindow(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">الابتسامات</a> مسموحة',
+  'smilies'=>'<a href="javascript:window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">الابتسامات</a> مسموحة',
   'sort'=>'الترتيب:',
   'submit'=>'ادخال',
   'update_comment'=>'حفض التعليق',

@@ -31,7 +31,7 @@ $language_array = Array(
 
 	'access_denied'=>'Zugriff verweigert',
 	'add_buddy'=>'zur Freundesliste hinzufügen',
-	'bbcode_on'=>'<a href="javascript:MM_openBrWindow(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> ist AN',
+	'bbcode_on'=>'<a href="javascript:window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> ist AN',
 	'by'=>'von',
 	'clanmember_icon'=>' <img src="images/icons/member.gif" width="6" height="11" alt="Clanmitglied">',
 	'comments'=>'Kommentare',
@@ -59,7 +59,7 @@ $language_array = Array(
 	'readd_buddy'=>'wieder zur Freundesliste hinzufügen',
 	'select_all'=>'alle auswählen',
 	'send_message'=>'Nachricht senden',
-	'smilies_on'=>'<a href="javascript:MM_openBrWindow(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smilies</a> sind AN',
+	'smilies_on'=>'<a href="javascript:window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smilies</a> sind AN',
 	'sort'=>'Sortierung:',
 	'sort_asc'=>'Sortiere aufsteigend',
 	'sort_desc'=>'Sortiere absteigend',

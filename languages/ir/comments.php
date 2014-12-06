@@ -31,7 +31,7 @@ $language_array = Array(
 
   'access_denied'=>'غیر قابل دسترسی',
   'add_buddy'=>'لیست دوستان اضافه کردن به',
-  'bbcode_on'=>'<a href="javascript:MM_openBrWindow(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> به وسیله',
+  'bbcode_on'=>'<a href="javascript:window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> به وسیله',
   'by'=>'به وسیله',
   'clanmember_icon'=>' <img src="images/icons/member.gif" width="6" height="11" alt="عضو کلن">',
   'comments'=>'کامنت ها',
@@ -59,7 +59,7 @@ $language_array = Array(
   'readd_buddy'=>'لیست دوستان برگشت به',
   'select_all'=>'انتخاب همه',
   'send_message'=>'فرستادن پیغام',
-  'smilies_on'=>'<a href="javascript:MM_openBrWindow(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">شکلک ها</a> به وسیله',
+  'smilies_on'=>'<a href="javascript:window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">شکلک ها</a> به وسیله',
   'sort'=>'انتخاب بر حسب:',
   'sort_asc'=>'بر حسب صعودی',
   'sort_desc'=>'بر حسب نزولی',

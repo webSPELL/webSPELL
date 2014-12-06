@@ -87,12 +87,12 @@ if (!isset($_GET[ 'action' ])) {
     }
 
     if (isclanwaradmin($userID)) {
-        $adminaction = '<input type="button" onclick="MM_openBrWindow(
+        $adminaction = '<input type="button" onclick="window.open(
                 \'upload.php?cwID=' . $cwID . '\',
                 \'Clanwars\',
                 \'toolbar=no,status=no,scrollbars=yes,width=800,height=600\'
             )" value="' . $_language->module[ 'upload_screenshot' ] . '" class="btn btn-danger">
-            <input type="button" onclick="MM_openBrWindow(
+            <input type="button" onclick="window.open(
                     \'clanwars.php?action=edit&amp;cwID=' . $ds[ 'cwID' ] . '\',
                     \'Clanwars\',
                     \'toolbar=no,status=no,scrollbars=yes,width=800,height=600\'

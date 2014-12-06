@@ -38,7 +38,7 @@ if (isset($_GET[ 'action' ])) {
 
 if ($action == "faqcat" and is_numeric($_GET[ 'faqcatID' ])) {
     if (ispageadmin($userID)) {
-        echo '<input type="button" onclick="MM_openBrWindow(
+        echo '<input type="button" onclick="window.open(
             \'admin/admincenter.php?site=faq\',
             \'News\',\'toolbar=yes,status=yes,scrollbars=yes,resizable=yes,width=800,height=600\'
         )" value="' . $_language->module[ 'admin_button' ] . '" class="btn btn-danger"><br><br>';
@@ -91,7 +91,7 @@ if ($action == "faqcat" and is_numeric($_GET[ 'faqcatID' ])) {
 } elseif ($action == "faq") {
     if (ispageadmin($userID)) {
         echo
-            '<p><input type="button" onclick="MM_openBrWindow(
+            '<p><input type="button" onclick="window.open(
                 \'admin/admincenter.php?site=faq\',
                 \'News\',\'toolbar=yes,status=yes,scrollbars=yes,resizable=yes,width=800,height=600\'
             )" value="' . $_language->module[ 'admin_button' ] . '" class="btn btn-danger"></p>';
@@ -142,7 +142,7 @@ if ($action == "faqcat" and is_numeric($_GET[ 'faqcatID' ])) {
 } else {
     if (ispageadmin($userID)) {
         echo
-            '<p><input type="button" onclick="MM_openBrWindow(
+            '<p><input type="button" onclick="window.open(
                 \'admin/admincenter.php?site=faq\',
                 \'News\',
                 \'toolbar=yes,status=yes,scrollbars=yes,resizable=yes,width=800,height=600\'

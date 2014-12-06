@@ -339,7 +339,7 @@ function print_termine($tag, $month, $year)
                             $adminaction = '<div class="text-right">
                                 <input
                                     type="button"
-                                    onclick="MM_openBrWindow(
+                                    onclick="window.open(
                                         \'clanwars.php?action=new&amp;upID=' . $ds[ 'upID' ] . '\',
                                         \'Clanwars\',
                                         \'toolbar=no,status=no,scrollbars=yes,width=800,height=490\'

@@ -29,7 +29,7 @@
 				langs = [];
 
 		news_languages = [];
-		function MM_openBrWindow(theURL, winName, features) { //v2.0
+		function window.open(theURL, winName, features) { //v2.0
 			window.open(theURL, winName, features);
 		}
 
@@ -222,16 +222,16 @@
 				<table width="100%" border="0" cellspacing="0" cellpadding="2">
 					<tr>
 						<td><b>%rubric%:</b> <select name="rubric">$rubrics</select>
-							<input name="button" type="button" onclick="MM_openBrWindow(
+							<input name="button" type="button" onclick="window.open(
 									'upload.php?newsID=$newsID',
 									'Upload',
 									'scrollbars=yes,width=800,height=600')" value="%upload_images%">
 							&nbsp;&nbsp;&nbsp;
-							<small><b>%options%:</b> &#8226; %html% &#8226; <a href="javascript:MM_openBrWindow(
+							<small><b>%options%:</b> &#8226; %html% &#8226; <a href="javascript:window.open(
 									'code.php',
 									'BBCode',
 									'scrollbars=yes,width=600,height=500')">%bbcode%</a>
-								&#8226; <a href="javascript:MM_openBrWindow(
+								&#8226; <a href="javascript:window.open(
 										'smileys.php',
 										'Smileys',
 										'scrollbars=yes,width=340,height=500')">%smilies%</a>

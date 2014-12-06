@@ -36,7 +36,7 @@ $language_array = Array(
 /* do not edit above this line */
 
   'admin_comment'=>'Yönetici Yorumu',
-  'bbcode'=>'<a href="javascript:MM_openBrWindow(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> AÇIK',
+  'bbcode'=>'<a href="javascript:window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> AÇIK',
   'by'=>'tarafından',
   'comment'=>'Yorum',
   'delete_selected'=>'Seçileni Sil',
@@ -58,7 +58,7 @@ $language_array = Array(
   'pmtext_newentry'=>'[b]Biri defterinize sizin için mesaj bıraktı![/b][br][br] [URL=index.php?site=guestbook#%insertid%]Mesajı okumak için buraya tıklayınız[/URL] ',
   'security_code'=>'Güvenlik Kodu',
   'select_all'=>'Tümünü seç',
-  'smilies'=>'<a href="javascript:MM_openBrWindow(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">İfadeler</a> AÇIK',
+  'smilies'=>'<a href="javascript:window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">İfadeler</a> AÇIK',
   'sort'=>'Sıralama:',
   'submit'=>'Gönder',
   'update_comment'=>'Yorumu kaydet',

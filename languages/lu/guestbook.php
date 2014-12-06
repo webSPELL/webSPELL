@@ -36,7 +36,7 @@ $language_array = Array(
 /* do not edit above this line */
 
   'admin_comment'=>'Administratorkommentar',
-  'bbcode'=>'<a href="javascript:MM_openBrWindow(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> ass UN',
+  'bbcode'=>'<a href="javascript:window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> ass UN',
   'by'=>'vun',
   'comment'=>'Kommentar',
   'delete_selected'=>'Markéiert läschen',
@@ -58,7 +58,7 @@ $language_array = Array(
   'pmtext_newentry'=>'[b]Et huet een eng Noriicht am Gäschtbuch hannerlooss![/b][br][br] [URL=index.php?site=guestbook#%insertid%]Hei geet et bei d\'Noriicht[/URL] ',
   'security_code'=>'Sécherheetscode',
   'select_all'=>'alles markéieren',
-  'smilies'=>'<a href="javascript:MM_openBrWindow(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smilies</a> ass UN',
+  'smilies'=>'<a href="javascript:window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smilies</a> ass UN',
   'sort'=>'Sortéierung:',
   'submit'=>'Ofschécken',
   'update_comment'=>'Kommentar spéichern',

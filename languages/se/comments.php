@@ -31,7 +31,7 @@ $language_array = Array(
 
 	'access_denied'=>'Tillgång nekad',
 	'add_buddy'=>'add to buddy list',
-	'bbcode_on'=>'<a href="javascript:MM_openBrWindow(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> är PÅ',
+	'bbcode_on'=>'<a href="javascript:window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> är PÅ',
 	'by'=>'av',
 	'clanmember_icon'=>' <img src="images/icons/member.gif" width="6" height="11" alt="Clanmember">',
 	'comments'=>'Kommentarer',
@@ -59,7 +59,7 @@ $language_array = Array(
 	'readd_buddy'=>'Tillbaka till vänner-lista',
 	'select_all'=>'markera alla',
 	'send_message'=>'send message',
-	'smilies_on'=>'<a href="javascript:MM_openBrWindow(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smilies</a> är PÅ',
+	'smilies_on'=>'<a href="javascript:window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smilies</a> är PÅ',
 	'sort'=>'Sort:',
 	'sort_asc'=>'Sort ascending',
 	'sort_desc'=>'Sort descending',

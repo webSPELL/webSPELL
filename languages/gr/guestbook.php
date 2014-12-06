@@ -36,7 +36,7 @@ $language_array = Array(
 /* do not edit above this line */
 
   'admin_comment'=>'Σχολια διαχειρηστη',
-  'bbcode'=>'<a href="javascript:MM_openBrWindow(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> ειναι ενεργο',
+  'bbcode'=>'<a href="javascript:window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> ειναι ενεργο',
   'by'=>'απο',
   'comment'=>'Σχολιο',
   'delete_selected'=>'Διαγραφη επιλεγμενων',
@@ -58,7 +58,7 @@ $language_array = Array(
   'pmtext_newentry'=>'[b]Καποιος αφησε ενα μηνυμα για εσας στο βιβλιο επισκεπτων![/b][br][br] [URL=index.php?site=guestbook#%insertid%]Καντε Click εδω για να διαβασετε το μηνυμα[/URL] ',
   'security_code'=>'Κωδικος ασφαλειας',
   'select_all'=>'επιλογη ολων',
-  'smilies'=>'<a href="javascript:MM_openBrWindow(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smilies</a> ειναι ενεργο',
+  'smilies'=>'<a href="javascript:window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smilies</a> ειναι ενεργο',
   'sort'=>'Ταξινομηση:',
   'submit'=>'Υποβολη',
   'update_comment'=>'Αποθηκευση σχολιου',

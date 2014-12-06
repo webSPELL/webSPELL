@@ -30,7 +30,7 @@ $language_array = Array(
 /* do not edit above this line */
 
   'admin_comment'=>'Админ коментар',
-  'bbcode'=>'<a href="javascript:MM_openBrWindow(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">ББКод</a> укључен',
+  'bbcode'=>'<a href="javascript:window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">ББКод</a> укључен',
   'by'=>'написао',
   'comment'=>'Kоментариши',
   'delete_selected'=>'Избриши означено',
@@ -52,7 +52,7 @@ $language_array = Array(
   'pmtext_newentry'=>'[b]Неко је оставио поруку у Вашој књизи гостију![/b][br][br] [URL=admin/admincenter.php?site=guestbook]Кликни да прочиташ поруку[/URL] ',
   'security_code'=>'Сигурносни код',
   'select_all'=>'означи све',
-  'smilies'=>'<a href="javascript:MM_openBrWindow(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Смајлићи</a> укључен',
+  'smilies'=>'<a href="javascript:window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Смајлићи</a> укључен',
   'sort'=>'Разврстај:',
   'submit'=>'Спреми',
   'update_comment'=>'Спреми коментар',

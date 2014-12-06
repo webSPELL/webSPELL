@@ -31,7 +31,7 @@ $language_array = Array(
 /* do not edit above this line */
 
   'admin_comment'=>'ადმინის კომენტარები',
-  'bbcode'=>'<a href="javascript:MM_openBrWindow(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBკოდი</a> ჩართულია',
+  'bbcode'=>'<a href="javascript:window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBკოდი</a> ჩართულია',
   'by'=>'მიერ',
   'comment'=>'კომენტარი',
   'delete_selected'=>'წაშლა მონიშნულია',
@@ -53,7 +53,7 @@ $language_array = Array(
   'pmtext_newentry'=>'[b]ვიღაცამ დატოვა კომენტარი თქვენთვის სტუმრების წიგნში![/b][br][br] [URL=index.php?site=guestbook#%insertid%]დააჭირე აქ რომ წაიკითხო შეტყობინება[/URL] ',
   'security_code'=>'უსაფრთხოების კოდი',
   'select_all'=>'ყველას მონიშვლა',
-  'smilies'=>'<a href="javascript:MM_openBrWindow(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">სმაილები</a> ჩართულია',
+  'smilies'=>'<a href="javascript:window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">სმაილები</a> ჩართულია',
   'sort'=>'დაფასოება:',
   'submit'=>'დადასტურება',
   'update_comment'=>'კომენტარის შენახვა',

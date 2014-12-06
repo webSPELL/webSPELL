@@ -31,7 +31,7 @@ $language_array = Array(
 /* do not edit above this line */
 
   'admin_comment'=>'Admin komentar',
-  'bbcode'=>'<a href="javascript:MM_openBrWindow(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBKod</a> uključen',
+  'bbcode'=>'<a href="javascript:window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBKod</a> uključen',
   'by'=>'napisao',
   'comment'=>'Komentariši',
   'delete_selected'=>'Izbriši označeno',
@@ -53,7 +53,7 @@ $language_array = Array(
   'pmtext_newentry'=>'[b]Neko je ostavio poruku u Vašoj knjizi musafira![/b][br][br] [URL=admin/admincenter.php?site=guestbook]Klikni da pročitaš poruku[/URL] ',
   'security_code'=>'Sigurnosni kod',
   'select_all'=>'označi sve',
-  'smilies'=>'<a href="javascript:MM_openBrWindow(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smajlići</a> uključeni',
+  'smilies'=>'<a href="javascript:window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smajlići</a> uključeni',
   'sort'=>'Razvrstaj:',
   'submit'=>'Spremi',
   'update_comment'=>'Spremi komentar',

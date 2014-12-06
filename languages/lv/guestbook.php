@@ -31,7 +31,7 @@ $language_array = Array(
 /* do not edit above this line */
 
   'admin_comment'=>'Administratora komentārs',
-  'bbcode'=>'<a href="javascript:MM_openBrWindow(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBKods</a> Ieslēgts',
+  'bbcode'=>'<a href="javascript:window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBKods</a> Ieslēgts',
   'by'=>'no',
   'comment'=>'Komentārs',
   'delete_selected'=>'Izdzēst atlasīto',
@@ -53,7 +53,7 @@ $language_array = Array(
   'pmtext_newentry'=>'[b]Kāds atstāja ziņu Jūsu viesu grāmatā![/b][br][br] [URL=index.php?site=guestbook#%insertid%]Nospiest šeit, lai izlasītu ziņu[/URL] ',
   'security_code'=>'Drošības kods',
   'select_all'=>'atlasīt visu',
-  'smilies'=>'<a href="javascript:MM_openBrWindow(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Sejiņas</a> Ieslēgts',
+  'smilies'=>'<a href="javascript:window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Sejiņas</a> Ieslēgts',
   'sort'=>'Kārtot:',
   'submit'=>'Iesniegt',
   'update_comment'=>'Saglabāt komentāru',

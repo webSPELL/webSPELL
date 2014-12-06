@@ -36,7 +36,7 @@ $language_array = Array(
 /* do not edit above this line */
 
   'admin_comment'=>'Коментарі адміна',
-  'bbcode'=>'<a href="javascript:MM_openBrWindow(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBКод</a> включити',
+  'bbcode'=>'<a href="javascript:window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBКод</a> включити',
   'by'=>'От',
   'comment'=>'Коментар',
   'delete_selected'=>'Видалити вибрані',
@@ -58,7 +58,7 @@ $language_array = Array(
   'pmtext_newentry'=>'[b]Хтось залишив вам повідомлення в гостьовій книзі![/b][br][br][URL=admin/admincenter.php?site=guestbook]Натисніть тут щоб прочитати повідомлення[/URL]',
   'security_code'=>'Код безпеки',
   'select_all'=>'Вибрати всі',
-  'smilies'=>'<a href="javascript:MM_openBrWindow(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Увімкнути</a> Увімкнути',
+  'smilies'=>'<a href="javascript:window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Увімкнути</a> Увімкнути',
   'sort'=>'Сортувати:',
   'submit'=>'Продовжити',
   'update_comment'=>'Зберегти коментар',

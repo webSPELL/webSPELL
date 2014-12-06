@@ -30,7 +30,7 @@ $language_array = Array(
 /* do not edit above this line */
 
 	'admin_comment'=>'Admin comment',
-  'bbcode'=>'<a href="javascript:MM_openBrWindow(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> AAN',
+  'bbcode'=>'<a href="javascript:window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> AAN',
 	'by'=>'door',
 	'comment'=>'Reactie',
 	'delete_selected'=>'Verwijder geselecteerden',
@@ -52,7 +52,7 @@ $language_array = Array(
 	'pmtext_newentry'=>'[b]Iemand liet een bericht achter in het gastenboek![/b][br][br] [URL=index.php?site=guestbook#%insertid%]Klik hier om het bericht te lezen[/URL] ',
 	'security_code'=>'Veiligheids code',
 	'select_all'=>'selecteer alles',
-	'smilies'=>'<a href="javascript:MM_openBrWindow(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smilies</a> AAN',
+	'smilies'=>'<a href="javascript:window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smilies</a> AAN',
 	'sort'=>'Sorteer:',
 	'submit'=>'Ok',
 	'update_comment'=>'Opslaan',

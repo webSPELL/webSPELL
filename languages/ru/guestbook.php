@@ -31,7 +31,7 @@ $language_array = Array(
 /* do not edit above this line */
 
   'admin_comment'=>'Комментарии админа',
-  'bbcode'=>'<a href="javascript:MM_openBrWindow(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBКод</a> включить',
+  'bbcode'=>'<a href="javascript:window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBКод</a> включить',
   'by'=>'От',
   'comment'=>'Комментарий',
   'delete_selected'=>'Удалить выбранные',
@@ -53,7 +53,7 @@ $language_array = Array(
   'pmtext_newentry'=>'[b]Кто то оставил вам сообщение в гостевой книге![/b][br][br] [URL=admin/admincenter.php?site=guestbook]Нажмите здесь чтобы прочитать сообщение[/URL] ',
   'security_code'=>'Код безопасности',
   'select_all'=>'Выбрать все',
-  'smilies'=>'<a href="javascript:MM_openBrWindow(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Смайлы</a> включить',
+  'smilies'=>'<a href="javascript:window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Смайлы</a> включить',
   'sort'=>'Сортировать:',
   'submit'=>'Продолжить',
   'update_comment'=>'Сохранить комментарий',

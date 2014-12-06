@@ -500,7 +500,7 @@ if ($action == "new") {
   <link href="_stylesheet.css" rel="stylesheet" type="text/css">
   <p class="text-center"><br><br><br><br>
   <b>' . $_language->module[ 'clanwar_saved' ] . '.</b><br><br>
-  <input type="button" onclick="MM_openBrWindow(\'upload.php?cwID=' . $cwID .
+  <input type="button" onclick="window.open(\'upload.php?cwID=' . $cwID .
             '\',\'Clanwars\',\'toolbar=no,status=no,scrollbars=yes,width=800,height=600\')" value="' .
             $_language->module[ 'upload_screenshot' ] . '">
   <input type="button" onclick="javascript:self.close()" value="' . $_language->module[ 'close_window' ] . '"></p>';
@@ -761,7 +761,7 @@ if ($action == "new") {
 
     echo '<p class="text-center"><br><br><br><br>
   <b>' . $_language->module[ 'clanwar_updated' ] . '</b><br><br>
-  <input type="button" onclick="MM_openBrWindow(\'upload.php?cwID=' . $cwID .
+  <input type="button" onclick="window.open(\'upload.php?cwID=' . $cwID .
         '\',\'Clanwars\',\'toolbar=no,status=no,scrollbars=yes,width=800,height=600\')" value="' .
         $_language->module[ 'upload_screenshot' ] . '">
   <input type="button" onclick="javascript:self.close()" value="' . $_language->module[ 'close_window' ] . '"></p>';
@@ -1294,7 +1294,7 @@ if ($action == "new") {
 
     if (isclanwaradmin($userID)) {
         $admin =
-            '<input type="button" onclick="MM_openBrWindow(
+            '<input type="button" onclick="window.open(
                     \'clanwars.php?action=new\',
                     \'Clanwars\',
                     \'toolbar=no,status=no,scrollbars=yes,width=800,height=600\'
@@ -1542,7 +1542,7 @@ if ($action == "new") {
 
     if (isclanwaradmin($userID)) {
         $admin =
-            '<input type="button" onclick="MM_openBrWindow(
+            '<input type="button" onclick="window.open(
                 \'clanwars.php?action=new\',
                 \'Clanwars\',
                 \'toolbar=no,status=no,scrollbars=yes,width=800,height=600\'

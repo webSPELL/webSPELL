@@ -36,7 +36,7 @@ $language_array = Array(
 /* do not edit above this line */
 
   'admin_comment'=>'Komentet e adminit',
-  'bbcode'=>'<a href="javascript:MM_openBrWindow(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> NDEZUR',
+  'bbcode'=>'<a href="javascript:window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> NDEZUR',
   'by'=>'nga',
   'comment'=>'Koment',
   'delete_selected'=>'Fshij të selektuarat',
@@ -58,7 +58,7 @@ $language_array = Array(
   'pmtext_newentry'=>'[b]Dikush la një mesazh për ju në librin e vizituesve![/b][br][br] [URL=index.php?site=guestbook#%insertid%]Kliko këtu për të lexuar mesazhin[/URL] ',
   'security_code'=>'Kodi sigurisë',
   'select_all'=>'zgjidhi të gjitha',
-  'smilies'=>'<a href="javascript:MM_openBrWindow(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smilies</a> NDEZUR',
+  'smilies'=>'<a href="javascript:window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smilies</a> NDEZUR',
   'sort'=>'Grupo:',
   'submit'=>'Dërgo',
   'update_comment'=>'Shpëto komentin',

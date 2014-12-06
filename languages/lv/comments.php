@@ -32,7 +32,7 @@ $language_array = Array(
 
   'access_denied'=>'Pieeja aizliegta',
   'add_buddy'=>'pievienot draugu srakstam',
-  'bbcode_on'=>'<a href="javascript:MM_openBrWindow(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBKods</a> ieslēgts',
+  'bbcode_on'=>'<a href="javascript:window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBKods</a> ieslēgts',
   'by'=>'ar',
   'clanmember_icon'=>' <img src="images/icons/member.gif" width="6" height="11" alt="Klana biedrs">',
   'comments'=>'komentāri',
@@ -60,7 +60,7 @@ $language_array = Array(
   'readd_buddy'=>'atpakaļ uz draugu sarakstu',
   'select_all'=>'atlasīt visu',
   'send_message'=>'nosūtīt ziņu',
-  'smilies_on'=>'<a href="javascript:MM_openBrWindow(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Sejiņas</a> ieslēgtas',
+  'smilies_on'=>'<a href="javascript:window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Sejiņas</a> ieslēgtas',
   'sort'=>'Kārtot:',
   'sort_asc'=>'Kārtot augoši',
   'sort_desc'=>'Kārtot dilstošā secībā',

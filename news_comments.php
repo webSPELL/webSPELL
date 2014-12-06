@@ -45,7 +45,7 @@ if (isset($_GET[ 'lang' ])) {
 $post = "";
 if (isnewswriter($userID)) {
     $post =
-        '<input type="button" onclick="MM_openBrWindow(
+        '<input type="button" onclick="window.open(
                 \'news.php?action=new\',
                 \'News\',
                 \'toolbar=no,status=no,scrollbars=yes,width=800,height=600\'
@@ -176,7 +176,7 @@ if ($newsID) {
 
         if (isnewsadmin($userID) or (isnewswriter($userID) and $ds[ 'poster' ] == $userID)) {
             $adminaction =
-                '<input type="button" onclick="MM_openBrWindow(
+                '<input type="button" onclick="window.open(
                         \'news.php?action=edit&amp;newsID=' . $ds[ 'newsID' ] . '\',
                         \'News\',
                         \'toolbar=no,status=no,scrollbars=yes,width=800,height=600\'

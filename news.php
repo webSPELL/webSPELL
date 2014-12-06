@@ -691,7 +691,7 @@ if ($action == "new") {
     $post = '';
     if (isnewsadmin($userID)) {
         $post =
-            '<input type="button" onclick="MM_openBrWindow(
+            '<input type="button" onclick="window.open(
                     \'news.php?action=new\',
                     \'News\',\'toolbar=no,status=no,scrollbars=yes,width=800,height=600\'
                 );" value="' . $_language->module[ 'post_news' ] . '" class="btn btn-danger">';
@@ -811,7 +811,7 @@ if ($action == "new") {
     $publish = '';
     if (isnewsadmin($userID)) {
         $post =
-            '<input type="button" onclick="MM_openBrWindow(
+            '<input type="button" onclick="window.open(
                     \'news.php?action=new\',
                     \'News\',
                     \'toolbar=no,status=no,scrollbars=yes,width=800,height=600\'
@@ -1010,7 +1010,7 @@ if ($action == "new") {
     if (isnewswriter($userID)) {
         $post =
             '<input type="button"
-                onclick="MM_openBrWindow(
+                onclick="window.open(
                     \'news.php?action=new\',
                     \'News\',
                     \'toolbar=no,status=no,scrollbars=yes,width=800,height=600\'
@@ -1207,7 +1207,7 @@ if ($action == "new") {
         }
         if ((isnewswriter($userID) and $ds[ 'poster' ] == $userID) or isnewsadmin($userID)) {
             $adminaction .=
-                '<input type="button" onclick="MM_openBrWindow(\'news.php?action=edit&amp;newsID=' . $ds[ 'newsID' ] .
+                '<input type="button" onclick="window.open(\'news.php?action=edit&amp;newsID=' . $ds[ 'newsID' ] .
                 '\',\'News\',\'toolbar=no,status=no,scrollbars=yes,width=800,height=600\');" value="' .
                 $_language->module[ 'edit' ] . '" class="btn btn-danger">
 		  <input type="button" onclick="MM_confirm(\'' . $_language->module[ 'really_delete' ] .

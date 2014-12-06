@@ -520,13 +520,13 @@ if (!$userID) {
                     $countries
                 );
             if ($ds[ 'avatar' ]) {
-                $viewavatar = '&#8226; <a href="javascript:MM_openBrWindow(\'images/avatars/' . $ds[ 'avatar' ] .
+                $viewavatar = '&#8226; <a href="javascript:window.open(\'images/avatars/' . $ds[ 'avatar' ] .
                     '\',\'avatar\',\'width=120,height=120\')">' . $_language->module[ 'avatar' ] . '</a>';
             } else {
                 $viewavatar = $_language->module[ 'avatar' ];
             }
             if ($ds[ 'userpic' ]) {
-                $viewpic = '&#8226; <a href="javascript:MM_openBrWindow(\'images/userpics/' . $ds[ 'userpic' ] .
+                $viewpic = '&#8226; <a href="javascript:window.open(\'images/userpics/' . $ds[ 'userpic' ] .
                     '\',\'userpic\',\'width=250,height=230\')">' . $_language->module[ 'userpic' ] . '</a>';
             } else {
                 $viewpic = $_language->module[ 'userpic' ];

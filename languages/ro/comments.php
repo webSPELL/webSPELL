@@ -32,7 +32,7 @@ $language_array = Array(
 
   'access_denied'=>'access interzis',
   'add_buddy'=>'adaugă în lista de prieteni',
-  'bbcode_on'=>'<a href="javascript:MM_openBrWindow(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> este PORNITE',
+  'bbcode_on'=>'<a href="javascript:window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> este PORNITE',
   'by'=>'de',
   'clanmember_icon'=>' <img src="images/icons/member.gif" width="6" height="11" alt="Clanmember">',
   'comments'=>'comentarii',
@@ -60,7 +60,7 @@ $language_array = Array(
   'readd_buddy'=>'țnapoi la lista de prieteni',
   'select_all'=>'selectează toate',
   'send_message'=>'trimite mesaj',
-  'smilies_on'=>'<a href="javascript:MM_openBrWindow(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smileurile</a> sunt PORNITE',
+  'smilies_on'=>'<a href="javascript:window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smileurile</a> sunt PORNITE',
   'sort'=>'Sortează:',
   'sort_asc'=>'Sortează ascendent',
   'sort_desc'=>'Sortează descendent',

@@ -31,7 +31,7 @@ $language_array = Array(
 
 	'access_denied'=>'Hozzáférés megtagadva',
 	'add_buddy'=>'add to buddy list',
-	'bbcode_on'=>'<a href="javascript:MM_openBrWindow(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> bekapcsolva',
+	'bbcode_on'=>'<a href="javascript:window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> bekapcsolva',
 	'by'=>'Név:',
 	'clanmember_icon'=>' <img src="images/icons/member.gif" width="6" height="11" alt="Clanmember">',
 	'comments'=>'hozzászólások',
@@ -59,7 +59,7 @@ $language_array = Array(
 	'readd_buddy'=>'back to buddy-list',
 	'select_all'=>'Mindet kijelöl',
 	'send_message'=>'send message',
-	'smilies_on'=>'<a href="javascript:MM_openBrWindow(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Hangulatjelek</a> bekapcsolva',
+	'smilies_on'=>'<a href="javascript:window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Hangulatjelek</a> bekapcsolva',
 	'sort'=>'Rendezés:',
 	'sort_asc'=>'Sort ascending',
 	'sort_desc'=>'Sort descending',

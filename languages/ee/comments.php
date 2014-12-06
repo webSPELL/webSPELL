@@ -32,7 +32,7 @@ $language_array = Array(
 
   'access_denied'=>'Puudub ligipääs',
   'add_buddy'=>'lisa sõbralisti',
-  'bbcode_on'=>'<a href="javascript:MM_openBrWindow(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> on PEAL',
+  'bbcode_on'=>'<a href="javascript:window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> on PEAL',
   'by'=>'',
   'clanmember_icon'=>' <img src="images/icons/member.gif" width="6" height="11" alt="Klanniliige">',
   'comments'=>'kommentaarid',
@@ -60,7 +60,7 @@ $language_array = Array(
   'readd_buddy'=>'tagasi sõbralisti',
   'select_all'=>'vali kõik',
   'send_message'=>'saada sõnum',
-  'smilies_on'=>'<a href="javascript:MM_openBrWindow(\'smileys.php\',\'Smailid\',\'scrollbars=yes,width=340,height=500\')">Smailid</a> on PEAL',
+  'smilies_on'=>'<a href="javascript:window.open(\'smileys.php\',\'Smailid\',\'scrollbars=yes,width=340,height=500\')">Smailid</a> on PEAL',
   'sort'=>'Sorteerimine:',
   'sort_asc'=>'Sorteeri kasvavalt',
   'sort_desc'=>'Sorteeri kahanevalt',

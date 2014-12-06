@@ -31,7 +31,7 @@ $language_array = Array(
 /* do not edit above this line */
 
   'admin_comment'=>'Comentarii admin',
-  'bbcode'=>'<a href="javascript:MM_openBrWindow(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> PE',
+  'bbcode'=>'<a href="javascript:window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> PE',
   'by'=>'din',
   'comment'=>'Comentariu',
   'delete_selected'=>'Ștergeți selectat',
@@ -53,7 +53,7 @@ $language_array = Array(
   'pmtext_newentry'=>'[b]Cineva a lăsat un mesaj pentru tine in cartea de oaspeti![/b][br][br] [URL=admin/admincenter.php?site=guestbook]Click aici pentru a citi mesajul[/URL] ',
   'security_code'=>'Cod de siguranţă',
   'select_all'=>'selectează tot',
-  'smilies'=>'<a href="javascript:MM_openBrWindow(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smileurile</a> PE',
+  'smilies'=>'<a href="javascript:window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smileurile</a> PE',
   'sort'=>'Sortează:',
   'submit'=>'Trimite',
   'update_comment'=>'Salvează comentariu',

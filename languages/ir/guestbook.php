@@ -30,7 +30,7 @@ $language_array = Array(
 /* do not edit above this line */
 
   'admin_comment'=>'کامنت ادمین',
-  'bbcode'=>'<a href="javascript:MM_openBrWindow(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> روشن',
+  'bbcode'=>'<a href="javascript:window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> روشن',
   'by'=>'به وسیله',
   'comment'=>'کامنت ها',
   'delete_selected'=>'حذف انتخاب',
@@ -52,7 +52,7 @@ $language_array = Array(
   'pmtext_newentry'=>'[b]!برای شما پیغام جدیدی وجود دارد[/b][br][br] [URL=admin/admincenter.php?site=guestbook]اینجا کلیک کنید تا پیغام نمایش داده شود[/URL] ',
   'security_code'=>'کد امنیتی',
   'select_all'=>'انتخاب همه',
-  'smilies'=>'<a href="javascript:MM_openBrWindow(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">شکلکها</a> روشن',
+  'smilies'=>'<a href="javascript:window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">شکلکها</a> روشن',
   'sort'=>'بر حسب:',
   'submit'=>'قرار گرفتن',
   'update_comment'=>'ذخیره کامنت',

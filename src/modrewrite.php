@@ -126,7 +126,7 @@ class ModRewrite
         $start_time = microtime(true);
         if (
             stristr($content, "MM_goToURL") ||
-            stristr($content, "MM_openBrWindow") ||
+            stristr($content, "window.open") ||
             stristr($content, 'http-equiv="refresh"')
         ) {
             $extended_replace = true;
@@ -151,14 +151,14 @@ class ModRewrite
                 if ($extended_replace) {
                     $content =
                         preg_replace(
-                            "/onclick=(['\"])(MM_openBrWindow\(|MM_goToURL\('parent',|MM_confirm\('.*?',\s)'" .
+                            "/onclick=(['\"])(window.open\(|MM_goToURL\('parent',|MM_confirm\('.*?',\s)'" .
                             $regex . "'/Si",
                             'onclick=$1$2\'' . $replace . '\'',
                             $content
                         );
                     $content =
                         preg_replace(
-                            "/href=(['\"])(javascript:MM_openBrWindow\(|MM_openBrWindow\(|MM_goToURL\('parent',)'" .
+                            "/href=(['\"])(javascript:window.open\(|window.open\(|MM_goToURL\('parent',)'" .
                             $regex . "'/Si",
                             'href=$1$2\'' . $replace . '\'',
                             $content

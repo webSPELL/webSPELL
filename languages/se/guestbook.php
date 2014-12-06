@@ -30,7 +30,7 @@ $language_array = Array(
 /* do not edit above this line */
 
 	'admin_comment'=>'Admin kommentar',
-  'bbcode'=>'<a href="javascript:MM_openBrWindow(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> är PÅ',
+  'bbcode'=>'<a href="javascript:window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> är PÅ',
 	'by'=>'av',
 	'comment'=>'Kommentera',
 	'delete_selected'=>'Radera markerade',
@@ -52,7 +52,7 @@ $language_array = Array(
 	'pmtext_newentry'=>'[b]Någon har lämnat ett nytt inlägg i din gästbok![/b][br][br] [URL=index.php?site=guestbook#%insertid%]Klicka här för att läsa inlägget[/URL] ',
 	'security_code'=>'Sökerhets kod',
 	'select_all'=>'välj alla',
-	'smilies'=>'<a href="javascript:MM_openBrWindow(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smilies</a> PÅ',
+	'smilies'=>'<a href="javascript:window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smilies</a> PÅ',
 	'sort'=>'Sortera:',
 	'submit'=>'Skicka',
 	'update_comment'=>'Spara kommentar',

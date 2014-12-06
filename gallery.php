@@ -527,7 +527,7 @@ if (isset($_POST[ 'saveedit' ])) {
 
     if (mysqli_num_rows($ergebnis)) {
         $diashow =
-            "<strong>- <a href=\"javascript:MM_openBrWindow('gallery.php?action=diashow&amp;galleryID=" . $galleryID .
+            "<strong>- <a href=\"javascript:window.open('gallery.php?action=diashow&amp;galleryID=" . $galleryID .
                 "','webspell_diashow','toolbar=no,status=no,scrollbars=yes')\"><small>[" .
                 $_language->module[ 'start_diashow' ] . "]</small></a></strong>";
     } else {

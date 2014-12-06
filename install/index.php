@@ -31,19 +31,19 @@ header('content-type: text/html; charset=utf-8');
 include("../src/func/language.php");
 include("../src/func/user.php");
 
-$_language = new Language();
+$_language = new webspell\Language();
 
 if(!isset($_SESSION['language'])){
 	$_SESSION['language'] = "uk";
 }
 
 if(isset($_GET['lang'])){
-	if($_language->set_language($_GET['lang'])) $_SESSION['language'] = $_GET['lang'];
+	if($_language->setLanguage($_GET['lang'])) $_SESSION['language'] = $_GET['lang'];
 	header("Location: index.php");
 	exit();
 }
 
-$_language->set_language($_SESSION['language']);
+$_language->setLanguage($_SESSION['language']);
 $_language->readModule('index');
 
 if(isset($_GET['step'])) $_language->readModule('step'.(int)$_GET['step'],true);

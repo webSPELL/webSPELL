@@ -456,7 +456,7 @@ if ($action == "new") {
 
     if (isnewsadmin($userID)) {
         echo
-            '<input type="button" onclick="MM_openBrWindow(
+            '<input type="button" onclick="window.open(
                 \'articles.php?action=new\',
                 \'Articles\',
                 \'toolbar=no,status=no,scrollbars=yes,width=800,height=600\'
@@ -550,7 +550,7 @@ if ($action == "new") {
 
         if (isnewsadmin($userID)) {
             $adminaction =
-                '<br><br><input type="button" onclick="MM_openBrWindow(\'articles.php?action=edit&amp;articlesID=' .
+                '<br><br><input type="button" onclick="window.open(\'articles.php?action=edit&amp;articlesID=' .
                 $ds[ 'articlesID' ] .
                 '\',\'News\',\'toolbar=no,status=no,scrollbars=yes,width=800,height=600\');" value="' .
                 $_language->module[ 'edit' ] . '" class="btn btn-danger">
@@ -660,7 +660,7 @@ if ($action == "new") {
 
     if (isnewsadmin($userID)) {
         echo
-            '<p><input type="button" onclick="MM_openBrWindow(
+            '<p><input type="button" onclick="window.open(
                 \'articles.php?action=new\',
                 \'Articles\',
                 \'toolbar=no,status=no,scrollbars=yes,width=800,height=600\'

@@ -30,7 +30,7 @@ $language_array = Array(
 /* do not edit above this line */
 
 	'admin_comment'=>'Admin comment',
-	'bbcode'=>'<a href="javascript:MM_openBrWindow(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> ON',
+	'bbcode'=>'<a href="javascript:window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> ON',
 	'by'=>'by',
 	'comment'=>'Comment',
 	'delete_selected'=>'Delete selected',
@@ -52,7 +52,7 @@ $language_array = Array(
 	'pmtext_newentry'=>'[b]Somebody left a message for you in your guestbook![/b][br][br] [URL=index.php?site=guestbook#%insertid%]Click here for reading the message[/URL] ',
 	'security_code'=>'Security code',
 	'select_all'=>'select all',
-	'smilies'=>'<a href="javascript:MM_openBrWindow(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smilies</a> ON',
+	'smilies'=>'<a href="javascript:window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smilies</a> ON',
 	'sort'=>'Sort:',
 	'submit'=>'Submit',
 	'update_comment'=>'Save comment',

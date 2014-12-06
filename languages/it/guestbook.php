@@ -30,7 +30,7 @@ $language_array = Array(
 /* do not edit above this line */
 
 	'admin_comment'=>'Amministratore commento',
-	'bbcode'=>'<a href="javascript:MM_openBrWindow(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> è ACCESO',
+	'bbcode'=>'<a href="javascript:window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> è ACCESO',
 	'by'=>'da',
 	'comment'=>'Commento',
 	'delete_selected'=>'Cancellare contrassegnato',
@@ -52,7 +52,7 @@ $language_array = Array(
 	'pmtext_newentry'=>'[b]Qualcuno ha un nuovo messaggio nel guestbook![/b][br][br] [URL=index.php?site=guestbook#%insertid%]Qui si viene al mesaggio[/URL] ',
 	'security_code'=>'Codice di sicurezza',
 	'select_all'=>'Segna tutti',
-	'smilies'=>'<a href="javascript:MM_openBrWindow(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smilies</a> sono ATTIVATO',
+	'smilies'=>'<a href="javascript:window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smilies</a> sono ATTIVATO',
 	'sort'=>'Ordina:',
 	'submit'=>'Inoltrare',
 	'update_comment'=>'Salva commento',
