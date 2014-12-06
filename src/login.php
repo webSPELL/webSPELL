@@ -52,7 +52,7 @@ if (isset($_SESSION['ws_auth'])) {
                 $loggedin = true;
                 $userID = $ds['userID'];
                 if (!empty($ds['language']) && isset($_language)) {
-                    if ($_language->set_language($ds['language'])) {
+                    if ($_language->setLanguage($ds['language'])) {
                         $_SESSION['language'] = $ds['language'];
                     }
                 }
