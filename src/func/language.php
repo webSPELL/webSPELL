@@ -82,7 +82,7 @@ class Language
         if (isset($module_file)) {
             include($module_file);
             if (!$add) {
-                $this->module = '';
+                $this->module = array();
             }
 
             foreach ($language_array as $key => $val) {
