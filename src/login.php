@@ -45,7 +45,7 @@ if (isset($_SESSION['ws_auth'])) {
                     " . PREFIX . "user
                 WHERE
                     `userID`=" . (int)$ws_user . " AND
-                    `password`='" . mysql_real_escape_string($ws_pwd) . "'"
+                    `password`='" . $GLOBALS['_database']->escape_string($ws_pwd) . "'"
             );
 
             while ($ds = mysqli_fetch_array($check)) {
