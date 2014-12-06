@@ -702,7 +702,7 @@ if (isset($id) and getnickname($id) != '') {
                             " . PREFIX . "user_visitors
                         WHERE
                             userID='" . $id . "' AND
-                            visitor='" . (int)$userID
+                            visitor='" . (int)$userID."'"
                     )
                 )
             ) {
@@ -713,7 +713,7 @@ if (isset($id) and getnickname($id) != '') {
                             date='" . $date . "'
                         WHERE
                             userID='" . $id . "'AND
-                            visitor='" . (int)$userID
+                            visitor='" . (int)$userID."'"
                 );
             } else {
                 safe_query(
@@ -835,8 +835,7 @@ if (isset($id) and getnickname($id) != '') {
         $firstname = clearfromtags($ds[ 'firstname' ]);
         $lastname = clearfromtags($ds[ 'lastname' ]);
 
-        $birthday = mb_substr($ds[ 'birthday' ], 0, 10);
-        $birthday = getformatdate(strtotime($birthday));
+        $birthday = getformatdate(strtotime($ds['birthday']));
 
         $res =
             safe_query(
@@ -846,7 +845,7 @@ if (isset($id) and getnickname($id) != '') {
                 FROM
                     " . PREFIX . "user
                 WHERE
-                    userID = '" . (int)$id
+                    userID = '" . (int)$id."'"
             );
         $cur = mysqli_fetch_array($res);
         $birthday = $birthday . " (" . (int)$cur[ 'age' ] . " " . $_language->module[ 'years' ] . ")";
