@@ -55,7 +55,7 @@ if ($userID) {
                 name='" . $_POST[ 'name' ] . "'
             WHERE
                 galleryID='" . $_POST[ 'galleryID' ] . "' AND
-                userID='" . (int)$userID
+                userID='" . (int)$userID."'"
         );
     } elseif (isset($_POST[ 'saveform' ])) {
         $endung = '';
@@ -124,7 +124,7 @@ if ($userID) {
                     " . PREFIX . "gallery
                 WHERE
                     galleryID='" . $_GET[ 'galleryID' ] . "' AND
-                    userID='" . (int)$userID
+                    userID='" . (int)$userID."'"
             )
         ) {
             //FILES
@@ -135,7 +135,7 @@ if ($userID) {
                     FROM
                         " . PREFIX . "gallery_pictures
                     WHERE
-                        `galleryID` = '" . (int)$_GET[ 'galleryID' ]
+                        `galleryID` = '" . (int)$_GET[ 'galleryID' ]."'"
                 );
             while ($ds = mysqli_fetch_array($ergebnis)) {
                 @unlink('images/gallery/thumb/' . $ds[ 'picID' ] . '.jpg'); //thumbnails
@@ -171,7 +171,7 @@ if ($userID) {
                     " . PREFIX . "gallery
                 WHERE
                     galleryID='" . $_GET[ 'galleryID' ] . "'AND
-                    userID='" . (int)$userID
+                    userID='" . (int)$userID."'"
             );
             $ds = mysqli_fetch_array($ergebnis);
 
@@ -211,7 +211,7 @@ if ($userID) {
         eval("\$usergallery_head = \"" . gettemplate("usergallery_head") . "\";");
         echo $usergallery_head;
 
-        $ergebnis = safe_query("SELECT * FROM " . PREFIX . "gallery WHERE userID='" . (int)$userID);
+        $ergebnis = safe_query("SELECT * FROM " . PREFIX . "gallery WHERE userID='" . (int)$userID."'");
 
         if (mysqli_num_rows($ergebnis) == 0) {
             echo '<tr bgcolor="' . $bg1 . '"><td colspan="4">' . $_language->module[ 'no_galleries' ] . '</td></tr>';
