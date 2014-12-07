@@ -37,7 +37,7 @@ $language_array = Array(
 
   'access_denied'=>'Toegang geweier',
   'add_buddy'=>'voeg by vriendelys',
-  'bbcode_on'=>'<a href="javascript:window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> is AAN',
+  'bbcode_on'=>'<a href="javascript:void(0);" onclick="window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> is AAN',
   'by'=>'deur',
   'clanmember_icon'=>' <img src="images/icons/member.gif" width="6" height="11" alt="klan lid">',
   'comments'=>'kommentaar',
@@ -65,7 +65,7 @@ $language_array = Array(
   'readd_buddy'=>'terug na vriendelys',
   'select_all'=>'selekteer alles',
   'send_message'=>'stuur boodskap',
-  'smilies_on'=>'<a href="javascript:window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smilies</a> is AAN',
+  'smilies_on'=>'<a href="javascript:void(0);" onclick="window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smilies</a> is AAN',
   'sort'=>'Sorteer:',
   'sort_asc'=>'Sorteer oplopend',
   'sort_desc'=>'Sorteer aflopend',

@@ -31,7 +31,7 @@ $language_array = Array(
 
 	'access_denied'=>'Toegang geweigerd',
 	'add_buddy'=>'add to buddy list',
-	'bbcode_on'=>'<a href="javascript:window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> is AAN',
+	'bbcode_on'=>'<a href="javascript:void(0);" onclick="window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> is AAN',
 	'by'=>'door',
 	'clanmember_icon'=>' <img src="images/icons/member.gif" width="6" height="11" alt="Clanmember">',
 	'comments'=>'reacties',
@@ -59,7 +59,7 @@ $language_array = Array(
 	'readd_buddy'=>'back to buddy-list',
 	'select_all'=>'selecteer alles',
 	'send_message'=>'send message',
-	'smilies_on'=>'<a href="javascript:window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smileys</a> zijn AAN',
+	'smilies_on'=>'<a href="javascript:void(0);" onclick="window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smileys</a> zijn AAN',
 	'sort'=>'Sorteer:',
 	'sort_asc'=>'Sort ascending',
 	'sort_desc'=>'Sort descending',

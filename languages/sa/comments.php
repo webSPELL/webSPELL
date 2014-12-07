@@ -32,7 +32,7 @@ $language_array = Array(
 
   'access_denied'=>'الدخول ممنوع',
   'add_buddy'=>'اضف الى قائمة الاصدقاء',
-  'bbcode_on'=>'<a href="javascript:window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> مفعلة',
+  'bbcode_on'=>'<a href="javascript:void(0);" onclick="window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> مفعلة',
   'by'=>'من',
   'clanmember_icon'=>' <img src="images/icons/member.gif" width="6" height="11" alt="اعضاء الفريق">',
   'comments'=>'التعليقات',
@@ -60,7 +60,7 @@ $language_array = Array(
   'readd_buddy'=>'الرجوع الى قائمة الاصدقاء',
   'select_all'=>'اختيار الكل',
   'send_message'=>'ارسل رسالة',
-  'smilies_on'=>'<a href="javascript:window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">الابتسامات</a> مفعلة',
+  'smilies_on'=>'<a href="javascript:void(0);" onclick="window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">الابتسامات</a> مفعلة',
   'sort'=>'ترتيب:',
   'sort_asc'=>'Sort ascending',
   'sort_desc'=>'Sort descending',

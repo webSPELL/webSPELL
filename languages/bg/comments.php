@@ -37,7 +37,7 @@ $language_array = Array(
 
   'access_denied'=>'Достъп забранен!',
   'add_buddy'=>'добави в листата с приятели',
-  'bbcode_on'=>'<a href="javascript:window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">ББкод</a> е включен',
+  'bbcode_on'=>'<a href="javascript:void(0);" onclick="window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">ББкод</a> е включен',
   'by'=>'от',
   'clanmember_icon'=>' <img src="images/icons/member.gif" width="6" height="11" alt="клан държава">',
   'comments'=>'коментари',
@@ -65,7 +65,7 @@ $language_array = Array(
   'readd_buddy'=>'добави отново в листата с приятели',
   'select_all'=>'избери вскички',
   'send_message'=>'изпрати съобщението',
-  'smilies_on'=>'<a href="javascript:window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Усмивките</a> са включен',
+  'smilies_on'=>'<a href="javascript:void(0);" onclick="window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Усмивките</a> са включен',
   'sort'=>'Подреди по:',
   'sort_asc'=>'Cортирай възходящо',
   'sort_desc'=>'Cортирай низгодящо',

@@ -37,7 +37,7 @@ $language_array = Array(
 
   'access_denied'=>'Zougrëff verweigert',
   'add_buddy'=>'bei d\' Frëndslescht bäifügen',
-  'bbcode_on'=>'<a href="javascript:window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> ass Un',
+  'bbcode_on'=>'<a href="javascript:void(0);" onclick="window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> ass Un',
   'by'=>'vun',
   'clanmember_icon'=>' <img src="images/icons/member.gif" width="6" height="11" alt="Clanmitglied">',
   'comments'=>'Kommentaren',
@@ -65,7 +65,7 @@ $language_array = Array(
   'readd_buddy'=>'rëm an d\'Frënd slescht bäifügen',
   'select_all'=>'all auswielen',
   'send_message'=>'Noriicht schécken',
-  'smilies_on'=>'<a href="javascript:window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smilies</a> sinn UN',
+  'smilies_on'=>'<a href="javascript:void(0);" onclick="window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smilies</a> sinn UN',
   'sort'=>'Sortéierung:',
   'sort_asc'=>'Sortéier opsteigent',
   'sort_desc'=>'Sortéier ofsteigent',

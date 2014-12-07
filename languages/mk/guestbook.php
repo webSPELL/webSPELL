@@ -31,7 +31,7 @@ $language_array = Array(
 /* do not edit above this line */
 
   'admin_comment'=>'Коментар на админот',
-  'bbcode'=>'<a href="javascript:window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">ББкод</a> е уклучен',
+  'bbcode'=>'<a href="javascript:void(0);" onclick="window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">ББкод</a> е уклучен',
   'by'=>'од',
   'comment'=>'Коментирај',
   'delete_selected'=>'Избриши го означеното',
@@ -53,7 +53,7 @@ $language_array = Array(
   'pmtext_newentry'=>'[b]Некој оставил порака во вашата книга со гости![/b][br][br] [URL=admin/admincenter.php?site=guestbook]Кликни за да ја прочиташ пораката[/URL] ',
   'security_code'=>'Сигурносна шифра',
   'select_all'=>'oзначи се',
-  'smilies'=>'<a href="javascript:window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Насмевките</a> уклучени',
+  'smilies'=>'<a href="javascript:void(0);" onclick="window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Насмевките</a> уклучени',
   'sort'=>'Подреди:',
   'submit'=>'Спреми',
   'update_comment'=>'Зачувај го коментарот',

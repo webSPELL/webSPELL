@@ -37,7 +37,7 @@ $language_array = Array(
 
   'access_denied'=>'Giriş engellendi',
   'add_buddy'=>'arkadaş listesine ekle',
-  'bbcode_on'=>'<a href="javascript:window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> AÇIK',
+  'bbcode_on'=>'<a href="javascript:void(0);" onclick="window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> AÇIK',
   'by'=>'tarafından',
   'clanmember_icon'=>' <img src="images/icons/member.gif" width="6" height="11" alt="Clanmember">',
   'comments'=>'yorumlar',
@@ -65,7 +65,7 @@ $language_array = Array(
   'readd_buddy'=>'arkadaş listesine geri dön',
   'select_all'=>'hepsini seç',
   'send_message'=>'mesaj gönder',
-  'smilies_on'=>'<a href="javascript:window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">İfadeler</a> AÇIK',
+  'smilies_on'=>'<a href="javascript:void(0);" onclick="window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">İfadeler</a> AÇIK',
   'sort'=>'Sıralama:',
   'sort_asc'=>'Artan sıralama',
   'sort_desc'=>'Azalan sıralama',

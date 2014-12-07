@@ -31,7 +31,7 @@ $language_array = Array(
 
 	'access_denied'=>'Nepovolený pøístup',
 	'add_buddy'=>'add to buddy list',
-	'bbcode_on'=>'<a href="javascript:window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> je ZAPNUTÝ',
+	'bbcode_on'=>'<a href="javascript:void(0);" onclick="window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> je ZAPNUTÝ',
 	'by'=>'od',
 	'clanmember_icon'=>' <img src="images/icons/member.gif" width="6" height="11" alt="Clanmember">',
 	'comments'=>'komentáře',
@@ -59,7 +59,7 @@ $language_array = Array(
 	'readd_buddy'=>'back to buddy-list',
 	'select_all'=>'vybrat všechny',
 	'send_message'=>'send message',
-	'smilies_on'=>'<a href="javascript:window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smajlíci</a> jsou ZAPNUTI',
+	'smilies_on'=>'<a href="javascript:void(0);" onclick="window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smajlíci</a> jsou ZAPNUTI',
 	'sort'=>'Seřadit:',
 	'sort_asc'=>'Sort ascending',
 	'sort_desc'=>'Sort descending',

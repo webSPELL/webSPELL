@@ -30,7 +30,7 @@ $language_array = Array(
 /* do not edit above this line */
 
   'admin_comment'=>'Comentário de Admnistrador',
-	'bbcode'=>'<a href="javascript:window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> ligado',
+	'bbcode'=>'<a href="javascript:void(0);" onclick="window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> ligado',
 	'by'=>'por',
 	'comment'=>'Comentário',
 	'delete_selected'=>'Eliminar selecção',
@@ -52,7 +52,7 @@ $language_array = Array(
 	'pmtext_newentry'=>'[b]Alguém lhe deixou uma mensagem no livro de visitas![/b][br][br] [URL=index.php?site=guestbook#$insertid]Clique aqui para ler a mensagem.[/URL] ',
 	'security_code'=>'Código de segurança',
 	'select_all'=>'seleccionar tudo',
-	'smilies'=>'<a href="javascript:window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smiles</a> ligados',
+	'smilies'=>'<a href="javascript:void(0);" onclick="window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smiles</a> ligados',
 	'sort'=>'Ordenar:',
 	'submit'=>'Submeter',
 	'update_comment'=>'Guardar comentário',

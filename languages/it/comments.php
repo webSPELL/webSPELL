@@ -31,7 +31,7 @@ $language_array = Array(
 
 	'access_denied'=>'Accesso negato',
 	'add_buddy'=>'per aggiungere l*elenco di amici',
-	'bbcode_on'=>'<a href="javascript:window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> è ATTIVATO',
+	'bbcode_on'=>'<a href="javascript:void(0);" onclick="window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> è ATTIVATO',
 	'by'=>'von',
 	'clanmember_icon'=>' <img src="images/icons/member.gif" width="6" height="11" alt="Clanmitglied">',
 	'comments'=>'Commenti',
@@ -59,7 +59,7 @@ $language_array = Array(
 	'readd_buddy'=>'Torna alla lista amici aggiungere',
 	'select_all'=>'selezionare tutto',
 	'send_message'=>'Invia messaggio',
-	'smilies_on'=>'<a href="javascript:window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smilies</a> sono ATTIVATI',
+	'smilies_on'=>'<a href="javascript:void(0);" onclick="window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smilies</a> sono ATTIVATI',
 	'sort'=>'Ordina:',
 	'sort_asc'=>'Ordina ascendente',
 	'sort_desc'=>'Ordina discendente',

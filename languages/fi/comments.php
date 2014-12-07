@@ -37,7 +37,7 @@ $language_array = Array(
 
   'access_denied'=>'Pääsy Evätty',
   'add_buddy'=>'lisää Kaveri',
-  'bbcode_on'=>'<a href="javascript:window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> on PÄÄLLÄ',
+  'bbcode_on'=>'<a href="javascript:void(0);" onclick="window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> on PÄÄLLÄ',
   'by'=>'mennessä',
   'clanmember_icon'=>' <img src="images/icons/member.gif" width="6" height="11" alt="Klaanin jäsen">',
   'comments'=>'Kommentteja',
@@ -65,7 +65,7 @@ $language_array = Array(
   'readd_buddy'=>'Palaa kaverilistalle',
   'select_all'=>'valitse kaikki',
   'send_message'=>'lähetä viesti',
-  'smilies_on'=>'<a href="javascript:window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smilies</a> on PÄÄLLÄ',
+  'smilies_on'=>'<a href="javascript:void(0);" onclick="window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smilies</a> on PÄÄLLÄ',
   'sort'=>'Järjestä:',
   'sort_asc'=>'Lajittele nousevasti',
   'sort_desc'=>'Lajittele laskeva',

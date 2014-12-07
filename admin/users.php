@@ -456,9 +456,9 @@ elseif($action=="profile") {
   $id = $_GET['id'];
   $ds = mysqli_fetch_array(safe_query("SELECT * FROM ".PREFIX."user WHERE userID='$id'"));
 
-  if($ds['userpic']) $viewpic='<a href="javascript:window.open(\'../images/userpics/'.$ds['userpic'].'\',\'userpic\',\'width=250,height=230\')">'.$_language->module['picture'].'</a>';
+  if($ds['userpic']) $viewpic='<a href="javascript:void(0);" onclick="window.open(\'../images/userpics/'.$ds['userpic'].'\',\'userpic\',\'width=250,height=230\')">'.$_language->module['picture'].'</a>';
   else $viewpic=$_language->module['picture'];
-  if($ds['avatar']) $viewavatar='<a href="javascript:window.open(\'../images/avatars/'.$ds['avatar'].'\',\'avatar\',\'width=120,height=120\')">'.$_language->module['avatar'].'</a>';
+  if($ds['avatar']) $viewavatar='<a href="javascript:void(0);" onclick="window.open(\'../images/avatars/'.$ds['avatar'].'\',\'avatar\',\'width=120,height=120\')">'.$_language->module['avatar'].'</a>';
   else $viewavatar=$_language->module['avatar'];
   $sex = '<option value="m">'.$_language->module['male'].'</option><option value="f">'.$_language->module['female'].'</option><option value="u">'.$_language->module['not_available'].'</option>';
   $sex = str_replace('value="'.$ds['sex'].'"','value="'.$ds['sex'].'" selected="selected"',$sex);

@@ -30,7 +30,7 @@ $language_array = Array(
 /* do not edit above this line */
   
   'admin_comment'=>'Administratoriaus komentaras',
-	'bbcode'=>'<a href="javascript:window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBKodas</a> ĮJUNGTAS',
+	'bbcode'=>'<a href="javascript:void(0);" onclick="window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBKodas</a> ĮJUNGTAS',
 	'by'=>'pagal',
 	'comment'=>'Komentaras',
 	'delete_selected'=>'Ištrinti pasirinktus',
@@ -52,7 +52,7 @@ $language_array = Array(
 	'pmtext_newentry'=>'[b]Kažkas paliko jums žinutę Svečių Knygoje![/b][br][br] [URL=index.php?site=guestbook#%insertid%]Spustelkite čia, norit peržiūrėti žinutę[/URL] ',
 	'security_code'=>'Apsaugos kodas',
 	'select_all'=>'pažymėti visus',
-	'smilies'=>'<a href="javascript:window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Šypsenėlės</a> ĮJUNGTOS',
+	'smilies'=>'<a href="javascript:void(0);" onclick="window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Šypsenėlės</a> ĮJUNGTOS',
 	'sort'=>'Rykiuoti:',
 	'submit'=>'Pateikti',
 	'update_comment'=>'Išsaugoti komentarą',

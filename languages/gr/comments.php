@@ -37,7 +37,7 @@ $language_array = Array(
 
   'access_denied'=>'Απαγορευεται η προσβαση',
   'add_buddy'=>'προσθηκη στους φιλους',
-  'bbcode_on'=>'<a href="javascript:window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">Το BBCode</a> ειναι ενεργο',
+  'bbcode_on'=>'<a href="javascript:void(0);" onclick="window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">Το BBCode</a> ειναι ενεργο',
   'by'=>'απο',
   'clanmember_icon'=>' <img src="images/icons/member.gif" width="6" height="11" alt="Clanmember">',
   'comments'=>'σχολια',
@@ -65,7 +65,7 @@ $language_array = Array(
   'readd_buddy'=>'πισω στη λιστα φιλων',
   'select_all'=>'επιλογη ολων',
   'send_message'=>'αποστολη μηνυματος',
-  'smilies_on'=>'<a href="javascript:window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smilies</a> ειναι ενεργο',
+  'smilies_on'=>'<a href="javascript:void(0);" onclick="window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smilies</a> ειναι ενεργο',
   'sort'=>'Ταξινομηση:',
   'sort_asc'=>'Αυξουσα',
   'sort_desc'=>'Φθινουσα',

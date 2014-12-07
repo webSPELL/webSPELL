@@ -36,7 +36,7 @@ $language_array = Array(
 /* do not edit above this line */
 
   'admin_comment'=>'administrateur kommentaar',
-  'bbcode'=>'<a href="javascript:window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> OP',
+  'bbcode'=>'<a href="javascript:void(0);" onclick="window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> OP',
   'by'=>'deur',
   'comment'=>'Kommentaar',
   'delete_selected'=>'Verwyder geselekteerde',
@@ -58,7 +58,7 @@ $language_array = Array(
   'pmtext_newentry'=>'[b]Iemand het \'n boodskap vir jou gelos in jou gasteboek![/b][br][br] [URL=admin/admincenter.php?site=guestbook]Klik hier vir die vrystelling van die inskrywing[/URL] ',
   'security_code'=>'Sekuriteit\'s kode',
   'select_all'=>'selekteer alles',
-  'smilies'=>'<a href="javascript:window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smilies</a> OP',
+  'smilies'=>'<a href="javascript:void(0);" onclick="window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smilies</a> OP',
   'sort'=>'Sorteer:',
   'submit'=>'Stuur',
   'update_comment'=>'Stoor kommentaar',

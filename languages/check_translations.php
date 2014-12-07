@@ -4,7 +4,7 @@ header("Content-Type: text/plain; charset=utf-8");
 
 define('BOM', "\xEF\xBB\xBF");
 
-$baseLanguage = "uk";
+$baseLanguage = "de";
 $checkUntranslated = true;
 
 $all_langs = glob("*",GLOB_ONLYDIR);
@@ -38,24 +38,29 @@ foreach($all_langs as $lang){
 			$all_keys += count($language_array);
 		}
 		else{
-			$tmp = $ref_keys[$file_name];
-			foreach($language_array as $key => $val){
-				if(!isset($ref_keys[$file_name][$key])){
-					$errors[$file_name][] = 'Unknown key: '.$key;
-				}
-				else{
-					if($val == $ref_keys[$file_name][$key] && $checkUntranslated == true){
-						//$errors[$file_name][] = 'Not translated key: '.$key;
-						$untranslated += 1;
-						unset($tmp[$key]);
+			if(isset($ref_keys[$file_name])){
+				$tmp = $ref_keys[$file_name];
+				foreach($language_array as $key => $val){
+					if(!isset($ref_keys[$file_name][$key])){
+						$errors[$file_name][] = 'Unknown key: '.$key;
 					}
 					else{
-						unset($tmp[$key]);
+						if($val == $ref_keys[$file_name][$key] && $checkUntranslated == true){
+							//$errors[$file_name][] = 'Not translated key: '.$key;
+							$untranslated += 1;
+							unset($tmp[$key]);
+						}
+						else{
+							unset($tmp[$key]);
+						}
 					}
 				}
+				foreach($tmp as $key => $val){
+					$errors[$file_name][] = 'Missing key: '.$key;
+				}
 			}
-			foreach($tmp as $key => $val){
-				$errors[$file_name][] = 'Missing key: '.$key;
+			else{
+				$errors['unknown_files'][] = $file_name;
 			}
 		}
 	}

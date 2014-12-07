@@ -31,7 +31,7 @@ $language_array = Array(
 
 	'access_denied'=>'Adgang Nægtet',
 	'add_buddy'=>'add to buddy list',
-	'bbcode_on'=>'<a href="javascript:window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> er TIL',
+	'bbcode_on'=>'<a href="javascript:void(0);" onclick="window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> er TIL',
 	'by'=>'af',
 	'clanmember_icon'=>' <img src="images/icons/member.gif" width="6" height="11" alt="Clanmember">',
 	'comments'=>'kommentarer',
@@ -58,7 +58,7 @@ $language_array = Array(
 	'quote_link'=>'<a href="javascript:AddCode(\'[quote=%nickname%]%message%[/quote]\')"><img src="images/icons/quote.gif" alt="quote"></a>',
 	'readd_buddy'=>'back to buddy-list',
 	'select_all'=>'Marker alt',
-	'smilies_on'=>'<a href="javascript:window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smilies</a> er TIL',
+	'smilies_on'=>'<a href="javascript:void(0);" onclick="window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smilies</a> er TIL',
 	'send_message'=>'send message',
 	'sort'=>'Sorter:',
 	'sort_asc'=>'Sort ascending',

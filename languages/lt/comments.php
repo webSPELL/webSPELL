@@ -31,7 +31,7 @@ $language_array = Array(
 
 	'access_denied'=>'Prieiga negalima',
 	'add_buddy'=>'add to buddy list',
-	'bbcode_on'=>'<a href="javascript:window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBkodas</a> YRA ĮJUNGTAS',
+	'bbcode_on'=>'<a href="javascript:void(0);" onclick="window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBkodas</a> YRA ĮJUNGTAS',
 	'by'=>'pagal',
 	'clanmember_icon'=>' <img src="images/icons/member.gif" width="6" height="11" alt="Clanmember">',
 	'comments'=>'komentarai',
@@ -59,7 +59,7 @@ $language_array = Array(
 	'readd_buddy'=>'back to buddy-list',
 	'select_all'=>'pažymėti visus',
 	'send_message'=>'send message',
-	'smilies_on'=>'<a href="javascript:window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Šypsenėlės</a> yra ĮJUNGTI',
+	'smilies_on'=>'<a href="javascript:void(0);" onclick="window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Šypsenėlės</a> yra ĮJUNGTI',
 	'sort'=>'Rykiuoti:',
 	'sort_asc'=>'Sort ascending',
 	'sort_desc'=>'Sort descending',

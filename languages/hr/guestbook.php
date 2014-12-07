@@ -30,7 +30,7 @@ $language_array = Array(
 /* do not edit above this line */
 
 	'admin_comment'=>'Admin komentar',
-	'bbcode'=>'<a href="javascript:window.open(\'code.php\',\'BBKod\',\'scrollbars=yes,width=600,height=500\')">BBKod</a> uključen',
+	'bbcode'=>'<a href="javascript:void(0);" onclick="window.open(\'code.php\',\'BBKod\',\'scrollbars=yes,width=600,height=500\')">BBKod</a> uključen',
 	'by'=>'napisao',
 	'comment'=>'Komentiraj',
 	'delete_selected'=>'Izbriši označeno',
@@ -52,7 +52,7 @@ $language_array = Array(
 	'pmtext_newentry'=>'[b]Netko je ostavio poruku u Vašoj knjizi gostiju![/b][br][br] [URL=index.php?site=guestbook#%insertid%]Klikni da pročitaš poruku[/URL] ',
 	'security_code'=>'Sigurnosni kod',
 	'select_all'=>'označi sve',
-	'smilies'=>'<a href="javascript:window.open(\'smileys.php\',\'Smajlići\',\'scrollbars=yes,width=340,height=500\')">Smajlići</a> uključeni',
+	'smilies'=>'<a href="javascript:void(0);" onclick="window.open(\'smileys.php\',\'Smajlići\',\'scrollbars=yes,width=340,height=500\')">Smajlići</a> uključeni',
 	'sort'=>'Razvrstaj:',
 	'submit'=>'Spremi',
 	'update_comment'=>'Spremi komentar',

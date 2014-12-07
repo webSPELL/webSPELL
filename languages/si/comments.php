@@ -37,7 +37,7 @@ $language_array = Array(
 
   'access_denied'=>'Ni pristopa',
   'add_buddy'=>'dodaj prijatelja',
-  'bbcode_on'=>'<a href="javascript:window.open(\'code.php\',\'BBKod\',\'scrollbars=yes,width=600,height=500\')">BBKoda</a> vključen',
+  'bbcode_on'=>'<a href="javascript:void(0);" onclick="window.open(\'code.php\',\'BBKod\',\'scrollbars=yes,width=600,height=500\')">BBKoda</a> vključen',
   'by'=>'napisal',
   'clanmember_icon'=>' <img src="images/icons/member.gif" width="6" height="11" alt="Clanmember">',
   'comments'=>'komentajri',
@@ -65,7 +65,7 @@ $language_array = Array(
   'readd_buddy'=>'nazaj na prijatelje',
   'select_all'=>'Označi vse',
   'send_message'=>'pošlji besedilo',
-  'smilies_on'=>'<a href="javascript:window.open(\'smileys.php\',\'Smajlići\',\'scrollbars=yes,width=340,height=500\')">Smejkoti</a> vključeni',
+  'smilies_on'=>'<a href="javascript:void(0);" onclick="window.open(\'smileys.php\',\'Smajlići\',\'scrollbars=yes,width=340,height=500\')">Smejkoti</a> vključeni',
   'sort'=>'Razvrsti:',
   'sort_asc'=>'Razvrsti naraščajoče',
   'sort_desc'=>'Razvrsti padajoče',

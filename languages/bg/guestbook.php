@@ -36,7 +36,7 @@ $language_array = Array(
 /* do not edit above this line */
 
   'admin_comment'=>'Коментар от администратор',
-  'bbcode'=>'<a href="javascript:window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">ББкод</a> е включен',
+  'bbcode'=>'<a href="javascript:void(0);" onclick="window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">ББкод</a> е включен',
   'by'=>'от',
   'comment'=>'Коментар',
   'delete_selected'=>'Изтрий избраните',
@@ -58,7 +58,7 @@ $language_array = Array(
   'pmtext_newentry'=>'[b]Някой е написал коментар в книгата за гости![/b][br][br] [URL=index.php?site=guestbook#%insertid%]Натиснете тук за да видите съобщението[/URL] ',
   'security_code'=>'Код за сигурност!',
   'select_all'=>'маркирай всички',
-  'smilies'=>'<a href="javascript:window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Усмивките</a> са включени',
+  'smilies'=>'<a href="javascript:void(0);" onclick="window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Усмивките</a> са включени',
   'sort'=>'Cоритрай по:',
   'submit'=>'Изпрати',
   'update_comment'=>'Промени коментар',

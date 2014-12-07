@@ -37,7 +37,7 @@ $language_array = Array(
 
   'access_denied'=>'Hyrje ndaluar',
   'add_buddy'=>'shto ne listën e shokëve',
-  'bbcode_on'=>'<a href="javascript:window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> PËR',
+  'bbcode_on'=>'<a href="javascript:void(0);" onclick="window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> PËR',
   'by'=>'nga',
   'clanmember_icon'=>' <img src="images/icons/member.gif" width="6" height="11" alt="Clanmember">',
   'comments'=>'komentet',
@@ -65,7 +65,7 @@ $language_array = Array(
   'readd_buddy'=>'mbrapsh tek lista e shokëve',
   'select_all'=>'selekto të gjithë',
   'send_message'=>'dërgo mesazh',
-  'smilies_on'=>'<a href="javascript:window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smilies</a> janë të NDEZURA',
+  'smilies_on'=>'<a href="javascript:void(0);" onclick="window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smilies</a> janë të NDEZURA',
   'sort'=>'Grupo:',
   'sort_asc'=>'Grupo sipas rritjes',
   'sort_desc'=>'Grupo sipas zbritjes',

@@ -36,7 +36,7 @@ $language_array = Array(
 /* do not edit above this line */
 
   'admin_comment'=>'Ylläpitäjän kommentti',
-  'bbcode'=>'<a href="javascript:window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> PÄÄLLÄ',
+  'bbcode'=>'<a href="javascript:void(0);" onclick="window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> PÄÄLLÄ',
   'by'=>'by',
   'comment'=>'Kommentti',
   'delete_selected'=>'Poista valitut',
@@ -58,7 +58,7 @@ $language_array = Array(
   'pmtext_newentry'=>'[b]Joku on jättänyt viestin vieraskirjaan![/b][br][br] [URL=index.php?site=guestbook#%insertid%]Klikkaa nähdäksesi viestin[/URL] ',
   'security_code'=>'Turvallisuuskoodi',
   'select_all'=>'valitse kaikki',
-  'smilies'=>'<a href="javascript:window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Hymiöt</a> PÄÄLLÄ',
+  'smilies'=>'<a href="javascript:void(0);" onclick="window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Hymiöt</a> PÄÄLLÄ',
   'sort'=>'Lajittele:',
   'submit'=>'Lähetä',
   'update_comment'=>'Tallenna kommentti',

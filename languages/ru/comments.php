@@ -32,7 +32,7 @@ $language_array = Array(
 
   'access_denied'=>'Доступ запрещен',
   'add_buddy'=>'Добавить в список друзей',
-  'bbcode_on'=>'<a href="javascript:window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBКод</a> включен',
+  'bbcode_on'=>'<a href="javascript:void(0);" onclick="window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBКод</a> включен',
   'by'=>'из',
   'clanmember_icon'=>' <img src="images/icons/member.gif" width="6" height="11" alt="Члены клана">',
   'comments'=>'Комментарии',
@@ -60,7 +60,7 @@ $language_array = Array(
   'readd_buddy'=>'Назад к списку друзей',
   'select_all'=>'Выбрать все',
   'send_message'=>'Отправить сообщение',
-  'smilies_on'=>'<a href="javascript:window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Смайлы</a> включены',
+  'smilies_on'=>'<a href="javascript:void(0);" onclick="window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Смайлы</a> включены',
   'sort'=>'Сортировать:',
   'sort_asc'=>'Сортировать по возрастанию',
   'sort_desc'=>'Сортировать по убыванию',

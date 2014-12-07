@@ -32,7 +32,7 @@ $language_array = Array(
 
   'access_denied'=>'შესვლა აკრძალულია',
   'add_buddy'=>'მეგობრების სიაში დამატება',
-  'bbcode_on'=>'<a href="javascript:window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBკოდი</a> is ჩართულია',
+  'bbcode_on'=>'<a href="javascript:void(0);" onclick="window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBკოდი</a> is ჩართულია',
   'by'=>'ამით',
   'clanmember_icon'=>' <img src="images/icons/member.gif" width="6" height="11" alt="კლანის მონაწილეები">',
   'comments'=>'კომენტარები',
@@ -60,7 +60,7 @@ $language_array = Array(
   'readd_buddy'=>'მეგობრების სიაში დაბრუნება',
   'select_all'=>'ყველას მონიშვნა',
   'send_message'=>'შეტყობინების გაგზავნო',
-  'smilies_on'=>'<a href="javascript:window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">სმაილები</a> ჩართულია',
+  'smilies_on'=>'<a href="javascript:void(0);" onclick="window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">სმაილები</a> ჩართულია',
   'sort'=>'დაფასოება:',
   'sort_asc'=>'ზრდის მიხედვით დალაგება',
   'sort_desc'=>'კლებადომის მიხედვით დალაგება',
