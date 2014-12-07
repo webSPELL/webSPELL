@@ -51,7 +51,7 @@ if (!$userID) {
         $usertext = $_POST[ 'usertext' ];
         $firstname = $_POST[ 'firstname' ];
         $lastname = $_POST[ 'lastname' ];
-        $birthday = date("Y-m-d", strtotime($_POST[ 'b_day' ]));
+        $birthday = date("Y-m-d", strtotime($_POST[ 'birthday' ]));
         $sex = $_POST[ 'sex' ];
         $flag = preg_replace("/[^a-zA-Z0-9\s]/", "", $_POST[ 'flag' ]);
         $town = $_POST[ 'town' ];
@@ -503,13 +503,17 @@ if (!$userID) {
             );
             $user_gbook_select = '';
             if ($user_guestbook) {
-                $user_gbook_select = '<tr bgcolor="' . BG_2 . '">
-										<td align="right" bgcolor="' . BG_1 . '">' . $_language->module[ 'guestbook' ] .
-                    '</td>
-										<td bgcolor="' . BG_2 . '"><select name="user_guestbook">' . $user_gbook . '</select></td>
-									  </tr>';
+
+                $user_gbook_select = '<div class="form-group">
+    <label for="pm_mail" class="col-lg-3 control-label">' . $_language->module[ 'guestbook' ] .
+                    ':</label>
+
+    <div class="col-lg-9">
+        <select name="user_guestbook" class="form-control">' . $user_gbook . '</select>
+    </div>
+</div>';
             }
-            $b_day = $birthday = mb_substr(trim($ds[ 'birthday' ]), 0, 10);
+            $birthday = date("Y-m-d",strtotime($ds[ 'birthday' ]));
             $countries = getcountries();
             $countries =
                 str_replace(
@@ -518,13 +522,13 @@ if (!$userID) {
                     $countries
                 );
             if ($ds[ 'avatar' ]) {
-                $viewavatar = '&#8226; <a href="javascript:window.open(\'images/avatars/' . $ds[ 'avatar' ] .
+                $viewavatar = '&#8226; <a href="javascript:void(0);" onclick="window.open(\'images/avatars/' . $ds[ 'avatar' ] .
                     '\',\'avatar\',\'width=120,height=120\')">' . $_language->module[ 'avatar' ] . '</a>';
             } else {
                 $viewavatar = $_language->module[ 'avatar' ];
             }
             if ($ds[ 'userpic' ]) {
-                $viewpic = '&#8226; <a href="javascript:window.open(\'images/userpics/' . $ds[ 'userpic' ] .
+                $viewpic = '&#8226; <a href="javascript:void(0);" onclick="window.open(\'images/userpics/' . $ds[ 'userpic' ] .
                     '\',\'userpic\',\'width=250,height=230\')">' . $_language->module[ 'userpic' ] . '</a>';
             } else {
                 $viewpic = $_language->module[ 'userpic' ];

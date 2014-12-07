@@ -48,7 +48,7 @@ if ($action == "vote") {
                 FROM
                   `" . PREFIX . "poll`
                 WHERE
-                    `pollID` = '" . (int)$pollID
+                    `pollID` = '" . (int)$pollID."'"
             )
         );
         $anz = mysqli_num_rows(
@@ -99,7 +99,7 @@ if ($action == "vote") {
                 SET
                     hosts='" . $ds[ 'hosts' ] . "#" . $_SERVER[ 'REMOTE_ADDR' ] . "#'" . $add_query . "
                 WHERE
-                    pollID='" . (int)$pollID
+                    pollID='" . (int)$pollID."'"
             );
 
             //write vote
@@ -109,7 +109,7 @@ if ($action == "vote") {
                 SET
                     o" . $vote . " = o" . $vote . "+1
                 WHERE
-                    pollID='" . (int)$pollID
+                    pollID='" . (int)$pollID."'"
             );
         }
         header('Location: index.php?site=polls');
@@ -132,14 +132,8 @@ if ($action == "vote") {
         die($_language->module[ 'no_access' ]);
     }
 
-    $runtime = mktime(
-        (int)$_POST[ 'laufzeit_hour' ],
-        (int)$_POST[ 'laufzeit_minute' ],
-        0,
-        (int)$_POST[ 'laufzeit_month' ],
-        (int)$_POST[ 'laufzeit_day' ],
-        (int)$_POST[ 'laufzeit_year' ]
-    );
+    $date_string = $_POST['runtime_time'].' '.$_POST['runtime_date'];
+    $runtime = strtotime($date_string);
 
     safe_query(
         "INSERT INTO
@@ -202,19 +196,8 @@ if ($action == "vote") {
         $intern = "";
     }
 
-    $runtime_date = $_POST[ 'runtime_date' ];
-    $rd = substr($runtime_date, 8, 2);
-    $rm = substr($runtime_date, 5, 2);
-    if ($rm > 12 && $rd < 12) { // User might have mixed up day and month
-        $oldrm = $am;
-        $rm = $rd;
-        $rd = $oldrm;
-    }
-    $ry = substr($runtime_date, 0, 4);
-
-    $runtime_time = $_POST[ 'runtime_time' ];
-    $laufzeit_hour = substr($runtime_date, 0, 2);
-    $laufzeit_minute = substr($runtime_date, 3, 2);
+    $date_string = $_POST['runtime_time'].' '.$_POST['runtime_date'];
+    $runtime = strtotime($date_string);
 
     if (isset($_POST[ 'reset' ])) {
         safe_query("DELETE FROM " . PREFIX . "poll WHERE pollID='$pollID'");
@@ -253,7 +236,7 @@ if ($action == "vote") {
                 '" . $_POST[ 'op9' ] . "',
                 '" . $_POST[ 'op10' ] . "',
                 '" . $_POST[ 'comments' ] . "',
-                '" . mktime((int)$laufzeit_hour, (int)$laufzeit_minute, 0, (int)$rm, (int)$rd, (int)$ry) . "',
+                '" . $runtime . "',
                 '" . $intern . "'
             )"
         );
@@ -288,14 +271,6 @@ if ($action == "vote") {
                 )"
         );
     } else {
-        $runtime = mktime(
-            (int)$laufzeit_hour,
-            (int)$laufzeit_minute,
-            0,
-            (int)$rm,
-            (int)$rd,
-            (int)$ry
-        );
 
         safe_query(
             "UPDATE
@@ -316,7 +291,7 @@ if ($action == "vote") {
                 laufzeit = '" . $runtime . "',
                 intern = '" . $intern . "'
             WHERE
-                pollID='" . (int)$pollID
+                pollID='" . (int)$pollID."'"
         );
     }
     header('Location: index.php?site=polls');
@@ -363,7 +338,6 @@ echo $title_polls;
 
 if ($action == "new") {
     if (ispollsadmin($userID)) {
-        $bg1 = BG_1;
         eval("\$polls_new = \"" . gettemplate("polls_new") . "\";");
         echo $polls_new;
     } else {
@@ -377,9 +351,8 @@ if ($action == "new") {
 
         if (isset($ds[ 'pollID' ])) {
 
-            $runtime_date =
-                date("Y", $ds[ "laufzeit" ]) . '-' . date("m", $ds[ "laufzeit" ]) . '-' . date("d", $ds[ "laufzeit" ]);
-            $runtime_time = date("H", $ds[ "laufzeit" ]) . ':' . date("i", $ds[ "laufzeit" ]) . ':00';
+            $runtime_date = date("Y-m-d",$ds['laufzeit']);
+            $runtime_time = date("H:i",$ds['laufzeit']);
 
             $polltitle = getinput($ds[ 'titel' ]);
             $option1 = getinput($ds[ 'o1' ]);

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -16,7 +16,6 @@
 			rel="stylesheet">
 	<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css"
 			rel="stylesheet">
-	<script src="js/bbcode.js"></script>
 	<!-- end Head & Title include -->
 </head>
 <body>
@@ -46,9 +45,7 @@
 	<table class="table">
 		<tr>
 			<th>%date%:</th>
-			<td><select name="day" class="form-control">$day</select>
-				<select name="month" class="form-control">$month</select>
-				<select name="year" class="form-control">$year</select></td>
+			<td><input name="date" type="date" value="$date" placeholder="yyyy-mm-dd" class="form-control"></td>
 			<th>%squad% / %game%:</th>
 			<td><select name="squad" id="squad" class="form-control">$squads</select>
 				<select name="game" class="form-control">$games</select></td>
@@ -128,5 +125,19 @@
 		</tr>
 	</table>
 </form>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="components/webshim/js-webshim/minified/polyfiller.js"></script>
+<script>
+webshim.setOptions('basePath', 'components/webshim/js-webshim/minified/shims/');
+//request the features you need:
+webshim.setOptions("forms-ext",
+{
+	replaceUI: "auto",
+	types: "date time datetime-local"
+});
+webshim.polyfill('forms forms-ext');
+</script>
+<script src="js/bbcode.js"></script>
 </body>
 </html>

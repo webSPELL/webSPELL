@@ -193,7 +193,7 @@ if (isset($_POST[ 'save' ])) {
             " . $mysql_file . "
             comments='$comments'
         WHERE
-            demoID='" . (int)$demoID
+            demoID='" . (int)$demoID."'"
     );
     header("Location: index.php?site=demos");
 } elseif (isset($_GET[ 'delete' ])) {
@@ -208,12 +208,12 @@ if (isset($_POST[ 'save' ])) {
 
     $demoID = $_GET[ 'demoID' ];
     $filepath = "./demos/";
-    $ergebnis = safe_query("SELECT * FROM " . PREFIX . "demos WHERE demoID = '" . (int)$demoID);
+    $ergebnis = safe_query("SELECT * FROM " . PREFIX . "demos WHERE demoID = '" . (int)$demoID."'");
     $ds = mysqli_fetch_array($ergebnis);
     if (file_exists($filepath . $ds[ 'file' ])) {
         @unlink($filepath . $ds[ 'file' ]);
     }
-    safe_query("DELETE FROM `" . PREFIX . "demos` WHERE `demoID` = '" . (int)$demoID);
+    safe_query("DELETE FROM `" . PREFIX . "demos` WHERE `demoID` = '" . (int)$demoID."'");
     safe_query("DELETE FROM `" . PREFIX . "comments` WHERE `parentID` = '" . (int)$demoID . "' AND `type` = 'de'");
     header("Location: index.php?site=demos");
 }
@@ -309,8 +309,8 @@ if ($action == "new") {
 } elseif ($action == "edit") {
     $demoID = $_GET[ 'demoID' ];
     if (isfileadmin($userID)) {
-        $ds = mysqli_fetch_array(safe_query("SELECT * FROM `" . PREFIX . "demos` WHERE `demoID` = '" . (int)$demoID));
-        $date = date("Y-n-d", $ds[ 'date' ]);
+        $ds = mysqli_fetch_array(safe_query("SELECT * FROM `" . PREFIX . "demos` WHERE `demoID` = '" . (int)$demoID."'"));
+        $date = date("Y-m-d", $ds[ 'date' ]);
         $games = str_replace(' selected="selected"', '', $games);
         $games =
             str_replace('value="' . $ds[ 'game' ] . '"', 'value="' . $ds[ 'game' ] . '" selected="selected"', $games);
@@ -365,7 +365,7 @@ if ($action == "new") {
     }
     echo '<a href="index.php?site=demos" class="btn btn-primary">' . $_language->module[ 'all_demos' ] . '</a><br><br>';
 
-    $result = safe_query("SELECT * FROM `" . PREFIX . "demos` WHERE `demoID` = '" . (int)$demoID);
+    $result = safe_query("SELECT * FROM `" . PREFIX . "demos` WHERE `demoID` = '" . (int)$demoID."'");
     $ds = mysqli_fetch_array($result);
     $date = getformatdate($ds[ 'date' ]);
     $league = '<a href="' . $ds[ 'leaguehp' ] . '" target="_blank">' . $ds[ 'league' ] . '</a>';

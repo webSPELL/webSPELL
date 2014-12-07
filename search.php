@@ -71,28 +71,12 @@ if (
             if (!$afterdate) {
                 $after = 0;
             } else {
-                $ad = substr($afterdate, 8, 2);
-                $am = substr($afterdate, 5, 2);
-                if ($am > 12 && $ad < 12) { // User might have mixed up day and month
-                    $oldam = $am;
-                    $am = $ad;
-                    $ad = $oldam;
-                }
-                $ay = substr($afterdate, 0, 4);
-                $after = mktime(0, 0, 0, $am, $ad, $ay);
+                $after = strtotime($afterdate);
             }
             if (!$beforedate) {
                 $before = time();
             } else {
-                $bd = substr($beforedate, 8, 2);
-                $bm = substr($beforedate, 5, 2);
-                if ($bm > 12 && $bd < 12) { // User might have mixed up day and month
-                    $oldbm = $bm;
-                    $bm = $bd;
-                    $bd = $oldbm;
-                }
-                $by = substr($beforedate, 0, 4);
-                $before = mktime(0, 0, 0, $bm, $bd, $by);
+                $before = strtotime($beforedate);
             }
 
             $i = 0;

@@ -12,8 +12,11 @@
 	<!-- Head & Title include -->
 	<title>%edit_clanwar%</title>
 	<base href="$rewriteBase">
-	<link href="_stylesheet.css" rel="stylesheet" type="text/css">
-	<script src="js/bbcode.js"></script>
+		<base href="$rewriteBase">
+	<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc2/css/bootstrap.min.css"
+			rel="stylesheet">
+	<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css"
+			rel="stylesheet">
 	<!-- end Head & Title include -->
 </head>
 <body>
@@ -51,9 +54,7 @@
 				<table width="100%" border="0" align="center" cellpadding="2" cellspacing="0">
 					<tr>
 						<td>%date%:</td>
-						<td><select name="day">$day</select>
-							<select name="month">$month</select>
-							<select name="year">$year</select></td>
+						<td><input name="date" type="date" value="$date" placeholder="yyyy-mm-dd" class="form-control"></td>
 						<td>%squad% / %game%:</td>
 						<td><select name="squad" id="squad">$squads</select>
 							<select name="game">$games</select></td>
@@ -166,5 +167,19 @@
 		</tr>
 	</table>
 </form>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="components/webshim/js-webshim/minified/polyfiller.js"></script>
+<script>
+webshim.setOptions('basePath', 'components/webshim/js-webshim/minified/shims/');
+//request the features you need:
+webshim.setOptions("forms-ext",
+{
+	replaceUI: "auto",
+	types: "date time datetime-local"
+});
+webshim.polyfill('forms forms-ext');
+</script>
+<script src="js/bbcode.js"></script>
 </body>
 </html>

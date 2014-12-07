@@ -182,7 +182,7 @@ if (isset($id) and getnickname($id) != '') {
                                 FROM
                                     " . PREFIX . "gallery_pictures
                                 WHERE
-                                    galleryID='" . (int)$ds[ 'galleryID' ]
+                                    galleryID='" . (int)$ds[ 'galleryID' ]."'"
                             )
                         );
                     $commentcount = mysqli_num_rows(
@@ -461,7 +461,7 @@ if (isset($id) and getnickname($id) != '') {
                     }
 
                     foreach ($_POST[ 'gbID' ] as $gbook_id) {
-                        safe_query("DELETE FROM " . PREFIX . "user_gbook WHERE gbID='" . (int)$gbook_id);
+                        safe_query("DELETE FROM " . PREFIX . "user_gbook WHERE gbID='" . (int)$gbook_id."'");
                     }
                     redirect('index.php?site=profile&amp;id=' . $id . '&amp;action=guestbook', '', 0);
                 } else {
@@ -479,7 +479,7 @@ if (isset($id) and getnickname($id) != '') {
                                 FROM
                                     " . PREFIX . "user_gbook
                                 WHERE
-                                    `userID` = '" . (int)$id
+                                    `userID` = '" . (int)$id."'"
                             )
                         );
 

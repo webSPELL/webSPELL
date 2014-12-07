@@ -38,15 +38,7 @@ if (isset($_POST[ 'save' ])) {
         die($_language->module[ 'no_access' ]);
     }
 
-    $date = $_POST[ 'date' ];
-    $day = substr($date, 8, 2);
-    $month = substr($date, 5, 2);
-    if ($month > 12 && $day < 12) { // User might have mixed up day and month
-        $oldmonth = $month;
-        $month = $day;
-        $day = $oldmonth;
-    }
-    $year = substr($date, 0, 4);
+    $date = strtotime($_POST['date']);
 
     if (isset($_POST[ 'squad' ])) {
         $squad = $_POST[ 'squad' ];
@@ -58,7 +50,6 @@ if (isset($_POST[ 'save' ])) {
     $rang = $_POST[ 'rang' ];
     $info = $_POST[ 'message' ];
 
-    $date = mktime(0, 0, 0, $month, $day, $year);
     safe_query(
         "INSERT INTO
             `" . PREFIX . "awards` (
@@ -89,15 +80,7 @@ if (isset($_POST[ 'save' ])) {
         die($_language->module[ 'no_access' ]);
     }
     $awardID = $_POST[ 'awardID' ];
-    $date = $_POST[ 'date' ];
-    $day = substr($date, 8, 2);
-    $month = substr($date, 5, 2);
-    if ($month > 12 && $day < 12) { // User might have mixed up day and month
-        $oldmonth = $month;
-        $month = $day;
-        $day = $oldmonth;
-    }
-    $year = substr($date, 0, 4);
+    $date = strtotime($_POST['date']);
     if (isset($_POST[ 'squad' ])) {
         $squad = $_POST[ 'squad' ];
     } else {

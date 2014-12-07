@@ -136,7 +136,7 @@ if (isset($_POST[ 'save' ]) and $_POST[ 'save' ]) {
                             " . PREFIX . "cash_box_payed
                         WHERE
                             userID='$usID'AND
-                            cashID='".(int)$id
+                            cashID='".(int)$id."'"
                     )
                 )
             ) {
@@ -147,7 +147,7 @@ if (isset($_POST[ 'save' ]) and $_POST[ 'save' ]) {
                         costs='$costs'
                     WHERE
                         userID='$usID' AND
-                        cashID='".(int)$id
+                        cashID='".(int)$id."'"
                 );
             } else {
                 safe_query(
@@ -215,9 +215,7 @@ if (!isclanmember($userID) and !iscashadmin($userID)) {
         $ergebnis = safe_query("SELECT * FROM " . PREFIX . "cash_box WHERE cashID='$id'");
         $ds = mysqli_fetch_array($ergebnis);
 
-        $day = date("d", $ds[ 'paydate' ]);
-        $month = date("m", $ds[ 'paydate' ]);
-        $year = date("Y", $ds[ 'paydate' ]);
+        $date = date("Y-m-d",$ds['paydate']);
 
         $info = getinput($ds[ 'info' ]);
         $usage = getinput($ds[ 'usedfor' ]);
@@ -239,7 +237,7 @@ if (!isclanmember($userID) and !iscashadmin($userID)) {
         );
 
         eval ("\$cashbox_edit = \"" . gettemplate("cash_box_edit") . "\";");
-        echo $cashboxedit;
+        echo $cashbox_edit;
     } else {
 
         echo '<h2>' . $_language->module[ 'cash_box' ] . '</h2>';
@@ -262,7 +260,7 @@ if (!isclanmember($userID) and !iscashadmin($userID)) {
             global $userID;
 
             if ($id) {
-                $squadergebnis = safe_query("SELECT squad FROM " . PREFIX . "cash_box WHERE cashID='" . (int)$id);
+                $squadergebnis = safe_query("SELECT squad FROM " . PREFIX . "cash_box WHERE cashID='" . (int)$id."'");
                 $dv = mysqli_fetch_array($squadergebnis);
                 $squadID = $dv[ 'squad' ];
             }
@@ -280,7 +278,7 @@ if (!isclanmember($userID) and !iscashadmin($userID)) {
                         WHERE
                             " . PREFIX . "cash_box_payed.payed='1' AND
                             " . PREFIX . "cash_box_payed.cashID=" . PREFIX . "cash_box.cashID AND
-                            " . PREFIX . "cash_box.squad = '" . (int)$squadID
+                            " . PREFIX . "cash_box.squad = '" . (int)$squadID."'"
                     );
                 $anz_squad = mysqli_num_rows($ergebnis_squad);
                 $costs_squad = 0.00;
@@ -289,7 +287,7 @@ if (!isclanmember($userID) and !iscashadmin($userID)) {
                         $costs_squad += $dss[ 'costs' ];
                     }
                 }
-                $ergebnis_squad = safe_query("SELECT * FROM " . PREFIX . "cash_box WHERE squad='".(int)$squadID);
+                $ergebnis_squad = safe_query("SELECT * FROM " . PREFIX . "cash_box WHERE squad='".(int)$squadID."'");
                 $anz_squad = mysqli_num_rows($ergebnis_squad);
                 if ($anz_squad) {
                     while ($dss = mysqli_fetch_array($ergebnis_squad)) {
@@ -388,7 +386,7 @@ if (!isclanmember($userID) and !iscashadmin($userID)) {
                               " . PREFIX . "cash_box_payed
                             WHERE
                                 userID='$usID' AND
-                                cashID='".(int)$id
+                                cashID='".(int)$id."'"
                         );
                         $du = mysqli_fetch_array($ergebnis);
                         $user = '<a href="index.php?site=profile&amp;id=' . $usID . '">
@@ -489,7 +487,7 @@ if (!isclanmember($userID) and !iscashadmin($userID)) {
                 $squadergebnis = safe_query("SELECT squadID FROM " . PREFIX . "squads");
             } else {
                 $squadergebnis =
-                    safe_query("SELECT squadID FROM " . PREFIX . "squads_members WHERE userID='" . (int)$userID);
+                    safe_query("SELECT squadID FROM " . PREFIX . "squads_members WHERE userID='" . (int)$userID."'");
             }
             while ($da = mysqli_fetch_array($squadergebnis)) {
                 print_cashbox($da[ 'squadID' ], 0);
@@ -510,7 +508,7 @@ if (!isclanmember($userID) and !iscashadmin($userID)) {
                 $squadergebnis = safe_query("SELECT squadID FROM " . PREFIX . "squads");
             } else {
                 $squadergebnis =
-                    safe_query("SELECT squadID FROM " . PREFIX . "squads_members WHERE userID='" . (int)$userID);
+                    safe_query("SELECT squadID FROM " . PREFIX . "squads_members WHERE userID='" . (int)$userID."'");
             }
             while ($da = mysqli_fetch_array($squadergebnis)) {
                 if ($get_squad == $da[ 'squadID' ]) {

@@ -80,33 +80,7 @@ if ($action == "new") {
             $hometeam .= '<option value="0" disabled="disabled">-----</option>';
         }
 
-        $day = '';
-        $month = '';
-        $year = '';
-
-
-        // ToDo: Change to date inputs especially because of line 102
-        for ($i = 1; $i < 32; $i++) {
-            if ($i == date("d", time())) {
-                $day .= '<option selected="selected">' . $i . '</option>';
-            } else {
-                $day .= '<option>' . $i . '</option>';
-            }
-        }
-        for ($i = 1; $i < 13; $i++) {
-            if ($i == date("n", time())) {
-                $month .= '<option value="' . $i . '" selected="selected">' . date("M", time()) . '</option>';
-            } else {
-                $month .= '<option value="' . $i . '">' . date("M", mktime(0, 0, 0, $i, 1, 2000)) . '</option>';
-            }
-        }
-        for ($i = 2000; $i < 2015; $i++) {
-            if ($i == date("Y", time())) {
-                $year .= '<option value="' . $i . '" selected="selected">' . date("Y", time()) . '</option>';
-            } else {
-                $year .= '<option value="' . $i . '">' . $i . '</option>';
-            }
-        }
+        $date = "";
 
         $countries = getcountries();
 
@@ -118,7 +92,7 @@ if ($action == "new") {
         $opponent = "";
         $opptag = "";
         if (isset($upID)) {
-            $ergebnis = safe_query("SELECT * FROM `" . PREFIX . "upcoming` WHERE `upID` = '" . (int)$upID);
+            $ergebnis = safe_query("SELECT * FROM `" . PREFIX . "upcoming` WHERE `upID` = '" . (int)$upID."'");
             $ds = mysqli_fetch_array($ergebnis);
             $league = $ds[ 'league' ];
             if ($ds[ 'leaguehp' ] != $leaguehp) {
@@ -144,24 +118,8 @@ if ($action == "new") {
                 $squads
             );
             $server = $ds[ 'server' ];
-            $day = str_replace(" selected=\"selected\"", "", $day);
-            $day = str_replace(
-                '<option>' . date("j", $ds[ 'date' ]) . '</option>',
-                '<option selected="selected">' . date("j", $ds[ 'date' ]) . '</option>',
-                $day
-            );
-            $month = str_replace(" selected=\"selected\"", "", $month);
-            $month = str_replace(
-                'value="' . date("n", $ds[ 'date' ]) . '"',
-                'value="' . date("n", $ds[ 'date' ]) . '" selected="selected"',
-                $month
-            );
-            $year = str_replace(" selected=\"selected\"", "", $year);
-            $year = str_replace(
-                'value="' . date("Y", $ds[ 'date' ]) . '"',
-                'value="' . date("Y", $ds[ 'date' ]) . '" selected="selected"',
-                $year
-            );
+
+            $date = date("Y-m-d",$ds['date']);
         }
 
         eval ("\$clanwar_new = \"" . gettemplate("clanwar_new") . "\";");
@@ -184,9 +142,7 @@ if ($action == "new") {
     $bghead = BGHEAD;
     $bgcat = BGCAT;
 
-    $month = $_POST[ 'month' ];
-    $day = $_POST[ 'day' ];
-    $year = $_POST[ 'year' ];
+    $date = strtotime($_POST['date']);
     if (isset($_POST[ 'hometeam' ])) {
         $hometeam = $_POST[ 'hometeam' ];
     }
@@ -263,8 +219,6 @@ if ($action == "new") {
         }
     }
     $home_string = serialize($team);
-
-    $date = mktime(0, 0, 0, $month, $day, $year);
 
     safe_query(
         "INSERT INTO
@@ -532,38 +486,16 @@ if ($action == "new") {
         $games = "";
         $maps = "";
         $hometeam = "";
-        $day = '';
-        $month = '';
-        $year = '';
 
-        $ds = mysqli_fetch_array(safe_query("SELECT * FROM `" . PREFIX . "clanwars` WHERE `cwID` = '" . (int)$cwID));
+        $ds = mysqli_fetch_array(safe_query("SELECT * FROM `" . PREFIX . "clanwars` WHERE `cwID` = '" . (int)$cwID."'"));
+
+        $date = date("Y-m-d",$ds['date']);
 
         $gamesa = safe_query("SELECT tag, name FROM `" . PREFIX . "games` ORDER BY `name`");
         while ($dv = mysqli_fetch_array($gamesa)) {
             $games .= '<option value="' . $dv[ 'tag' ] . '">' . $dv[ 'name' ] . '</option>';
         }
 
-        for ($i = 1; $i < 32; $i++) {
-            if ($i == date("d", $ds[ 'date' ])) {
-                $day .= '<option selected="selected">' . $i . '</option>';
-            } else {
-                $day .= '<option>' . $i . '</option>';
-            }
-        }
-        for ($i = 1; $i < 13; $i++) {
-            if ($i == date("n", $ds[ 'date' ])) {
-                $month .= '<option value="' . $i . '" selected="selected">' . date("M", $ds[ 'date' ]) . '</option>';
-            } else {
-                $month .= '<option value="' . $i . '">' . date("M", mktime(0, 0, 0, $i, 1, 2000)) . '</option>';
-            }
-        }
-        for ($i = 2000; $i < 2015; $i++) {
-            if ($i == date("Y", $ds[ 'date' ])) {
-                $year .= '<option selected="selected">' . $i . '</option>';
-            } else {
-                $year .= '<option>' . $i . '</option>';
-            }
-        }
         $games =
             str_replace('value="' . $ds[ 'game' ] . '"', 'value="' . $ds[ 'game' ] . '" selected="selected"', $games);
         $squads = getgamesquads();
@@ -668,9 +600,7 @@ if ($action == "new") {
     }
 
     $cwID = $_POST[ 'cwID' ];
-    $month = $_POST[ 'month' ];
-    $day = $_POST[ 'day' ];
-    $year = $_POST[ 'year' ];
+    $date = strtotime($_POST['date']);
     if (isset($_POST[ 'hometeam' ])) {
         $hometeam = $_POST[ 'hometeam' ];
     } else {
@@ -721,7 +651,6 @@ if ($action == "new") {
     echo '<script src="js/bbcode.js"></script>
   <link href="_stylesheet.css" rel="stylesheet" type="text/css">';
 
-    $date = mktime(0, 0, 0, $month, $day, $year);
     $team = [];
     if (is_array($hometeam)) {
         foreach ($hometeam as $player) {
@@ -807,7 +736,7 @@ if ($action == "new") {
     if (isset($_POST[ 'cwID' ])) {
         $cwID = $_POST[ 'cwID' ];
         foreach ($cwID as $id) {
-            $ergebnis = safe_query("SELECT `screens` FROM `" . PREFIX . "clanwars` WHERE `cwID` = '" . (int)$id);
+            $ergebnis = safe_query("SELECT `screens` FROM `" . PREFIX . "clanwars` WHERE `cwID` = '" . (int)$id."'");
             $ds = mysqli_fetch_array($ergebnis);
             $screens = explode("|", $ds[ 'screens' ]);
             $filepath = "./images/clanwar-screens/";
@@ -821,7 +750,7 @@ if ($action == "new") {
                 }
             }
 
-            safe_query("DELETE FROM `" . PREFIX . "clanwars` WHERE `cwID` = '" . (int)$id);
+            safe_query("DELETE FROM `" . PREFIX . "clanwars` WHERE `cwID` = '" . (int)$id."'");
             safe_query("DELETE FROM `" . PREFIX . "comments` WHERE `parentID` = '" . (int)$id . "' AND type='cw'");
         }
     }
@@ -852,14 +781,14 @@ if ($action == "new") {
     while ($cwdata = mysqli_fetch_array($dp)) {
         // total home points
         $totalhomeqry =
-            safe_query("SELECT `homescore` FROM `" . PREFIX . "clanwars` WHERE `cwID = '" . (int)$cwdata['cwID']);
+            safe_query("SELECT `homescore` FROM `" . PREFIX . "clanwars` WHERE `cwID = '" . (int)$cwdata['cwID']."'");
         while ($theHomeData = mysqli_fetch_array($totalhomeqry)) {
             $totalHomeScore += array_sum(unserialize($theHomeData[ 'homescore' ]));
             $theHomeScore = array_sum(unserialize($theHomeData[ 'homescore' ]));
         }
         // total opponent points
         $totaloppqry =
-            safe_query("SELECT `oppscore` FROM `" . PREFIX . "clanwars` WHERE `cwID` = '" . (int)$cwdata['cwID']);
+            safe_query("SELECT `oppscore` FROM `" . PREFIX . "clanwars` WHERE `cwID` = '" . (int)$cwdata['cwID']."'");
         while ($theOppData = mysqli_fetch_array($totaloppqry)) {
             $totalOppScore += array_sum(unserialize($theOppData[ 'oppscore' ]));
             $theOppScore = array_sum(unserialize($theOppData[ 'oppscore' ]));
@@ -956,7 +885,7 @@ if ($action == "new") {
             // SQUAD STATISTICS
 
             $squadcws =
-                safe_query("SELECT * FROM `" . PREFIX . "clanwars` WHERE `squad` = '" . (int)$squaddata[ 'squadID' ]);
+                safe_query("SELECT * FROM `" . PREFIX . "clanwars` WHERE `squad` = '" . (int)$squaddata[ 'squadID' ]."'");
             $total = mysqli_num_rows($squadcws);
             $totalperc = percent($total, $totaltotal, 2);
 
@@ -974,7 +903,7 @@ if ($action == "new") {
                                 `" . PREFIX . "clanwars`
                             WHERE
                                 `cwID` = '" . $squadcwdata[ 'cwID' ] . "' AND
-                                `squad` = '" . $squaddata[ 'squadID' ]
+                                `squad` = '" . $squaddata[ 'squadID' ]."'"
                         )
                     );
                 $sqHomeScore = array_sum(unserialize($sqHomeScoreQry[ 'homescore' ]));
@@ -989,7 +918,7 @@ if ($action == "new") {
                                 `" . PREFIX . "clanwars`
                             WHERE
                                 `cwID` = '" . (int)$squadcwdata[ 'cwID' ] . "' AND
-                                `squad` = '" . (int)$squaddata[ 'squadID' ]
+                                `squad` = '" . (int)$squaddata[ 'squadID' ]."'"
                         )
                     );
                 $sqOppScore = array_sum(unserialize($sqOppScoreQry[ 'oppscore' ]));
@@ -1104,7 +1033,7 @@ if ($action == "new") {
                     FROM
                         `" . PREFIX . "squads_members`
                     WHERE
-                        `squadID` = '" . (int)$squaddata[ 'squadID' ]
+                        `squadID` = '" . (int)$squaddata[ 'squadID' ]."'"
                 );
             while ($player = mysqli_fetch_array($squadmembers)) {
                 $playerlist[ ] = $player[ 'userID' ];
@@ -1118,7 +1047,7 @@ if ($action == "new") {
                     FROM
                         `" . PREFIX . "clanwars`
                     WHERE
-                        `squad` = '" . (int)$squaddata[ 'squadID' ]
+                        `squad` = '" . (int)$squaddata[ 'squadID' ]."'"
                 );
             while ($roster = mysqli_fetch_array($playercws)) {
                 $hometeam = array_merge($hometeam, unserialize($roster[ 'hometeam' ]));

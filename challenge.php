@@ -224,6 +224,8 @@ if ($show == true) {
         $info = '';
     }
 
+    $date_now = date("Y-m-d\TH:m");
+
     if ($loggedin) {
         $email = getemail($userID);
         eval ("\$challenge_loggedin = \"" . gettemplate("challenge_loggedin") . "\";");
