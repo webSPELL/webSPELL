@@ -43,7 +43,7 @@ function checkCommentsAllow($type, $parentID)
         FROM
             " . PREFIX . $modul[ 0 ] . "
         WHERE
-            " . $modul[ 1 ] . "='" . (int)$parentID
+            " . $modul[ 1 ] . "='" . (int)$parentID."'"
     );
     if (mysqli_num_rows($get)) {
         $data = mysqli_fetch_assoc($get);
@@ -88,7 +88,7 @@ if (isset($_POST[ 'savevisitorcomment' ])) {
     }
     $_SESSION[ 'comments_message' ] = $message;
 
-    $spamApi = SpamApi::getInstance();
+    $spamApi = webspell\SpamApi::getInstance();
     $validation = $spamApi->validate($message);
 
     if (in_array(trim($name), $nicks)) {
@@ -99,7 +99,7 @@ if (isset($_POST[ 'savevisitorcomment' ])) {
         header("Location: " . $_POST[ 'referer' ]);
     } else {
         $date = time();
-        if ($validation == SpamApi::Spam) {
+        if ($validation == webspell\SpamApi::SPAM) {
             safe_query(
                 "INSERT INTO
                     `" . PREFIX . "comments_spam` (
@@ -165,12 +165,12 @@ if (isset($_POST[ 'savevisitorcomment' ])) {
     $type = $_POST[ 'type' ];
     $message = $_POST[ 'message' ];
 
-    $spamApi = SpamApi::getInstance();
+    $spamApi = webspell\SpamApi::getInstance();
     $validation = $spamApi->validate($message);
 
     if (checkCommentsAllow($type, $parentID)) {
         $date = time();
-        if ($validation == SpamApi::Spam) {
+        if ($validation == webspell\SpamApi::SPAM) {
             safe_query(
                 "INSERT INTO
                     `" . PREFIX . "comments_spam` (
@@ -220,7 +220,7 @@ if (isset($_POST[ 'savevisitorcomment' ])) {
         die($_language->module[ 'access_denied' ]);
     }
     foreach ($_POST[ 'commentID' ] as $id) {
-        safe_query("DELETE FROM " . PREFIX . "comments WHERE commentID='" . (int)$id);
+        safe_query("DELETE FROM " . PREFIX . "comments WHERE commentID='" . (int)$id."'");
     }
     header("Location: " . $_POST[ 'referer' ]);
 } elseif (isset($_GET[ 'editcomment' ])) {
@@ -230,7 +230,7 @@ if (isset($_POST[ 'savevisitorcomment' ])) {
     $_language->readModule('bbcode', true);
     if (isfeedbackadmin($userID) or iscommentposter($userID, $id)) {
         if (!empty($id)) {
-            $dt = safe_query("SELECT * FROM " . PREFIX . "comments WHERE commentID='" . (int)$id);
+            $dt = safe_query("SELECT * FROM " . PREFIX . "comments WHERE commentID='" . (int)$id."'");
             if (mysqli_num_rows($dt)) {
                 $ds = mysqli_fetch_array($dt);
                 $poster = '<a href="index.php?site=profile&amp;id=' . $ds[ 'userID' ] . '"><b>' .
@@ -308,7 +308,7 @@ if (isset($_POST[ 'savevisitorcomment' ])) {
             `" . PREFIX . "comments`
         WHERE
             `parentID` = '" . (int)$parentID . "' AND
-            `type` = '" . $type
+            `type` = '" . $type."'"
     );
     $gesamt = mysqli_num_rows($alle);
     $commentspages = ceil($gesamt / $maxfeedback);
