@@ -13,7 +13,6 @@ module.exports = function(grunt) {
         ],
         phps = [
             "!admin/admincenter.php",
-            "!admin/faq.php",
             "!admin/faqcategories.php",
             "!admin/filecategories.php",
             "!admin/gallery.php",
