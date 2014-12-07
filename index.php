@@ -266,13 +266,15 @@ header('X-UA-Compatible: IE=edge,chrome=1');
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 <script src="components/webshim/js-webshim/minified/polyfiller.js"></script>
 <script>
-  webshim.setOptions('basePath', 'components/webshim/js-webshim/minified/shims/');
-
-  //request the features you need:
-  webshim.polyfill('forms forms-ext');
-  </script>
+    webshim.setOptions('basePath', 'components/webshim/js-webshim/minified/shims/');
+    //request the features you need:
+    webshim.setOptions("forms-ext",
+    {
+        replaceUI: "auto",
+        types: "date time datetime-local"
+    });
+    webshim.polyfill('forms forms-ext');
+</script>
 <script src="js/bbcode.js" type="text/javascript"></script>
-
 </body>
 </html>
-<?php
