@@ -48,10 +48,11 @@ module.exports = function(grunt) {
             "!admin/users.php",
             "!admin/visitor_statistic.php",
             "!admin/visitor_statistic_image.php",
+            "!install/**/*.php",
+            "!languages/**/*.php",
             "src/**/*.php",
-            "install/**/*.php",
-            "languages/**/*.php",
-            "*.php"
+            "*.php",
+            "!index.php"
         ],
         csss = [ "**/*.css" ],
         excludes = [

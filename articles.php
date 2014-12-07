@@ -470,11 +470,13 @@ if ($action == "new") {
         '</a><br><br>';
 
     if ($page == 1) {
-        safe_query("UPDATE `" . PREFIX . "articles`
-                    SET `viewed`=viewed+1
-                    WHERE `articlesID` = '" . (int)$articlesID."'");
+        safe_query(
+            "UPDATE `" . PREFIX . "articles`
+            SET `viewed`=viewed+1
+            WHERE `articlesID` = '" . (int)$articlesID."'"
+        );
     }
-    $result = safe_query("SELECT * FROM `" . PREFIX . "articles` WHERE `articlesID` = '" . (int)$articlesID."'");
+    $result = safe_query("SELECT * FROM `" . PREFIX . "articles` WHERE `articlesID` = '" . (int)$articlesID . "'");
 
     if (mysqli_num_rows($result)) {
 
