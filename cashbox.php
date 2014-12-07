@@ -484,7 +484,7 @@ if (!isclanmember($userID) and !iscashadmin($userID)) {
         echo $cash_box_top;
 
         if (!isset($_GET[ 'id' ])) {
-            print_cash_box(0, 0);
+            print_cashbox(0, 0);
             if (iscashadmin($userID)) {
                 $squadergebnis = safe_query("SELECT squadID FROM " . PREFIX . "squads");
             } else {
