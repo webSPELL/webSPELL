@@ -225,7 +225,7 @@ function update_count(new_days, new_months)
 </script>
 
 <p><b><?php echo $_language->module['settings']; ?>:</b></p>
-<?php echo $_language->module['last']; ?> <input type="text" id="count_days" value="<?php echo $count_days; ?>" style="width:20px;"> <?php echo $_language->module['days']; ? /><br /><br />
+<?php echo $_language->module['last']; ?> <input type="text" id="count_days" value="<?php echo $count_days; ?>" style="width:20px;" /> <?php echo $_language->module['days']; ?><br /><br />
 <?php echo $_language->module['last']; ?> <input type="text" id="count_months" value="<?php echo $count_months; ?>" style="width:20px;" /> <?php echo $_language->module['months']; ?> <input type="button" onclick="update_count(document.getElementById('count_days').value, document.getElementById('count_months').value);" value="<?php echo $_language->module['show']; ?>" /><br /><br />
 
 <p><b><?php echo $_language->module['change_size']; ?>:</b></p>

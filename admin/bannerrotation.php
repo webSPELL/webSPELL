@@ -364,7 +364,7 @@ if ($action == "add") {
             <a href="admincenter.php?site=bannerrotation&amp;action=edit&amp;bannerID=' .
                 $ds[ 'bannerID' ] . '" class="btn btn-danger">' . $_language->module[ 'edit' ] . '</a>
             <input type="button" onclick="MM_confirm(
-                    \'' . $_language->module[ 'really_delete' ] . \',
+                    \'' . $_language->module[ 'really_delete' ] . '\',
                     \'admincenter.php?site=bannerrotation&amp;delete=true&amp;bannerID=' . $ds[ 'bannerID' ] .
                     '&amp;captcha_hash=' . $hash . '\'
                 )" value="' . $_language->module[ 'delete' ] . '" class="btn btn-danger">
