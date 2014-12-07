@@ -51,7 +51,7 @@ module.exports = function(grunt) {
             "src/**/*.php",
             "install/**/*.php",
             "languages/**/*.php",
-            "*.php",
+            "*.php"
         ],
         csss = [ "**/*.css" ],
         excludes = [
