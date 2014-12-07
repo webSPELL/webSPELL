@@ -54,7 +54,7 @@ $dy = mysqli_fetch_array(
         FROM
             `" . PREFIX . "counter_stats`
         WHERE
-            `dates='$dateyesterday'`"
+            `dates`='$dateyesterday'"
     )
 );
 
@@ -91,7 +91,7 @@ for ($i = date("d", time()); $i > 0; $i--) {
             FROM
                 `" . PREFIX . "counter_stats`
             WHERE
-                `dates` = '" . $i . $datemonth
+                `dates` = '" . $i . $datemonth."'"
         )
     );
 
@@ -120,7 +120,7 @@ $perday = round($total / $days_online, 2);
 $perhour = round($total / $days_online / 24, 2);
 $permonth = round($total / $days_online * 24, 2);
 
-$tmp = mysqli_fetch_array(safe_query("SELECT `max(count)` as `MAXIMUM` FROM `" . PREFIX . "counter_stats`"));
+$tmp = mysqli_fetch_array(safe_query("SELECT max(count) as `MAXIMUM` FROM `" . PREFIX . "counter_stats`"));
 $maxvisits = $tmp[ 'MAXIMUM' ];
 
 $online_lasthour =
@@ -150,10 +150,10 @@ $get =
     mysqli_fetch_assoc(
         safe_query(
             "SELECT
-                `ROUND(SUM(DATE_FORMAT(FROM_DAYS(TO_DAYS(NOW()) - TO_DAYS(birthday)), '%y')) / COUNT(userID))` AS
+                ROUND(SUM(DATE_FORMAT(FROM_DAYS(TO_DAYS(NOW()) - TO_DAYS(birthday)), '%y')) / COUNT(userID)) AS
                     `avg_age`
             FROM
-                `" . PREFIX . "user`
+                " . PREFIX . "user
             WHERE
                 birthday > 0"
         )
@@ -163,7 +163,7 @@ $avg_age_user = $get[ 'avg_age' ];
 $avg_age_member = 0;
 $get = safe_query(
     "SELECT
-        `SUM(DATE_FORMAT(FROM_DAYS(TO_DAYS(NOW()) - TO_DAYS(u.birthday)), '%y')) / COUNT(u.userID)` AS `avg_age`
+        SUM(DATE_FORMAT(FROM_DAYS(TO_DAYS(NOW()) - TO_DAYS(u.birthday)), '%y')) / COUNT(u.userID) AS `avg_age`
     FROM
         " . PREFIX . "squads_members m
     JOIN
