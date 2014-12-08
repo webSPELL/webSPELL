@@ -215,7 +215,7 @@ if (!isclanmember($userID) and !iscashadmin($userID)) {
         $ergebnis = safe_query("SELECT * FROM " . PREFIX . "cash_box WHERE cashID='$id'");
         $ds = mysqli_fetch_array($ergebnis);
 
-        $date = date("Y-m-d",$ds['paydate']);
+        $date = date("Y-m-d", $ds[ 'paydate' ]);
 
         $info = getinput($ds[ 'info' ]);
         $usage = getinput($ds[ 'usedfor' ]);

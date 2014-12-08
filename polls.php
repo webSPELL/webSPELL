@@ -351,8 +351,8 @@ if ($action == "new") {
 
         if (isset($ds[ 'pollID' ])) {
 
-            $runtime_date = date("Y-m-d",$ds['laufzeit']);
-            $runtime_time = date("H:i",$ds['laufzeit']);
+            $runtime_date = date("Y-m-d", $ds[ 'laufzeit' ]);
+            $runtime_time = date("H:i", $ds[ 'laufzeit' ]);
 
             $polltitle = getinput($ds[ 'titel' ]);
             $option1 = getinput($ds[ 'o1' ]);

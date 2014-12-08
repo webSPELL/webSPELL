@@ -309,7 +309,11 @@ if ($action == "new") {
 } elseif ($action == "edit") {
     $demoID = $_GET[ 'demoID' ];
     if (isfileadmin($userID)) {
-        $ds = mysqli_fetch_array(safe_query("SELECT * FROM `" . PREFIX . "demos` WHERE `demoID` = '" . (int)$demoID."'"));
+        $ds = mysqli_fetch_array(
+            safe_query(
+                "SELECT * FROM `" . PREFIX . "demos` WHERE `demoID` = '" . (int)$demoID."'"
+            )
+        );
         $date = date("Y-m-d", $ds[ 'date' ]);
         $games = str_replace(' selected="selected"', '', $games);
         $games =
