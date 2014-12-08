@@ -95,3 +95,8 @@ a.flag.active img, a.flag:hover img {
     -webkit-filter: none;
     opacity: 1;
 }
+
+.input-group span.input-group-addon.captcha-img {
+    padding-top: 4px;
+    padding-bottom: 3px;
+}
