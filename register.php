@@ -37,6 +37,8 @@ if (isset($_POST[ 'save' ])) {
         $nickname = htmlspecialchars(mb_substr(trim($_POST[ 'nickname' ]), 0, 30));
         $pwd1 = $_POST[ 'pwd1' ];
         $pwd2 = $_POST[ 'pwd2' ];
+        $md5pwd = generatePasswordHash(stripslashes($pwd1));
+
         $mail = $_POST[ 'mail' ];
         $CAPCLASS = new \webspell\Captcha;
 
@@ -103,7 +105,7 @@ if (isset($_POST[ 'save' ])) {
                     " . PREFIX . "user
                 WHERE
                     password='$md5pwd' AND
-                    ip='" . $GLOBALS[ 'ip' ]
+                    ip='" . $GLOBALS[ 'ip' ]."'"
             );
         if (mysqli_num_rows($get_users)) {
             $error[ ] = 'Only one Account per IP';
@@ -111,14 +113,13 @@ if (isset($_POST[ 'save' ])) {
 
         if (count($error)) {
             $list = implode('<br>&#8226; ', $error);
-            $showerror = '<div class="alert alert-error">
+            $showerror = '<div class="alert alert-danger alert-dismissible" role="alert">
                 <button data-dismiss="alert" class="close" type="button">×</button>
                 <strong>' . $_language->module[ 'errors_there' ] . ':</strong><br><br>
                 &#8226; ' . $list
                 . '</div>';
         } else {
             // insert in db
-            $md5pwd = generatePasswordHash(stripslashes($pwd1));
             $registerdate = time();
             $activationkey = md5(RandPass(20));
             $activationlink = 'http://' . $hp_url . '/index.php?site=register&key=' . $activationkey;
