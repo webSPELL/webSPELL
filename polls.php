@@ -60,7 +60,7 @@ if ($action == "vote") {
                 WHERE
                     pollID = '" . $pollID . "' AND
                     hosts LIKE '%" . $_SERVER[ 'REMOTE_ADDR' ] . "%' AND
-                    intern<=" . isclanmember($userID)
+                    intern<=" . (int)isclanmember($userID)
             )
         );
 
@@ -397,7 +397,7 @@ if ($action == "new") {
     }
 
     $ergebnis =
-        safe_query("SELECT * FROM " . PREFIX . "poll WHERE pollID='$pollID' AND intern<=" . isclanmember($userID));
+        safe_query("SELECT * FROM " . PREFIX . "poll WHERE pollID='$pollID' AND intern<=" . (int)isclanmember($userID));
     $ds = mysqli_fetch_array($ergebnis);
     $bg1 = BG_1;
     $title = $ds[ 'titel' ];
@@ -525,7 +525,7 @@ if ($action == "new") {
         WHERE
             aktiv='1' AND
             laufzeit>" . time() . " AND
-            intern<=" . isclanmember($userID) . " AND
+            intern<=" . (int)isclanmember($userID) . " AND
             pollID='" . $poll . "'
         LIMIT 0,1"
     );
@@ -544,7 +544,7 @@ if ($action == "new") {
                     hosts
                     LIKE
                         '%" . $_SERVER[ 'REMOTE_ADDR' ] . "%' AND
-                        intern<=" . isclanmember($userID)
+                        intern<=" . (int)isclanmember($userID)
             )
         );
 
@@ -606,7 +606,7 @@ if ($action == "new") {
     }
 
     $ergebnis =
-        safe_query("SELECT * FROM " . PREFIX . "poll WHERE intern<=" . isclanmember($userID) . " ORDER BY pollID DESC");
+        safe_query("SELECT * FROM " . PREFIX . "poll WHERE intern<=" . (int)isclanmember($userID) . " ORDER BY pollID DESC");
     $anz = mysqli_num_rows($ergebnis);
     if ($anz) {
         $i = 1;

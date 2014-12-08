@@ -46,7 +46,7 @@ function vote($poll)
                 laufzeit>" . time() . " AND (
                     intern = false
                     OR
-                    intern = " . isclanmember($userID) . "
+                    intern = " . (int)isclanmember($userID) . "
                 ) AND
                 pollID='" . $poll . "'
             LIMIT 0,1"
