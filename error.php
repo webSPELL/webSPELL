@@ -53,13 +53,13 @@ foreach ($urlparts as $tag) {
         while ($ds = mysqli_fetch_assoc($sql)) {
             $data_check = null;
             if ($ds['rel'] == "news") {
-                $data_check = Tags::getNews($ds['ID']);
+                $data_check = \webspell\Tags::getNews($ds['ID']);
             } elseif ($ds['rel'] == "articles") {
-                $data_check = Tags::getArticle($ds['ID']);
+                $data_check = \webspell\Tags::getArticle($ds['ID']);
             } elseif ($ds['rel'] == "static") {
-                $data_check = Tags::getStaticPage($ds['ID']);
+                $data_check = \webspell\Tags::getStaticPage($ds['ID']);
             } elseif ($ds['rel'] == "faq") {
-                $data_check = Tags::getFaq($ds['ID']);
+                $data_check = \webspell\Tags::getFaq($ds['ID']);
             }
             if (is_array($data_check)) {
                 $results[] = $data_check;

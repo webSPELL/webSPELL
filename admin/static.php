@@ -122,7 +122,7 @@ elseif(isset($_GET['action']) and $_GET['action'] == "edit") {
 	elseif($ds['accesslevel'] == 1) $user = "checked=\"checked\"";
 	else $public = "checked=\"checked\"";
 
-	$tags = Tags::getTags('static', $staticID);
+	$tags = \webspell\Tags::getTags('static', $staticID);
 
 	$CAPCLASS = new \webspell\Captcha;
 	$CAPCLASS->createTransaction();

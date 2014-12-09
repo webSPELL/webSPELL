@@ -171,7 +171,7 @@ if(isset($_GET['action'])) {
 		}
 		$faqcats.='</select>';
 
-    	$tags = Tags::getTags('faq', $faqID);
+    	$tags = \webspell\Tags::getTags('faq', $faqID);
 
 	    $CAPCLASS = new \webspell\Captcha;
 	    $CAPCLASS->createTransaction();

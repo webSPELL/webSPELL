@@ -179,7 +179,7 @@ if ($action == "save") {
         }
     }
 
-    Tags::removeTags('articles', $_GET[ 'articlesID' ]);
+    \webspell\Tags::removeTags('articles', $_GET[ 'articlesID' ]);
 
     safe_query("DELETE FROM " . PREFIX . "articles WHERE articlesID='" . (int)$_GET[ 'articlesID' ]);
     safe_query("DELETE FROM " . PREFIX . "articles_contents WHERE articlesID='" . (int)$_GET[ 'articlesID' ]);
