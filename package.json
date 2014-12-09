@@ -13,5 +13,8 @@
     "grunt-phplint": "0.0.5",
     "grunt-text-replace": "^0.4.0",
     "logfile-grunt": "^0.1.5"
+  },
+  "scripts": {
+    "test": "grunt codecheck --verbose"
   }
 }

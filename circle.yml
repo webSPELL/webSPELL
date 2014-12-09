@@ -1,3 +1,6 @@
+general:
+  artifacts:
+    - "grunt-log.txt"
 ## Tests
 test:
   override:
