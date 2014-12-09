@@ -732,7 +732,7 @@ if ($action == "save") {
             FROM
                 `" . PREFIX . "files_categorys`
             WHERE
-                `filecatID` = '" . (int)$file[ 'filecatID' ]
+                `filecatID` = '" . (int)$file[ 'filecatID' ]."'"
         )
     );
     $category =
