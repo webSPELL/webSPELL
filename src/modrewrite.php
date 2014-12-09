@@ -95,11 +95,13 @@ class ModRewrite
         if (!isset(self::$rewriteBase)) {
             $path = str_replace(realpath($_SERVER['DOCUMENT_ROOT']), '', realpath(dirname(__FILE__) . '/../'));
             $path = str_replace('\\', '/', $path);
-            if ($path[0] != '/') {
-                $path = '/' . $path;
-            }
-            if ($path[strlen($path) - 1] != '/') {
-                $path = $path . '/';
+            if (strlen($path) > 0) {
+                if ($path[0] != '/') {
+                    $path = '/' . $path;
+                }
+                if ($path[strlen($path) - 1] != '/') {
+                    $path = $path . '/';
+                }
             }
             self::$rewriteBase = $path;
         }
