@@ -38,8 +38,14 @@ if ($type == 404) {
     $error_message = $_language->module[ 'message_404' ];
 }
 
-echo '<h2>' . $error_header . '</h2>';
-echo $error_message;
+if(isset($error_header)){
+
+    echo '<h2>' . $error_header . '</h2>';
+    echo $error_message;
+}
+else{
+    echo '<h2>Error</h2>';
+}
 
 $urlparts = preg_split('/[\s.,-\/]+/si', $_GET[ 'url' ]);
 $results = [];
