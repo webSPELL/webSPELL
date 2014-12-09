@@ -606,7 +606,16 @@ if ($action == "new") {
     }
 
     $ergebnis =
-        safe_query("SELECT * FROM " . PREFIX . "poll WHERE intern<=" . (int)isclanmember($userID) . " ORDER BY pollID DESC");
+        safe_query(
+            "SELECT
+              *
+            FROM
+              " . PREFIX . "poll
+            WHERE
+              intern<=" . (int)isclanmember($userID) . "
+            ORDER BY
+              pollID DESC"
+        );
     $anz = mysqli_num_rows($ergebnis);
     if ($anz) {
         $i = 1;
