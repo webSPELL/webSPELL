@@ -40,7 +40,7 @@ function get_all_sub_cats($parent, $start = 0)
         FROM
             `" . PREFIX . "files_categorys`
         WHERE
-            `subcatID` = '" . (int)$parent
+            `subcatID` = '" . (int)$parent."'"
     );
 
     if (mysqli_num_rows($get_catIDs)) {
@@ -53,7 +53,7 @@ function get_all_sub_cats($parent, $start = 0)
                     FROM
                         `" . PREFIX . "files_categorys`
                     WHERE
-                        `subcatID` = '" . (int)$dc[ 'filecatID' ]
+                        `subcatID` = '" . (int)$dc[ 'filecatID' ]."'"
                 )
             );
             if ($more > 0) {
@@ -250,7 +250,7 @@ if ($action == "save") {
             `info` = '" . $info . "',
             `accesslevel` = '" . $accesslevel . "'
         WHERE
-            `fileID` = '" . (int)$fileID
+            `fileID` = '" . (int)$fileID."'"
     ) || die(redirect("index.php?site=files", $_language->module[ 'failed_save_file-info' ], "3"));
     if (isset($file)) {
         if (
@@ -283,14 +283,14 @@ if ($action == "save") {
     $file = (int)$_GET[ 'file' ];
 
     if ($file) {
-        $ergebnis = safe_query("SELECT * FROM `" . PREFIX . "files` WHERE `fileID` = '" . $file);
+        $ergebnis = safe_query("SELECT * FROM `" . PREFIX . "files` WHERE `fileID` = '" . $file."'");
         $ds = mysqli_fetch_array($ergebnis);
 
         if (!stristr($ds[ 'file' ], "http://") && !stristr($ds[ 'file' ], "ftp://")) {
             @unlink('./downloads/' . $ds[ 'file' ]);
         }
 
-        if (safe_query("DELETE FROM `" . PREFIX . "files` WHERE `fileID` = '" . (int)$file)) {
+        if (safe_query("DELETE FROM `" . PREFIX . "files` WHERE `fileID` = '" . (int)$file."'")) {
             redirect("index.php?site=files" . $ref, $_language->module[ 'file_deleted' ], "3");
         } else {
             redirect("index.php?site=files", $_language->module[ 'file_not_deleted' ], "3");
@@ -334,7 +334,7 @@ if ($action == "save") {
                             FROM
                                 `" . PREFIX . "files_categorys`
                             WHERE
-                                `subcatID` = '" . (int)$dr[ 'filecatID' ]
+                                `subcatID` = '" . (int)$dr[ 'filecatID' ]."'"
                         )
                     )
                 ) {
@@ -395,7 +395,7 @@ if ($action == "save") {
                                 FROM
                                     `" . PREFIX . "files_categorys`
                                 WHERE
-                                    `subcatID` = '" . (int)$dr[ 'filecatID' ]
+                                    `subcatID` = '" . (int)$dr[ 'filecatID' ]."'"
                             )
                         )
                     ) {
@@ -408,7 +408,7 @@ if ($action == "save") {
             $filecats = generate_options();
 
             $file = mysqli_fetch_array(
-                safe_query("SELECT * FROM `" . PREFIX . "files` WHERE `fileID` = '" . (int)$fileID)
+                safe_query("SELECT * FROM `" . PREFIX . "files` WHERE `fileID` = '" . (int)$fileID."'")
             );
             $filecats = str_replace(
                 'value="' . $file[ 'filecatID' ] . '"',
@@ -509,7 +509,7 @@ if ($action == "save") {
                 `subcatID`
             FROM
                 `" . PREFIX . "files_categorys`
-            WHERE `filecatID` = '" . (int)$catID
+            WHERE `filecatID` = '" . (int)$catID."'"
         )
     );
     $category = $cat[ 'name' ];
@@ -525,7 +525,7 @@ if ($action == "save") {
                 FROM
                     `" . PREFIX . "files_categorys`
                 WHERE
-                    `filecatID` = '" . (int)$cat_id
+                    `filecatID` = '" . (int)$cat_id."'"
             )
         );
         $category = '<a href="index.php?site=files&amp;cat=' . $subcat[ 'filecatID' ] . '" class="titlelink">' .
@@ -692,7 +692,7 @@ if ($action == "save") {
             FROM
                 `" . PREFIX . "files`
             WHERE
-                `fileID` = '" . $_GET[ 'file' ]
+                `fileID` = '" . $_GET[ 'file' ]."'"
         )
     );
     if ($file[ 'accesslevel' ] == 2 && !isclanmember($userID)) {
@@ -752,7 +752,7 @@ if ($action == "save") {
                 FROM
                   `" . PREFIX . "files_categorys`
                 WHERE
-                    `filecatID` = '" . (int)$cat_id
+                    `filecatID` = '" . (int)$cat_id."'"
             )
         );
         $category = '<a href="index.php?site=files&amp;cat=' . $subcat[ 'filecatID' ] . '" class="titlelink">' .
@@ -796,7 +796,7 @@ if ($action == "save") {
         $ratingpic .= '<img src="images/icons/rating_' . $pic . '.gif">';
     }
     if ($loggedin) {
-        $getfiles = safe_query("SELECT `files` FROM `" . PREFIX . "user` WHERE `userID` = '" . (int)$userID);
+        $getfiles = safe_query("SELECT `files` FROM `" . PREFIX . "user` WHERE `userID` = '" . (int)$userID."'");
         $found = false;
         if (mysqli_num_rows($getfiles)) {
             $ga = mysqli_fetch_array($getfiles);
@@ -885,8 +885,6 @@ if ($action == "save") {
 
     eval("\$files_display = \"" . gettemplate("files_display") . "\";");
     echo $files_display;
-} elseif ($action == "statistic") {
-    // EXTENDED STATS
 } elseif ($action == "report") {
     // DEAD-LINK TICKET SYSTEM
     $mode = 'deadlink';
