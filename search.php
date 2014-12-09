@@ -332,7 +332,17 @@ if (
                         $res_link[ $i ] = '<a href="index.php?site=news_comments&amp;newsID=' . $newsID . '">' .
                             $_language->module[ 'news_link' ] . '</a>';
                         $res_occurr[ $i ] = substri_count_array($message_array, stripslashes($text)) +
-                            count(array_intersect(\webspell\Tags::getTags('news', $ds[ 'newsID' ], true), $keywords)) * 2;
+                            count(
+                                array_intersect(
+                                    \webspell\Tags::getTags(
+                                        'news',
+                                        $ds[ 'newsID' ],
+                                        true
+                                    ),
+                                    $keywords
+                                )
+                            )
+                            * 2;
                         $res_date[ $i ] = $ds[ 'date' ];
                         $res_type[ $i ] = $_language->module[ 'news' ];
 
