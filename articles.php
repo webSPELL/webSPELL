@@ -80,7 +80,7 @@ if ($action == "save") {
             articlesID='" . (int)$articlesID."'"
     );
 
-    webspell\Tags::setTags('articles', $articlesID, $_POST[ 'tags' ]);
+    \webspell\Tags::setTags('articles', $articlesID, $_POST[ 'tags' ]);
 
     $anzpages =
         mysqli_num_rows(
@@ -424,7 +424,7 @@ if ($action == "new") {
                 $_language->module[ 'self' ] . '';
         }
 
-        $tags = webspell\Tags::getTags('articles', $articlesID);
+        $tags = \webspell\Tags::getTags('articles', $articlesID);
 
         $comments = '<option value="0">' . $_language->module[ 'no_comments' ] . '</option><option value="1">' .
             $_language->module[ 'user_comments' ] . '</option><option value="2">' .
@@ -615,7 +615,7 @@ if ($action == "new") {
             $rateform = $_language->module[ 'login_for_rate' ];
         }
 
-        $tags = webspell\Tags::getTagsLinked('articles', $articlesID);
+        $tags = \webspell\Tags::getTagsLinked('articles', $articlesID);
 
         $bg1 = BG_1;
         eval ("\$articles = \"" . gettemplate("articles") . "\";");
