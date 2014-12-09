@@ -555,7 +555,7 @@ if (isset($_POST[ 'delete' ])) {
             $user .= '<option value="' . $ds[ 'buddy' ] . '">' . getnickname($ds[ 'buddy' ]) . '</option>';
         }
         if ($user == "") {
-            $user = '<option value="">' . $_language->module[ 'no_buddys' ] . '</option>';
+            $user = '<option value="">' . $_language->module[ 'no_buddies' ] . '</option>';
         } else {
             $user = '<option value="" selected="selected">---</option>' . $user;
         }
