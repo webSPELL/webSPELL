@@ -1,4 +1,4 @@
 ## Tests
 test:
   override:
-    - grunt codecheck
+    - grunt codecheck_circle
