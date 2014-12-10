@@ -132,6 +132,13 @@ module.exports = function(grunt) {
                 ]
             }
         },
+        changelog: {
+            release: {
+                options: {
+                    version: '4.3.0'
+                }
+            }
+        },
         //phpcpd: {
         //    application: {
         //        dir: "admin"
@@ -164,6 +171,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks("grunt-jscs");
     grunt.loadNpmTasks("grunt-lintspaces");
     grunt.loadNpmTasks("grunt-text-replace");
+    grunt.loadNpmTasks('grunt-templated-changelog');
 
     grunt.registerTask("codecheck", [
         "lintspaces",
@@ -184,6 +192,7 @@ module.exports = function(grunt) {
         "jshint",
         "jscs"
     ]);
+
     grunt.registerTask("release", [
         "replace:copyright"
     ]);
