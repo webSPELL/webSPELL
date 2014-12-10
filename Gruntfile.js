@@ -135,7 +135,7 @@ module.exports = function(grunt) {
         changelog: {
             release: {
                 options: {
-                    version: '4.3.0'
+                    version: "4.3.0"
                 }
             }
         },
@@ -171,7 +171,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks("grunt-jscs");
     grunt.loadNpmTasks("grunt-lintspaces");
     grunt.loadNpmTasks("grunt-text-replace");
-    grunt.loadNpmTasks('grunt-templated-changelog');
+    grunt.loadNpmTasks("grunt-templated-changelog");
 
     grunt.registerTask("codecheck", [
         "lintspaces",
