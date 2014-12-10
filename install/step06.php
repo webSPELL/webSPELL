@@ -69,6 +69,7 @@ if($_POST['installtype'] == 'update') {
 	update40100_40101();
 	update40101_420();
 	update420_430();
+    updatePasswordHash();
 
 }
 elseif($_POST['installtype'] == 'full') {
@@ -175,6 +176,7 @@ elseif($_POST['installtype'] == 'update_beta') {
 	update40100_40101();
 	update40101_420();
 	update420_430();
+    updatePasswordHash();
 
 }
 elseif($_POST['installtype'] == 'update_beta5') {
@@ -196,6 +198,7 @@ elseif($_POST['installtype'] == 'update_beta5') {
 	update40100_40101();
 	update40101_420();
 	update420_430();
+    updatePasswordHash();
 
 }
 
@@ -217,6 +220,7 @@ elseif($_POST['installtype'] == 'update_beta6') {
 	update40100_40101();
 	update40101_420();
 	update420_430();
+    updatePasswordHash();
 
 }
 
@@ -237,6 +241,7 @@ elseif($_POST['installtype'] == 'update_final') {
 	update40100_40101();
 	update40101_420();
 	update420_430();
+    updatePasswordHash();
 
 }
 
@@ -256,6 +261,7 @@ elseif($_POST['installtype'] == 'update_40100') {
 	update40100_40101();
 	update40101_420();
 	update420_430();
+    updatePasswordHash();
 
 }
 elseif($_POST['installtype'] == 'update_40102') {
@@ -273,6 +279,7 @@ elseif($_POST['installtype'] == 'update_40102') {
 
 	update40101_420();
 	update420_430();
+    updatePasswordHash();
 
 }
 elseif($_POST['installtype'] == 'update_420') {
@@ -289,6 +296,7 @@ elseif($_POST['installtype'] == 'update_420') {
     mysqli_query($_database, "SET NAMES 'utf8'");
 
 	update420_430();
+    updatePasswordHash();
 
 }
 include("../src/func/filesystem.php");
