@@ -235,11 +235,18 @@ if (isset($_POST[ 'savemods' ])) {
 
     $CAPCLASS = new \webspell\Captcha;
     if ($CAPCLASS->checkCaptcha(0, $_POST[ 'captcha_hash' ])) {
-        safe_query("UPDATE " . PREFIX . "forum_boards SET category='$kath',
-		           name='$name',
-	             info='$boardinfo',
-	             readgrps='$readgrps',
-	             writegrps='$writegrps' WHERE boardID='$boardID'");
+        safe_query(
+            "UPDATE
+                " . PREFIX . "forum_boards
+            SET
+                category='$kath',
+                name='$name',
+                info='$boardinfo',
+                readgrps='$readgrps',
+                writegrps='$writegrps'
+            WHERE
+                boardID='$boardID'"
+        );
         safe_query(
             "UPDATE
                 `" . PREFIX . "forum_topics`
@@ -653,15 +660,17 @@ if ($action == "mods") {
     while ($ds = mysqli_fetch_array($ergebnis)) {
 
         echo '<tr bgcolor="#CCCCCC">
-	      <td class="td_head"><b>' . getinput($ds[ 'name' ]) . '</b><br><small>' . getinput($ds[ 'info' ]) . '</small></td>
-	      <td class="td_head"></td>
-	      <td class="td_head" align="center"><input type="button"
-	      onclick="MM_goToURL(\'parent\',\'admincenter.php?site=boards&amp;action=editcat&amp;catID=' .
+            <td class="td_head">
+                <b>' . getinput($ds[ 'name' ]) . '</b><br><small>' . getinput($ds[ 'info' ]) . '</small>
+            </td>
+          <td class="td_head"></td>
+          <td class="td_head" align="center"><input type="button"
+          onclick="MM_goToURL(\'parent\',\'admincenter.php?site=boards&amp;action=editcat&amp;catID=' .
             $ds[ 'catID' ] . '\');return document.MM_returnValue" value="' . $_language->module[ 'edit' ] . '" />
-	      <input type="button" onclick="MM_confirm(\'' . $_language->module[ 'really_delete_category' ] .
+        <input type="button" onclick="MM_confirm(\'' . $_language->module[ 'really_delete_category' ] .
             '\', \'admincenter.php?site=boards&amp;delcat=true&amp;catID=' . $ds[ 'catID' ] . '&amp;captcha_hash=' .
             $hash . '\')" value="' . $_language->module[ 'delete' ] . '" /></td>
-	      <td class="td_head" align="center"><select name="sortcat[]">';
+        <td class="td_head" align="center"><select name="sortcat[]">';
 
         for ($n = 1; $n <= $anz; $n++) {
             if ($ds[ 'sort' ] == $n) {
@@ -727,8 +736,11 @@ if ($action == "mods") {
     }
 
     $boards = safe_query("SELECT * FROM " . PREFIX . "forum_boards WHERE category='0' ORDER BY sort");
-    $tmp = mysqli_fetch_assoc(safe_query("SELECT count(boardID) as cnt FROM " . PREFIX .
-            "forum_boards WHERE category='0'"));
+    $tmp = mysqli_fetch_assoc(
+        safe_query(
+            "SELECT count(boardID) as cnt FROM " . PREFIX . "forum_boards WHERE category='0'"
+        )
+    );
     $anzboards = $tmp[ 'cnt' ];
     $CAPCLASS = new \webspell\Captcha;
     $CAPCLASS->createTransaction();
@@ -752,13 +764,13 @@ if ($action == "mods") {
             </td>
             <td bgcolor="#FFFFFF"><select name="sort[]">';
 
-            for ($n = 1; $n <= $anzboards; $n++) {
-                if ($ds[ 'sort' ] == $n) {
-                    echo '<option value="' . $db[ 'boardID' ] . '-' . $n . '" selected="selected">' . $n . '</option>';
-                } else {
-                    echo '<option value="' . $db[ 'boardID' ] . '-' . $n . '">' . $n . '</option>';
-                }
+        for ($n = 1; $n <= $anzboards; $n++) {
+            if ($ds[ 'sort' ] == $n) {
+                echo '<option value="' . $db[ 'boardID' ] . '-' . $n . '" selected="selected">' . $n . '</option>';
+            } else {
+                echo '<option value="' . $db[ 'boardID' ] . '-' . $n . '">' . $n . '</option>';
             }
+        }
             echo '</select></td></tr>';
     }
 

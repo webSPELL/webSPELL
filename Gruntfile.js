@@ -12,48 +12,19 @@ module.exports = function(grunt) {
             "templates/*.html"
         ],
         phps = [
+            "**/*.php",
             "!admin/admincenter.php",
-            "!admin/faqcategories.php",
-            "!admin/filecategories.php",
-            "!admin/gallery.php",
-            "!admin/games.php",
-            "!admin/group-users.php",
-            "!admin/history.php",
-            "!admin/imprint.php",
-            "!admin/index.php",
-            "!admin/linkcategories.php",
-            "!admin/lock.php",
-            "!admin/members.php",
-            "!admin/modrewrite.php",
-            "!admin/newsletter.php",
-            "!admin/overview.php",
-            "!admin/page_statistic.php",
-            "!admin/partners.php",
-            "!admin/ranks.php",
-            "!admin/rubrics.php",
-            "!admin/scrolltext.php",
-            "!admin/servers.php",
-            "!admin/settings.php",
-            "!admin/smileys.php",
-            "!admin/spam.php",
-            "!admin/sponsors.php",
-            "!admin/spuads.php",
-            "!admin/style.php",
-            "!admin/update.php",
-            "!admin/users.php",
-            "!admin/visitor_statistic.php",
-            "!admin/visitor_statistic_image.php",
+            "!admin/languages/**/*.php",
             "!install/**/*.php",
             "!languages/**/*.php",
-            "src/**/*.php",
-            "*.php",
             "!index.php"
         ],
         csss = [ "**/*.css" ],
         excludes = [
             "!node_modules/**",
             "!components/**",
-            "!vendor/**"
+            "!vendor/**",
+            "!tmp/**"
         ];
 
     require("logfile-grunt")(grunt, {
@@ -108,6 +79,7 @@ module.exports = function(grunt) {
             options: {
                 bin: "vendor/bin/phpcs",
                 standard: "Ruleset.xml",
+                tabWidth: "4",
                 showSniffCodes: true
             }
         },

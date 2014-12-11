@@ -513,7 +513,7 @@ if (!$userID) {
     </div>
 </div>';
             }
-            $birthday = date("Y-m-d",strtotime($ds[ 'birthday' ]));
+            $birthday = date("Y-m-d", strtotime($ds[ 'birthday' ]));
             $countries = getcountries();
             $countries =
                 str_replace(
@@ -522,14 +522,16 @@ if (!$userID) {
                     $countries
                 );
             if ($ds[ 'avatar' ]) {
-                $viewavatar = '&#8226; <a href="javascript:void(0);" onclick="window.open(\'images/avatars/' . $ds[ 'avatar' ] .
-                    '\',\'avatar\',\'width=120,height=120\')">' . $_language->module[ 'avatar' ] . '</a>';
+                $viewavatar = '&#8226; <a href="javascript:void(0);" onclick="window.open(\'images/avatars/' .
+                    $ds[ 'avatar' ] . '\',\'avatar\',\'width=120,height=120\')">' . $_language->module[ 'avatar' ] .
+                    '</a>';
             } else {
                 $viewavatar = $_language->module[ 'avatar' ];
             }
             if ($ds[ 'userpic' ]) {
-                $viewpic = '&#8226; <a href="javascript:void(0);" onclick="window.open(\'images/userpics/' . $ds[ 'userpic' ] .
-                    '\',\'userpic\',\'width=250,height=230\')">' . $_language->module[ 'userpic' ] . '</a>';
+                $viewpic = '&#8226; <a href="javascript:void(0);" onclick="window.open(\'images/userpics/' .
+                    $ds[ 'userpic' ] . '\',\'userpic\',\'width=250,height=230\')">' . $_language->module[ 'userpic' ] .
+                    '</a>';
             } else {
                 $viewpic = $_language->module[ 'userpic' ];
             }

@@ -27,7 +27,7 @@
 
 $_language->readModule('contact');
 
-if (!isuseradmin($userID) OR mb_substr(basename($_SERVER[ 'REQUEST_URI' ]), 0, 15) != "admincenter.php") {
+if (!isuseradmin($userID) || mb_substr(basename($_SERVER[ 'REQUEST_URI' ]), 0, 15) != "admincenter.php") {
     die($_language->module[ 'access_denied' ]);
 }
 
@@ -58,8 +58,7 @@ if (isset($_GET[ 'delete' ])) {
     $CAPCLASS = new \webspell\Captcha;
     if ($CAPCLASS->checkCaptcha(0, $_POST[ 'captcha_hash' ])) {
         if (checkforempty(['name', 'email'])) {
-            safe_query("INSERT INTO " . PREFIX . "contact ( name, email, sort )
-							values( '$name', '$email', '1' )");
+            safe_query("INSERT INTO " . PREFIX . "contact ( name, email, sort ) values( '$name', '$email', '1' )");
         } else {
             echo $_language->module[ 'information_incomplete' ];
         }
@@ -186,13 +185,14 @@ if (isset($_GET[ 'action' ])) {
                 '&amp;captcha_hash=' . $hash . '\')" value="' . $_language->module[ 'delete' ] . '" /></td>
             <td class="' . $td . '" align="center">
                 <select name="sortcontact[]">';
-                    for ($n = 1; $n <= $anz; $n++) {
-                        if ($ds[ 'sort' ] == $n) {
-                            echo '<option value="' . $ds[ 'contactID' ] . '-' . $n . '" selected="selected">' . $n . '</option>';
-                        } else {
-                            echo '<option value="' . $ds[ 'contactID' ] . '-' . $n . '">' . $n . '</option>';
-                        }
-                    }
+        for ($n = 1; $n <= $anz; $n++) {
+            if ($ds[ 'sort' ] == $n) {
+                echo '<option value="' . $ds[ 'contactID' ] . '-' . $n . '" selected="selected">' . $n .
+                    '</option>';
+            } else {
+                echo '<option value="' . $ds[ 'contactID' ] . '-' . $n . '">' . $n . '</option>';
+            }
+        }
 
         echo '</select></td></tr>';
 

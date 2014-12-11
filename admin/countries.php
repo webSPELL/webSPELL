@@ -27,7 +27,7 @@
 
 $_language->readModule('countries');
 
-if (!ispageadmin($userID) OR mb_substr(basename($_SERVER[ 'REQUEST_URI' ]), 0, 15) != "admincenter.php") {
+if (!ispageadmin($userID) || mb_substr(basename($_SERVER[ 'REQUEST_URI' ]), 0, 15) != "admincenter.php") {
     die($_language->module[ 'access_denied' ]);
 }
 
@@ -75,8 +75,10 @@ if ($action == "add") {
 		  </form>';
 } elseif ($action == "edit") {
     $ds =
-        mysqli_fetch_array(safe_query("SELECT * FROM " . PREFIX . "countries WHERE countryID='" . $_GET[ "countryID" ] .
-                "'"));
+        mysqli_fetch_array(safe_query(
+            "SELECT * FROM " . PREFIX . "countries WHERE countryID='" . $_GET[ "countryID" ] .
+            "'"
+        ));
     $pic = '<img src="../images/flags/' . $ds[ 'short' ] . '.gif" alt="' . $ds[ 'country' ] . '" />';
     if ($ds[ 'fav' ] == '1') {
         $fav = '<input type="checkbox" name="fav" value="1" checked="checked" />';
@@ -140,7 +142,7 @@ if ($action == "add") {
     }
     $CAPCLASS = new \webspell\Captcha;
     if ($CAPCLASS->checkCaptcha(0, $_POST[ 'captcha_hash' ])) {
-        if ($country AND $short) {
+        if ($country and $short) {
             $file_ext = strtolower(mb_substr($icon[ 'name' ], strrpos($icon[ 'name' ], ".")));
             if ($file_ext == ".gif") {
                 safe_query(
@@ -186,7 +188,7 @@ if ($action == "add") {
     }
     $CAPCLASS = new \webspell\Captcha;
     if ($CAPCLASS->checkCaptcha(0, $_POST[ 'captcha_hash' ])) {
-        if ($country AND $short) {
+        if ($country and $short) {
             if ($icon[ 'name' ] == "") {
                 if (
                     safe_query(

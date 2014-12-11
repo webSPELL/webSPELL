@@ -27,7 +27,7 @@
 
 $_language->readModule('faq');
 
-if (!ispageadmin($userID) OR mb_substr(basename($_SERVER[ 'REQUEST_URI' ]), 0, 15) != "admincenter.php") {
+if (!ispageadmin($userID) || mb_substr(basename($_SERVER[ 'REQUEST_URI' ]), 0, 15) != "admincenter.php") {
     die($_language->module[ 'access_denied' ]);
 }
 
@@ -271,7 +271,8 @@ if (isset($_GET[ 'action' ])) {
                             <td valign="top">' . $addflags . '</td>
                         </tr>
                     </table>
-                    <textarea id="message" rows="10" cols="" name="message" style="width: 100%;">' . getinput($ds[ 'answer' ]) . '</textarea>
+                    <textarea id="message" rows="10" cols="" name="message" style="width: 100%;">' .
+                        getinput($ds[ 'answer' ]) . '</textarea>
                 </td>
             </tr>
             <tr>
@@ -343,14 +344,14 @@ if (isset($_GET[ 'action' ])) {
                         '&amp;captcha_hash=' . $hash . '\')" value="' . $_language->module[ 'delete' ] . '" />
                 </td>
                 <td class="' . $td . '" align="center"><select name="sortfaq[]">';
-                    for ($j = 1; $j <= $anzfaq; $j++) {
-                        if ($db[ 'sort' ] == $j) {
-                            echo '<option value="' . $db[ 'faqID' ] . '-' . $j . '" selected="selected">' . $j .
-                            '</option>';
-                        } else {
-                            echo '<option value="' . $db[ 'faqID' ] . '-' . $j . '">' . $j . '</option>';
-                        }
-                    }
+            for ($j = 1; $j <= $anzfaq; $j++) {
+                if ($db[ 'sort' ] == $j) {
+                    echo '<option value="' . $db[ 'faqID' ] . '-' . $j . '" selected="selected">' . $j .
+                    '</option>';
+                } else {
+                    echo '<option value="' . $db[ 'faqID' ] . '-' . $j . '">' . $j . '</option>';
+                }
+            }
             echo '</select></td></tr>';
             $i++;
         }

@@ -119,7 +119,7 @@ if ($action == "new") {
             );
             $server = $ds[ 'server' ];
 
-            $date = date("Y-m-d",$ds['date']);
+            $date = date("Y-m-d", $ds[ 'date' ]);
         }
 
         eval ("\$clanwar_new = \"" . gettemplate("clanwar_new") . "\";");
@@ -487,9 +487,18 @@ if ($action == "new") {
         $maps = "";
         $hometeam = "";
 
-        $ds = mysqli_fetch_array(safe_query("SELECT * FROM `" . PREFIX . "clanwars` WHERE `cwID` = '" . (int)$cwID."'"));
+        $ds = mysqli_fetch_array(
+            safe_query(
+                "SELECT
+                    *
+                FROM
+                    `" . PREFIX . "clanwars`
+                WHERE
+                    `cwID` = '" . (int)$cwID."'"
+            )
+        );
 
-        $date = date("Y-m-d",$ds['date']);
+        $date = date("Y-m-d", $ds[ 'date' ]);
 
         $gamesa = safe_query("SELECT tag, name FROM `" . PREFIX . "games` ORDER BY `name`");
         while ($dv = mysqli_fetch_array($gamesa)) {
@@ -885,7 +894,14 @@ if ($action == "new") {
             // SQUAD STATISTICS
 
             $squadcws =
-                safe_query("SELECT * FROM `" . PREFIX . "clanwars` WHERE `squad` = '" . (int)$squaddata[ 'squadID' ]."'");
+                safe_query(
+                    "SELECT
+                        *
+                    FROM
+                        `" . PREFIX . "clanwars`
+                    WHERE
+                        `squad` = '" . (int)$squaddata[ 'squadID' ] . "'"
+                );
             $total = mysqli_num_rows($squadcws);
             $totalperc = percent($total, $totaltotal, 2);
 

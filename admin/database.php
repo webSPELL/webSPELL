@@ -29,7 +29,7 @@ if (isset($_POST[ 'upload' ])) {
 
     $_language->readModule('database');
 
-    if (!ispageadmin($userID) OR mb_substr(basename($_SERVER[ 'REQUEST_URI' ]), 0, 15) != "admincenter.php") {
+    if (!ispageadmin($userID) || mb_substr(basename($_SERVER[ 'REQUEST_URI' ]), 0, 15) != "admincenter.php") {
         die($_language->module[ 'access_denied' ]);
     }
     $upload = $_FILES[ 'sql' ];
@@ -75,7 +75,7 @@ if ($action == "optimize") {
 
     echo '<h1>&curren; ' . $_language->module[ 'database' ] . '</h1>';
 
-    if (!ispageadmin($userID) or mb_substr(basename($_SERVER[ 'REQUEST_URI' ]), 0, 15) != "admincenter.php") {
+    if (!ispageadmin($userID) || mb_substr(basename($_SERVER[ 'REQUEST_URI' ]), 0, 15) != "admincenter.php") {
         die($_language->module[ 'access_denied' ]);
     }
 
@@ -175,15 +175,17 @@ if ($action == "optimize") {
         systeminc('session');
         systeminc('login');
 
-        $anz = mysqli_num_rows(safe_query("SELECT userID FROM " . PREFIX .
-                "user_groups WHERE (page='1' OR super='1') AND userID='$userID'"));
+        $anz = mysqli_num_rows(safe_query(
+            "SELECT userID FROM " . PREFIX .
+            "user_groups WHERE (page='1' OR super='1') AND userID='$userID'"
+        ));
 
         if ($anz) {
             header("Expires: 0");
             header("Cache-Control: must-revalidate, post-check=0, pre-check=0");
             header("Content-Type: application/force-download");
             header("Content-Description: File Transfer");
-            if (is_integer(mb_strpos(strtolower($_SERVER[ "HTTP_USER_AGENT" ]), "msie")) AND
+            if (is_integer(mb_strpos(strtolower($_SERVER[ "HTTP_USER_AGENT" ]), "msie")) and
                 is_integer(mb_strpos(strtolower($_SERVER[ "HTTP_USER_AGENT" ]), "win"))
             ) {
                 header("Content-Disposition: filename=backup-" . strtolower(date("D-d-M-Y")) . ".sql;");
@@ -200,7 +202,7 @@ if ($action == "optimize") {
 
     $_language->readModule('database');
 
-    if (!ispageadmin($userID) OR mb_substr(basename($_SERVER[ 'REQUEST_URI' ]), 0, 15) != "admincenter.php") {
+    if (!ispageadmin($userID) || mb_substr(basename($_SERVER[ 'REQUEST_URI' ]), 0, 15) != "admincenter.php") {
         die($_language->module[ 'access_denied' ]);
     }
 

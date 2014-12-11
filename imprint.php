@@ -92,25 +92,27 @@ if ($imprint_type) {
     $imprint_head = htmloutput($ds[ 'imprint' ]);
 } else {
     $imprint_head = '<div class="form-horizontal">
-		<div class="form-group">
-			<label class="col-sm-3 control-label">' . $_language->module[ 'webmaster' ] . '</label>
-			<div class="col-sm-9">
-				<p class="form-control-static"><a href="mailto:' . mail_protect($admin_email) . '">' . $admin_name . '</a></p>
-			</div>
-		</div>
-		<div class="form-group">
-			<label class="col-sm-3 control-label">' . $_language->module[ 'admins' ] . '</label>
-			<div class="col-sm-9">
-				<p class="form-control-static">' . $administrators . '</p>
-			</div>
-		</div>
-		<div class="form-group">
-			<label class="col-sm-3 control-label">' . $_language->module[ 'webmaster' ] . '</label>
-			<div class="col-sm-9">
-				<p class="form-control-static">' . $moderators . '</p>
-			</div>
-		</div>
-	</div>';
+        <div class="form-group">
+            <label class="col-sm-3 control-label">' . $_language->module[ 'webmaster' ] . '</label>
+            <div class="col-sm-9">
+                <p class="form-control-static">
+                    <a href="mailto:' . mail_protect($admin_email) . '">' . $admin_name . '</a>
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">' . $_language->module[ 'admins' ] . '</label>
+            <div class="col-sm-9">
+                <p class="form-control-static">' . $administrators . '</p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">' . $_language->module[ 'webmaster' ] . '</label>
+            <div class="col-sm-9">
+                <p class="form-control-static">' . $moderators . '</p>
+            </div>
+        </div>
+    </div>';
 }
 
 eval ("\$imprint = \"" . gettemplate("imprint") . "\";");

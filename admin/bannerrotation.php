@@ -27,7 +27,7 @@
 
 $_language->readModule('bannerrotation');
 
-if (!ispageadmin($userID) OR mb_substr(basename($_SERVER[ 'REQUEST_URI' ]), 0, 15) != "admincenter.php") {
+if (!ispageadmin($userID) || mb_substr(basename($_SERVER[ 'REQUEST_URI' ]), 0, 15) != "admincenter.php") {
     die($_language->module[ 'access_denied' ]);
 }
 
@@ -151,7 +151,7 @@ if ($action == "add") {
 
     $CAPCLASS = new \webspell\Captcha;
     if ($CAPCLASS->checkCaptcha(0, $_POST[ 'captcha_hash' ])) {
-        if ($bannername AND $bannerurl AND $banner) {
+        if ($bannername && $bannerurl && $banner) {
             if (stristr($bannerurl, 'http://')) {
                 $bannerurl = $bannerurl;
             } else {
@@ -159,7 +159,7 @@ if ($action == "add") {
             }
 
             $file_ext = strtolower(mb_substr($banner[ 'name' ], strrpos($banner[ 'name' ], ".")));
-            if ($file_ext == ".gif" OR $file_ext == ".jpg" OR $file_ext == ".png") {
+            if ($file_ext == ".gif" || $file_ext == ".jpg" || $file_ext == ".png") {
                 safe_query(
                     "INSERT INTO
                         `" . PREFIX . "bannerrotation` (
@@ -183,8 +183,16 @@ if ($action == "add") {
                     @chmod($filepath . $banner[ 'name' ], 0755);
                     $file = $id . $file_ext;
                     rename($filepath . $banner[ 'name' ], $filepath . $file);
-                    if (safe_query("UPDATE " . PREFIX . "bannerrotation SET banner='" . $file . "' WHERE bannerID='" .
-                        $id . "'")) {
+                    if (
+                        safe_query(
+                            "UPDATE
+                                `" . PREFIX . "bannerrotation`
+                            SET
+                                `banner` = '" . $file . "'
+                            WHERE
+                                `bannerID` = '" . (int)$id . "'"
+                        )
+                    ) {
                         redirect("admincenter.php?site=bannerrotation", "", 0);
                     } else {
                         redirect("admincenter.php?site=bannerrotation", "", 0);
@@ -215,7 +223,7 @@ if ($action == "add") {
     }
     $CAPCLASS = new \webspell\Captcha;
     if ($CAPCLASS->checkCaptcha(0, $_POST[ 'captcha_hash' ])) {
-        if ($banner AND $bannername AND $bannerurl) {
+        if ($banner && $bannername && $bannerurl) {
             if (stristr($bannerurl, 'http://')) {
                 $bannerurl = $bannerurl;
             } else {
@@ -239,7 +247,7 @@ if ($action == "add") {
                 }
             } else {
                 $file_ext = strtolower(mb_substr($banner[ 'name' ], strrpos($banner[ 'name' ], ".")));
-                if ($file_ext == ".gif" OR $file_ext == ".jpg" OR $file_ext == ".png") {
+                if ($file_ext == ".gif" || $file_ext == ".jpg" || $file_ext == ".png") {
                     move_uploaded_file($banner[ 'tmp_name' ], $filepath . $banner[ 'name' ]);
                     @chmod($filepath . $banner[ 'name' ], 0755);
                     $file = $_POST[ 'bannerID' ] . $file_ext;
