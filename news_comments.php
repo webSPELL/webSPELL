@@ -191,7 +191,7 @@ if ($newsID) {
 
         $bg1 = BG_1;
 
-        $tags = Tags::getTagsLinked('news', $newsID);
+        $tags = \webspell\Tags::getTagsLinked('news', $newsID);
 
         eval ("\$news = \"" . gettemplate("news") . "\";");
         echo $news;

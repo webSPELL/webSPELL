@@ -1,0 +1,7 @@
+general:
+  artifacts:
+    - "grunt-log.txt"
+## Tests
+test:
+  override:
+    - grunt codecheck_circle

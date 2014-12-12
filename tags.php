@@ -34,13 +34,13 @@ if (isset($_GET[ 'tag' ])) {
         while ($ds = mysqli_fetch_assoc($sql)) {
             $data_check = null;
             if ($ds[ 'rel' ] == "news") {
-                $data_check = Tags::getNews($ds[ 'ID' ]);
+                $data_check = \webspell\Tags::getNews($ds[ 'ID' ]);
             } elseif ($ds[ 'rel' ] == "articles") {
-                $data_check = Tags::getArticle($ds[ 'ID' ]);
+                $data_check = \webspell\Tags::getArticle($ds[ 'ID' ]);
             } elseif ($ds[ 'rel' ] == "static") {
-                $data_check = Tags::getStaticPage($ds[ 'ID' ]);
+                $data_check = \webspell\Tags::getStaticPage($ds[ 'ID' ]);
             } elseif ($ds[ 'rel' ] == "faq") {
-                $data_check = Tags::getFaq($ds[ 'ID' ]);
+                $data_check = \webspell\Tags::getFaq($ds[ 'ID' ]);
             }
             if (is_array($data_check)) {
                 $data[ ] = $data_check;
@@ -76,12 +76,12 @@ if (isset($_GET[ 'tag' ])) {
         }
     }
 
-    $tags = Tags::getTagCloud();
+    $tags = \webspell\Tags::getTagCloud();
     usort($tags[ 'tags' ], "tags_top_10");
     $str = '';
     for ($i = 0; $i < min(10, count($tags[ 'tags' ])); $i++) {
         $tag = $tags[ 'tags' ][ $i ];
-        $size = Tags::GetTagSizeLogarithmic($tag[ 'count' ], $tags[ 'min' ], $tags[ 'max' ], 10, 25, 0);
+        $size = \webspell\Tags::GetTagSizeLogarithmic($tag[ 'count' ], $tags[ 'min' ], $tags[ 'max' ], 10, 25, 0);
         $str .= " <a href='index.php?site=tags&amp;tag=" . $tag[ 'name' ] . "' style='font-size:" . $size .
             "px;text-decoration:none;'>" . $tag[ 'name' ] . "</a> ";
     }

@@ -98,7 +98,7 @@ function parseWebspellURL($parameters = null)
                         'index.php?site=articles'
                     );
                     $returned_title[] = array($get['title']);
-                    $metadata['keywords'] = Tags::getTags('articles', $articlesID);
+                    $metadata['keywords'] = \webspell\Tags::getTags('articles', $articlesID);
                 } else {
                     $returned_title[] = array($_language->module['articles']);
                 }
@@ -238,7 +238,7 @@ function parseWebspellURL($parameters = null)
                         'index.php?site=faq&amp;action=faqcat&amp;faqcatID=' . $faqcatID
                     );
                     $returned_title[] = array($get2['question']);
-                    $metadata['keywords'] = Tags::getTags('faq', $faqID);
+                    $metadata['keywords'] = \webspell\Tags::getTags('faq', $faqID);
                 } else {
                     $returned_title[] = array($_language->module['faq']);
                 }
@@ -595,7 +595,7 @@ function parseWebspellURL($parameters = null)
 
                 $headline = $message_array[$showlang]['headline'];
 
-                $metadata['keywords'] = Tags::getTags('news', $newsID);
+                $metadata['keywords'] = \webspell\Tags::getTags('news', $newsID);
 
                 $returned_title[] = array($_language->module['news'], 'index.php?site=news');
                 $returned_title[] = array($headline);
@@ -707,7 +707,7 @@ function parseWebspellURL($parameters = null)
                     safe_query("SELECT name FROM `" . PREFIX . "static` WHERE staticID=" . (int)$staticID)
                 );
                 $returned_title[] = array($get['name']);
-                $metadata['keywords'] = Tags::getTags('static', $staticID);
+                $metadata['keywords'] = \webspell\Tags::getTags('static', $staticID);
                 break;
 
             case 'usergallery':

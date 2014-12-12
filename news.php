@@ -203,7 +203,7 @@ if ($action == "new") {
             newsID='" . (int)$newsID
     );
 
-    Tags::setTags('news', $newsID, $_POST[ 'tags' ]);
+    \webspell\Tags::setTags('news', $newsID, $_POST[ 'tags' ]);
 
     $update_langs = [];
     $query = safe_query("SELECT language FROM " . PREFIX . "news_contents WHERE newsID = '" . (int)$newsID);
@@ -387,7 +387,7 @@ if ($action == "new") {
         $related .= '&#8226; <a href="' . $ds[ 'url4' ] . '">' . $ds[ 'link4' ] . '</a> ';
     }
 
-    $tags = Tags::getTagsLinked('news', $ds[ 'newsID' ]);
+    $tags = \webspell\Tags::getTagsLinked('news', $ds[ 'newsID' ]);
 
     eval ("\$news = \"" . gettemplate("news") . "\";");
     echo $news;
@@ -479,7 +479,7 @@ if ($action == "new") {
                     }
                 }
             }
-            Tags::removeTags('news', $id);
+            \webspell\Tags::removeTags('news', $id);
             safe_query("DELETE FROM " . PREFIX . "news WHERE newsID='" . (int)$id);
             safe_query("DELETE FROM " . PREFIX . "news_contents WHERE newsID='" . (int)$id);
             safe_query("DELETE FROM " . PREFIX . "comments WHERE parentID='" . (int)$id . "' AND type='ne'");
@@ -514,7 +514,7 @@ if ($action == "new") {
         }
     }
 
-    Tags::removeTags('news', $id);
+    \webspell\Tags::removeTags('news', $id);
 
     safe_query("DELETE FROM " . PREFIX . "news WHERE newsID='" . (int)$id);
     safe_query("DELETE FROM " . PREFIX . "news_contents WHERE newsID='" . (int)$id);
@@ -660,7 +660,7 @@ if ($action == "new") {
         $window4_self = 'checked="checked"';
     }
 
-    $tags = Tags::getTags('news', $newsID);
+    $tags = \webspell\Tags::getTags('news', $newsID);
 
     $comments = '<option value="0">' . $_language->module[ 'no_comments' ] . '</option><option value="1">' .
         $_language->module[ 'user_comments' ] . '</option><option value="2">' .
@@ -1196,7 +1196,7 @@ if ($action == "new") {
             $comments = '';
         }
 
-        $tags = Tags::getTagsLinked('news', $ds[ 'newsID' ]);
+        $tags = \webspell\Tags::getTagsLinked('news', $ds[ 'newsID' ]);
 
         $adminaction = '';
         if (isnewsadmin($userID)) {
