@@ -62,6 +62,11 @@ class Language
         }
     }
 
+    public function getRootPath()
+    {
+        return $this->language_path;
+    }
+
     public function readModule($module, $add = false)
     {
 

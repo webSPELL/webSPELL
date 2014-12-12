@@ -330,7 +330,7 @@ function detectUserLanguage()
         if (count($matches)) {
             $languages_found = array_combine($matches[1], array_map("getLanguageWeight", $matches[4]));
             arsort($languages_found, SORT_NUMERIC);
-            $path = $GLOBALS['_language']->language_path;
+            $path = $GLOBALS['_language']->getRootPath();
             foreach ($languages_found as $key => $val) {
                 if (is_dir($path . $key)) {
                     return $key;
