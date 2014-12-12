@@ -103,7 +103,7 @@ class ModRewrite
                     $path = $path . '/';
                 }
             } else {
-            	$path = '/';
+                $path = '/';
             }
             self::$rewriteBase = $path;
         }
