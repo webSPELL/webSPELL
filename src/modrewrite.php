@@ -102,6 +102,8 @@ class ModRewrite
                 if ($path[strlen($path) - 1] != '/') {
                     $path = $path . '/';
                 }
+            } else {
+            	$path = '/';
             }
             self::$rewriteBase = $path;
         }
