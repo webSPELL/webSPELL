@@ -49,6 +49,7 @@ header('X-UA-Compatible: IE=edge,chrome=1');
 
     <!-- Head & Title include -->
     <title><?php echo PAGETITLE; ?></title>
+    <base href="<?php echo $rewriteBase; ?>">
     <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
     <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
     <link href="_stylesheet.css" rel="stylesheet">
