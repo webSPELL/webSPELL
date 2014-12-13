@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -63,7 +63,7 @@ $language_array = Array(
 	'preview'=>'överblick',
 	'publish_now'=>'publicera nu',
 	'publish_selected'=>'publicera vald',
-  'really_delete'=>'Vill du verkligen radera denna nyhet?',
+  	'really_delete'=>'Vill du verkligen radera denna nyhet?',
 	'rubric'=>'Rubrik',
 	'save_news'=>'save news',
 	'select_all'=>'markera alla',
@@ -81,6 +81,7 @@ $language_array = Array(
 	'view_more'=>'Se mer...',
 	'visitor_comments'=>'tillåt besökar kommentarer',
 	'written_by'=>'skrivet av',
-	'yes'=>'Ja'
+	'yes'=>'Ja',
+	'tags'=>'Taggar'
 );
 ?>

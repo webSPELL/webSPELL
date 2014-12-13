@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2010 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -32,6 +32,6 @@ $language_array = Array(
   'no_informations'=>'هیچ اطلاعاتی وجود ندارد',
   'report_message'=>'[b]جدید %s - گزارش[/b][br][br]%s-ID: %d[br]اطلاعات: %s[br]به روز کردن: [url]index.php?site=files&file=%d[/url]',
   'report_recognized'=>'.گزارش شما تایید شد',
-  'wrong_securitycode'=>'شما کد را اشتباه وارد کردید<br /><br />[<a href="javascript:back();">برگشت</a>]'
+  'wrong_securitycode'=>'شما کد را اشتباه وارد کردید<br><br>[<a href="javascript:back();">برگشت</a>]'
 );
 ?>

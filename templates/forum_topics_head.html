@@ -1,17 +1,15 @@
-<table width="100%" cellpadding="2" cellspacing="0">
-  <tr> 
-    <td>$page_link</td>
-    <td align="right">$actions</td>
-  </tr>
-</table>
-<table width="100%" cellpadding="2" cellspacing="0" border="0" bgcolor="$border">
-  <tr bgcolor="$bghead">
-    <td class="title" width="30">&nbsp;</td>
-		<td class="title" width="30">&nbsp;</td>
-    <td class="title">%topic%:</td>
-    <td class="title" width="20%" align="center">%author%:</td>
-    <td class="title" width="5%" align="center">%replies%:</td>
-    <td class="title" width="5%" align="center">%views%:</td>
-	<td class="title" width="20%" align="center">%lastpost%:</td>
-  </tr>
-  <tr><td colspan="7" bgcolor="$pagebg"></td></tr>
+<div class="row">
+	<div class="col-xs-6">$page_link</div>
+	<p class="col-xs-6 text-right">$actions</p>
+</div>
+
+<table class="table">
+	<tr>
+		<th>&nbsp;</th>
+		<th class="visible-md visible-lg">&nbsp;</th>
+		<th>%topic%:</th>
+		<th>%author%:</th>
+		<th class="visible-md visible-lg">%replies%:</th>
+		<th class="visible-md visible-lg">%views%:</th>
+		<th>%lastpost%:</th>
+	</tr>

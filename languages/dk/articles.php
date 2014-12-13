@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -33,7 +33,7 @@ $language_array = Array(
 	'already_rated'=>'<b>Artiklen er allerede vurderet!</b>',
 	'articles'=>'artikler',
 	'author'=>'Forfatter',
-	'bbcode'=>'&#8226; <a href="javascript:MM_openBrWindow(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> <b><u>TIL</u></b>',
+	'bbcode'=>'&#8226; <a href="javascript:window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> <b><u>TIL</u></b>',
 	'cancel'=>'Afbryd',
 	'date'=>'Dato',
 	'delete'=>'Slet',
@@ -63,7 +63,7 @@ $language_array = Array(
 	'really_delete'=>'Vil du virkelig slette denne artikel?',
 	'save_article'=>'Gem artiklen',
   'self'=>'samme vindue',
-	'smilies'=>'&#8226; <a href="javascript:MM_openBrWindow(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smilies</a> <b><u>Til</u></b>',
+	'smilies'=>'&#8226; <a href="javascript:window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smilies</a> <b><u>Til</u></b>',
 	'sort'=>'Sorter:',
 	'title'=>'Navn',
 	'top5_points'=>'TOP 5 ARTIKLER (Points)',
@@ -71,6 +71,7 @@ $language_array = Array(
 	'upload_images'=>'Upload billeder',
 	'user_comments'=>'Slå bruger kommentarer til',
 	'viewed'=>'Antal set',
-	'visitor_comments'=>'Slå gæst kommentarer til'
+	'visitor_comments'=>'Slå gæst kommentarer til',
+	'tags'=>'Tags'
 );
 ?>

@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2010 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -35,13 +35,13 @@ $language_array = Array(
   'and'=>'و',
   'author'=>'نویسنده',
   'back_buddy'=>'برگشت به لیست دوستان',
-  'bbcode_on'=>'<a href="javascript:MM_openBrWindow(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> روشن',
+  'bbcode_on'=>'<a href="javascript:window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> روشن',
   'board'=>'صفحه',
   'boards'=>'صفحات',
   'clanmember'=>'اعضای کلن',
   'close_topic'=>'تاپیک بسته شده',
   'closed'=>'بسته شده',
-  'closed_image'=>'<img src="images/icons/closed.gif" alt="" />',
+  'closed_image'=>'<img src="images/icons/closed.gif" alt="">',
   'default_topic_title'=>'(بدون عنوان)',
   'delete_posts'=>'حذف پست انتخاب شده',
   'delete_topic'=>'حذف تاپیک',
@@ -78,8 +78,8 @@ $language_array = Array(
   'new_reply'=>'پاسخ جدید',
   'new_topic'=>'تاپیک جدید',
   'newest_member'=>'عضو جدید',
-  'newreply_image'=>'<img src="images/icons/newreply.gif" border="0" alt="پاسخ" />',
-  'newtopic_image'=>'<img src="images/icons/newtopic.gif" border="0" alt="تاپیک جدید" />',
+  'newreply_image'=>'<img src="images/icons/newreply.gif" alt="پاسخ">',
+  'newtopic_image'=>'<img src="images/icons/newtopic.gif" alt="تاپیک جدید">',
   'next_7_days'=>'روز اینده7',
   'no_access'=>'غیر قابل دسترسی',
   'no_access_write'=>'.شما نمیتوانید در این صفحه بنویسید',
@@ -87,7 +87,7 @@ $language_array = Array(
   'no_new_posts'=>'هیچ پست جدیدی',
   'no_permission'=>'!شما اجازه مشاهده این صفحه را ندارید',
   'not_logged'=>'.لطفا وارد شوید',
-  'not_logged_msg'=>'<br /><br />!برای اینکه بتوانید در فروم فعالیت کنید باید عضو شوید<br /><br />rn    &#8226; <a href="index.php?site=register">عضو شوید</a><br />rn    &#8226; <a href="index.php?site=login">ورود</a>',
+  'not_logged_msg'=>'<br><br>!برای اینکه بتوانید در فروم فعالیت کنید باید عضو شوید<br><br>rn    &#8226; <a href="index.php?site=register">عضو شوید</a><br>rn    &#8226; <a href="index.php?site=login">ورود</a>',
   'notify'=>'من را با خبر کن وقتی که به پست پاسخ داده شد',
   'notify_mail'=>'پاسخ جدید توسط %poster% در تاپیکrn%topic_link%rn	rn%pagetitle% - %hpurl%',
   'notify_reply'=>'من را با خبر کن وقتی که به پست پاسخ داده شد',
@@ -108,9 +108,9 @@ $language_array = Array(
   'registered_users'=>'کاربران عضو شده',
   'reopen_topic'=>'باز کردن مجدد تاپیک',
   'replies'=>'جواب ها',
-  'search_image'=>'<img src="images/icons/search.gif" border="0" alt="" />',
+  'search_image'=>'<img src="images/icons/search.gif" alt="">',
   'select_all'=>'انتخاب همه',
-  'smilies_on'=>'<a href="javascript:MM_openBrWindow(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">شکلک ها</a> روشن',
+  'smilies_on'=>'<a href="javascript:window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">شکلک ها</a> روشن',
   'sort'=>'بر حسب',
   'stats'=>'وضعیت',
   'sticky'=>'مهم',

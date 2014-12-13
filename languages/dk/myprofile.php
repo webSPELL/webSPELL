@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -30,9 +30,10 @@ $language_array = Array(
 /* do not edit above this line */
 
 	'about_myself'=>'Om mig selv',
+	'activated'=>'aktiveret',
 	'avatar'=>'Billede:',
 	'back'=>'tilbage',
-	'bbcode'=>'<a href="javascript:MM_openBrWindow(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> er TIL',
+	'bbcode'=>'<a href="javascript:window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> er TIL',
 	'can_not_copy'=>'kan ikke kopiere fil fra serveren',
 	'change_password'=>'Skift adgangskode',
 	'change_mail'=>'Ændre email',
@@ -45,6 +46,7 @@ $language_array = Array(
 	'country'=>'Land',
 	'cpu'=>'CPU',
 	'date_of_birth'=>'Fødselsdato',
+	'deactivated'=>'deaktiveret',
 	'delete_max_230_210'=>'Slet (maks230/210)',
 	'delete_max_90_90'=>'Slet (maks90/90)',
 	'e-mail'=>'E-mail',
@@ -57,7 +59,12 @@ $language_array = Array(
 	'first_name'=>'Fornavn',
 	'forgot_new_pw'=>'Du glemte at indtaste et nyt kodeord!',
 	'forgot_old_pw'=>'Du glemte at skrive dit gamle kodeord!',
+	'format_date'=>'Dato format',
+	'format_time'=>'Tids format',
 	'graphiccard'=>'Grafikkort',
+	'guestbook'=>'Gæstebog',
+	'hdd'=>'Hard disk',
+	'headset'=>'Headset',
 	'hide_e-mail'=>'Skjul E-mail?',
 	'homepage'=>'Hjemmeside',
 	'html'=>'HTML er FRA',
@@ -94,8 +101,8 @@ Tak for din interesse
 	'nickname'=>'Øgenavn',
 	'nickname_already_in_use'=>'Øgenavn allerede i brug!',
 	'no'=>'Nej',
-	'not_logged_in'=>'Du skal være logget ind for at se din profil!<br /><br />
-   &#8226; <a href="index.php?site=register">registrer nu</a><br />
+	'not_logged_in'=>'Du skal være logget ind for at se din profil!<br><br>
+   &#8226; <a href="index.php?site=register">registrer nu</a><br>
    &#8226; <a href="index.php?site=login">log ind</a>',
 	'old_password'=>'gamle kodeord',
 	'old_pw_not_valid'=>'dit gamle kodeord er ikke korrekt',
@@ -114,7 +121,7 @@ Tak for din interesse
 	'repeated_pw_not_valid'=>'Kodeordet du gentog var forkert!',
 	'sexuality'=>'Køn',
 	'signature'=>'Underskrift',
-	'smilies'=>'<a href="javascript:MM_openBrWindow(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smilies</a> er TIL',
+	'smilies'=>'<a href="javascript:window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smilies</a> er TIL',
 	'soundcard'=>'Lydkort',
 	'town'=>'By',
 	'unknown'=>'Ikke tilgængelig',

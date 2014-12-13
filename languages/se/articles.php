@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -33,7 +33,7 @@ $language_array = Array(
 	'already_rated'=>'<b>Du har redan röstat på artiklen</b>',
 	'articles'=>'Artiklar',
 	'author'=>'Författare',
-	'bbcode'=>'&#8226; <a href="javascript:MM_openBrWindow(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> <b><u>PÅ</u></b>',
+	'bbcode'=>'&#8226; <a href="javascript:window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> <b><u>PÅ</u></b>',
 	'cancel'=>'Avbryt',
 	'date'=>'Datum',
 	'delete'=>'Radera',
@@ -63,7 +63,7 @@ $language_array = Array(
 	'really_delete'=>'Vill du verkligen radera denna artikel?',
 	'save_article'=>'Spara artikel',
 	'self'=>'Samma fönster',
-	'smilies'=>'&#8226; <a href="javascript:MM_openBrWindow(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smilies</a> <b><u>PÅ</u></b>',
+	'smilies'=>'&#8226; <a href="javascript:window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smilies</a> <b><u>PÅ</u></b>',
 	'sort'=>'Sort:',
 	'title'=>'Rubrik',
 	'top5_points'=>'TOP 5 ARTIKLAR (Poäng)',
@@ -71,6 +71,7 @@ $language_array = Array(
 	'upload_images'=>'Ladda upp bilder',
 	'user_comments'=>'Tillåt kommentarer från användare',
 	'viewed'=>'Visningar',
-	'visitor_comments'=>'Tillåt kommentarer från besökare'
+	'visitor_comments'=>'Tillåt kommentarer från besökare',
+	'tags'=>'Taggar'
 );
 ?>

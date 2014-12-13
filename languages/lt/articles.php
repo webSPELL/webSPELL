@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -33,7 +33,7 @@ $language_array = Array(
 	'already_rated'=>'<b>Straipsnis jau įvertintas!</b>',
 	'articles'=>'straipsniai',
 	'author'=>'Autorius',
-	'bbcode'=>'&#8226; <a href="javascript:MM_openBrWindow(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBKodas</a> <b><u>ĮJUNGTAS</u></b>',
+	'bbcode'=>'&#8226; <a href="javascript:window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBKodas</a> <b><u>ĮJUNGTAS</u></b>',
 	'cancel'=>'Atšaukti',
 	'date'=>'Data',
 	'delete'=>'Ištrinti',
@@ -63,7 +63,7 @@ $language_array = Array(
 	'really_delete'=>'Ar tikrai norite ištrinti šį straipsnį?',
 	'save_article'=>'Išsaugoti straipsnį',
 	'self'=>'tame pačiame lange',
-	'smilies'=>'&#8226; <a href="javascript:MM_openBrWindow(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Šypsenėlės</a> <b><u>ĮJUNGTOS</u></b>',
+	'smilies'=>'&#8226; <a href="javascript:window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Šypsenėlės</a> <b><u>ĮJUNGTOS</u></b>',
 	'sort'=>'Rykiuoti:',
 	'title'=>'Antraštė',
 	'top5_points'=>'GERIAUSI 5 STRAIPSNIAI (Taškais)',
@@ -71,6 +71,7 @@ $language_array = Array(
 	'upload_images'=>'Atsiųsti vaizdus',
 	'user_comments'=>'Įjungti vartotojo komentarus',
 	'viewed'=>'Peržiūrėta',
-	'visitor_comments'=>'Įjungti lankytojo komentarus'
+	'visitor_comments'=>'Įjungti lankytojo komentarus',
+	'tags'=>'Žymos'
 );
 ?>

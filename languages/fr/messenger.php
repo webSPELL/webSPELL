@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -54,7 +54,7 @@ $language_array = Array(
 	'no_incoming'=>'Aucun message reçu.',
 	'no_outgoing'=>'Aucun message envoyé.',
 	'no_subject'=>'(Aucun objet)',
-	'not_logged'=>'Vous n\'êtes pas connecté.<br /><a href="index.php?site=login">Se connecter</a> | <a href="index.php?site=register">S\'enregistrer</a>',
+	'not_logged'=>'Vous n\'êtes pas connecté.<br><a href="index.php?site=login">Se connecter</a> | <a href="index.php?site=register">S\'enregistrer</a>',
 	'options'=>'Options',
 	'outgoing'=>'Sortant',
 	'read'=>'Lire',
@@ -73,7 +73,7 @@ $language_array = Array(
 	'title'=>'Objet',
 	'your_message'=>'Votre message:',
 	'mail_subject'=>'Vous avez un nouveau message !',
-	'mail_body'=>'<b>Salut %nickname%!</b><br /><br />Vous avez reçu un nouveau message sur '.PAGETITLE.' (%hp_url%).<br />Clique <a href="http://%hp_url%?site=messenger">ici</a> pour lire ce message.<br /><br />(C) webSPELL.org',
+	'mail_body'=>'<b>Salut %nickname%!</b><br><br>Vous avez reçu un nouveau message sur '.PAGETITLE.' (%hp_url%).<br>Clique <a href="http://%hp_url%?site=messenger">ici</a> pour lire ce message.<br><br>(C) webSPELL.org',
 	'error'=>'error',
 	'unknown_user'=>'unknown user'
 );

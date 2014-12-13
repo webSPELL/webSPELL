@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -30,9 +30,10 @@ $language_array = Array(
 /* do not edit above this line */
 
 	'about_myself'=>'À propos de moi',
+    'activated'=>'activé',
 	'avatar'=>'Avatar:',
 	'back'=>'Retour',
-	'bbcode'=>'<a href="javascript:MM_openBrWindow(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> activé',
+	'bbcode'=>'<a href="javascript:window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> activé',
 	'can_not_copy'=>'Impossible de copier le fichier sur le serveur',
 	'change_mail'=>'Enregistrer',
 	'change_password'=>'Enregistrer',
@@ -45,6 +46,7 @@ $language_array = Array(
 	'country'=>'Pays',
 	'cpu'=>'Processeur',
 	'date_of_birth'=>'Date de naissance',
+    'deactivated'=>'désactivé',
 	'delete_max_230_210'=>'Supprimer (max. 230/210)',
 	'delete_max_90_90'=>'Supprimer (max. 90/90)',
 	'e-mail'=>'Email',
@@ -57,7 +59,12 @@ $language_array = Array(
 	'first_name'=>'Prénom',
 	'forgot_new_pw'=>'Vous avez oublié d\'entrer votre nouveau mot de passe !',
 	'forgot_old_pw'=>'Vous avez oublié d\'entrer votre ancien mot de passe !',
+	'format_date'=>'Format de la date',
+	'format_time'=>'Format de l\'heure',
 	'graphiccard'=>'Carte graphique',
+	'guestbook'=>'Livre d\'or',
+	'hdd'=>'Disque dur',
+	'headset'=>'Casque à écouteurs',
 	'hide_e-mail'=>'Cacher l\'email ?',
 	'homepage'=>'Site web',
 	'html'=>'HTML désactivé',
@@ -94,8 +101,8 @@ Merci pour votre intérêt
 	'nickname'=>'Pseudo',
 	'nickname_already_in_use'=>'Pseudo déjà utilisé !',
 	'no'=>'Non',
-	'not_logged_in'=>'Vous devez être connecté pour pouvoir éditer votre profil !<br /><br />
-    &#8226; <a href="index.php?site=register">S\'enregistrer</a><br />
+	'not_logged_in'=>'Vous devez être connecté pour pouvoir éditer votre profil !<br><br>
+    &#8226; <a href="index.php?site=register">S\'enregistrer</a><br>
     &#8226; <a href="index.php?site=login">Connexion</a>',
 	'old_password'=>'Ancien mot de passe',
 	'old_pw_not_valid'=>'Votre ancien mot de passe n\`est pas valide !',
@@ -114,7 +121,7 @@ Merci pour votre intérêt
 	'repeated_pw_not_valid'=>'Vos mots de passe sont différents !',
 	'sexuality'=>'Sexe',
 	'signature'=>'Signature',
-	'smilies'=>'<a href="javascript:MM_openBrWindow(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smileys</a> activés',
+	'smilies'=>'<a href="javascript:window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smileys</a> activés',
 	'soundcard'=>'Carte son',
 	'town'=>'Ville',
 	'unknown'=>'Non indiqué',

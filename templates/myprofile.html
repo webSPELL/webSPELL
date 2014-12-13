@@ -1,231 +1,386 @@
-<script language="JavaScript" type="text/javascript">
-<!--
-function chkFormular() {
-	if(document.getElementById('nickname').value == "") {
-		alert("%you_have_to_nickname%");
-		document.getElementById('nickname').focus();
-   		return false;
-	}
+<script>
+	<!--
+	function chkFormular() {
+		if (document.getElementById('nickname').value == "") {
+			alert("%you_have_to_nickname%");
+			document.getElementById('nickname').focus();
+			return false;
+		}
 
-	if(document.getElementById('usernamenew').value == "") {
-		alert("%you_have_to_username%");
-		document.getElementById('usernamenew').focus();
-   		return false;
-	}
+		if (document.getElementById('usernamenew').value == "") {
+			alert("%you_have_to_username%");
+			document.getElementById('usernamenew').focus();
+			return false;
+		}
 
-	if(document.getElementById('firstname').value == "") {
-		alert("%you_have_to_firstname%");
-		document.getElementById('firstname').focus();
-		return false;
-	}
+		if (document.getElementById('firstname').value == "") {
+			alert("%you_have_to_firstname%");
+			document.getElementById('firstname').focus();
+			return false;
+		}
 
-	if(document.getElementById('b_day').value < 1 || document.getElementById('b_day').value > 31) {
-		alert("%you_have_to_bday%");
-		document.getElementById('b_day').focus();
-		return false;
-	}
+		if (document.getElementById('b_day').value == "") {
+			alert("%you_have_to_bday%");
+			document.getElementById('b_day').focus();
+			return false;
+		}
 
-	if(document.getElementById('b_month').value < 1 || document.getElementById('b_month').value > 12) {
-		alert("%you_have_to_bday%");
-		document.getElementById('b_month').focus();
-		return false;
 	}
-
-	if(document.getElementById('b_year').value < 1900 || document.getElementById('b_year').value > 2050) {
-		alert("%you_have_to_bday%");
-		document.getElementById('b_year').focus();
-		return false;
-	}
-
-}
--->
+	-->
 </script>
 
-<form method="post" name="post" action="index.php?site=myprofile" enctype="multipart/form-data" onsubmit="return chkFormular()">
-<center>$showerror</center>
-<table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="$border">
-  <tr bgcolor="$bghead">
-    <td colspan="2" class="title">&nbsp; &#8226; %profile-info%:</td>
-  </tr>
-  <tr><td colspan="2" bgcolor="$pagebg"></td></tr>
-  <tr>
-    <td align="right" bgcolor="$bg1">%nickname%:*</td>
-    <td bgcolor="$bg2"><input type="text" name="nickname" id="nickname" value="$nickname" maxlength="30" size="30" /></td>
-  </tr>
-  <tr bgcolor="$bg2">
-    <td align="right" bgcolor="$bg3">%username%:*</td>
-    <td bgcolor="$bg4"><input name="usernamenew" type="text" id="usernamenew" value="$username" maxlength="30" size="30" /></td>
-  </tr>
-  <tr>
-    <td align="right" bgcolor="$bg1">%password%:</td>
-    <td bgcolor="$bg2">&#8226; <a href="index.php?site=myprofile&amp;action=editpwd">%edit_password%</a></td>
-  </tr>
-  <tr bgcolor="$bg2">
-    <td align="right" bgcolor="$bg3">%e-mail%:*</td>
-    <td bgcolor="$bg4">$email</td>
-  </tr>
-  <tr bgcolor="$bg2">
-    <td align="right" bgcolor="$bg3"></td>
-    <td bgcolor="$bg4">&#8226; <a href="index.php?site=myprofile&amp;action=editmail">%edit_mail%</a></td>
-  </tr>
-  <tr>
-    <td align="right" bgcolor="$bg1" valign="top">$viewavatar</td>
-    <td bgcolor="$bg2"><input name="avatar" type="file" size="30" />
-    <input class="input" name="delavatar" type="checkbox" value="1" />
-    <small>%delete_max_90_90%</small><br />%or%<br />
-    <input name="avatar_url" type="text" size="30" value="http://" /></td>
-  </tr>
-  <tr bgcolor="$bg4">
-    <td align="right" bgcolor="$bg3" valign="top">$viewpic</td>
-    <td bgcolor="$bg4"><input name="userpic" type="file" size="30" />
-    <input class="input" name="deluserpic" type="checkbox" value="1" />
-    <small>%delete_max_230_210%</small><br />%or%<br />
-    <input name="userpic_url" type="text" size="30" value="http://" /></td>
-  </tr>
-  <tr>
-    <td align="right" valign="top" bgcolor="$bg1">%signature%:</td>
-    <td bgcolor="$bg2"><textarea name="usertext" cols="70" rows="5" style="width:100%">$usertext</textarea></td>
-  </tr>
-  <tr><td colspan="2" bgcolor="$pagebg"></td></tr>
-  <tr bgcolor="$bghead">
-    <td colspan="2" class="title">&nbsp; &#8226; %personal-info%:</td>
-  </tr>
-  <tr><td colspan="2" bgcolor="$pagebg"></td></tr>
-  <tr>
-    <td align="right" bgcolor="$bg1">%first_name%:*</td>
-    <td bgcolor="$bg2"><input type="text" name="firstname" id="firstname" value="$firstname" size="30" /></td>
-  </tr>
-  <tr bgcolor="$bg2">
-    <td align="right" bgcolor="$bg3">%last_name%:</td>
-    <td bgcolor="$bg4"><input type="text" name="lastname" value="$lastname" size="30" /></td>
-  </tr>
-  <tr>
-    <td align="right" bgcolor="$bg1">%date_of_birth%:*</td>
-    <td bgcolor="$bg2"><input type="text" name="b_day" id="b_day" value="$b_day" size="2" />
-    .
-    <input type="text" name="b_month" id="b_month" value="$b_month" size="2" />
-    .
-    <input type="text" name="b_year" id="b_year" value="$b_year" size="4" /></td>
-  </tr>
-  <tr bgcolor="$bg2">
-    <td align="right" bgcolor="$bg3">%sexuality%:</td>
-    <td bgcolor="$bg4"><select name="sex">$sex</select></td>
-  </tr>
-  <tr>
-    <td align="right" bgcolor="$bg1">%country%:</td>
-    <td bgcolor="$bg2"><select name="flag" onchange="document.getElementById('county').src='images/flags/'+this.options[this.selectedIndex].value+'.gif'">$countries</select> $country</td>
-  </tr>
-  <tr>
-    <td align="right" bgcolor="$bg3">%town%:</td>
-    <td bgcolor="$bg4"><input type="text" name="town" size="30" value="$town" /></td>
-  </tr>
-  <tr bgcolor="$bg2">
-    <td align="right" bgcolor="$bg1">Icq#:</td>
-    <td bgcolor="$bg2"><input type="text" name="icq" value="$icq" size="30" /></td>
-  </tr>
-  <tr bgcolor="$bg3">
-    <td align="right" bgcolor="$bg3">%homepage%:</td>
-    <td bgcolor="$bg4"><input type="text" name="homepage" value="$homepage" size="30" maxlength="255" /></td>
-  </tr>
-  <tr bgcolor="$bg2">
-    <td align="right" valign="top" bgcolor="$bg1">%about_myself%:<br /><br />
-    <small><b>%options%:</b><br />%html%<br />%bbcode%<br />%smilies%</small></td>
-    <td bgcolor="$bg2"><textarea name="messageabout" cols="70" rows="8" style="width:100%">$about</textarea></td>
-  </tr>
-  <tr><td colspan="2" bgcolor="$pagebg"></td></tr>
-  <tr bgcolor="$bghead">
-    <td colspan="2" class="title">&nbsp; &#8226; %options%:</td>
-  </tr>
-  <tr><td colspan="2" bgcolor="$pagebg"></td></tr>
-  <tr bgcolor="$bg2">
-    <td align="right" bgcolor="$bg1">%newsletter%</td>
-    <td bgcolor="$bg2"><select name="newsletter">$newsletter</select></td>
-  </tr>
-  <tr bgcolor="$bg2">
-    <td align="right" bgcolor="$bg3">%language%</td>
-    <td bgcolor="$bg4"><select name="language">$langdirs</select></td>
-  </tr>
-  <tr bgcolor="$bg2">
-    <td align="right" bgcolor="$bg1">%mail_on_new_pm%</td>
-    <td bgcolor="$bg2"><select name="pm_mail">$pm_mail</select></td>
-  </tr>
-  <tr bgcolor="$bg2">
-    <td align="right" bgcolor="$bg3">%hide_e-mail%</td>
-    <td bgcolor="$bg4"><input type="checkbox" name="mail_hide" value="1"$email_hide /></td>
-  </tr>
-  <tr><td colspan="2" bgcolor="$pagebg"></td></tr>
-  <tr bgcolor="$bghead">
-    <td colspan="2" class="title">&nbsp; &#8226; %clan-info%:</td>
-  </tr>
-  <tr><td colspan="2" bgcolor="$pagebg"></td></tr>
-  <tr>
-    <td align="right" bgcolor="$bg1">%clan-tag%:</td>
-    <td bgcolor="$bg2"><input type="text" name="clantag" value="$clantag" size="30" /></td>
-  </tr>
-  <tr bgcolor="$bg2">
-    <td align="right" bgcolor="$bg3">%clan-name%:</td>
-    <td bgcolor="$bg4"><input type="text" name="clanname" value="$clanname" size="30" /></td>
-  </tr>
-  <tr>
-    <td align="right" bgcolor="$bg1">%clan-hp%:</td>
-    <td bgcolor="$bg2"><input type="text" name="clanhp" value="$clanhp" size="30" /></td>
-  </tr>
-  <tr bgcolor="$bg2">
-    <td align="right" bgcolor="$bg3">%clan-irc%:</td>
-    <td bgcolor="$bg4"><input type="text" name="clanirc" value="$clanirc" size="30" /></td>
-  </tr>
-  <tr>
-    <td align="right" bgcolor="$bg1">%clan-history%:</td>
-    <td bgcolor="$bg2"><input type="text" name="clanhistory" value="$clanhistory" size="30" /></td>
-  </tr>
-  <tr><td colspan="2" bgcolor="$pagebg"></td></tr>
-  <tr bgcolor="$bghead">
-    <td colspan="2" class="title">&nbsp; &#8226; %equipment-info%:</td>
-   </tr>
-   <tr><td colspan="2" bgcolor="$pagebg"></td></tr>
-   <tr>
-    <td align="right" bgcolor="$bg1">%cpu%:</td>
-    <td bgcolor="$bg2"><input type="text" name="cpu" value="$cpu" size="30" /></td>
-  </tr>
-  <tr>
-    <td align="right" bgcolor="$bg3">%mainboard%:</td>
-    <td bgcolor="$bg4"><input type="text" name="mainboard" value="$mainboard" size="30" /></td>
-  </tr>
-  <tr>
-    <td align="right" bgcolor="$bg1">%ram%:</td>
-    <td bgcolor="$bg2"><input type="text" name="ram" value="$ram" size="30" /></td>
-  </tr>
-  <tr>
-    <td align="right" bgcolor="$bg3">%monitor%:</td>
-    <td bgcolor="$bg4"><input type="text" name="monitor" value="$monitor" size="30" /></td>
-  </tr>
-  <tr>
-    <td align="right" bgcolor="$bg1">%graphiccard%:</td>
-    <td bgcolor="$bg2"><input type="text" name="graphiccard" value="$graphiccard" size="30" /></td>
-  </tr>
-  <tr>
-    <td align="right" bgcolor="$bg3">%soundcard%:</td>
-    <td bgcolor="$bg4"><input type="text" name="soundcard" value="$soundcard" size="30" /></td>
-  </tr>
-  <tr>
-    <td align="right" bgcolor="$bg1">%i-connection%:</td>
-    <td bgcolor="$bg2"><input type="text" name="connection" value="$connection" size="30" /></td>
-  </tr>
-  <tr>
-    <td align="right" bgcolor="$bg3">%keyboard%:</td>
-    <td bgcolor="$bg4"><input type="text" name="keyboard" value="$keyboard" size="30" /></td>
-  </tr>
-  <tr>
-    <td align="right" bgcolor="$bg1">%mouse%:</td>
-    <td bgcolor="$bg2"><input type="text" name="mouse" value="$mouse" size="30" /></td>
-  </tr>
-  <tr>
-    <td align="right" bgcolor="$bg3">%mousepad%:</td>
-    <td bgcolor="$bg4"><input type="text" name="mousepad" value="$mousepad" size="30" /></td>
-  </tr>
-  <tr bgcolor="$bghead">
-    <td bgcolor="$bg1"></td>
-    <td bgcolor="$bg2"><input type="submit" name="submit" value="%update_profile%" /><br /><br />%fields_star_required%</td>
-  </tr>
-</table>
+<form method="post" name="post" action="index.php?site=myprofile" enctype="multipart/form-data"
+		onsubmit="return chkFormular()" class="form-horizontal" role="form">
+<h2>%profile-info%:</h2>
+$showerror
+
+<div class="form-group">
+	<label for="nickname" class="col-lg-3 control-label">%nickname%:*</label>
+
+	<div class="col-lg-9">
+		<input type="text" name="nickname" id="nickname" value="$nickname" maxlength="30"
+				autocomplete="nickname" class="form-control">
+	</div>
+</div>
+
+<div class="form-group">
+	<label for="usernamenew" class="col-lg-3 control-label">%username%:*</label>
+
+	<div class="col-lg-9">
+		<input type="text" name="usernamenew" id="usernamenew" value="$username"
+				autocomplete="nickname" class="form-control">
+	</div>
+</div>
+
+<div class="form-group">
+	<div class="col-xs-6 text-left">
+		<a href="index.php?site=myprofile&amp;action=editpwd"
+				class="btn btn-danger">%edit_password%</a>
+	</div>
+	<div class="col-xs-6 text-right">
+		<a href="index.php?site=myprofile&amp;action=editmail" title="$email"
+				class="btn btn-danger">%edit_mail%</a>
+	</div>
+</div>
+<hr>
+
+<div class="row">
+	<div class="col-md-6">
+		$viewavatar<br>
+		<input class="input" name="delavatar" type="checkbox" value="1" class="form-control">
+		<small>%delete_max_90_90%</small>
+	</div>
+
+	<div class="col-md-6">
+		<div class="form-group">
+			<input name="avatar" type="file" class="form-control">%or%<br>
+			<input name="avatar_url" type="text" value="http://" class="form-control">
+		</div>
+	</div>
+</div>
+<hr>
+
+<div class="row">
+	<div class="col-md-6">
+		$viewpic<br>
+		<input class="input" name="deluserpic" type="checkbox" value="1" class="form-control">
+		<small>%delete_max_230_210%</small>
+	</div>
+
+	<div class="col-md-6">
+		<div class="form-group">
+			<input name="userpic" type="file" class="form-control">%or%<br>
+			<input name="userpic_url" type="text" value="http://" class="form-control">
+		</div>
+	</div>
+</div>
+<hr>
+
+<div class="form-group">
+	<label for="usertext" class="col-lg-3 control-label">%signature%:*</label>
+
+	<div class="col-lg-9">
+		<textarea name="usertext" cols="70" rows="5" class="form-control">$usertext</textarea>
+	</div>
+</div>
+
+<h2>%personal-info%:</h2>
+
+<div class="form-group">
+	<label for="firstname" class="col-lg-3 control-label">%first_name%:*</label>
+
+	<div class="col-lg-9">
+		<input type="text" name="firstname" id="firstname" value="$firstname"
+				autocomplete="given-name" class="form-control">
+	</div>
+</div>
+
+<div class="form-group">
+	<label for="lastname" class="col-lg-3 control-label">%last_name%:*</label>
+
+	<div class="col-lg-9">
+		<input type="text" name="lastname" value="$lastname" autocomplete="family-name"
+				class="form-control">
+	</div>
+</div>
+
+<div class="form-group">
+	<label for="inputEmail1" class="col-lg-3 control-label">%country%:</label>
+
+	<div class="input-group col-lg-9">
+		<span class="input-group-addon">$country</span>
+		<select name="flag"
+				onchange="document.getElementById('county')
+				.src='images/flags/'+this.options[this.selectedIndex].value+'.gif'"
+				autocomplete="country" class="form-control">$countries</select>
+	</div>
+</div>
+
+<div class="form-group">
+	<label for="town" class="col-lg-3 control-label">%town%:</label>
+
+	<div class="col-lg-9">
+		<input type="text" name="town" autocomplete="locality" value="$town" class="form-control">
+	</div>
+</div>
+
+<div class="form-group">
+	<label for="b_day" class="col-lg-3 control-label">%date_of_birth%:*</label>
+
+	<div class="col-lg-9">
+		<input class="form-control" placeholder="yyyy-mm-dd" value="$birthday" name="birthday" type="date" />
+	</div>
+</div>
+
+<div class="form-group">
+	<label for="sex" class="col-lg-3 control-label">%sexuality%:</label>
+
+	<div class="col-lg-9">
+		<select name="sex" autofocus="sex" class="form-control">$sex</select>
+	</div>
+</div>
+
+<div class="form-group">
+	<label for="icq" class="col-lg-3 control-label">Icq#</label>
+
+	<div class="col-lg-9">
+		<input type="text" name="icq" value="$icq" class="form-control">
+	</div>
+</div>
+
+<div class="form-group">
+	<label for="homepage" class="col-lg-3 control-label">%homepage%:</label>
+
+	<div class="col-lg-9">
+		<input type="url" name="homepage" value="http://$homepage" autocomplete="url"
+				class="form-control">
+	</div>
+</div>
+
+<div class="form-group">
+	<label for="messageabout" class="col-lg-3 control-label">%about_myself%:</label>
+
+	<div class="col-lg-9">
+		<textarea name="messageabout" cols="70" rows="8" class="form-control">$about</textarea>
+	</div>
+</div>
+
+<h2>%options%:</h2>
+
+<div class="form-group">
+	<label for="newsletter" class="col-lg-3 control-label">%newsletter%:</label>
+
+	<div class="col-lg-9">
+		<select name="newsletter" class="form-control">$newsletter</select>
+	</div>
+</div>
+
+<div class="form-group">
+	<label for="language" class="col-lg-3 control-label">%language%:</label>
+
+	<div class="col-lg-9">
+		<select name="language" class="form-control">$langdirs</select>
+	</div>
+</div>
+
+<div class="form-group">
+	<label for="pm_mail" class="col-lg-3 control-label">%mail_on_new_pm%:</label>
+
+	<div class="col-lg-9">
+		<select name="pm_mail" class="form-control">$pm_mail</select>
+	</div>
+</div>
+
+<div class="form-group">
+	<label for="mail_hide" class="col-lg-3 control-label">%hide_e-mail%</label>
+
+	<div class="col-lg-9">
+		<input type="checkbox" name="mail_hide" value="1"$email_hide>
+	</div>
+</div>
+
+<div class="form-group">
+	<label for="pm_mail" class="col-lg-3 control-label">%format_date%:</label>
+
+	<div class="col-lg-9">
+		<select name="date_format" class="form-control">$format_date</select>
+	</div>
+</div>
+
+<div class="form-group">
+	<label for="pm_mail" class="col-lg-3 control-label">%format_time%:</label>
+
+	<div class="col-lg-9">
+		<select name="time_format" class="form-control">$format_time</select>
+	</div>
+</div>
+
+$user_gbook_select
+
+<h2>%clan-info%:</h2>
+
+<div class="form-group">
+	<label for="clantag" class="col-lg-3 control-label">%clan-tag%:</label>
+
+	<div class="col-lg-9">
+		<input type="text" name="clantag" value="$clantag" class="form-control">
+	</div>
+</div>
+
+<div class="form-group">
+	<label for="clanname" class="col-lg-3 control-label">%clan-name%:</label>
+
+	<div class="col-lg-9">
+		<input type="text" name="clanname" value="$clanname" class="form-control">
+	</div>
+</div>
+
+<div class="form-group">
+	<label for="clanhp" class="col-lg-3 control-label">%clan-hp%:</label>
+
+	<div class="col-lg-9">
+		<input type="url" name="clanhp" value="$clanhp" class="form-control">
+	</div>
+</div>
+
+<div class="form-group">
+	<label for="clanirc" class="col-lg-3 control-label">%clan-irc%:</label>
+
+	<div class="col-lg-9">
+		<input type="text" name="clanirc" value="$clanirc" class="form-control">
+	</div>
+</div>
+
+<div class="form-group">
+	<label for="clanhistory" class="col-lg-3 control-label">%clan-history%:</label>
+
+	<div class="col-lg-9">
+		<input type="text" name="clanhistory" value="$clanhistory" class="form-control">
+	</div>
+</div>
+
+<h2>%equipment-info%:</h2>
+
+<div class="form-group">
+	<label for="cpu" class="col-lg-3 control-label">%cpu%:</label>
+
+	<div class="col-lg-9">
+		<input type="text" name="cpu" value="$cpu" class="form-control">
+	</div>
+</div>
+
+<div class="form-group">
+	<label for="mainboard" class="col-lg-3 control-label">%mainboard%:</label>
+
+	<div class="col-lg-9">
+		<input type="text" name="mainboard" value="$mainboard" class="form-control">
+	</div>
+</div>
+
+<div class="form-group">
+	<label for="ram" class="col-lg-3 control-label">%ram%:</label>
+
+	<div class="col-lg-9">
+		<input type="text" name="ram" value="$ram" class="form-control">
+	</div>
+</div>
+
+<div class="form-group">
+	<label for="hdd" class="col-lg-3 control-label">%hdd%:</label>
+
+	<div class="col-lg-9">
+		<input type="text" name="hdd" value="$hdd" class="form-control">
+	</div>
+</div>
+
+<div class="form-group">
+	<label for="monitor" class="col-lg-3 control-label">%monitor%:</label>
+
+	<div class="col-lg-9">
+		<input type="text" name="monitor" value="$monitor" class="form-control">
+	</div>
+</div>
+
+<div class="form-group">
+	<label for="graphiccard" class="col-lg-3 control-label">%graphiccard%:</label>
+
+	<div class="col-lg-9">
+		<input type="text" name="graphiccard" value="$graphiccard" class="form-control">
+	</div>
+</div>
+
+<div class="form-group">
+	<label for="soundcard" class="col-lg-3 control-label">%soundcard%:</label>
+
+	<div class="col-lg-9">
+		<input type="text" name="soundcard" value="$soundcard" class="form-control">
+	</div>
+</div>
+
+<div class="form-group">
+	<label for="connection" class="col-lg-3 control-label">%i-connection%:</label>
+
+	<div class="col-lg-9">
+		<input type="text" name="connection" value="$connection" class="form-control">
+	</div>
+</div>
+
+<div class="form-group">
+	<label for="keyboard" class="col-lg-3 control-label">%keyboard%:</label>
+
+	<div class="col-lg-9">
+		<input type="text" name="keyboard" value="$keyboard" class="form-control">
+	</div>
+</div>
+
+<div class="form-group">
+	<label for="mouse" class="col-lg-3 control-label">%mouse%:</label>
+
+	<div class="col-lg-9">
+		<input type="text" name="mouse" value="$mouse" class="form-control">
+	</div>
+</div>
+
+<div class="form-group">
+	<label for="mousepad" class="col-lg-3 control-label">%mousepad%:</label>
+
+	<div class="col-lg-9">
+		<input type="text" name="mousepad" value="$mousepad" class="form-control">
+	</div>
+</div>
+
+<div class="form-group">
+	<label for="headset" class="col-lg-3 control-label">%headset%:</label>
+
+	<div class="col-lg-9">
+		<input type="text" name="headset" value="$headset" class="form-control">
+	</div>
+</div>
+
+<div class="form-group">
+	<div class="col-md-6">%fields_star_required%</div>
+	<div class="col-md-6 text-right">
+		<input type="submit" name="submit" value="%update_profile%" class="btn btn-danger">
+	</div>
+</div>
 </form>

@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -29,22 +29,39 @@ session_name('ws_session');
 session_start();
 
 // unset session variables
-$_SESSION = Array();
+$_SESSION = [];
 
 // remove session cookie
-if (isset($_COOKIE[session_name()])) {
-	setcookie(session_name(), '', time()-42000, '/');
+if (isset($_COOKIE[ session_name() ])) {
+    setcookie(session_name(), '', time() - 42000, '/');
 }
 
 session_destroy();
 
 // remove login cookie
-if (isset($_COOKIE['ws_auth'])) {
-	setcookie('ws_auth', '', time()-(24*60*60));
+if (isset($_COOKIE[ 'ws_auth' ])) {
+
+    $cookieName = "ws_auth";
+    $cookieValue = '';
+    $cookieExpire = time() - (24 * 60 * 60);
+    if (version_compare(PHP_VERSION, '5.2.0') >= 0) {
+        $cookieInfo = session_get_cookie_params();
+        setcookie(
+            $cookieName,
+            $cookieValue,
+            $cookieExpire,
+            $cookieInfo[ 'path' ],
+            $cookieInfo[ 'domain' ],
+            $cookieInfo[ 'secure' ],
+            true
+        );
+    } else {
+        setcookie($cookieName, $cookieValue, $cookieExpire);
+    }
+    unset($cookieName);
+    unset($cookieValue);
+    unset($cookieExpire);
+    unset($cookieInfo);
 }
 
 header("Location: index.php");
-
-?>
-
-

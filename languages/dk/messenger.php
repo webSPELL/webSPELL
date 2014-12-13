@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -54,7 +54,7 @@ $language_array = Array(
 	'no_incoming'=>'Ingen beskeder i indbakken.',
 	'no_outgoing'=>'Ingen beskeder i udbakken.',
 	'no_subject'=>'(Intet emne)',
-	'not_logged'=>'Du er ikke logget ind.<br /><a href="index.php?site=login">Log ind</a> | <a href="index.php?site=register">Registrer</a>',
+	'not_logged'=>'Du er ikke logget ind.<br><a href="index.php?site=login">Log ind</a> | <a href="index.php?site=register">Registrer</a>',
 	'options'=>'Indstillinger',
 	'outgoing'=>'udgående',
 	'read'=>'Læs',
@@ -73,7 +73,7 @@ $language_array = Array(
 	'title'=>'emne',
 	'your_message'=>'Din besked:',
 	'mail_subject'=>'Du har modtaget en ny besked.',
-	'mail_body'=>'<b>Hej %nickname%!</b><br /><br />Du har modtaget en ny besked på '.PAGETITLE.' (%hp_url%).<br />Klik <a href="http://%hp_url%?site=messenger">her</a> for at læse beskeden.<br /><br />(C) webSPELL.org',
+	'mail_body'=>'<b>Hej %nickname%!</b><br><br>Du har modtaget en ny besked på '.PAGETITLE.' (%hp_url%).<br>Klik <a href="http://%hp_url%?site=messenger">her</a> for at læse beskeden.<br><br>(C) webSPELL.org',
 	'error'=>'error',
 	'unknown_user'=>'unknown user'
 );

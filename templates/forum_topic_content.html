@@ -1,36 +1,28 @@
-<tr>
-  <td bgcolor="$bg1" width="125" valign="top">
-  <table width="100%" cellpadding="2" cellspacing="0">
-    <tr>
-      <td align="center">$username $member</td>
-    </tr>
-    <tr>
-      <td align="center"><small>$usertype</small></td>
-    </tr>
-    <tr>
-      <td align="center">$avatar</td>
-    </tr>
-    <tr>
-      <td align="center">$rang</td>
-    </tr>
-    <tr>
-      <td align="center"><small>$posts %posts%</small></td>
-    </tr>
-    <tr>
-      <td align="center"><small>%registered%: $registered</small></td>
-    </tr>
-  </table>
-  </td>
-  <td bgcolor="$bg2" valign="top">
-  <table width="100%" cellpadding="2" cellspacing="0">
-    <tr>
-      <td><a name="$postID" href="#$postID"><img src="images/icons/posticon.gif" width="10" height="11" alt="" /></a> <i>$date, $time</i> $pm $buddy $email $hp $statuspic</td>
-      <td align="right"> $quote$actions&nbsp;</td>
-    </tr>
-  </table>
-  <hr width="50%" />
-  <div style="overflow:hidden;">$message</div>
-  <hr width="90%" />
-  <small>$signatur</small></td>
-</tr>
-<tr><td colspan="2" bgcolor="$pagebg"></td></tr>
+<div class="panel panel-default">
+	<div class="panel-heading">
+		$statuspic $username
+		<small>$usertype</small>
+		<div class="pull-right">$quote <i>$date, $time</i> $pm $buddy $email $hp $actions</div>
+	</div>
+
+	<div class="panel-body row">
+
+		<div class="hidden-xs col-sm-3 col-lg-2">
+			<ul class="nav text-center">
+				<li>$avatar</li>
+				<li>$rang</li>
+				<li>
+					<small>$posts %posts%</small>
+				</li>
+				<li>
+					<small>%registered%: $registered</small>
+				</li>
+			</ul>
+		</div>
+
+		<div class="col-xs-12 col-sm-9 col-lg-10">
+			$message
+			<small>$signatur</small>
+		</div>
+	</div>
+</div>

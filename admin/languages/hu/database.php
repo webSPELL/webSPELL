@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -34,7 +34,7 @@ $language_array = Array(
   'backup_file'=>'Biztonsági mentés',
   'database'=>'Adatbázis',
   'export'=>'Biztosági mentés készítése',
-  'import_info'=>'Válaszd ki az importálandó sql fájlt.<br /><br /><b>Fontos:</b> Csinálj biztonsági mentést, mielőtt importálsz egy másik adatbázist!',
+  'import_info'=>'Válaszd ki az importálandó sql fájlt.<br><br><b>Fontos:</b> Csinálj biztonsági mentést, mielőtt importálsz egy másik adatbázist!',
   'optimize'=>'Adatbázis optimalizálása',
   'select_option'=>'Válassz a lehetőségek közül',
   'submit'=>'Küldés',

@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -30,7 +30,7 @@ $language_array = Array(
 /* do not edit above this line */
 
 	'admin_comment'=>'Admin comment',
-  'bbcode'=>'<a href="javascript:MM_openBrWindow(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> AAN',
+  'bbcode'=>'<a href="javascript:window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> AAN',
 	'by'=>'door',
 	'comment'=>'Reactie',
 	'delete_selected'=>'Verwijder geselecteerden',
@@ -46,13 +46,13 @@ $language_array = Array(
 	'mail'=>'Je mail adres',
 	'name'=>'Je naam',
 	'new_entry'=>'Nieuw bericht',
-	'no_access'=>'Je bent niet ingelogd.<br /><a href="index.php?site=login">Log in</a> | <a href="index.php?site=register">Registreer</a>',
+	'no_access'=>'Je bent niet ingelogd.<br><a href="index.php?site=login">Log in</a> | <a href="index.php?site=register">Registreer</a>',
 	'options'=>'Opties',
 	'pmsubject_newentry'=>'Nieuw bericht in het gastenboek',
 	'pmtext_newentry'=>'[b]Iemand liet een bericht achter in het gastenboek![/b][br][br] [URL=index.php?site=guestbook#%insertid%]Klik hier om het bericht te lezen[/URL] ',
 	'security_code'=>'Veiligheids code',
 	'select_all'=>'selecteer alles',
-	'smilies'=>'<a href="javascript:MM_openBrWindow(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smilies</a> AAN',
+	'smilies'=>'<a href="javascript:window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smilies</a> AAN',
 	'sort'=>'Sorteer:',
 	'submit'=>'Ok',
 	'update_comment'=>'Opslaan',

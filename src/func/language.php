@@ -1,4 +1,5 @@
 <?php
+
 /*
 ##########################################################################
 #                                                                        #
@@ -10,7 +11,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -25,64 +26,79 @@
 ##########################################################################
 */
 
-class Language {
+namespace webspell;
 
-	var $language = 'uk';
-	var $language_path = 'languages/';
-	var $module = array();
+class Language
+{
 
-	function set_language($to) {
+    public $language = 'uk';
+    public $module = array();
+    private $language_path = 'languages/';
 
-		$filepath = "languages/";
-		$langs = array();
+    public function setLanguage($to)
+    {
 
-		if($dh = opendir($filepath)) {
-			while($file = mb_substr(readdir($dh), 0, 2)) {
-				if($file != "." and $file!=".." and is_dir($filepath.$file)) {
-					$langs[] = $file;
-				}
-			}
-			closedir($dh);
-		}
+        $filepath = "languages/";
+        $langs = array();
 
-		if(in_array($to, $langs)){
-			if(is_dir($this->language_path.$to)) {
-				$this->language = $to;
-				return true;
-			} 
-			else return false;
-		} 
-		else return false;
-	}
+        if ($dh = opendir($filepath)) {
+            while ($file = mb_substr(readdir($dh), 0, 2)) {
+                if ($file != "." and $file != ".." and is_dir($filepath . $file)) {
+                    $langs[] = $file;
+                }
+            }
+            closedir($dh);
+        }
 
-	function read_module($module, $add=false) {
+        if (in_array($to, $langs)) {
+            if (is_dir($this->language_path . $to)) {
+                $this->language = $to;
+                return true;
+            } else {
+                return false;
+            }
+        } else {
+            return false;
+        }
+    }
 
-		global $default_language;
+    public function readModule($module, $add = false)
+    {
 
-		$module=str_replace(array('\\','/','.'), '', $module);
-		if(file_exists($this->language_path.$this->language.'/'.$module.'.php')) $module_file = $this->language_path.$this->language.'/'.$module.'.php';
-		elseif(file_exists($this->language_path.$default_language.'/'.$module.'.php')) $module_file = $this->language_path.$default_language.'/'.$module.'.php';
-		elseif(file_exists($this->language_path.'uk/'.$module.'.php')) $module_file = $this->language_path.'uk/'.$module.'.php'; // UK as worst case
-		else return false;
+        global $default_language;
 
-		if(isset($module_file)) {
-			include($module_file);
-			if(!$add) $this->module = '';
+        $module = str_replace(array('\\', '/', '.'), '', $module);
+        if (file_exists($this->language_path . $this->language . '/' . $module . '.php')) {
+            $module_file = $this->language_path . $this->language . '/' . $module . '.php';
+        } elseif (file_exists($this->language_path . $default_language . '/' . $module . '.php')) {
+            $module_file = $this->language_path . $default_language . '/' . $module . '.php';
+        } elseif (file_exists($this->language_path . 'uk/' . $module . '.php')) {
+            // UK as worst case
+            $module_file = $this->language_path . 'uk/' . $module . '.php';
+        } else {
+            return false;
+        }
 
-			foreach($language_array as $key => $val) {
-				$this->module[$key] = $val;
-			}
-		}
-		return true;
-	}
-	function replace($template) {
+        if (isset($module_file)) {
+            include($module_file);
+            if (!$add) {
+                $this->module = array();
+            }
 
-		foreach($this->module as $key => $val) {
-			$template = str_replace('%'.$key.'%', $val, $template);
-		}
+            foreach ($language_array as $key => $val) {
+                $this->module[$key] = $val;
+            }
+        }
+        return true;
+    }
 
-		return $template;
-	}
+    public function replace($template)
+    {
+
+        foreach ($this->module as $key => $val) {
+            $template = str_replace('%' . $key . '%', $val, $template);
+        }
+
+        return $template;
+    }
 }
-
-?>

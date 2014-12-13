@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -30,7 +30,7 @@ $language_array = Array(
 /* do not edit above this line */
 
 	'admin_comment'=>'Komentarz admina',
-	'bbcode'=>'<a href="javascript:MM_openBrWindow(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> jest WŁĄCZONY',
+	'bbcode'=>'<a href="javascript:window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> jest WŁĄCZONY',
 	'by'=>'przez',
 	'comment'=>'Komentarz',
 	'delete_selected'=>'Usuń zaznaczone',
@@ -46,13 +46,13 @@ $language_array = Array(
 	'mail'=>'Twój adres email',
 	'name'=>'Twój nick',
 	'new_entry'=>'Nowy wpis',
-	'no_access'=>'Nie jesteś zalogowany.<br /><a href="index.php?site=login">Login</a> | <a href="index.php?site=register">Zarejestruj się</a>',
+	'no_access'=>'Nie jesteś zalogowany.<br><a href="index.php?site=login">Login</a> | <a href="index.php?site=register">Zarejestruj się</a>',
 	'options'=>'Opcje',
 	'pmsubject_newentry'=>'Nowy wpis do księgi gości',
 	'pmtext_newentry'=>'[b]Ktoś zostawił wpis w Twojej księdze gości![/b][br][br] [URL=index.php?site=guestbook#%insertid%]Kliknij tutaj żeby odczytać wiadomość[/URL] ',
 	'security_code'=>'Kod zabezpieczający',
 	'select_all'=>'zaznacz wszystkie',
-	'smilies'=>'<a href="javascript:MM_openBrWindow(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Emotikonki</a>są WŁĄCZONE',
+	'smilies'=>'<a href="javascript:window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Emotikonki</a>są WŁĄCZONE',
 	'sort'=>'Sortuj:',
 	'submit'=>'Wyślij',
 	'update_comment'=>'Zapisz komentarz',

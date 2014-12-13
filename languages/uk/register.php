@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -29,7 +29,7 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-	'activation_successful'=>'The activation of your account was successful.<br />You are able to log in now.',
+	'activation_successful'=>'The activation of your account was successful.<br>You are able to log in now.',
 	'back'=>'back',
 	'enter_nickname'=>'Please enter a nick name.',
 	'enter_password'=>'Please enter a password.',
@@ -47,7 +47,6 @@ $language_array = Array(
 Your registering at %pagetitle% (%homepage_url%) was successful. Your account data:
 
 Login name: %username%
-Password: %password%
 
 To finish your registration you have to activate your account by clicking the following link:
 %activationlink%
@@ -56,7 +55,7 @@ Thank you for your registration
 %pagetitle% - %homepage_url%',
 	'nickname'=>'Nickname',
 	'nickname_inuse'=>'Nickname allready in use.',
-	'no_register_when_loggedin'=>'You allready have an account at %pagename%',
+	'no_register_when_loggedin'=>'You already have an account at %pagename%',
 	'password'=>'Password',
 	'profile_info'=>'Registration information',
 	'register_now'=>'Register now!',

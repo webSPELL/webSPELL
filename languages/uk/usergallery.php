@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -42,7 +42,7 @@ $language_array = Array(
 	'gallery_name'=>'Gallery-Name',
 	'group'=>'Group',
 	'name'=>'Name',
-	'new_gallery'=>'new Gallery',
+	'new_gallery'=>'new \webspell\Gallery',
 	'no_galleries'=>'No galleries available.',
 	'no_space_left'=>'There is no space left: canceled.',
 	'picture'=>'Picture',

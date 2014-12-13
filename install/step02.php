@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -61,21 +61,21 @@ if($_POST['agree'] == "1") {
    <td id="content" colspan="2">
    <?php if($versionerror) {
    	echo '<p style="color: #FF0000; font-weight: bold;">'.$_language->module['php_version'].':</p>
-		<p>'.$_language->module['php_info'].'</p><br /><br />';
+		<p>'.$_language->module['php_info'].'</p><br><br>';
    } 
    else {
-		echo $_language->module['enter_url'].':<br /><br />
-           http://<input type="text" name="hp_url" value="'.getwspath().'" size="50" />
-           <a class="tooltip" href="#"><img src="images/tooltip.png" alt="" />
+		echo $_language->module['enter_url'].':<br><br>
+           http://<input type="text" name="hp_url" value="'.getwspath().'" size="50">
+           <a class="tooltip" href="#"><img src="images/tooltip.png" alt="">
            <span>'.$_language->module['tooltip'].'</span></a>
    
-           <div align="right"><br /><a href="javascript:document.ws_install.submit()"><img src="images/next.jpg" alt="" /></a></div>';
+           <div align="right"><br><a href="javascript:document.ws_install.submit()"><img src="images/next.jpg" alt=""></a></div>';
    }
    ?>
    </td>
   </tr>
 
-<?php } else{ ?>
+<?php } else { ?>
 
   <tr>
    <td id="step" align="center" colspan="2">
@@ -95,7 +95,7 @@ if($_POST['agree'] == "1") {
    <td id="content" colspan="2">
    <?php echo $_language->module['you_have_to_agree'];?>
    
-   <div align="left"><br /><a href="javascript:history.back()"><img src="images/back.jpg" alt="" /></a></div>
+   <div align="left"><br><a href="javascript:history.back()"><img src="images/back.jpg" alt=""></a></div>
    </td>
   </tr>
 

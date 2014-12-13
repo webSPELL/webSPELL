@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -54,7 +54,7 @@ $language_array = Array(
 	'visits_total'=>'Besucher insgesamt',
 	'yesterday'=>'Gestern',
 	'avg_age'=>'Durchschnittsalter',
-	'avg_age_clanmember'=>'Durchschnittsalter Clanmmember',
+	'avg_age_clanmember'=>'Durchschnittsalter Clanmember',
 	'youngest_user'=>'Jüngster Benutzer',
 	'oldest_user'=>'Ältester Benutzer',
 	'user_statistic'=>'Benutzerstatistik',

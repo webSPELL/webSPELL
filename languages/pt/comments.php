@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -31,14 +31,14 @@ $language_array = Array(
 
 	'access_denied'=>'Acesso negado',
 	'add_buddy'=>'add to buddy list',
-	'bbcode_on'=>'<a href="javascript:MM_openBrWindow(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> ligado',
+	'bbcode_on'=>'<a href="javascript:window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> ligado',
 	'by'=>'por',
-	'clanmember_icon'=>' <img src="images/icons/member.gif" width="6" height="11" alt="Clanmember" />',
+	'clanmember_icon'=>' <img src="images/icons/member.gif" width="6" height="11" alt="Clanmember">',
 	'comments'=>'comentários',
 	'comments_disabled'=>'<br><br><b>Comentários desactivados.</b>',
 	'delete_selected'=>'eliminar selecção',
 	'edit_comment'=>'guardar edição',
-	'email_link'=>'<a href="mailto:%email%"><img src="images/icons/email.gif" border="0" width="15" height="11" alt="email" /></a>',
+	'email_link'=>'<a href="mailto:%email%"><img src="images/icons/email.gif" width="15" height="11" alt="email"></a>',
 	'enter_code'=>'Código de segurança',
 	'enter_message'=>'Por favor digite a sua mensagem!',
 	'enter_name'=>'Por favor digite o seu nome!',
@@ -55,11 +55,11 @@ $language_array = Array(
 	'no_database_entry'=>'No database entry matching commentID - redirecting',
 	'options'=>'Opções',
 	'post_comment'=>'Inserir comentário',
-	'quote_link'=>'<a href="javascript:AddCode(\'[quote=%nickname%]%message%[/quote]\')"><img src="images/icons/quote.gif" border="0" alt="quote" /></a>',
+	'quote_link'=>'<a href="javascript:AddCode(\'[quote=%nickname%]%message%[/quote]\')"><img src="images/icons/quote.gif" alt="quote"></a>',
 	'readd_buddy'=>'back to buddy-list',
 	'select_all'=>'seleccionar tudo',
 	'send_message'=>'send message',
-	'smilies_on'=>'<a href="javascript:MM_openBrWindow(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smiles</a> ligados',
+	'smilies_on'=>'<a href="javascript:window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smiles</a> ligados',
 	'sort'=>'Ordenar:',
 	'sort_asc'=>'Sort ascending',
 	'sort_desc'=>'Sort descending',

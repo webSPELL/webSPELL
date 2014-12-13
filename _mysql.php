@@ -1,7 +1,8 @@
 <?php
-$host = "";
-$user = "";
-$pwd = "";
-$db = "";
-define('PREFIX', '');
-?>
+$host = '';
+$user = '';
+$pwd = '';
+$db = '';
+if (!defined("PREFIX")) {
+    define("PREFIX", '');
+}

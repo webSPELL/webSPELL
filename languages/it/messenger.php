@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -54,7 +54,7 @@ $language_array = Array(
 	'no_incoming'=>'Nessun messaggio in posta in arrivo.',
 	'no_outgoing'=>'Nessun messaggio in posta in arrivo.',
 	'no_subject'=>'(nessun oggetto)',
-	'not_logged'=>'Non sei loggato.<br /><a href="index.php?site=login">accesso</a> | <a href="index.php?site=register">registrati</a>',
+	'not_logged'=>'Non sei loggato.<br><a href="index.php?site=login">accesso</a> | <a href="index.php?site=register">registrati</a>',
 	'options'=>'opzioni',
 	'outgoing'=>'In uscita',
 	'read'=>'Leggere',
@@ -73,7 +73,7 @@ $language_array = Array(
 	'title'=>'soggetto',
 	'your_message'=>'Il tuo messaggio:',
 	'mail_subject'=>'Tu hai ricevuto un nuovo messaggio',
-	'mail_body'=>'<b>Ciao %nickname%!</b><br /><br />Tu hai un nuovo messaggio so '.PAGETITLE.' (%hp_url%) recevuto.<br />Clica <a href="http://%hp_url%?site=messenger">qui</a> per leggere il messaggio.<br /><br />(C) webSPELL.org',
+	'mail_body'=>'<b>Ciao %nickname%!</b><br><br>Tu hai un nuovo messaggio so '.PAGETITLE.' (%hp_url%) recevuto.<br>Clica <a href="http://%hp_url%?site=messenger">qui</a> per leggere il messaggio.<br><br>(C) webSPELL.org',
 	'error'=>'error',
 	'unknown_user'=>'unknown user'
 );

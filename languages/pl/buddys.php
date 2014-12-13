@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -35,7 +35,7 @@ $language_array = Array(
 	'buddy_nousers'=>'Brak przyjaciół na liście ',
 	'buddys'=>'Przyjaciele',
 	'ignore_nousers'=>'Brak osób ignorowanych',
-	'not_logged'=>'By móc zarządzać listami przyjaciól i ignorowanych musisz być zarejestrowany, a następnie zalogowany.<br /><a href="index.php?site=register">Rejestracja</a> | <a href="index.php?site=login">Logowanie</a>',
+	'not_logged'=>'By móc zarządzać listami przyjaciól i ignorowanych musisz być zarejestrowany, a następnie zalogowany.<br><a href="index.php?site=register">Rejestracja</a> | <a href="index.php?site=login">Logowanie</a>',
 	'your_buddylist'=>'Lista przyjaciół',
 	'your_ignorelist'=>'Lista ignorowanych'
 );

@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -25,71 +25,76 @@
 ##########################################################################
 */
 
-if(isset($_GET['new_lang'])) {
-	
-	if(file_exists('languages/'.$_GET['new_lang'])) {
-	
-		include("_mysql.php");
-		include("_settings.php");
-		include("_functions.php");
-		if($userID) {
-			$lang = $_GET['new_lang'];
-			safe_query("UPDATE ".PREFIX."user SET language='".$lang."' WHERE userID='".$userID."'");
-		}
-		else{
-			$_SESSION['language'] = $_GET['new_lang'];
-		}
+if (isset($_GET[ 'new_lang' ])) {
 
-	}
+    if (file_exists('languages/' . $_GET[ 'new_lang' ])) {
 
-	if(isset($_GET['query'])) {
+        include("_mysql.php");
+        include("_settings.php");
+        include("_functions.php");
+        if ($userID) {
+            $lang = $_GET[ 'new_lang' ];
+            safe_query("UPDATE " . PREFIX . "user SET language='" . $lang . "' WHERE userID='" . $userID . "'");
+        } else {
+            $_SESSION[ 'language' ] = $_GET[ 'new_lang' ];
+        }
+    }
 
-		$query = rawurldecode($_GET['query']);
-		header("Location: index.php?".$query);
+    if (isset($_GET[ 'query' ])) {
 
-	} else header("Location: index.php");
+        $query = rawurldecode($_GET[ 'query' ]);
+        header("Location: ./" . $query);
+    } else {
+        header("Location: index.php");
+    }
+} else {
 
+    $_language->readModule('sc_language');
+
+    $filepath = "languages/";
+    $langs = [];
+    // Select all possible languages
+    $mysql_langs = [];
+    $query = safe_query("SELECT lang, language FROM " . PREFIX . "news_languages");
+    while ($ds = mysqli_fetch_assoc($query)) {
+        $mysql_langs[ $ds[ 'lang' ] ] = $ds[ 'language' ];
+    }
+
+    if ($dh = opendir($filepath)) {
+        while ($file = mb_substr(readdir($dh), 0, 2)) {
+            if ($file != "." and $file != ".." and is_dir($filepath . $file)) {
+                if (isset($mysql_langs[ $file ])) {
+                    $name = $mysql_langs[ $file ];
+                    $name = ucfirst($name);
+                    $langs[ $name ] = $file;
+                } else {
+                    $langs[ $file ] = $file;
+                }
+            }
+        }
+        closedir($dh);
+    }
+    if (defined("SORT_NATURAL")) {
+        $sortMode = SORT_NATURAL;
+    } else {
+        $sortMode = SORT_LOCALE_STRING;
+    }
+    ksort($langs, $sortMode);
+
+    $querystring = '';
+    $path = str_replace($GLOBALS[ 'rewriteBase' ], '', $_SERVER[ 'REQUEST_URI' ]);
+    if (!empty($path)) {
+        $querystring = "&amp;query=" . rawurlencode($path);
+    }
+
+    foreach ($langs as $lang => $flag) {
+        $querystring = '';
+        if (!empty($_SERVER[ 'QUERY_STRING' ])) {
+            $querystring = "&amp;query=" . rawurlencode($_SERVER[ 'QUERY_STRING' ]);
+        }
+
+        echo '<a href="sc_language.php?new_lang=' . $flag . $querystring . '" title="' . $lang . '" class="flag' .
+            ($_language->language == $flag ? ' active' : '') . '"><img src="images/flags/' . $flag . '.gif" alt="' .
+            $lang . '"></a>';
+    }
 }
-else {
-
-	$_language->read_module('sc_language');
-
-	$filepath = "languages/";
-	$langs = array();
-	// Select all possible languages
-	$mysql_langs = array();
-	$query = safe_query("SELECT lang, language FROM ".PREFIX."news_languages");
-	while($ds = mysql_fetch_assoc($query)){
-		$mysql_langs[$ds['lang']] = $ds['language'];
-	}
-	
-	if($dh = opendir($filepath)) {
-		while($file = mb_substr(readdir($dh), 0, 2)) {
-			if($file != "." and $file!=".." and is_dir($filepath.$file)) {
-				if(isset($mysql_langs[$file])){
-					$name = $mysql_langs[$file];
-					$name = ucfirst($name);
-					$langs[] = array($file,$name);
-				}
-				else{
-					$langs[] = array($file,$file);
-				}
-			}
-		}
-		closedir($dh);
-	}
-	
-	foreach($langs as $lang){
-		$querystring='';
-		if($_SERVER['QUERY_STRING']) $querystring = "&amp;query=".rawurlencode($_SERVER['QUERY_STRING']);
-		echo '<a href="sc_language.php?new_lang='.$lang[0].$querystring.'" title="'.$lang[1].'">';
-		if($_language->language == $lang[0]){
-			 echo '<img src="images/haken.gif" alt="'.$lang[1].'" border="0" style="background-image:url(\'images/flags/'.$lang[0].'.gif\'); background-position: center;" />';
-		}	 
-		else { 
-			echo '<img src="images/flags/'.$lang[0].'.gif" alt="'.$lang[1].'" border="0" />';
-		} 	
-		echo "</a> ";
-	}
-}
-?>

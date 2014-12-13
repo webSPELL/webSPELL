@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -30,9 +30,10 @@ $language_array = Array(
 /* do not edit above this line */
 
 	'about_myself'=>'About myself',
+	'activated'=>'activated',
 	'avatar'=>'Avatar:',
 	'back'=>'back',
-	'bbcode'=>'<a href="javascript:MM_openBrWindow(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> is ON',
+	'bbcode'=>'<a href="javascript:window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> is ON',
 	'can_not_copy'=>'can not copy file from server',
 	'change_mail'=>'change E-Mail',
 	'change_password'=>'change password',
@@ -45,6 +46,7 @@ $language_array = Array(
 	'country'=>'Country',
 	'cpu'=>'CPU',
 	'date_of_birth'=>'Date of Birth',
+	'deactivated'=>'deactivated',
 	'delete_max_230_210'=>'delete (max230/210)',
 	'delete_max_90_90'=>'delete (max90/90)',
 	'e-mail'=>'E-mail',
@@ -57,7 +59,12 @@ $language_array = Array(
 	'first_name'=>'First Name',
 	'forgot_new_pw'=>'you forgot to enter a new password!',
 	'forgot_old_pw'=>'you forgot to enter your old password!',
+    'format_date'=>'Date format',
+    'format_time'=>'Time format',
 	'graphiccard'=>'Graphics card',
+	'guestbook'=>'Guestbook',
+	'hdd'=>'Hard drive',
+	'headset'=>'Headset',
 	'hide_e-mail'=>'Hide E-mail?',
 	'homepage'=>'Homepage',
 	'html'=>'HTML is OFF',
@@ -94,8 +101,8 @@ Thank you for your interest
 	'nickname'=>'Nickname',
 	'nickname_already_in_use'=>'nickname already in use!',
 	'no'=>'No',
-	'not_logged_in'=>'You have to be logged in to view your profile!<br /><br />
-    &#8226; <a href="index.php?site=register">register now</a><br />
+	'not_logged_in'=>'You have to be logged in to view your profile!<br><br>
+    &#8226; <a href="index.php?site=register">register now</a><br>
     &#8226; <a href="index.php?site=login">log in</a>',
 	'old_password'=>'old Password',
 	'old_pw_not_valid'=>'your old password is not valid!',
@@ -112,9 +119,10 @@ Thank you for your interest
 	'repeat_new_email'=>'repeat new E-Mail',
 	'repeat_new_password'=>'repeat new Password',
 	'repeated_pw_not_valid'=>'your repeated password is not valid!',
+	'repeated_mail_not_valid'=>'your repeated e-mail is not equal!',
 	'sexuality'=>'Gender',
 	'signature'=>'Signature',
-	'smilies'=>'<a href="javascript:MM_openBrWindow(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smilies</a> are ON',
+	'smilies'=>'<a href="javascript:window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smilies</a> are ON',
 	'soundcard'=>'Soundcard',
 	'town'=>'Town',
 	'unknown'=>'not available',
@@ -129,6 +137,7 @@ Thank you for your interest
 	'you_have_to_firstname'=>'You have to enter your First-Name!',
 	'you_have_to_nickname'=>'You have to enter a nickname!',
 	'you_have_to_username'=>'You have to enter a username!',
-	'you_have_to_valid_email'=>'Your e-mail is not valid!'
+	'you_have_to_valid_email'=>'Your e-mail is not valid!',
+	'wrong_password'=>'Wrong password'
 );
 ?>

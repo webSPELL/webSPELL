@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -32,6 +32,6 @@ $language_array = Array(
 	'no_informations'=>'nincs elérhető információ',
 	'report_message'=>'[b]Van egy új %s - Jelentés[/b][br][br]%s-ID: %d[br]Infó: %s[br]Besorolás: [url]index.php?site=files&file=%d[/url]',
 	'report_recognized'=>'A jelentésed elfogadva. Köszönjük.',
-	'wrong_securitycode'=>'Hibás biztonsági kód!<br /><br />[<a href="javascript:back();">vissza</a>]'
+	'wrong_securitycode'=>'Hibás biztonsági kód!<br><br>[<a href="javascript:back();">vissza</a>]'
 );
 ?>

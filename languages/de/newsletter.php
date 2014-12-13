@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -42,11 +42,11 @@ $language_array = Array(
 	'newsletter_registration'=>'Newsletter abonieren',
 	'no_such_mail_adress'=>'Diese E-Mail Adresse ist nicht in der Datenbank',
 	'password_had_been_send'=>'Der Entfernungscode wurde gesendet',
-	'register_newsletter'=>'Für das Newsletter anmelden',
-	'request_mail'=>'<b>Du hast deinen Entfernungscode angefordert.</b><br /><br />Um deine Mailadresse von der Mailing-Liste zu entfernen, klicke folgenden Link an: <a href="http://%homepage_url%/index.php?site=newsletter&mail=%mail%&pass=%delete_key%">Mailadresse entfernen</a><br />Das Passwort zum Entfernen von der Liste lautet: %delete_key%<br /><br />Bis demnächst auf %homepage_url%',
+	'register_newsletter'=>'Für den Newsletter anmelden',
+	'request_mail'=>'<b>Du hast deinen Entfernungscode angefordert.</b><br><br>Um deine Mailadresse von der Mailing-Liste zu entfernen, klicke folgenden Link an: <a href="http://%homepage_url%/index.php?site=newsletter&mail=%mail%&pass=%delete_key%">Mailadresse entfernen</a><br>Das Passwort zum Entfernen von der Liste lautet: %delete_key%<br><br>Bis demnächst auf %homepage_url%',
 	'send'=>'senden',
 	'submit'=>'abschicken',
-	'success_mail'=>'<b>Vielen Dank für deine Anmeldung!</b><br /><br />Wenn du deine Mailadresse von der Mailing-Liste entfernen willst, nutze bitte folgenden Link: <a href="http://%homepage_url%/index.php?site=newsletter&mail=%mail%&pass=%delete_key%">Mailadresse entfernen</a><br />Das Passwort zum Entfernen von der Liste lautet: %delete_key%<br /><br />Bis demnächst auf %homepage_url%',
+	'success_mail'=>'<b>Vielen Dank für deine Anmeldung!</b><br><br>Wenn du deine Mailadresse von der Mailing-Liste entfernen willst, nutze bitte folgenden Link: <a href="http://%homepage_url%/index.php?site=newsletter&mail=%mail%&pass=%delete_key%">Mailadresse entfernen</a><br>Das Passwort zum Entfernen von der Liste lautet: %delete_key%<br><br>Bis demnächst auf %homepage_url%',
 	'thank_you_for_registration'=>'Besten Dank für dein Abonnement',
 	'you_are_already_registered'=>'Du bist schon registriert.',
 	'your_mail_adress'=>'Deine E-Mail Adresse',

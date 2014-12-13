@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -25,71 +25,117 @@
 ##########################################################################
 */
 
-function getuserforumtopics($userID) {
-	$anz=mysql_num_rows(safe_query("SELECT topicID FROM ".PREFIX."forum_topics WHERE userID='$userID' "));
-	return $anz;
+function getuserforumtopics($userID)
+{
+    return (
+        mysqli_num_rows(
+            safe_query(
+                "SELECT `topicID` FROM `" . PREFIX . "forum_topics` WHERE `userID` = " . (int)$userID
+            )
+        ) > 0
+    );
 }
 
-function getuserforumposts($userID) {
-	$anz=mysql_num_rows(safe_query("SELECT postID FROM ".PREFIX."forum_posts WHERE poster='$userID'"));
-	return $anz;
+function getuserforumposts($userID)
+{
+    return (
+        mysqli_num_rows(
+            safe_query(
+                "SELECT `postID` FROM `" . PREFIX . "forum_posts` WHERE `poster` = " . (int)$userID
+            )
+        ) > 0
+    );
 }
 
-function getboardname($boardID) {
-	$ds=mysql_fetch_array(safe_query("SELECT name FROM ".PREFIX."forum_boards WHERE boardID='$boardID'"));
-	return $ds['name'];
-}
-function getcategoryname($catID){
-	$ds=mysql_fetch_array(safe_query("SELECT name FROM ".PREFIX."forum_categories WHERE catID='$catID'"));
-	return $ds['name'];
-}
-
-function gettopicname($topicID) {
-	$ds=mysql_fetch_array(safe_query("SELECT topic FROM ".PREFIX."forum_topics WHERE topicID='$topicID'"));
-	return $ds['topic'];
+function getboardname($boardID)
+{
+    $ds = mysqli_fetch_array(
+        safe_query(
+            "SELECT `name` FROM `" . PREFIX . "forum_boards` WHERE `boardID` = " . (int)$boardID
+        )
+    );
+    return $ds['name'];
 }
 
-function redirect($url, $info, $time=1) {
-	if($url=="back" AND $info!='' AND isset($_SERVER['HTTP_REFERER'])) {
-		$url = $_SERVER['HTTP_REFERER'];
-		$info = '';
-	} elseif($url=="back" AND $info!='') {
-		$url = $info;
-		$info = '';
-	}
-	echo'<meta http-equiv="refresh" content="'.$time.';URL='.$url.'" />
-  <br /><p style="color:#000000">'.$info.'</p><br /><br />';
+function getcategoryname($catID)
+{
+    $ds = mysqli_fetch_array(
+        safe_query(
+            "SELECT `name` FROM `" . PREFIX . "forum_categories` WHERE `catID` = " .(int)$catID
+        )
+    );
+    return $ds['name'];
 }
 
-function getmoderators($boardID) {
-	$moderatoren=safe_query("SELECT * FROM ".PREFIX."forum_moderators WHERE boardID='$boardID'");
-	$moderators = '';
-	$j=1;
-	while($dm=mysql_fetch_array($moderatoren)) {
-		$username=getnickname($dm['userID']);
-		if($j>1) $moderators .= ', <a href="index.php?site=profile&amp;id='.$dm['userID'].'">'.$username.'</a>';
-		else $moderators = '<a href="index.php?site=profile&amp;id='.$dm['userID'].'">'.$username.'</a>';
-		$j++;
-	}
-	return $moderators;
+function gettopicname($topicID)
+{
+    $ds = mysqli_fetch_array(safe_query("SELECT topic FROM " . PREFIX . "forum_topics WHERE topicID='$topicID'"));
+    return $ds['topic'];
 }
 
-function getlastpost($topicID) {
-	$ds=mysql_fetch_array(safe_query("SELECT postID FROM ".PREFIX."forum_posts WHERE topicID='$topicID' ORDER BY postID DESC LIMIT 0,1"));
-	return $ds['postID'];
+function getmoderators($boardID)
+{
+    $moderatoren = safe_query("SELECT * FROM `" . PREFIX . "forum_moderators` WHERE `boardID` = " . (int)$boardID);
+    $moderators = '';
+    $j = 1;
+    while ($dm = mysqli_fetch_array($moderatoren)) {
+        $username = getnickname($dm['userID']);
+        if ($j > 1) {
+            $moderators .= ', <a href="index.php?site=profile&amp;id=' . $dm['userID'] . '">' . $username . '</a>';
+        } else {
+            $moderators = '<a href="index.php?site=profile&amp;id=' . $dm['userID'] . '">' . $username . '</a>';
+        }
+        $j++;
+    }
+    return $moderators;
 }
 
-function getboardid($topicID) {
-	$ds=mysql_fetch_array(safe_query("SELECT boardID FROM ".PREFIX."forum_topics WHERE topicID='".$topicID."' LIMIT 0,1"));
-	return $ds['boardID'];
+function getlastpost($topicID)
+{
+    $ds = mysqli_fetch_array(
+        safe_query(
+            "SELECT
+                `postID`
+            FROM
+                `" . PREFIX . "forum_posts`
+            WHERE
+                `topicID` = " . (int)$topicID . "
+            ORDER BY
+                `postID` DESC
+            LIMIT 0,1"
+        )
+    );
+    return $ds['postID'];
 }
 
-function usergrpexists($fgrID) {
-	$anz=mysql_num_rows(safe_query("SELECT fgrID FROM ".PREFIX."forum_groups WHERE fgrID='$fgrID'"));
-	return $anz;
+function getboardid($topicID)
+{
+    $ds = mysqli_fetch_array(
+        safe_query(
+            "SELECT `boardID` FROM `" . PREFIX . "forum_topics` WHERE `topicID` = " . (int)$topicID . " LIMIT 0,1"
+        )
+    );
+    return $ds['boardID'];
 }
-function boardexists($boardID){
-	$anz = mysql_num_rows(safe_query("SELECT name FROM ".PREFIX."forum_boards WHERE boardID='$boardID'"));
-	return $anz;
+
+function usergrpexists($fgrID)
+{
+    return (
+        mysqli_num_rows(
+            safe_query(
+                "SELECT `fgrID` FROM `" . PREFIX . "forum_groups` WHERE `fgrID` = " . (int)$fgrID
+            )
+        ) > 0
+    );
 }
-?>
+
+function boardexists($boardID)
+{
+    return (
+        mysqli_num_rows(
+            safe_query(
+                "SELECT `name` FROM `" . PREFIX . "forum_boards` WHERE `boardID` = " . (int)$boardID
+            )
+        ) > 0
+    );
+}

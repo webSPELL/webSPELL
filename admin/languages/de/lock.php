@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -33,7 +33,7 @@ $language_array = Array(
   'lock'=>'sperren',
   'locked_since'=>'Die Seite ist gesperrt seit',
   'pagelock'=>'Seite sperren',
-  'page_locked'=>'<b>Seite gesperrt!</b><br />Nur Admins haben jetzt Zugriff zur Seite.',
+  'page_locked'=>'<b>Seite gesperrt!</b><br>Nur Admins haben jetzt Zugriff zur Seite.',
   'page_unlocked'=>'<b>Seite entriegelt!</b>',
   'settings'=>'Einstellungen',
   'transaction_invalid'=>'Transaktions ID ungültig',

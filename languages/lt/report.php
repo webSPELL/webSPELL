@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -32,6 +32,6 @@ $language_array = Array(
 	'no_informations'=>'jokios informacijos nėra',
 	'report_message'=>'[b]Čia yra naujas %s - Pranešimas[/b][br][br]%s-ID: %d[br]Info: %s[br]Nustatymai: [url]index.php?site=files&file=%d[/url]',
 	'report_recognized'=>'Jūsų pranešimas buvo atpažintas. Ačiū jums.',
-  'wrong_securitycode'=>'Jūs įvedėte blogą apsaugos kodą<br /><br />[<a href="javascript:back();">grįžti</a>]'
+  'wrong_securitycode'=>'Jūs įvedėte blogą apsaugos kodą<br><br>[<a href="javascript:back();">grįžti</a>]'
 );
 ?>

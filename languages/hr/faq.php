@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -35,7 +35,7 @@ $language_array = Array(
 	'faq'=>'Česta pitanja',
 	'faqs'=>'Česta pitanja',
 	'no_categories'=>'Još nisu stvorene kategorije',
-	'no_faq'=>'Nema unesenih pitanja.<br /><a href="index.php?site=faq">Natrag na prethodnu stranicu</a>',
+	'no_faq'=>'Nema unesenih pitanja.<br><a href="index.php?site=faq">Natrag na prethodnu stranicu</a>',
 	'saved_on'=>'Spremljeno'
 );
 ?>

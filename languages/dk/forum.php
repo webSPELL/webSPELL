@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -35,7 +35,7 @@ $language_array = Array(
 	'and'=>'og',
 	'author'=>'Forfatter',
 	'back_buddy'=>'tilbage til vennelisten',
-	'bbcode_on'=>'<a href="javascript:MM_openBrWindow(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> er TIL',
+	'bbcode_on'=>'<a href="javascript:window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> er TIL',
 	'board'=>'Board',
 	'boards'=>'Boards',
 	'clanmember'=>'Klanmedlem',
@@ -78,8 +78,8 @@ $language_array = Array(
 	'new_reply'=>'nyt svar',
 	'new_topic'=>'nyt emne',
 	'newest_member'=>'nyeste medlem',
-	'newreply_image'=>'<img src="images/icons/newreply.gif" border="0" alt="svar">',
-	'newtopic_image'=>'<img src="images/icons/newtopic.gif" border="0" alt="nyt emne">',
+	'newreply_image'=>'<img src="images/icons/newreply.gif" alt="svar">',
+	'newtopic_image'=>'<img src="images/icons/newtopic.gif" alt="nyt emne">',
 	'next_7_days'=>'næste 7 dage',
 	'no_access'=>'Ingen Adgang',
 	'no_access_write'=>'Ingen adgang til at skrive på dette board.',
@@ -87,8 +87,8 @@ $language_array = Array(
 	'no_new_posts'=>'ingen nye indlæg',
 	'no_permission'=>'Du har ikke rettigheder til at se interne Boards!',
 	'not_logged'=>'Ikke logget ind',
-	'not_logged_msg'=>'<br /><br />For at starte eller svare i et emne, skal du være registreret og logget ind!<br /><br />
-    &#8226; <a href="index.php?site=register">Registrer nu</a><br />
+	'not_logged_msg'=>'<br><br>For at starte eller svare i et emne, skal du være registreret og logget ind!<br><br>
+    &#8226; <a href="index.php?site=register">Registrer nu</a><br>
     &#8226; <a href="index.php?site=login">log ind</a>',
 	'notify'=>'Meddel mig når der er tilføjet et svar',
 	'notify_mail'=>'nyt svar fra %poster% i emne
@@ -113,9 +113,9 @@ $language_array = Array(
 	'registered_users'=>'registrerede brugere',
 	'reopen_topic'=>'genåbn emne',
 	'replies'=>'Svar',
-	'search_image'=>'<img src="images/icons/search.gif" border="0">',
+	'search_image'=>'<img src="images/icons/search.gif">',
 	'select_all'=>'Marker alle',
-	'smilies_on'=>'<a href="javascript:MM_openBrWindow(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smilies</a> er TIL',
+	'smilies_on'=>'<a href="javascript:window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smilies</a> er TIL',
 	'sort'=>'sorter',
 	'stats'=>'Statistik',
 	'sticky'=>'opslag',

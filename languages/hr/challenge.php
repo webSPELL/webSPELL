@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -61,7 +61,7 @@ $language_array = Array(
 	'sort'=>'Razvrstaj:',
 	'squad'=>'tim',
 	'submit_challenge'=>'spremi izazov',
-	'thank_you'=>'Hvala Vam na Vašem zahtjevu!<br />',
+	'thank_you'=>'Hvala Vam na Vašem zahtjevu!<br>',
 	'time'=>'Vrijeme',
 	'wrong_security_code'=>'Krivo unesen sigurnosni kod.'
 );

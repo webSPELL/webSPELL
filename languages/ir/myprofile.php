@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2010 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -30,9 +30,10 @@ $language_array = Array(
 /* do not edit above this line */
 
   'about_myself'=>'در مورد من',
+  'activated'=>'فعال',
   'avatar'=>'اواتار:',
   'back'=>'برگشت',
-  'bbcode'=>'<a href="javascript:MM_openBrWindow(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> روشن',
+  'bbcode'=>'<a href="javascript:window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> روشن',
   'can_not_copy'=>'نمیتوان فایل را از سرور کپی کرد',
   'change_mail'=>'تغغیر ایمیل',
   'change_password'=>'تغغیر پسورد',
@@ -45,6 +46,7 @@ $language_array = Array(
   'country'=>'کشور',
   'cpu'=>'CPU',
   'date_of_birth'=>'تاریخ تولد',
+  'deactivated'=>'غیر فعال',
   'delete_max_230_210'=>'حذف (max230/210)',
   'delete_max_90_90'=>'حذف (max90/90)',
   'e-mail'=>'ایمیل',
@@ -57,7 +59,12 @@ $language_array = Array(
   'first_name'=>'نام کوچک',
   'forgot_new_pw'=>'!شما فراموش کردید پسورد جدید را وارد کنید',
   'forgot_old_pw'=>'!شما فراموش کردید پسورد قدیمی را وارد کنید',
+  'format_date'=>'قالب تاریخ',
+  'format_time'=>'فرمت زمان',
   'graphiccard'=>'Graphics card',
+  'guestbook'=>'مهمان',
+  'hdd'=>'هارد دیسک',
+  'headset'=>'هدست',
   'hide_e-mail'=>'ایا میخواهی ایمیل را مخفی کنید؟',
   'homepage'=>'صفحه نخست',
   'html'=>'HTML خاموش است',
@@ -85,7 +92,7 @@ $language_array = Array(
   'nickname'=>'نام مخفف',
   'nickname_already_in_use'=>'!این نام مخفف هم اکنون وجود دارد',
   'no'=>'خیر',
-  'not_logged_in'=>'!شما باید وارد شوید تا بتوانید پروفایل را ببینید<br /><br />rn    &#8226; <a href="index.php?site=register">عضو شوید</a><br />rn    &#8226; <a href="index.php?site=login">ورود</a>',
+  'not_logged_in'=>'!شما باید وارد شوید تا بتوانید پروفایل را ببینید<br><br>rn    &#8226; <a href="index.php?site=register">عضو شوید</a><br>rn    &#8226; <a href="index.php?site=login">ورود</a>',
   'old_password'=>'پسورد قدیمی',
   'old_pw_not_valid'=>'!پسورد قدیمی شما معتبر نیست',
   'options'=>'تنظیمات',
@@ -103,7 +110,7 @@ $language_array = Array(
   'repeated_pw_not_valid'=>'!پسورد اشتباه وارد شده',
   'sexuality'=>'جنس',
   'signature'=>'امضا',
-  'smilies'=>'<a href="javascript:MM_openBrWindow(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">شکلک ها</a> روشن',
+  'smilies'=>'<a href="javascript:window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">شکلک ها</a> روشن',
   'soundcard'=>'Soundcard',
   'town'=>'شهر',
   'unknown'=>'موجود نیست',

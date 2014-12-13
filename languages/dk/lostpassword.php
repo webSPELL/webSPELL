@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -43,8 +43,8 @@ Hyg dig på hjemmesiden
 	'lost_password'=>'glemt kodeordet',
 	'no_mail_given'=>'Du har glemt at indtaste en email adresse.',
 	'no_user_found'=>'ingen bruger fundet!',
-	'successful'=>'Din konto er blevet fundet<br /><br />
-					Du vil modtage en e-mail med din konto-data om et par sekunder.<br /><br />
+	'successful'=>'Din konto er blevet fundet<br><br>
+					Du vil modtage en e-mail med din konto-data om et par sekunder.<br><br>
 			 		&#8226; <a href="index.php?site=login">log ind</a>',
 	'your_email'=>'Din email'
 );

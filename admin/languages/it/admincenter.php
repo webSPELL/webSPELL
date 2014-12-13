@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -31,6 +31,7 @@ $language_array = Array(
 
   'about_us'=>'Chi siamo',
   'access_denied'=>'Accesso negato',
+  'addons'=>'Addons',
   'bannerrotation'=>'Banner rotazione',
   'boards'=>'Forum',
   'clanmembers'=>'Membri',
@@ -75,6 +76,13 @@ $language_array = Array(
   'update_webspell'=>'webSPELL aggiornamento',
   'user_administration'=>'Utenti Amministrazione',
   'user_ranks'=>'Utente Ranks',
-  'visitor_statistics'=>'Statistiche visitatori'
+  'visitor_statistics'=>'Statistiche visitatori',
+  'spam'=>'Spam',
+  'spam_forum'=>'Posts / Topics',
+  'spam_user'=>'Remove User',
+  'multiaccounts'=>'Multi-Accounts',
+  'api_log'=>'API Log',
+  'blocked_content'=>'Blocked Content',
+  'modrewrite'=>'Mod-Rewrite'
 );
 ?>

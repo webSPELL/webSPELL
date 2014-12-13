@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -67,14 +67,14 @@ $language_array = Array(
 	'teal'=>'teal',
 	'tiny'=>'lillebitte',
 	'tomato'=>'tomat',
-	'uneven_amount'=>'Ulige antal af åbnende og lukkende BBCode tags',
-	'first_tag_closing_tag'=>'Første BBCode tag kan ikke være et lukkende et',
-	'not_same_amount'=>'Ikke det antal af åbnende og lukkende BBCode tags',
-	'wrong_nesting'=>'Forkert indlejring af BBCode tags',
+	'unevenAmount'=>'Ulige antal af åbnende og lukkende BBCode tags',
+	'firstTagClosingTag'=>'Første BBCode tag kan ikke være et lukkende et',
+	'notSameAmount'=>'Ikke det antal af åbnende og lukkende BBCode tags',
+	'wrongNesting'=>'Forkert indlejring af BBCode tags',
 	'listguide'=>'Indtast \'1\' for en nummereret Liste, \'a\' for en alfabetisk Liste eller \'\' for en punktliste',
 	'listpoint'=>'Indtast et Liste-Punkt. Indtast intet eller klik \'Annuller\' for at færdiggøre listen.',
 	'addcode'=>'Indsæt en position',
-	'read_more'=>'læs videre',
+	'readMore'=>'læs videre',
 	'mc_you_have'=>'Du har',
 	'mc_new_messages'=>'ny(e) besked(er).Vil du læse dem nu?',
 	'na'=>'ikke tilgængelig',

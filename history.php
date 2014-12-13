@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -25,21 +25,21 @@
 ##########################################################################
 */
 
-$_language->read_module('history');
+$_language->readModule('history');
 
-eval ("\$title_history = \"".gettemplate("title_history")."\";");
+eval ("\$title_history = \"" . gettemplate("title_history") . "\";");
 echo $title_history;
 
-$ergebnis=safe_query("SELECT * FROM ".PREFIX."history");
-if(mysql_num_rows($ergebnis)) {
-	$ds=mysql_fetch_array($ergebnis);
+$ergebnis = safe_query("SELECT * FROM " . PREFIX . "history");
+if (mysqli_num_rows($ergebnis)) {
+    $ds = mysqli_fetch_array($ergebnis);
 
-	$history=htmloutput($ds['history']);
-	$history=toggle($history, 1);
+    $history = htmloutput($ds[ 'history' ]);
+    $history = toggle($history, 1);
 
-	$bg1=BG_1;
-	eval ("\$history = \"".gettemplate("history")."\";");
-	echo $history;
+    $bg1 = BG_1;
+    eval ("\$history = \"" . gettemplate("history") . "\";");
+    echo $history;
+} else {
+    echo $_language->module[ 'no_history' ];
 }
-else echo $_language->module['no_history'];
-?>

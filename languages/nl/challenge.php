@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -61,7 +61,7 @@ $language_array = Array(
 	'sort'=>'sorteer:',
 	'squad'=>'team',
 	'submit_challenge'=>'Ok',
-	'thank_you'=>'Bedankt voor je verzoek!<br />',
+	'thank_you'=>'Bedankt voor je verzoek!<br>',
 	'time'=>'tijd',
 	'wrong_security_code'=>'De veiligheids code was verkeerd.'
 

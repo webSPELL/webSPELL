@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -43,8 +43,8 @@ Užite si našu stránku
 	'lost_password'=>'stratené heslo',
 	'no_mail_given'=>'Nezadali ste žiadnu e-mailovú adresu.',
 	'no_user_found'=>'užívateľ nebol nájdený!',
-	'successful'=>'Vaše konto bolo nájdené<br /><br />
-	O chvíľu dostanete E-mail s informáciami o vašom konte.<br /><br />
+	'successful'=>'Vaše konto bolo nájdené<br><br>
+	O chvíľu dostanete E-mail s informáciami o vašom konte.<br><br>
 	&#8226; <a href="index.php?site=login">prihlásenie</a>',
 	'your_email'=>'Váš E-mail'
 );

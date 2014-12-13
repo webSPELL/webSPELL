@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -43,10 +43,10 @@ $language_array = Array(
 	'no_such_mail_adress'=>'Čia nėra tokio e-pašto adreso.',
 	'password_had_been_send'=>'Slaptažodis buvo išsiųstas.',
 	'register_newsletter'=>'Registruotis naujienlaiškiui',
-	'request_mail'=>'<b>Jūms reikalingas panaikinimo raktas!</b><br /><br />Kad panaikinti jus iš sąrašo spustelkite <a href="http://%homepage_url%/index.php?site=newsletter&mail=%mail%&pass=%delete_key%">čia</a><br />Jūsų slaptažodis norit ištrinti: %delete_key%<br /><br />Susimatysime puslapyje - %homepage_url%',
+	'request_mail'=>'<b>Jūms reikalingas panaikinimo raktas!</b><br><br>Kad panaikinti jus iš sąrašo spustelkite <a href="http://%homepage_url%/index.php?site=newsletter&mail=%mail%&pass=%delete_key%">čia</a><br>Jūsų slaptažodis norit ištrinti: %delete_key%<br><br>Susimatysime puslapyje - %homepage_url%',
 	'send'=>'siųsti',
 	'submit'=>'pateikti',
-	'success_mail'=>'<b>Ačiū už registraciją!</b><br /><br />Kad panaikinti jus iš sąrašo spustelkite <a href="http://%homepage_url%/index.php?site=newsletter&mail=%mail%&pass=%delete_key%">čia</a><br />Jūsų slaptažodis norit ištrinti: %delete_key%<br /><br />Susimatysime puslapyje - %homepage_url%',
+	'success_mail'=>'<b>Ačiū už registraciją!</b><br><br>Kad panaikinti jus iš sąrašo spustelkite <a href="http://%homepage_url%/index.php?site=newsletter&mail=%mail%&pass=%delete_key%">čia</a><br>Jūsų slaptažodis norit ištrinti: %delete_key%<br><br>Susimatysime puslapyje - %homepage_url%',
 	'thank_you_for_registration'=>'Ačiū už jūsų registraciją.',
 	'you_are_already_registered'=>'Jūs jau esate užregistruoti.',
 	'your_mail_adress'=>'Jūsų E-Pašto adresas',

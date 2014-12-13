@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -33,7 +33,7 @@ $language_array = Array(
 	'already_rated'=>'<b>Članak već ocijenjen!</b>',
 	'articles'=>'članci',
 	'author'=>'Autor',
-	'bbcode'=>'&#8226; <a href="javascript:MM_openBrWindow(\'code.php\',\'BBKod\',\'scrollbars=yes,width=600,height=500\')">BBKod</a> <b><u>uključen</u></b>',
+	'bbcode'=>'&#8226; <a href="javascript:window.open(\'code.php\',\'BBKod\',\'scrollbars=yes,width=600,height=500\')">BBKod</a> <b><u>uključen</u></b>',
 	'cancel'=>'Odustani',
 	'date'=>'Datum',
 	'delete'=>'izbriši',
@@ -63,7 +63,7 @@ $language_array = Array(
 	'really_delete'=>'Stvarno izbriši ovaj članak?',
 	'save_article'=>'Spremi članak',
   'self'=>'isti prozor',
-	'smilies'=>'&#8226; <a href="javascript:MM_openBrWindow(\'smileys.php\',\'Smajlići\',\'scrollbars=yes,width=340,height=500\')">Smajlići</a> <b><u>uključeni</u></b>',
+	'smilies'=>'&#8226; <a href="javascript:window.open(\'smileys.php\',\'Smajlići\',\'scrollbars=yes,width=340,height=500\')">Smajlići</a> <b><u>uključeni</u></b>',
 	'sort'=>'Razvrstaj:',
 	'title'=>'Naslov',
 	'top5_points'=>'Top 5 članaka (Bodovi)',
@@ -71,6 +71,7 @@ $language_array = Array(
 	'upload_images'=>'Uploadaj slike',
 	'user_comments'=>'Omogući komentare korisnicima',
 	'viewed'=>'Pogleda',
-	'visitor_comments'=>'Omogući komentare posjetiteljima'
+	'visitor_comments'=>'Omogući komentare posjetiteljima',
+	'tags'=>'tagovi'
 );
 ?>

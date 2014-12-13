@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -33,7 +33,7 @@ $language_array = Array(
 	'already_rated'=>'<b>Oceniałeś już ten artykuł!</b>',
 	'articles'=>'Artykuły',
 	'author'=>'Autor',
-	'bbcode'=>'&#8226; <a href="javascript:MM_openBrWindow(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> <b><u>jest Włączony</u></b>',
+	'bbcode'=>'&#8226; <a href="javascript:window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> <b><u>jest Włączony</u></b>',
 	'cancel'=>'Anuluj',
 	'date'=>'Data',
 	'delete'=>'Usuń',
@@ -46,7 +46,7 @@ $language_array = Array(
 	'links'=>'Linki',
 	'login_for_rate'=>'<b>Musisz być zarejestrowany i zalogowany by ocenić artykuł!</b>',
 	'new_article'=>'Nowy artykuł',
-        'new_window'=>'Otwieraj w nowym oknie',
+    'new_window'=>'Otwieraj w nowym oknie',
 	'no_access'=>'Odmowa dostępu',
 	'no_comments'=>'Komentowanie wyłączone',
 	'no_entries'=>'No entries available',
@@ -62,8 +62,8 @@ $language_array = Array(
 	'rating'=>'Ocena',
 	'really_delete'=>'Na pewno chcesz skasować artykuł ?',
 	'save_article'=>'Zapisz artykuł',
-        'self'=>'Otwórz w tym samym oknie',
-	'smilies'=>'&#8226; <a href="javascript:MM_openBrWindow(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smilies</a> <b><u>Wł</u></b>',
+    'self'=>'Otwórz w tym samym oknie',
+	'smilies'=>'&#8226; <a href="javascript:window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smilies</a> <b><u>Wł</u></b>',
 	'sort'=>'Sortuj:',
 	'title'=>'Tytuł',
 	'top5_points'=>'TOP 5 ARTYKUŁY (Punkty)',
@@ -71,6 +71,7 @@ $language_array = Array(
 	'upload_images'=>'Wgraj obrazki',
 	'user_comments'=>'Użytkownicy mogą komentować',
 	'viewed'=>'Wejść',
-	'visitor_comments'=>'Goście mogą komentować'
+	'visitor_comments'=>'Goście mogą komentować',
+	'tags'=>'tagi'
 );
 ?>

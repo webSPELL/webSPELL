@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -54,7 +54,7 @@ $language_array = Array(
 	'no_incoming'=>'Nincs üzenet a bejövő postafiókban.',
 	'no_outgoing'=>'Nincs üzenet a kimenő postafiókban.',
 	'no_subject'=>'(nincs tárgy)',
-	'not_logged'=>'Nem vagy bejelentkezve.<br /><a href="index.php?site=login">Bejelentkezés</a> | <a href="index.php?site=register">Regisztráció</a>',
+	'not_logged'=>'Nem vagy bejelentkezve.<br><a href="index.php?site=login">Bejelentkezés</a> | <a href="index.php?site=register">Regisztráció</a>',
 	'options'=>'Lehetőségek',
 	'outgoing'=>'Kimenő',
 	'read'=>'Olvas',
@@ -73,7 +73,7 @@ $language_array = Array(
 	'title'=>'Tárgy',
 	'your_message'=>'Az üzeneted:',
 	'mail_subject'=>'Új privi',
-	'mail_body'=>'<b>Hello %nickname%!</b><br /><br />Új privát üzeneted érkezett a '.PAGETITLE.' weboldalon (%hp_url%).<br />Klikkelj <a href="http://%hp_url%?site=messenger">ide</a> a privi elolvasásához.<br /><br />(C) webSPELL.org',
+	'mail_body'=>'<b>Hello %nickname%!</b><br><br>Új privát üzeneted érkezett a '.PAGETITLE.' weboldalon (%hp_url%).<br>Klikkelj <a href="http://%hp_url%?site=messenger">ide</a> a privi elolvasásához.<br><br>(C) webSPELL.org',
 	'error'=>'error',
 	'unknown_user'=>'unknown user'
 );

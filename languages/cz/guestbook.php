@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -30,7 +30,7 @@ $language_array = Array(
 /* do not edit above this line */
 
 	'admin_comment'=>'Admin comment',
-  'bbcode'=>'<a href="javascript:MM_openBrWindow(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> ZAPNUTÝ',
+  'bbcode'=>'<a href="javascript:window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> ZAPNUTÝ',
 	'by'=>'od',
 	'comment'=>'Komentář',
 	'delete_selected'=>'Smazat vybrané',
@@ -46,13 +46,13 @@ $language_array = Array(
 	'mail'=>'Tvůj e-mail',
 	'name'=>'Tvoje jméno',
 	'new_entry'=>'Nový příspěvek',
-	'no_access'=>'Nejsi přihlášený.<br /><a href="index.php?site=login">Přihlásit</a> | <a href="index.php?site=register">Registrovat</a>',
+	'no_access'=>'Nejsi přihlášený.<br><a href="index.php?site=login">Přihlásit</a> | <a href="index.php?site=register">Registrovat</a>',
 	'options'=>'Nastavení',
 	'pmsubject_newentry'=>'Nový příspěvek v knize návštěv',
 	'pmtext_newentry'=>'[b]Někdo odeslal zprávu do vaší knihy návštěv![/b][br][br] [URL=index.php?site=guestbook#%insertid%]Kliknutím zde si zprávu přečteš[/URL] ',
 	'security_code'=>'Bezpečnostní kód',
 	'select_all'=>'vybrat všechno',
-	'smilies'=>'<a href="javascript:MM_openBrWindow(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smajlíci</a> ZAPNUTI',
+	'smilies'=>'<a href="javascript:window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smajlíci</a> ZAPNUTI',
 	'sort'=>'Seřadit:',
 	'submit'=>'Odeslat',
 	'update_comment'=>'Uložit komentář',

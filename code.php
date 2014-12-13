@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -29,11 +29,9 @@ include("_mysql.php");
 include("_settings.php");
 include("_functions.php");
 
-$_language->read_module('code');
+$_language->readModule('code');
 
 $bg1 = BG_1;
 $bg2 = BG_2;
-eval ("\$bbcode = \"".gettemplate("bbcode")."\";");
+eval ("\$bbcode = \"" . gettemplate("bbcode") . "\";");
 echo $bbcode;
-
-?>

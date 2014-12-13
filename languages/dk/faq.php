@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -35,7 +35,7 @@ $language_array = Array(
 	'faq'=>'FAQ',
 	'faqs'=>'FAQs',
 	'no_categories'=>'Ingen kategorier oprettet endnu',
-	'no_faq'=>'Ingen spørgsmål tilgængelige<br /><a href="index.php?site=faq">Tilbage</a>',
+	'no_faq'=>'Ingen spørgsmål tilgængelige<br><a href="index.php?site=faq">Tilbage</a>',
 	'saved_on'=>'Gemt den'
 );
 ?>

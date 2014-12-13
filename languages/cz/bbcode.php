@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -67,14 +67,14 @@ $language_array = Array(
 	'teal'=>'zeleno modrá',
 	'tiny'=>'malinké',
 	'tomato'=>'tomatová',
-	'uneven_amount'=>'Nerovnoměrné množství otevřených a zavřených BBCode tagů',
-	'first_tag_closing_tag'=>'První BBCode tag nemůže být zavírací',
-	'not_same_amount'=>'Rozdílné množství BBCode tagů',
-	'wrong_nesting'=>'Nesprávná úroveň BBCode tagů',
+	'unevenAmount'=>'Nerovnoměrné množství otevřených a zavřených BBCode tagů',
+	'firstTagClosingTag'=>'První BBCode tag nemůže být zavírací',
+	'notSameAmount'=>'Rozdílné množství BBCode tagů',
+	'wrongNesting'=>'Nesprávná úroveň BBCode tagů',
 	'listguide'=>'zadej \'1\' pro číselný seznam, \'a\' pro písmený seznam or \'\' pro seznam s odrážkami',
 	'listpoint'=>'Vložit odrážku. Nezadávej nic nebo klikni \'Cancel\' pro uzavření seznamu.',
 	'addcode'=>'Zadej pozici',
-	'read_more'=>'čti více',
+	'readMore'=>'čti více',
 	'mc_you_have'=>'Máš',
 	'mc_new_messages'=>'novou zprávu(y). Chceš si je nyní přečíst?',
 	'na'=>'nedostupné',

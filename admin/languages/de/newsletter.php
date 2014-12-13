@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -37,7 +37,7 @@ $language_array = Array(
 Dein System unterstützt keine HTML Mails.
 Du hast folgende Nachricht erhalten:',
   'profile'=>'Profil',
-  'receptionists'=>'Newsletter versandt!<br /><br />Empfänger:',
+  'receptionists'=>'Newsletter versandt!<br><br>Empfänger:',
   'remove'=>'Du kannst dich in deinem Profil selbst von der Versandliste löschen',
   'send'=>'Newsletter senden',
   'send_to'=>'Senden an',

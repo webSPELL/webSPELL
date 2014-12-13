@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -25,31 +25,43 @@
 ##########################################################################
 */
 
-$_language->read_module('news');
+$_language->readModule('news');
 
-$ergebnis=safe_query("SELECT newsID FROM ".PREFIX."news WHERE newsID='".$topnewsID."' AND intern<=".isclanmember($userID)." AND published='1' LIMIT 0,1");
-$anz = mysql_num_rows($ergebnis);
-if($anz) {
+$ergebnis = safe_query(
+    "SELECT
+        newsID
+    FROM
+        " . PREFIX . "news
+    WHERE
+        newsID='" . $topnewsID . "' AND
+        intern<=" . (int)isclanmember($userID) . " AND
+        published='1'
+    LIMIT 0,1"
+);
+$anz = mysqli_num_rows($ergebnis);
+if ($anz) {
 
-	$dn=mysql_fetch_array($ergebnis);
+    $dn = mysqli_fetch_array($ergebnis);
 
-	$message_array = array();
-	$query=safe_query("SELECT * FROM ".PREFIX."news_contents WHERE newsID='".$dn['newsID']."'");
-	while($qs = mysql_fetch_array($query)) {
-		$message_array[] = array('lang' => $qs['language'], 'headline' => $qs['headline'], 'message' => $qs['content']);
-	}
-	$showlang = select_language($message_array);
+    $message_array = [];
+    $query = safe_query("SELECT * FROM " . PREFIX . "news_contents WHERE newsID='" . $dn[ 'newsID' ] . "'");
+    while ($qs = mysqli_fetch_array($query)) {
+        $message_array[ ] =
+            ['lang' => $qs[ 'language' ], 'headline' => $qs[ 'headline' ], 'message' => $qs[ 'content' ]];
+    }
+    $showlang = select_language($message_array);
 
-	$headline=clearfromtags($message_array[$showlang]['headline']);
-	$content=$message_array[$showlang]['message'];
-	
-	if(mb_strlen($content)>$maxtopnewschars) {
-		$content=mb_substr($content, 0, $maxtopnewschars);
-		$content.='...';
-	}
-	$content = nl2br(strip_tags($content));
+    $headline = clearfromtags($message_array[ $showlang ][ 'headline' ]);
+    $content = $message_array[ $showlang ][ 'message' ];
 
-	eval ("\$sc_topnews = \"".gettemplate("sc_topnews")."\";");
-	echo $sc_topnews;
-} else echo $_language->module['no_topnews'];
-?>
+    if (mb_strlen($content) > $maxtopnewschars) {
+        $content = mb_substr($content, 0, $maxtopnewschars);
+        $content .= '...';
+    }
+    $content = nl2br(strip_tags($content));
+
+    eval ("\$sc_topnews = \"" . gettemplate("sc_topnews") . "\";");
+    echo $sc_topnews;
+} else {
+    echo $_language->module[ 'no_topnews' ];
+}

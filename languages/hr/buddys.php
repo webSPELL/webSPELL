@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -35,7 +35,7 @@ $language_array = Array(
 	'buddy_nousers'=>'Nemate korisnika na listi prijatelja',
 	'buddys'=>'Prijatelji',
 	'ignore_nousers'=>'Nemate korisnika na listi ignoriranja prijatelja',
-	'not_logged'=>'Da bi upravljali listom prijatelja, morate biti registriran i prijavljen korisnik.<br /><a href="index.php?site=register">Registriraj se</a> | <a href="index.php?site=login">Prijavi se</a>',
+	'not_logged'=>'Da bi upravljali listom prijatelja, morate biti registriran i prijavljen korisnik.<br><a href="index.php?site=register">Registriraj se</a> | <a href="index.php?site=login">Prijavi se</a>',
 	'your_buddylist'=>'Tvoja lista prijatelja',
 	'your_ignorelist'=>'Tvoja lista ignoriranja'
 );

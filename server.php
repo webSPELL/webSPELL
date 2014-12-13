@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -25,54 +25,47 @@
 ##########################################################################
 */
 
-$_language->read_module('server');
+$_language->readModule('server');
 
-eval("\$title_server = \"".gettemplate("title_server")."\";");
+eval("\$title_server = \"" . gettemplate("title_server") . "\";");
 echo $title_server;
 
-$ergebnis = safe_query("SELECT * FROM ".PREFIX."servers ORDER BY sort");
+$ergebnis = safe_query("SELECT * FROM " . PREFIX . "servers ORDER BY sort");
 
-if(mysql_num_rows($ergebnis)) {
-	$i = 1;
-	while($ds = mysql_fetch_array($ergebnis)) {
-		if($i % 2) {
-			$bg1 = BG_1;
-			$bg2 = BG_2;
-			$bg3 = BG_3;
-			$bg4 = BG_4;
-		}
-		else {
-			$bg1 = BG_3;
-			$bg2 = BG_4;
-			$bg3 = BG_1;
-			$bg4 = BG_2;
+if (mysqli_num_rows($ergebnis)) {
+    $i = 1;
+    while ($ds = mysqli_fetch_array($ergebnis)) {
+        if ($ds[ 'game' ] == "CS") {
+            $game = "HL";
+        } else {
+            $game = $ds[ 'game' ];
+        }
 
-		}
+        $showgame = getgamename($ds[ 'game' ]);
 
-		if($ds['game'] == "CS") $game = "HL";
-		else $game = $ds['game'];
-    
-    	$showgame = getgamename($ds['game']);
-    
-    	$serverdata = explode(":", $ds['ip']);
-		$ip = $serverdata[0];
-		if(isset($serverdata[1])) $port = $serverdata[1];
-		else $port='';
+        $serverdata = explode(":", $ds[ 'ip' ]);
+        $ip = $serverdata[ 0 ];
+        if (isset($serverdata[ 1 ])) {
+            $port = $serverdata[ 1 ];
+        } else {
+            $port = '';
+        }
 
-		if(!checkenv('disable_functions','fsockopen')) {
-			if(!fsockopen("udp://".$ip, $port, $strErrNo, $strErrStr, 30)) $status= "<i>".$_language->module['timeout']."</i>";
-			else $status = "<b>".$_language->module['online']."</b>";
-		}
-		else $status = "<i>".$_language->module['not_supported']."</i>";
-    	$servername=htmloutput($ds['name']);
-		$info=htmloutput($ds['info']);
-		eval("\$server = \"".gettemplate("server")."\";");
-		echo $server;
-		$i++;
-	}
-
+        if (!checkenv('disable_functions', 'fsockopen')) {
+            if (!fsockopen("udp://" . $ip, $port, $strErrNo, $strErrStr, 30)) {
+                $status = "<i>" . $_language->module[ 'timeout' ] . "</i>";
+            } else {
+                $status = "<b>" . $_language->module[ 'online' ] . "</b>";
+            }
+        } else {
+            $status = "<i>" . $_language->module[ 'not_supported' ] . "</i>";
+        }
+        $servername = htmloutput($ds[ 'name' ]);
+        $info = htmloutput($ds[ 'info' ]);
+        eval("\$server = \"" . gettemplate("server") . "\";");
+        echo $server;
+        $i++;
+    }
+} else {
+    echo $_language->module[ 'no_server' ];
 }
-else echo $_language->module['no_server'];
-
-?>
-

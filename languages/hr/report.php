@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -32,6 +32,6 @@ $language_array = Array(
 	'no_informations'=>'nema dostupnih informacija',
 	'report_message'=>'[b]Postoji novi %s - Izvještaj[/b][br][br]%s-ID: %d[br]Info: %s[br]Referer: [url]index.php?site=files&file=%d[/url]',
 	'report_recognized'=>'Vaš izvještaj je zaprimljen. Hvala.',
-  'wrong_securitycode'=>'Unijeli ste krivi sigurnosni kod!<br /><br />[<a href="javascript:back();">Natrag</a>]'
+  'wrong_securitycode'=>'Unijeli ste krivi sigurnosni kod!<br><br>[<a href="javascript:back();">Natrag</a>]'
 );
 ?>

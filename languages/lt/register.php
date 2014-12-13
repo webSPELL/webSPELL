@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -29,7 +29,7 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-	'activation_successful'=>'Jūsų profilio aktivacija sėkminga.<br />Dabar jūs jau galite prisijungti.',
+	'activation_successful'=>'Jūsų profilio aktivacija sėkminga.<br>Dabar jūs jau galite prisijungti.',
 	'back'=>'atgal',
 	'enter_nickname'=>'Prašome įrašykite slapyvardį.',
 	'enter_password'=>'Prašome įrašykite slaptažodį.',
@@ -47,7 +47,6 @@ $language_array = Array(
 Jūsų registracija %pagetitle% (%homepage_url%) buvo sėkminga. Jūsų profilio duomenys::
 
 Prisijungimo vardas: %username%
-Slaptažodis: %password%
 
 Kad baigti registraciją ir aktivaciją, jums reikia spustelti šią nuorodą:
 %activationlink%

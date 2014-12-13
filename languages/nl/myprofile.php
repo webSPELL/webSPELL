@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -30,9 +30,10 @@ $language_array = Array(
 /* do not edit above this line */
 
 	'about_myself'=>'Over mezelf',
+	'activated'=>'geactiveerd',
 	'avatar'=>'Avatar:',
 	'back'=>'terug',
-	'bbcode'=>'<a href="javascript:MM_openBrWindow(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> is AAN',
+	'bbcode'=>'<a href="javascript:window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> is AAN',
 	'can_not_copy'=>'Kan bestand niet kopiëren van server',
 	'change_mail'=>'verander E-Mail',
 	'change_password'=>'verander wachtwoord',
@@ -45,6 +46,7 @@ $language_array = Array(
 	'country'=>'Land',
 	'cpu'=>'CPU',
 	'date_of_birth'=>'Geboortedatum',
+	'deactivated'=>'gedeactiveerd',
 	'delete_max_230_210'=>'verwijder (max230/210)',
 	'delete_max_90_90'=>'verwijder (max90/90)',
 	'e-mail'=>'E-mail',
@@ -57,7 +59,12 @@ $language_array = Array(
 	'first_name'=>'Voornaam',
 	'forgot_new_pw'=>'Je bent vergeten een nieuw wachtwoord in te vullen!',
 	'forgot_old_pw'=>'Je bent vergeten je oude wachtwoord in te vullen!',
+  	'format_date'=>'Datum formaat',
+  	'format_time'=>'Tijd formaat',
 	'graphiccard'=>'Grafische kaart',
+	'guestbook'=>'Gastenboek',
+	'hdd'=>'Harde schijf',
+	'headset'=>'Koptelefoon',
 	'hide_e-mail'=>'Verstop E-mail?',
 	'homepage'=>'Homepage',
 	'html'=>'HTML is UIT',
@@ -94,8 +101,8 @@ Bedankt voor je interesse
 	'nickname'=>'Bijnaam',
 	'nickname_already_in_use'=>'Bijnaam al in gebruik!',
 	'no'=>'Nee',
-	'not_logged_in'=>'Je moet ingelogd zijn om je profiel te bekijken!<br /><br />
-    &#8226; <a href="index.php?site=register">registreer nu</a><br />
+	'not_logged_in'=>'Je moet ingelogd zijn om je profiel te bekijken!<br><br>
+    &#8226; <a href="index.php?site=register">registreer nu</a><br>
     &#8226; <a href="index.php?site=login">log in</a>',
 	'old_password'=>'oude Wachtwoord',
 	'old_pw_not_valid'=>'Je oude wachtwoord is niet geldig!',
@@ -114,7 +121,7 @@ Bedankt voor je interesse
 	'repeated_pw_not_valid'=>'Je herhaalde Wachtwoord is niet geldig!',
 	'sexuality'=>'Geslacht',
 	'signature'=>'Handtekening',
-	'smilies'=>'<a href="javascript:MM_openBrWindow(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smilies</a> zijn AAN',
+	'smilies'=>'<a href="javascript:window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smilies</a> zijn AAN',
 	'soundcard'=>'Geluidskaart',
 	'town'=>'Stad',
 	'unknown'=>'niet beschikbaar',

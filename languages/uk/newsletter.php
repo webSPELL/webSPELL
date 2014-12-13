@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -43,10 +43,10 @@ $language_array = Array(
 	'no_such_mail_adress'=>'There is no such mail adress.',
 	'password_had_been_send'=>'The password had been send.',
 	'register_newsletter'=>'Register for newsletter',
-	'request_mail'=>'<b>You required your deletion key!</b><br /><br />To remove your mail adress from the maillist click <a href="http://%homepage_url%/index.php?site=newsletter&mail=%mail%&pass=%delete_key%">here</a><br />Your password to delete yourself: %delete_key%<br /><br />See you at %homepage_url%',
+	'request_mail'=>'<b>You required your deletion key!</b><br><br>To remove your mail adress from the maillist click <a href="http://%homepage_url%/index.php?site=newsletter&mail=%mail%&pass=%delete_key%">here</a><br>Your password to delete yourself: %delete_key%<br><br>See you at %homepage_url%',
 	'send'=>'send',
 	'submit'=>'submit',
-	'success_mail'=>'<b>Thank you for your registration!</b><br /><br />To remove your mail adress from the maillist click <a href="http://%homepage_url%/index.php?site=newsletter&mail=%mail%&pass=%delete_key%">here</a><br />Your password to delete yourself: %delete_key%<br /><br />See you at %homepage_url%',
+	'success_mail'=>'<b>Thank you for your registration!</b><br><br>To remove your mail adress from the maillist click <a href="http://%homepage_url%/index.php?site=newsletter&mail=%mail%&pass=%delete_key%">here</a><br>Your password to delete yourself: %delete_key%<br><br>See you at %homepage_url%',
 	'thank_you_for_registration'=>'Thank you for your registration.',
 	'you_are_already_registered'=>'You are already registered.',
 	'your_mail_adress'=>'Your mail adress',

@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -35,13 +35,13 @@ $language_array = Array(
 	'and'=>'ir',
 	'author'=>'Autorius',
 	'back_buddy'=>'grįžti į draugų sąrašą',
-	'bbcode_on'=>'<a href="javascript:MM_openBrWindow(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBkodas</a> yra ĮJUNGTAS',
+	'bbcode_on'=>'<a href="javascript:window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBkodas</a> yra ĮJUNGTAS',
 	'board'=>'Lenta',
 	'boards'=>'Lentos',
 	'clanmember'=>'Klano narys',
 	'close_topic'=>'uždaryti temą',
 	'closed'=>'uždarytas',
-	'closed_image'=>'<img src="images/icons/closed.gif" alt="" />',
+	'closed_image'=>'<img src="images/icons/closed.gif" alt="">',
 	'default_topic_title'=>'(be pavadinimo)',
 	'delete_posts'=>'ištrinti pasirinktus pranešimus',
 	'delete_topic'=>'ištrinti temą',
@@ -78,8 +78,8 @@ $language_array = Array(
 	'new_reply'=>'naujas atsakymas',
 	'new_topic'=>'nauja tema',
 	'newest_member'=>'naujausias narys',
-	'newreply_image'=>'<img src="images/icons/newreply.gif" border="0" alt="atsakymas" />',
-	'newtopic_image'=>'<img src="images/icons/newtopic.gif" border="0" alt="nauja tema" />',
+	'newreply_image'=>'<img src="images/icons/newreply.gif" alt="atsakymas">',
+	'newtopic_image'=>'<img src="images/icons/newtopic.gif" alt="nauja tema">',
 	'next_7_days'=>'kitos 7 dienos',
 	'no_access'=>'Jokia prieiga',
 	'no_access_write'=>'Neturite teisių rašyti.',
@@ -87,8 +87,8 @@ $language_array = Array(
 	'no_new_posts'=>'jokio naujo pranešimo',
 	'no_permission'=>'Jūs neturite teisių peržiūrinėti V.I.P lentos!',
 	'not_logged'=>'Neprisijungę.',
-	'not_logged_msg'=>'<br /><br />Norint rašyti temą ar atsakyti į pranešimus, turite užsiregistruoti ir prisijungti!<br /><br />
-    &#8226; <a href="index.php?site=register">registruotis dabar</a><br />
+	'not_logged_msg'=>'<br><br>Norint rašyti temą ar atsakyti į pranešimus, turite užsiregistruoti ir prisijungti!<br><br>
+    &#8226; <a href="index.php?site=register">registruotis dabar</a><br>
     &#8226; <a href="index.php?site=login">prisijungti</a>',
 	'notify'=>'Pranešti mane, kada ateis atsakymas',
 	'notify_mail'=>'naujas atsakymas pagal %poster% temoje
@@ -113,9 +113,9 @@ $language_array = Array(
 	'registered_users'=>'registruoti vartotojai',
 	'reopen_topic'=>'vėl atidaryti temą',
 	'replies'=>'Atsakymai',
-	'search_image'=>'<img src="images/icons/search.gif" border="0" alt="" />',
+	'search_image'=>'<img src="images/icons/search.gif" alt="">',
 	'select_all'=>'pažymėti visus',
-	'smilies_on'=>'<a href="javascript:MM_openBrWindow(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Šypsenėlės</a> yra ĮJUNGTI',
+	'smilies_on'=>'<a href="javascript:window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Šypsenėlės</a> yra ĮJUNGTI',
 	'sort'=>'Rykiuoti',
 	'stats'=>'Statistika',
 	'sticky'=>'lipni',

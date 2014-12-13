@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -33,7 +33,7 @@ $language_array = Array(
   'lock'=>'Lezárás',
   'locked_since'=>'Az oldal lezárásának kezdete:',
   'pagelock'=>'Oldal lezárása',
-  'page_locked'=>'<b>Az oldal le van zárva!</b><br />Jelenleg csak az adminok léphetnek be.',
+  'page_locked'=>'<b>Az oldal le van zárva!</b><br>Jelenleg csak az adminok léphetnek be.',
   'page_unlocked'=>'<b>Az oldal újra nyitva!</b>',
   'settings'=>'Beállítások',
   'transaction_invalid'=>'A művelet azonosítója érvénytelen',

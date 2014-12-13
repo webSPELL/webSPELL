@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -33,7 +33,7 @@ $language_array = Array(
 	'already_rated'=>'<b>Článok už bol hodnotený!</b>',
 	'articles'=>'články',
 	'author'=>'Autor',
-	'bbcode'=>'&#8226; <a href="javascript:MM_openBrWindow(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> <b><u>zapnutý</u></b>',
+	'bbcode'=>'&#8226; <a href="javascript:window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> <b><u>zapnutý</u></b>',
 	'cancel'=>'Zrušiť',
 	'date'=>'Dátum',
 	'delete'=>'Vymazať',
@@ -46,7 +46,7 @@ $language_array = Array(
 	'links'=>'Odkazy',
 	'login_for_rate'=>'<b>Musíte byť registrovaný a prihlásený, aby ste mohli hodnotiť tento článok!</b>',
 	'new_article'=>'Nový článok',
-  'new_window'=>'nové okno',
+  	'new_window'=>'nové okno',
 	'no_access'=>'Prístup nepovolený',
 	'no_comments'=>'Deaktivovať komentáre',
 	'no_entries'=>'Žiadne záznamy',
@@ -62,8 +62,8 @@ $language_array = Array(
 	'rating'=>'Hodnotenie',
 	'really_delete'=>'Naozaj chcete vymazať tento článok?',
 	'save_article'=>'Uložiť článok',
-  'self'=>'to isté okno',
-	'smilies'=>'&#8226; <a href="javascript:MM_openBrWindow(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smajlíci</a> <b><u>zapnutí</u></b>',
+  	'self'=>'to isté okno',
+	'smilies'=>'&#8226; <a href="javascript:window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smajlíci</a> <b><u>zapnutí</u></b>',
 	'sort'=>'Triediť:',
 	'title'=>'Nadpis',
 	'top5_points'=>'TOP 5 ČLÁNKOV (Body)',
@@ -71,6 +71,7 @@ $language_array = Array(
 	'upload_images'=>'Pridaj obrázky',
 	'user_comments'=>'Povoliť komentáre užívaľov',
 	'viewed'=>'Prečítané',
-	'visitor_comments'=>'Povololiť komentáre návštevníkov'
+	'visitor_comments'=>'Povololiť komentáre návštevníkov',
+	'tags'=>'tagy'
 );
 ?>

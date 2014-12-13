@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2010 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -54,7 +54,7 @@ $language_array = Array(
   'no_incoming'=>'.هیچ پیغامی در این فولدر یافت نشد',
   'no_outgoing'=>'.هیچ پیغامی در فولدر های قبلی یافت نشد',
   'no_subject'=>'(هیچ موضوعی)',
-  'not_logged'=>'.شما وارد نشدید<br /><a href="index.php?site=login">ورود</a> | <a href="index.php?site=register">عضویت</a>',
+  'not_logged'=>'.شما وارد نشدید<br><a href="index.php?site=login">ورود</a> | <a href="index.php?site=register">عضویت</a>',
   'options'=>'تنظیمات',
   'outgoing'=>'رفتن',
   'read'=>'خواندن',
@@ -73,7 +73,7 @@ $language_array = Array(
   'title'=>'موضوع',
   'your_message'=>'پیغام های شما:',
   'mail_subject'=>'شما پیغام جدیدی دارید',
-  'mail_body'=>'<b>سلام %nickname%!</b><br /><br />شما پیغام جدیدی دارید در  =BBC= (%hp_url%).<br />کلیک <a href="http://%hp_url%?site=messenger">اینجا</a> تا پیغام را بخوانید.<br /><br />(C) webSPELL.org',
+  'mail_body'=>'<b>سلام %nickname%!</b><br><br>شما پیغام جدیدی دارید در  =BBC= (%hp_url%).<br>کلیک <a href="http://%hp_url%?site=messenger">اینجا</a> تا پیغام را بخوانید.<br><br>(C) webSPELL.org',
   'error'=>'بروز خطا',
   'unknown_user'=>'کاربر ناشناس'
 );

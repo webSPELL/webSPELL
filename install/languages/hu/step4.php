@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -35,6 +35,7 @@ $language_array = Array(
 	'update_40'=>'Frissítés webSPELL final/keyless-ről',
 	'update_40100'=>'Frissítés webSPELL 4.01.00/4.01.01-ről',
 	'update_40102'=>'Frissítés webSPELL 4.01.02-ről',
+	'update_420'=>'Frissítés webSPELL 4.2.0-ről',
 	'what_to_do'=>'Mit szeretnél csinálni?'
 );
 ?>

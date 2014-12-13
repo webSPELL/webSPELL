@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -30,6 +30,7 @@ $language_array = Array(
 /* do not edit above this line */
 
   'access_denied'=>'Hozzáférés megtagadva',
+  'activated'=>'aktív',
   'additional_options'=>'További beállítások',
   'admin_email'=>'Admin E-mail',
   'admin_name'=>'Admin neve',
@@ -59,11 +60,15 @@ $language_array = Array(
   'clanwars'=>'Warok',
   'comments'=>'Hozzászólások',
   'content_size'=>'Tartalom mérete',
+  'deactivated'=>'kikapcsolva',
   'default_language'=>'Alapértelmezett nyelv',
   'demos'=>'Demók',
+  'detect_visitor_language'=>'Detect látogató nyelv?',
   'forum'=>'Fórum',
   'forum_posts'=>'Fórum bejegyzések',
   'forum_topics'=>'Fórum témák',
+  'format_date'=>'Dátum formátum',
+  'format_time'=>'Idő formátum',
   'gallery'=>'Galéria',
   'guestbook'=>'Vendégkönyv',
   'headlines'=>'Címsorok',
@@ -94,8 +99,14 @@ $language_array = Array(
   'shoutbox_all_messages'=>'Üzenőfal összes üzenet',
   'shoutbox_refresh'=>'Üzenőfal frissítése',
   'space_user'=>'Felhasználónkénti szabad hely (MByte)',
+  'spam_check'=>'Érvényesítése Hozzászólások?',
+  'spamapiblockerror'=>'Blokk Hozzászólás?',
+  'spamapihost'=>'API URL',
+  'spamapikey'=>'API kulcs',
+  'spamfilter'=>'Spam szűrő',
+  'spammaxposts'=>'Max Hozzászólás',
   'thumb_width'=>'Előnézet szélesség',
-  'tooltip_1'=>'Ez az oldalad címe pld. (yourdomain.com/path/webspell).<br /> "http://" előtag nélkül és "/" jel nélkül a végén!<br />Így kell kinéznie:',
+  'tooltip_1'=>'Ez az oldalad címe pld. (yourdomain.com/path/webspell).<br> "http://" előtag nélkül és "/" jel nélkül a végén!<br>Így kell kinéznie:',
   'tooltip_2'=>'Ez weboldalad címe, mely a címsorban jelenik meg',
   'tooltip_3'=>'A szervezeted neve',
   'tooltip_4'=>'A szervezeted rövid neve [TAG]',
@@ -146,8 +157,18 @@ $language_array = Array(
   'tooltip_49'=>'A zavaró vonalak száma',
   'tooltip_50'=>'Az automatikus képátméretező típusának kiválasztása',
   'tooltip_51'=>'A kiemelt hírek max. hossza az "sc_topnews"-ban',
+  'tooltip_52'=>'Nyelvfelismerés a látogató automatikusan',
+  'tooltip_53'=>'Hozzászólások érvényesíteni külső adatbázis',
+  'tooltip_54'=>'Adja meg a Spam API kulcs itt, ha rendelkezésre áll',
+  'tooltip_55'=>'Írja be az URL-t, hogy API gazdakiszolgálóra itt.<br>Alapértelmezett: https://api.webspell.org',
+  'tooltip_56'=>'Hozzászólások száma, amikor már nem lehet érvényesíteni a külső adatbázis',
+  'tooltip_57'=>'Blokk Hozzászólások ha hiba történt',
+  'tooltip_58'=>'Kimeneti formátum A dátum',
+  'tooltip_59'=>'Kimeneti formátum idő',
+  'tooltip_60'=>'Engedélyezze a felhasználói vendégkönyvek az oldalon?',
   'transaction_invalid'=>'A művelet azonosítója érvénytelen',
   'upcoming_actions'=>'Közeledő események',
-  'update'=>'Frissítés'
+  'update'=>'Frissítés',
+  'user_guestbook'=>'Felhasználói vendégkönyvek'
 );
 ?>

@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2010 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -36,7 +36,7 @@ $language_array = Array(
   'lost_password'=>'پسورد را فراموش کردید',
   'no_mail_given'=>'.شما ایمیل را وارد نکردید',
   'no_user_found'=>'!کاربر یافت نشد',
-  'successful'=>'کاربر یافت شد<br /><br />rn    .ایمیلی حاوی اطلاعات کاربری ارسال شد<br /><br />rn    &#8226; <a href="index.php?site=login">ورود</a>',
+  'successful'=>'کاربر یافت شد<br><br>rn    .ایمیلی حاوی اطلاعات کاربری ارسال شد<br><br>rn    &#8226; <a href="index.php?site=login">ورود</a>',
   'your_email'=>'ایمیل شما'
 );
 ?>

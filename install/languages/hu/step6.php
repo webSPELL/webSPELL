@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -29,8 +29,8 @@ $language_array = Array(
 	'back'=>'Vissza',
 	'delete_folder'=>'Biztonsági okokból töröld az <b>/install</b> mappát.',
 	'error'=>'HIBA',
-	'error_database'=>'<b>HIBA:</b><br /> Nem lehet csatlakozni az adatbázishoz',
-	'error_mysql'=>'<b>HIBA:</b><br />Nincs MySQL kapcsolat',
+	'error_database'=>'<b>HIBA:</b><br> Nem lehet csatlakozni az adatbázishoz',
+	'error_mysql'=>'<b>HIBA:</b><br>Nincs MySQL kapcsolat',
 	'install_complete'=>'A telepítés befejeződött!',
 	'finish_install'=>'Telepítés Befejezése',
 	'folder_removed'=>'Az <b>/install</b> mappa sikeresen eltávolítva',

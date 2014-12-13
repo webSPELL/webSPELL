@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -64,6 +64,7 @@ $language_array = Array(
 	'text_contains'=>'Szöveg tartalmazza',
 	'title_contains'=>'Cím tartalmazza',
 	'too_short'=>'A keresési kritérium túl kevés. Legalább %min_chars% karakter',
-	'wrong_securitycode'=>'Hibás biztonsági kód!'
+	'wrong_securitycode'=>'Hibás biztonsági kód!',
+	'no_result'=>'Nem található "%s"'
 );
 ?>

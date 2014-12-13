@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -34,7 +34,7 @@ $language_array = Array(
   'backup_file'=>'File di backup',
   'database'=>'Database',
   'export'=>'Backup di file di esportazione / download',
-  'import_info'=>'Scegli un file di backup da cui si desidera importare dati SQL.<br /><br /><b>Importante:</b> Fai un backup primo che importi una altra!',
+  'import_info'=>'Scegli un file di backup da cui si desidera importare dati SQL.<br><br><b>Importante:</b> Fai un backup primo che importi una altra!',
   'optimize'=>'Ottimizza database',
   'select_option'=>'Si prega di selezionare un*opzione',
   'submit'=>'Conferma',

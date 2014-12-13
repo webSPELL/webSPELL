@@ -1,101 +1,153 @@
-<form action="demos.php" method="post" enctype="multipart/form-data">
-<table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="$border">
-  <tr>
-    <td class="title" align="center" bgcolor="$bghead">%new_demo%</td>
-  </tr>
-  <tr><td bgcolor="$pagebg"></td></tr>
-  <tr>
-    <td bgcolor="$bg1">
-    <table width="100%" border="0" align="center" cellpadding="2" cellspacing="0">
-      <tr>
-        <td align="right">%date%:</td>
-        <td><select name="day">$day</select>
-        <select name="month">$month</select>
-        <select name="year">$year</select></td>
-      </tr>
-      <tr>
-        <td align="right">%game%:</td>
-        <td><select name="game">$games</select></td>
-      </tr>
-      <tr>
-        <td colspan="2" align="right"><hr /></td>
-      </tr>
-      <tr>
-        <td align="right">%clan1_name%:</td>
-        <td><input name="clanname1" type="text" size="35" /></td>
-      </tr>
-      <tr>
-        <td align="right">%clan1_tag%:</td>
-        <td><input name="clan1" type="text" size="8" /></td>
-      </tr>
-      <tr>
-        <td align="right">%clan1_country%:</td>
-        <td><select name="country1" >$countries</select></td>
-      </tr>
-      <tr>
-        <td align="right">%clan1_homepage%</td>
-        <td><input name="hp1" type="text" value="http://" size="35" /></td>
-      </tr>
-      <tr>
-        <td colspan="2" align="right"><hr /></td>
-      </tr>
-      <tr>
-        <td align="right">%clan2_name%:</td>
-        <td><input name="clanname2" type="text" size="35" /></td>
-      </tr>
-      <tr>
-        <td align="right">%clan2_tag%:</td>
-        <td><input name="clan2" type="text" size="8" /></td>
-      </tr>
-      <tr>
-        <td align="right">%clan2_country%:</td>
-        <td><select name="country2">$countries</select></td>
-      </tr>
-      <tr>
-        <td align="right">%clan2_homepage%</td>
-        <td><input name="hp2" type="text" value="http://" size="35" /></td>
-      </tr>
-      <tr>
-        <td colspan="2" align="right"><hr /></td>
-      </tr>
-      <tr>
-        <td align="right">%league%:</td>
-        <td><input name="league" type="text" size="35" /></td>
-      </tr>
-      <tr>
-        <td align="right">%league_homepage%</td>
-        <td><input name="leaguehp" type="text" value="http://" size="35" /></td>
-      </tr>
-      <tr>
-        <td align="right">%maps%:</td>
-        <td><input name="maps" type="text" size="35" /></td>
-      </tr>
-      <tr>
-        <td align="right">%players%:</td>
-        <td><input name="player" type="text" size="35" /></td>
-      </tr>
-      <tr>
-        <td colspan="2" align="right"><hr /></td>
-      </tr>
-      <tr>
-        <td align="right">%demo_upload%:</td>
-        <td><input name="demo" type="file" size="30" /></td>
-      </tr>
-      <tr>
-        <td align="right">%extern_link%:</td>
-        <td><input name="link" type="text" value="http://" size="35" /></td>
-      </tr>
-      <tr>
-        <td align="right">&nbsp;</td>
-        <td><select name="comments">
-          <option value="0">%disable_comments%</option>
-          <option value="1">%user_comments%</option>
-          <option value="2" selected="selected">%visitor_comments%</option>
-        </select>
-        <br /><br /><input name="save" type="submit" value="%save_demo%" /></td>
-      </tr>
-    </table>
-    </td>
-  </tr>
-</table>
+<form action="demos.php" method="post" enctype="multipart/form-data" class="form-horizontal">
+	<h2>%new_demo%</h2>
+
+	<div class="form-group">
+		<label for="date" class="col-lg-4 control-label">%date%:</label>
+
+		<div class="col-lg-8">
+			<input name="date" type="date" placeholder="yyyy-mm-dd" class="form-control">
+		</div>
+	</div>
+
+	<div class="form-group">
+		<label for="game" class="col-lg-4 control-label">%game%:</label>
+
+		<div class="col-lg-8">
+			<select name="game" class="form-control">$games</select>
+		</div>
+	</div>
+
+	<hr>
+
+	<div class="form-group">
+		<label for="clanname1" class="col-lg-4 control-label">%clan1_name%:</label>
+
+		<div class="col-lg-8">
+			<input name="clanname1" type="text" size="35" class="form-control">
+		</div>
+	</div>
+
+	<div class="form-group">
+		<label for="clan1" class="col-lg-4 control-label">%clan1_tag%:</label>
+
+		<div class="col-lg-8">
+			<input name="clan1" type="text" size="8" class="form-control">
+		</div>
+	</div>
+
+	<div class="form-group">
+		<label for="country1" class="col-lg-4 control-label">%clan1_country%:</label>
+
+		<div class="col-lg-8">
+			<select name="country1" class="form-control">$countries</select>
+		</div>
+	</div>
+
+	<div class="form-group">
+		<label for="hp1" class="col-lg-4 control-label">%clan1_homepage%</label>
+
+		<div class="col-lg-8">
+			<input name="hp1" type="url" value="http://" size="35" class="form-control">
+		</div>
+	</div>
+
+	<hr>
+
+	<div class="form-group">
+		<label for="clanname2" class="col-lg-4 control-label">%clan2_name%:</label>
+
+		<div class="col-lg-8">
+			<input name="clanname2" type="text" size="35" class="form-control">
+		</div>
+	</div>
+
+	<div class="form-group">
+		<label for="clan2" class="col-lg-4 control-label">%clan2_tag%:</label>
+
+		<div class="col-lg-8">
+			<input name="clan2" type="text" size="8" class="form-control">
+		</div>
+	</div>
+
+	<div class="form-group">
+		<label for="country2" class="col-lg-4 control-label">%clan2_country%:</label>
+
+		<div class="col-lg-8">
+			<select name="country2" class="form-control">$countries</select>
+		</div>
+	</div>
+
+	<div class="form-group">
+		<label for="hp2" class="col-lg-4 control-label">%clan2_homepage%</label>
+
+		<div class="col-lg-8">
+			<input name="hp2" type="url" value="http://" size="35" class="form-control">
+		</div>
+	</div>
+
+	<hr>
+
+	<div class="form-group">
+		<label for="league" class="col-lg-4 control-label">%league%:</label>
+
+		<div class="col-lg-8">
+			<input name="league" type="text" size="35" class="form-control">
+		</div>
+	</div>
+
+	<div class="form-group">
+		<label for="leaguehp" class="col-lg-4 control-label">%league_homepage%</label>
+
+		<div class="col-lg-8">
+			<input name="leaguehp" type="url" value="http://" size="35" class="form-control">
+		</div>
+	</div>
+
+	<div class="form-group">
+		<label for="maps" class="col-lg-4 control-label">%maps%:</label>
+
+		<div class="col-lg-8">
+			<input name="maps" type="text" size="35" class="form-control">
+		</div>
+	</div>
+
+	<div class="form-group">
+		<label for="player" class="col-lg-4 control-label">%players%:</label>
+
+		<div class="col-lg-8">
+			<input name="player" type="text" size="35" class="form-control">
+		</div>
+	</div>
+
+	<div class="form-group">
+		<label for="demo" class="col-lg-4 control-label">%demo_upload%:</label>
+
+		<div class="col-lg-8">
+			<input name="demo" type="file" size="30" class="form-control">
+		</div>
+	</div>
+
+	<div class="form-group">
+		<label for="link" class="col-lg-4 control-label">%extern_link%:</label>
+
+		<div class="col-lg-8">
+			<input name="link" type="url" value="http://" size="35" class="form-control">
+		</div>
+	</div>
+
+	<div class="form-group">
+		<div class="col-lg-offset-4 col-lg-8">
+			<select name="comments" class="form-control">
+				<option value="0">%disable_comments%</option>
+				<option value="1">%user_comments%</option>
+				<option value="2" selected="selected">%visitor_comments%</option>
+			</select>
+		</div>
+	</div>
+
+	<div class="form-group">
+		<div class="col-lg-12 text-right">
+			<input name="save" type="submit" value="%save_demo%" class="btn btn-danger">
+		</div>
+	</div>
 </form>

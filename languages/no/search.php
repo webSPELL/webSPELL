@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -64,6 +64,7 @@ $language_array = Array(
 	'text_contains'=>'Text contains',
 	'title_contains'=>'Title contains',
 	'too_short'=>'Search term is too short. At least %min_chars% characters',
-	'wrong_securitycode'=>'Du har skreve feil sikkerhetskode!'
+	'wrong_securitycode'=>'Du har skreve feil sikkerhetskode!',
+	'no_result'=>'Ingen oppføringer funnet for "%s"'
 );
 ?>

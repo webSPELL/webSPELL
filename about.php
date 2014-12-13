@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -25,23 +25,21 @@
 ##########################################################################
 */
 
-$_language->read_module('about');
+$_language->readModule('about');
 
-eval ("\$title_about = \"".gettemplate("title_about")."\";");
+eval ("\$title_about = \"" . gettemplate("title_about") . "\";");
 echo $title_about;
 
-$ergebnis=safe_query("SELECT * FROM ".PREFIX."about");
-if(mysql_num_rows($ergebnis)) {
-	$ds=mysql_fetch_array($ergebnis);
+$ergebnis = safe_query("SELECT * FROM " . PREFIX . "about");
+if (mysqli_num_rows($ergebnis)) {
+    $ds = mysqli_fetch_array($ergebnis);
 
-	$about=htmloutput($ds['about']);
-	$about=toggle($about, 1);
+    $about = htmloutput($ds[ 'about' ]);
+    $about = toggle($about, 1);
 
-	$bg1=BG_1;
-	eval ("\$about = \"".gettemplate("about")."\";");
-	echo $about;
+    $bg1 = BG_1;
+    eval ("\$about = \"" . gettemplate("about") . "\";");
+    echo $about;
+} else {
+    echo $_language->module[ 'no_about' ];
 }
-else echo $_language->module['no_about'];
-
-
-?>

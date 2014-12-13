@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -30,7 +30,7 @@ $language_array = Array(
 /* do not edit above this line */
 
 	'admin_comment'=>'Admin comment',
-  'bbcode'=>'<a href="javascript:MM_openBrWindow(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> ON',
+  'bbcode'=>'<a href="javascript:window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> ON',
 	'by'=>'por',
 	'comment'=>'Comentar',
 	'delete_selected'=>'Borrar selecionado(s)',
@@ -46,13 +46,13 @@ $language_array = Array(
 	'mail'=>'Tu email',
 	'name'=>'Tu nombre',
 	'new_entry'=>'Nueva entrada',
-	'no_access'=>'No estas conectado.<br /><a href="index.php?site=login">Conectar</a> | <a href="index.php?site=register">Registrar</a>',
+	'no_access'=>'No estas conectado.<br><a href="index.php?site=login">Conectar</a> | <a href="index.php?site=register">Registrar</a>',
 	'options'=>'Opciones',
 	'pmsubject_newentry'=>'Nueva entrada libro de visitas',
 	'pmtext_newentry'=>'[b]Alguien ha dejado un mensajer para ti en tu libro de visitas![/b][br][br] [URL=index.php?site=guestbook#$insertid]Pulsa aqui para leer el mensaje.[/URL] ',
 	'security_code'=>'Código de seguridad',
 	'select_all'=>'selecionar todos',
-	'smilies'=>'<a href="javascript:MM_openBrWindow(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Emoticonos</a> ON',
+	'smilies'=>'<a href="javascript:window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Emoticonos</a> ON',
 	'sort'=>'Ordenar:',
 	'submit'=>'Enviar',
 	'update_comment'=>'Guardar comentario',

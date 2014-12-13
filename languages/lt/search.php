@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -64,6 +64,7 @@ $language_array = Array(
 	'text_contains'=>'Tekstą sudaro',
 	'title_contains'=>'Pavadinimą sudaro',
 	'too_short'=>'Termino pavadinimas per trumpas. Mažiausiai turi būti %min_chars% simboliai',
-	'wrong_securitycode'=>'Jūs įvedėte blogą apsaugos kodą!'
+	'wrong_securitycode'=>'Jūs įvedėte blogą apsaugos kodą!',
+	'no_result'=>'Nėra įrašų už "%s" rasti'
 );
 ?>

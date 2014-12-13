@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2010 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -64,6 +64,7 @@ $language_array = Array(
   'text_contains'=>'جزییات',
   'title_contains'=>'عنوان',
   'too_short'=>'.حروف %min_chars% کلمه جستجو کوتاه است . دست كم',
-  'wrong_securitycode'=>'!شما کد اشتباه را وارد کردید'
+  'wrong_securitycode'=>'!شما کد اشتباه را وارد کردید',
+  'no_result'=>'هیچ نوشته ای پیدا نشد برای "%s"'
 );
 ?>

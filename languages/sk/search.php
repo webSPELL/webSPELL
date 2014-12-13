@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -64,6 +64,7 @@ $language_array = Array(
 	'text_contains'=>'Vyhľadať',
 	'title_contains'=>'Názov obsahuje',
 	'too_short'=>'Vyhľadávací reťazec je príliž krátky. Minimálne %min_chars% znakov',
-	'wrong_securitycode'=>'Zadali ste chybný bezpečnostný kód!'
+	'wrong_securitycode'=>'Zadali ste chybný bezpečnostný kód!',
+	'no_result'=>'Pre "%s" Žiadne záznamy'
 );
 ?>

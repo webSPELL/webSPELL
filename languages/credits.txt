@@ -8,7 +8,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -39,3 +39,22 @@ sk: Juraj (www.bkmcrew.eu)
 uk: webspell.org
 pt: SAM|DoDoT (www.sam-clan.com)
 pl: spec8320 & HasH
+ir: BVBPOWER & NucxX (www.xnc.bplaced.net)
+rs: BVBPOWER & Mahalac (www.xnc.bplaced.net)
+ba: BVBPOWER & Mahalac (www.xnc.bplaced.net)
+ee: BVBPOWER & Mikk36 (www.xnc.bplaced.net)
+ge: BVBPOWER & Kacho95 (www.xnc.bplaced.net)
+lv: BVBPOWER & mortar28 (www.xnc.bplaced.net)
+mk: BVBPOWER & Ghost (www.xnc.bplaced.net)
+ro: BVBPOWER & Savovici & effect84 (www.xnc.bplaced.net)
+ru: BVBPOWER & ToM@SoN (www.xnc.bplaced.net)
+sa: BVBPOWER & Madooo (www.xnc.bplaced.net)
+si: BVBPOWER & asandrejas & stane (www.xnc.bplaced.net)
+fi: BVBPOWER & Koppex (www.xnc.bplaced.net)
+tr: BVBPOWER & aqrep (www.xnc.bplaced.net)
+al: BVBPOWER & AngryRhino (www.xnc.bplaced.net)
+bg: BVBPOWER & neizvesten (www.xnc.bplaced.net)
+za: BVBPOWER & JAHViking (www.xnc.bplaced.net)
+gr: BVBPOWER & dreamer1984 (www.xnc.bplaced.net)
+ua: BVBPOWER & Ctulhu (www.xnc.bplaced.net)
+lu: BVBPOWER & Agi86 (www.xnc.bplaced.net)

@@ -1,55 +1,113 @@
-<form action="index.php?site=joinus&amp;action=save" method="post" name="post">
-<table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="$border">
-  <tr>
-    <td class="title" align="center" bgcolor="$bghead">%joinus_form%</td>
-  </tr>
-  <tr><td bgcolor="$pagebg"></td></tr>
-  <tr>
-    <td bgcolor="$bg1">
-    <center>$showerror</center>
-    <table width="100%" border="0" align="center" cellpadding="2" cellspacing="0">
-      <tr>
-        <td width="20%" align="right">%squad%:</td>
-        <td colspan="3"><select name="squad">$squads</select></td>
-      </tr>
-      <tr>
-        <td align="right">%nick%:</td>
-        <td><input name="nick" type="text" value="$nickname" /></td>
-        <td align="right">%name%:</td>
-        <td><input name="name" type="text" value="$name" /></td>
-      </tr>
-      <tr>
-        <td align="right">%mail%:</td>
-        <td><input name="email" type="text" value="$email" /></td>
-        <td align="right">%icq_msn%:</td>
-        <td><input name="messenger" type="text" value="$messenger" /></td>
-      </tr>
-      <tr>
-        <td align="right">%age%:</td>
-        <td><input name="age" size="2" type="text" value="$age" /></td>
-        <td align="right">%city%:</td>
-        <td><input name="city" type="text" value="$city" /></td>
-      </tr>
-      <tr>
-        <td align="right">%clan_history%:</td>
-        <td colspan="3"><input name="clanhistory" value="$clanhistory" type="text" /></td>
-      </tr>
-      <tr><td colspan="4">&nbsp;</td></tr>
-      <tr>
-        <td align="center" colspan="4">%additional_info%:</td>
-      </tr>
-      <tr>
-        <td></td>
-        <td colspan="3"><textarea name="info" cols="60" rows="5">$info</textarea></td>
-      </tr>
-      <tr>
-        <td>&nbsp;</td>
-        <td><input name="post" type="submit" value="%send%" /></td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-      </tr>
-    </table>
-    </td>
-  </tr>
-</table>
-</form>
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h3 class="panel-title">%joinus_form%</h3>
+	</div>
+	<div class="panel-body">
+		<form action="index.php?site=joinus&amp;action=save" method="post" name="post" role="form"
+				class="form-horizontal">
+
+			<!-- Error Box -->
+			$showerror
+
+			<!-- Squad -->
+			<div class="form-group">
+				<label for="selectSquad" class="col-xs-12 col-md-3 control-label">%squad%:</label>
+
+				<div class="col-xs-12 col-md-9">
+					<select name="squad" id="selectSquad" class="form-control">
+						$squads
+					</select>
+				</div>
+			</div>
+
+			<!-- Nick -->
+			<div class="form-group">
+				<label for="inputNick" class="col-xs-12 col-md-3 control-label">%nick%:</label>
+
+				<div class="col-xs-12 col-md-9">
+					<input type="text" name="nick" class="form-control" id="inputNick"
+							placeholder="%nick%" value="$nickname">
+				</div>
+			</div>
+
+			<!-- Name -->
+			<div class="form-group">
+				<label for="inputName" class="col-xs-12 col-md-3 control-label">%name%:</label>
+
+				<div class="col-xs-12 col-md-9">
+					<input type="text" name="name" class="form-control" id="inputName"
+							placeholder="%name%" value="$name">
+				</div>
+			</div>
+
+			<!-- Mail -->
+			<div class="form-group">
+				<label for="inputMail" class="col-xs-12 col-md-3 control-label">%mail%:</label>
+
+				<div class="col-xs-12 col-md-9">
+					<input type="email" name="email" class="form-control" id="inputMail"
+							placeholder="%mail%" value="$email">
+				</div>
+			</div>
+
+			<!-- Messenger -->
+			<div class="form-group">
+				<label for="inputMessenger"
+						class="col-xs-12 col-md-3 control-label">%icq_msn%:</label>
+
+				<div class="col-xs-12 col-md-9">
+					<input type="text" name="messenger" class="form-control" id="inputMessenger"
+							placeholder="%icq_msn%" value="$messenger">
+				</div>
+			</div>
+
+			<!-- Age -->
+			<div class="form-group">
+				<label for="inputAge" class="col-xs-12 col-md-3 control-label">%age%:</label>
+
+				<div class="col-xs-12 col-md-9">
+					<input type="number" name="age" class="form-control" id="inputAge"
+							placeholder="%age%" value="$age">
+				</div>
+			</div>
+
+			<!-- City -->
+			<div class="form-group">
+				<label for="inputCity" class="col-xs-12 col-md-3 control-label">%city%:</label>
+
+				<div class="col-xs-12 col-md-9">
+					<input type="text" name="city" class="form-control" id="inputCity"
+							placeholder="%city%" value="$city">
+				</div>
+			</div>
+
+			<!-- Clan history -->
+			<div class="form-group">
+				<label for="inputClan_history" class="col-xs-12 col-md-3 control-label">%clan_history%:</label>
+
+				<div class="col-xs-12 col-md-9">
+					<input type="text" name="clanhistory" class="form-control"
+							id="inputClan_history" placeholder="%clan_history%"
+							value="$clanhistory">
+				</div>
+			</div>
+
+			<!-- Info -->
+			<div class="form-group">
+				<div class="col-xs-12 col-md-12">
+					<label for="textareaInfo">%additional_info%:</label>
+					<textarea name="info" id="textareaInfo" class="form-control"
+							rows="5">$info</textarea>
+				</div>
+			</div>
+
+			<!-- Submit button -->
+			<div class="form-group">
+				<div class="col-xs-12 text-right">
+					<button type="submit" name="post" class="btn btn-primary">%send%</button>
+				</div>
+			</div>
+
+		</form>
+	</div>
+</div>

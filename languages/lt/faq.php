@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -35,7 +35,7 @@ $language_array = Array(
 	'faq'=>'D.U.K',
 	'faqs'=>'D.U.K',
 	'no_categories'=>'jokių kategorijų nėra sukurta',
-	'no_faq'=>'Nėra jokių klaisymų.<br /><a href="index.php?site=faq">Grįžti</a>',
+	'no_faq'=>'Nėra jokių klaisymų.<br><a href="index.php?site=faq">Grįžti</a>',
 	'saved_on'=>'išsaugota'
 );
 ?>

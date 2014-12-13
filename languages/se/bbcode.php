@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -67,14 +67,14 @@ $language_array = Array(
 	'teal'=>'kricka ',
 	'tiny'=>'pytteliten ',
 	'tomato'=>'tomat',
-	'uneven_amount'=>'Varierande mängd öppna och stänga BBCode taggar',
-	'first_tag_closing_tag'=>'Första BBCode-taggen kan inte vara en utgående',
-	'not_same_amount'=>'Inte lika mycket öppna och stänga BBCode taggar',
-	'wrong_nesting'=>'Fel kapsling av BBCode taggar',
+	'unevenAmount'=>'Varierande mängd öppna och stänga BBCode taggar',
+	'firstTagClosingTag'=>'Första BBCode-taggen kan inte vara en utgående',
+	'notSameAmount'=>'Inte lika mycket öppna och stänga BBCode taggar',
+	'wrongNesting'=>'Fel kapsling av BBCode taggar',
 	'listguide'=>'Skriv \'1\' för en numrerad lista, \'a\' för en alfabetisk lista eller \'\' för en rundad lista.',
 	'listpoint'=>'Skriv in en lista. Skriv inget eller tryck på \'Avbryt\' för att avsluta listan.',
 	'addcode'=>'Sätt i position',
-	'read_more'=>'Läs mer',
+	'readMore'=>'Läs mer',
 	'mc_you_have'=>'Du har',
 	'mc_new_messages'=>'nytt meddelande. Vill du läsa dom nu?',
 	'na'=>'Inte tillänglig',

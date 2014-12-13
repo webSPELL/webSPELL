@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -30,7 +30,7 @@ $language_array = Array(
 /* do not edit above this line */
 
 	'admin_comment'=>'Admin komment',
-  'bbcode'=>'<a href="javascript:MM_openBrWindow(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> Bekapcsolva',
+  'bbcode'=>'<a href="javascript:window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> Bekapcsolva',
 	'by'=>'by',
 	'comment'=>'Komment',
 	'delete_selected'=>'Kijelölt törlése',
@@ -46,13 +46,13 @@ $language_array = Array(
 	'mail'=>'Mail címed',
 	'name'=>'Neved',
 	'new_entry'=>'Új bejegyzés',
-	'no_access'=>'Nem jelentkeztél be.<br /><a href="index.php?site=login">Bejelentkezés</a> | <a href="index.php?site=register">Regisztráció</a>',
+	'no_access'=>'Nem jelentkeztél be.<br><a href="index.php?site=login">Bejelentkezés</a> | <a href="index.php?site=register">Regisztráció</a>',
 	'options'=>'Lehetőségek',
 	'pmsubject_newentry'=>'Új vendégkönyv bejegyzés',
 	'pmtext_newentry'=>'[b]Valaki üzenetet hagyott a vendégkönyvedben![/b][br][br] [URL=index.php?site=guestbook#%insertid%]Kattints ide az elolvasásához![/URL] ',
 	'security_code'=>'Biztonsági kód',
 	'select_all'=>'mindet kijelöl',
-	'smilies'=>'<a href="javascript:MM_openBrWindow(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Hangulatjelek</a> Bekapcsolva',
+	'smilies'=>'<a href="javascript:window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Hangulatjelek</a> Bekapcsolva',
 	'sort'=>'Rendezés:',
 	'submit'=>'Küldés',
 	'update_comment'=>'Komment mentése',

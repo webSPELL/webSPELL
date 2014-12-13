@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -43,10 +43,10 @@ $language_array = Array(
 	'no_such_mail_adress'=>'No hay dirección email.',
 	'password_had_been_send'=>'La contraseña ha sido enviada.',
 	'register_newsletter'=>'Registrar para el boletín de noticias',
-	'request_mail'=>'<b>Se necesita tu palabra de borrado!</b><br /><br />Para eliminar tu dirección email de la lista haz clic en <a href="http://%homepage_url%/index.php?site=newsletter&mail=%mail%&pass=%delete_key%">aquí</a><br />Tu clave para darte de baja: %delete_key%<br /><br />Nos vemos en %homepage_url%',
+	'request_mail'=>'<b>Se necesita tu palabra de borrado!</b><br><br>Para eliminar tu dirección email de la lista haz clic en <a href="http://%homepage_url%/index.php?site=newsletter&mail=%mail%&pass=%delete_key%">aquí</a><br>Tu clave para darte de baja: %delete_key%<br><br>Nos vemos en %homepage_url%',
 	'send'=>'enviar',
 	'submit'=>'enviar',
-	'success_mail'=>'<b>Gracias por registrarte!</b><br /><br />Para eliminar tu dirección email de la lista haz clic <a href="http://%homepage_url%/index.php?site=newsletter&mail=%mail%&pass=%delete_key%">aquí</a><br />Tu clave para darte de baja: %delete_key%<br /><br />Nos vemos en %homepage_url%',
+	'success_mail'=>'<b>Gracias por registrarte!</b><br><br>Para eliminar tu dirección email de la lista haz clic <a href="http://%homepage_url%/index.php?site=newsletter&mail=%mail%&pass=%delete_key%">aquí</a><br>Tu clave para darte de baja: %delete_key%<br><br>Nos vemos en %homepage_url%',
 	'thank_you_for_registration'=>'Gracias por registrarte.',
 	'you_are_already_registered'=>'Ya estas registrado.',
 	'your_mail_adress'=>'Tu dirección email',

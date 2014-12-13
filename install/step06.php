@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -53,17 +53,22 @@ if($_POST['installtype'] == 'update') {
 	$type = '<b>'.$_language->module['update_complete'].'</b>';
 
 	include('../_mysql.php');
-	mysql_connect($host, $user, $pwd) or die ($_language->module['error_mysql']);
-	mysql_select_db($db) or die ($_language->module['error_database'].'&nbsp;'.$db.'!');
-	mysql_query("SET NAMES 'utf8'");
-	
+    $_database = new mysqli($host, $user, $pwd, $db);
+
+    if(mysqli_connect_error()) {
+        die($_language->module['error_mysql']);
+    }
+
+	mysqli_query($_database, "SET NAMES 'utf8'");
+
 	update31_4beta4();
 	update4beta4_4beta5();
 	update4beta5_4beta6();
 	update4beta6_4final();
 	update40000_40100();
 	update40100_40101();
-	update40101_40200();
+	update40101_420();
+	update420_430();
 
 }
 elseif($_POST['installtype'] == 'full') {
@@ -83,42 +88,44 @@ elseif($_POST['installtype'] == 'full') {
 
 	if(!(mb_strlen(trim($host)))) {
 		$error=$_language->module['verify_data'];
-		die("<b>".$_language->module['error']."<br />".$error."</b><br /><br /><a href='javascript:history.back()'>".$_language->module['back']."</a>");
+		die("<b>".$_language->module['error']."<br>".$error."</b><br><br><a href='javascript:history.back()'>".$_language->module['back']."</a>");
 	}
 	if(!(mb_strlen(trim($db)))) {
 		$error=$_language->module['verify_data'];
-		die("<b>".$_language->module['error']."<br />".$error."</b><br /><br /><a href='javascript:history.back()'>".$_language->module['back']."</a>");
+		die("<b>".$_language->module['error']."<br>".$error."</b><br><br><a href='javascript:history.back()'>".$_language->module['back']."</a>");
 	}
 	if(!(mb_strlen(trim($adminname)))) {
 		$error=$_language->module['verify_data'];
-		die("<b>".$_language->module['error']."<br />".$error."</b><br /><br /><a href='javascript:history.back()'>".$_language->module['back']."</a>");
+		die("<b>".$_language->module['error']."<br>".$error."</b><br><br><a href='javascript:history.back()'>".$_language->module['back']."</a>");
 	}
 	if(!(mb_strlen(trim($adminpwd)))) {
 		$error=$_language->module['verify_data'];
-		die("<b>".$_language->module['error']."<br />".$error."</b><br /><br /><a href='javascript:history.back()'>".$_language->module['back']."</a>");
+		die("<b>".$_language->module['error']."<br>".$error."</b><br><br><a href='javascript:history.back()'>".$_language->module['back']."</a>");
 	}
 	if(!(mb_strlen(trim($adminmail)))) {
 		$error=$_language->module['verify_data'];
-		die("<b>".$_language->module['error']."<br />".$error."</b><br /><br /><a href='javascript:history.back()'>".$_language->module['back']."</a>");
+		die("<b>".$_language->module['error']."<br>".$error."</b><br><br><a href='javascript:history.back()'>".$_language->module['back']."</a>");
 	}
 	if(!(mb_strlen(trim($url)))) {
 		$error=$_language->module['verify_data'];
-		die("<b>".$_language->module['error']."<br />".$error."</b><br /><br /><a href='javascript:history.back()'>".$_language->module['back']."</a>");
+		die("<b>".$_language->module['error']."<br>".$error."</b><br><br><a href='javascript:history.back()'>".$_language->module['back']."</a>");
 	}
 
-	$adminpassword=md5($adminpwd);
+	$adminpassword=generatePasswordHash($adminpwd);
 
 	//write _mysql.php
 
 	$file = ('../_mysql.php');
 	if($fp = fopen ($file, 'wb')) {
 		$string='<?php
-	 $host = "'.$host.'";
-	 $user = "'.$user.'";
-	 $pwd = "'.$pwd.'";
-	 $db = "'.$db.'";
-	 define("PREFIX", \''.$prefix.'\');
-	?>';
+$host = "'.$host.'";
+$user = "'.$user.'";
+$pwd = "'.$pwd.'";
+$db = "'.$db.'";
+if(!defined("PREFIX")){
+	define("PREFIX", \''.$prefix.'\');
+}
+?>';
 
 		fwrite($fp, $string);
 		fclose($fp);
@@ -127,10 +134,15 @@ elseif($_POST['installtype'] == 'full') {
 
 	//write sql-tables
 
-	mysql_connect($host, $user, $pwd) or die ($_language->module['error_mysql']);
-	mysql_select_db($db) or die ($_language->module['error_database'].'&nbsp;'.$db.'!');
-	mysql_query("SET NAMES 'utf8'");
-	
+    $_database = new mysqli($host, $user, $pwd, $db);
+
+    if(mysqli_connect_error()) {
+        die($_language->module['error_mysql']);
+    }
+
+    mysqli_query($_database, "SET NAMES 'utf8'");
+
+
 	define("PREFIX", $prefix);
 
 	fullinstall();
@@ -139,7 +151,8 @@ elseif($_POST['installtype'] == 'full') {
 	update4beta6_4final();
 	update40000_40100();
 	update40100_40101();
-	update40101_40200();
+	update40101_420();
+	update420_430();
 
 }
 elseif($_POST['installtype'] == 'update_beta') {
@@ -147,16 +160,21 @@ elseif($_POST['installtype'] == 'update_beta') {
 	$type = '<b>'.$_language->module['update_complete'].'</b>';
 
 	include('../_mysql.php');
-	mysql_connect($host, $user, $pwd) or die ($_language->module['error_mysql']);
-	mysql_select_db($db) or die ($_language->module['error_database'].'&nbsp;'.$db.'!');
-	mysql_query("SET NAMES 'utf8'");
-	
+	$_database = new mysqli($host, $user, $pwd, $db);
+
+    if(mysqli_connect_error()) {
+        die($_language->module['error_mysql']);
+    }
+
+    mysqli_query($_database, "SET NAMES 'utf8'");
+
 	update4beta4_4beta5();
 	update4beta5_4beta6();
 	update4beta6_4final();
 	update40000_40100();
 	update40100_40101();
-	update40101_40200();
+	update40101_420();
+	update420_430();
 
 }
 elseif($_POST['installtype'] == 'update_beta5') {
@@ -164,15 +182,20 @@ elseif($_POST['installtype'] == 'update_beta5') {
 	$type = '<b>'.$_language->module['update_complete'].'</b>';
 
 	include('../_mysql.php');
-	mysql_connect($host, $user, $pwd) or die ($_language->module['error_mysql']);
-	mysql_select_db($db) or die ($_language->module['error_database'].'&nbsp;'.$db.'!');
-	mysql_query("SET NAMES 'utf8'");
-	
+	$_database = new mysqli($host, $user, $pwd, $db);
+
+    if(mysqli_connect_error()) {
+        die($_language->module['error_mysql']);
+    }
+
+    mysqli_query($_database, "SET NAMES 'utf8'");
+
 	update4beta5_4beta6();
 	update4beta6_4final();
 	update40000_40100();
 	update40100_40101();
-	update40101_40200();
+	update40101_420();
+	update420_430();
 
 }
 
@@ -181,14 +204,19 @@ elseif($_POST['installtype'] == 'update_beta6') {
 	$type = '<b>'.$_language->module['update_complete'].'</b>';
 
 	include('../_mysql.php');
-	mysql_connect($host, $user, $pwd) or die ($_language->module['error_mysql']);
-	mysql_select_db($db) or die ($_language->module['error_database'].'&nbsp;'.$db.'!');
-	mysql_query("SET NAMES 'utf8'");
-	
+	$_database = new mysqli($host, $user, $pwd, $db);
+
+    if(mysqli_connect_error()) {
+        die($_language->module['error_mysql']);
+    }
+
+    mysqli_query($_database, "SET NAMES 'utf8'");
+
 	update4beta6_4final();
 	update40000_40100();
 	update40100_40101();
-	update40101_40200();
+	update40101_420();
+	update420_430();
 
 }
 
@@ -197,13 +225,18 @@ elseif($_POST['installtype'] == 'update_final') {
 	$type = '<b>'.$_language->module['update_complete'].'</b>';
 
 	include('../_mysql.php');
-	mysql_connect($host, $user, $pwd) or die ($_language->module['error_mysql']);
-	mysql_select_db($db) or die ($_language->module['error_database'].'&nbsp;'.$db.'!');
-	mysql_query("SET NAMES 'utf8'");
-	
+	$_database = new mysqli($host, $user, $pwd, $db);
+
+    if(mysqli_connect_error()) {
+        die($_language->module['error_mysql']);
+    }
+
+    mysqli_query($_database, "SET NAMES 'utf8'");
+
 	update40000_40100();
 	update40100_40101();
-	update40101_40200();
+	update40101_420();
+	update420_430();
 
 }
 
@@ -212,12 +245,17 @@ elseif($_POST['installtype'] == 'update_40100') {
 	$type = '<b>'.$_language->module['update_complete'].'</b>';
 
 	include('../_mysql.php');
-	mysql_connect($host, $user, $pwd) or die ($_language->module['error_mysql']);
-	mysql_select_db($db) or die ($_language->module['error_database'].'&nbsp;'.$db.'!');
-	mysql_query("SET NAMES 'utf8'");
-	
+	$_database = new mysqli($host, $user, $pwd, $db);
+
+    if(mysqli_connect_error()) {
+        die($_language->module['error_mysql']);
+    }
+
+    mysqli_query($_database, "SET NAMES 'utf8'");
+
 	update40100_40101();
-	update40101_40200();
+	update40101_420();
+	update420_430();
 
 }
 elseif($_POST['installtype'] == 'update_40102') {
@@ -225,11 +263,32 @@ elseif($_POST['installtype'] == 'update_40102') {
 	$type = '<b>'.$_language->module['update_complete'].'</b>';
 
 	include('../_mysql.php');
-	mysql_connect($host, $user, $pwd) or die ($_language->module['error_mysql']);
-	mysql_select_db($db) or die ($_language->module['error_database'].'&nbsp;'.$db.'!');
-	mysql_query("SET NAMES 'utf8'");
-	
-	update40101_40200();
+	$_database = new mysqli($host, $user, $pwd, $db);
+
+    if(mysqli_connect_error()) {
+        die($_language->module['error_mysql']);
+    }
+
+    mysqli_query($_database, "SET NAMES 'utf8'");
+
+	update40101_420();
+	update420_430();
+
+}
+elseif($_POST['installtype'] == 'update_420') {
+
+	$type = '<b>'.$_language->module['update_complete'].'</b>';
+
+	include('../_mysql.php');
+	$_database = new mysqli($host, $user, $pwd, $db);
+
+    if(mysqli_connect_error()) {
+        die($_language->module['error_mysql']);
+    }
+
+    mysqli_query($_database, "SET NAMES 'utf8'");
+
+	update420_430();
 
 }
 include("../src/func/filesystem.php");
@@ -239,9 +298,9 @@ else $delete_info = $_language->module['delete_folder'];
 ?>
 
    <center>
-   <?php echo $type; ?><br /><br />
-   <?php echo $delete_info; ?><br /><br />
-   <?php echo $info; ?><br /><br /><br />
+   <?php echo $type; ?><br><br>
+   <?php echo $delete_info; ?><br><br>
+   <?php echo $info; ?><br><br><br>
    <a href="../index.php"><b><?php echo $_language->module['view_site']; ?></b></a>
    </center>
    </td>

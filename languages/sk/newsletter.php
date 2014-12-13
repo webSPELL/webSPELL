@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -43,10 +43,10 @@ $language_array = Array(
 	'no_such_mail_adress'=>'Neexistuje taká e-mailová adresa.',
 	'password_had_been_send'=>'Heslo bolo odoslané.',
 	'register_newsletter'=>'Zaregistrovať do informačného letáku',
-	'request_mail'=>'<b>Vyžiadali ste si klúč vymazania!</b><br /><br />Pre vymazanie vášho mailu zo zoznamu informačného letáku prosím kliknite <a href="http://%homepage_url%/index.php?site=newsletter&mail=%mail%&pass=%delete_key%">sem</a><br />Váš kľúč pre vymazanie: %delete_key%<br /><br />Vidíme sa na %homepage_url%',
+	'request_mail'=>'<b>Vyžiadali ste si klúč vymazania!</b><br><br>Pre vymazanie vášho mailu zo zoznamu informačného letáku prosím kliknite <a href="http://%homepage_url%/index.php?site=newsletter&mail=%mail%&pass=%delete_key%">sem</a><br>Váš kľúč pre vymazanie: %delete_key%<br><br>Vidíme sa na %homepage_url%',
 	'send'=>'odoslať',
 	'submit'=>'potvrdiť',
-	'success_mail'=>'<b>Ďakujeme za registráciu!</b><br /><br />Pre vymazanie vášho mailu zo zoznamu prosím kliknite <a href="http://%homepage_url%/index.php?site=newsletter&mail=%mail%&pass=%delete_key%">sem</a><br />. Vaše heslo pre vymazanie: %delete_key%<br /><br />Vidíme sa na %homepage_url%',
+	'success_mail'=>'<b>Ďakujeme za registráciu!</b><br><br>Pre vymazanie vášho mailu zo zoznamu prosím kliknite <a href="http://%homepage_url%/index.php?site=newsletter&mail=%mail%&pass=%delete_key%">sem</a><br>. Vaše heslo pre vymazanie: %delete_key%<br><br>Vidíme sa na %homepage_url%',
 	'thank_you_for_registration'=>'Ďakujeme za registráciu do infromačného letáku.',
 	'you_are_already_registered'=>'Už ste registrovaný.',
 	'your_mail_adress'=>'Vaša e-mailová adresa',

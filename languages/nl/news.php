@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -81,7 +81,7 @@ $language_array = Array(
 	'view_more'=>'zie meer...',
 	'visitor_comments'=>'sta bezoekers commentaar toe',
 	'written_by'=>'geschreven door',
-	'yes'=>'ja'
-
+	'yes'=>'ja',
+	'tags'=>'Tags'
 );
 ?>

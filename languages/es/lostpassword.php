@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -43,8 +43,8 @@ diviertete en nuestra página
 	'lost_password'=>'contraseña perdida',
 	'no_mail_given'=>'ningún E-Mail reciben.',
 	'no_user_found'=>'usuario inexistente!',
-	'successful'=>'Tu cuenta ha sido encontrada<br /><br />
-	 Recibiras un email con los datos de tu cuenta en breves momentos.<br /><br />
+	'successful'=>'Tu cuenta ha sido encontrada<br><br>
+	 Recibiras un email con los datos de tu cuenta en breves momentos.<br><br>
 	 &#8226; <a href="index.php?site=login">conectar</a>',
 	'your_email'=>'Tu email'
 );

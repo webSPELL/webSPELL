@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -30,8 +30,8 @@ $language_array = Array(
 	'webspell_team'=>'Dein <a href="http://www.webspell.org" target="_blank">webSPELL Entwickler</a> Team',
 	'welcome'=>'Willkommen',
 	'welcome_text'=>'Dieser Installationsablauf wird Dir dabei helfen, webSPELL auf deinem Server zu installieren.
-   Sechs einfache Schritte führen Dich durch die Installation.<br /><br />
-   Bitte halte folgende Daten bereit:<br />
+   Sechs einfache Schritte führen Dich durch die Installation.<br><br>
+   Bitte halte folgende Daten bereit:<br>
 	<ul><li><b>Deine E-Mail Adresse</b></li></ul>
 	<ul><li><b>Die URL zur deiner webSPELL Seite</b></li></ul>
    <ul><li><b>Die MySQL Zugangsdaten für deinen Webspace</b></li></ul>

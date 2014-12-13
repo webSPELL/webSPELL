@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -31,14 +31,14 @@ $language_array = Array(
 
 	'access_denied'=>'Tillgång nekad',
 	'add_buddy'=>'add to buddy list',
-	'bbcode_on'=>'<a href="javascript:MM_openBrWindow(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> är PÅ',
+	'bbcode_on'=>'<a href="javascript:window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> är PÅ',
 	'by'=>'av',
-	'clanmember_icon'=>' <img src="images/icons/member.gif" width="6" height="11" alt="Clanmember" />',
+	'clanmember_icon'=>' <img src="images/icons/member.gif" width="6" height="11" alt="Clanmember">',
 	'comments'=>'Kommentarer',
-	'comments_disabled'=>'<br /><br /><b>Kommentarer avstängda.</b>',
+	'comments_disabled'=>'<br><br><b>Kommentarer avstängda.</b>',
 	'delete_selected'=>'Radera markerade',
 	'edit_comment'=>'spara redigeringen',
-	'email_link'=>'<a href="mailto:%email%"><img src="images/icons/email.gif" border="0" width="15" height="11" alt="email" /></a>',
+	'email_link'=>'<a href="mailto:%email%"><img src="images/icons/email.gif" width="15" height="11" alt="email"></a>',
 	'enter_code'=>'Skriv in säkerhets koden',
 	'enter_message'=>'Snälla skriv ett meddelande!',
 	'enter_name'=>'Snälla skriv ditt namn!',
@@ -50,16 +50,16 @@ $language_array = Array(
 	'ip'=>'IP',
 	'mail'=>'E-Mail',
 	'name'=>'Namn',
-	'no_access'=>'<br /><br />Du måste logga in!<br /><br />&#8226; <a href="index.php?site=register">registera nu!</a><br />&#8226; <a href="index.php?site=login">Logga in</a>',
+	'no_access'=>'<br><br>Du måste logga in!<br><br>&#8226; <a href="index.php?site=register">registera nu!</a><br>&#8226; <a href="index.php?site=login">Logga in</a>',
 	'no_commentid'=>'Inga kommentarID angavs - Omdirigera',
 	'no_database_entry'=>'No database entry matching commentID - redirecting',
 	'options'=>'Options',
 	'post_comment'=>'Skicka kommentar',
-	'quote_link'=>'<a href="javascript:AddCode(\'[quote=%nickname%]%message%[/quote]\')"><img src="images/icons/quote.gif" border="0" alt="quote" /></a>',
+	'quote_link'=>'<a href="javascript:AddCode(\'[quote=%nickname%]%message%[/quote]\')"><img src="images/icons/quote.gif" alt="quote"></a>',
 	'readd_buddy'=>'Tillbaka till vänner-lista',
 	'select_all'=>'markera alla',
 	'send_message'=>'send message',
-	'smilies_on'=>'<a href="javascript:MM_openBrWindow(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smilies</a> är PÅ',
+	'smilies_on'=>'<a href="javascript:window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smilies</a> är PÅ',
 	'sort'=>'Sort:',
 	'sort_asc'=>'Sort ascending',
 	'sort_desc'=>'Sort descending',

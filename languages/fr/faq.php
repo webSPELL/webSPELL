@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -35,7 +35,7 @@ $language_array = Array(
 	'faq'=>'FAQ',
 	'faqs'=>'FAQs',
 	'no_categories'=>'Aucune catégorie créée',
-	'no_faq'=>'Aucune question disponible.<br /><a href="index.php?site=faq">Retour</a>',
+	'no_faq'=>'Aucune question disponible.<br><a href="index.php?site=faq">Retour</a>',
 	'saved_on'=>'Ajouté le'
 );
 ?>

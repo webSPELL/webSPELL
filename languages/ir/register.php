@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2010 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -29,7 +29,7 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'activation_successful'=>'.فعال سازی اکانت شما با موفقیت انجام گرفت<br />.شما میتوانید وارد شوید',
+  'activation_successful'=>'.فعال سازی اکانت شما با موفقیت انجام گرفت<br>.شما میتوانید وارد شوید',
   'back'=>'برگشت',
   'enter_nickname'=>'.لطفا نام مخفف خود را وارد کنید',
   'enter_password'=>'.لطفا کلمه عبور را وارد کنید',
@@ -42,7 +42,16 @@ $language_array = Array(
   'mail_failed'=>'.ایمیل فعال سازی نمیتواند فرستاده شود لطفا با ادمین تماس بگرید',
   'mail_inuse'=>'.ایمیل هم اکنون در حا استفاده است',
   'mail_subject'=>'فعال سازی ایمیل برای %homepage_url%',
-  'mail_text'=>'سلام %username%!rnrnشما عضو شدید در %pagetitle% (%homepage_url%) تاریخ اکانت شما.موفقیت امیز:rnrnنام ورود: %username%rnکلمه عبور: %password%rnrnبرای اینکه فرایند عضویت با موفقیت تمام شود باید اکانت خود را فعال سازی کنید:rn%activationlink%rnrnبا تشکرrn%pagetitle% - %homepage_url%',
+  'mail_text'=>'سلام %username%
+  
+  شما عضو شدید در %pagetitle% (%homepage_url%) تاریخ اکانت شما.موفقیت امیز:
+  
+  نام ورود: %username%
+  
+  برای اینکه فرایند عضویت با موفقیت تمام شود باید اکانت خود را فعال سازی کنید:
+  %activationlink%
+  با تشکر
+  %pagetitle% - %homepage_url%',
   'nickname'=>'نام مخفف',
   'nickname_inuse'=>'.این نام هم اکنون در حال استفاده است',
 'no_register_when_loggedin'=>'You allready have an account at %pagename%',

@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -64,8 +64,8 @@ $language_array = Array(
 	'usermenu'=>'Užívateľské menu',
 	'views'=>'videné',
 	'x_new_message'=>'Máte %new_messages% nové správy.',
-	'you_have_to_be_logged_in'=>'Musíte byť prihlásený aby ste mohli vidieť prehľad udalostí!<br /><br />
-	 &#8226; <a href="index.php?site=register">registrácia</a><br />
+	'you_have_to_be_logged_in'=>'Musíte byť prihlásený aby ste mohli vidieť prehľad udalostí!<br><br>
+	 &#8226; <a href="index.php?site=register">registrácia</a><br>
 	 &#8226; <a href="index.php?site=login">prihlásenie</a>'
 );
 ?>

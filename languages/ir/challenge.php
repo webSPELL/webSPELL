@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2010 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -61,7 +61,7 @@ $language_array = Array(
   'sort'=>'دسته بندى:',
   'squad'=>'گروه',
   'submit_challenge'=>'اعلام دعوت به مبارزه',
-  'thank_you'=>'!با تشکر از شما<br />',
+  'thank_you'=>'!با تشکر از شما<br>',
   'time'=>'زمان',
   'wrong_security_code'=>'.کد مهرمانه اشتباه است'
 );

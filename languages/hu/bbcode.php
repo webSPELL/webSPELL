@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -67,14 +67,14 @@ $language_array = Array(
 	'teal'=>'pávakék',
 	'tiny'=>'apró',
 	'tomato'=>'paradicsom',
-	'uneven_amount'=>'Szabálytalan mennyiségű nyitó és záró BBCode tag',
-	'first_tag_closing_tag'=>'Az első BBCode tag nem lehet zárótag',
-	'not_same_amount'=>'A nyitó és záró BBCode tagok száma nem egyezik',
-	'wrong_nesting'=>'Rossz BBCdoe tag beágyazás',
+	'unevenAmount'=>'Szabálytalan mennyiségű nyitó és záró BBCode tag',
+	'firstTagClosingTag'=>'Az első BBCode tag nem lehet zárótag',
+	'notSameAmount'=>'A nyitó és záró BBCode tagok száma nem egyezik',
+	'wrongNesting'=>'Rossz BBCdoe tag beágyazás',
 	'listguide'=>'Írj be egy \'1\'-t a számozott listához, egy \'a\' betűt az betűzött listához, vagy egy \'[Alt Gr+Q]\'-t a pontozott listához',
 	'listpoint'=>'Adj meg egy lista elemet. A lista befejezéséhez hagyd üresen a mezőt, vagy klikkelj a \'Cancel\' gombra.',
 	'addcode'=>'Pozícióban illeszd be',
-	'read_more'=>'tovább olvas',
+	'readMore'=>'tovább olvas',
 	'mc_you_have'=>'Van neked',
 	'mc_new_messages'=>'új üzenet(ek). El akarod most olvasni őket?',
 	'na'=>'nem elérhető',

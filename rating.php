@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -28,66 +28,93 @@
 include("_mysql.php");
 include("_settings.php");
 include("_functions.php");
-$_language->read_module('rating');
+$_language->readModule('rating');
 
-if(!$userID) die($_language->module['no_access']);
+if (!$userID) {
+    die($_language->module[ 'no_access' ]);
+}
 
 $table = "0";
 $key = "0";
 
-$rating = $_POST['rating'];
+$rating = $_POST[ 'rating' ];
 settype($rating, "integer");
-if($rating > 10 OR $rating < 0) die($_language->module['just_rate_between_0_10']);
-$type = $_POST['type'];
-$id = $_POST['id'];
+if ($rating > 10 || $rating < 0) {
+    die($_language->module[ 'just_rate_between_0_10' ]);
+}
+$type = $_POST[ 'type' ];
+$id = $_POST[ 'id' ];
 
-if($type == "ar") {
-	$table = "articles";
-	$key = "articlesID";
-}
-elseif($type == "de") {
-	$table = "demos";
-	$key = "demoID";
-}
-elseif($type == "fi") {
-	$table = "files";
-	$key = "fileID";
-}
-elseif($type == "ga") {
-	$table = "gallery_pictures";
-	$key = "picID";
-}
-
-
-$getarticles = safe_query("SELECT ".$table." FROM ".PREFIX."user WHERE userID='".$userID."'");
-if(mysql_num_rows($getarticles)) {
-	$ga = mysql_fetch_array($getarticles);
-	$go = false;
-	if($ga[$table] == ""){
-		$array = array();
-		$go = true;
-	}
-	else {
-		$string = $ga[$table];
-		$array = explode(":", $string);
-		if(!in_array($id,$array)) $go = true;
-	}
-	// Only vote, if isn't voted
-	if($go == true){
-		safe_query("UPDATE ".PREFIX.$table." SET votes=votes+1, points=points+".$rating." WHERE ".$key."='".$id."'");
-		$ergebnis = safe_query("SELECT votes, points FROM ".PREFIX.$table." WHERE ".$key."='".$id."'");
-		$ds = mysql_fetch_array($ergebnis);
-		$rate = round($ds['points'] / $ds['votes']);
-		safe_query("UPDATE ".PREFIX.$table." SET rating='".$rate."' WHERE ".$key."='".$id."'");
-		$array[] = $id;
-		$string_new = implode(":", $array);
-		safe_query("UPDATE ".PREFIX."user SET ".$table."='".$string_new."' WHERE userID='".$userID."'");
-	}
+if ($type == "ar") {
+    $table = "articles";
+    $key = "articlesID";
+} elseif ($type == "de") {
+    $table = "demos";
+    $key = "demoID";
+} elseif ($type == "fi") {
+    $table = "files";
+    $key = "fileID";
+} elseif ($type == "ga") {
+    $table = "gallery_pictures";
+    $key = "picID";
 }
 
-if($table == "gallery_pictures") $table = "gallery&picID=".$id;
-elseif($table == "articles") $table = "articles&action=show&articlesID=".$id;
-elseif($table == "demos") $table = "demos&action=showdemo&demoID=".$id;
-elseif($table == "files") $table = "files&file=".$id;
-header("Location: index.php?site=".$table);
-?>
+
+$getarticles = safe_query(
+    "SELECT
+        " . $table . "
+    FROM
+        " . PREFIX . "user
+    WHERE
+        userID='" . (int)$userID
+);
+if (mysqli_num_rows($getarticles)) {
+    $ga = mysqli_fetch_array($getarticles);
+    $go = false;
+    if ($ga[ $table ] == "") {
+        $array = [];
+        $go = true;
+    } else {
+        $string = $ga[ $table ];
+        $array = explode(":", $string);
+        if (!in_array($id, $array)) {
+            $go = true;
+        }
+    }
+    // Only vote, if isn't voted
+    if ($go == true) {
+        safe_query(
+            "UPDATE
+                " . PREFIX . $table . "
+            SET
+                votes=votes+1,
+                points=points+" . $rating . "
+            WHERE
+            " . $key . " = '" . (int)$id
+        );
+        $ergebnis = safe_query("SELECT votes, points FROM " . PREFIX . $table . " WHERE " . $key . " = '" . (int)$id);
+        $ds = mysqli_fetch_array($ergebnis);
+        $rate = round($ds[ 'points' ] / $ds[ 'votes' ]);
+        safe_query("UPDATE " . PREFIX . $table . " SET rating='" . $rate . "' WHERE " . $key . "='" . (int)$id);
+        $array[ ] = $id;
+        $string_new = implode(":", $array);
+        safe_query("UPDATE " . PREFIX . "user SET " . $table . "='" . $string_new . "' WHERE userID='" . (int)$userID);
+    }
+}
+
+switch($table) {
+    case "gallery_pictures":
+        $table = "gallery&picID=" . $id;
+        break;
+    case "articles":
+        $table = "articles&action=show&articlesID=" . $id;
+        break;
+    case "demos":
+        $table = "demos&action=showdemo&demoID=" . $id;
+        break;
+    case "files":
+        $table = "files&file=" . $id;
+        break;
+}
+
+header("Location: index.php?site=" . $table);

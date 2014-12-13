@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -29,9 +29,10 @@ $language_array = Array(
 	'available'=>'Vorhanden',
 	'check_chmod'=>'CHMOD Überprüfung',
 	'check_requirements'=>'Überprüfe Anforderungen',
-	'chmod_error'=>'<b>Der CHMOD konnte nicht gesetzt werden.</b><br />Bitte gebe den Ordnern CHMOD 777 und den Dateien CHMOD 766 manuell',
+	'chmod_error'=>'<b>Der CHMOD konnte nicht gesetzt werden.</b><br>Bitte gebe den Ordnern CHMOD 777 und den Dateien CHMOD 766 manuell',
 	'mysql_error'=>'_mysql.php muss beschreibbar sein oder webSPELL kann nicht installiert werden.',
 	'mysql_support'=>'MySQL Unterstützung',
+	'multibyte_support'=>'MultiByte Unterstützung',
 	'no'=>'Nein',
 	'php_version'=>'PHP Version',
 	'set_chmod'=>'CHMOD setzen',

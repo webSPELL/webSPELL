@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -54,7 +54,7 @@ $language_array = Array(
 	'no_incoming'=>'Inga meddelanden i kommande mapp.',
 	'no_outgoing'=>'Inga meddelanden i utgående mapp.',
 	'no_subject'=>'(inget ämne)',
-	'not_logged'=>'Du är inte inloggad.<br /><a href="index.php?site=login">Logga in</a> | <a href="index.php?site=register">Registrera</a>',
+	'not_logged'=>'Du är inte inloggad.<br><a href="index.php?site=login">Logga in</a> | <a href="index.php?site=register">Registrera</a>',
 	'options'=>'Options',
 	'outgoing'=>'Utgående',
 	'read'=>'Läs',
@@ -73,7 +73,7 @@ $language_array = Array(
 	'title'=>'Ämne',
 	'your_message'=>'Ditt meddelande:',
 	'mail_subject'=>'Du har ett nytt PM',
-	'mail_body'=>'<b>Hejsan %nickname%!</b><br /><br />Du har ett nytt meddelande på '.PAGETITLE.' (%hp_url%).<br />Tryck <a href="http://%hp_url%?site=messenger">här</a> för att läsa ditt PM.<br /><br />(C) webSPELL.org',
+	'mail_body'=>'<b>Hejsan %nickname%!</b><br><br>Du har ett nytt meddelande på '.PAGETITLE.' (%hp_url%).<br>Tryck <a href="http://%hp_url%?site=messenger">här</a> för att läsa ditt PM.<br><br>(C) webSPELL.org',
 	'error'=>'error',
 	'unknown_user'=>'unknown user'
 );

@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -64,6 +64,7 @@ $language_array = Array(
 	'text_contains'=>'Il testo contiene',
 	'title_contains'=>'Titolo contiene',
 	'too_short'=>'Ricerca troppo corta. Almeno %min_chars% ciffre',
-	'wrong_securitycode'=>'Il codice di sicurezza è sbagliata'
+	'wrong_securitycode'=>'Il codice di sicurezza è sbagliata',
+	'no_result'=>'Nessuna voce trovati per "%s"'
 );
 ?>

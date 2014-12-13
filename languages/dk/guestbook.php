@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -30,7 +30,7 @@ $language_array = Array(
 /* do not edit above this line */
 
   'admin_comment'=>'Admin kommantar',
-	'bbcode'=>'<a href="javascript:MM_openBrWindow(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> TIL',
+	'bbcode'=>'<a href="javascript:window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> TIL',
 	'by'=>'fra',
 	'comment'=>'Kommentar',
 	'delete_selected'=>'Slet markerede',
@@ -46,13 +46,13 @@ $language_array = Array(
 	'mail'=>'Din mail adresse',
 	'name'=>'Dit navn',
 	'new_entry'=>'Nyt indlæg',
-	'no_access'=>'Du er ikke logget ind.<br /><a href="index.php?site=login">Log ind</a> | <a href="index.php?site=register">Registrer</a>',
+	'no_access'=>'Du er ikke logget ind.<br><a href="index.php?site=login">Log ind</a> | <a href="index.php?site=register">Registrer</a>',
 	'options'=>'indstillinger',
 	'pmsubject_newentry'=>'Nyt gæstebogs indlæg',
 	'pmtext_newentry'=>'[b]Nogen har efterladt dig en besked i din gæstebog![/b][br][br] [URL=index.php?site=guestbook#%insertid%]Klik her for at læse beskeden[/URL] ',
 	'security_code'=>'Sikkerhedskode',
 	'select_all'=>'marker alle',
-	'smilies'=>'<a href="javascript:MM_openBrWindow(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smilies</a> TIL',
+	'smilies'=>'<a href="javascript:window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smilies</a> TIL',
 	'sort'=>'Sorter:',
 	'submit'=>'godkend',
 	'update_comment'=>'Gem kommentar',

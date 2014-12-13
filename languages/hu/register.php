@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -29,7 +29,7 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-	'activation_successful'=>'Felhasználói profilod aktiválása sikeresen befejeződött.<br />Most már bejelentkezhetsz.',
+	'activation_successful'=>'Felhasználói profilod aktiválása sikeresen befejeződött.<br>Most már bejelentkezhetsz.',
 	'back'=>'back',
 	'enter_nickname'=>'Írj be becenevet.',
 	'enter_password'=>'Írj be jelszót.',
@@ -47,7 +47,6 @@ $language_array = Array(
 Sikeresen regisztráltál a(z) %pagetitle% (%homepage_url%) honlapra . A felhasználói adataid:
 
 Felhasználónév: %username%
-Jelszó: %password%
 
 A regisztráció befejezéséhez kattints az alábbi linkre:
 %activationlink%

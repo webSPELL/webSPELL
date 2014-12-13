@@ -1,29 +1,18 @@
-<table width="100%" border="0" cellspacing="0" cellpadding="2">
-  <tr>
-    <td>$today %visits% (%today%)</td>
-  </tr>
-  <tr>
-    <td>$yesterday %visits% (%yesterday%)</td>
-  </tr>
-  <tr>
-    <td>$month %visits% (%month%)</td>
-  </tr>
-  <tr>
-    <td>$total %visits_total%</td>
-  </tr>
-  <tr>
-    <td>$us %registered_users%</td>
-  </tr>
-  <tr>
-    <td></td>
-  </tr>
-  <tr>
-    <td><a href="index.php?site=whoisonline">$user_on</a> online</td>
-  </tr>
-  <tr>
-    <td><a href="index.php?site=whoisonline">$guests_on</a> online</td>
-  </tr>
-  <tr>
-    <td>&#8226; <a href="index.php?site=counter_stats">%statistic%</a></td>
-  </tr>
-</table>
+<ul class="list-group">
+	<li class="list-group-item"><span class="badge">$today</span> %visits% (%today%)</li>
+	<li class="list-group-item"><span class="badge">$yesterday</span> %visits% (%yesterday%)</li>
+	<li class="list-group-item"><span class="badge">$month</span> %visits% (%month%)</li>
+	<li class="list-group-item"><span class="badge">$total</span> %visits_total%</li>
+	<li class="list-group-item"><span class="badge">$us</span> %registered_users%</li>
+	<li class="list-group-item">
+		<span class="badge">$user_on</span>
+		<a href="index.php?site=whoisonline">$user_on_text online</a>
+	</li>
+	<li class="list-group-item">
+		<span class="badge">$guests_on</span>
+		<a href="index.php?site=whoisonline">$guests_on_text online</a>
+	</li>
+	<li class="list-group-item text-right">
+		<a href="index.php?site=counter_stats">%statistic%</a>
+	</li>
+</ul>

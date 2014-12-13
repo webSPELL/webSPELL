@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -33,7 +33,7 @@ $language_array = Array(
 	'already_rated'=>'<b>Article already rated!</b>',
 	'articles'=>'articles',
 	'author'=>'Author',
-	'bbcode'=>'&#8226; <a href="javascript:MM_openBrWindow(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> <b><u>ON</u></b>',
+	'bbcode'=>'&#8226; <a href="javascript:window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> <b><u>ON</u></b>',
 	'cancel'=>'Cancel',
 	'date'=>'Date',
 	'delete'=>'Delete',
@@ -63,7 +63,7 @@ $language_array = Array(
 	'really_delete'=>'really delete this article?',
 	'save_article'=>'Save article',
   'self'=>'same window',
-	'smilies'=>'&#8226; <a href="javascript:MM_openBrWindow(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smilies</a> <b><u>ON</u></b>',
+	'smilies'=>'&#8226; <a href="javascript:window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smilies</a> <b><u>ON</u></b>',
 	'sort'=>'Sort:',
 	'title'=>'Headline',
 	'top5_points'=>'Top 5 articles (points)',
@@ -71,6 +71,7 @@ $language_array = Array(
 	'upload_images'=>'Upload images',
 	'user_comments'=>'Enable user comments',
 	'viewed'=>'Views',
-	'visitor_comments'=>'Enable visitor comments'
+	'visitor_comments'=>'Enable visitor comments',
+	'tags'=>'tags'
 );
 ?>

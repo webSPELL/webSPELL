@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -30,7 +30,7 @@ $language_array = Array(
 /* do not edit above this line */
 
 	'admin_comment'=>'Admin komentár',
-  'bbcode'=>'<a href="javascript:MM_openBrWindow(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> zapnutý',
+  'bbcode'=>'<a href="javascript:window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> zapnutý',
 	'by'=>'od',
 	'comment'=>'Komentár',
 	'delete_selected'=>'Vymazať označené',
@@ -46,13 +46,13 @@ $language_array = Array(
 	'mail'=>'Váš e-mail',
 	'name'=>'Vaše meno',
 	'new_entry'=>'Pridať príspevok',
-	'no_access'=>'Nie ste prihlásený.<br /><a href="index.php?site=login">Prihlásenie</a> | <a href="index.php?site=register">Registrácia</a>',
+	'no_access'=>'Nie ste prihlásený.<br><a href="index.php?site=login">Prihlásenie</a> | <a href="index.php?site=register">Registrácia</a>',
 	'options'=>'Možnosti',
 	'pmsubject_newentry'=>'Nový guestbook príspevok',
 	'pmtext_newentry'=>'[b]Niekto vám nechal správu v guestbook-u![/b][br][br] [URL=index.php?site=guestbook#$insertid]Kliknite sem pre prečítanie[/URL] ',
 	'security_code'=>'Bezpečnostný kód',
 	'select_all'=>'označiť všetko',
-	'smilies'=>'<a href="javascript:MM_openBrWindow(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smajlíci</a> zapnutý',
+	'smilies'=>'<a href="javascript:window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smajlíci</a> zapnutý',
 	'sort'=>'Triediť:',
 	'submit'=>'Potrvdiť',
 	'update_comment'=>'Uložiť komentár',

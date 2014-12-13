@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -25,20 +25,18 @@
 ##########################################################################
 */
 
-if(DEBUG == "ON") {
-	if(isset($_GET['help'])) {
-		switch($_GET['help']) {
+if (DEBUG == "ON") {
+    if (isset($_GET['help'])) {
+        switch ($_GET['help']) {
 
-			case "phpinfoplease":
-				die(phpinfo());
-				break;
-			case "versionplease":
-				include('version.php');
-				die($version);
-				break;
+            case "phpinfoplease":
+                die(phpinfo());
+                break;
+            case "versionplease":
+                include('version.php');
+                die($version);
+                break;
 
-		}
-	}
+        }
+    }
 }
-
-?>

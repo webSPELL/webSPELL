@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2010 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -67,14 +67,14 @@ $language_array = Array(
   'teal'=>'خاكسترى',
   'tiny'=>'کوچک تر',
   'tomato'=>'گوجه فرنگي',
-  'uneven_amount'=>'نا هماهنگ بودن تگ ها',
-  'first_tag_closing_tag'=>'اولین تگ را نمیتوانید ببندید',
-  'not_same_amount'=>'نا هماهنگ بودن تگ های اولیه',
-  'wrong_nesting'=>'انتخاب تگ اشتباه',
+  'unevenAmount'=>'نا هماهنگ بودن تگ ها',
+  'firstTagClosingTag'=>'اولین تگ را نمیتوانید ببندید',
+  'notSameAmount'=>'نا هماهنگ بودن تگ های اولیه',
+  'wrongNesting'=>'انتخاب تگ اشتباه',
   'listguide'=>'درا برایلیست حروف وارد کنید a عدد 1 را برای لیست اعداد و',
   'listpoint'=>'رافشار دهید حذف  لیست ارا را وارد کنی یا چیزی وارد نکنید یا کلید',
   'addcode'=>'وارد این قسمت شوید',
-  'read_more'=>'بیشتر خواندن',
+  'readMore'=>'بیشتر خواندن',
   'mc_you_have'=>'شما باید',
   'mc_new_messages'=>'پیقام جدید : ایا میخاهید هم اکنون بخوانید؟',
   'na'=>'موجود نیست',

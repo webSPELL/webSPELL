@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -49,17 +49,17 @@ $language_array = Array(
   'new_board'=>'Új téma',
   'new_category'=>'Új kategória',
   'read_right'=>'Olvasási jogosultság',
-  'read_right_info_board'=>'Ez(ek) a felhasználói csoport(ok) láthatjá(k) és olvashatjá(k) a témát.<br />Ha egyik csoport sem kerül kijelölésre, akkor a téma szabadon olvasható lesz minden látogató számára.<br />Használd a CTRL-t több csoport kijelöléséhez.',
+  'read_right_info_board'=>'Ez(ek) a felhasználói csoport(ok) láthatjá(k) és olvashatjá(k) a témát.<br>Ha egyik csoport sem kerül kijelölésre, akkor a téma szabadon olvasható lesz minden látogató számára.<br>Használd a CTRL-t több csoport kijelöléséhez.',
   'really_delete_board'=>'Biztosan törölni akarod ezt a témát?',
   'really_delete_category'=>'Biztosan törölni akarod ezt a kategóriát?',
   'registered_users'=>'Regisztrált felhasználók',
-  'right_info_category'=>'Ez(ek) a felhasználói csoport(ok) láthatjá(k) a kategóriát.<br />Ha egyik csoport sem kerül kijelölésre, akkor a kategóriát minden látogató látni fogja.<br />Használd a CTRL-t több csoport kijelöléséhez.',
+  'right_info_category'=>'Ez(ek) a felhasználói csoport(ok) láthatjá(k) a kategóriát.<br>Ha egyik csoport sem kerül kijelölésre, akkor a kategóriát minden látogató látni fogja.<br>Használd a CTRL-t több csoport kijelöléséhez.',
   'select_moderators'=>'Moderátorok kijelölése',
   'sort'=>'Rendezés',
   'transaction_invalid'=>'A művelet azonosítója érvénytelen',
   'to_sort'=>'Rendezés',
   'unselect_all'=>'Kijelölés visszavonása',
   'write_right'=>'Írási jogosultság',
-  'write_right_info_board'=>'Ez(ek) a felhasználói csoport(ok) írhat(nak) a témában.<br />Ha egyik csoport sem kerül kijelölésre, akkor a témába szabadon írhat minden látogató.<br />Használd a CTRL-t több csoport kijelöléséhez.'
+  'write_right_info_board'=>'Ez(ek) a felhasználói csoport(ok) írhat(nak) a témában.<br>Ha egyik csoport sem kerül kijelölésre, akkor a témába szabadon írhat minden látogató.<br>Használd a CTRL-t több csoport kijelöléséhez.'
 );
 ?>

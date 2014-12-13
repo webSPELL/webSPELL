@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -64,8 +64,8 @@ $language_array = Array(
 	'usermenu'=>'Menu użytkownika',
 	'views'=>'wejść',
 	'x_new_message'=>'Masz %new_messages% nowych wiadomości.',
-	'you_have_to_be_logged_in'=>'Musisz być zalogowany aby móc przeglądać swój profil!<br /><br />
-    &#8226; <a href="index.php?site=register">Rejestracja</a><br />
+	'you_have_to_be_logged_in'=>'Musisz być zalogowany aby móc przeglądać swój profil!<br><br>
+    &#8226; <a href="index.php?site=register">Rejestracja</a><br>
     &#8226; <a href="index.php?site=login">Logowanie</a>'
 );
 ?>

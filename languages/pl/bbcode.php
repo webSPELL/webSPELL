@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -67,14 +67,14 @@ $language_array = Array(
 	'teal'=>'cyraneczka',
 	'tiny'=>'Malutki',
 	'tomato'=>'pomidorowy',
-	'uneven_amount'=>'Nierówna ilość tagów zamykających i otwierających ',
-	'first_tag_closing_tag'=>'Pierwszy tag BBCODE nie może być zamykającym',
-	'not_same_amount'=>'Nie taka sama ilość tagów zamykających i otwierających',
-	'wrong_nesting'=>'Złe zagnieżdżenie tagów BBCode',
+	'unevenAmount'=>'Nierówna ilość tagów zamykających i otwierających ',
+	'firstTagClosingTag'=>'Pierwszy tag BBCODE nie może być zamykającym',
+	'notSameAmount'=>'Nie taka sama ilość tagów zamykających i otwierających',
+	'wrongNesting'=>'Złe zagnieżdżenie tagów BBCode',
 	'listguide'=>'Wpisz \'1\' dla listy numerycznej, \'a\' dla listy alfabetycznej lub \'\' dla listy punktowej',
 	'listpoint'=>'Wstaw liste punktową. Wstaw nic lub \'Cancel\' żeby zakończyć listę',
 	'addcode'=>'Wstaw na pozycję',
-	'read_more'=>'Czytaj więcej',
+	'readMore'=>'Czytaj więcej',
 	'mc_you_have'=>'Masz',
 	'mc_new_messages'=>'nowych wiadomości. Czy chcesz je teraz przeczytać ?',
 	'na'=>'niedostępne',

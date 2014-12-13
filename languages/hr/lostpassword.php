@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -43,8 +43,8 @@ Zabavite se na našim stranicama,
 	'lost_password'=>'izgubljena lozinka',
 	'no_mail_given'=>'Niste unijeli e-mail adresu.',
 	'no_user_found'=>'Korisnik nije naden!',
-	'successful'=>'Vaš racun je pronaden<br /><br />
-    Za nekoliko sekundi primit cete e-mail sa Vašim podacima.<br /><br />
+	'successful'=>'Vaš racun je pronaden<br><br>
+    Za nekoliko sekundi primit cete e-mail sa Vašim podacima.<br><br>
     &#8226; <a href="index.php?site=login">Prijavi se</a>',
 	'your_email'=>'Vaš E-Mail'
 );

@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -25,55 +25,57 @@
 ##########################################################################
 */
 
-if (isset($site)) $_language->read_module('sc_upcoming');
-$now=time();
-$ergebnis=safe_query("SELECT * FROM ".PREFIX."upcoming WHERE date>= $now ORDER BY date LIMIT 0, ".$maxupcoming);
-$n=1;
-while($ds=mysql_fetch_array($ergebnis)) {
-	echo'<table width="100%" cellspacing="0" cellpadding="2">';
-	if($ds['type']=="c") {
-		$date=date("d.m.Y", $ds['date']);
-		$upsquad=getsquadname($ds['squad']);
-    
-    if($n%2) {
-			$bg1=BG_1;
-			$bg2=BG_2;
-		}
-		else {
-			$bg1=BG_3;
-			$bg2=BG_4;
-		}
-
-		$upurl='index.php?site=calendar&amp;tag='.date("d", $ds['date']).'&amp;month='.date("m", $ds['date']).'&amp;year='.date("Y", $ds['date']);
-
-		$opponent=$ds['opponent'];
-		
-		eval ("\$upcomingactions = \"".gettemplate("upcomingactions")."\";");
-		echo $upcomingactions;
-	}
-	else {
-		$date=date("d.m.Y", $ds['date']);
-		$country="[flag]".$ds['country']."[/flag]";
-		$country=flags($country);
-    
-    if($n%2) {
-			$bg1=BG_1;
-			$bg2=BG_2;
-		}
-		else {
-			$bg1=BG_3;
-			$bg2=BG_4;
-		}
-
-		$upurl='index.php?site=calendar&amp;tag='.date("d", $ds['date']).'&amp;month='.date("m", $ds['date']).'&amp;year='.date("Y", $ds['date']);
-    
-		$eventtitle=$ds['title'];
-		
-		eval ("\$upcomingevent = \"".gettemplate("upcomingevent")."\";");
-		echo $upcomingevent;
-	}
-  $n++;
-  echo'</table>';
+if (isset($site)) {
+    $_language->readModule('sc_upcoming');
 }
-$anzahl='';
-?>
+$now = time();
+$ergebnis = safe_query("SELECT * FROM " . PREFIX . "upcoming WHERE date>= $now ORDER BY date LIMIT 0, " . $maxupcoming);
+$n = 1;
+while ($ds = mysqli_fetch_array($ergebnis)) {
+    echo '<ul class="list-group">';
+    if ($ds[ 'type' ] == "c") {
+        $date = getformatdate($ds[ 'date' ]);
+        $upsquad = getsquadname($ds[ 'squad' ]);
+
+        if ($n % 2) {
+            $bg1 = BG_1;
+            $bg2 = BG_2;
+        } else {
+            $bg1 = BG_3;
+            $bg2 = BG_4;
+        }
+
+        $upurl =
+            'index.php?site=calendar&amp;tag=' . date("d", $ds[ 'date' ]) . '&amp;month=' . date("m", $ds[ 'date' ]) .
+            '&amp;year=' . date("Y", $ds[ 'date' ]);
+
+        $opponent = $ds[ 'opponent' ];
+
+        eval ("\$upcomingactions = \"" . gettemplate("upcomingactions") . "\";");
+        echo $upcomingactions;
+    } else {
+        $date = getformatdate($ds[ 'date' ]);
+        $country = "[flag]" . $ds[ 'country' ] . "[/flag]";
+        $country = flags($country);
+
+        if ($n % 2) {
+            $bg1 = BG_1;
+            $bg2 = BG_2;
+        } else {
+            $bg1 = BG_3;
+            $bg2 = BG_4;
+        }
+
+        $upurl =
+            'index.php?site=calendar&amp;tag=' . date("d", $ds[ 'date' ]) . '&amp;month=' . date("m", $ds[ 'date' ]) .
+            '&amp;year=' . date("Y", $ds[ 'date' ]);
+
+        $eventtitle = $ds[ 'title' ];
+
+        eval ("\$upcomingevent = \"" . gettemplate("upcomingevent") . "\";");
+        echo $upcomingevent;
+    }
+    $n++;
+    echo '</ul>';
+}
+$anzahl = '';

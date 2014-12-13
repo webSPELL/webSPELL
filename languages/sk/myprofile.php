@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -30,9 +30,10 @@ $language_array = Array(
 /* do not edit above this line */
 
 	'about_myself'=>'O mne',
+	'activated'=>'aktivovaná',
 	'avatar'=>'Avatar:',
 	'back'=>'naspäť',
-	'bbcode'=>'<a href="javascript:MM_openBrWindow(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> je ZAPNUTÝ',
+	'bbcode'=>'<a href="javascript:window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> je ZAPNUTÝ',
 	'can_not_copy'=>'nedá sa kópirovať súbor zo serveru',
 	'change_mail'=>'zmeniť e-mail',
 	'change_password'=>'zmeniť heslo',
@@ -45,6 +46,7 @@ $language_array = Array(
 	'country'=>'Krajina',
 	'cpu'=>'CPU',
 	'date_of_birth'=>'Dátum narodenia',
+	'deactivated'=>'deaktivovaná',
 	'delete_max_230_210'=>'vymazať (max230/210)',
 	'delete_max_90_90'=>'vymazať (max90/90)',
 	'e-mail'=>'e-mail',
@@ -57,7 +59,12 @@ $language_array = Array(
 	'first_name'=>'Krstné meno',
 	'forgot_new_pw'=>'zabudli ste zadať nové heslo!',
 	'forgot_old_pw'=>'zabudli ste zadať staré heslo!',
+    'format_date'=>'Formát dátumu',
+    'format_time'=>'Formát času',
 	'graphiccard'=>'Grafická karta',
+	'guestbook'=>'Návštevná kniha',
+	'hdd'=>'Pevný disk',
+	'headset'=>'Slúchadlá',
 	'hide_e-mail'=>'Utajiť E-mail?',
 	'homepage'=>'Stránka',
 	'html'=>'HTML je VYPNUTÉ',
@@ -94,8 +101,8 @@ Pre potrvrdenie zmeny, prosím kliknite na nasledujúci odkaz:
 	'nickname'=>'Prezývka',
 	'nickname_already_in_use'=>'prezývka je už používaná!',
 	'no'=>'Nie',
-	'not_logged_in'=>'Musíte byť prihlásený aby ste mohli vidieť svoj profil!<br /><br />
-	&#8226; <a href="index.php?site=register">registrácia</a><br />
+	'not_logged_in'=>'Musíte byť prihlásený aby ste mohli vidieť svoj profil!<br><br>
+	&#8226; <a href="index.php?site=register">registrácia</a><br>
 	&#8226; <a href="index.php?site=login">prihlásenie</a>',
 	'old_password'=>'staré heslo',
 	'old_pw_not_valid'=>'vaše staré heslo nie je spráne!',
@@ -114,7 +121,7 @@ Pre potrvrdenie zmeny, prosím kliknite na nasledujúci odkaz:
 	'repeated_pw_not_valid'=>'zopakované heslo nie je platné!',
 	'sexuality'=>'Pohlavie',
 	'signature'=>'Podpis',
-	'smilies'=>'<a href="javascript:MM_openBrWindow(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smajlíci</a> sú ZAPNUTÍ',
+	'smilies'=>'<a href="javascript:window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smajlíci</a> sú ZAPNUTÍ',
 	'soundcard'=>'Zvuk. karta',
 	'town'=>'Mesto',
 	'unknown'=>'not available',

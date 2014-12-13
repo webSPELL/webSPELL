@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -25,36 +25,36 @@
 ##########################################################################
 */
 
-$_language->read_module('sc_randompic');
+$_language->readModule('sc_randompic');
 
 //get files
-$pic_array = Array();
+$pic_array = [];
 $picpath = './images/userpics/';
 $picdir = opendir($picpath);
 while (false !== ($file = readdir($picdir))) {
-	if ($file != "." && $file != ".." && $file != "nouserpic.gif" && is_file($picpath.$file) && $file!="Thumbs.db") {
-		$pic_array[] = $file;
-	}
+    if ($file != "." && $file != ".." && $file != "nouserpic.gif" && is_file($picpath . $file) && $file != "Thumbs.db"
+    ) {
+        $pic_array[ ] = $file;
+    }
 }
 closedir($picdir);
 
 //sort array
-natcasesort ($pic_array);
-reset ($pic_array);
+natcasesort($pic_array);
+reset($pic_array);
 
-//get randompic
+//get randomPic
 $anz = count($pic_array);
-if($anz) {
-	$the_pic = $pic_array[rand(0,($anz-1))];
-	$picID = str_replace(strrchr($the_pic,'.'),'',$the_pic);
-	$nickname = getnickname($picID);
-	$nickname_fixed = getinput($nickname);
-	$registerdate = getregistered($picID);
-	$picurl = $picpath.$the_pic;
+if ($anz) {
+    $the_pic = $pic_array[ rand(0, ($anz - 1)) ];
+    $picID = str_replace(strrchr($the_pic, '.'), '', $the_pic);
+    $nickname = getnickname($picID);
+    $nickname_fixed = getinput($nickname);
+    $registerdate = getregistered($picID);
+    $picurl = $picpath . $the_pic;
 
-  	eval ("\$sc_randompic = \"".gettemplate("sc_randompic")."\";");
-	echo $sc_randompic;
-  
-} else echo $_language->module['no_user'];
-
-?>
+    eval ("\$sc_randompic = \"" . gettemplate("sc_randompic") . "\";");
+    echo $sc_randompic;
+} else {
+    echo $_language->module[ 'no_user' ];
+}

@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<ruleset name="webSPELL">
+    <description>webSPELL coding standard</description>
+
+    <rule ref="PSR2"/>
+
+    <rule ref="PSR1">
+        <exclude name="PSR1.Files.SideEffects.FoundWithSymbols"/>
+    </rule>
+
+</ruleset>

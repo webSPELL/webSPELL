@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -25,24 +25,29 @@
 ##########################################################################
 */
 
-if($userID) {
-	$name_settings = 'value="'.getinput(getnickname($userID)).'" readonly="readonly" ';
-	$captcha_form = '';
+if ($userID) {
+    $name_settings = 'value="' . getinput(getnickname($userID)) . '" readonly="readonly" ';
+    $captcha_form = '';
+} else {
+    $name_settings = 'value="Name" onfocus="this.value=\'\'"';
+    $CAPCLASS = new \webspell\Captcha;
+    $captcha = $CAPCLASS->createCaptcha();
+    $hash = $CAPCLASS->getHash();
+    $CAPCLASS->clearOldCaptcha();
+    $captcha_form =
+        '<div class="form-group">
+            <div class="input-group">
+                <span class="input-group-addon captcha-img">' . $captcha . '</span>
+                <input type="number" name="captcha" placeholder="Enter Captcha"  autocomplete="off"
+                    class="form-control">
+                <input name="captcha_hash" type="hidden" value="' . $hash . '">
+            </div>
+        </div>';
 }
-else {
-	$name_settings = 'value="Name" onfocus="this.value=\'\'"';
-	$CAPCLASS = new Captcha;
-	$captcha = $CAPCLASS->create_captcha();
-	$hash = $CAPCLASS->get_hash();
-	$CAPCLASS->clear_oldcaptcha();
-	$captcha_form = $captcha.' <input type="text" name="captcha" size="5" maxlength="5" /><input name="captcha_hash" type="hidden" value="'.$hash.'" /><br />';
-}
 
-$_language->read_module('shoutbox');
+$_language->readModule('shoutbox');
 
-$refresh = $sbrefresh*1000;
+$refresh = $sbrefresh * 1000;
 
-eval ("\$shoutbox = \"".gettemplate("shoutbox")."\";");
+eval ("\$shoutbox = \"" . gettemplate("shoutbox") . "\";");
 echo $shoutbox;
-
-?>

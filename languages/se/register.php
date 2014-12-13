@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -29,7 +29,7 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-	'activation_successful'=>'Ditt account lyckades aktivera.<br />Du kan nu logga in.',
+	'activation_successful'=>'Ditt account lyckades aktivera.<br>Du kan nu logga in.',
 	'back'=>'tillbaka',
 	'enter_nickname'=>'Snälla skriv in ett smeknamn',
 	'enter_password'=>'Snälla skriv in ett lösenord',
@@ -47,7 +47,6 @@ $language_array = Array(
 Din registrerning på %pagetitle% (%homepage_url%) var lyckad. Din inloggnigns information::
 
 Inloggningsnamn: %username%
-Lösenord: %password%
 
 För att slutgöra registrationen måste du aktivera ditt account genom att klicka på följande länk: 
 %activationlink%

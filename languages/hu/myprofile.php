@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -30,9 +30,10 @@ $language_array = Array(
 /* do not edit above this line */
 
 	'about_myself'=>'Rólam',
+	'activated'=>'aktív',
 	'avatar'=>'Avatar:',
 	'back'=>'vissza',
-	'bbcode'=>'<a href="javascript:MM_openBrWindow(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> Bekapcsolva',
+	'bbcode'=>'<a href="javascript:window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> Bekapcsolva',
 	'can_not_copy'=>'nem tudsz fájlt másolni a szerverről',
 	'change_password'=>'jelszó változtatás',
 	'change_mail'=>'E-mail cím megváltoztatása',
@@ -45,6 +46,7 @@ $language_array = Array(
 	'country'=>'Ország',
 	'cpu'=>'CPU',
 	'date_of_birth'=>'Születésnap',
+	'deactivated'=>'kikapcsolva',
 	'delete_max_230_210'=>'törlés (max230/210)',
 	'delete_max_90_90'=>'törlés (max90/90)',
 	'e-mail'=>'E-mail',
@@ -57,7 +59,12 @@ $language_array = Array(
 	'first_name'=>'Keresztnév',
 	'forgot_new_pw'=>'elfelejtettél új jelszót beírni!',
 	'forgot_old_pw'=>'elfelejtetted beírni a régi jelszavad!',
+	'format_date'=>'Dátum formátum',
+	'format_time'=>'Idő formátum',
 	'graphiccard'=>'Videókártya',
+	'guestbook'=>'Vendégkönyv',
+	'hdd'=>'Merevlemez',
+	'headset'=>'Fejhallgató',
 	'hide_e-mail'=>'E-mail elrejtése?',
 	'homepage'=>'Honlap',
 	'html'=>'HTML Kikapcsolva',
@@ -94,8 +101,8 @@ Köszönjük érdeklődésed
 	'nickname'=>'Becenév',
 	'nickname_already_in_use'=>'a becenév már használatban van!',
 	'no'=>'Nem',
-	'not_logged_in'=>'Jelentkezz be a profilod megtekintéséhez!<br /><br />
-  &#8226; <a href="index.php?site=register">regisztráció</a><br />
+	'not_logged_in'=>'Jelentkezz be a profilod megtekintéséhez!<br><br>
+  &#8226; <a href="index.php?site=register">regisztráció</a><br>
   &#8226; <a href="index.php?site=login">bejelentkezés</a>',
 	'old_password'=>'régi jelszó',
 	'old_pw_not_valid'=>'a régi jelszavad nem érvényes!',
@@ -114,7 +121,7 @@ Köszönjük érdeklődésed
 	'repeated_pw_not_valid'=>'a megismételt jelszó nem érvényes!',
 	'sexuality'=>'Nem',
 	'signature'=>'Aláírás',
-	'smilies'=>'<a href="javascript:MM_openBrWindow(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Hangulatjelek</a> Bekapcsolva',
+	'smilies'=>'<a href="javascript:window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Hangulatjelek</a> Bekapcsolva',
 	'soundcard'=>'Hangkártya',
 	'town'=>'Település',
 	'unknown'=>'nem elérhető',

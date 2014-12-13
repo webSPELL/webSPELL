@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -30,7 +30,7 @@ $language_array = Array(
 /* do not edit above this line */
 
 	'admin_comment'=>'Admin komentar',
-	'bbcode'=>'<a href="javascript:MM_openBrWindow(\'code.php\',\'BBKod\',\'scrollbars=yes,width=600,height=500\')">BBKod</a> uključen',
+	'bbcode'=>'<a href="javascript:window.open(\'code.php\',\'BBKod\',\'scrollbars=yes,width=600,height=500\')">BBKod</a> uključen',
 	'by'=>'napisao',
 	'comment'=>'Komentiraj',
 	'delete_selected'=>'Izbriši označeno',
@@ -46,13 +46,13 @@ $language_array = Array(
 	'mail'=>'Vaš e-mail',
 	'name'=>'Vaše ime',
 	'new_entry'=>'Novi unos',
-	'no_access'=>'Niste prijavljeni.<br /><a href="index.php?site=login">Prijavi se</a> | <a href="index.php?site=register">Registriraj se</a>',
+	'no_access'=>'Niste prijavljeni.<br><a href="index.php?site=login">Prijavi se</a> | <a href="index.php?site=register">Registriraj se</a>',
 	'options'=>'Opcije',
 	'pmsubject_newentry'=>'Novi unos u knjigu gostiju',
 	'pmtext_newentry'=>'[b]Netko je ostavio poruku u Vašoj knjizi gostiju![/b][br][br] [URL=index.php?site=guestbook#%insertid%]Klikni da pročitaš poruku[/URL] ',
 	'security_code'=>'Sigurnosni kod',
 	'select_all'=>'označi sve',
-	'smilies'=>'<a href="javascript:MM_openBrWindow(\'smileys.php\',\'Smajlići\',\'scrollbars=yes,width=340,height=500\')">Smajlići</a> uključeni',
+	'smilies'=>'<a href="javascript:window.open(\'smileys.php\',\'Smajlići\',\'scrollbars=yes,width=340,height=500\')">Smajlići</a> uključeni',
 	'sort'=>'Razvrstaj:',
 	'submit'=>'Spremi',
 	'update_comment'=>'Spremi komentar',

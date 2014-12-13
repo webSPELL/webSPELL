@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -29,7 +29,7 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-	'activation_successful'=>'Vaš račun je uspješno aktiviran.<br />Sad se možete prijaviti na stranice.',
+	'activation_successful'=>'Vaš račun je uspješno aktiviran.<br>Sad se možete prijaviti na stranice.',
 	'back'=>'Natrag',
 	'enter_nickname'=>'Molimo unesite nick.',
 	'enter_password'=>'Molimo unesite lozinku.',
@@ -47,7 +47,6 @@ $language_array = Array(
 Vaša registracija na %pagetitle% (%homepage_url%) je uspješna. Podaci za prijavu:
 
 Korisničko ime: %username%
-Lozinka: %password%
 
 Da bi završili vašu registraciju, morate kliknuti na aktivacijski link:
 %activationlink%

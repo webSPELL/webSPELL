@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -25,9 +25,7 @@
 ##########################################################################
 */
 
-$_language->read_module('search');
+$_language->readModule('search');
 
-eval ("\$quicksearch = \"".gettemplate("quicksearch")."\";");
+eval ("\$quicksearch = \"" . gettemplate("quicksearch") . "\";");
 echo $quicksearch;
-
-?>	

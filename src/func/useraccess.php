@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -25,134 +25,440 @@
 ##########################################################################
 */
 
-function isanyadmin($userID) {
-	$anz=mysql_num_rows(safe_query("SELECT userID FROM ".PREFIX."user_groups WHERE userID='".$userID."' AND (page='1' OR forum='1' OR user='1' OR news='1' OR clanwars='1' OR feedback='1' OR super='1' OR gallery='1' OR cash='1' OR files='1') "));
-	return $anz;
+function isanyadmin($userID)
+{
+    return (
+        mysqli_num_rows(
+            safe_query(
+                "SELECT
+                    userID
+                FROM
+                    " . PREFIX . "user_groups
+                WHERE
+                    `userID` = " . (int)$userID . " AND
+                    (
+                        `page` = 1 OR
+                        `forum` = 1 OR
+                        `user` = 1 OR
+                        `news` = 1 OR
+                        `clanwars` = 1 OR
+                        `feedback` = 1 OR
+                        `super` = 1 OR
+                        `gallery` = 1 OR
+                        `cash` = 1 OR
+                        `files` = 1
+                    )"
+            )
+        ) > 0
+    );
 }
 
-function issuperadmin($userID) {
-	$anz=mysql_num_rows(safe_query("SELECT userID FROM ".PREFIX."user_groups WHERE super='1' AND userID='".$userID."'"));
-	return $anz;
+function issuperadmin($userID)
+{
+    return (
+        mysqli_num_rows(
+            safe_query(
+                "SELECT userID FROM " . PREFIX . "user_groups WHERE `super` = 1 AND `userID` = " . (int)$userID
+            )
+        ) > 0
+    );
 }
 
-function isforumadmin($userID) {
-	$anz=mysql_num_rows(safe_query("SELECT userID FROM ".PREFIX."user_groups WHERE (forum='1' OR super='1') AND userID='".$userID."'"));
-	return $anz;
+function isforumadmin($userID)
+{
+    return (
+        mysqli_num_rows(
+            safe_query(
+                "SELECT
+                    userID
+                FROM
+                    " . PREFIX . "user_groups
+                WHERE
+                    (
+                        `forum` = 1 OR
+                        `super` = 1
+                    ) AND
+                    `userID` = " . (int)$userID
+            )
+        ) > 0
+    );
 }
 
-function isfileadmin($userID) {
-	$anz=mysql_num_rows(safe_query("SELECT userID FROM ".PREFIX."user_groups WHERE (files='1' OR super='1') AND userID='".$userID."'"));
-	return $anz;
+function isfileadmin($userID)
+{
+    return (
+        mysqli_num_rows(
+            safe_query(
+                "SELECT
+                    userID
+                FROM
+                    " . PREFIX . "user_groups
+                WHERE
+                    (
+                        `files` = 1 OR
+                        `super` = 1
+                    ) AND
+                    `userID` = " . (int)$userID
+            )
+        ) > 0
+    );
 }
 
-function ispageadmin($userID) {
-	$anz=mysql_num_rows(safe_query("SELECT userID FROM ".PREFIX."user_groups WHERE (page='1' OR super='1') AND userID='".$userID."'"));
-	return $anz;
+function ispageadmin($userID)
+{
+    return (
+        mysqli_num_rows(
+            safe_query(
+                "SELECT
+                    userID
+                FROM
+                    " . PREFIX . "user_groups
+                WHERE
+                    (
+                        `page` = 1 OR
+                         `super` = 1
+                    ) AND
+                    `userID` = " . (int)$userID
+            )
+        ) > 0
+    );
 }
 
-function isfeedbackadmin($userID) {
-	$anz=mysql_num_rows(safe_query("SELECT userID FROM ".PREFIX."user_groups WHERE (feedback='1' OR super='1') AND userID='".$userID."'"));
-	return $anz;
+function isfeedbackadmin($userID)
+{
+    return (
+        mysqli_num_rows(
+            safe_query(
+                "SELECT
+                    userID
+                FROM
+                    " . PREFIX . "user_groups
+                WHERE
+                    (
+                        `feedback` = 1 OR
+                        `super` = 1
+                    ) AND
+                    `userID` = " . (int)$userID
+            )
+        ) > 0
+    );
 }
 
-function isnewsadmin($userID) {
-	$anz=mysql_num_rows(safe_query("SELECT userID FROM ".PREFIX."user_groups WHERE (news='1' OR super='1') AND userID='".$userID."'"));
-	return $anz;
+function isnewsadmin($userID)
+{
+    return (
+        mysqli_num_rows(
+            safe_query(
+                "SELECT
+                    userID
+                FROM
+                    " . PREFIX . "user_groups
+                WHERE
+                    (
+                        `news` = 1 OR
+                         `super` = 1
+                    ) AND
+                    `userID` = " . (int)$userID
+            )
+        ) > 0
+    );
 }
 
-function isnewswriter($userID) {
-	$anz=mysql_num_rows(safe_query("SELECT userID FROM ".PREFIX."user_groups WHERE (news='1' OR super='1' OR news_writer='1') AND userID='".$userID."'"));
-	return $anz;
+function isnewswriter($userID)
+{
+    return (
+        mysqli_num_rows(
+            safe_query(
+                "SELECT
+                    userID
+                FROM
+                    " . PREFIX . "user_groups
+                WHERE
+                    (
+                        `news` = 1 OR
+                        `super` = 1 OR
+                        `news_writer` = 1
+                    ) AND
+                    `userID` = " . (int)$userID
+            )
+        ) > 0
+    );
 }
 
-function ispollsadmin($userID) {
-	$anz=mysql_num_rows(safe_query("SELECT userID FROM ".PREFIX."user_groups WHERE (polls='1' OR super='1') AND userID='".$userID."'"));
-	return $anz;
+function ispollsadmin($userID)
+{
+    return (
+        mysqli_num_rows(
+            safe_query(
+                "SELECT
+                    userID
+                FROM
+                    " . PREFIX . "user_groups
+                WHERE
+                    (
+                        `polls` = 1 OR
+                        `super` = 1
+                    ) AND
+                    `userID` = " . (int)$userID
+            )
+        ) > 0
+    );
 }
 
-function isclanwaradmin($userID) {
-	$anz=mysql_num_rows(safe_query("SELECT userID FROM ".PREFIX."user_groups WHERE (clanwars='1' OR super='1') AND userID='".$userID."'"));
-	return $anz;
+function isclanwaradmin($userID)
+{
+    return (
+        mysqli_num_rows(
+            safe_query(
+                "SELECT
+                    userID
+                FROM
+                    " . PREFIX . "user_groups
+                WHERE
+                    (
+                        `clanwars` = 1 OR
+                        `super` = 1
+                    ) AND
+                    `userID` = " . (int)$userID
+            )
+        ) > 0
+    );
 }
 
-function ismoderator($userID, $boardID) {
-	if(!$userID OR !$boardID) return false;
-	else {
-		if(!isanymoderator($userID)) return false;
-		$anz=mysql_num_rows(safe_query("SELECT userID FROM ".PREFIX."forum_moderators WHERE userID='".$userID."' AND boardID='".$boardID."'"));
-		return $anz;
-	}
+function ismoderator($userID, $boardID)
+{
+    if (empty($userID) || empty($boardID)) {
+        return false;
+    }
+
+    if (!isanymoderator($userID)) {
+        return false;
+    }
+
+    return (
+        mysqli_num_rows(
+            safe_query(
+                "SELECT
+                    userID
+                FROM
+                    " . PREFIX . "forum_moderators
+                WHERE
+                    `userID` = " . (int)$userID . " AND
+                    `boardID` = " . (int)$boardID
+            )
+        ) > 0
+    );
 }
 
-function isanymoderator($userID) {
-	$anz=mysql_num_rows(safe_query("SELECT userID FROM ".PREFIX."user_groups WHERE userID='".$userID."' AND moderator='1'"));
-	return $anz;
+function isanymoderator($userID)
+{
+    return (
+        mysqli_num_rows(
+            safe_query(
+                "SELECT
+                    userID
+                FROM
+                    " . PREFIX . "user_groups
+                WHERE
+                    `userID` = " . (int)$userID . " AND
+                    `moderator` = 1"
+            )
+        ) > 0
+    );
 }
 
-function isuseradmin($userID) {
-	$anz=mysql_num_rows(safe_query("SELECT userID FROM `".PREFIX."user_groups` WHERE (user='1' OR super='1') AND userID='".$userID."'"));
-	if(!$anz) $anz=issuperadmin($userID);
-	return $anz;
+function isuseradmin($userID)
+{
+    return (
+        mysqli_num_rows(
+            safe_query(
+                "SELECT
+                    userID
+                FROM
+                    `" . PREFIX . "user_groups`
+                WHERE
+                    (
+                        `user` = 1 OR
+                        `super` = 1
+                    ) AND
+                    `userID` = " . (int)$userID
+            )
+        ) > 0
+    );
 }
 
-function iscashadmin($userID) {
-	$anz=mysql_num_rows(safe_query("SELECT userID FROM `".PREFIX."user_groups` WHERE (cash='1' OR super='1') AND userID='".$userID."'"));
-	if(!$anz) $anz=issuperadmin($userID);
-	return $anz;
+function iscashadmin($userID)
+{
+    return (
+        mysqli_num_rows(
+            safe_query(
+                "SELECT
+                    userID
+                FROM
+                    `" . PREFIX . "user_groups`
+                WHERE
+                    (
+                        `cash` = 1 OR
+                        `super` = 1
+                    ) AND
+                    `userID` = " . (int)$userID
+            )
+        ) > 0
+    );
 }
 
-function isgalleryadmin($userID) {
-	$anz=mysql_num_rows(safe_query("SELECT userID FROM `".PREFIX."user_groups` WHERE (gallery='1' OR super='1') AND userID='".$userID."'"));
-	return $anz;
+function isgalleryadmin($userID)
+{
+    return (
+        mysqli_num_rows(
+            safe_query(
+                "SELECT
+                    userID
+                FROM
+                    `" . PREFIX . "user_groups`
+                WHERE
+                    (
+                        `gallery` = 1 OR
+                        `super` = 1
+                    ) AND
+                    `userID` = " . (int)$userID
+            )
+        ) > 0
+    );
 }
 
-function isclanmember($userID) {
-	$anz=mysql_num_rows(safe_query("SELECT userID FROM `".PREFIX."squads_members` WHERE userID='".$userID."'"));
-	if(!$anz) $anz=issuperadmin($userID);
-	return $anz;
+function isclanmember($userID)
+{
+    if (
+        mysqli_num_rows(
+            safe_query(
+                "SELECT userID FROM `" . PREFIX . "squads_members` WHERE `userID` = " . (int)$userID
+            )
+        ) > 0
+    ) {
+        return true;
+    } else {
+        return issuperadmin($userID);
+    }
 }
 
-function isjoinusmember($userID) {
-	$anz=mysql_num_rows(safe_query("SELECT userID FROM `".PREFIX."squads_members` WHERE userID='".$userID."'"));
-	if(!$anz) $anz=issuperadmin($userID);
-	return $anz;
+function isjoinusmember($userID)
+{
+    if (
+        mysqli_num_rows(
+            safe_query(
+                "SELECT userID FROM `" . PREFIX . "squads_members` WHERE `userID` = " . (int)$userID
+            )
+        ) > 0
+    ) {
+        return true;
+    } else {
+        return issuperadmin($userID);
+    }
 }
 
-function isbanned($userID) {
-  $anz=mysql_num_rows(safe_query("SELECT userID FROM `".PREFIX."user` WHERE userID='$userID' AND (banned='perm' OR banned IS NOT NULL)"));
-	return $anz;
+function isbanned($userID)
+{
+    return (
+        mysqli_num_rows(
+            safe_query(
+                "SELECT
+                    userID
+                FROM
+                    `" . PREFIX . "user`
+                WHERE
+                    `userID` = " . (int)$userID . " AND
+                    (
+                        `banned` = 'perm' OR
+                        `banned` IS NOT NULL
+                    )"
+            )
+        ) > 0
+    );
 }
 
-function getusercomments($userID, $type) {
-	$anz=mysql_num_rows(safe_query("SELECT commentID FROM `".PREFIX."comments` WHERE userID='".$userID."' AND type='".$type."'"));
-	return $anz;
+function iscommentposter($userID, $commID)
+{
+    if (empty($userID) || empty($commID)) {
+        return false;
+    }
+
+    return (
+        mysqli_num_rows(
+            safe_query(
+                "SELECT
+                    commentID
+                FROM
+                    " . PREFIX . "comments
+                WHERE
+                    `commentID` = " . (int)$commID . " AND
+                    `userID` = " . (int)$userID
+            )
+        ) > 0
+    );
 }
 
-function iscommentposter($userID,$commID) {
-	if(!$userID OR !$commID) return false;
-	else {
-		$anz = mysql_num_rows(safe_query("SELECT commentID FROM ".PREFIX."comments WHERE commentID='".$commID."' AND userID='".$userID."'"));
-		return $anz;
-	}
+function isforumposter($userID, $postID)
+{
+    return (
+        mysqli_num_rows(
+            safe_query(
+                "SELECT
+                    postID
+                FROM
+                    " . PREFIX . "forum_posts
+                WHERE
+                    `postID` = " . (int)$postID . " AND
+                    `poster` = " . (int)$userID
+            )
+        ) > 0
+    );
 }
 
-function isforumposter($userID, $postID) {
-	$anz = mysql_num_rows(safe_query("SELECT postID FROM ".PREFIX."forum_posts WHERE postID='".$postID."' AND poster='".$userID."'"));
-	return $anz;
+function istopicpost($topicID, $postID)
+{
+    return (
+        mysqli_num_rows(
+            safe_query(
+                "SELECT
+                    postID
+                FROM
+                    " . PREFIX . "forum_posts
+                WHERE
+                    `topicID` = " . (int)$topicID . " AND
+                    `postId` = " . (int)$postID . "
+                ORDER BY
+                    `date` ASC
+                LIMIT
+                    0,1"
+            )
+        ) > 0
+    );
 }
 
-function istopicpost($topicID, $postID) {
-	$ds=mysql_fetch_array(safe_query("SELECT postID FROM ".PREFIX."forum_posts WHERE topicID='".$topicID."' ORDER BY date ASC LIMIT 0,1"));
-	if($ds['postID']==$postID) return true;
-	else return false;
-}
+function isinusergrp($usergrp, $userID, $sp = 1)
+{
+    if ($usergrp == 'user' && !empty($userID)) {
+        return true;
+    }
 
-function isinusergrp($usergrp, $userID, $sp=1) {
-	if($usergrp == 'user' and $userID != 0) return 1;
-	if(!usergrpexists($usergrp)) return 0;
-	$anz=mysql_num_rows(safe_query("SELECT userID FROM ".PREFIX."user_forum_groups WHERE (`".$usergrp."`=1) AND userID='".$userID."'"));
-	if($sp) if(!$anz) $anz=isforumadmin($userID);
-	return $anz;
-}
+    if (!usergrpexists($usergrp)) {
+        return false;
+    }
 
-?>
+    if (
+        mysqli_num_rows(safe_query(
+            "SELECT
+                userID
+            FROM
+                " . PREFIX . "user_forum_groups
+            WHERE
+                `" . $usergrp . "` = 1 AND
+                `userID` = " . (int)$userID
+        )) > 0
+    ) {
+        return true;
+    }
+
+    return isforumadmin($userID);
+}

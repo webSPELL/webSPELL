@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -25,56 +25,62 @@
 ##########################################################################
 */
 
-$_language->read_module('about');
+$_language->readModule('about');
 
-if(!ispageadmin($userID) OR mb_substr(basename($_SERVER['REQUEST_URI']),0,15) != "admincenter.php") die($_language->module['access_denied']);
-
-echo'<h1>&curren; '.$_language->module['about'].'</h1>';
-
-if(isset($_POST['submit']) != "") {
-	$about = $_POST['message'];
-	$CAPCLASS = new Captcha;
-	if($CAPCLASS->check_captcha(0, $_POST['captcha_hash'])) {
-		if(mysql_num_rows(safe_query("SELECT * FROM ".PREFIX."about")))	safe_query("UPDATE ".PREFIX."about SET about='".$about."'");
-		else safe_query("INSERT INTO ".PREFIX."about (about) values( '".$about."') ");
-		redirect("admincenter.php?site=about", "", 0);
-	} else echo $_language->module['transaction_invalid'];
+if (!ispageadmin($userID) || mb_substr(basename($_SERVER[ 'REQUEST_URI' ]), 0, 15) !== "admincenter.php") {
+    die($_language->module[ 'access_denied' ]);
 }
-else {
-	$ergebnis=safe_query("SELECT * FROM ".PREFIX."about");
-	$ds=mysql_fetch_array($ergebnis);
 
-	$CAPCLASS = new Captcha;
-	$CAPCLASS->create_transaction();
-	$hash = $CAPCLASS->get_hash();
-	
-	$_language->read_module('bbcode', true);
+echo '<h1>&curren; ' . $_language->module[ 'about' ] . '</h1>';
 
-	echo '<script language="JavaScript" type="text/javascript">
-					<!--
-						function chkFormular() {
-							if(!validbbcode(document.getElementById(\'message\').value, \'admin\')){
-								return false;
-							}
-						}
-					-->
-				</script>';
-	
-	echo '<form method="post" id="post" name="post" action="admincenter.php?site=about" onsubmit="return chkFormular();">
-  <b>'.$_language->module['about'].'</b><br /><small>'.$_language->module['you_can_use_html'].'</small><br /><br />';
-	
-	eval ("\$addbbcode = \"".gettemplate("addbbcode", "html", "admin")."\";");
-  eval ("\$addflags = \"".gettemplate("flags_admin", "html", "admin")."\";");
-  
-  echo '<table width="100%" border="0" cellspacing="0" cellpadding="0">
-		      <tr>
-		        <td valign="top">'.$addbbcode.'</td>
-		        <td valign="top">'.$addflags.'</td>
-		      </tr>
-		    </table>';
-  
-  echo '<br /><textarea id="message" name="message" rows="30" cols="" style="width: 100%;">'.getinput($ds['about']).'</textarea>
-  <br /><br /><input type="hidden" name="captcha_hash" value="'.$hash.'" /><input type="submit" name="submit" value="'.$_language->module['update'].'" />
-  </form>';
+if (isset($_POST[ 'submit' ]) != "") {
+    $about = $_POST[ 'message' ];
+    $CAPCLASS = new \webspell\Captcha;
+    if ($CAPCLASS->checkCaptcha(0, $_POST[ 'captcha_hash' ])) {
+        if (mysqli_num_rows(safe_query("SELECT * FROM " . PREFIX . "about"))) {
+            safe_query("UPDATE " . PREFIX . "about SET about='" . $about . "'");
+        } else {
+            safe_query("INSERT INTO " . PREFIX . "about (about) values( '" . $about . "') ");
+        }
+        redirect("admincenter.php?site=about", "", 0);
+    } else {
+        echo $_language->module[ 'transaction_invalid' ];
+    }
+} else {
+    $ergebnis = safe_query("SELECT * FROM " . PREFIX . "about");
+    $ds = mysqli_fetch_array($ergebnis);
+
+    $CAPCLASS = new \webspell\Captcha;
+    $CAPCLASS->createTransaction();
+    $hash = $CAPCLASS->getHash();
+
+    $_language->readModule('bbcode', true);
+
+    echo '<script>
+        function chkFormular() {
+            if(!validbbcode(document.getElementById(\'message\').value, \'admin\')){
+                return false;
+            }
+        }
+    </script>';
+
+    echo '<form method="post" id="post" name="post" action="admincenter.php?site=about"
+            onsubmit="return chkFormular();">
+        <b>' . $_language->module[ 'about' ] . '</b><br><small>' . $_language->module[ 'you_can_use_html' ] .
+        '</small><br><br>';
+
+    eval ("\$addbbcode = \"" . gettemplate("addbbcode", "html", "admin") . "\";");
+    eval ("\$addflags = \"" . gettemplate("flags_admin", "html", "admin") . "\";");
+
+    echo '<table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+            <td valign="top">' . $addbbcode . '</td>
+            <td valign="top">' . $addflags . '</td>
+        </tr>
+    </table>';
+
+    echo
+        '<br><textarea id="message" name="message" rows="30" cols="" style="width: 100%;">' . getinput($ds[ 'about' ]) .
+        '</textarea><br><br><input type="hidden" name="captcha_hash" value="' . $hash .
+        '" /><input type="submit" name="submit" value="' . $_language->module[ 'update' ] . '" /></form>';
 }
-?>

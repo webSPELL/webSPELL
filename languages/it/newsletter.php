@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -43,10 +43,10 @@ $language_array = Array(
 	'no_such_mail_adress'=>'Questo indirizzo e-mail non è nel database',
 	'password_had_been_send'=>'Il codice è stato inviato via',
 	'register_newsletter'=>'Per la newsletter',
-	'request_mail'=>'<b>Hai chiesto la cancellazione del codice.</b><br /><br />Per aggiungere il tuo indirizzo e-mail dalla mailing list di rimuovere, fare clic sul seguente link: <a href="http://%homepage_url%/index.php?site=newsletter&mail=%mail%&pass=%delete_key%">E-mail rimuovere</a><br />La password per la rimozione della lista è la seguente: %delete_key%<br /><br />Arrivederci a presto %homepage_url%',
+	'request_mail'=>'<b>Hai chiesto la cancellazione del codice.</b><br><br>Per aggiungere il tuo indirizzo e-mail dalla mailing list di rimuovere, fare clic sul seguente link: <a href="http://%homepage_url%/index.php?site=newsletter&mail=%mail%&pass=%delete_key%">E-mail rimuovere</a><br>La password per la rimozione della lista è la seguente: %delete_key%<br><br>Arrivederci a presto %homepage_url%',
 	'send'=>'inviare',
 	'submit'=>'Inoltrare',
-	'success_mail'=>'<b>Grazie per la tua registrazione!</b><br /><br />Se la tua mail dalla mailing list desidera rimuovere, si prega di utilizzare il seguente link: <a href="http://%homepage_url%/index.php?site=newsletter&mail=%mail%&pass=%delete_key%">E-mail rimuovi</a><br />La password per la rimozione della lista seguente: %delete_key%<br /><br />Arrivederci a presto %homepage_url%',
+	'success_mail'=>'<b>Grazie per la tua registrazione!</b><br><br>Se la tua mail dalla mailing list desidera rimuovere, si prega di utilizzare il seguente link: <a href="http://%homepage_url%/index.php?site=newsletter&mail=%mail%&pass=%delete_key%">E-mail rimuovi</a><br>La password per la rimozione della lista seguente: %delete_key%<br><br>Arrivederci a presto %homepage_url%',
 	'thank_you_for_registration'=>'Grazie per il tuo abbonamento',
 	'you_are_already_registered'=>'Sei già registrato.',
 	'your_mail_adress'=>'Il tuo indirizzo e-mail',

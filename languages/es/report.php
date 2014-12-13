@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -32,6 +32,6 @@ $language_array = Array(
 	'no_informations'=>'no hay información disponible',
 	'report_message'=>'[b]Hay un nuevo %s - Reporte[/b][br][br]%s-ID: %d[br]Info: %s[br]Referencia: [url]index.php?site=files&amp;file=%d[/url]',
 	'report_recognized'=>'Tu reporte ha sido guardado. Gracias.',
-	'wrong_securitycode'=>'El código de seguridad es equivocado.<br /><br />[<a href="javascript:back();">Volver</a>]'
+	'wrong_securitycode'=>'El código de seguridad es equivocado.<br><br>[<a href="javascript:back();">Volver</a>]'
 );
 ?>

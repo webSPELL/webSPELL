@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -30,10 +30,10 @@ $language_array = Array(
 /* do not edit above this line */
 
 	'invalid_password'=>'Inseriu uma password inválida.<br><br><a href="javascript:history.back()">Volte atrás e tente de novo.</a>',
-	'ip_banned'=>'O seu IP foi banido deste site.<br/>%reason%<br /><br /><a href="javascript:history.back()">Volte atrás</a>',
+	'ip_banned'=>'O seu IP foi banido deste site.<br>%reason%<br><br><a href="javascript:history.back()">Volte atrás</a>',
 	'login_successful'=>'Login efectuado com sucesso!',
 	'no_user'=>'O utilizador <b>%username%</b> não está disponível neste sistema.<br><br><a href="javascript:history.back()">Volte atrás e tente de novo!</a>',
 	'not_activated'=>'A sua conta não está activa.<br><br><a href="javascript:history.back()">Volte atrás</a>',
-	'session_error'=>'Por favor, certifique-se de que os cookies estão activados no seu browser.<br />Se o problema continuar a ocorrer, contacte o webmaster.<br /><br /><a href="javascript:history.back()">Volte atrás</a>'
+	'session_error'=>'Por favor, certifique-se de que os cookies estão activados no seu browser.<br>Se o problema continuar a ocorrer, contacte o webmaster.<br><br><a href="javascript:history.back()">Volte atrás</a>'
 );
 ?>

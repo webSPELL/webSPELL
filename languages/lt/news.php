@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -81,6 +81,7 @@ $language_array = Array(
 	'view_more'=>'Skaityti daugiau...',
 	'visitor_comments'=>'įjungti lankytojo komentarus',
 	'written_by'=>'parašė',
-	'yes'=>'taip'
+	'yes'=>'taip',
+	'tags'=>'Žymos'
 );
 ?>

@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -33,7 +33,7 @@ $language_array = Array(
 	'already_rated'=>'<b>Je hebt al gestemd op dit artikel!</b>',
 	'articles'=>'artikelen',
 	'author'=>'Auteur',
-	'bbcode'=>'&#8226; <a href="javascript:MM_openBrWindow(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> <b><u>AAN</u></b>',
+	'bbcode'=>'&#8226; <a href="javascript:window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> <b><u>AAN</u></b>',
 	'cancel'=>'Annuleren',
 	'date'=>'Datum',
 	'delete'=>'Verwijder',
@@ -63,7 +63,7 @@ $language_array = Array(
 	'really_delete'=>'Dit artikel echt verwijderen?',
 	'save_article'=>'Sla artikel op',
 	'self'=>'same window',
-	'smilies'=>'&#8226; <a href="javascript:MM_openBrWindow(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smileys</a> <b><u>AAN</u></b>',
+	'smilies'=>'&#8226; <a href="javascript:window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smileys</a> <b><u>AAN</u></b>',
 	'sort'=>'Sorteer:',
 	'title'=>'Titel',
 	'top5_points'=>'TOP 5 ARTIKELEN (Punten)',
@@ -71,6 +71,7 @@ $language_array = Array(
 	'upload_images'=>'Upload afbeeldingen',
 	'user_comments'=>'Sta gebruikers commentaar toe',
 	'viewed'=>'Bekeken',
-	'visitor_comments'=>'Sta bezoekers commentaar toe'
+	'visitor_comments'=>'Sta bezoekers commentaar toe',
+	'tags'=>'Tags'
 );
 ?>

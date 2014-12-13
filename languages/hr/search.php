@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -64,6 +64,7 @@ $language_array = Array(
 	'text_contains'=>'Tekst sadrži',
 	'title_contains'=>'Naslov sadrži',
 	'too_short'=>'Upit pretrage je prekratak. Najmanje %min_chars% znaka',
-	'wrong_securitycode'=>'Unijeli ste krivi sigurnosni kod!'
+	'wrong_securitycode'=>'Unijeli ste krivi sigurnosni kod!',
+	'no_result'=>'Nema unosa podataka za "%s"'
 );
 ?>

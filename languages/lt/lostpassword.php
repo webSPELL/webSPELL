@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -43,8 +43,8 @@ gerai praleiskite laiką mūsų tinklalapyje
 	'lost_password'=>'pametei slaptažodį',
 	'no_mail_given'=>'Jūs neįvedėte jokio e-pašto.',
 	'no_user_found'=>'joks vartotojas nesurastas!',
-	'successful'=>'Jūsų profilis buvo rastas<br /><br />
-    Jūsų profilio duomenys bus atsiųsti į e-paštą per kelias sekundes.<br /><br />
+	'successful'=>'Jūsų profilis buvo rastas<br><br>
+    Jūsų profilio duomenys bus atsiųsti į e-paštą per kelias sekundes.<br><br>
     &#8226; <a href="index.php?site=login">prisijungti</a>',
 	'your_email'=>'Jūsų E-Paštas'
 );

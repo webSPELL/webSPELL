@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -33,7 +33,7 @@ $language_array = Array(
 	'already_rated'=>'<b>Článek již ohodnocen!</b>',
 	'articles'=>'Články',
 	'author'=>'Autor',
-	'bbcode'=>'&#8226; <a href="javascript:MM_openBrWindow(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> <b><u>ZAPNUTÝ</u></b>',
+	'bbcode'=>'&#8226; <a href="javascript:window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> <b><u>ZAPNUTÝ</u></b>',
 	'cancel'=>'Zrušit',
 	'date'=>'Datum',
 	'delete'=>'Smazat',
@@ -63,7 +63,7 @@ $language_array = Array(
 	'really_delete'=>'Opravdu chceš smazat článek?',
 	'save_article'=>'Uložit článek',
 	'self'=>'same window',
-	'smilies'=>'&#8226; <a href="javascript:MM_openBrWindow(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smajlíci</a> <b><u>ZAPNUTÉ</u></b>',
+	'smilies'=>'&#8226; <a href="javascript:window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smajlíci</a> <b><u>ZAPNUTÉ</u></b>',
 	'sort'=>'Seřadit:',
 	'title'=>'Nadpis',
 	'top5_points'=>'TOP 5 ARTICLES (Points)',
@@ -71,6 +71,7 @@ $language_array = Array(
 	'upload_images'=>'Nahrát obrázky',
 	'user_comments'=>'Povolit uživatelské komentáře',
 	'viewed'=>'Shlédnuto',
-	'visitor_comments'=>'Povolit komentáře návštěvníků'
+	'visitor_comments'=>'Povolit komentáře návštěvníků',
+	'tags'=>'Tagy'
 );
 ?>

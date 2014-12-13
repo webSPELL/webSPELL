@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -51,6 +51,7 @@ $language_array = Array(
 	'squads'=>'skupiny',
 	'statistics'=>'statistiky',
 	'topics'=>'témata',
-	'upcoming_events'=>'nadcházející události'
+	'upcoming_events'=>'nadcházející události',
+	'tags'=>'Tagy'
 );
 ?>

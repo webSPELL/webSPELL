@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -46,6 +46,7 @@ $language_array = Array(
   'registered_only'=>'registered Users only',
   'static_pages'=>'Static Pages',
   'transaction_invalid'=>'Transaction ID invalid',
-  'you_can_use_html'=>'You can use HTML-Tags'
+  'you_can_use_html'=>'You can use HTML-Tags',
+  'tags'=>'Tags'
 );
 ?>

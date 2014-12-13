@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -29,8 +29,8 @@ $language_array = Array(
 	'back'=>'zurück',
 	'delete_folder'=>'Bitte lösche das <b>/install</b> Verzeichnis zu Deiner eigenen Sicherheit.',
 	'error'=>'FEHLER',
-	'error_database'=>'<b>FEHLER:</b><br /> Keine Verbindung zur Datenbank',
-	'error_mysql'=>'<b>FEHLER:</b><br />Keine Verbindung zu MySQL!',
+	'error_database'=>'<b>FEHLER:</b><br> Keine Verbindung zur Datenbank',
+	'error_mysql'=>'<b>FEHLER:</b><br>Keine Verbindung zu MySQL!',
 	'install_complete'=>'Installation war erfolgreich!',
 	'finish_install'=>'Installation abschließen',
 	'folder_removed'=>'Das <b>/install</b> Verzeichnis wurde erfolgreich gelöscht',

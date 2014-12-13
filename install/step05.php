@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -26,21 +26,6 @@
 */
 
 if($_POST['installtype']=="full" AND $_POST['hp_url']) {
-
-	function RandPass($length, $type=0) {		
-		$pass = null;
-		for ($i = 0; $i < $length; $i++) {
-			if($type==0) $rand = rand(1,3);
-			else $rand = $type;
-			switch($rand) {
-				case 1: $pass .= chr(rand(48,57)); break;
-				case 2: $pass .= chr(rand(65,90)); break;
-				case 3: $pass .= chr(rand(97,122)); break;
-			}
-		}
-		return $pass;
-	}
-
 ?>
 
   <tr>
@@ -65,57 +50,57 @@ if($_POST['installtype']=="full" AND $_POST['hp_url']) {
      </tr>
      <tr>
       <td><?php echo $_language->module['host_name']; ?>:</td>
-      <td><input type="text" name="host" size="30" value="localhost" />
-      <a class="tooltip" href="#"><img src="images/tooltip.png" alt="" />
+      <td><input type="text" name="host" size="30" value="localhost">
+      <a class="tooltip" href="#"><img src="images/tooltip.png" alt="">
       <span><?php echo $_language->module['tooltip_1']; ?></span></a></td>
      </tr>
      <tr>
       <td><?php echo $_language->module['mysql_username']; ?>:</td>
-      <td><input type="text" name="user" size="30" />
-      <a class="tooltip" href="#"><img src="images/tooltip.png" alt="" />
+      <td><input type="text" name="user" size="30">
+      <a class="tooltip" href="#"><img src="images/tooltip.png" alt="">
       <span><?php echo $_language->module['tooltip_2']; ?></span></a></td>
      </tr>
      <tr>
       <td><?php echo $_language->module['mysql_password']; ?>:</td>
-      <td><input type="password" name="pwd" size="30" />
-      <a class="tooltip" href="#"><img src="images/tooltip.png" alt="" />
+      <td><input type="password" name="pwd" size="30">
+      <a class="tooltip" href="#"><img src="images/tooltip.png" alt="">
       <span><?php echo $_language->module['tooltip_3']; ?></span></a></td>
      </tr>
      <tr>
       <td><?php echo $_language->module['mysql_database']; ?>:</td>
-      <td><input type="text" name="db" size="30" />
-      <a class="tooltip" href="#"><img src="images/tooltip.png" alt="" />
+      <td><input type="text" name="db" size="30">
+      <a class="tooltip" href="#"><img src="images/tooltip.png" alt="">
       <span><?php echo $_language->module['tooltip_4']; ?></span></a></td>
      </tr>
      <tr>
       <td><?php echo $_language->module['mysql_prefix']; ?>:</td>
-      <td><input name="prefix" type="text" value="<?php echo 'ws_'.RandPass(3).'_'; ?>" size="10" />
-      <a class="tooltip" href="#"><img src="images/tooltip.png" alt="" />
+      <td><input name="prefix" type="text" value="<?php echo 'ws_'.RandPass(3).'_'; ?>" size="10">
+      <a class="tooltip" href="#"><img src="images/tooltip.png" alt="">
       <span><?php echo $_language->module['tooltip_5']; ?></span></a></td>
      </tr>
      <tr>
-      <td colspan="2"><br /><b><?php echo $_language->module['webspell_config']; ?></b></td>
+      <td colspan="2"><br><b><?php echo $_language->module['webspell_config']; ?></b></td>
      </tr>
      <tr>
       <td><?php echo $_language->module['admin_username']; ?>:</td>
-      <td><input type="text" name="adminname" size="30" />
-      <a class="tooltip" href="#"><img src="images/tooltip.png" alt="" />
+      <td><input type="text" name="adminname" size="30">
+      <a class="tooltip" href="#"><img src="images/tooltip.png" alt="">
       <span><?php echo $_language->module['tooltip_6']; ?></span></a></td>
      </tr>
      <tr>
       <td><?php echo $_language->module['admin_password']; ?>:</td>
-      <td><input type="password" name="adminpwd" size="30" />
-      <a class="tooltip" href="#"><img src="images/tooltip.png" alt="" />
+      <td><input type="password" name="adminpwd" size="30">
+      <a class="tooltip" href="#"><img src="images/tooltip.png" alt="">
       <span><?php echo $_language->module['tooltip_7']; ?></span></a></td>
      </tr>
      <tr>
       <td><?php echo $_language->module['admin_email']; ?>:</td>
-      <td><input type="text" name="adminmail" size="30" />
-      <a class="tooltip" href="#"><img src="images/tooltip.png" alt="" />
+      <td><input type="text" name="adminmail" size="30">
+      <a class="tooltip" href="#"><img src="images/tooltip.png" alt="">
       <span><?php echo $_language->module['tooltip_8']; ?></span></a></td>
      </tr>
    </table>
-   <input type="hidden" name="url" value="<?php echo $_POST['hp_url']; ?>" />
+   <input type="hidden" name="url" value="<?php echo $_POST['hp_url']; ?>">
    
    <?php
    } else echo '<tr>
@@ -137,8 +122,8 @@ if($_POST['installtype']=="full" AND $_POST['hp_url']) {
 	'.$_language->module['finish_next'];
    ?>
    
-   <input type="hidden" name="installtype" value="<?php echo $_POST['installtype']; ?>" />
+   <input type="hidden" name="installtype" value="<?php echo $_POST['installtype']; ?>">
 	
-   <div align="right"><br /><a href="javascript:document.ws_install.submit()"><img src="images/next.jpg" alt="" /></a></div>
+   <div align="right"><br><a href="javascript:document.ws_install.submit()"><img src="images/next.jpg" alt=""></a></div>
    </td>
   </tr>

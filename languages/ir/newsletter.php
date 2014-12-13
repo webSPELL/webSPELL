@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2010 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -43,10 +43,10 @@ $language_array = Array(
   'no_such_mail_adress'=>'.ادرس ایمیل وجود ندارد',
   'password_had_been_send'=>'.کلمه عبور فرستاده شد',
   'register_newsletter'=>'عضوییت برای خبرنامه',
-  'request_mail'=>'<b>!کلید حذف شده مورد نیاز است</b><br /><br />برای اینکه ادرس ایمیلتان را حذف کنید اینجا کلیک کنتید <a href="http://%homepage_url%/index.php?site=newsletter&mail=%mail%&pass=%delete_key%">اینجا</a><br />پسورد را حذف کنید: %delete_key%<br /><br />شما را میبینم در %homepage_url%',
+  'request_mail'=>'<b>!کلید حذف شده مورد نیاز است</b><br><br>برای اینکه ادرس ایمیلتان را حذف کنید اینجا کلیک کنتید <a href="http://%homepage_url%/index.php?site=newsletter&mail=%mail%&pass=%delete_key%">اینجا</a><br>پسورد را حذف کنید: %delete_key%<br><br>شما را میبینم در %homepage_url%',
   'send'=>'فرستادن',
   'submit'=>'ارائه كردن',
-  'success_mail'=>'<b>!از عضوییت شما متشکریم</b><br /><br />برای اینکه ادرس ایمیلتان را حذف کنید اینجا کلیک کنتید <a href="http://%homepage_url%/index.php?site=newsletter&mail=%mail%&pass=%delete_key%">اینجا</a><br />پسورد را حذف کنید: %delete_key%<br /><br />شما را میبینم در %homepage_url%',
+  'success_mail'=>'<b>!از عضوییت شما متشکریم</b><br><br>برای اینکه ادرس ایمیلتان را حذف کنید اینجا کلیک کنتید <a href="http://%homepage_url%/index.php?site=newsletter&mail=%mail%&pass=%delete_key%">اینجا</a><br>پسورد را حذف کنید: %delete_key%<br><br>شما را میبینم در %homepage_url%',
   'thank_you_for_registration'=>'.از عضوییت شما متشکریم',
   'you_are_already_registered'=>'.شما هم اکنون عضو هستید',
   'your_mail_adress'=>'ادرس ایمیل شما',

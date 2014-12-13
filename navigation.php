@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -25,8 +25,7 @@
 ##########################################################################
 */
 
-$_language->read_module('navigation');
+$_language->readModule('navigation');
 
-eval ("\$navigation = \"".gettemplate("navigation")."\";");
+eval ("\$navigation = \"" . gettemplate("navigation") . "\";");
 echo $navigation;
-?>

@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -61,7 +61,7 @@ $language_array = Array(
 	'sort'=>'triediť:',
 	'squad'=>'squad',
 	'submit_challenge'=>'potvrdiť výzvu',
-	'thank_you'=>'Ďakujeme Vám za Váš záujem.<br />',
+	'thank_you'=>'Ďakujeme Vám za Váš záujem.<br>',
 	'time'=>'čas',
 	'wrong_security_code'=>'Bezpečnostný kód je chybný.'
 );

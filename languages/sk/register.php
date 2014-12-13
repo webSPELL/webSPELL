@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -29,7 +29,7 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-	'activation_successful'=>'Aktivácia vášho konta bola úspešná.<br />Môžete sa prihlásiť.',
+	'activation_successful'=>'Aktivácia vášho konta bola úspešná.<br>Môžete sa prihlásiť.',
 	'back'=>'naspäť',
 	'enter_nickname'=>'Prosím zadajte prezývku.',
 	'enter_password'=>'Prosím zadajte heslo.',
@@ -47,7 +47,6 @@ $language_array = Array(
 Vaša registrácia na %pagetitle% (%homepage_url%) bola úspešná. Vaše údaje::
 
 Prihlasovacie meno: %username%
-Heslo: %password%
 
 Pre dokončenie aktivácie, prosím kliknite na tento odkaz:
 %activationlink%

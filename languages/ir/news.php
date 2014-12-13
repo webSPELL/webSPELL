@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2010 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -81,6 +81,7 @@ $language_array = Array(
   'view_more'=>'...بیشتر ببینید',
   'visitor_comments'=>'فعال کردن کامنت مهمان',
   'written_by'=>'نوشته شده توسط',
-  'yes'=>'بلی'
+  'yes'=>'بلی',
+  'tags'=>'برچسب ها'
 );
 ?>

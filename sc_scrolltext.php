@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -25,20 +25,19 @@
 ##########################################################################
 */
 
-$_language->read_module('sc_scrolltext');
+$_language->readModule('sc_scrolltext');
 
-$ergebnis=safe_query("SELECT * FROM ".PREFIX."scrolltext");
-if(mysql_num_rows($ergebnis)) {
-	$ds=mysql_fetch_array($ergebnis);
+$ergebnis = safe_query("SELECT * FROM " . PREFIX . "scrolltext");
+if (mysqli_num_rows($ergebnis)) {
+    $ds = mysqli_fetch_array($ergebnis);
 
-	$scrolltext = js_replace($ds['text']);
-	$direction=$ds['direction'];
-	$delay=$ds['delay'];
-	$color=$ds['color'];
-	
-  eval ("\$sc_scrolltext = \"".gettemplate("sc_scrolltext")."\";");
-	echo $sc_scrolltext;
+    $scrolltext = js_replace($ds[ 'text' ]);
+    $direction = $ds[ 'direction' ];
+    $delay = $ds[ 'delay' ];
+    $color = $ds[ 'color' ];
+
+    eval ("\$sc_scrolltext = \"" . gettemplate("sc_scrolltext") . "\";");
+    echo $sc_scrolltext;
+} else {
+    echo $_language->module[ 'no_text' ];
 }
-else echo $_language->module['no_text'];
-
-?>

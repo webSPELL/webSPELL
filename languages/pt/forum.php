@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -35,7 +35,7 @@ $language_array = Array(
 	'and'=>'e',
 	'author'=>'Autor',
 	'back_buddy'=>'voltar à lista de amigos',
-	'bbcode_on'=>'<a href="javascript:MM_openBrWindow(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> ligado',
+	'bbcode_on'=>'<a href="javascript:window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> ligado',
 	'board'=>'Fórum',
 	'boards'=>'Fóruns',
 	'clanmember'=>'Membro do clan',
@@ -78,8 +78,8 @@ $language_array = Array(
 	'new_reply'=>'nova resposta',
 	'new_topic'=>'novo tópico',
 	'newest_member'=>'membro mais recente',
-	'newreply_image'=>'<img src="images/icons/newreply.gif" border="0" alt="reply">',
-	'newtopic_image'=>'<img src="images/icons/newtopic.gif" border="0" alt="new topic">',
+	'newreply_image'=>'<img src="images/icons/newreply.gif" alt="reply">',
+	'newtopic_image'=>'<img src="images/icons/newtopic.gif" alt="new topic">',
 	'next_7_days'=>'próximos 7 dias',
 	'no_access'=>'Sem acesso',
 	'no_access_write'=>'Não tem acesso para escrever neste fórum.',
@@ -113,9 +113,9 @@ $language_array = Array(
 	'registered_users'=>'utilizadores registados',
 	'reopen_topic'=>'re-abrir tópico',
 	'replies'=>'Respostas',
-	'search_image'=>'<img src="images/icons/search.gif" border="0">',
+	'search_image'=>'<img src="images/icons/search.gif">',
 	'select_all'=>'seleccionar todos',
-	'smilies_on'=>'<a href="javascript:MM_openBrWindow(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smiles</a> ligados',
+	'smilies_on'=>'<a href="javascript:window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smiles</a> ligados',
 	'sort'=>'Ordenar',
 	'stats'=>'Estado',
 	'sticky'=>'fixo',

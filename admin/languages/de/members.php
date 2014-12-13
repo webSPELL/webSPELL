@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -64,19 +64,19 @@ $language_array = Array(
   'squad'=>'Team',
   'super_admin'=>'Super-Admin',
   'to_sort'=>'sortieren',
-  'tooltip_1'=>'<b>Zugriff:</b><br />- Neuigkeiten Rubriken<br />- Neuigkeiten Sprachen<br />- Neuigkeiten<br />- Artikel<br />- Auszeichnungen<br />- Links',
-  'tooltip_2'=>'<b>Zugriff:</b><br />- Neuigkeiten schreiben',
-  'tooltip_3'=>'<b>Zugriff:</b><br />- Umfragen',
-  'tooltip_4'=>'<b>Zugriff:</b><br />- Kommentare<br />- Gästebuch<br />- Benutzergästebücher<br />- Shoutbox',
-  'tooltip_5'=>'<b>Zugriff:</b><br />- Benutzer<br />- Benutzer Rechte<br />- Gruppen<br />- Mitglieder<br />- Kontakte<br />- Newsletter',
-  'tooltip_6'=>'<b>Zugriff:</b><br />- Clanwars<br />- Auszeichnungen<br />- Herausforderungen<br />- Kalender',
-  'tooltip_7'=>'<b>Zugriff:</b><br />- Forum Kategorien<br />- Foren<br />- Forumbeiträge bearbeiten &amp; löschen<br />- Benutzergruppen<br />- Gruppen Benutzer<br />- Benutzer Ränge',
-  'tooltip_8'=>'<b>Zugriff:</b><br />- Forumbeiträge bearbeiten &amp; löschen<br />(Board-Zuteilung muss vorhanden sein)',
-  'tooltip_9'=>'<b>Zugriff:</b><br />- Über uns<br />- Bannerrotation<br />- Symbole<br />- Datenbank<br />- FAQ Kategorien<br />- FAQ<br />- Werdegang<br />- Impressum<br />- Link Kategorien<br />- Links<br />- Seite sperren<br />- Parnter<br />- Scrolltext<br />- Server<br />- Einstellungen<br />- Statische Seiten<br />- Stile<br />- Update<br />- Uns verlinken<br />- Sponsoren',
-  'tooltip_10'=>'<b>Zugriff:</b><br />- Datei Kategorien<br />- Dateien<br />- Demos',
-  'tooltip_11'=>'<b>Zugriff:</b><br />- Clan-Kasse',
-  'tooltip_12'=>'<b>Zugriff:</b><br />- Galerie Kategorien<br />- Galerien<br />- Bilder',
-  'tooltip_13'=>'<b>Zugriff:</b><br />- voller Administrations Zugriff',
+  'tooltip_1'=>'<b>Zugriff:</b><br>- Neuigkeiten Rubriken<br>- Neuigkeiten Sprachen<br>- Neuigkeiten<br>- Artikel<br>- Auszeichnungen<br>- Links',
+  'tooltip_2'=>'<b>Zugriff:</b><br>- Neuigkeiten schreiben',
+  'tooltip_3'=>'<b>Zugriff:</b><br>- Umfragen',
+  'tooltip_4'=>'<b>Zugriff:</b><br>- Kommentare<br>- Gästebuch<br>- Benutzergästebücher<br>- Shoutbox',
+  'tooltip_5'=>'<b>Zugriff:</b><br>- Benutzer<br>- Benutzer Rechte<br>- Gruppen<br>- Mitglieder<br>- Kontakte<br>- Newsletter',
+  'tooltip_6'=>'<b>Zugriff:</b><br>- Clanwars<br>- Auszeichnungen<br>- Herausforderungen<br>- Kalender',
+  'tooltip_7'=>'<b>Zugriff:</b><br>- Forum Kategorien<br>- Foren<br>- Forumbeiträge bearbeiten &amp; löschen<br>- Benutzergruppen<br>- Gruppen Benutzer<br>- Benutzer Ränge',
+  'tooltip_8'=>'<b>Zugriff:</b><br>- Forumbeiträge bearbeiten &amp; löschen<br>(Board-Zuteilung muss vorhanden sein)',
+  'tooltip_9'=>'<b>Zugriff:</b><br>- Über uns<br>- Bannerrotation<br>- Symbole<br>- Datenbank<br>- FAQ Kategorien<br>- FAQ<br>- Werdegang<br>- Impressum<br>- Link Kategorien<br>- Links<br>- Seite sperren<br>- Parnter<br>- Scrolltext<br>- Server<br>- Einstellungen<br>- Statische Seiten<br>- Stile<br>- Update<br>- Uns verlinken<br>- Sponsoren',
+  'tooltip_10'=>'<b>Zugriff:</b><br>- Datei Kategorien<br>- Dateien<br>- Demos',
+  'tooltip_11'=>'<b>Zugriff:</b><br>- Clan-Kasse',
+  'tooltip_12'=>'<b>Zugriff:</b><br>- Galerie Kategorien<br>- Galerien<br>- Bilder',
+  'tooltip_13'=>'<b>Zugriff:</b><br>- voller Administrations Zugriff',
   'transaction_invalid'=>'Transaktions ID ungültig',
   'user_admin'=>'Benutzer-Admin',
   'yes'=>'ja'

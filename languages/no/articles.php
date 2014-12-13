@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -33,7 +33,7 @@ $language_array = Array(
 	'already_rated'=>'<b>Du har allerede stemt!</b>',
 	'articles'=>'artikler',
 	'author'=>'Forfatter',
-	'bbcode'=>'&#8226; <a href="javascript:MM_openBrWindow(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> er <b><u>PÅ</u></b>',
+	'bbcode'=>'&#8226; <a href="javascript:window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> er <b><u>PÅ</u></b>',
 	'cancel'=>'Avbryt',
 	'date'=>'Dato',
 	'delete'=>'Slett',
@@ -63,7 +63,7 @@ $language_array = Array(
 	'really_delete'=>'really delete this article?',
 	'save_article'=>'Lagre artikkel',
 	'self'=>'same window',
-	'smilies'=>'&#8226; <a href="javascript:MM_openBrWindow(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smilefjes</a> er <b><u>PÅ</u></b>',
+	'smilies'=>'&#8226; <a href="javascript:window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smilefjes</a> er <b><u>PÅ</u></b>',
 	'sort'=>'Sorter:',
 	'title'=>'Overskrift',
 	'top5_points'=>'TOPP 5 ARTIKLER (Poeng)',
@@ -71,6 +71,7 @@ $language_array = Array(
 	'upload_images'=>'Last opp bilder',
 	'user_comments'=>'tillat brukere å kommentere',
 	'viewed'=>'Besøk',
-	'visitor_comments'=>'Tillat gjester å kommentere'
+	'visitor_comments'=>'Tillat gjester å kommentere',
+	'tags'=>'tags'
 );
 ?>

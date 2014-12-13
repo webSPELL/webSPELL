@@ -1,104 +1,118 @@
-<script language="JavaScript" type="text/javascript">
-<!--
-function chkFormular() {
-	if(document.post.usedfor.value == "") {
-		alert("%enter_usage%");
-		document.post.usedfor.focus();
-   		return false;
-	}
-	
-	if(document.post.day.value == "") {
-		alert("%enter_date%");
-		document.post.day.focus();
-   		return false;
-	}
-	
-	if(document.post.month.value == "") {
-		alert("%enter_date%");
-		document.post.month.focus();
-   		return false;
-	}
-	
-	if(document.post.year.value == "") {
-		alert("%enter_date%");
-		document.post.year.focus();
-   		return false;
-	}
-	
-	if(document.post.euro.value == "" || document.post.euro.value == "0.00") {
-		alert("%enter_total_costs%");
-		document.post.euro.focus();
-   		return false;
-	}
-	
-	if(document.post.usereuro.value == "" || document.post.usereuro.value == "0.00") {
-		alert("%enter_costs_member%");
-		document.post.usereuro.focus();
-   		return false;
-	}
-	
-}
+<script>
+	<!--
+	function chkFormular() {
+		if (document.post.usedfor.value === "") {
+			alert("%enter_usage%");
+			document.post.usedfor.focus();
 
-function berechnen() {
-	var anz = document.post.anz.value;
-	var total = document.post.euro.value;
-	
-	var user = total/anz;
-	var rounduser = Math.round(user);
-	
-	document.post.usereuro.value = rounduser;
-	document.post.calculation.value = rounduser + " EUR  (" + total + "/" + anz + "=" + user + ")";
-	
-	document.post.usereuro.focus();
-	return;
-}
--->
+			return false;
+		}
+
+		if (document.post.day.value === "") {
+			alert("%enter_date%");
+			document.post.day.focus();
+
+			return false;
+		}
+
+		if (document.post.month.value === "") {
+			alert("%enter_date%");
+			document.post.month.focus();
+
+			return false;
+		}
+
+		if (document.post.year.value === "") {
+			alert("%enter_date%");
+			document.post.year.focus();
+
+			return false;
+		}
+
+		if (document.post.euro.value === "" || document.post.euro.value == "0.00") {
+			alert("%enter_total_costs%");
+			document.post.euro.focus();
+
+			return false;
+		}
+
+		if (document.post.usereuro.value === "" || document.post.usereuro.value == "0.00") {
+			alert("%enter_costs_member%");
+			document.post.usereuro.focus();
+
+			return false;
+		}
+
+	}
+
+	function berechnen() {
+		var anz = document.post.anz.value,
+				total = document.post.euro.value,
+				user = total / anz,
+				rounduser = Math.round(user);
+
+		document.post.usereuro.value = rounduser;
+		document.post.calculation.value =
+				rounduser + " EUR  (" + total + "/" + anz + "=" + user + ")";
+		document.post.usereuro.focus();
+	}
+	-->
 </script>
 
-<form name="post" method="post" action="cash_box.php" onsubmit="return chkFormular()">
-<table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="$border">
-  <tr>
-    <td class="title" colspan="2" align="center" bgcolor="$bghead">%new_usage%</td>
-  </tr>
-  <tr><td bgcolor="$pagebg" colspan="2"></td></tr>
-  <tr bgcolor="$bg1">
-        <td align="right">%squad%:</td>
-        <td><select name="squad">$squads</select></td>
-      </tr>
-      <tr bgcolor="$bg2">
-        <td align="right">%usage%:</td>
-        <td><input name="usedfor" type="text" id="usedfor" value="$usage" size="55" /></td>
-      </tr>
-      <tr bgcolor="$bg1">
-        <td align="right" valign="top">%info%:</td>
-        <td><textarea name="info" cols="50" rows="7">$info</textarea></td>
-      </tr>
-      <tr bgcolor="$bg2">
-        <td align="right" valign="top">%bank_account%:</td>
-        <td><textarea name="konto" cols="50" rows="4">$bank_account</textarea></td>
-      </tr>
-      <tr bgcolor="$bg1">
-        <td align="right">%pay_until%:</td>
-        <td><input type="text" name="day" size="2" value="$day" />
-        .
-        <input type="text" name="month" size="2" value="$month" />
-        .
-        <input type="text" name="year" size="4" value="$year" /> %ddmmyyyy%</td>
-      </tr>
-      <tr bgcolor="$bg2">
-        <td align="right">%total_costs%:</td>
-        <td><input type="text" dir="rtl" name="euro" size="8" value="$ds[totalcosts]" /> &#8364;</td>
-      </tr>
-      <tr bgcolor="$bg1">
-        <td align="right">%costs_member%:</td>
-        <td><input type="hidden" name="anz" value="$anz" />
-        <input type="text" dir="rtl" name="usereuro" size="8" value="$ds[usercosts]" /> &#8364;
-        <input type="button" name="calculate" value="%calculate%" onclick="berechnen()" />
-        <input name="calculation" type="text" class="input" size="50" value="" /></td>
-      </tr>
-      <tr bgcolor="$bg2">
-        <td><input type="hidden" name="id" value="$id" /></td>
-        <td><input type="submit" name="saveedit" value="%submit%" /></td>
-      </tr>
-</table>
+<form name="post" method="post" action="cashbox.php" onsubmit="return chkFormular()">
+
+	<h3>%new_usage%</h3>
+
+	<div class="form-group">
+		<label for="squad">%squad%</label>
+		<select name="squad" id="squad" class="form-control">$squads</select>
+	</div>
+
+	<div class="form-group">
+		<label for="usedfor">%usage%</label>
+		<input name="usedfor" type="text" id="usedfor" value="$usage" size="55"
+				class="form-control">
+	</div>
+
+	<div class="form-group">
+		<label for="info">%info%</label>
+		<textarea name="info" cols="50" rows="7" id="info" class="form-control">$info</textarea>
+	</div>
+
+	<div class="form-group">
+		<label for="konto">%bank_account%</label>
+		<textarea name="konto" cols="50" rows="4" id="konto"
+				class="form-control">$bank_account</textarea>
+	</div>
+
+	<div class="form-group">
+		<label for="date">%pay_until%</label>
+
+		<input type="date" name="date" id="date" placeholder="yyyy-mm-dd" value="$date" class="form-control">
+	</div>
+
+	<div class="form-group">
+		<label for="euro">%total_costs%:</label>
+		<input type="text" dir="rtl" name="euro" id="euro" size="8" value="$ds[totalcosts]"
+				class="form-control">
+	</div>
+
+	<div class="form-group">
+		<label for="usereuro">%costs_member%:</label>
+
+		<div class="input-group">
+			<input type="text" dir="rtl" name="usereuro" id="usereuro" size="8"
+					value="$ds[usercosts]" class="form-control">
+			<span class="input-group-btn">
+				<input type="button" name="calculate" value="%calculate%" onclick="berechnen()"
+						class="btn btn-info">
+			</span>
+		</div>
+	</div>
+
+	<div class="form-group text-right">
+		<input type="hidden" name="anz" value="$anz">
+		<input type="submit" name="saveedit" value="%submit%" class="btn btn-primary">
+	</div>
+
 </form>

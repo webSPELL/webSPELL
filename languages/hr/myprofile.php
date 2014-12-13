@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -30,9 +30,10 @@ $language_array = Array(
 /* do not edit above this line */
 
 	'about_myself'=>'O meni',
+	'activated'=>'aktivira',
 	'avatar'=>'Avatar:',
 	'back'=>'natrag',
-	'bbcode'=>'<a href="javascript:MM_openBrWindow(\'code.php\',\'BBKod\',\'scrollbars=yes,width=600,height=500\')">BBKod</a> uključen',
+	'bbcode'=>'<a href="javascript:window.open(\'code.php\',\'BBKod\',\'scrollbars=yes,width=600,height=500\')">BBKod</a> uključen',
 	'can_not_copy'=>'nije moguće kopirati dokument sa servera',
 	'change_mail'=>'promjeni e-mail',
 	'change_password'=>'promjeni lozinku',
@@ -45,6 +46,7 @@ $language_array = Array(
 	'country'=>'Zemlja',
 	'cpu'=>'Procesor',
 	'date_of_birth'=>'Datum rođenja',
+	'deactivated'=>'deaktivirana',
 	'delete_max_230_210'=>'izbriši (max230x210)',
 	'delete_max_90_90'=>'izbriši (max90x90)',
 	'e-mail'=>'E-mail',
@@ -57,7 +59,12 @@ $language_array = Array(
 	'first_name'=>'Ime',
 	'forgot_new_pw'=>'Zaboravili ste unijeti Vašu novu lozinku!',
 	'forgot_old_pw'=>'Zaboravili ste unijeti Vašu staru lozinku!',
+	'format_date'=>'Format datum',
+	'format_time'=>'Format vremena',
 	'graphiccard'=>'Grafička kartica',
+	'guestbook'=>'Knjiga gostiju',
+	'hdd'=>'Tvrdi disk',
+	'headset'=>'Slušalice',
 	'hide_e-mail'=>'Sakrij E-mail?',
 	'homepage'=>'Homepage',
 	'html'=>'HTML isključen',
@@ -94,8 +101,8 @@ Hvala vam na Vašem interesu
 	'nickname'=>'Nick',
 	'nickname_already_in_use'=>'nick se već koristi!',
 	'no'=>'Ne',
-	'not_logged_in'=>'Morate biti prijavljeni da bi vidjeli svoj profil!<br /><br />
-    &#8226; <a href="index.php?site=register">Registriraj se</a><br />
+	'not_logged_in'=>'Morate biti prijavljeni da bi vidjeli svoj profil!<br><br>
+    &#8226; <a href="index.php?site=register">Registriraj se</a><br>
     &#8226; <a href="index.php?site=login">Prijavi se</a>',
 	'old_password'=>'Stara lozinka',
 	'old_pw_not_valid'=>'vaša stara lozinka nije ispravna!',
@@ -114,7 +121,7 @@ Hvala vam na Vašem interesu
 	'repeated_pw_not_valid'=>'Vaša ponovljena lozinka nije ispravno upisana!',
 	'sexuality'=>'Spol',
 	'signature'=>'Potpis',
-	'smilies'=>'<a href="javascript:MM_openBrWindow(\'smileys.php\',\'Smajlići\',\'scrollbars=yes,width=340,height=500\')">Smajlići</a> uključeni',
+	'smilies'=>'<a href="javascript:window.open(\'smileys.php\',\'Smajlići\',\'scrollbars=yes,width=340,height=500\')">Smajlići</a> uključeni',
 	'soundcard'=>'Zvučna kartica',
 	'town'=>'Grad',
 	'unknown'=>'nije dostupno',

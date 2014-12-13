@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -35,13 +35,13 @@ $language_array = Array(
 	'and'=>'e',
 	'author'=>'Autore',
 	'back_buddy'=>'torna alla lista degli amici',
-	'bbcode_on'=>'<a href="javascript:MM_openBrWindow(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> è ACCESO',
+	'bbcode_on'=>'<a href="javascript:window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> è ACCESO',
 	'board'=>'Forum',
 	'boards'=>'Forum',
 	'clanmember'=>'Clan membri',
 	'close_topic'=>'Chiudi tema',
 	'closed'=>'chiuso',
-	'closed_image'=>'<img src="images/icons/closed.gif" alt="" />',
+	'closed_image'=>'<img src="images/icons/closed.gif" alt="">',
 	'default_topic_title'=>'(nessun titolo)',
 	'delete_posts'=>'Elimina selezionati posti',
 	'delete_topic'=>'Tema cancellare',
@@ -78,8 +78,8 @@ $language_array = Array(
 	'new_reply'=>'nuovi risposte',
 	'new_topic'=>'nuovo argomento',
 	'newest_member'=>'nuovo utente',
-	'newreply_image'=>'<img src="images/icons/newreply.gif" border="0" alt="nuove risposte" />',
-	'newtopic_image'=>'<img src="images/icons/newtopic.gif" border="0" alt="nuovo argomento" />',
+	'newreply_image'=>'<img src="images/icons/newreply.gif" alt="nuove risposte">',
+	'newtopic_image'=>'<img src="images/icons/newtopic.gif" alt="nuovo argomento">',
 	'next_7_days'=>'nei prossimi 7 giorni',
 	'no_access'=>'Nessun accesso',
 	'no_access_write'=>'non è possibile scrivere in questo forum.',
@@ -87,8 +87,8 @@ $language_array = Array(
 	'no_new_posts'=>'Non ci sono nuovi messaggi',
 	'no_permission'=>'non hai il accesso per questo forum!',
 	'not_logged'=>'non loggato',
-	'not_logged_msg'=>'<br /><br />Per aprire un argomento, è necessario essere registrati e loggati!<br /><br />
-    &#8226; <a href="index.php?site=register">Registrare</a><br />
+	'not_logged_msg'=>'<br><br>Per aprire un argomento, è necessario essere registrati e loggati!<br><br>
+    &#8226; <a href="index.php?site=register">Registrare</a><br>
     &#8226; <a href="index.php?site=login">Accesso</a>',
 	'notify'=>'recevere un mesaggo di una nuova risposta',
 	'notify_mail'=>'Nuova risposta %poster% nel tema %topic_link%
@@ -112,9 +112,9 @@ $language_array = Array(
 	'registered_users'=>'Utente Registrato',
 	'reopen_topic'=>'Argomento riaperti',
 	'replies'=>'Rispondere',
-	'search_image'=>'<img src="images/icons/search.gif" border="0" alt="cercare" />',
+	'search_image'=>'<img src="images/icons/search.gif" alt="cercare">',
 	'select_all'=>'Seleziona tutto',
-	'smilies_on'=>'<a href="javascript:MM_openBrWindow(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smilies</a> sono ATTIVATI',
+	'smilies_on'=>'<a href="javascript:window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smilies</a> sono ATTIVATI',
 	'sort'=>'ordinamento',
 	'stats'=>'statistiche',
 	'sticky'=>'importante',

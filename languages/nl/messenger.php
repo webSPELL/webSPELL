@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -54,7 +54,7 @@ $language_array = Array(
 	'no_incoming'=>'Geen berichten in Postvak IN.',
 	'no_outgoing'=>'Geen berichten in Postvak UIT.',
 	'no_subject'=>'(geen onderwerp)',
-	'not_logged'=>'Je bent niet ingelogd.<br /><a href="index.php?site=login">Log in</a> | <a href="index.php?site=register">Registreer</a>',
+	'not_logged'=>'Je bent niet ingelogd.<br><a href="index.php?site=login">Log in</a> | <a href="index.php?site=register">Registreer</a>',
 	'options'=>'Opties',
 	'outgoing'=>'Postvak UIT',
 	'read'=>'Lees',
@@ -73,7 +73,7 @@ $language_array = Array(
 	'title'=>'Onderwerp',
 	'your_message'=>'Je bericht:',
 	'mail_subject'=>'Je hebt een nieuw bericht',
-	'mail_body'=>'<b>Hallo %nickname%!</b><br /><br />Je hebt een nieuwe bericht op '.PAGETITLE.' (%hp_url%).<br />Klik <a href="http://%hp_url%?site=messenger">hier</a> om het bericht te lezen.<br /><br />(C) webSPELL.org',
+	'mail_body'=>'<b>Hallo %nickname%!</b><br><br>Je hebt een nieuwe bericht op '.PAGETITLE.' (%hp_url%).<br>Klik <a href="http://%hp_url%?site=messenger">hier</a> om het bericht te lezen.<br><br>(C) webSPELL.org',
 	'error'=>'error',
 	'unknown_user'=>'unknown user'
 

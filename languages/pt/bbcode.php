@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -67,14 +67,14 @@ $language_array = Array(
 	'teal'=>'azul esverdeado',
 	'tiny'=>'mini',
 	'tomato'=>'tomate',
-	'uneven_amount'=>'Valor desigual de abertura e encerramento dos códigos BBCode',
-	'first_tag_closing_tag'=>'O primeiro código BBCode não pode ser o de encerramento',
-	'not_same_amount'=>'Não há a mesma quantidade de códigos BBCode de abertura e encerramento',
-	'wrong_nesting'=>'Nidificação errada de códigos BBCode',
+	'unevenAmount'=>'Valor desigual de abertura e encerramento dos códigos BBCode',
+	'firstTagClosingTag'=>'O primeiro código BBCode não pode ser o de encerramento',
+	'notSameAmount'=>'Não há a mesma quantidade de códigos BBCode de abertura e encerramento',
+	'wrongNesting'=>'Nidificação errada de códigos BBCode',
 	'listguide'=>'Introduza \'1\' para uma Lista numerada, \'a\' para uma Lista alfabética ou \'\' para uma Lista com pontos',
 	'listpoint'=>'Introduza a Lista de Pontos. Não introduza nada ou clique \'Cancelar\' para terminar a lista.',
 	'addcode'=>'Inserir na posição',
-	'read_more'=>'ler mais',
+	'readMore'=>'ler mais',
 	'mc_you_have'=>'Tem',
 	'mc_new_messages'=>'Existem novas mensagens. Deseja lê-las agora?',
 	'na'=>'não disponível',

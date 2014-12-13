@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -30,9 +30,10 @@ $language_array = Array(
 /* do not edit above this line */
 
 	'about_myself'=>'Apie Mane',
+	'activated'=>'įjungta',
 	'avatar'=>'Avataras:',
 	'back'=>'atgal',
-	'bbcode'=>'<a href="javascript:MM_openBrWindow(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBKodas</a> yra ĮJUNGTAS',
+	'bbcode'=>'<a href="javascript:window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBKodas</a> yra ĮJUNGTAS',
 	'can_not_copy'=>'negali nukopijuoti failą iš serverio',
 	'change_password'=>'pasikeisti slaptažodį',
 	'change_mail'=>'pasikeisti E-Paštą',
@@ -45,6 +46,7 @@ $language_array = Array(
 	'country'=>'Šalis',
 	'cpu'=>'CPU',
 	'date_of_birth'=>'Gimimo metai',
+	'deactivated'=>'išjungta',
 	'delete_max_230_210'=>'ištrinti (maks230/210)',
 	'delete_max_90_90'=>'ištrinti (maks90/90)',
 	'e-mail'=>'E-Paštas',
@@ -57,7 +59,12 @@ $language_array = Array(
 	'first_name'=>'Pirmas vardas',
 	'forgot_new_pw'=>'jūs pamiršote įrašyti naują slaptažodį!',
 	'forgot_old_pw'=>'jūs pamiršote įrašyti seną slaptažodį!',
+	'format_date'=>'Datos formatas',
+	'format_time'=>'Laiko formatas',	
 	'graphiccard'=>'Vaizdo Plokštė',
+	'guestbook'=>'Svečių knyga',
+	'hdd'=>'Kietasis diskas',
+	'headset'=>'Laisvų rankų',
 	'hide_e-mail'=>'Slėpti E-Paštą?',
 	'homepage'=>'Namų puslapis',
 	'html'=>'HTML yra IŠJUNGTA',
@@ -94,8 +101,8 @@ Ačiū jums
 	'nickname'=>'Slapyvardis',
 	'nickname_already_in_use'=>'slapyvardis jau naudojamas!',
 	'no'=>'Ne',
-	'not_logged_in'=>'Jūs turite būti prisijungę, kad žiūrėti savo profilį!<br /><br />
-    &#8226; <a href="index.php?site=register">registruotis dabar</a><br />
+	'not_logged_in'=>'Jūs turite būti prisijungę, kad žiūrėti savo profilį!<br><br>
+    &#8226; <a href="index.php?site=register">registruotis dabar</a><br>
     &#8226; <a href="index.php?site=login">prisijungti</a>',
 	'old_password'=>'senas Slaptažodis',
 	'old_pw_not_valid'=>'jūsų senas slaptažodis blogas!',
@@ -114,7 +121,7 @@ Ačiū jums
 	'repeated_pw_not_valid'=>'jūsų pakartotas slaptažodis blogas!',
 	'sexuality'=>'Lytis',
 	'signature'=>'Parašas',
-	'smilies'=>'<a href="javascript:MM_openBrWindow(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Šypsenėles</a> yra ĮJUNGTOS',
+	'smilies'=>'<a href="javascript:window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Šypsenėles</a> yra ĮJUNGTOS',
 	'soundcard'=>'Garso Plokštė',
 	'town'=>'Miestas',
 	'unknown'=>'negalimas',

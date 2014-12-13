@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -33,7 +33,7 @@ $language_array = Array(
   'lock'=>'lock',
   'locked_since'=>'The Page ist locked since',
   'pagelock'=>'Pagelock',
-  'page_locked'=>'<b>Page locked!</b><br />Only Admins can access the Page now.',
+  'page_locked'=>'<b>Page locked!</b><br>Only Admins can access the Page now.',
   'page_unlocked'=>'<b>Page unlocked!</b>',
   'settings'=>'Settings',
   'transaction_invalid'=>'Transaction ID invalid',

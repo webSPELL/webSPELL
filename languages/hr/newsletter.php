@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -43,10 +43,10 @@ $language_array = Array(
 	'no_such_mail_adress'=>'Ne postoji takva e-mail adresa.',
 	'password_had_been_send'=>'Lozinka je poslana.',
 	'register_newsletter'=>'Registriraj se za newsletter',
-	'request_mail'=>'<b>Treba Vam vaš kod za brisanje!</b><br /><br />Da bi maknuli Vaš e-mail sa liste mailova za newsletter kliknite <a href="http://%homepage_url%/index.php?site=newsletter&mail=%mail%&pass=%delete_key%">ovdje</a><br />Vaša lozinka za brisanje s liste: %delete_key%<br /><br />Vidimo se na %homepage_url%',
+	'request_mail'=>'<b>Treba Vam vaš kod za brisanje!</b><br><br>Da bi maknuli Vaš e-mail sa liste mailova za newsletter kliknite <a href="http://%homepage_url%/index.php?site=newsletter&mail=%mail%&pass=%delete_key%">ovdje</a><br>Vaša lozinka za brisanje s liste: %delete_key%<br><br>Vidimo se na %homepage_url%',
 	'send'=>'Pošalji',
 	'submit'=>'Spremi',
-	'success_mail'=>'<b>Hvala Vam na registraciji!</b><br /><br />Da bi maknuli Vaš e-mail sa liste mailova za newsletter kliknite <a href="http://%homepage_url%/index.php?site=newsletter&mail=%mail%&pass=%delete_key%">ovdje</a><br />Vaša lozinka za brisanje s liste: %delete_key%<br /><br />Vidimo se na %homepage_url%',
+	'success_mail'=>'<b>Hvala Vam na registraciji!</b><br><br>Da bi maknuli Vaš e-mail sa liste mailova za newsletter kliknite <a href="http://%homepage_url%/index.php?site=newsletter&mail=%mail%&pass=%delete_key%">ovdje</a><br>Vaša lozinka za brisanje s liste: %delete_key%<br><br>Vidimo se na %homepage_url%',
 	'thank_you_for_registration'=>'Hvala Vam na registraciji.',
 	'you_are_already_registered'=>'Već ste registrirani.',
 	'your_mail_adress'=>'Vaš e-mail',

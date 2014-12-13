@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -43,8 +43,8 @@ kellemes időtöltést a honlapunkon
 	'lost_password'=>'elfelejtett jelszó',
 	'no_mail_given'=>'Nem adtál meg email címet.',
 	'no_user_found'=>'nincs ilyen tag!',
-	'successful'=>'Felhasználói fiókod megtaláltuk<br /><br />
-  Kis idő múlva megérkezik az e-mail a felhasználói adataiddal.<br /><br />
+	'successful'=>'Felhasználói fiókod megtaláltuk<br><br>
+  Kis idő múlva megérkezik az e-mail a felhasználói adataiddal.<br><br>
   &#8226; <a href="index.php?site=login">login</a>',
 	'your_email'=>'E-Mail címed'
 );

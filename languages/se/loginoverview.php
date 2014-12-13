@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -64,8 +64,8 @@ $language_array = Array(
 	'usermenu'=>'Medlemmenu',
 	'views'=>'visningar',
 	'x_new_message'=>'Det finns %new_messages% nya meddelanden.',
-	'you_have_to_be_logged_in'=>'Du måste vara inloggad för att se inloggnings överblick!<br /><br />
-    #8226; <a href="index.php?site=register">Registrera nu</a><br />
+	'you_have_to_be_logged_in'=>'Du måste vara inloggad för att se inloggnings överblick!<br><br>
+    #8226; <a href="index.php?site=register">Registrera nu</a><br>
     &#8226; <a href="index.php?site=login">Logga in</a>'
 );
 ?>

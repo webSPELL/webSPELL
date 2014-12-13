@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -30,6 +30,7 @@ $language_array = Array(
 /* do not edit above this line */
 
   'access_denied'=>'Access denied',
+  'activated'=>'activated',
   'additional_options'=>'Additional options',
   'admin_email'=>'Admin E-mail',
   'admin_name'=>'Admin name',
@@ -59,11 +60,15 @@ $language_array = Array(
   'clanwars'=>'Clanwars',
   'comments'=>'Comments',
   'content_size'=>'Content size',
+  'deactivated'=>'deactivated',
   'default_language'=>'default language',
   'demos'=>'Demos',
+  'detect_visitor_language'=>'Detect visitor language',
   'forum'=>'Forum',
   'forum_posts'=>'Forum posts',
   'forum_topics'=>'Forum topics',
+  'format_date'=>'Date format',
+  'format_time'=>'Time format',
   'gallery'=>'Gallery',
   'guestbook'=>'Guestbook',
   'headlines'=>'Headlines',
@@ -94,8 +99,14 @@ $language_array = Array(
   'shoutbox_all_messages'=>'Shoutbox all messages',
   'shoutbox_refresh'=>'Shoutbox refresh',
   'space_user'=>'Space per user (MByte)',
+  'spam_check'=>'Validate Posts?',
+  'spamapiblockerror'=>'Block Posts?',
+  'spamapihost'=>'API URL',
+  'spamapikey'=>'API Key',
+  'spamfilter'=>'Spam Filter',
+  'spammaxposts'=>'Max. Posts',
   'thumb_width'=>'Thumb width',
-  'tooltip_1'=>'This is the URL of your page e.g. (yourdomain.com/path/webspell).<br />Without http:// at the beginn and don\'t end with a slash!<br />Should be like',
+  'tooltip_1'=>'This is the URL of your page e.g. (yourdomain.com/path/webspell).<br>Without http:// at the beginn and don\'t end with a slash!<br>Should be like',
   'tooltip_2'=>'This is the title of your page, shown as window title',
   'tooltip_3'=>'The Name of your organisation',
   'tooltip_4'=>'The short name/tag of your organisation',
@@ -146,8 +157,18 @@ $language_array = Array(
   'tooltip_49'=>'Number of noise-lines',
   'tooltip_50'=>'Selection of automatic image resize function',
   'tooltip_51'=>'Maximal length of the topnews in sc_topnews',
+  'tooltip_52'=>'Detect language of the visitor automatically',
+  'tooltip_53'=>'Validate Posts with external Database',
+  'tooltip_54'=>'Enter your Spam API key here if available',
+  'tooltip_55'=>'Enter the URL to API host server here.<br>Default: https://api.webspell.org',
+  'tooltip_56'=>'Number of posts from when no longer will be validated with external database',
+  'tooltip_57'=>'Block Posts when an error has occurred',
+  'tooltip_58'=>'Output format of the date',
+  'tooltip_59'=>'Output format of time',
+  'tooltip_60'=>'Enable user guestbooks on the website?',
   'transaction_invalid'=>'Transaction ID invalid',
   'upcoming_actions'=>'upcoming actions',
-  'update'=>'update'
+  'update'=>'update',
+  'user_guestbook'=>'User Guestbooks'  
 );
 ?>

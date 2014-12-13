@@ -1,6 +1,16 @@
-<tr bgcolor="$bg">
-  <td width="$thumbwidth"><a href="index.php?site=gallery&amp;picID=$gallery[picture]"><img src="images/gallery/thumb/$gallery[picture].jpg" border="0" width="$thumbwidth" alt="" /></a></td>
-  <td>$gallery[date]</td>
-  <td><a href="index.php?site=gallery&amp;galleryID=$gallery[galleryID]">$gallery[name]</a></td>
-  <td>$gallery[count]</td>
-</tr>
+<div class="col-lg-6">
+	<a href="index.php?site=gallery&amp;picID=$ds[picture]">
+		<img src="images/gallery/thumb/$ds[picture].jpg" width="100%" class="img-responsive">
+	</a>
+
+	<h4>
+		<a href="index.php?site=gallery&amp;galleryID=$ds[galleryID]">
+			<b>$ds[name]</b>
+		</a>
+	</h4>
+
+	<p>
+		<i>%pictures%:</i> $ds[count]<br>
+		<i>%date%:</i> $ds[date]
+	</p>
+</div>

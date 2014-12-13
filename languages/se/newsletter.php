@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -43,10 +43,10 @@ $language_array = Array(
 	'no_such_mail_adress'=>'Det finns ingen sådan email adress.',
 	'password_had_been_send'=>'Lösenordet har skickats.',
 	'register_newsletter'=>'Registrear för nyhetsbrev',
-	'request_mail'=>'<b>Det krävs din radernings knapp!</b><br /><br />För att radera din mail från maillistan klicka <a href="http://%homepage_url%/index.php?site=newsletter&mail=%mail%&pass=%delete_key%">här</a><br />Ditt lösenord för att radera själv: %delete_key%<br /><br />Ses på %homepage_url%',
+	'request_mail'=>'<b>Det krävs din radernings knapp!</b><br><br>För att radera din mail från maillistan klicka <a href="http://%homepage_url%/index.php?site=newsletter&mail=%mail%&pass=%delete_key%">här</a><br>Ditt lösenord för att radera själv: %delete_key%<br><br>Ses på %homepage_url%',
 	'send'=>'skicka',
 	'submit'=>'lämna in',
-	'success_mail'=>'<b>Tack för din registration!</b><br /><br />För att radera din mail från maillistan klicka <a href="http://%homepage_url%/index.php?site=newsletter&mail=%mail%&pass=%delete_key%">här</a><br />Ditt lösenord för att radera själv: %delete_key%<br /><br />Ses på %homepage_url%',
+	'success_mail'=>'<b>Tack för din registration!</b><br><br>För att radera din mail från maillistan klicka <a href="http://%homepage_url%/index.php?site=newsletter&mail=%mail%&pass=%delete_key%">här</a><br>Ditt lösenord för att radera själv: %delete_key%<br><br>Ses på %homepage_url%',
 	'thank_you_for_registration'=>'Tack för din registration.',
 	'you_are_already_registered'=>'Du är redan registrerad.',
 	'your_mail_adress'=>'Din email adress',

@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -35,7 +35,7 @@ $language_array = Array(
 	'faq'=>'FAQ',
 	'faqs'=>'Kérdés',
 	'no_categories'=>'Nincs létrehozott kategória',
-	'no_faq'=>'Nincs elérhető kérdés<br /><a href="index.php?site=faq">Vissza</a>',
+	'no_faq'=>'Nincs elérhető kérdés<br><a href="index.php?site=faq">Vissza</a>',
 	'saved_on'=>'Megtakarítva'
 );
 ?>

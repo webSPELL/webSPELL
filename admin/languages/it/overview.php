@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -67,7 +67,7 @@ $language_array = Array(
   'version'=>'Versione',
   'webspell_version'=>'webSPELL Versione',
   'welcome'=>'Benvenuto nel tuo webSPELL AdminCenter',
-  'welcome_message'=>'Questo sistema di gestione consente di gestire la tua pagina, utilizzare al navigazione sinistra.<br />Se esistono problemi, si prega di utilizzare il nostro <a href="http://www.webspell.org?site=support" target="_blank">assistenza</a>.<br /><br />Grazie, che hai secelto webSPELL.<br /><br />Tuo <a href="http://www.webspell.org" target="_blank">webSPELL Team di Sviluppo</a>',
+  'welcome_message'=>'Questo sistema di gestione consente di gestire la tua pagina, utilizzare al navigazione sinistra.<br>Se esistono problemi, si prega di utilizzare il nostro <a href="http://www.webspell.org?site=support" target="_blank">assistenza</a>.<br><br>Grazie, che hai secelto webSPELL.<br><br>Tuo <a href="http://www.webspell.org" target="_blank">webSPELL Team di Sviluppo</a>',
   'zend_version'=>'Zend Versione',
   'na'=>'Informazioni non disponibili'
 );

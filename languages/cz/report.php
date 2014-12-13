@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -32,6 +32,6 @@ $language_array = Array(
 	'no_informations'=>'zatím neexistují žádné informace',
 	'report_message'=>'[b]Toto je nové %s - Zpráva[/b][br][br]%s-ID: %d[br]Info: %s[br]Odkaz: [url]index.php?site=files&file=%d[/url]',
 	'report_recognized'=>'vaše zpráva byla odeslaná. Dìkujeme.',
-  'wrong_securitycode'=>'Bezpečností kód je špatný<br /><br />[<a href="javascript:back();">vrátit</a>]'
+  'wrong_securitycode'=>'Bezpečností kód je špatný<br><br>[<a href="javascript:back();">vrátit</a>]'
 );
 ?>

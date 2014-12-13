@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -44,19 +44,20 @@ if($_POST['hp_url']) {
   </tr>
   <tr>
    <td id="content" colspan="2">
-   <b><?php echo $_language->module['what_to_do']; ?></b><br />
-   <br /><input type="radio" name="installtype" value="update" /> <?php echo $_language->module['update_31']; ?>
-   <br /><input type="radio" name="installtype" value="update_beta" /> <?php echo $_language->module['update_beta4']; ?>
-   <br /><input type="radio" name="installtype" value="update_beta5" /> <?php echo $_language->module['update_beta5']; ?>
-   <br /><input type="radio" name="installtype" value="update_beta6" /> <?php echo $_language->module['update_beta6']; ?>
-   <br /><input type="radio" name="installtype" value="update_final" /> <?php echo $_language->module['update_40']; ?>
-   <br /><input type="radio" name="installtype" value="update_40100" /> <?php echo $_language->module['update_40100']; ?>
-   <br /><input type="radio" name="installtype" value="update_40102" /> <?php echo $_language->module['update_40102']; ?>
-   <br /><input type="radio" name="installtype" value="full" checked="checked" /> <?php echo $_language->module['new_install']; ?>
+   <b><?php echo $_language->module['what_to_do']; ?></b><br>
+   <br><input type="radio" name="installtype" value="update"> <?php echo $_language->module['update_31']; ?>
+   <br><input type="radio" name="installtype" value="update_beta"> <?php echo $_language->module['update_beta4']; ?>
+   <br><input type="radio" name="installtype" value="update_beta5"> <?php echo $_language->module['update_beta5']; ?>
+   <br><input type="radio" name="installtype" value="update_beta6"> <?php echo $_language->module['update_beta6']; ?>
+   <br><input type="radio" name="installtype" value="update_final"> <?php echo $_language->module['update_40']; ?>
+   <br><input type="radio" name="installtype" value="update_40100"> <?php echo $_language->module['update_40100']; ?>
+   <br><input type="radio" name="installtype" value="update_40102"> <?php echo $_language->module['update_40102']; ?>
+   <br><input type="radio" name="installtype" value="update_420"> <?php echo $_language->module['update_420']; ?>
+   <br><input type="radio" name="installtype" value="full" checked="checked"> <?php echo $_language->module['new_install']; ?>
           
-   <input type="hidden" name="hp_url" value="<?php echo $_POST['hp_url']; ?>" />
+   <input type="hidden" name="hp_url" value="<?php echo $_POST['hp_url']; ?>">
    
-   <div align="right"><br /><a href="javascript:document.ws_install.submit()"><img src="images/next.jpg" alt="" /></a></div>
+   <div align="right"><br><a href="javascript:document.ws_install.submit()"><img src="images/next.jpg" alt=""></a></div>
    </td>
   </tr>
 

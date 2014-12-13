@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -29,7 +29,7 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-	'activation_successful'=>'L\'activation de votre compte a été prise en compte.<br />Vous pouvez maintenant vous connecter.',
+	'activation_successful'=>'L\'activation de votre compte a été prise en compte.<br>Vous pouvez maintenant vous connecter.',
 	'back'=>'Retour',
 	'enter_nickname'=>'Vous devez entrer un pseudo !',
 	'enter_password'=>'Vous devez entrer un mot de passe !',
@@ -47,7 +47,6 @@ $language_array = Array(
 Votre inscription à %pagetitle% (%homepage_url%) a été prise en compte. Informations sur votre compte:
 
 Pseudo: %username%
-Mot de passe: %password%
 
 Pour compléter votre inscription vous devez activer votre compte en cliquant sur le lien suivant:
 %activationlink%

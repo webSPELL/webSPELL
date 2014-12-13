@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -61,7 +61,7 @@ $language_array = Array(
 	'sort'=>'Rendezés',
 	'squad'=>'Squad',
 	'submit_challenge'=>'Kihívás beküldése',
-	'thank_you'=>'Köszönjük a kérésed!<br />',
+	'thank_you'=>'Köszönjük a kérésed!<br>',
 	'time'=>'Idő',
 	'wrong_security_code'=>'Rossz biztonsági kód.'
 );

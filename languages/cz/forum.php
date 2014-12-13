@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -35,13 +35,13 @@ $language_array = Array(
 	'and'=>'a',
 	'author'=>'Autor',
 	'back_buddy'=>'zpět na seznam přátel',
-	'bbcode_on'=>'<a href="javascript:MM_openBrWindow(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> je ZAPNUTÝ',
+	'bbcode_on'=>'<a href="javascript:window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> je ZAPNUTÝ',
 	'board'=>'Fórum',
 	'boards'=>'Fóra',
 	'clanmember'=>'Člen klanu',
 	'close_topic'=>'zavřít téma',
 	'closed'=>'zavřeno',
-	'closed_image'=>'<img src="images/icons/closed.gif" alt="" />',
+	'closed_image'=>'<img src="images/icons/closed.gif" alt="">',
 	'default_topic_title'=>'(bez názvu)',
 	'delete_posts'=>'smazat vybrané příspěvky',
 	'delete_topic'=>'smazat téma',
@@ -78,8 +78,8 @@ $language_array = Array(
 	'new_reply'=>'nová odpověď',
 	'new_topic'=>'nové téma',
 	'newest_member'=>'nejnovější člen',
-	'newreply_image'=>'<img src="images/icons/newreply.gif" border="0" alt="odpovědět" />',
-	'newtopic_image'=>'<img src="images/icons/newtopic.gif" border="0" alt="nové téma" />',
+	'newreply_image'=>'<img src="images/icons/newreply.gif" alt="odpovědět">',
+	'newtopic_image'=>'<img src="images/icons/newtopic.gif" alt="nové téma">',
 	'next_7_days'=>'následujících 7 dní',
 	'no_access'=>'Nemáš přístup',
 	'no_access_write'=>'Nemáš přístup k psaní do fóra.',
@@ -87,8 +87,8 @@ $language_array = Array(
 	'no_new_posts'=>'nové příspěvky neexistují',
 	'no_permission'=>'Nemáš povolení dívat se do interního fóra!',
 	'not_logged'=>'Nejsi přihlášen.',
-	'not_logged_msg'=>'<br /><br />Než začneš odpovídat musíš se zaregistrovat!<br /><br />
-    &#8226; <a href="index.php?site=register">registrace</a><br />
+	'not_logged_msg'=>'<br><br>Než začneš odpovídat musíš se zaregistrovat!<br><br>
+    &#8226; <a href="index.php?site=register">registrace</a><br>
     &#8226; <a href="index.php?site=login">přihlášení</a>',
 	'notify'=>'Upozornění na odpoveď',
 	'notify_mail'=>'nová odpověď od %poster% v_tématu
@@ -113,9 +113,9 @@ $language_array = Array(
 	'registered_users'=>'registrovaných uživatelů',
 	'reopen_topic'=>'znovu otevřít téma',
 	'replies'=>'Odpovědi',
-	'search_image'=>'<img src="images/icons/search.gif" border="0" alt="" />',
+	'search_image'=>'<img src="images/icons/search.gif" alt="">',
 	'select_all'=>'vybrat všechny',
-	'smilies_on'=>'<a href="javascript:MM_openBrWindow(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smajlíci</a> jsou ZAPNUTI',
+	'smilies_on'=>'<a href="javascript:window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smajlíci</a> jsou ZAPNUTI',
 	'sort'=>'Seřadit',
 	'stats'=>'Stats',
 	'sticky'=>'přišpendleno',

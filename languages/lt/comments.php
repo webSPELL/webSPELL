@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -31,14 +31,14 @@ $language_array = Array(
 
 	'access_denied'=>'Prieiga negalima',
 	'add_buddy'=>'add to buddy list',
-	'bbcode_on'=>'<a href="javascript:MM_openBrWindow(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBkodas</a> YRA ĮJUNGTAS',
+	'bbcode_on'=>'<a href="javascript:window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBkodas</a> YRA ĮJUNGTAS',
 	'by'=>'pagal',
-	'clanmember_icon'=>' <img src="images/icons/member.gif" width="6" height="11" alt="Clanmember" />',
+	'clanmember_icon'=>' <img src="images/icons/member.gif" width="6" height="11" alt="Clanmember">',
 	'comments'=>'komentarai',
-	'comments_disabled'=>'<br /><br /><b>Komentarai išjungti.</b>',
+	'comments_disabled'=>'<br><br><b>Komentarai išjungti.</b>',
 	'delete_selected'=>'ištrinti pasirinktus',
 	'edit_comment'=>'redeguoti',
-	'email_link'=>'<a href="mailto:%email%"><img src="images/icons/email.gif" border="0" width="15" height="11" alt="email" /></a>',
+	'email_link'=>'<a href="mailto:%email%"><img src="images/icons/email.gif" width="15" height="11" alt="email"></a>',
 	'enter_code'=>'Įveskite apsaugos kodą',
 	'enter_message'=>'Prašome įrašyti žinutę!',
 	'enter_name'=>'Prašome įrašyti vardą!',
@@ -50,16 +50,16 @@ $language_array = Array(
 	'ip'=>'IP',
 	'mail'=>'E-Paštas',
 	'name'=>'Vardas',
-	'no_access'=>'<br /><br />Jūs turite prisijungti!<br /><br />&#8226; <a href="index.php?site=register">registruotis dabar!</a><br />&#8226; <a href="index.php?site=login">prisijungti</a>',
+	'no_access'=>'<br><br>Jūs turite prisijungti!<br><br>&#8226; <a href="index.php?site=register">registruotis dabar!</a><br>&#8226; <a href="index.php?site=login">prisijungti</a>',
 	'no_commentid'=>'No commentID specified - redirecting',
 	'no_database_entry'=>'No database entry matching commentID - redirecting',
 	'options'=>'Pasirinkimai',
 	'post_comment'=>'Rašyti komentarą',
-	'quote_link'=>'<a href="javascript:AddCode(\'[quote=%nickname%]%message%[/quote]\')"><img src="images/icons/quote.gif" border="0" alt="quote" /></a>',
+	'quote_link'=>'<a href="javascript:AddCode(\'[quote=%nickname%]%message%[/quote]\')"><img src="images/icons/quote.gif" alt="quote"></a>',
 	'readd_buddy'=>'back to buddy-list',
 	'select_all'=>'pažymėti visus',
 	'send_message'=>'send message',
-	'smilies_on'=>'<a href="javascript:MM_openBrWindow(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Šypsenėlės</a> yra ĮJUNGTI',
+	'smilies_on'=>'<a href="javascript:window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Šypsenėlės</a> yra ĮJUNGTI',
 	'sort'=>'Rykiuoti:',
 	'sort_asc'=>'Sort ascending',
 	'sort_desc'=>'Sort descending',

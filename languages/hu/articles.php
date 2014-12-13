@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -33,7 +33,7 @@ $language_array = Array(
 	'already_rated'=>'<b>A cikk már értékelve van!</b>',
 	'articles'=>'Cikkek',
 	'author'=>'Szerző',
-	'bbcode'=>'&#8226; <a href="javascript:MM_openBrWindow(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> <b><u>ON</u></b>',
+	'bbcode'=>'&#8226; <a href="javascript:window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> <b><u>ON</u></b>',
 	'cancel'=>'Mégse',
 	'date'=>'Dátum',
 	'delete'=>'Törlés',
@@ -63,7 +63,7 @@ $language_array = Array(
 	'really_delete'=>'Tényleg törölni akarod a cikk írása?',
 	'save_article'=>'Cikk mentése',
   'self'=>'same window',
-	'smilies'=>'&#8226; <a href="javascript:MM_openBrWindow(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Emotikonok</a> <b><u>ON</u></b>',
+	'smilies'=>'&#8226; <a href="javascript:window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Emotikonok</a> <b><u>ON</u></b>',
 	'sort'=>'Rendezés:',
 	'title'=>'Címsor',
 	'top5_points'=>'Az 5 Legjobb Cikk (Pont)',
@@ -71,6 +71,7 @@ $language_array = Array(
 	'upload_images'=>'Képek feltöltése',
 	'user_comments'=>'Csak a tagok kommentálhatják',
 	'viewed'=>'Megtekintve',
-	'visitor_comments'=>'A vendégek is kommentálhatják'
+	'visitor_comments'=>'A vendégek is kommentálhatják',
+	'tags'=>'címkék'
 );
 ?>

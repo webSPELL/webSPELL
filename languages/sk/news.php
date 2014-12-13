@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -63,7 +63,7 @@ $language_array = Array(
 	'preview'=>'náhľad',
 	'publish_now'=>'publikovať',
 	'publish_selected'=>'publikovať označené',
-  'really_delete'=>'Naozaj chcete vymazať tento novinky?',
+  	'really_delete'=>'Naozaj chcete vymazať tento novinky?',
 	'rubric'=>'Rubrika',
 	'save_news'=>'uložiť novinku',
 	'select_all'=>'označiť všetko',
@@ -81,6 +81,7 @@ $language_array = Array(
 	'view_more'=>'Čítať ďalej...',
 	'visitor_comments'=>'povoliť komentáre návštevníkov',
 	'written_by'=>'napísal',
-	'yes'=>'áno'
+	'yes'=>'áno',
+	'tags'=>'tagy'
 );
 ?>

@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -25,26 +25,28 @@
 ##########################################################################
 */
 
-$ergebnis=safe_query("SELECT * FROM ".PREFIX."squads WHERE gamesquad = '1' ORDER BY sort");
-if(mysql_num_rows($ergebnis)) {
-	echo '<table width="100%" cellspacing="0" cellpadding="2">';
-	$n=1;
-	while($db=mysql_fetch_array($ergebnis)) {
-		if($n%2) {
-			$bg1=BG_1;
-			$bg2=BG_2;
-		}
-		else {
-			$bg1=BG_3;
-			$bg2=BG_4;
-		}
-		$n++;
-		if(!empty($db['icon_small'])) $squadicon='<img src="images/squadicons/'.$db['icon_small'].'" style="margin:2px 0;" border="0" alt="'.getinput($db['name']).'" title="'.getinput($db['name']).'" />';
-		else $squadicon='';
-		$squadname=getinput($db['name']);
-		eval ("\$sc_squads = \"".gettemplate("sc_squads")."\";");
-		echo $sc_squads;
-	}
-	echo '</table>';
+$ergebnis = safe_query("SELECT * FROM " . PREFIX . "squads WHERE gamesquad = '1' ORDER BY sort");
+if (mysqli_num_rows($ergebnis)) {
+    echo '<ul class="list-group">';
+    $n = 1;
+    while ($db = mysqli_fetch_array($ergebnis)) {
+        if ($n % 2) {
+            $bg1 = BG_1;
+            $bg2 = BG_2;
+        } else {
+            $bg1 = BG_3;
+            $bg2 = BG_4;
+        }
+        $n++;
+        if (!empty($db[ 'icon_small' ])) {
+            $squadicon = '<img src="images/squadicons/' . $db[ 'icon_small' ] . '" style="margin:2px 0;" alt="' .
+                getinput($db[ 'name' ]) . '" title="' . getinput($db[ 'name' ]) . '">';
+        } else {
+            $squadicon = '';
+        }
+        $squadname = getinput($db[ 'name' ]);
+        eval ("\$sc_squads = \"" . gettemplate("sc_squads") . "\";");
+        echo $sc_squads;
+    }
+    echo '</ul>';
 }
-?>

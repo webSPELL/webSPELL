@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -25,15 +25,16 @@
 ##########################################################################
 */
 
-$_language->read_module('sc_bannerrotation');
+$_language->readModule('sc_bannerrotation');
 
 //get banner
-$allbanner = safe_query("SELECT * FROM ".PREFIX."bannerrotation WHERE displayed='1' ORDER BY RAND() LIMIT 0,1");
-$total = mysql_num_rows($allbanner);
-if($total) {
-	$banner = mysql_fetch_array($allbanner);
-	echo '<a href="out.php?bannerID='.$banner['bannerID'].'" target="_blank"><img src="./images/bannerrotation/'.$banner['banner'].'" border="0" alt="'.htmlspecialchars($banner['bannername']).'" /></a>';
+$allbanner = safe_query("SELECT * FROM " . PREFIX . "bannerrotation WHERE displayed='1' ORDER BY RAND() LIMIT 0,1");
+$total = mysqli_num_rows($allbanner);
+if ($total) {
+    $banner = mysqli_fetch_array($allbanner);
+    echo '<a href="out.php?bannerID=' . $banner[ 'bannerID' ] . '" target="_blank"><img src="./images/bannerrotation/' .
+        $banner[ 'banner' ] . '" alt="' . htmlspecialchars($banner[ 'bannername' ]) . '"></a>';
+} else {
+    echo $_language->module[ 'no_banners' ];
 }
-else echo $_language->module['no_banners'];
 unset($banner);
-?>

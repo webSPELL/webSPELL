@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -61,7 +61,7 @@ $language_array = Array(
 	'sort'=>'Rykiuoti:',
 	'squad'=>'Būrys',
 	'submit_challenge'=>'Pateikti iššūkį',
-	'thank_you'=>'Ačiū už jūsų užklausą!<br />',
+	'thank_you'=>'Ačiū už jūsų užklausą!<br>',
 	'time'=>'Laikas',
 	'wrong_security_code'=>'Apsaugos kodas blogas.'
 );

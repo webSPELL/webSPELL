@@ -1,49 +1,23 @@
-<table width="100%" cellspacing="0" cellpadding="2" bgcolor="$border">
-  <tr bgcolor="$bghead">
-    <td class="title">$title</td>
-  </tr>
-  <tr><td bgcolor="$pagebg"></td></tr>
-  <tr bgcolor="$bg1">
-    <td>
-    <table width="100%" border="0" cellspacing="0" cellpadding="2">
-      <tr>
-        <td valign="top">
-        <table width="100%" border="0" cellspacing="0" cellpadding="0">
-          <tr>
-            <td>
-            <table border="0" cellspacing="0" cellpadding="2">
-              <tr>
-                <td>%date%</td>
-                <td>$date</td>
-              </tr>
-              <tr>
-                <td>%author%</td>
-                <td>$poster</td>
-              </tr>
-              <tr>
-                <td>%links%</td>
-                <td>$related</td>
-              </tr>
-            </table>
-            </td>
-            <td align="right" valign="top">%rating% $ratingpic<br />$adminaction</td>
-          </tr>
-          <tr>
-            <td colspan="2" align="right"><hr />%page_of%</td>
-          </tr>
-          <tr>
-            <td colspan="2">$content</td>
-          </tr>
-          <tr>
-            <td colspan="2" align="right">$page_link</td>
-          </tr>
-          <tr>
-            <td colspan="2" align="right"><hr />$rateform</td>
-          </tr>
-        </table>
-        </td>
-      </tr>
-    </table>
-    </td>
-  </tr>
-</table>
+<article>
+	<div class="row">
+		<div class="col-xs-10">
+			<h3>$title</h3>
+		</div>
+		<small class="col-xs-2">$date</small>
+	</div>
+
+	<p>$content $adminaction</p>
+
+	<aside>
+		<div class="row">
+			<div class="col-md-8">
+				<p>
+					<i class="icon-user"></i> by $poster
+					| <i class="icon-calendar"></i> $date
+					| <i class="icon-link"></i> $related
+					| %rating% $ratingpic </p>
+			</div>
+			<div class="col-md-4">$rateform</div>
+		</div>
+	</aside>
+</article>

@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -30,9 +30,10 @@ $language_array = Array(
 /* do not edit above this line */
 
 	'about_myself'=>'Sobre mim',
+	'activated'=>'ativado',
 	'avatar'=>'Avatar:',
 	'back'=>'Voltar',
-	'bbcode'=>'<a href="javascript:MM_openBrWindow(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> ligado',
+	'bbcode'=>'<a href="javascript:window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> ligado',
 	'can_not_copy'=>'não é possível copiar ficheiro do servidor',
 	'change_mail'=>'alterar o E-Mail',
 	'change_password'=>'alterar a password',
@@ -45,6 +46,7 @@ $language_array = Array(
 	'country'=>'País',
 	'cpu'=>'Processador',
 	'date_of_birth'=>'Data de Nascimento',
+	'deactivated'=>'desativado',
 	'delete_max_230_210'=>'eliminar (máx 230/210)',
 	'delete_max_90_90'=>'eliminar (máx 90/90)',
 	'e-mail'=>'E-mail',
@@ -57,7 +59,12 @@ $language_array = Array(
 	'first_name'=>'Primeiro nome',
 	'forgot_new_pw'=>'esqueceu-se de inserir uma password!',
 	'forgot_old_pw'=>'esqueceu-se de inserir a password antiga!',
+	'format_date'=>'Formato de data',
+	'format_time'=>'Formato da hora',
 	'graphiccard'=>'Placa gráfica',
+	'guestbook'=>'Livro de visitas',
+	'hdd'=>'Disco rígido',
+	'headset'=>'Fone',
 	'hide_e-mail'=>'Esconder E-mail?',
 	'homepage'=>'Website',
 	'html'=>'HTML desligado',
@@ -114,7 +121,7 @@ Obrigado pelo seu interesse
 	'repeated_pw_not_valid'=>'a sua password repetida não é válida!',
 	'sexuality'=>'Sexo',
 	'signature'=>'Assinatura',
-	'smilies'=>'<a href="javascript:MM_openBrWindow(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smiles</a> ligados',
+	'smilies'=>'<a href="javascript:window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smiles</a> ligados',
 	'soundcard'=>'Placa de Som',
 	'town'=>'Cidade',
 	'unknown'=>'não disponivel',

@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -45,6 +45,7 @@ $language_array = Array(
   'really_delete'=>'Really delete this FAQ?',
   'sort'=>'Sort',
   'to_sort'=>'sort',
-  'transaction_invalid'=>'Transaction ID invalid'
+  'transaction_invalid'=>'Transaction ID invalid',
+  'tags'=>'Tags'
 );
 ?>

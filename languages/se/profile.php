@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -57,6 +57,8 @@ $language_array = Array(
 	'galleries'=>'Gallerier',
 	'graphiccard'=>'Grafikkort',
 	'guestbook'=>'Gästbok',
+	'hdd'=>'Hårddisk',
+	'headset'=>'Headset',
 	'homepage'=>'Hemsida',
 	'hp'=>'HP',
 	'html_off'=>'HTML är AV',

@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -25,31 +25,40 @@
 ##########################################################################
 */
 
-$_language->read_module('login');
+$_language->readModule('login');
 
-if($loggedin) {
-	$username='<a href="index.php?site=profile&amp;id='.$userID.'"><b>'.strip_tags(getnickname($userID)).'</b></a>';
-	if(isanyadmin($userID)) $admin='&#8226; <a href="admin/admincenter.php" target="_blank">'.$_language->module['admin'].'</a><br />';
-	else $admin='';
-	if(isclanmember($userID) or iscashadmin($userID)) $cashbox='&#8226; <a href="index.php?site=cash_box">'.$_language->module['cash-box'].'</a><br />';
-	else $cashbox='';
-	$anz=getnewmessages($userID);
-	if($anz) {
-		$newmessages=' (<b>'.$anz.'</b>)';
-	}
-	else $newmessages='';
-	if($getavatar = getavatar($userID)) $l_avatar='<img src="images/avatars/'.$getavatar.'" alt="Avatar" />';
-	else $l_avatar=$_language->module['n_a'];
+if ($loggedin) {
+    $username =
+        '<a href="index.php?site=profile&amp;id=' . $userID . '"><b>' . strip_tags(getnickname($userID)) . '</b></a>';
+    if (isanyadmin($userID)) {
+        $admin = '<li class="divider"></li><li><a href="admin/admincenter.php" target="_blank" class="alert-danger">' .
+            $_language->module[ 'admin' ] . '</a></li>';
+    } else {
+        $admin = '';
+    }
+    if (isclanmember($userID) or iscashadmin($userID)) {
+        $cashbox = '<li><a href="index.php?site=cashbox" class="alert-danger">' . $_language->module[ 'cash-box' ] .
+            '</a></li><li class="divider"></li>';
+    } else {
+        $cashbox = '';
+    }
+    $anz = getnewmessages($userID);
+    if ($anz) {
+        $newmessages = $anz;
+    } else {
+        $newmessages = '';
+    }
+    if ($getavatar = getavatar($userID)) {
+        $l_avatar = '<img src="images/avatars/' . $getavatar . '" alt="Avatar">';
+    } else {
+        $l_avatar = $_language->module[ 'n_a' ];
+    }
 
-
-	eval ("\$logged = \"".gettemplate("logged")."\";");
-	echo $logged;
+    eval ("\$logged = \"" . gettemplate("logged") . "\";");
+    echo $logged;
+} else {
+    //set sessiontest variable (checks if session works correctly)
+    $_SESSION[ 'ws_sessiontest' ] = true;
+    eval ("\$loginform = \"" . gettemplate("login") . "\";");
+    echo $loginform;
 }
-else {
-	//set sessiontest variable (checks if session works correctly)
-	$_SESSION['ws_sessiontest'] = true;
-	eval ("\$loginform = \"".gettemplate("login")."\";");
-	echo $loginform;
-}
-
-?>

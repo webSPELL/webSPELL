@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2010 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -35,7 +35,7 @@ $language_array = Array(
   'faq'=>'وابسته',
   'faqs'=>'وابستگی به',
   'no_categories'=>'هیچ دسته بندی تا کنون ساخته نشده است',
-  'no_faq'=>'.هیچ سوالی موجود نیست<br /><a href="index.php?site=faq">برگشت</a>',
+  'no_faq'=>'.هیچ سوالی موجود نیست<br><a href="index.php?site=faq">برگشت</a>',
   'saved_on'=>'ذخیره کردن'
 );
 ?>

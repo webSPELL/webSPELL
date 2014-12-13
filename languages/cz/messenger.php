@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -54,7 +54,7 @@ $language_array = Array(
 	'no_incoming'=>'Žádná zpráva v příchozí poště.',
 	'no_outgoing'=>'Žádná zpráva v odeslané poště.',
 	'no_subject'=>'(bez předmětu)',
-	'not_logged'=>'Nejsi přihlášen.<br /><a href="index.php?site=login">Přihlásit se</a> | <a href="index.php?site=register">Registrovat se</a>',
+	'not_logged'=>'Nejsi přihlášen.<br><a href="index.php?site=login">Přihlásit se</a> | <a href="index.php?site=register">Registrovat se</a>',
 	'options'=>'Nastavení',
 	'outgoing'=>'Odeslané',
 	'read'=>'Číst',
@@ -73,7 +73,7 @@ $language_array = Array(
 	'title'=>'Předmět',
 	'your_message'=>'Tvoje zpráva:',
 	'mail_subject'=>'Máš novou PM',
-	'mail_body'=>'<b>Nazdar %nickname%!</b><br /><br />Dostal jsi novou zprávu na '.PAGETITLE.' (%hp_url%).<br />Klikni zde <a href="http://%hp_url%?site=messenger">here</a> a přečti si PM.<br /><br />(C) webSPELL.org',
+	'mail_body'=>'<b>Nazdar %nickname%!</b><br><br>Dostal jsi novou zprávu na '.PAGETITLE.' (%hp_url%).<br>Klikni zde <a href="http://%hp_url%?site=messenger">here</a> a přečti si PM.<br><br>(C) webSPELL.org',
 	'error'=>'error',
 	'unknown_user'=>'unknown user'
 );
