@@ -544,7 +544,12 @@ if ($action === "savewar") {
             sendmessage($id, $title, $message);
         }
     }
-    header("Location: index.php?site=calendar&tag=" . date("j", $date) . "&month=" . date("n", $date) . "&year=" . date("Y", $date));
+    header(
+        "Location: index.php?site=calendar&tag=" .
+        date("j", $date) . "&month=" .
+        date("n", $date) . "&year=" .
+        date("Y", $date)
+    );
 } elseif ($action === "delete") {
     include("_mysql.php");
     include("_settings.php");
@@ -645,7 +650,12 @@ if ($action === "savewar") {
             upID='" . (int)$_POST['upID']."'"
     );
 
-    header("Location: index.php?site=calendar&tag=" . date("j", $date_start) . "&month=" . date("n", $date_start) . "&year=" . date("Y", $date_start));
+    header(
+        "Location: index.php?site=calendar&tag=" .
+        date("j", $date_start) . "&month=" .
+        date("n", $date_start) . "&year=" .
+        date("Y", $date_start)
+    );
 } elseif ($action === "savedate") {
     include("_mysql.php");
     include("_settings.php");
@@ -684,7 +694,10 @@ if ($action === "savewar") {
             )"
     );
     redirect(
-        "index.php?site=calendar&amp;tag=" . date("j", $date_start) . "&amp;month=" . date("n", $date_start) . "&amp;year=" . date("Y", $date_start),
+        "index.php?site=calendar&amp;tag=" .
+        date("j", $date_start) . "&amp;month=" .
+        date("n", $date_start) . "&amp;year=" .
+        date("Y", $date_start),
         "",
         0
     );
@@ -731,7 +744,12 @@ if ($action === "savewar") {
             `upID` = '$upID' "
     );
 
-    header("Location: index.php?site=calendar&tag=" . date("j", $date) . "&month=" . date("n", $date) . "&year=" . date("Y", $date));
+    header(
+        "Location: index.php?site=calendar&tag=" .
+        date("j", $date) . "&month=" .
+        date("n", $date) . "&year=" .
+        date("Y", $date)
+    );
 } elseif ($action === "addwar") {
     $_language->readModule('calendar');
     if (isclanwaradmin($userID)) {
