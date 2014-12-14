@@ -26,18 +26,20 @@
 */
 
 $language_array = Array(
-	'back'=>'Vissza',
-	'delete_folder'=>'Biztonsági okokból töröld az <b>/install</b> mappát.',
-	'error'=>'HIBA',
-	'error_database'=>'<b>HIBA:</b><br> Nem lehet csatlakozni az adatbázishoz',
-	'error_mysql'=>'<b>HIBA:</b><br>Nincs MySQL kapcsolat',
-	'install_complete'=>'A telepítés befejeződött!',
-	'finish_install'=>'Telepítés Befejezése',
-	'folder_removed'=>'Az <b>/install</b> mappa sikeresen eltávolítva',
-	'reset_chmod'=>'A <b>_mysql.php</b> CHMOD-ját állítsd 644-re.',
-	'update_complete'=>'A Frissítés befejeződött!',
-	'verify_data'=>'Ellenőrizd a megadott adatokat!',
-	'view_site'=>'Nézd meg az oldalad',
-	'write_failed'=>'A beállítások mentése sikertelen. Biztosíts a webszerver számára írási jogosultságot a _mysql.php fájlhoz (CHMOD 777).'
+    'back' => 'Vissza',
+    'delete_folder' => 'Biztonsági okokból töröld az <b>/install</b> mappát.',
+    'error' => 'Hiba',
+    'error_database' => 'Nem lehet csatlakozni az adatbázishoz',
+    'error_mysql' => 'Nincs MySQL kapcsolat',
+    'install_complete' => 'A telepítés befejeződött!',
+    'finish_install' => 'Telepítés Befejezése',
+    'install_running' => 'Installation running!',
+    'folder_removed' => 'Az <b>/install</b> mappa sikeresen eltávolítva',
+    'reset_chmod' => 'A <b>_mysql.php</b> CHMOD-ját állítsd 644-re.',
+    'update_complete' => 'A Frissítés befejeződött!',
+    'update_running' => 'Update running!',
+    'verify_data' => 'Ellenőrizd a megadott adatokat!',
+    'view_site' => 'Nézd meg az oldalad',
+    'write_failed' => 'A beállítások mentése sikertelen. Biztosíts a webszerver számára írási jogosultságot a _mysql.php fájlhoz (CHMOD 777).'
 );
 ?>

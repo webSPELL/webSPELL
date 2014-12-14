@@ -26,22 +26,22 @@
 */
 
 $language_array = Array(
-	'available'=>'Vorhanden',
-	'check_chmod'=>'CHMOD Überprüfung',
-	'check_requirements'=>'Überprüfe Anforderungen',
-	'chmod_error'=>'<b>Der CHMOD konnte nicht gesetzt werden.</b><br>Bitte gebe den Ordnern CHMOD 777 und den Dateien CHMOD 766 manuell',
-	'mysql_error'=>'_mysql.php muss beschreibbar sein oder webSPELL kann nicht installiert werden.',
-	'mysql_support'=>'MySQL Unterstützung',
-	'multibyte_support'=>'MultiByte Unterstützung',
-	'no'=>'Nein',
-	'php_version'=>'PHP Version',
-	'set_chmod'=>'CHMOD setzen',
-	'setting_chmod'=>'CHMOD wird gesetzt...',
-	'stylesheet_error'=>'_stylesheet.css muss beschreibbar sein oder webSPELL läuft nicht korrekt.',
-	'successful'=>'Erfolgreich!',
-	'unavailable'=>'Nicht vorhanden',
-	'unwriteable'=>'Nicht Beschreibbar',
-	'writeable'=>'Beschreibbar',
-	'yes'=>'Ja'
+    'available' => 'Vorhanden',
+    'check_chmod' => 'CHMOD Überprüfung',
+    'check_requirements' => 'Überprüfe Anforderungen',
+    'chmod_error' => '<b>Der CHMOD konnte nicht gesetzt werden.</b><br>Bitte gebe den Ordnern CHMOD 777 und den Dateien CHMOD 766 manuell',
+    'mysql_error' => '_mysql.php muss beschreibbar sein oder webSPELL kann nicht installiert werden.',
+    'mysql_support' => 'MySQL Unterstützung',
+    'multibyte_support' => 'MultiByte Unterstützung',
+    'no' => 'Nein',
+    'php_version' => 'PHP Version',
+    'set_chmod' => 'CHMOD setzen',
+    'setting_chmod' => 'CHMOD wird gesetzt...',
+    'stylesheet_error' => '_stylesheet.css muss beschreibbar sein oder webSPELL läuft nicht korrekt.',
+    'successful' => 'Erfolgreich!',
+    'unavailable' => 'Nicht vorhanden',
+    'unwriteable' => 'Nicht Beschreibbar',
+    'writeable' => 'Beschreibbar',
+    'yes' => 'Ja'
 );
 ?>

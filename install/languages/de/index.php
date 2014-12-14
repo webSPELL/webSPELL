@@ -26,12 +26,12 @@
 */
 
 $language_array = Array(
-	'step0'=>'Start',
-	'step1'=>'Step1',
-	'step2'=>'Step2',
-	'step3'=>'Step3',
-	'step4'=>'Step4',
-	'step5'=>'Step5',
-	'step6'=>'Step6'
+    'step0' => 'Start',
+    'step1' => 'Step1',
+    'step2' => 'Step2',
+    'step3' => 'Step3',
+    'step4' => 'Step4',
+    'step5' => 'Step5',
+    'step6' => 'Step6'
 );
 ?>

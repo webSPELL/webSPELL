@@ -26,12 +26,12 @@
 */
 
 $language_array = Array(
-	'agree'=>'J\'accepte',
-	'agree_not'=>'Je refuse',
-	'gpl_info'=>'Pour installer webSPELL sur votre serveur, vous devez accepter là <br><a href="http://www.gnu.org/licenses/licenses.html" target="_blank">GNU GENERAL PUBLIC LICENCE</a>',
-	'licence'=>'Accord de la licence',
-	'more_info'=>'Obtenez plus d\'informations sur la licence sur <a href="http://www.webspell.org/index.php?site=license" target="_blank">webSPELL</a>',
-	'please_select'=>'Veuillez choisir',
-	'version'=>'Version'
+    'agree' => 'J\'accepte',
+    'agree_not' => 'Je refuse',
+    'gpl_info' => 'Pour installer webSPELL sur votre serveur, vous devez accepter là <br><a href="http://www.gnu.org/licenses/licenses.html" target="_blank">GNU GENERAL PUBLIC LICENCE</a>',
+    'licence' => 'Accord de la licence',
+    'more_info' => 'Obtenez plus d\'informations sur la licence sur <a href="http://www.webspell.org/index.php?site=license" target="_blank">webSPELL</a>',
+    'please_select' => 'Veuillez choisir',
+    'version' => 'Version'
 );
 ?>
