@@ -307,6 +307,22 @@ function isignored($userID, $buddy)
 
 $ds = mysqli_fetch_array(safe_query("SELECT * FROM " . PREFIX . "settings"));
 
+$jquery = $ds[ 'jquery' ];
+if (empty($jquery)) {
+    $jquery = 'components/jquery/dist/jquery.min.js';
+}
+$getBootstrapCss = $ds[ 'getbootstrapcss' ];
+if (empty($getBootstrapCss)) {
+    $getBootstrapCss = 'components/bootstrap/dist/css/bootstrap.min.css';
+}
+$getBootstrapJs = $ds[ 'getbootstrapjs' ];
+if (empty($getBootstrapJs)) {
+    $getBootstrapJs = 'components/bootstrap/dist/js/bootstrap.min.js';
+}
+$fontawesome = $ds[ 'fontawesome' ];
+if (empty($fontawesome)) {
+    $fontawesome = 'components/fontawesome/css/font-awesome.min.css';
+}
 $maxshownnews = $ds[ 'news' ];
 if (empty($maxshownnews)) {
     $maxshownnews = 10;

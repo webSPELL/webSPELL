@@ -38,7 +38,8 @@ echo '<!DOCTYPE html>
 	<meta name="copyright" content="Copyright 2005-2014 by webspell.org">
 	<meta name="generator" content="webSPELL">
 	<title>Smilies</title>
-    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?php echo $getBootstrapCss; ?>" rel="stylesheet">
+    <link href="<?php echo $fontawesome; ?>" rel="stylesheet">
 	<link href="_stylesheet.css" rel="stylesheet">
     <script src="js/bbcode.js"></script>
 </head>
