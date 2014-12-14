@@ -68,6 +68,7 @@ module.exports = function(grunt) {
 
     // Project configuration.
     grunt.initConfig({
+        pkg: grunt.file.readJSON("package.json"),
         lintspaces: {
             all: {
                 src: [
@@ -132,10 +133,19 @@ module.exports = function(grunt) {
                 ]
             }
         },
+        bump: {
+            options: {
+                files: ["package.json"],
+                createTag: false,
+                commit: false,
+                push: false,
+                globalReplace: false
+            }
+        },
         changelog: {
             release: {
                 options: {
-                    version: "4.3.0"
+                    version: "<%= pkg.version %>"
                 }
             }
         },
@@ -172,6 +182,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks("grunt-lintspaces");
     grunt.loadNpmTasks("grunt-text-replace");
     grunt.loadNpmTasks("grunt-templated-changelog");
+    grunt.loadNpmTasks("grunt-bump");
 
     grunt.registerTask("codecheck", [
         "lintspaces",
@@ -193,8 +204,22 @@ module.exports = function(grunt) {
         "jshint",
         "jscs"
     ]);
-    grunt.registerTask("release", [
-        "replace:copyright",
-        "changelog"
-    ]);
+    grunt.registerTask("release", "Creating a new webSPELL Release", function(releaseLevel) {
+        if (
+            arguments.length === 0 &&
+            (
+            releaseLevel !== "path" &&
+            releaseLevel !== "minor" &&
+            releaseLevel !== "major"
+            )
+        ) {
+            grunt.log.error("Specify if this is a release:path, release:minor or release:major");
+        } else {
+            grunt.task.run([
+                "bump:" + releaseLevel,
+                "replace:copyright",
+                "changelog"
+            ]);
+        }
+    });
 };
