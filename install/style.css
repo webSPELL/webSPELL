@@ -112,17 +112,17 @@ img {
     width: 48px;
 }
 
-a.tooltip, a.tooltip:link, a.tooltip:visited, a.tooltip:active {
+a.ws_tooltip, a.ws_tooltip:link, a.ws_tooltip:visited, a.ws_tooltip:active {
     position: relative;
     text-decoration: none;
 }
 
-a.tooltip span {
+a.ws_tooltip span {
     display: none;
     text-decoration: none;
 }
 
-a.tooltip:hover span {
+a.ws_tooltip:hover span {
     display: block;
     position: absolute;
     top: 0;

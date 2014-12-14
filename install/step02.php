@@ -72,7 +72,7 @@ if ($_POST['agree'] == "1") {
             } else {
                 echo $_language->module['enter_url'] . ':<br><br>
            http://<input type="text" name="hp_url" value="' . getwspath() . '" size="50">
-           <a class="tooltip" href="#"><img src="images/tooltip.png" alt="">
+           <a class="ws_tooltip" href="#"><img src="images/tooltip.png" alt="">
            <span>' . $_language->module['tooltip'] . '</span></a>
 
            <div align="right"><br><a href="javascript:document.ws_install.submit()"><img src="images/next.jpg" alt=""></a></div>';

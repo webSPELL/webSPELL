@@ -51,31 +51,31 @@ if ($_POST['installtype'] == "full" AND $_POST['hp_url']) {
             <tr>
                 <td><?php echo $_language->module['host_name']; ?>:</td>
                 <td><input type="text" name="host" size="30" value="localhost">
-                    <a class="tooltip" href="#"><img src="images/tooltip.png" alt="">
+                    <a class="ws_tooltip" href="#"><img src="images/tooltip.png" alt="">
                         <span><?php echo $_language->module['tooltip_1']; ?></span></a></td>
             </tr>
             <tr>
                 <td><?php echo $_language->module['mysql_username']; ?>:</td>
                 <td><input type="text" name="user" size="30">
-                    <a class="tooltip" href="#"><img src="images/tooltip.png" alt="">
+                    <a class="ws_tooltip" href="#"><img src="images/tooltip.png" alt="">
                         <span><?php echo $_language->module['tooltip_2']; ?></span></a></td>
             </tr>
             <tr>
                 <td><?php echo $_language->module['mysql_password']; ?>:</td>
                 <td><input type="password" name="pwd" size="30">
-                    <a class="tooltip" href="#"><img src="images/tooltip.png" alt="">
+                    <a class="ws_tooltip" href="#"><img src="images/tooltip.png" alt="">
                         <span><?php echo $_language->module['tooltip_3']; ?></span></a></td>
             </tr>
             <tr>
                 <td><?php echo $_language->module['mysql_database']; ?>:</td>
                 <td><input type="text" name="db" size="30">
-                    <a class="tooltip" href="#"><img src="images/tooltip.png" alt="">
+                    <a class="ws_tooltip" href="#"><img src="images/tooltip.png" alt="">
                         <span><?php echo $_language->module['tooltip_4']; ?></span></a></td>
             </tr>
             <tr>
                 <td><?php echo $_language->module['mysql_prefix']; ?>:</td>
                 <td><input name="prefix" type="text" value="<?php echo 'ws_' . RandPass(3) . '_'; ?>" size="10">
-                    <a class="tooltip" href="#"><img src="images/tooltip.png" alt="">
+                    <a class="ws_tooltip" href="#"><img src="images/tooltip.png" alt="">
                         <span><?php echo $_language->module['tooltip_5']; ?></span></a></td>
             </tr>
             <tr>
@@ -84,19 +84,19 @@ if ($_POST['installtype'] == "full" AND $_POST['hp_url']) {
             <tr>
                 <td><?php echo $_language->module['admin_username']; ?>:</td>
                 <td><input type="text" name="adminname" size="30">
-                    <a class="tooltip" href="#"><img src="images/tooltip.png" alt="">
+                    <a class="ws_tooltip" href="#"><img src="images/tooltip.png" alt="">
                         <span><?php echo $_language->module['tooltip_6']; ?></span></a></td>
             </tr>
             <tr>
                 <td><?php echo $_language->module['admin_password']; ?>:</td>
                 <td><input type="password" name="adminpwd" size="30">
-                    <a class="tooltip" href="#"><img src="images/tooltip.png" alt="">
+                    <a class="ws_tooltip" href="#"><img src="images/tooltip.png" alt="">
                         <span><?php echo $_language->module['tooltip_7']; ?></span></a></td>
             </tr>
             <tr>
                 <td><?php echo $_language->module['admin_email']; ?>:</td>
                 <td><input type="text" name="adminmail" size="30">
-                    <a class="tooltip" href="#"><img src="images/tooltip.png" alt="">
+                    <a class="ws_tooltip" href="#"><img src="images/tooltip.png" alt="">
                         <span><?php echo $_language->module['tooltip_8']; ?></span></a></td>
             </tr>
         </table>
