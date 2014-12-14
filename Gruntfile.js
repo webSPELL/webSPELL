@@ -65,8 +65,10 @@ module.exports = function(grunt) {
             ]
         },
         phplint: {
-            good: [ phps ]
-            //bad: ["admin/fail*.php"]
+            good: [
+                phps,
+                excludes
+            ]
         },
         phpcs: {
             application: {
