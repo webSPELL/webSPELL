@@ -100,10 +100,10 @@ $host = ' . var_export($host, true) . ';
 $user = ' . var_export($user, true) . ';
 $pwd = ' . var_export($pwd, true) . ';
 $db = ' . var_export($db, true) . ';
-if(!defined("PREFIX")){
-  define("PREFIX", ' . var_export(PREFIX, true) . ');
+if (!defined("PREFIX")) {
+    define("PREFIX", ' . var_export(PREFIX, true) . ');
 }
-?>';
+';
     $ret = file_put_contents('../_mysql.php', $new_content);
     if ($ret === false) {
         echo $_language->module['write_failed'];
