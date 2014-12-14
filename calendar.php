@@ -36,11 +36,6 @@ function print_calendar($mon, $year)
 {
     global $dates, $first_day, $start_day, $_language;
 
-    $pagebg = PAGEBG;
-    $border = BORDER;
-    $bghead = BGHEAD;
-    $bgcat = BGCAT;
-
     $first_day = mktime(0, 0, 0, $mon, 1, $year);
     $start_day = date("w", $first_day);
     if ($start_day == 0) {
@@ -131,18 +126,18 @@ function print_calendar($mon, $year)
 
     echo '<a name="event"></a><table class="table table-bordered">
     <tr>
-      <td class="title" align="center">&laquo; <a class="titlelink" href="index.php?site=calendar&amp;month=' . $prev .
-        '&amp;year=' . $prev_yr . '">' .
-        mb_substr($_language->module[ strtolower(date('M', mktime(0, 0, 0, $prev, 1, $prev_yr))) ], 0, 3) . '</a></td>
-      <td class="title" align="center" colspan="5">' . $_language->module[ strtolower(date("M", $first_day)) ] . ' ' .
-        $temp_yr . '</td>
-      <td class="title" align="center"><a class="titlelink" href="index.php?site=calendar&amp;month=' . $next .
+      <th class="text-center"><a class="titlelink" href="index.php?site=calendar&amp;month=' . $prev .
+        '&amp;year=' . $prev_yr . '">&laquo; ' .
+        mb_substr($_language->module[ strtolower(date('M', mktime(0, 0, 0, $prev, 1, $prev_yr))) ], 0, 3) . '</a></th>
+      <th class="text-center" colspan="5">' . $_language->module[ strtolower(date("M", $first_day)) ] . ' ' .
+        $temp_yr . '</th>
+      <th class="text-center"><a class="titlelink" href="index.php?site=calendar&amp;month=' . $next .
         '&amp;year=' . $next_yr . '">' . mb_substr(
             $_language->module[ strtolower(date('M', mktime(0, 0, 0, $next, 1, $next_yr))) ],
             0,
             3
         )
-        . '</a> &raquo;</td>
+        . ' &raquo;</a></th>
     </tr>
     <tr>
       <td width="14%" align="center">' . $_language->module[ 'mon' ] . '</td>
@@ -365,11 +360,6 @@ function print_termine($tag, $month, $year)
                     } else {
                         $players = $_language->module[ 'access_member' ];
                     }
-
-                    $bg1 = BG_1;
-                    $bg2 = BG_2;
-                    $bg3 = BG_3;
-                    $bg4 = BG_4;
 
                     eval ("\$upcoming_war_details = \"" . gettemplate("upcoming_war_details") . "\";");
                     echo $upcoming_war_details;
