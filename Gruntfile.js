@@ -68,6 +68,7 @@ module.exports = function(grunt) {
 
     // Project configuration.
     grunt.initConfig({
+        pkg: grunt.file.readJSON("package.json"),
         lintspaces: {
             all: {
                 src: [
@@ -130,12 +131,25 @@ module.exports = function(grunt) {
                         to: "Copyright 2005-<%= grunt.template.today('yyyy') %> by webspell.org"
                     }
                 ]
+            },
+            version: {
+                src: [
+                    "version.php"
+                ],
+                overwrite: true,
+                replacements: [
+                    {
+                        from: /(\$version = ").+(";)/g,
+                        to: "$version = \"<%= pkg.version %>\";"
+                    }
+                ]
+
             }
         },
         changelog: {
             release: {
                 options: {
-                    version: "4.3.0"
+                    version: "<%= pkg.version %>"
                 }
             }
         },
@@ -172,6 +186,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks("grunt-lintspaces");
     grunt.loadNpmTasks("grunt-text-replace");
     grunt.loadNpmTasks("grunt-templated-changelog");
+    grunt.loadNpmTasks("grunt-bump");
 
     grunt.registerTask("codecheck", [
         "lintspaces",
@@ -193,8 +208,58 @@ module.exports = function(grunt) {
         "jshint",
         "jscs"
     ]);
-    grunt.registerTask("release", [
-        "replace:copyright",
-        "changelog"
-    ]);
+    grunt.registerTask("release", "Creating a new webSPELL Release", function(releaseLevel) {
+        if (
+            arguments.length === 0 &&
+            (
+            releaseLevel !== "path" &&
+            releaseLevel !== "minor" &&
+            releaseLevel !== "major"
+            )
+        ) {
+            grunt.log.error("Specify if this is a release:path, release:minor or release:major");
+        } else {
+            grunt.task.run([
+                "bumpOnly:" + releaseLevel,
+                "replace:copyright",
+                "replace:version",
+                "changelog",
+                "bumpCommit:" + releaseLevel
+            ]);
+        }
+    });
+    grunt.registerTask("bumpOnly", function() {
+        grunt.config("bump", {
+            options: {
+                files: [ "package.json" ],
+                createTag: false,
+                commit: false,
+                push: false,
+                globalReplace: false
+            }
+        });
+        return grunt.task.run("bump");
+    });
+    grunt.registerTask("bumpCommit", function() {
+        grunt.config("bump", {
+            options: {
+                files: [],
+                updateConfigs: [],
+                commit: true,
+                commitMessage: "Release v<%= pkg.version %>",
+                commitFiles: [
+                    "package.json",
+                    "CHANGES.md"
+                ],
+                createTag: true,
+                tagName: "v<%= pkg.version %>",
+                tagMessage: "Version <%= pkg.version %>",
+                push: false,
+                pushTo: "origin",
+                gitDescribeOptions: "--tags --always --abbrev=1 --dirty=-d",
+                globalReplace: false
+            }
+        });
+        return grunt.task.run("bump");
+    });
 };
