@@ -148,7 +148,7 @@ module.exports = function(grunt) {
         },
         bump: {
             options: {
-                files: ["package.json"],
+                files: [ "package.json" ],
                 createTag: false,
                 commit: false,
                 push: false,
