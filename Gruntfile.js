@@ -180,19 +180,19 @@ module.exports = function(grunt) {
         "phplint",
         "phpcs"
     ]);
-
     grunt.registerTask("codecheck_circle", [
         "lintspaces",
         "jshint",
         "jscs",
         "phpcs"
     ]);
-
+    grunt.registerTask("test", [
+        "codecheck"
+    ]);
     grunt.registerTask("js", [
         "jshint",
         "jscs"
     ]);
-
     grunt.registerTask("release", [
         "replace:copyright"
     ]);
