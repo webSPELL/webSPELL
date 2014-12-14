@@ -24,6 +24,8 @@
 #                                                                        #
 ##########################################################################
 */
+session_name("ws_session");
+session_start();
 include('functions.php');
 include("../src/func/language.php");
 include("../src/func/user.php");
