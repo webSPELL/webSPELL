@@ -146,15 +146,6 @@ module.exports = function(grunt) {
 
             }
         },
-        bump: {
-            options: {
-                files: [ "package.json" ],
-                createTag: false,
-                commit: false,
-                push: false,
-                globalReplace: false
-            }
-        },
         changelog: {
             release: {
                 options: {
@@ -229,11 +220,46 @@ module.exports = function(grunt) {
             grunt.log.error("Specify if this is a release:path, release:minor or release:major");
         } else {
             grunt.task.run([
-                "bump:" + releaseLevel,
+                "bumpOnly:" + releaseLevel,
                 "replace:copyright",
                 "replace:version",
-                "changelog"
+                "changelog",
+                "bumpCommit:" + releaseLevel
             ]);
         }
+    });
+    grunt.registerTask("bumpOnly", function() {
+        grunt.config("bump", {
+            options: {
+                files: [ "package.json" ],
+                createTag: false,
+                commit: false,
+                push: false,
+                globalReplace: false
+            }
+        });
+        return grunt.task.run("bump");
+    });
+    grunt.registerTask("bumpCommit", function() {
+        grunt.config("bump", {
+            options: {
+                files: [],
+                updateConfigs: [],
+                commit: true,
+                commitMessage: "Release v%VERSION%",
+                commitFiles: [
+                    "package.json",
+                    "CHANGES.md"
+                ],
+                createTag: true,
+                tagName: "v%VERSION%",
+                tagMessage: "Version %VERSION%",
+                push: false,
+                pushTo: "origin",
+                gitDescribeOptions: "--tags --always --abbrev=1 --dirty=-d",
+                globalReplace: false
+            }
+        });
+        return grunt.task.run("bump");
     });
 };
