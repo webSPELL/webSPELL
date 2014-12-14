@@ -131,6 +131,19 @@ module.exports = function(grunt) {
                         to: "Copyright 2005-<%= grunt.template.today('yyyy') %> by webspell.org"
                     }
                 ]
+            },
+            version: {
+                src: [
+                    "version.php"
+                ],
+                overwrite: true,
+                replacements: [
+                    {
+                        from: /(\$version = ").+(";)/g,
+                        to: "$version = \"<%= pkg.version %>\";"
+                    }
+                ]
+
             }
         },
         bump: {
@@ -218,6 +231,7 @@ module.exports = function(grunt) {
             grunt.task.run([
                 "bump:" + releaseLevel,
                 "replace:copyright",
+                "replace:version",
                 "changelog"
             ]);
         }

@@ -25,5 +25,5 @@
 ##########################################################################
 */
 
-$package = json_decode(file_get_contents("package.json"));
-$version = $package->version;
+$version = "4.2.3";
+
