@@ -5,31 +5,34 @@
     <div class="panel-body">
         <form action="calendar.php?action=saveeditdate" method="post" onsubmit="return chkFormular()">
             <div class="form-group">
-                <label for="starttime_date" class="col-xs-12 control-label">%start_datetime%</label>
+                <label for="date_start" class="col-xs-12 control-label">%start_datetime%</label>
+
                 <div class="col-xs-12">
-                    <input type="date" name="starttime_date" id="starttime_date" value="$starttime_date"
-                       class="form-control" required>
-                    <input type="time" name="starttime_time" value="$starttime_time" class="form-control" required>
+                    <input type="datetime-local" name="date_start" id="date_start" value="$date_start"
+                           class="form-control" required>
                 </div>
 
-                <label for="endtime_date" class="col-xs-12 control-label">%end_datetime%</label>
+                <label for="date_end" class="col-xs-12 control-label">%end_datetime%</label>
+
                 <div class="col-xs-12">
-                    <input type="date" name="endtime_date" id="endtime_date" value="$endtime_date"
-                        class="form-control" required>
-                    <input type="time" name="endtime_time" value="$endtime_time"
-                        class="form-control" required>
+                    <input type="datetime-local" name="date_end" id="date_end" value="$date_end"
+                           class="form-control" required>
                 </div>
             </div>
 
             <div class="form-group">
                 <label for="short" class="col-xs-12 control-label">
-                    %shorttitle% (<small>%displayed_in%</small>)
+                    %shorttitle% (
+                    <small>%displayed_in%</small>
+                    )
                 </label>
+
                 <div class="col-xs-12">
                     <input name="short" id="short" type="text" value="$short" class="form-control" required>
                 </div>
 
                 <label for="title" class="col-xs-12 control-label">%longtitle%</label>
+
                 <div class="col-xs-12">
                     <input name="title" id="title" type="text" value="$title" class="form-control" required>
                 </div>
@@ -37,6 +40,7 @@
 
             <div class="form-group">
                 <label for="country" class="col-xs-12 control-label">%location%</label>
+
                 <div class="col-xs-12">
                     <select name="country" id="country" class="form-control">$countries</select>
                 </div>
@@ -47,15 +51,17 @@
 
             <div class="form-group">
                 <label for="locationhp" class="col-xs-12 control-label">%homepage%</label>
+
                 <div class="col-xs-12">
                     <input name="locationhp" id="locationhp" type="text" value="$locationhp" class="form-control">
                 </div>
 
                 <div class="form-group">
                     <label for="dateinfo" class="col-xs-12 control-label">%information%</label>
+
                     <div class="col-xs-12">
                         <textarea name="message" id="dateinfo" cols="45" rows="7" class="form-control">
-                            $dateinfo
+$dateinfo
                         </textarea>
                     </div>
                 </div>
