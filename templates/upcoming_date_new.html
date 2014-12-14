@@ -1,98 +1,71 @@
-<script>
-	<!--
-	function chkFormular() {
-		if (document.getElementById('short').value === "") {
-			alert("%enter_short%");
-			document.getElementById('short').focus();
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">%new_date%</h3>
+    </div>
+    <div class="panel-body">
+        <form action="calendar.php?action=savedate" method="post" name="post" onsubmit="return chkFormular()">
 
-			return false;
-		}
+            <div class="form-group">
+                <label for="date_start" class="col-xs-12 control-label">%start_datetime%</label>
+                <div class="col-xs-12">
+                    <input type="date" name="date_start" id="date_start" placeholder="yyyy-mm-dd" class="form-control">
+                </div>
+                <div class="col-xs-12">
+                    <input type="time" placeholder="hh:mm" name="time_start" class="form-control">
+                </div>
 
-		if (document.getElementById('title').value === "") {
-			alert("%enter_title%");
-			document.getElementById('title').focus();
+                <label for="date_end" class="col-xs-12 control-label">%end_datetime%</label>
+                <div class="col-xs-12">
+                    <input type="date" name="date_end" id="date_end" placeholder="yyyy-mm-dd" class="form-control">
+                </div>
+                <div class="col-xs-12">
+                    <input type="time" placeholder="hh:mm" name="time_end" class="form-control">
+                </div>
+            </div>
 
-			return false;
-		}
 
-		if (document.getElementById('dateinfo').value == "") {
-			alert("%enter_info%");
-			document.getElementById('dateinfo').focus();
+            <div class="form-group">
+                <label for="short" class="col-xs-12 control-label">%shorttitle% <small>(%displayed_in%)</small></label>
+                <div class="col-xs-12">
+                    <input name="short" id="short" type="text" class="form-control" required>
+                </div>
 
-			return false;
-		}
-		if (!validbbcode(document.getElementById('dateinfo').value)) {
+                <label for="title" class="col-xs-12 control-label">%longtitle%</label>
+                <div class="col-xs-12">
+                    <input name="title" id="title" type="text" class="form-control" required>
+                </div>
+            </div>
 
-			return false;
-		}
-	}
-	-->
-</script>
-<form action="calendar.php?action=savedate" method="post" name="post"
-		onsubmit="return chkFormular()">
-	<table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="$border">
-		<tr>
-			<td class="title" align="center" bgcolor="$bghead">%new_date%</td>
-		</tr>
-		<tr>
-			<td bgcolor="$pagebg"></td>
-		</tr>
-		<tr>
-			<td bgcolor="$bg1">
-				<table border="0" align="center" cellpadding="2" cellspacing="0">
-					<tr>
-						<td align="right">%start_datetime%</td>
-						<td><select name="day">$day</select>
-							<select name="month">$month</select>
-							<select name="year">$year</select>
-							-
-							<input name="hour" type="text" value="20" size="3">
-							:
-							<input name="minute" type="text" value="00" size="3"></td>
-					</tr>
-					<tr>
-						<td align="right">%end_datetime%</td>
-						<td><select name="endday">$day</select>
-							<select name="endmonth">$month</select>
-							<select name="endyear">$year</select>
-							-
-							<input name="endhour" type="text" value="20" size="3">
-							:
-							<input name="endminute" type="text" value="00" size="3"></td>
-					</tr>
-					<tr>
-						<td align="right">%shorttitle%</td>
-						<td><input name="short" id="short" type="text" size="35">
-							<small>%displayed_in%</small>
-						</td>
-					</tr>
-					<tr>
-						<td align="right">%longtitle%</td>
-						<td><input name="title" id="title" type="text" size="35"></td>
-					</tr>
-					<tr>
-						<td align="right">%location%</td>
-						<td><select name="country">$countries</select>
-							<input name="location" type="text"></td>
-					</tr>
-					<tr>
-						<td align="right">%homepage%</td>
-						<td><input name="locationhp" type="text" value="http://" size="35"></td>
-					</tr>
-					<tr>
-						<td align="right" valign="top">%information%</td>
-						<td><textarea name="message" id="dateinfo" cols="40" rows="7"></textarea>
-						</td>
-					</tr>
-					<tr>
-						<td align="right">&nbsp;</td>
-					</tr>
-					<tr>
-						<td>&nbsp;</td>
-						<td><input name="post" type="submit" value="%save_event%"></td>
-					</tr>
-				</table>
-			</td>
-		</tr>
-	</table>
-</form>
+
+            <div class="form-group">
+                <label for="country" class="col-xs-12 control-label">%location%</label>
+                <div class="col-xs-12">
+                    <select name="country" id="country" class="form-control">$countries</select>
+                </div>
+                <div class="col-xs-12">
+                    <input name="location" type="text" class="form-control">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="locationhp" class="col-xs-12 control-label">%homepage%</label>
+                <div class="col-xs-12">
+                    <input name="locationhp" id="locationhp" type="text" value="http://" class="form-control">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="dateinfo" class="col-xs-12 control-label">%information%</label>
+                <div class="col-xs-12">
+                    <textarea name="message" id="dateinfo" cols="40" rows="7" class="form-control" required></textarea>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-xs-12">
+                    <input name="post" type="submit" value="%save_event%" class="btn btn-primary btn-sm">
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
