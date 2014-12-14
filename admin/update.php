@@ -41,7 +41,7 @@ include('../version.php');
 
 if (!isset($_GET[ 'action' ])) {
     if (!$getnew = file_get_contents($updateserver . "index.php?show=version")) {
-        echo '<i><b>' . $_language- >module[ 'error' ] . '&nbsp;' . $updateserver . '.</b></i>';
+        echo '<i><b>' . $_language->module[ 'error' ] . '&nbsp;' . $updateserver . '.</b></i>';
     } else {
 
         $latest = explode(".", $getnew);
