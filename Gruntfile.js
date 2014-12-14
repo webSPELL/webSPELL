@@ -246,14 +246,14 @@ module.exports = function(grunt) {
                 files: [],
                 updateConfigs: [],
                 commit: true,
-                commitMessage: "Release v%VERSION%",
+                commitMessage: "Release v<%= pkg.version %>",
                 commitFiles: [
                     "package.json",
                     "CHANGES.md"
                 ],
                 createTag: true,
-                tagName: "v%VERSION%",
-                tagMessage: "Version %VERSION%",
+                tagName: "v<%= pkg.version %>",
+                tagMessage: "Version <%= pkg.version %>",
                 push: false,
                 pushTo: "origin",
                 gitDescribeOptions: "--tags --always --abbrev=1 --dirty=-d",
