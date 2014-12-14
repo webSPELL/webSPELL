@@ -27,8 +27,8 @@ function handleJob(job, done_count, all_count, todo) {
             install_failed()
         }
         else {
-            job = todo.shift();
-            if (job) {
+            if (done_count < all_count) {
+            	job = todo.shift();
                 handleJob(job, done_count, all_count, todo);
             }
             else {
@@ -48,5 +48,5 @@ function install_successful() {
     $('#details_text').append('<font color="green">Install successful</font>');
     $('#progress_bar').addClass('progress-bar-success');
     scroll_down();
-    $('#result').css('display', '');
+    $('#result').css('display', 'block');
 }
