@@ -127,7 +127,7 @@ module.exports = function(grunt) {
                 overwrite: true,
                 replacements: [
                     {
-                        from: /(Copyright).+(webspell.org)/g,
+                        from: /Copyright [0-9]{4}-[0-9]{4} by webspell.org/g,
                         to: "Copyright 2005-<%= grunt.template.today('yyyy') %> by webspell.org"
                     }
                 ]
