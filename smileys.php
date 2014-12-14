@@ -37,10 +37,11 @@ echo '<!DOCTYPE html>
 	<meta name="keywords" content="webspell, webspell4, clan, cms">
 	<meta name="copyright" content="Copyright 2005-2014 by webspell.org">
 	<meta name="generator" content="webSPELL">
-	<title>Smilies</title>
-    <link href="<?php echo $getBootstrapCss; ?>" rel="stylesheet">
-    <link href="<?php echo $fontawesome; ?>" rel="stylesheet">
-	<link href="_stylesheet.css" rel="stylesheet">
+	<title>Smilies</title>';
+    foreach($components['css'] as $component) {
+        echo '<link href="' . $component . '" rel="stylesheet">';
+    }
+	echo '<link href="_stylesheet.css" rel="stylesheet">
     <script src="js/bbcode.js"></script>
 </head>
 

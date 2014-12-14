@@ -12,8 +12,7 @@
 	<!-- Head & Title include -->
 	<title>%edit_clanwar%</title>
 	<base href="$rewriteBase">
-	<link href="$getBootstrapCss" rel="stylesheet">
-	<link href="$fontawesome" rel="stylesheet">
+	$componentsCss
 	<!-- end Head & Title include -->
 </head>
 <body>
@@ -164,9 +163,7 @@
 		</tr>
 	</table>
 </form>
-<script src="$jquery"></script>
-<script src="$getBootstrapJs"></script>
-<script src="components/webshim/js-webshim/minified/polyfiller.js"></script>
+$componentsJs
 <script>
 webshim.setOptions('basePath', 'components/webshim/js-webshim/minified/shims/');
 //request the features you need:

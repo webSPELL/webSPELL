@@ -12,13 +12,8 @@
 	<!-- Head & Title include -->
 	<title>%new_post%</title>
 	<base href="$rewriteBase">
-	<link href="$getBootstrapCss" rel="stylesheet">
-	<link href="$fontawesome" rel="stylesheet">
+	$componentsCss
 
-	<script src="$jquery"></script>
-	<script src="$getBootstrapJs"></script>
-
-	<script src="js/bbcode.js"></script>
 	<!-- end Head & Title include -->
 	<script>
 		<!--
@@ -337,5 +332,7 @@
 		</tr>
 	</table>
 </form>
+$componentsJs
+<script src="js/bbcode.js"></script>
 </body>
 </html>

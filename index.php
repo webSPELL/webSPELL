@@ -50,8 +50,10 @@ header('X-UA-Compatible: IE=edge,chrome=1');
     <!-- Head & Title include -->
     <title><?php echo PAGETITLE; ?></title>
     <base href="<?php echo $rewriteBase; ?>">
-    <link href="<?php echo $getBootstrapCss; ?>" rel="stylesheet">
-    <link href="<?php echo $fontawesome; ?>" rel="stylesheet">
+    <?php foreach($components['css'] as $component) {
+        echo '<link href="' . $component . '" rel="stylesheet">';
+    }
+    ?>
     <link href="_stylesheet.css" rel="stylesheet">
     <link href="tmp/rss.xml" rel="alternate" type="application/rss+xml" title="<?php
     echo getinput($myclanname);
@@ -263,9 +265,10 @@ header('X-UA-Compatible: IE=edge,chrome=1');
         </div>
     </div>
 </div>
-<script src="<?php echo $jquery; ?>"></script>
-<script src="<?php echo $getBootstrapJs; ?>"></script>
-<script src="components/webshim/js-webshim/minified/polyfiller.js"></script>
+<?php foreach($components['js'] as $component) {
+    echo '<script src="' . $component . '"></script>';
+}
+?>
 <script>
     webshim.setOptions('basePath', 'components/webshim/js-webshim/minified/shims/');
     //request the features you need:

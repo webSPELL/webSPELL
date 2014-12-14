@@ -306,7 +306,16 @@ if ($action == "new") {
 
         $pages = 1;
 
-        $bg1 = BG_1;
+        $componentsCss = '';
+        foreach($components['css'] as $component) {
+            $componentsCss .= '<link href="' . $component . '" rel="stylesheet">';
+        }
+
+        $componentsJs = '';
+        foreach($components['js'] as $component) {
+            $componentsJs .= '<script src="' . $component . '"></script>';
+        }
+
         eval ("\$addbbcode = \"" . gettemplate("addbbcode") . "\";");
         eval ("\$addflags = \"" . gettemplate("flags") . "\";");
 
@@ -429,14 +438,22 @@ if ($action == "new") {
         $comments = '<option value="0">' . $_language->module[ 'no_comments' ] . '</option><option value="1">' .
             $_language->module[ 'user_comments' ] . '</option><option value="2">' .
             $_language->module[ 'visitor_comments' ] . '</option>';
-        $comments =
-            str_replace(
-                'value="' . $ds[ 'comments' ] . '"',
-                'value="' . $ds[ 'comments' ] . '" selected="selected"',
-                $comments
-            );
+        $comments = str_replace(
+            'value="' . $ds[ 'comments' ] . '"',
+            'value="' . $ds[ 'comments' ] . '" selected="selected"',
+            $comments
+        );
 
-        $bg1 = BG_1;
+        $componentsCss = '';
+        foreach($components['css'] as $component) {
+            $componentsCss .= '<link href="' . $component . '" rel="stylesheet">';
+        }
+
+        $componentsJs = '';
+        foreach($components['js'] as $component) {
+            $componentsJs .= '<script src="' . $component . '"></script>';
+        }
+
         eval ("\$addbbcode = \"" . gettemplate("addbbcode") . "\";");
         eval ("\$addflags = \"" . gettemplate("flags") . "\";");
 
