@@ -123,12 +123,12 @@ if ($action == "new") {
         }
 
         $componentsCss = '';
-        foreach($components['css'] as $component) {
+        foreach ($components['css'] as $component) {
             $componentsCss .= '<link href="' . $component . '" rel="stylesheet">';
         }
 
         $componentsJs = '';
-        foreach($components['js'] as $component) {
+        foreach ($components['js'] as $component) {
             $componentsJs .= '<script src="' . $component . '"></script>';
         }
 
@@ -603,12 +603,12 @@ if ($action == "new") {
         );
 
         $componentsCss = '';
-        foreach($components['css'] as $component) {
+        foreach ($components['css'] as $component) {
             $componentsCss .= '<link href="' . $component . '" rel="stylesheet">';
         }
 
         $componentsJs = '';
-        foreach($components['js'] as $component) {
+        foreach ($components['js'] as $component) {
             $componentsJs .= '<script src="' . $component . '"></script>';
         }
 
