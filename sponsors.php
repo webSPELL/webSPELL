@@ -35,17 +35,17 @@ if (mysqli_num_rows($ergebnis)) {
     $i = 1;
     while ($ds = mysqli_fetch_array($ergebnis)) {
 
-        $url = str_replace('http://', '', $ds[ 'url' ]);
-        $sponsor = '<a href="out.php?sponsorID=' . $ds[ 'sponsorID' ] . '" target="_blank">' . $ds[ 'name' ] . '</a>';
-        $link = '<a href="out.php?sponsorID=' . $ds[ 'sponsorID' ] . '" target="_blank">' . $url . '</a>';
-        $info = cleartext($ds[ 'info' ]);
-        $banner = '<a href="out.php?sponsorID=' . $ds[ 'sponsorID' ] . '" target="_blank"><img src="images/sponsors/' .
-            $ds[ 'banner' ] . '" alt="' . htmlspecialchars($ds[ 'name' ]) . '" class="img-responsive"></a>';
+        $url = str_replace('http://', '', $ds['url']);
+        $sponsor = '<a href="out.php?sponsorID=' . $ds['sponsorID'] . '" target="_blank">' . $ds['name'] . '</a>';
+        $link = '<a href="out.php?sponsorID=' . $ds['sponsorID'] . '" target="_blank">' . $url . '</a>';
+        $info = cleartext($ds['info']);
+        $banner = '<a href="out.php?sponsorID=' . $ds['sponsorID'] . '" target="_blank"><img src="images/sponsors/' .
+            $ds['banner'] . '" alt="' . htmlspecialchars($ds['name']) . '" class="img-responsive"></a>';
 
         eval ("\$sponsors = \"" . gettemplate("sponsors") . "\";");
         echo $sponsors;
         $i++;
     }
 } else {
-    echo '<div class="alert alert-info" role="alert">' . $_language->module[ 'no_sponsors' ] . '</div>';
+    echo generateAlert($_language->module['no_sponsors'], 'alert-info');
 }

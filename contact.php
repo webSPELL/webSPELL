@@ -32,47 +32,47 @@ if (isset($site)) {
 eval ("\$title_contact = \"" . gettemplate("title_contact") . "\";");
 echo $title_contact;
 
-if (isset($_POST[ "action" ])) {
-    $action = $_POST[ "action" ];
+if (isset($_POST["action"])) {
+    $action = $_POST["action"];
 } else {
     $action = '';
 }
 
 if ($action == "send") {
-    $getemail = $_POST[ 'getemail' ];
-    $subject = $_POST[ 'subject' ];
-    $text = $_POST[ 'text' ];
+    $getemail = $_POST['getemail'];
+    $subject = $_POST['subject'];
+    $text = $_POST['text'];
     $text = str_replace('\r\n', "\n", $text);
-    $name = $_POST[ 'name' ];
-    $from = $_POST[ 'from' ];
+    $name = $_POST['name'];
+    $from = $_POST['from'];
     $run = 0;
 
     $fehler = [];
     if (!(mb_strlen(trim($name)))) {
-        $fehler[ ] = $_language->module[ 'enter_name' ];
+        $fehler[] = $_language->module['enter_name'];
     }
 
     if (!validate_email($from)) {
-        $fehler[ ] = $_language->module[ 'enter_mail' ];
+        $fehler[] = $_language->module['enter_mail'];
     }
     if (!(mb_strlen(trim($subject)))) {
-        $fehler[ ] = $_language->module[ 'enter_subject' ];
+        $fehler[] = $_language->module['enter_subject'];
     }
     if (!(mb_strlen(trim($text)))) {
-        $fehler[ ] = $_language->module[ 'enter_message' ];
+        $fehler[] = $_language->module['enter_message'];
     }
 
     $ergebnis = safe_query("SELECT * FROM " . PREFIX . "contact WHERE email='" . $getemail . "'");
     if (mysqli_num_rows($ergebnis) == 0) {
-        $fehler[ ] = $_language->module[ 'unknown_receiver' ];
+        $fehler[] = $_language->module['unknown_receiver'];
     }
 
     if ($userID) {
         $run = 1;
     } else {
         $CAPCLASS = new \webspell\Captcha;
-        if (!$CAPCLASS->checkCaptcha($_POST[ 'captcha' ], $_POST[ 'captcha_hash' ])) {
-            $fehler[ ] = $_language->module[ 'wrong_securitycode' ];
+        if (!$CAPCLASS->checkCaptcha($_POST['captcha'], $_POST['captcha_hash'])) {
+            $fehler[] = $_language->module['wrong_securitycode'];
         } else {
             $run = 1;
         }
@@ -86,38 +86,30 @@ if ($action == "send") {
             $getemail,
             stripslashes($subject),
             stripslashes(
-                'This mail was send over your webSPELL - Website (IP ' . $GLOBALS[ 'ip' ] . '): ' . $hp_url .
+                'This mail was send over your webSPELL - Website (IP ' . $GLOBALS['ip'] . '): ' . $hp_url .
                 '<br><br><strong>' . getinput($name) . ' writes:</strong><br>' . clearfromtags($text)
             ),
             $header
         );
-        redirect('index.php?site=contact', $_language->module[ 'send_successfull' ], 3);
-        unset($_POST[ 'name' ]);
-        unset($_POST[ 'from' ]);
-        unset($_POST[ 'text' ]);
-        unset($_POST[ 'subject' ]);
+        redirect('index.php?site=contact', $_language->module['send_successfull'], 3);
+        unset($_POST['name']);
+        unset($_POST['from']);
+        unset($_POST['text']);
+        unset($_POST['subject']);
     } else {
-        $errors = implode('<br>&#8226; ', $fehler);
 
-        $showerror = '<div class="alert alert-danger alert-dismissible" role="alert">
-            <button type="button" class="close" data-dismiss="alert">
-                <span aria-hidden="true">&times;</span>
-                <span class="sr-only">Close</span>
-            </button>
-            <strong>' . $_language->module[ 'errors_there' ] . ':</strong><br>
-            <br>
-            &#8226; ' . $errors . '
-        </div>';
+        $showerror = generateErrorBoxFromArray($_language->module['errors_there'], $fehler);
+
     }
 }
 
 $getemail = '';
 $ergebnis = safe_query("SELECT * FROM `" . PREFIX . "contact` ORDER BY `sort`");
 while ($ds = mysqli_fetch_array($ergebnis)) {
-    if ($getemail === $ds[ 'email' ]) {
-        $getemail .= '<option value="' . $ds[ 'email' ] . '" selected="selected">' . $ds[ 'name' ] . '</option>';
+    if ($getemail === $ds['email']) {
+        $getemail .= '<option value="' . $ds['email'] . '" selected="selected">' . $ds['name'] . '</option>';
     } else {
-        $getemail .= '<option value="' . $ds[ 'email' ] . '">' . $ds[ 'name' ] . '</option>';
+        $getemail .= '<option value="' . $ds['email'] . '">' . $ds['name'] . '</option>';
     }
 }
 
@@ -127,13 +119,13 @@ if ($loggedin) {
     }
     $name = getinput(stripslashes(getnickname($userID)));
     $from = getinput(getemail($userID));
-    if (isset($_POST[ 'subject' ])) {
-        $subject = getforminput($_POST[ 'subject' ]);
+    if (isset($_POST['subject'])) {
+        $subject = getforminput($_POST['subject']);
     } else {
         $subject = '';
     }
-    if (isset($_POST[ 'text' ])) {
-        $text = getforminput($_POST[ 'text' ]);
+    if (isset($_POST['text'])) {
+        $text = getforminput($_POST['text']);
     } else {
         $text = '';
     }
@@ -148,23 +140,23 @@ if ($loggedin) {
     if (!isset($showerror)) {
         $showerror = '';
     }
-    if (isset($_POST[ 'name' ])) {
-        $name = getforminput($_POST[ 'name' ]);
+    if (isset($_POST['name'])) {
+        $name = getforminput($_POST['name']);
     } else {
         $name = '';
     }
-    if (isset($_POST[ 'from' ])) {
-        $from = getforminput($_POST[ 'from' ]);
+    if (isset($_POST['from'])) {
+        $from = getforminput($_POST['from']);
     } else {
         $from = '';
     }
-    if (isset($_POST[ 'subject' ])) {
-        $subject = getforminput($_POST[ 'subject' ]);
+    if (isset($_POST['subject'])) {
+        $subject = getforminput($_POST['subject']);
     } else {
         $subject = '';
     }
-    if (isset($_POST[ 'text' ])) {
-        $text = getforminput($_POST[ 'text' ]);
+    if (isset($_POST['text'])) {
+        $text = getforminput($_POST['text']);
     } else {
         $text = '';
     }

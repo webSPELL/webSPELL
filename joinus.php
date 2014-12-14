@@ -38,58 +38,58 @@ if (isset($site)) {
 eval ("\$title_joinus = \"" . gettemplate("title_joinus") . "\";");
 echo $title_joinus;
 
-if (isset($_GET[ 'action' ])) {
-    $action = $_GET[ 'action' ];
+if (isset($_GET['action'])) {
+    $action = $_GET['action'];
 } else {
     $action = "";
 }
 $show = true;
-if ($action == "save" && isset($_POST[ 'post' ])) {
+if ($action == "save" && isset($_POST['post'])) {
 
-    if (isset($_POST[ 'squad' ])) {
-        $squad = $_POST[ 'squad' ];
+    if (isset($_POST['squad'])) {
+        $squad = $_POST['squad'];
     } else {
         $squad = 0;
     }
-    $nick = $_POST[ 'nick' ];
-    $name = $_POST[ 'name' ];
-    $email = $_POST[ 'email' ];
-    $messenger = $_POST[ 'messenger' ];
-    $age = $_POST[ 'age' ];
-    $city = $_POST[ 'city' ];
-    $clanhistory = $_POST[ 'clanhistory' ];
-    $info = $_POST[ 'info' ];
+    $nick = $_POST['nick'];
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $messenger = $_POST['messenger'];
+    $age = $_POST['age'];
+    $city = $_POST['city'];
+    $clanhistory = $_POST['clanhistory'];
+    $info = $_POST['info'];
     $run = 0;
 
     $error = [];
     if (!(mb_strlen(trim($nick)))) {
-        $error[ ] = $_language->module[ 'forgot_nickname' ];
+        $error[] = $_language->module['forgot_nickname'];
     }
     if (!(mb_strlen(trim($name)))) {
-        $error[ ] = $_language->module[ 'forgot_realname' ];
+        $error[] = $_language->module['forgot_realname'];
     }
     if (!validate_email($email)) {
-        $error[ ] = $_language->module[ 'email_not_valid' ];
+        $error[] = $_language->module['email_not_valid'];
     }
     if (!(mb_strlen(trim($messenger)))) {
-        $error[ ] = $_language->module[ 'forgot_messenger' ];
+        $error[] = $_language->module['forgot_messenger'];
     }
     if (!(mb_strlen(trim($age)))) {
-        $error[ ] = $_language->module[ 'forgot_age' ];
+        $error[] = $_language->module['forgot_age'];
     }
     if (!(mb_strlen(trim($city)))) {
-        $error[ ] = $_language->module[ 'forgot_city' ];
+        $error[] = $_language->module['forgot_city'];
     }
     if (!(mb_strlen(trim($clanhistory)))) {
-        $error[ ] = $_language->module[ 'forgot_history' ];
+        $error[] = $_language->module['forgot_history'];
     }
 
     if ($userID) {
         $run = 1;
     } else {
         $CAPCLASS = new \webspell\Captcha;
-        if (!$CAPCLASS->checkCaptcha($_POST[ 'captcha' ], $_POST[ 'captcha_hash' ])) {
-            $error[ ] = $_language->module[ 'wrong_security_code' ];
+        if (!$CAPCLASS->checkCaptcha($_POST['captcha'], $_POST['captcha_hash'])) {
+            $error[] = $_language->module['wrong_security_code'];
         } else {
             $run = 1;
         }
@@ -108,50 +108,43 @@ if ($action == "save" && isset($_POST[ 'post' ])) {
                   squadID='" . $squad . "'"
             );
         while ($ds = mysqli_fetch_assoc($ergebnis)) {
-            $touser[ ] = $ds[ 'userID' ];
+            $touser[] = $ds['userID'];
         }
         if (!count($touser)) {
-            $touser[ ] = 1;
+            $touser[] = 1;
         }
         $tmp_lang = new Language();
         foreach ($touser as $id) {
             $tmp_lang->set_language(getuserlanguage($id));
             $tmp_lang->read_module('joinus');
-            $message = '[b]' . $tmp_lang->module[ 'someone_want_to_join_your_squad' ] . ' ' .
+            $message = '[b]' . $tmp_lang->module['someone_want_to_join_your_squad'] . ' ' .
                 $_database->escape_string(getsquadname($squad)) . '![/b]
-				 ' . $tmp_lang->module[ 'nick' ] . ' ' . $nick . '
-				 ' . $tmp_lang->module[ 'name' ] . ': ' . $name . '
-				 ' . $tmp_lang->module[ 'age' ] . ': ' . $age . '
-				 ' . $tmp_lang->module[ 'mail' ] . ': [email]' . $email . '[/email]
-				 ' . $tmp_lang->module[ 'messenger' ] . ': ' . $messenger . '
-				 ' . $tmp_lang->module[ 'city' ] . ': ' . $city . '
-				 ' . $tmp_lang->module[ 'clan_history' ] . ': ' . $clanhistory . '
+				 ' . $tmp_lang->module['nick'] . ' ' . $nick . '
+				 ' . $tmp_lang->module['name'] . ': ' . $name . '
+				 ' . $tmp_lang->module['age'] . ': ' . $age . '
+				 ' . $tmp_lang->module['mail'] . ': [email]' . $email . '[/email]
+				 ' . $tmp_lang->module['messenger'] . ': ' . $messenger . '
+				 ' . $tmp_lang->module['city'] . ': ' . $city . '
+				 ' . $tmp_lang->module['clan_history'] . ': ' . $clanhistory . '
 
-				 ' . $tmp_lang->module[ 'info' ] . ':
+				 ' . $tmp_lang->module['info'] . ':
 				 ' . $info . '
 				 ';
-            sendmessage($id, $tmp_lang->module[ 'message_title' ], $message);
+            sendmessage($id, $tmp_lang->module['message_title'], $message);
         }
-        echo $_language->module[ 'thanks_you_will_get_mail' ];
-        unset($_POST[ 'nick' ],
-            $_POST[ 'name' ],
-            $_POST[ 'email' ],
-            $_POST[ 'messenger' ],
-            $_POST[ 'age' ],
-            $_POST[ 'city' ],
-            $_POST[ 'clanhistory' ],
-            $_POST[ 'info' ]);
+        echo $_language->module['thanks_you_will_get_mail'];
+        unset($_POST['nick'],
+            $_POST['name'],
+            $_POST['email'],
+            $_POST['messenger'],
+            $_POST['age'],
+            $_POST['city'],
+            $_POST['clanhistory'],
+            $_POST['info']);
         $show = false;
     } else {
-        $fehler = implode('<br>&#8226; ', $error);
         $show = true;
-        $showerror = '<div class="alert alert-danger alert-dismissible" role="alert">
-		  <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span>
-		  <span class="sr-only">Close</span></button>
-		  <strong>' . $_language->module[ 'problems' ] . ':</strong><br>
-		  <br>
-		  &#8226; ' . $fehler . '
-		</div>';
+        $showerror = generateErrorBoxFromArray($_language->module['problems'], $error);
     }
 }
 if ($show == true) {
@@ -176,20 +169,20 @@ if ($show == true) {
               userID = '$userID'"
         );
         $ds = mysqli_fetch_assoc($res);
-        $nickname = getinput($ds[ 'nickname' ]);
-        $name = getinput($ds[ 'firstname' ] . " " . $ds[ 'lastname' ]);
-        $email = getinput($ds[ 'email' ]);
-        $messenger = getinput($ds[ 'icq' ]);
-        $age = $ds[ 'age' ];
-        $city = getinput($ds[ 'town' ]);
+        $nickname = getinput($ds['nickname']);
+        $name = getinput($ds['firstname'] . " " . $ds['lastname']);
+        $email = getinput($ds['email']);
+        $messenger = getinput($ds['icq']);
+        $age = $ds['age'];
+        $city = getinput($ds['town']);
 
-        if (isset($_POST[ 'clanhistory' ])) {
-            $clanhistory = getforminput($_POST[ 'clanhistory' ]);
+        if (isset($_POST['clanhistory'])) {
+            $clanhistory = getforminput($_POST['clanhistory']);
         } else {
             $clanhistory = '';
         }
-        if (isset($_POST[ 'info' ])) {
-            $info = getforminput($_POST[ 'info' ]);
+        if (isset($_POST['info'])) {
+            $info = getforminput($_POST['info']);
         } else {
             $info = '';
         }
@@ -205,43 +198,43 @@ if ($show == true) {
         if (!isset($showerror)) {
             $showerror = '';
         }
-        if (isset($_POST[ 'nick' ])) {
-            $nick = getforminput($_POST[ 'nick' ]);
+        if (isset($_POST['nick'])) {
+            $nick = getforminput($_POST['nick']);
         } else {
             $nick = '';
         }
-        if (isset($_POST[ 'name' ])) {
-            $name = getforminput($_POST[ 'name' ]);
+        if (isset($_POST['name'])) {
+            $name = getforminput($_POST['name']);
         } else {
             $name = '';
         }
-        if (isset($_POST[ 'email' ])) {
-            $email = getforminput($_POST[ 'email' ]);
+        if (isset($_POST['email'])) {
+            $email = getforminput($_POST['email']);
         } else {
             $email = '';
         }
-        if (isset($_POST[ 'messenger' ])) {
-            $messenger = getforminput($_POST[ 'messenger' ]);
+        if (isset($_POST['messenger'])) {
+            $messenger = getforminput($_POST['messenger']);
         } else {
             $messenger = '';
         }
-        if (isset($_POST[ 'age' ])) {
-            $age = getforminput($_POST[ 'age' ]);
+        if (isset($_POST['age'])) {
+            $age = getforminput($_POST['age']);
         } else {
             $age = '';
         }
-        if (isset($_POST[ 'city' ])) {
-            $city = getforminput($_POST[ 'city' ]);
+        if (isset($_POST['city'])) {
+            $city = getforminput($_POST['city']);
         } else {
             $city = '';
         }
-        if (isset($_POST[ 'clanhistory' ])) {
-            $clanhistory = getforminput($_POST[ 'clanhistory' ]);
+        if (isset($_POST['clanhistory'])) {
+            $clanhistory = getforminput($_POST['clanhistory']);
         } else {
             $clanhistory = '';
         }
-        if (isset($_POST[ 'info' ])) {
-            $info = getforminput($_POST[ 'info' ]);
+        if (isset($_POST['info'])) {
+            $info = getforminput($_POST['info']);
         } else {
             $info = '';
         }

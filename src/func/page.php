@@ -53,3 +53,35 @@ function isStaticPage($staticID = null)
 
     return true;
 }
+
+function generateAlert($text, $class = 'alert-warning', $dismissible = false)
+{
+    $classes = 'alert ' . $class;
+    if ($dismissible) {
+        $classes .= ' alert-dismissible';
+    }
+    $return = '<div class="' . $classes . '" role="alert">';
+    if ($dismissible) {
+        $return .= '<button type="button" class="close" data-dismiss="alert">';
+        $return .= '<span aria-hidden="true">&times;</span><span class="sr-only">Close</span>';
+        $return .= '</button>';
+    }
+    $return .= $text;
+    $return .= '</div>';
+    return $return;
+}
+
+function generateErrorBox($message, $dismissible = false)
+{
+    return generateAlert($message, 'alert-danger', $dismissible);
+}
+
+function generateErrorBoxFromArray($intro, $errors, $dismissible = false)
+{
+    $message = '<strong>' . $intro . ':</strong><br/><ul>';
+    foreach ($errors as $error) {
+        $message .= '<li>' . $error . '</li>';
+    }
+    $message .= '</ul>';
+    return generateAlert($message, 'alert-danger', $dismissible);
+}
