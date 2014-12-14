@@ -75,12 +75,13 @@ function update_progress($functions_to_call)
 
 function update_clearfolder($_database)
 {
+    global $_language;
     include("../src/func/filesystem.php");
     $remove_install = @rm_recursive("./");
     if ($remove_install) {
-        return array('status' => 'success', 'message' => 'Successfully removed install folder');
+        return array('status' => 'success', 'message' => $_language->module['folder_removed']);
     } else {
-        return array('status' => 'fail', 'message' => 'Failed to remove install folder');
+        return array('status' => 'success', 'message' => $_language->module['delete_folder']);
     }
 }
 
@@ -1406,7 +1407,7 @@ function update_4beta6_4final_2($_database)
             // update database, set new structure
             if (mysqli_query($_database, "ALTER TABLE `" . PREFIX . "clanwars` CHANGE `homescr1` `homescore` TEXT NOT NULL")) {
                 $transaction->addQuery("ALTER TABLE `" . PREFIX . "clanwars` CHANGE `oppscr1` `oppscore` TEXT NOT NULL");
-                if (mysqli_query($_database,"ALTER TABLE `" . PREFIX . "clanwars` DROP `homescr2`")) {
+                if (mysqli_query($_database, "ALTER TABLE `" . PREFIX . "clanwars` DROP `homescr2`")) {
                     $transaction->addQuery("ALTER TABLE `" . PREFIX . "clanwars` DROP `oppscr2`");
                     // save converted data into the database
                     $transaction->addQuery("UPDATE " . PREFIX . "clanwars SET homescore='" . $scoreHome . "', oppscore='" . $scoreOpp . "', maps='" . $maps . "' WHERE cwID='" . $id . "'");
