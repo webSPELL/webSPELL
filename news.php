@@ -120,15 +120,8 @@ if ($action == "new") {
         $_language->module[ 'user_comments' ] . '</option><option value="2" selected="selected">' .
         $_language->module[ 'visitor_comments' ] . '</option>';
 
-    $componentsCss = '';
-    foreach ($components['css'] as $component) {
-        $componentsCss .= '<link href="' . $component . '" rel="stylesheet">';
-    }
-
-    $componentsJs = '';
-    foreach ($components['js'] as $component) {
-        $componentsJs .= '<script src="' . $component . '"></script>';
-    }
+    $componentsCss = generateComponents($components['css'], 'css');
+    $componentsJs = generateComponents($components['js'], 'js');
 
     eval ("\$addbbcode = \"" . gettemplate("addbbcode") . "\";");
     eval ("\$addflags = \"" . gettemplate("flags") . "\";");

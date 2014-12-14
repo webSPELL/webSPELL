@@ -122,15 +122,8 @@ if ($action == "new") {
             $date = date("Y-m-d", $ds[ 'date' ]);
         }
 
-        $componentsCss = '';
-        foreach ($components['css'] as $component) {
-            $componentsCss .= '<link href="' . $component . '" rel="stylesheet">';
-        }
-
-        $componentsJs = '';
-        foreach ($components['js'] as $component) {
-            $componentsJs .= '<script src="' . $component . '"></script>';
-        }
+        $componentsCss = generateComponents($components['css'], 'css');
+        $componentsJs = generateComponents($components['js'], 'js');
 
         eval ("\$clanwar_new = \"" . gettemplate("clanwar_new") . "\";");
         echo $clanwar_new;
