@@ -86,6 +86,20 @@ module.exports = function(grunt) {
                 showSniffCodes: true
             }
         },
+        bootlint: {
+            options: {
+                stoponerror: false,
+                relaxerror: [
+                    "E001",
+                    "E003",
+                    "W001",
+                    "W002",
+                    "W003",
+                    "W005"
+                ]
+            },
+            files: [ "templates/*.html" ]
+        },
         githooks: {
             all: {
                 "pre-commit": "test"
@@ -162,19 +176,22 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks("grunt-templated-changelog");
     grunt.loadNpmTasks("grunt-bump");
     grunt.loadNpmTasks("grunt-githooks");
+    grunt.loadNpmTasks("grunt-bootlint");
 
     grunt.registerTask("codecheck", [
         "lintspaces",
         "jshint",
         "jscs",
         "phplint",
-        "phpcs"
+        "phpcs",
+        "bootlint"
     ]);
     grunt.registerTask("codecheck_circle", [
         "lintspaces",
         "jshint",
         "jscs",
-        "phpcs"
+        "phpcs",
+        "bootlint"
     ]);
     grunt.registerTask("test", [
         "codecheck"
