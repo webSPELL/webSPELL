@@ -90,15 +90,15 @@ module.exports = function(grunt) {
             options: {
                 stoponerror: false,
                 relaxerror: [
-                    'E001',
-                    'E003',
-                    'W001',
-                    'W002',
-                    'W003',
-                    'W005'
+                    "E001",
+                    "E003",
+                    "W001",
+                    "W002",
+                    "W003",
+                    "W005"
                 ]
             },
-            files: ['templates/*.html']
+            files: [ "templates/*.html" ]
         },
         githooks: {
             all: {
