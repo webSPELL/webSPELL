@@ -117,6 +117,11 @@ module.exports = function(grunt) {
                 showSniffCodes: true
             }
         },
+        githooks: {
+            all: {
+                "pre-commit": "test"
+            }
+        },
         replace: {
             copyright: {
                 src: [
@@ -187,6 +192,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks("grunt-text-replace");
     grunt.loadNpmTasks("grunt-templated-changelog");
     grunt.loadNpmTasks("grunt-bump");
+    grunt.loadNpmTasks("grunt-githooks");
 
     grunt.registerTask("codecheck", [
         "lintspaces",
