@@ -71,30 +71,30 @@ if (isset($_POST['save'])) {
                     if (unlink($filepath . $banner['name'] . ".tmp")) {
                         $error = $_language->module['format_incorrect'];
                         die('<div class="alert alert-danger" role="alert">
-    						<strong>' . $error . '</strong><br>
-    						<br>
-    						<a href="index.php?site=linkus&amp;action=edit&amp;bannerID=' . $id .
+                            <strong>' . $error . '</strong><br>
+                            <br>
+                            <a href="index.php?site=linkus&amp;action=edit&amp;bannerID=' . $id .
                             '" class="alert-link">&laquo; ' . $_language->module['back'] . '</a>
-    					</div>');
+                        </div>');
                     } else {
                         $error = $_language->module['format_incorrect'];
                         die('<div class="alert alert-danger" role="alert">
-    						<strong>' . $error . '</strong><br>
-    						<br>
-    						<a href="index.php?site=linkus&amp;action=edit&amp;bannerID=' . $id .
+                            <strong>' . $error . '</strong><br>
+                            <br>
+                            <a href="index.php?site=linkus&amp;action=edit&amp;bannerID=' . $id .
                             '" class="alert-link">&laquo; ' . $_language->module['back'] . '</a>
-    					</div>');
+                        </div>');
                     }
                 }
             } else {
                 @unlink($filepath . $banner['name'] . ".tmp");
                 $error = $_language->module['banner_to_big'];
                 die('<div class="alert alert-danger" role="alert">
-    				<strong>' . $error . '</strong><br>
-    				<br>
-    				<a href="index.php?site=linkus&amp;action=edit&amp;bannerID=' . $id . '" class="alert-link">&laquo; ' .
-                    $_language->module['back'] . '</a>
-    			</div>');
+                    <strong>' . $error . '</strong><br>
+                    <br>
+                    <a href="index.php?site=linkus&amp;action=edit&amp;bannerID=' . $id .
+                    '" class="alert-link">&laquo; ' . $_language->module['back'] . '</a>
+                </div>');
             }
         }
     }
@@ -146,30 +146,30 @@ if (isset($_POST['save'])) {
                     if (unlink($filepath . $banner['name'] . ".tmp")) {
                         $error = $_language->module['format_incorrect'];
                         die('<div class="alert alert-danger" role="alert">
-    						<strong>' . $error . '</strong><br>
-    						<br>
-    						<a href="index.php?site=linkus&amp;action=edit&amp;bannerID=' . $id .
+                            <strong>' . $error . '</strong><br>
+                            <br>
+                            <a href="index.php?site=linkus&amp;action=edit&amp;bannerID=' . $id .
                             '" class="alert-link">&laquo; ' . $_language->module['back'] . '</a>
-    					</div>');
+                        </div>');
                     } else {
                         $error = $_language->module['format_incorrect'];
                         die('<div class="alert alert-danger" role="alert">
-    						<strong>' . $error . '</strong><br>
-    						<br>
-    						<a href="index.php?site=linkus&amp;action=edit&amp;bannerID=' . $id .
+                            <strong>' . $error . '</strong><br>
+                            <br>
+                            <a href="index.php?site=linkus&amp;action=edit&amp;bannerID=' . $id .
                             '" class="alert-link">&laquo; ' . $_language->module['back'] . '</a>
-    					</div>');
+                        </div>');
                     }
                 }
             } else {
                 @unlink($filepath . $banner['name'] . ".tmp");
                 $error = $_language->module['banner_to_big'];
                 die('<div class="alert alert-danger" role="alert">
-    				<strong>' . $error . '</strong><br>
-    				<br>
-    				<a href="index.php?site=linkus&amp;action=edit&amp;bannerID=' . $id . '" class="alert-link">&laquo; ' .
-                    $_language->module['back'] . '</a>
-    			</div>');
+                    <strong>' . $error . '</strong><br>
+                    <br>
+                    <a href="index.php?site=linkus&amp;action=edit&amp;bannerID=' .
+                    $id . '" class="alert-link">&laquo; ' . $_language->module['back'] . '</a>
+                </div>');
             }
         }
     }
@@ -271,11 +271,11 @@ if ($action == "new") {
             $adminaction = '';
             if (ispageadmin($userID)) {
                 $adminaction = '<div class="pull-right">
-					<a href="index.php?site=linkus&amp;action=edit&amp;bannerID=' . $ds['bannerID'] .
+                    <a href="index.php?site=linkus&amp;action=edit&amp;bannerID=' . $ds['bannerID'] .
                     '" class="btn btn-warning btn-sm" role="button">' . $_language->module['edit'] . '</a>
-					<a href="linkus.php?delete=true&amp;bannerID=' . $ds['bannerID'] .
+                    <a href="linkus.php?delete=true&amp;bannerID=' . $ds['bannerID'] .
                     '" class="btn btn-danger btn-sm" role="button">' . $_language->module['delete'] . '</a>
-				</div>';
+                </div>';
             }
 
             eval("\$linkus = \"" . gettemplate("linkus") . "\";");

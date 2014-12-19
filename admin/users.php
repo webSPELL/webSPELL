@@ -585,179 +585,199 @@ if ($action == "activate") {
     $CAPCLASS->createTransaction();
     $hash = $CAPCLASS->getHash();
 
-  if($ds['userpic']) $viewpic='<a href="javascript:void(0);" onclick="window.open(\'../images/userpics/'.$ds['userpic'].'\',\'userpic\',\'width=250,height=230\')">'.$_language->module['picture'].'</a>';
-  else $viewpic=$_language->module['picture'];
-  if($ds['avatar']) $viewavatar='<a href="javascript:void(0);" onclick="window.open(\'../images/avatars/'.$ds['avatar'].'\',\'avatar\',\'width=120,height=120\')">'.$_language->module['avatar'].'</a>';
-  else $viewavatar=$_language->module['avatar'];
-  $sex = '<option value="m">'.$_language->module['male'].'</option><option value="f">'.$_language->module['female'].'</option><option value="u">'.$_language->module['not_available'].'</option>';
-  $sex = str_replace('value="'.$ds['sex'].'"','value="'.$ds['sex'].'" selected="selected"',$sex);
-  $countries=getcountries();
-  $countries = str_replace(" selected=\"selected\"", "", $countries);
-  $countries = str_replace('value="'.$ds['country'].'"', 'value="'.$ds['country'].'" selected="selected"', $countries);
-  $b_day=mb_substr($ds['birthday'],8,2);
-  $b_month=mb_substr($ds['birthday'],5,2);
-  $b_year=mb_substr($ds['birthday'],0,4);
+    if ($ds[ 'userpic' ]) {
+        $viewpic = '<a href="javascript:void(0);" onclick="window.open(\'../images/userpics/' . $ds[ 'userpic' ] .
+            '\',\'userpic\',\'width=250,height=230\')">' . $_language->module[ 'picture' ] . '</a>';
+    } else {
+        $viewpic = $_language->module[ 'picture' ];
+    }
+    if ($ds[ 'avatar' ]) {
+        $viewavatar = '<a href="javascript:void(0);" onclick="window.open(\'../images/avatars/' . $ds[ 'avatar' ] .
+            '\',\'avatar\',\'width=120,height=120\')">' . $_language->module[ 'avatar' ] . '</a>';
+    } else {
+        $viewavatar = $_language->module[ 'avatar' ];
+    }
+    $sex = '<option value="m">' . $_language->module[ 'male' ] . '</option><option value="f">' .
+        $_language->module[ 'female' ] . '</option><option value="u">' . $_language->module[ 'not_available' ] .
+        '</option>';
+    $sex = str_replace('value="' . $ds[ 'sex' ] . '"', 'value="' . $ds[ 'sex' ] . '" selected="selected"', $sex);
+    $countries = getcountries();
+    $countries = str_replace(" selected=\"selected\"", "", $countries);
+    $countries = str_replace(
+        'value="' . $ds[ 'country' ] . '"',
+        'value="' . $ds[ 'country' ] . '" selected="selected"',
+        $countries
+    );
+    $b_day = mb_substr($ds[ 'birthday' ], 8, 2);
+    $b_month = mb_substr($ds[ 'birthday' ], 5, 2);
+    $b_year = mb_substr($ds[ 'birthday' ], 0, 4);
 
-  $CAPCLASS = new \webspell\Captcha;
-  $CAPCLASS->createTransaction();
-  $hash = $CAPCLASS->getHash();
+    $CAPCLASS = new \webspell\Captcha;
+    $CAPCLASS->createTransaction();
+    $hash = $CAPCLASS->getHash();
 
-  echo'<form method="post" enctype="multipart/form-data" action="admincenter.php?site=users&amp;page='.$_GET['page'].'&amp;type='.$_GET['type'].'&amp;sort='.$_GET['sort'].'">
     echo '<form method="post" enctype="multipart/form-data" action="admincenter.php?site=users&amp;page=' .
         $_GET[ 'page' ] . '&amp;type=' . $_GET[ 'type' ] . '&amp;sort=' . $_GET[ 'sort' ] . '">
-  <table width="100%" border="0" cellspacing="1" cellpadding="3">
+    <table width="100%" border="0" cellspacing="1" cellpadding="3">
     <tr>
-      <td width="15%"><b>' . $_language->module[ 'user_id' ] . '</b></td>
-      <td width="85%"><b>' . $ds[ 'userID' ] . '</b></td>
-    </tr>
-    <tr>
-      <td colspan="2"><br /><i><b>' . $_language->module[ 'general' ] . '</b></i></td>
+        <td width="15%"><b>' . $_language->module[ 'user_id' ] . '</b></td>
+        <td width="85%"><b>' . $ds[ 'userID' ] . '</b></td>
     </tr>
     <tr>
-      <td><b>' . $_language->module[ 'nickname' ] . '</b></td>
-      <td><input type="text" name="nickname" value="' . $ds[ 'nickname' ] . '" size="60" /></td>
+        <td colspan="2"><br /><i><b>' . $_language->module[ 'general' ] . '</b></i></td>
     </tr>
     <tr>
-      <td><b>' . $_language->module[ 'email' ] . '</b></td>
-      <td><input type="text" name="email" value="' . getinput($ds[ 'email' ]) . '" size="60" /></td>
+        <td><b>' . $_language->module[ 'nickname' ] . '</b></td>
+        <td><input type="text" name="nickname" value="' . $ds[ 'nickname' ] . '" size="60" /></td>
     </tr>
     <tr>
-      <td colspan="2"><br /><i><b>' . $_language->module[ 'pictures' ] . '</b></i></td>
+        <td><b>' . $_language->module[ 'email' ] . '</b></td>
+        <td><input type="text" name="email" value="' . getinput($ds[ 'email' ]) . '" size="60" /></td>
     </tr>
     <tr>
-      <td><b>' . $viewavatar . '</b></td>
-      <td><input name="avatar" type="file" size="40" /> <small>' . $_language->module[ 'max_90x90' ] . '</small></td>
+        <td colspan="2"><br /><i><b>' . $_language->module[ 'pictures' ] . '</b></i></td>
     </tr>
     <tr>
-      <td></td>
-      <td><input type="checkbox" name="avatar" value="1" /> ' . $_language->module[ 'delete_avatar' ] . '</td>
+        <td><b>' . $viewavatar . '</b></td>
+        <td><input name="avatar" type="file" size="40" /> <small>' . $_language->module[ 'max_90x90' ] . '</small></td>
     </tr>
     <tr>
-      <td><b>' . $viewpic . '</b></td>
-      <td><input name="userpic" type="file" size="40" /> <small>' . $_language->module[ 'max_230x210' ] . '</small></td>
+        <td colspan="2">
+            <input type="checkbox" name="avatar" value="1" /> ' . $_language->module[ 'delete_avatar' ] . '
+        </td>
     </tr>
     <tr>
-      <td></td>
-      <td><input type="checkbox" name="userpic" value="1" /> ' . $_language->module[ 'delete_picture' ] . '</td>
+        <td><b>' . $viewpic . '</b></td>
+        <td>
+            <input name="userpic" type="file" size="40" /> <small>' . $_language->module[ 'max_230x210' ] . '</small>
+        </td>
     </tr>
     <tr>
-      <td colspan="2"><br /><i><b>' . $_language->module[ 'personal' ] . '</b></i></td>
+        <td colspan="2">
+            <input type="checkbox" name="userpic" value="1" /> ' . $_language->module[ 'delete_picture' ] . '
+        </td>
     </tr>
     <tr>
-      <td><b>' . $_language->module[ 'firstname' ] . '</b></td>
-      <td><input type="text" name="firstname" value="' . getinput($ds[ 'firstname' ]) . '" size="60" /></td>
+        <td colspan="2"><br /><i><b>' . $_language->module[ 'personal' ] . '</b></i></td>
     </tr>
     <tr>
-      <td><b>' . $_language->module[ 'lastname' ] . '</b></td>
-      <td><input type="text" name="lastname" value="' . getinput($ds[ 'lastname' ]) . '" size="60" /></td>
+        <td><b>' . $_language->module[ 'firstname' ] . '</b></td>
+        <td><input type="text" name="firstname" value="' . getinput($ds[ 'firstname' ]) . '" size="60" /></td>
     </tr>
     <tr>
-      <td><b>' . $_language->module[ 'birthday' ] . '</b></td>
-      <td><input type="text" name="b_day" value="' . getinput($b_day) . '" size="2" />
-      .
-      <input type="text" name="b_month" value="' . getinput($b_month) . '" size="2" />
-      .
-      <input type="text" name="b_year" value="' . getinput($b_year) . '" size="4" /></td>
+        <td><b>' . $_language->module[ 'lastname' ] . '</b></td>
+        <td><input type="text" name="lastname" value="' . getinput($ds[ 'lastname' ]) . '" size="60" /></td>
     </tr>
     <tr>
-      <td><b>' . $_language->module[ 'gender' ] . '</b></td>
-      <td><select name="sex">' . $sex . '</select></td>
+        <td><b>' . $_language->module[ 'birthday' ] . '</b></td>
+        <td><input type="text" name="b_day" value="' . getinput($b_day) . '" size="2" />
+        .
+        <input type="text" name="b_month" value="' . getinput($b_month) . '" size="2" />
+        .
+        <input type="text" name="b_year" value="' . getinput($b_year) . '" size="4" /></td>
     </tr>
     <tr>
-      <td><b>' . $_language->module[ 'country' ] . '</b></td>
-      <td><select name="flag">' . $countries . '</select></td>
+        <td><b>' . $_language->module[ 'gender' ] . '</b></td>
+        <td><select name="sex">' . $sex . '</select></td>
     </tr>
     <tr>
-      <td><b>' . $_language->module[ 'town' ] . '</b></td>
-      <td><input type="text" name="town" value="' . getinput($ds[ 'town' ]) . '" size="60" /></td>
+        <td><b>' . $_language->module[ 'country' ] . '</b></td>
+        <td><select name="flag">' . $countries . '</select></td>
     </tr>
     <tr>
-      <td><b>' . $_language->module[ 'icq' ] . '</b></td>
-      <td><input type="text" name="icq" value="' . getinput($ds[ 'icq' ]) . '" size="60" /></td>
+        <td><b>' . $_language->module[ 'town' ] . '</b></td>
+        <td><input type="text" name="town" value="' . getinput($ds[ 'town' ]) . '" size="60" /></td>
     </tr>
     <tr>
-      <td><b>' . $_language->module[ 'homepage' ] . '</b></td>
-      <td><input type="text" name="homepage" value="' . getinput($ds[ 'homepage' ]) . '" size="60" /></td>
+        <td><b>' . $_language->module[ 'icq' ] . '</b></td>
+        <td><input type="text" name="icq" value="' . getinput($ds[ 'icq' ]) . '" size="60" /></td>
     </tr>
     <tr>
-      <td><b>' . $_language->module[ 'signatur' ] . '</b></td>
-      <td>
-        <textarea name="usertext" rows="5" cols="" style="width: 60%;">' . getinput($ds[ 'usertext' ]) . '</textarea>
-      </td>
+        <td><b>' . $_language->module[ 'homepage' ] . '</b></td>
+        <td><input type="text" name="homepage" value="' . getinput($ds[ 'homepage' ]) . '" size="60" /></td>
     </tr>
     <tr>
-      <td><b>' . $_language->module[ 'about_myself' ] . '</b></td>
-      <td><textarea name="about" rows="5" cols="" style="width: 60%;">' . getinput($ds[ 'about' ]) . '</textarea></td>
+        <td><b>' . $_language->module[ 'signatur' ] . '</b></td>
+        <td>
+            <textarea name="usertext" rows="5" cols="" style="width: 60%;">
+                ' . getinput($ds[ 'usertext' ]) . '
+            </textarea>
+        </td>
     </tr>
     <tr>
-      <td colspan="2"><br /><i><b>' . $_language->module[ 'various' ] . '</b></i></td>
-    </tr>
-    <tr><td><b>' . $_language->module[ 'clantag' ] . '</b></td>
-      <td><input type="text" name="clantag" value="' . getinput($ds[ 'clantag' ]) . '" size="60" /></td>
+        <td><b>' . $_language->module[ 'about_myself' ] . '</b></td>
+        <td><textarea name="about" rows="5" cols="" style="width: 60%;">' . getinput($ds[ 'about' ]) . '</textarea></td>
     </tr>
     <tr>
-      <td><b>' . $_language->module[ 'clanname' ] . '</b></td>
-      <td><input type="text" name="clanname" value="' . getinput($ds[ 'clanname' ]) . '" size="60" /></td>
+        <td colspan="2"><br /><i><b>' . $_language->module[ 'various' ] . '</b></i></td>
+    </tr>
+        <tr><td><b>' . $_language->module[ 'clantag' ] . '</b></td>
+        <td><input type="text" name="clantag" value="' . getinput($ds[ 'clantag' ]) . '" size="60" /></td>
     </tr>
     <tr>
-      <td><b>' . $_language->module[ 'clan_homepage' ] . '</b></td>
-      <td><input type="text" name="clanhp" value="' . getinput($ds[ 'clanhp' ]) . '" size="60" /></td>
+        <td><b>' . $_language->module[ 'clanname' ] . '</b></td>
+        <td><input type="text" name="clanname" value="' . getinput($ds[ 'clanname' ]) . '" size="60" /></td>
     </tr>
     <tr>
-      <td><b>' . $_language->module[ 'clan_irc' ] . '</b></td>
-      <td><input type="text" name="clanirc" value="' . getinput($ds[ 'clanirc' ]) . '" size="60" /></td>
+        <td><b>' . $_language->module[ 'clan_homepage' ] . '</b></td>
+        <td><input type="text" name="clanhp" value="' . getinput($ds[ 'clanhp' ]) . '" size="60" /></td>
     </tr>
     <tr>
-      <td><b>' . $_language->module[ 'clan_history' ] . '</b></td>
-      <td><input type="text" name="clanhistory" value="' . getinput($ds[ 'clanhistory' ]) . '" size="60" /></td>
+        <td><b>' . $_language->module[ 'clan_irc' ] . '</b></td>
+        <td><input type="text" name="clanirc" value="' . getinput($ds[ 'clanirc' ]) . '" size="60" /></td>
     </tr>
     <tr>
-      <td><b>' . $_language->module[ 'cpu' ] . '</b></td>
-      <td><input type="text" name="cpu" value="' . getinput($ds[ 'cpu' ]) . '" size="60" /></td>
+        <td><b>' . $_language->module[ 'clan_history' ] . '</b></td>
+        <td><input type="text" name="clanhistory" value="' . getinput($ds[ 'clanhistory' ]) . '" size="60" /></td>
     </tr>
     <tr>
-      <td><b>' . $_language->module[ 'mainboard' ] . '</b></td>
-      <td><input type="text" name="mainboard" value="' . getinput($ds[ 'mainboard' ]) . '" size="60" /></td>
+        <td><b>' . $_language->module[ 'cpu' ] . '</b></td>
+        <td><input type="text" name="cpu" value="' . getinput($ds[ 'cpu' ]) . '" size="60" /></td>
     </tr>
     <tr>
-      <td><b>' . $_language->module[ 'ram' ] . '</b></td>
-      <td><input type="text" name="ram" value="' . getinput($ds[ 'ram' ]) . '" size="60" /></td>
+        <td><b>' . $_language->module[ 'mainboard' ] . '</b></td>
+        <td><input type="text" name="mainboard" value="' . getinput($ds[ 'mainboard' ]) . '" size="60" /></td>
     </tr>
     <tr>
-      <td><b>' . $_language->module[ 'monitor' ] . '</b></td>
-      <td><input type="text" name="monitor" value="' . getinput($ds[ 'monitor' ]) . '" size="60" /></td>
+        <td><b>' . $_language->module[ 'ram' ] . '</b></td>
+        <td><input type="text" name="ram" value="' . getinput($ds[ 'ram' ]) . '" size="60" /></td>
     </tr>
     <tr>
-      <td><b>' . $_language->module[ 'graphiccard' ] . '</b></td>
-      <td><input type="text" name="graphiccard" value="' . getinput($ds[ 'graphiccard' ]) . '" size="60" /></td>
+        <td><b>' . $_language->module[ 'monitor' ] . '</b></td>
+        <td><input type="text" name="monitor" value="' . getinput($ds[ 'monitor' ]) . '" size="60" /></td>
     </tr>
     <tr>
-      <td><b>' . $_language->module[ 'soundcard' ] . '</b></td>
-      <td><input type="text" name="soundcard" value="' . getinput($ds[ 'soundcard' ]) . '" size="60" /></td>
+        <td><b>' . $_language->module[ 'graphiccard' ] . '</b></td>
+        <td><input type="text" name="graphiccard" value="' . getinput($ds[ 'graphiccard' ]) . '" size="60" /></td>
     </tr>
     <tr>
-      <td><b>' . $_language->module[ 'connection' ] . '</b></td>
-      <td><input type="text" name="connection" value="' . getinput($ds[ 'verbindung' ]) . '" size="60" /></td>
+        <td><b>' . $_language->module[ 'soundcard' ] . '</b></td>
+        <td><input type="text" name="soundcard" value="' . getinput($ds[ 'soundcard' ]) . '" size="60" /></td>
     </tr>
     <tr>
-      <td><b>' . $_language->module[ 'keyboard' ] . '</b></td>
-      <td><input type="text" name="keyboard" value="' . getinput($ds[ 'keyboard' ]) . '" size="60" /></td>
+        <td><b>' . $_language->module[ 'connection' ] . '</b></td>
+        <td><input type="text" name="connection" value="' . getinput($ds[ 'verbindung' ]) . '" size="60" /></td>
     </tr>
     <tr>
-      <td><b>' . $_language->module[ 'mouse' ] . '</b></td>
-      <td><input type="text" name="mouse" value="' . getinput($ds[ 'mouse' ]) . '" size="60" /></td>
+        <td><b>' . $_language->module[ 'keyboard' ] . '</b></td>
+        <td><input type="text" name="keyboard" value="' . getinput($ds[ 'keyboard' ]) . '" size="60" /></td>
     </tr>
     <tr>
-      <td><b>' . $_language->module[ 'mousepad' ] . '</b></td>
-      <td><input type="text" name="mousepad" value="' . getinput($ds[ 'mousepad' ]) . '" size="60" /></td>
+        <td><b>' . $_language->module[ 'mouse' ] . '</b></td>
+        <td><input type="text" name="mouse" value="' . getinput($ds[ 'mouse' ]) . '" size="60" /></td>
     </tr>
     <tr>
-      <td><input type="hidden" name="captcha_hash" value="' . $hash . '" /><input type="hidden" name="id" value="' .
-        $id . '" /></td>
-      <td><br /><input type="submit" name="edit" value="' . $_language->module[ 'edit_profile' ] . '" /></td>
+        <td><b>' . $_language->module[ 'mousepad' ] . '</b></td>
+        <td><input type="text" name="mousepad" value="' . getinput($ds[ 'mousepad' ]) . '" size="60" /></td>
     </tr>
-  </table>
-  </form>';
+    <tr>
+        <td><input type="hidden" name="captcha_hash" value="' . $hash . '" />
+            <input type="hidden" name="id" value="' . $id . '" />
+        </td>
+        <td><br /><input type="submit" name="edit" value="' . $_language->module[ 'edit_profile' ] . '" /></td>
+    </tr>
+    </table>
+    </form>';
 } else {
 
     echo '<h1>&curren; ' . $_language->module[ 'users' ] . '</h1>';
