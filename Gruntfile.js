@@ -183,13 +183,15 @@ module.exports = function(grunt) {
         "jshint",
         "jscs",
         "phplint",
-        "phpcs"
+        "phpcs",
+        "bootlint"
     ]);
     grunt.registerTask("codecheck_circle", [
         "lintspaces",
         "jshint",
         "jscs",
-        "phpcs"
+        "phpcs",
+        "bootlint"
     ]);
     grunt.registerTask("test", [
         "codecheck"
