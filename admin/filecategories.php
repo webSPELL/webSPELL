@@ -53,7 +53,9 @@ function generate_overview($filecats = '', $offset = '', $subcatID = 0)
         $filecats .= '<tr>
         <td class="' . $td . '">' . $offset . getinput($ds[ 'name' ]) . '</td>
         <td class="' . $td .
-            '" align="center"><input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=filecategories&amp;action=edit&amp;filecatID=' .
+            '" align="center">
+                <input type="button"
+                onclick="MM_goToURL(\'parent\',\'admincenter.php?site=filecategories&amp;action=edit&amp;filecatID=' .
             $ds[ 'filecatID' ] . '\');return document.MM_returnValue" value="' . $_language->module[ 'edit' ] . '" />
         <input type="button" onclick="MM_confirm(\'' . $_language->module[ 'really_delete' ] .
             '\', \'admincenter.php?site=filecategories&amp;delete=true&amp;filecatID=' . $ds[ 'filecatID' ] .
@@ -62,8 +64,10 @@ function generate_overview($filecats = '', $offset = '', $subcatID = 0)
 
         $i++;
 
-        if (mysqli_num_rows(safe_query("SELECT * FROM " . PREFIX . "files_categorys WHERE subcatID = '" .
-                $ds[ 'filecatID' ] . "'"))) {
+        if (mysqli_num_rows(safe_query(
+            "SELECT * FROM " . PREFIX . "files_categorys WHERE subcatID = '" .
+            $ds[ 'filecatID' ] . "'"
+        ))) {
             $filecats .= generate_overview("", $offset . getinput($ds[ 'name' ]) . " &raquo; ", $ds[ 'filecatID' ]);
         }
     }
@@ -73,8 +77,10 @@ function generate_overview($filecats = '', $offset = '', $subcatID = 0)
 
 function delete_category($filecat)
 {
-    $rubrics = safe_query("SELECT filecatID FROM " . PREFIX . "files_categorys WHERE subcatID = '" . $filecat .
-        "' ORDER BY name");
+    $rubrics = safe_query(
+        "SELECT filecatID FROM " . PREFIX . "files_categorys WHERE subcatID = '" . $filecat .
+        "' ORDER BY name"
+    );
     if (mysqli_num_rows($rubrics)) {
         while ($ds = mysqli_fetch_assoc($rubrics)) {
             delete_category($ds[ 'filecatID' ]);
@@ -96,8 +102,10 @@ if (isset($_POST[ 'save' ])) {
     if (mb_strlen($_POST[ 'name' ]) > 0) {
         $CAPCLASS = new \webspell\Captcha;
         if ($CAPCLASS->checkCaptcha(0, $_POST[ 'captcha_hash' ])) {
-            safe_query("INSERT INTO " . PREFIX . "files_categorys ( name, subcatID ) values( '" . $_POST[ 'name' ] .
-                "', '" . $_POST[ 'subcat' ] . "' ) ");
+            safe_query(
+                "INSERT INTO " . PREFIX . "files_categorys ( name, subcatID ) values( '" . $_POST[ 'name' ] .
+                "', '" . $_POST[ 'subcat' ] . "' ) "
+            );
         } else {
             echo $_language->module[ 'transaction_invalid' ];
         }
@@ -108,14 +116,19 @@ if (isset($_POST[ 'save' ])) {
     if (mb_strlen($_POST[ 'name' ]) > 0) {
         $CAPCLASS = new \webspell\Captcha;
         if ($CAPCLASS->checkCaptcha(0, $_POST[ 'captcha_hash' ])) {
-            safe_query("UPDATE " . PREFIX . "files_categorys SET name='" . $_POST[ 'name' ] . "', subcatID = '" .
-                $_POST[ 'subcat' ] . "' WHERE filecatID='" . $_POST[ 'filecatID' ] . "'");
+            safe_query(
+                "UPDATE " . PREFIX . "files_categorys SET name='" . $_POST[ 'name' ] . "', subcatID = '" .
+                $_POST[ 'subcat' ] . "' WHERE filecatID='" . $_POST[ 'filecatID' ] . "'"
+            );
         } else {
             echo $_language->module[ 'transaction_invalid' ];
         }
     } else {
-        redirect("admincenter.php?site=filecategories&amp;action=edit&amp;filecatID=" . $_POST[ 'filecatID' ],
-            $_language->module[ 'enter_name' ], 3);
+        redirect(
+            "admincenter.php?site=filecategories&amp;action=edit&amp;filecatID=" . $_POST[ 'filecatID' ],
+            $_language->module[ 'enter_name' ],
+            3
+        );
     }
 } elseif (isset($_GET[ 'delete' ])) {
     $filecatID = $_GET[ 'filecatID' ];
@@ -135,13 +148,17 @@ if ($_GET[ 'action' ] == "add") {
 
     function generate_options($filecats = '', $offset = '', $subcatID = 0)
     {
-        $rubrics = safe_query("SELECT * FROM " . PREFIX . "files_categorys WHERE subcatID = '" . $subcatID .
-            "' ORDER BY name");
+        $rubrics = safe_query(
+            "SELECT * FROM " . PREFIX . "files_categorys WHERE subcatID = '" . $subcatID .
+            "' ORDER BY name"
+        );
         while ($dr = mysqli_fetch_array($rubrics)) {
             $filecats .= '<option value="' . $dr[ 'filecatID' ] . '">' . $offset . getinput($dr[ 'name' ]) .
                 '</option>';
-            if (mysqli_num_rows(safe_query("SELECT * FROM " . PREFIX . "files_categorys WHERE subcatID = '" .
-                    $dr[ 'filecatID' ] . "'"))) {
+            if (mysqli_num_rows(safe_query(
+                "SELECT * FROM " . PREFIX . "files_categorys WHERE subcatID = '" .
+                $dr[ 'filecatID' ] . "'"
+            ))) {
                 $filecats .= generate_options("", $offset . "- ", $dr[ 'filecatID' ]);
             }
         }
@@ -182,13 +199,17 @@ if ($_GET[ 'action' ] == "add") {
     {
 
         global $filecatID;
-        $rubrics = safe_query("SELECT * FROM " . PREFIX . "files_categorys WHERE subcatID = '" . $subcatID .
-            "' AND (filecatID !='" . $filecatID . "' AND subcatID !='" . $filecatID . "')  ORDER BY name");
+        $rubrics = safe_query(
+            "SELECT * FROM " . PREFIX . "files_categorys WHERE subcatID = '" . $subcatID .
+            "' AND (filecatID !='" . $filecatID . "' AND subcatID !='" . $filecatID . "')  ORDER BY name"
+        );
         while ($dr = mysqli_fetch_array($rubrics)) {
             $filecats .= '<option value="' . $dr[ 'filecatID' ] . '">' . $offset . getinput($dr[ 'name' ]) .
                 '</option>';
-            if (mysqli_num_rows(safe_query("SELECT * FROM " . PREFIX . "files_categorys WHERE subcatID = '" .
-                    $dr[ 'filecatID' ] . "'"))) {
+            if (mysqli_num_rows(safe_query(
+                "SELECT * FROM " . PREFIX . "files_categorys WHERE subcatID = '" .
+                $dr[ 'filecatID' ] . "'"
+            ))) {
                 $filecats .= generate_options("", $offset . "- ", $dr[ 'filecatID' ]);
             }
         }
@@ -197,9 +218,11 @@ if ($_GET[ 'action' ] == "add") {
 
     $filecats = generate_options('<option value="0">' . $_language->module[ 'main' ] . '</option>', '- ');
 
-    $filecats =
-        str_replace('value="' . $ds[ 'subcatID' ] . '"', 'value="' . $ds[ 'subcatID' ] . '" selected="selected"',
-            $filecats);
+    $filecats = str_replace(
+        'value="' . $ds[ 'subcatID' ] . '"',
+        'value="' . $ds[ 'subcatID' ] . '" selected="selected"',
+        $filecats
+    );
     $CAPCLASS = new \webspell\Captcha;
     $CAPCLASS->createTransaction();
     $hash = $CAPCLASS->getHash();
@@ -229,7 +252,9 @@ if ($_GET[ 'action' ] == "add") {
     echo '<h1>&curren; ' . $_language->module[ 'file_categories' ] . '</h1>';
 
     echo
-        '<input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=filecategories&amp;action=add\');return document.MM_returnValue" value="' .
+        '<input type="button"
+        onclick="MM_goToURL(\'parent\',\'admincenter.php?site=filecategories&amp;action=add\');
+        return document.MM_returnValue" value="' .
         $_language->module[ 'new_category' ] . '" /><br /><br />';
 
     echo '<table width="100%" border="0" cellspacing="1" cellpadding="3" bgcolor="#DDDDDD">
@@ -243,4 +268,3 @@ if ($_GET[ 'action' ] == "add") {
 
     echo '</table>';
 }
-?>

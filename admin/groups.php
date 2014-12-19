@@ -27,126 +27,150 @@
 
 $_language->readModule('groups');
 
-if(!isforumadmin($userID) OR mb_substr(basename($_SERVER['REQUEST_URI']),0,15) != "admincenter.php") die($_language->module['access_denied']);
-
-if(isset($_GET['action'])) $action = $_GET['action'];
-else $action = '';
-
-if($action=="delete") {
-	$CAPCLASS = new \webspell\Captcha;
-	if($CAPCLASS->checkCaptcha(0, $_GET['captcha_hash'])) {
-		if(!$_GET['fgrID']) die('missing fgrID... <a href="admincenter.php?site=groups">back</a>');
-		safe_query("ALTER TABLE ".PREFIX."user_forum_groups DROP `".$_GET['fgrID']."`");
-		safe_query("DELETE FROM ".PREFIX."forum_groups WHERE fgrID='".$_GET['fgrID']."'");
-
-			redirect("admincenter.php?site=groups","",0);
-		} else echo $_language->module['transaction_invalid'];
+if (!isforumadmin($userID) or mb_substr(basename($_SERVER[ 'REQUEST_URI' ]), 0, 15) != "admincenter.php") {
+    die($_language->module[ 'access_denied' ]);
 }
 
-elseif($action=="add") {
+if (isset($_GET[ 'action' ])) {
+    $action = $_GET[ 'action' ];
+} else {
+    $action = '';
+}
 
-	echo'<h1>&curren; <a href="admincenter.php?site=groups" class="white">'.$_language->module['groups'].'</a> &raquo; '.$_language->module['add_group'].'</h1>';
+if ($action == "delete") {
+    $CAPCLASS = new \webspell\Captcha;
+    if ($CAPCLASS->checkCaptcha(0, $_GET[ 'captcha_hash' ])) {
+        if (!$_GET[ 'fgrID' ]) {
+            die('missing fgrID... <a href="admincenter.php?site=groups">back</a>');
+        }
+        safe_query("ALTER TABLE " . PREFIX . "user_forum_groups DROP `" . $_GET[ 'fgrID' ] . "`");
+        safe_query("DELETE FROM " . PREFIX . "forum_groups WHERE fgrID='" . $_GET[ 'fgrID' ] . "'");
 
-	$CAPCLASS = new \webspell\Captcha;
-	$CAPCLASS->createTransaction();
-	$hash = $CAPCLASS->getHash();
+        redirect("admincenter.php?site=groups", "", 0);
+    } else {
+        echo $_language->module[ 'transaction_invalid' ];
+    }
+} elseif ($action == "add") {
 
-	echo'<form method="post" action="admincenter.php?site=groups&amp;action=save">
+    echo '<h1>&curren; <a href="admincenter.php?site=groups" class="white">' . $_language->module[ 'groups' ] .
+        '</a> &raquo; ' . $_language->module[ 'add_group' ] . '</h1>';
+
+    $CAPCLASS = new \webspell\Captcha;
+    $CAPCLASS->createTransaction();
+    $hash = $CAPCLASS->getHash();
+
+    echo '<form method="post" action="admincenter.php?site=groups&amp;action=save">
 	<table width="100%" border="0" cellspacing="1" cellpadding="3">
 		<tr>
-			<td width="15%"><b>'.$_language->module['group_name'].'</b></td>
+			<td width="15%"><b>' . $_language->module[ 'group_name' ] . '</b></td>
 			<td width="85%"><input type="text" name="name" size="60" /></td>
 		</tr>
 		<tr>
-			<td><input type="hidden" name="captcha_hash" value="'.$hash.'" /></td>
-			<td><input type="submit" name="save" value="'.$_language->module['add_group'].'" /></td>
+			<td><input type="hidden" name="captcha_hash" value="' . $hash . '" /></td>
+			<td><input type="submit" name="save" value="' . $_language->module[ 'add_group' ] . '" /></td>
 		</tr>
 	</table>
 	</form>';
-}
+} elseif ($action == "save") {
+    if (!$_POST[ 'name' ]) {
+        die('<b>' . $_language->module[ 'error_group' ] .
+            '</b><br /><br /><a href="admincenter.php?site=groups&amp;action=add">&laquo; ' .
+            $_language->module[ 'back' ] . '</a>');
+    }
+    $CAPCLASS = new \webspell\Captcha;
+    if ($CAPCLASS->checkCaptcha(0, $_POST[ 'captcha_hash' ])) {
+        safe_query("INSERT INTO " . PREFIX . "forum_groups ( name ) values( '" . $_POST[ 'name' ] . "' ) ");
+        $id = mysqli_insert_id($_database);
+        if (!safe_query("ALTER TABLE " . PREFIX . "user_forum_groups ADD `" . $id . "` INT( 1 ) NOT NULL ; ")) {
+            safe_query("ALTER TABLE " . PREFIX . "user_forum_groups DROP `" . $id . "`");
+            safe_query("ALTER TABLE " . PREFIX . "user_forum_groups ADD `" . $id . "` INT( 1 ) NOT NULL ; ");
+        }
 
-elseif($action=="save") {
-	if(!$_POST['name']) die('<b>'.$_language->module['error_group'].'</b><br /><br /><a href="admincenter.php?site=groups&amp;action=add">&laquo; '.$_language->module['back'].'</a>');
-	$CAPCLASS = new \webspell\Captcha;
-	if($CAPCLASS->checkCaptcha(0, $_POST['captcha_hash'])) {
-		safe_query("INSERT INTO ".PREFIX."forum_groups ( name ) values( '".$_POST['name']."' ) ");
-		$id = mysqli_insert_id($_database);
-		if(!safe_query("ALTER TABLE ".PREFIX."user_forum_groups ADD `".$id."` INT( 1 ) NOT NULL ; ")) {
-			safe_query("ALTER TABLE ".PREFIX."user_forum_groups DROP `".$id."`");
-			safe_query("ALTER TABLE ".PREFIX."user_forum_groups ADD `".$id."` INT( 1 ) NOT NULL ; ");
-		}
+        redirect("admincenter.php?site=groups", "", 0);
+    } else {
+        echo $_language->module[ 'transaction_invalid' ];
+    }
+} elseif ($action == "saveedit") {
+    $name = $_POST[ 'name' ];
+    $CAPCLASS = new \webspell\Captcha;
+    if ($CAPCLASS->checkCaptcha(0, $_POST[ 'captcha_hash' ])) {
+        safe_query(
+            "UPDATE " . PREFIX . "forum_groups SET name='" . $name . "' WHERE fgrID='" . $_POST[ 'fgrID' ] .
+            "'"
+        );
+        redirect("admincenter.php?site=groups", "", 0);
+    } else {
+        echo $_language->module[ 'transaction_invalid' ];
+    }
+} elseif ($action == "edit") {
 
-		redirect("admincenter.php?site=groups","",0);
-	} else echo $_language->module['transaction_invalid'];
-}
+    echo '<h1>&curren; <a href="admincenter.php?site=groups" class="white">' . $_language->module[ 'groups' ] .
+        '</a> &raquo; ' . $_language->module[ 'edit_group' ] . '</h1>';
 
-elseif($action=="saveedit") {
-	$name=$_POST['name'];
-	$CAPCLASS = new \webspell\Captcha;
-	if($CAPCLASS->checkCaptcha(0, $_POST['captcha_hash'])) {
-		safe_query("UPDATE ".PREFIX."forum_groups SET name='".$name."' WHERE fgrID='".$_POST['fgrID']."'");
-			redirect("admincenter.php?site=groups","",0);
-	} else echo $_language->module['transaction_invalid'];
-}
+    if (!$_GET[ 'fgrID' ]) {
+        die('<b>' . $_language->module[ 'error_groupid' ] .
+            '</b><br /><br /><a href="admincenter.php?site=groups">&laquo; ' . $_language->module[ 'back' ] . '</a>');
+    }
+    $ergebnis = safe_query("SELECT * FROM " . PREFIX . "forum_groups WHERE fgrID='" . $_GET[ 'fgrID' ] . "'");
+    $ds = mysqli_fetch_array($ergebnis);
 
-elseif($action=="edit") {
+    $CAPCLASS = new \webspell\Captcha;
+    $CAPCLASS->createTransaction();
+    $hash = $CAPCLASS->getHash();
 
-	echo'<h1>&curren; <a href="admincenter.php?site=groups" class="white">'.$_language->module['groups'].'</a> &raquo; '.$_language->module['edit_group'].'</h1>';
-
-	if(!$_GET['fgrID']) die('<b>'.$_language->module['error_groupid'].'</b><br /><br /><a href="admincenter.php?site=groups">&laquo; '.$_language->module['back'].'</a>');
-	$ergebnis=safe_query("SELECT * FROM ".PREFIX."forum_groups WHERE fgrID='".$_GET['fgrID']."'");
-	$ds=mysqli_fetch_array($ergebnis);
-
-	$CAPCLASS = new \webspell\Captcha;
-	$CAPCLASS->createTransaction();
-	$hash = $CAPCLASS->getHash();
-
-	echo'<form method="post" action="admincenter.php?site=groups&amp;action=saveedit">
+    echo '<form method="post" action="admincenter.php?site=groups&amp;action=saveedit">
 	<table width="100%" border="0" cellspacing="1" cellpadding="3">
 		<tr>
-			<td width="15%"><b>'.$_language->module['group_name'].'</b></td>
-			<td width="85%"><input type="text" name="name" value="'.getinput($ds["name"]).'" size="60" /></td>
+			<td width="15%"><b>' . $_language->module[ 'group_name' ] . '</b></td>
+			<td width="85%"><input type="text" name="name" value="' . getinput($ds[ "name" ]) . '" size="60" /></td>
 		</tr>
 		<tr>
-			<td><input type="hidden" name="captcha_hash" value="'.$hash.'"><input name="fgrID" type="hidden" value="'.$ds["fgrID"].'" /></td>
-			<td><input type="submit" name="save" value="'.$_language->module['edit_group'].'" /></td>
+			<td><input type="hidden" name="captcha_hash" value="' . $hash .
+        '"><input name="fgrID" type="hidden" value="' . $ds[ "fgrID" ] . '" /></td>
+			<td><input type="submit" name="save" value="' . $_language->module[ 'edit_group' ] . '" /></td>
 		</tr>
 	</table>
 	</form>';
-}
+} else {
 
-else {
+    echo '<h1>&curren; ' . $_language->module[ 'groups' ] . '</h1>';
 
-	echo'<h1>&curren; '.$_language->module['groups'].'</h1>';
+    echo '<input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=groups&amp;action=add\');
+    return document.MM_returnValue" value="' . $_language->module[ 'new_group' ] . '" /><br /><br />';
 
-	echo'<input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=groups&amp;action=add\');return document.MM_returnValue" value="'.$_language->module['new_group'].'" /><br /><br />';
+    $ergebnis = safe_query("SELECT * FROM " . PREFIX . "forum_groups ORDER BY fgrID");
 
-	$ergebnis=safe_query("SELECT * FROM ".PREFIX."forum_groups ORDER BY fgrID");
-
-	echo'<table width="100%" border="0" cellspacing="1" cellpadding="3" bgcolor="#DDDDDD">
+    echo '<table width="100%" border="0" cellspacing="1" cellpadding="3" bgcolor="#DDDDDD">
 		<tr>
-			<td width="80%" class="title"><b>'.$_language->module['group_name'].'</b></td>
-			<td width="20%" class="title"><b>'.$_language->module['actions'].'</b></td>
+			<td width="80%" class="title"><b>' . $_language->module[ 'group_name' ] . '</b></td>
+			<td width="20%" class="title"><b>' . $_language->module[ 'actions' ] . '</b></td>
 		</tr>';
 
-	$i=1;
-	$CAPCLASS = new \webspell\Captcha;
-	$CAPCLASS->createTransaction();
-	$hash = $CAPCLASS->getHash();
+    $i = 1;
+    $CAPCLASS = new \webspell\Captcha;
+    $CAPCLASS->createTransaction();
+    $hash = $CAPCLASS->getHash();
 
-	while($ds=mysqli_fetch_array($ergebnis)) {
-		if($i%2) { $td='td1'; }
-		else { $td='td2'; }
+    while ($ds = mysqli_fetch_array($ergebnis)) {
+        if ($i % 2) {
+            $td = 'td1';
+        } else {
+            $td = 'td2';
+        }
 
-		echo'<tr>
-			<td class="'.$td.'"><b>'.getinput($ds['name']).'</b></td>
-			<td class="'.$td.'" align="center"><input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=groups&amp;action=edit&amp;fgrID='.$ds["fgrID"].'\');return document.MM_returnValue" value="'.$_language->module['edit'].'" />
-			<input type="button" onclick="MM_confirm(\''.$_language->module['really_delete'].'\', \'admincenter.php?site=groups&amp;action=delete&amp;fgrID='.$ds["fgrID"].'&amp;captcha_hash='.$hash.'\')" value="'.$_language->module['delete'].'" /></td>
-		</tr>';
+        echo '<tr>
+            <td class="' . $td . '"><b>' . getinput($ds[ 'name' ]) . '</b></td>
+            <td class="' . $td . '" align="center">
+                <input type="button"
+                onclick="MM_goToURL(\'parent\',\'admincenter.php?site=groups&amp;action=edit&amp;fgrID=' .
+                $ds[ "fgrID" ] . '\');return document.MM_returnValue" value="' . $_language->module[ 'edit' ] . '" />
+            <input type="button" onclick="MM_confirm(\'' . $_language->module[ 'really_delete' ] .
+            '\', \'admincenter.php?site=groups&amp;action=delete&amp;fgrID=' . $ds[ "fgrID" ] . '&amp;captcha_hash=' .
+            $hash . '\')" value="' . $_language->module[ 'delete' ] . '" /></td>
+        </tr>';
 
-			$i++;
-	}
+        $i++;
+    }
 
-	echo'</table>';
+    echo '</table>';
 }
-?>
