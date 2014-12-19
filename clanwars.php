@@ -122,6 +122,9 @@ if ($action == "new") {
             $date = date("Y-m-d", $ds[ 'date' ]);
         }
 
+        $componentsCss = generateComponents($components['css'], 'css');
+        $componentsJs = generateComponents($components['js'], 'js');
+
         eval ("\$clanwar_new = \"" . gettemplate("clanwar_new") . "\";");
         echo $clanwar_new;
     } else {
@@ -592,7 +595,16 @@ if ($action == "new") {
             $comments
         );
 
-        $bg1 = BG_1;
+        $componentsCss = '';
+        foreach ($components['css'] as $component) {
+            $componentsCss .= '<link href="' . $component . '" rel="stylesheet">';
+        }
+
+        $componentsJs = '';
+        foreach ($components['js'] as $component) {
+            $componentsJs .= '<script src="' . $component . '"></script>';
+        }
+
         eval ("\$clanwar_edit = \"" . gettemplate("clanwar_edit") . "\";");
         echo $clanwar_edit;
     } else {

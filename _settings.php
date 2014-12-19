@@ -307,6 +307,18 @@ function isignored($userID, $buddy)
 
 $ds = mysqli_fetch_array(safe_query("SELECT * FROM " . PREFIX . "settings"));
 
+$components = [
+    'css' => [
+        'components/bootstrap/dist/css/bootstrap.min.css',
+        'components/fontawesome/css/font-awesome.min.css'
+    ],
+    'js' => [
+        'components/jquery/dist/jquery.min.js',
+        'components/bootstrap/dist/js/bootstrap.min.js',
+        'components/webshim/js-webshim/minified/polyfiller.js'
+    ]
+];
+
 $maxshownnews = $ds[ 'news' ];
 if (empty($maxshownnews)) {
     $maxshownnews = 10;

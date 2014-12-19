@@ -37,9 +37,12 @@ echo '<!DOCTYPE html>
 	<meta name="keywords" content="webspell, webspell4, clan, cms">
 	<meta name="copyright" content="Copyright 2005-2014 by webspell.org">
 	<meta name="generator" content="webSPELL">
-	<title>Smilies</title>
-    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
-	<link href="_stylesheet.css" rel="stylesheet">
+	<title>Smilies</title>';
+$componentsCss = generateComponents($components['css'], 'css');
+foreach ($componentsCss as $component) {
+    echo $component;
+}
+    echo '<link href="_stylesheet.css" rel="stylesheet">
     <script src="js/bbcode.js"></script>
 </head>
 
