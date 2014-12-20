@@ -564,9 +564,9 @@ if ($action == "new") {
             redirect('index.php?site=polls&amp;pollID=' . $ds[ 'pollID' ], $_language->module[ 'already_voted' ], 3);
         } else {
             echo '<form method="post" action="polls.php?action=vote">
-			<table cellspacing="2" cellpadding="0">
+			<table class="table">
 				<tr>
-					<td><b>' . $ds[ 'titel' ] . '</b><br><br></td>
+					<td><strong>' . $ds[ 'titel' ] . '</strong><br><br></td>
 				</tr>
 				<tr>
 					<td>';

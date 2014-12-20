@@ -241,11 +241,11 @@ if (isset($_POST[ 'save' ])) {
     if ($type == "ASC") {
         $sorter =
             '<a href="index.php?site=guestbook&amp;page=' . $page . '&amp;type=DESC">' . $_language->module[ 'sort' ] .
-            ' <i class="icon-sort-down"></i></a>';
+            ' <span class="icon-sort-down"></span></a>';
     } else {
         $sorter =
             '<a href="index.php?site=guestbook&amp;page=' . $page . '&amp;type=ASC">' . $_language->module[ 'sort' ] .
-            ' <i class="icon-sort-up"></i></a>';
+            ' <span class="icon-sort-up"></span></a>';
     }
 
     eval ("\$guestbook_head = \"" . gettemplate("guestbook_head") . "\";");
@@ -285,7 +285,7 @@ if (isset($_POST[ 'save' ])) {
         unset($admincomment);
         if ($ds[ 'admincomment' ] != "") {
             $admincomment = '<hr>
-			<small><b>' . $_language->module[ 'admin_comment' ] . ':</b><br>' . cleartext($ds[ 'admincomment' ]) .
+			<small><strong>' . $_language->module[ 'admin_comment' ] . ':</strong><br>' . cleartext($ds[ 'admincomment' ]) .
                 '</small>';
         } else {
             $admincomment = '';

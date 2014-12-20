@@ -383,10 +383,10 @@ function showtopic($topic, $edit, $addreply, $quoteID, $type)
     if ($type == "ASC") {
         $sorter =
             '<a href="index.php?site=forum_topic&amp;topic=' . $topic . '&amp;page=' . $page . '&amp;type=DESC">' .
-            $_language->module['sort'] . ' <i class="icon-sort-down"></i></a>';
+            $_language->module['sort'] . ' <span class="icon-sort-down"></span></a>';
     } else {
         $sorter = '<a href="index.php?site=forum_topic&amp;topic=' . $topic . '&amp;page=' . $page . '&amp;type=ASC">' .
-            $_language->module['sort'] . ' <i class="icon-sort-up"></i></a>';
+            $_language->module['sort'] . ' <span class="icon-sort-up"></span></a>';
     }
 
     $start = 0;
@@ -424,13 +424,13 @@ function showtopic($topic, $edit, $addreply, $quoteID, $type)
     $moderators = getmoderators($dt['boardID']);
 
     $topicactions = '<a href="printview.php?board=' . $dt['boardID'] . '&amp;topic=' . $topic .
-        '" target="_blank" class="btn btn-default"><i class="icon-print"></i></a> ';
+        '" target="_blank" class="btn btn-default"><span class="icon-print"></span></a> ';
     if ($loggedin and $writer) {
         $topicactions .=
             '<a href="index.php?site=forum&amp;addtopic=true&amp;action=newtopic&amp;board=' . $dt['boardID'] .
             '" class="btn btn-primary hidden">' . $_language->module['new_topic'] .
             '</a> <a href="index.php?site=forum_topic&amp;topic=' . $topic . '&amp;addreply=true&amp;page=' . $pages .
-            '&amp;type=' . $type . '" class="btn btn-primary"><i class="icon-mail-reply"></i> ' .
+            '&amp;type=' . $type . '" class="btn btn-primary"><span class="icon-mail-reply"></span> ' .
             $_language->module['new_reply'] . '</a>';
     }
     if ($dt['closed']) {
@@ -596,7 +596,7 @@ function showtopic($topic, $edit, $addreply, $quoteID, $type)
 
                 $message = toggle($message, 'xx');
                 $username =
-                    '<a href="index.php?site=profile&amp;id=' . $userID . '"><b>' . getnickname($userID) . '</b></a>';
+                    '<a href="index.php?site=profile&amp;id=' . $userID . '"><strong>' . getnickname($userID) . '</strong></a>';
 
                 if (isclanmember($userID)) {
                     $member = ' <img src="images/icons/member.gif" alt="' . $_language->module['clanmember'] . '">';
@@ -670,11 +670,11 @@ function showtopic($topic, $edit, $addreply, $quoteID, $type)
                 }
                 $quote = "";
                 $actions = "";
-                echo '<table width="100%" cellspacing="1" cellpadding="2" bgcolor="' . BORDER . '">
-          <tr bgcolor="' . BGHEAD . '">
-            <td colspan="2" class="title" align="center">' . $_language->module['preview'] . '</td>
+                echo '<table class="table">
+          <tr>
+            <td colspan="2" class="title" class="text-center">' . $_language->module['preview'] . '</td>
           </tr>
-          <tr bgcolor="' . PAGEBG . '"><td colspan="2"></td></tr>';
+          <tr></td></tr>';
 
                 eval ("\$forum_topic_content = \"" . gettemplate("forum_topic_content") . "\";");
                 echo $forum_topic_content;
@@ -833,7 +833,7 @@ function showtopic($topic, $edit, $addreply, $quoteID, $type)
             $quote =
                 '<a href="index.php?site=forum_topic&amp;addreply=true&amp;board=' . $dt['boardID'] . '&amp;topic=' .
                 $topic . '&amp;quoteID=' . $dr['postID'] . '&amp;page=' . $page . '&amp;type=' . $type .
-                '"><i class="icon-quote-left"></i></a>';
+                '"><span class="icon-quote-left"></span></a>';
         } else {
             $quote = "";
         }
@@ -874,7 +874,7 @@ function showtopic($topic, $edit, $addreply, $quoteID, $type)
             !$dt['closed']
         ) {
             $actions = ' <a href="index.php?site=forum_topic&amp;topic=' . $topic . '&amp;edit=true&amp;id=' .
-                $dr['postID'] . '&amp;page=' . $page . '"><i class="icon-edit"></i></a> ';
+                $dr['postID'] . '&amp;page=' . $page . '"><span class="icon-edit"></span></a> ';
         }
         if (isforumadmin($userID) or ismoderator($userID, $dt['boardID'])) {
             $actions .= '<input class="input" type="checkbox" name="postID[]" value="' . $dr['postID'] . '">';
@@ -921,7 +921,7 @@ function showtopic($topic, $edit, $addreply, $quoteID, $type)
     eval ("\$forum_topics_actions = \"" . gettemplate("forum_topics_actions") . "\";");
     echo $forum_topics_actions;
 
-    echo '<div align="right">' . $adminactions . '</div></form>';
+    echo '<div class="text-right">' . $adminactions . '</div></form>';
 
     if ($dt['closed']) {
         echo $_language->module['closed_image'];

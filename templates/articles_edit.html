@@ -2,10 +2,9 @@
 <html>
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
 	<meta name="description" content="Clanpage using webSPELL 4 CMS">
 	<meta name="author" content="webspell.org">
-	<meta name="keywords" content="webspell, webspell4, clan, cms">
 	<meta name="copyright" content="Copyright 2005-2014 by webspell.org">
 	<meta name="generator" content="webSPELL">
 
@@ -21,7 +20,7 @@
 		message = new Array();
 
 		function chkFormular() {
-			if (document.getElementById('article_title').value == "") {
+			if (document.getElementById('article-title').value == "") {
 				alert("%enter_title%");
 				document.post.title.focus();
 				return false;
@@ -47,10 +46,10 @@
 		}
 
 		function update_textarea(value) {
-			document.getElementById('articles_textarea').innerHTML = '';
+			document.getElementById('articles-textarea').innerHTML = '';
 			for (i = 0; i < value; ++i) {
 				if (message[ i ]) {
-					document.getElementById('articles_textarea')
+					document.getElementById('articles-textarea')
 							.innerHTML += '%page% ' + (i + 1) + '<br>' +
 					'<textarea name="message[' + i + ']" ' +
 					'rows="20" ' +
@@ -61,7 +60,7 @@
 					'class="form-control">' + message[ i ] + '</textarea><br><br>';
 				}
 				else {
-					document.getElementById('articles_textarea')
+					document.getElementById('articles-textarea')
 							.innerHTML += '%page% ' + (i + 1) + '<br>' +
 					'<textarea name="message[' + i + ']" ' +
 					'rows="20" ' +
@@ -90,10 +89,10 @@
 				<div class="panel-heading">
 					<h4 class="panel-title">
 						<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion"
-								href="#collapseOne">BBCode and Flags</a>
+								href="#collapse-one">BBCode and Flags</a>
 					</h4>
 				</div>
-				<div id="collapseOne" class="panel-collapse collapse in">
+				<div id="collapse-one" class="panel-collapse collapse in">
 					<div class="panel-body">
 						$addbbcode
 						$addflags
@@ -105,10 +104,10 @@
 				<div class="panel-heading">
 					<h4 class="panel-title">
 						<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion"
-								href="#collapseTwo">%link%</a>
+								href="#collapse-two">%link%</a>
 					</h4>
 				</div>
-				<div id="collapseTwo" class="panel-collapse collapse">
+				<div id="collapse-two" class="panel-collapse collapse">
 					<div class="panel-body">
 						<div class="form-horizontal">
 							<div class="form-group">
@@ -162,12 +161,12 @@
 				<div class="panel-heading">
 					<h4 class="panel-title">
 						<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion"
-								href="#collapseThree">%options%</a>
+								href="#collapse-three">%options%</a>
 					</h4>
 				</div>
-				<div id="collapseThree" class="panel-collapse collapse">
+				<div id="collapse-three" class="panel-collapse collapse">
 					<div class="panel-body">
-						<b>%pagecount%</b>
+						<strong>%pagecount%</strong>
 						%page_select%
 
 						<input name="upload" type="button" onclick="window.open(
@@ -181,14 +180,13 @@
 		</div>
 
 		<div>
-			<div><b>%title%</b></div>
-			<input name="title" type="text" size="80" value="$title" id='article_title'
-					class="form-control">
+			<div><strong>%title%</strong></div>
+			<input name="title" type="text" size="80" value="$title" id="article-title" class="form-control">
 
 			<p class="text-right">
-				<small><b>%options%:</b> %html% %bbcode% %smilies%</small>
+				<small><strong>%options%:</strong> %html% %bbcode% %smilies%</small>
 			</p>
-			<div id="articles_textarea"></div>
+			<div id="articles-textarea"></div>
 
 			<script>
 				<!--

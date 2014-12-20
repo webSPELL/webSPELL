@@ -33,9 +33,9 @@ $_language->readModule('forum');
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
     <meta name="robots" content="noindex, nofollow">
     <title><?php echo PAGETITLE; ?></title>
     <style type="text/css">
@@ -91,13 +91,13 @@ if (mysqli_num_rows($thread)) {
     $boardname = $db[ 'name' ];
 
     echo '<div style="width:640px;">
-  <table width="640" cellpadding="2" cellspacing="0" border="0" bgcolor="#CCCCCC">
-    <tr bgcolor="FFFFFF">
-      <td><b>' . $boardname . '</b> &#8226; <b>' . getinput($dt[ 'topic' ]) . '</b></td>
+  <table class="table">
+    <tr>
+      <td><strong>' . $boardname . '</strong> &#8226; <strong>' . getinput($dt[ 'topic' ]) . '</strong></td>
     </tr>
   </table><hr size="1"><br>';
 
-    echo '<table width="100%" cellpadding="4" cellspacing="1" border="0">';
+    echo '<table class="table">';
 
     $replys = safe_query("SELECT * FROM " . PREFIX . "forum_posts WHERE topicID='$topic' ORDER BY date");
     while ($dr = mysqli_fetch_array($replys)) {
@@ -130,8 +130,8 @@ if (mysqli_num_rows($thread)) {
             $rang = '<img src="images/icons/ranks/' . $ds[ 'pic' ] . '" alt="">';
         }
 
-        echo '<tr bgcolor="FFFFFF">
-        <td valign="top"><i>' . $date . ', ' . $time . ' </i> - <b>' . $username . '</b> - ' .
+        echo '<tr>
+        <td valign="top"><i>' . $date . ', ' . $time . ' </i> - <strong>' . $username . '</strong> - ' .
             $usertype . ' - ' . $posts . ' ' . $_language->module[ 'posts' ] . '
         <br>' . $message . ' ><i>' . $signatur . '</i>><br>&nbsp;</td>
       </tr>';

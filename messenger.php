@@ -307,8 +307,8 @@ if (isset($_POST['delete'])) {
                 $new = '';
                 $icon = '';
                 if (!$ds['viewed']) {
-                    $icon = '<i class="icon-envelope"></i>';
-                    $title = '<b>' . $title . '</b>';
+                    $icon = '<span class="icon-envelope"></span>';
+                    $title = '<strong>' . $title . '</strong>';
                     $new = 'class="warning"';
                 }
 
@@ -321,7 +321,7 @@ if (isset($_POST['delete'])) {
                 $n++;
             }
         } else {
-            echo '<tr bgcolor="' . BG_1 . '"><td colspan="5">' . $_language->module['no_incoming'] . '</td></tr>';
+            echo '<tr>' . $_language->module['no_incoming'] . '</td></tr>';
         }
 
         eval ("\$pm_incoming_foot = \"" . gettemplate("pm_incoming_foot") . "\";");
@@ -470,7 +470,7 @@ if (isset($_POST['delete'])) {
                 $n++;
             }
         } else {
-            echo '<tr bgcolor="' . BG_1 . '"><td colspan="4">' . $_language->module['no_outgoing'] . '</td></tr>';
+            echo '<tr>' . $_language->module['no_outgoing'] . '</td></tr>';
         }
 
         eval ("\$pm_outgoing_foot = \"" . gettemplate("pm_outgoing_foot") . "\";");
@@ -572,7 +572,7 @@ if (isset($_POST['delete'])) {
         $bg1 = BG_1;
 
         if (isanyadmin($userID)) {
-            $admin = '<b>' . $_language->module['adminoptions'] . '</b><br>' . $_language->module['sendeachuser'] .
+            $admin = '<strong>' . $_language->module['adminoptions'] . '</strong><br>' . $_language->module['sendeachuser'] .
                 '<input class="input" type="checkbox" name="eachuser" value="true"><br>' .
                 $_language->module['sendeachmember'] .
                 '<input class="input" type="checkbox" name="eachmember" value="true">';

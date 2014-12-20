@@ -2,10 +2,9 @@
 <html>
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
 	<meta name="description" content="Clanpage using webSPELL 4 CMS">
 	<meta name="author" content="webspell.org">
-	<meta name="keywords" content="webspell, webspell4, clan, cms">
 	<meta name="copyright" content="Copyright 2005-2014 by webspell.org">
 	<meta name="generator" content="webSPELL">
 
@@ -38,16 +37,16 @@
 </script>
 <form action="clanwars.php?action=saveedit" method="post" name="post"
 		onsubmit="return chkFormular();">
-	<table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="$border">
+	<table class="table">
 		<tr>
-			<td class="title" align="center" bgcolor="$bghead">%edit_clanwar%</td>
+			<th>%edit_clanwar%</th>
 		</tr>
 		<tr>
-			<td bgcolor="$pagebg"></td>
+			<td></td>
 		</tr>
 		<tr>
-			<td bgcolor="$bg1">
-				<table width="100%" border="0" align="center" cellpadding="2" cellspacing="0">
+			<td>
+				<table class="table">
 					<tr>
 						<td>%date%:</td>
 						<td><input name="date" type="date" value="$date" placeholder="yyyy-mm-dd" class="form-control"></td>
@@ -129,18 +128,20 @@
 					</tr>
 					<tr>
 						<td colspan="4">
-							<table width="100%" id="maplist">
+							<table class="table" id="maplist">
 								<tr>
-									<td width="10%">%map% %id%:</td>
-									<td width="25%">%map%:</td>
-									<td width="20%">%score_home%:</td>
-									<td width="20%">%score_opponent%:</td>
-									<td width="25%"><a href="javascript:;" onclick="addRow('edit');"
-											title="add map"><img src="images/icons/expand.gif"
-											alt=""></a>
-										<a href="javascript:;" onclick="removeRow();"
-												title="remove map"><img
-												src="images/icons/collapse.gif" alt=""></a></td>
+									<td>%map% %id%:</td>
+									<td>%map%:</td>
+									<td>%score_home%:</td>
+									<td>%score_opponent%:</td>
+									<td>
+										<a href="javascript:;" onclick="addRow('edit');" title="add map">
+											<img src="images/icons/expand.gif" alt="">
+										</a>
+										<a href="javascript:;" onclick="removeRow();" title="remove map">
+											<img src="images/icons/collapse.gif" alt="">
+										</a>
+									</td>
 								</tr>
 								$maps
 							</table>
@@ -153,10 +154,11 @@
 					</tr>
 					<tr>
 						<td colspan="3"></td>
-						<td align="right" valign="bottom">
+						<td class="text-right" valign="bottom">
 							<input name="cwID" type="hidden" value="$cwID">
 							<select name="comments">$comments</select>
-							<input name="post" type="submit" value="%update_clanwar%"></td>
+							<input name="post" type="submit" value="%update_clanwar%">
+						</td>
 					</tr>
 				</table>
 			</td>

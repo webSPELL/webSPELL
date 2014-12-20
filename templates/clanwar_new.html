@@ -2,10 +2,9 @@
 <html>
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
 	<meta name="description" content="Clanpage using webSPELL 4 CMS">
 	<meta name="author" content="webspell.org">
-	<meta name="keywords" content="webspell, webspell4, clan, cms">
 	<meta name="copyright" content="Copyright 2005-2014 by webspell.org">
 	<meta name="generator" content="webSPELL">
 
@@ -88,16 +87,16 @@
 		</tr>
 		<tr>
 			<td colspan="4">
-				<table width="100%" id="maplist">
+				<table class="table" id="maplist">
 					<tr>
-						<th width="15%">%map% %id%:</th>
-						<th width="30%">%map%:</th>
-						<th width="20%">%score_home%:</th>
-						<th width="20%">%score_opponent%:</th>
+						<th>%map% %id%:</th>
+						<th>%map%:</th>
+						<th>%score_home%:</th>
+						<th>%score_opponent%:</th>
 						<th><a href="javascript:;" onclick="addRow();" title="add map">
-							<img src="images/icons/expand.gif"></a>
+							<img src="images/icons/expand.gif" alt="expand"></a>
 							<a href="javascript:;" onclick="removeRow();" title="remove map">
-								<img src="images/icons/collapse.gif"></a></th>
+								<img src="images/icons/collapse.gif" alt="collapse"></a></th>
 					</tr>
 				</table>
 			</td>
@@ -108,7 +107,7 @@
 					class="form-control"></textarea></td>
 		</tr>
 		<tr>
-			<td colspan="4" align="right">
+			<td colspan="4" class="text-right">
 				<input name="news" type="checkbox" class="input" value="true"
 						class="form-control">%publish_clanwar_news%?
 				<select name="comments" class="form-control">

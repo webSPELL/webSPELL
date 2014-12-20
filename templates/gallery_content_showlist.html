@@ -1,16 +1,16 @@
 <div class="col-lg-6">
 	<a href="index.php?site=gallery&amp;picID=$ds[picture]">
-		<img src="images/gallery/thumb/$ds[picture].jpg" width="100%" class="img-responsive">
+		<img src="images/gallery/thumb/$ds[picture].jpg" width="100%" class="img-responsive" alt="Thumbnail">
 	</a>
 
 	<h4>
 		<a href="index.php?site=gallery&amp;galleryID=$ds[galleryID]">
-			<b>$ds[name]</b>
+			<strong>$ds[name]</strong>
 		</a>
 	</h4>
 
 	<p>
-		<i>%pictures%:</i> $ds[count]<br>
-		<i>%date%:</i> $ds[date]
+		<em>%pictures%:</em> $ds[count]<br>
+		<em>%date%:</em> $ds[date]
 	</p>
 </div>

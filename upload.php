@@ -100,12 +100,11 @@ if (isset($_POST[ 'submit' ])) {
 } else {
 
     echo '<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<html>
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
 	<meta name="description" content="Clanpage using webSPELL 4 CMS">
 	<meta name="author" content="webspell.org">
-	<meta name="keywords" content="webspell, webspell4, clan, cms">
 	<meta name="copyright" content="Copyright 2005-2014 by webspell.org">
 	<meta name="generator" content="webSPELL">
 	<title>' . $_language->module[ 'file_upload' ] . '</title>
@@ -116,13 +115,13 @@ if (isset($_POST[ 'submit' ])) {
 <center>
 <h2>' . $_language->module[ 'file_upload' ] . ':</h2>
 <form method="post" action="upload.php?' . $tableid . '=' . $id . '" enctype="multipart/form-data">
-<table width="100%" cellpadding="4" cellspacing="1" bgcolor="' . BORDER . '">
-  <tr bgcolor="' . BG_1 . '">
-    <td align="center"><input type="file" name="screen">
+<table class="table">
+  <tr>
+    <td class="text-center"><input type="file" name="screen">
     <input type="submit" name="submit" value="' . $_language->module[ 'upload' ] . '">
     <hr>
     <h2>' . $_language->module[ 'existing_files' ] . ':</h2>
-    <table width="100%" border="0" cellspacing="0" cellpadding="2">';
+    <table class="table">';
 
     $ergebnis = safe_query("SELECT screens FROM " . PREFIX . "$table WHERE $tableid='$id'");
 

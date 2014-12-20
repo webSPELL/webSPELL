@@ -2,10 +2,9 @@
 <html>
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
 	<meta name="description" content="Clanpage using webSPELL 4 CMS">
 	<meta name="author" content="webspell.org">
-	<meta name="keywords" content="webspell, webspell4, clan, cms">
 	<meta name="copyright" content="Copyright 2005-2014 by webspell.org">
 	<meta name="generator" content="webSPELL">
 
@@ -68,16 +67,16 @@
 				<p>%bb_code_tags_text_syle%</p>
 				<ul>
 					<li>
-						%bold_text%: <b>[b]</b>%hello%<b>[/b]</b><br>
-						%will_become% <b>%hello%</b>
+						%bold_text%: <strong>[b]</strong>%hello%<strong>[/b]</strong><br>
+						%will_become% <strong>%hello%</strong>
 					</li>
 					<li>
-						%underlined_text%: <b>[u]</b>%good_morning%<b>[/u]</b><br>
+						%underlined_text%: <strong>[u]</strong>%good_morning%<strong>[/u]</strong><br>
 						%becomes% <u>%good_morning%</u>
 					</li>
 					<li>
-						%italic_text%: <b>[i]</b>%great%<b>[/i]</b><br>
-						%would_give% <i>%great%</i>
+						%italic_text%: <strong>[i]</strong>%great%<strong>[/i]</strong><br>
+						%would_give% <em>%great%</em>
 					</li>
 				</ul>
 				<a href="#Top">%back_top%</a></td>
@@ -94,20 +93,21 @@
 				<p>%bb_code_tags_color_size%</p>
 				<ul>
 					<li>
-						<b>[color=red]</b>%hello%<b>[/color]</b><br>
+						<strong>[color=red]</strong>%hello%<strong>[/color]</strong><br>
 						%or%<br>
-						<b>[color=#FF0000]</b>%hello%<b>[/color]</b><br>
-						%will_both_output% <span style="color:FF0000">%hello%</span>
+						<strong>[color=#FF0000]</strong>%hello%<strong>[/color]</strong><br>
+						<!-- htmllint attr-bans=false -->
+						%will_both_output% <span style="color:#FF0000">%hello%</span>
 					</li>
 					<li>
-						<b>[size=1]</b>%small%<b>[/size]</b><br>
+						<strong>[size=1]</strong>%small%<strong>[/size]</strong><br>
 						%will_generally_be% <font size="1">%small%</font><br>
 						%or%:<br><br>
-						<b>[size=5]</b>%huge%<b>[/size]</b><br>
+						<strong>[size=5]</strong>%huge%<strong>[/size]</strong><br>
 						%will_be% <font size="5">%huge%</font>
 					</li>
 					<li>
-						<b>[font=courier]</b>Courier<b>[/font]</b><br>
+						<strong>[font=courier]</strong>Courier<strong>[/font]</strong><br>
 						%will_generally_be% <font face="Courier">Courier</font>
 					</li>
 				</ul>
@@ -123,8 +123,8 @@
 			</div>
 			<div class="panel-body">
 				<p>%yes_can_combine%</p>
-				<b>[size=5][color=red][b]</b>%look_at_me%<b>[/b][/color][/size]</b><br>
-				%this_would_output% <font color="#FF0000" size="5"><b>%look_at_me%</b></font>
+				<strong>[size=5][color=red][b]</strong>%look_at_me%<strong>[/b][/color][/size]</strong><br>
+				%this_would_output% <font color="#FF0000" size="5"><strong>%look_at_me%</strong></font>
 
 				<p>%close_tags_is_up_to_you%</p>
 				<a href="#Top">%back_top%</a>
@@ -143,13 +143,13 @@
 			</div>
 			<div class="panel-body">
 
-				<b>%quoting_replys%</b>
+				<strong>%quoting_replys%</strong>
 				<ul>
 					<li>
-						<b>[quote=%mr_blobby%]</b>%text_of_mr_blobby%<b>[/quote]</b>
+						<strong>[quote=%mr_blobby%]</strong>%text_of_mr_blobby%<strong>[/quote]</strong>
 					</li>
 					<li>
-						<b>[quote]</b>%text_of_mr_blobby%<b>[/quote]</b>
+						<strong>[quote]</strong>%text_of_mr_blobby%<strong>[/quote]</strong>
 					</li>
 				</ul>
 				<a href="#Top">%back_top%</a>
@@ -164,9 +164,9 @@
 			</div>
 			<div class="panel-body">
 
-				<p><b>[code]</b>echo "%this_is_some_code%";<b>[/code]</b></p>
+				<p><strong>[code]</strong>echo "%this_is_some_code%";<strong>[/code]</strong></p>
 
-				<p>%all_formating_% <b>[code][/code]</b> %_tags_retained%</p>
+				<p>%all_formating_% <strong>[code][/code]</strong> %_tags_retained%</p>
 				<a href="#Top">%back_top%</a>
 			</div>
 		</div>
@@ -183,11 +183,11 @@
 			</div>
 			<div class="panel-body">
 
-				<b>[list]</b><br>
-				<b>[*]</b>%red%<br>
-				<b>[*]</b>%blue%<br>
-				<b>[*]</b>%yellow%<br>
-				<b>[/list]</b><br><br>
+				<strong>[list]</strong><br>
+				<strong>[*]</strong>%red%<br>
+				<strong>[*]</strong>%blue%<br>
+				<strong>[*]</strong>%yellow%<br>
+				<strong>[/list]</strong><br><br>
 				%would_generate_list%:
 				<ul>
 					<li>%red%</li>
@@ -205,23 +205,21 @@
 				<h3 class="panel-title">%creating_ordered_list%</h3>
 			</div>
 			<div class="panel-body">
-				<b>[list=1]</b><br>
-				<b>[*]</b>%red%<br>
-				<b>[*]</b>%blue%<br>
-				<b>[*]</b>%yellow%<br>
-				<b>[/list=1]<br><br>
-					%would_generate_list%:</b>
+				<strong>[list=1]</strong><br>
+				<strong>[*]</strong>%red%<br>
+				<strong>[*]</strong>%blue%<br>
+				<strong>[*]</strong>%yellow%<br>
+				<strong>[/list=1]<br><br>%would_generate_list%:</strong>
 				<ol>
 					<li>%red%</li>
 					<li>%blue%</li>
 					<li>%yellow%</li>
 				</ol>
-				<b>[list=a]</b><br>
-				<b>[*]</b>%red%<br>
-				<b>[*]</b>%blue%<br>
-				<b>[*]</b>%yellow%<br>
-				<b>[/list=a]<br><br>
-					%would_generate_list%:</b>
+				<strong>[list=a]</strong><br>
+				<strong>[*]</strong>%red%<br>
+				<strong>[*]</strong>%blue%<br>
+				<strong>[*]</strong>%yellow%<br>
+				<strong>[/list=a]<br><br>%would_generate_list%:</strong>
 				<ol type="a">
 					<li>%red%</li>
 					<li>%blue%</li>
@@ -244,17 +242,17 @@
 			<div class="panel-body">
 				<ul>
 					<li>
-						<b>[url=http://www.webspell.at]</b>webSPELL<b>[/url]</b><br>
+						<strong>[url=http://www.webspell.at]</strong>webSPELL<strong>[/url]</strong><br>
 						%would_generate_link%<a href="http://www.webspell.at" target="_blank">webSPELL</a>
 					</li>
 					<li>
-						<b>[url]</b>http://www.webspell.org<b>[/url]</b><br>
+						<strong>[url]</strong>http://www.webspell.org<strong>[/url]</strong><br>
 						%would_generate_link%<a href="http://www.webspell.org" target="_blank">www.webspell.org</a>
 					</li>
 					<li>
-						<b>[email]</b>no.one@domain.adr<b>[/email]</b><br>
+						<strong>[email]</strong>no.one@domain.adr<strong>[/email]</strong><br>
 						%which_will_output% <a href="mailto:no.one@domain.adr">no.one@domain.adr.</a><br>
-						<b>[email=no.one@domain.adr]</b>%email_me%<b>[/email]</b><br>
+						<strong>[email=no.one@domain.adr]</strong>%email_me%<strong>[/email]</strong><br>
 						%which_will_output% <a href="mailto:no.one@domain.adr">%email_me%</a>
 					</li>
 				</ul>
@@ -273,9 +271,9 @@
 				<h3 class="panel-title">%adding_image%</h3>
 			</div>
 			<div class="panel-body">
-				<b>[img]</b>http://www.webspell.org/images/linkus/1.gif<b>[/img]</b><br><br>
-				%as_noted_url_% <b>[url][/url]</b>%_tag_if_wish%<br>
-				<b>[url=http://www.webspell.org/][img]</b>http://www.webspell.org/images/linkus/1.gif<b>[/img][/url]</b><br>
+				<strong>[img]</strong>http://www.webspell.org/images/linkus/1.gif<strong>[/img]</strong><br><br>
+				%as_noted_url_% <strong>[url][/url]</strong>%_tag_if_wish%<br>
+				<strong>[url=http://www.webspell.org/][img]</strong>http://www.webspell.org/images/linkus/1.gif<strong>[/img][/url]</strong><br>
 				%would_generate%:<br>
 				<a href="http://www.webspell.org" target="_blank"><img src="http://www.webspell.org/images/linkus/1.gif" alt=""></a><br><br>
 				<a href="#Top">%back_top%</a>

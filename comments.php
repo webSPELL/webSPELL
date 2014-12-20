@@ -424,7 +424,7 @@ if (isset($_POST[ 'savevisitorcomment' ])) {
                     $statuspic = '<img src="images/icons/online.gif" width="7" height="7" alt="online">';
                 }
 
-                $avatar = '<img src="images/avatars/' . getavatar($ds[ 'userID' ]) . '" align="left" alt="Avatar">';
+                $avatar = '<img src="images/avatars/' . getavatar($ds[ 'userID' ]) . '" class="text-left" alt="Avatar">';
 
                 if ($loggedin && $ds[ 'userID' ] != $userID) {
                     $pm = '<a href="index.php?site=messenger&amp;action=touser&amp;touser=' . $ds[ 'userID' ] .
@@ -454,7 +454,7 @@ if (isset($_POST[ 'savevisitorcomment' ])) {
                 }
             } else {
                 $member = '';
-                $avatar = '<img src="images/avatars/noavatar.gif" align="left" alt="Avatar">';
+                $avatar = '<img src="images/avatars/noavatar.gif" class="text-left" alt="Avatar">';
                 $country = '';
                 $pm = '';
                 $buddy = '';
@@ -506,7 +506,7 @@ if (isset($_POST[ 'savevisitorcomment' ])) {
                 $edit =
                     '<a href="index.php?site=comments&amp;editcomment=true&amp;id=' . $ds[ 'commentID' ] . '&amp;ref=' .
                     urlencode($referer) . '" title="' . $_language->module[ 'edit_comment' ] .
-                    '"><i class="icon-edit"></i></a>';
+                    '"><span class="icon-edit"></span></a>';
             } else {
                 $edit = '';
             }

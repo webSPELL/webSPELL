@@ -2,10 +2,9 @@
 <html>
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
 	<meta name="description" content="Clanpage using webSPELL 4 CMS">
 	<meta name="author" content="webspell.org">
-	<meta name="keywords" content="webspell, webspell4, clan, cms">
 	<meta name="copyright" content="Copyright 2005-2014 by webspell.org">
 	<meta name="generator" content="webSPELL">
 
@@ -15,19 +14,17 @@
 	<script src="js/bbcode.js"></script>
 </head>
 
-<body bgcolor="$pagebg">
-<br><br>
-
+<body>
 <form action="forum.php?board={$_POST['board']}" method="post">
-	<table width="800" cellspacing="0" cellpadding="2" align="center" bgcolor="$border">
+	<table class="table">
 		<tr>
-			<td class="title" bgcolor="$bghead" align="center">%move_topic%</td>
+			<td class="title">%move_topic%</td>
 		</tr>
 		<tr>
-			<td bgcolor="$bg1"></td>
+			<td></td>
 		</tr>
 		<tr>
-			<td bgcolor="$bg1" align="center" height="100">%move_topic_board%:
+			<td>%move_topic_board%:
 				<select name="toboard">$boards</select><br>
 				<input type="checkbox" name="movelink" value="1" checked="checked">
 				%leave_shadowtopic%

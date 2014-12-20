@@ -187,7 +187,7 @@ if ($login) {
     <!DOCTYPE html>
     <html>
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta charset="utf-8">
         <meta name="description" content="Clanpage using webSPELL 4 CMS">
         <meta name="author" content="webspell.org">
         <meta name="keywords" content="webspell, webspell4, clan, cms">
@@ -196,10 +196,10 @@ if ($login) {
         <title><?php echo PAGETITLE; ?></title>
         <link href="_stylesheet.css" rel="stylesheet" type="text/css">
     </head>
-    <body bgcolor="<?php echo PAGEBG; ?>">
-    <table width="100%" border="0" cellpadding="0" cellspacing="0">
+    <body>
+    <table class="table">
         <tr>
-            <td height="500" align="center">
+            <td height="500" class="text-center">
                 <table width="350" border="0" cellpadding="10" cellspacing="0"
                        style="border:1px solid <?php
                        echo BORDER;
@@ -207,7 +207,7 @@ if ($login) {
                     echo BG_1;
                 ?>">
                     <tr>
-                        <td align="center"><?php echo $error; ?></td>
+                        <td class="text-center"><?php echo $error; ?></td>
                     </tr>
                 </table>
             </td>

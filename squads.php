@@ -56,7 +56,7 @@ if ($action == "show") {
         }
         $name = $ds[ 'name' ];
         $squadID = $ds[ 'squadID' ];
-        $backlink = '<a href="index.php?site=squads"><b>' . $_language->module[ 'back_squad_overview' ] . '</b></a>';
+        $backlink = '<a href="index.php?site=squads"><strong>' . $_language->module[ 'back_squad_overview' ] . '</strong></a>';
         $results = '';
         $awards = '';
         $challenge = '';

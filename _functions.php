@@ -76,7 +76,7 @@ function makepagelink($link, $page, $pages, $sub = '')
             $i = 1;
         }
         if ($i == $page) {
-            $page_link .= '&nbsp;<b><u>' . $i . '</u></b>';
+            $page_link .= '&nbsp;<strong><u>' . $i . '</u></strong>';
         } else {
             $page_link .= '&nbsp;<a href="' . $link . '&amp;' . $sub . 'page=' . $i . '">' . $i . '</a>';
         }

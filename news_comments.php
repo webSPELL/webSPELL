@@ -139,7 +139,7 @@ if ($newsID) {
         $comments = '';
 
         $poster = '<a href="index.php?site=profile&amp;id=' . $ds[ 'poster' ] . '">
-            <b>' . getnickname($ds[ 'poster' ]) . '</b>
+            <strong>' . getnickname($ds[ 'poster' ]) . '</strong>
         </a>';
         $related = '';
         if ($ds[ 'link1' ] && $ds[ 'url1' ] != "http://" && $ds[ 'window1' ]) {

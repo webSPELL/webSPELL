@@ -30,18 +30,18 @@
 </script>
 <form action="calendar.php?action=savedate" method="post" name="post"
 		onsubmit="return chkFormular()">
-	<table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="$border">
+	<table class="table">
 		<tr>
-			<td class="title" align="center" bgcolor="$bghead">%new_date%</td>
+			<td class="title" class="text-center">%new_date%</td>
 		</tr>
 		<tr>
-			<td bgcolor="$pagebg"></td>
+			<td></td>
 		</tr>
 		<tr>
-			<td bgcolor="$bg1">
-				<table border="0" align="center" cellpadding="2" cellspacing="0">
+			<td>
+				<table class="table">
 					<tr>
-						<td align="right">%start_datetime%</td>
+						<td class="text-right">%start_datetime%</td>
 						<td><select name="day">$day</select>
 							<select name="month">$month</select>
 							<select name="year">$year</select>
@@ -51,7 +51,7 @@
 							<input name="minute" type="text" value="00" size="3"></td>
 					</tr>
 					<tr>
-						<td align="right">%end_datetime%</td>
+						<td class="text-right">%end_datetime%</td>
 						<td><select name="endday">$day</select>
 							<select name="endmonth">$month</select>
 							<select name="endyear">$year</select>
@@ -61,31 +61,31 @@
 							<input name="endminute" type="text" value="00" size="3"></td>
 					</tr>
 					<tr>
-						<td align="right">%shorttitle%</td>
+						<td class="text-right">%shorttitle%</td>
 						<td><input name="short" id="short" type="text" size="35">
 							<small>%displayed_in%</small>
 						</td>
 					</tr>
 					<tr>
-						<td align="right">%longtitle%</td>
+						<td class="text-right">%longtitle%</td>
 						<td><input name="title" id="title" type="text" size="35"></td>
 					</tr>
 					<tr>
-						<td align="right">%location%</td>
+						<td class="text-right">%location%</td>
 						<td><select name="country">$countries</select>
 							<input name="location" type="text"></td>
 					</tr>
 					<tr>
-						<td align="right">%homepage%</td>
+						<td class="text-right">%homepage%</td>
 						<td><input name="locationhp" type="text" value="http://" size="35"></td>
 					</tr>
 					<tr>
-						<td align="right" valign="top">%information%</td>
+						<td class="text-right" valign="top">%information%</td>
 						<td><textarea name="message" id="dateinfo" cols="40" rows="7"></textarea>
 						</td>
 					</tr>
 					<tr>
-						<td align="right">&nbsp;</td>
+						<td class="text-right">&nbsp;</td>
 					</tr>
 					<tr>
 						<td>&nbsp;</td>

@@ -55,7 +55,7 @@ if (mysqli_num_rows($ergebnis)) {
             if (!fsockopen("udp://" . $ip, $port, $strErrNo, $strErrStr, 30)) {
                 $status = "<i>" . $_language->module[ 'timeout' ] . "</i>";
             } else {
-                $status = "<b>" . $_language->module[ 'online' ] . "</b>";
+                $status = "<strong>" . $_language->module[ 'online' ] . "</strong>";
             }
         } else {
             $status = "<i>" . $_language->module[ 'not_supported' ] . "</i>";

@@ -77,18 +77,18 @@ if (isset($_POST[ 'save' ])) {
             } else {
                 if (unlink($filepath . $banner[ 'name' ] . ".tmp")) {
                     $error = $_language->module[ 'format_incorrect' ];
-                    die('<b>' . $error . '</b><br><br><a href="index.php?site=links&amp;action=edit&amp;linkID=' . $id .
+                    die('<strong>' . $error . '</strong><br><br><a href="index.php?site=links&amp;action=edit&amp;linkID=' . $id .
                         '">&laquo; ' . $_language->module[ 'back' ] . '</a>');
                 } else {
                     $error = $_language->module[ 'format_incorrect' ];
-                    die('<b>' . $error . '</b><br><br><a href="index.php?site=links&amp;action=edit&amp;linkID=' . $id .
+                    die('<strong>' . $error . '</strong><br><br><a href="index.php?site=links&amp;action=edit&amp;linkID=' . $id .
                         '">&laquo; ' . $_language->module[ 'back' ] . '</a>');
                 }
             }
         } else {
             @unlink($filepath . $banner[ 'name' ] . ".tmp");
             $error = $_language->module[ 'banner_to_big' ];
-            die('<b>' . $error . '</b><br><br><a href="index.php?site=links&amp;action=edit&amp;linkID=' . $id .
+            die('<strong>' . $error . '</strong><br><br><a href="index.php?site=links&amp;action=edit&amp;linkID=' . $id .
                 '">&laquo; ' . $_language->module[ 'back' ] . '</a>');
         }
     }
@@ -140,18 +140,18 @@ if (isset($_POST[ 'save' ])) {
             } else {
                 if (unlink($filepath . $banner[ 'name' ] . ".tmp")) {
                     $error = $_language->module[ 'format_incorrect' ];
-                    die('<b>' . $error . '</b><br><br><a href="index.php?site=links&amp;action=edit&amp;linkID=' . $id .
+                    die('<strong>' . $error . '</strong><br><br><a href="index.php?site=links&amp;action=edit&amp;linkID=' . $id .
                         '">&laquo; ' . $_language->module[ 'back' ] . '</a>');
                 } else {
                     $error = $_language->module[ 'format_incorrect' ];
-                    die('<b>' . $error . '</b><br><br><a href="index.php?site=links&amp;action=edit&amp;linkID=' . $id .
+                    die('<strong>' . $error . '</strong><br><br><a href="index.php?site=links&amp;action=edit&amp;linkID=' . $id .
                         '">&laquo; ' . $_language->module[ 'back' ] . '</a>');
                 }
             }
         } else {
             @unlink($filepath . $banner[ 'name' ] . ".tmp");
             $error = $_language->module[ 'banner_to_big' ];
-            die('<b>' . $error . '</b><br><br><a href="index.php?site=links&amp;action=edit&amp;linkID=' . $id .
+            die('<strong>' . $error . '</strong><br><br><a href="index.php?site=links&amp;action=edit&amp;linkID=' . $id .
                 '">&laquo; ' . $_language->module[ 'back' ] . '</a>');
         }
     }
@@ -265,7 +265,7 @@ if ($action == "new") {
             }
             $i++;
 
-            $link = '<a href="' . $ds[ 'url' ] . '" target="_blank"><b>' . $ds[ 'name' ] . '</b></a>';
+            $link = '<a href="' . $ds[ 'url' ] . '" target="_blank"><strong>' . $ds[ 'name' ] . '</strong></a>';
             $info = cleartext($ds[ 'info' ]);
             if ($ds[ 'banner' ]) {
                 $banner = '<a href="' . $ds[ 'url' ] . '" target="_blank"><img src="images/links/' . $ds[ 'banner' ] .
@@ -311,7 +311,7 @@ if ($action == "new") {
         $bg1 = BG_1;
 
         eval ("\$links_category = \"" . gettemplate("links_category") . "\";");
-        echo $links_category;
+        echo $links-category;
 
         $i = 1;
         while ($ds = mysqli_fetch_array($cats)) {

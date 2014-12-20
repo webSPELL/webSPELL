@@ -2,16 +2,16 @@
 	<!--
 
 	function chkFormularShoutBox() {
-		if (document.getElementById('shoutbox_name').value === "") {
+		if (document.getElementById('shoutbox-name').value === "") {
 			alert('%enter_name%');
-			document.getElementById('shoutbox_name').focus();
+			document.getElementById('shoutbox-name').focus();
 
 			return false;
 		}
-		if (document.getElementById('shoutbox_message').value === "" ||
-				document.getElementById('shoutbox_message').value === "Message") {
+		if (document.getElementById('shoutbox-message').value === "" ||
+				document.getElementById('shoutbox-message').value === "Message") {
 			alert('%enter_message%');
-			document.getElementById('shoutbox_message').focus();
+			document.getElementById('shoutbox-message').focus();
 
 			return false;
 		}
@@ -28,17 +28,15 @@
 		fetch('shoutbox_content.php', 'shoutbox', 'replace', 'time', $refresh);
 		-->
 	</script>
-	<div id="shoutbox" style="width: 100%;overflow: hidden; text-align: left;"></div>
+	<div id="shoutbox"></div>
 
-	<input type="text" id="shoutbox_name" name="name" maxlength="255"
-			class="form-control form-group" $name_settings>
-	<input type="text" id="shoutbox_message" name="message" maxlength="255" placeholder="Message"
-			class="form-control form-group" required>
+	<input type="text" id="shoutbox-name" name="name" maxlength="255" class="form-control form-group" $name_settings>
+	<input type="text" id="shoutbox-message" name="message" maxlength="255" placeholder="Message"
+		class="form-control form-group" required>
 
 	$captcha_form
 	<div class="form-group">
-		<a href="javascript:if(chkFormularShoutBox())+document.shout.submit();"
-				class="btn btn-primary">%shout%</a> - <a
-			href="index.php?site=shoutbox_content&amp;action=showall">%all_messages%</a>
+		<a href="javascript:if(chkFormularShoutBox())+document.shout.submit();" class="btn btn-primary">%shout%</a> -
+		<a href="index.php?site=shoutbox_content&amp;action=showall">%all_messages%</a>
 	</div>
 </form>

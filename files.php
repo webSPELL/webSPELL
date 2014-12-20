@@ -653,7 +653,7 @@ if ($action == "save") {
             if (!$userID && $file[ 'accesslevel' ] >= 1) {
                 $link = '(R)';
             } else {
-                $link = '<a href="download.php?fileID=' . $fileid . '"><i class="icon-download icon-large"></i></a>';
+                $link = '<a href="download.php?fileID=' . $fileid . '"><span class="icon-download icon-large"></span></a>';
             }
 
             eval("\$files_category_list = \"" . gettemplate("files_category_list") . "\";");
@@ -739,7 +739,7 @@ if ($action == "save") {
         '<a href="index.php?site=files&amp;cat=' . $cat[ 'filecatID' ] . '" class="titlelink">' . $cat[ 'name' ] .
         '</a>';
     $categories =
-        '<a href="index.php?site=files&amp;cat=' . $cat[ 'filecatID' ] . '"><b>' . $cat[ 'name' ] . '</b></a>';
+        '<a href="index.php?site=files&amp;cat=' . $cat[ 'filecatID' ] . '"><strong>' . $cat[ 'name' ] . '</strong></a>';
 
     $cat_id = $cat[ 'subcatID' ];
     while ($cat_id != 0) {
@@ -855,7 +855,7 @@ if ($action == "save") {
     $admintools = '';
     // ADMINTOOLS
     if (isfileadmin($userID)) {
-        $admintools = '<tr><td colspan="2" align="right">';
+        $admintools = '<tr><td colspan="2" class="text-right">';
         $admintools .=
             '<a href="index.php?site=files&amp;action=edit&amp;fileID=' . $file[ 'fileID' ] .
                 '" class="btn btn-danger">' . $_language->module[ 'edit_file' ] . '</a>';
@@ -875,7 +875,7 @@ if ($action == "save") {
 
     if ($file[ 'accesslevel' ] <= $accesslevel) {
         $link = '<a href="download.php?fileID=' . $fileID .
-            '" class="btn btn-lg btn-success"><i class="icon-download icon-large"></i> ' .
+            '" class="btn btn-lg btn-success"><span class="icon-download icon-large"></span> ' .
             str_replace('%filename%', $filename, $_language->module[ 'download_now' ]) . '</a>';
     } else {
         $link = $_language->module[ 'download_registered_only' ] . '<br><a href="index.php?site=login">' .
@@ -1009,7 +1009,7 @@ if ($action == "save") {
                 downloads DESC
             LIMIT 0,5"
         );
-        $top5 = '<b>' . $_language->module[ 'top_5_downloads' ] . '</b><ul class="list-group">';
+        $top5 = '<strong>' . $_language->module[ 'top_5_downloads' ] . '</strong><ul class="list-group">';
 
         $n = 1;
         while ($file = mysqli_fetch_array($top5qry)) {
@@ -1020,7 +1020,7 @@ if ($action == "save") {
                 $filename .= '...';
             }
             $filename =
-                '<a href="index.php?site=files&amp;file=' . $file[ 'fileID' ] . '"><b>' . $filename . '</b></a>';
+                '<a href="index.php?site=files&amp;file=' . $file[ 'fileID' ] . '"><strong>' . $filename . '</strong></a>';
             if ($file[ 'downloads' ] != '0') {
                 $top5 .=
                     '<li class="list-group-item">
@@ -1045,7 +1045,7 @@ if ($action == "save") {
                 // cat-information
                 $catID = $cat[ 'filecatID' ];
                 $sub_cat_qry = get_all_sub_cats($catID, 1);
-                $catname = '<a href="index.php?site=files&amp;cat=' . $catID . '"><b>' . $cat[ 'name' ] . '</b></a>';
+                $catname = '<a href="index.php?site=files&amp;cat=' . $catID . '"><strong>' . $cat[ 'name' ] . '</strong></a>';
                 $subcategories =
                     mysqli_num_rows(
                         safe_query(

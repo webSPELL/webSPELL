@@ -56,7 +56,7 @@ if ($action == "show") {
                   squadID='" . $ds[ 'squadID' ] . "'"
             )
         );
-        $name = '<b>' . $ds[ 'name' ] . '</b>';
+        $name = '<strong>' . $ds[ 'name' ] . '</strong>';
         if ($ds[ 'icon' ]) {
             $icon = '<img src="images/squadicons/' . $ds[ 'icon' ] . '" alt="' . htmlspecialchars($ds[ 'name' ]) . '">';
         } else {

@@ -89,11 +89,9 @@ module.exports = function(grunt) {
         htmllint: {
             options: {
                 htmllintrc: true,
-                force: false
+                force: true
             },
-            src: [
-                templates
-            ]
+            src: templates
         },
         bootlint: {
             options: {

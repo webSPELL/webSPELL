@@ -100,3 +100,21 @@ a.flag.active img, a.flag:hover img {
     padding-top: 4px;
     padding-bottom: 3px;
 }
+
+.ws-win-color {
+    color: #008000;
+}
+
+.ws-draw-color {
+    color: #ffa500;
+}
+
+.ws-lose-color {
+    color: #ff0000;
+}
+
+#shoutbox {
+    width: 100%;
+    overflow: hidden;
+    text-align: left;
+}

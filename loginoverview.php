@@ -213,7 +213,7 @@ if ($userID && !isset($_GET[ 'userID' ]) && !isset($_POST[ 'userID' ])) {
     }
 
     if (isset($_SESSION[ 'referer' ])) {
-        $referer_uri = '<a class="btn" href="' . $_SESSION[ 'referer' ] . '"><i class="icon-caret-left"></i> ' .
+        $referer_uri = '<a class="btn" href="' . $_SESSION[ 'referer' ] . '"><span class="icon-caret-left"></span> ' .
             $_language->module[ 'back_last_page' ] . '</a>';
         unset($_SESSION[ 'referer' ]);
     } else {

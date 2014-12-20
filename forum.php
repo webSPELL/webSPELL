@@ -166,7 +166,7 @@ function forum_stats()
                     '</b></a>';
             } else {
                 $user_names =
-                    '<a href="index.php?site=profile&amp;id=' . $ds[ 'userID' ] . '"><b>' . $nickname . '</b></a>';
+                    '<a href="index.php?site=profile&amp;id=' . $ds[ 'userID' ] . '"><strong>' . $nickname . '</strong></a>';
             }
             $n++;
         }
@@ -186,7 +186,7 @@ function forum_stats()
     $maxonline = $dm[ 'maxonline' ];
 
     $newestmember =
-        '<a href="index.php?site=profile&amp;id=' . $dn[ 'userID' ] . '"><b>' . $dn[ 'nickname' ] . '</b></a>';
+        '<a href="index.php?site=profile&amp;id=' . $dn[ 'userID' ] . '"><strong>' . $dn[ 'nickname' ] . '</strong></a>';
     eval ("\$forum_stats = \"" . gettemplate("forum_stats") . "\";");
     echo $forum_stats;
 }
@@ -302,7 +302,7 @@ function boardmain()
             $anztopics = $db[ 'topics' ];
             $anzposts = $db[ 'posts' ];
             $boardname = $db[ 'name' ];
-            $boardname = '<a href="index.php?site=forum&amp;board=' . $board . '"><b>' . $boardname . '</b></a>';
+            $boardname = '<a href="index.php?site=forum&amp;board=' . $board . '"><strong>' . $boardname . '</strong></a>';
 
             if ($db[ 'info' ]) {
                 $boardinfo = $db[ 'info' ];
@@ -443,7 +443,7 @@ function boardmain()
         $anzposts = $db[ 'posts' ];
 
         $boardname = $db[ 'name' ];
-        $boardname = '<a href="index.php?site=forum&amp;board=' . $db[ 'boardID' ] . '"><b>' . $boardname . '</b></a>';
+        $boardname = '<a href="index.php?site=forum&amp;board=' . $db[ 'boardID' ] . '"><strong>' . $boardname . '</strong></a>';
 
         $boardinfo = '';
         if ($db[ 'info' ]) {
@@ -644,13 +644,13 @@ function showboard($board)
         $moderators = '(' . $_language->module[ 'moderated_by' ] . ': ' . $moderators . ')';
     }
 
-    $actions = '<a href="index.php?site=search" class="btn btn-default"><i class="icon-search"></i> Search</a>';
+    $actions = '<a href="index.php?site=search" class="btn btn-default"><span class="icon-search"></span> Search</a>';
     if ($loggedin) {
         $mark = '<a href="index.php?site=forum&amp;board=' . $board . '&amp;action=markall">' .
             $_language->module[ 'mark_topics_read' ] . '</a>';
         if ($writer) {
             $actions .= ' <a href="index.php?site=forum&amp;addtopic=true&amp;board=' . $board .
-                '" class="btn btn-primary"><i class="icon-comment-alt"></i> ' . $_language->module[ 'new_topic' ] .
+                '" class="btn btn-primary"><span class="icon-comment-alt"></span> ' . $_language->module[ 'new_topic' ] .
                 '</a>';
         }
     } else {
@@ -1297,7 +1297,7 @@ if (isset($_POST[ 'submit' ]) || isset($_POST[ 'movetopic' ]) || isset($_GET[ 'a
                 $message = cleartext(stripslashes(str_replace(['\r\n', '\n'], ["\n", "\n"], $_POST[ 'message' ])));
                 $message = toggle($message, 'xx');
                 $username =
-                    '<a href="index.php?site=profile&amp;id=' . $userID . '"><b>' . getnickname($userID) . '</b></a>';
+                    '<a href="index.php?site=profile&amp;id=' . $userID . '"><strong>' . getnickname($userID) . '</strong></a>';
 
                 $board = (int)$_POST[ 'board' ];
                 $topicname = stripslashes($_POST[ 'topicname' ]);
@@ -1368,11 +1368,11 @@ if (isset($_POST[ 'submit' ]) || isset($_POST[ 'movetopic' ]) || isset($_GET[ 'a
                 $actions = '';
                 $quote = '';
 
-                echo '<table width="100%" cellspacing="1" cellpadding="2" bgcolor="' . BORDER . '">
-          <tr bgcolor="' . BGHEAD . '">
-            <td colspan="2" class="title" align="center">' . cleartext($topicname) . '</td>
+                echo '<table class="table">
+          <tr>
+            <td colspan="2" class="title" class="text-center">' . cleartext($topicname) . '</td>
           </tr>
-          <tr bgcolor="' . PAGEBG . '"><td colspan="2"></td></tr>';
+          <tr></td></tr>';
 
                 eval ("\$forum_topic_content = \"" . gettemplate("forum_topic_content") . "\";");
                 echo $forum_topic_content;

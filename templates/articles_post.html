@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
     <meta name="description" content="Clanpage using webSPELL 4 CMS">
     <meta name="author" content="webspell.org">
     <meta name="keywords" content="webspell, webspell4, clan, cms">
@@ -21,7 +21,7 @@
             var message_text = '',
                     x = 0;
 
-            if (document.getElementById('article_title').value == "") {
+            if (document.getElementById('article-title').value == "") {
                 alert("%enter_title%");
                 document.post.title.focus();
 
@@ -52,10 +52,10 @@
         function update_textarea(value) {
             var message = new Array();
 
-            document.getElementById('articles_textarea').innerHTML = '';
+            document.getElementById('articles-textarea').innerHTML = '';
             for (i = 0; i < value; ++i) {
                 if (message[i]) {
-                    document.getElementById('articles_textarea')
+                    document.getElementById('articles-textarea')
                             .innerHTML += '%page% ' + (i + 1) + '<br><textarea ' +
                     'name="message[' + i + ']" ' +
                     'rows="20" ' +
@@ -68,7 +68,7 @@
                     '</textarea><br><br>';
                 } else {
                     message[i] = '';
-                    document.getElementById('articles_textarea')
+                    document.getElementById('articles-textarea')
                             .innerHTML += '%page% ' + (i + 1) + '<br><textarea ' +
                     'name="message[' + i + ']" ' +
                     'rows="20" ' +
@@ -85,8 +85,7 @@
     </script>
 </head>
 <body>
-<form action="articles.php?action=save" method="post" id="post" name="post"
-      onsubmit="return chkFormular()">
+<form action="articles.php?action=save" method="post" id="post" name="post" onsubmit="return chkFormular()">
     <div class="container">
         <h2>%edit_article%</h2>
 
@@ -95,11 +94,10 @@
                 <div class="panel-heading">
                     <h4 class="panel-title">
                         <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion"
-                           href="#collapseOne">BBCode
-                            and Flags</a>
+                            href="#collapse-one">BBCode and Flags</a>
                     </h4>
                 </div>
-                <div id="collapseOne" class="panel-collapse collapse in">
+                <div id="collapse-one" class="panel-collapse collapse in">
                     <div class="panel-body">
                         $addbbcode
                         $addflags
@@ -107,51 +105,59 @@
                 </div>
             </div>
 
-            <div id="collapseTwo" class="panel-collapse collapse">
+            <div id="collapse-two" class="panel-collapse collapse">
                 <div class="panel-body">
                     <div class="form-horizontal">
                         <div class="form-group">
                             <div class="col-xs-1">%link% 1:</div>
-                            <div class="col-xs-4"><input name="link1" type="text" value=""
-                                                         class="form-control"></div>
-                            <div class="col-xs-4"><input name="url1" type="text" value="http://"
-                                                         class="form-control">
+                            <div class="col-xs-4">
+                                <input name="link1" type="text" value="" class="form-control">
                             </div>
-                            <div class="col-xs-3"><input class="input" type="radio" name="window1"
-                                                         value="0"></div>
+                            <div class="col-xs-4">
+                                <input name="url1" type="text" value="http://" class="form-control">
+                            </div>
+                            <div class="col-xs-3">
+                                <input class="input" type="radio" name="window1" value="0">
+                            </div>
                         </div>
 
                         <div class="form-group">
                             <div class="col-xs-1">%link% 2:</div>
-                            <div class="col-xs-4"><input name="link2" type="text" value=""
-                                                         class="form-control"></div>
-                            <div class="col-xs-4"><input name="url2" type="text" value="http://"
-                                                         class="form-control">
+                            <div class="col-xs-4">
+                                <input name="link2" type="text" value="" class="form-control">
                             </div>
-                            <div class="col-xs-3"><input class="input" type="radio" name="window2"
-                                                         value="0"></div>
+                            <div class="col-xs-4">
+                                <input name="url2" type="text" value="http://" class="form-control">
+                            </div>
+                            <div class="col-xs-3">
+                                <input class="input" type="radio" name="window2" value="0">
+                            </div>
                         </div>
 
                         <div class="form-group">
                             <div class="col-xs-1">%link% 3:</div>
-                            <div class="col-xs-4"><input name="link3" type="text" value=""
-                                                         class="form-control"></div>
-                            <div class="col-xs-4"><input name="url3" type="text" value="http://"
-                                                         class="form-control">
+                            <div class="col-xs-4">
+                                <input name="link3" type="text" value="" class="form-control">
                             </div>
-                            <div class="col-xs-3"><input class="input" type="radio" name="window3"
-                                                         value="0"></div>
+                            <div class="col-xs-4">
+                                <input name="url3" type="text" value="http://" class="form-control">
+                            </div>
+                            <div class="col-xs-3">
+                                <input class="input" type="radio" name="window3" value="0">
+                            </div>
                         </div>
 
                         <div class="form-group">
                             <div class="col-xs-1">%link% 4:</div>
-                            <div class="col-xs-4"><input name="link4" type="text" value=""
-                                                         class="form-control"></div>
-                            <div class="col-xs-4"><input name="url4" type="text" value="http://"
-                                                         class="form-control">
+                            <div class="col-xs-4">
+                                <input name="link4" type="text" value="" class="form-control">
                             </div>
-                            <div class="col-xs-3"><input class="input" type="radio" name="window4"
-                                                         value="0"></div>
+                            <div class="col-xs-4">
+                                <input name="url4" type="text" value="http://" class="form-control">
+                            </div>
+                            <div class="col-xs-3">
+                                <input class="input" type="radio" name="window4" value="0">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -161,20 +167,19 @@
                 <div class="panel-heading">
                     <h4 class="panel-title">
                         <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion"
-                           href="#collapseThree">%options%</a>
+                            href="#collapse-three">%options%</a>
                     </h4>
                 </div>
-                <div id="collapseThree" class="panel-collapse collapse">
+                <div id="collapse-three" class="panel-collapse collapse">
                     <div class="panel-body">
-                        <b>%pagecount%</b>
+                        <strong>%pagecount%</strong>
                         %page_select%
 
-                        <input name="upload" type="button"
-                               onclick="window.open(
-								'upload.php?articlesID=$articlesID',
-								'Upload',
-								'scrollbars=yes,width=800,height=600')"
-                               value="%upload_images%" class="btn btn-danger">
+                        <input name="upload" type="button" onclick="window.open(
+                            'upload.php?articlesID=$articlesID',
+                            'Upload',
+                            'scrollbars=yes,width=800,height=600')"
+                        value="%upload_images%" class="btn btn-danger">
                     </div>
                 </div>
             </div>
@@ -182,14 +187,14 @@
     </div>
 
     <div>
-        <div><b>%title%</b></div>
-        <input name="title" type="text" size="80" value="$title" id='article_title'
-               class="form-control">
+        <div><strong>%title%</strong></div>
+        <input name="title" type="text" size="80" value="$title" id="article-title"
+            class="form-control">
 
         <p class="text-right">
-            <small><b>%options%:</b> %html% %bbcode% %smilies%</small>
+            <small><strong>%options%:</strong> %html% %bbcode% %smilies%</small>
         </p>
-        <div id="articles_textarea"></div>
+        <div id="articles-textarea"></div>
 
         <script>
             <!--
