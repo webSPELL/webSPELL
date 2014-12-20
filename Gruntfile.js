@@ -86,6 +86,15 @@ module.exports = function(grunt) {
                 showSniffCodes: true
             }
         },
+        htmllint: {
+            options: {
+                htmllintrc: true,
+                force: false
+            },
+            src: [
+                templates
+            ]
+        },
         bootlint: {
             options: {
                 stoponerror: false,
@@ -98,7 +107,7 @@ module.exports = function(grunt) {
                     "W005"
                 ]
             },
-            files: [ "templates/*.html" ]
+            files: templates
         },
         githooks: {
             all: {
@@ -177,6 +186,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks("grunt-bump");
     grunt.loadNpmTasks("grunt-githooks");
     grunt.loadNpmTasks("grunt-bootlint");
+    grunt.loadNpmTasks("grunt-htmllint");
 
     grunt.registerTask("codecheck", [
         "lintspaces",
