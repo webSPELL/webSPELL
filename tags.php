@@ -48,7 +48,7 @@ if (isset($_GET[ 'tag' ])) {
         }
         echo "<h1>" . $_language->module[ 'search' ] . "</h1>";
         usort($data, ['Tags', 'sortByDate']);
-        echo "<p class=\"text-center\"><b>" . count($data) . "</b> " . $_language->module[ 'results_found' ] .
+        echo "<p class=\"text-center\"><strong>" . count($data) . "</strong> " . $_language->module[ 'results_found' ] .
             "</p><br><br>";
         foreach ($data as $entry) {
 

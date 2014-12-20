@@ -43,9 +43,9 @@
 	<div class="form-group">
 		<textarea name="message" id="message" rows="10" class="form-control"
 				autofocus>$message</textarea>
-		<small><b>%options%:</b> %bbcode_on% | %smilies_on%</small>
-		<div class="pull-right"><input class="input" type="checkbox" name="notify" value="1"
-			$notify> %notify_reply%
+		<small><strong>%options%:</strong> %bbcode_on% | %smilies_on%</small>
+		<div class="pull-right">
+			<input class="input" type="checkbox" name="notify" value="1" $notify> %notify_reply%
 		</div>
 	</div>
 
@@ -58,7 +58,6 @@
 		<input type="hidden" name="topic" value="$topic">
 		<input type="hidden" name="page" value="$page">
 		<input type="hidden" name="addreply" value="true">
-		<input name="newreply" id="add_post_submit" type="submit" value="%post_new_reply%"
-				class="btn btn-primary">
+		<input name="newreply" type="submit" value="%post_new_reply%" class="btn btn-primary">
 	</div>
 </form>

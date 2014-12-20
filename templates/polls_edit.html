@@ -36,11 +36,11 @@
 	</div>
 
 	<div class="form-group">
-		<label for="laufzeit_hour">%endingtime%:</label>
-
+		<label for="laufzeit-hour">%endingtime%:</label>
 		<div class="row">
 			<div class="col-xs-6">
-				<input type="date" placeholder="yyyy-mm-dd" value="$runtime_date" name="runtime_date" class="form-control">
+				<input id="laufzeit-hour" type="date" placeholder="yyyy-mm-dd" value="$runtime_date" name="runtime_date"
+					class="form-control">
 			</div>
 			<div class="col-xs-6">
 				<input type="time" placeholder="hh:mm" value="$runtime_time" name="runtime_time" class="form-control">
@@ -76,7 +76,7 @@
 		<label for="opt9">%option%: 9</label>
 		<input type="text" name="op9" id="opt9" value="$option9" class="form-control">
 
-		<label for="op10">%option%: 10</label>
+		<label for="opt10">%option%: 10</label>
 		<input type="text" name="op10" id="opt10" value="$option10" class="form-control">
 	</div>
 
@@ -87,8 +87,8 @@
 	</div>
 
 	<div class="form-group">
-		<label for="intern">%intern%?</label>
-		<input type="checkbox" name="intern" value="1" $intern>
+		<label for="intern" form="intern">%intern%?</label>
+		<input id="intern" type="checkbox" name="intern" value="1" $intern>
 	</div>
 	<div class="control-group">
 

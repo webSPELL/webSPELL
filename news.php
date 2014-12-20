@@ -293,12 +293,11 @@ if ($action == "new") {
     }
 
     echo '<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<html>
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
 	<meta name="description" content="Clanpage using webSPELL 4 CMS">
 	<meta name="author" content="webspell.org">
-	<meta name="keywords" content="webspell, webspell4, clan, cms">
 	<meta name="copyright" content="Copyright 2005-2014 by webspell.org">
 	<meta name="generator" content="webSPELL">
 

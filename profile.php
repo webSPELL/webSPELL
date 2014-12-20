@@ -119,13 +119,13 @@ if (isset($id) and getnickname($id) != '') {
                     $statuspic = '<img src="images/icons/online.gif" alt="' . $_language->module[ 'online' ] . '">';
                 }
 
-                $buddylist .= '<tr bgcolor="' . $bgcolor . '">
+                $buddylist .= '<tr>
             <td>
-            <table>
+            <table class="table">
               <tr>
                 <td>' . $country . ' <a href="index.php?site=profile&amp;id=' . $db[ 'buddy' ] . '"><b>' .
                     $nicknamebuddy . '</b></a></td>
-                <td align="right">' . $email . '&nbsp;&nbsp;' . $buddy . '&nbsp;&nbsp;' . $statuspic . '</td>
+                <td class="text-right">' . $email . '&nbsp;&nbsp;' . $buddy . '&nbsp;&nbsp;' . $statuspic . '</td>
               </tr>
             </table>
             </td>
@@ -135,7 +135,7 @@ if (isset($id) and getnickname($id) != '') {
             }
         } else {
             $buddylist = '<tr>
-        <td colspan="2" bgcolor="' . BG_1 . '">' . $_language->module[ 'no_buddies' ] . '</td>
+        <td colspan="2">' . $_language->module[ 'no_buddies' ] . '</td>
       </tr>';
         }
 
@@ -163,9 +163,9 @@ if (isset($id) and getnickname($id) != '') {
       </tr>
       <tr>
         <td></td>
-        <td><b>' . $_language->module[ 'date' ] . '</b></td>
-        <td><b>' . $_language->module[ 'name' ] . '</b></td>
-        <td><b>' . $_language->module[ 'pictures' ] . '</b></td>
+        <td><strong>' . $_language->module[ 'date' ] . '</strong></td>
+        <td><strong>' . $_language->module[ 'name' ] . '</strong></td>
+        <td><strong>' . $_language->module[ 'pictures' ] . '</strong></td>
       </tr>';
 
         if ($usergalleries) {
@@ -267,15 +267,15 @@ if (isset($id) and getnickname($id) != '') {
                 $n % 2 ? $bgcolor = BG_1 : $bgcolor = BG_2;
                 $posttime = getformatdatetime($db[ 'date' ]);
 
-                $topiclist .= '<tr bgcolor="' . $bgcolor . '">
+                $topiclist .= '<tr>
             <td width="50%">
-            <table width="100%" cellpadding="2" cellspacing="0">
+            <table class="table">
               <tr>
                 <td colspan="3">
                     <div style="overflow:hidden;">
                         <a href="index.php?site=forum_topic&amp;topic=' . $db[ 'topicID' ] . '">' .
                             $posttime . '<br>
-                            <b>' . clearfromtags($db[ 'topic' ]) . '</b>
+                            <strong>' . clearfromtags($db[ 'topic' ]) . '</strong>
                         </a><br>
                         <i>' . $db[ 'views' ] . ' ' . $_language->module[ 'views' ] . ' - ' .
                             $db[ 'replys' ] . ' ' . $_language->module[ 'replys' ] . '
@@ -294,7 +294,7 @@ if (isset($id) and getnickname($id) != '') {
             }
         } else {
             $topiclist = '<tr>
-        <td colspan="2" bgcolor="' . BG_1 . '">' . $_language->module[ 'no_topics' ] . '</td>
+        <td colspan="2">' . $_language->module[ 'no_topics' ] . '</td>
       </tr>';
         }
 
@@ -352,20 +352,20 @@ if (isset($id) and getnickname($id) != '') {
                 } else {
                     $message = $db[ 'message' ];
                 }
-                $postlist .= '<tr bgcolor="' . $bgcolor1 . '">
+                $postlist .= '<tr>
             <td>
-            <table width="100%" cellpadding="2" cellspacing="0">
+            <table class="table">
               <tr>
                 <td colspan="3">
                     <a href="index.php?site=forum_topic&amp;topic=' . $db[ 'topicID' ] . '">' . $posttime .
-                    ' <br><b>' . $db[ 'topic' ] . '</b>
+                    ' <br><strong>' . $db[ 'topic' ] . '</strong>
                     </a>
                 </td>
               </tr>
               <tr><td></td></tr>
               <tr>
                 <td width="1%">&nbsp;</td>
-                <td bgcolor="' . $bgcolor2 . '">
+                <td>
                     <div style="width: 250px;overflow:hidden;">' .
                         clearfromtags($message) .
                     '</div>
@@ -383,7 +383,7 @@ if (isset($id) and getnickname($id) != '') {
             }
         } else {
             $postlist = '<tr>
-        <td colspan="2" bgcolor="' . BG_1 . '">' . $_language->module[ 'no_posts' ] . '</td>
+        <td colspan="2">' . $_language->module[ 'no_posts' ] . '</td>
       </tr>';
         }
 
@@ -553,11 +553,11 @@ if (isset($id) and getnickname($id) != '') {
                     if ($type == "ASC") {
                         $sorter = '<a href="index.php?site=profile&amp;id=' . $id . '&amp;action=guestbook&amp;page=' .
                             $page . '&amp;type=DESC">' . $_language->module[ 'sort' ] .
-                            ' <i class="icon-sort-down"></i></a>';
+                            ' <span class="icon-sort-down"></span></a>';
                     } else {
                         $sorter = '<a href="index.php?site=profile&amp;id=' . $id . '&amp;action=guestbook&amp;page=' .
                             $page . '&amp;type=ASC">' . $_language->module[ 'sort' ] .
-                            ' <i class="icon-sort-up"></i></a>';
+                            ' <span class="icon-sort-up"></span></a>';
                     }
 
                     echo '<div class="row form-group"><div class="col-xs-6">' . $sorter . ' ' . $page_link . '</div>
@@ -610,7 +610,7 @@ if (isset($id) and getnickname($id) != '') {
                         $actions = '';
                         $ip = $_language->module[ 'logged' ];
                         $quote = '<a href="javascript:AddCode(\'[quote=' . $name . ']' . $quotemessage .
-                            '[/quote]\')"> <i class="icon-quote-left"></i></a>';
+                            '[/quote]\')"> <span class="icon-quote-left"></span></a>';
                         if (isfeedbackadmin($userID) || $id == $userID) {
                             $actions =
                                 '<input class="input" type="checkbox" name="gbID[]" value="' . $ds[ 'gbID' ] . '">';
@@ -640,9 +640,9 @@ if (isset($id) and getnickname($id) != '') {
                         $submit = '';
                     }
 
-                    echo '<table><tr>
+                    echo '<table class="table"><tr>
                         <td>' . $page_link . '</td>
-                        <td align="right">' . $submit . '</td>
+                        <td class="text-right">' . $submit . '</td>
                         </tr></table></form>';
 
                     echo '<a name="addcomment"></a>';

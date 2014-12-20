@@ -13,34 +13,30 @@
 	<div class="form-group">
 		<div class="input-group">
 			<span class="input-group-addon captcha-img">$captcha</span>
-			<input name="captcha" id="captcha" type="number" placeholder="Enter Captcha"
-					autocomplete="off" class="form-control">
+			<input name="captcha" id="captcha" type="number" placeholder="Enter Captcha" autocomplete="off"
+				class="form-control">
 			<input name="captcha_hash" type="hidden" value="$hash">
 		</div>
 	</div>
 
-	<div id="ws_searchoptions" class="collapse">
+	<div id="ws-searchoptions" class="collapse">
 		<div class="form-group row">
-			<label class="col-lg-2">%search_in%</label>
+			<label class="col-lg-2" for="articles">%search_in%</label>
 
 			<div class="col-lg-10">
-				<input type="checkbox" class="input" name="articles" value="true"
-						class="form-control" checked>
-				%articles%
-				<input type="checkbox" class="input" name="faq" value="true" class="form-control"
-						checked> %faq%
-				<input type="checkbox" class="input" name="forum" value="true" class="form-control"
-						checked> %forum%
-				<input type="checkbox" class="input" name="news" value="true" class="form-control"
-						checked> %news%
+				<input type="checkbox" id="articles" class="input" name="articles" value="true" class="form-control"
+					checked> %articles%
+				<input type="checkbox" class="input" name="faq" value="true" class="form-control" checked> %faq%
+				<input type="checkbox" class="input" name="forum" value="true" class="form-control" checked> %forum%
+				<input type="checkbox" class="input" name="news" value="true" class="form-control" checked> %news%
 			</div>
 		</div>
 
 		<div class="form-group row">
-			<label class="col-lg-2">%result_quantity%:</label>
+			<label class="col-lg-2" for="result-quantity">%result_quantity%:</label>
 
 			<div class="col-lg-10 text-right">
-				<select name="r" class="form-control" multiple>
+				<select id="result-quantity" name="r" class="form-control" multiple>
 					<option value="100" selected>100</option>
 					<option value="50">50</option>
 					<option value="25">25</option>
@@ -50,18 +46,18 @@
 		</div>
 
 		<div class="form-group row">
-			<label class="col-lg-2">%sort_options%:</label>
+			<label class="col-lg-2" for="order1">%sort_options%:</label>
 
 			<div class="col-lg-10">
 				<div class="radio">
-					<label>
-						<input type="radio" name="order" value="1" checked>
+					<label for="order1">
+						<input id="order1" type="radio" name="order" value="1" checked>
 						%descending%
 					</label>
 				</div>
 				<div class="radio">
-					<label>
-						<input type="radio" name="order" value="2">
+					<label for="order2">
+						<input id="order2" type="radio" name="order" value="2">
 						%ascending%
 					</label>
 				</div>
@@ -69,21 +65,20 @@
 		</div>
 
 		<div class="form-group row">
-			<label class="col-lg-2">%date_options%:</label>
-
+			<label class="col-lg-2" for="afterdate">%date_options%:</label>
 			<div class="col-lg-5">
 				<label for="afterdate">%after%</label>
-				<input name="afterdate" placeholder="yyyy-mm-dd" type="date" class="form-control">
+				<input id="afterdate" name="afterdate" placeholder="yyyy-mm-dd" type="date" class="form-control">
 			</div>
 			<div class="col-lg-5">
 				<label for="beforedate">%before%</label>
-				<input name="beforedate" placeholder="yyyy-mm-dd" type="date" class="form-control">
+				<input id="beforedate" name="beforedate" placeholder="yyyy-mm-dd" type="date" class="form-control">
 			</div>
 		</div>
 	</div>
 
 	<div class="form-group">
-		<a class="btn btn-default" data-toggle="collapse" data-target="#ws_searchoptions">%options%
+		<a class="btn btn-default" data-toggle="collapse" data-target="#ws-searchoptions">%options%
 			<span class="caret"></span></a>
 	</div>
 

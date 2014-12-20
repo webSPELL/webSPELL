@@ -81,11 +81,4 @@ if (isset($_GET[ 'sponsorID' ])) {
 }
 
 //output
-if ($type === "frame") {
-    $pagetitle = PAGETITLE;
-
-    eval("\$out_frame = \"" . gettemplate("out_frame") . "\";");
-    echo $out_frame;
-} elseif ($type === "direct") {
-    header("Location: " . $target);
-}
+header("Location: " . $target);

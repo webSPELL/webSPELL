@@ -25,20 +25,19 @@
 	</div>
 	<br>
 
-	$error <!-- <div class="alert alert-danger"><b>Error:</b><br>Error message</div> -->
+	$error <!-- <div class="alert alert-danger"><strong>Error:</strong><br>Error message</div> -->
 
 	<div class="form-group">
 		<label for="title">%title%</label>
-		<input name="title" value="$subject" type="text" class="form-control" autofocus>
+		<input id="title" name="title" value="$subject" type="text" class="form-control" autofocus>
 	</div>
 
 	<div class="form-group">
-		<label>%recipient%</label>
-
+		<label for="recipient">%recipient%</label>
 		<div class="row">
 			<div class="col-md-6">
-				<input name="touser_field" type="text" class="form-control"
-						placeholder="%enter_username%">
+				<input id="recipient" name="touser_field" type="text" class="form-control"
+					placeholder="%enter_username%">
 			</div>
 			<div class="col-md-6">
 				<select name="touser[]" size="1" class="form-control">$user</select>
@@ -47,16 +46,16 @@
 	</div>
 
 	<div class="form-group">
-		<b>%formation%</b><br>$addbbcode
+		<strong>%formation%</strong><br>$addbbcode
 	</div>
 
 	<div class="form-group">
-		<b>%your_message%</b><br>
+		<strong>%your_message%</strong><br>
 		<textarea name="message" id="message" rows="10" class="form-control">$message</textarea>
 	</div>
 
 	<div class="form-group text-right">
-		<small><b>%options%</b> <a
+		<small><strong>%options%</strong> <a
 				href="javascript:void(0);" onclick="window.open(
 				'code.php',
 				'BBCode',

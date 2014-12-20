@@ -29,7 +29,8 @@ $_language->readModule('login');
 
 if ($loggedin) {
     $username =
-        '<a href="index.php?site=profile&amp;id=' . $userID . '"><b>' . strip_tags(getnickname($userID)) . '</b></a>';
+        '<a href="index.php?site=profile&amp;id=' . $userID . '"><strong>' .
+        strip_tags(getnickname($userID)) . '</strong></a>';
     if (isanyadmin($userID)) {
         $admin = '<li class="divider"></li><li><a href="admin/admincenter.php" target="_blank" class="alert-danger">' .
             $_language->module[ 'admin' ] . '</a></li>';

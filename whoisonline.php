@@ -38,15 +38,15 @@ $result_user = safe_query("SELECT * FROM " . PREFIX . "whoisonline WHERE ip=''")
 $user = mysqli_num_rows($result_user);
 $useronline = $guests + $user;
 if ($user == 1) {
-    $user_on = '<b>1</b> ' . $_language->module[ 'registered_user' ];
+    $user_on = '<strong>1</strong> ' . $_language->module[ 'registered_user' ];
 } else {
-    $user_on = '<b>' . $user . '</b> ' . $_language->module[ 'registered_users' ];
+    $user_on = '<strong>' . $user . '</strong> ' . $_language->module[ 'registered_users' ];
 }
 
 if ($guests == 1) {
-    $guests_on = '<b>1</b> ' . $_language->module[ 'guest' ];
+    $guests_on = '<strong>1</strong> ' . $_language->module[ 'guest' ];
 } else {
-    $guests_on = '<b>' . $guests . '</b> ' . $_language->module[ 'guests' ];
+    $guests_on = '<strong>' . $guests . '</strong> ' . $_language->module[ 'guests' ];
 }
 
 $online = $_language->module[ 'now_online' ] . ' ' . $user_on . ' ' . $_language->module[ 'and' ] . ' ' . $guests_on;
@@ -101,7 +101,8 @@ while ($ds = mysqli_fetch_array($ergebnis)) {
     }
     if ($ds[ 'ip' ] == '') {
         $nickname =
-            '<a href="index.php?site=profile&amp;id=' . $ds[ 'userID' ] . '"><b>' . $ds[ 'nickname' ] . '</b></a>';
+            '<a href="index.php?site=profile&amp;id=' . $ds[ 'userID' ] . '"><strong>' . $ds[ 'nickname' ] .
+            '</strong></a>';
         if (isclanmember($ds[ 'userID' ])) {
             $member = ' <img src="images/icons/member.gif" width="6" height="11" alt="Clanmember">';
         } else {
@@ -263,7 +264,8 @@ while ($ds = mysqli_fetch_array($ergebnis)) {
     }
 
     $date = getformatdatetime($ds[ 'time' ]);
-    $nickname = '<a href="index.php?site=profile&amp;id=' . $ds[ 'userID' ] . '"><b>' . $ds[ 'nickname' ] . '</b></a>';
+    $nickname = '<a href="index.php?site=profile&amp;id=' . $ds[ 'userID' ] . '"><strong>' . $ds[ 'nickname' ] .
+        '</strong></a>';
     if (isclanmember($ds[ 'userID' ])) {
         $member = ' <img src="images/icons/member.gif" width="6" height="11" alt="Clanmember">';
     } else {

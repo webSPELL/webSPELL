@@ -17,26 +17,22 @@
 </script>
 
 <form id="post" name="post" action="comments.php" method="post" onsubmit="return chkFormular()">
-	<table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="$border">
+	<table class="table">
 		<tr>
-			<td class="title" align="center" bgcolor="$bghead">%title_editcomment%</td>
+			<td class="title" class="text-center">%title_editcomment%</td>
 		</tr>
 		<tr>
-			<td bgcolor="$pagebg"></td>
-		</tr>
-		<tr>
-			<td bgcolor="$bg1">
-				<table width="100%" border="0" align="center" cellpadding="2" cellspacing="0">
+			<td>
+				<table class="table">
 					<tr>
 						<td>$addbbcode</td>
 					</tr>
 					<tr>
-						<td><textarea name="message" id="message" rows="5" cols="35"
-								style="width:99%;">$message</textarea></td>
+						<td><textarea name="message" id="message" rows="5" cols="35" class="form-control">$message</textarea></td>
 					</tr>
 					<tr>
 						<td>
-							<small><b>%options%:</b> &#8226; %html_off% &#8226; %bbcode_on% &#8226;
+							<small><strong>%options%:</strong> &#8226; %html_off% &#8226; %bbcode_on% &#8226;
 								%smilies_on%
 							</small>
 						</td>

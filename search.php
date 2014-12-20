@@ -351,8 +351,8 @@ if (
                 }
             }
             $count_results = $i;
-            echo "<p class=\"text-center\"><b>" . $count_results . "</b> " . $_language->module[ 'results_found' ] .
-                "</p><br><br>";
+            echo "<p class=\"text-center\"><strong>" . $count_results . "</strong> " .
+                $_language->module[ 'results_found' ] . "</p><br><br>";
 
             $pages = ceil($count_results / $results);
             if ($pages > 1) {
@@ -395,7 +395,11 @@ if (
                         }
                     }
                 }
-                $auszug = str_ireplace(stripslashes($text), '<b>' . stripslashes($text) . '</b>', $res_message[ $key ]);
+                $auszug = str_ireplace(
+                    stripslashes($text),
+                    '<strong>' . stripslashes($text) . '</strong>',
+                    $res_message[ $key ]
+                );
                 if (mb_strlen($res_title[ $key ]) > 50) {
                     $title = mb_substr($res_title[ $key ], 0, 50);
                     $title .= '..';

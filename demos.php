@@ -396,7 +396,7 @@ if ($action == "new") {
 
     if ($loggedin) {
         $download = '<a href="download.php?demoID=' . $ds[ 'demoID' ] .
-            '" class="btn btn-lg btn-success"><i class="icon-download icon-large"></i> ' .
+            '" class="btn btn-lg btn-success"><span class="icon-download icon-large"></span> ' .
             $_language->module[ 'download_now' ] . '</a>';
 
         $getdemos = safe_query("SELECT demos FROM " . PREFIX . "user WHERE userID='$userID'");
@@ -415,7 +415,7 @@ if ($action == "new") {
             }
         }
         if ($found) {
-            $rateform = '<b>' . $_language->module[ 'allready_rated' ] . '</b>';
+            $rateform = '<strong>' . $_language->module[ 'allready_rated' ] . '</strong>';
         } else {
             $rateform = '<div class="input-group">
                             <select name="rating" class="form-control">
@@ -442,8 +442,8 @@ if ($action == "new") {
                         <input type="hidden" name="id" value="' . $ds[ 'demoID' ] . '">';
         }
     } else {
-        $rateform = '<b>' . $_language->module[ 'to_rate' ] . '</b>';
-        $download = '<b>' . $_language->module[ 'to_download' ] . '</b>';
+        $rateform = '<strong>' . $_language->module[ 'to_rate' ] . '</strong>';
+        $download = '<strong>' . $_language->module[ 'to_download' ] . '</strong>';
     }
 
     $adminaction = "";

@@ -114,7 +114,7 @@ if ($anz) {
     if ($type == "ASC") {
         $sorter =
             '<a href="index.php?site=registered_users&amp;page=' . $page . '&amp;sort=' . $sort . '&amp;type=DESC">' .
-            $_language->module[ 'sort' ] . ' <i class="icon-sort-down"></i></a>';
+            $_language->module[ 'sort' ] . ' <span class="icon-sort-down"></span></a>';
     } else {
         $sorter =
             '<a href="index.php?site=registered_users&amp;page=' . $page . '&amp;sort=' . $sort . '&amp;type=ASC">' .

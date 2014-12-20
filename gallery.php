@@ -228,7 +228,7 @@ if (isset($_POST[ 'saveedit' ])) {
     echo '<!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
 <meta name="description" content="Clanpage using webSPELL 4 CMS">
 <meta name="author" content="webspell.org">
 <meta name="keywords" content="webspell, webspell4, clan, cms">
@@ -273,7 +273,8 @@ if (isset($_POST[ 'saveedit' ])) {
 
     //output image
 
-    echo '<img src="picture.php?id=' . $picID . '" alt=""><br><b>' . cleartext($ds[ 'comment' ], false) . '</b>';
+    echo '<img src="picture.php?id=' . $picID . '" alt=""><br>
+    <strong>' . cleartext($ds[ 'comment' ], false) . '</strong>';
 
     if ($browse[ 'picID' ] or $_GET[ 'action' ] == "window") {
         echo '</a>';
@@ -491,9 +492,9 @@ if (isset($_POST[ 'saveedit' ])) {
         )
     );
 
-    $carouselIndicators = '<li data-target="#myCarousel" data-slide-to="0" class="active"></li>';
+    $carouselIndicators = '<li data-target="#my-carousel" data-slide-to="0" class="active"></li>';
     for ($foo = 1; $foo < $pics; $foo++) {
-        $carouselIndicators .= '<li data-target="#myCarousel" data-slide-to="' . $foo . '"></li>';
+        $carouselIndicators .= '<li data-target="#my-carousel" data-slide-to="' . $foo . '"></li>';
     }
 
     eval("\$gallery = \"" . gettemplate("title_gallery") . "\";");
@@ -550,9 +551,9 @@ if (isset($_POST[ 'saveedit' ])) {
 
         $dir = 'images/gallery/';
 
-        $firstActive = '';
+        $firstactive = '';
         if ($i == 1) {
-            $firstActive = 'active';
+            $firstactive = 'active';
         }
 
         $pic[ 'pic' ] = $pic[ 'picID' ] . '.jpg';

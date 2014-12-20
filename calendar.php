@@ -95,36 +95,36 @@ function print_calendar($mon, $year)
 
     echo '<table class="table">
     <tr>
-      <td align="center"><a class="category" href="index.php?site=calendar&amp;month=01">' .
+      <td class="text-center"><a class="category" href="index.php?site=calendar&amp;month=01">' .
         mb_substr($_language->module[ 'jan' ], 0, 3) . '</a></td>
-      <td align="center"><a class="category" href="index.php?site=calendar&amp;month=02">' .
+      <td class="text-center"><a class="category" href="index.php?site=calendar&amp;month=02">' .
         mb_substr($_language->module[ 'feb' ], 0, 3) . '</a></td>
-      <td align="center"><a class="category" href="index.php?site=calendar&amp;month=03">' .
+      <td class="text-center"><a class="category" href="index.php?site=calendar&amp;month=03">' .
         mb_substr($_language->module[ 'mar' ], 0, 3) . '</a></td>
-      <td align="center"><a class="category" href="index.php?site=calendar&amp;month=04">' .
+      <td class="text-center"><a class="category" href="index.php?site=calendar&amp;month=04">' .
         mb_substr($_language->module[ 'apr' ], 0, 3) . '</a></td>
-      <td align="center"><a class="category" href="index.php?site=calendar&amp;month=05">' .
+      <td class="text-center"><a class="category" href="index.php?site=calendar&amp;month=05">' .
         mb_substr($_language->module[ 'may' ], 0, 3) . '</a></td>
-      <td align="center"><a class="category" href="index.php?site=calendar&amp;month=06">' .
+      <td class="text-center"><a class="category" href="index.php?site=calendar&amp;month=06">' .
         mb_substr($_language->module[ 'jun' ], 0, 3) . '</a></td>
     </tr>
     <tr>
-      <td align="center"><a class="category" href="index.php?site=calendar&amp;month=07">' .
+      <td class="text-center"><a class="category" href="index.php?site=calendar&amp;month=07">' .
         mb_substr($_language->module[ 'jul' ], 0, 3) . '</a></td>
-      <td align="center"><a class="category" href="index.php?site=calendar&amp;month=08">' .
+      <td class="text-center"><a class="category" href="index.php?site=calendar&amp;month=08">' .
         mb_substr($_language->module[ 'aug' ], 0, 3) . '</a></td>
-      <td align="center"><a class="category" href="index.php?site=calendar&amp;month=09">' .
+      <td class="text-center"><a class="category" href="index.php?site=calendar&amp;month=09">' .
         mb_substr($_language->module[ 'sep' ], 0, 3) . '</a></td>
-      <td align="center"><a class="category" href="index.php?site=calendar&amp;month=10">' .
+      <td class="text-center"><a class="category" href="index.php?site=calendar&amp;month=10">' .
         mb_substr($_language->module[ 'oct' ], 0, 3) . '</a></td>
-      <td align="center"><a class="category" href="index.php?site=calendar&amp;month=11">' .
+      <td class="text-center"><a class="category" href="index.php?site=calendar&amp;month=11">' .
         mb_substr($_language->module[ 'nov' ], 0, 3) . '</a></td>
-      <td align="center"><a class="category" href="index.php?site=calendar&amp;month=12">' .
+      <td class="text-center"><a class="category" href="index.php?site=calendar&amp;month=12">' .
         mb_substr($_language->module[ 'dec' ], 0, 3) . '</a></td>
     </tr>
     </table>';
 
-    echo '<a name="event"></a><table class="table table-bordered">
+    echo '<a name="event"></a><table class="table">
     <tr>
       <th class="text-center"><a class="titlelink" href="index.php?site=calendar&amp;month=' . $prev .
         '&amp;year=' . $prev_yr . '">&laquo; ' .
@@ -140,13 +140,13 @@ function print_calendar($mon, $year)
         . ' &raquo;</a></th>
     </tr>
     <tr>
-      <td width="14%" align="center">' . $_language->module[ 'mon' ] . '</td>
-      <td width="14%" align="center">' . $_language->module[ 'tue' ] . '</td>
-      <td width="14%" align="center">' . $_language->module[ 'wed' ] . '</td>
-      <td width="14%" align="center">' . $_language->module[ 'thu' ] . '</td>
-      <td width="14%" align="center">' . $_language->module[ 'fri' ] . '</td>
-      <td width="14%" align="center">' . $_language->module[ 'sat' ] . '</td>
-      <td width="16%" align="center">' . $_language->module[ 'sun' ] . '</td>
+      <td class="text-center">' . $_language->module[ 'mon' ] . '</td>
+      <td class="text-center">' . $_language->module[ 'tue' ] . '</td>
+      <td class="text-center">' . $_language->module[ 'wed' ] . '</td>
+      <td class="text-center">' . $_language->module[ 'thu' ] . '</td>
+      <td class="text-center">' . $_language->module[ 'fri' ] . '</td>
+      <td class="text-center">' . $_language->module[ 'sat' ] . '</td>
+      <td class="text-center">' . $_language->module[ 'sun' ] . '</td>
     </tr>
     <tr>';
 
@@ -220,7 +220,7 @@ function print_calendar($mon, $year)
 
             //If date is today, highlight it
             if (($t == date("j")) && ($mon == date("n")) && ($year == date("Y"))) {
-                echo '<td height="40" valign="top" bgcolor="' . BG_4 . '"><b>' . $t . '</b><br>' . $termin . '</td>';
+                echo '<td height="40" valign="top"><strong>' . $t . '</strong><br>' . $termin . '</td>';
             } else { //  If the date is absent ie after 31, print space
                 if ($t === ' ') {
                     echo '<td height="40" valign="top" style="background-color:' . BG_1 . ';">&nbsp;</td>';
@@ -238,7 +238,7 @@ function print_calendar($mon, $year)
         }
     }
     echo '<tr>
-      <td colspan="7" align="center"><a class="category" href="index.php?site=calendar#event"><b>' .
+      <td colspan="7" class="text-center"><a class="category" href="index.php?site=calendar#event"><b>' .
         $_language->module[ 'today_events' ] . '</b></a></td>
     </tr>
   </table>
@@ -426,7 +426,7 @@ function print_termine($tag, $month, $year)
                         }
 
                         if (isclanwaradmin($userID)) {
-                            $adminaction = '<div align="right">
+                            $adminaction = '<div class="text-right">
                                 <a class="btn btn-danger" href="index.php?site=calendar&amp;action=editdate&amp;upID=' .
                                 $ds[ 'upID' ] . '">' .
                                 $_language->module[ 'edit' ] . '

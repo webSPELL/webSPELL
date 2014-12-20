@@ -2,10 +2,9 @@
 <html>
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
 	<meta name="description" content="Clanpage using webSPELL 4 CMS">
 	<meta name="author" content="webspell.org">
-	<meta name="keywords" content="webspell, webspell4, clan, cms">
 	<meta name="copyright" content="Copyright 2005-2014 by webspell.org">
 	<meta name="generator" content="webSPELL">
 
@@ -97,10 +96,10 @@
 			var message_length,
 					i;
 
-			document.getElementById('news_textarea').innerHTML = '';
+			document.getElementById('news-textarea').innerHTML = '';
 			for (i = 0; i < value; i++) {
 				if (message[i] || headline[i] || langs[i] && langs[i] != default_language) {
-					document.getElementById('news_textarea')
+					document.getElementById('news-textarea')
 							.innerHTML += '<select name="lang[]" id="lang_' + i + '" ' +
 					'onchange="langs[' + i + ']=this.value; update_language();">' +
 					'</select> %headline% ' +
@@ -121,7 +120,7 @@
 					message[i] = '';
 					headline[i] = '';
 					langs[i] = '';
-					document.getElementById('news_textarea')
+					document.getElementById('news-textarea')
 							.innerHTML += '<select name="lang[]" id="lang_' + i + '" ' +
 					'onchange="langs[' + i + ']=this.value; update_language();"></select> ' +
 					'%headline% <input name="headline[]" ' +
@@ -188,40 +187,35 @@
 		}
 		-->
 	</script>
-	<style type="text/css">
-		body {
-			margin: 0px;
-		}
-	</style>
 </head>
 <body>
 <form action="news.php?action=save" method="post" enctype="multipart/form-data" id="post"
 		name="post" onsubmit="return chkFormular();">
-	<table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="$border">
+	<table class="table">
 		<tr>
-			<td class="title" align="center" bgcolor="$bghead">%new_post%</td>
+			<td class="title" class="text-center">%new_post%</td>
 		</tr>
 		<tr>
-			<td bgcolor="$pagebg"></td>
+			<td></td>
 		</tr>
 		<tr>
-			<td bgcolor="$bg1">
-				<table width="100%" border="0" cellspacing="0" cellpadding="0">
+			<td>
+				<table class="table">
 					<tr>
 						<td valign="top">$addbbcode</td>
 						<td valign="top">$addflags</td>
 					</tr>
 				</table>
 				<hr>
-				<table width="100%" border="0" cellspacing="0" cellpadding="2">
+				<table class="table">
 					<tr>
-						<td><b>%rubric%:</b> <select name="rubric">$rubrics</select>
+						<td><strong>%rubric%:</strong> <select name="rubric">$rubrics</select>
 							<input name="button" type="button" onclick="window.open(
 									'upload.php?newsID=$newsID',
 									'Upload',
 									'scrollbars=yes,width=800,height=600')" value="%upload_images%">
 							&nbsp;&nbsp;&nbsp;
-							<small><b>%options%:</b> &#8226; %html% &#8226; <a href="javascript:void(0);" onclick="window.open(
+							<small><strong>%options%:</strong> &#8226; %html% &#8226; <a href="javascript:void(0);" onclick="window.open(
 									'code.php',
 									'BBCode',
 									'scrollbars=yes,width=600,height=500')">%bbcode%</a>
@@ -239,22 +233,22 @@
 					</tr>
 					<tr>
 						<td>
-							<table width="100%" border="0" cellspacing="0" cellpadding="2">
+							<table class="table">
 								<tr>
-									<td><b>%options%</b></td>
-									<td><b>%languages%:</b></td>
+									<td><strong>%options%</strong></td>
+									<td><strong>%languages%:</strong></td>
 								</tr>
 								<tr>
-									<td><i>%topnews%:</i>&nbsp;&nbsp;
+									<td><em>%topnews%:</em>&nbsp;&nbsp;
 										<select name="topnews">$topnews</select>
-										<i>%intern%:</i>&nbsp;&nbsp;
+										<em>%intern%:</em>&nbsp;&nbsp;
 										<select name="intern">$intern</select>
 									</td>
 									<td>%post_languages%</td>
 								</tr>
 								<tr>
 									<td colspan="2">
-										<b>Tags:</b> <input type="text" name="tags" value="$tags">
+										<strong>Tags:</strong> <input type="text" name="tags" value="$tags">
 									</td>
 								</tr>
 							</table>
@@ -266,14 +260,14 @@
 						</td>
 					</tr>
 				</table>
-				<div id="news_textarea"></div>
+				<div id="news-textarea"></div>
 				<script>
 					/* <![CDATA[ */
 					update_textarea($langcount);
 					/* ]]> */
 				</script>
 				<hr>
-				<table width="100%" border="0" cellpadding="0" cellspacing="2">
+				<table class="table">
 					<tr>
 						<td valign="top">%link% 1:
 							<input name="link1" type="text" value="$link1">
@@ -289,8 +283,7 @@
 							<input name="url2" type="text" value="$url2">
 							<input class="input" name="window2" type="radio" value="1" $window2_new>
 							%new_window%
-							<input class="input" type="radio" name="window2" value="0"
-							$window2_self>
+							<input class="input" type="radio" name="window2" value="0" $window2_self>
 							%self%
 							<br>
 							%link% 3:
@@ -298,8 +291,7 @@
 							<input name="url3" type="text" value="$url3">
 							<input class="input" name="window3" type="radio" value="1" $window3_new>
 							%new_window%
-							<input class="input" type="radio" name="window3" value="0"
-							$window3_self>
+							<input class="input" type="radio" name="window3" value="0" $window3_self>
 							%self%
 							<br>
 							%link% 4:
@@ -307,8 +299,7 @@
 							<input name="url4" type="text" value="$url4">
 							<input class="input" name="window4" type="radio" value="1" $window4_new>
 							%new_window%
-							<input class="input" type="radio" name="window4" value="0"
-							$window4_self>
+							<input class="input" type="radio" name="window4" value="0" $window4_self>
 							%self%
 						</td>
 						<td valign="top"><br>&nbsp;</td>
@@ -318,7 +309,7 @@
 							<hr>
 						</td>
 					</tr>
-					<tr align="right">
+					<tr class="text-right">
 						<td colspan="2">
 							<input type="hidden" name="userID" value="$userID">
 							<input type="hidden" name="newsID" value="$newsID">

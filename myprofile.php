@@ -334,9 +334,8 @@ if (!$userID) {
 
             redirect('index.php?site=login', $_language->module['pw_changed'], 3);
         } else {
-            echo
-                '<b>ERROR: ' . $error . '</b><br><br><input type="button" onclick="javascript:history.back()" value="' .
-                $_language->module['back'] . '">';
+            echo '<strong>ERROR: ' . $error . '</strong><br><br>
+                <input type="button" onclick="javascript:history.back()" value="' . $_language->module['back'] . '">';
         }
     } elseif (isset($_GET['action']) and $_GET['action'] == "editmail") {
 
@@ -422,9 +421,8 @@ if (!$userID) {
                 echo $_language->module['mail_failed'];
             }
         } else {
-            echo
-                '<b>ERROR: ' . $error . '</b><br><br><input type="button" onclick="javascript:history.back()" value="' .
-                $_language->module['back'] . '">';
+            echo '<strong>ERROR: ' . $error . '</strong><br><br>
+            <input type="button" onclick="javascript:history.back()" value="' . $_language->module['back'] . '">';
         }
     } else {
         $ergebnis = safe_query("SELECT * FROM " . PREFIX . "user WHERE userID='" . $userID . "'");

@@ -214,7 +214,7 @@ if ($userID) {
         $ergebnis = safe_query("SELECT * FROM " . PREFIX . "gallery WHERE userID='" . (int)$userID."'");
 
         if (mysqli_num_rows($ergebnis) == 0) {
-            echo '<tr bgcolor="' . $bg1 . '"><td colspan="4">' . $_language->module[ 'no_galleries' ] . '</td></tr>';
+            echo '<tr>' . $_language->module[ 'no_galleries' ] . '</td></tr>';
         }
 
         for ($i = 1; $ds = mysqli_fetch_array($ergebnis); $i++) {

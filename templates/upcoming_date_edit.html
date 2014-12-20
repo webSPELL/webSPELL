@@ -32,7 +32,7 @@
 	<h2>%editevent%</h2>
 	<table class="table">
 		<tr>
-			<th align="right">%start_datetime%</th>
+			<th class="text-right">%start_datetime%</th>
 			<td>
 
 				<div class="form-group">
@@ -44,7 +44,7 @@
 			</td>
 		</tr>
 		<tr>
-			<th align="right">%end_datetime%</th>
+			<th class="text-right">%end_datetime%</th>
 			<td>
 				<div class="form-group">
 					<input type="date" name="endtime_date" value="$endtime_date"
@@ -55,18 +55,18 @@
 			</td>
 		</tr>
 		<tr>
-			<th align="right">%shorttitle%</th>
+			<th class="text-right">%shorttitle%</th>
 			<td>
 				<input name="short" id="short" type="text" value="$short" class="form-control">
 				<small>%displayed_in%</small>
 			</td>
 		</tr>
 		<tr>
-			<th align="right">%longtitle%</th>
+			<th class="text-right">%longtitle%</th>
 			<td><input name="title" id="title" type="text" value="$title" class="form-control"></td>
 		</tr>
 		<tr>
-			<th align="right">%location%</th>
+			<th class="text-right">%location%</th>
 			<td>
 				<div class="form-group">
 					<select name="country" class="form-control">$countries</select>
@@ -75,11 +75,11 @@
 			</td>
 		</tr>
 		<tr>
-			<th align="right">%homepage%</th>
+			<th class="text-right">%homepage%</th>
 			<td><input name="locationhp" type="text" value="$locationhp" class="form-control"></td>
 		</tr>
 		<tr>
-			<th align="right" valign="top">%information%</th>
+			<th class="text-right" valign="top">%information%</th>
 			<td>
 				<textarea name="message" id="dateinfo" cols="45" rows="7" class="form-control">
 					$dateinfo
@@ -87,7 +87,7 @@
 			</td>
 		</tr>
 		<tr>
-			<th align="right"><input type="hidden" name="upID" value="$ds[upID]"></th>
+			<th class="text-right"><input type="hidden" name="upID" value="$ds[upID]"></th>
 			<td><input name="post" type="submit" value="%updateevent%" class="btn btn-danger"></td>
 		</tr>
 	</table>

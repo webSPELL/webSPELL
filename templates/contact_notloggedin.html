@@ -16,11 +16,11 @@
 
 			<!-- Receiver -->
 			<div class="form-group">
-				<label for="selectReceiver"
+				<label for="select-receiver"
 						class="col-xs-12 col-md-3 control-label">%receiver%:</label>
 
 				<div class="col-xs-12 col-md-9">
-					<select name="getemail" id="selectReceiver" class="form-control">
+					<select name="getemail" id="select-receiver" class="form-control">
 						$getemail
 					</select>
 				</div>
@@ -28,55 +28,55 @@
 
 			<!-- Name -->
 			<div class="form-group">
-				<label for="inputName" class="col-xs-12 col-md-3 control-label">%name%:</label>
+				<label for="input-name" class="col-xs-12 col-md-3 control-label">%name%:</label>
 
 				<div class="col-xs-12 col-md-9">
-					<input type="text" name="name" class="form-control" id="inputName"
+					<input type="text" name="name" class="form-control" id="input-name"
 							value="$name">
 				</div>
 			</div>
 
 			<!-- Mail -->
 			<div class="form-group">
-				<label for="inputMail" class="col-xs-12 col-md-3 control-label">%mail%:</label>
+				<label for="input-mail" class="col-xs-12 col-md-3 control-label">%mail%:</label>
 
 				<div class="col-xs-12 col-md-9">
-					<input type="email" name="from" class="form-control" id="inputMail"
+					<input type="email" name="from" class="form-control" id="input-mail"
 							value="$from">
 				</div>
 			</div>
 
 			<!-- Subject -->
 			<div class="form-group">
-				<label for="inputSubject"
+				<label for="input-subject"
 						class="col-xs-12 col-md-3 control-label">%subject%:</label>
 
 				<div class="col-xs-12 col-md-9">
-					<input type="text" name="subject" class="form-control" id="inputSubject"
+					<input type="text" name="subject" class="form-control" id="input-subject"
 							value="$subject">
 				</div>
 			</div>
 
 			<!-- Message -->
 			<div class="form-group">
-				<label for="textareaMessage"
+				<label for="textarea-message"
 						class="col-xs-12 col-md-3 control-label">%message%:</label>
 
 				<div class="col-xs-12 col-md-9">
-					<textarea name="text" id="textareaMessage" class="form-control"
+					<textarea name="text" id="textarea-message" class="form-control"
 							rows="5">$text</textarea>
 				</div>
 			</div>
 
 			<!-- Security code -->
 			<div class="form-group">
-				<label for="inputSecurity_code" class="col-xs-12 col-md-3 control-label">%security_code%:</label>
+				<label for="input-security-code" class="col-xs-12 col-md-3 control-label">%security_code%:</label>
 
 				<div class="col-xs-12 col-md-9">
 					<div class="input-group">
 						<span class="input-group-addon captcha-img">$captcha</span>
 						<input type="number" name="captcha" class="form-control"
-								id="inputSecurity_code">
+								id="input-security-code">
 						<input name="captcha_hash" type="hidden" value="$hash">
 					</div>
 				</div>

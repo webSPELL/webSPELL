@@ -31,10 +31,9 @@ include("_settings.php");
 echo '<!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
 	<meta name="description" content="Clanpage using webSPELL 4 CMS">
 	<meta name="author" content="webspell.org">
-	<meta name="keywords" content="webspell, webspell4, clan, cms">
 	<meta name="copyright" content="Copyright 2005-2014 by webspell.org">
 	<meta name="generator" content="webSPELL">
 	<title>Smilies</title>';

@@ -198,14 +198,14 @@ if (is_array($theMaps)) {
             $bgtwo = BG_4;
         }
         if ($scoreHome[ $d ] > $scoreOpp[ $d ]) {
-            $score_1 = '<font color="' . $wincolor . '"><b>' . $scoreHome[ $d ] . '</b></font>';
-            $score_2 = '<font color="' . $wincolor . '"><b>' . $scoreOpp[ $d ] . '</b></font>';
+            $score_1 = '<font color="' . $wincolor . '"><strong>' . $scoreHome[ $d ] . '</strong></font>';
+            $score_2 = '<font color="' . $wincolor . '"><strong>' . $scoreOpp[ $d ] . '</strong></font>';
         } elseif ($scoreHome[ $d ] < $scoreOpp[ $d ]) {
-            $score_1 = '<font color="' . $loosecolor . '"><b>' . $scoreHome[ $d ] . '</b></font>';
-            $score_2 = '<font color="' . $loosecolor . '"><b>' . $scoreOpp[ $d ] . '</b></font>';
+            $score_1 = '<font color="' . $loosecolor . '"><strong>' . $scoreHome[ $d ] . '</strong></font>';
+            $score_2 = '<font color="' . $loosecolor . '"><strong>' . $scoreOpp[ $d ] . '</strong></font>';
         } else {
-            $score_1 = '<font color="' . $drawcolor . '"><b>' . $scoreHome[ $d ] . '</b></font>';
-            $score_2 = '<font color="' . $drawcolor . '"><b>' . $scoreOpp[ $d ] . '</b></font>';
+            $score_1 = '<font color="' . $drawcolor . '"><strong>' . $scoreHome[ $d ] . '</strong></font>';
+            $score_2 = '<font color="' . $drawcolor . '"><strong>' . $scoreOpp[ $d ] . '</strong></font>';
         }
 
         eval ("\$clanwars_details_results = \"" . gettemplate("clanwars_details_results") . "\";");

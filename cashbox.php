@@ -306,7 +306,7 @@ if (!isclanmember($userID) and !iscashadmin($userID)) {
                 DESC LIMIT 0,1"
             );
 
-            echo '<div class="col-md-6"><b>' . $usersquad . $costs_squad . '</b>';
+            echo '<div class="col-md-6"><strong>' . $usersquad . $costs_squad . '</strong>';
 
             if (mysqli_num_rows($ergebnis)) {
                 $ds = mysqli_fetch_array($ergebnis);
@@ -355,7 +355,7 @@ if (!isclanmember($userID) and !iscashadmin($userID)) {
                 while ($ds = mysqli_fetch_array($all)) {
                     echo
                         '&#8226; <a href="index.php?site=cashbox&amp;id=' . $ds[ 'cashID' ] . '&amp;squad=' . $squadID .
-                        '"><b>' . $ds[ 'usedfor' ] . '</b></a><br>';
+                        '"><strong>' . $ds[ 'usedfor' ] . '</strong></a><br>';
                 }
 
                 echo '</div><div class="col-md-6">';
@@ -390,7 +390,7 @@ if (!isclanmember($userID) and !iscashadmin($userID)) {
                         );
                         $du = mysqli_fetch_array($ergebnis);
                         $user = '<a href="index.php?site=profile&amp;id=' . $usID . '">
-                                <b>' . getnickname($usID) . '</b>
+                                <strong>' . getnickname($usID) . '</strong>
                             </a>';
                         if ($du[ 'payed' ]) {
                             $paydate = getformatdate($du[ 'date' ]);
@@ -417,7 +417,7 @@ if (!isclanmember($userID) and !iscashadmin($userID)) {
                                 value="' . $costs . '" dir="rtl" class="form-control">';
                         } else {
                             if ($du[ 'costs' ]) {
-                                $costs = '<b style="color:' . $wincolor . '">' . $du[ 'costs' ] . ' €</b>';
+                                $costs = '<strong>' . $du[ 'costs' ] . ' €</strong>';
                                 $bg = BG_1;
                             } else {
                                 $costs = '<span style="color:' . $loosecolor . '">0.00 €</span>';

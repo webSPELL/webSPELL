@@ -422,10 +422,10 @@ if ($action == "new") {
     if ($gesamt) {
         if ($type == "ASC") {
             echo '<a href="index.php?site=awards&amp;page=' . $page . '&amp;sort=' . $sort . '&amp;type=DESC">' .
-                $_language->module[ 'sort' ] . ':</a> <i class="icon-sort-down"></i>';
+                $_language->module[ 'sort' ] . ':</a> <span class="icon-sort-up"></span>';
         } else {
             echo '<a href="index.php?site=awards&amp;page=' . $page . '&amp;sort=' . $sort . '&amp;type=ASC">' .
-                $_language->module[ 'sort' ] . ':</a> <i class="icon-sort-up"></i>';
+                $_language->module[ 'sort' ] . ':</a> <span class="icon-sort-up"></span>';
         }
 
         echo $page_link;

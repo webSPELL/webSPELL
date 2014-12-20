@@ -150,7 +150,7 @@ if ($action == "add") {
             $n++;
         }
     } else {
-        echo '<tr><td colspan="4" bgcolor="' . BG_1 . '">' . $_language->module[ 'buddy_nousers' ] . '</td></tr>';
+        echo '<tr><td colspan="4">' . $_language->module[ 'buddy_nousers' ] . '</td></tr>';
     }
 
     eval ("\$buddys_foot = \"" . gettemplate("buddys_foot") . "\";");

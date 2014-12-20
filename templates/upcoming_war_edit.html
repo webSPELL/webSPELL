@@ -20,18 +20,18 @@
 </script>
 <form action="calendar.php?action=saveeditwar" method="post" name="post"
 		onsubmit="return chkFormular();">
-	<table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="$border">
+	<table class="table">
 		<tr>
-			<td class="title" align="center" bgcolor="$bghead">%editwar%</td>
+			<td class="title" class="text-center">%editwar%</td>
 		</tr>
 		<tr>
-			<td bgcolor="$pagebg"></td>
+			<td></td>
 		</tr>
 		<tr>
-			<td bgcolor="$bg1">
-				<table width="100%" border="0" align="center" cellpadding="2" cellspacing="0">
+			<td>
+				<table class="table">
 					<tr>
-						<td align="right">%date_time%</td>
+						<td class="text-right">%date_time%</td>
 						<td><select name="day">$day</select>
 							<select name="month">$month</select>
 							<select name="year">$year</select>
@@ -41,48 +41,48 @@
 							<input name="minute" type="text" value="$minutes" size="2"></td>
 					</tr>
 					<tr>
-						<td align="right">%squad%</td>
+						<td class="text-right">%squad%</td>
 						<td><select name="squad" id="squad">$squads</select></td>
 					</tr>
 					<tr>
-						<td align="right">%league%</td>
+						<td class="text-right">%league%</td>
 						<td><input name="league" type="text" value="$league" size="35"></td>
 					</tr>
 					<tr>
-						<td align="right">%leaguehp%</td>
+						<td class="text-right">%leaguehp%</td>
 						<td><input name="leaguehp" type="text" value="$leaguehp" size="35"></td>
 					</tr>
 					<tr>
-						<td align="right">%opponent%</td>
+						<td class="text-right">%opponent%</td>
 						<td><input name="opponent" type="text" value="$opponent" size="35"></td>
 					</tr>
 					<tr>
-						<td align="right">%opponenttag%</td>
+						<td class="text-right">%opponenttag%</td>
 						<td><input name="opptag" type="text" value="$opptag" size="8"></td>
 					</tr>
 					<tr>
-						<td align="right">%opponentcountry%</td>
+						<td class="text-right">%opponentcountry%</td>
 						<td><select name="oppcountry">$countries</select></td>
 					</tr>
 					<tr>
-						<td align="right">%opponenthp%</td>
+						<td class="text-right">%opponenthp%</td>
 						<td><input name="opphp" type="text" value="$opphp" size="35"></td>
 					</tr>
 					<tr>
-						<td align="right">%maps%</td>
+						<td class="text-right">%maps%</td>
 						<td><input name="maps" type="text" value="$maps" size="35"></td>
 					</tr>
 					<tr>
-						<td align="right">%server%</td>
+						<td class="text-right">%server%</td>
 						<td><input name="server" type="text" value="$server" size="35"></td>
 					</tr>
 					<tr>
-						<td align="right" valign="top">%information%</td>
+						<td class="text-right" valign="top">%information%</td>
 						<td><textarea id="message" name="message" cols="45"
 								rows="7">$warinfo</textarea></td>
 					</tr>
 					<tr>
-						<td align="right"><input type="hidden" name="upID" value="$ds[upID]"></td>
+						<td class="text-right"><input type="hidden" name="upID" value="$ds[upID]"></td>
 						<td><input name="post" type="submit" value="%updatewar%"></td>
 					</tr>
 				</table>

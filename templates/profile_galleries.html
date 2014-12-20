@@ -1,14 +1,12 @@
 <tr>
-	<td width="$thumbwidth">
+	<td>
 		<a href="index.php?site=gallery&amp;picID=$gallery[picture]">
-			<img src="images/gallery/thumb/$gallery[picture].jpg" width="$thumbwidth" alt="">
+			<img src="images/gallery/thumb/$gallery[picture].jpg" width="$thumbwidth" alt="thumbnail">
 		</a>
 	</td>
 	<td>$gallery[date]</td>
 	<td>
-		<div style="overflow:hidden">
-			<a href="index.php?site=gallery&amp;galleryID=$gallery[galleryID]">$gallery[title]</a>
-		</div>
+		<a href="index.php?site=gallery&amp;galleryID=$gallery[galleryID]">$gallery[title]</a>
 	</td>
 	<td>$gallery[count]</td>
 </tr>

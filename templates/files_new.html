@@ -43,24 +43,20 @@
 
 	<div class="form-group">
 		<label for="filename" class="col-lg-4 control-label">%filename%:</label>
-
 		<div class="col-lg-8">
-			<input type="text" name="filename" id="filename" size="30" class="form-control"
-					autofocus>
+			<input type="text" name="filename" id="filename" size="30" class="form-control" autofocus>
 		</div>
 	</div>
 
 	<div class="form-group">
 		<label for="filecat" class="col-lg-4 control-label">%category_cl%:</label>
-
 		<div class="col-lg-8">
-			<select name="filecat" class="form-control">$filecats</select>
+			<select id="filecat" name="filecat" class="form-control">$filecats</select>
 		</div>
 	</div>
 
 	<div class="form-group">
 		<label for="info" class="col-lg-4 control-label">%info_description%:</label>
-
 		<div class="col-lg-8">
 			<textarea name="info" id="info" cols="44" rows="7" class="form-control"></textarea>
 		</div>
@@ -68,17 +64,15 @@
 
 	<div class="form-group">
 		<label for="accesslevel" class="col-lg-4 control-label">%accesslevel%:</label>
-
 		<div class="col-lg-8">
-			<select name="accesslevel" class="form-control">$access</select>
+			<select id="accesslevel" name="accesslevel" class="form-control">$access</select>
 		</div>
 	</div>
 
 	<div class="form-group">
 		<label for="file" class="col-lg-4 control-label">%file-upload%:</label>
-
 		<div class="col-lg-8">
-			<input type="file" name="upfile" id="upfile" class="form-control">
+			<input id="file" type="file" name="upfile" id="upfile" class="form-control">
 		</div>
 	</div>
 
@@ -93,10 +87,9 @@
 
 	<div class="form-group">
 		<label for="filesize" class="col-lg-4 control-label">%file-size_e%:</label>
-
 		<div class="col-lg-8">
 			<div class="input-group">
-				<input name="filesize" type="text" maxlength="4" size="4" class="form-control">
+				<input id="filesize" name="filesize" type="text" maxlength="4" size="4" class="form-control">
 				<span class="input-group-addon">
 					<select name="unit">
 						<option value="b">Byte</option>
@@ -111,17 +104,15 @@
 
 	<div class="form-group">
 		<label for="mirror2" class="col-lg-4 control-label">%mirror% #2:</label>
-
 		<div class="col-lg-8">
-			<input type="url" name="mirror2" size="40" class="form-control">
+			<input id="mirror2" type="url" name="mirror2" size="40" class="form-control">
 		</div>
 	</div>
 
 	<div class="form-group">
 		<label for="mirror3" class="col-lg-4 control-label">%mirror% #3:</label>
-
 		<div class="col-lg-8">
-			<input type="url" name="mirror3" size="40" class="form-control">
+			<input id="mirror3" type="url" name="mirror3" size="40" class="form-control">
 		</div>
 	</div>
 

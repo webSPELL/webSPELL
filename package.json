@@ -3,9 +3,9 @@
   "version": "4.2.3",
   "description": "webSPELL is a free Content Management System which was especially developed for the needs of esport related communities.",
   "url": "https://webspell.org",
-  "repository" : {
-    "type" : "git",
-    "url" : "https://github.com/webSPELL/webSPELL-4.2.3.git"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/webSPELL/webSPELL-4.2.3.git"
   },
   "bugs": {
     "url": "https://github.com/webSPELL/webSPELL-4.2.3/issues"
@@ -19,6 +19,7 @@
     "grunt-contrib-jshint": "^0.10.0",
     "grunt-contrib-watch": "^0.6.1",
     "grunt-githooks": "^0.3.1",
+    "grunt-htmllint": "^0.2.4",
     "grunt-jscs": "^0.8.1",
     "grunt-jscs-checker": "^0.8.1",
     "grunt-lintspaces": "^0.6.0",
