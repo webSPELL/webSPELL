@@ -211,14 +211,14 @@ module.exports = function(grunt) {
     ]);
     grunt.registerTask("release", "Creating a new webSPELL Release", function(releaseLevel) {
         if (
-            arguments.length === 0 &&
+            arguments.length === 0 ||
             (
-            releaseLevel !== "path" &&
+            releaseLevel !== "patch" &&
             releaseLevel !== "minor" &&
             releaseLevel !== "major"
             )
         ) {
-            grunt.log.error("Specify if this is a release:path, release:minor or release:major");
+            grunt.log.error("Specify if this is a release:patch, release:minor or release:major");
         } else {
             grunt.task.run([
                 "bumpOnly:" + releaseLevel,
