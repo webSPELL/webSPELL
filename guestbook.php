@@ -284,9 +284,8 @@ if (isset($_POST[ 'save' ])) {
         $message = toggle($message, $ds[ 'gbID' ]);
         unset($admincomment);
         if ($ds[ 'admincomment' ] != "") {
-            $admincomment = '<hr>
-			<small><strong>' . $_language->module[ 'admin_comment' ] . ':</strong><br>' . cleartext($ds[ 'admincomment' ]) .
-                '</small>';
+            $admincomment = '<hr><small><strong>' . $_language->module[ 'admin_comment' ] . ':</strong><br>' .
+                cleartext($ds[ 'admincomment' ]) . '</small>';
         } else {
             $admincomment = '';
         }

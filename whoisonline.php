@@ -101,7 +101,8 @@ while ($ds = mysqli_fetch_array($ergebnis)) {
     }
     if ($ds[ 'ip' ] == '') {
         $nickname =
-            '<a href="index.php?site=profile&amp;id=' . $ds[ 'userID' ] . '"><strong>' . $ds[ 'nickname' ] . '</strong></a>';
+            '<a href="index.php?site=profile&amp;id=' . $ds[ 'userID' ] . '"><strong>' . $ds[ 'nickname' ] .
+            '</strong></a>';
         if (isclanmember($ds[ 'userID' ])) {
             $member = ' <img src="images/icons/member.gif" width="6" height="11" alt="Clanmember">';
         } else {
@@ -263,7 +264,8 @@ while ($ds = mysqli_fetch_array($ergebnis)) {
     }
 
     $date = getformatdatetime($ds[ 'time' ]);
-    $nickname = '<a href="index.php?site=profile&amp;id=' . $ds[ 'userID' ] . '"><strong>' . $ds[ 'nickname' ] . '</strong></a>';
+    $nickname = '<a href="index.php?site=profile&amp;id=' . $ds[ 'userID' ] . '"><strong>' . $ds[ 'nickname' ] .
+        '</strong></a>';
     if (isclanmember($ds[ 'userID' ])) {
         $member = ' <img src="images/icons/member.gif" width="6" height="11" alt="Clanmember">';
     } else {

@@ -653,7 +653,9 @@ if ($action == "save") {
             if (!$userID && $file[ 'accesslevel' ] >= 1) {
                 $link = '(R)';
             } else {
-                $link = '<a href="download.php?fileID=' . $fileid . '"><span class="icon-download icon-large"></span></a>';
+                $link = '<a href="download.php?fileID=' . $fileid . '">
+                <span class="icon-download icon-large"></span>
+                </a>';
             }
 
             eval("\$files_category_list = \"" . gettemplate("files_category_list") . "\";");
@@ -735,11 +737,10 @@ if ($action == "save") {
                 `filecatID` = '" . (int)$file[ 'filecatID' ]."'"
         )
     );
-    $category =
-        '<a href="index.php?site=files&amp;cat=' . $cat[ 'filecatID' ] . '" class="titlelink">' . $cat[ 'name' ] .
-        '</a>';
-    $categories =
-        '<a href="index.php?site=files&amp;cat=' . $cat[ 'filecatID' ] . '"><strong>' . $cat[ 'name' ] . '</strong></a>';
+    $category = '<a href="index.php?site=files&amp;cat=' . $cat[ 'filecatID' ] . '" class="titlelink">' .
+        $cat[ 'name' ] . '</a>';
+    $categories = '<a href="index.php?site=files&amp;cat=' . $cat[ 'filecatID' ] . '"><strong>' .
+        $cat[ 'name' ] . '</strong></a>';
 
     $cat_id = $cat[ 'subcatID' ];
     while ($cat_id != 0) {
@@ -1020,7 +1021,8 @@ if ($action == "save") {
                 $filename .= '...';
             }
             $filename =
-                '<a href="index.php?site=files&amp;file=' . $file[ 'fileID' ] . '"><strong>' . $filename . '</strong></a>';
+                '<a href="index.php?site=files&amp;file=' . $file[ 'fileID' ] . '"><strong>' .
+                $filename . '</strong></a>';
             if ($file[ 'downloads' ] != '0') {
                 $top5 .=
                     '<li class="list-group-item">
@@ -1045,7 +1047,8 @@ if ($action == "save") {
                 // cat-information
                 $catID = $cat[ 'filecatID' ];
                 $sub_cat_qry = get_all_sub_cats($catID, 1);
-                $catname = '<a href="index.php?site=files&amp;cat=' . $catID . '"><strong>' . $cat[ 'name' ] . '</strong></a>';
+                $catname = '<a href="index.php?site=files&amp;cat=' . $catID . '"><strong>' .
+                    $cat[ 'name' ] . '</strong></a>';
                 $subcategories =
                     mysqli_num_rows(
                         safe_query(

@@ -166,7 +166,8 @@ function forum_stats()
                     '</b></a>';
             } else {
                 $user_names =
-                    '<a href="index.php?site=profile&amp;id=' . $ds[ 'userID' ] . '"><strong>' . $nickname . '</strong></a>';
+                    '<a href="index.php?site=profile&amp;id=' . $ds[ 'userID' ] . '"><strong>' .
+                    $nickname . '</strong></a>';
             }
             $n++;
         }
@@ -186,7 +187,8 @@ function forum_stats()
     $maxonline = $dm[ 'maxonline' ];
 
     $newestmember =
-        '<a href="index.php?site=profile&amp;id=' . $dn[ 'userID' ] . '"><strong>' . $dn[ 'nickname' ] . '</strong></a>';
+        '<a href="index.php?site=profile&amp;id=' . $dn[ 'userID' ] . '"><strong>' .
+        $dn[ 'nickname' ] . '</strong></a>';
     eval ("\$forum_stats = \"" . gettemplate("forum_stats") . "\";");
     echo $forum_stats;
 }
@@ -301,8 +303,8 @@ function boardmain()
             $board = $db[ 'boardID' ];
             $anztopics = $db[ 'topics' ];
             $anzposts = $db[ 'posts' ];
-            $boardname = $db[ 'name' ];
-            $boardname = '<a href="index.php?site=forum&amp;board=' . $board . '"><strong>' . $boardname . '</strong></a>';
+            $boardname = '<a href="index.php?site=forum&amp;board=' . $board . '"><strong>' .
+                $db[ 'name' ] . '</strong></a>';
 
             if ($db[ 'info' ]) {
                 $boardinfo = $db[ 'info' ];
@@ -443,7 +445,8 @@ function boardmain()
         $anzposts = $db[ 'posts' ];
 
         $boardname = $db[ 'name' ];
-        $boardname = '<a href="index.php?site=forum&amp;board=' . $db[ 'boardID' ] . '"><strong>' . $boardname . '</strong></a>';
+        $boardname = '<a href="index.php?site=forum&amp;board=' . $db[ 'boardID' ] . '"><strong>' .
+            $boardname . '</strong></a>';
 
         $boardinfo = '';
         if ($db[ 'info' ]) {
@@ -649,9 +652,9 @@ function showboard($board)
         $mark = '<a href="index.php?site=forum&amp;board=' . $board . '&amp;action=markall">' .
             $_language->module[ 'mark_topics_read' ] . '</a>';
         if ($writer) {
-            $actions .= ' <a href="index.php?site=forum&amp;addtopic=true&amp;board=' . $board .
-                '" class="btn btn-primary"><span class="icon-comment-alt"></span> ' . $_language->module[ 'new_topic' ] .
-                '</a>';
+            $actions .= ' <a href="index.php?site=forum&amp;addtopic=true&amp;board=' .
+                $board . '" class="btn btn-primary"><span class="icon-comment-alt"></span> ' .
+                $_language->module[ 'new_topic' ] . '</a>';
         }
     } else {
         $mark = '';
@@ -1297,7 +1300,8 @@ if (isset($_POST[ 'submit' ]) || isset($_POST[ 'movetopic' ]) || isset($_GET[ 'a
                 $message = cleartext(stripslashes(str_replace(['\r\n', '\n'], ["\n", "\n"], $_POST[ 'message' ])));
                 $message = toggle($message, 'xx');
                 $username =
-                    '<a href="index.php?site=profile&amp;id=' . $userID . '"><strong>' . getnickname($userID) . '</strong></a>';
+                    '<a href="index.php?site=profile&amp;id=' . $userID . '"><strong>' . getnickname($userID) .
+                    '</strong></a>';
 
                 $board = (int)$_POST[ 'board' ];
                 $topicname = stripslashes($_POST[ 'topicname' ]);

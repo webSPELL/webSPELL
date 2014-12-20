@@ -273,7 +273,8 @@ if (isset($_POST[ 'saveedit' ])) {
 
     //output image
 
-    echo '<img src="picture.php?id=' . $picID . '" alt=""><br><strong>' . cleartext($ds[ 'comment' ], false) . '</strong>';
+    echo '<img src="picture.php?id=' . $picID . '" alt=""><br>
+    <strong>' . cleartext($ds[ 'comment' ], false) . '</strong>';
 
     if ($browse[ 'picID' ] or $_GET[ 'action' ] == "window") {
         echo '</a>';

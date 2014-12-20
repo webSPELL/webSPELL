@@ -596,7 +596,8 @@ function showtopic($topic, $edit, $addreply, $quoteID, $type)
 
                 $message = toggle($message, 'xx');
                 $username =
-                    '<a href="index.php?site=profile&amp;id=' . $userID . '"><strong>' . getnickname($userID) . '</strong></a>';
+                    '<a href="index.php?site=profile&amp;id=' . $userID . '"><strong>' . getnickname($userID) .
+                    '</strong></a>';
 
                 if (isclanmember($userID)) {
                     $member = ' <img src="images/icons/member.gif" alt="' . $_language->module['clanmember'] . '">';

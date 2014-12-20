@@ -424,7 +424,8 @@ if (isset($_POST[ 'savevisitorcomment' ])) {
                     $statuspic = '<img src="images/icons/online.gif" width="7" height="7" alt="online">';
                 }
 
-                $avatar = '<img src="images/avatars/' . getavatar($ds[ 'userID' ]) . '" class="text-left" alt="Avatar">';
+                $avatar = '<img src="images/avatars/' . getavatar($ds[ 'userID' ]) .
+                    '" class="text-left" alt="Avatar">';
 
                 if ($loggedin && $ds[ 'userID' ] != $userID) {
                     $pm = '<a href="index.php?site=messenger&amp;action=touser&amp;touser=' . $ds[ 'userID' ] .

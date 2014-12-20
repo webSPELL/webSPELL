@@ -572,9 +572,9 @@ if (isset($_POST['delete'])) {
         $bg1 = BG_1;
 
         if (isanyadmin($userID)) {
-            $admin = '<strong>' . $_language->module['adminoptions'] . '</strong><br>' . $_language->module['sendeachuser'] .
-                '<input class="input" type="checkbox" name="eachuser" value="true"><br>' .
-                $_language->module['sendeachmember'] .
+            $admin = '<strong>' . $_language->module['adminoptions'] . '</strong><br>' .
+                $_language->module['sendeachuser'] . '<input class="input" type="checkbox" name="eachuser" value="true">
+                <br>' . $_language->module['sendeachmember'] .
                 '<input class="input" type="checkbox" name="eachmember" value="true">';
         } else {
             $admin = '';

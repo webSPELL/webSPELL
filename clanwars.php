@@ -1107,7 +1107,8 @@ if ($action == "new") {
 
                     $country = '[flag]' . getcountry($id) . '[/flag]';
                     $country = flags($country);
-                    $member = '<a href="index.php?site=profile&amp;id=' . $id . '"><strong>' . getnickname($id) . '</strong></a>';
+                    $member = '<a href="index.php?site=profile&amp;id=' . $id . '"><strong>' . getnickname($id) .
+                        '</strong></a>';
                     if (!isset($anz[ $id ])) {
                         $anz[ $id ] = '';
                     }
@@ -1315,7 +1316,8 @@ if ($action == "new") {
             $server = $ds[ 'server' ];
 
             $squad = '<a href="index.php?site=clanwars&amp;action=showonly&amp;id=' . $id . '&amp;page=' . $page .
-                '&amp;sort=game&amp;type=' . $type . '&amp;only=squad"><strong>' . getsquadname($ds[ 'squad' ]) . '</strong></a>';
+                '&amp;sort=game&amp;type=' . $type . '&amp;only=squad"><strong>' . getsquadname($ds[ 'squad' ]) .
+                '</strong></a>';
             if (file_exists('images/games/' . $ds[ 'game' ] . '.gif')) {
                 $pic = $ds[ 'game' ] . '.gif';
             }
@@ -1556,7 +1558,8 @@ if ($action == "new") {
             $league = '<a href="' . getinput($ds[ 'leaguehp' ]) . '" target="_blank">' . $ds[ 'league' ] . '</a>';
             $oppcountry = "[flag]" . $ds[ 'oppcountry' ] . "[/flag]";
             $country = flags($oppcountry);
-            $opponent = '<a href="' . getinput($ds[ 'opphp' ]) . '" target="_blank"><strong>' . $ds[ 'opptag' ] . '</strong></a>';
+            $opponent = '<a href="' . getinput($ds[ 'opphp' ]) . '" target="_blank"><strong>' . $ds[ 'opptag' ] .
+                '</strong></a>';
             $hometeam = $ds[ 'hometeam' ];
             $oppteam = $ds[ 'oppteam' ];
             $server = $ds[ 'server' ];

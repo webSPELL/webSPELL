@@ -77,19 +77,27 @@ if (isset($_POST[ 'save' ])) {
             } else {
                 if (unlink($filepath . $banner[ 'name' ] . ".tmp")) {
                     $error = $_language->module[ 'format_incorrect' ];
-                    die('<strong>' . $error . '</strong><br><br><a href="index.php?site=links&amp;action=edit&amp;linkID=' . $id .
-                        '">&laquo; ' . $_language->module[ 'back' ] . '</a>');
+                    die(
+                        '<strong>' . $error . '</strong><br><br>
+                        <a href="index.php?site=links&amp;action=edit&amp;linkID=' . $id . '">&laquo; ' .
+                        $_language->module[ 'back' ] . '</a>'
+                    );
                 } else {
                     $error = $_language->module[ 'format_incorrect' ];
-                    die('<strong>' . $error . '</strong><br><br><a href="index.php?site=links&amp;action=edit&amp;linkID=' . $id .
-                        '">&laquo; ' . $_language->module[ 'back' ] . '</a>');
+                    die(
+                        '<strong>' . $error . '</strong><br><br>
+                        <a href="index.php?site=links&amp;action=edit&amp;linkID=' . $id . '">&laquo; ' .
+                        $_language->module[ 'back' ] . '</a>'
+                    );
                 }
             }
         } else {
             @unlink($filepath . $banner[ 'name' ] . ".tmp");
             $error = $_language->module[ 'banner_to_big' ];
-            die('<strong>' . $error . '</strong><br><br><a href="index.php?site=links&amp;action=edit&amp;linkID=' . $id .
-                '">&laquo; ' . $_language->module[ 'back' ] . '</a>');
+            die(
+                '<strong>' . $error . '</strong><br><br><a href="index.php?site=links&amp;action=edit&amp;linkID=' .
+                $id . '">&laquo; ' . $_language->module[ 'back' ] . '</a>'
+            );
         }
     }
 } elseif (isset($_POST[ 'saveedit' ])) {
@@ -140,19 +148,25 @@ if (isset($_POST[ 'save' ])) {
             } else {
                 if (unlink($filepath . $banner[ 'name' ] . ".tmp")) {
                     $error = $_language->module[ 'format_incorrect' ];
-                    die('<strong>' . $error . '</strong><br><br><a href="index.php?site=links&amp;action=edit&amp;linkID=' . $id .
-                        '">&laquo; ' . $_language->module[ 'back' ] . '</a>');
+                    die(
+                        '<strong>' . $error . '</strong><br><br>
+                        <a href="index.php?site=links&amp;action=edit&amp;linkID=' . $id . '">&laquo; ' .
+                        $_language->module[ 'back' ] . '</a>'
+                    );
                 } else {
                     $error = $_language->module[ 'format_incorrect' ];
-                    die('<strong>' . $error . '</strong><br><br><a href="index.php?site=links&amp;action=edit&amp;linkID=' . $id .
-                        '">&laquo; ' . $_language->module[ 'back' ] . '</a>');
+                    die(
+                        '<strong>' . $error . '</strong><br><br>
+                        <a href="index.php?site=links&amp;action=edit&amp;linkID=' . $id . '">&laquo; ' .
+                        $_language->module[ 'back' ] . '</a>'
+                    );
                 }
             }
         } else {
             @unlink($filepath . $banner[ 'name' ] . ".tmp");
             $error = $_language->module[ 'banner_to_big' ];
-            die('<strong>' . $error . '</strong><br><br><a href="index.php?site=links&amp;action=edit&amp;linkID=' . $id .
-                '">&laquo; ' . $_language->module[ 'back' ] . '</a>');
+            die('<strong>' . $error . '</strong><br><br><a href="index.php?site=links&amp;action=edit&amp;linkID=' .
+                $id . '">&laquo; ' . $_language->module[ 'back' ] . '</a>');
         }
     }
 } elseif ($action == "delete") {
