@@ -157,10 +157,10 @@ function addonnav() {
 			<li><a href="admincenter.php?site=rubrics"><?php echo $_language->module['news_rubrics']; ?></a></li>
 			<li><a href="admincenter.php?site=newslanguages"><?php echo $_language->module['news_languages']; ?></a></li>
 			<?php } if(isfileadmin($userID)) { ?>
-			<li><a href="admincenter.php?site=filecategorys"><?php echo $_language->module['file_categories']; ?></a></li>
+			<li><a href="admincenter.php?site=filecategories"><?php echo $_language->module['file_categories']; ?></a></li>
 			<?php } if(ispageadmin($userID)) { ?>
 			<li><a href="admincenter.php?site=faqcategories"><?php echo $_language->module['faq_categories']; ?></a></li>
-			<li><a href="admincenter.php?site=linkcategorys"><?php echo $_language->module['link_categories']; ?></a></li>
+			<li><a href="admincenter.php?site=linkcategories"><?php echo $_language->module['link_categories']; ?></a></li>
 			<?php echo admincenternav(4); ?>
 		</ul>
 		<?php } if(ispageadmin($userID)) { ?>
