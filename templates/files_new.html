@@ -87,18 +87,16 @@
 
 	<div class="form-group">
 		<label for="filesize" class="col-lg-4 control-label">%file-size_e%:</label>
-		<div class="col-lg-8">
-			<div class="input-group">
-				<input id="filesize" name="filesize" type="text" maxlength="4" size="4" class="form-control">
-				<span class="input-group-addon">
-					<select name="unit">
-						<option value="b">Byte</option>
-						<option value="kb">KByte</option>
-						<option value="mb" selected="selected">MByte</option>
-						<option value="gb">GByte</option>
-					</select>
-				</span>
-			</div>
+		<div class="col-xs-9 col-lg-6">
+			<input id="filesize" name="filesize" type="text" maxlength="4" size="4" class="form-control">
+		</div>
+		<div class="col-xs-3 col-lg-2">
+			<select name="unit">
+				<option value="b">Byte</option>
+				<option value="kb">KByte</option>
+				<option value="mb" selected="selected">MByte</option>
+				<option value="gb">GByte</option>
+			</select>
 		</div>
 	</div>
 
