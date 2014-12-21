@@ -274,7 +274,7 @@ header('X-UA-Compatible: IE=edge,chrome=1');
     //request the features you need:
     webshim.setOptions("forms-ext",
     {
-        replaceUI: "auto",
+        replaceUI: false,
         types: "date time datetime-local"
     });
     webshim.polyfill('forms forms-ext');
