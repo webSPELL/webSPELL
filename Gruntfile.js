@@ -183,6 +183,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks("grunt-templated-changelog");
     grunt.loadNpmTasks("grunt-bump");
     grunt.loadNpmTasks("grunt-githooks");
+    grunt.loadNpmTasks("grunt-commit-message-verify");
     grunt.loadNpmTasks("grunt-bootlint");
     grunt.loadNpmTasks("grunt-htmllint");
 
@@ -202,12 +203,16 @@ module.exports = function(grunt) {
         "phpcs",
         "bootlint"
     ]);
-    grunt.registerTask("test", [
-        "codecheck"
-    ]);
     grunt.registerTask("js", [
         "jshint",
         "jscs"
+    ]);
+    grunt.registerTask("git", [
+        "grunt-commit-message-verify"
+    ]);
+    grunt.registerTask("test", [
+        "codecheck",
+        "git"
     ]);
     grunt.registerTask("release", "Creating a new webSPELL Release", function(releaseLevel) {
         if (
@@ -262,5 +267,36 @@ module.exports = function(grunt) {
             }
         });
         return grunt.task.run("bump");
+    });
+    grunt.config.set("grunt-commit-message-verify", {
+        minLength: 0,
+        maxLength: 3000,
+
+        // first line should be both concise and informative
+        minFirstLineLength: 20,
+        maxFirstLineLength: 60,
+
+        // this is a good default to prevent overflows in shell console and Github UI
+        maxLineLength: 80,
+
+        regexes: {
+            "check start of the commit": {
+                // the commit is either a fix, a feature, a documentation fix, a refactoring,
+                // new release commit, or Work-In-Progress temporary commit
+                regex: /^((refactor|doc) |((fix|feat) #\d+ )|(v?\d+\.\d+\.\d+)|WIP)/,
+                explanation:
+                    "The commit should start with sth like fix #123, feat #123, doc, refactor, " +
+                    "or WIP for test commits"
+            },
+            "is github compliant": {
+                // https://help.github.com/articles/closing-issues-via-commit-messages
+                regex: /(((close|resolve)(s|d)?)|fix(e(s|d))?) #\d+/i,
+                explanation: "The commit should contain sth like fix #123 or close #123 somewhere"
+            }
+        },
+        skipCheckAfterIndent: false,
+        forceSecondLineEmpty: false,
+        messageOnError: "",
+        shellCommand: "git log --format=%B --no-merges -n 1"
     });
 };
