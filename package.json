@@ -32,5 +32,8 @@
   },
   "scripts": {
     "test": "grunt codecheck --verbose"
+  },
+  "dependencies": {
+    "grunt-commit-message-verify": "^0.1.0"
   }
 }
