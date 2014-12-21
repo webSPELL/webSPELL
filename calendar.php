@@ -590,7 +590,7 @@ if ($action === "savewar") {
             WHERE
                 upID='" . (int)$_POST['upID'] . "'
             AND
-                userID='" . (int)$userID
+                userID='" . (int)$userID."'"
         );
 
         if (mysqli_num_rows($ergebnis)) {
