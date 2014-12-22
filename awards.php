@@ -112,7 +112,7 @@ if (isset($_POST[ 'save' ])) {
     }
 
     $awardID = $_GET[ 'awardID' ];
-    safe_query("DELETE FROM `" . PREFIX . "awards` WHERE `awardID` = '" . (int)$awardID);
+    safe_query("DELETE FROM `" . PREFIX . "awards` WHERE `awardID` = '" . (int)$awardID . "'");
     header("Location: index.php?site=awards");
 }
 
@@ -170,7 +170,7 @@ if ($action == "new") {
         $_language->readModule('bbcode', true);
         $ds = mysqli_fetch_array(
             safe_query(
-                "SELECT * FROM " . PREFIX . "awards WHERE awardID='" . (int)$awardID
+                "SELECT * FROM " . PREFIX . "awards WHERE awardID='" . (int)$awardID . "'"
             )
         );
         $day = "";
@@ -334,7 +334,7 @@ if ($action == "new") {
             FROM
                 `" . PREFIX . "awards`
             WHERE
-                awardID='" . (int)$awardID
+                awardID='" . (int)$awardID . "'"
         )
     );
 

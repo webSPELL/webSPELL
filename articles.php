@@ -85,7 +85,7 @@ if ($action == "save") {
     $anzpages =
         mysqli_num_rows(
             safe_query(
-                "SELECT * FROM " . PREFIX . "articles_contents WHERE articlesID='" . (int)$articlesID."'"
+                "SELECT * FROM " . PREFIX . "articles_contents WHERE articlesID='" . (int)$articlesID ."'"
             )
         );
     if ($anzpages > count($message)) {
@@ -164,7 +164,7 @@ if ($action == "save") {
                 FROM
                   `" . PREFIX . "articles`
                 WHERE
-                    `articlesID` = '" . (int)$_GET[ 'articlesID' ]
+                    `articlesID` = '" . (int)$_GET[ 'articlesID' ] . "'"
         )
     );
     if ($ds[ 'screens' ]) {
@@ -181,8 +181,8 @@ if ($action == "save") {
 
     \webspell\Tags::removeTags('articles', $_GET[ 'articlesID' ]);
 
-    safe_query("DELETE FROM " . PREFIX . "articles WHERE articlesID='" . (int)$_GET[ 'articlesID' ]);
-    safe_query("DELETE FROM " . PREFIX . "articles_contents WHERE articlesID='" . (int)$_GET[ 'articlesID' ]);
+    safe_query("DELETE FROM " . PREFIX . "articles WHERE articlesID='" . (int)$_GET[ 'articlesID' ] . "'");
+    safe_query("DELETE FROM " . PREFIX . "articles_contents WHERE articlesID='" . (int)$_GET[ 'articlesID' ] . "'");
     safe_query("DELETE FROM " . PREFIX . "comments WHERE parentID='" . (int)$_GET[ 'articlesID' ] . "' AND type='ar'");
 
     if (isset($close)) {
@@ -335,7 +335,7 @@ if ($action == "new") {
 
     if (isnewsadmin($userID)) {
         $ds = mysqli_fetch_array(
-            safe_query("SELECT * FROM " . PREFIX . "articles WHERE articlesID = '" . (int)$articlesID)
+            safe_query("SELECT * FROM " . PREFIX . "articles WHERE articlesID = '" . (int)$articlesID . "'")
         );
 
         $title = getinput($ds[ 'title' ]);
