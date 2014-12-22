@@ -197,8 +197,8 @@ if ($action == "add") {
     echo '<h1>&curren; <a href="admincenter.php?site=icons" class="white">' . $_language->module[ 'icons' ] .
         '</a> &raquo; ' . $_language->module[ 'smilies' ] . '</h1>';
 
-    echo '<input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=smileys&amp;action=add\');
-    return document.MM_returnValue" value="' . $_language->module[ 'new_smiley' ] . '" /><br /><br />';
+    echo '<a href="admincenter.php?site=smileys&amp;action=add" class="input">' .
+        $_language->module[ 'new_smiley' ] . '</a><br><br>';
 
     echo '<form method="post" action="admincenter.php?site=smileys">
   <table width="100%" border="0" cellspacing="1" cellpadding="3" bgcolor="#DDDDDD">
@@ -233,11 +233,9 @@ if ($action == "add") {
         <td class="' . $td . '">' . $smileys[ 'alt' ] . '</td>
         <td class="' . $td . '" align="center">' . $smileys[ 'pattern' ] . '</td>
         <td class="' . $td . '" align="center">
-            <input type="button"
-            onclick="MM_goToURL(\'parent\',\'admincenter.php?site=smileys&amp;action=edit&amp;smileyID=' .
-                $smileys[ 'smileyID' ] . '\');return document.MM_returnValue" value="' . $_language->module[ 'edit' ] .
-                '" />
-        <input type="button" onclick="MM_confirm(\'' . $_language->module[ 'really_delete' ] .
+            <a href="admincenter.php?site=smileys&amp;action=edit&amp;smileyID=' .
+                $smileys[ 'smileyID' ] . '" class="input">' . $_language->module[ 'edit' ] . '</a>
+            <input type="button" onclick="MM_confirm(\'' . $_language->module[ 'really_delete' ] .
                 '\', \'admincenter.php?site=smileys&amp;delete=true&amp;smileyID=' . $smileys[ 'smileyID' ] .
                 '&amp;captcha_hash=' . $hash . '\')" value="' . $_language->module[ 'delete' ] . '" /></td>
       </tr>';

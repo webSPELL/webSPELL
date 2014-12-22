@@ -192,9 +192,8 @@ if ($action == "add") {
         '</a> &raquo; ' . $_language->module[ 'games' ] . '</h1>';
 
     echo
-        '<input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=games&amp;action=add\');
-        return document.MM_returnValue" value="' .
-        $_language->module[ 'new_game' ] . '" /><br /><br />';
+        '<a href="admincenter.php?site=games&amp;action=add" class="input">' .
+        $_language->module[ 'new_game' ] . '</a><br /><br />';
 
     echo '<form method="post" action="admincenter.php?site=games">
     <table width="100%" border="0" cellspacing="1" cellpadding="3" bgcolor="#DDDDDD">
@@ -226,10 +225,9 @@ if ($action == "add") {
                 <td class="' . $td . '" align="center">' . $pic . '</td>
                 <td class="' . $td . '">' . getinput($ds[ 'name' ]) . '</td>
                 <td class="' . $td . '" align="center">' . getinput($ds[ 'tag' ]) . '</td>
-                <td class="' . $td .
-                '" align="center"><input type="button"
-                onclick="MM_goToURL(\'parent\',\'admincenter.php?site=games&amp;action=edit&amp;gameID=' .
-                $ds[ 'gameID' ] . '\');return document.MM_returnValue" value="' . $_language->module[ 'edit' ] . '" />
+                <td class="' . $td . '" align="center">
+                    <a href=admincenter.php?site=games&amp;action=edit&amp;gameID=' . $ds[ 'gameID' ] .
+                '" class="input">' . $_language->module[ 'edit' ] . '</a>
                 <input type="button" onclick="MM_confirm(\'' . $_language->module[ 'really_delete' ] .
                 '\', \'admincenter.php?site=games&amp;delete=true&amp;gameID=' . $ds[ 'gameID' ] .
                 '&amp;captcha_hash=' . $hash . '\')" value="' . $_language->module[ 'delete' ] . '" /></td>

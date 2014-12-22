@@ -52,11 +52,9 @@ function generate_overview($filecats = '', $offset = '', $subcatID = 0)
 
         $filecats .= '<tr>
         <td class="' . $td . '">' . $offset . getinput($ds[ 'name' ]) . '</td>
-        <td class="' . $td .
-            '" align="center">
-                <input type="button"
-                onclick="MM_goToURL(\'parent\',\'admincenter.php?site=filecategories&amp;action=edit&amp;filecatID=' .
-            $ds[ 'filecatID' ] . '\');return document.MM_returnValue" value="' . $_language->module[ 'edit' ] . '" />
+        <td class="' . $td . '" align="center">
+            <a href="admincenter.php?site=filecategories&amp;action=edit&amp;filecatID=' .
+            $ds[ 'filecatID' ] . '" class="input">' . $_language->module[ 'edit' ] . '</a>
         <input type="button" onclick="MM_confirm(\'' . $_language->module[ 'really_delete' ] .
             '\', \'admincenter.php?site=filecategories&amp;delete=true&amp;filecatID=' . $ds[ 'filecatID' ] .
             '&amp;captcha_hash=' . $hash . '\')" value="' . $_language->module[ 'delete' ] . '" /></td>
@@ -252,10 +250,8 @@ if ($_GET[ 'action' ] == "add") {
     echo '<h1>&curren; ' . $_language->module[ 'file_categories' ] . '</h1>';
 
     echo
-        '<input type="button"
-        onclick="MM_goToURL(\'parent\',\'admincenter.php?site=filecategories&amp;action=add\');
-        return document.MM_returnValue" value="' .
-        $_language->module[ 'new_category' ] . '" /><br /><br />';
+        '<a href="admincenter.php?site=filecategories&amp;action=add" class="input">' .
+        $_language->module[ 'new_category' ] . '</a><br /><br />';
 
     echo '<table width="100%" border="0" cellspacing="1" cellpadding="3" bgcolor="#DDDDDD">
     <tr>

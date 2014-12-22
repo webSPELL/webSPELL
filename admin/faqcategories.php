@@ -208,10 +208,8 @@ onsubmit="return chkFormular();">
     echo '<h1>&curren; ' . $_language->module[ 'faq_categories' ] . '</h1>';
 
     echo
-        '<input type="button"
-        onclick="MM_goToURL(\'parent\',\'admincenter.php?site=faqcategories&amp;action=addcat\');
-        return document.MM_returnValue" value="' .
-        $_language->module[ 'new_category' ] . '" /><br><br>';
+        '<a href="admincenter.php?site=faqcategories&amp;action=addcat" class="input">' .
+        $_language->module[ 'new_category' ] . '</a><br><br>';
 
     echo '<form method="post" action="admincenter.php?site=faqcategories">
     <table width="100%" border="0" cellspacing="1" cellpadding="3" bgcolor="#DDDDDD">
@@ -241,9 +239,8 @@ onsubmit="return chkFormular();">
             <td class="' . $td . '"><b>' . getinput($ds[ 'faqcatname' ]) . '</b>
             <br />' . cleartext($ds[ 'description' ], 1, 'admin') . '</td>
             <td class="' . $td . '" align="center">
-            <input type="button"
-            onclick="MM_goToURL(\'parent\',\'admincenter.php?site=faqcategories&amp;action=editcat&amp;faqcatID=' .
-                $ds[ 'faqcatID' ] . '\');return document.MM_returnValue" value="' . $_language->module[ 'edit' ] . '">
+            <a href="admincenter.php?site=faqcategories&amp;action=editcat&amp;faqcatID=' .
+            $ds[ 'faqcatID' ] . '" class="input">' . $_language->module[ 'edit' ] .'</a>
             <input type="button" onclick="MM_confirm(\'' . $_language->module[ 'really_delete' ] .
                 '\', \'admincenter.php?site=faqcategories&amp;delcat=true&amp;faqcatID=' . $ds[ 'faqcatID' ] .
                 '&amp;captcha_hash=' . $hash . '\')" value="' . $_language->module[ 'delete' ] . '"></td>

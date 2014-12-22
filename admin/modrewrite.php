@@ -438,16 +438,12 @@ if ($action == "add") {
     echo '<h1>&curren; ' . $_language->module['modrewrite_rules'] . '</h1>';
 
     echo
-        '<input type="button"
-        onclick="MM_goToURL(\'parent\',\'admincenter.php?site=modrewrite&amp;action=add\');
-        return document.MM_returnValue" value="' . $_language->module['new_rule'] . '"> ';
+        '<a href="admincenter.php?site=modrewrite&amp;action=add">' . $_language->module[ 'new_rule' ] . '</a>';
     echo
-        '<input type="button"
-        onclick="MM_goToURL(\'parent\',\'admincenter.php?site=modrewrite&amp;action=rebuild\');
-        return document.MM_returnValue" value="' . $_language->module['rebuild'] . '"><br><br>';
+        '<a href="admincenter.php?site=modrewrite&amp;action=rebuild">' .
+        $_language->module[ 'rebuild' ] . '</a><br><br>';
 
-    echo '
-    <table width="100%" border="0" cellspacing="1" cellpadding="3" bgcolor="#DDDDDD">
+    echo '<table width="100%" border="0" cellspacing="1" cellpadding="3" bgcolor="#DDDDDD">
     <tr>
     <td width="60%" class="title"><b>' . $_language->module['rule'] . '</b></td>
     <td width="15%" class="title"><b>' . $_language->module['variables'] . '</b></td>
@@ -470,14 +466,14 @@ if ($action == "add") {
                 $td = 'td2';
             }
             echo '<tr>
-            <td class="' . $td . '" align="left">' . $flags['regex'] . '<br>' . $flags['link'] . '</td>
-            <td class="' . $td . '">' . count(unserialize($flags['fields'])) . '</td>
-            <td class="' . $td . '" align="center"><input type="button"
-            onclick="MM_goToURL(\'parent\',\'admincenter.php?site=modrewrite&amp;action=edit&amp;ruleID=' .
-                $flags['ruleID'] . '\');return document.MM_returnValue" value="' . $_language->module['edit'] . '">
-            <input type="button" onclick="MM_confirm(\'' . $_language->module['really_delete'] .
-                '\', \'admincenter.php?site=modrewrite&amp;delete=true&amp;ruleID=' . $flags['ruleID'] .
-                '&amp;captcha_hash=' . $hash . '\')" value="' . $_language->module['delete'] . '"></td>
+            <td class="' . $td . '" align="left">' . $flags[ 'regex' ] . '<br>' . $flags[ 'link' ] . '</td>
+            <td class="' . $td . '">' . count(unserialize($flags[ 'fields' ])) . '</td>
+            <td class="' . $td . '" align="center">
+                <a href="admincenter.php?site=modrewrite&amp;action=edit&amp;ruleID=' .
+                $flags[ 'ruleID' ] . '" class="input">'. $_language->module[ 'edit' ] . '</a>
+            <input type="button" onclick="MM_confirm(\'' . $_language->module[ 'really_delete' ] .
+                '\', \'admincenter.php?site=modrewrite&amp;delete=true&amp;ruleID=' . $flags[ 'ruleID' ] .
+                '&amp;captcha_hash=' . $hash . '\')" value="' . $_language->module[ 'delete' ] . '"></td>
             </tr>';
 
             $i++;

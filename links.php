@@ -253,9 +253,8 @@ if ($action == "new") {
 } elseif ($action == "show" and is_numeric($_GET[ 'linkcatID' ])) {
     if (ispageadmin($userID) || isnewsadmin($userID)) {
         echo
-            '<input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=links&amp;action=new\');
-            return document.MM_returnValue" value="' .
-            $_language->module[ 'new_link' ] . '" class="btn btn-danger"><br><br>';
+            '<a href="index.php?site=links&amp;action=new" class="btn btn-danger">' .
+            $_language->module[ 'new_link' ] . '</a><br><br>';
     }
 
     $linkcatID = $_GET[ 'linkcatID' ];
@@ -289,11 +288,9 @@ if ($action == "new") {
             }
             if (ispageadmin($userID) || isnewsadmin($userID)) {
                 $adminaction =
-                    '<input type="button" onclick="MM_goToURL(\'parent\',\'index.php?
-                    site=links&amp;action=edit&amp;linkID=' .
-                    $ds[ 'linkID' ] . '\');return document.MM_returnValue" value="' . $_language->module[ 'edit' ] .
-                    '" class="btn btn-danger">
-				    <input type="button" onclick="MM_confirm(\'' . $_language->module[ 'really_delete' ] .
+                    '<a href="index.php?site=links&amp;action=edit&amp;linkID=' . $ds[ 'linkID' ] .
+                    '" class="btn btn-danger">' . $_language->module[ 'edit' ] . '">
+                    <input type="button" onclick="MM_confirm(\'' . $_language->module[ 'really_delete' ] .
                     '\', \'links.php?action=delete&amp;linkID=' . $ds[ 'linkID' ] . '\')" value="' .
                     $_language->module[ 'delete' ] . '" class="btn btn-danger">';
             } else {
@@ -316,10 +313,8 @@ if ($action == "new") {
     $cats = safe_query("SELECT * FROM " . PREFIX . "links_categorys ORDER BY name");
     if (mysqli_num_rows($cats)) {
         if (ispageadmin($userID) || isnewsadmin($userID)) {
-            echo
-                '<input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=links&amp;action=new\');
-                return document.MM_returnValue" value="' .
-                $_language->module[ 'new_link' ] . '"><br><br>';
+            echo '<a href="index.php?site=links&amp;action=new" class="btn btn-danger">' .
+                $_language->module[ 'new_link' ] . '</a><br><br>';
         }
         $anzcats = mysqli_num_rows(safe_query("SELECT linkcatID FROM " . PREFIX . "links_categorys"));
         $bg1 = BG_1;
@@ -359,9 +354,8 @@ if ($action == "new") {
     } else {
         if (ispageadmin($userID) || isnewsadmin($userID)) {
             echo
-                '<input type="button" onclick="MM_goToURL(\'parent\',\'admin/admincenter.php?site=linkcategories\');
-                return document.MM_returnValue" value="' .
-                $_language->module[ 'new_category' ] . '" class="btn btn-danger"><br><br>';
+                '<a href="admin/admincenter.php?site=linkcategories" class="btn btn-danger">' .
+                $_language->module[ 'new_category' ] . '</a><br><br>';
         }
         echo $_language->module[ 'no_categories' ];
     }

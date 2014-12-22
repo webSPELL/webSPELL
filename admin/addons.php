@@ -305,17 +305,10 @@ if ($action == "add") {
     echo '<h1>&curren; ' . $_language->module[ 'addons' ] . '</h1>';
 
     echo
-        '<input type="button"
-            onclick="MM_goToURL(
-                \'parent\',
-                \'admincenter.php?site=addons&amp;action=addcat\');return document.MM_returnValue" value="' .
-            $_language->module[ 'new_category' ] . '
-        ">
-        <input type="button" onclick="MM_goToURL(
-            \'parent\',
-            \'admincenter.php?site=addons&amp;action=add\');return document.MM_returnValue" value="' .
-            $_language->module[ 'new_link' ] . '
-        "><br><br>';
+        '<a href="admincenter.php?site=addons&amp;action=addcat" class="input">' .
+        $_language->module[ 'new_category' ] . '</a>
+        <a href="admincenter.php?site=addons&amp;action=add" class="input">' .
+        $_language->module[ 'new_link' ] . '</a><br><br>';
 
     echo '<form method="post" action="admincenter.php?site=addons">
     <table width="100%" border="0" cellspacing="1" cellpadding="3" bgcolor="#DDDDDD">
@@ -355,13 +348,8 @@ if ($action == "add") {
         } else {
             $sort = $list;
             $catactions =
-                '<input type="button"
-                    onclick="MM_goToURL(
-                        \'parent\',
-                        \'admincenter.php?site=addons&amp;action=editcat&amp;catID=' . $ds[ 'catID' ] . '\'
-                    );return document.MM_returnValue"
-                    value="' . $_language->module[ 'edit' ] .
-                '">
+                '<a href="admincenter.php?site=addons&amp;action=editcat&amp;catID=' . $ds[ 'catID' ] .
+                '" class="input">' . $_language->module[ 'edit' ] . '</a>
                 <input type="button" onclick="MM_confirm(\'' . $_language->module[ 'really_delete_category' ] . '\',
                 \'admincenter.php?site=addons&amp;delcat=true&amp;catID=' . $ds[ 'catID' ] .
                 '&amp;captcha_hash=' . $hash . '\')" value="' . $_language->module[ 'delete' ] . '">';
@@ -410,9 +398,9 @@ if ($action == "add") {
                 <td class="' . $td . '"><b>' . $db[ 'name' ] . '</b><br><small>' . $db[ 'url' ] . '</small></td>
                 <td class="' . $td . '" align="center"><small><b>' .
                 $_language->module[ 'admin_' . getinput($db[ 'accesslevel' ]) ] . '</b></small></td>
-                <td class="' . $td . '" align="center"><input type="button" onclick="MM_goToURL(
-                    \'parent\',\'admincenter.php?site=addons&amp;action=edit&amp;linkID=' . $db[ 'linkID' ] . '\'
-                );return document.MM_returnValue" value="' . $_language->module[ 'edit' ] . '">
+                <td class="' . $td . '" align="center">
+                    <a href="admincenter.php?site=addons&amp;action=edit&amp;linkID=' . $db[ 'linkID' ] . '">' .
+                        $_language->module[ 'edit' ] .'</a>
                 <input type="button" onclick="MM_confirm(
                     \'' . $_language->module[ 'really_delete_link' ] . '\',
                     \'admincenter.php?site=addons&amp;delete=true&amp;linkID=' . $db[ 'linkID' ] .
@@ -448,10 +436,8 @@ if ($action == "add") {
                 <small><b>' . $_language->module[ 'admin_' . getinput($db[ 'accesslevel' ]) ] . '</b></small>
             </td>
             <td bgcolor="#FFFFFF">
-                <input
-                    type="button"
-                    onclick="MM_goToURL(\'parent\',\'admincenter.php?site=addons&amp;action=edit&amp;linkID=' .
-            $db[ 'linkID' ] . '\');return document.MM_returnValue" value="' . $_language->module[ 'edit' ] . '">
+                <a href="admincenter.php?site=addons&amp;action=edit&amp;linkID=' . $db[ 'linkID' ] . '">' .
+                    $_language->module[ 'edit' ] . '</a>
                 <input type="button" onclick="MM_confirm(\'' . $_language->module[ 'really_delete_link' ] .
             '\', \'admincenter.php?site=addons&amp;delete=true&amp;linkID=' . $db[ 'linkID' ] . '&amp;captcha_hash=' .
             $hash . '\')" value="delete"></td>

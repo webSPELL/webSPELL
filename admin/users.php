@@ -960,39 +960,26 @@ if ($action == "activate") {
             }
 
             if (isbanned($ds[ 'userID' ])) {
-                $banned =
-                    '<input type="button"
-                    onclick="MM_goToURL(\'parent\',\'admincenter.php?site=users&amp;action=ban&amp;id=' .
-                    $ds[ 'userID' ] . '\');return document.MM_returnValue" value="' . $_language->module[ 'undo_ban' ] .
-                    '" />';
+                $banned = '<a href="admincenter.php?site=users&amp;action=ban&amp;id=' . $ds[ 'userID' ] .
+                    '" class="input">' . $_language->module[ 'undo_ban' ] . '</a>';
             } else {
-                $banned = '<input type="button"
-                    onclick="MM_goToURL(\'parent\',\'admincenter.php?site=users&amp;action=ban&amp;id=' .
-                    $ds[ 'userID' ] . '\');return document.MM_returnValue" value="' . $_language->module[ 'banish' ] .
-                    '" />';
+                $banned = '<a href="admincenter.php?site=users&amp;action=ban&amp;id=' . $ds[ 'userID' ] .
+                    '" class="input">' . $_language->module[ 'banish' ] . '</a>';
             }
 
             if ($ds[ 'activated' ] == "1") {
                 $actions =
-                    '<input type="button"
-                        onclick="MM_goToURL(\'parent\',\'admincenter.php?site=users&amp;page=' .
-                        $page . '&amp;type=' . $type . '&amp;sort=' . $sort . '&amp;search=' . $search .
-                        '&amp;action=addtoclan&amp;id=' . $ds[ 'userID' ] . '\');return document.MM_returnValue"
-                        value="' . $_language->module[ 'to_clan' ] . '" />
-                    <input type="button"
-                        onclick="MM_goToURL(\'parent\',\'admincenter.php?site=members&amp;action=edit&amp;id=' .
-                        $ds[ 'userID' ] . '\');return document.MM_returnValue" value="' .
-                        $_language->module[ 'rights' ] . '" />
-                    <input type="button"
-                        onclick="MM_goToURL(\'parent\',\'admincenter.php?site=users&amp;action=profile&amp;page=' .
-                        $page . '&amp;type=' . $type . '&amp;sort=' . $sort . '&amp;search=' . $search . '&amp;id=' .
-                        $ds[ 'userID' ] . '\');return document.MM_returnValue" value="' .
-                    $_language->module[ 'profile' ] . '" />';
+                    '<a href="admincenter.php?site=users&amp;page=' . $page . '&amp;type=' . $type . '&amp;sort=' .
+                    $sort . '&amp;search=' . $search . '&amp;action=addtoclan&amp;id=' . $ds[ 'userID' ] .
+                    '" class="input">' . $_language->module[ 'to_clan' ] . '</a>
+                    <a href="admincenter.php?site=members&amp;action=edit&amp;id=' . $ds[ 'userID' ] .
+                    '" class="input">' . $_language->module[ 'rights' ] . '</a>
+                    <a href="admincenter.php?site=users&amp;action=profile&amp;page=' . $page . '&amp;type=' . $type .
+                    '&amp;sort=' . $sort . '&amp;search=' . $search . '&amp;id=' . $ds[ 'userID' ] .
+                    '" class="input">' . $_language->module[ 'profile' ] . '</a>';
             } else {
-                $actions = '<input type="button"
-                onclick="MM_goToURL(\'parent\',\'admincenter.php?site=users&amp;action=activate&amp;id=' .
-                    $ds[ 'userID' ] . '&amp;captcha_hash=' . $hash . '\');return document.MM_returnValue" value="' .
-                    $_language->module[ 'activate' ] . '" />';
+                $actions = '<a href="admincenter.php?site=users&amp;action=activate&amp;id=' .
+                    $ds[ 'userID' ] . '&amp;captcha_hash=' . $hash . '">' . $_language->module[ 'activate' ] . '</a>';
             }
 
             echo '<tr>

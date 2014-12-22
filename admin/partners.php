@@ -314,9 +314,8 @@ if ($action == "add") {
 
     echo '<h1>&curren; ' . $_language->module[ 'partners' ] . '</h1>';
 
-    echo '<input type="button"
-    onclick="MM_goToURL(\'parent\',\'admincenter.php?site=partners&amp;action=add\');return document.MM_returnValue"
-    value="' . $_language->module[ 'new_partner' ] . '" /><br><br>';
+    echo '<a href="admincenter.php?site=partners&amp;action=add" class="input">' .
+        $_language->module[ 'new_partner' ] . '</a><br><br>';
 
     echo '<form method="post" action="admincenter.php?site=partners">
   <table width="100%" border="0" cellspacing="1" cellpadding="3" bgcolor="#DDDDDD">
@@ -361,9 +360,8 @@ if ($action == "add") {
             '</a></td>
       <td class="' . $td . '">' . $db[ 'hits' ] . ' (' . $perday . ')</td>
       <td class="' . $td . '" align="center">' . $displayed . '</td>
-      <td class="' . $td . '" align="center"><input type="button"
-      onclick="MM_goToURL(\'parent\',\'admincenter.php?site=partners&amp;action=edit&amp;partnerID=' .
-            $db[ 'partnerID' ] . '\');return document.MM_returnValue" value="' . $_language->module[ 'edit' ] . '" />
+      <td class="' . $td . '" align="center"><a href="admincenter.php?site=partners&amp;action=edit&amp;partnerID=' .
+            $db[ 'partnerID' ] . '" class="input">' . $_language->module[ 'edit' ] . '</a>
       <input type="button" onclick="MM_confirm(\'' . $_language->module[ 'really_delete' ] .
             '\', \'admincenter.php?site=partners&amp;delete=true&amp;partnerID=' . $db[ 'partnerID' ] .
             '&amp;captcha_hash=' . $hash . '\')" value="' . $_language->module[ 'delete' ] . '" /></td>

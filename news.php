@@ -1215,9 +1215,8 @@ if ($action == "new") {
         $adminaction = '';
         if (isnewsadmin($userID)) {
             $adminaction .=
-                '<input type="button" onclick="MM_goToURL(\'parent\',\'news.php?quickactiontype=unpublish&amp;newsID=' .
-                $ds[ 'newsID' ] . '\');return document.MM_returnValue;" value="' . $_language->module[ 'unpublish' ] .
-                '" class="btn btn-danger"> ';
+                '<a href="news.php?quickactiontype=unpublish&amp;newsID=' . $ds[ 'newsID' ] .
+                '" class="btn btn-danger">' . $_language->module[ 'unpublish' ] . '</a>';
         }
         if ((isnewswriter($userID) and $ds[ 'poster' ] == $userID) or isnewsadmin($userID)) {
             $adminaction .=

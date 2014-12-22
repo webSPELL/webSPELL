@@ -248,8 +248,8 @@ if ($action == "add") {
     echo '<h1>&curren; <a href="admincenter.php?site=icons" class="white">' . $_language->module[ 'icons' ] .
         '</a> &raquo; ' . $_language->module[ 'countries' ] . '</h1>';
 
-    echo '<input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=countries&amp;action=add\');
-    return document.MM_returnValue" value="' . $_language->module[ 'new_country' ] . '" /><br><br>';
+    echo '<a href="admincenter.php?site=countries&amp;action=add" class="input">' .
+        $_language->module[ 'new_country' ] . '</a><br><br>';
 
     echo '<form method="post" action="admincenter.php?site=countries">
 		  <table width="100%" border="0" cellspacing="1" cellpadding="3" bgcolor="#DDDDDD">
@@ -260,7 +260,7 @@ if ($action == "add") {
 			  <td width="25%" class="title"><b>' . $_language->module[ 'actions' ] . '</b></td>
 			</tr>';
 
-    $ds = safe_query("SELECT * `FROM " . PREFIX . "countries` ORDER BY `country`");
+    $ds = safe_query("SELECT * FROM `" . PREFIX . "countries` ORDER BY `country`");
     $anz = mysqli_num_rows($ds);
     if ($anz) {
         $CAPCLASS = new \webspell\Captcha;
@@ -286,9 +286,8 @@ if ($action == "add") {
                 <td class="' . $td . '">' . getinput($flags[ 'country' ]) . $fav . '</td>
                 <td class="' . $td . '" align="center">' . getinput($flags[ 'short' ]) . '</td>
                 <td class="' . $td . '" align="center">
-                    <input type="button" onclick="MM_goToURL(\'parent\',
-                    \'admincenter.php?site=countries&amp;action=edit&amp;countryID='. $flags[ 'countryID' ] .
-                    '\');return document.MM_returnValue" value="' . $_language->module[ 'edit' ] . '" />
+                    <a href="admincenter.php?site=countries&amp;action=edit&amp;countryID='. $flags[ 'countryID' ]
+                    . '" class="input">' . $_language->module[ 'edit' ] . '</a>
                     <input type="button" onclick="MM_confirm(\'' . $_language->module[ 'really_delete' ] .
                         '\', \'admincenter.php?site=countries&amp;delete=true&amp;countryID=' . $flags[ 'countryID' ] .
                         '&amp;captcha_hash=' . $hash . '\')" value="' . $_language->module[ 'delete' ] . '" />

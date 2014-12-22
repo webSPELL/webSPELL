@@ -135,8 +135,8 @@ if ($action == "delete") {
 
     echo '<h1>&curren; ' . $_language->module[ 'groups' ] . '</h1>';
 
-    echo '<input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=groups&amp;action=add\');
-    return document.MM_returnValue" value="' . $_language->module[ 'new_group' ] . '" /><br /><br />';
+    echo '<a href="admincenter.php?site=groups&amp;action=add" class="input">' . $_language->module[ 'new_group' ] .
+        '</a><br><br>';
 
     $ergebnis = safe_query("SELECT * FROM " . PREFIX . "forum_groups ORDER BY fgrID");
 
@@ -161,9 +161,8 @@ if ($action == "delete") {
         echo '<tr>
             <td class="' . $td . '"><b>' . getinput($ds[ 'name' ]) . '</b></td>
             <td class="' . $td . '" align="center">
-                <input type="button"
-                onclick="MM_goToURL(\'parent\',\'admincenter.php?site=groups&amp;action=edit&amp;fgrID=' .
-                $ds[ "fgrID" ] . '\');return document.MM_returnValue" value="' . $_language->module[ 'edit' ] . '" />
+                <a href="admincenter.php?site=groups&amp;action=edit&amp;fgrID=' . $ds[ "fgrID" ] . '" class="input">' .
+                $_language->module[ 'edit' ] . '</a>
             <input type="button" onclick="MM_confirm(\'' . $_language->module[ 'really_delete' ] .
             '\', \'admincenter.php?site=groups&amp;action=delete&amp;fgrID=' . $ds[ "fgrID" ] . '&amp;captcha_hash=' .
             $hash . '\')" value="' . $_language->module[ 'delete' ] . '" /></td>
