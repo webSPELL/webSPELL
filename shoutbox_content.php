@@ -89,7 +89,7 @@ if ($action == "save") {
             $_POST[ 'shoutID' ] = [$_POST[ 'shoutID' ]];
         }
         foreach ($_POST[ 'shoutID' ] as $id) {
-            safe_query("DELETE FROM " . PREFIX . "shoutbox WHERE shoutID='".(int)$id);
+            safe_query("DELETE FROM " . PREFIX . "shoutbox WHERE shoutID='".(int)$id."'");
         }
     }
     header("Location: index.php?site=shoutbox_content&action=showall");
