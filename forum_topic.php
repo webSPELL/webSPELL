@@ -159,12 +159,12 @@ if (isset($_POST['newreply']) && !isset($_POST['preview'])) {
             $topicname = getinput($de['topic']);
 
             $link = "http://" . $hp_url . "/index.php?site=forum_topic&topic=" . $topic;
-            $maillanguage = new Language;
-            $maillanguage->set_language($default_language);
+            $maillanguage = new \webspell\Language();
+            $maillanguage->setLanguage($default_language);
 
             foreach ($emails as $email) {
-                $maillanguage->set_language($email['lang']);
-                $maillanguage->read_module('forum');
+                $maillanguage->setLanguage($email['lang']);
+                $maillanguage->readModule('forum');
                 $forum_topic_notify = str_replace(
                     ['%poster%', '%topic_link%', '%pagetitle%', '%hpurl%'],
                     [html_entity_decode($poster), $link, $hp_title, 'http://' . $hp_url],

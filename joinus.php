@@ -96,6 +96,7 @@ if ($action == "save" && isset($_POST['post'])) {
     }
 
     if (!count($error) and $run) {
+        $touser = [];
         $ergebnis =
             safe_query(
                 "SELECT
@@ -113,10 +114,10 @@ if ($action == "save" && isset($_POST['post'])) {
         if (!count($touser)) {
             $touser[] = 1;
         }
-        $tmp_lang = new Language();
+        $tmp_lang = new \webspell\Language();
         foreach ($touser as $id) {
-            $tmp_lang->set_language(getuserlanguage($id));
-            $tmp_lang->read_module('joinus');
+            $tmp_lang->setLanguage(getuserlanguage($id));
+            $tmp_lang->readModule('joinus');
             $message = '[b]' . $tmp_lang->module['someone_want_to_join_your_squad'] . ' ' .
                 $_database->escape_string(getsquadname($squad)) . '![/b]
 				 ' . $tmp_lang->module['nick'] . ' ' . $nick . '

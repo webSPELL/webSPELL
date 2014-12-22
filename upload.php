@@ -73,7 +73,7 @@ if (isset($_POST[ 'submit' ])) {
         $screens_string = implode("|", $screens);
 
         safe_query(
-            "UPDATE " . PREFIX . $table . " SET screens='" . $screens_string . "' WHERE " . $tableid . "='" . (int)$id
+            "UPDATE " . PREFIX . $table . " SET screens='" . $screens_string . "' WHERE " . $tableid . "='" . (int)$id."'"
         );
     }
     header("Location: upload.php?$tableid=$id");

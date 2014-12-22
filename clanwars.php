@@ -401,9 +401,9 @@ if ($action == "new") {
             }
         }
 
-        $_languagepagedefault = new Language;
-        $_languagepagedefault->set_language($rss_default_language);
-        $_languagepagedefault->read_module('clanwars');
+        $_languagepagedefault = new \webspell\Language();
+        $_languagepagedefault->setLanguage($rss_default_language);
+        $_languagepagedefault->readModule('clanwars');
         $message =
             $_language->module[ 'clanwar_against' ] . ' [flag]' . $oppcountry . '[/flag] ' . stripslashes($opponent) .
             ' ' . $_language->module[ 'on' ] . ' ' . $date . '

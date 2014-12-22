@@ -3,8 +3,8 @@ function generate_rss2()
 {
     global $hp_url, $hp_title;
     global $rss_default_language;
-    $_language = new Language;
-    $_language->set_language($rss_default_language);
+    $_language = new \webspell\Language();
+    $_language->setLanguage($rss_default_language);
     $_language->readModule('feeds');
     $date = safe_query(
         "SELECT `date` FROM `" . PREFIX . "news` WHERE `published` = 1 AND `intern` = 0 ORDER BY `date` DESC LIMIT 0,1"

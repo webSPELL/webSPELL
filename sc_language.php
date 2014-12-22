@@ -90,7 +90,7 @@ if (isset($_GET[ 'new_lang' ])) {
     foreach ($langs as $lang => $flag) {
         $querystring = '';
         if (!empty($_SERVER[ 'QUERY_STRING' ])) {
-            $querystring = "&amp;query=" . rawurlencode($_SERVER[ 'QUERY_STRING' ]);
+            $querystring = "&amp;query=?" . rawurlencode($_SERVER[ 'QUERY_STRING' ]);
         }
 
         echo '<a href="sc_language.php?new_lang=' . $flag . $querystring . '" title="' . $lang . '" class="flag' .
