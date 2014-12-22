@@ -110,6 +110,17 @@ class ModRewrite
         return self::$rewriteBase;
     }
 
+    public function generateHtAccess($basepath)
+    {
+        return '<IfModule mod_rewrite.c>
+    RewriteEngine on
+    RewriteBase ' . $basepath . '
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)$ _rewrite.php?url=$1 [L,QSA]
+</IfModule>';
+    }
+
     public function rewriteHeaders()
     {
         $headers = headers_list();
