@@ -290,8 +290,7 @@ if (isset($_GET[ 'action' ])) {
 
     echo '<h1>&curren; ' . $_language->module[ 'faq' ] . '</h1>';
 
-    echo '<input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=faq&amp;action=add\');
-        return document.MM_returnValue" value="' . $_language->module[ 'new_faq' ] . '"><br><br>';
+    echo '<a href="admincenter.php?site=faq&amp;action=add" class="input">' . $_language->module[ 'new_faq' ] . '</a><br><br>';
 
     echo '<form method="post" action="admincenter.php?site=faq">
     <table width="100%" border="0" cellspacing="1" cellpadding="3" bgcolor="#DDDDDD">
@@ -336,10 +335,8 @@ if (isset($_GET[ 'action' ])) {
             echo '<tr>
                 <td class="' . $td . '"><b>- ' . getinput($db[ 'question' ]) . '</b></td>
                 <td class="' . $td . '" align="center">
-                    <input type="button"
-                        onclick="MM_goToURL(\'parent\',\'admincenter.php?site=faq&amp;action=edit&amp;faqID=' .
-                        $db[ 'faqID' ] . '\');return document.MM_returnValue" value="' . $_language->module[ 'edit' ] .
-                        '" />
+                    <a href="admincenter.php?site=faq&amp;action=edit&amp;faqID=' . $db[ 'faqID' ] .
+                    '" class="input">' . $_language->module[ 'edit' ] . '</a>
                     <input type="button" onclick="MM_confirm(\'' . $_language->module[ 'really_delete' ] .
                         '\', \'admincenter.php?site=faq&amp;delete=true&amp;faqID=' . $db[ 'faqID' ] .
                         '&amp;captcha_hash=' . $hash . '\')" value="' . $_language->module[ 'delete' ] . '" />

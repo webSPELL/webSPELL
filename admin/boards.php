@@ -633,13 +633,10 @@ if ($action == "mods") {
 
     echo '<h1>&curren; ' . $_language->module[ 'boards' ] . '</h1>';
 
-    echo
-        '<input type="button"
-        onclick="MM_goToURL(\'parent\',\'admincenter.php?site=boards&amp;action=addcat\');
-        return document.MM_returnValue" value="' . $_language->module[ 'new_category' ] . '" />
-        <input type="button"
-        onclick="MM_goToURL(\'parent\',\'admincenter.php?site=boards&amp;action=add\');
-        return document.MM_returnValue" value="' . $_language->module[ 'new_board' ] . '" /><br /><br />';
+    echo '<a href="admincenter.php?site=boards&amp;action=addcat" class="input">' .
+        $_language->module[ 'new_category' ] . '</a>
+        <a href="admincenter.php?site=boards&amp;action=add" class="input">' .
+        $_language->module[ 'new_board' ] . '</a><br /><br />';
 
     echo '<form method="post" action="admincenter.php?site=boards">
   <table width="100%" border="0" cellspacing="1" cellpadding="3" bgcolor="#DDDDDD">
@@ -664,9 +661,9 @@ if ($action == "mods") {
                 <b>' . getinput($ds[ 'name' ]) . '</b><br><small>' . getinput($ds[ 'info' ]) . '</small>
             </td>
           <td class="td_head"></td>
-          <td class="td_head" align="center"><input type="button"
-          onclick="MM_goToURL(\'parent\',\'admincenter.php?site=boards&amp;action=editcat&amp;catID=' .
-            $ds[ 'catID' ] . '\');return document.MM_returnValue" value="' . $_language->module[ 'edit' ] . '" />
+          <td class="td_head" align="center">
+            <a href="admincenter.php?site=boards&amp;action=editcat&amp;catID=' . $ds[ 'catID' ] . '" class="input">' .
+                $_language->module[ 'edit' ] . '</a>
         <input type="button" onclick="MM_confirm(\'' . $_language->module[ 'really_delete_category' ] .
             '\', \'admincenter.php?site=boards&amp;delcat=true&amp;catID=' . $ds[ 'catID' ] . '&amp;captcha_hash=' .
             $hash . '\')" value="' . $_language->module[ 'delete' ] . '" /></td>
@@ -707,14 +704,11 @@ if ($action == "mods") {
             echo '<tr>
 	        <td class="' . $td . '">' . $db[ 'name' ] . '<br><small>' . $db[ 'info' ] . '</small></td>
 	        <td class="' . $td . '" align="center">
-	            <input type="button"
-	            onclick="MM_goToURL(\'parent\',\'admincenter.php?site=boards&amp;action=mods&amp;boardID=' .
-                $db[ 'boardID' ] . '\');return document.MM_returnValue" value="' .
-                $_language->module[ 'mods' ] . '" /></td>
+	            <a href="admincenter.php?site=boards&amp;action=mods&amp;boardID=' .
+                $db[ 'boardID' ] . '" class="input">' . $_language->module[ 'mods' ] . '</a></td>
 	        <td class="' . $td . '" align="center">
-	            <input type="button"
-                onclick="MM_goToURL(\'parent\',\'admincenter.php?site=boards&amp;action=edit&amp;boardID=' .
-                $db[ 'boardID' ] . '\');return document.MM_returnValue" value="' . $_language->module[ 'edit' ] . '" />
+	            <a href="admincenter.php?site=boards&amp;action=edit&amp;boardID=' .
+                $db[ 'boardID' ] . '" class="input">' . $_language->module[ 'edit' ] . '</a>
 	        <input type="button" onclick="MM_confirm(\'' . $_language->module[ 'really_delete_board' ] .
                 '\', \'admincenter.php?site=boards&amp;delete=true&amp;boardID=' . $db[ 'boardID' ] .
                 '&amp;captcha_hash=' . $hash . '\')" value="' . $_language->module[ 'delete' ] . '" /></td>
@@ -750,14 +744,12 @@ if ($action == "mods") {
         echo '<tr bgcolor="#dcdcdc">
             <td bgcolor="#FFFFFF"><b>' . getinput($db[ 'name' ]) . '</b></td>
             <td bgcolor="#FFFFFF">
-                <input type="button"
-                onclick="MM_goToURL(\'parent\',\'admincenter.php?site=boards&amp;action=mods&amp;boardID=' .
-                $db[ 'boardID' ] . '\');return document.MM_returnValue" value="' . $_language->module[ 'mods' ] . '" />
+                <a href="admincenter.php?site=boards&amp;action=mods&amp;boardID=' .
+                $db[ 'boardID' ] . '" class="input">' . $_language->module[ 'mods' ] . '</a>
             </td>
             <td bgcolor="#FFFFFF">
-                <input type="button"
-                onclick="MM_goToURL(\'parent\',\'admincenter.php?site=boards&amp;action=edit&amp;boardID=' .
-                $db[ 'boardID' ] . '\');return document.MM_returnValue" value="' . $_language->module[ 'edit' ] . '" />
+                <a href="admincenter.php?site=boards&amp;action=edit&amp;boardID=' .
+                $db[ 'boardID' ] . '" class="input">' . $_language->module[ 'edit' ] . '</a>
                 <input type="button" onclick="MM_confirm(\'' . $_language->module[ 'really_delete_board' ] .
                 '\', \'admincenter.php?site=boards&amp;delete=true&amp;boardID=' . $db[ 'boardID' ] .
                 '&amp;captcha_hash=' . $hash . '\')" value="delete" />

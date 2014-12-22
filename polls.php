@@ -434,10 +434,8 @@ if ($action == "new") {
                     \'polls.php?reopen=true&amp;pollID=' . $ds[ 'pollID' ] . '\'
 			    )" value="' . $_language->module[ 'reopen_poll' ] . '" class="btn btn-danger"> ';
         }
-        $edit = ' <input type="button" onclick="MM_goToURL(
-                \'parent\',
-                \'index.php?site=polls&amp;action=edit&amp;pollID=' . $ds[ 'pollID' ] . '\'
-		    );return document.MM_returnValue" value="' . $_language->module[ 'edit' ] . '" class="btn btn-danger"> ';
+        $edit = ' <a href="index.php?site=polls&amp;action=edit&amp;pollID=' . $ds[ 'pollID' ] .
+            '" class="btn btn-danger">' . $_language->module[ 'edit' ] . '</a>';
         $adminactions = $edit . '<input type="button" onclick="MM_confirm(
 		        \'' . $_language->module[ 'really_delete' ] . '\',
 		        \'polls.php?delete=true&amp;pollID=' . $ds[ 'pollID' ] . '\'

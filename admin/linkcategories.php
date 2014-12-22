@@ -122,9 +122,8 @@ if ($action == "add") {
     echo '<h1>&curren; ' . $_language->module[ 'link_categories' ] . '</h1>';
 
     echo
-        '<input type="button"
-        onclick="MM_goToURL(\'parent\',\'admincenter.php?site=linkcategories&amp;action=add\');
-        return document.MM_returnValue" value="' . $_language->module[ 'new_category' ] . '" /><br><br>';
+        '<a href="admincenter.php?site=linkcategories&amp;action=add" class="input">' .
+        $_language->module[ 'new_category' ] . '</a><br><br>';
 
     $ergebnis = safe_query("SELECT * FROM " . PREFIX . "links_categorys ORDER BY name");
 
@@ -149,9 +148,8 @@ if ($action == "add") {
         echo '<tr>
             <td class="' . $td . '">' . getinput($ds[ 'name' ]) . '</td>
             <td class="' . $td . '" align="center">
-                <input type="button"
-                onclick="MM_goToURL(\'parent\',\'admincenter.php?site=linkcategories&amp;action=edit&amp;linkcatID=' .
-            $ds[ 'linkcatID' ] . '\');return document.MM_returnValue" value="' . $_language->module[ 'edit' ] . '" />
+                <a href="admincenter.php?site=linkcategories&amp;action=edit&amp;linkcatID=' . $ds[ 'linkcatID' ] .
+                '" class="input">' . $_language->module[ 'edit' ] . '</a>
             <input type="button" onclick="MM_confirm(\'' . $_language->module[ 'really_delete' ] .
             '\', \'admincenter.php?site=linkcategories&amp;delete=true&amp;linkcatID=' . $ds[ 'linkcatID' ] .
             '&amp;captcha_hash=' . $hash . '\')" value="' . $_language->module[ 'delete' ] . '" /></td>

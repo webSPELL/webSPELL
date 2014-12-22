@@ -63,7 +63,7 @@ form {
     padding: 0;
 }
 
-input, textarea, select {
+input, textarea, select, a.input {
     border: 1px solid #CCCCCC;
     background-color: #F6F6F6;
     font: normal 11px Verdana;
@@ -76,11 +76,15 @@ input[type="checkbox"]:focus, input[type="checkbox"]:active {
     border: 0px;
 }
 
-input:active, textarea:active, select:active,
-input:focus, textarea:focus, select:focus {
+input:active, textarea:active, select:active, a.input:active,
+input:focus, textarea:focus, select:focus, a.input:focus {
     border: 1px solid #666666;
     background-color: #EAF7FD;
     color: #666666;
+}
+
+a.input {
+    padding: 2px 6px 3px 6px;
 }
 
 .pad {

@@ -218,8 +218,7 @@ onsubmit="return chkFormular();">
 
     echo '<h1>&curren; ' . $_language->module[ 'servers' ] . '</h1>';
 
-    echo '<input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=servers&amp;action=add\');
-    return document.MM_returnValue" value="' . $_language->module[ 'new_server' ] . '" /><br><br>';
+    echo '<a href="admincenter.php?site=servers&amp;action=add" class="input">' . $_language->module[ 'new_server' ] . '</a><br><br>';
 
     $ergebnis = safe_query("SELECT * FROM " . PREFIX . "servers ORDER BY sort");
     $anz = mysqli_num_rows($ergebnis);
@@ -261,9 +260,8 @@ onsubmit="return chkFormular();">
                 '</b></a><br /><b>' . getinput($ds[ 'name' ]) . '</b><br />' . cleartext($ds[ 'info' ], 1, 'admin') .
                 '</td>
         <td class="' . $td . '" align="center">
-            <input type="button"
-            onclick="MM_goToURL(\'parent\',\'admincenter.php?site=servers&amp;action=edit&amp;serverID=' .
-                $ds[ 'serverID' ] . '\');return document.MM_returnValue" value="' . $_language->module[ 'edit' ] . '" />
+            <a href="admincenter.php?site=servers&amp;action=edit&amp;serverID=' .
+                $ds[ 'serverID' ] . '" class="input">' . $_language->module[ 'edit' ] . '</a>
         <input type="button" onclick="MM_confirm(\'' . $_language->module[ 'really_delete' ] .
                 '\', \'admincenter.php?site=servers&amp;delete=true&amp;serverID=' . $ds[ 'serverID' ] .
                 '&amp;captcha_hash=' . $hash . '\')" value="' . $_language->module[ 'delete' ] . '" /></td>

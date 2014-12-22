@@ -580,15 +580,14 @@ onmouseout="hideWMTT()" />';
         <td class="' . $td . '">' . $country . ' ' . $nickname . '</td>
         <td class="' . $td . '">' . $dm[ 'position' ] . '</td>
         <td class="' . $td . '" align="center">' . $activity . '</td>
-        <td class="' . $td . '" align="center"><input type="button"
-            onclick="MM_goToURL(\'parent\',\'admincenter.php?site=members&amp;action=edit&amp;id=' .
-            $dm[ 'userID' ] . '\');return document.MM_returnValue" value="' . $_language->module[ 'edit' ] . '" />
-        <input type="button" onclick="MM_confirm(\'' . $_language->module[ 'really_delete' ] .
+        <td class="' . $td . '" align="center">
+            <a href="admincenter.php?site=members&amp;action=edit&amp;id=' . $dm[ 'userID' ] . '" class="input">' .
+                $_language->module[ 'edit' ] . '</a>
+            <input type="button" onclick="MM_confirm(\'' . $_language->module[ 'really_delete' ] .
                 '\', \'admincenter.php?site=members&amp;delete=true&amp;id=' . $dm[ 'userID' ] . '&amp;squadID=' .
                 $dm[ 'squadID' ] . '&amp;captcha_hash=' . $hash . '\')" value="' . $_language->module[ 'delete' ] .
                 '" /></td>
         <td class="' . $td . '" align="center"><select name="sort[]">';
-
             for ($j = 1; $j <= $anzmembers; $j++) {
                 if ($dm[ 'sort' ] == $j) {
                     echo '<option value="' . $dm[ 'sqmID' ] . '-' . $j . '" selected="selected">' . $j . '</option>';

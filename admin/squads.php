@@ -503,8 +503,8 @@ onsubmit="return chkFormular();">
 
     echo '<h1>&curren; ' . $_language->module[ 'squads' ] . '</h1>';
 
-    echo '<input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=squads&amp;action=add\');
-    return document.MM_returnValue" value="' . $_language->module[ 'new_squad' ] . '" /><br /><br />';
+    echo '<a href="admincenter.php?site=squads&amp;action=add" class="input">' .
+        $_language->module[ 'new_squad' ] . '</a><br><br>';
 
     echo '<form method="post" action="admincenter.php?site=squads">
   <table width="100%" border="0" cellspacing="1" cellpadding="3" bgcolor="#DDDDDD">
@@ -548,9 +548,8 @@ onsubmit="return chkFormular();">
         <td class="' . $td . '" align="center">' . $type . '</td>
         <td class="' . $td . '">' . cleartext($db[ 'info' ], 1, 'admin') . '</td>
         <td class="' . $td . '" align="center">
-            <input type="button"
-            onclick="MM_goToURL(\'parent\',\'admincenter.php?site=squads&amp;action=edit&amp;squadID=' .
-                $db[ 'squadID' ] . '\');return document.MM_returnValue" value="' . $_language->module[ 'edit' ] . '" />
+            <a href="admincenter.php?site=squads&amp;action=edit&amp;squadID=' .
+                $db[ 'squadID' ] . '">' . $_language->module[ 'edit' ] . '</a>
         <input type="button" onclick="MM_confirm(\'' . $_language->module[ 'really_delete' ] .
                 '\', \'admincenter.php?site=squads&amp;delete=true&amp;squadID=' . $db[ 'squadID' ] .
                 '&amp;captcha_hash=' . $hash . '\')" value="' . $_language->module[ 'delete' ] . '" /></td>

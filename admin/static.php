@@ -209,9 +209,8 @@ onsubmit="return chkFormular();">
 
     echo '<h1>&curren; ' . $_language->module[ 'static_pages' ] . '</h1>';
 
-    echo '<input type="button"
-       onclick="MM_goToURL(\'parent\',\'admincenter.php?site=static&amp;action=add\');return document.MM_returnValue"
-       value="' . $_language->module[ 'new_static_page' ] . '" /><br><br>';
+    echo '<a href="admincenter.php?site=static&amp;action=add" class="input">' .
+        $_language->module[ 'new_static_page' ] . '</a><br><br>';
 
     $ergebnis = safe_query("SELECT * FROM " . PREFIX . "static ORDER BY staticID");
 
@@ -247,9 +246,8 @@ onsubmit="return chkFormular();">
             '" target="_blank">' . getinput($ds[ 'name' ]) . '</a></td>
             <td class="' . $td . '">' . $accesslevel . '</td>
             <td class="' . $td . '" align="center">
-            <input type="button"
-            onclick="MM_goToURL(\'parent\',\'admincenter.php?site=static&amp;action=edit&amp;staticID=' .
-            $ds[ 'staticID' ] . '\');return document.MM_returnValue" value="' . $_language->module[ 'edit' ] . '" />
+            <a href="admincenter.php?site=static&amp;action=edit&amp;staticID=' .
+            $ds[ 'staticID' ] . '">' . $_language->module[ 'edit' ] . '</a>
                 <input type="button" onclick="MM_confirm(\'' . $_language->module[ 'really_delete' ] .
             '\', \'admincenter.php?site=static&amp;delete=true&amp;staticID=' . $ds[ 'staticID' ] .
             '&amp;captcha_hash=' . $hash . '\')" value="' . $_language->module[ 'delete' ] . '" /></td>

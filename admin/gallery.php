@@ -150,9 +150,8 @@ if ($part == "groups") {
     } else {
         echo '<h1>&curren; <a href="admincenter.php?site=gallery" class="white">' . $_language->module[ 'gallery' ] .
             '</a> &raquo; ' . $_language->module[ 'groups' ] . '</h1>';
-        echo '<input type="button"
-        onclick="MM_goToURL(\'parent\',\'admincenter.php?site=gallery&amp;part=groups&amp;action=add\');
-        return document.MM_returnValue" value="' . $_language->module[ 'new_group' ] . '" /><br /><br />';
+        echo '<a href="admincenter.php?site=gallery&amp;part=groups&amp;action=add">' .
+            $_language->module[ 'new_group' ] . '</a><br><br>';
         $ergebnis = safe_query("SELECT * FROM " . PREFIX . "gallery_groups ORDER BY sort");
         echo '<form method="post" name="ws_gallery" action="admincenter.php?site=gallery&amp;part=groups">
         <table width="100%" border="0" cellspacing="1" cellpadding="3" bgcolor="#DDDDDD">
@@ -161,10 +160,10 @@ if ($part == "groups") {
             <td width="20%" class="title"><b>' . $_language->module[ 'actions' ] . '</b></td>
             <td width="10%" class="title"><b>' . $_language->module[ 'sort' ] . '</b></td>
             </tr>';
-            $n = 1;
-            $CAPCLASS = new \webspell\Captcha;
-            $CAPCLASS->createTransaction();
-            $hash = $CAPCLASS->getHash();
+        $n = 1;
+        $CAPCLASS = new \webspell\Captcha;
+        $CAPCLASS->createTransaction();
+        $hash = $CAPCLASS->getHash();
         while ($ds = mysqli_fetch_array($ergebnis)) {
             if ($n % 2) {
                 $td = 'td1';
@@ -184,10 +183,8 @@ if ($part == "groups") {
             echo '<tr>
             <td class="' . $td . '">' . $ds[ 'name' ] . '</td>
             <td class="' . $td . '" align="center">
-                <input type="button" onclick="MM_goToURL(
-                    \'parent\',
-                    \'admincenter.php?site=gallery&amp;part=groups&amp;action=edit&amp;groupID=' .
-                $ds[ 'groupID' ] . '\');return document.MM_returnValue" value="' . $_language->module[ 'edit' ] . '" />
+                <a href="admincenter.php?site=gallery&amp;part=groups&amp;action=edit&amp;groupID=' .
+                $ds[ 'groupID' ] . '" class="input">' . $_language->module[ 'edit' ] . '</a>
             <input type="button" onclick="MM_confirm(\'' . $_language->module[ 'really_delete_group' ] .
                 '\', \'admincenter.php?site=gallery&amp;part=groups&amp;delete=true&amp;groupID=' . $ds[ 'groupID' ] .
                 '&amp;captcha_hash=' . $hash . '\')" value="' . $_language->module[ 'delete' ] . '" /></td>
@@ -430,7 +427,8 @@ if ($part == "groups") {
             echo '
       <tr>
         <td><b>' . $_language->module[ 'usergallery_of' ] . '</b></td>
-        <td><a href="../index.php?site=profile&amp;id=' . $userID . '" target="_blank">' .
+        <td>
+            <a href="../index.php?site=profile&amp;id=' . $userID . '" target="_blank">' .
                 getnickname($ds[ 'userID' ]) . '</a></td>
       </tr>';
         } else {
@@ -508,7 +506,7 @@ if ($part == "groups") {
                       <option value="0">' . $_language->module[ 'disable_comments' ] . '</option>
                       <option value="1">' . $_language->module[ 'enable_user_comments' ] . '</option>
                       <option value="2" selected="selected">' .
-                        $_language->module[ 'enable_visitor_comments' ] . '</option>
+                $_language->module[ 'enable_visitor_comments' ] . '</option>
                     </select></td>
                   </tr>
                   <tr>
@@ -557,10 +555,8 @@ if ($part == "groups") {
         echo '<h1>&curren; <a href="admincenter.php?site=gallery" class="white">' . $_language->module[ 'gallery' ] .
             '</a> &raquo; ' . $_language->module[ 'galleries' ] . '</h1>';
         echo
-            '<input type="button" onclick="MM_goToURL(
-                \'parent\',
-                \'admincenter.php?site=gallery&amp;part=gallerys&amp;action=add\');
-                return document.MM_returnValue" value="' . $_language->module[ 'new_gallery' ] . '" /><br><br>';
+            '<a href="admincenter.php?site=gallery&amp;part=gallerys&amp;action=add">' .
+            $_language->module[ 'new_gallery' ] . '</a><br><br>';
         echo '<form method="post" name="ws_gallery" action="admincenter.php?site=gallery&amp;part=gallerys">
         <table width="100%" border="0" cellspacing="1" cellpadding="3" bgcolor="#DDDDDD">
       <tr>
@@ -590,24 +586,18 @@ if ($part == "groups") {
                 <td class="' . $td . '" width="50%"><a href="../index.php?site=gallery&amp;galleryID=' .
                     $db[ 'galleryID' ] . '" target="_blank">' . getinput($db[ 'name' ]) . '</a></td>
                 <td class="' . $td . '" width="30%" align="center">
-                <input type="button"
-                onclick="MM_goToURL(
-                    \'parent\',
-                    \'admincenter.php?site=gallery&amp;part=gallerys&amp;action=upload&amp;upload=form&amp;galleryID=' .
-                    $db[ 'galleryID' ] . '\');return document.MM_returnValue" value="' .
-                    $_language->module[ 'add_img' ] . ' (' . $_language->module[ 'per_form' ] . ')" style="margin:1px;">
-                <input type="button" onclick="MM_goToURL(
-                    \'parent\',
-                    \'admincenter.php?site=gallery&amp;part=gallerys&amp;action=upload&amp;upload=ftp&amp;galleryID=' .
-                $db[ 'galleryID' ] . '\');return document.MM_returnValue" value="' .
-                $_language->module[ 'add_img' ] . ' (' . $_language->module[ 'per_ftp' ] . ')" style="margin:1px;" />
+                    <a href="admincenter.php?site=gallery&amp;part=gallerys&amp;action=upload&amp;upload=form&amp;galleryID=' .
+                    $db[ 'galleryID' ] . '">' . $_language->module[ 'add_img' ] . ' (' .
+                    $_language->module[ 'per_form' ] . ')</a>
+                <a type="button"
+                href="admincenter.php?site=gallery&amp;part=gallerys&amp;action=upload&amp;upload=ftp&amp;galleryID=' .
+                    $db[ 'galleryID' ] . '">' . $_language->module[ 'add_img' ] . ' (' .
+                    $_language->module[ 'per_ftp' ] .
+                    ')</a>
                 </td>
               <td class="' . $td . '" width="20%" align="center">
-              <input type="button" onclick="MM_goToURL(
-                \'parent\',
-                \'admincenter.php?site=gallery&amp;part=gallerys&amp;action=edit&amp;galleryID=' .
-                    $db[ 'galleryID' ] . '\'
-            );return document.MM_returnValue" value="' . $_language->module[ 'edit' ] . '" />
+              <a href="admincenter.php?site=gallery&amp;part=gallerys&amp;action=edit&amp;galleryID=' .
+                    $db[ 'galleryID' ] . '">' . $_language->module[ 'edit' ] . '</a>
           <input type="button" onclick="MM_confirm(\'' . $_language->module[ 'really_delete_gallery' ] .
                     '\', \'admincenter.php?site=gallery&amp;part=gallerys&amp;delete=true&amp;galleryID=' .
                     $db[ 'galleryID' ] . '&amp;captcha_hash=' . $hash . '\')" value="' .
@@ -639,19 +629,16 @@ if ($part == "groups") {
             }
             echo '<tr>
             <td class="' . $td . '"><a href="../index.php?site=gallery&amp;galleryID=' . $ds[ 'galleryID' ] .
-                    '" target="_blank">' . getinput($ds[ 'name' ]) . '</a></td>
+                '" target="_blank">' . getinput($ds[ 'name' ]) . '</a></td>
             <td class="' . $td . '"><a href="../index.php?site=profile&amp;id=' . $userID . '" target="_blank">' .
-                    getnickname($ds[ 'userID' ]) . '</a></td>
-            <td class="' . $td .
-                    '" align="center"><input type="button"
-                    onclick="MM_goToURL(
-                        \'parent\',\'admincenter.php?site=gallery&amp;part=gallerys&amp;action=edit&amp;galleryID=' .
-                    $ds[ 'galleryID' ] . '\');return document.MM_returnValue" value="' .
-                    $_language->module[ 'edit' ] . '" />
+                getnickname($ds[ 'userID' ]) . '</a></td>
+            <td class="' . $td . '" align="center">
+                <a href="admincenter.php?site=gallery&amp;part=gallerys&amp;action=edit&amp;galleryID=' .
+                $ds[ 'galleryID' ] . '" class="input">' . $_language->module[ 'edit' ] . '</a>
             <input type="button" onclick="MM_confirm(\'' . $_language->module[ 'really_delete_gallery' ] .
-                    '\', \'admincenter.php?site=gallery&amp;part=gallerys&amp;delete=true&amp;galleryID=' .
-                    $ds[ 'galleryID' ] . '&amp;captcha_hash=' . $hash . '\')" value="' . $_language->module[ 'delete' ].
-                    '" /></td>
+                '\', \'admincenter.php?site=gallery&amp;part=gallerys&amp;delete=true&amp;galleryID=' .
+                $ds[ 'galleryID' ] . '&amp;captcha_hash=' . $hash . '\')" value="' . $_language->module[ 'delete' ].
+                '" /></td>
             </tr>';
             $i++;
         }

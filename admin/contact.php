@@ -143,10 +143,8 @@ if (isset($_GET[ 'action' ])) {
     echo '<h1>&curren; ' . $_language->module[ 'contact' ] . '</h1>';
 
     echo
-        '<input type="button"
-        onclick="MM_goToURL(\'parent\',\'admincenter.php?site=contact&amp;action=add\');
-        return document.MM_returnValue" value="' .
-        $_language->module[ 'new_contact' ] . '" /><br /><br />';
+        '<a href="admincenter.php?site=contact&amp;action=add" class="input">' .
+        $_language->module[ 'new_contact' ] . '</a><br><br>';
 
     echo '<form method="post" action="admincenter.php?site=contact">
 	<table width="100%" border="0" cellspacing="1" cellpadding="3" bgcolor="#DDDDDD">
@@ -177,9 +175,8 @@ if (isset($_GET[ 'action' ])) {
             <td class="' . $td . '">' . getinput($ds[ 'name' ]) . '</td>
             <td class="' . $td . '">' . getinput($ds[ 'email' ]) . '</td>
             <td class="' . $td . '" align="center">
-                <input type="button"
-                onclick="MM_goToURL(\'parent\',\'admincenter.php?site=contact&amp;action=edit&amp;contactID=' .
-                $ds[ 'contactID' ] . '\');return document.MM_returnValue" value="' . $_language->module[ 'edit' ] . '">
+                <a href="admincenter.php?site=contact&amp;action=edit&amp;contactID=' .
+                $ds[ 'contactID' ] . '" class="input">' . $_language->module[ 'edit' ] .'</a>
                 <input type="button" onclick="MM_confirm(\'' . $_language->module[ 'really_delete' ] .
                 '\', \'admincenter.php?site=contact&amp;delete=true&amp;contactID=' . $ds[ 'contactID' ] .
                 '&amp;captcha_hash=' . $hash . '\')" value="' . $_language->module[ 'delete' ] . '" /></td>

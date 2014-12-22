@@ -173,9 +173,8 @@ if ($action == "add") {
 
     echo '<h1>&curren; ' . $_language->module[ 'news_languages' ] . '</h1>';
 
-    echo '<input type="button"
-    onclick="MM_goToURL(\'parent\',\'admincenter.php?site=newslanguages&amp;action=add\');
-    return document.MM_returnValue" value="' . $_language->module[ 'new_language' ] . '" /><br /><br />';
+    echo '<a href="admincenter.php?site=newslanguages&amp;action=add" class="input">' .
+        $_language->module[ 'new_language' ] . '</a><br /><br />';
 
     $ergebnis = safe_query("SELECT * FROM " . PREFIX . "news_languages ORDER BY language");
 
@@ -206,9 +205,8 @@ if ($action == "add") {
             <td class="' . $td . '">' . getinput($ds[ 'language' ]) . '</td>
             <td class="' . $td . '">' . getinput($ds[ 'alt' ]) . '</td>
             <td class="' . $td . '" align="center">
-                <input type="button"
-                onclick="MM_goToURL(\'parent\',\'admincenter.php?site=newslanguages&amp;action=edit&amp;langID=' .
-                $ds[ 'langID' ] . '\');return document.MM_returnValue" value="' . $_language->module[ 'edit' ] . '" />
+                <a href="admincenter.php?site=newslanguages&amp;action=edit&amp;langID=' .
+                $ds[ 'langID' ] . '" class="input">' . $_language->module[ 'edit' ] . '</a>
             <input type="button" onclick="MM_confirm(\'' . $_language->module[ 'really_delete' ] .
             '\', \'admincenter.php?site=newslanguages&amp;delete=true&amp;langID=' . $ds[ 'langID' ] .
             '&amp;captcha_hash=' . $hash . '\')" value="' . $_language->module[ 'delete' ] . '" /></td>

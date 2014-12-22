@@ -221,8 +221,8 @@ if ($action == "add") {
 
     echo '<h1>&curren; ' . $_language->module[ 'news_rubrics' ] . '</h1>';
 
-    echo '<input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=rubrics&amp;action=add\');
-    return document.MM_returnValue" value="' . $_language->module[ 'new_rubric' ] . '" /><br /><br />';
+    echo '<a href="admincenter.php?site=rubrics&amp;action=add" class="input">' .
+        $_language->module[ 'new_rubric' ] . '</a><br><br>';
 
     $ergebnis = safe_query("SELECT * FROM " . PREFIX . "news_rubrics ORDER BY rubric");
 
@@ -246,9 +246,8 @@ if ($action == "add") {
         echo '<tr>
       <td class="' . $td . '">' . getinput($ds[ 'rubric' ]) . '</td>
       <td class="' . $td . '" align="center"><img src="../images/news-rubrics/' . $ds[ 'pic' ] . '" alt=""></td>
-      <td class="' . $td . '" align="center"><input type="button"
-      onclick="MM_goToURL(\'parent\',\'admincenter.php?site=rubrics&amp;action=edit&amp;rubricID=' .
-            $ds[ 'rubricID' ] . '\');return document.MM_returnValue" value="' . $_language->module[ 'edit' ] . '" />
+      <td class="' . $td . '" align="center"><a href="admincenter.php?site=rubrics&amp;action=edit&amp;rubricID=' .
+            $ds[ 'rubricID' ] . '">' . $_language->module[ 'edit' ] . '</a>
       <input type="button" onclick="MM_confirm(\'' . $_language->module[ 'really_delete' ] .
             '\', \'admincenter.php?site=rubrics&amp;delete=true&amp;rubricID=' . $ds[ 'rubricID' ] .
             '&amp;captcha_hash=' . $hash . '\')" value="' . $_language->module[ 'delete' ] . '" /></td>

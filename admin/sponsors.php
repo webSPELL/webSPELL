@@ -538,8 +538,8 @@ if ($action == "add") {
     echo '<h1>&curren; ' . $_language->module[ 'sponsors' ] . '</h1>';
 
     echo
-        '<input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=sponsors&amp;action=add\');
-        return document.MM_returnValue" value="' . $_language->module[ 'new_sponsor' ] . '" /><br /><br />';
+        '<a href="admincenter.php?site=sponsors&amp;action=add" class="input">' .
+        $_language->module[ 'new_sponsor' ] . '</a><br /><br />';
 
     echo '<form method="post" action="admincenter.php?site=sponsors">
   <table width="100%" border="0" cellspacing="1" cellpadding="3" bgcolor="#DDDDDD">
@@ -593,9 +593,8 @@ if ($action == "add") {
         <td class="' . $td . '">' . $ds[ 'hits' ] . ' (' . $perday . ')</td>
         <td class="' . $td . '" align="center">' . $displayed . '</td>
 		  <td class="' . $td . '" align="center">' . $mainsponsor . '</td>
-        <td class="' . $td . '" align="center"><input type="button"
-        onclick="MM_goToURL(\'parent\',\'admincenter.php?site=sponsors&amp;action=edit&amp;sponsorID=' .
-            $ds[ 'sponsorID' ] . '\');return document.MM_returnValue" value="' . $_language->module[ 'edit' ] . '" />
+        <td class="' . $td . '" align="center"><a href="admincenter.php?site=sponsors&amp;action=edit&amp;sponsorID=' .
+            $ds[ 'sponsorID' ] . '" class="input">' . $_language->module[ 'edit' ] . '</a>
         <input type="button" onclick="MM_confirm(\'' . $_language->module[ 'really_delete' ] .
                 '\', \'admincenter.php?site=sponsors&amp;delete=true&amp;sponsorID=' . $ds[ 'sponsorID' ] .
                 '&amp;captcha_hash=' . $hash . '\')" value="' . $_language->module[ 'delete' ] . '" /></td>
