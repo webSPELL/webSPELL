@@ -45,7 +45,17 @@ if ($action == "add") {
             redirect('index.php?site=buddies', $_language->module[ 'add_yourself' ], 3);
             die();
         }
-        if (mysqli_num_rows(safe_query("SELECT userID FROM " . PREFIX . "user WHERE userID='" . (int)$_GET[ 'id' ]))) {
+        if (mysqli_num_rows(
+            safe_query(
+                "SELECT
+                  userID
+                FROM
+                  " . PREFIX . "user
+                WHERE
+                  userID='" . (int)$_GET[ 'id' ] . "'"
+            )
+        )
+        ) {
             safe_query(
                 "INSERT INTO
                     " . PREFIX . "buddys (userID, buddy, banned)
@@ -71,9 +81,25 @@ if ($action == "add") {
             redirect('index.php?site=buddies', $_language->module[ 'add_yourself' ], 3);
             die();
         }
-        if (mysqli_num_rows(safe_query("SELECT userID FROM " . PREFIX . "user WHERE userID='" . (int)$_GET[ 'id' ]))) {
+        if (mysqli_num_rows(
             safe_query(
-                "UPDATE " . PREFIX . "buddys SET banned='1' WHERE userID='$userID' AND buddy='" . (int)$_GET[ 'id' ]
+                "SELECT
+                  userID
+                FROM
+                  " . PREFIX . "user
+                WHERE userID='" . (int)$_GET[ 'id' ] . "'"
+            )
+        )
+        ) {
+            safe_query(
+                "UPDATE
+                  " . PREFIX . "buddys
+                SET
+                  banned='1'
+                WHERE
+                  userID='$userID'
+                AND
+                  buddy='" . (int)$_GET[ 'id' ] . "'"
             );
             header("Location: index.php?site=buddies");
         } else {
