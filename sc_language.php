@@ -82,17 +82,21 @@ if (isset($_GET[ 'new_lang' ])) {
     ksort($langs, $sortMode);
 
     $querystring = '';
-    $path = str_replace($GLOBALS[ 'rewriteBase' ], '', $_SERVER[ 'REQUEST_URI' ]);
+    if ($modRewrite == true) {
+        $path = rawurlencode(str_replace($GLOBALS[ 'rewriteBase' ], '', $_SERVER[ 'REQUEST_URI' ]));
+
+    }
+    else{
+        $path = rawurlencode($_SERVER[ 'QUERY_STRING' ]);
+        if(!empty($path)){
+            $path = "?".$path;
+        }
+    }
     if (!empty($path)) {
-        $querystring = "&amp;query=" . rawurlencode($path);
+        $querystring = "&amp;query=" . $path;
     }
 
     foreach ($langs as $lang => $flag) {
-        $querystring = '';
-        if (!empty($_SERVER[ 'QUERY_STRING' ])) {
-            $querystring = "&amp;query=?" . rawurlencode($_SERVER[ 'QUERY_STRING' ]);
-        }
-
         echo '<a href="sc_language.php?new_lang=' . $flag . $querystring . '" title="' . $lang . '" class="flag' .
             ($_language->language == $flag ? ' active' : '') . '"><img src="images/flags/' . $flag . '.gif" alt="' .
             $lang . '"></a>';
