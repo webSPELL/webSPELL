@@ -45,7 +45,7 @@ if (isset($_POST[ 'send' ]) || isset($_POST[ 'testen' ])) {
         $error_send = $_language->module[ 'error_send' ];
 
         //use page's default language for newsletter
-        $_language->set_language($default_language);
+        $_language->setLanguage($default_language);
         $_language->readModule('newsletter');
         $no_htmlmail = $_language->module[ 'no_htmlmail' ];
         $remove = $_language->module[ 'remove' ];

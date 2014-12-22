@@ -31,7 +31,7 @@ header('content-type: text/html; charset=utf-8');
 include("../src/func/language.php");
 include("../src/func/user.php");
 
-$_language = new webspell\Language();
+$_language = new \webspell\Language();
 
 if(!isset($_SESSION['language'])){
 	$_SESSION['language'] = "uk";

@@ -137,10 +137,10 @@ if ($action == "save" && isset($_POST['post'])) {
             $touser[] = 1;
         }
         $date = time();
-        $tmp_lang = new Language();
+        $tmp_lang = new \webspell\Language();
         foreach ($touser as $id) {
-            $tmp_lang->set_language(getuserlanguage($id));
-            $tmp_lang->read_module('challenge');
+            $tmp_lang->setLanguage(getuserlanguage($id));
+            $tmp_lang->readModule('challenge');
             $message = $tmp_lang->module['challenge_message'];
             sendmessage($id, $tmp_lang->module['message_title'], $message);
         }
