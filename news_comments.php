@@ -56,7 +56,7 @@ echo $post .
     $_language->module[ 'news_archive' ] . '</a><hr>';
 
 if ($newsID) {
-    $result = safe_query("SELECT * FROM " . PREFIX . "news WHERE `newsID` = '" . (int)$newsID);
+    $result = safe_query("SELECT * FROM " . PREFIX . "news WHERE `newsID` = '" . (int)$newsID."'");
     $ds = mysqli_fetch_array($result);
 
     if (
