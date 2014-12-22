@@ -96,7 +96,7 @@ if ($newsID) {
                 " . PREFIX . "countries c ON
                 c.short = n.language
             WHERE
-                n.newsID='" . (int)$newsID
+                n.newsID='" . (int)$newsID."'"
         );
         while ($qs = mysqli_fetch_array($query)) {
             $message_array[ ] = [

@@ -235,7 +235,7 @@ if ($action == "new") {
                     `content` = '" . $message[ $i ] . "'
                 WHERE
                     `newsID` = '" . $newsID . "' AND
-                    `language` = '" . $lang[ $i ]
+                    `language` = '" . $lang[ $i ]."'"
             );
             unset($update_langs[ $lang[ $i ] ]);
         } else {
