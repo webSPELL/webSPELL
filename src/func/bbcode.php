@@ -374,16 +374,16 @@ function imgreplace($content)
                 $n = str_replace(' ', '', $n);
                 $content = preg_replace(
                     '#\[img\]' . preg_quote($teil[2], "#") . '\[/img\]#si',
+                    '<div ' .
+                    'id="ws_imagediv_' . $n . '" ' .
+                    'style="display:none;">' .
                     '<img ' .
                     'src="' . fixJavaEvents($teil[2]) . '" ' .
                     'id="ws_image_' . $n . '" ' .
                     'onload="checkSize(\'' . $n . '\', ' . $picsize_l . ', ' . $picsize_h . ')" ' .
                     'alt="' . fixJavaEvents($teil[2]) . '" ' .
                     'style="max-width: ' . ($picsize_l + 1) . 'px; max-height: ' . ($picsize_h + 1) . 'px;" ' .
-                    '/>' .
-                    '<div ' .
-                    'id="ws_imagediv_' . $n . '" ' .
-                    'style="display:none;">' .
+                    '/><br>' .
                     '[url=' . fixJavaEvents($teil[2]) . ']' .
                     '[i]' .
                     '(' . $_language->module['auto_resize'] . ': ' .
@@ -479,6 +479,16 @@ function urlreplace_callback_1($match)
     return '<a href="' . fixJavaEvents($match[1]) . '" target="_blank">';
 }
 
+function urlreplace_callback_2($match)
+{
+    if(file_exists($match[1])){
+        return '<a href="' . fixJavaEvents($match[1]) . '" target="_blank">';
+    }
+    else{
+        return "";
+    }
+}
+
 function urlreplace($content)
 {
     $starttags = substr_count(strtolower($content), strtolower('[url'));
@@ -501,6 +511,11 @@ function urlreplace($content)
     $content = preg_replace_callback(
         "#\[url=((http://|https://|ftp://|mailto:|news:|www\.).*?)\]#i",
         "urlreplace_callback_1",
+        $content
+    );
+    $content = preg_replace_callback(
+        "#\[url=(.*?)\]#i",
+        "urlreplace_callback_2",
         $content
     );
     $content = preg_replace(
