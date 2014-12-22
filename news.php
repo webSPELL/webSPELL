@@ -203,7 +203,7 @@ if ($action == "new") {
             intern='" . $intern . "',
             comments='" . $comments . "'
         WHERE
-            newsID='" . (int)$newsID
+            newsID='" . (int)$newsID . "'"
     );
 
     \webspell\Tags::setTags('news', $newsID, $_POST[ 'tags' ]);
@@ -416,10 +416,10 @@ if ($action == "new") {
         $newsID = $_POST[ 'newsID' ];
         if (is_array($newsID)) {
             foreach ($newsID as $id) {
-                safe_query("UPDATE " . PREFIX . "news SET published='1' WHERE newsID='" . (int)$id);
+                safe_query("UPDATE " . PREFIX . "news SET published='1' WHERE newsID='" . (int)$id . "'");
             }
         } else {
-            safe_query("UPDATE " . PREFIX . "news SET published='1' WHERE newsID='" . (int)$newsID);
+            safe_query("UPDATE " . PREFIX . "news SET published='1' WHERE newsID='" . (int)$newsID . "'");
         }
         generate_rss2();
         header("Location: index.php?site=news");
@@ -439,10 +439,10 @@ if ($action == "new") {
         $newsID = $_REQUEST[ 'newsID' ];
         if (is_array($newsID)) {
             foreach ($newsID as $id) {
-                safe_query("UPDATE " . PREFIX . "news SET published='0' WHERE newsID='" . (int)$id);
+                safe_query("UPDATE " . PREFIX . "news SET published='0' WHERE newsID='" . (int)$id . "'");
             }
         } else {
-            safe_query("UPDATE " . PREFIX . "news SET published='0' WHERE newsID='" . (int)$newsID);
+            safe_query("UPDATE " . PREFIX . "news SET published='0' WHERE newsID='" . (int)$newsID . "'");
         }
         generate_rss2();
     }
