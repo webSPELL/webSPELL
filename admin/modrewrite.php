@@ -290,7 +290,7 @@ if ($action == "add") {
         $file = ".htaccess";
         $path = $GLOBALS['_modRewrite']->getRewriteBase() . 'admin/' . $folder . '/';
         $content = $GLOBALS['_modRewrite']->generateHtAccess($path, 'test.php');
-        file_put_contents($folder . '/test.php', '<?php echo @$_GET["q"];?>');
+        file_put_contents($folder . '/test.php', '<?php echo @$_GET["url"];?>');
 
         $written = @file_put_contents($folder . '/' . $file, $content);
 
@@ -323,7 +323,7 @@ if ($action == "add") {
                 $status = $_language->module['modrewrite_failed'];
             } elseif (stristr($headers[0], '500')) {
                 $status = $_language->module['htaccess_failed'];
-            } elseif (stristr($headers[0], '200') && file_get_contents($base_test) === "not_existing_file") {
+            } elseif (stristr($headers[0], '200') && file_get_contents($base_test) == "not_existing_file") {
                 $headers = @get_headers($mutliview_test, 1);
                 if (stristr($headers[0], '200') && file_get_contents($mutliview_test) == "test/multiview") {
                     $status = $_language->module['test_successful'];
@@ -334,7 +334,7 @@ if ($action == "add") {
                 }
             } else {
                 $status = $_language->module['unexpected_result'];
-                $info .= var_dump($headers);
+                $info .= var_dump($headers,true);
             }
         }
         if ($unlink) {
