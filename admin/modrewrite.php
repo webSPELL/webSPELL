@@ -288,7 +288,7 @@ if ($action == "add") {
             mkdir($folder, 0777);
         }
         $file = ".htaccess";
-        $path = $GLOBALS['_modRewrite']->getRewriteBase() . 'admin/' . $folder . '/';
+        $path = $_POST['base'] . 'admin/' . $folder . '/';
         $content = $GLOBALS['_modRewrite']->generateHtAccess($path, 'test.php');
         file_put_contents($folder . '/test.php', '<?php echo @$_GET["url"];?>');
 
