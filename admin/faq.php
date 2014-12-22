@@ -290,7 +290,8 @@ if (isset($_GET[ 'action' ])) {
 
     echo '<h1>&curren; ' . $_language->module[ 'faq' ] . '</h1>';
 
-    echo '<a href="admincenter.php?site=faq&amp;action=add" class="input">' . $_language->module[ 'new_faq' ] . '</a><br><br>';
+    echo '<a href="admincenter.php?site=faq&amp;action=add" class="input">' . $_language->module[ 'new_faq' ] .
+        '</a><br><br>';
 
     echo '<form method="post" action="admincenter.php?site=faq">
     <table width="100%" border="0" cellspacing="1" cellpadding="3" bgcolor="#DDDDDD">

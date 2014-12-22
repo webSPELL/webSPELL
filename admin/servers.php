@@ -218,7 +218,8 @@ onsubmit="return chkFormular();">
 
     echo '<h1>&curren; ' . $_language->module[ 'servers' ] . '</h1>';
 
-    echo '<a href="admincenter.php?site=servers&amp;action=add" class="input">' . $_language->module[ 'new_server' ] . '</a><br><br>';
+    echo '<a href="admincenter.php?site=servers&amp;action=add" class="input">' .
+        $_language->module[ 'new_server' ] . '</a><br><br>';
 
     $ergebnis = safe_query("SELECT * FROM " . PREFIX . "servers ORDER BY sort");
     $anz = mysqli_num_rows($ergebnis);
