@@ -677,6 +677,10 @@ function validbbcode(txt) {
     }
 }
 
+function MM_confirm(msg, url) { //v1.0
+    if(confirm(msg)) location.replace(url);
+}
+
 //test for valid url
 function url(string) {
     "use strict";
