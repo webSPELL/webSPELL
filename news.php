@@ -142,7 +142,7 @@ if ($action == "new") {
             FROM
                 " . PREFIX . "news
             WHERE
-                newsID = '" . (int)$newsID
+                newsID = '" . (int)$newsID ."'"
         )
     );
     if (($ds[ 'poster' ] != $userID or !isnewswriter($userID)) and !isnewsadmin($userID)) {
@@ -209,7 +209,7 @@ if ($action == "new") {
     \webspell\Tags::setTags('news', $newsID, $_POST[ 'tags' ]);
 
     $update_langs = [];
-    $query = safe_query("SELECT language FROM " . PREFIX . "news_contents WHERE newsID = '" . (int)$newsID);
+    $query = safe_query("SELECT language FROM " . PREFIX . "news_contents WHERE newsID = '" . (int)$newsID ."'");
     while ($qs = mysqli_fetch_array($query)) {
         $update_langs[ ] = $qs[ 'language' ];
         if (in_array($qs[ 'language' ], $lang)) {
@@ -220,7 +220,7 @@ if ($action == "new") {
                 " . PREFIX . "news_contents
                 WHERE
                     `newsID` = '" . $newsID . "' AND
-                    `language` = '" . $qs[ 'language' ]
+                    `language` = '" . $qs[ 'language' ] ."'"
             );
         }
     }
@@ -464,7 +464,7 @@ if ($action == "new") {
                     FROM
                         " . PREFIX . "news
                     WHERE
-                        newsID='" . (int)$id
+                        newsID='" . (int)$id ."'"
                 )
             );
             if (($ds[ 'poster' ] != $userID or !isnewswriter($userID)) and !isnewsadmin($userID)) {
@@ -482,8 +482,8 @@ if ($action == "new") {
                 }
             }
             \webspell\Tags::removeTags('news', $id);
-            safe_query("DELETE FROM " . PREFIX . "news WHERE newsID='" . (int)$id);
-            safe_query("DELETE FROM " . PREFIX . "news_contents WHERE newsID='" . (int)$id);
+            safe_query("DELETE FROM " . PREFIX . "news WHERE newsID='" . (int)$id ."'");
+            safe_query("DELETE FROM " . PREFIX . "news_contents WHERE newsID='" . (int)$id ."'");
             safe_query("DELETE FROM " . PREFIX . "comments WHERE parentID='" . (int)$id . "' AND type='ne'");
         }
         generate_rss2();
@@ -500,7 +500,16 @@ if ($action == "new") {
 
     $id = $_GET[ 'id' ];
 
-    $ds = mysqli_fetch_array(safe_query("SELECT screens, poster FROM " . PREFIX . "news WHERE newsID='" . (int)$id));
+    $ds = mysqli_fetch_array(
+        safe_query(
+            "SELECT
+              screens, poster
+            FROM
+              " . PREFIX . "news
+            WHERE
+              newsID='" . (int)$id ."'"
+        )
+    );
     if (($ds[ 'poster' ] != $userID or !isnewswriter($userID)) and !isnewsadmin($userID)) {
         die($_language->module[ 'no_access' ]);
     }
@@ -518,8 +527,8 @@ if ($action == "new") {
 
     \webspell\Tags::removeTags('news', $id);
 
-    safe_query("DELETE FROM " . PREFIX . "news WHERE newsID='" . (int)$id);
-    safe_query("DELETE FROM " . PREFIX . "news_contents WHERE newsID='" . (int)$id);
+    safe_query("DELETE FROM " . PREFIX . "news WHERE newsID='" . (int)$id ."'");
+    safe_query("DELETE FROM " . PREFIX . "news_contents WHERE newsID='" . (int)$id ."'");
     safe_query("DELETE FROM " . PREFIX . "comments WHERE parentID='" . (int)$id . "' AND type='ne'");
 
     generate_rss2();
