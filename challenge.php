@@ -128,7 +128,7 @@ if ($action == "save" && isset($_POST['post'])) {
                     `" . PREFIX . "squads_members`
                 WHERE
                     `warmember` = '1' AND
-                    `squadID` = '" . (int)$squad
+                    `squadID` = '" . (int)$squad ."'"
             );
         while ($ds = mysqli_fetch_array($ergebnis)) {
             $touser[] = $ds['userID'];
@@ -162,8 +162,10 @@ if ($action == "save" && isset($_POST['post'])) {
 } elseif ($action == "delete") {
     $chID = $_GET['chID'];
     if (isclanwaradmin($userID)) {
-        safe_query("DELETE FROM `" . PREFIX . "challenge` WHERE `chID` = '" . (int)$chID);
-        redirect('index.php?site=challenge', $_language->module['entry_deleted'], 3);
+        safe_query("DELETE FROM `" . PREFIX . "challenge` WHERE `chID` = '" . (int)$chID ."'");
+        if (!empty($_language)) {
+            redirect('index.php?site=challenge', $_language->module['entry_deleted'], 3);
+        }
     } else {
         redirect('index.php?site=challenge', $_language->module['no_access'], 3);
     }
