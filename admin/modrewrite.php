@@ -289,7 +289,7 @@ if ($action == "add") {
         }
         $file = ".htaccess";
         $path = $GLOBALS['_modRewrite']->getRewriteBase() . 'admin/' . $folder . '/';
-        $content = $GLOBALS['_modRewrite']->generateHtAccess($path);
+        $content = $GLOBALS['_modRewrite']->generateHtAccess($path, 'test.php');
         file_put_contents($folder . '/test.php', '<?php echo @$_GET["q"];?>');
 
         $written = @file_put_contents($folder . '/' . $file, $content);
