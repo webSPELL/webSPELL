@@ -481,10 +481,9 @@ function urlreplace_callback_1($match)
 
 function urlreplace_callback_2($match)
 {
-    if(file_exists($match[1])){
+    if (file_exists($match[1])) {
         return '<a href="' . fixJavaEvents($match[1]) . '" target="_blank">';
-    }
-    else{
+    } else {
         return "";
     }
 }

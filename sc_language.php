@@ -85,10 +85,9 @@ if (isset($_GET[ 'new_lang' ])) {
     if ($modRewrite == true) {
         $path = rawurlencode(str_replace($GLOBALS[ 'rewriteBase' ], '', $_SERVER[ 'REQUEST_URI' ]));
 
-    }
-    else{
+    } else {
         $path = rawurlencode($_SERVER[ 'QUERY_STRING' ]);
-        if(!empty($path)){
+        if (!empty($path)) {
             $path = "?".$path;
         }
     }
