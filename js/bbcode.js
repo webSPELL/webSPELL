@@ -677,9 +677,13 @@ function validbbcode(txt) {
     }
 }
 
+/* jshint ignore:start */
+// jscs:disable
 function MM_confirm(msg, url) { //v1.0
     if(confirm(msg)) location.replace(url);
 }
+// jscs:enable
+/* jshint ignore:end */
 
 //test for valid url
 function url(string) {
