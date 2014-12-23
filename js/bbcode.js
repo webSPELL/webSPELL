@@ -210,6 +210,7 @@ function AddCodetag() {
 function AddToggle() {
     "use strict";
 
+    /*jshint camelcase: false */
     AddTag("[toggle=" + languageArray.bbcode.read_more + "]", "[/toggle]", "");
 }
 
