@@ -586,13 +586,10 @@ if ($part == "groups") {
                 <td class="' . $td . '" width="50%"><a href="../index.php?site=gallery&amp;galleryID=' .
                     $db[ 'galleryID' ] . '" target="_blank">' . getinput($db[ 'name' ]) . '</a></td>
                 <td class="' . $td . '" width="30%" align="center">
-                    <a
-                    href="admincenter.php?site=gallery&amp;
-                    part=gallerys&amp;
-                    action=upload&amp;
-                    upload=form&amp;
-                    galleryID=' . $db[ 'galleryID' ] . '">' . $_language->module[ 'add_img' ] . ' (' .
-                        $_language->module[ 'per_form' ] .
+                <a type="button"
+                href="admincenter.php?site=gallery&amp;part=gallerys&amp;action=upload&amp;upload=form&amp;galleryID=' .
+                    $db[ 'galleryID' ] . '">' . $_language->module[ 'add_img' ] . ' (' .
+                    $_language->module[ 'per_form' ] .
                     ')</a>
                 <a type="button"
                 href="admincenter.php?site=gallery&amp;part=gallerys&amp;action=upload&amp;upload=ftp&amp;galleryID=' .
