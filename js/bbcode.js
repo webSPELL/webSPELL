@@ -434,9 +434,9 @@ function updatepage(str, id, action) {
         document.getElementById(id).value = trim(str);
     } else if (action === "return") {
         return str;
-    } else if (action === "execute"){
-        eval(str);
-    } else if (action === "callback"){
+    } else if (action === "execute") {
+        eval(str); // jshint ignore:line
+    } else if (action === "callback") {
         id(str);
     }
 }
