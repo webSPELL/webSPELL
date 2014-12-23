@@ -320,7 +320,7 @@ if ($action == "new") {
         $bg1 = BG_1;
 
         eval ("\$links_category = \"" . gettemplate("links_category") . "\";");
-        echo $links-category;
+        echo $links_category;
 
         $i = 1;
         while ($ds = mysqli_fetch_array($cats)) {
