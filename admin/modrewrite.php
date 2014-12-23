@@ -288,7 +288,7 @@ if ($action == "add") {
             mkdir($folder, 0777);
         }
         $file = ".htaccess";
-        $path = $GLOBALS['_modRewrite']->getRewriteBase() . 'admin/' . $folder . '/';
+        $path = $_POST['base'] . 'admin/' . $folder . '/';
         $content = $GLOBALS['_modRewrite']->generateHtAccess($path, 'test.php');
         file_put_contents($folder . '/test.php', '<?php echo @$_GET["url"];?>');
 
@@ -334,7 +334,7 @@ if ($action == "add") {
                 }
             } else {
                 $status = $_language->module['unexpected_result'];
-                $info .= var_dump($headers,true);
+                $info .= var_dump($headers, true);
             }
         }
         if ($unlink) {
@@ -438,10 +438,10 @@ if ($action == "add") {
     echo '<h1>&curren; ' . $_language->module['modrewrite_rules'] . '</h1>';
 
     echo
-        '<a href="admincenter.php?site=modrewrite&amp;action=add">' . $_language->module[ 'new_rule' ] . '</a>';
+        '<a href="admincenter.php?site=modrewrite&amp;action=add">' . $_language->module['new_rule'] . '</a>';
     echo
         '<a href="admincenter.php?site=modrewrite&amp;action=rebuild">' .
-        $_language->module[ 'rebuild' ] . '</a><br><br>';
+        $_language->module['rebuild'] . '</a><br><br>';
 
     echo '<table width="100%" border="0" cellspacing="1" cellpadding="3" bgcolor="#DDDDDD">
     <tr>
@@ -466,14 +466,14 @@ if ($action == "add") {
                 $td = 'td2';
             }
             echo '<tr>
-            <td class="' . $td . '" align="left">' . $flags[ 'regex' ] . '<br>' . $flags[ 'link' ] . '</td>
-            <td class="' . $td . '">' . count(unserialize($flags[ 'fields' ])) . '</td>
+            <td class="' . $td . '" align="left">' . $flags['regex'] . '<br>' . $flags['link'] . '</td>
+            <td class="' . $td . '">' . count(unserialize($flags['fields'])) . '</td>
             <td class="' . $td . '" align="center">
                 <a href="admincenter.php?site=modrewrite&amp;action=edit&amp;ruleID=' .
-                $flags[ 'ruleID' ] . '" class="input">'. $_language->module[ 'edit' ] . '</a>
-            <input type="button" onclick="MM_confirm(\'' . $_language->module[ 'really_delete' ] .
-                '\', \'admincenter.php?site=modrewrite&amp;delete=true&amp;ruleID=' . $flags[ 'ruleID' ] .
-                '&amp;captcha_hash=' . $hash . '\')" value="' . $_language->module[ 'delete' ] . '"></td>
+                $flags['ruleID'] . '" class="input">' . $_language->module['edit'] . '</a>
+            <input type="button" onclick="MM_confirm(\'' . $_language->module['really_delete'] .
+                '\', \'admincenter.php?site=modrewrite&amp;delete=true&amp;ruleID=' . $flags['ruleID'] .
+                '&amp;captcha_hash=' . $hash . '\')" value="' . $_language->module['delete'] . '"></td>
             </tr>';
 
             $i++;

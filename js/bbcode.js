@@ -210,7 +210,9 @@ function AddCodetag() {
 function AddToggle() {
     "use strict";
 
-    AddTag("[toggle=" + languageArray.bbcode.readMore + "]", "[/toggle]", "");
+    /*jshint camelcase: false */
+    /* jscs: disable requireCamelCaseOrUpperCaseIdentifiers */
+    AddTag("[toggle=" + languageArray.bbcode.read_more + "]", "[/toggle]", "");
 }
 
 // toggle function - read more
@@ -432,10 +434,11 @@ function updatepage(str, id, action) {
         document.getElementById(id).value = trim(str);
     } else if (action === "return") {
         return str;
+    } else if (action === "execute") {
+        eval(str); // jshint ignore:line
+    } else if (action === "callback") {
+        id(str);
     }
-    //else if (action === "execute") {
-    //	eval(str);
-    //}
 }
 
 //ajax functions

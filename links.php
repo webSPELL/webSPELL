@@ -289,7 +289,7 @@ if ($action == "new") {
             if (ispageadmin($userID) || isnewsadmin($userID)) {
                 $adminaction =
                     '<a href="index.php?site=links&amp;action=edit&amp;linkID=' . $ds[ 'linkID' ] .
-                    '" class="btn btn-danger">' . $_language->module[ 'edit' ] . '">
+                    '" class="btn btn-danger">' . $_language->module[ 'edit' ] . '</a>
                     <input type="button" onclick="MM_confirm(\'' . $_language->module[ 'really_delete' ] .
                     '\', \'links.php?action=delete&amp;linkID=' . $ds[ 'linkID' ] . '\')" value="' .
                     $_language->module[ 'delete' ] . '" class="btn btn-danger">';
@@ -320,7 +320,7 @@ if ($action == "new") {
         $bg1 = BG_1;
 
         eval ("\$links_category = \"" . gettemplate("links_category") . "\";");
-        echo $links-category;
+        echo $links_category;
 
         $i = 1;
         while ($ds = mysqli_fetch_array($cats)) {

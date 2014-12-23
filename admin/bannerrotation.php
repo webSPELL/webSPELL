@@ -84,7 +84,7 @@ if ($action == "add") {
             FROM
                 " . PREFIX . "bannerrotation
             WHERE
-                bannerID='" . (int)$_GET[ "bannerID" ]
+                bannerID='" . (int)$_GET[ "bannerID" ] . "'"
         )
     );
     if (file_exists($filepath . $ds[ 'bannerID' ] . '.gif')) {
@@ -290,7 +290,7 @@ if ($action == "add") {
                 "DELETE FROM
                     `" . PREFIX . "bannerrotation`
                 WHERE
-                    `bannerID` = '" . (int)$_GET[ "bannerID" ]
+                    `bannerID` = '" . (int)$_GET[ "bannerID" ] . "'"
             )
         ) {
             if (file_exists($filepath . $_GET[ "bannerID" ] . '.jpg')) {
@@ -315,8 +315,7 @@ if ($action == "add") {
 
     echo
         '<a href="admincenter.php?site=bannerrotation&amp;action=add" class="btn btn-danger">' .
-            $_language->module[ 'new_banner' ] .
-        '"</a>><br><br>';
+            $_language->module[ 'new_banner' ] . '</a><br><br>';
 
     echo '<form method="post" action="admincenter.php?site=bannerrotation">
   <table width="100%" border="0" cellspacing="1" cellpadding="3" bgcolor="#DDDDDD">
