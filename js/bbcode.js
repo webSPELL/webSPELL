@@ -211,6 +211,7 @@ function AddToggle() {
     "use strict";
 
     /*jshint camelcase: false */
+    /* jscs: disable requireCamelCaseOrUpperCaseIdentifiers */
     AddTag("[toggle=" + languageArray.bbcode.read_more + "]", "[/toggle]", "");
 }
 
