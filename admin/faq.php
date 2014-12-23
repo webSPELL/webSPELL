@@ -41,7 +41,7 @@ if (isset($_GET[ 'delete' ])) {
             WHERE
                 `faqID` = '" . $faqID . "'"
         );
-        Tags::removeTags('faq', $faqID);
+        \webspell\Tags::removeTags('faq', $faqID);
     } else {
         echo $_language->module[ 'transaction_invalid' ];
     }
@@ -88,7 +88,7 @@ if (isset($_GET[ 'delete' ])) {
                 )"
             );
             $id = mysqli_insert_id($_database);
-            Tags::setTags('faq', $id, $_POST[ 'tags' ]);
+            \webspell\Tags::setTags('faq', $id, $_POST[ 'tags' ]);
         } else {
             echo $_language->module[ 'information_incomplete' ];
         }
@@ -114,7 +114,7 @@ if (isset($_GET[ 'delete' ])) {
                 WHERE
                     `faqID` = '$faqID'"
             );
-            Tags::setTags('faq', $faqID, $_POST[ 'tags' ]);
+            \webspell\Tags::setTags('faq', $faqID, $_POST[ 'tags' ]);
         } else {
             echo $_language->module[ 'information_incomplete' ];
         }
@@ -226,7 +226,7 @@ if (isset($_GET[ 'action' ])) {
         }
         $faqcats .= '</select>';
 
-        $tags = Tags::getTags('faq', $faqID);
+        $tags = \webspell\Tags::getTags('faq', $faqID);
 
         $CAPCLASS = new \webspell\Captcha;
         $CAPCLASS->createTransaction();
@@ -320,7 +320,7 @@ if (isset($_GET[ 'action' ])) {
         $faq = safe_query("SELECT * FROM `" . PREFIX . "faq` WHERE `faqcatID` = '$ds[faqcatID]' ORDER BY `sort`");
         $tmp = mysqli_fetch_assoc(
             safe_query(
-                "SELECT count(faqID) as cnt FROM `" . PREFIX . "faq` WHERE `faqcatID` = '" . $ds[faqcatID] . "'"
+                "SELECT count(faqID) as cnt FROM `" . PREFIX . "faq` WHERE `faqcatID` = '$ds[faqcatID]'"
             )
         );
         $anzfaq = $tmp[ 'cnt' ];
