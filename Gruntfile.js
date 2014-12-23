@@ -6,7 +6,8 @@ module.exports = function(grunt) {
 
     var javascripts = [
             "Gruntfile.js",
-            "js/bbcode.js"
+            "js/bbcode.js",
+            "tests/casperjs/**/*.js"
         ],
         templates = [
             "templates/*.html"
@@ -156,13 +157,25 @@ module.exports = function(grunt) {
         //        quiet: true
         //    }
         //},
+        casperjs: {
+            options: {
+                casperjsOptions: [
+                    //"--engine=slimerjs",
+                    "--includes=tests/casperjs/config.js," +
+                    "tests/casperjs/functions/login.js"
+                ]
+            },
+            files: [
+                "tests/casperjs/login_as_admin.js"
+            ]
+        },
         watch: {
             options: {
                 debounceDelay: 1000
             },
             js: {
                 files: [
-                    "js/*.js"
+                    javascripts
                 ],
                 tasks: [
                     "js"
@@ -186,6 +199,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks("grunt-commit-message-verify");
     grunt.loadNpmTasks("grunt-bootlint");
     grunt.loadNpmTasks("grunt-htmllint");
+    grunt.loadNpmTasks("grunt-casperjs");
 
     grunt.registerTask("codecheck", [
         "lintspaces",
