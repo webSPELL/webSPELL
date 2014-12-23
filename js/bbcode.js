@@ -210,7 +210,7 @@ function AddCodetag() {
 function AddToggle() {
     "use strict";
 
-    AddTag("[toggle=" + languageArray.bbcode.readMore + "]", "[/toggle]", "");
+    AddTag("[toggle=" + languageArray.bbcode.read_more + "]", "[/toggle]", "");
 }
 
 // toggle function - read more
