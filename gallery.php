@@ -55,7 +55,7 @@ if (isset($_POST[ 'saveedit' ])) {
             FROM
                 `" . PREFIX . "gallery_pictures`
             WHERE
-                `picID` = '" . (int)$_POST[ 'picID' ]
+                `picID` = '" . (int)$_POST[ 'picID' ] . "'"
         )
     );
 
@@ -103,7 +103,7 @@ if (isset($_POST[ 'saveedit' ])) {
                     FROM
                         `" . PREFIX . "gallery_pictures`
                     WHERE
-                        `picID` = '" . $_GET[ 'id' ]
+                        `picID` = '" . $_GET[ 'id' ] . "'"
                 )
             );
 
@@ -139,7 +139,7 @@ if (isset($_POST[ 'saveedit' ])) {
             FROM
                 `" . PREFIX . "gallery_pictures`
             WHERE
-                `picID` = '" . (int)$_GET[ 'id' ]
+                `picID` = '" . (int)$_GET[ 'id' ] . "'"
         )
     );
 
@@ -151,7 +151,7 @@ if (isset($_POST[ 'saveedit' ])) {
                     `galleryID`
                 FROM
                     `" . PREFIX . "gallery_pictures`
-                WHERE `picID` = '" . (int)$_GET[ 'id' ]
+                WHERE `picID` = '" . (int)$_GET[ 'id' ] . "'"
             )
         );
 
@@ -175,7 +175,7 @@ if (isset($_POST[ 'saveedit' ])) {
             "DELETE FROM
                 `" . PREFIX . "gallery_pictures`
             WHERE
-                `picID` = '" . (int)$_GET[ 'id' ]
+                `picID` = '" . (int)$_GET[ 'id' ] . "'"
         );
         safe_query(
             "DELETE FROM
@@ -221,7 +221,7 @@ if (isset($_POST[ 'saveedit' ])) {
                 `comment`
             FROM
                 `" . PREFIX . "gallery_pictures`
-            WHERE `picID` = '" . (int)$picID
+            WHERE `picID` = '" . (int)$picID . "'"
         )
     );
 
@@ -290,12 +290,12 @@ if (isset($_POST[ 'saveedit' ])) {
     eval("\$gallery = \"" . gettemplate("title_gallery") . "\";");
     echo $gallery;
 
-    $ergebnis = safe_query("SELECT * FROM `" . PREFIX . "gallery_pictures` WHERE `picID` = '" . $_GET[ 'picID' ]);
+    $ergebnis = safe_query("SELECT * FROM `" . PREFIX . "gallery_pictures` WHERE `picID` = '" . $_GET[ 'picID' ] . "'");
     if (mysqli_num_rows($ergebnis)) {
 
         $ds = mysqli_fetch_array(
             safe_query(
-                "SELECT * FROM `" . PREFIX . "gallery_pictures` WHERE `picID` = '" . (int)$_GET[ 'picID' ]
+                "SELECT * FROM `" . PREFIX . "gallery_pictures` WHERE `picID` = '" . (int)$_GET[ 'picID' ] . "'"
             )
         );
         safe_query(
@@ -373,7 +373,7 @@ if (isset($_POST[ 'saveedit' ])) {
         if ($loggedin) {
 
             $getgallery = safe_query(
-                "SELECT `gallery_pictures` FROM `" . PREFIX . "user` WHERE `userID` = '" . (int)$userID
+                "SELECT `gallery_pictures` FROM `" . PREFIX . "user` WHERE `userID` = '" . (int)$userID . "'"
             );
             $found = false;
             if (mysqli_num_rows($getgallery)) {
@@ -482,13 +482,18 @@ if (isset($_POST[ 'saveedit' ])) {
     $ds =
         mysql_fetch_array(
             safe_query(
-                "SELECT `name` FROM `" . PREFIX . "gallery` WHERE `galleryID` = '" . $_GET[ 'galleryID' ]
+                "SELECT `name` FROM `" . PREFIX . "gallery` WHERE `galleryID` = '" . $_GET[ 'galleryID' ] . "'"
             )
         );
     $title = str_break(clearfromtags($ds[ 'name' ]), 45);
     $pics = mysql_num_rows(
         safe_query(
-            "SELECT `picID` FROM `" . PREFIX . "gallery_pictures` WHERE `galleryID` = '" . (int)$_GET[ 'galleryID' ]
+            "SELECT
+              `picID`
+            FROM
+              `" . PREFIX . "gallery_pictures`
+            WHERE
+              `galleryID` = '" . (int)$_GET[ 'galleryID' ] . "'"
         )
     );
 
@@ -604,7 +609,7 @@ if (isset($_POST[ 'saveedit' ])) {
     $galleries =
         mysqli_num_rows(
             safe_query(
-                "SELECT `galleryID` FROM `" . PREFIX . "gallery` WHERE `groupID` = '" . (int)$_GET[ 'groupID' ]
+                "SELECT `galleryID` FROM `" . PREFIX . "gallery` WHERE `groupID` = '" . (int)$_GET[ 'groupID' ] . "'"
             )
         );
     $pages = ceil($galleries / $gallerypictures);
@@ -656,7 +661,7 @@ if (isset($_POST[ 'saveedit' ])) {
                     FROM
                         `" . PREFIX . "gallery_pictures`
                     WHERE
-                        `galleryID` ='" . (int)$gallery[ 'galleryID' ]
+                        `galleryID` ='" . (int)$gallery[ 'galleryID' ] . "'"
                 )
             );
         $gallery[ 'date' ] = getformatdatetime($gallery[ 'date' ]);
@@ -693,7 +698,7 @@ if (isset($_POST[ 'saveedit' ])) {
                 FROM
                     `" . PREFIX . "gallery`
                 WHERE
-                    `groupID` = '" . $ds[ 'groupID' ]
+                    `groupID` = '" . $ds[ 'groupID' ] . "'"
             )
         );
 
@@ -728,7 +733,7 @@ if (isset($_POST[ 'saveedit' ])) {
                             FROM
                                 `" . PREFIX . "gallery_pictures`
                             WHERE
-                                `galleryID` = '" . (int)$ds[ 'galleryID' ]
+                                `galleryID` = '" . (int)$ds[ 'galleryID' ] . "'"
                         )
                     );
             }
