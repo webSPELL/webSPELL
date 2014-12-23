@@ -46,7 +46,7 @@ if ($action == "show") {
 
         $anzmembers = mysqli_num_rows(
             safe_query(
-                "SELECT sqmID FROM " . PREFIX . "squads_members WHERE squadID='" . (int)$ds[ 'squadID' ]
+                "SELECT sqmID FROM " . PREFIX . "squads_members WHERE squadID='" . (int)$ds[ 'squadID' ] . "'"
             )
         );
         if ($anzmembers == 1) {
@@ -204,7 +204,7 @@ if ($action == "show") {
                 FROM
                     " . PREFIX . "squads_members
                 WHERE
-                    squadID='" . (int)$ds[ 'squadID' ]
+                    squadID='" . (int)$ds[ 'squadID' ] . "'"
             )
         );
         if ($anzmembers == 1) {
