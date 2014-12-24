@@ -58,14 +58,14 @@ if (isset($_POST[ 'save' ])) {
             );
             $id = mysqli_insert_id($_database);
         }
-        Tags::setTags('static', $id, $_POST[ 'tags' ]);
+        \webspell\Tags::setTags('static', $id, $_POST[ 'tags' ]);
     } else {
         echo $_language->module[ 'transaction_invalid' ];
     }
 } elseif (isset($_GET[ 'delete' ])) {
     $CAPCLASS = new \webspell\Captcha;
     if ($CAPCLASS->checkCaptcha(0, $_GET[ 'captcha_hash' ])) {
-        Tags::removeTags('static', $_GET[ 'staticID' ]);
+        \webspell\Tags::removeTags('static', $_GET[ 'staticID' ]);
         safe_query("DELETE FROM `" . PREFIX . "static` WHERE staticID='" . $_GET[ 'staticID' ] . "'");
     } else {
         echo $_language->module[ 'transaction_invalid' ];
@@ -147,7 +147,7 @@ onsubmit="return chkFormular();">
         $public = "checked=\"checked\"";
     }
 
-    $tags = Tags::getTags('static', $staticID);
+    $tags = \webspell\Tags::getTags('static', $staticID);
 
     $CAPCLASS = new \webspell\Captcha;
     $CAPCLASS->createTransaction();

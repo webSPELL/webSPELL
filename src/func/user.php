@@ -200,7 +200,7 @@ function usergroupexists($userID)
 function wantmail($userID)
 {
     return (
-        mysql_num_rows(
+        mysqli_num_rows(
             safe_query(
                 "SELECT
                     userID
