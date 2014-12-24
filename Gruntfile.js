@@ -24,7 +24,8 @@ module.exports = function(grunt) {
             "!node_modules/**",
             "!components/**",
             "!vendor/**",
-            "!tmp/**"
+            "!tmp/**",
+            "!tests/vendor/**/*.php"
         ];
 
     require("logfile-grunt")(grunt, {

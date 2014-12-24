@@ -203,7 +203,7 @@ if (isset($_POST['newreply']) && !isset($_POST['preview'])) {
 
     if (!isforumposter($userID, $_POST['id']) and !isforumadmin($userID) and !ismoderator($userID, $_GET['board'])
     ) {
-        die($_language->module['no_accses']);
+        die($_language->module['no_access']);
     }
 
     $message = $_POST['message'];
@@ -249,7 +249,7 @@ if (isset($_POST['newreply']) && !isset($_POST['preview'])) {
     if (!isforumadmin($userID) and
         !isforumposter($userID, $_POST['post']) and !ismoderator($userID, $_GET['board'])
     ) {
-        die($_language->module['no_accses']);
+        die($_language->module['no_access']);
     }
 
     $board = (int)$_GET['board'];
