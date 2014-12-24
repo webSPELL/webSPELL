@@ -72,7 +72,7 @@ if (isset($_POST[ 'saveedit' ])) {
                 `comment` = '" . $_POST[ 'comment' ] . "',
                 `comments` = '" . (int)$_POST[ 'comments' ] . "'
             WHERE
-                `picID` = '" . (int)$_POST[ 'picID' ]
+                `picID` = '" . (int)$_POST[ 'picID' ] . "'"
         );
         if (isset($_POST[ 'reset' ])) {
             safe_query(
@@ -81,7 +81,7 @@ if (isset($_POST[ 'saveedit' ])) {
                 SET
                     `views` = '0'
                 WHERE
-                    `picID` = '" . $_POST[ 'picID' ]
+                    `picID` = '" . $_POST[ 'picID' ] . "'"
             );
         }
     } else {
@@ -181,8 +181,9 @@ if (isset($_POST[ 'saveedit' ])) {
             "DELETE FROM
                 `" . PREFIX . "comments`
             WHERE
-            `parentID` = '" . (int)$_GET[ 'id' ] . "' AND
-            `type` = 'ga'"
+                `parentID` = '" . (int)$_GET[ 'id' ] . "'
+            AND
+                `type` = 'ga'"
         );
     }
     redirect('index.php?site=gallery&amp;galleryID=' . $ds[ 'galleryID' ], '', 0);
@@ -244,13 +245,14 @@ if (isset($_POST[ 'saveedit' ])) {
             "SELECT
                 `picID`
             FROM
-              `" . PREFIX . "gallery_pictures`
-          WHERE
-            `galleryID` = '" . (int)$_GET[ 'galleryID' ] . "' AND
-            `picID` > " . (int)$picID . "
-        ORDER BY
-            `picID`ASC
-        LIMIT 0,1"
+                `" . PREFIX . "gallery_pictures`
+            WHERE
+                `galleryID` = '" . (int)$_GET[ 'galleryID' ] . "'
+            AND
+                `picID` > " . (int)$picID . "
+            ORDER BY
+                `picID` ASC
+            LIMIT 0,1"
         )
     );
 
@@ -265,7 +267,14 @@ if (isset($_POST[ 'saveedit' ])) {
         if ($browse[ 'picID' ]) {
             echo '<a href="gallery.php?action=diashow&amp;galleryID=' . $_GET[ 'galleryID' ] . '&amp;picID=' .
                 $browse[ 'picID' ] . '">';
-            safe_query("UPDATE `" . PREFIX . "gallery_pictures` SET `views` = views+1 WHERE `picID` = '" . (int)$picID);
+            safe_query(
+                "UPDATE
+                    `" . PREFIX . "gallery_pictures`
+                SET
+                    `views` = views+1
+                WHERE
+                    `picID` = '" . (int)$picID . "'"
+            );
         }
     } else {
         echo '<a href="javascript:close()">';
@@ -299,7 +308,12 @@ if (isset($_POST[ 'saveedit' ])) {
             )
         );
         safe_query(
-            "UPDATE `" . PREFIX . "gallery_pictures` SET `views` = views+1 WHERE `picID` = '" . (int)$_GET[ 'picID' ]
+            "UPDATE
+                `" . PREFIX . "gallery_pictures`
+            SET
+                `views` = views+1
+            WHERE
+                `picID` = '" . (int)$_GET[ 'picID' ] . "'"
         );
 
         $picturename = clearfromtags($ds[ 'name' ]);
@@ -333,7 +347,8 @@ if (isset($_POST[ 'saveedit' ])) {
                 FROM
                     `" . PREFIX . "gallery_pictures`
                 WHERE
-                    `galleryID` = '" . (int)$ds[ 'galleryID' ] . "' AND
+                    `galleryID` = '" . (int)$ds[ 'galleryID' ] . "'
+                AND
                     `picID` > " . (int)$ds[ 'picID' ] . "
                 ORDER BY
                     `picID` ASC
@@ -354,7 +369,8 @@ if (isset($_POST[ 'saveedit' ])) {
                 FROM
                     `" . PREFIX . "gallery_pictures`
                 WHERE
-                    `galleryID` = '" . (int)$ds[ 'galleryID' ] . "' AND
+                    `galleryID` = '" . (int)$ds[ 'galleryID' ] . "'
+                AND
                     `picID` < " . (int)$ds[ 'picID' ] . "
                 ORDER BY
                     `picID` DESC
@@ -576,7 +592,8 @@ if (isset($_POST[ 'saveedit' ])) {
                     FROM
                         `" . PREFIX . "comments`
                     WHERE
-                        `parentID` = '" . (int)$pic[ 'picID' ] . "' AND
+                        `parentID` = '" . (int)$pic[ 'picID' ] . "'
+                    AND
                         `type` = 'ga'"
                 )
             );
