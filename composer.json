@@ -1,6 +1,7 @@
 {
 	"require": {
 		"squizlabs/php_codesniffer": "2.0.0a2",
-		"codeclimate/php-test-reporter": "dev-master"
+		"codeclimate/php-test-reporter": "dev-master",
+		"phpunit/phpunit": "4.4.0"
 	}
 }
