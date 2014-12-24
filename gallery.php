@@ -448,10 +448,10 @@ if (isset($_POST[ 'saveedit' ])) {
 
         $gallery = '<a href="index.php?site=gallery&amp;galleryID=' . $ds[ 'galleryID' ] . '" class="titlelink">' .
             $galclass->getGalleryName($_GET[ 'picID' ]) . '</a>';
-        if ($galclass->getgroupid_by_gallery($ds[ 'galleryID' ])) {
+        if ($galclass->getGroupIdByGallery($ds[ 'galleryID' ])) {
             $group =
-                '<a href="index.php?site=gallery&amp;groupID=' . $galclass->getgroupid_by_gallery($ds[ 'galleryID' ]) .
-                '" class="titlelink">' . $galclass->getGroupName($galclass->getgroupid_by_gallery($ds[ 'galleryID' ])) .
+                '<a href="index.php?site=gallery&amp;groupID=' . $galclass->getGroupIdByGallery($ds[ 'galleryID' ]) .
+                '" class="titlelink">' . $galclass->getGroupName($galclass->getGroupIdByGallery($ds[ 'galleryID' ])) .
                 '</a>';
         } else {
             $group = '<a href="index.php?site=gallery&amp;groupID=0" class="titlelink">' .
@@ -479,14 +479,13 @@ if (isset($_POST[ 'saveedit' ])) {
 
     $galclass = new \webspell\Gallery;
 
-    $ds =
-        mysql_fetch_array(
-            safe_query(
-                "SELECT `name` FROM `" . PREFIX . "gallery` WHERE `galleryID` = '" . $_GET[ 'galleryID' ] . "'"
-            )
-        );
+    $ds = mysqli_fetch_array(
+        safe_query(
+            "SELECT `name` FROM `" . PREFIX . "gallery` WHERE `galleryID` = '" . $_GET[ 'galleryID' ] . "'"
+        )
+    );
     $title = str_break(clearfromtags($ds[ 'name' ]), 45);
-    $pics = mysql_num_rows(
+    $pics = mysqli_num_rows(
         safe_query(
             "SELECT
               `picID`
@@ -507,10 +506,10 @@ if (isset($_POST[ 'saveedit' ])) {
 
     $pages = ceil($pics / $gallerypictures);
     $galleryID = $_GET[ 'galleryID' ];
-    if ($galclass->getgroupid_by_gallery($_GET[ 'galleryID' ])) {
+    if ($galclass->getGroupIdByGallery($_GET[ 'galleryID' ])) {
         $group =
-            '<a href="index.php?site=gallery&amp;groupID=' . $galclass->getgroupid_by_gallery($_GET[ 'galleryID' ]) .
-            '" class="titlelink">' . $galclass->getGroupName($galclass->getgroupid_by_gallery($_GET[ 'galleryID' ])) .
+            '<a href="index.php?site=gallery&amp;groupID=' . $galclass->getGroupIdByGallery($_GET[ 'galleryID' ]) .
+            '" class="titlelink">' . $galclass->getGroupName($galclass->getGroupIdByGallery($_GET[ 'galleryID' ])) .
             '</a>';
     } else {
         $group = '<a href="index.php?site=gallery&amp;groupID=0" class="titlelink">' .
