@@ -138,6 +138,9 @@ class Captcha
 
     private function createCatpchaImage($text)
     {
+        global $_language;
+        $_language->readModule('captcha', true);
+        global $new_chmod;
         $imgziel = imagecreatetruecolor(($this->length * 15) + 10, 25);
         $bgcolor = imagecolorallocate($imgziel, $this->bgcol[ 'r' ], $this->bgcol[ 'g' ], $this->bgcol[ 'b' ]);
         $fontcolor = imagecolorallocate($imgziel, $this->fontcol[ 'r' ], $this->fontcol[ 'g' ], $this->fontcol[ 'b' ]);
@@ -176,7 +179,7 @@ class Captcha
                 imagestring($imgziel, $font, $i * 15 + 5, 5, $char, $fontcolor);
             }
         }
-        imageJPEG($imgziel, 'tmp/' . $this->hash . '.jpg');
+        imagejpeg($imgziel, 'tmp/' . $this->hash . '.jpg');
         @chmod('tmp/' . $this->hash . '.jpg', $new_chmod);
         return '<img src="tmp/' . $this->hash . '.jpg" alt="' . $_language->module[ 'security_code' ] . '" />';
     }
@@ -184,9 +187,6 @@ class Captcha
     /* create captcha image/string and hash */
     public function createCaptcha()
     {
-        global $_language;
-        $_language->readModule('captcha', true);
-        global $new_chmod;
         $this->hash = md5(time() . rand(0, 10000));
         $captchastring = '';
         $captcha = '';
