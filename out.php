@@ -57,7 +57,7 @@ if (isset($_GET[ 'partnerID' ])) {
             FROM
                 " . PREFIX . "partners
             WHERE
-                `partnerID` = '" . (int)$_GET[ 'partnerID' ]."'"
+                `partnerID` = '" . (int)$_GET[ 'partnerID' ] . "'"
         )
     );
     $target = 'http://' . str_replace('http://', '', $ds[ 'url' ]);
@@ -73,12 +73,14 @@ if (isset($_GET[ 'sponsorID' ])) {
            FROM
                 " . PREFIX . "sponsors
             WHERE
-                `sponsorID` = '" . (int)$_GET[ 'sponsorID' ]."'"
+                `sponsorID` = '" . (int)$_GET[ 'sponsorID' ] . "'"
         )
     );
     $target = 'http://' . str_replace('http://', '', $ds[ 'url' ]);
     $type = "direct";
 }
 
-//output
-header("Location: " . $target);
+if (isset($target)) {
+    //output
+    header("Location: " . $target);
+}
