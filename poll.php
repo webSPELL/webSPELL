@@ -180,6 +180,8 @@ function vote($poll)
             eval("\$poll_head = \"" . gettemplate("poll_head") . "\";");
             echo $poll_head;
 
+            $options = [];
+
             for ($n = 1; $n <= 10; $n++) {
                 if ($ds[ 'o' . $n ]) {
                     $options[ ] = $ds[ 'o' . $n ];
