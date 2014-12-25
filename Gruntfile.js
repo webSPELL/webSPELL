@@ -189,6 +189,15 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks("grunt-newer");
 
     grunt.registerTask("codecheck", [
+        "lintspaces",
+        "jshint",
+        "jscs",
+        "phplint",
+        "phpcs",
+        "htmllint",
+        "bootlint"
+    ]);
+    grunt.registerTask("codecheck_newer", [
         "newer:lintspaces",
         "newer:jshint",
         "newer:jscs",
@@ -202,6 +211,7 @@ module.exports = function(grunt) {
         "jshint",
         "jscs",
         "phpcs",
+        "htmllint",
         "bootlint"
     ]);
     grunt.registerTask("js", [
