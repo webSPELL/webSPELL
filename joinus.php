@@ -133,7 +133,7 @@ if ($action == "save" && isset($_POST['post'])) {
 				 ';
             sendmessage($id, $tmp_lang->module['message_title'], $message);
         }
-        echo $_language->module['thanks_you_will_get_mail'];
+        echo generateAlert($_language->module['thanks_you_will_get_mail'], 'alert-success');
         unset($_POST['nick'],
             $_POST['name'],
             $_POST['email'],
