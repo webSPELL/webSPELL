@@ -199,7 +199,8 @@ class Captcha
             $captcha_text = $this->createCatpchaImage($captcha_text);
         }
 
-        safe_query("INSERT INTO `" . PREFIX . "captcha` (
+        safe_query(
+            "INSERT INTO `" . PREFIX . "captcha` (
             `hash`,`captcha`,`deltime`
             )VALUES (
             '" . $this->hash . "',
@@ -215,7 +216,8 @@ class Captcha
     {
 
         $this->hash = md5(time() . rand(0, 10000));
-        safe_query("INSERT INTO `" . PREFIX . "captcha`(
+        safe_query(
+            "INSERT INTO `" . PREFIX . "captcha`(
             `hash`,`captcha`,`deltime`
             )VALUES (
             '" . $this->hash . "',
@@ -237,14 +239,19 @@ class Captcha
     public function checkCaptcha($input, $hash)
     {
 
-        if (mysqli_num_rows(safe_query("SELECT `hash`
-                FROM `" . PREFIX . "captcha`
-                WHERE
-                    `captcha` = '" . $input . "' AND
-                    `hash` = '" . $hash . "'"
-            ))
+        if (
+            mysqli_num_rows(
+                safe_query(
+                    "SELECT `hash`
+                    FROM `" . PREFIX . "captcha`
+                    WHERE
+                        `captcha` = '" . $input . "' AND
+                        `hash` = '" . $hash . "'"
+                )
+            )
         ) {
-            safe_query("DELETE FROM `" . PREFIX . "captcha`
+            safe_query(
+                "DELETE FROM `" . PREFIX . "captcha`
                 WHERE
                     `captcha` = '" . $input . "' AND
                     `hash` = '" . $hash . "'"
