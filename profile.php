@@ -662,9 +662,9 @@ if (isset($id) and getnickname($id) != '') {
                         echo $profile_guestbook_loggedin;
                     } else {
                         $CAPCLASS = new \webspell\Captcha;
-                        $captcha = $CAPCLASS->create_captcha();
+                        $captcha = $CAPCLASS->createCaptcha();
                         $hash = $CAPCLASS->getHash();
-                        $CAPCLASS->clear_oldcaptcha();
+                        $CAPCLASS->clearOldCaptcha();
                         $_language->readModule('bbcode', true);
 
                         eval ("\$addbbcode = \"" . gettemplate("addbbcode") . "\";");

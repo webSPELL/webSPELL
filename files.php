@@ -899,9 +899,9 @@ if ($action == "save") {
         $type_ = "";
         if (!$userID) {
             $CAPCLASS = new \webspell\Captcha();
-            $captcha = $CAPCLASS->create_captcha();
+            $captcha = $CAPCLASS->createCaptcha();
             $hash = $CAPCLASS->getHash();
-            $CAPCLASS->clear_oldcaptcha();
+            $CAPCLASS->clearOldCaptcha();
             $captcha_form =
                 '<div class="form-group">
                     <div class="input-group">
