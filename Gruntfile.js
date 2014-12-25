@@ -186,15 +186,16 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks("grunt-commit-message-verify");
     grunt.loadNpmTasks("grunt-bootlint");
     grunt.loadNpmTasks("grunt-htmllint");
+    grunt.loadNpmTasks("grunt-newer");
 
     grunt.registerTask("codecheck", [
-        "lintspaces",
-        "jshint",
-        "jscs",
-        "phplint",
-        "phpcs",
-        "htmllint",
-        "bootlint"
+        "newer:lintspaces",
+        "newer:jshint",
+        "newer:jscs",
+        "newer:phplint",
+        "newer:phpcs",
+        "newer:htmllint",
+        "newer:bootlint"
     ]);
     grunt.registerTask("codecheck_circle", [
         "lintspaces",
