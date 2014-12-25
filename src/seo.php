@@ -468,7 +468,6 @@ function parseWebspellURL($parameters = null)
                         $_language->module['gallery'],
                         'index.php?site=gallery'
                     );
-                    $returned_title[] = array($getgroupname['name'], $url);
                     $returned_title[] = array(
                         $getgalleryname['name'],
                         'index.php?site=gallery&amp;groupID=' . $getgalleryname['galleryID']
