@@ -91,7 +91,6 @@ if (isset($_POST[ 'save' ])) {
     $rang = $_POST[ 'rang' ];
     $info = $_POST[ 'message' ];
 
-    $date = mktime(0, 0, 0, $month, $day, $year);
     safe_query(
         "UPDATE
             `" . PREFIX . "awards`
@@ -103,7 +102,7 @@ if (isset($_POST[ 'save' ])) {
             `rang` = '$rang',
             `info` = '$info'
         WHERE
-            awardID = '". (int)$awardID
+            awardID = '". (int)$awardID."'"
     );
     header("Location: index.php?site=awards");
 } elseif (isset($_GET[ 'delete' ])) {
