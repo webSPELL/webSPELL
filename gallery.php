@@ -569,18 +569,14 @@ if (isset($_POST[ 'saveedit' ])) {
             $bg = BG_1;
         }
 
-        $dir = 'images/gallery/';
-
         $firstactive = '';
         if ($i == 1) {
             $firstactive = 'active';
         }
 
-        $pic[ 'pic' ] = $pic[ 'picID' ] . '.jpg';
-        if (!file_exists($dir . 'large/' . $pic[ 'pic' ])) {
-            $pic[ 'pic' ] = 'images/nopic.gif';
-        }
-        list($width, $height, $type, $attr) = getimagesize($dir . 'large/' . $pic[ 'pic' ]);
+        $dir = $galclass->getLargeFile($pic[ 'picID' ]);
+
+        list($width, $height, $type, $attr) = getimagesize($dir);
 
         $pic[ 'name' ] = clearfromtags($pic[ 'name' ]);
         $pic[ 'comment' ] = cleartext($pic[ 'comment' ], false);
