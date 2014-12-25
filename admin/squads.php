@@ -546,7 +546,7 @@ onsubmit="return chkFormular();">
         <td class="' . $td . '"><a href="../index.php?site=squads&amp;squadID=' . $db[ 'squadID' ] .
                 '" target="_blank">' . getinput($db[ 'name' ]) . '</a></td>
         <td class="' . $td . '" align="center">' . $type . '</td>
-        <td class="' . $td . '">' . cleartext($db[ 'info' ], 1, 'admin') . '</td>
+        <td class="' . $td . '">' . cleartext($db[ 'info' ], true, 'admin') . '</td>
         <td class="' . $td . '" align="center">
             <a href="admincenter.php?site=squads&amp;action=edit&amp;squadID=' .
                 $db[ 'squadID' ] . '">' . $_language->module[ 'edit' ] . '</a>

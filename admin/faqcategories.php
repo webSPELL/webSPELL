@@ -237,7 +237,7 @@ onsubmit="return chkFormular();">
 
         echo '<tr>
             <td class="' . $td . '"><b>' . getinput($ds[ 'faqcatname' ]) . '</b>
-            <br />' . cleartext($ds[ 'description' ], 1, 'admin') . '</td>
+            <br />' . cleartext($ds[ 'description' ], true, 'admin') . '</td>
             <td class="' . $td . '" align="center">
             <a href="admincenter.php?site=faqcategories&amp;action=editcat&amp;faqcatID=' .
             $ds[ 'faqcatID' ] . '" class="input">' . $_language->module[ 'edit' ] .'</a>
