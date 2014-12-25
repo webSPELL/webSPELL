@@ -148,8 +148,7 @@ if ($action == "new") {
     $date = strtotime($_POST['date']);
     if (isset($_POST[ 'hometeam' ])) {
         $hometeam = $_POST[ 'hometeam' ];
-    }
-    else{
+    } else {
         $hometeam = array();
     }
     if (isset($_POST[ 'squad' ])) {
@@ -384,14 +383,12 @@ if ($action == "new") {
                 unset($score);
             }
             $results_ext .= '[/TOGGLE]';
-        }
-        else{
+        } else {
             $results_ext = "";
         }
         if (!empty($report)) {
             $more1 = '[TOGGLE=Report]' . getforminput($report) . '[/TOGGLE]';
-        }
-        else{
+        } else {
             $more1 = "";
         }
         $home = "";
