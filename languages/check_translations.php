@@ -26,13 +26,13 @@ foreach($all_langs as $lang){
 	$files = glob($lang.'/*');
 	$untranslated = 0;
 	foreach ($files as $file) {
+		$file_name = basename($file);
 		if(checkBom($file) !== false){
 			$errors[$file_name][] = 'UTF-8 BOM';
 		}
 		ob_start();
 		include($file);
 		ob_end_clean();
-		$file_name = basename($file);
 		if($lang == $baseLanguage){
 			$ref_keys[$file_name] = $language_array;
 			$all_keys += count($language_array);
