@@ -20,6 +20,7 @@
     "grunt-contrib-jshint": "^0.10.0",
     "grunt-contrib-watch": "^0.6.1",
     "grunt-githooks": "^0.3.1",
+    "grunt-htmlhint": "^0.4.1",
     "grunt-htmllint": "^0.2.4",
     "grunt-jscs": "^0.8.1",
     "grunt-lintspaces": "^0.6.0",

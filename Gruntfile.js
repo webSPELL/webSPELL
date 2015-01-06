@@ -94,6 +94,15 @@ module.exports = function(grunt) {
             },
             src: templates
         },
+        htmlhint: {
+            options: {
+                htmlhintrc: ".htmlhintrc", // https://github.com/yaniswang/HTMLHint/wiki/Rules
+                force: true
+            },
+            html1: {
+                src: [ "templates/*.html" ]
+            }
+        },
         bootlint: {
             options: {
                 stoponerror: false,
@@ -187,6 +196,7 @@ module.exports = function(grunt) {
     // These plugins provide necessary tasks.
     grunt.loadNpmTasks("grunt-contrib-watch");
     grunt.loadNpmTasks("grunt-contrib-jshint");
+    grunt.loadNpmTasks("grunt-htmlhint");
     grunt.loadNpmTasks("grunt-phplint");
     grunt.loadNpmTasks("grunt-phpcs");
     grunt.loadNpmTasks("grunt-phpcpd");
@@ -208,6 +218,7 @@ module.exports = function(grunt) {
         "jscs",
         "phplint",
         "phpcs",
+        "htmlhint",
         "htmllint",
         "bootlint"
     ]);
