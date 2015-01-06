@@ -43,15 +43,15 @@ if (isset($_POST[ 'save' ]) && $_POST[ 'save' ]) {
 
     safe_query(
         "INSERT INTO
-          " . PREFIX . "cash_box (
-            `date`,
-            `paydate`,
-            `usedfor`,
-            `info`,
-            `totalcosts`,
-            `usercosts`,
-            `squad`,
-            `konto`
+            " . PREFIX . "cash_box (
+                `date`,
+                `paydate`,
+                `usedfor`,
+                `info`,
+                `totalcosts`,
+                `usercosts`,
+                `squad`,
+                `konto`
         )
         VALUES (
             '$date',
@@ -344,9 +344,9 @@ if (!isclanmember($userID) && !iscashadmin($userID)) {
 
                 $all = safe_query(
                     "SELECT
-                      *
+                        *
                     FROM
-                      " . PREFIX . "cash_box
+                        " . PREFIX . "cash_box
                     WHERE
                         squad='" . $squadID . "'
                     ORDER BY
@@ -381,12 +381,12 @@ if (!isclanmember($userID) && !iscashadmin($userID)) {
                     foreach ($members as $usID) {
                         $ergebnis = safe_query(
                             "SELECT
-                              *
+                                *
                             FROM
-                              " . PREFIX . "cash_box_payed
+                                " . PREFIX . "cash_box_payed
                             WHERE
                                 userID='$usID' AND
-                                cashID='".(int)$id."'"
+                                cashID='" . (int)$id . "'"
                         );
                         $du = mysqli_fetch_array($ergebnis);
                         $user = '<a href="index.php?site=profile&amp;id=' . $usID . '">

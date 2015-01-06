@@ -1,153 +1,143 @@
 <script>
-	<!--
-	function chkFormular() {
-		if (!validbbcode(document.getElementById('info').value)) {
-			document.getElementById('info').focus();
+    <!--
+    function chkFormular() {
+        if (!validbbcode(document.getElementById('info').value)) {
+            document.getElementById('info').focus();
 
-			return false;
-		}
-	}
-	-->
+            return false;
+        }
+    }
+    -->
 </script>
 <div class="panel panel-default">
-	<div class="panel-heading">
-		<h3 class="panel-title">%challenge%</h3>
-	</div>
-	<div class="panel-body">
-		<form action="index.php?site=challenge&amp;action=save" method="post" name="post"
-				role="form" class="form-horizontal">
+    <div class="panel-heading">
+        <h3 class="panel-title">%challenge%</h3>
+    </div>
+    <div class="panel-body">
+        <form action="index.php?site=challenge&amp;action=save" method="post" name="post" role="form"
+            class="form-horizontal">
 
-			<!-- Error Box -->
-			$showerror
+            <!-- Error Box -->
+            $showerror
 
-			<!-- Datetime -->
-			<div class="form-group">
-				<label for="input-datetime" class="col-xs-12 col-md-3 control-label">%date%:</label>
+            <!-- Datetime -->
+            <div class="form-group">
+                <label for="input-datetime" class="col-xs-12 col-md-3 control-label">%date%:</label>
 
-				<div class="col-xs-12 col-md-9">
-					<input type="datetime-local" name="datetime" min="$date_now" class="form-control"
-							id="input-datetime" value="$datetime">
-				</div>
-			</div>
+                <div class="col-xs-12 col-md-9">
+                    <input type="datetime-local" name="datetime" min="$date_now" class="form-control"
+                        id="input-datetime" value="$datetime">
+                </div>
+            </div>
 
-			<!-- Squad -->
-			<div class="form-group">
-				<label for="select-squad" class="col-xs-12 col-md-3 control-label">%squad%:</label>
+            <!-- Squad -->
+            <div class="form-group">
+                <label for="select-squad" class="col-xs-12 col-md-3 control-label">%squad%:</label>
 
-				<div class="col-xs-12 col-md-9">
-					<select name="squad" id="select-squad" class="form-control">
-						$squads
-					</select>
-				</div>
-			</div>
+                <div class="col-xs-12 col-md-9">
+                    <select name="squad" id="select-squad" class="form-control">
+                        $squads
+                    </select>
+                </div>
+            </div>
 
-			<!-- Opponent -->
-			<div class="form-group">
-				<label for="input-opponent"
-						class="col-xs-12 col-md-3 control-label">%opponent%:</label>
+            <!-- Opponent -->
+            <div class="form-group">
+                <label for="input-opponent" class="col-xs-12 col-md-3 control-label">%opponent%:</label>
 
-				<div class="col-xs-12 col-md-9">
-					<input type="text" name="opponent" class="form-control" id="input-opponent"
-							value="$opponent">
-				</div>
-			</div>
+                <div class="col-xs-12 col-md-9">
+                    <input type="text" name="opponent" class="form-control" id="input-opponent" value="$opponent">
+                </div>
+            </div>
 
-			<!-- Homepage -->
-			<div class="form-group">
-				<label for="input-homepage"
-						class="col-xs-12 col-md-3 control-label">%homepage%:</label>
+            <!-- Homepage -->
+            <div class="form-group">
+                <label for="input-homepage" class="col-xs-12 col-md-3 control-label">%homepage%:</label>
 
-				<div class="col-xs-12 col-md-9">
-					<input type="url" name="opphp" class="form-control" id="input-homepage"
-							value="$opphp">
-				</div>
-			</div>
+                <div class="col-xs-12 col-md-9">
+                    <input type="url" name="opphp" class="form-control" id="input-homepage" value="$opphp">
+                </div>
+            </div>
 
-			<!-- League -->
-			<div class="form-group">
-				<label for="input-league" class="col-xs-12 col-md-3 control-label">%league%:</label>
+            <!-- League -->
+            <div class="form-group">
+                <label for="input-league" class="col-xs-12 col-md-3 control-label">%league%:</label>
 
-				<div class="col-xs-12 col-md-9">
-					<input type="text" name="league" class="form-control" id="input-league"
-							value="$league">
-				</div>
-			</div>
+                <div class="col-xs-12 col-md-9">
+                    <input type="text" name="league" class="form-control" id="input-league" value="$league">
+                </div>
+            </div>
 
-			<!-- Country -->
-			<div class="form-group">
-				<label for="select-oppcountry"
-						class="col-xs-12 col-md-3 control-label">%country%:</label>
+            <!-- Country -->
+            <div class="form-group">
+                <label for="select-oppcountry" class="col-xs-12 col-md-3 control-label">%country%:</label>
 
-				<div class="col-xs-12 col-md-9">
-					<select name="oppcountry" id="select-oppcountry" class="form-control">
-						$countries
-					</select>
-				</div>
-			</div>
+                <div class="col-xs-12 col-md-9">
+                    <select name="oppcountry" id="select-oppcountry" class="form-control">
+                        $countries
+                    </select>
+                </div>
+            </div>
 
-			<!-- Map -->
-			<div class="form-group">
-				<label for="input-map" class="col-xs-12 col-md-3 control-label">%map%:</label>
+            <!-- Map -->
+            <div class="form-group">
+                <label for="input-map" class="col-xs-12 col-md-3 control-label">%map%:</label>
 
-				<div class="col-xs-12 col-md-9">
-					<input type="text" name="map" class="form-control" id="input-map" value="$map">
-				</div>
-			</div>
+                <div class="col-xs-12 col-md-9">
+                    <input type="text" name="map" class="form-control" id="input-map" value="$map">
+                </div>
+            </div>
 
-			<!-- Server -->
-			<div class="form-group">
-				<label for="input-server" class="col-xs-12 col-md-3 control-label">%server%:</label>
+            <!-- Server -->
+            <div class="form-group">
+                <label for="input-server" class="col-xs-12 col-md-3 control-label">%server%:</label>
 
-				<div class="col-xs-12 col-md-9">
-					<input type="text" name="server" class="form-control" id="input-server"
-							value="$server">
-				</div>
-			</div>
+                <div class="col-xs-12 col-md-9">
+                    <input type="text" name="server" class="form-control" id="input-server" value="$server">
+                </div>
+            </div>
 
-			<!-- Email -->
-			<div class="form-group">
-				<label for="input-email" class="col-xs-12 col-md-3 control-label">%email%:</label>
+            <!-- Email -->
+            <div class="form-group">
+                <label for="input-email" class="col-xs-12 col-md-3 control-label">%email%:</label>
 
-				<div class="col-xs-12 col-md-9">
-					<input type="email" name="email" class="form-control" id="input-email"
-							value="$email">
-				</div>
-			</div>
+                <div class="col-xs-12 col-md-9">
+                    <input type="email" name="email" class="form-control" id="input-email" value="$email">
+                </div>
+            </div>
 
-			<!-- Info -->
-			<div class="form-group">
-				<label for="textarea-info" class="col-xs-12 col-md-3 control-label">%info%:</label>
+            <!-- Info -->
+            <div class="form-group">
+                <label for="textarea-info" class="col-xs-12 col-md-3 control-label">%info%:</label>
 
-				<div class="col-xs-12 col-md-9">
-					<textarea name="info" id="textarea-info" class="form-control"
-							rows="5">$info</textarea>
-				</div>
-			</div>
+                <div class="col-xs-12 col-md-9">
+                    <textarea name="info" id="textarea-info" class="form-control" rows="5">$info</textarea>
+                </div>
+            </div>
 
-			<!-- Security code -->
-			<div class="form-group">
-				<label for="input-security-code" class="col-xs-12 col-md-3 control-label">
-					%security_code%:
-				</label>
+            <!-- Security code -->
+            <div class="form-group">
+                <label for="input-security-code" class="col-xs-12 col-md-3 control-label">
+                    %security_code%:
+                </label>
 
-				<div class="col-xs-12 col-md-9">
-					<div class="input-group">
-						<span class="input-group-addon captcha-img">$captcha</span>
-						<input type="number" name="captcha" class="form-control"
-								id="input-security-code">
-						<input name="captcha_hash" type="hidden" value="$hash">
-					</div>
-				</div>
-			</div>
+                <div class="col-xs-12 col-md-9">
+                    <div class="input-group">
+                        <span class="input-group-addon captcha-img">$captcha</span>
+                        <input type="number" name="captcha" class="form-control" id="input-security-code">
+                        <input name="captcha_hash" type="hidden" value="$hash">
+                    </div>
+                </div>
+            </div>
 
-			<!-- Submit button -->
-			<div class="form-group">
-				<div class="col-xs-12 text-right">
-					<button type="submit" name="post" class="btn btn-primary">%submit_challenge%
-					</button>
-				</div>
-			</div>
+            <!-- Submit button -->
+            <div class="form-group">
+                <div class="col-xs-12 text-right">
+                    <button type="submit" name="post" class="btn btn-primary">%submit_challenge%
+                    </button>
+                </div>
+            </div>
 
-		</form>
-	</div>
+        </form>
+    </div>
 </div>

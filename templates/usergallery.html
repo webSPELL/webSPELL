@@ -1,16 +1,15 @@
 <tr>
-	<td>
-		<a href="index.php?site=gallery&galleryID=$galleryID"><strong>$name</strong></a>
-	</td>
-	<td>
-		<a href="index.php?site=usergalleryaction=upload&upload=form&galleryID=$galleryID"
-				class="btn btn-primary">%add_img%</a>
-		<a href="index.php?site=usergallery&action=edit&galleryID=$galleryID"
-				class="btn btn-primary">%edit%</a>
-		<input type="button"
-				onclick="MM_confirm(
-				'%really_delete_gallery%',
-				'index.php?site=usergallery&amp;delete=true&amp;galleryID=$galleryID')"
-				value="%delete%" class="btn btn-danger">
-	</td>
+    <td>
+        <a href="index.php?site=gallery&galleryID=$galleryID"><strong>$name</strong></a>
+    </td>
+    <td>
+        <a href="index.php?site=usergalleryaction=upload&upload=form&galleryID=$galleryID"
+            class="btn btn-primary">%add_img%</a>
+        <a href="index.php?site=usergallery&action=edit&galleryID=$galleryID"
+            class="btn btn-primary">%edit%</a>
+        <input type="button" onclick="MM_confirm(
+                '%really_delete_gallery%',
+                'index.php?site=usergallery&amp;delete=true&amp;galleryID=$galleryID')"
+            value="%delete%" class="btn btn-danger">
+    </td>
 </tr>

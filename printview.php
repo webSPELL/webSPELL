@@ -91,11 +91,11 @@ if (mysqli_num_rows($thread)) {
     $boardname = $db[ 'name' ];
 
     echo '<div style="width:640px;">
-  <table class="table">
-    <tr>
-      <td><strong>' . $boardname . '</strong> &#8226; <strong>' . getinput($dt[ 'topic' ]) . '</strong></td>
-    </tr>
-  </table><hr size="1"><br>';
+    <table class="table">
+        <tr>
+            <td><strong>' . $boardname . '</strong> &#8226; <strong>' . getinput($dt[ 'topic' ]) . '</strong></td>
+        </tr>
+    </table><hr size="1"><br>';
 
     echo '<table class="table">';
 
@@ -132,9 +132,9 @@ if (mysqli_num_rows($thread)) {
 
         echo '<tr>
         <td valign="top"><i>' . $date . ', ' . $time . ' </i> - <strong>' . $username . '</strong> - ' .
-            $usertype . ' - ' . $posts . ' ' . $_language->module[ 'posts' ] . '
-        <br>' . $message . ' ><i>' . $signatur . '</i>><br>&nbsp;</td>
-      </tr>';
+            $usertype . ' - ' . $posts . ' ' . $_language->module[ 'posts' ] . '<br>' .
+            $message . ' ><i>' . $signatur . '</i>><br>&nbsp;</td>
+        </tr>';
     }
     echo '</table><br></div></body></html>';
 }

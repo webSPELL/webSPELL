@@ -504,11 +504,11 @@ if (isset($_POST[ 'saveedit' ])) {
     $pics = mysqli_num_rows(
         safe_query(
             "SELECT
-              `picID`
+                `picID`
             FROM
-              `" . PREFIX . "gallery_pictures`
+                `" . PREFIX . "gallery_pictures`
             WHERE
-              `galleryID` = '" . (int)$_GET[ 'galleryID' ] . "'"
+                `galleryID` = '" . (int)$_GET[ 'galleryID' ] . "'"
         )
     );
 

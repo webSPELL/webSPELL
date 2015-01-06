@@ -39,10 +39,18 @@ if (isset($_POST[ 'save' ])) {
 
     safe_query(
         "INSERT INTO
-          " . PREFIX . "links ( linkcatID, name, url, info )
-        values
-          ( '" . $_POST[ 'cat' ] . "', '" . strip_tags($_POST[ 'name' ]) . "', '" . $_POST[ 'url' ] .
-        "', '" . $_POST[ 'info' ] . "' ) "
+            " . PREFIX . "links (
+                linkcatID,
+                name,
+                url,
+                info
+            )
+        values (
+            '" . $_POST[ 'cat' ] . "',
+            '" . strip_tags($_POST[ 'name' ]) . "',
+            '" . $_POST[ 'url' ] . "',
+            '" . $_POST[ 'info' ] . "'
+        ) "
     );
 
     $id = mysqli_insert_id($_database);
@@ -95,8 +103,9 @@ if (isset($_POST[ 'save' ])) {
             @unlink($filepath . $banner[ 'name' ] . ".tmp");
             $error = $_language->module[ 'banner_to_big' ];
             die(
-                '<strong>' . $error . '</strong><br><br><a href="index.php?site=links&amp;action=edit&amp;linkID=' .
-                $id . '">&laquo; ' . $_language->module[ 'back' ] . '</a>'
+                '<strong>' . $error . '</strong><br><br>
+                <a href="index.php?site=links&amp;action=edit&amp;linkID=' . $id . '">&laquo; ' .
+                    $_language->module[ 'back' ] . '</a>'
             );
         }
     }
@@ -108,12 +117,14 @@ if (isset($_POST[ 'save' ])) {
 
     safe_query(
         "UPDATE
-          " . PREFIX . "links
+            " . PREFIX . "links
         SET
-          linkcatID='" . $_POST[ 'cat' ] . "', name='" .
-        strip_tags($_POST[ 'name' ]) . "', url='" . $_POST[ 'url' ] . "', info='" . $_POST[ 'info' ] . "'
+            linkcatID='" . $_POST[ 'cat' ] . "',
+            name='" . strip_tags($_POST[ 'name' ]) . "',
+            url='" . $_POST[ 'url' ] . "',
+            info='" . $_POST[ 'info' ] . "'
         WHERE
-          linkID='" . $_POST[ 'linkID' ] . "'"
+            linkID='" . $_POST[ 'linkID' ] . "'"
     );
 
     $filepath = "./images/links/";
@@ -305,8 +316,8 @@ if ($action == "new") {
         eval ("\$links_foot = \"" . gettemplate("links_foot") . "\";");
         echo $links_foot;
     } else {
-        echo $_language->module[ 'no_links' ] . '<br><br>
-  [ <a href="index.php?site=links">' . $_language->module[ 'go_back' ] . '</a> ]';
+        echo $_language->module[ 'no_links' ] . '<br><br>[ <a href="index.php?site=links">' .
+            $_language->module[ 'go_back' ] . '</a> ]';
     }
 } else {
     $_language->readModule('links');
@@ -327,11 +338,11 @@ if ($action == "new") {
             $anzlinks = mysqli_num_rows(
                 safe_query(
                     "SELECT
-                      linkID
+                        linkID
                     FROM
-                      " . PREFIX . "links
+                        " . PREFIX . "links
                     WHERE
-                      linkcatID='" . $ds[ 'linkcatID' ] . "'"
+                        linkcatID='" . $ds[ 'linkcatID' ] . "'"
                 )
             );
             if ($i % 2) {

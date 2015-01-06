@@ -738,10 +738,10 @@ function toggle($content, $id)
         </td>
     </tr>
     <tr>
-      <td style="padding-left: 16px;"><div id="ToggleRow_' . $id . '_%d" style="display:none">';
+        <td style="padding-left: 16px;"><div id="ToggleRow_' . $id . '_%d" style="display:none">';
     $replace2 = '</div></td>
     </tr>
-  </table>';
+    </table>';
 
     $n = 0;
     while (($pos = mb_strpos(strtolower($content), "[toggle=")) !== false) {

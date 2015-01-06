@@ -250,9 +250,7 @@ if (isclanwaradmin($userID)) {
             echo '<a class="btn btn-default btn-xs" href="index.php?site=challenge&amp;type=DESC">' .
                 $_language->module['sort'] . ' <span class="glyphicon glyphicon-chevron-down"></span></a>';
         } else {
-            echo '
-
-		<a class="btn btn-default btn-xs" href="index.php?site=challenge&amp;type=ASC">' .
+            echo '<a class="btn btn-default btn-xs" href="index.php?site=challenge&amp;type=ASC">' .
                 $_language->module['sort'] . ' <span class="glyphicon glyphicon-chevron-up"></span></a>';
         }
         echo '</p>';

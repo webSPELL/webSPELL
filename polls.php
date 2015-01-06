@@ -46,7 +46,7 @@ if ($action == "vote") {
                     `userIDs`,
                     `hosts`
                 FROM
-                  `" . PREFIX . "poll`
+                    `" . PREFIX . "poll`
                 WHERE
                     `pollID` = '" . (int)$pollID."'"
             )
@@ -366,9 +366,10 @@ if ($action == "new") {
             $option9 = getinput($ds[ 'o9' ]);
             $option10 = getinput($ds[ 'o10' ]);
 
-            $comments = '<option value="0">' . $_language->module[ 'disable_comments' ] . '</option>
-                         <option value="1">' . $_language->module[ 'enable_user_comments' ] . '</option>
-                         <option value="2">' . $_language->module[ 'enable_visitor_comments' ] . '</option>';
+            $comments = '
+                <option value="0">' . $_language->module[ 'disable_comments' ] . '</option>
+                <option value="1">' . $_language->module[ 'enable_user_comments' ] . '</option>
+                <option value="2">' . $_language->module[ 'enable_visitor_comments' ] . '</option>';
             $comments = str_replace(
                 'value="' . $ds[ 'comments' ] . '"',
                 'value="' . $ds[ 'comments' ] . '" selected="selected"',
@@ -425,21 +426,21 @@ if ($action == "new") {
     if (ispollsadmin($userID)) {
         if ($ds[ 'aktiv' ]) {
             $stop = ' <input type="button" onclick="MM_confirm(
-                    \'' . $_language->module[ 'really_stop' ] . '\',
-                    \'polls.php?end=true&amp;pollID=' . $ds[ 'pollID' ] . '\'
-			    )" value="' . $_language->module[ 'stop_poll' ] . '" class="btn btn-danger"> ';
+                \'' . $_language->module[ 'really_stop' ] . '\',
+                \'polls.php?end=true&amp;pollID=' . $ds[ 'pollID' ] . '\'
+            )" value="' . $_language->module[ 'stop_poll' ] . '" class="btn btn-danger"> ';
         } else {
             $stop = ' <input type="button" onclick="MM_confirm(
-                    \'' . $_language->module[ 'really_reopen' ] . '\',
-                    \'polls.php?reopen=true&amp;pollID=' . $ds[ 'pollID' ] . '\'
-			    )" value="' . $_language->module[ 'reopen_poll' ] . '" class="btn btn-danger"> ';
+                \'' . $_language->module[ 'really_reopen' ] . '\',
+                \'polls.php?reopen=true&amp;pollID=' . $ds[ 'pollID' ] . '\'
+            )" value="' . $_language->module[ 'reopen_poll' ] . '" class="btn btn-danger"> ';
         }
         $edit = ' <a href="index.php?site=polls&amp;action=edit&amp;pollID=' . $ds[ 'pollID' ] .
             '" class="btn btn-danger">' . $_language->module[ 'edit' ] . '</a>';
         $adminactions = $edit . '<input type="button" onclick="MM_confirm(
-		        \'' . $_language->module[ 'really_delete' ] . '\',
-		        \'polls.php?delete=true&amp;pollID=' . $ds[ 'pollID' ] . '\'
-            )" value="' . $_language->module[ 'delete' ] . '" class="btn btn-danger">' . $stop;
+            \'' . $_language->module[ 'really_delete' ] . '\',
+            \'polls.php?delete=true&amp;pollID=' . $ds[ 'pollID' ] . '\'
+        )" value="' . $_language->module[ 'delete' ] . '" class="btn btn-danger">' . $stop;
     }
 
     $votes = safe_query("SELECT * FROM " . PREFIX . "poll_votes WHERE pollID='" . $pollID . "'");
@@ -562,12 +563,12 @@ if ($action == "new") {
             redirect('index.php?site=polls&amp;pollID=' . $ds[ 'pollID' ], $_language->module[ 'already_voted' ], 3);
         } else {
             echo '<form method="post" action="polls.php?action=vote">
-			<table class="table">
-				<tr>
-					<td><strong>' . $ds[ 'titel' ] . '</strong><br><br></td>
-				</tr>
-				<tr>
-					<td>';
+            <table class="table">
+                <tr>
+                    <td><strong>' . $ds[ 'titel' ] . '</strong><br><br></td>
+                </tr>
+                <tr>
+                <td>';
 
             for ($n = 1; $n <= 10; $n++) {
                 if ($ds[ 'o' . $n ]) {
@@ -580,16 +581,16 @@ if ($action == "new") {
                 $n++;
             }
             echo '</td>
-        </tr>
-        <tr>
-          <td><br><input type="hidden" name="pollID" value="' . $ds[ 'pollID' ] . '">
-          <input type="submit" value="vote"></td>
-        </tr>
-        <tr>
-          <td><br>&#8226; <a href="index.php?site=polls">' . $_language->module[ 'show_polls' ] . '</a></td>
-        </tr>
-      </table>
-      </form>';
+            </tr>
+            <tr>
+                <td><br><input type="hidden" name="pollID" value="' . $ds[ 'pollID' ] . '">
+                <input type="submit" value="vote"></td>
+            </tr>
+            <tr>
+                <td><br>&#8226; <a href="index.php?site=polls">' . $_language->module[ 'show_polls' ] . '</a></td>
+            </tr>
+        </table>
+        </form>';
         }
     } else {
         redirect('index.php?site=polls&pollID=' . $ds[ 'pollID' ], $_language->module[ 'poll_ended' ], 3);
@@ -606,13 +607,13 @@ if ($action == "new") {
     $ergebnis =
         safe_query(
             "SELECT
-              *
+                *
             FROM
-              " . PREFIX . "poll
+                " . PREFIX . "poll
             WHERE
-              intern<=" . (int)isclanmember($userID) . "
+                intern<=" . (int)isclanmember($userID) . "
             ORDER BY
-              pollID DESC"
+                pollID DESC"
         );
     $anz = mysqli_num_rows($ergebnis);
     if ($anz) {
@@ -654,23 +655,23 @@ if ($action == "new") {
             if (ispollsadmin($userID)) {
                 if ($ds[ 'aktiv' ]) {
                     $stop = ' <input type="button" onclick="MM_confirm(
-					        \'' . $_language->module[ 'really_stop' ] . '\',
-					        \'polls.php?end=true&amp;pollID=' . $ds[ 'pollID' ] . '\'
-                        )" value="' . $_language->module[ 'stop_poll' ] . '" class="btn btn-danger"> ';
+                        \'' . $_language->module[ 'really_stop' ] . '\',
+                        \'polls.php?end=true&amp;pollID=' . $ds[ 'pollID' ] . '\'
+                    )" value="' . $_language->module[ 'stop_poll' ] . '" class="btn btn-danger"> ';
                 } else {
                     $stop = ' <input type="button" onclick="MM_confirm(
-					    \'' . $_language->module[ 'really_reopen' ] . '\',
-					    \'polls.php?reopen=true&amp;pollID=' . $ds[ 'pollID' ] . '\'
-					    )" value="' . $_language->module[ 'reopen_poll' ] . '" class="btn btn-danger"> ';
+                    \'' . $_language->module[ 'really_reopen' ] . '\',
+                    \'polls.php?reopen=true&amp;pollID=' . $ds[ 'pollID' ] . '\'
+                    )" value="' . $_language->module[ 'reopen_poll' ] . '" class="btn btn-danger"> ';
                 }
                 $edit = ' <a href="index.php?site=polls&amp;action=edit&amp;pollID=' . $ds[ 'pollID' ] . '"
                         class="btn btn-danger">
-				        ' . $_language->module[ 'edit' ] . '
-				    </a> ';
+                    ' . $_language->module[ 'edit' ] . '
+                </a> ';
                 $adminactions = $edit . '<input type="button" onclick="MM_confirm(
-                        \'' . $_language->module[ 'really_delete' ] . '\',
-                        \'polls.php?delete=true&amp;pollID=' . $ds[ 'pollID' ] . '\'
-				    )" value="' . $_language->module[ 'delete' ] . '" class="btn btn-danger">' . $stop;
+                    \'' . $_language->module[ 'really_delete' ] . '\',
+                    \'polls.php?delete=true&amp;pollID=' . $ds[ 'pollID' ] . '\'
+                )" value="' . $_language->module[ 'delete' ] . '" class="btn btn-danger">' . $stop;
             }
 
             $votes = safe_query("SELECT * FROM " . PREFIX . "poll_votes WHERE pollID='" . $ds[ 'pollID' ] . "'");

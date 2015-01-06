@@ -17,14 +17,13 @@ function generate_rss2()
     }
     $xmlstring = '<?xml version="1.0" encoding="UTF-8"?>
                 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-                  <channel>
-                    <title>' . $hp_title . ' ' . $_language->module['news_feed'] . '</title>
-                    <link>http://' . $hp_url . '</link>
-                    <atom:link href="http://' . $hp_url . '/tmp/rss.xml" rel="self" type="application/rss+xml" />
-                    <description>' . $_language->module['latest_news_from'] . ' http://' . $hp_url . '</description>
-                    <language>' . $rss_default_language . '-' . $rss_default_language . '</language>
-                    <pubDate>' . date('D, d M Y h:i:s O', $updated) . '</pubDate>
-                    ';
+                    <channel>
+                        <title>' . $hp_title . ' ' . $_language->module['news_feed'] . '</title>
+                        <link>http://' . $hp_url . '</link>
+                        <atom:link href="http://' . $hp_url . '/tmp/rss.xml" rel="self" type="application/rss+xml" />
+                        <description>' . $_language->module['latest_news_from'] . ' http://' . $hp_url . '</description>
+                        <language>' . $rss_default_language . '-' . $rss_default_language . '</language>
+                        <pubDate>' . date('D, d M Y h:i:s O', $updated) . '</pubDate>';
     $db_news = safe_query(
         "SELECT * FROM `" . PREFIX . "news` WHERE `published` = 1 AND `intern` = 0 ORDER BY `date` DESC LIMIT 0,10"
     );
@@ -44,30 +43,28 @@ function generate_rss2()
             if ($any_newscontent) {
                 $newscontent = mysqli_fetch_array($db_newscontent);
                 $xmlstring .= '<item>
-	                       <title>' . htmlspecialchars(($newscontent['headline'])) . '</title>
-	                       <description><![CDATA[' . htmloutput($newscontent['content']) . ']]></description>
-	                       <author>' .
-                                getemail($news['poster']) . ' (' .
-                                getfirstname($news['poster']) . ' ' .
-                                getlastname($news['poster']) . ')' .
-                           '</author>
-	                       <guid>
-	                            <![CDATA[http://' . $hp_url . '/index.php?site=news_comments&newsID=' .
-                                $news['newsID'] . ']]>
-                           </guid>
-	                       <link>
-	                            <![CDATA[http://' . $hp_url . '/index.php?site=news_comments&newsID=' .
-                                $news['newsID'] . ']]>
-                           </link>
-	                     </item>
-	  			            ';
+                <title>' . htmlspecialchars(($newscontent['headline'])) . '</title>
+                <description><![CDATA[' . htmloutput($newscontent['content']) . ']]></description>
+                <author>' .
+                    getemail($news['poster']) . ' (' .
+                    getfirstname($news['poster']) . ' ' .
+                    getlastname($news['poster']) . ')' .
+                '</author>
+                <guid>
+                    <![CDATA[http://' . $hp_url . '/index.php?site=news_comments&newsID=' .
+                    $news['newsID'] . ']]>
+                </guid>
+                <link>
+                    <![CDATA[http://' . $hp_url . '/index.php?site=news_comments&newsID=' .
+                    $news['newsID'] . ']]>
+                </link>
+                </item>';
             } else {
                 continue;
             }
         }
     }
-    $xmlstring .= '</channel>
-                 </rss>';
+    $xmlstring .= '</channel></rss>';
     $rss_xml = fopen("tmp/rss.xml", "w");
     fwrite($rss_xml, $xmlstring);
     fclose($rss_xml);

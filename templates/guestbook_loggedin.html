@@ -1,36 +1,36 @@
 <script>
-	<!--
-	function chkFormular() {
-		if (document.getElementById('guestbookmessage').value === "") {
-			alert("%enter_a_message%");
-			document.getElementById('guestbookmessage').focus();
+    <!--
+    function chkFormular() {
+        if (document.getElementById('guestbookmessage').value === "") {
+            alert("%enter_a_message%");
+            document.getElementById('guestbookmessage').focus();
 
-			return false;
-		}
-		if (!validbbcode(document.getElementById('guestbookmessage').value)) {
+            return false;
+        }
+        if (!validbbcode(document.getElementById('guestbookmessage').value)) {
 
-			return false;
-		}
-	}
-	-->
+            return false;
+        }
+    }
+    -->
 </script>
 
 <form id="post" name="post" method="post" action="guestbook.php" onsubmit="return chkFormular()">
 
-	<h4>%new_entry%</h4>
+    <h4>%new_entry%</h4>
 
-	<div class="form-group">
-		$addbbcode
-	</div>
-	<div class="form-group">
-		<label for="guestbookmessage">%your_message%:</label>
+    <div class="form-group">
+        $addbbcode
+    </div>
+    <div class="form-group">
+        <label for="guestbookmessage">%your_message%:</label>
 
-		<textarea id="guestbookmessage" name="message" rows="5" class="form-control" autofocus>
-			$message
-		</textarea>
-		<small class="pull-right"><strong>%options%:</strong> %bbcode% %smilies%</small>
-	</div>
-	<div class="form-group">
-		<input name="save" type="submit" value="%submit%" class="btn btn-primary">
-	</div>
+        <textarea id="guestbookmessage" name="message" rows="5" class="form-control" autofocus>
+            $message
+        </textarea>
+        <small class="pull-right"><strong>%options%:</strong> %bbcode% %smilies%</small>
+    </div>
+    <div class="form-group">
+        <input name="save" type="submit" value="%submit%" class="btn btn-primary">
+    </div>
 </form>

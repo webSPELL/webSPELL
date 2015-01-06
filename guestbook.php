@@ -65,15 +65,15 @@ if (isset($_POST[ 'save' ])) {
         if (mb_strlen($_POST[ 'message' ])) {
             safe_query(
                 "INSERT INTO
-                  " . PREFIX . "guestbook (date, name, email, hp, icq, ip, comment)
+                    " . PREFIX . "guestbook (date, name, email, hp, icq, ip, comment)
                 VALUES
-                  ('" . $date . "',
-                  '" . $name . "',
-                  '" . $email . "',
-                  '" . $url . "',
-                  '" . $icq . "',
-                  '" . $GLOBALS[ 'ip' ] . "',
-                  '" . $_POST[ 'message' ] . "');"
+                    ('" . $date . "',
+                    '" . $name . "',
+                    '" . $email . "',
+                    '" . $url . "',
+                    '" . $icq . "',
+                    '" . $GLOBALS[ 'ip' ] . "',
+                    '" . $_POST[ 'message' ] . "');"
             );
 
             if ($gb_info) {
@@ -125,11 +125,11 @@ if (isset($_POST[ 'save' ])) {
 
     safe_query(
         "UPDATE
-          " . PREFIX . "guestbook
+            " . PREFIX . "guestbook
         SET
-          admincomment='" . $_POST[ 'message' ] . "'
+            admincomment='" . $_POST[ 'message' ] . "'
         WHERE
-          gbID='" . $_POST[ 'guestbookID' ] . "' "
+            gbID='" . $_POST[ 'guestbookID' ] . "' "
     );
 
     header("Location: index.php?site=guestbook");
@@ -161,9 +161,9 @@ if (isset($_POST[ 'save' ])) {
             $ds = mysqli_fetch_array(
                 safe_query(
                     "SELECT
-                      comment, name
+                        comment, name
                     FROM
-                      `" . PREFIX . "guestbook`
+                        `" . PREFIX . "guestbook`
                     WHERE gbID='" . $_GET[ 'messageID' ] . "'"
                 )
             );
@@ -314,7 +314,7 @@ if (isset($_POST[ 'save' ])) {
     if (isfeedbackadmin($userID)) {
         $submit = '<input class="input" type="checkbox" name="ALL" value="ALL" onclick="SelectAll(this.form);"> ' .
             $_language->module[ 'select_all' ] . '
-  <input type="submit" value="' . $_language->module[ 'delete_selected' ] . '" class="btn btn-danger">';
+            <input type="submit" value="' . $_language->module[ 'delete_selected' ] . '" class="btn btn-danger">';
     } else {
         $submit = '';
     }

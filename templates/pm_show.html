@@ -1,25 +1,25 @@
 <form method="post" action="messenger.php">
 
-	<div class="btn-group btn-group-justified">
-		<a href="index.php?site=messenger" class="btn btn-default">%incoming%</a>
-		<a href="index.php?site=messenger&amp;action=outgoing" class="btn btn-default">%outgoing%</a>
-		<a href="index.php?site=messenger&amp;action=newmessage" class="btn btn-default">%new_message%</a>
-		<span class="btn btn-default"><strong>&nbsp;%read%&nbsp;</strong></span>
-	</div>
-	<br>
+    <div class="btn-group btn-group-justified">
+        <a href="index.php?site=messenger" class="btn btn-default">%incoming%</a>
+        <a href="index.php?site=messenger&amp;action=outgoing" class="btn btn-default">%outgoing%</a>
+        <a href="index.php?site=messenger&amp;action=newmessage" class="btn btn-default">%new_message%</a>
+        <span class="btn btn-default"><strong>&nbsp;%read%&nbsp;</strong></span>
+    </div>
+    <br>
 
-	<div class="row">
-		<div class="col-md-6"><span class="icon-envelope"></span> <strong>$title</strong></div>
-		<div class="col-md-6 text-right">$date %by% $sender</div>
-	</div>
+    <div class="row">
+        <div class="col-md-6"><span class="icon-envelope"></span> <strong>$title</strong></div>
+        <div class="col-md-6 text-right">$date %by% $sender</div>
+    </div>
 
-	<div class="well">
-		$message
-	</div>
+    <div class="well">
+        $message
+    </div>
 
-	<input type="hidden" name="quickaction" value="true">
-	<input type="hidden" name="quickactiontype" value="delete">
-	<input type="hidden" name="messageID[]" value="$id">
-	<a href="index.php?site=messenger&action=reply&id=$id" class="btn btn-primary">%reply%</a>
-	<input type="submit" value="%delete%" class="btn btn-danger">
+    <input type="hidden" name="quickaction" value="true">
+    <input type="hidden" name="quickactiontype" value="delete">
+    <input type="hidden" name="messageID[]" value="$id">
+    <a href="index.php?site=messenger&action=reply&id=$id" class="btn btn-primary">%reply%</a>
+    <input type="submit" value="%delete%" class="btn btn-danger">
 </form>

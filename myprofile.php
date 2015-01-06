@@ -279,7 +279,7 @@ if (!$userID) {
                         time_format='" . $time_format . "',
                         language='" . $language . "',
                         user_guestbook='" . $user_gbook . "'
-					WHERE
+                    WHERE
                         userID='" . $id . "'"
             );
 
@@ -457,13 +457,13 @@ if (!$userID) {
                 $email_hide = '';
             }
             $format_date = "<option value='d.m.y'>DD.MM.YY</option>
-							<option value='d.m.Y'>DD.MM.YYYY</option>
-							<option value='j.n.y'>D.M.YY</option>
-							<option value='j.n.Y'>D.M.YYYY</option>
-							<option value='y-m-d'>YY-MM-DD</option>
-							<option value='Y-m-d'>YYYY-MM-DD</option>
-							<option value='y/m/d'>YY/MM/DD</option>
-							<option value='Y/m/d'>YYYY/MM/DD</option>";
+                <option value='d.m.Y'>DD.MM.YYYY</option>
+                <option value='j.n.y'>D.M.YY</option>
+                <option value='j.n.Y'>D.M.YYYY</option>
+                <option value='y-m-d'>YY-MM-DD</option>
+                <option value='Y-m-d'>YYYY-MM-DD</option>
+                <option value='y/m/d'>YY/MM/DD</option>
+                <option value='Y/m/d'>YYYY/MM/DD</option>";
             $format_date = str_replace(
                 "value='" . $ds['date_format'] . "'",
                 "value='" . $ds['date_format'] . "' selected='selected'",
@@ -471,17 +471,17 @@ if (!$userID) {
             );
 
             $format_time = "<option value='G:i'>H:MM</option>
-							<option value='H:i'>HH:MM</option>
-							<option value='G:i a'>H:MM am/pm</option>
-							<option value='H:i a'>HH:MM am/pm</option>
-							<option value='G:i A'>H:MM AM/PM</option>
-							<option value='H:i A'>HH:MM AM/PM</option>
-							<option value='G:i:s'>H:MM:SS</option>
-							<option value='H:i:s'>HH:MM:SS</option>
-							<option value='G:i:s a'>H:MM:SS am/pm</option>
-							<option value='H:i:s a'>HH:MM:SS am/pm</option>
-							<option value='G:i:s A'>H:MM:SS AM/PM</option>
-							<option value='H:i:s A'>HH:MM:SS AM/PM</option>";
+                <option value='H:i'>HH:MM</option>
+                <option value='G:i a'>H:MM am/pm</option>
+                <option value='H:i a'>HH:MM am/pm</option>
+                <option value='G:i A'>H:MM AM/PM</option>
+                <option value='H:i A'>HH:MM AM/PM</option>
+                <option value='G:i:s'>H:MM:SS</option>
+                <option value='H:i:s'>HH:MM:SS</option>
+                <option value='G:i:s a'>H:MM:SS am/pm</option>
+                <option value='H:i:s a'>HH:MM:SS am/pm</option>
+                <option value='G:i:s A'>H:MM:SS AM/PM</option>
+                <option value='H:i:s A'>HH:MM:SS AM/PM</option>";
             $format_time = str_replace(
                 "value='" . $ds['time_format'] . "'",
                 "value='" . $ds['time_format'] . "' selected='selected'",
@@ -496,15 +496,13 @@ if (!$userID) {
             );
             $user_gbook_select = '';
             if ($user_guestbook) {
+                $user_gbook_select = '<div class="form-group"><label for="pm_mail" class="col-lg-3 control-label">' .
+                    $_language->module['guestbook'] . ':</label>
 
-                $user_gbook_select = '<div class="form-group">
-    <label for="pm_mail" class="col-lg-3 control-label">' . $_language->module['guestbook'] .
-                    ':</label>
-
-    <div class="col-lg-9">
-        <select name="user_guestbook" class="form-control">' . $user_gbook . '</select>
-    </div>
-</div>';
+                    <div class="col-lg-9">
+                        <select name="user_guestbook" class="form-control">' . $user_gbook . '</select>
+                    </div>
+                </div>';
             }
             $birthday = date("Y-m-d", strtotime($ds[ 'birthday' ]));
             $countries = getcountries();

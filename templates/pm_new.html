@@ -1,75 +1,75 @@
 <script>
-	<!--
-	function chkFormular() {
-		if (document.getElementById('message').value == "") {
-			alert("%enter_message%");
-			document.getElementById('message').focus();
+    <!--
+    function chkFormular() {
+        if (document.getElementById('message').value == "") {
+            alert("%enter_message%");
+            document.getElementById('message').focus();
 
-			return false;
-		}
-		if (!validbbcode(document.getElementById('message').value)) {
+            return false;
+        }
+        if (!validbbcode(document.getElementById('message').value)) {
 
-			return false;
-		}
-	}
+            return false;
+        }
+    }
 
-	-->
+    -->
 </script>
 
 <form method="post" action="messenger.php" id="post" name="post" onsubmit="return chkFormular()">
-	<div class="btn-group btn-group-justified">
-		<a href="index.php?site=messenger" class="btn btn-default">%incoming%</a>
-		<a href="index.php?site=messenger&amp;action=outgoing"
-				class="btn btn-default">%outgoing%</a>
-		<span class="btn btn-primary">%new_message%</span>
-	</div>
-	<br>
+    <div class="btn-group btn-group-justified">
+        <a href="index.php?site=messenger" class="btn btn-default">%incoming%</a>
+        <a href="index.php?site=messenger&amp;action=outgoing" class="btn btn-default">%outgoing%</a>
+        <span class="btn btn-primary">%new_message%</span>
+    </div>
+    <br>
 
-	$error <!-- <div class="alert alert-danger"><strong>Error:</strong><br>Error message</div> -->
+    $error <!-- <div class="alert alert-danger"><strong>Error:</strong><br>Error message</div> -->
 
-	<div class="form-group">
-		<label for="title">%title%</label>
-		<input id="title" name="title" value="$subject" type="text" class="form-control" autofocus>
-	</div>
+    <div class="form-group">
+        <label for="title">%title%</label>
+        <input id="title" name="title" value="$subject" type="text" class="form-control" autofocus>
+    </div>
 
-	<div class="form-group">
-		<label for="recipient">%recipient%</label>
-		<div class="row">
-			<div class="col-md-6">
-				<input id="recipient" name="touser_field" type="text" class="form-control"
-					placeholder="%enter_username%">
-			</div>
-			<div class="col-md-6">
-				<select name="touser[]" size="1" class="form-control">$user</select>
-			</div>
-		</div>
-	</div>
+    <div class="form-group">
+        <label for="recipient">%recipient%</label>
 
-	<div class="form-group">
-		<strong>%formation%</strong><br>$addbbcode
-	</div>
+        <div class="row">
+            <div class="col-md-6">
+                <input id="recipient" name="touser_field" type="text" class="form-control"
+                    placeholder="%enter_username%">
+            </div>
+            <div class="col-md-6">
+                <select name="touser[]" size="1" class="form-control">$user</select>
+            </div>
+        </div>
+    </div>
 
-	<div class="form-group">
-		<strong>%your_message%</strong><br>
-		<textarea name="message" id="message" rows="10" class="form-control">$message</textarea>
-	</div>
+    <div class="form-group">
+        <strong>%formation%</strong><br>$addbbcode
+    </div>
 
-	<div class="form-group text-right">
-		<small><strong>%options%</strong> <a
-				href="javascript:void(0);" onclick="window.open(
-				'code.php',
-				'BBCode',
-				'scrollbars=yes,width=600,height=500')">%bbcode%</a>
-			|
-			<a href="javascript:void(0);" onclick="window.open(
-			'smileys.php',
-			'Smileys',
-			'scrollbars=yes,width=340,height=500')">%smilies%</a>
-		</small>
-	</div>
+    <div class="form-group">
+        <strong>%your_message%</strong><br>
+        <textarea name="message" id="message" rows="10" class="form-control">$message</textarea>
+    </div>
 
-	<div class="form-group">
-		<input type="submit" name="send" value="%send_message%" class="btn btn-danger pull-right">
-	</div>
-	$admin
+    <div class="form-group text-right">
+        <small><strong>%options%</strong> <a
+                href="javascript:void(0);" onclick="window.open(
+                    'code.php',
+                    'BBCode',
+                    'scrollbars=yes,width=600,height=500')">%bbcode%</a>
+            |
+            <a href="javascript:void(0);" onclick="window.open(
+                'smileys.php',
+                'Smileys',
+                'scrollbars=yes,width=340,height=500')">%smilies%</a>
+        </small>
+    </div>
+
+    <div class="form-group">
+        <input type="submit" name="send" value="%send_message%" class="btn btn-danger pull-right">
+    </div>
+    $admin
 </form>

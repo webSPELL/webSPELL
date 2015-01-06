@@ -1,40 +1,40 @@
 <script>
-	<!--
-	var comment_submit = false;
+    <!--
+    var comment_submit = false;
 
-	function chkFormular() {
-		if (document.getElementById('message').value === "") {
-			alert('%enter_message%');
-			document.getElementById('message').focus();
+    function chkFormular() {
+        if (document.getElementById('message').value === "") {
+            alert('%enter_message%');
+            document.getElementById('message').focus();
 
-			return false;
-		}
-		if (!validbbcode(document.getElementById('message').value)) {
+            return false;
+        }
+        if (!validbbcode(document.getElementById('message').value)) {
 
-			return false;
-		}
-		if (comment_submit) {
+            return false;
+        }
+        if (comment_submit) {
 
-			return false;
-		}
-		comment_submit = true;
-	}
-	-->
+            return false;
+        }
+        comment_submit = true;
+    }
+    -->
 </script>
 
 <form id="post" name="post" action="comments.php" method="post" onsubmit="return chkFormular()">
-	<h4>%title_comment%</h4>
+    <h4>%title_comment%</h4>
 
-	<div class="form-group">
-		<textarea name="message" id="message" rows="3" class="form-control"></textarea>
-	</div>
-	<div class="form-group">
-		<input type="submit" name="saveusercomment" value="%post_comment%" class="btn btn-primary">
-		<small class="pull-right">%bbcode_on% | %smilies_on%</small>
-	</div>
+    <div class="form-group">
+        <textarea name="message" id="message" rows="3" class="form-control"></textarea>
+    </div>
+    <div class="form-group">
+        <input type="submit" name="saveusercomment" value="%post_comment%" class="btn btn-primary">
+        <small class="pull-right">%bbcode_on% | %smilies_on%</small>
+    </div>
 
-	<input type="hidden" name="userID" value="$userID">
-	<input type="hidden" name="referer" value="$referer">
-	<input type="hidden" name="parentID" value="$parentID">
-	<input type="hidden" name="type" value="$type">
+    <input type="hidden" name="userID" value="$userID">
+    <input type="hidden" name="referer" value="$referer">
+    <input type="hidden" name="parentID" value="$parentID">
+    <input type="hidden" name="type" value="$type">
 </form>

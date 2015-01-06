@@ -207,15 +207,15 @@ if (isset($_POST['delete'])) {
         if ($page == "1") {
             $ergebnis = safe_query(
                 "SELECT
-                  *
+                    *
                 FROM
-                  " . PREFIX . "messenger
+                    " . PREFIX . "messenger
                 WHERE
-                  touser='$userID'
+                    touser='$userID'
                 AND
-                  userID='$userID'
+                    userID='$userID'
                 ORDER BY
-                  $sort $type LIMIT 0,$max"
+                    $sort $type LIMIT 0,$max"
             );
             if ($type == "DESC") {
                 $n = $gesamt;
@@ -226,15 +226,15 @@ if (isset($_POST['delete'])) {
             $start = $page * $max - $max;
             $ergebnis = safe_query(
                 "SELECT
-                  *
+                    *
                 FROM
-                  " . PREFIX . "messenger
+                    " . PREFIX . "messenger
                 WHERE
-                  touser='$userID'
+                    touser='$userID'
                 AND
-                  userID='$userID'
+                    userID='$userID'
                 ORDER BY
-                  $sort $type LIMIT $start,$max"
+                    $sort $type LIMIT $start,$max"
             );
             if ($type == "DESC") {
                 $n = ($gesamt) - $page * $max + $max;
@@ -365,15 +365,15 @@ if (isset($_POST['delete'])) {
         if ($page == "1") {
             $ergebnis = safe_query(
                 "SELECT
-                  *
+                    *
                 FROM
-                  " . PREFIX . "messenger
+                    " . PREFIX . "messenger
                 WHERE
-                  fromuser='$userID'
+                    fromuser='$userID'
                 AND
-                  userID='$userID'
+                    userID='$userID'
                 ORDER BY
-                  $sort $type LIMIT 0,$max"
+                    $sort $type LIMIT 0,$max"
             );
             if ($type == "DESC") {
                 $n = $gesamt;
@@ -384,15 +384,15 @@ if (isset($_POST['delete'])) {
             $start = $page * $max - $max;
             $ergebnis = safe_query(
                 "SELECT
-                  *
+                    *
                 FROM
-                  " . PREFIX . "messenger
+                    " . PREFIX . "messenger
                 WHERE
-                  fromuser='$userID'
+                    fromuser='$userID'
                 AND
-                  userID='$userID'
+                    userID='$userID'
                 ORDER BY
-                  $sort $type LIMIT $start,$max"
+                    $sort $type LIMIT $start,$max"
             );
             if ($type == "DESC") {
                 $n = ($gesamt) - $page * $max + $max;
@@ -481,9 +481,9 @@ if (isset($_POST['delete'])) {
         $ds = mysqli_fetch_array(
             safe_query(
                 "SELECT
-                  *
+                    *
                 FROM
-                  " . PREFIX . "messenger
+                    " . PREFIX . "messenger
                 WHERE
                     messageID='" . $id . "'
                 AND

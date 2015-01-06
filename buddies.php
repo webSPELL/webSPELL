@@ -48,11 +48,11 @@ if ($action == "add") {
         if (mysqli_num_rows(
             safe_query(
                 "SELECT
-                  userID
+                    userID
                 FROM
-                  " . PREFIX . "user
+                    " . PREFIX . "user
                 WHERE
-                  userID='" . (int)$_GET[ 'id' ] . "'"
+                    userID='" . (int)$_GET[ 'id' ] . "'"
             )
         )
         ) {
@@ -84,22 +84,22 @@ if ($action == "add") {
         if (mysqli_num_rows(
             safe_query(
                 "SELECT
-                  userID
+                    userID
                 FROM
-                  " . PREFIX . "user
+                    " . PREFIX . "user
                 WHERE userID='" . (int)$_GET[ 'id' ] . "'"
             )
         )
         ) {
             safe_query(
                 "UPDATE
-                  " . PREFIX . "buddys
+                    " . PREFIX . "buddys
                 SET
-                  banned='1'
+                    banned='1'
                 WHERE
-                  userID='$userID'
+                    userID='$userID'
                 AND
-                  buddy='" . (int)$_GET[ 'id' ] . "'"
+                    buddy='" . (int)$_GET[ 'id' ] . "'"
             );
             header("Location: index.php?site=buddies");
         } else {

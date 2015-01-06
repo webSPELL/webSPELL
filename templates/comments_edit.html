@@ -1,51 +1,55 @@
 <script>
-	<!--
-	function chkFormular() {
-		if (document.getElementById('message').value == "") {
-			alert('%enter_message%');
-			document.getElementById('message').focus();
+    <!--
+    function chkFormular() {
+        if (document.getElementById('message').value == "") {
+            alert('%enter_message%');
+            document.getElementById('message').focus();
 
-			return false;
-		}
-		if (!validbbcode(document.getElementById('message').value)) {
+            return false;
+        }
+        if (!validbbcode(document.getElementById('message').value)) {
 
-			return false;
-		}
+            return false;
+        }
 
-	}
-	-->
+    }
+    -->
 </script>
 
 <form id="post" name="post" action="comments.php" method="post" onsubmit="return chkFormular()">
-	<table class="table">
-		<tr>
-			<td class="title text-center">%title_editcomment%</td>
-		</tr>
-		<tr>
-			<td>
-				<table class="table">
-					<tr>
-						<td>$addbbcode</td>
-					</tr>
-					<tr>
-						<td><textarea name="message" id="message" rows="5" cols="35" class="form-control">$message</textarea></td>
-					</tr>
-					<tr>
-						<td>
-							<small><strong>%options%:</strong> &#8226; %html_off% &#8226; %bbcode_on% &#8226;
-								%smilies_on%
-							</small>
-						</td>
-					</tr>
-					<tr>
-						<td><input type="hidden" name="authorID" value="$ds[userID]">
-							<input type="hidden" name="commentID" value="$id">
-							<input type="hidden" name="referer" value="$referer">
-							<input type="hidden" name="userID" value="$userID">
-							<input type="submit" name="saveeditcomment" value="%edit_comment%"></td>
-					</tr>
-				</table>
-			</td>
-		</tr>
-	</table>
+    <table class="table">
+        <tr>
+            <td class="title text-center">%title_editcomment%</td>
+        </tr>
+        <tr>
+            <td>
+                <table class="table">
+                    <tr>
+                        <td>$addbbcode</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <textarea name="message" id="message" rows="5" cols="35" class="form-control">
+                                $message
+                            </textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <small><strong>%options%:</strong> &#8226; %html_off% &#8226; %bbcode_on% &#8226;
+                                %smilies_on%
+                            </small>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="hidden" name="authorID" value="$ds[userID]">
+                            <input type="hidden" name="commentID" value="$id">
+                            <input type="hidden" name="referer" value="$referer">
+                            <input type="hidden" name="userID" value="$userID">
+                            <input type="submit" name="saveeditcomment" value="%edit_comment%"></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
 </form>

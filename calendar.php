@@ -94,59 +94,60 @@ function print_calendar($mon, $year)
     }
 
     echo '<table class="table">
-    <tr>
-      <td align="center"><a class="category" href="index.php?site=calendar&amp;month=01">' .
-        mb_substr($_language->module['jan'], 0, 3) . '</a></td>
-      <td align="center"><a class="category" href="index.php?site=calendar&amp;month=02">' .
-        mb_substr($_language->module['feb'], 0, 3) . '</a></td>
-      <td align="center"><a class="category" href="index.php?site=calendar&amp;month=03">' .
-        mb_substr($_language->module['mar'], 0, 3) . '</a></td>
-      <td align="center"><a class="category" href="index.php?site=calendar&amp;month=04">' .
-        mb_substr($_language->module['apr'], 0, 3) . '</a></td>
-      <td align="center"><a class="category" href="index.php?site=calendar&amp;month=05">' .
-        mb_substr($_language->module['may'], 0, 3) . '</a></td>
-      <td align="center"><a class="category" href="index.php?site=calendar&amp;month=06">' .
-        mb_substr($_language->module['jun'], 0, 3) . '</a></td>
-    </tr>
-    <tr>
-      <td align="center"><a class="category" href="index.php?site=calendar&amp;month=07">' .
-        mb_substr($_language->module['jul'], 0, 3) . '</a></td>
-      <td align="center"><a class="category" href="index.php?site=calendar&amp;month=08">' .
-        mb_substr($_language->module['aug'], 0, 3) . '</a></td>
-      <td align="center"><a class="category" href="index.php?site=calendar&amp;month=09">' .
-        mb_substr($_language->module['sep'], 0, 3) . '</a></td>
-      <td align="center"><a class="category" href="index.php?site=calendar&amp;month=10">' .
-        mb_substr($_language->module['oct'], 0, 3) . '</a></td>
-      <td align="center"><a class="category" href="index.php?site=calendar&amp;month=11">' .
-        mb_substr($_language->module['nov'], 0, 3) . '</a></td>
-      <td align="center"><a class="category" href="index.php?site=calendar&amp;month=12">' .
-        mb_substr($_language->module['dec'], 0, 3) . '</a></td>
-    </tr>
+        <tr>
+            <td align="center"><a class="category" href="index.php?site=calendar&amp;month=01">' .
+                mb_substr($_language->module['jan'], 0, 3) . '</a></td>
+            <td align="center"><a class="category" href="index.php?site=calendar&amp;month=02">' .
+                mb_substr($_language->module['feb'], 0, 3) . '</a></td>
+            <td align="center"><a class="category" href="index.php?site=calendar&amp;month=03">' .
+                mb_substr($_language->module['mar'], 0, 3) . '</a></td>
+            <td align="center"><a class="category" href="index.php?site=calendar&amp;month=04">' .
+                mb_substr($_language->module['apr'], 0, 3) . '</a></td>
+            <td align="center"><a class="category" href="index.php?site=calendar&amp;month=05">' .
+                mb_substr($_language->module['may'], 0, 3) . '</a></td>
+            <td align="center"><a class="category" href="index.php?site=calendar&amp;month=06">' .
+                mb_substr($_language->module['jun'], 0, 3) . '</a></td>
+        </tr>
+        <tr>
+            <td align="center"><a class="category" href="index.php?site=calendar&amp;month=07">' .
+                mb_substr($_language->module['jul'], 0, 3) . '</a></td>
+            <td align="center"><a class="category" href="index.php?site=calendar&amp;month=08">' .
+                mb_substr($_language->module['aug'], 0, 3) . '</a></td>
+            <td align="center"><a class="category" href="index.php?site=calendar&amp;month=09">' .
+                mb_substr($_language->module['sep'], 0, 3) . '</a></td>
+            <td align="center"><a class="category" href="index.php?site=calendar&amp;month=10">' .
+                mb_substr($_language->module['oct'], 0, 3) . '</a></td>
+            <td align="center"><a class="category" href="index.php?site=calendar&amp;month=11">' .
+                mb_substr($_language->module['nov'], 0, 3) . '</a></td>
+            <td align="center"><a class="category" href="index.php?site=calendar&amp;month=12">' .
+                mb_substr($_language->module['dec'], 0, 3) . '</a></td>
+        </tr>
     </table>';
 
     echo '<a name="event"></a><table class="table table-bordered">
     <tr>
-      <th class="text-center"><a class="titlelink" href="index.php?site=calendar&amp;month=' . $prev .
-        '&amp;year=' . $prev_yr . '">&laquo; ' .
-        mb_substr($_language->module[strtolower(date('M', mktime(0, 0, 0, $prev, 1, $prev_yr)))], 0, 3) . '</a></th>
-      <th class="text-center" colspan="5">' . $_language->module[strtolower(date("M", $first_day))] . ' ' .
-        $temp_yr . '</th>
-      <th class="text-center"><a class="titlelink" href="index.php?site=calendar&amp;month=' . $next .
-        '&amp;year=' . $next_yr . '">' . mb_substr(
-            $_language->module[strtolower(date('M', mktime(0, 0, 0, $next, 1, $next_yr)))],
-            0,
-            3
-        )
-        . ' &raquo;</a></th>
+        <th class="text-center">
+            <a class="titlelink" href="index.php?site=calendar&amp;month=' . $prev . '&amp;year=' . $prev_yr .
+            '">&laquo; ' .
+            mb_substr($_language->module[strtolower(date('M', mktime(0, 0, 0, $prev, 1, $prev_yr)))], 0, 3) . '</a>
+        </th>
+        <th class="text-center" colspan="5">' .
+            $_language->module[strtolower(date("M", $first_day))] . ' ' . $temp_yr . '
+        </th>
+        <th class="text-center">
+            <a class="titlelink" href="index.php?site=calendar&amp;month=' . $next . '&amp;year=' . $next_yr . '">' .
+            mb_substr($_language->module[strtolower(date('M', mktime(0, 0, 0, $next, 1, $next_yr)))], 0, 3) .
+            ' &raquo;</a>
+        </th>
     </tr>
     <tr>
-      <td width="14%" align="center">' . $_language->module['mon'] . '</td>
-      <td width="14%" align="center">' . $_language->module['tue'] . '</td>
-      <td width="14%" align="center">' . $_language->module['wed'] . '</td>
-      <td width="14%" align="center">' . $_language->module['thu'] . '</td>
-      <td width="14%" align="center">' . $_language->module['fri'] . '</td>
-      <td width="14%" align="center">' . $_language->module['sat'] . '</td>
-      <td width="16%" align="center">' . $_language->module['sun'] . '</td>
+        <td width="14%" align="center">' . $_language->module['mon'] . '</td>
+        <td width="14%" align="center">' . $_language->module['tue'] . '</td>
+        <td width="14%" align="center">' . $_language->module['wed'] . '</td>
+        <td width="14%" align="center">' . $_language->module['thu'] . '</td>
+        <td width="14%" align="center">' . $_language->module['fri'] . '</td>
+        <td width="14%" align="center">' . $_language->module['sat'] . '</td>
+        <td width="16%" align="center">' . $_language->module['sun'] . '</td>
     </tr>
     <tr>';
 
@@ -238,11 +239,13 @@ function print_calendar($mon, $year)
         }
     }
     echo '<tr>
-      <td colspan="7" align="center"><a class="category" href="index.php?site=calendar#event"><b>' .
-        $_language->module['today_events'] . '</b></a></td>
-    </tr>
-  </table>
-  <br><br>';
+            <td colspan="7" align="center">
+                <a class="category" href="index.php?site=calendar#event">
+                    <strong>' . $_language->module['today_events'] . '</strong>
+                </a>
+            </td>
+        </tr>
+    </table><br><br>';
 }
 
 function print_termine($tag, $month, $year)

@@ -1,77 +1,74 @@
 <script>
-	<!--
-	var comment_submit = false;
+    <!--
+    var comment_submit = false;
 
-	function chkFormular() {
-		if (document.getElementById('name').value == "") {
-			alert('%enter_name%');
-			document.getElementById('name').focus();
+    function chkFormular() {
+        if (document.getElementById('name').value == "") {
+            alert('%enter_name%');
+            document.getElementById('name').focus();
 
-			return false;
-		}
-		if (document.getElementById('message').value == "") {
-			alert('%enter_message%');
-			document.getElementById('message').focus();
+            return false;
+        }
+        if (document.getElementById('message').value == "") {
+            alert('%enter_message%');
+            document.getElementById('message').focus();
 
-			return false;
-		}
-		if (document.getElementById('captcha').value == "") {
-			alert('%error_captcha%');
-			document.getElementById('captcha').focus();
+            return false;
+        }
+        if (document.getElementById('captcha').value == "") {
+            alert('%error_captcha%');
+            document.getElementById('captcha').focus();
 
-			return false;
-		}
-		if (!validbbcode(document.getElementById('message').value)) {
+            return false;
+        }
+        if (!validbbcode(document.getElementById('message').value)) {
 
-			return false;
-		}
-		if (comment_submit == true) {
+            return false;
+        }
+        if (comment_submit == true) {
 
-			return false;
-		}
+            return false;
+        }
 
-		comment_submit = true;
-	}
-	-->
+        comment_submit = true;
+    }
+    -->
 </script>
 
 <hr name="addcomment">
-<form id="post" name="post" action="comments.php" method="post" onsubmit="return chkFormular()"
-		class="form-horizontal">
+<form id="post" name="post" action="comments.php" method="post" onsubmit="return chkFormular()" class="form-horizontal">
 
-	<h4>%title_comment%</h4>
+    <h4>%title_comment%</h4>
 
-	<div class="form-group">
-		<input name="name" type="text" id="name" value="$name" placeholder="%name%"
-				class="form-control">
-	</div>
-	<div class="form-group">
-		<input name="mail" type="email" value="$mail" placeholder="%mail%" class="form-control">
-	</div>
-	<div class="form-group">
-		<input name="url" type="url" value="$url" placeholder="%homepage%" class="form-control">
-	</div>
-	<div class="form-group">
-		<textarea name="message" id="message" rows="5" class="form-control">$message</textarea>
-	</div>
-	<div class="form-group">
-		<div class="input-group">
-			<span class="input-group-addon captcha-img">$captcha</span>
-			<input name="captcha" id="captcha" type="number" placeholder="Enter Captcha"
-					autocomplete="off" class="form-control">
-			<input name="captcha_hash" type="hidden" value="$hash">
-		</div>
-	</div>
+    <div class="form-group">
+        <input name="name" type="text" id="name" value="$name" placeholder="%name%" class="form-control">
+    </div>
+    <div class="form-group">
+        <input name="mail" type="email" value="$mail" placeholder="%mail%" class="form-control">
+    </div>
+    <div class="form-group">
+        <input name="url" type="url" value="$url" placeholder="%homepage%" class="form-control">
+    </div>
+    <div class="form-group">
+        <textarea name="message" id="message" rows="5" class="form-control">$message</textarea>
+    </div>
+    <div class="form-group">
+        <div class="input-group">
+            <span class="input-group-addon captcha-img">$captcha</span>
+            <input name="captcha" id="captcha" type="number" placeholder="Enter Captcha" autocomplete="off"
+                class="form-control">
+            <input name="captcha_hash" type="hidden" value="$hash">
+        </div>
+    </div>
 
-	<input type="hidden" name="referer" value="$referer">
-	<input type="hidden" name="parentID" value="$parentID">
-	<input type="hidden" name="type" value="$type">
-	<input type="hidden" name="ip" value="$ip">
+    <input type="hidden" name="referer" value="$referer">
+    <input type="hidden" name="parentID" value="$parentID">
+    <input type="hidden" name="type" value="$type">
+    <input type="hidden" name="ip" value="$ip">
 
-	<div class="form-group">
-		<input type="submit" name="savevisitorcomment" value="%post_comment%"
-				class="btn btn-primary">
-		<small><strong>%options%:</strong> &#8226; %html_off% &#8226; %bbcode_on% &#8226; %smilies_on%</small>
-	</div>
+    <div class="form-group">
+        <input type="submit" name="savevisitorcomment" value="%post_comment%" class="btn btn-primary">
+        <small><strong>%options%:</strong> &#8226; %html_off% &#8226; %bbcode_on% &#8226; %smilies_on%</small>
+    </div>
 
 </form>

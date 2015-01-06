@@ -419,21 +419,21 @@ if ($action == "new") {
         } else {
             $rateform = '<div class="input-group">
                             <select name="rating" class="form-control">
-                              <option>0 - ' . $_language->module[ 'poor' ] . '</option>
-                              <option>1</option>
-                              <option>2</option>
-                              <option>3</option>
-                              <option>4</option>
-                              <option>5</option>
-                              <option>6</option>
-                              <option>7</option>
-                              <option>8</option>
-                              <option>9</option>
-                              <option>10 - ' . $_language->module[ 'perfect' ] . '</option>
+                                <option>0 - ' . $_language->module[ 'poor' ] . '</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                                <option>6</option>
+                                <option>7</option>
+                                <option>8</option>
+                                <option>9</option>
+                                <option>10 - ' . $_language->module[ 'perfect' ] . '</option>
                             </select>
 
                             <span class="input-group-btn">
-                              <input type="submit" name="Submit" value="' . $_language->module[ 'rate' ] .
+                                <input type="submit" name="Submit" value="' . $_language->module[ 'rate' ] .
                                 '" class="btn btn-primary">
                             </span>
                         </div>

@@ -1,28 +1,27 @@
 <form action="index.php?site=report" name="report_$type_$id" method="post">
-	<input type="hidden" name="mode" value="$mode">
-	<input type="hidden" name="type" value="$type">
-	<input type="hidden" name="id" value="$id">
-	<input type="hidden" name="referer" value="$referer">
+    <input type="hidden" name="mode" value="$mode">
+    <input type="hidden" name="type" value="$type">
+    <input type="hidden" name="id" value="$id">
+    <input type="hidden" name="referer" value="$referer">
 
-	<div class="panel panel-default">
-		<div class="panel-heading">
-			<h3 class="panel-title">%report_dead_link%</h3>
-		</div>
-		<div class="panel-body">
-			%leave_description%
-			<textarea name="description" class="form-control" rows="5"></textarea>
-		</div>
-		<div class="panel-footer">
-			<div class="row">
-				<div class="col-md-7">$captcha_form</div>
-				<div class="col-md-5">
-					<p class="text-right">
-						<input type="submit" name="confirm" value="%report%"
-								class="btn btn-primary">
-						<input type="reset" name="reset" value="%reset%" class="btn btn-warning">
-					</p>
-				</div>
-			</div>
-		</div>
-	</div>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">%report_dead_link%</h3>
+        </div>
+        <div class="panel-body">
+            %leave_description%
+            <textarea name="description" class="form-control" rows="5"></textarea>
+        </div>
+        <div class="panel-footer">
+            <div class="row">
+                <div class="col-md-7">$captcha_form</div>
+                <div class="col-md-5">
+                    <p class="text-right">
+                        <input type="submit" name="confirm" value="%report%" class="btn btn-primary">
+                        <input type="reset" name="reset" value="%reset%" class="btn btn-warning">
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
 </form>

@@ -100,11 +100,11 @@ if ($action == "faqcat" && is_numeric($_GET[ 'faqcatID' ])) {
     $faqcatID = intval($_GET[ 'faqcatID' ]);
     $get = safe_query(
         "SELECT
-          `faqcatname`
+            `faqcatname`
         FROM
-          `" . PREFIX . "faq_categories`
+            `" . PREFIX . "faq_categories`
         WHERE
-          `faqcatID` = '" . (int)$faqcatID . "'"
+            `faqcatID` = '" . (int)$faqcatID . "'"
     );
     $dc = mysqli_fetch_assoc($get);
     $faqcatname = $dc[ 'faqcatname' ];
@@ -168,11 +168,11 @@ if ($action == "faqcat" && is_numeric($_GET[ 'faqcatID' ])) {
                 mysqli_num_rows(
                     safe_query(
                         "SELECT
-                          `faqID`
+                            `faqID`
                         FROM
-                          `" . PREFIX . "faq`
+                            `" . PREFIX . "faq`
                         WHERE
-                          `faqcatID` = '" . (int)$ds[ 'faqcatID' ] . "'"
+                            `faqcatID` = '" . (int)$ds[ 'faqcatID' ] . "'"
                     )
                 );
             if ($i % 2) {

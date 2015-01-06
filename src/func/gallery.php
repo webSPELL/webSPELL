@@ -213,10 +213,11 @@ class Gallery
                 safe_query(
                     "SELECT
                         `galleryID`
-                    FROM `" . PREFIX . "gallery`
-                 WHERE
-                    `userID` = " . (int)$userID . " AND
-                    `galleryID` = " . (int)$galleryID
+                    FROM
+                        `" . PREFIX . "gallery`
+                    WHERE
+                        `userID` = " . (int)$userID . " AND
+                        `galleryID` = " . (int)$galleryID
                 )
             ) > 0
         );
@@ -227,7 +228,7 @@ class Gallery
 
         $ds = mysqli_fetch_array(
             safe_query(
-                "SELECT `userID` FROM `" . PREFIX . "gallery` WHERE `galleryID` = " . (int)$galleryID
+                "SELECT `userID` FROM `" . PREFIX . "gallery` WHERE `galleryID` = " . (int)$galleryID . ""
             )
         );
         return $ds['userID'];

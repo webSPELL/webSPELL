@@ -70,7 +70,7 @@ if (isset($_GET[ 'sponsorID' ])) {
         safe_query(
             "SELECT
                 `url`
-           FROM
+            FROM
                 " . PREFIX . "sponsors
             WHERE
                 `sponsorID` = '" . (int)$_GET[ 'sponsorID' ] . "'"

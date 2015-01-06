@@ -31,12 +31,12 @@ include("_settings.php");
 echo '<!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta name="description" content="Clanpage using webSPELL 4 CMS">
-	<meta name="author" content="webspell.org">
-	<meta name="copyright" content="Copyright 2005-2014 by webspell.org">
-	<meta name="generator" content="webSPELL">
-	<title>Smilies</title>';
+    <meta charset="utf-8">
+    <meta name="description" content="Clanpage using webSPELL 4 CMS">
+    <meta name="author" content="webspell.org">
+    <meta name="copyright" content="Copyright 2005-2014 by webspell.org">
+    <meta name="generator" content="webSPELL">
+    <title>Smilies</title>';
 $componentsCss = generateComponents($components['css'], 'css');
 foreach ($componentsCss as $component) {
     echo $component;
@@ -77,12 +77,12 @@ if (is_array($files)) {
         $smiley = explode(".", $file);
 
         echo '<tr>
-        <td><a href="javascript:AddCodeFromWindow(\':' . $smiley[ 0 ] . ':\')">
-                <img src="images/smileys/' . $file . '" alt="">
-            </a>
-        </td>
-        <td><a href="javascript:AddCodeFromWindow(\':' . $smiley[ 0 ] . ':\')">:' . $smiley[ 0 ] . ':</a></td>
-      </tr>';
+            <td><a href="javascript:AddCodeFromWindow(\':' . $smiley[ 0 ] . ':\')">
+                    <img src="images/smileys/' . $file . '" alt="">
+                </a>
+            </td>
+            <td><a href="javascript:AddCodeFromWindow(\':' . $smiley[ 0 ] . ':\')">:' . $smiley[ 0 ] . ':</a></td>
+        </tr>';
     }
 }
 

@@ -121,7 +121,7 @@ if (isset($_POST['save'])) {
 
             safe_query(
                 "INSERT INTO
-                  `" . PREFIX . "user` (
+                    `" . PREFIX . "user` (
                         `registerdate`,
                         `lastlogin`,
                         `username`,

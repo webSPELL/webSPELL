@@ -430,10 +430,11 @@ if ($action == "save") {
             $filesize = $sizeinfo[ 0 ];
             $description = htmlspecialchars($file[ 'info' ]);
             $name = htmlspecialchars($file[ 'filename' ]);
-            $unit = '<option value="b">Byte</option>
-                     <option value="kb">KByte</option>
-                     <option value="mb">MByte</option>
-                     <option value="gb">GByte</option>';
+            $unit = '
+                <option value="b">Byte</option>
+                <option value="kb">KByte</option>
+                <option value="mb">MByte</option>
+                <option value="gb">GByte</option>';
 
             switch ($sizeinfo[ 1 ]) {
                 case 'byte':
@@ -599,7 +600,7 @@ if ($action == "save") {
         "SELECT
             *
         FROM
-          `" . PREFIX . "files`
+            `" . PREFIX . "files`
         WHERE
             `filecatID` = '" . (int)$cat[ 'filecatID' ] . "' AND
             `accesslevel` <= " . (int)$accesslevel . "
@@ -751,7 +752,7 @@ if ($action == "save") {
                     `name`,
                     `subcatID`
                 FROM
-                  `" . PREFIX . "files_categorys`
+                    `" . PREFIX . "files_categorys`
                 WHERE
                     `filecatID` = '" . (int)$cat_id."'"
             )

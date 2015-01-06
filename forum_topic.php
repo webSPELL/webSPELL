@@ -672,10 +672,9 @@ function showtopic($topic, $edit, $addreply, $quoteID, $type)
                 $quote = "";
                 $actions = "";
                 echo '<table class="table">
-          <tr>
-            <td colspan="2" class="title" class="text-center">' . $_language->module['preview'] . '</td>
-          </tr>
-          <tr></td></tr>';
+                <tr>
+                <td colspan="2" class="title" class="text-center">' . $_language->module['preview'] . '</td>
+                </tr>';
 
                 eval ("\$forum_topic_content = \"" . gettemplate("forum_topic_content") . "\";");
                 echo $forum_topic_content;
@@ -899,15 +898,15 @@ function showtopic($topic, $edit, $addreply, $quoteID, $type)
         $adminactions = '<div class="row">
         <div class="col-xs-6 text-left"><input type="checkbox" name="ALL" value="ALL" onclick="SelectAll(this.form);">
             ' . $_language->module['select_all'] . '</div>
-		<div class="input-group col-xs-6">
+        <div class="input-group col-xs-6">
         <select name="admaction" class="form-control">
-          <option value="0">' . $_language->module['admin_actions'] . ':</option>
-          <option value="delposts">- ' . $_language->module['delete_posts'] . '</option>
-          <option value="stickytopic">- ' . $_language->module['make_topic_sticky'] . '</option>
-          <option value="unstickytopic">- ' . $_language->module['make_topic_unsticky'] . '</option>
-          <option value="movetopic">- ' . $_language->module['move_topic'] . '</option>
-          ' . $close . '
-          <option value="deletetopic">- ' . $_language->module['delete_topic'] . '</option>
+            <option value="0">' . $_language->module['admin_actions'] . ':</option>
+            <option value="delposts">- ' . $_language->module['delete_posts'] . '</option>
+            <option value="stickytopic">- ' . $_language->module['make_topic_sticky'] . '</option>
+            <option value="unstickytopic">- ' . $_language->module['make_topic_unsticky'] . '</option>
+            <option value="movetopic">- ' . $_language->module['move_topic'] . '</option>
+            ' . $close . '
+            <option value="deletetopic">- ' . $_language->module['delete_topic'] . '</option>
         </select>
         <span class="input-group-btn">
         <input type="submit" name="submit" value="' . $_language->module['go'] . '" class="btn btn-danger">

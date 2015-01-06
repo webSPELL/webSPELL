@@ -33,31 +33,31 @@ echo $title_imprint;
 $ergebnis =
     safe_query(
         "SELECT
-          u.firstname, u.lastname, u.nickname, u.userID
+            u.firstname, u.lastname, u.nickname, u.userID
         FROM
-          " . PREFIX . "user_groups as g, " . PREFIX . "user as u
+            " . PREFIX . "user_groups as g, " . PREFIX . "user as u
         WHERE
-          u.userID = g.userID
+            u.userID = g.userID
         AND
-          (g.page='1'
+            (g.page='1'
         OR
-          g.forum='1'
+            g.forum='1'
         OR
-          g.user='1'
+            g.user='1'
         OR
-          g.news='1'
+            g.news='1'
         OR
-          g.clanwars='1'
+            g.clanwars='1'
         OR
-          g.feedback='1'
+            g.feedback='1'
         OR
-          g.super='1'
+            g.super='1'
         OR
-          g.gallery='1'
+            g.gallery='1'
         OR
-          g.cash='1'
+            g.cash='1'
         OR
-          g.files='1')"
+            g.files='1')"
     );
 $administrators = '';
 while ($ds = mysqli_fetch_array($ergebnis)) {
@@ -67,13 +67,13 @@ while ($ds = mysqli_fetch_array($ergebnis)) {
 $ergebnis =
     safe_query(
         "SELECT
-          u.firstname, u.lastname, u.nickname, u.userID
+            u.firstname, u.lastname, u.nickname, u.userID
         FROM
-          " . PREFIX . "user_groups as g, " . PREFIX . "user as u
+            " . PREFIX . "user_groups as g, " . PREFIX . "user as u
         WHERE
-          u.userID = g.userID
+            u.userID = g.userID
         AND
-          g.moderator='1'"
+            g.moderator='1'"
     );
 $moderators = '';
 while ($ds = mysqli_fetch_array($ergebnis)) {

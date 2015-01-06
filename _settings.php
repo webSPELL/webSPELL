@@ -235,39 +235,39 @@ function system_error($text, $system = 1)
     }
     die('<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-  <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="description" content="Clanpage using webSPELL 4 CMS">
-    <meta name="author" content="webspell.org">
-    <meta name="keywords" content="webspell, webspell4, clan, cms">
-    <meta name="copyright" content="Copyright 2005-2014 by webspell.org">
-    <meta name="generator" content="webSPELL">
-    <title>webSPELL</title>
-  </head>
-  <body class="text-center">
-  <table class="table">
-    <tr>
-      <td>
-        <a href="http://www.webspell.org" target="_blank">
-            <img src="images/banner.gif" style="border:none;" alt="webSPELL.org" title="webSPELL.org">
-        </a>
-      </td>
-    </tr>
-    <tr>
-      <td><div style="color:#333333;font-family:Tahoma,Verdana,Arial;font-size:11px;padding:5px;">' . $info .
-        '<br><font color="red">' . $text . '</font><br>&nbsp;</div></td>
-    </tr>
-    <tr>
-      <td>
-        <div style="color:#333333;font-family:Tahoma,Verdana,Arial;font-size:11px;padding:5px;">
-            For support visit <a href="http://webspell.org" target="_blank">webspell.org</a>
-        </div>
-      </td>
-    </tr>
-  </table>
-  </body>
-  </html>');
+    <html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="Clanpage using webSPELL 4 CMS">
+        <meta name="author" content="webspell.org">
+        <meta name="keywords" content="webspell, webspell4, clan, cms">
+        <meta name="copyright" content="Copyright 2005-2014 by webspell.org">
+        <meta name="generator" content="webSPELL">
+        <title>webSPELL</title>
+    </head>
+    <body class="text-center">
+    <table class="table">
+        <tr>
+            <td>
+                <a href="http://www.webspell.org" target="_blank">
+                    <img src="images/banner.gif" style="border:none;" alt="webSPELL.org" title="webSPELL.org">
+                </a>
+            </td>
+        </tr>
+        <tr>
+            <td><div style="color:#333333;font-family:Tahoma,Verdana,Arial;font-size:11px;padding:5px;">' .
+                $info . '<br><font color="red">' . $text . '</font><br>&nbsp;</div></td>
+        </tr>
+        <tr>
+            <td>
+                <div style="color:#333333;font-family:Tahoma,Verdana,Arial;font-size:11px;padding:5px;">
+                    For support visit <a href="http://webspell.org" target="_blank">webspell.org</a>
+                </div>
+            </td>
+        </tr>
+        </table>
+    </body>
+    </html>');
 }
 
 // -- SYSTEM FILE INCLUDE -- //

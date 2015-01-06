@@ -74,11 +74,11 @@ if (isset($_POST[ 'submit' ])) {
 
         safe_query(
             "UPDATE
-              " . PREFIX . $table . "
+                " . PREFIX . $table . "
             SET
-              screens='" . $screens_string . "'
+                screens='" . $screens_string . "'
             WHERE
-              " . $tableid . "='" . (int)$id."'"
+                " . $tableid . "='" . (int)$id . "'"
         );
     }
     header("Location: upload.php?$tableid=$id");
@@ -107,26 +107,26 @@ if (isset($_POST[ 'submit' ])) {
     echo '<!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<meta name="description" content="Clanpage using webSPELL 4 CMS">
-	<meta name="author" content="webspell.org">
-	<meta name="copyright" content="Copyright 2005-2014 by webspell.org">
-	<meta name="generator" content="webSPELL">
-	<title>' . $_language->module[ 'file_upload' ] . '</title>
-  <script src="js/bbcode.js"></script>
-	<link href="_stylesheet.css" rel="stylesheet" type="text/css">
+    <meta charset="utf-8">
+    <meta name="description" content="Clanpage using webSPELL 4 CMS">
+    <meta name="author" content="webspell.org">
+    <meta name="copyright" content="Copyright 2005-2014 by webspell.org">
+    <meta name="generator" content="webSPELL">
+    <title>' . $_language->module[ 'file_upload' ] . '</title>
+    <script src="js/bbcode.js"></script>
+    <link href="_stylesheet.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 <center>
 <h2>' . $_language->module[ 'file_upload' ] . ':</h2>
 <form method="post" action="upload.php?' . $tableid . '=' . $id . '" enctype="multipart/form-data">
 <table class="table">
-  <tr>
-    <td class="text-center"><input type="file" name="screen">
-    <input type="submit" name="submit" value="' . $_language->module[ 'upload' ] . '">
-    <hr>
-    <h2>' . $_language->module[ 'existing_files' ] . ':</h2>
-    <table class="table">';
+    <tr>
+        <td class="text-center"><input type="file" name="screen">
+        <input type="submit" name="submit" value="' . $_language->module[ 'upload' ] . '">
+        <hr>
+        <h2>' . $_language->module[ 'existing_files' ] . ':</h2>
+        <table class="table">';
 
     $ergebnis = safe_query("SELECT screens FROM " . PREFIX . "$table WHERE $tableid='$id'");
 
@@ -156,18 +156,17 @@ if (isset($_POST[ 'submit' ])) {
                         \'upload.php?action=delete&amp;' . $tableid . '=' . $id . '&amp;file=' . basename($screen) . '\'
                     )" value="' . $_language->module[ 'delete' ] . '">
             </td>
-          </tr>';
+            </tr>';
             }
         }
     }
 
-    echo '</table>
-      </td>
+    echo '</table></td>
     </tr>
-  </table>
-  </form>
-  <br><br><input type="button" onclick="javascript:self.close()" value="' . $_language->module[ 'close_window' ] . '">
-  </center>
-  </body>
-  </html>';
+    </table>
+    </form>
+    <br><br><input type="button" onclick="javascript:self.close()" value="' . $_language->module[ 'close_window' ] . '">
+    </center>
+    </body>
+    </html>';
 }

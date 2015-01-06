@@ -1,122 +1,129 @@
 <script>
-	<!--
-	function chkFormular() {
-		if (document.getElementById('filename').value == "") {
-			alert("%you_have_to_enter_filename%");
-			document.getElementById('filename').focus();
-			return false;
-		}
-		if (
-				document.getElementById('upfile').value === "" &&
-				document.getElementById('fileurl').value == "http://"
-		) {
-			alert("%you_have_to_enter_file%");
-			document.getElementById('upfile').focus();
+    <!--
+    function chkFormular() {
+        if (document.getElementById('filename').value == "") {
+            alert("%you_have_to_enter_filename%");
+            document.getElementById('filename').focus();
+            return false;
+        }
+        if (
+                document.getElementById('upfile').value === "" &&
+                document.getElementById('fileurl').value == "http://"
+        ) {
+            alert("%you_have_to_enter_file%");
+            document.getElementById('upfile').focus();
 
-			return false;
-		}
-		if (
-				document.getElementById('fileurl').value !== "http://" &&
-				document.getElementById('upfile').value === ""
-		) {
-			if (!url(document.getElementById('fileurl').value)) {
-				alert("%you_have_to_enter_file%");
-				document.getElementById('fileurl').focus();
+            return false;
+        }
+        if (
+                document.getElementById('fileurl').value !== "http://" &&
+                document.getElementById('upfile').value === ""
+        ) {
+            if (!url(document.getElementById('fileurl').value)) {
+                alert("%you_have_to_enter_file%");
+                document.getElementById('fileurl').focus();
 
-				return false;
-			}
-		}
-		if (!validbbcode(document.getElementById('info').value)) {
-			document.getElementById('info').focus();
+                return false;
+            }
+        }
+        if (!validbbcode(document.getElementById('info').value)) {
+            document.getElementById('info').focus();
 
-			return false;
-		}
-	}
-	-->
+            return false;
+        }
+    }
+    -->
 </script>
 
-<form action="index.php?site=files&amp;action=save" method="post" name="post"
-		enctype="multipart/form-data" onsubmit="return chkFormular()" class="form-horizontal">
-	<input type="hidden" name="poster" value="$userID">
+<form action="index.php?site=files&amp;action=save" method="post" name="post" enctype="multipart/form-data"
+    onsubmit="return chkFormular()" class="form-horizontal">
+    <input type="hidden" name="poster" value="$userID">
 
-	<h2>%new_file%</h2>
+    <h2>%new_file%</h2>
 
-	<div class="form-group">
-		<label for="filename" class="col-lg-4 control-label">%filename%:</label>
-		<div class="col-lg-8">
-			<input type="text" name="filename" id="filename" size="30" class="form-control" autofocus="">
-		</div>
-	</div>
+    <div class="form-group">
+        <label for="filename" class="col-lg-4 control-label">%filename%:</label>
 
-	<div class="form-group">
-		<label for="filecat" class="col-lg-4 control-label">%category_cl%:</label>
-		<div class="col-lg-8">
-			<select id="filecat" name="filecat" class="form-control">$filecats</select>
-		</div>
-	</div>
+        <div class="col-lg-8">
+            <input type="text" name="filename" id="filename" size="30" class="form-control" autofocus="">
+        </div>
+    </div>
 
-	<div class="form-group">
-		<label for="info" class="col-lg-4 control-label">%info_description%:</label>
-		<div class="col-lg-8">
-			<textarea name="info" id="info" cols="44" rows="7" class="form-control"></textarea>
-		</div>
-	</div>
+    <div class="form-group">
+        <label for="filecat" class="col-lg-4 control-label">%category_cl%:</label>
 
-	<div class="form-group">
-		<label for="accesslevel" class="col-lg-4 control-label">%accesslevel%:</label>
-		<div class="col-lg-8">
-			<select id="accesslevel" name="accesslevel" class="form-control">$access</select>
-		</div>
-	</div>
+        <div class="col-lg-8">
+            <select id="filecat" name="filecat" class="form-control">$filecats</select>
+        </div>
+    </div>
 
-	<div class="form-group">
-		<label for="upfile" class="col-lg-4 control-label">%file-upload%:</label>
-		<div class="col-lg-8">
-			<input id="upfile" type="file" name="upfile" class="form-control">
-		</div>
-	</div>
+    <div class="form-group">
+        <label for="info" class="col-lg-4 control-label">%info_description%:</label>
 
-	<div class="form-group">
-		<label for="fileurl" class="col-lg-4 control-label">%extern-link%:</label>
+        <div class="col-lg-8">
+            <textarea name="info" id="info" cols="44" rows="7" class="form-control"></textarea>
+        </div>
+    </div>
 
-		<div class="col-lg-8">
-			<input type="url" name="fileurl" id="fileurl" size="40" value="http://"
-					class="form-control">
-		</div>
-	</div>
+    <div class="form-group">
+        <label for="accesslevel" class="col-lg-4 control-label">%accesslevel%:</label>
 
-	<div class="form-group">
-		<label for="filesize" class="col-lg-4 control-label">%file-size_e%:</label>
-		<div class="col-xs-9 col-lg-6">
-			<input id="filesize" name="filesize" type="text" maxlength="4" size="4" class="form-control">
-		</div>
-		<div class="col-xs-3 col-lg-2">
-			<select name="unit">
-				<option value="b">Byte</option>
-				<option value="kb">KByte</option>
-				<option value="mb" selected="selected">MByte</option>
-				<option value="gb">GByte</option>
-			</select>
-		</div>
-	</div>
+        <div class="col-lg-8">
+            <select id="accesslevel" name="accesslevel" class="form-control">$access</select>
+        </div>
+    </div>
 
-	<div class="form-group">
-		<label for="mirror2" class="col-lg-4 control-label">%mirror% #2:</label>
-		<div class="col-lg-8">
-			<input id="mirror2" type="url" name="mirror2" size="40" class="form-control">
-		</div>
-	</div>
+    <div class="form-group">
+        <label for="upfile" class="col-lg-4 control-label">%file-upload%:</label>
 
-	<div class="form-group">
-		<label for="mirror3" class="col-lg-4 control-label">%mirror% #3:</label>
-		<div class="col-lg-8">
-			<input id="mirror3" type="url" name="mirror3" size="40" class="form-control">
-		</div>
-	</div>
+        <div class="col-lg-8">
+            <input id="upfile" type="file" name="upfile" class="form-control">
+        </div>
+    </div>
 
-	<div class="form-group">
-		<div class="col-lg-12 text-right">
-			<input type="submit" name="submit" value="%upload%" class="btn btn-danger">
-		</div>
-	</div>
+    <div class="form-group">
+        <label for="fileurl" class="col-lg-4 control-label">%extern-link%:</label>
+
+        <div class="col-lg-8">
+            <input type="url" name="fileurl" id="fileurl" size="40" value="http://" class="form-control">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="filesize" class="col-lg-4 control-label">%file-size_e%:</label>
+
+        <div class="col-xs-9 col-lg-6">
+            <input id="filesize" name="filesize" type="text" maxlength="4" size="4" class="form-control">
+        </div>
+        <div class="col-xs-3 col-lg-2">
+            <select name="unit">
+                <option value="b">Byte</option>
+                <option value="kb">KByte</option>
+                <option value="mb" selected="selected">MByte</option>
+                <option value="gb">GByte</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="mirror2" class="col-lg-4 control-label">%mirror% #2:</label>
+
+        <div class="col-lg-8">
+            <input id="mirror2" type="url" name="mirror2" size="40" class="form-control">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="mirror3" class="col-lg-4 control-label">%mirror% #3:</label>
+
+        <div class="col-lg-8">
+            <input id="mirror3" type="url" name="mirror3" size="40" class="form-control">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-lg-12 text-right">
+            <input type="submit" name="submit" value="%upload%" class="btn btn-danger">
+        </div>
+    </div>
 </form>

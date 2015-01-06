@@ -295,17 +295,17 @@ if ($action == "new") {
     echo '<!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<meta name="description" content="Clanpage using webSPELL 4 CMS">
-	<meta name="author" content="webspell.org">
-	<meta name="copyright" content="Copyright 2005-2014 by webspell.org">
-	<meta name="generator" content="webSPELL">
+    <meta charset="utf-8">
+    <meta name="description" content="Clanpage using webSPELL 4 CMS">
+    <meta name="author" content="webspell.org">
+    <meta name="copyright" content="Copyright 2005-2014 by webspell.org">
+    <meta name="generator" content="webSPELL">
 
-<!-- Head & Title include -->
-	<title>' . PAGETITLE . '; ?></title>
-	<link href="_stylesheet.css" rel="stylesheet" type="text/css">
-	<script src="js/bbcode.js"></script>
-<!-- end Head & Title include -->
+    <!-- Head & Title include -->
+    <title>' . PAGETITLE . '; ?></title>
+    <link href="_stylesheet.css" rel="stylesheet" type="text/css">
+    <script src="js/bbcode.js"></script>
+    <!-- end Head & Title include -->
 </head>
 <body>';
 
@@ -395,14 +395,14 @@ if ($action == "new") {
     echo $news;
 
     echo '<hr>
-  <a href="news.php?action=edit&amp;newsID=' . $newsID . '" class="btn btn-danger">' .
+    <a href="news.php?action=edit&amp;newsID=' . $newsID . '" class="btn btn-danger">' .
         $_language->module[ 'edit' ] . '</a>
-  <input type="button" onclick="javascript:self.close()" value="' .
+    <input type="button" onclick="javascript:self.close()" value="' .
         $_language->module[ 'save_news' ] . '" class="btn btn-danger">
-  <input type="button" onclick="MM_confirm(
-      \'' . $_language->module[ 'really_delete' ] .
-      '\', \'news.php?action=delete&amp;id=' . $newsID . '&amp;close=true\'
-  )" value="' . $_language->module[ 'delete' ] . '" class="btn btn-danger"></body></html>';
+    <input type="button" onclick="MM_confirm(
+        \'' . $_language->module[ 'really_delete' ] .
+        '\', \'news.php?action=delete&amp;id=' . $newsID . '&amp;close=true\'
+    )" value="' . $_language->module[ 'delete' ] . '" class="btn btn-danger"></body></html>';
 } elseif ($quickactiontype == "publish") {
     include("_mysql.php");
     include("_settings.php");
@@ -503,11 +503,11 @@ if ($action == "new") {
     $ds = mysqli_fetch_array(
         safe_query(
             "SELECT
-              screens, poster
+                screens, poster
             FROM
-              " . PREFIX . "news
+                " . PREFIX . "news
             WHERE
-              newsID='" . (int)$id ."'"
+                newsID='" . (int)$id ."'"
         )
     );
     if (($ds[ 'poster' ] != $userID || !isnewswriter($userID)) && !isnewsadmin($userID)) {
@@ -982,27 +982,27 @@ if ($action == "new") {
         if (isnewsadmin($userID)) {
             $admdel = '<div class="row">
 
-	          <div class="col-md-4">
-	           <input class="input" id="archivecbx" type="checkbox" name="ALL" value="ALL"
-	                onclick="SelectAll(this.form);">
-	           <label for="archivecbx">' . $_language->module[ 'select_all' ] . '</label>
-	          </div>
-	          <div class="col-md-8">
+                <div class="col-md-4">
+                    <input class="input" id="archivecbx" type="checkbox" name="ALL" value="ALL"
+                    onclick="SelectAll(this.form);">
+                    <label for="archivecbx">' . $_language->module[ 'select_all' ] . '</label>
+                </div>
 
-	            <div class="input-group">
-			      <select name="quickactiontype" class="form-control">
-			          <option value="delete">' . $_language->module[ 'delete_selected' ] . '</option>
-			          <option value="unpublish">' . $_language->module[ 'unpublish_selected' ] . '</option>
-			      </select>
+                <div class="col-md-8">
+                    <div class="input-group">
+                        <select name="quickactiontype" class="form-control">
+                        <option value="delete">' . $_language->module[ 'delete_selected' ] . '</option>
+                        <option value="unpublish">' . $_language->module[ 'unpublish_selected' ] . '</option>
+                    </select>
 
-	              <span class="input-group-btn">
-	                <input type="submit" name="quickaction" value="' . $_language->module[ 'go' ] . '"
-	                    class="btn btn-danger">
-	              </span>
-	            </div>
+                    <span class="input-group-btn">
+                    <input type="submit" name="quickaction" value="' .
+                    $_language->module[ 'go' ] . '" class="btn btn-danger">
+                    </span>
+                </div>
 
-	          </div>
-	    </div></form>';
+                </div>
+            </div></form>';
         } else {
             $admdel = '';
         }

@@ -100,13 +100,13 @@ if ($action == "save" && isset($_POST['post'])) {
         $ergebnis =
             safe_query(
                 "SELECT
-                  userID
+                    userID
                 FROM
-                  " . PREFIX . "squads_members
+                    " . PREFIX . "squads_members
                 WHERE
-                  joinmember='1'
+                    joinmember='1'
                 AND
-                  squadID='" . $squad . "'"
+                    squadID='" . $squad . "'"
             );
         while ($ds = mysqli_fetch_assoc($ergebnis)) {
             $touser[] = $ds['userID'];
@@ -120,17 +120,16 @@ if ($action == "save" && isset($_POST['post'])) {
             $tmp_lang->readModule('joinus');
             $message = '[b]' . $tmp_lang->module['someone_want_to_join_your_squad'] . ' ' .
                 $_database->escape_string(getsquadname($squad)) . '![/b]
-				 ' . $tmp_lang->module['nick'] . ' ' . $nick . '
-				 ' . $tmp_lang->module['name'] . ': ' . $name . '
-				 ' . $tmp_lang->module['age'] . ': ' . $age . '
-				 ' . $tmp_lang->module['mail'] . ': [email]' . $email . '[/email]
-				 ' . $tmp_lang->module['messenger'] . ': ' . $messenger . '
-				 ' . $tmp_lang->module['city'] . ': ' . $city . '
-				 ' . $tmp_lang->module['clan_history'] . ': ' . $clanhistory . '
+                ' . $tmp_lang->module['nick'] . ' ' . $nick . '
+                ' . $tmp_lang->module['name'] . ': ' . $name . '
+                ' . $tmp_lang->module['age'] . ': ' . $age . '
+                ' . $tmp_lang->module['mail'] . ': [email]' . $email . '[/email]
+                ' . $tmp_lang->module['messenger'] . ': ' . $messenger . '
+                ' . $tmp_lang->module['city'] . ': ' . $city . '
+                ' . $tmp_lang->module['clan_history'] . ': ' . $clanhistory . '
 
-				 ' . $tmp_lang->module['info'] . ':
-				 ' . $info . '
-				 ';
+                ' . $tmp_lang->module['info'] . ':
+                ' . $info .'';
             sendmessage($id, $tmp_lang->module['message_title'], $message);
         }
         echo generateAlert($_language->module['thanks_you_will_get_mail'], 'alert-success');
@@ -163,11 +162,11 @@ if ($show == true) {
         }
         $res = safe_query(
             "SELECT
-              *, DATE_FORMAT(FROM_DAYS(TO_DAYS(NOW()) - TO_DAYS(birthday)), '%y') 'age'
+                *, DATE_FORMAT(FROM_DAYS(TO_DAYS(NOW()) - TO_DAYS(birthday)), '%y') 'age'
             FROM
-              " . PREFIX . "user
+                " . PREFIX . "user
             WHERE
-              userID = '$userID'"
+                userID = '$userID'"
         );
         $ds = mysqli_fetch_assoc($res);
         $nickname = getinput($ds['nickname']);

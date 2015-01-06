@@ -160,11 +160,11 @@ if ($action == "save") {
     $ds = mysqli_fetch_array(
         safe_query(
             "SELECT
-                  `screens`
-                FROM
-                  `" . PREFIX . "articles`
-                WHERE
-                    `articlesID` = '" . (int)$_GET[ 'articlesID' ] . "'"
+                `screens`
+            FROM
+                `" . PREFIX . "articles`
+            WHERE
+                `articlesID` = '" . (int)$_GET[ 'articlesID' ] . "'"
         )
     );
     if ($ds[ 'screens' ]) {
@@ -597,29 +597,29 @@ if ($action == "new") {
                 $rateform = $_language->module[ 'already_rated' ];
             } else {
                 $rateform = '<form method="post" action="rating.php">
-				<div class="input-group">
-                <select name="rating" class="form-control">
-                  <option>0 - ' . $_language->module[ 'poor' ] . '</option>
-                  <option>1</option>
-                  <option>2</option>
-                  <option>3</option>
-                  <option>4</option>
-                  <option>5</option>
-                  <option>6</option>
-                  <option>7</option>
-                  <option>8</option>
-                  <option>9</option>
-                  <option>10 - ' . $_language->module[ 'perfect' ] . '</option>
-                </select>
+                <div class="input-group">
+                    <select name="rating" class="form-control">
+                        <option>0 - ' . $_language->module[ 'poor' ] . '</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10 - ' . $_language->module[ 'perfect' ] . '</option>
+                    </select>
 
-                <span class="input-group-btn">
-                  <input type="submit" name="Submit" value="' .
-                    $_language->module[ 'rate' ] . '" class="btn btn-primary">
-                </span>
-            </div>
-            <input type="hidden" name="userID" value="' . $userID . '">
-            <input type="hidden" name="type" value="ar">
-            <input type="hidden" name="id" value="' . $ds[ 'articlesID' ] . '"></form>';
+                    <span class="input-group-btn">
+                        <input type="submit" name="Submit" value="' .
+                        $_language->module[ 'rate' ] . '" class="btn btn-primary">
+                    </span>
+                </div>
+                <input type="hidden" name="userID" value="' . $userID . '">
+                <input type="hidden" name="type" value="ar">
+                <input type="hidden" name="id" value="' . $ds[ 'articlesID' ] . '"></form>';
             }
         } else {
             $rateform = $_language->module[ 'login_for_rate' ];

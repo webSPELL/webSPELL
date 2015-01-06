@@ -41,10 +41,16 @@ module.exports = function(grunt) {
                 src: [
                     javascripts,
                     templates,
-                    excludes
+                    phps,
+                    excludes,
+                    "!admin/**"
                 ],
                 options: {
-                    editorconfig: ".editorconfig"
+                    newline: true,
+                    newlineMaximum: 2,
+                    trailingspaces: true,
+                    indentation: "spaces",
+                    spaces: 4
                 }
             }
         },
@@ -182,6 +188,25 @@ module.exports = function(grunt) {
             options: {
                 debounceDelay: 1000
             },
+            all: {
+                files: [
+                    phps,
+                    javascripts,
+                    templates,
+                    csss
+                ],
+                tasks: [
+                    "codecheck_newer"
+                ]
+            },
+            html: {
+                files: [
+                    templates
+                ],
+                tasks: [
+                    "html"
+                ]
+            },
             js: {
                 files: [
                     javascripts
@@ -213,23 +238,16 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks("grunt-newer");
 
     grunt.registerTask("codecheck", [
-        "lintspaces",
-        "jshint",
-        "jscs",
-        "phplint",
-        "phpcs",
-        "htmlhint",
-        "htmllint",
-        "bootlint"
+        "js",
+        "php",
+        "html"
     ]);
     grunt.registerTask("codecheck_newer", [
         "newer:lintspaces",
-        "newer:jshint",
-        "newer:jscs",
+        "newer:js",
         "newer:phplint",
         "newer:phpcs",
-        "newer:htmllint",
-        "newer:bootlint"
+        "newer:html"
     ]);
     grunt.registerTask("codecheck_circle", [
         "lintspaces",
@@ -239,9 +257,21 @@ module.exports = function(grunt) {
         "htmllint",
         "bootlint"
     ]);
+    grunt.registerTask("html", [
+        "lintspaces",
+        "htmlhint",
+        "htmllint",
+        "bootlint"
+    ]);
     grunt.registerTask("js", [
+        "lintspaces",
         "jshint",
         "jscs"
+    ]);
+    grunt.registerTask("php", [
+        "lintspaces",
+        "phplint",
+        "phpcs"
     ]);
     grunt.registerTask("git", [
         "grunt-commit-message-verify"

@@ -113,16 +113,16 @@ if (isset($_POST[ 'savevisitorcomment' ])) {
                         `ip`,
                         `rating`
                     )
-		            VALUES (
-		                '" . $parentID . "',
-		                '" . $type . "',
-		                '" . $name . "',
-		                '" . $date . "',
-		                '" . $message . "',
-		                '" . $url . "',
-		                '" . $mail . "',
-		                '" . $ip . "',
-		                '" . $rating . "'
+                    VALUES (
+                        '" . $parentID . "',
+                        '" . $type . "',
+                        '" . $name . "',
+                        '" . $date . "',
+                        '" . $message . "',
+                        '" . $url . "',
+                        '" . $mail . "',
+                        '" . $ip . "',
+                        '" . $rating . "'
                     )"
             );
         } else {
@@ -525,8 +525,8 @@ if (isset($_POST[ 'savevisitorcomment' ])) {
                     $spam_buttons =
                         '<input type="button" value="Spam" onclick="eventfetch(\'ajax_spamfilter.php?commentID=' .
                         $ds[ 'commentID' ] . '&type=spam\',\'\',\'return\')">
-	<input type="button" value="Ham" onclick="eventfetch(\'ajax_spamfilter.php?commentID=' . $ds[ 'commentID' ] .
-                        '&type=ham\',\'\',\'return\')">';
+                        <input type="button" value="Ham" onclick="eventfetch(\'ajax_spamfilter.php?commentID=' .
+                        $ds[ 'commentID' ] . '&type=ham\',\'\',\'return\')">';
                 }
             }
 

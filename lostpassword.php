@@ -35,11 +35,11 @@ if (isset($_POST[ 'submit' ])) {
     if ($email != '') {
         $ergebnis = safe_query(
             "SELECT
-              *
+                *
             FROM
-              " . PREFIX . "user
+                " . PREFIX . "user
             WHERE
-              email = '" . $email . "'"
+                email = '" . $email . "'"
         );
         $anz = mysqli_num_rows($ergebnis);
 
@@ -51,11 +51,11 @@ if (isset($_POST[ 'submit' ])) {
             $ds = mysqli_fetch_array($ergebnis);
             safe_query(
                 "UPDATE
-                  " . PREFIX . "user
+                    " . PREFIX . "user
                 SET
-                  password='" . $newmd5pwd . "'
+                    password='" . $newmd5pwd . "'
                 WHERE
-                  userID='" . $ds[ 'userID' ] . "'"
+                    userID='" . $ds[ 'userID' ] . "'"
             );
 
             $ToEmail = $ds[ 'email' ];
@@ -92,5 +92,5 @@ if (isset($_POST[ 'submit' ])) {
             </div>
             <input type="submit" name="submit"
             value="' . $_language->module[ 'get_password' ] . '" class="btn btn-danger">
-		 </form>';
+        </form>';
 }

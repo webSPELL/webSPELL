@@ -78,7 +78,7 @@ $ergebnis = safe_query(
         w.*,
         u.nickname
     FROM
-      " . PREFIX . "whoisonline w
+        " . PREFIX . "whoisonline w
     LEFT JOIN
         " . PREFIX . "user u
     ON

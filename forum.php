@@ -61,13 +61,14 @@ function forum_stats()
     // TODAY birthdays
     $ergebnis = safe_query(
         "SELECT
-          nickname, userID, YEAR(CURRENT_DATE()) -YEAR(birthday) 'age'
+            nickname, userID, YEAR(CURRENT_DATE()) -YEAR(birthday) 'age'
         FROM
-          " . PREFIX . "user
+            " . PREFIX . "user
         WHERE
-          DATE_FORMAT(`birthday`, '%m%d') = DATE_FORMAT(NOW(), '%m%d')"
+            DATE_FORMAT(`birthday`, '%m%d') = DATE_FORMAT(NOW(), '%m%d')"
     );
     $n = 0;
+    $birthdays = '';
     while ($db = mysqli_fetch_array($ergebnis)) {
         $n++;
         $years = $db[ 'age' ];
@@ -87,19 +88,19 @@ function forum_stats()
     $ergebnis =
         safe_query(
             "SELECT
-              nickname, userID, DATE_FORMAT(FROM_DAYS(TO_DAYS(NOW()) - TO_DAYS(birthday)), '%y') + 1 AS age
+                nickname, userID, DATE_FORMAT(FROM_DAYS(TO_DAYS(NOW()) - TO_DAYS(birthday)), '%y') + 1 AS age
             FROM
-              " . PREFIX . "user
+                " . PREFIX . "user
             WHERE
-              IF(DAYOFYEAR(NOW())<=358,((DAYOFYEAR(birthday)>DAYOFYEAR(NOW()))
+                IF(DAYOFYEAR(NOW())<=358,((DAYOFYEAR(birthday)>DAYOFYEAR(NOW()))
             AND
-              (DAYOFYEAR(birthday)<=DAYOFYEAR(DATE_ADD(NOW(), INTERVAL 7 DAY)))),(DAYOFYEAR(BIRTHDAY)>DAYOFYEAR(NOW())
+                (DAYOFYEAR(birthday)<=DAYOFYEAR(DATE_ADD(NOW(), INTERVAL 7 DAY)))),(DAYOFYEAR(BIRTHDAY)>DAYOFYEAR(NOW())
             OR
-              DAYOFYEAR(birthday)<=DAYOFYEAR(DATE_ADD(NOW(), INTERVAL 7 DAY))))
+                DAYOFYEAR(birthday)<=DAYOFYEAR(DATE_ADD(NOW(), INTERVAL 7 DAY))))
             AND
-              birthday !='0000-00-00 00:00:00'
+                birthday !='0000-00-00 00:00:00'
             ORDER BY
-              `birthday` ASC"
+                `birthday` ASC"
         );
     $n = 0;
     while ($db = mysqli_fetch_array($ergebnis)) {
@@ -136,17 +137,17 @@ function forum_stats()
 
     $ergebnis = safe_query(
         "SELECT
-          w.*, u.nickname
+            w.*, u.nickname
         FROM
-          " . PREFIX . "whoisonline w
+            " . PREFIX . "whoisonline w
         LEFT JOIN
-          " . PREFIX . "user u
+            " . PREFIX . "user u
         ON
-          u.userID = w.userID
+            u.userID = w.userID
         WHERE
-          w.ip=''
+            w.ip=''
         ORDER BY
-          u.nickname"
+            u.nickname"
     );
     $user_names = "";
     if ($user) {
@@ -1373,10 +1374,9 @@ if (isset($_POST[ 'submit' ]) || isset($_POST[ 'movetopic' ]) || isset($_GET[ 'a
                 $quote = '';
 
                 echo '<table class="table">
-          <tr>
-            <td colspan="2" class="title" class="text-center">' . cleartext($topicname) . '</td>
-          </tr>
-          <tr></td></tr>';
+                <tr>
+                    <td colspan="2" class="title" class="text-center">' . cleartext($topicname) . '</td>
+                </tr>';
 
                 eval ("\$forum_topic_content = \"" . gettemplate("forum_topic_content") . "\";");
                 echo $forum_topic_content;

@@ -56,51 +56,51 @@ if ($userID && !isset($_GET[ 'userID' ]) && !isset($_POST[ 'userID' ])) {
 
     $posts = safe_query(
         "SELECT
-          p.topicID,
-          p.date,
-          p.message,
-          p.boardID,
-          t.topic,
-          t.readgrps
+            p.topicID,
+            p.date,
+            p.message,
+            p.boardID,
+            t.topic,
+            t.readgrps
         FROM
-          `" . PREFIX . "forum_posts` AS p,
-          `" . PREFIX . "forum_topics` AS t
+            `" . PREFIX . "forum_posts` AS p,
+            `" . PREFIX . "forum_topics` AS t
         WHERE
-          p.date>" . $_SESSION[ 'ws_lastlogin' ] . "
+            p.date>" . $_SESSION[ 'ws_lastlogin' ] . "
         AND
-          p.topicID = t.topicID
+            p.topicID = t.topicID
         LIMIT
-          0, 10"
+            0, 10"
     );
     $topics = safe_query(
         "SELECT
-          *
+            *
         FROM
-          " . PREFIX . "forum_topics
+            " . PREFIX . "forum_topics
         WHERE
-          date > " . $_SESSION[ 'ws_lastlogin' ] . " LIMIT 0, 10"
+            date > " . $_SESSION[ 'ws_lastlogin' ] . " LIMIT 0, 10"
     );
 
     $new_posts = mysqli_num_rows(
         safe_query(
             "SELECT
-              p.postID
+                p.postID
             FROM
-              `" . PREFIX . "forum_posts` AS p, `" . PREFIX . "forum_topics` AS t
+                `" . PREFIX . "forum_posts` AS p, `" . PREFIX . "forum_topics` AS t
             WHERE
-              p.date>" . $_SESSION[ 'ws_lastlogin' ] . "
+                p.date>" . $_SESSION[ 'ws_lastlogin' ] . "
             AND
-              p.topicID = t.topicID"
+                p.topicID = t.topicID"
         )
     );
     $new_topics = mysqli_num_rows(
         safe_query(
             "SELECT
-              *
+                *
             FROM
-              " . PREFIX . "forum_topics
+                " . PREFIX . "forum_topics
             WHERE
-              date > " . $_SESSION[ 'ws_lastlogin' ]
+                date > " . $_SESSION[ 'ws_lastlogin' ] .""
         )
     );
 
@@ -126,19 +126,19 @@ if ($userID && !isset($_GET[ 'userID' ]) && !isset($_POST[ 'userID' ])) {
             $posttime = getformatdatetime($db[ 'date' ]);
 
             $topiclist .= '<tr>
-              <td>' . $posttime . '</td>
-              <td><a href="index.php?site=forum_topic&amp;topic=' . $db[ 'topicID' ] . '">' .
-                str_break(getinput($db[ 'topic' ]), 34) . '</a></td>
-              <td>' . $db[ 'views' ] . ' ' . $_language->module[ 'views' ] . '</td>
-              <td>' . $db[ 'replys' ] . ' ' . $_language->module[ 'replys' ] . '</td>
+                <td>' . $posttime . '</td>
+                <td>
+                    <a href="index.php?site=forum_topic&amp;topic=' . $db[ 'topicID' ] . '">' .
+                        str_break(getinput($db[ 'topic' ]), 34) . '</a>
+                </td>
+                <td>' . $db[ 'views' ] . ' ' . $_language->module[ 'views' ] . '</td>
+                <td>' . $db[ 'replys' ] . ' ' . $_language->module[ 'replys' ] . '</td>
             </tr>';
 
             $n++;
         }
     } else {
-        $topiclist = '<tr>
-      <td colspan="4">' . $_language->module[ 'no_new_topics' ] . '</td>
-    </tr>';
+        $topiclist = '<tr><td colspan="4">' . $_language->module[ 'no_new_topics' ] . '</td></tr>';
     }
 
     //new posts
@@ -180,18 +180,17 @@ if ($userID && !isset($_GET[ 'userID' ]) && !isset($_POST[ 'userID' ])) {
             }
 
             $postlist .= '<tr>
-      				<td><a href="index.php?site=forum_topic&amp;topic=' . $db[ 'topicID' ] . '">' .
-                str_break(getinput($db[ 'topic' ]), 34) . '</a></td>
-      				<td>' . $posttime . '</td>
-      				<td>' . str_break(clearfromtags($message), 34) . '</td>
-      			  </tr>';
+                <td><a href="index.php?site=forum_topic&amp;topic=' . $db[ 'topicID' ] . '">' .
+                    str_break(getinput($db[ 'topic' ]), 34) . '</a>
+                </td>
+                <td>' . $posttime . '</td>
+                <td>' . str_break(clearfromtags($message), 34) . '</td>
+            </tr>';
 
             $n++;
         }
     } else {
-        $postlist = '<tr>
-      <td colspan="3">' . $_language->module[ 'no_new_posts' ] . '</td>
-    </tr>';
+        $postlist = '<tr><td colspan="3">' . $_language->module[ 'no_new_posts' ] . '</td></tr>';
     }
 
     //clanmember/admin/referer
@@ -206,7 +205,7 @@ if ($userID && !isset($_GET[ 'userID' ]) && !isset($_POST[ 'userID' ])) {
     if (isanyadmin($userID)) {
         $admincenterpic =
             '<a class="thumbnail" href="admin/admincenter.php" target="_blank">
-            <img src="images/icons/admincenter.gif" alt="Admincenter">
+                <img src="images/icons/admincenter.gif" alt="Admincenter">
             </a>';
     } else {
         $admincenterpic = '';
@@ -234,43 +233,43 @@ if ($userID && !isset($_GET[ 'userID' ]) && !isset($_POST[ 'userID' ])) {
                 $dn = mysqli_fetch_array(
                     safe_query(
                         "SELECT
-                          name
+                            name
                         FROM
-                          `" . PREFIX . "squads`
+                            `" . PREFIX . "squads`
                         WHERE
-                          squadID='" . $squad[ 'squadID' ] . "'
+                            squadID='" . $squad[ 'squadID' ] . "'
                         AND
-                          gamesquad='1'"
+                            gamesquad='1'"
                     )
                 );
                 $clanwars .= '<h5>' . $_language->module[ 'squad' ] . ': ' . $dn[ 'name' ] . '</h5>';
                 $n = 1;
                 $ergebnis = safe_query(
                     "SELECT
-                      *
+                        *
                     FROM
-                      `" . PREFIX . "upcoming`
+                        `" . PREFIX . "upcoming`
                     WHERE
-                      type='c'
+                        type='c'
                     AND
-                      squad='" . $squad[ 'squadID' ] . "'
+                        squad='" . $squad[ 'squadID' ] . "'
                     AND
-                      date>" . time() . "
+                        date>" . time() . "
                     ORDER BY
-                      date"
+                        date"
                 );
                 $anz = mysqli_num_rows($ergebnis);
 
                 if ($anz) {
                     $clanwars .= '<table class="table table-hover">
-				<thead>
-					<tr>
-						<th>' . $_language->module[ 'date' ] . '</th>
-						<th>' . $_language->module[ 'against' ] . '</th>
-						<th>' . $_language->module[ 'announcement' ] . '</th>
-						<th>' . $_language->module[ 'announce' ] . '</th>
-					</tr>
-				</thead><tbody>';
+                    <thead>
+                        <tr>
+                            <th>' . $_language->module[ 'date' ] . '</th>
+                            <th>' . $_language->module[ 'against' ] . '</th>
+                            <th>' . $_language->module[ 'announcement' ] . '</th>
+                            <th>' . $_language->module[ 'announce' ] . '</th>
+                        </tr>
+                    </thead><tbody>';
 
                     while ($ds = mysqli_fetch_array($ergebnis)) {
                         $n % 2 ? $bg = BG_1 : $bg = BG_2;
@@ -279,11 +278,11 @@ if ($userID && !isset($_GET[ 'userID' ]) && !isset($_POST[ 'userID' ])) {
                         $anmeldung =
                             safe_query(
                                 "SELECT
-                                  *
+                                    *
                                 FROM
-                                  " . PREFIX . "upcoming_announce
+                                    " . PREFIX . "upcoming_announce
                                 WHERE
-                                  upID='" . $ds[ 'upID' ] . "'"
+                                    upID='" . $ds[ 'upID' ] . "'"
                             );
                         if (mysqli_num_rows($anmeldung)) {
                             $i = 1;
@@ -317,14 +316,14 @@ if ($userID && !isset($_GET[ 'userID' ]) && !isset($_POST[ 'userID' ])) {
                         $yahr = date("Y", $ds[ 'date' ]);
 
                         $clanwars .= '<tr>
-							<td>' . $date . '</td>
-							<td><a href="' . $ds[ 'opphp' ] . '" target="_blank">' . $ds[ 'opptag' ] . ' / ' .
+                            <td>' . $date . '</td>
+                            <td><a href="' . $ds[ 'opphp' ] . '" target="_blank">' . $ds[ 'opptag' ] . ' / ' .
                             $ds[ 'opponent' ] . '</a></td>
-							<td>' . $players . '</td>
-							<td><a href="index.php?site=calendar&amp;action=announce&amp;upID=' . $ds[ 'upID' ] .
+                            <td>' . $players . '</td>
+                            <td><a href="index.php?site=calendar&amp;action=announce&amp;upID=' . $ds[ 'upID' ] .
                             '&amp;tag=' . $tag . '&amp;month=' . $monat . '&amp;year=' . $yahr . '#event">' .
                             $_language->module[ 'click' ] . '</a></td>
-						</tr>';
+                        </tr>';
                         $n++;
                     }
                     $clanwars .= '</tbody></table>';
@@ -349,20 +348,20 @@ if ($userID && !isset($_GET[ 'userID' ]) && !isset($_POST[ 'userID' ])) {
         $n = 1;
         while ($ds = mysqli_fetch_array($ergebnis)) {
             $events .= '<tr>
-				<td>' . $ds[ 'title' ] . '</td>
-				<td>' . date('d.m.y, H:i', $ds[ 'date' ]) . '</td>
-				<td>' . date('d.m.y, H:i', $ds[ 'enddate' ]) . '</td>
-				<td>' . $ds[ 'location' ] . '</td>
-				<td><a href="index.php?site=calendar&amp;tag=' . date('d', $ds[ 'date' ]) . '&amp;month=' .
+                <td>' . $ds[ 'title' ] . '</td>
+                <td>' . date('d.m.y, H:i', $ds[ 'date' ]) . '</td>
+                <td>' . date('d.m.y, H:i', $ds[ 'enddate' ]) . '</td>
+                <td>' . $ds[ 'location' ] . '</td>
+                <td><a href="index.php?site=calendar&amp;tag=' . date('d', $ds[ 'date' ]) . '&amp;month=' .
                 date('m', $ds[ 'date' ]) . '&amp;year=' . date('Y', $ds[ 'date' ]) . '#event">' .
                 $_language->module[ 'click' ] . '</a></td>
-			</tr>';
+            </tr>';
             $n++;
         }
     } else {
         $events = '<tr>
-		<td colspan="5"><i>' . $_language->module[ 'no_events' ] . '</i></td>
-	</tr>';
+        <td colspan="5"><i>' . $_language->module[ 'no_events' ] . '</i></td>
+    </tr>';
     }
 
     eval ("\$loginoverview = \"" . gettemplate("loginoverview") . "\";");

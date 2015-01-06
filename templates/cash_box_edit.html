@@ -1,118 +1,115 @@
 <script>
-	<!--
-	function chkFormular() {
-		if (document.post.usedfor.value === "") {
-			alert("%enter_usage%");
-			document.post.usedfor.focus();
+    <!--
+    function chkFormular() {
+        if (document.post.usedfor.value === "") {
+            alert("%enter_usage%");
+            document.post.usedfor.focus();
 
-			return false;
-		}
+            return false;
+        }
 
-		if (document.post.day.value === "") {
-			alert("%enter_date%");
-			document.post.day.focus();
+        if (document.post.day.value === "") {
+            alert("%enter_date%");
+            document.post.day.focus();
 
-			return false;
-		}
+            return false;
+        }
 
-		if (document.post.month.value === "") {
-			alert("%enter_date%");
-			document.post.month.focus();
+        if (document.post.month.value === "") {
+            alert("%enter_date%");
+            document.post.month.focus();
 
-			return false;
-		}
+            return false;
+        }
 
-		if (document.post.year.value === "") {
-			alert("%enter_date%");
-			document.post.year.focus();
+        if (document.post.year.value === "") {
+            alert("%enter_date%");
+            document.post.year.focus();
 
-			return false;
-		}
+            return false;
+        }
 
-		if (document.post.euro.value === "" || document.post.euro.value == "0.00") {
-			alert("%enter_total_costs%");
-			document.post.euro.focus();
+        if (document.post.euro.value === "" || document.post.euro.value == "0.00") {
+            alert("%enter_total_costs%");
+            document.post.euro.focus();
 
-			return false;
-		}
+            return false;
+        }
 
-		if (document.post.usereuro.value === "" || document.post.usereuro.value == "0.00") {
-			alert("%enter_costs_member%");
-			document.post.usereuro.focus();
+        if (document.post.usereuro.value === "" || document.post.usereuro.value == "0.00") {
+            alert("%enter_costs_member%");
+            document.post.usereuro.focus();
 
-			return false;
-		}
+            return false;
+        }
 
-	}
+    }
 
-	function berechnen() {
-		var anz = document.post.anz.value,
-				total = document.post.euro.value,
-				user = total / anz,
-				rounduser = Math.round(user);
+    function berechnen() {
+        var anz = document.post.anz.value,
+                total = document.post.euro.value,
+                user = total / anz,
+                rounduser = Math.round(user);
 
-		document.post.usereuro.value = rounduser;
-		document.post.calculation.value =
-				rounduser + " EUR  (" + total + "/" + anz + "=" + user + ")";
-		document.post.usereuro.focus();
-	}
-	-->
+        document.post.usereuro.value = rounduser;
+        document.post.calculation.value =
+                rounduser + " EUR  (" + total + "/" + anz + "=" + user + ")";
+        document.post.usereuro.focus();
+    }
+    -->
 </script>
 
 <form name="post" method="post" action="cashbox.php" onsubmit="return chkFormular()">
 
-	<h3>%new_usage%</h3>
+    <h3>%new_usage%</h3>
 
-	<div class="form-group">
-		<label for="squad">%squad%</label>
-		<select name="squad" id="squad" class="form-control">$squads</select>
-	</div>
+    <div class="form-group">
+        <label for="squad">%squad%</label>
+        <select name="squad" id="squad" class="form-control">$squads</select>
+    </div>
 
-	<div class="form-group">
-		<label for="usedfor">%usage%</label>
-		<input name="usedfor" type="text" id="usedfor" value="$usage" size="55"
-				class="form-control">
-	</div>
+    <div class="form-group">
+        <label for="usedfor">%usage%</label>
+        <input name="usedfor" type="text" id="usedfor" value="$usage" size="55" class="form-control">
+    </div>
 
-	<div class="form-group">
-		<label for="info">%info%</label>
-		<textarea name="info" cols="50" rows="7" id="info" class="form-control">$info</textarea>
-	</div>
+    <div class="form-group">
+        <label for="info">%info%</label>
+        <textarea name="info" cols="50" rows="7" id="info" class="form-control">$info</textarea>
+    </div>
 
-	<div class="form-group">
-		<label for="konto">%bank_account%</label>
-		<textarea name="konto" cols="50" rows="4" id="konto"
-				class="form-control">$bank_account</textarea>
-	</div>
+    <div class="form-group">
+        <label for="konto">%bank_account%</label>
+        <textarea name="konto" cols="50" rows="4" id="konto" class="form-control">$bank_account</textarea>
+    </div>
 
-	<div class="form-group">
-		<label for="date">%pay_until%</label>
+    <div class="form-group">
+        <label for="date">%pay_until%</label>
 
-		<input type="date" name="date" id="date" placeholder="yyyy-mm-dd" value="$date" class="form-control">
-	</div>
+        <input type="date" name="date" id="date" placeholder="yyyy-mm-dd" value="$date" class="form-control">
+    </div>
 
-	<div class="form-group">
-		<label for="euro">%total_costs%:</label>
-		<input type="text" dir="rtl" name="euro" id="euro" size="8" value="$ds[totalcosts]"
-				class="form-control">
-	</div>
+    <div class="form-group">
+        <label for="euro">%total_costs%:</label>
+        <input type="text" dir="rtl" name="euro" id="euro" size="8" value="$ds[totalcosts]"
+            class="form-control">
+    </div>
 
-	<div class="form-group">
-		<label for="usereuro">%costs_member%:</label>
+    <div class="form-group">
+        <label for="usereuro">%costs_member%:</label>
 
-		<div class="input-group">
-			<input type="text" dir="rtl" name="usereuro" id="usereuro" size="8"
-					value="$ds[usercosts]" class="form-control">
-			<span class="input-group-btn">
-				<input type="button" name="calculate" value="%calculate%" onclick="berechnen()"
-						class="btn btn-info">
-			</span>
-		</div>
-	</div>
+        <div class="input-group">
+            <input type="text" dir="rtl" name="usereuro" id="usereuro" size="8" value="$ds[usercosts]"
+                class="form-control">
+            <span class="input-group-btn">
+                <input type="button" name="calculate" value="%calculate%" onclick="berechnen()" class="btn btn-info">
+            </span>
+        </div>
+    </div>
 
-	<div class="form-group text-right">
-		<input type="hidden" name="anz" value="$anz">
-		<input type="submit" name="saveedit" value="%submit%" class="btn btn-primary">
-	</div>
+    <div class="form-group text-right">
+        <input type="hidden" name="anz" value="$anz">
+        <input type="submit" name="saveedit" value="%submit%" class="btn btn-primary">
+    </div>
 
 </form>

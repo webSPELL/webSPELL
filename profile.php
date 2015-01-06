@@ -122,21 +122,21 @@ if (isset($id) && getnickname($id) != '') {
                 $buddylist .= '<tr>
             <td>
             <table class="table">
-              <tr>
-                <td>' . $country . ' <a href="index.php?site=profile&amp;id=' . $db[ 'buddy' ] . '"><b>' .
-                    $nicknamebuddy . '</b></a></td>
-                <td class="text-right">' . $email . '&nbsp;&nbsp;' . $buddy . '&nbsp;&nbsp;' . $statuspic . '</td>
-              </tr>
-            </table>
-            </td>
-          </tr>';
+                <tr>
+                    <td>' . $country . ' <a href="index.php?site=profile&amp;id=' . $db[ 'buddy' ] . '"><b>' .
+                        $nicknamebuddy . '</b></a></td>
+                    <td class="text-right">' . $email . '&nbsp;&nbsp;' . $buddy . '&nbsp;&nbsp;' . $statuspic . '</td>
+                </tr>
+                </table>
+                </td>
+            </tr>';
 
                 $n++;
             }
         } else {
             $buddylist = '<tr>
-        <td colspan="2">' . $_language->module[ 'no_buddies' ] . '</td>
-      </tr>';
+            <td colspan="2">' . $_language->module[ 'no_buddies' ] . '</td>
+        </tr>';
         }
 
         eval("\$profile = \"" . gettemplate("profile_buddys") . "\";");
@@ -156,17 +156,17 @@ if (isset($id) && getnickname($id) != '') {
         $galleries = safe_query("SELECT * FROM " . PREFIX . "gallery WHERE userID='" . $id . "'");
 
         echo '<table class="table">
-      <tr>
-        <td colspan="4">
-            ' . $_language->module[ 'galleries' ] . ' ' . $_language->module[ 'by' ] . ' ' . getnickname($id) . '
-        </td>
-      </tr>
-      <tr>
-        <td></td>
-        <td><strong>' . $_language->module[ 'date' ] . '</strong></td>
-        <td><strong>' . $_language->module[ 'name' ] . '</strong></td>
-        <td><strong>' . $_language->module[ 'pictures' ] . '</strong></td>
-      </tr>';
+        <tr>
+            <td colspan="4">
+                ' . $_language->module[ 'galleries' ] . ' ' . $_language->module[ 'by' ] . ' ' . getnickname($id) . '
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><strong>' . $_language->module[ 'date' ] . '</strong></td>
+            <td><strong>' . $_language->module[ 'name' ] . '</strong></td>
+            <td><strong>' . $_language->module[ 'pictures' ] . '</strong></td>
+        </tr>';
 
         if ($usergalleries) {
             if (mysqli_num_rows($galleries)) {
@@ -218,14 +218,10 @@ if (isset($id) && getnickname($id) != '') {
                     $n++;
                 }
             } else {
-                echo '<tr>
-          <td colspan="4">' . $_language->module[ 'no_galleries' ] . '</td>
-        </tr>';
+                echo '<tr><td colspan="4">' . $_language->module[ 'no_galleries' ] . '</td></tr>';
             }
         } else {
-            echo '<tr>
-        <td colspan="4">' . $_language->module[ 'usergalleries_disabled' ] . '</td>
-      </tr>';
+            echo '<tr><td colspan="4">' . $_language->module[ 'usergalleries_disabled' ] . '</td></tr>';
         }
 
         echo '</table>';
@@ -267,25 +263,20 @@ if (isset($id) && getnickname($id) != '') {
                 $n % 2 ? $bgcolor = BG_1 : $bgcolor = BG_2;
                 $posttime = getformatdatetime($db[ 'date' ]);
 
-                $topiclist .= '<tr>
-            <td width="50%">
-            <table class="table">
-              <tr>
-                <td colspan="3">
-                    <div style="overflow:hidden;">
-                        <a href="index.php?site=forum_topic&amp;topic=' . $db[ 'topicID' ] . '">' .
-                            $posttime . '<br>
-                            <strong>' . clearfromtags($db[ 'topic' ]) . '</strong>
-                        </a><br>
-                        <i>' . $db[ 'views' ] . ' ' . $_language->module[ 'views' ] . ' - ' .
-                            $db[ 'replys' ] . ' ' . $_language->module[ 'replys' ] . '
-                        </i>
-                    </div>
-                </td>
-              </tr>
-            </table>
-            </td>
-          </tr>';
+                $topiclist .= '<tr><td width="50%"><table class="table">
+                <tr>
+                    <td colspan="3">
+                        <div style="overflow:hidden;">
+                            <a href="index.php?site=forum_topic&amp;topic=' . $db[ 'topicID' ] . '">' .
+                                $posttime . '<br>
+                                <strong>' . clearfromtags($db[ 'topic' ]) . '</strong>
+                            </a><br>
+                            <i>' . $db[ 'views' ] . ' ' . $_language->module[ 'views' ] . ' - ' .
+                            $db[ 'replys' ] . ' ' . $_language->module[ 'replys' ] . '</i>
+                        </div>
+                    </td>
+                </tr>
+                </table></td></tr>';
 
                 if ($profilelast == $n) {
                     break;
@@ -293,9 +284,7 @@ if (isset($id) && getnickname($id) != '') {
                 $n++;
             }
         } else {
-            $topiclist = '<tr>
-        <td colspan="2">' . $_language->module[ 'no_topics' ] . '</td>
-      </tr>';
+            $topiclist = '<tr><td colspan="2">' . $_language->module[ 'no_topics' ] . '</td></tr>';
         }
 
         $postlist = "";
@@ -352,29 +341,21 @@ if (isset($id) && getnickname($id) != '') {
                 } else {
                     $message = $db[ 'message' ];
                 }
-                $postlist .= '<tr>
-            <td>
-            <table class="table">
-              <tr>
-                <td colspan="3">
-                    <a href="index.php?site=forum_topic&amp;topic=' . $db[ 'topicID' ] . '">' . $posttime .
-                    ' <br><strong>' . $db[ 'topic' ] . '</strong>
-                    </a>
-                </td>
-              </tr>
-              <tr><td></td></tr>
-              <tr>
-                <td width="1%">&nbsp;</td>
-                <td>
-                    <div style="width: 250px;overflow:hidden;">' .
-                        clearfromtags($message) .
-                    '</div>
-                </td>
-                <td width="1%">&nbsp;</td>
-              </tr>
-            </table>
-            </td>
-          </tr>';
+                $postlist .= '<tr><td><table class="table"><tr>
+                    <td colspan="3">
+                        <a href="index.php?site=forum_topic&amp;topic=' . $db[ 'topicID' ] . '">' . $posttime . ' <br>
+                            <strong>' . $db[ 'topic' ] . '</strong>
+                        </a>
+                    </td>
+                    </tr>
+                        <tr><td></td></tr>
+                    <tr>
+                        <td width="1%">&nbsp;</td>
+                    <td>
+                        <div style="width: 250px;overflow:hidden;">' . clearfromtags($message) . '</div>
+                    </td>
+                    <td width="1%">&nbsp;</td>
+                </tr></table></td></tr>';
 
                 if ($profilelast == $n) {
                     break;
@@ -382,9 +363,7 @@ if (isset($id) && getnickname($id) != '') {
                 $n++;
             }
         } else {
-            $postlist = '<tr>
-        <td colspan="2">' . $_language->module[ 'no_posts' ] . '</td>
-      </tr>';
+            $postlist = '<tr><td colspan="2">' . $_language->module[ 'no_posts' ] . '</td></tr>';
         }
 
         eval("\$profile = \"" . gettemplate("profile_lastposts") . "\";");
@@ -634,8 +613,8 @@ if (isset($id) && getnickname($id) != '') {
                             '<input class="input" type="checkbox" name="ALL" value="ALL"
                                 onclick="SelectAll(this.form);"> ' .
                             $_language->module[ 'select_all' ] . '
-                    <input type="submit" value="' . $_language->module[ 'delete_selected' ] . '"
-                      class="btn btn-danger">';
+                    <input type="submit" value="' .
+                        $_language->module[ 'delete_selected' ] . '" class="btn btn-danger">';
                     } else {
                         $submit = '';
                     }
@@ -1014,16 +993,15 @@ if (isset($id) && getnickname($id) != '') {
                 }
 
                 $lastvisits .= '<tr>
-              <td>' . $country . ' <a href="index.php?site=profile&amp;id=' . $dv[ 'visitor' ] . '"><b>' .
+                <td>' . $country . ' <a href="index.php?site=profile&amp;id=' . $dv[ 'visitor' ] . '"><b>' .
                     $nicknamevisitor . '</b></a></td>
-              <td><small>' . $now . $days . $hours . $minutes . ' ' . $statuspic . '</small></td>
+                <td><small>' . $now . $days . $hours . $minutes . ' ' . $statuspic . '</small></td>
             </tr>';
 
                 $n++;
             }
         } else {
-            $lastvisits = '<tr>
-      <td colspan="2">' . $_language->module[ 'no_visits' ] . '</td>
+            $lastvisits = '<tr><td colspan="2">' . $_language->module[ 'no_visits' ] . '</td>
     </tr>';
         }
 

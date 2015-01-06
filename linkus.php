@@ -106,11 +106,11 @@ if (isset($_POST['save'])) {
 
         safe_query(
             "UPDATE
-              " . PREFIX . "linkus
+                " . PREFIX . "linkus
             SET
-              name='" . $_POST['name'] . "'
+                name='" . $_POST['name'] . "'
             WHERE
-              bannerID='" . $_POST['bannerID'] . "'"
+                bannerID='" . $_POST['bannerID'] . "'"
         );
 
         $filepath = "./images/linkus/";
@@ -219,11 +219,11 @@ if ($action == "new") {
         $ds = mysqli_fetch_array(
             safe_query(
                 "SELECT
-                  *
+                    *
                 FROM
-                  " . PREFIX . "linkus
+                    " . PREFIX . "linkus
                 WHERE
-                  bannerID='" . $bannerID . "'"
+                    bannerID='" . $bannerID . "'"
             )
         );
         $name = getinput($ds['name']);

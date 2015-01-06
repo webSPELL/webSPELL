@@ -286,9 +286,9 @@ function parseWebspellURL($parameters = null)
                         safe_query(
                             "SELECT
                                 name
-                              FROM
+                            FROM
                                 " . PREFIX . "files_categorys
-                              WHERE
+                            WHERE
                                 filecatID=" . (int)$file['filecatID']
                         )
                     );

@@ -459,13 +459,13 @@ if ($action == "new") {
         echo $news_post;
     } else {
         echo '<script src="js/bbcode.js"></script>
-  <link href="_stylesheet.css" rel="stylesheet" type="text/css">
-  <p class="text-center"><br><br><br><br>
-  <strong>' . $_language->module[ 'clanwar_saved' ] . '.</strong><br><br>
-  <input type="button" onclick="window.open(\'upload.php?cwID=' . $cwID .
-            '\',\'Clanwars\',\'toolbar=no,status=no,scrollbars=yes,width=800,height=600\')" value="' .
+    <link href="_stylesheet.css" rel="stylesheet" type="text/css">
+    <p class="text-center"><br><br><br><br>
+    <strong>' . $_language->module[ 'clanwar_saved' ] . '.</strong><br><br>
+    <input type="button" onclick="window.open(\'upload.php?cwID=' . $cwID .
+        '\',\'Clanwars\',\'toolbar=no,status=no,scrollbars=yes,width=800,height=600\')" value="' .
             $_language->module[ 'upload_screenshot' ] . '">
-  <input type="button" onclick="javascript:self.close()" value="' . $_language->module[ 'close_window' ] . '"></p>';
+    <input type="button" onclick="javascript:self.close()" value="' . $_language->module[ 'close_window' ] . '"></p>';
     }
 } elseif ($action == "edit") {
     include("_mysql.php");
@@ -546,19 +546,22 @@ if ($action == "new") {
         $i = 0;
         for ($i = 0; $i < count($map); $i++) {
 
-            $maps .= '
-      <tr>
-        <td width="15%"><input type="hidden" name="map_id[]" value="' . $i . '">map #' . ($i + 1) .
-                '</td>
-				<td width="25%"><input type="text" name="map_name[]" value="' . getinput($map[ $i ]) .
-                '" size="35"></td>
-				<td width="20%"><input type="text" name="map_result_home[]" value="' . $theHomeScore[ $i ] .
-                '" size="3"></td>
-				<td width="20%"><input type="text" name="map_result_opp[]" value="' . $theOppScore[ $i ] .
-                '" size="3"></td>
-				<td width="25%"><input type="checkbox" name="delete[' . $i . ']" value="1"> ' .
-                $_language->module[ 'delete' ] . '</td>
-			</tr>';
+            $maps .= '<tr>
+            <td width="15%">
+                <input type="hidden" name="map_id[]" value="' . $i . '">map #' . ($i + 1) . '
+            </td>
+            <td width="25%">
+                <input type="text" name="map_name[]" value="' . getinput($map[ $i ]) . '" size="35">
+            </td>
+            <td width="20%">
+                <input type="text" name="map_result_home[]" value="' . $theHomeScore[ $i ] . '" size="3">
+            </td>
+            <td width="20%">
+                <input type="text" name="map_result_opp[]" value="' . $theOppScore[ $i ] . '" size="3">
+            </td>
+            <td width="25%">
+                <input type="checkbox" name="delete[' . $i . ']" value="1"> ' . $_language->module[ 'delete' ] . '
+            </td></tr>';
         }
 
         $gamesquads = safe_query("SELECT * FROM `" . PREFIX . "squads` WHERE `gamesquad` = '1' ORDER BY `sort`");
@@ -674,8 +677,7 @@ if ($action == "new") {
     $theHomeScore = serialize($theHomeScore);
     $theOppScore = serialize($theOppScore);
 
-    echo '<script src="js/bbcode.js"></script>
-  <link href="_stylesheet.css" rel="stylesheet" type="text/css">';
+    echo '<script src="js/bbcode.js"></script><link href="_stylesheet.css" rel="stylesheet" type="text/css">';
 
     $team = [];
     if (is_array($hometeam)) {
@@ -692,34 +694,34 @@ if ($action == "new") {
             `" . PREFIX . "clanwars`
         SET
             `date` = '" . $date . "',
-                 `squad` = '" . $squad . "',
-                 `game` = '" . $game . "',
-                 `league` = '" . $league . "',
-                 `leaguehp` = '" . $leaguehp . "',
-                 `opponent` = '" . $opponent . "',
-                 `opptag` = '" . $opptag . "',
-                 `oppcountry` = '" . $oppcountry . "',
-                 `opphp` = '" . $opphp . "',
-                 `maps` = '" . $theMaps . "',
-                 `hometeam` = '" . $home_string . "',
-                 `oppteam` = '" . $oppteam . "',
-                 `server` = '" . $server . "',
-                 `hltv` = '" . $hltv . "',
-                 `homescore` = '" . $theHomeScore . "',
-                 `oppscore` = '" . $theOppScore . "',
-                 `report` = '" . $report . "',
-                 `comments` = '" . $comments . "',
-                 `linkpage` = '" . $linkpage . "'
-             WHERE
-                `cwID` = '" . (int)$cwID
+            `squad` = '" . $squad . "',
+            `game` = '" . $game . "',
+            `league` = '" . $league . "',
+            `leaguehp` = '" . $leaguehp . "',
+            `opponent` = '" . $opponent . "',
+            `opptag` = '" . $opptag . "',
+            `oppcountry` = '" . $oppcountry . "',
+            `opphp` = '" . $opphp . "',
+            `maps` = '" . $theMaps . "',
+            `hometeam` = '" . $home_string . "',
+            `oppteam` = '" . $oppteam . "',
+            `server` = '" . $server . "',
+            `hltv` = '" . $hltv . "',
+            `homescore` = '" . $theHomeScore . "',
+            `oppscore` = '" . $theOppScore . "',
+            `report` = '" . $report . "',
+            `comments` = '" . $comments . "',
+            `linkpage` = '" . $linkpage . "'
+        WHERE
+            `cwID` = '" . (int)$cwID ."'"
     );
 
     echo '<p class="text-center"><br><br><br><br>
-  <strong>' . $_language->module[ 'clanwar_updated' ] . '</strong><br><br>
-  <input type="button" onclick="window.open(\'upload.php?cwID=' . $cwID .
+    <strong>' . $_language->module[ 'clanwar_updated' ] . '</strong><br><br>
+    <input type="button" onclick="window.open(\'upload.php?cwID=' . $cwID .
         '\',\'Clanwars\',\'toolbar=no,status=no,scrollbars=yes,width=800,height=600\')" value="' .
         $_language->module[ 'upload_screenshot' ] . '">
-  <input type="button" onclick="javascript:self.close()" value="' . $_language->module[ 'close_window' ] . '"></p>';
+    <input type="button" onclick="javascript:self.close()" value="' . $_language->module[ 'close_window' ] . '"></p>';
 } elseif ($action == "delete") {
     include("_mysql.php");
     include("_settings.php");

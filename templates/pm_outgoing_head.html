@@ -1,43 +1,42 @@
 <form method="post" action="index.php?site=messenger&amp;action=outgoing">
-	<div class="row">
-		<div class="col-xs-12">
-			$sorter
-		</div>
-		<div class="col-md-6">
-			$page_link
-		</div>
+    <div class="row">
+        <div class="col-xs-12">
+            $sorter
+        </div>
+        <div class="col-md-6">
+            $page_link
+        </div>
 
-		<div class="form-group col-md-6">
-			<div class="input-group">
-				<span class="input-group-addon">
-					%messages_per_page%
-				</span>
+        <div class="form-group col-md-6">
+            <div class="input-group">
+                <span class="input-group-addon">
+                    %messages_per_page%
+                </span>
 
-				<input type="text" name="entries" size="2" value="$max" class="form-control"
-						autofocus>
+                <input type="text" name="entries" size="2" value="$max" class="form-control" autofocus>
 
-				<span class="input-group-btn">
-					<input type="submit" value="%show%" class="btn btn-primary">
-				</span>
-			</div>
-		</div>
-	</div>
+                <span class="input-group-btn">
+                    <input type="submit" value="%show%" class="btn btn-primary">
+                </span>
+            </div>
+        </div>
+    </div>
 </form><br>
 
 <form method="post" name="form" action="messenger.php">
-	<div class="btn-group btn-group-justified">
-		<a href="index.php?site=messenger" class="btn btn-default">%incoming%</a>
-		<span class="btn btn-primary">%outgoing%</span>
-		<a href="index.php?site=messenger&amp;action=newmessage" class="btn btn-default">
-			%new_message%
-		</a>
-	</div>
-	<br>
+    <div class="btn-group btn-group-justified">
+        <a href="index.php?site=messenger" class="btn btn-default">%incoming%</a>
+        <span class="btn btn-primary">%outgoing%</span>
+        <a href="index.php?site=messenger&amp;action=newmessage" class="btn btn-default">
+            %new_message%
+        </a>
+    </div>
+    <br>
 
-	<table class="table">
-		<tr>
-			<td></td>
-			<th><strong>%message%</strong></th>
-			<th><strong>%receptionist%</strong></th>
-			<th><strong>%date%</strong></th>
-		</tr>
+    <table class="table">
+        <tr>
+            <td></td>
+            <th><strong>%message%</strong></th>
+            <th><strong>%receptionist%</strong></th>
+            <th><strong>%date%</strong></th>
+        </tr>

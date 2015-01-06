@@ -32,11 +32,11 @@ if ($loggedin) {
     $usergroups[ ] = 'user';
     $get = safe_query(
         "SELECT
-          *
+            *
         FROM
-          " . PREFIX . "user_forum_groups
+            " . PREFIX . "user_forum_groups
         WHERE
-          userID='" . $userID . "'"
+            userID='" . $userID . "'"
     );
     $data = mysqli_fetch_row($get);
     for ($i = 2; $i < count($data); $i++) {
@@ -85,31 +85,31 @@ if (empty($userallowedreadgrps[ 'boardIDs' ])) {
 }
 $ergebnis = safe_query(
     "SELECT
-      t.*, u.nickname, b.name
+        t.*, u.nickname, b.name
     FROM
-      " . PREFIX . "forum_topics t
+        " . PREFIX . "forum_topics t
     LEFT JOIN
-      " . PREFIX . "user u
+        " . PREFIX . "user u
     ON
-      u.userID = t.lastposter
+        u.userID = t.lastposter
     LEFT JOIN
-      " . PREFIX . "forum_boards b
+        " . PREFIX . "forum_boards b
     ON
-      b.boardID = t.boardID
+        b.boardID = t.boardID
     WHERE
-      b.category
+        b.category
     IN
-      (" . implode(",", $userallowedreadgrps[ 'catIDs' ]) . ")
+        (" . implode(",", $userallowedreadgrps[ 'catIDs' ]) . ")
     AND
-      t.boardID
+        t.boardID
     IN
-      (" . implode(",", $userallowedreadgrps[ 'boardIDs' ]) . ")
+        (" . implode(",", $userallowedreadgrps[ 'boardIDs' ]) . ")
     AND
-      t.moveID = '0'
+        t.moveID = '0'
     ORDER BY
-      t.lastdate
+        t.lastdate
     DESC
-      LIMIT 0," . $maxlatesttopics
+        LIMIT 0," . $maxlatesttopics
 );
 $anz = mysqli_num_rows($ergebnis);
 if ($anz) {

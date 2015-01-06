@@ -116,7 +116,7 @@ function ispageadmin($userID)
                 WHERE
                     (
                         `page` = 1 OR
-                         `super` = 1
+                        `super` = 1
                     ) AND
                     `userID` = " . (int)$userID
             )
@@ -156,7 +156,7 @@ function isnewsadmin($userID)
                 WHERE
                     (
                         `news` = 1 OR
-                         `super` = 1
+                        `super` = 1
                     ) AND
                     `userID` = " . (int)$userID
             )

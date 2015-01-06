@@ -49,11 +49,11 @@ if ($action == "show") {
         $anzmembers = mysqli_num_rows(
             safe_query(
                 "SELECT
-                  sqmID
+                    sqmID
                 FROM
-                  " . PREFIX . "squads_members
+                    " . PREFIX . "squads_members
                 WHERE
-                  squadID='" . $ds[ 'squadID' ] . "'"
+                    squadID='" . $ds[ 'squadID' ] . "'"
             )
         );
         $name = '<strong>' . $ds[ 'name' ] . '</strong>';
@@ -86,13 +86,13 @@ if ($action == "show") {
 
         $member = safe_query(
             "SELECT
-              *
+                *
             FROM
-              " . PREFIX . "squads_members s, " . PREFIX . "user u
+                " . PREFIX . "squads_members s, " . PREFIX . "user u
             WHERE
-              s.squadID='" . $ds[ 'squadID' ] . "'
+                s.squadID='" . $ds[ 'squadID' ] . "'
             AND
-              s.userID = u.userID
+                s.userID = u.userID
             ORDER BY sort"
         );
 
@@ -210,9 +210,9 @@ if ($action == "show") {
             $anzmembers = mysqli_num_rows(
                 safe_query(
                     "SELECT
-                      sqmID
+                        sqmID
                     FROM
-                      " . PREFIX . "squads_members
+                        " . PREFIX . "squads_members
                     WHERE squadID='" . $ds[ 'squadID' ] . "'"
                 )
             );
@@ -259,15 +259,15 @@ if ($action == "show") {
             $member =
                 safe_query(
                     "SELECT
-                      *
+                        *
                     FROM
-                      " . PREFIX . "squads_members s, " . PREFIX . "user u
+                        " . PREFIX . "squads_members s, " . PREFIX . "user u
                     WHERE
-                      s.squadID='" . $ds[ 'squadID' ] . "'
+                        s.squadID='" . $ds[ 'squadID' ] . "'
                     AND
-                      s.userID = u.userID
+                        s.userID = u.userID
                     ORDER BY
-                      sort"
+                        sort"
                 );
 
             eval ("\$members_head = \"" . gettemplate("members_head") . "\";");
