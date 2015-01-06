@@ -1216,14 +1216,14 @@ if ($action == "new") {
         if (isnewsadmin($userID)) {
             $adminaction .=
                 '<a href="news.php?quickactiontype=unpublish&amp;newsID=' . $ds[ 'newsID' ] .
-                '" class="btn btn-danger">' . $_language->module[ 'unpublish' ] . '</a>';
+                '" class="btn btn-danger">' . $_language->module[ 'unpublish' ] . '</a> ';
         }
         if ((isnewswriter($userID) and $ds[ 'poster' ] == $userID) or isnewsadmin($userID)) {
             $adminaction .=
                 '<input type="button" onclick="window.open(\'news.php?action=edit&amp;newsID=' . $ds[ 'newsID' ] .
                 '\',\'News\',\'toolbar=no,status=no,scrollbars=yes,width=800,height=600\');" value="' .
                 $_language->module[ 'edit' ] . '" class="btn btn-danger">
-		  <input type="button" onclick="MM_confirm(\'' . $_language->module[ 'really_delete' ] .
+                <input type="button" onclick="MM_confirm(\'' . $_language->module[ 'really_delete' ] .
                 '\', \'news.php?action=delete&amp;id=' . $ds[ 'newsID' ] . '\')" value="' .
                 $_language->module[ 'delete' ] . '" class="btn btn-danger">';
         }
