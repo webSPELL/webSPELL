@@ -36,34 +36,39 @@ function checkCommentsAllow($type, $parentID)
     $moduls[ 'de' ] = ["demos", "demoID", "comments"];
     $moduls[ 'po' ] = ["poll", "pollID", "comments"];
     $allowed = 0;
-    $modul = $moduls[ $type ];
-    $get = safe_query(
-        "SELECT
-            " . $modul[ 2 ] . "
-        FROM
-            " . PREFIX . $modul[ 0 ] . "
-        WHERE
-            " . $modul[ 1 ] . "='" . (int)$parentID."'"
-    );
-    if (mysqli_num_rows($get)) {
-        $data = mysqli_fetch_assoc($get);
-        switch ($data[ $modul[ 2 ] ]) {
-            case 0:
-                $allowed = 0;
-                break;
-            case 1:
-                if ($userID) {
-                    $allowed = 1;
-                }
-                break;
-            case 2:
-                $allowed = 1;
-                break;
-            default:
-                $allowed = 0;
+    if (array_key_exists($type, $moduls)) {
+        $modul = $moduls[ $type ];
+        $get = safe_query(
+            "SELECT
+                " . $modul[ 2 ] . "
+            FROM
+                " . PREFIX . $modul[ 0 ] . "
+            WHERE
+                " . $modul[ 1 ] . "='" . (int)$parentID."'"
+        );
+        if (mysqli_num_rows($get)) {
+            $data = mysqli_fetch_assoc($get);
+            switch ($data[ $modul[ 2 ] ]) {
+                case 0:
+                    $allowed = false;
+                    break;
+                case 1:
+                    if ($userID) {
+                        $allowed = true;
+                    }
+                    break;
+                case 2:
+                    $allowed = true;
+                    break;
+                default:
+                    $allowed = false;
+            }
         }
+        return $allowed;
     }
-    return $allowed;
+    else{
+        return false;
+    }
 }
 
 if (isset($_POST[ 'savevisitorcomment' ])) {
