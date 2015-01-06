@@ -55,7 +55,7 @@ echo $post .
     ' <a href="index.php?site=news&amp;action=archive" class="btn btn-primary">' .
     $_language->module[ 'news_archive' ] . '</a><hr>';
 
-if ($newsID) {
+if (isset($newsID)) {
     $result = safe_query("SELECT * FROM " . PREFIX . "news WHERE `newsID` = '" . (int)$newsID."'");
     $ds = mysqli_fetch_array($result);
 
