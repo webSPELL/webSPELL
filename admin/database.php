@@ -185,7 +185,7 @@ if ($action == "optimize") {
             header("Cache-Control: must-revalidate, post-check=0, pre-check=0");
             header("Content-Type: application/force-download");
             header("Content-Description: File Transfer");
-            if (is_integer(mb_strpos(strtolower($_SERVER[ "HTTP_USER_AGENT" ]), "msie")) and
+            if (is_integer(mb_strpos(strtolower($_SERVER[ "HTTP_USER_AGENT" ]), "msie")) &&
                 is_integer(mb_strpos(strtolower($_SERVER[ "HTTP_USER_AGENT" ]), "win"))
             ) {
                 header("Content-Disposition: filename=backup-" . strtolower(date("D-d-M-Y")) . ".sql;");
