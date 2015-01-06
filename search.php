@@ -56,7 +56,7 @@ if (
         echo $title_search;
 
         $text = str_replace(['%', '*'], ['\%', '%'], $_REQUEST[ 'text' ]);
-        if (!isset($_REQUEST[ 'r' ]) or $_REQUEST[ 'r' ] < 1 or $_REQUEST[ 'r' ] > 100) {
+        if (!isset($_REQUEST[ 'r' ]) || $_REQUEST[ 'r' ] < 1 || $_REQUEST[ 'r' ] > 100) {
             $results = 50;
         } else {
             $results = (int)$_REQUEST[ 'r' ];
@@ -244,7 +244,7 @@ if (
                                 break;
                             }
                         }
-                        if (!$usergrp and !ismoderator($userID, $ds[ 'boardID' ])) {
+                        if (!$usergrp && !ismoderator($userID, $ds[ 'boardID' ])) {
                             continue;
                         }
                     }
@@ -376,7 +376,7 @@ if (
 
             $i = 0;
             foreach ($res_occurr as $key => $val) {
-                if ($page > 1 and $i < ($results * ($page - 1))) {
+                if ($page > 1 && $i < ($results * ($page - 1))) {
                     $i++;
                     continue;
                 }

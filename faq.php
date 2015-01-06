@@ -36,7 +36,7 @@ if (isset($_GET[ 'action' ])) {
     $action = '';
 }
 
-if ($action == "faqcat" and is_numeric($_GET[ 'faqcatID' ])) {
+if ($action == "faqcat" && is_numeric($_GET[ 'faqcatID' ])) {
     if (ispageadmin($userID)) {
         echo '<input type="button" onclick="window.open(
             \'admin/admincenter.php?site=faq\',

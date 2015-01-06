@@ -244,7 +244,7 @@ foreach ($array as $i => $int) {
         imagefilledrectangle($im, $nr - 2, $offset_top + $y1 - 2, $nr + 2, $offset_top + $y1 + 2, $gelb);
     }
 
-    if (isset($_GET[ 'last' ]) and $_GET[ 'last' ] == "days") {
+    if (isset($_GET[ 'last' ]) && $_GET[ 'last' ] == "days") {
         imagestring(
             $im,
             2,
@@ -253,7 +253,7 @@ foreach ($array as $i => $int) {
             date("d", mktime(0, 0, 0, date("m"), date("d") - $count + $i, date("Y"))),
             $schwarz
         );
-    } elseif (isset($_GET[ 'last' ]) and $_GET[ 'last' ] == "months") {
+    } elseif (isset($_GET[ 'last' ]) && $_GET[ 'last' ] == "months") {
         imagestring(
             $im,
             2,

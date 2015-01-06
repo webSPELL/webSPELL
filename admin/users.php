@@ -27,7 +27,7 @@
 
 $_language->readModule('users');
 
-if (!isuseradmin($userID) or mb_substr(basename($_SERVER[ 'REQUEST_URI' ]), 0, 15) != "admincenter.php") {
+if (!isuseradmin($userID) || mb_substr(basename($_SERVER[ 'REQUEST_URI' ]), 0, 15) != "admincenter.php") {
     die($_language->module[ 'access_denied' ]);
 }
 
@@ -65,7 +65,7 @@ if (isset($_POST[ 'add' ])) {
             $avatar_url = '';
         }
 
-        if ($avatar[ 'name' ] != "" or ($avatar_url != "" and $avatar_url != "http://")) {
+        if ($avatar[ 'name' ] != "" || ($avatar_url != "" && $avatar_url != "http://")) {
             if ($avatar[ 'name' ] != "") {
                 move_uploaded_file($avatar[ 'tmp_name' ], $filepath . $avatar[ 'name' ] . ".tmp");
             } else {
@@ -130,7 +130,7 @@ if (isset($_POST[ 'add' ])) {
             $userpic_url = '';
         }
 
-        if ($userpic[ 'name' ] != "" or ($userpic_url != "" and $userpic_url != "http://")) {
+        if ($userpic[ 'name' ] != "" || ($userpic_url != "" && $userpic_url != "http://")) {
             if ($userpic[ 'name' ] != "") {
                 move_uploaded_file($userpic[ 'tmp_name' ], $filepath . $userpic[ 'name' ] . ".tmp");
             } else {
@@ -256,7 +256,7 @@ if (isset($_POST[ 'add' ])) {
             "SELECT userID FROM " . PREFIX . "user WHERE (username='" . $newusername .
             "' OR nickname='" . $newnickname . "') "
         ));
-        if (!$anz and $newusername != "") {
+        if (!$anz && $newusername != "") {
             safe_query(
                 "INSERT INTO " . PREFIX .
                 "user ( username, nickname, password, registerdate, activated) VALUES( '" . $newusername . "', '" .
@@ -277,7 +277,7 @@ if (isset($_POST[ 'add' ])) {
     $CAPCLASS = new \webspell\Captcha;
     if ($CAPCLASS->checkCaptcha(0, $_GET[ 'captcha_hash' ])) {
         $id = $_GET[ 'id' ];
-        if (!issuperadmin($id) or (issuperadmin($id) and issuperadmin($userID))) {
+        if (!issuperadmin($id) || (issuperadmin($id) && issuperadmin($userID))) {
             safe_query("DELETE FROM " . PREFIX . "forum_moderators WHERE userID='$id'");
             safe_query("DELETE FROM " . PREFIX . "messenger WHERE touser='$id'");
             safe_query("DELETE FROM " . PREFIX . "squads_members WHERE userID='$id'");
@@ -372,7 +372,7 @@ if ($action == "activate") {
     $id = $_GET[ 'id' ];
 
     if ($userID != $id) {
-        if (!issuperadmin($id) or (issuperadmin($id) and issuperadmin($userID))) {
+        if (!issuperadmin($id) || (issuperadmin($id) && issuperadmin($userID))) {
             $CAPCLASS = new \webspell\Captcha;
             $CAPCLASS->createTransaction();
             $hash = $CAPCLASS->getHash();

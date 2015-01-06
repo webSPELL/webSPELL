@@ -70,7 +70,7 @@ if (isset($_GET[ 'ajax' ])) {
 }
 $_language->readModule('group-users');
 
-if (!isforumadmin($userID) or mb_substr(basename($_SERVER[ 'REQUEST_URI' ]), 0, 15) != "admincenter.php") {
+if (!isforumadmin($userID) || mb_substr(basename($_SERVER[ 'REQUEST_URI' ]), 0, 15) != "admincenter.php") {
     die($_language->module[ 'access_denied' ]);
 }
 
@@ -98,7 +98,7 @@ if (isset($_GET[ 'action' ])) {
     if (isset($_GET[ 'addfield' ])) {
         $_POST[ 'addfield' ] = $_GET[ 'addfield' ];
     }
-        $users = [];
+    $users = [];
     if (in_array(0, $_POST[ 'users' ])) {
         $query = safe_query("SELECT userID FROM `" . PREFIX . "squads_members`");
         while ($ds = mysqli_fetch_array($query)) {
@@ -157,7 +157,7 @@ if (isset($_GET[ 'action' ])) {
             }
         }
     }
-    if (in_array(4, $_POST[ 'users' ]) or !count($_POST[ 'users' ]) or empty($_GET[ 'users' ])) {
+    if (in_array(4, $_POST[ 'users' ]) || !count($_POST[ 'users' ]) || empty($_GET[ 'users' ])) {
         $query = safe_query("SELECT userID FROM `" . PREFIX . "user`");
         while ($ds = mysqli_fetch_array($query)) {
             if (!in_array($ds[ 'userID' ], $users)) {
@@ -165,21 +165,23 @@ if (isset($_GET[ 'action' ])) {
             }
         }
     }
-        $groups = [];
+    $groups = [];
     if (isset($_POST[ 'groups' ])) {
         $grps = $_POST[ 'groups' ];
     } else {
         $grps = [1];
     }
-        $sql = safe_query("SELECT * FROM " . PREFIX . "forum_groups");
+
+    $sql = safe_query("SELECT * FROM " . PREFIX . "forum_groups");
     while ($ds = mysqli_fetch_array($sql)) {
         if (in_array($ds[ 'fgrID' ], $grps)) {
             $groups[ ] = ['fgrID' => $ds[ 'fgrID' ], 'name' => getinput($ds[ 'name' ])];
         }
     }
-        $groups_anz = count($groups);
-        $anz_users = count($users);
-        $pages = ceil($anz_users / $anz_users_page);
+
+    $groups_anz = count($groups);
+    $anz_users = count($users);
+    $pages = ceil($anz_users / $anz_users_page);
     if ($pages > 1) {
         echo makepagelink(
             "admincenter.php?site=group-users&amp;action=show&amp;users=" .
@@ -189,10 +191,10 @@ if (isset($_GET[ 'action' ])) {
             $pages
         );
     }
-        echo '<h1>&curren; <a href="admincenter.php?site=group-users" class="white">' .
-            $_language->module[ 'group_users' ] . '</a> &raquo; ' . $_language->module[ 'edit_group_users' ] .
-            '</h1>';
-        echo '<script type="text/javascript">
+    echo '<h1>&curren; <a href="admincenter.php?site=group-users" class="white">' .
+        $_language->module[ 'group_users' ] . '</a> &raquo; ' . $_language->module[ 'edit_group_users' ] .
+        '</h1>';
+    echo '<script type="text/javascript">
     function setUser(userID,group,status){
         fetch(
             "group-users.php?ajax=true&action=usergroups&user="+userID+"&group="+group+"&state="+status,
@@ -222,10 +224,10 @@ if (isset($_GET[ 'action' ])) {
     for ($i = 0; $i < $groups_anz; $i++) {
         echo '<td class="title"><b>' . $groups[ $i ][ 'name' ] . '</b></td>';
     }
-        echo '</tr>';
-        $n = 1;
-        $skip = $anz_users_page * ($page - 1);
-    for ($z = $skip; $z < ($skip + $anz_users_page) and $z < $anz_users; $z++) {
+    echo '</tr>';
+    $n = 1;
+    $skip = $anz_users_page * ($page - 1);
+    for ($z = $skip; $z < ($skip + $anz_users_page) && $z < $anz_users; $z++) {
         if ($n % 2) {
             $td = 'td1';
         } else {
@@ -245,7 +247,7 @@ if (isset($_GET[ 'action' ])) {
         echo '</tr>';
         $n++;
     }
-        echo '<tr><td class="td_head">
+    echo '<tr><td class="td_head">
             <input type="checkbox" name="ALL" value="ALL" onclick="SelectAllEval(this.form);" /> ' .
             $_language->module[ 'select_all' ] . '
         </td>

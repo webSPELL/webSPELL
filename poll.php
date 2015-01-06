@@ -116,7 +116,7 @@ function vote($poll)
             $cookie = in_array($ds[ 'pollID' ], $_COOKIE[ 'poll' ]);
         }
 
-        if ($cookie or $anz or $anz_user) {
+        if ($cookie || $anz || $anz_user) {
 
             if ($ds[ 'intern' ] == 1) {
                 $isintern = '(' . $_language->module[ 'intern' ] . ')';

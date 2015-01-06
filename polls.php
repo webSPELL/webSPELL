@@ -80,7 +80,7 @@ if ($action == "vote") {
         if (isset($_COOKIE[ 'poll' ]) && is_array($_COOKIE[ 'poll' ])) {
             $cookie = in_array($pollID, $_COOKIE[ 'poll' ]);
         }
-        if (!$cookie and !$anz and !$anz_user and isset($_POST[ 'vote' ])) {
+        if (!$cookie && !$anz && !$anz_user && isset($_POST[ 'vote' ])) {
 
             //write cookie
             $index = count($_COOKIE[ 'poll' ]);
@@ -558,7 +558,7 @@ if ($action == "new") {
             $cookie = in_array($ds[ 'pollID' ], $_COOKIE[ 'poll' ]);
         }
 
-        if ($cookie or $anz or $anz_user) {
+        if ($cookie || $anz || $anz_user) {
             redirect('index.php?site=polls&amp;pollID=' . $ds[ 'pollID' ], $_language->module[ 'already_voted' ], 3);
         } else {
             echo '<form method="post" action="polls.php?action=vote">
@@ -632,7 +632,7 @@ if ($action == "new") {
                 $isintern = '';
             }
 
-            if ($ds[ 'laufzeit' ] < time() or $ds[ 'aktiv' ] == "0") {
+            if ($ds[ 'laufzeit' ] < time() || $ds[ 'aktiv' ] == "0") {
                 $timeleft = $_language->module[ 'poll_ended' ];
                 $active = '';
             } else {

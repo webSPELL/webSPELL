@@ -25,7 +25,7 @@
 ##########################################################################
 */
 
-if (isset($rubricID) and $rubricID) {
+if (isset($rubricID) && $rubricID) {
     $only = "AND rubric='" . $rubricID . "'";
 } else {
     $only = '';

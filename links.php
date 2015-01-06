@@ -250,7 +250,7 @@ if ($action == "new") {
     } else {
         redirect('index.php?site=links', $_language->module[ 'no_access' ]);
     }
-} elseif ($action == "show" and is_numeric($_GET[ 'linkcatID' ])) {
+} elseif ($action == "show" && is_numeric($_GET[ 'linkcatID' ])) {
     if (ispageadmin($userID) || isnewsadmin($userID)) {
         echo
             '<a href="index.php?site=links&amp;action=new" class="btn btn-danger">' .

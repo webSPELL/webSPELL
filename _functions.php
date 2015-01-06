@@ -375,7 +375,7 @@ function getforminput($text)
 // -- LOGIN -- //
 
 $login_per_cookie = false;
-if (isset($_COOKIE[ 'ws_auth' ]) and !isset($_SESSION[ 'ws_auth' ])) {
+if (isset($_COOKIE[ 'ws_auth' ]) && !isset($_SESSION[ 'ws_auth' ])) {
     $login_per_cookie = true;
     $_SESSION[ 'ws_auth' ] = $_COOKIE[ 'ws_auth' ];
 }
@@ -408,7 +408,7 @@ if (isset($_GET[ 'site' ])) {
 } else {
     $site = '';
 }
-if ($closed and !isanyadmin($userID)) {
+if ($closed && !isanyadmin($userID)) {
     $dl = mysqli_fetch_array(safe_query("SELECT * FROM `" . PREFIX . "lock` LIMIT 0,1"));
     $reason = $dl[ 'reason' ];
     $time = $dl[ 'time' ];

@@ -289,7 +289,7 @@ function print_termine($tag, $month, $year)
                     $players = "";
                     $announce = "";
                     $adminaction = '';
-                    if (isclanmember($userID) or isanyadmin($userID)) {
+                    if (isclanmember($userID) || isanyadmin($userID)) {
                         $anmeldung =
                             safe_query(
                                 "SELECT * FROM " . PREFIX . "upcoming_announce WHERE upID='" . $ds['upID'] . "'"
@@ -518,7 +518,7 @@ if ($action === "savewar") {
             )"
     );
 
-    if (isset($chID) and $chID > 0) {
+    if (isset($chID) && $chID > 0) {
         safe_query("DELETE FROM " . PREFIX . "challenge WHERE chID='" . $chID . "'");
     }
 

@@ -228,7 +228,7 @@ if (isset($_POST[ 'savevisitorcomment' ])) {
     $referer = $_GET[ 'ref' ];
     $_language->readModule('comments');
     $_language->readModule('bbcode', true);
-    if (isfeedbackadmin($userID) or iscommentposter($userID, $id)) {
+    if (isfeedbackadmin($userID) || iscommentposter($userID, $id)) {
         if (!empty($id)) {
             $dt = safe_query("SELECT * FROM " . PREFIX . "comments WHERE commentID='" . (int)$id."'");
             if (mysqli_num_rows($dt)) {
@@ -257,7 +257,7 @@ if (isset($_POST[ 'savevisitorcomment' ])) {
     include("_settings.php");
     include("_functions.php");
 
-    if (!isfeedbackadmin($userID) and !iscommentposter($userID, $_POST[ 'commentID' ])) {
+    if (!isfeedbackadmin($userID) && !iscommentposter($userID, $_POST[ 'commentID' ])) {
         die('No access');
     }
 
@@ -503,7 +503,7 @@ if (isset($_POST[ 'savevisitorcomment' ])) {
             $content = cleartext($ds[ 'comment' ]);
             $content = toggle($content, $ds[ 'commentID' ]);
 
-            if (isfeedbackadmin($userID) or iscommentposter($userID, $ds[ 'commentID' ])) {
+            if (isfeedbackadmin($userID) || iscommentposter($userID, $ds[ 'commentID' ])) {
                 $edit =
                     '<a href="index.php?site=comments&amp;editcomment=true&amp;id=' . $ds[ 'commentID' ] . '&amp;ref=' .
                     urlencode($referer) . '" title="' . $_language->module[ 'edit_comment' ] .

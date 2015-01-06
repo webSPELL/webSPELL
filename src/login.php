@@ -37,7 +37,7 @@ if (isset($_SESSION['ws_auth'])) {
         $ws_user = $authent[0];
         $ws_pwd = $authent[1];
 
-        if (isset($ws_user) and isset($ws_pwd)) {
+        if (isset($ws_user) && isset($ws_pwd)) {
             $check = safe_query(
                 "SELECT
                     userID, language

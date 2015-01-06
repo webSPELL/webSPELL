@@ -54,7 +54,7 @@ if (isset($_GET[ 'delete' ])) {
         $id = $_GET[ 'id' ];
         $squadID = $_GET[ 'squadID' ];
         $squads = mysqli_num_rows(safe_query("SELECT userID FROM " . PREFIX . "squads_members WHERE userID='$id'"));
-        if ($squads < 2 and !issuperadmin($id)) {
+        if ($squads < 2 && !issuperadmin($id)) {
             safe_query("DELETE FROM " . PREFIX . "user_groups WHERE userID='$id'");
         }
 
@@ -106,7 +106,7 @@ if (isset($_POST[ 'saveedit' ])) {
         }
         $gallery = isset($_POST[ 'galleryadmin' ]);
 
-        if ($userID != $id or issuperadmin($userID)) {
+        if ($userID != $id || issuperadmin($userID)) {
 
             $ergebnis = safe_query("SELECT * FROM " . PREFIX . "user_groups WHERE userID='" . $id . "'");
             if (!mysqli_num_rows($ergebnis)) {
@@ -194,7 +194,7 @@ if (isset($_POST[ 'saveedit' ])) {
     }
 }
 
-if (isset($_GET[ 'action' ]) and $_GET[ 'action' ] == "edit") {
+if (isset($_GET[ 'action' ]) && $_GET[ 'action' ] == "edit") {
 
     echo '<h1>&curren; <a href="admincenter.php?site=members" class="white">' . $_language->module[ 'members' ] .
         '</a> &raquo; ' . $_language->module[ 'edit_member' ] . '</h1>';

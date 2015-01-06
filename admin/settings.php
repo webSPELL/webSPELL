@@ -167,7 +167,7 @@ if (isset($_POST[ 'submit' ])) {
     $langs = [];
     if ($dh = opendir($filepath)) {
         while ($file = mb_substr(readdir($dh), 0, 2)) {
-            if ($file != "." and $file != ".." and is_dir($filepath . $file)) {
+            if ($file != "." && $file != ".." && is_dir($filepath . $file)) {
                 if (isset($mysql_langs[ $file ])) {
                     $name = $mysql_langs[ $file ];
                     $name = ucfirst($name);

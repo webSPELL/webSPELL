@@ -471,7 +471,7 @@ if ($part == "groups") {
                 if ($file != "." && $file != "..") {
                     if (is_file($dir . $file)) {
                         if ($info = getimagesize($dir . $file)) {
-                            if ($info[ 2 ] == 1 or $info[ 2 ] == 2 || $info[ 2 ] == 3) {
+                            if ($info[ 2 ] == 1 || $info[ 2 ] == 2 || $info[ 2 ] == 3) {
                                 $pics[ ] = $file;
                             }
                         }

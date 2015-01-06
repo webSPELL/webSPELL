@@ -50,11 +50,11 @@ if (!isset($_GET[ 'action' ])) {
         if ($latest[ 0 ] > $ownversion[ 0 ]) {
             echo '<a href="admincenter.php?site=update&amp;action=update"><font color="red">' .
                 $_language->module[ 'new_version' ] . '!</font></a>';
-        } elseif ($latest[ 0 ] == $ownversion[ 0 ] and $latest[ 1 ] > $ownversion[ 1 ]) {
+        } elseif ($latest[ 0 ] == $ownversion[ 0 ] && $latest[ 1 ] > $ownversion[ 1 ]) {
             echo '<a href="admincenter.php?site=update&amp;action=update">' . $_language->module[ 'new_functions' ] .
                 '&nbsp;' . $version[ 0 ] . '!</a>';
-        } elseif ($latest[ 0 ] == $ownversion[ 0 ] and
-            $latest[ 1 ] == $ownversion[ 1 ] and $latest[ 2 ] > $ownversion[ 2 ]
+        } elseif ($latest[ 0 ] == $ownversion[ 0 ] &&
+            $latest[ 1 ] == $ownversion[ 1 ] && $latest[ 2 ] > $ownversion[ 2 ]
         ) {
             echo '<a href="admincenter.php?site=update&amp;action=update">' . $_language->module[ 'new_updates' ] .
                 '&nbsp;' . $version[ 0 ] . '!</a>';

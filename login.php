@@ -37,7 +37,7 @@ if ($loggedin) {
     } else {
         $admin = '';
     }
-    if (isclanmember($userID) or iscashadmin($userID)) {
+    if (isclanmember($userID) || iscashadmin($userID)) {
         $cashbox = '<li><a href="index.php?site=cashbox" class="alert-danger">' . $_language->module[ 'cash-box' ] .
             '</a></li><li class="divider"></li>';
     } else {

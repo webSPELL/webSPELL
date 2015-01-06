@@ -27,7 +27,7 @@
 
 $_language->readModule('squads');
 
-if (!isuseradmin($userID) or mb_substr(basename($_SERVER[ 'REQUEST_URI' ]), 0, 15) != "admincenter.php") {
+if (!isuseradmin($userID) || mb_substr(basename($_SERVER[ 'REQUEST_URI' ]), 0, 15) != "admincenter.php") {
     die($_language->module[ 'access_denied' ]);
 }
 
@@ -41,7 +41,7 @@ if (isset($_GET[ 'delete' ])) {
                 "SELECT userID FROM " . PREFIX .
                 "squads_members WHERE userID='$ds[userID]'"
             ));
-            if ($squads < 2 and !issuperadmin($ds[ 'userID' ])) {
+            if ($squads < 2 && !issuperadmin($ds[ 'userID' ])) {
                 safe_query("DELETE FROM " . PREFIX . "user_groups WHERE userID='$ds[userID]'");
             }
         }
