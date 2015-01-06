@@ -44,8 +44,7 @@ $league = '<a href="' . getinput($ds[ 'leaguehp' ]) . '" target="_blank">' . get
 if (file_exists('images/games/' . $ds[ 'game' ] . '.gif')) {
     $game_ico = 'images/games/' . $ds[ 'game' ] . '.gif';
     $game = '<img src="' . $game_ico . '" width="13" height="13" alt="">';
-}
-else {
+} else {
     $game = $ds[ 'game' ];
 }
 $maps = "";
