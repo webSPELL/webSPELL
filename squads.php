@@ -119,7 +119,7 @@ if ($action == "show") {
                 $userdescription = $_language->module[ 'no_description' ];
             }
 
-            if ($dm[ 'userpic' ] != "" and file_exists("images/userpics/" . $dm[ 'userpic' ])) {
+            if ($dm[ 'userpic' ] != "" && file_exists("images/userpics/" . $dm[ 'userpic' ])) {
                 $userpic = $dm[ 'userpic' ];
                 $pic_info = $dm[ 'nickname' ] . ' ' . $_language->module[ 'userpicture' ];
             } else {

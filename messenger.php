@@ -79,7 +79,7 @@ if (isset($_POST['delete'])) {
     $_language->readModule('messenger');
 
     $touser = $_POST['touser'];
-    if ($touser[0] == "" and $_POST['touser_field'] != "*") {
+    if ($touser[0] == "" && $_POST['touser_field'] != "*") {
         $tmp = explode(",", $_POST['touser_field']);
         for ($i = 0; $i < 5; $i++) {
             if (isset($tmp[$i])) {
@@ -119,7 +119,7 @@ if (isset($_POST['delete'])) {
         $title = $_POST['title'];
     }
     $message = $_POST['message'];
-    if ($touser[0] != "" and isset($userID)) {
+    if ($touser[0] != "" && isset($userID)) {
         foreach ($touser as $id) {
             sendmessage($id, $title, $message, $userID);
         }
@@ -186,7 +186,7 @@ if (isset($_POST['delete'])) {
             }
         }
 
-        if (isset($entries) and $entries > 0) {
+        if (isset($entries) && $entries > 0) {
             $max = (int)$entries;
         } else {
             $max = $maxmessages;
@@ -349,7 +349,7 @@ if (isset($_POST['delete'])) {
                 $type = 'ASC';
             }
         }
-        if (isset($entries) and $entries > 0) {
+        if (isset($entries) && $entries > 0) {
             $max = (int)$entries;
         } else {
             $max = $maxmessages;
@@ -491,7 +491,7 @@ if (isset($_POST['delete'])) {
             )
         );
 
-        if ($ds['touser'] == $userID or $ds['fromuser'] == $userID) {
+        if ($ds['touser'] == $userID || $ds['fromuser'] == $userID) {
             safe_query("UPDATE " . PREFIX . "messenger SET viewed='1' WHERE messageID='$id'");
             $date = getformatdatetime($ds['date']);
             $sender = '<a href="index.php?site=profile&amp;id=' . $ds['fromuser'] . '"><b>' .
@@ -523,7 +523,7 @@ if (isset($_POST['delete'])) {
         $_language->readModule('bbcode', true);
         $ergebnis = safe_query("SELECT * FROM " . PREFIX . "messenger WHERE messageID='$id'");
         $ds = mysqli_fetch_array($ergebnis);
-        if ($ds['touser'] == $userID or $ds['fromuser'] == $userID) {
+        if ($ds['touser'] == $userID || $ds['fromuser'] == $userID) {
             $replytouser = $ds['fromuser'];
             $tousernick = getnickname($replytouser);
             $date = getformatdatetime($ds['date']);

@@ -142,7 +142,7 @@ if ($action == "add") {
     }
     $CAPCLASS = new \webspell\Captcha;
     if ($CAPCLASS->checkCaptcha(0, $_POST[ 'captcha_hash' ])) {
-        if ($country and $short) {
+        if ($country && $short) {
             $file_ext = strtolower(mb_substr($icon[ 'name' ], strrpos($icon[ 'name' ], ".")));
             if ($file_ext == ".gif") {
                 safe_query(
@@ -188,7 +188,7 @@ if ($action == "add") {
     }
     $CAPCLASS = new \webspell\Captcha;
     if ($CAPCLASS->checkCaptcha(0, $_POST[ 'captcha_hash' ])) {
-        if ($country and $short) {
+        if ($country && $short) {
             if ($icon[ 'name' ] == "") {
                 if (
                     safe_query(

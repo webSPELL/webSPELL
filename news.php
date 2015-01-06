@@ -145,7 +145,7 @@ if ($action == "new") {
                 newsID = '" . (int)$newsID ."'"
         )
     );
-    if (($ds[ 'poster' ] != $userID or !isnewswriter($userID)) and !isnewsadmin($userID)) {
+    if (($ds[ 'poster' ] != $userID || !isnewswriter($userID)) && !isnewsadmin($userID)) {
         die($_language->module[ 'no_access' ]);
     }
 
@@ -263,7 +263,7 @@ if ($action == "new") {
     if (isset($_POST[ 'topnews' ])) {
         if ($_POST[ 'topnews' ]) {
             safe_query("UPDATE " . PREFIX . "settings SET topnewsID='" . $newsID . "'");
-        } elseif (!$_POST[ 'topnews' ] and $newsID == $topnewsID) {
+        } elseif (!$_POST[ 'topnews' ] && $newsID == $topnewsID) {
             safe_query("UPDATE " . PREFIX . "settings SET topnewsID='0'");
         }
     }
@@ -288,7 +288,7 @@ if ($action == "new") {
     $result = safe_query("SELECT * FROM " . PREFIX . "news WHERE newsID='$newsID'");
     $ds = mysqli_fetch_array($result);
 
-    if (($ds[ 'poster' ] != $userID or !isnewswriter($userID)) and !isnewsadmin($userID)) {
+    if (($ds[ 'poster' ] != $userID || !isnewswriter($userID)) && !isnewsadmin($userID)) {
         die($_language->module[ 'no_access' ]);
     }
 
@@ -467,7 +467,7 @@ if ($action == "new") {
                         newsID='" . (int)$id ."'"
                 )
             );
-            if (($ds[ 'poster' ] != $userID or !isnewswriter($userID)) and !isnewsadmin($userID)) {
+            if (($ds[ 'poster' ] != $userID || !isnewswriter($userID)) && !isnewsadmin($userID)) {
                 die($_language->module[ 'no_access' ]);
             }
             if ($ds[ 'screens' ]) {
@@ -510,7 +510,7 @@ if ($action == "new") {
               newsID='" . (int)$id ."'"
         )
     );
-    if (($ds[ 'poster' ] != $userID or !isnewswriter($userID)) and !isnewsadmin($userID)) {
+    if (($ds[ 'poster' ] != $userID || !isnewswriter($userID)) && !isnewsadmin($userID)) {
         die($_language->module[ 'no_access' ]);
     }
     if ($ds[ 'screens' ]) {
@@ -546,7 +546,7 @@ if ($action == "new") {
     $newsID = $_GET[ 'newsID' ];
 
     $ds = mysqli_fetch_array(safe_query("SELECT * FROM " . PREFIX . "news WHERE newsID='" . $newsID . "'"));
-    if (($ds[ 'poster' ] != $userID or !isnewswriter($userID)) and !isnewsadmin($userID)) {
+    if (($ds[ 'poster' ] != $userID || !isnewswriter($userID)) && !isnewsadmin($userID)) {
         die($_language->module[ 'no_access' ]);
     }
 
@@ -1218,7 +1218,7 @@ if ($action == "new") {
                 '<a href="news.php?quickactiontype=unpublish&amp;newsID=' . $ds[ 'newsID' ] .
                 '" class="btn btn-danger">' . $_language->module[ 'unpublish' ] . '</a>';
         }
-        if ((isnewswriter($userID) and $ds[ 'poster' ] == $userID) or isnewsadmin($userID)) {
+        if ((isnewswriter($userID) && $ds[ 'poster' ] == $userID) || isnewsadmin($userID)) {
             $adminaction .=
                 '<input type="button" onclick="window.open(\'news.php?action=edit&amp;newsID=' . $ds[ 'newsID' ] .
                 '\',\'News\',\'toolbar=no,status=no,scrollbars=yes,width=800,height=600\');" value="' .

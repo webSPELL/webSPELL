@@ -25,7 +25,7 @@
 ##########################################################################
 */
 
-if($_POST['installtype']=="full" AND $_POST['hp_url']) {
+if($_POST['installtype']=="full" && $_POST['hp_url']) {
 ?>
 
   <tr>
@@ -101,7 +101,7 @@ if($_POST['installtype']=="full" AND $_POST['hp_url']) {
      </tr>
    </table>
    <input type="hidden" name="url" value="<?php echo $_POST['hp_url']; ?>">
-   
+
    <?php
    } else echo '<tr>
    <td id="step" align="center" colspan="2">
@@ -121,9 +121,9 @@ if($_POST['installtype']=="full" AND $_POST['hp_url']) {
    <td id="content" colspan="2">
 	'.$_language->module['finish_next'];
    ?>
-   
+
    <input type="hidden" name="installtype" value="<?php echo $_POST['installtype']; ?>">
-	
+
    <div align="right"><br><a href="javascript:document.ws_install.submit()"><img src="images/next.jpg" alt=""></a></div>
    </td>
   </tr>

@@ -174,7 +174,7 @@ if ($newsID) {
             $related = "n/a";
         }
 
-        if (isnewsadmin($userID) or (isnewswriter($userID) and $ds[ 'poster' ] == $userID)) {
+        if (isnewsadmin($userID) || (isnewswriter($userID) && $ds[ 'poster' ] == $userID)) {
             $adminaction =
                 '<input type="button" onclick="window.open(
                         \'news.php?action=edit&amp;newsID=' . $ds[ 'newsID' ] . '\',

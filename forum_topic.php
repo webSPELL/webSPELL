@@ -104,7 +104,7 @@ if (isset($_POST['newreply']) && !isset($_POST['preview'])) {
         die($_language->module['no_access_write']);
     }
     $do_sticky = '';
-    if (isforumadmin($userID) or isanymoderator($userID, $ds['boardID'])) {
+    if (isforumadmin($userID) || isanymoderator($userID, $ds['boardID'])) {
         $do_sticky = (isset($_POST['sticky'])) ? ', sticky=1' : ', sticky=0';
     }
 
@@ -180,7 +180,7 @@ if (isset($_POST['newreply']) && !isset($_POST['preview'])) {
             }
         }
 
-        if (isset($_POST['notify']) and (bool)$_POST['notify']) {
+        if (isset($_POST['notify']) && (bool)$_POST['notify']) {
             safe_query(
                 "INSERT INTO " . PREFIX . "forum_notify (topicID, userID) VALUES('" . $topic . "', '" . $userID .
                 "') "
@@ -195,13 +195,13 @@ if (isset($_POST['newreply']) && !isset($_POST['preview'])) {
     }
     header("Location: index.php?site=forum_topic&topic=" . $topic . "&page=" . $page);
     exit();
-} elseif (isset($_POST['editreply']) and (bool)$_POST['editreply']) {
+} elseif (isset($_POST['editreply']) && (bool)$_POST['editreply']) {
     include("_mysql.php");
     include("_settings.php");
     include("_functions.php");
     $_language->readModule('forum');
 
-    if (!isforumposter($userID, $_POST['id']) and !isforumadmin($userID) and !ismoderator($userID, $_GET['board'])
+    if (!isforumposter($userID, $_POST['id']) && !isforumadmin($userID) && !ismoderator($userID, $_GET['board'])
     ) {
         die($_language->module['no_accses']);
     }
@@ -212,10 +212,10 @@ if (isset($_POST['newreply']) && !isset($_POST['preview'])) {
         "SELECT postID FROM " . PREFIX . "forum_posts WHERE postID='" . $id .
         "' AND poster='" . $userID . "'"
     ));
-    if (($check or isforumadmin($userID) or ismoderator($userID, (int)$_GET['board'])) and mb_strlen(trim($message))
+    if (($check || isforumadmin($userID) || ismoderator($userID, (int)$_GET['board'])) && mb_strlen(trim($message))
     ) {
 
-        if (isforumadmin($userID) or isanymoderator($userID, $ds['boardID'])) {
+        if (isforumadmin($userID) || isanymoderator($userID, $ds['boardID'])) {
             $do_sticky = (isset($_POST['sticky'])) ? 'sticky=1' : 'sticky=0';
             safe_query(
                 "UPDATE " . PREFIX . "forum_topics SET $do_sticky WHERE topicID='" . (int)$_GET['topic'] .
@@ -240,14 +240,14 @@ if (isset($_POST['newreply']) && !isset($_POST['preview'])) {
         }
     }
     header("Location: index.php?site=forum_topic&topic=" . (int)$_GET['topic'] . "&page=" . (int)$_GET['page']);
-} elseif (isset($_POST['saveedittopic']) and (bool)$_POST['saveedittopic']) {
+} elseif (isset($_POST['saveedittopic']) && (bool)$_POST['saveedittopic']) {
     include("_mysql.php");
     include("_settings.php");
     include("_functions.php");
     $_language->readModule('forum');
 
-    if (!isforumadmin($userID) and
-        !isforumposter($userID, $_POST['post']) and !ismoderator($userID, $_GET['board'])
+    if (!isforumadmin($userID) &&
+        !isforumposter($userID, $_POST['post']) && !ismoderator($userID, $_GET['board'])
     ) {
         die($_language->module['no_accses']);
     }
@@ -272,7 +272,7 @@ if (isset($_POST['newreply']) && !isset($_POST['preview'])) {
             $icon = '';
         }
         $do_sticky = (isset($_POST['sticky'])) ? true : false;
-        if ($do_sticky and (isforumadmin($userID) or isanymoderator($userID, $board))) {
+        if ($do_sticky && (isforumadmin($userID) || isanymoderator($userID, $board))) {
             $do_sticky = true;
         } else {
             $do_sticky = false;
@@ -332,7 +332,7 @@ function showtopic($topic, $edit, $addreply, $quoteID, $type)
     $usergrp = 0;
     $writer = 0;
     $ismod = ismoderator($userID, $dt['boardID']);
-    if ($dt['writegrps'] != "" and !$ismod) {
+    if ($dt['writegrps'] != "" && !$ismod) {
         $writegrps = explode(";", $dt['writegrps']);
         foreach ($writegrps as $value) {
             if (isinusergrp($value, $userID)) {
@@ -344,7 +344,7 @@ function showtopic($topic, $edit, $addreply, $quoteID, $type)
     } else {
         $writer = 1;
     }
-    if ($dt['readgrps'] != "" and !$usergrp and !$ismod) {
+    if ($dt['readgrps'] != "" && !$usergrp && !$ismod) {
         $readgrps = explode(";", $dt['readgrps']);
         foreach ($readgrps as $value) {
             if (isinusergrp($value, $userID)) {
@@ -405,7 +405,7 @@ function showtopic($topic, $edit, $addreply, $quoteID, $type)
         $new = '|';
 
         foreach ($array as $split) {
-            if ($split != "" and $split != $topic) {
+            if ($split != "" && $split != $topic) {
                 $new = $new . $split . '|';
             }
         }
@@ -425,7 +425,7 @@ function showtopic($topic, $edit, $addreply, $quoteID, $type)
 
     $topicactions = '<a href="printview.php?board=' . $dt['boardID'] . '&amp;topic=' . $topic .
         '" target="_blank" class="btn btn-default"><span class="icon-print"></span></a> ';
-    if ($loggedin and $writer) {
+    if ($loggedin && $writer) {
         $topicactions .=
             '<a href="index.php?site=forum&amp;addtopic=true&amp;action=newtopic&amp;board=' . $dt['boardID'] .
             '" class="btn btn-primary hidden">' . $_language->module['new_topic'] .
@@ -463,7 +463,7 @@ function showtopic($topic, $edit, $addreply, $quoteID, $type)
             "SELECT * FROM " . PREFIX . "forum_posts WHERE topicID='" . $dt['topicID'] .
             "' AND postID='" . $id . "' AND poster='" . $userID . "' ORDER BY DATE ASC LIMIT 0,1"
         ));
-        if ($anz or isforumadmin($userID) or ismoderator($userID, $dt['boardID'])) {
+        if ($anz || isforumadmin($userID) || ismoderator($userID, $dt['boardID'])) {
             if (istopicpost($dt['topicID'], $id)) {
                 $bg1 = BG_1;
 
@@ -581,7 +581,7 @@ function showtopic($topic, $edit, $addreply, $quoteID, $type)
             "forum_posts WHERE topicID='$topic' ORDER BY date DESC LIMIT $start, $max"
         );
     } elseif ($addreply && !$dt['closed']) {
-        if ($loggedin and $writer) {
+        if ($loggedin && $writer) {
             if (isset($_POST['preview'])) {
                 $bg1 = BG_1;
                 $bg2 = BG_2;
@@ -614,7 +614,7 @@ function showtopic($topic, $edit, $addreply, $quoteID, $type)
                 } else {
                     $signatur = '';
                 }
-                if ($getemail = getemail($userID) and !getemailhide($userID)) {
+                if ($getemail = getemail($userID) && !getemailhide($userID)) {
                     $email = '<a href="mailto:' . mail_protect($getemail) .
                         '"><img src="images/icons/email.gif" alt="email"></a>';
                 } else {
@@ -791,7 +791,7 @@ function showtopic($topic, $edit, $addreply, $quoteID, $type)
             $signatur = '';
         }
 
-        if ($getemail = getemail($dr['poster']) and !getemailhide($dr['poster'])) {
+        if ($getemail = getemail($dr['poster']) && !getemailhide($dr['poster'])) {
             $email =
                 '<a href="mailto:' . mail_protect($getemail) . '"><img src="images/icons/email.gif" alt="email"></a>';
         } else {
@@ -871,13 +871,13 @@ function showtopic($topic, $edit, $addreply, $quoteID, $type)
         }
 
         $actions = '';
-        if (($userID == $dr['poster'] or isforumadmin($userID) or ismoderator($userID, $dt['boardID'])) &&
+        if (($userID == $dr['poster'] || isforumadmin($userID) || ismoderator($userID, $dt['boardID'])) &&
             !$dt['closed']
         ) {
             $actions = ' <a href="index.php?site=forum_topic&amp;topic=' . $topic . '&amp;edit=true&amp;id=' .
                 $dr['postID'] . '&amp;page=' . $page . '"><span class="icon-edit"></span></a> ';
         }
-        if (isforumadmin($userID) or ismoderator($userID, $dt['boardID'])) {
+        if (isforumadmin($userID) || ismoderator($userID, $dt['boardID'])) {
             $actions .= '<input class="input" type="checkbox" name="postID[]" value="' . $dr['postID'] . '">';
         }
 
@@ -888,7 +888,7 @@ function showtopic($topic, $edit, $addreply, $quoteID, $type)
     }
 
     $adminactions = "";
-    if (isforumadmin($userID) or ismoderator($userID, $dt['boardID'])) {
+    if (isforumadmin($userID) || ismoderator($userID, $dt['boardID'])) {
 
         if ($dt['closed']) {
             $close = '<option value="opentopic">- ' . $_language->module['reopen_topic'] . '</option>';

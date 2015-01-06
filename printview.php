@@ -74,7 +74,7 @@ if (mysqli_num_rows($thread)) {
                 break;
             }
         }
-        if (!$usergrp and !ismoderator($userID, $dt[ 'boardID' ])) {
+        if (!$usergrp && !ismoderator($userID, $dt[ 'boardID' ])) {
             die($_language->module[ 'no_access' ]);
         }
     }

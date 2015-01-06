@@ -133,7 +133,7 @@ if (isset($_POST[ 'save' ])) {
     );
 
     header("Location: index.php?site=guestbook");
-} elseif ($action == 'comment' and is_numeric($_GET[ 'guestbookID' ])) {
+} elseif ($action == 'comment' && is_numeric($_GET[ 'guestbookID' ])) {
 
     $_language->readModule('guestbook');
     $_language->readModule('bbcode', true);

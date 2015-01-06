@@ -137,7 +137,7 @@ class Tags
                 (
                     isnewsadmin($userID) ||
                     (
-                        isnewswriter($userID) and $ds['poster'] == $userID
+                        isnewswriter($userID) && $ds['poster'] == $userID
                     )
                 )
             )

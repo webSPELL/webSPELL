@@ -40,7 +40,7 @@ if ($userID) {
     }
 }
 
-if ($_POST[ 'mode' ] and $run) {
+if ($_POST[ 'mode' ] && $run) {
     $mode = $_POST[ 'mode' ];
     $type = $_POST[ 'type' ];
     $info = $_POST[ 'description' ];

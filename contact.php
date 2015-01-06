@@ -78,7 +78,7 @@ if ($action == "send") {
         }
     }
 
-    if (!count($fehler) and $run) {
+    if (!count($fehler) && $run) {
         $header = "From:$from\n";
         $header .= "Reply-To: $from\n";
         $header .= "Content-Type: text/html; charset=utf-8\n";

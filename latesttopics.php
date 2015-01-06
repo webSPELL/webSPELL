@@ -126,7 +126,7 @@ if ($anz) {
                     break;
                 }
             }
-            if (!$usergrp and !ismoderator($userID, $ds[ 'boardID' ])) {
+            if (!$usergrp && !ismoderator($userID, $ds[ 'boardID' ])) {
                 continue;
             }
         }

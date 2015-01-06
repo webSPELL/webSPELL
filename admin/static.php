@@ -34,7 +34,7 @@ if (!ispageadmin($userID) || mb_substr(basename($_SERVER[ 'REQUEST_URI' ]), 0, 1
 if (isset($_POST[ 'save' ])) {
     $CAPCLASS = new \webspell\Captcha;
     if ($CAPCLASS->checkCaptcha(0, $_POST[ 'captcha_hash' ])) {
-        if (isset($_POST[ 'staticID' ]) and $_POST[ 'staticID' ]) {
+        if (isset($_POST[ 'staticID' ]) && $_POST[ 'staticID' ]) {
             safe_query(
                 "UPDATE
                     `" . PREFIX . "static`
@@ -72,7 +72,7 @@ if (isset($_POST[ 'save' ])) {
     }
 }
 
-if (isset($_GET[ 'action' ]) and $_GET[ 'action' ] == "add") {
+if (isset($_GET[ 'action' ]) && $_GET[ 'action' ] == "add") {
     $CAPCLASS = new \webspell\Captcha;
     $CAPCLASS->createTransaction();
     $hash = $CAPCLASS->getHash();
@@ -127,7 +127,7 @@ onsubmit="return chkFormular();">
 <input type="hidden" name="captcha_hash" value="' . $hash . '" />
 <br /><br /><input type="submit" name="save" value="' . $_language->module[ 'add_static_page' ] . '" />
 </form>';
-} elseif (isset($_GET[ 'action' ]) and $_GET[ 'action' ] == "edit") {
+} elseif (isset($_GET[ 'action' ]) && $_GET[ 'action' ] == "edit") {
 
     $_language->readModule('bbcode', true);
 

@@ -1468,12 +1468,12 @@ function update40101_420()
     //news converter
     $q = mysqli_query($_database, "SELECT newsID, lang1, lang2, headline1, headline2, content1, content2 FROM `" . PREFIX . "news`");
     while ($ds = mysqli_fetch_array($q)) {
-        if ($ds['headline1'] != "" or $ds['content1'] != "") {
+        if ($ds['headline1'] != "" || $ds['content1'] != "") {
             if (get_magic_quotes_gpc()) $content1 = str_replace('\r\n', "\n", $ds['content1']);
             else $content1 = str_replace('\r\n', "\n", mysqli_real_escape_string($_database, $ds['content1']));
             mysqli_query($_database, "INSERT INTO " . PREFIX . "news_contents (newsID, language, headline, content) VALUES ('" . $ds['newsID'] . "', '" . mysqli_real_escape_string($_database, $ds['lang1']) . "', '" . mysqli_real_escape_string($_database, $ds['headline1']) . "', '" . $content1 . "')");
         }
-        if ($ds['headline2'] != "" or $ds['content2'] != "") {
+        if ($ds['headline2'] != "" || $ds['content2'] != "") {
             if (get_magic_quotes_gpc()) $content2 = str_replace('\r\n', "\n", $ds['content2']);
             else $content2 = str_replace('\r\n', "\n", mysqli_real_escape_string($_database, $ds['content2']));
             mysqli_query($_database, "INSERT INTO " . PREFIX . "news_contents (newsID, language, headline, content) VALUES ('" . $ds['newsID'] . "', '" . mysqli_real_escape_string($_database, $ds['lang2']) . "', '" . mysqli_real_escape_string($_database, $ds['headline2']) . "', '" . $content2 . "')");

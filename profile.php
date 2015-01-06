@@ -38,7 +38,7 @@ if (isset($_GET[ 'action' ])) {
     $action = '';
 }
 
-if (isset($id) and getnickname($id) != '') {
+if (isset($id) && getnickname($id) != '') {
 
     if (isbanned($id)) {
         $banned =
@@ -260,7 +260,7 @@ if (isset($id) and getnickname($id) != '') {
                             break;
                         }
                     }
-                    if (!$usergrp and !ismoderator($userID, $db[ 'boardID' ])) {
+                    if (!$usergrp && !ismoderator($userID, $db[ 'boardID' ])) {
                         continue;
                     }
                 }
@@ -328,7 +328,7 @@ if (isset($id) and getnickname($id) != '') {
                             break;
                         }
                     }
-                    if (!$usergrp and !ismoderator($userID, $db[ 'boardID' ])) {
+                    if (!$usergrp && !ismoderator($userID, $db[ 'boardID' ])) {
                         continue;
                     }
                 }
@@ -456,7 +456,7 @@ if (isset($id) and getnickname($id) != '') {
                     }
                     redirect('index.php?site=profile&amp;id=' . $id . '&amp;action=guestbook', '', 0);
                 } elseif (isset($_GET[ 'delete' ])) {
-                    if (!isanyadmin($userID) and $id != $userID) {
+                    if (!isanyadmin($userID) && $id != $userID) {
                         die($_language->module[ 'no_access' ]);
                     }
 

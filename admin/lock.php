@@ -36,7 +36,7 @@ echo '<h1>&curren; <a href="admincenter.php?site=settings" class="white">' . $_l
 
 if (!$closed) {
 
-    if (isset($_POST[ 'submit' ]) != "" and ispageadmin($userID)) {
+    if (isset($_POST[ 'submit' ]) != "" && ispageadmin($userID)) {
         $CAPCLASS = new \webspell\Captcha;
         if ($CAPCLASS->checkCaptcha(0, $_POST[ 'captcha_hash' ])) {
             if (mysqli_num_rows(safe_query("SELECT * FROM `" . PREFIX . "lock`"))) {
@@ -71,7 +71,7 @@ if (!$closed) {
     }
 } else {
 
-    if (isset($_POST[ 'submit' ]) != "" and isset($_POST[ 'unlock' ]) and ispageadmin($userID)) {
+    if (isset($_POST[ 'submit' ]) != "" && isset($_POST[ 'unlock' ]) && ispageadmin($userID)) {
         $CAPCLASS = new \webspell\Captcha;
         if ($CAPCLASS->checkCaptcha(0, $_POST[ 'captcha_hash' ])) {
             safe_query("UPDATE `" . PREFIX . "settings` SET closed='0'");

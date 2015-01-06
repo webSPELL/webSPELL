@@ -88,7 +88,7 @@ if ($action == "save" && isset($_POST['post'])) {
         }
     }
 
-    if (!count($error) and $run) {
+    if (!count($error) && $run) {
         $date = time();
         $touser = [];
         safe_query(

@@ -143,7 +143,7 @@ if (isset($_POST[ 'saveedit' ])) {
         )
     );
 
-    if ((isgalleryadmin($userID) or $galclass->isGalleryOwner($ds[ 'galleryID' ], $userID)) and $_GET[ 'id' ]) {
+    if ((isgalleryadmin($userID) || $galclass->isGalleryOwner($ds[ 'galleryID' ], $userID)) && $_GET[ 'id' ]) {
 
         $ds = mysqli_fetch_array(
             safe_query(
@@ -256,7 +256,7 @@ if (isset($_POST[ 'saveedit' ])) {
         )
     );
 
-    if ($browse[ 'picID' ] and $_GET[ 'action' ] == "diashow") {
+    if ($browse[ 'picID' ] && $_GET[ 'action' ] == "diashow") {
         echo '<meta http-equiv="refresh" content="2;URL=gallery.php?action=diashow&amp;galleryID=' .
             (int)$_GET[ 'galleryID' ] . '&amp;picID=' . $browse[ 'picID' ] . '">';
     }
@@ -285,7 +285,7 @@ if (isset($_POST[ 'saveedit' ])) {
     echo '<img src="picture.php?id=' . $picID . '" alt=""><br>
     <strong>' . cleartext($ds[ 'comment' ], false) . '</strong>';
 
-    if ($browse[ 'picID' ] or $_GET[ 'action' ] == "window") {
+    if ($browse[ 'picID' ] || $_GET[ 'action' ] == "window") {
         echo '</a>';
     }
 
@@ -448,7 +448,7 @@ if (isset($_POST[ 'saveedit' ])) {
 
         //admin
 
-        if ((isgalleryadmin($userID) and $publicadmin) or $galclass->isGalleryOwner($ds[ 'galleryID' ], $userID)) {
+        if ((isgalleryadmin($userID) && $publicadmin) || $galclass->isGalleryOwner($ds[ 'galleryID' ], $userID)) {
             $adminaction =
                 '<a href="index.php?site=gallery&amp;action=edit&amp;id=' . $_GET[ 'picID' ] .
                 '" class="btn btn-danger">' . $_language->module[ 'edit' ] . '</a>

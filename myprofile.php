@@ -88,7 +88,7 @@ if (!$userID) {
 
         $error_array = [];
 
-        if (isset($_POST['userID']) or isset($_GET['userID']) or $userID == "") {
+        if (isset($_POST['userID']) || isset($_GET['userID']) || $userID == "") {
             die($_language->module['not_logged_in']);
         }
 
@@ -121,7 +121,7 @@ if (!$userID) {
 
         //avatar
         $filepath = "./images/avatars/";
-        if ($avatar['name'] != "" or ($_POST['avatar_url'] != "" and $_POST['avatar_url'] != "http://")) {
+        if ($avatar['name'] != "" || ($_POST['avatar_url'] != "" && $_POST['avatar_url'] != "http://")) {
             if ($avatar['name'] != "") {
                 move_uploaded_file($avatar['tmp_name'], $filepath . $avatar['name'] . ".tmp");
             } else {
@@ -170,7 +170,7 @@ if (!$userID) {
 
         //userpic
         $filepath = "./images/userpics/";
-        if ($userpic['name'] != "" or ($_POST['userpic_url'] != "" and $_POST['userpic_url'] != "http://")) {
+        if ($userpic['name'] != "" || ($_POST['userpic_url'] != "" && $_POST['userpic_url'] != "http://")) {
             if ($userpic['name'] != "") {
                 move_uploaded_file($userpic['tmp_name'], $filepath . $userpic['name'] . ".tmp");
             } else {
@@ -287,7 +287,7 @@ if (!$userID) {
         }
     }
 
-    if (isset($_GET['action']) and $_GET['action'] == "editpwd") {
+    if (isset($_GET['action']) && $_GET['action'] == "editpwd") {
 
         $bg1 = BG_1;
         $bg2 = BG_2;
@@ -337,7 +337,7 @@ if (!$userID) {
             echo '<strong>ERROR: ' . $error . '</strong><br><br>
                 <input type="button" onclick="javascript:history.back()" value="' . $_language->module['back'] . '">';
         }
-    } elseif (isset($_GET['action']) and $_GET['action'] == "editmail") {
+    } elseif (isset($_GET['action']) && $_GET['action'] == "editmail") {
 
         $bg1 = BG_1;
         $bg2 = BG_2;
@@ -569,7 +569,7 @@ if (!$userID) {
             $langs = [];
             if ($dh = opendir($filepath)) {
                 while ($file = mb_substr(readdir($dh), 0, 2)) {
-                    if ($file != "." and $file != ".." and is_dir($filepath . $file)) {
+                    if ($file != "." && $file != ".." && is_dir($filepath . $file)) {
                         if (isset($mysql_langs[$file])) {
                             $name = $mysql_langs[$file];
                             $name = ucfirst($name);

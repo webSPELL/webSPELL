@@ -119,7 +119,7 @@ if ($userID && !isset($_GET[ 'userID' ]) && !isset($_POST[ 'userID' ])) {
                         break;
                     }
                 }
-                if (!$usergrp and !ismoderator($userID, $db[ 'boardID' ])) {
+                if (!$usergrp && !ismoderator($userID, $db[ 'boardID' ])) {
                     continue;
                 }
             }
@@ -156,7 +156,7 @@ if ($userID && !isset($_GET[ 'userID' ]) && !isset($_POST[ 'userID' ])) {
                         break;
                     }
                 }
-                if (!$usergrp and !ismoderator($userID, $db[ 'boardID' ])) {
+                if (!$usergrp && !ismoderator($userID, $db[ 'boardID' ])) {
                     continue;
                 }
             }

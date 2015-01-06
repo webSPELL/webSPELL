@@ -70,7 +70,7 @@ if (isset($_GET[ 'ajax' ])) {
 }
 $_language->readModule('group-users');
 
-if (!isforumadmin($userID) or mb_substr(basename($_SERVER[ 'REQUEST_URI' ]), 0, 15) != "admincenter.php") {
+if (!isforumadmin($userID) || mb_substr(basename($_SERVER[ 'REQUEST_URI' ]), 0, 15) != "admincenter.php") {
     die($_language->module[ 'access_denied' ]);
 }
 
@@ -157,7 +157,7 @@ if (isset($_GET[ 'action' ])) {
             }
         }
     }
-    if (in_array(4, $_POST[ 'users' ]) or !count($_POST[ 'users' ]) or empty($_GET[ 'users' ])) {
+    if (in_array(4, $_POST[ 'users' ]) || !count($_POST[ 'users' ]) || empty($_GET[ 'users' ])) {
         $query = safe_query("SELECT userID FROM `" . PREFIX . "user`");
         while ($ds = mysqli_fetch_array($query)) {
             if (!in_array($ds[ 'userID' ], $users)) {
@@ -225,11 +225,11 @@ if (isset($_GET[ 'action' ])) {
         echo '</tr>';
         $n = 1;
         $skip = $anz_users_page * ($page - 1);
-    for ($z = $skip; $z < ($skip + $anz_users_page) and $z < $anz_users; $z++) {
-        if ($n % 2) {
-            $td = 'td1';
-        } else {
-            $td = 'td2';
+        for ($z = $skip; $z < ($skip + $anz_users_page) && $z < $anz_users; $z++) {
+            if ($n % 2) {
+                $td = 'td1';
+            } else {
+                $td = 'td2';
         }
         echo '<tr><td class="' . $td . '">' . strip_tags(stripslashes(getnickname($users[ $z ]))) . '</td>';
         for ($i = 0; $i < $groups_anz; $i++) {

@@ -27,7 +27,7 @@
 
 $_language->readModule('filecategorys');
 
-if (!isfileadmin($userID) or mb_substr(basename($_SERVER[ 'REQUEST_URI' ]), 0, 15) != "admincenter.php") {
+if (!isfileadmin($userID) || mb_substr(basename($_SERVER[ 'REQUEST_URI' ]), 0, 15) != "admincenter.php") {
     die($_language->module[ 'access_denied' ]);
 }
 
@@ -87,7 +87,7 @@ function delete_category($filecat)
     safe_query("DELETE FROM " . PREFIX . "files_categorys WHERE filecatID='" . $filecat . "'");
     $files = safe_query("SELECT * FROM " . PREFIX . "files WHERE filecatID='" . $filecat . "'");
     while ($ds = mysqli_fetch_array($files)) {
-        if (stristr($ds[ 'file' ], "http://") or stristr($ds[ 'file' ], "ftp://")) {
+        if (stristr($ds[ 'file' ], "http://") || stristr($ds[ 'file' ], "ftp://")) {
             @unlink('../downloads/' . $ds[ 'file' ]);
         }
     }

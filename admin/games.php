@@ -111,7 +111,7 @@ if ($action == "add") {
     $tag = $_POST[ "tag" ];
     $CAPCLASS = new \webspell\Captcha;
     if ($CAPCLASS->checkCaptcha(0, $_POST[ 'captcha_hash' ])) {
-        if ($name and $tag) {
+        if ($name && $tag) {
             $file_ext = strtolower(mb_substr($icon[ 'name' ], strrpos($icon[ 'name' ], ".")));
             if ($file_ext == ".gif") {
                 safe_query(
@@ -142,7 +142,7 @@ if ($action == "add") {
     $tag = $_POST[ "tag" ];
     $CAPCLASS = new \webspell\Captcha;
     if ($CAPCLASS->checkCaptcha(0, $_POST[ 'captcha_hash' ])) {
-        if ($name and $tag) {
+        if ($name && $tag) {
             if ($icon[ 'name' ] == "") {
                 if (safe_query(
                     "UPDATE " . PREFIX . "games SET name='" . $name . "', tag='" . $tag .

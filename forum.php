@@ -275,7 +275,7 @@ function boardmain()
             $ismod = ismoderator($userID, $db[ 'boardID' ]);
             $usergrp = 0;
             $writer = 'ro-';
-            if ($db[ 'writegrps' ] != "" and !$ismod) {
+            if ($db[ 'writegrps' ] != "" && !$ismod) {
                 $writegrps = explode(";", $db[ 'writegrps' ]);
                 foreach ($writegrps as $value) {
                     if (isinusergrp($value, $userID)) {
@@ -287,7 +287,7 @@ function boardmain()
             } else {
                 $writer = '';
             }
-            if ($db[ 'readgrps' ] != "" and !$usergrp and !$ismod) {
+            if ($db[ 'readgrps' ] != "" && !$usergrp && !$ismod) {
                 $readgrps = explode(";", $db[ 'readgrps' ]);
                 foreach ($readgrps as $value) {
                     if (isinusergrp($value, $userID)) {
@@ -377,7 +377,7 @@ function boardmain()
 
                 foreach ($array as $split) {
 
-                    if ($split != "" and in_array($split, $board_topics)) {
+                    if ($split != "" && in_array($split, $board_topics)) {
                         $found = true;
                         break;
                     }
@@ -415,7 +415,7 @@ function boardmain()
         $usergrp = 0;
         $writer = 'ro-';
         $ismod = ismoderator($userID, $db[ 'boardID' ]);
-        if ($db[ 'writegrps' ] != "" and !$ismod) {
+        if ($db[ 'writegrps' ] != "" && !$ismod) {
             $writegrps = explode(";", $db[ 'writegrps' ]);
             foreach ($writegrps as $value) {
                 if (isinusergrp($value, $userID)) {
@@ -427,7 +427,7 @@ function boardmain()
         } else {
             $writer = '';
         }
-        if ($db[ 'readgrps' ] != "" and !$usergrp and !$ismod) {
+        if ($db[ 'readgrps' ] != "" && !$usergrp && !$ismod) {
             $readgrps = explode(";", $db[ 'readgrps' ]);
             foreach ($readgrps as $value) {
                 if (isinusergrp($value, $userID)) {
@@ -510,7 +510,7 @@ function boardmain()
 
             foreach ($array as $split) {
 
-                if ($split != "" and in_array($split, $board_topics)) {
+                if ($split != "" && in_array($split, $board_topics)) {
                     $found = true;
                     break;
                 }
@@ -566,7 +566,7 @@ function showboard($board)
     $alle = safe_query("SELECT topicID FROM " . PREFIX . "forum_topics WHERE boardID='$board'");
     $gesamt = mysqli_num_rows($alle);
 
-    if ($action == "markall" and $userID) {
+    if ($action == "markall" && $userID) {
         $gv = mysqli_fetch_array(safe_query("SELECT topics FROM " . PREFIX . "user WHERE userID='$userID'"));
 
         $board_topics = [];
@@ -578,7 +578,7 @@ function showboard($board)
         $new = '|';
 
         foreach ($array as $split) {
-            if ($split != "" and !in_array($split, $board_topics)) {
+            if ($split != "" && !in_array($split, $board_topics)) {
                 $new .= $split . '|';
             }
         }
@@ -611,11 +611,11 @@ function showboard($board)
     $writer = 0;
 
     $ismod = false;
-    if (ismoderator($userID, $board) or isforumadmin($userID)) {
+    if (ismoderator($userID, $board) || isforumadmin($userID)) {
         $ismod = true;
     }
 
-    if ($db[ 'writegrps' ] != "" and !$ismod) {
+    if ($db[ 'writegrps' ] != "" && !$ismod) {
         $writegrps = explode(";", $db[ 'writegrps' ]);
         foreach ($writegrps as $value) {
             if (isinusergrp($value, $userID)) {
@@ -627,7 +627,7 @@ function showboard($board)
     } else {
         $writer = 1;
     }
-    if ($db[ 'readgrps' ] != "" and !$usergrp and !$ismod) {
+    if ($db[ 'readgrps' ] != "" && !$usergrp && !$ismod) {
         $readgrps = explode(";", $db[ 'readgrps' ]);
         foreach ($readgrps as $value) {
             if (isinusergrp($value, $userID)) {
@@ -774,7 +774,7 @@ function showboard($board)
             $poster =
                 '<a href="index.php?site=profile&amp;id=' . $dt[ 'userID' ] . '">' . getnickname($dt[ 'userID' ]) .
                 '</a>';
-            if (isset($posterID) and isclanmember($posterID)) {
+            if (isset($posterID) && isclanmember($posterID)) {
                 $member1 = ' <img src="images/icons/member.gif" alt="' . $_language->module[ 'clanmember' ] . '">';
             } else {
                 $member1 = '';
@@ -875,7 +875,7 @@ function showboard($board)
 }
 
 if (isset($_POST[ 'submit' ]) || isset($_POST[ 'movetopic' ]) || isset($_GET[ 'addtopic' ]) ||
-    isset($_POST[ 'addtopic' ]) || (isset($_GET[ 'action' ]) and $_GET[ 'action' ] == "admin-action") ||
+    isset($_POST[ 'addtopic' ]) || (isset($_GET[ 'action' ]) && $_GET[ 'action' ] == "admin-action") ||
     isset($_POST[ 'admaction' ])
 ) {
 
@@ -892,7 +892,7 @@ if (isset($_POST[ 'submit' ]) || isset($_POST[ 'movetopic' ]) || isset($_GET[ 'a
         $topicID = (int)$_POST[ 'topicID' ];
         $board = (int)$_POST[ 'board' ];
 
-        if (!isforumadmin($userID) and !ismoderator($userID, $board)) {
+        if (!isforumadmin($userID) && !ismoderator($userID, $board)) {
             die($_language->module[ 'no_access' ]);
         }
 
@@ -907,7 +907,7 @@ if (isset($_POST[ 'submit' ]) || isset($_POST[ 'movetopic' ]) || isset($_GET[ 'a
         $topicID = (int)$_POST[ 'topicID' ];
         $board = (int)$_POST[ 'board' ];
 
-        if (!isforumadmin($userID) and !ismoderator($userID, $board)) {
+        if (!isforumadmin($userID) && !ismoderator($userID, $board)) {
             die($_language->module[ 'no_access' ]);
         }
 
@@ -922,7 +922,7 @@ if (isset($_POST[ 'submit' ]) || isset($_POST[ 'movetopic' ]) || isset($_GET[ 'a
         $topicID = (int)$_POST[ 'topicID' ];
         $board = (int)$_POST[ 'board' ];
 
-        if (!isforumadmin($userID) and !ismoderator($userID, $board)) {
+        if (!isforumadmin($userID) && !ismoderator($userID, $board)) {
             die($_language->module[ 'no_access' ]);
         }
 
@@ -950,7 +950,7 @@ if (isset($_POST[ 'submit' ]) || isset($_POST[ 'movetopic' ]) || isset($_GET[ 'a
         $topicID = (int)$_POST[ 'topicID' ];
         $board = (int)$_POST[ 'board' ];
 
-        if (!isforumadmin($userID) and !ismoderator($userID, $board)) {
+        if (!isforumadmin($userID) && !ismoderator($userID, $board)) {
             die($_language->module[ 'no_access' ]);
         }
 
@@ -965,7 +965,7 @@ if (isset($_POST[ 'submit' ]) || isset($_POST[ 'movetopic' ]) || isset($_GET[ 'a
         $topicID = (int)$_POST[ 'topicID' ];
         $board = (int)$_POST[ 'board' ];
 
-        if (!isforumadmin($userID) and !ismoderator($userID, $board)) {
+        if (!isforumadmin($userID) && !ismoderator($userID, $board)) {
             die($_language->module[ 'no_access' ]);
         }
 
@@ -985,7 +985,7 @@ if (isset($_POST[ 'submit' ]) || isset($_POST[ 'movetopic' ]) || isset($_GET[ 'a
         }
         $board = (int)$_POST[ 'board' ];
 
-        if (!isforumadmin($userID) and !ismoderator($userID, $board)) {
+        if (!isforumadmin($userID) && !ismoderator($userID, $board)) {
             die($_language->module[ 'no_access' ]);
         }
         $last = safe_query("SELECT * FROM " . PREFIX . "forum_posts WHERE topicID = '$topicID' ");
@@ -1027,7 +1027,7 @@ if (isset($_POST[ 'submit' ]) || isset($_POST[ 'movetopic' ]) || isset($_GET[ 'a
         $toboard = (int)$_POST[ 'toboard' ];
         $topicID = (int)$_POST[ 'topicID' ];
 
-        if (!isanyadmin($userID) and !ismoderator($userID, getboardid($topicID))) {
+        if (!isanyadmin($userID) && !ismoderator($userID, getboardid($topicID))) {
             die($_language->module[ 'no_access' ]);
         }
 
@@ -1039,7 +1039,7 @@ if (isset($_POST[ 'submit' ]) || isset($_POST[ 'movetopic' ]) || isset($_GET[ 'a
         $ergebnis = safe_query("SELECT * FROM " . PREFIX . "forum_topics WHERE topicID='$topicID'");
         $ds = mysqli_fetch_array($ergebnis);
 
-        if (isset($_POST[ 'movelink' ]) and $ds[ 'boardID' ] != $toboard) {
+        if (isset($_POST[ 'movelink' ]) && $ds[ 'boardID' ] != $toboard) {
             safe_query(
                 "INSERT INTO " . PREFIX .
                 "forum_topics (boardID, icon, userID, date, topic, lastdate, lastposter, replys, views, closed, moveID)
@@ -1079,7 +1079,7 @@ if (isset($_POST[ 'submit' ]) || isset($_POST[ 'movetopic' ]) || isset($_GET[ 'a
         include("_settings.php");
         include('_functions.php');
         $_language->readModule('forum');
-        if (!isanyadmin($userID) and !ismoderator($userID, getboardid($_POST[ 'topicID' ]))) {
+        if (!isanyadmin($userID) && !ismoderator($userID, getboardid($_POST[ 'topicID' ]))) {
             die($_language->module[ 'no_access' ]);
         }
 
@@ -1324,7 +1324,7 @@ if (isset($_POST[ 'submit' ]) || isset($_POST[ 'movetopic' ]) || isset($_GET[ 'a
                 } else {
                     $signatur = '';
                 }
-                if (getemail($userID) and !getemailhide($userID)) {
+                if (getemail($userID) && !getemailhide($userID)) {
                     $email = '<a href="mailto:' . mail_protect(getemail($userID)) .
                         '"><img src="images/icons/email.gif" alt="email"></a>';
                 } else {
