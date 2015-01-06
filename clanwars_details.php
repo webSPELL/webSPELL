@@ -43,8 +43,11 @@ $opponent = '<a href="' . getinput($ds[ 'opphp' ]) . '" target="_blank"><b>' . g
 $league = '<a href="' . getinput($ds[ 'leaguehp' ]) . '" target="_blank">' . getinput($ds[ 'league' ]) . '</a>';
 if (file_exists('images/games/' . $ds[ 'game' ] . '.gif')) {
     $game_ico = 'images/games/' . $ds[ 'game' ] . '.gif';
+    $game = '<img src="' . $game_ico . '" width="13" height="13" alt="">';
 }
-$game = '<img src="' . $game_ico . '" width="13" height="13" alt="">';
+else{
+    $game = $ds[ 'game' ];
+}
 $maps = "";
 $hometeam = "";
 $screens = "";
