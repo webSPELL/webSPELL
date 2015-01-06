@@ -32,7 +32,7 @@ function getuserforumtopics($userID)
             safe_query(
                 "SELECT `topicID` FROM `" . PREFIX . "forum_topics` WHERE `userID` = " . (int)$userID
             )
-        ) > 0
+        )
     );
 }
 
@@ -43,7 +43,7 @@ function getuserforumposts($userID)
             safe_query(
                 "SELECT `postID` FROM `" . PREFIX . "forum_posts` WHERE `poster` = " . (int)$userID
             )
-        ) > 0
+        )
     );
 }
 
