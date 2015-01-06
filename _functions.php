@@ -249,6 +249,9 @@ function checkforempty($valuearray)
     return true;
 }
 
+// -- INPUT-FILTER -- //
+systeminc('func/input');
+
 // -- FILESYSTEM -- //
 
 systeminc('func/filesystem');
@@ -403,11 +406,11 @@ if ($login_per_cookie) {
 
 // -- SITE VARIABLE -- //
 
-if (isset($_GET[ 'site' ])) {
-    $site = $_GET[ 'site' ];
-} else {
-    $site = '';
+$site = Input::validFromGet('site',Input::StringAlpha);
+if ($site === NULL) {
+    $site = "";
 }
+
 if ($closed and !isanyadmin($userID)) {
     $dl = mysqli_fetch_array(safe_query("SELECT * FROM `" . PREFIX . "lock` LIMIT 0,1"));
     $reason = $dl[ 'reason' ];

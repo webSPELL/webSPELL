@@ -26,24 +26,27 @@
 */
 
 if (isset($_GET[ 'new_lang' ])) {
-
-    if (file_exists('languages/' . $_GET[ 'new_lang' ])) {
-
-        include("_mysql.php");
-        include("_settings.php");
-        include("_functions.php");
-        if ($userID) {
-            $lang = $_GET[ 'new_lang' ];
-            safe_query("UPDATE " . PREFIX . "user SET language='" . $lang . "' WHERE userID='" . $userID . "'");
-        } else {
-            $_SESSION[ 'language' ] = $_GET[ 'new_lang' ];
+    include_once("_mysql.php");
+    include_once("_settings.php");
+    include_once("_functions.php");
+    $new_language = Input::validFromGet('new_lang', Input::StringAlpha);
+    if (isset($new_language)) {
+        if (file_exists('languages/' . $new_language)) {
+            if ($userID) {
+                safe_query("UPDATE " . PREFIX . "user SET language='" . $new_language . "' WHERE userID='" . $userID .
+                    "'");
+            } else {
+                $_SESSION[ 'language' ] = $new_language;
+            }
         }
-    }
 
-    if (isset($_GET[ 'query' ])) {
+        if (isset($_GET[ 'query' ])) {
 
-        $query = rawurldecode($_GET[ 'query' ]);
-        header("Location: ./" . $query);
+            $query = rawurldecode($_GET[ 'query' ]);
+            header("Location: ./" . $query);
+        } else {
+            header("Location: index.php");
+        }
     } else {
         header("Location: index.php");
     }
@@ -84,11 +87,10 @@ if (isset($_GET[ 'new_lang' ])) {
     $querystring = '';
     if ($modRewrite == true) {
         $path = rawurlencode(str_replace($GLOBALS[ 'rewriteBase' ], '', $_SERVER[ 'REQUEST_URI' ]));
-
     } else {
         $path = rawurlencode($_SERVER[ 'QUERY_STRING' ]);
         if (!empty($path)) {
-            $path = "?".$path;
+            $path = "?" . $path;
         }
     }
     if (!empty($path)) {
