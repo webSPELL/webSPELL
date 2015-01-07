@@ -65,8 +65,7 @@ function checkCommentsAllow($type, $parentID)
             }
         }
         return $allowed;
-    }
-    else{
+    } else {
         return false;
     }
 }

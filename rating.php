@@ -90,13 +90,19 @@ if (isset($table) && isset($key)) {
                 WHERE
                 " . $key . " = '" . (int)$id."'"
             );
-            $ergebnis = safe_query("SELECT votes, points FROM " . PREFIX . $table . " WHERE " . $key . " = '" . (int)$id);
+            $ergebnis = safe_query(
+                "SELECT votes, points FROM " . PREFIX . $table . " WHERE " . $key . " = '" . (int)$id-"'"
+            );
             $ds = mysqli_fetch_array($ergebnis);
             $rate = round($ds[ 'points' ] / $ds[ 'votes' ]);
-            safe_query("UPDATE " . PREFIX . $table . " SET rating='" . $rate . "' WHERE " . $key . "='" . (int)$id);
+            safe_query(
+                "UPDATE " . PREFIX . $table . " SET rating='" . $rate . "' WHERE " . $key . "='" . (int)$id."'"
+            );
             $array[ ] = $id;
             $string_new = implode(":", $array);
-            safe_query("UPDATE " . PREFIX . "user SET " . $table . "='" . $string_new . "' WHERE userID='" . (int)$userID);
+            safe_query(
+                "UPDATE " . PREFIX . "user SET " . $table . "='" . $string_new . "' WHERE userID='" . (int)$userID."'"
+            );
         }
     }
 
@@ -116,7 +122,6 @@ if (isset($table) && isset($key)) {
     }
 
     header("Location: index.php?site=" . $table);
-}
-else{
+} else {
     header("Location: index.php");
 }
