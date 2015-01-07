@@ -54,16 +54,13 @@ if (mysqli_num_rows($get) == 0) {
         $error = $_language->module[ 'session_error' ];
     } else {
         if ($anz) {
-
             $check = safe_query("SELECT * FROM " . PREFIX . "user WHERE username='" . $ws_user . "' AND activated='1'");
             if (mysqli_num_rows($check)) {
-
                 $ds = mysqli_fetch_array($check);
 
                 // check password
                 $login = 0;
                 if ($ws_pwd == $ds[ 'password' ]) {
-
                     //session
                     $_SESSION[ 'ws_auth' ] = $ds[ 'userID' ] . ":" . $ws_pwd;
                     $_SESSION[ 'ws_lastlogin' ] = $ds[ 'lastlogin' ];

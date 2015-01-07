@@ -142,11 +142,11 @@ foreach ($tables_array as $table) {
     </tr>
     <?php
     for ($i = 0; $i < count($count_array); $i += 1) {
-    if ($i % 4) {
-        $td = 'td1';
-    } else {
-        $td = 'td2';
-    }
+        if ($i % 4) {
+            $td = 'td1';
+        } else {
+            $td = 'td2';
+        }
         ?>
         <tr>
             <td width="25%" class="<?php

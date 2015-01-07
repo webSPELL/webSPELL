@@ -170,7 +170,6 @@ if ($action == "add") {
     </table>
     </form>';
 } else {
-
     echo '<h1>&curren; ' . $_language->module[ 'news_languages' ] . '</h1>';
 
     echo '<a href="admincenter.php?site=newslanguages&amp;action=add" class="input">' .

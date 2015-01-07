@@ -137,7 +137,6 @@ if ($action == "add") {
         header("Location: index.php?site=buddies");
     }
 } elseif ($userID) {
-
     $_language->readModule('buddys');
 
     eval ("\$title_buddys = \"" . gettemplate("title_buddys") . "\";");
@@ -220,7 +219,6 @@ if ($action == "add") {
     eval ("\$ignore_foot = \"" . gettemplate("ignore_foot") . "\";");
     echo $ignore_foot;
 } else {
-
     $_language->readModule('buddys');
     if (!$userID) {
         redirect('index.php?site=buddies', $_language->module[ 'not_logged' ], 3);

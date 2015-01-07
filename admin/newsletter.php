@@ -99,12 +99,10 @@ hr { margin: 0px; }
             $_SESSION[ 'emailbody' ] = $message;
             $_SESSION[ 'title' ] = $title;
         } else {
-
             $emails = [];
             //clanmember
 
             if (isset($_POST[ 'sendto_clanmembers' ])) {
-
                 $ergebnis = safe_query("SELECT userID FROM " . PREFIX . "squads_members GROUP BY userID");
                 $anz = mysqli_num_rows($ergebnis);
                 if ($anz) {
@@ -115,7 +113,6 @@ hr { margin: 0px; }
             }
 
             if (isset($_POST[ 'sendto_registered' ])) {
-
                 $ergebnis = safe_query("SELECT * FROM " . PREFIX . "user WHERE newsletter='1'");
                 $anz = mysqli_num_rows($ergebnis);
                 if ($anz) {
@@ -126,7 +123,6 @@ hr { margin: 0px; }
             }
 
             if (isset($_POST[ 'sendto_newsletter' ])) {
-
                 $ergebnis = safe_query("SELECT * FROM " . PREFIX . "newsletter");
                 $anz = mysqli_num_rows($ergebnis);
                 if ($anz) {
@@ -196,19 +192,23 @@ hr { margin: 0px; }
                 <td><b><?php echo $_language->module[ 'send_to' ]; ?></b></td>
                 <td><input type="checkbox" name="sendto_clanmembers" value="1"
                            checked="checked"/> <?php echo $_language->module[ 'user_clanmembers' ]; ?> [<?php
-                    echo
-                        mysqli_num_rows(safe_query("SELECT userID FROM " . PREFIX . "squads_members GROUP BY userID")) .
-                        '&nbsp;' . $_language->module[ 'users' ]; ?>]
+                            echo
+                            mysqli_num_rows(
+                                safe_query(
+                                    "SELECT userID FROM " . PREFIX . "squads_members GROUP BY userID"
+                                )
+                            ) .
+                            '&nbsp;' . $_language->module[ 'users' ]; ?>]
                     <br/><input type="checkbox" name="sendto_registered" value="1"
                                 checked="checked"/> <?php echo $_language->module[ 'user_registered' ]; ?> [<?php
-                    echo
-                        mysqli_num_rows(safe_query("SELECT * FROM " . PREFIX . "user WHERE newsletter='1'")) .
-                        '&nbsp;' . $_language->module[ 'users' ]; ?>]
+                                echo
+                                mysqli_num_rows(safe_query("SELECT * FROM " . PREFIX . "user WHERE newsletter='1'")) .
+                                '&nbsp;' . $_language->module[ 'users' ]; ?>]
                     <br/><input type="checkbox" name="sendto_newsletter" value="1"
                                 checked="checked"/> <?php echo $_language->module[ 'user_newsletter' ]; ?> [<?php
-                    echo
-                        mysqli_num_rows(safe_query("SELECT * FROM " . PREFIX . "newsletter")) . '&nbsp;' .
-                        $_language->module[ 'users' ]; ?>]
+                                echo
+                                mysqli_num_rows(safe_query("SELECT * FROM " . PREFIX . "newsletter")) . '&nbsp;' .
+                                $_language->module[ 'users' ]; ?>]
                 </td>
             </tr>
             <tr>

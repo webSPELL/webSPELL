@@ -40,7 +40,6 @@ if (isset($_GET[ 'action' ])) {
 }
 
 if ($action == "add") {
-
     echo '<h1>&curren; <a href="admincenter.php?site=bannerrotation" class="white">' .
         $_language->module[ 'bannerrotation' ] . '</a> &raquo; ' . $_language->module[ 'add_banner' ] . '</h1>';
 
@@ -73,7 +72,6 @@ if ($action == "add") {
   </table>
   </form>';
 } elseif ($action == "edit") {
-
     echo '<h1>&curren; <a href="admincenter.php?site=bannerrotation" class="white">' .
         $_language->module[ 'bannerrotation' ] . '</a> &raquo; ' . $_language->module[ 'edit_banner' ] . '</h1>';
 
@@ -310,7 +308,6 @@ if ($action == "add") {
         echo $_language->module[ 'transaction_invalid' ];
     }
 } else {
-
     echo '<h1>&curren; ' . $_language->module[ 'bannerrotation' ] . '</h1>';
 
     echo

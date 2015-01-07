@@ -85,7 +85,6 @@ if (isset($fileID)) {
     }
 
     if ($allowed) {
-
         safe_query("UPDATE " . PREFIX . "files SET downloads=downloads+1 WHERE fileID='$fileID' ");
 
         if (stristr($dd[ 'file' ], 'http://') || stristr($dd[ 'file' ], 'ftp://')) {
@@ -117,7 +116,6 @@ if (isset($fileID)) {
     }
 
     if ($allowed) {
-
         safe_query("UPDATE " . PREFIX . "demos SET downloads=downloads+1 WHERE demoID='" . $demoID . "'");
 
         if (stristr($dd[ 'file' ], 'http://')) {

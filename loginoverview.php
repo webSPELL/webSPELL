@@ -27,7 +27,6 @@
 $_language->readModule('loginoverview');
 
 if ($userID && !isset($_GET[ 'userID' ]) && !isset($_POST[ 'userID' ])) {
-
     eval ("\$title_loginoverview = \"" . gettemplate("title_loginoverview") . "\";");
     echo $title_loginoverview;
 
@@ -222,14 +221,11 @@ if ($userID && !isset($_GET[ 'userID' ]) && !isset($_POST[ 'userID' ])) {
     //upcoming
     $clanwars = '';
     if (isclanmember($userID)) {
-
         $clanwars .= "<h4>" . $_language->module[ 'upcoming_clanwars' ] . "</h4>";
 
         $squads = safe_query("SELECT squadID FROM `" . PREFIX . "squads_members` WHERE userID='" . $userID . "'");
         while ($squad = mysqli_fetch_array($squads)) {
-
             if (isgamesquad($squad[ 'squadID' ])) {
-
                 $dn = mysqli_fetch_array(
                     safe_query(
                         "SELECT

@@ -39,7 +39,6 @@ if (isset($_GET[ 'action' ])) {
 }
 
 if (isset($id) && getnickname($id) != '') {
-
     if (isbanned($id)) {
         $banned =
             '<br><p class="text-center" style="color:red;font-weight:bold;font-size:11px;letter-spacing:1px;">' .
@@ -77,7 +76,6 @@ if (isset($id) && getnickname($id) != '') {
 
     //profil: buddys
     if ($action == "buddies") {
-
         eval("\$title_profile = \"" . gettemplate("title_profile") . "\";");
         echo $title_profile;
 
@@ -142,7 +140,6 @@ if (isset($id) && getnickname($id) != '') {
         eval("\$profile = \"" . gettemplate("profile_buddys") . "\";");
         echo $profile;
     } elseif ($action == "galleries") {
-
         //galleries
         eval("\$title_profile = \"" . gettemplate("title_profile") . "\";");
         echo $title_profile;
@@ -226,7 +223,6 @@ if (isset($id) && getnickname($id) != '') {
 
         echo '</table>';
     } elseif ($action == "lastposts") {
-
         //profil: last posts
 
         eval("\$title_profile = \"" . gettemplate("title_profile") . "\";");
@@ -373,7 +369,6 @@ if (isset($id) && getnickname($id) != '') {
             if (getuserguestbookstatus($id) == 1) {
                 //user guestbook
                 if (isset($_POST[ 'save' ])) {
-
                     $date = time();
                     $ip = $GLOBALS[ 'ip' ];
                     $run = 0;
@@ -400,7 +395,6 @@ if (isset($id) && getnickname($id) != '') {
                     }
 
                     if ($run) {
-
                         safe_query(
                             "INSERT INTO
                                 " . PREFIX . "user_gbook (
@@ -659,7 +653,6 @@ if (isset($id) && getnickname($id) != '') {
             redirect('index.php?site=404', '', 0);
         }
     } else {
-
         //profil: home
 
         eval ("\$title_profile = \"" . gettemplate("title_profile") . "\";");

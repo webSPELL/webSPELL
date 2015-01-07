@@ -101,7 +101,6 @@ if (isset($_POST[ 'sortieren' ])) {
 if (isset($_POST[ 'save' ])) {
     $CAPCLASS = new \webspell\Captcha;
     if ($CAPCLASS->checkCaptcha(0, $_POST[ 'captcha_hash' ])) {
-
         if (checkforempty(['name'])) {
             $games = implode(";", $_POST[ 'games' ]);
             safe_query(
@@ -193,7 +192,6 @@ if (isset($_POST[ 'saveedit' ])) {
     $CAPCLASS = new \webspell\Captcha;
     if ($CAPCLASS->checkCaptcha(0, $_POST[ 'captcha_hash' ])) {
         if (checkforempty(['name'])) {
-
             $games = implode(";", $_POST[ 'games' ]);
             safe_query(
                 "UPDATE " . PREFIX . "squads SET gamesquad='" . $_POST[ 'gamesquad' ] . "', games='" . $games .
@@ -286,7 +284,6 @@ if (isset($_GET[ 'action' ])) {
 }
 
 if ($action == "add") {
-
     echo '<h1>&curren; <a href="admincenter.php?site=squads" class="white">' . $_language->module[ 'squads' ] .
         '</a> &raquo; ' . $_language->module[ 'add_squad' ] . '</h1>';
 
@@ -370,7 +367,6 @@ onsubmit="return chkFormular();">
     </table>
     </form>';
 } elseif ($action == "edit") {
-
     echo '<h1>&curren; <a href="admincenter.php?site=squads" class="white">' . $_language->module[ 'squads' ] .
         '</a> &raquo; ' . $_language->module[ 'edit_squad' ] . '</h1>';
 
@@ -500,7 +496,6 @@ onsubmit="return chkFormular();">
   </table>
   </form>';
 } else {
-
     echo '<h1>&curren; ' . $_language->module[ 'squads' ] . '</h1>';
 
     echo '<a href="admincenter.php?site=squads&amp;action=add" class="input">' .

@@ -35,7 +35,6 @@ echo '<h1>&curren; <a href="admincenter.php?site=settings" class="white">' . $_l
     '</a> &raquo; ' . $_language->module[ 'pagelock' ] . '</h1>';
 
 if (!$closed) {
-
     if (isset($_POST[ 'submit' ]) != "" && ispageadmin($userID)) {
         $CAPCLASS = new \webspell\Captcha;
         if ($CAPCLASS->checkCaptcha(0, $_POST[ 'captcha_hash' ])) {
@@ -70,7 +69,6 @@ if (!$closed) {
             <input type="submit" name="submit" value="' . $_language->module[ 'lock' ] . '" /></form>';
     }
 } else {
-
     if (isset($_POST[ 'submit' ]) != "" && isset($_POST[ 'unlock' ]) && ispageadmin($userID)) {
         $CAPCLASS = new \webspell\Captcha;
         if ($CAPCLASS->checkCaptcha(0, $_POST[ 'captcha_hash' ])) {

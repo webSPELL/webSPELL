@@ -26,9 +26,7 @@
 */
 
 if (isset($_GET[ 'new_lang' ])) {
-
     if (file_exists('languages/' . $_GET[ 'new_lang' ])) {
-
         include("_mysql.php");
         include("_settings.php");
         include("_functions.php");
@@ -41,14 +39,12 @@ if (isset($_GET[ 'new_lang' ])) {
     }
 
     if (isset($_GET[ 'query' ])) {
-
         $query = rawurldecode($_GET[ 'query' ]);
         header("Location: ./" . $query);
     } else {
         header("Location: index.php");
     }
 } else {
-
     $_language->readModule('sc_language');
 
     $filepath = "languages/";

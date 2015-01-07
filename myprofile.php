@@ -30,7 +30,6 @@ $_language->readModule('myprofile');
 if (!$userID) {
     echo $_language->module['not_logged_in'];
 } else {
-
     $showerror = '';
     eval ("\$title_myprofile = \"" . gettemplate("title_myprofile") . "\";");
     echo $title_myprofile;
@@ -288,7 +287,6 @@ if (!$userID) {
     }
 
     if (isset($_GET['action']) && $_GET['action'] == "editpwd") {
-
         $bg1 = BG_1;
         $bg2 = BG_2;
         $bg3 = BG_3;
@@ -298,7 +296,6 @@ if (!$userID) {
         eval("\$myprofile_editpwd = \"" . gettemplate("myprofile_editpwd") . "\";");
         echo $myprofile_editpwd;
     } elseif (isset($_POST['savepwd'])) {
-
         $oldpwd = $_POST['oldpwd'];
         $pwd1 = $_POST['pwd1'];
         $pwd2 = $_POST['pwd2'];
@@ -338,7 +335,6 @@ if (!$userID) {
                 <input type="button" onclick="javascript:history.back()" value="' . $_language->module['back'] . '">';
         }
     } elseif (isset($_GET['action']) && $_GET['action'] == "editmail") {
-
         $bg1 = BG_1;
         $bg2 = BG_2;
         $bg3 = BG_3;
@@ -348,7 +344,6 @@ if (!$userID) {
         eval("\$myprofile_editmail = \"" . gettemplate("myprofile_editmail") . "\";");
         echo $myprofile_editmail;
     } elseif (isset($_POST['savemail'])) {
-
         $activationkey = md5(RandPass(20));
         $activationlink = 'http://' . $hp_url . '/index.php?site=register&mailkey=' . $activationkey;
         $pwd = $_POST['oldpwd'];
@@ -381,7 +376,6 @@ if (!$userID) {
         }
 
         if (empty($error)) {
-
             safe_query(
                 "UPDATE
                     " . PREFIX . "user

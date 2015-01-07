@@ -292,7 +292,6 @@ if (isset($_GET[ 'action' ])) {
 }
 
 if ($action == "mods") {
-
     echo '<h1>&curren; <a href="admincenter.php?site=boards" class="white">' . $_language->module[ 'boards' ] .
         '</a> &raquo; ' . $_language->module[ 'moderators' ] . '</h1>';
 
@@ -337,7 +336,6 @@ if ($action == "mods") {
 	<input type="submit" name="savemods" value="' . $_language->module[ 'select_moderators' ] . '" />
 	</form>';
 } elseif ($action == "add") {
-
     echo '<h1>&curren; <a href="admincenter.php?site=boards" class="white">' . $_language->module[ 'boards' ] .
         '</a> &raquo; ' . $_language->module[ 'add_board' ] . '</h1>';
 
@@ -408,7 +406,6 @@ if ($action == "mods") {
   </table>
   </form>';
 } elseif ($action == "edit") {
-
     echo '<h1>&curren; <a href="admincenter.php?site=boards" class="white">' . $_language->module[ 'boards' ] .
         '</a> &raquo; ' . $_language->module[ 'edit_board' ] . '</h1>';
 
@@ -518,7 +515,6 @@ if ($action == "mods") {
   </table>
   </form>';
 } elseif ($action == "addcat") {
-
     echo '<h1>&curren; <a href="admincenter.php?site=boards" class="white">' . $_language->module[ 'boards' ] .
         '</a> &raquo; ' . $_language->module[ 'add_category' ] . '</h1>';
 
@@ -566,7 +562,6 @@ if ($action == "mods") {
   </table>
   </form>';
 } elseif ($action == "editcat") {
-
     echo '<h1>&curren; <a href="admincenter.php?site=boards" class="white">' . $_language->module[ 'boards' ] .
         '</a> &raquo; ' . $_language->module[ 'edit_category' ] . '</h1>';
 
@@ -630,7 +625,6 @@ if ($action == "mods") {
   </table>
   </form>';
 } else {
-
     echo '<h1>&curren; ' . $_language->module[ 'boards' ] . '</h1>';
 
     echo '<a href="admincenter.php?site=boards&amp;action=addcat" class="input">' .
@@ -655,7 +649,6 @@ if ($action == "mods") {
     $CAPCLASS->createTransaction();
     $hash = $CAPCLASS->getHash();
     while ($ds = mysqli_fetch_array($ergebnis)) {
-
         echo '<tr bgcolor="#CCCCCC">
             <td class="td_head">
                 <b>' . getinput($ds[ 'name' ]) . '</b><br><small>' . getinput($ds[ 'info' ]) . '</small>
@@ -740,7 +733,6 @@ if ($action == "mods") {
     $CAPCLASS->createTransaction();
     $hash = $CAPCLASS->getHash();
     while ($db = mysqli_fetch_array($boards)) {
-
         echo '<tr bgcolor="#dcdcdc">
             <td bgcolor="#FFFFFF"><b>' . getinput($db[ 'name' ]) . '</b></td>
             <td bgcolor="#FFFFFF">

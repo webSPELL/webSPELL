@@ -34,7 +34,6 @@ $ergebnis = safe_query("SELECT * FROM " . PREFIX . "sponsors WHERE displayed = '
 if (mysqli_num_rows($ergebnis)) {
     $i = 1;
     while ($ds = mysqli_fetch_array($ergebnis)) {
-
         $url = str_replace('http://', '', $ds['url']);
         $sponsor = '<a href="out.php?sponsorID=' . $ds['sponsorID'] . '" target="_blank">' . $ds['name'] . '</a>';
         $link = '<a href="out.php?sponsorID=' . $ds['sponsorID'] . '" target="_blank">' . $url . '</a>';

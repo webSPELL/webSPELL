@@ -45,7 +45,6 @@ if (isset($_GET['action'])) {
 }
 $show = true;
 if ($action == "save" && isset($_POST['post'])) {
-
     if (isset($_POST['squad'])) {
         $squad = $_POST['squad'];
     } else {

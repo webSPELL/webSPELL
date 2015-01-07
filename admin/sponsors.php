@@ -40,7 +40,6 @@ if (isset($_GET[ 'action' ])) {
 }
 
 if ($action == "add") {
-
     echo '<h1>&curren; <a href="admincenter.php?site=sponsors" class="white">' . $_language->module[ 'sponsors' ] .
         '</a> &raquo; ' . $_language->module[ 'add_sponsor' ] . '</h1>';
 
@@ -110,7 +109,6 @@ if ($action == "add") {
   </table>
   </form>';
 } elseif ($action == "edit") {
-
     echo '<h1>&curren; <a href="admincenter.php?site=sponsors" class="white">' . $_language->module[ 'sponsors' ] .
         '</a> &raquo; ' . $_language->module[ 'edit_sponsor' ] . '</h1>';
 
@@ -389,7 +387,6 @@ if ($action == "add") {
 
     $CAPCLASS = new \webspell\Captcha;
     if ($CAPCLASS->checkCaptcha(0, $_POST[ 'captcha_hash' ])) {
-
         if (stristr($url, 'http://')) {
             $url = $url;
         } else {
@@ -534,7 +531,6 @@ if ($action == "add") {
         echo $_language->module[ 'transaction_invalid' ];
     }
 } else {
-
     echo '<h1>&curren; ' . $_language->module[ 'sponsors' ] . '</h1>';
 
     echo

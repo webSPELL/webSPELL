@@ -128,7 +128,6 @@ onsubmit="return chkFormular();">
 <br /><br /><input type="submit" name="save" value="' . $_language->module[ 'add_static_page' ] . '" />
 </form>';
 } elseif (isset($_GET[ 'action' ]) && $_GET[ 'action' ] == "edit") {
-
     $_language->readModule('bbcode', true);
 
     $staticID = $_GET[ 'staticID' ];
@@ -153,7 +152,7 @@ onsubmit="return chkFormular();">
     $CAPCLASS->createTransaction();
     $hash = $CAPCLASS->getHash();
 
-	$tags = \webspell\Tags::getTags('static', $staticID);
+    $tags = \webspell\Tags::getTags('static', $staticID);
     echo '<h1>&curren; <a href="admincenter.php?site=static" class="white">' . $_language->module[ 'static_pages' ] .
         '</a> &raquo; ' . $_language->module[ 'edit_static_page' ] . '</h1>';
 
@@ -206,7 +205,6 @@ onsubmit="return chkFormular();">
 <input type="submit" name="save" value="' . $_language->module[ 'edit_static_page' ] . '" />
 </form>';
 } else {
-
     echo '<h1>&curren; ' . $_language->module[ 'static_pages' ] . '</h1>';
 
     echo '<a href="admincenter.php?site=static&amp;action=add" class="input">' .

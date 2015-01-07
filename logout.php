@@ -40,7 +40,6 @@ session_destroy();
 
 // remove login cookie
 if (isset($_COOKIE[ 'ws_auth' ])) {
-
     $cookieName = "ws_auth";
     $cookieValue = '';
     $cookieExpire = time() - (24 * 60 * 60);

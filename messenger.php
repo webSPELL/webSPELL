@@ -147,7 +147,6 @@ if (isset($_POST['delete'])) {
     header("Location: index.php?site=messenger&action=outgoing");
     exit();
 } elseif ($userID) {
-
     $_language->readModule('messenger');
 
     if (isset($_REQUEST['action'])) {
@@ -160,7 +159,6 @@ if (isset($_POST['delete'])) {
     echo $title_messenger;
 
     if ($action == "incoming") {
-
         if (isset($_REQUEST['entries'])) {
             $entries = $_REQUEST['entries'];
         }
@@ -327,7 +325,6 @@ if (isset($_POST['delete'])) {
         eval ("\$pm_incoming_foot = \"" . gettemplate("pm_incoming_foot") . "\";");
         echo $pm_incoming_foot;
     } elseif ($action == "outgoing") {
-
         if (isset($_REQUEST['entries'])) {
             $entries = $_REQUEST['entries'];
         }
@@ -476,7 +473,6 @@ if (isset($_POST['delete'])) {
         eval ("\$pm_outgoing_foot = \"" . gettemplate("pm_outgoing_foot") . "\";");
         echo $pm_outgoing_foot;
     } elseif ($action == "show") {
-
         $id = (int)$_GET['id'];
         $ds = mysqli_fetch_array(
             safe_query(
@@ -518,7 +514,6 @@ if (isset($_POST['delete'])) {
         eval ("\$pm_new_touser = \"" . gettemplate("pm_new_touser") . "\";");
         echo $pm_new_touser;
     } elseif ($action == "reply") {
-
         $id = $_GET['id'];
         $_language->readModule('bbcode', true);
         $ergebnis = safe_query("SELECT * FROM " . PREFIX . "messenger WHERE messageID='$id'");
@@ -547,7 +542,6 @@ if (isset($_POST['delete'])) {
             redirect('index.php?site=messenger', '', 0);
         }
     } elseif ($action == "newmessage") {
-
         $_language->readModule('bbcode', true);
         $ergebnis = safe_query("SELECT buddy FROM " . PREFIX . "buddys WHERE userID='$userID'");
         $user = '';

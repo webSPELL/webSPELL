@@ -77,7 +77,6 @@ if (isset($_POST[ 'save' ])) {
             );
 
             if ($gb_info) {
-
                 $ergebnis = safe_query("SELECT userID FROM " . PREFIX . "user_groups WHERE feedback='1'");
                 while ($ds = mysqli_fetch_array($ergebnis)) {
                     $touser[ ] = $ds[ 'userID' ];
@@ -134,7 +133,6 @@ if (isset($_POST[ 'save' ])) {
 
     header("Location: index.php?site=guestbook");
 } elseif ($action == 'comment' && is_numeric($_GET[ 'guestbookID' ])) {
-
     $_language->readModule('guestbook');
     $_language->readModule('bbcode', true);
     if (!isfeedbackadmin($userID)) {
@@ -151,7 +149,6 @@ if (isset($_POST[ 'save' ])) {
     eval ("\$guestbook_comment = \"" . gettemplate("guestbook_comment") . "\";");
     echo $guestbook_comment;
 } elseif ($action == 'add') {
-
     $_language->readModule('guestbook');
     $_language->readModule('bbcode', true);
 
@@ -195,7 +192,6 @@ if (isset($_POST[ 'save' ])) {
         echo $guestbook_notloggedin;
     }
 } else {
-
     $_language->readModule('guestbook');
     eval ("\$title_guestbook = \"" . gettemplate("title_guestbook") . "\";");
     echo $title_guestbook;

@@ -152,7 +152,6 @@ if ($action == "add") {
     </table>
     </form>';
 } elseif ($action == "edit") {
-
     echo '<h1>&curren; <a href="admincenter.php?site=servers" class="white">' . $_language->module[ 'servers' ] .
         '</a> &raquo; ' . $_language->module[ 'edit_server' ] . '</h1>';
 
@@ -215,7 +214,6 @@ onsubmit="return chkFormular();">
   </table>
   </form>';
 } else {
-
     echo '<h1>&curren; ' . $_language->module[ 'servers' ] . '</h1>';
 
     echo '<a href="admincenter.php?site=servers&amp;action=add" class="input">' .

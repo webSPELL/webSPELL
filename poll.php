@@ -91,7 +91,6 @@ function vote($poll)
     $anz = mysqli_num_rows($lastpoll);
     $ds = mysqli_fetch_array($lastpoll);
     if ($anz) {
-
         $anz = mysqli_num_rows(
             safe_query(
                 "SELECT
@@ -117,7 +116,6 @@ function vote($poll)
         }
 
         if ($cookie || $anz || $anz_user) {
-
             if ($ds[ 'intern' ] == 1) {
                 $isintern = '(' . $_language->module[ 'intern' ] . ')';
             } else {
@@ -169,7 +167,6 @@ function vote($poll)
 
             unset($options);
         } else {
-
             if ($ds[ 'intern' ] == 1) {
                 $isintern = '(' . $_language->module[ 'intern' ] . ')';
             } else {

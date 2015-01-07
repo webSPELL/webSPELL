@@ -51,7 +51,6 @@ if (isset($_GET[ 'tag' ])) {
         echo "<p class=\"text-center\"><strong>" . count($data) . "</strong> " . $_language->module[ 'results_found' ] .
             "</p><br><br>";
         foreach ($data as $entry) {
-
             $date = getformatdate($entry[ 'date' ]);
             $type = $entry[ 'type' ];
             $auszug = $entry[ 'content' ];

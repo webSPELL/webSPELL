@@ -31,7 +31,6 @@ if (isset($_GET[ 'action' ])) {
     $action = null;
 }
 if ($action == "save") {
-
     $message = trim($_POST[ 'message' ]);
     $name = trim($_POST[ 'name' ]);
     $run = 0;
@@ -94,7 +93,6 @@ if ($action == "save") {
     }
     header("Location: index.php?site=shoutbox_content&action=showall");
 } elseif ($action == "showall") {
-
     $_language->readModule('shoutbox');
     eval ("\$title_shoutbox = \"" . gettemplate("title_shoutbox") . "\";");
     echo $title_shoutbox;
@@ -151,7 +149,6 @@ if ($action == "save") {
 
     $i = 1;
     while ($ds = mysqli_fetch_array($ergebnis)) {
-
         $i % 2 ? $bg1 = BG_1 : $bg1 = BG_2;
         $date = getformatdatetime($ds[ 'date' ]);
         $name = $ds[ 'name' ];

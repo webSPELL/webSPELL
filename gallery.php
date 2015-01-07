@@ -39,7 +39,6 @@ if (isset($_GET[ 'action' ])) {
 }
 
 if (isset($_POST[ 'saveedit' ])) {
-
     include('_mysql.php');
     include('_settings.php');
     include('_functions.php');
@@ -63,7 +62,6 @@ if (isset($_POST[ 'saveedit' ])) {
         (isgalleryadmin($userID) || $galclass->isGalleryOwner($ds[ 'galleryID' ], $userID)) &&
         $_POST[ 'picID' ]
     ) {
-
         safe_query(
             "UPDATE
                 `" . PREFIX . "gallery_pictures`
@@ -90,11 +88,9 @@ if (isset($_POST[ 'saveedit' ])) {
 
     redirect('index.php?site=gallery&amp;picID=' . $_POST[ 'picID' ], '', 0);
 } elseif ($action == "edit") {
-
     $_language->readModule('gallery');
 
     if ($_GET[ 'id' ]) {
-
         $ds =
             mysqli_fetch_array(
                 safe_query(
@@ -125,7 +121,6 @@ if (isset($_POST[ 'saveedit' ])) {
         redirect('index.php?site=gallery', $_language->module[ 'no_pic_set' ]);
     }
 } elseif ($action == "delete") {
-
     include('_mysql.php');
     include('_settings.php');
     include('_functions.php');
@@ -144,7 +139,6 @@ if (isset($_POST[ 'saveedit' ])) {
     );
 
     if ((isgalleryadmin($userID) || $galclass->isGalleryOwner($ds[ 'galleryID' ], $userID)) && $_GET[ 'id' ]) {
-
         $ds = mysqli_fetch_array(
             safe_query(
                 "SELECT
@@ -188,7 +182,6 @@ if (isset($_POST[ 'saveedit' ])) {
     }
     redirect('index.php?site=gallery&amp;galleryID=' . $ds[ 'galleryID' ], '', 0);
 } elseif ($action == "diashow" || $action == "window") {
-
     include('_mysql.php');
     include('_settings.php');
     include('_functions.php');
@@ -291,7 +284,6 @@ if (isset($_POST[ 'saveedit' ])) {
 
     echo '</center></body></html>';
 } elseif (isset($_GET[ 'picID' ])) {
-
     $_language->readModule('gallery');
 
     $galclass = new \webspell\Gallery;
@@ -301,7 +293,6 @@ if (isset($_POST[ 'saveedit' ])) {
 
     $ergebnis = safe_query("SELECT * FROM `" . PREFIX . "gallery_pictures` WHERE `picID` = '" . $_GET[ 'picID' ] . "'");
     if (mysqli_num_rows($ergebnis)) {
-
         $ds = mysqli_fetch_array(
             safe_query(
                 "SELECT * FROM `" . PREFIX . "gallery_pictures` WHERE `picID` = '" . (int)$_GET[ 'picID' ] . "'"
@@ -387,7 +378,6 @@ if (isset($_POST[ 'saveedit' ])) {
         //rateform
 
         if ($loggedin) {
-
             $getgallery = safe_query(
                 "SELECT `gallery_pictures` FROM `" . PREFIX . "user` WHERE `userID` = '" . (int)$userID . "'"
             );
@@ -490,7 +480,6 @@ if (isset($_POST[ 'saveedit' ])) {
         include("comments.php");
     }
 } elseif (isset($_GET[ 'galleryID' ])) {
-
     $_language->readModule('gallery');
 
     $galclass = new \webspell\Gallery;
@@ -562,7 +551,6 @@ if (isset($_POST[ 'saveedit' ])) {
     $percent = 100 / $pics_per_row;
 
     while ($pic = mysqli_fetch_array($ergebnis)) {
-
         if ($i % 2) {
             $bg = BG_2;
         } else {
@@ -610,7 +598,6 @@ if (isset($_POST[ 'saveedit' ])) {
     eval("\$gallery = \"" . gettemplate("gallery_gallery_foot") . "\";");
     echo $gallery;
 } elseif (isset($_GET[ 'groupID' ])) {
-
     $_language->readModule('gallery');
 
     $galclass = new \webspell\Gallery;
@@ -689,7 +676,6 @@ if (isset($_POST[ 'saveedit' ])) {
     eval("\$gallery = \"" . gettemplate("gallery_group_foot") . "\";");
     echo $gallery;
 } else {
-
     $_language->readModule('gallery');
 
     $galclass = new \webspell\Gallery;
@@ -700,7 +686,6 @@ if (isset($_POST[ 'saveedit' ])) {
     $ergebnis = safe_query("SELECT * FROM " . PREFIX . "gallery_groups ORDER BY sort");
 
     while ($ds = mysqli_fetch_array($ergebnis)) {
-
         $groupID = $ds[ 'groupID' ];
         $title = $ds[ 'name' ];
         $gallerys = mysqli_num_rows(

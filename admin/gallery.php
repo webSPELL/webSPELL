@@ -45,7 +45,6 @@ if (isset($_GET[ 'action' ])) {
 }
 
 if ($part == "groups") {
-
     if (isset($_POST[ 'save' ])) {
         $CAPCLASS = new \webspell\Captcha;
         if ($CAPCLASS->checkCaptcha(0, $_POST[ 'captcha_hash' ])) {

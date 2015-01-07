@@ -348,7 +348,6 @@ if ($action == "user") {
 
     $get = safe_query("SELECT * FROM " . PREFIX . "api_log ORDER BY `date` DESC");
     if (mysqli_num_rows($get)) {
-
         echo '<input type="button" onclick="MM_confirm(\'' . $_language->module[ "question_delete_all" ] .
             '\', \'admincenter.php?site=spam&amp;action=api_log&amp;del_option=del_all\')" value="' .
             $_language->module[ "delete_all" ] . '" /><br /><br />';
@@ -360,7 +359,6 @@ if ($action == "user") {
 		</tr>';
         $i = 0;
         while ($ds = mysqli_fetch_assoc($get)) {
-
             if ($i % 2) {
                 $td = 'td1';
             } else {

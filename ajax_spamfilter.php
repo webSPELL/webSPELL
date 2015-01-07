@@ -18,7 +18,6 @@ if (!empty($spamapikey)) {
             $ds = mysqli_fetch_array($get);
 
             if (ispageadmin($userID) || ismoderator($userID, $ds[ 'boardID' ])) {
-
                 $message = $ds[ 'message' ];
                 $spamApi = SpamApi::getInstance();
                 if (in_array($type, ["spam", "ham"])) {

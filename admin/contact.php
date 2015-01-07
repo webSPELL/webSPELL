@@ -107,7 +107,6 @@ if (isset($_GET[ 'action' ])) {
 		</table>
 		</form>';
     } elseif ($_GET[ 'action' ] == "edit") {
-
         $contactID = (int)$_GET[ 'contactID' ];
 
         $ergebnis = safe_query("SELECT * FROM " . PREFIX . "contact WHERE contactID='$contactID'");
@@ -139,7 +138,6 @@ if (isset($_GET[ 'action' ])) {
 		</form>';
     }
 } else {
-
     echo '<h1>&curren; ' . $_language->module[ 'contact' ] . '</h1>';
 
     echo

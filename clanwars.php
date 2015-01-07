@@ -545,7 +545,6 @@ if ($action == "new") {
         $theOppScore = unserialize($ds[ 'oppscore' ]);
         $i = 0;
         for ($i = 0; $i < count($map); $i++) {
-
             $maps .= '<tr>
             <td width="15%">
                 <input type="hidden" name="map_id[]" value="' . $i . '">map #' . ($i + 1) . '
@@ -925,7 +924,6 @@ if ($action == "new") {
             $totalperc = percent($total, $totaltotal, 2);
 
             while ($squadcwdata = mysqli_fetch_array($squadcws)) {
-
                 // SQUAD CLANWAR STATISTICS
 
                 // total squad homescore

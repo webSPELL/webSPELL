@@ -452,7 +452,6 @@ function parseWebspellURL($parameters = null)
                     if ($getgroupname['name'] == "") {
                         $getgroupname['name'] = $_language->module['usergallery'];
                     } else {
-
                     }
                     $picID = mysqli_fetch_array(
                         safe_query(

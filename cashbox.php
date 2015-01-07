@@ -177,9 +177,7 @@ if (isset($_POST[ 'save' ]) && $_POST[ 'save' ]) {
 if (!isclanmember($userID) && !iscashadmin($userID)) {
     echo $_language->module[ 'clanmembers_only' ];
 } else {
-
     if (isset($_GET[ 'action' ]) && $_GET[ 'action' ] == "new") {
-
         if (!iscashadmin($userID)) {
             die($_language->module[ 'no_access' ]);
         }
@@ -204,7 +202,6 @@ if (!isclanmember($userID) && !iscashadmin($userID)) {
         eval ("\$cash_box_new = \"" . gettemplate("cash_box_new") . "\";");
         echo $cash_box_new;
     } elseif (isset($_GET[ 'action' ]) && $_GET[ 'action' ] == "edit") {
-
         if (!iscashadmin($userID)) {
             die($_language->module[ 'no_access' ]);
         }
@@ -239,7 +236,6 @@ if (!isclanmember($userID) && !iscashadmin($userID)) {
         eval ("\$cashbox_edit = \"" . gettemplate("cash_box_edit") . "\";");
         echo $cashbox_edit;
     } else {
-
         echo '<h2>' . $_language->module[ 'cash_box' ] . '</h2>';
 
         function print_cashbox($squadID, $id)

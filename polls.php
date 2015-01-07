@@ -81,7 +81,6 @@ if ($action == "vote") {
             $cookie = in_array($pollID, $_COOKIE[ 'poll' ]);
         }
         if (!$cookie && !$anz && !$anz_user && isset($_POST[ 'vote' ])) {
-
             //write cookie
             $index = count($_COOKIE[ 'poll' ]);
             setcookie("poll[" . $index . "]", $pollID, time() + (3600 * 24 * 365));
@@ -271,7 +270,6 @@ if ($action == "vote") {
                 )"
         );
     } else {
-
         safe_query(
             "UPDATE
                 " . PREFIX . "poll
@@ -350,7 +348,6 @@ if ($action == "new") {
         $ds = mysqli_fetch_array($ergebnis);
 
         if (isset($ds[ 'pollID' ])) {
-
             $runtime_date = date("Y-m-d", $ds[ 'laufzeit' ]);
             $runtime_time = date("H:i", $ds[ 'laufzeit' ]);
 
@@ -508,7 +505,6 @@ if ($action == "new") {
 
     include("comments.php");
 } elseif (isset($_GET[ 'vote' ])) {
-
     $pagebg = PAGEBG;
     $border = BORDER;
     $bghead = BGHEAD;

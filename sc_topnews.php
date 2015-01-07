@@ -40,7 +40,6 @@ $ergebnis = safe_query(
 );
 $anz = mysqli_num_rows($ergebnis);
 if ($anz) {
-
     $dn = mysqli_fetch_array($ergebnis);
 
     $message_array = [];

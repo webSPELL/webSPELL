@@ -51,7 +51,6 @@ if ($action == "delete") {
         echo $_language->module[ 'transaction_invalid' ];
     }
 } elseif ($action == "add") {
-
     echo '<h1>&curren; <a href="admincenter.php?site=groups" class="white">' . $_language->module[ 'groups' ] .
         '</a> &raquo; ' . $_language->module[ 'add_group' ] . '</h1>';
 
@@ -103,7 +102,6 @@ if ($action == "delete") {
         echo $_language->module[ 'transaction_invalid' ];
     }
 } elseif ($action == "edit") {
-
     echo '<h1>&curren; <a href="admincenter.php?site=groups" class="white">' . $_language->module[ 'groups' ] .
         '</a> &raquo; ' . $_language->module[ 'edit_group' ] . '</h1>';
 
@@ -132,7 +130,6 @@ if ($action == "delete") {
 	</table>
 	</form>';
 } else {
-
     echo '<h1>&curren; ' . $_language->module[ 'groups' ] . '</h1>';
 
     echo '<a href="admincenter.php?site=groups&amp;action=add" class="input">' . $_language->module[ 'new_group' ] .

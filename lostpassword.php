@@ -44,7 +44,6 @@ if (isset($_POST[ 'submit' ])) {
         $anz = mysqli_num_rows($ergebnis);
 
         if ($anz) {
-
             $newpwd = RandPass(6);
             $newmd5pwd = generatePasswordHash($newpwd);
 

@@ -270,7 +270,6 @@ if (isset($_GET[ 'action' ])) {
     }
     echo '</td></tr></table></form>';
 } else {
-
     $groups = '';
     $ergebnis = safe_query("SELECT * FROM " . PREFIX . "forum_groups");
     $selector = 0;

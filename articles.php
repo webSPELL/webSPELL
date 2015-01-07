@@ -318,7 +318,6 @@ if ($action == "new") {
         redirect('index.php?site=articles', $_language->module[ 'no_access' ]);
     }
 } elseif ($action == "edit") {
-
     include("_mysql.php");
     include("_settings.php");
     include("_functions.php");
@@ -456,7 +455,6 @@ if ($action == "new") {
         redirect('index.php?site=articles', $_language->module[ 'no_access' ]);
     }
 } elseif ($action == "show") {
-
     $_language->readModule('articles');
 
     $articlesID = (int)$_GET[ 'articlesID' ];
@@ -489,7 +487,6 @@ if ($action == "new") {
     $result = safe_query("SELECT * FROM `" . PREFIX . "articles` WHERE `articlesID` = '" . (int)$articlesID . "'");
 
     if (mysqli_num_rows($result)) {
-
         $ds = mysqli_fetch_array($result);
         $date_time = getformatdatetime($ds[ 'date' ]);
         $title = clearfromtags($ds[ 'title' ]);
@@ -648,7 +645,6 @@ if ($action == "new") {
         echo $_language->module[ 'no_entries' ];
     }
 } else {
-
     $_language->readModule('articles');
 
     if (isset($_GET[ 'page' ])) {

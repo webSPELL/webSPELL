@@ -549,7 +549,6 @@ if ($action == "save") {
             name"
     );
     if (mysqli_num_rows($subcats)) {
-
         eval("\$files_category_head = \"" . gettemplate("files_category_head") . "\";");
         echo $files_category_head;
 
@@ -608,14 +607,12 @@ if ($action == "save") {
             `filename`"
     );
     if (mysqli_num_rows($files)) {
-
         eval("\$files_category_list = \"" . gettemplate("files_category_list_head") . "\";");
         echo $files_category_list;
 
         $n = 0;
 
         while ($file = mysqli_fetch_array($files)) {
-
             $n++;
             if ($n % 2) {
                 $bg1 = BG_1;
@@ -955,7 +952,6 @@ if ($action == "save") {
         $fileQry = safe_query("SELECT * FROM `" . PREFIX . "files`");
         $totalfiles = mysqli_num_rows($fileQry);
         if ($totalfiles) {
-
             $hddspace = 0;
             $traffic = 0;
             // total traffic caused by downloads

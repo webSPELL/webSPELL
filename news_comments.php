@@ -71,7 +71,6 @@ if (isset($newsID)) {
             )
         )
     ) {
-
         $date = getformatdate($ds[ 'date' ]);
         $time = getformattime($ds[ 'date' ]);
         $rubrikname = getrubricname($ds[ 'rubric' ]);
