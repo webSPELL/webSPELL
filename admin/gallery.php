@@ -456,7 +456,6 @@ if ($part == "groups") {
         } else {
             $upload_type = null;
         }
-        $id = $_GET[ 'galleryID' ];
         if ($upload_type == "ftp") {
             $CAPCLASS = new \webspell\Captcha;
             $CAPCLASS->createTransaction();
