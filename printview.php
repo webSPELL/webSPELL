@@ -79,14 +79,7 @@ if (mysqli_num_rows($thread)) {
         }
     }
 
-    $ergebnis = safe_query(
-        "SELECT
-            *
-        FROM
-            " . PREFIX . "forum_boards
-        WHERE
-            boardID='".(int)$dt[boardID]
-    );
+    $ergebnis = safe_query("SELECT * FROM " . PREFIX . "forum_boards WHERE boardID='".(int)$dt[boardID]."'");
     $db = mysqli_fetch_array($ergebnis);
     $boardname = $db[ 'name' ];
 
