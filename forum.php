@@ -1163,10 +1163,10 @@ if (isset($_POST[ 'submit' ]) || isset($_POST[ 'movetopic' ]) || isset($_GET[ 'a
                 die($_language->module[ 'no_access_write' ]);
             }
 
-            $spamApi = SpamApi::getInstance();
+            $spamApi = \webspell\SpamApi::getInstance();
             $validation = $spamApi->validate($message);
 
-            if ($validation == SpamApi::NoSpam) {
+            if ($validation == \webspell\SpamApi::NoSpam) {
                 $date = time();
                 safe_query(
                     "INSERT INTO " . PREFIX .
