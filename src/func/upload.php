@@ -25,105 +25,129 @@
 ##########################################################################
 */
 
-class Upload {
-	public function __constructor($field_name){
-		$this->field = $field_name;
-	}
+namespace webspell;
 
-	public function hasFile(){
-		return isset($_FILES[$this->field]['error']);
-	}
+class Upload
+{
+    private $field;
 
-	public function hasError(){
-		return $_FILES[$this->field]['error'] === UPLOAD_ERR_OK;
-	}
+    public function __construct($field_name)
+    {
+        $this->field = $field_name;
+    }
 
-	public function getError() {
-		if($this->hasFile()){
-			return $_FILES[$this->field]['error'];
-		}
-		else{
-			return null;
-		}
-	}
+    public function hasFile()
+    {
+        return (isset($_FILES[ $this->field ]) && $_FILES[ $this->field ][ 'error' ] != UPLOAD_ERR_NO_FILE);
+    }
 
-	public function getMimeType(){
-		if(function_exists("finfo_file")){
-			$handle = finfo_open(FILEINFO_MIME_TYPE);
-			$mime = finfo_file($handle, );
-			if(stristr($mime, ";") !== false){
-				$mime = substr($mime, 0,strpos($mime, ";"));
-			}
-		} else{
-			$mime = mime_content_type($filename);
-		}
+    public function hasError()
+    {
+        return $_FILES[ $this->field ][ 'error' ] !== UPLOAD_ERR_OK;
+    }
 
-		if($mime === false){
-			$mime = $_FILES[$this->field]['type'];
-		}
-	}
+    public function getError()
+    {
+        if ($this->hasFile()) {
+            return $_FILES[ $this->field ][ 'error' ];
+        } else {
+            return null;
+        }
+    }
 
-	public function supportedMimeType($required_mime){
-		$filename = $_FILES[$this->field]['tmp_name'];
-		$mime = $this->getMimeType();
+    public function getMimeType()
+    {
+        $filename = $_FILES[ $this->field ][ 'tmp_name' ];
+        if (function_exists("finfo_file")) {
+            $handle = finfo_open(FILEINFO_MIME_TYPE);
+            $mime = finfo_file($handle, $filename);
+            if (stristr($mime, ";") !== false) {
+                $mime = substr($mime, 0, strpos($mime, ";"));
+            }
+        } else {
+            $mime = mime_content_type($filename);
+        }
 
-		if(is_array($required_mime)){
-			foreach($required_mime as $req_mime){
-				if($req_mime == $mime){
-					return true;
-				}
-			}
-		}
-		else{
-			if($required_mime == $mime){
-				return true;
-			}
-		}
+        if ($mime === false) {
+            $mime = $_FILES[ $this->field ][ 'type' ];
+        }
+        return $mime;
+    }
 
-		return false;
-	}
+    public function supportedMimeType($required_mime)
+    {
+        $mime = $this->getMimeType();
 
-	public function getTempFile(){
-		return $_FILES[$this->field]['tmp_name'];
-	}
+        if (is_array($required_mime)) {
+            foreach ($required_mime as $req_mime) {
+                if ($req_mime == $mime) {
+                    return true;
+                }
+            }
+        } else {
+            if ($required_mime == $mime) {
+                return true;
+            }
+        }
 
-	public function saveAs($newFilePath){
-		return move_uploaded_file($_FILES[$this->field]['tmp_name'], $newFilePath);
-	}
+        return false;
+    }
 
-	public function translateError($code){
-		global $_language;
-		$_language->readModule('upload',true);
-		switch ($code) {
+    public function getTempFile()
+    {
+        return $_FILES[ $this->field ][ 'tmp_name' ];
+    }
+
+    public function getFilename()
+    {
+        return basename($_FILES[ $this->field ][ 'name' ]);
+    }
+
+    public function getExtension()
+    {
+        $filename = $this->getFilename();
+        if (stristr($filename, ".") !== false) {
+            return substr($filename, strrpos($filename, ".") + 1);
+        } else {
+            return null;
+        }
+    }
+
+    public function saveAs($newFilePath)
+    {
+        return move_uploaded_file($_FILES[ $this->field ][ 'tmp_name' ], $newFilePath);
+    }
+
+    public function translateError()
+    {
+        global $_language;
+        $_language->readModule('upload', true);
+        switch ($_FILES[ $this->field ][ 'error' ]) {
             case UPLOAD_ERR_INI_SIZE:
-                $message = $_language->module['file_too_big'];
+                $message = $_language->module[ 'file_too_big' ];
                 break;
             case UPLOAD_ERR_FORM_SIZE:
-                $message = $_language->module['file_too_big'];
+                $message = $_language->module[ 'file_too_big' ];
                 break;
             case UPLOAD_ERR_PARTIAL:
-                $message = $_language->module['incomplete_upload'];
+                $message = $_language->module[ 'incomplete_upload' ];
                 break;
             case UPLOAD_ERR_NO_FILE:
-                $message = $_language->module['no_file_uploaded'];
+                $message = $_language->module[ 'no_file_uploaded' ];
                 break;
             case UPLOAD_ERR_NO_TMP_DIR:
-                $message = $_language->module['no_temp_folder_available'];
+                $message = $_language->module[ 'no_temp_folder_available' ];
                 break;
             case UPLOAD_ERR_CANT_WRITE:
-                $message = $_language->module['cant_write_temp_file'];
+                $message = $_language->module[ 'cant_write_temp_file' ];
                 break;
             case UPLOAD_ERR_EXTENSION:
-                $message = $_language->module['unexpected_errpr'];
+                $message = $_language->module[ 'unexpected_error' ];
                 break;
-
             default:
-                $message = $_language->module['unexpected_errpr'];
+                $message = $_language->module[ 'unexpected_error' ];
                 break;
-        } 
+        }
         return $message;
-	}
-
+    }
 }
-
-?>

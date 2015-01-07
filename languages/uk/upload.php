@@ -30,12 +30,18 @@ $language_array = Array(
 /* do not edit above this line */
 
 	'add_to_message'=>'Add to message',
-  'close_window'=>'close window',
+  	'close_window'=>'close window',
 	'delete'=>'Delete',
 	'existing_files'=>'Existing files',
 	'file_upload'=>'Upload file',
 	'invalid_access'=>'Invalid access!',
 	'no_access'=>'No access!',
-	'upload'=>'Upload'
+	'upload'=>'Upload',
+	'file_too_big'=>'File too big',
+	'incomplete_upload'=>'Incomplete upload',
+	'no_file_uploaded'=>'No file uploaded',
+	'no_temp_folder_available'=>'No temporary folder available. Please contact the administrator',
+	'cant_write_temp_file'=>'Can\'t write temporary file. Please contact the administrator',
+	'unexpected_error'=>'Unexpected error'
 );
 ?>

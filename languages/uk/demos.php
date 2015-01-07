@@ -76,6 +76,7 @@ $language_array = Array(
 	'update_demo'=>'Update demo',
 	'user_comments'=>'Enable user comments',
 	'visitor_comments'=>'Enable visitor comments',
-	'vs'=>'vs.'
+	'vs'=>'vs.',
+	'successful'=>'successful'
 );
 ?>
