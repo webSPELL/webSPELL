@@ -222,10 +222,8 @@ function boardmain()
 
     // KATEGORIEN
     $sql_where = '';
-    if (isset($_GET[ 'cat' ])) {
-        if (is_numeric($_GET[ 'cat' ])) {
-            $sql_where = " WHERE catID='" . $_GET[ 'cat' ] . "'";
-        }
+    if (isset($_GET[ 'cat' ]) && is_numeric($_GET[ 'cat' ])) {
+        $sql_where = " WHERE catID='" . (int)$_GET[ 'cat' ] . "'";
     }
     $kath = safe_query(
         "SELECT catID, name, info, readgrps FROM " . PREFIX . "forum_categories" . $sql_where .

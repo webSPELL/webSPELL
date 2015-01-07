@@ -181,7 +181,7 @@ if ($action == "show") {
 } else {
     $getsquad = "";
     if (isset($_GET[ 'squadID' ])) {
-        $getsquad = 'WHERE squadID="' . $_GET[ 'squadID' ] . '"';
+        $getsquad = 'WHERE squadID="' . (int)$_GET[ 'squadID' ] . '"';
     }
 
     $ergebnis = safe_query("SELECT * FROM " . PREFIX . "squads " . $getsquad . " ORDER BY sort");

@@ -38,7 +38,7 @@ if (isset($_GET[ 'action' ])) {
 
 if ($action == "show") {
     if (isset($_GET[ 'squadID' ])) {
-        $getsquad = 'WHERE squadID="' . $_GET[ 'squadID' ] . '"';
+        $getsquad = 'WHERE squadID="' . (int)$_GET[ 'squadID' ] . '"';
     } else {
         $getsquad = '';
     }
@@ -194,10 +194,10 @@ if ($action == "show") {
     }
 } else {
     if (isset($_POST[ 'squadID' ])) {
-        $onesquadonly = 'WHERE squadID="' . $_POST[ 'squadID' ] . '"';
+        $onesquadonly = 'WHERE squadID="' . (int)$_POST[ 'squadID' ] . '"';
         $visible = "block";
     } elseif (isset($_GET[ 'squadID' ])) {
-        $onesquadonly = 'WHERE squadID="' . $_GET[ 'squadID' ] . '"';
+        $onesquadonly = 'WHERE squadID="' . (int)$_GET[ 'squadID' ] . '"';
         $visible = "block";
     } else {
         $visible = "none";

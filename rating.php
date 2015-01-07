@@ -64,7 +64,7 @@ if (isset($table) && isset($key)) {
         FROM
             " . PREFIX . "user
         WHERE
-            userID='" . (int)$userID
+            userID='" . (int)$userID."'"
     );
     if (mysqli_num_rows($getarticles)) {
         $ga = mysqli_fetch_array($getarticles);
@@ -88,7 +88,7 @@ if (isset($table) && isset($key)) {
                     votes=votes+1,
                     points=points+" . $rating . "
                 WHERE
-                " . $key . " = '" . (int)$id
+                " . $key . " = '" . (int)$id."'"
             );
             $ergebnis = safe_query("SELECT votes, points FROM " . PREFIX . $table . " WHERE " . $key . " = '" . (int)$id);
             $ds = mysqli_fetch_array($ergebnis);
