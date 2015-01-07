@@ -39,7 +39,9 @@ if ($loggedin) {
             userID='" . $userID . "'"
     );
     $data = mysqli_fetch_row($get);
-    for ($i = 2; $i < count($data); $i++) {
+
+    $counter = count($data);
+    for ($i = 2; $i < $counter; $i++) {
         if ($data[ $i ] == 1) {
             $info = mysqli_fetch_field_direct($get, $i);
             $usergroups[ ] = $info->name;

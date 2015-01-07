@@ -111,7 +111,8 @@ if (isset($_GET[ 'month' ])) {
             $_GET[ 'year' ] ? $_GET[ 'year' ] : date("Y")
         )
     );
-    for ($i = 1; $i <= date(
+
+    $date_end = date(
         "d",
         mktime(
             0,
@@ -121,7 +122,9 @@ if (isset($_GET[ 'month' ])) {
             0,
             $_GET[ 'year' ] ? $_GET[ 'year' ] : date("Y")
         )
-    ); $i++) {
+    );
+
+    for ($i = 1; $i <= $date_end; $i++) {
         $tmp = mysqli_fetch_array(safe_query(
             "SELECT count FROM " . PREFIX . "counter_stats WHERE dates LIKE '%" . $i .
             $datemonth . "'"

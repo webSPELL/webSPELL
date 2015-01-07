@@ -171,7 +171,8 @@ if ($part == "groups") {
                 $td = 'td2';
             }
             $list = '<select name="sortlist[]">';
-            for ($i = 1; $i <= mysqli_num_rows($ergebnis); $i++) {
+            $counter = mysqli_num_rows($ergebnis);
+            for ($i = 1; $i <= $counter; $i++) {
                 $list .= '<option value="' . $ds[ 'groupID' ] . '-' . $i . '">' . $i . '</option>';
             }
             $list .= '</select>';
