@@ -115,10 +115,9 @@ class Upload
 
     public function saveAs($newFilePath, $override = true)
     {
-        if(!file_exists($newFilePath) || $override){
+        if (!file_exists($newFilePath) || $override) {
             return move_uploaded_file($_FILES[ $this->field ][ 'tmp_name' ], $newFilePath);
-        }
-        else{
+        } else {
             return false;
         }
     }

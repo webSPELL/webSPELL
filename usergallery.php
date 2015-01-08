@@ -124,7 +124,7 @@ if ($userID) {
                                 );
                                 echo generateErrorBox($_language->module[ 'no_space_left' ]);
                             }
-                        } else{
+                        } else {
                             safe_query("DELETE FROM " . PREFIX . "gallery_pictures WHERE picID='" . $insertid . "'");
                             @unlink($upload->getTempFile());
                         }

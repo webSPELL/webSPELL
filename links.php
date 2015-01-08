@@ -85,7 +85,9 @@ if (isset($_POST[ 'save' ])) {
 
                             if ($upload->saveAs($filepath.$file)) {
                                 @chmod($file, $new_chmod);
-                                safe_query("UPDATE " . PREFIX . "links SET banner='" . $file . "' WHERE linkID='" . $id . "'");
+                                safe_query(
+                                    "UPDATE " . PREFIX . "links SET banner='" . $file . "' WHERE linkID='" . $id . "'"
+                                );
                             }
                         } else {
                             echo generateErrorBox($_language->module[ 'banner_to_big' ]);
@@ -150,7 +152,9 @@ if (isset($_POST[ 'save' ])) {
 
                             if ($upload->saveAs($filepath.$file)) {
                                 @chmod($file, $new_chmod);
-                                safe_query("UPDATE " . PREFIX . "links SET banner='" . $file . "' WHERE linkID='" . $id . "'");
+                                safe_query(
+                                    "UPDATE " . PREFIX . "links SET banner='" . $file . "' WHERE linkID='" . $id . "'"
+                                );
                             }
                         } else {
                             echo generateErrorBox($_language->module[ 'banner_to_big' ]);

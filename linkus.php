@@ -70,7 +70,9 @@ if (isset($_POST['save'])) {
 
                             if ($upload->saveAs($filepath.$file)) {
                                 @chmod($file, $new_chmod);
-                                safe_query("UPDATE " . PREFIX . "linkus SET file='" . $file . "' WHERE bannerID='" . $id . "'");
+                                safe_query(
+                                    "UPDATE " . PREFIX . "linkus SET file='" . $file . "' WHERE bannerID='" . $id . "'"
+                                );
                             }
                         } else {
                             echo generateErrorBox($_language->module[ 'image_too_big' ]);
@@ -131,7 +133,9 @@ if (isset($_POST['save'])) {
 
                             if ($upload->saveAs($filepath.$file)) {
                                 @chmod($file, $new_chmod);
-                                safe_query("UPDATE " . PREFIX . "linkus SET file='" . $file . "' WHERE bannerID='" . $id . "'");
+                                safe_query(
+                                    "UPDATE " . PREFIX . "linkus SET file='" . $file . "' WHERE bannerID='" . $id . "'"
+                                );
                             }
                         } else {
                             echo generateErrorBox($_language->module[ 'image_too_big' ]);
