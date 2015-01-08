@@ -64,11 +64,11 @@ class Upload
             if (stristr($mime, ";") !== false) {
                 $mime = substr($mime, 0, strpos($mime, ";"));
             }
-        } else {
+        } elseif (function_exists("mime_content_type")) {
             $mime = mime_content_type($filename);
         }
 
-        if ($mime === false) {
+        if (!isset($mime) || empty($mime)) {
             $mime = $_FILES[ $this->field ][ 'type' ];
         }
         return $mime;
