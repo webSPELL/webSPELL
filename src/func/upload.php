@@ -113,9 +113,14 @@ class Upload
         }
     }
 
-    public function saveAs($newFilePath)
+    public function saveAs($newFilePath, $override = true)
     {
-        return move_uploaded_file($_FILES[ $this->field ][ 'tmp_name' ], $newFilePath);
+        if(!file_exists($newFilePath) || $override){
+            return move_uploaded_file($_FILES[ $this->field ][ 'tmp_name' ], $newFilePath);
+        }
+        else{
+            return false;
+        }
     }
 
     public function translateError()
