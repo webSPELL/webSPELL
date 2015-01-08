@@ -37,64 +37,56 @@ if (isset($_POST['save'])) {
         echo generateAlert($_language->module['no_access'], 'alert-danger');
     } else {
 
-        safe_query("INSERT INTO " . PREFIX . "linkus ( name ) VALUES( '" . $_POST['name'] . "' ) ");
-        $id = mysqli_insert_id($_database);
-        $banner = $_FILES['banner'];
         $filepath = "./images/linkus/";
 
-        if ($banner['name'] != "") {
-            move_uploaded_file($banner['tmp_name'], $filepath . $banner['name'] . ".tmp");
-            @chmod($filepath . $banner['name'] . ".tmp", 0755);
-            $getimg = getimagesize($filepath . $banner['name'] . ".tmp");
-            if ($getimg[0] < 801 && $getimg[1] < 601) {
-                $file = '';
-                if ($getimg[2] == 1) {
-                    $file = $id . '.gif';
-                } elseif ($getimg[2] == 2) {
-                    $file = $id . '.jpg';
-                } elseif ($getimg[2] == 3) {
-                    $file = $id . '.png';
-                }
-                if ($file != "") {
-                    if (file_exists($filepath . $id . '.gif')) {
-                        unlink($filepath . $id . '.gif');
-                    }
-                    if (file_exists($filepath . $id . '.jpg')) {
-                        unlink($filepath . $id . '.jpg');
-                    }
-                    if (file_exists($filepath . $id . '.png')) {
-                        unlink($filepath . $id . '.png');
-                    }
-                    rename($filepath . $banner['name'] . ".tmp", $filepath . $file);
-                    safe_query("UPDATE " . PREFIX . "linkus SET file='" . $file . "' WHERE bannerID='" . $id . "'");
-                } else {
-                    if (unlink($filepath . $banner['name'] . ".tmp")) {
-                        $error = $_language->module['format_incorrect'];
-                        die('<div class="alert alert-danger" role="alert">
-                            <strong>' . $error . '</strong><br>
-                            <br>
-                            <a href="index.php?site=linkus&amp;action=edit&amp;bannerID=' . $id .
-                            '" class="alert-link">&laquo; ' . $_language->module['back'] . '</a>
-                        </div>');
+        $upload = new \webspell\Upload('banner');
+
+        if ($upload->hasFile()) {
+            if ($upload->hasError() === false) {
+
+                $mime_types = array('image/jpeg','image/png','image/gif');
+
+                if ($upload->supportedMimeType($mime_types)) {
+
+                    $imageInformation =  getimagesize($upload->getTempFile());
+
+                    if (is_array($imageInformation)) {
+                        if ($imageInformation[0] < 801 && $imageInformation[1] < 601) {
+                            switch ($imageInformation[ 2 ]) {
+                                case 1:
+                                    $endung = '.gif';
+                                    break;
+                                case 3:
+                                    $endung = '.png';
+                                    break;
+                                default:
+                                    $endung = '.jpg';
+                                    break;
+                            }
+
+                            safe_query("INSERT INTO " . PREFIX . "linkus ( name ) VALUES( '" . $_POST['name'] . "' ) ");
+                            $id = mysqli_insert_id($_database);
+                            $file = $id.$endung;
+
+                            if ($upload->saveAs($filepath.$file)) {
+                                @chmod($file, $new_chmod);
+                                safe_query("UPDATE " . PREFIX . "linkus SET file='" . $file . "' WHERE bannerID='" . $id . "'");
+                            } else{
+                                @unlink($upload->getTempFile());
+                            }
+                        }
+                        else{
+                            echo generateErrorBox($_language->module[ 'image_too_big' ]);
+                        }
                     } else {
-                        $error = $_language->module['format_incorrect'];
-                        die('<div class="alert alert-danger" role="alert">
-                            <strong>' . $error . '</strong><br>
-                            <br>
-                            <a href="index.php?site=linkus&amp;action=edit&amp;bannerID=' . $id .
-                            '" class="alert-link">&laquo; ' . $_language->module['back'] . '</a>
-                        </div>');
+                        echo generateErrorBox($_language->module[ 'broken_image' ]);
                     }
+                } else {
+                    echo generateErrorBox($_language->module[ 'unsupported_image_type' ]);
                 }
-            } else {
-                @unlink($filepath . $banner['name'] . ".tmp");
-                $error = $_language->module['banner_to_big'];
-                die('<div class="alert alert-danger" role="alert">
-                    <strong>' . $error . '</strong><br>
-                    <br>
-                    <a href="index.php?site=linkus&amp;action=edit&amp;bannerID=' . $id .
-                    '" class="alert-link">&laquo; ' . $_language->module['back'] . '</a>
-                </div>');
+            }
+            else{
+                echo generateErrorBox($upload->translateError());
             }
         }
     }
@@ -115,61 +107,51 @@ if (isset($_POST['save'])) {
 
         $filepath = "./images/linkus/";
         $id = $_POST['bannerID'];
-        $banner = $_FILES['banner'];
+        $upload = new \webspell\Upload('banner');
+        if ($upload->hasFile()) {
+            if ($upload->hasError() === false) {
 
-        if ($banner['name'] != "") {
-            move_uploaded_file($banner['tmp_name'], $filepath . $banner['name'] . ".tmp");
-            @chmod($filepath . $banner['name'] . ".tmp", 0755);
-            $getimg = getimagesize($filepath . $banner['name'] . ".tmp");
-            if ($getimg[0] < 801 && $getimg[1] < 601) {
-                $file = '';
-                if ($getimg[2] == 1) {
-                    $file = $id . '.gif';
-                } elseif ($getimg[2] == 2) {
-                    $file = $id . '.jpg';
-                } elseif ($getimg[2] == 3) {
-                    $file = $id . '.png';
-                }
-                if ($file != "") {
-                    if (file_exists($filepath . $id . '.gif')) {
-                        unlink($filepath . $id . '.gif');
-                    }
-                    if (file_exists($filepath . $id . '.jpg')) {
-                        unlink($filepath . $id . '.jpg');
-                    }
-                    if (file_exists($filepath . $id . '.png')) {
-                        unlink($filepath . $id . '.png');
-                    }
-                    rename($filepath . $banner['name'] . ".tmp", $filepath . $file);
-                    safe_query("UPDATE " . PREFIX . "linkus SET file='" . $file . "' WHERE bannerID='" . $id . "'");
-                } else {
-                    if (unlink($filepath . $banner['name'] . ".tmp")) {
-                        $error = $_language->module['format_incorrect'];
-                        die('<div class="alert alert-danger" role="alert">
-                            <strong>' . $error . '</strong><br>
-                            <br>
-                            <a href="index.php?site=linkus&amp;action=edit&amp;bannerID=' . $id .
-                            '" class="alert-link">&laquo; ' . $_language->module['back'] . '</a>
-                        </div>');
+                $mime_types = array('image/jpeg','image/png','image/gif');
+
+                if ($upload->supportedMimeType($mime_types)) {
+
+                    $imageInformation =  getimagesize($upload->getTempFile());
+
+                    if (is_array($imageInformation)) {
+                        if ($imageInformation[0] < 801 && $imageInformation[1] < 601) {
+                            switch ($imageInformation[ 2 ]) {
+                                case 1:
+                                    $endung = '.gif';
+                                    break;
+                                case 3:
+                                    $endung = '.png';
+                                    break;
+                                default:
+                                    $endung = '.jpg';
+                                    break;
+                            }
+
+                            $file = $id.$endung;
+
+                            if ($upload->saveAs($filepath.$file)) {
+                                @chmod($file, $new_chmod);
+                                safe_query("UPDATE " . PREFIX . "linkus SET file='" . $file . "' WHERE bannerID='" . $id . "'");
+                            } else{
+                                @unlink($upload->getTempFile());
+                            }
+                        }
+                        else{
+                            echo generateErrorBox($_language->module[ 'image_too_big' ]);
+                        }
                     } else {
-                        $error = $_language->module['format_incorrect'];
-                        die('<div class="alert alert-danger" role="alert">
-                            <strong>' . $error . '</strong><br>
-                            <br>
-                            <a href="index.php?site=linkus&amp;action=edit&amp;bannerID=' . $id .
-                            '" class="alert-link">&laquo; ' . $_language->module['back'] . '</a>
-                        </div>');
+                        echo generateErrorBox($_language->module[ 'broken_image' ]);
                     }
+                } else {
+                    echo generateErrorBox($_language->module[ 'unsupported_image_type' ]);
                 }
-            } else {
-                @unlink($filepath . $banner['name'] . ".tmp");
-                $error = $_language->module['banner_to_big'];
-                die('<div class="alert alert-danger" role="alert">
-                    <strong>' . $error . '</strong><br>
-                    <br>
-                    <a href="index.php?site=linkus&amp;action=edit&amp;bannerID=' .
-                    $id . '" class="alert-link">&laquo; ' . $_language->module['back'] . '</a>
-                </div>');
+            }
+            else{
+                echo generateErrorBox($upload->translateError());
             }
         }
     }
@@ -252,17 +234,6 @@ if ($action == "new") {
         while ($ds = mysqli_fetch_array($ergebnis)) {
 
             $name = htmloutput($ds['name']);
-            $fileinfo = getimagesize($filepath . $ds['file']);
-            if ($fileinfo[0] > $picsize_l) {
-                $width = ' width="' . $picsize_l . '"';
-            } else {
-                $width = '';
-            }
-            if ($fileinfo[1] > $picsize_h) {
-                $height = ' height="' . $picsize_h . '"';
-            } else {
-                $height = '';
-            }
             $banner = '<img src="' . $filepath . $ds['file'] . '" class="img-responsive">';
             $code =
                 '&lt;a href=&quot;http://' . $hp_url . '&quot;&gt;&lt;img src=&quot;http://' . $hp_url . $filepath2 .

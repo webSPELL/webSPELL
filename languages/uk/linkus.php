@@ -43,6 +43,9 @@ $language_array = Array(
 	'no_banner'=>'no link us banner',
 	'really_delete_banner'=>'really delete this banner?',
 	'save_banner'=>'save banner',
-	'use_following_code'=>'Use the following code, to insert the banner on your homepage.'
+	'use_following_code'=>'Use the following code, to insert the banner on your homepage.',
+	'unsupported_image_type'=>'Unsupported image type',
+	'broken_image'=>'Broken image',
+	'image_too_big'=>'No images larger as 800x600 px allowed'
 );
 ?>
