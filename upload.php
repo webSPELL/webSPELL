@@ -146,9 +146,8 @@ if (isset($_POST[ 'submit' ])) {
             <td><a href="' . $filepath . $screen . '" target="_blank">' . $screen . '</a></td>
             <td>
                 <input type="text" name="pic" size="70"
- value="&lt;img src=&quot;' . $filepath . $screen . '&quot;
- border=&quot;0&quot; align=&quot;left&quot;
- style=&quot;padding:4px;&quot; alt=&quot;&quot; /&gt;">
+                value="&lt;img src=&quot;' . $filepath . $screen . '&quot; border=&quot;0&quot; align=&quot;left&quot;
+                style=&quot;padding:4px;&quot; alt=&quot;&quot; /&gt;">
             </td>
             <td>
                 <input type="button" onclick="AddCodeFromWindow(\'[img]' . $filepath . $screen . '[/img] \')"
