@@ -71,11 +71,8 @@ if (isset($_POST['save'])) {
                             if ($upload->saveAs($filepath.$file)) {
                                 @chmod($file, $new_chmod);
                                 safe_query("UPDATE " . PREFIX . "linkus SET file='" . $file . "' WHERE bannerID='" . $id . "'");
-                            } else{
-                                @unlink($upload->getTempFile());
                             }
-                        }
-                        else{
+                        } else {
                             echo generateErrorBox($_language->module[ 'image_too_big' ]);
                         }
                     } else {
@@ -84,8 +81,7 @@ if (isset($_POST['save'])) {
                 } else {
                     echo generateErrorBox($_language->module[ 'unsupported_image_type' ]);
                 }
-            }
-            else{
+            } else {
                 echo generateErrorBox($upload->translateError());
             }
         }
@@ -136,11 +132,8 @@ if (isset($_POST['save'])) {
                             if ($upload->saveAs($filepath.$file)) {
                                 @chmod($file, $new_chmod);
                                 safe_query("UPDATE " . PREFIX . "linkus SET file='" . $file . "' WHERE bannerID='" . $id . "'");
-                            } else{
-                                @unlink($upload->getTempFile());
                             }
-                        }
-                        else{
+                        } else {
                             echo generateErrorBox($_language->module[ 'image_too_big' ]);
                         }
                     } else {
@@ -149,8 +142,7 @@ if (isset($_POST['save'])) {
                 } else {
                     echo generateErrorBox($_language->module[ 'unsupported_image_type' ]);
                 }
-            }
-            else{
+            } else {
                 echo generateErrorBox($upload->translateError());
             }
         }
