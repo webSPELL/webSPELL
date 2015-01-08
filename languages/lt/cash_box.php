@@ -2,64 +2,64 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Vesion 4       /                        /   /               #
+#           Version 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Fee Content / Management System                 #
+#                       Free Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyight 2005-2014 by webspell.og                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
-#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
-#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to emove this copyight-tag                      #
-#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
+#   visit webSPELL.org, webspell.info to get webSPELL for free           #
+#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to remove this copyright-tag                      #
+#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
-#   Fa Development by Development Team - webspell.og                   #
+#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
+#   Far Development by Development Team - webspell.org                   #
 #                                                                        #
-#   visit webspell.og                                                   #
+#   visit webspell.org                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_aay = Aay(
+$language_array = Array(
 
 /* do not edit above this line */
 
-	'add_payment'=>'Pidėti užmokestį',
+	'add_payment'=>'Pridėti užmokestį',
 	'amount'=>'Kiekis',
-	'bank_account'=>'Gįžti į pofilį',
+	'bank_account'=>'Grįžti į profilį',
 	'calculate'=>'skaičiuoti',
 	'cash_box'=>'pinigų dėžė',
 	'clan'=>'Klanas',
-	'clanmembes_only'=>'Tik klano naiams',
-	'costs_membe'=>'Kaina vienam naiui',
+	'clanmembers_only'=>'Tik klano nariams',
+	'costs_member'=>'Kaina vienam nariui',
 	'ddmmyyyy'=>'dd.mm.yyyy',
-	'delete'=>'ištinti',
-	'each_squad'=>'Kiekvienas būys',
-	'edit'=>'edeguoti',
-	'ente_costs_membe'=>'Jūs tuite įvesti kainą vienam naiui.',
-	'ente_date'=>'Jūs tuite įašyti datą.',
-	'ente_total_costs'=>'Jūs tuite įvesti pilnas kainas.',
-	'ente_usage'=>'Jūs tuite įvesti vatojimą.',
+	'delete'=>'ištrinti',
+	'each_squad'=>'Kiekvienas būrys',
+	'edit'=>'redeguoti',
+	'enter_costs_member'=>'Jūs turite įvesti kainą vienam nariui.',
+	'enter_date'=>'Jūs turite įrašyti datą.',
+	'enter_total_costs'=>'Jūs turite įvesti pilnas kainas.',
+	'enter_usage'=>'Jūs turite įvesti vartojimą.',
 	'info'=>'Info',
-	'invalid_equest'=>'Bloga užklausa',
-	'membe'=>'Nays',
-	'new_usage'=>'Naujas vatojimas',
-	'no_enties'=>'Tuščia, nieko nėa.',
-	'not_paid'=>'da nemokėjęs',
+	'invalid_request'=>'Bloga užklausa',
+	'member'=>'Narys',
+	'new_usage'=>'Naujas vartojimas',
+	'no_entries'=>'Tuščia, nieko nėra.',
+	'not_paid'=>'dar nemokėjęs',
 	'paid'=>'Mokėti',
 	'pay_until'=>'Mokėti iki',
-	'eally_delete'=>'Tikai noite ištinti?',
+	'really_delete'=>'Tikrai norite ištrinti?',
 	'saved_on'=>'Taupyta ant',
-	'squad'=>'Būys',
+	'squad'=>'Būrys',
 	'submit'=>'išsaugoti',
 	'total_amount'=>'Pilnas kiekis (klanas)',
 	'total_costs'=>'Pilna kaina',
 	'update'=>'atnaujinti',
-	'usage'=>'Vatojimas'
+	'usage'=>'Vartojimas'
 );
 ?>

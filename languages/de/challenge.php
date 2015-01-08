@@ -2,67 +2,67 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Vesion 4       /                        /   /               #
+#           Version 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Fee Content / Management System                 #
+#                       Free Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyight 2005-2014 by webspell.og                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
-#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
-#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to emove this copyight-tag                      #
-#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
+#   visit webSPELL.org, webspell.info to get webSPELL for free           #
+#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to remove this copyright-tag                      #
+#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
-#   Fa Development by Development Team - webspell.og                   #
+#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
+#   Far Development by Development Team - webspell.org                   #
 #                                                                        #
-#   visit webspell.og                                                   #
+#   visit webspell.org                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_aay = Aay(
+$language_array = Array(
 
 /* do not edit above this line */
 
-	'back_to_fom'=>'Zuück zum Fomula',
-	'challenge'=>'Heausfodeung',
-	'challenge_fom'=>'Heausfodeung vom',
-	'challenge_message'=>'[b]Es gibt eine neue Heausfodeung![/b][BR][BR] Bitte hie Klicken: [URL]index.php?site=challenge[/URL]',
-	'challenges'=>'Heausfodeungen',
-	'county'=>'Land',
+	'back_to_form'=>'Zurück zum Formular',
+	'challenge'=>'Herausforderung',
+	'challenge_from'=>'Herausforderung vom',
+	'challenge_message'=>'[b]Es gibt eine neue Herausforderung![/b][BR][BR] Bitte hier Klicken: [URL]index.php?site=challenge[/URL]',
+	'challenges'=>'Herausforderungen',
+	'country'=>'Land',
 	'date'=>'Datum',
-	'delete_challenge'=>'Heausfodeung löschen',
+	'delete_challenge'=>'Herausforderung löschen',
 	'email'=>'E-Mail',
-	'ente_clanname'=>'Kein Clan angegeben.',
-	'ente_email'=>'Keine valide Email-Adesse angegeben.',
-	'ente_league'=>'Keine Liga angegeben.',
-	'ente_map'=>'Keine Map angegeben.',
-	'ente_seve'=>'Kein Seve angegeben.',
-	'ente_ul'=>'Keine valide Homepage URL angegeben.',
-  'enty_deleted'=>'Eintag gelöscht.',
-	'fight_us'=>'Fodee uns heaus!',
+	'enter_clanname'=>'Kein Clan angegeben.',
+	'enter_email'=>'Keine valide Email-Adresse angegeben.',
+	'enter_league'=>'Keine Liga angegeben.',
+	'enter_map'=>'Keine Map angegeben.',
+	'enter_server'=>'Kein Server angegeben.',
+	'enter_url'=>'Keine valide Homepage URL angegeben.',
+  'entry_deleted'=>'Eintrag gelöscht.',
+	'fight_us'=>'Fordere uns heraus!',
 	'homepage'=>'Homepage',
-	'info'=>'weitee Infomationen',
-	'inset_in_calenda'=>'In den Kalende einfügen',
+	'info'=>'weitere Informationen',
+	'insert_in_calendar'=>'In den Kalender einfügen',
 	'league'=>'Liga',
 	'map'=>'Map',
 	'message_title'=>'Fight us',
-	'no_access'=>'Kein Zugiff!',
-	'no_enties'=>'Keine Eintäge',
-	'opponent'=>'Gegne',
-	'poblems'=>'Folgende Pobleme sind aufgeteten',
-	'secuity_code'=>'Sicheheitscode',
-	'seve'=>'Seve',
-	'sot'=>'Sotieen',
+	'no_access'=>'Kein Zugriff!',
+	'no_entries'=>'Keine Einträge',
+	'opponent'=>'Gegner',
+	'problems'=>'Folgende Probleme sind aufgetreten',
+	'security_code'=>'Sicherheitscode',
+	'server'=>'Server',
+	'sort'=>'Sortieren',
 	'squad'=>'Team',
-	'submit_challenge'=>'Heausfoden',
-	'thank_you'=>'Danke fü deinen Eintag!<b>',
-	'time'=>'Uhzeit',
-	'wong_secuity_code'=>'De Sicheheitscode wude falsch eingegeben.'
+	'submit_challenge'=>'Herausfordern',
+	'thank_you'=>'Danke für deinen Eintrag!<br>',
+	'time'=>'Uhrzeit',
+	'wrong_security_code'=>'Der Sicherheitscode wurde falsch eingegeben.'
 );
 ?>

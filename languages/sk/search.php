@@ -2,69 +2,69 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Vesion 4       /                        /   /               #
+#           Version 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Fee Content / Management System                 #
+#                       Free Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyight 2005-2014 by webspell.og                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
-#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
-#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to emove this copyight-tag                      #
-#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
+#   visit webSPELL.org, webspell.info to get webSPELL for free           #
+#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to remove this copyright-tag                      #
+#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
-#   Fa Development by Development Team - webspell.og                   #
+#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
+#   Far Development by Development Team - webspell.org                   #
 #                                                                        #
-#   visit webspell.og                                                   #
+#   visit webspell.org                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_aay = Aay(
+$language_array = Array(
 
 /* do not edit above this line */
 
-	'afte'=>'po',
+	'after'=>'po',
 	'and'=>'a',
-	'aticle'=>'Článok',
-	'aticles'=>'Články',
-	'aticles_link'=>'<b>Odkaz na článok</b>',
+	'article'=>'Článok',
+	'articles'=>'Články',
+	'articles_link'=>'<b>Odkaz na článok</b>',
 	'ascending'=>'vzostupne',
-	'befoe'=>'ped',
+	'before'=>'pred',
 	'date_options'=>'Dátum',
 	'delete_selected'=>'vymazať označené',
 	'descending'=>'zostupne',
 	'faq'=>'FAQ',
 	'faq_link'=>'<b>Odkaz na FAQ</b>',
-	'foum'=>'Fóum',
-	'foum_link'=>'<b>odkaz na tému</b>',
-	'fequency'=>'Fekvencia',
-	'keywod'=>'Kľučové slovo',
-	'new_seach'=>'Nové hľadanie',
+	'forum'=>'Fórum',
+	'forum_link'=>'<b>odkaz na tému</b>',
+	'frequency'=>'Frekvencia',
+	'keyword'=>'Kľučové slovo',
+	'new_search'=>'Nové hľadanie',
 	'news'=>'Novinky',
 	'news_link'=>'<b>odkaz na novinky</b>',
 	'options'=>'Možnosti',
-	'o'=>'alebo',
-	'esult_quantity'=>'Výsledkov na stanu',
-	'esults_found'=>'nájdené výsledky',
-	'seach'=>'vyhľadávanie',
-	'seach_in'=>'Hľadaj v:',
-	'seach_location'=>'Miesto vyhľadávania',
-	'seach_tem'=>'Vyhľadaj',
-	'seach_title'=>'Rozšíené vyhľadávanie',
-	'secuity_code'=>'Bezpečnostný kód',
-	'sot_options'=>'Tiediť',
-	'stat_seach'=>'Začať vyhľadávanie',
-	'submit'=>'Potvdiť',
+	'or'=>'alebo',
+	'result_quantity'=>'Výsledkov na stranu',
+	'results_found'=>'nájdené výsledky',
+	'search'=>'vyhľadávanie',
+	'search_in'=>'Hľadaj v:',
+	'search_location'=>'Miesto vyhľadávania',
+	'search_term'=>'Vyhľadaj',
+	'search_title'=>'Rozšírené vyhľadávanie',
+	'security_code'=>'Bezpečnostný kód',
+	'sort_options'=>'Triediť',
+	'start_search'=>'Začať vyhľadávanie',
+	'submit'=>'Potvrdiť',
 	'text_contains'=>'Vyhľadať',
 	'title_contains'=>'Názov obsahuje',
-	'too_shot'=>'Vyhľadávací eťazec je píliž kátky. Minimálne %min_chas% znakov',
-	'wong_secuitycode'=>'Zadali ste chybný bezpečnostný kód!',
-	'no_esult'=>'Pe "%s" Žiadne záznamy'
+	'too_short'=>'Vyhľadávací reťazec je príliž krátky. Minimálne %min_chars% znakov',
+	'wrong_securitycode'=>'Zadali ste chybný bezpečnostný kód!',
+	'no_result'=>'Pre "%s" Žiadne záznamy'
 );
 ?>

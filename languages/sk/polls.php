@@ -2,58 +2,58 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Vesion 4       /                        /   /               #
+#           Version 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Fee Content / Management System                 #
+#                       Free Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyight 2005-2014 by webspell.og                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
-#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
-#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to emove this copyight-tag                      #
-#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
+#   visit webSPELL.org, webspell.info to get webSPELL for free           #
+#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to remove this copyright-tag                      #
+#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
-#   Fa Development by Development Team - webspell.og                   #
+#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
+#   Far Development by Development Team - webspell.org                   #
 #                                                                        #
-#   visit webspell.og                                                   #
+#   visit webspell.org                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_aay = Aay(
+$language_array = Array(
 
 /* do not edit above this line */
 
-	'aleady_voted'=>'Už si hlasoval.',
-	'comments'=>'komentáe',
+	'already_voted'=>'Už si hlasoval.',
+	'comments'=>'komentáre',
 	'days'=>'dni',
 	'delete'=>'vymazať',
-	'disable_comments'=>'zakázať komentáe',
-	'edit'=>'upaviť',
-	'edit_poll'=>'upaviť anketu',
-	'enable_use_comments'=>'povoliť komentáe užívateľov',
-	'enable_visito_comments'=>'povoliť komentáe návštevníkov',
+	'disable_comments'=>'zakázať komentáre',
+	'edit'=>'upraviť',
+	'edit_poll'=>'upraviť anketu',
+	'enable_user_comments'=>'povoliť komentáre užívateľov',
+	'enable_visitor_comments'=>'povoliť komentáre návštevníkov',
 	'endingtime'=>'Koniec',
-	'inten'=>'Intená',
+	'intern'=>'Interná',
 	'latest_by'=>'posledný od',
 	'new_poll'=>'nová anketa',
-	'no_access'=>'žiaden pístup!',
+	'no_access'=>'žiaden prístup!',
 	'no_active_poll'=>'žiadna aktívna anketa',
-	'no_enties'=>'žiaden záznam!',
+	'no_entries'=>'žiaden záznam!',
 	'on'=>'zapnutý',
 	'option'=>'Možnost',
 	'poll_ended'=>'anketa sa skončila',
 	'polls'=>'ankety',
-	'eally_delete'=>'naozaj chcete vymazať túto anketu?',
-	'eally_eopen'=>'naozaj znovuotvoiť túto anketu?',
-	'eally_stop'=>'naozaj chcete zastaviť túto anketu?',
-	'eset_votes'=>'esetovať hlasy',
-	'eopen_poll'=>'znovuotvoiť anketu',
+	'really_delete'=>'naozaj chcete vymazať túto anketu?',
+	'really_reopen'=>'naozaj znovuotvoriť túto anketu?',
+	'really_stop'=>'naozaj chcete zastaviť túto anketu?',
+	'reset_votes'=>'resetovať hlasy',
+	'reopen_poll'=>'znovuotvoriť anketu',
 	'save_poll'=>'uložiť anketu',
 	'show_polls'=>'ukázať ankety',
 	'stop_poll'=>'zastaviť anketu',
@@ -64,8 +64,8 @@ $language_aay = Aay(
 	'vote'=>'hlasovať',
 	'vote_now'=>'hlasovať',
 	'votes'=>'hlasy',
-	'yht_ente_2_options'=>'Musíte zadať min. 2 možnosti!',
-	'yht_ente_endingtime'=>'Musíte zadať čas ukončenia!',
-	'yht_ente_title'=>'Musíte zadať názov!'
+	'yht_enter_2_options'=>'Musíte zadať min. 2 možnosti!',
+	'yht_enter_endingtime'=>'Musíte zadať čas ukončenia!',
+	'yht_enter_title'=>'Musíte zadať názov!'
 );
 ?>

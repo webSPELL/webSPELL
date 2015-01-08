@@ -2,67 +2,67 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Vesion 4       /                        /   /               #
+#           Version 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Fee Content / Management System                 #
+#                       Free Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyight 2005-2014 by webspell.og                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
-#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
-#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to emove this copyight-tag                      #
-#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
+#   visit webSPELL.org, webspell.info to get webSPELL for free           #
+#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to remove this copyright-tag                      #
+#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
-#   Fa Development by Development Team - webspell.og                   #
+#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
+#   Far Development by Development Team - webspell.org                   #
 #                                                                        #
-#   visit webspell.og                                                   #
+#   visit webspell.org                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_aay = Aay(
+$language_array = Array(
 
 /* do not edit above this line */
 
-	'back_to_fom'=>'Gįžti į fomą',
+	'back_to_form'=>'Grįžti į formą',
 	'challenge'=>'Iššūkis',
-	'challenge_fom'=>'Iššūkis, skelbiamas',
-	'challenge_message'=>'[b]Naujas iššūkis![/b][BR][BR] Pašome paspausti čia: [URL]index.php?site=challenge[/URL]',
+	'challenge_from'=>'Iššūkis, skelbiamas',
+	'challenge_message'=>'[b]Naujas iššūkis![/b][BR][BR] Prašome paspausti čia: [URL]index.php?site=challenge[/URL]',
 	'challenges'=>'Iššūkiai',
-	'county'=>'Šalis',
+	'country'=>'Šalis',
 	'date'=>'Data',
-	'delete_challenge'=>'Ištinti iššūkį',
+	'delete_challenge'=>'Ištrinti iššūkį',
 	'email'=>'E-paštas',
-	'ente_clanname'=>'Neįašėte klano vado.',
-	'ente_email'=>'Neįašėte geo e-pašto adeso.',
-	'ente_league'=>'Neįašėte lygos vado.',
-	'ente_map'=>'Neįašėte žemėlapio.',
-	'ente_seve'=>'Neįašėte seveio adeso.',
-	'ente_ul'=>'Neįašėte namų puslapio.',
-  'enty_deleted'=>'Žinutė ištinta.',
-	'fight_us'=>'Noi kovoti?!',
+	'enter_clanname'=>'Neįrašėte klano vardo.',
+	'enter_email'=>'Neįrašėte gero e-pašto adreso.',
+	'enter_league'=>'Neįrašėte lygos vardo.',
+	'enter_map'=>'Neįrašėte žemėlapio.',
+	'enter_server'=>'Neįrašėte serverio adreso.',
+	'enter_url'=>'Neįrašėte namų puslapio.',
+  'entry_deleted'=>'Žinutė ištrinta.',
+	'fight_us'=>'Nori kovoti?!',
 	'homepage'=>'Namų puslapis',
-	'info'=>'Daugiau infomacijos',
-	'inset_in_calenda'=>'Pidėti į kalendoių',
+	'info'=>'Daugiau informacijos',
+	'insert_in_calendar'=>'Pridėti į kalendorių',
 	'league'=>'Lyga',
 	'map'=>'Žemėlapis',
 	'message_title'=>'Fight us',
-	'no_access'=>'Nėa leidimo!',
-	'no_enties'=>'Tuščia, nieko nėa.',
-	'opponent'=>'Piešininkas',
-	'poblems'=>'Tęsiant įvyko klaidų',
-	'secuity_code'=>'Apsaugos kodas',
-	'seve'=>'Seveis',
-	'sot'=>'Rykiuoti:',
-	'squad'=>'Būys',
+	'no_access'=>'Nėra leidimo!',
+	'no_entries'=>'Tuščia, nieko nėra.',
+	'opponent'=>'Priešininkas',
+	'problems'=>'Tęsiant įvyko klaidų',
+	'security_code'=>'Apsaugos kodas',
+	'server'=>'Serveris',
+	'sort'=>'Rykiuoti:',
+	'squad'=>'Būrys',
 	'submit_challenge'=>'Pateikti iššūkį',
-	'thank_you'=>'Ačiū už jūsų užklausą!<b>',
+	'thank_you'=>'Ačiū už jūsų užklausą!<br>',
 	'time'=>'Laikas',
-	'wong_secuity_code'=>'Apsaugos kodas blogas.'
+	'wrong_security_code'=>'Apsaugos kodas blogas.'
 );
 ?>

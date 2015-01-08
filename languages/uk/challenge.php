@@ -2,67 +2,67 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Vesion 4       /                        /   /               #
+#           Version 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Fee Content / Management System                 #
+#                       Free Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyight 2005-2014 by webspell.og                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
-#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
-#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to emove this copyight-tag                      #
-#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
+#   visit webSPELL.org, webspell.info to get webSPELL for free           #
+#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to remove this copyright-tag                      #
+#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
-#   Fa Development by Development Team - webspell.og                   #
+#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
+#   Far Development by Development Team - webspell.org                   #
 #                                                                        #
-#   visit webspell.og                                                   #
+#   visit webspell.org                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_aay = Aay(
+$language_array = Array(
 
 /* do not edit above this line */
 
-	'back_to_fom'=>'Back to fom',
+	'back_to_form'=>'Back to form',
 	'challenge'=>'Challenge',
-	'challenge_fom'=>'challenge posted on',
-	'challenge_message'=>'[b]Thee is a new challenge![/b][BR][BR] Please click hee: [URL]index.php?site=challenge[/URL]',
+	'challenge_from'=>'challenge posted on',
+	'challenge_message'=>'[b]There is a new challenge![/b][BR][BR] Please click here: [URL]index.php?site=challenge[/URL]',
 	'challenges'=>'challenges',
-	'county'=>'county',
+	'country'=>'country',
 	'date'=>'date',
 	'delete_challenge'=>'Delete challenge',
 	'email'=>'E-Mail',
-	'ente_clanname'=>'No clanname enteed.',
-	'ente_email'=>'No valid mail adess enteed.',
-	'ente_league'=>'No league enteed.',
-	'ente_map'=>'No map enteed.',
-	'ente_seve'=>'No seve adess enteed.',
-	'ente_ul'=>'No valid homepage enteed.',
-	'enty_deleted'=>'Enty deleted.',
+	'enter_clanname'=>'No clanname entered.',
+	'enter_email'=>'No valid mail adress entered.',
+	'enter_league'=>'No league entered.',
+	'enter_map'=>'No map entered.',
+	'enter_server'=>'No server adress entered.',
+	'enter_url'=>'No valid homepage entered.',
+	'entry_deleted'=>'Entry deleted.',
 	'fight_us'=>'Fight us!',
 	'homepage'=>'homepage',
-	'info'=>'moe infomation',
-	'inset_in_calenda'=>'add to calenda',
+	'info'=>'more information',
+	'insert_in_calendar'=>'add to calendar',
 	'league'=>'league',
 	'map'=>'map',
 	'message_title'=>'Fight us',
-	'no_access'=>'No pemission!',
-	'no_enties'=>'No enties.',
+	'no_access'=>'No permission!',
+	'no_entries'=>'No entries.',
 	'opponent'=>'opponent',
-	'poblems'=>'Following poblems have occued',
-	'secuity_code'=>'secuity code',
-	'seve'=>'seve',
-	'sot'=>'sot:',
+	'problems'=>'Following problems have occurred',
+	'security_code'=>'security code',
+	'server'=>'server',
+	'sort'=>'sort:',
 	'squad'=>'squad',
 	'submit_challenge'=>'submit challenge',
-	'thank_you'=>'Thank you fo you equest!<b>',
+	'thank_you'=>'Thank you for your request!<br>',
 	'time'=>'time',
-	'wong_secuity_code'=>'The secuity code was wong.'
+	'wrong_security_code'=>'The security code was wrong.'
 );
 ?>

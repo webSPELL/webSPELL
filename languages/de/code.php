@@ -2,83 +2,83 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Vesion 4       /                        /   /               #
+#           Version 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Fee Content / Management System                 #
+#                       Free Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyight 2005-2014 by webspell.og                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
-#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
-#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to emove this copyight-tag                      #
-#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
+#   visit webSPELL.org, webspell.info to get webSPELL for free           #
+#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to remove this copyright-tag                      #
+#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
-#   Fa Development by Development Team - webspell.og                   #
+#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
+#   Far Development by Development Team - webspell.org                   #
 #                                                                        #
-#   visit webspell.og                                                   #
+#   visit webspell.org                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_aay = Aay(
+$language_array = Array(
 
 /* do not edit above this line */
 
 	'_tag_if_wish'=>' Anweisung umgeben.',
-	'_tags_etained'=>'Anweisung umgeben sind, weden beibehalten.',
-	'adding_image'=>'Bilde zu einem Beitag hinzufügen',
-	'all_fomating_'=>'Alle Fomatieungen die mit de',
-	'as_noted_ul_'=>'Du kannst z.B. das Bild mit eine ',
-	'back_top'=>'Wiede an den Anfang',
-	'bb_code_tags_colo_size'=>'Um die Textfabe ode Textgösse abzuänden, kannst du folgende Anweisungen benutzen. Vegesse abe nicht, dass je nach Betiebssystem und Webbowse alles etwas andes aussehen kann:',
-	'bb_code_tags_text_syle'=>'BBCode hat Anweisungen, die Ihnen elauben einfach den Textstill zu änden:',
+	'_tags_retained'=>'Anweisung umgeben sind, werden beibehalten.',
+	'adding_image'=>'Bilder zu einem Beitrag hinzufügen',
+	'all_formating_'=>'Alle Formatierungen die mit der',
+	'as_noted_url_'=>'Du kannst z.B. das Bild mit einer ',
+	'back_top'=>'Wieder an den Anfang',
+	'bb_code_tags_color_size'=>'Um die Textfarbe oder Textgrösse abzuändern, kannst du folgende Anweisungen benutzen. Vergesse aber nicht, dass je nach Betriebssystem und Webbrowser alles etwas anders aussehen kann:',
+	'bb_code_tags_text_syle'=>'BBCode hat Anweisungen, die Ihnen erlauben einfach den Textstill zu ändern:',
 	'bbcode_guide'=>'BBCode Anleitung',
-	'becomes'=>'wid',
+	'becomes'=>'wird',
 	'blue'=>'Blau',
-	'bold_text'=>'Fett geduckt',
-	'can_combine_fomatting'=>'Kombinieen von BBCode Anweisungen',
-	'close_tags_is_up_to_you'=>'Vegess nicht, dass es deine Aufgabe ist, die Anweisungen koekt zu schliessen.',
-	'ceating_links'=>'WebLinks',
-	'ceating_odeed_list'=>'Geotnete Listen',
-	'ceating_unodeed_list'=>'Ungeodnete Listen',
-	'email_me'=>'scheib mi!',
-	'geneating_lists'=>'Listen estellen',
-	'good_moning'=>'Guten Mogen',
-	'geat'=>'Gossatig!',
+	'bold_text'=>'Fett gedruckt',
+	'can_combine_formatting'=>'Kombinieren von BBCode Anweisungen',
+	'close_tags_is_up_to_you'=>'Vergess nicht, dass es deine Aufgabe ist, die Anweisungen korrekt zu schliessen.',
+	'creating_links'=>'WebLinks',
+	'creating_ordered_list'=>'Geortnete Listen',
+	'creating_unordered_list'=>'Ungeordnete Listen',
+	'email_me'=>'schreib mir!',
+	'generating_lists'=>'Listen erstellen',
+	'good_morning'=>'Guten Morgen',
+	'great'=>'Grossartig!',
 	'hello'=>'Hallo',
-	'how_to_change_cs'=>'Änden de Textfabe und Textgösse',
-	'how_to_ceate_biu'=>'Fett geduckte, kusive und untestichene Text',
+	'how_to_change_cs'=>'Ändern der Textfarbe und Textgrösse',
+	'how_to_create_biu'=>'Fett gedruckter, kursiver und unterstrichener Text',
 	'huge'=>'GROSS!',
-	'italic_text'=>'Kusiv',
-	'linking_anothe_site'=>'Andee Seiten velinken',
+	'italic_text'=>'Kursiv',
+	'linking_another_site'=>'Andere Seiten verlinken',
 	'look_at_me'=>'SCHAU MICH AN!',
-	'm_blobby'=>'Globby',
-	'o'=>'ode',
-	'outputting_code'=>'Quellcode hevoheben',
-	'quoting_outputting_text'=>'Zitieen und Hevoheben von Texten',
-	'quoting_eplys'=>'Zitieen',
-	'ed'=>'Rot',
-	'showing_images'=>'Bilde',
+	'mr_blobby'=>'Globby',
+	'or'=>'oder',
+	'outputting_code'=>'Quellcode hervorheben',
+	'quoting_outputting_text'=>'Zitieren und Hervorheben von Texten',
+	'quoting_replys'=>'Zitieren',
+	'red'=>'Rot',
+	'showing_images'=>'Bilder',
 	'small'=>'KLEIN',
-	'text_fomatting'=>'Textfomatieung',
-	'text_of_m_blobby'=>'De Text de Globby geschieben hat',
-	'this_is_some_code'=>'Das ist de ultimative Quellcode',
-	'this_would_output'=>'wid ausgeben',
-	'undelined_text'=>'Untestichen',
-	'which_will_output'=>'wüde ausgeben',
-	'will_be'=>'wid',
-	'will_become'=>'wid zu',
-	'will_both_output'=>'Beide weden ausgeben',
-	'will_geneally_be'=>'wid nomaleweise',
-	'would_geneate'=>'wüde egeben',
-	'would_geneate_link'=>'Dies wüde folgende Link estellen, ',
-	'would_geneate_list'=>'Wüde folgende Liste estellen',
-	'would_give'=>'Wüde ausgeben',
+	'text_formatting'=>'Textformatierung',
+	'text_of_mr_blobby'=>'Der Text der Globby geschrieben hat',
+	'this_is_some_code'=>'Das ist der ultimative Quellcode',
+	'this_would_output'=>'wird ausgeben',
+	'underlined_text'=>'Unterstrichen',
+	'which_will_output'=>'würde ausgeben',
+	'will_be'=>'wird',
+	'will_become'=>'wird zu',
+	'will_both_output'=>'Beide werden ausgeben',
+	'will_generally_be'=>'wird normalerweise',
+	'would_generate'=>'würde ergeben',
+	'would_generate_link'=>'Dies würde folgender Link erstellen, ',
+	'would_generate_list'=>'Würde folgende Liste erstellen',
+	'would_give'=>'Würde ausgeben',
 	'yellow'=>'Gelb',
 	'yes_can_combine'=>'Beispiel:'
 );

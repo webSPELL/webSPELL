@@ -2,70 +2,70 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Vesion 4       /                        /   /               #
+#           Version 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Fee Content / Management System                 #
+#                       Free Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyight 2005-2014 by webspell.og                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
-#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
-#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to emove this copyight-tag                      #
-#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
+#   visit webSPELL.org, webspell.info to get webSPELL for free           #
+#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to remove this copyright-tag                      #
+#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
-#   Fa Development by Development Team - webspell.og                   #
+#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
+#   Far Development by Development Team - webspell.org                   #
 #                                                                        #
-#   visit webspell.og                                                   #
+#   visit webspell.org                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_aay = Aay(
+$language_array = Array(
 
 /* do not edit above this line */
 
-	'against'=>'potiv',
+	'against'=>'protiv',
 	'announce'=>'obavjesti',
 	'announcement'=>'Obavijest',
-	'back_last_page'=>'Povatak na pethodnu stanicu',
+	'back_last_page'=>'Povratak na prethodnu stranicu',
 	'click'=>'klik',
 	'date'=>'Datum',
-	'fom'=>'od',
+	'from'=>'od',
 	'info'=>'Info',
-	'last_login'=>'Zadnja pijava',
+	'last_login'=>'Zadnja prijava',
 	'location'=>'Lokacija',
-	'messenge'=>'Pouke',
+	'messenger'=>'Poruke',
 	'name'=>'Ime',
-	'new_in_foum'=>'Nove teme / Odgovoi',
-	'new_posts'=>'Novi odgovoi',
+	'new_in_forum'=>'Nove teme / Odgovori',
+	'new_posts'=>'Novi odgovori',
 	'new_topics'=>'Nove teme',
-	'no_enties'=>'nema unosa',
+	'no_entries'=>'nema unosa',
 	'no_events'=>'nema događaja',
-	'no_new_messages'=>'Nema novih pouka.',
-	'no_new_posts'=>'nema novih odgovoa',
+	'no_new_messages'=>'Nema novih poruka.',
+	'no_new_posts'=>'nema novih odgovora',
 	'no_new_topics'=>'nema novih tema',
-	'no_playes_announced'=>'nema najavljenih igača',
-	'one_new_message'=>'postoji 1 nova pouka.',
-	'oveview'=>'Pegled',
-	'egisteed'=>'Registiani',
-	'eplys'=>'odgovoa',
+	'no_players_announced'=>'nema najavljenih igrača',
+	'one_new_message'=>'postoji 1 nova poruka.',
+	'overview'=>'Pregled',
+	'registered'=>'Registrirani',
+	'replys'=>'odgovora',
 	'squad'=>'Tim',
 	'until'=>'do',
 	'upcoming'=>'Nadolazeći',
-	'upcoming_clanwas'=>'Nadolazeći waovi',
+	'upcoming_clanwars'=>'Nadolazeći warovi',
 	'upcoming_events'=>'Nadolazeći događaji',
-	'use'=>'Koisnik',
-	'useinfomations'=>'Infomacije o koisniku',
-	'usemenu'=>'Koisnički izbonik',
+	'user'=>'Korisnik',
+	'userinformations'=>'Informacije o korisniku',
+	'usermenu'=>'Korisnički izbornik',
 	'views'=>'pogleda',
-	'x_new_message'=>'Novih pouka: %new_messages%',
-	'you_have_to_be_logged_in'=>'Moate biti pijavljeni da bi vidjeli ovu stanicu!<b><b>
-    &#8226; <a hef="index.php?site=egiste">Registiaj se</a><b>
-    &#8226; <a hef="index.php?site=login">Pijavi se</a>'
+	'x_new_message'=>'Novih poruka: %new_messages%',
+	'you_have_to_be_logged_in'=>'Morate biti prijavljeni da bi vidjeli ovu stranicu!<br><br>
+    &#8226; <a href="index.php?site=register">Registriraj se</a><br>
+    &#8226; <a href="index.php?site=login">Prijavi se</a>'
 );
 ?>

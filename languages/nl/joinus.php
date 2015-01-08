@@ -2,61 +2,61 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Vesion 4       /                        /   /               #
+#           Version 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Fee Content / Management System                 #
+#                       Free Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyight 2005-2014 by webspell.og                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
-#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
-#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to emove this copyight-tag                      #
-#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
+#   visit webSPELL.org, webspell.info to get webSPELL for free           #
+#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to remove this copyright-tag                      #
+#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
-#   Fa Development by Development Team - webspell.og                   #
+#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
+#   Far Development by Development Team - webspell.org                   #
 #                                                                        #
-#   visit webspell.og                                                   #
+#   visit webspell.org                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_aay = Aay(
+$language_array = Array(
 
 /* do not edit above this line */
 
-	'additional_info'=>'Exta infomatie (bijv. waaom mij als nieuw lid kiezen...)',
+	'additional_info'=>'Extra informatie (bijv. waarom mij als nieuw lid kiezen...)',
 	'age'=>'Leeftijd',
-	'back_to_fom'=>'Teug naa fomulie',
-	'city'=>'Dop/Stad',
-	'clan_histoy'=>'Clan geschiedenis',
-	'email_not_valid'=>'Geen geldig mail ades ingevoed!',
-	'fogot_age'=>'Geen leeftijd ingevoed!',
-	'fogot_city'=>'Geen dop/stad ingevoed!',
-	'fogot_histoy'=>'Geen clan geschiedenis ingevoed!',
-	'fogot_messenge'=>'Geen messenge contact (ICQ, AIM etc...) ingevoed!',
-	'fogot_nickname'=>'Je bent je nickname vegeten!',
-	'fogot_ealname'=>'Je bent je naam vegeten!',
+	'back_to_form'=>'Terug naar formulier',
+	'city'=>'Dorp/Stad',
+	'clan_history'=>'Clan geschiedenis',
+	'email_not_valid'=>'Geen geldig mail adres ingevoerd!',
+	'forgot_age'=>'Geen leeftijd ingevoerd!',
+	'forgot_city'=>'Geen dorp/stad ingevoerd!',
+	'forgot_history'=>'Geen clan geschiedenis ingevoerd!',
+	'forgot_messenger'=>'Geen messenger contact (ICQ, AIM etc...) ingevoerd!',
+	'forgot_nickname'=>'Je bent je nickname vergeten!',
+	'forgot_realname'=>'Je bent je naam vergeten!',
 	'icq_msn'=>'ICQ/MSN/etc...',
-	'info'=>'Exta infomatie',
-	'joinus_fom'=>'Join ons fomulie',
+	'info'=>'Extra informatie',
+	'joinus_form'=>'Join ons formulier',
 	'mail'=>'E-mail',
-	'messenge'=>'Messenge',
+	'messenger'=>'Messenger',
 	'message_title'=>'Join us',
 	'name'=>'Naam',
 	'nick'=>'Nickname',
-	'poblems'=>'De volgende poblemen zijn veschenen tijdens het uploaden van de gegevens',
-	'secuity_code'=>'Veiligheids code',
-	'send'=>'Vezend',
-	'someone_want_to_join_you_squad'=>'Iemand wil in je team komen:',
+	'problems'=>'De volgende problemen zijn verschenen tijdens het uploaden van de gegevens',
+	'security_code'=>'Veiligheids code',
+	'send'=>'Verzend',
+	'someone_want_to_join_your_squad'=>'Iemand wil in je team komen:',
 	'squad'=>'Team',
-	'thanks_you_will_get_mail'=>'Bedankt voo de moeite, we zullen zo snel mogelijk contact met je opnemen.',
-	'title_join_us'=>'Wodt lid',
-	'wong_secuity_code'=>'De veiligheids code was vekeed!'
+	'thanks_you_will_get_mail'=>'Bedankt voor de moeite, we zullen zo snel mogelijk contact met je opnemen.',
+	'title_join_us'=>'Wordt lid',
+	'wrong_security_code'=>'De veiligheids code was verkeerd!'
 
 );
 ?>

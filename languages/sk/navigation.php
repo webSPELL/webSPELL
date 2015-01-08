@@ -2,38 +2,38 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Vesion 4       /                        /   /               #
+#           Version 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Fee Content / Management System                 #
+#                       Free Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyight 2005-2014 by webspell.og                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
-#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
-#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to emove this copyight-tag                      #
-#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
+#   visit webSPELL.org, webspell.info to get webSPELL for free           #
+#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to remove this copyright-tag                      #
+#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
-#   Fa Development by Development Team - webspell.og                   #
+#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
+#   Far Development by Development Team - webspell.org                   #
 #                                                                        #
-#   visit webspell.og                                                   #
+#   visit webspell.org                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_aay = Aay(
+$language_array = Array(
 
 /* do not edit above this line */
 
 	'about_us'=>'O Nás',
-	'achives'=>'Achív',
-	'aticles'=>'Články',
-	'awads'=>'Ocenenia',
-	'calenda'=>'Kalendá',
+	'archives'=>'Archív',
+	'articles'=>'Články',
+	'awards'=>'Ocenenia',
+	'calendar'=>'Kalendár',
 	'clan'=>'Clan',
 	'community'=>'Komunita',
 	'contact'=>'Kontakt',
@@ -41,26 +41,26 @@ $language_aay = Aay(
 	'downloads'=>'Na stiahnutie',
 	'faq'=>'FAQ',
 	'fight_us'=>'Vyzvite Nás',
-	'foums'=>'Fóum',
-	'galley'=>'Galéia',
+	'forums'=>'Fórum',
+	'gallery'=>'Galéria',
 	'guestbook'=>'Guestbook',
-	'histoy'=>'Históia',
-	'impint'=>'Impint',
-	'join_us'=>'Pidaj sa k Nám',
+	'history'=>'História',
+	'imprint'=>'Imprint',
+	'join_us'=>'Pridaj sa k Nám',
 	'links'=>'Odkazy',
-	'links_us'=>'Podpote Nás',
+	'links_us'=>'Podporte Nás',
 	'main'=>'Hlavné',
 	'matches'=>'Zápasy',
 	'media'=>'Média',
-	'membes'=>'Členovia',
+	'members'=>'Členovia',
 	'miscellaneous'=>'Ostatné',
 	'news'=>'Novinky',
-	'newslette'=>'Info. Leták',
+	'newsletter'=>'Infor. Leták',
 	'polls'=>'Ankety',
-	'egisteed_uses'=>'Registovaní užív.',
-	'seach'=>'Vyhľadávanie',
-	'seves'=>'Sevey',
-	'sponsos'=>'Sponzoi',
+	'registered_users'=>'Registrovaní užív.',
+	'search'=>'Vyhľadávanie',
+	'servers'=>'Servery',
+	'sponsors'=>'Sponzori',
 	'squads'=>'Squady',
 	'who_is_online'=>'Kto je online?'
 );

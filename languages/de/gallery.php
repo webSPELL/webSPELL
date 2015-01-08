@@ -2,74 +2,74 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Vesion 4       /                        /   /               #
+#           Version 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Fee Content / Management System                 #
+#                       Free Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyight 2005-2014 by webspell.og                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
-#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
-#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to emove this copyight-tag                      #
-#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
+#   visit webSPELL.org, webspell.info to get webSPELL for free           #
+#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to remove this copyright-tag                      #
+#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
-#   Fa Development by Development Team - webspell.og                   #
+#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
+#   Far Development by Development Team - webspell.org                   #
 #                                                                        #
-#   visit webspell.og                                                   #
+#   visit webspell.org                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_aay = Aay(
+$language_array = Array(
 
 /* do not edit above this line */
 
-	'back'=>'Zuück',
-	'categoy'=>'Kategoie',
-	'comment'=>'Kommenta',
-	'comments'=>'Kommentae',
+	'back'=>'Zurück',
+	'category'=>'Kategorie',
+	'comment'=>'Kommentar',
+	'comments'=>'Kommentare',
 	'date'=>'Datum',
 	'delete'=>'löschen',
-	'edit'=>'Beabeiten',
-	'edit_pictue'=>'Bild beabeiten',
-	'galleies'=>'Galeien',
-	'galley'=>'Galeie',
-	'latest_galley'=>'Letzte Galeie',
-	'most_comments'=>'Meist kommentiete Galeie',
+	'edit'=>'Bearbeiten',
+	'edit_picture'=>'Bild bearbeiten',
+	'galleries'=>'Galerien',
+	'gallery'=>'Galerie',
+	'latest_gallery'=>'Letzte Galerie',
+	'most_comments'=>'Meist kommentierte Galerie',
 	'name'=>'Name',
 	'next'=>'Nächstes',
-	'no_comments'=>'Kommentae deaktivieen',
-	'no_galley_exists'=>'Keine Galeie vefügba!',
+	'no_comments'=>'Kommentare deaktivieren',
+	'no_gallery_exists'=>'Keine Galerie verfügbar!',
 	'no_pic_set'=>'Kein Bild gesetzt',
-	'no_pictue'=>'Kein Bild vohanden',
+	'no_picture'=>'Kein Bild vorhanden',
 	'page_s'=>'Seite(n)',
-	'pefect'=>'Pefekt',
+	'perfect'=>'Perfekt',
 	'pg_1_1'=>'Seite 1 von 1',
-	'pictue'=>'Bild',
-	'pictues'=>'Bilde',
-	'poo'=>'Schlecht',
-	'andom_pictue'=>'Zufallsbild',
-	'ate'=>'beweten',
-	'ate_have_to_eg_login'=>'Beweten: Du musst egistiet und angemeldet sein!',
-	'ate_now'=>'Jetzt beweten!',
-	'ating'=>'Bewetung',
-	'eally_del'=>'wiklich löschen?',
-	'eset_views'=>'Aufufe zuücksetzen',
-	'show_galleies'=>'Galeien anzeigen',
-	'stat_diashow'=>'Diashow staten',
-	'update_pictue'=>'Bild aktualisieen',
-	'use_comments'=>'Benutze-Kommentae aktivieen',
-	'usegalleies'=>'Benutzegaleien',
-	'views'=>'Aufufe',
-	'visito_comments'=>'Besuche-Kommentae aktivieen',
+	'picture'=>'Bild',
+	'pictures'=>'Bilder',
+	'poor'=>'Schlecht',
+	'random_picture'=>'Zufallsbild',
+	'rate'=>'bewerten',
+	'rate_have_to_reg_login'=>'Bewerten: Du musst registriert und angemeldet sein!',
+	'rate_now'=>'Jetzt bewerten!',
+	'rating'=>'Bewertung',
+	'really_del'=>'wirklich löschen?',
+	'reset_views'=>'Aufrufe zurücksetzen',
+	'show_galleries'=>'Galerien anzeigen',
+	'start_diashow'=>'Diashow starten',
+	'update_picture'=>'Bild aktualisieren',
+	'user_comments'=>'Benutzer-Kommentare aktivieren',
+	'usergalleries'=>'Benutzergalerien',
+	'views'=>'Aufrufe',
+	'visitor_comments'=>'Besucher-Kommentare aktivieren',
 	'votes'=>'Stimmen',
 	'webs_diashow'=>'webSPELL Diashow:',
-	'you_have_aleady_ated'=>'Du hast beeits bewetet.',
-	'no_thumb'=>'Kein Thumb vohanden'
+	'you_have_already_rated'=>'Du hast bereits bewertet.',
+	'no_thumb'=>'Kein Thumb vorhanden'
 );
 ?>

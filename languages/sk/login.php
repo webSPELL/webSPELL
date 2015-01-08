@@ -2,46 +2,46 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Vesion 4       /                        /   /               #
+#           Version 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Fee Content / Management System                 #
+#                       Free Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyight 2005-2014 by webspell.og                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
-#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
-#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to emove this copyight-tag                      #
-#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
+#   visit webSPELL.org, webspell.info to get webSPELL for free           #
+#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to remove this copyright-tag                      #
+#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
-#   Fa Development by Development Team - webspell.og                   #
+#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
+#   Far Development by Development Team - webspell.org                   #
 #                                                                        #
-#   visit webspell.og                                                   #
+#   visit webspell.org                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_aay = Aay(
+$language_array = Array(
 
 /* do not edit above this line */
 
 	'admin'=>'admin',
-	'buddy_list'=>'piatelia',
+	'buddy_list'=>'priatelia',
 	'cash-box'=>'cash box',
-	'edit_account'=>'upaviť pofil',
-	'galleies'=>'galéia',
-	'login'=>'pihlásiť',
+	'edit_account'=>'upraviť profil',
+	'galleries'=>'galéria',
+	'login'=>'prihlásiť',
 	'logout'=>'odhlásiť',
-	'lost_passwod'=>'zabudnuté heslo?',
-	'messenge'=>'spávy',
+	'lost_password'=>'zabudnuté heslo?',
+	'messenger'=>'správy',
 	'n_a'=>'n/a',
-	'oveview'=>'pehľad',
-	'egiste_now'=>'egistácia',
-	'egisteed_uses'=>'egistovaní užívatelia',
+	'overview'=>'prehľad',
+	'register_now'=>'registrácia',
+	'registered_users'=>'registrovaní užívatelia',
 	'welcome_back'=>'vitaj naspäť'
 );
 ?>

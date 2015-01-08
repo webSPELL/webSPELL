@@ -2,83 +2,83 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Vesion 4       /                        /   /               #
+#           Version 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Fee Content / Management System                 #
+#                       Free Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyight 2005-2014 by webspell.og                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
-#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
-#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to emove this copyight-tag                      #
-#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
+#   visit webSPELL.org, webspell.info to get webSPELL for free           #
+#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to remove this copyright-tag                      #
+#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
-#   Fa Development by Development Team - webspell.og                   #
+#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
+#   Far Development by Development Team - webspell.org                   #
 #                                                                        #
-#   visit webspell.og                                                   #
+#   visit webspell.org                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_aay = Aay(
+$language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Hozzáféés megtagadva',
-  'access_ights'=>'Hozzáféési jogok',
+  'access_denied'=>'Hozzáférés megtagadva',
+  'access_rights'=>'Hozzáférési jogok',
   'actions'=>'Lehetőségek',
   'active'=>'Aktív',
   'activity'=>'Aktivitás',
   'cash_admin'=>'Pénzügyek',
-  'clanwa_admin'=>'Wa szevezés',
-  'county_nickname'=>'Nemzetiség / Nick',
-  'delete'=>'Tölés',
-  'desciption'=>'Felhasználó leíása',
-  'edit'=>'Szekesztés',
-  'edit_membe'=>'Tag szekesztése',
-  'eo_own_ights'=>'HIBA: Nem változtathatod meg a saját jogaid!',
+  'clanwar_admin'=>'War szervezés',
+  'country_nickname'=>'Nemzetiség / Nick',
+  'delete'=>'Törlés',
+  'description'=>'Felhasználó leírása',
+  'edit'=>'Szerkesztés',
+  'edit_member'=>'Tag szerkesztése',
+  'error_own_rights'=>'HIBA: Nem változtathatod meg a saját jogaid!',
   'feedback_admin'=>'Visszajelzés',
   'fightus_admin'=>'Kihívások',
   'file_admin'=>'Fájlok',
-  'galley_admin'=>'Galéia',
-  'goup_access'=>'Hozzáféés a fóum témáihoz',
+  'gallery_admin'=>'Galéria',
+  'group_access'=>'Hozzáférés a fórum témáihoz',
   'inactive'=>'Inaktív',
   'joinus_admin'=>'Tagfelvétel',
-  'membes'=>'Tagok',
-  'messageboad_admin'=>'Üzenőfal admin',
-  'messageboad_modeato'=>'Üzenőfal modeáto',
-  'news_admin'=>'Híek',
-  'news_wite'=>'Híszekesztő',
+  'members'=>'Tagok',
+  'messageboard_admin'=>'Üzenőfal admin',
+  'messageboard_moderator'=>'Üzenőfal moderátor',
+  'news_admin'=>'Hírek',
+  'news_writer'=>'Hírszerkesztő',
   'nickname'=>'Nick',
   'no'=>'Nem',
   'page_admin'=>'Weboldal admin',
   'polls_admin'=>'Szavazás',
   'position'=>'Pozíció',
-  'eally_delete'=>'Biztosan töölni akaod ezt a felhasználót?',
-  'sot'=>'Rendezés',
+  'really_delete'=>'Biztosan törölni akarod ezt a felhasználót?',
+  'sort'=>'Rendezés',
   'squad'=>'Squad',
-  'supe_admin'=>'Fő Admin',
-  'to_sot'=>'Rendezés',
-  'tooltip_1'=>'<b>Hozzáféés:</b><b>- Híkategóiák<b>- Híek nyelve<b>- Híek<b>- Cikkek<b>- Díjak<b>- Linkek',
-  'tooltip_2'=>'<b>Hozzáféés:</b><b>- Híek íása',
-  'tooltip_3'=>'<b>Hozzáféés:</b><b>- Szavazások',
-  'tooltip_4'=>'<b>Hozzáféés:</b><b>- Hozzászólások<b>- Vendégkönyv<b>- Felhasználók vendégkönyve<b>- Üzenőfal',
-  'tooltip_5'=>'<b>Hozzáféés:</b><b>- Felhasználók<b>- Felhasználói jogok<b>- Squads<b>- Tagok<b>- Kapcsolat<b>- Hílevél',
-  'tooltip_6'=>'<b>Hozzáféés:</b><b>- Waok<b>- Díjak<b>- Kihívások<b>- Naptá',
-  'tooltip_7'=>'<b>Hozzáféés:</b><b>- Téma kategóiák<b>- Témák<b>- Topik/Post szekesztés &amp; tölés<b>- Felhasználói csopotok<b>- Csopotok beállítása<b>- Felhasználói angok',
-  'tooltip_8'=>'<b>Hozzáféés:</b><b>- Topik/Post szekesztés &amp; tölés<b>(Csak a számáa hozzáféhető témákban)',
-  'tooltip_9'=>'<b>Hozzáféés:</b><b>- Rólunk<b>- Mozgó banneek<b>- Ikonok<b>- Adatbázis<b>- GYIK kategóiák<b>- GYIK<b>- Töténet<b>- Impesszum<b>- Link kategóiák<b>- Linkek<b>- Oldal lezáása<b>- Panteek<b>- Fényújság<b>- Szeveek<b>- Beállítások<b>- Egyéni oldalak<b>- Stílusok<b>- Fissítés<b>- Linkelj ánk<b>- Szponzook',
-  'tooltip_10'=>'<b>Hozzáféés:</b><b>- Fájl kategóiák<b>- Fájlok<b>- Demók',
-  'tooltip_11'=>'<b>Hozzáféés:</b><b>- Pénz-doboz',
-  'tooltip_12'=>'<b>Hozzáféés:</b><b>- Galéia kategóiák<b>- Galéiák<b>- Képek',
-  'tooltip_13'=>'<b>Hozzáféés:</b><b>- Teljes adminisztátoi hozzáféés',
-  'tansaction_invalid'=>'A művelet azonosítója événytelen',
-  'use_admin'=>'Felhasználók',
+  'super_admin'=>'Fő Admin',
+  'to_sort'=>'Rendezés',
+  'tooltip_1'=>'<b>Hozzáférés:</b><br>- Hírkategóriák<br>- Hírek nyelve<br>- Hírek<br>- Cikkek<br>- Díjak<br>- Linkek',
+  'tooltip_2'=>'<b>Hozzáférés:</b><br>- Hírek írása',
+  'tooltip_3'=>'<b>Hozzáférés:</b><br>- Szavazások',
+  'tooltip_4'=>'<b>Hozzáférés:</b><br>- Hozzászólások<br>- Vendégkönyv<br>- Felhasználók vendégkönyve<br>- Üzenőfal',
+  'tooltip_5'=>'<b>Hozzáférés:</b><br>- Felhasználók<br>- Felhasználói jogok<br>- Squads<br>- Tagok<br>- Kapcsolat<br>- Hírlevél',
+  'tooltip_6'=>'<b>Hozzáférés:</b><br>- Warok<br>- Díjak<br>- Kihívások<br>- Naptár',
+  'tooltip_7'=>'<b>Hozzáférés:</b><br>- Téma kategóriák<br>- Témák<br>- Topik/Post szerkesztés &amp; törlés<br>- Felhasználói csoportok<br>- Csoportok beállítása<br>- Felhasználói rangok',
+  'tooltip_8'=>'<b>Hozzáférés:</b><br>- Topik/Post szerkesztés &amp; törlés<br>(Csak a számára hozzáférhető témákban)',
+  'tooltip_9'=>'<b>Hozzáférés:</b><br>- Rólunk<br>- Mozgó bannerek<br>- Ikonok<br>- Adatbázis<br>- GYIK kategóriák<br>- GYIK<br>- Történet<br>- Impresszum<br>- Link kategóriák<br>- Linkek<br>- Oldal lezárása<br>- Parnterek<br>- Fényújság<br>- Szerverek<br>- Beállítások<br>- Egyéni oldalak<br>- Stílusok<br>- Frissítés<br>- Linkelj ránk<br>- Szponzorok',
+  'tooltip_10'=>'<b>Hozzáférés:</b><br>- Fájl kategóriák<br>- Fájlok<br>- Demók',
+  'tooltip_11'=>'<b>Hozzáférés:</b><br>- Pénz-doboz',
+  'tooltip_12'=>'<b>Hozzáférés:</b><br>- Galéria kategóriák<br>- Galériák<br>- Képek',
+  'tooltip_13'=>'<b>Hozzáférés:</b><br>- Teljes adminisztrátori hozzáférés',
+  'transaction_invalid'=>'A művelet azonosítója érvénytelen',
+  'user_admin'=>'Felhasználók',
   'yes'=>'Igen'
 );
 ?>

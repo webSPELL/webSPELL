@@ -2,50 +2,50 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Vesion 4       /                        /   /               #
+#           Version 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Fee Content / Management System                 #
+#                       Free Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyight 2005-2014 by webspell.og                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
-#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
-#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to emove this copyight-tag                      #
-#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
+#   visit webSPELL.org, webspell.info to get webSPELL for free           #
+#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to remove this copyright-tag                      #
+#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
-#   Fa Development by Development Team - webspell.og                   #
+#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
+#   Far Development by Development Team - webspell.org                   #
 #                                                                        #
-#   visit webspell.og                                                   #
+#   visit webspell.org                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_aay = Aay(
+$language_array = Array(
 	'admin_email'=>'Admin E-Mail',
-	'admin_passwod'=>'Admin Jelszó',
-	'admin_usename'=>'Admin Felhasználónév',
+	'admin_password'=>'Admin Jelszó',
+	'admin_username'=>'Admin Felhasználónév',
 	'data_config'=>'Adatok Beállítása',
 	'database_config'=>'MySQL Adatbázis beállítása',
 	'finish_install'=>'Telepítés befejezése',
-	'finish_next'=>'A következő lépés a telepítés befejezése.<b><b>Ne felejts el <b>MySQL biztonsági mentést</b> csinálni fissítés előtt!',
-	'host_name'=>'MySQL Szeve',
+	'finish_next'=>'A következő lépés a telepítés befejezése.<br><br>Ne felejts el <b>MySQL biztonsági mentést</b> csinálni frissítés előtt!',
+	'host_name'=>'MySQL Szerver',
 	'mysql_database'=>'MySQL Adatbázis Név',
-	'mysql_passwod'=>'MySQL Jelszó',
-	'mysql_pefix'=>'MySQL Tábla Előtag',
-	'mysql_usename'=>'MySQL Felhasználónév',
-	'tooltip_1'=>'<b>MySQL Szeve</b><b>Ez a MySQL adatbázis szeve eléési útja.<b>Ez általában a "localhost".',
-	'tooltip_2'=>'<b>MySQL Felhasználónév</b><b>"Root" vagy a szolgáltatónál kapott felhasználónév.',
-	'tooltip_3'=>'<b>MySQL Jelszó</b><b>A MySQL adatbázis hozzáfééséhez szükséges jelszó.',
-	'tooltip_4'=>'<b>MySQL Adatbázis Név</b><b>Néhány szolgáltató csak egyetlen adatbázist engedélyez.<b>Ebben az esetben használd a tábla előtagot.',
-	'tooltip_5'=>'<b>MySQL Tábla Előtag</b><b>Az adatbázisban táolt adatok ütközésének megelőzésée használható.<b>A biztonság kedvéét automatikusan jön léte. Választhatsz eltéő előtagot is.',
-	'tooltip_6'=>'<b>Admin Név</b><b>Ez lesz a felhasználóneved az oldalon.',
-	'tooltip_7'=>'<b>Admin Jelszó</b><b>Felhasználódat ezzel védheted meg.<b>Ne használj egyszeű jelszót! A legjobb, ha számokat és különböző kaakteeket is használsz.',
-	'tooltip_8'=>'<b>Admin E-Mail</b><b>Az E-Mail címed. Ez lesz feltüntetve a Kapcsolat menüpontban is.',
+	'mysql_password'=>'MySQL Jelszó',
+	'mysql_prefix'=>'MySQL Tábla Előtag',
+	'mysql_username'=>'MySQL Felhasználónév',
+	'tooltip_1'=>'<b>MySQL Szerver</b><br>Ez a MySQL adatbázis szerver elérési útja.<br>Ez általában a "localhost".',
+	'tooltip_2'=>'<b>MySQL Felhasználónév</b><br>"Root" vagy a szolgáltatónál kapott felhasználónév.',
+	'tooltip_3'=>'<b>MySQL Jelszó</b><br>A MySQL adatbázis hozzáféréséhez szükséges jelszó.',
+	'tooltip_4'=>'<b>MySQL Adatbázis Név</b><br>Néhány szolgáltató csak egyetlen adatbázist engedélyez.<br>Ebben az esetben használd a tábla előtagot.',
+	'tooltip_5'=>'<b>MySQL Tábla Előtag</b><br>Az adatbázisban tárolt adatok ütközésének megelőzésére használható.<br>A biztonság kedvéért automatikusan jön létre. Választhatsz eltérő előtagot is.',
+	'tooltip_6'=>'<b>Admin Név</b><br>Ez lesz a felhasználóneved az oldalon.',
+	'tooltip_7'=>'<b>Admin Jelszó</b><br>Felhasználódat ezzel védheted meg.<br>Ne használj egyszerű jelszót! A legjobb, ha számokat és különböző karaktereket is használsz.',
+	'tooltip_8'=>'<b>Admin E-Mail</b><br>Az E-Mail címed. Ez lesz feltüntetve a Kapcsolat menüpontban is.',
 	'webspell_config'=>'webSPELL beállítása'
 );
 ?>

@@ -2,64 +2,64 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Vesion 4       /                        /   /               #
+#           Version 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Fee Content / Management System                 #
+#                       Free Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyight 2005-2014 by webspell.og                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
-#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
-#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to emove this copyight-tag                      #
-#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
+#   visit webSPELL.org, webspell.info to get webSPELL for free           #
+#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to remove this copyright-tag                      #
+#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
-#   Fa Development by Development Team - webspell.og                   #
+#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
+#   Far Development by Development Team - webspell.org                   #
 #                                                                        #
-#   visit webspell.og                                                   #
+#   visit webspell.org                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_aay = Aay(
+$language_array = Array(
 
 /* do not edit above this line */
 
   'access_denied'=>'Accesso negato',
   'actions'=>'Azioni',
-  'add_boad'=>'Aggiungi Foum',
-  'add_categoy'=>'Aggiungi categoia',
-  'boadinfo'=>'Foum Info',
-  'boadname'=>'Foum Nome',
-  'boads'=>'Foum',
-  'categoy'=>'Categoia',
-  'categoy_info'=>'Categoia Info',
-  'categoy_name'=>'Categoia Nome',
-  'choose_modeatos'=>'Modeatoi pe il foum selezionae:',
-  'delete'=>'cancellae',
-  'edit'=>'cambiae',
-  'edit_boad'=>'Cambiae Foum',
-  'edit_categoy'=>'Cambia Categoia',
-  'modeatos'=>'Modeatoi',
+  'add_board'=>'Aggiungi Forum',
+  'add_category'=>'Aggiungi categoria',
+  'boardinfo'=>'Forum Info',
+  'boardname'=>'Forum Nome',
+  'boards'=>'Forum',
+  'category'=>'Categoria',
+  'category_info'=>'Categoria Info',
+  'category_name'=>'Categoria Nome',
+  'choose_moderators'=>'Moderatori per il forum selezionare:',
+  'delete'=>'cancellare',
+  'edit'=>'cambiare',
+  'edit_board'=>'Cambiare Forum',
+  'edit_category'=>'Cambia Categoria',
+  'moderators'=>'Moderatori',
   'mods'=>'Mods',
-  'new_boad'=>'nuovo Foum',
-  'new_categoy'=>'nuova categoia',
-  'ead_ight'=>'Diitto di leggee',
-  'ead_ight_info_boad'=>'Questo guppo di utenti ha i dietti di vedee e leggee questo foum.<b>Se non è selezionato un guppo di utenti, tutti vedevono il foum e possono leggee.<b>Usa CTRL pe selezionae o deselezionae più.',
-  'eally_delete_boad'=>'Veamente cancellae questo foum?',
-  'eally_delete_categoy'=>'Veamente cancellae questa categoia?',
-  'egisteed_uses'=>'Utenti Registati',
-  'ight_info_categoy'=>'Questo guppo di utenti ha i dietti di vedee e leggee questo foum.<b>Se non è selezionato un guppo di utenti, tutti vedevono il foum e possono leggee.<b>Usa CTRL pe selezionae o deselezionae più.',
-  'select_modeatos'=>'Selezionae modeatoi ',
-  'sot'=>'Odinamento',
-  'tansaction_invalid'=>'ID tansazione non valido',
-  'to_sot'=>'assotie',
-  'unselect_all'=>'deselezionae tutti',
-  'wite_ight'=>'Scivi Diitto',
-  'wite_ight_info_boad'=>'Questo guppo di utenti ha i dietti di vedee e leggee questo foum.<b>Se non è selezionato un guppo di utenti, tutti vedevono il foum e possono leggee.<b>Usa CTRL pe selezionae o deselezionae più.'
+  'new_board'=>'nuovo Forum',
+  'new_category'=>'nuova categoria',
+  'read_right'=>'Diritto di leggere',
+  'read_right_info_board'=>'Questo gruppo di utenti ha i diretti di vedere e leggere questo forum.<br>Se non è selezionato un gruppo di utenti, tutti vedevono il forum e possono leggere.<br>Usa CTRL per selezionare o deselezionare più.',
+  'really_delete_board'=>'Veramente cancellare questo forum?',
+  'really_delete_category'=>'Veramente cancellare questa categoria?',
+  'registered_users'=>'Utenti Registrati',
+  'right_info_category'=>'Questo gruppo di utenti ha i diretti di vedere e leggere questo forum.<br>Se non è selezionato un gruppo di utenti, tutti vedevono il forum e possono leggere.<br>Usa CTRL per selezionare o deselezionare più.',
+  'select_moderators'=>'Selezionare moderatori ',
+  'sort'=>'Ordinamento',
+  'transaction_invalid'=>'ID transazione non valido',
+  'to_sort'=>'assortire',
+  'unselect_all'=>'deselezionare tutti',
+  'write_right'=>'Scrivi Diritto',
+  'write_right_info_board'=>'Questo gruppo di utenti ha i diretti di vedere e leggere questo forum.<br>Se non è selezionato un gruppo di utenti, tutti vedevono il forum e possono leggere.<br>Usa CTRL per selezionare o deselezionare più.'
 );
 ?>

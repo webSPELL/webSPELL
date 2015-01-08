@@ -2,60 +2,60 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Vesion 4       /                        /   /               #
+#           Version 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Fee Content / Management System                 #
+#                       Free Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyight 2005-2014 by webspell.og                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
-#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
-#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to emove this copyight-tag                      #
-#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
+#   visit webSPELL.org, webspell.info to get webSPELL for free           #
+#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to remove this copyright-tag                      #
+#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
-#   Fa Development by Development Team - webspell.og                   #
+#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
+#   Far Development by Development Team - webspell.org                   #
 #                                                                        #
-#   visit webspell.og                                                   #
+#   visit webspell.org                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_aay = Aay(
+$language_array = Array(
 
 /* do not edit above this line */
 
   'access_denied'=>'Accesso negato',
   'actions'=>'Azioni',
-  'add_squad'=>'Aggiungi Squada',
-  'back'=>'indieto',
-  'cuent_icon'=>'actuello Simbolo',
-  'cuent_icon_small'=>'actuello Simbolo (piccolo)',
-  'delete'=>'cancellae',
-  'edit'=>'cambiae',
-  'edit_squad'=>'Squada modificae',
-  'fomat_incoect'=>'Il fomato del banne è sbagliato. Si pega di caicae solo banne *.gif, *.jpg o *.png fomato.',
+  'add_squad'=>'Aggiungi Squadra',
+  'back'=>'indietro',
+  'current_icon'=>'actuello Simbolo',
+  'current_icon_small'=>'actuello Simbolo (piccolo)',
+  'delete'=>'cancellare',
+  'edit'=>'cambiare',
+  'edit_squad'=>'Squadra modificare',
+  'format_incorrect'=>'Il formato del banner è sbagliato. Si prega di caricare solo banner *.gif, *.jpg o *.png formato.',
   'game'=>'Gioco',
   'gaming_squad'=>'Team che gioca',
   'icon'=>'Icona',
-  'icon_upload'=>'Caica icona',
-  'icon_upload_info'=>'pe includee sc_squads',
-  'icon_upload_small'=>'Caica Icona (piccola)',
-  'infomation_incomplete'=>'Infomazioni incomplete.',
-  'new_squad'=>'nuova squada',
+  'icon_upload'=>'Carica icona',
+  'icon_upload_info'=>'per includere sc_squads',
+  'icon_upload_small'=>'Carica Icona (piccola)',
+  'information_incomplete'=>'Informazioni incomplete.',
+  'new_squad'=>'nuova squadra',
   'no_icon'=>'Nessuna icona disponibile',
-  'non_gaming_squad'=>'squada che non giocando',
-  'eally_delete'=>'Questa squada veamente cancellae?',
-  'sot'=>'assotie',
+  'non_gaming_squad'=>'squadra che non giocando',
+  'really_delete'=>'Questa squadra veramente cancellare?',
+  'sort'=>'assortire',
   'squad_info'=>'Team Info',
   'squad_name'=>'Team nome',
   'squad_type'=>'Team typo',
-  'squads'=>'Squade',
-  'tansaction_invalid'=>'ID tansazione non valido',
-  'to_sot'=>'assotie'
+  'squads'=>'Squadre',
+  'transaction_invalid'=>'ID transazione non valido',
+  'to_sort'=>'assortire'
 );
 ?>

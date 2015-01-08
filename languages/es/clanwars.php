@@ -2,106 +2,106 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Vesion 4       /                        /   /               #
+#           Version 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Fee Content / Management System                 #
+#                       Free Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyight 2005-2014 by webspell.og                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
-#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
-#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to emove this copyight-tag                      #
-#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
+#   visit webSPELL.org, webspell.info to get webSPELL for free           #
+#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to remove this copyright-tag                      #
+#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
-#   Fa Development by Development Team - webspell.og                   #
+#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
+#   Far Development by Development Team - webspell.org                   #
 #                                                                        #
-#   visit webspell.og                                                   #
+#   visit webspell.org                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_aay = Aay(
+$language_array = Array(
 
 /* do not edit above this line */
 
 	'clan'=>'clan',
 	'clan_stats'=>'estadisticas clan',
 	'clantag'=>'Signos de clan',
-	'clanwa_against'=>'encuento conta',
-	'clanwa_details'=>'detalles encuento',
-	'clanwa_saved'=>'el encuento ha sido guadado.',
-	'clanwa_updated'=>'el encuento ha sido actualizado.',
-	'clanwas'=>'encuentos',
-	'close_window'=>'cea ventana',
-	'county'=>'pais',
+	'clanwar_against'=>'encuentro contra',
+	'clanwar_details'=>'detalles encuentro',
+	'clanwar_saved'=>'el encuentro ha sido guardado.',
+	'clanwar_updated'=>'el encuentro ha sido actualizado.',
+	'clanwars'=>'encuentros',
+	'close_window'=>'cerrar ventana',
+	'country'=>'pais',
 	'date'=>'fecha',
-	'delete'=>'boa',
-	'delete_selected'=>'boa seleccion',
+	'delete'=>'borrar',
+	'delete_selected'=>'borrar seleccion',
 	'details'=>'detalles',
-	'disable_comments'=>'Desactiva comentaios',
-	'daw'=>'empate',
-	'daw_clanwas'=>'encuentos empatados',
-	'edit'=>'edita',
-	'edit_clanwa'=>'edita encuento',
+	'disable_comments'=>'Desactivar comentarios',
+	'draw'=>'empate',
+	'draw_clanwars'=>'encuentros empatados',
+	'edit'=>'editar',
+	'edit_clanwar'=>'editar encuentro',
 	'game'=>'juego',
-	'go'=>'I',
-	'hltv_seve'=>'sevido HLTV',
+	'go'=>'Ir',
+	'hltv_server'=>'servidor HLTV',
 	'home_team'=>'equipo local',
 	'homepage'=>'pagina web',
 	'id'=>'ID',
 	'league'=>'liga',
-	'league_match_link'=>'enlace al patido de la liga',
-	'lost'=>'pedido',
-	'lost_clanwas'=>'encuentos pedidos',
-	'lost_points'=>'puntos pedidos',
+	'league_match_link'=>'enlace al partido de la liga',
+	'lost'=>'perdido',
+	'lost_clanwars'=>'encuentros perdidos',
+	'lost_points'=>'puntos perdidos',
 	'map'=>'mapa',
 	'maps'=>'mapas',
-	'matchlink'=>'enlace patido',
-	'new_clanwa'=>'nuevo encuento',
+	'matchlink'=>'enlace partido',
+	'new_clanwar'=>'nuevo encuentro',
 	'nickname'=>'apodo',
-	'no_access'=>'No tienes pemiso!',
-	'no_enties'=>'No hay datos',
+	'no_access'=>'No tienes permiso!',
+	'no_entries'=>'No hay datos',
 	'no_maps'=>'No hay mapas',
-	'no_sceenshots'=>'No hay captuas',
+	'no_screenshots'=>'No hay capturas',
 	'on'=>'on',
-	'opponent'=>'contaio',
-	'opponent_team'=>'equipo contaio',
-	'pecent'=>'pocentaje',
-	'publish_clanwa_news'=>'publica noticias de encuentos',
-	'eally_delete_clanwa'=>'Estas seguo de boa este encuento?',
-	'epot'=>'descipcion',
-	'esult'=>'esultado',
-	'save_clanwa'=>'guada encuento',
-	'scoe_home'=>'puntuacion local',
-	'scoe_opponent'=>'puntuacion contaio',
-	'sceenshots'=>'captuas',
-	'select_all'=>'selecciona todo',
-	'seve'=>'sevido',
-	'show_all_squads'=>'mosta escuadones',
-	'show_clanwas'=>'mosta encuentos',
-	'sot'=>'odena',
-	'squad'=>'escuadon',
+	'opponent'=>'contrario',
+	'opponent_team'=>'equipo contrario',
+	'percent'=>'porcentaje',
+	'publish_clanwar_news'=>'publicar noticias de encuentros',
+	'really_delete_clanwar'=>'Estas seguro de borrar este encuentro?',
+	'report'=>'descripcion',
+	'result'=>'resultado',
+	'save_clanwar'=>'guardar encuentro',
+	'score_home'=>'puntuacion local',
+	'score_opponent'=>'puntuacion contrario',
+	'screenshots'=>'capturas',
+	'select_all'=>'seleccionar todo',
+	'server'=>'servidor',
+	'show_all_squads'=>'mostrar escuadrones',
+	'show_clanwars'=>'mostrar encuentros',
+	'sort'=>'ordenar',
+	'squad'=>'escuadron',
 	'stat'=>'estadistica',
 	'stats'=>'estadisticas',
 	'team'=>'equipo',
 	'total'=>'total',
-	'total_clanwas'=>'encuentos totales',
-	'total_daw_clanwas'=>'total encuentos empatados',
-	'total_lost_clanwas'=>'total encuentos pedidos',
-	'total_lost_points'=>'total puntos pedidos',
-	'total_won_clanwas'=>'total encuentos ganados',
+	'total_clanwars'=>'encuentros totales',
+	'total_draw_clanwars'=>'total encuentros empatados',
+	'total_lost_clanwars'=>'total encuentros perdidos',
+	'total_lost_points'=>'total puntos perdidos',
+	'total_won_clanwars'=>'total encuentros ganados',
 	'total_won_points'=>'total puntos ganados',
-	'update_clanwa'=>'actualiza encuento',
-	'upload_sceenshot'=>'subi captuas',
-	'use_comments'=>'Activa comentaios usuaio',
-	'visito_comments'=>'Activa comentaios visitante',
+	'update_clanwar'=>'actualizar encuentro',
+	'upload_screenshot'=>'subir capturas',
+	'user_comments'=>'Activar comentarios usuario',
+	'visitor_comments'=>'Activar comentarios visitante',
 	'won'=>'ganado',
-	'won_clanwas'=>'encuentos ganados',
+	'won_clanwars'=>'encuentros ganados',
 	'won_points'=>'puntos ganados'
 );
 ?>

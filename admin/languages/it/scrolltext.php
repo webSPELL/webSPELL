@@ -2,47 +2,47 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Vesion 4       /                        /   /               #
+#           Version 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Fee Content / Management System                 #
+#                       Free Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyight 2005-2014 by webspell.og                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
-#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
-#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to emove this copyight-tag                      #
-#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
+#   visit webSPELL.org, webspell.info to get webSPELL for free           #
+#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to remove this copyright-tag                      #
+#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
-#   Fa Development by Development Team - webspell.og                   #
+#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
+#   Far Development by Development Team - webspell.org                   #
 #                                                                        #
-#   visit webspell.og                                                   #
+#   visit webspell.org                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_aay = Aay(
+$language_array = Array(
 
 /* do not edit above this line */
 
   '1_slow'=>'1 (lento)',
-  '2_nomal'=>'2 (nomale)',
+  '2_normal'=>'2 (normale)',
   '3_fast'=>'3 (veloce)',
   'access_denied'=>'Accesso negato',
-  'colo'=>'Coloe',
-  'delay'=>'Ritado',
-  'delete'=>'cancellae',
-  'diection'=>'Allineamento',
+  'color'=>'Colore',
+  'delay'=>'Ritardo',
+  'delete'=>'cancellare',
+  'direction'=>'Allineamento',
   'example'=>'(p.e.: #FFFFFF)',
-  'left_to_ight'=>'da sinista a desta',
-  'ight_to_left'=>'da desta a sinista',
-  'scolltext'=>'Scoimento testo',
-  'tansaction_invalid'=>'ID tansazione non valido',
-  'update'=>'aggionamento',
-  'you_can_use_html'=>'È possibile di utilizzae HTML'
+  'left_to_right'=>'da sinistra a destra',
+  'right_to_left'=>'da destra a sinistra',
+  'scrolltext'=>'Scorrimento testo',
+  'transaction_invalid'=>'ID transazione non valido',
+  'update'=>'aggiornamento',
+  'you_can_use_html'=>'È possibile di utilizzare HTML'
 );
 ?>

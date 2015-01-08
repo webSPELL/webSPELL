@@ -2,85 +2,85 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Vesion 4       /                        /   /               #
+#           Version 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Fee Content / Management System                 #
+#                       Free Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyight 2005-2014 by webspell.og                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
-#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
-#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to emove this copyight-tag                      #
-#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
+#   visit webSPELL.org, webspell.info to get webSPELL for free           #
+#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to remove this copyright-tag                      #
+#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
-#   Fa Development by Development Team - webspell.og                   #
+#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
+#   Far Development by Development Team - webspell.org                   #
 #                                                                        #
-#   visit webspell.og                                                   #
+#   visit webspell.org                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_aay = Aay(
+$language_array = Array(
 
 /* do not edit above this line */
 
-	'autho'=>'Fofatte',
-	'bbcode'=>'BBCode e <b><u>PÅ</u></b>',
-	'cancel'=>'avbyt',
+	'author'=>'Forfatter',
+	'bbcode'=>'BBCode er <b><u>PÅ</u></b>',
+	'cancel'=>'avbryt',
 	'comm'=>'komm',
-	'comment'=>'<a hef="$ul">1 komenta</a>, siste av $lastposte - $lastdate',
-	'comments'=>'<a hef="$ul">[$anzcomments] kommentae</a>, siste av $lastposte - $lastdate',
+	'comment'=>'<a href="$url">1 komentar</a>, siste av $lastposter - $lastdate',
+	'comments'=>'<a href="$url">[$anzcomments] kommentarer</a>, siste av $lastposter - $lastdate',
 	'date'=>'Dato',
 	'delete'=>'slett',
-	'delete_selected'=>'slett mekede',
-	'edit'=>'edige',
-	'ente_title'=>'You have to ente a title!',
-	'ente_text'=>'You have to ente a text',
+	'delete_selected'=>'slett merkede',
+	'edit'=>'rediger',
+	'enter_title'=>'You have to enter a title!',
+	'enter_text'=>'You have to enter a text',
 	'go'=>'Gå!',
-	'headline'=>'Oveskift',
-	'html'=>'HTML e <b><u>PÅ</u></b>',
-	'inten'=>'inten',
-	'languages'=>'Spåk',
+	'headline'=>'Overskrift',
+	'html'=>'HTML er <b><u>PÅ</u></b>',
+	'intern'=>'intern',
+	'languages'=>'Språk',
 	'link'=>'Link',
-	'links'=>'Linke',
+	'links'=>'Linker',
 	'new_post'=>'Ny post',
 	'new_window'=>'Nytt vindu',
-	'news'=>'Nyhete',
-	'news_achive'=>'Akiv',
+	'news'=>'Nyheter',
+	'news_archive'=>'Arkiv',
 	'no'=>'nei',
 	'no_access'=>'ingen tilgang',
-	'no_comment'=>'<a hef="$ul">ingen kommentae</a>',
-	'no_comments'=>'deaktive',
-	'no_topnews'=>'ingen topp nyhete',
+	'no_comment'=>'<a href="$url">ingen kommentarer</a>',
+	'no_comments'=>'deaktiver',
+	'no_topnews'=>'ingen topp nyheter',
 	'options'=>'valg',
-	'post_languages'=>'Nyheten i <select name="language_count" onchange="update_textaea(this.options[this.selectedIndex].value)">$selects</select> spåk',
-	'post_news'=>'post nyhete',
-	'peview'=>'fohåndsvisning',
-	'publish_now'=>'publise nå',
-	'publish_selected'=>'publise mekede',
-	'eally_delete'=>'eally delete this news?',
-	'ubic'=>'Rubikk',
-	'save_news'=>'lage nyhet',
+	'post_languages'=>'Nyheten i <select name="language_count" onchange="update_textarea(this.options[this.selectedIndex].value)">$selects</select> språk',
+	'post_news'=>'post nyheter',
+	'preview'=>'forhåndsvisning',
+	'publish_now'=>'publiser nå',
+	'publish_selected'=>'publiser merkede',
+	'really_delete'=>'really delete this news?',
+	'rubric'=>'Rubrikk',
+	'save_news'=>'lagre nyhet',
 	'select_all'=>'velge alle',
 	'self'=>'Samme vindu',
-	'show_news'=>'vis nyhete',
-	'smilies'=>'Smilefjes e <b><u>PÅ</u></b>',
-	'sot'=>'Sote:',
+	'show_news'=>'vis nyheter',
+	'smilies'=>'Smilefjes er <b><u>PÅ</u></b>',
+	'sort'=>'Sorter:',
 	'title_unpublished_news'=>'<h2>UPUBLISERTE NYHETER:</h2>',
 	'topnews'=>'topp nyhet',
-	'unpublish'=>'upublise',
-	'unpublish_selected'=>'upublise mekede',
-	'unpublished_news'=>'upubliset(e) nyhet(e)',
+	'unpublish'=>'upubliser',
+	'unpublish_selected'=>'upubliser merkede',
+	'unpublished_news'=>'upublisert(e) nyhet(er)',
 	'upload_images'=>'last opp bilde',
-	'use_comments'=>'tillat bukee å kommentee',
-	'view_moe'=>'Vis mei...',
-	'visito_comments'=>'tillat gjeste å kommentee',
-	'witten_by'=>'skevet av',
+	'user_comments'=>'tillat brukere å kommentere',
+	'view_more'=>'Vis meir...',
+	'visitor_comments'=>'tillat gjester å kommentere',
+	'written_by'=>'skrevet av',
 	'yes'=>'ja',
 	'tags'=>'tags'
 );

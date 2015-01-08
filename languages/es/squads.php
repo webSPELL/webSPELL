@@ -2,56 +2,56 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Vesion 4       /                        /   /               #
+#           Version 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Fee Content / Management System                 #
+#                       Free Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyight 2005-2014 by webspell.og                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
-#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
-#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to emove this copyight-tag                      #
-#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
+#   visit webSPELL.org, webspell.info to get webSPELL for free           #
+#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to remove this copyright-tag                      #
+#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
-#   Fa Development by Development Team - webspell.og                   #
+#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
+#   Far Development by Development Team - webspell.org                   #
 #                                                                        #
-#   visit webspell.og                                                   #
+#   visit webspell.org                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_aay = Aay(
+$language_array = Array(
 
 /* do not edit above this line */
 
-	'about'=>'sobe',
+	'about'=>'sobre',
 	'active'=>'activo',
-	'add_buddy'=>'añadi lista amigos',
-	'awads'=>'pemios',
-	'back_buddy'=>'volve a lista amigos',
-	'back_squad_oveview'=>'volve a escuadon',
-	'challenge'=>'eta',
-	'contact'=>'Contacta',
+	'add_buddy'=>'añadir lista amigos',
+	'awards'=>'premios',
+	'back_buddy'=>'volver a lista amigos',
+	'back_squad_overview'=>'volver a escuadron',
+	'challenge'=>'retar',
+	'contact'=>'Contactar',
 	'email'=>'email',
-	'ignoe'=>'ignoa usuaio',
+	'ignore'=>'ignorar usuario',
 	'inactive'=>'inactivo',
-	'membe'=>'Miembo',
-	'membes'=>'Miembos',
-	'messenge'=>'messenge',
-	'no_desciption'=>'no hay descipcion',
-	'no_usepic'=>'no hay imagen!',
+	'member'=>'Miembro',
+	'members'=>'Miembros',
+	'messenger'=>'messenger',
+	'no_description'=>'no hay descripcion',
+	'no_userpic'=>'no hay imagen!',
 	'position'=>'Posición',
-	'esults'=>'esultados',
-	'show_details'=>'mosta detalles',
-	'squad_plays'=>'Escuadon juega:',
-	'squads'=>'escuadones',
+	'results'=>'resultados',
+	'show_details'=>'mostrar detalles',
+	'squad_plays'=>'Escuadron juega:',
+	'squads'=>'escuadrones',
 	'status'=>'Estado',
 	'town'=>'Pueblo',
-	'usepictue'=>'foto'
+	'userpicture'=>'foto'
 );
 ?>

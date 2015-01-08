@@ -2,51 +2,51 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Vesion 4       /                        /   /               #
+#           Version 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Fee Content / Management System                 #
+#                       Free Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyight 2005-2014 by webspell.og                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
-#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
-#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to emove this copyight-tag                      #
-#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
+#   visit webSPELL.org, webspell.info to get webSPELL for free           #
+#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to remove this copyright-tag                      #
+#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
-#   Fa Development by Development Team - webspell.og                   #
+#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
+#   Far Development by Development Team - webspell.org                   #
 #                                                                        #
-#   visit webspell.og                                                   #
+#   visit webspell.org                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_aay = Aay(
+$language_array = Array(
 
 /* do not edit above this line */
 
-	'admins'=>'Administateu(s):',
+	'admins'=>'Administrateur(s):',
 	'coding'=>'Le code',
-	'coding_info'=>'Ce site utilise le <a hef="http://www.webspell.og" taget="_blank">scipt webSPELL Fee Content Management System (vesion: $vesion)</a>. Il est basé su le PHP4/5 et le MySQL et fonctionne sous la <a hef="http://www.fsf.og/licensing/licenses/gpl.html" taget="_blank">license généale publique GNU</a>.<b>Pocuez-vous le gatuitement à cette adesse:: <a hef="http://www.webspell.og" taget="_blank">www.webSPELL.og</a>',
-	'disclaime'=>'Le disclaime (en anglais)',
-	'disclaime_text'=>'<p><stong>1. Content</stong><b>
-	The autho eseves the ight not to be esponsible fo the topicality, coectness, completeness o quality of the infomation povided. Liability claims egading damage caused by the use of any infomation povided, including any kind of infomation which is incomplete o incoect,will theefoe be ejected.<b>
-	All offes ae not-binding and without obligation. Pats of the pages o the complete publication including all offes and infomation might be extended, changed o patly o completely deleted by the autho without sepaate announcement.</p>
-	<p><stong>2. Refeals and links</stong><b>
-	The autho is not esponsible fo any contents linked o efeed to fom his pages - unless he has full knowledge of illegal contents and would be able to pevent the visitos of his site fomviewing those pages. If any damage occus by the use of infomation pesented thee, only the autho of the espective pages might be liable, not the one who has linked to these pages. Futhemoe the autho is not liable fo any postings o messages published by uses of discussion boads, guestbooks o mailinglists povided on his page.</p>
-	<p><stong>3. Copyight</stong><b>
-	The autho intended not to use any copyighted mateial fo the publication o, if not possible, to indicatethe copyight of the espective object. The copyight fo any mateial ceated by the autho is eseved. Any duplication o use of objects such as images, diagams, sounds o texts in othe electonic o pinted publications is not pemitted without the authos ageement.</p>
-	<p><stong>4. Pivacy policy</stong><b>
-	If the oppotunity fo the input of pesonal o business data (email addesses, name, addesses) is given, the input of these data takes place voluntaily. The use and payment of all offeed sevices ae pemitted - if and so fa technically possible and easonable - without specification of any pesonal data o unde specification of anonymized data o an alias. The use of published postal addesses, telephone o fax numbes and email addesses fo maketing puposes is pohibited, offendes sending unwanted spam messages will be punished.</p>
-	<p><stong>5. Legal validity of this disclaime</stong><b>
-	This disclaime is to be egaded as pat of the intenet publication which you wee efeed fom. If sections o individual tems of this statement ae not legal o coect, the content o validity of the othe pats emain uninfluenced by this fact.</p>',
-	'impint'=>'L\'administation',
-	'mods'=>'Mod&eacute;ateu(s):',
-	'esponsible_pesons'=>'Responsables',
-	'webmaste'=>'Webmaste:'
+	'coding_info'=>'Ce site utilise le <a href="http://www.webspell.org" target="_blank">script webSPELL Free Content Management System (version: $version)</a>. Il est basé sur le PHP4/5 et le MySQL et fonctionne sous la <a href="http://www.fsf.org/licensing/licenses/gpl.html" target="_blank">license générale publique GNU</a>.<br>Procurez-vous le gratuitement à cette adresse:: <a href="http://www.webspell.org" target="_blank">www.webSPELL.org</a>',
+	'disclaimer'=>'Le disclaimer (en anglais)',
+	'disclaimer_text'=>'<p><strong>1. Content</strong><br>
+	The author reserves the right not to be responsible for the topicality, correctness, completeness or quality of the information provided. Liability claims regarding damage caused by the use of any information provided, including any kind of information which is incomplete or incorrect,will therefore be rejected.<br>
+	All offers are not-binding and without obligation. Parts of the pages or the complete publication including all offers and information might be extended, changed or partly or completely deleted by the author without separate announcement.</p>
+	<p><strong>2. Referrals and links</strong><br>
+	The author is not responsible for any contents linked or referred to from his pages - unless he has full knowledge of illegal contents and would be able to prevent the visitors of his site fromviewing those pages. If any damage occurs by the use of information presented there, only the author of the respective pages might be liable, not the one who has linked to these pages. Furthermore the author is not liable for any postings or messages published by users of discussion boards, guestbooks or mailinglists provided on his page.</p>
+	<p><strong>3. Copyright</strong><br>
+	The author intended not to use any copyrighted material for the publication or, if not possible, to indicatethe copyright of the respective object. The copyright for any material created by the author is reserved. Any duplication or use of objects such as images, diagrams, sounds or texts in other electronic or printed publications is not permitted without the authors agreement.</p>
+	<p><strong>4. Privacy policy</strong><br>
+	If the opportunity for the input of personal or business data (email addresses, name, addresses) is given, the input of these data takes place voluntarily. The use and payment of all offered services are permitted - if and so far technically possible and reasonable - without specification of any personal data or under specification of anonymized data or an alias. The use of published postal addresses, telephone or fax numbers and email addresses for marketing purposes is prohibited, offenders sending unwanted spam messages will be punished.</p>
+	<p><strong>5. Legal validity of this disclaimer</strong><br>
+	This disclaimer is to be regarded as part of the internet publication which you were referred from. If sections or individual terms of this statement are not legal or correct, the content or validity of the other parts remain uninfluenced by this fact.</p>',
+	'imprint'=>'L\'administration',
+	'mods'=>'Mod&eacute;rateur(s):',
+	'responsible_persons'=>'Responsables',
+	'webmaster'=>'Webmaster:'
 );
 ?>

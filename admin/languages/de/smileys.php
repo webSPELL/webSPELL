@@ -2,52 +2,52 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Vesion 4       /                        /   /               #
+#           Version 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Fee Content / Management System                 #
+#                       Free Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyight 2005-2014 by webspell.og                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
-#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
-#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to emove this copyight-tag                      #
-#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
+#   visit webSPELL.org, webspell.info to get webSPELL for free           #
+#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to remove this copyright-tag                      #
+#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
-#   Fa Development by Development Team - webspell.og                   #
+#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
+#   Far Development by Development Team - webspell.org                   #
 #                                                                        #
-#   visit webspell.og                                                   #
+#   visit webspell.org                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_aay = Aay(
+$language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Zugiff veweiget',
+  'access_denied'=>'Zugriff verweigert',
   'actions'=>'Aktionen',
   'add_smiley'=>'Smiley hinzufügen',
-  'back'=>'zuück',
+  'back'=>'zurück',
   'delete'=>'löschen',
-  'edit'=>'änden',
-  'edit_smiley'=>'Smiley änden',
+  'edit'=>'ändern',
+  'edit_smiley'=>'Smiley ändern',
   'example'=>'(z.B.: ":oO:")',
-  'fill_fom'=>'Bitte das Fomula koekt ausfüllen',
-  'fomat_incoect'=>'Das Fomat des Symbols wa falsch. Bitte lade nu Symbole im  *.gif Fomat hoch',
+  'fill_form'=>'Bitte das Formular korrekt ausfüllen',
+  'format_incorrect'=>'Das Format des Symbols war falsch. Bitte lade nur Symbole im  *.gif Format hoch',
   'icon'=>'Symbol',
   'icons'=>'Symbole',
-  'new_smiley'=>'neue Smiley',
-  'no_enties'=>'Keine Eintäge',
-  'patten'=>'Küzel',
-  'pesent_icon'=>'aktuelles Symbol',
-  'eally_delete'=>'Diesen Smiley wiklich löschen?',
+  'new_smiley'=>'neuer Smiley',
+  'no_entries'=>'Keine Einträge',
+  'pattern'=>'Kürzel',
+  'present_icon'=>'aktuelles Symbol',
+  'really_delete'=>'Diesen Smiley wirklich löschen?',
   'smilies'=>'Smilies',
   'smiley_name'=>'Smiley Name',
-  'tansaction_invalid'=>'Tansaktions ID ungültig'
+  'transaction_invalid'=>'Transaktions ID ungültig'
 );
 ?>

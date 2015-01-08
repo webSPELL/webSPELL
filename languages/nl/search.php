@@ -2,69 +2,69 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Vesion 4       /                        /   /               #
+#           Version 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Fee Content / Management System                 #
+#                       Free Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyight 2005-2014 by webspell.og                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
-#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
-#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to emove this copyight-tag                      #
-#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
+#   visit webSPELL.org, webspell.info to get webSPELL for free           #
+#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to remove this copyright-tag                      #
+#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
-#   Fa Development by Development Team - webspell.og                   #
+#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
+#   Far Development by Development Team - webspell.org                   #
 #                                                                        #
-#   visit webspell.og                                                   #
+#   visit webspell.org                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_aay = Aay(
+$language_array = Array(
 
 /* do not edit above this line */
 
-	'afte'=>'na',
+	'after'=>'na',
 	'and'=>'en',
-	'aticle'=>'Atikel',
-	'aticles'=>'Atikels',
-	'aticles_link'=>'<b>link naa Atikel</b>',
+	'article'=>'Artikel',
+	'articles'=>'Artikels',
+	'articles_link'=>'<b>link naar Artikel</b>',
 	'ascending'=>'oplopend',
-	'befoe'=>'voo',
+	'before'=>'voor',
 	'date_options'=>'Datum',
-	'delete_selected'=>'vewijde geselecteeden',
+	'delete_selected'=>'verwijder geselecteerden',
 	'descending'=>'aflopend',
 	'faq'=>'FAQ',
-	'faq_link'=>'<b>link naa FAQ</b>',
-	'foum'=>'Foum',
-	'foum_link'=>'<b>link naa ondewep</b>',
-	'fequency'=>'Fequentie  ',
-	'keywod'=>'Zoekwood',
-	'new_seach'=>'Nieuwe zoekopdacht',
+	'faq_link'=>'<b>link naar FAQ</b>',
+	'forum'=>'Forum',
+	'forum_link'=>'<b>link naar onderwerp</b>',
+	'frequency'=>'Frequentie  ',
+	'keyword'=>'Zoekwoord',
+	'new_search'=>'Nieuwe zoekopdracht',
 	'news'=>'Nieuws',
-	'news_link'=>'<b>link naa nieuws</b>',
+	'news_link'=>'<b>link naar nieuws</b>',
 	'options'=>'Opties',
-	'o'=>'of',
-	'esult_quantity'=>'Resultaten pe pagina',
-	'esults_found'=>'esultaten gevonden',
-	'seach'=>'zoek',
-	'seach_in'=>'zoek in:',
-	'seach_location'=>'Zoek Locatie',
-	'seach_tem'=>'Zoek Tem',
-	'seach_title'=>'Uitgebeid zoeken',
-	'secuity_code'=>'Beveiligings code',
-	'sot_options'=>'Sotee',
-	'stat_seach'=>'Stat zoeken',
+	'or'=>'of',
+	'result_quantity'=>'Resultaten per pagina',
+	'results_found'=>'resultaten gevonden',
+	'search'=>'zoek',
+	'search_in'=>'zoek in:',
+	'search_location'=>'Zoek Locatie',
+	'search_term'=>'Zoek Term',
+	'search_title'=>'Uitgebreid zoeken',
+	'security_code'=>'Beveiligings code',
+	'sort_options'=>'Sorteer',
+	'start_search'=>'Start zoeken',
 	'submit'=>'Ok',
 	'text_contains'=>'Tekst inhoud',
 	'title_contains'=>'Titel inhoud',
-	'too_shot'=>'Zoektem is te kot. Op zijn minst %min_chas% tekens',
-	'wong_secuitycode'=>'De veiligheids code was vekeed!',
-	'no_esult'=>'Geen data gevonden voo "%s"'
+	'too_short'=>'Zoekterm is te kort. Op zijn minst %min_chars% tekens',
+	'wrong_securitycode'=>'De veiligheids code was verkeerd!',
+	'no_result'=>'Geen data gevonden voor "%s"'
 );
 ?>

@@ -2,70 +2,70 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Vesion 4       /                        /   /               #
+#           Version 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Fee Content / Management System                 #
+#                       Free Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyight 2005-2014 by webspell.og                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
-#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
-#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to emove this copyight-tag                      #
-#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
+#   visit webSPELL.org, webspell.info to get webSPELL for free           #
+#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to remove this copyright-tag                      #
+#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
-#   Fa Development by Development Team - webspell.og                   #
+#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
+#   Far Development by Development Team - webspell.org                   #
 #                                                                        #
-#   visit webspell.og                                                   #
+#   visit webspell.org                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_aay = Aay(
+$language_array = Array(
 
 /* do not edit above this line */
 
-	'aleady_voted'=>'Jūs jau balsavote.',
-	'comments'=>'komentaų',
+	'already_voted'=>'Jūs jau balsavote.',
+	'comments'=>'komentarų',
 	'days'=>'dienos',
-	'delete'=>'ištinti',
-	'disable_comments'=>'išjungti komentaus',
-	'edit'=>'edeguoti',
-	'edit_poll'=>'edeguoti apklausą',
-	'enable_use_comments'=>'įjungti vatotojo komentaus',
-	'enable_visito_comments'=>'įjungti lankytojo komentaus',
+	'delete'=>'ištrinti',
+	'disable_comments'=>'išjungti komentarus',
+	'edit'=>'redeguoti',
+	'edit_poll'=>'redeguoti apklausą',
+	'enable_user_comments'=>'įjungti vartotojo komentarus',
+	'enable_visitor_comments'=>'įjungti lankytojo komentarus',
 	'endingtime'=>'Pasibaigimo laikas',
-	'inten'=>'V.I.P',
+	'intern'=>'V.I.P',
 	'latest_by'=>'paskutinis pagal',
 	'new_poll'=>'nauja apklausa',
-	'no_access'=>'jokia pieiga!',
-	'no_active_poll'=>'nėa aktyvių apklausų',
-	'no_enties'=>'Tuščia, nieko nėa. Įėjimai daudžiami!',
+	'no_access'=>'jokia prieiga!',
+	'no_active_poll'=>'nėra aktyvių apklausų',
+	'no_entries'=>'Tuščia, nieko nėra. Įėjimai draudžiami!',
 	'on'=>',',
-	'option'=>'Pasiinkimas',
+	'option'=>'Pasirinkimas',
 	'poll_ended'=>'apklausa jau baigėsi',
 	'polls'=>'apklausos',
-	'eally_delete'=>'tikai noite ištinti apklausą?',
-	'eally_eopen'=>'tikai iš naujo įjungti apklausą?',
-	'eally_stop'=>'tikai sustabdyti apklausą?',
-	'eset_votes'=>'atnaujinti balsavimus',
-	'eopen_poll'=>'iš naujo įjungti apklausą',
+	'really_delete'=>'tikrai norite ištrinti apklausą?',
+	'really_reopen'=>'tikrai iš naujo įjungti apklausą?',
+	'really_stop'=>'tikrai sustabdyti apklausą?',
+	'reset_votes'=>'atnaujinti balsavimus',
+	'reopen_poll'=>'iš naujo įjungti apklausą',
 	'save_poll'=>'išsaugoti apklausą',
-	'show_polls'=>'odyti apklausas',
+	'show_polls'=>'rodyti apklausas',
 	'stop_poll'=>'sustabdyti apklausą',
 	'stopped_poll'=>'sustabdyta Apklausa',
 	'time_left'=>'laiko liko',
 	'title'=>'Pavadinimas',
 	'update_poll'=>'atnaujinti apklausą',
 	'vote'=>'balsuoti',
-	'vote_now'=>'balsuok daba',
+	'vote_now'=>'balsuok dabar',
 	'votes'=>'balsai',
-	'yht_ente_2_options'=>'Jūs tuite įvesti nos 2 pasiinkimus!',
-	'yht_ente_endingtime'=>'Jūs tuite įašyti pasibaigimo laiką!',
-	'yht_ente_title'=>'Jūs tuite įašyti pavadinimą!'
+	'yht_enter_2_options'=>'Jūs turite įvesti nors 2 pasirinkimus!',
+	'yht_enter_endingtime'=>'Jūs turite įrašyti pasibaigimo laiką!',
+	'yht_enter_title'=>'Jūs turite įrašyti pavadinimą!'
 );
 ?>

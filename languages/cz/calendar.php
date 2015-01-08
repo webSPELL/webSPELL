@@ -2,106 +2,106 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Vesion 4       /                        /   /               #
+#           Version 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Fee Content / Management System                 #
+#                       Free Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyight 2005-2014 by webspell.og                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
-#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
-#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to emove this copyight-tag                      #
-#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
+#   visit webSPELL.org, webspell.info to get webSPELL for free           #
+#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to remove this copyright-tag                      #
+#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
-#   Fa Development by Development Team - webspell.og                   #
+#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
+#   Far Development by Development Team - webspell.org                   #
 #                                                                        #
-#   visit webspell.og                                                   #
+#   visit webspell.org                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_aay = Aay(
+$language_array = Array(
 
 /* do not edit above this line */
 
-	'access_membe'=>'toto vidí pouze členové týmu',
-	'add_clanwa'=>'Přidat zápas',
-	'add_clanwas'=>'přidat zápas',
+	'access_member'=>'toto vidí pouze členové týmu',
+	'add_clanwar'=>'Přidat zápas',
+	'add_clanwars'=>'přidat zápas',
 	'add_event'=>'Přidat událost',
-	'announce_hee'=>'oznámit zde',
+	'announce_here'=>'oznámit zde',
 	'announce_to'=>'Oznámit tento zápas/událost:',
 	'announcements'=>'Oznámení:',
-	'ap'=>'Duben',
-	'aug'=>'Spen',
-	'calenda'=>'kalendář',
-	'clanwadetails'=>'Detaily zápasu',
-	'clanwa_message'=>'new upcoming clanwa on %date%:[b][b]Opponent: [flag]%opponent_flag%[/flag] [ul=%opp_hp%]%opponent%[/ul] [b]League: [ul=%league_hp%]%league%[/ul] [b]Info: %wainfo%[b][b][ul=index.php?site=calenda]link to calenda[/ul]',
-	'clanwa_message_title'=>'new upcoming wa in calenda!',
+	'apr'=>'Duben',
+	'aug'=>'Srpen',
+	'calendar'=>'kalendář',
+	'clanwardetails'=>'Detaily zápasu',
+	'clanwar_message'=>'new upcoming clanwar on %date%:[br][br]Opponent: [flag]%opponent_flag%[/flag] [url=%opp_hp%]%opponent%[/url] [br]League: [url=%league_hp%]%league%[/url] [br]Info: %warinfo%[br][br][url=index.php?site=calendar]link to calendar[/url]',
+	'clanwar_message_title'=>'new upcoming war in calendar!',
 	'date_time'=>'Datum - Čas',
-	'dec'=>'Posinec',
+	'dec'=>'Prosinec',
 	'delete'=>'smazat',
-	'displayed_in'=>'zobazit v kalendáři',
-	'edit'=>'upavit',
-	'editevent'=>'Upavit událost',
-	'editwa'=>'Upavit zápas',
+	'displayed_in'=>'zobrazit v kalendáři',
+	'edit'=>'upravit',
+	'editevent'=>'Upravit událost',
+	'editwar'=>'Upravit zápas',
 	'end_datetime'=>'Konec: Datum - Čas',
 	'eventdetails'=>'Detaily události',
-	'feb'=>'Úno',
-	'fi'=>'Pá',
-	'homepage'=>'Domovská stánka:',
-	'infomation'=>'Infomace',
+	'feb'=>'Únor',
+	'fri'=>'Pá',
+	'homepage'=>'Domovská stránka:',
+	'information'=>'Informace',
 	'jan'=>'Leden',
-	'jul'=>'Čevenec',
-	'jun'=>'Čeven',
+	'jul'=>'Červenec',
+	'jun'=>'Červen',
 	'league'=>'Liga',
-	'leaguehp'=>'Domovská stánka ligy',
+	'leaguehp'=>'Domovská stránka ligy',
 	'location'=>'Poloha:',
 	'longtitle'=>'Dlouhý popis',
 	'maps'=>'Mapy',
-	'ma'=>'Březen',
+	'mar'=>'Březen',
 	'may'=>'Květen',
 	'mon'=>'Po',
 	'new_date'=>'Nová událost',
-	'new_wa'=>'Oznámit nový zápas',
+	'new_war'=>'Oznámit nový zápas',
 	'no'=>'Ne',
 	'no_access'=>'Nemáš přístup!',
 	'no_announced'=>'nikdo se dosud nepřihlásil',
-	'no_enties'=>'na dnešek není nic naplánované',
+	'no_entries'=>'na dnešek není nic naplánované',
 	'no_text'=>'Text nenalezen',
 	'nov'=>'Listopad',
 	'oct'=>'Řijen',
 	'opponent'=>'Soupeř',
-	'opponentcounty'=>'Soupeřova náodnost',
-	'opponenthp'=>'Soupeřova domovská stánka',
+	'opponentcountry'=>'Soupeřova národnost',
+	'opponenthp'=>'Soupeřova domovská stránka',
 	'opponenttag'=>'Soupeřův clantag',
-	'pehaps'=>'Možná',
-  'eally_delete'=>'Opavdu chcete tento příspěvek smazat?',
+	'perhaps'=>'Možná',
+  'really_delete'=>'Opravdu chcete tento příspěvek smazat?',
 	'sat'=>'So',
 	'save_announcement'=>'Uložit oznámení',
 	'save_event'=>'Uložit událost',
-	'save_wa'=>'Uložit oznámení o zápase',
-	'send_message'=>'poslat zpávu všem členùm týmu',
+	'save_war'=>'Uložit oznámení o zápase',
+	'send_message'=>'poslat zprávu všem členùm týmu',
 	'sep'=>'Září',
-	'seve'=>'Seve',
-	'shottitle'=>'Kátký popis',
+	'server'=>'Server',
+	'shorttitle'=>'Krátký popis',
 	'squad'=>'Tým',
-	'stat_datetime'=>'Začátek: Datum - Čas',
+	'start_datetime'=>'Začátek: Datum - Čas',
 	'sun'=>'Ne',
 	'thu'=>'Čt',
 	'today_events'=>'Ukázat dnešní události',
 	'tue'=>'Út',
 	'updateevent'=>'Aktualizovat událost',
-	'updatewa'=>'Aktualizovat zápas',
+	'updatewar'=>'Aktualizovat zápas',
 	'wed'=>'St',
 	'yes'=>'Ano',
-	'you_have_to_be_clanmembe'=>'Musíš být členem týmu, abys toto viděl.',
-	'ente_shot'=>'Nezadal jsi kátký nadpis!',
-	'ente_title'=>'Nezadal jsi dlouhý nadpis!',
-	'ente_info'=>'Nezadal jsi žádné infomace!'
+	'you_have_to_be_clanmember'=>'Musíš být členem týmu, abys toto viděl.',
+	'enter_short'=>'Nezadal jsi krátký nadpis!',
+	'enter_title'=>'Nezadal jsi dlouhý nadpis!',
+	'enter_info'=>'Nezadal jsi žádné informace!'
 );
 ?>

@@ -2,70 +2,70 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Vesion 4       /                        /   /               #
+#           Version 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Fee Content / Management System                 #
+#                       Free Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyight 2005-2014 by webspell.og                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
-#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
-#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to emove this copyight-tag                      #
-#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
+#   visit webSPELL.org, webspell.info to get webSPELL for free           #
+#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to remove this copyright-tag                      #
+#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
-#   Fa Development by Development Team - webspell.og                   #
+#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
+#   Far Development by Development Team - webspell.org                   #
 #                                                                        #
-#   visit webspell.og                                                   #
+#   visit webspell.org                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_aay = Aay(
+$language_array = Array(
 
 /* do not edit above this line */
 
-	'aleady_voted'=>'Ya has votado.',
-	'comments'=>'comentaios',
+	'already_voted'=>'Ya has votado.',
+	'comments'=>'comentarios',
 	'days'=>'dias',
-	'delete'=>'boa',
-	'disable_comments'=>'Desactiva comentaios',
-	'edit'=>'edita',
-	'edit_poll'=>'edita encuesta',
-	'enable_use_comments'=>'Activa comentaios usuaios',
-	'enable_visito_comments'=>'Activa comentaios visitantes',
+	'delete'=>'borrar',
+	'disable_comments'=>'Desactivar comentarios',
+	'edit'=>'editar',
+	'edit_poll'=>'editar encuesta',
+	'enable_user_comments'=>'Activar comentarios usuarios',
+	'enable_visitor_comments'=>'Activar comentarios visitantes',
 	'endingtime'=>'Tiempo finalizacion',
-	'inten'=>'Intena',
-	'latest_by'=>'última po',
+	'intern'=>'Interna',
+	'latest_by'=>'última por',
 	'new_poll'=>'nueva encuesta',
 	'no_access'=>'sin acceso!',
 	'no_active_poll'=>'no hay encuesta',
-	'no_enties'=>'no hay datos!',
+	'no_entries'=>'no hay datos!',
 	'on'=>'en',
 	'option'=>'Opcion',
 	'poll_ended'=>'encuesta ya finalizada',
 	'polls'=>'encuestas',
-	'eally_delete'=>'Estas seguo de boa esta encuesta?',
-	'eally_stop'=>'Estas seguo de paa esta encuesta?',
-	'eally_eopen'=>'eally eopen this poll?',
-	'eset_votes'=>'esetea votos',
-	'eopen_poll'=>'eopen poll',
-	'save_poll'=>'guada encuesta',
-	'show_polls'=>'mosta encuestas',
-	'stop_poll'=>'paa encuesta',
-	'stopped_poll'=>'encuesta paada',
-	'time_left'=>'tiempo estante',
+	'really_delete'=>'Estas seguro de borrar esta encuesta?',
+	'really_stop'=>'Estas seguro de parar esta encuesta?',
+	'really_reopen'=>'really reopen this poll?',
+	'reset_votes'=>'resetear votos',
+	'reopen_poll'=>'reopen poll',
+	'save_poll'=>'guardar encuesta',
+	'show_polls'=>'mostrar encuestas',
+	'stop_poll'=>'parar encuesta',
+	'stopped_poll'=>'encuesta parada',
+	'time_left'=>'tiempo restante',
 	'title'=>'Titulo',
-	'update_poll'=>'actualiza encuesta',
-	'vote'=>'vota',
-	'vote_now'=>'vota ahoa',
+	'update_poll'=>'actualizar encuesta',
+	'vote'=>'votar',
+	'vote_now'=>'votar ahora',
 	'votes'=>'votos',
-	'yht_ente_2_options'=>'Debes inseta almenos 2 opciones!',
-	'yht_ente_endingtime'=>'Debes inseta el tiempo de finalizacion!',
-	'yht_ente_title'=>'Debes inseta un titulo!'
+	'yht_enter_2_options'=>'Debes insertar almenos 2 opciones!',
+	'yht_enter_endingtime'=>'Debes insertar el tiempo de finalizacion!',
+	'yht_enter_title'=>'Debes insertar un titulo!'
 );
 ?>

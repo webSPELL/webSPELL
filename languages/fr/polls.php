@@ -2,70 +2,70 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Vesion 4       /                        /   /               #
+#           Version 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Fee Content / Management System                 #
+#                       Free Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyight 2005-2014 by webspell.og                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
-#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
-#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to emove this copyight-tag                      #
-#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
+#   visit webSPELL.org, webspell.info to get webSPELL for free           #
+#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to remove this copyright-tag                      #
+#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
-#   Fa Development by Development Team - webspell.og                   #
+#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
+#   Far Development by Development Team - webspell.org                   #
 #                                                                        #
-#   visit webspell.og                                                   #
+#   visit webspell.org                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_aay = Aay(
+$language_array = Array(
 
 /* do not edit above this line */
 
-	'aleady_voted'=>'Vous avez déjà voté pou ce sondage !',
-	'comments'=>'Commentaies',
-	'days'=>'jous',
-	'delete'=>'Suppime',
-	'disable_comments'=>'Désactive les commentaies',
-	'edit'=>'Edite',
-	'edit_poll'=>'Edite le sondage',
-	'enable_use_comments'=>'Active les commentaies pou les membes',
-	'enable_visito_comments'=>'Active les commentaies',
+	'already_voted'=>'Vous avez déjà voté pour ce sondage !',
+	'comments'=>'Commentaires',
+	'days'=>'jours',
+	'delete'=>'Supprimer',
+	'disable_comments'=>'Désactiver les commentaires',
+	'edit'=>'Editer',
+	'edit_poll'=>'Editer le sondage',
+	'enable_user_comments'=>'Activer les commentaires pour les membres',
+	'enable_visitor_comments'=>'Activer les commentaires',
 	'endingtime'=>'Fin',
-	'inten'=>'Intene ',
-	'latest_by'=>'Denie pa',
+	'intern'=>'Interne ',
+	'latest_by'=>'Dernier par',
 	'new_poll'=>'Nouveau sondage',
-	'no_access'=>'Accès efusé !',
+	'no_access'=>'Accès refusé !',
 	'no_active_poll'=>'Aucun sondage actif.',
-	'no_enties'=>'Aucune sondage.',
+	'no_entries'=>'Aucune sondage.',
 	'on'=>'le:',
 	'option'=>'Option',
-	'poll_ended'=>'Sondage déjà teminé',
+	'poll_ended'=>'Sondage déjà terminé',
 	'polls'=>'Sondages',
-	'eally_delete'=>'Voulez-vous vaiment suppime ce sondage ?',
-	'eally_stop'=>'Voulez-vous vaiment temine ce sondage ?',
-	'eally_eopen'=>'Voulez-vous vaiment éouvi ce sondage ?',
-	'eset_votes'=>'Efface les votes',
-	'eopen_poll'=>'Réouvi le sondage',
-	'save_poll'=>'Enegiste',
+	'really_delete'=>'Voulez-vous vraiment supprimer ce sondage ?',
+	'really_stop'=>'Voulez-vous vraiment terminer ce sondage ?',
+	'really_reopen'=>'Voulez-vous vraiment réouvrir ce sondage ?',
+	'reset_votes'=>'Effacer les votes',
+	'reopen_poll'=>'Réouvrir le sondage',
+	'save_poll'=>'Enregistrer',
 	'show_polls'=>'Tous les sondages',
-	'stop_poll'=>'Teminé',
-	'stopped_poll'=>'Sondage teminé',
-	'time_left'=>'Temps estant',
-	'title'=>'Tite',
-	'update_poll'=>'Edite',
+	'stop_poll'=>'Terminé',
+	'stopped_poll'=>'Sondage terminé',
+	'time_left'=>'Temps restant',
+	'title'=>'Titre',
+	'update_poll'=>'Editer',
 	'vote'=>'vote',
 	'vote_now'=>'Votez maintenant',
 	'votes'=>'votes',
-	'yht_ente_2_options'=>'Vous devez ente au moins 2 options !',
-	'yht_ente_endingtime'=>'Vous devez ente une date de fin !',
-	'yht_ente_title'=>'Vous devez ente un tite !'
+	'yht_enter_2_options'=>'Vous devez entrer au moins 2 options !',
+	'yht_enter_endingtime'=>'Vous devez entrer une date de fin !',
+	'yht_enter_title'=>'Vous devez entrer un titre !'
 );
 ?>

@@ -2,62 +2,62 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Vesion 4       /                        /   /               #
+#           Version 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Fee Content / Management System                 #
+#                       Free Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyight 2005-2014 by webspell.og                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
-#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
-#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to emove this copyight-tag                      #
-#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
+#   visit webSPELL.org, webspell.info to get webSPELL for free           #
+#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to remove this copyright-tag                      #
+#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
-#   Fa Development by Development Team - webspell.og                   #
+#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
+#   Far Development by Development Team - webspell.org                   #
 #                                                                        #
-#   visit webspell.og                                                   #
+#   visit webspell.org                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_aay = Aay(
+$language_array = Array(
 
 /* do not edit above this line */
 
-	'daysonline'=>'Dienų pisijungę',
+	'daysonline'=>'Dienų prisijungę',
 	'guest'=>'Svečias',
 	'guests'=>'Svečių',
-	'lasthou'=>'Paskutinę valandą',
-	'max_day'=>'Daugiausia pe dieną',
+	'lasthour'=>'Paskutinę valandą',
+	'max_day'=>'Daugiausia per dieną',
 	'maximum'=>'Daugiausiai',
 	'month'=>'Mėnesis',
-	'now'=>'Daba',
-	'online'=>'Pisijungęs',
+	'now'=>'Dabar',
+	'online'=>'Prisijungęs',
 	'page_statistics'=>'Puslapio statistika',
-	'egisteed_uses'=>'egistuoti vatotojai',
+	'registered_users'=>'registruoti vartotojai',
 	'statistic'=>'Rodyti statistiką',
 	'this_month'=>'Šį mėnesį',
 	'today'=>'Šiandien',
 	'total'=>'Iš viso',
-	'total_statistic'=>'Benda statistika',
-	'use'=>'vatotojas',
-	'uses'=>'vatotojai',
+	'total_statistic'=>'Bendra statistika',
+	'user'=>'vartotojas',
+	'users'=>'vartotojai',
 	'visits'=>'Apsilankymai',
-	'visits_day'=>'Aplankymų pe Dienos',
-	'visits_hou'=>'Aplankymų pe valandą',
-	'visits_month'=>'Aplankymų pe mėnesį',
+	'visits_day'=>'Aplankymų per Dienos',
+	'visits_hour'=>'Aplankymų per valandą',
+	'visits_month'=>'Aplankymų per mėnesį',
 	'visits_total'=>'Iš viso aplankymų',
-	'yesteday'=>'Vaka',
+	'yesterday'=>'Vakar',
 	'avg_age'=>'Vidutinis amžius',
-	'avg_age_clanmembe'=>'Vidutinis klano naių amžius',
-	'youngest_use'=>'jaunausias vatotojas',
-	'oldest_use'=>'Seniausias vatotojas',
-	'use_statistic'=>'Vatotojo statistika',
-	'yeas'=>'metai'
+	'avg_age_clanmember'=>'Vidutinis klano narių amžius',
+	'youngest_user'=>'jaunausias vartotojas',
+	'oldest_user'=>'Seniausias vartotojas',
+	'user_statistic'=>'Vartotojo statistika',
+	'years'=>'metai'
 );
 ?>

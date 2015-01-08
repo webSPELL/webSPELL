@@ -2,46 +2,46 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Vesion 4       /                        /   /               #
+#           Version 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Fee Content / Management System                 #
+#                       Free Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyight 2005-2014 by webspell.og                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
-#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
-#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to emove this copyight-tag                      #
-#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
+#   visit webSPELL.org, webspell.info to get webSPELL for free           #
+#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to remove this copyright-tag                      #
+#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
-#   Fa Development by Development Team - webspell.og                   #
+#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
+#   Far Development by Development Team - webspell.org                   #
 #                                                                        #
-#   visit webspell.og                                                   #
+#   visit webspell.org                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_aay = Aay(
+$language_array = Array(
 	'available'=>'Ritenuto',
 	'check_chmod'=>'CHMOD Revisione',
-	'check_equiements'=>'Veifica Requisita',
-	'chmod_eo'=>'<b>Il CHMOD non è possibile impostae.</b><b>Inseite ai catelle CHMOD 777 e und nei dati CHMOD 766 manuello',
-	'mysql_eo'=>'_mysql.php deve essee descivibile o Webspell non si può installae.',
-	'mysql_suppot'=>'MySQL Assistenza',
-	'multibyte_suppot'=>'Multibyte Assistenza',
+	'check_requirements'=>'Verifica Requisita',
+	'chmod_error'=>'<b>Il CHMOD non è possibile impostare.</b><br>Inserite ai cartelle CHMOD 777 e und nei dati CHMOD 766 manuello',
+	'mysql_error'=>'_mysql.php deve essere descrivibile o Webspell non si può installare.',
+	'mysql_support'=>'MySQL Assistenza',
+	'multibyte_support'=>'Multibyte Assistenza',
 	'no'=>'No',
-	'php_vesion'=>'PHP Vesione',
-	'set_chmod'=>'CHMOD inseie',
-	'setting_chmod'=>'CHMOD viene inseie...',
-	'stylesheet_eo'=>'_stylesheet.css deve essee scivibile o Webspell non funziona coettamente.',
+	'php_version'=>'PHP Versione',
+	'set_chmod'=>'CHMOD inserire',
+	'setting_chmod'=>'CHMOD viene inserire...',
+	'stylesheet_error'=>'_stylesheet.css deve essere scrivibile o Webspell non funziona correttamente.',
 	'successful'=>'Successo!',
 	'unavailable'=>'Non disponibile',
-	'unwiteable'=>'Non scivibile',
-	'witeable'=>'Registabile',
+	'unwriteable'=>'Non scrivibile',
+	'writeable'=>'Registrabile',
 	'yes'=>'Si'
 );
 ?>

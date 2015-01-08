@@ -2,75 +2,75 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Vesion 4       /                        /   /               #
+#           Version 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Fee Content / Management System                 #
+#                       Free Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyight 2005-2014 by webspell.og                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
-#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
-#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to emove this copyight-tag                      #
-#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
+#   visit webSPELL.org, webspell.info to get webSPELL for free           #
+#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to remove this copyright-tag                      #
+#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
-#   Fa Development by Development Team - webspell.og                   #
+#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
+#   Far Development by Development Team - webspell.org                   #
 #                                                                        #
-#   visit webspell.og                                                   #
+#   visit webspell.org                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_aay = Aay(
+$language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Zugiff veweiget',
+  'access_denied'=>'Zugriff verweigert',
   'actions'=>'Aktionen',
-  'add_galley'=>'Galeie hinzufügen',
-  'add_goup'=>'Guppe hinzufügen',
+  'add_gallery'=>'Galerie hinzufügen',
+  'add_group'=>'Gruppe hinzufügen',
   'add_img'=>'Bild hinzufügen',
-  'comment'=>'Kommenta',
+  'comment'=>'Kommentar',
   'delete'=>'löschen',
-  'disable_comments'=>'Kommentae ausschalten',
-  'edit_galley'=>'Galeie änden',
-  'edit_goup'=>'Guppe änden',
-  'edit'=>'änden',
-  'enable_use_comments'=>'Benutze Kommentae elauben',
-  'enable_visito_comments'=>'Besuche Kommentae elauben',
+  'disable_comments'=>'Kommentare ausschalten',
+  'edit_gallery'=>'Galerie ändern',
+  'edit_group'=>'Gruppe ändern',
+  'edit'=>'ändern',
+  'enable_user_comments'=>'Benutzer Kommentare erlauben',
+  'enable_visitor_comments'=>'Besucher Kommentare erlauben',
   'filename'=>'Dateiname',
-  'fomula'=>'Fomula',
+  'formular'=>'Formular',
   'ftp'=>'FTP',
-  'ftp_info'=>'Um Dateien pe FTP hinzu zu fügen, lade deine Bilde in folgendes Vezeichnis hoch',
-  'galleies'=>'Galeien',
-  'galleies_available'=>'Es sind noch Galleien in diese Guppe vohanden. Um diese Guppe löschen zu können, musst du zuest diese Galleien veschieben ode löschen.',
-  'galley'=>'Galeie',
-  'galley_name'=>'Galeie Name',
-  'goup'=>'Guppe',
-  'goups'=>'Guppen/Kategoien',
-  'goup_name'=>'Guppen Name',
-  'infomation_incomplete'=>'Angaben unvollständig.',
+  'ftp_info'=>'Um Dateien per FTP hinzu zu fügen, lade deine Bilder in folgendes Verzeichnis hoch',
+  'galleries'=>'Galerien',
+  'galleries_available'=>'Es sind noch Gallerien in dieser Gruppe vorhanden. Um diese Gruppe löschen zu können, musst du zuerst diese Gallerien verschieben oder löschen.',
+  'gallery'=>'Galerie',
+  'gallery_name'=>'Galerie Name',
+  'group'=>'Gruppe',
+  'groups'=>'Gruppen/Kategorien',
+  'group_name'=>'Gruppen Name',
+  'information_incomplete'=>'Angaben unvollständig.',
   'name'=>'Name',
-  'need_goup'=>'Du musst zuest mindestens eine Galleie-Guppe estellen, bevo du eine Galleie estellen kannst.',
-  'new_galley'=>'neue Galeie',
-  'new_goup'=>'neue Guppe',
-  'pe_fom'=>'pe Fomula',
-  'pe_ftp'=>'pe FTP',
-  'pictue'=>'Bild',
+  'need_group'=>'Du musst zuerst mindestens eine Gallerie-Gruppe erstellen, bevor du eine Gallerie erstellen kannst.',
+  'new_gallery'=>'neue Galerie',
+  'new_group'=>'neue Gruppe',
+  'per_form'=>'per Formular',
+  'per_ftp'=>'per FTP',
+  'picture'=>'Bild',
   'pic_upload'=>'Bild Upload',
-  'eally_delete_goup'=>'Diese Guppe wiklich löschen?',
-  'eally_delete_galley'=>'Diese Galeie wiklich löschen?',
-  'sot'=>'Sotieung',
-  'tansaction_invalid'=>'Tansaktions ID ungültig',
-  'to_sot'=>'sotieen',
+  'really_delete_group'=>'Diese Gruppe wirklich löschen?',
+  'really_delete_gallery'=>'Diese Galerie wirklich löschen?',
+  'sort'=>'Sortierung',
+  'transaction_invalid'=>'Transaktions ID ungültig',
+  'to_sort'=>'sortieren',
   'upload'=>'Upload',
-  'usegalleies'=>'Benutze-Galeien',
-  'usegalley_of'=>'Benutze-Galeie von',
-  'visito_comments'=>'Besuche Kommentae',
-	'no_thumb'=>'Kein Thumb vohanden'
+  'usergalleries'=>'Benutzer-Galerien',
+  'usergallery_of'=>'Benutzer-Galerie von',
+  'visitor_comments'=>'Besucher Kommentare',
+	'no_thumb'=>'Kein Thumb vorhanden'
 );
 ?>

@@ -2,41 +2,41 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Vesion 4       /                        /   /               #
+#           Version 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Fee Content / Management System                 #
+#                       Free Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyight 2005-2014 by webspell.og                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
-#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
-#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to emove this copyight-tag                      #
-#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
+#   visit webSPELL.org, webspell.info to get webSPELL for free           #
+#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to remove this copyright-tag                      #
+#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
-#   Fa Development by Development Team - webspell.og                   #
+#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
+#   Far Development by Development Team - webspell.org                   #
 #                                                                        #
-#   visit webspell.og                                                   #
+#   visit webspell.org                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_aay = Aay(
+$language_array = Array(
 
 /* do not edit above this line */
 
-	'add_notexists'=>'Ovaj koisnik ne postoji',
-	'add_nouseid'=>'Koisnicki ID nije dostupan',
-	'add_youself'=>'Ne možete dodati sebe kao pijatelja, niti ignoiati sebe na listi pijatelja!',
-	'buddy_nouses'=>'Nemate koisnika na listi pijatelja',
-	'buddys'=>'Pijatelji',
-	'ignoe_nouses'=>'Nemate koisnika na listi ignoianja pijatelja',
-	'not_logged'=>'Da bi upavljali listom pijatelja, moate biti egistian i pijavljen koisnik.<b><a hef="index.php?site=egiste">Registiaj se</a> | <a hef="index.php?site=login">Pijavi se</a>',
-	'you_buddylist'=>'Tvoja lista pijatelja',
-	'you_ignoelist'=>'Tvoja lista ignoianja'
+	'add_notexists'=>'Ovaj korisnik ne postoji',
+	'add_nouserid'=>'Korisnicki ID nije dostupan',
+	'add_yourself'=>'Ne možete dodati sebe kao prijatelja, niti ignorirati sebe na listi prijatelja!',
+	'buddy_nousers'=>'Nemate korisnika na listi prijatelja',
+	'buddys'=>'Prijatelji',
+	'ignore_nousers'=>'Nemate korisnika na listi ignoriranja prijatelja',
+	'not_logged'=>'Da bi upravljali listom prijatelja, morate biti registriran i prijavljen korisnik.<br><a href="index.php?site=register">Registriraj se</a> | <a href="index.php?site=login">Prijavi se</a>',
+	'your_buddylist'=>'Tvoja lista prijatelja',
+	'your_ignorelist'=>'Tvoja lista ignoriranja'
 );
 ?>

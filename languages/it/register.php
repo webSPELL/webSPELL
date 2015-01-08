@@ -2,72 +2,72 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Vesion 4       /                        /   /               #
+#           Version 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Fee Content / Management System                 #
+#                       Free Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyight 2005-2014 by webspell.og                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
-#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
-#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to emove this copyight-tag                      #
-#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
+#   visit webSPELL.org, webspell.info to get webSPELL for free           #
+#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to remove this copyright-tag                      #
+#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
-#   Fa Development by Development Team - webspell.og                   #
+#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
+#   Far Development by Development Team - webspell.org                   #
 #                                                                        #
-#   visit webspell.og                                                   #
+#   visit webspell.org                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_aay = Aay(
+$language_array = Array(
 
 /* do not edit above this line */
 
-	'activation_successful'=>'La tua ichiesta è stata completata con successo.<b>Puoi egistati oa.',
-	'back'=>'indieto',
-	'ente_nickname'=>'Si pega di inseie un nickname.',
-	'ente_passwod'=>'Si pega di inseie una passwod.',
-	'ente_usename'=>'Si pega di inseie un nome utente.',
-	'eos_thee'=>'Ci sono alcuni eoi',
-	'fo_login'=>'solo l*applicazione',
-	'invalid_mail'=>'Il dato indiizzo e-mail non è coetto.',
+	'activation_successful'=>'La tua richiesta è stata completata con successo.<br>Puoi registrarti ora.',
+	'back'=>'indietro',
+	'enter_nickname'=>'Si prega di inserire un nickname.',
+	'enter_password'=>'Si prega di inserire una password.',
+	'enter_username'=>'Si prega di inserire un nome utente.',
+	'errors_there'=>'Ci sono alcuni errori',
+	'for_login'=>'solo l*applicazione',
+	'invalid_mail'=>'Il dato indirizzo e-mail non è corretto.',
 	'mail'=>'E-Mail',
-	'mail_activation_successful'=>'Il sbloccae il tuo indiizzo e-mail ha avuto esito positivo.',
-	'mail_failed'=>'L*attivazione e-mail non ha potuto essee inviato, si pega di infomae il webmaste al iguado.',
-	'mail_inuse'=>'Esiste già una domanda di questo indiizzo email.',
-	'mail_subject'=>'confema di egistatione da %homepage_ul%',
-	'mail_text'=>'Ciao %usename%!
+	'mail_activation_successful'=>'Il sbloccare il tuo indirizzo e-mail ha avuto esito positivo.',
+	'mail_failed'=>'L*attivazione e-mail non ha potuto essere inviato, si prega di informare il webmaster al riguardo.',
+	'mail_inuse'=>'Esiste già una domanda di questo indirizzo email.',
+	'mail_subject'=>'conferma di registratione da %homepage_url%',
+	'mail_text'=>'Ciao %username%!
 
-La tua notifica alla %pagetitle% (%homepage_ul%) ha avuto successo. Qui, ancoa una volta i tuoi dati di accesso:
+La tua notifica alla %pagetitle% (%homepage_url%) ha avuto successo. Qui, ancora una volta i tuoi dati di accesso:
 
-Il tuo nome utente: %usename%
+Il tuo nome utente: %username%
 
-Pe completae la egistazione adesso, pe attivae il tuo account, visita il seguente link da visitae:
+Per completare la registrazione adesso, per attivare il tuo account, visita il seguente link da visitare:
 %activationlink%
 
-Gazie pe la vosta applicazione
-%pagetitle% - %homepage_ul%',
+Grazie per la vostra applicazione
+%pagetitle% - %homepage_url%',
 	'nickname'=>'Nickname',
-	'nickname_inuse'=>'Il sopannome è già pesa.',
-	'no_egiste_when_loggedin'=>'You alleady have an account at %pagename%',
-	'passwod'=>'Passwod',
-	'pofile_info'=>'Applicazione infomazioni',
-	'egiste_now'=>'Registati oa!',
-	'egiste_successful'=>'La tua ichiesta è stata completata con successo. Saà in pochi minuti una e-mail con il codice di sblocco in modo da pote attivae il tuo account. Dopo la egistazione è completa.',
-	'egistation'=>'Registazione',
-	'epeat'=>'Ripetee la passwod',
-	'epeat_invalid'=>'La ipetizione del passwod non è coetto.',
-	'secuity_code'=>'Codice di sicuezza',
-	'usename'=>'Nome utente',
-	'usename_inuse'=>'Il nome utente è già pesa.',
-	'usename_toolong'=>'Il nome utente è toppo lungo (max. 30 Caattee).',
-	'wong_activationkey'=>'Il tuo codice di sblocco è sbagliato!',
-	'wong_secuitycode'=>'Il codice di sicuezza è sbagliato!'
+	'nickname_inuse'=>'Il soprannome è già presa.',
+	'no_register_when_loggedin'=>'You allready have an account at %pagename%',
+	'password'=>'Password',
+	'profile_info'=>'Applicazione informazioni',
+	'register_now'=>'Registrati ora!',
+	'register_successful'=>'La tua richiesta è stata completata con successo. Sarà in pochi minuti una e-mail con il codice di sblocco in modo da poter attivare il tuo account. Dopo la registrazione è completa.',
+	'registration'=>'Registrazione',
+	'repeat'=>'Ripetere la password',
+	'repeat_invalid'=>'La ripetizione del password non è corretto.',
+	'security_code'=>'Codice di sicurezza',
+	'username'=>'Nome utente',
+	'username_inuse'=>'Il nome utente è già presa.',
+	'username_toolong'=>'Il nome utente è troppo lungo (max. 30 Carattere).',
+	'wrong_activationkey'=>'Il tuo codice di sblocco è sbagliato!',
+	'wrong_securitycode'=>'Il codice di sicurezza è sbagliato!'
 );
 ?>

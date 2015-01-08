@@ -2,54 +2,54 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Vesion 4       /                        /   /               #
+#           Version 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Fee Content / Management System                 #
+#                       Free Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyight 2005-2014 by webspell.og                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
-#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
-#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to emove this copyight-tag                      #
-#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
+#   visit webSPELL.org, webspell.info to get webSPELL for free           #
+#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to remove this copyright-tag                      #
+#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
-#   Fa Development by Development Team - webspell.og                   #
+#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
+#   Far Development by Development Team - webspell.org                   #
 #                                                                        #
-#   visit webspell.og                                                   #
+#   visit webspell.org                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_aay = Aay(
+$language_array = Array(
 
 /* do not edit above this line */
 
   'access_denied'=>'Access denied',
   'actions'=>'Actions',
-  'add_county'=>'add County',
+  'add_country'=>'add Country',
   'back'=>'back',
-  'counties'=>'Counties',
-  'county'=>'County',
+  'countries'=>'Countries',
+  'country'=>'Country',
   'delete'=>'delete',
   'edit'=>'edit',
-  'edit_county'=>'edit County',
-  'favoite'=>'Favoite',
-  'fill_coectly'=>'Please fill in the fom coectly.',
-  'fomat_incoect'=>'The fomat of the icon was incoect. Please upload only icons in *.gif fomat.',
+  'edit_country'=>'edit Country',
+  'favorite'=>'Favorite',
+  'fill_correctly'=>'Please fill in the form correctly.',
+  'format_incorrect'=>'The format of the icon was incorrect. Please upload only icons in *.gif format.',
   'icon'=>'Icon',
   'icons'=>'Icons',
   'icon_upload'=>'Icon Upload',
   'max_18x12'=>'(max. 18x12)',
-  'new_county'=>'new County',
-  'no_enties'=>'No enties',
-  'pesent_icon'=>'pesent Icon',
-  'eally_delete'=>'Really delete this County?',
-  'shothandle'=>'Shothandle',
-  'tansaction_invalid'=>'Tansaction ID invalid'
+  'new_country'=>'new Country',
+  'no_entries'=>'No entries',
+  'present_icon'=>'present Icon',
+  'really_delete'=>'Really delete this Country?',
+  'shorthandle'=>'Shorthandle',
+  'transaction_invalid'=>'Transaction ID invalid'
 );
 ?>

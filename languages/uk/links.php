@@ -2,56 +2,56 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Vesion 4       /                        /   /               #
+#           Version 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Fee Content / Management System                 #
+#                       Free Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyight 2005-2014 by webspell.og                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
-#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
-#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to emove this copyight-tag                      #
-#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
+#   visit webSPELL.org, webspell.info to get webSPELL for free           #
+#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to remove this copyright-tag                      #
+#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
-#   Fa Development by Development Team - webspell.og                   #
+#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
+#   Far Development by Development Team - webspell.org                   #
 #                                                                        #
-#   visit webspell.og                                                   #
+#   visit webspell.org                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_aay = Aay(
+$language_array = Array(
 
 /* do not edit above this line */
 
 	'back'=>'back',
-	'banne'=>'Banne',
-	'banne_to_big'=>'Pictue is to big',
-	'categoies'=>'Categoies',
-	'categoy'=>'Categoy',
+	'banner'=>'Banner',
+	'banner_to_big'=>'Picture is to big',
+	'categories'=>'Categories',
+	'category'=>'Category',
 	'delete'=>'delete',
 	'edit'=>'edit',
 	'edit_link'=>'Edit link',
-	'fomat_incoect'=>'Invalid pictue-fomat (allowed: *.gif, *.jpg o *.png)',
+	'format_incorrect'=>'Invalid picture-format (allowed: *.gif, *.jpg or *.png)',
 	'go_back'=>'go back',
-	'homepage'=>'Addess',
-	'infomation'=>'infomation',
+	'homepage'=>'Address',
+	'information'=>'information',
 	'link'=>'Link',
 	'linkname'=>'Linkname',
-	'linkubic'=>'Linkubic',
+	'linkrubric'=>'Linkrubric',
 	'links'=>'Links',
 	'new_link'=>'New link',
 	'no_access'=>'no access.',
-	'no_categoies'=>'no categoies available',
+	'no_categories'=>'no categories available',
 	'no_links'=>'no links available',
-	'eally_delete'=>'eally delete this enty?',
+	'really_delete'=>'really delete this entry?',
 	'save_link'=>'Save link',
-	'title_categoies'=>'Link categoies',
+	'title_categories'=>'Link categories',
 	'update_link'=>'Update link'
 );
 ?>

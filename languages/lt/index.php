@@ -2,53 +2,53 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Vesion 4       /                        /   /               #
+#           Version 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Fee Content / Management System                 #
+#                       Free Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyight 2005-2014 by webspell.og                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
-#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
-#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to emove this copyight-tag                      #
-#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
+#   visit webSPELL.org, webspell.info to get webSPELL for free           #
+#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to remove this copyright-tag                      #
+#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
-#   Fa Development by Development Team - webspell.og                   #
+#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
+#   Far Development by Development Team - webspell.org                   #
 #                                                                        #
-#   visit webspell.og                                                   #
+#   visit webspell.org                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_aay = Aay(
+$language_array = Array(
 
 /* do not edit above this line */
 
-	'advetisement'=>'eklama',
-	'aticles'=>'staipsniai',
-	'content'=>'tuinys',
-	'demos'=>'demo įašai',
+	'advertisement'=>'reklama',
+	'articles'=>'straipsniai',
+	'content'=>'turinys',
+	'demos'=>'demo įrašai',
 	'downloads'=>'siuntiniai',
-	'hotest_news'=>'kaščiausios naujienos',
+	'hotest_news'=>'karščiausios naujienos',
 	'language_switch'=>'kalbos keitiklis',
 	'latest_news'=>'paskutinės naujienos',
-	'login'=>'pisijungti',
+	'login'=>'prisijungti',
 	'matches'=>'kovos',
-	'newslette'=>'naujienlaiškis',
-	'patnes'=>'daugai',
-	'pic_of_the_moment'=>'šios akimikos vaizdas',
+	'newsletter'=>'naujienlaiškis',
+	'partners'=>'draugai',
+	'pic_of_the_moment'=>'šios akimirkos vaizdas',
 	'poll'=>'apklausa',
-	'andom_use'=>'atsitiktinis vatotojas',
-	'scolltext'=>'bėgantis tekstas',
-	'seve'=>'seveis',
+	'random_user'=>'atsitiktinis vartotojas',
+	'scrolltext'=>'bėgantis tekstas',
+	'server'=>'serveris',
 	'shoutbox'=>'šaukykla',
-	'sponsos'=>'emėjai',
-	'squads'=>'būiai',
+	'sponsors'=>'remėjai',
+	'squads'=>'būriai',
 	'statistics'=>'statistika',
 	'topics'=>'temos',
 	'upcoming_events'=>'ateinantys įvykiai',

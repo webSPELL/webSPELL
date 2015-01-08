@@ -2,61 +2,61 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Vesion 4       /                        /   /               #
+#           Version 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Fee Content / Management System                 #
+#                       Free Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyight 2005-2014 by webspell.og                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
-#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
-#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to emove this copyight-tag                      #
-#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
+#   visit webSPELL.org, webspell.info to get webSPELL for free           #
+#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to remove this copyright-tag                      #
+#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
-#   Fa Development by Development Team - webspell.og                   #
+#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
+#   Far Development by Development Team - webspell.org                   #
 #                                                                        #
-#   visit webspell.og                                                   #
+#   visit webspell.org                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_aay = Aay(
+$language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Zugiff veweiget',
-  'change_size'=>'Göße wechseln',
+  'access_denied'=>'Zugriff verweigert',
+  'change_size'=>'Größe wechseln',
   'days'=>'Tage',
   'days_online'=>'Tage online',
   'guest'=>'Gast',
   'guests'=>'Gäste',
   'last'=>'Letzten',
-  'max_day'=>'Tagesekod',
+  'max_day'=>'Tagesrekord',
   'months'=>'Monate',
   'now_online'=>'Jetzt Online',
   'settings'=>'Einstellungen',
   'show'=>'anzeigen',
-  'show_yea_month'=>'Zeige definietes Jah &amp; Monat',
+  'show_year_month'=>'Zeige definiertes Jahr &amp; Monat',
   'stats'=>'Statistiken',
   'this_month'=>'Diesen Monat',
   'today'=>'Heute',
   'total'=>'Insgesamt',
-  'use'=>'Benutze',
-  'uses'=>'Benutze',
-  'visito'=>'Besuche',
-  'visito_stats_gaphics'=>'Besuche Statistiken (Gafiken)',
-  'visito_stats_oveall'=>'Besuche Statistiken (Allgemein)',
-  'visits_day'=>'Besuche po Tag',
-  'visits_hou'=>'Besuche po Stunde',
-  'visits_month'=>'Besuche po Monat',
-  'visits_total'=>'Besuche insgesamt',
-  'width_height'=>'(Beite x Höhe)',
-  'yesteday'=>'Gesten',
+  'user'=>'Benutzer',
+  'users'=>'Benutzer',
+  'visitor'=>'Besucher',
+  'visitor_stats_graphics'=>'Besucher Statistiken (Grafiken)',
+  'visitor_stats_overall'=>'Besucher Statistiken (Allgemein)',
+  'visits_day'=>'Besucher pro Tag',
+  'visits_hour'=>'Besucher pro Stunde',
+  'visits_month'=>'Besucher pro Monat',
+  'visits_total'=>'Besucher insgesamt',
+  'width_height'=>'(Breite x Höhe)',
+  'yesterday'=>'Gestern',
   'yyyy'=>'(JJJJ)',
   'yyyy_mm'=>'(JJJJ.MM)'
 );

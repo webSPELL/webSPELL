@@ -2,85 +2,85 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Vesion 4       /                        /   /               #
+#           Version 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Fee Content / Management System                 #
+#                       Free Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyight 2005-2014 by webspell.og                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
-#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
-#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to emove this copyight-tag                      #
-#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
+#   visit webSPELL.org, webspell.info to get webSPELL for free           #
+#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to remove this copyright-tag                      #
+#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
-#   Fa Development by Development Team - webspell.og                   #
+#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
+#   Far Development by Development Team - webspell.org                   #
 #                                                                        #
-#   visit webspell.og                                                   #
+#   visit webspell.org                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_aay = Aay(
+$language_array = Array(
 
 /* do not edit above this line */
 
-	'autho'=>'Szező',
+	'author'=>'Szerző',
 	'bbcode'=>'BBCode <b><u>Bekapcsolva</u></b>',
 	'cancel'=>'mégse',
 	'comm'=>'Komm',
-	'comment'=>'<a hef="$ul">[1] komment</a>, legutolsó $lastposte - $lastdate',
-	'comments'=>'<a hef="$ul">[$anzcomments] kommentek</a>, legutolsó $lastposte - $lastdate',
+	'comment'=>'<a href="$url">[1] komment</a>, legutolsó $lastposter - $lastdate',
+	'comments'=>'<a href="$url">[$anzcomments] kommentek</a>, legutolsó $lastposter - $lastdate',
 	'date'=>'Dátum',
-	'delete'=>'tölés',
-	'delete_selected'=>'kijelölt tölése',
-	'edit'=>'szekesztés',
-	'ente_title'=>'Meg kell adnod a címet!',
-	'ente_text'=>'Meg kell adnod a szöveget',
+	'delete'=>'törlés',
+	'delete_selected'=>'kijelölt törlése',
+	'edit'=>'szerkesztés',
+	'enter_title'=>'Meg kell adnod a címet!',
+	'enter_text'=>'Meg kell adnod a szöveget',
 	'go'=>'Go!',
 	'headline'=>'Fejléc',
 	'html'=>'HTML <b><u>Bekapcsolva</u></b>',
-	'inten'=>'bizalmas',
+	'intern'=>'bizalmas',
 	'languages'=>'Nyelvek',
 	'link'=>'Link',
 	'links'=>'Linkek',
-	'new_post'=>'Új hí',
+	'new_post'=>'Új hír',
 	'new_window'=>'Új ablak',
-	'news'=>'Híek',
-	'news_achive'=>'Ahívum',
+	'news'=>'Hírek',
+	'news_archive'=>'Arhívum',
 	'no'=>'nem',
 	'no_access'=>'belépés megtagadva',
-	'no_comment'=>'<a hef="$ul">nincs komment</a>',
+	'no_comment'=>'<a href="$url">nincs komment</a>',
 	'no_comments'=>'kommentek tiltása',
-	'no_topnews'=>'nincs top hí',
+	'no_topnews'=>'nincs top hír',
 	'options'=>'lehetőségek',
-	'post_languages'=>'Híek a következő nyelveken: <select name="language_count" onchange="update_textaea(this.options[this.selectedIndex].value)">$selects</select>',
-	'post_news'=>'hí beküldése',
-	'peview'=>'előnézet',
+	'post_languages'=>'Hírek a következő nyelveken: <select name="language_count" onchange="update_textarea(this.options[this.selectedIndex].value)">$selects</select>',
+	'post_news'=>'hír beküldése',
+	'preview'=>'előnézet',
 	'publish_now'=>'közlés most',
 	'publish_selected'=>'kijelölt közlése',
-	'eally_delete'=>'Tényleg töölni akaod ezt a hít?',
-	'ubic'=>'Rovat',
-	'save_news'=>'híek mentése',
+	'really_delete'=>'Tényleg törölni akarod ezt a hírt?',
+	'rubric'=>'Rovat',
+	'save_news'=>'hírek mentése',
 	'select_all'=>'mindet kijelöl',
 	'self'=>'azonos ablak',
-	'show_news'=>'híek mutatása',
+	'show_news'=>'hírek mutatása',
 	'smilies'=>'Hangulatjelek <b><u>Bekapcsolva</u></b>',
-	'sot'=>'Rendezés:',
+	'sort'=>'Rendezés:',
 	'title_unpublished_news'=>'<h2>NEM KÖZÖLT HÍREK:</h2>',
-	'topnews'=>'legjobb híek',
+	'topnews'=>'legjobb hírek',
 	'unpublish'=>'bevonás',
 	'unpublish_selected'=>'kijelölt bevonása',
-	'unpublished_news'=>'nem közölt híek',
+	'unpublished_news'=>'nem közölt hírek',
 	'upload_images'=>'képek feltöltése',
-	'use_comments'=>'csak a tagok kommentálhatják',
-	'view_moe'=>'Tovább...',
-	'visito_comments'=>'a vendégek is kommentálhatják',
-	'witten_by'=>'Íta:',
+	'user_comments'=>'csak a tagok kommentálhatják',
+	'view_more'=>'Tovább...',
+	'visitor_comments'=>'a vendégek is kommentálhatják',
+	'written_by'=>'Írta:',
 	'yes'=>'igen',
 	'tags'=>'címkék'
 );

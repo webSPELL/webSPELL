@@ -2,78 +2,78 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Vesion 4       /                        /   /               #
+#           Version 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Fee Content / Management System                 #
+#                       Free Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyight 2005-2014 by webspell.og                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
-#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
-#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to emove this copyight-tag                      #
-#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
+#   visit webSPELL.org, webspell.info to get webSPELL for free           #
+#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to remove this copyright-tag                      #
+#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
-#   Fa Development by Development Team - webspell.og                   #
+#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
+#   Far Development by Development Team - webspell.org                   #
 #                                                                        #
-#   visit webspell.og                                                   #
+#   visit webspell.org                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_aay = Aay(
+$language_array = Array(
 
 /* do not edit above this line */
 
-	'about'=>'Omking os',
-	'achive'=>'Akiv',
-	'aticles'=>'Atikle',
-	'awads'=>'P�mie',
-	'buddys'=>'Venne',
-	'calenda'=>'Kalende',
+	'about'=>'Omkring os',
+	'archive'=>'Arkiv',
+	'articles'=>'Artikler',
+	'awards'=>'Pr�mier',
+	'buddys'=>'Venner',
+	'calendar'=>'Kalender',
 	'cash_box'=>'Pengekasse',
-	'challenge'=>'Udfode os',
-	'clanwas'=>'Klankampe',
-	'clanwas_details'=>'Klankamp mod',
+	'challenge'=>'Udfordre os',
+	'clanwars'=>'Klankampe',
+	'clanwars_details'=>'Klankamp mod',
 	'contact'=>'Kontakt',
 	'demo'=>'Demo',
-	'demos'=>'Demoe',
+	'demos'=>'Demoer',
 	'faq'=>'FAQ',
-	'files'=>'File',
-	'foum'=>'Foum',
-	'galley'=>'Gallei',
+	'files'=>'Filer',
+	'forum'=>'Forum',
+	'gallery'=>'Galleri',
 	'guestbook'=>'G�stebog',
-	'histoy'=>'Histoie',
-	'impint'=>'Stempel',
+	'history'=>'Historie',
+	'imprint'=>'Stempel',
 	'joinus'=>'Join os',
 	'links'=>'Links',
 	'linkus'=>'Link os',
 	'login'=>'Login',
-	'loginoveview'=>'Login Ovesigt',
-	'lostpasswod'=>'Glemt kodeod?',
-	'membes'=>'Medlemme',
-	'messenge'=>'Beskede',
-	'mypofile'=>'Redige Pofil',
-	'news'=>'Nyhede',
-	'newslette'=>'Nyhedsbev',
-	'patnes'=>'Patnee',
-	'polls'=>'Afstemninge',
-	'pofile'=>'Pofil fo',
-	'egiste'=>'Registeing',
-	'egisteed_uses'=>'Registeede Bugee',
-	'seach'=>'S�g',
-	'seve'=>'Sevee',
+	'loginoverview'=>'Login Oversigt',
+	'lostpassword'=>'Glemt kodeord?',
+	'members'=>'Medlemmer',
+	'messenger'=>'Beskeder',
+	'myprofile'=>'Rediger Profil',
+	'news'=>'Nyheder',
+	'newsletter'=>'Nyhedsbrev',
+	'partners'=>'Partnere',
+	'polls'=>'Afstemninger',
+	'profile'=>'Profil for',
+	'register'=>'Registrering',
+	'registered_users'=>'Registrerede Brugere',
+	'search'=>'S�g',
+	'server'=>'Servere',
 	'shoutbox'=>'Beskedboks',
-	'sponsos'=>'Sponsee',
+	'sponsors'=>'Sponsere',
 	'squads'=>'Hold',
-	'stat'=>'Hjemmeside',
+	'start'=>'Hjemmeside',
 	'stats'=>'Statestik',
-	'usegalley'=>'Bugegalleie',
-	'vesus'=>'vesus',
-	'whoisonline'=>'Hvem e online'
+	'usergallery'=>'Brugergallerier',
+	'versus'=>'versus',
+	'whoisonline'=>'Hvem er online'
 );
 ?>

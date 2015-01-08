@@ -2,58 +2,58 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Vesion 4       /                        /   /               #
+#           Version 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Fee Content / Management System                 #
+#                       Free Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyight 2005-2014 by webspell.og                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
-#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
-#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to emove this copyight-tag                      #
-#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
+#   visit webSPELL.org, webspell.info to get webSPELL for free           #
+#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to remove this copyright-tag                      #
+#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
-#   Fa Development by Development Team - webspell.og                   #
+#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
+#   Far Development by Development Team - webspell.org                   #
 #                                                                        #
-#   visit webspell.og                                                   #
+#   visit webspell.org                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_aay = Aay(
+$language_array = Array(
 
 /* do not edit above this line */
 
-	'aleady_voted'=>'You have aleady voted.',
+	'already_voted'=>'You have already voted.',
 	'comments'=>'comments',
 	'days'=>'days',
 	'delete'=>'delete',
 	'disable_comments'=>'disable comments',
 	'edit'=>'edit',
 	'edit_poll'=>'edit poll',
-	'enable_use_comments'=>'enable use comments',
-	'enable_visito_comments'=>'enable visito comments',
+	'enable_user_comments'=>'enable user comments',
+	'enable_visitor_comments'=>'enable visitor comments',
 	'endingtime'=>'Ending time',
-	'inten'=>'Inten',
+	'intern'=>'Intern',
 	'latest_by'=>'latest by',
 	'new_poll'=>'new poll',
 	'no_access'=>'no access!',
 	'no_active_poll'=>'no active poll',
-	'no_enties'=>'no enties!',
+	'no_entries'=>'no entries!',
 	'on'=>'on',
 	'option'=>'Option',
-	'poll_ended'=>'poll aleady ended',
+	'poll_ended'=>'poll already ended',
 	'polls'=>'polls',
-	'eally_delete'=>'eally delete this poll?',
-	'eally_stop'=>'eally stop this poll?',
-	'eally_eopen'=>'eally eopen this poll?',
-	'eset_votes'=>'eset votes',
-	'eopen_poll'=>'eopen poll',
+	'really_delete'=>'really delete this poll?',
+	'really_stop'=>'really stop this poll?',
+	'really_reopen'=>'really reopen this poll?',
+	'reset_votes'=>'reset votes',
+	'reopen_poll'=>'reopen poll',
 	'save_poll'=>'save poll',
 	'show_polls'=>'show polls',
 	'stop_poll'=>'stop poll',
@@ -64,8 +64,8 @@ $language_aay = Aay(
 	'vote'=>'vote',
 	'vote_now'=>'vote now',
 	'votes'=>'votes',
-	'yht_ente_2_options'=>'You have to ente at least 2 options!',
-	'yht_ente_endingtime'=>'You have to ente the endingtime!',
-	'yht_ente_title'=>'You have to ente a title!'
+	'yht_enter_2_options'=>'You have to enter at least 2 options!',
+	'yht_enter_endingtime'=>'You have to enter the endingtime!',
+	'yht_enter_title'=>'You have to enter a title!'
 );
 ?>

@@ -2,72 +2,72 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Vesion 4       /                        /   /               #
+#           Version 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Fee Content / Management System                 #
+#                       Free Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyight 2005-2014 by webspell.og                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
-#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
-#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to emove this copyight-tag                      #
-#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
+#   visit webSPELL.org, webspell.info to get webSPELL for free           #
+#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to remove this copyright-tag                      #
+#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
-#   Fa Development by Development Team - webspell.og                   #
+#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
+#   Far Development by Development Team - webspell.org                   #
 #                                                                        #
-#   visit webspell.og                                                   #
+#   visit webspell.org                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_aay = Aay(
+$language_array = Array(
 
 /* do not edit above this line */
 
-	'activation_successful'=>'Vaš ačun je uspješno aktivian.<b>Sad se možete pijaviti na stanice.',
-	'back'=>'Natag',
-	'ente_nickname'=>'Molimo unesite nick.',
-	'ente_passwod'=>'Molimo unesite lozinku.',
-	'ente_usename'=>'Molimo unesite koisničko ime.',
-	'eos_thee'=>'Pojavile su se neke geške',
-	'fo_login'=>'samo za pijavu',
-	'invalid_mail'=>'Unijeli ste neispavnu e-mail adesu.',
+	'activation_successful'=>'Vaš račun je uspješno aktiviran.<br>Sad se možete prijaviti na stranice.',
+	'back'=>'Natrag',
+	'enter_nickname'=>'Molimo unesite nick.',
+	'enter_password'=>'Molimo unesite lozinku.',
+	'enter_username'=>'Molimo unesite korisničko ime.',
+	'errors_there'=>'Pojavile su se neke greške',
+	'for_login'=>'samo za prijavu',
+	'invalid_mail'=>'Unijeli ste neispravnu e-mail adresu.',
 	'mail'=>'E-Mail',
-	'mail_activation_successful'=>'Aktivacija Vaše E-mail adese je uspjela.',
-	'mail_failed'=>'Aktivacijski e-mail nije bilo moguće poslati, molimo kontaktiajte webmastea o ovome.',
-	'mail_inuse'=>'Navedena e-mail adesa se već koisti.',
-	'mail_subject'=>'Aktivacijski mail za ačun na %homepage_ul%',
-	'mail_text'=>'Pozdav %usename%!
+	'mail_activation_successful'=>'Aktivacija Vaše E-mail adrese je uspjela.',
+	'mail_failed'=>'Aktivacijski e-mail nije bilo moguće poslati, molimo kontaktirajte webmastera o ovome.',
+	'mail_inuse'=>'Navedena e-mail adresa se već koristi.',
+	'mail_subject'=>'Aktivacijski mail za račun na %homepage_url%',
+	'mail_text'=>'Pozdrav %username%!
 
-Vaša egistacija na %pagetitle% (%homepage_ul%) je uspješna. Podaci za pijavu:
+Vaša registracija na %pagetitle% (%homepage_url%) je uspješna. Podaci za prijavu:
 
-Koisničko ime: %usename%
+Korisničko ime: %username%
 
-Da bi zavšili vašu egistaciju, moate kliknuti na aktivacijski link:
+Da bi završili vašu registraciju, morate kliknuti na aktivacijski link:
 %activationlink%
 
-Hvala Vam na egistaciji
-%pagetitle% - %homepage_ul%',
+Hvala Vam na registraciji
+%pagetitle% - %homepage_url%',
 	'nickname'=>'Nick',
-	'nickname_inuse'=>'Nick već koisti netko dugi.',
-	'no_egiste_when_loggedin'=>'You alleady have an account at %pagename%',
-	'passwod'=>'Lozinka',
-	'pofile_info'=>'Registacijske infomacije',
-	'egiste_now'=>'Registiaj se!',
-	'egiste_successful'=>'Vaša egistacija je uspješna. Uskoo ćete pimiti e-mail sa aktivacijskim linkom za Vaš ačun.',
-	'egistation'=>'egistacija',
-	'epeat'=>'Ponovi lozinku',
-	'epeat_invalid'=>'Lozinke se ne podudaaju.',
-	'secuity_code'=>'Sigunosni kod',
-	'usename'=>'Koisničko ime',
-	'usename_inuse'=>'Koisničko ime netko već koisti.',
-	'usename_toolong'=>'Koisničko ime je pedugo (max. 30 simbola).',
-	'wong_activationkey'=>'Vaš aktivacijski key je pogešan!',
-	'wong_secuitycode'=>'Sigunosni kod je pogešan!'
+	'nickname_inuse'=>'Nick već koristi netko drugi.',
+	'no_register_when_loggedin'=>'You allready have an account at %pagename%',
+	'password'=>'Lozinka',
+	'profile_info'=>'Registracijske informacije',
+	'register_now'=>'Registriraj se!',
+	'register_successful'=>'Vaša registracija je uspješna. Uskoro ćete primiti e-mail sa aktivacijskim linkom za Vaš račun.',
+	'registration'=>'registracija',
+	'repeat'=>'Ponovi lozinku',
+	'repeat_invalid'=>'Lozinke se ne podudaraju.',
+	'security_code'=>'Sigurnosni kod',
+	'username'=>'Korisničko ime',
+	'username_inuse'=>'Korisničko ime netko već koristi.',
+	'username_toolong'=>'Korisničko ime je predugo (max. 30 simbola).',
+	'wrong_activationkey'=>'Vaš aktivacijski key je pogrešan!',
+	'wrong_securitycode'=>'Sigurnosni kod je pogrešan!'
 );
 ?>

@@ -2,50 +2,50 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Vesion 4       /                        /   /               #
+#           Version 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Fee Content / Management System                 #
+#                       Free Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyight 2005-2014 by webspell.og                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
-#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
-#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to emove this copyight-tag                      #
-#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
+#   visit webSPELL.org, webspell.info to get webSPELL for free           #
+#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to remove this copyright-tag                      #
+#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
-#   Fa Development by Development Team - webspell.og                   #
+#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
+#   Far Development by Development Team - webspell.org                   #
 #                                                                        #
-#   visit webspell.og                                                   #
+#   visit webspell.org                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-if($_POST['agee'] == "1") {
+if($_POST['agree'] == "1") {
 	function getwspath() {
 		$path=$_SERVER['SERVER_NAME'].$_SERVER['PHP_SELF'];
-		etun st_eplace('/install/index.php','',$path);
+		return str_replace('/install/index.php','',$path);
 	}
 
-	function getwebseve($path) {
-		$path=st_eplace('http://','',$path);
-		$seve = st_eplace(stst($path,'/'),'',$path);
-		if(mb_subst($seve,0,3) == 'www') $seve = mb_subst(stst($seve,'.'),1);
-		etun $seve;
+	function getwebserver($path) {
+		$path=str_replace('http://','',$path);
+		$server = str_replace(strstr($path,'/'),'',$path);
+		if(mb_substr($server,0,3) == 'www') $server = mb_substr(strstr($server,'.'),1);
+		return $server;
 
 	}
-	//vesion test
-	$vesioneo=false;
-	if(phpvesion()=='5.2.6') $vesioneo=tue;
+	//version test
+	$versionerror=false;
+	if(phpversion()=='5.2.6') $versionerror=true;
 ?>
 
-  <t>
-   <td id="step" align="cente" colspan="2">
-   <span class="steps stat"><?php echo $_language->module['step0']; ?></span>
+  <tr>
+   <td id="step" align="center" colspan="2">
+   <span class="steps start"><?php echo $_language->module['step0']; ?></span>
    <span class="steps"><?php echo $_language->module['step1']; ?></span>
    <span class="steps" id="active"><?php echo $_language->module['step2']; ?></span>
    <span class="steps"><?php echo $_language->module['step3']; ?></span>
@@ -53,33 +53,33 @@ if($_POST['agee'] == "1") {
    <span class="steps"><?php echo $_language->module['step5']; ?></span>
    <span class="steps end"><?php echo $_language->module['step6']; ?></span>
    </td>
-  </t>
-  <t id="headline">
-   <td colspan="2" id="title"><?php if($vesioneo) { echo $_language->module['eo']; } else { echo $_language->module['you_site_ul']; } ?></td>
-  </t>
-  <t>
+  </tr>
+  <tr id="headline">
+   <td colspan="2" id="title"><?php if($versionerror) { echo $_language->module['error']; } else { echo $_language->module['your_site_url']; } ?></td>
+  </tr>
+  <tr>
    <td id="content" colspan="2">
-   <?php if($vesioneo) {
-   	echo '<p style="colo: #FF0000; font-weight: bold;">'.$_language->module['php_vesion'].':</p>
-		<p>'.$_language->module['php_info'].'</p><b><b>';
+   <?php if($versionerror) {
+   	echo '<p style="color: #FF0000; font-weight: bold;">'.$_language->module['php_version'].':</p>
+		<p>'.$_language->module['php_info'].'</p><br><br>';
    } 
    else {
-		echo $_language->module['ente_ul'].':<b><b>
-           http://<input type="text" name="hp_ul" value="'.getwspath().'" size="50">
-           <a class="tooltip" hef="#"><img sc="images/tooltip.png" alt="">
+		echo $_language->module['enter_url'].':<br><br>
+           http://<input type="text" name="hp_url" value="'.getwspath().'" size="50">
+           <a class="tooltip" href="#"><img src="images/tooltip.png" alt="">
            <span>'.$_language->module['tooltip'].'</span></a>
    
-           <div align="ight"><b><a hef="javascipt:document.ws_install.submit()"><img sc="images/next.jpg" alt=""></a></div>';
+           <div align="right"><br><a href="javascript:document.ws_install.submit()"><img src="images/next.jpg" alt=""></a></div>';
    }
    ?>
    </td>
-  </t>
+  </tr>
 
 <?php } else { ?>
 
-  <t>
-   <td id="step" align="cente" colspan="2">
-   <span class="steps stat"><?php echo $_language->module['step0']; ?></span>
+  <tr>
+   <td id="step" align="center" colspan="2">
+   <span class="steps start"><?php echo $_language->module['step0']; ?></span>
    <span class="steps" id="active"><?php echo $_language->module['step1']; ?></span>
    <span class="steps"><?php echo $_language->module['step2']; ?></span>
    <span class="steps"><?php echo $_language->module['step3']; ?></span>
@@ -87,16 +87,16 @@ if($_POST['agee'] == "1") {
    <span class="steps"><?php echo $_language->module['step5']; ?></span>
    <span class="steps end"><?php echo $_language->module['step6']; ?></span>
    </td>
-  </t>
-  <t id="headline">
+  </tr>
+  <tr id="headline">
    <td colspan="2" id="title"><?php echo $_language->module['licence']; ?></td>
-  </t>
-  <t>
+  </tr>
+  <tr>
    <td id="content" colspan="2">
-   <?php echo $_language->module['you_have_to_agee'];?>
+   <?php echo $_language->module['you_have_to_agree'];?>
    
-   <div align="left"><b><a hef="javascipt:histoy.back()"><img sc="images/back.jpg" alt=""></a></div>
+   <div align="left"><br><a href="javascript:history.back()"><img src="images/back.jpg" alt=""></a></div>
    </td>
-  </t>
+  </tr>
 
 <?php } ?>

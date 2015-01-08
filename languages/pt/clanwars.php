@@ -2,106 +2,106 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Vesion 4       /                        /   /               #
+#           Version 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Fee Content / Management System                 #
+#                       Free Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyight 2005-2014 by webspell.og                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
-#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
-#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to emove this copyight-tag                      #
-#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
+#   visit webSPELL.org, webspell.info to get webSPELL for free           #
+#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to remove this copyright-tag                      #
+#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
-#   Fa Development by Development Team - webspell.og                   #
+#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
+#   Far Development by Development Team - webspell.org                   #
 #                                                                        #
-#   visit webspell.og                                                   #
+#   visit webspell.org                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_aay = Aay(
+$language_array = Array(
 
 /* do not edit above this line */
 
 	'clan'=>'clan',
 	'clan_stats'=>'Estatísticas do clan',
 	'clantag'=>'tag do clan',
-	'clanwa_against'=>'patida conta',
-	'clanwa_details'=>'detalhes da patida',
-	'clanwa_saved'=>'A patida foi gavada.',
-	'clanwa_updated'=>'A patida foi actualizada.',
-	'clanwas'=>'patidas',
-	'close_window'=>'fecha janela',
-	'county'=>'país',
+	'clanwar_against'=>'partida contra',
+	'clanwar_details'=>'detalhes da partida',
+	'clanwar_saved'=>'A partida foi gravada.',
+	'clanwar_updated'=>'A partida foi actualizada.',
+	'clanwars'=>'partidas',
+	'close_window'=>'fechar janela',
+	'country'=>'país',
 	'date'=>'data',
-	'delete'=>'apaga',
-	'delete_selected'=>'apaga selecção',
+	'delete'=>'apagar',
+	'delete_selected'=>'apagar selecção',
 	'details'=>'detalhes',
-	'disable_comments'=>'desactiva comentáios',
-	'daw'=>'empates',
-	'daw_clanwas'=>'patidas empatadas',
-	'edit'=>'edita',
-	'edit_clanwa'=>'edita a patida',
+	'disable_comments'=>'desactivar comentários',
+	'draw'=>'empates',
+	'draw_clanwars'=>'partidas empatadas',
+	'edit'=>'editar',
+	'edit_clanwar'=>'editar a partida',
 	'game'=>'jogo',
-	'go'=>'i',
-	'hltv_seve'=>'sevido hltv',
+	'go'=>'ir',
+	'hltv_server'=>'servidor hltv',
 	'home_team'=>'equipa da casa',
 	'homepage'=>'página',
 	'id'=>'ID',
 	'league'=>'liga',
-	'league_match_link'=>'link paa o jogo da liga',
-	'lost'=>'deotas',
-	'lost_clanwas'=>'patidas pedidas',
-	'lost_points'=>'pontos pedidos',
+	'league_match_link'=>'link para o jogo da liga',
+	'lost'=>'derrotas',
+	'lost_clanwars'=>'partidas perdidas',
+	'lost_points'=>'pontos perdidos',
 	'map'=>'mapa',
 	'maps'=>'mapas',
-	'matchlink'=>'link da patida',
-	'new_clanwa'=>'nova patida',
+	'matchlink'=>'link da partida',
+	'new_clanwar'=>'nova partida',
 	'nickname'=>'nickname',
 	'no_access'=>'Sem acesso!',
-	'no_enties'=>'Sem entadas disponíveis',
+	'no_entries'=>'Sem entradas disponíveis',
 	'no_maps'=>'sem mapas',
-	'no_sceenshots'=>'sem sceenshots',
+	'no_screenshots'=>'sem screenshots',
 	'on'=>'ligado',
-	'opponent'=>'advesáio',
-	'opponent_team'=>'equipa advesáia',
-	'pecent'=>'pecentagem',
-	'publish_clanwa_news'=>'publica notícia da patida',
-	'eally_delete_clanwa'=>'Deseja mesmo apaga esta patida?',
-	'epot'=>'elatóio',
-	'esult'=>'esultado',
-	'save_clanwa'=>'guada patida',
-	'scoe_home'=>'pontuação equipa da casa',
-	'scoe_opponent'=>'pontuação advesáio',
-	'sceenshots'=>'sceenshots',
-	'select_all'=>'selecciona tudo',
-	'seve'=>'sevido',
-	'show_all_squads'=>'mosta todas as equipas',
-	'show_clanwas'=>'mosta todas as patidas',
-	'sot'=>'odena',
+	'opponent'=>'adversário',
+	'opponent_team'=>'equipa adversária',
+	'percent'=>'percentagem',
+	'publish_clanwar_news'=>'publicar notícia da partida',
+	'really_delete_clanwar'=>'Deseja mesmo apagar esta partida?',
+	'report'=>'relatório',
+	'result'=>'resultado',
+	'save_clanwar'=>'guardar partida',
+	'score_home'=>'pontuação equipa da casa',
+	'score_opponent'=>'pontuação adversário',
+	'screenshots'=>'screenshots',
+	'select_all'=>'seleccionar tudo',
+	'server'=>'servidor',
+	'show_all_squads'=>'mostrar todas as equipas',
+	'show_clanwars'=>'mostrar todas as partidas',
+	'sort'=>'ordenar',
 	'squad'=>'equipa',
 	'stat'=>'estatísticas',
 	'stats'=>'estatísticas',
 	'team'=>'equipa',
 	'total'=>'total',
-	'total_clanwas'=>'total de patidas',
-	'total_daw_clanwas'=>'total de patidas empatadas',
-	'total_lost_clanwas'=>'total de patidas pedidas',
-	'total_lost_points'=>'total de pontuação pedida',
-	'total_won_clanwas'=>'total de patidas ganhas',
+	'total_clanwars'=>'total de partidas',
+	'total_draw_clanwars'=>'total de partidas empatadas',
+	'total_lost_clanwars'=>'total de partidas perdidas',
+	'total_lost_points'=>'total de pontuação perdida',
+	'total_won_clanwars'=>'total de partidas ganhas',
 	'total_won_points'=>'total de pontos ganhos',
-	'update_clanwa'=>'actualiza patida',
-	'upload_sceenshot'=>'actualiza sceenshot',
-	'use_comments'=>'activa comentáios de utilizadoes',
-	'visito_comments'=>'activa comentáios de visitantes',
-	'won'=>'vitóias',
-	'won_clanwas'=>'patidas ganhas',
+	'update_clanwar'=>'actualizar partida',
+	'upload_screenshot'=>'actualizar screenshot',
+	'user_comments'=>'activar comentários de utilizadores',
+	'visitor_comments'=>'activar comentários de visitantes',
+	'won'=>'vitórias',
+	'won_clanwars'=>'partidas ganhas',
 	'won_points'=>'pontuação ganha'
 );
 ?>

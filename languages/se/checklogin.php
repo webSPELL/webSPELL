@@ -2,38 +2,38 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Vesion 4       /                        /   /               #
+#           Version 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Fee Content / Management System                 #
+#                       Free Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyight 2005-2014 by webspell.og                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
-#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
-#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to emove this copyight-tag                      #
-#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
+#   visit webSPELL.org, webspell.info to get webSPELL for free           #
+#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to remove this copyright-tag                      #
+#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
-#   Fa Development by Development Team - webspell.og                   #
+#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
+#   Far Development by Development Team - webspell.org                   #
 #                                                                        #
-#   visit webspell.og                                                   #
+#   visit webspell.org                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_aay = Aay(
+$language_array = Array(
 
 /* do not edit above this line */
 
-	'invalid_passwod'=>'Du ha skivit in fel lösenod<b><b><a hef="javascipt:histoy.back()">Gå tillbaka och fösök igen.</a>',
-	'ip_banned'=>'Din IP ä bannad fån denna hemsidan.<b>%eason%<b><b><a hef="javascipt:histoy.back()">Gå tillbaka</a>',
+	'invalid_password'=>'Du har skrivit in fel lösenord<br><br><a href="javascript:history.back()">Gå tillbaka och försök igen.</a>',
+	'ip_banned'=>'Din IP är bannad från denna hemsidan.<br>%reason%<br><br><a href="javascript:history.back()">Gå tillbaka</a>',
 	'login_successful'=>'Inlogningen lyckad!',
-	'no_use'=>'Användaen <b>%usename%</b> ä inte tillgänglig.<b><b><a hef="javascipt:histoy.back()">Gå tillbaka och fösök igen!</a>',
-	'not_activated'=>'Ditt konto ä inte aktiveat.<b><b><a hef="javascipt:histoy.back()">Tillbaka</a>',
-	'session_eo'=>'Kontollea att du ha aktiveat cookies i din webbläsae.<b>Om poblemet kvastå, kontakta webbmasten.<b><b><a hef="javascipt:histoy.back()">Tillbaka</a>'
+	'no_user'=>'Användaren <b>%username%</b> är inte tillgänglig.<br><br><a href="javascript:history.back()">Gå tillbaka och försök igen!</a>',
+	'not_activated'=>'Ditt konto är inte aktiverat.<br><br><a href="javascript:history.back()">Tillbaka</a>',
+	'session_error'=>'Kontrollera att du har aktiverat cookies i din webbläsare.<br>Om problemet kvarstår, kontakta webbmastern.<br><br><a href="javascript:history.back()">Tillbaka</a>'
 );
 ?>

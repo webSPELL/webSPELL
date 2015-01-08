@@ -2,56 +2,56 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Vesion 4       /                        /   /               #
+#           Version 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Fee Content / Management System                 #
+#                       Free Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyight 2005-2014 by webspell.og                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
-#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
-#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to emove this copyight-tag                      #
-#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
+#   visit webSPELL.org, webspell.info to get webSPELL for free           #
+#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to remove this copyright-tag                      #
+#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
-#   Fa Development by Development Team - webspell.og                   #
+#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
+#   Far Development by Development Team - webspell.org                   #
 #                                                                        #
-#   visit webspell.og                                                   #
+#   visit webspell.org                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_aay = Aay(
+$language_array = Array(
 
 /* do not edit above this line */
 
   'access_denied'=>'Access denied',
   'actions'=>'Actions',
-  'add_patne'=>'add patne',
+  'add_partner'=>'add partner',
   'back'=>'back',
-  'banne'=>'Banne',
-  'banne_to_big'=>'Banne is to big',
-  'clicks'=>'Clicks (pe Day)',
-  'cuent_banne'=>'Cuent Banne',
+  'banner'=>'Banner',
+  'banner_to_big'=>'Banner is to big',
+  'clicks'=>'Clicks (per Day)',
+  'current_banner'=>'Current Banner',
   'delete'=>'delete',
   'edit'=>'edit',
-  'edit_patne'=>'edit Patne',
-  'fomat_incoect'=>'The fomat of the icon was incoect. Please upload only banne in *.gif, *.jpg and *.png fomat.',
-  'homepage_ul'=>'Homepage URL',
+  'edit_partner'=>'edit Partner',
+  'format_incorrect'=>'The format of the icon was incorrect. Please upload only banner in *.gif, *.jpg and *.png format.',
+  'homepage_url'=>'Homepage URL',
   'is_displayed'=>'Is displayed?',
   'max_88x31'=>'(max. 88x31)',
-  'new_patne'=>'new Patne',
+  'new_partner'=>'new Partner',
   'no'=>'No',
-  'patne_name'=>'Patne Name',
-  'patnes'=>'Patnes',
-  'eally_delete'=>'Really delete this Patne?',
-  'sot'=>'Sot',
-  'tansaction_invalid'=>'Tansaction ID invalid',
-  'to_sot'=>'sot',
+  'partner_name'=>'Partner Name',
+  'partners'=>'Partners',
+  'really_delete'=>'Really delete this Partner?',
+  'sort'=>'Sort',
+  'transaction_invalid'=>'Transaction ID invalid',
+  'to_sort'=>'sort',
   'yes'=>'Yes'
 );
 ?>

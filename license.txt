@@ -1,31 +1,31 @@
 GNU GENERAL PUBLIC LICENSE
 
-Vesion 3, 29 June 2007
+Version 3, 29 June 2007
 
-Copyight © 2007 Fee Softwae Foundation, Inc. <http://fsf.og/>
+Copyright © 2007 Free Software Foundation, Inc. <http://fsf.org/>
 
-Eveyone is pemitted to copy and distibute vebatim copies of this license document, but changing it is not allowed.
-Peamble
+Everyone is permitted to copy and distribute verbatim copies of this license document, but changing it is not allowed.
+Preamble
 
-The GNU Geneal Public License is a fee, copyleft license fo softwae and othe kinds of woks.
+The GNU General Public License is a free, copyleft license for software and other kinds of works.
 
-The licenses fo most softwae and othe pactical woks ae designed to take away you feedom to shae and change the woks. By contast, the GNU Geneal Public License is intended to guaantee you feedom to shae and change all vesions of a pogam--to make sue it emains fee softwae fo all its uses. We, the Fee Softwae Foundation, use the GNU Geneal Public License fo most of ou softwae; it applies also to any othe wok eleased this way by its authos. You can apply it to you pogams, too.
+The licenses for most software and other practical works are designed to take away your freedom to share and change the works. By contrast, the GNU General Public License is intended to guarantee your freedom to share and change all versions of a program--to make sure it remains free software for all its users. We, the Free Software Foundation, use the GNU General Public License for most of our software; it applies also to any other work released this way by its authors. You can apply it to your programs, too.
 
-When we speak of fee softwae, we ae efeing to feedom, not pice. Ou Geneal Public Licenses ae designed to make sue that you have the feedom to distibute copies of fee softwae (and chage fo them if you wish), that you eceive souce code o can get it if you want it, that you can change the softwae o use pieces of it in new fee pogams, and that you know you can do these things.
+When we speak of free software, we are referring to freedom, not price. Our General Public Licenses are designed to make sure that you have the freedom to distribute copies of free software (and charge for them if you wish), that you receive source code or can get it if you want it, that you can change the software or use pieces of it in new free programs, and that you know you can do these things.
 
-To potect you ights, we need to pevent othes fom denying you these ights o asking you to suende the ights. Theefoe, you have cetain esponsibilities if you distibute copies of the softwae, o if you modify it: esponsibilities to espect the feedom of othes.
+To protect your rights, we need to prevent others from denying you these rights or asking you to surrender the rights. Therefore, you have certain responsibilities if you distribute copies of the software, or if you modify it: responsibilities to respect the freedom of others.
 
-Fo example, if you distibute copies of such a pogam, whethe gatis o fo a fee, you must pass on to the ecipients the same feedoms that you eceived. You must make sue that they, too, eceive o can get the souce code. And you must show them these tems so they know thei ights.
+For example, if you distribute copies of such a program, whether gratis or for a fee, you must pass on to the recipients the same freedoms that you received. You must make sure that they, too, receive or can get the source code. And you must show them these terms so they know their rights.
 
-Developes that use the GNU GPL potect you ights with two steps: (1) asset copyight on the softwae, and (2) offe you this License giving you legal pemission to copy, distibute and/o modify it.
+Developers that use the GNU GPL protect your rights with two steps: (1) assert copyright on the software, and (2) offer you this License giving you legal permission to copy, distribute and/or modify it.
 
-Fo the developes' and authos' potection, the GPL clealy explains that thee is no waanty fo this fee softwae. Fo both uses' and authos' sake, the GPL equies that modified vesions be maked as changed, so that thei poblems will not be attibuted eoneously to authos of pevious vesions.
+For the developers' and authors' protection, the GPL clearly explains that there is no warranty for this free software. For both users' and authors' sake, the GPL requires that modified versions be marked as changed, so that their problems will not be attributed erroneously to authors of previous versions.
 
-Some devices ae designed to deny uses access to install o un modified vesions of the softwae inside them, although the manufactue can do so. This is fundamentally incompatible with the aim of potecting uses' feedom to change the softwae. The systematic patten of such abuse occus in the aea of poducts fo individuals to use, which is pecisely whee it is most unacceptable. Theefoe, we have designed this vesion of the GPL to pohibit the pactice fo those poducts. If such poblems aise substantially in othe domains, we stand eady to extend this povision to those domains in futue vesions of the GPL, as needed to potect the feedom of uses.
+Some devices are designed to deny users access to install or run modified versions of the software inside them, although the manufacturer can do so. This is fundamentally incompatible with the aim of protecting users' freedom to change the software. The systematic pattern of such abuse occurs in the area of products for individuals to use, which is precisely where it is most unacceptable. Therefore, we have designed this version of the GPL to prohibit the practice for those products. If such problems arise substantially in other domains, we stand ready to extend this provision to those domains in future versions of the GPL, as needed to protect the freedom of users.
 
-Finally, evey pogam is theatened constantly by softwae patents. States should not allow patents to estict development and use of softwae on geneal-pupose computes, but in those that do, we wish to avoid the special dange that patents applied to a fee pogam could make it effectively popietay. To pevent this, the GPL assues that patents cannot be used to ende the pogam non-fee.
+Finally, every program is threatened constantly by software patents. States should not allow patents to restrict development and use of software on general-purpose computers, but in those that do, we wish to avoid the special danger that patents applied to a free program could make it effectively proprietary. To prevent this, the GPL assures that patents cannot be used to render the program non-free.
 
-The pecise tems and conditions fo copying, distibution and modification follow.
+The precise terms and conditions for copying, distribution and modification follow.
 
 
 
@@ -34,184 +34,184 @@ TERMS AND CONDITIONS
 
 0. Definitions.
 
-“This License” efes to vesion 3 of the GNU Geneal Public License.
+“This License” refers to version 3 of the GNU General Public License.
 
-“Copyight” also means copyight-like laws that apply to othe kinds of woks, such as semiconducto masks.
+“Copyright” also means copyright-like laws that apply to other kinds of works, such as semiconductor masks.
 
-“The Pogam” efes to any copyightable wok licensed unde this License. Each licensee is addessed as “you”. “Licensees” and “ecipients” may be individuals o oganizations.
+“The Program” refers to any copyrightable work licensed under this License. Each licensee is addressed as “you”. “Licensees” and “recipients” may be individuals or organizations.
 
-To “modify” a wok means to copy fom o adapt all o pat of the wok in a fashion equiing copyight pemission, othe than the making of an exact copy. The esulting wok is called a “modified vesion” of the ealie wok o a wok “based on” the ealie wok.
+To “modify” a work means to copy from or adapt all or part of the work in a fashion requiring copyright permission, other than the making of an exact copy. The resulting work is called a “modified version” of the earlier work or a work “based on” the earlier work.
 
-A “coveed wok” means eithe the unmodified Pogam o a wok based on the Pogam.
+A “covered work” means either the unmodified Program or a work based on the Program.
 
-To “popagate” a wok means to do anything with it that, without pemission, would make you diectly o secondaily liable fo infingement unde applicable copyight law, except executing it on a compute o modifying a pivate copy. Popagation includes copying, distibution (with o without modification), making available to the public, and in some counties othe activities as well.
+To “propagate” a work means to do anything with it that, without permission, would make you directly or secondarily liable for infringement under applicable copyright law, except executing it on a computer or modifying a private copy. Propagation includes copying, distribution (with or without modification), making available to the public, and in some countries other activities as well.
 
-To “convey” a wok means any kind of popagation that enables othe paties to make o eceive copies. Mee inteaction with a use though a compute netwok, with no tansfe of a copy, is not conveying.
+To “convey” a work means any kind of propagation that enables other parties to make or receive copies. Mere interaction with a user through a computer network, with no transfer of a copy, is not conveying.
 
-An inteactive use inteface displays “Appopiate Legal Notices” to the extent that it includes a convenient and pominently visible featue that (1) displays an appopiate copyight notice, and (2) tells the use that thee is no waanty fo the wok (except to the extent that waanties ae povided), that licensees may convey the wok unde this License, and how to view a copy of this License. If the inteface pesents a list of use commands o options, such as a menu, a pominent item in the list meets this citeion.
+An interactive user interface displays “Appropriate Legal Notices” to the extent that it includes a convenient and prominently visible feature that (1) displays an appropriate copyright notice, and (2) tells the user that there is no warranty for the work (except to the extent that warranties are provided), that licensees may convey the work under this License, and how to view a copy of this License. If the interface presents a list of user commands or options, such as a menu, a prominent item in the list meets this criterion.
 
 
-1. Souce Code.
+1. Source Code.
 
-The “souce code” fo a wok means the pefeed fom of the wok fo making modifications to it. “Object code” means any non-souce fom of a wok.
+The “source code” for a work means the preferred form of the work for making modifications to it. “Object code” means any non-source form of a work.
 
-A “Standad Inteface” means an inteface that eithe is an official standad defined by a ecognized standads body, o, in the case of intefaces specified fo a paticula pogamming language, one that is widely used among developes woking in that language.
+A “Standard Interface” means an interface that either is an official standard defined by a recognized standards body, or, in the case of interfaces specified for a particular programming language, one that is widely used among developers working in that language.
 
-The “System Libaies” of an executable wok include anything, othe than the wok as a whole, that (a) is included in the nomal fom of packaging a Majo Component, but which is not pat of that Majo Component, and (b) seves only to enable use of the wok with that Majo Component, o to implement a Standad Inteface fo which an implementation is available to the public in souce code fom. A “Majo Component”, in this context, means a majo essential component (kenel, window system, and so on) of the specific opeating system (if any) on which the executable wok uns, o a compile used to poduce the wok, o an object code intepete used to un it.
+The “System Libraries” of an executable work include anything, other than the work as a whole, that (a) is included in the normal form of packaging a Major Component, but which is not part of that Major Component, and (b) serves only to enable use of the work with that Major Component, or to implement a Standard Interface for which an implementation is available to the public in source code form. A “Major Component”, in this context, means a major essential component (kernel, window system, and so on) of the specific operating system (if any) on which the executable work runs, or a compiler used to produce the work, or an object code interpreter used to run it.
 
-The “Coesponding Souce” fo a wok in object code fom means all the souce code needed to geneate, install, and (fo an executable wok) un the object code and to modify the wok, including scipts to contol those activities. Howeve, it does not include the wok's System Libaies, o geneal-pupose tools o geneally available fee pogams which ae used unmodified in pefoming those activities but which ae not pat of the wok. Fo example, Coesponding Souce includes inteface definition files associated with souce files fo the wok, and the souce code fo shaed libaies and dynamically linked subpogams that the wok is specifically designed to equie, such as by intimate data communication o contol flow between those subpogams and othe pats of the wok.
+The “Corresponding Source” for a work in object code form means all the source code needed to generate, install, and (for an executable work) run the object code and to modify the work, including scripts to control those activities. However, it does not include the work's System Libraries, or general-purpose tools or generally available free programs which are used unmodified in performing those activities but which are not part of the work. For example, Corresponding Source includes interface definition files associated with source files for the work, and the source code for shared libraries and dynamically linked subprograms that the work is specifically designed to require, such as by intimate data communication or control flow between those subprograms and other parts of the work.
 
-The Coesponding Souce need not include anything that uses can egeneate automatically fom othe pats of the Coesponding Souce.
+The Corresponding Source need not include anything that users can regenerate automatically from other parts of the Corresponding Source.
 
-The Coesponding Souce fo a wok in souce code fom is that same wok.
+The Corresponding Source for a work in source code form is that same work.
 
 
-2. Basic Pemissions.
+2. Basic Permissions.
 
-All ights ganted unde this License ae ganted fo the tem of copyight on the Pogam, and ae ievocable povided the stated conditions ae met. This License explicitly affims you unlimited pemission to un the unmodified Pogam. The output fom unning a coveed wok is coveed by this License only if the output, given its content, constitutes a coveed wok. This License acknowledges you ights of fai use o othe equivalent, as povided by copyight law.
+All rights granted under this License are granted for the term of copyright on the Program, and are irrevocable provided the stated conditions are met. This License explicitly affirms your unlimited permission to run the unmodified Program. The output from running a covered work is covered by this License only if the output, given its content, constitutes a covered work. This License acknowledges your rights of fair use or other equivalent, as provided by copyright law.
 
-You may make, un and popagate coveed woks that you do not convey, without conditions so long as you license othewise emains in foce. You may convey coveed woks to othes fo the sole pupose of having them make modifications exclusively fo you, o povide you with facilities fo unning those woks, povided that you comply with the tems of this License in conveying all mateial fo which you do not contol copyight. Those thus making o unning the coveed woks fo you must do so exclusively on you behalf, unde you diection and contol, on tems that pohibit them fom making any copies of you copyighted mateial outside thei elationship with you.
+You may make, run and propagate covered works that you do not convey, without conditions so long as your license otherwise remains in force. You may convey covered works to others for the sole purpose of having them make modifications exclusively for you, or provide you with facilities for running those works, provided that you comply with the terms of this License in conveying all material for which you do not control copyright. Those thus making or running the covered works for you must do so exclusively on your behalf, under your direction and control, on terms that prohibit them from making any copies of your copyrighted material outside their relationship with you.
 
-Conveying unde any othe cicumstances is pemitted solely unde the conditions stated below. Sublicensing is not allowed; section 10 makes it unnecessay.
+Conveying under any other circumstances is permitted solely under the conditions stated below. Sublicensing is not allowed; section 10 makes it unnecessary.
 
 
-3. Potecting Uses' Legal Rights Fom Anti-Cicumvention Law.
+3. Protecting Users' Legal Rights From Anti-Circumvention Law.
 
-No coveed wok shall be deemed pat of an effective technological measue unde any applicable law fulfilling obligations unde aticle 11 of the WIPO copyight teaty adopted on 20 Decembe 1996, o simila laws pohibiting o esticting cicumvention of such measues.
+No covered work shall be deemed part of an effective technological measure under any applicable law fulfilling obligations under article 11 of the WIPO copyright treaty adopted on 20 December 1996, or similar laws prohibiting or restricting circumvention of such measures.
 
-When you convey a coveed wok, you waive any legal powe to fobid cicumvention of technological measues to the extent such cicumvention is effected by execising ights unde this License with espect to the coveed wok, and you disclaim any intention to limit opeation o modification of the wok as a means of enfocing, against the wok's uses, you o thid paties' legal ights to fobid cicumvention of technological measues.
+When you convey a covered work, you waive any legal power to forbid circumvention of technological measures to the extent such circumvention is effected by exercising rights under this License with respect to the covered work, and you disclaim any intention to limit operation or modification of the work as a means of enforcing, against the work's users, your or third parties' legal rights to forbid circumvention of technological measures.
 
 
-4. Conveying Vebatim Copies.
+4. Conveying Verbatim Copies.
 
-You may convey vebatim copies of the Pogam's souce code as you eceive it, in any medium, povided that you conspicuously and appopiately publish on each copy an appopiate copyight notice; keep intact all notices stating that this License and any non-pemissive tems added in accod with section 7 apply to the code; keep intact all notices of the absence of any waanty; and give all ecipients a copy of this License along with the Pogam.
+You may convey verbatim copies of the Program's source code as you receive it, in any medium, provided that you conspicuously and appropriately publish on each copy an appropriate copyright notice; keep intact all notices stating that this License and any non-permissive terms added in accord with section 7 apply to the code; keep intact all notices of the absence of any warranty; and give all recipients a copy of this License along with the Program.
 
-You may chage any pice o no pice fo each copy that you convey, and you may offe suppot o waanty potection fo a fee.
+You may charge any price or no price for each copy that you convey, and you may offer support or warranty protection for a fee.
 
 
-5. Conveying Modified Souce Vesions.
+5. Conveying Modified Source Versions.
 
-You may convey a wok based on the Pogam, o the modifications to poduce it fom the Pogam, in the fom of souce code unde the tems of section 4, povided that you also meet all of these conditions:
+You may convey a work based on the Program, or the modifications to produce it from the Program, in the form of source code under the terms of section 4, provided that you also meet all of these conditions:
 
-    * a) The wok must cay pominent notices stating that you modified it, and giving a elevant date.
-    * b) The wok must cay pominent notices stating that it is eleased unde this License and any conditions added unde section 7. This equiement modifies the equiement in section 4 to “keep intact all notices”.
-    * c) You must license the entie wok, as a whole, unde this License to anyone who comes into possession of a copy. This License will theefoe apply, along with any applicable section 7 additional tems, to the whole of the wok, and all its pats, egadless of how they ae packaged. This License gives no pemission to license the wok in any othe way, but it does not invalidate such pemission if you have sepaately eceived it.
-    * d) If the wok has inteactive use intefaces, each must display Appopiate Legal Notices; howeve, if the Pogam has inteactive intefaces that do not display Appopiate Legal Notices, you wok need not make them do so.
+    * a) The work must carry prominent notices stating that you modified it, and giving a relevant date.
+    * b) The work must carry prominent notices stating that it is released under this License and any conditions added under section 7. This requirement modifies the requirement in section 4 to “keep intact all notices”.
+    * c) You must license the entire work, as a whole, under this License to anyone who comes into possession of a copy. This License will therefore apply, along with any applicable section 7 additional terms, to the whole of the work, and all its parts, regardless of how they are packaged. This License gives no permission to license the work in any other way, but it does not invalidate such permission if you have separately received it.
+    * d) If the work has interactive user interfaces, each must display Appropriate Legal Notices; however, if the Program has interactive interfaces that do not display Appropriate Legal Notices, your work need not make them do so.
 
-A compilation of a coveed wok with othe sepaate and independent woks, which ae not by thei natue extensions of the coveed wok, and which ae not combined with it such as to fom a lage pogam, in o on a volume of a stoage o distibution medium, is called an “aggegate” if the compilation and its esulting copyight ae not used to limit the access o legal ights of the compilation's uses beyond what the individual woks pemit. Inclusion of a coveed wok in an aggegate does not cause this License to apply to the othe pats of the aggegate.
+A compilation of a covered work with other separate and independent works, which are not by their nature extensions of the covered work, and which are not combined with it such as to form a larger program, in or on a volume of a storage or distribution medium, is called an “aggregate” if the compilation and its resulting copyright are not used to limit the access or legal rights of the compilation's users beyond what the individual works permit. Inclusion of a covered work in an aggregate does not cause this License to apply to the other parts of the aggregate.
 
 
-6. Conveying Non-Souce Foms.
+6. Conveying Non-Source Forms.
 
-You may convey a coveed wok in object code fom unde the tems of sections 4 and 5, povided that you also convey the machine-eadable Coesponding Souce unde the tems of this License, in one of these ways:
+You may convey a covered work in object code form under the terms of sections 4 and 5, provided that you also convey the machine-readable Corresponding Source under the terms of this License, in one of these ways:
 
-    * a) Convey the object code in, o embodied in, a physical poduct (including a physical distibution medium), accompanied by the Coesponding Souce fixed on a duable physical medium customaily used fo softwae intechange.
-    * b) Convey the object code in, o embodied in, a physical poduct (including a physical distibution medium), accompanied by a witten offe, valid fo at least thee yeas and valid fo as long as you offe spae pats o custome suppot fo that poduct model, to give anyone who possesses the object code eithe (1) a copy of the Coesponding Souce fo all the softwae in the poduct that is coveed by this License, on a duable physical medium customaily used fo softwae intechange, fo a pice no moe than you easonable cost of physically pefoming this conveying of souce, o (2) access to copy the Coesponding Souce fom a netwok seve at no chage.
-    * c) Convey individual copies of the object code with a copy of the witten offe to povide the Coesponding Souce. This altenative is allowed only occasionally and noncommecially, and only if you eceived the object code with such an offe, in accod with subsection 6b.
-    * d) Convey the object code by offeing access fom a designated place (gatis o fo a chage), and offe equivalent access to the Coesponding Souce in the same way though the same place at no futhe chage. You need not equie ecipients to copy the Coesponding Souce along with the object code. If the place to copy the object code is a netwok seve, the Coesponding Souce may be on a diffeent seve (opeated by you o a thid paty) that suppots equivalent copying facilities, povided you maintain clea diections next to the object code saying whee to find the Coesponding Souce. Regadless of what seve hosts the Coesponding Souce, you emain obligated to ensue that it is available fo as long as needed to satisfy these equiements.
-    * e) Convey the object code using pee-to-pee tansmission, povided you infom othe pees whee the object code and Coesponding Souce of the wok ae being offeed to the geneal public at no chage unde subsection 6d.
+    * a) Convey the object code in, or embodied in, a physical product (including a physical distribution medium), accompanied by the Corresponding Source fixed on a durable physical medium customarily used for software interchange.
+    * b) Convey the object code in, or embodied in, a physical product (including a physical distribution medium), accompanied by a written offer, valid for at least three years and valid for as long as you offer spare parts or customer support for that product model, to give anyone who possesses the object code either (1) a copy of the Corresponding Source for all the software in the product that is covered by this License, on a durable physical medium customarily used for software interchange, for a price no more than your reasonable cost of physically performing this conveying of source, or (2) access to copy the Corresponding Source from a network server at no charge.
+    * c) Convey individual copies of the object code with a copy of the written offer to provide the Corresponding Source. This alternative is allowed only occasionally and noncommercially, and only if you received the object code with such an offer, in accord with subsection 6b.
+    * d) Convey the object code by offering access from a designated place (gratis or for a charge), and offer equivalent access to the Corresponding Source in the same way through the same place at no further charge. You need not require recipients to copy the Corresponding Source along with the object code. If the place to copy the object code is a network server, the Corresponding Source may be on a different server (operated by you or a third party) that supports equivalent copying facilities, provided you maintain clear directions next to the object code saying where to find the Corresponding Source. Regardless of what server hosts the Corresponding Source, you remain obligated to ensure that it is available for as long as needed to satisfy these requirements.
+    * e) Convey the object code using peer-to-peer transmission, provided you inform other peers where the object code and Corresponding Source of the work are being offered to the general public at no charge under subsection 6d.
 
-A sepaable potion of the object code, whose souce code is excluded fom the Coesponding Souce as a System Libay, need not be included in conveying the object code wok.
+A separable portion of the object code, whose source code is excluded from the Corresponding Source as a System Library, need not be included in conveying the object code work.
 
-A “Use Poduct” is eithe (1) a “consume poduct”, which means any tangible pesonal popety which is nomally used fo pesonal, family, o household puposes, o (2) anything designed o sold fo incopoation into a dwelling. In detemining whethe a poduct is a consume poduct, doubtful cases shall be esolved in favo of coveage. Fo a paticula poduct eceived by a paticula use, “nomally used” efes to a typical o common use of that class of poduct, egadless of the status of the paticula use o of the way in which the paticula use actually uses, o expects o is expected to use, the poduct. A poduct is a consume poduct egadless of whethe the poduct has substantial commecial, industial o non-consume uses, unless such uses epesent the only significant mode of use of the poduct.
+A “User Product” is either (1) a “consumer product”, which means any tangible personal property which is normally used for personal, family, or household purposes, or (2) anything designed or sold for incorporation into a dwelling. In determining whether a product is a consumer product, doubtful cases shall be resolved in favor of coverage. For a particular product received by a particular user, “normally used” refers to a typical or common use of that class of product, regardless of the status of the particular user or of the way in which the particular user actually uses, or expects or is expected to use, the product. A product is a consumer product regardless of whether the product has substantial commercial, industrial or non-consumer uses, unless such uses represent the only significant mode of use of the product.
 
-“Installation Infomation” fo a Use Poduct means any methods, pocedues, authoization keys, o othe infomation equied to install and execute modified vesions of a coveed wok in that Use Poduct fom a modified vesion of its Coesponding Souce. The infomation must suffice to ensue that the continued functioning of the modified object code is in no case pevented o intefeed with solely because modification has been made.
+“Installation Information” for a User Product means any methods, procedures, authorization keys, or other information required to install and execute modified versions of a covered work in that User Product from a modified version of its Corresponding Source. The information must suffice to ensure that the continued functioning of the modified object code is in no case prevented or interfered with solely because modification has been made.
 
-If you convey an object code wok unde this section in, o with, o specifically fo use in, a Use Poduct, and the conveying occus as pat of a tansaction in which the ight of possession and use of the Use Poduct is tansfeed to the ecipient in pepetuity o fo a fixed tem (egadless of how the tansaction is chaacteized), the Coesponding Souce conveyed unde this section must be accompanied by the Installation Infomation. But this equiement does not apply if neithe you no any thid paty etains the ability to install modified object code on the Use Poduct (fo example, the wok has been installed in ROM).
+If you convey an object code work under this section in, or with, or specifically for use in, a User Product, and the conveying occurs as part of a transaction in which the right of possession and use of the User Product is transferred to the recipient in perpetuity or for a fixed term (regardless of how the transaction is characterized), the Corresponding Source conveyed under this section must be accompanied by the Installation Information. But this requirement does not apply if neither you nor any third party retains the ability to install modified object code on the User Product (for example, the work has been installed in ROM).
 
-The equiement to povide Installation Infomation does not include a equiement to continue to povide suppot sevice, waanty, o updates fo a wok that has been modified o installed by the ecipient, o fo the Use Poduct in which it has been modified o installed. Access to a netwok may be denied when the modification itself mateially and advesely affects the opeation of the netwok o violates the ules and potocols fo communication acoss the netwok.
+The requirement to provide Installation Information does not include a requirement to continue to provide support service, warranty, or updates for a work that has been modified or installed by the recipient, or for the User Product in which it has been modified or installed. Access to a network may be denied when the modification itself materially and adversely affects the operation of the network or violates the rules and protocols for communication across the network.
 
-Coesponding Souce conveyed, and Installation Infomation povided, in accod with this section must be in a fomat that is publicly documented (and with an implementation available to the public in souce code fom), and must equie no special passwod o key fo unpacking, eading o copying.
+Corresponding Source conveyed, and Installation Information provided, in accord with this section must be in a format that is publicly documented (and with an implementation available to the public in source code form), and must require no special password or key for unpacking, reading or copying.
 
 
-7. Additional Tems.
+7. Additional Terms.
 
-“Additional pemissions” ae tems that supplement the tems of this License by making exceptions fom one o moe of its conditions. Additional pemissions that ae applicable to the entie Pogam shall be teated as though they wee included in this License, to the extent that they ae valid unde applicable law. If additional pemissions apply only to pat of the Pogam, that pat may be used sepaately unde those pemissions, but the entie Pogam emains govened by this License without egad to the additional pemissions.
+“Additional permissions” are terms that supplement the terms of this License by making exceptions from one or more of its conditions. Additional permissions that are applicable to the entire Program shall be treated as though they were included in this License, to the extent that they are valid under applicable law. If additional permissions apply only to part of the Program, that part may be used separately under those permissions, but the entire Program remains governed by this License without regard to the additional permissions.
 
-When you convey a copy of a coveed wok, you may at you option emove any additional pemissions fom that copy, o fom any pat of it. (Additional pemissions may be witten to equie thei own emoval in cetain cases when you modify the wok.) You may place additional pemissions on mateial, added by you to a coveed wok, fo which you have o can give appopiate copyight pemission.
+When you convey a copy of a covered work, you may at your option remove any additional permissions from that copy, or from any part of it. (Additional permissions may be written to require their own removal in certain cases when you modify the work.) You may place additional permissions on material, added by you to a covered work, for which you have or can give appropriate copyright permission.
 
-Notwithstanding any othe povision of this License, fo mateial you add to a coveed wok, you may (if authoized by the copyight holdes of that mateial) supplement the tems of this License with tems:
+Notwithstanding any other provision of this License, for material you add to a covered work, you may (if authorized by the copyright holders of that material) supplement the terms of this License with terms:
 
-    * a) Disclaiming waanty o limiting liability diffeently fom the tems of sections 15 and 16 of this License; o
-    * b) Requiing pesevation of specified easonable legal notices o autho attibutions in that mateial o in the Appopiate Legal Notices displayed by woks containing it; o
-    * c) Pohibiting misepesentation of the oigin of that mateial, o equiing that modified vesions of such mateial be maked in easonable ways as diffeent fom the oiginal vesion; o
-    * d) Limiting the use fo publicity puposes of names of licensos o authos of the mateial; o
-    * e) Declining to gant ights unde tademak law fo use of some tade names, tademaks, o sevice maks; o
-    * f) Requiing indemnification of licensos and authos of that mateial by anyone who conveys the mateial (o modified vesions of it) with contactual assumptions of liability to the ecipient, fo any liability that these contactual assumptions diectly impose on those licensos and authos.
+    * a) Disclaiming warranty or limiting liability differently from the terms of sections 15 and 16 of this License; or
+    * b) Requiring preservation of specified reasonable legal notices or author attributions in that material or in the Appropriate Legal Notices displayed by works containing it; or
+    * c) Prohibiting misrepresentation of the origin of that material, or requiring that modified versions of such material be marked in reasonable ways as different from the original version; or
+    * d) Limiting the use for publicity purposes of names of licensors or authors of the material; or
+    * e) Declining to grant rights under trademark law for use of some trade names, trademarks, or service marks; or
+    * f) Requiring indemnification of licensors and authors of that material by anyone who conveys the material (or modified versions of it) with contractual assumptions of liability to the recipient, for any liability that these contractual assumptions directly impose on those licensors and authors.
 
-All othe non-pemissive additional tems ae consideed “futhe estictions” within the meaning of section 10. If the Pogam as you eceived it, o any pat of it, contains a notice stating that it is govened by this License along with a tem that is a futhe estiction, you may emove that tem. If a license document contains a futhe estiction but pemits elicensing o conveying unde this License, you may add to a coveed wok mateial govened by the tems of that license document, povided that the futhe estiction does not suvive such elicensing o conveying.
+All other non-permissive additional terms are considered “further restrictions” within the meaning of section 10. If the Program as you received it, or any part of it, contains a notice stating that it is governed by this License along with a term that is a further restriction, you may remove that term. If a license document contains a further restriction but permits relicensing or conveying under this License, you may add to a covered work material governed by the terms of that license document, provided that the further restriction does not survive such relicensing or conveying.
 
-If you add tems to a coveed wok in accod with this section, you must place, in the elevant souce files, a statement of the additional tems that apply to those files, o a notice indicating whee to find the applicable tems.
+If you add terms to a covered work in accord with this section, you must place, in the relevant source files, a statement of the additional terms that apply to those files, or a notice indicating where to find the applicable terms.
 
-Additional tems, pemissive o non-pemissive, may be stated in the fom of a sepaately witten license, o stated as exceptions; the above equiements apply eithe way.
+Additional terms, permissive or non-permissive, may be stated in the form of a separately written license, or stated as exceptions; the above requirements apply either way.
 
 
-8. Temination.
+8. Termination.
 
-You may not popagate o modify a coveed wok except as expessly povided unde this License. Any attempt othewise to popagate o modify it is void, and will automatically teminate you ights unde this License (including any patent licenses ganted unde the thid paagaph of section 11).
+You may not propagate or modify a covered work except as expressly provided under this License. Any attempt otherwise to propagate or modify it is void, and will automatically terminate your rights under this License (including any patent licenses granted under the third paragraph of section 11).
 
-Howeve, if you cease all violation of this License, then you license fom a paticula copyight holde is einstated (a) povisionally, unless and until the copyight holde explicitly and finally teminates you license, and (b) pemanently, if the copyight holde fails to notify you of the violation by some easonable means pio to 60 days afte the cessation.
+However, if you cease all violation of this License, then your license from a particular copyright holder is reinstated (a) provisionally, unless and until the copyright holder explicitly and finally terminates your license, and (b) permanently, if the copyright holder fails to notify you of the violation by some reasonable means prior to 60 days after the cessation.
 
-Moeove, you license fom a paticula copyight holde is einstated pemanently if the copyight holde notifies you of the violation by some easonable means, this is the fist time you have eceived notice of violation of this License (fo any wok) fom that copyight holde, and you cue the violation pio to 30 days afte you eceipt of the notice.
+Moreover, your license from a particular copyright holder is reinstated permanently if the copyright holder notifies you of the violation by some reasonable means, this is the first time you have received notice of violation of this License (for any work) from that copyright holder, and you cure the violation prior to 30 days after your receipt of the notice.
 
-Temination of you ights unde this section does not teminate the licenses of paties who have eceived copies o ights fom you unde this License. If you ights have been teminated and not pemanently einstated, you do not qualify to eceive new licenses fo the same mateial unde section 10.
+Termination of your rights under this section does not terminate the licenses of parties who have received copies or rights from you under this License. If your rights have been terminated and not permanently reinstated, you do not qualify to receive new licenses for the same material under section 10.
 
 
-9. Acceptance Not Requied fo Having Copies.
+9. Acceptance Not Required for Having Copies.
 
-You ae not equied to accept this License in ode to eceive o un a copy of the Pogam. Ancillay popagation of a coveed wok occuing solely as a consequence of using pee-to-pee tansmission to eceive a copy likewise does not equie acceptance. Howeve, nothing othe than this License gants you pemission to popagate o modify any coveed wok. These actions infinge copyight if you do not accept this License. Theefoe, by modifying o popagating a coveed wok, you indicate you acceptance of this License to do so.
+You are not required to accept this License in order to receive or run a copy of the Program. Ancillary propagation of a covered work occurring solely as a consequence of using peer-to-peer transmission to receive a copy likewise does not require acceptance. However, nothing other than this License grants you permission to propagate or modify any covered work. These actions infringe copyright if you do not accept this License. Therefore, by modifying or propagating a covered work, you indicate your acceptance of this License to do so.
 
 
-10. Automatic Licensing of Downsteam Recipients.
+10. Automatic Licensing of Downstream Recipients.
 
-Each time you convey a coveed wok, the ecipient automatically eceives a license fom the oiginal licensos, to un, modify and popagate that wok, subject to this License. You ae not esponsible fo enfocing compliance by thid paties with this License.
+Each time you convey a covered work, the recipient automatically receives a license from the original licensors, to run, modify and propagate that work, subject to this License. You are not responsible for enforcing compliance by third parties with this License.
 
-An “entity tansaction” is a tansaction tansfeing contol of an oganization, o substantially all assets of one, o subdividing an oganization, o meging oganizations. If popagation of a coveed wok esults fom an entity tansaction, each paty to that tansaction who eceives a copy of the wok also eceives whateve licenses to the wok the paty's pedecesso in inteest had o could give unde the pevious paagaph, plus a ight to possession of the Coesponding Souce of the wok fom the pedecesso in inteest, if the pedecesso has it o can get it with easonable effots.
+An “entity transaction” is a transaction transferring control of an organization, or substantially all assets of one, or subdividing an organization, or merging organizations. If propagation of a covered work results from an entity transaction, each party to that transaction who receives a copy of the work also receives whatever licenses to the work the party's predecessor in interest had or could give under the previous paragraph, plus a right to possession of the Corresponding Source of the work from the predecessor in interest, if the predecessor has it or can get it with reasonable efforts.
 
-You may not impose any futhe estictions on the execise of the ights ganted o affimed unde this License. Fo example, you may not impose a license fee, oyalty, o othe chage fo execise of ights ganted unde this License, and you may not initiate litigation (including a coss-claim o counteclaim in a lawsuit) alleging that any patent claim is infinged by making, using, selling, offeing fo sale, o impoting the Pogam o any potion of it.
+You may not impose any further restrictions on the exercise of the rights granted or affirmed under this License. For example, you may not impose a license fee, royalty, or other charge for exercise of rights granted under this License, and you may not initiate litigation (including a cross-claim or counterclaim in a lawsuit) alleging that any patent claim is infringed by making, using, selling, offering for sale, or importing the Program or any portion of it.
 
 
 11. Patents.
 
-A “contibuto” is a copyight holde who authoizes use unde this License of the Pogam o a wok on which the Pogam is based. The wok thus licensed is called the contibuto's “contibuto vesion”.
+A “contributor” is a copyright holder who authorizes use under this License of the Program or a work on which the Program is based. The work thus licensed is called the contributor's “contributor version”.
 
-A contibuto's “essential patent claims” ae all patent claims owned o contolled by the contibuto, whethe aleady acquied o heeafte acquied, that would be infinged by some manne, pemitted by this License, of making, using, o selling its contibuto vesion, but do not include claims that would be infinged only as a consequence of futhe modification of the contibuto vesion. Fo puposes of this definition, “contol” includes the ight to gant patent sublicenses in a manne consistent with the equiements of this License.
+A contributor's “essential patent claims” are all patent claims owned or controlled by the contributor, whether already acquired or hereafter acquired, that would be infringed by some manner, permitted by this License, of making, using, or selling its contributor version, but do not include claims that would be infringed only as a consequence of further modification of the contributor version. For purposes of this definition, “control” includes the right to grant patent sublicenses in a manner consistent with the requirements of this License.
 
-Each contibuto gants you a non-exclusive, woldwide, oyalty-fee patent license unde the contibuto's essential patent claims, to make, use, sell, offe fo sale, impot and othewise un, modify and popagate the contents of its contibuto vesion.
+Each contributor grants you a non-exclusive, worldwide, royalty-free patent license under the contributor's essential patent claims, to make, use, sell, offer for sale, import and otherwise run, modify and propagate the contents of its contributor version.
 
-In the following thee paagaphs, a “patent license” is any expess ageement o commitment, howeve denominated, not to enfoce a patent (such as an expess pemission to pactice a patent o covenant not to sue fo patent infingement). To “gant” such a patent license to a paty means to make such an ageement o commitment not to enfoce a patent against the paty.
+In the following three paragraphs, a “patent license” is any express agreement or commitment, however denominated, not to enforce a patent (such as an express permission to practice a patent or covenant not to sue for patent infringement). To “grant” such a patent license to a party means to make such an agreement or commitment not to enforce a patent against the party.
 
-If you convey a coveed wok, knowingly elying on a patent license, and the Coesponding Souce of the wok is not available fo anyone to copy, fee of chage and unde the tems of this License, though a publicly available netwok seve o othe eadily accessible means, then you must eithe (1) cause the Coesponding Souce to be so available, o (2) aange to depive youself of the benefit of the patent license fo this paticula wok, o (3) aange, in a manne consistent with the equiements of this License, to extend the patent license to downsteam ecipients. “Knowingly elying” means you have actual knowledge that, but fo the patent license, you conveying the coveed wok in a county, o you ecipient's use of the coveed wok in a county, would infinge one o moe identifiable patents in that county that you have eason to believe ae valid.
+If you convey a covered work, knowingly relying on a patent license, and the Corresponding Source of the work is not available for anyone to copy, free of charge and under the terms of this License, through a publicly available network server or other readily accessible means, then you must either (1) cause the Corresponding Source to be so available, or (2) arrange to deprive yourself of the benefit of the patent license for this particular work, or (3) arrange, in a manner consistent with the requirements of this License, to extend the patent license to downstream recipients. “Knowingly relying” means you have actual knowledge that, but for the patent license, your conveying the covered work in a country, or your recipient's use of the covered work in a country, would infringe one or more identifiable patents in that country that you have reason to believe are valid.
 
-If, pusuant to o in connection with a single tansaction o aangement, you convey, o popagate by pocuing conveyance of, a coveed wok, and gant a patent license to some of the paties eceiving the coveed wok authoizing them to use, popagate, modify o convey a specific copy of the coveed wok, then the patent license you gant is automatically extended to all ecipients of the coveed wok and woks based on it.
+If, pursuant to or in connection with a single transaction or arrangement, you convey, or propagate by procuring conveyance of, a covered work, and grant a patent license to some of the parties receiving the covered work authorizing them to use, propagate, modify or convey a specific copy of the covered work, then the patent license you grant is automatically extended to all recipients of the covered work and works based on it.
 
-A patent license is “disciminatoy” if it does not include within the scope of its coveage, pohibits the execise of, o is conditioned on the non-execise of one o moe of the ights that ae specifically ganted unde this License. You may not convey a coveed wok if you ae a paty to an aangement with a thid paty that is in the business of distibuting softwae, unde which you make payment to the thid paty based on the extent of you activity of conveying the wok, and unde which the thid paty gants, to any of the paties who would eceive the coveed wok fom you, a disciminatoy patent license (a) in connection with copies of the coveed wok conveyed by you (o copies made fom those copies), o (b) pimaily fo and in connection with specific poducts o compilations that contain the coveed wok, unless you enteed into that aangement, o that patent license was ganted, pio to 28 Mach 2007.
+A patent license is “discriminatory” if it does not include within the scope of its coverage, prohibits the exercise of, or is conditioned on the non-exercise of one or more of the rights that are specifically granted under this License. You may not convey a covered work if you are a party to an arrangement with a third party that is in the business of distributing software, under which you make payment to the third party based on the extent of your activity of conveying the work, and under which the third party grants, to any of the parties who would receive the covered work from you, a discriminatory patent license (a) in connection with copies of the covered work conveyed by you (or copies made from those copies), or (b) primarily for and in connection with specific products or compilations that contain the covered work, unless you entered into that arrangement, or that patent license was granted, prior to 28 March 2007.
 
-Nothing in this License shall be constued as excluding o limiting any implied license o othe defenses to infingement that may othewise be available to you unde applicable patent law.
-
-
-12. No Suende of Othes' Feedom.
-
-If conditions ae imposed on you (whethe by cout ode, ageement o othewise) that contadict the conditions of this License, they do not excuse you fom the conditions of this License. If you cannot convey a coveed wok so as to satisfy simultaneously you obligations unde this License and any othe petinent obligations, then as a consequence you may not convey it at all. Fo example, if you agee to tems that obligate you to collect a oyalty fo futhe conveying fom those to whom you convey the Pogam, the only way you could satisfy both those tems and this License would be to efain entiely fom conveying the Pogam.
+Nothing in this License shall be construed as excluding or limiting any implied license or other defenses to infringement that may otherwise be available to you under applicable patent law.
 
 
-13. Use with the GNU Affeo Geneal Public License.
+12. No Surrender of Others' Freedom.
 
-Notwithstanding any othe povision of this License, you have pemission to link o combine any coveed wok with a wok licensed unde vesion 3 of the GNU Affeo Geneal Public License into a single combined wok, and to convey the esulting wok. The tems of this License will continue to apply to the pat which is the coveed wok, but the special equiements of the GNU Affeo Geneal Public License, section 13, concening inteaction though a netwok will apply to the combination as such.
-
-
-14. Revised Vesions of this License.
-
-The Fee Softwae Foundation may publish evised and/o new vesions of the GNU Geneal Public License fom time to time. Such new vesions will be simila in spiit to the pesent vesion, but may diffe in detail to addess new poblems o concens.
-
-Each vesion is given a distinguishing vesion numbe. If the Pogam specifies that a cetain numbeed vesion of the GNU Geneal Public License “o any late vesion” applies to it, you have the option of following the tems and conditions eithe of that numbeed vesion o of any late vesion published by the Fee Softwae Foundation. If the Pogam does not specify a vesion numbe of the GNU Geneal Public License, you may choose any vesion eve published by the Fee Softwae Foundation.
-
-If the Pogam specifies that a poxy can decide which futue vesions of the GNU Geneal Public License can be used, that poxy's public statement of acceptance of a vesion pemanently authoizes you to choose that vesion fo the Pogam.
-
-Late license vesions may give you additional o diffeent pemissions. Howeve, no additional obligations ae imposed on any autho o copyight holde as a esult of you choosing to follow a late vesion.
+If conditions are imposed on you (whether by court order, agreement or otherwise) that contradict the conditions of this License, they do not excuse you from the conditions of this License. If you cannot convey a covered work so as to satisfy simultaneously your obligations under this License and any other pertinent obligations, then as a consequence you may not convey it at all. For example, if you agree to terms that obligate you to collect a royalty for further conveying from those to whom you convey the Program, the only way you could satisfy both those terms and this License would be to refrain entirely from conveying the Program.
 
 
-15. Disclaime of Waanty.
+13. Use with the GNU Affero General Public License.
+
+Notwithstanding any other provision of this License, you have permission to link or combine any covered work with a work licensed under version 3 of the GNU Affero General Public License into a single combined work, and to convey the resulting work. The terms of this License will continue to apply to the part which is the covered work, but the special requirements of the GNU Affero General Public License, section 13, concerning interaction through a network will apply to the combination as such.
+
+
+14. Revised Versions of this License.
+
+The Free Software Foundation may publish revised and/or new versions of the GNU General Public License from time to time. Such new versions will be similar in spirit to the present version, but may differ in detail to address new problems or concerns.
+
+Each version is given a distinguishing version number. If the Program specifies that a certain numbered version of the GNU General Public License “or any later version” applies to it, you have the option of following the terms and conditions either of that numbered version or of any later version published by the Free Software Foundation. If the Program does not specify a version number of the GNU General Public License, you may choose any version ever published by the Free Software Foundation.
+
+If the Program specifies that a proxy can decide which future versions of the GNU General Public License can be used, that proxy's public statement of acceptance of a version permanently authorizes you to choose that version for the Program.
+
+Later license versions may give you additional or different permissions. However, no additional obligations are imposed on any author or copyright holder as a result of your choosing to follow a later version.
+
+
+15. Disclaimer of Warranty.
 
 THERE IS NO WARRANTY FOR THE PROGRAM, TO THE EXTENT PERMITTED BY APPLICABLE LAW. EXCEPT WHEN OTHERWISE STATED IN WRITING THE COPYRIGHT HOLDERS AND/OR OTHER PARTIES PROVIDE THE PROGRAM “AS IS” WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. THE ENTIRE RISK AS TO THE QUALITY AND PERFORMANCE OF THE PROGRAM IS WITH YOU. SHOULD THE PROGRAM PROVE DEFECTIVE, YOU ASSUME THE COST OF ALL NECESSARY SERVICING, REPAIR OR CORRECTION.
 
@@ -221,9 +221,9 @@ THERE IS NO WARRANTY FOR THE PROGRAM, TO THE EXTENT PERMITTED BY APPLICABLE LAW.
 IN NO EVENT UNLESS REQUIRED BY APPLICABLE LAW OR AGREED TO IN WRITING WILL ANY COPYRIGHT HOLDER, OR ANY OTHER PARTY WHO MODIFIES AND/OR CONVEYS THE PROGRAM AS PERMITTED ABOVE, BE LIABLE TO YOU FOR DAMAGES, INCLUDING ANY GENERAL, SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES ARISING OUT OF THE USE OR INABILITY TO USE THE PROGRAM (INCLUDING BUT NOT LIMITED TO LOSS OF DATA OR DATA BEING RENDERED INACCURATE OR LOSSES SUSTAINED BY YOU OR THIRD PARTIES OR A FAILURE OF THE PROGRAM TO OPERATE WITH ANY OTHER PROGRAMS), EVEN IF SUCH HOLDER OR OTHER PARTY HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
 
 
-17. Intepetation of Sections 15 and 16.
+17. Interpretation of Sections 15 and 16.
 
-If the disclaime of waanty and limitation of liability povided above cannot be given local legal effect accoding to thei tems, eviewing couts shall apply local law that most closely appoximates an absolute waive of all civil liability in connection with the Pogam, unless a waanty o assumption of liability accompanies a copy of the Pogam in etun fo a fee.
+If the disclaimer of warranty and limitation of liability provided above cannot be given local legal effect according to their terms, reviewing courts shall apply local law that most closely approximates an absolute waiver of all civil liability in connection with the Program, unless a warranty or assumption of liability accompanies a copy of the Program in return for a fee.
 
 
 END OF TERMS AND CONDITIONS

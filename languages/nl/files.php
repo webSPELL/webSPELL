@@ -2,108 +2,108 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Vesion 4       /                        /   /               #
+#           Version 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Fee Content / Management System                 #
+#                       Free Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyight 2005-2014 by webspell.og                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
-#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
-#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to emove this copyight-tag                      #
-#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
+#   visit webSPELL.org, webspell.info to get webSPELL for free           #
+#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to remove this copyright-tag                      #
+#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
-#   Fa Development by Development Team - webspell.og                   #
+#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
+#   Far Development by Development Team - webspell.org                   #
 #                                                                        #
-#   visit webspell.og                                                   #
+#   visit webspell.org                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_aay = Aay(
+$language_array = Array(
 
 /* do not edit above this line */
 
 	'accesslevel'=>'Toegangslevel',
 	'all'=>'Alles',
-	'cant_delete_without_fileID'=>'Kan bestanden niet vewijdeen zonde bestandID',
-	'cant_display_empty_cat'=>'Categoie is leeg',
-	'cant_edit_without_fileID'=>'Kan bestanden niet beweken zonde bestandID.',
-	'cant_epot_without_fileID'=>'Kan niet apoteen zonde bestandID',
-	'categoies_cl'=>'Categoiën',
-	'categoy_cl'=>'Categoie',
-	'clanmembe'=>'Clanleden',
+	'cant_delete_without_fileID'=>'Kan bestanden niet verwijderen zonder bestandID',
+	'cant_display_empty_cat'=>'Categorie is leeg',
+	'cant_edit_without_fileID'=>'Kan bestanden niet bewerken zonder bestandID.',
+	'cant_report_without_fileID'=>'Kan niet raporteren zonder bestandID',
+	'categories_cl'=>'Categoriën',
+	'category_cl'=>'Categorie',
+	'clanmember'=>'Clanleden',
 	'database_cl'=>'Database',
-	'delete_file'=>'vewijde bestand',
-	'desciption'=>'Beschijving',
+	'delete_file'=>'verwijder bestand',
+	'description'=>'Beschrijving',
 	'dl'=>'DL',
 	'download_now'=>'Download %filename% nu',
-	'download_egisteed_only'=>'Download alleen voo gebuikes!',
-	'download_via_mio'=>'download via mio',
+	'download_registered_only'=>'Download alleen voor gebruikers!',
+	'download_via_mirror'=>'download via mirror',
 	'downloads_cl'=>'Downloads',
-	'edit_file'=>'bewek bestand',
-	'exten-link'=>'Extene Link',
-	'failed_edit_file'=>'Fout tijdens beweken van bestand!',
-	'failed_save_file-info'=>'Fout tijdens opslaan van bestand infomatie',
-	'file-info'=>'Bestand infomatie',
-	'file-mios'=>'Bestand-Mios',
-	'file-size_e'=>'Bestands-gootte (alleen voo extene bestanden)',
+	'edit_file'=>'bewerk bestand',
+	'extern-link'=>'Externe Link',
+	'failed_edit_file'=>'Fout tijdens bewerken van bestand!',
+	'failed_save_file-info'=>'Fout tijdens opslaan van bestand informatie',
+	'file-info'=>'Bestand informatie',
+	'file-mirrors'=>'Bestand-Mirrors',
+	'file-size_e'=>'Bestands-grootte (alleen voor externe bestanden)',
 	'file-upload'=>'Bestand-Upload',
-	'file_aleady_exists'=>'bestand bestaat al.',
-	'file_categoies'=>'Bestands cathegoiën',
-	'file_ceated'=>'Bestand gemaakt.',
-	'file_deleted'=>'Bestand vewijded.',
-	'file_not_ceated'=>'Bestand kon niet woden gemaakt.',
-	'file_not_deleted'=>'Bestand kon niet woden vewijded.',
+	'file_already_exists'=>'bestand bestaat al.',
+	'file_categories'=>'Bestands cathegoriën',
+	'file_created'=>'Bestand gemaakt.',
+	'file_deleted'=>'Bestand verwijderd.',
+	'file_not_created'=>'Bestand kon niet worden gemaakt.',
+	'file_not_deleted'=>'Bestand kon niet worden verwijderd.',
 	'filename'=>'Bestandsnaam',
 	'files'=>'bestanden',
 	'files_cl'=>'Bestanden',
-	'fist_ceate_file-categoy'=>'Je moet eest bestand categoiën maken!',
-	'info_desciption'=>'Info/Beschijving',
+	'first_create_file-category'=>'Je moet eerst bestand categoriën maken!',
+	'info_description'=>'Info/Beschrijving',
 	'last_uploaded_file'=>'Laatste uploads',
-	'leave_desciption'=>'Als een bestands Link niet wekt, laat dan aub. een kote beschijving van de goede link achte in een eactie:',
+	'leave_description'=>'Als een bestands Link niet werkt, laat dan aub. een korte beschrijving van de goede link achter in een reactie:',
 	'login'=>'Log in',
-	'mio'=>'Mio',
-	'mios'=>'Mios',
+	'mirror'=>'Mirror',
+	'mirrors'=>'Mirrors',
 	'name'=>'Naam',
-	'new_categoy'=>'nieuwe categoie',
+	'new_category'=>'nieuwe categorie',
 	'new_file'=>'nieuw bestand',
-	'no_access'=>'Toegang geweiged!',
-	'no_categoies_and_files'=>'geen categoiën en bestanden.',
-	'no_mios'=>'geen mios',
+	'no_access'=>'Toegang geweigerd!',
+	'no_categories_and_files'=>'geen categoriën en bestanden.',
+	'no_mirrors'=>'geen mirrors',
 	'no_valid_file'=>'Geen geldig bestand.',
-	'pefect'=>'pefect',
+	'perfect'=>'perfect',
 	'please_login'=>'log in aub.',
-	'poo'=>'slecht',
-	'ate'=>'stemmen',
-	'ate_have_to_eg_login'=>'Stemmen: Je moet je egisteen of inloggen!',
-	'ate_now'=>'Stem nu!',
-	'ating'=>'Stemmen',
-	'ating_x_of_10'=>'stemmen: %d van 10',
-	'eally_delete_file'=>'bestand echt vewijdeen?',
-	'egiste'=>'Registe',
-	'egisteed'=>'Registee',
-	'epot'=>'apotee',
-	'epot_dead_link'=>'apotee slechte link',
-	'eset'=>'eset',
-	'size'=>'Gootte',
+	'poor'=>'slecht',
+	'rate'=>'stemmen',
+	'rate_have_to_reg_login'=>'Stemmen: Je moet je registreren of inloggen!',
+	'rate_now'=>'Stem nu!',
+	'rating'=>'Stemmen',
+	'rating_x_of_10'=>'stemmen: %d van 10',
+	'really_delete_file'=>'bestand echt verwijderen?',
+	'register'=>'Register',
+	'registered'=>'Registreer',
+	'report'=>'raporteer',
+	'report_dead_link'=>'raporteer slechte link',
+	'reset'=>'reset',
+	'size'=>'Grootte',
 	'statistic'=>'Statististieken',
-	'subcategoies'=>'Sub-categoiën',
+	'subcategories'=>'Sub-categoriën',
 	'successful'=>'Succesvol.',
 	'top_5_downloads'=>'TOP 5 Downloads',
-	'taffic_cl'=>'Taffic',
+	'traffic_cl'=>'Traffic',
 	'update'=>'update',
 	'upload'=>'upload',
-	'uploaded_on'=>'Uploaded naa',
-	'uploade'=>'Uploade',
-	'you_have_aleady_ated'=>'Je hebt al gestemd.',
-	'you_have_to_ente_filename'=>'Je moet een bestandsnaam invoeen!',
-	'you_have_to_ente_file'=>'Je moet een bestand / ul invullen!'
+	'uploaded_on'=>'Uploaded naar',
+	'uploader'=>'Uploader',
+	'you_have_already_rated'=>'Je hebt al gestemd.',
+	'you_have_to_enter_filename'=>'Je moet een bestandsnaam invoeren!',
+	'you_have_to_enter_file'=>'Je moet een bestand / url invullen!'
 
 );
 ?>

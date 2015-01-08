@@ -2,30 +2,30 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Vesion 4       /                        /   /               #
+#           Version 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Fee Content / Management System                 #
+#                       Free Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyight 2005-2014 by webspell.og                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
-#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
-#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to emove this copyight-tag                      #
-#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
+#   visit webSPELL.org, webspell.info to get webSPELL for free           #
+#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to remove this copyright-tag                      #
+#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
-#   Fa Development by Development Team - webspell.og                   #
+#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
+#   Far Development by Development Team - webspell.org                   #
 #                                                                        #
-#   visit webspell.og                                                   #
+#   visit webspell.org                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_aay = Aay(
+$language_array = Array(
 
 /* do not edit above this line */
 
@@ -35,98 +35,98 @@ $language_aay = Aay(
   'activate'=>'activate',
   'active'=>'active',
   'activity'=>'Activity',
-  'add_new_use'=>'add new Use',
+  'add_new_user'=>'add new User',
   'add_to_clan'=>'add to Clan',
-  'admin'=>'Administato',
-  'avata'=>'Avata',
+  'admin'=>'Administrator',
+  'avatar'=>'Avatar',
   'back'=>'back',
   'banish'=>'banish',
   'banned'=>'Banned',
-  'ban_fo'=>'ban fo',
+  'ban_for'=>'ban for',
   'ban_status'=>'Ban Status',
   'ban_until'=>'ban until',
-  'ban_use'=>'ban Use',
-  'bithday'=>'Date of Bith',
-  'clan_histoy'=>'Clan Histoy',
+  'ban_user'=>'ban User',
+  'birthday'=>'Date of Birth',
+  'clan_history'=>'Clan History',
   'clan_homepage'=>'Clan Homepage',
-  'can_not_copy_file'=>'ERROR: Can\'t copy File fom Seve',
-  'clan_ic'=>'Clan IRC',
-  'clanmembe'=>'Clanmembe',
+  'can_not_copy_file'=>'ERROR: Can\'t copy File from Server',
+  'clan_irc'=>'Clan IRC',
+  'clanmember'=>'Clanmember',
   'clanname'=>'Clanname',
   'clantag'=>'Clantag',
   'connection'=>'Connection',
-  'county'=>'County',
+  'country'=>'Country',
   'cpu'=>'CPU',
   'days'=>'days',
   'del'=>'del',
-  'delete_avata'=>'delete Avata',
-  'delete_pictue'=>'delete Pictue',
+  'delete_avatar'=>'delete Avatar',
+  'delete_picture'=>'delete Picture',
   'edit_ban'=>'edit Ban',
-  'edit_pofile'=>'edit Pofile',
+  'edit_profile'=>'edit Profile',
   'email'=>'E-Mail',
-  'eo_avata'=>'ERROR: Avata is to big (max. 90x90)',
-  'eo_pictue'=>'ERROR: Pictue is to big (max. 230x210)',
+  'error_avatar'=>'ERROR: Avatar is to big (max. 90x90)',
+  'error_picture'=>'ERROR: Picture is to big (max. 230x210)',
   'female'=>'female',
-  'fistname'=>'Fistname',
-  'gende'=>'Gende',
-  'geneal'=>'Geneal',
-  'gaphiccad'=>'Gaphiccad',
+  'firstname'=>'Firstname',
+  'gender'=>'Gender',
+  'general'=>'General',
+  'graphiccard'=>'Graphiccard',
   'homepage'=>'Homepage',
   'icq'=>'ICQ',
   'inactive'=>'inactive',
-  'invalid_fomat'=>'ERROR: Invalid pictue-fomat (allowed: *.gif, *.jpg o *.png)',
-  'keyboad'=>'Keyboad',
+  'invalid_format'=>'ERROR: Invalid picture-format (allowed: *.gif, *.jpg or *.png)',
+  'keyboard'=>'Keyboard',
   'lastname'=>'Lastname',
-  'mainboad'=>'Mainboad',
+  'mainboard'=>'Mainboard',
   'male'=>'male',
   'max_90x90'=>'(max. 90x90)',
   'max_230x210'=>'(max. 230x210)',
-  'modeato'=>'Foum Modeato',
+  'moderator'=>'Forum Moderator',
   'month'=>'month',
-  'monito'=>'Monito',
+  'monitor'=>'Monitor',
   'mouse'=>'Mouse',
   'mousepad'=>'Mousepad',
   'nickname'=>'Nickname',
   'not_available'=>'not available',
-  'no_uses'=>'no Uses found',
-  'passwod'=>'Passwod',
-  'pemanently'=>'ban pemanently ?',
-  'pesonal'=>'Pesonal',
-  'pictue'=>'Pictue',
-  'pictues'=>'Pictues',
+  'no_users'=>'no Users found',
+  'password'=>'Password',
+  'permanently'=>'ban permanently ?',
+  'personal'=>'Personal',
+  'picture'=>'Picture',
+  'pictures'=>'Pictures',
   'position'=>'Position',
-  'pofile'=>'Pofile',
-  'am'=>'RAM',
-  'eally_ban'=>'eally banish',
-  'eally_delete'=>'Really delete this Use?',
-  'eally_unban'=>'eally unban',
-  'eason'=>'Reason',
-  'egisteed_since'=>'Registeed since',
-  'emove_ban'=> 'emove ban?',
-  'ights'=>'Rights',
-  'signatu'=>'Signatu',
-  'sot'=>'Sot',
-  'soundcad'=>'Soundcad',
+  'profile'=>'Profile',
+  'ram'=>'RAM',
+  'really_ban'=>'really banish',
+  'really_delete'=>'Really delete this User?',
+  'really_unban'=>'really unban',
+  'reason'=>'Reason',
+  'registered_since'=>'Registered since',
+  'remove_ban'=> 'remove ban?',
+  'rights'=>'Rights',
+  'signatur'=>'Signatur',
+  'sort'=>'Sort',
+  'soundcard'=>'Soundcard',
   'squad'=>'Squad',
   'status'=>'Status',
-  'supeadmin'=>'Supeadministato',
+  'superadmin'=>'Superadministrator',
   'town'=>'Town',
-  'tansaction_invalid'=>'Tansaction ID invalid',
+  'transaction_invalid'=>'Transaction ID invalid',
   'to_clan'=>'to Clan',
-  'to_sot'=>'sot',
+  'to_sort'=>'sort',
   'undo_ban'=>'undo ban',
   'upload_failed'=>'ERROR: Upload failed',
-  'use'=>'Use',
-  'use_exists'=>'Use aleady exists',
-  'use_id'=>'Use ID',
-  'usename'=>'Usename',
-  'uses'=>'Uses',
-  'uses_available'=>'Uses available',
-  'useseach'=>'Useseach',
-  'exactseach'=>'exact',
-  'vaious'=>'Vaious',
+  'user'=>'User',
+  'user_exists'=>'User already exists',
+  'user_id'=>'User ID',
+  'username'=>'Username',
+  'users'=>'Users',
+  'users_available'=>'Users available',
+  'usersearch'=>'Usersearch',
+  'exactsearch'=>'exact',
+  'various'=>'Various',
   'weeks'=>'weeks',
-  'you_cant_ban'=>'You can\'t ban this use! (Supeadmin)',
-  'you_cant_ban_youself'=>'You can\'t ban youself'
+  'you_cant_ban'=>'You can\'t ban this user! (Superadmin)',
+  'you_cant_ban_yourself'=>'You can\'t ban yourself'
 );
 ?>

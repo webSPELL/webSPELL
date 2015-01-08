@@ -2,71 +2,71 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Vesion 4       /                        /   /               #
+#           Version 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Fee Content / Management System                 #
+#                       Free Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyight 2005-2014 by webspell.og                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
-#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
-#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to emove this copyight-tag                      #
-#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
+#   visit webSPELL.org, webspell.info to get webSPELL for free           #
+#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to remove this copyright-tag                      #
+#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
-#   Fa Development by Development Team - webspell.og                   #
+#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
+#   Far Development by Development Team - webspell.org                   #
 #                                                                        #
-#   visit webspell.og                                                   #
+#   visit webspell.org                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_aay = Aay(
+$language_array = Array(
 
 /* do not edit above this line */
 
-  'activation_successful'=>'.فعال سازی اکانت شما با موفقیت انجام گرفت<b>.شما میتوانید وارد شوید',
+  'activation_successful'=>'.فعال سازی اکانت شما با موفقیت انجام گرفت<br>.شما میتوانید وارد شوید',
   'back'=>'برگشت',
-  'ente_nickname'=>'.لطفا نام مخفف خود را وارد کنید',
-  'ente_passwod'=>'.لطفا کلمه عبور را وارد کنید',
-  'ente_usename'=>'.لطفا نام کاربری را وارد کنید',
-  'eos_thee'=>'مشکلی پیش امد',
-  'fo_login'=>'برای ورود',
+  'enter_nickname'=>'.لطفا نام مخفف خود را وارد کنید',
+  'enter_password'=>'.لطفا کلمه عبور را وارد کنید',
+  'enter_username'=>'.لطفا نام کاربری را وارد کنید',
+  'errors_there'=>'مشکلی پیش امد',
+  'for_login'=>'برای ورود',
   'invalid_mail'=>'.شما ایمیل درست را وارد نکردید',
   'mail'=>'ایمیل',
   'mail_activation_successful'=>'.فعال سازی ایمیل شما با موفقیت انجام گرفت',
   'mail_failed'=>'.ایمیل فعال سازی نمیتواند فرستاده شود لطفا با ادمین تماس بگرید',
   'mail_inuse'=>'.ایمیل هم اکنون در حا استفاده است',
-  'mail_subject'=>'فعال سازی ایمیل برای %homepage_ul%',
-  'mail_text'=>'سلام %usename%
+  'mail_subject'=>'فعال سازی ایمیل برای %homepage_url%',
+  'mail_text'=>'سلام %username%
   
-  شما عضو شدید در %pagetitle% (%homepage_ul%) تاریخ اکانت شما.موفقیت امیز:
+  شما عضو شدید در %pagetitle% (%homepage_url%) تاریخ اکانت شما.موفقیت امیز:
   
-  نام ورود: %usename%
+  نام ورود: %username%
   
   برای اینکه فرایند عضویت با موفقیت تمام شود باید اکانت خود را فعال سازی کنید:
   %activationlink%
   با تشکر
-  %pagetitle% - %homepage_ul%',
+  %pagetitle% - %homepage_url%',
   'nickname'=>'نام مخفف',
   'nickname_inuse'=>'.این نام هم اکنون در حال استفاده است',
-'no_egiste_when_loggedin'=>'You alleady have an account at %pagename%',
-  'passwod'=>'کلمه عبور',
-  'pofile_info'=>'اطلاعات اکانت',
-  'egiste_now'=>'!عضو شوید',
-  'egiste_successful'=>'.عضویت با موفقیت انجام گرفت لطفا ایمیل را فعال سازی کنید',
-  'egistation'=>'عضویت',
-  'epeat'=>'کلمه عبور',
-  'epeat_invalid'=>'.پسورد هماهنگ نیست',
-  'secuity_code'=>'کد',
-  'usename'=>'نام کاربر',
-  'usename_inuse'=>'.کاربر در حال استفاده است',
-  'usename_toolong'=>'.(نام کاربر بلند است (حداکثر 30 حرف',
-  'wong_activationkey'=>'!کد فعال سازی اشتباه است',
-  'wong_secuitycode'=>'!کد اشتباه است'
+'no_register_when_loggedin'=>'You allready have an account at %pagename%',
+  'password'=>'کلمه عبور',
+  'profile_info'=>'اطلاعات اکانت',
+  'register_now'=>'!عضو شوید',
+  'register_successful'=>'.عضویت با موفقیت انجام گرفت لطفا ایمیل را فعال سازی کنید',
+  'registration'=>'عضویت',
+  'repeat'=>'کلمه عبور',
+  'repeat_invalid'=>'.پسورد هماهنگ نیست',
+  'security_code'=>'کد',
+  'username'=>'نام کاربر',
+  'username_inuse'=>'.کاربر در حال استفاده است',
+  'username_toolong'=>'.(نام کاربر بلند است (حداکثر 30 حرف',
+  'wrong_activationkey'=>'!کد فعال سازی اشتباه است',
+  'wrong_securitycode'=>'!کد اشتباه است'
 );
 ?>

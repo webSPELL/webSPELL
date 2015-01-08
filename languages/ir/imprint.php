@@ -2,48 +2,48 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Vesion 4       /                        /   /               #
+#           Version 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Fee Content / Management System                 #
+#                       Free Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyight 2005-2014 by webspell.og                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
-#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
-#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to emove this copyight-tag                      #
-#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
+#   visit webSPELL.org, webspell.info to get webSPELL for free           #
+#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to remove this copyright-tag                      #
+#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
-#   Fa Development by Development Team - webspell.og                   #
+#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
+#   Far Development by Development Team - webspell.org                   #
 #                                                                        #
-#   visit webspell.og                                                   #
+#   visit webspell.org                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_aay = Aay(
+$language_array = Array(
 
 /* do not edit above this line */
 
 	'admins'=>'مدیر:',
 	'coding'=>'برنامه ریزی',
-	'coding_info'=>'این سایت استفاده میکند از <a hef="http://www.webspell.og" taget="_blank">webSPELL Fee Content Management System (نسخه: $vesion)</a>. این سایت برگرفته شده ازHP4/5 و MySQL <a hef="http://www.fsf.og/licensing/licenses/gpl.html" taget="_blank">GNU GENERAL PUBLIC LICENSE</a>.<b>از این لینک به طور رایگان دریافت کنید: <a hef="http://www.webspell.og" taget="_blank">www.webSPELL.og</a>',
-	'disclaime'=>'حقوق',
-	'disclaime_text'=>'<p><stong>1. مفاد </stong><b>
-	.نویسنده مسئول است نسبت به اطلاعات و کیفیت و درستی انها نظارت کند و مسیول است اگر از این اطلاعات نسبت به شخصی خسارتی وارد شود و یا اطلاعات نادرست و یا اینکه کامل نباشد و منبع ان نادرست باشد در غیر این صورت نوشته بدون تذکر به نویسنده حذف خواهد گردید<b>	.تمام پیشنهادات و مقالات باید کامل ارایه شود در غیر این صورت نویسنده حق دارد انها را از تاپیک مورد نظر حذف کند<b></p>
-	<p><stong>2. مرجع و لینک ها </stong><b>
+	'coding_info'=>'این سایت استفاده میکند از <a href="http://www.webspell.org" target="_blank">webSPELL Free Content Management System (نسخه: $version)</a>. این سایت برگرفته شده ازHP4/5 و MySQL <a href="http://www.fsf.org/licensing/licenses/gpl.html" target="_blank">GNU GENERAL PUBLIC LICENSE</a>.<br>از این لینک به طور رایگان دریافت کنید: <a href="http://www.webspell.org" target="_blank">www.webSPELL.org</a>',
+	'disclaimer'=>'حقوق',
+	'disclaimer_text'=>'<p><strong>1. مفاد </strong><br>
+	.نویسنده مسئول است نسبت به اطلاعات و کیفیت و درستی انها نظارت کند و مسیول است اگر از این اطلاعات نسبت به شخصی خسارتی وارد شود و یا اطلاعات نادرست و یا اینکه کامل نباشد و منبع ان نادرست باشد در غیر این صورت نوشته بدون تذکر به نویسنده حذف خواهد گردید<br>	.تمام پیشنهادات و مقالات باید کامل ارایه شود در غیر این صورت نویسنده حق دارد انها را از تاپیک مورد نظر حذف کند<br></p>
+	<p><strong>2. مرجع و لینک ها </strong><br>
 	.نویسنده وظیفه ای در قبال لینک های موجود در نوشته خود ندارد ولی در صورتی که نویسنده در مورد لینک اطلاعات لازم را دارد و اگر لینک مورد نطر باعث بروز مشکل برای بازدید کننده خواهد شد نویسنده است که مسیول لینک مورد نظر و خسارت وارده بر بازدید کنندگان را دارد و باید لینک مورد نظر را حذف نماید</p>
-	<p><stong>3. کپی رایت</stong><b>
+	<p><strong>3. کپی رایت</strong><br>
 	.نویسنده وظیفه دارد از منابعی که قانون کپی رایت در انها وجود دارد استفاده نکند در غیر این صورت از ذکر منبع و دارا بودن قانون کپی رایت مطلب استفاده کند 	.در قبال نوشته ها و عکس های موجود در این سایت اعضای سایت مسیول به رعایت قانون کپی رایت میباشند و استفاده ازمطالب درون سایت این مطالب بدون اجازه نویسنده و ذکر لینک ممنوع میباشد</p>
-	<p><stong>4. اطلاعات شخصی</stong><b>
-	.استفاده از اطلاعات شخصی از جمله ایمیل ادرس و شماره تلفن برای مصارفی مثل پرداخت امکان پذیر میباشد و مسیولیت ان بر عهده شخص دارنده میباشد و استفاده از اطلاعات شخصی دیگران و ایجاد مزاحمت و فرستادن اسپم باعث مزاحمت و بن شدن میباشد<b><b>	<stong>5. اعتبارقانونی</stong><b>	.اگر بخشهای از این مفاد نادرست است و یا احتیاج به تصحیح دارد و یا قانونی نیست بخشهای دیگر انها را کامل میکند</p>',
-	'impint'=>'قرار دادن',
+	<p><strong>4. اطلاعات شخصی</strong><br>
+	.استفاده از اطلاعات شخصی از جمله ایمیل ادرس و شماره تلفن برای مصارفی مثل پرداخت امکان پذیر میباشد و مسیولیت ان بر عهده شخص دارنده میباشد و استفاده از اطلاعات شخصی دیگران و ایجاد مزاحمت و فرستادن اسپم باعث مزاحمت و بن شدن میباشد<br><br>	<strong>5. اعتبارقانونی</strong><br>	.اگر بخشهای از این مفاد نادرست است و یا احتیاج به تصحیح دارد و یا قانونی نیست بخشهای دیگر انها را کامل میکند</p>',
+	'imprint'=>'قرار دادن',
 	'mods'=>'گرداننده:',
-	'esponsible_pesons'=>'شخص مسئول',
-	'webmaste'=>'وب مستر:'
+	'responsible_persons'=>'شخص مسئول',
+	'webmaster'=>'وب مستر:'
 );
 ?>

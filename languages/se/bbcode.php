@@ -2,86 +2,86 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Vesion 4       /                        /   /               #
+#           Version 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Fee Content / Management System                 #
+#                       Free Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyight 2005-2014 by webspell.og                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
-#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
-#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to emove this copyight-tag                      #
-#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
+#   visit webSPELL.org, webspell.info to get webSPELL for free           #
+#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to remove this copyright-tag                      #
+#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
-#   Fa Development by Development Team - webspell.og                   #
+#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
+#   Far Development by Development Team - webspell.org                   #
 #                                                                        #
-#   visit webspell.og                                                   #
+#   visit webspell.org                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_aay = Aay(
+$language_array = Array(
 
 /* do not edit above this line */
 
 	'align'=>'Rätta till',
 	'blue'=>'Blå',
-	'bulywood'=>'bulywood',
-	'cente'=>'centea',
+	'burlywood'=>'burlywood',
+	'center'=>'centrera',
 	'chocolate'=>'choklad',
-	'colo'=>'FÄRG',
-	'coal'=>'koall',
-	'cimson'=>'kamosinöd',
-	'dakblue'=>'mök blå',
-	'daked'=>'mök öd',
-	'deeppink'=>'djuposa',
-	'fiebick'=>'eldfast tegel',
+	'color'=>'FÄRG',
+	'coral'=>'korall',
+	'crimson'=>'karmosinröd',
+	'darkblue'=>'mörk blå',
+	'darkred'=>'mörk röd',
+	'deeppink'=>'djuprosa',
+	'firebrick'=>'eldfast tegel',
 	'font'=>'TECKENSNITT',
-	'geen'=>'gön',
-	'huge'=>'enom',
+	'green'=>'grön',
+	'huge'=>'enorm',
 	'indigo'=>'indigo',
-	'justify'=>'ättfädiga',
-	'lage'=>'sto',
-	'left'=>'vänste',
-	'limegeen'=>'limegön',
-	'moe_flags'=>'me flaggo',
-	'nomal'=>'nomal',
-	'oange'=>'oange',
-	'oangeed'=>'oange öd',
-	'puple'=>'lila',
-	'ed'=>'öd',
-	'ight'=>'Höge',
-	'oyalblue'=>'kunglig blå',
-	'sandybown'=>'sandig bun',
-	'seageen'=>'sjögönt',
+	'justify'=>'rättfärdiga',
+	'large'=>'stor',
+	'left'=>'vänster',
+	'limegreen'=>'limegrön',
+	'more_flags'=>'mer flaggor',
+	'normal'=>'normal',
+	'orange'=>'orange',
+	'orangered'=>'orange röd',
+	'purple'=>'lila',
+	'red'=>'röd',
+	'right'=>'Höger',
+	'royalblue'=>'kunglig blå',
+	'sandybrown'=>'sandig brun',
+	'seagreen'=>'sjögrönt',
 	'sienna'=>'sienna',
-	'silve'=>'silve',
+	'silver'=>'silver',
 	'size'=>'STORLEK',
 	'skyblue'=>'himmel blå',
 	'small'=>'liten',
-	'teal'=>'kicka ',
+	'teal'=>'kricka ',
 	'tiny'=>'pytteliten ',
 	'tomato'=>'tomat',
-	'unevenAmount'=>'Vaieande mängd öppna och stänga BBCode tagga',
-	'fistTagClosingTag'=>'Fösta BBCode-taggen kan inte vaa en utgående',
-	'notSameAmount'=>'Inte lika mycket öppna och stänga BBCode tagga',
-	'wongNesting'=>'Fel kapsling av BBCode tagga',
-	'listguide'=>'Skiv \'1\' fö en numead lista, \'a\' fö en alfabetisk lista elle \'\' fö en undad lista.',
-	'listpoint'=>'Skiv in en lista. Skiv inget elle tyck på \'Avbyt\' fö att avsluta listan.',
+	'unevenAmount'=>'Varierande mängd öppna och stänga BBCode taggar',
+	'firstTagClosingTag'=>'Första BBCode-taggen kan inte vara en utgående',
+	'notSameAmount'=>'Inte lika mycket öppna och stänga BBCode taggar',
+	'wrongNesting'=>'Fel kapsling av BBCode taggar',
+	'listguide'=>'Skriv \'1\' för en numrerad lista, \'a\' för en alfabetisk lista eller \'\' för en rundad lista.',
+	'listpoint'=>'Skriv in en lista. Skriv inget eller tryck på \'Avbryt\' för att avsluta listan.',
 	'addcode'=>'Sätt i position',
-	'ead_moe'=>'Läs me',
-	'mc_you_have'=>'Du ha',
+	'read_more'=>'Läs mer',
+	'mc_you_have'=>'Du har',
 	'mc_new_messages'=>'nytt meddelande. Vill du läsa dom nu?',
 	'na'=>'Inte tillänglig',
-	'wote'=>'skev',
-	'auto_esize'=>'Anpassa automatiskt',
+	'wrote'=>'skrev',
+	'auto_resize'=>'Anpassa automatiskt',
 	'code'=>'Kod',
-	'lage_pictue'=>'Sto bild',
-	'show_oiginal'=>'Visa oginal'
+	'large_picture'=>'Stor bild',
+	'show_original'=>'Visa orginal'
 );
 ?>

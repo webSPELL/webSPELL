@@ -2,37 +2,37 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Vesion 4       /                        /   /               #
+#           Version 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Fee Content / Management System                 #
+#                       Free Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyight 2005-2014 by webspell.og                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
-#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
-#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to emove this copyight-tag                      #
-#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
+#   visit webSPELL.org, webspell.info to get webSPELL for free           #
+#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to remove this copyright-tag                      #
+#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
-#   Fa Development by Development Team - webspell.og                   #
+#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
+#   Far Development by Development Team - webspell.org                   #
 #                                                                        #
-#   visit webspell.og                                                   #
+#   visit webspell.org                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_aay = Aay(
+$language_array = Array(
 
 /* do not edit above this line */
-	'invalid_passwod'=>'Du hast ein falsches Passwot eingegeben.<b><b><a hef="javascipt:histoy.back()">Zuück und Eingabe wiedeholen</a>',
-	'ip_banned'=>'Deine IP wude von de Seite gebannt.<b>%eason%<b><b><a hef="javascipt:histoy.back()">Zuück</a>',
-	'login_successful'=>'Efolgeich angemeldet',
-	'no_use'=>'Kein Benutze mit dem Namen <b>%usename%</b> im System vohanden.<b><b><a hef="javascipt:histoy.back()">Zuück und Eingabe wiedeholen</a>',
-	'not_activated'=>'Dein Account ist nicht aktiviet.<b><b><a hef="javascipt:histoy.back()">Zuück</a>',
-	'session_eo'=>'Bitte vesichee dich, dass dein Bowse Cookies akzeptiet.<b>Falls das Poblem weitehin besteht, wende dich an den Webmaste.<b><b><a hef="javascipt:histoy.back()">Zuück</a>'
+	'invalid_password'=>'Du hast ein falsches Passwort eingegeben.<br><br><a href="javascript:history.back()">Zurück und Eingabe wiederholen</a>',
+	'ip_banned'=>'Deine IP wurde von der Seite gebannt.<br>%reason%<br><br><a href="javascript:history.back()">Zurück</a>',
+	'login_successful'=>'Erfolgreich angemeldet',
+	'no_user'=>'Kein Benutzer mit dem Namen <b>%username%</b> im System vorhanden.<br><br><a href="javascript:history.back()">Zurück und Eingabe wiederholen</a>',
+	'not_activated'=>'Dein Account ist nicht aktiviert.<br><br><a href="javascript:history.back()">Zurück</a>',
+	'session_error'=>'Bitte versichere dich, dass dein Browser Cookies akzeptiert.<br>Falls das Problem weiterhin besteht, wende dich an den Webmaster.<br><br><a href="javascript:history.back()">Zurück</a>'
 );
 ?>

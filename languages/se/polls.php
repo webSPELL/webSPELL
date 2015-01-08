@@ -2,70 +2,70 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Vesion 4       /                        /   /               #
+#           Version 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Fee Content / Management System                 #
+#                       Free Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyight 2005-2014 by webspell.og                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
-#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
-#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to emove this copyight-tag                      #
-#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
+#   visit webSPELL.org, webspell.info to get webSPELL for free           #
+#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to remove this copyright-tag                      #
+#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
-#   Fa Development by Development Team - webspell.og                   #
+#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
+#   Far Development by Development Team - webspell.org                   #
 #                                                                        #
-#   visit webspell.og                                                   #
+#   visit webspell.org                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_aay = Aay(
+$language_array = Array(
 
 /* do not edit above this line */
 
-	'aleady_voted'=>'Du ha edan östat.',
-	'comments'=>'kommentae',
-	'days'=>'daga',
-	'delete'=>'adea',
-	'disable_comments'=>'slå av kommentae',
-	'edit'=>'edigea',
-	'edit_poll'=>'edigea omöstningen',
-	'enable_use_comments'=>'tillåt använda kommentae',
-	'enable_visito_comments'=>'tillåt besöka kommentae',
+	'already_voted'=>'Du har redan röstat.',
+	'comments'=>'kommentarer',
+	'days'=>'dagar',
+	'delete'=>'radera',
+	'disable_comments'=>'slå av kommentarer',
+	'edit'=>'redigera',
+	'edit_poll'=>'redigera omröstningen',
+	'enable_user_comments'=>'tillåt användar kommentarer',
+	'enable_visitor_comments'=>'tillåt besökar kommentarer',
 	'endingtime'=>'Sluttid',
-	'inten'=>'Inten',
+	'intern'=>'Intern',
 	'latest_by'=>'Senast av',
-	'new_poll'=>'ny omöstning',
+	'new_poll'=>'ny omröstning',
 	'no_access'=>'Ingen tillåtelse!',
-	'no_active_poll'=>'ingen aktiv omöstning',
-	'no_enties'=>'inga inlägg!',
+	'no_active_poll'=>'ingen aktiv omröstning',
+	'no_entries'=>'inga inlägg!',
 	'on'=>'på',
-	'option'=>'Altenativ',
-	'poll_ended'=>'omöstningen ä edan slut',
-	'polls'=>'omöstninga',
-	'eally_delete'=>'vekligen adea denna omöstningen?',
-	'eally_eopen'=>'eally eopen this poll?',
-	'eally_stop'=>'vekligen stoppa denna omöstningen?',
-	'eset_votes'=>'ställ om östningana',
-	'eopen_poll'=>'eopen poll',
-	'save_poll'=>'spaa omöstning',
-	'show_polls'=>'visa omöstningana',
-	'stop_poll'=>'stoppa omöstningen',
-	'stopped_poll'=>'Omöstningen stoppad',
-	'time_left'=>'tid kva',
+	'option'=>'Alternativ',
+	'poll_ended'=>'omröstningen är redan slut',
+	'polls'=>'omröstningar',
+	'really_delete'=>'verkligen radera denna omröstningen?',
+	'really_reopen'=>'really reopen this poll?',
+	'really_stop'=>'verkligen stoppa denna omröstningen?',
+	'reset_votes'=>'ställ om röstningarna',
+	'reopen_poll'=>'reopen poll',
+	'save_poll'=>'spara omröstning',
+	'show_polls'=>'visa omröstningarna',
+	'stop_poll'=>'stoppa omröstningen',
+	'stopped_poll'=>'Omröstningen stoppad',
+	'time_left'=>'tid kvar',
 	'title'=>'Titel',
-	'update_poll'=>'uppdatea omöstning',
-	'vote'=>'östa',
-	'vote_now'=>'östa nu',
-	'votes'=>'östninga',
-	'yht_ente_2_options'=>'Du måste skiva minst 2 valmöjlighete!',
-	'yht_ente_endingtime'=>'Du måste skiva slut tid!',
-	'yht_ente_title'=>'Du måste skiva en titel!'
+	'update_poll'=>'uppdatera omröstning',
+	'vote'=>'rösta',
+	'vote_now'=>'rösta nu',
+	'votes'=>'röstningar',
+	'yht_enter_2_options'=>'Du måste skriva minst 2 valmöjligheter!',
+	'yht_enter_endingtime'=>'Du måste skriva slut tid!',
+	'yht_enter_title'=>'Du måste skriva en titel!'
 );
 ?>

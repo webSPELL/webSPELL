@@ -2,60 +2,60 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Vesion 4       /                        /   /               #
+#           Version 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Fee Content / Management System                 #
+#                       Free Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyight 2005-2014 by webspell.og                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
-#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
-#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to emove this copyight-tag                      #
-#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
+#   visit webSPELL.org, webspell.info to get webSPELL for free           #
+#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to remove this copyright-tag                      #
+#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
-#   Fa Development by Development Team - webspell.og                   #
+#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
+#   Far Development by Development Team - webspell.org                   #
 #                                                                        #
-#   visit webspell.og                                                   #
+#   visit webspell.org                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_aay = Aay(
+$language_array = Array(
 
 /* do not edit above this line */
 
-	'additional_info'=>'Infomación adicional (ej. Poque debeías teneme como miembo...)',
+	'additional_info'=>'Información adicional (ej. Porque deberías tenerme como miembro...)',
 	'age'=>'Edad',
-	'back_to_fom'=>'Volve al fomulaio',
+	'back_to_form'=>'Volver al formulario',
 	'city'=>'Ciudad',
-	'clan_histoy'=>'Histoial',
+	'clan_history'=>'Historial',
 	'email_not_valid'=>'El email no es válido!',
-	'fogot_age'=>'No has puesto edad!',
-	'fogot_city'=>'No has puesto ciudad!',
-	'fogot_histoy'=>'No has puesto tu histoial!',
-	'fogot_messenge'=>'No has puesto contacto msn (ICQ, AIM etc...)!',
-	'fogot_nickname'=>'Olvidaste tu apodo!',
-	'fogot_ealname'=>'Olvidaste tu nombe!',
+	'forgot_age'=>'No has puesto edad!',
+	'forgot_city'=>'No has puesto ciudad!',
+	'forgot_history'=>'No has puesto tu historial!',
+	'forgot_messenger'=>'No has puesto contacto msn (ICQ, AIM etc...)!',
+	'forgot_nickname'=>'Olvidaste tu apodo!',
+	'forgot_realname'=>'Olvidaste tu nombre!',
 	'icq_msn'=>'ICQ/MSN/etc...',
-	'info'=>'Infomación adicional',
-	'joinus_fom'=>'Unete fom.',
+	'info'=>'Información adicional',
+	'joinus_form'=>'Unete form.',
 	'mail'=>'E-mail',
-	'messenge'=>'Messenge',
+	'messenger'=>'Messenger',
 	'message_title'=>'Join us',
-	'name'=>'Nombe',
+	'name'=>'Nombre',
 	'nick'=>'Apodo',
-	'poblems'=>'Ocuieon los siguientes eoes al intoduci los datos',
-	'secuity_code'=>'Código de seguidad',
-	'send'=>'Envia',
-	'someone_want_to_join_you_squad'=>'Alguien quiee enta en tu escuadón:',
-	'squad'=>'Escuadón',
-	'thanks_you_will_get_mail'=>'Gacias po tu inteés, contactaemos contigo via email.',
-	'title_join_us'=>'Se un miembo',
-	'wong_secuity_code'=>'El cógido de seguidad intoducido es eoneo!'
+	'problems'=>'Ocurrieron los siguientes errores al introducir los datos',
+	'security_code'=>'Código de seguridad',
+	'send'=>'Enviar',
+	'someone_want_to_join_your_squad'=>'Alguien quiere entrar en tu escuadrón:',
+	'squad'=>'Escuadrón',
+	'thanks_you_will_get_mail'=>'Gracias por tu interés, contactaremos contigo via email.',
+	'title_join_us'=>'Ser un miembro',
+	'wrong_security_code'=>'El cógido de seguridad introducido es erroneo!'
 );
 ?>

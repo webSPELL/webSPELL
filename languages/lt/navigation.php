@@ -2,66 +2,66 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Vesion 4       /                        /   /               #
+#           Version 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Fee Content / Management System                 #
+#                       Free Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyight 2005-2014 by webspell.og                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
-#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
-#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to emove this copyight-tag                      #
-#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
+#   visit webSPELL.org, webspell.info to get webSPELL for free           #
+#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to remove this copyright-tag                      #
+#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
-#   Fa Development by Development Team - webspell.og                   #
+#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
+#   Far Development by Development Team - webspell.org                   #
 #                                                                        #
-#   visit webspell.og                                                   #
+#   visit webspell.org                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_aay = Aay(
+$language_array = Array(
 
 /* do not edit above this line */
 
 	'about_us'=>'Apie Mus',
-	'achives'=>'Achyvai',
-	'aticles'=>'Staipsniai',
-	'awads'=>'Apdovanojimai',
-	'calenda'=>'Kalendoius',
+	'archives'=>'Archyvai',
+	'articles'=>'Straipsniai',
+	'awards'=>'Apdovanojimai',
+	'calendar'=>'Kalendorius',
 	'clan'=>'Klanas',
-	'community'=>'Benduomenė',
+	'community'=>'Bendruomenė',
 	'contact'=>'Susisiekimas',
-	'demos'=>'Demo įašai',
+	'demos'=>'Demo įrašai',
 	'downloads'=>'Siuntiniai',
 	'faq'=>'D.U.K',
-	'fight_us'=>'Noi kovoti?',
-	'foums'=>'Diskusijos',
-	'galley'=>'Galeija',
+	'fight_us'=>'Nori kovoti?',
+	'forums'=>'Diskusijos',
+	'gallery'=>'Galerija',
 	'guestbook'=>'Svečių knyga',
-	'histoy'=>'Istoija',
-	'impint'=>'Įspaudas',
-	'join_us'=>'Noi pas mus?',
-	'links'=>'Tinklalapių nuoodos',
+	'history'=>'Istorija',
+	'imprint'=>'Įspaudas',
+	'join_us'=>'Nori pas mus?',
+	'links'=>'Tinklalapių nuorodos',
 	'links_us'=>'Reklamuokite mus',
-	'main'=>'Pagindinis',
+	'main'=>'Pagrindinis',
 	'matches'=>'Kovos',
 	'media'=>'Media',
-	'membes'=>'Naiai',
-	'miscellaneous'=>'Įvaiūs',
+	'members'=>'Nariai',
+	'miscellaneous'=>'Įvairūs',
 	'news'=>'Naujienos',
-	'newslette'=>'Naujienlaiškis',
+	'newsletter'=>'Naujienlaiškis',
 	'polls'=>'Apklausos',
-	'egisteed_uses'=>'Registuoti vatotojai',
-	'seach'=>'Paieška',
-	'seves'=>'Seveiai',
-	'sponsos'=>'Remėjai',
-	'squads'=>'Būiai',
-	'who_is_online'=>'Kas Pisijungę?'
+	'registered_users'=>'Registruoti vartotojai',
+	'search'=>'Paieška',
+	'servers'=>'Serveriai',
+	'sponsors'=>'Remėjai',
+	'squads'=>'Būriai',
+	'who_is_online'=>'Kas Prisijungę?'
 );
 ?>

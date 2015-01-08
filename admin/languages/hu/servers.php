@@ -2,49 +2,49 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Vesion 4       /                        /   /               #
+#           Version 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Fee Content / Management System                 #
+#                       Free Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyight 2005-2014 by webspell.og                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
-#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
-#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to emove this copyight-tag                      #
-#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
+#   visit webSPELL.org, webspell.info to get webSPELL for free           #
+#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to remove this copyright-tag                      #
+#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
-#   Fa Development by Development Team - webspell.og                   #
+#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
+#   Far Development by Development Team - webspell.org                   #
 #                                                                        #
-#   visit webspell.og                                                   #
+#   visit webspell.org                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_aay = Aay(
+$language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Hozzáféés megtagadva',
-  'add_seve'=>'Szeve hozzáadása',
+  'access_denied'=>'Hozzáférés megtagadva',
+  'add_server'=>'Szerver hozzáadása',
   'actions'=>'Lehetőségek',
-  'delete'=>'Tölés',
-  'edit'=>'Szekesztés',
-  'edit_seve'=>'Szeve szekesztése',
+  'delete'=>'Törlés',
+  'edit'=>'Szerkesztés',
+  'edit_server'=>'Szerver szerkesztése',
   'game'=>'Játék',
-  'info'=>'Leíás',
-  'ip_pot'=>'Szeve IP:Pot',
-  'new_seve'=>'Új Szeve',
-  'no_seve'=>'Nincs eléhető szeve',
-  'eally_delete'=>'Biztosan töölni akaod ezt a szevet?',
-  'seves'=>'Szeveek',
-  'seve_name'=>'Szeve Neve',
-  'sot'=>'Rendezés',
-  'tansaction_invalid'=>'A művelet azonosítója événytelen',
-  'to_sot'=>'Rendezés'
+  'info'=>'Leírás',
+  'ip_port'=>'Szerver IP:Port',
+  'new_server'=>'Új Szerver',
+  'no_server'=>'Nincs elérhető szerver',
+  'really_delete'=>'Biztosan törölni akarod ezt a szervert?',
+  'servers'=>'Szerverek',
+  'server_name'=>'Szerver Neve',
+  'sort'=>'Rendezés',
+  'transaction_invalid'=>'A művelet azonosítója érvénytelen',
+  'to_sort'=>'Rendezés'
 );
 ?>

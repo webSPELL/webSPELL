@@ -2,62 +2,62 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Vesion 4       /                        /   /               #
+#           Version 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Fee Content / Management System                 #
+#                       Free Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyight 2005-2014 by webspell.og                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
-#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
-#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to emove this copyight-tag                      #
-#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
+#   visit webSPELL.org, webspell.info to get webSPELL for free           #
+#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to remove this copyright-tag                      #
+#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
-#   Fa Development by Development Team - webspell.og                   #
+#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
+#   Far Development by Development Team - webspell.org                   #
 #                                                                        #
-#   visit webspell.og                                                   #
+#   visit webspell.org                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_aay = Aay(
+$language_array = Array(
 
 /* do not edit above this line */
 
 	'add_payment'=>'Voeg betaling toe',
-	'amount'=>'bedag',
-	'bank_account'=>'bankekening',
-	'calculate'=>'beeken',
+	'amount'=>'bedrag',
+	'bank_account'=>'bankrekening',
+	'calculate'=>'bereken',
 	'cash_box'=>'geld box',
 	'clan'=>'clan',
-	'clanmembes_only'=>'clanleden alleen',
-	'costs_membe'=>'kosten pe lid',
+	'clanmembers_only'=>'clanleden alleen',
+	'costs_member'=>'kosten per lid',
 	'ddmmyyyy'=>'dd.mm.jjjj',
-	'delete'=>'vewijde',
+	'delete'=>'verwijder',
 	'each_squad'=>'elk team',
-	'edit'=>'bewek',
-	'ente_costs_membe'=>'Je moet de kosten pe lid invoeen.',
-	'ente_date'=>'Je moet een datum invoeen.',
-	'ente_total_costs'=>'Je moet de totale kosten invoeen.',
-	'ente_usage'=>'Je moet een doel invoeen.',
+	'edit'=>'bewerk',
+	'enter_costs_member'=>'Je moet de kosten per lid invoeren.',
+	'enter_date'=>'Je moet een datum invoeren.',
+	'enter_total_costs'=>'Je moet de totale kosten invoeren.',
+	'enter_usage'=>'Je moet een doel invoeren.',
 	'info'=>'info',
-	'invalid_equest'=>'Ongeldige opdacht',
-	'membe'=>'lid',
+	'invalid_request'=>'Ongeldige opdracht',
+	'member'=>'lid',
 	'new_usage'=>'nieuw doel',
-	'no_enties'=>'geen invoe',
+	'no_entries'=>'geen invoer',
 	'not_paid'=>'nog niet betaald',
 	'paid'=>'betaald',
 	'pay_until'=>'betaald tot',
-	'eally_delete'=>'Echt vewijdeen?',
+	'really_delete'=>'Echt verwijderen?',
 	'saved_on'=>'opgeslagen op',
 	'squad'=>'team',
 	'submit'=>'opslaan',
-	'total_amount'=>'totaal bedag (clan)',
+	'total_amount'=>'totaal bedrag (clan)',
 	'total_costs'=>'totale kosten',
 	'update'=>'update',
 	'usage'=>'doel'

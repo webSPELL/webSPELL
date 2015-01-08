@@ -2,86 +2,86 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Vesion 4       /                        /   /               #
+#           Version 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Fee Content / Management System                 #
+#                       Free Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyight 2005-2014 by webspell.og                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
-#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
-#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to emove this copyight-tag                      #
-#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
+#   visit webSPELL.org, webspell.info to get webSPELL for free           #
+#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to remove this copyright-tag                      #
+#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
-#   Fa Development by Development Team - webspell.og                   #
+#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
+#   Far Development by Development Team - webspell.org                   #
 #                                                                        #
-#   visit webspell.og                                                   #
+#   visit webspell.org                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_aay = Aay(
+$language_array = Array(
 
 /* do not edit above this line */
 
 	'align'=>'Igazítás',
 	'blue'=>'kék',
-	'bulywood'=>'világosbana',
-	'cente'=>'középe',
-	'chocolate'=>'csokoládébana',
-	'colo'=>'Betűszín',
-	'coal'=>'koall',
-	'cimson'=>'bíbovöös',
-	'dakblue'=>'sötétkék',
-	'daked'=>'sötétvöös',
-	'deeppink'=>'ózsaszín',
-	'fiebick'=>'tégla',
+	'burlywood'=>'világosbarna',
+	'center'=>'középre',
+	'chocolate'=>'csokoládébarna',
+	'color'=>'Betűszín',
+	'coral'=>'korall',
+	'crimson'=>'bíborvörös',
+	'darkblue'=>'sötétkék',
+	'darkred'=>'sötétvörös',
+	'deeppink'=>'rózsaszín',
+	'firebrick'=>'tégla',
 	'font'=>'Betűtípus',
-	'geen'=>'zöld',
-	'huge'=>'óiási',
+	'green'=>'zöld',
+	'huge'=>'óriási',
 	'indigo'=>'indigókék',
-	'justify'=>'sokizát',
-	'lage'=>'nagy',
-	'left'=>'bala',
-	'limegeen'=>'világoszöld',
-	'moe_flags'=>'Több zászló',
-	'nomal'=>'nomál',
-	'oange'=>'naancs',
-	'oangeed'=>'naancsvöös',
-	'puple'=>'lila',
-	'ed'=>'vöös',
-	'ight'=>'jobba',
-	'oyalblue'=>'kiálykék',
-	'sandybown'=>'homokszínű',
-	'seageen'=>'tengezöld',
-	'sienna'=>'vöösesbana',
-	'silve'=>'ezüst',
+	'justify'=>'sorkizárt',
+	'large'=>'nagy',
+	'left'=>'balra',
+	'limegreen'=>'világoszöld',
+	'more_flags'=>'Több zászló',
+	'normal'=>'normál',
+	'orange'=>'narancs',
+	'orangered'=>'narancsvörös',
+	'purple'=>'lila',
+	'red'=>'vörös',
+	'right'=>'jobbra',
+	'royalblue'=>'királykék',
+	'sandybrown'=>'homokszínű',
+	'seagreen'=>'tengerzöld',
+	'sienna'=>'vörösesbarna',
+	'silver'=>'ezüst',
 	'size'=>'MÉRET',
 	'skyblue'=>'égszínkék',
 	'small'=>'kicsi',
 	'teal'=>'pávakék',
-	'tiny'=>'apó',
-	'tomato'=>'paadicsom',
-	'unevenAmount'=>'Szabálytalan mennyiségű nyitó és záó BBCode tag',
-	'fistTagClosingTag'=>'Az első BBCode tag nem lehet záótag',
-	'notSameAmount'=>'A nyitó és záó BBCode tagok száma nem egyezik',
-	'wongNesting'=>'Rossz BBCdoe tag beágyazás',
-	'listguide'=>'Íj be egy \'1\'-t a számozott listához, egy \'a\' betűt az betűzött listához, vagy egy \'[Alt G+Q]\'-t a pontozott listához',
-	'listpoint'=>'Adj meg egy lista elemet. A lista befejezéséhez hagyd üesen a mezőt, vagy klikkelj a \'Cancel\' gomba.',
+	'tiny'=>'apró',
+	'tomato'=>'paradicsom',
+	'unevenAmount'=>'Szabálytalan mennyiségű nyitó és záró BBCode tag',
+	'firstTagClosingTag'=>'Az első BBCode tag nem lehet zárótag',
+	'notSameAmount'=>'A nyitó és záró BBCode tagok száma nem egyezik',
+	'wrongNesting'=>'Rossz BBCdoe tag beágyazás',
+	'listguide'=>'Írj be egy \'1\'-t a számozott listához, egy \'a\' betűt az betűzött listához, vagy egy \'[Alt Gr+Q]\'-t a pontozott listához',
+	'listpoint'=>'Adj meg egy lista elemet. A lista befejezéséhez hagyd üresen a mezőt, vagy klikkelj a \'Cancel\' gombra.',
 	'addcode'=>'Pozícióban illeszd be',
-	'ead_moe'=>'tovább olvas',
+	'read_more'=>'tovább olvas',
 	'mc_you_have'=>'Van neked',
-	'mc_new_messages'=>'új üzenet(ek). El akaod most olvasni őket?',
-	'na'=>'nem eléhető',
-	'wote'=>'ít',
-	'auto_esize'=>'Átméetezve.',
+	'mc_new_messages'=>'új üzenet(ek). El akarod most olvasni őket?',
+	'na'=>'nem elérhető',
+	'wrote'=>'írt',
+	'auto_resize'=>'Átméretezve.',
 	'code'=>'Kód',
-	'lage_pictue'=>'Nagy Kép',
-	'show_oiginal'=>'Eedeti megtekintése'
+	'large_picture'=>'Nagy Kép',
+	'show_original'=>'Eredeti megtekintése'
 );
 ?>

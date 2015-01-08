@@ -2,86 +2,86 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Vesion 4       /                        /   /               #
+#           Version 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Fee Content / Management System                 #
+#                       Free Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyight 2005-2014 by webspell.og                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
-#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
-#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to emove this copyight-tag                      #
-#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
+#   visit webSPELL.org, webspell.info to get webSPELL for free           #
+#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to remove this copyright-tag                      #
+#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
-#   Fa Development by Development Team - webspell.og                   #
+#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
+#   Far Development by Development Team - webspell.org                   #
 #                                                                        #
-#   visit webspell.og                                                   #
+#   visit webspell.org                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_aay = Aay(
+$language_array = Array(
 
 /* do not edit above this line */
 
 	'align'=>'Allineamento',
 	'blue'=>'blu',
-	'bulywood'=>'coloi legno',
-	'cente'=>'mediale',
+	'burlywood'=>'colori legno',
+	'center'=>'mediale',
 	'chocolate'=>'cioccolato',
-	'colo'=>'coloe',
-	'coal'=>'koal coloe',
-	'cimson'=>'viola',
-	'dakblue'=>'blu scuo',
-	'daked'=>'osso scuo',
-	'deeppink'=>'osa',
-	'fiebick'=>'osso mattone',
-	'font'=>'Font',
-	'geen'=>'vede',
-	'huge'=>'molto gande',
+	'color'=>'colore',
+	'coral'=>'koral colore',
+	'crimson'=>'viola',
+	'darkblue'=>'blu scuro',
+	'darkred'=>'rosso scuro',
+	'deeppink'=>'rosa',
+	'firebrick'=>'rosso mattone',
+	'font'=>'Front',
+	'green'=>'verde',
+	'huge'=>'molto grande',
 	'indigo'=>'indaco',
 	'justify'=>'Giustificato',
-	'lage'=>'gande',
-	'left'=>'sinista',
-	'limegeen'=>'vede luminato',
-	'moe_flags'=>'più bandiee',
-	'nomal'=>'nomale',
-	'oange'=>'aancione',
-	'oangeed'=>'aancione-osso',
-	'puple'=>'viola scuo',
-	'ed'=>'osso',
-	'ight'=>'desta',
-	'oyalblue'=>'e blu',
-	'sandybown'=>'maone sabbia',
-	'seageen'=>'mae vede',
-	'sienna'=>'sienna coloe',
-	'silve'=>'agento',
+	'large'=>'grande',
+	'left'=>'sinistra',
+	'limegreen'=>'verde luminato',
+	'more_flags'=>'più bandiere',
+	'normal'=>'normale',
+	'orange'=>'arancione',
+	'orangered'=>'arancione-rosso',
+	'purple'=>'viola scuro',
+	'red'=>'rosso',
+	'right'=>'destra',
+	'royalblue'=>'re blu',
+	'sandybrown'=>'marrone sabbia',
+	'seagreen'=>'mare verde',
+	'sienna'=>'sienna colore',
+	'silver'=>'argento',
 	'size'=>'Dimensione',
 	'skyblue'=>'cielo blu',
 	'small'=>'piccolo',
-	'teal'=>'acquamaina',
+	'teal'=>'acquamarina',
 	'tiny'=>'molto piccolo',
-	'tomato'=>'tomate osso',
-	'unevenAmount'=>'Numeo dispai di apetua e di chiusua BBCode tag',
-	'fistTagClosingTag'=>'Pimo giono in BBCode testo non può essee la chiusua definitiva',
-	'notSameAmount'=>'Dispaità di numeo di apetua e di chiusua BBCode tag',
-	'wongNesting'=>'Incoetto di annidamento BBCode Tag',
-	'listguide'=>'Dai \'1\' pe una lista numeato, \'a\' pe una lista alfabetica o \'\' pe una punteggiata lista',
-	'listpoint'=>'Inseie un punto elenco. Metti niente o clicci su \'annulla\' pe ciudee la lista.',
-	'addcode'=>'Pe inseie nella posizione desideata',
-	'ead_moe'=>'Leggi di più',
+	'tomato'=>'tomate rosso',
+	'unevenAmount'=>'Numero dispari di apertura e di chiusura BBCode tag',
+	'firstTagClosingTag'=>'Primo giorno in BBCode testo non può essere la chiusura definitiva',
+	'notSameAmount'=>'Disparità di numero di apertura e di chiusura BBCode tag',
+	'wrongNesting'=>'Incorretto di annidamento BBCode Tag',
+	'listguide'=>'Dai \'1\' per una lista numerato, \'a\' per una lista alfabetica o \'\' per una punteggiata lista',
+	'listpoint'=>'Inserire un punto elenco. Metti niente o clicci su \'annulla\' per ciudere la lista.',
+	'addcode'=>'Per inserire nella posizione desiderata',
+	'read_more'=>'Leggi di più',
 	'mc_you_have'=>'Tu hai',
-	'mc_new_messages'=>'nuovo(i) Messaggi(o). Vuoi leggee adesso?',
+	'mc_new_messages'=>'nuovo(i) Messaggi(o). Vuoi leggere adesso?',
 	'na'=>'non disponibile',
-	'wote'=>'ha scitte',
-	'auto_esize'=>'Dimensione pesonalizzae',
-	'code'=>'Vedi sogente',
-	'lage_pictue'=>'Immagine gande',
-	'show_oiginal'=>'Mostae oiginale'
+	'wrote'=>'ha scritte',
+	'auto_resize'=>'Dimensione personalizzare',
+	'code'=>'Vedi sorgente',
+	'large_picture'=>'Immagine grande',
+	'show_original'=>'Mostrare originale'
 );
 ?>

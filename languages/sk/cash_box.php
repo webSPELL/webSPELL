@@ -2,58 +2,58 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Vesion 4       /                        /   /               #
+#           Version 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Fee Content / Management System                 #
+#                       Free Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyight 2005-2014 by webspell.og                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
-#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
-#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to emove this copyight-tag                      #
-#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
+#   visit webSPELL.org, webspell.info to get webSPELL for free           #
+#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to remove this copyright-tag                      #
+#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
-#   Fa Development by Development Team - webspell.og                   #
+#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
+#   Far Development by Development Team - webspell.org                   #
 #                                                                        #
-#   visit webspell.og                                                   #
+#   visit webspell.org                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_aay = Aay(
+$language_array = Array(
 
 /* do not edit above this line */
 
-	'add_payment'=>'Pidať výplatu',
+	'add_payment'=>'Pridať výplatu',
 	'amount'=>'čiastka',
 	'bank_account'=>'bankové konto',
 	'calculate'=>'vypočítať',
 	'cash_box'=>'cash box',
 	'clan'=>'clan',
-	'clanmembes_only'=>'iba členovia clanu',
-	'costs_membe'=>'za člena',
-	'ddmmyyyy'=>'dd.mm.',
+	'clanmembers_only'=>'iba členovia clanu',
+	'costs_member'=>'za člena',
+	'ddmmyyyy'=>'dd.mm.rrrr',
 	'delete'=>'vymazať',
 	'each_squad'=>'každý squad',
-	'edit'=>'upaviť',
-	'ente_costs_membe'=>'Musíte zadať náklady za člena.',
-	'ente_date'=>'Musíte zadať dátum.',
-	'ente_total_costs'=>'Musíte zadať celkové náklady.',
-	'ente_usage'=>'Musíte zadať potebu.',
+	'edit'=>'upraviť',
+	'enter_costs_member'=>'Musíte zadať náklady za člena.',
+	'enter_date'=>'Musíte zadať dátum.',
+	'enter_total_costs'=>'Musíte zadať celkové náklady.',
+	'enter_usage'=>'Musíte zadať potrebu.',
 	'info'=>'info',
-	'invalid_equest'=>'Neplatná požiadavka',
-	'membe'=>'člen',
-	'new_usage'=>'nová spoteba',
-	'no_enties'=>'žiaden záznam',
+	'invalid_request'=>'Neplatná požiadavka',
+	'member'=>'člen',
+	'new_usage'=>'nová spotreba',
+	'no_entries'=>'žiaden záznam',
 	'not_paid'=>'zatiaľ nevyplatené',
 	'paid'=>'vyplatené',
 	'pay_until'=>'vyplatiť do',
-	'eally_delete'=>'Naozaj vymazať tento záznam?',
+	'really_delete'=>'Naozaj vymazať tento záznam?',
 	'saved_on'=>'uložené',
 	'squad'=>'squad',
 	'submit'=>'uložiť',

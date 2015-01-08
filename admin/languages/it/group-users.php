@@ -2,52 +2,52 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Vesion 4       /                        /   /               #
+#           Version 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Fee Content / Management System                 #
+#                       Free Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyight 2005-2014 by webspell.og                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
-#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
-#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to emove this copyight-tag                      #
-#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
+#   visit webSPELL.org, webspell.info to get webSPELL for free           #
+#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to remove this copyright-tag                      #
+#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
-#   Fa Development by Development Team - webspell.og                   #
+#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
+#   Far Development by Development Team - webspell.org                   #
 #                                                                        #
-#   visit webspell.og                                                   #
+#   visit webspell.org                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_aay = Aay(
+$language_array = Array(
 
 /* do not edit above this line */
 
   'access_denied'=>'Accesso negato',
-  'back'=>'indieto',
-  'edit_goup_uses'=>'Utenti Guppo cambiae',
-  'eo_goup'=>'ERRORE: non esiste guppo',
-  'filte'=>'Filto',
-  'filte_anyadmin'=>'Admins ogni filto',
-  'filte_clanmembe'=>'pesoni del clan filto',
-  'filte_egisteed'=>'Utente Registato filto',
-  'filte_supeadmin'=>'Supe amministatoe Filto',
+  'back'=>'indietro',
+  'edit_group_users'=>'Utenti Gruppo cambiare',
+  'error_group'=>'ERRORE: non esiste gruppo',
+  'filter'=>'Filtro',
+  'filter_anyadmin'=>'Admins ogni filtro',
+  'filter_clanmember'=>'personi del clan filtro',
+  'filter_registered'=>'Utente Registrato filtro',
+  'filter_superadmin'=>'Super amministratore Filtro',
   'go'=>'GO',
-  'goup_uses'=>'Utenti dei guppi gestie',
-  'goups'=>'Utenti dei guppi gestie',
-  'o_just'=>'o diettamente',
-  'save'=>'salvae',
-  'save_and_jump'=>'Salvae e si altenano alla pagina',
-  'select_all'=>'selezionae tutte le',
-  'show'=>'vistae',
-  'use_filte'=>'Utente filto',
-  'uses_fom_goup'=>'guppo di utenti',
-  'tansaction_invalid'=>'ID tansazione non valido'
+  'group_users'=>'Utenti dei gruppi gestire',
+  'groups'=>'Utenti dei gruppi gestire',
+  'or_just'=>'o direttamente',
+  'save'=>'salvare',
+  'save_and_jump'=>'Salvare e si alternano alla pagina',
+  'select_all'=>'selezionare tutte le',
+  'show'=>'vistare',
+  'user_filter'=>'Utente filtro',
+  'users_from_group'=>'gruppo di utenti',
+  'transaction_invalid'=>'ID transazione non valido'
 );
 ?>

@@ -2,78 +2,78 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Vesion 4       /                        /   /               #
+#           Version 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Fee Content / Management System                 #
+#                       Free Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyight 2005-2014 by webspell.og                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
-#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
-#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to emove this copyight-tag                      #
-#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
+#   visit webSPELL.org, webspell.info to get webSPELL for free           #
+#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to remove this copyright-tag                      #
+#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
-#   Fa Development by Development Team - webspell.og                   #
+#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
+#   Far Development by Development Team - webspell.org                   #
 #                                                                        #
-#   visit webspell.og                                                   #
+#   visit webspell.org                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_aay = Aay(
+$language_array = Array(
 
 /* do not edit above this line */
 
 	'about'=>'O nás',
-	'achive'=>'Achív',
-	'aticles'=>'Èlánky',
-	'awads'=>'Ocenìní',
+	'archive'=>'Archív',
+	'articles'=>'Èlánky',
+	'awards'=>'Ocenìní',
 	'buddys'=>'Pøátelé',
-	'calenda'=>'Kalendáø',
+	'calendar'=>'Kalendáø',
 	'cash_box'=>'Cash Box',
 	'challenge'=>'Výzvy',
-	'clanwas'=>'Zápasy',
-	'clanwas_details'=>'Zápas poti',
+	'clanwars'=>'Zápasy',
+	'clanwars_details'=>'Zápas proti',
 	'contact'=>'Kontakt',
 	'demo'=>'Demo',
 	'demos'=>'Dema',
 	'faq'=>'FAQ',
-	'files'=>'Souboy',
-	'foum'=>'Fóum',
-	'galley'=>'Galeie',
+	'files'=>'Soubory',
+	'forum'=>'Fórum',
+	'gallery'=>'Galerie',
 	'guestbook'=>'Kniha vzkazù',
-	'histoy'=>'Histoie',
-	'impint'=>'Impint',
+	'history'=>'Historie',
+	'imprint'=>'Imprint',
 	'joinus'=>'Pøidej se',
 	'links'=>'Odkazy',
 	'linkus'=>'Náš odkaz',
 	'login'=>'Login',
-	'loginoveview'=>'Login Pøehled',
-	'lostpasswod'=>'požadavek hesla',
-	'membes'=>'Èlenové',
-	'messenge'=>'Zpávy',
-	'mypofile'=>'upavit Pofil',
+	'loginoverview'=>'Login Pøehled',
+	'lostpassword'=>'požadavek hesla',
+	'members'=>'Èlenové',
+	'messenger'=>'Zprávy',
+	'myprofile'=>'upravit Profil',
 	'news'=>'Novinky',
-	'newslette'=>'Newslette',
-	'patnes'=>'Patneøi',
+	'newsletter'=>'Newsletter',
+	'partners'=>'Partneøi',
 	'polls'=>'Ankety',
-	'pofile'=>'Pofil',
-	'egiste'=>'Registace',
-	'egisteed_uses'=>'egistovaní uživatelé',
-	'seach'=>'Hledání',
-	'seve'=>'Sevey',
+	'profile'=>'Profil',
+	'register'=>'Registrace',
+	'registered_users'=>'registrovaní uživatelé',
+	'search'=>'Hledání',
+	'server'=>'Servery',
 	'shoutbox'=>'Rychlé vzkazy',
-	'sponsos'=>'Sponzoøi',
+	'sponsors'=>'Sponzoøi',
 	'squads'=>'Skupiny',
-	'stat'=>'Domovská stánka',
+	'start'=>'Domovská stránka',
 	'stats'=>'Statistiky',
-	'usegalley'=>'Uživatelské galeie',
-	'vesus'=>'poti',
+	'usergallery'=>'Uživatelské galerie',
+	'versus'=>'proti',
 	'whoisonline'=>'Kdo je online'
 );
 ?>

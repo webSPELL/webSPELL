@@ -2,107 +2,107 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Vesion 4       /                        /   /               #
+#           Version 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Fee Content / Management System                 #
+#                       Free Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyight 2005-2014 by webspell.og                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
-#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
-#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to emove this copyight-tag                      #
-#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
+#   visit webSPELL.org, webspell.info to get webSPELL for free           #
+#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to remove this copyright-tag                      #
+#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
-#   Fa Development by Development Team - webspell.og                   #
+#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
+#   Far Development by Development Team - webspell.org                   #
 #                                                                        #
-#   visit webspell.og                                                   #
+#   visit webspell.org                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_aay = Aay(
+$language_array = Array(
 
 /* do not edit above this line */
 
 	'accesslevel'=>'Tillgång',
 	'all'=>'Alla',
-	'cant_delete_without_fileID'=>'Kan inte adea filen utan filID',
-	'cant_display_empty_cat'=>'Kategoin ä tom',
-	'cant_edit_without_fileID'=>'Kan inte edigea filen utan filID.',
-	'cant_epot_without_fileID'=>'Kan inte apotea död länk utan filID',
-	'categoies_cl'=>'Kategoie',
-	'categoy_cl'=>'Kategoi',
-	'clanmembe'=>'Clanmedlem',
+	'cant_delete_without_fileID'=>'Kan inte radera filen utan filID',
+	'cant_display_empty_cat'=>'Kategorin är tom',
+	'cant_edit_without_fileID'=>'Kan inte redigera filen utan filID.',
+	'cant_report_without_fileID'=>'Kan inte raportera död länk utan filID',
+	'categories_cl'=>'Kategorier',
+	'category_cl'=>'Kategori',
+	'clanmember'=>'Clanmedlem',
 	'database_cl'=>'Databas',
-	'delete_file'=>'adea fil',
-	'desciption'=>'Beskivning',
+	'delete_file'=>'radera fil',
+	'description'=>'Beskrivning',
 	'dl'=>'DL',
-	'download_now'=>'Ladda ne %filename% nu',
-	'download_egisteed_only'=>'Neladdning endast fö egisteade användae!',
-	'download_via_mio'=>'Ladda ne via spegel',
-	'downloads_cl'=>'Neladdninga',
-	'edit_file'=>'edigea fil',
-	'exten-link'=>'Exten länk',
-	'failed_edit_file'=>'Redigeingen misslyckades!',
-	'failed_save_file-info'=>'Spaa fil-infomationen mysslyckades',
-	'file-info'=>'Fil-infomation',
-	'file-mios'=>'Fil-Spegla',
-	'file-size_e'=>'Fil-Stolek (baa fö extena file)',
+	'download_now'=>'Ladda ner %filename% nu',
+	'download_registered_only'=>'Nerladdning endast för registrerade användare!',
+	'download_via_mirror'=>'Ladda ner via spegel',
+	'downloads_cl'=>'Nerladdningar',
+	'edit_file'=>'redigera fil',
+	'extern-link'=>'Extern länk',
+	'failed_edit_file'=>'Redigeringen misslyckades!',
+	'failed_save_file-info'=>'Spara fil-informationen mysslyckades',
+	'file-info'=>'Fil-information',
+	'file-mirrors'=>'Fil-Speglar',
+	'file-size_e'=>'Fil-Storlek (bara för externa filer)',
 	'file-upload'=>'Fil-uppladdning',
-	'file_aleady_exists'=>'filen finns edan.',
-	'file_categoies'=>'Fil kategoie',
-	'file_ceated'=>'Filen skapad',
-	'file_deleted'=>'Filen adead.',
-	'file_not_ceated'=>'Filen kunde inte skapas',
-	'file_not_deleted'=>'Filen kunde inte adeas',
+	'file_already_exists'=>'filen finns redan.',
+	'file_categories'=>'Fil kategorier',
+	'file_created'=>'Filen skapad',
+	'file_deleted'=>'Filen raderad.',
+	'file_not_created'=>'Filen kunde inte skapas',
+	'file_not_deleted'=>'Filen kunde inte raderas',
 	'filename'=>'Filnamn',
-	'files'=>'file',
-	'files_cl'=>'File',
-	'fist_ceate_file-categoy'=>'Du måste skapa en fil-kategoi föst!',
-	'info_desciption'=>'Info/Beskivning',
+	'files'=>'filer',
+	'files_cl'=>'Filer',
+	'first_create_file-category'=>'Du måste skapa en fil-kategori först!',
+	'info_description'=>'Info/Beskrivning',
 	'last_uploaded_file'=>'Senas uppladdad fil',
-	'leave_desciption'=>'Om fil-ul ä sönde och du vet vafö, lämna en fixad URL och en kot beskivning i detta fält:',
+	'leave_description'=>'Om fil-url är sönder och du vet varför, lämna en fixad URL och en kort beskrivning i detta fält:',
 	'login'=>'Logga in',
-	'mio'=>'Spegel',
-	'mios'=>'Spegla',
+	'mirror'=>'Spegel',
+	'mirrors'=>'Speglar',
 	'name'=>'Namn',
-	'new_categoy'=>'ny kategoi',
+	'new_category'=>'ny kategori',
 	'new_file'=>'ny fil',
 	'no_access'=>'ingen tillgång!',
-	'no_categoies_and_files'=>'Inga kategoie och file',
-	'no_mios'=>'inga spegla',
+	'no_categories_and_files'=>'Inga kategorier och filer',
+	'no_mirrors'=>'inga speglar',
 	'no_valid_file'=>'Ingen giltig fil',
-	'pefect'=>'pefekt',
+	'perfect'=>'perfekt',
 	'please_login'=>'Snälla logga in',
-	'poo'=>'Dålig',
-	'ate'=>'östa',
-	'ate_have_to_eg_login'=>'Rösta: Du måste egistea dig elle logga in!',
-	'ate_now'=>'Rösta nu!',
-	'ating'=>'Röstning',
-	'ating_x_of_10'=>'östning: %d av 10',
-	'eally_delete_file'=>'Vekligen adea denna filen?',
-	'egiste'=>'Registea',
-	'egisteed'=>'Registead',
-	'epot'=>'Rappot',
-	'epot_dead_link'=>'Rappotea död länk',
-	'eset'=>'ensa',
-	'size'=>'Stolek',
+	'poor'=>'Dålig',
+	'rate'=>'rösta',
+	'rate_have_to_reg_login'=>'Rösta: Du måste registrera dig eller logga in!',
+	'rate_now'=>'Rösta nu!',
+	'rating'=>'Röstning',
+	'rating_x_of_10'=>'röstning: %d av 10',
+	'really_delete_file'=>'Verkligen radera denna filen?',
+	'register'=>'Registrera',
+	'registered'=>'Registrerad',
+	'report'=>'Rapport',
+	'report_dead_link'=>'Rapportera död länk',
+	'reset'=>'rensa',
+	'size'=>'Storlek',
 	'statistic'=>'Statistik',
-	'subcategoies'=>'Sub-kategoie',
+	'subcategories'=>'Sub-kategorier',
 	'successful'=>'Lyckad.',
-	'top_5_downloads'=>'TOP 5 Neladdninga',
-	'taffic_cl'=>'Tafik',
-	'update'=>'uppdatea',
+	'top_5_downloads'=>'TOP 5 Nerladdningar',
+	'traffic_cl'=>'Trafik',
+	'update'=>'uppdatera',
 	'upload'=>'ladda up',
 	'uploaded_on'=>'Uppladdad på',
-	'uploade'=>'Uppladdae',
-	'you_have_aleady_ated'=>'Du ha edan östat.',
-	'you_have_to_ente_filename'=>'Du måste skiva ett filnamn!',
-	'you_have_to_ente_file'=>'Du måste ange en fil / URL!'
+	'uploader'=>'Uppladdare',
+	'you_have_already_rated'=>'Du har redan röstat.',
+	'you_have_to_enter_filename'=>'Du måste skriva ett filnamn!',
+	'you_have_to_enter_file'=>'Du måste ange en fil / URL!'
 );
 ?>

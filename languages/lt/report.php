@@ -2,36 +2,36 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Vesion 4       /                        /   /               #
+#           Version 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Fee Content / Management System                 #
+#                       Free Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyight 2005-2014 by webspell.og                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
-#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
-#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to emove this copyight-tag                      #
-#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
+#   visit webSPELL.org, webspell.info to get webSPELL for free           #
+#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to remove this copyright-tag                      #
+#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
-#   Fa Development by Development Team - webspell.og                   #
+#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
+#   Far Development by Development Team - webspell.org                   #
 #                                                                        #
-#   visit webspell.og                                                   #
+#   visit webspell.org                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_aay = Aay(
+$language_array = Array(
 
 /* do not edit above this line */
 
-	'no_infomations'=>'jokios infomacijos nėa',
-	'epot_message'=>'[b]Čia ya naujas %s - Panešimas[/b][b][b]%s-ID: %d[b]Info: %s[b]Nustatymai: [ul]index.php?site=files&file=%d[/ul]',
-	'epot_ecognized'=>'Jūsų panešimas buvo atpažintas. Ačiū jums.',
-  'wong_secuitycode'=>'Jūs įvedėte blogą apsaugos kodą<b><b>[<a hef="javascipt:back();">gįžti</a>]'
+	'no_informations'=>'jokios informacijos nėra',
+	'report_message'=>'[b]Čia yra naujas %s - Pranešimas[/b][br][br]%s-ID: %d[br]Info: %s[br]Nustatymai: [url]index.php?site=files&file=%d[/url]',
+	'report_recognized'=>'Jūsų pranešimas buvo atpažintas. Ačiū jums.',
+  'wrong_securitycode'=>'Jūs įvedėte blogą apsaugos kodą<br><br>[<a href="javascript:back();">grįžti</a>]'
 );
 ?>

@@ -2,56 +2,56 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Vesion 4       /                        /   /               #
+#           Version 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Fee Content / Management System                 #
+#                       Free Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyight 2005-2014 by webspell.og                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
-#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
-#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to emove this copyight-tag                      #
-#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
+#   visit webSPELL.org, webspell.info to get webSPELL for free           #
+#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to remove this copyright-tag                      #
+#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
-#   Fa Development by Development Team - webspell.og                   #
+#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
+#   Far Development by Development Team - webspell.org                   #
 #                                                                        #
-#   visit webspell.og                                                   #
+#   visit webspell.org                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_aay = Aay(
+$language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Hozzáféés megtagadva',
+  'access_denied'=>'Hozzáférés megtagadva',
   'actions'=>'Lehetőségek',
-  'add_banne'=>'Banne hozzáadása',
+  'add_banner'=>'Banner hozzáadása',
   'back'=>'Vissza',
-  'banne'=>'Banne',
-  'banneotation'=>'Mozgó banneek',
-  'banne_name'=>'Banne Név',
-  'banne_upload'=>'Banne Feltöltése',
-  'banne_ul'=>'Banne URL',
+  'banner'=>'Banner',
+  'bannerrotation'=>'Mozgó bannerek',
+  'banner_name'=>'Banner Név',
+  'banner_upload'=>'Banner Feltöltése',
+  'banner_url'=>'Banner URL',
   'clicks'=>'Kattintások (naponta)',
-  'delete'=>'Tölés',
-  'edit'=>'Szekesztés',
-  'edit_banne'=>'Banne szekesztése',
-  'fill_coectly'=>'Helyesen töltsd ki az űlapot!',
-  'fomat_incoect'=>'A kép fomátuma nem megfelelő. A banne kitejesztése csak *.gif, *.jpg és *.png lehet.',
+  'delete'=>'Törlés',
+  'edit'=>'Szerkesztés',
+  'edit_banner'=>'Banner szerkesztése',
+  'fill_correctly'=>'Helyesen töltsd ki az űrlapot!',
+  'format_incorrect'=>'A kép formátuma nem megfelelő. A banner kiterjesztése csak *.gif, *.jpg és *.png lehet.',
   'is_displayed'=>'Megjelenítés?',
-  'new_banne'=>'Új Banne',
+  'new_banner'=>'Új Banner',
   'no'=>'Nem',
   'no_upload'=>'Nincs kép feltöltve',
-  'no_enties'=>'Nincs bejegyzés',
-  'pesent_banne'=>'Jelenlegi Banne',
-  'eally_delete'=>'Biztosan töölni akaod ezt a bannet?',
-  'tansaction_invalid'=>'A művelet azonosítója événytelen',
+  'no_entries'=>'Nincs bejegyzés',
+  'present_banner'=>'Jelenlegi Banner',
+  'really_delete'=>'Biztosan törölni akarod ezt a bannert?',
+  'transaction_invalid'=>'A művelet azonosítója érvénytelen',
   'yes'=>'Igen'
 );
 ?>

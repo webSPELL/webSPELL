@@ -2,47 +2,47 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Vesion 4       /                        /   /               #
+#           Version 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Fee Content / Management System                 #
+#                       Free Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyight 2005-2014 by webspell.og                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
-#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
-#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to emove this copyight-tag                      #
-#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
+#   visit webSPELL.org, webspell.info to get webSPELL for free           #
+#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to remove this copyright-tag                      #
+#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
-#   Fa Development by Development Team - webspell.og                   #
+#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
+#   Far Development by Development Team - webspell.org                   #
 #                                                                        #
-#   visit webspell.og                                                   #
+#   visit webspell.org                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_aay = Aay(
+$language_array = Array(
 
 /* do not edit above this line */
 
 	'back'=>'back',
-	'banne'=>'Banne',
-	'banne_to_big'=>'Pictue is to big',
+	'banner'=>'Banner',
+	'banner_to_big'=>'Picture is to big',
 	'delete'=>'delete',
 	'edit'=>'edit',
-	'edit_linkus'=>'edit banne',
-	'fomat_incoect'=>'Invalid pictue-fomat (allowed: *.gif, *.jpg o *.png)',
+	'edit_linkus'=>'edit banner',
+	'format_incorrect'=>'Invalid picture-format (allowed: *.gif, *.jpg or *.png)',
 	'link_us'=>'link us',
 	'name'=>'Name',
-	'new_banne'=>'new banne',
+	'new_banner'=>'new banner',
 	'no_access'=>'No access!',
-	'no_banne'=>'no link us banne',
-	'eally_delete_banne'=>'eally delete this banne?',
-	'save_banne'=>'save banne',
-	'use_following_code'=>'Use the following code, to inset the banne on you homepage.'
+	'no_banner'=>'no link us banner',
+	'really_delete_banner'=>'really delete this banner?',
+	'save_banner'=>'save banner',
+	'use_following_code'=>'Use the following code, to insert the banner on your homepage.'
 );
 ?>

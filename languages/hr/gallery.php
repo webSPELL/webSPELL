@@ -2,74 +2,74 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Vesion 4       /                        /   /               #
+#           Version 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Fee Content / Management System                 #
+#                       Free Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyight 2005-2014 by webspell.og                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
-#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
-#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to emove this copyight-tag                      #
-#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
+#   visit webSPELL.org, webspell.info to get webSPELL for free           #
+#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to remove this copyright-tag                      #
+#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
-#   Fa Development by Development Team - webspell.og                   #
+#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
+#   Far Development by Development Team - webspell.org                   #
 #                                                                        #
-#   visit webspell.og                                                   #
+#   visit webspell.org                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_aay = Aay(
+$language_array = Array(
 
 /* do not edit above this line */
 
-	'back'=>'Natag',
-	'categoy'=>'Kategoija',
-	'comment'=>'Komenta',
-	'comments'=>'Komentai',
+	'back'=>'Natrag',
+	'category'=>'Kategorija',
+	'comment'=>'Komentar',
+	'comments'=>'Komentari',
 	'date'=>'Datum',
-	'delete'=>'Izbiši',
+	'delete'=>'Izbriši',
 	'edit'=>'Izmjeni',
-	'edit_pictue'=>'Izmjeni sliku',
-	'galleies'=>'galeije',
-	'galley'=>'Galeija',
-	'latest_galley'=>'zadnja galeija',
-	'most_comments'=>'Najkomentianija',
+	'edit_picture'=>'Izmjeni sliku',
+	'galleries'=>'galerije',
+	'gallery'=>'Galerija',
+	'latest_gallery'=>'zadnja galerija',
+	'most_comments'=>'Najkomentiranija',
 	'name'=>'Ime',
 	'next'=>'Sljedeća',
-	'no_comments'=>'Onemogući komentae',
-	'no_galley_exists'=>'Galeija ne postoji!',
+	'no_comments'=>'Onemogući komentare',
+	'no_gallery_exists'=>'Galerija ne postoji!',
 	'no_pic_set'=>'Nije podešena slika.',
-	'no_pictue'=>'Slika ne postoji!',
-	'page_s'=>'stanice',
-	'pefect'=>'savšena',
-	'pg_1_1'=>'stanica 1 od ukupno 1',
-	'pictue'=>'Slika',
-	'pictues'=>'Slike',
-	'poo'=>'jadna',
-	'andom_pictue'=>'Nasumična slika',
-	'ate'=>'ocijeni',
-	'ate_have_to_eg_login'=>'Ocjenjivanje: Moate biti egistian i pijavljen!',
-	'ate_now'=>'Ocijeni!',
-	'ating'=>'Ocjena',
-	'eally_del'=>'Stvano izbiši ovaj unos?',
-	'eset_views'=>'Resetiaj poglede',
-	'show_galleies'=>'Pikaži galeije',
-	'stat_diashow'=>'Pokeni slideshow',
-	'update_pictue'=>'Spemi izmjene',
-	'use_comments'=>'Omogući komentae koisnicima',
-	'usegalleies'=>'Koisničke galeije',
+	'no_picture'=>'Slika ne postoji!',
+	'page_s'=>'stranice',
+	'perfect'=>'savršena',
+	'pg_1_1'=>'stranica 1 od ukupno 1',
+	'picture'=>'Slika',
+	'pictures'=>'Slike',
+	'poor'=>'jadna',
+	'random_picture'=>'Nasumična slika',
+	'rate'=>'ocijeni',
+	'rate_have_to_reg_login'=>'Ocjenjivanje: Morate biti registriran i prijavljen!',
+	'rate_now'=>'Ocijeni!',
+	'rating'=>'Ocjena',
+	'really_del'=>'Stvarno izbriši ovaj unos?',
+	'reset_views'=>'Resetiraj poglede',
+	'show_galleries'=>'Prikaži galerije',
+	'start_diashow'=>'Pokreni slideshow',
+	'update_picture'=>'Spremi izmjene',
+	'user_comments'=>'Omogući komentare korisnicima',
+	'usergalleries'=>'Korisničke galerije',
 	'views'=>'Pogleda',
-	'visito_comments'=>'Omogući komentae posjetiteljima',
+	'visitor_comments'=>'Omogući komentare posjetiteljima',
 	'votes'=>'glasova',
 	'webs_diashow'=>'webSPELL Slideshow:',
-	'you_have_aleady_ated'=>'Već ste ocjenili sliku.',
+	'you_have_already_rated'=>'Već ste ocjenili sliku.',
 	'no_thumb'=>'Nema Thumb-slike'
 );
 ?>

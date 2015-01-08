@@ -1,24 +1,24 @@
 ########################################################################
 #                                                                        #
-#           Vesion 4       /                        /   /               #
+#           Version 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Fee Content / Management System                 #
+#                       Free Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyight 2005-2014 by webspell.og                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
-#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
-#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to emove this copyight-tag                      #
-#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
+#   visit webSPELL.org, webspell.info to get webSPELL for free           #
+#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to remove this copyright-tag                      #
+#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
-#   Fa Development by Development Team - webspell.og                   #
+#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
+#   Far Development by Development Team - webspell.org                   #
 #                                                                        #
-#   visit webspell.og                                                   #
+#   visit webspell.org                                                   #
 #                                                                        #
  ########################################################################
 
@@ -27,8 +27,8 @@ ENGLISH
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Thank you fo choosing webSPELL.
-webSPELL is a fee Content Management System (CMS), which is available fo fee at www.webspell.og. The following infomation should should help you getting stated and will give you a fist impession of the functionality.
+Thank you for choosing webSPELL.
+webSPELL is a free Content Management System (CMS), which is available for free at www.webspell.org. The following information should should help you getting started and will give you a first impression of the functionality.
 
 1. License
 2. Installation
@@ -36,60 +36,60 @@ webSPELL is a fee Content Management System (CMS), which is available fo fee at 
 
 1. License
 
-	webSPELL is published unde GNU Geneal Public License (GPL). It guaantees the fee usage, modification and distibution of the webSPELL scipt withing the ules of the GPL.
-	You ae able to find additional infomation about license at http://www.webspell.og/?site=license
+	webSPELL is published under GNU General Public License (GPL). It guarantees the free usage, modification and distribution of the webSPELL script withing the rules of the GPL.
+	You are able to find additional information about license at http://www.webspell.org/?site=license
 
 2. Installation
 
-	1. Requiements
-	2. Upload WebSpell to you webspace
-	3. Setting the coect file/folde ights
+	1. Requirements
+	2. Upload WebSpell to your webspace
+	3. Setting the correct file/folder rights
 	4. Do the WebSpell install
 	5. Cleaning up
 	
-	1. Requiements
+	1. Requirements
 	
-	    * Webspace with PHP and mySQL suppot (PHP >= 4.3, MySQL >= 4.1)
-	    * WinRAR to extact the downloaded WebSpell elease ---> get it hee: http://www.win-a.com
-	    * A FTP pogam to upload the WebSpell files to you webspace - we ecommend SmatFTP
-	
-	
-	
-	2. Upload webSPELL to you webspace
-	
-	    * Stat you above downloaded FTP pogamm
-	    * Connect with this FTP pogam to you webspace FTP seve (you will get the access data fo this fom you webhoste)
-	    * Upload ALL the extacted WebSpell files and foldes to you webspace
+	    * Webspace with PHP and mySQL support (PHP >= 4.3, MySQL >= 4.1)
+	    * WinRAR to extract the downloaded WebSpell release ---> get it here: http://www.win-rar.com
+	    * A FTP program to upload the WebSpell files to your webspace - we recommend SmartFTP
 	
 	
 	
-	3. Setting the coect file/folde ights
+	2. Upload webSPELL to your webspace
 	
-		webSPELL needs special access ights on some files and foldes. You ae able to set this ights with the FTP
-		pogam. Fo doing this make a ight click in the FTP pogam on the desied files o foldes, look fo
-		Popeties/CHMOD (might be named diffeent accoding to the used ftp pogam) and click it. Thee you have to set the pemissions fo all following files and foldes to 777:
+	    * Start your above downloaded FTP programm
+	    * Connect with this FTP program to your webspace FTP server (you will get the access data for this from your webhoster)
+	    * Upload ALL the extracted WebSpell files and folders to your webspace
+	
+	
+	
+	3. Setting the correct file/folder rights
+	
+		webSPELL needs special access rights on some files and folders. You are able to set this rights with the FTP
+		program. For doing this make a right click in the FTP program on the desired files or folders, look for
+		Properties/CHMOD (might be named different according to the used ftp program) and click it. There you have to set the permissions for all following files and folders to 777:
 	
 	    * demos/
 	    * downloads/
-	    * images/aticles-pics
-	    * images/avatas
-	    * images/banne
-	    * images/banneotation
-	    * images/clanwa-sceens
+	    * images/articles-pics
+	    * images/avatars
+	    * images/banner
+	    * images/bannerrotation
+	    * images/clanwar-screens
 	    * images/flags
-	    * images/galley/lage
-	    * images/galley/thumb
+	    * images/gallery/large
+	    * images/gallery/thumb
 	    * images/games
-		  * images/icons/anks
+		  * images/icons/ranks
 	    * images/links
 	    * images/linkus
 	    * images/news-pics
-	    * images/news-ubics
-	    * images/patnes
+	    * images/news-rubrics
+	    * images/partners
 	    * images/smileys
-	    * images/sponsos
+	    * images/sponsors
 	    * images/squadicons
-	    * images/usepics
+	    * images/userpics
 	    * _mysql.php
 	    * _stylesheet.css
 	    * tmp/
@@ -98,26 +98,26 @@ webSPELL is a fee Content Management System (CMS), which is available fo fee at 
 	
 	4. Do the WebSpell install
 	
-	    * Open you webbowse
-	    * Ente the path to the webspell install folde http://[hostnameofyouwebspace]/install (substitute [hostnameofyouwebspace] with the coect domain name (and maybe additional path name if you uploaded webSPELL to some sub-folde) whee you have uploaded webSPELL.
-	    * Follow the installation steps and ente the coect data
+	    * Open your webbrowser
+	    * Enter the path to the webspell install folder http://[hostnameofyouwebspace]/install (substitute [hostnameofyouwebspace] with the correct domain name (and maybe additional path name if you uploaded webSPELL to some sub-folder) where you have uploaded webSPELL.
+	    * Follow the installation steps and enter the correct data
 	
 	
 	
 	5. Cleaning up
 	
-	    * Reset the access ights of _mysql.php back to 644 with the FTP pogam
-	    * Delete the complete install/ folde fom you webspace with the FTP pogam
+	    * Reset the access rights of _mysql.php back to 644 with the FTP program
+	    * Delete the complete install/ folder from your webspace with the FTP program
 	
-	Now you webSPELL Page is eady.
+	Now your webSPELL Page is ready.
 
 3. Related links
 
-	http://www.webspell.og/?site=foum
-		Bulletin boads fo suppot and communication between use (poblems, modifications, templates, addons, etc.)
-	http://wiki.webspell.og
-		Wiki fo webSPELL. Help with using webSPELL system, link lists, etc.
-	http://www.webspell.og/?site=faq
-		Fequently Asked Questions (FAQ) fo webSPELL. Answes and solutions fo fequently asked questions and poblems
-	http://www.webspell.og/?site=ic
-		Access via bowse to webSPELL chat (IRC) fo live suppot. Channel: #webspell @ Quakenet
+	http://www.webspell.org/?site=forum
+		Bulletin boards for support and communication between user (problems, modifications, templates, addons, etc.)
+	http://wiki.webspell.org
+		Wiki for webSPELL. Help with using webSPELL system, link lists, etc.
+	http://www.webspell.org/?site=faq
+		Frequently Asked Questions (FAQ) for webSPELL. Answers and solutions for frequently asked questions and problems
+	http://www.webspell.org/?site=irc
+		Access via browser to webSPELL chat (IRC) for live support. Channel: #webspell @ Quakenet

@@ -2,67 +2,67 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Vesion 4       /                        /   /               #
+#           Version 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Fee Content / Management System                 #
+#                       Free Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyight 2005-2014 by webspell.og                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
-#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
-#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to emove this copyight-tag                      #
-#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
+#   visit webSPELL.org, webspell.info to get webSPELL for free           #
+#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to remove this copyright-tag                      #
+#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
-#   Fa Development by Development Team - webspell.og                   #
+#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
+#   Far Development by Development Team - webspell.org                   #
 #                                                                        #
-#   visit webspell.og                                                   #
+#   visit webspell.org                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_aay = Aay(
+$language_array = Array(
 
 /* do not edit above this line */
 
-	'back_to_fom'=>'Naspäť na fomulá',
+	'back_to_form'=>'Naspäť na formulár',
 	'challenge'=>'Vyzvite nás',
-	'challenge_fom'=>'výzva bola pidaná',
-	'challenge_message'=>'[b]Bola pidaná nová výzva![/b][BR][BR] Posím kliknite sem: [URL]index.php?site=challenge[/URL]',
+	'challenge_from'=>'výzva bola pridaná',
+	'challenge_message'=>'[b]Bola pridaná nová výzva![/b][BR][BR] Prosím kliknite sem: [URL]index.php?site=challenge[/URL]',
 	'challenges'=>'výzvy',
-	'county'=>'kajina',
+	'country'=>'krajina',
 	'date'=>'dátum',
 	'delete_challenge'=>'Vymazať výzvu',
 	'email'=>'E-mail',
-	'ente_clanname'=>'Nezadali ste názov clanu.',
-	'ente_email'=>'Nezadali ste spávny E-mail.',
-	'ente_league'=>'Nezadali ste ligu.',
-	'ente_map'=>'Nezadali ste mapu.',
-	'ente_seve'=>'Nezadali ste adesu sevea.',
-	'ente_ul'=>'Nezadali ste spávnu adesu stánky.',
-  'enty_deleted'=>'Píspevok vymazaný.',
+	'enter_clanname'=>'Nezadali ste názov clanu.',
+	'enter_email'=>'Nezadali ste správny E-mail.',
+	'enter_league'=>'Nezadali ste ligu.',
+	'enter_map'=>'Nezadali ste mapu.',
+	'enter_server'=>'Nezadali ste adresu servera.',
+	'enter_url'=>'Nezadali ste správnu adresu stránky.',
+  'entry_deleted'=>'Príspevok vymazaný.',
 	'fight_us'=>'Vyzvite nás!',
-	'homepage'=>'webová stánka',
-	'info'=>'viacej infomácií',
-	'inset_in_calenda'=>'pidať do kalendáu',
+	'homepage'=>'webová stránka',
+	'info'=>'viacej informácií',
+	'insert_in_calendar'=>'pridať do kalendáru',
 	'league'=>'liga',
 	'map'=>'mapa',
 	'message_title'=>'Fight us',
-	'no_access'=>'Žiadne páva!',
-	'no_enties'=>'Žiadne záznamy.',
+	'no_access'=>'Žiadne práva!',
+	'no_entries'=>'Žiadne záznamy.',
 	'opponent'=>'oponent',
-	'poblems'=>'Vyskytli sa nasledujúce poblémy',
-	'secuity_code'=>'bezpečnostný kód',
-	'seve'=>'seve',
-	'sot'=>'tiediť:',
+	'problems'=>'Vyskytli sa nasledujúce problémy',
+	'security_code'=>'bezpečnostný kód',
+	'server'=>'server',
+	'sort'=>'triediť:',
 	'squad'=>'squad',
-	'submit_challenge'=>'potvdiť výzvu',
-	'thank_you'=>'Ďakujeme Vám za Váš záujem.<b>',
+	'submit_challenge'=>'potvrdiť výzvu',
+	'thank_you'=>'Ďakujeme Vám za Váš záujem.<br>',
 	'time'=>'čas',
-	'wong_secuity_code'=>'Bezpečnostný kód je chybný.'
+	'wrong_security_code'=>'Bezpečnostný kód je chybný.'
 );
 ?>

@@ -2,92 +2,92 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Vesion 4       /                        /   /               #
+#           Version 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Fee Content / Management System                 #
+#                       Free Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyight 2005-2014 by webspell.og                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
-#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
-#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to emove this copyight-tag                      #
-#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
+#   visit webSPELL.org, webspell.info to get webSPELL for free           #
+#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to remove this copyright-tag                      #
+#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
-#   Fa Development by Development Team - webspell.og                   #
+#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
+#   Far Development by Development Team - webspell.org                   #
 #                                                                        #
-#   visit webspell.og                                                   #
+#   visit webspell.org                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_aay = Aay(
+$language_array = Array(
 
 /* do not edit above this line */
 
 	'about'=>'om os',
 	'and'=>'og',
-	'aticles'=>'atikle',
-	'awads'=>'Pæmie',
-	'buddys'=>'venne',
-	'calenda'=>'kalende',
-	'clanwas'=>'klankampe',
-	'contact'=>'kontakt oplysninge',
-	'counte_stats'=>'tælle statistikke',
+	'articles'=>'artikler',
+	'awards'=>'Præmier',
+	'buddys'=>'venner',
+	'calendar'=>'kalender',
+	'clanwars'=>'klankampe',
+	'contact'=>'kontakt oplysninger',
+	'counter_stats'=>'tæller statistikker',
 	'date'=>'Dato',
-	'demos'=>'demoe',
+	'demos'=>'demoer',
 	'faq'=>'FAQ',
 	'fightus'=>'kæmp mod os',
 	'files'=>'downloads',
-	'foum'=>'foume',
-	'galley'=>'gallei',
+	'forum'=>'forumer',
+	'gallery'=>'galleri',
 	'guest'=>'Gæst',
 	'guestbook'=>'gæstebog',
-	'guests'=>'Gæste',
-	'histoy'=>'histoie',
-	'impint'=>'Stempel',
-	'is_editing_his'=>'edige hans',
-	'is_eading_foum'=>'læse i foumet',
-	'is_eading_newscomments'=>'læse nyhedskommentae',
-	'is_eading_the'=>'læse',
-	'is_watching_details_clanwa'=>'kigge på detaljene på en klankamp',
-	'is_watching_his'=>'kigge på hans',
-	'is_watching_pofile'=>'kigge på en pofil',
-	'is_watching_the'=>'kigge på',
+	'guests'=>'Gæster',
+	'history'=>'historie',
+	'imprint'=>'Stempel',
+	'is_editing_his'=>'rediger hans',
+	'is_reading_forum'=>'læser i forumet',
+	'is_reading_newscomments'=>'læser nyhedskommentarer',
+	'is_reading_the'=>'læser',
+	'is_watching_details_clanwar'=>'kigger på detaljerne på en klankamp',
+	'is_watching_his'=>'kigger på hans',
+	'is_watching_profile'=>'kigger på en profil',
+	'is_watching_the'=>'kigger på',
 	'joinus'=>'join os',
 	'latest_action'=>'sidste handling',
 	'links'=>'links',
 	'linkus'=>'links Os',
-	'loginoveview'=>'login ovesigt',
-	'membes'=>'medlemme',
-	'messenge'=>'beskede',
-	'news'=>'nyhede',
-	'newslette'=>'nyhedsbev',
+	'loginoverview'=>'login oversigt',
+	'members'=>'medlemmer',
+	'messenger'=>'beskeder',
+	'news'=>'nyheder',
+	'newsletter'=>'nyhedsbrev',
 	'nickname'=>'Øgenavn',
 	'now_online'=>'Online nu:',
-	'polls'=>'afstemninge',
-	'pofile'=>'pofil',
-	'egisteed_use'=>'Registeet buge',
-	'egisteed_uses'=>'egisteede bugee',
-	'seve'=>'sevee',
-	'sot'=>'Sote:',
-	'sponsos'=>'sponsee',
+	'polls'=>'afstemninger',
+	'profile'=>'profil',
+	'registered_user'=>'Registreret bruger',
+	'registered_users'=>'registrerede brugere',
+	'server'=>'servere',
+	'sort'=>'Sorter:',
+	'sponsors'=>'sponsere',
 	'squads'=>'hold',
 	'status'=>'Status',
-	'title_is'=>'hvem e online',
-	'title_was'=>'HVEM VAR ONLINE (sidste 24 time)',
-	'was_editing_his'=>'va igang med at ænde sin',
-	'was_eading_foum'=>'va igang med at læse i foumet',
-	'was_eading_newscomments'=>'va igang med at læse nyhedskommentae',
-	'was_eading_the'=>'va igang med at læse',
-	'was_watching_details_clanwa'=>'va igang med at kigge på detaljene fo en klankamp',
+	'title_is'=>'hvem er online',
+	'title_was'=>'HVEM VAR ONLINE (sidste 24 timer)',
+	'was_editing_his'=>'var igang med at ændre sin',
+	'was_reading_forum'=>'var igang med at læse i forumet',
+	'was_reading_newscomments'=>'var igang med at læse nyhedskommentarer',
+	'was_reading_the'=>'var igang med at læse',
+	'was_watching_details_clanwar'=>'var igang med at kigge på detaljerne for en klankamp',
 	'was_watching_his'=>'kiggede på hans',
-	'was_watching_pofile'=>'kiggede på en pofil',
+	'was_watching_profile'=>'kiggede på en profil',
 	'was_watching_the'=>'kiggede på',
-	'whoisonline'=>'hvem e online?'
+	'whoisonline'=>'hvem er online?'
 );
 ?>

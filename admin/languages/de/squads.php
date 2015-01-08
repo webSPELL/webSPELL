@@ -2,60 +2,60 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Vesion 4       /                        /   /               #
+#           Version 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Fee Content / Management System                 #
+#                       Free Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyight 2005-2014 by webspell.og                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
-#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
-#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to emove this copyight-tag                      #
-#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
+#   visit webSPELL.org, webspell.info to get webSPELL for free           #
+#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to remove this copyright-tag                      #
+#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
-#   Fa Development by Development Team - webspell.og                   #
+#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
+#   Far Development by Development Team - webspell.org                   #
 #                                                                        #
-#   visit webspell.og                                                   #
+#   visit webspell.org                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_aay = Aay(
+$language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Zugiff veweiget',
+  'access_denied'=>'Zugriff verweigert',
   'actions'=>'Aktionen',
   'add_squad'=>'Team hinzufügen',
-  'back'=>'zuück',
-  'cuent_icon'=>'Aktuelles Symbol',
-  'cuent_icon_small'=>'Aktuelles Symbol (klein)',
+  'back'=>'zurück',
+  'current_icon'=>'Aktuelles Symbol',
+  'current_icon_small'=>'Aktuelles Symbol (klein)',
   'delete'=>'löschen',
-  'edit'=>'änden',
-  'edit_squad'=>'Team änden',
-  'fomat_incoect'=>'Das Fomat des Banne wa falsch. Bitte lade nu Banne im *.gif, *.jpg ode *.png Fomat hoch.',
+  'edit'=>'ändern',
+  'edit_squad'=>'Team ändern',
+  'format_incorrect'=>'Das Format des Banner war falsch. Bitte lade nur Banner im *.gif, *.jpg oder *.png Format hoch.',
   'game'=>'Spiel',
   'gaming_squad'=>'spielendes Team',
   'icon'=>'Symbol',
   'icon_upload'=>'Symbol Upload',
-  'icon_upload_info'=>'fü den sc_squads include',
+  'icon_upload_info'=>'für den sc_squads include',
   'icon_upload_small'=>'Symbol Upload (klein)',
-  'infomation_incomplete'=>'Angaben unvollständig.',
+  'information_incomplete'=>'Angaben unvollständig.',
   'new_squad'=>'neues Team',
-  'no_icon'=>'Kein Symbol vohanden',
+  'no_icon'=>'Kein Symbol vorhanden',
   'non_gaming_squad'=>'nicht spielendes Team',
-  'eally_delete'=>'Diese Guppe wiklich löschen?',
-  'sot'=>'Sotieung',
+  'really_delete'=>'Diese Gruppe wirklich löschen?',
+  'sort'=>'Sortierung',
   'squad_info'=>'Team Info',
   'squad_name'=>'Team Name',
   'squad_type'=>'Team Type',
   'squads'=>'Teams',
-  'tansaction_invalid'=>'Tansaktions ID ungültig',
-  'to_sot'=>'sotieen'
+  'transaction_invalid'=>'Transaktions ID ungültig',
+  'to_sort'=>'sortieren'
 );
 ?>

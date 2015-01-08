@@ -2,52 +2,52 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Vesion 4       /                        /   /               #
+#           Version 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Fee Content / Management System                 #
+#                       Free Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyight 2005-2014 by webspell.og                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
-#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
-#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to emove this copyight-tag                      #
-#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
+#   visit webSPELL.org, webspell.info to get webSPELL for free           #
+#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to remove this copyright-tag                      #
+#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
-#   Fa Development by Development Team - webspell.og                   #
+#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
+#   Far Development by Development Team - webspell.org                   #
 #                                                                        #
-#   visit webspell.og                                                   #
+#   visit webspell.org                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_aay = Aay(
+$language_array = Array(
 
 /* do not edit above this line */
 
-	'back'=>'back to fom',
+	'back'=>'back to form',
 	'contact'=>'contact',
-	'desciption'=>'With this fom you ae able to submit a message to us',
-	'ente_mail'=>'Please ente a mail adess.',
-	'ente_message'=>'Please ente a message.',
-	'ente_name'=>'Please ente a name.',
-	'ente_subject'=>'Please ente a subject.',
-	'eos_thee'=>'Some eos occued',
+	'description'=>'With this form you are able to submit a message to us',
+	'enter_mail'=>'Please enter a mail adress.',
+	'enter_message'=>'Please enter a message.',
+	'enter_name'=>'Please enter a name.',
+	'enter_subject'=>'Please enter a subject.',
+	'errors_there'=>'Some errors occured',
 	'mail'=>'E-Mail',
 	'message'=>'Message',
 	'name'=>'Name',
-	'eceive'=>'Receive',
-	'eset'=>'Reset',
-	'secuity_code'=>'Secuity Code',
+	'receiver'=>'Receiver',
+	'reset'=>'Reset',
+	'security_code'=>'Security Code',
 	'send'=>'Send',
-	'send_successfull'=>'You message was send successfully.',
+	'send_successfull'=>'Your message was send successfully.',
 	'subject'=>'Subject',
-	'title_contact'=>'Contact fom',
-	'unknown_eceive'=>'unknown eceive',
-	'wong_secuitycode'=>'You enteed a wong secuity code!'
+	'title_contact'=>'Contact form',
+	'unknown_receiver'=>'unknown receiver',
+	'wrong_securitycode'=>'You entered a wrong security code!'
 );
 ?>

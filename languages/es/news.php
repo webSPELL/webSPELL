@@ -2,85 +2,85 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Vesion 4       /                        /   /               #
+#           Version 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Fee Content / Management System                 #
+#                       Free Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyight 2005-2014 by webspell.og                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
-#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
-#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to emove this copyight-tag                      #
-#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
+#   visit webSPELL.org, webspell.info to get webSPELL for free           #
+#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to remove this copyright-tag                      #
+#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
-#   Fa Development by Development Team - webspell.og                   #
+#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
+#   Far Development by Development Team - webspell.org                   #
 #                                                                        #
-#   visit webspell.og                                                   #
+#   visit webspell.org                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_aay = Aay(
+$language_array = Array(
 
 /* do not edit above this line */
 
-	'autho'=>'Auto',
+	'author'=>'Autor',
 	'bbcode'=>'BBCode esta <b><u>ON</u></b>',
-	'cancel'=>'cancela',
+	'cancel'=>'cancelar',
 	'comm'=>'comen',
-	'comment'=>'<a hef="$ul">1 comentaio</a>, ultimo po $lastposte - $lastdate',
-	'comments'=>'<a hef="$ul">[$anzcomments] comentaios</a>, ultimo po $lastposte - $lastdate',
+	'comment'=>'<a href="$url">1 comentario</a>, ultimo por $lastposter - $lastdate',
+	'comments'=>'<a href="$url">[$anzcomments] comentarios</a>, ultimo por $lastposter - $lastdate',
 	'date'=>'Fecha',
-	'delete'=>'boa',
-	'delete_selected'=>'boa seleccionado(s)',
-	'edit'=>'edita',
-	'ente_title'=>'Intoduzca un título!',
-	'ente_text'=>'Intoduzca un texto!',
-	'go'=>'Ejecuta',
+	'delete'=>'borrar',
+	'delete_selected'=>'borrar seleccionado(s)',
+	'edit'=>'editar',
+	'enter_title'=>'Introduzca un título!',
+	'enter_text'=>'Introduzca un texto!',
+	'go'=>'Ejecutar',
 	'headline'=>'Titulo',
 	'html'=>'HTML esta <b><u>ON</u></b>',
-	'inten'=>'inteno',
+	'intern'=>'interno',
 	'languages'=>'Idiomas',
 	'link'=>'Enlace',
 	'links'=>'Enlaces',
 	'new_post'=>'Nuevo post',
 	'new_window'=>'Nueva ventana',
 	'news'=>'Noticias',
-	'news_achive'=>'Achivo',
+	'news_archive'=>'Archivo',
 	'no'=>'no',
 	'no_access'=>'sin acceso',
-	'no_comment'=>'<a hef="$ul">sin comentaios</a>',
-	'no_comments'=>'Desactiva comentaios',
+	'no_comment'=>'<a href="$url">sin comentarios</a>',
+	'no_comments'=>'Desactivar comentarios',
 	'no_topnews'=>'no hay top noticias',
 	'options'=>'opciones',
-	'post_languages'=>'Noticias en <select name="language_count" onchange="update_textaea(this.options[this.selectedIndex].value)">$selects</select> idiomas',
-	'post_news'=>'pone noticias',
-	'peview'=>'vista pevia',
-	'publish_now'=>'publica ahoa',
-	'publish_selected'=>'publica seleccionadas',
-	'eally_delete'=>'Realmente desea elimina este noticias?',
-	'ubic'=>'Fima',
-	'save_news'=>'guada noticias',
-	'select_all'=>'selecciona todos',
+	'post_languages'=>'Noticias en <select name="language_count" onchange="update_textarea(this.options[this.selectedIndex].value)">$selects</select> idiomas',
+	'post_news'=>'poner noticias',
+	'preview'=>'vista previa',
+	'publish_now'=>'publicar ahora',
+	'publish_selected'=>'publicar seleccionadas',
+	'really_delete'=>'Realmente desea eliminar este noticias?',
+	'rubric'=>'Firma',
+	'save_news'=>'guardar noticias',
+	'select_all'=>'seleccionar todos',
 	'self'=>'Misma ventana',
-	'show_news'=>'mosta noticias',
+	'show_news'=>'mostrar noticias',
 	'smilies'=>'Emoticonos estan <b><u>ON</u></b>',
-	'sot'=>'Odena:',
+	'sort'=>'Ordenar:',
 	'title_unpublished_news'=>'<h2>NOTICIAS SIN PUBLICAR:</h2>',
 	'topnews'=>'noticias top',
-	'unpublish'=>'no publica',
-	'unpublish_selected'=>'no publica seleccionado(s)',
-	'unpublished_news'=>'no publica noticias',
-	'upload_images'=>'subi imagenes',
-	'use_comments'=>'Activa comentaios usuaios',
-	'view_moe'=>'Ve mas...',
-	'visito_comments'=>'Activa comentaios visitantes',
-	'witten_by'=>'escito po',
+	'unpublish'=>'no publicar',
+	'unpublish_selected'=>'no publicar seleccionado(s)',
+	'unpublished_news'=>'no publicar noticias',
+	'upload_images'=>'subir imagenes',
+	'user_comments'=>'Activar comentarios usuarios',
+	'view_more'=>'Ver mas...',
+	'visitor_comments'=>'Activar comentarios visitantes',
+	'written_by'=>'escrito por',
 	'yes'=>'si',
 	'tags'=>'etiquetas'
 );

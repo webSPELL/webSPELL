@@ -2,72 +2,72 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Vesion 4       /                        /   /               #
+#           Version 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Fee Content / Management System                 #
+#                       Free Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyight 2005-2014 by webspell.og                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
-#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
-#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to emove this copyight-tag                      #
-#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
+#   visit webSPELL.org, webspell.info to get webSPELL for free           #
+#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to remove this copyright-tag                      #
+#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
-#   Fa Development by Development Team - webspell.og                   #
+#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
+#   Far Development by Development Team - webspell.org                   #
 #                                                                        #
-#   visit webspell.og                                                   #
+#   visit webspell.org                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_aay = Aay(
+$language_array = Array(
 
 /* do not edit above this line */
 
-	'activation_successful'=>'L\'activation de vote compte a été pise en compte.<b>Vous pouvez maintenant vous connecte.',
-	'back'=>'Retou',
-	'ente_nickname'=>'Vous devez ente un pseudo !',
-	'ente_passwod'=>'Vous devez ente un mot de passe !',
-	'ente_usename'=>'Vous devez ente un nom d\'utilisateu !',
-	'eos_thee'=>'Eeus',
-	'fo_login'=>'seulement pou la connexion',
-	'invalid_mail'=>'Vote adesse mail est invalide !',
+	'activation_successful'=>'L\'activation de votre compte a été prise en compte.<br>Vous pouvez maintenant vous connecter.',
+	'back'=>'Retour',
+	'enter_nickname'=>'Vous devez entrer un pseudo !',
+	'enter_password'=>'Vous devez entrer un mot de passe !',
+	'enter_username'=>'Vous devez entrer un nom d\'utilisateur !',
+	'errors_there'=>'Erreurs',
+	'for_login'=>'seulement pour la connexion',
+	'invalid_mail'=>'Votre adresse mail est invalide !',
 	'mail'=>'Email',
-	'mail_activation_successful'=>'L\'activation de vote adesse mail a été pise en compte.',
-	'mail_failed'=>'L\'envoi du mail d\'activation a échoué, meci de contacte le webmaste.',
-	'mail_inuse'=>'L\'adesse mail est déjà utilisée.',
-	'mail_subject'=>'Mail d\'activation de compte de %homepage_ul%',
-	'mail_text'=>'Bonjou %usename%!
+	'mail_activation_successful'=>'L\'activation de votre adresse mail a été prise en compte.',
+	'mail_failed'=>'L\'envoi du mail d\'activation a échoué, merci de contacter le webmaster.',
+	'mail_inuse'=>'L\'adresse mail est déjà utilisée.',
+	'mail_subject'=>'Mail d\'activation de compte de %homepage_url%',
+	'mail_text'=>'Bonjour %username%!
 
-Vote insciption à %pagetitle% (%homepage_ul%) a été pise en compte. Infomations su vote compte:
+Votre inscription à %pagetitle% (%homepage_url%) a été prise en compte. Informations sur votre compte:
 
-Pseudo: %usename%
+Pseudo: %username%
 
-Pou compléte vote insciption vous devez active vote compte en cliquant su le lien suivant:
+Pour compléter votre inscription vous devez activer votre compte en cliquant sur le lien suivant:
 %activationlink%
 
-Meci pou vote insciption
-%pagetitle% - %homepage_ul%',
+Merci pour votre inscription
+%pagetitle% - %homepage_url%',
 	'nickname'=>'Pseudo',
 	'nickname_inuse'=>'Pseudo déjà utilisé !',
-	'no_egiste_when_loggedin'=>'You alleady have an account at %pagename%',
-	'passwod'=>'Mot de passe',
-	'pofile_info'=>'Infomations',
-	'egiste_now'=>'S\'inscie !',
-	'egiste_successful'=>'Vote insciption a été pise en compte. Vous allez ecevoi un mail dans quelques minutes accompagné d\'un lien pou active vote compte.',
-	'egistation'=>'S\'enegiste',
-	'epeat'=>'Répéte le mot de passe',
-	'epeat_invalid'=>'Vos mots de passe sont difféents.',
-	'secuity_code'=>'Code de sécuité',
-	'usename'=>'Nom d\'utilisateu',
-	'usename_inuse'=>'Nom d\'utilisateu déjà utilisé !',
-	'usename_toolong'=>'Le nom d\'utilisateu est top long (max. 30 caactèes).',
-	'wong_activationkey'=>'Vote clé d\'activation est fausse !',
-	'wong_secuitycode'=>'Le code de sécuité est faux !'
+	'no_register_when_loggedin'=>'You allready have an account at %pagename%',
+	'password'=>'Mot de passe',
+	'profile_info'=>'Informations',
+	'register_now'=>'S\'inscrire !',
+	'register_successful'=>'Votre inscription a été prise en compte. Vous allez recevoir un mail dans quelques minutes accompagné d\'un lien pour activer votre compte.',
+	'registration'=>'S\'enregistrer',
+	'repeat'=>'Répéter le mot de passe',
+	'repeat_invalid'=>'Vos mots de passe sont différents.',
+	'security_code'=>'Code de sécurité',
+	'username'=>'Nom d\'utilisateur',
+	'username_inuse'=>'Nom d\'utilisateur déjà utilisé !',
+	'username_toolong'=>'Le nom d\'utilisateur est trop long (max. 30 caractères).',
+	'wrong_activationkey'=>'Votre clé d\'activation est fausse !',
+	'wrong_securitycode'=>'Le code de sécurité est faux !'
 );
 ?>

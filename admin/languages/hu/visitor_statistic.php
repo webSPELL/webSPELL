@@ -2,35 +2,35 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Vesion 4       /                        /   /               #
+#           Version 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Fee Content / Management System                 #
+#                       Free Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyight 2005-2014 by webspell.og                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
-#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
-#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to emove this copyight-tag                      #
-#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
+#   visit webSPELL.org, webspell.info to get webSPELL for free           #
+#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to remove this copyright-tag                      #
+#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
-#   Fa Development by Development Team - webspell.og                   #
+#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
+#   Far Development by Development Team - webspell.org                   #
 #                                                                        #
-#   visit webspell.og                                                   #
+#   visit webspell.org                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_aay = Aay(
+$language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Hozzáféés megtagadva',
-  'change_size'=>'Méet megváltoztatása',
+  'access_denied'=>'Hozzáférés megtagadva',
+  'change_size'=>'Méret megváltoztatása',
   'days'=>'Nap',
   'days_online'=>'Online napok',
   'guest'=>'vendég',
@@ -41,22 +41,22 @@ $language_aay = Aay(
   'now_online'=>'Most online',
   'settings'=>'Beállítások',
   'show'=>'Megjelenítés',
-  'show_yea_month'=>'Egyedi év és hónap megjelenítése',
+  'show_year_month'=>'Egyedi év és hónap megjelenítése',
   'stats'=>'Statisztikák',
   'this_month'=>'Ebben a hónapban',
   'today'=>'Ma',
   'total'=>'Összesen',
-  'use'=>'Felhasználó',
-  'uses'=>'Felhasználók',
-  'visito'=>'Látogatók',
-  'visito_stats_gaphics'=>'Látogatói statisztikák (Gafikusan)',
-  'visito_stats_oveall'=>'Látogatói statisztikák (összegezve)',
+  'user'=>'Felhasználó',
+  'users'=>'Felhasználók',
+  'visitor'=>'Látogatók',
+  'visitor_stats_graphics'=>'Látogatói statisztikák (Grafikusan)',
+  'visitor_stats_overall'=>'Látogatói statisztikák (összegezve)',
   'visits_day'=>'Látogatók naponta',
-  'visits_hou'=>'Látogatók óánként',
+  'visits_hour'=>'Látogatók óránként',
   'visits_month'=>'Látogatók havonta',
   'visits_total'=>'Összes látogatás',
   'width_height'=>'(szélesség x magasság)',
-  'yesteday'=>'Tegnap',
+  'yesterday'=>'Tegnap',
   'yyyy'=>'(YYYY)',
   'yyyy_mm'=>'(YYYY.MM)'
 );

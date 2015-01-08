@@ -2,56 +2,56 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Vesion 4       /                        /   /               #
+#           Version 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Fee Content / Management System                 #
+#                       Free Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyight 2005-2014 by webspell.og                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
-#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
-#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to emove this copyight-tag                      #
-#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
+#   visit webSPELL.org, webspell.info to get webSPELL for free           #
+#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to remove this copyright-tag                      #
+#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
-#   Fa Development by Development Team - webspell.og                   #
+#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
+#   Far Development by Development Team - webspell.org                   #
 #                                                                        #
-#   visit webspell.og                                                   #
+#   visit webspell.org                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_aay = Aay(
+$language_array = Array(
 
 /* do not edit above this line */
 
-	'actions'=>'Handlinge',
-	'add_galley'=>'Tilføj gallei',
+	'actions'=>'Handlinger',
+	'add_gallery'=>'Tilføj galleri',
 	'add_img'=>'tilføj billede',
-	'add_pictue'=>'tilføj billede',
-	'comment'=>'Kommenta',
+	'add_picture'=>'tilføj billede',
+	'comment'=>'Kommentar',
 	'delete'=>'slet',
-	'disable_comments'=>'Deaktive kommentae',
-	'edit'=>'edige',
-	'enable_use_comments'=>'Slå buge kommentae til',
-	'enable_visito_comments'=>'Slå gæst kommentae til',
-	'galley_name'=>'Gallei-Navn',
-	'goup'=>'Guppe',
+	'disable_comments'=>'Deaktiver kommentarer',
+	'edit'=>'rediger',
+	'enable_user_comments'=>'Slå bruger kommentarer til',
+	'enable_visitor_comments'=>'Slå gæst kommentarer til',
+	'gallery_name'=>'Galleri-Navn',
+	'group'=>'Gruppe',
 	'name'=>'Navn',
-	'new_galley'=>'nyt Gallei',
-	'no_galleies'=>'Ingen galleie tilgængelige.',
-	'no_space_left'=>'De e ikke noget plads tilbage: afbudt.',
-	'pictue'=>'Billede',
-	'please_ente_name'=>'Indtast venligst et navn!',
-	'eally_delete_galley'=>'Vil du vikelig slette dette gallei?',
-	'update'=>'opdate',
-	'use_galley'=>'Buge-Gallei',
-	'usegalleies'=>'Buge galleie',
-	'visito_comments'=>'Gæste kommentae',
-	'x_of_y_mb_in_use'=>'<span style="colo:%spacecolo%">&nbsp;%used_size%</span> af %available_size% MB e i bug.'
+	'new_gallery'=>'nyt Galleri',
+	'no_galleries'=>'Ingen gallerier tilgængelige.',
+	'no_space_left'=>'Der er ikke noget plads tilbage: afbrudt.',
+	'picture'=>'Billede',
+	'please_enter_name'=>'Indtast venligst et navn!',
+	'really_delete_gallery'=>'Vil du virkelig slette dette galleri?',
+	'update'=>'opdater',
+	'user_gallery'=>'Bruger-Galleri',
+	'usergalleries'=>'Bruger gallerier',
+	'visitor_comments'=>'Gæste kommentarer',
+	'x_of_y_mb_in_use'=>'<span style="color:%spacecolor%">&nbsp;%used_size%</span> af %available_size% MB er i brug.'
 );
 ?>

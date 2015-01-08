@@ -2,59 +2,59 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Vesion 4       /                        /   /               #
+#           Version 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Fee Content / Management System                 #
+#                       Free Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyight 2005-2014 by webspell.og                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
-#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
-#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to emove this copyight-tag                      #
-#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
+#   visit webSPELL.org, webspell.info to get webSPELL for free           #
+#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to remove this copyright-tag                      #
+#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
-#   Fa Development by Development Team - webspell.og                   #
+#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
+#   Far Development by Development Team - webspell.org                   #
 #                                                                        #
-#   visit webspell.og                                                   #
+#   visit webspell.org                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_aay = Aay(
+$language_array = Array(
 
 /* do not edit above this line */
 
-	'all_demos'=>'Alle Demoe',
-	'alleady_ated'=>'Du ha alleede vudeet denne demo',
+	'all_demos'=>'Alle Demoer',
+	'allready_rated'=>'Du har allerede vurderet denne demo',
 	'clan1'=>'Klan 1',
-	'clan1_county'=>'Land klan 1',
+	'clan1_country'=>'Land klan 1',
 	'clan1_homepage'=>'Hjemmeside klan 1',
 	'clan1_name'=>'Fulde klannavn 1',
 	'clan1_tag'=>'Klantag 1',
 	'clan2'=>'Klan 2',
-	'clan2_county'=>'Land klan 2',
+	'clan2_country'=>'Land klan 2',
 	'clan2_homepage'=>'Hjemmeside klan 2',
 	'clan2_name'=>'Fulde klannavn',
 	'clan2_tag'=>'Klantag 2',
 	'date'=>'Dato',
 	'delete'=>'slet',
-	'demo_details'=>'Demo detalje',
+	'demo_details'=>'Demo detaljer',
 	'demo_upload'=>'Demo',
-	'demos'=>'demoe',
-	'disable_comments'=>'Deaktive kommenta',
+	'demos'=>'demoer',
+	'disable_comments'=>'Deaktiver kommentar',
 	'download'=>'Download',
 	'download_now'=>'Download nu',
 	'downloaded'=>'Downloadet',
 	'downloads'=>'Downloads',
-	'edit'=>'edige',
-	'edit_demo'=>'edige demo',
-	'exten_link'=>'Ekstent Link',
-	'file_exists'=>'Filen eksistee alleede!',
+	'edit'=>'rediger',
+	'edit_demo'=>'rediger demo',
+	'extern_link'=>'Eksternt Link',
+	'file_exists'=>'Filen eksisterer allerede!',
 	'game'=>'spil',
 	'league'=>'Liga',
 	'league_homepage'=>'Liga hjemmeside',
@@ -62,20 +62,20 @@ $language_aay = Aay(
 	'match'=>'Kamp',
 	'new_demo'=>'Ny demo',
 	'no_access'=>'Adgang Nægtet',
-	'no_demos'=>'Ingen demoe tilgængeligt',
-	'pefect'=>'Pefekt',
-	'playes'=>'Spillee',
-	'poo'=>'Dålig',
-	'ate'=>'Vude',
-	'ate_with'=>'Giv mellem 0-10 point',
-	'ating'=>'Vudeing',
+	'no_demos'=>'Ingen demoer tilgængeligt',
+	'perfect'=>'Perfekt',
+	'players'=>'Spillere',
+	'poor'=>'Dårlig',
+	'rate'=>'Vurder',
+	'rate_with'=>'Giv mellem 0-10 point',
+	'rating'=>'Vurdering',
 	'save_demo'=>'Gem demo',
-	'sot'=>'Sote',
-	'to_download'=>'Du skal væe egisteet og logget ind fo at hente denne demo!',
-	'to_ate'=>'Du skal væe egisteet og logget ind fo at vudee en Demo!',
-	'update_demo'=>'Opdate demo',
-	'use_comments'=>'Slå buge kommentae til',
-	'visito_comments'=>'Slå gæst kommentae til',
+	'sort'=>'Sorter',
+	'to_download'=>'Du skal være registreret og logget ind for at hente denne demo!',
+	'to_rate'=>'Du skal være registreret og logget ind for at vurdere en Demo!',
+	'update_demo'=>'Opdater demo',
+	'user_comments'=>'Slå bruger kommentarer til',
+	'visitor_comments'=>'Slå gæst kommentarer til',
 	'vs'=>'vs.'
 );
 ?>

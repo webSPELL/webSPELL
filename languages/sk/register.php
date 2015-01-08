@@ -2,72 +2,72 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Vesion 4       /                        /   /               #
+#           Version 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Fee Content / Management System                 #
+#                       Free Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyight 2005-2014 by webspell.og                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
-#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
-#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to emove this copyight-tag                      #
-#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
+#   visit webSPELL.org, webspell.info to get webSPELL for free           #
+#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to remove this copyright-tag                      #
+#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
-#   Fa Development by Development Team - webspell.og                   #
+#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
+#   Far Development by Development Team - webspell.org                   #
 #                                                                        #
-#   visit webspell.og                                                   #
+#   visit webspell.org                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_aay = Aay(
+$language_array = Array(
 
 /* do not edit above this line */
 
-	'activation_successful'=>'Aktivácia vášho konta bola úspešná.<b>Môžete sa pihlásiť.',
+	'activation_successful'=>'Aktivácia vášho konta bola úspešná.<br>Môžete sa prihlásiť.',
 	'back'=>'naspäť',
-	'ente_nickname'=>'Posím zadajte pezývku.',
-	'ente_passwod'=>'Posím zadajte heslo.',
-	'ente_usename'=>'Posím zadajte užív. meno.',
-	'eos_thee'=>'Vyskytli sa chyby:',
-	'fo_login'=>'iba pe pihlásenie',
-	'invalid_mail'=>'Zadali ste chybú E-mailovú adesu.',
+	'enter_nickname'=>'Prosím zadajte prezývku.',
+	'enter_password'=>'Prosím zadajte heslo.',
+	'enter_username'=>'Prosím zadajte užív. meno.',
+	'errors_there'=>'Vyskytli sa chyby:',
+	'for_login'=>'iba pre prihlásenie',
+	'invalid_mail'=>'Zadali ste chybú E-mailovú adresu.',
 	'mail'=>'E-Mail',
-	'mail_activation_successful'=>'Aktivácia vášho e-mailu pebehla úspešne.',
-	'mail_failed'=>'Aktivačný E-mail nemohol byť odoslaný, posím infomujte WebMastea.',
-	'mail_inuse'=>'Mailová adesa sa už používa.',
-	'mail_subject'=>'Aktivačný mail pe %homepage_ul%',
-	'mail_text'=>'Zdavím %usename%!
+	'mail_activation_successful'=>'Aktivácia vášho e-mailu prebehla úspešne.',
+	'mail_failed'=>'Aktivačný E-mail nemohol byť odoslaný, prosím informujte WebMastera.',
+	'mail_inuse'=>'Mailová adresa sa už používa.',
+	'mail_subject'=>'Aktivačný mail pre %homepage_url%',
+	'mail_text'=>'Zdravím %username%!
 
-Vaša egistácia na %pagetitle% (%homepage_ul%) bola úspešná. Vaše údaje::
+Vaša registrácia na %pagetitle% (%homepage_url%) bola úspešná. Vaše údaje::
 
-Pihlasovacie meno: %usename%
+Prihlasovacie meno: %username%
 
-Pe dokončenie aktivácie, posím kliknite na tento odkaz:
+Pre dokončenie aktivácie, prosím kliknite na tento odkaz:
 %activationlink%
 
-Ďakujeme Vám za egistáciu
-%pagetitle% - %homepage_ul%',
-	'nickname'=>'Pezývka',
-	'nickname_inuse'=>'Pezývka sa už používa.',
-	'no_egiste_when_loggedin'=>'You alleady have an account at %pagename%',
-	'passwod'=>'Heslo',
-	'pofile_info'=>'Infomácie o egistácii',
-	'egiste_now'=>'Zaegistuj sa!',
-	'egiste_successful'=>'Vaša egistácia bola úspešná. Za chvíľu dostanete e-mail s ďalšími pokynmi pe dokončenie egistácie.',
-	'egistation'=>'egistácia',
-	'epeat'=>'Zopakuj heslo',
-	'epeat_invalid'=>'Vaše heslá sa nezhodujú.',
-	'secuity_code'=>'Bezpečnostný kód',
-	'usename'=>'Užív. meno',
-	'usename_inuse'=>'Užív. meno sa už používa.',
-	'usename_toolong'=>'Užív. meno je píliž dlhé (max. 30 znakov).',
-	'wong_activationkey'=>'Váš aktivačný klúč je zlý!',
-	'wong_secuitycode'=>'Bezpečnostný kód je chybný!'
+Ďakujeme Vám za registráciu
+%pagetitle% - %homepage_url%',
+	'nickname'=>'Prezývka',
+	'nickname_inuse'=>'Prezývka sa už používa.',
+	'no_register_when_loggedin'=>'You allready have an account at %pagename%',
+	'password'=>'Heslo',
+	'profile_info'=>'Informácie o registrácii',
+	'register_now'=>'Zaregistruj sa!',
+	'register_successful'=>'Vaša registrácia bola úspešná. Za chvíľu dostanete e-mail s ďalšími pokynmi pre dokončenie registrácie.',
+	'registration'=>'registrácia',
+	'repeat'=>'Zopakuj heslo',
+	'repeat_invalid'=>'Vaše heslá sa nezhodujú.',
+	'security_code'=>'Bezpečnostný kód',
+	'username'=>'Užív. meno',
+	'username_inuse'=>'Užív. meno sa už používa.',
+	'username_toolong'=>'Užív. meno je príliž dlhé (max. 30 znakov).',
+	'wrong_activationkey'=>'Váš aktivačný klúč je zlý!',
+	'wrong_securitycode'=>'Bezpečnostný kód je chybný!'
 );
 ?>

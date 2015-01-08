@@ -2,47 +2,47 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Vesion 4       /                        /   /               #
+#           Version 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Fee Content / Management System                 #
+#                       Free Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyight 2005-2014 by webspell.og                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
-#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
-#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to emove this copyight-tag                      #
-#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
+#   visit webSPELL.org, webspell.info to get webSPELL for free           #
+#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to remove this copyright-tag                      #
+#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
-#   Fa Development by Development Team - webspell.og                   #
+#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
+#   Far Development by Development Team - webspell.org                   #
 #                                                                        #
-#   visit webspell.og                                                   #
+#   visit webspell.org                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_aay = Aay(
+$language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Hozzáféés megtagadva',
+  'access_denied'=>'Hozzáférés megtagadva',
   'actions'=>'Lehetőségek',
-  'add_categoy'=>'Kategóia hozzáadása',
-  'categoy'=>'Kategóia',
-  'categoy_name'=>'Kategóia neve',
-  'delete'=>'Tölés',
-  'ente_name'=>'Be kell ínod egy nevet',
-  'edit'=>'Szekesztés',
-  'edit_categoy'=>'Kategóia szekesztése',
-  'file_categoies'=>'Fájl kategóiák',
+  'add_category'=>'Kategória hozzáadása',
+  'category'=>'Kategória',
+  'category_name'=>'Kategória neve',
+  'delete'=>'Törlés',
+  'enter_name'=>'Be kell írnod egy nevet',
+  'edit'=>'Szerkesztés',
+  'edit_category'=>'Kategória szerkesztése',
+  'file_categories'=>'Fájl kategóriák',
   'main'=>'Fő',
-  'new_categoy'=>'Új kategóia',
-  'eally_delete'=>'Biztosan töölni akaod ezt a kategóiát?',
-  'sub_categoy'=>'Szülő kategóia:',
-  'tansaction_invalid'=>'A művelet azonosítója événytelen'
+  'new_category'=>'Új kategória',
+  'really_delete'=>'Biztosan törölni akarod ezt a kategóriát?',
+  'sub_category'=>'Szülő kategória:',
+  'transaction_invalid'=>'A művelet azonosítója érvénytelen'
 );
 ?>

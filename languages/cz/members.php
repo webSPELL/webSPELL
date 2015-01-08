@@ -2,49 +2,49 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Vesion 4       /                        /   /               #
+#           Version 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Fee Content / Management System                 #
+#                       Free Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyight 2005-2014 by webspell.og                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
-#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
-#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to emove this copyight-tag                      #
-#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
+#   visit webSPELL.org, webspell.info to get webSPELL for free           #
+#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to remove this copyright-tag                      #
+#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
-#   Fa Development by Development Team - webspell.og                   #
+#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
+#   Far Development by Development Team - webspell.org                   #
 #                                                                        #
-#   visit webspell.og                                                   #
+#   visit webspell.org                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_aay = Aay(
+$language_array = Array(
 
 /* do not edit above this line */
 
 	'about'=>'O mě',
 	'active'=>'aktivní',
-	'activity'=>'Úpavy',
-	'awads'=>'Ocenění',
-	'back_oveview'=>'&aquo; <a hef="index.php?site=membes"><b>vátit se na přehled členů</b></a>',
+	'activity'=>'Úpravy',
+	'awards'=>'Ocenění',
+	'back_overview'=>'&raquo; <a href="index.php?site=members"><b>vrátit se na přehled členů</b></a>',
 	'challenge'=>'Zápasy',
 	'contact'=>'Kontakt/y',
 	'go'=>'Jdi!',
 	'inactive'=>'neaktivní',
-	'membe'=>'Člen',
-	'membes'=>'členové',
+	'member'=>'Člen',
+	'members'=>'členové',
 	'nickname'=>'Přezdívka',
-	'no_desciption'=>'uživatel o sobě zatím nic nenapsal',
+	'no_description'=>'uživatel o sobě zatím nic nenapsal',
 	'position'=>'Pozice',
-	'esults'=>'Výsledky',
-	'show_details'=>'&aquo; <a hef="index.php?site=membes&amp;action=show&amp;squadID=%squadID%"><b>Ukázat detaily</b></a>',
+	'results'=>'Výsledky',
+	'show_details'=>'&raquo; <a href="index.php?site=members&amp;action=show&amp;squadID=%squadID%"><b>Ukázat detaily</b></a>',
 	'show_only'=>'Ukaž pouze',
 	'status'=>'Status',
 	'town'=>'Město'

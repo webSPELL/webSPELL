@@ -2,84 +2,84 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Vesion 4       /                        /   /               #
+#           Version 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Fee Content / Management System                 #
+#                       Free Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyight 2005-2014 by webspell.og                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
-#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
-#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to emove this copyight-tag                      #
-#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
+#   visit webSPELL.org, webspell.info to get webSPELL for free           #
+#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to remove this copyright-tag                      #
+#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
-#   Fa Development by Development Team - webspell.og                   #
+#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
+#   Far Development by Development Team - webspell.org                   #
 #                                                                        #
-#   visit webspell.og                                                   #
+#   visit webspell.org                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_aay = Aay(
+$language_array = Array(
 
 /* do not edit above this line */
 
 	'_tag_if_wish'=>' tagujte keď chcete, eg.',
-	'_tags_etained'=>'tag je zadžaný keď sa na to neskô poziete.',
-	'adding_image'=>'Pidanie obázky do píspevku',
-	'all_fomating_'=>'Všetko fomátovanie vámci',
-	'as_noted_ul_'=>'Ako bolo uvedené v sekcii URL, obázok môžete zabaliť do ',
-	'back_top'=>'Naspäť na vchol',
-	'bb_code_tags_colo_size'=>'Pe zmenenie faby alebo veľkosti vášho textu, môžete použiť nasledujúce tagy. Nezabudnite, že vzhľad výstupného textu závisí taktiež od piehladaču a systému čítajúceho:',
-	'bb_code_tags_text_syle'=>'BBCode obsahuje tagy, ktoé Vám umožnia ýchlo zmeniť vlastnosti a štýl vášho textu. Môžme to dosiahnuť nasledujúcimi spôsobmi:',
+	'_tags_retained'=>'tag je zadržaný keď sa na to neskôr pozriete.',
+	'adding_image'=>'Pridanie obrázky do príspevku',
+	'all_formating_'=>'Všetko formátovanie vrámci',
+	'as_noted_url_'=>'Ako bolo uvedené v sekcii URL, obrázok môžete zabaliť do ',
+	'back_top'=>'Naspäť na vrchol',
+	'bb_code_tags_color_size'=>'Pre zmenenie farby alebo veľkosti vášho textu, môžete použiť nasledujúce tagy. Nezabudnite, že vzhľad výstupného textu závisí taktiež od priehladaču a systému čítajúceho:',
+	'bb_code_tags_text_syle'=>'BBCode obsahuje tagy, ktoré Vám umožnia rýchlo zmeniť vlastnosti a štýl vášho textu. Môžme to dosiahnuť nasledujúcimi spôsobmi:',
 	'bbcode_guide'=>'BBCode Návod',
 	'becomes'=>'stane sa',
-	'blue'=>'Modý',
+	'blue'=>'Modrý',
 	'bold_text'=>'tučný text',
-	'can_combine_fomatting'=>'Môžem kombinovať fomatujúce tagy?',
-	'close_tags_is_up_to_you'=>'Nedopoúčame Vám veľa výstupného textu, ktoý vyzeá takto! Pamätajte, je to na vás. Pispievateľ musí zaistiť, aby tagy boli koektne uzaveté.',
-	'ceating_links'=>'Vytváanie odkazov',
-	'ceating_odeed_list'=>'Vytváanie zoadeného zoznamu',
-	'ceating_unodeed_list'=>'Vytváanie nezoadeného zoznamu',
+	'can_combine_formatting'=>'Môžem kombinovať formatujúce tagy?',
+	'close_tags_is_up_to_you'=>'Nedoporúčame Vám veľa výstupného textu, ktorý vyzerá takto! Pamätajte, je to na vás. Prispievateľ musí zaistiť, aby tagy boli korektne uzavreté.',
+	'creating_links'=>'Vytváranie odkazov',
+	'creating_ordered_list'=>'Vytváranie zoradeného zoznamu',
+	'creating_unordered_list'=>'Vytváranie nezoradeného zoznamu',
 	'email_me'=>'pošli mi email',
-	'geneating_lists'=>'Geneovanie zoznamov',
-	'good_moning'=>'Dobé áno',
-	'geat'=>'Výbone!',
+	'generating_lists'=>'Generovanie zoznamov',
+	'good_morning'=>'Dobré ráno',
+	'great'=>'Výborne!',
 	'hello'=>'Ahoj',
-	'how_to_change_cs'=>'Ako zmeniť fabu alebo veľkosť textu',
-	'how_to_ceate_biu'=>'Ako vytvoiť tučný, kuzívny alebo podčiaknutý text',
+	'how_to_change_cs'=>'Ako zmeniť farbu alebo veľkosť textu',
+	'how_to_create_biu'=>'Ako vytvoriť tučný, kurzívny alebo podčiraknutý text',
 	'huge'=>'OBROVSKÉ!',
-	'italic_text'=>'kuzívny text',
-	'linking_anothe_site'=>'Pozeanie na inú stánku',
+	'italic_text'=>'kurzívny text',
+	'linking_another_site'=>'Pozeranie na inú stránku',
 	'look_at_me'=>'POZRI SA NA MŇA!',
-	'm_blobby'=>'pán Pipík',
-	'o'=>'alebo',
+	'mr_blobby'=>'pán Pipík',
+	'or'=>'alebo',
 	'outputting_code'=>'Výstupný kód',
-	'quoting_outputting_text'=>'Citovanie a výstupy u textu s pevnou šíkou',
-	'quoting_eplys'=>'Citovanie textu v odpovediach',
-	'ed'=>'Čevený',
-	'showing_images'=>'Ukazovanie obázkov v píspevkoch',
+	'quoting_outputting_text'=>'Citovanie a výstupy u textu s pevnou šírkou',
+	'quoting_replys'=>'Citovanie textu v odpovediach',
+	'red'=>'Červený',
+	'showing_images'=>'Ukazovanie obrázkov v príspevkoch',
 	'small'=>'MALÉ',
-	'text_fomatting'=>'Fomátovanie textu',
-	'text_of_m_blobby'=>'Text ktoý napísal pán Pipík má ísť sem',
+	'text_formatting'=>'Formátovanie textu',
+	'text_of_mr_blobby'=>'Text ktorý napísal pán Pipík má ísť sem',
 	'this_is_some_code'=>'Toto je nejaký kód',
 	'this_would_output'=>'toto bude výstup',
-	'undelined_text'=>'podčiaknutý text',
-	'which_will_output'=>'ktoý vytvoí výstup',
+	'underlined_text'=>'podčiarknutý text',
+	'which_will_output'=>'ktorý vytvorí výstup',
 	'will_be'=>'bude',
 	'will_become'=>'stane sa',
-	'will_both_output'=>'obidva vytvoia výstup',
-	'will_geneally_be'=>'zvyčajne bude',
-	'would_geneate'=>'vygeneuje',
-	'would_geneate_link'=>'Toto vygeneuje nasledujúci odkaz, ',
-	'would_geneate_list'=>'Toto vygeneuje nasledujúci zoznam',
+	'will_both_output'=>'obidva vytvoria výstup',
+	'will_generally_be'=>'zvyčajne bude',
+	'would_generate'=>'vygeneruje',
+	'would_generate_link'=>'Toto vygeneruje nasledujúci odkaz, ',
+	'would_generate_list'=>'Toto vygeneruje nasledujúci zoznam',
 	'would_give'=>'toto by dalo',
 	'yellow'=>'Žltý',
-	'yes_can_combine'=>'Áno, samozejme môžete. Ak chcete niekoho zaujať, mali by ste napísať:'
+	'yes_can_combine'=>'Áno, samozrejme môžete. Ak chcete niekoho zaujať, mali by ste napísať:'
 );
 ?>

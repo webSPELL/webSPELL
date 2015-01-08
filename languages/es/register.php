@@ -2,72 +2,72 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Vesion 4       /                        /   /               #
+#           Version 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Fee Content / Management System                 #
+#                       Free Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyight 2005-2014 by webspell.og                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
-#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
-#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to emove this copyight-tag                      #
-#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
+#   visit webSPELL.org, webspell.info to get webSPELL for free           #
+#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to remove this copyright-tag                      #
+#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
-#   Fa Development by Development Team - webspell.og                   #
+#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
+#   Far Development by Development Team - webspell.org                   #
 #                                                                        #
-#   visit webspell.og                                                   #
+#   visit webspell.org                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_aay = Aay(
+$language_array = Array(
 
 /* do not edit above this line */
 
-	'activation_successful'=>'La activación de tu cuenta fue satisfactoia.<b>Ahoa puedes inica sesión.',
-	'back'=>'volve',
-	'ente_nickname'=>'Pofavo inseta apodo.',
-	'ente_passwod'=>'Pofavo inseta contaseña.',
-	'ente_usename'=>'Pofavo inseta nombe de usuaio.',
-	'eos_thee'=>'Algunos eoes ocuieon:',
-	'fo_login'=>'solo paa conecta',
-	'invalid_mail'=>'Has insetado un e-mail no válido.',
+	'activation_successful'=>'La activación de tu cuenta fue satisfactoria.<br>Ahora puedes inicar sesión.',
+	'back'=>'volver',
+	'enter_nickname'=>'Porfavor inserta apodo.',
+	'enter_password'=>'Porfavor inserta contraseña.',
+	'enter_username'=>'Porfavor inserta nombre de usuario.',
+	'errors_there'=>'Algunos errores ocurrieron:',
+	'for_login'=>'solo para conectar',
+	'invalid_mail'=>'Has insertado un e-mail no válido.',
 	'mail'=>'E-Mail',
-	'mail_activation_successful'=>'The activation of you email addess was successfull.',
-	'mail_failed'=>'El código de activación no pudo se enviado, pofavo, infoma al webmaste de esto.',
-	'mail_inuse'=>'Este diección mail ya está en uso.',
-	'mail_subject'=>'Mail de activación de cuenta paa %homepage_ul%',
-	'mail_text'=>'Hola %usename%!
+	'mail_activation_successful'=>'The activation of your email address was successfull.',
+	'mail_failed'=>'El código de activación no pudo ser enviado, porfavor, informa al webmaster de esto.',
+	'mail_inuse'=>'Este dirección mail ya está en uso.',
+	'mail_subject'=>'Mail de activación de cuenta para %homepage_url%',
+	'mail_text'=>'Hola %username%!
 
-Tu egisto en %pagetitle% (%homepage_ul%) fue satisfactoio. Los datos de tu cuenta:
+Tu registro en %pagetitle% (%homepage_url%) fue satisfactorio. Los datos de tu cuenta:
 
-Usuaio: %usename%
+Usuario: %username%
 
-Paa finaliza el egisto debes de activa la cuenta haciendo clic en el siguiente enlace:
+Para finalizar el registro debes de activar la cuenta haciendo clic en el siguiente enlace:
 %activationlink%
 
-Gacias po tu egisto
-%pagetitle% - %homepage_ul%',
+Gracias por tu registro
+%pagetitle% - %homepage_url%',
 	'nickname'=>'Apodo',
 	'nickname_inuse'=>'Apodo ya en uso.',
-	'no_egiste_when_loggedin'=>'You alleady have an account at %pagename%',
-	'passwod'=>'Contaseña',
-	'pofile_info'=>'Info. Registo',
-	'egiste_now'=>'Regista ahoa!',
-	'egiste_successful'=>'Tu egisto fue satisfactoio. Recibias un email el enlace de activación de la cuenta.',
-	'egistation'=>'egisto',
-	'epeat'=>'Repite contaseña',
-	'epeat_invalid'=>'Las contaseñas no coinciden.',
-	'secuity_code'=>'Código de seguidad',
-	'usename'=>'Nombe usuaio',
-	'usename_inuse'=>'Nombe usuaio ya en uso.',
-	'usename_toolong'=>'El nombe de usuaio es demasiado lago (max. 30 chaactes).',
-	'wong_activationkey'=>'Tu código de activación es incoecto!',
-	'wong_secuitycode'=>'El código de seguidad es incoecto!'
+	'no_register_when_loggedin'=>'You allready have an account at %pagename%',
+	'password'=>'Contraseña',
+	'profile_info'=>'Info. Registro',
+	'register_now'=>'Registrar ahora!',
+	'register_successful'=>'Tu registro fue satisfactorio. Recibiras un email el enlace de activación de la cuenta.',
+	'registration'=>'registro',
+	'repeat'=>'Repite contraseña',
+	'repeat_invalid'=>'Las contraseñas no coinciden.',
+	'security_code'=>'Código de seguridad',
+	'username'=>'Nombre usuario',
+	'username_inuse'=>'Nombre usuario ya en uso.',
+	'username_toolong'=>'El nombre de usuario es demasiado largo (max. 30 characters).',
+	'wrong_activationkey'=>'Tu código de activación es incorrecto!',
+	'wrong_securitycode'=>'El código de seguridad es incorrecto!'
 );
 ?>

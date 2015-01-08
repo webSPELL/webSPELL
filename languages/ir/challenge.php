@@ -2,67 +2,67 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Vesion 4       /                        /   /               #
+#           Version 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Fee Content / Management System                 #
+#                       Free Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyight 2005-2014 by webspell.og                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
-#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
-#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to emove this copyight-tag                      #
-#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
+#   visit webSPELL.org, webspell.info to get webSPELL for free           #
+#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to remove this copyright-tag                      #
+#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
-#   Fa Development by Development Team - webspell.og                   #
+#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
+#   Far Development by Development Team - webspell.org                   #
 #                                                                        #
-#   visit webspell.og                                                   #
+#   visit webspell.org                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_aay = Aay(
+$language_array = Array(
 
 /* do not edit above this line */
 
-  'back_to_fom'=>'برگشت به فرم',
+  'back_to_form'=>'برگشت به فرم',
   'challenge'=>'مبارزه',
-  'challenge_fom'=>'اعلام امادگی برای مسابقه',
+  'challenge_from'=>'اعلام امادگی برای مسابقه',
   'challenge_message'=>'[b]!مسابقه جدید[/b][BR][BR] لطفا اینجا کلیک کنید: [URL]index.php?site=challenge[/URL]',
   'challenges'=>'مسابقات',
-  'county'=>'کشور',
+  'country'=>'کشور',
   'date'=>'تاریخ',
   'delete_challenge'=>'حذف مسابقه',
   'email'=>'ایمیل',
-  'ente_clanname'=>'.اسم هیچ کلنی وارد نشده',
-  'ente_email'=>'.وارد نشده ایمیل هیچ',
-  'ente_league'=>'.هیچ لیگش وارد نشده',
-  'ente_map'=>'.مپ انتخاب نشده',
-  'ente_seve'=>'.ادرس سرور وارد نشده',
-  'ente_ul'=>'.ادرس وب سایت وارد نشده',
-  'enty_deleted'=>'.حذف رخداد',
+  'enter_clanname'=>'.اسم هیچ کلنی وارد نشده',
+  'enter_email'=>'.وارد نشده ایمیل هیچ',
+  'enter_league'=>'.هیچ لیگش وارد نشده',
+  'enter_map'=>'.مپ انتخاب نشده',
+  'enter_server'=>'.ادرس سرور وارد نشده',
+  'enter_url'=>'.ادرس وب سایت وارد نشده',
+  'entry_deleted'=>'.حذف رخداد',
   'fight_us'=>'!با ما مبارزه کنید',
   'homepage'=>'صفحه نخست',
   'info'=>'اطلاعات بیشتر',
-  'inset_in_calenda'=>'به تاریخ وارد کنید',
+  'insert_in_calendar'=>'به تاریخ وارد کنید',
   'league'=>'لیگ',
   'map'=>'مپ',
   'message_title'=>'با ما مبارزه کنید',
   'no_access'=>'!اجازه ورود نیست',
-  'no_enties'=>'.اجازه ورود داده نشده',
+  'no_entries'=>'.اجازه ورود داده نشده',
   'opponent'=>'رقیب',
-  'poblems'=>'این مشکل رخ داد',
-  'secuity_code'=>'اطلاعات مهرمانه',
-  'seve'=>'سرور',
-  'sot'=>'دسته بندى:',
+  'problems'=>'این مشکل رخ داد',
+  'security_code'=>'اطلاعات مهرمانه',
+  'server'=>'سرور',
+  'sort'=>'دسته بندى:',
   'squad'=>'گروه',
   'submit_challenge'=>'اعلام دعوت به مبارزه',
-  'thank_you'=>'!با تشکر از شما<b>',
+  'thank_you'=>'!با تشکر از شما<br>',
   'time'=>'زمان',
-  'wong_secuity_code'=>'.کد مهرمانه اشتباه است'
+  'wrong_security_code'=>'.کد مهرمانه اشتباه است'
 );
 ?>

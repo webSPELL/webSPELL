@@ -2,69 +2,69 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Vesion 4       /                        /   /               #
+#           Version 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Fee Content / Management System                 #
+#                       Free Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyight 2005-2014 by webspell.og                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
-#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
-#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to emove this copyight-tag                      #
-#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
+#   visit webSPELL.org, webspell.info to get webSPELL for free           #
+#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to remove this copyright-tag                      #
+#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
-#   Fa Development by Development Team - webspell.og                   #
+#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
+#   Far Development by Development Team - webspell.org                   #
 #                                                                        #
-#   visit webspell.og                                                   #
+#   visit webspell.org                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_aay = Aay(
+$language_array = Array(
 
 /* do not edit above this line */
 
-	'afte'=>'ette',
+	'after'=>'etter',
 	'and'=>'og',
-	'aticle'=>'Atikkel',
-	'aticles'=>'Atikle',
-	'aticles_link'=>'<b>link til Atikkel</b>',
+	'article'=>'Artikkel',
+	'articles'=>'Artikler',
+	'articles_link'=>'<b>link til Artikkel</b>',
 	'ascending'=>'oppstigende',
-	'befoe'=>'fø',
+	'before'=>'før',
 	'date_options'=>'Dato',
-	'delete_selected'=>'slett mekede',
+	'delete_selected'=>'slett merkede',
 	'descending'=>'nedstigende',
 	'faq'=>'FAQ',
 	'faq_link'=>'<b>link til FAQ</b>',
-	'foum'=>'Foum',
-	'foum_link'=>'<b>link til emne</b>',
-	'fequency'=>'Hyppighet',
-	'keywod'=>'Stikkod',
-	'new_seach'=>'Nytt søk',
-	'news'=>'Nyhete',
-	'news_link'=>'<b>link til nyhete</b>',
+	'forum'=>'Forum',
+	'forum_link'=>'<b>link til emne</b>',
+	'frequency'=>'Hyppighet',
+	'keyword'=>'Stikkord',
+	'new_search'=>'Nytt søk',
+	'news'=>'Nyheter',
+	'news_link'=>'<b>link til nyheter</b>',
 	'options'=>'Valg',
-	'o'=>'elle',
-	'esult_quantity'=>'Results pe page',
-	'esults_found'=>'esults found',
-	'seach'=>'seach',
-	'seach_in'=>'Seach in:',
-	'seach_location'=>'Seaching Location',
-	'seach_tem'=>'Seach tem',
-	'seach_title'=>'Advanced Seach',
-	'secuity_code'=>'Sikkehetskode',
-	'sot_options'=>'Sot',
-	'stat_seach'=>'Stat seach',
+	'or'=>'eller',
+	'result_quantity'=>'Results per page',
+	'results_found'=>'results found',
+	'search'=>'search',
+	'search_in'=>'Search in:',
+	'search_location'=>'Searching Location',
+	'search_term'=>'Search term',
+	'search_title'=>'Advanced Search',
+	'security_code'=>'Sikkerhetskode',
+	'sort_options'=>'Sort',
+	'start_search'=>'Start search',
 	'submit'=>'Submit',
 	'text_contains'=>'Text contains',
 	'title_contains'=>'Title contains',
-	'too_shot'=>'Seach tem is too shot. At least %min_chas% chaactes',
-	'wong_secuitycode'=>'Du ha skeve feil sikkehetskode!',
-	'no_esult'=>'Ingen oppføinge funnet fo "%s"'
+	'too_short'=>'Search term is too short. At least %min_chars% characters',
+	'wrong_securitycode'=>'Du har skreve feil sikkerhetskode!',
+	'no_result'=>'Ingen oppføringer funnet for "%s"'
 );
 ?>

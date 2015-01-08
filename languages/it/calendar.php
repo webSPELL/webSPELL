@@ -2,59 +2,59 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Vesion 4       /                        /   /               #
+#           Version 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Fee Content / Management System                 #
+#                       Free Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyight 2005-2014 by webspell.og                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
-#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
-#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to emove this copyight-tag                      #
-#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
+#   visit webSPELL.org, webspell.info to get webSPELL for free           #
+#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to remove this copyright-tag                      #
+#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
-#   Fa Development by Development Team - webspell.og                   #
+#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
+#   Far Development by Development Team - webspell.org                   #
 #                                                                        #
-#   visit webspell.og                                                   #
+#   visit webspell.org                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_aay = Aay(
+$language_array = Array(
 
 /* do not edit above this line */
 
-	'access_membe'=>'solo pe i membi del team',
-	'add_clanwa'=>'Clanwa egistatae',
-	'add_clanwas'=>'a Clanwas aggiungee',
-	'add_event'=>'Evento scivee',
-	'announce_hee'=>'qui egistae',
-	'announce_to'=>'Pe questo Clanwas / evento egistae',
-	'announcements'=>'Registazioni:',
-	'ap'=>'Apile',
+	'access_member'=>'solo per i membri del team',
+	'add_clanwar'=>'Clanwar registratrare',
+	'add_clanwars'=>'a Clanwars aggiungere',
+	'add_event'=>'Evento scrivere',
+	'announce_here'=>'qui registrare',
+	'announce_to'=>'Per questo Clanwars / evento registrare',
+	'announcements'=>'Registrazioni:',
+	'apr'=>'Aprile',
 	'aug'=>'Agosto',
-	'calenda'=>'Calendaio',
-	'clanwadetails'=>'Clanwadetails',
-	'clanwa_message'=>'new upcoming clanwa on %date%:[b][b]Opponent: [flag]%opponent_flag%[/flag] [ul=%opp_hp%]%opponent%[/ul] [b]League: [ul=%league_hp%]%league%[/ul] [b]Info: %wainfo%[b][b][ul=index.php?site=calenda]link to calenda[/ul]',
-	'clanwa_message_title'=>'new upcoming wa in calenda!',
-	'date_time'=>'Data - Oa',
-	'dec'=>'Dicembe',
+	'calendar'=>'Calendario',
+	'clanwardetails'=>'Clanwardetails',
+	'clanwar_message'=>'new upcoming clanwar on %date%:[br][br]Opponent: [flag]%opponent_flag%[/flag] [url=%opp_hp%]%opponent%[/url] [br]League: [url=%league_hp%]%league%[/url] [br]Info: %warinfo%[br][br][url=index.php?site=calendar]link to calendar[/url]',
+	'clanwar_message_title'=>'new upcoming war in calendar!',
+	'date_time'=>'Data - Ora',
+	'dec'=>'Dicembre',
 	'delete'=>'anulla',
-	'displayed_in'=>'viene visualizzato nel calendaio',
-	'edit'=>'cambiae',
-	'editevent'=>'modificae evento',
-	'editwa'=>'Clanwa modificae',
-	'end_datetime'=>'Fine: Data - Oa',
+	'displayed_in'=>'viene visualizzato nel calendario',
+	'edit'=>'cambiare',
+	'editevent'=>'modificare evento',
+	'editwar'=>'Clanwar modificare',
+	'end_datetime'=>'Fine: Data - Ora',
 	'eventdetails'=>'dettagli evento',
-	'feb'=>'Febbaio',
-	'fi'=>'Ve',
+	'feb'=>'Febbraio',
+	'fri'=>'Ve',
 	'homepage'=>'Home page:',
-	'infomation'=>'Infomazioni',
+	'information'=>'Informazioni',
 	'jan'=>'Gennaio',
 	'jul'=>'Luglio',
 	'jun'=>'Giugno',
@@ -63,45 +63,45 @@ $language_aay = Aay(
 	'location'=>'Localizzazione:',
 	'longtitle'=>'Titolo lungo',
 	'maps'=>'Mappe',
-	'ma'=>'Mazo',
+	'mar'=>'Marzo',
 	'may'=>'Maggio',
 	'mon'=>'Lu',
 	'new_date'=>'Nuovo evento',
-	'new_wa'=>'Nuovo Clanwas annunciae',
+	'new_war'=>'Nuovo Clanwars annunciare',
 	'no'=>'no',
 	'no_access'=>'Accesso negato',
-	'no_announced'=>'nessun cosa scitto',
-	'no_enties'=>'pe oggi nessun cosa scitto',
+	'no_announced'=>'nessun cosa scritto',
+	'no_entries'=>'per oggi nessun cosa scritto',
 	'no_text'=>'nessun Testo disponibile',
-	'nov'=>'Novembe',
-	'oct'=>'Ottobe',
-	'opponent'=>'oppositoi',
-	'opponentcounty'=>'paese dei ospiti',
+	'nov'=>'Novembre',
+	'oct'=>'Ottobre',
+	'opponent'=>'oppositori',
+	'opponentcountry'=>'paese dei ospiti',
 	'opponenthp'=>'homepage dei ospiti',
 	'opponenttag'=>'Clantag dei ospiti',
-	'pehaps'=>'fose',
-  'eally_delete'=>'Questa voce veamente cancellae',
+	'perhaps'=>'forse',
+  'really_delete'=>'Questa voce veramente cancellare',
 	'sat'=>'Sa',
-	'save_announcement'=>'salvae annuncio',
-	'save_event'=>'salvae evento',
-	'save_wa'=>'Clanwa annuncio salvae',
-	'send_message'=>'a tutti i giocatoi della squada scive un messaggio',
-	'sep'=>'Settembe',
-	'seve'=>'Seve',
-	'shottitle'=>'titolo beve',
-	'squad'=>'squada',
-	'stat_datetime'=>'Inizio: Data - Oa',
+	'save_announcement'=>'salvare annuncio',
+	'save_event'=>'salvare evento',
+	'save_war'=>'Clanwar annuncio salvare',
+	'send_message'=>'a tutti i giocatori della squadra scrive un messaggio',
+	'sep'=>'Settembre',
+	'server'=>'Server',
+	'shorttitle'=>'titolo breve',
+	'squad'=>'squadra',
+	'start_datetime'=>'Inizio: Data - Ora',
 	'sun'=>'Do',
 	'thu'=>'Gi',
 	'today_events'=>'eveni da oggi',
 	'tue'=>'Ma',
-	'updateevent'=>'Evento aggionamento',
-	'updatewa'=>'Clanwa aggionamento',
+	'updateevent'=>'Evento aggiornamento',
+	'updatewar'=>'Clanwar aggiornamento',
 	'wed'=>'Me',
 	'yes'=>'SI',
-	'you_have_to_be_clanmembe'=>'devi essee nel clan pe falo vedee.',
-	'ente_shot'=>'Nessun titolo beve entato!',
-	'ente_title'=>'Nessun titolo lungo entato!',
-	'ente_info'=>'Non ci sono infomazioni!'
+	'you_have_to_be_clanmember'=>'devi essere nel clan per farlo vedere.',
+	'enter_short'=>'Nessun titolo breve entrato!',
+	'enter_title'=>'Nessun titolo lungo entrato!',
+	'enter_info'=>'Non ci sono informazioni!'
 );
 ?>

@@ -2,52 +2,52 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Vesion 4       /                        /   /               #
+#           Version 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Fee Content / Management System                 #
+#                       Free Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyight 2005-2014 by webspell.og                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
-#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
-#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to emove this copyight-tag                      #
-#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
+#   visit webSPELL.org, webspell.info to get webSPELL for free           #
+#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to remove this copyright-tag                      #
+#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
-#   Fa Development by Development Team - webspell.og                   #
+#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
+#   Far Development by Development Team - webspell.org                   #
 #                                                                        #
-#   visit webspell.og                                                   #
+#   visit webspell.org                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_aay = Aay(
+$language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Hozzáféés megtagadva',
-  'eo_send'=>'EHIBA: A hílevelet nem sikeült elküldeni (A mailszeve eléhető?)',
+  'access_denied'=>'Hozzáférés megtagadva',
+  'error_send'=>'EHIBA: A hírlevelet nem sikerült elküldeni (A mailszerver elérhető?)',
   'html_mail'=>'HTML-Mail',
-  'newslette'=>'Hílevél',
+  'newsletter'=>'Hírlevél',
   'no_htmlmail'=>'Hello!
-Rendszeed nem támogatja a HTML-Maileket.
+Rendszered nem támogatja a HTML-Maileket.
 Az alábbi üzenetet kaptad:',
-  'pofile'=>'Pofil',
-  'eceptionists'=>'Hílevél elküldve!<b><b>Címzett(ek):',
-  'emove'=>'Itt iatkozhatsz le hílevelünkől:',
-  'send'=>'Hílevél elküldése',
+  'profile'=>'Profil',
+  'receptionists'=>'Hírlevél elküldve!<br><br>Címzett(ek):',
+  'remove'=>'Itt iratkozhatsz le hírlevelünkről:',
+  'send'=>'Hírlevél elküldése',
   'send_to'=>'Címzett(ek):',
   'test'=>'Teszt',
-  'test_newslette'=>'Hílevél teszt',
+  'test_newsletter'=>'Hírlevél teszt',
   'title'=>'Cím',
-  'tansaction_invalid'=>'A művelet azonosítója événytelen',
-  'use_clanmembes'=>'Klántagok',
-  'use_newslette'=>'Hílevél előfizetők',
-  'use_egisteed'=>'Regisztált tagok (klántagok is) ',
-  'uses'=>'Felhasználók'
+  'transaction_invalid'=>'A művelet azonosítója érvénytelen',
+  'user_clanmembers'=>'Klántagok',
+  'user_newsletter'=>'Hírlevél előfizetők',
+  'user_registered'=>'Regisztrált tagok (klántagok is) ',
+  'users'=>'Felhasználók'
 );
 ?>

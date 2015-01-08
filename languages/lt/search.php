@@ -2,69 +2,69 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Vesion 4       /                        /   /               #
+#           Version 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Fee Content / Management System                 #
+#                       Free Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyight 2005-2014 by webspell.og                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
-#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
-#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to emove this copyight-tag                      #
-#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
+#   visit webSPELL.org, webspell.info to get webSPELL for free           #
+#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to remove this copyright-tag                      #
+#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
-#   Fa Development by Development Team - webspell.og                   #
+#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
+#   Far Development by Development Team - webspell.org                   #
 #                                                                        #
-#   visit webspell.og                                                   #
+#   visit webspell.org                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_aay = Aay(
+$language_array = Array(
 
 /* do not edit above this line */
 
-	'afte'=>'paskui',
-	'and'=>'i',
-	'aticle'=>'Staipsnis',
-	'aticles'=>'staipsniai',
-	'aticles_link'=>'<b>nuooda į staipsnį</b>',
+	'after'=>'paskui',
+	'and'=>'ir',
+	'article'=>'Straipsnis',
+	'articles'=>'straipsniai',
+	'articles_link'=>'<b>nuoroda į straipsnį</b>',
 	'ascending'=>'didėjimas',
-	'befoe'=>'anksčiau',
+	'before'=>'anksčiau',
 	'date_options'=>'Data',
-	'delete_selected'=>'ištinti pasiinktus',
+	'delete_selected'=>'ištrinti pasirinktus',
 	'descending'=>'mažėjimas',
 	'faq'=>'D.U.K',
-	'faq_link'=>'<b>nuooda į D.U.K</b>',
-	'foum'=>'Diskusijos',
-	'foum_link'=>'<b>nuooda į temą</b>',
-	'fequency'=>'Dažnis',
-	'keywod'=>'Raktažodis',
-	'new_seach'=>'Nauja paieška',
+	'faq_link'=>'<b>nuoroda į D.U.K</b>',
+	'forum'=>'Diskusijos',
+	'forum_link'=>'<b>nuoroda į temą</b>',
+	'frequency'=>'Dažnis',
+	'keyword'=>'Raktažodis',
+	'new_search'=>'Nauja paieška',
 	'news'=>'Naujienos',
-	'news_link'=>'<b>nuooda į naujienas</b>',
-	'options'=>'Pasiinkimai',
-	'o'=>'aba',
-	'esult_quantity'=>'ezultatai puslapyje',
-	'esults_found'=>'astų ezultatų',
-	'seach'=>'paieška',
-	'seach_in'=>'Ieškoti:',
-	'seach_location'=>'Paieškos vieta',
-	'seach_tem'=>'Ieškoti temino',
-	'seach_title'=>'Pažangesnė Paieška',
-	'secuity_code'=>'Apsaugos kodas',
-	'sot_options'=>'Rykiuoti',
-	'stat_seach'=>'Padėti paiešką',
+	'news_link'=>'<b>nuoroda į naujienas</b>',
+	'options'=>'Pasirinkimai',
+	'or'=>'arba',
+	'result_quantity'=>'rezultatai puslapyje',
+	'results_found'=>'rastų rezultatų',
+	'search'=>'paieška',
+	'search_in'=>'Ieškoti:',
+	'search_location'=>'Paieškos vieta',
+	'search_term'=>'Ieškoti termino',
+	'search_title'=>'Pažangesnė Paieška',
+	'security_code'=>'Apsaugos kodas',
+	'sort_options'=>'Rykiuoti',
+	'start_search'=>'Pradėti paiešką',
 	'submit'=>'Pateikti',
-	'text_contains'=>'Tekstą sudao',
-	'title_contains'=>'Pavadinimą sudao',
-	'too_shot'=>'Temino pavadinimas pe tumpas. Mažiausiai tui būti %min_chas% simboliai',
-	'wong_secuitycode'=>'Jūs įvedėte blogą apsaugos kodą!',
-	'no_esult'=>'Nėa įašų už "%s" asti'
+	'text_contains'=>'Tekstą sudaro',
+	'title_contains'=>'Pavadinimą sudaro',
+	'too_short'=>'Termino pavadinimas per trumpas. Mažiausiai turi būti %min_chars% simboliai',
+	'wrong_securitycode'=>'Jūs įvedėte blogą apsaugos kodą!',
+	'no_result'=>'Nėra įrašų už "%s" rasti'
 );
 ?>

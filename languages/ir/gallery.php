@@ -2,74 +2,74 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Vesion 4       /                        /   /               #
+#           Version 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Fee Content / Management System                 #
+#                       Free Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyight 2005-2014 by webspell.og                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
-#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
-#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to emove this copyight-tag                      #
-#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
+#   visit webSPELL.org, webspell.info to get webSPELL for free           #
+#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to remove this copyright-tag                      #
+#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
-#   Fa Development by Development Team - webspell.og                   #
+#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
+#   Far Development by Development Team - webspell.org                   #
 #                                                                        #
-#   visit webspell.og                                                   #
+#   visit webspell.org                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_aay = Aay(
+$language_array = Array(
 
 /* do not edit above this line */
 
   'back'=>'برگشت',
-  'categoy'=>'رديف',
+  'category'=>'رديف',
   'comment'=>'کامنت',
   'comments'=>'کامنت ها',
   'date'=>'تاریخ',
   'delete'=>'حذف',
   'edit'=>'ادیت',
-  'edit_pictue'=>'ادیت تصویر',
-  'galleies'=>'گالری',
-  'galley'=>'گالری',
-  'latest_galley'=>'جدید ترین گالری',
+  'edit_picture'=>'ادیت تصویر',
+  'galleries'=>'گالری',
+  'gallery'=>'گالری',
+  'latest_gallery'=>'جدید ترین گالری',
   'most_comments'=>'اکپر کامنت ها',
   'name'=>'نام',
   'next'=>'بعدی',
   'no_comments'=>'کامنتهای غیر فعال',
-  'no_galley_exists'=>'!گالری وجود ندارد',
+  'no_gallery_exists'=>'!گالری وجود ندارد',
   'no_pic_set'=>'.هیچ عکسی',
-  'no_pictue'=>'!عکس وجود ندارد',
+  'no_picture'=>'!عکس وجود ندارد',
   'page_s'=>'صفحات',
-  'pefect'=>'عالی',
+  'perfect'=>'عالی',
   'pg_1_1'=>'صفحه 1 از 1',
-  'pictue'=>'عکس',
-  'pictues'=>'عکس ها',
-  'poo'=>'ضعیف',
-  'andom_pictue'=>'عکس رندم',
-  'ate'=>'نمره دادن',
-  'ate_have_to_eg_login'=>'!برای نمره دادن شما باید عضو شوید',
-  'ate_now'=>'!همین حالا نمره دهید',
-  'ating'=>'نمره دادن',
-  'eally_del'=>'ایا واقعا میخواهید انتخاب را حذف کنید؟',
-  'eset_views'=>'به روز کردن تعداد بیننده',
-  'show_galleies'=>'نشان دادن گالری',
-  'stat_diashow'=>'شروع کردن نمایش',
-  'update_pictue'=>'اپلود عکس',
-  'use_comments'=>'فعال کردن کامنت کاربر',
-  'usegalleies'=>'گالری کاربر',
+  'picture'=>'عکس',
+  'pictures'=>'عکس ها',
+  'poor'=>'ضعیف',
+  'random_picture'=>'عکس رندم',
+  'rate'=>'نمره دادن',
+  'rate_have_to_reg_login'=>'!برای نمره دادن شما باید عضو شوید',
+  'rate_now'=>'!همین حالا نمره دهید',
+  'rating'=>'نمره دادن',
+  'really_del'=>'ایا واقعا میخواهید انتخاب را حذف کنید؟',
+  'reset_views'=>'به روز کردن تعداد بیننده',
+  'show_galleries'=>'نشان دادن گالری',
+  'start_diashow'=>'شروع کردن نمایش',
+  'update_picture'=>'اپلود عکس',
+  'user_comments'=>'فعال کردن کامنت کاربر',
+  'usergalleries'=>'گالری کاربر',
   'views'=>'تعداد نمایش',
-  'visito_comments'=>'فعال کردن کامنت مهمان ها',
+  'visitor_comments'=>'فعال کردن کامنت مهمان ها',
   'votes'=>'تعداد نمره داده شده',
   'webs_diashow'=>'webSPELL نشان داده شده:',
-  'you_have_aleady_ated'=>'.شما تا کنون نمره داده اید',
+  'you_have_already_rated'=>'.شما تا کنون نمره داده اید',
   'no_thumb'=>'بدون تامب'
 );
 ?>

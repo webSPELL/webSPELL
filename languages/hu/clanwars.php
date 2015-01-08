@@ -2,106 +2,106 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Vesion 4       /                        /   /               #
+#           Version 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Fee Content / Management System                 #
+#                       Free Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyight 2005-2014 by webspell.og                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
-#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
-#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to emove this copyight-tag                      #
-#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
+#   visit webSPELL.org, webspell.info to get webSPELL for free           #
+#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to remove this copyright-tag                      #
+#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
-#   Fa Development by Development Team - webspell.og                   #
+#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
+#   Far Development by Development Team - webspell.org                   #
 #                                                                        #
-#   visit webspell.og                                                   #
+#   visit webspell.org                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_aay = Aay(
+$language_array = Array(
 
 /* do not edit above this line */
 
 	'clan'=>'Klán',
 	'clan_stats'=>'Klán Statisztikák',
-	'clantag'=>'Pefix',
-	'clanwa_against'=>'Wa ellenfél:',
-	'clanwa_details'=>'a wa észletei',
-	'clanwa_saved'=>'A wa elmentve.',
-	'clanwa_updated'=>'A wa fissítve.',
-	'clanwas'=>'waok',
-	'close_window'=>'Ablak bezáása',
-	'county'=>'Oszág',
+	'clantag'=>'Prefix',
+	'clanwar_against'=>'War ellenfél:',
+	'clanwar_details'=>'a war részletei',
+	'clanwar_saved'=>'A war elmentve.',
+	'clanwar_updated'=>'A war frissítve.',
+	'clanwars'=>'warok',
+	'close_window'=>'Ablak bezárása',
+	'country'=>'Ország',
 	'date'=>'Dátum',
-	'delete'=>'Tölés',
-	'delete_selected'=>'Kijelöltek tölése',
+	'delete'=>'Törlés',
+	'delete_selected'=>'Kijelöltek törlése',
 	'details'=>'Részletek',
 	'disable_comments'=>'Kommentek kikapcsolása',
-	'daw'=>'Döntetlen',
-	'daw_clanwas'=>'Döntetlen',
-	'edit'=>'Szekesztés',
-	'edit_clanwa'=>'A WAR Szekesztése',
+	'draw'=>'Döntetlen',
+	'draw_clanwars'=>'Döntetlen',
+	'edit'=>'Szerkesztés',
+	'edit_clanwar'=>'A WAR Szerkesztése',
 	'game'=>'Játék',
 	'go'=>'Ok',
-	'hltv_seve'=>'HLTV szeve',
+	'hltv_server'=>'HLTV szerver',
 	'home_team'=>'A csapatunk',
 	'homepage'=>'Honlap',
 	'id'=>'ID',
 	'league'=>'Liga',
 	'league_match_link'=>'A Liga linkje',
-	'lost'=>'Veeség',
-	'lost_clanwas'=>'Veeség',
+	'lost'=>'Vereség',
+	'lost_clanwars'=>'Vereség',
 	'lost_points'=>'Vesztett pontok',
 	'map'=>'MAP',
 	'maps'=>'Mapok',
-	'matchlink'=>'A wa linkje',
-	'new_clanwa'=>'Új wa',
+	'matchlink'=>'A war linkje',
+	'new_clanwar'=>'Új war',
 	'nickname'=>'becenév',
-	'no_access'=>'Nincs hozzáféés!',
-	'no_enties'=>'Nincs eléhető bejegyzés',
+	'no_access'=>'Nincs hozzáférés!',
+	'no_entries'=>'Nincs elérhető bejegyzés',
 	'no_maps'=>'nincs map',
-	'no_sceenshots'=>'Nincs Sceenshot',
+	'no_screenshots'=>'Nincs Screenshot',
 	'on'=>'be',
 	'opponent'=>'Ellenfél',
 	'opponent_team'=>'Az ellenfél csapata',
-	'pecent'=>'Százalék',
-	'publish_clanwa_news'=>'A WAR közlése híként',
-	'eally_delete_clanwa'=>'Tényleg töölni akaod a wat?',
-	'epot'=>'Beszámoló',
-	'esult'=>'Eedmény',
-	'save_clanwa'=>'A WAR mentése',
-	'scoe_home'=>'A klán pontjai',
-	'scoe_opponent'=>'Az ellenfél pontjai',
-	'sceenshots'=>'Sceenshotok',
+	'percent'=>'Százalék',
+	'publish_clanwar_news'=>'A WAR közlése hírként',
+	'really_delete_clanwar'=>'Tényleg törölni akarod a wart?',
+	'report'=>'Beszámoló',
+	'result'=>'Eredmény',
+	'save_clanwar'=>'A WAR mentése',
+	'score_home'=>'A klán pontjai',
+	'score_opponent'=>'Az ellenfél pontjai',
+	'screenshots'=>'Screenshotok',
 	'select_all'=>'Mindet kijelöl',
-	'seve'=>'Szeve',
+	'server'=>'Szerver',
 	'show_all_squads'=>'Minden Squad megjelenítése',
-	'show_clanwas'=>'Minden WAR megjelenítése',
-	'sot'=>'Rendezés',
+	'show_clanwars'=>'Minden WAR megjelenítése',
+	'sort'=>'Rendezés',
 	'squad'=>'Squad',
 	'stat'=>'Statisztika',
 	'stats'=>'statok',
 	'team'=>'csapat',
-	'total'=>'Végeedmény',
-	'total_clanwas'=>'Waok száma',
-	'total_daw_clanwas'=>'Döntetlenek száma',
-	'total_lost_clanwas'=>'Veeségek száma',
+	'total'=>'Végeredmény',
+	'total_clanwars'=>'Warok száma',
+	'total_draw_clanwars'=>'Döntetlenek száma',
+	'total_lost_clanwars'=>'Vereségek száma',
 	'total_lost_points'=>'Vesztett Pontok',
-	'total_won_clanwas'=>'Győzelmek száma',
-	'total_won_points'=>'Szezett Pontok',
-	'update_clanwa'=>'Wa fissítése',
-	'upload_sceenshot'=>'Sceenshot Feltöltése',
-	'use_comments'=>'Csak a tagok kommentálhatják',
-	'visito_comments'=>'A vendégek is kommentálhatják',
+	'total_won_clanwars'=>'Győzelmek száma',
+	'total_won_points'=>'Szerzett Pontok',
+	'update_clanwar'=>'War frissítése',
+	'upload_screenshot'=>'Screenshot Feltöltése',
+	'user_comments'=>'Csak a tagok kommentálhatják',
+	'visitor_comments'=>'A vendégek is kommentálhatják',
 	'won'=>'Győzelem',
-	'won_clanwas'=>'Győzelem',
-	'won_points'=>'Szezett pontok'
+	'won_clanwars'=>'Győzelem',
+	'won_points'=>'Szerzett pontok'
 );
 ?>

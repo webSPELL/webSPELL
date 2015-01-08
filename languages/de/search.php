@@ -2,69 +2,69 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Vesion 4       /                        /   /               #
+#           Version 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Fee Content / Management System                 #
+#                       Free Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyight 2005-2014 by webspell.og                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
-#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
-#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to emove this copyight-tag                      #
-#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
+#   visit webSPELL.org, webspell.info to get webSPELL for free           #
+#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to remove this copyright-tag                      #
+#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
-#   Fa Development by Development Team - webspell.og                   #
+#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
+#   Far Development by Development Team - webspell.org                   #
 #                                                                        #
-#   visit webspell.og                                                   #
+#   visit webspell.org                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_aay = Aay(
+$language_array = Array(
 
 /* do not edit above this line */
 
-	'afte'=>'nach dem',
+	'after'=>'nach dem',
 	'and'=>'und',
-	'aticle'=>'Atikel',
-	'aticles'=>'Atikel',
-	'aticles_link'=>'<b>Link zum Atikel</b>',
+	'article'=>'Artikel',
+	'articles'=>'Artikel',
+	'articles_link'=>'<b>Link zum Artikel</b>',
 	'ascending'=>'aufsteigend',
-	'befoe'=>'vo dem',
+	'before'=>'vor dem',
 	'date_options'=>'Datum',
 	'delete_selected'=>'Ausgewählte löschen',
 	'descending'=>'absteigend',
 	'faq'=>'FAQ',
-	'faq_link'=>'<b>Link zu FAQ</b>',
-	'foum'=>'Foenbeitag',
-	'foum_link'=>'<b>Link zum Topic</b>',
-	'fequency'=>'Häufigkeit',
-	'keywod'=>'Stichwot',
-	'new_seach'=>'Neue Suche',
+	'faq_link'=>'<b>Link zur FAQ</b>',
+	'forum'=>'Forenbeitrag',
+	'forum_link'=>'<b>Link zum Topic</b>',
+	'frequency'=>'Häufigkeit',
+	'keyword'=>'Stichwort',
+	'new_search'=>'Neue Suche',
 	'news'=>'Neuigkeiten',
-	'news_link'=>'<b>Link zu Neuigkeit</b>',
+	'news_link'=>'<b>Link zur Neuigkeit</b>',
 	'options'=>'Optionen',
-	'o'=>'ode',
-	'esult_quantity'=>'Egebnisse po Seite',
-	'esults_found'=>'Egebnisse gefunden',
-	'seach'=>'Suche',
-	'seach_in'=>'Duchsuche:',
-	'seach_location'=>'Suchot',
-	'seach_tem'=>'Suchbegiff',
-	'seach_title'=>'Eweitete Suche',
-	'secuity_code'=>'Sicheheitscode',
-	'sot_options'=>'Sotieung',
-	'stat_seach'=>'Suche staten',
+	'or'=>'oder',
+	'result_quantity'=>'Ergebnisse pro Seite',
+	'results_found'=>'Ergebnisse gefunden',
+	'search'=>'Suche',
+	'search_in'=>'Durchsuche:',
+	'search_location'=>'Suchort',
+	'search_term'=>'Suchbegriff',
+	'search_title'=>'Erweiterte Suche',
+	'security_code'=>'Sicherheitscode',
+	'sort_options'=>'Sortierung',
+	'start_search'=>'Suche starten',
 	'submit'=>'Absenden',
 	'text_contains'=>'Text enthält',
 	'title_contains'=>'Titel enthält',
-	'too_shot'=>'Suchbegiff zu kuz. Mindestens %min_chas% Zeichen',
-	'wong_secuitycode'=>'De Sicheheitscode ist falsch',
-	'no_esult' =>'Keine Eintäge zu "%s" gefunden'
+	'too_short'=>'Suchbegriff zu kurz. Mindestens %min_chars% Zeichen',
+	'wrong_securitycode'=>'Der Sicherheitscode ist falsch',
+	'no_result' =>'Keine Einträge zu "%s" gefunden'
 );
 ?>

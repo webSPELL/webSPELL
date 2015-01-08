@@ -2,78 +2,78 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Vesion 4       /                        /   /               #
+#           Version 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Fee Content / Management System                 #
+#                       Free Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyight 2005-2014 by webspell.og                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
-#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
-#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to emove this copyight-tag                      #
-#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
+#   visit webSPELL.org, webspell.info to get webSPELL for free           #
+#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to remove this copyright-tag                      #
+#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
-#   Fa Development by Development Team - webspell.og                   #
+#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
+#   Far Development by Development Team - webspell.org                   #
 #                                                                        #
-#   visit webspell.og                                                   #
+#   visit webspell.org                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_aay = Aay(
+$language_array = Array(
 
 /* do not edit above this line */
 
 	'about'=>'Apie mus',
-	'achive'=>'Achyvas',
-	'aticles'=>'Staipsniai',
-	'awads'=>'Apdovanojimai',
-	'buddys'=>'Daugai',
-	'calenda'=>'Kalendoius',
+	'archive'=>'Archyvas',
+	'articles'=>'Straipsniai',
+	'awards'=>'Apdovanojimai',
+	'buddys'=>'Draugai',
+	'calendar'=>'Kalendorius',
 	'cash_box'=>'Pinigų dėžė',
 	'challenge'=>'Iššūkiai',
-	'clanwas'=>'Klano kovos',
-	'clanwas_details'=>'Klano kovų detalės',
+	'clanwars'=>'Klano kovos',
+	'clanwars_details'=>'Klano kovų detalės',
 	'contact'=>'Susisiekimas',
-	'demo'=>'Demo įašas',
-	'demos'=>'Demo įašai',
+	'demo'=>'Demo įrašas',
+	'demos'=>'Demo įrašai',
 	'faq'=>'D.U.K.',
 	'files'=>'Failai',
-	'foum'=>'Diskusijos',
-	'galley'=>'Galeija',
+	'forum'=>'Diskusijos',
+	'gallery'=>'Galerija',
 	'guestbook'=>'Svečių knyga',
-	'histoy'=>'Istoija',
-	'impint'=>'Įspaudas',
-	'joinus'=>'Noi pas mus?',
-	'links'=>'Nuoodos',
+	'history'=>'Istorija',
+	'imprint'=>'Įspaudas',
+	'joinus'=>'Nori pas mus?',
+	'links'=>'Nuorodos',
 	'linkus'=>'Reklamuok mus',
-	'login'=>'Pisijungimas',
-	'loginoveview'=>'Pisijungimo pežiūa',
-	'lostpasswod'=>'slaptažodžio piminimas',
-	'membes'=>'Naiai',
-	'messenge'=>'Panešiklis',
-	'mypofile'=>'edeguoti Pofilį',
+	'login'=>'Prisijungimas',
+	'loginoverview'=>'Prisijungimo peržiūra',
+	'lostpassword'=>'slaptažodžio priminimas',
+	'members'=>'Nariai',
+	'messenger'=>'Pranešiklis',
+	'myprofile'=>'redeguoti Profilį',
 	'news'=>'Naujienos',
-	'newslette'=>'Naujienlaiškis',
-	'patnes'=>'Patneiai',
+	'newsletter'=>'Naujienlaiškis',
+	'partners'=>'Partneriai',
 	'polls'=>'Apklausos',
-	'pofile'=>'Pofilis',
-	'egiste'=>'Registacija',
-	'egisteed_uses'=>'egistuoti Vatotojai',
-	'seach'=>'Paieška',
-	'seve'=>'Seveiai',
+	'profile'=>'Profilis',
+	'register'=>'Registracija',
+	'registered_users'=>'registruoti Vartotojai',
+	'search'=>'Paieška',
+	'server'=>'Serveriai',
 	'shoutbox'=>'Šaukykla',
-	'sponsos'=>'Remėjai',
-	'squads'=>'Būiai',
-	'stat'=>'Namų puslapis',
+	'sponsors'=>'Remėjai',
+	'squads'=>'Būriai',
+	'start'=>'Namų puslapis',
 	'stats'=>'Statistika',
-	'usegalley'=>'Vatotojų galeijos',
-	'vesus'=>'detalės',
-	'whoisonline'=>'Kas pisijungę'
+	'usergallery'=>'Vartotojų galerijos',
+	'versus'=>'detalės',
+	'whoisonline'=>'Kas prisijungę'
 );
 ?>

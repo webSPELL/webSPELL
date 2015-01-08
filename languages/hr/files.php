@@ -2,107 +2,107 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Vesion 4       /                        /   /               #
+#           Version 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Fee Content / Management System                 #
+#                       Free Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyight 2005-2014 by webspell.og                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
-#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
-#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to emove this copyight-tag                      #
-#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
+#   visit webSPELL.org, webspell.info to get webSPELL for free           #
+#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to remove this copyright-tag                      #
+#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
-#   Fa Development by Development Team - webspell.og                   #
+#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
+#   Far Development by Development Team - webspell.org                   #
 #                                                                        #
-#   visit webspell.og                                                   #
+#   visit webspell.org                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_aay = Aay(
+$language_array = Array(
 
 /* do not edit above this line */
 
-	'accesslevel'=>'Pistupni nivo',
+	'accesslevel'=>'Pristupni nivo',
 	'all'=>'Svi',
-	'cant_delete_without_fileID'=>'Nemogu izbisati bez fileID-a',
-	'cant_display_empty_cat'=>'Kategoija pazna',
+	'cant_delete_without_fileID'=>'Nemogu izbrisati bez fileID-a',
+	'cant_display_empty_cat'=>'Kategorija prazna',
 	'cant_edit_without_fileID'=>'Nemogu izmjeniti dokumente bez fileID-a.',
-	'cant_epot_without_fileID'=>'Nemogu pijaviti mtav link bez fileID-a',
-	'categoies_cl'=>'Kategoija',
-	'categoy_cl'=>'Kategoija',
-	'clanmembe'=>'Član klana',
+	'cant_report_without_fileID'=>'Nemogu prijaviti mrtav link bez fileID-a',
+	'categories_cl'=>'Kategorija',
+	'category_cl'=>'Kategorija',
+	'clanmember'=>'Član klana',
 	'database_cl'=>'Baza podatak',
-	'delete_file'=>'Izbiši dokument',
-	'desciption'=>'Opis',
+	'delete_file'=>'Izbriši dokument',
+	'description'=>'Opis',
 	'dl'=>'Nivo',
-	'download_now'=>'Peuzmi %filename%',
-	'download_egisteed_only'=>'Peuzimanje samo za egistiane koisnike!',
-	'download_via_mio'=>'Peuzmi peko altenativnog linka',
-	'downloads_cl'=>'Peuzimanja',
+	'download_now'=>'Preuzmi %filename%',
+	'download_registered_only'=>'Preuzimanje samo za registrirane korisnike!',
+	'download_via_mirror'=>'Preuzmi preko alternativnog linka',
+	'downloads_cl'=>'Preuzimanja',
 	'edit_file'=>'Izmjeni dokument',
-	'exten-link'=>'Eksteni link',
+	'extern-link'=>'Eksterni link',
 	'failed_edit_file'=>'Dokument nije izmjenjen!',
-	'failed_save_file-info'=>'Nije uspjelo spemanje infomacija o dokumentu',
-	'file-info'=>'Infomacije o dokumentu',
-	'file-mios'=>'Altenativni linkovi',
-	'file-size_e'=>'Veličina (samo za ekstene dokumente)',
+	'failed_save_file-info'=>'Nije uspjelo spremanje informacija o dokumentu',
+	'file-info'=>'Informacije o dokumentu',
+	'file-mirrors'=>'Alternativni linkovi',
+	'file-size_e'=>'Veličina (samo za eksterne dokumente)',
 	'file-upload'=>'Uploadaj dokumenta',
-	'file_aleady_exists'=>'Dokument već postoji.',
-	'file_categoies'=>'Kategoije dokumenata',
-	'file_ceated'=>'Dokument stvoen.',
-	'file_deleted'=>'Dokument izbisan.',
-	'file_not_ceated'=>'Dokument nije moguće stvoiti.',
-	'file_not_deleted'=>'Dokument nije moguće izbisati.',
+	'file_already_exists'=>'Dokument već postoji.',
+	'file_categories'=>'Kategorije dokumenata',
+	'file_created'=>'Dokument stvoren.',
+	'file_deleted'=>'Dokument izbrisan.',
+	'file_not_created'=>'Dokument nije moguće stvoriti.',
+	'file_not_deleted'=>'Dokument nije moguće izbrisati.',
 	'filename'=>'Ime dokumenta',
 	'files'=>'dokumenti',
 	'files_cl'=>'Dokumenata',
-	'fist_ceate_file-categoy'=>'Pvo stvoite kategoiju dokumenata!',
-	'info_desciption'=>'Info/Opis',
+	'first_create_file-category'=>'Prvo stvorite kategoriju dokumenata!',
+	'info_description'=>'Info/Opis',
 	'last_uploaded_file'=>'Zadnje uploadano',
-	'leave_desciption'=>'Ako je link na dokument neispavan  i znate azlog, ostavite popoavljeni link i katki opis u sljedeće polje:',
-	'login'=>'Pijavi se',
-	'mio'=>'Altenativni link',
-	'mios'=>'Altenativni linkovi',
+	'leave_description'=>'Ako je link na dokument neispravan  i znate razlog, ostavite poporavljeni link i kratki opis u sljedeće polje:',
+	'login'=>'Prijavi se',
+	'mirror'=>'Alternativni link',
+	'mirrors'=>'Alternativni linkovi',
 	'name'=>'Ime',
-	'new_categoy'=>'Nova kategoija',
+	'new_category'=>'Nova kategorija',
 	'new_file'=>'Novi dokument',
-	'no_access'=>'nemate pistup!',
-	'no_categoies_and_files'=>'nema ktegoija i dokumenata.',
-	'no_mios'=>'nema altenativnih linkova',
-	'no_valid_file'=>'Nema ispavnog dokumenta.',
-	'pefect'=>'Savšen',
-	'please_login'=>'Molimo pijavite se',
-	'poo'=>'Jadan',
-	'ate'=>'Ocijeni',
-	'ate_have_to_eg_login'=>'Ocjena: Moate se egistiati i pijaviti!',
-	'ate_now'=>'Ocijeni sada!',
-	'ating'=>'Ocjena',
-	'ating_x_of_10'=>'Ocjena: %d od 10',
-	'eally_delete_file'=>'stvano izbiši ovaj dokument?',
-	'egiste'=>'Registiaj se',
-	'egisteed'=>'Registiani',
-	'epot'=>'Pijavi',
-	'epot_dead_link'=>'Pijavi neispavan link',
-	'eset'=>'Resetiaj',
+	'no_access'=>'nemate pristup!',
+	'no_categories_and_files'=>'nema ktegorija i dokumenata.',
+	'no_mirrors'=>'nema alternativnih linkova',
+	'no_valid_file'=>'Nema ispravnog dokumenta.',
+	'perfect'=>'Savršen',
+	'please_login'=>'Molimo prijavite se',
+	'poor'=>'Jadan',
+	'rate'=>'Ocijeni',
+	'rate_have_to_reg_login'=>'Ocjena: Morate se registrirati i prijaviti!',
+	'rate_now'=>'Ocijeni sada!',
+	'rating'=>'Ocjena',
+	'rating_x_of_10'=>'Ocjena: %d od 10',
+	'really_delete_file'=>'stvarno izbriši ovaj dokument?',
+	'register'=>'Registriraj se',
+	'registered'=>'Registrirani',
+	'report'=>'Prijavi',
+	'report_dead_link'=>'Prijavi neispravan link',
+	'reset'=>'Resetiraj',
 	'size'=>'Veličina',
 	'statistic'=>'Statistika',
-	'subcategoies'=>'Podkategoije',
+	'subcategories'=>'Podkategorije',
 	'successful'=>'Uspješno.',
-	'top_5_downloads'=>'TOP 5 Peuzimanja',
-	'taffic_cl'=>'Pomet',
-	'update'=>'spemi izmjene',
+	'top_5_downloads'=>'TOP 5 Preuzimanja',
+	'traffic_cl'=>'Promet',
+	'update'=>'spremi izmjene',
 	'upload'=>'Uploadaj',
 	'uploaded_on'=>'Uploadeno ',
-	'uploade'=>'Uploadao',
-	'you_have_aleady_ated'=>'Već ste ocjenili.',
-	'you_have_to_ente_filename'=>'moate unijeti ime dokumenta!',
-	'you_have_to_ente_file'=>'Moate unijeti dokument/link!'
+	'uploader'=>'Uploadao',
+	'you_have_already_rated'=>'Već ste ocjenili.',
+	'you_have_to_enter_filename'=>'morate unijeti ime dokumenta!',
+	'you_have_to_enter_file'=>'Morate unijeti dokument/link!'
 );
 ?>

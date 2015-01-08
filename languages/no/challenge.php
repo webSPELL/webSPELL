@@ -2,67 +2,67 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Vesion 4       /                        /   /               #
+#           Version 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Fee Content / Management System                 #
+#                       Free Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyight 2005-2014 by webspell.og                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
-#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
-#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to emove this copyight-tag                      #
-#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
+#   visit webSPELL.org, webspell.info to get webSPELL for free           #
+#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to remove this copyright-tag                      #
+#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
-#   Fa Development by Development Team - webspell.og                   #
+#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
+#   Far Development by Development Team - webspell.org                   #
 #                                                                        #
-#   visit webspell.og                                                   #
+#   visit webspell.org                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_aay = Aay(
+$language_array = Array(
 
 /* do not edit above this line */
 
-	'back_to_fom'=>'Tilbake',
-	'challenge'=>'Utfode',
-	'challenge_fom'=>'challenge posted on',
-	'challenge_message'=>'[b]De e en ny utfoding![/b][BR][BR] Vennligst klikk he: [URL]index.php?site=challenge[/URL]',
-	'challenges'=>'utfodinge',
-	'county'=>'land',
+	'back_to_form'=>'Tilbake',
+	'challenge'=>'Utfordre',
+	'challenge_from'=>'challenge posted on',
+	'challenge_message'=>'[b]Der er en ny utfordring![/b][BR][BR] Vennligst klikk her: [URL]index.php?site=challenge[/URL]',
+	'challenges'=>'utfordringer',
+	'country'=>'land',
 	'date'=>'dato',
-	'delete_challenge'=>'Slett utfoding',
+	'delete_challenge'=>'Slett utfordring',
 	'email'=>'e-post',
-	'ente_clanname'=>'Vennligst skiv klannavnet dees.',
-	'ente_email'=>'Vennligst skiv e-post adessen din.',
-	'ente_league'=>'Vennligst skiv hvilke liga.',
-	'ente_map'=>'Vennligst skiv hvilke bane dee vil spille på.',
-	'ente_seve'=>'Vennligst skiv IP-en til seveen dees, vist dee ha.',
-	'ente_ul'=>'Vennligst skiv adessen til hjemmesiden dees.',
-	'enty_deleted'=>'Enty deleted.',
-	'fight_us'=>'Utfode oss!',
+	'enter_clanname'=>'Vennligst skriv klannavnet deres.',
+	'enter_email'=>'Vennligst skriv e-post adressen din.',
+	'enter_league'=>'Vennligst skriv hvilke liga.',
+	'enter_map'=>'Vennligst skriv hvilke bane dere vil spille på.',
+	'enter_server'=>'Vennligst skriv IP-en til serveren deres, vist dere har.',
+	'enter_url'=>'Vennligst skriv adressen til hjemmesiden deres.',
+	'entry_deleted'=>'Entry deleted.',
+	'fight_us'=>'Utfordre oss!',
 	'homepage'=>'hjemmeside',
-	'info'=>'mei infomasjon',
-	'inset_in_calenda'=>'Legg til kalende',
+	'info'=>'meir informasjon',
+	'insert_in_calendar'=>'Legg til kalender',
 	'league'=>'liga',
 	'map'=>'bane',
 	'message_title'=>'Fight us',
 	'no_access'=>'Ingen tilgang!',
-	'no_enties'=>'Ingen oppføinge.',
-	'opponent'=>'motstande',
-	'poblems'=>'Følgende poblem oppstod',
-	'secuity_code'=>'sikkehetskode',
-	'seve'=>'seve',
-	'sot'=>'sote:',
+	'no_entries'=>'Ingen oppføringer.',
+	'opponent'=>'motstander',
+	'problems'=>'Følgende problem oppstod',
+	'security_code'=>'sikkerhetskode',
+	'server'=>'server',
+	'sort'=>'sorter:',
 	'squad'=>'lag',
 	'submit_challenge'=>'Send',
-	'thank_you'=>'Takk fo utfodingen!<b>',
+	'thank_you'=>'Takk for utfordringen!<br>',
 	'time'=>'tid',
-	'wong_secuity_code'=>'Sikkehets koden va feil.'
+	'wrong_security_code'=>'Sikkerhets koden var feil.'
 );
 ?>

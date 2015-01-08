@@ -2,50 +2,50 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Vesion 4       /                        /   /               #
+#           Version 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Fee Content / Management System                 #
+#                       Free Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyight 2005-2014 by webspell.og                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
-#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
-#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to emove this copyight-tag                      #
-#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
+#   visit webSPELL.org, webspell.info to get webSPELL for free           #
+#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to remove this copyright-tag                      #
+#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
-#   Fa Development by Development Team - webspell.og                   #
+#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
+#   Far Development by Development Team - webspell.org                   #
 #                                                                        #
-#   visit webspell.og                                                   #
+#   visit webspell.org                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_aay = Aay(
+$language_array = Array(
 
 /* do not edit above this line */
 
-	'email_failed'=>'Es tat ein Fehle beim Vesenden de E-Mail auf, kontaktiee den Webmaste.',
-	'email_subject'=>'Dein Konto fü %pagetitle%',
-	'email_text'=>'Dein Konto fü %pagetitle%
-ACHTUNG dein Passwot wude geändet
+	'email_failed'=>'Es trat ein Fehler beim Versenden der E-Mail auf, kontaktiere den Webmaster.',
+	'email_subject'=>'Dein Konto für %pagetitle%',
+	'email_text'=>'Dein Konto für %pagetitle%
+ACHTUNG dein Passwort wurde geändert
 
-dein Benutzename: %usename%
-dein neues Passwot: %new_passwod%
+dein Benutzername: %username%
+dein neues Passwort: %new_password%
 	
-Viel Spass auf unsee Webseite
-	%homepage_ul%',
-	'get_passwod'=>'Passwot zusenden',
-	'lost_passwod'=>'Passwot veloen',
-	'no_mail_given'=>'Du hast keine E-Mail Adesse eingegeben.',
-	'no_use_found'=>'Benutze nicht gefunden!',
-	'successful'=>'Dein Konto wude gefunden!<b><b>
-    Du wist in wenigen Sekunden eine E-Mail mit deinen Daten ehalten.<b><b>
-    &#8226; <a hef="index.php?site=login">anmelden</a>',
-	'you_email'=>'Deine E-Mail'
+Viel Spass auf unserer Webseite
+	%homepage_url%',
+	'get_password'=>'Passwort zusenden',
+	'lost_password'=>'Passwort verloren',
+	'no_mail_given'=>'Du hast keine E-Mail Adresse eingegeben.',
+	'no_user_found'=>'Benutzer nicht gefunden!',
+	'successful'=>'Dein Konto wurde gefunden!<br><br>
+    Du wirst in wenigen Sekunden eine E-Mail mit deinen Daten erhalten.<br><br>
+    &#8226; <a href="index.php?site=login">anmelden</a>',
+	'your_email'=>'Deine E-Mail'
 );
 ?>

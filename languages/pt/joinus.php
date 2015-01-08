@@ -2,60 +2,60 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Vesion 4       /                        /   /               #
+#           Version 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Fee Content / Management System                 #
+#                       Free Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyight 2005-2014 by webspell.og                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
-#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
-#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to emove this copyight-tag                      #
-#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
+#   visit webSPELL.org, webspell.info to get webSPELL for free           #
+#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to remove this copyright-tag                      #
+#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
-#   Fa Development by Development Team - webspell.og                   #
+#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
+#   Far Development by Development Team - webspell.org                   #
 #                                                                        #
-#   visit webspell.og                                                   #
+#   visit webspell.org                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_aay = Aay(
+$language_array = Array(
 
 /* do not edit above this line */
 
-	'additional_info'=>'Infomação adicional (p.ex. Poque é que me deveiam aceita como membo...)',
+	'additional_info'=>'Informação adicional (p.ex. Porque é que me deveriam aceitar como membro...)',
 	'age'=>'Idade',
-	'back_to_fom'=>'Volta ao fomuláio',
+	'back_to_form'=>'Voltar ao formulário',
 	'city'=>'Cidade',
-	'clan_histoy'=>'Históico de clans',
-	'email_not_valid'=>'Não foi inseido nenhum e-mail válido!',
-	'fogot_age'=>'Nenhuma idade inseida!',
-	'fogot_city'=>'Nenhuma cidade inseida!',
-	'fogot_histoy'=>'Nenhum histoial de clans inseido!',
-	'fogot_messenge'=>'Nenhum contacto de messenge (ICQ, AIM etc...) inseido!',
-	'fogot_nickname'=>'Esqueceu-se do seu nickname!',
-	'fogot_ealname'=>'Esqueceu-se do seu nome!',
+	'clan_history'=>'Histórico de clans',
+	'email_not_valid'=>'Não foi inserido nenhum e-mail válido!',
+	'forgot_age'=>'Nenhuma idade inserida!',
+	'forgot_city'=>'Nenhuma cidade inserida!',
+	'forgot_history'=>'Nenhum historial de clans inserido!',
+	'forgot_messenger'=>'Nenhum contacto de messenger (ICQ, AIM etc...) inserido!',
+	'forgot_nickname'=>'Esqueceu-se do seu nickname!',
+	'forgot_realname'=>'Esqueceu-se do seu nome!',
 	'icq_msn'=>'ICQ/MSN/etc...',
-	'info'=>'Infomação adicional',
-	'joinus_fom'=>'Fomuláio paa se junta a nós',
+	'info'=>'Informação adicional',
+	'joinus_form'=>'Formulário para se juntar a nós',
 	'mail'=>'E-mail',
-	'messenge'=>'Messenge',
+	'messenger'=>'Messenger',
 	'message_title'=>'Join us',
 	'name'=>'Nome',
 	'nick'=>'Nickname',
-	'poblems'=>'Ocoeam os seguintes poblemas com os dados inseidos',
-	'secuity_code'=>'Código de seguança',
-	'send'=>'Envia',
-	'someone_want_to_join_you_squad'=>'Alguém que junta-se à sua equipa:',
+	'problems'=>'Ocorreram os seguintes problemas com os dados inseridos',
+	'security_code'=>'Código de segurança',
+	'send'=>'Enviar',
+	'someone_want_to_join_your_squad'=>'Alguém quer juntar-se à sua equipa:',
 	'squad'=>'Equipa',
-	'thanks_you_will_get_mail'=>'Obigada pela sua inscição, iemos bevemente enta em contacto consigo.',
-	'title_join_us'=>'Tona-se membo',
-	'wong_secuity_code'=>'O código de seguança está eado!'
+	'thanks_you_will_get_mail'=>'Obrigada pela sua inscrição, iremos brevemente entrar em contacto consigo.',
+	'title_join_us'=>'Tornar-se membro',
+	'wrong_security_code'=>'O código de segurança está errado!'
 );
 ?>

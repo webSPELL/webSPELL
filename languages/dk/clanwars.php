@@ -2,106 +2,106 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Vesion 4       /                        /   /               #
+#           Version 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Fee Content / Management System                 #
+#                       Free Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyight 2005-2014 by webspell.og                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
-#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
-#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to emove this copyight-tag                      #
-#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
+#   visit webSPELL.org, webspell.info to get webSPELL for free           #
+#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to remove this copyright-tag                      #
+#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
-#   Fa Development by Development Team - webspell.og                   #
+#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
+#   Far Development by Development Team - webspell.org                   #
 #                                                                        #
-#   visit webspell.og                                                   #
+#   visit webspell.org                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_aay = Aay(
+$language_array = Array(
 
 /* do not edit above this line */
 
 	'clan'=>'klan',
 	'clan_stats'=>'klan statistik',
 	'clantag'=>'klantag',
-	'clanwa_against'=>'kamp imod',
-	'clanwa_details'=>'kampdetalje',
-	'clanwa_saved'=>'kampen e blevet gemt.',
-	'clanwa_updated'=>'Kampen e blevet opdateet.',
-	'clanwas'=>'Kampe',
+	'clanwar_against'=>'kamp imod',
+	'clanwar_details'=>'kampdetaljer',
+	'clanwar_saved'=>'kampen er blevet gemt.',
+	'clanwar_updated'=>'Kampen er blevet opdateret.',
+	'clanwars'=>'Kampe',
 	'close_window'=>'Luk Vinduet',
-	'county'=>'land',
+	'country'=>'land',
 	'date'=>'dato',
 	'delete'=>'slet',
-	'delete_selected'=>'slet makeede',
-	'details'=>'detalje',
-	'disable_comments'=>'deaktive kommentae',
-	'daw'=>'uafgjot',
-	'daw_clanwas'=>'uafgjote kampe',
-	'edit'=>'edige',
-	'edit_clanwa'=>'edige kampen',
+	'delete_selected'=>'slet markerede',
+	'details'=>'detaljer',
+	'disable_comments'=>'deaktiver kommentarer',
+	'draw'=>'uafgjort',
+	'draw_clanwars'=>'uafgjorte kampe',
+	'edit'=>'rediger',
+	'edit_clanwar'=>'rediger kampen',
 	'game'=>'spil',
 	'go'=>'gå',
-	'hltv_seve'=>'hltv seve',
+	'hltv_server'=>'hltv server',
 	'home_team'=>'hjemmehold',
 	'homepage'=>'hjemmeside',
 	'id'=>'ID',
 	'league'=>'liga',
 	'league_match_link'=>'liga kamp-link',
 	'lost'=>'tabt',
-	'lost_clanwas'=>'tabte kampe',
+	'lost_clanwars'=>'tabte kampe',
 	'lost_points'=>'tabte points',
 	'map'=>'map',
 	'maps'=>'maps',
 	'matchlink'=>'kamp-link',
-	'new_clanwa'=>'Ny klankamp',
+	'new_clanwar'=>'Ny klankamp',
 	'nickname'=>'øgenavn',
 	'no_access'=>'Adgang nægtet!',
-	'no_enties'=>'Ingen indlæg tilgængelige',
+	'no_entries'=>'Ingen indlæg tilgængelige',
 	'no_maps'=>'ingen maps',
-	'no_sceenshots'=>'ingen sceenshots',
+	'no_screenshots'=>'ingen screenshots',
 	'on'=>'på',
-	'opponent'=>'modstande',
-	'opponent_team'=>'modstandehold',
-	'pecent'=>'pocent',
-	'publish_clanwa_news'=>'publice nyhede om kampen',
-	'eally_delete_clanwa'=>'Vil du vikelig slette denne kamp?',
-	'epot'=>'appot',
-	'esult'=>'esultat',
-	'save_clanwa'=>'gem kamp',
-	'scoe_home'=>'scoe hjemme',
-	'scoe_opponent'=>'scoe modstande',
-	'sceenshots'=>'sceenshots',
-	'select_all'=>'make alt',
-	'seve'=>'seve',
+	'opponent'=>'modstander',
+	'opponent_team'=>'modstanderhold',
+	'percent'=>'procent',
+	'publish_clanwar_news'=>'publicer nyheder om kampen',
+	'really_delete_clanwar'=>'Vil du virkelig slette denne kamp?',
+	'report'=>'rapport',
+	'result'=>'resultat',
+	'save_clanwar'=>'gem kamp',
+	'score_home'=>'score hjemme',
+	'score_opponent'=>'score modstander',
+	'screenshots'=>'screenshots',
+	'select_all'=>'marker alt',
+	'server'=>'server',
 	'show_all_squads'=>'vis alle hold',
-	'show_clanwas'=>'vis alle kampe',
-	'sot'=>'sote',
+	'show_clanwars'=>'vis alle kampe',
+	'sort'=>'sorter',
 	'squad'=>'hold',
 	'stat'=>'statistik',
-	'stats'=>'statistikke',
+	'stats'=>'statistikker',
 	'team'=>'hold',
 	'total'=>'totalt',
-	'total_clanwas'=>'kampe i alt',
-	'total_daw_clanwas'=>'Uafgjote kampe i alt',
-	'total_lost_clanwas'=>'Tabte kampe i alt',
+	'total_clanwars'=>'kampe i alt',
+	'total_draw_clanwars'=>'Uafgjorte kampe i alt',
+	'total_lost_clanwars'=>'Tabte kampe i alt',
 	'total_lost_points'=>'Tabte points i alt',
-	'total_won_clanwas'=>'Vundet kampe i alt',
+	'total_won_clanwars'=>'Vundet kampe i alt',
 	'total_won_points'=>'vundet points i alt',
-	'update_clanwa'=>'opdate kampen',
-	'upload_sceenshot'=>'upload sceenshot',
-	'use_comments'=>'Slå buge kommentae til',
-	'visito_comments'=>'Slå gæst kommentae til',
-	'won'=>'Sej',
-	'won_clanwas'=>'vundet kampe',
+	'update_clanwar'=>'opdater kampen',
+	'upload_screenshot'=>'upload screenshot',
+	'user_comments'=>'Slå bruger kommentarer til',
+	'visitor_comments'=>'Slå gæst kommentarer til',
+	'won'=>'Sejr',
+	'won_clanwars'=>'vundet kampe',
 	'won_points'=>'vundet point'
 );
 ?>

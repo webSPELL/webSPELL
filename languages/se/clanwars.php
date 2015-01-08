@@ -2,106 +2,106 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Vesion 4       /                        /   /               #
+#           Version 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Fee Content / Management System                 #
+#                       Free Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyight 2005-2014 by webspell.og                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
-#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
-#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to emove this copyight-tag                      #
-#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
+#   visit webSPELL.org, webspell.info to get webSPELL for free           #
+#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to remove this copyright-tag                      #
+#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
-#   Fa Development by Development Team - webspell.og                   #
+#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
+#   Far Development by Development Team - webspell.org                   #
 #                                                                        #
-#   visit webspell.og                                                   #
+#   visit webspell.org                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_aay = Aay(
+$language_array = Array(
 
 /* do not edit above this line */
 
 	'clan'=>'clan',
 	'clan_stats'=>'clan statistik',
 	'clantag'=>'clantag',
-	'clanwa_against'=>'clanmatch mot',
-	'clanwa_details'=>'clanmatch detalje',
-	'clanwa_saved'=>'clanmatchen ha spaats.',
-	'clanwa_updated'=>'clanmatchen ha uppdateats.',
-	'clanwas'=>'clanmatches',
-	'close_window'=>'stäng fönste',
-	'county'=>'land',
+	'clanwar_against'=>'clanmatch mot',
+	'clanwar_details'=>'clanmatch detaljer',
+	'clanwar_saved'=>'clanmatchen har sparats.',
+	'clanwar_updated'=>'clanmatchen har uppdaterats.',
+	'clanwars'=>'clanmatchers',
+	'close_window'=>'stäng fönster',
+	'country'=>'land',
 	'date'=>'datum',
-	'delete'=>'adea',
-	'delete_selected'=>'adea makeade',
-	'details'=>'detalje',
-	'disable_comments'=>'stänga av kommentae',
-	'daw'=>'lika',
-	'daw_clanwas'=>'lika clanmatche',
-	'edit'=>'edigea',
-	'edit_clanwa'=>'edigea clanmatch',
+	'delete'=>'radera',
+	'delete_selected'=>'radera markerade',
+	'details'=>'detaljer',
+	'disable_comments'=>'stänga av kommentarer',
+	'draw'=>'lika',
+	'draw_clanwars'=>'lika clanmatcher',
+	'edit'=>'redigera',
+	'edit_clanwar'=>'redigera clanmatch',
 	'game'=>'match',
 	'go'=>'gå',
-	'hltv_seve'=>'hltv seve',
+	'hltv_server'=>'hltv server',
 	'home_team'=>'hemma lag',
 	'homepage'=>'hemsida',
 	'id'=>'ID',
 	'league'=>'liga',
 	'league_match_link'=>'liga match länk',
-	'lost'=>'föload',
-	'lost_clanwas'=>'föloade clanmatche',
-	'lost_points'=>'föloade poäng',
+	'lost'=>'förlorad',
+	'lost_clanwars'=>'förlorade clanmatcher',
+	'lost_points'=>'förlorade poäng',
 	'map'=>'bana',
-	'maps'=>'bano',
+	'maps'=>'banor',
 	'matchlink'=>'matchlänk',
-	'new_clanwa'=>'ny clanmatch',
+	'new_clanwar'=>'ny clanmatch',
 	'nickname'=>'smeknamn',
 	'no_access'=>'Ingen tillgång!',
-	'no_enties'=>'Inga tillägg tillgängliga',
-	'no_maps'=>'Inga bano',
-	'no_sceenshots'=>'Inga skämdumpa',
+	'no_entries'=>'Inga tillägg tillgängliga',
+	'no_maps'=>'Inga banor',
+	'no_screenshots'=>'Inga skärmdumpar',
 	'on'=>'på',
-	'opponent'=>'motståndae',
-	'opponent_team'=>'motståndalag',
-	'pecent'=>'pocent',
-	'publish_clanwa_news'=>'publisea clanmatch nyhet',
-	'eally_delete_clanwa'=>'Vill du vekligen adea denna clanmatch?',
-	'epot'=>'apot',
-	'esult'=>'esultat',
-	'save_clanwa'=>'Spaa clanmatch',
-	'scoe_home'=>'poäng hemmalag',
-	'scoe_opponent'=>'poäng botalag',
-	'sceenshots'=>'skämdumpa',
-	'select_all'=>'makea alla',
-	'seve'=>'seve',
+	'opponent'=>'motståndare',
+	'opponent_team'=>'motståndarlag',
+	'percent'=>'procent',
+	'publish_clanwar_news'=>'publisera clanmatch nyhet',
+	'really_delete_clanwar'=>'Vill du verkligen radera denna clanmatch?',
+	'report'=>'raport',
+	'result'=>'resultat',
+	'save_clanwar'=>'Spara clanmatch',
+	'score_home'=>'poäng hemmalag',
+	'score_opponent'=>'poäng bortalag',
+	'screenshots'=>'skärmdumpar',
+	'select_all'=>'markera alla',
+	'server'=>'server',
 	'show_all_squads'=>'visa alla lag',
-	'show_clanwas'=>'visa alla clanmatche',
-	'sot'=>'sotea',
+	'show_clanwars'=>'visa alla clanmatcher',
+	'sort'=>'sortera',
 	'squad'=>'lag',
 	'stat'=>'statistik',
 	'stats'=>'statistik',
 	'team'=>'lag',
 	'total'=>'total',
-	'total_clanwas'=>'totalt clanmatche',
-	'total_daw_clanwas'=>'totalt lika clanmatche',
-	'total_lost_clanwas'=>'totalt föloade clanmatche',
-	'total_lost_points'=>'totalt föloade poäng',
-	'total_won_clanwas'=>'totalt vunna clanmatche',
+	'total_clanwars'=>'totalt clanmatcher',
+	'total_draw_clanwars'=>'totalt lika clanmatcher',
+	'total_lost_clanwars'=>'totalt förlorade clanmatcher',
+	'total_lost_points'=>'totalt förlorade poäng',
+	'total_won_clanwars'=>'totalt vunna clanmatcher',
 	'total_won_points'=>'totalt vunna poäng',
-	'update_clanwa'=>'uppdatea clanmatch',
-	'upload_sceenshot'=>'ladda upp skämdumpa',
-	'use_comments'=>'möjliggöa använda kommentae',
-	'visito_comments'=>'möjliggöa besöka kommentae',
+	'update_clanwar'=>'uppdatera clanmatch',
+	'upload_screenshot'=>'ladda upp skärmdumpar',
+	'user_comments'=>'möjliggöra användar kommentarer',
+	'visitor_comments'=>'möjliggöra besökar kommentarer',
 	'won'=>'Vann',
-	'won_clanwas'=>'vunna clanmatche',
+	'won_clanwars'=>'vunna clanmatcher',
 	'won_points'=>'vunna poäng'
 );
 ?>

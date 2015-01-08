@@ -1,4 +1,4 @@
 <?php
 /* THIS IS JUST A PLACEHOLDER */
-heade('Location: ../index.php');
+header('Location: ../index.php');
 ?>

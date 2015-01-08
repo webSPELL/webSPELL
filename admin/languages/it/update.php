@@ -2,43 +2,43 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Vesion 4       /                        /   /               #
+#           Version 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Fee Content / Management System                 #
+#                       Free Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyight 2005-2014 by webspell.og                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
-#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
-#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to emove this copyight-tag                      #
-#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
+#   visit webSPELL.org, webspell.info to get webSPELL for free           #
+#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to remove this copyright-tag                      #
+#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
-#   Fa Development by Development Team - webspell.og                   #
+#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
+#   Far Development by Development Team - webspell.org                   #
 #                                                                        #
-#   visit webspell.og                                                   #
+#   visit webspell.org                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_aay = Aay(
+$language_array = Array(
 
 /* do not edit above this line */
 
   'access_denied'=>'Accesso negato',
-  'eo'=>'Seve non è compatibile con l*aggionamento o il file non esiste su',
+  'error'=>'Server non è compatibile con l*aggiornamento o il file non esiste su',
   'filename'=>'Nome del file',
-  'get_new_vesion'=>'Scaica qui l*ultima vesione Webspell!',
-  'infomation'=>'Infomazioni',
-  'new_functions'=>'Nuove funzioni disponibili pe Webspell',
-  'new_updates'=>'Nuovi aggionamenti disponibili pe Webspell',
-  'new_vesion'=>'Nuova vesione Webspell',
-  'no_updates'=>'Nessun aggionamento disponibile!',
-  'vesion'=>'Vesione',
-  'webspell_update'=>'webSPELL aggionamento'
+  'get_new_version'=>'Scarica qui l*ultima versione Webspell!',
+  'information'=>'Informazioni',
+  'new_functions'=>'Nuove funzioni disponibili per Webspell',
+  'new_updates'=>'Nuovi aggiornamenti disponibili per Webspell',
+  'new_version'=>'Nuova versione Webspell',
+  'no_updates'=>'Nessun aggiornamento disponibile!',
+  'version'=>'Versione',
+  'webspell_update'=>'webSPELL aggiornamento'
 );
 ?>

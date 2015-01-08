@@ -2,67 +2,67 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Vesion 4       /                        /   /               #
+#           Version 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Fee Content / Management System                 #
+#                       Free Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyight 2005-2014 by webspell.og                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
-#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
-#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to emove this copyight-tag                      #
-#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
+#   visit webSPELL.org, webspell.info to get webSPELL for free           #
+#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to remove this copyright-tag                      #
+#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
-#   Fa Development by Development Team - webspell.og                   #
+#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
+#   Far Development by Development Team - webspell.org                   #
 #                                                                        #
-#   visit webspell.og                                                   #
+#   visit webspell.org                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_aay = Aay(
+$language_array = Array(
 
 /* do not edit above this line */
 
-	'back_to_fom'=>'Vissza a fomához',
+	'back_to_form'=>'Vissza a formához',
 	'challenge'=>'Kihívás',
-	'challenge_fom'=>'Kihívás beküldője',
+	'challenge_from'=>'Kihívás beküldője',
 	'challenge_message'=>'[b]Új kihívás van![/b][BR][BR] Kattint ide: [URL]index.php?site=challenge[/URL]',
 	'challenges'=>'kihívások',
-	'county'=>'Oszág',
+	'country'=>'Ország',
 	'date'=>'Dátum',
-	'delete_challenge'=>'Kihívás tölése',
+	'delete_challenge'=>'Kihívás törlése',
 	'email'=>'E-mail',
-	'ente_clanname'=>'Nincs beíva klánnév.',
-	'ente_email'=>'Nincs beíva évényes e-mail.',
-	'ente_league'=>'Nincs beíva liga.',
-	'ente_map'=>'Nincs beíva map.',
-	'ente_seve'=>'Nincs beíva szeve-cím.',
-	'ente_ul'=>'Nincs beíva évényes honlap.',
-  'enty_deleted'=>'Bejegyzés töölve.',
+	'enter_clanname'=>'Nincs beírva klánnév.',
+	'enter_email'=>'Nincs beírva érvényes e-mail.',
+	'enter_league'=>'Nincs beírva liga.',
+	'enter_map'=>'Nincs beírva map.',
+	'enter_server'=>'Nincs beírva szerver-cím.',
+	'enter_url'=>'Nincs beírva érvényes honlap.',
+  'entry_deleted'=>'Bejegyzés törölve.',
 	'fight_us'=>'Küzdelem velünk!',
 	'homepage'=>'Honlap',
-	'info'=>'További infomációk',
-	'inset_in_calenda'=>'Felvétel a naptába',
+	'info'=>'További információk',
+	'insert_in_calendar'=>'Felvétel a naptárba',
 	'league'=>'Liga',
 	'map'=>'Map',
 	'message_title'=>'Fight us',
 	'no_access'=>'Nincs engedély!',
-	'no_enties'=>'Nincs bejegyzés.',
+	'no_entries'=>'Nincs bejegyzés.',
 	'opponent'=>'Ellenfél',
-	'poblems'=>'A következo poblémák meültek fel',
-	'secuity_code'=>'Biztonsági kód',
-	'seve'=>'Szeve',
-	'sot'=>'Rendezés',
+	'problems'=>'A következo problémák merültek fel',
+	'security_code'=>'Biztonsági kód',
+	'server'=>'Szerver',
+	'sort'=>'Rendezés',
 	'squad'=>'Squad',
 	'submit_challenge'=>'Kihívás beküldése',
-	'thank_you'=>'Köszönjük a kéésed!<b>',
+	'thank_you'=>'Köszönjük a kérésed!<br>',
 	'time'=>'Idő',
-	'wong_secuity_code'=>'Rossz biztonsági kód.'
+	'wrong_security_code'=>'Rossz biztonsági kód.'
 );
 ?>

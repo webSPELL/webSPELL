@@ -2,40 +2,40 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Vesion 4       /                        /   /               #
+#           Version 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Fee Content / Management System                 #
+#                       Free Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyight 2005-2014 by webspell.og                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
-#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
-#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to emove this copyight-tag                      #
-#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
+#   visit webSPELL.org, webspell.info to get webSPELL for free           #
+#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to remove this copyright-tag                      #
+#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
-#   Fa Development by Development Team - webspell.og                   #
+#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
+#   Far Development by Development Team - webspell.org                   #
 #                                                                        #
-#   visit webspell.og                                                   #
+#   visit webspell.org                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_aay = Aay(
+$language_array = Array(
 	'select_a_language'=>'Scegli la lingua',
-	'webspell_team'=>'Tuo <a hef="http://www.webspell.og" taget="_blank">webSPELL Sviluppatoo</a> Team',
+	'webspell_team'=>'Tuo <a href="http://www.webspell.org" target="_blank">webSPELL Sviluppatoro</a> Team',
 	'welcome'=>'Benvenuto',
-	'welcome_text'=>'Questa pocedua di installazione ti aiuta, installae webSPELL sul tuo seve.
-   Sei semplici passi condue l`utente attaveso l`installazione.<b><b>
-   Si pega di pendee in consideazione le seguenti infomazioni:<b>
-	<ul><li><b>Il tuo indiizzo e-mail</b></li></ul>
-	<ul><li><b>L`URL pe la tua pagina Webspell</b></li></ul>
-   <ul><li><b>L`accesso ai dati di MySQL pe il tuo webspace</b></li></ul>
-   Gazie, che ti hai deciso pe webSPELL.',
+	'welcome_text'=>'Questa procedura di installazione ti aiuta, installare webSPELL sul tuo server.
+   Sei semplici passi condurre l`utente attraverso l`installazione.<br><br>
+   Si prega di prendere in considerazione le seguenti informazioni:<br>
+	<ul><li><b>Il tuo indirizzo e-mail</b></li></ul>
+	<ul><li><b>L`URL per la tua pagina Webspell</b></li></ul>
+   <ul><li><b>L`accesso ai dati di MySQL per il tuo webspace</b></li></ul>
+   Grazie, che ti hai deciso per webSPELL.',
 	'welcome_to'=>'Benvenuto nel tuo Webspell installazione!'
 );
 ?>

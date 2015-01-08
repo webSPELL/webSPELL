@@ -2,62 +2,62 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Vesion 4       /                        /   /               #
+#           Version 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Fee Content / Management System                 #
+#                       Free Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyight 2005-2014 by webspell.og                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
-#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
-#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to emove this copyight-tag                      #
-#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
+#   visit webSPELL.org, webspell.info to get webSPELL for free           #
+#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to remove this copyright-tag                      #
+#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
-#   Fa Development by Development Team - webspell.og                   #
+#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
+#   Far Development by Development Team - webspell.org                   #
 #                                                                        #
-#   visit webspell.og                                                   #
+#   visit webspell.org                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_aay = Aay(
+$language_array = Array(
 
 /* do not edit above this line */
 
-	'daysonline'=>'Gioni online',
+	'daysonline'=>'Giorni online',
 	'guest'=>'ospito',
 	'guests'=>'ospiti',
-	'lasthou'=>'Ultima oa',
-	'max_day'=>'Recod gionalieo',
+	'lasthour'=>'Ultima ora',
+	'max_day'=>'Record giornaliero',
 	'maximum'=>'Maximale',
 	'month'=>'Mese',
 	'now'=>'Adesso',
 	'online'=>'Online',
 	'page_statistics'=>'Statisticha della pagina',
-	'egisteed_uses'=>'egistati Utenti ',
+	'registered_users'=>'registrati Utenti ',
 	'statistic'=>'Visualizza Statistiche',
 	'this_month'=>'Questo mese',
 	'today'=>'Oggi',
 	'total'=>'Totale',
-	'total_statistic'=>'Statistiche geneali',
-	'use'=>'Utenti',
-	'uses'=>'Utenti',
+	'total_statistic'=>'Statistiche generali',
+	'user'=>'Utenti',
+	'users'=>'Utenti',
 	'visits'=>'Utenti',
-	'visits_day'=>'Visitatoi pe giono',
-	'visits_hou'=>'Visitatoi pe oa',
-	'visits_month'=>'Visitatoi al mese',
-	'visits_total'=>'Totale Visitatoi',
-	'yesteday'=>'Iei',
+	'visits_day'=>'Visitatori per giorno',
+	'visits_hour'=>'Visitatori per ora',
+	'visits_month'=>'Visitatori al mese',
+	'visits_total'=>'Totale Visitatori',
+	'yesterday'=>'Ieri',
 	'avg_age'=>'Età media',
-	'avg_age_clanmembe'=>'Età media Clanmmembe',
-	'youngest_use'=>'Recenti utenti',
-	'oldest_use'=>'Anziano utente',
-	'use_statistic'=>'Statistiche utente',
-	'yeas'=>'Anni'
+	'avg_age_clanmember'=>'Età media Clanmmember',
+	'youngest_user'=>'Recenti utenti',
+	'oldest_user'=>'Anziano utente',
+	'user_statistic'=>'Statistiche utente',
+	'years'=>'Anni'
 );
 ?>

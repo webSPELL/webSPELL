@@ -2,38 +2,38 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Vesion 4       /                        /   /               #
+#           Version 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Fee Content / Management System                 #
+#                       Free Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyight 2005-2014 by webspell.og                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
-#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
-#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to emove this copyight-tag                      #
-#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
+#   visit webSPELL.org, webspell.info to get webSPELL for free           #
+#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to remove this copyright-tag                      #
+#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
-#   Fa Development by Development Team - webspell.og                   #
+#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
+#   Far Development by Development Team - webspell.org                   #
 #                                                                        #
-#   visit webspell.og                                                   #
+#   visit webspell.org                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_aay = Aay(
+$language_array = Array(
 
 /* do not edit above this line */
 
-	'invalid_passwod'=>'La contaseña no es coecta.<b><b><a hef="javascipt:histoy.back()">Vuelve y pueba ota vez!</a>',
-	'ip_banned'=>'Ellos están alejados.<b>%eason%<b><b><a hef="javascipt:histoy.back()">Volve</a>',
-	'login_successful'=>'Conectado coectamente!',
-	'no_use'=>'El usuaio <b>%usename%</b> no esta disponible en este sistema.<b><b><a hef="javascipt:histoy.back()">Vuelve y pueba ota vez!</a>',
-	'not_activated'=>'Tu cuenta no esta activada.<b><b><a hef="javascipt:histoy.back()">Volve</a>',
-	'session_eo'=>'Asegue que Cookies están activados en su navegado, po favo.<b>Si el poblema pesiste, pongase en contacto con al webmaste de está página.<b><b><a hef="javascipt:histoy.back()">Volve</a>'
+	'invalid_password'=>'La contraseña no es correcta.<br><br><a href="javascript:history.back()">Vuelve y prueba otra vez!</a>',
+	'ip_banned'=>'Ellos están alejados.<br>%reason%<br><br><a href="javascript:history.back()">Volver</a>',
+	'login_successful'=>'Conectado correctamente!',
+	'no_user'=>'El usuario <b>%username%</b> no esta disponible en este sistema.<br><br><a href="javascript:history.back()">Vuelve y prueba otra vez!</a>',
+	'not_activated'=>'Tu cuenta no esta activada.<br><br><a href="javascript:history.back()">Volver</a>',
+	'session_error'=>'Asegure que Cookies están activados en su navegador, por favor.<br>Si el problema persiste, pongase en contacto con al webmaster de está página.<br><br><a href="javascript:history.back()">Volver</a>'
 );
 ?>

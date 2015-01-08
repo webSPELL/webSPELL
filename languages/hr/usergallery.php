@@ -2,56 +2,56 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Vesion 4       /                        /   /               #
+#           Version 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Fee Content / Management System                 #
+#                       Free Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyight 2005-2014 by webspell.og                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
-#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
-#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to emove this copyight-tag                      #
-#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
+#   visit webSPELL.org, webspell.info to get webSPELL for free           #
+#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to remove this copyright-tag                      #
+#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
-#   Fa Development by Development Team - webspell.og                   #
+#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
+#   Far Development by Development Team - webspell.org                   #
 #                                                                        #
-#   visit webspell.og                                                   #
+#   visit webspell.org                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_aay = Aay(
+$language_array = Array(
 
 /* do not edit above this line */
 
 	'actions'=>'Akcije',
-	'add_galley'=>'dodaj galeiju',
+	'add_gallery'=>'dodaj galeriju',
 	'add_img'=>'Dodaj img',
-	'add_pictue'=>'dodaj sliku',
-	'comment'=>'Komentiaj',
-	'delete'=>'Izbiši',
-	'disable_comments'=>'Onemoguci komentae',
+	'add_picture'=>'dodaj sliku',
+	'comment'=>'Komentiraj',
+	'delete'=>'Izbriši',
+	'disable_comments'=>'Onemoguci komentare',
 	'edit'=>'Izmjeni',
-	'enable_use_comments'=>'Omoguci komentae koisnicima',
-	'enable_visito_comments'=>'Svi mogu komentiati',
-	'galley_name'=>'Ime galeije',
-	'goup'=>'Gupa',
+	'enable_user_comments'=>'Omoguci komentare korisnicima',
+	'enable_visitor_comments'=>'Svi mogu komentirati',
+	'gallery_name'=>'Ime galerije',
+	'group'=>'Grupa',
 	'name'=>'Ime',
-	'new_galley'=>'Nova galeija',
-	'no_galleies'=>'Nema dostupnih galeija.',
-	'no_space_left'=>'Nije vam peostalo postoa.',
-	'pictue'=>'Slika',
-	'please_ente_name'=>'Molimo unesite ime!',
-	'eally_delete_galley'=>'Stvano izbiši galeiju?',
-	'update'=>'Spemi izmjene',
-	'use_galley'=>'Koisnicka galeija',
-	'usegalleies'=>'Galeije koisnika',
-	'visito_comments'=>'Komentai posjetitelja',
-	'x_of_y_mb_in_use'=>'<span style="colo:%spacecolo%">&nbsp;%used_size%</span> od %available_size% MB se tenutno koisti.'
+	'new_gallery'=>'Nova galerija',
+	'no_galleries'=>'Nema dostupnih galerija.',
+	'no_space_left'=>'Nije vam preostalo prostora.',
+	'picture'=>'Slika',
+	'please_enter_name'=>'Molimo unesite ime!',
+	'really_delete_gallery'=>'Stvarno izbriši galeriju?',
+	'update'=>'Spremi izmjene',
+	'user_gallery'=>'Korisnicka galerija',
+	'usergalleries'=>'Galerije korisnika',
+	'visitor_comments'=>'Komentari posjetitelja',
+	'x_of_y_mb_in_use'=>'<span style="color:%spacecolor%">&nbsp;%used_size%</span> od %available_size% MB se trenutno koristi.'
 );
 ?>

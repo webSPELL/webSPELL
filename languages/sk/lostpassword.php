@@ -2,50 +2,50 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Vesion 4       /                        /   /               #
+#           Version 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Fee Content / Management System                 #
+#                       Free Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyight 2005-2014 by webspell.og                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
-#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
-#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to emove this copyight-tag                      #
-#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
+#   visit webSPELL.org, webspell.info to get webSPELL for free           #
+#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to remove this copyright-tag                      #
+#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
-#   Fa Development by Development Team - webspell.og                   #
+#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
+#   Far Development by Development Team - webspell.org                   #
 #                                                                        #
-#   visit webspell.og                                                   #
+#   visit webspell.org                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_aay = Aay(
+$language_array = Array(
 
 /* do not edit above this line */
 
-	'email_failed'=>'Vyskytol sa poblém v posielaní E-mailu, posím kontaktujte WebMastea.',
-	'email_subject'=>'Vaše konto pe %pagetitle%',
-	'email_text'=>'Vaše konto pe %pagetitle%
+	'email_failed'=>'Vyskytol sa problém v posielaní E-mailu, prosím kontaktujte WebMastera.',
+	'email_subject'=>'Vaše konto pre %pagetitle%',
+	'email_text'=>'Vaše konto pre %pagetitle%
 POZOR! vaše heslo bolo zmenené
 
-vaše pihl. meno: %usename%
-vaše nové heslo: %new_passwod%
+vaše prihl. meno: %username%
+vaše nové heslo: %new_password%
 
-Užite si našu stánku
-%homepage_ul%',
-	'get_passwod'=>'získaj heslo',
-	'lost_passwod'=>'statené heslo',
-	'no_mail_given'=>'Nezadali ste žiadnu e-mailovú adesu.',
-	'no_use_found'=>'užívateľ nebol nájdený!',
-	'successful'=>'Vaše konto bolo nájdené<b><b>
-	O chvíľu dostanete E-mail s infomáciami o vašom konte.<b><b>
-	&#8226; <a hef="index.php?site=login">pihlásenie</a>',
-	'you_email'=>'Váš E-mail'
+Užite si našu stránku
+%homepage_url%',
+	'get_password'=>'získaj heslo',
+	'lost_password'=>'stratené heslo',
+	'no_mail_given'=>'Nezadali ste žiadnu e-mailovú adresu.',
+	'no_user_found'=>'užívateľ nebol nájdený!',
+	'successful'=>'Vaše konto bolo nájdené<br><br>
+	O chvíľu dostanete E-mail s informáciami o vašom konte.<br><br>
+	&#8226; <a href="index.php?site=login">prihlásenie</a>',
+	'your_email'=>'Váš E-mail'
 );
 ?>

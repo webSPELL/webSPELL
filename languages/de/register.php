@@ -2,72 +2,72 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Vesion 4       /                        /   /               #
+#           Version 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Fee Content / Management System                 #
+#                       Free Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyight 2005-2014 by webspell.og                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
-#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
-#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to emove this copyight-tag                      #
-#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
+#   visit webSPELL.org, webspell.info to get webSPELL for free           #
+#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to remove this copyright-tag                      #
+#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
-#   Fa Development by Development Team - webspell.og                   #
+#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
+#   Far Development by Development Team - webspell.org                   #
 #                                                                        #
-#   visit webspell.og                                                   #
+#   visit webspell.org                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_aay = Aay(
+$language_array = Array(
 
 /* do not edit above this line */
 
-	'activation_successful'=>'Deine Anmeldung wude efolgeich abgeschlossen.<b>Du kannst dich jetzt anmelden.',
-	'back'=>'zuück',
-	'ente_nickname'=>'Bitte einen Nicknamen eingeben.',
-	'ente_passwod'=>'Bitte ein Passwot eingeben.',
-	'ente_usename'=>'Bitte einen Benutzename eingeben.',
-	'eos_thee'=>'Es sind folgende Fehle aufgeteten',
-	'fo_login'=>'nu fü die Anmeldung',
-	'invalid_mail'=>'Die angegebene Mailadesse ist fehlehaft.',
+	'activation_successful'=>'Deine Anmeldung wurde erfolgreich abgeschlossen.<br>Du kannst dich jetzt anmelden.',
+	'back'=>'zurück',
+	'enter_nickname'=>'Bitte einen Nicknamen eingeben.',
+	'enter_password'=>'Bitte ein Passwort eingeben.',
+	'enter_username'=>'Bitte einen Benutzername eingeben.',
+	'errors_there'=>'Es sind folgende Fehler aufgetreten',
+	'for_login'=>'nur für die Anmeldung',
+	'invalid_mail'=>'Die angegebene Mailadresse ist fehlerhaft.',
 	'mail'=>'E-Mail',
-	'mail_activation_successful'=>'Das Feischalten deine Mailadesse wa efolgeich.',
-	'mail_failed'=>'Die Feischaltmail konnte nicht vesandt weden, bitte infomiee den Webmaste daübe.',
-	'mail_inuse'=>'Es existiet beeits eine Anmeldung fü diese Mailadesse.',
-	'mail_subject'=>'Anmeldebestätigung fü %homepage_ul%',
-	'mail_text'=>'Hallo %usename%!
+	'mail_activation_successful'=>'Das Freischalten deiner Mailadresse war erfolgreich.',
+	'mail_failed'=>'Die Freischaltmail konnte nicht versandt werden, bitte informiere den Webmaster darüber.',
+	'mail_inuse'=>'Es existiert bereits eine Anmeldung für diese Mailadresse.',
+	'mail_subject'=>'Anmeldebestätigung für %homepage_url%',
+	'mail_text'=>'Hallo %username%!
 
-Deine Anmeldung auf %pagetitle% (%homepage_ul%) wa efolgeich. Hie noch einmal deine Zugangsdaten:
+Deine Anmeldung auf %pagetitle% (%homepage_url%) war erfolgreich. Hier noch einmal deine Zugangsdaten:
 
-Dein Benutzename: %usename%
+Dein Benutzername: %username%
 
-Um deine Registieung jetzt abzuschließen, aktiviee deinen Account, indem du folgenden Link besuchst:
+Um deine Registrierung jetzt abzuschließen, aktiviere deinen Account, indem du folgenden Link besuchst:
 %activationlink%
 
-Vielen Dank fü deine Anmeldung
-%pagetitle% - %homepage_ul%',
+Vielen Dank für deine Anmeldung
+%pagetitle% - %homepage_url%',
 	'nickname'=>'Nickname',
-	'nickname_inuse'=>'De Nickname ist beeits vegeben.',
-	'no_egiste_when_loggedin'=>'Du hast beeits einen Accout auf %pagename%.',
-	'passwod'=>'Passwot',
-	'pofile_info'=>'Anmeldeinfomationen',
-	'egiste_now'=>'Jetzt Anmelden!',
-	'egiste_successful'=>'Deine Anmeldung wude efolgeich abgeschlossen. Du wist in wenigen Minuten eine E-Mail mit dem Feischaltcode ehalten, damit du deinen Account aktivieen kannst. Danach ist die Registieung vollständig.',
-	'egistation'=>'Registieung',
-	'epeat'=>'Passwot wiedeholen',
-	'epeat_invalid'=>'Die Passwotwiedeholung ist falsch.',
-	'secuity_code'=>'Sicheheitscode',
-	'usename'=>'Benutzename',
-	'usename_inuse'=>'De Benutzename ist beeits vegeben.',
-	'usename_toolong'=>'De Benutzename ist zu lang (max. 30 Zeichen).',
-	'wong_activationkey'=>'Dein Feischaltcode ist falsch!',
-	'wong_secuitycode'=>'De Sicheheitscode ist falsch!'
+	'nickname_inuse'=>'Der Nickname ist bereits vergeben.',
+	'no_register_when_loggedin'=>'Du hast bereits einen Accout auf %pagename%.',
+	'password'=>'Passwort',
+	'profile_info'=>'Anmeldeinformationen',
+	'register_now'=>'Jetzt Anmelden!',
+	'register_successful'=>'Deine Anmeldung wurde erfolgreich abgeschlossen. Du wirst in wenigen Minuten eine E-Mail mit dem Freischaltcode erhalten, damit du deinen Account aktivieren kannst. Danach ist die Registrierung vollständig.',
+	'registration'=>'Registrierung',
+	'repeat'=>'Passwort wiederholen',
+	'repeat_invalid'=>'Die Passwortwiederholung ist falsch.',
+	'security_code'=>'Sicherheitscode',
+	'username'=>'Benutzername',
+	'username_inuse'=>'Der Benutzername ist bereits vergeben.',
+	'username_toolong'=>'Der Benutzername ist zu lang (max. 30 Zeichen).',
+	'wrong_activationkey'=>'Dein Freischaltcode ist falsch!',
+	'wrong_securitycode'=>'Der Sicherheitscode ist falsch!'
 );
 ?>

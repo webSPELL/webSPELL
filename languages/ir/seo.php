@@ -2,78 +2,78 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Vesion 4       /                        /   /               #
+#           Version 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Fee Content / Management System                 #
+#                       Free Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyight 2005-2014 by webspell.og                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
-#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
-#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to emove this copyight-tag                      #
-#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
+#   visit webSPELL.org, webspell.info to get webSPELL for free           #
+#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to remove this copyright-tag                      #
+#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
-#   Fa Development by Development Team - webspell.og                   #
+#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
+#   Far Development by Development Team - webspell.org                   #
 #                                                                        #
-#   visit webspell.og                                                   #
+#   visit webspell.org                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_aay = Aay(
+$language_array = Array(
 
 /* do not edit above this line */
 
   'about'=>'در مورد ما',
-  'achive'=>'ارشیو',
-  'aticles'=>'مقالات',
-  'awads'=>'جوایز',
+  'archive'=>'ارشیو',
+  'articles'=>'مقالات',
+  'awards'=>'جوایز',
   'buddys'=>'دوستان',
-  'calenda'=>'تاریخ',
+  'calendar'=>'تاریخ',
   'cash_box'=>'صفحه پرداخت',
   'challenge'=>'مسابقات',
-  'clanwas'=>'مسابقات کلن',
-  'clanwas_details'=>'مسابقات در برابر',
+  'clanwars'=>'مسابقات کلن',
+  'clanwars_details'=>'مسابقات در برابر',
   'contact'=>'ارتباط',
   'demo'=>'دمو',
   'demos'=>'دمو ها',
   'faq'=>'FAQ',
   'files'=>'فایل ها',
-  'foum'=>'فروم',
-  'galley'=>'گالری',
+  'forum'=>'فروم',
+  'gallery'=>'گالری',
   'guestbook'=>'کتابچه مهمان',
-  'histoy'=>'تاریخچه',
-  'impint'=>'قرار دادن',
+  'history'=>'تاریخچه',
+  'imprint'=>'قرار دادن',
   'joinus'=>'به ما ملحق شوید',
   'links'=>'لینک',
   'linkus'=>'لینک کردن',
   'login'=>'ورود',
-  'loginoveview'=>'مرور ورود',
-  'lostpasswod'=>'کلمه عبور',
-  'membes'=>'اعضا',
-  'messenge'=>'مسنجر',
-  'mypofile'=>'تنظیمات پروفایل',
+  'loginoverview'=>'مرور ورود',
+  'lostpassword'=>'کلمه عبور',
+  'members'=>'اعضا',
+  'messenger'=>'مسنجر',
+  'myprofile'=>'تنظیمات پروفایل',
   'news'=>'اخبار',
-  'newslette'=>'خبرنامه',
-  'patnes'=>'شريك',
+  'newsletter'=>'خبرنامه',
+  'partners'=>'شريك',
   'polls'=>'سرانه',
-  'pofile'=>'پروفایل از',
-  'egiste'=>'غضویت',
-  'egisteed_uses'=>'کاربران عضو',
-  'seach'=>'جستجو',
-  'seve'=>'سرور',
+  'profile'=>'پروفایل از',
+  'register'=>'غضویت',
+  'registered_users'=>'کاربران عضو',
+  'search'=>'جستجو',
+  'server'=>'سرور',
   'shoutbox'=>'چت باکس',
-  'sponsos'=>'اسپانسرها',
+  'sponsors'=>'اسپانسرها',
   'squads'=>'گروه ها',
-  'stat'=>'صفحه نخست',
+  'start'=>'صفحه نخست',
   'stats'=>'وضعیت',
-  'usegalley'=>'گالری کاربر',
-  'vesus'=>'برضد',
+  'usergallery'=>'گالری کاربر',
+  'versus'=>'برضد',
   'whoisonline'=>'چه کسی انلاین است'
 );
 ?>

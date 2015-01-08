@@ -2,48 +2,48 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Vesion 4       /                        /   /               #
+#           Version 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Fee Content / Management System                 #
+#                       Free Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyight 2005-2014 by webspell.og                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
-#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
-#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to emove this copyight-tag                      #
-#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
+#   visit webSPELL.org, webspell.info to get webSPELL for free           #
+#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to remove this copyright-tag                      #
+#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
-#   Fa Development by Development Team - webspell.og                   #
+#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
+#   Far Development by Development Team - webspell.org                   #
 #                                                                        #
-#   visit webspell.og                                                   #
+#   visit webspell.org                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_aay = Aay(
+$language_array = Array(
 
 /* do not edit above this line */
 
   'access_denied'=>'Access denied',
   'actions'=>'Actions',
-  'add_ubic'=>'add Rubic',
+  'add_rubric'=>'add Rubric',
   'back'=>'back',
   'delete'=>'delete',
   'edit'=>'edit',
-  'edit_ubic'=>'edit Rubic',
-  'fomat_incoect'=>'The fomat of the icon was incoect. Please upload only banne in *.gif, *.jpg and *.png fomat.',
-  'infomation_incomplete'=>'Some infomation is missing.',
-  'new_ubic'=>'new Rubic',
-  'news_ubics'=>'News Rubics',
-  'pictue'=>'Pictue',
-  'pictue_upload'=>'Pictue Upload',
-  'eally_delete'=>'Really delete this Rubic?',
-  'ubic_name'=>'Rubic Name',
-  'tansaction_invalid'=>'Tansaction ID invalid'
+  'edit_rubric'=>'edit Rubric',
+  'format_incorrect'=>'The format of the icon was incorrect. Please upload only banner in *.gif, *.jpg and *.png format.',
+  'information_incomplete'=>'Some information is missing.',
+  'new_rubric'=>'new Rubric',
+  'news_rubrics'=>'News Rubrics',
+  'picture'=>'Picture',
+  'picture_upload'=>'Picture Upload',
+  'really_delete'=>'Really delete this Rubric?',
+  'rubric_name'=>'Rubric Name',
+  'transaction_invalid'=>'Transaction ID invalid'
 );
 ?>

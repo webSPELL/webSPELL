@@ -2,86 +2,86 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Vesion 4       /                        /   /               #
+#           Version 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Fee Content / Management System                 #
+#                       Free Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyight 2005-2014 by webspell.og                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
-#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
-#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to emove this copyight-tag                      #
-#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
+#   visit webSPELL.org, webspell.info to get webSPELL for free           #
+#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to remove this copyright-tag                      #
+#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
-#   Fa Development by Development Team - webspell.og                   #
+#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
+#   Far Development by Development Team - webspell.org                   #
 #                                                                        #
-#   visit webspell.og                                                   #
+#   visit webspell.org                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_aay = Aay(
+$language_array = Array(
 
 /* do not edit above this line */
 
-	'align'=>'Poavnanje',
+	'align'=>'Poravnanje',
 	'blue'=>'Plava',
-	'bulywood'=>'Svijetlo-smeđa',
-	'cente'=>'Centa',
+	'burlywood'=>'Svijetlo-smeđa',
+	'center'=>'Centar',
 	'chocolate'=>'Čokolada',
-	'colo'=>'BOJA',
-	'coal'=>'Koaljna',
-	'cimson'=>'Tamno cvena',
-	'dakblue'=>'Tamno plava',
-	'daked'=>'Tamno cvena',
+	'color'=>'BOJA',
+	'coral'=>'Koraljna',
+	'crimson'=>'Tamno crvena',
+	'darkblue'=>'Tamno plava',
+	'darkred'=>'Tamno crvena',
 	'deeppink'=>'Roza',
-	'fiebick'=>'Smeđa',
+	'firebrick'=>'Smeđa',
 	'font'=>'FONT',
-	'geen'=>'Zelena',
-	'huge'=>'Ogoman',
+	'green'=>'Zelena',
+	'huge'=>'Ogroman',
 	'indigo'=>'Indigo',
 	'justify'=>'Izjednači',
-	'lage'=>'Veliki',
+	'large'=>'Veliki',
 	'left'=>'Lijevo',
-	'limegeen'=>'Svjetlo zelena',
-	'moe_flags'=>'Više zastava',
-	'nomal'=>'nomalan',
-	'oange'=>'Naančasta',
-	'oangeed'=>'Naančasto cvena',
-	'puple'=>'Ljubičasta',
-	'ed'=>'Cvena',
-	'ight'=>'Desno',
-	'oyalblue'=>'Kaljevsko plava',
-	'sandybown'=>'Pijesak smeđa',
-	'seageen'=>'Mosko zelena',
+	'limegreen'=>'Svjetlo zelena',
+	'more_flags'=>'Više zastava',
+	'normal'=>'normalan',
+	'orange'=>'Narančasta',
+	'orangered'=>'Narančasto crvena',
+	'purple'=>'Ljubičasta',
+	'red'=>'Crvena',
+	'right'=>'Desno',
+	'royalblue'=>'Kraljevsko plava',
+	'sandybrown'=>'Pijesak smeđa',
+	'seagreen'=>'Morsko zelena',
 	'sienna'=>'Zagasita žuta',
-	'silve'=>'Sebna',
+	'silver'=>'Srebrna',
 	'size'=>'VELIČINA',
 	'skyblue'=>'Nebesko plava',
 	'small'=>'Malen',
 	'teal'=>'Plavo-zelena',
-	'tiny'=>'Minijatuan',
+	'tiny'=>'Minijaturan',
 	'tomato'=>'Rajčica',
-	'unevenAmount'=>'Nejednaka količina otvoenih i zatvoenih BBKod tagova',
-	'fistTagClosingTag'=>'Pvi BBKod tag nemože biti zatvaajući',
-	'notSameAmount'=>'Nije isti boj otvoenih i zatvoenih BBKod tagova',
-	'wongNesting'=>'Kivo smještanje BBKod tagova',
-	'listguide'=>'Unesite \'1\' za numeianu listu, \'a\' za listu slovima o \'\' za nenumeianu listu',
-	'listpoint'=>'Unesite tekst koji će odgovaati ovoj točki u listi. Nemoj upisati ništa ili klikni \'Odustani\' da bi zavšili listu.',
+	'unevenAmount'=>'Nejednaka količina otvorenih i zatvorenih BBKod tagova',
+	'firstTagClosingTag'=>'Prvi BBKod tag nemože biti zatvarajući',
+	'notSameAmount'=>'Nije isti broj otvorenih i zatvorenih BBKod tagova',
+	'wrongNesting'=>'Krivo smještanje BBKod tagova',
+	'listguide'=>'Unesite \'1\' za numeriranu listu, \'a\' za listu slovima or \'\' za nenumeriranu listu',
+	'listpoint'=>'Unesite tekst koji će odgovarati ovoj točki u listi. Nemoj upisati ništa ili klikni \'Odustani\' da bi završili listu.',
 	'addcode'=>'Unesi na poziciju',
-	'ead_moe'=>'Opšinije',
-	'mc_you_have'=>'Boj novih pouka',
-	'mc_new_messages'=>'. Želite li ih počitati sada?',
+	'read_more'=>'Opširnije',
+	'mc_you_have'=>'Broj novih poruka',
+	'mc_new_messages'=>'. Želite li ih pročitati sada?',
 	'na'=>'nije dostupno',
-	'wote'=>'je napisao',
-	'auto_esize'=>'Automatsko smanjivanje',
+	'wrote'=>'je napisao',
+	'auto_resize'=>'Automatsko smanjivanje',
 	'code'=>'Kod',
-	'lage_pictue'=>'velika slika',
-	'show_oiginal'=>'Pikaži oiginal'
+	'large_picture'=>'velika slika',
+	'show_original'=>'Prikaži original'
 );
 ?>

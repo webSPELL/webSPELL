@@ -2,42 +2,42 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Vesion 4       /                        /   /               #
+#           Version 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Fee Content / Management System                 #
+#                       Free Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyight 2005-2014 by webspell.og                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
-#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
-#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to emove this copyight-tag                      #
-#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
+#   visit webSPELL.org, webspell.info to get webSPELL for free           #
+#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to remove this copyright-tag                      #
+#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
-#   Fa Development by Development Team - webspell.og                   #
+#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
+#   Far Development by Development Team - webspell.org                   #
 #                                                                        #
-#   visit webspell.og                                                   #
+#   visit webspell.org                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_aay = Aay(
+$language_array = Array(
 
 /* do not edit above this line */
 
   'all_demos'=>'تمام دمو ها',
-  'alleady_ated'=>'شما تا کنون این دمو را نمره داده اید',
+  'allready_rated'=>'شما تا کنون این دمو را نمره داده اید',
   'clan1'=>'کلن 1',
-  'clan1_county'=>'کلن کشور 1',
+  'clan1_country'=>'کلن کشور 1',
   'clan1_homepage'=>'وب سایت کلن 1',
   'clan1_name'=>'نام کامل کلن 1',
   'clan1_tag'=>'تگ کلن 1',
   'clan2'=>'کلن 2',
-  'clan2_county'=>'کلن کشور 2',
+  'clan2_country'=>'کلن کشور 2',
   'clan2_homepage'=>'وب سایت کلن 2',
   'clan2_name'=>'نام کامل کلن 2',
   'clan2_tag'=>'تگ کلن 2',
@@ -53,7 +53,7 @@ $language_aay = Aay(
   'downloads'=>'دانلود ها',
   'edit'=>'ادیت',
   'edit_demo'=>'ادیت دمو',
-  'exten_link'=>'لینک خروجی',
+  'extern_link'=>'لینک خروجی',
   'file_exists'=>'!این فایل هم اکنون وجود دارد',
   'game'=>'بازی',
   'league'=>'لیگ',
@@ -63,19 +63,19 @@ $language_aay = Aay(
   'new_demo'=>'دموی جدید',
   'no_access'=>'!ورود غیر ممکن',
   'no_demos'=>'دمو موجود نیست',
-  'pefect'=>'عالی',
-  'playes'=>'بازیکنان',
-  'poo'=>'ضعیف',
-  'ate'=>'نمره دادن',
-  'ate_with'=>'10 تا0 نمره از',
-  'ating'=>'نمره دادن',
+  'perfect'=>'عالی',
+  'players'=>'بازیکنان',
+  'poor'=>'ضعیف',
+  'rate'=>'نمره دادن',
+  'rate_with'=>'10 تا0 نمره از',
+  'rating'=>'نمره دادن',
   'save_demo'=>'ذخیره دمو',
-  'sot'=>'بر حسب',
+  'sort'=>'بر حسب',
   'to_download'=>'!برای اینکه بتوانید دانلود کنید باید عضو شوید',
-  'to_ate'=>'!برای اینکه بتوانید نمره دهید باید عضو شوید',
+  'to_rate'=>'!برای اینکه بتوانید نمره دهید باید عضو شوید',
   'update_demo'=>'اپلود دمو',
-  'use_comments'=>'فعال کردن کامنت برای کاربران',
-  'visito_comments'=>'فعال کردن کامنت برای مهمان ها',
+  'user_comments'=>'فعال کردن کامنت برای کاربران',
+  'visitor_comments'=>'فعال کردن کامنت برای مهمان ها',
   'vs'=>'در مقابل'
 );
 ?>

@@ -2,106 +2,106 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Vesion 4       /                        /   /               #
+#           Version 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Fee Content / Management System                 #
+#                       Free Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyight 2005-2014 by webspell.og                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
-#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
-#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to emove this copyight-tag                      #
-#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
+#   visit webSPELL.org, webspell.info to get webSPELL for free           #
+#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to remove this copyright-tag                      #
+#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
-#   Fa Development by Development Team - webspell.og                   #
+#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
+#   Far Development by Development Team - webspell.org                   #
 #                                                                        #
-#   visit webspell.og                                                   #
+#   visit webspell.org                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_aay = Aay(
+$language_array = Array(
 
 /* do not edit above this line */
 
-	'access_membe'=>'matomas tik komandos naiams',
-	'add_clanwa'=>'Pidėti klano kovą',
-	'add_clanwas'=>'pisidėti į klano kovą',
-	'add_event'=>'Pidėti įvykį',
-	'announce_hee'=>'skelbkites čia',
+	'access_member'=>'matomas tik komandos nariams',
+	'add_clanwar'=>'Pridėti klano kovą',
+	'add_clanwars'=>'prisidėti į klano kovą',
+	'add_event'=>'Pridėti įvykį',
+	'announce_here'=>'skelbkites čia',
 	'announce_to'=>'Skelbkites dėl šio Klano kovos/Įvykio:',
-	'announcements'=>'Panešimai:',
-	'ap'=>'Balandis',
+	'announcements'=>'Pranešimai:',
+	'apr'=>'Balandis',
 	'aug'=>'Rugpjūtis',
-	'calenda'=>'kalendoius',
-	'clanwadetails'=>'Klano kovos detalės',
-	'clanwa_message'=>'new upcoming clanwa on %date%:[b][b]Opponent: [flag]%opponent_flag%[/flag] [ul=%opp_hp%]%opponent%[/ul] [b]League: [ul=%league_hp%]%league%[/ul] [b]Info: %wainfo%[b][b][ul=index.php?site=calenda]link to calenda[/ul]',
-	'clanwa_message_title'=>'new upcoming wa in calenda!',
+	'calendar'=>'kalendorius',
+	'clanwardetails'=>'Klano kovos detalės',
+	'clanwar_message'=>'new upcoming clanwar on %date%:[br][br]Opponent: [flag]%opponent_flag%[/flag] [url=%opp_hp%]%opponent%[/url] [br]League: [url=%league_hp%]%league%[/url] [br]Info: %warinfo%[br][br][url=index.php?site=calendar]link to calendar[/url]',
+	'clanwar_message_title'=>'new upcoming war in calendar!',
 	'date_time'=>'Data - Laikas',
-	'dec'=>'Guodis',
-	'delete'=>'ištinti',
-	'displayed_in'=>'odytas kalendoiuje',
-	'edit'=>'edeguoti',
+	'dec'=>'Gruodis',
+	'delete'=>'ištrinti',
+	'displayed_in'=>'rodytas kalendoriuje',
+	'edit'=>'redeguoti',
 	'editevent'=>'Redeguoti įvykį',
-	'editwa'=>'Redeguoti klano kovą',
+	'editwar'=>'Redeguoti klano kovą',
 	'end_datetime'=>'Pabaiga: Data - Laikas',
 	'eventdetails'=>'Įvykio detalės',
-	'feb'=>'Vasais',
-	'fi'=>'Penkt',
+	'feb'=>'Vasaris',
+	'fri'=>'Penkt',
 	'homepage'=>'Namų puslapis:',
-	'infomation'=>'Infomacija',
+	'information'=>'Informacija',
 	'jan'=>'Sausis',
 	'jul'=>'Liepa',
-	'jun'=>'Biželis',
+	'jun'=>'Birželis',
 	'league'=>'Lyga',
 	'leaguehp'=>'Lygos Namų puslapis',
 	'location'=>'Vieta:',
 	'longtitle'=>'Ilgas pavadinimas',
 	'maps'=>'Žemėlapiai',
-	'ma'=>'Kovas',
+	'mar'=>'Kovas',
 	'may'=>'Gegužė',
-	'mon'=>'Pim',
+	'mon'=>'Pirm',
 	'new_date'=>'Naujas įvykis',
-	'new_wa'=>'Paskelbkite naują klano kovą',
+	'new_war'=>'Paskelbkite naują klano kovą',
 	'no'=>'Ne',
-	'no_access'=>'Pieiga negalima',
+	'no_access'=>'Prieiga negalima',
 	'no_announced'=>'niekas nesiskelbė ligi šiol',
-	'no_enties'=>'Tuščia, nieko nėa.',
-	'no_text'=>'Jokio teksto nėa',
-	'nov'=>'Lapkitis',
+	'no_entries'=>'Tuščia, nieko nėra.',
+	'no_text'=>'Jokio teksto nėra',
+	'nov'=>'Lapkritis',
 	'oct'=>'Spalis',
-	'opponent'=>'Piešininkas',
-	'opponentcounty'=>'Piešininko šalis',
-	'opponenthp'=>'Piešininko namų puslapis',
-	'opponenttag'=>'Piešininko klano užašas',
-	'pehaps'=>'Gal',
-  'eally_delete'=>'Tikai noite ištinti?',
+	'opponent'=>'Priešininkas',
+	'opponentcountry'=>'Priešininko šalis',
+	'opponenthp'=>'Priešininko namų puslapis',
+	'opponenttag'=>'Priešininko klano užrašas',
+	'perhaps'=>'Gal',
+  'really_delete'=>'Tikrai norite ištrinti?',
 	'sat'=>'Šešt',
 	'save_announcement'=>'Išsaugoti skelbimą',
 	'save_event'=>'Išsaugoti įvykį',
-	'save_wa'=>'Išsaugoti klano kovų skelbimus',
-	'send_message'=>'išsiųsti žinutę visiems klano naiams',
+	'save_war'=>'Išsaugoti klano kovų skelbimus',
+	'send_message'=>'išsiųsti žinutę visiems klano nariams',
 	'sep'=>'Rugsėjis',
-	'seve'=>'Seveis',
-	'shottitle'=>'Tumpas pavadinimas',
+	'server'=>'Serveris',
+	'shorttitle'=>'Trumpas pavadinimas',
 	'squad'=>'Komanda',
-	'stat_datetime'=>'Padžia: Data - Laikas',
+	'start_datetime'=>'Pradžia: Data - Laikas',
 	'sun'=>'Sekm',
-	'thu'=>'Ketv',
+	'thu'=>'Ketvr',
 	'today_events'=>'Rodyti šiandienos įvykius',
-	'tue'=>'Ant',
+	'tue'=>'Antr',
 	'updateevent'=>'Atnaujinti įvykį',
-	'updatewa'=>'Atnaujinti klano kovą',
-	'wed'=>'Teč',
+	'updatewar'=>'Atnaujinti klano kovą',
+	'wed'=>'Treč',
 	'yes'=>'Taip',
-	'you_have_to_be_clanmembe'=>'Jūs tuite būtų klano nays, kad matyti tai.',
-	'ente_shot'=>'Jūs neįašėte tumpo pavadinimo!',
-	'ente_title'=>'Jūs neįašėte jokio ilgo pavadinimo!',
-	'ente_info'=>'Jūs neįašėte jokios infomacijos!'
+	'you_have_to_be_clanmember'=>'Jūs turite būtų klano narys, kad matyti tai.',
+	'enter_short'=>'Jūs neįrašėte trumpo pavadinimo!',
+	'enter_title'=>'Jūs neįrašėte jokio ilgo pavadinimo!',
+	'enter_info'=>'Jūs neįrašėte jokios informacijos!'
 );
 ?>

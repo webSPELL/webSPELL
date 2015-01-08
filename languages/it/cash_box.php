@@ -2,62 +2,62 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Vesion 4       /                        /   /               #
+#           Version 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Fee Content / Management System                 #
+#                       Free Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyight 2005-2014 by webspell.og                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
-#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
-#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to emove this copyight-tag                      #
-#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
+#   visit webSPELL.org, webspell.info to get webSPELL for free           #
+#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to remove this copyright-tag                      #
+#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
-#   Fa Development by Development Team - webspell.og                   #
+#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
+#   Far Development by Development Team - webspell.org                   #
 #                                                                        #
-#   visit webspell.og                                                   #
+#   visit webspell.org                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_aay = Aay(
+$language_array = Array(
 
 /* do not edit above this line */
 
 	'add_payment'=>'Aggiungi il pagamento',
 	'amount'=>'Quantità',
 	'bank_account'=>'Bank conto',
-	'calculate'=>'Calcolae',
+	'calculate'=>'Calcolare',
 	'cash_box'=>'Acquista',
 	'clan'=>'Clan',
-	'clanmembes_only'=>'Accesso solo pe i pesoni del clan',
-	'costs_membe'=>'Costi/Membi',
+	'clanmembers_only'=>'Accesso solo per i personi del clan',
+	'costs_member'=>'Costi/Membri',
 	'ddmmyyyy'=>'gg.mm.aaaa',
-	'delete'=>'cancellae',
-	'each_squad'=>'Ogni squada',
-	'edit'=>'modificae',
-	'ente_costs_membe'=>'Metti i costi pe una pesona.',
-	'ente_date'=>'È necessaio di specificae una data',
-	'ente_total_costs'=>'È necessaio inseie il costo totale.',
-	'ente_usage'=>'Metti un Scopo.',
+	'delete'=>'cancellare',
+	'each_squad'=>'Ogni squadra',
+	'edit'=>'modificare',
+	'enter_costs_member'=>'Metti i costi per una persona.',
+	'enter_date'=>'È necessario di specificare una data',
+	'enter_total_costs'=>'È necessario inserire il costo totale.',
+	'enter_usage'=>'Metti un Scopo.',
 	'info'=>'info',
-	'invalid_equest'=>'Invito non valido',
-	'membe'=>'pesone del clan',
+	'invalid_request'=>'Invito non valido',
+	'member'=>'persone del clan',
 	'new_usage'=>'Nuovo Scopo',
-	'no_enties'=>'Nessun dicitue',
-	'not_paid'=>'ancoa non pagato',
+	'no_entries'=>'Nessun diciture',
+	'not_paid'=>'ancora non pagato',
 	'paid'=>'pagato',
-	'pay_until'=>'pegae fino',
-	'eally_delete'=>'Registazione veamente cancellae?',
-	'saved_on'=>'egistato il',
+	'pay_until'=>'pegare fino',
+	'really_delete'=>'Registrazione veramente cancellare?',
+	'saved_on'=>'registrato il',
 	'squad'=>'Team',
-	'submit'=>'salvae',
-	'total_amount'=>'Impoto totale del fondo (completo clan)',
+	'submit'=>'salvare',
+	'total_amount'=>'Importo totale del fondo (completo clan)',
 	'total_costs'=>'Costo totale',
 	'update'=>'Rinnova',
 	'usage'=>'Scopo'

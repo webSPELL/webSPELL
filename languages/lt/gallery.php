@@ -2,74 +2,74 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Vesion 4       /                        /   /               #
+#           Version 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Fee Content / Management System                 #
+#                       Free Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyight 2005-2014 by webspell.og                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
-#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
-#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to emove this copyight-tag                      #
-#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
+#   visit webSPELL.org, webspell.info to get webSPELL for free           #
+#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to remove this copyright-tag                      #
+#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
-#   Fa Development by Development Team - webspell.og                   #
+#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
+#   Far Development by Development Team - webspell.org                   #
 #                                                                        #
-#   visit webspell.og                                                   #
+#   visit webspell.org                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_aay = Aay(
+$language_array = Array(
 
 /* do not edit above this line */
 
 	'back'=>'Atgal',
-	'categoy'=>'Kategoija',
-	'comment'=>'Komentaas',
-	'comments'=>'Komentaai',
+	'category'=>'Kategorija',
+	'comment'=>'Komentaras',
+	'comments'=>'Komentarai',
 	'date'=>'Data',
-	'delete'=>'ištinti',
+	'delete'=>'ištrinti',
 	'edit'=>'Redeguoti',
-	'edit_pictue'=>'edeguoti nuotauką',
-	'galleies'=>'galeijos',
-	'galley'=>'Galeija',
-	'latest_galley'=>'Paskutinės galeijos',
-	'most_comments'=>'Daugiausia komentaų',
-	'name'=>'Vadas',
+	'edit_picture'=>'redeguoti nuotrauką',
+	'galleries'=>'galerijos',
+	'gallery'=>'Galerija',
+	'latest_gallery'=>'Paskutinės galerijos',
+	'most_comments'=>'Daugiausia komentarų',
+	'name'=>'Vardas',
 	'next'=>'Kitas',
-	'no_comments'=>'Įšjungti komentaus',
-	'no_galley_exists'=>'Jokių galeijū neegzistuoja!',
-	'no_pic_set'=>'Nėa užstatytų nuotaukų',
-	'no_pictue'=>'Nuotauka neegzistuoja!',
+	'no_comments'=>'Įšjungti komentarus',
+	'no_gallery_exists'=>'Jokių galerijū neegzistuoja!',
+	'no_pic_set'=>'Nėra užstatytų nuotraukų',
+	'no_picture'=>'Nuotrauka neegzistuoja!',
 	'page_s'=>'puslapis(-iai)',
-	'pefect'=>'puikus',
+	'perfect'=>'puikus',
 	'pg_1_1'=>'puslapis 1 iš 1',
-	'pictue'=>'Nuotauka',
-	'pictues'=>'Nuotaukos',
-	'poo'=>'blogas',
-	'andom_pictue'=>'Atsitiktinė nuotauka',
-	'ate'=>'įvetinti',
-	'ate_have_to_eg_login'=>'Įvetinti: Jūs tuite užsiegistuoti i pisijungti!',
-	'ate_now'=>'Įvetinti daba!',
-	'ating'=>'Įvetinimas',
-	'eally_del'=>'tikai noite ištinti?',
-	'eset_views'=>'Atstatyti pežiūėjimus',
-	'show_galleies'=>'Rodyti Galeijas',
-	'stat_diashow'=>'Padėti Dia odymą',
-	'update_pictue'=>'atnaujinti nuotauką',
-	'use_comments'=>'Įjungti vatotojo komentaus',
-	'usegalleies'=>'Vatotojų galeijos',
-	'views'=>'Pežiūėjimai',
-	'visito_comments'=>'Įjungti lankytojo komentaus',
+	'picture'=>'Nuotrauka',
+	'pictures'=>'Nuotraukos',
+	'poor'=>'blogas',
+	'random_picture'=>'Atsitiktinė nuotrauka',
+	'rate'=>'įvertinti',
+	'rate_have_to_reg_login'=>'Įvertinti: Jūs turite užsiregistruoti ir prisijungti!',
+	'rate_now'=>'Įvertinti dabar!',
+	'rating'=>'Įvertinimas',
+	'really_del'=>'tikrai norite ištrinti?',
+	'reset_views'=>'Atstatyti peržiūrėjimus',
+	'show_galleries'=>'Rodyti Galerijas',
+	'start_diashow'=>'Pradėti Dia rodymą',
+	'update_picture'=>'atnaujinti nuotrauką',
+	'user_comments'=>'Įjungti vartotojo komentarus',
+	'usergalleries'=>'Vartotojų galerijos',
+	'views'=>'Peržiūrėjimai',
+	'visitor_comments'=>'Įjungti lankytojo komentarus',
 	'votes'=>'balsai',
 	'webs_diashow'=>'webSPELL Dia Rodymas:',
-	'you_have_aleady_ated'=>'Jūs jau įvetinote.',
-	'no_thumb'=>'Nėa Thumb'
+	'you_have_already_rated'=>'Jūs jau įvertinote.',
+	'no_thumb'=>'Nėra Thumb'
 );
 ?>

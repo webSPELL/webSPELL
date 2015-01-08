@@ -2,64 +2,64 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Vesion 4       /                        /   /               #
+#           Version 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Fee Content / Management System                 #
+#                       Free Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyight 2005-2014 by webspell.og                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
-#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
-#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to emove this copyight-tag                      #
-#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
+#   visit webSPELL.org, webspell.info to get webSPELL for free           #
+#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to remove this copyright-tag                      #
+#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
-#   Fa Development by Development Team - webspell.og                   #
+#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
+#   Far Development by Development Team - webspell.org                   #
 #                                                                        #
-#   visit webspell.og                                                   #
+#   visit webspell.org                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_aay = Aay(
+$language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Hozzáféés megtagadva',
+  'access_denied'=>'Hozzáférés megtagadva',
   'actions'=>'Lehetőségek',
-  'add_sponso'=>'Szponzo hozzáadása',
+  'add_sponsor'=>'Szponzor hozzáadása',
   'back'=>'Vissza',
-  'banne'=>'Banne',
-  'banne_to_big'=>'A banne túl nagy',
-  'banne_upload'=>'Banne Feltöltése',
-  'banne_upload_info'=>'az "sc_sponsos"-ban jelenik meg',
-  'banne_upload_small'=>'Banne Feltöltése (kicsi)',
+  'banner'=>'Banner',
+  'banner_to_big'=>'A banner túl nagy',
+  'banner_upload'=>'Banner Feltöltése',
+  'banner_upload_info'=>'az "sc_sponsors"-ban jelenik meg',
+  'banner_upload_small'=>'Banner Feltöltése (kicsi)',
   'clicks'=>'Kattintások (naponta)',
-  'cuent_banne'=>'Jelenlegi Banne',
-  'cuent_banne_small'=>'Jelenlegi Banne (kicsi)',
-  'delete'=>'Tölés',
-  'desciption'=>'Leíás',
-  'edit'=>'Szekesztés',
-  'edit_sponso'=>'Szponzo szekesztése',
-  'fomat_incoect'=>'A kép fomátuma nem megfelelő. A kép kitejesztése csak *.gif, *.jpg and *.png lehet.',
+  'current_banner'=>'Jelenlegi Banner',
+  'current_banner_small'=>'Jelenlegi Banner (kicsi)',
+  'delete'=>'Törlés',
+  'description'=>'Leírás',
+  'edit'=>'Szerkesztés',
+  'edit_sponsor'=>'Szponzor szerkesztése',
+  'format_incorrect'=>'A kép formátuma nem megfelelő. A kép kiterjesztése csak *.gif, *.jpg and *.png lehet.',
   'is_displayed'=>'Megjelenítés?',
-  'mainsponso'=>'Főszponzo',
-  'new_sponso'=>'Új Szponzo',
+  'mainsponsor'=>'Főszponzor',
+  'new_sponsor'=>'Új Szponzor',
   'no'=>'Nem',
   'no_upload'=>'Nincs feltöltött kép',
-  'no_enties'=>'Nincs bejegyzés',
-  'eally_delete'=>'Biztosan töölni akaod ezt a bannet?',
-  'sot'=>'Rendezés',
-  'sponso'=>'Szponzo',
-  'sponso_name'=>'Szponzo Neve',
-  'sponso_ul'=>'Szponzo URL',
-  'sponsos'=>'Szponzook',
-  'tansaction_invalid'=>'A művelet azonosítója événytelen',
-  'to_sot'=>'Rendezés',
+  'no_entries'=>'Nincs bejegyzés',
+  'really_delete'=>'Biztosan törölni akarod ezt a bannert?',
+  'sort'=>'Rendezés',
+  'sponsor'=>'Szponzor',
+  'sponsor_name'=>'Szponzor Neve',
+  'sponsor_url'=>'Szponzor URL',
+  'sponsors'=>'Szponzorok',
+  'transaction_invalid'=>'A művelet azonosítója érvénytelen',
+  'to_sort'=>'Rendezés',
   'yes'=>'Igen'
 );
 ?>

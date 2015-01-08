@@ -2,54 +2,54 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Vesion 4       /                        /   /               #
+#           Version 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Fee Content / Management System                 #
+#                       Free Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyight 2005-2014 by webspell.og                                  #
+#   Copyright 2005-2014 by webspell.org                                  #
 #                                                                        #
-#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
-#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to emove this copyight-tag                      #
-#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
+#   visit webSPELL.org, webspell.info to get webSPELL for free           #
+#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to remove this copyright-tag                      #
+#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
-#   Fa Development by Development Team - webspell.og                   #
+#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
+#   Far Development by Development Team - webspell.org                   #
 #                                                                        #
-#   visit webspell.og                                                   #
+#   visit webspell.org                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_aay = Aay(
+$language_array = Array(
 
 /* do not edit above this line */
 
-	'del_fom_mail_list'=>'Von de Liste entfenen',
-	'del_key'=>'Entfenungscode',
-	'delete'=>'entfenen',
-	'deletion_key'=>'Entfenungscode',
-	'email_not_valid'=>'Deine E-Mail Adesse ist nicht gültig!',
-	'lost_deletion_key'=>'Entfenungscode veloen?',
-	'mail_adess'=>'E-Mail Adesse',
-	'mail_pw_didnt_match'=>'Die E-Mail und das Passwot stimmt nicht übeein.',
-	'mail_not_in_db'=>'Die eingegebene E-Mail Adesse existiet nicht in unsee Datenbank.',
-	'newslette'=>'Newslette',
-	'newslette_egistation'=>'Newslette abonieen',
-	'no_such_mail_adess'=>'Diese E-Mail Adesse ist nicht in de Datenbank',
-	'passwod_had_been_send'=>'De Entfenungscode wude gesendet',
-	'egiste_newslette'=>'Fü den Newslette anmelden',
-	'equest_mail'=>'<b>Du hast deinen Entfenungscode angefodet.</b><b><b>Um deine Mailadesse von de Mailing-Liste zu entfenen, klicke folgenden Link an: <a hef="http://%homepage_ul%/index.php?site=newslette&mail=%mail%&pass=%delete_key%">Mailadesse entfenen</a><b>Das Passwot zum Entfenen von de Liste lautet: %delete_key%<b><b>Bis demnächst auf %homepage_ul%',
+	'del_from_mail_list'=>'Von der Liste entfernen',
+	'del_key'=>'Entfernungscode',
+	'delete'=>'entfernen',
+	'deletion_key'=>'Entfernungscode',
+	'email_not_valid'=>'Deine E-Mail Adresse ist nicht gültig!',
+	'lost_deletion_key'=>'Entfernungscode verloren?',
+	'mail_adress'=>'E-Mail Adresse',
+	'mail_pw_didnt_match'=>'Die E-Mail und das Passwort stimmt nicht überein.',
+	'mail_not_in_db'=>'Die eingegebene E-Mail Adresse existiert nicht in unserer Datenbank.',
+	'newsletter'=>'Newsletter',
+	'newsletter_registration'=>'Newsletter abonieren',
+	'no_such_mail_adress'=>'Diese E-Mail Adresse ist nicht in der Datenbank',
+	'password_had_been_send'=>'Der Entfernungscode wurde gesendet',
+	'register_newsletter'=>'Für den Newsletter anmelden',
+	'request_mail'=>'<b>Du hast deinen Entfernungscode angefordert.</b><br><br>Um deine Mailadresse von der Mailing-Liste zu entfernen, klicke folgenden Link an: <a href="http://%homepage_url%/index.php?site=newsletter&mail=%mail%&pass=%delete_key%">Mailadresse entfernen</a><br>Das Passwort zum Entfernen von der Liste lautet: %delete_key%<br><br>Bis demnächst auf %homepage_url%',
 	'send'=>'senden',
 	'submit'=>'abschicken',
-	'success_mail'=>'<b>Vielen Dank fü deine Anmeldung!</b><b><b>Wenn du deine Mailadesse von de Mailing-Liste entfenen willst, nutze bitte folgenden Link: <a hef="http://%homepage_ul%/index.php?site=newslette&mail=%mail%&pass=%delete_key%">Mailadesse entfenen</a><b>Das Passwot zum Entfenen von de Liste lautet: %delete_key%<b><b>Bis demnächst auf %homepage_ul%',
-	'thank_you_fo_egistation'=>'Besten Dank fü dein Abonnement',
-	'you_ae_aleady_egisteed'=>'Du bist schon egistiet.',
-	'you_mail_adess'=>'Deine E-Mail Adesse',
-	'you_mail_adess_deleted'=>'Deine E-Mail Adesse wude aus de Liste entfent.'
+	'success_mail'=>'<b>Vielen Dank für deine Anmeldung!</b><br><br>Wenn du deine Mailadresse von der Mailing-Liste entfernen willst, nutze bitte folgenden Link: <a href="http://%homepage_url%/index.php?site=newsletter&mail=%mail%&pass=%delete_key%">Mailadresse entfernen</a><br>Das Passwort zum Entfernen von der Liste lautet: %delete_key%<br><br>Bis demnächst auf %homepage_url%',
+	'thank_you_for_registration'=>'Besten Dank für dein Abonnement',
+	'you_are_already_registered'=>'Du bist schon registriert.',
+	'your_mail_adress'=>'Deine E-Mail Adresse',
+	'your_mail_adress_deleted'=>'Deine E-Mail Adresse wurde aus der Liste entfernt.'
 );
 ?>
