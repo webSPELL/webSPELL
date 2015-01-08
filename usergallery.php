@@ -36,8 +36,8 @@ if ($userID) {
                     " . PREFIX . "gallery (
                         `name`,
                         `date`,
-                        `userID
-                    ) `
+                        `userID`
+                    )
                     values(
                     '" . $_POST[ 'name' ] . "',
                     '" . time() . "',
@@ -54,66 +54,87 @@ if ($userID) {
             SET
                 name='" . $_POST[ 'name' ] . "'
             WHERE
-                galleryID='" . $_POST[ 'galleryID' ] . "' AND
+                galleryID='" . (int)$_POST[ 'galleryID' ] . "' AND
                 userID='" . (int)$userID."'"
         );
     } elseif (isset($_POST[ 'saveform' ])) {
-        $endung = '';
         $dir = 'images/gallery/';
-        $picture = $_FILES[ 'picture' ];
 
-        if ($picture[ 'name' ] != "") {
+        $upload = new \webspell\Upload('picture');
 
-            if ($_POST[ 'name' ] != "") {
-                $insertname = $_POST[ 'name' ];
-            } else {
-                $insertname = $picture[ 'name' ];
-            }
-            safe_query(
-                "INSERT INTO
-                    " . PREFIX . "gallery_pictures (
-                        `galleryID`,
-                        `name`,
-                        `comment`,
-                        `comments`
-                    )
-                    VALUES (
-                        '" . $_POST[ 'galleryID' ] . "',
-                        '" . $insertname . "',
-                        '" . $_POST[ 'comment' ] . "',
-                        '" . $_POST[ 'comments' ] . "'
-                    )"
-            );
+        if ($upload->hasFile()) {
+            if ($upload->hasError() === false) {
 
-            $typ = getimagesize($picture[ 'tmp_name' ]);
-            $insertid = mysqli_insert_id($_database);
-            if (is_array($typ)) {
-                switch ($typ[ 2 ]) {
-                    case 1:
-                        $endung = '.gif';
-                        break;
-                    case 3:
-                        $endung = '.png';
-                        break;
-                    default:
-                        $endung = '.jpg';
-                        break;
+                $mime_types = array('image/jpeg','image/png','image/gif');
+
+                if($upload->supportedMimeType($mime_types)){
+                    if (!empty($_POST[ 'name' ])) {
+                        $insertname = $_POST[ 'name' ];
+                    } else {
+                        $insertname = $upload->getFilename();
+                    }
+
+                    $typ =  getimagesize($upload->getTempFile());
+
+                    if (is_array($typ)) {
+                        switch ($typ[ 2 ]) {
+                            case 1:
+                                $endung = '.gif';
+                                break;
+                            case 3:
+                                $endung = '.png';
+                                break;
+                            default:
+                                $endung = '.jpg';
+                                break;
+                        }
+
+                        safe_query(
+                            "INSERT INTO
+                                " . PREFIX . "gallery_pictures (
+                                    `galleryID`,
+                                    `name`,
+                                    `comment`,
+                                    `comments`
+                                )
+                                VALUES (
+                                    '" . (int)$_POST[ 'galleryID' ] . "',
+                                    '" . $insertname . "',
+                                    '" . $_POST[ 'comment' ] . "',
+                                    '" . $_POST[ 'comments' ] . "'
+                                )"
+                        );
+
+                        $insertid = mysqli_insert_id($_database);
+
+                        $newBigFile   = $dir . 'large/' . $insertid . $endung;
+                        $newThumbFile = $dir . 'thumb/' . $insertid . '.jpg';
+
+                        if($upload->saveAs($newBigFile)){
+                            @chmod($newBigFile, $new_chmod);
+                            $galclass->saveThumb($newBigFile, $newThumbFile);
+
+                            if (($galclass->getUserSpace($userID) + filesize($newBigFile) +
+                                    filesize($newThumbFile)) > $maxusergalleries
+                            ) {
+                                @unlink($newBigFile);
+                                @unlink($newThumbFile);
+                                safe_query("DELETE FROM " . PREFIX . "gallery_pictures WHERE picID='" . $insertid . "'");
+                                echo generateErrorBox($_language->module[ 'no_space_left' ]);
+                            }
+                        }
+                        else{
+                            safe_query("DELETE FROM " . PREFIX . "gallery_pictures WHERE picID='" . $insertid . "'");
+                            @unlink($upload->getTempFile());
+                        }
+                    }
+                    else{
+                        echo generateErrorBox($_language->module[ 'broken_image' ]);
+                    }
                 }
-
-                move_uploaded_file($picture[ 'tmp_name' ], $dir . 'large/' . $insertid . $endung);
-                @chmod($dir . 'large/' . $insertid . $endung, $new_chmod);
-                $galclass->saveThumb($dir . 'large/' . $insertid . $endung, $dir . 'thumb/' . $insertid . '.jpg');
-
-                if (($galclass->getUserSpace($userID) + filesize($dir . 'large/' . $insertid . $endung) +
-                        filesize($dir . 'thumb/' . $insertid . '.jpg')) > $maxusergalleries
-                ) {
-                    @unlink($dir . 'large/' . $insertid . $endung);
-                    @unlink($dir . 'thumb/' . $insertid . '.jpg');
-                    safe_query("DELETE FROM " . PREFIX . "gallery_pictures WHERE picID='" . $insertid . "'");
-                    echo '<p style="color:' . $loosecolor . '">' . $_language->module[ 'no_space_left' ] . '</p>';
+                else{
+                    echo generateErrorBox($_language->module[ 'unsupported_image_type' ]);
                 }
-            } else {
-                safe_query("DELETE FROM " . PREFIX . "gallery_pictures WHERE picID='" . $insertid . "'");
             }
         }
     } elseif (isset($_GET[ 'delete' ])) {
@@ -123,7 +144,7 @@ if ($userID) {
                 "DELETE FROM
                     " . PREFIX . "gallery
                 WHERE
-                    galleryID='" . $_GET[ 'galleryID' ] . "' AND
+                    galleryID='" . (int)$_GET[ 'galleryID' ] . "' AND
                     userID='" . (int)$userID."'"
             )
         ) {
