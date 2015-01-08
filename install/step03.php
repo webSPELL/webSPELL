@@ -25,7 +25,7 @@
 ##########################################################################
 */
 $fatal_error = false;
-if (version_compare(PHP_VERSION, '5.2.0', '<')) {
+if (version_compare(PHP_VERSION, '5.3.0', '<')) {
     $php_version_check = '<b><font color="red">'.$_language->module['no'].'</font></b>';
     $fatal_error = true;
 } else {
