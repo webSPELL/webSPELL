@@ -383,10 +383,10 @@ function showtopic($topic, $edit, $addreply, $quoteID, $type)
     if ($type == "ASC") {
         $sorter =
             '<a href="index.php?site=forum_topic&amp;topic=' . $topic . '&amp;page=' . $page . '&amp;type=DESC">' .
-            $_language->module['sort'] . ' <span class="icon-sort-down"></span></a>';
+            $_language->module['sort'] . ' <span class="glyphicon glyphicon-chevron-down"></span></a>';
     } else {
         $sorter = '<a href="index.php?site=forum_topic&amp;topic=' . $topic . '&amp;page=' . $page . '&amp;type=ASC">' .
-            $_language->module['sort'] . ' <span class="icon-sort-up"></span></a>';
+            $_language->module['sort'] . ' <span class="glyphicon glyphicon-chevron-up"></span></a>';
     }
 
     $start = 0;
@@ -424,13 +424,13 @@ function showtopic($topic, $edit, $addreply, $quoteID, $type)
     $moderators = getmoderators($dt['boardID']);
 
     $topicactions = '<a href="printview.php?board=' . $dt['boardID'] . '&amp;topic=' . $topic .
-        '" target="_blank" class="btn btn-default"><span class="icon-print"></span></a> ';
+        '" target="_blank" class="btn btn-default"><span class="glyphicon glyphicon-print"></span></a> ';
     if ($loggedin && $writer) {
         $topicactions .=
             '<a href="index.php?site=forum&amp;addtopic=true&amp;action=newtopic&amp;board=' . $dt['boardID'] .
             '" class="btn btn-primary hidden">' . $_language->module['new_topic'] .
             '</a> <a href="index.php?site=forum_topic&amp;topic=' . $topic . '&amp;addreply=true&amp;page=' . $pages .
-            '&amp;type=' . $type . '" class="btn btn-primary"><span class="icon-mail-reply"></span> ' .
+            '&amp;type=' . $type . '" class="btn btn-primary"><span class="glyphicon glyphicon-share-alt"></span> ' .
             $_language->module['new_reply'] . '</a>';
     }
     if ($dt['closed']) {
@@ -833,7 +833,7 @@ function showtopic($topic, $edit, $addreply, $quoteID, $type)
             $quote =
                 '<a href="index.php?site=forum_topic&amp;addreply=true&amp;board=' . $dt['boardID'] . '&amp;topic=' .
                 $topic . '&amp;quoteID=' . $dr['postID'] . '&amp;page=' . $page . '&amp;type=' . $type .
-                '"><span class="icon-quote-left"></span></a>';
+                '"><span class="no_replace_glyphicon glyphicon-quote-left"></span></a>';
         } else {
             $quote = "";
         }
@@ -874,7 +874,7 @@ function showtopic($topic, $edit, $addreply, $quoteID, $type)
             !$dt['closed']
         ) {
             $actions = ' <a href="index.php?site=forum_topic&amp;topic=' . $topic . '&amp;edit=true&amp;id=' .
-                $dr['postID'] . '&amp;page=' . $page . '"><span class="icon-edit"></span></a> ';
+                $dr['postID'] . '&amp;page=' . $page . '"><span class="glyphicon glyphicon-edit"></span></a> ';
         }
         if (isforumadmin($userID) || ismoderator($userID, $dt['boardID'])) {
             $actions .= '<input class="input" type="checkbox" name="postID[]" value="' . $dr['postID'] . '">';

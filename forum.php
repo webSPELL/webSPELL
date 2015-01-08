@@ -646,13 +646,13 @@ function showboard($board)
         $moderators = '(' . $_language->module[ 'moderated_by' ] . ': ' . $moderators . ')';
     }
 
-    $actions = '<a href="index.php?site=search" class="btn btn-default"><span class="icon-search"></span> Search</a>';
+    $actions = '<a href="index.php?site=search" class="btn btn-default"><span class="glyphicon glyphicon-search"></span> Search</a>';
     if ($loggedin) {
         $mark = '<a href="index.php?site=forum&amp;board=' . $board . '&amp;action=markall">' .
             $_language->module[ 'mark_topics_read' ] . '</a>';
         if ($writer) {
             $actions .= ' <a href="index.php?site=forum&amp;addtopic=true&amp;board=' .
-                $board . '" class="btn btn-primary"><span class="icon-comment-alt"></span> ' .
+                $board . '" class="btn btn-primary"><span class="glyphicon glyphicon-comment"></span> ' .
                 $_language->module[ 'new_topic' ] . '</a>';
         }
     } else {

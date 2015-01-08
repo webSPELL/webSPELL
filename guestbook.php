@@ -241,11 +241,11 @@ if (isset($_POST[ 'save' ])) {
     if ($type == "ASC") {
         $sorter =
             '<a href="index.php?site=guestbook&amp;page=' . $page . '&amp;type=DESC">' . $_language->module[ 'sort' ] .
-            ' <span class="icon-sort-down"></span></a>';
+            ' <span class="glyphicon glyphicon-chevron-down"></span></a>';
     } else {
         $sorter =
             '<a href="index.php?site=guestbook&amp;page=' . $page . '&amp;type=ASC">' . $_language->module[ 'sort' ] .
-            ' <span class="icon-sort-up"></span></a>';
+            ' <span class="glyphicon glyphicon-chevron-up"></span></a>';
     }
 
     eval ("\$guestbook_head = \"" . gettemplate("guestbook_head") . "\";");

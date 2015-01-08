@@ -114,11 +114,11 @@ if ($anz) {
     if ($type == "ASC") {
         $sorter =
             '<a href="index.php?site=registered_users&amp;page=' . $page . '&amp;sort=' . $sort . '&amp;type=DESC">' .
-            $_language->module[ 'sort' ] . ' <span class="icon-sort-down"></span></a>';
+            $_language->module[ 'sort' ] . ' <span class="glyphicon glyphicon-chevron-down"></span></a>';
     } else {
         $sorter =
             '<a href="index.php?site=registered_users&amp;page=' . $page . '&amp;sort=' . $sort . '&amp;type=ASC">' .
-            $_language->module[ 'sort' ] . ' <i class="icon-sort-up"></i';
+            $_language->module[ 'sort' ] . ' <span class="glyphicon glyphicon-chevron-down"></span></a>';
     }
     eval ("\$registered_users_head = \"" . gettemplate("registered_users_head") . "\";");
     echo $registered_users_head;

@@ -532,11 +532,11 @@ if (isset($id) && getnickname($id) != '') {
                     if ($type == "ASC") {
                         $sorter = '<a href="index.php?site=profile&amp;id=' . $id . '&amp;action=guestbook&amp;page=' .
                             $page . '&amp;type=DESC">' . $_language->module[ 'sort' ] .
-                            ' <span class="icon-sort-down"></span></a>';
+                            ' <span class="glyphicon glyphicon-chevron-down"></span></a>';
                     } else {
                         $sorter = '<a href="index.php?site=profile&amp;id=' . $id . '&amp;action=guestbook&amp;page=' .
                             $page . '&amp;type=ASC">' . $_language->module[ 'sort' ] .
-                            ' <span class="icon-sort-up"></span></a>';
+                            ' <span class="glyphicon glyphicon-chevron-up"></span></a>';
                     }
 
                     echo '<div class="row form-group"><div class="col-xs-6">' . $sorter . ' ' . $page_link . '</div>
@@ -589,7 +589,7 @@ if (isset($id) && getnickname($id) != '') {
                         $actions = '';
                         $ip = $_language->module[ 'logged' ];
                         $quote = '<a href="javascript:AddCode(\'[quote=' . $name . ']' . $quotemessage .
-                            '[/quote]\')"> <span class="icon-quote-left"></span></a>';
+                            '[/quote]\')"> <span class="no_replace_glyphicon glyphicon-quote-left"></span></a>';
                         if (isfeedbackadmin($userID) || $id == $userID) {
                             $actions =
                                 '<input class="input" type="checkbox" name="gbID[]" value="' . $ds[ 'gbID' ] . '">';

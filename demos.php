@@ -396,7 +396,7 @@ if ($action == "new") {
 
     if ($loggedin) {
         $download = '<a href="download.php?demoID=' . $ds[ 'demoID' ] .
-            '" class="btn btn-lg btn-success"><span class="icon-download icon-large"></span> ' .
+            '" class="btn btn-lg btn-success"><span class="glyphicon glyphicon-download"></span> ' .
             $_language->module[ 'download_now' ] . '</a>';
 
         $getdemos = safe_query("SELECT demos FROM " . PREFIX . "user WHERE userID='$userID'");

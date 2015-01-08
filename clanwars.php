@@ -1250,12 +1250,12 @@ if ($action == "new") {
         $seiten =
             '<a href="index.php?site=clanwars&amp;action=showonly&amp;id=' . $id . '&amp;page=' . $page . '&amp;sort=' .
             $sort . '&amp;type=DESC&amp;only=' . $only . '">' . $_language->module[ 'sort' ] .
-            ' <span class="icon-sort-up"></span></a> ' . $page_link . '';
+            ' <span class="glyphicon glyphicon-chevron-down"></span></a> ' . $page_link . '';
     } else {
         $seiten =
             '<a href="index.php?site=clanwars&amp;action=showonly&amp;id=' . $id . '&amp;page=' . $page . '&amp;sort=' .
             $sort . '&amp;type=ASC&amp;only=' . $only . '">' . $_language->module[ 'sort' ] .
-            ' <span class="icon-sort-down"></span></a>  ' . $page_link . '';
+            ' <span class="glyphicon glyphicon-chevron-up"></span></a>  ' . $page_link . '';
     }
 
     if (isclanwaradmin($userID)) {

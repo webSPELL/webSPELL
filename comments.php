@@ -511,7 +511,7 @@ if (isset($_POST[ 'savevisitorcomment' ])) {
                 $edit =
                     '<a href="index.php?site=comments&amp;editcomment=true&amp;id=' . $ds[ 'commentID' ] . '&amp;ref=' .
                     urlencode($referer) . '" title="' . $_language->module[ 'edit_comment' ] .
-                    '"><span class="icon-edit"></span></a>';
+                    '"><span class="glyphicon glyphicon-edit"></span></a>';
             } else {
                 $edit = '';
             }
