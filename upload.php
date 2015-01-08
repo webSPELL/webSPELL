@@ -37,17 +37,17 @@ if (isset($_GET[ 'cwID' ])) {
     $filepath = "images/clanwar-screens/";
     $table = "clanwars";
     $tableid = "cwID";
-    $id = $_GET[ 'cwID' ];
+    $id = (int)$_GET[ 'cwID' ];
 } elseif (isset($_GET[ 'newsID' ])) {
     $filepath = "images/news-pics/";
     $table = "news";
     $tableid = "newsID";
-    $id = $_GET[ 'newsID' ];
+    $id = (int)$_GET[ 'newsID' ];
 } elseif (isset($_GET[ 'articlesID' ])) {
     $filepath = "images/articles-pics/";
     $table = "articles";
     $tableid = "articlesID";
-    $id = $_GET[ 'articlesID' ];
+    $id = (int)$_GET[ 'articlesID' ];
 } else {
     die($_language->module[ 'invalid_access' ]);
 }
@@ -59,27 +59,31 @@ if (isset($_GET[ 'action' ])) {
 }
 
 if (isset($_POST[ 'submit' ])) {
-    $screen = $_FILES[ 'screen' ];
-    if (!empty($screen[ 'name' ])) {
-        move_uploaded_file($screen[ 'tmp_name' ], $filepath . $screen[ 'name' ]);
-        @chmod($filepath . $screen[ 'name' ], $new_chmod);
-        $file_ext = strtolower(mb_substr($screen[ 'name' ], strrpos($screen[ 'name' ], ".")));
-        $file = $id . '_' . time() . $file_ext;
-        rename($filepath . $screen[ 'name' ], $filepath . $file);
-        $ergebnis = safe_query("SELECT screens FROM " . PREFIX . "$table WHERE $tableid='$id'");
-        $ds = mysqli_fetch_array($ergebnis);
-        $screens = explode("|", $ds[ 'screens' ]);
-        $screens[ ] = $file;
-        $screens_string = implode("|", $screens);
 
-        safe_query(
-            "UPDATE
-                " . PREFIX . $table . "
-            SET
-                screens='" . $screens_string . "'
-            WHERE
-                " . $tableid . "='" . (int)$id . "'"
-        );
+    $screen = new \webspell\Upload('screen');
+
+    if ($screen->hasFile()) {
+        if ($screen->hasError() === false) {
+            $file = $id . '_' . time() . "." .$screen->getExtension();
+            $new_name = $filepath . $file;
+            if ($screen->saveAs($new_name)) {
+                @chmod($new_name, $new_chmod);
+                $ergebnis = safe_query("SELECT screens FROM " . PREFIX . "$table WHERE $tableid='$id'");
+                $ds = mysqli_fetch_array($ergebnis);
+                $screens = explode("|", $ds[ 'screens' ]);
+                $screens[ ] = $file;
+                $screens_string = implode("|", $screens);
+
+                safe_query(
+                    "UPDATE
+                    " . PREFIX . $table . "
+                    SET
+                        screens='" . $screens_string . "'
+                    WHERE
+                        " . $tableid . "='" . (int)$id . "'"
+                );
+            }
+        }
     }
     header("Location: upload.php?$tableid=$id");
 } elseif ($action == "delete") {
@@ -142,9 +146,9 @@ if (isset($_POST[ 'submit' ])) {
             <td><a href="' . $filepath . $screen . '" target="_blank">' . $screen . '</a></td>
             <td>
                 <input type="text" name="pic" size="70"
-                    value="&lt;img src=&quot;' . $filepath . $screen . '&quot;
-                    border=&quot;0&quot; align=&quot;left&quot;
-                    style=&quot;padding:4px;&quot; alt=&quot;&quot; /&gt;">
+ value="&lt;img src=&quot;' . $filepath . $screen . '&quot;
+ border=&quot;0&quot; align=&quot;left&quot;
+ style=&quot;padding:4px;&quot; alt=&quot;&quot; /&gt;">
             </td>
             <td>
                 <input type="button" onclick="AddCodeFromWindow(\'[img]' . $filepath . $screen . '[/img] \')"
