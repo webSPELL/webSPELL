@@ -34,7 +34,7 @@ if (isset($_GET[ 'action' ])) {
 if (isset($_POST[ 'save' ])) {
     $_language->readModule('links');
     if (!ispageadmin($userID) || !isnewsadmin($userID)) {
-       echo generateAlert($_language->module['no_access'], 'alert-danger');
+        echo generateAlert($_language->module['no_access'], 'alert-danger');
     } else {
 
         safe_query(
