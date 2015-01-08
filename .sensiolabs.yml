@@ -12,6 +12,7 @@ global_exclude_dirs:
     - Fixtures
     - DataFixtures
     - var
+    - components
 
 exclude_patterns:
     - app/check.php
