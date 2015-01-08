@@ -118,7 +118,7 @@ if ($anz) {
     } else {
         $sorter =
             '<a href="index.php?site=registered_users&amp;page=' . $page . '&amp;sort=' . $sort . '&amp;type=ASC">' .
-            $_language->module[ 'sort' ] . ' <span class="glyphicon glyphicon-chevron-down"></span></a>';
+            $_language->module[ 'sort' ] . ' <span class="glyphicon glyphicon-chevron-up"></span></a>';
     }
     eval ("\$registered_users_head = \"" . gettemplate("registered_users_head") . "\";");
     echo $registered_users_head;

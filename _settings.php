@@ -307,8 +307,7 @@ $ds = mysqli_fetch_array(safe_query("SELECT * FROM " . PREFIX . "settings"));
 
 $components = [
     'css' => [
-        'components/bootstrap/dist/css/bootstrap.min.css',
-        'components/fontawesome/css/font-awesome.min.css'
+        'components/bootstrap/dist/css/bootstrap.min.css'
     ],
     'js' => [
         'components/jquery/dist/jquery.min.js',
