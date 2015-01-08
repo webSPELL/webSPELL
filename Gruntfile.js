@@ -250,13 +250,13 @@ module.exports = function(grunt) {
         compress: {
             main: {
                 options: {
-                    archive: 'webspell.zip'
+                    archive: "webspell.zip"
                 },
                 src:releaseFiles
             },
             release: {
                 options: {
-                    archive: 'webSPELL-<%= pkg.version %>.zip'
+                    archive: "webSPELL-<%= pkg.version %>.zip"
                 },
                 src:releaseFiles
             }
@@ -281,7 +281,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks("grunt-htmllint");
     grunt.loadNpmTasks("grunt-casperjs");
     grunt.loadNpmTasks("grunt-newer");
-    grunt.loadNpmTasks('grunt-contrib-compress');
+    grunt.loadNpmTasks("grunt-contrib-compress");
 
 
     grunt.registerTask("codecheck", [
