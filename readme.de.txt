@@ -1,24 +1,24 @@
  ########################################################################
 #                                                                        #
-#           Version 4       /                        /   /               #
+#           Vesion 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Free Content / Management System                 #
+#                       Fee Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyight 2005-2014 by webspell.og                                  #
 #                                                                        #
-#   visit webSPELL.org, webspell.info to get webSPELL for free           #
-#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to remove this copyright-tag                      #
-#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
+#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
+#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to emove this copyight-tag                      #
+#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
-#   Far Development by Development Team - webspell.org                   #
+#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
+#   Fa Development by Development Team - webspell.og                   #
 #                                                                        #
-#   visit webspell.org                                                   #
+#   visit webspell.og                                                   #
 #                                                                        #
  ########################################################################
 
@@ -27,88 +27,88 @@ DEUTSCH
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Vielen Dank, dass du dich für webSPELL 4 entschieden hast.
-webSPELL ist ein freies Content Management System (CMS), welches kostenlos auf www.webspell.org zur Verfügung steht. Die nachfolgenden Informationen sollen den Einstieg in das System erleichtern und einen ersten Eindruck der Funktionsweise vermitteln.
+Vielen Dank, dass du dich fü webSPELL 4 entschieden hast.
+webSPELL ist ein feies Content Management System (CMS), welches kostenlos auf www.webspell.og zu Vefügung steht. Die nachfolgenden Infomationen sollen den Einstieg in das System eleichten und einen esten Einduck de Funktionsweise vemitteln.
 
 1. Lizenz
 2. Installation
-3. Weiterführende Links
+3. Weitefühende Links
 
 1. Lizenz
 
-	webSPELL wird unter der GNU General Public License (GPL) veröffentlicht. Diese gestattet die freie Verwendung, Modifikation und Weitergabe des webSPELL-Skriptes im Rahmen der Regeln der GPL.
-	Weiterführende Informationen gibt es unter http://www.webspell.org/?site=license
+	webSPELL wid unte de GNU Geneal Public License (GPL) veöffentlicht. Diese gestattet die feie Vewendung, Modifikation und Weitegabe des webSPELL-Skiptes im Rahmen de Regeln de GPL.
+	Weitefühende Infomationen gibt es unte http://www.webspell.og/?site=license
 
 2. Installation
 
-	1. Anforderungen
-	2. webSPELL auf den Webspace heraufladen
-	3. Die korrekten Datei- und Ordnerrechte setzen
-	4. webSPELL Installation ausführen
-	5. Aufräumen
+	1. Anfodeungen
+	2. webSPELL auf den Webspace heaufladen
+	3. Die koekten Datei- und Odneechte setzen
+	4. webSPELL Installation ausfühen
+	5. Aufäumen
 	
-	1. Anforderungen
+	1. Anfodeungen
 	
-	    * Webspace mit PHP- und MySQL-Unterstützung (PHP >= 4.3, MySQL >= 4.1)
-	    * WinRAR zum Entpacken des webSPELL Paketes ---> Download unter http://www.winrar.de
-	    * Ein FTP-Programm um webSPELL auf den Webspace hochzuladen - Empfehlung: SmartFTP (http://www.smartftp.com)
+	    * Webspace mit PHP- und MySQL-Untestützung (PHP >= 4.3, MySQL >= 4.1)
+	    * WinRAR zum Entpacken des webSPELL Paketes ---> Download unte http://www.wina.de
+	    * Ein FTP-Pogamm um webSPELL auf den Webspace hochzuladen - Empfehlung: SmatFTP (http://www.smatftp.com)
 	
 	2. webSPELL auf den Webspace hochladen
 	
-	    * Starte dein zuvor installiertes FTP-Programm
-	    * Verbinde mit diesem FTP-Programm zu dem FTP-Server des Webspaces (die Zugangsdaten bekommst du von deinem Webhoster)
-	    * Lade alle entpackten Dateien und Ordner des webSPELL Paketes auf deinen Webspace
+	    * State dein zuvo installietes FTP-Pogamm
+	    * Vebinde mit diesem FTP-Pogamm zu dem FTP-Seve des Webspaces (die Zugangsdaten bekommst du von deinem Webhoste)
+	    * Lade alle entpackten Dateien und Odne des webSPELL Paketes auf deinen Webspace
 	
-	3. Die richtigen Datei- und Ordnerrechte setzen
+	3. Die ichtigen Datei- und Odneechte setzen
 	
-		webSPELL benötigt spezielle Zugriffsrechte für einige Dateien und Ordner. Diese Rechte können mit dem FTP-Programm vergeben werden. Um dies umzusetzen, klicke in dem FTP-Programm rechts auf die gewünschten Dateien und Ordner und suche nach etwas namens "Eigenschaften", "chmod", "Properties" etc. (die bezeichnung variiert von FTP-Programm zu FTP-Programm). Folgende Dateien und Ordner nun auf chmod 777 setzen:
+		webSPELL benötigt spezielle Zugiffsechte fü einige Dateien und Odne. Diese Rechte können mit dem FTP-Pogamm vegeben weden. Um dies umzusetzen, klicke in dem FTP-Pogamm echts auf die gewünschten Dateien und Odne und suche nach etwas namens "Eigenschaften", "chmod", "Popeties" etc. (die bezeichnung vaiiet von FTP-Pogamm zu FTP-Pogamm). Folgende Dateien und Odne nun auf chmod 777 setzen:
 		
 		* demos/
 		* downloads/
-		* images/articles-pics
-		* images/avatars
-		* images/banner
-		* images/bannerrotation
-		* images/clanwar-screens
+		* images/aticles-pics
+		* images/avatas
+		* images/banne
+		* images/banneotation
+		* images/clanwa-sceens
 		* images/flags
-		* images/gallery/large
-		* images/gallery/thumb
+		* images/galley/lage
+		* images/galley/thumb
 		* images/games
-		* images/icons/ranks
+		* images/icons/anks
 		* images/links
 		* images/linkus
 		* images/news-pics
-		* images/news-rubrics
-		* images/partners
+		* images/news-ubics
+		* images/patnes
 		* images/smileys
-		* images/sponsors
+		* images/sponsos
 		* images/squadicons
-		* images/userpics
+		* images/usepics
 		* _mysql.php
 		* _stylesheet.css
 		* tmp/
 	
-	4. webSPELL Installation ausführen
+	4. webSPELL Installation ausfühen
 	
-	    * Öffne deinen Webbrowser
-	    * Gib den Pfad zur webSPELL Installation http://[hostnamedeinerseite]/install ein (ersetze [hostnamedeinerseite] mit der Domain (und evtl. einer Pfaderweiterung, falls du webSPELL in irgendeinen Unterordner hochgeladen hast), wo du webSPELL hochgeladen hast)
-	    * Folge den Anweisungen der Installationsschritte und gib die erforderlichen Daten ein
+	    * Öffne deinen Webbowse
+	    * Gib den Pfad zu webSPELL Installation http://[hostnamedeineseite]/install ein (esetze [hostnamedeineseite] mit de Domain (und evtl. eine Pfadeweiteung, falls du webSPELL in igendeinen Unteodne hochgeladen hast), wo du webSPELL hochgeladen hast)
+	    * Folge den Anweisungen de Installationsschitte und gib die efodelichen Daten ein
 	
-	5. Aufräumen
+	5. Aufäumen
 	
-	    * Setze die Zugriffsrechte der _mysql.php mit dem FTP-Programm auf 644 zurück
-	    * Lösche den kompletten install-Ordner von deinem Webspace mit dem FTP-Programm
+	    * Setze die Zugiffsechte de _mysql.php mit dem FTP-Pogamm auf 644 zuück
+	    * Lösche den kompletten install-Odne von deinem Webspace mit dem FTP-Pogamm
 	
-	Nun sollte deine webSPELL Seite fertig eingerichtet sein.
+	Nun sollte deine webSPELL Seite fetig eingeichtet sein.
 
 
-3. Weiterführende Links
+3. Weitefühende Links
 
-	http://www.webspell.org/?site=forum
-		Forum für Support und Austausch zwischen Nutzern (Probleme, Modifikationen, Templates, Addons, etc.)
-	http://wiki.webspell.org
-		Wiki für webSPELL. Hilfe im Umgang mit dem System, Linksammlungen, etc.
-	http://www.webspell.org/?site=faq
-		Frequently Asked Questions (FAQ) für webSPELL. Antworten und Lösungsansätze für häufige gestellte Fragen und Probleme
-	http://www.webspell.org/?site=irc
-		Zugang via Browser zum webSPELL Chat (IRC) für Live-Support. Channel: #webspell @ Quakenet
+	http://www.webspell.og/?site=foum
+		Foum fü Suppot und Austausch zwischen Nutzen (Pobleme, Modifikationen, Templates, Addons, etc.)
+	http://wiki.webspell.og
+		Wiki fü webSPELL. Hilfe im Umgang mit dem System, Linksammlungen, etc.
+	http://www.webspell.og/?site=faq
+		Fequently Asked Questions (FAQ) fü webSPELL. Antwoten und Lösungsansätze fü häufige gestellte Fagen und Pobleme
+	http://www.webspell.og/?site=ic
+		Zugang via Bowse zum webSPELL Chat (IRC) fü Live-Suppot. Channel: #webspell @ Quakenet

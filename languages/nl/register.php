@@ -2,73 +2,73 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Version 4       /                        /   /               #
+#           Vesion 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Free Content / Management System                 #
+#                       Fee Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyight 2005-2014 by webspell.og                                  #
 #                                                                        #
-#   visit webSPELL.org, webspell.info to get webSPELL for free           #
-#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to remove this copyright-tag                      #
-#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
+#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
+#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to emove this copyight-tag                      #
+#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
-#   Far Development by Development Team - webspell.org                   #
+#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
+#   Fa Development by Development Team - webspell.og                   #
 #                                                                        #
-#   visit webspell.org                                                   #
+#   visit webspell.og                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_array = Array(
+$language_aay = Aay(
 
 /* do not edit above this line */
 
-	'activation_successful'=>'Je account is met succes geactiveerd.<br>Je kan nu inloggen.',
-	'back'=>'terug',
-	'enter_nickname'=>'Voer aub. een bijnaam in.',
-	'enter_password'=>'Voer aub. een wachtwoord in.',
-	'enter_username'=>'Voer aub. een gebruikersnaam in.',
-	'errors_there'=>'Er waren wat problemen:',
-	'for_login'=>'alleen voor login',
-	'invalid_mail'=>'Je hebt een ongeldig mail adres opgegeven.',
+	'activation_successful'=>'Je account is met succes geactiveed.<b>Je kan nu inloggen.',
+	'back'=>'teug',
+	'ente_nickname'=>'Voe aub. een bijnaam in.',
+	'ente_passwod'=>'Voe aub. een wachtwood in.',
+	'ente_usename'=>'Voe aub. een gebuikesnaam in.',
+	'eos_thee'=>'E waen wat poblemen:',
+	'fo_login'=>'alleen voo login',
+	'invalid_mail'=>'Je hebt een ongeldig mail ades opgegeven.',
 	'mail'=>'E-Mail',
-	'mail_activation_successful'=>'De activatie van je email adress was succesvol.',
-	'mail_failed'=>'De activatie mail kon niet worden verzonden, neem aub. contact op met de webmaster.',
-	'mail_inuse'=>'Dit mail adres is al in gebruik.',
-	'mail_subject'=>'Account activatie mail voor %homepage_url%',
-	'mail_text'=>'Hallo %username%!
+	'mail_activation_successful'=>'De activatie van je email adess was succesvol.',
+	'mail_failed'=>'De activatie mail kon niet woden vezonden, neem aub. contact op met de webmaste.',
+	'mail_inuse'=>'Dit mail ades is al in gebuik.',
+	'mail_subject'=>'Account activatie mail voo %homepage_ul%',
+	'mail_text'=>'Hallo %usename%!
 
-Je registratie op %pagetitle% (%homepage_url%) was successvol. Je account informatie::
+Je egistatie op %pagetitle% (%homepage_ul%) was successvol. Je account infomatie::
 
-Login naam: %username%
+Login naam: %usename%
 
-Om je registratie te voltooien moet je op de volgende link klikken:
+Om je egistatie te voltooien moet je op de volgende link klikken:
 %activationlink%
 
-Bedankt voor je registratie
-%pagetitle% - %homepage_url%',
+Bedankt voo je egistatie
+%pagetitle% - %homepage_ul%',
 	'nickname'=>'Bijnaam',
-	'nickname_inuse'=>'Bijnaam is al in gebruik.',
-	'no_register_when_loggedin'=>'You allready have an account at %pagename%',
-	'password'=>'Wachtwoord',
-	'profile_info'=>'Registratie informatie',
-	'register_now'=>'Registreer nu!',
-	'register_successful'=>'Je registratie was succesvol. Je zal spoedig een mail ontvangen met je activatie link.',
-	'registration'=>'registratie',
-	'repeat'=>'Herhaal wachtwoord',
-	'repeat_invalid'=>'Je wachtwoord komt niet overeen.',
-	'security_code'=>'Beveiligings Code',
-	'username'=>'Gebruikersnaam',
-	'username_inuse'=>'Gebruikersnaam al in gebruik.',
-	'username_toolong'=>'De gebruikersnaam is al in gebruik (max. 30 tekens).',
-	'wrong_activationkey'=>'De activatie code is verkeerd!',
-	'wrong_securitycode'=>'De veiligheids code is verkeerd!'
+	'nickname_inuse'=>'Bijnaam is al in gebuik.',
+	'no_egiste_when_loggedin'=>'You alleady have an account at %pagename%',
+	'passwod'=>'Wachtwood',
+	'pofile_info'=>'Registatie infomatie',
+	'egiste_now'=>'Registee nu!',
+	'egiste_successful'=>'Je egistatie was succesvol. Je zal spoedig een mail ontvangen met je activatie link.',
+	'egistation'=>'egistatie',
+	'epeat'=>'Hehaal wachtwood',
+	'epeat_invalid'=>'Je wachtwood komt niet oveeen.',
+	'secuity_code'=>'Beveiligings Code',
+	'usename'=>'Gebuikesnaam',
+	'usename_inuse'=>'Gebuikesnaam al in gebuik.',
+	'usename_toolong'=>'De gebuikesnaam is al in gebuik (max. 30 tekens).',
+	'wong_activationkey'=>'De activatie code is vekeed!',
+	'wong_secuitycode'=>'De veiligheids code is vekeed!'
 
 );
 ?>

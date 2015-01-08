@@ -2,107 +2,107 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Version 4       /                        /   /               #
+#           Vesion 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Free Content / Management System                 #
+#                       Fee Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyight 2005-2014 by webspell.og                                  #
 #                                                                        #
-#   visit webSPELL.org, webspell.info to get webSPELL for free           #
-#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to remove this copyright-tag                      #
-#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
+#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
+#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to emove this copyight-tag                      #
+#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
-#   Far Development by Development Team - webspell.org                   #
+#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
+#   Fa Development by Development Team - webspell.og                   #
 #                                                                        #
-#   visit webspell.org                                                   #
+#   visit webspell.og                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_array = Array(
+$language_aay = Aay(
 
 /* do not edit above this line */
 
 	'accesslevel'=>'Nível de Acesso',
 	'all'=>'Todos',
-	'cant_delete_without_fileID'=>'Não pode eliminar ficheiros sem o fileID',
-	'cant_display_empty_cat'=>'Categoria vazia',
-	'cant_edit_without_fileID'=>'Não pode editar ficheiros sem o fileID.',
-	'cant_report_without_fileID'=>'Não pode declarar o link morto sem o fileID.',
-	'categories_cl'=>'Categorias',
-	'category_cl'=>'Categoria',
-	'clanmember'=>'Membro do clan',
+	'cant_delete_without_fileID'=>'Não pode elimina ficheios sem o fileID',
+	'cant_display_empty_cat'=>'Categoia vazia',
+	'cant_edit_without_fileID'=>'Não pode edita ficheios sem o fileID.',
+	'cant_epot_without_fileID'=>'Não pode declaa o link moto sem o fileID.',
+	'categoies_cl'=>'Categoias',
+	'categoy_cl'=>'Categoia',
+	'clanmembe'=>'Membo do clan',
 	'database_cl'=>'Base de dados',
-	'delete_file'=>'Eliminar ficheiro',
-	'description'=>'Descrição',
+	'delete_file'=>'Elimina ficheio',
+	'desciption'=>'Descição',
 	'dl'=>'DL',
-	'download_now'=>'Fazer download de %filename% agora',
-	'download_registered_only'=>'Download apenas disponível para utilizadores registados!',
-	'download_via_mirror'=>'Efectuar download via link alternativo',
+	'download_now'=>'Faze download de %filename% agoa',
+	'download_egisteed_only'=>'Download apenas disponível paa utilizadoes egistados!',
+	'download_via_mio'=>'Efectua download via link altenativo',
 	'downloads_cl'=>'Downloads',
-	'edit_file'=>'Editar ficheiro',
-	'extern-link'=>'Link externo',
-	'failed_edit_file'=>'Edição de ficheiro falhou!',
-	'failed_save_file-info'=>'Não foi possível guardar as informações do ficheiro.',
-	'file-info'=>'Informação sobre o ficheiro',
-	'file-mirrors'=>'Links alternativos do ficheiro',
-	'file-size_e'=>'Tamanho do ficheiro (apenas disponível para ficheiros externos)',
-	'file-upload'=>'Upload do ficheiro',
-	'file_already_exists'=>'o ficheiro já existe.',
-	'file_categories'=>'Categorias de ficheiros',
-	'file_created'=>'Ficheiro criado.',
-	'file_deleted'=>'Ficheiro eliminado.',
-	'file_not_created'=>'O ficheiro não pôde ser criado.',
-	'file_not_deleted'=>'O ficheiro não pôde ser eliminado.',
-	'filename'=>'Nome do ficheiro',
-	'files'=>'Ficheiro',
-	'files_cl'=>'Ficheiros',
-	'first_create_file-category'=>'Primeiro tem de criar uma categoria de ficheiros!',
-	'info_description'=>'Info/Descrição',
-	'last_uploaded_file'=>'Último ficheiro carregado',
-	'leave_description'=>'Se o url do ficheiro estiver danificado, e se souber porquê, deixe aqui um url correcto e uma pequena descrição:',
+	'edit_file'=>'Edita ficheio',
+	'exten-link'=>'Link exteno',
+	'failed_edit_file'=>'Edição de ficheio falhou!',
+	'failed_save_file-info'=>'Não foi possível guada as infomações do ficheio.',
+	'file-info'=>'Infomação sobe o ficheio',
+	'file-mios'=>'Links altenativos do ficheio',
+	'file-size_e'=>'Tamanho do ficheio (apenas disponível paa ficheios extenos)',
+	'file-upload'=>'Upload do ficheio',
+	'file_aleady_exists'=>'o ficheio já existe.',
+	'file_categoies'=>'Categoias de ficheios',
+	'file_ceated'=>'Ficheio ciado.',
+	'file_deleted'=>'Ficheio eliminado.',
+	'file_not_ceated'=>'O ficheio não pôde se ciado.',
+	'file_not_deleted'=>'O ficheio não pôde se eliminado.',
+	'filename'=>'Nome do ficheio',
+	'files'=>'Ficheio',
+	'files_cl'=>'Ficheios',
+	'fist_ceate_file-categoy'=>'Pimeio tem de cia uma categoia de ficheios!',
+	'info_desciption'=>'Info/Descição',
+	'last_uploaded_file'=>'Último ficheio caegado',
+	'leave_desciption'=>'Se o ul do ficheio estive danificado, e se soube poquê, deixe aqui um ul coecto e uma pequena descição:',
 	'login'=>'Login',
-	'mirror'=>'Link alternativo',
-	'mirrors'=>'Links alternativos',
+	'mio'=>'Link altenativo',
+	'mios'=>'Links altenativos',
 	'name'=>'Nome',
-	'new_category'=>'Nova categoria',
-	'new_file'=>'Novo ficheiro',
+	'new_categoy'=>'Nova categoia',
+	'new_file'=>'Novo ficheio',
 	'no_access'=>'Sem acesso!',
-	'no_categories_and_files'=>'Nenhuma categoria ou ficheiro.',
-	'no_mirrors'=>'Nenhum link alternativo',
-	'no_valid_file'=>'Nenhum ficheiro válido.',
-	'perfect'=>'Perfeito',
-	'please_login'=>'Por favor faça o login',
-	'poor'=>'Fraco',
-	'rate'=>'Votar',
-	'rate_have_to_reg_login'=>'Votar: Tem de efectuar registo ou o login!',
-	'rate_now'=>'Votar agora!',
-	'rating'=>'Votação',
-	'rating_x_of_10'=>'votação: %d de 10',
-	'really_delete_file'=>'deseja mesmo eliminar este ficheiro?',
-	'register'=>'Registar',
-	'registered'=>'Registado',
-	'report'=>'reportar',
-	'report_dead_link'=>'reportar link morto',
-	'reset'=>'limpar',
+	'no_categoies_and_files'=>'Nenhuma categoia ou ficheio.',
+	'no_mios'=>'Nenhum link altenativo',
+	'no_valid_file'=>'Nenhum ficheio válido.',
+	'pefect'=>'Pefeito',
+	'please_login'=>'Po favo faça o login',
+	'poo'=>'Faco',
+	'ate'=>'Vota',
+	'ate_have_to_eg_login'=>'Vota: Tem de efectua egisto ou o login!',
+	'ate_now'=>'Vota agoa!',
+	'ating'=>'Votação',
+	'ating_x_of_10'=>'votação: %d de 10',
+	'eally_delete_file'=>'deseja mesmo elimina este ficheio?',
+	'egiste'=>'Regista',
+	'egisteed'=>'Registado',
+	'epot'=>'epota',
+	'epot_dead_link'=>'epota link moto',
+	'eset'=>'limpa',
 	'size'=>'Tamanho',
 	'statistic'=>'Estatística',
-	'subcategories'=>'Sub-categorias',
+	'subcategoies'=>'Sub-categoias',
 	'successful'=>'Com sucesso.',
 	'top_5_downloads'=>'TOP 5 Downloads',
-	'traffic_cl'=>'Tráfego',
-	'update'=>'actualizar',
+	'taffic_cl'=>'Táfego',
+	'update'=>'actualiza',
 	'upload'=>'upload',
 	'uploaded_on'=>'Upload efectuado a',
-	'uploader'=>'Enviado por',
-	'you_have_already_rated'=>'Já votou.',
-	'you_have_to_enter_filename'=>'Tem de colocar o nome do ficheiro!',
-	'you_have_to_enter_file'=>'Tem de inserir um ficheiro / url!'
+	'uploade'=>'Enviado po',
+	'you_have_aleady_ated'=>'Já votou.',
+	'you_have_to_ente_filename'=>'Tem de coloca o nome do ficheio!',
+	'you_have_to_ente_file'=>'Tem de insei um ficheio / ul!'
 );
 ?>

@@ -2,70 +2,70 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Version 4       /                        /   /               #
+#           Vesion 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Free Content / Management System                 #
+#                       Fee Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyight 2005-2014 by webspell.og                                  #
 #                                                                        #
-#   visit webSPELL.org, webspell.info to get webSPELL for free           #
-#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to remove this copyright-tag                      #
-#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
+#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
+#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to emove this copyight-tag                      #
+#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
-#   Far Development by Development Team - webspell.org                   #
+#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
+#   Fa Development by Development Team - webspell.og                   #
 #                                                                        #
-#   visit webspell.org                                                   #
+#   visit webspell.og                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_array = Array(
+$language_aay = Aay(
 
 /* do not edit above this line */
 
-	'against'=>'prieš',
+	'against'=>'pieš',
 	'announce'=>'paskelbti',
 	'announcement'=>'Skelbimas',
-	'back_last_page'=>'Grįžti į paskutinį puslapį',
+	'back_last_page'=>'Gįžti į paskutinį puslapį',
 	'click'=>'spustelti',
 	'date'=>'Data',
-	'from'=>'Nuo',
+	'fom'=>'Nuo',
 	'info'=>'Info',
-	'last_login'=>'Paskutinis prisijungimas',
+	'last_login'=>'Paskutinis pisijungimas',
 	'location'=>'Vieta',
-	'messenger'=>'Pranešiklis',
-	'name'=>'Vardas',
-	'new_in_forum'=>'Naujos Temos / Nauji Pranešimai',
+	'messenge'=>'Panešiklis',
+	'name'=>'Vadas',
+	'new_in_foum'=>'Naujos Temos / Nauji Panešimai',
 	'new_posts'=>'Nauji skelbimai',
 	'new_topics'=>'Naujos temos',
-	'no_entries'=>'Tuščia, nieko nėra.',
-	'no_events'=>'nėra įvykių',
-	'no_new_messages'=>'Nėra naujų žinučių.',
-	'no_new_posts'=>'nėra naujų pranešimų',
-	'no_new_topics'=>'nėra naujų temų',
-	'no_players_announced'=>'nėra paskelbtų žaidėjų',
-	'one_new_message'=>'Čia yra viena nauja žinutė.',
-	'overview'=>'Peržiūrėti',
-	'registered'=>'Registruotas',
-	'replys'=>'atsakymai',
-	'squad'=>'Būrys',
+	'no_enties'=>'Tuščia, nieko nėa.',
+	'no_events'=>'nėa įvykių',
+	'no_new_messages'=>'Nėa naujų žinučių.',
+	'no_new_posts'=>'nėa naujų panešimų',
+	'no_new_topics'=>'nėa naujų temų',
+	'no_playes_announced'=>'nėa paskelbtų žaidėjų',
+	'one_new_message'=>'Čia ya viena nauja žinutė.',
+	'oveview'=>'Pežiūėti',
+	'egisteed'=>'Registuotas',
+	'eplys'=>'atsakymai',
+	'squad'=>'Būys',
 	'until'=>'iki',
 	'upcoming'=>'Ateinantys',
-	'upcoming_clanwars'=>'Ateinančios klano kovos',
+	'upcoming_clanwas'=>'Ateinančios klano kovos',
 	'upcoming_events'=>'Ateinantys įvykiai',
-	'user'=>'Vartotojas',
-	'userinformations'=>'Vartotojo informacija',
-	'usermenu'=>'Vartotojo meniu',
-	'views'=>'peržiūrėjimai',
-	'x_new_message'=>'Čia yra %new_messages% naujos žinutės.',
-	'you_have_to_be_logged_in'=>'Jūs turite būti registruoti ir prisijungę, norit peržiūrinėti!<br><br>
-    &#8226; <a href="index.php?site=register">registruotis dabar</a><br>
-    &#8226; <a href="index.php?site=login">prisijungti</a>'
+	'use'=>'Vatotojas',
+	'useinfomations'=>'Vatotojo infomacija',
+	'usemenu'=>'Vatotojo meniu',
+	'views'=>'pežiūėjimai',
+	'x_new_message'=>'Čia ya %new_messages% naujos žinutės.',
+	'you_have_to_be_logged_in'=>'Jūs tuite būti egistuoti i pisijungę, noit pežiūinėti!<b><b>
+    &#8226; <a hef="index.php?site=egiste">egistuotis daba</a><b>
+    &#8226; <a hef="index.php?site=login">pisijungti</a>'
 );
 ?>

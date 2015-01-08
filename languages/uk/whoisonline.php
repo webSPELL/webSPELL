@@ -2,91 +2,91 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Version 4       /                        /   /               #
+#           Vesion 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Free Content / Management System                 #
+#                       Fee Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyight 2005-2014 by webspell.og                                  #
 #                                                                        #
-#   visit webSPELL.org, webspell.info to get webSPELL for free           #
-#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to remove this copyright-tag                      #
-#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
+#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
+#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to emove this copyight-tag                      #
+#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
-#   Far Development by Development Team - webspell.org                   #
+#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
+#   Fa Development by Development Team - webspell.og                   #
 #                                                                        #
-#   visit webspell.org                                                   #
+#   visit webspell.og                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_array = Array(
+$language_aay = Aay(
 
 /* do not edit above this line */
 
 	'about'=>'about us',
 	'and'=>'and',
-	'articles'=>'articles',
-	'awards'=>'awards',
+	'aticles'=>'aticles',
+	'awads'=>'awads',
 	'buddys'=>'buddys',
-	'calendar'=>'calendar',
-	'clanwars'=>'clanwars',
-	'contact'=>'contact information',
-	'counter_stats'=>'counter statistics',
+	'calenda'=>'calenda',
+	'clanwas'=>'clanwas',
+	'contact'=>'contact infomation',
+	'counte_stats'=>'counte statistics',
 	'date'=>'Date',
 	'demos'=>'demos',
 	'faq'=>'FAQ',
 	'fightus'=>'fight us',
 	'files'=>'downloads',
-	'forum'=>'forums',
-	'gallery'=>'gallery',
+	'foum'=>'foums',
+	'galley'=>'galley',
 	'guest'=>'Guest',
 	'guestbook'=>'guestbook',
 	'guests'=>'Guests',
-	'history'=>'history',
-	'imprint'=>'imprint',
+	'histoy'=>'histoy',
+	'impint'=>'impint',
 	'is_editing_his'=>'is editing his',
-	'is_reading_forum'=>'is reading the forum',
-	'is_reading_newscomments'=>'is reading newscomments',
-	'is_reading_the'=>'is reading the',
-	'is_watching_details_clanwar'=>'is watching the details of a clanwar',
+	'is_eading_foum'=>'is eading the foum',
+	'is_eading_newscomments'=>'is eading newscomments',
+	'is_eading_the'=>'is eading the',
+	'is_watching_details_clanwa'=>'is watching the details of a clanwa',
 	'is_watching_his'=>'is watching his',
-	'is_watching_profile'=>'is watching a profile',
+	'is_watching_pofile'=>'is watching a pofile',
 	'is_watching_the'=>'is watching the',
 	'joinus'=>'join us',
 	'latest_action'=>'Last action',
 	'links'=>'links',
 	'linkus'=>'links Us',
-	'loginoverview'=>'loginoverview',
-	'members'=>'members',
-	'messenger'=>'messenger',
+	'loginoveview'=>'loginoveview',
+	'membes'=>'membes',
+	'messenge'=>'messenge',
 	'news'=>'news',
-	'newsletter'=>'newsletter',
+	'newslette'=>'newslette',
 	'nickname'=>'Nickname',
 	'now_online'=>'Now online:',
 	'polls'=>'polls',
-	'profile'=>'profile',
-	'registered_user'=>'Registered user',
-	'registered_users'=>'registered users',
-	'server'=>'servers',
-	'sort'=>'Sort:',
-	'sponsors'=>'sponsors',
+	'pofile'=>'pofile',
+	'egisteed_use'=>'Registeed use',
+	'egisteed_uses'=>'egisteed uses',
+	'seve'=>'seves',
+	'sot'=>'Sot:',
+	'sponsos'=>'sponsos',
 	'squads'=>'squads',
 	'status'=>'Status',
 	'title_is'=>'who is online',
 	'title_was'=>'WHO WAS ONLINE (last 24H)',
 	'was_editing_his'=>'was editing his',
-	'was_reading_forum'=>'was reading the forum',
-	'was_reading_newscomments'=>'was reading newscomments',
-	'was_reading_the'=>'was reading the',
-	'was_watching_details_clanwar'=>'was watching the details of a clanwar',
+	'was_eading_foum'=>'was eading the foum',
+	'was_eading_newscomments'=>'was eading newscomments',
+	'was_eading_the'=>'was eading the',
+	'was_watching_details_clanwa'=>'was watching the details of a clanwa',
 	'was_watching_his'=>'was watching his',
-	'was_watching_profile'=>'was watching a profile',
+	'was_watching_pofile'=>'was watching a pofile',
 	'was_watching_the'=>'was watching the',
 	'whoisonline'=>'who is online?'
 );

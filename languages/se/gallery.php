@@ -2,74 +2,74 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Version 4       /                        /   /               #
+#           Vesion 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Free Content / Management System                 #
+#                       Fee Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyight 2005-2014 by webspell.og                                  #
 #                                                                        #
-#   visit webSPELL.org, webspell.info to get webSPELL for free           #
-#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to remove this copyright-tag                      #
-#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
+#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
+#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to emove this copyight-tag                      #
+#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
-#   Far Development by Development Team - webspell.org                   #
+#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
+#   Fa Development by Development Team - webspell.og                   #
 #                                                                        #
-#   visit webspell.org                                                   #
+#   visit webspell.og                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_array = Array(
+$language_aay = Aay(
 
 /* do not edit above this line */
 
 	'back'=>'Tillbaka',
-	'category'=>'Kategori',
-	'comment'=>'Kommentera',
-	'comments'=>'Kommentarer',
+	'categoy'=>'Kategoi',
+	'comment'=>'Kommentea',
+	'comments'=>'Kommentae',
 	'date'=>'Datum',
-	'delete'=>'Radera',
-	'edit'=>'Redigera',
-	'edit_picture'=>'redigera bild',
-	'galleries'=>'Gallerier',
-	'gallery'=>'Galleri',
-	'latest_gallery'=>'Senaste galleri',
-	'most_comments'=>'Flest kommentarer',
+	'delete'=>'Radea',
+	'edit'=>'Redigea',
+	'edit_pictue'=>'edigea bild',
+	'galleies'=>'Galleie',
+	'galley'=>'Gallei',
+	'latest_galley'=>'Senaste gallei',
+	'most_comments'=>'Flest kommentae',
 	'name'=>'Namn',
 	'next'=>'Nästa',
-	'no_comments'=>'Avaktivera kommentarer',
-	'no_gallery_exists'=>'Finns ingen galleri!',
-	'no_pic_set'=>'Inga bilder.',
-	'no_picture'=>'Bilden finns int!',
-	'page_s'=>'sida(or)',
-	'perfect'=>'perfeckt',
+	'no_comments'=>'Avaktivea kommentae',
+	'no_galley_exists'=>'Finns ingen gallei!',
+	'no_pic_set'=>'Inga bilde.',
+	'no_pictue'=>'Bilden finns int!',
+	'page_s'=>'sida(o)',
+	'pefect'=>'pefeckt',
 	'pg_1_1'=>'sida 1 av 1',
-	'picture'=>'Bild',
-	'pictures'=>'Bilder',
-	'poor'=>'dålig',
-	'random_picture'=>'Random bild',
-	'rate'=>'rösta',
-	'rate_have_to_reg_login'=>'Rösta: Du måste registrera eller logga in!',
-	'rate_now'=>'Rösta nu!',
-	'rating'=>'Röstning',
-	'really_del'=>'Verkligen radera detta inlägg?',
-	'reset_views'=>'Återställ Visningar',
-	'show_galleries'=>'Visa gallerier',
-	'start_diashow'=>'Starta bildspel',
-	'update_picture'=>'uppdatera bild',
-	'user_comments'=>'Aktivera användar kommentar',
-	'usergalleries'=>'Användargallerier',
-	'views'=>'Visningar',
-	'visitor_comments'=>'Aktivera besökar kommentar',
-	'votes'=>'Röstningar',
+	'pictue'=>'Bild',
+	'pictues'=>'Bilde',
+	'poo'=>'dålig',
+	'andom_pictue'=>'Random bild',
+	'ate'=>'östa',
+	'ate_have_to_eg_login'=>'Rösta: Du måste egistea elle logga in!',
+	'ate_now'=>'Rösta nu!',
+	'ating'=>'Röstning',
+	'eally_del'=>'Vekligen adea detta inlägg?',
+	'eset_views'=>'Åteställ Visninga',
+	'show_galleies'=>'Visa galleie',
+	'stat_diashow'=>'Stata bildspel',
+	'update_pictue'=>'uppdatea bild',
+	'use_comments'=>'Aktivea använda kommenta',
+	'usegalleies'=>'Användagalleie',
+	'views'=>'Visninga',
+	'visito_comments'=>'Aktivea besöka kommenta',
+	'votes'=>'Röstninga',
 	'webs_diashow'=>'webSPELL bildspel:',
-	'you_have_already_rated'=>'Du har redan röstat.',
+	'you_have_aleady_ated'=>'Du ha edan östat.',
 	'no_thumb'=>'Ingen Thumb'
 );
 ?>

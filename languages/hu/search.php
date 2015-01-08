@@ -2,69 +2,69 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Version 4       /                        /   /               #
+#           Vesion 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Free Content / Management System                 #
+#                       Fee Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyight 2005-2014 by webspell.og                                  #
 #                                                                        #
-#   visit webSPELL.org, webspell.info to get webSPELL for free           #
-#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to remove this copyright-tag                      #
-#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
+#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
+#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to emove this copyight-tag                      #
+#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
-#   Far Development by Development Team - webspell.org                   #
+#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
+#   Fa Development by Development Team - webspell.og                   #
 #                                                                        #
-#   visit webspell.org                                                   #
+#   visit webspell.og                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_array = Array(
+$language_aay = Aay(
 
 /* do not edit above this line */
 
-	'after'=>'után',
+	'afte'=>'után',
 	'and'=>'és',
-	'article'=>'Cikk',
-	'articles'=>'cikkek',
-	'articles_link'=>'<b>cikk link</b>',
+	'aticle'=>'Cikk',
+	'aticles'=>'cikkek',
+	'aticles_link'=>'<b>cikk link</b>',
 	'ascending'=>'emelkedő',
-	'before'=>'előtt',
+	'befoe'=>'előtt',
 	'date_options'=>'Dátum',
-	'delete_selected'=>'kijelölt törlése',
+	'delete_selected'=>'kijelölt tölése',
 	'descending'=>'csökkenő',
 	'faq'=>'FAQ',
 	'faq_link'=>'<b>FAQ link</b>',
-	'forum'=>'Fórum',
-	'forum_link'=>'<b>topik link</b>',
-	'frequency'=>'Gyakoriság',
-	'keyword'=>'Kulcsszó',
-	'new_search'=>'Új keresés',
-	'news'=>'Hírek',
-	'news_link'=>'<b>hír link</b>',
+	'foum'=>'Fóum',
+	'foum_link'=>'<b>topik link</b>',
+	'fequency'=>'Gyakoiság',
+	'keywod'=>'Kulcsszó',
+	'new_seach'=>'Új keesés',
+	'news'=>'Híek',
+	'news_link'=>'<b>hí link</b>',
 	'options'=>'Lehetőségek',
-	'or'=>'vagy',
-	'result_quantity'=>'Találat per oldal',
-	'results_found'=>'találat',
-	'search'=>'keresés',
-	'search_in'=>'Keresés itt:',
-	'search_location'=>'Keresés Helye',
-	'search_term'=>'Keresés ideje',
-	'search_title'=>'Bővített keresés',
-	'security_code'=>'Biztonsági kód',
-	'sort_options'=>'Rendezés',
-	'start_search'=>'Keresés kezdése',
+	'o'=>'vagy',
+	'esult_quantity'=>'Találat pe oldal',
+	'esults_found'=>'találat',
+	'seach'=>'keesés',
+	'seach_in'=>'Keesés itt:',
+	'seach_location'=>'Keesés Helye',
+	'seach_tem'=>'Keesés ideje',
+	'seach_title'=>'Bővített keesés',
+	'secuity_code'=>'Biztonsági kód',
+	'sot_options'=>'Rendezés',
+	'stat_seach'=>'Keesés kezdése',
 	'submit'=>'Küldés',
-	'text_contains'=>'Szöveg tartalmazza',
-	'title_contains'=>'Cím tartalmazza',
-	'too_short'=>'A keresési kritérium túl kevés. Legalább %min_chars% karakter',
-	'wrong_securitycode'=>'Hibás biztonsági kód!',
-	'no_result'=>'Nem található "%s"'
+	'text_contains'=>'Szöveg tatalmazza',
+	'title_contains'=>'Cím tatalmazza',
+	'too_shot'=>'A keesési kitéium túl kevés. Legalább %min_chas% kaakte',
+	'wong_secuitycode'=>'Hibás biztonsági kód!',
+	'no_esult'=>'Nem található "%s"'
 );
 ?>

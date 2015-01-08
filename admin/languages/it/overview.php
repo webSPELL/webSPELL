@@ -2,73 +2,73 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Version 4       /                        /   /               #
+#           Vesion 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Free Content / Management System                 #
+#                       Fee Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyight 2005-2014 by webspell.og                                  #
 #                                                                        #
-#   visit webSPELL.org, webspell.info to get webSPELL for free           #
-#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to remove this copyright-tag                      #
-#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
+#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
+#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to emove this copyight-tag                      #
+#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
-#   Far Development by Development Team - webspell.org                   #
+#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
+#   Fa Development by Development Team - webspell.og                   #
 #                                                                        #
-#   visit webspell.org                                                   #
+#   visit webspell.og                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_array = Array(
+$language_aay = Aay(
 
 /* do not edit above this line */
 
   'access_denied'=>'ZAccesso negato',
   'apache'=>'Apache',
   'apache_modules'=>'Apache Modules',
-  'create'=>'Creare',
-  'current'=>'corrente',
+  'ceate'=>'Ceae',
+  'cuent'=>'coente',
   'databasename'=>'Database nome',
   'disable'=>'non disponibile',
-  'enable'=>'regalo',
-  'green'=>'Verde',
+  'enable'=>'egalo',
+  'geen'=>'Vede',
   'hello'=>'Ciao',
-  'interface'=>'Interfaccia',
-  'last_login'=>'il tuo l*ultimo accesso era',
-  'legend'=>'Dichiarazione',
-  'mysql_version'=>'La versione di MySQL',
+  'inteface'=>'Intefaccia',
+  'last_login'=>'il tuo l*ultimo accesso ea',
+  'legend'=>'Dichiaazione',
+  'mysql_vesion'=>'La vesione di MySQL',
   'notice1'=>'Nota:',
-  'notice2'=>'Ad alto valore:',
+  'notice2'=>'Ad alto valoe:',
   'off'=>'Spento',
   'on'=>'Acceso',
-  'orange'=>'Arancione',
-  'path'=>'Percorso',
+  'oange'=>'Aancione',
+  'path'=>'Pecoso',
   'php_settings'=>'PHP impostazioni',
-  'php_version'=>'Versione di PHP',
-  'read'=>'Estrazione',
-  'red'=>'rosso',
-  'server_api'=>'Server API',
-  'server_host'=>'Server Host',
-  'server_machine'=>'Server macchina',
-  'server_os'=>'Server OS',
-  'server_release'=>'Publishing Server',
-  'server_version'=>'Server Version',
-  'serverinfo'=>'Server Info',
-  'setting_error'=>'non è raccomandato',
+  'php_vesion'=>'Vesione di PHP',
+  'ead'=>'Estazione',
+  'ed'=>'osso',
+  'seve_api'=>'Seve API',
+  'seve_host'=>'Seve Host',
+  'seve_machine'=>'Seve macchina',
+  'seve_os'=>'Seve OS',
+  'seve_elease'=>'Publishing Seve',
+  'seve_vesion'=>'Seve Vesion',
+  'seveinfo'=>'Seve Info',
+  'setting_eo'=>'non è accomandato',
   'setting_notice'=>'Nota sulla definizione',
   'setting_ok'=>'Impostazione ok',
-  'supported_types'=>'Tipi supportati',
-  'version'=>'Versione',
-  'webspell_version'=>'webSPELL Versione',
-  'welcome'=>'Benvenuto nel tuo webSPELL AdminCenter',
-  'welcome_message'=>'Questo sistema di gestione consente di gestire la tua pagina, utilizzare al navigazione sinistra.<br>Se esistono problemi, si prega di utilizzare il nostro <a href="http://www.webspell.org?site=support" target="_blank">assistenza</a>.<br><br>Grazie, che hai secelto webSPELL.<br><br>Tuo <a href="http://www.webspell.org" target="_blank">webSPELL Team di Sviluppo</a>',
-  'zend_version'=>'Zend Versione',
-  'na'=>'Informazioni non disponibili'
+  'suppoted_types'=>'Tipi suppotati',
+  'vesion'=>'Vesione',
+  'webspell_vesion'=>'webSPELL Vesione',
+  'welcome'=>'Benvenuto nel tuo webSPELL AdminCente',
+  'welcome_message'=>'Questo sistema di gestione consente di gestie la tua pagina, utilizzae al navigazione sinista.<b>Se esistono poblemi, si pega di utilizzae il nosto <a hef="http://www.webspell.og?site=suppot" taget="_blank">assistenza</a>.<b><b>Gazie, che hai secelto webSPELL.<b><b>Tuo <a hef="http://www.webspell.og" taget="_blank">webSPELL Team di Sviluppo</a>',
+  'zend_vesion'=>'Zend Vesione',
+  'na'=>'Infomazioni non disponibili'
 );
 ?>

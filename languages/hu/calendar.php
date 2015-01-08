@@ -2,60 +2,60 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Version 4       /                        /   /               #
+#           Vesion 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Free Content / Management System                 #
+#                       Fee Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyight 2005-2014 by webspell.og                                  #
 #                                                                        #
-#   visit webSPELL.org, webspell.info to get webSPELL for free           #
-#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to remove this copyright-tag                      #
-#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
+#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
+#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to emove this copyight-tag                      #
+#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
-#   Far Development by Development Team - webspell.org                   #
+#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
+#   Fa Development by Development Team - webspell.og                   #
 #                                                                        #
-#   visit webspell.org                                                   #
+#   visit webspell.og                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_array = Array(
+$language_aay = Aay(
 
 /* do not edit above this line */
 
-	'access_member'=>'csak a csapattagok férhetnek hozzá',
-	'add_clanwar'=>'War hozzáadása',
-	'add_clanwars'=>'hozzáadás a warokhoz',
+	'access_membe'=>'csak a csapattagok féhetnek hozzá',
+	'add_clanwa'=>'Wa hozzáadása',
+	'add_clanwas'=>'hozzáadás a waokhoz',
 	'add_event'=>'Esemény hozzáadása',
-	'announce_here'=>'közlés itt',
+	'announce_hee'=>'közlés itt',
 	'announce_to'=>'Közlemény ehhez az Eseményhez:',
 	'announcements'=>'Közlemények:',
-	'apr'=>'Április',
+	'ap'=>'Ápilis',
 	'aug'=>'Augusztus',
-	'calendar'=>'naptár',
-	'clanwardetails'=>'A War részletei',
-	'clanwar_message'=>'new upcoming clanwar on %date%:[br][br]Opponent: [flag]%opponent_flag%[/flag] [url=%opp_hp%]%opponent%[/url] [br]League: [url=%league_hp%]%league%[/url] [br]Info: %warinfo%[br][br][url=index.php?site=calendar]link to calendar[/url]',
-	'clanwar_message_title'=>'new upcoming war in calendar!',
+	'calenda'=>'naptá',
+	'clanwadetails'=>'A Wa észletei',
+	'clanwa_message'=>'new upcoming clanwa on %date%:[b][b]Opponent: [flag]%opponent_flag%[/flag] [ul=%opp_hp%]%opponent%[/ul] [b]League: [ul=%league_hp%]%league%[/ul] [b]Info: %wainfo%[b][b][ul=index.php?site=calenda]link to calenda[/ul]',
+	'clanwa_message_title'=>'new upcoming wa in calenda!',
 	'date_time'=>'Dátum - Idő',
-	'dec'=>'December',
-	'delete'=>'törlés',
-	'displayed_in'=>'(a naptárban jelenik meg)',
-	'edit'=>'szerkesztés',
-	'editevent'=>'Esemény szerkesztése',
-	'editwar'=>'War szerkesztése',
-	'end_datetime'=>'A lejárat ideje',
-	'eventdetails'=>'Esemény részletei',
-	'feb'=>'Február',
-	'fri'=>'Péntek',
+	'dec'=>'Decembe',
+	'delete'=>'tölés',
+	'displayed_in'=>'(a naptában jelenik meg)',
+	'edit'=>'szekesztés',
+	'editevent'=>'Esemény szekesztése',
+	'editwa'=>'Wa szekesztése',
+	'end_datetime'=>'A lejáat ideje',
+	'eventdetails'=>'Esemény észletei',
+	'feb'=>'Febuá',
+	'fi'=>'Péntek',
 	'homepage'=>'Honlap:',
-	'information'=>'Információ',
-	'jan'=>'Január',
+	'infomation'=>'Infomáció',
+	'jan'=>'Januá',
 	'jul'=>'Július',
 	'jun'=>'Június',
 	'league'=>'Liga',
@@ -63,45 +63,45 @@ $language_array = Array(
 	'location'=>'Helyszín:',
 	'longtitle'=>'Hosszú cím',
 	'maps'=>'Mapok',
-	'mar'=>'Március',
+	'ma'=>'Mácius',
 	'may'=>'Május',
 	'mon'=>'Hétfő',
-	'new_date'=>'Új esemény létrehozása',
-	'new_war'=>'Új WAR közlése',
+	'new_date'=>'Új esemény létehozása',
+	'new_wa'=>'Új WAR közlése',
 	'no'=>'Nem',
-	'no_access'=>'Hozzáférés megtagadva',
+	'no_access'=>'Hozzáféés megtagadva',
 	'no_announced'=>'Eddig nem közölték',
-	'no_entries'=>'Nincs elérhető bejegyzés',
-	'no_text'=>'Nincs elérhető szöveg',
-	'nov'=>'November',
-	'oct'=>'Október',
+	'no_enties'=>'Nincs eléhető bejegyzés',
+	'no_text'=>'Nincs eléhető szöveg',
+	'nov'=>'Novembe',
+	'oct'=>'Októbe',
 	'opponent'=>'Ellenfél',
-	'opponentcountry'=>'Az ellenfél nemzetisége',
+	'opponentcounty'=>'Az ellenfél nemzetisége',
 	'opponenthp'=>'Az ellenfél honlapja',
 	'opponenttag'=>'Az ellenfél TAG-je',
-	'perhaps'=>'Talán',
-  'really_delete'=>'Biztosan törölni akarod a bejegyzést?',
+	'pehaps'=>'Talán',
+  'eally_delete'=>'Biztosan töölni akaod a bejegyzést?',
 	'sat'=>'Szombat',
 	'save_announcement'=>'Közlemény mentése',
 	'save_event'=>'Esemény mentése',
-	'save_war'=>'War mentése',
-	'send_message'=>'Csapattagok értesítése',
-	'sep'=>'Szeptember',
-	'server'=>'Szerver',
-	'shorttitle'=>'Rövid cím',
+	'save_wa'=>'Wa mentése',
+	'send_message'=>'Csapattagok étesítése',
+	'sep'=>'Szeptembe',
+	'seve'=>'Szeve',
+	'shottitle'=>'Rövid cím',
 	'squad'=>'Squad',
-	'start_datetime'=>'Az életbelépés ideje',
-	'sun'=>'Vasárnap',
-	'thu'=>'Csütörtök',
+	'stat_datetime'=>'Az életbelépés ideje',
+	'sun'=>'Vasánap',
+	'thu'=>'Csütötök',
 	'today_events'=>'Mai események listája',
 	'tue'=>'Kedd',
-	'updateevent'=>'Esemény frissítése',
-	'updatewar'=>'War frissítése',
-	'wed'=>'Szerda',
+	'updateevent'=>'Esemény fissítése',
+	'updatewa'=>'Wa fissítése',
+	'wed'=>'Szeda',
 	'yes'=>'Igen',
-	'you_have_to_be_clanmember'=>'Klántagnak kell lenned, hogy ezt megtekinthesd.',
-	'enter_short'=>'Nem adtál meg rövid címet!',
-	'enter_title'=>'Nem adtál meg hosszú címet!',
-	'enter_info'=>'Nem adtál meg információt!'
+	'you_have_to_be_clanmembe'=>'Klántagnak kell lenned, hogy ezt megtekinthesd.',
+	'ente_shot'=>'Nem adtál meg övid címet!',
+	'ente_title'=>'Nem adtál meg hosszú címet!',
+	'ente_info'=>'Nem adtál meg infomációt!'
 );
 ?>

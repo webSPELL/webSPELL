@@ -2,36 +2,36 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Version 4       /                        /   /               #
+#           Vesion 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Free Content / Management System                 #
+#                       Fee Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyight 2005-2014 by webspell.og                                  #
 #                                                                        #
-#   visit webSPELL.org, webspell.info to get webSPELL for free           #
-#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to remove this copyright-tag                      #
-#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
+#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
+#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to emove this copyight-tag                      #
+#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
-#   Far Development by Development Team - webspell.org                   #
+#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
+#   Fa Development by Development Team - webspell.og                   #
 #                                                                        #
-#   visit webspell.org                                                   #
+#   visit webspell.og                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_array = Array(
-	'agree'=>'Sono d`accordo',
-	'agree_not'=>'Non sono d`accordo',
-	'gpl_info'=>'Per installare questo webSPELL Versione sul tuo server, è neccessario di<br><a href="http://www.gnu.org/licenses/licenses.html" target="_blank">GNU GENERAL PUBLIC LICENCE</a> accettare <small>(<a href="http://www.gnu.de/documents/gpl.en.html" target="_blank">traduzione in inglese non ufficiale</a>)</small>',
-	'licence'=>'accordo di licenza',
-	'more_info'=>'Potrei ricevere ulteriori informazioni sulla <a href="http://www.webspell.org/index.php?site=license" target="_blank">webSPELL pagina</a>',
-	'please_select'=>'Si prega di selezionare',
-	'version'=>'Versione'
+$language_aay = Aay(
+	'agee'=>'Sono d`accodo',
+	'agee_not'=>'Non sono d`accodo',
+	'gpl_info'=>'Pe installae questo webSPELL Vesione sul tuo seve, è neccessaio di<b><a hef="http://www.gnu.og/licenses/licenses.html" taget="_blank">GNU GENERAL PUBLIC LICENCE</a> accettae <small>(<a hef="http://www.gnu.de/documents/gpl.en.html" taget="_blank">taduzione in inglese non ufficiale</a>)</small>',
+	'licence'=>'accodo di licenza',
+	'moe_info'=>'Potei icevee ulteioi infomazioni sulla <a hef="http://www.webspell.og/index.php?site=license" taget="_blank">webSPELL pagina</a>',
+	'please_select'=>'Si pega di selezionae',
+	'vesion'=>'Vesione'
 );
 ?>

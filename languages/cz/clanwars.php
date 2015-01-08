@@ -2,106 +2,106 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Version 4       /                        /   /               #
+#           Vesion 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Free Content / Management System                 #
+#                       Fee Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyight 2005-2014 by webspell.og                                  #
 #                                                                        #
-#   visit webSPELL.org, webspell.info to get webSPELL for free           #
-#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to remove this copyright-tag                      #
-#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
+#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
+#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to emove this copyight-tag                      #
+#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
-#   Far Development by Development Team - webspell.org                   #
+#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
+#   Fa Development by Development Team - webspell.og                   #
 #                                                                        #
-#   visit webspell.org                                                   #
+#   visit webspell.og                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_array = Array(
+$language_aay = Aay(
 
 /* do not edit above this line */
 
 	'clan'=>'klan',
 	'clan_stats'=>'klan stats',
 	'clantag'=>'klantag',
-	'clanwar_against'=>'zápas proti',
-	'clanwar_details'=>'detaily zápasů',
-	'clanwar_saved'=>'zápas byl uložen.',
-	'clanwar_updated'=>'zápas byl aktualizován.',
-	'clanwars'=>'zápasy',
+	'clanwa_against'=>'zápas poti',
+	'clanwa_details'=>'detaily zápasů',
+	'clanwa_saved'=>'zápas byl uložen.',
+	'clanwa_updated'=>'zápas byl aktualizován.',
+	'clanwas'=>'zápasy',
 	'close_window'=>'zavřít okno',
-	'country'=>'národnost',
+	'county'=>'náodnost',
 	'date'=>'datum',
 	'delete'=>'smazat',
-	'delete_selected'=>'smazat vybrané',
+	'delete_selected'=>'smazat vybané',
 	'details'=>'detaily',
 	'disable_comments'=>'zakázat komentáře',
-	'draw'=>'remíza',
-	'draw_clanwars'=>'remízované zápasy',
-	'edit'=>'upravit',
-	'edit_clanwar'=>'upravit zápas',
-	'game'=>'hra',
-	'go'=>'proveď',
-	'hltv_server'=>'hltv server',
+	'daw'=>'emíza',
+	'daw_clanwas'=>'emízované zápasy',
+	'edit'=>'upavit',
+	'edit_clanwa'=>'upavit zápas',
+	'game'=>'ha',
+	'go'=>'poveď',
+	'hltv_seve'=>'hltv seve',
 	'home_team'=>'domací tým',
-	'homepage'=>'domovská stránka',
+	'homepage'=>'domovská stánka',
 	'id'=>'ID',
 	'league'=>'liga',
 	'league_match_link'=>'odkaz na zápis o zápasu z ligy',
-	'lost'=>'prohrané',
-	'lost_clanwars'=>'prohrané zápasy',
-	'lost_points'=>'prohrané body',
+	'lost'=>'pohané',
+	'lost_clanwas'=>'pohané zápasy',
+	'lost_points'=>'pohané body',
 	'map'=>'mapa',
 	'maps'=>'mapy',
 	'matchlink'=>'matchlink',
-	'new_clanwar'=>'nový zápas',
+	'new_clanwa'=>'nový zápas',
 	'nickname'=>'přezdívka',
 	'no_access'=>'nemáš přístup!',
-	'no_entries'=>'nepovolený přístup',
+	'no_enties'=>'nepovolený přístup',
 	'no_maps'=>'žádné mapy',
-	'no_screenshots'=>'screenshoty nedodány',
+	'no_sceenshots'=>'sceenshoty nedodány',
 	'on'=>'on',
 	'opponent'=>'soupeř',
 	'opponent_team'=>'soupeřův tým',
-	'percent'=>'procento',
-	'publish_clanwar_news'=>'publikovat zápas jako novinku',
-	'really_delete_clanwar'=>'Opravdu chceš smazat zápas?',
-	'report'=>'hlášení',
-	'result'=>'výsledek',
-	'save_clanwar'=>'uložit zápas',
-	'score_home'=>'domací skore',
-	'score_opponent'=>'hosté skore',
-	'screenshots'=>'screenshoty',
-	'select_all'=>'vybrat všechny',
-	'server'=>'server',
+	'pecent'=>'pocento',
+	'publish_clanwa_news'=>'publikovat zápas jako novinku',
+	'eally_delete_clanwa'=>'Opavdu chceš smazat zápas?',
+	'epot'=>'hlášení',
+	'esult'=>'výsledek',
+	'save_clanwa'=>'uložit zápas',
+	'scoe_home'=>'domací skoe',
+	'scoe_opponent'=>'hosté skoe',
+	'sceenshots'=>'sceenshoty',
+	'select_all'=>'vybat všechny',
+	'seve'=>'seve',
 	'show_all_squads'=>'ukázat všechny skupiny',
-	'show_clanwars'=>'ukázat všechny zápasy',
-	'sort'=>'seřadit',
+	'show_clanwas'=>'ukázat všechny zápasy',
+	'sot'=>'seřadit',
 	'squad'=>'skupina',
 	'stat'=>'stat',
 	'stats'=>'stats',
 	'team'=>'tým',
 	'total'=>'celkem',
-	'total_clanwars'=>'celkem zápasů',
-	'total_draw_clanwars'=>'celkem remizovaných zápasù',
-	'total_lost_clanwars'=>'celkem prohraných zápasù',
-	'total_lost_points'=>'celkem prohraných bodů',
-	'total_won_clanwars'=>'celkem vyhraných zápasů',
-	'total_won_points'=>'celkem vyhraných zápasů',
-	'update_clanwar'=>'aktualizovat zápas',
-	'upload_screenshot'=>'nahrát screenshoty',
-	'user_comments'=>'zapnout komentáře uživatelů',
-	'visitor_comments'=>'zapnout komentáře návštěvníků',
-	'won'=>'vyhrané',
-	'won_clanwars'=>'vyhrané zápasy',
-	'won_points'=>'vyhrané body'
+	'total_clanwas'=>'celkem zápasů',
+	'total_daw_clanwas'=>'celkem emizovaných zápasù',
+	'total_lost_clanwas'=>'celkem pohaných zápasù',
+	'total_lost_points'=>'celkem pohaných bodů',
+	'total_won_clanwas'=>'celkem vyhaných zápasů',
+	'total_won_points'=>'celkem vyhaných zápasů',
+	'update_clanwa'=>'aktualizovat zápas',
+	'upload_sceenshot'=>'nahát sceenshoty',
+	'use_comments'=>'zapnout komentáře uživatelů',
+	'visito_comments'=>'zapnout komentáře návštěvníků',
+	'won'=>'vyhané',
+	'won_clanwas'=>'vyhané zápasy',
+	'won_points'=>'vyhané body'
 );
 ?>

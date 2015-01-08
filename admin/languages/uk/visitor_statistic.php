@@ -2,30 +2,30 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Version 4       /                        /   /               #
+#           Vesion 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Free Content / Management System                 #
+#                       Fee Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyight 2005-2014 by webspell.og                                  #
 #                                                                        #
-#   visit webSPELL.org, webspell.info to get webSPELL for free           #
-#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to remove this copyright-tag                      #
-#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
+#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
+#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to emove this copyight-tag                      #
+#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
-#   Far Development by Development Team - webspell.org                   #
+#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
+#   Fa Development by Development Team - webspell.og                   #
 #                                                                        #
-#   visit webspell.org                                                   #
+#   visit webspell.og                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_array = Array(
+$language_aay = Aay(
 
 /* do not edit above this line */
 
@@ -36,27 +36,27 @@ $language_array = Array(
   'guest'=>'Guest',
   'guests'=>'Guests',
   'last'=>'Last',
-  'max_day'=>'Day Record',
+  'max_day'=>'Day Recod',
   'months'=>'Months',
   'now_online'=>'Now Online',
   'settings'=>'Settings',
   'show'=>'show',
-  'show_year_month'=>'Show custom Year &amp; Month',
+  'show_yea_month'=>'Show custom Yea &amp; Month',
   'stats'=>'Statistics',
   'this_month'=>'This Month',
   'today'=>'Today',
   'total'=>'Total',
-  'user'=>'User',
-  'users'=>'Users',
-  'visitor'=>'Visitor',
-  'visitor_stats_graphics'=>'Visitor Statistics (Graphics)',
-  'visitor_stats_overall'=>'Visitor Statistics (overall)',
-  'visits_day'=>'Visits per Day',
-  'visits_hour'=>'Visits per Hour',
-  'visits_month'=>'Visits per Month',
+  'use'=>'Use',
+  'uses'=>'Uses',
+  'visito'=>'Visito',
+  'visito_stats_gaphics'=>'Visito Statistics (Gaphics)',
+  'visito_stats_oveall'=>'Visito Statistics (oveall)',
+  'visits_day'=>'Visits pe Day',
+  'visits_hou'=>'Visits pe Hou',
+  'visits_month'=>'Visits pe Month',
   'visits_total'=>'Visits Total',
   'width_height'=>'(width x height)',
-  'yesterday'=>'Yesterday',
+  'yesteday'=>'Yesteday',
   'yyyy'=>'(YYYY)',
   'yyyy_mm'=>'(YYYY.MM)'
 );

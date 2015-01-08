@@ -2,52 +2,52 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Version 4       /                        /   /               #
+#           Vesion 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Free Content / Management System                 #
+#                       Fee Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyight 2005-2014 by webspell.og                                  #
 #                                                                        #
-#   visit webSPELL.org, webspell.info to get webSPELL for free           #
-#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to remove this copyright-tag                      #
-#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
+#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
+#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to emove this copyight-tag                      #
+#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
-#   Far Development by Development Team - webspell.org                   #
+#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
+#   Fa Development by Development Team - webspell.og                   #
 #                                                                        #
-#   visit webspell.org                                                   #
+#   visit webspell.og                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_array = Array(
+$language_aay = Aay(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Hozzáférés megtagadva',
+  'access_denied'=>'Hozzáféés megtagadva',
   'actions'=>'Lehetőségek',
   'add_smiley'=>'Hangulatjel hozzáadása',
   'back'=>'Vissza',
-  'delete'=>'Törlés',
-  'edit'=>'Szerkesztés',
-  'edit_smiley'=>'Hangulatjel szerkesztése',
+  'delete'=>'Tölés',
+  'edit'=>'Szekesztés',
+  'edit_smiley'=>'Hangulatjel szekesztése',
   'example'=>'(pld.: ":oO:")',
-  'fill_form'=>'Helyesen töltsd ki az űrlapot!',
-  'format_incorrect'=>'A kép formátuma nem megfelelő. A kép kiterjesztése csak *.gif lehet.',
+  'fill_fom'=>'Helyesen töltsd ki az űlapot!',
+  'fomat_incoect'=>'A kép fomátuma nem megfelelő. A kép kitejesztése csak *.gif lehet.',
   'icon'=>'Ikon',
   'icons'=>'Ikonok',
   'new_smiley'=>'Új hangulatjel',
-  'no_entries'=>'Nincs bejegyzés',
-  'pattern'=>'Minta',
-  'present_icon'=>'Jelenlegi Ikon',
-  'really_delete'=>'Biztosan törölni akarod ezt a hangulatjelet?',
+  'no_enties'=>'Nincs bejegyzés',
+  'patten'=>'Minta',
+  'pesent_icon'=>'Jelenlegi Ikon',
+  'eally_delete'=>'Biztosan töölni akaod ezt a hangulatjelet?',
   'smilies'=>'Hangulatjelek',
   'smiley_name'=>'Hangulatjel neve',
-  'transaction_invalid'=>'A művelet azonosítója érvénytelen'
+  'tansaction_invalid'=>'A művelet azonosítója événytelen'
 );
 ?>

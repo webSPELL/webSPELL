@@ -2,83 +2,83 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Version 4       /                        /   /               #
+#           Vesion 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Free Content / Management System                 #
+#                       Fee Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyight 2005-2014 by webspell.og                                  #
 #                                                                        #
-#   visit webSPELL.org, webspell.info to get webSPELL for free           #
-#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to remove this copyright-tag                      #
-#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
+#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
+#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to emove this copyight-tag                      #
+#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
-#   Far Development by Development Team - webspell.org                   #
+#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
+#   Fa Development by Development Team - webspell.og                   #
 #                                                                        #
-#   visit webspell.org                                                   #
+#   visit webspell.og                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_array = Array(
+$language_aay = Aay(
 
 /* do not edit above this line */
 
   'access_denied'=>'Access denied',
-  'access_rights'=>'Access rights',
+  'access_ights'=>'Access ights',
   'actions'=>'Actions',
   'active'=>'active',
   'activity'=>'Activity',
   'cash_admin'=>'Cash-Admin',
-  'clanwar_admin'=>'Clanwar-Admin',
-  'country_nickname'=>'Country / Nickname',
+  'clanwa_admin'=>'Clanwa-Admin',
+  'county_nickname'=>'County / Nickname',
   'delete'=>'delete',
-  'description'=>'User Description',
+  'desciption'=>'Use Desciption',
   'edit'=>'edit',
-  'edit_member'=>'edit Member',
-  'error_own_rights'=>'ERROR: Can not change own Rights',
+  'edit_membe'=>'edit Membe',
+  'eo_own_ights'=>'ERROR: Can not change own Rights',
   'feedback_admin'=>'Feedback-Admin',
   'fightus_admin'=>'Fightus-Admin',
   'file_admin'=>'File-Admin',
-  'gallery_admin'=>'Gallery-Admin',
-  'group_access'=>'Forum Group Access',
+  'galley_admin'=>'Galley-Admin',
+  'goup_access'=>'Foum Goup Access',
   'inactive'=>'inactive',
   'joinus_admin'=>'Joinus-Admin',
-  'members'=>'Members',
-  'messageboard_admin'=>'Messageboard-Admin',
-  'messageboard_moderator'=>'Messageboard-Moderator',
+  'membes'=>'Membes',
+  'messageboad_admin'=>'Messageboad-Admin',
+  'messageboad_modeato'=>'Messageboad-Modeato',
   'news_admin'=>'News-Admin',
-  'news_writer'=>'News-Writer',
+  'news_wite'=>'News-Wite',
   'nickname'=>'Nickname',
   'no'=>'no',
   'page_admin'=>'Page-Admin',
   'polls_admin'=>'Polls-Admin',
   'position'=>'Position',
-  'really_delete'=>'Really delete this Member?',
-  'sort'=>'Sort',
+  'eally_delete'=>'Really delete this Membe?',
+  'sot'=>'Sot',
   'squad'=>'Squad',
-  'super_admin'=>'Super-Admin',
-  'to_sort'=>'sort',
-  'tooltip_1'=>'<b>Access:</b><br>- News Rubrics<br>- News Languages<br>- News<br>- Articles<br>- Awards<br>- Links',
-  'tooltip_2'=>'<b>Access:</b><br>- write News',
-  'tooltip_3'=>'<b>Access:</b><br>- Polls',
-  'tooltip_4'=>'<b>Access:</b><br>- Comments<br>- Guestbook<br>- Userguestbooks<br>- Shoutbox',
-  'tooltip_5'=>'<b>Access:</b><br>- Users<br>- User Rights<br>- Squads<br>- Members<br>- Contacts<br>- Newsletter',
-  'tooltip_6'=>'<b>Access:</b><br>- Clanwars<br>- Awards<br>- Challenges<br>- Calendar',
-  'tooltip_7'=>'<b>Access:</b><br>- Board Categories<br>- Boards<br>- Topics/Posts edit &amp; delete<br>- Usergroups<br>- Group-Users<br>- User Ranks',
-  'tooltip_8'=>'<b>Access:</b><br>- Topics/Posts edit &amp; delete<br>(Board assignment must exist)',
-  'tooltip_9'=>'<b>Access:</b><br>- About us<br>- Bannerrotation<br>- Icons<br>- Database<br>- FAQ Categories<br>- FAQ<br>- History<br>- Imprint<br>- Link Categories<br>- Links<br>- Page Lock<br>- Parnters<br>- Scrolltext<br>- Servers<br>- Settings<br>- Static Pages<br>- Styles<br>- Update<br>- Link us<br>- Sponsors',
-  'tooltip_10'=>'<b>Access:</b><br>- File Categories<br>- Files<br>- Demos',
-  'tooltip_11'=>'<b>Access:</b><br>- Cash-Box',
-  'tooltip_12'=>'<b>Access:</b><br>- Gallery Categories<br>- Galleries<br>- Pictures',
-  'tooltip_13'=>'<b>Access:</b><br>- full Administration Access',
-  'transaction_invalid'=>'Transaction ID invalid',
-  'user_admin'=>'User-Admin',
+  'supe_admin'=>'Supe-Admin',
+  'to_sot'=>'sot',
+  'tooltip_1'=>'<b>Access:</b><b>- News Rubics<b>- News Languages<b>- News<b>- Aticles<b>- Awads<b>- Links',
+  'tooltip_2'=>'<b>Access:</b><b>- wite News',
+  'tooltip_3'=>'<b>Access:</b><b>- Polls',
+  'tooltip_4'=>'<b>Access:</b><b>- Comments<b>- Guestbook<b>- Useguestbooks<b>- Shoutbox',
+  'tooltip_5'=>'<b>Access:</b><b>- Uses<b>- Use Rights<b>- Squads<b>- Membes<b>- Contacts<b>- Newslette',
+  'tooltip_6'=>'<b>Access:</b><b>- Clanwas<b>- Awads<b>- Challenges<b>- Calenda',
+  'tooltip_7'=>'<b>Access:</b><b>- Boad Categoies<b>- Boads<b>- Topics/Posts edit &amp; delete<b>- Usegoups<b>- Goup-Uses<b>- Use Ranks',
+  'tooltip_8'=>'<b>Access:</b><b>- Topics/Posts edit &amp; delete<b>(Boad assignment must exist)',
+  'tooltip_9'=>'<b>Access:</b><b>- About us<b>- Banneotation<b>- Icons<b>- Database<b>- FAQ Categoies<b>- FAQ<b>- Histoy<b>- Impint<b>- Link Categoies<b>- Links<b>- Page Lock<b>- Pantes<b>- Scolltext<b>- Seves<b>- Settings<b>- Static Pages<b>- Styles<b>- Update<b>- Link us<b>- Sponsos',
+  'tooltip_10'=>'<b>Access:</b><b>- File Categoies<b>- Files<b>- Demos',
+  'tooltip_11'=>'<b>Access:</b><b>- Cash-Box',
+  'tooltip_12'=>'<b>Access:</b><b>- Galley Categoies<b>- Galleies<b>- Pictues',
+  'tooltip_13'=>'<b>Access:</b><b>- full Administation Access',
+  'tansaction_invalid'=>'Tansaction ID invalid',
+  'use_admin'=>'Use-Admin',
   'yes'=>'yes'
 );
 ?>

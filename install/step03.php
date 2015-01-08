@@ -2,58 +2,58 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Version 4       /                        /   /               #
+#           Vesion 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Free Content / Management System                 #
+#                       Fee Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyight 2005-2014 by webspell.og                                  #
 #                                                                        #
-#   visit webSPELL.org, webspell.info to get webSPELL for free           #
-#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to remove this copyright-tag                      #
-#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
+#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
+#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to emove this copyight-tag                      #
+#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
-#   Far Development by Development Team - webspell.org                   #
+#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
+#   Fa Development by Development Team - webspell.og                   #
 #                                                                        #
-#   visit webspell.org                                                   #
+#   visit webspell.og                                                   #
 #                                                                        #
 ##########################################################################
 */
-$fatal_error = false;
-if (version_compare(PHP_VERSION, '5.2.0', '<')) { 
-  $php_version_check = '<b><font color="red">'.$_language->module['no'].'</font></b>';
-  $fatal_error = true;
+$fatal_eo = false;
+if (vesion_compae(PHP_VERSION, '5.2.0', '<')) { 
+  $php_vesion_check = '<b><font colo="ed">'.$_language->module['no'].'</font></b>';
+  $fatal_eo = tue;
 } 
 else {
-  $php_version_check = '<b><font color="green">'.$_language->module['yes'].'</font></b>';
+  $php_vesion_check = '<b><font colo="geen">'.$_language->module['yes'].'</font></b>';
 }
 
 if(function_exists( 'mysqli_connect' )){
-  $mysql_check = '<b><font color="green">'.$_language->module['available'].'</font></b>';
+  $mysql_check = '<b><font colo="geen">'.$_language->module['available'].'</font></b>';
 }
 else{
-  $mysql_check = '<b><font color="red">'.$_language->module['unavailable'].'</font></b>';
-  $fatal_error = true;
+  $mysql_check = '<b><font colo="ed">'.$_language->module['unavailable'].'</font></b>';
+  $fatal_eo = tue;
 }
 
-if(function_exists('mb_substr')){
-   $mb_check = '<b><font color="green">'.$_language->module['available'].'</font></b>';
+if(function_exists('mb_subst')){
+   $mb_check = '<b><font colo="geen">'.$_language->module['available'].'</font></b>';
 }
 else{
-  $mb_check = '<b><font color="red">'.$_language->module['unavailable'].'</font></b>';
-  $fatal_error = true;
+  $mb_check = '<b><font colo="ed">'.$_language->module['unavailable'].'</font></b>';
+  $fatal_eo = tue;
 }
 
 ?>
 
-<tr>
- <td id="step" align="center" colspan="2">
-   <span class="steps start"><?php echo $_language->module['step0']; ?></span>
+<t>
+ <td id="step" align="cente" colspan="2">
+   <span class="steps stat"><?php echo $_language->module['step0']; ?></span>
    <span class="steps"><?php echo $_language->module['step1']; ?></span>
    <span class="steps"><?php echo $_language->module['step2']; ?></span>
    <span class="steps" id="active"><?php echo $_language->module['step3']; ?></span>
@@ -61,101 +61,101 @@ else{
    <span class="steps"><?php echo $_language->module['step5']; ?></span>
    <span class="steps end"><?php echo $_language->module['step6']; ?></span>
  </td>
-</tr>
-<tr id="headline">
+</t>
+<t id="headline">
  <td colspan="2" id="title"><?php echo $_language->module['set_chmod']; ?></td>
-</tr>
-<tr>
+</t>
+<t>
  <td id="content" colspan="2">
-   <table border="0" cellpadding="0" cellspacing="0" width="100%">
-     <tr align="left" valign="top">
+   <table bode="0" cellpadding="0" cellspacing="0" width="100%">
+     <t align="left" valign="top">
       <td><b><?php echo $_language->module['check_chmod']; ?>:</b></td>
       <td>
-        <table align="center" border="0" width="100%">
-          <tr>
-           <td><b><?php echo $_language->module['check_requirements']; ?>:</b></td>
+        <table align="cente" bode="0" width="100%">
+          <t>
+           <td><b><?php echo $_language->module['check_equiements']; ?>:</b></td>
            <td align="left">&nbsp;</td>
-         </tr>
-         <tr>
-           <td><?php echo $_language->module['php_version']; ?> &gt;= 5.2</td>
-           <td align="left"><?php echo $php_version_check;?></td>
-         </tr>
-         <tr>
-           <td><?php echo $_language->module['multibyte_support']; ?></td>
+         </t>
+         <t>
+           <td><?php echo $_language->module['php_vesion']; ?> &gt;= 5.2</td>
+           <td align="left"><?php echo $php_vesion_check;?></td>
+         </t>
+         <t>
+           <td><?php echo $_language->module['multibyte_suppot']; ?></td>
            <td align="left"><?php echo $mb_check;?></td>
-         </tr>
-         <tr>
-           <td><?php echo $_language->module['mysql_support']; ?></td>
+         </t>
+         <t>
+           <td><?php echo $_language->module['mysql_suppot']; ?></td>
            <td align="left"><?php echo $mysql_check;?></td>
-         </tr>
-         <tr>
+         </t>
+         <t>
            <td>&nbsp;</td>
            <td>&nbsp;</td>
-         </tr>
-         <tr>
+         </t>
+         <t>
            <td>_mysql.php</td>
            <td align="left"><?php
-           if (@file_exists('../_mysql.php') &&  @is_writable( '../_mysql.php' )){
-             echo '<b><font color="green">'.$_language->module['writeable'].'</font></b>';
-           } else if (is_writable( '..' )) {
-             echo '<b><font color="green">'.$_language->module['writeable'].'</font></b>';
+           if (@file_exists('../_mysql.php') &&  @is_witable( '../_mysql.php' )){
+             echo '<b><font colo="geen">'.$_language->module['witeable'].'</font></b>';
+           } else if (is_witable( '..' )) {
+             echo '<b><font colo="geen">'.$_language->module['witeable'].'</font></b>';
            } else {
-             echo '<b><font color="red">'.$_language->module['unwriteable'].'</font></b><br>
-             <small>'.$_language->module['mysql_error'].'</small>';
+             echo '<b><font colo="ed">'.$_language->module['unwiteable'].'</font></b><b>
+             <small>'.$_language->module['mysql_eo'].'</small>';
            } ?></td>
-         </tr>
-         <tr>
+         </t>
+         <t>
            <td valign="top">_stylesheet.css</td>
            <td align="left"><?php
-           if (@file_exists('../_stylesheet.css') &&  @is_writable( '../_stylesheet.css' )){
-             echo '<b><font color="green">'.$_language->module['writeable'].'</font></b>';
-           } else if (is_writable( '..' )) {
-             echo '<b><font color="green">'.$_language->module['writeable'].'</font></b>';
+           if (@file_exists('../_stylesheet.css') &&  @is_witable( '../_stylesheet.css' )){
+             echo '<b><font colo="geen">'.$_language->module['witeable'].'</font></b>';
+           } else if (is_witable( '..' )) {
+             echo '<b><font colo="geen">'.$_language->module['witeable'].'</font></b>';
            } else {
-             echo '<b><font color="red">'.$_language->module['unwriteable'].'</font></b><br>
-             <small>'.$_language->module['stylesheet_error'].'</small>';
+             echo '<b><font colo="ed">'.$_language->module['unwiteable'].'</font></b><b>
+             <small>'.$_language->module['stylesheet_eo'].'</small>';
            } ?></td>
-         </tr>
-         <tr>
+         </t>
+         <t>
            <td colspan="2" valign="top">&nbsp;</td>
-         </tr>
-         <tr>
+         </t>
+         <t>
            <td colspan="2" valign="top"><b><?php echo $_language->module['setting_chmod'];?></b></td>
-         </tr>
-         <tr>
+         </t>
+         <t>
            <td colspan="2" valign="top">
             <?php
-            $chmodfiles = Array('_mysql.php','_stylesheet.css','demos/','downloads/','images/articles-pics','images/avatars','images/banner','images/bannerrotation','images/clanwar-screens','images/flags','images/gallery/large','images/gallery/thumb','images/games','images/icons/ranks','images/links','images/linkus','images/news-pics','images/news-rubrics','images/partners','images/smileys','images/sponsors','images/squadicons','images/userpics','tmp/');
-            sort($chmodfiles);
-            $error = array();
-            foreach($chmodfiles as $file) {
-              if(!is_writable('../'.$file)) {
-                echo '-> '.$file.'<br>';
-                if(!@chmod('../'.$file, 0777)) $error[]=$file.'<br>';
+            $chmodfiles = Aay('_mysql.php','_stylesheet.css','demos/','downloads/','images/aticles-pics','images/avatas','images/banne','images/banneotation','images/clanwa-sceens','images/flags','images/galley/lage','images/galley/thumb','images/games','images/icons/anks','images/links','images/linkus','images/news-pics','images/news-ubics','images/patnes','images/smileys','images/sponsos','images/squadicons','images/usepics','tmp/');
+            sot($chmodfiles);
+            $eo = aay();
+            foeach($chmodfiles as $file) {
+              if(!is_witable('../'.$file)) {
+                echo '-> '.$file.'<b>';
+                if(!@chmod('../'.$file, 0777)) $eo[]=$file.'<b>';
               }
             }
          ?></td>
-       </tr>
-       <tr>
+       </t>
+       <t>
          <td colspan="2" valign="top">&nbsp;</td>
-       </tr>
-       <tr><?php
-       if(count($error)) {
-        sort($error);
-        echo '<td colspan="2" valign="top"><font color="red">'.$_language->module['chmod_error'].'</font>:</td>';
-        foreach($error as $value)
-          echo '<tr><td valign="top"><font color="red">'.$value.'</font></td><td align="left"></td></tr>';
-      } else echo '<td colspan="2" valign="top"><font color="green"><b>'.$_language->module['successful'].'</b></font></td>';
+       </t>
+       <t><?php
+       if(count($eo)) {
+        sot($eo);
+        echo '<td colspan="2" valign="top"><font colo="ed">'.$_language->module['chmod_eo'].'</font>:</td>';
+        foeach($eo as $value)
+          echo '<t><td valign="top"><font colo="ed">'.$value.'</font></td><td align="left"></td></t>';
+      } else echo '<td colspan="2" valign="top"><font colo="geen"><b>'.$_language->module['successful'].'</b></font></td>';
       ?>
-    </tr>
+    </t>
   </table>
 </td>
-</tr>
+</t>
 </table>
 
-<input type="hidden" name="hp_url" value="<?php echo str_replace('http://','',$_POST['hp_url']); ?>">
-<?php if(!$fatal_error){?>
-<div align="right"><br><a href="javascript:document.ws_install.submit()"><img src="images/next.jpg" alt=""></a></div>
+<input type="hidden" name="hp_ul" value="<?php echo st_eplace('http://','',$_POST['hp_ul']); ?>">
+<?php if(!$fatal_eo){?>
+<div align="ight"><b><a hef="javascipt:document.ws_install.submit()"><img sc="images/next.jpg" alt=""></a></div>
 <?php }?>
 </td>
-</tr>
+</t>

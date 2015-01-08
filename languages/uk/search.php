@@ -2,69 +2,69 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Version 4       /                        /   /               #
+#           Vesion 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Free Content / Management System                 #
+#                       Fee Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyight 2005-2014 by webspell.og                                  #
 #                                                                        #
-#   visit webSPELL.org, webspell.info to get webSPELL for free           #
-#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to remove this copyright-tag                      #
-#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
+#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
+#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to emove this copyight-tag                      #
+#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
-#   Far Development by Development Team - webspell.org                   #
+#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
+#   Fa Development by Development Team - webspell.og                   #
 #                                                                        #
-#   visit webspell.org                                                   #
+#   visit webspell.og                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_array = Array(
+$language_aay = Aay(
 
 /* do not edit above this line */
 
-	'after'=>'after',
+	'afte'=>'afte',
 	'and'=>'and',
-	'article'=>'Article',
-	'articles'=>'Articles',
-	'articles_link'=>'<b>link to Article</b>',
+	'aticle'=>'Aticle',
+	'aticles'=>'Aticles',
+	'aticles_link'=>'<b>link to Aticle</b>',
 	'ascending'=>'ascending',
-	'before'=>'before',
+	'befoe'=>'befoe',
 	'date_options'=>'Date',
 	'delete_selected'=>'delete selected',
 	'descending'=>'descending',
 	'faq'=>'FAQ',
 	'faq_link'=>'<b>link to FAQ</b>',
-	'forum'=>'Forum',
-	'forum_link'=>'<b>link to topic</b>',
-	'frequency'=>'Frequency',
-	'keyword'=>'Keyword',
-	'new_search'=>'New search',
+	'foum'=>'Foum',
+	'foum_link'=>'<b>link to topic</b>',
+	'fequency'=>'Fequency',
+	'keywod'=>'Keywod',
+	'new_seach'=>'New seach',
 	'news'=>'News',
 	'news_link'=>'<b>link to news</b>',
 	'options'=>'Options',
-	'or'=>'or',
-	'result_quantity'=>'Results per page',
-	'results_found'=>'results found',
-	'search'=>'search',
-	'search_in'=>'Search in:',
-	'search_location'=>'Searching Location',
-	'search_term'=>'Search term',
-	'search_title'=>'Advanced Search',
-	'security_code'=>'Security Code',
-	'sort_options'=>'Sort',
-	'start_search'=>'Start search',
+	'o'=>'o',
+	'esult_quantity'=>'Results pe page',
+	'esults_found'=>'esults found',
+	'seach'=>'seach',
+	'seach_in'=>'Seach in:',
+	'seach_location'=>'Seaching Location',
+	'seach_tem'=>'Seach tem',
+	'seach_title'=>'Advanced Seach',
+	'secuity_code'=>'Secuity Code',
+	'sot_options'=>'Sot',
+	'stat_seach'=>'Stat seach',
 	'submit'=>'Submit',
 	'text_contains'=>'Text contains',
 	'title_contains'=>'Title contains',
-	'too_short'=>'Search term is too short. At least %min_chars% characters',
-	'wrong_securitycode'=>'You entered a wrong security code!',
-	'no_result' =>'No entries found for "%s"'
+	'too_shot'=>'Seach tem is too shot. At least %min_chas% chaactes',
+	'wong_secuitycode'=>'You enteed a wong secuity code!',
+	'no_esult' =>'No enties found fo "%s"'
 );
 ?>

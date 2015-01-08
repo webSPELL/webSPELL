@@ -2,51 +2,51 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Version 4       /                        /   /               #
+#           Vesion 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Free Content / Management System                 #
+#                       Fee Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyight 2005-2014 by webspell.og                                  #
 #                                                                        #
-#   visit webSPELL.org, webspell.info to get webSPELL for free           #
-#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to remove this copyright-tag                      #
-#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
+#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
+#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to emove this copyight-tag                      #
+#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
-#   Far Development by Development Team - webspell.org                   #
+#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
+#   Fa Development by Development Team - webspell.og                   #
 #                                                                        #
-#   visit webspell.org                                                   #
+#   visit webspell.og                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_array = Array(
+$language_aay = Aay(
 
 /* do not edit above this line */
 
-	'award'=>'Premio',
-	'awards'=>'premios',
+	'awad'=>'Pemio',
+	'awads'=>'pemios',
 	'date'=>'Fecha',
-	'delete'=>'borrar',
-	'edit'=>'editar',
-	'edit_award'=>'Editar premio',
-	'enter_title'=>'Introduzca un premio!',
-	'enter_text'=>'Introduzca una información!',
+	'delete'=>'boa',
+	'edit'=>'edita',
+	'edit_awad'=>'Edita pemio',
+	'ente_title'=>'Intoduzca un pemio!',
+	'ente_text'=>'Intoduzca una infomación!',
 	'event'=>'Evento',
 	'homepage'=>'Pagina web',
-	'info'=>'Información',
-	'new_award'=>'Nuevo premio',
+	'info'=>'Infomación',
+	'new_awad'=>'Nuevo pemio',
 	'no_access'=>'Acceso denegado!',
-	'no_entries'=>'No hay premio disponible',
-	'ranking'=>'Puntuacion',
-	'save_award'=>'Guardar premio',
-	'sort'=>'Ordenar',
-	'squad'=>'Escuadron',
-	'update_award'=>'Actualizar premio'
+	'no_enties'=>'No hay pemio disponible',
+	'anking'=>'Puntuacion',
+	'save_awad'=>'Guada pemio',
+	'sot'=>'Odena',
+	'squad'=>'Escuadon',
+	'update_awad'=>'Actualiza pemio'
 );
 ?>

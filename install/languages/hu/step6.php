@@ -2,42 +2,42 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Version 4       /                        /   /               #
+#           Vesion 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Free Content / Management System                 #
+#                       Fee Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyight 2005-2014 by webspell.og                                  #
 #                                                                        #
-#   visit webSPELL.org, webspell.info to get webSPELL for free           #
-#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to remove this copyright-tag                      #
-#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
+#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
+#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to emove this copyight-tag                      #
+#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
-#   Far Development by Development Team - webspell.org                   #
+#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
+#   Fa Development by Development Team - webspell.og                   #
 #                                                                        #
-#   visit webspell.org                                                   #
+#   visit webspell.og                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_array = Array(
+$language_aay = Aay(
 	'back'=>'Vissza',
-	'delete_folder'=>'Biztonsági okokból töröld az <b>/install</b> mappát.',
-	'error'=>'HIBA',
-	'error_database'=>'<b>HIBA:</b><br> Nem lehet csatlakozni az adatbázishoz',
-	'error_mysql'=>'<b>HIBA:</b><br>Nincs MySQL kapcsolat',
+	'delete_folde'=>'Biztonsági okokból tööld az <b>/install</b> mappát.',
+	'eo'=>'HIBA',
+	'eo_database'=>'<b>HIBA:</b><b> Nem lehet csatlakozni az adatbázishoz',
+	'eo_mysql'=>'<b>HIBA:</b><b>Nincs MySQL kapcsolat',
 	'install_complete'=>'A telepítés befejeződött!',
 	'finish_install'=>'Telepítés Befejezése',
-	'folder_removed'=>'Az <b>/install</b> mappa sikeresen eltávolítva',
-	'reset_chmod'=>'A <b>_mysql.php</b> CHMOD-ját állítsd 644-re.',
-	'update_complete'=>'A Frissítés befejeződött!',
-	'verify_data'=>'Ellenőrizd a megadott adatokat!',
+	'folde_emoved'=>'Az <b>/install</b> mappa sikeesen eltávolítva',
+	'eset_chmod'=>'A <b>_mysql.php</b> CHMOD-ját állítsd 644-e.',
+	'update_complete'=>'A Fissítés befejeződött!',
+	'veify_data'=>'Ellenőizd a megadott adatokat!',
 	'view_site'=>'Nézd meg az oldalad',
-	'write_failed'=>'A beállítások mentése sikertelen. Biztosíts a webszerver számára írási jogosultságot a _mysql.php fájlhoz (CHMOD 777).'
+	'wite_failed'=>'A beállítások mentése siketelen. Biztosíts a webszeve számáa íási jogosultságot a _mysql.php fájlhoz (CHMOD 777).'
 );
 ?>

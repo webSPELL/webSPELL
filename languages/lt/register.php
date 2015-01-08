@@ -2,72 +2,72 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Version 4       /                        /   /               #
+#           Vesion 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Free Content / Management System                 #
+#                       Fee Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyight 2005-2014 by webspell.og                                  #
 #                                                                        #
-#   visit webSPELL.org, webspell.info to get webSPELL for free           #
-#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to remove this copyright-tag                      #
-#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
+#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
+#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to emove this copyight-tag                      #
+#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
-#   Far Development by Development Team - webspell.org                   #
+#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
+#   Fa Development by Development Team - webspell.og                   #
 #                                                                        #
-#   visit webspell.org                                                   #
+#   visit webspell.og                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_array = Array(
+$language_aay = Aay(
 
 /* do not edit above this line */
 
-	'activation_successful'=>'Jūsų profilio aktivacija sėkminga.<br>Dabar jūs jau galite prisijungti.',
+	'activation_successful'=>'Jūsų pofilio aktivacija sėkminga.<b>Daba jūs jau galite pisijungti.',
 	'back'=>'atgal',
-	'enter_nickname'=>'Prašome įrašykite slapyvardį.',
-	'enter_password'=>'Prašome įrašykite slaptažodį.',
-	'enter_username'=>'Prašome įrašykite vartotojo vardą.',
-	'errors_there'=>'Atsitiko keletas klaidų',
-	'for_login'=>'tik prisijungimui',
-	'invalid_mail'=>'Jūs įrašėte blogą e-paštą.',
+	'ente_nickname'=>'Pašome įašykite slapyvadį.',
+	'ente_passwod'=>'Pašome įašykite slaptažodį.',
+	'ente_usename'=>'Pašome įašykite vatotojo vadą.',
+	'eos_thee'=>'Atsitiko keletas klaidų',
+	'fo_login'=>'tik pisijungimui',
+	'invalid_mail'=>'Jūs įašėte blogą e-paštą.',
 	'mail'=>'E-Paštas',
-	'mail_activation_successful'=>'Jūsų e-pašto adreso aktivacija sėkminga.',
-	'mail_failed'=>'Profilio aktivacija negalėjo būti išsiųsta, prašome pranešti tinklalapio savininkui.',
-	'mail_inuse'=>'E-Pašto adresas jau naudojamas.',
-	'mail_subject'=>'Profilio aktivacija puslapio - %homepage_url%',
-	'mail_text'=>'Sveikas %username%!
+	'mail_activation_successful'=>'Jūsų e-pašto adeso aktivacija sėkminga.',
+	'mail_failed'=>'Pofilio aktivacija negalėjo būti išsiųsta, pašome panešti tinklalapio savininkui.',
+	'mail_inuse'=>'E-Pašto adesas jau naudojamas.',
+	'mail_subject'=>'Pofilio aktivacija puslapio - %homepage_ul%',
+	'mail_text'=>'Sveikas %usename%!
 
-Jūsų registracija %pagetitle% (%homepage_url%) buvo sėkminga. Jūsų profilio duomenys::
+Jūsų egistacija %pagetitle% (%homepage_ul%) buvo sėkminga. Jūsų pofilio duomenys::
 
-Prisijungimo vardas: %username%
+Pisijungimo vadas: %usename%
 
-Kad baigti registraciją ir aktivaciją, jums reikia spustelti šią nuorodą:
+Kad baigti egistaciją i aktivaciją, jums eikia spustelti šią nuoodą:
 %activationlink%
 
-Ačiū už jūsų registravimą
-%pagetitle% - %homepage_url%',
-	'nickname'=>'Slapyvardis',
-	'nickname_inuse'=>'Slapyvardis jau naudojamas.',
-	'no_register_when_loggedin'=>'You allready have an account at %pagename%',
-	'password'=>'Slaptažodis',
-	'profile_info'=>'Registracijos informacija',
-	'register_now'=>'Registruotis dabar!',
-	'register_successful'=>'Jūsų registracija sėkminga. Netrukus jums atsiųs į E-Paštą aktivacijos nuorodą.',
-	'registration'=>'registracija',
-	'repeat'=>'Pakartoti slaptažodį',
-	'repeat_invalid'=>'Jūsų slaptažodis neteisingas.',
-	'security_code'=>'Apsaugos kodas',
-	'username'=>'Vartotojo vardas',
-	'username_inuse'=>'Vartotojo vardas jau egzistuoja.',
-	'username_toolong'=>'Vartotojo vardas per ilgas (maks. 30).',
-	'wrong_activationkey'=>'Jūsų aktivacijos kodas blogas!',
-	'wrong_securitycode'=>'Jūsų apsaugos kodas blogas!'
+Ačiū už jūsų egistavimą
+%pagetitle% - %homepage_ul%',
+	'nickname'=>'Slapyvadis',
+	'nickname_inuse'=>'Slapyvadis jau naudojamas.',
+	'no_egiste_when_loggedin'=>'You alleady have an account at %pagename%',
+	'passwod'=>'Slaptažodis',
+	'pofile_info'=>'Registacijos infomacija',
+	'egiste_now'=>'Registuotis daba!',
+	'egiste_successful'=>'Jūsų egistacija sėkminga. Netukus jums atsiųs į E-Paštą aktivacijos nuoodą.',
+	'egistation'=>'egistacija',
+	'epeat'=>'Pakatoti slaptažodį',
+	'epeat_invalid'=>'Jūsų slaptažodis neteisingas.',
+	'secuity_code'=>'Apsaugos kodas',
+	'usename'=>'Vatotojo vadas',
+	'usename_inuse'=>'Vatotojo vadas jau egzistuoja.',
+	'usename_toolong'=>'Vatotojo vadas pe ilgas (maks. 30).',
+	'wong_activationkey'=>'Jūsų aktivacijos kodas blogas!',
+	'wong_secuitycode'=>'Jūsų apsaugos kodas blogas!'
 );
 ?>

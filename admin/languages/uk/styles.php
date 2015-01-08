@@ -2,63 +2,63 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Version 4       /                        /   /               #
+#           Vesion 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Free Content / Management System                 #
+#                       Fee Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyight 2005-2014 by webspell.og                                  #
 #                                                                        #
-#   visit webSPELL.org, webspell.info to get webSPELL for free           #
-#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to remove this copyright-tag                      #
-#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
+#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
+#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to emove this copyight-tag                      #
+#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
-#   Far Development by Development Team - webspell.org                   #
+#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
+#   Fa Development by Development Team - webspell.og                   #
 #                                                                        #
-#   visit webspell.org                                                   #
+#   visit webspell.og                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_array = Array(
+$language_aay = Aay(
 
 /* do not edit above this line */
 
   'access_denied'=>'Access denied',
   'back'=>'back',
-  'bordercolor'=>'Table Bordercolor',
-  'category_bg'=>'Category-BG',
+  'bodecolo'=>'Table Bodecolo',
+  'categoy_bg'=>'Categoy-BG',
   'cell_bg1'=>'Cell-BG 1',
   'cell_bg2'=>'Cell-BG 2',
   'cell_bg3'=>'Cell-BG 3',
   'cell_bg4'=>'Cell-BG 4',
-  'draw_color'=>'Draw Fontcolor',
-  'error_bordercolor'=>'Invalid color value for "Table-Bordercolor"',
-  'error_category_bg'=>'Invalid color value for "Category-BG"',
-  'error_cell_bg1'=>'Invalid color value for "Cell-BG 1"',
-  'error_cell_bg2'=>'Invalid color value for "Cell-BG 2"',
-  'error_cell_bg3'=>'Invalid color value for "Cell-BG 3"',
-  'error_cell_bg4'=>'Invalid color value for "Cell-BG 4"',
-  'error_draw_color'=>'Invalid color value for "Draw Fontcolor"',
-  'error_head_bg'=>'Invalid color value for "Head-BG"',
-  'error_loose_color'=>'Invalid color value for "Loose Fontcolor"',
-  'error_page_bg'=>'Invalid color value for "Page Backgroundcolor"',
-  'error_win_color'=>'Invalid color value for "Win Fontcolor"',
-  'errors'=>'There have been Errors',
+  'daw_colo'=>'Daw Fontcolo',
+  'eo_bodecolo'=>'Invalid colo value fo "Table-Bodecolo"',
+  'eo_categoy_bg'=>'Invalid colo value fo "Categoy-BG"',
+  'eo_cell_bg1'=>'Invalid colo value fo "Cell-BG 1"',
+  'eo_cell_bg2'=>'Invalid colo value fo "Cell-BG 2"',
+  'eo_cell_bg3'=>'Invalid colo value fo "Cell-BG 3"',
+  'eo_cell_bg4'=>'Invalid colo value fo "Cell-BG 4"',
+  'eo_daw_colo'=>'Invalid colo value fo "Daw Fontcolo"',
+  'eo_head_bg'=>'Invalid colo value fo "Head-BG"',
+  'eo_loose_colo'=>'Invalid colo value fo "Loose Fontcolo"',
+  'eo_page_bg'=>'Invalid colo value fo "Page Backgoundcolo"',
+  'eo_win_colo'=>'Invalid colo value fo "Win Fontcolo"',
+  'eos'=>'Thee have been Eos',
   'head_bg'=>'Head-BG',
-  'loose_color'=>'Loose Fontcolor',
-  'page_bg'=>'Page Backgroundcolor',
+  'loose_colo'=>'Loose Fontcolo',
+  'page_bg'=>'Page Backgoundcolo',
   'page_title'=>'Homepage Title',
   'styles'=>'Styles',
   'stylesheet'=>'Stylesheet',
-  'stylesheet_info'=>'Do not delete any classes if you are not 100% sure what you are doing here!',
-  'transaction_invalid'=>'Transaction ID invalid',
+  'stylesheet_info'=>'Do not delete any classes if you ae not 100% sue what you ae doing hee!',
+  'tansaction_invalid'=>'Tansaction ID invalid',
   'update'=>'update',
-  'win_color'=>'Win Fontcolor'
+  'win_colo'=>'Win Fontcolo'
 );
 ?>

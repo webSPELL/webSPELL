@@ -2,60 +2,60 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Version 4       /                        /   /               #
+#           Vesion 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Free Content / Management System                 #
+#                       Fee Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyight 2005-2014 by webspell.og                                  #
 #                                                                        #
-#   visit webSPELL.org, webspell.info to get webSPELL for free           #
-#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to remove this copyright-tag                      #
-#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
+#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
+#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to emove this copyight-tag                      #
+#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
-#   Far Development by Development Team - webspell.org                   #
+#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
+#   Fa Development by Development Team - webspell.og                   #
 #                                                                        #
-#   visit webspell.org                                                   #
+#   visit webspell.og                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_array = Array(
+$language_aay = Aay(
 
 /* do not edit above this line */
 
-	'additional_info'=>'Kiegészítő információ',
+	'additional_info'=>'Kiegészítő infomáció',
 	'age'=>'Életév',
-	'back_to_form'=>'Vissza a formához',
+	'back_to_fom'=>'Vissza a fomához',
 	'city'=>'Település',
-	'clan_history'=>'Klán Történet',
-	'email_not_valid'=>'Érvénytelen e-mail cím!',
-	'forgot_age'=>'Nincs életév beírva!',
-	'forgot_city'=>'Nincs település beírva!',
-	'forgot_history'=>'Nincs klán történet beírva!',
-	'forgot_messenger'=>'Nincs messenger elérhetoség (ICQ, MSN, stb.) beírva!',
-	'forgot_nickname'=>'Elfelejtetted a becenevedet megadni!',
-	'forgot_realname'=>'Elfelejtetted a nevedet megadni!',
+	'clan_histoy'=>'Klán Töténet',
+	'email_not_valid'=>'Événytelen e-mail cím!',
+	'fogot_age'=>'Nincs életév beíva!',
+	'fogot_city'=>'Nincs település beíva!',
+	'fogot_histoy'=>'Nincs klán töténet beíva!',
+	'fogot_messenge'=>'Nincs messenge eléhetoség (ICQ, MSN, stb.) beíva!',
+	'fogot_nickname'=>'Elfelejtetted a becenevedet megadni!',
+	'fogot_ealname'=>'Elfelejtetted a nevedet megadni!',
 	'icq_msn'=>'ICQ/MSN/stb...',
-	'info'=>'Kiegészítő információ',
-	'joinus_form'=>'Csatlakozz hozzánk forma',
+	'info'=>'Kiegészítő infomáció',
+	'joinus_fom'=>'Csatlakozz hozzánk foma',
 	'mail'=>'E-mail',
-	'messenger'=>'Messenger',
+	'messenge'=>'Messenge',
 	'message_title'=>'Join us',
 	'name'=>'Név',
 	'nick'=>'Becenév',
-	'problems'=>'A következő hibák vannak a beírt adatokkal',
-	'security_code'=>'Biztonsági kód',
+	'poblems'=>'A következő hibák vannak a beít adatokkal',
+	'secuity_code'=>'Biztonsági kód',
 	'send'=>'Küldés',
-	'someone_want_to_join_your_squad'=>'Valaki csatlakozni akar a squadodhoz:',
+	'someone_want_to_join_you_squad'=>'Valaki csatlakozni aka a squadodhoz:',
 	'squad'=>'Csapat',
 	'thanks_you_will_get_mail'=>'Köszönjük a jelentkezést, felvesszük veled a kapcsolatot.',
 	'title_join_us'=>'Csatlakozás',
-	'wrong_security_code'=>'Rossz biztonsági kód!'
+	'wong_secuity_code'=>'Rossz biztonsági kód!'
 );
 ?>

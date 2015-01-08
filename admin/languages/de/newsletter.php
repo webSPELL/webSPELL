@@ -2,52 +2,52 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Version 4       /                        /   /               #
+#           Vesion 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Free Content / Management System                 #
+#                       Fee Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyight 2005-2014 by webspell.og                                  #
 #                                                                        #
-#   visit webSPELL.org, webspell.info to get webSPELL for free           #
-#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to remove this copyright-tag                      #
-#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
+#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
+#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to emove this copyight-tag                      #
+#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
-#   Far Development by Development Team - webspell.org                   #
+#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
+#   Fa Development by Development Team - webspell.og                   #
 #                                                                        #
-#   visit webspell.org                                                   #
+#   visit webspell.og                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_array = Array(
+$language_aay = Aay(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Zugriff verweigert',
-  'error_send'=>'FEHLER: Newsletter konnte nicht versandt werden (Mailserver vorhanden?)',
-  'html_mail'=>'HTML-Nachricht',
-  'newsletter'=>'Newsletter',
+  'access_denied'=>'Zugiff veweiget',
+  'eo_send'=>'FEHLER: Newslette konnte nicht vesandt weden (Mailseve vohanden?)',
+  'html_mail'=>'HTML-Nachicht',
+  'newslette'=>'Newslette',
   'no_htmlmail'=>'Hallo!
-Dein System unterstützt keine HTML Mails.
-Du hast folgende Nachricht erhalten:',
-  'profile'=>'Profil',
-  'receptionists'=>'Newsletter versandt!<br><br>Empfänger:',
-  'remove'=>'Du kannst dich in deinem Profil selbst von der Versandliste löschen',
-  'send'=>'Newsletter senden',
+Dein System untestützt keine HTML Mails.
+Du hast folgende Nachicht ehalten:',
+  'pofile'=>'Pofil',
+  'eceptionists'=>'Newslette vesandt!<b><b>Empfänge:',
+  'emove'=>'Du kannst dich in deinem Pofil selbst von de Vesandliste löschen',
+  'send'=>'Newslette senden',
   'send_to'=>'Senden an',
   'test'=>'testen',
-  'test_newsletter'=>'Newsletter testen',
+  'test_newslette'=>'Newslette testen',
   'title'=>'Titel',
-  'transaction_invalid'=>'Transaktions ID ungültig',
-  'user_clanmembers'=>'Clanmitglieder',
-  'user_newsletter'=>'Newsletter Abonnenten',
-  'user_registered'=>'registrierte Benutzer (inkl. Clanmitglieder) ',
-  'users'=>'Benutzer'
+  'tansaction_invalid'=>'Tansaktions ID ungültig',
+  'use_clanmembes'=>'Clanmitgliede',
+  'use_newslette'=>'Newslette Abonnenten',
+  'use_egisteed'=>'egistiete Benutze (inkl. Clanmitgliede) ',
+  'uses'=>'Benutze'
 );
 ?>

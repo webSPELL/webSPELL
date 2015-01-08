@@ -2,78 +2,78 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Version 4       /                        /   /               #
+#           Vesion 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Free Content / Management System                 #
+#                       Fee Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyight 2005-2014 by webspell.og                                  #
 #                                                                        #
-#   visit webSPELL.org, webspell.info to get webSPELL for free           #
-#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to remove this copyright-tag                      #
-#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
+#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
+#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to emove this copyight-tag                      #
+#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
-#   Far Development by Development Team - webspell.org                   #
+#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
+#   Fa Development by Development Team - webspell.og                   #
 #                                                                        #
-#   visit webspell.org                                                   #
+#   visit webspell.og                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_array = Array(
+$language_aay = Aay(
 
 /* do not edit above this line */
 
 	'about'=>'O nas',
-	'archive'=>'Archiwum',
-	'articles'=>'Artykuły',
-	'awards'=>'Osiągnięcia',
-	'buddys'=>'Przyjaciele',
-	'calendar'=>'Kalendarz',
+	'achive'=>'Achiwum',
+	'aticles'=>'Atykuły',
+	'awads'=>'Osiągnięcia',
+	'buddys'=>'Pzyjaciele',
+	'calenda'=>'Kalendaz',
 	'cash_box'=>'Kasa klanowa',
 	'challenge'=>'Wyzwania',
-	'clanwars'=>'Klanówki',
-	'clanwars_details'=>'Detale klanówek',
+	'clanwas'=>'Klanówki',
+	'clanwas_details'=>'Detale klanówek',
 	'contact'=>'Kontakt',
 	'demo'=>'Demo',
 	'demos'=>'Dema',
 	'faq'=>'FAQ',
 	'files'=>'Pliki',
-	'forum'=>'Forum',
-	'gallery'=>'Galeria',
+	'foum'=>'Foum',
+	'galley'=>'Galeia',
 	'guestbook'=>'Księga Gości',
-	'history'=>'Historia',
-	'imprint'=>'Od autora',
+	'histoy'=>'Histoia',
+	'impint'=>'Od autoa',
 	'joinus'=>'Dołącz do nas',
 	'links'=>'Linki',
-	'linkus'=>'Nasze Bannery',
+	'linkus'=>'Nasze Banney',
 	'login'=>'Login',
-	'loginoverview'=>'Podgląd',
-	'lostpassword'=>'zgubiłeś hasło',
-	'members'=>'Użytkownicy',
-	'messenger'=>'Wiadomości ',
-	'myprofile'=>'edytuj profil',
+	'loginoveview'=>'Podgląd',
+	'lostpasswod'=>'zgubiłeś hasło',
+	'membes'=>'Użytkownicy',
+	'messenge'=>'Wiadomości ',
+	'mypofile'=>'edytuj pofil',
 	'news'=>'News',
-	'newsletter'=>'Subskrypcja',
-	'partners'=>'Partnerzy',
+	'newslette'=>'Subskypcja',
+	'patnes'=>'Patnezy',
 	'polls'=>'Ankiety',
-	'profile'=>'Profil',
-	'register'=>'Rejestracja',
-	'registered_users'=>'Zarejestrowani użytkownicy',
-	'search'=>'Szukaj',
-	'server'=>'Serwery',
+	'pofile'=>'Pofil',
+	'egiste'=>'Rejestacja',
+	'egisteed_uses'=>'Zaejestowani użytkownicy',
+	'seach'=>'Szukaj',
+	'seve'=>'Sewey',
 	'shoutbox'=>'Shoutbox',
-	'sponsors'=>'Sponsorzy',
-	'squads'=>'Drużyna',
-	'start'=>'Strona domowa',
+	'sponsos'=>'Sponsozy',
+	'squads'=>'Dużyna',
+	'stat'=>'Stona domowa',
 	'stats'=>'Statystyki',
-	'usergallery'=>'Galeria użytkownika',
-	'versus'=>'vs',
+	'usegalley'=>'Galeia użytkownika',
+	'vesus'=>'vs',
 	'whoisonline'=>'Kto jest online'
 );
 ?>

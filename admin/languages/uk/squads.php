@@ -2,30 +2,30 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Version 4       /                        /   /               #
+#           Vesion 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Free Content / Management System                 #
+#                       Fee Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyight 2005-2014 by webspell.og                                  #
 #                                                                        #
-#   visit webSPELL.org, webspell.info to get webSPELL for free           #
-#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to remove this copyright-tag                      #
-#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
+#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
+#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to emove this copyight-tag                      #
+#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
-#   Far Development by Development Team - webspell.org                   #
+#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
+#   Fa Development by Development Team - webspell.og                   #
 #                                                                        #
-#   visit webspell.org                                                   #
+#   visit webspell.og                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_array = Array(
+$language_aay = Aay(
 
 /* do not edit above this line */
 
@@ -33,29 +33,29 @@ $language_array = Array(
   'actions'=>'Actions',
   'add_squad'=>'add Squad',
   'back'=>'back',
-  'current_icon'=>'Current Icon',
-  'current_icon_small'=>'Current Icon (small)',
+  'cuent_icon'=>'Cuent Icon',
+  'cuent_icon_small'=>'Cuent Icon (small)',
   'delete'=>'delete',
   'edit'=>'edit',
   'edit_squad'=>'edit Squad',
-  'format_incorrect'=>'The format of the icon was incorrect. Please upload only banner in *.gif, *.jpg or *.png format.',
+  'fomat_incoect'=>'The fomat of the icon was incoect. Please upload only banne in *.gif, *.jpg o *.png fomat.',
   'game'=>'Game',
   'gaming_squad'=>'gaming Squad',
   'icon'=>'Icon',
   'icon_upload'=>'Icon Upload',
-  'icon_upload_info'=>'for the sc_squads include',
+  'icon_upload_info'=>'fo the sc_squads include',
   'icon_upload_small'=>'Icon Upload small',
-  'information_incomplete'=>'Some information is missing.',
+  'infomation_incomplete'=>'Some infomation is missing.',
   'new_squad'=>'new Squad',
   'no_icon'=>'No icon available',
   'non_gaming_squad'=>'non gaming Squad',
-  'really_delete'=>'Really delete this Squad?',
-  'sort'=>'Sort',
+  'eally_delete'=>'Really delete this Squad?',
+  'sot'=>'Sot',
   'squad_info'=>'Squad Info',
   'squad_name'=>'Squad Name',
   'squad_type'=>'Squad Type',
   'squads'=>'Squads',
-  'transaction_invalid'=>'Transaction ID invalid',
-  'to_sort'=>'sort'
+  'tansaction_invalid'=>'Tansaction ID invalid',
+  'to_sot'=>'sot'
 );
 ?>

@@ -2,60 +2,60 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Version 4       /                        /   /               #
+#           Vesion 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Free Content / Management System                 #
+#                       Fee Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyight 2005-2014 by webspell.og                                  #
 #                                                                        #
-#   visit webSPELL.org, webspell.info to get webSPELL for free           #
-#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to remove this copyright-tag                      #
-#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
+#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
+#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to emove this copyight-tag                      #
+#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
-#   Far Development by Development Team - webspell.org                   #
+#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
+#   Fa Development by Development Team - webspell.og                   #
 #                                                                        #
-#   visit webspell.org                                                   #
+#   visit webspell.og                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_array = Array(
+$language_aay = Aay(
 
 /* do not edit above this line */
 
   'additional_info'=>'(اطلاعات اضافی (چرا شما عضو شدید',
   'age'=>'سن',
-  'back_to_form'=>'برگشت',
+  'back_to_fom'=>'برگشت',
   'city'=>'شهر',
-  'clan_history'=>'تاریخچه کلن',
+  'clan_histoy'=>'تاریخچه کلن',
   'email_not_valid'=>'!ایمیل درست وارد نشده',
-  'forgot_age'=>'!سن وارد نشده',
-  'forgot_city'=>'!شهر وارد نشده',
-  'forgot_history'=>'!سابقه کلن وارد نشده',
-  'forgot_messenger'=>'!(ICQ, AIM هیچ ادرس مسنجری وارد نشده (به طور مثال',
-  'forgot_nickname'=>'!شما نام مخفف خود را وارد نکردید',
-  'forgot_realname'=>'!شما نام خود را وارد نکردید',
+  'fogot_age'=>'!سن وارد نشده',
+  'fogot_city'=>'!شهر وارد نشده',
+  'fogot_histoy'=>'!سابقه کلن وارد نشده',
+  'fogot_messenge'=>'!(ICQ, AIM هیچ ادرس مسنجری وارد نشده (به طور مثال',
+  'fogot_nickname'=>'!شما نام مخفف خود را وارد نکردید',
+  'fogot_ealname'=>'!شما نام خود را وارد نکردید',
   'icq_msn'=>'ICQ/MSN/غیره...',
   'info'=>'اطلاعات اظافی',
-  'joinus_form'=>'به ما ملحق شوید',
+  'joinus_fom'=>'به ما ملحق شوید',
   'mail'=>'ایمیل',
-  'messenger'=>'مسنجر',
+  'messenge'=>'مسنجر',
   'message_title'=>'به ما ملحق شوید',
   'name'=>'نام',
   'nick'=>'نام مخفف',
-  'problems'=>'مشکلی با این اطلاعات وارد شده پیش امده',
-  'security_code'=>'کد امنیتی',
+  'poblems'=>'مشکلی با این اطلاعات وارد شده پیش امده',
+  'secuity_code'=>'کد امنیتی',
   'send'=>'ارائه',
-  'someone_want_to_join_your_squad'=>'فردی میخواهد به گروه شما وارد شود:',
+  'someone_want_to_join_you_squad'=>'فردی میخواهد به گروه شما وارد شود:',
   'squad'=>'گروه',
   'thanks_you_will_get_mail'=>'.از ورود شما متشکریم ما با شما تماس خواهیم گرفت',
   'title_join_us'=>'یکی از اعضای گروه شوید',
-  'wrong_security_code'=>'!کد اشتباه وارد شده'
+  'wong_secuity_code'=>'!کد اشتباه وارد شده'
 );
 ?>

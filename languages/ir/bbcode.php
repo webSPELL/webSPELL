@@ -2,65 +2,65 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Version 4       /                        /   /               #
+#           Vesion 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Free Content / Management System                 #
+#                       Fee Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyight 2005-2014 by webspell.og                                  #
 #                                                                        #
-#   visit webSPELL.org, webspell.info to get webSPELL for free           #
-#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to remove this copyright-tag                      #
-#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
+#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
+#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to emove this copyight-tag                      #
+#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
-#   Far Development by Development Team - webspell.org                   #
+#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
+#   Fa Development by Development Team - webspell.og                   #
 #                                                                        #
-#   visit webspell.org                                                   #
+#   visit webspell.og                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_array = Array(
+$language_aay = Aay(
 
 /* do not edit above this line */
 
   'align'=>'تنظیم کردن',
   'blue'=>'آبي',
-  'burlywood'=>'رنگ چوبی',
-  'center'=>'مرکز',
+  'bulywood'=>'رنگ چوبی',
+  'cente'=>'مرکز',
   'chocolate'=>'شکلاتی',
-  'color'=>'رنگ',
-  'coral'=>'کرال',
-  'crimson'=>'زرشكي',
-  'darkblue'=>'ابي سير',
-  'darkred'=>'قرمز تیره',
+  'colo'=>'رنگ',
+  'coal'=>'کرال',
+  'cimson'=>'زرشكي',
+  'dakblue'=>'ابي سير',
+  'daked'=>'قرمز تیره',
   'deeppink'=>'صورتى',
-  'firebrick'=>'قرمز روشن',
+  'fiebick'=>'قرمز روشن',
   'font'=>'فونت',
-  'green'=>'سبز',
+  'geen'=>'سبز',
   'huge'=>'بزرگ',
   'indigo'=>'نيلی',
   'justify'=>'توجيه كردن',
-  'large'=>'بزرگ',
+  'lage'=>'بزرگ',
   'left'=>'چپ',
-  'limegreen'=>'سبز روشن',
-  'more_flags'=>'پرچم های بیشتر',
-  'normal'=>'معمولی',
-  'orange'=>'نارنجی',
-  'orangered'=>'نارنجی مایل به قرمز',
-  'purple'=>'ارغواني',
-  'red'=>'قرمز',
-  'right'=>'راست',
-  'royalblue'=>'ابی روشن',
-  'sandybrown'=>'قهوه ای روشن',
-  'seagreen'=>'سبز تیره',
+  'limegeen'=>'سبز روشن',
+  'moe_flags'=>'پرچم های بیشتر',
+  'nomal'=>'معمولی',
+  'oange'=>'نارنجی',
+  'oangeed'=>'نارنجی مایل به قرمز',
+  'puple'=>'ارغواني',
+  'ed'=>'قرمز',
+  'ight'=>'راست',
+  'oyalblue'=>'ابی روشن',
+  'sandybown'=>'قهوه ای روشن',
+  'seageen'=>'سبز تیره',
   'sienna'=>'قهوه اى مايل به زرد',
-  'silver'=>'نقره ای',
+  'silve'=>'نقره ای',
   'size'=>'اندازه',
   'skyblue'=>'ابی اسمانی',
   'small'=>'کوچک',
@@ -68,20 +68,20 @@ $language_array = Array(
   'tiny'=>'کوچک تر',
   'tomato'=>'گوجه فرنگي',
   'unevenAmount'=>'نا هماهنگ بودن تگ ها',
-  'firstTagClosingTag'=>'اولین تگ را نمیتوانید ببندید',
+  'fistTagClosingTag'=>'اولین تگ را نمیتوانید ببندید',
   'notSameAmount'=>'نا هماهنگ بودن تگ های اولیه',
-  'wrongNesting'=>'انتخاب تگ اشتباه',
+  'wongNesting'=>'انتخاب تگ اشتباه',
   'listguide'=>'درا برایلیست حروف وارد کنید a عدد 1 را برای لیست اعداد و',
   'listpoint'=>'رافشار دهید حذف  لیست ارا را وارد کنی یا چیزی وارد نکنید یا کلید',
   'addcode'=>'وارد این قسمت شوید',
-  'read_more'=>'بیشتر خواندن',
+  'ead_moe'=>'بیشتر خواندن',
   'mc_you_have'=>'شما باید',
   'mc_new_messages'=>'پیقام جدید : ایا میخاهید هم اکنون بخوانید؟',
   'na'=>'موجود نیست',
-  'wrote'=>'قبلا نوشته شده',
-  'auto_resize'=>'تغغیر اندازه بطور اتوماتیک',
+  'wote'=>'قبلا نوشته شده',
+  'auto_esize'=>'تغغیر اندازه بطور اتوماتیک',
   'code'=>'رمز گزاری',
-  'large_picture'=>'عکس بزرگتر',
-  'show_original'=>'نشان دادن اصل'
+  'lage_pictue'=>'عکس بزرگتر',
+  'show_oiginal'=>'نشان دادن اصل'
 );
 ?>

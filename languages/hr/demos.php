@@ -2,80 +2,80 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Version 4       /                        /   /               #
+#           Vesion 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Free Content / Management System                 #
+#                       Fee Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyight 2005-2014 by webspell.og                                  #
 #                                                                        #
-#   visit webSPELL.org, webspell.info to get webSPELL for free           #
-#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to remove this copyright-tag                      #
-#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
+#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
+#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to emove this copyight-tag                      #
+#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
-#   Far Development by Development Team - webspell.org                   #
+#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
+#   Fa Development by Development Team - webspell.og                   #
 #                                                                        #
-#   visit webspell.org                                                   #
+#   visit webspell.og                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_array = Array(
+$language_aay = Aay(
 
 /* do not edit above this line */
 
 	'all_demos'=>'Svi demoi',
-	'allready_rated'=>'Vi ste već ocijenili ovaj demo',
+	'alleady_ated'=>'Vi ste već ocijenili ovaj demo',
 	'clan1'=>'Klan 1',
-	'clan1_country'=>'Zemlja klana 1',
+	'clan1_county'=>'Zemlja klana 1',
 	'clan1_homepage'=>'Site klana 1',
 	'clan1_name'=>'Puno ime klana 1',
 	'clan1_tag'=>'Tag klana 1',
 	'clan2'=>'Klan 2',
-	'clan2_country'=>'Zemlja klana 2',
+	'clan2_county'=>'Zemlja klana 2',
 	'clan2_homepage'=>'Site klana 2',
 	'clan2_name'=>'Puno ime klana 2',
 	'clan2_tag'=>'Tag klana 2',
 	'date'=>'Datum',
-	'delete'=>'izbriši',
+	'delete'=>'izbiši',
 	'demo_details'=>'Demo detalji',
 	'demo_upload'=>'Upload demoa',
 	'demos'=>'demos',
-	'disable_comments'=>'Onemogući komentare',
-	'download'=>'Preuzmi',
-	'download_now'=>'Preuzmi sada',
-	'downloaded'=>'Preuzimanja',
-	'downloads'=>'Preuzimanja',
+	'disable_comments'=>'Onemogući komentae',
+	'download'=>'Peuzmi',
+	'download_now'=>'Peuzmi sada',
+	'downloaded'=>'Peuzimanja',
+	'downloads'=>'Peuzimanja',
 	'edit'=>'izmjeni',
 	'edit_demo'=>'izmjeni demo',
-	'extern_link'=>'Externi link',
+	'exten_link'=>'Exteni link',
 	'file_exists'=>'Dokument već postoji!',
-	'game'=>'Igra',
+	'game'=>'Iga',
 	'league'=>'Liga',
 	'league_homepage'=>'Homepage lige',
 	'maps'=>'Mape',
 	'match'=>'Match',
 	'new_demo'=>'Novi demo',
-	'no_access'=>'Pristup zabranjen!',
+	'no_access'=>'Pistup zabanjen!',
 	'no_demos'=>'Nema dostupnih demoa',
-	'perfect'=>'Savršen',
-	'players'=>'Igrači',
-	'poor'=>'Jadan',
-	'rate'=>'Ocijeni',
-	'rate_with'=>'Ocijeni sa 0 do 10 bodova',
-	'rating'=>'Ocjena',
-	'save_demo'=>'Spremi demo',
-	'sort'=>'Razvrstaj',
-	'to_download'=>'Morate biti registriran i prijavljen da bi preuzeli ovaj demo!',
-	'to_rate'=>'Morate biti registriran i prijavljen da bi ocijenili ovaj demo!',
-	'update_demo'=>'Spremi izmjene',
-	'user_comments'=>'Pmogući komentare korisnicima',
-	'visitor_comments'=>'Omogući komentare posjetiteljima',
+	'pefect'=>'Savšen',
+	'playes'=>'Igači',
+	'poo'=>'Jadan',
+	'ate'=>'Ocijeni',
+	'ate_with'=>'Ocijeni sa 0 do 10 bodova',
+	'ating'=>'Ocjena',
+	'save_demo'=>'Spemi demo',
+	'sot'=>'Razvstaj',
+	'to_download'=>'Moate biti egistian i pijavljen da bi peuzeli ovaj demo!',
+	'to_ate'=>'Moate biti egistian i pijavljen da bi ocijenili ovaj demo!',
+	'update_demo'=>'Spemi izmjene',
+	'use_comments'=>'Pmogući komentae koisnicima',
+	'visito_comments'=>'Omogući komentae posjetiteljima',
 	'vs'=>'vs.'
 );
 ?>

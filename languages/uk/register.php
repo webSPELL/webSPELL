@@ -2,72 +2,72 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Version 4       /                        /   /               #
+#           Vesion 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Free Content / Management System                 #
+#                       Fee Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyight 2005-2014 by webspell.og                                  #
 #                                                                        #
-#   visit webSPELL.org, webspell.info to get webSPELL for free           #
-#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to remove this copyright-tag                      #
-#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
+#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
+#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to emove this copyight-tag                      #
+#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
-#   Far Development by Development Team - webspell.org                   #
+#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
+#   Fa Development by Development Team - webspell.og                   #
 #                                                                        #
-#   visit webspell.org                                                   #
+#   visit webspell.og                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_array = Array(
+$language_aay = Aay(
 
 /* do not edit above this line */
 
-	'activation_successful'=>'The activation of your account was successful.<br>You are able to log in now.',
+	'activation_successful'=>'The activation of you account was successful.<b>You ae able to log in now.',
 	'back'=>'back',
-	'enter_nickname'=>'Please enter a nick name.',
-	'enter_password'=>'Please enter a password.',
-	'enter_username'=>'Please enter a username.',
-	'errors_there'=>'Some errors occured',
-	'for_login'=>'only for login',
-	'invalid_mail'=>'You have entered an invalid mail address.',
+	'ente_nickname'=>'Please ente a nick name.',
+	'ente_passwod'=>'Please ente a passwod.',
+	'ente_usename'=>'Please ente a usename.',
+	'eos_thee'=>'Some eos occued',
+	'fo_login'=>'only fo login',
+	'invalid_mail'=>'You have enteed an invalid mail addess.',
 	'mail'=>'E-Mail',
-	'mail_activation_successful'=>'The activation of your email address was successfull.',
-	'mail_failed'=>'The activation mail could not be sent, please inform the webmaster about this.',
-	'mail_inuse'=>'The mail address is already in use.',
-	'mail_subject'=>'Account activation mail for %homepage_url%',
-	'mail_text'=>'Hello %username%!
+	'mail_activation_successful'=>'The activation of you email addess was successfull.',
+	'mail_failed'=>'The activation mail could not be sent, please infom the webmaste about this.',
+	'mail_inuse'=>'The mail addess is aleady in use.',
+	'mail_subject'=>'Account activation mail fo %homepage_ul%',
+	'mail_text'=>'Hello %usename%!
 
-Your registering at %pagetitle% (%homepage_url%) was successful. Your account data:
+You egisteing at %pagetitle% (%homepage_ul%) was successful. You account data:
 
-Login name: %username%
+Login name: %usename%
 
-To finish your registration you have to activate your account by clicking the following link:
+To finish you egistation you have to activate you account by clicking the following link:
 %activationlink%
 
-Thank you for your registration
-%pagetitle% - %homepage_url%',
+Thank you fo you egistation
+%pagetitle% - %homepage_ul%',
 	'nickname'=>'Nickname',
-	'nickname_inuse'=>'Nickname allready in use.',
-	'no_register_when_loggedin'=>'You already have an account at %pagename%',
-	'password'=>'Password',
-	'profile_info'=>'Registration information',
-	'register_now'=>'Register now!',
-	'register_successful'=>'Your registration was successful. You will receive an email with an account activation link shortly.',
-	'registration'=>'registration',
-	'repeat'=>'Repeat password',
-	'repeat_invalid'=>'You passwords do not match.',
-	'security_code'=>'Security code',
-	'username'=>'Username',
-	'username_inuse'=>'Username allready in use.',
-	'username_toolong'=>'The username is to long (max. 30 characters).',
-	'wrong_activationkey'=>'Your activation key is wrong!',
-	'wrong_securitycode'=>'The security code is wrong!'
+	'nickname_inuse'=>'Nickname alleady in use.',
+	'no_egiste_when_loggedin'=>'You aleady have an account at %pagename%',
+	'passwod'=>'Passwod',
+	'pofile_info'=>'Registation infomation',
+	'egiste_now'=>'Registe now!',
+	'egiste_successful'=>'You egistation was successful. You will eceive an email with an account activation link shotly.',
+	'egistation'=>'egistation',
+	'epeat'=>'Repeat passwod',
+	'epeat_invalid'=>'You passwods do not match.',
+	'secuity_code'=>'Secuity code',
+	'usename'=>'Usename',
+	'usename_inuse'=>'Usename alleady in use.',
+	'usename_toolong'=>'The usename is to long (max. 30 chaactes).',
+	'wong_activationkey'=>'You activation key is wong!',
+	'wong_secuitycode'=>'The secuity code is wong!'
 );
 ?>

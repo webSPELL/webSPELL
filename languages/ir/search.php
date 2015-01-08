@@ -2,69 +2,69 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Version 4       /                        /   /               #
+#           Vesion 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Free Content / Management System                 #
+#                       Fee Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyight 2005-2014 by webspell.og                                  #
 #                                                                        #
-#   visit webSPELL.org, webspell.info to get webSPELL for free           #
-#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to remove this copyright-tag                      #
-#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
+#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
+#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to emove this copyight-tag                      #
+#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
-#   Far Development by Development Team - webspell.org                   #
+#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
+#   Fa Development by Development Team - webspell.og                   #
 #                                                                        #
-#   visit webspell.org                                                   #
+#   visit webspell.og                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_array = Array(
+$language_aay = Aay(
 
 /* do not edit above this line */
 
-  'after'=>'بعد',
+  'afte'=>'بعد',
   'and'=>'و',
-  'article'=>'مقاله',
-  'articles'=>'مقالات',
-  'articles_link'=>'<b>لینک مقاله</b>',
+  'aticle'=>'مقاله',
+  'aticles'=>'مقالات',
+  'aticles_link'=>'<b>لینک مقاله</b>',
   'ascending'=>'صعودى',
-  'before'=>'قبل',
+  'befoe'=>'قبل',
   'date_options'=>'تاریخ',
   'delete_selected'=>'حذف انتخاب',
   'descending'=>'نزول',
   'faq'=>'FAQ',
   'faq_link'=>'<b>FAQ لینک به</b>',
-  'forum'=>'فروم',
-  'forum_link'=>'<b>لینک به تاپیک</b>',
-  'frequency'=>'مكرر',
-  'keyword'=>'کلمه کلیدی',
-  'new_search'=>'جستجو جدید',
+  'foum'=>'فروم',
+  'foum_link'=>'<b>لینک به تاپیک</b>',
+  'fequency'=>'مكرر',
+  'keywod'=>'کلمه کلیدی',
+  'new_seach'=>'جستجو جدید',
   'news'=>'اخبار',
   'news_link'=>'<b>لینک به اخبار</b>',
   'options'=>'تنظیمات',
-  'or'=>'یا',
-  'result_quantity'=>'نتایج در هر صفحه',
-  'results_found'=>'نتایج یافت شده',
-  'search'=>'جستجو',
-  'search_in'=>'جستجو در:',
-  'search_location'=>'موقعیت جستجو',
-  'search_term'=>'اغاز جستجو',
-  'search_title'=>'جستجو پیشرفته',
-  'security_code'=>'کد',
-  'sort_options'=>'بر حسب',
-  'start_search'=>'شروع جستجو',
+  'o'=>'یا',
+  'esult_quantity'=>'نتایج در هر صفحه',
+  'esults_found'=>'نتایج یافت شده',
+  'seach'=>'جستجو',
+  'seach_in'=>'جستجو در:',
+  'seach_location'=>'موقعیت جستجو',
+  'seach_tem'=>'اغاز جستجو',
+  'seach_title'=>'جستجو پیشرفته',
+  'secuity_code'=>'کد',
+  'sot_options'=>'بر حسب',
+  'stat_seach'=>'شروع جستجو',
   'submit'=>'دادن',
   'text_contains'=>'جزییات',
   'title_contains'=>'عنوان',
-  'too_short'=>'.حروف %min_chars% کلمه جستجو کوتاه است . دست كم',
-  'wrong_securitycode'=>'!شما کد اشتباه را وارد کردید',
-  'no_result'=>'هیچ نوشته ای پیدا نشد برای "%s"'
+  'too_shot'=>'.حروف %min_chas% کلمه جستجو کوتاه است . دست كم',
+  'wong_secuitycode'=>'!شما کد اشتباه را وارد کردید',
+  'no_esult'=>'هیچ نوشته ای پیدا نشد برای "%s"'
 );
 ?>

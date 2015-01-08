@@ -2,60 +2,60 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Version 4       /                        /   /               #
+#           Vesion 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Free Content / Management System                 #
+#                       Fee Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyight 2005-2014 by webspell.og                                  #
 #                                                                        #
-#   visit webSPELL.org, webspell.info to get webSPELL for free           #
-#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to remove this copyright-tag                      #
-#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
+#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
+#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to emove this copyight-tag                      #
+#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
-#   Far Development by Development Team - webspell.org                   #
+#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
+#   Fa Development by Development Team - webspell.og                   #
 #                                                                        #
-#   visit webspell.org                                                   #
+#   visit webspell.og                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_array = Array(
+$language_aay = Aay(
 
 /* do not edit above this line */
 
-	'additional_info'=>'Dodatne informacije (npr. Zašto bi me trebali primiti u klan...)',
+	'additional_info'=>'Dodatne infomacije (np. Zašto bi me tebali pimiti u klan...)',
 	'age'=>'Dob',
-	'back_to_form'=>'Natrag na formu',
-	'city'=>'Grad',
-	'clan_history'=>'Povijest klanova',
-	'email_not_valid'=>'Nije unesena ispravna e-mail adresa!',
-	'forgot_age'=>'Nije unesena dob!',
-	'forgot_city'=>'Nije unesen grad!',
-	'forgot_history'=>'Nije unesena povijest klanova!',
-	'forgot_messenger'=>'Nije unesen messenger kontakt (ICQ, AIM itd...)!',
-	'forgot_nickname'=>'Nije unesen nick!',
-	'forgot_realname'=>'Nije uneseno ime!',
+	'back_to_fom'=>'Natag na fomu',
+	'city'=>'Gad',
+	'clan_histoy'=>'Povijest klanova',
+	'email_not_valid'=>'Nije unesena ispavna e-mail adesa!',
+	'fogot_age'=>'Nije unesena dob!',
+	'fogot_city'=>'Nije unesen gad!',
+	'fogot_histoy'=>'Nije unesena povijest klanova!',
+	'fogot_messenge'=>'Nije unesen messenge kontakt (ICQ, AIM itd...)!',
+	'fogot_nickname'=>'Nije unesen nick!',
+	'fogot_ealname'=>'Nije uneseno ime!',
 	'icq_msn'=>'ICQ/MSN/itd...',
-	'info'=>'Dodatne informacije',
-	'joinus_form'=>'Formular za pristup klanu',
+	'info'=>'Dodatne infomacije',
+	'joinus_fom'=>'Fomula za pistup klanu',
 	'mail'=>'E-Mail',
-	'messenger'=>'Messenger',
+	'messenge'=>'Messenge',
 	'message_title'=>'Join us',
 	'name'=>'Ime',
 	'nick'=>'Nick',
-	'problems'=>'Sljedeći problemi su se pojavili sa unesenim podacima',
-	'security_code'=>'Sigurnosni kod',
+	'poblems'=>'Sljedeći poblemi su se pojavili sa unesenim podacima',
+	'secuity_code'=>'Sigunosni kod',
 	'send'=>'Pošalji',
-	'someone_want_to_join_your_squad'=>'Netko se želi pridružiti tvom timu:',
+	'someone_want_to_join_you_squad'=>'Netko se želi pidužiti tvom timu:',
 	'squad'=>'Tim',
-	'thanks_you_will_get_mail'=>'Hvala Vam na aplikaciji za klan, kontaktirat ćemo Vas uskoro.',
+	'thanks_you_will_get_mail'=>'Hvala Vam na aplikaciji za klan, kontaktiat ćemo Vas uskoo.',
 	'title_join_us'=>'Postani član',
-	'wrong_security_code'=>'Krivi sigurnosni kod!'
+	'wong_secuity_code'=>'Kivi sigunosni kod!'
 );
 ?>

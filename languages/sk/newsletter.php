@@ -2,54 +2,54 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Version 4       /                        /   /               #
+#           Vesion 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Free Content / Management System                 #
+#                       Fee Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyight 2005-2014 by webspell.og                                  #
 #                                                                        #
-#   visit webSPELL.org, webspell.info to get webSPELL for free           #
-#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to remove this copyright-tag                      #
-#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
+#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
+#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to emove this copyight-tag                      #
+#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
-#   Far Development by Development Team - webspell.org                   #
+#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
+#   Fa Development by Development Team - webspell.og                   #
 #                                                                        #
-#   visit webspell.org                                                   #
+#   visit webspell.og                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_array = Array(
+$language_aay = Aay(
 
 /* do not edit above this line */
 
-	'del_from_mail_list'=>'Vymazať zo zoznamu mailov',
+	'del_fom_mail_list'=>'Vymazať zo zoznamu mailov',
 	'del_key'=>'kľúč-vymaz',
 	'delete'=>'vymazať',
 	'deletion_key'=>'Kľúč vymazania',
 	'email_not_valid'=>'Váš e-mail nie je platný!',
-	'lost_deletion_key'=>'Stratený kľúč vymazania?',
-	'mail_adress'=>'e-mailová adresa',
+	'lost_deletion_key'=>'Statený kľúč vymazania?',
+	'mail_adess'=>'e-mailová adesa',
 	'mail_pw_didnt_match'=>'Mail a heslo sa nezhodujú.',
-	'mail_not_in_db'=>'Zadaná e-mailová adresa neexsituje v našej databáze.',
-	'newsletter'=>'informačný leták',
-	'newsletter_registration'=>'Registrácia inf. letáku',
-	'no_such_mail_adress'=>'Neexistuje taká e-mailová adresa.',
-	'password_had_been_send'=>'Heslo bolo odoslané.',
-	'register_newsletter'=>'Zaregistrovať do informačného letáku',
-	'request_mail'=>'<b>Vyžiadali ste si klúč vymazania!</b><br><br>Pre vymazanie vášho mailu zo zoznamu informačného letáku prosím kliknite <a href="http://%homepage_url%/index.php?site=newsletter&mail=%mail%&pass=%delete_key%">sem</a><br>Váš kľúč pre vymazanie: %delete_key%<br><br>Vidíme sa na %homepage_url%',
+	'mail_not_in_db'=>'Zadaná e-mailová adesa neexsituje v našej databáze.',
+	'newslette'=>'infomačný leták',
+	'newslette_egistation'=>'Registácia inf. letáku',
+	'no_such_mail_adess'=>'Neexistuje taká e-mailová adesa.',
+	'passwod_had_been_send'=>'Heslo bolo odoslané.',
+	'egiste_newslette'=>'Zaegistovať do infomačného letáku',
+	'equest_mail'=>'<b>Vyžiadali ste si klúč vymazania!</b><b><b>Pe vymazanie vášho mailu zo zoznamu infomačného letáku posím kliknite <a hef="http://%homepage_ul%/index.php?site=newslette&mail=%mail%&pass=%delete_key%">sem</a><b>Váš kľúč pe vymazanie: %delete_key%<b><b>Vidíme sa na %homepage_ul%',
 	'send'=>'odoslať',
-	'submit'=>'potvrdiť',
-	'success_mail'=>'<b>Ďakujeme za registráciu!</b><br><br>Pre vymazanie vášho mailu zo zoznamu prosím kliknite <a href="http://%homepage_url%/index.php?site=newsletter&mail=%mail%&pass=%delete_key%">sem</a><br>. Vaše heslo pre vymazanie: %delete_key%<br><br>Vidíme sa na %homepage_url%',
-	'thank_you_for_registration'=>'Ďakujeme za registráciu do infromačného letáku.',
-	'you_are_already_registered'=>'Už ste registrovaný.',
-	'your_mail_adress'=>'Vaša e-mailová adresa',
-	'your_mail_adress_deleted'=>'Vaša e-mailová adresa bola vymazaná.'
+	'submit'=>'potvdiť',
+	'success_mail'=>'<b>Ďakujeme za egistáciu!</b><b><b>Pe vymazanie vášho mailu zo zoznamu posím kliknite <a hef="http://%homepage_ul%/index.php?site=newslette&mail=%mail%&pass=%delete_key%">sem</a><b>. Vaše heslo pe vymazanie: %delete_key%<b><b>Vidíme sa na %homepage_ul%',
+	'thank_you_fo_egistation'=>'Ďakujeme za egistáciu do infomačného letáku.',
+	'you_ae_aleady_egisteed'=>'Už ste egistovaný.',
+	'you_mail_adess'=>'Vaša e-mailová adesa',
+	'you_mail_adess_deleted'=>'Vaša e-mailová adesa bola vymazaná.'
 );
 ?>

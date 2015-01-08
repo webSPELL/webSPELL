@@ -2,85 +2,85 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Version 4       /                        /   /               #
+#           Vesion 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Free Content / Management System                 #
+#                       Fee Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyight 2005-2014 by webspell.og                                  #
 #                                                                        #
-#   visit webSPELL.org, webspell.info to get webSPELL for free           #
-#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to remove this copyright-tag                      #
-#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
+#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
+#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to emove this copyight-tag                      #
+#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
-#   Far Development by Development Team - webspell.org                   #
+#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
+#   Fa Development by Development Team - webspell.og                   #
 #                                                                        #
-#   visit webspell.org                                                   #
+#   visit webspell.og                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_array = Array(
+$language_aay = Aay(
 
 /* do not edit above this line */
 
-	'author'=>'Autor',
+	'autho'=>'Auto',
 	'bbcode'=>'BBCode je <b><u>ZAPNUTÝ</u></b>',
-	'cancel'=>'zrušiť',
+	'cancel'=>'zušiť',
 	'comm'=>'kom.',
-	'comment'=>'<a href="$url">[1] komentár</a>, posledný od $lastposter - $lastdate',
-	'comments'=>'<a href="$url">[$anzcomments] komentárov</a>, posledný od $lastposter - $lastdate',
+	'comment'=>'<a hef="$ul">[1] komentá</a>, posledný od $lastposte - $lastdate',
+	'comments'=>'<a hef="$ul">[$anzcomments] komentáov</a>, posledný od $lastposte - $lastdate',
 	'date'=>'Dátum',
 	'delete'=>'vymazať',
 	'delete_selected'=>'vymazať označené',
-	'edit'=>'upraviť',
-	'enter_title'=>'Musíte zadať nadpis!',
-	'enter_text'=>'Musíte zadať text',
+	'edit'=>'upaviť',
+	'ente_title'=>'Musíte zadať nadpis!',
+	'ente_text'=>'Musíte zadať text',
 	'go'=>'Vykonaj!',
 	'headline'=>'Nadpis',
 	'html'=>'HTML je <b><u>ZAPNUTÉ</u></b>',
-	'intern'=>'interná',
+	'inten'=>'intená',
 	'languages'=>'Jazyky',
 	'link'=>'Odkaz',
 	'links'=>'Odkazy',
-	'new_post'=>'Nový príspevok',
+	'new_post'=>'Nový píspevok',
 	'new_window'=>'nové okno',
 	'news'=>'Novinky',
-	'news_archive'=>'Archív',
+	'news_achive'=>'Achív',
 	'no'=>'nie',
-	'no_access'=>'žiaden prístup',
-	'no_comment'=>'<a href="$url">žiaden komentár</a>',
-	'no_comments'=>'zakázať komentáre',
+	'no_access'=>'žiaden pístup',
+	'no_comment'=>'<a hef="$ul">žiaden komentá</a>',
+	'no_comments'=>'zakázať komentáe',
 	'no_topnews'=>'žiadne top novinky',
 	'options'=>'možnosti',
-	'post_languages'=>'Novinky v <select name="language_count" onchange="update_textarea(this.options[this.selectedIndex].value)">$selects</select> jazykoch',
-	'post_news'=>'pridať novinku',
-	'preview'=>'náhľad',
+	'post_languages'=>'Novinky v <select name="language_count" onchange="update_textaea(this.options[this.selectedIndex].value)">$selects</select> jazykoch',
+	'post_news'=>'pidať novinku',
+	'peview'=>'náhľad',
 	'publish_now'=>'publikovať',
 	'publish_selected'=>'publikovať označené',
-  	'really_delete'=>'Naozaj chcete vymazať tento novinky?',
-	'rubric'=>'Rubrika',
+  	'eally_delete'=>'Naozaj chcete vymazať tento novinky?',
+	'ubic'=>'Rubika',
 	'save_news'=>'uložiť novinku',
 	'select_all'=>'označiť všetko',
 	'self'=>'to isté okno',
 	'show_news'=>'ukázať novinky',
 	'smilies'=>'Smajlíci sú <b><u>ZAPNUTÍ</u></b>',
-	'sort'=>'Triediť:',
+	'sot'=>'Tiediť:',
 	'title_unpublished_news'=>'<h2>NEPUBLIKOVANÉ NOVINKY:</h2>',
 	'topnews'=>'top novinka',
 	'unpublish'=>'odpublikovať',
 	'unpublish_selected'=>'odpublikovať vyznačené',
 	'unpublished_news'=>'nepublikované novinky',
-	'upload_images'=>'odoslať obrázky',
-	'user_comments'=>'povoliť komenáre užívateľov',
-	'view_more'=>'Čítať ďalej...',
-	'visitor_comments'=>'povoliť komentáre návštevníkov',
-	'written_by'=>'napísal',
+	'upload_images'=>'odoslať obázky',
+	'use_comments'=>'povoliť komenáe užívateľov',
+	'view_moe'=>'Čítať ďalej...',
+	'visito_comments'=>'povoliť komentáe návštevníkov',
+	'witten_by'=>'napísal',
 	'yes'=>'áno',
 	'tags'=>'tagy'
 );

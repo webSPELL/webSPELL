@@ -2,92 +2,92 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Version 4       /                        /   /               #
+#           Vesion 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Free Content / Management System                 #
+#                       Fee Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyight 2005-2014 by webspell.og                                  #
 #                                                                        #
-#   visit webSPELL.org, webspell.info to get webSPELL for free           #
-#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to remove this copyright-tag                      #
-#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
+#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
+#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to emove this copyight-tag                      #
+#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
-#   Far Development by Development Team - webspell.org                   #
+#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
+#   Fa Development by Development Team - webspell.og                   #
 #                                                                        #
-#   visit webspell.org                                                   #
+#   visit webspell.og                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_array = Array(
+$language_aay = Aay(
 
 /* do not edit above this line */
 
 	'about'=>'o nás',
 	'and'=>'a',
-	'articles'=>'články',
-	'awards'=>'ocenenia',
-	'buddys'=>'priatelia',
-	'calendar'=>'kalendár',
-	'clanwars'=>'clanwary',
+	'aticles'=>'články',
+	'awads'=>'ocenenia',
+	'buddys'=>'piatelia',
+	'calenda'=>'kalendá',
+	'clanwas'=>'clanway',
 	'contact'=>'kontakt',
-	'counter_stats'=>'štatistiky počítadla',
+	'counte_stats'=>'štatistiky počítadla',
 	'date'=>'Dátum',
 	'demos'=>'demá',
 	'faq'=>'FAQ',
 	'fightus'=>'vyzvite nás',
 	'files'=>'downloady',
-	'forum'=>'fórum',
-	'gallery'=>'galéria',
+	'foum'=>'fóum',
+	'galley'=>'galéia',
 	'guest'=>'Návštevník',
 	'guestbook'=>'guestbook',
 	'guests'=>'Návštevníci',
-	'history'=>'história',
-	'imprint'=>'imprint',
-	'is_editing_his'=>'upravuje jeho',
-	'is_reading_forum'=>'číta fórum',
-	'is_reading_newscomments'=>'číta komentáre k novinkám',
-	'is_reading_the'=>'číta',
-	'is_watching_details_clanwar'=>'si pozerá CW detaily',
-	'is_watching_his'=>'si pozerá jeho',
-	'is_watching_profile'=>'si pozerá profil',
-	'is_watching_the'=>'pozerá',
-	'joinus'=>'pridaj sa k nám',
+	'histoy'=>'históia',
+	'impint'=>'impint',
+	'is_editing_his'=>'upavuje jeho',
+	'is_eading_foum'=>'číta fóum',
+	'is_eading_newscomments'=>'číta komentáe k novinkám',
+	'is_eading_the'=>'číta',
+	'is_watching_details_clanwa'=>'si pozeá CW detaily',
+	'is_watching_his'=>'si pozeá jeho',
+	'is_watching_pofile'=>'si pozeá pofil',
+	'is_watching_the'=>'pozeá',
+	'joinus'=>'pidaj sa k nám',
 	'latest_action'=>'Posledná akcia',
 	'links'=>'odkazy',
-	'linkus'=>'podporte nás',
-	'loginoverview'=>'prehľad',
-	'members'=>'členovia',
-	'messenger'=>'správy',
+	'linkus'=>'podpote nás',
+	'loginoveview'=>'pehľad',
+	'membes'=>'členovia',
+	'messenge'=>'spávy',
 	'news'=>'novinky',
-	'newsletter'=>'mailovanie noviniek',
-	'nickname'=>'Prezývka',
-	'now_online'=>'Teraz online:',
+	'newslette'=>'mailovanie noviniek',
+	'nickname'=>'Pezývka',
+	'now_online'=>'Teaz online:',
 	'polls'=>'ankety',
-	'profile'=>'profil',
-	'registered_user'=>'Registrovaný užívateľ',
-	'registered_users'=>'Registrovaní užívatelia',
-	'server'=>'servery',
-	'sort'=>'Triediť:',
-	'sponsors'=>'sponzori',
+	'pofile'=>'pofil',
+	'egisteed_use'=>'Registovaný užívateľ',
+	'egisteed_uses'=>'Registovaní užívatelia',
+	'seve'=>'sevey',
+	'sot'=>'Tiediť:',
+	'sponsos'=>'sponzoi',
 	'squads'=>'squady',
 	'status'=>'Status',
 	'title_is'=>'kto je online',
 	'title_was'=>'KTO BOL ONLINE (posl. 24H)',
-	'was_editing_his'=>'upravoval jeho',
-	'was_reading_forum'=>'čítal fórum',
-	'was_reading_newscomments'=>'čítal komentáre k novinkám',
-	'was_reading_the'=>'čítal',
-	'was_watching_details_clanwar'=>'pozeral detialy k CW',
-	'was_watching_his'=>'pozeral si jeho',
-	'was_watching_profile'=>'si pozeral profil',
-	'was_watching_the'=>'pozeral',
+	'was_editing_his'=>'upavoval jeho',
+	'was_eading_foum'=>'čítal fóum',
+	'was_eading_newscomments'=>'čítal komentáe k novinkám',
+	'was_eading_the'=>'čítal',
+	'was_watching_details_clanwa'=>'pozeal detialy k CW',
+	'was_watching_his'=>'pozeal si jeho',
+	'was_watching_pofile'=>'si pozeal pofil',
+	'was_watching_the'=>'pozeal',
 	'whoisonline'=>'kto je online?'
 );
 ?>

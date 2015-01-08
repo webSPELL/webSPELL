@@ -2,106 +2,106 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Version 4       /                        /   /               #
+#           Vesion 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Free Content / Management System                 #
+#                       Fee Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyight 2005-2014 by webspell.og                                  #
 #                                                                        #
-#   visit webSPELL.org, webspell.info to get webSPELL for free           #
-#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to remove this copyright-tag                      #
-#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
+#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
+#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to emove this copyight-tag                      #
+#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
-#   Far Development by Development Team - webspell.org                   #
+#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
+#   Fa Development by Development Team - webspell.og                   #
 #                                                                        #
-#   visit webspell.org                                                   #
+#   visit webspell.og                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_array = Array(
+$language_aay = Aay(
 
 /* do not edit above this line */
 
-	'access_member'=>'Vidljivo samo članovima klana',
-	'add_clanwar'=>'dodaj match',
-	'add_clanwars'=>'Dodaj u matcheve',
+	'access_membe'=>'Vidljivo samo članovima klana',
+	'add_clanwa'=>'dodaj match',
+	'add_clanwas'=>'Dodaj u matcheve',
 	'add_event'=>'Dodaj događaj',
-	'announce_here'=>'prijavi se ovdje',
-	'announce_to'=>'Prijavi se za ovaj match/Dođgađaj:',
-	'announcements'=>'Prijavljeni:',
-	'apr'=>'Travanj',
+	'announce_hee'=>'pijavi se ovdje',
+	'announce_to'=>'Pijavi se za ovaj match/Dođgađaj:',
+	'announcements'=>'Pijavljeni:',
+	'ap'=>'Tavanj',
 	'aug'=>'Kolovoz',
-	'calendar'=>'kalendar',
-	'clanwardetails'=>'Detalji matcha',
-	'clanwar_message'=>'new upcoming clanwar on %date%:[br][br]Opponent: [flag]%opponent_flag%[/flag] [url=%opp_hp%]%opponent%[/url] [br]League: [url=%league_hp%]%league%[/url] [br]Info: %warinfo%[br][br][url=index.php?site=calendar]link to calendar[/url]',
-	'clanwar_message_title'=>'new upcoming war in calendar!',
-	'date_time'=>'Datum - Vrijeme',
-	'dec'=>'Prosinac',
-	'delete'=>'izbriši',
-	'displayed_in'=>'prijkazano na kalendaru',
+	'calenda'=>'kalenda',
+	'clanwadetails'=>'Detalji matcha',
+	'clanwa_message'=>'new upcoming clanwa on %date%:[b][b]Opponent: [flag]%opponent_flag%[/flag] [ul=%opp_hp%]%opponent%[/ul] [b]League: [ul=%league_hp%]%league%[/ul] [b]Info: %wainfo%[b][b][ul=index.php?site=calenda]link to calenda[/ul]',
+	'clanwa_message_title'=>'new upcoming wa in calenda!',
+	'date_time'=>'Datum - Vijeme',
+	'dec'=>'Posinac',
+	'delete'=>'izbiši',
+	'displayed_in'=>'pijkazano na kalendau',
 	'edit'=>'izmjeni',
 	'editevent'=>'izmjeni događaj',
-	'editwar'=>'izmjeni match',
-	'end_datetime'=>'Završava: Datum - Vrijeme',
+	'editwa'=>'izmjeni match',
+	'end_datetime'=>'Zavšava: Datum - Vijeme',
 	'eventdetails'=>'Detalji događaja',
 	'feb'=>'Veljača',
-	'fri'=>'Pet',
+	'fi'=>'Pet',
 	'homepage'=>'Homepage:',
-	'information'=>'Informacije',
+	'infomation'=>'Infomacije',
 	'jan'=>'Siječanj',
-	'jul'=>'Srpanj',
+	'jul'=>'Spanj',
 	'jun'=>'Lipanj',
 	'league'=>'Liga',
 	'leaguehp'=>'Liga homepage',
 	'location'=>'Lokacija:',
 	'longtitle'=>'Dugi naslov',
 	'maps'=>'Mape',
-	'mar'=>'Ožujak',
+	'ma'=>'Ožujak',
 	'may'=>'Svibanj',
 	'mon'=>'Pon',
 	'new_date'=>'Novi događaj',
-	'new_war'=>'Najavi novi match',
+	'new_wa'=>'Najavi novi match',
 	'no'=>'Ne',
-	'no_access'=>'Pristup zabranjen',
-	'no_announced'=>'Nitko se nije prijavio dosada',
-	'no_entries'=>'nema dostupnih unosa za danas',
+	'no_access'=>'Pistup zabanjen',
+	'no_announced'=>'Nitko se nije pijavio dosada',
+	'no_enties'=>'nema dostupnih unosa za danas',
 	'no_text'=>'Nema dostupnog teksta',
 	'nov'=>'Studeni',
 	'oct'=>'Listopad',
-	'opponent'=>'Protivnik',
-	'opponentcountry'=>'Zemlja protivnika',
-	'opponenthp'=>'homepage protivnika',
-	'opponenttag'=>'Protivnički tag',
-	'perhaps'=>'Možda',
-  'really_delete'=>'Stvarno izbriši ovaj unos?',
+	'opponent'=>'Potivnik',
+	'opponentcounty'=>'Zemlja potivnika',
+	'opponenthp'=>'homepage potivnika',
+	'opponenttag'=>'Potivnički tag',
+	'pehaps'=>'Možda',
+  'eally_delete'=>'Stvano izbiši ovaj unos?',
 	'sat'=>'Sub',
-	'save_announcement'=>'Spremi najavu',
-	'save_event'=>'Spremi događaj',
-	'save_war'=>'Spremi najavu matcha',
-	'send_message'=>'Pošalji poruku svim članovima tima',
+	'save_announcement'=>'Spemi najavu',
+	'save_event'=>'Spemi događaj',
+	'save_wa'=>'Spemi najavu matcha',
+	'send_message'=>'Pošalji pouku svim članovima tima',
 	'sep'=>'Rujan',
-	'server'=>'Server',
-	'shorttitle'=>'Kratki naslov',
+	'seve'=>'Seve',
+	'shottitle'=>'Katki naslov',
 	'squad'=>'Tim',
-	'start_datetime'=>'Počinje: Datum - Vrijeme',
+	'stat_datetime'=>'Počinje: Datum - Vijeme',
 	'sun'=>'Ned',
 	'thu'=>'Čet',
-	'today_events'=>'Prikži današnje događaje',
+	'today_events'=>'Pikži današnje događaje',
 	'tue'=>'Uto',
-	'updateevent'=>'Spremi izmjene',
-	'updatewar'=>'Spremi match',
-	'wed'=>'Sri',
+	'updateevent'=>'Spemi izmjene',
+	'updatewa'=>'Spemi match',
+	'wed'=>'Si',
 	'yes'=>'Da',
-	'you_have_to_be_clanmember'=>'Morate niti član klana da bi vidjeli ovu stranicu.',
-	'enter_short'=>'Niste unijeli kratki naslov!',
-	'enter_title'=>'Niste unijeli dugi naslov!',
-	'enter_info'=>'Niste unijeli nikakvu informaciju!'
+	'you_have_to_be_clanmembe'=>'Moate niti član klana da bi vidjeli ovu stanicu.',
+	'ente_shot'=>'Niste unijeli katki naslov!',
+	'ente_title'=>'Niste unijeli dugi naslov!',
+	'ente_info'=>'Niste unijeli nikakvu infomaciju!'
 );
 ?>

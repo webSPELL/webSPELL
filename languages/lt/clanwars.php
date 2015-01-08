@@ -2,106 +2,106 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Version 4       /                        /   /               #
+#           Vesion 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Free Content / Management System                 #
+#                       Fee Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyight 2005-2014 by webspell.og                                  #
 #                                                                        #
-#   visit webSPELL.org, webspell.info to get webSPELL for free           #
-#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to remove this copyright-tag                      #
-#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
+#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
+#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to emove this copyight-tag                      #
+#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
-#   Far Development by Development Team - webspell.org                   #
+#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
+#   Fa Development by Development Team - webspell.og                   #
 #                                                                        #
-#   visit webspell.org                                                   #
+#   visit webspell.og                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_array = Array(
+$language_aay = Aay(
 
 /* do not edit above this line */
 
 	'clan'=>'Klanas',
 	'clan_stats'=>'klano statistika',
 	'clantag'=>'klano pavadinimas',
-	'clanwar_against'=>'Klano kova prieš',
-	'clanwar_details'=>'Klano kovos detalės',
-	'clanwar_saved'=>'Išsaugota klano kova.',
-	'clanwar_updated'=>'Klano kova atnaujinta.',
-	'clanwars'=>'Klano kovos',
-	'close_window'=>'Uždaryti langą',
-	'country'=>'Šalis',
+	'clanwa_against'=>'Klano kova pieš',
+	'clanwa_details'=>'Klano kovos detalės',
+	'clanwa_saved'=>'Išsaugota klano kova.',
+	'clanwa_updated'=>'Klano kova atnaujinta.',
+	'clanwas'=>'Klano kovos',
+	'close_window'=>'Uždayti langą',
+	'county'=>'Šalis',
 	'date'=>'Data',
-	'delete'=>'ištrinti',
-	'delete_selected'=>'ištrinti pasirinktus',
+	'delete'=>'ištinti',
+	'delete_selected'=>'ištinti pasiinktus',
 	'details'=>'Detalės',
-	'disable_comments'=>'išjungti komentarus',
-	'draw'=>'Lygiosios',
-	'draw_clanwars'=>'Lygiosios klano kovos',
-	'edit'=>'redeguoti',
-	'edit_clanwar'=>'redeguoti klano kovą',
+	'disable_comments'=>'išjungti komentaus',
+	'daw'=>'Lygiosios',
+	'daw_clanwas'=>'Lygiosios klano kovos',
+	'edit'=>'edeguoti',
+	'edit_clanwa'=>'edeguoti klano kovą',
 	'game'=>'Žaidimas',
-	'go'=>'Pirmyn',
-	'hltv_server'=>'HLTV serveris',
+	'go'=>'Pimyn',
+	'hltv_seve'=>'HLTV seveis',
 	'home_team'=>'Mūsų komanda',
 	'homepage'=>'Namų puslapis',
 	'id'=>'ID',
 	'league'=>'Lyga',
-	'league_match_link'=>'Lygos kovos nuoroda',
-	'lost'=>'Pralaimėjimas',
-	'lost_clanwars'=>'Pralaimėta klano kova',
-	'lost_points'=>'Pralošti taškai',
+	'league_match_link'=>'Lygos kovos nuooda',
+	'lost'=>'Palaimėjimas',
+	'lost_clanwas'=>'Palaimėta klano kova',
+	'lost_points'=>'Palošti taškai',
 	'map'=>'Žemėlapis',
 	'maps'=>'Žemėlapiai',
-	'matchlink'=>'Kovų nuorodos',
-	'new_clanwar'=>'Nauja klano kova',
-	'nickname'=>'Slapyvardis',
-	'no_access'=>'Jokia prieiga!',
-	'no_entries'=>'Tuščia, nieko nėra.',
-	'no_maps'=>'nėra žemėlapių',
-	'no_screenshots'=>'nėra nuotraukų',
+	'matchlink'=>'Kovų nuoodos',
+	'new_clanwa'=>'Nauja klano kova',
+	'nickname'=>'Slapyvadis',
+	'no_access'=>'Jokia pieiga!',
+	'no_enties'=>'Tuščia, nieko nėa.',
+	'no_maps'=>'nėa žemėlapių',
+	'no_sceenshots'=>'nėa nuotaukų',
 	'on'=>'įjungtas',
-	'opponent'=>'Priešininkas',
-	'opponent_team'=>'Priešininko komanda',
-	'percent'=>'Procentas',
-	'publish_clanwar_news'=>'viešinti klano kovų naujienas',
-	'really_delete_clanwar'=>'Ar tikrai norite ištrinti šią klano kovą?',
-	'report'=>'Pranešimas',
-	'result'=>'Rezultatas',
-	'save_clanwar'=>'išsaugoti klano kovą',
-	'score_home'=>'namų rezultatas',
-	'score_opponent'=>'Priešininko rezultatas',
-	'screenshots'=>'Nuotraukos',
+	'opponent'=>'Piešininkas',
+	'opponent_team'=>'Piešininko komanda',
+	'pecent'=>'Pocentas',
+	'publish_clanwa_news'=>'viešinti klano kovų naujienas',
+	'eally_delete_clanwa'=>'A tikai noite ištinti šią klano kovą?',
+	'epot'=>'Panešimas',
+	'esult'=>'Rezultatas',
+	'save_clanwa'=>'išsaugoti klano kovą',
+	'scoe_home'=>'namų ezultatas',
+	'scoe_opponent'=>'Piešininko ezultatas',
+	'sceenshots'=>'Nuotaukos',
 	'select_all'=>'pažymėti visus',
-	'server'=>'Serveris',
-	'show_all_squads'=>'rodyti visus būrius',
-	'show_clanwars'=>'rodyti visas klano kovas',
-	'sort'=>'Rykiuoti',
-	'squad'=>'Būrys',
+	'seve'=>'Seveis',
+	'show_all_squads'=>'odyti visus būius',
+	'show_clanwas'=>'odyti visas klano kovas',
+	'sot'=>'Rykiuoti',
+	'squad'=>'Būys',
 	'stat'=>'Padėtis',
 	'stats'=>'Padėtys',
 	'team'=>'Komanda',
 	'total'=>'iš viso',
-	'total_clanwars'=>'iš viso klano kovų',
-	'total_draw_clanwars'=>'iš viso lygiosios klano kavos',
-	'total_lost_clanwars'=>'iš viso praloštų klano kovų',
-	'total_lost_points'=>'iš viso praleimėtų taškų',
-	'total_won_clanwars'=>'iš viso laimėtų klano kovų',
+	'total_clanwas'=>'iš viso klano kovų',
+	'total_daw_clanwas'=>'iš viso lygiosios klano kavos',
+	'total_lost_clanwas'=>'iš viso paloštų klano kovų',
+	'total_lost_points'=>'iš viso paleimėtų taškų',
+	'total_won_clanwas'=>'iš viso laimėtų klano kovų',
 	'total_won_points'=>'iš viso laimėtų taškų',
-	'update_clanwar'=>'atnaujinti klano kovą',
-	'upload_screenshot'=>'atsiųsti nuotrauką',
-	'user_comments'=>'įjungti vartotojo komentarus',
-	'visitor_comments'=>'įjungti lankytojo komentarus',
+	'update_clanwa'=>'atnaujinti klano kovą',
+	'upload_sceenshot'=>'atsiųsti nuotauką',
+	'use_comments'=>'įjungti vatotojo komentaus',
+	'visito_comments'=>'įjungti lankytojo komentaus',
 	'won'=>'Laimėjimas',
-	'won_clanwars'=>'laimėtos klano kovos',
+	'won_clanwas'=>'laimėtos klano kovos',
 	'won_points'=>'laimėti taškai'
 );
 ?>

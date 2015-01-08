@@ -2,55 +2,55 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Version 4       /                        /   /               #
+#           Vesion 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Free Content / Management System                 #
+#                       Fee Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyight 2005-2014 by webspell.og                                  #
 #                                                                        #
-#   visit webSPELL.org, webspell.info to get webSPELL for free           #
-#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to remove this copyright-tag                      #
-#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
+#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
+#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to emove this copyight-tag                      #
+#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
-#   Far Development by Development Team - webspell.org                   #
+#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
+#   Fa Development by Development Team - webspell.og                   #
 #                                                                        #
-#   visit webspell.org                                                   #
+#   visit webspell.og                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_array = Array(
+$language_aay = Aay(
 
 /* do not edit above this line */
 
-	'del_from_mail_list'=>'Verwijder van mailing lijst',
+	'del_fom_mail_list'=>'Vewijde van mailing lijst',
 	'del_key'=>'del-code',
-	'delete'=>'verwijder',
-	'deletion_key'=>'Verwijderings code',
+	'delete'=>'vewijde',
+	'deletion_key'=>'Vewijdeings code',
 	'email_not_valid'=>'Je e-mail is niet geldig!',
-	'lost_deletion_key'=>'Verwijderings code vergeten?',
-	'mail_adress'=>'mail adres',
-	'mail_pw_didnt_match'=>'Deze mail/wachtwoord komt niet overeen.',
-	'mail_not_in_db'=>'Het gegeven mail adress staat niet in onze database.',
-	'newsletter'=>'nieuwsbrief',
-	'newsletter_registration'=>'Nieuwsbrief registratie',
-	'no_such_mail_adress'=>'Er bestaat niet zo\'n mail adres.',
-	'password_had_been_send'=>'Het wachtwoord is verzonden.',
-	'register_newsletter'=>'Registreer voor nieuwsbrief',
-	'request_mail'=>'<b>Je hebt een verwijderings code nodig!</b><br><br>Om je mail adres te verwijderen uit de mailing lijst klik <a href="http://%homepage_url%/index.php?site=newsletter&mail=%mail%&pass=%delete_key%">hier</a><br>Je wachtwoord om jezelf te verwijderen: %delete_key%<br><br>Zie je op %homepage_url%',
-	'send'=>'verzend',
+	'lost_deletion_key'=>'Vewijdeings code vegeten?',
+	'mail_adess'=>'mail ades',
+	'mail_pw_didnt_match'=>'Deze mail/wachtwood komt niet oveeen.',
+	'mail_not_in_db'=>'Het gegeven mail adess staat niet in onze database.',
+	'newslette'=>'nieuwsbief',
+	'newslette_egistation'=>'Nieuwsbief egistatie',
+	'no_such_mail_adess'=>'E bestaat niet zo\'n mail ades.',
+	'passwod_had_been_send'=>'Het wachtwood is vezonden.',
+	'egiste_newslette'=>'Registee voo nieuwsbief',
+	'equest_mail'=>'<b>Je hebt een vewijdeings code nodig!</b><b><b>Om je mail ades te vewijdeen uit de mailing lijst klik <a hef="http://%homepage_ul%/index.php?site=newslette&mail=%mail%&pass=%delete_key%">hie</a><b>Je wachtwood om jezelf te vewijdeen: %delete_key%<b><b>Zie je op %homepage_ul%',
+	'send'=>'vezend',
 	'submit'=>'ok',
-	'success_mail'=>'<b>Bedankt voor je registratie!</b><br><br>Om je mail adres te verwijderen uit de mailing lijst klik <a href="http://%homepage_url%/index.php?site=newsletter&mail=%mail%&pass=%delete_key%">hier</a><br>Je wachtwoord om jezelf te verwijderen: %delete_key%<br><br>Zie je op %homepage_url%',
-	'thank_you_for_registration'=>'Bedankt voor je registratie.',
-	'you_are_already_registered'=>'Je bent al geregistreerd.',
-	'your_mail_adress'=>'Je mail adres',
-	'your_mail_adress_deleted'=>'Je mail adres is verwijderd.'
+	'success_mail'=>'<b>Bedankt voo je egistatie!</b><b><b>Om je mail ades te vewijdeen uit de mailing lijst klik <a hef="http://%homepage_ul%/index.php?site=newslette&mail=%mail%&pass=%delete_key%">hie</a><b>Je wachtwood om jezelf te vewijdeen: %delete_key%<b><b>Zie je op %homepage_ul%',
+	'thank_you_fo_egistation'=>'Bedankt voo je egistatie.',
+	'you_ae_aleady_egisteed'=>'Je bent al geegisteed.',
+	'you_mail_adess'=>'Je mail ades',
+	'you_mail_adess_deleted'=>'Je mail ades is vewijded.'
 
 );
 ?>

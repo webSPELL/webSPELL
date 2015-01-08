@@ -2,74 +2,74 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Version 4       /                        /   /               #
+#           Vesion 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Free Content / Management System                 #
+#                       Fee Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyight 2005-2014 by webspell.og                                  #
 #                                                                        #
-#   visit webSPELL.org, webspell.info to get webSPELL for free           #
-#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to remove this copyright-tag                      #
-#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
+#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
+#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to emove this copyight-tag                      #
+#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
-#   Far Development by Development Team - webspell.org                   #
+#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
+#   Fa Development by Development Team - webspell.og                   #
 #                                                                        #
-#   visit webspell.org                                                   #
+#   visit webspell.og                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_array = Array(
+$language_aay = Aay(
 
 /* do not edit above this line */
 
 	'back'=>'Zpět',
-	'category'=>'Kategorie',
+	'categoy'=>'Kategoie',
 	'comment'=>'Komentáře',
 	'comments'=>'Komentáře',
 	'date'=>'Datum',
 	'delete'=>'smazat',
-	'edit'=>'Upravit',
-	'edit_picture'=>'upravit obrázek',
-	'galleries'=>'galerie',
-	'gallery'=>'Galerie',
-	'latest_gallery'=>'Poslední galerie',
+	'edit'=>'Upavit',
+	'edit_pictue'=>'upavit obázek',
+	'galleies'=>'galeie',
+	'galley'=>'Galeie',
+	'latest_galley'=>'Poslední galeie',
 	'most_comments'=>'Nejvíce komentářů',
 	'name'=>'Název',
 	'next'=>'Další',
 	'no_comments'=>'Zakázat komentáře',
-	'no_gallery_exists'=>'Galerie neexistuje!',
+	'no_galley_exists'=>'Galeie neexistuje!',
 	'no_pic_set'=>'Nebyly nastaveny fotky.',
-	'no_picture'=>'Obrázky neexistují!',
-	'page_s'=>'stránka/y',
-	'perfect'=>'perfektní',
-	'pg_1_1'=>'stránka 1 z 1',
-	'picture'=>'Obrázek',
-	'pictures'=>'Obrázky',
-	'poor'=>'špatný',
-	'random_picture'=>'Náhodné obrázky',
-	'rate'=>'Hlasování',
-	'rate_have_to_reg_login'=>'Hlasování: Musíš se registrovat a přihlásit!',
-	'rate_now'=>'Nové hlasování!',
-	'rating'=>'Hodnocení',
-	'really_del'=>'opravdu chceš toto smazat?',
-	'reset_views'=>'Resetovat shlédnutí',
-	'show_galleries'=>'Ukázat galerie',
-	'start_diashow'=>'Spustit prezentaci',
-	'update_picture'=>'aktualizovat obrázek',
-	'user_comments'=>'Povolit uživatelské komentáře',
-	'usergalleries'=>'Uživatelské galerie',
+	'no_pictue'=>'Obázky neexistují!',
+	'page_s'=>'stánka/y',
+	'pefect'=>'pefektní',
+	'pg_1_1'=>'stánka 1 z 1',
+	'pictue'=>'Obázek',
+	'pictues'=>'Obázky',
+	'poo'=>'špatný',
+	'andom_pictue'=>'Náhodné obázky',
+	'ate'=>'Hlasování',
+	'ate_have_to_eg_login'=>'Hlasování: Musíš se egistovat a přihlásit!',
+	'ate_now'=>'Nové hlasování!',
+	'ating'=>'Hodnocení',
+	'eally_del'=>'opavdu chceš toto smazat?',
+	'eset_views'=>'Resetovat shlédnutí',
+	'show_galleies'=>'Ukázat galeie',
+	'stat_diashow'=>'Spustit pezentaci',
+	'update_pictue'=>'aktualizovat obázek',
+	'use_comments'=>'Povolit uživatelské komentáře',
+	'usegalleies'=>'Uživatelské galeie',
 	'views'=>'Shlédnuto',
-	'visitor_comments'=>'Povolit komentáře návštěvníků',
+	'visito_comments'=>'Povolit komentáře návštěvníků',
 	'votes'=>'hlasovalo',
-	'webs_diashow'=>'webSPELL prezentace:',
-	'you_have_already_rated'=>'Už jsi hlasoval.',
+	'webs_diashow'=>'webSPELL pezentace:',
+	'you_have_aleady_ated'=>'Už jsi hlasoval.',
 	'no_thumb'=>'Bez náhledu'
 );
 ?>

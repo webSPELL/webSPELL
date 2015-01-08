@@ -2,41 +2,41 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Version 4       /                        /   /               #
+#           Vesion 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Free Content / Management System                 #
+#                       Fee Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyight 2005-2014 by webspell.og                                  #
 #                                                                        #
-#   visit webSPELL.org, webspell.info to get webSPELL for free           #
-#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to remove this copyright-tag                      #
-#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
+#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
+#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to emove this copyight-tag                      #
+#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
-#   Far Development by Development Team - webspell.org                   #
+#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
+#   Fa Development by Development Team - webspell.og                   #
 #                                                                        #
-#   visit webspell.org                                                   #
+#   visit webspell.og                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_array = Array(
+$language_aay = Aay(
 
 /* do not edit above this line */
 
-	'add_notexists'=>'Dieser Benutzer existiert nicht',
-	'add_nouserid'=>'Keine Benutzer-ID vorhanden',
-	'add_yourself'=>'Du kannst dich nicht selber ignorieren oder als Freund haben :P',
-	'buddy_nousers'=>'Du hast keine Benutzer in der Freundesliste',
-	'buddys'=>'Freunde',
-	'ignore_nousers'=>'Du hast keine Benutzer auf der Ignorierliste',
-	'not_logged'=>'Um deine Freunde zu verwalten musst du registriert und angemeldet sein.<br><a href="index.php?site=register">registrieren</a> | <a href="index.php?site=login">anmelden</a>',
-	'your_buddylist'=>'Deine Freundesliste',
-	'your_ignorelist'=>'Deine Ignorierliste'
+	'add_notexists'=>'Diese Benutze existiet nicht',
+	'add_nouseid'=>'Keine Benutze-ID vohanden',
+	'add_youself'=>'Du kannst dich nicht selbe ignoieen ode als Feund haben :P',
+	'buddy_nouses'=>'Du hast keine Benutze in de Feundesliste',
+	'buddys'=>'Feunde',
+	'ignoe_nouses'=>'Du hast keine Benutze auf de Ignoieliste',
+	'not_logged'=>'Um deine Feunde zu vewalten musst du egistiet und angemeldet sein.<b><a hef="index.php?site=egiste">egistieen</a> | <a hef="index.php?site=login">anmelden</a>',
+	'you_buddylist'=>'Deine Feundesliste',
+	'you_ignoelist'=>'Deine Ignoieliste'
 );
 ?>

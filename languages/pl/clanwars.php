@@ -2,106 +2,106 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Version 4       /                        /   /               #
+#           Vesion 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Free Content / Management System                 #
+#                       Fee Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyight 2005-2014 by webspell.og                                  #
 #                                                                        #
-#   visit webSPELL.org, webspell.info to get webSPELL for free           #
-#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to remove this copyright-tag                      #
-#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
+#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
+#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to emove this copyight-tag                      #
+#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
-#   Far Development by Development Team - webspell.org                   #
+#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
+#   Fa Development by Development Team - webspell.og                   #
 #                                                                        #
-#   visit webspell.org                                                   #
+#   visit webspell.og                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_array = Array(
+$language_aay = Aay(
 
 /* do not edit above this line */
 
 	'clan'=>'Klan',
 	'clan_stats'=>'Statystyki klanowe',
 	'clantag'=>'Tag klanowy',
-	'clanwar_against'=>'Klanówka przeciw',
-	'clanwar_details'=>'Szczegóły klanówki',
-	'clanwar_saved'=>'Klanówka zapisana.',
-	'clanwar_updated'=>'Klanówka zaktualizowana.',
-	'clanwars'=>'Klanówki',
+	'clanwa_against'=>'Klanówka pzeciw',
+	'clanwa_details'=>'Szczegóły klanówki',
+	'clanwa_saved'=>'Klanówka zapisana.',
+	'clanwa_updated'=>'Klanówka zaktualizowana.',
+	'clanwas'=>'Klanówki',
 	'close_window'=>'Zamknij okno',
-	'country'=>'Kraj',
+	'county'=>'Kaj',
 	'date'=>'Data',
 	'delete'=>'Usuń',
 	'delete_selected'=>'usuń zaznaczone',
 	'details'=>'Szczegóły',
 	'disable_comments'=>'Wyłącz komentowanie',
-	'draw'=>'Remis',
-	'draw_clanwars'=>'Zremisowanych',
+	'daw'=>'Remis',
+	'daw_clanwas'=>'Zemisowanych',
 	'edit'=>'Edytuj',
-	'edit_clanwar'=>'Edycja klanówki',
-	'game'=>'Gra',
+	'edit_clanwa'=>'Edycja klanówki',
+	'game'=>'Ga',
 	'go'=>'Idź',
-	'hltv_server'=>'HLTV serwer',
-	'home_team'=>'Nasza drużyna',
-	'homepage'=>'Strona domowa',
+	'hltv_seve'=>'HLTV sewe',
+	'home_team'=>'Nasza dużyna',
+	'homepage'=>'Stona domowa',
 	'id'=>'ID',
 	'league'=>'Liga',
 	'league_match_link'=>'Link do meczu ligowego',
-	'lost'=>'Przegrane',
-	'lost_clanwars'=>'Przegrane ',
-	'lost_points'=>'Stracone punkty',
+	'lost'=>'Pzegane',
+	'lost_clanwas'=>'Pzegane ',
+	'lost_points'=>'Stacone punkty',
 	'map'=>'Mapa',
 	'maps'=>'Mapy',
 	'matchlink'=>'Link',
-	'new_clanwar'=>'Nowa klanówka',
+	'new_clanwa'=>'Nowa klanówka',
 	'nickname'=>'Nick',
-	'no_access'=>'Brak dostępu!',
-	'no_entries'=>'no entries available',
-	'no_maps'=>'Brak map',
-	'no_screenshots'=>'brak screenshotów',
+	'no_access'=>'Bak dostępu!',
+	'no_enties'=>'no enties available',
+	'no_maps'=>'Bak map',
+	'no_sceenshots'=>'bak sceenshotów',
 	'on'=>'Wł',
-	'opponent'=>'Przeciwnik',
-	'opponent_team'=>'Drużyna przeciwnika',
-	'percent'=>'Procent',
-	'publish_clanwar_news'=>'Opublikować newsa o meczu ',
-	'really_delete_clanwar'=>'Na pewno chcesz usunąc tą klanówkę ?',
-	'report'=>'Raport',
-	'result'=>'Wynik',
-	'save_clanwar'=>'Zapisz klanówkę',
-	'score_home'=>'Nasz wynik',
-	'score_opponent'=>'Wynik przeciwnika',
-	'screenshots'=>'screenshots',
+	'opponent'=>'Pzeciwnik',
+	'opponent_team'=>'Dużyna pzeciwnika',
+	'pecent'=>'Pocent',
+	'publish_clanwa_news'=>'Opublikować newsa o meczu ',
+	'eally_delete_clanwa'=>'Na pewno chcesz usunąc tą klanówkę ?',
+	'epot'=>'Rapot',
+	'esult'=>'Wynik',
+	'save_clanwa'=>'Zapisz klanówkę',
+	'scoe_home'=>'Nasz wynik',
+	'scoe_opponent'=>'Wynik pzeciwnika',
+	'sceenshots'=>'sceenshots',
 	'select_all'=>'zaznacz wszystkie',
-	'server'=>'Serwer',
-	'show_all_squads'=>'Pokaż wszystkie drużyny',
-	'show_clanwars'=>'Pokaż wszystkie klanówki',
-	'sort'=>'sortuj',
-	'squad'=>'Drużyna',
+	'seve'=>'Sewe',
+	'show_all_squads'=>'Pokaż wszystkie dużyny',
+	'show_clanwas'=>'Pokaż wszystkie klanówki',
+	'sot'=>'sotuj',
+	'squad'=>'Dużyna',
 	'stat'=>'Statystyki',
 	'stats'=>'Statystyki',
 	'team'=>'team',
-	'total'=>'razem',
-	'total_clanwars'=>'Łącznie meczy',
-	'total_draw_clanwars'=>'Zremisowane',
-	'total_lost_clanwars'=>'Przegranych',
-	'total_lost_points'=>'Stracone punkty',
-	'total_won_clanwars'=>'Wygranych',
+	'total'=>'azem',
+	'total_clanwas'=>'Łącznie meczy',
+	'total_daw_clanwas'=>'Zemisowane',
+	'total_lost_clanwas'=>'Pzeganych',
+	'total_lost_points'=>'Stacone punkty',
+	'total_won_clanwas'=>'Wyganych',
 	'total_won_points'=>'Zdobyte punkty',
-	'update_clanwar'=>'aktualizuj klanówkę',
-	'upload_screenshot'=>'Wgraj obrazki',
-	'user_comments'=>'Użytkownicy mogą komentować',
-	'visitor_comments'=>'Goście mogą komentować',
-	'won'=>'Wygrane',
-	'won_clanwars'=>'Wygrane',
+	'update_clanwa'=>'aktualizuj klanówkę',
+	'upload_sceenshot'=>'Wgaj obazki',
+	'use_comments'=>'Użytkownicy mogą komentować',
+	'visito_comments'=>'Goście mogą komentować',
+	'won'=>'Wygane',
+	'won_clanwas'=>'Wygane',
 	'won_points'=>'Zdobyte punkty'
 );
 ?>

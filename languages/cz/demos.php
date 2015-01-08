@@ -2,43 +2,43 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Version 4       /                        /   /               #
+#           Vesion 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Free Content / Management System                 #
+#                       Fee Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyight 2005-2014 by webspell.og                                  #
 #                                                                        #
-#   visit webSPELL.org, webspell.info to get webSPELL for free           #
-#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to remove this copyright-tag                      #
-#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
+#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
+#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to emove this copyight-tag                      #
+#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
-#   Far Development by Development Team - webspell.org                   #
+#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
+#   Fa Development by Development Team - webspell.og                   #
 #                                                                        #
-#   visit webspell.org                                                   #
+#   visit webspell.og                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_array = Array(
+$language_aay = Aay(
 
 /* do not edit above this line */
 
 	'all_demos'=>'Všechny dema',
-	'allready_rated'=>'Toto demo už jsi hodnotil',
+	'alleady_ated'=>'Toto demo už jsi hodnotil',
 	'clan1'=>'Klan 1',
-	'clan1_country'=>'Národnost klanu 1',
-	'clan1_homepage'=>'Domovská stránka klanu 1',
+	'clan1_county'=>'Náodnost klanu 1',
+	'clan1_homepage'=>'Domovská stánka klanu 1',
 	'clan1_name'=>'Úplný název klanu 1',
 	'clan1_tag'=>'Klan tag 1',
 	'clan2'=>'Klan 2',
-	'clan2_country'=>'Národnost klanu 2',
-	'clan2_homepage'=>'Domovská stránka klanu 2',
+	'clan2_county'=>'Náodnost klanu 2',
+	'clan2_homepage'=>'Domovská stánka klanu 2',
 	'clan2_name'=>'Úplný název klanu 2',
 	'clan2_tag'=>'Klan tag 2',
 	'date'=>'Datum',
@@ -51,31 +51,31 @@ $language_array = Array(
 	'download_now'=>'Stáhnout nyní',
 	'downloaded'=>'Stáhnul',
 	'downloads'=>'Stáhnuto',
-	'edit'=>'upravit',
-	'edit_demo'=>'upravit demo',
-	'extern_link'=>'Externí odkaz',
-	'file_exists'=>'Soubor neexistuje!',
-	'game'=>'Hra',
+	'edit'=>'upavit',
+	'edit_demo'=>'upavit demo',
+	'exten_link'=>'Extení odkaz',
+	'file_exists'=>'Soubo neexistuje!',
+	'game'=>'Ha',
 	'league'=>'Liga',
-	'league_homepage'=>'Domovská stránka ligy',
+	'league_homepage'=>'Domovská stánka ligy',
 	'maps'=>'Mapy',
 	'match'=>'Zápas',
 	'new_demo'=>'Nové demo',
 	'no_access'=>'Nemáš přístup',
 	'no_demos'=>'Demo neexistuje',
-	'perfect'=>'Perfektní',
-	'players'=>'Hráči',
-	'poor'=>'Špatné',
-	'rate'=>'Hodnotit',
-	'rate_with'=>'Hodnotit mezi 0-10 body',
-	'rating'=>'Hodnocení',
+	'pefect'=>'Pefektní',
+	'playes'=>'Háči',
+	'poo'=>'Špatné',
+	'ate'=>'Hodnotit',
+	'ate_with'=>'Hodnotit mezi 0-10 body',
+	'ating'=>'Hodnocení',
 	'save_demo'=>'Uložit demo',
-	'sort'=>'Seřadit',
-	'to_download'=>'Musíš být registrovaný a přihlášený pokud chceš stahovat demo!',
-	'to_rate'=>'Musíš být registrovaný a přihlášený pokud chceš hodnotit demo!',
-	'update_demo'=>'Nahrát demo',
-	'user_comments'=>'Povolit uživatelské komentáře',
-	'visitor_comments'=>'Povolit komentáře návštěvníků',
+	'sot'=>'Seřadit',
+	'to_download'=>'Musíš být egistovaný a přihlášený pokud chceš stahovat demo!',
+	'to_ate'=>'Musíš být egistovaný a přihlášený pokud chceš hodnotit demo!',
+	'update_demo'=>'Nahát demo',
+	'use_comments'=>'Povolit uživatelské komentáře',
+	'visito_comments'=>'Povolit komentáře návštěvníků',
 	'vs'=>'vs.'
 );
 ?>

@@ -2,107 +2,107 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Version 4       /                        /   /               #
+#           Vesion 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Free Content / Management System                 #
+#                       Fee Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyight 2005-2014 by webspell.og                                  #
 #                                                                        #
-#   visit webSPELL.org, webspell.info to get webSPELL for free           #
-#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to remove this copyright-tag                      #
-#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
+#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
+#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to emove this copyight-tag                      #
+#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
-#   Far Development by Development Team - webspell.org                   #
+#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
+#   Fa Development by Development Team - webspell.og                   #
 #                                                                        #
-#   visit webspell.org                                                   #
+#   visit webspell.og                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_array = Array(
+$language_aay = Aay(
 
 /* do not edit above this line */
 
 	'accesslevel'=>'Niveau d\'accès',
 	'all'=>'Tout le monde',
-	'cant_delete_without_fileID'=>'Impossible de supprimer les fichiers sans l\'ID du fichier.',
-	'cant_display_empty_cat'=>'La catégorie est vide',
-	'cant_edit_without_fileID'=>'Impossible d\'éditer les fichiers sans l\'ID du fichier !',
-	'cant_report_without_fileID'=>'Impossible de rapporter un lien mort sans l\'ID du fichier !',
-	'categories_cl'=>'Catégories',
-	'category_cl'=>'Catégorie',
-	'clanmember'=>'Membres de la team',
+	'cant_delete_without_fileID'=>'Impossible de suppime les fichies sans l\'ID du fichie.',
+	'cant_display_empty_cat'=>'La catégoie est vide',
+	'cant_edit_without_fileID'=>'Impossible d\'édite les fichies sans l\'ID du fichie !',
+	'cant_epot_without_fileID'=>'Impossible de appote un lien mot sans l\'ID du fichie !',
+	'categoies_cl'=>'Catégoies',
+	'categoy_cl'=>'Catégoie',
+	'clanmembe'=>'Membes de la team',
 	'database_cl'=>'Base de données',
-	'delete_file'=>'Supprimer le fichier',
-	'description'=>'Description',
+	'delete_file'=>'Suppime le fichie',
+	'desciption'=>'Desciption',
 	'dl'=>'DL',
-	'download_now'=>'Télécharger %filename% maintenant',
-	'download_registered_only'=>'Téléchargeable pour les membres seulement !',
-	'download_via_mirror'=>'Télécharger via le miroir',
-	'downloads_cl'=>'Téléchargements',
-	'edit_file'=>'Editer le fichier',
-	'extern-link'=>'Lien externe',
-	'failed_edit_file'=>'Erreur pour éditer le fichier !',
-	'failed_save_file-info'=>'Erreur pour enregistrer les informations du fichier !',
-	'file-info'=>'Information du fichier',
-	'file-mirrors'=>'Miroir du fichier',
-	'file-size_e'=>'Taille du fichier (seulement pour les fichiers externes)',
-	'file-upload'=>'Envoi du fichier',
-	'file_already_exists'=>'Le fichier existe déjà.',
-	'file_categories'=>'Catégories',
-	'file_created'=>'Fichier ajouté.',
-	'file_deleted'=>'Fichier supprimé.',
-	'file_not_created'=>'Le fichier ne peut pas être ajouté !',
-	'file_not_deleted'=>'Le fichier ne peut pas être supprimé !',
-	'filename'=>'Nom du fichier',
-	'files'=>'Tous les fichiers',
-	'files_cl'=>'Fichiers',
-	'first_create_file-category'=>'Vous devez créer une catégorie !',
-	'info_description'=>'Description',
-	'last_uploaded_file'=>'Dernier fichier envoyé',
-	'leave_description'=>'Si le lien est invalide, et que vous savez pourquoi, laissez un lien valide et une courte description dans ce champ:',
+	'download_now'=>'Téléchage %filename% maintenant',
+	'download_egisteed_only'=>'Téléchageable pou les membes seulement !',
+	'download_via_mio'=>'Téléchage via le mioi',
+	'downloads_cl'=>'Téléchagements',
+	'edit_file'=>'Edite le fichie',
+	'exten-link'=>'Lien extene',
+	'failed_edit_file'=>'Eeu pou édite le fichie !',
+	'failed_save_file-info'=>'Eeu pou enegiste les infomations du fichie !',
+	'file-info'=>'Infomation du fichie',
+	'file-mios'=>'Mioi du fichie',
+	'file-size_e'=>'Taille du fichie (seulement pou les fichies extenes)',
+	'file-upload'=>'Envoi du fichie',
+	'file_aleady_exists'=>'Le fichie existe déjà.',
+	'file_categoies'=>'Catégoies',
+	'file_ceated'=>'Fichie ajouté.',
+	'file_deleted'=>'Fichie suppimé.',
+	'file_not_ceated'=>'Le fichie ne peut pas ête ajouté !',
+	'file_not_deleted'=>'Le fichie ne peut pas ête suppimé !',
+	'filename'=>'Nom du fichie',
+	'files'=>'Tous les fichies',
+	'files_cl'=>'Fichies',
+	'fist_ceate_file-categoy'=>'Vous devez cée une catégoie !',
+	'info_desciption'=>'Desciption',
+	'last_uploaded_file'=>'Denie fichie envoyé',
+	'leave_desciption'=>'Si le lien est invalide, et que vous savez pouquoi, laissez un lien valide et une coute desciption dans ce champ:',
 	'login'=>'Connexion',
-	'mirror'=>'Miroir',
-	'mirrors'=>'Miroirs',
+	'mio'=>'Mioi',
+	'mios'=>'Miois',
 	'name'=>'Nom',
-	'new_category'=>'Nouvelle catégorie',
-	'new_file'=>'Nouveau fichier',
-	'no_access'=>'Accès refusé !',
-	'no_categories_and_files'=>'Aucune catégorie et aucun fichier.',
-	'no_mirrors'=>'Aucun miroir',
-	'no_valid_file'=>'Fichier non valide.',
-	'perfect'=>'Parfait',
+	'new_categoy'=>'Nouvelle catégoie',
+	'new_file'=>'Nouveau fichie',
+	'no_access'=>'Accès efusé !',
+	'no_categoies_and_files'=>'Aucune catégoie et aucun fichie.',
+	'no_mios'=>'Aucun mioi',
+	'no_valid_file'=>'Fichie non valide.',
+	'pefect'=>'Pafait',
 	'please_login'=>'Connectez-vous svp',
-	'poor'=>'Nul',
-	'rate'=>'Evaluer',
-	'rate_have_to_reg_login'=>'Note: vous devez être enregistré et connecté !',
-	'rate_now'=>'Choisissez une note',
-	'rating'=>'Note',
-	'rating_x_of_10'=>'Note: %d à 10',
-	'really_delete_file'=>'Voulez-vous vraiment supprimer ce fichier?',
-	'register'=>'Enregistrer',
-	'registered'=>'Enregistré',
-	'report'=>'Rapporter',
-	'report_dead_link'=>'Rapporter un lien mort',
-	'reset'=>'Effacer',
+	'poo'=>'Nul',
+	'ate'=>'Evalue',
+	'ate_have_to_eg_login'=>'Note: vous devez ête enegisté et connecté !',
+	'ate_now'=>'Choisissez une note',
+	'ating'=>'Note',
+	'ating_x_of_10'=>'Note: %d à 10',
+	'eally_delete_file'=>'Voulez-vous vaiment suppime ce fichie?',
+	'egiste'=>'Enegiste',
+	'egisteed'=>'Enegisté',
+	'epot'=>'Rappote',
+	'epot_dead_link'=>'Rappote un lien mot',
+	'eset'=>'Efface',
 	'size'=>'Taille',
 	'statistic'=>'Statistiques',
-	'subcategories'=>'Sous-catégories',
-	'successful'=>'Rapport effectué avec succès.',
+	'subcategoies'=>'Sous-catégoies',
+	'successful'=>'Rappot effectué avec succès.',
 	'top_5_downloads'=>'TOP 5 TELECHARGEMENTS',
-	'traffic_cl'=>'Trafic',
-	'update'=>'Editer',
-	'upload'=>'Envoyer',
+	'taffic_cl'=>'Tafic',
+	'update'=>'Edite',
+	'upload'=>'Envoye',
 	'uploaded_on'=>'Envoyé le',
-	'uploader'=>'Envoyer par',
-	'you_have_already_rated'=>'Vous avez déjà évalué ce fichier !',
-	'you_have_to_enter_filename'=>'Vous devez entrer un nom de fichier !',
-	'you_have_to_enter_file'=>'Vous devez entrer un fichier / un lien !'
+	'uploade'=>'Envoye pa',
+	'you_have_aleady_ated'=>'Vous avez déjà évalué ce fichie !',
+	'you_have_to_ente_filename'=>'Vous devez ente un nom de fichie !',
+	'you_have_to_ente_file'=>'Vous devez ente un fichie / un lien !'
 );
 ?>

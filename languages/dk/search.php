@@ -2,69 +2,69 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Version 4       /                        /   /               #
+#           Vesion 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Free Content / Management System                 #
+#                       Fee Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyight 2005-2014 by webspell.og                                  #
 #                                                                        #
-#   visit webSPELL.org, webspell.info to get webSPELL for free           #
-#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to remove this copyright-tag                      #
-#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
+#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
+#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to emove this copyight-tag                      #
+#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
-#   Far Development by Development Team - webspell.org                   #
+#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
+#   Fa Development by Development Team - webspell.og                   #
 #                                                                        #
-#   visit webspell.org                                                   #
+#   visit webspell.og                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_array = Array(
+$language_aay = Aay(
 
 /* do not edit above this line */
 
-	'after'=>'Efter',
+	'afte'=>'Efte',
 	'and'=>'og',
-	'article'=>'Artikel',
-	'articles'=>'Artikler',
-	'articles_link'=>'<b>link til artikel</b>',
+	'aticle'=>'Atikel',
+	'aticles'=>'Atikle',
+	'aticles_link'=>'<b>link til atikel</b>',
 	'ascending'=>'stigende',
-	'before'=>'før',
+	'befoe'=>'fø',
 	'date_options'=>'Dato',
-	'delete_selected'=>'slet markerede',
+	'delete_selected'=>'slet makeede',
 	'descending'=>'faldende',
 	'faq'=>'FAQ',
 	'faq_link'=>'<b>link til FAQ</b>',
-	'forum'=>'Forum',
-	'forum_link'=>'<b>link til emne</b>',
-	'frequency'=>'Hypighed',
-	'keyword'=>'Nøgleord',
-	'new_search'=>'Ny søgning',
-	'news'=>'Nyheder',
-	'news_link'=>'<b>link til nyheder</b>',
-	'options'=>'Handlinger',
-	'or'=>'eller',
-	'result_quantity'=>'Resultater per side',
-	'results_found'=>'resultater fundet',
-	'search'=>'søg',
-	'search_in'=>'Søg i:',
-	'search_location'=>'Søger område',
-	'search_term'=>'Søgeudtryk',
-	'search_title'=>'Avanceret søgning',
-	'security_code'=>'Sikkerhedskode',
-	'sort_options'=>'Sorter',
-	'start_search'=>'Start søgning',
+	'foum'=>'Foum',
+	'foum_link'=>'<b>link til emne</b>',
+	'fequency'=>'Hypighed',
+	'keywod'=>'Nøgleod',
+	'new_seach'=>'Ny søgning',
+	'news'=>'Nyhede',
+	'news_link'=>'<b>link til nyhede</b>',
+	'options'=>'Handlinge',
+	'o'=>'elle',
+	'esult_quantity'=>'Resultate pe side',
+	'esults_found'=>'esultate fundet',
+	'seach'=>'søg',
+	'seach_in'=>'Søg i:',
+	'seach_location'=>'Søge omåde',
+	'seach_tem'=>'Søgeudtyk',
+	'seach_title'=>'Avanceet søgning',
+	'secuity_code'=>'Sikkehedskode',
+	'sot_options'=>'Sote',
+	'stat_seach'=>'Stat søgning',
 	'submit'=>'Søg',
-	'text_contains'=>'Teksten indeholder',
-	'title_contains'=>'Titlen indeholder',
-	'too_short'=>'Søgeudtrykket er for kort. Mindst %min_chars% tegn',
-	'wrong_securitycode'=>'Du har indtastet en forkert sikkerhedskode!',
-	'no_result'=>'Ingen oplysningerne fundet for "%s"'
+	'text_contains'=>'Teksten indeholde',
+	'title_contains'=>'Titlen indeholde',
+	'too_shot'=>'Søgeudtykket e fo kot. Mindst %min_chas% tegn',
+	'wong_secuitycode'=>'Du ha indtastet en foket sikkehedskode!',
+	'no_esult'=>'Ingen oplysningene fundet fo "%s"'
 );
 ?>

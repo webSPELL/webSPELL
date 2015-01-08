@@ -2,62 +2,62 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Version 4       /                        /   /               #
+#           Vesion 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Free Content / Management System                 #
+#                       Fee Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyight 2005-2014 by webspell.og                                  #
 #                                                                        #
-#   visit webSPELL.org, webspell.info to get webSPELL for free           #
-#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to remove this copyright-tag                      #
-#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
+#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
+#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to emove this copyight-tag                      #
+#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
-#   Far Development by Development Team - webspell.org                   #
+#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
+#   Fa Development by Development Team - webspell.og                   #
 #                                                                        #
-#   visit webspell.org                                                   #
+#   visit webspell.og                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_array = Array(
+$language_aay = Aay(
 
 /* do not edit above this line */
 
-	'daysonline'=>'Dagar online',
+	'daysonline'=>'Daga online',
 	'guest'=>'Gäst',
-	'guests'=>'Gäster',
-	'lasthour'=>'Senaste timmen',
-	'max_day'=>'Max per dag',
+	'guests'=>'Gäste',
+	'lasthou'=>'Senaste timmen',
+	'max_day'=>'Max pe dag',
 	'maximum'=>'Max',
 	'month'=>'Månad',
 	'now'=>'Nu',
 	'online'=>'Online',
 	'page_statistics'=>'Statistik på sidan',
-	'registered_users'=>'Registrerade användare',
+	'egisteed_uses'=>'Registeade användae',
 	'statistic'=>'Visa statistik',
 	'this_month'=>'Denna månaden',
 	'today'=>'Idag',
 	'total'=>'Totalt',
 	'total_statistic'=>'Total statistik',
-	'user'=>'användare',
-	'users'=>'användare',
-	'visits'=>'Besökare',
-	'visits_day'=>'Besök per dagar',
-	'visits_hour'=>'Besök per timme',
-	'visits_month'=>'Besök per månad',
+	'use'=>'användae',
+	'uses'=>'användae',
+	'visits'=>'Besökae',
+	'visits_day'=>'Besök pe daga',
+	'visits_hou'=>'Besök pe timme',
+	'visits_month'=>'Besök pe månad',
 	'visits_total'=>'Besök totalt',
-	'yesterday'=>'Igår',
-	'avg_age'=>'Medelåldern',
-	'avg_age_clanmember'=>'Medelåldern för clan medlemmar',
-	'youngest_user'=>'yngsta användaren',
-	'oldest_user'=>'Äldsta användaren',
-	'user_statistic'=>'Användar statistik',
-	'years'=>'År'
+	'yesteday'=>'Igå',
+	'avg_age'=>'Medelålden',
+	'avg_age_clanmembe'=>'Medelålden fö clan medlemma',
+	'youngest_use'=>'yngsta användaen',
+	'oldest_use'=>'Äldsta användaen',
+	'use_statistic'=>'Använda statistik',
+	'yeas'=>'Å'
 );
 ?>

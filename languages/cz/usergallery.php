@@ -2,56 +2,56 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Version 4       /                        /   /               #
+#           Vesion 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Free Content / Management System                 #
+#                       Fee Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyight 2005-2014 by webspell.og                                  #
 #                                                                        #
-#   visit webSPELL.org, webspell.info to get webSPELL for free           #
-#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to remove this copyright-tag                      #
-#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
+#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
+#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to emove this copyight-tag                      #
+#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
-#   Far Development by Development Team - webspell.org                   #
+#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
+#   Fa Development by Development Team - webspell.og                   #
 #                                                                        #
-#   visit webspell.org                                                   #
+#   visit webspell.og                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_array = Array(
+$language_aay = Aay(
 
 /* do not edit above this line */
 
-	'actions'=>'Úpravy',
-	'add_gallery'=>'přidat galerii',
-	'add_img'=>'přidat obrázek',
-	'add_picture'=>'přidat obrázek',
+	'actions'=>'Úpavy',
+	'add_galley'=>'přidat galeii',
+	'add_img'=>'přidat obázek',
+	'add_pictue'=>'přidat obázek',
 	'comment'=>'Komentář',
 	'delete'=>'smazat',
 	'disable_comments'=>'zakázat komentáře',
-	'edit'=>'upravit',
-	'enable_user_comments'=>'povolit uživatelské komentáře',
-	'enable_visitor_comments'=>'povolit návštìvnické komentáře',
-	'gallery_name'=>'Název galerie',
-	'group'=>'Skupina',
+	'edit'=>'upavit',
+	'enable_use_comments'=>'povolit uživatelské komentáře',
+	'enable_visito_comments'=>'povolit návštìvnické komentáře',
+	'galley_name'=>'Název galeie',
+	'goup'=>'Skupina',
 	'name'=>'Název',
-	'new_gallery'=>'nová galerie',
-	'no_galleries'=>'Galerie neexistuje.',
-	'no_space_left'=>'Nedostatek volného prostoru: zrušeno.',
-	'picture'=>'Obrázek',
-	'please_enter_name'=>'Prosím vlož název!',
-	'really_delete_gallery'=>'Opravdu chcete smazat tuto galerii?',
+	'new_galley'=>'nová galeie',
+	'no_galleies'=>'Galeie neexistuje.',
+	'no_space_left'=>'Nedostatek volného postou: zušeno.',
+	'pictue'=>'Obázek',
+	'please_ente_name'=>'Posím vlož název!',
+	'eally_delete_galley'=>'Opavdu chcete smazat tuto galeii?',
 	'update'=>'aktualizovat',
-	'user_gallery'=>'Uživatelská galerie',
-	'usergalleries'=>'Uživatelské galerie',
-	'visitor_comments'=>'Komentáře návštěvníků',
-	'x_of_y_mb_in_use'=>'<span style="color:%spacecolor%">&nbsp;%used_size%</span> of %available_size% MB jsou použity.'
+	'use_galley'=>'Uživatelská galeie',
+	'usegalleies'=>'Uživatelské galeie',
+	'visito_comments'=>'Komentáře návštěvníků',
+	'x_of_y_mb_in_use'=>'<span style="colo:%spacecolo%">&nbsp;%used_size%</span> of %available_size% MB jsou použity.'
 );
 ?>

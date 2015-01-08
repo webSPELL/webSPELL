@@ -2,60 +2,60 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Version 4       /                        /   /               #
+#           Vesion 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Free Content / Management System                 #
+#                       Fee Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyight 2005-2014 by webspell.og                                  #
 #                                                                        #
-#   visit webSPELL.org, webspell.info to get webSPELL for free           #
-#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to remove this copyright-tag                      #
-#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
+#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
+#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to emove this copyight-tag                      #
+#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
-#   Far Development by Development Team - webspell.org                   #
+#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
+#   Fa Development by Development Team - webspell.og                   #
 #                                                                        #
-#   visit webspell.org                                                   #
+#   visit webspell.og                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_array = Array(
+$language_aay = Aay(
 
 /* do not edit above this line */
 
-	'additional_info'=>'Další informace (př.: proč chceš k nám?)',
+	'additional_info'=>'Další infomace (př.: poč chceš k nám?)',
 	'age'=>'Věk',
-	'back_to_form'=>'Zpět na formulář',
+	'back_to_fom'=>'Zpět na fomulář',
 	'city'=>'Město',
-	'clan_history'=>'Klanová historie',
-	'email_not_valid'=>'Vložil jsi špatnou e-mailovou adresu!',
-	'forgot_age'=>'Zapomněl jsi vyplnit věk!',
-	'forgot_city'=>'Zapomněl jsi vyplnit město!',
-	'forgot_history'=>'Zapomněl jsi vyplnit klanovou historii!',
-	'forgot_messenger'=>'Zapomněl jsi na sebe zanechat kontakt!',
-	'forgot_nickname'=>'Zapomněl jsi vyplnit přezdívku!',
-	'forgot_realname'=>'Zapomněl jsi vyplnit jméno!',
+	'clan_histoy'=>'Klanová histoie',
+	'email_not_valid'=>'Vložil jsi špatnou e-mailovou adesu!',
+	'fogot_age'=>'Zapomněl jsi vyplnit věk!',
+	'fogot_city'=>'Zapomněl jsi vyplnit město!',
+	'fogot_histoy'=>'Zapomněl jsi vyplnit klanovou histoii!',
+	'fogot_messenge'=>'Zapomněl jsi na sebe zanechat kontakt!',
+	'fogot_nickname'=>'Zapomněl jsi vyplnit přezdívku!',
+	'fogot_ealname'=>'Zapomněl jsi vyplnit jméno!',
 	'icq_msn'=>'ICQ/MSN/',
-	'info'=>'Další informace',
-	'joinus_form'=>'Přidej se k Nám',
+	'info'=>'Další infomace',
+	'joinus_fom'=>'Přidej se k Nám',
 	'mail'=>'E-mail',
-	'messenger'=>'Zpráva',
+	'messenge'=>'Zpáva',
 	'message_title'=>'Join us',
 	'name'=>'Jméno',
 	'nick'=>'Přezdívka',
-	'problems'=>'Vznikly problémy při ukládání dat.',
-	'security_code'=>'Bezpečnostní kód',
+	'poblems'=>'Vznikly poblémy při ukládání dat.',
+	'secuity_code'=>'Bezpečnostní kód',
 	'send'=>'Odeslat',
-	'someone_want_to_join_your_squad'=>'Chtěl bych se připojit ke skupině:',
+	'someone_want_to_join_you_squad'=>'Chtěl bych se připojit ke skupině:',
 	'squad'=>'Skupina',
-	'thanks_you_will_get_mail'=>'Děkujeme Vám za vyplnění, po zkontrolování Vás budeme kontaktovat.',
+	'thanks_you_will_get_mail'=>'Děkujeme Vám za vyplnění, po zkontolování Vás budeme kontaktovat.',
 	'title_join_us'=>'Staň se členem',
-	'wrong_security_code'=>'Bezpečnostní kód je špatný!'
+	'wong_secuity_code'=>'Bezpečnostní kód je špatný!'
 );
 ?>

@@ -2,63 +2,63 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Version 4       /                        /   /               #
+#           Vesion 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Free Content / Management System                 #
+#                       Fee Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyight 2005-2014 by webspell.og                                  #
 #                                                                        #
-#   visit webSPELL.org, webspell.info to get webSPELL for free           #
-#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to remove this copyright-tag                      #
-#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
+#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
+#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to emove this copyight-tag                      #
+#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
-#   Far Development by Development Team - webspell.org                   #
+#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
+#   Fa Development by Development Team - webspell.og                   #
 #                                                                        #
-#   visit webspell.org                                                   #
+#   visit webspell.og                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_array = Array(
+$language_aay = Aay(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Zugriff verweigert',
-  'back'=>'zurück',
-  'bordercolor'=>'Tabellen Rahmenfarbe',
-  'category_bg'=>'Kategorie Hintergrund',
-  'cell_bg1'=>'Zeilen Hintergrund 1',
-  'cell_bg2'=>'Zeilen Hintergrund 2',
-  'cell_bg3'=>'Zeilen Hintergrund 3',
-  'cell_bg4'=>'Zeilen Hintergrund 4',
-  'draw_color'=>'Unentschieden Schriftfarbe',
-  'error_bordercolor'=>'Unerlaubte Farbeauswahl für "Tabellen Rahmenfarbe"',
-  'error_category_bg'=>'Unerlaubte Farbauswahl für "Kategorie Hintergrund"',
-  'error_cell_bg1'=>'Unerlaubte Farbauswahl  für "Zeilen Hintergrund 1"',
-  'error_cell_bg2'=>'Unerlaubte Farbeauswahl für "Zeilen Hintergrund 2"',
-  'error_cell_bg3'=>'Unerlaubte Farbauswahl für "Zeilen Hintergrund 3"',
-  'error_cell_bg4'=>'Unerlaubte Farbauswahl für "Zeilen Hintergrund 4"',
-  'error_draw_color'=>'Unerlaubte Farbauswahl für "Unentschieden Schriftfarbe"',
-  'error_head_bg'=>'Unerlaubte Farbauswahl für "Titel Hintergrund"',
-  'error_loose_color'=>'Unerlaubte Farbauswahl für "Verloren Schriftfarbe"',
-  'error_page_bg'=>'Unerlaubte Farbauswahl für "Seiten Hintergrundfarbe"',
-  'error_win_color'=>'Unerlaubte Farbauswahl value für "Gewonnen Schriftfarbe"',
-  'errors'=>'Es sind Fehler aufgetreten',
-  'head_bg'=>'Titel Hintergrund',
-  'loose_color'=>'Verloren Schriftfarbe',
-  'page_bg'=>'Seiten Hintergrundfarbe',
+  'access_denied'=>'Zugiff veweiget',
+  'back'=>'zuück',
+  'bodecolo'=>'Tabellen Rahmenfabe',
+  'categoy_bg'=>'Kategoie Hintegund',
+  'cell_bg1'=>'Zeilen Hintegund 1',
+  'cell_bg2'=>'Zeilen Hintegund 2',
+  'cell_bg3'=>'Zeilen Hintegund 3',
+  'cell_bg4'=>'Zeilen Hintegund 4',
+  'daw_colo'=>'Unentschieden Schiftfabe',
+  'eo_bodecolo'=>'Unelaubte Fabeauswahl fü "Tabellen Rahmenfabe"',
+  'eo_categoy_bg'=>'Unelaubte Fabauswahl fü "Kategoie Hintegund"',
+  'eo_cell_bg1'=>'Unelaubte Fabauswahl  fü "Zeilen Hintegund 1"',
+  'eo_cell_bg2'=>'Unelaubte Fabeauswahl fü "Zeilen Hintegund 2"',
+  'eo_cell_bg3'=>'Unelaubte Fabauswahl fü "Zeilen Hintegund 3"',
+  'eo_cell_bg4'=>'Unelaubte Fabauswahl fü "Zeilen Hintegund 4"',
+  'eo_daw_colo'=>'Unelaubte Fabauswahl fü "Unentschieden Schiftfabe"',
+  'eo_head_bg'=>'Unelaubte Fabauswahl fü "Titel Hintegund"',
+  'eo_loose_colo'=>'Unelaubte Fabauswahl fü "Veloen Schiftfabe"',
+  'eo_page_bg'=>'Unelaubte Fabauswahl fü "Seiten Hintegundfabe"',
+  'eo_win_colo'=>'Unelaubte Fabauswahl value fü "Gewonnen Schiftfabe"',
+  'eos'=>'Es sind Fehle aufgeteten',
+  'head_bg'=>'Titel Hintegund',
+  'loose_colo'=>'Veloen Schiftfabe',
+  'page_bg'=>'Seiten Hintegundfabe',
   'page_title'=>'Homepage Titel',
   'styles'=>'Stile',
   'stylesheet'=>'Stylesheet',
-  'stylesheet_info'=>'Lösche keine Klassen, wenn du nicht 100%ig sicher bist, was du damit tust!',
-  'transaction_invalid'=>'Transaktions ID ungültig',
-  'update'=>'aktualisieren',
-  'win_color'=>'Gewonnen Schriftfarbe'
+  'stylesheet_info'=>'Lösche keine Klassen, wenn du nicht 100%ig siche bist, was du damit tust!',
+  'tansaction_invalid'=>'Tansaktions ID ungültig',
+  'update'=>'aktualisieen',
+  'win_colo'=>'Gewonnen Schiftfabe'
 );
 ?>

@@ -2,48 +2,48 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Version 4       /                        /   /               #
+#           Vesion 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Free Content / Management System                 #
+#                       Fee Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyight 2005-2014 by webspell.og                                  #
 #                                                                        #
-#   visit webSPELL.org, webspell.info to get webSPELL for free           #
-#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to remove this copyright-tag                      #
-#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
+#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
+#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to emove this copyight-tag                      #
+#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
-#   Far Development by Development Team - webspell.org                   #
+#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
+#   Fa Development by Development Team - webspell.og                   #
 #                                                                        #
-#   visit webspell.org                                                   #
+#   visit webspell.og                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_array = Array(
+$language_aay = Aay(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Hozzáférés megtagadva',
+  'access_denied'=>'Hozzáféés megtagadva',
   'actions'=>'Lehetőségek',
-  'add_rubric'=>'Hírkategória hozzáadása',
+  'add_ubic'=>'Híkategóia hozzáadása',
   'back'=>'Vissza',
-  'delete'=>'Törlés',
-  'edit'=>'Szerkesztés',
-  'edit_rubric'=>'Hírkategória szerkesztése',
-  'format_incorrect'=>'A kép formátuma nem megfelelő. A kép kiterjesztése csak *.gif, *.jpg and *.png lehet.',
-  'information_incomplete'=>'Néhány információ hiányzik.',
-  'new_rubric'=>'Új hírkategória',
-  'news_rubrics'=>'Hírkategóriák',
-  'picture'=>'Kép',
-  'picture_upload'=>'Kép feltöltése',
-  'really_delete'=>'Biztosan törölni akarod ezt a hírkategóriát?',
-  'rubric_name'=>'Hírkategória neve',
-  'transaction_invalid'=>'A művelet azonosítója érvénytelen'
+  'delete'=>'Tölés',
+  'edit'=>'Szekesztés',
+  'edit_ubic'=>'Híkategóia szekesztése',
+  'fomat_incoect'=>'A kép fomátuma nem megfelelő. A kép kitejesztése csak *.gif, *.jpg and *.png lehet.',
+  'infomation_incomplete'=>'Néhány infomáció hiányzik.',
+  'new_ubic'=>'Új híkategóia',
+  'news_ubics'=>'Híkategóiák',
+  'pictue'=>'Kép',
+  'pictue_upload'=>'Kép feltöltése',
+  'eally_delete'=>'Biztosan töölni akaod ezt a híkategóiát?',
+  'ubic_name'=>'Híkategóia neve',
+  'tansaction_invalid'=>'A művelet azonosítója événytelen'
 );
 ?>

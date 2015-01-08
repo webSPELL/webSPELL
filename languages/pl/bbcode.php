@@ -2,86 +2,86 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Version 4       /                        /   /               #
+#           Vesion 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Free Content / Management System                 #
+#                       Fee Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyight 2005-2014 by webspell.og                                  #
 #                                                                        #
-#   visit webSPELL.org, webspell.info to get webSPELL for free           #
-#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to remove this copyright-tag                      #
-#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
+#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
+#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to emove this copyight-tag                      #
+#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
-#   Far Development by Development Team - webspell.org                   #
+#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
+#   Fa Development by Development Team - webspell.og                   #
 #                                                                        #
-#   visit webspell.org                                                   #
+#   visit webspell.og                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_array = Array(
+$language_aay = Aay(
 
 /* do not edit above this line */
 
-	'align'=>'Wyrównanie',
+	'align'=>'Wyównanie',
 	'blue'=>'niebieski',
-	'burlywood'=>'burlywood',
-	'center'=>'środek',
+	'bulywood'=>'bulywood',
+	'cente'=>'śodek',
 	'chocolate'=>'czekoladowy',
-	'color'=>'Kolor',
-	'coral'=>'łososiowy',
-	'crimson'=>'purpurowy',
-	'darkblue'=>'ciemny niebieski',
-	'darkred'=>'ciemny czerwony',
+	'colo'=>'Kolo',
+	'coal'=>'łososiowy',
+	'cimson'=>'pupuowy',
+	'dakblue'=>'ciemny niebieski',
+	'daked'=>'ciemny czewony',
 	'deeppink'=>'deeppink',
-	'firebrick'=>'firebrick',
+	'fiebick'=>'fiebick',
 	'font'=>'Czcionka',
-	'green'=>'zielony',
-	'huge'=>'Bardzo duży',
+	'geen'=>'zielony',
+	'huge'=>'Badzo duży',
 	'indigo'=>'ciemny fiolet',
 	'justify'=>'Wyjustowany',
-	'large'=>'Duży',
+	'lage'=>'Duży',
 	'left'=>'Do lewej',
-	'limegreen'=>'limonkowy',
-	'more_flags'=>'więcej flag',
-	'normal'=>'Normalny',
-	'orange'=>'pomarańczowy',
-	'orangered'=>'orange red',
-	'purple'=>'fioletowy',
-	'red'=>'czerwony',
-	'right'=>'Do prawej',
-	'royalblue'=>'royal blue',
-	'sandybrown'=>'piaskowy',
-	'seagreen'=>'seagreen',
+	'limegeen'=>'limonkowy',
+	'moe_flags'=>'więcej flag',
+	'nomal'=>'Nomalny',
+	'oange'=>'pomaańczowy',
+	'oangeed'=>'oange ed',
+	'puple'=>'fioletowy',
+	'ed'=>'czewony',
+	'ight'=>'Do pawej',
+	'oyalblue'=>'oyal blue',
+	'sandybown'=>'piaskowy',
+	'seageen'=>'seageen',
 	'sienna'=>'sienna',
-	'silver'=>'srebrny',
-	'size'=>'Rozmiar',
+	'silve'=>'sebny',
+	'size'=>'Rozmia',
 	'skyblue'=>'błękitny',
 	'small'=>'Mały',
-	'teal'=>'cyraneczka',
+	'teal'=>'cyaneczka',
 	'tiny'=>'Malutki',
-	'tomato'=>'pomidorowy',
-	'unevenAmount'=>'Nierówna ilość tagów zamykających i otwierających ',
-	'firstTagClosingTag'=>'Pierwszy tag BBCODE nie może być zamykającym',
-	'notSameAmount'=>'Nie taka sama ilość tagów zamykających i otwierających',
-	'wrongNesting'=>'Złe zagnieżdżenie tagów BBCode',
-	'listguide'=>'Wpisz \'1\' dla listy numerycznej, \'a\' dla listy alfabetycznej lub \'\' dla listy punktowej',
+	'tomato'=>'pomidoowy',
+	'unevenAmount'=>'Nieówna ilość tagów zamykających i otwieających ',
+	'fistTagClosingTag'=>'Piewszy tag BBCODE nie może być zamykającym',
+	'notSameAmount'=>'Nie taka sama ilość tagów zamykających i otwieających',
+	'wongNesting'=>'Złe zagnieżdżenie tagów BBCode',
+	'listguide'=>'Wpisz \'1\' dla listy numeycznej, \'a\' dla listy alfabetycznej lub \'\' dla listy punktowej',
 	'listpoint'=>'Wstaw liste punktową. Wstaw nic lub \'Cancel\' żeby zakończyć listę',
 	'addcode'=>'Wstaw na pozycję',
-	'read_more'=>'Czytaj więcej',
+	'ead_moe'=>'Czytaj więcej',
 	'mc_you_have'=>'Masz',
-	'mc_new_messages'=>'nowych wiadomości. Czy chcesz je teraz przeczytać ?',
+	'mc_new_messages'=>'nowych wiadomości. Czy chcesz je teaz pzeczytać ?',
 	'na'=>'niedostępne',
-	'wrote'=>'wrote',
-	'auto_resize'=>'Automatyczne dopasowanie',
+	'wote'=>'wote',
+	'auto_esize'=>'Automatyczne dopasowanie',
 	'code'=>'Code',
-	'large_picture'=>'Duże zdjęcia',
-	'show_original'=>'Pokaż oryginalny'
+	'lage_pictue'=>'Duże zdjęcia',
+	'show_oiginal'=>'Pokaż oyginalny'
 );
 ?>

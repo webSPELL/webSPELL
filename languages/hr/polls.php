@@ -2,70 +2,70 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Version 4       /                        /   /               #
+#           Vesion 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Free Content / Management System                 #
+#                       Fee Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyight 2005-2014 by webspell.og                                  #
 #                                                                        #
-#   visit webSPELL.org, webspell.info to get webSPELL for free           #
-#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to remove this copyright-tag                      #
-#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
+#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
+#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to emove this copyight-tag                      #
+#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
-#   Far Development by Development Team - webspell.org                   #
+#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
+#   Fa Development by Development Team - webspell.og                   #
 #                                                                        #
-#   visit webspell.org                                                   #
+#   visit webspell.og                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_array = Array(
+$language_aay = Aay(
 
 /* do not edit above this line */
 
-	'already_voted'=>'Već ste glasali.',
-	'comments'=>'komentara',
+	'aleady_voted'=>'Već ste glasali.',
+	'comments'=>'komentaa',
 	'days'=>'dana',
-	'delete'=>'izbriši',
-	'disable_comments'=>'onemogući komentare',
+	'delete'=>'izbiši',
+	'disable_comments'=>'onemogući komentae',
 	'edit'=>'izmjeni',
 	'edit_poll'=>'izmjeni anketu',
-	'enable_user_comments'=>'omogući komentare korisnicima',
-	'enable_visitor_comments'=>'omogući komentare posjetiteljima',
-	'endingtime'=>'Traje do',
-	'intern'=>'Interna',
-	'latest_by'=>'zadnji komentirao',
+	'enable_use_comments'=>'omogući komentae koisnicima',
+	'enable_visito_comments'=>'omogući komentae posjetiteljima',
+	'endingtime'=>'Taje do',
+	'inten'=>'Intena',
+	'latest_by'=>'zadnji komentiao',
 	'new_poll'=>'nova anketa',
-	'no_access'=>'nemate pristup!',
+	'no_access'=>'nemate pistup!',
 	'no_active_poll'=>'nema aktivnih anketa',
-	'no_entries'=>'nema unosa!',
+	'no_enties'=>'nema unosa!',
 	'on'=>'dana',
 	'option'=>'Opcija',
-	'poll_ended'=>'anketa je završila',
+	'poll_ended'=>'anketa je zavšila',
 	'polls'=>'ankete',
-	'really_delete'=>'stvarno izbriši ovu anketu?',
-	'really_stop'=>'stvarno zaustavi ovu anketu?',
-	'really_reopen'=>'stvarno ponovno otvori ovu anketu?',
-	'reset_votes'=>'resetiraj glasove',
-	'reopen_poll'=>'ponovno otvori anketu',
-	'save_poll'=>'spremi anketu',
-	'show_polls'=>'prikaži ankete',
+	'eally_delete'=>'stvano izbiši ovu anketu?',
+	'eally_stop'=>'stvano zaustavi ovu anketu?',
+	'eally_eopen'=>'stvano ponovno otvoi ovu anketu?',
+	'eset_votes'=>'esetiaj glasove',
+	'eopen_poll'=>'ponovno otvoi anketu',
+	'save_poll'=>'spemi anketu',
+	'show_polls'=>'pikaži ankete',
 	'stop_poll'=>'zaustavi anketu',
 	'stopped_poll'=>'zaustavljena anketa',
-	'time_left'=>'vrijeme preostalo',
+	'time_left'=>'vijeme peostalo',
 	'title'=>'Naslov',
-	'update_poll'=>'Spremi izmjene',
+	'update_poll'=>'Spemi izmjene',
 	'vote'=>'Glasaj',
 	'vote_now'=>'Glasaj sada',
 	'votes'=>'Glasovi',
-	'yht_enter_2_options'=>'Morate odabrati najmanje 2 opcije!',
-	'yht_enter_endingtime'=>'Morate unijeti vrijeme završavanja ankete!',
-	'yht_enter_title'=>'Morate unijeti naslov!'
+	'yht_ente_2_options'=>'Moate odabati najmanje 2 opcije!',
+	'yht_ente_endingtime'=>'Moate unijeti vijeme zavšavanja ankete!',
+	'yht_ente_title'=>'Moate unijeti naslov!'
 );
 ?>

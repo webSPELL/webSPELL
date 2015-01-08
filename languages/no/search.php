@@ -2,69 +2,69 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Version 4       /                        /   /               #
+#           Vesion 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Free Content / Management System                 #
+#                       Fee Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyight 2005-2014 by webspell.og                                  #
 #                                                                        #
-#   visit webSPELL.org, webspell.info to get webSPELL for free           #
-#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to remove this copyright-tag                      #
-#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
+#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
+#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to emove this copyight-tag                      #
+#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
-#   Far Development by Development Team - webspell.org                   #
+#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
+#   Fa Development by Development Team - webspell.og                   #
 #                                                                        #
-#   visit webspell.org                                                   #
+#   visit webspell.og                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_array = Array(
+$language_aay = Aay(
 
 /* do not edit above this line */
 
-	'after'=>'etter',
+	'afte'=>'ette',
 	'and'=>'og',
-	'article'=>'Artikkel',
-	'articles'=>'Artikler',
-	'articles_link'=>'<b>link til Artikkel</b>',
+	'aticle'=>'Atikkel',
+	'aticles'=>'Atikle',
+	'aticles_link'=>'<b>link til Atikkel</b>',
 	'ascending'=>'oppstigende',
-	'before'=>'før',
+	'befoe'=>'fø',
 	'date_options'=>'Dato',
-	'delete_selected'=>'slett merkede',
+	'delete_selected'=>'slett mekede',
 	'descending'=>'nedstigende',
 	'faq'=>'FAQ',
 	'faq_link'=>'<b>link til FAQ</b>',
-	'forum'=>'Forum',
-	'forum_link'=>'<b>link til emne</b>',
-	'frequency'=>'Hyppighet',
-	'keyword'=>'Stikkord',
-	'new_search'=>'Nytt søk',
-	'news'=>'Nyheter',
-	'news_link'=>'<b>link til nyheter</b>',
+	'foum'=>'Foum',
+	'foum_link'=>'<b>link til emne</b>',
+	'fequency'=>'Hyppighet',
+	'keywod'=>'Stikkod',
+	'new_seach'=>'Nytt søk',
+	'news'=>'Nyhete',
+	'news_link'=>'<b>link til nyhete</b>',
 	'options'=>'Valg',
-	'or'=>'eller',
-	'result_quantity'=>'Results per page',
-	'results_found'=>'results found',
-	'search'=>'search',
-	'search_in'=>'Search in:',
-	'search_location'=>'Searching Location',
-	'search_term'=>'Search term',
-	'search_title'=>'Advanced Search',
-	'security_code'=>'Sikkerhetskode',
-	'sort_options'=>'Sort',
-	'start_search'=>'Start search',
+	'o'=>'elle',
+	'esult_quantity'=>'Results pe page',
+	'esults_found'=>'esults found',
+	'seach'=>'seach',
+	'seach_in'=>'Seach in:',
+	'seach_location'=>'Seaching Location',
+	'seach_tem'=>'Seach tem',
+	'seach_title'=>'Advanced Seach',
+	'secuity_code'=>'Sikkehetskode',
+	'sot_options'=>'Sot',
+	'stat_seach'=>'Stat seach',
 	'submit'=>'Submit',
 	'text_contains'=>'Text contains',
 	'title_contains'=>'Title contains',
-	'too_short'=>'Search term is too short. At least %min_chars% characters',
-	'wrong_securitycode'=>'Du har skreve feil sikkerhetskode!',
-	'no_result'=>'Ingen oppføringer funnet for "%s"'
+	'too_shot'=>'Seach tem is too shot. At least %min_chas% chaactes',
+	'wong_secuitycode'=>'Du ha skeve feil sikkehetskode!',
+	'no_esult'=>'Ingen oppføinge funnet fo "%s"'
 );
 ?>

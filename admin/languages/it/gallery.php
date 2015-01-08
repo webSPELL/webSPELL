@@ -2,75 +2,75 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Version 4       /                        /   /               #
+#           Vesion 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Free Content / Management System                 #
+#                       Fee Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyight 2005-2014 by webspell.og                                  #
 #                                                                        #
-#   visit webSPELL.org, webspell.info to get webSPELL for free           #
-#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to remove this copyright-tag                      #
-#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
+#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
+#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to emove this copyight-tag                      #
+#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
-#   Far Development by Development Team - webspell.org                   #
+#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
+#   Fa Development by Development Team - webspell.og                   #
 #                                                                        #
-#   visit webspell.org                                                   #
+#   visit webspell.og                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_array = Array(
+$language_aay = Aay(
 
 /* do not edit above this line */
 
   'access_denied'=>'Accesso negato',
   'actions'=>'Azioni',
-  'add_gallery'=>'Aggiungi Gallera',
-  'add_group'=>'Aggiungi gruppo',
+  'add_galley'=>'Aggiungi Gallea',
+  'add_goup'=>'Aggiungi guppo',
   'add_img'=>'Aggiungi immagine',
   'comment'=>'Commento',
-  'delete'=>'cancellare',
-  'disable_comments'=>'chiudi commentari',
-  'edit_gallery'=>'cambiare galleria',
-  'edit_group'=>'Modifica gruppo',
-  'edit'=>'cambiare',
-  'enable_user_comments'=>'Commenti consentire agli utenti',
-  'enable_visitor_comments'=>'Consentire ai visitatori Commenti',
+  'delete'=>'cancellae',
+  'disable_comments'=>'chiudi commentai',
+  'edit_galley'=>'cambiae galleia',
+  'edit_goup'=>'Modifica guppo',
+  'edit'=>'cambiae',
+  'enable_use_comments'=>'Commenti consentie agli utenti',
+  'enable_visito_comments'=>'Consentie ai visitatoi Commenti',
   'filename'=>'Nome file',
-  'formular'=>'Formulario',
+  'fomula'=>'Fomulaio',
   'ftp'=>'FTP',
-  'ftp_info'=>'Per aggiungere file via FTP per aggiungere, caricare le immagini nella categoria seguente',
-  'galleries'=>'Gallerie',
-  'galleries_available'=>'Ci sono gallerie in questo gruppo. Per cancellare questo gruppo devi sposare o cancellare i gallerie.',
-  'gallery'=>'Galleria',
-  'gallery_name'=>'Galleria Nome',
-  'group'=>'Gruppo',
-  'groups'=>'Gruppi / gestisci categorie',
-  'group_name'=>'Nome del gruppo',
-  'information_incomplete'=>'Informazioni incomplete.',
+  'ftp_info'=>'Pe aggiungee file via FTP pe aggiungee, caicae le immagini nella categoia seguente',
+  'galleies'=>'Galleie',
+  'galleies_available'=>'Ci sono galleie in questo guppo. Pe cancellae questo guppo devi sposae o cancellae i galleie.',
+  'galley'=>'Galleia',
+  'galley_name'=>'Galleia Nome',
+  'goup'=>'Guppo',
+  'goups'=>'Guppi / gestisci categoie',
+  'goup_name'=>'Nome del guppo',
+  'infomation_incomplete'=>'Infomazioni incomplete.',
   'name'=>'Nome',
-  'need_group'=>'È necessario avere almeno una prima galleria di gruppo prima di poter creare una galleria.',
-  'new_gallery'=>'nuova galleria',
-  'new_group'=>'nuovo gruppo',
-  'per_form'=>'per formulario',
-  'per_ftp'=>'per FTP',
-  'picture'=>'Immagine',
-  'pic_upload'=>'Carica immagine',
-  'really_delete_group'=>'Veramente cancellare questo grupp?',
-  'really_delete_gallery'=>'Veramente cancellare questo grupp?',
-  'sort'=>'assortire',
-  'transaction_invalid'=>'ID transazione non valido',
-  'to_sort'=>'assortire',
-  'upload'=>'Caricare',
-  'usergalleries'=>'Gallerie Utenti',
-  'usergallery_of'=>'Galleria utente da',
-  'visitor_comments'=>'Commenti dei visitatori',
+  'need_goup'=>'È necessaio avee almeno una pima galleia di guppo pima di pote ceae una galleia.',
+  'new_galley'=>'nuova galleia',
+  'new_goup'=>'nuovo guppo',
+  'pe_fom'=>'pe fomulaio',
+  'pe_ftp'=>'pe FTP',
+  'pictue'=>'Immagine',
+  'pic_upload'=>'Caica immagine',
+  'eally_delete_goup'=>'Veamente cancellae questo gupp?',
+  'eally_delete_galley'=>'Veamente cancellae questo gupp?',
+  'sot'=>'assotie',
+  'tansaction_invalid'=>'ID tansazione non valido',
+  'to_sot'=>'assotie',
+  'upload'=>'Caicae',
+  'usegalleies'=>'Galleie Utenti',
+  'usegalley_of'=>'Galleia utente da',
+  'visito_comments'=>'Commenti dei visitatoi',
 	'no_thumb'=>'Thumb non disponibilen'
 );
 ?>

@@ -2,106 +2,106 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Version 4       /                        /   /               #
+#           Vesion 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Free Content / Management System                 #
+#                       Fee Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyight 2005-2014 by webspell.og                                  #
 #                                                                        #
-#   visit webSPELL.org, webspell.info to get webSPELL for free           #
-#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to remove this copyright-tag                      #
-#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
+#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
+#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to emove this copyight-tag                      #
+#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
-#   Far Development by Development Team - webspell.org                   #
+#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
+#   Fa Development by Development Team - webspell.og                   #
 #                                                                        #
-#   visit webspell.org                                                   #
+#   visit webspell.og                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_array = Array(
+$language_aay = Aay(
 
 /* do not edit above this line */
 
-	'access_member'=>'nur für Teammitglieder sichtbar',
-	'add_clanwar'=>'Clanwar eintragen',
-	'add_clanwars'=>'zu Clanwars hinzufügen',
-	'add_event'=>'Ereignis eintragen',
-	'announce_here'=>'hier anmelden',
-	'announce_to'=>'Zu diesem Clanwar/Event anmelden:',
+	'access_membe'=>'nu fü Teammitgliede sichtba',
+	'add_clanwa'=>'Clanwa eintagen',
+	'add_clanwas'=>'zu Clanwas hinzufügen',
+	'add_event'=>'Eeignis eintagen',
+	'announce_hee'=>'hie anmelden',
+	'announce_to'=>'Zu diesem Clanwa/Event anmelden:',
 	'announcements'=>'Anmeldungen:',
-	'apr'=>'April',
+	'ap'=>'Apil',
 	'aug'=>'August',
-	'calendar'=>'Kalender',
-	'clanwardetails'=>'Clanwardetails',
-	'clanwar_message'=>'Neuer anstehender Clanwar am %date%:[br][br]Gegner: [flag]%opponent_flag%[/flag] [url=%opp_hp%]%opponent%[/url] [br]Liga: [url=%league_hp%]%league%[/url] [br]Info: %warinfo%[br][br][url=index.php?site=calendar]Link zum Kalender[/url]',
-	'clanwar_message_title'=>'Neuer anstehender Clanwar im Kalender!',
+	'calenda'=>'Kalende',
+	'clanwadetails'=>'Clanwadetails',
+	'clanwa_message'=>'Neue anstehende Clanwa am %date%:[b][b]Gegne: [flag]%opponent_flag%[/flag] [ul=%opp_hp%]%opponent%[/ul] [b]Liga: [ul=%league_hp%]%league%[/ul] [b]Info: %wainfo%[b][b][ul=index.php?site=calenda]Link zum Kalende[/ul]',
+	'clanwa_message_title'=>'Neue anstehende Clanwa im Kalende!',
 	'date_time'=>'Datum - Zeit',
-	'dec'=>'Dezember',
+	'dec'=>'Dezembe',
 	'delete'=>'löschen',
-	'displayed_in'=>'wird im Kalender angezeigt',
-	'edit'=>'ändern',
-	'editevent'=>'Ereignis editieren',
-	'editwar'=>'Clanwar editieren',
+	'displayed_in'=>'wid im Kalende angezeigt',
+	'edit'=>'änden',
+	'editevent'=>'Eeignis editieen',
+	'editwa'=>'Clanwa editieen',
 	'end_datetime'=>'Ende: Datum - Zeit',
-	'eventdetails'=>'Veranstaltungsdetails',
-	'feb'=>'Februar',
-	'fri'=>'Fr',
+	'eventdetails'=>'Veanstaltungsdetails',
+	'feb'=>'Febua',
+	'fi'=>'F',
 	'homepage'=>'Homepage:',
-	'information'=>'Information',
-	'jan'=>'Januar',
+	'infomation'=>'Infomation',
+	'jan'=>'Janua',
 	'jul'=>'Juli',
 	'jun'=>'Juni',
 	'league'=>'Liga',
 	'leaguehp'=>'Ligenhomepage',
-	'location'=>'Ort:',
-	'longtitle'=>'Langer Titel',
-	'maps'=>'Karten',
-	'mar'=>'März',
+	'location'=>'Ot:',
+	'longtitle'=>'Lange Titel',
+	'maps'=>'Katen',
+	'ma'=>'Mäz',
 	'may'=>'Mai',
 	'mon'=>'Mo',
-	'new_date'=>'Neues Ereignis',
-	'new_war'=>'Neuen Clanwar ankündigen',
+	'new_date'=>'Neues Eeignis',
+	'new_wa'=>'Neuen Clanwa ankündigen',
 	'no'=>'Nein',
-	'no_access'=>'Zugriff verweigert',
-	'no_announced'=>'bisher keiner eingetragen',
-	'no_entries'=>'für heute keine Einträge vorhanden',
-	'no_text'=>'Kein Text verfügbar',
-	'nov'=>'November',
-	'oct'=>'Oktober',
-	'opponent'=>'Gegner',
-	'opponentcountry'=>'Gegnerland',
-	'opponenthp'=>'Gegner-Homepage',
-	'opponenttag'=>'Gegner-Clantag',
-	'perhaps'=>'Vielleicht',
-  'really_delete'=>'Diesen Eintrag wirklich löschen?',
+	'no_access'=>'Zugiff veweiget',
+	'no_announced'=>'bishe keine eingetagen',
+	'no_enties'=>'fü heute keine Eintäge vohanden',
+	'no_text'=>'Kein Text vefügba',
+	'nov'=>'Novembe',
+	'oct'=>'Oktobe',
+	'opponent'=>'Gegne',
+	'opponentcounty'=>'Gegneland',
+	'opponenthp'=>'Gegne-Homepage',
+	'opponenttag'=>'Gegne-Clantag',
+	'pehaps'=>'Vielleicht',
+  'eally_delete'=>'Diesen Eintag wiklich löschen?',
 	'sat'=>'Sa',
-	'save_announcement'=>'Ankündigung speichern',
-	'save_event'=>'Ereignis speichern',
-	'save_war'=>'Clanwarankündigung speichern',
-	'send_message'=>'an alle Spieler des Teams Nachricht senden',
-	'sep'=>'September',
-	'server'=>'Server',
-	'shorttitle'=>'Kurztitel',
+	'save_announcement'=>'Ankündigung speichen',
+	'save_event'=>'Eeignis speichen',
+	'save_wa'=>'Clanwaankündigung speichen',
+	'send_message'=>'an alle Spiele des Teams Nachicht senden',
+	'sep'=>'Septembe',
+	'seve'=>'Seve',
+	'shottitle'=>'Kuztitel',
 	'squad'=>'Team',
-	'start_datetime'=>'Beginn: Datum - Zeit',
+	'stat_datetime'=>'Beginn: Datum - Zeit',
 	'sun'=>'So',
 	'thu'=>'Do',
-	'today_events'=>'Heutige Ereignisse anzeigen',
+	'today_events'=>'Heutige Eeignisse anzeigen',
 	'tue'=>'Di',
-	'updateevent'=>'Ereignis aktualisieren',
-	'updatewar'=>'Clanwar aktualisieren',
+	'updateevent'=>'Eeignis aktualisieen',
+	'updatewa'=>'Clanwa aktualisieen',
 	'wed'=>'Mi',
 	'yes'=>'Ja',
-	'you_have_to_be_clanmember'=>'Du musst Clanmitglied sein um dies zu sehn.',
-	'enter_short'=>'Kein Kurztitel eingegeben!',
-	'enter_title'=>'Kein langer Titel eingegeben!',
-	'enter_info'=>'Keinerlei Informationen eingegeben!'
+	'you_have_to_be_clanmembe'=>'Du musst Clanmitglied sein um dies zu sehn.',
+	'ente_shot'=>'Kein Kuztitel eingegeben!',
+	'ente_title'=>'Kein lange Titel eingegeben!',
+	'ente_info'=>'Keinelei Infomationen eingegeben!'
 );
 ?>

@@ -2,85 +2,85 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Version 4       /                        /   /               #
+#           Vesion 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Free Content / Management System                 #
+#                       Fee Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyight 2005-2014 by webspell.og                                  #
 #                                                                        #
-#   visit webSPELL.org, webspell.info to get webSPELL for free           #
-#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to remove this copyright-tag                      #
-#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
+#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
+#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to emove this copyight-tag                      #
+#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
-#   Far Development by Development Team - webspell.org                   #
+#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
+#   Fa Development by Development Team - webspell.og                   #
 #                                                                        #
-#   visit webspell.org                                                   #
+#   visit webspell.og                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_array = Array(
+$language_aay = Aay(
 
 /* do not edit above this line */
 
-	'author'=>'Author',
+	'autho'=>'Autho',
 	'bbcode'=>'BBCode is <b><u>ON</u></b>',
 	'cancel'=>'cancel',
 	'comm'=>'comm',
-	'comment'=>'<a href="$url">[1] comment</a>, latest by $lastposter - $lastdate',
-	'comments'=>'<a href="$url">[$anzcomments] comments</a>, latest by $lastposter - $lastdate',
+	'comment'=>'<a hef="$ul">[1] comment</a>, latest by $lastposte - $lastdate',
+	'comments'=>'<a hef="$ul">[$anzcomments] comments</a>, latest by $lastposte - $lastdate',
 	'date'=>'Date',
 	'delete'=>'delete',
 	'delete_selected'=>'delete selected',
 	'edit'=>'edit',
-	'enter_title'=>'You have to enter a title!',
-	'enter_text'=>'You have to enter a text',
+	'ente_title'=>'You have to ente a title!',
+	'ente_text'=>'You have to ente a text',
 	'go'=>'Go!',
 	'headline'=>'Headline',
 	'html'=>'HTML is <b><u>ON</u></b>',
-	'intern'=>'intern',
+	'inten'=>'inten',
 	'languages'=>'Languages',
 	'link'=>'Link',
 	'links'=>'Links',
 	'new_post'=>'New post',
 	'new_window'=>'new window',
 	'news'=>'News',
-	'news_archive'=>'Archive',
+	'news_achive'=>'Achive',
 	'no'=>'no',
 	'no_access'=>'no access',
-	'no_comment'=>'<a href="$url">no comments</a>',
+	'no_comment'=>'<a hef="$ul">no comments</a>',
 	'no_comments'=>'disable comments',
 	'no_topnews'=>'no top news',
 	'options'=>'options',
-	'post_languages'=>'News in <select name="language_count" onchange="update_textarea(this.options[this.selectedIndex].value)">$selects</select> languages',
+	'post_languages'=>'News in <select name="language_count" onchange="update_textaea(this.options[this.selectedIndex].value)">$selects</select> languages',
 	'post_news'=>'post news',
-	'preview'=>'preview',
+	'peview'=>'peview',
 	'publish_now'=>'publish now',
 	'publish_selected'=>'publish selected',
-	'really_delete'=>'really delete this news?',
-	'rubric'=>'Rubric',
+	'eally_delete'=>'eally delete this news?',
+	'ubic'=>'Rubic',
 	'save_news'=>'save news',
 	'select_all'=>'select all',
 	'self'=>'self window',
 	'show_news'=>'show news',
-	'smilies'=>'Smilies are <b><u>ON</u></b>',
-	'sort'=>'Sort:',
+	'smilies'=>'Smilies ae <b><u>ON</u></b>',
+	'sot'=>'Sot:',
 	'title_unpublished_news'=>'<h2>UNPUBLISHED NEWS:</h2>',
 	'topnews'=>'top news',
 	'unpublish'=>'unpublish',
 	'unpublish_selected'=>'unpublish selected',
 	'unpublished_news'=>'unpublished news',
 	'upload_images'=>'upload images',
-	'user_comments'=>'enable user comments',
-	'view_more'=>'View more...',
-	'visitor_comments'=>'enable visitor comments',
-	'written_by'=>'written by',
+	'use_comments'=>'enable use comments',
+	'view_moe'=>'View moe...',
+	'visito_comments'=>'enable visito comments',
+	'witten_by'=>'witten by',
 	'yes'=>'yes',
 	'tags'=>'tags'
 );

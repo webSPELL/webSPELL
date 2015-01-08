@@ -2,67 +2,67 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Version 4       /                        /   /               #
+#           Vesion 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Free Content / Management System                 #
+#                       Fee Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyight 2005-2014 by webspell.og                                  #
 #                                                                        #
-#   visit webSPELL.org, webspell.info to get webSPELL for free           #
-#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to remove this copyright-tag                      #
-#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
+#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
+#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to emove this copyight-tag                      #
+#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
-#   Far Development by Development Team - webspell.org                   #
+#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
+#   Fa Development by Development Team - webspell.og                   #
 #                                                                        #
-#   visit webspell.org                                                   #
+#   visit webspell.og                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_array = Array(
+$language_aay = Aay(
 
 /* do not edit above this line */
 
-	'back_to_form'=>'Natrag na formular',
+	'back_to_fom'=>'Natag na fomula',
 	'challenge'=>'Izazov',
-	'challenge_from'=>'Izazov zatražen',
+	'challenge_fom'=>'Izazov zatažen',
 	'challenge_message'=>'[b]Postoji novi izazov![/b][BR][BR] Molimo kliknite ovdje: [URL]index.php?site=challenge[/URL]',
 	'challenges'=>'Izazovi',
-	'country'=>'zemlja',
+	'county'=>'zemlja',
 	'date'=>'datum',
-	'delete_challenge'=>'Izbriši izazov',
+	'delete_challenge'=>'Izbiši izazov',
 	'email'=>'E-Mail',
-	'enter_clanname'=>'Nije uneseno ime klana.',
-	'enter_email'=>'Nije unesena ispravna e-mail adresa.',
-	'enter_league'=>'Nije unesena liga.',
-	'enter_map'=>'Nije unesena mapa.',
-	'enter_server'=>'Nije unesen server.',
-	'enter_url'=>'Nije unesen vaš website.',
-  'entry_deleted'=>'Unos izbrisan.',
+	'ente_clanname'=>'Nije uneseno ime klana.',
+	'ente_email'=>'Nije unesena ispavna e-mail adesa.',
+	'ente_league'=>'Nije unesena liga.',
+	'ente_map'=>'Nije unesena mapa.',
+	'ente_seve'=>'Nije unesen seve.',
+	'ente_ul'=>'Nije unesen vaš website.',
+  'enty_deleted'=>'Unos izbisan.',
 	'fight_us'=>'Izazovi nas!',
 	'homepage'=>'Website',
-	'info'=>'više informacija',
-	'insert_in_calendar'=>'Dodaj u kalendar',
+	'info'=>'više infomacija',
+	'inset_in_calenda'=>'Dodaj u kalenda',
 	'league'=>'liga',
 	'map'=>'mapa',
 	'message_title'=>'Fight us',
-	'no_access'=>'Zabranjen pristup!',
-	'no_entries'=>'Nema unosa.',
-	'opponent'=>'protivnik',
-	'problems'=>'Sljedeći problemi su se pojavili',
-	'security_code'=>'sigurnosni kod',
-	'server'=>'server',
-	'sort'=>'Razvrstaj:',
+	'no_access'=>'Zabanjen pistup!',
+	'no_enties'=>'Nema unosa.',
+	'opponent'=>'potivnik',
+	'poblems'=>'Sljedeći poblemi su se pojavili',
+	'secuity_code'=>'sigunosni kod',
+	'seve'=>'seve',
+	'sot'=>'Razvstaj:',
 	'squad'=>'tim',
-	'submit_challenge'=>'spremi izazov',
-	'thank_you'=>'Hvala Vam na Vašem zahtjevu!<br>',
-	'time'=>'Vrijeme',
-	'wrong_security_code'=>'Krivo unesen sigurnosni kod.'
+	'submit_challenge'=>'spemi izazov',
+	'thank_you'=>'Hvala Vam na Vašem zahtjevu!<b>',
+	'time'=>'Vijeme',
+	'wong_secuity_code'=>'Kivo unesen sigunosni kod.'
 );
 ?>

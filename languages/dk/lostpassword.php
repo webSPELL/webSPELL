@@ -2,50 +2,50 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Version 4       /                        /   /               #
+#           Vesion 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Free Content / Management System                 #
+#                       Fee Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyight 2005-2014 by webspell.og                                  #
 #                                                                        #
-#   visit webSPELL.org, webspell.info to get webSPELL for free           #
-#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to remove this copyright-tag                      #
-#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
+#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
+#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to emove this copyight-tag                      #
+#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
-#   Far Development by Development Team - webspell.org                   #
+#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
+#   Fa Development by Development Team - webspell.og                   #
 #                                                                        #
-#   visit webspell.org                                                   #
+#   visit webspell.og                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_array = Array(
+$language_aay = Aay(
 
 /* do not edit above this line */
 
-	'email_failed'=>'Der var et problem da du sendte mailen. Kontakt venligst webmasteren.',
-	'email_subject'=>'Din konto for %pagetitle%',
-	'email_text'=>'Din konto for %pagetitle%
-OPMÆRKSOMHED dit kodeord er blevet ændret!
+	'email_failed'=>'De va et poblem da du sendte mailen. Kontakt venligst webmasteen.',
+	'email_subject'=>'Din konto fo %pagetitle%',
+	'email_text'=>'Din konto fo %pagetitle%
+OPMÆRKSOMHED dit kodeod e blevet ændet!
 
-Dit brugernavn: %username%
-Dit nye kodeord: %new_password%
+Dit bugenavn: %usename%
+Dit nye kodeod: %new_passwod%
 
 Hyg dig på hjemmesiden
-%homepage_url%',
-	'get_password'=>'få kodeordet',
-	'lost_password'=>'glemt kodeordet',
-	'no_mail_given'=>'Du har glemt at indtaste en email adresse.',
-	'no_user_found'=>'ingen bruger fundet!',
-	'successful'=>'Din konto er blevet fundet<br><br>
-					Du vil modtage en e-mail med din konto-data om et par sekunder.<br><br>
-			 		&#8226; <a href="index.php?site=login">log ind</a>',
-	'your_email'=>'Din email'
+%homepage_ul%',
+	'get_passwod'=>'få kodeodet',
+	'lost_passwod'=>'glemt kodeodet',
+	'no_mail_given'=>'Du ha glemt at indtaste en email adesse.',
+	'no_use_found'=>'ingen buge fundet!',
+	'successful'=>'Din konto e blevet fundet<b><b>
+					Du vil modtage en e-mail med din konto-data om et pa sekunde.<b><b>
+			 		&#8226; <a hef="index.php?site=login">log ind</a>',
+	'you_email'=>'Din email'
 );
 ?>

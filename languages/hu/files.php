@@ -2,107 +2,107 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Version 4       /                        /   /               #
+#           Vesion 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Free Content / Management System                 #
+#                       Fee Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyight 2005-2014 by webspell.og                                  #
 #                                                                        #
-#   visit webSPELL.org, webspell.info to get webSPELL for free           #
-#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to remove this copyright-tag                      #
-#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
+#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
+#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to emove this copyight-tag                      #
+#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
-#   Far Development by Development Team - webspell.org                   #
+#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
+#   Fa Development by Development Team - webspell.og                   #
 #                                                                        #
-#   visit webspell.org                                                   #
+#   visit webspell.og                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_array = Array(
+$language_aay = Aay(
 
 /* do not edit above this line */
 
-	'accesslevel'=>'Hozzáférési szint',
+	'accesslevel'=>'Hozzáféési szint',
 	'all'=>'Mind',
-	'cant_delete_without_fileID'=>'Nem törölhetsz fájlt a fileID nélkül.',
-	'cant_display_empty_cat'=>'A kategória üres',
-	'cant_edit_without_fileID'=>'Nem szerkeszthetsz fájlt a fileID nélkül.',
-	'cant_report_without_fileID'=>'Nem jelenthetsz érvénytelen linket a fileID nélkül.',
-	'categories_cl'=>'Kategóriák',
-	'category_cl'=>'Kategória',
-	'clanmember'=>'Klántag',
+	'cant_delete_without_fileID'=>'Nem töölhetsz fájlt a fileID nélkül.',
+	'cant_display_empty_cat'=>'A kategóia ües',
+	'cant_edit_without_fileID'=>'Nem szekeszthetsz fájlt a fileID nélkül.',
+	'cant_epot_without_fileID'=>'Nem jelenthetsz événytelen linket a fileID nélkül.',
+	'categoies_cl'=>'Kategóiák',
+	'categoy_cl'=>'Kategóia',
+	'clanmembe'=>'Klántag',
 	'database_cl'=>'Adatbázis',
-	'delete_file'=>'fájl törlése',
-	'description'=>'Leírás',
+	'delete_file'=>'fájl tölése',
+	'desciption'=>'Leíás',
 	'dl'=>'DL',
 	'download_now'=>'%filename% letöltése most',
-	'download_registered_only'=>'Csak regisztráltak tölthetnek le!',
-	'download_via_mirror'=>'letöltés mirrorral',
+	'download_egisteed_only'=>'Csak egisztáltak tölthetnek le!',
+	'download_via_mio'=>'letöltés mioal',
 	'downloads_cl'=>'Letöltések',
-	'edit_file'=>'fájl szerkesztése',
-	'extern-link'=>'Külso Link',
-	'failed_edit_file'=>'A fájl szerkesztése sikertelen!',
-	'failed_save_file-info'=>'A fájl-információ mentése sikertelen',
-	'file-info'=>'Fájl-Információ',
-	'file-mirrors'=>'Fájl-Mirrorok',
-	'file-size_e'=>'Fájl-Méret (csak külso fájlok)',
+	'edit_file'=>'fájl szekesztése',
+	'exten-link'=>'Külso Link',
+	'failed_edit_file'=>'A fájl szekesztése siketelen!',
+	'failed_save_file-info'=>'A fájl-infomáció mentése siketelen',
+	'file-info'=>'Fájl-Infomáció',
+	'file-mios'=>'Fájl-Miook',
+	'file-size_e'=>'Fájl-Méet (csak külso fájlok)',
 	'file-upload'=>'Fájl-Feltöltése',
-	'file_already_exists'=>'a fájl már létezik.',
-	'file_categories'=>'Fájl kategóriák',
-	'file_created'=>'Fájl létrehozva.',
-	'file_deleted'=>'Fájl törölve.',
-	'file_not_created'=>'A fájl nem lehet létrehozni.',
-	'file_not_deleted'=>'A fájlt nem lehet törölni.',
+	'file_aleady_exists'=>'a fájl má létezik.',
+	'file_categoies'=>'Fájl kategóiák',
+	'file_ceated'=>'Fájl létehozva.',
+	'file_deleted'=>'Fájl töölve.',
+	'file_not_ceated'=>'A fájl nem lehet létehozni.',
+	'file_not_deleted'=>'A fájlt nem lehet töölni.',
 	'filename'=>'Fájlnév',
 	'files'=>'fájlok',
 	'files_cl'=>'Fájlok',
-	'first_create_file-category'=>'Eloször fájl kategóriát csinálj!',
-	'info_description'=>'Infó/Leírás',
+	'fist_ceate_file-categoy'=>'Eloszö fájl kategóiát csinálj!',
+	'info_desciption'=>'Infó/Leíás',
 	'last_uploaded_file'=>'Utolsó feltöltött fájl',
-	'leave_description'=>'Ha hibás a letöltési link és tudod, hogy mi a probléma, akkor ide írhatod a jó linket és egy rövid leírást hozzá:',
+	'leave_desciption'=>'Ha hibás a letöltési link és tudod, hogy mi a pobléma, akko ide íhatod a jó linket és egy övid leíást hozzá:',
 	'login'=>'Belépés',
-	'mirror'=>'Mirror',
-	'mirrors'=>'Mirrorok',
+	'mio'=>'Mio',
+	'mios'=>'Miook',
 	'name'=>'Név',
-	'new_category'=>'új kategória',
+	'new_categoy'=>'új kategóia',
 	'new_file'=>'új fájl',
 	'no_access'=>'Belépés megtagadva!',
-	'no_categories_and_files'=>'nincs kategória és fájl.',
-	'no_mirrors'=>'nincs mirror',
-	'no_valid_file'=>'Nincs érvényes fájl.',
-	'perfect'=>'tökéletes',
+	'no_categoies_and_files'=>'nincs kategóia és fájl.',
+	'no_mios'=>'nincs mio',
+	'no_valid_file'=>'Nincs évényes fájl.',
+	'pefect'=>'tökéletes',
 	'please_login'=>'lépj be',
-	'poor'=>'gyenge',
-	'rate'=>'Osztályzat',
-	'rate_have_to_reg_login'=>'Osztályzás: Be kell jelentkezned!',
-	'rate_now'=>'Osztályzás most!',
-	'rating'=>'Minosítés',
-	'rating_x_of_10'=>'Osztályzat: %d a 10-bol',
-	'really_delete_file'=>'tényleg törölni akarod?',
-	'register'=>'Regisztráció',
-	'registered'=>'Regisztrálva',
-	'report'=>'jelentés',
-	'report_dead_link'=>'hibás link jelentése',
-	'reset'=>'alaphelyzet',
-	'size'=>'Méret',
+	'poo'=>'gyenge',
+	'ate'=>'Osztályzat',
+	'ate_have_to_eg_login'=>'Osztályzás: Be kell jelentkezned!',
+	'ate_now'=>'Osztályzás most!',
+	'ating'=>'Minosítés',
+	'ating_x_of_10'=>'Osztályzat: %d a 10-bol',
+	'eally_delete_file'=>'tényleg töölni akaod?',
+	'egiste'=>'Regisztáció',
+	'egisteed'=>'Regisztálva',
+	'epot'=>'jelentés',
+	'epot_dead_link'=>'hibás link jelentése',
+	'eset'=>'alaphelyzet',
+	'size'=>'Méet',
 	'statistic'=>'Statisztika',
-	'subcategories'=>'Alkategóriák',
-	'successful'=>'Sikeres.',
+	'subcategoies'=>'Alkategóiák',
+	'successful'=>'Sikees.',
 	'top_5_downloads'=>'Az 5 TOP letöltés',
-	'traffic_cl'=>'Forgalom',
-	'update'=>'frissítés',
+	'taffic_cl'=>'Fogalom',
+	'update'=>'fissítés',
 	'upload'=>'feltöltés',
 	'uploaded_on'=>'Feltöltve',
-	'uploader'=>'Feltölto',
-	'you_have_already_rated'=>'Már értékelted.',
-	'you_have_to_enter_filename'=>'Írj be fájlnevet!',
-	'you_have_to_enter_file'=>'Meg kell adnod egy fájlt / URL-t!'
+	'uploade'=>'Feltölto',
+	'you_have_aleady_ated'=>'Má étékelted.',
+	'you_have_to_ente_filename'=>'Íj be fájlnevet!',
+	'you_have_to_ente_file'=>'Meg kell adnod egy fájlt / URL-t!'
 );
 ?>

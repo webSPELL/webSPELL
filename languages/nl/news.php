@@ -2,85 +2,85 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Version 4       /                        /   /               #
+#           Vesion 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Free Content / Management System                 #
+#                       Fee Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyight 2005-2014 by webspell.og                                  #
 #                                                                        #
-#   visit webSPELL.org, webspell.info to get webSPELL for free           #
-#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to remove this copyright-tag                      #
-#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
+#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
+#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to emove this copyight-tag                      #
+#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
-#   Far Development by Development Team - webspell.org                   #
+#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
+#   Fa Development by Development Team - webspell.og                   #
 #                                                                        #
-#   visit webspell.org                                                   #
+#   visit webspell.og                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_array = Array(
+$language_aay = Aay(
 
 /* do not edit above this line */
 
-	'author'=>'Auteur',
+	'autho'=>'Auteu',
 	'bbcode'=>'BBCode is <b><u>AAN</u></b>',
-	'cancel'=>'annuleren',
-	'comm'=>'reactie',
-	'comment'=>'<a href="$url">[1] reactie</a>, laatst door $lastposter - $lastdate',
-	'comments'=>'<a href="$url">[$anzcomments] reacties</a>, laatst door $lastposter - $lastdate',
+	'cancel'=>'annuleen',
+	'comm'=>'eactie',
+	'comment'=>'<a hef="$ul">[1] eactie</a>, laatst doo $lastposte - $lastdate',
+	'comments'=>'<a hef="$ul">[$anzcomments] eacties</a>, laatst doo $lastposte - $lastdate',
 	'date'=>'Datum',
-	'delete'=>'verwijder',
-	'delete_selected'=>'verwijder geselecteerden',
-	'edit'=>'bewerk',
-	'enter_title'=>'Je moet een titel invullen!',
-	'enter_text'=>'Je moet tekst invullen',
+	'delete'=>'vewijde',
+	'delete_selected'=>'vewijde geselecteeden',
+	'edit'=>'bewek',
+	'ente_title'=>'Je moet een titel invullen!',
+	'ente_text'=>'Je moet tekst invullen',
 	'go'=>'Ga!',
 	'headline'=>'Titel',
 	'html'=>'HTML is <b><u>AAN</u></b>',
-	'intern'=>'intern',
+	'inten'=>'inten',
 	'languages'=>'Talen',
 	'link'=>'Link',
 	'links'=>'Links',
-	'new_post'=>'Nieuw Bericht',
-	'new_window'=>'nieuw venster',
+	'new_post'=>'Nieuw Beicht',
+	'new_window'=>'nieuw venste',
 	'news'=>'Nieuws',
-	'news_archive'=>'Archief',
+	'news_achive'=>'Achief',
 	'no'=>'nee',
 	'no_access'=>'geen toegang',
-	'no_comment'=>'<a href="$url">geen reacties</a>',
-	'no_comments'=>'sta commentaar niet toe',
+	'no_comment'=>'<a hef="$ul">geen eacties</a>',
+	'no_comments'=>'sta commentaa niet toe',
 	'no_topnews'=>'geen top nieuws',
 	'options'=>'opties',
-	'post_languages'=>'Nieuws in <select name="language_count" onchange="update_textarea(this.options[this.selectedIndex].value)">$selects</select> talen',
+	'post_languages'=>'Nieuws in <select name="language_count" onchange="update_textaea(this.options[this.selectedIndex].value)">$selects</select> talen',
 	'post_news'=>'plaats nieuws',
-	'preview'=>'preview',
+	'peview'=>'peview',
 	'publish_now'=>'plaats nu',
-	'publish_selected'=>'plaats geselecteerden',
-	'really_delete'=>'Dit Nieuws echt verwijderen?',
-	'rubric'=>'Rubriek',
+	'publish_selected'=>'plaats geselecteeden',
+	'eally_delete'=>'Dit Nieuws echt vewijdeen?',
+	'ubic'=>'Rubiek',
 	'save_news'=>'opslaan',
-	'select_all'=>'selecteer allen',
-	'self'=>'zelf venster',
+	'select_all'=>'selectee allen',
+	'self'=>'zelf venste',
 	'show_news'=>'bekijk nieuws',
 	'smilies'=>'Smileys zijn <b><u>AAN</u></b>',
-	'sort'=>'Sorteer:',
+	'sot'=>'Sotee:',
 	'title_unpublished_news'=>'<h2>ONGEPUCLICEERD NIEUWS:</h2>',
 	'topnews'=>'top nieuws',
-	'unpublish'=>'onpubliceer',
-	'unpublish_selected'=>'onpubliceer geselecteerden',
-	'unpublished_news'=>'onpubliceer nieuws',
+	'unpublish'=>'onpublicee',
+	'unpublish_selected'=>'onpublicee geselecteeden',
+	'unpublished_news'=>'onpublicee nieuws',
 	'upload_images'=>'upload afbeeldingen',
-	'user_comments'=>'sta gebruikers commentaar toe',
-	'view_more'=>'zie meer...',
-	'visitor_comments'=>'sta bezoekers commentaar toe',
-	'written_by'=>'geschreven door',
+	'use_comments'=>'sta gebuikes commentaa toe',
+	'view_moe'=>'zie mee...',
+	'visito_comments'=>'sta bezoekes commentaa toe',
+	'witten_by'=>'gescheven doo',
 	'yes'=>'ja',
 	'tags'=>'Tags'
 );

@@ -2,56 +2,56 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Version 4       /                        /   /               #
+#           Vesion 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Free Content / Management System                 #
+#                       Fee Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyight 2005-2014 by webspell.og                                  #
 #                                                                        #
-#   visit webSPELL.org, webspell.info to get webSPELL for free           #
-#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to remove this copyright-tag                      #
-#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
+#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
+#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to emove this copyight-tag                      #
+#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
-#   Far Development by Development Team - webspell.org                   #
+#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
+#   Fa Development by Development Team - webspell.og                   #
 #                                                                        #
-#   visit webspell.org                                                   #
+#   visit webspell.og                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_array = Array(
+$language_aay = Aay(
 
 /* do not edit above this line */
 
 	'actions'=>'Veiksmai',
-	'add_gallery'=>'Pridėti galeriją',
-	'add_img'=>'pridėti vaizdą',
-	'add_picture'=>'pridėti nuotrauką',
-	'comment'=>'Komentaras',
-	'delete'=>'ištrinti',
-	'disable_comments'=>'išjungti komentarus',
-	'edit'=>'redeguoti',
-	'enable_user_comments'=>'įjungti vartotojo komentarus',
-	'enable_visitor_comments'=>'įjungti lankytojo komentarus',
-	'gallery_name'=>'Galerijos vardas',
-	'group'=>'Grupė',
-	'name'=>'Vardas',
-	'new_gallery'=>'Nauja galerija',
-	'no_galleries'=>'Jokių galerijų nėra.',
+	'add_galley'=>'Pidėti galeiją',
+	'add_img'=>'pidėti vaizdą',
+	'add_pictue'=>'pidėti nuotauką',
+	'comment'=>'Komentaas',
+	'delete'=>'ištinti',
+	'disable_comments'=>'išjungti komentaus',
+	'edit'=>'edeguoti',
+	'enable_use_comments'=>'įjungti vatotojo komentaus',
+	'enable_visito_comments'=>'įjungti lankytojo komentaus',
+	'galley_name'=>'Galeijos vadas',
+	'goup'=>'Gupė',
+	'name'=>'Vadas',
+	'new_galley'=>'Nauja galeija',
+	'no_galleies'=>'Jokių galeijų nėa.',
 	'no_space_left'=>'Čia nebeliko vietos: atšaukta.',
-	'picture'=>'Nuotrauka',
-	'please_enter_name'=>'Prašome įrašyti vardą!',
-	'really_delete_gallery'=>'Tikrai ištrinti galeriją?',
+	'pictue'=>'Nuotauka',
+	'please_ente_name'=>'Pašome įašyti vadą!',
+	'eally_delete_galley'=>'Tikai ištinti galeiją?',
 	'update'=>'atnaujinti',
-	'user_gallery'=>'Vartotojo galerija',
-	'usergalleries'=>'Vartotojų galerijos',
-	'visitor_comments'=>'Lankytojo komentaras',
-	'x_of_y_mb_in_use'=>'<span style="color:%spacecolor%">&nbsp;%used_size%</span> iš %available_size% MB yra naudojami.'
+	'use_galley'=>'Vatotojo galeija',
+	'usegalleies'=>'Vatotojų galeijos',
+	'visito_comments'=>'Lankytojo komentaas',
+	'x_of_y_mb_in_use'=>'<span style="colo:%spacecolo%">&nbsp;%used_size%</span> iš %available_size% MB ya naudojami.'
 );
 ?>

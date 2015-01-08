@@ -2,131 +2,131 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Version 4       /                        /   /               #
+#           Vesion 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Free Content / Management System                 #
+#                       Fee Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyight 2005-2014 by webspell.og                                  #
 #                                                                        #
-#   visit webSPELL.org, webspell.info to get webSPELL for free           #
-#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to remove this copyright-tag                      #
-#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
+#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
+#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to emove this copyight-tag                      #
+#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
-#   Far Development by Development Team - webspell.org                   #
+#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
+#   Fa Development by Development Team - webspell.og                   #
 #                                                                        #
-#   visit webspell.org                                                   #
+#   visit webspell.og                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_array = Array(
+$language_aay = Aay(
 
 /* do not edit above this line */
 
-  'about_myself'=>'Magamról',
-  'access_denied'=>'Hozzáférés megtagadva',
+  'about_myself'=>'Magamól',
+  'access_denied'=>'Hozzáféés megtagadva',
   'actions'=>'Lehetőségek',
   'activate'=>'Aktiválás',
   'active'=>'Aktív',
   'activity'=>'Aktivitás',
-  'add_new_user'=>'Új felhasználó hozzáadása',
+  'add_new_use'=>'Új felhasználó hozzáadása',
   'add_to_clan'=>'Hozzáadás a klánhoz',
-  'admin'=>'Adminisztrátor',
-  'avatar'=>'Avatar',
+  'admin'=>'Adminisztáto',
+  'avata'=>'Avata',
   'back'=>'Vissza',
   'banish'=>'Bannol',
   'banned'=>'Bannolva',
-  'ban_for'=>'ban időtartama',
+  'ban_fo'=>'ban időtatama',
   'ban_status'=>'Ban Státusz',
   'ban_until'=>'ban (meddig)',
-  'ban_user'=>'Felhasználó kitiltása',
-  'birthday'=>'Születésnap',
-  'clan_history'=>'Klán történet',
+  'ban_use'=>'Felhasználó kitiltása',
+  'bithday'=>'Születésnap',
+  'clan_histoy'=>'Klán töténet',
   'clan_homepage'=>'Klán főoldal',
-  'can_not_copy_file'=>'HIBA: Nem másolható a fájl a szerverről',
-  'clan_irc'=>'Klán IRC',
-  'clanmember'=>'Klántag',
+  'can_not_copy_file'=>'HIBA: Nem másolható a fájl a szeveől',
+  'clan_ic'=>'Klán IRC',
+  'clanmembe'=>'Klántag',
   'clanname'=>'Klán neve',
   'clantag'=>'Klán TAG',
   'connection'=>'Kapcsolat',
-  'country'=>'Nemzetiség',
+  'county'=>'Nemzetiség',
   'cpu'=>'CPU',
   'days'=>'nap',
-  'del'=>'Törlés',
-  'delete_avatar'=>'Avatar törlése',
-  'delete_picture'=>'Fotó törlése',
-  'edit_ban'=>'Ban szerkesztése',
-  'edit_profile'=>'Profil szerkesztése',
+  'del'=>'Tölés',
+  'delete_avata'=>'Avata tölése',
+  'delete_pictue'=>'Fotó tölése',
+  'edit_ban'=>'Ban szekesztése',
+  'edit_pofile'=>'Pofil szekesztése',
   'email'=>'E-Mail',
-  'error_avatar'=>'HIBA: Az avatar túl nagy (max. 90x90)',
-  'error_picture'=>'HIBA: A fotó túl nagy (max. 230x210)',
+  'eo_avata'=>'HIBA: Az avata túl nagy (max. 90x90)',
+  'eo_pictue'=>'HIBA: A fotó túl nagy (max. 230x210)',
   'female'=>'nő',
-  'firstname'=>'Keresztnév',
-  'gender'=>'Nem',
-  'general'=>'Általános',
-  'graphiccard'=>'Videokártya',
+  'fistname'=>'Keesztnév',
+  'gende'=>'Nem',
+  'geneal'=>'Általános',
+  'gaphiccad'=>'Videokátya',
   'homepage'=>'Weboldal',
   'icq'=>'ICQ',
   'inactive'=>'Inaktív',
-  'invalid_format'=>'HIBA: Nem engedélyezett kép formátum (engedélyezett: *.gif, *.jpg vagy *.png)',
-  'keyboard'=>'Billentyűzet',
+  'invalid_fomat'=>'HIBA: Nem engedélyezett kép fomátum (engedélyezett: *.gif, *.jpg vagy *.png)',
+  'keyboad'=>'Billentyűzet',
   'lastname'=>'Vezetéknév',
-  'mainboard'=>'Alaplap',
-  'male'=>'férfi',
+  'mainboad'=>'Alaplap',
+  'male'=>'féfi',
   'max_90x90'=>'(max. 90x90)',
   'max_230x210'=>'(max. 230x210)',
-  'moderator'=>'Fórum Moderátor',
+  'modeato'=>'Fóum Modeáto',
   'month'=>'hónap',
-  'monitor'=>'Monitor',
-  'mouse'=>'Egér',
-  'mousepad'=>'Egérpad',
+  'monito'=>'Monito',
+  'mouse'=>'Egé',
+  'mousepad'=>'Egépad',
   'nickname'=>'Nick',
-  'not_available'=>'nem elérhető',
-  'no_users'=>'Nem található felhasználó',
-  'password'=>'Jelszó',
-  'permanently'=>'Végleges Ban?',
-  'personal'=>'Személyes',
-  'picture'=>'Fotó',
-  'pictures'=>'Képek',
+  'not_available'=>'nem eléhető',
+  'no_uses'=>'Nem található felhasználó',
+  'passwod'=>'Jelszó',
+  'pemanently'=>'Végleges Ban?',
+  'pesonal'=>'Személyes',
+  'pictue'=>'Fotó',
+  'pictues'=>'Képek',
   'position'=>'Pozíció',
-  'profile'=>'Profil',
-  'ram'=>'RAM',
-  'really_ban'=>'tényleges ban',
-  'really_delete'=>'Biztosan törölni akarod ezt a felhasználót?',
-  'really_unban'=>'tényleges visszavonás',
-  'reason'=>'Indok',
-  'registered_since'=>'Regisztráció időpontja',
-  'remove_ban'=> 'ban eltávolítása?',
-  'rights'=>'Jogok',
-  'signatur'=>'Aláírás',
-  'sort'=>'Rendezés',
-  'soundcard'=>'Hangkártya',
+  'pofile'=>'Pofil',
+  'am'=>'RAM',
+  'eally_ban'=>'tényleges ban',
+  'eally_delete'=>'Biztosan töölni akaod ezt a felhasználót?',
+  'eally_unban'=>'tényleges visszavonás',
+  'eason'=>'Indok',
+  'egisteed_since'=>'Regisztáció időpontja',
+  'emove_ban'=> 'ban eltávolítása?',
+  'ights'=>'Jogok',
+  'signatu'=>'Aláíás',
+  'sot'=>'Rendezés',
+  'soundcad'=>'Hangkátya',
   'squad'=>'Squad',
   'status'=>'Státusz',
-  'superadmin'=>'Főadmin',
+  'supeadmin'=>'Főadmin',
   'town'=>'Település',
-  'transaction_invalid'=>'A művelet azonosítója érvénytelen',
+  'tansaction_invalid'=>'A művelet azonosítója événytelen',
   'to_clan'=>'Klánba',
-  'to_sort'=>'Rendezés',
+  'to_sot'=>'Rendezés',
   'undo_ban'=>'ban visszavonása',
-  'upload_failed'=>'HIBA: A feltöltés sikertelen',
-  'user'=>'Felhasználó',
-  'user_exists'=>'Már létezik ilyen felhasználó',
-  'user_id'=>'Felhasználói azonosító',
-  'username'=>'Felhasználónév',
-  'users'=>'Felhasználók',
-  'users_available'=>'Elérhető felhasználók',
-  'usersearch'=>'Keresés',
-  'exactsearch'=>'pontos',
-  'various'=>'Változó',
+  'upload_failed'=>'HIBA: A feltöltés siketelen',
+  'use'=>'Felhasználó',
+  'use_exists'=>'Má létezik ilyen felhasználó',
+  'use_id'=>'Felhasználói azonosító',
+  'usename'=>'Felhasználónév',
+  'uses'=>'Felhasználók',
+  'uses_available'=>'Eléhető felhasználók',
+  'useseach'=>'Keesés',
+  'exactseach'=>'pontos',
+  'vaious'=>'Változó',
   'weeks'=>'hét',
   'you_cant_ban'=>'Nem bannolhatod ezt a felhasználót! (Főadmin)',
-  'you_cant_ban_yourself'=>'Nem bannolhatod magad!'
+  'you_cant_ban_youself'=>'Nem bannolhatod magad!'
 );
 ?>

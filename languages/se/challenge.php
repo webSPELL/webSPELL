@@ -2,67 +2,67 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Version 4       /                        /   /               #
+#           Vesion 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Free Content / Management System                 #
+#                       Fee Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyight 2005-2014 by webspell.og                                  #
 #                                                                        #
-#   visit webSPELL.org, webspell.info to get webSPELL for free           #
-#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to remove this copyright-tag                      #
-#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
+#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
+#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to emove this copyight-tag                      #
+#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
-#   Far Development by Development Team - webspell.org                   #
+#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
+#   Fa Development by Development Team - webspell.og                   #
 #                                                                        #
-#   visit webspell.org                                                   #
+#   visit webspell.og                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_array = Array(
+$language_aay = Aay(
 
 /* do not edit above this line */
 
-	'back_to_form'=>'Tillbaka till form',
+	'back_to_fom'=>'Tillbaka till fom',
 	'challenge'=>'Utmana',
-	'challenge_from'=>'Utmaningen avsänd på',
-	'challenge_message'=>'[b]Det finns en ny utmaning![/b][BR][BR] Snälla klicka här: [URL]index.php?site=challenge[/URL]',
-	'challenges'=>'Utmaningar',
-	'country'=>'land',
+	'challenge_fom'=>'Utmaningen avsänd på',
+	'challenge_message'=>'[b]Det finns en ny utmaning![/b][BR][BR] Snälla klicka hä: [URL]index.php?site=challenge[/URL]',
+	'challenges'=>'Utmaninga',
+	'county'=>'land',
 	'date'=>'datum',
-	'delete_challenge'=>'Radera utmaning',
+	'delete_challenge'=>'Radea utmaning',
 	'email'=>'email',
-	'enter_clanname'=>'Du har inte skrivit in nåt clannamn',
-	'enter_email'=>'Ingen giltig email inknappad',
-	'enter_league'=>'Ingen liga inknappad',
-	'enter_map'=>'Ingen bana inknappad',
-	'enter_server'=>'Ingen server adress inknappad',
-	'enter_url'=>'Ingen giltig hemsida inknappad',
-  'entry_deleted'=>'Inlägg raderad.',
+	'ente_clanname'=>'Du ha inte skivit in nåt clannamn',
+	'ente_email'=>'Ingen giltig email inknappad',
+	'ente_league'=>'Ingen liga inknappad',
+	'ente_map'=>'Ingen bana inknappad',
+	'ente_seve'=>'Ingen seve adess inknappad',
+	'ente_ul'=>'Ingen giltig hemsida inknappad',
+  'enty_deleted'=>'Inlägg adead.',
 	'fight_us'=>'Utmana oss!',
 	'homepage'=>'hemsida',
-	'info'=>'mer information',
-	'insert_in_calendar'=>'Lägg till Kalendar',
+	'info'=>'me infomation',
+	'inset_in_calenda'=>'Lägg till Kalenda',
 	'league'=>'liga',
 	'map'=>'bana',
 	'message_title'=>'Fight us',
 	'no_access'=>'Ingen tillåtelse',
-	'no_entries'=>'Inga tillägg',
-	'opponent'=>'motståndare',
-	'problems'=>'Följande problem har skett',
-	'security_code'=>'Säkerhets kod',
-	'server'=>'server',
-	'sort'=>'sortera:',
+	'no_enties'=>'Inga tillägg',
+	'opponent'=>'motståndae',
+	'poblems'=>'Följande poblem ha skett',
+	'secuity_code'=>'Säkehets kod',
+	'seve'=>'seve',
+	'sot'=>'sotea:',
 	'squad'=>'lag',
 	'submit_challenge'=>'Skicka utmaningen',
-	'thank_you'=>'Tack för din begäran!<br>',
+	'thank_you'=>'Tack fö din begäan!<b>',
 	'time'=>'tid',
-	'wrong_security_code'=>'Säkerhets koden är fel'
+	'wong_secuity_code'=>'Säkehets koden ä fel'
 );
 ?>

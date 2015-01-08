@@ -2,60 +2,60 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Version 4       /                        /   /               #
+#           Vesion 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Free Content / Management System                 #
+#                       Fee Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyight 2005-2014 by webspell.og                                  #
 #                                                                        #
-#   visit webSPELL.org, webspell.info to get webSPELL for free           #
-#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to remove this copyright-tag                      #
-#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
+#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
+#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to emove this copyight-tag                      #
+#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
-#   Far Development by Development Team - webspell.org                   #
+#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
+#   Fa Development by Development Team - webspell.og                   #
 #                                                                        #
-#   visit webspell.org                                                   #
+#   visit webspell.og                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_array = Array(
+$language_aay = Aay(
 
 /* do not edit above this line */
 
-	'additional_info'=>'Doplňujúce informácie (napr. Prečo by som sa mal stať členom...)',
+	'additional_info'=>'Doplňujúce infomácie (nap. Pečo by som sa mal stať členom...)',
 	'age'=>'Vek',
-	'back_to_form'=>'Naspäť na formulár',
+	'back_to_fom'=>'Naspäť na fomulá',
 	'city'=>'Mesto',
-	'clan_history'=>'Clanová história',
+	'clan_histoy'=>'Clanová históia',
 	'email_not_valid'=>'Zadali ste chybný e-mail!',
-	'forgot_age'=>'Nezadali ste vek!',
-	'forgot_city'=>'Nezadali ste mesto!',
-	'forgot_history'=>'Nezadali ste clanovú históriu!',
-	'forgot_messenger'=>'Nezadali ste kontakt (ICQ, AIM atď...)!',
-	'forgot_nickname'=>'Nezadali ste prezývku!',
-	'forgot_realname'=>'Nezadali ste Vaše meno!',
+	'fogot_age'=>'Nezadali ste vek!',
+	'fogot_city'=>'Nezadali ste mesto!',
+	'fogot_histoy'=>'Nezadali ste clanovú históiu!',
+	'fogot_messenge'=>'Nezadali ste kontakt (ICQ, AIM atď...)!',
+	'fogot_nickname'=>'Nezadali ste pezývku!',
+	'fogot_ealname'=>'Nezadali ste Vaše meno!',
 	'icq_msn'=>'ICQ/MSN/atď...',
-	'info'=>'Doplňujúce informácie',
-	'joinus_form'=>'"Pridaj sa k nám" formulár',
+	'info'=>'Doplňujúce infomácie',
+	'joinus_fom'=>'"Pidaj sa k nám" fomulá',
 	'mail'=>'E-mail',
-	'messenger'=>'Messenger',
+	'messenge'=>'Messenge',
 	'message_title'=>'Join us',
 	'name'=>'Meno',
-	'nick'=>'Prezývka',
-	'problems'=>'Vyskytli sa chuby s vašimi údajmi',
-	'security_code'=>'Bezpečnostný kód',
-	'send'=>'Potvrdiť',
-	'someone_want_to_join_your_squad'=>'Niekto sa chce pridať k vašemu squadu:',
+	'nick'=>'Pezývka',
+	'poblems'=>'Vyskytli sa chuby s vašimi údajmi',
+	'secuity_code'=>'Bezpečnostný kód',
+	'send'=>'Potvdiť',
+	'someone_want_to_join_you_squad'=>'Niekto sa chce pidať k vašemu squadu:',
 	'squad'=>'Squad',
 	'thanks_you_will_get_mail'=>'Ďakujeme za Váš záujem, ozveme sa Vám.',
 	'title_join_us'=>'Staň sa členom',
-	'wrong_security_code'=>'Zadali ste chybný bezpeč. kód!'
+	'wong_secuity_code'=>'Zadali ste chybný bezpeč. kód!'
 );
 ?>

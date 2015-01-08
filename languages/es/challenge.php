@@ -2,67 +2,67 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Version 4       /                        /   /               #
+#           Vesion 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Free Content / Management System                 #
+#                       Fee Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyight 2005-2014 by webspell.og                                  #
 #                                                                        #
-#   visit webSPELL.org, webspell.info to get webSPELL for free           #
-#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to remove this copyright-tag                      #
-#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
+#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
+#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to emove this copyight-tag                      #
+#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
-#   Far Development by Development Team - webspell.org                   #
+#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
+#   Fa Development by Development Team - webspell.og                   #
 #                                                                        #
-#   visit webspell.org                                                   #
+#   visit webspell.og                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_array = Array(
+$language_aay = Aay(
 
 /* do not edit above this line */
 
-	'back_to_form'=>'Volver al formulario',
+	'back_to_fom'=>'Volve al fomulaio',
 	'challenge'=>'Desafio',
-	'challenge_from'=>'nuevo desafio en',
-	'challenge_message'=>'[b]Hay un nuevo desafio![/b][BR][BR] Entra aquí porfavor: [URL]index.php?site=challenge[/URL]',
+	'challenge_fom'=>'nuevo desafio en',
+	'challenge_message'=>'[b]Hay un nuevo desafio![/b][BR][BR] Enta aquí pofavo: [URL]index.php?site=challenge[/URL]',
 	'challenges'=>'desafios',
-	'country'=>'país',
+	'county'=>'país',
 	'date'=>'fecha',
-	'delete_challenge'=>'Borrar desafio',
+	'delete_challenge'=>'Boa desafio',
 	'email'=>'email',
-	'enter_clanname'=>'Falta el nombre del clan.',
-	'enter_email'=>'Email no valido.',
-	'enter_league'=>'No hay liga definida.',
-	'enter_map'=>'No hay mapa definido.',
-	'enter_server'=>'No hay servidor definido.',
-	'enter_url'=>'No hay web definida.',
-	'entry_deleted'=>'Inscripción lejos.',
+	'ente_clanname'=>'Falta el nombe del clan.',
+	'ente_email'=>'Email no valido.',
+	'ente_league'=>'No hay liga definida.',
+	'ente_map'=>'No hay mapa definido.',
+	'ente_seve'=>'No hay sevido definido.',
+	'ente_ul'=>'No hay web definida.',
+	'enty_deleted'=>'Inscipción lejos.',
 	'fight_us'=>'Retanos!',
 	'homepage'=>'web',
-	'info'=>'más información',
-	'insert_in_calendar'=>'añadir al calendario',
+	'info'=>'más infomación',
+	'inset_in_calenda'=>'añadi al calendaio',
 	'league'=>'liga',
 	'map'=>'mapa',
 	'message_title'=>'Fight us',
-	'no_access'=>'No tienes permiso!',
-	'no_entries'=>'No hay datos.',
-	'opponent'=>'Contrario',
-	'problems'=>'Se han producido los siguientes errores',
-	'security_code'=>'código de seguridad',
-	'server'=>'servidor',
-	'sort'=>'ordenar:',
-	'squad'=>'escuadrón',
-	'submit_challenge'=>'enviar desafio',
-	'thank_you'=>'Gracias por tu solicitud!<br>',
-	'time'=>'hora',
-	'wrong_security_code'=>'El código de seguridad esta mal.'
+	'no_access'=>'No tienes pemiso!',
+	'no_enties'=>'No hay datos.',
+	'opponent'=>'Contaio',
+	'poblems'=>'Se han poducido los siguientes eoes',
+	'secuity_code'=>'código de seguidad',
+	'seve'=>'sevido',
+	'sot'=>'odena:',
+	'squad'=>'escuadón',
+	'submit_challenge'=>'envia desafio',
+	'thank_you'=>'Gacias po tu solicitud!<b>',
+	'time'=>'hoa',
+	'wong_secuity_code'=>'El código de seguidad esta mal.'
 );
 ?>

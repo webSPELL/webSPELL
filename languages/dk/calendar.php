@@ -2,60 +2,60 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Version 4       /                        /   /               #
+#           Vesion 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Free Content / Management System                 #
+#                       Fee Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyight 2005-2014 by webspell.og                                  #
 #                                                                        #
-#   visit webSPELL.org, webspell.info to get webSPELL for free           #
-#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to remove this copyright-tag                      #
-#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
+#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
+#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to emove this copyight-tag                      #
+#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
-#   Far Development by Development Team - webspell.org                   #
+#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
+#   Fa Development by Development Team - webspell.og                   #
 #                                                                        #
-#   visit webspell.org                                                   #
+#   visit webspell.og                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_array = Array(
+$language_aay = Aay(
 
 /* do not edit above this line */
 
-	'access_member'=>'kun synlig for holdmedlemmer',
-	'add_clanwar'=>'Tilføj klankamp',
-	'add_clanwars'=>'tilføj til klankampe',
+	'access_membe'=>'kun synlig fo holdmedlemme',
+	'add_clanwa'=>'Tilføj klankamp',
+	'add_clanwas'=>'tilføj til klankampe',
 	'add_event'=>'Tilføj begivenhed',
-	'announce_here'=>'tilmeld her',
+	'announce_hee'=>'tilmeld he',
 	'announce_to'=>'Tilmeld til denne klan kamp/begivenhed:',
-	'announcements'=>'Tilmeldinger:',
-	'apr'=>'april',
+	'announcements'=>'Tilmeldinge:',
+	'ap'=>'apil',
 	'aug'=>'august',
-	'calendar'=>'kalender',
-	'clanwardetails'=>'Klankampdetaljer',
-	'clanwar_message'=>'new upcoming clanwar on %date%:[br][br]Opponent: [flag]%opponent_flag%[/flag] [url=%opp_hp%]%opponent%[/url] [br]League: [url=%league_hp%]%league%[/url] [br]Info: %warinfo%[br][br][url=index.php?site=calendar]link to calendar[/url]',
-	'clanwar_message_title'=>'new upcoming war in calendar!',
+	'calenda'=>'kalende',
+	'clanwadetails'=>'Klankampdetalje',
+	'clanwa_message'=>'new upcoming clanwa on %date%:[b][b]Opponent: [flag]%opponent_flag%[/flag] [ul=%opp_hp%]%opponent%[/ul] [b]League: [ul=%league_hp%]%league%[/ul] [b]Info: %wainfo%[b][b][ul=index.php?site=calenda]link to calenda[/ul]',
+	'clanwa_message_title'=>'new upcoming wa in calenda!',
 	'date_time'=>'Dato - Tid',
-	'dec'=>'december',
+	'dec'=>'decembe',
 	'delete'=>'slet',
-	'displayed_in'=>'vist i kalenderen',
-	'edit'=>'rediger',
-	'editevent'=>'Rediger begivenhed',
-	'editwar'=>'Rediger klankamp',
+	'displayed_in'=>'vist i kalendeen',
+	'edit'=>'edige',
+	'editevent'=>'Redige begivenhed',
+	'editwa'=>'Redige klankamp',
 	'end_datetime'=>'Slut: Dato - Tid',
-	'eventdetails'=>'Begivenhedsdetaljer',
-	'feb'=>'februar',
-	'fri'=>'fre',
+	'eventdetails'=>'Begivenhedsdetalje',
+	'feb'=>'febua',
+	'fi'=>'fe',
 	'homepage'=>'Hjemmeside:',
-	'information'=>'Oplysninger',
-	'jan'=>'januar',
+	'infomation'=>'Oplysninge',
+	'jan'=>'janua',
 	'jul'=>'juli',
 	'jun'=>'juni',
 	'league'=>'Liga',
@@ -63,45 +63,45 @@ $language_array = Array(
 	'location'=>'Sted:',
 	'longtitle'=>'Lang titel',
 	'maps'=>'Maps',
-	'mar'=>'marts',
+	'ma'=>'mats',
 	'may'=>'maj',
 	'mon'=>'man',
 	'new_date'=>'Ny begivenhen',
-	'new_war'=>'meddel en ny klankamp',
+	'new_wa'=>'meddel en ny klankamp',
 	'no'=>'Nej',
 	'no_access'=>'Adgang nægtet',
-	'no_announced'=>'ingen tilmeldte indtil videre',
-	'no_entries'=>'ingen indlæg tilgængelige for idag',
+	'no_announced'=>'ingen tilmeldte indtil videe',
+	'no_enties'=>'ingen indlæg tilgængelige fo idag',
 	'no_text'=>'Ingen tekst tilgængelig',
-	'nov'=>'november',
-	'oct'=>'oktober',
-	'opponent'=>'Modstander',
-	'opponentcountry'=>'Modstanders land',
-	'opponenthp'=>'Modstanders hjemmeside',
-	'opponenttag'=>'Modstanders klantag',
-	'perhaps'=>'Måske',
-  'really_delete'=>'Vil du virkelig slette indlægget?',
-	'sat'=>'lør',
-	'save_announcement'=>'Gem bekendtgørelse',
+	'nov'=>'novembe',
+	'oct'=>'oktobe',
+	'opponent'=>'Modstande',
+	'opponentcounty'=>'Modstandes land',
+	'opponenthp'=>'Modstandes hjemmeside',
+	'opponenttag'=>'Modstandes klantag',
+	'pehaps'=>'Måske',
+  'eally_delete'=>'Vil du vikelig slette indlægget?',
+	'sat'=>'lø',
+	'save_announcement'=>'Gem bekendtgøelse',
 	'save_event'=>'Gem begivenhed',
-	'save_war'=>'Gem klankamp bekendtgørelse',
-	'send_message'=>'send besked til alle spillere på dette hold',
-	'sep'=>'september',
-	'server'=>'Server',
-	'shorttitle'=>'Kort titel',
+	'save_wa'=>'Gem klankamp bekendtgøelse',
+	'send_message'=>'send besked til alle spillee på dette hold',
+	'sep'=>'septembe',
+	'seve'=>'Seve',
+	'shottitle'=>'Kot titel',
 	'squad'=>'Hold',
-	'start_datetime'=>'Start: Dato - Tid',
+	'stat_datetime'=>'Stat: Dato - Tid',
 	'sun'=>'søn',
-	'thu'=>'tors',
-	'today_events'=>'Vis begivenheder for idag',
-	'tue'=>'tirs',
-	'updateevent'=>'Opdater begivenhed',
-	'updatewar'=>'Opdater klankamp',
+	'thu'=>'tos',
+	'today_events'=>'Vis begivenhede fo idag',
+	'tue'=>'tis',
+	'updateevent'=>'Opdate begivenhed',
+	'updatewa'=>'Opdate klankamp',
 	'wed'=>'ons',
 	'yes'=>'Ja',
-	'you_have_to_be_clanmember'=>'Du skal være et holdmedlem for at se dette.',
-	'enter_short'=>'Du har ikke indtastet nogen kort titel!',
-	'enter_title'=>'Du har ikke indtastet nogen lang titel!',
-	'enter_info'=>'Du har ikke indtastet nogen information!'
+	'you_have_to_be_clanmembe'=>'Du skal væe et holdmedlem fo at se dette.',
+	'ente_shot'=>'Du ha ikke indtastet nogen kot titel!',
+	'ente_title'=>'Du ha ikke indtastet nogen lang titel!',
+	'ente_info'=>'Du ha ikke indtastet nogen infomation!'
 );
 ?>

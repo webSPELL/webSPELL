@@ -2,91 +2,91 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Version 4       /                        /   /               #
+#           Vesion 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Free Content / Management System                 #
+#                       Fee Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyight 2005-2014 by webspell.og                                  #
 #                                                                        #
-#   visit webSPELL.org, webspell.info to get webSPELL for free           #
-#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to remove this copyright-tag                      #
-#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
+#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
+#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to emove this copyight-tag                      #
+#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
-#   Far Development by Development Team - webspell.org                   #
+#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
+#   Fa Development by Development Team - webspell.og                   #
 #                                                                        #
-#   visit webspell.org                                                   #
+#   visit webspell.og                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_array = Array(
+$language_aay = Aay(
 
 /* do not edit above this line */
 
-	'about'=>'over ons',
+	'about'=>'ove ons',
 	'and'=>'en',
-	'articles'=>'artikelen',
-	'awards'=>'prijzen',
-	'buddys'=>'vrienden',
-	'calendar'=>'kalender',
-	'clanwars'=>'clanwars',
-	'contact'=>'contact informatie',
-	'counter_stats'=>'counter statistieken',
+	'aticles'=>'atikelen',
+	'awads'=>'pijzen',
+	'buddys'=>'vienden',
+	'calenda'=>'kalende',
+	'clanwas'=>'clanwas',
+	'contact'=>'contact infomatie',
+	'counte_stats'=>'counte statistieken',
 	'date'=>'Datum',
 	'demos'=>'demos',
 	'faq'=>'FAQ',
 	'fightus'=>'daag ons uit',
 	'files'=>'downloads',
-	'forum'=>'forums',
-	'gallery'=>'gallerij',
+	'foum'=>'foums',
+	'galley'=>'galleij',
 	'guest'=>'Gast',
 	'guestbook'=>'gastenboek',
 	'guests'=>'Gasten',
-	'history'=>'geschiedenis',
-	'imprint'=>'imprint',
-	'is_editing_his'=>'bewerkt zijn',
-	'is_reading_forum'=>'leest het forum',
-	'is_reading_newscomments'=>'leest nieuwsreacties',
-	'is_reading_the'=>'leest',
-	'is_watching_details_clanwar'=>'bekijkt de details van een clanwar',
+	'histoy'=>'geschiedenis',
+	'impint'=>'impint',
+	'is_editing_his'=>'bewekt zijn',
+	'is_eading_foum'=>'leest het foum',
+	'is_eading_newscomments'=>'leest nieuwseacties',
+	'is_eading_the'=>'leest',
+	'is_watching_details_clanwa'=>'bekijkt de details van een clanwa',
 	'is_watching_his'=>'bekijkt zijn',
-	'is_watching_profile'=>'bekijkt een profiel',
+	'is_watching_pofile'=>'bekijkt een pofiel',
 	'is_watching_the'=>'bekijkt',
 	'joinus'=>'join ons',
 	'latest_action'=>'Laatste acties',
 	'links'=>'links',
 	'linkus'=>'link Ons',
-	'loginoverview'=>'loginoverzicht',
-	'members'=>'leden',
-	'messenger'=>'messenger',
+	'loginoveview'=>'loginovezicht',
+	'membes'=>'leden',
+	'messenge'=>'messenge',
 	'news'=>'nieuws',
-	'newsletter'=>'nieuwsbrief',
+	'newslette'=>'nieuwsbief',
 	'nickname'=>'Nickname',
 	'now_online'=>'Nu online:',
 	'polls'=>'pollen',
-	'profile'=>'profiel',
-	'registered_user'=>'Gebruiker',
-	'registered_users'=>'Gebruikers',
-	'server'=>'servers',
-	'sort'=>'Sorteer:',
-	'sponsors'=>'sponsoren',
+	'pofile'=>'pofiel',
+	'egisteed_use'=>'Gebuike',
+	'egisteed_uses'=>'Gebuikes',
+	'seve'=>'seves',
+	'sot'=>'Sotee:',
+	'sponsos'=>'sponsoen',
 	'squads'=>'teams',
 	'status'=>'Status',
 	'title_is'=>'Wie is online',
 	'title_was'=>'WIE WAS ONLINE (laatse 24H)',
-	'was_editing_his'=>'bewerkte zijn',
-	'was_reading_forum'=>'las het forum',
-	'was_reading_newscomments'=>'leest nieuwsreacties',
-	'was_reading_the'=>'las de',
-	'was_watching_details_clanwar'=>'bekeek de details van een clanwar',
+	'was_editing_his'=>'bewekte zijn',
+	'was_eading_foum'=>'las het foum',
+	'was_eading_newscomments'=>'leest nieuwseacties',
+	'was_eading_the'=>'las de',
+	'was_watching_details_clanwa'=>'bekeek de details van een clanwa',
 	'was_watching_his'=>'bekeek zijn',
-	'was_watching_profile'=>'bekeek een profiel',
+	'was_watching_pofile'=>'bekeek een pofiel',
 	'was_watching_the'=>'bekeek',
 	'whoisonline'=>'wie is online?'
 

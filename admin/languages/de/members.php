@@ -2,83 +2,83 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Version 4       /                        /   /               #
+#           Vesion 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Free Content / Management System                 #
+#                       Fee Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyight 2005-2014 by webspell.og                                  #
 #                                                                        #
-#   visit webSPELL.org, webspell.info to get webSPELL for free           #
-#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to remove this copyright-tag                      #
-#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
+#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
+#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to emove this copyight-tag                      #
+#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
-#   Far Development by Development Team - webspell.org                   #
+#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
+#   Fa Development by Development Team - webspell.og                   #
 #                                                                        #
-#   visit webspell.org                                                   #
+#   visit webspell.og                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_array = Array(
+$language_aay = Aay(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Zugriff verweigert',
-  'access_rights'=>'Zugriffsrechte',
+  'access_denied'=>'Zugiff veweiget',
+  'access_ights'=>'Zugiffsechte',
   'actions'=>'Aktionen',
   'active'=>'aktiv',
   'activity'=>'Aktivität',
   'cash_admin'=>'Kassen-Admin',
-  'clanwar_admin'=>'Clanwar-Admin',
-  'country_nickname'=>'Land / Nickname',
+  'clanwa_admin'=>'Clanwa-Admin',
+  'county_nickname'=>'Land / Nickname',
   'delete'=>'löschen',
-  'description'=>'Benutzer Beschreibung',
-  'edit'=>'ändern',
-  'edit_member'=>'Mitglied ändern',
-  'error_own_rights'=>'FEHLER: Eigene Rechte können nicht geändert werden',
+  'desciption'=>'Benutze Bescheibung',
+  'edit'=>'änden',
+  'edit_membe'=>'Mitglied änden',
+  'eo_own_ights'=>'FEHLER: Eigene Rechte können nicht geändet weden',
   'feedback_admin'=>'Feedback-Admin',
-  'fightus_admin'=>'Herausforderung-Admin',
+  'fightus_admin'=>'Heausfodeung-Admin',
   'file_admin'=>'Datei-Admin',
-  'gallery_admin'=>'Galerie-Admin',
-  'group_access'=>'Forum Gruppen Zugriff',
+  'galley_admin'=>'Galeie-Admin',
+  'goup_access'=>'Foum Guppen Zugiff',
   'inactive'=>'inaktiv',
-  'joinus_admin'=>'Beitritt-Admin',
-  'members'=>'Mitglieder',
-  'messageboard_admin'=>'Forum-Admin',
-  'messageboard_moderator'=>'Forum-Moderator',
+  'joinus_admin'=>'Beititt-Admin',
+  'membes'=>'Mitgliede',
+  'messageboad_admin'=>'Foum-Admin',
+  'messageboad_modeato'=>'Foum-Modeato',
   'news_admin'=>'Neuigkeiten-Admin',
-  'news_writer'=>'Neuigkeiten-Autor',
+  'news_wite'=>'Neuigkeiten-Auto',
   'nickname'=>'Nickname',
   'no'=>'nein',
   'page_admin'=>'Seiten-Admin',
-  'polls_admin'=>'Umfragen-Admin',
+  'polls_admin'=>'Umfagen-Admin',
   'position'=>'Position',
-  'really_delete'=>'Dieses Mitglied wirklich löschen?',
-  'sort'=>'Sortierung',
+  'eally_delete'=>'Dieses Mitglied wiklich löschen?',
+  'sot'=>'Sotieung',
   'squad'=>'Team',
-  'super_admin'=>'Super-Admin',
-  'to_sort'=>'sortieren',
-  'tooltip_1'=>'<b>Zugriff:</b><br>- Neuigkeiten Rubriken<br>- Neuigkeiten Sprachen<br>- Neuigkeiten<br>- Artikel<br>- Auszeichnungen<br>- Links',
-  'tooltip_2'=>'<b>Zugriff:</b><br>- Neuigkeiten schreiben',
-  'tooltip_3'=>'<b>Zugriff:</b><br>- Umfragen',
-  'tooltip_4'=>'<b>Zugriff:</b><br>- Kommentare<br>- Gästebuch<br>- Benutzergästebücher<br>- Shoutbox',
-  'tooltip_5'=>'<b>Zugriff:</b><br>- Benutzer<br>- Benutzer Rechte<br>- Gruppen<br>- Mitglieder<br>- Kontakte<br>- Newsletter',
-  'tooltip_6'=>'<b>Zugriff:</b><br>- Clanwars<br>- Auszeichnungen<br>- Herausforderungen<br>- Kalender',
-  'tooltip_7'=>'<b>Zugriff:</b><br>- Forum Kategorien<br>- Foren<br>- Forumbeiträge bearbeiten &amp; löschen<br>- Benutzergruppen<br>- Gruppen Benutzer<br>- Benutzer Ränge',
-  'tooltip_8'=>'<b>Zugriff:</b><br>- Forumbeiträge bearbeiten &amp; löschen<br>(Board-Zuteilung muss vorhanden sein)',
-  'tooltip_9'=>'<b>Zugriff:</b><br>- Über uns<br>- Bannerrotation<br>- Symbole<br>- Datenbank<br>- FAQ Kategorien<br>- FAQ<br>- Werdegang<br>- Impressum<br>- Link Kategorien<br>- Links<br>- Seite sperren<br>- Parnter<br>- Scrolltext<br>- Server<br>- Einstellungen<br>- Statische Seiten<br>- Stile<br>- Update<br>- Uns verlinken<br>- Sponsoren',
-  'tooltip_10'=>'<b>Zugriff:</b><br>- Datei Kategorien<br>- Dateien<br>- Demos',
-  'tooltip_11'=>'<b>Zugriff:</b><br>- Clan-Kasse',
-  'tooltip_12'=>'<b>Zugriff:</b><br>- Galerie Kategorien<br>- Galerien<br>- Bilder',
-  'tooltip_13'=>'<b>Zugriff:</b><br>- voller Administrations Zugriff',
-  'transaction_invalid'=>'Transaktions ID ungültig',
-  'user_admin'=>'Benutzer-Admin',
+  'supe_admin'=>'Supe-Admin',
+  'to_sot'=>'sotieen',
+  'tooltip_1'=>'<b>Zugiff:</b><b>- Neuigkeiten Rubiken<b>- Neuigkeiten Spachen<b>- Neuigkeiten<b>- Atikel<b>- Auszeichnungen<b>- Links',
+  'tooltip_2'=>'<b>Zugiff:</b><b>- Neuigkeiten scheiben',
+  'tooltip_3'=>'<b>Zugiff:</b><b>- Umfagen',
+  'tooltip_4'=>'<b>Zugiff:</b><b>- Kommentae<b>- Gästebuch<b>- Benutzegästebüche<b>- Shoutbox',
+  'tooltip_5'=>'<b>Zugiff:</b><b>- Benutze<b>- Benutze Rechte<b>- Guppen<b>- Mitgliede<b>- Kontakte<b>- Newslette',
+  'tooltip_6'=>'<b>Zugiff:</b><b>- Clanwas<b>- Auszeichnungen<b>- Heausfodeungen<b>- Kalende',
+  'tooltip_7'=>'<b>Zugiff:</b><b>- Foum Kategoien<b>- Foen<b>- Foumbeitäge beabeiten &amp; löschen<b>- Benutzeguppen<b>- Guppen Benutze<b>- Benutze Ränge',
+  'tooltip_8'=>'<b>Zugiff:</b><b>- Foumbeitäge beabeiten &amp; löschen<b>(Boad-Zuteilung muss vohanden sein)',
+  'tooltip_9'=>'<b>Zugiff:</b><b>- Übe uns<b>- Banneotation<b>- Symbole<b>- Datenbank<b>- FAQ Kategoien<b>- FAQ<b>- Wedegang<b>- Impessum<b>- Link Kategoien<b>- Links<b>- Seite speen<b>- Pante<b>- Scolltext<b>- Seve<b>- Einstellungen<b>- Statische Seiten<b>- Stile<b>- Update<b>- Uns velinken<b>- Sponsoen',
+  'tooltip_10'=>'<b>Zugiff:</b><b>- Datei Kategoien<b>- Dateien<b>- Demos',
+  'tooltip_11'=>'<b>Zugiff:</b><b>- Clan-Kasse',
+  'tooltip_12'=>'<b>Zugiff:</b><b>- Galeie Kategoien<b>- Galeien<b>- Bilde',
+  'tooltip_13'=>'<b>Zugiff:</b><b>- volle Administations Zugiff',
+  'tansaction_invalid'=>'Tansaktions ID ungültig',
+  'use_admin'=>'Benutze-Admin',
   'yes'=>'ja'
 );
 ?>

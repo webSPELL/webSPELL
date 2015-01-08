@@ -2,107 +2,107 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Version 4       /                        /   /               #
+#           Vesion 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Free Content / Management System                 #
+#                       Fee Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyight 2005-2014 by webspell.og                                  #
 #                                                                        #
-#   visit webSPELL.org, webspell.info to get webSPELL for free           #
-#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to remove this copyright-tag                      #
-#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
+#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
+#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to emove this copyight-tag                      #
+#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
-#   Far Development by Development Team - webspell.org                   #
+#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
+#   Fa Development by Development Team - webspell.og                   #
 #                                                                        #
-#   visit webspell.org                                                   #
+#   visit webspell.og                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_array = Array(
+$language_aay = Aay(
 
 /* do not edit above this line */
 
 	'accesslevel'=>'Accesslevel',
 	'all'=>'All',
 	'cant_delete_without_fileID'=>'Can\'t delete files without fileID',
-	'cant_display_empty_cat'=>'Category is empty',
+	'cant_display_empty_cat'=>'Categoy is empty',
 	'cant_edit_without_fileID'=>'Can\'t edit files without fileID.',
-	'cant_report_without_fileID'=>'Can\'t report dead link without fileID',
-	'categories_cl'=>'Categories',
-	'category_cl'=>'Category',
-	'clanmember'=>'Clanmember',
+	'cant_epot_without_fileID'=>'Can\'t epot dead link without fileID',
+	'categoies_cl'=>'Categoies',
+	'categoy_cl'=>'Categoy',
+	'clanmembe'=>'Clanmembe',
 	'database_cl'=>'Database',
 	'delete_file'=>'delete file',
-	'description'=>'Description',
+	'desciption'=>'Desciption',
 	'dl'=>'DL',
 	'download_now'=>'Download %filename% now',
-	'download_registered_only'=>'Download for registered users only!',
-	'download_via_mirror'=>'download via mirror',
+	'download_egisteed_only'=>'Download fo egisteed uses only!',
+	'download_via_mio'=>'download via mio',
 	'downloads_cl'=>'Downloads',
 	'edit_file'=>'edit file',
-	'extern-link'=>'Extern Link',
+	'exten-link'=>'Exten Link',
 	'failed_edit_file'=>'Failed to edit file!',
-	'failed_save_file-info'=>'Failed to save file-information',
-	'file-info'=>'File-Information',
-	'file-mirrors'=>'File-Mirrors',
-	'file-size_e'=>'File-Size (only for extern files)',
+	'failed_save_file-info'=>'Failed to save file-infomation',
+	'file-info'=>'File-Infomation',
+	'file-mios'=>'File-Mios',
+	'file-size_e'=>'File-Size (only fo exten files)',
 	'file-upload'=>'File-Upload',
-	'file_already_exists'=>'file already exists.',
-	'file_categories'=>'File Categories',
-	'file_created'=>'File created.',
+	'file_aleady_exists'=>'file aleady exists.',
+	'file_categoies'=>'File Categoies',
+	'file_ceated'=>'File ceated.',
 	'file_deleted'=>'File deleted.',
-	'file_not_created'=>'File could not be created.',
+	'file_not_ceated'=>'File could not be ceated.',
 	'file_not_deleted'=>'File could not be deleted.',
 	'filename'=>'Filename',
 	'files'=>'files',
 	'files_cl'=>'Files',
-	'first_create_file-category'=>'You have to create a file-category first!',
-	'info_description'=>'Info/Description',
+	'fist_ceate_file-categoy'=>'You have to ceate a file-categoy fist!',
+	'info_desciption'=>'Info/Desciption',
 	'last_uploaded_file'=>'Last uploaded file',
-	'leave_description'=>'If the file-url is broken, and you know why, leave a fixed url and a short description in this field:',
+	'leave_desciption'=>'If the file-ul is boken, and you know why, leave a fixed ul and a shot desciption in this field:',
 	'login'=>'Login',
-	'mirror'=>'Mirror',
-	'mirrors'=>'Mirrors',
+	'mio'=>'Mio',
+	'mios'=>'Mios',
 	'name'=>'Name',
-	'new_category'=>'new category',
+	'new_categoy'=>'new categoy',
 	'new_file'=>'new file',
 	'no_access'=>'no access!',
-	'no_categories_and_files'=>'no categories and files.',
-	'no_mirrors'=>'no mirrors',
+	'no_categoies_and_files'=>'no categoies and files.',
+	'no_mios'=>'no mios',
 	'no_valid_file'=>'No valid file.',
-	'perfect'=>'perfect',
+	'pefect'=>'pefect',
 	'please_login'=>'please login',
-	'poor'=>'poor',
-	'rate'=>'rate',
-	'rate_have_to_reg_login'=>'Rate: You have to register or login!',
-	'rate_now'=>'Rate now!',
-	'rating'=>'Rating',
-	'rating_x_of_10'=>'rating: %d of 10',
-	'really_delete_file'=>'really delete this file?',
-	'register'=>'Register',
-	'registered'=>'Registered',
-	'report'=>'report',
-	'report_dead_link'=>'report dead link',
-	'reset'=>'reset',
+	'poo'=>'poo',
+	'ate'=>'ate',
+	'ate_have_to_eg_login'=>'Rate: You have to egiste o login!',
+	'ate_now'=>'Rate now!',
+	'ating'=>'Rating',
+	'ating_x_of_10'=>'ating: %d of 10',
+	'eally_delete_file'=>'eally delete this file?',
+	'egiste'=>'Registe',
+	'egisteed'=>'Registeed',
+	'epot'=>'epot',
+	'epot_dead_link'=>'epot dead link',
+	'eset'=>'eset',
 	'size'=>'Size',
 	'statistic'=>'Statistic',
-	'subcategories'=>'Sub-categories',
+	'subcategoies'=>'Sub-categoies',
 	'successful'=>'Successful.',
 	'top_5_downloads'=>'TOP 5 Downloads',
-	'traffic_cl'=>'Traffic',
+	'taffic_cl'=>'Taffic',
 	'update'=>'update',
 	'upload'=>'upload',
 	'uploaded_on'=>'Uploaded on',
-	'uploader'=>'Uploader',
-	'you_have_already_rated'=>'You have already rated.',
-	'you_have_to_enter_filename'=>'You have to enter a filename!',
-	'you_have_to_enter_file'=>'You have to enter a file / url!'
+	'uploade'=>'Uploade',
+	'you_have_aleady_ated'=>'You have aleady ated.',
+	'you_have_to_ente_filename'=>'You have to ente a filename!',
+	'you_have_to_ente_file'=>'You have to ente a file / ul!'
 );
 ?>

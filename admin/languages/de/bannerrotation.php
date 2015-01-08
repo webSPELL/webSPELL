@@ -2,56 +2,56 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Version 4       /                        /   /               #
+#           Vesion 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Free Content / Management System                 #
+#                       Fee Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyight 2005-2014 by webspell.og                                  #
 #                                                                        #
-#   visit webSPELL.org, webspell.info to get webSPELL for free           #
-#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to remove this copyright-tag                      #
-#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
+#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
+#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to emove this copyight-tag                      #
+#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
-#   Far Development by Development Team - webspell.org                   #
+#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
+#   Fa Development by Development Team - webspell.og                   #
 #                                                                        #
-#   visit webspell.org                                                   #
+#   visit webspell.og                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_array = Array(
+$language_aay = Aay(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Zugriff verweigert',
+  'access_denied'=>'Zugiff veweiget',
   'actions'=>'Aktionen',
-  'add_banner'=>'Banner hinzufügen',
-  'back'=>'zurück',
-  'banner'=>'Banner',
-  'bannerrotation'=>'Banner Rotation',
-  'banner_name'=>'Banner Name',
-  'banner_upload'=>'Banner Upload',
-  'banner_url'=>'Banner URL',
-  'clicks'=>'Klicks (pro Tag)',
+  'add_banne'=>'Banne hinzufügen',
+  'back'=>'zuück',
+  'banne'=>'Banne',
+  'banneotation'=>'Banne Rotation',
+  'banne_name'=>'Banne Name',
+  'banne_upload'=>'Banne Upload',
+  'banne_ul'=>'Banne URL',
+  'clicks'=>'Klicks (po Tag)',
   'delete'=>'löschen',
-  'edit'=>'ändern',
-  'edit_banner'=>'Banner ändern',
-  'fill_correctly'=>'Bitte füll das Formular korrekt aus.',
-  'format_incorrect'=>'Das Format des Symbols war falsch. Bitte lade nur Banner im *.gif, *.jpg und *.png Format hoch.',
-  'is_displayed'=>'Wird angezeigt?',
-  'new_banner'=>'neuer Banner',
+  'edit'=>'änden',
+  'edit_banne'=>'Banne änden',
+  'fill_coectly'=>'Bitte füll das Fomula koekt aus.',
+  'fomat_incoect'=>'Das Fomat des Symbols wa falsch. Bitte lade nu Banne im *.gif, *.jpg und *.png Fomat hoch.',
+  'is_displayed'=>'Wid angezeigt?',
+  'new_banne'=>'neue Banne',
   'no'=>'Nein',
   'no_upload'=>'Kein Bild hochgeladen',
-  'no_entries'=>'Keine Einträge',
-  'present_banner'=>'Aktueller Banner',
-  'really_delete'=>'Diesen Banner wirklich löschen?',
-  'transaction_invalid'=>'Transaktions ID ungültig',
+  'no_enties'=>'Keine Eintäge',
+  'pesent_banne'=>'Aktuelle Banne',
+  'eally_delete'=>'Diesen Banne wiklich löschen?',
+  'tansaction_invalid'=>'Tansaktions ID ungültig',
   'yes'=>'Ja'
 );
 ?>

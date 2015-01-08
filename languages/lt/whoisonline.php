@@ -2,92 +2,92 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Version 4       /                        /   /               #
+#           Vesion 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Free Content / Management System                 #
+#                       Fee Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyight 2005-2014 by webspell.og                                  #
 #                                                                        #
-#   visit webSPELL.org, webspell.info to get webSPELL for free           #
-#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to remove this copyright-tag                      #
-#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
+#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
+#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to emove this copyight-tag                      #
+#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
-#   Far Development by Development Team - webspell.org                   #
+#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
+#   Fa Development by Development Team - webspell.og                   #
 #                                                                        #
-#   visit webspell.org                                                   #
+#   visit webspell.og                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_array = Array(
+$language_aay = Aay(
 
 /* do not edit above this line */
 
 	'about'=>'apie mus',
-	'and'=>'ir',
-	'articles'=>'straipsniai',
-	'awards'=>'apdovanojimai',
+	'and'=>'i',
+	'aticles'=>'staipsniai',
+	'awads'=>'apdovanojimai',
 	'buddys'=>'bičiuliai',
-	'calendar'=>'kalendorius',
-	'clanwars'=>'klano kovos',
-	'contact'=>'Susisiekimo informacija',
-	'counter_stats'=>'statistika',
+	'calenda'=>'kalendoius',
+	'clanwas'=>'klano kovos',
+	'contact'=>'Susisiekimo infomacija',
+	'counte_stats'=>'statistika',
 	'date'=>'Data',
-	'demos'=>'demo įrašai',
+	'demos'=>'demo įašai',
 	'faq'=>'D.U.K',
 	'fightus'=>'kovokite su mumis',
 	'files'=>'siuntiniai',
-	'forum'=>'diskusijos',
-	'gallery'=>'galerija',
+	'foum'=>'diskusijos',
+	'galley'=>'galeija',
 	'guest'=>'Svečias',
 	'guestbook'=>'svečių knyga',
 	'guests'=>'Svečiai',
-	'history'=>'istorija',
-	'imprint'=>'įspaudas',
-	'is_editing_his'=>'redeguoja',
-	'is_reading_forum'=>'skaito diskusijas',
-	'is_reading_newscomments'=>'skaito naujienų komentarus',
-	'is_reading_the'=>'skaito',
-	'is_watching_details_clanwar'=>'žiūri klano kovų detales',
-	'is_watching_his'=>'žiūri',
-	'is_watching_profile'=>'žiūri profilį',
-	'is_watching_the'=>'žiūri',
-	'joinus'=>'prisijunkite prie mūsų',
+	'histoy'=>'istoija',
+	'impint'=>'įspaudas',
+	'is_editing_his'=>'edeguoja',
+	'is_eading_foum'=>'skaito diskusijas',
+	'is_eading_newscomments'=>'skaito naujienų komentaus',
+	'is_eading_the'=>'skaito',
+	'is_watching_details_clanwa'=>'žiūi klano kovų detales',
+	'is_watching_his'=>'žiūi',
+	'is_watching_pofile'=>'žiūi pofilį',
+	'is_watching_the'=>'žiūi',
+	'joinus'=>'pisijunkite pie mūsų',
 	'latest_action'=>'Paskutinis veiksmas',
-	'links'=>'nuoroda',
-	'linkus'=>'reklamuokite Mus',
-	'loginoverview'=>'prisijungimo peržiūra',
-	'members'=>'nariai',
-	'messenger'=>'pranešiklis',
+	'links'=>'nuooda',
+	'linkus'=>'eklamuokite Mus',
+	'loginoveview'=>'pisijungimo pežiūa',
+	'membes'=>'naiai',
+	'messenge'=>'panešiklis',
 	'news'=>'naujienos',
-	'newsletter'=>'naujienlaiškis',
-	'nickname'=>'Slapyvardis',
-	'now_online'=>'Dabar prisijungusių:',
+	'newslette'=>'naujienlaiškis',
+	'nickname'=>'Slapyvadis',
+	'now_online'=>'Daba pisijungusių:',
 	'polls'=>'apklausos',
-	'profile'=>'profilis',
-	'registered_user'=>'Registruotas vartotojas',
-	'registered_users'=>'registruotų vartotojų',
-	'server'=>'serveriai',
-	'sort'=>'Rykiuoti:',
-	'sponsors'=>'remėjai',
-	'squads'=>'būriai',
+	'pofile'=>'pofilis',
+	'egisteed_use'=>'Registuotas vatotojas',
+	'egisteed_uses'=>'egistuotų vatotojų',
+	'seve'=>'seveiai',
+	'sot'=>'Rykiuoti:',
+	'sponsos'=>'emėjai',
+	'squads'=>'būiai',
 	'status'=>'Padėtis',
-	'title_is'=>'kas prisijungę',
+	'title_is'=>'kas pisijungę',
 	'title_was'=>'KAS BUVO PRISIJUNGĘ (paskutines 24val.)',
-	'was_editing_his'=>'redegavo',
-	'was_reading_forum'=>'skaitė diskusijas',
-	'was_reading_newscomments'=>'skaitė naujienų komentarus',
-	'was_reading_the'=>'skaitė',
-	'was_watching_details_clanwar'=>'žiūrėjo į klano kovų detales',
-	'was_watching_his'=>'žiūrėjo',
-	'was_watching_profile'=>'žiūrėjo į profilį',
-	'was_watching_the'=>'žiūrėjo',
-	'whoisonline'=>'kas prisijungę'
+	'was_editing_his'=>'edegavo',
+	'was_eading_foum'=>'skaitė diskusijas',
+	'was_eading_newscomments'=>'skaitė naujienų komentaus',
+	'was_eading_the'=>'skaitė',
+	'was_watching_details_clanwa'=>'žiūėjo į klano kovų detales',
+	'was_watching_his'=>'žiūėjo',
+	'was_watching_pofile'=>'žiūėjo į pofilį',
+	'was_watching_the'=>'žiūėjo',
+	'whoisonline'=>'kas pisijungę'
 );
 ?>

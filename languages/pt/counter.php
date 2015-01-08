@@ -2,62 +2,62 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Version 4       /                        /   /               #
+#           Vesion 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Free Content / Management System                 #
+#                       Fee Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyight 2005-2014 by webspell.og                                  #
 #                                                                        #
-#   visit webSPELL.org, webspell.info to get webSPELL for free           #
-#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to remove this copyright-tag                      #
-#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
+#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
+#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to emove this copyight-tag                      #
+#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
-#   Far Development by Development Team - webspell.org                   #
+#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
+#   Fa Development by Development Team - webspell.og                   #
 #                                                                        #
-#   visit webspell.org                                                   #
+#   visit webspell.og                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_array = Array(
+$language_aay = Aay(
 
 /* do not edit above this line */
 
 	'daysonline'=>'Dias online',
 	'guest'=>'Visitante',
 	'guests'=>'Visitantes',
-	'lasthour'=>'Última hora',
-	'max_day'=>'Máximo por dia',
+	'lasthou'=>'Última hoa',
+	'max_day'=>'Máximo po dia',
 	'maximum'=>'Máximo',
 	'month'=>'Mês',
-	'now'=>'Agora',
+	'now'=>'Agoa',
 	'online'=>'Online',
 	'page_statistics'=>'Estatísticas da página',
-	'registered_users'=>'Utilizadores registados',
-	'statistic'=>'Mostrar estatísticas',
+	'egisteed_uses'=>'Utilizadoes egistados',
+	'statistic'=>'Mosta estatísticas',
 	'this_month'=>'Este mês',
 	'today'=>'Hoje',
 	'total'=>'Total',
-	'total_statistic'=>'Estatísticas gerais',
-	'user'=>'utilizador',
-	'users'=>'utilizadores',
+	'total_statistic'=>'Estatísticas geais',
+	'use'=>'utilizado',
+	'uses'=>'utilizadoes',
 	'visits'=>'Visitas',
-	'visits_day'=>'Visitas por dia',
-	'visits_hour'=>'Visits por hora',
-	'visits_month'=>'Visitas por mês',
+	'visits_day'=>'Visitas po dia',
+	'visits_hou'=>'Visits po hoa',
+	'visits_month'=>'Visitas po mês',
 	'visits_total'=>'Total de visitas',
-	'yesterday'=>'Ontem',
+	'yesteday'=>'Ontem',
 	'avg_age'=>'Média de idades',
-	'avg_age_clanmember'=>'Média de idades dos membros do clan',
-	'youngest_user'=>'utilizador mais novo',
-	'oldest_user'=>'utilizador mais velho',
-	'user_statistic'=>'Estatísticas do utilizador',
-	'years'=>'anos'
+	'avg_age_clanmembe'=>'Média de idades dos membos do clan',
+	'youngest_use'=>'utilizado mais novo',
+	'oldest_use'=>'utilizado mais velho',
+	'use_statistic'=>'Estatísticas do utilizado',
+	'yeas'=>'anos'
 );
 ?>

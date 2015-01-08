@@ -2,52 +2,52 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Version 4       /                        /   /               #
+#           Vesion 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Free Content / Management System                 #
+#                       Fee Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyight 2005-2014 by webspell.og                                  #
 #                                                                        #
-#   visit webSPELL.org, webspell.info to get webSPELL for free           #
-#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to remove this copyright-tag                      #
-#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
+#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
+#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to emove this copyight-tag                      #
+#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
-#   Far Development by Development Team - webspell.org                   #
+#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
+#   Fa Development by Development Team - webspell.og                   #
 #                                                                        #
-#   visit webspell.org                                                   #
+#   visit webspell.og                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_array = Array(
+$language_aay = Aay(
 
 /* do not edit above this line */
 
-	'back'=>'naspäť na formulár',
+	'back'=>'naspäť na fomulá',
 	'contact'=>'kontakt',
-	'description'=>'Pomocou tohto formuláru môžete odoslať správu webmasterovi',
-	'enter_mail'=>'Prosím zadajte e-mailovú adresu.',
-	'enter_message'=>'Prosím zadajte správu.',
-	'enter_name'=>'Prosím zadajte meno.',
-	'enter_subject'=>'Prosím zadajte predmet.',
-	'errors_there'=>'Vyskytla sa chyba',
+	'desciption'=>'Pomocou tohto fomuláu môžete odoslať spávu webmasteovi',
+	'ente_mail'=>'Posím zadajte e-mailovú adesu.',
+	'ente_message'=>'Posím zadajte spávu.',
+	'ente_name'=>'Posím zadajte meno.',
+	'ente_subject'=>'Posím zadajte pedmet.',
+	'eos_thee'=>'Vyskytla sa chyba',
 	'mail'=>'E-Mail',
-	'message'=>'Správa',
+	'message'=>'Spáva',
 	'name'=>'Meno',
-	'receiver'=>'Prijímateľ',
-	'reset'=>'Reset',
-	'security_code'=>'Bezpečnostný kód',
+	'eceive'=>'Pijímateľ',
+	'eset'=>'Reset',
+	'secuity_code'=>'Bezpečnostný kód',
 	'send'=>'Odoslať',
-	'send_successfull'=>'Vaša správa bola odoslaná.',
-	'subject'=>'Predmet',
-	'title_contact'=>'Kontaktný formulár',
-	'unknown_receiver'=>'unknown receiver',
-	'wrong_securitycode'=>'Zadali ste chybný bezpečnostný kód!'
+	'send_successfull'=>'Vaša spáva bola odoslaná.',
+	'subject'=>'Pedmet',
+	'title_contact'=>'Kontaktný fomulá',
+	'unknown_eceive'=>'unknown eceive',
+	'wong_secuitycode'=>'Zadali ste chybný bezpečnostný kód!'
 );
 ?>

@@ -2,54 +2,54 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Version 4       /                        /   /               #
+#           Vesion 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Free Content / Management System                 #
+#                       Fee Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyight 2005-2014 by webspell.og                                  #
 #                                                                        #
-#   visit webSPELL.org, webspell.info to get webSPELL for free           #
-#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to remove this copyright-tag                      #
-#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
+#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
+#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to emove this copyight-tag                      #
+#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
-#   Far Development by Development Team - webspell.org                   #
+#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
+#   Fa Development by Development Team - webspell.og                   #
 #                                                                        #
-#   visit webspell.org                                                   #
+#   visit webspell.og                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_array = Array(
+$language_aay = Aay(
 
 /* do not edit above this line */
 
-	'del_from_mail_list'=>'Se retirer de la liste d\'envoi',
-	'del_key'=>'Clé de suppression',
-	'delete'=>'Supprimer',
-	'deletion_key'=>'Cl" de suppression',
-	'email_not_valid'=>'Votre adresse mail est incorrecte !',
-	'lost_deletion_key'=>'Clé de suppression perdue ?',
-	'mail_adress'=>'Adresse mail',
-	'mail_pw_didnt_match'=>'Le mail ou le mot de passe ne correspondent pas.',
-	'mail_not_in_db'=>'L\'adresse mail indiquée n\'existe pas dans notre base de données.',
-	'newsletter'=>'Newsletter',
-	'newsletter_registration'=>'Enregistrement à la newsletter',
-	'no_such_mail_adress'=>'Cette adresse mail n\'est pas associée à notre base de données.',
-	'password_had_been_send'=>'Le mot de passe a été envoyé.',
-	'register_newsletter'=>'Enregistrement à la newsletter',
-	'request_mail'=>'<b>Vous avez demandé une clé de suppression manuelle !</b><br><br>Pour vous retirer, cliquez <a href="http://%homepage_url%/index.php?site=newsletter&mail=%mail%&pass=%delete_key%">ici</a><br>Le mot de passe pour vous retirer manuellement: %delete_key%<br><br>Le staff, %homepage_url%',
-	'send'=>'Envoyer',
-	'submit'=>'Envoyer',
-	'success_mail'=>'<b>Merci de vous être inscrit &aacute; notre newsletter!</b><br><br>Pour vous retirer, cliquez <a href="http://%homepage_url%/index.php?site=newsletter&mail=%mail%&pass=%delete_key%">ici</a><br>Le mot de passe pour vous retirer manuellement: %delete_key%<br><br>Le staff, %homepage_url%',
-	'thank_you_for_registration'=>'Merci pour votre inscription.',
-	'you_are_already_registered'=>'Vous êtes déjà inscrit.',
-	'your_mail_adress'=>'Votre adresse mail',
-	'your_mail_adress_deleted'=>'Votre adresse mail a été supprimé.'
+	'del_fom_mail_list'=>'Se etie de la liste d\'envoi',
+	'del_key'=>'Clé de suppession',
+	'delete'=>'Suppime',
+	'deletion_key'=>'Cl" de suppession',
+	'email_not_valid'=>'Vote adesse mail est incoecte !',
+	'lost_deletion_key'=>'Clé de suppession pedue ?',
+	'mail_adess'=>'Adesse mail',
+	'mail_pw_didnt_match'=>'Le mail ou le mot de passe ne coespondent pas.',
+	'mail_not_in_db'=>'L\'adesse mail indiquée n\'existe pas dans note base de données.',
+	'newslette'=>'Newslette',
+	'newslette_egistation'=>'Enegistement à la newslette',
+	'no_such_mail_adess'=>'Cette adesse mail n\'est pas associée à note base de données.',
+	'passwod_had_been_send'=>'Le mot de passe a été envoyé.',
+	'egiste_newslette'=>'Enegistement à la newslette',
+	'equest_mail'=>'<b>Vous avez demandé une clé de suppession manuelle !</b><b><b>Pou vous etie, cliquez <a hef="http://%homepage_ul%/index.php?site=newslette&mail=%mail%&pass=%delete_key%">ici</a><b>Le mot de passe pou vous etie manuellement: %delete_key%<b><b>Le staff, %homepage_ul%',
+	'send'=>'Envoye',
+	'submit'=>'Envoye',
+	'success_mail'=>'<b>Meci de vous ête inscit &aacute; note newslette!</b><b><b>Pou vous etie, cliquez <a hef="http://%homepage_ul%/index.php?site=newslette&mail=%mail%&pass=%delete_key%">ici</a><b>Le mot de passe pou vous etie manuellement: %delete_key%<b><b>Le staff, %homepage_ul%',
+	'thank_you_fo_egistation'=>'Meci pou vote insciption.',
+	'you_ae_aleady_egisteed'=>'Vous êtes déjà inscit.',
+	'you_mail_adess'=>'Vote adesse mail',
+	'you_mail_adess_deleted'=>'Vote adesse mail a été suppimé.'
 );
 ?>

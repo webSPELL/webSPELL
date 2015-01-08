@@ -2,51 +2,51 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Version 4       /                        /   /               #
+#           Vesion 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Free Content / Management System                 #
+#                       Fee Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyight 2005-2014 by webspell.og                                  #
 #                                                                        #
-#   visit webSPELL.org, webspell.info to get webSPELL for free           #
-#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to remove this copyright-tag                      #
-#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
+#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
+#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to emove this copyight-tag                      #
+#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
-#   Far Development by Development Team - webspell.org                   #
+#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
+#   Fa Development by Development Team - webspell.og                   #
 #                                                                        #
-#   visit webspell.org                                                   #
+#   visit webspell.og                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_array = Array(
+$language_aay = Aay(
 
 /* do not edit above this line */
 
-	'admins'=>'Administrador(es):',
-	'coding'=>'Programação',
-	'coding_info'=>'Este website utiliza o script <a href="http://www.webspell.org" target="_blank">webSPELL Free Content Management System (versão: $version)</a>. É baseado em PHP4/5 e MySQL, corre sob a <a href="http://www.fsf.org/licensing/licenses/gpl.html" target="_blank">Licença Pública Geral (GNU GPL)</a>.<br>Faz o download gratuito em: <a href="http://www.webspell.org" target="_blank">www.webSPELL.org</a>',
-	'disclaimer'=>'Aviso Legal',
-	'disclaimer_text'=>'<p><strong>1. Conteúdo</strong><br>
-	O autor não se responsabiliza pela actualidade, correcção, integralidade ou qualidade da informação prestada. Quaisquer reclamações de responsabilidade relativas a danos causados devido à utilização de qualquer informação fornecida, incluindo qualquer tipo de informação incompleta ou incorrecta, serão por isso rejeitadas.<br>
-	Nenhuma das ofertas é vinculativa nem representam obrigações. Partes das páginas ou a publicação integral, incluindo todas as ofertas e informações, poderão ser prolongadas, alteradas ou parcial ou totalmente eliminadas pelo autor, sem aviso prévio.</p>
-	<p><strong>2. Referências e ligações</strong><br>
-	O autor não se responsabiliza por nenhum dos conteúdos relacionados por ligação ou mencionados nas suas páginas - excepto nos casos em que possua total conhecimento de conteúdos ilegais e lhe seja possível evitar que os visitantes do seu site visualizem essas páginas. Se ocorrerem danos devido à utilização da informação aqui apresentada, apenas o autor das respectivas páginas pode ser considerado responsável, não a pessoa que utilizou a ligação a estas páginas. Além do mais, o autor não é responsável por comentários ou mensagens publicadas pelos utilizadores nas áreas de debate, livros de visitas ou listas de correio, disponibilizados na sua página.</p>
-	<p><strong>3. Direitos de autor</strong><br>
-	O autor tentou não utilizar nenhum material protegido por direitos de autor para publicação ou, nos casos em que não foi possível, indicou os direitos de autor do respectivo item. Todos os direitos para o material criado pelo autor encontram-se reservados. Não é permitida qualquer duplicação ou uso de objectos como imagens, diagramas, sons ou textos em outras publicações impressas ou electrónicas sem o consentimento do autor.</p>
-	<p><strong>4. Política de Privacidade</strong><br>
-	Se for dada a oportunidade para o fornecimento de dados pessoais ou comerciais (endereço electrónico, nome, moradas), o fornecimento destes dados é realizado voluntariamente. É permitido o uso e pagamento de todos os serviços oferecidos – somente e até ao ponto tecnicamente possível e razoável – sem especificação de qualquer dado pessoal ou sob especificação de dados anónimos ou com alcunha. O uso de endereços postais, telefones, números de fax ou endereços electrónicos publicados, para fins de marketing, é proibido e os ofensores que enviarem spam não desejado serão punidos.</p>
-	<p><strong>5. Validade legal deste aviso</strong><br>
-	Esta publicação deve ser considerada parte da publicação electrónica à qual se refere. Se secções ou termos individuais desta declaração não são legais ou correctas, o conteúdo ou validade das outras partes mantém-se, independentemente desse facto.</p>',
-	'imprint'=>'Impressum',
-	'mods'=>'Moderador(es):',
-	'responsible_persons'=>'Pessoas responsáveis',
-	'webmaster'=>'Webmaster:'
+	'admins'=>'Administado(es):',
+	'coding'=>'Pogamação',
+	'coding_info'=>'Este website utiliza o scipt <a hef="http://www.webspell.og" taget="_blank">webSPELL Fee Content Management System (vesão: $vesion)</a>. É baseado em PHP4/5 e MySQL, coe sob a <a hef="http://www.fsf.og/licensing/licenses/gpl.html" taget="_blank">Licença Pública Geal (GNU GPL)</a>.<b>Faz o download gatuito em: <a hef="http://www.webspell.og" taget="_blank">www.webSPELL.og</a>',
+	'disclaime'=>'Aviso Legal',
+	'disclaime_text'=>'<p><stong>1. Conteúdo</stong><b>
+	O auto não se esponsabiliza pela actualidade, coecção, integalidade ou qualidade da infomação pestada. Quaisque eclamações de esponsabilidade elativas a danos causados devido à utilização de qualque infomação fonecida, incluindo qualque tipo de infomação incompleta ou incoecta, seão po isso ejeitadas.<b>
+	Nenhuma das ofetas é vinculativa nem epesentam obigações. Pates das páginas ou a publicação integal, incluindo todas as ofetas e infomações, podeão se polongadas, alteadas ou pacial ou totalmente eliminadas pelo auto, sem aviso pévio.</p>
+	<p><stong>2. Refeências e ligações</stong><b>
+	O auto não se esponsabiliza po nenhum dos conteúdos elacionados po ligação ou mencionados nas suas páginas - excepto nos casos em que possua total conhecimento de conteúdos ilegais e lhe seja possível evita que os visitantes do seu site visualizem essas páginas. Se ocoeem danos devido à utilização da infomação aqui apesentada, apenas o auto das espectivas páginas pode se consideado esponsável, não a pessoa que utilizou a ligação a estas páginas. Além do mais, o auto não é esponsável po comentáios ou mensagens publicadas pelos utilizadoes nas áeas de debate, livos de visitas ou listas de coeio, disponibilizados na sua página.</p>
+	<p><stong>3. Dieitos de auto</stong><b>
+	O auto tentou não utiliza nenhum mateial potegido po dieitos de auto paa publicação ou, nos casos em que não foi possível, indicou os dieitos de auto do espectivo item. Todos os dieitos paa o mateial ciado pelo auto encontam-se esevados. Não é pemitida qualque duplicação ou uso de objectos como imagens, diagamas, sons ou textos em outas publicações impessas ou electónicas sem o consentimento do auto.</p>
+	<p><stong>4. Política de Pivacidade</stong><b>
+	Se fo dada a opotunidade paa o fonecimento de dados pessoais ou comeciais (endeeço electónico, nome, moadas), o fonecimento destes dados é ealizado voluntaiamente. É pemitido o uso e pagamento de todos os seviços ofeecidos – somente e até ao ponto tecnicamente possível e azoável – sem especificação de qualque dado pessoal ou sob especificação de dados anónimos ou com alcunha. O uso de endeeços postais, telefones, númeos de fax ou endeeços electónicos publicados, paa fins de maketing, é poibido e os ofensoes que enviaem spam não desejado seão punidos.</p>
+	<p><stong>5. Validade legal deste aviso</stong><b>
+	Esta publicação deve se consideada pate da publicação electónica à qual se efee. Se secções ou temos individuais desta declaação não são legais ou coectas, o conteúdo ou validade das outas pates mantém-se, independentemente desse facto.</p>',
+	'impint'=>'Impessum',
+	'mods'=>'Modeado(es):',
+	'esponsible_pesons'=>'Pessoas esponsáveis',
+	'webmaste'=>'Webmaste:'
 );
 ?>

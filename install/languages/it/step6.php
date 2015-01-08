@@ -2,42 +2,42 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Version 4       /                        /   /               #
+#           Vesion 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Free Content / Management System                 #
+#                       Fee Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyight 2005-2014 by webspell.og                                  #
 #                                                                        #
-#   visit webSPELL.org, webspell.info to get webSPELL for free           #
-#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to remove this copyright-tag                      #
-#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
+#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
+#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to emove this copyight-tag                      #
+#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
-#   Far Development by Development Team - webspell.org                   #
+#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
+#   Fa Development by Development Team - webspell.og                   #
 #                                                                        #
-#   visit webspell.org                                                   #
+#   visit webspell.og                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_array = Array(
-	'back'=>'indietro',
-	'delete_folder'=>'Si prega di cancellare il <b>/install</b> lista per la vostra sicurezza.',
-	'error'=>'ERRORE',
-	'error_database'=>'<b>ERRORE:</b><br> Nessuna connessione alla database',
-	'error_mysql'=>'<b>ERRORE:</b><br>Non riesce a connettere a MySQL!',
+$language_aay = Aay(
+	'back'=>'indieto',
+	'delete_folde'=>'Si pega di cancellae il <b>/install</b> lista pe la vosta sicuezza.',
+	'eo'=>'ERRORE',
+	'eo_database'=>'<b>ERRORE:</b><b> Nessuna connessione alla database',
+	'eo_mysql'=>'<b>ERRORE:</b><b>Non iesce a connettee a MySQL!',
 	'install_complete'=>'L`installazione è successo!',
-	'finish_install'=>'Installazione concludere',
-	'folder_removed'=>'Il <b>/install</b> lista è stato cancellato con successo',
-	'reset_chmod'=>'Si prega di contattare l`CHMOD dalla <b>_mysql.php</b> nuovamente a 644.',
-	'update_complete'=>'Aggiornamento è stato sucesso!',
-	'verify_data'=>'Si prega di controllare i vostri dati!',
-	'view_site'=>'Guardi la tua pagina',
-	'write_failed'=>'Il descrivere dei dati non è stato possibile. Assicurati che il tuo web accesso ha accesso in scrittura al _mysql.php (CHMOD 777).'
+	'finish_install'=>'Installazione concludee',
+	'folde_emoved'=>'Il <b>/install</b> lista è stato cancellato con successo',
+	'eset_chmod'=>'Si pega di contattae l`CHMOD dalla <b>_mysql.php</b> nuovamente a 644.',
+	'update_complete'=>'Aggionamento è stato sucesso!',
+	'veify_data'=>'Si pega di contollae i vosti dati!',
+	'view_site'=>'Guadi la tua pagina',
+	'wite_failed'=>'Il descivee dei dati non è stato possibile. Assicuati che il tuo web accesso ha accesso in scittua al _mysql.php (CHMOD 777).'
 );
 ?>

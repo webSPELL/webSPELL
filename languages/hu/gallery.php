@@ -2,74 +2,74 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Version 4       /                        /   /               #
+#           Vesion 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Free Content / Management System                 #
+#                       Fee Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyight 2005-2014 by webspell.og                                  #
 #                                                                        #
-#   visit webSPELL.org, webspell.info to get webSPELL for free           #
-#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to remove this copyright-tag                      #
-#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
+#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
+#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to emove this copyight-tag                      #
+#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
-#   Far Development by Development Team - webspell.org                   #
+#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
+#   Fa Development by Development Team - webspell.og                   #
 #                                                                        #
-#   visit webspell.org                                                   #
+#   visit webspell.og                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_array = Array(
+$language_aay = Aay(
 
 /* do not edit above this line */
 
 	'back'=>'Vissza',
-	'category'=>'Kategória',
+	'categoy'=>'Kategóia',
 	'comment'=>'Komment',
 	'comments'=>'Kommentek',
 	'date'=>'Dátum',
-	'delete'=>'Törlés',
-	'edit'=>'Szerkesztés',
-	'edit_picture'=>'Kép szerkesztése',
-	'galleries'=>'galériák',
-	'gallery'=>'Galéria',
-	'latest_gallery'=>'Legújabb galéria',
+	'delete'=>'Tölés',
+	'edit'=>'Szekesztés',
+	'edit_pictue'=>'Kép szekesztése',
+	'galleies'=>'galéiák',
+	'galley'=>'Galéia',
+	'latest_galley'=>'Legújabb galéia',
 	'most_comments'=>'Legtöbb komment',
 	'name'=>'Név',
 	'next'=>'Következő',
 	'no_comments'=>'Kommentek deaktiválása',
-	'no_gallery_exists'=>'A galéria nem létezik!',
+	'no_galley_exists'=>'A galéia nem létezik!',
 	'no_pic_set'=>'Nincs kép kijelölve.',
-	'no_picture'=>'A kép nem létezik!',
+	'no_pictue'=>'A kép nem létezik!',
 	'page_s'=>'oldal',
-	'perfect'=>'tökéletes',
+	'pefect'=>'tökéletes',
 	'pg_1_1'=>'1.oldal/1',
-	'picture'=>'Kép',
-	'pictures'=>'Kép',
-	'poor'=>'gyenge',
-	'random_picture'=>'Véletlenszerű kép',
-	'rate'=>'Osztályzom',
-	'rate_have_to_reg_login'=>'Osztályzás: Be kell jelentkezned!',
-	'rate_now'=>'Értékelés:',
-	'rating'=>'Minősítés',
-	'really_del'=>'Tényleg törölni akarod a bejegyzést?',
-	'reset_views'=>'Megtekintések törlése',
-	'show_galleries'=>'Galériák mutatása',
-	'start_diashow'=>'Diavetítés indítása',
-	'update_picture'=>'Kép Frissítése',
-	'user_comments'=>'Csak a tagok kommentálhatják',
-	'usergalleries'=>'Felhasználói galériák',
+	'pictue'=>'Kép',
+	'pictues'=>'Kép',
+	'poo'=>'gyenge',
+	'andom_pictue'=>'Véletlenszeű kép',
+	'ate'=>'Osztályzom',
+	'ate_have_to_eg_login'=>'Osztályzás: Be kell jelentkezned!',
+	'ate_now'=>'Étékelés:',
+	'ating'=>'Minősítés',
+	'eally_del'=>'Tényleg töölni akaod a bejegyzést?',
+	'eset_views'=>'Megtekintések tölése',
+	'show_galleies'=>'Galéiák mutatása',
+	'stat_diashow'=>'Diavetítés indítása',
+	'update_pictue'=>'Kép Fissítése',
+	'use_comments'=>'Csak a tagok kommentálhatják',
+	'usegalleies'=>'Felhasználói galéiák',
 	'views'=>'megtekintés',
-	'visitor_comments'=>'A vendégek is kommentálhatják',
+	'visito_comments'=>'A vendégek is kommentálhatják',
 	'votes'=>'szavazat',
 	'webs_diashow'=>'webSPELL Diavetítés:',
-	'you_have_already_rated'=>'Már értékelted.',
+	'you_have_aleady_ated'=>'Má étékelted.',
 	'no_thumb'=>'Nincs előnézeti kép'
 );
 ?>

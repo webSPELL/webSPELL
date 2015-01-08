@@ -2,54 +2,54 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Version 4       /                        /   /               #
+#           Vesion 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Free Content / Management System                 #
+#                       Fee Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyight 2005-2014 by webspell.og                                  #
 #                                                                        #
-#   visit webSPELL.org, webspell.info to get webSPELL for free           #
-#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to remove this copyright-tag                      #
-#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
+#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
+#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to emove this copyight-tag                      #
+#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
-#   Far Development by Development Team - webspell.org                   #
+#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
+#   Fa Development by Development Team - webspell.og                   #
 #                                                                        #
-#   visit webspell.org                                                   #
+#   visit webspell.og                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_array = Array(
+$language_aay = Aay(
 
 /* do not edit above this line */
 
-	'del_from_mail_list'=>'Radera från mail listan',
-	'del_key'=>'radera-knapp',
-	'delete'=>'radera',
-	'deletion_key'=>'Radernings kanapp',
-	'email_not_valid'=>'Din email är inte giltig!',
-	'lost_deletion_key'=>'Tappat radernings knapp?',
-	'mail_adress'=>'mail adress',
-	'mail_pw_didnt_match'=>'Mailet/lösenordet matchade inte',
-	'mail_not_in_db'=>'E-post adressen du angav finns inte i databasen',
-	'newsletter'=>'nyhetsbrev',
-	'newsletter_registration'=>'Nyhetsbrevs registration',
-	'no_such_mail_adress'=>'Det finns ingen sådan email adress.',
-	'password_had_been_send'=>'Lösenordet har skickats.',
-	'register_newsletter'=>'Registrear för nyhetsbrev',
-	'request_mail'=>'<b>Det krävs din radernings knapp!</b><br><br>För att radera din mail från maillistan klicka <a href="http://%homepage_url%/index.php?site=newsletter&mail=%mail%&pass=%delete_key%">här</a><br>Ditt lösenord för att radera själv: %delete_key%<br><br>Ses på %homepage_url%',
+	'del_fom_mail_list'=>'Radea fån mail listan',
+	'del_key'=>'adea-knapp',
+	'delete'=>'adea',
+	'deletion_key'=>'Radenings kanapp',
+	'email_not_valid'=>'Din email ä inte giltig!',
+	'lost_deletion_key'=>'Tappat adenings knapp?',
+	'mail_adess'=>'mail adess',
+	'mail_pw_didnt_match'=>'Mailet/lösenodet matchade inte',
+	'mail_not_in_db'=>'E-post adessen du angav finns inte i databasen',
+	'newslette'=>'nyhetsbev',
+	'newslette_egistation'=>'Nyhetsbevs egistation',
+	'no_such_mail_adess'=>'Det finns ingen sådan email adess.',
+	'passwod_had_been_send'=>'Lösenodet ha skickats.',
+	'egiste_newslette'=>'Registea fö nyhetsbev',
+	'equest_mail'=>'<b>Det kävs din adenings knapp!</b><b><b>Fö att adea din mail fån maillistan klicka <a hef="http://%homepage_ul%/index.php?site=newslette&mail=%mail%&pass=%delete_key%">hä</a><b>Ditt lösenod fö att adea själv: %delete_key%<b><b>Ses på %homepage_ul%',
 	'send'=>'skicka',
 	'submit'=>'lämna in',
-	'success_mail'=>'<b>Tack för din registration!</b><br><br>För att radera din mail från maillistan klicka <a href="http://%homepage_url%/index.php?site=newsletter&mail=%mail%&pass=%delete_key%">här</a><br>Ditt lösenord för att radera själv: %delete_key%<br><br>Ses på %homepage_url%',
-	'thank_you_for_registration'=>'Tack för din registration.',
-	'you_are_already_registered'=>'Du är redan registrerad.',
-	'your_mail_adress'=>'Din email adress',
-	'your_mail_adress_deleted'=>'Din mail adress har raderats.'
+	'success_mail'=>'<b>Tack fö din egistation!</b><b><b>Fö att adea din mail fån maillistan klicka <a hef="http://%homepage_ul%/index.php?site=newslette&mail=%mail%&pass=%delete_key%">hä</a><b>Ditt lösenod fö att adea själv: %delete_key%<b><b>Ses på %homepage_ul%',
+	'thank_you_fo_egistation'=>'Tack fö din egistation.',
+	'you_ae_aleady_egisteed'=>'Du ä edan egistead.',
+	'you_mail_adess'=>'Din email adess',
+	'you_mail_adess_deleted'=>'Din mail adess ha adeats.'
 );
 ?>

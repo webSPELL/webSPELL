@@ -2,57 +2,57 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Version 4       /                        /   /               #
+#           Vesion 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Free Content / Management System                 #
+#                       Fee Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyight 2005-2014 by webspell.og                                  #
 #                                                                        #
-#   visit webSPELL.org, webspell.info to get webSPELL for free           #
-#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to remove this copyright-tag                      #
-#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
+#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
+#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to emove this copyight-tag                      #
+#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
-#   Far Development by Development Team - webspell.org                   #
+#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
+#   Fa Development by Development Team - webspell.og                   #
 #                                                                        #
-#   visit webspell.org                                                   #
+#   visit webspell.og                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_array = Array(
+$language_aay = Aay(
 
 /* do not edit above this line */
 
 	'actions'=>'Acties',
-	'add_gallery'=>'voeg toe aan Gallerij',
+	'add_galley'=>'voeg toe aan Galleij',
 	'add_img'=>'voeg afbeelding toe',
-	'add_picture'=>'voeg afbeelding toe',
+	'add_pictue'=>'voeg afbeelding toe',
 	'comment'=>'Reactie',
-	'delete'=>'verwijder',
-	'disable_comments'=>'sta commentaar niet toe',
-	'edit'=>'bewerk',
-	'enable_user_comments'=>'sta gebruikers commentaar toe',
-	'enable_visitor_comments'=>'sta bezoekers commentaar toe',
-	'gallery_name'=>'Gallerij Naam',
-	'group'=>'Groep',
+	'delete'=>'vewijde',
+	'disable_comments'=>'sta commentaa niet toe',
+	'edit'=>'bewek',
+	'enable_use_comments'=>'sta gebuikes commentaa toe',
+	'enable_visito_comments'=>'sta bezoekes commentaa toe',
+	'galley_name'=>'Galleij Naam',
+	'goup'=>'Goep',
 	'name'=>'Naam',
-	'new_gallery'=>'nieuwe Gallerij',
-	'no_galleries'=>'Geen gallerijen beschikbaar.',
-	'no_space_left'=>'Er is geen ruimte over: geannuleerd.',
-	'picture'=>'Afbeelding',
-	'please_enter_name'=>'Geef aub. een naam!',
-	'really_delete_gallery'=>'Deze gallerij echt verwijderen?',
+	'new_galley'=>'nieuwe Galleij',
+	'no_galleies'=>'Geen galleijen beschikbaa.',
+	'no_space_left'=>'E is geen uimte ove: geannuleed.',
+	'pictue'=>'Afbeelding',
+	'please_ente_name'=>'Geef aub. een naam!',
+	'eally_delete_galley'=>'Deze galleij echt vewijdeen?',
 	'update'=>'update',
-	'user_gallery'=>'Gebruikers-Gallerij',
-	'usergalleries'=>'Gebruikers-Gallerijen',
-	'visitor_comments'=>'Bezoekers reacties',
-	'x_of_y_mb_in_use'=>'<span style="color:%spacecolor%">&nbsp;%used_size%</span> van %available_size% MB zijn in gebruik.'
+	'use_galley'=>'Gebuikes-Galleij',
+	'usegalleies'=>'Gebuikes-Galleijen',
+	'visito_comments'=>'Bezoekes eacties',
+	'x_of_y_mb_in_use'=>'<span style="colo:%spacecolo%">&nbsp;%used_size%</span> van %available_size% MB zijn in gebuik.'
 
 );
 ?>

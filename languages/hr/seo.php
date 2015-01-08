@@ -2,78 +2,78 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Version 4       /                        /   /               #
+#           Vesion 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Free Content / Management System                 #
+#                       Fee Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyight 2005-2014 by webspell.og                                  #
 #                                                                        #
-#   visit webSPELL.org, webspell.info to get webSPELL for free           #
-#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to remove this copyright-tag                      #
-#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
+#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
+#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to emove this copyight-tag                      #
+#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
-#   Far Development by Development Team - webspell.org                   #
+#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
+#   Fa Development by Development Team - webspell.og                   #
 #                                                                        #
-#   visit webspell.org                                                   #
+#   visit webspell.og                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_array = Array(
+$language_aay = Aay(
 
 /* do not edit above this line */
 
 	'about'=>'O nama',
-	'archive'=>'Arhiva',
-	'articles'=>'Članci',
-	'awards'=>'Nagrade',
-	'buddys'=>'Prijatelji',
-	'calendar'=>'Kalendar',
+	'achive'=>'Ahiva',
+	'aticles'=>'Članci',
+	'awads'=>'Nagade',
+	'buddys'=>'Pijatelji',
+	'calenda'=>'Kalenda',
 	'cash_box'=>'Blagajna',
 	'challenge'=>'Izazovi',
-	'clanwars'=>'Matchevi',
-	'clanwars_details'=>'Clanwar protiv',
+	'clanwas'=>'Matchevi',
+	'clanwas_details'=>'Clanwa potiv',
 	'contact'=>'Kontakt',
 	'demo'=>'Demo',
 	'demos'=>'Demoi',
 	'faq'=>'Česta pitanja',
-	'files'=>'Preuzimanja',
-	'forum'=>'Forum',
-	'gallery'=>'Galerija',
+	'files'=>'Peuzimanja',
+	'foum'=>'Foum',
+	'galley'=>'Galeija',
 	'guestbook'=>'Knjiga gostiju',
-	'history'=>'Povijest',
-	'imprint'=>'Impresum',
+	'histoy'=>'Povijest',
+	'impint'=>'Impesum',
 	'joinus'=>'Postani član',
 	'links'=>'Linkovi',
 	'linkus'=>'Linkaj nas',
-	'login'=>'Prijava',
-	'loginoverview'=>'Pregled',
-	'lostpassword'=>'zaboravljena lozinka',
-	'members'=>'Članovi',
-	'messenger'=>'Poruke',
-	'myprofile'=>'Izmjeni profil',
+	'login'=>'Pijava',
+	'loginoveview'=>'Pegled',
+	'lostpasswod'=>'zaboavljena lozinka',
+	'membes'=>'Članovi',
+	'messenge'=>'Pouke',
+	'mypofile'=>'Izmjeni pofil',
 	'news'=>'Novosti',
-	'newsletter'=>'Newsletter',
-	'partners'=>'Partneri',
+	'newslette'=>'Newslette',
+	'patnes'=>'Patnei',
 	'polls'=>'Ankete',
-	'profile'=>'Profil:',
-	'register'=>'Registracija',
-	'registered_users'=>'Registrirani korisnici',
-	'search'=>'Pretraga',
-	'server'=>'Serveri',
+	'pofile'=>'Pofil:',
+	'egiste'=>'Registacija',
+	'egisteed_uses'=>'Registiani koisnici',
+	'seach'=>'Petaga',
+	'seve'=>'Sevei',
 	'shoutbox'=>'Shoutbox',
-	'sponsors'=>'Sponzori',
+	'sponsos'=>'Sponzoi',
 	'squads'=>'Timovi',
-	'start'=>'Početna',
+	'stat'=>'Početna',
 	'stats'=>'Statistika',
-	'usergallery'=>'Galerije korisnika',
-	'versus'=>'protiv',
+	'usegalley'=>'Galeije koisnika',
+	'vesus'=>'potiv',
 	'whoisonline'=>'Tko je online'
 );
 ?>

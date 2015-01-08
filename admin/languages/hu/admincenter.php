@@ -2,87 +2,87 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Version 4       /                        /   /               #
+#           Vesion 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Free Content / Management System                 #
+#                       Fee Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyight 2005-2014 by webspell.og                                  #
 #                                                                        #
-#   visit webSPELL.org, webspell.info to get webSPELL for free           #
-#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to remove this copyright-tag                      #
-#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
+#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
+#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to emove this copyight-tag                      #
+#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
-#   Far Development by Development Team - webspell.org                   #
+#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
+#   Fa Development by Development Team - webspell.og                   #
 #                                                                        #
-#   visit webspell.org                                                   #
+#   visit webspell.og                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_array = Array(
+$language_aay = Aay(
 
 /* do not edit above this line */
 
   'about_us'=>'Rólunk',
-  'access_denied'=>'Hozzáférés megtagadva',
+  'access_denied'=>'Hozzáféés megtagadva',
   'addons'=>'Kiegészítések',
-  'bannerrotation'=>'Mozgó bannerek',
-  'boards'=>'Témák',
-  'clanmembers'=>'Klántagok',
+  'banneotation'=>'Mozgó banneek',
+  'boads'=>'Témák',
+  'clanmembes'=>'Klántagok',
   'contact'=>'Kapcsolat',
-  'content'=>'Tartalom',
-  'countries'=>'Országok',
+  'content'=>'Tatalom',
+  'counties'=>'Oszágok',
   'database'=>'Adatbázis',
   'faq'=>'GYIK',
-  'faq_categories'=>'GYIK Kategóriák',
-  'file_categories'=>'Fájl Kategóriák',
-  'forum'=>'Fórum',
-  'gallery'=>'Galéria',
+  'faq_categoies'=>'GYIK Kategóiák',
+  'file_categoies'=>'Fájl Kategóiák',
+  'foum'=>'Fóum',
+  'galley'=>'Galéia',
   'games'=>'Játékok',
-  'history'=>'Történet',
+  'histoy'=>'Töténet',
   'icons'=>'Ikonok',
-  'imprint'=>'Impresszum',
-  'link_categories'=>'Link Kategóriák',
+  'impint'=>'Impesszum',
+  'link_categoies'=>'Link Kategóiák',
   'log_out'=>'Kijelentkezés',
   'main_panel'=>'Fő Panel',
-  'manage_galleries'=>'Galériák beállítása',
-  'manage_groups'=>'Kategóriák beállítása',
-  'manage_group_users'=>'Csoportok tagjai',
-  'manage_user_groups'=>'Csoportok csoportok',
-  'newsletter'=>'Hírlevél',
-  'news_languages'=>'Hírek nyelve',
-  'news_rubrics'=>'Hírkategóriák',
+  'manage_galleies'=>'Galéiák beállítása',
+  'manage_goups'=>'Kategóiák beállítása',
+  'manage_goup_uses'=>'Csopotok tagjai',
+  'manage_use_goups'=>'Csopotok csopotok',
+  'newslette'=>'Hílevél',
+  'news_languages'=>'Híek nyelve',
+  'news_ubics'=>'Híkategóiák',
   'not_logged_in'=>'Nem vagy bejelentkezve',
-  'overview'=>'Áttekintés / Szerver-Info',
+  'oveview'=>'Áttekintés / Szeve-Info',
   'page_statistics'=>'Oldal statisztikák',
-  'partners'=>'Partnerek',
-  'registered_users'=>'Regisztrált tagok',
-  'rubrics'=>'Kategóriák',
-  'scrolltext'=>'Fényújság',
+  'patnes'=>'Patneek',
+  'egisteed_uses'=>'Regisztált tagok',
+  'ubics'=>'Kategóiák',
+  'scolltext'=>'Fényújság',
   'select_icons'=>'Válassz ikonokat',
-  'servers'=>'Szerverek',
+  'seves'=>'Szeveek',
   'settings'=>'Beállítások',
   'smilies'=>'Hangulatjelek',
-  'sponsors'=>'Szponzorok',
+  'sponsos'=>'Szponzook',
   'squads'=>'Squadok',
   'static_pages'=>'Egyéni oldalak',
   'styles'=>'Kinézet/Stílusok',
-  'update_webspell'=>'webSPELL frissítés',
-  'user_administration'=>'Felhasználói beállítások',
-  'user_ranks'=>'Rangok',
-  'visitor_statistics'=>'Látogatói statisztikák',
+  'update_webspell'=>'webSPELL fissítés',
+  'use_administation'=>'Felhasználói beállítások',
+  'use_anks'=>'Rangok',
+  'visito_statistics'=>'Látogatói statisztikák',
   'spam'=>'Spam',
-  'spam_forum'=>'Posts / Topics',
-  'spam_user'=>'Remove User',
+  'spam_foum'=>'Posts / Topics',
+  'spam_use'=>'Remove Use',
   'multiaccounts'=>'Multi-Accounts',
   'api_log'=>'API Log',
   'blocked_content'=>'Blocked Content',
-  'modrewrite'=>'Mod-Rewrite'
+  'modewite'=>'Mod-Rewite'
 );
 ?>

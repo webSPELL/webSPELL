@@ -2,56 +2,56 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Version 4       /                        /   /               #
+#           Vesion 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Free Content / Management System                 #
+#                       Fee Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyight 2005-2014 by webspell.og                                  #
 #                                                                        #
-#   visit webSPELL.org, webspell.info to get webSPELL for free           #
-#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to remove this copyright-tag                      #
-#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
+#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
+#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to emove this copyight-tag                      #
+#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
-#   Far Development by Development Team - webspell.org                   #
+#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
+#   Fa Development by Development Team - webspell.og                   #
 #                                                                        #
-#   visit webspell.org                                                   #
+#   visit webspell.og                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_array = Array(
+$language_aay = Aay(
 
 /* do not edit above this line */
 
 	'back'=>'naspäť',
-	'banner'=>'Banner',
-	'banner_to_big'=>'Pobrázok je príliž veľký',
-	'categories'=>'Kategórie',
-	'category'=>'Kategória',
+	'banne'=>'Banne',
+	'banne_to_big'=>'Pobázok je píliž veľký',
+	'categoies'=>'Kategóie',
+	'categoy'=>'Kategóia',
 	'delete'=>'vymazať',
-	'edit'=>'upraviť',
-	'edit_link'=>'Upraviť odkaz',
-	'format_incorrect'=>'Chybný formát obrázku (povolené iba: *.gif, *.jpg or *.png)',
+	'edit'=>'upaviť',
+	'edit_link'=>'Upaviť odkaz',
+	'fomat_incoect'=>'Chybný fomát obázku (povolené iba: *.gif, *.jpg o *.png)',
 	'go_back'=>'naspäť',
-	'homepage'=>'Adresa',
-	'information'=>'Informácie',
+	'homepage'=>'Adesa',
+	'infomation'=>'Infomácie',
 	'link'=>'Odkaz',
 	'linkname'=>'Názov odkazu',
-	'linkrubric'=>'Kategória odkazu',
+	'linkubic'=>'Kategóia odkazu',
 	'links'=>'Odkazy',
 	'new_link'=>'Nový odkaz',
-	'no_access'=>'nepovolený prístup.',
-	'no_categories'=>'kategórie niesu dostupné',
+	'no_access'=>'nepovolený pístup.',
+	'no_categoies'=>'kategóie niesu dostupné',
 	'no_links'=>'odkazy nie sú dostupné',
-	'really_delete'=>'naozaj vymazať tento záznam?',
+	'eally_delete'=>'naozaj vymazať tento záznam?',
 	'save_link'=>'Uložit odkaz',
-	'title_categories'=>'Kategórie odkazov',
-	'update_link'=>'Upraviť odkaz'
+	'title_categoies'=>'Kategóie odkazov',
+	'update_link'=>'Upaviť odkaz'
 );
 ?>

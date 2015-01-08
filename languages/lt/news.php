@@ -2,85 +2,85 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Version 4       /                        /   /               #
+#           Vesion 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Free Content / Management System                 #
+#                       Fee Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyight 2005-2014 by webspell.og                                  #
 #                                                                        #
-#   visit webSPELL.org, webspell.info to get webSPELL for free           #
-#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to remove this copyright-tag                      #
-#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
+#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
+#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to emove this copyight-tag                      #
+#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
-#   Far Development by Development Team - webspell.org                   #
+#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
+#   Fa Development by Development Team - webspell.og                   #
 #                                                                        #
-#   visit webspell.org                                                   #
+#   visit webspell.og                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_array = Array(
+$language_aay = Aay(
 
 /* do not edit above this line */
 
-	'author'=>'Autorius',
-	'bbcode'=>'BBKodas yra <b><u>ĮJUNGTAS</u></b>',
+	'autho'=>'Autoius',
+	'bbcode'=>'BBKodas ya <b><u>ĮJUNGTAS</u></b>',
 	'cancel'=>'atšaukti',
-	'comm'=>'komentaras',
-	'comment'=>'<a href="$url">[1] komentaras</a>, paskutinis pagal $lastposter - $lastdate',
-	'comments'=>'<a href="$url">[$anzcomments] komentarų</a>, paskutinis pagal $lastposter - $lastdate',
+	'comm'=>'komentaas',
+	'comment'=>'<a hef="$ul">[1] komentaas</a>, paskutinis pagal $lastposte - $lastdate',
+	'comments'=>'<a hef="$ul">[$anzcomments] komentaų</a>, paskutinis pagal $lastposte - $lastdate',
 	'date'=>'Data',
-	'delete'=>'ištrinti',
-	'delete_selected'=>'ištrinti pasirinktus',
-	'edit'=>'redeguoti',
-	'enter_title'=>'Jūs turite įvesti pavadinimą!',
-	'enter_text'=>'Jūs turite įvesti tekstą',
-	'go'=>'Pirmyn!',
-	'headline'=>'Antraštė',
-	'html'=>'HTML yra <b><u>ĮJUNGTA</u></b>',
-	'intern'=>'V.I.P',
+	'delete'=>'ištinti',
+	'delete_selected'=>'ištinti pasiinktus',
+	'edit'=>'edeguoti',
+	'ente_title'=>'Jūs tuite įvesti pavadinimą!',
+	'ente_text'=>'Jūs tuite įvesti tekstą',
+	'go'=>'Pimyn!',
+	'headline'=>'Antaštė',
+	'html'=>'HTML ya <b><u>ĮJUNGTA</u></b>',
+	'inten'=>'V.I.P',
 	'languages'=>'Kalbos',
-	'link'=>'Nuoroda',
-	'links'=>'Nuorodos',
-	'new_post'=>'Naujas pranešimas',
+	'link'=>'Nuooda',
+	'links'=>'Nuoodos',
+	'new_post'=>'Naujas panešimas',
 	'new_window'=>'naujas langas',
 	'news'=>'Naujienos',
-	'news_archive'=>'Archyvas',
+	'news_achive'=>'Achyvas',
 	'no'=>'ne',
-	'no_access'=>'jokios prieigos',
-	'no_comment'=>'<a href="$url">komentarų nėra</a>',
-	'no_comments'=>'išjungti komentarus',
-	'no_topnews'=>'nėra karščiausių naujienų',
-	'options'=>'pasirinkimai',
-	'post_languages'=>'Naujienos <select name="language_count" onchange="update_textarea(this.options[this.selectedIndex].value)">$selects</select> kalbos',
+	'no_access'=>'jokios pieigos',
+	'no_comment'=>'<a hef="$ul">komentaų nėa</a>',
+	'no_comments'=>'išjungti komentaus',
+	'no_topnews'=>'nėa kaščiausių naujienų',
+	'options'=>'pasiinkimai',
+	'post_languages'=>'Naujienos <select name="language_count" onchange="update_textaea(this.options[this.selectedIndex].value)">$selects</select> kalbos',
 	'post_news'=>'skelbti naujieną',
-	'preview'=>'peržiūrėti',
-	'publish_now'=>'paviešinti dabar',
-	'publish_selected'=>'paviešinti pasirinktus',
-	'really_delete'=>'Ar tikrai norite ištrinti šią naujieną?',
-	'rubric'=>'Rubrika',
+	'peview'=>'pežiūėti',
+	'publish_now'=>'paviešinti daba',
+	'publish_selected'=>'paviešinti pasiinktus',
+	'eally_delete'=>'A tikai noite ištinti šią naujieną?',
+	'ubic'=>'Rubika',
 	'save_news'=>'išsaugoti naujienas',
 	'select_all'=>'pažymėti visus',
 	'self'=>'_tame pačiame lange',
-	'show_news'=>'rodyti naujienas',
+	'show_news'=>'odyti naujienas',
 	'smilies'=>'Šypsenėlės <b><u>ĮJUNGTOS</u></b>',
-	'sort'=>'Rykiuoti:',
+	'sot'=>'Rykiuoti:',
 	'title_unpublished_news'=>'<h2>NEPAVIEŠINTOS NAUJIENOS:</h2>',
-	'topnews'=>'karščiausios naujienos',
+	'topnews'=>'kaščiausios naujienos',
 	'unpublish'=>'neviešinti',
-	'unpublish_selected'=>'neviešinti pasirinktus',
+	'unpublish_selected'=>'neviešinti pasiinktus',
 	'unpublished_news'=>'nepaviešintos naujienos',
 	'upload_images'=>'atsiųsti vaizdų',
-	'user_comments'=>'įjungti vartotojo komentarus',
-	'view_more'=>'Skaityti daugiau...',
-	'visitor_comments'=>'įjungti lankytojo komentarus',
-	'written_by'=>'parašė',
+	'use_comments'=>'įjungti vatotojo komentaus',
+	'view_moe'=>'Skaityti daugiau...',
+	'visito_comments'=>'įjungti lankytojo komentaus',
+	'witten_by'=>'paašė',
 	'yes'=>'taip',
 	'tags'=>'Žymos'
 );

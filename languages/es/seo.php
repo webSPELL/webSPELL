@@ -2,78 +2,78 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Version 4       /                        /   /               #
+#           Vesion 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Free Content / Management System                 #
+#                       Fee Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyight 2005-2014 by webspell.og                                  #
 #                                                                        #
-#   visit webSPELL.org, webspell.info to get webSPELL for free           #
-#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to remove this copyright-tag                      #
-#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
+#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
+#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to emove this copyight-tag                      #
+#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
-#   Far Development by Development Team - webspell.org                   #
+#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
+#   Fa Development by Development Team - webspell.og                   #
 #                                                                        #
-#   visit webspell.org                                                   #
+#   visit webspell.og                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_array = Array(
+$language_aay = Aay(
 
 /* do not edit above this line */
 
-	'about'=>'Sobre nosotros',
-	'archive'=>'Archivo',
-	'articles'=>'Artículo',
-	'awards'=>'Condecoraciones',
+	'about'=>'Sobe nosotos',
+	'achive'=>'Achivo',
+	'aticles'=>'Atículo',
+	'awads'=>'Condecoaciones',
 	'buddys'=>'Amigos',
-	'calendar'=>'Calendario',
+	'calenda'=>'Calendaio',
 	'cash_box'=>'Caja',
 	'challenge'=>'Desafío',
-	'clanwars'=>'Guerras de clan',
-	'clanwars_details'=>'Guerras de clan detalles',
+	'clanwas'=>'Gueas de clan',
+	'clanwas_details'=>'Gueas de clan detalles',
 	'contact'=>'Contacto',
-	'demo'=>'Demostración',
-	'demos'=>'Demostraciones',
+	'demo'=>'Demostación',
+	'demos'=>'Demostaciones',
 	'faq'=>'FAQ',
-	'files'=>'Ficheros',
-	'forum'=>'Foro',
-	'gallery'=>'Galería',
-	'guestbook'=>'Libro de invitados',
-	'history'=>'Historia',
-	'imprint'=>'Pie de imprenta',
-	'joinus'=>'Unirse',
+	'files'=>'Ficheos',
+	'foum'=>'Foo',
+	'galley'=>'Galeía',
+	'guestbook'=>'Libo de invitados',
+	'histoy'=>'Histoia',
+	'impint'=>'Pie de impenta',
+	'joinus'=>'Unise',
 	'links'=>'Enlaces',
-	'linkus'=>'Enlace con nosotros',
+	'linkus'=>'Enlace con nosotos',
 	'login'=>'Inicio de sesión',
-	'loginoverview'=>'vista previa',
-	'lostpassword'=>'Has olvidado tu contraseña!',
-	'members'=>'Miembros',
-	'messenger'=>'Messenger',
-	'myprofile'=>'editar cuenta',
+	'loginoveview'=>'vista pevia',
+	'lostpasswod'=>'Has olvidado tu contaseña!',
+	'membes'=>'Miembos',
+	'messenge'=>'Messenge',
+	'mypofile'=>'edita cuenta',
 	'news'=>'Noticias',
-	'newsletter'=>'Boletin noticias',
-	'partners'=>'Compañero',
+	'newslette'=>'Boletin noticias',
+	'patnes'=>'Compañeo',
 	'polls'=>'Encuestas',
-	'profile'=>'Perfil de',
-	'register'=>'registrar',
-	'registered_users'=>'usuarios registrados',
-	'search'=>'Buscar',
-	'server'=>'Servidor',
-	'shoutbox'=>'Charla por internet',
-	'sponsors'=>'Patrocinador',
-	'squads'=>'Escuadrones',
-	'start'=>'Sitio Web',
+	'pofile'=>'Pefil de',
+	'egiste'=>'egista',
+	'egisteed_uses'=>'usuaios egistados',
+	'seach'=>'Busca',
+	'seve'=>'Sevido',
+	'shoutbox'=>'Chala po intenet',
+	'sponsos'=>'Patocinado',
+	'squads'=>'Escuadones',
+	'stat'=>'Sitio Web',
 	'stats'=>'Estadísticas',
-	'usergallery'=>'Galería de usuarios',
-	'versus'=>'contra',
+	'usegalley'=>'Galeía de usuaios',
+	'vesus'=>'conta',
 	'whoisonline'=>'¿Quién es en línea?'
 );
 ?>

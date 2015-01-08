@@ -2,107 +2,107 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Version 4       /                        /   /               #
+#           Vesion 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Free Content / Management System                 #
+#                       Fee Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyight 2005-2014 by webspell.og                                  #
 #                                                                        #
-#   visit webSPELL.org, webspell.info to get webSPELL for free           #
-#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to remove this copyright-tag                      #
-#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
+#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
+#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to emove this copyight-tag                      #
+#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
-#   Far Development by Development Team - webspell.org                   #
+#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
+#   Fa Development by Development Team - webspell.og                   #
 #                                                                        #
-#   visit webspell.org                                                   #
+#   visit webspell.og                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_array = Array(
+$language_aay = Aay(
 
 /* do not edit above this line */
 
 	'accesslevel'=>'Nivel de acceso',
 	'all'=>'Todos',
-	'cant_delete_without_fileID'=>'No se pueden borrar archivos sin la ID',
-	'cant_display_empty_cat'=>'Categoría vacia',
-	'cant_edit_without_fileID'=>'No se pueden editar archivos sin la ID.',
-	'cant_report_without_fileID'=>'No se pueden reportar enlaces rotos sin la ID',
-	'categories_cl'=>'Categorías',
-	'category_cl'=>'Categoría',
-	'clanmember'=>'Miembros del clan',
+	'cant_delete_without_fileID'=>'No se pueden boa achivos sin la ID',
+	'cant_display_empty_cat'=>'Categoía vacia',
+	'cant_edit_without_fileID'=>'No se pueden edita achivos sin la ID.',
+	'cant_epot_without_fileID'=>'No se pueden epota enlaces otos sin la ID',
+	'categoies_cl'=>'Categoías',
+	'categoy_cl'=>'Categoía',
+	'clanmembe'=>'Miembos del clan',
 	'database_cl'=>'Base de datos',
-	'delete_file'=>'borrar archivo',
-	'description'=>'Descripción',
+	'delete_file'=>'boa achivo',
+	'desciption'=>'Descipción',
 	'dl'=>'DL',
-	'download_now'=>'Descargar %filename% ahora',
-	'download_registered_only'=>'Descargas sólo para usuarios registrados!',
-	'download_via_mirror'=>'descargar via mirror',
-	'downloads_cl'=>'Descargas',
-	'edit_file'=>'editar archivo',
-	'extern-link'=>'Enlace externo',
-	'failed_edit_file'=>'Fallo al editar archivo!',
-	'failed_save_file-info'=>'Fallo al guardar información del archivo',
-	'file-info'=>'Información archivo',
-	'file-mirrors'=>'Mirrors archivo',
-	'file-size_e'=>'Tamaño (sólo para enlaces externos)',
-	'file-upload'=>'Subir archivo',
-	'file_already_exists'=>'archivo ya existente.',
-	'file_categories'=>'Categorías archivos',
-	'file_created'=>'Archivo creado.',
-	'file_deleted'=>'Archivo borrado.',
-	'file_not_created'=>'No se pudo crear archivo.',
-	'file_not_deleted'=>'No se pudo borrar archivo.',
-	'filename'=>'Nombre archivo',
-	'files'=>'archivos',
-	'files_cl'=>'Archivos',
-	'first_create_file-category'=>'Tienes que crear una categoría de archivos primero!',
-	'info_description'=>'Descripción',
-	'last_uploaded_file'=>'Último archivo subido',
-	'leave_description'=>'Si el enlace está roto, y sabes el motivo, deja la url y una pequeña descripción en este campo:',
-	'login'=>'Conectar',
-	'mirror'=>'Mirror',
-	'mirrors'=>'Mirrors',
-	'name'=>'Nombre',
-	'new_category'=>'nueva categoría',
-	'new_file'=>'nuevo archivo',
+	'download_now'=>'Descaga %filename% ahoa',
+	'download_egisteed_only'=>'Descagas sólo paa usuaios egistados!',
+	'download_via_mio'=>'descaga via mio',
+	'downloads_cl'=>'Descagas',
+	'edit_file'=>'edita achivo',
+	'exten-link'=>'Enlace exteno',
+	'failed_edit_file'=>'Fallo al edita achivo!',
+	'failed_save_file-info'=>'Fallo al guada infomación del achivo',
+	'file-info'=>'Infomación achivo',
+	'file-mios'=>'Mios achivo',
+	'file-size_e'=>'Tamaño (sólo paa enlaces extenos)',
+	'file-upload'=>'Subi achivo',
+	'file_aleady_exists'=>'achivo ya existente.',
+	'file_categoies'=>'Categoías achivos',
+	'file_ceated'=>'Achivo ceado.',
+	'file_deleted'=>'Achivo boado.',
+	'file_not_ceated'=>'No se pudo cea achivo.',
+	'file_not_deleted'=>'No se pudo boa achivo.',
+	'filename'=>'Nombe achivo',
+	'files'=>'achivos',
+	'files_cl'=>'Achivos',
+	'fist_ceate_file-categoy'=>'Tienes que cea una categoía de achivos pimeo!',
+	'info_desciption'=>'Descipción',
+	'last_uploaded_file'=>'Último achivo subido',
+	'leave_desciption'=>'Si el enlace está oto, y sabes el motivo, deja la ul y una pequeña descipción en este campo:',
+	'login'=>'Conecta',
+	'mio'=>'Mio',
+	'mios'=>'Mios',
+	'name'=>'Nombe',
+	'new_categoy'=>'nueva categoía',
+	'new_file'=>'nuevo achivo',
 	'no_access'=>'Acceso denegado!',
-	'no_categories_and_files'=>'no hay categorías ni archivos.',
-	'no_mirrors'=>'no hay mirrors',
-	'no_valid_file'=>'No es un archivo válido.',
-	'perfect'=>'perfecto',
-	'please_login'=>'porfavor conecta',
-	'poor'=>'pobre',
-	'rate'=>'puntuación',
-	'rate_have_to_reg_login'=>'Puntuación: Tienes que estar registrado o conectado!',
-	'rate_now'=>'Puntuar ahora!',
-	'rating'=>'Puntuando',
-	'rating_x_of_10'=>'puntuación: %d de 10',
-	'really_delete_file'=>'borrar este archivo?',
-	'register'=>'Registrar',
-	'registered'=>'Registrado',
-	'report'=>'reportar',
-	'report_dead_link'=>'reportar enlace roto',
-	'reset'=>'resetear',
+	'no_categoies_and_files'=>'no hay categoías ni achivos.',
+	'no_mios'=>'no hay mios',
+	'no_valid_file'=>'No es un achivo válido.',
+	'pefect'=>'pefecto',
+	'please_login'=>'pofavo conecta',
+	'poo'=>'pobe',
+	'ate'=>'puntuación',
+	'ate_have_to_eg_login'=>'Puntuación: Tienes que esta egistado o conectado!',
+	'ate_now'=>'Puntua ahoa!',
+	'ating'=>'Puntuando',
+	'ating_x_of_10'=>'puntuación: %d de 10',
+	'eally_delete_file'=>'boa este achivo?',
+	'egiste'=>'Regista',
+	'egisteed'=>'Registado',
+	'epot'=>'epota',
+	'epot_dead_link'=>'epota enlace oto',
+	'eset'=>'esetea',
 	'size'=>'Tamaño',
 	'statistic'=>'Estadística',
-	'subcategories'=>'Subcategorías',
-	'successful'=>'Satisfactoriamente.',
-	'top_5_downloads'=>'TOP 5 Descargas',
-	'traffic_cl'=>'Tráfico',
-	'update'=>'actualizar',
-	'upload'=>'subir',
+	'subcategoies'=>'Subcategoías',
+	'successful'=>'Satisfactoiamente.',
+	'top_5_downloads'=>'TOP 5 Descagas',
+	'taffic_cl'=>'Táfico',
+	'update'=>'actualiza',
+	'upload'=>'subi',
 	'uploaded_on'=>'Subido en',
-	'uploader'=>'Uploader',
-	'you_have_already_rated'=>'Ya lo has puntuado.',
-	'you_have_to_enter_filename'=>'Introduce un nombre de archivo!',
-	'you_have_to_enter_file'=>'Introduzca un archivo / url!'
+	'uploade'=>'Uploade',
+	'you_have_aleady_ated'=>'Ya lo has puntuado.',
+	'you_have_to_ente_filename'=>'Intoduce un nombe de achivo!',
+	'you_have_to_ente_file'=>'Intoduzca un achivo / ul!'
 );
 ?>

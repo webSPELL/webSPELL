@@ -2,62 +2,62 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Version 4       /                        /   /               #
+#           Vesion 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Free Content / Management System                 #
+#                       Fee Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyight 2005-2014 by webspell.og                                  #
 #                                                                        #
-#   visit webSPELL.org, webspell.info to get webSPELL for free           #
-#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to remove this copyright-tag                      #
-#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
+#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
+#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to emove this copyight-tag                      #
+#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
-#   Far Development by Development Team - webspell.org                   #
+#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
+#   Fa Development by Development Team - webspell.og                   #
 #                                                                        #
-#   visit webspell.org                                                   #
+#   visit webspell.og                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_array = Array(
+$language_aay = Aay(
 
 /* do not edit above this line */
 
 	'daysonline'=>'Días conectado',
 	'guest'=>'Invitado',
 	'guests'=>'Invitados',
-	'lasthour'=>'Última hora',
-	'max_day'=>'Máximo por día',
+	'lasthou'=>'Última hoa',
+	'max_day'=>'Máximo po día',
 	'maximum'=>'Máximo',
 	'month'=>'Més',
-	'now'=>'Ahora',
+	'now'=>'Ahoa',
 	'online'=>'Conectado',
 	'page_statistics'=>'Estadísticas de página',
-	'registered_users'=>'Usuarios registrados',
-	'statistic'=>'Mostrar estadísticas',
+	'egisteed_uses'=>'Usuaios egistados',
+	'statistic'=>'Mosta estadísticas',
 	'this_month'=>'Este més',
 	'today'=>'Hoy',
 	'total'=>'Total',
-	'total_statistic'=>'Estadísticas generales',
-	'user'=>'ususario',
-	'users'=>'usuarios',
+	'total_statistic'=>'Estadísticas geneales',
+	'use'=>'ususaio',
+	'uses'=>'usuaios',
 	'visits'=>'Visitantes',
-	'visits_day'=>'Visitas por día',
-	'visits_hour'=>'Visitas por hora',
-	'visits_month'=>'Visitas por més',
+	'visits_day'=>'Visitas po día',
+	'visits_hou'=>'Visitas po hoa',
+	'visits_month'=>'Visitas po més',
 	'visits_total'=>'Visitas totales',
-	'yesterday'=>'Ayer',
+	'yesteday'=>'Aye',
 	'avg_age'=>'Edad media',
-	'avg_age_clanmember'=>'Edad media del equipo de miembros',
-	'youngest_user'=>'El usuario más joven',
-	'oldest_user'=>'El usuario más viejo',
-	'user_statistic'=>'Estadística de usuario',
-	'years'=>'años'
+	'avg_age_clanmembe'=>'Edad media del equipo de miembos',
+	'youngest_use'=>'El usuaio más joven',
+	'oldest_use'=>'El usuaio más viejo',
+	'use_statistic'=>'Estadística de usuaio',
+	'yeas'=>'años'
 );
 ?>

@@ -2,51 +2,51 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Version 4       /                        /   /               #
+#           Vesion 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Free Content / Management System                 #
+#                       Fee Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyight 2005-2014 by webspell.og                                  #
 #                                                                        #
-#   visit webSPELL.org, webspell.info to get webSPELL for free           #
-#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to remove this copyright-tag                      #
-#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
+#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
+#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to emove this copyight-tag                      #
+#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
-#   Far Development by Development Team - webspell.org                   #
+#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
+#   Fa Development by Development Team - webspell.og                   #
 #                                                                        #
-#   visit webspell.org                                                   #
+#   visit webspell.og                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_array = Array(
+$language_aay = Aay(
 
 /* do not edit above this line */
 
-	'admins'=>'Administrátor:',
-	'coding'=>'Programovanie:',
-	'coding_info'=>'Táto stránka používa <a href="http://www.webspell.org" target="_blank">webSPELL Free Content Management System (verzia: $version)</a>. Webspell je založený na PHP4/5 a MySQL, využívajúci <a href="http://www.fsf.org/licensing/licenses/gpl.html" target="_blank">GNU GENERAL PUBLIC LICENSE</a>.<br>Webspell si môžete prevziať zadarmo z adresy: <a href="http://www.webspell.org" target="_blank">www.webSPELL.org</a>',
-	'disclaimer'=>'Prehlásenie',
-	'disclaimer_text'=>'<p><strong>1. Obsah</strong><br>
-	Autor si vyhradzuje právo nebyť zodpovedný za aktuálnosť, správnosť, úplnosť alebo kvalitu poskytovaných informácií. Stažnosti za vzniknuté škody spôsobené používaním poskytnutých informácií (ktoré môžu byť neúplné alebo nesprávne) budú zamietnuté.<br>
-	Všetky údaje sú neviazané a bez záväzkov. Časti stránok alebo kompletná publikácia obsahujúca všetky údaje a informácie môžu byť rozšírené, zmenené, čiastočne alebo úplne vymazané bez akéhokoľvek oznámenia.</p>
-	<p><strong>2. Odkazy</strong><br>
-	Autor nie je zodpovedný za akýkoľvek obsah odkazovaný z jeho stránok - pokým nemá plné vedomosti o ilegálnom obsahu - Autor môže zabrániť návštevníkom prístup do týchto stránok. Ak vznikne škoda spôsobená používaním informácií prezentovaných na tejto stránke, iba autor príslušných stránok nesie zodpovednosť, nie ten, kto odkazoval na tieto stránky. Okrem toho, autor nie je zodpovedný za príspevky alebo správy publikované užívateľmi diskusných fór alebo návštevných kníh.</p>
-	<p><strong>3. Copyright</strong><br>
-	Autor by nemal používať akýkoľvek materiál nad ktorým je vznesený copyright, alebo ak to je možné - poukázať na copyright na príslušnom mieste. Pre materiál vytvorený autorom sú všetky práva vyhradené. Akákoľvek duplikácia objektov ako obrázkov, diagramov, zvukových, textových alebo akýchkoľvek elektronických či printových publikácií je zakázaná bez súhlasu autora.</p>
-	<p><strong>4. Ochrana súkromia</strong><br>
-	Ak je daná možnosť zadania osobných alebo pracovných informácií (e-mailová adresa, meno, adresa), vstup týchto dát sa uskutočňuje dobrovoľne. Použitie a platby za poskytnuté služby sú prípustné - ak je to technicky možné - bez špecifikácie akýchkoľvek osobných údajov alebo špecifikácie pomocou anonymizovaných údajov alebo aliasov. Použitie publikovaných poštových adries, telefónnych alebo faxových čísel a emailových adries pre marketingové účely je zakázané. Páchateľ ktorý odosiela nevyžiadanú poštu (spam) bude potrestaný.</p>
-	<p><strong>5. Právna platnosť tohto vyhlásenia</strong><br>
-	Toto vyhlásenie je považované za časť internetovej publikácie. Ak časti alebo jednotlivé výrazy tohto prehlásenia nie sú platné alebo správne, správnosť ostatných častí zostáva nedotknutá.</p>',
-	'imprint'=>'Imprint',
-	'mods'=>'Moderátor:',
-	'responsible_persons'=>'zodpovedné osoby',
-	'webmaster'=>'Webmaster:'
+	'admins'=>'Administáto:',
+	'coding'=>'Pogamovanie:',
+	'coding_info'=>'Táto stánka používa <a hef="http://www.webspell.og" taget="_blank">webSPELL Fee Content Management System (vezia: $vesion)</a>. Webspell je založený na PHP4/5 a MySQL, využívajúci <a hef="http://www.fsf.og/licensing/licenses/gpl.html" taget="_blank">GNU GENERAL PUBLIC LICENSE</a>.<b>Webspell si môžete pevziať zadamo z adesy: <a hef="http://www.webspell.og" taget="_blank">www.webSPELL.og</a>',
+	'disclaime'=>'Pehlásenie',
+	'disclaime_text'=>'<p><stong>1. Obsah</stong><b>
+	Auto si vyhadzuje pávo nebyť zodpovedný za aktuálnosť, spávnosť, úplnosť alebo kvalitu poskytovaných infomácií. Stažnosti za vzniknuté škody spôsobené používaním poskytnutých infomácií (ktoé môžu byť neúplné alebo nespávne) budú zamietnuté.<b>
+	Všetky údaje sú neviazané a bez záväzkov. Časti stánok alebo kompletná publikácia obsahujúca všetky údaje a infomácie môžu byť ozšíené, zmenené, čiastočne alebo úplne vymazané bez akéhokoľvek oznámenia.</p>
+	<p><stong>2. Odkazy</stong><b>
+	Auto nie je zodpovedný za akýkoľvek obsah odkazovaný z jeho stánok - pokým nemá plné vedomosti o ilegálnom obsahu - Auto môže zabániť návštevníkom pístup do týchto stánok. Ak vznikne škoda spôsobená používaním infomácií pezentovaných na tejto stánke, iba auto píslušných stánok nesie zodpovednosť, nie ten, kto odkazoval na tieto stánky. Okem toho, auto nie je zodpovedný za píspevky alebo spávy publikované užívateľmi diskusných fó alebo návštevných kníh.</p>
+	<p><stong>3. Copyight</stong><b>
+	Auto by nemal používať akýkoľvek mateiál nad ktoým je vznesený copyight, alebo ak to je možné - poukázať na copyight na píslušnom mieste. Pe mateiál vytvoený autoom sú všetky páva vyhadené. Akákoľvek duplikácia objektov ako obázkov, diagamov, zvukových, textových alebo akýchkoľvek elektonických či pintových publikácií je zakázaná bez súhlasu autoa.</p>
+	<p><stong>4. Ochana súkomia</stong><b>
+	Ak je daná možnosť zadania osobných alebo pacovných infomácií (e-mailová adesa, meno, adesa), vstup týchto dát sa uskutočňuje dobovoľne. Použitie a platby za poskytnuté služby sú pípustné - ak je to technicky možné - bez špecifikácie akýchkoľvek osobných údajov alebo špecifikácie pomocou anonymizovaných údajov alebo aliasov. Použitie publikovaných poštových adies, telefónnych alebo faxových čísel a emailových adies pe maketingové účely je zakázané. Páchateľ ktoý odosiela nevyžiadanú poštu (spam) bude potestaný.</p>
+	<p><stong>5. Pávna platnosť tohto vyhlásenia</stong><b>
+	Toto vyhlásenie je považované za časť intenetovej publikácie. Ak časti alebo jednotlivé výazy tohto pehlásenia nie sú platné alebo spávne, spávnosť ostatných častí zostáva nedotknutá.</p>',
+	'impint'=>'Impint',
+	'mods'=>'Modeáto:',
+	'esponsible_pesons'=>'zodpovedné osoby',
+	'webmaste'=>'Webmaste:'
 );
 ?>

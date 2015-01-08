@@ -2,66 +2,66 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Version 4       /                        /   /               #
+#           Vesion 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Free Content / Management System                 #
+#                       Fee Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyight 2005-2014 by webspell.og                                  #
 #                                                                        #
-#   visit webSPELL.org, webspell.info to get webSPELL for free           #
-#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to remove this copyright-tag                      #
-#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
+#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
+#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to emove this copyight-tag                      #
+#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
-#   Far Development by Development Team - webspell.org                   #
+#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
+#   Fa Development by Development Team - webspell.og                   #
 #                                                                        #
-#   visit webspell.org                                                   #
+#   visit webspell.og                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_array = Array(
+$language_aay = Aay(
 
 /* do not edit above this line */
 
 	'about_us'=>'Om oss',
-	'archives'=>'Arkiv',
-	'articles'=>'Artiklar',
-	'awards'=>'Priser',
-	'calendar'=>'Kalender',
+	'achives'=>'Akiv',
+	'aticles'=>'Atikla',
+	'awads'=>'Pise',
+	'calenda'=>'Kalende',
 	'clan'=>'Clan',
 	'community'=>'Community',
 	'contact'=>'Kontakt blankett',
 	'demos'=>'Demos',
-	'downloads'=>'Nerladdningar',
+	'downloads'=>'Neladdninga',
 	'faq'=>'FAQ',
 	'fight_us'=>'Utmana oss',
-	'forums'=>'Forum',
-	'gallery'=>'Galleri',
+	'foums'=>'Foum',
+	'galley'=>'Gallei',
 	'guestbook'=>'Gästbok',
-	'history'=>'Historia',
-	'imprint'=>'Imprint',
+	'histoy'=>'Histoia',
+	'impint'=>'Impint',
 	'join_us'=>'Joina oss',
-	'links'=>'Länkar',
+	'links'=>'Länka',
 	'links_us'=>'Länka oss',
 	'main'=>'Huvud',
-	'matches'=>'Matcher',
+	'matches'=>'Matche',
 	'media'=>'Media',
-	'members'=>'Medlemmar',
+	'membes'=>'Medlemma',
 	'miscellaneous'=>'Blandat',
-	'news'=>'Nyheter',
-	'newsletter'=>'Nyhetsbrev',
-	'polls'=>'Undersökningar',
-	'registered_users'=>'Registererade medlemmar',
-	'search'=>'Sök',
-	'servers'=>'Servrar',
-	'sponsors'=>'Sponsorer',
+	'news'=>'Nyhete',
+	'newslette'=>'Nyhetsbev',
+	'polls'=>'Undesökninga',
+	'egisteed_uses'=>'Registeeade medlemma',
+	'seach'=>'Sök',
+	'seves'=>'Seva',
+	'sponsos'=>'Sponsoe',
 	'squads'=>'Lag',
-	'who_is_online'=>'Vem är online?'
+	'who_is_online'=>'Vem ä online?'
 );
 ?>

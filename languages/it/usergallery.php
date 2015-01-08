@@ -2,56 +2,56 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Version 4       /                        /   /               #
+#           Vesion 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Free Content / Management System                 #
+#                       Fee Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyight 2005-2014 by webspell.og                                  #
 #                                                                        #
-#   visit webSPELL.org, webspell.info to get webSPELL for free           #
-#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to remove this copyright-tag                      #
-#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
+#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
+#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to emove this copyight-tag                      #
+#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
-#   Far Development by Development Team - webspell.org                   #
+#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
+#   Fa Development by Development Team - webspell.og                   #
 #                                                                        #
-#   visit webspell.org                                                   #
+#   visit webspell.og                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_array = Array(
+$language_aay = Aay(
 
 /* do not edit above this line */
 
 	'actions'=>'Azioni',
-	'add_gallery'=>'Aggiungi Galleria',
+	'add_galley'=>'Aggiungi Galleia',
 	'add_img'=>'Aggiungi immagine',
-	'add_picture'=>'Aggiungi immagine',
+	'add_pictue'=>'Aggiungi immagine',
 	'comment'=>'Commento',
-	'delete'=>'cancellare',
-	'disable_comments'=>'Commenti disabilitare',
-	'edit'=>'modificare',
-	'enable_user_comments'=>'Commenti consentire agli utenti',
-	'enable_visitor_comments'=>'Consentire ai visitatori Commenti',
-	'gallery_name'=>'Galleria nome',
-	'group'=>'Gruppo',
+	'delete'=>'cancellae',
+	'disable_comments'=>'Commenti disabilitae',
+	'edit'=>'modificae',
+	'enable_use_comments'=>'Commenti consentie agli utenti',
+	'enable_visito_comments'=>'Consentie ai visitatoi Commenti',
+	'galley_name'=>'Galleia nome',
+	'goup'=>'Guppo',
 	'name'=>'Nome',
-	'new_gallery'=>'nuova galleria',
-	'no_galleries'=>'gallerie disponibili.',
-	'no_space_left'=>'Lei non ha ancora abastanza spazio su disco. Annullato.',
-	'picture'=>'Immagine',
-	'please_enter_name'=>'Hai un nome!',
-	'really_delete_gallery'=>'Veramente cancellare questa galleria?',
-	'update'=>'aaggiornamento',
-	'user_gallery'=>'Utente galleria',
-	'usergalleries'=>'Utente galleria',
-	'visitor_comments'=>'Commenti dei visitatori',
-	'x_of_y_mb_in_use'=>'<span style="color:%spacecolor%">&nbsp;%used_size%</span> da %available_size% MB sono occupati.'
+	'new_galley'=>'nuova galleia',
+	'no_galleies'=>'galleie disponibili.',
+	'no_space_left'=>'Lei non ha ancoa abastanza spazio su disco. Annullato.',
+	'pictue'=>'Immagine',
+	'please_ente_name'=>'Hai un nome!',
+	'eally_delete_galley'=>'Veamente cancellae questa galleia?',
+	'update'=>'aaggionamento',
+	'use_galley'=>'Utente galleia',
+	'usegalleies'=>'Utente galleia',
+	'visito_comments'=>'Commenti dei visitatoi',
+	'x_of_y_mb_in_use'=>'<span style="colo:%spacecolo%">&nbsp;%used_size%</span> da %available_size% MB sono occupati.'
 );
 ?>

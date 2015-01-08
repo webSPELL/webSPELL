@@ -2,51 +2,51 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Version 4       /                        /   /               #
+#           Vesion 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Free Content / Management System                 #
+#                       Fee Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyight 2005-2014 by webspell.og                                  #
 #                                                                        #
-#   visit webSPELL.org, webspell.info to get webSPELL for free           #
-#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to remove this copyright-tag                      #
-#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
+#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
+#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to emove this copyight-tag                      #
+#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
-#   Far Development by Development Team - webspell.org                   #
+#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
+#   Fa Development by Development Team - webspell.og                   #
 #                                                                        #
-#   visit webspell.org                                                   #
+#   visit webspell.og                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_array = Array(
+$language_aay = Aay(
 
 /* do not edit above this line */
 
-	'email_failed'=>'Er was een probleem tijdens het verzenden van de mail. Neem aub. contact op met de webmaster.',
-	'email_subject'=>'Je account voor %pagetitle%',
-	'email_text'=>'Je account voor %pagetitle%
-BELANGRIJK je wachtwoord is gewijzigd
+	'email_failed'=>'E was een pobleem tijdens het vezenden van de mail. Neem aub. contact op met de webmaste.',
+	'email_subject'=>'Je account voo %pagetitle%',
+	'email_text'=>'Je account voo %pagetitle%
+BELANGRIJK je wachtwood is gewijzigd
 
-je gebruikersnaam: %username%
-je nieuwe wachtwoord: %new_password%
+je gebuikesnaam: %usename%
+je nieuwe wachtwood: %new_passwod%
 
-nog veel plezier op onze site
-%homepage_url%',
-	'get_password'=>'haal wachtwoord op',
-	'lost_password'=>'wachtwoord vergeten',
-	'no_mail_given'=>'You have not entered any mail adress.',
-	'no_user_found'=>'geen gebruiker gevonden!',
-	'successful'=>'Je account is gevonden<br><br>
-	zal een mailtje krijgen met je accountgegevens in een paar seconden.<br><br>
-	&#8226; <a href="index.php?site=login">log in</a>',
-	'your_email'=>'Je E-Mail'
+nog veel plezie op onze site
+%homepage_ul%',
+	'get_passwod'=>'haal wachtwood op',
+	'lost_passwod'=>'wachtwood vegeten',
+	'no_mail_given'=>'You have not enteed any mail adess.',
+	'no_use_found'=>'geen gebuike gevonden!',
+	'successful'=>'Je account is gevonden<b><b>
+	zal een mailtje kijgen met je accountgegevens in een paa seconden.<b><b>
+	&#8226; <a hef="index.php?site=login">log in</a>',
+	'you_email'=>'Je E-Mail'
 
 );
 ?>

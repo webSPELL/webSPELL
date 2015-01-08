@@ -2,60 +2,60 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Version 4       /                        /   /               #
+#           Vesion 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Free Content / Management System                 #
+#                       Fee Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyight 2005-2014 by webspell.og                                  #
 #                                                                        #
-#   visit webSPELL.org, webspell.info to get webSPELL for free           #
-#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to remove this copyright-tag                      #
-#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
+#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
+#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to emove this copyight-tag                      #
+#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
-#   Far Development by Development Team - webspell.org                   #
+#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
+#   Fa Development by Development Team - webspell.og                   #
 #                                                                        #
-#   visit webspell.org                                                   #
+#   visit webspell.og                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_array = Array(
+$language_aay = Aay(
 
 /* do not edit above this line */
 
-	'additional_info'=>'Papildoma informacija (Kodel mes turetume tave paimti į narius...)',
+	'additional_info'=>'Papildoma infomacija (Kodel mes tuetume tave paimti į naius...)',
 	'age'=>'Amžius',
-	'back_to_form'=>'Grįžti į formą',
+	'back_to_fom'=>'Gįžti į fomą',
 	'city'=>'Miestas',
-	'clan_history'=>'Klano istorija',
-	'email_not_valid'=>'Įvestas blogas e-pašto adresas!',
-	'forgot_age'=>'Jokio amžiaus neįvesta!',
-	'forgot_city'=>'Neįrašėte miesto!',
-	'forgot_history'=>'Jokio klano istorijos nėra!',
-	'forgot_messenger'=>'Nėra jokių susisiekimo būdų (ICQ, AIM ir t.t...) įvesta!',
-	'forgot_nickname'=>'Jūs pamiršote savo slapyvardį!',
-	'forgot_realname'=>'Jūs pamiršote savo vardą!',
-	'icq_msn'=>'ICQ/MSN/ ir t.t...',
-	'info'=>'Papildoma Informacija',
-	'joinus_form'=>'Prisijungimo forma',
+	'clan_histoy'=>'Klano istoija',
+	'email_not_valid'=>'Įvestas blogas e-pašto adesas!',
+	'fogot_age'=>'Jokio amžiaus neįvesta!',
+	'fogot_city'=>'Neįašėte miesto!',
+	'fogot_histoy'=>'Jokio klano istoijos nėa!',
+	'fogot_messenge'=>'Nėa jokių susisiekimo būdų (ICQ, AIM i t.t...) įvesta!',
+	'fogot_nickname'=>'Jūs pamišote savo slapyvadį!',
+	'fogot_ealname'=>'Jūs pamišote savo vadą!',
+	'icq_msn'=>'ICQ/MSN/ i t.t...',
+	'info'=>'Papildoma Infomacija',
+	'joinus_fom'=>'Pisijungimo foma',
 	'mail'=>'E-Paštas',
-	'messenger'=>'Pranešiklis',
+	'messenge'=>'Panešiklis',
 	'message_title'=>'Join us',
-	'name'=>'Vardas',
-	'nick'=>'Slapyvardis',
-	'problems'=>'Tęsiant atsitiko klaidų, bandat įrašyti jūsų duomenis',
-	'security_code'=>'Apsaugos kodas',
+	'name'=>'Vadas',
+	'nick'=>'Slapyvadis',
+	'poblems'=>'Tęsiant atsitiko klaidų, bandat įašyti jūsų duomenis',
+	'secuity_code'=>'Apsaugos kodas',
 	'send'=>'Pateikti',
-	'someone_want_to_join_your_squad'=>'Kažkas nori įstoti į jūsų būrį:',
-	'squad'=>'Būrys',
-	'thanks_you_will_get_mail'=>'Ačiū už jūsų užpildytą formą, mes jums parašysime.',
-	'title_join_us'=>'Tapo nariu',
-	'wrong_security_code'=>'Apsaugos kodas blogas!'
+	'someone_want_to_join_you_squad'=>'Kažkas noi įstoti į jūsų būį:',
+	'squad'=>'Būys',
+	'thanks_you_will_get_mail'=>'Ačiū už jūsų užpildytą fomą, mes jums paašysime.',
+	'title_join_us'=>'Tapo naiu',
+	'wong_secuity_code'=>'Apsaugos kodas blogas!'
 );
 ?>

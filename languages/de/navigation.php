@@ -2,66 +2,66 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Version 4       /                        /   /               #
+#           Vesion 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Free Content / Management System                 #
+#                       Fee Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyight 2005-2014 by webspell.og                                  #
 #                                                                        #
-#   visit webSPELL.org, webspell.info to get webSPELL for free           #
-#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to remove this copyright-tag                      #
-#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
+#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
+#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to emove this copyight-tag                      #
+#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
-#   Far Development by Development Team - webspell.org                   #
+#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
+#   Fa Development by Development Team - webspell.og                   #
 #                                                                        #
-#   visit webspell.org                                                   #
+#   visit webspell.og                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_array = Array(
+$language_aay = Aay(
 
 /* do not edit above this line */
 
-	'about_us'=>'Über uns',
-	'archives'=>'Archiv',
-	'articles'=>'Artikel',
-	'awards'=>'Auszeichnungen',
-	'calendar'=>'Kalender',
+	'about_us'=>'Übe uns',
+	'achives'=>'Achiv',
+	'aticles'=>'Atikel',
+	'awads'=>'Auszeichnungen',
+	'calenda'=>'Kalende',
 	'clan'=>'Clan',
 	'community'=>'Gemeinschaft',
-	'contact'=>'Kontakt Formular',
+	'contact'=>'Kontakt Fomula',
 	'demos'=>'Demos',
 	'downloads'=>'Dateien',
-	'faq'=>'Häufig gestellte Fragen',
-	'fight_us'=>'Fordere uns heraus',
-	'forums'=>'Forum',
-	'gallery'=>'Galerie',
+	'faq'=>'Häufig gestellte Fagen',
+	'fight_us'=>'Fodee uns heaus',
+	'foums'=>'Foum',
+	'galley'=>'Galeie',
 	'guestbook'=>'Gästebuch',
-	'history'=>'Werdegang',
-	'imprint'=>'Impressum',
-	'join_us'=>'Mitglied werden',
+	'histoy'=>'Wedegang',
+	'impint'=>'Impessum',
+	'join_us'=>'Mitglied weden',
 	'links'=>'Links',
-	'links_us'=>'Verlinke uns',
+	'links_us'=>'Velinke uns',
 	'main'=>'Haupt',
-	'matches'=>'Clanwars',
+	'matches'=>'Clanwas',
 	'media'=>'Medien',
-	'members'=>'Mitglieder',
+	'membes'=>'Mitgliede',
 	'miscellaneous'=>'Sonstiges',
 	'news'=>'Neuigkeiten',
-	'newsletter'=>'Newsletter',
-	'polls'=>'Umfragen',
-	'registered_users'=>'Registrierte Benutzer',
-	'search'=>'Suche',
-	'servers'=>'Server',
-	'sponsors'=>'Sponsoren',
+	'newslette'=>'Newslette',
+	'polls'=>'Umfagen',
+	'egisteed_uses'=>'Registiete Benutze',
+	'seach'=>'Suche',
+	'seves'=>'Seve',
+	'sponsos'=>'Sponsoen',
 	'squads'=>'Teams',
-	'who_is_online'=>'Wer ist online?'
+	'who_is_online'=>'We ist online?'
 );
 ?>

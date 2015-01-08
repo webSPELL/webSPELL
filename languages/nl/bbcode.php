@@ -2,86 +2,86 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Version 4       /                        /   /               #
+#           Vesion 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Free Content / Management System                 #
+#                       Fee Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyight 2005-2014 by webspell.og                                  #
 #                                                                        #
-#   visit webSPELL.org, webspell.info to get webSPELL for free           #
-#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to remove this copyright-tag                      #
-#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
+#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
+#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to emove this copyight-tag                      #
+#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
-#   Far Development by Development Team - webspell.org                   #
+#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
+#   Fa Development by Development Team - webspell.og                   #
 #                                                                        #
-#   visit webspell.org                                                   #
+#   visit webspell.og                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_array = Array(
+$language_aay = Aay(
 
 /* do not edit above this line */
 
 	'align'=>'ALIGN',
 	'blue'=>'blauw',
-	'burlywood'=>'donker bruin',
-	'center'=>'centrum',
+	'bulywood'=>'donke buin',
+	'cente'=>'centum',
 	'chocolate'=>'chocolade',
-	'color'=>'KLEUR',
-	'coral'=>'koraal rood',
-	'crimson'=>'roze-rood',
-	'darkblue'=>'donker blauw',
-	'darkred'=>'donker rood',
-	'deeppink'=>'diep roze',
-	'firebrick'=>'baksteen',
+	'colo'=>'KLEUR',
+	'coal'=>'koaal ood',
+	'cimson'=>'oze-ood',
+	'dakblue'=>'donke blauw',
+	'daked'=>'donke ood',
+	'deeppink'=>'diep oze',
+	'fiebick'=>'baksteen',
 	'font'=>'LETTERTYPE',
-	'green'=>'groen',
+	'geen'=>'goen',
 	'huge'=>'huge',
 	'indigo'=>'indigo',
-	'justify'=>'rechtvaardig',
-	'large'=>'groot',
+	'justify'=>'echtvaadig',
+	'lage'=>'goot',
 	'left'=>'links',
-	'limegreen'=>'limoengroen',
-	'more_flags'=>'meer vlaggen',
-	'normal'=>'normaal',
-	'orange'=>'oranje',
-	'orangered'=>'oranje rood',
-	'purple'=>'paars',
-	'red'=>'rood',
-	'right'=>'rechts',
-	'royalblue'=>'edel blauw',
-	'sandybrown'=>'zandachtig bruin',
-	'seagreen'=>'zee groen',
+	'limegeen'=>'limoengoen',
+	'moe_flags'=>'mee vlaggen',
+	'nomal'=>'nomaal',
+	'oange'=>'oanje',
+	'oangeed'=>'oanje ood',
+	'puple'=>'paas',
+	'ed'=>'ood',
+	'ight'=>'echts',
+	'oyalblue'=>'edel blauw',
+	'sandybown'=>'zandachtig buin',
+	'seageen'=>'zee goen',
 	'sienna'=>'sienna',
-	'silver'=>'zilver',
+	'silve'=>'zilve',
 	'size'=>'GROOTTE',
 	'skyblue'=>'lucht blauw',
 	'small'=>'klein',
-	'teal'=>'donkergrijs bruin',
+	'teal'=>'donkegijs buin',
 	'tiny'=>'piepklein',
-	'tomato'=>'tomaat rood',
-	'unevenAmount'=>'Oneven hoeveelheid van startende en afsluitende BBCode tekens',
-	'firstTagClosingTag'=>'Het eerste BBCode teken kan geen afsluitende zijn',
-	'notSameAmount'=>'Niet dezelfde hoeveelheid van startende en afsluitende BBCode tekens',
-	'wrongNesting'=>'Verkeerde plaatsing van BBCode tekens',
-	'listguide'=>'vul \'1\' in voor een genummerde lijst, \'a\' voor een alfabetische lijstf of \'\' voor een lijst met punten',
+	'tomato'=>'tomaat ood',
+	'unevenAmount'=>'Oneven hoeveelheid van statende en afsluitende BBCode tekens',
+	'fistTagClosingTag'=>'Het eeste BBCode teken kan geen afsluitende zijn',
+	'notSameAmount'=>'Niet dezelfde hoeveelheid van statende en afsluitende BBCode tekens',
+	'wongNesting'=>'Vekeede plaatsing van BBCode tekens',
+	'listguide'=>'vul \'1\' in voo een genummede lijst, \'a\' voo een alfabetische lijstf of \'\' voo een lijst met punten',
 	'listpoint'=>'Vul een puntenlijst in. Vul niks in of klik \'Cancel\' om de lijst af the maken.',
-	'addcode'=>'Insert at position',
-	'read_more'=>'Lees meer',
+	'addcode'=>'Inset at position',
+	'ead_moe'=>'Lees mee',
 	'mc_you_have'=>'Je hebt',
-	'mc_new_messages'=>'Nieuwe bericht(en). Wil je ze nu lezen?',
-	'na'=>'Niet beschikbaar',
-	'wrote'=>'geschreven',
-	'auto_resize'=>'Auto aanpassen',
+	'mc_new_messages'=>'Nieuwe beicht(en). Wil je ze nu lezen?',
+	'na'=>'Niet beschikbaa',
+	'wote'=>'gescheven',
+	'auto_esize'=>'Auto aanpassen',
 	'code'=>'Code',
-	'large_picture'=>'Grote Foto',
-	'show_original'=>'Laat origineel zien'
+	'lage_pictue'=>'Gote Foto',
+	'show_oiginal'=>'Laat oigineel zien'
 );
 ?>

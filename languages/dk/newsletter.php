@@ -2,54 +2,54 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Version 4       /                        /   /               #
+#           Vesion 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Free Content / Management System                 #
+#                       Fee Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyight 2005-2014 by webspell.og                                  #
 #                                                                        #
-#   visit webSPELL.org, webspell.info to get webSPELL for free           #
-#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to remove this copyright-tag                      #
-#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
+#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
+#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to emove this copyight-tag                      #
+#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
-#   Far Development by Development Team - webspell.org                   #
+#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
+#   Fa Development by Development Team - webspell.og                   #
 #                                                                        #
-#   visit webspell.org                                                   #
+#   visit webspell.og                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_array = Array(
+$language_aay = Aay(
 
 /* do not edit above this line */
 
-	'del_from_mail_list'=>'Slet mail fra listen',
+	'del_fom_mail_list'=>'Slet mail fa listen',
 	'del_key'=>'slet-n�gle',
 	'delete'=>'slet',
 	'deletion_key'=>'Sletten�glen',
-	'email_not_valid'=>'Din e-mail er ugyldig!',
+	'email_not_valid'=>'Din e-mail e ugyldig!',
 	'lost_deletion_key'=>'Mistet sletten�glen?',
-	'mail_adress'=>'mail adresse',
-	'mail_pw_didnt_match'=>'Mailen/kodeordet stemmer ikke.',
-	'mail_not_in_db'=>'Den indtastede email adresse findes ikke i vores database.',
-	'newsletter'=>'Nyhedsbreve',
-	'newsletter_registration'=>'Nyhedsbreve registrering',
-	'no_such_mail_adress'=>'Emailadressen findes ikke her.',
-	'password_had_been_send'=>'Kodeordet er blevet sendt.',
-	'register_newsletter'=>'Registrer for nyhedsbreve',
-	'request_mail'=>'<b>Du har brug for din sletten�gle!</b><br><br>For at fjerne din email fra mail-listen, klik <a href="http://%homepage_url%/index.php?site=newsletter&mail=%mail%&pass=%delete_key%">her</a><br>Dit kodeord for at slette dig selv: %delete_key%<br><br>Vi ses hos %homepage_url%',
+	'mail_adess'=>'mail adesse',
+	'mail_pw_didnt_match'=>'Mailen/kodeodet stemme ikke.',
+	'mail_not_in_db'=>'Den indtastede email adesse findes ikke i voes database.',
+	'newslette'=>'Nyhedsbeve',
+	'newslette_egistation'=>'Nyhedsbeve egisteing',
+	'no_such_mail_adess'=>'Emailadessen findes ikke he.',
+	'passwod_had_been_send'=>'Kodeodet e blevet sendt.',
+	'egiste_newslette'=>'Registe fo nyhedsbeve',
+	'equest_mail'=>'<b>Du ha bug fo din sletten�gle!</b><b><b>Fo at fjene din email fa mail-listen, klik <a hef="http://%homepage_ul%/index.php?site=newslette&mail=%mail%&pass=%delete_key%">he</a><b>Dit kodeod fo at slette dig selv: %delete_key%<b><b>Vi ses hos %homepage_ul%',
 	'send'=>'send',
 	'submit'=>'Godkend',
-	'success_mail'=>'<b>Tak for din registrering!</b><br><br>For at fjerne din email fra mail-listen, klik <a href="http://%homepage_url%/index.php?site=newsletter&mail=%mail%&pass=%delete_key%">her</a><br>Dit kodeord for at slette dig selv: %delete_key%<br><br>Vi ses hos %homepage_url%',
-	'thank_you_for_registration'=>'Tak for din registrering.',
-	'you_are_already_registered'=>'Du er allerede registreret.',
-	'your_mail_adress'=>'Din mail adresse',
-	'your_mail_adress_deleted'=>'Din mail er blevet slettet.'
+	'success_mail'=>'<b>Tak fo din egisteing!</b><b><b>Fo at fjene din email fa mail-listen, klik <a hef="http://%homepage_ul%/index.php?site=newslette&mail=%mail%&pass=%delete_key%">he</a><b>Dit kodeod fo at slette dig selv: %delete_key%<b><b>Vi ses hos %homepage_ul%',
+	'thank_you_fo_egistation'=>'Tak fo din egisteing.',
+	'you_ae_aleady_egisteed'=>'Du e alleede egisteet.',
+	'you_mail_adess'=>'Din mail adesse',
+	'you_mail_adess_deleted'=>'Din mail e blevet slettet.'
 );
 ?>

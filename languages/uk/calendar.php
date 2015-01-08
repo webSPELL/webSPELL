@@ -2,60 +2,60 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Version 4       /                        /   /               #
+#           Vesion 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Free Content / Management System                 #
+#                       Fee Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyight 2005-2014 by webspell.og                                  #
 #                                                                        #
-#   visit webSPELL.org, webspell.info to get webSPELL for free           #
-#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to remove this copyright-tag                      #
-#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
+#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
+#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to emove this copyight-tag                      #
+#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
-#   Far Development by Development Team - webspell.org                   #
+#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
+#   Fa Development by Development Team - webspell.og                   #
 #                                                                        #
-#   visit webspell.org                                                   #
+#   visit webspell.og                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_array = Array(
+$language_aay = Aay(
 
 /* do not edit above this line */
 
-	'access_member'=>'only visible to team members',
-	'add_clanwar'=>'Add clanwar',
-	'add_clanwars'=>'add to clanwars',
+	'access_membe'=>'only visible to team membes',
+	'add_clanwa'=>'Add clanwa',
+	'add_clanwas'=>'add to clanwas',
 	'add_event'=>'Add event',
-	'announce_here'=>'apply here',
-	'announce_to'=>'Apply for this Clanwar/Event:',
+	'announce_hee'=>'apply hee',
+	'announce_to'=>'Apply fo this Clanwa/Event:',
 	'announcements'=>'Applies:',
-	'apr'=>'April',
+	'ap'=>'Apil',
 	'aug'=>'August',
-	'calendar'=>'calendar',
-	'clanwardetails'=>'Clanwar details',
-	'clanwar_message'=>'new upcoming clanwar on %date%:[br][br]Opponent: [flag]%opponent_flag%[/flag] [url=%opp_hp%]%opponent%[/url] [br]League: [url=%league_hp%]%league%[/url] [br]Info: %warinfo%[br][br][url=index.php?site=calendar]link to calendar[/url]',
-	'clanwar_message_title'=>'new upcoming war in calendar!',
+	'calenda'=>'calenda',
+	'clanwadetails'=>'Clanwa details',
+	'clanwa_message'=>'new upcoming clanwa on %date%:[b][b]Opponent: [flag]%opponent_flag%[/flag] [ul=%opp_hp%]%opponent%[/ul] [b]League: [ul=%league_hp%]%league%[/ul] [b]Info: %wainfo%[b][b][ul=index.php?site=calenda]link to calenda[/ul]',
+	'clanwa_message_title'=>'new upcoming wa in calenda!',
 	'date_time'=>'Date - Time',
-	'dec'=>'December',
+	'dec'=>'Decembe',
 	'delete'=>'delete',
-	'displayed_in'=>'displayed in the calendar',
+	'displayed_in'=>'displayed in the calenda',
 	'edit'=>'edit',
 	'editevent'=>'Edit event',
-	'editwar'=>'Edit clanwar',
+	'editwa'=>'Edit clanwa',
 	'end_datetime'=>'End: Date - Time',
 	'eventdetails'=>'Event details',
-	'feb'=>'February',
-	'fri'=>'Fri',
+	'feb'=>'Febuay',
+	'fi'=>'Fi',
 	'homepage'=>'Homepage:',
-	'information'=>'Information',
-	'jan'=>'January',
+	'infomation'=>'Infomation',
+	'jan'=>'Januay',
 	'jul'=>'July',
 	'jun'=>'June',
 	'league'=>'League',
@@ -63,45 +63,45 @@ $language_array = Array(
 	'location'=>'Location:',
 	'longtitle'=>'Long title',
 	'maps'=>'Maps',
-	'mar'=>'March',
+	'ma'=>'Mach',
 	'may'=>'May',
 	'mon'=>'Mon',
 	'new_date'=>'New event',
-	'new_war'=>'Announce new clanwar',
+	'new_wa'=>'Announce new clanwa',
 	'no'=>'No',
 	'no_access'=>'Access denied',
-	'no_announced'=>'no one applied so far',
-	'no_entries'=>'no entries for today available',
+	'no_announced'=>'no one applied so fa',
+	'no_enties'=>'no enties fo today available',
 	'no_text'=>'No text available',
-	'nov'=>'November',
-	'oct'=>'October',
+	'nov'=>'Novembe',
+	'oct'=>'Octobe',
 	'opponent'=>'Opponent',
-	'opponentcountry'=>'Opponent country',
+	'opponentcounty'=>'Opponent county',
 	'opponenthp'=>'Opponent homepage',
 	'opponenttag'=>'Opponent clantag',
-	'perhaps'=>'Maybe',
-  'really_delete'=>'Really delete this entry?',
+	'pehaps'=>'Maybe',
+  'eally_delete'=>'Really delete this enty?',
 	'sat'=>'Sat',
 	'save_announcement'=>'Save announcement',
 	'save_event'=>'Save event',
-	'save_war'=>'Save clanwar announcement',
-	'send_message'=>'send message to all players of the team',
-	'sep'=>'September',
-	'server'=>'Server',
-	'shorttitle'=>'Short title',
+	'save_wa'=>'Save clanwa announcement',
+	'send_message'=>'send message to all playes of the team',
+	'sep'=>'Septembe',
+	'seve'=>'Seve',
+	'shottitle'=>'Shot title',
 	'squad'=>'Team',
-	'start_datetime'=>'Start: Date - Time',
+	'stat_datetime'=>'Stat: Date - Time',
 	'sun'=>'Sun',
 	'thu'=>'Thu',
 	'today_events'=>'Show todays events',
 	'tue'=>'Tue',
 	'updateevent'=>'Update event',
-	'updatewar'=>'Update clanwar',
+	'updatewa'=>'Update clanwa',
 	'wed'=>'Wed',
 	'yes'=>'Yes',
-	'you_have_to_be_clanmember'=>'You have to be a clanmmeber to see this.',
-	'enter_short'=>'You have not entered any short title!',
-	'enter_title'=>'You have not entered any long title!',
-	'enter_info'=>'You have not entered any information!'
+	'you_have_to_be_clanmembe'=>'You have to be a clanmmebe to see this.',
+	'ente_shot'=>'You have not enteed any shot title!',
+	'ente_title'=>'You have not enteed any long title!',
+	'ente_info'=>'You have not enteed any infomation!'
 );
 ?>

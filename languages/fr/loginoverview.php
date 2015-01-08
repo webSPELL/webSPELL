@@ -2,70 +2,70 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Version 4       /                        /   /               #
+#           Vesion 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Free Content / Management System                 #
+#                       Fee Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyight 2005-2014 by webspell.og                                  #
 #                                                                        #
-#   visit webSPELL.org, webspell.info to get webSPELL for free           #
-#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to remove this copyright-tag                      #
-#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
+#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
+#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to emove this copyight-tag                      #
+#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
-#   Far Development by Development Team - webspell.org                   #
+#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
+#   Fa Development by Development Team - webspell.og                   #
 #                                                                        #
-#   visit webspell.org                                                   #
+#   visit webspell.og                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_array = Array(
+$language_aay = Aay(
 
 /* do not edit above this line */
 
-	'against'=>'Contre',
+	'against'=>'Conte',
 	'announce'=>'Ma disponibilité',
 	'announcement'=>'Disponibilités',
-	'back_last_page'=>'Retour à la page précédente',
-	'click'=>'Cliquer',
+	'back_last_page'=>'Retou à la page pécédente',
+	'click'=>'Clique',
 	'date'=>'Date',
-	'from'=>'Du',
+	'fom'=>'Du',
 	'info'=>'Info',
-	'last_login'=>'Dernière connexion',
+	'last_login'=>'Denièe connexion',
 	'location'=>'Lieu',
-	'messenger'=>'Messagerie',
+	'messenge'=>'Messageie',
 	'name'=>'Nom',
-	'new_in_forum'=>'Nouveau(x) sujet(s) / Nouveau(x) message(s)',
+	'new_in_foum'=>'Nouveau(x) sujet(s) / Nouveau(x) message(s)',
 	'new_posts'=>'Nouveau(x) message(s)',
 	'new_topics'=>'Nouveau(x) sujet(s)',
-	'no_entries'=>'Nouvelle(s) entrée(s)',
+	'no_enties'=>'Nouvelle(s) entée(s)',
 	'no_events'=>'Aucun événement.',
 	'no_new_messages'=>'Aucun nouveau message.',
 	'no_new_posts'=>'Aucun nouveau message.',
 	'no_new_topics'=>'Aucun nouveau sujet.',
-	'no_players_announced'=>'Aucun joueur n\'a donné sa disponibilité pour le moment',
+	'no_playes_announced'=>'Aucun joueu n\'a donné sa disponibilité pou le moment',
 	'one_new_message'=>'Il y a un nouveau message.',
-	'overview'=>'Aperçu',
-	'registered'=>'Enregistré le',
-	'replys'=>'Réponses',
+	'oveview'=>'Apeçu',
+	'egisteed'=>'Enegisté le',
+	'eplys'=>'Réponses',
 	'squad'=>'Section',
 	'until'=>'Jusqu\'au',
-	'upcoming'=>'À venir',
-	'upcoming_clanwars'=>'Prochains matchs',
-	'upcoming_events'=>'Prochains événements',
-	'user'=>'Utilisateur',
-	'userinformations'=>'Informations utilisateur',
-	'usermenu'=>'Menu utilisateur',
+	'upcoming'=>'À veni',
+	'upcoming_clanwas'=>'Pochains matchs',
+	'upcoming_events'=>'Pochains événements',
+	'use'=>'Utilisateu',
+	'useinfomations'=>'Infomations utilisateu',
+	'usemenu'=>'Menu utilisateu',
 	'views'=>'Visualisations',
 	'x_new_message'=>'Il y %new_messages% nouveau(x) message(s).',
-	'you_have_to_be_logged_in'=>'Vous devez être connecter !<br><br>
-    &#8226; <a href="index.php?site=register">S\'enregistrer</a><br>
-    &#8226; <a href="index.php?site=login">Connexion</a>'
+	'you_have_to_be_logged_in'=>'Vous devez ête connecte !<b><b>
+    &#8226; <a hef="index.php?site=egiste">S\'enegiste</a><b>
+    &#8226; <a hef="index.php?site=login">Connexion</a>'
 );
 ?>

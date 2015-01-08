@@ -2,64 +2,64 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Version 4       /                        /   /               #
+#           Vesion 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Free Content / Management System                 #
+#                       Fee Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyight 2005-2014 by webspell.og                                  #
 #                                                                        #
-#   visit webSPELL.org, webspell.info to get webSPELL for free           #
-#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to remove this copyright-tag                      #
-#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
+#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
+#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to emove this copyight-tag                      #
+#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
-#   Far Development by Development Team - webspell.org                   #
+#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
+#   Fa Development by Development Team - webspell.og                   #
 #                                                                        #
-#   visit webspell.org                                                   #
+#   visit webspell.og                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_array = Array(
+$language_aay = Aay(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Hozzáférés megtagadva',
+  'access_denied'=>'Hozzáféés megtagadva',
   'actions'=>'Lehetőségek',
-  'add_board'=>'Téma hozzáadása',
-  'add_category'=>'Új kategória',
-  'boardinfo'=>'Téma leírása',
-  'boardname'=>'Téma neve',
-  'boards'=>'Témák',
-  'category'=>'Kategória',
-  'category_info'=>'Kategória leírása',
-  'category_name'=>'Kategória neve',
-  'choose_moderators'=>'Válassz moderátorokat a témához:',
-  'delete'=>'Törlés',
-  'edit'=>'Szerkesztés',
-  'edit_board'=>'Téma szerkesztése',
-  'edit_category'=>'Kategória szerkesztése',
-  'moderators'=>'Moderátorok',
-  'mods'=>'Moderátorok',
-  'new_board'=>'Új téma',
-  'new_category'=>'Új kategória',
-  'read_right'=>'Olvasási jogosultság',
-  'read_right_info_board'=>'Ez(ek) a felhasználói csoport(ok) láthatjá(k) és olvashatjá(k) a témát.<br>Ha egyik csoport sem kerül kijelölésre, akkor a téma szabadon olvasható lesz minden látogató számára.<br>Használd a CTRL-t több csoport kijelöléséhez.',
-  'really_delete_board'=>'Biztosan törölni akarod ezt a témát?',
-  'really_delete_category'=>'Biztosan törölni akarod ezt a kategóriát?',
-  'registered_users'=>'Regisztrált felhasználók',
-  'right_info_category'=>'Ez(ek) a felhasználói csoport(ok) láthatjá(k) a kategóriát.<br>Ha egyik csoport sem kerül kijelölésre, akkor a kategóriát minden látogató látni fogja.<br>Használd a CTRL-t több csoport kijelöléséhez.',
-  'select_moderators'=>'Moderátorok kijelölése',
-  'sort'=>'Rendezés',
-  'transaction_invalid'=>'A művelet azonosítója érvénytelen',
-  'to_sort'=>'Rendezés',
+  'add_boad'=>'Téma hozzáadása',
+  'add_categoy'=>'Új kategóia',
+  'boadinfo'=>'Téma leíása',
+  'boadname'=>'Téma neve',
+  'boads'=>'Témák',
+  'categoy'=>'Kategóia',
+  'categoy_info'=>'Kategóia leíása',
+  'categoy_name'=>'Kategóia neve',
+  'choose_modeatos'=>'Válassz modeátookat a témához:',
+  'delete'=>'Tölés',
+  'edit'=>'Szekesztés',
+  'edit_boad'=>'Téma szekesztése',
+  'edit_categoy'=>'Kategóia szekesztése',
+  'modeatos'=>'Modeátook',
+  'mods'=>'Modeátook',
+  'new_boad'=>'Új téma',
+  'new_categoy'=>'Új kategóia',
+  'ead_ight'=>'Olvasási jogosultság',
+  'ead_ight_info_boad'=>'Ez(ek) a felhasználói csopot(ok) láthatjá(k) és olvashatjá(k) a témát.<b>Ha egyik csopot sem keül kijelölése, akko a téma szabadon olvasható lesz minden látogató számáa.<b>Használd a CTRL-t több csopot kijelöléséhez.',
+  'eally_delete_boad'=>'Biztosan töölni akaod ezt a témát?',
+  'eally_delete_categoy'=>'Biztosan töölni akaod ezt a kategóiát?',
+  'egisteed_uses'=>'Regisztált felhasználók',
+  'ight_info_categoy'=>'Ez(ek) a felhasználói csopot(ok) láthatjá(k) a kategóiát.<b>Ha egyik csopot sem keül kijelölése, akko a kategóiát minden látogató látni fogja.<b>Használd a CTRL-t több csopot kijelöléséhez.',
+  'select_modeatos'=>'Modeátook kijelölése',
+  'sot'=>'Rendezés',
+  'tansaction_invalid'=>'A művelet azonosítója événytelen',
+  'to_sot'=>'Rendezés',
   'unselect_all'=>'Kijelölés visszavonása',
-  'write_right'=>'Írási jogosultság',
-  'write_right_info_board'=>'Ez(ek) a felhasználói csoport(ok) írhat(nak) a témában.<br>Ha egyik csoport sem kerül kijelölésre, akkor a témába szabadon írhat minden látogató.<br>Használd a CTRL-t több csoport kijelöléséhez.'
+  'wite_ight'=>'Íási jogosultság',
+  'wite_ight_info_boad'=>'Ez(ek) a felhasználói csopot(ok) íhat(nak) a témában.<b>Ha egyik csopot sem keül kijelölése, akko a témába szabadon íhat minden látogató.<b>Használd a CTRL-t több csopot kijelöléséhez.'
 );
 ?>

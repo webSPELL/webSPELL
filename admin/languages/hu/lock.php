@@ -2,43 +2,43 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Version 4       /                        /   /               #
+#           Vesion 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Free Content / Management System                 #
+#                       Fee Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyight 2005-2014 by webspell.og                                  #
 #                                                                        #
-#   visit webSPELL.org, webspell.info to get webSPELL for free           #
-#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to remove this copyright-tag                      #
-#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
+#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
+#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to emove this copyight-tag                      #
+#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
-#   Far Development by Development Team - webspell.org                   #
+#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
+#   Fa Development by Development Team - webspell.og                   #
 #                                                                        #
-#   visit webspell.org                                                   #
+#   visit webspell.og                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_array = Array(
+$language_aay = Aay(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Hozzáférés megtagadva',
-  'lock'=>'Lezárás',
-  'locked_since'=>'Az oldal lezárásának kezdete:',
-  'pagelock'=>'Oldal lezárása',
-  'page_locked'=>'<b>Az oldal le van zárva!</b><br>Jelenleg csak az adminok léphetnek be.',
-  'page_unlocked'=>'<b>Az oldal újra nyitva!</b>',
+  'access_denied'=>'Hozzáféés megtagadva',
+  'lock'=>'Lezáás',
+  'locked_since'=>'Az oldal lezáásának kezdete:',
+  'pagelock'=>'Oldal lezáása',
+  'page_locked'=>'<b>Az oldal le van záva!</b><b>Jelenleg csak az adminok léphetnek be.',
+  'page_unlocked'=>'<b>Az oldal úja nyitva!</b>',
   'settings'=>'Beállítások',
-  'transaction_invalid'=>'A művelet azonosítója érvénytelen',
+  'tansaction_invalid'=>'A művelet azonosítója événytelen',
   'unlock'=>'Feloldás',
-  'unlock_page'=>'Biztosan meg akarod nyitni az oldalt?',
+  'unlock_page'=>'Biztosan meg akaod nyitni az oldalt?',
   'you_can_use_html'=>'Használhatsz HTML-Tageket'
 );
 ?>

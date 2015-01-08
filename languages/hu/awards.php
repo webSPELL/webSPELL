@@ -2,51 +2,51 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Version 4       /                        /   /               #
+#           Vesion 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Free Content / Management System                 #
+#                       Fee Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyight 2005-2014 by webspell.og                                  #
 #                                                                        #
-#   visit webSPELL.org, webspell.info to get webSPELL for free           #
-#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to remove this copyright-tag                      #
-#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
+#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
+#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to emove this copyight-tag                      #
+#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
-#   Far Development by Development Team - webspell.org                   #
+#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
+#   Fa Development by Development Team - webspell.og                   #
 #                                                                        #
-#   visit webspell.org                                                   #
+#   visit webspell.og                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_array = Array(
+$language_aay = Aay(
 
 /* do not edit above this line */
 
-	'award'=>'Díjak',
-	'awards'=>'díjak',
+	'awad'=>'Díjak',
+	'awads'=>'díjak',
 	'date'=>'Dátum',
-	'delete'=>'Törlés',
-	'edit'=>'Szerkesztés',
-	'edit_award'=>'Díj szerkesztése',
-	'enter_title'=>'Megg kell adnod a címet!',
-	'enter_text'=>'Meg kell adnod szöveget',
+	'delete'=>'Tölés',
+	'edit'=>'Szekesztés',
+	'edit_awad'=>'Díj szekesztése',
+	'ente_title'=>'Megg kell adnod a címet!',
+	'ente_text'=>'Meg kell adnod szöveget',
 	'event'=>'Esemény',
 	'homepage'=>'Honlap',
-	'info'=>'Információ',
-	'new_award'=>'Új díj létrehozása',
-	'no_access'=>'Nincs hozzáférhetőség!',
-	'no_entries'=>'Nincs elérhető díj',
-	'ranking'=>'Helyezés',
-	'save_award'=>'Díj mentése',
-	'sort'=>'Rendezés',
+	'info'=>'Infomáció',
+	'new_awad'=>'Új díj létehozása',
+	'no_access'=>'Nincs hozzáféhetőség!',
+	'no_enties'=>'Nincs eléhető díj',
+	'anking'=>'Helyezés',
+	'save_awad'=>'Díj mentése',
+	'sot'=>'Rendezés',
 	'squad'=>'Squad',
-	'update_award'=>'Díj frissítése'
+	'update_awad'=>'Díj fissítése'
 );
 ?>

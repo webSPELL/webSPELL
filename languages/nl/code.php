@@ -2,85 +2,85 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Version 4       /                        /   /               #
+#           Vesion 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Free Content / Management System                 #
+#                       Fee Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyight 2005-2014 by webspell.og                                  #
 #                                                                        #
-#   visit webSPELL.org, webspell.info to get webSPELL for free           #
-#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to remove this copyright-tag                      #
-#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
+#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
+#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to emove this copyight-tag                      #
+#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
-#   Far Development by Development Team - webspell.org                   #
+#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
+#   Fa Development by Development Team - webspell.og                   #
 #                                                                        #
-#   visit webspell.org                                                   #
+#   visit webspell.og                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_array = Array(
+$language_aay = Aay(
 
 /* do not edit above this line */
 
 	'_tag_if_wish'=>' teken dat je wilt, bijv.',
-	'_tags_retained'=>'tekens worden behouden tot je het weer bekijkt.',
-	'adding_image'=>'Een afbeelding toevoegen aan een bericht',
-	'all_formating_'=>'Alle formaten die gebruikt zijn',
-	'as_noted_url_'=>'Zoals genoteerd in de bovenstaande URL sectie kan je een een afbeelding omhullen in een ',
-	'back_top'=>'Terug naar Boven',
-	'bb_code_tags_color_size'=>'Voor de kleur of grootte van je tekst kunnen de volgende tags worden gebruikt. Houd wel in gedachten dat de uitkomst afhangt van de brower en systeem van de bezoeker:',
-	'bb_code_tags_text_syle'=>'BBCode beschikt voor tekens waarmee je snel de basis kunt vormen van een tekst. Dit kan op de volgende manieren:',
+	'_tags_etained'=>'tekens woden behouden tot je het wee bekijkt.',
+	'adding_image'=>'Een afbeelding toevoegen aan een beicht',
+	'all_fomating_'=>'Alle fomaten die gebuikt zijn',
+	'as_noted_ul_'=>'Zoals genoteed in de bovenstaande URL sectie kan je een een afbeelding omhullen in een ',
+	'back_top'=>'Teug naa Boven',
+	'bb_code_tags_colo_size'=>'Voo de kleu of gootte van je tekst kunnen de volgende tags woden gebuikt. Houd wel in gedachten dat de uitkomst afhangt van de bowe en systeem van de bezoeke:',
+	'bb_code_tags_text_syle'=>'BBCode beschikt voo tekens waamee je snel de basis kunt vomen van een tekst. Dit kan op de volgende manieen:',
 	'bbcode_guide'=>'BBCode Handleiding',
-	'becomes'=>'wordt',
+	'becomes'=>'wodt',
 	'blue'=>'Blauw',
-	'bold_text'=>'dikgedrukte tekst',
-	'can_combine_formatting'=>'Kan met tekens combineren?',
-	'close_tags_is_up_to_you'=>'We raden je niet aan om veel tekens in te voegen zodat het lijkt als dit! Onthoud dat degene die de tekst plaatst verantwoordelijk is.',
-	'creating_links'=>'Links maken',
-	'creating_ordered_list'=>'Geordende lijst maken',
-	'creating_unordered_list'=>'Ongeordende lijst maken',
+	'bold_text'=>'dikgedukte tekst',
+	'can_combine_fomatting'=>'Kan met tekens combineen?',
+	'close_tags_is_up_to_you'=>'We aden je niet aan om veel tekens in te voegen zodat het lijkt als dit! Onthoud dat degene die de tekst plaatst veantwoodelijk is.',
+	'ceating_links'=>'Links maken',
+	'ceating_odeed_list'=>'Geodende lijst maken',
+	'ceating_unodeed_list'=>'Ongeodende lijst maken',
 	'email_me'=>'email mij',
-	'generating_lists'=>'Een lijst genereren',
-	'good_morning'=>'Goede Morgen',
-	'great'=>'Geweldig!',
+	'geneating_lists'=>'Een lijst geneeen',
+	'good_moning'=>'Goede Mogen',
+	'geat'=>'Geweldig!',
 	'hello'=>'Hallo',
-	'how_to_change_cs'=>'Hoe wijzig je de kleur of maat van de tekst',
-	'how_to_create_biu'=>'Hoe maak je dikgedrukte, schuine en onderlijnde tekst',
+	'how_to_change_cs'=>'Hoe wijzig je de kleu of maat van de tekst',
+	'how_to_ceate_biu'=>'Hoe maak je dikgedukte, schuine en ondelijnde tekst',
 	'huge'=>'ENORM!',
 	'italic_text'=>'schuine tekst',
-	'linking_another_site'=>'Linken naar een andere site',
+	'linking_anothe_site'=>'Linken naa een andee site',
 	'look_at_me'=>'KIJK NAAR ME!',
-	'mr_blobby'=>'Mr. Blobby',
-	'or'=>'of',
+	'm_blobby'=>'M. Blobby',
+	'o'=>'of',
 	'outputting_code'=>'Uitgaande code',
-	'quoting_outputting_text'=>'Citeren en laten zien van gefixte-width tekst',
-	'quoting_replys'=>'Tekst citeren in reacties',
-	'red'=>'Rood',
-	'showing_images'=>'Afbeeldingen in berichten',
+	'quoting_outputting_text'=>'Citeen en laten zien van gefixte-width tekst',
+	'quoting_eplys'=>'Tekst citeen in eacties',
+	'ed'=>'Rood',
+	'showing_images'=>'Afbeeldingen in beichten',
 	'small'=>'KLEIN',
-	'text_formatting'=>'Tekst formateren',
-	'text_of_mr_blobby'=>'De tekst die Mr. Blobby schreef zal hier komen',
+	'text_fomatting'=>'Tekst fomateen',
+	'text_of_m_blobby'=>'De tekst die M. Blobby scheef zal hie komen',
 	'this_is_some_code'=>'Dit is een code',
-	'this_would_output'=>'dit zal eruit komen',
-	'underlined_text'=>'onderstreepte tekst',
-	'which_will_output'=>'zal eruit komen',
-	'will_be'=>'zal worden',
-	'will_become'=>'zal worden',
-	'will_both_output'=>'zullen beiden worden',
-	'will_generally_be'=>'zullen algemeen worden',
-	'would_generate'=>'zullen genereren',
-	'would_generate_link'=>'Dit zal de volgende link genereren, ',
-	'would_generate_list'=>'Dit zal de volgende lijst genereren',
+	'this_would_output'=>'dit zal euit komen',
+	'undelined_text'=>'ondesteepte tekst',
+	'which_will_output'=>'zal euit komen',
+	'will_be'=>'zal woden',
+	'will_become'=>'zal woden',
+	'will_both_output'=>'zullen beiden woden',
+	'will_geneally_be'=>'zullen algemeen woden',
+	'would_geneate'=>'zullen geneeen',
+	'would_geneate_link'=>'Dit zal de volgende link geneeen, ',
+	'would_geneate_list'=>'Dit zal de volgende lijst geneeen',
 	'would_give'=>'zal dit geven',
 	'yellow'=>'Geel',
-	'yes_can_combine'=>'Ja, natuurlijk kan dat, om iemands aandacht te krijgen kan je bijvoorbeeld dit schrijven:'
+	'yes_can_combine'=>'Ja, natuulijk kan dat, om iemands aandacht te kijgen kan je bijvoobeeld dit schijven:'
 
 );
 ?>

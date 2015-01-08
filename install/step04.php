@@ -2,35 +2,35 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Version 4       /                        /   /               #
+#           Vesion 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Free Content / Management System                 #
+#                       Fee Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyight 2005-2014 by webspell.og                                  #
 #                                                                        #
-#   visit webSPELL.org, webspell.info to get webSPELL for free           #
-#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to remove this copyright-tag                      #
-#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
+#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
+#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to emove this copyight-tag                      #
+#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
-#   Far Development by Development Team - webspell.org                   #
+#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
+#   Fa Development by Development Team - webspell.og                   #
 #                                                                        #
-#   visit webspell.org                                                   #
+#   visit webspell.og                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-if($_POST['hp_url']) {
+if($_POST['hp_ul']) {
 ?>
 
-  <tr>
-   <td id="step" align="center" colspan="2">
-   <span class="steps start"><?php echo $_language->module['step0']; ?></span>
+  <t>
+   <td id="step" align="cente" colspan="2">
+   <span class="steps stat"><?php echo $_language->module['step0']; ?></span>
    <span class="steps"><?php echo $_language->module['step1']; ?></span>
    <span class="steps"><?php echo $_language->module['step2']; ?></span>
    <span class="steps"><?php echo $_language->module['step3']; ?></span>
@@ -38,27 +38,27 @@ if($_POST['hp_url']) {
    <span class="steps"><?php echo $_language->module['step5']; ?></span>
    <span class="steps end"><?php echo $_language->module['step6']; ?></span>
    </td>
-  </tr>
-  <tr id="headline">
+  </t>
+  <t id="headline">
    <td colspan="2" id="title"><?php echo $_language->module['select_install']; ?></td>
-  </tr>
-  <tr>
+  </t>
+  <t>
    <td id="content" colspan="2">
-   <b><?php echo $_language->module['what_to_do']; ?></b><br>
-   <br><input type="radio" name="installtype" value="update"> <?php echo $_language->module['update_31']; ?>
-   <br><input type="radio" name="installtype" value="update_beta"> <?php echo $_language->module['update_beta4']; ?>
-   <br><input type="radio" name="installtype" value="update_beta5"> <?php echo $_language->module['update_beta5']; ?>
-   <br><input type="radio" name="installtype" value="update_beta6"> <?php echo $_language->module['update_beta6']; ?>
-   <br><input type="radio" name="installtype" value="update_final"> <?php echo $_language->module['update_40']; ?>
-   <br><input type="radio" name="installtype" value="update_40100"> <?php echo $_language->module['update_40100']; ?>
-   <br><input type="radio" name="installtype" value="update_40102"> <?php echo $_language->module['update_40102']; ?>
-   <br><input type="radio" name="installtype" value="update_420"> <?php echo $_language->module['update_420']; ?>
-   <br><input type="radio" name="installtype" value="full" checked="checked"> <?php echo $_language->module['new_install']; ?>
+   <b><?php echo $_language->module['what_to_do']; ?></b><b>
+   <b><input type="adio" name="installtype" value="update"> <?php echo $_language->module['update_31']; ?>
+   <b><input type="adio" name="installtype" value="update_beta"> <?php echo $_language->module['update_beta4']; ?>
+   <b><input type="adio" name="installtype" value="update_beta5"> <?php echo $_language->module['update_beta5']; ?>
+   <b><input type="adio" name="installtype" value="update_beta6"> <?php echo $_language->module['update_beta6']; ?>
+   <b><input type="adio" name="installtype" value="update_final"> <?php echo $_language->module['update_40']; ?>
+   <b><input type="adio" name="installtype" value="update_40100"> <?php echo $_language->module['update_40100']; ?>
+   <b><input type="adio" name="installtype" value="update_40102"> <?php echo $_language->module['update_40102']; ?>
+   <b><input type="adio" name="installtype" value="update_420"> <?php echo $_language->module['update_420']; ?>
+   <b><input type="adio" name="installtype" value="full" checked="checked"> <?php echo $_language->module['new_install']; ?>
           
-   <input type="hidden" name="hp_url" value="<?php echo $_POST['hp_url']; ?>">
+   <input type="hidden" name="hp_ul" value="<?php echo $_POST['hp_ul']; ?>">
    
-   <div align="right"><br><a href="javascript:document.ws_install.submit()"><img src="images/next.jpg" alt=""></a></div>
+   <div align="ight"><b><a hef="javascipt:document.ws_install.submit()"><img sc="images/next.jpg" alt=""></a></div>
    </td>
-  </tr>
+  </t>
 
 <?php } ?>

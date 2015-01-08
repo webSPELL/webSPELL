@@ -2,80 +2,80 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Version 4       /                        /   /               #
+#           Vesion 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Free Content / Management System                 #
+#                       Fee Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyight 2005-2014 by webspell.og                                  #
 #                                                                        #
-#   visit webSPELL.org, webspell.info to get webSPELL for free           #
-#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to remove this copyright-tag                      #
-#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
+#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
+#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to emove this copyight-tag                      #
+#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
-#   Far Development by Development Team - webspell.org                   #
+#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
+#   Fa Development by Development Team - webspell.og                   #
 #                                                                        #
-#   visit webspell.org                                                   #
+#   visit webspell.og                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_array = Array(
+$language_aay = Aay(
 
 /* do not edit above this line */
 
 	'all_demos'=>'Toutes les démos',
-	'allready_rated'=>'<b>Vous avez déjà évalué cette démo !</b>',
+	'alleady_ated'=>'<b>Vous avez déjà évalué cette démo !</b>',
 	'clan1'=>'Team 1',
-	'clan1_country'=>'Pays team 1',
+	'clan1_county'=>'Pays team 1',
 	'clan1_homepage'=>'Site web team 1',
 	'clan1_name'=>'Nom complet team 1',
 	'clan1_tag'=>'Tag team 1',
 	'clan2'=>'Team 2',
-	'clan2_country'=>'Pays team 2',
+	'clan2_county'=>'Pays team 2',
 	'clan2_homepage'=>'Site web team 2',
 	'clan2_name'=>'Nom complet team 2',
 	'clan2_tag'=>'Tag team 2',
 	'date'=>'Date',
-	'delete'=>'Supprimer',
+	'delete'=>'Suppime',
 	'demo_details'=>'Détails de la démo',
-	'demo_upload'=>'Envoyer une démo',
+	'demo_upload'=>'Envoye une démo',
 	'demos'=>'Démos',
-	'disable_comments'=>'Désactiver les commentaires',
-	'download'=>'Téléchargement',
-	'download_now'=>'Télécharger',
-	'downloaded'=>'Téléchargé',
-	'downloads'=>'Téléchargements',
-	'edit'=>'Editer',
-	'edit_demo'=>'Editer la démo',
-	'extern_link'=>'Lien externe',
-	'file_exists'=>'Fichier déjà existant !',
+	'disable_comments'=>'Désactive les commentaies',
+	'download'=>'Téléchagement',
+	'download_now'=>'Téléchage',
+	'downloaded'=>'Téléchagé',
+	'downloads'=>'Téléchagements',
+	'edit'=>'Edite',
+	'edit_demo'=>'Edite la démo',
+	'exten_link'=>'Lien extene',
+	'file_exists'=>'Fichie déjà existant !',
 	'game'=>'Jeu',
 	'league'=>'Ligue',
 	'league_homepage'=>'Site de la ligue',
 	'maps'=>'Maps',
 	'match'=>'Match',
 	'new_demo'=>'Nouvelle démo',
-	'no_access'=>'Accès refusé !',
+	'no_access'=>'Accès efusé !',
 	'no_demos'=>'Aucune démo.',
-	'perfect'=>'Parfait',
-	'players'=>'Joueurs',
-	'poor'=>'Nul',
-	'rate'=>'Evaluer',
-	'rate_with'=>'Choisissez une note',
-	'rating'=>'Note',
-	'save_demo'=>'Enregistrer',
-	'sort'=>'Ordre',
-	'to_download'=>'Vous devez être enregistré et connecté pour télécharger cette démo !',
-	'to_rate'=>'Vous devez être enregistré et connecté pour noter cette démo !',
-	'update_demo'=>'Editer',
-	'user_comments'=>'Activer les commentaires pour les membres',
-	'visitor_comments'=>'Activer les commentaires',
+	'pefect'=>'Pafait',
+	'playes'=>'Joueus',
+	'poo'=>'Nul',
+	'ate'=>'Evalue',
+	'ate_with'=>'Choisissez une note',
+	'ating'=>'Note',
+	'save_demo'=>'Enegiste',
+	'sot'=>'Ode',
+	'to_download'=>'Vous devez ête enegisté et connecté pou téléchage cette démo !',
+	'to_ate'=>'Vous devez ête enegisté et connecté pou note cette démo !',
+	'update_demo'=>'Edite',
+	'use_comments'=>'Active les commentaies pou les membes',
+	'visito_comments'=>'Active les commentaies',
 	'vs'=>'vs.'
 );
 ?>

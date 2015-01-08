@@ -2,56 +2,56 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Version 4       /                        /   /               #
+#           Vesion 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Free Content / Management System                 #
+#                       Fee Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyight 2005-2014 by webspell.og                                  #
 #                                                                        #
-#   visit webSPELL.org, webspell.info to get webSPELL for free           #
-#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to remove this copyright-tag                      #
-#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
+#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
+#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to emove this copyight-tag                      #
+#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
-#   Far Development by Development Team - webspell.org                   #
+#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
+#   Fa Development by Development Team - webspell.og                   #
 #                                                                        #
-#   visit webspell.org                                                   #
+#   visit webspell.og                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_array = Array(
+$language_aay = Aay(
 
 /* do not edit above this line */
 
-	'back'=>'zurück',
-	'banner'=>'Banner',
-	'banner_to_big'=>'Bild ist zu groß',
-	'categories'=>'Kategorien',
-	'category'=>'Kategorie',
+	'back'=>'zuück',
+	'banne'=>'Banne',
+	'banne_to_big'=>'Bild ist zu goß',
+	'categoies'=>'Kategoien',
+	'categoy'=>'Kategoie',
 	'delete'=>'löschen',
-	'edit'=>'ändern',
-	'edit_link'=>'Link ändern',
-	'format_incorrect'=>'nicht erlaubtes Bildformat (erlaubt: *.gif, *.jpg oder *.png)',
-	'go_back'=>'zurück',
-	'homepage'=>'Adresse',
-	'information'=>'Informationen',
+	'edit'=>'änden',
+	'edit_link'=>'Link änden',
+	'fomat_incoect'=>'nicht elaubtes Bildfomat (elaubt: *.gif, *.jpg ode *.png)',
+	'go_back'=>'zuück',
+	'homepage'=>'Adesse',
+	'infomation'=>'Infomationen',
 	'link'=>'Link',
 	'linkname'=>'Linkname',
-	'linkrubric'=>'Linkrubrik',
+	'linkubic'=>'Linkubik',
 	'links'=>'Links',
-	'new_link'=>'Neuen Link erstellen',
-	'no_access'=>'Keine Zugriffsberechtigung.',
-	'no_categories'=>'keine Kategorien vorhanden',
-	'no_links'=>'keine Links verfügbar',
-	'really_delete'=>'Diesen Link wirklich löschen?',
-	'save_link'=>'Link speichern',
-	'title_categories'=>'Link Kategorien',
-	'update_link'=>'Änderungen speichern'
+	'new_link'=>'Neuen Link estellen',
+	'no_access'=>'Keine Zugiffsbeechtigung.',
+	'no_categoies'=>'keine Kategoien vohanden',
+	'no_links'=>'keine Links vefügba',
+	'eally_delete'=>'Diesen Link wiklich löschen?',
+	'save_link'=>'Link speichen',
+	'title_categoies'=>'Link Kategoien',
+	'update_link'=>'Ändeungen speichen'
 );
 ?>

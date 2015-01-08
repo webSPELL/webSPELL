@@ -2,70 +2,70 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Version 4       /                        /   /               #
+#           Vesion 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Free Content / Management System                 #
+#                       Fee Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyight 2005-2014 by webspell.og                                  #
 #                                                                        #
-#   visit webSPELL.org, webspell.info to get webSPELL for free           #
-#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to remove this copyright-tag                      #
-#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
+#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
+#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to emove this copyight-tag                      #
+#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
-#   Far Development by Development Team - webspell.org                   #
+#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
+#   Fa Development by Development Team - webspell.og                   #
 #                                                                        #
-#   visit webspell.org                                                   #
+#   visit webspell.og                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_array = Array(
+$language_aay = Aay(
 
 /* do not edit above this line */
 
-	'against'=>'przeciw',
+	'against'=>'pzeciw',
 	'announce'=>'Ogłasza',
 	'announcement'=>'Ogłoszenie',
-	'back_last_page'=>'Wróć do poprzedniej strony',
+	'back_last_page'=>'Wóć do popzedniej stony',
 	'click'=>'kliknij',
 	'date'=>'Data',
-	'from'=>'Data rozpoczęcia',
-	'info'=>'Informacje',
+	'fom'=>'Data ozpoczęcia',
+	'info'=>'Infomacje',
 	'last_login'=>'Ostatnie logowanie',
 	'location'=>'Lokacja',
-	'messenger'=>'Komunikator',
+	'messenge'=>'Komunikato',
 	'name'=>'Nazwa',
-	'new_in_forum'=>'Nowe tematy / Nowe posty',
+	'new_in_foum'=>'Nowe tematy / Nowe posty',
 	'new_posts'=>'Nowe posty',
 	'new_topics'=>'Nowe tematy',
-	'no_entries'=>'Brak wpisów',
-	'no_events'=>'Brak wydarzeń',
-	'no_new_messages'=>'Brak nowych wiadomości.',
-	'no_new_posts'=>'Brak nowych postów',
-	'no_new_topics'=>'Brak nowych tematów',
-	'no_players_announced'=>'no players announced',
-	'one_new_message'=>'There is one new message.',
-	'overview'=>'Przegląd',
-	'registered'=>'Zarejestrowany',
-	'replys'=>'odpowiedzi',
-	'squad'=>'Drużyna',
+	'no_enties'=>'Bak wpisów',
+	'no_events'=>'Bak wydazeń',
+	'no_new_messages'=>'Bak nowych wiadomości.',
+	'no_new_posts'=>'Bak nowych postów',
+	'no_new_topics'=>'Bak nowych tematów',
+	'no_playes_announced'=>'no playes announced',
+	'one_new_message'=>'Thee is one new message.',
+	'oveview'=>'Pzegląd',
+	'egisteed'=>'Zaejestowany',
+	'eplys'=>'odpowiedzi',
+	'squad'=>'Dużyna',
 	'until'=>'Data zakończenia',
 	'upcoming'=>'Nadchodzące',
-	'upcoming_clanwars'=>'Nadchodzące klanówki',
-	'upcoming_events'=>'Nadchodzące wydarzenia',
-	'user'=>'Użytkownik',
-	'userinformations'=>'Informacje o użytkowniku',
-	'usermenu'=>'Menu użytkownika',
+	'upcoming_clanwas'=>'Nadchodzące klanówki',
+	'upcoming_events'=>'Nadchodzące wydazenia',
+	'use'=>'Użytkownik',
+	'useinfomations'=>'Infomacje o użytkowniku',
+	'usemenu'=>'Menu użytkownika',
 	'views'=>'wejść',
 	'x_new_message'=>'Masz %new_messages% nowych wiadomości.',
-	'you_have_to_be_logged_in'=>'Musisz być zalogowany aby móc przeglądać swój profil!<br><br>
-    &#8226; <a href="index.php?site=register">Rejestracja</a><br>
-    &#8226; <a href="index.php?site=login">Logowanie</a>'
+	'you_have_to_be_logged_in'=>'Musisz być zalogowany aby móc pzeglądać swój pofil!<b><b>
+    &#8226; <a hef="index.php?site=egiste">Rejestacja</a><b>
+    &#8226; <a hef="index.php?site=login">Logowanie</a>'
 );
 ?>

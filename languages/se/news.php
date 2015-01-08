@@ -2,86 +2,86 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Version 4       /                        /   /               #
+#           Vesion 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Free Content / Management System                 #
+#                       Fee Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyight 2005-2014 by webspell.og                                  #
 #                                                                        #
-#   visit webSPELL.org, webspell.info to get webSPELL for free           #
-#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to remove this copyright-tag                      #
-#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
+#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
+#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to emove this copyight-tag                      #
+#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
-#   Far Development by Development Team - webspell.org                   #
+#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
+#   Fa Development by Development Team - webspell.og                   #
 #                                                                        #
-#   visit webspell.org                                                   #
+#   visit webspell.og                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_array = Array(
+$language_aay = Aay(
 
 /* do not edit above this line */
 
-	'author'=>'Författare',
-	'bbcode'=>'BBCode är <b><u>PÅ</u></b>',
-	'cancel'=>'avbryt',
-	'comm'=>'kommentar(er)',
-	'comment'=>'<a href="$url">[1] kommentar</a>, senaste av $lastposter - $lastdate',
-	'comments'=>'<a href="$url">[$anzcomments] kommentarer</a>, senaste av $lastposter - $lastdate',
+	'autho'=>'Föfattae',
+	'bbcode'=>'BBCode ä <b><u>PÅ</u></b>',
+	'cancel'=>'avbyt',
+	'comm'=>'kommenta(e)',
+	'comment'=>'<a hef="$ul">[1] kommenta</a>, senaste av $lastposte - $lastdate',
+	'comments'=>'<a hef="$ul">[$anzcomments] kommentae</a>, senaste av $lastposte - $lastdate',
 	'date'=>'Datum',
-	'delete'=>'radera',
-	'delete_selected'=>'radera markerade',
-	'edit'=>'redigera',
-	'enter_title'=>'Du måste skriva en rubrik!',
-	'enter_text'=>'Du måste skriva text',
+	'delete'=>'adea',
+	'delete_selected'=>'adea makeade',
+	'edit'=>'edigea',
+	'ente_title'=>'Du måste skiva en ubik!',
+	'ente_text'=>'Du måste skiva text',
 	'go'=>'Gå!',
-	'headline'=>'Huvudrubrik',
-	'html'=>'HTML är <b><u>PÅ</u></b>',
-	'intern'=>'intern',
-	'languages'=>'Språk',
+	'headline'=>'Huvudubik',
+	'html'=>'HTML ä <b><u>PÅ</u></b>',
+	'inten'=>'inten',
+	'languages'=>'Spåk',
 	'link'=>'Länk',
-	'links'=>'Länkar',
+	'links'=>'Länka',
 	'new_post'=>'Nya inlägg',
-	'new_window'=>'nytt fönster',
+	'new_window'=>'nytt fönste',
 	'news'=>'Nyhet',
-	'news_archive'=>'Arkiv',
+	'news_achive'=>'Akiv',
 	'no'=>'nej',
 	'no_access'=>'ingen tillgång',
-	'no_comment'=>'<a href="$url">ingen kommentar</a>',
-	'no_comments'=>'stänga av kommentarer',
+	'no_comment'=>'<a hef="$ul">ingen kommenta</a>',
+	'no_comments'=>'stänga av kommentae',
 	'no_topnews'=>'ingen top nyhet',
 	'options'=>'Val',
-	'post_languages'=>'Nyhet i <select name="language_count" onchange="update_textarea(this.options[this.selectedIndex].value)">$selects</select> språk',
+	'post_languages'=>'Nyhet i <select name="language_count" onchange="update_textaea(this.options[this.selectedIndex].value)">$selects</select> spåk',
 	'post_news'=>'Lägg till nyhet',
-	'preview'=>'överblick',
-	'publish_now'=>'publicera nu',
-	'publish_selected'=>'publicera vald',
-  	'really_delete'=>'Vill du verkligen radera denna nyhet?',
-	'rubric'=>'Rubrik',
+	'peview'=>'öveblick',
+	'publish_now'=>'publicea nu',
+	'publish_selected'=>'publicea vald',
+  	'eally_delete'=>'Vill du vekligen adea denna nyhet?',
+	'ubic'=>'Rubik',
 	'save_news'=>'save news',
-	'select_all'=>'markera alla',
-	'self'=>'själv fönster',
+	'select_all'=>'makea alla',
+	'self'=>'själv fönste',
 	'show_news'=>'visa nyhet',
-	'smilies'=>'Smilies är <b><u>PÅ</u></b>',
-	'sort'=>'Sort:',
+	'smilies'=>'Smilies ä <b><u>PÅ</u></b>',
+	'sot'=>'Sot:',
 	'title_unpublished_news'=>'<h2>OPUBLICERADE NYHETER:</h2>',
-	'topnews'=>'top nyheter',
-	'unpublish'=>'opublicera',
-	'unpublish_selected'=>'opublicera vald',
-	'unpublished_news'=>'opublicerade nyheter',
-	'upload_images'=>'ladda upp bilder',
-	'user_comments'=>'tillåt användar kommentarer',
-	'view_more'=>'Se mer...',
-	'visitor_comments'=>'tillåt besökar kommentarer',
-	'written_by'=>'skrivet av',
+	'topnews'=>'top nyhete',
+	'unpublish'=>'opublicea',
+	'unpublish_selected'=>'opublicea vald',
+	'unpublished_news'=>'opubliceade nyhete',
+	'upload_images'=>'ladda upp bilde',
+	'use_comments'=>'tillåt använda kommentae',
+	'view_moe'=>'Se me...',
+	'visito_comments'=>'tillåt besöka kommentae',
+	'witten_by'=>'skivet av',
 	'yes'=>'Ja',
-	'tags'=>'Taggar'
+	'tags'=>'Tagga'
 );
 ?>

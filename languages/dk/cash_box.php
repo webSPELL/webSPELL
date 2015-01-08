@@ -2,64 +2,64 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Version 4       /                        /   /               #
+#           Vesion 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Free Content / Management System                 #
+#                       Fee Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyight 2005-2014 by webspell.og                                  #
 #                                                                        #
-#   visit webSPELL.org, webspell.info to get webSPELL for free           #
-#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to remove this copyright-tag                      #
-#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
+#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
+#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to emove this copyight-tag                      #
+#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
-#   Far Development by Development Team - webspell.org                   #
+#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
+#   Fa Development by Development Team - webspell.og                   #
 #                                                                        #
-#   visit webspell.org                                                   #
+#   visit webspell.og                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_array = Array(
+$language_aay = Aay(
 
 /* do not edit above this line */
 
 	'add_payment'=>'Tilføj betaling',
 	'amount'=>'mængde',
 	'bank_account'=>'bank konto',
-	'calculate'=>'beregn',
+	'calculate'=>'beegn',
 	'cash_box'=>'Pengekasse',
 	'clan'=>'klan',
-	'clanmembers_only'=>'Kun klanmedlemmer',
-	'costs_member'=>'omkostning pr. medlem',
+	'clanmembes_only'=>'Kun klanmedlemme',
+	'costs_membe'=>'omkostning p. medlem',
 	'ddmmyyyy'=>'dd.mm.åååå',
 	'delete'=>'slet',
-	'each_squad'=>'Hvert hold',
-	'edit'=>'rediger',
-	'enter_costs_member'=>'Du skal indtaste omkostning pr. medlem.',
-	'enter_date'=>'Du skal indtaste en dato.',
-	'enter_total_costs'=>'Du skal indtaste den totale omkostning.',
-	'enter_usage'=>'Du skal indtaste et brug.',
+	'each_squad'=>'Hvet hold',
+	'edit'=>'edige',
+	'ente_costs_membe'=>'Du skal indtaste omkostning p. medlem.',
+	'ente_date'=>'Du skal indtaste en dato.',
+	'ente_total_costs'=>'Du skal indtaste den totale omkostning.',
+	'ente_usage'=>'Du skal indtaste et bug.',
 	'info'=>'info',
-	'invalid_request'=>'Ugyldigt ønske',
-	'member'=>'medlem',
+	'invalid_equest'=>'Ugyldigt ønske',
+	'membe'=>'medlem',
 	'new_usage'=>'nyt ønske',
-	'no_entries'=>'ingen indlæg',
+	'no_enties'=>'ingen indlæg',
 	'not_paid'=>'Ikke betalt endnu',
 	'paid'=>'betalt',
 	'pay_until'=>'betal indtil',
-	'really_delete'=>'Vil du virkelig slette indlægget?',
+	'eally_delete'=>'Vil du vikelig slette indlægget?',
 	'saved_on'=>'Gemt den',
 	'squad'=>'Hold',
 	'submit'=>'gem',
 	'total_amount'=>'Totale mængde (klan)',
 	'total_costs'=>'totale omkostning',
-	'update'=>'opdater',
-	'usage'=>'brug'
+	'update'=>'opdate',
+	'usage'=>'bug'
 );
 ?>

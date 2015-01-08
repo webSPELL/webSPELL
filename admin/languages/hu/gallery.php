@@ -2,75 +2,75 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Version 4       /                        /   /               #
+#           Vesion 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Free Content / Management System                 #
+#                       Fee Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyight 2005-2014 by webspell.og                                  #
 #                                                                        #
-#   visit webSPELL.org, webspell.info to get webSPELL for free           #
-#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to remove this copyright-tag                      #
-#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
+#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
+#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to emove this copyight-tag                      #
+#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
-#   Far Development by Development Team - webspell.org                   #
+#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
+#   Fa Development by Development Team - webspell.og                   #
 #                                                                        #
-#   visit webspell.org                                                   #
+#   visit webspell.og                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_array = Array(
+$language_aay = Aay(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Hozzáférés megtagadva',
+  'access_denied'=>'Hozzáféés megtagadva',
   'actions'=>'Lehetőségek',
-  'add_gallery'=>'Galéria hozzáadása',
-  'add_group'=>'Kategória hozzáadása',
+  'add_galley'=>'Galéia hozzáadása',
+  'add_goup'=>'Kategóia hozzáadása',
   'add_img'=>'Kép hozzáadása',
   'comment'=>'Hozzászólás',
-  'delete'=>'Törlés',
+  'delete'=>'Tölés',
   'disable_comments'=>'Hozzászólások engedélyezése',
-  'edit_gallery'=>'Galéria szerkesztése',
-  'edit_group'=>'Kategória szerkesztése',
-  'edit'=>'Szerkesztés',
-  'enable_user_comments'=>'Csak a tagok kommentálhatják',
-  'enable_visitor_comments'=>'Mindenki kommentálhatja',
+  'edit_galley'=>'Galéia szekesztése',
+  'edit_goup'=>'Kategóia szekesztése',
+  'edit'=>'Szekesztés',
+  'enable_use_comments'=>'Csak a tagok kommentálhatják',
+  'enable_visito_comments'=>'Mindenki kommentálhatja',
   'filename'=>'Fájl neve',
-  'formular'=>'Böngészővel',
+  'fomula'=>'Böngészővel',
   'ftp'=>'FTP',
   'ftp_info'=>'Képek hozzáadásához töltsd fel FTP-n a fájlokat ide:',
-  'galleries'=>'Galériák',
-  'galleries_available'=>'Ebben a kategóriában még vannak galériák. A kategória törléséhez előbb át kell helyezned, vagy törölnöd kell ezen galériákat.',
-  'gallery'=>'Galéria',
-  'gallery_name'=>'Galéria neve',
-  'group'=>'Kategória',
-  'groups'=>'Kategóriák',
-  'group_name'=>'Kategória neve',
-  'information_incomplete'=>'Néhány információ hiányzik.',
+  'galleies'=>'Galéiák',
+  'galleies_available'=>'Ebben a kategóiában még vannak galéiák. A kategóia töléséhez előbb át kell helyezned, vagy töölnöd kell ezen galéiákat.',
+  'galley'=>'Galéia',
+  'galley_name'=>'Galéia neve',
+  'goup'=>'Kategóia',
+  'goups'=>'Kategóiák',
+  'goup_name'=>'Kategóia neve',
+  'infomation_incomplete'=>'Néhány infomáció hiányzik.',
   'name'=>'Név',
-  'need_group'=>'Galériák létrehozása előtt legalább egy kategóriát is létre kell hoznod.',
-  'new_gallery'=>'Új galéria',
-  'new_group'=>'Új kategória',
-  'per_form'=>'Böngészővel',
-  'per_ftp'=>'FTP-n',
-  'picture'=>'Kép',
+  'need_goup'=>'Galéiák létehozása előtt legalább egy kategóiát is léte kell hoznod.',
+  'new_galley'=>'Új galéia',
+  'new_goup'=>'Új kategóia',
+  'pe_fom'=>'Böngészővel',
+  'pe_ftp'=>'FTP-n',
+  'pictue'=>'Kép',
   'pic_upload'=>'Kép feltöltése',
-  'really_delete_group'=>'Biztosan törölni akarod ezt a kategóriát?',
-  'really_delete_gallery'=>'Biztosan törölni akarod ezt a galériát?',
-  'sort'=>'Rendezés',
-  'transaction_invalid'=>'A művelet azonosítója érvénytelen',
-  'to_sort'=>'Rendezés',
+  'eally_delete_goup'=>'Biztosan töölni akaod ezt a kategóiát?',
+  'eally_delete_galley'=>'Biztosan töölni akaod ezt a galéiát?',
+  'sot'=>'Rendezés',
+  'tansaction_invalid'=>'A művelet azonosítója événytelen',
+  'to_sot'=>'Rendezés',
   'upload'=>'Feltöltés',
-  'usergalleries'=>'Felhasználók galériái',
-  'usergallery_of'=>'Felhasználó',
-  'visitor_comments'=>'Látogatók hozzászólásai',
+  'usegalleies'=>'Felhasználók galéiái',
+  'usegalley_of'=>'Felhasználó',
+  'visito_comments'=>'Látogatók hozzászólásai',
 	'no_thumb'=>'Nincs mintakép'
 );
 ?>

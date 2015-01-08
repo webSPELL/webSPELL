@@ -2,86 +2,86 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Version 4       /                        /   /               #
+#           Vesion 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Free Content / Management System                 #
+#                       Fee Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyight 2005-2014 by webspell.og                                  #
 #                                                                        #
-#   visit webSPELL.org, webspell.info to get webSPELL for free           #
-#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to remove this copyright-tag                      #
-#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
+#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
+#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to emove this copyight-tag                      #
+#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
-#   Far Development by Development Team - webspell.org                   #
+#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
+#   Fa Development by Development Team - webspell.og                   #
 #                                                                        #
-#   visit webspell.org                                                   #
+#   visit webspell.og                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_array = Array(
+$language_aay = Aay(
 
 /* do not edit above this line */
 
 	'align'=>'PLACERING',
 	'blue'=>'blå',
-	'burlywood'=>'burlywood',
-	'center'=>'center',
+	'bulywood'=>'bulywood',
+	'cente'=>'cente',
 	'chocolate'=>'chokolade',
-	'color'=>'FARVE',
-	'coral'=>'coral',
-	'crimson'=>'crimson rødt',
-	'darkblue'=>'mørkeblå',
-	'darkred'=>'mørkerød',
+	'colo'=>'FARVE',
+	'coal'=>'coal',
+	'cimson'=>'cimson ødt',
+	'dakblue'=>'møkeblå',
+	'daked'=>'møkeød',
 	'deeppink'=>'dybpink',
-	'firebrick'=>'rødmursten',
-	'font'=>'Skrift',
-	'green'=>'grøn',
+	'fiebick'=>'ødmusten',
+	'font'=>'Skift',
+	'geen'=>'gøn',
 	'huge'=>'kæmpe',
 	'indigo'=>'indigo',
-	'justify'=>'berettiget',
-	'large'=>'stor',
-	'left'=>'venstre',
-	'limegreen'=>'limegrønt',
-	'more_flags'=>'flere Flag',
-	'normal'=>'normal',
-	'orange'=>'orange',
-	'orangered'=>'orange rød',
-	'purple'=>'lilla',
-	'red'=>'rød',
-	'right'=>'højre',
-	'royalblue'=>'royal blå',
-	'sandybrown'=>'sand brun',
-	'seagreen'=>'havgrøn',
+	'justify'=>'beettiget',
+	'lage'=>'sto',
+	'left'=>'venste',
+	'limegeen'=>'limegønt',
+	'moe_flags'=>'flee Flag',
+	'nomal'=>'nomal',
+	'oange'=>'oange',
+	'oangeed'=>'oange ød',
+	'puple'=>'lilla',
+	'ed'=>'ød',
+	'ight'=>'høje',
+	'oyalblue'=>'oyal blå',
+	'sandybown'=>'sand bun',
+	'seageen'=>'havgøn',
 	'sienna'=>'sienna',
-	'silver'=>'sølv',
-	'size'=>'Størrelse',
+	'silve'=>'sølv',
+	'size'=>'Støelse',
 	'skyblue'=>'Lyseblå',
 	'small'=>'lille',
 	'teal'=>'teal',
 	'tiny'=>'lillebitte',
 	'tomato'=>'tomat',
 	'unevenAmount'=>'Ulige antal af åbnende og lukkende BBCode tags',
-	'firstTagClosingTag'=>'Første BBCode tag kan ikke være et lukkende et',
+	'fistTagClosingTag'=>'Føste BBCode tag kan ikke væe et lukkende et',
 	'notSameAmount'=>'Ikke det antal af åbnende og lukkende BBCode tags',
-	'wrongNesting'=>'Forkert indlejring af BBCode tags',
-	'listguide'=>'Indtast \'1\' for en nummereret Liste, \'a\' for en alfabetisk Liste eller \'\' for en punktliste',
-	'listpoint'=>'Indtast et Liste-Punkt. Indtast intet eller klik \'Annuller\' for at færdiggøre listen.',
+	'wongNesting'=>'Foket indlejing af BBCode tags',
+	'listguide'=>'Indtast \'1\' fo en nummeeet Liste, \'a\' fo en alfabetisk Liste elle \'\' fo en punktliste',
+	'listpoint'=>'Indtast et Liste-Punkt. Indtast intet elle klik \'Annulle\' fo at fædiggøe listen.',
 	'addcode'=>'Indsæt en position',
-	'read_more'=>'læs videre',
-	'mc_you_have'=>'Du har',
-	'mc_new_messages'=>'ny(e) besked(er).Vil du læse dem nu?',
+	'ead_moe'=>'læs videe',
+	'mc_you_have'=>'Du ha',
+	'mc_new_messages'=>'ny(e) besked(e).Vil du læse dem nu?',
 	'na'=>'ikke tilgængelig',
-	'wrote'=>'skrev',
-	'auto_resize'=>'Auto resize',
+	'wote'=>'skev',
+	'auto_esize'=>'Auto esize',
 	'code'=>'Code',
-	'large_picture'=>'Stort Billede',
-	'show_original'=>'vis original'
+	'lage_pictue'=>'Stot Billede',
+	'show_oiginal'=>'vis oiginal'
 );
 ?>

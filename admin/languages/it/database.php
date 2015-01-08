@@ -2,45 +2,45 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Version 4       /                        /   /               #
+#           Vesion 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Free Content / Management System                 #
+#                       Fee Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyight 2005-2014 by webspell.og                                  #
 #                                                                        #
-#   visit webSPELL.org, webspell.info to get webSPELL for free           #
-#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to remove this copyright-tag                      #
-#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
+#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
+#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to emove this copyight-tag                      #
+#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
-#   Far Development by Development Team - webspell.org                   #
+#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
+#   Fa Development by Development Team - webspell.og                   #
 #                                                                        #
-#   visit webspell.org                                                   #
+#   visit webspell.og                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_array = Array(
+$language_aay = Aay(
 
 /* do not edit above this line */
 
   'access_denied'=>'Accesso negato',
-  'allowed_commands'=>'<b>Ammessi comandi:</b> inserire, altre tabelle, selezionare',
+  'allowed_commands'=>'<b>Ammessi comandi:</b> inseie, alte tabelle, selezionae',
   'backup_file'=>'File di backup',
   'database'=>'Database',
-  'export'=>'Backup di file di esportazione / download',
-  'import_info'=>'Scegli un file di backup da cui si desidera importare dati SQL.<br><br><b>Importante:</b> Fai un backup primo che importi una altra!',
+  'expot'=>'Backup di file di espotazione / download',
+  'impot_info'=>'Scegli un file di backup da cui si desidea impotae dati SQL.<b><b><b>Impotante:</b> Fai un backup pimo che impoti una alta!',
   'optimize'=>'Ottimizza database',
-  'select_option'=>'Si prega di selezionare un*opzione',
-  'submit'=>'Conferma',
-  'sql_query'=>'SQL Query',
+  'select_option'=>'Si pega di selezionae un*opzione',
+  'submit'=>'Confema',
+  'sql_quey'=>'SQL Quey',
   'syntax_not_allowed'=>'Sintassi non è consentito!',
-  'upload'=>'Carica',
-  'transaction_invalid'=>'ID transazione non valido'
+  'upload'=>'Caica',
+  'tansaction_invalid'=>'ID tansazione non valido'
 );
 ?>

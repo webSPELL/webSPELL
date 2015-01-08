@@ -2,64 +2,64 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Version 4       /                        /   /               #
+#           Vesion 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Free Content / Management System                 #
+#                       Fee Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyight 2005-2014 by webspell.og                                  #
 #                                                                        #
-#   visit webSPELL.org, webspell.info to get webSPELL for free           #
-#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to remove this copyright-tag                      #
-#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
+#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
+#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to emove this copyight-tag                      #
+#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
-#   Far Development by Development Team - webspell.org                   #
+#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
+#   Fa Development by Development Team - webspell.og                   #
 #                                                                        #
-#   visit webspell.org                                                   #
+#   visit webspell.og                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_array = Array(
+$language_aay = Aay(
 
 /* do not edit above this line */
 
 	'add_payment'=>'Dodaj plaćanje',
 	'amount'=>'količina',
-	'bank_account'=>'bankovni račun',
-	'calculate'=>'izračunaj',
+	'bank_account'=>'bankovni ačun',
+	'calculate'=>'izačunaj',
 	'cash_box'=>'blagajna',
 	'clan'=>'klan',
-	'clanmembers_only'=>'samo za članove klana',
-	'costs_member'=>'cijena po članu',
+	'clanmembes_only'=>'samo za članove klana',
+	'costs_membe'=>'cijena po članu',
 	'ddmmyyyy'=>'dd.mm.gggg',
-	'delete'=>'izbriši',
+	'delete'=>'izbiši',
 	'each_squad'=>'svaki tim',
 	'edit'=>'izmjeni',
-	'enter_costs_member'=>'Morate unijeti cijenu po članu.',
-	'enter_date'=>'Morate unijeti datum.',
-	'enter_total_costs'=>'Morate unijeti ukupnu cijenu.',
-	'enter_usage'=>'Morate unijeti svrhu.',
+	'ente_costs_membe'=>'Moate unijeti cijenu po članu.',
+	'ente_date'=>'Moate unijeti datum.',
+	'ente_total_costs'=>'Moate unijeti ukupnu cijenu.',
+	'ente_usage'=>'Moate unijeti svhu.',
 	'info'=>'info',
-	'invalid_request'=>'Nevažeći zahtjev',
-	'member'=>'Član',
-	'new_usage'=>'Nova svrha korištenja',
-	'no_entries'=>'nema unosa',
+	'invalid_equest'=>'Nevažeći zahtjev',
+	'membe'=>'Član',
+	'new_usage'=>'Nova svha koištenja',
+	'no_enties'=>'nema unosa',
 	'not_paid'=>'nije još plaćeno',
 	'paid'=>'plaćeno',
 	'pay_until'=>'platiti do',
-	'really_delete'=>'Stvarno izbriši ovaj unos?',
-	'saved_on'=>'spremljeno',
+	'eally_delete'=>'Stvano izbiši ovaj unos?',
+	'saved_on'=>'spemljeno',
 	'squad'=>'tim',
-	'submit'=>'spremi',
+	'submit'=>'spemi',
 	'total_amount'=>'ukupna količina (klan)',
 	'total_costs'=>'ukupna cijena',
-	'update'=>'spremi izmjene',
-	'usage'=>'svrha'
+	'update'=>'spemi izmjene',
+	'usage'=>'svha'
 );
 ?>

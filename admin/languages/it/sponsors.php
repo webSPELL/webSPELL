@@ -2,64 +2,64 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Version 4       /                        /   /               #
+#           Vesion 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Free Content / Management System                 #
+#                       Fee Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyight 2005-2014 by webspell.og                                  #
 #                                                                        #
-#   visit webSPELL.org, webspell.info to get webSPELL for free           #
-#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to remove this copyright-tag                      #
-#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
+#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
+#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to emove this copyight-tag                      #
+#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
-#   Far Development by Development Team - webspell.org                   #
+#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
+#   Fa Development by Development Team - webspell.og                   #
 #                                                                        #
-#   visit webspell.org                                                   #
+#   visit webspell.og                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_array = Array(
+$language_aay = Aay(
 
 /* do not edit above this line */
 
   'access_denied'=>'Accesso negato',
   'actions'=>'Azioni',
-  'add_sponsor'=>'Sponsore aggiungere',
-  'back'=>'indietro',
-  'banner'=>'Banner',
-  'banner_to_big'=>'Il banner è troppo grande',
-  'banner_upload'=>'Banner caricare',
-  'banner_upload_info'=>'per includere sc_sponsors',
-  'banner_upload_small'=>'Carica Banner (piccolo)',
-  'clicks'=>'Visite (al giorno)',
-  'current_banner'=>'Banner Attualità',
-  'current_banner_small'=>'Banner corrente (piccolo)',
-  'delete'=>'cancellare',
-  'description'=>'Descrizione',
-  'edit'=>'cambiare',
-  'edit_sponsor'=>'Sponsor cambia',
-  'format_incorrect'=>'Il formato del banner è sbagliato. Si prega di caricare solo banner *.gif, *.jpg o *.png formato.',
+  'add_sponso'=>'Sponsoe aggiungee',
+  'back'=>'indieto',
+  'banne'=>'Banne',
+  'banne_to_big'=>'Il banne è toppo gande',
+  'banne_upload'=>'Banne caicae',
+  'banne_upload_info'=>'pe includee sc_sponsos',
+  'banne_upload_small'=>'Caica Banne (piccolo)',
+  'clicks'=>'Visite (al giono)',
+  'cuent_banne'=>'Banne Attualità',
+  'cuent_banne_small'=>'Banne coente (piccolo)',
+  'delete'=>'cancellae',
+  'desciption'=>'Descizione',
+  'edit'=>'cambiae',
+  'edit_sponso'=>'Sponso cambia',
+  'fomat_incoect'=>'Il fomato del banne è sbagliato. Si pega di caicae solo banne *.gif, *.jpg o *.png fomato.',
   'is_displayed'=>'Si vede?',
-  'mainsponsor'=>'Sponsore principale',
-  'new_sponsor'=>'nuovo sponsore',
+  'mainsponso'=>'Sponsoe pincipale',
+  'new_sponso'=>'nuovo sponsoe',
   'no'=>'No',
-  'no_upload'=>'Nessuna immagine caricata',
-  'no_entries'=>'Nessun voci',
-  'really_delete'=>'Questo sponsore veramente cancellare?',
-  'sort'=>'assortire',
-  'sponsor'=>'Sponsori',
-  'sponsor_name'=>'Sponsore nome',
-  'sponsor_url'=>'Sponsore URL',
-  'sponsors'=>'Sponsori',
-  'transaction_invalid'=>'ID transazione non valido',
-  'to_sort'=>'assortire',
+  'no_upload'=>'Nessuna immagine caicata',
+  'no_enties'=>'Nessun voci',
+  'eally_delete'=>'Questo sponsoe veamente cancellae?',
+  'sot'=>'assotie',
+  'sponso'=>'Sponsoi',
+  'sponso_name'=>'Sponsoe nome',
+  'sponso_ul'=>'Sponsoe URL',
+  'sponsos'=>'Sponsoi',
+  'tansaction_invalid'=>'ID tansazione non valido',
+  'to_sot'=>'assotie',
   'yes'=>'Si'
 );
 ?>

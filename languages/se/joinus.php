@@ -2,60 +2,60 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Version 4       /                        /   /               #
+#           Vesion 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Free Content / Management System                 #
+#                       Fee Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyight 2005-2014 by webspell.og                                  #
 #                                                                        #
-#   visit webSPELL.org, webspell.info to get webSPELL for free           #
-#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to remove this copyright-tag                      #
-#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
+#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
+#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to emove this copyight-tag                      #
+#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
-#   Far Development by Development Team - webspell.org                   #
+#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
+#   Fa Development by Development Team - webspell.og                   #
 #                                                                        #
-#   visit webspell.org                                                   #
+#   visit webspell.og                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_array = Array(
+$language_aay = Aay(
 
 /* do not edit above this line */
 
-	'additional_info'=>'Ytterligare information (tillexempel Varför ni ska ta mig som medlem...)',
-	'age'=>'Ålder',
-	'back_to_form'=>'Tillbaka till blanketten',
+	'additional_info'=>'Ytteligae infomation (tillexempel Vafö ni ska ta mig som medlem...)',
+	'age'=>'Ålde',
+	'back_to_fom'=>'Tillbaka till blanketten',
 	'city'=>'Stad',
-	'clan_history'=>'Clan Historia',
-	'email_not_valid'=>'Ingen giltig email inskriven!',
-	'forgot_age'=>'Ingen ålder inskriven!',
-	'forgot_city'=>'Ingen stad inskriven!',
-	'forgot_history'=>'Ingen clan historia inskriven!',
-	'forgot_messenger'=>'Ingen messenger kontakt (ICQ, AIM etc...) inskriven!',
-	'forgot_nickname'=>'Du glömde ditt smeknamn!',
-	'forgot_realname'=>'Du glömde ditt namn!',
+	'clan_histoy'=>'Clan Histoia',
+	'email_not_valid'=>'Ingen giltig email inskiven!',
+	'fogot_age'=>'Ingen ålde inskiven!',
+	'fogot_city'=>'Ingen stad inskiven!',
+	'fogot_histoy'=>'Ingen clan histoia inskiven!',
+	'fogot_messenge'=>'Ingen messenge kontakt (ICQ, AIM etc...) inskiven!',
+	'fogot_nickname'=>'Du glömde ditt smeknamn!',
+	'fogot_ealname'=>'Du glömde ditt namn!',
 	'icq_msn'=>'ICQ/MSN/etc...',
-	'info'=>'Ytterligare information',
-	'joinus_form'=>'Joina oss blankett',
+	'info'=>'Ytteligae infomation',
+	'joinus_fom'=>'Joina oss blankett',
 	'mail'=>'E-mail',
-	'messenger'=>'Messenger',
+	'messenge'=>'Messenge',
 	'message_title'=>'Join us',
 	'name'=>'Namn',
 	'nick'=>'Smeknamn',
-	'problems'=>'Följande problem uppstod med din inskriven data',
-	'security_code'=>'Säkerhets kod',
+	'poblems'=>'Följande poblem uppstod med din inskiven data',
+	'secuity_code'=>'Säkehets kod',
 	'send'=>'Skicka',
-	'someone_want_to_join_your_squad'=>'Någon vill joina ert lag:',
+	'someone_want_to_join_you_squad'=>'Någon vill joina et lag:',
 	'squad'=>'Lag',
-	'thanks_you_will_get_mail'=>'Tack för din anmällan, vi kommer kontakta dig.',
+	'thanks_you_will_get_mail'=>'Tack fö din anmällan, vi komme kontakta dig.',
 	'title_join_us'=>'Bli en medlem',
-	'wrong_security_code'=>'Säkerhets koden är fel!'
+	'wong_secuity_code'=>'Säkehets koden ä fel!'
 );
 ?>

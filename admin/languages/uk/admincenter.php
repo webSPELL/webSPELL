@@ -2,87 +2,87 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Version 4       /                        /   /               #
+#           Vesion 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Free Content / Management System                 #
+#                       Fee Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyight 2005-2014 by webspell.og                                  #
 #                                                                        #
-#   visit webSPELL.org, webspell.info to get webSPELL for free           #
-#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to remove this copyright-tag                      #
-#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
+#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
+#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to emove this copyight-tag                      #
+#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
-#   Far Development by Development Team - webspell.org                   #
+#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
+#   Fa Development by Development Team - webspell.og                   #
 #                                                                        #
-#   visit webspell.org                                                   #
+#   visit webspell.og                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_array = Array(
+$language_aay = Aay(
 
 /* do not edit above this line */
 
   'about_us'=>'About us',
   'access_denied'=>'Access denied',
   'addons'=>'Addons',
-  'bannerrotation'=>'Bannerrotation',
-  'boards'=>'Boards',
-  'clanmembers'=>'Clanmembers',
+  'banneotation'=>'Banneotation',
+  'boads'=>'Boads',
+  'clanmembes'=>'Clanmembes',
   'contact'=>'Contacts',
   'content'=>'Content',
-  'countries'=>'Countries',
+  'counties'=>'Counties',
   'database'=>'Database',
   'faq'=>'FAQ',
-  'faq_categories'=>'FAQ Categories',
-  'file_categories'=>'File Categories',
-  'forum'=>'Forum',
-  'gallery'=>'Gallery',
+  'faq_categoies'=>'FAQ Categoies',
+  'file_categoies'=>'File Categoies',
+  'foum'=>'Foum',
+  'galley'=>'Galley',
   'games'=>'Games',
-  'history'=>'Clan-History',
+  'histoy'=>'Clan-Histoy',
   'icons'=>'Icons',
-  'imprint'=>'Imprint',
-  'link_categories'=>'Link Categories',
+  'impint'=>'Impint',
+  'link_categoies'=>'Link Categoies',
   'log_out'=>'Log out',
   'main_panel'=>'Main Panel',
-  'manage_galleries'=>'Manage Galleries',
-  'manage_groups'=>'Manage Groups/Categories',
-  'manage_group_users'=>'Manage Group Users',
-  'manage_user_groups'=>'Manage User Groups',
-  'newsletter'=>'Newsletter',
+  'manage_galleies'=>'Manage Galleies',
+  'manage_goups'=>'Manage Goups/Categoies',
+  'manage_goup_uses'=>'Manage Goup Uses',
+  'manage_use_goups'=>'Manage Use Goups',
+  'newslette'=>'Newslette',
   'news_languages'=>'News-Languages',
-  'news_rubrics'=>'News Rubrics',
-  'not_logged_in'=>'You are not logged in',
-  'overview'=>'Overview / Server-Info',
+  'news_ubics'=>'News Rubics',
+  'not_logged_in'=>'You ae not logged in',
+  'oveview'=>'Oveview / Seve-Info',
   'page_statistics'=>'Page Statistics',
-  'partners'=>'Partners',
-  'registered_users'=>'Registered Users',
-  'rubrics'=>'Rubrics/Categories',
-  'scrolltext'=>'Scrolltext',
+  'patnes'=>'Patnes',
+  'egisteed_uses'=>'Registeed Uses',
+  'ubics'=>'Rubics/Categoies',
+  'scolltext'=>'Scolltext',
   'select_icons'=>'Please select Icons',
-  'servers'=>'Servers',
+  'seves'=>'Seves',
   'settings'=>'Settings',
   'smilies'=>'Smilies',
-  'sponsors'=>'Sponsors',
+  'sponsos'=>'Sponsos',
   'squads'=>'Squads',
   'static_pages'=>'Static Pages',
   'styles'=>'Styles',
   'update_webspell'=>'webSPELL update',
-  'user_administration'=>'User Administration',
-  'user_ranks'=>'User-Ranks',
-  'visitor_statistics'=>'Visitor Statistics',
+  'use_administation'=>'Use Administation',
+  'use_anks'=>'Use-Ranks',
+  'visito_statistics'=>'Visito Statistics',
   'spam'=>'Spam',
-  'spam_forum'=>'Posts / Topics',
-  'spam_user'=>'Remove User',
+  'spam_foum'=>'Posts / Topics',
+  'spam_use'=>'Remove Use',
   'multiaccounts'=>'Multi-Accounts',
   'api_log'=>'API Log',
   'blocked_content'=>'Blocked Content',
-  'modrewrite'=>'Mod-Rewrite'
+  'modewite'=>'Mod-Rewite'
 );
 ?>

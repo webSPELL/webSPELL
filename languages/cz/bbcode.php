@@ -2,86 +2,86 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Version 4       /                        /   /               #
+#           Vesion 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Free Content / Management System                 #
+#                       Fee Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyight 2005-2014 by webspell.og                                  #
 #                                                                        #
-#   visit webSPELL.org, webspell.info to get webSPELL for free           #
-#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to remove this copyright-tag                      #
-#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
+#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
+#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to emove this copyight-tag                      #
+#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
-#   Far Development by Development Team - webspell.org                   #
+#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
+#   Fa Development by Development Team - webspell.og                   #
 #                                                                        #
-#   visit webspell.org                                                   #
+#   visit webspell.og                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_array = Array(
+$language_aay = Aay(
 
 /* do not edit above this line */
 
 	'align'=>'ZAROVNÁNÍ',
-	'blue'=>'modrá',
-	'burlywood'=>'pískově hnědá',
-	'center'=>'střed',
+	'blue'=>'modá',
+	'bulywood'=>'pískově hnědá',
+	'cente'=>'střed',
 	'chocolate'=>'čokoládová',
-	'color'=>'BARVA',
-	'coral'=>'korálová',
-	'crimson'=>'karmínová',
-	'darkblue'=>'tmavě modrá',
-	'darkred'=>'tmavì červená',
-	'deeppink'=>'tmavě růžová',
-	'firebrick'=>'ohnivě cihlová',
+	'colo'=>'BARVA',
+	'coal'=>'koálová',
+	'cimson'=>'kamínová',
+	'dakblue'=>'tmavě modá',
+	'daked'=>'tmavì čevená',
+	'deeppink'=>'tmavě ůžová',
+	'fiebick'=>'ohnivě cihlová',
 	'font'=>'PÍSMO',
-	'green'=>'zelená',
-	'huge'=>'obrovské',
+	'geen'=>'zelená',
+	'huge'=>'obovské',
 	'indigo'=>'indigo',
-	'justify'=>'vyrovnané',
-	'large'=>'velké',
+	'justify'=>'vyovnané',
+	'lage'=>'velké',
 	'left'=>'vlevo',
-	'limegreen'=>'zelená limetka',
-	'more_flags'=>'více flagů',
-	'normal'=>'normální',
-	'orange'=>'oranžová',
-	'orangered'=>'červeno oranžová',
-	'purple'=>'fialová',
-	'red'=>'červená',
-	'right'=>'vpravo',
-	'royalblue'=>'královská modrá',
-	'sandybrown'=>'pískově hnědá',
-	'seagreen'=>'mořská zelená',
-	'sienna'=>'oranžovo žlutá',
-	'silver'=>'stříbrná',
+	'limegeen'=>'zelená limetka',
+	'moe_flags'=>'více flagů',
+	'nomal'=>'nomální',
+	'oange'=>'oanžová',
+	'oangeed'=>'čeveno oanžová',
+	'puple'=>'fialová',
+	'ed'=>'čevená',
+	'ight'=>'vpavo',
+	'oyalblue'=>'kálovská modá',
+	'sandybown'=>'pískově hnědá',
+	'seageen'=>'mořská zelená',
+	'sienna'=>'oanžovo žlutá',
+	'silve'=>'stříbná',
 	'size'=>'VELIKOST',
 	'skyblue'=>'nebeská modř',
 	'small'=>'malé',
-	'teal'=>'zeleno modrá',
+	'teal'=>'zeleno modá',
 	'tiny'=>'malinké',
 	'tomato'=>'tomatová',
-	'unevenAmount'=>'Nerovnoměrné množství otevřených a zavřených BBCode tagů',
-	'firstTagClosingTag'=>'První BBCode tag nemůže být zavírací',
+	'unevenAmount'=>'Neovnoměné množství otevřených a zavřených BBCode tagů',
+	'fistTagClosingTag'=>'Pvní BBCode tag nemůže být zavíací',
 	'notSameAmount'=>'Rozdílné množství BBCode tagů',
-	'wrongNesting'=>'Nesprávná úroveň BBCode tagů',
-	'listguide'=>'zadej \'1\' pro číselný seznam, \'a\' pro písmený seznam or \'\' pro seznam s odrážkami',
-	'listpoint'=>'Vložit odrážku. Nezadávej nic nebo klikni \'Cancel\' pro uzavření seznamu.',
+	'wongNesting'=>'Nespávná úoveň BBCode tagů',
+	'listguide'=>'zadej \'1\' po číselný seznam, \'a\' po písmený seznam o \'\' po seznam s odážkami',
+	'listpoint'=>'Vložit odážku. Nezadávej nic nebo klikni \'Cancel\' po uzavření seznamu.',
 	'addcode'=>'Zadej pozici',
-	'read_more'=>'čti více',
+	'ead_moe'=>'čti více',
 	'mc_you_have'=>'Máš',
-	'mc_new_messages'=>'novou zprávu(y). Chceš si je nyní přečíst?',
+	'mc_new_messages'=>'novou zpávu(y). Chceš si je nyní přečíst?',
 	'na'=>'nedostupné',
-	'wrote'=>'napsáno',
-	'auto_resize'=>'automaticky změnit velikost',
+	'wote'=>'napsáno',
+	'auto_esize'=>'automaticky změnit velikost',
 	'code'=>'Kód',
-	'large_picture'=>'Velký obrázek',
-	'show_original'=>'ukázat originál'
+	'lage_pictue'=>'Velký obázek',
+	'show_oiginal'=>'ukázat oiginál'
 );
 ?>

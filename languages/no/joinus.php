@@ -2,60 +2,60 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Version 4       /                        /   /               #
+#           Vesion 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Free Content / Management System                 #
+#                       Fee Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyight 2005-2014 by webspell.og                                  #
 #                                                                        #
-#   visit webSPELL.org, webspell.info to get webSPELL for free           #
-#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to remove this copyright-tag                      #
-#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
+#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
+#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to emove this copyight-tag                      #
+#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
-#   Far Development by Development Team - webspell.org                   #
+#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
+#   Fa Development by Development Team - webspell.og                   #
 #                                                                        #
-#   visit webspell.org                                                   #
+#   visit webspell.og                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_array = Array(
+$language_aay = Aay(
 
 /* do not edit above this line */
 
-	'additional_info'=>'Tilleggsinformasjon (for eksempel: Hvorfor eg burde få joine laget...)',
-	'age'=>'Alder',
-	'back_to_form'=>'Tilbake',
+	'additional_info'=>'Tilleggsinfomasjon (fo eksempel: Hvofo eg bude få joine laget...)',
+	'age'=>'Alde',
+	'back_to_fom'=>'Tilbake',
 	'city'=>'By',
-	'clan_history'=>'Klan historie',
-	'email_not_valid'=>'Vennligst skriv din e-post adresse!',
-	'forgot_age'=>'Vennligst skriv alderen din!',
-	'forgot_city'=>'Vennligst skriv hvor du bor',
-	'forgot_history'=>'Vennligst skriv klan historien din!',
-	'forgot_messenger'=>'Vennligst skriv MSN/ICQ/AIM eller lignende!',
-	'forgot_nickname'=>'Vennligst skriv ditt nick!',
-	'forgot_realname'=>'Vennligst skriv ditt navn!',
+	'clan_histoy'=>'Klan histoie',
+	'email_not_valid'=>'Vennligst skiv din e-post adesse!',
+	'fogot_age'=>'Vennligst skiv aldeen din!',
+	'fogot_city'=>'Vennligst skiv hvo du bo',
+	'fogot_histoy'=>'Vennligst skiv klan histoien din!',
+	'fogot_messenge'=>'Vennligst skiv MSN/ICQ/AIM elle lignende!',
+	'fogot_nickname'=>'Vennligst skiv ditt nick!',
+	'fogot_ealname'=>'Vennligst skiv ditt navn!',
 	'icq_msn'=>'ICQ/MSN/osv...',
-	'info'=>'Tilleggsinformasjon',
-	'joinus_form'=>'Join oss formen',
+	'info'=>'Tilleggsinfomasjon',
+	'joinus_fom'=>'Join oss fomen',
 	'mail'=>'E-post',
-	'messenger'=>'Melding',
+	'messenge'=>'Melding',
 	'message_title'=>'Join us',
 	'name'=>'Navn',
 	'nick'=>'Nick',
-	'problems'=>'Følgende problem oppstod',
-	'security_code'=>'Sikkerhetskode',
+	'poblems'=>'Følgende poblem oppstod',
+	'secuity_code'=>'Sikkehetskode',
 	'send'=>'Send',
-	'someone_want_to_join_your_squad'=>'Noen vil joine laget ditt:',
+	'someone_want_to_join_you_squad'=>'Noen vil joine laget ditt:',
 	'squad'=>'Lag',
-	'thanks_you_will_get_mail'=>'Takk for søknaden, vi vil kontakte deg snarest mulig.',
+	'thanks_you_will_get_mail'=>'Takk fo søknaden, vi vil kontakte deg snaest mulig.',
 	'title_join_us'=>'Bli medlem',
-	'wrong_security_code'=>'Sikkerhetskoden var feil!'
+	'wong_secuity_code'=>'Sikkehetskoden va feil!'
 );
 ?>

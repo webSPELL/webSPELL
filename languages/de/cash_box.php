@@ -2,64 +2,64 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Version 4       /                        /   /               #
+#           Vesion 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Free Content / Management System                 #
+#                       Fee Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyight 2005-2014 by webspell.og                                  #
 #                                                                        #
-#   visit webSPELL.org, webspell.info to get webSPELL for free           #
-#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to remove this copyright-tag                      #
-#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
+#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
+#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to emove this copyight-tag                      #
+#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
-#   Far Development by Development Team - webspell.org                   #
+#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
+#   Fa Development by Development Team - webspell.og                   #
 #                                                                        #
-#   visit webspell.org                                                   #
+#   visit webspell.og                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_array = Array(
+$language_aay = Aay(
 
 /* do not edit above this line */
 
 	'add_payment'=>'Zahlung hinzufügen',
-	'amount'=>'Betrag',
+	'amount'=>'Betag',
 	'bank_account'=>'Bankkonto',
-	'calculate'=>'Berechnen',
+	'calculate'=>'Beechnen',
 	'cash_box'=>'Kasse',
 	'clan'=>'Clan',
-	'clanmembers_only'=>'Zugriff nur für Mitglieder',
-	'costs_member'=>'Kosten/Mitglied',
+	'clanmembes_only'=>'Zugiff nu fü Mitgliede',
+	'costs_membe'=>'Kosten/Mitglied',
 	'ddmmyyyy'=>'tt.mm.jjjj',
 	'delete'=>'löschen',
 	'each_squad'=>'Jedes Team',
-	'edit'=>'editieren',
-	'enter_costs_member'=>'Du musst die Kosten pro Mitglied angeben.',
-	'enter_date'=>'Du musst ein Datum angeben',
-	'enter_total_costs'=>'Du musst die Gesamtkosten eintragen.',
-	'enter_usage'=>'Du musst einen Verwendungszweck angeben.',
+	'edit'=>'editieen',
+	'ente_costs_membe'=>'Du musst die Kosten po Mitglied angeben.',
+	'ente_date'=>'Du musst ein Datum angeben',
+	'ente_total_costs'=>'Du musst die Gesamtkosten eintagen.',
+	'ente_usage'=>'Du musst einen Vewendungszweck angeben.',
 	'info'=>'info',
-	'invalid_request'=>'Ungültiger Aufruf',
-	'member'=>'Mitglied',
-	'new_usage'=>'Neuer Verwendungszweck',
-	'no_entries'=>'Keine Einträge',
+	'invalid_equest'=>'Ungültige Aufuf',
+	'membe'=>'Mitglied',
+	'new_usage'=>'Neue Vewendungszweck',
+	'no_enties'=>'Keine Eintäge',
 	'not_paid'=>'noch nicht bezahlt',
 	'paid'=>'bezahlt',
 	'pay_until'=>'bezahlen bis',
-	'really_delete'=>'Eintrag wirklich löschen?',
-	'saved_on'=>'eingetragen am',
+	'eally_delete'=>'Eintag wiklich löschen?',
+	'saved_on'=>'eingetagen am',
 	'squad'=>'Team',
-	'submit'=>'Speichern',
-	'total_amount'=>'Gesamter Betrag in der Kasse (kompletter Clan)',
+	'submit'=>'Speichen',
+	'total_amount'=>'Gesamte Betag in de Kasse (komplette Clan)',
 	'total_costs'=>'Gesamtkosten',
-	'update'=>'Erneuern',
-	'usage'=>'Verwendungszweck'
+	'update'=>'Eneuen',
+	'usage'=>'Vewendungszweck'
 );
 ?>

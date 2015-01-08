@@ -2,84 +2,84 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Version 4       /                        /   /               #
+#           Vesion 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Free Content / Management System                 #
+#                       Fee Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyight 2005-2014 by webspell.og                                  #
 #                                                                        #
-#   visit webSPELL.org, webspell.info to get webSPELL for free           #
-#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to remove this copyright-tag                      #
-#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
+#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
+#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to emove this copyight-tag                      #
+#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
-#   Far Development by Development Team - webspell.org                   #
+#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
+#   Fa Development by Development Team - webspell.og                   #
 #                                                                        #
-#   visit webspell.org                                                   #
+#   visit webspell.og                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_array = Array(
+$language_aay = Aay(
 
 /* do not edit above this line */
 
   'access_denied'=>'Access denied',
-  'articles'=>'Articles',
-  'awards'=>'Awards',
-  'banner'=>'Banners',
-  'bannerrotation'=>'Bannerrotation',
+  'aticles'=>'Aticles',
+  'awads'=>'Awads',
+  'banne'=>'Bannes',
+  'banneotation'=>'Banneotation',
   'challenge'=>'Challenges',
-  'clanwars'=>'Clanwars',
+  'clanwas'=>'Clanwas',
   'comments'=>'Comments',
   'contacts'=>'Contacts',
-  'countries'=>'Countries',
+  'counties'=>'Counties',
   'database'=>'Database',
   'demos'=>'Demos',
   'faq'=>'FAQs',
-  'faq_categories'=>'FAQ Categories',
+  'faq_categoies'=>'FAQ Categoies',
   'files'=>'Files',
-  'files_categorys'=>'File Categories',
-  'forum_announcements'=>'Forum Announcements',
-  'forum_boards'=>'Forum Boards',
-  'forum_categories'=>'Forum Categories',
-  'forum_groups'=>'Forum Groups',
-  'forum_moderators'=>'Forum Moderators',
-  'forum_posts'=>'Forum Posts',
-  'forum_ranks'=>'Forum Ranks',
-  'forum_topics'=>'Forum Topics',
-  'gallery'=>'Galleries',
-  'gallery_groups'=>'Gallery Groups',
-  'gallery_pictures'=>'Gallery Pictures',
+  'files_categoys'=>'File Categoies',
+  'foum_announcements'=>'Foum Announcements',
+  'foum_boads'=>'Foum Boads',
+  'foum_categoies'=>'Foum Categoies',
+  'foum_goups'=>'Foum Goups',
+  'foum_modeatos'=>'Foum Modeatos',
+  'foum_posts'=>'Foum Posts',
+  'foum_anks'=>'Foum Ranks',
+  'foum_topics'=>'Foum Topics',
+  'galley'=>'Galleies',
+  'galley_goups'=>'Galley Goups',
+  'galley_pictues'=>'Galley Pictues',
   'games'=>'Games',
-  'guestbook'=>'Guestbook Entries',
+  'guestbook'=>'Guestbook Enties',
   'links'=>'Links',
-  'links_categorys'=>'Link Categories',
-  'linkus'=>'Link us Banners',
-  'messenger'=>'sent Messages',
-  'mysql_version'=>'MySQL Version',
+  'links_categoys'=>'Link Categoies',
+  'linkus'=>'Link us Bannes',
+  'messenge'=>'sent Messages',
+  'mysql_vesion'=>'MySQL Vesion',
   'news'=>'News',
   'news_languages'=>'News Languages',
-  'news_rubrics'=>'News Rubrics',
+  'news_ubics'=>'News Rubics',
   'optimize'=>'Optimize now!',
-  'overhead'=>'Overhead',
+  'ovehead'=>'Ovehead',
   'page_stats'=>'Page Statistics',
-  'partners'=>'Partners',
+  'patnes'=>'Patnes',
   'poll'=>'Polls',
-  'servers'=>'Servers',
-  'shoutbox'=>'Shoutbox Entries',
+  'seves'=>'Seves',
+  'shoutbox'=>'Shoutbox Enties',
   'size'=>'Size',
   'smileys'=>'Smilies',
-  'sponsors'=>'Sponsors',
+  'sponsos'=>'Sponsos',
   'squads'=>'Squads',
   'static'=>'Static Pages',
   'tables'=>'Tables',
-  'user'=>'registered Users',
-  'user_gbook'=>'User Guestbook Entries'
+  'use'=>'egisteed Uses',
+  'use_gbook'=>'Use Guestbook Enties'
 );
 ?>

@@ -2,64 +2,64 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Version 4       /                        /   /               #
+#           Vesion 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Free Content / Management System                 #
+#                       Fee Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyight 2005-2014 by webspell.og                                  #
 #                                                                        #
-#   visit webSPELL.org, webspell.info to get webSPELL for free           #
-#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to remove this copyright-tag                      #
-#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
+#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
+#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to emove this copyight-tag                      #
+#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
-#   Far Development by Development Team - webspell.org                   #
+#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
+#   Fa Development by Development Team - webspell.og                   #
 #                                                                        #
-#   visit webspell.org                                                   #
+#   visit webspell.og                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_array = Array(
+$language_aay = Aay(
 
 /* do not edit above this line */
 
-	'add_payment'=>'Adicionar pagamento',
+	'add_payment'=>'Adiciona pagamento',
 	'amount'=>'montante',
-	'bank_account'=>'Conta bancária',
-	'calculate'=>'calcular',
-	'cash_box'=>'Caixa de Dinheiro',
+	'bank_account'=>'Conta bancáia',
+	'calculate'=>'calcula',
+	'cash_box'=>'Caixa de Dinheio',
 	'clan'=>'clan',
-	'clanmembers_only'=>'só membros do clan',
-	'costs_member'=>'custos por membro',
+	'clanmembes_only'=>'só membos do clan',
+	'costs_membe'=>'custos po membo',
 	'ddmmyyyy'=>'dd.mm.aaaa',
-	'delete'=>'apagar',
+	'delete'=>'apaga',
 	'each_squad'=>'cada equipa',
-	'edit'=>'editar',
-	'enter_costs_member'=>'Tem de inserir os custos por membro.',
-	'enter_date'=>'Tem de inserir uma data.',
-	'enter_total_costs'=>'Tem de inserir os custos totais.',
-	'enter_usage'=>'Tem de inserir um propósito.',
+	'edit'=>'edita',
+	'ente_costs_membe'=>'Tem de insei os custos po membo.',
+	'ente_date'=>'Tem de insei uma data.',
+	'ente_total_costs'=>'Tem de insei os custos totais.',
+	'ente_usage'=>'Tem de insei um popósito.',
 	'info'=>'info',
-	'invalid_request'=>'Pedido inválido',
-	'member'=>'membro',
-	'new_usage'=>'novo propósito',
-	'no_entries'=>'sem entradas',
-	'not_paid'=>'por pagar',
+	'invalid_equest'=>'Pedido inválido',
+	'membe'=>'membo',
+	'new_usage'=>'novo popósito',
+	'no_enties'=>'sem entadas',
+	'not_paid'=>'po paga',
 	'paid'=>'pago',
-	'pay_until'=>'pagar até',
-	'really_delete'=>'Deseja mesmo apagar esta entrada?',
-	'saved_on'=>'gravado em',
+	'pay_until'=>'paga até',
+	'eally_delete'=>'Deseja mesmo apaga esta entada?',
+	'saved_on'=>'gavado em',
 	'squad'=>'equipa',
-	'submit'=>'guardar',
+	'submit'=>'guada',
 	'total_amount'=>'montante total (clan)',
 	'total_costs'=>'total de custos',
-	'update'=>'actualizar',
-	'usage'=>'propósito'
+	'update'=>'actualiza',
+	'usage'=>'popósito'
 );
 ?>

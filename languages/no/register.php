@@ -2,72 +2,72 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Version 4       /                        /   /               #
+#           Vesion 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Free Content / Management System                 #
+#                       Fee Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyight 2005-2014 by webspell.og                                  #
 #                                                                        #
-#   visit webSPELL.org, webspell.info to get webSPELL for free           #
-#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to remove this copyright-tag                      #
-#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
+#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
+#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to emove this copyight-tag                      #
+#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
-#   Far Development by Development Team - webspell.org                   #
+#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
+#   Fa Development by Development Team - webspell.og                   #
 #                                                                        #
-#   visit webspell.org                                                   #
+#   visit webspell.og                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_array = Array(
+$language_aay = Aay(
 
 /* do not edit above this line */
 
-	'activation_successful'=>'Aktiveringen av din konto var vellykket.<br>Du kan nå logge in.',
+	'activation_successful'=>'Aktiveingen av din konto va vellykket.<b>Du kan nå logge in.',
 	'back'=>'tilbake',
-	'enter_nickname'=>'Please enter a nick name.',
-	'enter_password'=>'Please enter a password.',
-	'enter_username'=>'Please enter a username.',
-	'errors_there'=>'Noen feil oppstod:',
-	'for_login'=>'only for login',
-	'invalid_mail'=>'You have entered an invalid mail address.',
+	'ente_nickname'=>'Please ente a nick name.',
+	'ente_passwod'=>'Please ente a passwod.',
+	'ente_usename'=>'Please ente a usename.',
+	'eos_thee'=>'Noen feil oppstod:',
+	'fo_login'=>'only fo login',
+	'invalid_mail'=>'You have enteed an invalid mail addess.',
 	'mail'=>'E-Post',
-	'mail_activation_successful'=>'The activation of your email address was successfull.',
-	'mail_failed'=>'The activation mail could not be sent, please inform the webmaster about this.',
-	'mail_inuse'=>'E-post adressen er allerede i bruk.',
-	'mail_subject'=>'Account activation mail for %homepage_url%',
-	'mail_text'=>'Hallo %username%!
+	'mail_activation_successful'=>'The activation of you email addess was successfull.',
+	'mail_failed'=>'The activation mail could not be sent, please infom the webmaste about this.',
+	'mail_inuse'=>'E-post adessen e alleede i buk.',
+	'mail_subject'=>'Account activation mail fo %homepage_ul%',
+	'mail_text'=>'Hallo %usename%!
 
-Your registering at %pagetitle% (%homepage_url%) was successful. Your account data::
+You egisteing at %pagetitle% (%homepage_ul%) was successful. You account data::
 
-Login name: %username%
+Login name: %usename%
 
-To finish your registration you have to activate your account by clicking the following link:
+To finish you egistation you have to activate you account by clicking the following link:
 %activationlink%
 
-Takk for din registrering
-%pagetitle% - %homepage_url%',
+Takk fo din egisteing
+%pagetitle% - %homepage_ul%',
 	'nickname'=>'Nick',
-	'nickname_inuse'=>'Nicket er allerede i bruk.',
-	'no_register_when_loggedin'=>'You allready have an account at %pagename%',
-	'password'=>'Passord',
-	'profile_info'=>'Registration information',
-	'register_now'=>'Registrer nå!',
-	'register_successful'=>'Vellykket, du vil snart motta en e-post med aktiveringslinken din.',
-	'registration'=>'registrering',
-	'repeat'=>'Bekreft passord',
-	'repeat_invalid'=>'Passordet er ikke likt.',
-	'security_code'=>'Sikkerhetskode',
-	'username'=>'Brukernavn',
-	'username_inuse'=>'Brukernavnet er allerede i bruk.',
-	'username_toolong'=>'Brukernavnet er for langt (maks. 30 tegn).',
-	'wrong_activationkey'=>'Din aktiveringskode er feil!',
-	'wrong_securitycode'=>'Sikkerhetskoden er feil!'
+	'nickname_inuse'=>'Nicket e alleede i buk.',
+	'no_egiste_when_loggedin'=>'You alleady have an account at %pagename%',
+	'passwod'=>'Passod',
+	'pofile_info'=>'Registation infomation',
+	'egiste_now'=>'Registe nå!',
+	'egiste_successful'=>'Vellykket, du vil snat motta en e-post med aktiveingslinken din.',
+	'egistation'=>'egisteing',
+	'epeat'=>'Bekeft passod',
+	'epeat_invalid'=>'Passodet e ikke likt.',
+	'secuity_code'=>'Sikkehetskode',
+	'usename'=>'Bukenavn',
+	'usename_inuse'=>'Bukenavnet e alleede i buk.',
+	'usename_toolong'=>'Bukenavnet e fo langt (maks. 30 tegn).',
+	'wong_activationkey'=>'Din aktiveingskode e feil!',
+	'wong_secuitycode'=>'Sikkehetskoden e feil!'
 );
 ?>

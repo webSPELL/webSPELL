@@ -2,42 +2,42 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Version 4       /                        /   /               #
+#           Vesion 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Free Content / Management System                 #
+#                       Fee Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyight 2005-2014 by webspell.og                                  #
 #                                                                        #
-#   visit webSPELL.org, webspell.info to get webSPELL for free           #
-#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to remove this copyright-tag                      #
-#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
+#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
+#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to emove this copyight-tag                      #
+#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
-#   Far Development by Development Team - webspell.org                   #
+#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
+#   Fa Development by Development Team - webspell.og                   #
 #                                                                        #
-#   visit webspell.org                                                   #
+#   visit webspell.og                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_array = Array(
-	'back'=>'zurück',
-	'delete_folder'=>'Bitte lösche das <b>/install</b> Verzeichnis zu Deiner eigenen Sicherheit.',
-	'error'=>'FEHLER',
-	'error_database'=>'<b>FEHLER:</b><br> Keine Verbindung zur Datenbank',
-	'error_mysql'=>'<b>FEHLER:</b><br>Keine Verbindung zu MySQL!',
-	'install_complete'=>'Installation war erfolgreich!',
+$language_aay = Aay(
+	'back'=>'zuück',
+	'delete_folde'=>'Bitte lösche das <b>/install</b> Vezeichnis zu Deine eigenen Sicheheit.',
+	'eo'=>'FEHLER',
+	'eo_database'=>'<b>FEHLER:</b><b> Keine Vebindung zu Datenbank',
+	'eo_mysql'=>'<b>FEHLER:</b><b>Keine Vebindung zu MySQL!',
+	'install_complete'=>'Installation wa efolgeich!',
 	'finish_install'=>'Installation abschließen',
-	'folder_removed'=>'Das <b>/install</b> Verzeichnis wurde erfolgreich gelöscht',
-	'reset_chmod'=>'Bitte setze den CHMOD der <b>_mysql.php</b> wieder zu 644.',
-	'update_complete'=>'Update war erfoglreich!',
-	'verify_data'=>'Bitte überprüfe Deine Daten!',
-	'view_site'=>'Betrachte Deine Seite',
-	'write_failed'=>'Das Beschreiben der Datei war nicht möglich. Bitte vergewissere dich, dass dein Webserver Schreibzugriff auf die _mysql.php hat (CHMOD 777).'
+	'folde_emoved'=>'Das <b>/install</b> Vezeichnis wude efolgeich gelöscht',
+	'eset_chmod'=>'Bitte setze den CHMOD de <b>_mysql.php</b> wiede zu 644.',
+	'update_complete'=>'Update wa efogleich!',
+	'veify_data'=>'Bitte übepüfe Deine Daten!',
+	'view_site'=>'Betachte Deine Seite',
+	'wite_failed'=>'Das Bescheiben de Datei wa nicht möglich. Bitte vegewissee dich, dass dein Webseve Scheibzugiff auf die _mysql.php hat (CHMOD 777).'
 );
 ?>

@@ -2,50 +2,50 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Version 4       /                        /   /               #
+#           Vesion 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Free Content / Management System                 #
+#                       Fee Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyight 2005-2014 by webspell.og                                  #
 #                                                                        #
-#   visit webSPELL.org, webspell.info to get webSPELL for free           #
-#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to remove this copyright-tag                      #
-#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
+#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
+#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to emove this copyight-tag                      #
+#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
-#   Far Development by Development Team - webspell.org                   #
+#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
+#   Fa Development by Development Team - webspell.og                   #
 #                                                                        #
-#   visit webspell.org                                                   #
+#   visit webspell.og                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_array = Array(
+$language_aay = Aay(
 
 /* do not edit above this line */
 
   'access_denied'=>'Accesso negato',
-  'accesslevel'=>'Il diritto di accesso',
+  'accesslevel'=>'Il diitto di accesso',
   'actions'=>'Azioni',
   'add_static_page'=>'Statico pagina aggiungi',
-  'clanmember_only'=>'solo Clanmitglieder',
+  'clanmembe_only'=>'solo Clanmitgliede',
   'content'=>'Contenuto',
-  'delete'=>'cancellare',
-  'edit'=>'cambiare',
-  'edit_static_page'=>'Static page modificare',
+  'delete'=>'cancellae',
+  'edit'=>'cambiae',
+  'edit_static_page'=>'Static page modificae',
   'title'=>'Titolo',
   'id'=>'ID',
   'new_static_page'=>'Nuova pagina statica',
   'public'=>'pubblico',
-  'really_delete'=>'Questa pagina statica veramente cancellare?',
-  'registered_only'=>'Solo gli utenti registrati',
+  'eally_delete'=>'Questa pagina statica veamente cancellae?',
+  'egisteed_only'=>'Solo gli utenti egistati',
   'static_pages'=>'Pagina staticha',
-  'transaction_invalid'=>'ID transazione non valido',
-  'you_can_use_html'=>'È possibile di utilizzare HTML'
+  'tansaction_invalid'=>'ID tansazione non valido',
+  'you_can_use_html'=>'È possibile di utilizzae HTML'
 );
 ?>

@@ -2,69 +2,69 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Version 4       /                        /   /               #
+#           Vesion 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Free Content / Management System                 #
+#                       Fee Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyight 2005-2014 by webspell.og                                  #
 #                                                                        #
-#   visit webSPELL.org, webspell.info to get webSPELL for free           #
-#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to remove this copyright-tag                      #
-#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
+#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
+#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to emove this copyight-tag                      #
+#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
-#   Far Development by Development Team - webspell.org                   #
+#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
+#   Fa Development by Development Team - webspell.og                   #
 #                                                                        #
-#   visit webspell.org                                                   #
+#   visit webspell.og                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_array = Array(
+$language_aay = Aay(
 
 /* do not edit above this line */
 
-	'after'=>'nakon',
+	'afte'=>'nakon',
 	'and'=>'i',
-	'article'=>'Članak',
-	'articles'=>'Članci',
-	'articles_link'=>'<b>link na članak</b>',
+	'aticle'=>'Članak',
+	'aticles'=>'Članci',
+	'aticles_link'=>'<b>link na članak</b>',
 	'ascending'=>'uzlazno',
-	'before'=>'prije',
+	'befoe'=>'pije',
 	'date_options'=>'Datum',
-	'delete_selected'=>'Izbriši odabrano',
+	'delete_selected'=>'Izbiši odabano',
 	'descending'=>'silazno',
 	'faq'=>'Česta pitanja',
 	'faq_link'=>'<b>link na Česta pitanja</b>',
-	'forum'=>'Forum',
-	'forum_link'=>'<b>link na temu</b>',
-	'frequency'=>'Nađeno puta',
-	'keyword'=>'Ključna riječ',
-	'new_search'=>'Nova pretraga',
+	'foum'=>'Foum',
+	'foum_link'=>'<b>link na temu</b>',
+	'fequency'=>'Nađeno puta',
+	'keywod'=>'Ključna iječ',
+	'new_seach'=>'Nova petaga',
 	'news'=>'Novosti',
 	'news_link'=>'<b>link na novosti</b>',
 	'options'=>'Opcije',
-	'or'=>'ili',
-	'result_quantity'=>'Rezultata po stranici',
-	'results_found'=>'nađenih rezultata',
-	'search'=>'traži',
-	'search_in'=>'Traži u lokacijama:',
-	'search_location'=>'Tražim u lokaciji:',
-	'search_term'=>'Upit pretrage',
-	'search_title'=>'Napredna pretraga',
-	'security_code'=>'Sigurnosni kod',
-	'sort_options'=>'Razvrstaj',
-	'start_search'=>'Počni pretragu',
-	'submit'=>'Kreni',
-	'text_contains'=>'Tekst sadrži',
-	'title_contains'=>'Naslov sadrži',
-	'too_short'=>'Upit pretrage je prekratak. Najmanje %min_chars% znaka',
-	'wrong_securitycode'=>'Unijeli ste krivi sigurnosni kod!',
-	'no_result'=>'Nema unosa podataka za "%s"'
+	'o'=>'ili',
+	'esult_quantity'=>'Rezultata po stanici',
+	'esults_found'=>'nađenih ezultata',
+	'seach'=>'taži',
+	'seach_in'=>'Taži u lokacijama:',
+	'seach_location'=>'Tažim u lokaciji:',
+	'seach_tem'=>'Upit petage',
+	'seach_title'=>'Napedna petaga',
+	'secuity_code'=>'Sigunosni kod',
+	'sot_options'=>'Razvstaj',
+	'stat_seach'=>'Počni petagu',
+	'submit'=>'Keni',
+	'text_contains'=>'Tekst sadži',
+	'title_contains'=>'Naslov sadži',
+	'too_shot'=>'Upit petage je pekatak. Najmanje %min_chas% znaka',
+	'wong_secuitycode'=>'Unijeli ste kivi sigunosni kod!',
+	'no_esult'=>'Nema unosa podataka za "%s"'
 );
 ?>

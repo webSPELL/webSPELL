@@ -2,60 +2,60 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Version 4       /                        /   /               #
+#           Vesion 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Free Content / Management System                 #
+#                       Fee Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyight 2005-2014 by webspell.og                                  #
 #                                                                        #
-#   visit webSPELL.org, webspell.info to get webSPELL for free           #
-#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to remove this copyright-tag                      #
-#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
+#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
+#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to emove this copyight-tag                      #
+#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
-#   Far Development by Development Team - webspell.org                   #
+#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
+#   Fa Development by Development Team - webspell.og                   #
 #                                                                        #
-#   visit webspell.org                                                   #
+#   visit webspell.og                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_array = Array(
+$language_aay = Aay(
 
 /* do not edit above this line */
 
-	'additional_info'=>'Description (ex: pourquoi vous devez me prendre moi en tant que joueur de votre team...)',
+	'additional_info'=>'Desciption (ex: pouquoi vous devez me pende moi en tant que joueu de vote team...)',
 	'age'=>'Âge',
-	'back_to_form'=>'Retour',
+	'back_to_fom'=>'Retou',
 	'city'=>'Ville',
-	'clan_history'=>'Anciennes teams',
-	'email_not_valid'=>'Votre adresse email est invalide !',
-	'forgot_age'=>'Vous avez oublié d\'entrer votre âge !',
-	'forgot_city'=>'Vous avez oublié d\'entrer votre ville !',
-	'forgot_history'=>'Vous avez oublié d\'entrer votre historique des teams !',
-	'forgot_messenger'=>'Vous avez oublié d\'entrer votre messagerie instantanée ?',
-	'forgot_nickname'=>'Vous avez oublié d\'entrer votre pseudo !',
-	'forgot_realname'=>'Vous avez oublié d\'entrer votre nom !',
+	'clan_histoy'=>'Anciennes teams',
+	'email_not_valid'=>'Vote adesse email est invalide !',
+	'fogot_age'=>'Vous avez oublié d\'ente vote âge !',
+	'fogot_city'=>'Vous avez oublié d\'ente vote ville !',
+	'fogot_histoy'=>'Vous avez oublié d\'ente vote histoique des teams !',
+	'fogot_messenge'=>'Vous avez oublié d\'ente vote messageie instantanée ?',
+	'fogot_nickname'=>'Vous avez oublié d\'ente vote pseudo !',
+	'fogot_ealname'=>'Vous avez oublié d\'ente vote nom !',
 	'icq_msn'=>'ICQ/MSN/etc...',
-	'info'=>'Description',
-	'joinus_form'=>'Recrutement',
+	'info'=>'Desciption',
+	'joinus_fom'=>'Recutement',
 	'mail'=>'Email',
-	'messenger'=>'Messagerie',
+	'messenge'=>'Messageie',
 	'message_title'=>'Join us',
 	'name'=>'Nom',
 	'nick'=>'Pseudo',
-	'problems'=>'Erreurs',
-	'security_code'=>'Code de sécurité',
-	'send'=>'Envoyer',
-	'someone_want_to_join_your_squad'=>'Un joueur demande à rejoindre la section:',
+	'poblems'=>'Eeus',
+	'secuity_code'=>'Code de sécuité',
+	'send'=>'Envoye',
+	'someone_want_to_join_you_squad'=>'Un joueu demande à ejoinde la section:',
 	'squad'=>'Section',
-	'thanks_you_will_get_mail'=>'Merci pour votre demande, nous rentrerons en contact avec vous après lecture de celle-ci.',
-	'title_join_us'=>'Demande de recrutement',
-	'wrong_security_code'=>'Le code de sécurité est faux !'
+	'thanks_you_will_get_mail'=>'Meci pou vote demande, nous enteons en contact avec vous apès lectue de celle-ci.',
+	'title_join_us'=>'Demande de ecutement',
+	'wong_secuity_code'=>'Le code de sécuité est faux !'
 );
 ?>

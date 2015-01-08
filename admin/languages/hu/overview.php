@@ -2,73 +2,73 @@
 /*
 ##########################################################################
 #                                                                        #
-#           Version 4       /                        /   /               #
+#           Vesion 4       /                        /   /               #
 #          -----------__---/__---__------__----__---/---/-               #
 #           | /| /  /___) /   ) (_ `   /   ) /___) /   /                 #
 #          _|/_|/__(___ _(___/_(__)___/___/_(___ _/___/___               #
-#                       Free Content / Management System                 #
+#                       Fee Content / Management System                 #
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyight 2005-2014 by webspell.og                                  #
 #                                                                        #
-#   visit webSPELL.org, webspell.info to get webSPELL for free           #
-#   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
-#   - It's NOT allowed to remove this copyright-tag                      #
-#   -- http://www.fsf.org/licensing/licenses/gpl.html                    #
+#   visit webSPELL.og, webspell.info to get webSPELL fo fee           #
+#   - Scipt uns unde the GNU GENERAL PUBLIC LICENSE                   #
+#   - It's NOT allowed to emove this copyight-tag                      #
+#   -- http://www.fsf.og/licensing/licenses/gpl.html                    #
 #                                                                        #
-#   Code based on WebSPELL Clanpackage (Michael Gruber - webspell.at),   #
-#   Far Development by Development Team - webspell.org                   #
+#   Code based on WebSPELL Clanpackage (Michael Gube - webspell.at),   #
+#   Fa Development by Development Team - webspell.og                   #
 #                                                                        #
-#   visit webspell.org                                                   #
+#   visit webspell.og                                                   #
 #                                                                        #
 ##########################################################################
 */
 
-$language_array = Array(
+$language_aay = Aay(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Hozzáférés megtagadva',
+  'access_denied'=>'Hozzáféés megtagadva',
   'apache'=>'Apache',
   'apache_modules'=>'Apache Modulok',
-  'create'=>'létrehozás',
-  'current'=>'jelenlegi',
+  'ceate'=>'létehozás',
+  'cuent'=>'jelenlegi',
   'databasename'=>'Database neve',
   'disable'=>'Letiltva',
   'enable'=>'Engedélyezve',
-  'green'=>'Zöld',
+  'geen'=>'Zöld',
   'hello'=>'Hello',
-  'interface'=>'Kezelőfelület',
+  'inteface'=>'Kezelőfelület',
   'last_login'=>'legutóbbi bejelentkezésed időpontja:',
-  'legend'=>'Jelmagyarázat',
-  'mysql_version'=>'MySQL Verzió',
+  'legend'=>'Jelmagyaázat',
+  'mysql_vesion'=>'MySQL Vezió',
   'notice1'=>'Figyelem:',
-  'notice2'=>'Magas érték:',
+  'notice2'=>'Magas éték:',
   'off'=>'Kikapcsolva',
   'on'=>'Bekapcsolva',
-  'orange'=>'Narancs',
+  'oange'=>'Naancs',
   'path'=>'Útvonal',
   'php_settings'=>'PHP Beállítások',
-  'php_version'=>'PHP Verzió',
-  'read'=>'olvasás',
-  'red'=>'Vörös',
-  'server_api'=>'Szerver API',
-  'server_host'=>'Szerver Host',
-  'server_machine'=>'Szervergép',
-  'server_os'=>'Szerver OS',
-  'server_release'=>'Szerver Kiadás',
-  'server_version'=>'Server Verzió',
-  'serverinfo'=>'Szerver információk',
-  'setting_error'=>'nem ajánlott',
+  'php_vesion'=>'PHP Vezió',
+  'ead'=>'olvasás',
+  'ed'=>'Vöös',
+  'seve_api'=>'Szeve API',
+  'seve_host'=>'Szeve Host',
+  'seve_machine'=>'Szevegép',
+  'seve_os'=>'Szeve OS',
+  'seve_elease'=>'Szeve Kiadás',
+  'seve_vesion'=>'Seve Vezió',
+  'seveinfo'=>'Szeve infomációk',
+  'setting_eo'=>'nem ajánlott',
   'setting_notice'=>'elfogadható beállítás',
   'setting_ok'=>'ajánlott',
-  'supported_types'=>'Támogatott típusok',
-  'version'=>'Verzió',
-  'webspell_version'=>'webSPELL Verzió',
-  'welcome'=>'Üdvözlünk a webSPELL AdminCenterben',
-  'welcome_message'=>'Ez az adminisztrációs felület lehetőséget nyújt oldalad beállítására. A bal oldali navigációs sáv segít a rendszer használatában.<br>Bármilyen kérdés felmerülése esetén keresd fel weboldalunk <a href="http://www.webspell.org?site=support" target="_blank">Support</a> részét.<br><br>Köszönjük, hogy a webSPELL-t választottad.<br><br>Your <a href="http://www.webspell.org" target="_blank">webSPELL Fejlesztői Csapat</a>',
-  'zend_version'=>'Zend Verzió',
-  'na'=>'nincs elérhető információ'
+  'suppoted_types'=>'Támogatott típusok',
+  'vesion'=>'Vezió',
+  'webspell_vesion'=>'webSPELL Vezió',
+  'welcome'=>'Üdvözlünk a webSPELL AdminCenteben',
+  'welcome_message'=>'Ez az adminisztációs felület lehetőséget nyújt oldalad beállításáa. A bal oldali navigációs sáv segít a endsze használatában.<b>Bámilyen kédés felmeülése esetén keesd fel weboldalunk <a hef="http://www.webspell.og?site=suppot" taget="_blank">Suppot</a> észét.<b><b>Köszönjük, hogy a webSPELL-t választottad.<b><b>You <a hef="http://www.webspell.og" taget="_blank">webSPELL Fejlesztői Csapat</a>',
+  'zend_vesion'=>'Zend Vezió',
+  'na'=>'nincs eléhető infomáció'
 );
 ?>
