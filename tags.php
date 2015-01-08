@@ -79,7 +79,9 @@ if (isset($_GET[ 'tag' ])) {
     $tags = \webspell\Tags::getTagCloud();
     usort($tags[ 'tags' ], "tags_top_10");
     $str = '';
-    for ($i = 0; $i < min(10, count($tags[ 'tags' ])); $i++) {
+
+    $counter = min(10, count($tags[ 'tags' ]));
+    for ($i = 0; $i < $counter; $i++) {
         $tag = $tags[ 'tags' ][ $i ];
         $size = \webspell\Tags::GetTagSizeLogarithmic($tag[ 'count' ], $tags[ 'min' ], $tags[ 'max' ], 10, 25, 0);
         $str .= " <a href='index.php?site=tags&amp;tag=" . $tag[ 'name' ] . "' style='font-size:" . $size .

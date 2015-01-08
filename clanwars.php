@@ -544,7 +544,8 @@ if ($action == "new") {
         $theHomeScore = unserialize($ds[ 'homescore' ]);
         $theOppScore = unserialize($ds[ 'oppscore' ]);
         $i = 0;
-        for ($i = 0; $i < count($map); $i++) {
+        $counter = count($map);
+        for ($i = 0; $i < $counter; $i++) {
 
             $maps .= '<tr>
             <td width="15%">
