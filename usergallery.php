@@ -67,7 +67,7 @@ if ($userID) {
 
                 $mime_types = array('image/jpeg','image/png','image/gif');
 
-                if($upload->supportedMimeType($mime_types)){
+                if ($upload->supportedMimeType($mime_types)) {
                     if (!empty($_POST[ 'name' ])) {
                         $insertname = $_POST[ 'name' ];
                     } else {
@@ -110,7 +110,7 @@ if ($userID) {
                         $newBigFile   = $dir . 'large/' . $insertid . $endung;
                         $newThumbFile = $dir . 'thumb/' . $insertid . '.jpg';
 
-                        if($upload->saveAs($newBigFile)){
+                        if ($upload->saveAs($newBigFile)) {
                             @chmod($newBigFile, $new_chmod);
                             $galclass->saveThumb($newBigFile, $newThumbFile);
 
@@ -119,20 +119,19 @@ if ($userID) {
                             ) {
                                 @unlink($newBigFile);
                                 @unlink($newThumbFile);
-                                safe_query("DELETE FROM " . PREFIX . "gallery_pictures WHERE picID='" . $insertid . "'");
+                                safe_query(
+                                    "DELETE FROM " . PREFIX . "gallery_pictures WHERE picID='" . $insertid . "'"
+                                );
                                 echo generateErrorBox($_language->module[ 'no_space_left' ]);
                             }
-                        }
-                        else{
+                        } else{
                             safe_query("DELETE FROM " . PREFIX . "gallery_pictures WHERE picID='" . $insertid . "'");
                             @unlink($upload->getTempFile());
                         }
-                    }
-                    else{
+                    } else {
                         echo generateErrorBox($_language->module[ 'broken_image' ]);
                     }
-                }
-                else{
+                } else {
                     echo generateErrorBox($_language->module[ 'unsupported_image_type' ]);
                 }
             }
