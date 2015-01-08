@@ -200,9 +200,9 @@ function safe_query($query = "")
             return false;
         }
         if (DEBUG == "OFF") {
-            $result = $_database->query($query) or system_error('Query failed!');
+            $result = $_database->query($query) || system_error('Query failed!');
         } else {
-            $result = $_database->query($query) or
+            $result = $_database->query($query) ||
             system_error(
                 'Query failed: ' . '<ul>' .
                 '<li>errorno=' . $_database->errno . '</li>' .
