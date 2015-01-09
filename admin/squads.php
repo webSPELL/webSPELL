@@ -37,10 +37,8 @@ if (isset($_GET[ 'delete' ])) {
         $squadID = $_GET[ 'squadID' ];
         $ergebnis = safe_query("SELECT userID FROM " . PREFIX . "squads_members WHERE squadID='$squadID'");
         while ($ds = mysqli_fetch_array($ergebnis)) {
-            $squads = mysqli_num_rows(safe_query(
-                "SELECT userID FROM " . PREFIX .
-                "squads_members WHERE userID='$ds[userID]'"
-            ));
+            $squads = mysqli_num_rows(safe_query("SELECT userID FROM " . PREFIX .
+                "squads_members WHERE userID='$ds[userID]'"));
             if ($squads < 2 && !issuperadmin($ds[ 'userID' ])) {
                 safe_query("DELETE FROM " . PREFIX . "user_groups WHERE userID='$ds[userID]'");
             }
@@ -104,11 +102,9 @@ if (isset($_POST[ 'save' ])) {
 
         if (checkforempty(['name'])) {
             $games = implode(";", $_POST[ 'games' ]);
-            safe_query(
-                "INSERT INTO " . PREFIX . "squads ( gamesquad, games, name, info, sort ) VALUES ( '" .
+            safe_query("INSERT INTO " . PREFIX . "squads ( gamesquad, games, name, info, sort ) VALUES ( '" .
                 $_POST[ 'gamesquad' ] . "', '" . $games . "', '" . $_POST[ 'name' ] . "', '" . $_POST[ 'message' ] .
-                "', '1' )"
-            );
+                "', '1' )");
 
             $id = mysqli_insert_id($_database);
             $filepath = "../images/squadicons/";
@@ -118,10 +114,10 @@ if (isset($_POST[ 'save' ])) {
             $upload = new \webspell\Upload('icon');
             if ($upload->hasFile()) {
                 if ($upload->hasError() === false) {
-                    $mime_types = array('image/jpeg','image/png','image/gif');
+                    $mime_types = array('image/jpeg', 'image/png', 'image/gif');
 
                     if ($upload->supportedMimeType($mime_types)) {
-                        $imageInformation =  getimagesize($upload->getTempFile());
+                        $imageInformation = getimagesize($upload->getTempFile());
 
                         if (is_array($imageInformation)) {
                             switch ($imageInformation[ 2 ]) {
@@ -135,35 +131,31 @@ if (isset($_POST[ 'save' ])) {
                                     $endung = '.jpg';
                                     break;
                             }
-                            $file = $id.$endung;
+                            $file = $id . $endung;
 
-                            if ($upload->saveAs($filepath.$file,true)) {
+                            if ($upload->saveAs($filepath . $file, true)) {
                                 @chmod($file, $new_chmod);
-                                safe_query(
-                                    "UPDATE " . PREFIX . "squads SET icon='" . $file . "' WHERE squadID='" . $id . "'"
-                                );
+                                safe_query("UPDATE " . PREFIX . "squads SET icon='" . $file . "' WHERE squadID='" .
+                                    $id . "'");
                             }
+                        } else {
+                            $errors[ ] = $_language->module[ 'broken_image' ];
                         }
-                        else{
-                            $errors[] = $_language->module[ 'broken_image' ];
-                        }
+                    } else {
+                        $errors[ ] = $_language->module[ 'unsupported_image_type' ];
                     }
-                    else{
-                        $errors[] = $_language->module[ 'unsupported_image_type' ];
-                    }
-                }
-                else{
-                    $errors[] = $upload->translateError();
+                } else {
+                    $errors[ ] = $upload->translateError();
                 }
             }
 
             $upload = new \webspell\Upload('icon_small');
             if ($upload->hasFile()) {
                 if ($upload->hasError() === false) {
-                    $mime_types = array('image/jpeg','image/png','image/gif');
+                    $mime_types = array('image/jpeg', 'image/png', 'image/gif');
 
                     if ($upload->supportedMimeType($mime_types)) {
-                        $imageInformation =  getimagesize($upload->getTempFile());
+                        $imageInformation = getimagesize($upload->getTempFile());
 
                         if (is_array($imageInformation)) {
                             switch ($imageInformation[ 2 ]) {
@@ -177,31 +169,27 @@ if (isset($_POST[ 'save' ])) {
                                     $endung = '.jpg';
                                     break;
                             }
-                            $file = $id.'_small'.$endung;
+                            $file = $id . '_small' . $endung;
 
-                            if ($upload->saveAs($filepath.$file,true)) {
+                            if ($upload->saveAs($filepath . $file, true)) {
                                 @chmod($file, $new_chmod);
-                                safe_query(
-                                    "UPDATE " . PREFIX . "squads SET icon_small='" . $file . "' WHERE squadID='" . $id . "'"
-                                );
+                                safe_query("UPDATE " . PREFIX . "squads SET icon_small='" . $file .
+                                    "' WHERE squadID='" . $id . "'");
                             }
+                        } else {
+                            $errors[ ] = $_language->module[ 'broken_image' ];
                         }
-                        else{
-                            $errors[] = $_language->module[ 'broken_image' ];
-                        }
+                    } else {
+                        $errors[ ] = $_language->module[ 'unsupported_image_type' ];
                     }
-                    else{
-                        $errors[] = $_language->module[ 'unsupported_image_type' ];
-                    }
-                }
-                else{
-                    $errors[] = $upload->translateError();
+                } else {
+                    $errors[ ] = $upload->translateError();
                 }
             }
 
             if (count($errors)) {
                 $errors = array_unique($errors);
-                echo generateErrorBoxFromArray($_language->module['errors_there'],$errors);
+                echo generateErrorBoxFromArray($_language->module[ 'errors_there' ], $errors);
             }
         } else {
             echo $_language->module[ 'information_incomplete' ];
@@ -217,11 +205,9 @@ if (isset($_POST[ 'saveedit' ])) {
         if (checkforempty(['name'])) {
 
             $games = implode(";", $_POST[ 'games' ]);
-            safe_query(
-                "UPDATE " . PREFIX . "squads SET gamesquad='" . $_POST[ 'gamesquad' ] . "', games='" . $games .
+            safe_query("UPDATE " . PREFIX . "squads SET gamesquad='" . $_POST[ 'gamesquad' ] . "', games='" . $games .
                 "', name='" . $_POST[ 'name' ] . "', info='" . $_POST[ 'message' ] . "' WHERE squadID='" .
-                $_POST[ 'squadID' ] . "' "
-            );
+                $_POST[ 'squadID' ] . "' ");
             $filepath = "../images/squadicons/";
             $id = $_POST[ 'squadID' ];
 
@@ -230,10 +216,10 @@ if (isset($_POST[ 'saveedit' ])) {
             $upload = new \webspell\Upload('icon');
             if ($upload->hasFile()) {
                 if ($upload->hasError() === false) {
-                    $mime_types = array('image/jpeg','image/png','image/gif');
+                    $mime_types = array('image/jpeg', 'image/png', 'image/gif');
 
                     if ($upload->supportedMimeType($mime_types)) {
-                        $imageInformation =  getimagesize($upload->getTempFile());
+                        $imageInformation = getimagesize($upload->getTempFile());
 
                         if (is_array($imageInformation)) {
                             switch ($imageInformation[ 2 ]) {
@@ -247,35 +233,31 @@ if (isset($_POST[ 'saveedit' ])) {
                                     $endung = '.jpg';
                                     break;
                             }
-                            $file = $id.$endung;
+                            $file = $id . $endung;
 
-                            if ($upload->saveAs($filepath.$file,true)) {
+                            if ($upload->saveAs($filepath . $file, true)) {
                                 @chmod($file, $new_chmod);
-                                safe_query(
-                                    "UPDATE " . PREFIX . "squads SET icon='" . $file . "' WHERE squadID='" . $id . "'"
-                                );
+                                safe_query("UPDATE " . PREFIX . "squads SET icon='" . $file . "' WHERE squadID='" .
+                                    $id . "'");
                             }
+                        } else {
+                            $errors[ ] = $_language->module[ 'broken_image' ];
                         }
-                        else{
-                            $errors[] = $_language->module[ 'broken_image' ];
-                        }
+                    } else {
+                        $errors[ ] = $_language->module[ 'unsupported_image_type' ];
                     }
-                    else{
-                        $errors[] = $_language->module[ 'unsupported_image_type' ];
-                    }
-                }
-                else{
-                    $errors[] = $upload->translateError();
+                } else {
+                    $errors[ ] = $upload->translateError();
                 }
             }
 
             $upload = new \webspell\Upload('icon_small');
             if ($upload->hasFile()) {
                 if ($upload->hasError() === false) {
-                    $mime_types = array('image/jpeg','image/png','image/gif');
+                    $mime_types = array('image/jpeg', 'image/png', 'image/gif');
 
                     if ($upload->supportedMimeType($mime_types)) {
-                        $imageInformation =  getimagesize($upload->getTempFile());
+                        $imageInformation = getimagesize($upload->getTempFile());
 
                         if (is_array($imageInformation)) {
                             switch ($imageInformation[ 2 ]) {
@@ -289,31 +271,27 @@ if (isset($_POST[ 'saveedit' ])) {
                                     $endung = '.jpg';
                                     break;
                             }
-                            $file = $id.'_small'.$endung;
+                            $file = $id . '_small' . $endung;
 
-                            if ($upload->saveAs($filepath.$file,true)) {
+                            if ($upload->saveAs($filepath . $file, true)) {
                                 @chmod($file, $new_chmod);
-                                safe_query(
-                                    "UPDATE " . PREFIX . "squads SET icon_small='" . $file . "' WHERE squadID='" . $id . "'"
-                                );
+                                safe_query("UPDATE " . PREFIX . "squads SET icon_small='" . $file .
+                                    "' WHERE squadID='" . $id . "'");
                             }
+                        } else {
+                            $errors[ ] = $_language->module[ 'broken_image' ];
                         }
-                        else{
-                            $errors[] = $_language->module[ 'broken_image' ];
-                        }
+                    } else {
+                        $errors[ ] = $_language->module[ 'unsupported_image_type' ];
                     }
-                    else{
-                        $errors[] = $_language->module[ 'unsupported_image_type' ];
-                    }
-                }
-                else{
-                    $errors[] = $upload->translateError();
+                } else {
+                    $errors[ ] = $upload->translateError();
                 }
             }
 
             if (count($errors)) {
                 $errors = array_unique($errors);
-                echo generateErrorBoxFromArray($_language->module['errors_there'],$errors);
+                echo generateErrorBoxFromArray($_language->module[ 'errors_there' ], $errors);
             }
         } else {
             echo $_language->module[ 'information_incomplete' ];
@@ -370,8 +348,10 @@ onsubmit="return chkFormular();">
       </tr>
         <tr>
         <td><b>' . $_language->module[ 'icon_upload_small' ] . '</b></td>
-        <td><input name="icon_small" type="file" size="40" /> <small>(' . $_language->module[ 'icon_upload_info' ] .
-        ')</small></td>
+        <td>
+        <input name="icon_small" type="file" size="40" />
+         <small>(' . $_language->module[ 'icon_upload_info' ] . ')</small>
+        </td>
       </tr>
       <tr>
         <td><b>' . $_language->module[ 'squad_name' ] . '</b></td>
@@ -380,11 +360,9 @@ onsubmit="return chkFormular();">
       <tr>
         <td><b>' . $_language->module[ 'squad_type' ] . '</b></td>
         <td><input onclick="document.getElementById(\'games\').style.display = \'block\'" type="radio"
-        name="gamesquad" value="1" checked="checked" /> ' .
-        $_language->module[ 'gaming_squad' ] .
-        ' &nbsp; <input onclick="document.getElementById(\'games\').style.display = \'none\'" type="radio"
-        name="gamesquad" value="0" /> ' .
-        $_language->module[ 'non_gaming_squad' ] . '</td>
+        name="gamesquad" value="1" checked="checked" /> ' . $_language->module[ 'gaming_squad' ] . ' &nbsp;
+        <input onclick="document.getElementById(\'games\').style.display = \'none\'" type="radio"
+        name="gamesquad" value="0" /> ' . $_language->module[ 'non_gaming_squad' ] . '</td>
       </tr>
     </table>
     <div id="games" style="display:block;">
@@ -438,22 +416,16 @@ onsubmit="return chkFormular();">
     $games .= '</select>';
 
     if ($ds[ 'gamesquad' ]) {
-        $type =
-            '<input onclick="document.getElementById(\'games\').style.display = \'block\'" type="radio" name="gamesquad"
-            value="1" checked="checked" /> ' .
-            $_language->module[ 'gaming_squad' ] .
-            ' &nbsp; <input onclick="document.getElementById(\'games\').style.display = \'none\'" type="radio"
-            name="gamesquad" value="0" /> ' .
-            $_language->module[ 'non_gaming_squad' ];
+        $type = '<input onclick="document.getElementById(\'games\').style.display = \'block\'"
+type="radio" name="gamesquad" value="1" checked="checked" /> ' . $_language->module[ 'gaming_squad' ] . ' &nbsp;
+<input onclick="document.getElementById(\'games\').style.display = \'none\'" type="radio"
+            name="gamesquad" value="0" /> ' . $_language->module[ 'non_gaming_squad' ];
         $display = 'block';
     } else {
-        $type =
-            '<input onclick="document.getElementById(\'games\').style.display = \'block\'" type="radio"
-            name="gamesquad" value="1" /> ' .
-            $_language->module[ 'gaming_squad' ] .
-            ' &nbsp; <input onclick="document.getElementById(\'games\').style.display = \'none\'" type="radio"
-            name="gamesquad" value="0" checked="checked" /> ' .
-            $_language->module[ 'non_gaming_squad' ];
+        $type = '<input onclick="document.getElementById(\'games\').style.display = \'block\'" type="radio"
+            name="gamesquad" value="1" /> ' . $_language->module[ 'gaming_squad' ] . ' &nbsp;
+            <input onclick="document.getElementById(\'games\').style.display = \'none\'" type="radio"
+            name="gamesquad" value="0" checked="checked" /> ' . $_language->module[ 'non_gaming_squad' ];
         $display = 'none';
     }
 
@@ -504,8 +476,10 @@ onsubmit="return chkFormular();">
     </tr>
 	 <tr>
       <td><b>' . $_language->module[ 'icon_upload_small' ] . '</b></td>
-      <td><input name="icon_small" type="file" size="40" /> <small>(' . $_language->module[ 'icon_upload_info' ] .
-        ')</small></td>
+      <td>
+      <input name="icon_small" type="file" size="40" />
+      <small>(' . $_language->module[ 'icon_upload_info' ] . ')</small>
+      </td>
     </tr>
     <tr>
       <td><b>' . $_language->module[ 'squad_name' ] . '</b></td>
@@ -547,8 +521,8 @@ onsubmit="return chkFormular();">
 
     echo '<h1>&curren; ' . $_language->module[ 'squads' ] . '</h1>';
 
-    echo '<a href="admincenter.php?site=squads&amp;action=add" class="input">' .
-        $_language->module[ 'new_squad' ] . '</a><br><br>';
+    echo '<a href="admincenter.php?site=squads&amp;action=add" class="input">' . $_language->module[ 'new_squad' ] .
+        '</a><br><br>';
 
     echo '<form method="post" action="admincenter.php?site=squads">
   <table width="100%" border="0" cellspacing="1" cellpadding="3" bgcolor="#DDDDDD">
@@ -592,8 +566,8 @@ onsubmit="return chkFormular();">
         <td class="' . $td . '" align="center">' . $type . '</td>
         <td class="' . $td . '">' . cleartext($db[ 'info' ], true, 'admin') . '</td>
         <td class="' . $td . '" align="center">
-            <a href="admincenter.php?site=squads&amp;action=edit&amp;squadID=' .
-                $db[ 'squadID' ] . '" class="input">' . $_language->module[ 'edit' ] . '</a>
+            <a href="admincenter.php?site=squads&amp;action=edit&amp;squadID=' . $db[ 'squadID' ] . '" class="input">' .
+                $_language->module[ 'edit' ] . '</a>
         <input type="button" onclick="MM_confirm(\'' . $_language->module[ 'really_delete' ] .
                 '\', \'admincenter.php?site=squads&amp;delete=true&amp;squadID=' . $db[ 'squadID' ] .
                 '&amp;captcha_hash=' . $hash . '\')" value="' . $_language->module[ 'delete' ] . '" /></td>
