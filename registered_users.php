@@ -145,7 +145,7 @@ if ($anz) {
             $email = '';
         } else {
             $email = '<a href="mailto:' . mail_protect($ds[ 'email' ]) .
-                '"><img src="images/icons/email.gif" width="15" height="11" alt="e-mail"></a>';
+                '"><span class="glyphicon glyphicon-email" title="email"></span></a>';
         }
 
         if (!validate_url($ds[ 'homepage' ])) {

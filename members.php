@@ -143,7 +143,7 @@ if ($action == "show") {
                 $email = '';
             } else {
                 $email = '<a href="mailto:' . mail_protect($dm[ 'email' ]) .
-                    '"><img src="images/icons/email.gif" width="15" height="11" alt="email"></a>';
+                    '"><span class="glyphicon glyphicon-email" title="email"></span></a>';
             }
             $emaill = $dm[ 'email' ];
 
@@ -291,7 +291,7 @@ if ($action == "show") {
                     $email = '';
                 } else {
                     $email = '<a href="mailto:' . mail_protect($dm[ 'email' ]) .
-                        '"><img src="images/icons/email.gif" width="15" height="11" alt="email"></a>';
+                        '"><span class="glyphicon glyphicon-email" title="email"></span></a>';
                 }
                 $emaill = $dm[ 'email' ];
 

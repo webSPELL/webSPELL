@@ -138,10 +138,10 @@ if ($action == "save") {
 
     if ($type == "ASC") {
         $sorter = '<a href="index.php?site=shoutbox_content&amp;action=showall&amp;page=' . $page . '&amp;type=DESC">' .
-            $_language->module[ 'sort' ] . '</a> <img src="images/icons/asc.gif">';
+            $_language->module[ 'sort' ] . '</a> <span class="glyphicon glyphicon-chevron-down"></span>';
     } else {
         $sorter = '<a href="index.php?site=shoutbox_content&amp;action=showall&amp;page=' . $page . '&amp;type=ASC">' .
-            $_language->module[ 'sort' ] . '</a> <img src="images/icons/desc.gif">';
+            $_language->module[ 'sort' ] . '</a> <span class="glyphicon glyphicon-chevron-up"></span>';
     }
 
     eval ("\$shoutbox_all_head = \"" . gettemplate("shoutbox_all_head") . "\";");

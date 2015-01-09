@@ -130,8 +130,8 @@ if ($action == "show") {
                 $email = '';
             } else {
                 $email =
-                    '<a href="mailto:' . mail_protect($dm[ 'email' ]) . '"><img src="images/icons/email.gif" alt="' .
-                    $_language->module[ 'email' ] . '"></a>';
+                    '<a href="mailto:' . mail_protect($dm[ 'email' ]) . '"><span class="glyphicon glyphicon-email"
+                    title="' . $_language->module[ 'email' ] . '"></span></a>';
             }
 
             $pm = '';

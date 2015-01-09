@@ -366,12 +366,12 @@ if (isset($_POST[ 'savevisitorcomment' ])) {
 
         if ($sorttype == "ASC") {
             $sorter = '<a href="' . $referer . '&amp;commentspage=' . $commentspage . '&amp;sorttype=DESC">' .
-                $_language->module[ 'sort' ] . '</a> <img src="images/icons/asc.gif" width="9" height="7" alt="' .
-                $_language->module[ 'sort_desc' ] . '">&nbsp;&nbsp;&nbsp;';
+                $_language->module[ 'sort' ] . '</a> <span class="glyphicon glyphicon-chevron-down" title="' .
+                $_language->module[ 'sort_desc' ] . '"></span>&nbsp;&nbsp;&nbsp;';
         } else {
             $sorter = '<a href="' . $referer . '&amp;commentspage=' . $commentspage . '&amp;sorttype=ASC">' .
-                $_language->module[ 'sort' ] . '</a> <img src="images/icons/desc.gif" width="9" height="7" alt="' .
-                $_language->module[ 'sort_asc' ] . '">&nbsp;&nbsp;&nbsp;';
+                $_language->module[ 'sort' ] . '</a> <span class="glyphicon glyphicon-chevron-up" title="' .
+                $_language->module[ 'sort_asc' ] . '"></span>&nbsp;&nbsp;&nbsp;';
         }
 
         eval ("\$comments_head = \"" . gettemplate("comments_head") . "\";");

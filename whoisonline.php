@@ -66,11 +66,11 @@ if (isset($_GET[ 'type' ])) {
 if ($type == "ASC") {
     $sorter =
         '<a href="index.php?site=whoisonline&amp;sort=' . $sort . '&amp;type=DESC">' . $_language->module[ 'sort' ] . '
-        </a> <img src="images/icons/asc.gif" width="9" height="7" alt="">';
+        </a> <span class="glyphicon glyphicon-chevron-down"></span>';
 } else {
     $sorter =
         '<a href="index.php?site=whoisonline&amp;sort=' . $sort . '&amp;type=ASC">' . $_language->module[ 'sort' ] . '
-        </a> <img src="images/icons/desc.gif" width="9" height="7" alt="">';
+        </a> <span class="glyphicon glyphicon-chevron-down"></span>';
 }
 
 $ergebnis = safe_query(
@@ -112,7 +112,7 @@ while ($ds = mysqli_fetch_array($ergebnis)) {
             $email = '';
         } else {
             $email = '<a href="mailto:' . mail_protect(getemail($ds[ 'userID' ])) . '">
-            <img src="images/icons/email.gif" width="15" height="11" alt="e-mail">
+            <span class="glyphicon glyphicon-email" title="email"></span>
         </a>';
         }
 
@@ -229,11 +229,11 @@ echo $whoisonline_foot;
 if ($type == "ASC") {
     $sorter =
         '<a href="index.php?site=whoisonline&amp;sort=' . $sort . '&amp;type=DESC">' . $_language->module[ 'sort' ] .
-        '</a> <img src="images/icons/asc.gif" width="9" height="7" alt="">';
+        '</a> <span class="glyphicon glyphicon-chevron-down"></span>';
 } else {
     $sorter =
         '<a href="index.php?site=whoisonline&amp;sort=' . $sort . '&amp;type=ASC">' . $_language->module[ 'sort' ] .
-        '</a> <img src="images/icons/desc.gif" width="9" height="7" alt="">';
+        '</a> <span class="glyphicon glyphicon-chevron-up"></span>';
 }
 
 $ergebnis = safe_query(
@@ -275,7 +275,7 @@ while ($ds = mysqli_fetch_array($ergebnis)) {
         $email = '';
     } else {
         $email = '<a href="mailto:' . mail_protect(getemail($ds[ 'userID' ])) . '">
-            <img src="images/icons/email.gif" width="15" height="11" alt="e-mail">
+            <span class="glyphicon glyphicon-email" title="email"></span>
         </a>';
     }
 

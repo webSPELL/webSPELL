@@ -1497,11 +1497,11 @@ if ($action == "new") {
 
     if ($type == "ASC") {
         $seiten = '<a href="index.php?site=clanwars&amp;page=' . $page . '&amp;sort=' . $sort . '&amp;type=DESC">' .
-            $_language->module[ 'sort' ] . ':</a> <img src="images/icons/asc.gif" width="9" height="7" alt=""> ' .
+            $_language->module[ 'sort' ] . ':</a> <span class="glyphicon glyphicon-chevron-down"></span> ' .
             $page_link . '<br><br>';
     } else {
         $seiten = '<a href="index.php?site=clanwars&amp;page=' . $page . '&amp;sort=' . $sort . '&amp;type=ASC">' .
-            $_language->module[ 'sort' ] . ':</a> <img src="images/icons/desc.gif" width="9" height="7" alt=""> ' .
+            $_language->module[ 'sort' ] . ':</a> <span class="glyphicon glyphicon-chevron-up"></span> ' .
             $page_link . '<br><br>';
     }
 

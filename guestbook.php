@@ -253,7 +253,7 @@ if (isset($_POST[ 'save' ])) {
 
         if (validate_email($ds[ 'email' ])) {
             $email = '<a href="mailto:' . mail_protect($ds[ 'email' ]) .
-                '"><img src="images/icons/email.gif" width="15" height="11" alt="email"></a>';
+                '"><span class="glyphicon glyphicon-email" title="email"></span></a>';
         } else {
             $email = '';
         }

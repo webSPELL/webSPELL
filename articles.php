@@ -741,11 +741,11 @@ if ($action == "new") {
         if ($type == "ASC") {
             echo '<a href="index.php?site=articles&amp;page=' . $page . '&amp;sort=' . $sort . '&amp;type=DESC">' .
                 $_language->module[ 'sort' ] .
-                '</a> <img src="images/icons/asc.gif" width="9" height="7" alt="">&nbsp;&nbsp;&nbsp;';
+                '</a> <span class="glyphicon glyphicon-chevron-down"></span>&nbsp;&nbsp;&nbsp;';
         } else {
             echo '<a href="index.php?site=articles&amp;page=' . $page . '&amp;sort=' . $sort . '&amp;type=ASC">' .
                 $_language->module[ 'sort' ] .
-                '</a> <img src="images/icons/desc.gif" width="9" height="7" alt="">&nbsp;&nbsp;&nbsp;';
+                '</a> <span class="glyphicon glyphicon-chevron-up"></span>&nbsp;&nbsp;&nbsp;';
         }
 
         if ($pages > 1) {
