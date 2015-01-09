@@ -98,8 +98,7 @@ if (isset($_GET[ 'action' ])) {
 if ($action == "save") {
     if (!isfileadmin($userID)) {
         echo generateErrorBox($_language->module[ 'no_access' ]);
-    }
-    else{
+    } else{
 
         $poster = $_POST[ 'poster' ];
         $filecat = $_POST[ 'filecat' ];
@@ -133,7 +132,7 @@ if ($action == "save") {
         if ($upload->hasFile()) {
             if ($upload->hasError() === false) {
                 $des_file = $filepath . $upload->getFilename();
-                if(file_exists($des_file)){
+                if (file_exists($des_file)) {
                     $des_file = $filepath . time() . "_" . $upload->getFilename();
                 }
                 if ($upload->saveAs($des_file, false)) {
@@ -155,7 +154,7 @@ if ($action == "save") {
         }
 
 
-        if(count($error)){
+        if (count($error)) {
             echo generateErrorBoxFromArray($_language->module['errors_there'], $fehler);
         } else {
             if (
@@ -200,8 +199,7 @@ if ($action == "save") {
 } elseif ($action == "saveedit") {
     if (!isfileadmin($userID)) {
         echo generateErrorBox($_language->module[ 'no_access' ]);
-    }
-    else{
+    } else{
 
         $fileID = $_POST[ 'fileID' ];
         $upfile = $_FILES[ 'upfile' ];
@@ -237,7 +235,7 @@ if ($action == "save") {
         if ($upload->hasFile()) {
             if ($upload->hasError() === false) {
                 $des_file = $filepath . $upload->getFilename();
-                if(file_exists($des_file)){
+                if (file_exists($des_file)) {
                     $des_file = $filepath . time() . "_" . $upload->getFilename();
                 }
                 if ($upload->saveAs($des_file)) {
@@ -253,7 +251,7 @@ if ($action == "save") {
             $file = $fileurl;
         }
 
-        if(count($error)){
+        if (count($error)) {
             echo generateErrorBoxFromArray($_language->module['errors_there'], $fehler);
         } else {
             safe_query(
@@ -275,13 +273,16 @@ if ($action == "save") {
                     "UPDATE `" . PREFIX . "files` SET `file` = '" . $file . "' WHERE `fileID` = '" . (int)$fileID."'"
                 );
             }
-            redirect("index.php?site=files&amp;file=" . (int)$fileID, generateSuccessBox($_language->module[ 'successful' ]));
+            redirect(
+                "index.php?site=files&amp;file=" . (int)$fileID,
+                generateSuccessBox($_language->module[ 'successful' ])
+            );
         }
     }
 } elseif ($action == "delete") {
     if (!isfileadmin($userID)) {
         echo generateErrorBox($_language->module[ 'no_access' ]);
-    } else{
+    } else {
 
         if (isset($_GET[ 'cat' ])) {
             $cat = $_GET[ 'cat' ];
