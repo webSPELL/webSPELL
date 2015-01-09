@@ -215,6 +215,13 @@ module.exports = function(grunt) {
                     "js"
                 ]
             }
+        },
+        exec: {
+            quickcheck: {
+                command: "sh ./qphpcs.sh",
+                stdout: true,
+                stderr: true
+            }
         }
     });
 
@@ -236,6 +243,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks("grunt-htmllint");
     grunt.loadNpmTasks("grunt-casperjs");
     grunt.loadNpmTasks("grunt-newer");
+    grunt.loadNpmTasks("grunt-exec");
 
     grunt.registerTask("codecheck", [
         "js",
@@ -279,6 +287,9 @@ module.exports = function(grunt) {
     grunt.registerTask("test", [
         "codecheck",
         "git"
+    ]);
+    grunt.registerTask("quick", [
+        "exec:quickcheck"
     ]);
     grunt.registerTask("release", "Creating a new webSPELL Release", function(releaseLevel) {
         if (
