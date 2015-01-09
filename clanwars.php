@@ -544,7 +544,8 @@ if ($action == "new") {
         $theHomeScore = unserialize($ds[ 'homescore' ]);
         $theOppScore = unserialize($ds[ 'oppscore' ]);
         $i = 0;
-        for ($i = 0; $i < count($map); $i++) {
+        $counter = count($map);
+        for ($i = 0; $i < $counter; $i++) {
             $maps .= '<tr>
             <td width="15%">
                 <input type="hidden" name="map_id[]" value="' . $i . '">map #' . ($i + 1) . '
@@ -1247,12 +1248,12 @@ if ($action == "new") {
         $seiten =
             '<a href="index.php?site=clanwars&amp;action=showonly&amp;id=' . $id . '&amp;page=' . $page . '&amp;sort=' .
             $sort . '&amp;type=DESC&amp;only=' . $only . '">' . $_language->module[ 'sort' ] .
-            ' <span class="icon-sort-up"></span></a> ' . $page_link . '';
+            ' <span class="glyphicon glyphicon-chevron-down"></span></a> ' . $page_link . '';
     } else {
         $seiten =
             '<a href="index.php?site=clanwars&amp;action=showonly&amp;id=' . $id . '&amp;page=' . $page . '&amp;sort=' .
             $sort . '&amp;type=ASC&amp;only=' . $only . '">' . $_language->module[ 'sort' ] .
-            ' <span class="icon-sort-down"></span></a>  ' . $page_link . '';
+            ' <span class="glyphicon glyphicon-chevron-up"></span></a>  ' . $page_link . '';
     }
 
     if (isclanwaradmin($userID)) {

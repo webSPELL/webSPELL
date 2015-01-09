@@ -305,7 +305,7 @@ if (isset($_POST['delete'])) {
                 $new = '';
                 $icon = '';
                 if (!$ds['viewed']) {
-                    $icon = '<span class="icon-envelope"></span>';
+                    $icon = '<span class="glyphicon glyphicon-envelope"></span>';
                     $title = '<strong>' . $title . '</strong>';
                     $new = 'class="warning"';
                 }

@@ -243,7 +243,8 @@ onsubmit="return chkFormular();">
             }
 
             $list = '<select name="sortlist[]">';
-            for ($n = 1; $n <= mysqli_num_rows($ergebnis); $n++) {
+            $counter = mysqli_num_rows($ergebnis);
+            for ($n = 1; $n <= $counter; $n++) {
                 $list .= '<option value="' . $ds[ 'serverID' ] . '-' . $n . '">' . $n . '</option>';
             }
             $list .= '</select>';

@@ -61,6 +61,7 @@ if ($_POST['agree'] == "1") {
    </td>
   </tr>
   <tr id="headline">
+<<<<<<< HEAD
    <td colspan="2" id="title"><?php if ($versionerror) {
         echo $_language->module['error'];
 
@@ -75,11 +76,24 @@ if ($_POST['agree'] == "1") {
 		<p>'.$_language->module['php_info'].'</p><br><br>';
 } else {
     echo $_language->module['enter_url'].':<br><br>
+=======
+   <td colspan="2" id="title"><?php if($versionerror) { echo $_language->module['error']; } else { echo $_language->module['your_site_url']; } ?></td>
+  </tr>
+  <tr>
+   <td id="content" colspan="2">
+   <?php if($versionerror) {
+   	echo '<p style="color: #FF0000; font-weight: bold;">'.$_language->module['php_version'].':</p>
+		<p>'.$_language->module['php_info'].'</p><br><br>';
+   } 
+   else {
+		echo $_language->module['enter_url'].':<br><br>
+>>>>>>> dev
            http://<input type="text" name="hp_url" value="'.getwspath().'" size="50">
            <a class="tooltip" href="#"><img src="images/tooltip.png" alt="">
            <span>'.$_language->module['tooltip'].'</span></a>
    
            <div align="right"><br><a href="javascript:document.ws_install.submit()"><img src="images/next.jpg" alt=""></a></div>';
+<<<<<<< HEAD
 }
     ?>
    </td>
@@ -88,6 +102,14 @@ if ($_POST['agree'] == "1") {
 <?php
 } else {
 ?>
+=======
+   }
+   ?>
+   </td>
+  </tr>
+
+<?php } else { ?>
+>>>>>>> dev
 
   <tr>
    <td id="step" align="center" colspan="2">
@@ -105,11 +127,19 @@ if ($_POST['agree'] == "1") {
   </tr>
   <tr>
    <td id="content" colspan="2">
+<<<<<<< HEAD
     <?php echo $_language->module['you_have_to_agree'];?>
+=======
+   <?php echo $_language->module['you_have_to_agree'];?>
+>>>>>>> dev
    
    <div align="left"><br><a href="javascript:history.back()"><img src="images/back.jpg" alt=""></a></div>
    </td>
   </tr>
 
+<<<<<<< HEAD
 <?php
 } 
+=======
+<?php } ?>
+>>>>>>> dev

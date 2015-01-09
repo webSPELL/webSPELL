@@ -225,7 +225,8 @@ if ($action == "new") {
         }
     }
 
-    for ($i = 0; $i < count($message); $i++) {
+    $counter = count($message);
+    for ($i = 0; $i < $counter; $i++) {
         if (in_array($lang[ $i ], $update_langs)) {
             safe_query(
                 "UPDATE

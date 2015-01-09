@@ -98,7 +98,8 @@ if ($action == "save") {
         );
     }
 
-    for ($i = 0; $i <= count($message); $i++) {
+    $counter = count($message);
+    for ($i = 0; $i <= $counter; $i++) {
         if (isset($message[ $i ])) {
             if ($i >= $anzpages) {
                 safe_query(

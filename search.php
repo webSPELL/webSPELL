@@ -382,8 +382,10 @@ if (
 
                 $date = getformatdate($res_date[ $key ]);
                 $type = $res_type[ $key ];
-                if (mb_strlen($res_message[ $key ]) > 200) {
-                    for ($z = 0; $z < mb_strlen($res_message[ $key ]); $z++) {
+                $str_len = mb_strlen($res_message[ $key ]);
+
+                if ($str_len > 200) {
+                    for ($z = 0; $z < $str_len; $z++) {
                         $tmp = mb_substr($res_message[ $key ], $z, 1);
                         if ($z >= 200 && $tmp == " ") {
                             $res_message[ $key ] = mb_substr($res_message[ $key ], 0, $z) . "...";
