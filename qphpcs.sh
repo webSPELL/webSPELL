@@ -1,3 +1,3 @@
 #!/bin/sh
 
-for check in `git status | grep "modified:" | grep ".php" | awk ' { print $2 } '`; do ./vendor/bin/phpcs -s --standard=ruleset.xml $check; done
+for check in `git status | egrep "modified:|new file:" | grep "\.php" | awk ' { print $2 } '`; do echo "*** PHPCS Quickcheck - $check ***"; ./vendor/bin/phpcs -s --standard=ruleset.xml $check; echo "*** PHPLint Quickcheck - $check ***"; php -l $check; done
