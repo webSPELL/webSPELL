@@ -62,7 +62,6 @@ if ($action == "faqcat" && is_numeric($_GET[ 'faqcatID' ])) {
             sort"
     );
     if (mysqli_num_rows($faqcat)) {
-
         eval ("\$faq_question_head = \"" . gettemplate("faq_question_head") . "\";");
         echo $faq_question_head;
         $i = 1;
@@ -159,7 +158,6 @@ if ($action == "faqcat" && is_numeric($_GET[ 'faqcatID' ])) {
     $faqcats = safe_query("SELECT * FROM `" . PREFIX . "faq_categories` ORDER BY `sort`");
     $anzcats = mysqli_num_rows($faqcats);
     if ($anzcats) {
-
         eval ("\$faq_category_head = \"" . gettemplate("faq_category_head") . "\";");
         echo $faq_category_head;
         $i = 1;

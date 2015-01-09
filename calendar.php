@@ -222,7 +222,8 @@ function print_calendar($mon, $year)
             //If date is today, highlight it
             if (($t == date("j")) && ($mon == date("n")) && ($year == date("Y"))) {
                 echo '<td height="40" valign="top" bgcolor="' . BG_4 . '"><b>' . $t . '</b><br>' . $termin . '</td>';
-            } else { //  If the date is absent ie after 31, print space
+            } else {
+//  If the date is absent ie after 31, print space
                 if ($t === ' ') {
                     echo '<td height="40" valign="top" style="background-color:' . BG_1 . ';">&nbsp;</td>';
                 } else {
@@ -756,7 +757,6 @@ if ($action === "savewar") {
 } elseif ($action === "addwar") {
     $_language->readModule('calendar');
     if (isclanwaradmin($userID)) {
-
         eval ("\$title_calendar = \"" . gettemplate("title_calendar") . "\";");
         echo $title_calendar;
 
@@ -778,7 +778,6 @@ if ($action === "savewar") {
         $countries = getcountries();
 
         if (isset($_GET['chID'])) {
-
             $chID = (int)$_GET['chID'];
             $ergebnis = safe_query("SELECT * FROM " . PREFIX . "challenge WHERE chID='" . $chID . "'");
             $ds = mysqli_fetch_array($ergebnis);
@@ -822,7 +821,6 @@ if ($action === "savewar") {
 } elseif ($action === "editwar") {
     $_language->readModule('calendar');
     if (isclanwaradmin($userID)) {
-
         eval ("\$title_calendar = \"" . gettemplate("title_calendar") . "\";");
         echo $title_calendar;
 
@@ -868,7 +866,6 @@ if ($action === "savewar") {
 } elseif ($action === "adddate") {
     $_language->readModule('calendar');
     if (isclanwaradmin($userID)) {
-
         eval ("\$title_calendar = \"" . gettemplate("title_calendar") . "\";");
         echo $title_calendar;
 
@@ -894,7 +891,6 @@ if ($action === "savewar") {
 } elseif ($action === "editdate") {
     $_language->readModule('calendar');
     if (isclanwaradmin($userID)) {
-
         eval ("\$title_calendar = \"" . gettemplate("title_calendar") . "\";");
         echo $title_calendar;
 
@@ -934,21 +930,18 @@ if ($action === "savewar") {
         redirect('index.php?site=calendar', $_language->module['no_access']);
     }
 } elseif ($action === "announce" && isclanmember($userID)) {
-
     $_language->readModule('calendar');
 
     eval ("\$title_calendar = \"" . gettemplate("title_calendar") . "\";");
     echo $title_calendar;
 
     if (isset($_GET['upID'])) {
-
         $upID = (int)$_GET['upID'];
 
         eval ("\$upcomingannounce = \"" . gettemplate("upcomingannounce") . "\";");
         echo $upcomingannounce;
     }
 } else {
-
     $_language->readModule('calendar');
 
     eval ("\$title_calendar = \"" . gettemplate("title_calendar") . "\";");

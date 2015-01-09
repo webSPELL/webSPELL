@@ -43,7 +43,6 @@ if (!isset($_GET[ 'action' ])) {
     if (!$getnew = file_get_contents($updateserver . "index.php?show=version")) {
         echo '<i><b>' . $_language->module[ 'error' ] . '&nbsp;' . $updateserver . '.</b></i>';
     } else {
-
         $latest = explode(".", $getnew);
         $ownversion = explode(".", $version);
 
@@ -73,7 +72,6 @@ if ($action == "update") {
     //package1:updateversion1:additional1.package2:additional2:WritttenBy2..., e.g. members:4.01.30:written by FS
 
     if ($getnew = file_get_contents($updateserver . "index.php?version=" . $version . "")) {
-
         $updates = explode("##", $getnew);
 
         //get packages
@@ -86,7 +84,6 @@ if ($action == "update") {
       </tr>';
 
         foreach ($updates as $value => $package) {
-
             $updateinfo = explode("#", $package);
             //get packageinfos
             if ($updateinfo[ 0 ] == "noupdates") {

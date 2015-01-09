@@ -44,9 +44,10 @@ include('../version.php');
   </tr>
   <tr>
    <td id="content" colspan="2">
-	<b><?php echo $_language->module['version']; ?>:</b> <?php echo $version; ?><br><br>
-   <?php echo $_language->module['gpl_info']; ?>:<br><br>
-   <?php echo $_language->module['more_info']; ?>.<br><br>
+	<b><?php echo $_language->module['version'];
+?>:</b> <?php echo $version; ?><br><br>
+    <?php echo $_language->module['gpl_info']; ?>:<br><br>
+    <?php echo $_language->module['more_info']; ?>.<br><br>
    <textarea rows="10" cols="75">GNU GENERAL PUBLIC LICENSE
 Version 2, June 1991
 

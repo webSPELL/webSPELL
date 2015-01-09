@@ -45,7 +45,6 @@ if ($action == "show") {
 
     $ergebnis = safe_query("SELECT * FROM " . PREFIX . "squads " . $getsquad . " ORDER BY sort");
     while ($ds = mysqli_fetch_array($ergebnis)) {
-
         $anzmembers = mysqli_num_rows(
             safe_query(
                 "SELECT
@@ -107,7 +106,6 @@ if ($action == "show") {
 
         $i = 1;
         while ($dm = mysqli_fetch_array($member)) {
-
             if ($i % 2) {
                 $bg1 = BG_1;
                 $bg2 = BG_2;
@@ -275,7 +273,6 @@ if ($action == "show") {
 
             $i = 1;
             while ($dm = mysqli_fetch_array($member)) {
-
                 if ($i % 2) {
                     $bg1 = BG_1;
                     $bg2 = BG_2;

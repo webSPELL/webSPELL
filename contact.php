@@ -97,7 +97,6 @@ if ($action == "send") {
         unset($_POST['text']);
         unset($_POST['subject']);
     } else {
-
         $showerror = generateErrorBoxFromArray($_language->module['errors_there'], $fehler);
 
     }

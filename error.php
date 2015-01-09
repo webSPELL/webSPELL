@@ -72,7 +72,6 @@ if (count($results)) {
     usort($results, ['Tags', 'sortByDate']);
     echo "<p class='text-center'><strong>" . count($data) . "</strong> " . $_language->module['results_found'] . "</p>";
     foreach ($results as $entry) {
-
         $date = getformatdate($entry['date']);
         $type = $entry['type'];
         $auszug = $entry['content'];

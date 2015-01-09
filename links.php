@@ -209,7 +209,6 @@ eval ("\$title_links = \"" . gettemplate("title_links") . "\";");
 echo $title_links;
 
 if ($action == "new") {
-
     if (ispageadmin($userID) || isnewsadmin($userID)) {
         $rubrics = safe_query("SELECT * FROM " . PREFIX . "links_categorys ORDER BY name");
         $linkcats = '';

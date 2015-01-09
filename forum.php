@@ -262,7 +262,6 @@ function boardmain()
         $i = 1;
 
         while ($db = mysqli_fetch_array($boards)) {
-
             if ($i % 2) {
                 $bg1 = BG_1;
                 $bg2 = BG_2;
@@ -329,9 +328,7 @@ function boardmain()
             $n = 1;
             $board_topics = [];
             while ($lp = mysqli_fetch_assoc($q)) {
-
                 if ($n == 1) {
-
                     $date = getformatdate($lp[ 'lastdate' ]);
                     $today = getformatdate(time());
                     $yesterday = getformatdate(time() - 3600 * 24);
@@ -370,12 +367,10 @@ function boardmain()
             $found = false;
 
             if ($userID) {
-
                 $gv = mysqli_fetch_array(safe_query("SELECT topics FROM " . PREFIX . "user WHERE userID='$userID'"));
                 $array = explode("|", $gv[ 'topics' ]);
 
                 foreach ($array as $split) {
-
                     if ($split != "" && in_array($split, $board_topics)) {
                         $found = true;
                         break;
@@ -402,7 +397,6 @@ function boardmain()
     $boards = safe_query("SELECT * FROM " . PREFIX . "forum_boards WHERE category='0' ORDER BY sort");
     $i = 1;
     while ($db = mysqli_fetch_array($boards)) {
-
         if ($i % 2) {
             $bg1 = BG_1;
             $bg2 = BG_2;
@@ -463,9 +457,7 @@ function boardmain()
         $n = 1;
         $board_topics = [];
         while ($lp = mysqli_fetch_assoc($q)) {
-
             if ($n == 1) {
-
                 $date = getformatdate($lp[ 'lastdate' ]);
                 $today = getformatdate(time());
                 $yesterday = getformatdate(time() - 3600 * 24);
@@ -503,12 +495,10 @@ function boardmain()
         $found = false;
 
         if ($userID) {
-
             $gv = mysqli_fetch_array(safe_query("SELECT topics FROM " . PREFIX . "user WHERE userID='$userID'"));
             $array = explode("|", $gv[ 'topics' ]);
 
             foreach ($array as $split) {
-
                 if ($split != "" && in_array($split, $board_topics)) {
                     $found = true;
                     break;
@@ -740,7 +730,6 @@ function showboard($board)
             } elseif ($dt[ 'moveID' ]) {
                 $folder = '<img src="images/icons/topicicons/pfeil.gif" alt="' . $_language->module[ 'moved' ] . '">';
             } elseif ($userID) {
-
                 $is_unread = mysqli_num_rows(safe_query(
                     "SELECT userID FROM " . PREFIX . "user WHERE topics LIKE '%|" .
                     $dt[ 'topicID' ] . "|%' AND userID='" . $userID . "'"
@@ -783,7 +772,8 @@ function showboard($board)
             $replys = '0';
             $views = '0';
 
-            if ($dt[ 'moveID' ]) { // MOVED TOPIC
+            if ($dt[ 'moveID' ]) {
+// MOVED TOPIC
                 $move = safe_query("SELECT * FROM " . PREFIX . "forum_topics WHERE topicID='" . $dt[ 'moveID' ] . "'");
                 $dm = mysqli_fetch_array($move);
 
@@ -814,7 +804,8 @@ function showboard($board)
                 }
                 $link = '<a href="index.php?site=forum_topic&amp;topic=' . $dt[ 'moveID' ] . '"><b>' .
                     $_language->module[ 'moved' ] . ': ' . $topictitle . '</b></a>';
-            } else {    // NO MOVED TOPIC
+            } else {
+// NO MOVED TOPIC
                 if ($dt[ 'replys' ]) {
                     $replys = $dt[ 'replys' ];
                 }
@@ -878,7 +869,6 @@ if (isset($_POST[ 'submit' ]) || isset($_POST[ 'movetopic' ]) || isset($_GET[ 'a
     isset($_POST[ 'addtopic' ]) || (isset($_GET[ 'action' ]) && $_GET[ 'action' ] == "admin-action") ||
     isset($_POST[ 'admaction' ])
 ) {
-
     if (!isset($_POST[ 'admaction' ])) {
         $_POST[ 'admaction' ] = '';
     }
@@ -1291,7 +1281,6 @@ if (isset($_POST[ 'submit' ]) || isset($_POST[ 'movetopic' ]) || isset($_GET[ 'a
 
         if ($loggedin) {
             if (isset($_POST[ 'preview' ])) {
-
                 $bg1 = BG_1;
                 $bg2 = BG_2;
 

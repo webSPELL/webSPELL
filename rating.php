@@ -57,7 +57,6 @@ if ($type == "ar") {
 }
 
 if (isset($table) && isset($key)) {
-
     $getarticles = safe_query(
         "SELECT
             " . $table . "

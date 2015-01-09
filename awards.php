@@ -163,7 +163,6 @@ if ($action == "new") {
         redirect('index.php?site=awards', $_language->module[ 'no_access' ]);
     }
 } elseif ($action == "edit") {
-
     $awardID = $_GET[ 'awardID' ];
     if (isclanwaradmin($userID) || isnewsadmin($userID)) {
         $_language->readModule('bbcode', true);

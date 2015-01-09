@@ -198,7 +198,6 @@ if (isset($_POST[ 'add' ])) {
             "' AND userID!=" . $_POST[ 'id' ]
         ))
         ) {
-
             safe_query(
                 "UPDATE " . PREFIX . "user SET nickname='" . $nickname . "',
 									 email='" . $_POST[ 'email' ] . "',
@@ -365,7 +364,6 @@ if ($action == "activate") {
         echo $_language->module[ 'transaction_invalid' ];
     }
 } elseif ($action == "ban") {
-
     echo '<h1>&curren; <a href="admincenter.php?site=users" class="white">' . $_language->module[ 'users' ] .
         '</a> &raquo; ' . $_language->module[ 'ban_user' ] . '</h1>';
 
@@ -484,7 +482,6 @@ if ($action == "activate") {
             $_language->module[ 'back' ] . '</a>';
     }
 } elseif ($action == "addtoclan") {
-
     echo '<h1>&curren; <a href="admincenter.php?site=users" class="white">' . $_language->module[ 'users' ] .
         '</a> &raquo; ' . $_language->module[ 'add_to_clan' ] . '</h1>';
 
@@ -547,7 +544,6 @@ if ($action == "activate") {
   </table>
   </form>';
 } elseif ($action == "profile") {
-
     echo '<h1>&curren; <a href="admincenter.php?site=users" class="white">' . $_language->module[ 'users' ] .
         '</a> &raquo; ' . $_language->module[ 'edit_profile' ] . '</h1>';
 
@@ -779,7 +775,6 @@ if ($action == "activate") {
     </table>
     </form>';
 } else {
-
     echo '<h1>&curren; ' . $_language->module[ 'users' ] . '</h1>';
 
     if (isset($_GET[ 'search' ])) {

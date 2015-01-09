@@ -110,7 +110,6 @@ if ($page == "1") {
 
 $anz = mysqli_num_rows($ergebnis);
 if ($anz) {
-
     if ($type == "ASC") {
         $sorter =
             '<a href="index.php?site=registered_users&amp;page=' . $page . '&amp;sort=' . $sort . '&amp;type=DESC">' .

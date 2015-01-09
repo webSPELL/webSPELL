@@ -29,7 +29,6 @@ $_language->readModule('sponsors');
 $mainsponsors =
     safe_query("SELECT * FROM " . PREFIX . "sponsors WHERE (displayed = '1' AND mainsponsor = '1') ORDER BY sort");
 if (mysqli_num_rows($mainsponsors)) {
-
     if (mysqli_num_rows($mainsponsors) == 1) {
         $main_title = $_language->module[ 'mainsponsor' ];
     } else {
@@ -57,7 +56,6 @@ if (mysqli_num_rows($mainsponsors)) {
 $sponsors =
     safe_query("SELECT * FROM " . PREFIX . "sponsors WHERE (displayed = '1' AND mainsponsor = '0') ORDER BY sort");
 if (mysqli_num_rows($sponsors)) {
-
     if (mysqli_num_rows($sponsors) == 1) {
         $title = $_language->module[ 'sponsor' ];
     } else {

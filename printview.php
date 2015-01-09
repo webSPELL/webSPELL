@@ -62,7 +62,6 @@ $topic = $_GET[ 'topic' ];
 $thread = safe_query("SELECT * FROM " . PREFIX . "forum_topics WHERE topicID='$topic' ");
 
 if (mysqli_num_rows($thread)) {
-
     $dt = mysqli_fetch_array($thread);
 
     if ($dt[ 'readgrps' ] != "") {

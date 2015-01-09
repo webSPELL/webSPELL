@@ -39,7 +39,6 @@ if (isset($_GET[ 'delete' ])) {
         echo $_language->module[ 'transaction_invalid' ];
     }
 } elseif (isset($_POST[ 'save' ])) {
-
     $name = $_POST[ 'name' ];
     $rank = $_FILES[ 'rank' ];
     $max = $_POST[ 'max' ];
@@ -85,7 +84,6 @@ if (isset($_GET[ 'delete' ])) {
         echo $_language->module[ 'transaction_invalid' ];
     }
 } elseif (isset($_POST[ 'saveedit' ])) {
-
     $rank = $_POST[ 'rank' ];
     $min = $_POST[ 'min' ];
     $max = $_POST[ 'max' ];
@@ -157,7 +155,6 @@ if ($action == "add") {
   </table>
   </form>';
 } else {
-
     echo '<h1>&curren; ' . $_language->module[ 'user_ranks' ] . '</h1>';
 
     echo

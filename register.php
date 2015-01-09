@@ -31,7 +31,6 @@ eval("\$title_register = \"" . gettemplate("title_register") . "\";");
 echo $title_register;
 $show = true;
 if (isset($_POST['save'])) {
-
     if (!$loggedin) {
         $username = mb_substr(trim($_POST['username']), 0, 30);
         $nickname = htmlspecialchars(mb_substr(trim($_POST['nickname']), 0, 30));
@@ -192,7 +191,6 @@ if (isset($_POST['save'])) {
     }
 }
 if (isset($_GET['key'])) {
-
     safe_query("UPDATE `" . PREFIX . "user` SET activated='1' WHERE activated='" . $_GET['key'] . "'");
     if (mysqli_affected_rows()) {
         redirect('index.php?site=login', $_language->module['activation_successful'], 3);

@@ -274,7 +274,6 @@ function top5()
     echo $top5_head;
     $n = 1;
     while ($ds = mysqli_fetch_array($ergebnis)) {
-
         $country1 = "[flag]" . $ds[ 'country1' ] . "[/flag]";
         $country1 = flags($country1);
         $country2 = "[flag]" . $ds[ 'country2' ] . "[/flag]";
@@ -616,7 +615,6 @@ if ($action == "new") {
         echo $_language->module[ 'no_demos' ];
     }
 } else {
-
     if (isset($_GET[ 'page' ])) {
         $page = (int)$_GET[ 'page' ];
     } else {

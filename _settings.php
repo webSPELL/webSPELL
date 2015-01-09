@@ -66,7 +66,8 @@ if (!isset($GLOBALS[ '_database' ])) {
 
 if (function_exists("globalskiller") == false) {
     function globalskiller()
-    {        // kills all non-system variables
+    {
+        // kills all non-system variables
         $global =
             ['GLOBALS', '_POST', '_GET', '_COOKIE', '_FILES', '_SERVER', '_ENV', '_REQUEST', '_SESSION', '_database'];
         foreach ($GLOBALS as $key => $val) {

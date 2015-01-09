@@ -79,7 +79,6 @@ if ($month == 0) {
 $monatsstat = '';
 
 for ($i = date("d", time()); $i > 0; $i--) {
-
     if (mb_strlen($i) < 2) {
         $i = "0" . $i;
     }

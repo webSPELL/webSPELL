@@ -50,9 +50,9 @@ header('X-UA-Compatible: IE=edge,chrome=1');
     <!-- Head & Title include -->
     <title><?php echo PAGETITLE; ?></title>
     <base href="<?php echo $rewriteBase; ?>">
-    <?php foreach($components['css'] as $component) {
+    <?php foreach ($components['css'] as $component) {
         echo '<link href="' . $component . '" rel="stylesheet">';
-    }
+}
     ?>
     <link href="_stylesheet.css" rel="stylesheet">
     <link href="tmp/rss.xml" rel="alternate" type="application/rss+xml" title="<?php
@@ -91,7 +91,8 @@ header('X-UA-Compatible: IE=edge,chrome=1');
         <div class="row">
 
             <?php // show left column
-            if (!in_array($site, $hide1)) { ?>
+            if (!in_array($site, $hide1)) {
+?>
                 <!-- left column -->
                 <div id="leftcol" class="col-lg-3 visible-lg">
                     <!-- poll include -->
@@ -265,7 +266,7 @@ header('X-UA-Compatible: IE=edge,chrome=1');
         </div>
     </div>
 </div>
-<?php foreach($components['js'] as $component) {
+<?php foreach ($components['js'] as $component) {
     echo '<script src="' . $component . '"></script>';
 }
 ?>

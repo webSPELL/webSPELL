@@ -283,7 +283,6 @@ if (isset($_POST[ 'savevisitorcomment' ])) {
         header("Location: " . $referer);
     }
 } else {
-
     $_language->readModule('comments');
     $_language->readModule('bbcode', true);
 
@@ -362,7 +361,6 @@ if (isset($_POST[ 'savevisitorcomment' ])) {
         }
     }
     if ($gesamt) {
-
         eval ("\$title_comments = \"" . gettemplate("title_comments") . "\";");
         echo $title_comments;
 
@@ -572,12 +570,10 @@ if (isset($_POST[ 'savevisitorcomment' ])) {
 
     if ($comments_allowed) {
         if ($loggedin) {
-
             eval ("\$addbbcode = \"" . gettemplate("addbbcode") . "\";");
             eval ("\$comments_add_user = \"" . gettemplate("comments_add_user") . "\";");
             echo $comments_add_user;
         } elseif ($comments_allowed == 2) {
-
             $ip = $GLOBALS[ 'ip' ];
 
             if (isset($_COOKIE[ 'visitor_info' ])) {

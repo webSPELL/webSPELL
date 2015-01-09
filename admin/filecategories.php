@@ -143,7 +143,6 @@ if (!isset($_GET[ 'action' ])) {
 }
 
 if ($_GET[ 'action' ] == "add") {
-
     function generate_options($filecats = '', $offset = '', $subcatID = 0)
     {
         $rubrics = safe_query(
@@ -188,7 +187,6 @@ if ($_GET[ 'action' ] == "add") {
   </table>
   </form>';
 } elseif ($_GET[ 'action' ] == "edit") {
-
     $filecatID = $_GET[ 'filecatID' ];
     $ergebnis = safe_query("SELECT * FROM " . PREFIX . "files_categorys WHERE filecatID='$filecatID'");
     $ds = mysqli_fetch_array($ergebnis);
@@ -246,7 +244,6 @@ if ($_GET[ 'action' ] == "add") {
   </table>
   </form>';
 } else {
-
     echo '<h1>&curren; ' . $_language->module[ 'file_categories' ] . '</h1>';
 
     echo

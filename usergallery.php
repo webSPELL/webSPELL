@@ -28,7 +28,6 @@ $_language->readModule('usergallery');
 $galclass = new \webspell\Gallery;
 
 if ($userID) {
-
     if (isset($_POST[ 'save' ])) {
         if ($_POST[ 'name' ]) {
             safe_query(
@@ -63,7 +62,6 @@ if ($userID) {
         $picture = $_FILES[ 'picture' ];
 
         if ($picture[ 'name' ] != "") {
-
             if ($_POST[ 'name' ] != "") {
                 $insertname = $_POST[ 'name' ];
             } else {
@@ -159,11 +157,9 @@ if ($userID) {
 
     if (isset($_GET[ 'action' ])) {
         if ($_GET[ 'action' ] == "add") {
-
             eval("\$usergallery_add = \"" . gettemplate("usergallery_add") . "\";");
             echo $usergallery_add;
         } elseif ($_GET[ 'action' ] == "edit") {
-
             $ergebnis = safe_query(
                 "SELECT
                     *
@@ -180,14 +176,12 @@ if ($userID) {
             eval("\$usergallery_edit = \"" . gettemplate("usergallery_edit") . "\";");
             echo $usergallery_edit;
         } elseif ($_GET[ 'action' ] == "upload") {
-
             $id = (int)$_GET[ 'galleryID' ];
 
             eval("\$usergallery_upload = \"" . gettemplate("usergallery_upload") . "\";");
             echo $usergallery_upload;
         }
     } else {
-
         $size = $galclass->getUserSpace($userID);
         $percent = percent($size, $maxusergalleries, 0);
 

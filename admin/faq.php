@@ -208,7 +208,6 @@ if (isset($_GET[ 'action' ])) {
         </table>
         </form>';
     } elseif ($_GET[ 'action' ] == "edit") {
-
         $faqID = $_GET[ 'faqID' ];
 
         $ergebnis = safe_query("SELECT * FROM `" . PREFIX . "faq` WHERE `faqID` = '$faqID'");
@@ -234,7 +233,7 @@ if (isset($_GET[ 'action' ])) {
 
         $_language->readModule('bbcode', true);
 
-    	$tags = \webspell\Tags::getTags('faq', $faqID);
+        $tags = \webspell\Tags::getTags('faq', $faqID);
         eval ("\$addbbcode = \"" . gettemplate("addbbcode", "html", "admin") . "\";");
         eval ("\$addflags = \"" . gettemplate("flags_admin", "html", "admin") . "\";");
 
@@ -287,7 +286,6 @@ if (isset($_GET[ 'action' ])) {
     </form>';
     }
 } else {
-
     echo '<h1>&curren; ' . $_language->module[ 'faq' ] . '</h1>';
 
     echo '<a href="admincenter.php?site=faq&amp;action=add" class="input">' . $_language->module[ 'new_faq' ] .
@@ -309,7 +307,6 @@ if (isset($_GET[ 'action' ])) {
     $CAPCLASS->createTransaction();
     $hash = $CAPCLASS->getHash();
     while ($ds = mysqli_fetch_array($ergebnis)) {
-
         echo '<tr>
             <td class="td_head" colspan="3">
                 <b>' . $ds[ 'faqcatname' ] . '</b><br>

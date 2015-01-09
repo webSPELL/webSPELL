@@ -43,7 +43,6 @@ foreach ($GLOBALS['_modRewrite']->getTypes() as $typ) {
 }
 
 if ($action == "add") {
-
     $CAPCLASS = new \webspell\Captcha;
     $CAPCLASS->createTransaction();
     $hash = $CAPCLASS->getHash();
@@ -164,7 +163,6 @@ if ($action == "add") {
     $ds = safe_query("SELECT * FROM " . PREFIX . "modrewrite");
     $anz = mysqli_num_rows($ds);
     while ($flags = mysqli_fetch_array($ds)) {
-
         $data = unserialize($flags['fields']);
         $replace = $GLOBALS['_modRewrite']->buildReplace($flags['link'], $flags['regex'], $data);
         security_slashes($replace);
@@ -399,7 +397,6 @@ if ($action == "add") {
     safe_query("UPDATE " . PREFIX . "settings SET modRewrite='0'");
     redirect("admincenter.php?site=modrewrite", $_language->module['successful'], 2);
 } else {
-
     echo '<h1>&curren; ' . $_language->module['modrewrite_settings'] . '</h1>';
     $CAPCLASS = new \webspell\Captcha;
     $CAPCLASS->createTransaction();
@@ -453,7 +450,6 @@ if ($action == "add") {
     $ds = safe_query("SELECT * FROM " . PREFIX . "modrewrite ORDER BY regex");
     $anz = mysqli_num_rows($ds);
     if ($anz) {
-
         $i = 1;
         $CAPCLASS = new \webspell\Captcha;
         $CAPCLASS->createTransaction();

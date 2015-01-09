@@ -103,7 +103,6 @@ if (isset($_POST[ 'submit' ])) {
 
     header("Location: upload.php?$tableid=$id");
 } else {
-
     echo '<!DOCTYPE html>
 <html>
 <head>

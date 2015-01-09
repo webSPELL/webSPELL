@@ -146,7 +146,6 @@ if (isset($_GET[ 'action' ])) {
     </table>
     </form>';
     } elseif ($_GET[ 'action' ] == "editcat") {
-
         $faqcatID = $_GET[ 'faqcatID' ];
 
         $ergebnis = safe_query("SELECT * FROM " . PREFIX . "faq_categories WHERE faqcatID='$faqcatID'");
@@ -204,7 +203,6 @@ onsubmit="return chkFormular();">
     </form>';
     }
 } else {
-
     echo '<h1>&curren; ' . $_language->module[ 'faq_categories' ] . '</h1>';
 
     echo

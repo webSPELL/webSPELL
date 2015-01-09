@@ -34,7 +34,6 @@ if (isset($_GET['action'])) {
 }
 
 if ($action == "save") {
-
     $email = $_POST['email'];
 
     if (!validate_email($email)) {
@@ -121,7 +120,6 @@ if ($action == "save") {
     $dn = mysqli_fetch_array($ergebnis);
 
     if ($dn['pass'] != "") {
-
         $email = $_POST['email'];
         $pass = $dn['pass'];
 
@@ -154,7 +152,6 @@ if ($action == "save") {
         );
     }
 } else {
-
     $usermail = getemail($userID);
     if (isset($_GET['mail'])) {
         $get_mail = getforminput($_GET['mail']);

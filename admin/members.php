@@ -107,7 +107,6 @@ if (isset($_POST[ 'saveedit' ])) {
         $gallery = isset($_POST[ 'galleryadmin' ]);
 
         if ($userID != $id || issuperadmin($userID)) {
-
             $ergebnis = safe_query("SELECT * FROM " . PREFIX . "user_groups WHERE userID='" . $id . "'");
             if (!mysqli_num_rows($ergebnis)) {
                 safe_query("INSERT INTO " . PREFIX . "user_groups (userID) values ('" . $id . "')");
@@ -195,7 +194,6 @@ if (isset($_POST[ 'saveedit' ])) {
 }
 
 if (isset($_GET[ 'action' ]) && $_GET[ 'action' ] == "edit") {
-
     echo '<h1>&curren; <a href="admincenter.php?site=members" class="white">' . $_language->module[ 'members' ] .
         '</a> &raquo; ' . $_language->module[ 'edit_member' ] . '</h1>';
 
@@ -523,7 +521,6 @@ onmouseout="hideWMTT()" />';
     unset($squads);
     unset($userdes);
 } else {
-
     echo '<h1>&curren; ' . $_language->module[ 'members' ] . '</h1>';
     $CAPCLASS = new \webspell\Captcha;
     $CAPCLASS->createTransaction();
@@ -531,7 +528,6 @@ onmouseout="hideWMTT()" />';
     $squads = safe_query("SELECT * FROM " . PREFIX . "squads ORDER BY sort");
     echo '<form method="post" action="admincenter.php?site=members">';
     while ($ds = mysqli_fetch_array($squads)) {
-
         echo '<table width="100%" border="0" cellspacing="1" cellpadding="3" bgcolor="#DDDDDD">
       <tr>
         <td class="title" colspan="5"><b>' . $ds[ 'name' ] . '</b></td>

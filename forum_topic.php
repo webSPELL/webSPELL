@@ -152,7 +152,6 @@ if (isset($_POST['newreply']) && !isset($_POST['preview'])) {
         safe_query("DELETE FROM " . PREFIX . "forum_notify WHERE topicID='$topic'");
 
         if (count($emails)) {
-
             $de = mysqli_fetch_array(safe_query("SELECT nickname FROM " . PREFIX . "user WHERE userID='$userID'"));
             $poster = $de['nickname'];
             $de = mysqli_fetch_array(safe_query("SELECT topic FROM " . PREFIX . "forum_topics WHERE topicID='$topic'"));
@@ -214,7 +213,6 @@ if (isset($_POST['newreply']) && !isset($_POST['preview'])) {
     ));
     if (($check || isforumadmin($userID) || ismoderator($userID, (int)$_GET['board'])) && mb_strlen(trim($message))
     ) {
-
         if (isforumadmin($userID) || isanymoderator($userID, $ds['boardID'])) {
             $do_sticky = (isset($_POST['sticky'])) ? 'sticky=1' : 'sticky=0';
             safe_query(
@@ -399,7 +397,6 @@ function showtopic($topic, $edit, $addreply, $quoteID, $type)
     // viewed topics
 
     if (mysqli_num_rows(safe_query("SELECT userID FROM " . PREFIX . "user WHERE topics LIKE '%|" . $topic . "|%'"))) {
-
         $gv = mysqli_fetch_array(safe_query("SELECT topics FROM " . PREFIX . "user WHERE userID='$userID'"));
         $array = explode("|", $gv['topics']);
         $new = '|';
@@ -452,7 +449,6 @@ function showtopic($topic, $edit, $addreply, $quoteID, $type)
     }
 
     if ($edit && !$dt['closed']) {
-
         $id = $_GET['id'];
         $dr = mysqli_fetch_array(safe_query("SELECT * FROM " . PREFIX . "forum_posts WHERE postID='" . $id . "'"));
         $topic = $_GET['topic'];
@@ -888,7 +884,6 @@ function showtopic($topic, $edit, $addreply, $quoteID, $type)
 
     $adminactions = "";
     if (isforumadmin($userID) || ismoderator($userID, $dt['boardID'])) {
-
         if ($dt['closed']) {
             $close = '<option value="opentopic">- ' . $_language->module['reopen_topic'] . '</option>';
         } else {

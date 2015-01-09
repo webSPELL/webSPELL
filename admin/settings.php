@@ -106,7 +106,6 @@ if (isset($_POST[ 'submit' ])) {
         redirect("admincenter.php?site=settings", $_language->module[ 'transaction_invalid' ], 3);
     }
 } else {
-
     $settings = safe_query("SELECT * FROM " . PREFIX . "settings");
     $ds = mysqli_fetch_array($settings);
 

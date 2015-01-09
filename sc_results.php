@@ -30,7 +30,6 @@ if (mysqli_num_rows($ergebnis)) {
     echo '<ul class="list-group">';
     $n = 1;
     while ($ds = mysqli_fetch_array($ergebnis)) {
-
         $date = getformatdate($ds[ 'date' ]);
         $homescr = array_sum(unserialize($ds[ 'homescore' ]));
         $oppscr = array_sum(unserialize($ds[ 'oppscore' ]));

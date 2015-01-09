@@ -797,7 +797,6 @@ if ($action == "new") {
         }
     }
 } elseif ($action == "archive") {
-
     $_language->readModule('news');
 
     eval ("\$title_news = \"" . gettemplate("title_news") . "\";");
@@ -1164,7 +1163,8 @@ if ($action == "new") {
         }
 
         if ($ds[ 'comments' ]) {
-            if ($ds[ 'cwID' ]) {  // CLANWAR-NEWS
+            if ($ds[ 'cwID' ]) {
+// CLANWAR-NEWS
                 $anzcomments = getanzcomments($ds[ 'cwID' ], 'cw');
                 $replace = ['$anzcomments', '$url', '$lastposter', '$lastdate'];
                 $vars = [

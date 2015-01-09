@@ -118,7 +118,6 @@ if ($action == "add") {
 	</table>
 	</form>';
 } else {
-
     echo '<h1>&curren; ' . $_language->module[ 'link_categories' ] . '</h1>';
 
     echo

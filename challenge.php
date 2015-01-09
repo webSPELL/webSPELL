@@ -40,7 +40,6 @@ if (isset($_GET['action'])) {
 
 $show = true;
 if ($action == "save" && isset($_POST['post'])) {
-
     $opponent = $_POST['opponent'];
     $opphp = $_POST['opphp'];
     $oppcountry = $_POST['oppcountry'];
@@ -173,7 +172,6 @@ if ($action == "save" && isset($_POST['post'])) {
 $type = (isset($_GET['type']) && $_GET['type'] == 'ASC') ? "ASC" : "DESC";
 
 if ($show == true) {
-
     $squads = getgamesquads();
     $countries = getcountries();
 

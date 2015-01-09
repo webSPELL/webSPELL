@@ -1242,11 +1242,17 @@ VALUES
             $scoreOpp2 = $olddata['oppscr2'];
 
             // do the convertation
-            if (!empty($scoreHome2)) $scoreHome = $scoreHome1 . '||' . $scoreHome2;
-            else $scoreHome = $scoreHome1;
+            if (!empty($scoreHome2)) {
+                $scoreHome = $scoreHome1 . '||' . $scoreHome2;
+            } else {
+                $scoreHome = $scoreHome1;
+            }
 
-            if (!empty($scoreOpp2)) $scoreOpp = $scoreOpp1 . '||' . $scoreOpp2;
-            else $scoreOpp = $scoreOpp1;
+            if (!empty($scoreOpp2)) {
+                $scoreOpp = $scoreOpp1 . '||' . $scoreOpp2;
+            } else {
+                $scoreOpp = $scoreOpp1;
+            }
 
             // update database, set new structure
             if (mysqli_query($_database, "ALTER TABLE `" . PREFIX . "clanwars` CHANGE `homescr1` `homescore` TEXT NOT NULL")) {
@@ -1325,8 +1331,11 @@ function update40100_40101()
     while ($ds = mysqli_fetch_array($q)) {
         $topics = mysqli_num_rows(mysqli_query($_database, "SELECT topicID FROM `" . PREFIX . "forum_topics` WHERE boardID='" . $ds['boardID'] . "' AND moveID='0'"));
         $posts = mysqli_num_rows(mysqli_query($_database, "SELECT postID FROM `" . PREFIX . "forum_posts` WHERE boardID='" . $ds['boardID'] . "'"));
-        if (($posts - $topics) < 0) $posts = 0;
-        else $posts = $posts - $topics;
+        if (($posts - $topics) < 0) {
+            $posts = 0;
+        } else {
+            $posts = $posts - $topics;
+        }
         mysqli_query($_database, "UPDATE `" . PREFIX . "forum_boards` SET topics='" . $topics . "' , posts='" . $posts . "' WHERE boardID='" . $ds['boardID'] . "'");
     }
 
@@ -1426,8 +1435,11 @@ function update40101_420()
     //add all internboards user to "Intern board user"
     $sql = mysqli_query($_database, "SELECT `userID` FROM `" . PREFIX . "user_groups` WHERE `internboards` = '1'");
     while ($ds = mysqli_fetch_array($sql)) {
-        if (mysqli_num_rows(mysqli_query($_database, "SELECT userID FROM `" . PREFIX . "user_forum_groups` WHERE `userID`=" . $ds['userID']))) mysqli_query($_database, "UPDATE `" . PREFIX . "user_forum_groups` SET `1`='1' WHERE `userID`='" . $ds['userID'] . "'");
-        else mysqli_query($_database, "INSERT INTO `" . PREFIX . "user_forum_groups` (`userID`, `1`) VALUES (" . $ds['userID'] . ", 1)");
+        if (mysqli_num_rows(mysqli_query($_database, "SELECT userID FROM `" . PREFIX . "user_forum_groups` WHERE `userID`=" . $ds['userID']))) {
+            mysqli_query($_database, "UPDATE `" . PREFIX . "user_forum_groups` SET `1`='1' WHERE `userID`='" . $ds['userID'] . "'");
+        } else {
+            mysqli_query($_database, "INSERT INTO `" . PREFIX . "user_forum_groups` (`userID`, `1`) VALUES (" . $ds['userID'] . ", 1)");
+        }
     }
     mysqli_query($_database, "ALTER TABLE `" . PREFIX . "user_groups` DROP `internboards`");
 
@@ -1469,13 +1481,19 @@ function update40101_420()
     $q = mysqli_query($_database, "SELECT newsID, lang1, lang2, headline1, headline2, content1, content2 FROM `" . PREFIX . "news`");
     while ($ds = mysqli_fetch_array($q)) {
         if ($ds['headline1'] != "" || $ds['content1'] != "") {
-            if (get_magic_quotes_gpc()) $content1 = str_replace('\r\n', "\n", $ds['content1']);
-            else $content1 = str_replace('\r\n', "\n", mysqli_real_escape_string($_database, $ds['content1']));
+            if (get_magic_quotes_gpc()) {
+                $content1 = str_replace('\r\n', "\n", $ds['content1']);
+            } else {
+                $content1 = str_replace('\r\n', "\n", mysqli_real_escape_string($_database, $ds['content1']));
+            }
             mysqli_query($_database, "INSERT INTO " . PREFIX . "news_contents (newsID, language, headline, content) VALUES ('" . $ds['newsID'] . "', '" . mysqli_real_escape_string($_database, $ds['lang1']) . "', '" . mysqli_real_escape_string($_database, $ds['headline1']) . "', '" . $content1 . "')");
         }
         if ($ds['headline2'] != "" || $ds['content2'] != "") {
-            if (get_magic_quotes_gpc()) $content2 = str_replace('\r\n', "\n", $ds['content2']);
-            else $content2 = str_replace('\r\n', "\n", mysqli_real_escape_string($_database, $ds['content2']));
+            if (get_magic_quotes_gpc()) {
+                $content2 = str_replace('\r\n', "\n", $ds['content2']);
+            } else {
+                $content2 = str_replace('\r\n', "\n", mysqli_real_escape_string($_database, $ds['content2']));
+            }
             mysqli_query($_database, "INSERT INTO " . PREFIX . "news_contents (newsID, language, headline, content) VALUES ('" . $ds['newsID'] . "', '" . mysqli_real_escape_string($_database, $ds['lang2']) . "', '" . mysqli_real_escape_string($_database, $ds['headline2']) . "', '" . $content2 . "')");
         }
     }
@@ -1947,7 +1965,6 @@ function update40101_420()
 
     //Reverter of wrong escapes
     if (get_magic_quotes_gpc()) {
-
         @ini_set("max_execution_time", "300");
         @set_time_limit(300);
 
@@ -2423,5 +2440,3 @@ function updatePasswordHash()
         mysqli_query($_database, "UPDATE `" . PREFIX . "user` SET password='" . hash('sha512', substr($ds['password'], 0, 14) . $ds['password']) . "' WHERE userID=" . $ds['userID']);
     }
 }
-
-?>

@@ -37,7 +37,6 @@ if (
         $userID || isset($_REQUEST[ 'captcha' ])
     )
 ) {
-
     $_language->readModule('search');
 
     $run = 0;
@@ -51,7 +50,6 @@ if (
     }
 
     if ($run) {
-
         eval ("\$title_search = \"" . gettemplate("title_search") . "\";");
         echo $title_search;
 
@@ -67,7 +65,6 @@ if (
         $keywords = preg_split("/ ,/si", strtolower(str_replace(['\%', '%'], '', $text)));
 
         if (mb_strlen(str_replace('%', '', $text)) >= $search_min_len) {
-
             if (!$afterdate) {
                 $after = 0;
             } else {
@@ -209,7 +206,6 @@ if (
                 }
             }
             if (isset($_REQUEST[ 'forum' ])) {
-
                 $ergebnis_forum = safe_query(
                     "SELECT
                         b.readgrps,

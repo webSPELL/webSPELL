@@ -36,7 +36,6 @@ if (isset($_POST['save'])) {
     if (!ispageadmin($userID)) {
         echo generateAlert($_language->module['no_access'], 'alert-danger');
     } else {
-
         safe_query("INSERT INTO " . PREFIX . "linkus ( name ) VALUES( '" . $_POST['name'] . "' ) ");
         $id = mysqli_insert_id($_database);
         $banner = $_FILES['banner'];
@@ -103,7 +102,6 @@ if (isset($_POST['save'])) {
     if (!ispageadmin($userID)) {
         echo generateAlert($_language->module['no_access'], 'alert-danger');
     } else {
-
         safe_query(
             "UPDATE
                 " . PREFIX . "linkus
@@ -181,7 +179,6 @@ if (isset($_POST['save'])) {
     if (!ispageadmin($userID)) {
         echo generateAlert($_language->module['no_access'], 'alert-danger');
     } else {
-
         $bannerID = $_GET['bannerID'];
         $filepath = "./images/linkus/";
         safe_query("DELETE FROM " . PREFIX . "linkus WHERE bannerID='" . $bannerID . "'");
@@ -250,7 +247,6 @@ if ($action == "new") {
     if (mysqli_num_rows($ergebnis)) {
         $i = 1;
         while ($ds = mysqli_fetch_array($ergebnis)) {
-
             $name = htmloutput($ds['name']);
             $fileinfo = getimagesize($filepath . $ds['file']);
             if ($fileinfo[0] > $picsize_l) {
