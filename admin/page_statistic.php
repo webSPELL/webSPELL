@@ -142,7 +142,7 @@ foreach ($tables_array as $table) {
     </tr>
     <?php
     $counter = count($count_array);
-    for ($i = 0; $i < $counter; $i += 1) {        
+    for ($i = 0; $i < $counter; $i += 1) {
         if ($i % 4) {
             $td = 'td1';
         } else {
