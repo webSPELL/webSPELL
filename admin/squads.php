@@ -110,76 +110,98 @@ if (isset($_POST[ 'save' ])) {
                 "', '1' )"
             );
 
-            $icon = $_FILES[ 'icon' ];
-            $icon_small = $_FILES[ 'icon_small' ];
             $id = mysqli_insert_id($_database);
             $filepath = "../images/squadicons/";
 
-            if ($icon[ 'name' ] != "") {
-                move_uploaded_file($icon[ 'tmp_name' ], $filepath . $icon[ 'name' ] . ".tmp");
-                @chmod($filepath . $icon[ 'name' ] . ".tmp", 0755);
-                $getimg = getimagesize($filepath . $icon[ 'name' ] . ".tmp");
-                $pic = '';
-                if ($getimg[ 2 ] == IMAGETYPE_GIF) {
-                    $pic = $id . '.gif';
-                } elseif ($getimg[ 2 ] == IMAGETYPE_JPEG) {
-                    $pic = $id . '.jpg';
-                } elseif ($getimg[ 2 ] == IMAGETYPE_PNG) {
-                    $pic = $id . '.png';
+            $errors = array();
+
+            $upload = new \webspell\Upload('icon');
+            if ($upload->hasFile()) {
+                if ($upload->hasError() === false) {
+                    $mime_types = array('image/jpeg','image/png','image/gif');
+
+                    if ($upload->supportedMimeType($mime_types)) {
+                        $imageInformation =  getimagesize($upload->getTempFile());
+
+                        if (is_array($imageInformation)) {
+                            switch ($imageInformation[ 2 ]) {
+                                case 1:
+                                    $endung = '.gif';
+                                    break;
+                                case 3:
+                                    $endung = '.png';
+                                    break;
+                                default:
+                                    $endung = '.jpg';
+                                    break;
+                            }
+                            $file = $id.$endung;
+
+                            if ($upload->saveAs($filepath.$file,true)) {
+                                @chmod($file, $new_chmod);
+                                safe_query(
+                                    "UPDATE " . PREFIX . "squads SET icon='" . $file . "' WHERE squadID='" . $id . "'"
+                                );
+                            }
+                        }
+                        else{
+                            $errors[] = $_language->module[ 'broken_image' ];
+                        }
+                    }
+                    else{
+                        $errors[] = $_language->module[ 'unsupported_image_type' ];
+                    }
                 }
-                if ($pic != "") {
-                    if (file_exists($filepath . $id . '.gif')) {
-                        unlink($filepath . $id . '.gif');
-                    }
-                    if (file_exists($filepath . $id . '.jpg')) {
-                        unlink($filepath . $id . '.jpg');
-                    }
-                    if (file_exists($filepath . $id . '.png')) {
-                        unlink($filepath . $id . '.png');
-                    }
-                    rename($filepath . $icon[ 'name' ] . ".tmp", $filepath . $pic);
-                    safe_query("UPDATE " . PREFIX . "squads SET icon='" . $pic . "' WHERE squadID='" . $id . "'");
-                } else {
-                    @unlink($filepath . $icon[ 'name' ] . ".tmp");
-                    $error = $_language->module[ 'format_incorrect' ];
-                    die('<b>' . $error .
-                        '</b><br /><br /><a href="admincenter.php?site=squads&amp;action=edit&amp;squadID=' . $id .
-                        '">&laquo; ' . $_language->module[ 'back' ] . '</a>');
+                else{
+                    $errors[] = $upload->translateError();
                 }
             }
 
-            if ($icon_small[ 'name' ] != "") {
-                move_uploaded_file($icon_small[ 'tmp_name' ], $filepath . $icon_small[ 'name' ] . ".tmp");
-                @chmod($filepath . $icon_small[ 'name' ] . ".tmp", 0755);
-                $getimg = getimagesize($filepath . $icon_small[ 'name' ] . ".tmp");
+            $upload = new \webspell\Upload('icon_small');
+            if ($upload->hasFile()) {
+                if ($upload->hasError() === false) {
+                    $mime_types = array('image/jpeg','image/png','image/gif');
 
-                $pic = '';
-                if ($getimg[ 2 ] == IMAGETYPE_GIF) {
-                    $pic = $id . '_small.gif';
-                } elseif ($getimg[ 2 ] == IMAGETYPE_JPEG) {
-                    $pic = $id . '_small.jpg';
-                } elseif ($getimg[ 2 ] == IMAGETYPE_PNG) {
-                    $pic = $id . '_small.png';
+                    if ($upload->supportedMimeType($mime_types)) {
+                        $imageInformation =  getimagesize($upload->getTempFile());
+
+                        if (is_array($imageInformation)) {
+                            switch ($imageInformation[ 2 ]) {
+                                case 1:
+                                    $endung = '.gif';
+                                    break;
+                                case 3:
+                                    $endung = '.png';
+                                    break;
+                                default:
+                                    $endung = '.jpg';
+                                    break;
+                            }
+                            $file = $id.'_small'.$endung;
+
+                            if ($upload->saveAs($filepath.$file,true)) {
+                                @chmod($file, $new_chmod);
+                                safe_query(
+                                    "UPDATE " . PREFIX . "squads SET icon_small='" . $file . "' WHERE squadID='" . $id . "'"
+                                );
+                            }
+                        }
+                        else{
+                            $errors[] = $_language->module[ 'broken_image' ];
+                        }
+                    }
+                    else{
+                        $errors[] = $_language->module[ 'unsupported_image_type' ];
+                    }
                 }
-                if ($pic != "") {
-                    if (file_exists($filepath . $id . '_small.gif')) {
-                        unlink($filepath . $id . '_small.gif');
-                    }
-                    if (file_exists($filepath . $id . '_small.jpg')) {
-                        unlink($filepath . $id . '_small.jpg');
-                    }
-                    if (file_exists($filepath . $id . '_small.png')) {
-                        unlink($filepath . $id . '_small.png');
-                    }
-                    rename($filepath . $icon_small[ 'name' ] . ".tmp", $filepath . $pic);
-                    safe_query("UPDATE " . PREFIX . "squads SET icon_small='" . $pic . "' WHERE squadID='" . $id . "'");
-                } else {
-                    @unlink($filepath . $icon_small[ 'name' ] . ".tmp");
-                    $error = $_language->module[ 'format_incorrect' ];
-                    die('<b>' . $error .
-                        '</b><br /><br /><a href="admincenter.php?site=squads&amp;action=edit&amp;squadID=' . $id .
-                        '">&laquo; ' . $_language->module[ 'back' ] . '</a>');
+                else{
+                    $errors[] = $upload->translateError();
                 }
+            }
+
+            if (count($errors)) {
+                $errors = array_unique($errors);
+                echo generateErrorBoxFromArray($_language->module['errors_there'],$errors);
             }
         } else {
             echo $_language->module[ 'information_incomplete' ];
@@ -201,75 +223,97 @@ if (isset($_POST[ 'saveedit' ])) {
                 $_POST[ 'squadID' ] . "' "
             );
             $filepath = "../images/squadicons/";
-            $icon = $_FILES[ 'icon' ];
-            $icon_small = $_FILES[ 'icon_small' ];
             $id = $_POST[ 'squadID' ];
 
-            if ($icon[ 'name' ] != "") {
-                move_uploaded_file($icon[ 'tmp_name' ], $filepath . $icon[ 'name' ] . ".tmp");
-                @chmod($filepath . $icon[ 'name' ] . ".tmp", 0755);
-                $getimg = getimagesize($filepath . $icon[ 'name' ] . ".tmp");
+            $errors = array();
 
-                $pic = '';
-                if ($getimg[ 2 ] == IMAGETYPE_GIF) {
-                    $pic = $id . '.gif';
-                } elseif ($getimg[ 2 ] == IMAGETYPE_JPEG) {
-                    $pic = $id . '.jpg';
-                } elseif ($getimg[ 2 ] == IMAGETYPE_PNG) {
-                    $pic = $id . '.png';
+            $upload = new \webspell\Upload('icon');
+            if ($upload->hasFile()) {
+                if ($upload->hasError() === false) {
+                    $mime_types = array('image/jpeg','image/png','image/gif');
+
+                    if ($upload->supportedMimeType($mime_types)) {
+                        $imageInformation =  getimagesize($upload->getTempFile());
+
+                        if (is_array($imageInformation)) {
+                            switch ($imageInformation[ 2 ]) {
+                                case 1:
+                                    $endung = '.gif';
+                                    break;
+                                case 3:
+                                    $endung = '.png';
+                                    break;
+                                default:
+                                    $endung = '.jpg';
+                                    break;
+                            }
+                            $file = $id.$endung;
+
+                            if ($upload->saveAs($filepath.$file,true)) {
+                                @chmod($file, $new_chmod);
+                                safe_query(
+                                    "UPDATE " . PREFIX . "squads SET icon='" . $file . "' WHERE squadID='" . $id . "'"
+                                );
+                            }
+                        }
+                        else{
+                            $errors[] = $_language->module[ 'broken_image' ];
+                        }
+                    }
+                    else{
+                        $errors[] = $_language->module[ 'unsupported_image_type' ];
+                    }
                 }
-                if ($pic != "") {
-                    if (file_exists($filepath . $id . '.gif')) {
-                        unlink($filepath . $id . '.gif');
-                    }
-                    if (file_exists($filepath . $id . '.jpg')) {
-                        unlink($filepath . $id . '.jpg');
-                    }
-                    if (file_exists($filepath . $id . '.png')) {
-                        unlink($filepath . $id . '.png');
-                    }
-                    rename($filepath . $icon[ 'name' ] . ".tmp", $filepath . $pic);
-                    safe_query("UPDATE " . PREFIX . "squads SET icon='" . $pic . "' WHERE squadID='" . $id . "'");
-                } else {
-                    @unlink($filepath . $icon[ 'name' ] . ".tmp");
-                    $error = $_language->module[ 'format_incorrect' ];
-                    die('<b>' . $error .
-                        '</b><br /><br /><a href="admincenter.php?site=squads&amp;action=edit&amp;squadID=' . $id .
-                        '">&laquo; ' . $_language->module[ 'back' ] . '</a>');
+                else{
+                    $errors[] = $upload->translateError();
                 }
             }
 
-            if ($icon_small[ 'name' ] != "") {
-                move_uploaded_file($icon_small[ 'tmp_name' ], $filepath . $icon_small[ 'name' ] . ".tmp");
-                @chmod($filepath . $icon_small[ 'name' ] . ".tmp", 0755);
-                $getimg = getimagesize($filepath . $icon_small[ 'name' ] . ".tmp");
-                $pic = '';
-                if ($getimg[ 2 ] == IMAGETYPE_GIF) {
-                    $pic = $id . '_small.gif';
-                } elseif ($getimg[ 2 ] == IMAGETYPE_JPEG) {
-                    $pic = $id . '_small.jpg';
-                } elseif ($getimg[ 2 ] == IMAGETYPE_PNG) {
-                    $pic = $id . '_small.png';
+            $upload = new \webspell\Upload('icon_small');
+            if ($upload->hasFile()) {
+                if ($upload->hasError() === false) {
+                    $mime_types = array('image/jpeg','image/png','image/gif');
+
+                    if ($upload->supportedMimeType($mime_types)) {
+                        $imageInformation =  getimagesize($upload->getTempFile());
+
+                        if (is_array($imageInformation)) {
+                            switch ($imageInformation[ 2 ]) {
+                                case 1:
+                                    $endung = '.gif';
+                                    break;
+                                case 3:
+                                    $endung = '.png';
+                                    break;
+                                default:
+                                    $endung = '.jpg';
+                                    break;
+                            }
+                            $file = $id.'_small'.$endung;
+
+                            if ($upload->saveAs($filepath.$file,true)) {
+                                @chmod($file, $new_chmod);
+                                safe_query(
+                                    "UPDATE " . PREFIX . "squads SET icon_small='" . $file . "' WHERE squadID='" . $id . "'"
+                                );
+                            }
+                        }
+                        else{
+                            $errors[] = $_language->module[ 'broken_image' ];
+                        }
+                    }
+                    else{
+                        $errors[] = $_language->module[ 'unsupported_image_type' ];
+                    }
                 }
-                if ($pic != "") {
-                    if (file_exists($filepath . $id . '_small.gif')) {
-                        unlink($filepath . $id . '_small.gif');
-                    }
-                    if (file_exists($filepath . $id . '_small.jpg')) {
-                        unlink($filepath . $id . '_small.jpg');
-                    }
-                    if (file_exists($filepath . $id . '_small.png')) {
-                        unlink($filepath . $id . '_small.png');
-                    }
-                    rename($filepath . $icon_small[ 'name' ] . ".tmp", $filepath . $pic);
-                    safe_query("UPDATE " . PREFIX . "squads SET icon_small='" . $pic . "' WHERE squadID='" . $id . "'");
-                } else {
-                    @unlink($filepath . $icon_small[ 'name' ] . ".tmp");
-                    $error = $_language->module[ 'format_incorrect' ];
-                    die('<b>' . $error .
-                        '</b><br /><br /><a href="admincenter.php?site=squads&amp;action=edit&amp;squadID=' . $id .
-                        '">&laquo; ' . $_language->module[ 'back' ] . '</a>');
+                else{
+                    $errors[] = $upload->translateError();
                 }
+            }
+
+            if (count($errors)) {
+                $errors = array_unique($errors);
+                echo generateErrorBoxFromArray($_language->module['errors_there'],$errors);
             }
         } else {
             echo $_language->module[ 'information_incomplete' ];
@@ -549,7 +593,7 @@ onsubmit="return chkFormular();">
         <td class="' . $td . '">' . cleartext($db[ 'info' ], true, 'admin') . '</td>
         <td class="' . $td . '" align="center">
             <a href="admincenter.php?site=squads&amp;action=edit&amp;squadID=' .
-                $db[ 'squadID' ] . '">' . $_language->module[ 'edit' ] . '</a>
+                $db[ 'squadID' ] . '" class="input">' . $_language->module[ 'edit' ] . '</a>
         <input type="button" onclick="MM_confirm(\'' . $_language->module[ 'really_delete' ] .
                 '\', \'admincenter.php?site=squads&amp;delete=true&amp;squadID=' . $db[ 'squadID' ] .
                 '&amp;captcha_hash=' . $hash . '\')" value="' . $_language->module[ 'delete' ] . '" /></td>
