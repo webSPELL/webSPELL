@@ -103,6 +103,10 @@ class Upload
         return basename($_FILES[ $this->field ][ 'name' ]);
     }
 
+    public function getSize(){
+        return $_FILES[ $this->field ]['size'];
+    }
+
     public function getExtension()
     {
         $filename = $this->getFilename();

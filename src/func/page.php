@@ -76,6 +76,11 @@ function generateErrorBox($message, $dismissible = false)
     return generateAlert($message, 'alert-danger', $dismissible);
 }
 
+function generateSuccessBox($message, $dismissible = false)
+{
+    return generateAlert($message, 'alert-success', $dismissible);
+}
+
 function generateErrorBoxFromArray($intro, $errors, $dismissible = false)
 {
     $message = '<strong>' . $intro . ':</strong><br/><ul>';

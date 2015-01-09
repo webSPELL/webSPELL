@@ -97,206 +97,223 @@ if (isset($_GET[ 'action' ])) {
 
 if ($action == "save") {
     if (!isfileadmin($userID)) {
-        die(redirect("index.php?site=files", $_language->module[ 'no_access' ], "3"));
+        echo generateErrorBox($_language->module[ 'no_access' ]);
     }
+    else{
 
-    $upfile = $_FILES[ 'upfile' ];
-    $poster = $_POST[ 'poster' ];
-    $filecat = $_POST[ 'filecat' ];
-    $filename = $_POST[ 'filename' ];
-    $fileurl = $_POST[ 'fileurl' ];
-    $filesize = unit_to_size($_POST[ 'filesize' ], $_POST[ 'unit' ]);
-    $info = $_POST[ 'info' ];
-    $accesslevel = $_POST[ 'accesslevel' ];
-    $mirror1 = $_POST[ 'mirror2' ];
-    $mirror2 = $_POST[ 'mirror3' ];
+        $poster = $_POST[ 'poster' ];
+        $filecat = $_POST[ 'filecat' ];
+        $filename = $_POST[ 'filename' ];
+        $fileurl = $_POST[ 'fileurl' ];
+        $filesize = unit_to_size($_POST[ 'filesize' ], $_POST[ 'unit' ]);
+        $info = $_POST[ 'info' ];
+        $accesslevel = $_POST[ 'accesslevel' ];
+        $mirror1 = $_POST[ 'mirror2' ];
+        $mirror2 = $_POST[ 'mirror3' ];
 
-    // MIRRORS
-    if (stristr($mirror1, "http://") || stristr($mirror1, "ftp://")) {
-        if (stristr($mirror2, "http://") || stristr($mirror2, "ftp://")) {
-            $mirrors = $mirror1 . '||' . $mirror2;
-        } else {
-            $mirrors = $mirror1;
-        }
-    } elseif (stristr($mirror2, "http://") || stristr($mirror2, "ftp://")) {
-        $mirrors = $mirror2;
-    } else {
-        $mirrors = '';
-    }
-
-    if ($upfile || $fileurl) {
-        $filepath = "./downloads/";
-        if ($upfile[ 'name' ] != "") {
-            $des_file = $filepath . $upfile[ 'name' ];
-            if (!file_exists($des_file)) {
-                if (move_uploaded_file($upfile[ 'tmp_name' ], $des_file)) {
-                    $file = $upfile[ 'name' ];
-                    $filesize = $upfile[ 'size' ];
-                    @chmod($des_file, $new_chmod);
-                }
+        // MIRRORS
+        if (stristr($mirror1, "http://") || stristr($mirror1, "ftp://")) {
+            if (stristr($mirror2, "http://") || stristr($mirror2, "ftp://")) {
+                $mirrors = $mirror1 . '||' . $mirror2;
             } else {
-                $date = time();
-                $des_file = $filepath . $date . "_" . $upfile[ 'name' ];
-                if (!file_exists($des_file)) {
-                    if (move_uploaded_file($upfile[ 'tmp_name' ], $des_file)) {
-                        $file = $date . "_" . $upfile[ 'name' ];
-                        $filesize = $upfile[ 'size' ];
-                        @chmod($des_file, $new_chmod);
-                    }
-                } else {
-                    die($_language->module[ 'file_already_exists' ]);
-                }
+                $mirrors = $mirror1;
             }
+        } elseif (stristr($mirror2, "http://") || stristr($mirror2, "ftp://")) {
+            $mirrors = $mirror2;
         } else {
-            if (stristr($fileurl, "http://") || stristr($fileurl, "ftp://")) {
-                $file = $fileurl;
-            }
+            $mirrors = '';
         }
 
-        if (
-            safe_query(
-                "INSERT INTO
-                    `" . PREFIX . "files` (
-                        `filecatID`,
-                        `poster`,
-                        `date`,
-                        `filename`,
-                        `filesize`,
-                        `info`,
-                        `file`,
-                        `mirrors`,
-                        `downloads`,
-                        `accesslevel`
-                    )
-                    VALUES (
-                        '" . $filecat . "',
-                        '" . $poster . "',
-                        '" . time() . "',
-                        '" . $filename . "',
-                        '" . $filesize . "',
-                        '" . $info . "',
-                        '" . $file . "',
-                        '" . $mirrors . "',
-                        '0',
-                        '" . $accesslevel . "'
-                    )"
-            )
-        ) {
-            redirect(
-                "index.php?site=files&amp;file=" . mysqli_insert_id($_database) . "",
-                $_language->module[ 'file_created' ],
-                "3"
-            );
+        $error = array();
+
+        $upload = new \webspell\Upload('upfile');
+
+        $filepath = "./downloads/";
+
+        if ($upload->hasFile()) {
+            if ($upload->hasError() === false) {
+                $des_file = $filepath . $upload->getFilename();
+                if(file_exists($des_file)){
+                    $des_file = $filepath . time() . "_" . $upload->getFilename();
+                }
+                if ($upload->saveAs($des_file, false)) {
+                    @chmod($des_file, $new_chmod);
+                    $file = basename($des_file);
+                    $filesize = $upload->getSize();
+                } else {
+                    $error[] = $_language->module[ 'file_already_exists' ];
+                }
+
+            } else {
+                echo generateErrorBox($upload->translateError());
+            }
+
+        } elseif (!empty($fileurl)) {
+            $file = $fileurl;
         } else {
-            redirect("index.php?site=files", $_language->module[ 'file_not_created' ], "3");
+            $error[] = $_language->module[ 'no_file_uploaded' ];
         }
-    } else {
-        redirect("index.php?site=files", $_language->module[ 'no_valid_file' ], "3");
+
+
+        if(count($error)){
+            echo generateErrorBoxFromArray($_language->module['errors_there'], $fehler);
+        } else {
+            if (
+                safe_query(
+                    "INSERT INTO
+                        `" . PREFIX . "files` (
+                            `filecatID`,
+                            `poster`,
+                            `date`,
+                            `filename`,
+                            `filesize`,
+                            `info`,
+                            `file`,
+                            `mirrors`,
+                            `downloads`,
+                            `accesslevel`
+                        )
+                        VALUES (
+                            '" . $filecat . "',
+                            '" . $poster . "',
+                            '" . time() . "',
+                            '" . $filename . "',
+                            '" . $filesize . "',
+                            '" . $info . "',
+                            '" . $file . "',
+                            '" . $mirrors . "',
+                            '0',
+                            '" . $accesslevel . "'
+                        )"
+                )
+            ) {
+                redirect(
+                    "index.php?site=files&amp;file=" . mysqli_insert_id($_database),
+                    $_language->module[ 'file_created' ],
+                    "3"
+                );
+            } else {
+                redirect("index.php?site=files", generateSuccessBox($_language->module[ 'file_not_created' ]), "3");
+            }
+        }
     }
 } elseif ($action == "saveedit") {
     if (!isfileadmin($userID)) {
-        die(redirect("index.php?site=files", $_language->module[ 'no_access' ], "3"));
+        echo generateErrorBox($_language->module[ 'no_access' ]);
     }
+    else{
 
-    $fileID = $_POST[ 'fileID' ];
-    $upfile = $_FILES[ 'upfile' ];
-    $filecat = $_POST[ 'filecat' ];
-    $filename = $_POST[ 'filename' ];
-    $fileurl = $_POST[ 'fileurl' ];
-    $filesize = unit_to_size($_POST[ 'filesize' ], $_POST[ 'unit' ]);
-    $info = $_POST[ 'info' ];
-    $accesslevel = $_POST[ 'accesslevel' ];
-    $mirror1 = $_POST[ 'mirror2' ];
-    $mirror2 = $_POST[ 'mirror3' ];
-    unset($file);
+        $fileID = $_POST[ 'fileID' ];
+        $upfile = $_FILES[ 'upfile' ];
+        $filecat = $_POST[ 'filecat' ];
+        $filename = $_POST[ 'filename' ];
+        $fileurl = $_POST[ 'fileurl' ];
+        $filesize = unit_to_size($_POST[ 'filesize' ], $_POST[ 'unit' ]);
+        $info = $_POST[ 'info' ];
+        $accesslevel = $_POST[ 'accesslevel' ];
+        $mirror1 = $_POST[ 'mirror2' ];
+        $mirror2 = $_POST[ 'mirror3' ];
+        unset($file);
 
-    // MIRRORS
-    if (stristr($mirror1, "http://") || stristr($mirror1, "ftp://")) {
-        if (stristr($mirror2, "http://") || stristr($mirror2, "ftp://")) {
-            $mirrors = $mirror1 . '||' . $mirror2;
+        // MIRRORS
+        if (stristr($mirror1, "http://") || stristr($mirror1, "ftp://")) {
+            if (stristr($mirror2, "http://") || stristr($mirror2, "ftp://")) {
+                $mirrors = $mirror1 . '||' . $mirror2;
+            } else {
+                $mirrors = $mirror1;
+            }
+        } elseif (stristr($mirror2, "http://") || stristr($mirror2, "ftp://")) {
+            $mirrors = $mirror2;
         } else {
-            $mirrors = $mirror1;
+            $mirrors = '';
         }
-    } elseif (stristr($mirror2, "http://") || stristr($mirror2, "ftp://")) {
-        $mirrors = $mirror2;
-    } else {
-        $mirrors = '';
-    }
 
-    $filepath = "./downloads/";
-    if ($upfile[ 'name' ] != "") {
-        $des_file = $filepath . $upfile[ 'name' ];
-        if (file_exists($des_file)) {
-            unlink($des_file);
-        }
-        if (move_uploaded_file($upfile[ 'tmp_name' ], $des_file)) {
-            $file = $upfile[ 'name' ];
-            $filesize = $upfile[ 'size' ];
-            chmod($des_file, $new_chmod);
-        }
-    } else {
-        if ((stristr($fileurl, "http://") || stristr($fileurl, "ftp://")) && $fileurl != "http://") {
+        $error = array();
+
+        $upload = new \webspell\Upload('upfile');
+
+        $filepath = "./downloads/";
+
+        if ($upload->hasFile()) {
+            if ($upload->hasError() === false) {
+                $des_file = $filepath . $upload->getFilename();
+                if(file_exists($des_file)){
+                    $des_file = $filepath . time() . "_" . $upload->getFilename();
+                }
+                if ($upload->saveAs($des_file)) {
+                    @chmod($des_file, $new_chmod);
+                    $file = basename($des_file);
+                    $filesize = $upload->getSize();
+                }
+            } else {
+                echo generateErrorBox($upload->translateError());
+            }
+
+        } elseif (!empty($fileurl)) {
             $file = $fileurl;
         }
-    }
-    safe_query(
-        "UPDATE
-            `" . PREFIX . "files`
-        SET
-            `filecatID` = '" . $filecat . "',
-            `mirrors` = '" . $mirrors . "',
-            `filename` = '" . $filename . "',
-            `filesize` = '" . $filesize . "',
-            `info` = '" . $info . "',
-            `accesslevel` = '" . $accesslevel . "'
-        WHERE
-            `fileID` = '" . (int)$fileID."'"
-    ) || die(redirect("index.php?site=files", $_language->module[ 'failed_save_file-info' ], "3"));
-    if (isset($file)) {
-        if (
-            !safe_query(
-                "UPDATE `" . PREFIX . "files` SET `file` = '" . $file . "' WHERE `fileID` = '" . (int)$fileID
-            )
-        ) {
-            die(redirect("index.php?site=files", $_language->module[ 'failed_edit_file' ], "3"));
+
+        if(count($error)){
+            echo generateErrorBoxFromArray($_language->module['errors_there'], $fehler);
+        } else {
+            safe_query(
+                "UPDATE
+                    `" . PREFIX . "files`
+                SET
+                    `filecatID` = '" . $filecat . "',
+                    `mirrors` = '" . $mirrors . "',
+                    `filename` = '" . $filename . "',
+                    `filesize` = '" . $filesize . "',
+                    `info` = '" . $info . "',
+                    `accesslevel` = '" . $accesslevel . "'
+                WHERE
+                    `fileID` = '" . (int)$fileID."'"
+            );
+
+            if (isset($file)) {
+                safe_query(
+                    "UPDATE `" . PREFIX . "files` SET `file` = '" . $file . "' WHERE `fileID` = '" . (int)$fileID."'"
+                );
+            }
+            redirect("index.php?site=files&amp;file=" . (int)$fileID, generateSuccessBox($_language->module[ 'successful' ]));
         }
     }
-    redirect("index.php?site=files", $_language->module[ 'successful' ]);
 } elseif ($action == "delete") {
     if (!isfileadmin($userID)) {
-        die(redirect("index.php?site=files", $_language->module[ 'no_access' ], "3"));
-    }
+        echo generateErrorBox($_language->module[ 'no_access' ]);
+    } else{
 
-    if (isset($_GET[ 'cat' ])) {
-        $cat = $_GET[ 'cat' ];
-    } else {
-        $cat = '';
-    }
-    if (isset($_GET[ 'ref' ])) {
-        $ref = $_GET[ 'ref' ];
-    } else {
-        $ref = '';
-    }
-    if ($cat) {
-        $ref = '&amp;cat=' . $cat;
-    }
-    $file = (int)$_GET[ 'file' ];
-
-    if ($file) {
-        $ergebnis = safe_query("SELECT * FROM `" . PREFIX . "files` WHERE `fileID` = '" . $file."'");
-        $ds = mysqli_fetch_array($ergebnis);
-
-        if (!stristr($ds[ 'file' ], "http://") && !stristr($ds[ 'file' ], "ftp://")) {
-            @unlink('./downloads/' . $ds[ 'file' ]);
-        }
-
-        if (safe_query("DELETE FROM `" . PREFIX . "files` WHERE `fileID` = '" . (int)$file."'")) {
-            redirect("index.php?site=files" . $ref, $_language->module[ 'file_deleted' ], "3");
+        if (isset($_GET[ 'cat' ])) {
+            $cat = $_GET[ 'cat' ];
         } else {
-            redirect("index.php?site=files", $_language->module[ 'file_not_deleted' ], "3");
+            $cat = '';
         }
-    } else {
-        redirect("index.php", $_language->module[ 'cant_delete_without_fileID' ], "3");
+        if (isset($_GET[ 'ref' ])) {
+            $ref = $_GET[ 'ref' ];
+        } else {
+            $ref = '';
+        }
+        if ($cat) {
+            $ref = '&amp;cat=' . $cat;
+        }
+        $file = (int)$_GET[ 'file' ];
+
+        if ($file) {
+            $ergebnis = safe_query("SELECT * FROM `" . PREFIX . "files` WHERE `fileID` = '" . $file."'");
+            $ds = mysqli_fetch_array($ergebnis);
+
+            if (!stristr($ds[ 'file' ], "http://") && !stristr($ds[ 'file' ], "ftp://")) {
+                @unlink('./downloads/' . $ds[ 'file' ]);
+            }
+
+            if (safe_query("DELETE FROM `" . PREFIX . "files` WHERE `fileID` = '" . (int)$file."'")) {
+                redirect("index.php?site=files", generateSuccessBox($ref, $_language->module[ 'file_deleted' ]), "3");
+            } else {
+                redirect("index.php?site=files", generateErrorBox($_language->module[ 'file_not_deleted' ]), "3");
+            }
+        } else {
+            redirect("index.php", generateErrorBox($_language->module[ 'cant_delete_without_fileID' ]), "3");
+        }
     }
 } elseif ($action == "newfile") {
     // ADMINACTIONS
@@ -360,7 +377,7 @@ if ($action == "save") {
             echo $files_new;
         }
     } else {
-        redirect("index.php?site=files", $_language->module[ 'no_access' ], "3");
+        redirect("index.php?site=files", generateErrorBox($_language->module[ 'no_access' ]), "3");
     }
 } elseif ($action == "edit") {
     $fileID = $_GET[ 'fileID' ];
@@ -450,7 +467,7 @@ if ($action == "save") {
                     $unit = str_replace('value="gb"', 'value="gb" selected="selected"', $unit);
                     break;
             }
-            $extern = 'http://';
+            $extern = '';
             if (stristr($file[ 'file' ], "http://") || stristr($file[ 'file' ], "ftp://")) {
                 $extern = $file[ 'file' ];
             }
@@ -471,10 +488,10 @@ if ($action == "save") {
             eval("\$files_edit = \"" . gettemplate("files_edit") . "\";");
             echo $files_edit;
         } else {
-            redirect("index.php?site=files", $_language->module[ 'no_access' ], "3");
+            redirect("index.php?site=files", generateErrorBox($_language->module[ 'no_access' ]), "3");
         }
     } else {
-        redirect("index.php", $_language->module[ 'cant_edit_without_fileID' ], "3");
+        redirect("index.php", generateErrorBox($_language->module[ 'cant_edit_without_fileID' ]), "3");
     }
 } elseif (isset($_GET[ 'cat' ])) {
     $accesslevel = 1;
@@ -695,7 +712,7 @@ if ($action == "save") {
             FROM
                 `" . PREFIX . "files`
             WHERE
-                `fileID` = '" . $_GET[ 'file' ]."'"
+                `fileID` = '" . (int)$_GET[ 'file' ]."'"
         )
     );
     if ($file[ 'accesslevel' ] == 2 && !isclanmember($userID)) {
