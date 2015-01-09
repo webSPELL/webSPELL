@@ -37,8 +37,11 @@ if (isset($_GET[ 'delete' ])) {
         $squadID = $_GET[ 'squadID' ];
         $ergebnis = safe_query("SELECT userID FROM " . PREFIX . "squads_members WHERE squadID='$squadID'");
         while ($ds = mysqli_fetch_array($ergebnis)) {
-            $squads = mysqli_num_rows(safe_query("SELECT userID FROM " . PREFIX .
-                "squads_members WHERE userID='$ds[userID]'"));
+            $squads = mysqli_num_rows(
+                safe_query(
+                    "SELECT userID FROM " . PREFIX . "squads_members WHERE userID='$ds[userID]'"
+                )
+            );
             if ($squads < 2 && !issuperadmin($ds[ 'userID' ])) {
                 safe_query("DELETE FROM " . PREFIX . "user_groups WHERE userID='$ds[userID]'");
             }
@@ -102,9 +105,11 @@ if (isset($_POST[ 'save' ])) {
 
         if (checkforempty(['name'])) {
             $games = implode(";", $_POST[ 'games' ]);
-            safe_query("INSERT INTO " . PREFIX . "squads ( gamesquad, games, name, info, sort ) VALUES ( '" .
+            safe_query(
+                "INSERT INTO " . PREFIX . "squads ( gamesquad, games, name, info, sort ) VALUES ( '" .
                 $_POST[ 'gamesquad' ] . "', '" . $games . "', '" . $_POST[ 'name' ] . "', '" . $_POST[ 'message' ] .
-                "', '1' )");
+                "', '1' )"
+            );
 
             $id = mysqli_insert_id($_database);
             $filepath = "../images/squadicons/";
@@ -135,8 +140,9 @@ if (isset($_POST[ 'save' ])) {
 
                             if ($upload->saveAs($filepath . $file, true)) {
                                 @chmod($file, $new_chmod);
-                                safe_query("UPDATE " . PREFIX . "squads SET icon='" . $file . "' WHERE squadID='" .
-                                    $id . "'");
+                                safe_query(
+                                    "UPDATE " . PREFIX . "squads SET icon='" . $file . "' WHERE squadID='" . $id . "'"
+                                );
                             }
                         } else {
                             $errors[ ] = $_language->module[ 'broken_image' ];
@@ -173,8 +179,10 @@ if (isset($_POST[ 'save' ])) {
 
                             if ($upload->saveAs($filepath . $file, true)) {
                                 @chmod($file, $new_chmod);
-                                safe_query("UPDATE " . PREFIX . "squads SET icon_small='" . $file .
-                                    "' WHERE squadID='" . $id . "'");
+                                safe_query(
+                                    "UPDATE " . PREFIX . "squads SET icon_small='" . $file .
+                                    "' WHERE squadID='" . $id . "'"
+                                );
                             }
                         } else {
                             $errors[ ] = $_language->module[ 'broken_image' ];
@@ -205,9 +213,11 @@ if (isset($_POST[ 'saveedit' ])) {
         if (checkforempty(['name'])) {
 
             $games = implode(";", $_POST[ 'games' ]);
-            safe_query("UPDATE " . PREFIX . "squads SET gamesquad='" . $_POST[ 'gamesquad' ] . "', games='" . $games .
+            safe_query(
+                "UPDATE " . PREFIX . "squads SET gamesquad='" . $_POST[ 'gamesquad' ] . "', games='" . $games .
                 "', name='" . $_POST[ 'name' ] . "', info='" . $_POST[ 'message' ] . "' WHERE squadID='" .
-                $_POST[ 'squadID' ] . "' ");
+                $_POST[ 'squadID' ] . "' "
+            );
             $filepath = "../images/squadicons/";
             $id = $_POST[ 'squadID' ];
 
@@ -237,8 +247,9 @@ if (isset($_POST[ 'saveedit' ])) {
 
                             if ($upload->saveAs($filepath . $file, true)) {
                                 @chmod($file, $new_chmod);
-                                safe_query("UPDATE " . PREFIX . "squads SET icon='" . $file . "' WHERE squadID='" .
-                                    $id . "'");
+                                safe_query(
+                                    "UPDATE " . PREFIX . "squads SET icon='" . $file . "' WHERE squadID='" . $id . "'"
+                                );
                             }
                         } else {
                             $errors[ ] = $_language->module[ 'broken_image' ];
@@ -275,8 +286,10 @@ if (isset($_POST[ 'saveedit' ])) {
 
                             if ($upload->saveAs($filepath . $file, true)) {
                                 @chmod($file, $new_chmod);
-                                safe_query("UPDATE " . PREFIX . "squads SET icon_small='" . $file .
-                                    "' WHERE squadID='" . $id . "'");
+                                safe_query(
+                                    "UPDATE " . PREFIX . "squads SET icon_small='" . $file .
+                                    "' WHERE squadID='" . $id . "'"
+                                );
                             }
                         } else {
                             $errors[ ] = $_language->module[ 'broken_image' ];

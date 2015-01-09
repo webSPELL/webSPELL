@@ -543,31 +543,31 @@ if ($action == "add") {
             <td class="' . $td . '">' . $ds[ 'hits' ] . ' (' . $perday . ')</td>
             <td class="' . $td . '" align="center">' . $displayed . '</td>
             <td class="' . $td . '" align="center">' . $mainsponsor . '</td>
-            <td class="' . $td . '" align="center"><a href="admincenter.php?site=sponsors&amp;action=edit&amp;sponsorID=' .
-                $ds[ 'sponsorID' ] . '" class="input">' . $_language->module[ 'edit' ] . '</a>
+            <td class="' . $td . '" align="center">
+            <a href="admincenter.php?site=sponsors&amp;action=edit&amp;sponsorID=' . $ds[ 'sponsorID' ] .
+                '" class="input">' . $_language->module[ 'edit' ] . '</a>
                 <input type="button" onclick="MM_confirm(\'' . $_language->module[ 'really_delete' ] .
                     '\', \'admincenter.php?site=sponsors&amp;delete=true&amp;sponsorID=' . $ds[ 'sponsorID' ] .
                     '&amp;captcha_hash=' . $hash . '\')" value="' . $_language->module[ 'delete' ] . '" /></td>
 <td class="' . $td . '" align="center"><select name="sort[]">';
-
-    for ($j = 1; $j <= $anz; $j++) {
-        if ($ds[ 'sort' ] == $j) {
-            echo '<option value="' . $ds[ 'sponsorID' ] . '-' . $j . '" selected="selected">' . $j . '</option>';
-        } else {
-            echo '<option value="' . $ds[ 'sponsorID' ] . '-' . $j . '">' . $j . '</option>';
-        }
-    }
-    echo '</select>
+            for ($j = 1; $j <= $anz; $j++) {
+                if ($ds[ 'sort' ] == $j) {
+                    echo '<option value="' . $ds[ 'sponsorID' ] . '-' . $j . '" selected="selected">' . $j .
+                        '</option>';
+                } else {
+                    echo '<option value="' . $ds[ 'sponsorID' ] . '-' . $j . '">' . $j . '</option>';
+                }
+            }
+            echo '</select>
 </td>
 </tr>';
-
-    $i++;
+            $i++;
+        }
+    } else {
+        echo '<tr><td class="td1" colspan="6">' . $_language->module[ 'no_entries' ] . '</td></tr>';
     }
-} else {
-    echo '<tr><td class="td1" colspan="6">' . $_language->module[ 'no_entries' ] . '</td></tr>';
-}
 
-echo '<tr>
+    echo '<tr>
 <td class="td_head" colspan="6" align="right"><input type="hidden" name="captcha_hash" value="' . $hash .
     '"><input type="submit" name="sortieren" value="' . $_language->module[ 'to_sort' ] . '" /></td>
 </tr>
