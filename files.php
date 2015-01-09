@@ -98,7 +98,7 @@ if (isset($_GET[ 'action' ])) {
 if ($action == "save") {
     if (!isfileadmin($userID)) {
         echo generateErrorBox($_language->module[ 'no_access' ]);
-    } else{
+    } else {
 
         $poster = $_POST[ 'poster' ];
         $filecat = $_POST[ 'filecat' ];
@@ -199,7 +199,7 @@ if ($action == "save") {
 } elseif ($action == "saveedit") {
     if (!isfileadmin($userID)) {
         echo generateErrorBox($_language->module[ 'no_access' ]);
-    } else{
+    } else {
 
         $fileID = $_POST[ 'fileID' ];
         $upfile = $_FILES[ 'upfile' ];
