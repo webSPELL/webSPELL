@@ -150,9 +150,7 @@ if ($action == "add") {
     $CAPCLASS = new \webspell\Captcha;
     if ($CAPCLASS->checkCaptcha(0, $_POST[ 'captcha_hash' ])) {
         if ($bannername && $bannerurl && $banner) {
-            if (stristr($bannerurl, 'http://')) {
-                $bannerurl = $bannerurl;
-            } else {
+            if (!stristr($bannerurl, 'http://')) {
                 $bannerurl = 'http://' . $bannerurl;
             }
 
@@ -222,9 +220,7 @@ if ($action == "add") {
     $CAPCLASS = new \webspell\Captcha;
     if ($CAPCLASS->checkCaptcha(0, $_POST[ 'captcha_hash' ])) {
         if ($banner && $bannername && $bannerurl) {
-            if (stristr($bannerurl, 'http://')) {
-                $bannerurl = $bannerurl;
-            } else {
+            if (!stristr($bannerurl, 'http://')) {
                 $bannerurl = 'http://' . $bannerurl;
             }
 
