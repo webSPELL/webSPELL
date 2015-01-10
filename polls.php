@@ -377,7 +377,6 @@ if ($action == "new") {
             } else {
                 $intern = '';
             }
-            $bg1 = BG_1;
             eval("\$polls_edit = \"" . gettemplate("polls_edit") . "\";");
             echo $polls_edit;
         }
@@ -397,7 +396,6 @@ if ($action == "new") {
     $ergebnis =
         safe_query("SELECT * FROM " . PREFIX . "poll WHERE pollID='$pollID' AND intern<=" . (int)isclanmember($userID));
     $ds = mysqli_fetch_array($ergebnis);
-    $bg1 = BG_1;
     $title = $ds[ 'titel' ];
 
     if ($ds[ 'intern' ] == 1) {
@@ -505,11 +503,6 @@ if ($action == "new") {
 
     include("comments.php");
 } elseif (isset($_GET[ 'vote' ])) {
-    $pagebg = PAGEBG;
-    $border = BORDER;
-    $bghead = BGHEAD;
-    $bgcat = BGCAT;
-
     $poll = $_GET[ 'vote' ];
 
     $lastpoll = safe_query(
@@ -613,14 +606,7 @@ if ($action == "new") {
         );
     $anz = mysqli_num_rows($ergebnis);
     if ($anz) {
-        $i = 1;
         while ($ds = mysqli_fetch_array($ergebnis)) {
-            if ($i % 2) {
-                $bg1 = BG_1;
-            } else {
-                $bg1 = BG_2;
-            }
-
             $title = $ds[ 'titel' ];
 
             if ($ds[ 'intern' ] == 1) {
@@ -714,8 +700,6 @@ if ($action == "new") {
 
             eval ("\$polls_foot = \"" . gettemplate("polls_foot") . "\";");
             echo $polls_foot;
-
-            $i++;
 
             unset($options);
         }

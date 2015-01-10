@@ -215,7 +215,6 @@ if ($action == "new") {
         while ($dr = mysqli_fetch_array($rubrics)) {
             $linkcats .= '<option value="' . $dr[ 'linkcatID' ] . '">' . htmlspecialchars($dr[ 'name' ]) . '</option>';
         }
-        $bg1 = BG_1;
         eval ("\$links_new = \"" . gettemplate("links_new") . "\";");
         echo $links_new;
     } else {
@@ -254,7 +253,6 @@ if ($action == "new") {
                 $linkcats
             );
 
-        $bg1 = BG_1;
         eval ("\$links_edit = \"" . gettemplate("links_edit") . "\";");
         echo $links_edit;
     } else {
@@ -277,17 +275,7 @@ if ($action == "new") {
         eval ("\$links_details_head = \"" . gettemplate("links_details_head") . "\";");
         echo $links_details_head;
 
-        $i = 1;
         while ($ds = mysqli_fetch_array($linkcat)) {
-            if ($i % 2) {
-                $bg1 = BG_1;
-                $bg2 = BG_2;
-            } else {
-                $bg1 = BG_3;
-                $bg2 = BG_4;
-            }
-            $i++;
-
             $link = '<a href="' . $ds[ 'url' ] . '" target="_blank"><strong>' . $ds[ 'name' ] . '</strong></a>';
             $info = cleartext($ds[ 'info' ]);
             if ($ds[ 'banner' ]) {
@@ -327,12 +315,10 @@ if ($action == "new") {
                 $_language->module[ 'new_link' ] . '</a><br><br>';
         }
         $anzcats = mysqli_num_rows(safe_query("SELECT linkcatID FROM " . PREFIX . "links_categorys"));
-        $bg1 = BG_1;
 
         eval ("\$links_category = \"" . gettemplate("links_category") . "\";");
         echo $links_category;
 
-        $i = 1;
         while ($ds = mysqli_fetch_array($cats)) {
             $anzlinks = mysqli_num_rows(
                 safe_query(
@@ -344,20 +330,12 @@ if ($action == "new") {
                         linkcatID='" . $ds[ 'linkcatID' ] . "'"
                 )
             );
-            if ($i % 2) {
-                $bg1 = BG_1;
-                $bg2 = BG_2;
-            } else {
-                $bg1 = BG_3;
-                $bg2 = BG_4;
-            }
             $linkcatname =
                 '<a href="index.php?site=links&amp;action=show&amp;linkcatID=' . $ds[ 'linkcatID' ] . '"><b>' .
                 $ds[ 'name' ] . '</b></a>';
 
             eval ("\$links_content = \"" . gettemplate("links_content") . "\";");
             echo $links_content;
-            $i++;
         }
         eval ("\$links_foot = \"" . gettemplate("links_foot") . "\";");
         echo $links_foot;

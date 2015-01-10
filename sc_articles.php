@@ -40,20 +40,11 @@ $ergebnis = safe_query(
 );
 if (mysqli_num_rows($ergebnis)) {
     echo '<ul class="list-group">';
-    $n = 1;
     while ($ds = mysqli_fetch_array($ergebnis)) {
         $date = getformatdate($ds[ 'date' ]);
         $time = getformattime($ds[ 'date' ]);
         $title = $ds[ 'title' ];
         $articlesID = $ds[ 'articlesID' ];
-
-        if ($n % 2) {
-            $bg1 = BG_1;
-            $bg2 = BG_2;
-        } else {
-            $bg1 = BG_3;
-            $bg2 = BG_4;
-        }
 
         if (mb_strlen($title) > $articleschars) {
             $title = mb_substr($title, 0, $articleschars);
@@ -62,7 +53,6 @@ if (mysqli_num_rows($ergebnis)) {
 
         eval("\$sc_articles = \"" . gettemplate("sc_articles") . "\";");
         echo $sc_articles;
-        $n++;
     }
     echo '</ul>';
 }

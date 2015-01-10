@@ -188,8 +188,6 @@ if (isset($newsID)) {
             $adminaction = '';
         }
 
-        $bg1 = BG_1;
-
         $tags = \webspell\Tags::getTagsLinked('news', $newsID);
 
         eval ("\$news = \"" . gettemplate("news") . "\";");

@@ -121,15 +121,7 @@ if ($anz) {
     }
     eval ("\$registered_users_head = \"" . gettemplate("registered_users_head") . "\";");
     echo $registered_users_head;
-    $n = 1;
     while ($ds = mysqli_fetch_array($ergebnis)) {
-        if ($n % 2) {
-            $bg1 = BG_1;
-            $bg2 = BG_2;
-        } else {
-            $bg1 = BG_3;
-            $bg2 = BG_4;
-        }
         $id = $ds[ 'userID' ];
         $country = '[flag]' . htmlspecialchars($ds[ 'country' ]) . '[/flag]';
         $country = flags($country);
@@ -187,7 +179,6 @@ if ($anz) {
 
         eval ("\$registered_users_content = \"" . gettemplate("registered_users_content") . "\";");
         echo $registered_users_content;
-        $n++;
     }
     eval ("\$registered_users_foot = \"" . gettemplate("registered_users_foot") . "\";");
     echo $registered_users_foot;

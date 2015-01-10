@@ -30,11 +30,6 @@ if ($userID && !isset($_GET[ 'userID' ]) && !isset($_POST[ 'userID' ])) {
     eval ("\$title_loginoverview = \"" . gettemplate("title_loginoverview") . "\";");
     echo $title_loginoverview;
 
-    $pagebg = PAGEBG;
-    $border = BORDER;
-    $bghead = BGHEAD;
-    $bgcat = BGCAT;
-
     $ds =
         mysqli_fetch_array(safe_query("SELECT registerdate FROM `" . PREFIX . "user` WHERE userID='" . $userID . "'"));
     $username = '<a href="index.php?site=profile&amp;id=' . $userID . '">' . getnickname($userID) . '</a>';
@@ -269,7 +264,6 @@ if ($userID && !isset($_GET[ 'userID' ]) && !isset($_POST[ 'userID' ])) {
                     </thead><tbody>';
 
                     while ($ds = mysqli_fetch_array($ergebnis)) {
-                        $n % 2 ? $bg = BG_1 : $bg = BG_2;
                         $date = getformatdate($ds[ 'date' ]);
 
                         $anmeldung =
@@ -321,7 +315,6 @@ if ($userID && !isset($_GET[ 'userID' ]) && !isset($_POST[ 'userID' ])) {
                             '&amp;tag=' . $tag . '&amp;month=' . $monat . '&amp;year=' . $yahr . '#event">' .
                             $_language->module[ 'click' ] . '</a></td>
                         </tr>';
-                        $n++;
                     }
                     $clanwars .= '</tbody></table>';
                 } else {
@@ -331,11 +324,6 @@ if ($userID && !isset($_GET[ 'userID' ]) && !isset($_POST[ 'userID' ])) {
         }
     }
     unset($events);
-
-    $bg1 = BG_1;
-    $bg2 = BG_2;
-    $bg3 = BG_3;
-    $bg4 = BG_4;
 
     $events = '';
     $ergebnis =

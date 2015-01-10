@@ -106,8 +106,6 @@ if ($action == "new") {
     $topnews = '<option value="0" selected="selected">' . $_language->module[ 'no' ] . '</option><option value="1">' .
         $_language->module[ 'yes' ] . '</option>';
 
-    $bg1 = BG_1;
-
     $selects = '';
     for ($i = 1; $i <= $count_langs; $i++) {
         $selects .= '<option value="' . $i . '">' . $i . '</option>';
@@ -310,12 +308,9 @@ if ($action == "new") {
 </head>
 <body>';
 
-    $bg1 = BG_1;
-
     eval ("\$title_news = \"" . gettemplate("title_news") . "\";");
     echo $title_news;
 
-    $bgcolor = BG_1;
     $date = getformatdate($ds[ 'date' ]);
     $time = getformattime($ds[ 'date' ]);
     $rubrikname = getrubricname($ds[ 'rubric' ]);
@@ -684,8 +679,6 @@ if ($action == "new") {
             $comments
         );
 
-    $bg1 = BG_1;
-
     $componentsCss = generateComponents($components['css'], 'css');
     $componentsJs = generateComponents($components['js'], 'js');
 
@@ -727,16 +720,7 @@ if ($action == "new") {
             eval ("\$news_unpublished_head = \"" . gettemplate("news_unpublished_head") . "\";");
             echo $news_unpublished_head;
 
-            $i = 1;
             while ($ds = mysqli_fetch_array($ergebnis)) {
-                if ($i % 2) {
-                    $bg1 = BG_1;
-                    $bg2 = BG_2;
-                } else {
-                    $bg1 = BG_3;
-                    $bg2 = BG_4;
-                }
-
                 $date = getformatdate($ds[ 'date' ]);
                 $rubric = getrubricname($ds[ 'rubric' ]);
                 if (!isset($rubric)) {
@@ -788,7 +772,6 @@ if ($action == "new") {
 
                 eval ("\$news_archive_content = \"" . gettemplate("news_archive_content") . "\";");
                 echo $news_archive_content;
-                $i++;
             }
             eval ("\$news_archive_foot = \"" . gettemplate("news_archive_foot") . "\";");
             echo $news_archive_foot;
@@ -928,16 +911,7 @@ if ($action == "new") {
         eval ("\$news_archive_head = \"" . gettemplate("news_archive_head") . "\";");
         echo $news_archive_head;
 
-        $i = 1;
         while ($ds = mysqli_fetch_array($ergebnis)) {
-            if ($i % 2) {
-                $bg1 = BG_1;
-                $bg2 = BG_2;
-            } else {
-                $bg1 = BG_3;
-                $bg2 = BG_4;
-            }
-
             $date = getformatdate($ds[ 'date' ]);
             $rubric = getrubricname($ds[ 'rubric' ]);
             $comms = getanzcomments($ds[ 'newsID' ], 'ne');
@@ -976,7 +950,6 @@ if ($action == "new") {
 
             eval ("\$news_archive_content = \"" . gettemplate("news_archive_content") . "\";");
             echo $news_archive_content;
-            $i++;
         }
 
         if (isnewsadmin($userID)) {
@@ -1073,14 +1046,7 @@ if ($action == "new") {
             LIMIT 0," . (int)$maxshownnews
         );
 
-    $i = 1;
     while ($ds = mysqli_fetch_array($result)) {
-        if ($i % 2) {
-            $bg1 = BG_1;
-        } else {
-            $bg1 = BG_2;
-        }
-
         $date = getformatdate($ds[ 'date' ]);
         $time = getformattime($ds[ 'date' ]);
         $rubrikname = getrubricname($ds[ 'rubric' ]);
@@ -1231,8 +1197,6 @@ if ($action == "new") {
 
         eval ("\$news = \"" . gettemplate("news") . "\";");
         echo $news;
-
-        $i++;
 
         unset($related);
         unset($comments);

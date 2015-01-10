@@ -147,15 +147,7 @@ if ($action == "add") {
     $ergebnis = safe_query("SELECT * FROM " . PREFIX . "buddys WHERE userID='$userID' AND banned='0'");
     $anz = mysqli_num_rows($ergebnis);
     if ($anz) {
-        $n = 1;
         while ($ds = mysqli_fetch_array($ergebnis)) {
-            if ($n % 2) {
-                $bg1 = BG_1;
-                $bg2 = BG_2;
-            } else {
-                $bg1 = BG_3;
-                $bg2 = BG_4;
-            }
             $flag = '[flag]' . getcountry($ds[ 'buddy' ]) . '[/flag]';
             $country = flags($flag);
             $nickname = getnickname($ds[ 'buddy' ]);
@@ -172,7 +164,6 @@ if ($action == "add") {
 
             eval ("\$buddys_content = \"" . gettemplate("buddys_content") . "\";");
             echo $buddys_content;
-            $n++;
         }
     } else {
         echo '<tr><td colspan="4">' . $_language->module[ 'buddy_nousers' ] . '</td></tr>';
@@ -186,15 +177,7 @@ if ($action == "add") {
     $ergebnis = safe_query("SELECT * FROM " . PREFIX . "buddys WHERE userID='$userID' AND banned='1'");
     $anz = mysqli_num_rows($ergebnis);
     if ($anz) {
-        $n = 1;
         while ($ds = mysqli_fetch_array($ergebnis)) {
-            if ($n % 2) {
-                $bg1 = BG_1;
-                $bg2 = BG_2;
-            } else {
-                $bg1 = BG_3;
-                $bg2 = BG_4;
-            }
             $flag = '[flag]' . getcountry($ds[ 'buddy' ]) . '[/flag]';
             $country = flags($flag);
             $nickname = getnickname($ds[ 'buddy' ]);
@@ -210,7 +193,6 @@ if ($action == "add") {
             }
             eval ("\$ignore_content = \"" . gettemplate("ignore_content") . "\";");
             echo $ignore_content;
-            $n++;
         }
     } else {
         echo $_language->module[ 'ignore_nousers' ];

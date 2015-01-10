@@ -350,8 +350,6 @@ if ($action == "save") {
             $_language->module[ 'registered' ] . '</option><option value="2">' . $_language->module[ 'clanmember' ] .
             '</option>';
 
-        $bg1 = BG_1;
-
         if ($filecats == '') {
             redirect('index.php?site=files', $_language->module[ 'first_create_file-category' ], '3');
         } else {
@@ -610,18 +608,7 @@ if ($action == "save") {
         eval("\$files_category_list = \"" . gettemplate("files_category_list_head") . "\";");
         echo $files_category_list;
 
-        $n = 0;
-
         while ($file = mysqli_fetch_array($files)) {
-            $n++;
-            if ($n % 2) {
-                $bg1 = BG_1;
-                $bg2 = BG_2;
-            } else {
-                $bg1 = BG_4;
-                $bg2 = BG_3;
-            }
-
             $fileid = $file[ 'fileID' ];
             $filename =
                 '<a href="index.php?site=files&amp;file=' . $fileid . '"><b>' . clearfromtags($file[ 'filename' ]) .
@@ -845,12 +832,6 @@ if ($action == "save") {
         $rateform = '<i>' . $_language->module[ 'rate_have_to_reg_login' ] . '</i>';
     }
 
-    // DISPLAY
-    $bg1 = BG_1;
-    $bg2 = BG_2;
-    $border = BORDER;
-    $pagebg = PAGEBG;
-
     $admintools = '';
     // ADMINTOOLS
     if (isfileadmin($userID)) {
@@ -1009,9 +990,7 @@ if ($action == "save") {
         );
         $top5 = '<strong>' . $_language->module[ 'top_5_downloads' ] . '</strong><ul class="list-group">';
 
-        $n = 1;
         while ($file = mysqli_fetch_array($top5qry)) {
-            $n % 2 ? $bg = BG_1 : $bg = BG_2;
             $filename = $file[ 'filename' ];
             if (mb_strlen($filename) > 12) {
                 $filename = mb_substr($filename, 0, 12);
@@ -1027,7 +1006,6 @@ if ($action == "save") {
                             $n . ' ' . $filename .
                     '</li>';
             }
-            $n++;
         }
         $top5 .= '</ul>';
 

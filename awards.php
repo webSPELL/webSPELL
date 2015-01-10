@@ -153,8 +153,6 @@ if ($action == "new") {
         }
         $squads = getgamesquads();
 
-        $bg1 = BG_1;
-
         eval ("\$addbbcode = \"" . gettemplate("addbbcode") . "\";");
         eval ("\$addflags = \"" . gettemplate("flags") . "\";");
         eval ("\$awards_new = \"" . gettemplate("awards_new") . "\";");
@@ -201,7 +199,6 @@ if ($action == "new") {
         $homepage = htmlspecialchars($ds[ 'homepage' ]);
         $rang = $ds[ 'rang' ];
         $info = htmlspecialchars($ds[ 'info' ]);
-        $bg1 = BG_1;
         eval ("\$addbbcode = \"" . gettemplate("addbbcode") . "\";");
         eval ("\$addflags = \"" . gettemplate("flags") . "\";");
         eval ("\$awards_edit = \"" . gettemplate("awards_edit") . "\";");
@@ -285,15 +282,7 @@ if ($action == "new") {
 
         eval ("\$awards_head = \"" . gettemplate("awards_head") . "\";");
         echo $awards_head;
-        $n = 1;
         while ($ds = mysqli_fetch_array($ergebnis)) {
-            if ($n % 2) {
-                $bg1 = BG_1;
-                $bg2 = BG_2;
-            } else {
-                $bg1 = BG_3;
-                $bg2 = BG_4;
-            }
             $date = getformatdate($ds[ 'date' ]);
             $squad = getsquadname($ds[ 'squadID' ]);
             $award = cleartext($ds[ 'award' ]);
@@ -316,7 +305,6 @@ if ($action == "new") {
             echo $awards_content;
 
             unset($result);
-            $n++;
         }
         eval ("\$awards_foot = \"" . gettemplate("awards_foot") . "\";");
         echo $awards_foot;
@@ -359,11 +347,6 @@ if ($action == "new") {
         )
     )
     . '" target="_blank">' . $ds[ 'homepage' ] . '</a>';
-
-    $bg1 = BG_1;
-    $bg2 = BG_2;
-    $bg3 = BG_3;
-    $bg4 = BG_4;
 
     if (isclanwaradmin($userID) || isnewsadmin($userID)) {
         $adminaction =
@@ -438,16 +421,7 @@ if ($action == "new") {
         eval ("\$awards_head = \"" . gettemplate("awards_head") . "\";");
         echo $awards_head;
 
-        $n = 1;
         while ($ds = mysqli_fetch_array($ergebnis)) {
-            if ($n % 2) {
-                $bg1 = BG_1;
-                $bg2 = BG_2;
-            } else {
-                $bg1 = BG_3;
-                $bg2 = BG_4;
-            }
-
             $date = getformatdate($ds[ 'date' ]);
             $squad =
                 '<a href="index.php?site=members&amp;action=showsquad&amp;squadID=' . $ds[ 'squadID' ] . '&amp;page=' .
@@ -470,7 +444,6 @@ if ($action == "new") {
 
             eval ("\$awards_content = \"" . gettemplate("awards_content") . "\";");
             echo $awards_content;
-            $n++;
         }
         eval ("\$awards_foot = \"" . gettemplate("awards_foot") . "\";");
         echo $awards_foot;

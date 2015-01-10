@@ -153,8 +153,6 @@ if ($show == true) {
         $squads = getsquads();
     }
 
-    $bg1 = BG_1;
-
     if ($loggedin) {
         if (!isset($showerror)) {
             $showerror = '';

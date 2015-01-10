@@ -209,14 +209,6 @@ function top5()
 
     $n = 1;
     while ($ds = mysqli_fetch_array($ergebnis)) {
-        if ($n % 2) {
-            $bg1 = BG_1;
-            $bg2 = BG_2;
-        } else {
-            $bg1 = BG_3;
-            $bg2 = BG_4;
-        }
-
         $title = '<a href="index.php?site=articles&amp;action=show&amp;articlesID=' . $ds[ 'articlesID' ] . '">' .
             clearfromtags($ds[ 'title' ]) . '</a>';
         $poster =
@@ -248,14 +240,6 @@ function top5()
 
     $n = 1;
     while ($ds = mysqli_fetch_array($ergebnis)) {
-        if ($n % 2) {
-            $bg1 = BG_1;
-            $bg2 = BG_2;
-        } else {
-            $bg1 = BG_3;
-            $bg2 = BG_4;
-        }
-
         $title = '<a href="index.php?site=articles&amp;action=show&amp;articlesID=' . $ds[ 'articlesID' ] . '">' .
             clearfromtags($ds[ 'title' ]) . '</a>';
         $viewed = '(' . $ds[ 'viewed' ] . ')';
@@ -274,11 +258,6 @@ if ($action == "new") {
 
     $_language->readModule('articles');
     $_language->readModule('bbcode', true);
-
-    $pagebg = PAGEBG;
-    $border = BORDER;
-    $bghead = BGHEAD;
-    $bgcat = BGCAT;
 
     if (isnewsadmin($userID)) {
         safe_query(
@@ -327,11 +306,6 @@ if ($action == "new") {
     $_language->readModule('bbcode', true);
 
     $articlesID = $_GET[ 'articlesID' ];
-
-    $pagebg = PAGEBG;
-    $border = BORDER;
-    $bghead = BGHEAD;
-    $bgcat = BGCAT;
 
     if (isnewsadmin($userID)) {
         $ds = mysqli_fetch_array(
@@ -625,7 +599,6 @@ if ($action == "new") {
 
         $tags = \webspell\Tags::getTagsLinked('articles', $articlesID);
 
-        $bg1 = BG_1;
         eval ("\$articles = \"" . gettemplate("articles") . "\";");
         echo $articles;
 
@@ -755,15 +728,7 @@ if ($action == "new") {
         eval ("\$articles_head = \"" . gettemplate("articles_head") . "\";");
         echo $articles_head;
 
-        $n = 1;
         while ($ds = mysqli_fetch_array($ergebnis)) {
-            if ($n % 2) {
-                $bg1 = BG_1;
-                $bg2 = BG_2;
-            } else {
-                $bg1 = BG_3;
-                $bg2 = BG_4;
-            }
             $date = getformatdate($ds[ 'date' ]);
 
             $title = '<a href="index.php?site=articles&amp;action=show&amp;articlesID=' . $ds[ 'articlesID' ] . '">' .
@@ -785,7 +750,6 @@ if ($action == "new") {
             eval ("\$articles_content = \"" . gettemplate("articles_content") . "\";");
             echo $articles_content;
             unset($ratingpic);
-            $n++;
         }
         eval ("\$articles_foot = \"" . gettemplate("articles_foot") . "\";");
         echo $articles_foot;

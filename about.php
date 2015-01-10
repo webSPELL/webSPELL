@@ -37,7 +37,6 @@ if (mysqli_num_rows($ergebnis)) {
     $about = htmloutput($ds[ 'about' ]);
     $about = toggle($about, 1);
 
-    $bg1 = BG_1;
     eval ("\$about = \"" . gettemplate("about") . "\";");
     echo $about;
 } else {

@@ -30,10 +30,6 @@ $_language->readModule('polls');
 function vote($poll)
 {
     global $userID, $_language;
-    $pagebg = PAGEBG;
-    $border = BORDER;
-    $bghead = BGHEAD;
-    $bgcat = BGCAT;
 
     if ($poll) {
         $lastpoll = safe_query(
@@ -141,7 +137,6 @@ function vote($poll)
             echo $poll_voted_head;
 
             $n = 1;
-            $bg = BG_2;
             foreach ($options as $option) {
                 $stimmen = $dv[ 'o' . $n ];
                 if ($gesamtstimmen) {

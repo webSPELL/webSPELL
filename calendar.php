@@ -221,14 +221,14 @@ function print_calendar($mon, $year)
 
             //If date is today, highlight it
             if (($t == date("j")) && ($mon == date("n")) && ($year == date("Y"))) {
-                echo '<td height="40" valign="top" bgcolor="' . BG_4 . '"><b>' . $t . '</b><br>' . $termin . '</td>';
+                echo '<td height="40" valign="top"><b>' . $t . '</b><br>' . $termin . '</td>';
             } else {
 //  If the date is absent ie after 31, print space
                 if ($t === ' ') {
-                    echo '<td height="40" valign="top" style="background-color:' . BG_1 . ';">&nbsp;</td>';
+                    echo '<td height="40" valign="top">&nbsp;</td>';
                 } else {
                     echo
-                        '<td height="40" valign="top" style="background-color:' . BG_2 . ';">' . $t . '<br>' . $termin .
+                        '<td height="40" valign="top">' . $t . '<br>' . $termin .
                         '</td>';
                 }
             }
@@ -258,11 +258,6 @@ function print_termine($tag, $month, $year)
     global $_language;
 
     $_language->readModule('calendar');
-
-    $pagebg = PAGEBG;
-    $border = BORDER;
-    $bghead = BGHEAD;
-    $bgcat = BGCAT;
 
     $start_date = mktime(0, 0, 0, $month, $tag, $year);
     $end_date = mktime(23, 59, 59, $month, $tag, $year);
@@ -812,7 +807,6 @@ if ($action === "savewar") {
             $info = '';
         }
 
-        $bg1 = BG_1;
         eval ("\$upcoming_war_new = \"" . gettemplate("upcoming_war_new") . "\";");
         echo $upcoming_war_new;
     } else {
@@ -882,7 +876,6 @@ if ($action === "savewar") {
         $squads = getgamesquads();
         $countries = getcountries();
 
-        $bg1 = BG_1;
         eval ("\$upcoming_date_new = \"" . gettemplate("upcoming_date_new") . "\";");
         echo $upcoming_date_new;
     } else {
@@ -923,7 +916,6 @@ if ($action === "savewar") {
         $locationhp = htmlspecialchars($ds['locationhp']);
         $dateinfo = htmlspecialchars($ds['dateinfo']);
 
-        $bg1 = BG_1;
         eval ("\$upcoming_date_edit = \"" . gettemplate("upcoming_date_edit") . "\";");
         echo $upcoming_date_edit;
     } else {

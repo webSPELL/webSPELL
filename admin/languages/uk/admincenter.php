@@ -72,7 +72,6 @@ $language_array = Array(
   'sponsors'=>'Sponsors',
   'squads'=>'Squads',
   'static_pages'=>'Static Pages',
-  'styles'=>'Styles',
   'update_webspell'=>'webSPELL update',
   'user_administration'=>'User Administration',
   'user_ranks'=>'User-Ranks',

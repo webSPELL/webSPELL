@@ -132,13 +132,6 @@ if ($anz) {
                 continue;
             }
         }
-        if ($n % 2) {
-            $bg1 = BG_1;
-            $bg2 = BG_2;
-        } else {
-            $bg1 = BG_3;
-            $bg2 = BG_4;
-        }
 
         $topictitle_full = clearfromtags($ds[ 'topic' ]);
         $topictitle = unhtmlspecialchars($topictitle_full);

@@ -50,14 +50,6 @@ if (mysqli_num_rows($ergebnis)) {
         $clan2 = $ds[ 'clan2' ];
         $number = $n;
 
-        if ($n % 2) {
-            $bg1 = BG_1;
-            $bg2 = BG_2;
-        } else {
-            $bg1 = BG_3;
-            $bg2 = BG_4;
-        }
-
         eval("\$sc_demos = \"" . gettemplate("sc_demos") . "\";");
         echo $sc_demos;
 

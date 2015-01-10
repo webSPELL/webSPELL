@@ -49,8 +49,8 @@ if (isset($id) && getnickname($id) != '') {
 
     if ($user_guestbook == 1) {
         if (getuserguestbookstatus($id) == 1) {
-            $title_user_guestbook = '<td class="title" bgcolor="' . BGHEAD .
-                '" width="20%">&nbsp; <a class="titlelink" href="index.php?site=profile&amp;id=' . $id .
+            $title_user_guestbook = '<td class="title" width="20%">&nbsp; <a class="titlelink" 
+			href="index.php?site=profile&amp;id=' . $id .
                 '&amp;action=guestbook">' . $_language->module[ 'guestbook' ] . '</a></td>';
             $title_width_main = 14;
             $title_width_galleries = 18;
@@ -82,9 +82,7 @@ if (isset($id) && getnickname($id) != '') {
         $buddylist = "";
         $buddys = safe_query("SELECT buddy FROM " . PREFIX . "buddys WHERE userID='" . $id . "'");
         if (mysqli_num_rows($buddys)) {
-            $n = 1;
             while ($db = mysqli_fetch_array($buddys)) {
-                $n % 2 ? $bgcolor = BG_1 : $bgcolor = BG_2;
                 $flag = '[flag]' . getcountry($db[ 'buddy' ]) . '[/flag]';
                 $country = flags($flag);
                 $nicknamebuddy = getnickname($db[ 'buddy' ]);
@@ -128,8 +126,6 @@ if (isset($id) && getnickname($id) != '') {
                 </table>
                 </td>
             </tr>';
-
-                $n++;
             }
         } else {
             $buddylist = '<tr>
@@ -145,10 +141,6 @@ if (isset($id) && getnickname($id) != '') {
         echo $title_profile;
 
         $galclass = new \webspell\Gallery();
-
-        $border = BORDER;
-        $bgcat = BGCAT;
-        $pagebg = PAGEBG;
 
         $galleries = safe_query("SELECT * FROM " . PREFIX . "gallery WHERE userID='" . $id . "'");
 
@@ -167,10 +159,7 @@ if (isset($id) && getnickname($id) != '') {
 
         if ($usergalleries) {
             if (mysqli_num_rows($galleries)) {
-                $n = 1;
                 while ($ds = mysqli_fetch_array($galleries)) {
-                    $n % 2 ? $bg = BG_1 : $bg = BG_2;
-
                     $piccount =
                         mysqli_num_rows(
                             safe_query(
@@ -211,8 +200,6 @@ if (isset($id) && getnickname($id) != '') {
 
                     eval("\$profile = \"" . gettemplate("profile_galleries") . "\";");
                     echo $profile;
-
-                    $n++;
                 }
             } else {
                 echo '<tr><td colspan="4">' . $_language->module[ 'no_galleries' ] . '</td></tr>';
@@ -256,7 +243,6 @@ if (isset($id) && getnickname($id) != '') {
                         continue;
                     }
                 }
-                $n % 2 ? $bgcolor = BG_1 : $bgcolor = BG_2;
                 $posttime = getformatdatetime($db[ 'date' ]);
 
                 $topiclist .= '<tr><td width="50%"><table class="table">
@@ -318,8 +304,6 @@ if (isset($id) && getnickname($id) != '') {
                     }
                 }
 
-                $n % 2 ? $bgcolor1 = BG_1 : $bgcolor1 = BG_2;
-                $n % 2 ? $bgcolor2 = BG_3 : $bgcolor2 = BG_4;
                 $posttime = getformatdatetime($db[ 'date' ]);
                 if (mb_strlen($db[ 'message' ]) > 100) {
                     $message = mb_substr(
@@ -441,9 +425,6 @@ if (isset($id) && getnickname($id) != '') {
                     eval("\$title_profile = \"" . gettemplate("title_profile") . "\";");
                     echo $title_profile;
 
-                    $bg1 = BG_1;
-                    $bg2 = BG_2;
-
                     $gesamt =
                         mysqli_num_rows(
                             safe_query(
@@ -544,7 +525,6 @@ if (isset($id) && getnickname($id) != '') {
                     echo '<form method="post" name="form"
                         action="index.php?site=profile&amp;id=' . $id . '&amp;action=guestbook&amp;delete=true">';
                     while ($ds = mysqli_fetch_array($ergebnis)) {
-                        $n % 2 ? $bg1 = BG_1 : $bg1 = BG_2;
                         $date = getformatdatetime($ds[ 'date' ]);
 
                         if (validate_email($ds[ 'email' ])) {
@@ -947,9 +927,7 @@ if (isset($id) && getnickname($id) != '') {
                 LIMIT 0,10"
         );
         if (mysqli_num_rows($visitors)) {
-            $n = 1;
             while ($dv = mysqli_fetch_array($visitors)) {
-                $n % 2 ? $bgcolor = BG_1 : $bgcolor = BG_2;
                 $flag = '[flag]' . $dv[ 'country' ] . '[/flag]';
                 $country = flags($flag);
                 $nicknamevisitor = $dv[ 'nickname' ];
@@ -990,18 +968,11 @@ if (isset($id) && getnickname($id) != '') {
                     $nicknamevisitor . '</b></a></td>
                 <td><small>' . $now . $days . $hours . $minutes . ' ' . $statuspic . '</small></td>
             </tr>';
-
-                $n++;
             }
         } else {
             $lastvisits = '<tr><td colspan="2">' . $_language->module[ 'no_visits' ] . '</td>
     </tr>';
         }
-
-        $bg1 = BG_1;
-        $bg2 = BG_2;
-        $bg3 = BG_3;
-        $bg4 = BG_4;
 
         eval("\$profile = \"" . gettemplate("profile") . "\";");
         echo $profile;

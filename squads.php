@@ -62,8 +62,6 @@ if ($action == "show") {
         $challenge = '';
         $games = '';
 
-        $border = BORDER;
-
         if ($ds[ 'gamesquad' ]) {
             $results = '<a href="index.php?site=clanwars&amp;action=showonly&amp;id=' . $squadID .
                 '&amp;sort=date&amp;only=squad" class="btn btn-primary">' . $_language->module[ 'results' ] . '</a>';
@@ -94,16 +92,7 @@ if ($action == "show") {
         eval("\$squads_head = \"" . gettemplate("squads_head") . "\";");
         echo $squads_head;
 
-        $i = 1;
         while ($dm = mysqli_fetch_array($member)) {
-            if ($i % 2) {
-                $bg1 = BG_1;
-                $bg2 = BG_2;
-            } else {
-                $bg1 = BG_3;
-                $bg2 = BG_4;
-            }
-
             $country = '[flag]' . $dm[ 'country' ] . '[/flag]';
             $country = flags($country);
             $nickname = '<a href="index.php?site=profile&amp;id=' . $dm[ 'userID' ] . '"><b>' .
@@ -171,7 +160,6 @@ if ($action == "show") {
 
             eval ("\$squads_content = \"" . gettemplate("squads_content") . "\";");
             echo $squads_content;
-            $i++;
         }
         eval ("\$squads_foot = \"" . gettemplate("squads_foot") . "\";");
         echo $squads_foot;
@@ -184,16 +172,7 @@ if ($action == "show") {
 
     $ergebnis = safe_query("SELECT * FROM " . PREFIX . "squads " . $getsquad . " ORDER BY sort");
 
-    $i = 1;
     while ($ds = mysqli_fetch_array($ergebnis)) {
-        if ($i % 2) {
-            $bg1 = BG_1;
-            $bg2 = BG_2;
-        } else {
-            $bg1 = BG_3;
-            $bg2 = BG_4;
-        }
-
         $anzmembers = mysqli_num_rows(
             safe_query(
                 "SELECT
@@ -237,10 +216,7 @@ if ($action == "show") {
                 '</a>';
         }
 
-        $bgcat = BGCAT;
         eval ("\$squads = \"" . gettemplate("squads") . "\";");
         echo $squads;
-
-        $i++;
     }
 }

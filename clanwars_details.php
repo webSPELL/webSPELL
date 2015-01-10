@@ -159,11 +159,6 @@ if (!(mb_strlen(trim($screenshots)))) {
     $screenshots = $_language->module[ 'no_screenshots' ];
 }
 
-$bg1 = BG_1;
-$bg2 = BG_2;
-$bg3 = BG_3;
-$bg4 = BG_4;
-
 $linkpage = cleartext($ds[ 'linkpage' ]);
 $linkpage = str_replace('http://', '', $ds[ 'linkpage' ]);
 if ($linkpage == "") {
@@ -192,13 +187,6 @@ if (is_array($theMaps)) {
     $d = 0;
     foreach ($theMaps as $map) {
         $score = '';
-        if (($d + 1) % 2) {
-            $bgone = BG_1;
-            $bgtwo = BG_2;
-        } else {
-            $bgone = BG_3;
-            $bgtwo = BG_4;
-        }
         if ($scoreHome[ $d ] > $scoreOpp[ $d ]) {
             $score_1 = '<font color="' . $wincolor . '"><strong>' . $scoreHome[ $d ] . '</strong></font>';
             $score_2 = '<font color="' . $wincolor . '"><strong>' . $scoreOpp[ $d ] . '</strong></font>';

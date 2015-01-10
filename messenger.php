@@ -256,15 +256,7 @@ if (isset($_POST['delete'])) {
 
         $anz = mysqli_num_rows($ergebnis);
         if ($anz) {
-            $n = 1;
             while ($ds = mysqli_fetch_array($ergebnis)) {
-                if ($n % 2) {
-                    $bg1 = BG_1;
-                    $bg2 = BG_2;
-                } else {
-                    $bg1 = BG_3;
-                    $bg2 = BG_4;
-                }
                 $date = getformatdatetime($ds['date']);
 
                 if ($userID == $ds['fromuser']) {
@@ -316,7 +308,6 @@ if (isset($_POST['delete'])) {
 
                 eval ("\$pm_incoming_content = \"" . gettemplate("pm_incoming_content") . "\";");
                 echo $pm_incoming_content;
-                $n++;
             }
         } else {
             echo '<tr>' . $_language->module['no_incoming'] . '</td></tr>';
@@ -413,15 +404,7 @@ if (isset($_POST['delete'])) {
 
         $anz = mysqli_num_rows($ergebnis);
         if ($anz) {
-            $n = 1;
             while ($ds = mysqli_fetch_array($ergebnis)) {
-                if ($n % 2) {
-                    $bg1 = BG_1;
-                    $bg2 = BG_2;
-                } else {
-                    $bg1 = BG_3;
-                    $bg2 = BG_4;
-                }
                 $date = getformatdatetime($ds['date']);
 
                 if ($userID == $ds['fromuser']) {
@@ -464,7 +447,6 @@ if (isset($_POST['delete'])) {
                 $icon = '<img src="images/icons/pm_old.gif" width="14" height="12" alt="">';
                 eval ("\$pm_outgoing_content = \"" . gettemplate("pm_outgoing_content") . "\";");
                 echo $pm_outgoing_content;
-                $n++;
             }
         } else {
             echo '<tr>' . $_language->module['no_outgoing'] . '</td></tr>';
@@ -496,7 +478,6 @@ if (isset($_POST['delete'])) {
             $message = toggle($message, $ds['messageID']);
             $title = clearfromtags($ds['title']);
 
-            $bg1 = BG_1;
             eval ("\$pm_show = \"" . gettemplate("pm_show") . "\";");
             echo $pm_show;
         } else {
@@ -509,7 +490,6 @@ if (isset($_POST['delete'])) {
         $tousernick = getnickname($touser);
         $touser = getforminput($touser);
 
-        $bg1 = BG_1;
         eval ("\$addbbcode = \"" . gettemplate("addbbcode") . "\";");
         eval ("\$pm_new_touser = \"" . gettemplate("pm_new_touser") . "\";");
         echo $pm_new_touser;
@@ -534,7 +514,6 @@ if (isset($_POST['delete'])) {
 
             $message = '[QUOTE=' . $tousernick . ']' . getinput($ds['message']) . '[/QUOTE]';
 
-            $bg1 = BG_1;
             eval ("\$addbbcode = \"" . gettemplate("addbbcode") . "\";");
             eval ("\$pm_reply = \"" . gettemplate("pm_reply") . "\";");
             echo $pm_reply;
@@ -562,8 +541,6 @@ if (isset($_POST['delete'])) {
         } else {
             $error = $message = $subject = "";
         }
-
-        $bg1 = BG_1;
 
         if (isanyadmin($userID)) {
             $admin = '<strong>' . $_language->module['adminoptions'] . '</strong><br>' .

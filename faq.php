@@ -64,17 +64,7 @@ if ($action == "faqcat" && is_numeric($_GET[ 'faqcatID' ])) {
     if (mysqli_num_rows($faqcat)) {
         eval ("\$faq_question_head = \"" . gettemplate("faq_question_head") . "\";");
         echo $faq_question_head;
-        $i = 1;
         while ($ds = mysqli_fetch_array($faqcat)) {
-            if ($i % 2) {
-                $bg1 = BG_1;
-                $bg2 = BG_2;
-            } else {
-                $bg1 = BG_3;
-                $bg2 = BG_4;
-            }
-            $i++;
-
             $sort = $ds[ 'sort' ];
             $question = '<a href="index.php?site=faq&amp;action=faq&amp;faqID=' . $ds[ 'faqID' ] . '&amp;faqcatID=' .
                 $faqcatID . '" class="list-group-item">' . $ds[ 'question' ] . '</a>';
@@ -136,7 +126,6 @@ if ($action == "faqcat" && is_numeric($_GET[ 'faqcatID' ])) {
         eval ("\$faq_answer_head = \"" . gettemplate("faq_answer_head") . "\";");
         echo $faq_answer_head;
 
-        $bg1 = BG_1;
         $date = getformatdate($ds[ 'date' ]);
         $answer = htmloutput($ds[ 'answer' ]);
 
@@ -160,7 +149,6 @@ if ($action == "faqcat" && is_numeric($_GET[ 'faqcatID' ])) {
     if ($anzcats) {
         eval ("\$faq_category_head = \"" . gettemplate("faq_category_head") . "\";");
         echo $faq_category_head;
-        $i = 1;
         while ($ds = mysqli_fetch_array($faqcats)) {
             $anzfaqs =
                 mysqli_num_rows(
@@ -173,20 +161,12 @@ if ($action == "faqcat" && is_numeric($_GET[ 'faqcatID' ])) {
                             `faqcatID` = '" . (int)$ds[ 'faqcatID' ] . "'"
                     )
                 );
-            if ($i % 2) {
-                $bg1 = BG_1;
-                $bg2 = BG_2;
-            } else {
-                $bg1 = BG_3;
-                $bg2 = BG_4;
-            }
             $faqcatname = '<a href="index.php?site=faq&amp;action=faqcat&amp;faqcatID=' . $ds[ 'faqcatID' ] . '">' .
                 $ds[ 'faqcatname' ] . '</a>';
             $description = htmloutput($ds[ 'description' ]);
 
             eval ("\$faq_category = \"" . gettemplate("faq_category") . "\";");
             echo $faq_category;
-            $i++;
         }
     } else {
         echo $_language->module[ 'no_categories' ];

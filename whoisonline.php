@@ -90,15 +90,7 @@ $ergebnis = safe_query(
 eval ("\$whoisonline_head = \"" . gettemplate("whoisonline_head") . "\";");
 echo $whoisonline_head;
 
-$n = 1;
 while ($ds = mysqli_fetch_array($ergebnis)) {
-    if ($n % 2) {
-        $bg1 = BG_1;
-        $bg2 = BG_2;
-    } else {
-        $bg1 = BG_3;
-        $bg2 = BG_4;
-    }
     if ($ds[ 'ip' ] == '') {
         $nickname =
             '<a href="index.php?site=profile&amp;id=' . $ds[ 'userID' ] . '"><strong>' . $ds[ 'nickname' ] .
@@ -217,7 +209,6 @@ while ($ds = mysqli_fetch_array($ergebnis)) {
 
     eval ("\$whoisonline_content = \"" . gettemplate("whoisonline_content") . "\";");
     echo $whoisonline_content;
-    $n++;
 }
 
 eval ("\$whoisonline_foot = \"" . gettemplate("whoisonline_foot") . "\";");
@@ -253,16 +244,7 @@ $ergebnis = safe_query(
 eval ("\$whowasonline_head = \"" . gettemplate("whowasonline_head") . "\";");
 echo $whowasonline_head;
 
-$n = 1;
 while ($ds = mysqli_fetch_array($ergebnis)) {
-    if ($n % 2) {
-        $bg1 = BG_1;
-        $bg2 = BG_2;
-    } else {
-        $bg1 = BG_3;
-        $bg2 = BG_4;
-    }
-
     $date = getformatdatetime($ds[ 'time' ]);
     $nickname = '<a href="index.php?site=profile&amp;id=' . $ds[ 'userID' ] . '"><strong>' . $ds[ 'nickname' ] .
         '</strong></a>';
@@ -368,7 +350,6 @@ while ($ds = mysqli_fetch_array($ergebnis)) {
 
     eval ("\$whowasonline_content = \"" . gettemplate("whowasonline_content") . "\";");
     echo $whowasonline_content;
-    $n++;
 }
 
 eval ("\$whowasonline_foot = \"" . gettemplate("whowasonline_foot") . "\";");

@@ -104,7 +104,6 @@ if (isset($_POST[ 'saveedit' ])) {
             );
 
         $picID = $_GET[ 'id' ];
-        $bg1 = BG_1;
         $comments = '<option value="0">' . $_language->module[ 'no_comments' ] . '</option><option value="1">' .
             $_language->module[ 'user_comments' ] . '</option><option value="2">' .
             $_language->module[ 'visitor_comments' ] . '</option>';
@@ -551,12 +550,6 @@ if (isset($_POST[ 'saveedit' ])) {
     $percent = 100 / $pics_per_row;
 
     while ($pic = mysqli_fetch_array($ergebnis)) {
-        if ($i % 2) {
-            $bg = BG_2;
-        } else {
-            $bg = BG_1;
-        }
-
         $firstactive = '';
         if ($i == 1) {
             $firstactive = 'active';

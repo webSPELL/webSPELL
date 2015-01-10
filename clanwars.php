@@ -43,11 +43,6 @@ if ($action == "new") {
         die($_language->module[ 'no_access' ]);
     }
 
-    $pagebg = PAGEBG;
-    $border = BORDER;
-    $bghead = BGHEAD;
-    $bgcat = BGCAT;
-
     if (isset($_GET[ 'upID' ])) {
         $upID = $_GET[ 'upID' ];
     }
@@ -139,11 +134,6 @@ if ($action == "new") {
     if (!isanyadmin($userID)) {
         die($_language->module[ 'no_access' ]);
     }
-
-    $pagebg = PAGEBG;
-    $border = BORDER;
-    $bghead = BGHEAD;
-    $bgcat = BGCAT;
 
     $date = strtotime($_POST['date']);
     if (isset($_POST[ 'hometeam' ])) {
@@ -446,7 +436,6 @@ if ($action == "new") {
         while ($dr = mysqli_fetch_array($newsrubrics)) {
             $rubrics .= '<option value="' . $dr[ 'rubricID' ] . '">' . $dr[ 'rubric' ] . '</option>';
         }
-        $bg1 = BG_1;
 
         $comments = '<option value="0">' . $_language->module[ 'no_comments' ] . '</option><option value="1">' .
             $_language->module[ 'user_comments' ] . '</option><option value="2" selected="selected">' .
@@ -475,11 +464,6 @@ if ($action == "new") {
     if (!isanyadmin($userID)) {
         die($_language->module[ 'no_access' ]);
     }
-
-    $pagebg = PAGEBG;
-    $border = BORDER;
-    $bghead = BGHEAD;
-    $bgcat = BGCAT;
 
     $cwID = $_GET[ 'cwID' ];
 
@@ -1101,16 +1085,7 @@ if ($action == "new") {
             }
             // member's details and the output
             if (is_array($playerlist)) {
-                $i = 1;
                 foreach ($playerlist as $id) {
-                    if ($i % 2) {
-                        $bg1 = BG_1;
-                        $bg2 = BG_2;
-                    } else {
-                        $bg1 = BG_3;
-                        $bg2 = BG_4;
-                    }
-
                     $country = '[flag]' . getcountry($id) . '[/flag]';
                     $country = flags($country);
                     $member = '<a href="index.php?site=profile&amp;id=' . $id . '"><strong>' . getnickname($id) .
@@ -1141,7 +1116,6 @@ if ($action == "new") {
                     eval ("\$clanwars_stats_player_content = \"" . gettemplate("clanwars_stats_player_content") .
                         "\";");
                     echo $clanwars_stats_player_content;
-                    $i++;
                 }
             }
             echo '</table>';
@@ -1301,16 +1275,8 @@ if ($action == "new") {
 
         eval ("\$clanwars_head = \"" . gettemplate("clanwars_head") . "\";");
         echo $clanwars_head;
-        $n = 1;
 
         while ($ds = mysqli_fetch_array($ergebnis)) {
-            if ($n % 2) {
-                $bg1 = BG_1;
-                $bg2 = BG_2;
-            } else {
-                $bg1 = BG_3;
-                $bg2 = BG_4;
-            }
             $date = getformatdate($ds[ 'date' ]);
             $league = '<a href="' . $ds[ 'leaguehp' ] . '" target="_blank">' . $ds[ 'league' ] . '</a>';
             $oppcountry = "[flag]" . $ds[ 'oppcountry' ] . "[/flag]";
@@ -1548,15 +1514,7 @@ if ($action == "new") {
         eval ("\$clanwars_head = \"" . gettemplate("clanwars_head") . "\";");
         echo $clanwars_head;
 
-        $n = 1;
         while ($ds = mysqli_fetch_array($ergebnis)) {
-            if ($n % 2) {
-                $bg1 = BG_1;
-                $bg2 = BG_2;
-            } else {
-                $bg1 = BG_3;
-                $bg2 = BG_4;
-            }
             $date = getformatdate($ds[ 'date' ]);
             $squad =
                 '<a href="index.php?site=clanwars&amp;action=showonly&amp;id=' . $ds[ 'squad' ] . '&amp;page=' . $page .
@@ -1607,7 +1565,6 @@ if ($action == "new") {
             eval ("\$clanwars_content = \"" . gettemplate("clanwars_content") . "\";");
             echo $clanwars_content;
             unset($result, $anzcomments);
-            $n++;
         }
         if (isclanwaradmin($userID)) {
             $admdel = '<div class="row">

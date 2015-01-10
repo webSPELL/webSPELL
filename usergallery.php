@@ -191,13 +191,6 @@ if ($userID) {
             $color = $wincolor;
         }
 
-        $bg1 = BG_1;
-        $bg2 = BG_2;
-        $pagebg = PAGEBG;
-        $border = BORDER;
-        $bghead = BGHEAD;
-        $bgcat = BGCAT;
-
         $vars = ['%spacecolor%', '%used_size%', '%available_size%'];
         $repl = [$color, round($size / (1024 * 1024), 2), round($maxusergalleries / (1024 * 1024), 2)];
         $space_max_in_user = str_replace($vars, $repl, $_language->module[ 'x_of_y_mb_in_use' ]);
@@ -212,11 +205,6 @@ if ($userID) {
         }
 
         for ($i = 1; $ds = mysqli_fetch_array($ergebnis); $i++) {
-            if ($i % 2) {
-                $bg = $bg1;
-            } else {
-                $bg = $bg2;
-            }
             $name = clearfromtags($ds[ 'name' ]);
             $galleryID = $ds[ 'galleryID' ];
 
