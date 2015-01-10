@@ -199,9 +199,9 @@ function validate_email($email)
 if (!function_exists('array_combine')) {
     function array_combine($keyarray, $valuearray)
     {
-        $keys = [];
-        $values = [];
-        $result = [];
+        $keys = array();
+        $values = array();
+        $result = array();
         foreach ($keyarray as $key) {
             $keys[ ] = $key;
         }
@@ -238,7 +238,7 @@ function countempty($checkarray)
 function checkforempty($valuearray)
 {
 
-    $check = [];
+    $check = array();
     foreach ($valuearray as $value) {
         $check[ ] = $_REQUEST[ $value ];
     }
@@ -365,7 +365,7 @@ function getinput($text)
 
 function getforminput($text)
 {
-    $text = str_replace(['\r', '\n'], ["\r", "\n"], $text);
+    $text = str_replace(array('\r', '\n'), array("\r", "\n"), $text);
     $text = stripslashes($text);
     $text = htmlspecialchars($text);
 
