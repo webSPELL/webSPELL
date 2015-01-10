@@ -137,8 +137,8 @@ function js_replace($string)
 {
     $output = preg_replace("/(\\\)/si", '\\\\\1', $string);
     $output = str_replace(
-        ["\r\n", "\n", "'", "<script>", "</script>", "<noscript>", "</noscript>"],
-        ["\\n", "\\n", "\'", "\\x3Cscript\\x3E", "\\x3C/script\\x3E", "\\x3Cnoscript\\x3E", "\\x3C/noscript\\x3E"],
+        array("\r\n", "\n", "'", "<script>", "</script>", "<noscript>", "</noscript>"),
+        array("\\n", "\\n", "\'", "\\x3Cscript\\x3E", "\\x3C/script\\x3E", "\\x3Cnoscript\\x3E", "\\x3C/noscript\\x3E"),
         $output
     );
     return $output;
