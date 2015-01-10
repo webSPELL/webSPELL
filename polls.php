@@ -470,7 +470,7 @@ if ($action == "new") {
                 aria-valuenow="' . $picwidth . '"
                 aria-valuemin="0"
                 aria-valuemax="100"
-                style="width: ' . $picwidth . '%;"
+                style="width: ' . $picwidth . '%"
             >
                 ' . $picwidth . ' %
             </div>
@@ -483,7 +483,7 @@ if ($action == "new") {
                 aria-valuenow="0"
                 aria-valuemin="0"
                 aria-valuemax="100"
-                style="width: 0%;"
+                style="width: 0"
             >
                 0 %
             </div>
