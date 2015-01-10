@@ -189,6 +189,7 @@ if ($login) {
     <meta name="description" content="Clanpage using webSPELL 4 CMS">
     <meta name="author" content="webspell.org">
     <meta name="keywords" content="webspell, webspell4, clan, cms">
+	<meta name="copyright" content="Copyright 2005-2014 by webspell.org">
     <meta name="generator" content="webSPELL">
 
     <!-- Head & Title include -->
@@ -200,27 +201,24 @@ if ($login) {
     ?>
     <link href="_stylesheet.css" rel="stylesheet">
 	<style>
-		html, body{
-			height:100%; margin:0;padding:0
-			}
-
-		.container-fluid{
-			height:100%;
-			display:table;
-			width: 100%;
-			padding: 0;
-			}
-
-		.row-fluid {
-			height: 100%; 
-			display:table-cell; 
-			vertical-align: middle;
-			}
-
-		.centering {
-			float:none;
-			margin:0 auto;
-			}
+	html, body{
+	height:100%; margin:0;padding:0
+	}
+	.container-fluid{
+	height:100%;
+	display:table;
+	width: 100%;
+	padding: 0;
+	}
+	.row-fluid {
+	height: 100%;
+	display:table-cell;
+	vertical-align: middle
+	}
+	.centering {
+	float:none;
+	margin:0 auto;
+	}
 	</style>
     </head>
     <body>
@@ -231,5 +229,5 @@ if ($login) {
 	</div>
     </body>
     </html>
-    <?php
+<?php
 }
