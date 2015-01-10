@@ -428,7 +428,7 @@ if (!isset($_SERVER[ 'REQUEST_URI' ])) {
 // -- BANNED USERS -- //
 if (date("dh", $lastBanCheck) != date("dh")) {
     $get = safe_query("SELECT userID, banned FROM " . PREFIX . "user WHERE banned IS NOT NULL");
-    $removeBan = [];
+    $removeBan = array();
     while ($ds = mysqli_fetch_assoc($get)) {
         if ($ds[ 'banned' ] != "perm") {
             if ($ds[ 'banned' ] <= time()) {
