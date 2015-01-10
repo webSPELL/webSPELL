@@ -337,8 +337,6 @@ function boardmain()
                         $date = $_language->module[ 'today' ];
                     } elseif ($date == $yesterday && $date < $today) {
                         $date = $_language->module[ 'yesterday' ];
-                    } else {
-                        $date = $date;
                     }
 
                     $time = getformattime($lp[ 'lastdate' ]);
@@ -466,8 +464,6 @@ function boardmain()
                     $date = $_language->module[ 'today' ];
                 } elseif ($date == $yesterday && $date < $today) {
                     $date = $_language->module[ 'yesterday' ];
-                } else {
-                    $date = $date;
                 }
 
                 $time = getformattime($lp[ 'lastdate' ]);
@@ -1112,9 +1108,7 @@ if (isset($_POST[ 'submit' ]) || isset($_POST[ 'movetopic' ]) || isset($_GET[ 'a
         if (boardexists($board)) {
             if (isset($_POST[ 'icon' ])) {
                 $icon = $_POST[ 'icon' ];
-                if (file_exists("images/icons/topicicons/" . $icon)) {
-                    $icon = $icon;
-                } else {
+                if (!file_exists("images/icons/topicicons/" . $icon)) {
                     $icon = "";
                 }
             } else {

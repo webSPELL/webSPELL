@@ -757,8 +757,6 @@ function showtopic($topic, $edit, $addreply, $quoteID, $type)
             $date = $_language->module['today'];
         } elseif ($date == $yesterday && $date < $today) {
             $date = $_language->module['yesterday'];
-        } else {
-            $date = $date;
         }
 
         $message = cleartext($dr['message']);

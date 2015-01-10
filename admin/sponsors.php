@@ -387,9 +387,7 @@ if ($action == "add") {
 
     $CAPCLASS = new \webspell\Captcha;
     if ($CAPCLASS->checkCaptcha(0, $_POST[ 'captcha_hash' ])) {
-        if (stristr($url, 'http://')) {
-            $url = $url;
-        } else {
+        if (!stristr($url, 'http://')) {
             $url = 'http://' . $url;
         }
 
