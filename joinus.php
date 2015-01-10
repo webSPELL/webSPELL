@@ -95,7 +95,7 @@ if ($action == "save" && isset($_POST['post'])) {
     }
 
     if (!count($error) && $run) {
-        $touser = [];
+        $touser = array();
         $ergebnis =
             safe_query(
                 "SELECT

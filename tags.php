@@ -30,7 +30,7 @@ if (isset($_GET[ 'tag' ])) {
     $tag = $_GET[ 'tag' ];
     $sql = safe_query("SELECT * FROM " . PREFIX . "tags WHERE tag='" . $tag . "'");
     if ($sql->num_rows) {
-        $data = [];
+        $data = array();
         while ($ds = mysqli_fetch_assoc($sql)) {
             $data_check = null;
             if ($ds[ 'rel' ] == "news") {
@@ -47,7 +47,7 @@ if (isset($_GET[ 'tag' ])) {
             }
         }
         echo "<h1>" . $_language->module[ 'search' ] . "</h1>";
-        usort($data, ['Tags', 'sortByDate']);
+        usort($data, array('Tags', 'sortByDate'));
         echo "<p class=\"text-center\"><strong>" . count($data) . "</strong> " . $_language->module[ 'results_found' ] .
             "</p><br><br>";
         foreach ($data as $entry) {

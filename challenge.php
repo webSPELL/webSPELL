@@ -89,7 +89,7 @@ if ($action == "save" && isset($_POST['post'])) {
 
     if (!count($error) && $run) {
         $date = time();
-        $touser = [];
+        $touser = array();
         safe_query(
             "INSERT INTO
                 `" . PREFIX . "challenge` (

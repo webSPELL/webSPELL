@@ -69,7 +69,7 @@ if (isset($table) && isset($key)) {
         $ga = mysqli_fetch_array($getarticles);
         $go = false;
         if ($ga[ $table ] == "") {
-            $array = [];
+            $array = array();
             $go = true;
         } else {
             $string = $ga[ $table ];

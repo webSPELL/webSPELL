@@ -59,8 +59,8 @@ if (isset($_POST[ 'submit' ])) {
 
             $ToEmail = $ds[ 'email' ];
             $ToName = $ds[ 'username' ];
-            $vars = ['%pagetitle%', '%username%', '%new_password%', '%homepage_url%'];
-            $repl = [$hp_title, $ds[ 'username' ], $newpwd, $hp_url];
+            $vars = array('%pagetitle%', '%username%', '%new_password%', '%homepage_url%');
+            $repl = array($hp_title, $ds[ 'username' ], $newpwd, $hp_url);
             $header = str_replace($vars, $repl, $_language->module[ 'email_subject' ]);
             $Message = str_replace($vars, $repl, $_language->module[ 'email_text' ]);
 

@@ -340,7 +340,7 @@ if ($action == "new") {
 
         $title = getinput($ds[ 'title' ]);
 
-        $message = [];
+        $message = array();
         $query = safe_query(
             "SELECT
                 `content`
@@ -492,7 +492,7 @@ if ($action == "new") {
         $date_time = getformatdatetime($ds[ 'date' ]);
         $title = clearfromtags($ds[ 'title' ]);
 
-        $content = [];
+        $content = array();
         $query = safe_query(
             "SELECT
                 *
@@ -553,7 +553,7 @@ if ($action == "new") {
 
         $comments_allowed = $ds[ 'comments' ];
 
-        $ratings = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+        $ratings = array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
         for ($i = 0; $i < $ds[ 'rating' ]; $i++) {
             $ratings[ $i ] = 1;
         }
@@ -773,7 +773,7 @@ if ($action == "new") {
                 '</b></a>';
             $viewed = $ds[ 'viewed' ];
 
-            $ratings = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+            $ratings = array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
             for ($i = 0; $i < $ds[ 'rating' ]; $i++) {
                 $ratings[ $i ] = 1;
             }

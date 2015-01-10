@@ -28,7 +28,7 @@
 $_language->readModule('sc_randompic');
 
 //get files
-$pic_array = [];
+$pic_array = array();
 $picpath = './images/userpics/';
 $picdir = opendir($picpath);
 while (false !== ($file = readdir($picdir))) {

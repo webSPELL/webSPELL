@@ -888,7 +888,7 @@ if (isset($id) && getnickname($id) != '') {
         $anzforumtopics = getuserforumtopics($ds[ 'userID' ]);
         $anzforumposts = getuserforumposts($ds[ 'userID' ]);
 
-        $comments = [];
+        $comments = array();
         $comments[ ] = getusercomments($ds[ 'userID' ], 'ne');
         $comments[ ] = getusercomments($ds[ 'userID' ], 'cw');
         $comments[ ] = getusercomments($ds[ 'userID' ], 'ar');

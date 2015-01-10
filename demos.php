@@ -384,7 +384,7 @@ if ($action == "new") {
     $player = $ds[ 'player' ];
     $maps = $ds[ 'maps' ];
 
-    $ratings = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+    $ratings = array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
     for ($i = 0; $i < $ds[ 'rating' ]; $i++) {
         $ratings[ $i ] = 1;
     }
@@ -595,7 +595,7 @@ if ($action == "new") {
             $game = '<img src="images/games/' . $ds[ 'game' ] . '.gif" width="13" height="13" alt="">';
             $clicks = $ds[ 'downloads' ];
 
-            $ratings = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+            $ratings = array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
             for ($i = 0; $i < $ds[ 'rating' ]; $i++) {
                 $ratings[ $i ] = 1;
             }
@@ -728,7 +728,7 @@ if ($action == "new") {
                 '"><img src="images/games/' . $ds[ 'game' ] . '.gif" width="13" height="13" alt=""></a>';
             $clicks = $ds[ 'downloads' ];
 
-            $ratings = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+            $ratings = array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
             for ($i = 0; $i < $ds[ 'rating' ]; $i++) {
                 $ratings[ $i ] = 1;
             }

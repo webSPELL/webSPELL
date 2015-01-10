@@ -42,11 +42,11 @@ $anz = mysqli_num_rows($ergebnis);
 if ($anz) {
     $dn = mysqli_fetch_array($ergebnis);
 
-    $message_array = [];
+    $message_array = array();
     $query = safe_query("SELECT * FROM " . PREFIX . "news_contents WHERE newsID='" . $dn[ 'newsID' ] . "'");
     while ($qs = mysqli_fetch_array($query)) {
         $message_array[ ] =
-            ['lang' => $qs[ 'language' ], 'headline' => $qs[ 'headline' ], 'message' => $qs[ 'content' ]];
+            array('lang' => $qs[ 'language' ], 'headline' => $qs[ 'headline' ], 'message' => $qs[ 'content' ]);
     }
     $showlang = select_language($message_array);
 

@@ -37,7 +37,7 @@ if (isset($_POST['delete'])) {
     if (isset($_POST['messageID'])) {
         $messageID = $_POST['messageID'];
     } else {
-        $messageID = [];
+        $messageID = array();
     }
 
     foreach ($messageID as $id) {

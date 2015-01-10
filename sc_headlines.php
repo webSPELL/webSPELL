@@ -59,7 +59,7 @@ if (mysqli_num_rows($ergebnis)) {
             $bg2 = BG_4;
         }
 
-        $message_array = [];
+        $message_array = array();
         $query =
             safe_query(
                 "SELECT
@@ -75,13 +75,13 @@ if (mysqli_num_rows($ergebnis)) {
                     n.newsID='" . (int)$ds[ 'newsID' ]."'"
             );
         while ($qs = mysqli_fetch_array($query)) {
-            $message_array[ ] = [
+            $message_array[ ] = array(
                 'lang' => $qs[ 'language' ],
                 'headline' => $qs[ 'headline' ],
                 'message' => $qs[ 'content' ],
                 'country' => $qs[ 'country' ],
                 'countryShort' => $qs[ 'countryCode' ]
-            ];
+            );
         }
         $showlang = select_language($message_array);
 

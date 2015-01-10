@@ -69,7 +69,7 @@ foreach ($urlparts as $tag) {
 }
 if (count($results)) {
     echo "<h1>" . $_language->module['alternative_results'] . "</h1>";
-    usort($results, ['Tags', 'sortByDate']);
+    usort($results, array('Tags', 'sortByDate'));
     echo "<p class='text-center'><strong>" . count($data) . "</strong> " . $_language->module['results_found'] . "</p>";
     foreach ($results as $entry) {
         $date = getformatdate($entry['date']);

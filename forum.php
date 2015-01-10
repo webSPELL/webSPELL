@@ -455,7 +455,7 @@ function boardmain()
             $db[ 'boardID' ] . "' AND moveID='0' ORDER BY lastdate DESC LIMIT 0," . $maxtopics
         );
         $n = 1;
-        $board_topics = [];
+        $board_topics = array();
         while ($lp = mysqli_fetch_assoc($q)) {
             if ($n == 1) {
                 $date = getformatdate($lp[ 'lastdate' ]);
@@ -558,7 +558,7 @@ function showboard($board)
     if ($action == "markall" && $userID) {
         $gv = mysqli_fetch_array(safe_query("SELECT topics FROM " . PREFIX . "user WHERE userID='$userID'"));
 
-        $board_topics = [];
+        $board_topics = array();
         while ($ds = mysqli_fetch_array($alle)) {
             $board_topics[ ] = $ds[ 'topicID' ];
         }
@@ -971,7 +971,7 @@ if (isset($_POST[ 'submit' ]) || isset($_POST[ 'movetopic' ]) || isset($_GET[ 'a
         if (isset($_POST[ 'postID' ])) {
             $postID = $_POST[ 'postID' ];
         } else {
-            $postID = [];
+            $postID = array();
         }
         $board = (int)$_POST[ 'board' ];
 
@@ -1286,7 +1286,15 @@ if (isset($_POST[ 'submit' ]) || isset($_POST[ 'movetopic' ]) || isset($_GET[ 'a
 
                 $time = getformattime(time());
                 $date = "today";
-                $message = cleartext(stripslashes(str_replace(['\r\n', '\n'], ["\n", "\n"], $_POST[ 'message' ])));
+                $message = cleartext(
+                    stripslashes(
+                        str_replace(
+                            array('\r\n', '\n'),
+                            array("\n", "\n"),
+                            $_POST[ 'message' ]
+                        )
+                    )
+                );
                 $message = toggle($message, 'xx');
                 $username =
                     '<a href="index.php?site=profile&amp;id=' . $userID . '"><strong>' . getnickname($userID) .

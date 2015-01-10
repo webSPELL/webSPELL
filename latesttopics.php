@@ -27,7 +27,7 @@
 if (isset($site)) {
     $_language->readModule('latesttopics');
 }
-$usergroups = [];
+$usergroups = array();
 if ($loggedin) {
     $usergroups[ ] = 'user';
     $get = safe_query(
@@ -48,9 +48,9 @@ if ($loggedin) {
         }
     }
 }
-$userallowedreadgrps = [];
-$userallowedreadgrps[ 'boardIDs' ] = [];
-$userallowedreadgrps[ 'catIDs' ] = [];
+$userallowedreadgrps = array();
+$userallowedreadgrps[ 'boardIDs' ] = array();
+$userallowedreadgrps[ 'catIDs' ] = array();
 $get = safe_query("SELECT boardID FROM " . PREFIX . "forum_boards WHERE readgrps = ''");
 while ($ds = mysqli_fetch_assoc($get)) {
     $userallowedreadgrps[ 'boardIDs' ][ ] = $ds[ 'boardID' ];

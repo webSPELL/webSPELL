@@ -208,7 +208,7 @@ if ($action == "new") {
 
     \webspell\Tags::setTags('news', $newsID, $_POST[ 'tags' ]);
 
-    $update_langs = [];
+    $update_langs = array();
     $query = safe_query("SELECT language FROM " . PREFIX . "news_contents WHERE newsID = '" . (int)$newsID ."'");
     while ($qs = mysqli_fetch_array($query)) {
         $update_langs[ ] = $qs[ 'language' ];
@@ -327,11 +327,11 @@ if ($action == "new") {
 
     $adminaction = '';
 
-    $message_array = [];
+    $message_array = array();
     $query = safe_query("SELECT * FROM " . PREFIX . "news_contents WHERE newsID='" . $newsID . "'");
     while ($qs = mysqli_fetch_array($query)) {
         $message_array[ ] =
-            ['lang' => $qs[ 'language' ], 'headline' => $qs[ 'headline' ], 'message' => $qs[ 'content' ]];
+            array('lang' => $qs[ 'language' ], 'headline' => $qs[ 'headline' ], 'message' => $qs[ 'content' ]);
     }
     $showlang = select_language($message_array);
 
@@ -553,11 +553,11 @@ if ($action == "new") {
 
     $_language->readModule('bbcode', true);
 
-    $message_array = [];
+    $message_array = array();
     $query = safe_query("SELECT * FROM " . PREFIX . "news_contents WHERE newsID='" . $newsID . "'");
     while ($qs = mysqli_fetch_array($query)) {
         $message_array[ ] =
-            ['lang' => $qs[ 'language' ], 'headline' => $qs[ 'headline' ], 'message' => $qs[ 'content' ]];
+            array('lang' => $qs[ 'language' ], 'headline' => $qs[ 'headline' ], 'message' => $qs[ 'content' ]);
     }
 
     $count_langs = 0;
@@ -743,11 +743,15 @@ if ($action == "new") {
                     $rubric = '';
                 }
                 $comms = getanzcomments($ds[ 'newsID' ], 'ne');
-                $message_array = [];
+                $message_array = array();
                 $query = safe_query("SELECT * FROM " . PREFIX . "news_contents WHERE newsID='" . $ds[ 'newsID' ] . "'");
                 while ($qs = mysqli_fetch_array($query)) {
                     $message_array[ ] =
-                        ['lang' => $qs[ 'language' ], 'headline' => $qs[ 'headline' ], 'message' => $qs[ 'content' ]];
+                        array(
+                            'lang' => $qs[ 'language' ],
+                            'headline' => $qs[ 'headline' ],
+                            'message' => $qs[ 'content' ]
+                        );
                 }
 
                 $headlines = '';
@@ -947,11 +951,11 @@ if ($action == "new") {
                 $isintern = '';
             }
 
-            $message_array = [];
+            $message_array = array();
             $query = safe_query("SELECT * FROM " . PREFIX . "news_contents WHERE newsID='" . $ds[ 'newsID' ] . "'");
             while ($qs = mysqli_fetch_array($query)) {
                 $message_array[ ] =
-                    ['lang' => $qs[ 'language' ], 'headline' => $qs[ 'headline' ], 'message' => $qs[ 'content' ]];
+                    array('lang' => $qs[ 'language' ], 'headline' => $qs[ 'headline' ], 'message' => $qs[ 'content' ]);
             }
 
             $headlines = '';
@@ -1091,11 +1095,11 @@ if ($action == "new") {
             $rubricpic = '';
         }
 
-        $message_array = [];
+        $message_array = array();
         $query = safe_query("SELECT * FROM " . PREFIX . "news_contents WHERE newsID='" . (int)$ds[ 'newsID' ] . "'");
         while ($qs = mysqli_fetch_array($query)) {
             $message_array[ ] =
-                ['lang' => $qs[ 'language' ], 'headline' => $qs[ 'headline' ], 'message' => $qs[ 'content' ]];
+                array('lang' => $qs[ 'language' ], 'headline' => $qs[ 'headline' ], 'message' => $qs[ 'content' ]);
         }
 
         $showlang = select_language($message_array);
@@ -1166,13 +1170,13 @@ if ($action == "new") {
             if ($ds[ 'cwID' ]) {
 // CLANWAR-NEWS
                 $anzcomments = getanzcomments($ds[ 'cwID' ], 'cw');
-                $replace = ['$anzcomments', '$url', '$lastposter', '$lastdate'];
-                $vars = [
+                $replace = array('$anzcomments', '$url', '$lastposter', '$lastdate');
+                $vars = array(
                     $anzcomments,
                     'index.php?site=clanwars_details&amp;cwID=' . $ds[ 'cwID' ],
                     clearfromtags(getlastcommentposter($ds[ 'cwID' ], 'cw')),
                     getformatdatetime(getlastcommentdate($ds[ 'cwID' ], 'cw'))
-                ];
+                );
 
                 switch ($anzcomments) {
                     case 0:
@@ -1187,13 +1191,13 @@ if ($action == "new") {
                 }
             } else {
                 $anzcomments = getanzcomments($ds[ 'newsID' ], 'ne');
-                $replace = ['$anzcomments', '$url', '$lastposter', '$lastdate'];
-                $vars = [
+                $replace = array('$anzcomments', '$url', '$lastposter', '$lastdate');
+                $vars = array(
                     $anzcomments,
                     'index.php?site=news_comments&amp;newsID=' . $ds[ 'newsID' ],
                     clearfromtags(html_entity_decode(getlastcommentposter($ds[ 'newsID' ], 'ne'))),
                     getformatdatetime(getlastcommentdate($ds[ 'newsID' ], 'ne'))
-                ];
+                );
 
                 switch ($anzcomments) {
                     case 0:

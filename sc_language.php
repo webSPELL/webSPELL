@@ -48,9 +48,9 @@ if (isset($_GET[ 'new_lang' ])) {
     $_language->readModule('sc_language');
 
     $filepath = "languages/";
-    $langs = [];
+    $langs = array();
     // Select all possible languages
-    $mysql_langs = [];
+    $mysql_langs = array();
     $query = safe_query("SELECT lang, language FROM " . PREFIX . "news_languages");
     while ($ds = mysqli_fetch_assoc($query)) {
         $mysql_langs[ $ds[ 'lang' ] ] = $ds[ 'language' ];

@@ -85,7 +85,7 @@ if (!$userID) {
         $user_gbook = $_POST['user_guestbook'];
         $id = $userID;
 
-        $error_array = [];
+        $error_array = array();
 
         if (isset($_POST['userID']) || isset($_GET['userID']) || $userID == "") {
             die($_language->module['not_logged_in']);
@@ -387,19 +387,20 @@ if (!$userID) {
 
             $ToEmail = $mail1;
             $ToName = $username;
-            $header = str_replace(['%homepage_url%'], [$hp_url], $_language->module['mail_subject']);
+            $header = str_replace(array('%homepage_url%'), array($hp_url), $_language->module['mail_subject']);
             $Message = str_replace(
-                [
+                array(
                     '%username%',
                     '%activationlink%',
                     '%pagetitle%',
                     '%homepage_url%'
-                ],
-                [
+                ),
+                array(
                     $username,
                     $activationlink,
                     $hp_title,
-                    $hp_url],
+                    $hp_url
+                ),
                 $_language->module['mail_text']
             );
 
@@ -553,12 +554,12 @@ if (!$userID) {
             $langdirs = '';
             $filepath = "./languages/";
 
-            $mysql_langs = [];
+            $mysql_langs = array();
             $query = safe_query("SELECT lang, language FROM " . PREFIX . "news_languages");
             while ($sql_lang = mysqli_fetch_assoc($query)) {
                 $mysql_langs[$sql_lang['lang']] = $sql_lang['language'];
             }
-            $langs = [];
+            $langs = array();
             if ($dh = opendir($filepath)) {
                 while ($file = mb_substr(readdir($dh), 0, 2)) {
                     if ($file != "." && $file != ".." && is_dir($filepath . $file)) {

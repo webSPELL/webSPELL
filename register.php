@@ -41,7 +41,7 @@ if (isset($_POST['save'])) {
         $mail = $_POST['mail'];
         $CAPCLASS = new \webspell\Captcha;
 
-        $error = [];
+        $error = array();
 
         // check nickname
         if (!(mb_strlen(trim($nickname)))) {
@@ -157,13 +157,13 @@ if (isset($_POST['save'])) {
             $ToEmail = $mail;
             $ToName = $username;
             $header = str_replace(
-                ['%username%', '%activationlink%', '%pagetitle%', '%homepage_url%'],
-                [stripslashes($username), stripslashes($activationlink), $hp_title, $hp_url],
+                array('%username%', '%activationlink%', '%pagetitle%', '%homepage_url%'),
+                array(stripslashes($username), stripslashes($activationlink), $hp_title, $hp_url),
                 $_language->module['mail_subject']
             );
             $Message = str_replace(
-                ['%username%', '%activationlink%', '%pagetitle%', '%homepage_url%'],
-                [stripslashes($username), stripslashes($activationlink), $hp_title, $hp_url],
+                array('%username%', '%activationlink%', '%pagetitle%', '%homepage_url%'),
+                array(stripslashes($username), stripslashes($activationlink), $hp_title, $hp_url),
                 $_language->module['mail_text']
             );
 

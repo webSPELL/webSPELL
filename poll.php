@@ -177,7 +177,7 @@ function vote($poll)
             eval("\$poll_head = \"" . gettemplate("poll_head") . "\";");
             echo $poll_head;
 
-            $options = [];
+            $options = array();
 
             for ($n = 1; $n <= 10; $n++) {
                 if ($ds[ 'o' . $n ]) {

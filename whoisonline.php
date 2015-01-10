@@ -159,7 +159,7 @@ while ($ds = mysqli_fetch_array($ergebnis)) {
         $buddy = "";
     }
 
-    $array_watching = [
+    $array_watching = array(
         'about',
         'awards',
         'calendar',
@@ -180,8 +180,8 @@ while ($ds = mysqli_fetch_array($ergebnis)) {
         'squads',
         'whoisonline',
         'newsletter'
-    ];
-    $array_reading = ['articles', 'contact', 'faq', 'guestbook', 'history', 'imprint'];
+    );
+    $array_reading = array('articles', 'contact', 'faq', 'guestbook', 'history', 'imprint');
 
     if (in_array($ds[ 'site' ], $array_watching)) {
         $status = $_language->module[ 'is_watching_the' ] . ' <a href="index.php?site=' . $ds[ 'site' ] . '">' .
@@ -313,7 +313,7 @@ while ($ds = mysqli_fetch_array($ergebnis)) {
         }
     }
 
-    $array_watching = [
+    $array_watching = array(
         'about',
         'awards',
         'calendar',
@@ -334,8 +334,8 @@ while ($ds = mysqli_fetch_array($ergebnis)) {
         'squads',
         'whoisonline',
         'newsletter'
-    ];
-    $array_reading = ['articles', 'contact', 'faq', 'guestbook', 'history', 'imprint'];
+    );
+    $array_reading = array('articles', 'contact', 'faq', 'guestbook', 'history', 'imprint');
 
     if (in_array($ds[ 'site' ], $array_watching)) {
         $status = $_language->module[ 'was_watching_the' ] . ' <a href="index.php?site=' . $ds[ 'site' ] . '">' .

@@ -168,7 +168,7 @@ header('X-UA-Compatible: IE=edge,chrome=1');
                 if (!isset($site)) {
                     $site = "news";
                 }
-                $invalide = ['\\', '/', '/\/', ':', '.'];
+                $invalide = array('\\', '/', '/\/', ':', '.');
                 $site = str_replace($invalide, ' ', $site);
                 if (!file_exists($site . ".php")) {
                     $site = "news";

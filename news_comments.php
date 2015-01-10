@@ -83,7 +83,7 @@ if (isset($newsID)) {
             $rubricpic = '<img src="' . $rubricpic . '" alt="">';
         }
 
-        $message_array = [];
+        $message_array = array();
         $query = safe_query(
             "SELECT
                 n.*,
@@ -98,13 +98,13 @@ if (isset($newsID)) {
                 n.newsID='" . (int)$newsID."'"
         );
         while ($qs = mysqli_fetch_array($query)) {
-            $message_array[ ] = [
+            $message_array[ ] = array(
                 'lang' => $qs[ 'language' ],
                 'headline' => $qs[ 'headline' ],
                 'message' => $qs[ 'content' ],
                 'country' => $qs[ 'country' ],
                 'countryShort' => $qs[ 'countryCode' ]
-            ];
+            );
         }
         if (isset($_GET[ 'lang' ])) {
             $showlang = getlanguageid($_GET[ 'lang' ], $message_array);

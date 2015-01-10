@@ -62,8 +62,8 @@ if ($action == "save") {
             $header = "From:" . $hp_title . "<" . $admin_email . ">\n";
             $header .= "Reply-To: " . $admin_email . "\n";
             $header .= "Content-Type: text/html; charset=utf-8\n";
-            $vars = ['%delete_key%', '%homepage_url%', '%mail%'];
-            $repl = [$pass, $hp_url, $email];
+            $vars = array('%delete_key%', '%homepage_url%', '%mail%');
+            $repl = array($pass, $hp_url, $email);
             mail(
                 $email,
                 $hp_title . ": " . $_language->module['newsletter_registration'],
@@ -126,8 +126,8 @@ if ($action == "save") {
         $header = "From:" . $hp_title . "<" . $admin_email . ">\n";
         $header .= "Reply-To: " . $admin_email . "\n";
         $header .= "Content-Type: text/html; charset=utf-8\n";
-        $vars = ['%delete_key%', '%homepage_url%', '%mail%'];
-        $repl = [$pass, $hp_url, $email];
+        $vars = array('%delete_key%', '%homepage_url%', '%mail%');
+        $repl = array($pass, $hp_url, $email);
         mail(
             $email,
             $hp_title . ": " . $_language->module['deletion_key'],

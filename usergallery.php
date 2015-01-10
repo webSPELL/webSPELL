@@ -35,8 +35,8 @@ if ($userID) {
                     " . PREFIX . "gallery (
                         `name`,
                         `date`,
-                        `userID
-                    ) `
+                        `userID`
+                    )
                     values(
                     '" . $_POST[ 'name' ] . "',
                     '" . time() . "',
@@ -198,8 +198,8 @@ if ($userID) {
         $bghead = BGHEAD;
         $bgcat = BGCAT;
 
-        $vars = ['%spacecolor%', '%used_size%', '%available_size%'];
-        $repl = [$color, round($size / (1024 * 1024), 2), round($maxusergalleries / (1024 * 1024), 2)];
+        $vars = array('%spacecolor%', '%used_size%', '%available_size%');
+        $repl = array($color, round($size / (1024 * 1024), 2), round($maxusergalleries / (1024 * 1024), 2));
         $space_max_in_user = str_replace($vars, $repl, $_language->module[ 'x_of_y_mb_in_use' ]);
 
         eval("\$usergallery_head = \"" . gettemplate("usergallery_head") . "\";");

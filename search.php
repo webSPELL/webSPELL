@@ -53,7 +53,7 @@ if (
         eval ("\$title_search = \"" . gettemplate("title_search") . "\";");
         echo $title_search;
 
-        $text = str_replace(['%', '*'], ['\%', '%'], $_REQUEST[ 'text' ]);
+        $text = str_replace(array('%', '*'), array('\%', '%'), $_REQUEST[ 'text' ]);
         if (!isset($_REQUEST[ 'r' ]) || $_REQUEST[ 'r' ] < 1 || $_REQUEST[ 'r' ] > 100) {
             $results = 50;
         } else {
@@ -62,7 +62,7 @@ if (
         isset($_REQUEST[ 'page' ]) ? $page = (int)$_REQUEST[ 'page' ] : $page = 1;
         isset($_REQUEST[ 'afterdate' ]) ? $afterdate = $_REQUEST[ 'afterdate' ] : $afterdate = 0;
         isset($_REQUEST[ 'beforedate' ]) ? $beforedate = $_REQUEST[ 'beforedate' ] : $beforedate = 0;
-        $keywords = preg_split("/ ,/si", strtolower(str_replace(['\%', '%'], '', $text)));
+        $keywords = preg_split("/ ,/si", strtolower(str_replace(array('\%', '%'), '', $text)));
 
         if (mb_strlen(str_replace('%', '', $text)) >= $search_min_len) {
             if (!$afterdate) {
@@ -77,12 +77,12 @@ if (
             }
 
             $i = 0;
-            $res_message = [];
-            $res_title = [];
-            $res_link = [];
-            $res_type = [];
-            $res_date = [];
-            $res_occurr = [];
+            $res_message = array();
+            $res_title = array();
+            $res_link = array();
+            $res_type = array();
+            $res_date = array();
+            $res_occurr = array();
 
             if (isset($_REQUEST[ 'articles' ])) {
                 $ergebnis_articles =
@@ -132,9 +132,9 @@ if (
                             )
                         );
                         $res_message[ $i ] = clearfromtags($query_result[ 'content' ]);
-                        $content = [$query_result[ 'content' ]];
+                        $content = array($query_result[ 'content' ]);
                     } else {
-                        $content = [];
+                        $content = array();
                         while ($qs = mysqli_fetch_array($ergebnis_articles_contents)) {
                             $content[ ] = $qs[ 'content' ];
                         }
@@ -184,9 +184,9 @@ if (
                             )"
                     );
                     if (mysqli_num_rows($ergebnis_faq_contents)) {
-                        $faq_array = [];
+                        $faq_array = array();
                         while ($qs = mysqli_fetch_array($ergebnis_faq_contents)) {
-                            $faq_array[ ] = ['question' => $qs[ 'question' ], 'answer' => $qs[ 'answer' ]];
+                            $faq_array[ ] = array('question' => $qs[ 'question' ], 'answer' => $qs[ 'answer' ]);
                         }
                         $faqID = $ds[ 'faqID' ];
                         $faqcatID = $ds[ 'faqcatID' ];
@@ -311,13 +311,13 @@ if (
                             )"
                     );
                     if (mysqli_num_rows($ergebnis_news_contents)) {
-                        $message_array = [];
+                        $message_array = array();
                         while ($qs = mysqli_fetch_array($ergebnis_news_contents)) {
-                            $message_array[ ] = [
+                            $message_array[ ] = array(
                                 'lang' => $qs[ 'language' ],
                                 'headline' => $qs[ 'headline' ],
                                 'message' => $qs[ 'content' ]
-                            ];
+                            );
                         }
                         $showlang = select_language($message_array);
 

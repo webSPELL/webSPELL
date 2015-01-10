@@ -147,7 +147,7 @@ if (isset($_POST['newreply']) && !isset($_POST['preview'])) {
             "user u ON u.userID=f.userID WHERE f.topicID=$topic"
         );
         while ($ds = mysqli_fetch_array($ergebnis)) {
-            $emails[] = ['mail' => $ds['email'], 'lang' => $ds['language']];
+            $emails[] = array('mail' => $ds['email'], 'lang' => $ds['language']);
         }
         safe_query("DELETE FROM " . PREFIX . "forum_notify WHERE topicID='$topic'");
 
@@ -165,8 +165,8 @@ if (isset($_POST['newreply']) && !isset($_POST['preview'])) {
                 $maillanguage->setLanguage($email['lang']);
                 $maillanguage->readModule('forum');
                 $forum_topic_notify = str_replace(
-                    ['%poster%', '%topic_link%', '%pagetitle%', '%hpurl%'],
-                    [html_entity_decode($poster), $link, $hp_title, 'http://' . $hp_url],
+                    array('%poster%', '%topic_link%', '%pagetitle%', '%hpurl%'),
+                    array(html_entity_decode($poster), $link, $hp_title, 'http://' . $hp_url),
                     $maillanguage->module['notify_mail']
                 );
                 $header = "From:" . $admin_email . "\nContent-type: text/plain; charset=utf-8\n";

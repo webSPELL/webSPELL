@@ -85,7 +85,7 @@ if ($action == "save") {
     }
     if (isset($_POST[ 'shoutID' ])) {
         if (!is_array($_POST[ 'shoutID' ])) {
-            $_POST[ 'shoutID' ] = [$_POST[ 'shoutID' ]];
+            $_POST[ 'shoutID' ] = array($_POST[ 'shoutID' ]);
         }
         foreach ($_POST[ 'shoutID' ] as $id) {
             safe_query("DELETE FROM " . PREFIX . "shoutbox WHERE shoutID='".(int)$id."'");

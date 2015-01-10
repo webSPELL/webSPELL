@@ -72,7 +72,7 @@ if ($action == "vote") {
                     $anz_user = true;
                 }
             } else {
-                $user_ids = [];
+                $user_ids = array();
             }
         }
 

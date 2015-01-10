@@ -633,7 +633,7 @@ if ($action == "new") {
     if (isset($_POST[ 'hometeam' ])) {
         $hometeam = $_POST[ 'hometeam' ];
     } else {
-        $hometeam = [];
+        $hometeam = array();
     }
     $squad = $_POST[ 'squad' ];
     $game = $_POST[ 'game' ];
@@ -655,13 +655,13 @@ if ($action == "new") {
     if (isset($_POST[ 'delete' ])) {
         $delete = $_POST[ 'delete' ];
     } else {
-        $delete = [];
+        $delete = array();
     }
 
     // v1.0 -- MAP-REMOVAL
-    $theMaps = [];
-    $theHomeScore = [];
-    $theOppScore = [];
+    $theMaps = array();
+    $theHomeScore = array();
+    $theOppScore = array();
 
     if (is_array($maplist)) {
         foreach ($maplist as $key => $map) {
@@ -679,7 +679,7 @@ if ($action == "new") {
 
     echo '<script src="js/bbcode.js"></script><link href="_stylesheet.css" rel="stylesheet" type="text/css">';
 
-    $team = [];
+    $team = array();
     if (is_array($hometeam)) {
         foreach ($hometeam as $player) {
             if (!in_array($player, $team)) {
@@ -1052,7 +1052,7 @@ if ($action == "new") {
 
             // PLAYER STATISTICS
 
-            $hometeam = [];
+            $hometeam = array();
             $playerlist = "";
 
             // start output for squad details - players of the squad - head
@@ -1088,7 +1088,7 @@ if ($action == "new") {
             }
 
             // counts clanwars the member has taken part in
-            $anz = [];
+            $anz = array();
             if (!empty($hometeam)) {
                 foreach ($hometeam as $id) {
                     if (!isset($anz[ $id ])) {

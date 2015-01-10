@@ -28,13 +28,13 @@ $bg1 = BG_1;
 function checkCommentsAllow($type, $parentID)
 {
     global $userID;
-    $moduls = [];
-    $moduls[ 'ne' ] = ["news", "newsID", "comments"];
-    $moduls[ 'ar' ] = ["articles", "articlesID", "comments"];
-    $moduls[ 'ga' ] = ["gallery_pictures", "picID", "comments"];
-    $moduls[ 'cw' ] = ["clanwars", "cwID", "comments"];
-    $moduls[ 'de' ] = ["demos", "demoID", "comments"];
-    $moduls[ 'po' ] = ["poll", "pollID", "comments"];
+    $moduls = array();
+    $moduls[ 'ne' ] = array("news", "newsID", "comments");
+    $moduls[ 'ar' ] = array("articles", "articlesID", "comments");
+    $moduls[ 'ga' ] = array("gallery_pictures", "picID", "comments");
+    $moduls[ 'cw' ] = array("clanwars", "cwID", "comments");
+    $moduls[ 'de' ] = array("demos", "demoID", "comments");
+    $moduls[ 'po' ] = array("poll", "pollID", "comments");
     $allowed = 0;
     if (array_key_exists($type, $moduls)) {
         $modul = $moduls[ $type ];
@@ -393,11 +393,11 @@ if (isset($_POST[ 'savevisitorcomment' ])) {
                 }
 
                 $quotemessage = addslashes(getinput($ds[ 'comment' ]));
-                $quotemessage = str_replace(["\r\n", "\r", "\n"], ['\r\n', '\r', '\n'], $quotemessage);
+                $quotemessage = str_replace(array("\r\n", "\r", "\n"), array('\r\n', '\r', '\n'), $quotemessage);
                 $quotenickname = addslashes(getinput(getnickname($ds[ 'userID' ])));
                 $quote = str_replace(
-                    ['%nickname%', '%message%'],
-                    [$quotenickname, $quotemessage],
+                    array('%nickname%', '%message%'),
+                    array($quotenickname, $quotemessage),
                     $_language->module[ 'quote_link' ]
                 );
 
@@ -496,8 +496,8 @@ if (isset($_POST[ 'savevisitorcomment' ])) {
                 $quotemessage = addslashes(getinput($ds[ 'comment' ]));
                 $quotenickname = addslashes(getinput($ds[ 'nickname' ]));
                 $quote = str_replace(
-                    ['%nickname%', '%message%'],
-                    [$quotenickname, $quotemessage],
+                    array('%nickname%', '%message%'),
+                    array($quotenickname, $quotemessage),
                     $_language->module[ 'quote_link' ]
                 );
             }
