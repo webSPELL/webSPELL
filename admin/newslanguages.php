@@ -34,7 +34,7 @@ if (!isnewsadmin($userID) || mb_substr(basename($_SERVER[ 'REQUEST_URI' ]), 0, 1
 if (isset($_POST[ 'save' ])) {
     $CAPCLASS = new \webspell\Captcha;
     if ($CAPCLASS->checkCaptcha(0, $_POST[ 'captcha_hash' ])) {
-        if (checkforempty(['language', 'lang', 'alt'])) {
+        if (checkforempty(array('language', 'lang', 'alt'))) {
             safe_query(
                 "INSERT INTO
                     " . PREFIX . "news_languages (
@@ -57,7 +57,7 @@ if (isset($_POST[ 'save' ])) {
 } elseif (isset($_POST[ 'saveedit' ])) {
     $CAPCLASS = new \webspell\Captcha;
     if ($CAPCLASS->checkCaptcha(0, $_POST[ 'captcha_hash' ])) {
-        if (checkforempty(['language', 'lang', 'alt'])) {
+        if (checkforempty(array('language', 'lang', 'alt'))) {
             safe_query(
                 "UPDATE
                     " . PREFIX . "news_languages

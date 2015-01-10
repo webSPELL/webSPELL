@@ -283,12 +283,12 @@ if (isset($_POST[ 'add' ])) {
             safe_query("DELETE FROM " . PREFIX . "upcoming_announce WHERE userID='$id'");
             safe_query("DELETE FROM " . PREFIX . "user WHERE userID='$id'");
             safe_query("DELETE FROM " . PREFIX . "user_groups WHERE userID='$id'");
-            $userfiles = [
+            $userfiles = array(
                 '../images/avatars/' . $id . '.jpg',
                 '../images/avatars/' . $id . '.gif',
                 '../images/userpics/' . $id . '.jpg',
                 '../images/userpics/' . $id . '.gif'
-            ];
+            );
             foreach ($userfiles as $file) {
                 if (file_exists($file)) {
                     unlink($file);

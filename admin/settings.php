@@ -158,7 +158,7 @@ if (isset($_POST[ 'submit' ])) {
     $langdirs = '';
     $filepath = "../languages/";
 
-    $mysql_langs = [];
+    $mysql_langs = array();
     $query = safe_query("SELECT lang, language FROM " . PREFIX . "news_languages");
     while ($sql_lang = mysqli_fetch_assoc($query)) {
         $mysql_langs[ $sql_lang[ 'lang' ] ] = $sql_lang[ 'language' ];

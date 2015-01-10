@@ -86,7 +86,7 @@ $info_na = '<font color="#8F8F8F">' . $_language->module[ 'na' ] . '</font>';
 if (function_exists("gd_info")) {
     $gdinfo = gd_info();
     $get_gd_info = '<font color="#008000">' . $_language->module[ 'enable' ] . '</font>';
-    $get_gdtypes = [];
+    $get_gdtypes = array();
     if (isset($gdinfo[ 'FreeType Support' ]) && $gdinfo[ 'FreeType Support' ] == true) {
         $get_gdtypes[ ] = "FreeType";
     }

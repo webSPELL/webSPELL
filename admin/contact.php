@@ -57,7 +57,7 @@ if (isset($_GET[ 'delete' ])) {
     $email = $_POST[ 'email' ];
     $CAPCLASS = new \webspell\Captcha;
     if ($CAPCLASS->checkCaptcha(0, $_POST[ 'captcha_hash' ])) {
-        if (checkforempty(['name', 'email'])) {
+        if (checkforempty(array('name', 'email'))) {
             safe_query("INSERT INTO " . PREFIX . "contact ( name, email, sort ) values( '$name', '$email', '1' )");
         } else {
             echo $_language->module[ 'information_incomplete' ];
@@ -71,7 +71,7 @@ if (isset($_GET[ 'delete' ])) {
     $contactID = $_POST[ 'contactID' ];
     $CAPCLASS = new \webspell\Captcha;
     if ($CAPCLASS->checkCaptcha(0, $_POST[ 'captcha_hash' ])) {
-        if (checkforempty(['name', 'email'])) {
+        if (checkforempty(array('name', 'email'))) {
             safe_query("UPDATE " . PREFIX . "contact SET name='$name', email='$email' WHERE contactID='$contactID' ");
         } else {
             echo $_language->module[ 'information_incomplete' ];

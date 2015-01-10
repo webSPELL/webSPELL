@@ -46,7 +46,7 @@ if (isset($_GET[ 'delete' ])) {
 
     $CAPCLASS = new \webspell\Captcha;
     if ($CAPCLASS->checkCaptcha(0, $_POST[ 'captcha_hash' ])) {
-        if (checkforempty(['min', 'max'])) {
+        if (checkforempty(array('min', 'max'))) {
             if ($max == "MAX") {
                 $maximum = 2147483647;
             } else {

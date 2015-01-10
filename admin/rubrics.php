@@ -35,7 +35,7 @@ if (isset($_POST[ 'save' ])) {
     $CAPCLASS = new \webspell\Captcha;
     if ($CAPCLASS->checkCaptcha(0, $_POST[ 'captcha_hash' ])) {
         $pic = $_FILES[ 'pic' ];
-        if (checkforempty(['name'])) {
+        if (checkforempty(array('name'))) {
             safe_query("INSERT INTO " . PREFIX . "news_rubrics ( rubric ) values( '" . $_POST[ 'name' ] . "' ) ");
             $id = mysqli_insert_id($_database);
 

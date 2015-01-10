@@ -426,7 +426,7 @@ if ($action == "mods") {
     }
     $cats .= '</select>';
 
-    $groups = [];
+    $groups = array();
     $sql = safe_query("SELECT * FROM `" . PREFIX . "forum_groups`");
     while ($db = mysqli_fetch_array($sql)) {
         $groups[ $db[ 'fgrID' ] ] = $db[ 'name' ];

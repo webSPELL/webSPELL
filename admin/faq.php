@@ -65,7 +65,7 @@ if (isset($_GET[ 'delete' ])) {
     $answer = $_POST[ 'message' ];
     $CAPCLASS = new \webspell\Captcha;
     if ($CAPCLASS->checkCaptcha(0, $_POST[ 'captcha_hash' ])) {
-        if (checkforempty(['question', 'message'])) {
+        if (checkforempty(array('question', 'message'))) {
             if ($faqcat == "") {
                 redirect('admincenter.php?site=faq', $_language->module[ 'no_faq_selected' ], 3);
                 exit;
@@ -102,7 +102,7 @@ if (isset($_GET[ 'delete' ])) {
     $faqID = $_POST[ 'faqID' ];
     $CAPCLASS = new \webspell\Captcha;
     if ($CAPCLASS->checkCaptcha(0, $_POST[ 'captcha_hash' ])) {
-        if (checkforempty(['question', 'message'])) {
+        if (checkforempty(array('question', 'message'))) {
             safe_query(
                 "UPDATE
                     `" . PREFIX . "faq`

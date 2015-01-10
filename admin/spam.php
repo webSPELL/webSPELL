@@ -24,8 +24,8 @@ function deleteSpamUser($spammerID)
     echo mysqli_affected_rows($_database) . " " . $_language->module[ "comments_deleted" ] . "<br />";
     // Delete Forum Topics (update posts / topics)
     $topics = safe_query("SELECT topicID,boardID FROM " . PREFIX . "forum_topics WHERE userID='" . $spammerID . "'");
-    $topicIDs = [];
-    $boardIDs = [];
+    $topicIDs = array();
+    $boardIDs = array();
     while ($ds = mysqli_fetch_assoc($topics)) {
         $topicIDs[ ] = $ds[ 'topicID' ];
         $boardIDs[ ] = $ds[ 'boardID' ];
@@ -37,7 +37,7 @@ function deleteSpamUser($spammerID)
         safe_query("DELETE FROM " . PREFIX . "forum_posts WHERE topicID IN (" . implode(",", $topicIDs) . ")");
         echo count($topicIDs) . " " . $_language->module[ 'topics_deleted' ] . "<br />";
     }
-    $update_topics = [];
+    $update_topics = array();
     $posts = safe_query("SELECT * FROM " . PREFIX . "forum_posts WHERE poster='" . $spammerID . "'");
     while ($ds = mysqli_fetch_assoc($posts)) {
         $update_topics[ ] = $ds[ 'topicID' ];

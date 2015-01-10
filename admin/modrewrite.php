@@ -182,7 +182,7 @@ if ($action == "add") {
 } elseif (isset($_POST['save'])) {
     $CAPCLASS = new \webspell\Captcha;
     if ($CAPCLASS->checkCaptcha(0, $_POST['captcha_hash'])) {
-        $data = [];
+        $data = array();
         foreach ($_POST['keys'] as $key => $val) {
             if (!empty($val)) {
                 $data[$val] = $_POST['values'][$key];
@@ -216,7 +216,7 @@ if ($action == "add") {
 } elseif (isset($_POST["saveedit"])) {
     $CAPCLASS = new \webspell\Captcha;
     if ($CAPCLASS->checkCaptcha(0, $_POST['captcha_hash'])) {
-        $data = [];
+        $data = array();
         foreach ($_POST['keys'] as $key => $val) {
             if (!empty($val)) {
                 $data[$val] = $_POST['values'][$key];

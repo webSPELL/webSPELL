@@ -80,7 +80,7 @@ $gelb = imagecolorallocate($im, 255, 0, 0);
 
 imagefill($im, 0, 0, $weiss);
 
-$linie_still = [$grau, $grau, $weiss, $weiss];
+$linie_still = array($grau, $grau, $weiss, $weiss);
 imagesetstyle($im, $linie_still);
 
 function teilen(&$item, $key, $teiler)

@@ -82,7 +82,7 @@ if (isset($_POST[ 'saveedit' ])) {
         if (isset($_POST[ 'position' ])) {
             $position = $_POST[ 'position' ];
         } else {
-            $position = [];
+            $position = array();
         }
         if (isset($_POST[ 'message' ])) {
             $userdescription = $_POST[ 'message' ];
@@ -92,17 +92,17 @@ if (isset($_POST[ 'saveedit' ])) {
         if (isset($_POST[ 'activity' ])) {
             $activity = $_POST[ 'activity' ];
         } else {
-            $activity = [];
+            $activity = array();
         }
         if (isset($_POST[ 'join' ])) {
             $join = $_POST[ 'join' ];
         } else {
-            $join = [];
+            $join = array();
         }
         if (isset($_POST[ 'war' ])) {
             $war = $_POST[ 'war' ];
         } else {
-            $war = [];
+            $war = array();
         }
         $gallery = isset($_POST[ 'galleryadmin' ]);
 
@@ -391,7 +391,7 @@ onmouseout="hideWMTT()" checked="checked" />';
 onmouseout="hideWMTT()" />';
     }
 
-    $usergrp = [];
+    $usergrp = array();
     $ergebnis = safe_query("SELECT * FROM " . PREFIX . "forum_groups");
     while ($ds = mysqli_fetch_array($ergebnis)) {
         $name = $ds[ 'name' ];

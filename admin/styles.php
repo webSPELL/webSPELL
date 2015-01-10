@@ -36,7 +36,7 @@ echo '<h1>&curren; ' . $_language->module[ 'styles' ] . '</h1>';
 if (isset($_POST[ 'submit' ])) {
     $CAPCLASS = new \webspell\Captcha;
     if ($CAPCLASS->checkCaptcha(0, $_POST[ 'captcha_hash' ])) {
-        $error = [];
+        $error = array();
         $sem = '/^#[a-fA-F0-9]{6}/';
         if (!(preg_match($sem, $_POST[ 'page' ]))) {
             $error[ ] = $_language->module[ 'error_page_bg' ];

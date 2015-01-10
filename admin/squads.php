@@ -101,7 +101,7 @@ if (isset($_POST[ 'sortieren' ])) {
 if (isset($_POST[ 'save' ])) {
     $CAPCLASS = new \webspell\Captcha;
     if ($CAPCLASS->checkCaptcha(0, $_POST[ 'captcha_hash' ])) {
-        if (checkforempty(['name'])) {
+        if (checkforempty(array('name'))) {
             $games = implode(";", $_POST[ 'games' ]);
             safe_query(
                 "INSERT INTO " . PREFIX . "squads ( gamesquad, games, name, info, sort ) VALUES ( '" .

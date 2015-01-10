@@ -58,7 +58,7 @@ if (isset($_GET[ 'delcat' ])) {
     $description = $_POST[ 'message' ];
     $CAPCLASS = new \webspell\Captcha;
     if ($CAPCLASS->checkCaptcha(0, $_POST[ 'captcha_hash' ])) {
-        if (checkforempty(['faqcatname'])) {
+        if (checkforempty(array('faqcatname'))) {
             safe_query(
                 "INSERT INTO
                     " . PREFIX . "faq_categories (
@@ -84,7 +84,7 @@ if (isset($_GET[ 'delcat' ])) {
     $faqcatID = $_POST[ 'faqcatID' ];
     $CAPCLASS = new \webspell\Captcha;
     if ($CAPCLASS->checkCaptcha(0, $_POST[ 'captcha_hash' ])) {
-        if (checkforempty(['faqcatname'])) {
+        if (checkforempty(array('faqcatname'))) {
             safe_query(
                 "UPDATE " . PREFIX .
                 "faq_categories SET faqcatname='$faqcatname', description='$description' WHERE faqcatID='$faqcatID' "

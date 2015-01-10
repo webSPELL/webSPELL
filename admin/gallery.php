@@ -48,7 +48,7 @@ if ($part == "groups") {
     if (isset($_POST[ 'save' ])) {
         $CAPCLASS = new \webspell\Captcha;
         if ($CAPCLASS->checkCaptcha(0, $_POST[ 'captcha_hash' ])) {
-            if (checkforempty(['name'])) {
+            if (checkforempty(array('name'))) {
                 safe_query(
                     "INSERT INTO " . PREFIX . "gallery_groups ( name, sort ) values( '" . $_POST[ 'name' ] . "', '1' ) "
                 );
@@ -61,7 +61,7 @@ if ($part == "groups") {
     } elseif (isset($_POST[ 'saveedit' ])) {
         $CAPCLASS = new \webspell\Captcha;
         if ($CAPCLASS->checkCaptcha(0, $_POST[ 'captcha_hash' ])) {
-            if (checkforempty(['name'])) {
+            if (checkforempty(array('name'))) {
                 safe_query(
                     "UPDATE " . PREFIX . "gallery_groups SET name='" . $_POST[ 'name' ] . "'
                     WHERE groupID='" . $_POST[ 'groupID' ] . "'"
@@ -239,17 +239,17 @@ if ($part == "groups") {
         if (isset($_POST[ 'comment' ])) {
             $comment = $_POST[ 'comment' ];
         } else {
-            $comment = [];
+            $comment = array();
         }
         if (isset($_POST[ 'name' ])) {
             $name = $_POST[ 'name' ];
         } else {
-            $name = [];
+            $name = array();
         }
         if (isset($_POST[ 'pictures' ])) {
             $pictures = $_POST[ 'pictures' ];
         } else {
-            $pictures = [];
+            $pictures = array();
         }
         $i = 0;
         $CAPCLASS = new \webspell\Captcha;

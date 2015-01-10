@@ -33,8 +33,8 @@ if (!isanyadmin($userID) || mb_substr(basename($_SERVER[ 'REQUEST_URI' ]), 0, 15
 
 echo '<h1>&curren; ' . $_language->module[ 'page_stats' ] . '</h1>';
 
-$count_array = [];
-$tables_array = [
+$count_array = array();
+$tables_array = array(
     PREFIX . "articles",
     PREFIX . "banner",
     PREFIX . "awards",
@@ -79,7 +79,7 @@ $tables_array = [
     PREFIX . "static",
     PREFIX . "user",
     PREFIX . "user_gbook"
-];
+);
 $db_size = 0;
 $db_size_op = 0;
 if (!isset($db)) {

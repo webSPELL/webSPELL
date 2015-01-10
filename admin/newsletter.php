@@ -99,7 +99,7 @@ hr { margin: 0px; }
             $_SESSION[ 'emailbody' ] = $message;
             $_SESSION[ 'title' ] = $title;
         } else {
-            $emails = [];
+            $emails = array();
             //clanmember
 
             if (isset($_POST[ 'sendto_clanmembers' ])) {
