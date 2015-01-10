@@ -206,8 +206,6 @@ function codereplace($content)
 
     global $picsize_l;
 
-    $border = BORDER;
-    $bg1 = BG_1;
     $splits = preg_split("/(\[[\/]{0,1}code\])/si", $content, -1, PREG_SPLIT_DELIM_CAPTURE);
     $anz = count($splits);
     for ($i = 0; $i < $anz; $i++) {
@@ -414,8 +412,6 @@ function quotereplace($content)
 
     global $_language, $picsize_l, $picsize_h;
     $_language->readModule('bbcode', true);
-    $border = BORDER;
-    $bg1 = BG_1;
 
     $content = preg_replace("#\[/quote\]([\n\r]*)#si", "[/quote]", $content);
 
@@ -662,11 +658,6 @@ function smiley_callback($match)
 
 function replacement($content, $bbcode = true)
 {
-    $pagebg = PAGEBG;
-    $border = BORDER;
-    $bg1 = BG_1;
-    $bghead = BGHEAD;
-    $bgcat = BGCAT;
 
     if ($bbcode) {
         $content = codereplace($content);

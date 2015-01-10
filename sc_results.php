@@ -28,19 +28,10 @@
 $ergebnis = safe_query("SELECT * FROM " . PREFIX . "clanwars ORDER BY date DESC LIMIT 0, " . $maxresults);
 if (mysqli_num_rows($ergebnis)) {
     echo '<ul class="list-group">';
-    $n = 1;
     while ($ds = mysqli_fetch_array($ergebnis)) {
         $date = getformatdate($ds[ 'date' ]);
         $homescr = array_sum(unserialize($ds[ 'homescore' ]));
         $oppscr = array_sum(unserialize($ds[ 'oppscore' ]));
-
-        if ($n % 2) {
-            $bg1 = BG_1;
-            $bg2 = BG_2;
-        } else {
-            $bg1 = BG_3;
-            $bg2 = BG_4;
-        }
 
         if ($homescr > $oppscr) {
             $result = '<font color="' . $wincolor . '">' . $homescr . ':' . $oppscr . '</font>';
@@ -58,7 +49,6 @@ if (mysqli_num_rows($ergebnis)) {
 
         eval ("\$results = \"" . gettemplate("results") . "\";");
         echo $results;
-        $n++;
     }
     echo '</ul>';
 }

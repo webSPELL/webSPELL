@@ -37,7 +37,6 @@ if (mysqli_num_rows($ergebnis)) {
     $history = htmloutput($ds[ 'history' ]);
     $history = toggle($history, 1);
 
-    $bg1 = BG_1;
     eval ("\$history = \"" . gettemplate("history") . "\";");
     echo $history;
 } else {

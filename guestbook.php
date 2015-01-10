@@ -140,7 +140,6 @@ if (isset($_POST[ 'save' ])) {
     }
     $ergebnis =
         safe_query("SELECT admincomment FROM " . PREFIX . "guestbook WHERE gbID='" . $_GET[ 'guestbookID' ] . "'");
-    $bg1 = BG_1;
     $ds = mysqli_fetch_array($ergebnis);
     $admincomment = getinput($ds[ 'admincomment' ]);
     eval ("\$title_guestbook = \"" . gettemplate("title_guestbook") . "\";");
@@ -169,7 +168,6 @@ if (isset($_POST[ 'save' ])) {
     }
 
     eval ("\$addbbcode = \"" . gettemplate("addbbcode") . "\";");
-    $bg1 = BG_1;
     if (isset($_GET[ 'error' ])) {
         if ($_GET[ 'error' ] == "captcha") {
             $error = $_language->module[ 'error_captcha' ];
@@ -248,7 +246,6 @@ if (isset($_POST[ 'save' ])) {
     echo $guestbook_head;
 
     while ($ds = mysqli_fetch_array($ergebnis)) {
-        $n % 2 ? $bg1 = BG_1 : $bg1 = BG_2;
         $date = getformatdatetime($ds[ 'date' ]);
 
         if (validate_email($ds[ 'email' ])) {

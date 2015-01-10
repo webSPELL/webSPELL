@@ -61,14 +61,6 @@ if (mysqli_num_rows($ergebnis)) {
         $filename = $ds[ 'filename' ];
         $number = $n;
 
-        if ($n % 2) {
-            $bg1 = BG_1;
-            $bg2 = BG_2;
-        } else {
-            $bg1 = BG_3;
-            $bg2 = BG_4;
-        }
-
         eval ("\$sc_files = \"" . gettemplate("sc_files") . "\";");
         echo $sc_files;
 

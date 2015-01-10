@@ -46,11 +46,6 @@ if (!isset($_GET[ 'action' ])) {
 
 function forum_stats()
 {
-    $pagebg = PAGEBG;
-    $border = BORDER;
-    $bghead = BGHEAD;
-    $bgcat = BGCAT;
-    $bg1 = BG_1;
     global $wincolor;
     global $loosecolor;
     global $drawcolor;
@@ -205,11 +200,6 @@ function boardmain()
 
     $_language->readModule('forum');
 
-    $pagebg = PAGEBG;
-    $border = BORDER;
-    $bghead = BGHEAD;
-    $bgcat = BGCAT;
-
     eval ("\$title_messageboard = \"" . gettemplate("title_messageboard") . "\";");
     echo $title_messageboard;
 
@@ -259,17 +249,8 @@ function boardmain()
             "SELECT * FROM " . PREFIX . "forum_boards WHERE category='" . $dk[ 'catID' ] .
             "' ORDER BY sort"
         );
-        $i = 1;
 
         while ($db = mysqli_fetch_array($boards)) {
-            if ($i % 2) {
-                $bg1 = BG_1;
-                $bg2 = BG_2;
-            } else {
-                $bg1 = BG_3;
-                $bg2 = BG_4;
-            }
-
             $ismod = ismoderator($userID, $db[ 'boardID' ]);
             $usergrp = 0;
             $writer = 'ro-';
@@ -388,23 +369,12 @@ function boardmain()
 
             eval ("\$forum_main_board = \"" . gettemplate("forum_main_board") . "\";");
             echo $forum_main_board;
-
-            $i++;
         }
     }
 
     // BOARDS OHNE KATEGORIE
     $boards = safe_query("SELECT * FROM " . PREFIX . "forum_boards WHERE category='0' ORDER BY sort");
-    $i = 1;
     while ($db = mysqli_fetch_array($boards)) {
-        if ($i % 2) {
-            $bg1 = BG_1;
-            $bg2 = BG_2;
-        } else {
-            $bg1 = BG_3;
-            $bg2 = BG_4;
-        }
-
         $usergrp = 0;
         $writer = 'ro-';
         $ismod = ismoderator($userID, $db[ 'boardID' ]);
@@ -517,8 +487,6 @@ function boardmain()
 
         eval ("\$forum_main_board = \"" . gettemplate("forum_main_board") . "\";");
         echo $forum_main_board;
-
-        $i++;
     }
 
     eval ("\$forum_main_foot = \"" . gettemplate("forum_main_foot") . "\";");
@@ -543,11 +511,6 @@ function showboard($board)
     global $_language;
 
     $_language->readModule('forum');
-
-    $pagebg = PAGEBG;
-    $border = BORDER;
-    $bghead = BGHEAD;
-    $bgcat = BGCAT;
 
     eval ("\$title_messageboard = \"" . gettemplate("title_messageboard") . "\";");
     echo $title_messageboard;
@@ -663,20 +626,11 @@ function showboard($board)
     );
     $anztopics = mysqli_num_rows(safe_query("SELECT boardID FROM " . PREFIX . "forum_topics WHERE boardID='$board'"));
 
-    $i = 1;
     unset($link);
     if ($anztopics) {
         eval ("\$forum_topics_head = \"" . gettemplate("forum_topics_head") . "\";");
         echo $forum_topics_head;
         while ($dt = mysqli_fetch_array($topics)) {
-            if ($i % 2) {
-                $bg1 = BG_1;
-                $bg2 = BG_2;
-            } else {
-                $bg1 = BG_3;
-                $bg2 = BG_4;
-            }
-
             if ($dt[ 'moveID' ]) {
                 $gesamt = 0;
             } else {
@@ -837,7 +791,6 @@ function showboard($board)
 
             eval ("\$forum_topics_content = \"" . gettemplate("forum_topics_content") . "\";");
             echo $forum_topics_content;
-            $i++;
             unset($topicpage_link);
             unset($lastposter);
             unset($member);
@@ -1090,10 +1043,6 @@ if (isset($_POST[ 'submit' ]) || isset($_POST[ 'movetopic' ]) || isset($_GET[ 'a
         }
 
         $pagetitle = PAGETITLE;
-        $pagebg = PAGEBG;
-        $border = BORDER;
-        $bghead = BGHEAD;
-        $bg1 = BG_1;
 
         eval ("\$forum_move_topic = \"" . gettemplate("forum_move_topic") . "\";");
         echo $forum_move_topic;
@@ -1275,15 +1224,10 @@ if (isset($_POST[ 'submit' ]) || isset($_POST[ 'movetopic' ]) || isset($_GET[ 'a
         eval ("\$forum_head = \"" . gettemplate("forum_head") . "\";");
         echo $forum_head;
 
-        $bg1 = BG_1;
-
         $message = '';
 
         if ($loggedin) {
             if (isset($_POST[ 'preview' ])) {
-                $bg1 = BG_1;
-                $bg2 = BG_2;
-
                 $time = getformattime(time());
                 $date = "today";
                 $message = cleartext(stripslashes(str_replace(['\r\n', '\n'], ["\n", "\n"], $_POST[ 'message' ])));

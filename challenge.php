@@ -253,9 +253,7 @@ if (isclanwaradmin($userID)) {
         }
         echo '</p>';
 
-        $i = 0;
         while ($ds = mysqli_fetch_array($ergebnis)) {
-            $bg1 = ($i % 2) ? BG_1 : BG_1;
             $date = getformatdate($ds['date']);
             $cwdate = getformatdatetime($ds['cwdate']);
             $squad = getsquadname($ds['squadID']);
@@ -291,7 +289,6 @@ if (isclanwaradmin($userID)) {
 
             eval ("\$challenges = \"" . gettemplate("challenges") . "\";");
             echo $challenges;
-            $i++;
         }
         echo '<br>';
     } else {

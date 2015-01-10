@@ -31,7 +31,5 @@ include("_functions.php");
 
 $_language->readModule('code');
 
-$bg1 = BG_1;
-$bg2 = BG_2;
 eval ("\$bbcode = \"" . gettemplate("bbcode") . "\";");
 echo $bbcode;

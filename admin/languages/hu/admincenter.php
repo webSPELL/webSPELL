@@ -72,7 +72,6 @@ $language_array = Array(
   'sponsors'=>'Szponzorok',
   'squads'=>'Squadok',
   'static_pages'=>'Egyéni oldalak',
-  'styles'=>'Kinézet/Stílusok',
   'update_webspell'=>'webSPELL frissítés',
   'user_administration'=>'Felhasználói beállítások',
   'user_ranks'=>'Rangok',

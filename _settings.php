@@ -509,20 +509,7 @@ $new_chmod = 0666;
 $ergebnis = safe_query("SELECT * FROM " . PREFIX . "styles");
 $ds = mysqli_fetch_array($ergebnis);
 
-define('PAGEBG', $ds[ 'bgpage' ]);
-define('BORDER', $ds[ 'border' ]);
-define('BGHEAD', $ds[ 'bghead' ]);
-define('BGCAT', $ds[ 'bgcat' ]);
-define('BG_1', $ds[ 'bg1' ]);
-define('BG_2', $ds[ 'bg2' ]);
-define('BG_3', $ds[ 'bg3' ]);
-define('BG_4', $ds[ 'bg4' ]);
-
 $hp_title = stripslashes($ds[ 'title' ]);
-$pagebg = PAGEBG;
-$border = BORDER;
-$bghead = BGHEAD;
-$bgcat = BGCAT;
 
 $wincolor = $ds[ 'win' ];
 $loosecolor = $ds[ 'loose' ];

@@ -100,8 +100,6 @@ for ($i = date("d", time()); $i > 0; $i--) {
         $visits = 0;
     }
 
-    $i % 2 ? $backgroundcolor1 = BG_1 : $backgroundcolor1 = BG_2;
-    $i % 2 ? $backgroundcolor2 = BG_3 : $backgroundcolor2 = BG_4;
     $prozent = $visits * 100 / $month_max;
     $monatsstat .= '<li class="list-group-item"><span class="badge">' . $visits . '</span> ' . $i . $datemonth .
         '<div class="progress"><div class="progress-bar progress-bar-info" style="width: ' . (round($prozent)) .

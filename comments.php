@@ -24,7 +24,6 @@
 #                                                                        #
 ##########################################################################
 */
-$bg1 = BG_1;
 function checkCommentsAllow($type, $parentID)
 {
     global $userID;
@@ -378,8 +377,6 @@ if (isset($_POST[ 'savevisitorcomment' ])) {
         echo $comments_head;
 
         while ($ds = mysqli_fetch_array($ergebnis)) {
-            $n % 2 ? $bg1 = BG_1 : $bg1 = BG_3;
-
             $date = getformatdatetime($ds[ 'date' ]);
 
             if ($ds[ 'userID' ]) {

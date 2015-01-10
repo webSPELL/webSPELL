@@ -189,7 +189,6 @@ if (ispageadmin($userID)) {
 		<h2>&not; <?php echo $_language->module['settings']; ?></h2>
 		<ul>
 			<li><a href="admincenter.php?site=settings"><?php echo $_language->module['settings']; ?></a></li>
-			<li><a href="admincenter.php?site=styles"><?php echo $_language->module['styles']; ?></a></li>
 			<li><a href="admincenter.php?site=addons"><?php echo $_language->module['addons']; ?></a></li>
 			<li><a href="admincenter.php?site=countries"><?php echo $_language->module['countries']; ?></a></li>
 			<li><a href="admincenter.php?site=games"><?php echo $_language->module['games']; ?></a></li>

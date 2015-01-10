@@ -147,9 +147,7 @@ if ($action == "save") {
     eval ("\$shoutbox_all_head = \"" . gettemplate("shoutbox_all_head") . "\";");
     echo $shoutbox_all_head;
 
-    $i = 1;
     while ($ds = mysqli_fetch_array($ergebnis)) {
-        $i % 2 ? $bg1 = BG_1 : $bg1 = BG_2;
         $date = getformatdatetime($ds[ 'date' ]);
         $name = $ds[ 'name' ];
         $message = cleartext($ds[ 'message' ], false);
@@ -169,7 +167,6 @@ if ($action == "save") {
         } else {
             $n++;
         }
-        $i++;
     }
     eval ("\$shoutbox_all_foot = \"" . gettemplate("shoutbox_all_foot") . "\";");
     echo $shoutbox_all_foot;
@@ -196,12 +193,6 @@ if ($action == "save") {
     include("_mysql.php");
     include("_settings.php");
     include("_functions.php");
-
-    $pagebg = PAGEBG;
-    $border = BORDER;
-    $bghead = BGHEAD;
-    $bgcat = BGCAT;
-    $bg1 = BG_1;
 
     $ergebnis = safe_query("SELECT * FROM " . PREFIX . "shoutbox ORDER BY date DESC LIMIT 0," . $maxshoutbox);
     while ($ds = mysqli_fetch_array($ergebnis)) {

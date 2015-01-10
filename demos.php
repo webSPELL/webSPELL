@@ -353,7 +353,6 @@ if ($action == "new") {
             $comments
         );
 
-        $bg1 = BG_1;
         eval ("\$demo_edit = \"" . gettemplate("demo_edit") . "\";");
         echo $demo_edit;
     } else {
@@ -575,15 +574,7 @@ if ($action == "new") {
 
         eval ("\$demos_head = \"" . gettemplate("demos_head") . "\";");
         echo $demos_head;
-        $n = 1;
         while ($ds = mysqli_fetch_array($ergebnis)) {
-            if ($n % 2) {
-                $bg1 = BG_1;
-                $bg2 = BG_2;
-            } else {
-                $bg1 = BG_3;
-                $bg2 = BG_4;
-            }
             $date = getformatdate($ds[ 'date' ]);
             $league = '<a href="' . $ds[ 'leaguehp' ] . '" target="_blank">' . $ds[ 'league' ] . '</a>';
             $country1 = "[flag]" . $ds[ 'country1' ] . "[/flag]";
@@ -607,7 +598,6 @@ if ($action == "new") {
             eval ("\$demos_content = \"" . gettemplate("demos_content") . "\";");
             echo $demos_content;
             unset($ratingpic);
-            $n++;
         }
         eval ("\$demos_foot = \"" . gettemplate("demos_foot") . "\";");
         echo $demos_foot;
@@ -707,15 +697,7 @@ if ($action == "new") {
 
         eval ("\$demos_head = \"" . gettemplate("demos_head") . "\";");
         echo $demos_head;
-        $n = 1;
         while ($ds = mysqli_fetch_array($ergebnis)) {
-            if ($n % 2) {
-                $bg1 = BG_1;
-                $bg2 = BG_2;
-            } else {
-                $bg1 = BG_3;
-                $bg2 = BG_4;
-            }
             $date = getformatdate($ds[ 'date' ]);
             $league = '<a href="' . $ds[ 'leaguehp' ] . '" target="_blank">' . $ds[ 'league' ] . '</a>';
             $country1 = "[flag]" . $ds[ 'country1' ] . "[/flag]";
@@ -740,7 +722,6 @@ if ($action == "new") {
             eval ("\$demos_content = \"" . gettemplate("demos_content") . "\";");
             echo $demos_content;
             unset($ratingpic);
-            $n++;
         }
         eval ("\$demos_foot = \"" . gettemplate("demos_foot") . "\";");
         echo $demos_foot;

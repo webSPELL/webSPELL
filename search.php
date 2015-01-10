@@ -433,8 +433,6 @@ if (
     eval ("\$title_search = \"" . gettemplate("title_search") . "\";");
     echo $title_search;
 
-    $bg1 = BG_1;
-
     if ($userID) {
         eval ("\$search_form = \"" . gettemplate("search_form_loggedin") . "\";");
         echo $search_form;

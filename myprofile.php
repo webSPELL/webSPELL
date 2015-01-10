@@ -287,12 +287,6 @@ if (!$userID) {
     }
 
     if (isset($_GET['action']) && $_GET['action'] == "editpwd") {
-        $bg1 = BG_1;
-        $bg2 = BG_2;
-        $bg3 = BG_3;
-        $bg4 = BG_4;
-        $border = BORDER;
-
         eval("\$myprofile_editpwd = \"" . gettemplate("myprofile_editpwd") . "\";");
         echo $myprofile_editpwd;
     } elseif (isset($_POST['savepwd'])) {
@@ -335,12 +329,6 @@ if (!$userID) {
                 <input type="button" onclick="javascript:history.back()" value="' . $_language->module['back'] . '">';
         }
     } elseif (isset($_GET['action']) && $_GET['action'] == "editmail") {
-        $bg1 = BG_1;
-        $bg2 = BG_2;
-        $bg3 = BG_3;
-        $bg4 = BG_4;
-        $border = BORDER;
-
         eval("\$myprofile_editmail = \"" . gettemplate("myprofile_editmail") . "\";");
         echo $myprofile_editmail;
     } elseif (isset($_POST['savemail'])) {
@@ -597,11 +585,6 @@ if (!$userID) {
             $lang_flag = '[flag]' . $ds['language'] . '[/flag]';
             $lang_country = flags($lang_flag);
             $lang_country = str_replace("<img", "<img id='lang_county'", $lang_country);
-
-            $bg1 = BG_1;
-            $bg2 = BG_2;
-            $bg3 = BG_3;
-            $bg4 = BG_4;
 
             eval("\$myprofile = \"" . gettemplate("myprofile") . "\";");
             echo $myprofile;

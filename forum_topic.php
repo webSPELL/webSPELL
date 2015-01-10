@@ -319,11 +319,6 @@ function showtopic($topic, $edit, $addreply, $quoteID, $type)
     $_language->readModule('forum');
     $_language->readModule('bbcode', true);
 
-    $pagebg = PAGEBG;
-    $border = BORDER;
-    $bghead = BGHEAD;
-    $bgcat = BGCAT;
-
     $thread = safe_query("SELECT * FROM " . PREFIX . "forum_topics WHERE topicID='$topic' ");
     $dt = mysqli_fetch_array($thread);
 
@@ -452,7 +447,6 @@ function showtopic($topic, $edit, $addreply, $quoteID, $type)
         $id = $_GET['id'];
         $dr = mysqli_fetch_array(safe_query("SELECT * FROM " . PREFIX . "forum_posts WHERE postID='" . $id . "'"));
         $topic = $_GET['topic'];
-        $bg1 = BG_1;
         $_sticky = ($dt['sticky'] == '1') ? 'checked="checked"' : '';
 
         $anz = mysqli_num_rows(safe_query(
@@ -461,8 +455,6 @@ function showtopic($topic, $edit, $addreply, $quoteID, $type)
         ));
         if ($anz || isforumadmin($userID) || ismoderator($userID, $dt['boardID'])) {
             if (istopicpost($dt['topicID'], $id)) {
-                $bg1 = BG_1;
-
                 // topicmessage
                 $message = getinput($dr['message']);
                 $post = $id;
@@ -579,9 +571,6 @@ function showtopic($topic, $edit, $addreply, $quoteID, $type)
     } elseif ($addreply && !$dt['closed']) {
         if ($loggedin && $writer) {
             if (isset($_POST['preview'])) {
-                $bg1 = BG_1;
-                $bg2 = BG_2;
-
                 $time = getformattime(time());
                 $date = $_language->module['today'];
 
@@ -711,7 +700,6 @@ function showtopic($topic, $edit, $addreply, $quoteID, $type)
                 ));
             $notify = ($mysql_notify || $post_notify == '1') ? 'checked="checked"' : '';
 
-            $bg1 = BG_1;
             $board = $dt['boardID'];
 
             eval ("\$addbbcode = \"" . gettemplate("addbbcode") . "\";");
@@ -737,16 +725,7 @@ function showtopic($topic, $edit, $addreply, $quoteID, $type)
 
     eval ("\$forum_topic_head = \"" . gettemplate("forum_topic_head") . "\";");
     echo $forum_topic_head;
-    $i = 1;
     while ($dr = mysqli_fetch_array($replys)) {
-        if ($i % 2) {
-            $bg1 = BG_1;
-            $bg2 = BG_2;
-        } else {
-            $bg1 = BG_3;
-            $bg2 = BG_4;
-        }
-
         $date = getformatdate($dr['date']);
         $time = getformattime($dr['date']);
 
@@ -879,7 +858,6 @@ function showtopic($topic, $edit, $addreply, $quoteID, $type)
         eval ("\$forum_topic_content = \"" . gettemplate("forum_topic_content") . "\";");
         echo $forum_topic_content;
         unset($actions);
-        $i++;
     }
 
     $adminactions = "";

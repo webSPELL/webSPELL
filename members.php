@@ -68,8 +68,6 @@ if ($action == "show") {
         $awards = '';
         $challenge = '';
 
-        $border = BORDER;
-
         if ($ds[ 'gamesquad' ]) {
             $results = '<a href="index.php?site=clanwars&amp;action=showonly&amp;id=' . $squadID .
                 '&amp;sort=date&amp;only=squad" class="btn btn-primary">' . $_language->module[ 'results' ] . '</a>';
@@ -104,16 +102,7 @@ if ($action == "show") {
         eval ("\$members_details_head = \"" . gettemplate("members_details_head") . "\";");
         echo $members_details_head;
 
-        $i = 1;
         while ($dm = mysqli_fetch_array($member)) {
-            if ($i % 2) {
-                $bg1 = BG_1;
-                $bg2 = BG_2;
-            } else {
-                $bg1 = BG_3;
-                $bg2 = BG_4;
-            }
-
             $country = '[flag]' . $dm[ 'country' ] . '[/flag]';
             $country = flags($country);
             $nickname = '<a href="index.php?site=profile&amp;id=' . $dm[ 'userID' ] . '"><b>' .
@@ -185,7 +174,6 @@ if ($action == "show") {
 
             eval ("\$members_details_content = \"" . gettemplate("members_details_content") . "\";");
             echo $members_details_content;
-            $i++;
         }
         eval ("\$members_details_foot = \"" . gettemplate("members_details_foot") . "\";");
         echo $members_details_foot;
@@ -243,8 +231,6 @@ if ($action == "show") {
                 $challenge = '';
             }
 
-            $bgcat = BGCAT;
-
             if ($anzmembers == 1) {
                 $anzmembers = $anzmembers . ' ' . $_language->module[ 'member' ];
             } else {
@@ -271,16 +257,7 @@ if ($action == "show") {
             eval ("\$members_head = \"" . gettemplate("members_head") . "\";");
             echo $members_head;
 
-            $i = 1;
             while ($dm = mysqli_fetch_array($member)) {
-                if ($i % 2) {
-                    $bg1 = BG_1;
-                    $bg2 = BG_2;
-                } else {
-                    $bg1 = BG_3;
-                    $bg2 = BG_4;
-                }
-
                 $country = '[flag]' . $dm[ 'country' ] . '[/flag]';
                 $country = flags($country);
                 $nickname = strip_tags(stripslashes($dm[ 'nickname' ]));
@@ -338,7 +315,6 @@ if ($action == "show") {
 
                 eval ("\$members_content = \"" . gettemplate("members_content") . "\";");
                 echo $members_content;
-                $i++;
             }
             eval ("\$members_content_foot = \"" . gettemplate("members_content_foot") . "\";");
             echo $members_content_foot;
