@@ -40,6 +40,6 @@ $language_array = Array(
   'login_successful'=>'Ви успішно зайшли!',
   'no_user'=>'Користувач <b>%username%</b> недоступний у цій системі.<br><br><a href="javascript:history.back()">Поверніться назад і спробуйте знову!</a>',
   'not_activated'=>'Ваш аккаунт не активований.<br><br><a href="javascript:history.back()">Назад</a>',
-  'session_error'=>'Будь ласка переконайтеся, що cookies включені у вашому інтернет-браузері.<br> Якщо проблема залишилася, зв\'яжіться з вашим інтернет провайдером.<br> <br> <a Href="javascript:history.back()"> Назад</ a>'
+  'session_error'=>'Будь ласка переконайтеся, що cookies включені у вашому інтернет-браузері.<br> Якщо проблема залишилася, зв\'яжіться з вашим інтернет провайдером.<br> <br> <a Href="javascript:history.back()"> Назад</a>'
 );
 ?>
