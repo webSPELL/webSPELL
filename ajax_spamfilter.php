@@ -20,7 +20,7 @@ if (!empty($spamapikey)) {
             if (ispageadmin($userID) || ismoderator($userID, $ds[ 'boardID' ])) {
                 $message = $ds[ 'message' ];
                 $spamApi = SpamApi::getInstance();
-                if (in_array($type, ["spam", "ham"])) {
+                if (in_array($type, array("spam", "ham"))) {
                     $spamApi->learn($message, $type);
                 }
             }
@@ -34,7 +34,7 @@ if (!empty($spamapikey)) {
 
                 $text = $ds[ 'comment' ];
                 $spamApi = SpamApi::getInstance();
-                if (in_array($type, ["spam", "ham"])) {
+                if (in_array($type, array("spam", "ham"))) {
                     $spamApi->learn($text, $type);
                 }
             }

@@ -85,7 +85,7 @@ if (isset($_POST[ 'save' ])) {
     $CAPCLASS = new \webspell\Captcha;
     if ($CAPCLASS->checkCaptcha(0, $_POST[ 'captcha_hash' ])) {
         $pic = $_FILES[ 'pic' ];
-        if (checkforempty(['name'])) {
+        if (checkforempty(array('name'))) {
             safe_query(
                 "UPDATE
                     `" . PREFIX . "news_rubrics`

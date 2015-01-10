@@ -222,7 +222,7 @@ function top5()
         $poster =
             '<a href="index.php?site=profile&amp;id=' . $ds[ 'poster' ] . '">' . getnickname($ds[ 'poster' ]) . '</a>';
         $viewed = '(' . $ds[ 'viewed' ] . ')';
-        $ratings = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+        $ratings = array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
         for ($i = 0; $i < $ds[ 'rating' ]; $i++) {
             $ratings[ $i ] = 1;
         }

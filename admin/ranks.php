@@ -90,7 +90,7 @@ if (isset($_GET[ 'delete' ])) {
 
     $CAPCLASS = new \webspell\Captcha;
     if ($CAPCLASS->checkCaptcha(0, $_POST[ 'captcha_hash' ])) {
-        if (checkforempty(['min', 'max'])) {
+        if (checkforempty(array('min', 'max'))) {
             $ergebnis = safe_query("SELECT * FROM " . PREFIX . "forum_ranks ORDER BY rankID");
             $anz = mysqli_num_rows($ergebnis);
             if ($anz) {

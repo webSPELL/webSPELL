@@ -56,7 +56,7 @@ if ($action == "save" && isset($_POST['post'])) {
     $datetime = strtotime($_POST['datetime']);
     $run = 0;
 
-    $error = [];
+    $error = array();
     if (!(mb_strlen(trim($opponent)))) {
         $error[] = $_language->module['enter_clanname'];
     }

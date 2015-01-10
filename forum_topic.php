@@ -141,7 +141,7 @@ if (isset($_POST['newreply']) && !isset($_POST['preview'])) {
             $topic . "|%'"
         ); // update unread topics, format: |oldstring| => |oldstring|topicID|
 
-        $emails = [];
+        $emails = array();
         $ergebnis = safe_query(
             "SELECT f.userID, u.email, u.language FROM " . PREFIX . "forum_notify f JOIN " . PREFIX .
             "user u ON u.userID=f.userID WHERE f.topicID=$topic"

@@ -34,7 +34,7 @@ $_language->readModule('index');
 $index_language = $_language->module;
 // end important data include
 
-$hide1 = ["forum", "forum_topic"];
+$hide1 = array("forum", "forum_topic");
 header('X-UA-Compatible: IE=edge,chrome=1');
 ?>
 <!DOCTYPE html>

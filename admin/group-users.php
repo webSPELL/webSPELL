@@ -169,13 +169,13 @@ if (isset($_GET[ 'action' ])) {
     if (isset($_POST[ 'groups' ])) {
         $grps = $_POST[ 'groups' ];
     } else {
-        $grps = [1];
+        $grps = array(1);
     }
 
     $sql = safe_query("SELECT * FROM " . PREFIX . "forum_groups");
     while ($ds = mysqli_fetch_array($sql)) {
         if (in_array($ds[ 'fgrID' ], $grps)) {
-            $groups[ ] = ['fgrID' => $ds[ 'fgrID' ], 'name' => getinput($ds[ 'name' ])];
+            $groups[ ] = array('fgrID' => $ds[ 'fgrID' ], 'name' => getinput($ds[ 'name' ]));
         }
     }
 

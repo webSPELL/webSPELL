@@ -46,7 +46,7 @@ if (isset($error_header)) {
 }
 
 $urlparts = preg_split('/[\s.,-\/]+/si', $_GET['url']);
-$results = [];
+$results = array();
 foreach ($urlparts as $tag) {
     $sql = safe_query("SELECT * FROM " . PREFIX . "tags WHERE tag='" . $tag . "'");
     if ($sql->num_rows) {

@@ -195,7 +195,7 @@ security_slashes($_GET);
 security_slashes($_REQUEST);
 
 // -- MYSQL QUERY FUNCTION -- //
-$_mysql_querys = [];
+$_mysql_querys = array();
 function safe_query($query = "")
 {
 

@@ -356,7 +356,7 @@ if (!isclanmember($userID) && !iscashadmin($userID)) {
 
                 echo '</div><div class="col-md-6">';
 
-                $members = [];
+                $members = array();
                 $ergebnis = safe_query("SELECT * FROM " . PREFIX . "user ORDER BY nickname");
                 while ($du = mysqli_fetch_array($ergebnis)) {
                     if ($squadID == 0) {

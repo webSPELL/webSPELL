@@ -184,7 +184,7 @@ if ($action == "new") {
         $oppscr = $_POST[ 'map_result_opp' ];
     }
 
-    $maps = [];
+    $maps = array();
     if (!empty($maplist)) {
         if (is_array($maplist)) {
             foreach ($maplist as $map) {
@@ -195,7 +195,7 @@ if ($action == "new") {
     $backup_theMaps = serialize($maps);
     $theMaps = $_database->escape_string($backup_theMaps);
 
-    $scores = [];
+    $scores = array();
     if (!empty($homescr)) {
         if (is_array($homescr)) {
             foreach ($homescr as $result) {
@@ -205,7 +205,7 @@ if ($action == "new") {
     }
     $theHomeScore = serialize($scores);
 
-    $results = [];
+    $results = array();
     if (!empty($oppscr)) {
         if (is_array($oppscr)) {
             foreach ($oppscr as $result) {
@@ -215,7 +215,7 @@ if ($action == "new") {
     }
     $theOppScore = serialize($results);
 
-    $team = [];
+    $team = array();
     if (is_array($hometeam)) {
         foreach ($hometeam as $player) {
             if (!in_array($player, $team)) {

@@ -60,7 +60,7 @@ if ($action == "save" && isset($_POST['post'])) {
     $info = $_POST['info'];
     $run = 0;
 
-    $error = [];
+    $error = array();
     if (!(mb_strlen(trim($nick)))) {
         $error[] = $_language->module['forgot_nickname'];
     }

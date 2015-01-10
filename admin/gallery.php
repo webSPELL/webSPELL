@@ -205,7 +205,7 @@ if ($part == "groups") {
     if (isset($_POST[ 'save' ])) {
         $CAPCLASS = new \webspell\Captcha;
         if ($CAPCLASS->checkCaptcha(0, $_POST[ 'captcha_hash' ])) {
-            if (checkforempty(['name'])) {
+            if (checkforempty(array('name'))) {
                 safe_query(
                     "INSERT INTO " . PREFIX . "gallery ( name, date, groupID )
                     values( '" . $_POST[ 'name' ] . "', '" . time() . "', '" . $_POST[ 'group' ] . "' ) "
@@ -220,7 +220,7 @@ if ($part == "groups") {
     } elseif (isset($_POST[ 'saveedit' ])) {
         $CAPCLASS = new \webspell\Captcha;
         if ($CAPCLASS->checkCaptcha(0, $_POST[ 'captcha_hash' ])) {
-            if (checkforempty(['name'])) {
+            if (checkforempty(array('name'))) {
                 if (!isset($_POST[ 'group' ])) {
                     $_POST[ 'group' ] = 0;
                 }
@@ -469,7 +469,7 @@ if ($part == "groups") {
               <table width="100%" border="0" cellspacing="1" cellpadding="3">
                 <tr>
                   <td>';
-            $pics = [];
+            $pics = array();
             $picdir = opendir($dir);
             while (false !== ($file = readdir($picdir))) {
                 if ($file != "." && $file != "..") {

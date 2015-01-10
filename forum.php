@@ -326,7 +326,7 @@ function boardmain()
                 $maxtopics
             );
             $n = 1;
-            $board_topics = [];
+            $board_topics = array();
             while ($lp = mysqli_fetch_assoc($q)) {
                 if ($n == 1) {
                     $date = getformatdate($lp[ 'lastdate' ]);

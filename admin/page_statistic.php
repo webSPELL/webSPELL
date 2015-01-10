@@ -105,7 +105,7 @@ foreach ($tables_array as $table) {
     } else {
         $table_name = ucfirst(str_replace("_", " ", $table_name));
     }
-    $count_array[ ] = [$table_name, $data[ 'Rows' ]];
+    $count_array[ ] = array($table_name, $data[ 'Rows' ]);
 }
 ?>
 

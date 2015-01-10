@@ -250,7 +250,7 @@ function top5()
         $link =
             '<a href="index.php?site=demos&amp;action=showdemo&amp;demoID=' . $ds[ 'demoID' ] . '">' . $country1 . ' ' .
             $ds[ 'clantag1' ] . ' vs. ' . $ds[ 'clantag2' ] . ' ' . $country2 . '</a>';
-        $ratings = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+        $ratings = array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
         for ($i = 0; $i < $ds[ 'rating' ]; $i++) {
             $ratings[ $i ] = 1;
         }

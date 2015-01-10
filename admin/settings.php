@@ -163,7 +163,7 @@ if (isset($_POST[ 'submit' ])) {
     while ($sql_lang = mysqli_fetch_assoc($query)) {
         $mysql_langs[ $sql_lang[ 'lang' ] ] = $sql_lang[ 'language' ];
     }
-    $langs = [];
+    $langs = array();
     if ($dh = opendir($filepath)) {
         while ($file = mb_substr(readdir($dh), 0, 2)) {
             if ($file != "." && $file != ".." && is_dir($filepath . $file)) {

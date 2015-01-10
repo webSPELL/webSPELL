@@ -527,7 +527,7 @@ if ($action === "savewar") {
     }
 
     if ($messages) {
-        $replace = [
+        $replace = array(
             '%date%' => getformatdate($date),
             '%opponent_flag%' => $oppcountry,
             '%opp_hp%' => $opphp,
@@ -535,7 +535,7 @@ if ($action === "savewar") {
             '%league_hp%' => $leaguehp,
             '%league%' => $league,
             '%warinfo%' => $warinfo
-        ];
+        );
         $ergebnis = safe_query("SELECT userID FROM " . PREFIX . "squads_members WHERE squadID='$squad'");
         $tmp_lang = new \webspell\Language();
         while ($ds = mysqli_fetch_array($ergebnis)) {

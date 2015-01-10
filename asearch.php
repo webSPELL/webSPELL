@@ -30,10 +30,10 @@ include("_functions.php");
 $_language->readModule('asearch');
 
 //allowed tables for search
-$allowed_tables = ["user"];
-$allowed_columns = ["nickname"];
-$allowed_identifiers = ["userID"];
-$allowed_searchtemps = ["search_user"];
+$allowed_tables = array("user");
+$allowed_columns = array("nickname");
+$allowed_identifiers = array("userID");
+$allowed_searchtemps = array("search_user");
 
 $table = $_GET[ 'table' ];
 if (!in_array($table, $allowed_tables)) {

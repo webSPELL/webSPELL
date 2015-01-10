@@ -427,7 +427,7 @@ if (isset($_POST[ 'saveedit' ])) {
         $votes = $ds[ 'votes' ];
 
         unset($ratingpic);
-        $ratings = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+        $ratings = array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
         for ($i = 0; $i < $ds[ 'rating' ]; $i++) {
             $ratings[ $i ] = 1;
         }

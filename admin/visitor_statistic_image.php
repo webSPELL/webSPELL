@@ -98,7 +98,7 @@ function hinzufuegen(&$item, $key, $faktor)
     $item = $item + $faktor;
 }
 
-$array = [];
+$array = array();
 if (isset($_GET[ 'month' ])) {
     $datemonth = date(
         ".m.Y",

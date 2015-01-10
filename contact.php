@@ -47,7 +47,7 @@ if ($action == "send") {
     $from = $_POST['from'];
     $run = 0;
 
-    $fehler = [];
+    $fehler = array();
     if (!(mb_strlen(trim($name)))) {
         $fehler[] = $_language->module['enter_name'];
     }

@@ -191,7 +191,7 @@ if (isset($_POST[ 'save' ])) {
 if (isset($_POST[ 'saveedit' ])) {
     $CAPCLASS = new \webspell\Captcha;
     if ($CAPCLASS->checkCaptcha(0, $_POST[ 'captcha_hash' ])) {
-        if (checkforempty(['name'])) {
+        if (checkforempty(array('name'))) {
             $games = implode(";", $_POST[ 'games' ]);
             safe_query(
                 "UPDATE " . PREFIX . "squads SET gamesquad='" . $_POST[ 'gamesquad' ] . "', games='" . $games .

@@ -583,7 +583,7 @@ if ($action == "save") {
                             `filecatID`
                         FROM
                             `" . PREFIX . "files_categorys`
-                        WHERE `subcatID` = '" . (int)$subcat[ 'filecatID' ]
+                        WHERE `subcatID` = '" . (int)$subcat[ 'filecatID' ] . "'"
                     )
                 );
 
@@ -639,7 +639,7 @@ if ($action == "save") {
             // RATING
             $rating = $file[ 'rating' ];
             $rating ? $rating = $rating . ' / 10' : $rating = '0 / 10';
-            $ratings = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+            $ratings = array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
             for ($i = 0; $i < $file[ 'rating' ]; $i++) {
                 $ratings[ $i ] = 1;
             }
