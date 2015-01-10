@@ -1,20 +1,6 @@
 before_commands:
     - composer install
 tools:
-    sensiolabs_security_checker:
-        enabled: true
-    php_sim:
-        enabled: true
-        filter:
-            excluded_paths: ["vendor", "node_modules", "components"]
-    php_pdepend:
-        enabled: true
-    php_analyzer:
-        enabled: true
-    php_changetracking:
-        enabled: true
-    php_mess_detector:
-        enabled: true
     js_hint:
         enabled: true
         use_native_config: true
@@ -23,14 +9,8 @@ tools:
         filter:
             paths: ["Gruntfile.js", "js/bbcode.js"]
             excluded_paths: ["vendor", "node_modules", "components"]
-    php_cpd:
-        command: phpcpd
-        min_lines: 5
-        min_tokens: 70
-        names:
-            - '*.php'
-        excluded_dirs: ["vendor", "node_modules", "components"]
-        enabled: false
+    php_changetracking:
+        enabled: true
     php_code_sniffer:
         config:
             ruleset: Ruleset.xml
@@ -42,3 +22,4 @@ tools:
         filter:
             excluded_paths: ["vendor", "node_modules", "components"]
             paths: ["*.php"]
+
