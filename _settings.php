@@ -68,8 +68,10 @@ if (function_exists("globalskiller") == false) {
     function globalskiller()
     {
         // kills all non-system variables
-        $global =
-            ['GLOBALS', '_POST', '_GET', '_COOKIE', '_FILES', '_SERVER', '_ENV', '_REQUEST', '_SESSION', '_database'];
+        $global = array(
+            'GLOBALS', '_POST', '_GET', '_COOKIE', '_FILES', '_SERVER', '_ENV', '_REQUEST', '_SESSION', '_database'
+        );
+
         foreach ($GLOBALS as $key => $val) {
             if (!in_array($key, $global)) {
                 if (is_array($val)) {
