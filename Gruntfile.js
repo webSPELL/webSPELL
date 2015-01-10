@@ -23,6 +23,7 @@ module.exports = function(grunt) {
         csss = [ "**/*.css" ],
         excludes = [
             "!node_modules/**",
+            "!codestyles/**",
             "!components/**",
             "!vendor/**",
             "!tmp/**"
