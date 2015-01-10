@@ -184,29 +184,51 @@ if ($login) {
     <!DOCTYPE html>
     <html>
     <head>
-        <meta charset="utf-8">
-        <meta name="description" content="Clanpage using webSPELL 4 CMS">
-        <meta name="author" content="webspell.org">
-        <meta name="keywords" content="webspell, webspell4, clan, cms">
-        <meta name="copyright" content="Copyright 2005-2014 by webspell.org">
-        <meta name="generator" content="webSPELL">
-        <title><?php echo PAGETITLE; ?></title>
-        <link href="_stylesheet.css" rel="stylesheet" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="description" content="Clanpage using webSPELL 4 CMS">
+    <meta name="author" content="webspell.org">
+    <meta name="keywords" content="webspell, webspell4, clan, cms">
+    <meta name="generator" content="webSPELL">
+
+    <!-- Head & Title include -->
+    <title><?php echo PAGETITLE; ?></title>
+    <base href="<?php echo $rewriteBase; ?>">
+    <?php foreach ($components['css'] as $component) {
+        echo '<link href="' . $component . '" rel="stylesheet">';
+}
+    ?>
+    <link href="_stylesheet.css" rel="stylesheet">
+	<style>
+		html, body{
+			height:100%; margin:0;padding:0
+			}
+
+		.container-fluid{
+			height:100%;
+			display:table;
+			width: 100%;
+			padding: 0;
+			}
+
+		.row-fluid {
+			height: 100%; 
+			display:table-cell; 
+			vertical-align: middle;
+			}
+
+		.centering {
+			float:none;
+			margin:0 auto;
+			}
+	</style>
     </head>
     <body>
-    <table class="table">
-        <tr>
-            <td height="500" class="text-center">
-                <table width="350" border="0" cellpadding="10" cellspacing="0" style="border:1px solid <?php
-                    echo BORDER; ?>" bgcolor="<?php
-                        echo BG_1; ?>">
-                    <tr>
-                        <td class="text-center"><?php echo $error; ?></td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
-    </table>
+	<div class="container-fluid">
+    <div class="row-fluid">
+       <div class="alert alert-danger centering text-center" role="alert"><?php echo $error; ?><div>
+    </div>
+	</div>
     </body>
     </html>
     <?php
