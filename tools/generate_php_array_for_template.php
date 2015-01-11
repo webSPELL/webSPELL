@@ -1,7 +1,7 @@
 <?php
 error_reporting(E_ALL);
 #$regex_find_eval_calls = '/eval\s\("\\\$([\w_])+\s*=\s*\\""\s+.\s+gettemplate\("([\w_]+?)"\)\s+.\s+"\\";"\);/si';
-$regex_find_eval_calls = '/eval\s*\("' . preg_quote('\$', "/") . '(?<variable>[\w_]+?)\s*=\s*' . preg_quote('\"', "/") .
+$regex_find_eval_calls = '/(?<intend>[ \t]+)eval\s*\("' . preg_quote('\$', "/") . '(?<variable>[\w_]+?)\s*=\s*' . preg_quote('\"', "/") .
     '"\s*.\s*gettemplate\(["\'](?<parameters>[\w_,\'" ]+?)["\']\)\s*.\s*"' . preg_quote('\"', "/") . ';"\);/si';
 
 $folders = array('../', '../admin/', '../src/', '../src/func/');
@@ -14,7 +14,7 @@ function extractVariablesFromTemplate($file)
     return $matches;
 }
 
-function generateNewTemplateClass($variable, $options)
+function generateNewTemplateClass($variable, $options, $intend)
 {
     if (stristr($options, ",")) {
         $options = preg_split("/[,\" ]/si", $options, -1, PREG_SPLIT_NO_EMPTY);
@@ -32,10 +32,10 @@ function generateNewTemplateClass($variable, $options)
     $unique_list = array();
     if (count($variables_used)) {
         $variable_in_call = '$data_array';
-        $replace_code = '$data_array = array();' . "\n";
+        $replace_code = $intend.'$data_array = array();' . "\n";
         foreach ($variables_used as $var) {
             if (!in_array($var[ 'variable' ], $unique_list)) {
-                $replace_code .= '$data_array[\'' . $var[ 'variable' ] . '\'] = ' . $var[ 'variable' ] . ';' . "\n";
+                $replace_code .= $intend.'$data_array[\'' . $var[ 'variable' ] . '\'] = ' . $var[ 'variable' ] . ';' . "\n";
                 $unique_list[ ] = $var[ 'variable' ];
             }
         }
@@ -44,7 +44,7 @@ function generateNewTemplateClass($variable, $options)
     }
 
     $replace_code .=
-        '$' . $variable . ' = $GLOBALS["_template"]->replaceTemplate("' . $template_file . '",' . $variable_in_call .
+        $intend.'$' . $variable . ' = $GLOBALS["_template"]->replaceTemplate("' . $template_file . '",' . $variable_in_call .
         ');' . "\n";
 
     return $replace_code;
@@ -61,7 +61,7 @@ foreach ($folders as $folder) {
             echo "Old Line:\n";
             echo $result[ 0 ] . "\n";
             echo "New Line\n";
-            $new_line = generateNewTemplateClass($result[ 'variable' ], $result[ 'parameters' ]);
+            $new_line = generateNewTemplateClass($result[ 'variable' ], $result[ 'parameters' ], $result['intend']);
             echo $new_line;
             $file_content = preg_replace("/" . preg_quote($result[ 0 ], "/") . "/si", $new_line, $file_content, 1);
             $count++;
