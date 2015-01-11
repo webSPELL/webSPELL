@@ -74,4 +74,3 @@ foreach ($folders as $folder) {
     }
 }
 echo $count . " replaces";
-?>
