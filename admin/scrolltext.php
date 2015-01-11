@@ -99,9 +99,16 @@ if (isset($_POST[ 'submit' ]) != "") {
         $direction
     );
 
-    $delay = '<option value="1">' . $_language->module[ '1_slow' ] . '</option>
-    <option value="2">' . $_language->module[ '2_normal' ] . '</option>
-    <option value="3">' . $_language->module[ '3_fast' ] . '</option>';
+    $delay = '<option value="1">' . $_language->module[ '1_fast' ] . '</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">' . $_language->module[ '5_normal' ] . '</option>
+    <option value="6">6</option>
+    <option value="7">7</option>
+    <option value="8">8</option>
+    <option value="9">9</option>
+    <option value="10">' . $_language->module[ '10_slow' ] . '</option>';
     $delay = str_replace(
         'value="' . $ds[ 'delay' ] . '"',
         'value="' . $ds[ 'delay' ] . '" selected="selected"',
