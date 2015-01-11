@@ -3,7 +3,7 @@ error_reporting(E_ALL);
 #$regex_find_eval_calls = '/eval\s\("\\\$([\w_])+\s*=\s*\\""\s+.\s+gettemplate\("([\w_]+?)"\)\s+.\s+"\\";"\);/si';
 $regex_find_eval_calls = '/eval\s*\("'.preg_quote('\$',"/").'(?<variable>[\w_]+?)\s*=\s*'.preg_quote('\"',"/").'"\s*.\s*gettemplate\(["\'](?<parameters>[\w_,\'" ]+?)["\']\)\s*.\s*"'.preg_quote('\"',"/").';"\);/si';
 
-$folders = array('../','../admin/');
+$folders = array('../','../admin/','../src/','../src/func/');
 $count = 0;
 
 function extractVariablesFromTemplate($file){
@@ -27,11 +27,15 @@ function generateNewTemplateClass($variable, $options){
 
 	$variables_used = extractVariablesFromTemplate('../templates/'.$template_file.".".$extension);
 	$replace_code = '';
+	$unique_list = array();
 	if(count($variables_used)){
 		$variable_in_call = '$data_array';
 		$replace_code = '$data_array = array();'."\n";
 		foreach($variables_used as $var){
-			$replace_code .= '$data_array[\''.$var['variable'].'\'] = '.$var['variable'].';'."\n";
+			if(!in_array($var['variable'], $unique_list)){
+				$replace_code .= '$data_array[\''.$var['variable'].'\'] = '.$var['variable'].';'."\n";
+				$unique_list[] = $var['variable'];
+			}
 		}
 	}
 	else{
