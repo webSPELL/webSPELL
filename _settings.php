@@ -80,7 +80,7 @@ if (function_exists("globalskiller") == false) {
             '_SESSION',
             '_database'
         );
-        
+
         foreach ($GLOBALS as $key => $val) {
             if (!in_array($key, $global)) {
                 if (is_array($val)) {
