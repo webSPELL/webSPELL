@@ -1330,7 +1330,7 @@ if ($action == "new") {
             $game =
                 '<a href="index.php?site=clanwars&amp;action=showonly&amp;id=' . $ds[ 'game' ] . '&amp;page=' . $page .
                 '&amp;sort=game&amp;type=' . $type . '&amp;only=game"><img src="images/games/' . $pic .
-                '" width="13" height="13" alt=""></a>';
+                '" alt=""></a>';
 
             $homescr = array_sum(unserialize($ds[ 'homescore' ]));
             $oppscr = array_sum(unserialize($ds[ 'oppscore' ]));
@@ -1574,8 +1574,7 @@ if ($action == "new") {
             }
             $game =
                 '<a href="index.php?site=clanwars&amp;action=showonly&amp;id=' . $ds[ 'game' ] . '&amp;page=' . $page .
-                '&amp;sort=game&amp;type=' . $type . '&amp;only=game"><img src="images/games/' . $pic .
-                '" width="13" height="13" alt=""></a>';
+                '&amp;sort=game&amp;type=' . $type . '&amp;only=game"><img src="images/games/' . $pic . '" alt=""></a>';
 
             $homescr = array_sum(unserialize($ds[ 'homescore' ]));
             $oppscr = array_sum(unserialize($ds[ 'oppscore' ]));

@@ -256,7 +256,7 @@ onsubmit="return chkFormular();">
 
             echo '<tr>
         <td class="' . $td . '"><img src="../images/games/' . $ds[ 'game' ] .
-                '.gif" width="13" height="13" alt=""> <a href="hlsw://' . $ds[ 'ip' ] . '"><b>' . $ds[ 'ip' ] .
+                '.gif" alt=""> <a href="hlsw://' . $ds[ 'ip' ] . '"><b>' . $ds[ 'ip' ] .
                 '</b></a><br /><b>' . getinput($ds[ 'name' ]) . '</b><br />' . cleartext($ds[ 'info' ], true, 'admin') .
                 '</td>
         <td class="' . $td . '" align="center">
