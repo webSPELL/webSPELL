@@ -49,9 +49,9 @@ if (isset($id) && getnickname($id) != '') {
 
     if ($user_guestbook == 1) {
         if (getuserguestbookstatus($id) == 1) {
-            $title_user_guestbook = '<td class="title" width="20%">&nbsp; <a class="titlelink" 
-			href="index.php?site=profile&amp;id=' . $id .
-                '&amp;action=guestbook">' . $_language->module[ 'guestbook' ] . '</a></td>';
+            $title_user_guestbook = '<li>
+               <a href="ndex.php?site=profile&amp;id=' . $id . '&amp;action=guestbook" class="btn btn-default navbar-btn">' . $_language->module[ 'guestbook' ] . '</a>
+            </li>';
             $title_width_main = 14;
             $title_width_galleries = 18;
             $title_width_buddys = 18;
