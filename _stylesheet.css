@@ -118,3 +118,32 @@ a.flag.active img, a.flag:hover img {
     overflow: hidden;
     text-align: left;
 }
+
+/* Centers on login error message */
+.checklogin-html {
+   height: 100%;
+}
+
+.checklogin-body {
+   padding:0;			   /* Reset paddings, to remove top-padding set in _stylesheet  */
+   display: -webkit-box;   /* OLD: Safari,  iOS, Android browser, older WebKit browsers.  */
+   display: -moz-box;      /* OLD: Firefox (buggy) */
+   display: -ms-flexbox;   /* MID: IE 10 */
+   display: -webkit-flex;  /* NEW, Chrome 21–28, Safari 6.1+ */
+   display: flex;          /* NEW: IE11, Chrome 29+, Opera 12.1+, Firefox 22+ */
+
+   /* OLD… */
+   -webkit-box-align: center; -moz-box-align: center;
+   -ms-flex-align: center;
+   -webkit-align-items: center;
+   align-items: center;
+
+   -webkit-box-pack: center; -moz-box-pack: center;
+   -ms-flex-pack: center;
+   -webkit-justify-content: center;
+   justify-content: center;
+
+   margin: 0;
+   height: 100%;
+   width: 100% /* needed for Firefox */
+}

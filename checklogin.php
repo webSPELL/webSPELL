@@ -182,7 +182,7 @@ if ($login) {
 } else {
     ?>
     <!DOCTYPE html>
-    <html>
+    <html class="checklogin-html">
     <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
@@ -199,37 +199,12 @@ if ($login) {
 }
     ?>
     <link href="_stylesheet.css" rel="stylesheet">
-	<style>
-		html, body{
-			height:100%; margin:0;padding:0
-			}
-
-		.container-fluid{
-			height:100%;
-			display:table;
-			width: 100%;
-			padding: 0;
-			}
-
-		.row-fluid {
-			height: 100%; 
-			display:table-cell; 
-			vertical-align: middle;
-			}
-
-		.centering {
-			float:none;
-			margin:0 auto;
-			}
-	</style>
+	
     </head>
-    <body>
-	<div class="container-fluid">
-    <div class="row-fluid">
-       <div class="alert alert-danger centering text-center" role="alert"><?php echo $error; ?><div>
-    </div>
-	</div>
-    </body>
+    <body class="checklogin-body">
+	<div class="alert alert-danger text-center" role="alert"><?php echo $error; ?></div>
+	</body>
+
     </html>
     <?php
 }
