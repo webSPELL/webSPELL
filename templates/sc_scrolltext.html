@@ -1,11 +1,7 @@
-<script>
-    <!--
-    function marquee() {
-        document.write(
-                '<marquee scrollamount="$delay" scrolldelay="0" direction="$direction">' +
-                '<span style="color: $color">$scrolltext<\/span>' +
-                '<\/marquee>');
-    }
-    marquee()
-    //-->
-</script>
+<p class="marquee"><span style="color: $color;
+animation: marquee $delay linear infinite;
+padding-$direction: 100%;">$scrolltext</span></p>
+<script src="js/prefixfree.min.js" type="text/javascript"></script>
+<style>
+$css_animation
+</style>
