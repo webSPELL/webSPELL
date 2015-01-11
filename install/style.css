@@ -140,7 +140,7 @@ form {
     padding: 0px;
 }
 
-textarea, input, select, file {
+textarea, input, select {
     border: 1px #bbbbbb solid;
     color: #666666;
     padding: 2px;

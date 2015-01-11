@@ -69,7 +69,7 @@ $language_array = Array(
   'really_delete'=>'Dësen Artikel wierklech läschen?',
   'save_article'=>'Artikel späichern',
   'self'=>'déi selwecht Fënster',
-  'smilies'=>'&#8226; <a href="javascript:void(0);" onclick="window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smilies</a> sinn <b><u><UN</u></b>',
+  'smilies'=>'&#8226; <a href="javascript:void(0);" onclick="window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smilies</a> sinn <strong><u>UN</u></strong>',
   'sort'=>'Sortéieren:',
   'title'=>'Iwwerschrëft',
   'top5_points'=>'TOP 5 ARTIKEL (Punkten)',

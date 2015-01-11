@@ -137,7 +137,7 @@ if ($anz) {
             '<a href="index.php?site=profile&amp;id=' . $ds[ 'userID' ] . '"><b>' . strip_tags($ds[ 'nickname' ]) .
             '</b></a>';
         if (isclanmember($ds[ 'userID' ])) {
-            $member = ' <img src="images/icons/member.gif" width="6" height="11" alt="Clanmember">';
+            $member = ' <img src="images/icons/member.gif" width="7" height="16" alt="Clanmember">';
         } else {
             $member = '';
         }

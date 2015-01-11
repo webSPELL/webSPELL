@@ -96,9 +96,9 @@ if (isset($_POST[ 'savevisitorcomment' ])) {
     $validation = $spamApi->validate($message);
 
     if (in_array(trim($name), $nicks)) {
-        header("Location: " . $_POST[ 'referer' ] . "&error=nickname#addcomment");
+        header("Location: " . $_POST[ 'referer' ] . "&error=nickname#post");
     } elseif (!($CAPCLASS->checkCaptcha($_POST[ 'captcha' ], $_POST[ 'captcha_hash' ]))) {
-        header("Location: " . $_POST[ 'referer' ] . "&error=captcha#addcomment");
+        header("Location: " . $_POST[ 'referer' ] . "&error=captcha#post");
     } elseif (checkCommentsAllow($type, $parentID) == false) {
         header("Location: " . $_POST[ 'referer' ]);
     } else {
