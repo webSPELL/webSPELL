@@ -7,7 +7,7 @@ define('BOM', "\xEF\xBB\xBF");
 $baseLanguage = "uk";
 $checkUntranslated = true;
 
-$all_langs = glob("*", GLOB_ONLYDIR);
+$all_langs = glob("../languages/*", GLOB_ONLYDIR);
 if (in_array($baseLanguage, $all_langs)) {
     unset($all_langs[array_search($baseLanguage, $all_langs)]);
 }
