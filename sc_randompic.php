@@ -53,7 +53,13 @@ if ($anz) {
     $registerdate = getregistered($picID);
     $picurl = $picpath . $the_pic;
 
-    eval ("\$sc_randompic = \"" . gettemplate("sc_randompic") . "\";");
+    $data_array = array();
+    $data_array['$picID'] = $picID;
+    $data_array['$picurl'] = $picurl;
+    $data_array['$nickname_fixed'] = $nickname_fixed;
+    $data_array['$nickname'] = $nickname;
+    $data_array['$registerdate'] = $registerdate;
+    $sc_randompic = $GLOBALS["_template"]->replaceTemplate("sc_randompic", $data_array);
     echo $sc_randompic;
 } else {
     echo $_language->module[ 'no_user' ];

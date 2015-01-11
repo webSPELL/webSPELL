@@ -29,7 +29,7 @@
 
 $_language->readModule('whoisonline');
 
-eval ("\$title_whoisonline = \"" . gettemplate("title_whoisonline") . "\";");
+$title_whoisonline = $GLOBALS["_template"]->replaceTemplate("title_whoisonline", array());
 echo $title_whoisonline;
 
 $result_guests = safe_query("SELECT * FROM " . PREFIX . "whoisonline WHERE userID=''");
@@ -87,7 +87,11 @@ $ergebnis = safe_query(
         $sort $type"
 );
 
-eval ("\$whoisonline_head = \"" . gettemplate("whoisonline_head") . "\";");
+$data_array = array();
+$data_array['$sorter'] = $sorter;
+$data_array['$online'] = $online;
+$data_array['$type'] = $type;
+$whoisonline_head = $GLOBALS["_template"]->replaceTemplate("whoisonline_head", $data_array);
 echo $whoisonline_head;
 
 $n = 1;
@@ -215,12 +219,20 @@ while ($ds = mysqli_fetch_array($ergebnis)) {
             '</a>';
     }
 
-    eval ("\$whoisonline_content = \"" . gettemplate("whoisonline_content") . "\";");
+    $data_array = array();
+    $data_array['$country'] = $country;
+    $data_array['$nickname'] = $nickname;
+    $data_array['$member'] = $member;
+    $data_array['$email'] = $email;
+    $data_array['$pm'] = $pm;
+    $data_array['$buddy'] = $buddy;
+    $data_array['$status'] = $status;
+    $whoisonline_content = $GLOBALS["_template"]->replaceTemplate("whoisonline_content", $data_array);
     echo $whoisonline_content;
     $n++;
 }
 
-eval ("\$whoisonline_foot = \"" . gettemplate("whoisonline_foot") . "\";");
+$whoisonline_foot = $GLOBALS["_template"]->replaceTemplate("whoisonline_foot", array());
 echo $whoisonline_foot;
 
 
@@ -250,7 +262,10 @@ $ergebnis = safe_query(
         $sort $type"
 );
 
-eval ("\$whowasonline_head = \"" . gettemplate("whowasonline_head") . "\";");
+$data_array = array();
+$data_array['$sorter'] = $sorter;
+$data_array['$type'] = $type;
+$whowasonline_head = $GLOBALS["_template"]->replaceTemplate("whowasonline_head", $data_array);
 echo $whowasonline_head;
 
 $n = 1;
@@ -366,10 +381,19 @@ while ($ds = mysqli_fetch_array($ergebnis)) {
             $_language->module[ 'news' ] . '</a>';
     }
 
-    eval ("\$whowasonline_content = \"" . gettemplate("whowasonline_content") . "\";");
+    $data_array = array();
+    $data_array['$country'] = $country;
+    $data_array['$nickname'] = $nickname;
+    $data_array['$member'] = $member;
+    $data_array['$email'] = $email;
+    $data_array['$pm'] = $pm;
+    $data_array['$buddy'] = $buddy;
+    $data_array['$status'] = $status;
+    $data_array['$date'] = $date;
+    $whowasonline_content = $GLOBALS["_template"]->replaceTemplate("whowasonline_content", $data_array);
     echo $whowasonline_content;
     $n++;
 }
 
-eval ("\$whowasonline_foot = \"" . gettemplate("whowasonline_foot") . "\";");
+$whowasonline_foot = $GLOBALS["_template"]->replaceTemplate("whowasonline_foot", array());
 echo $whowasonline_foot;

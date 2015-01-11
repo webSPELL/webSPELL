@@ -61,9 +61,9 @@ if (isset($_GET['quoteID'])) {
 $do_sticky = (isset($_POST['sticky'])) ? true : false;
 
 if (isset($_POST['newreply']) && !isset($_POST['preview'])) {
-    include("_mysql.php");
-    include("_settings.php");
-    include("_functions.php");
+    include"_mysql.php";
+    include"_settings.php";
+    include"_functions.php";
     $_language->readModule('forum');
 
     if (!$userID) {
@@ -77,10 +77,12 @@ if (isset($_POST['newreply']) && !isset($_POST['preview'])) {
     if (!(mb_strlen(trim($message)))) {
         die($_language->module['forgot_message']);
     }
-    $ds = mysqli_fetch_array(safe_query(
-        "SELECT closed, writegrps, boardID FROM " . PREFIX .
-        "forum_topics WHERE topicID='" . $topic . "'"
-    ));
+    $ds = mysqli_fetch_array(
+        safe_query(
+            "SELECT closed, writegrps, boardID FROM " . PREFIX .
+            "forum_topics WHERE topicID='" . $topic . "'"
+        )
+    );
     if ($ds['closed']) {
         die($_language->module['topic_closed']);
     }
@@ -195,9 +197,9 @@ if (isset($_POST['newreply']) && !isset($_POST['preview'])) {
     header("Location: index.php?site=forum_topic&topic=" . $topic . "&page=" . $page);
     exit();
 } elseif (isset($_POST['editreply']) && (bool)$_POST['editreply']) {
-    include("_mysql.php");
-    include("_settings.php");
-    include("_functions.php");
+    include"_mysql.php";
+    include"_settings.php";
+    include"_functions.php";
     $_language->readModule('forum');
 
     if (!isforumposter($userID, $_POST['id']) && !isforumadmin($userID) && !ismoderator($userID, $_GET['board'])
@@ -207,10 +209,12 @@ if (isset($_POST['newreply']) && !isset($_POST['preview'])) {
 
     $message = $_POST['message'];
     $id = (int)$_POST['id'];
-    $check = mysqli_num_rows(safe_query(
-        "SELECT postID FROM " . PREFIX . "forum_posts WHERE postID='" . $id .
-        "' AND poster='" . $userID . "'"
-    ));
+    $check = mysqli_num_rows(
+        safe_query(
+            "SELECT postID FROM " . PREFIX . "forum_posts WHERE postID='" . $id .
+            "' AND poster='" . $userID . "'"
+        )
+    );
     if (($check || isforumadmin($userID) || ismoderator($userID, (int)$_GET['board'])) && mb_strlen(trim($message))
     ) {
         if (isforumadmin($userID) || isanymoderator($userID, $ds['boardID'])) {
@@ -239,13 +243,13 @@ if (isset($_POST['newreply']) && !isset($_POST['preview'])) {
     }
     header("Location: index.php?site=forum_topic&topic=" . (int)$_GET['topic'] . "&page=" . (int)$_GET['page']);
 } elseif (isset($_POST['saveedittopic']) && (bool)$_POST['saveedittopic']) {
-    include("_mysql.php");
-    include("_settings.php");
-    include("_functions.php");
+    include"_mysql.php";
+    include"_settings.php";
+    include"_functions.php";
     $_language->readModule('forum');
 
-    if (!isforumadmin($userID) &&
-        !isforumposter($userID, $_POST['post']) && !ismoderator($userID, $_GET['board'])
+    if (!isforumadmin($userID)
+        && !isforumposter($userID, $_POST['post']) && !ismoderator($userID, $_GET['board'])
     ) {
         die($_language->module['no_accses']);
     }
@@ -438,10 +442,20 @@ function showtopic($topic, $edit, $addreply, $quoteID, $type)
     $posttype = 'topic';
 
     $kathname = getcategoryname($db['category']);
-    eval ("\$forum_topics_title = \"" . gettemplate("forum_topics_title") . "\";");
+    $data_array = array();
+    $data_array['$db'] = $db;
+    $data_array['$kathname'] = $kathname;
+    $data_array['$dt'] = $dt;
+    $data_array['$boardname'] = $boardname;
+    $data_array['$topicname'] = $topicname;
+    $forum_topics_title = $GLOBALS["_template"]->replaceTemplate("forum_topics_title", $data_array);
     echo $forum_topics_title;
 
-    eval ("\$forum_topics_actions = \"" . gettemplate("forum_topics_actions") . "\";");
+    $data_array = array();
+    $data_array['$sorter'] = $sorter;
+    $data_array['$page_link'] = $page_link;
+    $data_array['$topicactions'] = $topicactions;
+    $forum_topics_actions = $GLOBALS["_template"]->replaceTemplate("forum_topics_actions", $data_array);
     echo $forum_topics_actions;
 
     if ($dt['closed']) {
@@ -455,10 +469,12 @@ function showtopic($topic, $edit, $addreply, $quoteID, $type)
         $bg1 = BG_1;
         $_sticky = ($dt['sticky'] == '1') ? 'checked="checked"' : '';
 
-        $anz = mysqli_num_rows(safe_query(
-            "SELECT * FROM " . PREFIX . "forum_posts WHERE topicID='" . $dt['topicID'] .
-            "' AND postID='" . $id . "' AND poster='" . $userID . "' ORDER BY DATE ASC LIMIT 0,1"
-        ));
+        $anz = mysqli_num_rows(
+            safe_query(
+                "SELECT * FROM " . PREFIX . "forum_posts WHERE topicID='" . $dt['topicID'] .
+                "' AND postID='" . $id . "' AND poster='" . $userID . "' ORDER BY DATE ASC LIMIT 0,1"
+            )
+        );
         if ($anz || isforumadmin($userID) || ismoderator($userID, $dt['boardID'])) {
             if (istopicpost($dt['topicID'], $id)) {
                 $bg1 = BG_1;
@@ -538,8 +554,18 @@ function showtopic($topic, $edit, $addreply, $quoteID, $type)
                 } else {
                     $iconlist = str_replace('value="0"', 'value="0" checked="checked"', $iconlist);
                 }
-                eval ("\$addbbcode = \"" . gettemplate("addbbcode") . "\";");
-                eval ("\$forum_edittopic = \"" . gettemplate("forum_edittopic") . "\";");
+                $addbbcode = $GLOBALS["_template"]->replaceTemplate("addbbcode", array());
+                $data_array = array();
+                $data_array['$board'] = $board;
+                $data_array['$topic'] = $topic;
+                $data_array['$iconlist'] = $iconlist;
+                $data_array['$topicname'] = $topicname;
+                $data_array['$addbbcode'] = $addbbcode;
+                $data_array['$message'] = $message;
+                $data_array['$notify'] = $notify;
+                $data_array['$chk_sticky'] = $chk_sticky;
+                $data_array['$post'] = $post;
+                $forum_edittopic = $GLOBALS["_template"]->replaceTemplate("forum_edittopic", $data_array);
                 echo $forum_edittopic;
             } else {
                 // notification check
@@ -564,8 +590,17 @@ function showtopic($topic, $edit, $addreply, $quoteID, $type)
                     $chk_sticky = '';
                 }
                 $dr['message'] = getinput($dr['message']);
-                eval ("\$addbbcode = \"" . gettemplate("addbbcode") . "\";");
-                eval ("\$forum_editpost = \"" . gettemplate("forum_editpost") . "\";");
+                $addbbcode = $GLOBALS["_template"]->replaceTemplate("addbbcode", array());
+                $data_array = array();
+                $data_array['$boardID'] = $dr['boardID'];
+                $data_array['$message'] = $dr['message'];
+                $data_array['$topic'] = $topic;
+                $data_array['$page'] = $page;
+                $data_array['$addbbcode'] = $addbbcode;
+                $data_array['$notify'] = $notify;
+                $data_array['$chk_sticky'] = $chk_sticky;
+                $data_array['$id'] = $id;
+                $forum_editpost = $GLOBALS["_template"]->replaceTemplate("forum_editpost", $data_array);
                 echo $forum_editpost;
             }
         } else {
@@ -672,7 +707,25 @@ function showtopic($topic, $edit, $addreply, $quoteID, $type)
                 <td colspan="2" class="title" class="text-center">' . $_language->module['preview'] . '</td>
                 </tr>';
 
-                eval ("\$forum_topic_content = \"" . gettemplate("forum_topic_content") . "\";");
+                $data_array = array();
+                $data_array['$statuspic'] = $statuspic;
+                $data_array['$username'] = $username;
+                $data_array['$usertype'] = $usertype;
+                $data_array['$quote'] = $quote;
+                $data_array['$date'] = $date;
+                $data_array['$time'] = $time;
+                $data_array['$pm'] = $pm;
+                $data_array['$buddy'] = $buddy;
+                $data_array['$email'] = $email;
+                $data_array['$hp'] = $hp;
+                $data_array['$actions'] = $actions;
+                $data_array['$avatar'] = $avatar;
+                $data_array['$rang'] = $rang;
+                $data_array['$posts'] = $posts;
+                $data_array['$registered'] = $registered;
+                $data_array['$message'] = $message;
+                $data_array['$signatur'] = $signatur;
+                $forum_topic_content = $GLOBALS["_template"]->replaceTemplate("forum_topic_content", $data_array);
                 echo $forum_topic_content;
 
                 echo '</table>';
@@ -705,17 +758,28 @@ function showtopic($topic, $edit, $addreply, $quoteID, $type)
                 $post_notify = null;
             }
             $mysql_notify =
-                mysqli_num_rows(safe_query(
-                    "SELECT notifyID FROM " . PREFIX . "forum_notify WHERE userID='" . $userID .
-                    "' AND topicID='" . $topic . "'"
-                ));
+                mysqli_num_rows(
+                    safe_query(
+                        "SELECT notifyID FROM " . PREFIX . "forum_notify WHERE userID='" . $userID .
+                        "' AND topicID='" . $topic . "'"
+                    )
+                );
             $notify = ($mysql_notify || $post_notify == '1') ? 'checked="checked"' : '';
 
             $bg1 = BG_1;
             $board = $dt['boardID'];
 
-            eval ("\$addbbcode = \"" . gettemplate("addbbcode") . "\";");
-            eval ("\$forum_newreply = \"" . gettemplate("forum_newreply") . "\";");
+            $addbbcode = $GLOBALS["_template"]->replaceTemplate("addbbcode", array());
+            $data_array = array();
+            $data_array['$addbbcode'] = $addbbcode;
+            $data_array['$message'] = $message;
+            $data_array['$notify'] = $notify;
+            $data_array['$chk_sticky'] = $chk_sticky;
+            $data_array['$userID'] = $userID;
+            $data_array['$board'] = $board;
+            $data_array['$topic'] = $topic;
+            $data_array['$page'] = $page;
+            $forum_newreply = $GLOBALS["_template"]->replaceTemplate("forum_newreply", $data_array);
             echo $forum_newreply;
         } elseif ($loggedin) {
             echo generateAlert($_language->module['no_access_write'], 'alert-danger');
@@ -735,7 +799,7 @@ function showtopic($topic, $edit, $addreply, $quoteID, $type)
             );
     }
 
-    eval ("\$forum_topic_head = \"" . gettemplate("forum_topic_head") . "\";");
+    $forum_topic_head = $GLOBALS["_template"]->replaceTemplate("forum_topic_head", array());
     echo $forum_topic_head;
     $i = 1;
     while ($dr = mysqli_fetch_array($replys)) {
@@ -864,8 +928,8 @@ function showtopic($topic, $edit, $addreply, $quoteID, $type)
         }
 
         $actions = '';
-        if (($userID == $dr['poster'] || isforumadmin($userID) || ismoderator($userID, $dt['boardID'])) &&
-            !$dt['closed']
+        if (($userID == $dr['poster'] || isforumadmin($userID) || ismoderator($userID, $dt['boardID']))
+            && !$dt['closed']
         ) {
             $actions = ' <a href="index.php?site=forum_topic&amp;topic=' . $topic . '&amp;edit=true&amp;id=' .
                 $dr['postID'] . '&amp;page=' . $page . '"><span class="glyphicon glyphicon-edit"></span></a> ';
@@ -874,7 +938,25 @@ function showtopic($topic, $edit, $addreply, $quoteID, $type)
             $actions .= '<input class="input" type="checkbox" name="postID[]" value="' . $dr['postID'] . '">';
         }
 
-        eval ("\$forum_topic_content = \"" . gettemplate("forum_topic_content") . "\";");
+        $data_array = array();
+        $data_array['$statuspic'] = $statuspic;
+        $data_array['$username'] = $username;
+        $data_array['$usertype'] = $usertype;
+        $data_array['$quote'] = $quote;
+        $data_array['$date'] = $date;
+        $data_array['$time'] = $time;
+        $data_array['$pm'] = $pm;
+        $data_array['$buddy'] = $buddy;
+        $data_array['$email'] = $email;
+        $data_array['$hp'] = $hp;
+        $data_array['$actions'] = $actions;
+        $data_array['$avatar'] = $avatar;
+        $data_array['$rang'] = $rang;
+        $data_array['$posts'] = $posts;
+        $data_array['$registered'] = $registered;
+        $data_array['$message'] = $message;
+        $data_array['$signatur'] = $signatur;
+        $forum_topic_content = $GLOBALS["_template"]->replaceTemplate("forum_topic_content", $data_array);
         echo $forum_topic_content;
         unset($actions);
         $i++;
@@ -908,10 +990,14 @@ function showtopic($topic, $edit, $addreply, $quoteID, $type)
         <input type="hidden" name="board" value="' . $dt['boardID'] . '"></div>';
     }
 
-    eval ("\$forum_topic_foot = \"" . gettemplate("forum_topic_foot") . "\";");
+    $forum_topic_foot = $GLOBALS["_template"]->replaceTemplate("forum_topic_foot", array());
     echo $forum_topic_foot;
 
-    eval ("\$forum_topics_actions = \"" . gettemplate("forum_topics_actions") . "\";");
+    $data_array = array();
+    $data_array['$sorter'] = $sorter;
+    $data_array['$page_link'] = $page_link;
+    $data_array['$topicactions'] = $topicactions;
+    $forum_topics_actions = $GLOBALS["_template"]->replaceTemplate("forum_topics_actions", $data_array);
     echo $forum_topics_actions;
 
     echo '<div class="text-right">' . $adminactions . '</div></form>';

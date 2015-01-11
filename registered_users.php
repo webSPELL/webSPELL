@@ -27,7 +27,7 @@
 
 $_language->readModule('registered_users');
 
-eval("\$title_registered_users = \"" . gettemplate("title_registered_users") . "\";");
+$title_registered_users = $GLOBALS["_template"]->replaceTemplate("title_registered_users", array());
 echo $title_registered_users;
 
 function clear($text)
@@ -50,11 +50,8 @@ if (isset($_GET[ 'page' ])) {
 }
 $sort = "nickname";
 if (isset($_GET[ 'sort' ])) {
-    if (
-        $_GET[ 'sort' ] === 'country' ||
-        $_GET[ 'sort' ] === 'nickname' ||
-        $_GET[ 'sort' ] === 'lastlogin' ||
-        $_GET[ 'sort' ] === 'registerdate'
+    if ($_GET[ 'sort' ] === 'country' || $_GET[ 'sort' ] === 'nickname' || $_GET[ 'sort' ] === 'lastlogin'
+        || $_GET[ 'sort' ] === 'registerdate'
     ) {
         $sort = $_GET[ 'sort' ];
     }
@@ -119,7 +116,12 @@ if ($anz) {
             '<a href="index.php?site=registered_users&amp;page=' . $page . '&amp;sort=' . $sort . '&amp;type=ASC">' .
             $_language->module[ 'sort' ] . ' <span class="glyphicon glyphicon-chevron-up"></span></a>';
     }
-    eval ("\$registered_users_head = \"" . gettemplate("registered_users_head") . "\";");
+    $data_array = array();
+    $data_array['$sorter'] = $sorter;
+    $data_array['$page_link'] = $page_link;
+    $data_array['$gesamt'] = $gesamt;
+    $data_array['$page'] = $page;
+    $registered_users_head = $GLOBALS["_template"]->replaceTemplate("registered_users_head", $data_array);
     echo $registered_users_head;
     $n = 1;
     while ($ds = mysqli_fetch_array($ergebnis)) {
@@ -185,11 +187,21 @@ if ($anz) {
                 $_language->module[ 'now_on' ];
         }
 
-        eval ("\$registered_users_content = \"" . gettemplate("registered_users_content") . "\";");
+        $data_array = array();
+        $data_array['$country'] = $country;
+        $data_array['$nickname'] = $nickname;
+        $data_array['$member'] = $member;
+        $data_array['$email'] = $email;
+        $data_array['$pm'] = $pm;
+        $data_array['$buddy'] = $buddy;
+        $data_array['$homepage'] = $homepage;
+        $data_array['$login'] = $login;
+        $data_array['$registereddate'] = $registereddate;
+        $registered_users_content = $GLOBALS["_template"]->replaceTemplate("registered_users_content", $data_array);
         echo $registered_users_content;
         $n++;
     }
-    eval ("\$registered_users_foot = \"" . gettemplate("registered_users_foot") . "\";");
+    $registered_users_foot = $GLOBALS["_template"]->replaceTemplate("registered_users_foot", array());
     echo $registered_users_foot;
 } else {
     echo $_language->module[ 'no_users' ];

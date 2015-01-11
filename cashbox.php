@@ -30,9 +30,9 @@ if (isset($site)) {
 }
 
 if (isset($_POST[ 'save' ]) && $_POST[ 'save' ]) {
-    include("_mysql.php");
-    include("_settings.php");
-    include("_functions.php");
+    include"_mysql.php";
+    include"_settings.php";
+    include"_functions.php";
     $_language->readModule('cash_box');
     if (!iscashadmin($userID)) {
         die($_language->module[ 'no_access' ]);
@@ -68,9 +68,9 @@ if (isset($_POST[ 'save' ]) && $_POST[ 'save' ]) {
 
     header("Location: index.php?site=cashbox&id=$id");
 } elseif (isset($_POST[ 'saveedit' ]) && $_POST[ 'saveedit' ]) {
-    include("_mysql.php");
-    include("_settings.php");
-    include("_functions.php");
+    include"_mysql.php";
+    include"_settings.php";
+    include"_functions.php";
     $_language->readModule('cash_box');
     if (!iscashadmin($userID)) {
         die($_language->module[ 'no_access' ]);
@@ -99,9 +99,9 @@ if (isset($_POST[ 'save' ]) && $_POST[ 'save' ]) {
 
     header("Location: index.php?site=cashbox&id=$id");
 } elseif (isset($_GET[ 'delete' ]) && $_GET[ 'delete' ]) {
-    include("_mysql.php");
-    include("_settings.php");
-    include("_functions.php");
+    include"_mysql.php";
+    include"_settings.php";
+    include"_functions.php";
     $_language->readModule('cash_box');
     if (!iscashadmin($userID)) {
         die($_language->module[ 'no_access' ]);
@@ -112,9 +112,9 @@ if (isset($_POST[ 'save' ]) && $_POST[ 'save' ]) {
 
     header("Location: index.php?site=cashbox");
 } elseif (isset($_POST[ 'pay' ]) && $_POST[ 'pay' ]) {
-    include("_mysql.php");
-    include("_settings.php");
-    include("_functions.php");
+    include"_mysql.php";
+    include"_settings.php";
+    include"_functions.php";
     $_language->readModule('cash_box');
     if (!iscashadmin($userID)) {
         die($_language->module[ 'no_access' ]);
@@ -127,18 +127,17 @@ if (isset($_POST[ 'save' ]) && $_POST[ 'save' ]) {
     $date = time();
     foreach ($payid as $usID => $costs) {
         if ($costs != "") {
-            if (
-                mysqli_num_rows(
-                    safe_query(
-                        "SELECT
+            if (mysqli_num_rows(
+                safe_query(
+                    "SELECT
                             payedID
                         FROM
                             " . PREFIX . "cash_box_payed
                         WHERE
                             userID='$usID'AND
                             cashID='".(int)$id."'"
-                    )
                 )
+            )
             ) {
                 safe_query(
                     "UPDATE
@@ -199,7 +198,12 @@ if (!isclanmember($userID) && !iscashadmin($userID)) {
         }
         $squads = '<option value="0">' . $_language->module[ 'each_squad' ] . '</option>' . getsquads();
 
-        eval ("\$cash_box_new = \"" . gettemplate("cash_box_new") . "\";");
+        $data_array = array();
+        $data_array['$squads'] = $squads;
+        $data_array['$euro'] = $euro;
+        $data_array['$usereuro'] = $usereuro;
+        $data_array['$anz'] = $anz;
+        $cash_box_new = $GLOBALS["_template"]->replaceTemplate("cash_box_new", $data_array);
         echo $cash_box_new;
     } elseif (isset($_GET[ 'action' ]) && $_GET[ 'action' ] == "edit") {
         if (!iscashadmin($userID)) {
@@ -233,7 +237,16 @@ if (!isclanmember($userID) && !iscashadmin($userID)) {
             $squads
         );
 
-        eval ("\$cashbox_edit = \"" . gettemplate("cash_box_edit") . "\";");
+        $data_array = array();
+        $data_array['$squads'] = $squads;
+        $data_array['$usage'] = $usage;
+        $data_array['$info'] = $info;
+        $data_array['$bank_account'] = $bank_account;
+        $data_array['$date'] = $date;
+        $data_array['$totalcosts'] = $ds['totalcosts'];
+        $data_array['$usercosts'] = $ds['usercosts'];
+        $data_array['$anz'] = $anz;
+        $cashbox_edit = $GLOBALS["_template"]->replaceTemplate("cash_box_edit", $data_array);
         echo $cashbox_edit;
     } else {
         echo '<h2>' . $_language->module[ 'cash_box' ] . '</h2>';
@@ -335,7 +348,15 @@ if (!isclanmember($userID) && !iscashadmin($userID)) {
                             class="btn btn-danger">';
                 }
 
-                eval ("\$cash_box_usage = \"" . gettemplate("cash_box_usage") . "\";");
+                $data_array = array();
+                $data_array['$usage'] = $usage;
+                $data_array['$date'] = $date;
+                $data_array['$totalcosts'] = $ds['totalcosts'];
+                $data_array['$usercosts'] = $ds['usercosts'];
+                $data_array['$paydate'] = $paydate;
+                $data_array['$konto'] = $konto;
+                $data_array['$adminaction'] = $adminaction;
+                $cash_box_usage = $GLOBALS["_template"]->replaceTemplate("cash_box_usage", $data_array);
                 echo $cash_box_usage;
 
                 $all = safe_query(
@@ -370,7 +391,7 @@ if (!isclanmember($userID) && !iscashadmin($userID)) {
                     }
                 }
 
-                eval ("\$cash_box_head = \"" . gettemplate("cash_box_head") . "\";");
+                $cash_box_head = $GLOBALS["_template"]->replaceTemplate("cash_box_head", array());
                 echo $cash_box_head;
 
                 if (count($members)) {
@@ -422,7 +443,11 @@ if (!isclanmember($userID) && !iscashadmin($userID)) {
                             $payment = $costs;
                         }
 
-                        eval ("\$cash_box_content = \"" . gettemplate("cash_box_content") . "\";");
+                        $data_array = array();
+                        $data_array['$user'] = $user;
+                        $data_array['$payed'] = $payed;
+                        $data_array['$payment'] = $payment;
+                        $cash_box_content = $GLOBALS["_template"]->replaceTemplate("cash_box_content", $data_array);
                         echo $cash_box_content;
                     }
                 }
@@ -432,7 +457,9 @@ if (!isclanmember($userID) && !iscashadmin($userID)) {
                     <input type="submit" name="pay" value="' . $_language->module[ 'update' ] . '"
                         class="btn btn-danger">';
                 }
-                eval ("\$cash_box_foot = \"" . gettemplate("cash_box_foot") . "\";");
+                $data_array = array();
+                $data_array['$admin'] = $admin;
+                $cash_box_foot = $GLOBALS["_template"]->replaceTemplate("cash_box_foot", $data_array);
                 echo $cash_box_foot;
             } else {
                 echo $_language->module[ 'no_entries' ];
@@ -474,7 +501,10 @@ if (!isclanmember($userID) && !iscashadmin($userID)) {
                 </a>';
         }
 
-        eval ("\$cash_box_top = \"" . gettemplate("cash_box_top") . "\";");
+        $data_array = array();
+        $data_array['$costs'] = $costs;
+        $data_array['$cashadmin'] = $cashadmin;
+        $cash_box_top = $GLOBALS["_template"]->replaceTemplate("cash_box_top", $data_array);
         echo $cash_box_top;
 
         if (!isset($_GET[ 'id' ])) {

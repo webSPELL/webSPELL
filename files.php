@@ -86,7 +86,7 @@ function unit_to_size($num, $unit)
     return $size;
 }
 
-eval ("\$title_files = \"" . gettemplate("title_files") . "\";");
+$title_files = $GLOBALS["_template"]->replaceTemplate("title_files", array());
 echo $title_files;
 
 if (isset($_GET[ 'action' ])) {
@@ -153,9 +153,8 @@ if ($action == "save") {
             }
         }
 
-        if (
-            safe_query(
-                "INSERT INTO
+        if (safe_query(
+            "INSERT INTO
                     `" . PREFIX . "files` (
                         `filecatID`,
                         `poster`,
@@ -180,7 +179,7 @@ if ($action == "save") {
                         '0',
                         '" . $accesslevel . "'
                     )"
-            )
+        )
         ) {
             redirect(
                 "index.php?site=files&amp;file=" . mysqli_insert_id($_database) . "",
@@ -253,10 +252,9 @@ if ($action == "save") {
             `fileID` = '" . (int)$fileID."'"
     ) || die(redirect("index.php?site=files", $_language->module[ 'failed_save_file-info' ], "3"));
     if (isset($file)) {
-        if (
-            !safe_query(
-                "UPDATE `" . PREFIX . "files` SET `file` = '" . $file . "' WHERE `fileID` = '" . (int)$fileID
-            )
+        if (!safe_query(
+            "UPDATE `" . PREFIX . "files` SET `file` = '" . $file . "' WHERE `fileID` = '" . (int)$fileID
+        )
         ) {
             die(redirect("index.php?site=files", $_language->module[ 'failed_edit_file' ], "3"));
         }
@@ -326,17 +324,16 @@ if ($action == "save") {
             while ($dr = mysqli_fetch_array($rubrics)) {
                 $filecats .= '<option value="' . $dr[ 'filecatID' ] . '">' .
                     $offset . htmlspecialchars($dr[ 'name' ]) . '</option>';
-                if (
-                    mysqli_num_rows(
-                        safe_query(
-                            "SELECT
+                if (mysqli_num_rows(
+                    safe_query(
+                        "SELECT
                                 *
                             FROM
                                 `" . PREFIX . "files_categorys`
                             WHERE
                                 `subcatID` = '" . (int)$dr[ 'filecatID' ]."'"
-                        )
                     )
+                )
                 ) {
                     $filecats .= generate_options("", $offset . "- ", $dr[ 'filecatID' ]);
                 }
@@ -356,7 +353,11 @@ if ($action == "save") {
             redirect('index.php?site=files', $_language->module[ 'first_create_file-category' ], '3');
         } else {
             echo $adminactions;
-            eval("\$files_new = \"" . gettemplate("files_new") . "\";");
+            $data_array = array();
+            $data_array['$userID'] = $userID;
+            $data_array['$filecats'] = $filecats;
+            $data_array['$access'] = $access;
+            $files_new = $GLOBALS["_template"]->replaceTemplate("files_new", $data_array);
             echo $files_new;
         }
     } else {
@@ -387,17 +388,16 @@ if ($action == "save") {
                     $filecats .=
                         '<option value="' . $dr[ 'filecatID' ] . '">' . $offset . htmlspecialchars($dr[ 'name' ]) .
                         '</option>';
-                    if (
-                        mysqli_num_rows(
-                            safe_query(
-                                "SELECT
+                    if (mysqli_num_rows(
+                        safe_query(
+                            "SELECT
                                     *
                                 FROM
                                     `" . PREFIX . "files_categorys`
                                 WHERE
                                     `subcatID` = '" . (int)$dr[ 'filecatID' ]."'"
-                            )
                         )
+                    )
                     ) {
                         $filecats .= generate_options("", $offset . "- ", $dr[ 'filecatID' ]);
                     }
@@ -468,7 +468,18 @@ if ($action == "save") {
                 }
             }
 
-            eval("\$files_edit = \"" . gettemplate("files_edit") . "\";");
+            $data_array = array();
+            $data_array['$adminactions'] = $adminactions;
+            $data_array['$name'] = $name;
+            $data_array['$filecats'] = $filecats;
+            $data_array['$description'] = $description;
+            $data_array['$access'] = $access;
+            $data_array['$extern'] = $extern;
+            $data_array['$unit'] = $unit;
+            $data_array['$mirror2'] = $mirror2;
+            $data_array['$mirror3'] = $mirror3;
+            $data_array['$fileID'] = $fileID;
+            $files_edit = $GLOBALS["_template"]->replaceTemplate("files_edit", $data_array);
             echo $files_edit;
         } else {
             redirect("index.php?site=files", $_language->module[ 'no_access' ], "3");
@@ -549,10 +560,12 @@ if ($action == "save") {
             name"
     );
     if (mysqli_num_rows($subcats)) {
-        eval("\$files_category_head = \"" . gettemplate("files_category_head") . "\";");
+        $data_array = array();
+        $data_array['$category'] = $category;
+        $files_category_head = $GLOBALS["_template"]->replaceTemplate("files_category_head", $data_array);
         echo $files_category_head;
 
-        eval("\$files_category_list = \"" . gettemplate("files_subcat_list_head") . "\";");
+        $files_category_list = $GLOBALS["_template"]->replaceTemplate("files_subcat_list_head", array());
         echo $files_category_list;
 
         while ($subcat = mysqli_fetch_array($subcats)) {
@@ -587,10 +600,15 @@ if ($action == "save") {
                     )
                 );
 
-            eval("\$files_category_list = \"" . gettemplate("files_subcat_list") . "\";");
+            $data_array = array();
+            $data_array['$catname'] = $catname;
+            $data_array['$subcategories'] = $subcategories;
+            $data_array['$cat_file_total'] = $cat_file_total;
+            $data_array['$downloads'] = $downloads;
+            $files_category_list = $GLOBALS["_template"]->replaceTemplate("files_subcat_list", $data_array);
             echo $files_category_list;
         }
-        eval("\$files_category_list = \"" . gettemplate("files_subcat_list_foot") . "\";");
+        $files_category_list = $GLOBALS["_template"]->replaceTemplate("files_subcat_list_foot", array());
         echo $files_category_list;
     }
 
@@ -607,7 +625,9 @@ if ($action == "save") {
             `filename`"
     );
     if (mysqli_num_rows($files)) {
-        eval("\$files_category_list = \"" . gettemplate("files_category_list_head") . "\";");
+        $data_array = array();
+        $data_array['$category'] = $category;
+        $files_category_list = $GLOBALS["_template"]->replaceTemplate("files_category_list_head", $data_array);
         echo $files_category_list;
 
         $n = 0;
@@ -656,10 +676,16 @@ if ($action == "save") {
                 </a>';
             }
 
-            eval("\$files_category_list = \"" . gettemplate("files_category_list") . "\";");
+            $data_array = array();
+            $data_array['$filename'] = $filename;
+            $data_array['$fileinfo'] = $fileinfo;
+            $data_array['$fileload'] = $fileload;
+            $data_array['$ratingpic'] = $ratingpic;
+            $data_array['$link'] = $link;
+            $files_category_list = $GLOBALS["_template"]->replaceTemplate("files_category_list", $data_array);
             echo $files_category_list;
         }
-        eval("\$files_category_list = \"" . gettemplate("files_category_list_foot") . "\";");
+        $files_category_list = $GLOBALS["_template"]->replaceTemplate("files_category_list_foot", array());
         echo $files_category_list;
     }
     if (!isset($n)) {
@@ -882,7 +908,26 @@ if ($action == "save") {
             $_language->module[ 'register' ] . '</a>';
     }
 
-    eval("\$files_display = \"" . gettemplate("files_display") . "\";");
+    $data_array = array();
+    $data_array['$adminactions'] = $adminactions;
+    $data_array['$category'] = $category;
+    $data_array['$filename'] = $filename;
+    $data_array['$fileinfo'] = $fileinfo;
+    $data_array['$categories'] = $categories;
+    $data_array['$uploader'] = $uploader;
+    $data_array['$date'] = $date;
+    $data_array['$ratingpic'] = $ratingpic;
+    $data_array['$rating'] = $rating;
+    $data_array['$filevotes'] = $filevotes;
+    $data_array['$rateform'] = $rateform;
+    $data_array['$filesize'] = $filesize;
+    $data_array['$downloads'] = $downloads;
+    $data_array['$traffic'] = $traffic;
+    $data_array['$reportlink'] = $reportlink;
+    $data_array['$link'] = $link;
+    $data_array['$mirrorlist'] = $mirrorlist;
+    $data_array['$admintools'] = $admintools;
+    $files_display = $GLOBALS["_template"]->replaceTemplate("files_display", $data_array);
     echo $files_display;
 } elseif ($action == "report") {
     // DEAD-LINK TICKET SYSTEM
@@ -911,7 +956,14 @@ if ($action == "save") {
                 </div>';
         }
 
-        eval("\$report_deadlink = \"" . gettemplate("report_deadlink") . "\";");
+        $data_array = array();
+        $data_array['$type_'] = $type_;
+        $data_array['$id'] = $id;
+        $data_array['$mode'] = $mode;
+        $data_array['$type'] = $type;
+        $data_array['$referer'] = $referer;
+        $data_array['$captcha_form'] = $captcha_form;
+        $report_deadlink = $GLOBALS["_template"]->replaceTemplate("report_deadlink", $data_array);
         echo $report_deadlink;
     } else {
         redirect("index.php?site=files", $_language->module[ 'cant_report_without_fileID' ], "3");
@@ -1031,8 +1083,18 @@ if ($action == "save") {
         }
         $top5 .= '</ul>';
 
-        eval("\$files_stats = \"" . gettemplate("files_stats") . "\";");
-        eval("\$files_overview = \"" . gettemplate("files_overview_head") . "\";");
+        $data_array = array();
+        $data_array['$totalfiles'] = $totalfiles;
+        $data_array['$totalcats'] = $totalcats;
+        $data_array['$hddspace'] = $hddspace;
+        $data_array['$traffic'] = $traffic;
+        $data_array['$lastfile'] = $lastfile;
+        $files_stats = $GLOBALS["_template"]->replaceTemplate("files_stats", $data_array);
+        $data_array = array();
+        $data_array['$adminactions'] = $adminactions;
+        $data_array['$files_stats'] = $files_stats;
+        $data_array['$top5'] = $top5;
+        $files_overview = $GLOBALS["_template"]->replaceTemplate("files_overview_head", $data_array);
         echo $files_overview;
 
         unset($traffic);
@@ -1114,7 +1176,12 @@ if ($action == "save") {
                         '</a>';
 
                     // output
-                    eval("\$files_category = \"" . gettemplate("files_category") . "\";");
+                    $data_array = array();
+                    $data_array['$catname'] = $catname;
+                    $data_array['$subcategories'] = $subcategories;
+                    $data_array['$catFileTotal'] = $catFileTotal;
+                    $data_array['$downloads'] = $downloads;
+                    $files_category = $GLOBALS["_template"]->replaceTemplate("files_category", $data_array);
                     echo $files_category;
 
                     unset($traffic);
@@ -1122,7 +1189,7 @@ if ($action == "save") {
                 }
             }
         }
-        eval ("\$files_overview = \"" . gettemplate("files_overview_foot") . "\";");
+        $files_overview = $GLOBALS["_template"]->replaceTemplate("files_overview_foot", array());
         echo $files_overview;
     } else {
         echo $_language->module[ 'no_categories_and_files' ];

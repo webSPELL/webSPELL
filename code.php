@@ -33,5 +33,8 @@ $_language->readModule('code');
 
 $bg1 = BG_1;
 $bg2 = BG_2;
-eval ("\$bbcode = \"" . gettemplate("bbcode") . "\";");
+$data_array = array();
+$data_array['$rewriteBase'] = $rewriteBase;
+$data_array['$componentsCss'] = $componentsCss;
+$bbcode = $GLOBALS["_template"]->replaceTemplate("bbcode", $data_array);
 echo $bbcode;

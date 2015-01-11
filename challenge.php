@@ -29,7 +29,7 @@ if (isset($site)) {
     $_language->readModule('challenge');
 }
 
-eval ("\$title_challenge = \"" . gettemplate("title_challenge") . "\";");
+$title_challenge = $GLOBALS["_template"]->replaceTemplate("title_challenge", array());
 echo $title_challenge;
 
 if (isset($_GET['action'])) {
@@ -218,7 +218,20 @@ if ($show == true) {
 
     if ($loggedin) {
         $email = getemail($userID);
-        eval ("\$challenge_loggedin = \"" . gettemplate("challenge_loggedin") . "\";");
+        $data_array = array();
+        $data_array['$showerror'] = $showerror;
+        $data_array['$date_now'] = $date_now;
+        $data_array['$datetime'] = $datetime;
+        $data_array['$squads'] = $squads;
+        $data_array['$opponent'] = $opponent;
+        $data_array['$opphp'] = $opphp;
+        $data_array['$league'] = $league;
+        $data_array['$countries'] = $countries;
+        $data_array['$map'] = $map;
+        $data_array['$server'] = $server;
+        $data_array['$email'] = $email;
+        $data_array['$info'] = $info;
+        $challenge_loggedin = $GLOBALS["_template"]->replaceTemplate("challenge_loggedin", $data_array);
         echo $challenge_loggedin;
     } else {
         $CAPCLASS = new \webspell\Captcha;
@@ -230,7 +243,22 @@ if ($show == true) {
         } else {
             $email = "";
         }
-        eval ("\$challenge_notloggedin = \"" . gettemplate("challenge_notloggedin") . "\";");
+        $data_array = array();
+        $data_array['$showerror'] = $showerror;
+        $data_array['$date_now'] = $date_now;
+        $data_array['$datetime'] = $datetime;
+        $data_array['$squads'] = $squads;
+        $data_array['$opponent'] = $opponent;
+        $data_array['$opphp'] = $opphp;
+        $data_array['$league'] = $league;
+        $data_array['$countries'] = $countries;
+        $data_array['$map'] = $map;
+        $data_array['$server'] = $server;
+        $data_array['$email'] = $email;
+        $data_array['$info'] = $info;
+        $data_array['$captcha'] = $captcha;
+        $data_array['$hash'] = $hash;
+        $challenge_notloggedin = $GLOBALS["_template"]->replaceTemplate("challenge_notloggedin", $data_array);
         echo $challenge_notloggedin;
     }
 }
@@ -289,7 +317,19 @@ if (isclanwaradmin($userID)) {
                 '</a> <a href="index.php?site=challenge&amp;action=delete&amp;chID=' . $ds['chID'] .
                 '" class="btn btn-danger btn-xs" role="button">' . $_language->module['delete_challenge'] . '</a>';
 
-            eval ("\$challenges = \"" . gettemplate("challenges") . "\";");
+            $data_array = array();
+            $data_array['$date'] = $date;
+            $data_array['$country'] = $country;
+            $data_array['$opponent'] = $opponent;
+            $data_array['$cwdate'] = $cwdate;
+            $data_array['$squad'] = $squad;
+            $data_array['$league'] = $league;
+            $data_array['$map'] = $map;
+            $data_array['$server'] = $server;
+            $data_array['$email'] = $email;
+            $data_array['$info'] = $info;
+            $data_array['$actions'] = $actions;
+            $challenges = $GLOBALS["_template"]->replaceTemplate("challenges", $data_array);
             echo $challenges;
             $i++;
         }

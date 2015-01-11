@@ -27,7 +27,7 @@
 
 $_language->readModule('squads');
 
-eval ("\$title_squads = \"" . gettemplate("title_squads") . "\";");
+$title_squads = $GLOBALS["_template"]->replaceTemplate("title_squads", array());
 echo $title_squads;
 if (isset($_GET[ 'action' ])) {
     $action = $_GET[ 'action' ];
@@ -91,7 +91,14 @@ if ($action == "show") {
             ORDER BY
                 sort"
         );
-        eval("\$squads_head = \"" . gettemplate("squads_head") . "\";");
+        $data_array = array();
+        $data_array['$name'] = $name;
+        $data_array['$anzmembers'] = $anzmembers;
+        $data_array['$results'] = $results;
+        $data_array['$awards'] = $awards;
+        $data_array['$challenge'] = $challenge;
+        $data_array['$games'] = $games;
+        $squads_head = $GLOBALS["_template"]->replaceTemplate("squads_head", $data_array);
         echo $squads_head;
 
         $i = 1;
@@ -169,11 +176,27 @@ if ($action == "show") {
                 $activity = '<font color="' . $loosecolor . '">' . $_language->module[ 'inactive' ] . '</font>';
             }
 
-            eval ("\$squads_content = \"" . gettemplate("squads_content") . "\";");
+            $data_array = array();
+            $data_array['$country'] = $country;
+            $data_array['$firstname'] = $firstname;
+            $data_array['$nickname'] = $nickname;
+            $data_array['$lastname'] = $lastname;
+            $data_array['$statuspic'] = $statuspic;
+            $data_array['$position'] = $position;
+            $data_array['$activity'] = $activity;
+            $data_array['$email'] = $email;
+            $data_array['$pm'] = $pm;
+            $data_array['$buddy'] = $buddy;
+            $data_array['$town'] = $town;
+            $data_array['$memberID'] = $dm['userID'];
+            $data_array['$userpic'] = $userpic;
+            $data_array['$nicknamee'] = $nicknamee;
+            $data_array['$userdescription'] = $userdescription;
+            $squads_content = $GLOBALS["_template"]->replaceTemplate("squads_content", $data_array);
             echo $squads_content;
             $i++;
         }
-        eval ("\$squads_foot = \"" . gettemplate("squads_foot") . "\";");
+        $squads_foot = $GLOBALS["_template"]->replaceTemplate("squads_foot", array());
         echo $squads_foot;
     }
 } else {
@@ -238,7 +261,16 @@ if ($action == "show") {
         }
 
         $bgcat = BGCAT;
-        eval ("\$squads = \"" . gettemplate("squads") . "\";");
+        $data_array = array();
+        $data_array['$icon'] = $icon;
+        $data_array['$name'] = $name;
+        $data_array['$anzmembers'] = $anzmembers;
+        $data_array['$results'] = $results;
+        $data_array['$awards'] = $awards;
+        $data_array['$challenge'] = $challenge;
+        $data_array['$info'] = $info;
+        $data_array['$details'] = $details;
+        $squads = $GLOBALS["_template"]->replaceTemplate("squads", $data_array);
         echo $squads;
 
         $i++;

@@ -32,9 +32,9 @@ if (isset($_GET[ 'action' ])) {
 }
 
 if ($action == "add") {
-    include("_mysql.php");
-    include("_settings.php");
-    include("_functions.php");
+    include"_mysql.php";
+    include"_settings.php";
+    include"_functions.php";
     $_language->readModule('buddys');
     if (!$userID) {
         redirect('index.php?site=buddies', $_language->module[ 'not_logged' ], 3);
@@ -68,9 +68,9 @@ if ($action == "add") {
         }
     }
 } elseif ($action == "ignore") {
-    include("_mysql.php");
-    include("_settings.php");
-    include("_functions.php");
+    include"_mysql.php";
+    include"_settings.php";
+    include"_functions.php";
     $_language->readModule('buddys');
     if (!$userID) {
         redirect('index.php?site=buddies', $_language->module[ 'not_logged' ], 3);
@@ -107,9 +107,9 @@ if ($action == "add") {
         }
     }
 } elseif ($action == "readd") {
-    include("_mysql.php");
-    include("_settings.php");
-    include("_functions.php");
+    include"_mysql.php";
+    include"_settings.php";
+    include"_functions.php";
     $_language->readModule('buddys');
     if (!$userID) {
         redirect('index.php?site=buddies', $_language->module[ 'not_logged' ], 3);
@@ -122,9 +122,9 @@ if ($action == "add") {
         header("Location: index.php?site=buddies");
     }
 } elseif ($action == "delete") {
-    include("_mysql.php");
-    include("_settings.php");
-    include("_functions.php");
+    include"_mysql.php";
+    include"_settings.php";
+    include"_functions.php";
     $_language->readModule('buddys');
     if (!$userID) {
         redirect('index.php?site=buddies', $_language->module[ 'not_logged' ], 3);
@@ -139,10 +139,10 @@ if ($action == "add") {
 } elseif ($userID) {
     $_language->readModule('buddys');
 
-    eval ("\$title_buddys = \"" . gettemplate("title_buddys") . "\";");
+    $title_buddys = $GLOBALS["_template"]->replaceTemplate("title_buddys", array());
     echo $title_buddys;
 
-    eval ("\$buddys_head = \"" . gettemplate("buddys_head") . "\";");
+    $buddys_head = $GLOBALS["_template"]->replaceTemplate("buddys_head", array());
     echo $buddys_head;
     $ergebnis = safe_query("SELECT * FROM " . PREFIX . "buddys WHERE userID='$userID' AND banned='0'");
     $anz = mysqli_num_rows($ergebnis);
@@ -170,7 +170,13 @@ if ($action == "add") {
                 $statuspic = '<img src="images/icons/online.gif" width="7" height="7" alt="online">';
             }
 
-            eval ("\$buddys_content = \"" . gettemplate("buddys_content") . "\";");
+            $data_array = array();
+            $data_array['$country'] = $country;
+            $data_array['$buddyID'] = $ds['buddy'];
+            $data_array['$nickname'] = $nickname;
+            $data_array['$member'] = $member;
+            $data_array['$userID'] = $userID;
+            $buddys_content = $GLOBALS["_template"]->replaceTemplate("buddys_content", $data_array);
             echo $buddys_content;
             $n++;
         }
@@ -178,10 +184,10 @@ if ($action == "add") {
         echo '<tr><td colspan="4">' . $_language->module[ 'buddy_nousers' ] . '</td></tr>';
     }
 
-    eval ("\$buddys_foot = \"" . gettemplate("buddys_foot") . "\";");
+    $buddys_foot = $GLOBALS["_template"]->replaceTemplate("buddys_foot", array());
     echo $buddys_foot;
 
-    eval ("\$ignore_head = \"" . gettemplate("ignore_head") . "\";");
+    $ignore_head = $GLOBALS["_template"]->replaceTemplate("ignore_head", array());
     echo $ignore_head;
     $ergebnis = safe_query("SELECT * FROM " . PREFIX . "buddys WHERE userID='$userID' AND banned='1'");
     $anz = mysqli_num_rows($ergebnis);
@@ -208,7 +214,14 @@ if ($action == "add") {
             } else {
                 $statuspic = '<img src="images/icons/online.gif" width="7" height="7" alt="online">';
             }
-            eval ("\$ignore_content = \"" . gettemplate("ignore_content") . "\";");
+            $data_array = array();
+            $data_array['$country'] = $country;
+            $data_array['$ds'] = $ds;
+            $data_array['$nickname'] = $nickname;
+            $data_array['$member'] = $member;
+            $data_array['$userID'] = $userID;
+            $data_array['$buddyID'] = $ds['buddy'];
+            $ignore_content = $GLOBALS["_template"]->replaceTemplate("ignore_content", $data_array);
             echo $ignore_content;
             $n++;
         }
@@ -216,7 +229,7 @@ if ($action == "add") {
         echo $_language->module[ 'ignore_nousers' ];
     }
 
-    eval ("\$ignore_foot = \"" . gettemplate("ignore_foot") . "\";");
+    $ignore_foot = $GLOBALS["_template"]->replaceTemplate("ignore_foot", array());
     echo $ignore_foot;
 } else {
     $_language->readModule('buddys');

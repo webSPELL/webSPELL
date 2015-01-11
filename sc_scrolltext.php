@@ -36,7 +36,12 @@ if (mysqli_num_rows($ergebnis)) {
     $delay = $ds[ 'delay' ];
     $color = $ds[ 'color' ];
 
-    eval ("\$sc_scrolltext = \"" . gettemplate("sc_scrolltext") . "\";");
+    $data_array = array();
+    $data_array['$delay'] = $delay;
+    $data_array['$direction'] = $direction;
+    $data_array['$color'] = $color;
+    $data_array['$scrolltext'] = $scrolltext;
+    $sc_scrolltext = $GLOBALS["_template"]->replaceTemplate("sc_scrolltext", $data_array);
     echo $sc_scrolltext;
 } else {
     echo $_language->module[ 'no_text' ];

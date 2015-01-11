@@ -32,28 +32,6 @@ systeminc('ip');
 
 // -- GLOBAL WEBSPELL FUNCTIONS -- //
 
-function gettemplate($template, $endung = "html", $calledfrom = "root")
-{
-    $templatefolder = "templates";
-    if ($calledfrom == 'root') {
-        return str_replace(
-            "\"",
-            "\\\"",
-            $GLOBALS['_language']->replace(
-                file_get_contents($templatefolder . "/" . $template . "." . $endung)
-            )
-        );
-    } elseif ($calledfrom == 'admin') {
-        return str_replace(
-            "\"",
-            "\\\"",
-            $GLOBALS['_language']->replace(
-                file_get_contents("../" . $templatefolder . "/" . $template . "." . $endung)
-            )
-        );
-    }
-}
-
 function makepagelink($link, $page, $pages, $sub = '')
 {
     $page_link = '<span class="pagelink"><img src="images/icons/multipage.gif" width="10" height="12" alt=""> <small>';
@@ -159,7 +137,12 @@ function showlock($reason, $time)
 {
     $gettitle = mysqli_fetch_array(safe_query("SELECT title FROM " . PREFIX . "styles"));
     $pagetitle = $gettitle['title'];
-    eval("\$lock = \"" . gettemplate("lock") . "\";");
+    $data_array = array();
+    $data_array['$pagetitle'] = $pagetitle;
+    $data_array['$rewriteBase'] = $rewriteBase;
+    $data_array['$reason'] = $reason;
+    $lock = $GLOBALS["_template"]->replaceTemplate("lock", $data_array);
+
     die($lock);
 }
 
@@ -298,8 +281,11 @@ $_language->setLanguage($default_language);
 // -- TEMPLATE SYSTEM -- //
 
 systeminc('func/template');
-$_template = new \webspell\Template();
-
+if (!stristr($_SERVER['SCRIPT_NAME'], '/admin/')) {
+    $_template = new \webspell\Template();
+} else {
+    $_template = new \webspell\Template('../templates/');
+}
 // -- GALLERY -- //
 
 systeminc('func/gallery');

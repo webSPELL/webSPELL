@@ -32,9 +32,9 @@ if (isset($_GET[ 'action' ])) {
 }
 
 if ($action == "save") {
-    include("_mysql.php");
-    include("_settings.php");
-    include("_functions.php");
+    include"_mysql.php";
+    include"_settings.php";
+    include"_functions.php";
     $_language->readModule('articles');
 
     if (!isnewsadmin($userID)) {
@@ -149,9 +149,9 @@ if ($action == "save") {
 
     die('<body onload="window.close()"></body>');
 } elseif (isset($_GET[ 'delete' ])) {
-    include("_mysql.php");
-    include("_settings.php");
-    include("_functions.php");
+    include"_mysql.php";
+    include"_settings.php";
+    include"_functions.php";
     $_language->readModule('articles');
 
     if (!isnewsadmin($userID)) {
@@ -204,7 +204,9 @@ function top5()
     $top = $_language->module[ 'top5_rating' ];
     echo '<div class="row">';
 
-    eval ("\$top5_head = \"" . gettemplate("top5_head") . "\";");
+    $data_array = array();
+    $data_array['$top'] = $top;
+    $top5_head = $GLOBALS["_template"]->replaceTemplate("top5_head", $data_array);
     echo $top5_head;
 
     $n = 1;
@@ -243,7 +245,9 @@ function top5()
     $ergebnis = safe_query("SELECT * FROM " . PREFIX . "articles WHERE saved='1' ORDER BY points DESC LIMIT 0,5");
     $top = $_language->module[ 'top5_points' ];
 
-    eval ("\$top5_head = \"" . gettemplate("top5_head") . "\";");
+    $data_array = array();
+    $data_array['$top'] = $top;
+    $top5_head = $GLOBALS["_template"]->replaceTemplate("top5_head", $data_array);
     echo $top5_head;
 
     $n = 1;
@@ -268,9 +272,9 @@ function top5()
 }
 
 if ($action == "new") {
-    include("_mysql.php");
-    include("_settings.php");
-    include("_functions.php");
+    include"_mysql.php";
+    include"_settings.php";
+    include"_functions.php";
 
     $_language->readModule('articles');
     $_language->readModule('bbcode', true);
@@ -310,18 +314,26 @@ if ($action == "new") {
         $componentsCss = generateComponents($components['css'], 'css');
         $componentsJs = generateComponents($components['js'], 'js');
 
-        eval ("\$addbbcode = \"" . gettemplate("addbbcode") . "\";");
-        eval ("\$addflags = \"" . gettemplate("flags") . "\";");
+        $addbbcode = $GLOBALS["_template"]->replaceTemplate("addbbcode", array());
+        $addflags = $GLOBALS["_template"]->replaceTemplate("flags", array());
 
-        eval ("\$articles_post = \"" . gettemplate("articles_post") . "\";");
+        $data_array = array();
+        $data_array['$rewriteBase'] = $rewriteBase;
+        $data_array['$componentsCss'] = $componentsCss;
+        $data_array['$addbbcode'] = $addbbcode;
+        $data_array['$addflags'] = $addflags;
+        $data_array['$articlesID'] = $articlesID;
+        $data_array['$title'] = $title;
+        $data_array['$componentsJs'] = $componentsJs;
+        $articles_post = $GLOBALS["_template"]->replaceTemplate("articles_post", $data_array);
         echo $articles_post;
     } else {
         redirect('index.php?site=articles', $_language->module[ 'no_access' ]);
     }
 } elseif ($action == "edit") {
-    include("_mysql.php");
-    include("_settings.php");
-    include("_functions.php");
+    include"_mysql.php";
+    include"_settings.php";
+    include"_functions.php";
 
     $_language->readModule('articles');
     $_language->readModule('bbcode', true);
@@ -447,10 +459,33 @@ if ($action == "new") {
             $componentsJs .= '<script src="' . $component . '"></script>';
         }
 
-        eval ("\$addbbcode = \"" . gettemplate("addbbcode") . "\";");
-        eval ("\$addflags = \"" . gettemplate("flags") . "\";");
+        $addbbcode = $GLOBALS["_template"]->replaceTemplate("addbbcode", array());
+        $addflags = $GLOBALS["_template"]->replaceTemplate("flags", array());
 
-        eval ("\$articles_edit = \"" . gettemplate("articles_edit") . "\";");
+        $data_array = array();
+        $data_array['$rewriteBase'] = $rewriteBase;
+        $data_array['$componentsCss'] = $componentsCss;
+        $data_array['$message_vars'] = $message_vars;
+        $data_array['$addbbcode'] = $addbbcode;
+        $data_array['$addflags'] = $addflags;
+        $data_array['$link1'] = $link1;
+        $data_array['$url1'] = $url1;
+        $data_array['$window1'] = $window1;
+        $data_array['$link2'] = $link2;
+        $data_array['$url2'] = $url2;
+        $data_array['$window2'] = $window2;
+        $data_array['$link3'] = $link3;
+        $data_array['$url3'] = $url3;
+        $data_array['$window3'] = $window3;
+        $data_array['$link4'] = $link4;
+        $data_array['$url4'] = $url4;
+        $data_array['$window4'] = $window4;
+        $data_array['$articlesID'] = $articlesID;
+        $data_array['$userID'] = $userID;
+        $data_array['$title'] = $title;
+        $data_array['$pages'] = $pages;
+        $data_array['$componentsJs'] = $componentsJs;
+        $articles_edit = $GLOBALS["_template"]->replaceTemplate("articles_edit", $data_array);
         echo $articles_edit;
     } else {
         redirect('index.php?site=articles', $_language->module[ 'no_access' ]);
@@ -626,7 +661,16 @@ if ($action == "new") {
         $tags = \webspell\Tags::getTagsLinked('articles', $articlesID);
 
         $bg1 = BG_1;
-        eval ("\$articles = \"" . gettemplate("articles") . "\";");
+        $data_array = array();
+        $data_array['$title'] = $title;
+        $data_array['$date'] = $date;
+        $data_array['$content'] = $content;
+        $data_array['$adminaction'] = $adminaction;
+        $data_array['$poster'] = $poster;
+        $data_array['$related'] = $related;
+        $data_array['$ratingpic'] = $ratingpic;
+        $data_array['$rateform'] = $rateform;
+        $articles = $GLOBALS["_template"]->replaceTemplate("articles", $data_array);
         echo $articles;
 
         unset($related);
@@ -641,7 +685,7 @@ if ($action == "new") {
         $type = "ar";
         $referer = "index.php?site=articles&amp;action=show&amp;articlesID=$articlesID";
 
-        include("comments.php");
+        include"comments.php";
     } else {
         echo $_language->module[ 'no_entries' ];
     }
@@ -655,8 +699,8 @@ if ($action == "new") {
     }
     $sort = "date";
     if (isset($_GET[ 'sort' ])) {
-        if (($_GET[ 'sort' ] == 'date') || ($_GET[ 'sort' ] == 'poster') || ($_GET[ 'sort' ] == 'rating') ||
-            ($_GET[ 'sort' ] == 'viewed')
+        if (($_GET[ 'sort' ] == 'date') || ($_GET[ 'sort' ] == 'poster') || ($_GET[ 'sort' ] == 'rating')
+            || ($_GET[ 'sort' ] == 'viewed')
         ) {
             $sort = $_GET[ 'sort' ];
         }
@@ -668,7 +712,7 @@ if ($action == "new") {
         }
     }
 
-    eval ("\$title_articles = \"" . gettemplate("title_articles") . "\";");
+    $title_articles = $GLOBALS["_template"]->replaceTemplate("title_articles", array());
     echo $title_articles;
 
     if (isnewsadmin($userID)) {
@@ -752,7 +796,9 @@ if ($action == "new") {
             echo $page_link;
         }
 
-        eval ("\$articles_head = \"" . gettemplate("articles_head") . "\";");
+        $data_array = array();
+        $data_array['$page'] = $page;
+        $articles_head = $GLOBALS["_template"]->replaceTemplate("articles_head", $data_array);
         echo $articles_head;
 
         $n = 1;
@@ -782,12 +828,18 @@ if ($action == "new") {
                 $ratingpic .= '<img src="images/icons/rating_' . $pic . '.gif" width="4" height="5" alt="">';
             }
 
-            eval ("\$articles_content = \"" . gettemplate("articles_content") . "\";");
+            $data_array = array();
+            $data_array['$date'] = $date;
+            $data_array['$title'] = $title;
+            $data_array['$poster'] = $poster;
+            $data_array['$ratingpic'] = $ratingpic;
+            $data_array['$viewed'] = $viewed;
+            $articles_content = $GLOBALS["_template"]->replaceTemplate("articles_content", $data_array);
             echo $articles_content;
             unset($ratingpic);
             $n++;
         }
-        eval ("\$articles_foot = \"" . gettemplate("articles_foot") . "\";");
+        $articles_foot = $GLOBALS["_template"]->replaceTemplate("articles_foot", array());
         echo $articles_foot;
         unset($ds);
     } else {

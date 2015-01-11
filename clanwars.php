@@ -34,9 +34,9 @@ if (isset($_GET[ 'action' ])) {
     $action = "";
 }
 if ($action == "new") {
-    include("_mysql.php");
-    include("_settings.php");
-    include("_functions.php");
+    include"_mysql.php";
+    include"_settings.php";
+    include"_functions.php";
     $_language->readModule('clanwars');
 
     if (!isanyadmin($userID)) {
@@ -125,15 +125,31 @@ if ($action == "new") {
         $componentsCss = generateComponents($components['css'], 'css');
         $componentsJs = generateComponents($components['js'], 'js');
 
-        eval ("\$clanwar_new = \"" . gettemplate("clanwar_new") . "\";");
+        $data_array = array();
+        $data_array['$rewriteBase'] = $rewriteBase;
+        $data_array['$componentsCss'] = $componentsCss;
+        $data_array['$date'] = $date;
+        $data_array['$squads'] = $squads;
+        $data_array['$games'] = $games;
+        $data_array['$league'] = $league;
+        $data_array['$leaguehp'] = $leaguehp;
+        $data_array['$linkpage'] = $linkpage;
+        $data_array['$opponent'] = $opponent;
+        $data_array['$opptag'] = $opptag;
+        $data_array['$opphp'] = $opphp;
+        $data_array['$countries'] = $countries;
+        $data_array['$server'] = $server;
+        $data_array['$hometeam'] = $hometeam;
+        $data_array['$componentsJs'] = $componentsJs;
+        $clanwar_new = $GLOBALS["_template"]->replaceTemplate("clanwar_new", $data_array);
         echo $clanwar_new;
     } else {
         redirect('index.php?site=clanwars', 'no access!');
     }
 } elseif ($action == "save") {
-    include("_mysql.php");
-    include("_settings.php");
-    include("_functions.php");
+    include"_mysql.php";
+    include"_settings.php";
+    include"_functions.php";
     $_language->readModule('clanwars');
 
     if (!isanyadmin($userID)) {
@@ -378,7 +394,10 @@ if ($action == "new") {
                         '][b]' . $scoreOpp[ $d ] . '[/b][/color]</td>';
                 }
                 $d++;
-                eval ("\$news_cw_results = \"" . gettemplate("news_cw_results") . "\";");
+                $data_array = array();
+                $data_array['$map'] = $map;
+                $data_array['$score'] = $score;
+                $news_cw_results = $GLOBALS["_template"]->replaceTemplate("news_cw_results", $data_array);
                 $results_ext .= $news_cw_results;
                 unset($score);
             }
@@ -452,10 +471,40 @@ if ($action == "new") {
             $_language->module[ 'user_comments' ] . '</option><option value="2" selected="selected">' .
             $_language->module[ 'visitor_comments' ] . '</option>';
 
-        eval ("\$addbbcode = \"" . gettemplate("addbbcode") . "\";");
-        eval ("\$addflags = \"" . gettemplate("flags") . "\";");
+        $addbbcode = $GLOBALS["_template"]->replaceTemplate("addbbcode", array());
+        $addflags = $GLOBALS["_template"]->replaceTemplate("flags", array());
         $_language->readModule('news');
-        eval ("\$news_post = \"" . gettemplate("news_post") . "\";");
+        $data_array = array();
+        $data_array['$rewriteBase'] = $rewriteBase;
+        $data_array['$componentsCss'] = $componentsCss;
+        $data_array['$addbbcode'] = $addbbcode;
+        $data_array['$addflags'] = $addflags;
+        $data_array['$rubrics'] = $rubrics;
+        $data_array['$newsID'] = $newsID;
+        $data_array['$topnews'] = $topnews;
+        $data_array['$intern'] = $intern;
+        $data_array['$tags'] = $tags;
+        $data_array['$langcount'] = $langcount;
+        $data_array['$link1'] = $link1;
+        $data_array['$url1'] = $url1;
+        $data_array['$window1_new'] = $window1_new;
+        $data_array['$window1_self'] = $window1_self;
+        $data_array['$link2'] = $link2;
+        $data_array['$url2'] = $url2;
+        $data_array['$window2_new'] = $window2_new;
+        $data_array['$window2_self'] = $window2_self;
+        $data_array['$link3'] = $link3;
+        $data_array['$url3'] = $url3;
+        $data_array['$window3_new'] = $window3_new;
+        $data_array['$window3_self'] = $window3_self;
+        $data_array['$link4'] = $link4;
+        $data_array['$url4'] = $url4;
+        $data_array['$window4_new'] = $window4_new;
+        $data_array['$window4_self'] = $window4_self;
+        $data_array['$userID'] = $userID;
+        $data_array['$comments'] = $comments;
+        $data_array['$componentsJs'] = $componentsJs;
+        $news_post = $GLOBALS["_template"]->replaceTemplate("news_post", $data_array);
         echo $news_post;
     } else {
         echo '<script src="js/bbcode.js"></script>
@@ -468,9 +517,9 @@ if ($action == "new") {
     <input type="button" onclick="javascript:self.close()" value="' . $_language->module[ 'close_window' ] . '"></p>';
     }
 } elseif ($action == "edit") {
-    include("_mysql.php");
-    include("_settings.php");
-    include("_functions.php");
+    include"_mysql.php";
+    include"_settings.php";
+    include"_functions.php";
     $_language->readModule('clanwars');
     if (!isanyadmin($userID)) {
         die($_language->module[ 'no_access' ]);
@@ -613,15 +662,37 @@ if ($action == "new") {
             $componentsJs .= '<script src="' . $component . '"></script>';
         }
 
-        eval ("\$clanwar_edit = \"" . gettemplate("clanwar_edit") . "\";");
+        $data_array = array();
+        $data_array['$rewriteBase'] = $rewriteBase;
+        $data_array['$componentsCss'] = $componentsCss;
+        $data_array['$date'] = $date;
+        $data_array['$squads'] = $squads;
+        $data_array['$games'] = $games;
+        $data_array['$league'] = $league;
+        $data_array['$leaguehp'] = $leaguehp;
+        $data_array['$linkpage'] = $linkpage;
+        $data_array['$opponent'] = $opponent;
+        $data_array['$opptag'] = $opptag;
+        $data_array['$opphp'] = $opphp;
+        $data_array['$countries'] = $countries;
+        $data_array['$server'] = $server;
+        $data_array['$hltv'] = $hltv;
+        $data_array['$hometeam'] = $hometeam;
+        $data_array['$oppteam'] = $oppteam;
+        $data_array['$report'] = $report;
+        $data_array['$maps'] = $maps;
+        $data_array['$cwID'] = $cwID;
+        $data_array['$comments'] = $comments;
+        $data_array['$componentsJs'] = $componentsJs;
+        $clanwar_edit = $GLOBALS["_template"]->replaceTemplate("clanwar_edit", $data_array);
         echo $clanwar_edit;
     } else {
         redirect('index.php?site=clanwars', $_language->module[ 'no_access' ]);
     }
 } elseif ($action == "saveedit") {
-    include("_mysql.php");
-    include("_settings.php");
-    include("_functions.php");
+    include"_mysql.php";
+    include"_settings.php";
+    include"_functions.php";
     $_language->readModule('clanwars');
 
     if (!isanyadmin($userID)) {
@@ -723,9 +794,9 @@ if ($action == "new") {
         $_language->module[ 'upload_screenshot' ] . '">
     <input type="button" onclick="javascript:self.close()" value="' . $_language->module[ 'close_window' ] . '"></p>';
 } elseif ($action == "delete") {
-    include("_mysql.php");
-    include("_settings.php");
-    include("_functions.php");
+    include"_mysql.php";
+    include"_settings.php";
+    include"_functions.php";
     $_language->readModule('clanwars');
 
     if (!isanyadmin($userID)) {
@@ -753,9 +824,9 @@ if ($action == "new") {
     safe_query("DELETE FROM `" . PREFIX . "clanwars` WHERE `cwID` = '$cwID'");
     header("Location: index.php?site=clanwars");
 } elseif (isset($_POST[ 'quickactiontype' ]) == "delete") {
-    include("_mysql.php");
-    include("_settings.php");
-    include("_functions.php");
+    include"_mysql.php";
+    include"_settings.php";
+    include"_functions.php";
     $_language->readModule('clanwars');
 
     if (!isanyadmin($userID)) {
@@ -784,7 +855,7 @@ if ($action == "new") {
     }
     header("Location: index.php?site=clanwars");
 } elseif ($action == "stats") {
-    eval ("\$title_clanwars = \"" . gettemplate("title_clanwars") . "\";");
+    $title_clanwars = $GLOBALS["_template"]->replaceTemplate("title_clanwars", array());
     echo $title_clanwars;
 
     echo '<a href="index.php?site=clanwars" class="btn btn-primary">' . $_language->module[ 'show_clanwars' ] . '</a>';
@@ -892,7 +963,17 @@ if ($action == "new") {
 
     $squad = $_language->module[ 'clan' ];
 
-    eval ("\$clanwars_stats_total = \"" . gettemplate("clanwars_stats_total") . "\";");
+    $data_array = array();
+    $data_array['$totaltotal'] = $totaltotal;
+    $data_array['$totalwonall'] = $totalwonall;
+    $data_array['$totalloseall'] = $totalloseall;
+    $data_array['$totaldrawall'] = $totaldrawall;
+    $data_array['$totalhome'] = $totalhome;
+    $data_array['$totalopp'] = $totalopp;
+    $data_array['$totalwon'] = $totalwon;
+    $data_array['$totallost'] = $totallost;
+    $data_array['$totaldraw'] = $totaldraw;
+    $clanwars_stats_total = $GLOBALS["_template"]->replaceTemplate("clanwars_stats_total", $data_array);
     echo $clanwars_stats_total;
 
     // SQUADS
@@ -1035,7 +1116,29 @@ if ($action == "new") {
             }
 
             // start output for squad details
-            eval("\$clanwars_stats = \"" . gettemplate("clanwars_stats") . "\";");
+            $data_array = array();
+            $data_array['$total'] = $total;
+            $data_array['$totaltotal'] = $totaltotal;
+            $data_array['$totalperc'] = $totalperc;
+            $data_array['$wonall'] = $wonall;
+            $data_array['$totalwonall'] = $totalwonall;
+            $data_array['$wonperc'] = $wonperc;
+            $data_array['$loseall'] = $loseall;
+            $data_array['$totalloseall'] = $totalloseall;
+            $data_array['$loseperc'] = $loseperc;
+            $data_array['$drawall'] = $drawall;
+            $data_array['$totaldrawall'] = $totaldrawall;
+            $data_array['$drawperc'] = $drawperc;
+            $data_array['$home'] = $home;
+            $data_array['$totalhome'] = $totalhome;
+            $data_array['$homeperc'] = $homeperc;
+            $data_array['$opp'] = $opp;
+            $data_array['$totalopp'] = $totalopp;
+            $data_array['$oppperc'] = $oppperc;
+            $data_array['$totalwon'] = $totalwon;
+            $data_array['$totallost'] = $totallost;
+            $data_array['$totaldraw'] = $totaldraw;
+            $clanwars_stats = $GLOBALS["_template"]->replaceTemplate("clanwars_stats", $data_array);
             echo $clanwars_stats;
 
             unset(
@@ -1056,7 +1159,7 @@ if ($action == "new") {
             $playerlist = "";
 
             // start output for squad details - players of the squad - head
-            eval ("\$clanwars_stats_player_head = \"" . gettemplate("clanwars_stats_player_head") . "\";");
+            $clanwars_stats_player_head = $GLOBALS["_template"]->replaceTemplate("clanwars_stats_player_head", array());
             echo $clanwars_stats_player_head;
 
             // get playerlist for squad
@@ -1138,8 +1241,15 @@ if ($action == "new") {
                             <img src="images/icons/poll_end.gif" width="1" height="5" alt=""> ' . $perc . '%';
                     }
 
-                    eval ("\$clanwars_stats_player_content = \"" . gettemplate("clanwars_stats_player_content") .
-                        "\";");
+                    $data_array = array();
+                    $data_array['$country'] = $country;
+                    $data_array['$member'] = $member;
+                    $data_array['$wars'] = $wars;
+                    $data_array['$percpic'] = $percpic;
+                    $clanwars_stats_player_content = $GLOBALS["_template"]->replaceTemplate(
+                        "clanwars_stats_player_content",
+                        $data_array
+                    );
                     echo $clanwars_stats_player_content;
                     $i++;
                 }
@@ -1176,8 +1286,8 @@ if ($action == "new") {
     }
     $sort = "date";
     if (isset($_GET[ 'sort' ])) {
-        if (($_GET[ 'sort' ] == 'date') || ($_GET[ 'sort' ] == 'game') || ($_GET[ 'sort' ] == 'squad') ||
-            ($_GET[ 'sort' ] == 'oppcountry') || ($_GET[ 'sort' ] == 'league')
+        if (($_GET[ 'sort' ] == 'date') || ($_GET[ 'sort' ] == 'game') || ($_GET[ 'sort' ] == 'squad')
+            || ($_GET[ 'sort' ] == 'oppcountry') || ($_GET[ 'sort' ] == 'league')
         ) {
             $sort = $_GET[ 'sort' ];
         }
@@ -1205,7 +1315,7 @@ if ($action == "new") {
             </span>
         </div>';
 
-    eval ("\$title_clanwars = \"" . gettemplate("title_clanwars") . "\";");
+    $title_clanwars = $GLOBALS["_template"]->replaceTemplate("title_clanwars", array());
     echo $title_clanwars;
 
     $gesamt = mysqli_num_rows(safe_query("SELECT cwID FROM " . PREFIX . "clanwars WHERE $only='$id'"));
@@ -1299,7 +1409,13 @@ if ($action == "new") {
             $only . '&amp;page=' . $page . '&amp;sort=league&amp;type=' . $type . '">' .
             $_language->module[ 'league' ] . ':</a>';
 
-        eval ("\$clanwars_head = \"" . gettemplate("clanwars_head") . "\";");
+        $data_array = array();
+        $data_array['$headdate'] = $headdate;
+        $data_array['$headgame'] = $headgame;
+        $data_array['$headsquad'] = $headsquad;
+        $data_array['$headcountry'] = $headcountry;
+        $data_array['$headleague'] = $headleague;
+        $clanwars_head = $GLOBALS["_template"]->replaceTemplate("clanwars_head", $data_array);
         echo $clanwars_head;
         $n = 1;
 
@@ -1359,7 +1475,17 @@ if ($action == "new") {
                 $multiple = '<input class="input" type="checkbox" name="cwID[]" value="' . $ds[ 'cwID' ] . '">';
             }
 
-            eval ("\$clanwars_content = \"" . gettemplate("clanwars_content") . "\";");
+            $data_array = array();
+            $data_array['$multiple'] = $multiple;
+            $data_array['$date'] = $date;
+            $data_array['$game'] = $game;
+            $data_array['$squad'] = $squad;
+            $data_array['$opponent'] = $opponent;
+            $data_array['$country'] = $country;
+            $data_array['$league'] = $league;
+            $data_array['$results'] = $results;
+            $data_array['$details'] = $details;
+            $clanwars_content = $GLOBALS["_template"]->replaceTemplate("clanwars_content", $data_array);
             echo $clanwars_content;
             unset($result);
             $n++;
@@ -1386,7 +1512,9 @@ if ($action == "new") {
                 </div>';
         }
 
-        eval ("\$clanwars_foot = \"" . gettemplate("clanwars_foot") . "\";");
+        $data_array = array();
+        $data_array['$admdel'] = $admdel;
+        $clanwars_foot = $GLOBALS["_template"]->replaceTemplate("clanwars_foot", $data_array);
         echo $clanwars_foot;
     } else {
         echo $_language->module[ 'no_entries' ];
@@ -1399,12 +1527,11 @@ if ($action == "new") {
     }
     $sort = "date";
     if (isset($_GET[ 'sort' ])) {
-        if (
-            $_GET[ 'sort' ] == 'date' ||
-            $_GET[ 'sort' ] == 'game' ||
-            $_GET[ 'sort' ] == 'squad' ||
-            $_GET[ 'sort' ] == 'oppcountry' ||
-            $_GET[ 'sort' ] == 'league'
+        if ($_GET[ 'sort' ] == 'date'
+            || $_GET[ 'sort' ] == 'game'
+            || $_GET[ 'sort' ] == 'squad'
+            || $_GET[ 'sort' ] == 'oppcountry'
+            || $_GET[ 'sort' ] == 'league'
         ) {
             $sort = $_GET[ 'sort' ];
         }
@@ -1431,7 +1558,7 @@ if ($action == "new") {
             </span>
         </div>';
 
-    eval ("\$title_clanwars = \"" . gettemplate("title_clanwars") . "\";");
+    $title_clanwars = $GLOBALS["_template"]->replaceTemplate("title_clanwars", array());
     echo $title_clanwars;
 
     $gesamt = mysqli_num_rows(safe_query("SELECT `cwID` FROM `" . PREFIX . "clanwars`"));
@@ -1545,7 +1672,13 @@ if ($action == "new") {
             '<a class="titlelink" href="index.php?site=clanwars&amp;page=' . $page . '&amp;sort=league&amp;type=' .
             $type . '">' . $_language->module[ 'league' ] . ':</a>';
 
-        eval ("\$clanwars_head = \"" . gettemplate("clanwars_head") . "\";");
+        $data_array = array();
+        $data_array['$headdate'] = $headdate;
+        $data_array['$headgame'] = $headgame;
+        $data_array['$headsquad'] = $headsquad;
+        $data_array['$headcountry'] = $headcountry;
+        $data_array['$headleague'] = $headleague;
+        $clanwars_head = $GLOBALS["_template"]->replaceTemplate("clanwars_head", $data_array);
         echo $clanwars_head;
 
         $n = 1;
@@ -1604,7 +1737,17 @@ if ($action == "new") {
                 $multiple = '<input class="input" type="checkbox" name="cwID[]" value="' . $ds[ 'cwID' ] . '">';
             }
 
-            eval ("\$clanwars_content = \"" . gettemplate("clanwars_content") . "\";");
+            $data_array = array();
+            $data_array['$multiple'] = $multiple;
+            $data_array['$date'] = $date;
+            $data_array['$game'] = $game;
+            $data_array['$squad'] = $squad;
+            $data_array['$opponent'] = $opponent;
+            $data_array['$country'] = $country;
+            $data_array['$league'] = $league;
+            $data_array['$results'] = $results;
+            $data_array['$details'] = $details;
+            $clanwars_content = $GLOBALS["_template"]->replaceTemplate("clanwars_content", $data_array);
             echo $clanwars_content;
             unset($result, $anzcomments);
             $n++;
@@ -1624,7 +1767,9 @@ if ($action == "new") {
         </div></div>';
         }
 
-        eval ("\$clanwars_foot = \"" . gettemplate("clanwars_foot") . "\";");
+        $data_array = array();
+        $data_array['$admdel'] = $admdel;
+        $clanwars_foot = $GLOBALS["_template"]->replaceTemplate("clanwars_foot", $data_array);
         echo $clanwars_foot;
     } else {
         echo $_language->module[ 'no_entries' ];

@@ -27,7 +27,7 @@
 $_language->readModule('loginoverview');
 
 if ($userID && !isset($_GET[ 'userID' ]) && !isset($_POST[ 'userID' ])) {
-    eval ("\$title_loginoverview = \"" . gettemplate("title_loginoverview") . "\";");
+    $title_loginoverview = $GLOBALS["_template"]->replaceTemplate("title_loginoverview", array());
     echo $title_loginoverview;
 
     $pagebg = PAGEBG;
@@ -361,7 +361,21 @@ if ($userID && !isset($_GET[ 'userID' ]) && !isset($_POST[ 'userID' ])) {
     </tr>';
     }
 
-    eval ("\$loginoverview = \"" . gettemplate("loginoverview") . "\";");
+    $data_array = array();
+    $data_array['$username'] = $username;
+    $data_array['$lastlogin'] = $lastlogin;
+    $data_array['$registerdate'] = $registerdate;
+    $data_array['$newmessages'] = $newmessages;
+    $data_array['$new_topics'] = $new_topics;
+    $data_array['$new_posts'] = $new_posts;
+    $data_array['$referer_uri'] = $referer_uri;
+    $data_array['$clanwars'] = $clanwars;
+    $data_array['$events'] = $events;
+    $data_array['$cashboxpic'] = $cashboxpic;
+    $data_array['$admincenterpic'] = $admincenterpic;
+    $data_array['$topiclist'] = $topiclist;
+    $data_array['$postlist'] = $postlist;
+    $loginoverview = $GLOBALS["_template"]->replaceTemplate("loginoverview", $data_array);
     echo $loginoverview;
 } else {
     echo $_language->module[ 'you_have_to_be_logged_in' ];

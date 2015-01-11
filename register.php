@@ -27,7 +27,7 @@
 
 $_language->readModule('register');
 
-eval("\$title_register = \"" . gettemplate("title_register") . "\";");
+$title_register = $GLOBALS["_template"]->replaceTemplate("title_register", array());
 echo $title_register;
 $show = true;
 if (isset($_POST['save'])) {
@@ -167,8 +167,7 @@ if (isset($_POST['save'])) {
                 $_language->module['mail_text']
             );
 
-            if (
-            mail(
+            if (mail(
                 $ToEmail,
                 $header,
                 $Message,
@@ -252,7 +251,16 @@ if (isset($_GET['key'])) {
                 $mail = '';
             }
 
-            eval("\$register = \"" . gettemplate("register") . "\";");
+            $data_array = array();
+            $data_array['$showerror'] = $showerror;
+            $data_array['$nickname'] = $nickname;
+            $data_array['$username'] = $username;
+            $data_array['$pwd1'] = $pwd1;
+            $data_array['$pwd2'] = $pwd2;
+            $data_array['$mail'] = $mail;
+            $data_array['$captcha'] = $captcha;
+            $data_array['$hash'] = $hash;
+            $register = $GLOBALS["_template"]->replaceTemplate("register", $data_array);
             echo $register;
         } else {
             redirect(

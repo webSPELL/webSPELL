@@ -27,7 +27,7 @@
 
 $_language->readModule('lostpassword');
 
-eval ("\$title_lostpassword = \"" . gettemplate("title_lostpassword") . "\";");
+$title_lostpassword = $GLOBALS["_template"]->replaceTemplate("title_lostpassword", array());
 echo $title_lostpassword;
 
 if (isset($_POST[ 'submit' ])) {

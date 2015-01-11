@@ -49,8 +49,8 @@ if ($action == "add") {
 
     $_language->readModule('bbcode', true);
 
-    eval ("\$addbbcode = \"" . gettemplate("addbbcode", "html", "admin") . "\";");
-    eval ("\$addflags = \"" . gettemplate("flags_admin", "html", "admin") . "\";");
+    $addbbcode = $GLOBALS["_template"]->replaceTemplate("addbbcode", array());
+    $addflags = $GLOBALS["_template"]->replaceTemplate("flags_admin", array());
 
     echo '<script>
 		<!--
@@ -113,10 +113,12 @@ if ($action == "add") {
         '</a> &raquo; ' . $_language->module[ 'edit_sponsor' ] . '</h1>';
 
     $ds =
-        mysqli_fetch_array(safe_query(
-            "SELECT * FROM " . PREFIX . "sponsors WHERE sponsorID='" . $_GET[ "sponsorID" ] .
-            "'"
-        ));
+        mysqli_fetch_array(
+            safe_query(
+                "SELECT * FROM " . PREFIX . "sponsors WHERE sponsorID='" . $_GET[ "sponsorID" ] .
+                "'"
+            )
+        );
     if (!empty($ds[ 'banner' ])) {
         $pic = '<img src="' . $filepath . $ds[ 'banner' ] . '" alt="">';
     } else {
@@ -146,8 +148,8 @@ if ($action == "add") {
 
     $_language->readModule('bbcode', true);
 
-    eval ("\$addbbcode = \"" . gettemplate("addbbcode", "html", "admin") . "\";");
-    eval ("\$addflags = \"" . gettemplate("flags_admin", "html", "admin") . "\";");
+    $addbbcode = $GLOBALS["_template"]->replaceTemplate("addbbcode", array());
+    $addflags = $GLOBALS["_template"]->replaceTemplate("flags_admin", array());
 
     echo '<script>
 		<!--

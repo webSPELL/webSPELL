@@ -54,10 +54,7 @@ if ($action == "save") {
         $ip = $GLOBALS[ 'ip' ];
         $ergebnis = safe_query("SELECT * FROM " . PREFIX . "shoutbox ORDER BY date DESC LIMIT 0,1");
         $ds = mysqli_fetch_array($ergebnis);
-        if (
-            ($ds[ 'message' ] != $message) ||
-            ($ds[ 'name' ] != $name)
-        ) {
+        if (($ds[ 'message' ] != $message) || ($ds[ 'name' ] != $name)) {
             safe_query(
                 "INSERT INTO
                     " . PREFIX . "shoutbox (
@@ -77,9 +74,9 @@ if ($action == "save") {
     }
     redirect('index.php?site=shoutbox_content&action=showall', 'shoutbox', 0);
 } elseif ($action == "delete") {
-    include("_mysql.php");
-    include("_settings.php");
-    include('_functions.php');
+    include"_mysql.php";
+    include"_settings.php";
+    include'_functions.php';
     if (!isfeedbackadmin($userID)) {
         die('No access.');
     }
@@ -94,7 +91,7 @@ if ($action == "save") {
     header("Location: index.php?site=shoutbox_content&action=showall");
 } elseif ($action == "showall") {
     $_language->readModule('shoutbox');
-    eval ("\$title_shoutbox = \"" . gettemplate("title_shoutbox") . "\";");
+    $title_shoutbox = $GLOBALS["_template"]->replaceTemplate("title_shoutbox", array());
     echo $title_shoutbox;
 
     $tmp = mysqli_fetch_assoc(safe_query("SELECT count(shoutID) as cnt FROM " . PREFIX . "shoutbox ORDER BY date"));
@@ -144,7 +141,10 @@ if ($action == "save") {
             $_language->module[ 'sort' ] . '</a> <span class="glyphicon glyphicon-chevron-up"></span>';
     }
 
-    eval ("\$shoutbox_all_head = \"" . gettemplate("shoutbox_all_head") . "\";");
+    $data_array = array();
+    $data_array['$sorter'] = $sorter;
+    $data_array['$page_link'] = $page_link;
+    $shoutbox_all_head = $GLOBALS["_template"]->replaceTemplate("shoutbox_all_head", $data_array);
     echo $shoutbox_all_head;
 
     $i = 1;
@@ -162,7 +162,14 @@ if ($action == "save") {
             $actions = '';
         }
 
-        eval ("\$shoutbox_all_content = \"" . gettemplate("shoutbox_all_content") . "\";");
+        $data_array = array();
+        $data_array['$actions'] = $actions;
+        $data_array['$n'] = $n;
+        $data_array['$name'] = $name;
+        $data_array['$date'] = $date;
+        $data_array['$ip'] = $ip;
+        $data_array['$message'] = $message;
+        $shoutbox_all_content = $GLOBALS["_template"]->replaceTemplate("shoutbox_all_content", $data_array);
         echo $shoutbox_all_content;
         if ($type == "DESC") {
             $n--;
@@ -171,7 +178,7 @@ if ($action == "save") {
         }
         $i++;
     }
-    eval ("\$shoutbox_all_foot = \"" . gettemplate("shoutbox_all_foot") . "\";");
+    $shoutbox_all_foot = $GLOBALS["_template"]->replaceTemplate("shoutbox_all_foot", array());
     echo $shoutbox_all_foot;
 
     if (isfeedbackadmin($userID)) {
@@ -193,9 +200,9 @@ if ($action == "save") {
 } elseif (basename($_SERVER[ 'PHP_SELF' ]) != "shoutbox_content.php") {
     redirect('index.php?site=shoutbox_content&action=showall', 'shoutbox', 0);
 } else {
-    include("_mysql.php");
-    include("_settings.php");
-    include("_functions.php");
+    include"_mysql.php";
+    include"_settings.php";
+    include"_functions.php";
 
     $pagebg = PAGEBG;
     $border = BORDER;
@@ -210,7 +217,11 @@ if ($action == "save") {
         $message = cleartext($ds[ 'message' ], false);
         $message = str_replace("&amp;amp;", "&", $message);
 
-        eval ("\$shoutbox_content = \"" . gettemplate("shoutbox_content") . "\";");
+        $data_array = array();
+        $data_array['$name'] = $name;
+        $data_array['$date'] = $date;
+        $data_array['$message'] = $message;
+        $shoutbox_content = $GLOBALS["_template"]->replaceTemplate("shoutbox_content", $data_array);
         echo $shoutbox_content;
     }
 }

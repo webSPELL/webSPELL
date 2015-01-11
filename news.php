@@ -37,9 +37,9 @@ if (isset($_REQUEST[ 'quickactiontype' ])) {
 }
 
 if ($action == "new") {
-    include("_mysql.php");
-    include("_settings.php");
-    include("_functions.php");
+    include"_mysql.php";
+    include"_settings.php";
+    include"_functions.php";
     $_language->readModule('news');
     $_language->readModule('bbcode', true);
     if (!isnewswriter($userID)) {
@@ -123,15 +123,45 @@ if ($action == "new") {
     $componentsCss = generateComponents($components['css'], 'css');
     $componentsJs = generateComponents($components['js'], 'js');
 
-    eval ("\$addbbcode = \"" . gettemplate("addbbcode") . "\";");
-    eval ("\$addflags = \"" . gettemplate("flags") . "\";");
+    $addbbcode = $GLOBALS["_template"]->replaceTemplate("addbbcode", array());
+    $addflags = $GLOBALS["_template"]->replaceTemplate("flags", array());
 
-    eval ("\$news_post = \"" . gettemplate("news_post") . "\";");
+    $data_array = array();
+    $data_array['$rewriteBase'] = $rewriteBase;
+    $data_array['$componentsCss'] = $componentsCss;
+    $data_array['$addbbcode'] = $addbbcode;
+    $data_array['$addflags'] = $addflags;
+    $data_array['$rubrics'] = $rubrics;
+    $data_array['$newsID'] = $newsID;
+    $data_array['$topnews'] = $topnews;
+    $data_array['$intern'] = $intern;
+    $data_array['$tags'] = $tags;
+    $data_array['$langcount'] = $langcount;
+    $data_array['$link1'] = $link1;
+    $data_array['$url1'] = $url1;
+    $data_array['$window1_new'] = $window1_new;
+    $data_array['$window1_self'] = $window1_self;
+    $data_array['$link2'] = $link2;
+    $data_array['$url2'] = $url2;
+    $data_array['$window2_new'] = $window2_new;
+    $data_array['$window2_self'] = $window2_self;
+    $data_array['$link3'] = $link3;
+    $data_array['$url3'] = $url3;
+    $data_array['$window3_new'] = $window3_new;
+    $data_array['$window3_self'] = $window3_self;
+    $data_array['$link4'] = $link4;
+    $data_array['$url4'] = $url4;
+    $data_array['$window4_new'] = $window4_new;
+    $data_array['$window4_self'] = $window4_self;
+    $data_array['$userID'] = $userID;
+    $data_array['$comments'] = $comments;
+    $data_array['$componentsJs'] = $componentsJs;
+    $news_post = $GLOBALS["_template"]->replaceTemplate("news_post", $data_array);
     echo $news_post;
 } elseif ($action == "save") {
-    include("_mysql.php");
-    include("_settings.php");
-    include("_functions.php");
+    include"_mysql.php";
+    include"_settings.php";
+    include"_functions.php";
     $_language->readModule('news');
     $newsID = $_POST[ 'newsID' ];
 
@@ -279,9 +309,9 @@ if ($action == "new") {
         header("Location: news.php?action=edit&newsID=" . $newsID);
     }
 } elseif ($action == "preview") {
-    include("_mysql.php");
-    include("_settings.php");
-    include("_functions.php");
+    include"_mysql.php";
+    include"_settings.php";
+    include"_functions.php";
     $_language->readModule('news');
 
     $newsID = $_GET[ 'newsID' ];
@@ -312,7 +342,7 @@ if ($action == "new") {
 
     $bg1 = BG_1;
 
-    eval ("\$title_news = \"" . gettemplate("title_news") . "\";");
+    $title_news = $GLOBALS["_template"]->replaceTemplate("title_news", array());
     echo $title_news;
 
     $bgcolor = BG_1;
@@ -392,7 +422,18 @@ if ($action == "new") {
 
     $tags = \webspell\Tags::getTagsLinked('news', $ds[ 'newsID' ]);
 
-    eval ("\$news = \"" . gettemplate("news") . "\";");
+    $data_array = array();
+    $data_array['$newsID'] = $newsID;
+    $data_array['$headline'] = $headline;
+    $data_array['$rubrikname'] = $rubrikname;
+    $data_array['$rubricpic'] = $rubricpic;
+    $data_array['$isintern'] = $isintern;
+    $data_array['$content'] = $content;
+    $data_array['$adminaction'] = $adminaction;
+    $data_array['$poster'] = $poster;
+    $data_array['$date'] = $date;
+    $data_array['$comments'] = $comments;
+    $news = $GLOBALS["_template"]->replaceTemplate("news", $data_array);
     echo $news;
 
     echo '<hr>
@@ -405,9 +446,9 @@ if ($action == "new") {
         '\', \'news.php?action=delete&amp;id=' . $newsID . '&amp;close=true\'
     )" value="' . $_language->module[ 'delete' ] . '" class="btn btn-danger"></body></html>';
 } elseif ($quickactiontype == "publish") {
-    include("_mysql.php");
-    include("_settings.php");
-    include("_functions.php");
+    include"_mysql.php";
+    include"_settings.php";
+    include"_functions.php";
     $_language->readModule('news');
     if (!isnewsadmin($userID)) {
         die($_language->module[ 'no_access' ]);
@@ -428,9 +469,9 @@ if ($action == "new") {
         header("Location: index.php?site=news&action=unpublished");
     }
 } elseif ($quickactiontype == "unpublish") {
-    include("_mysql.php");
-    include("_settings.php");
-    include("_functions.php");
+    include"_mysql.php";
+    include"_settings.php";
+    include"_functions.php";
     $_language->readModule('news');
     if (!isnewsadmin($userID)) {
         die($_language->module[ 'no_access' ]);
@@ -449,9 +490,9 @@ if ($action == "new") {
     }
     header("Location: index.php?site=news");
 } elseif ($quickactiontype == "delete") {
-    include("_mysql.php");
-    include("_settings.php");
-    include("_functions.php");
+    include"_mysql.php";
+    include"_settings.php";
+    include"_functions.php";
     $_language->readModule('news');
     if (isset($_POST[ 'newsID' ])) {
         $newsID = $_POST[ 'newsID' ];
@@ -494,9 +535,9 @@ if ($action == "new") {
         header("Location: index.php?site=news&action=archive");
     }
 } elseif ($action == "delete") {
-    include("_mysql.php");
-    include("_settings.php");
-    include("_functions.php");
+    include"_mysql.php";
+    include"_settings.php";
+    include"_functions.php";
     $_language->readModule('news');
 
     $id = $_GET[ 'id' ];
@@ -539,9 +580,9 @@ if ($action == "new") {
         header("Location: index.php?site=news");
     }
 } elseif ($action == "edit") {
-    include("_mysql.php");
-    include("_settings.php");
-    include("_functions.php");
+    include"_mysql.php";
+    include"_settings.php";
+    include"_functions.php";
     $_language->readModule('news');
 
     $newsID = $_GET[ 'newsID' ];
@@ -689,10 +730,40 @@ if ($action == "new") {
     $componentsCss = generateComponents($components['css'], 'css');
     $componentsJs = generateComponents($components['js'], 'js');
 
-    eval ("\$addbbcode = \"" . gettemplate("addbbcode") . "\";");
-    eval ("\$addflags = \"" . gettemplate("flags") . "\";");
+    $addbbcode = $GLOBALS["_template"]->replaceTemplate("addbbcode", array());
+    $addflags = $GLOBALS["_template"]->replaceTemplate("flags", array());
 
-    eval ("\$news_post = \"" . gettemplate("news_post") . "\";");
+    $data_array = array();
+    $data_array['$rewriteBase'] = $rewriteBase;
+    $data_array['$componentsCss'] = $componentsCss;
+    $data_array['$addbbcode'] = $addbbcode;
+    $data_array['$addflags'] = $addflags;
+    $data_array['$rubrics'] = $rubrics;
+    $data_array['$newsID'] = $newsID;
+    $data_array['$topnews'] = $topnews;
+    $data_array['$intern'] = $intern;
+    $data_array['$tags'] = $tags;
+    $data_array['$langcount'] = $langcount;
+    $data_array['$link1'] = $link1;
+    $data_array['$url1'] = $url1;
+    $data_array['$window1_new'] = $window1_new;
+    $data_array['$window1_self'] = $window1_self;
+    $data_array['$link2'] = $link2;
+    $data_array['$url2'] = $url2;
+    $data_array['$window2_new'] = $window2_new;
+    $data_array['$window2_self'] = $window2_self;
+    $data_array['$link3'] = $link3;
+    $data_array['$url3'] = $url3;
+    $data_array['$window3_new'] = $window3_new;
+    $data_array['$window3_self'] = $window3_self;
+    $data_array['$link4'] = $link4;
+    $data_array['$url4'] = $url4;
+    $data_array['$window4_new'] = $window4_new;
+    $data_array['$window4_self'] = $window4_self;
+    $data_array['$userID'] = $userID;
+    $data_array['$comments'] = $comments;
+    $data_array['$componentsJs'] = $componentsJs;
+    $news_post = $GLOBALS["_template"]->replaceTemplate("news_post", $data_array);
     echo $news_post;
 } elseif (basename($_SERVER[ 'PHP_SELF' ]) == "news.php") {
     generate_rss2();
@@ -700,7 +771,7 @@ if ($action == "new") {
 } elseif ($action == "unpublished") {
     $_language->readModule('news');
 
-    eval ("\$title_news = \"" . gettemplate("title_news") . "\";");
+    $title_news = $GLOBALS["_template"]->replaceTemplate("title_news", array());
     echo $title_news;
 
     $post = '';
@@ -724,7 +795,7 @@ if ($action == "new") {
             echo $_language->module[ 'title_unpublished_news' ];
 
             echo '<form method="post" name="form" action="news.php">';
-            eval ("\$news_unpublished_head = \"" . gettemplate("news_unpublished_head") . "\";");
+            $news_unpublished_head = $GLOBALS["_template"]->replaceTemplate("news_unpublished_head", array());
             echo $news_unpublished_head;
 
             $i = 1;
@@ -790,11 +861,18 @@ if ($action == "new") {
                     </div></form>';
                 }
 
-                eval ("\$news_archive_content = \"" . gettemplate("news_archive_content") . "\";");
+                $data_array = array();
+                $data_array['$multiple'] = $multiple;
+                $data_array['$date'] = $date;
+                $data_array['$rubric'] = $rubric;
+                $data_array['$headlines'] = $headlines;
+                $news_archive_content = $GLOBALS["_template"]->replaceTemplate("news_archive_content", $data_array);
                 echo $news_archive_content;
                 $i++;
             }
-            eval ("\$news_archive_foot = \"" . gettemplate("news_archive_foot") . "\";");
+            $data_array = array();
+            $data_array['$admdel'] = $admdel;
+            $news_archive_foot = $GLOBALS["_template"]->replaceTemplate("news_archive_foot", $data_array);
             echo $news_archive_foot;
 
             unset($ds);
@@ -803,7 +881,7 @@ if ($action == "new") {
 } elseif ($action == "archive") {
     $_language->readModule('news');
 
-    eval ("\$title_news = \"" . gettemplate("title_news") . "\";");
+    $title_news = $GLOBALS["_template"]->replaceTemplate("title_news", array());
     echo $title_news;
 
     if (isset($_GET[ 'page' ])) {
@@ -929,7 +1007,9 @@ if ($action == "new") {
             echo '<form method="post" name="form" action="news.php">';
         }
 
-        eval ("\$news_archive_head = \"" . gettemplate("news_archive_head") . "\";");
+        $data_array = array();
+        $data_array['$page'] = $page;
+        $news_archive_head = $GLOBALS["_template"]->replaceTemplate("news_archive_head", $data_array);
         echo $news_archive_head;
 
         $i = 1;
@@ -978,7 +1058,12 @@ if ($action == "new") {
                     '">';
             }
 
-            eval ("\$news_archive_content = \"" . gettemplate("news_archive_content") . "\";");
+            $data_array = array();
+            $data_array['$multiple'] = $multiple;
+            $data_array['$date'] = $date;
+            $data_array['$rubric'] = $rubric;
+            $data_array['$headlines'] = $headlines;
+            $news_archive_content = $GLOBALS["_template"]->replaceTemplate("news_archive_content", $data_array);
             echo $news_archive_content;
             $i++;
         }
@@ -1011,7 +1096,9 @@ if ($action == "new") {
             $admdel = '';
         }
 
-        eval ("\$news_archive_foot = \"" . gettemplate("news_archive_foot") . "\";");
+        $data_array = array();
+        $data_array['$admdel'] = $admdel;
+        $news_archive_foot = $GLOBALS["_template"]->replaceTemplate("news_archive_foot", $data_array);
         echo $news_archive_foot;
         unset($ds);
     } else {
@@ -1020,7 +1107,7 @@ if ($action == "new") {
 } else {
     $_language->readModule('news');
 
-    eval ("\$title_news = \"" . gettemplate("title_news") . "\";");
+    $title_news = $GLOBALS["_template"]->replaceTemplate("title_news", array());
     echo $title_news;
 
     $post = '';
@@ -1168,7 +1255,7 @@ if ($action == "new") {
 
         if ($ds[ 'comments' ]) {
             if ($ds[ 'cwID' ]) {
-// CLANWAR-NEWS
+                // CLANWAR-NEWS
                 $anzcomments = getanzcomments($ds[ 'cwID' ], 'cw');
                 $replace = array('$anzcomments', '$url', '$lastposter', '$lastdate');
                 $vars = array(
@@ -1233,7 +1320,18 @@ if ($action == "new") {
                 $_language->module[ 'delete' ] . '" class="btn btn-danger">';
         }
 
-        eval ("\$news = \"" . gettemplate("news") . "\";");
+        $data_array = array();
+        $data_array['$newsID'] = $newsID;
+        $data_array['$headline'] = $headline;
+        $data_array['$rubrikname'] = $rubrikname;
+        $data_array['$rubricpic'] = $rubricpic;
+        $data_array['$isintern'] = $isintern;
+        $data_array['$content'] = $content;
+        $data_array['$adminaction'] = $adminaction;
+        $data_array['$poster'] = $poster;
+        $data_array['$date'] = $date;
+        $data_array['$comments'] = $comments;
+        $news = $GLOBALS["_template"]->replaceTemplate("news", $data_array);
         echo $news;
 
         $i++;

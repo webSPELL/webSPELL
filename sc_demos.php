@@ -58,7 +58,12 @@ if (mysqli_num_rows($ergebnis)) {
             $bg2 = BG_4;
         }
 
-        eval("\$sc_demos = \"" . gettemplate("sc_demos") . "\";");
+        $data_array = array();
+        $data_array['$count'] = $count;
+        $data_array['$demoID'] = $demoID;
+        $data_array['$tag1'] = $tag1;
+        $data_array['$tag2'] = $tag2;
+        $sc_demos = $GLOBALS["_template"]->replaceTemplate("sc_demos", $data_array);
         echo $sc_demos;
 
         $n++;

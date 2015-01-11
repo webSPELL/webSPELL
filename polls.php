@@ -32,9 +32,9 @@ if (isset($_GET[ 'action' ])) {
 }
 
 if ($action == "vote") {
-    include("_mysql.php");
-    include("_settings.php");
-    include("_functions.php");
+    include"_mysql.php";
+    include"_settings.php";
+    include"_functions.php";
     if (isset($_POST[ 'pollID' ]) && isset($_POST[ 'vote' ])) {
         $pollID = (int)$_POST[ 'pollID' ];
         $vote = (int)$_POST[ 'vote' ];
@@ -116,9 +116,9 @@ if ($action == "vote") {
         header('Location: index.php?site=polls');
     }
 } elseif (isset($_POST[ 'save' ])) {
-    include("_mysql.php");
-    include("_settings.php");
-    include('_functions.php');
+    include"_mysql.php";
+    include"_settings.php";
+    include'_functions.php';
     $_language->readModule('polls');
 
     if (isset($_POST[ 'intern' ])) {
@@ -180,9 +180,9 @@ if ($action == "vote") {
     );
     header('Location: index.php?site=polls');
 } elseif (isset($_POST[ 'saveedit' ])) {
-    include("_mysql.php");
-    include("_settings.php");
-    include('_functions.php');
+    include"_mysql.php";
+    include"_settings.php";
+    include'_functions.php';
     $_language->readModule('polls');
     if (!ispollsadmin($userID)) {
         die($_language->module[ 'no_access' ]);
@@ -294,9 +294,9 @@ if ($action == "vote") {
     }
     header('Location: index.php?site=polls');
 } elseif (isset($_GET[ 'end' ])) {
-    include("_mysql.php");
-    include("_settings.php");
-    include('_functions.php');
+    include"_mysql.php";
+    include"_settings.php";
+    include'_functions.php';
     $_language->readModule('polls');
     if (!ispollsadmin($userID)) {
         die($_language->module[ 'no_access' ]);
@@ -305,9 +305,9 @@ if ($action == "vote") {
     safe_query("UPDATE " . PREFIX . "poll SET aktiv='0' WHERE pollID='" . $pollID . "'");
     header('Location: index.php?site=polls');
 } elseif (isset($_GET[ 'reopen' ])) {
-    include("_mysql.php");
-    include("_settings.php");
-    include('_functions.php');
+    include"_mysql.php";
+    include"_settings.php";
+    include'_functions.php';
     $_language->readModule('polls');
     if (!ispollsadmin($userID)) {
         die($_language->module[ 'no_access' ]);
@@ -316,9 +316,9 @@ if ($action == "vote") {
     safe_query("UPDATE " . PREFIX . "poll SET aktiv='1' WHERE pollID='" . $pollID . "'");
     header('Location: index.php?site=polls');
 } elseif (isset($_GET[ 'delete' ])) {
-    include("_mysql.php");
-    include("_settings.php");
-    include('_functions.php');
+    include"_mysql.php";
+    include"_settings.php";
+    include'_functions.php';
     $_language->readModule('polls');
     if (!ispollsadmin($userID)) {
         die($_language->module[ 'no_access' ]);
@@ -331,12 +331,12 @@ if ($action == "vote") {
 }
 
 $_language->readModule('polls');
-eval("\$title_polls = \"" . gettemplate("title_polls") . "\";");
+$title_polls = $GLOBALS["_template"]->replaceTemplate("title_polls", array());
 echo $title_polls;
 
 if ($action == "new") {
     if (ispollsadmin($userID)) {
-        eval("\$polls_new = \"" . gettemplate("polls_new") . "\";");
+        $polls_new = $GLOBALS["_template"]->replaceTemplate("polls_new", array());
         echo $polls_new;
     } else {
         redirect('index.php?site=news', $_language->module[ 'no_access' ], 3);
@@ -378,7 +378,24 @@ if ($action == "new") {
                 $intern = '';
             }
             $bg1 = BG_1;
-            eval("\$polls_edit = \"" . gettemplate("polls_edit") . "\";");
+            $data_array = array();
+            $data_array['$polltitle'] = $polltitle;
+            $data_array['$runtime_date'] = $runtime_date;
+            $data_array['$runtime_time'] = $runtime_time;
+            $data_array['$option1'] = $option1;
+            $data_array['$option2'] = $option2;
+            $data_array['$option3'] = $option3;
+            $data_array['$option4'] = $option4;
+            $data_array['$option5'] = $option5;
+            $data_array['$option6'] = $option6;
+            $data_array['$option7'] = $option7;
+            $data_array['$option8'] = $option8;
+            $data_array['$option9'] = $option9;
+            $data_array['$option10'] = $option10;
+            $data_array['$comments'] = $comments;
+            $data_array['$intern'] = $intern;
+            $data_array['$pollID'] = (int)$pollID;
+            $polls_edit = $GLOBALS["_template"]->replaceTemplate("polls_edit", $data_array);
             echo $polls_edit;
         }
     } else {
@@ -447,7 +464,12 @@ if ($action == "new") {
         $dv[ 'o9' ] + $dv[ 'o10' ];
     $n = 1;
 
-    eval("\$polls_head = \"" . gettemplate("polls_head") . "\";");
+    $data_array = array();
+    $data_array['$title'] = $title;
+    $data_array['$isintern'] = $isintern;
+    $data_array['$gesamtstimmen'] = $gesamtstimmen;
+    $data_array['$timeleft'] = $timeleft;
+    $polls_head = $GLOBALS["_template"]->replaceTemplate("polls_head", $data_array);
     echo $polls_head;
     $comments = "";
     foreach ($options as $option) {
@@ -490,12 +512,18 @@ if ($action == "new") {
         </div>';
         }
 
-        eval("\$polls_content = \"" . gettemplate("polls_content") . "\";");
+        $data_array = array();
+        $data_array['$option'] = $option;
+        $data_array['$perc'] = $perc;
+        $polls_content = $GLOBALS["_template"]->replaceTemplate("polls_content", $data_array);
         echo $polls_content;
         $n++;
     }
 
-    eval("\$polls_foot = \"" . gettemplate("polls_foot") . "\";");
+    $data_array = array();
+    $data_array['$comments'] = $comments;
+    $data_array['$adminactions'] = $adminactions;
+    $polls_foot = $GLOBALS["_template"]->replaceTemplate("polls_foot", $data_array);
     echo $polls_foot;
 
     $comments_allowed = $ds[ 'comments' ];
@@ -503,7 +531,7 @@ if ($action == "new") {
     $type = "po";
     $referer = "index.php?site=polls&amp;pollID=" . $pollID;
 
-    include("comments.php");
+    include"comments.php";
 } elseif (isset($_GET[ 'vote' ])) {
     $pagebg = PAGEBG;
     $border = BORDER;
@@ -677,7 +705,12 @@ if ($action == "new") {
                 $dv[ 'o8' ] + $dv[ 'o9' ] + $dv[ 'o10' ];
             $n = 1;
 
-            eval ("\$polls_head = \"" . gettemplate("polls_head") . "\";");
+            $data_array = array();
+            $data_array['$title'] = $title;
+            $data_array['$isintern'] = $isintern;
+            $data_array['$gesamtstimmen'] = $gesamtstimmen;
+            $data_array['$timeleft'] = $timeleft;
+            $polls_head = $GLOBALS["_template"]->replaceTemplate("polls_head", $data_array);
             echo $polls_head;
 
             foreach ($options as $option) {
@@ -706,13 +739,19 @@ if ($action == "new") {
                     </a>';
                 }
 
-                eval ("\$polls_content = \"" . gettemplate("polls_content") . "\";");
+                $data_array = array();
+                $data_array['$option'] = $option;
+                $data_array['$perc'] = $perc;
+                $polls_content = $GLOBALS["_template"]->replaceTemplate("polls_content", $data_array);
                 echo $polls_content;
 
                 $n++;
             }
 
-            eval ("\$polls_foot = \"" . gettemplate("polls_foot") . "\";");
+            $data_array = array();
+            $data_array['$comments'] = $comments;
+            $data_array['$adminactions'] = $adminactions;
+            $polls_foot = $GLOBALS["_template"]->replaceTemplate("polls_foot", $data_array);
             echo $polls_foot;
 
             $i++;

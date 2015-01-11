@@ -27,7 +27,7 @@
 
 $_language->readModule('about');
 
-eval ("\$title_about = \"" . gettemplate("title_about") . "\";");
+$title_about = $GLOBALS["_template"]->replaceTemplate("title_about", array());
 echo $title_about;
 
 $ergebnis = safe_query("SELECT * FROM " . PREFIX . "about");
@@ -38,7 +38,9 @@ if (mysqli_num_rows($ergebnis)) {
     $about = toggle($about, 1);
 
     $bg1 = BG_1;
-    eval ("\$about = \"" . gettemplate("about") . "\";");
+    $data_array = array();
+    $data_array['$about'] = $about;
+    $about = $GLOBALS["_template"]->replaceTemplate("about", $data_array);
     echo $about;
 } else {
     echo $_language->module[ 'no_about' ];

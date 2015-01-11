@@ -69,7 +69,11 @@ if (mysqli_num_rows($ergebnis)) {
             $bg2 = BG_4;
         }
 
-        eval ("\$sc_files = \"" . gettemplate("sc_files") . "\";");
+        $data_array = array();
+        $data_array['$count'] = $count;
+        $data_array['$fileID'] = $fileID;
+        $data_array['$filename'] = $filename;
+        $sc_files = $GLOBALS["_template"]->replaceTemplate("sc_files", $data_array);
         echo $sc_files;
 
         $n++;
