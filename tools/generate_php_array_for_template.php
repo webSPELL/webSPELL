@@ -2,7 +2,7 @@
 error_reporting(E_ALL);
 #$regex_find_eval_calls = '/eval\s\("\\\$([\w_])+\s*=\s*\\""\s+.\s+gettemplate\("([\w_]+?)"\)\s+.\s+"\\";"\);/si';
 $regex_find_eval_calls =
-    '/(?<intend>[ \t]+)eval\s*\("' . preg_quote('\$', "/") . '(?<variable>[\w_]+?)\s*=\s*' . preg_quote('\"', "/") .
+    '/(?<intend>[ \t]*)eval\s*\("' . preg_quote('\$', "/") . '(?<variable>[\w_]+?)\s*=\s*' . preg_quote('\"', "/") .
     '"\s*.\s*gettemplate\(["\'](?<parameters>[\w_,\'" ]+?)["\']\)\s*.\s*"' . preg_quote('\"', "/") . ';"\);/si';
 
 $folders = array('../', '../admin/', '../src/', '../src/func/');
@@ -46,7 +46,7 @@ function generateNewTemplateClass($variable, $options, $intend)
     }
 
     $replace_code .= $intend . '$' . $variable . ' = $GLOBALS["_template"]->replaceTemplate("' . $template_file . '",' .
-        $variable_in_call . ');' . "\n";
+        $variable_in_call . ');';
 
     return $replace_code;
 }
@@ -65,6 +65,7 @@ foreach ($folders as $folder) {
             $new_line = generateNewTemplateClass($result[ 'variable' ], $result[ 'parameters' ], $result[ 'intend' ]);
             echo $new_line;
             $file_content = preg_replace("/" . preg_quote($result[ 0 ], "/") . "/si", $new_line, $file_content, 1);
+            echo "\n";
             $count++;
             $modified = true;
         }
