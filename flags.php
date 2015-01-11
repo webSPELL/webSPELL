@@ -42,12 +42,14 @@ echo '<!DOCTYPE html>
 </head>
 
 <body>
-<table class="table">
-    <tr>
-        <td class="title" class="text-center">Flag:</td>
-        <td class="title" class="text-center">Tag:</td>
-    </tr>
-    <tr><td colspan="2"></td></tr>';
+<table class="table table-striped">
+    <thead>
+        <tr>
+		    <th class="text-center">Flag:</th>
+		    <th class="text-center">Tag:</th>
+        </tr>
+    </thead>
+    <tbody>';
 
 
 $filepath = "./images/flags/";
@@ -73,5 +75,5 @@ if (is_array($files)) {
                 '[/flag]\')">' . $flag[ 0 ] . '</a></td>
         </tr>';
     }
-    echo '</table></body></html>';
+    echo '</tbody></table></body></html>';
 }
