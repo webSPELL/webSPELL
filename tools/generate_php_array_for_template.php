@@ -45,7 +45,7 @@ function generateNewTemplateClass($variable, $options, $intend)
         $variable_in_call = 'array()';
     }
 
-    $replace_code .= $intend . '$' . $variable . ' = $GLOBALS["_template"]->replaceTemplate("' . $template_file . '",' .
+    $replace_code .= $intend . '$' . $variable . ' = $GLOBALS["_template"]->replaceTemplate("' . $template_file . '", ' .
         $variable_in_call . ');';
 
     return $replace_code;
