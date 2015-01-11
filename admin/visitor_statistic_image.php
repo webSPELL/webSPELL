@@ -83,17 +83,17 @@ imagefill($im, 0, 0, $weiss);
 $linie_still = array($grau, $grau, $weiss, $weiss);
 imagesetstyle($im, $linie_still);
 
-function teilen(&$item, $key, $teiler)
+function teilen(&$item, $teiler)
 {
     $item = round($item / $teiler);
 }
 
-function multiplizieren(&$item, $key, $faktor)
+function multiplizieren(&$item, $faktor)
 {
     $item = round($item * $faktor);
 }
 
-function hinzufuegen(&$item, $key, $faktor)
+function hinzufuegen(&$item, $faktor)
 {
     $item = $item + $faktor;
 }

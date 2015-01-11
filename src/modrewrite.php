@@ -132,7 +132,7 @@ class ModRewrite
         }
     }
 
-    public function rewriteBody($content, $phase)
+    public function rewriteBody($content)
     {
         return $this->rewrite($content, false);
     }
