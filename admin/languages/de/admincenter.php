@@ -64,7 +64,6 @@ $language_array = Array(
   'partners'=>'Partner',
   'registered_users'=>'Registrierte Benutzer',
   'rubrics'=>'Rubriken/Kategorien',
-  'scrolltext'=>'Lauftext',
   'select_icons'=>'Bitte Symbole auswählen',
   'servers'=>'Server',
   'settings'=>'Einstellungen',

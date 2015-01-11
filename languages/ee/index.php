@@ -45,7 +45,6 @@ $language_array = Array(
   'pic_of_the_moment'=>'hetke pilt',
   'poll'=>'küsitlus',
   'random_user'=>'suvaline kasutaja',
-  'scrolltext'=>'keriv tekst',
   'server'=>'serverid',
   'shoutbox'=>'hüüdmiskast',
   'sponsors'=>'sponsorid',

@@ -44,7 +44,6 @@ $language_array = Array(
 	'pic_of_the_moment'=>'imagem do momento',
 	'poll'=>'questionário',
 	'random_user'=>'utilizador aleatório',
-	'scrolltext'=>'texto rotativo',
 	'server'=>'servidores',
 	'shoutbox'=>'shoutbox',
 	'sponsors'=>'patrocinadores',

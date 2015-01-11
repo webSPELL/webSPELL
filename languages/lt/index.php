@@ -44,7 +44,6 @@ $language_array = Array(
 	'pic_of_the_moment'=>'šios akimirkos vaizdas',
 	'poll'=>'apklausa',
 	'random_user'=>'atsitiktinis vartotojas',
-	'scrolltext'=>'bėgantis tekstas',
 	'server'=>'serveris',
 	'shoutbox'=>'šaukykla',
 	'sponsors'=>'remėjai',
