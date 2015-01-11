@@ -243,9 +243,6 @@ if (!isclanmember($userID) && !iscashadmin($userID)) {
             global $_language;
             $_language->readModule('cash_box');
 
-            global $wincolor;
-            global $loosecolor;
-            global $drawcolor;
             global $userID;
 
             if ($id) {
@@ -384,12 +381,12 @@ if (!isclanmember($userID) && !iscashadmin($userID)) {
                         if ($du[ 'payed' ]) {
                             $paydate = getformatdate($du[ 'date' ]);
                             $payed =
-                                '<span style="color:' . $wincolor . '">' .
+                                '<span class="ws-win-color">' .
                                     $_language->module[ 'paid' ] . ': ' . $paydate .
                                 '</span>';
                         } else {
                             $payed =
-                                '<span style="color:' . $loosecolor . '">' .
+                                '<span class="ws-lose-color">' .
                                     $_language->module[ 'not_paid' ] . '
                                 </span>';
                         }
@@ -406,7 +403,7 @@ if (!isclanmember($userID) && !iscashadmin($userID)) {
                             if ($du[ 'costs' ]) {
                                 $costs = '<strong>' . $du[ 'costs' ] . ' €</strong>';
                             } else {
-                                $costs = '<span style="color:' . $loosecolor . '">0.00 €</span>';
+                                $costs = '<span class="ws-lose-color">0.00 €</span>';
                             }
                             $payment = $costs;
                         }
@@ -448,9 +445,9 @@ if (!isclanmember($userID) && !iscashadmin($userID)) {
         }
 
         if ($costs < 0) {
-            $fontcolor = $loosecolor;
+            $fontcolor = "ws-lose-color";
         } else {
-            $fontcolor = $wincolor;
+            $fontcolor = "ws-win-color";
         }
 
         if (iscashadmin($userID)) {

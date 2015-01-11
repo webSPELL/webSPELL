@@ -635,6 +635,7 @@ function fullinstall()
     mysqli_query($_database, "DROP TABLE IF EXISTS `" . PREFIX . "settings`");
     mysqli_query($_database, "CREATE TABLE `" . PREFIX . "settings` (
   `settingID` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(255) NOT NULL default '',
   `hpurl` varchar(255) NOT NULL default '',
   `clanname` varchar(255) NOT NULL default '',
   `clantag` varchar(255) NOT NULL default '',
@@ -669,7 +670,7 @@ function fullinstall()
   PRIMARY KEY  (`settingID`)
 ) AUTO_INCREMENT=2 ");
 
-    mysqli_query($_database, "INSERT IGNORE INTO `" . PREFIX . "settings` (`settingID`, `hpurl`, `clanname`, `clantag`, `adminname`, `adminemail`, `news`, `newsarchiv`, `headlines`, `headlineschars`, `articles`, `latestarticles`, `articleschars`, `clanwars`, `results`, `upcoming`, `shoutbox`, `sball`, `sbrefresh`, `topics`, `posts`, `latesttopics`, `hideboards`, `awards`, `demos`, `guestbook`, `feedback`, `messages`, `users`, `profilelast`, `topnewsID`) VALUES (1, '" . $url . "', 'Clanname', 'MyClan', 'Admin-Name', '" . $adminmail . "', 10, 20, 10, 22, 20, 5, 20, 20, 5, 5, 5, 30, 60, 20, 10, 10, 1, 20, 20, 20, 20, 20, 60, 10, 27)");
+    mysqli_query($_database, "INSERT IGNORE INTO `" . PREFIX . "settings` (`settingID`, `title`, `hpurl`, `clanname`, `clantag`, `adminname`, `adminemail`, `news`, `newsarchiv`, `headlines`, `headlineschars`, `articles`, `latestarticles`, `articleschars`, `clanwars`, `results`, `upcoming`, `shoutbox`, `sball`, `sbrefresh`, `topics`, `posts`, `latesttopics`, `hideboards`, `awards`, `demos`, `guestbook`, `feedback`, `messages`, `users`, `profilelast`, `topnewsID`) VALUES (1, 'webSPELL v4', '" . $url . "', 'Clanname', 'MyClan', 'Admin-Name', '" . $adminmail . "', 10, 20, 10, 22, 20, 5, 20, 20, 5, 5, 5, 30, 60, 20, 10, 10, 1, 20, 20, 20, 20, 20, 60, 10, 27)");
 
     mysqli_query($_database, "DROP TABLE IF EXISTS `" . PREFIX . "shoutbox`");
     mysqli_query($_database, "CREATE TABLE `" . PREFIX . "shoutbox` (
@@ -715,27 +716,6 @@ function fullinstall()
   `warmember` int(1) NOT NULL default '0',
   PRIMARY KEY  (`sqmID`)
 ) AUTO_INCREMENT=1 ");
-
-
-    mysqli_query($_database, "DROP TABLE IF EXISTS `" . PREFIX . "styles`");
-    mysqli_query($_database, "CREATE TABLE `" . PREFIX . "styles` (
-  `styleID` int(11) NOT NULL AUTO_INCREMENT,
-  `title` varchar(255) NOT NULL default '',
-  `bgpage` varchar(255) NOT NULL default '',
-  `border` varchar(255) NOT NULL default '',
-  `bghead` varchar(255) NOT NULL default '',
-  `bgcat` varchar(255) NOT NULL default '',
-  `bg1` varchar(255) NOT NULL default '',
-  `bg2` varchar(255) NOT NULL default '',
-  `bg3` varchar(255) NOT NULL default '',
-  `bg4` varchar(255) NOT NULL default '',
-  `win` varchar(255) NOT NULL default '',
-  `loose` varchar(255) NOT NULL default '',
-  `draw` varchar(255) NOT NULL default '',
-  PRIMARY KEY  (`styleID`)
-) AUTO_INCREMENT=2 ");
-
-    mysqli_query($_database, "INSERT IGNORE INTO `" . PREFIX . "styles` (`styleID`, `title`, `bgpage`, `border`, `bghead`, `bgcat`, `bg1`, `bg2`, `bg3`, `bg4`, `win`, `loose`, `draw`) VALUES (1, 'webSPELL v4', '#E6E6E6', '#666666', '#333333', '#FFFFFF', '#FFFFFF', '#F2F2F2', '#F2F2F2', '#D9D9D9', '#00CC00', '#DD0000', '#FF6600')");
 
     mysqli_query($_database, "DROP TABLE IF EXISTS `" . PREFIX . "upcoming`");
     mysqli_query($_database, "CREATE TABLE `" . PREFIX . "upcoming` (
@@ -2111,6 +2091,7 @@ function update420_430()
     `data` text NOT NULL
     )");
 
+    mysqli_query($_database, "ALTER TABLE `" . PREFIX . "settings` ADD `title` varchar(255) NOT NULL default ''");
     mysqli_query($_database, "ALTER TABLE `" . PREFIX . "settings` ADD `spam_check` int(1) NOT NULL default '0'");
     mysqli_query($_database, "ALTER TABLE `" . PREFIX . "settings` ADD `detect_language` int(1) NOT NULL default '0'");
     mysqli_query($_database, "ALTER TABLE `" . PREFIX . "settings` ADD `spamapikey` varchar(32) NOT NULL default ''");
@@ -2121,6 +2102,7 @@ function update420_430()
     mysqli_query($_database, "ALTER TABLE `" . PREFIX . "settings` ADD `time_format` varchar(255) NOT NULL default 'H:i'");
     mysqli_query($_database, "ALTER TABLE `" . PREFIX . "settings` ADD `user_guestbook` int(1) NOT NULL default '1'");
 
+    mysqli_query($_database, "UPDATE `" . PREFIX . "settings` SET title='webSPELL v4'");
     mysqli_query($_database, "UPDATE `" . PREFIX . "settings` SET spamapihost='https://api.webspell.org/'");
 
     mysqli_query($_database, "ALTER TABLE `" . PREFIX . "user` ADD `date_format` varchar(255) NOT NULL default 'd.m.Y'");
@@ -2426,6 +2408,8 @@ function update420_430()
     mysqli_query($_database, "INSERT INTO `" . PREFIX . "modrewrite` (`regex`, `link`, `fields`, `replace_regex`, `replace_result`, `rebuild_regex`, `rebuild_result`) VALUES('whoisonline.html','index.php?site=whoisonline','a:0:{}','index\\\\.php\\\\?site=whoisonline','whoisonline.html','whoisonline\\\\.html','index.php?site=whoisonline')");
     mysqli_query($_database, "INSERT INTO `" . PREFIX . "modrewrite` (`regex`, `link`, `fields`, `replace_regex`, `replace_result`, `rebuild_regex`, `rebuild_result`) VALUES('whoisonline.html#was','index.php?site=whoisonline#was','a:0:{}','index\\\\.php\\\\?site=whoisonline#was','whoisonline.html#was','whoisonline\\\\.html#was','index.php?site=whoisonline#was')");
     mysqli_query($_database, "INSERT INTO `" . PREFIX . "modrewrite` (`regex`, `link`, `fields`, `replace_regex`, `replace_result`, `rebuild_regex`, `rebuild_result`) VALUES('whoisonline/{sort}/{type}.html','index.php?site=whoisonline&sort={sort}&type={type}','a:2:{s:4:\"sort\";s:6:\"string\";s:4:\"type\";s:6:\"string\";}','index\\\\.php\\\\?site=whoisonline[&|&amp;]*sort=(\\\\w*?)[&|&amp;]*type=(\\\\w*?)','whoisonline/$3/$4.html','whoisonline\\\\/(\\\\w*?)\\\\/(\\\\w*?)\\\\.html','index.php?site=whoisonline&sort=$1&type=$2')");
+
+    mysqli_query($_database, "DROP TABLE `" . PREFIX . "settings`");
 
     updateMySQLConfig();
 }

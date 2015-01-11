@@ -108,7 +108,7 @@ if ($userID) {
                     @unlink($dir . 'large/' . $insertid . $endung);
                     @unlink($dir . 'thumb/' . $insertid . '.jpg');
                     safe_query("DELETE FROM " . PREFIX . "gallery_pictures WHERE picID='" . $insertid . "'");
-                    echo '<p style="color:' . $loosecolor . '">' . $_language->module[ 'no_space_left' ] . '</p>';
+                    echo '<p class="ws-lose-color">' . $_language->module[ 'no_space_left' ] . '</p>';
                 }
             } else {
                 safe_query("DELETE FROM " . PREFIX . "gallery_pictures WHERE picID='" . $insertid . "'");
@@ -186,9 +186,9 @@ if ($userID) {
         $percent = percent($size, $maxusergalleries, 0);
 
         if ($percent > 95) {
-            $color = $loosecolor;
+            $color = "#FF0000";
         } else {
-            $color = $wincolor;
+            $color = "#008000";
         }
 
         $vars = ['%spacecolor%', '%used_size%', '%available_size%'];

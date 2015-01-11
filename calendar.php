@@ -251,9 +251,6 @@ function print_calendar($mon, $year)
 
 function print_termine($tag, $month, $year)
 {
-    global $wincolor;
-    global $loosecolor;
-    global $drawcolor;
     global $userID;
     global $_language;
 
@@ -297,21 +294,17 @@ function print_termine($tag, $month, $year)
                             $i = 1;
                             while ($da = mysqli_fetch_array($anmeldung)) {
                                 if ($da['status'] == "y") {
-                                    $fontcolor = $wincolor;
+                                    $fontcolor = "ws-win-color";
                                 } elseif ($da['status'] == "n") {
-                                    $fontcolor = $loosecolor;
+                                    $fontcolor = "ws-lose-color";
                                 } else {
-                                    $fontcolor = $drawcolor;
+                                    $fontcolor = "ws-draw-color";
                                 }
 
                                 if ($i > 1) {
-                                    $players .= ', <a href="index.php?site=profile&amp;id=' . $da['userID'] .
-                                        '"><font color="' . $fontcolor . '">' . getnickname($da['userID']) .
-                                        '</font></a>';
+                                    $players .= ', <a href="index.php?site=profile&amp;id=' . $da['userID'] . '" class="' . $fontcolor . '">' . getnickname($da['userID']) . '</a>';
                                 } else {
-                                    $players .= '<a href="index.php?site=profile&amp;id=' . $da['userID'] .
-                                        '"><font color="' . $fontcolor . '">' . getnickname($da['userID']) .
-                                        '</font></a>';
+                                    $players .= '<a href="index.php?site=profile&amp;id=' . $da['userID'] . '" class="' . $fontcolor . '">' . getnickname($da['userID']) . '</a>';
                                 }
                                 $i++;
                             }
@@ -391,25 +384,17 @@ function print_termine($tag, $month, $year)
                             $i = 1;
                             while ($da = mysqli_fetch_array($anmeldung)) {
                                 if ($da['status'] == "y") {
-                                    $fontcolor = $wincolor;
+                                    $fontcolor = "ws-win-color";
                                 } elseif ($da['status'] == "n") {
-                                    $fontcolor = $loosecolor;
+                                    $fontcolor = "ws-lose-color";
                                 } else {
-                                    $fontcolor = $drawcolor;
+                                    $fontcolor = "ws-draw-color";
                                 }
 
                                 if ($i > 1) {
-                                    $players .= ', <a href="index.php?site=profile&amp;id=' . $da['userID'] . '">
-                                        <span style="color:' . $fontcolor . '">
-                                            ' . getnickname($da['userID']) . '
-                                        </span>
-                                    </a>';
+                                    $players .= ', <a href="index.php?site=profile&amp;id=' . $da['userID'] . '" class="' . $fontcolor . '">' . getnickname($da['userID']) . '</a>';
                                 } else {
-                                    $players .= '<a href="index.php?site=profile&amp;id=' . $da['userID'] . '">
-                                        <span style="color:' . $fontcolor . '">
-                                            ' . getnickname($da['userID']) .
-                                        '</span>
-                                    </a>';
+                                    $players .= '<a href="index.php?site=profile&amp;id=' . $da['userID'] . '">' . getnickname($da['userID']) . '</a>';
                                 }
                                 $i++;
                             }

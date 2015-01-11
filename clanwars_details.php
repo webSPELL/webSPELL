@@ -76,14 +76,14 @@ if (is_array($theMaps)) {
 }
 
 if ($homescr > $oppscr) {
-    $results_1 = '<font color="' . $wincolor . '">' . $homescr . '</font>';
-    $results_2 = '<font color="' . $wincolor . '">' . $oppscr . '</font>';
+    $results_1 = '<span class="ws-win-color">' . $homescr . '</span>';
+    $results_2 = '<span class="ws-win-color">' . $oppscr . '</span>';
 } elseif ($homescr < $oppscr) {
-    $results_1 = '<font color="' . $loosecolor . '">' . $homescr . '</font>';
-    $results_2 = '<font color="' . $loosecolor . '">' . $oppscr . '</font>';
+    $results_1 = '<span class="ws-lose-color">' . $homescr . '</span>';
+    $results_2 = '<span class="ws-lose-color">' . $oppscr . '</span>';
 } else {
-    $results_1 = '<font color="' . $drawcolor . '">' . $homescr . '</font>';
-    $results_2 = '<font color="' . $drawcolor . '">' . $oppscr . '</font>';
+    $results_1 = '<span class="ws-draw-color">' . $homescr . '</span>';
+    $results_2 = '<span class="ws-draw-color">' . $oppscr . '</span>';
 }
 
 if (isclanwaradmin($userID)) {
@@ -173,13 +173,13 @@ $homescr = array_sum($scoreHome);
 $oppscr = array_sum($scoreOpp);
 
 if ($homescr > $oppscr) {
-    $result_map = '[color=' . $wincolor . '][b]' . $homescr . ':' . $oppscr . '[/b][/color]';
+    $result_map = '[color=#008000][b]' . $homescr . ':' . $oppscr . '[/b][/color]';
     $result_map2 = 'won';
 } elseif ($homescr < $oppscr) {
-    $result_map = '[color=' . $loosecolor . '][b]' . $homescr . ':' . $oppscr . '[/b][/color]';
+    $result_map = '[color=#FF0000][b]' . $homescr . ':' . $oppscr . '[/b][/color]';
     $result_map2 = 'lost';
 } else {
-    $result_map = '[color=' . $drawcolor . '][b]' . $homescr . ':' . $oppscr . '[/b][/color]';
+    $result_map = '[color=#FFA500][b]' . $homescr . ':' . $oppscr . '[/b][/color]';
     $result_map2 = 'draw';
 }
 
@@ -188,14 +188,14 @@ if (is_array($theMaps)) {
     foreach ($theMaps as $map) {
         $score = '';
         if ($scoreHome[ $d ] > $scoreOpp[ $d ]) {
-            $score_1 = '<font color="' . $wincolor . '"><strong>' . $scoreHome[ $d ] . '</strong></font>';
-            $score_2 = '<font color="' . $wincolor . '"><strong>' . $scoreOpp[ $d ] . '</strong></font>';
+            $score_1 = '<span class="ws-win-color"><strong>' . $scoreHome[ $d ] . '</strong></span>';
+            $score_2 = '<span class="ws-win-color"><strong>' . $scoreOpp[ $d ] . '</strong></span>';
         } elseif ($scoreHome[ $d ] < $scoreOpp[ $d ]) {
-            $score_1 = '<font color="' . $loosecolor . '"><strong>' . $scoreHome[ $d ] . '</strong></font>';
-            $score_2 = '<font color="' . $loosecolor . '"><strong>' . $scoreOpp[ $d ] . '</strong></font>';
+            $score_1 = '<span class="ws-lose-color"><strong>' . $scoreHome[ $d ] . '</strong></span>';
+            $score_2 = '<span class="ws-lose-color"><strong>' . $scoreOpp[ $d ] . '</strong></span>';
         } else {
-            $score_1 = '<font color="' . $drawcolor . '"><strong>' . $scoreHome[ $d ] . '</strong></font>';
-            $score_2 = '<font color="' . $drawcolor . '"><strong>' . $scoreOpp[ $d ] . '</strong></font>';
+            $score_1 = '<span class="ws-draw-color"><strong>' . $scoreHome[ $d ] . '</strong></span>';
+            $score_2 = '<span class="ws-draw-color"><strong>' . $scoreOpp[ $d ] . '</strong></span>';
         }
 
         eval ("\$clanwars_details_results = \"" . gettemplate("clanwars_details_results") . "\";");

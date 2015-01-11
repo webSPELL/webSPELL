@@ -405,6 +405,7 @@ $maxusers = $ds[ 'users' ];
 if (empty($maxusers)) {
     $maxusers = 5;
 }
+$hp_title = stripslashes($ds[ 'title' ]);
 $hp_url = $ds[ 'hpurl' ];
 $admin_name = $ds[ 'adminname' ];
 $admin_email = $ds[ 'adminemail' ];
@@ -503,14 +504,3 @@ if (empty($modRewrite)) {
 }
 
 $new_chmod = 0666;
-
-// -- STYLES -- //
-
-$ergebnis = safe_query("SELECT * FROM " . PREFIX . "styles");
-$ds = mysqli_fetch_array($ergebnis);
-
-$hp_title = stripslashes($ds[ 'title' ]);
-
-$wincolor = $ds[ 'win' ];
-$loosecolor = $ds[ 'loose' ];
-$drawcolor = $ds[ 'draw' ];

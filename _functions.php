@@ -157,7 +157,7 @@ function percent($sub, $total, $dec)
 
 function showlock($reason, $time)
 {
-    $gettitle = mysqli_fetch_array(safe_query("SELECT title FROM " . PREFIX . "styles"));
+    $gettitle = mysqli_fetch_array(safe_query("SELECT title FROM " . PREFIX . "settings"));
     $pagetitle = $gettitle[ 'title' ];
     eval ("\$lock = \"" . gettemplate("lock") . "\";");
     die($lock);

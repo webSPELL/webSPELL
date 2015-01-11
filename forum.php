@@ -46,9 +46,6 @@ if (!isset($_GET[ 'action' ])) {
 
 function forum_stats()
 {
-    global $wincolor;
-    global $loosecolor;
-    global $drawcolor;
     global $_language;
 
     $_language->readModule('forum');
@@ -149,11 +146,11 @@ function forum_stats()
         $n = 1;
         while ($ds = mysqli_fetch_array($ergebnis)) {
             if (isforumadmin($ds[ 'userID' ])) {
-                $nickname = '<span style="color:' . $loosecolor . '">' . $ds[ 'nickname' ] . '</span>';
+                $nickname = '<span class="ws-lose-color">' . $ds[ 'nickname' ] . '</span>';
             } elseif (isanymoderator($ds[ 'userID' ])) {
-                $nickname = '<span style="color:' . $drawcolor . '">' . $ds[ 'nickname' ] . '</span>';
+                $nickname = '<span class="ws-draw-color">' . $ds[ 'nickname' ] . '</span>';
             } elseif (isclanmember($ds[ 'userID' ])) {
-                $nickname = '<span style="color:' . $wincolor . '">' . $ds[ 'nickname' ] . '</span>';
+                $nickname = '<span class="ws-win-color">' . $ds[ 'nickname' ] . '</span>';
             } else {
                 $nickname = $ds[ 'nickname' ];
             }

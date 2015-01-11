@@ -328,13 +328,13 @@ if ($action == "new") {
         $oppscr = array_sum($scoreOpp);
 
         if ($homescr > $oppscr) {
-            $results = '[color=' . $wincolor . '][b]' . $homescr . ':' . $oppscr . '[/b][/color]';
+            $results = '[color=#008000][b]' . $homescr . ':' . $oppscr . '[/b][/color]';
             $result2 = 'won';
         } elseif ($homescr < $oppscr) {
-            $results = '[color=' . $loosecolor . '][b]' . $homescr . ':' . $oppscr . '[/b][/color]';
+            $results = '[color=#FF0000][b]' . $homescr . ':' . $oppscr . '[/b][/color]';
             $result2 = 'lost';
         } else {
-            $results = '[color=' . $drawcolor . '][b]' . $homescr . ':' . $oppscr . '[/b][/color]';
+            $results = '[color=#FFA500][b]' . $homescr . ':' . $oppscr . '[/b][/color]';
             $result2 = 'draw';
         }
 
@@ -356,16 +356,16 @@ if ($action == "new") {
                 $score = "";
                 if ($scoreHome[ $d ] > $scoreOpp[ $d ]) {
                     $score .=
-                        '<td>[color=' . $wincolor . '][b]' . $scoreHome[ $d ] . '[/b][/color] : [color=' . $loosecolor .
-                        '][b]' . $scoreOpp[ $d ] . '[/b][/color]</td>';
+                        '<td>[color=#008000][b]' . $scoreHome[ $d ] . '[/b][/color] : [color=#FF0000][b]
+						' . $scoreOpp[ $d ] . '[/b][/color]</td>';
                 } elseif ($scoreHome[ $d ] < $scoreOpp[ $d ]) {
                     $score .=
-                        '<td>[color=' . $loosecolor . '][b]' . $scoreHome[ $d ] . '[/b][/color] : [color=' . $wincolor .
-                        '][b]' . $scoreOpp[ $d ] . '[/b][/color]</td>';
+                        '<td>[color=#FF0000][b]' . $scoreHome[ $d ] . '[/b][/color] : [color=#008000][b]
+						' . $scoreOpp[ $d ] . '[/b][/color]</td>';
                 } else {
                     $score .=
-                        '<td>[color=' . $drawcolor . '][b]' . $scoreHome[ $d ] . '[/b][/color] : [color=' . $drawcolor .
-                        '][b]' . $scoreOpp[ $d ] . '[/b][/color]</td>';
+                        '<td>[color=#FFA500][b]' . $scoreHome[ $d ] . '[/b][/color] : [color=#FFA500][b]
+						' . $scoreOpp[ $d ] . '[/b][/color]</td>';
                 }
                 $d++;
                 eval ("\$news_cw_results = \"" . gettemplate("news_cw_results") . "\";");
@@ -1302,11 +1302,11 @@ if ($action == "new") {
             $oppscr = array_sum(unserialize($ds[ 'oppscore' ]));
 
             if ($homescr > $oppscr) {
-                $results = '<font color="' . $wincolor . '">' . $homescr . ':' . $oppscr . '</font>';
+                $results = '<span class="ws-win-color">' . $homescr . ':' . $oppscr . '</span>';
             } elseif ($homescr < $oppscr) {
-                $results = '<font color="' . $loosecolor . '">' . $homescr . ':' . $oppscr . '</font>';
+                $results = '<span class="ws-lose-color">' . $homescr . ':' . $oppscr . '</span>';
             } else {
-                $results = '<font color="' . $drawcolor . '">' . $homescr . ':' . $oppscr . '</font>';
+                $results = '<span class="ws-draw-color">' . $homescr . ':' . $oppscr . '</span>';
             }
 
             if (getanzcwcomments($ds[ 'cwID' ])) {
@@ -1539,11 +1539,11 @@ if ($action == "new") {
             $oppscr = array_sum(unserialize($ds[ 'oppscore' ]));
 
             if ($homescr > $oppscr) {
-                $results = '<font color="' . $wincolor . '">' . $homescr . ':' . $oppscr . '</font>';
+                $results = '<span class="ws-win-color">' . $homescr . ':' . $oppscr . '</span>';
             } elseif ($homescr < $oppscr) {
-                $results = '<font color="' . $loosecolor . '">' . $homescr . ':' . $oppscr . '</font>';
+                $results = '<span class="ws-lose-color">' . $homescr . ':' . $oppscr . '</span>';
             } else {
-                $results = '<font color="' . $drawcolor . '">' . $homescr . ':' . $oppscr . '</font>';
+                $results = '<span class="ws-draw-color">' . $homescr . ':' . $oppscr . '</span>';
             }
 
             if ($anzcomments = getanzcwcomments($ds[ 'cwID' ])) {

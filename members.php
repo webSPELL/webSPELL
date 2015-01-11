@@ -167,9 +167,9 @@ if ($action == "show") {
             $lastname = strip_tags($dm[ 'lastname' ]);
             $town = strip_tags($dm[ 'town' ]);
             if ($dm[ 'activity' ]) {
-                $activity = '<font color="' . $wincolor . '">' . $_language->module[ 'active' ] . '</font>';
+                $activity = '<span class="ws-win-color">' . $_language->module[ 'active' ] . '</span>';
             } else {
-                $activity = '<font color="' . $loosecolor . '">' . $_language->module[ 'inactive' ] . '</font>';
+                $activity = '<span class="ws-lose-color">' . $_language->module[ 'inactive' ] . '</span>';
             }
 
             eval ("\$members_details_content = \"" . gettemplate("members_details_content") . "\";");
@@ -308,9 +308,9 @@ if ($action == "show") {
                 $lastname = strip_tags($dm[ 'lastname' ]);
                 $town = strip_tags($dm[ 'town' ]);
                 if ($dm[ 'activity' ]) {
-                    $activity = '<font color="' . $wincolor . '">' . $_language->module[ 'active' ] . '</font>';
+                    $activity = '<span class="ws-win-color">' . $_language->module[ 'active' ] . '</span>';
                 } else {
-                    $activity = '<font color="' . $loosecolor . '">' . $_language->module[ 'inactive' ] . '</font>';
+                    $activity = '<span class="ws-lose-color">' . $_language->module[ 'inactive' ] . '</span>';
                 }
 
                 eval ("\$members_content = \"" . gettemplate("members_content") . "\";");
