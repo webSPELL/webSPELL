@@ -44,7 +44,7 @@ class Language
         if ($dh = opendir($filepath)) {
             while ($file = mb_substr(readdir($dh), 0, 2)) {
                 if ($file != "." && $file != ".." && is_dir($filepath . $file)) {
-                    $langs[] = $file;
+                    $langs[ ] = $file;
                 }
             }
             closedir($dh);
@@ -91,7 +91,7 @@ class Language
             }
 
             foreach ($language_array as $key => $val) {
-                $this->module[$key] = $val;
+                $this->module[ $key ] = $val;
             }
         }
         return true;
@@ -105,5 +105,15 @@ class Language
         }
 
         return $template;
+    }
+
+    public function getTranslationTable()
+    {
+        $map = array();
+        foreach ($this->module as $key => $val) {
+            $newKey = '%' . $key . '%';
+            $map[ $newKey ] = $val;
+        }
+        return $map;
     }
 }
