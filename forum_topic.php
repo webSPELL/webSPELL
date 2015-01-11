@@ -112,7 +112,7 @@ if (isset($_POST['newreply']) && !isset($_POST['preview'])) {
     $validation = $spamApi->validate($message);
 
     $date = time();
-    if ($validation == SpamApi::NoSpam) {
+    if ($validation == \webspell\SpamApi::NOSPAM) {
         safe_query(
             "INSERT INTO " . PREFIX . "forum_posts ( boardID, topicID, date, poster, message ) VALUES( '" .
             $_REQUEST['board'] . "', '$topic', '$date', '$userID', '" . $message . "' ) "
@@ -125,7 +125,7 @@ if (isset($_POST['newreply']) && !isset($_POST['preview'])) {
         );
 
         // check if there are more than 1000 unread topics => delete oldest one
-        $dv = safe_query("SELECT topics FROM " . PREFIX . "user WHERE userID='" . $userID . "'");
+        $dv = mysqli_fetch_array(safe_query("SELECT topics FROM " . PREFIX . "user WHERE userID='" . $userID . "'"));
         $array = explode('|', $dv['topics']);
         if (count($array) >= 1000) {
             safe_query(

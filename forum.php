@@ -1149,7 +1149,7 @@ if (isset($_POST[ 'submit' ]) || isset($_POST[ 'movetopic' ]) || isset($_GET[ 'a
             $spamApi = \webspell\SpamApi::getInstance();
             $validation = $spamApi->validate($message);
 
-            if ($validation == \webspell\SpamApi::NoSpam) {
+            if ($validation == \webspell\SpamApi::NOSPAM) {
                 $date = time();
                 safe_query(
                     "INSERT INTO " . PREFIX .
