@@ -115,21 +115,3 @@ a.flag.active img, a.flag:hover img {
     overflow: hidden;
     text-align: left;
 }
-
-/* CSS Marquee */
-.marquee {
-    width: 100%;
-    margin: 0 auto;
-    white-space: nowrap;
-    overflow: hidden;
-    box-sizing: border-box;
-}
-
-.marquee span {
-    display: inline-block;
-    text-indent: 0;
-}
-
-.marquee span:hover {
-    animation-play-state: paused
-}

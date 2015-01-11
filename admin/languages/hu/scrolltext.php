@@ -29,9 +29,9 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  '1_fast'=>'1 (gyors)',
-  '5_normal'=>'5 (norműl)',
-  '10_slow'=>'10 (lassú)',
+  '1_slow'=>'1 (lassú)',
+  '2_normal'=>'2 (norműl)',
+  '3_fast'=>'3 (gyors)',
   'access_denied'=>'Hozzáférés megtagadva',
   'color'=>'Szín',
   'delay'=>'Sebesség',
