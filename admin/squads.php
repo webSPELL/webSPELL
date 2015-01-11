@@ -468,7 +468,7 @@ onsubmit="return chkFormular();">
       <td>' . $type . '</td>
     </tr>
   </table>
-  <div id="games" style="display:' . $display . ';">
+  <div id="games" style="display:' . $display . '">
   <table width="100%" border="0" cellspacing="1" cellpadding="3">
     <tr>
       <td width="15%"><b>' . $_language->module[ 'game' ] . '</b></td>

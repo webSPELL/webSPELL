@@ -186,7 +186,6 @@ function vote($poll)
             }
             $n = 1;
             foreach ($options as $option) {
-                $option = $option;
                 eval("\$poll_content = \"" . gettemplate("poll_content") . "\";");
                 echo $poll_content;
                 $n++;

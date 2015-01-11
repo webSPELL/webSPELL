@@ -53,10 +53,9 @@
 
     function berechnen() {
         var anz = document.getElementById('anz').value,
-                =
-        document.getElementById('euro').value,
-                user = total / anz,
-                rounduser = Math.round(user);
+            total = document.getElementById('euro').value,
+            user = total / anz,
+            rounduser = Math.round(user);
 
         document.getElementById('usereuro').value = rounduser;
         document.getElementById('calculation').value =

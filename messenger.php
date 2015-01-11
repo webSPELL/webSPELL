@@ -291,7 +291,7 @@ if (isset($_POST['delete'])) {
                 $sender = '<a href="index.php?site=profile&amp;id=' . $ds['fromuser'] . '"><b>' .
                     getnickname($ds['fromuser']) . '</b></a>';
                 if (isclanmember($ds['fromuser'])) {
-                    $member = '<img src="images/icons/member.gif" width="6" height="11" alt="Clanmember">';
+                    $member = '<img src="images/icons/member.gif" width="7" height="16" alt="Clanmember">';
                 } else {
                     $member = '';
                 }
@@ -441,7 +441,7 @@ if (isset($_POST['delete'])) {
                     getnickname($ds['touser']) . '</b></a>';
 
                 if (isclanmember($ds['touser'])) {
-                    $member = ' <img src="images/icons/member.gif" width="6" height="11" alt="Clanmember">';
+                    $member = ' <img src="images/icons/member.gif" width="7" height="16" alt="Clanmember">';
                 } else {
                     $member = '';
                 }
