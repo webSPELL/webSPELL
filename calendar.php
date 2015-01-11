@@ -221,7 +221,7 @@ function print_calendar($mon, $year)
 
             //If date is today, highlight it
             if (($t == date("j")) && ($mon == date("n")) && ($year == date("Y"))) {
-                echo '<td height="40" valign="top"><b>' . $t . '</b><br>' . $termin . '</td>';
+                echo '<td height="40" valign="top" class="active"><b>' . $t . '</b><br>' . $termin . '</td>';
             } else {
 //  If the date is absent ie after 31, print space
                 if ($t === ' ') {
