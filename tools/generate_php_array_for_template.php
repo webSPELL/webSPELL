@@ -1,7 +1,7 @@
 <?php
 error_reporting(E_ALL);
 #$regex_find_eval_calls = '/eval\s\("\\\$([\w_])+\s*=\s*\\""\s+.\s+gettemplate\("([\w_]+?)"\)\s+.\s+"\\";"\);/si';
-$regex_find_eval_calls = '/eval\s\("'.preg_quote('\$',"/").'(?<variable>[\w_]+?)\s*=\s*'.preg_quote('\"',"/").'"\s*.\s*gettemplate\(["\'](?<parameters>[\w_,\'" ]+?)["\']\)\s*.\s*"'.preg_quote('\"',"/").';"\);/si';
+$regex_find_eval_calls = '/eval\s*\("'.preg_quote('\$',"/").'(?<variable>[\w_]+?)\s*=\s*'.preg_quote('\"',"/").'"\s*.\s*gettemplate\(["\'](?<parameters>[\w_,\'" ]+?)["\']\)\s*.\s*"'.preg_quote('\"',"/").';"\);/si';
 
 $folders = array('../','../admin/');
 $count = 0;
