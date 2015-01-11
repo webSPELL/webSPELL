@@ -40,7 +40,8 @@ if (isset($_POST[ 'submit' ])) {
             "UPDATE
                 " . PREFIX . "settings
             SET
-                hpurl='" . $_POST[ 'url' ] . "',
+                title='" . $_POST[ 'title' ] . "',
+				hpurl='" . $_POST[ 'url' ] . "',
                 clanname='" . $_POST[ 'clanname' ] . "',
                 clantag='" . $_POST[ 'clantag' ] . "',
                 adminname='" . $_POST[ 'admname' ] . "',
@@ -100,7 +101,6 @@ if (isset($_POST[ 'submit' ])) {
                 user_guestbook='" . $_POST[ 'user_guestbook' ] . "',
                 autoresize='" . $_POST[ 'autoresize' ] . "'"
         );
-        safe_query("UPDATE " . PREFIX . "styles SET title='" . $_POST[ 'title' ] . "' ");
         redirect("admincenter.php?site=settings", "", 0);
     } else {
         redirect("admincenter.php?site=settings", $_language->module[ 'transaction_invalid' ], 3);
@@ -108,9 +108,6 @@ if (isset($_POST[ 'submit' ])) {
 } else {
     $settings = safe_query("SELECT * FROM " . PREFIX . "settings");
     $ds = mysqli_fetch_array($settings);
-
-    $styles = safe_query("SELECT * FROM " . PREFIX . "styles");
-    $dt = mysqli_fetch_array($styles);
 
     if ($ds[ 'gb_info' ]) {
         $gb_info = '<input type="checkbox" name="gb_info" value="1" checked="checked"
@@ -331,7 +328,7 @@ if (isset($_POST[ 'submit' ])) {
     <table width="100%" border="0" cellspacing="1" cellpadding="3">
         <tr>
             <td width="15%"><b><?php echo $_language->module[ 'page_title' ]; ?></b></td>
-            <td width="35%"><input name="title" type="text" value="<?php echo getinput($dt[ 'title' ]); ?>" size="35"
+            <td width="35%"><input name="title" type="text" value="<?php echo getinput($ds[ 'title' ]); ?>" size="35"
                                    onmouseover="showWMTT('id2')" onmouseout="hideWMTT()"/></td>
             <td width="15%"><b><?php echo $_language->module[ 'page_url' ]; ?></b></td>
             <td width="35%"><input type="text" name="url" value="<?php echo getinput($ds[ 'hpurl' ]); ?>" size="35"
