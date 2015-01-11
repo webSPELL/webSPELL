@@ -197,7 +197,7 @@ if ($login) {
     <table class="table">
         <tr>
             <td height="500" class="text-center">
-                <table width="350" border="0" cellpadding="10" cellspacing="0">
+                <table class="table">
                     <tr>
                         <td class="text-center"><?php echo $error; ?></td>
                     </tr>
