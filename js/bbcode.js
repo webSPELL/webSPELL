@@ -563,8 +563,6 @@ function formcheckOnsend(id) {
     var valuestring = document.getElementById(id).value;
 
     return trim(valuestring) !== "";
-
-
 }
 
 //bbcode checker
