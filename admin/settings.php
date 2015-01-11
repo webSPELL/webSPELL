@@ -426,7 +426,7 @@ if (isset($_POST[ 'submit' ])) {
             </tr>
             <tr>
                 <td align="right"><select name="captcha_math" onmouseover="showWMTT('id47')"
-                                          onmouseout="hideWMTT()"></select><?php echo $captcha_style; ?></select></td>
+                                          onmouseout="hideWMTT()"><?php echo $captcha_style; ?></select></td>
                 <td><?php echo $_language->module[ 'captcha_style' ]; ?></td>
             </tr>
             <tr>
