@@ -510,7 +510,11 @@ if (mb_strlen($site)) {
         }
     } else {
         $anz =
-            mysqli_num_rows(safe_query("SELECT ip FROM `" . PREFIX . "whoisonline` WHERE ip='" . $GLOBALS[ 'ip' ] . "'"));
+            mysqli_num_rows(
+                safe_query(
+                    "SELECT ip FROM `" . PREFIX . "whoisonline` WHERE ip='" . $GLOBALS[ 'ip' ] . "'"
+                )
+            );
         if ($anz) {
             safe_query(
                 "UPDATE " . PREFIX . "whoisonline SET time='" . time() . "', site='$site' WHERE ip='" .
