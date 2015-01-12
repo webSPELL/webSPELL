@@ -199,12 +199,10 @@ if ($login) {
 }
     ?>
     <link href="_stylesheet.css" rel="stylesheet">
-	
     </head>
     <body class="checklogin-body">
 	<div class="alert alert-danger text-center" role="alert"><?php echo $error; ?></div>
 	</body>
-
     </html>
     <?php
 }
