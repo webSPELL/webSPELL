@@ -191,7 +191,7 @@ if (isset($_POST['save'])) {
 }
 if (isset($_GET['key'])) {
     safe_query("UPDATE `" . PREFIX . "user` SET activated='1' WHERE activated='" . $_GET['key'] . "'");
-    if (mysqli_affected_rows()) {
+    if (mysqli_affected_rows($_database)) {
         redirect('index.php?site=login', $_language->module['activation_successful'], 3);
     } else {
         redirect('index.php?site=login', $_language->module['wrong_activationkey'], 3);
@@ -208,7 +208,7 @@ if (isset($_GET['key'])) {
             WHERE
                 email_activate='" . $_GET['mailkey']
         );
-        if (mysqli_affected_rows()) {
+        if (mysqli_affected_rows($_database)) {
             redirect('index.php?site=login', $_language->module['mail_activation_successful'], 3);
         } else {
             redirect('index.php?site=login', $_language->module['wrong_activationkey'], 3);

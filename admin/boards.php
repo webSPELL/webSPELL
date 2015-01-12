@@ -571,7 +571,7 @@ if ($action == "mods") {
     $ds = mysqli_fetch_array($ergebnis);
 
     $usergrps = explode(";", $ds[ 'readgrps' ]);
-    $sql = safe_query("SELECT * FROM " . PREFIX . "forum_groups");
+    $sql = safe_query("SELECT * FROM `" . PREFIX . "forum_groups`");
     $groups = '<select id="readgrps" name="readgrps[]" multiple="multiple" size="10">';
     if (in_array('user', $usergrps)) {
         $groups .= '<option value="user" selected="selected">' . $_language->module[ 'registered_users' ] . '</option>';
@@ -722,10 +722,10 @@ if ($action == "mods") {
         }
     }
 
-    $boards = safe_query("SELECT * FROM " . PREFIX . "forum_boards WHERE category='0' ORDER BY sort");
+    $boards = safe_query("SELECT * FROM `" . PREFIX . "forum_boards` WHERE `category`='0' ORDER BY `sort`");
     $tmp = mysqli_fetch_assoc(
         safe_query(
-            "SELECT count(boardID) as cnt FROM " . PREFIX . "forum_boards WHERE category='0'"
+            "SELECT count(boardID) as cnt FROM `" . PREFIX . "forum_boards` WHERE `category` = '0'"
         )
     );
     $anzboards = $tmp[ 'cnt' ];

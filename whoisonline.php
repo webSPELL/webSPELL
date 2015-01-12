@@ -108,7 +108,7 @@ while ($ds = mysqli_fetch_array($ergebnis)) {
             '<a href="index.php?site=profile&amp;id=' . $ds[ 'userID' ] . '"><strong>' . $ds[ 'nickname' ] .
             '</strong></a>';
         if (isclanmember($ds[ 'userID' ])) {
-            $member = ' <img src="images/icons/member.gif" width="6" height="11" alt="Clanmember">';
+            $member = ' <img src="images/icons/member.gif" width="7" height="16" alt="Clanmember">';
         } else {
             $member = '';
         }
@@ -116,7 +116,7 @@ while ($ds = mysqli_fetch_array($ergebnis)) {
             $email = '';
         } else {
             $email = '<a href="mailto:' . mail_protect(getemail($ds[ 'userID' ])) . '">
-            <span class="glyphicon glyphicon-email" title="email"></span>
+            <span class="glyphicon glyphicon-envelope" title="email"></span>
         </a>';
         }
 
@@ -282,7 +282,7 @@ while ($ds = mysqli_fetch_array($ergebnis)) {
     $nickname = '<a href="index.php?site=profile&amp;id=' . $ds[ 'userID' ] . '"><strong>' . $ds[ 'nickname' ] .
         '</strong></a>';
     if (isclanmember($ds[ 'userID' ])) {
-        $member = ' <img src="images/icons/member.gif" width="6" height="11" alt="Clanmember">';
+        $member = ' <img src="images/icons/member.gif" width="7" height="16" alt="Clanmember">';
     } else {
         $member = '';
     }
@@ -290,7 +290,7 @@ while ($ds = mysqli_fetch_array($ergebnis)) {
         $email = '';
     } else {
         $email = '<a href="mailto:' . mail_protect(getemail($ds[ 'userID' ])) . '">
-            <span class="glyphicon glyphicon-email" title="email"></span>
+            <span class="glyphicon glyphicon-envelope" title="email"></span>
         </a>';
     }
 

@@ -499,7 +499,7 @@ if (!$userID) {
                     $_language->module['guestbook'] . ':</label>
 
                     <div class="col-lg-9">
-                        <select name="user_guestbook" class="form-control">' . $user_gbook . '</select>
+                        <select name="user_guestbook" id="pm_mail" class="form-control">' . $user_gbook . '</select>
                     </div>
                 </div>';
             }

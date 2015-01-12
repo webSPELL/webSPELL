@@ -86,7 +86,7 @@ if (isset($_POST[ 'submit' ])) {
     echo '<form method="post" action="index.php?site=lostpassword" class="form-inline" role="form">
             <div class="form-group">
                 <label class="sr-only" for="email">' . $_language->module[ 'your_email' ] . '</label>
-                <input type="email" name="email" class="form-control" placeholder="' .
+                <input type="email" id="email" name="email" class="form-control" placeholder="' .
         $_language->module[ 'your_email' ] . '" required>
             </div>
             <input type="submit" name="submit"

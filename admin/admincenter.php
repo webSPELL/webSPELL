@@ -137,7 +137,7 @@ function addonnav()
 			<li><a href="admincenter.php?site=page_statistic"><?php echo $_language->module['page_statistics']; ?></a></li>
 			<li><a href="admincenter.php?site=visitor_statistic"><?php echo $_language->module['visitor_statistics']; ?></a></li>
     <?php echo admincenternav(1); ?>
-			<li><a href="../logout.php"><b><?php echo $_language->module['log_out']; ?></b></a></li>
+			<li><a href="../logout.php"><strong><?php echo $_language->module['log_out']; ?></strong></a></li>
 		</ul>
     <?php if (isuseradmin($userID)) {
 ?>
@@ -260,6 +260,6 @@ if (ispageadmin($userID)) {
 	 <td colspan="5"><img src="images/5.jpg" width="1000" height="7" alt="" /></td>
 	</tr>
 </table>
-<center><br>&copy; 2005 - 2011 <a href="http://www.webspell.org" target="_blank" class="white"><b>webSPELL.org</b></a> &amp; <a href="http://www.webspell.at" target="_blank" class="white"><b>webSPELL.at</b></a><br>&nbsp;</center>
+<center><br>&copy; 2005 - 2011 <a href="http://www.webspell.org" target="_blank" class="white"><strong>webSPELL.org</strong></a> &amp; <a href="http://www.webspell.at" target="_blank" class="white"><b>webSPELL.at</b></a><br>&nbsp;</center>
 </body>
 </html>

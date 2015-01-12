@@ -409,7 +409,7 @@ if (isset($_POST[ 'submit' ])) {
             </tr>
             <tr>
                 <td align="right"><select name="captcha_type" onmouseover="showWMTT('id44')"
-                                          onmouseout="hideWMTT()"/><?php echo $captcha_type; ?></select></td>
+                                          onmouseout="hideWMTT()"></select><?php echo $captcha_type; ?></select></td>
                 <td><?php echo $_language->module[ 'captcha_type' ]; ?></td>
             </tr>
             <tr>
@@ -426,7 +426,7 @@ if (isset($_POST[ 'submit' ])) {
             </tr>
             <tr>
                 <td align="right"><select name="captcha_math" onmouseover="showWMTT('id47')"
-                                          onmouseout="hideWMTT()"/><?php echo $captcha_style; ?></select></td>
+                                          onmouseout="hideWMTT()"><?php echo $captcha_style; ?></select></td>
                 <td><?php echo $_language->module[ 'captcha_style' ]; ?></td>
             </tr>
             <tr>
@@ -582,7 +582,7 @@ if (isset($_POST[ 'submit' ])) {
             </tr>
             <tr>
                 <td align="right"><select name="user_guestbook" onmouseover="showWMTT('id60')"
-                                          onmouseout="hideWMTT()"/><?php echo $user_gbook; ?></select></td>
+                                          onmouseout="hideWMTT()"></select><?php echo $user_gbook; ?></select></td>
                 <td><?php echo $_language->module[ 'user_guestbook' ]; ?></td>
             </tr>
             <tr>
@@ -618,7 +618,7 @@ if (isset($_POST[ 'submit' ])) {
             </tr>
             <tr>
                 <td align="right"><select name="language" onmouseover="showWMTT('id40')"
-                                          onmouseout="hideWMTT()"/><?php echo $langdirs; ?></select></td>
+                                          onmouseout="hideWMTT()"></select><?php echo $langdirs; ?></select></td>
                 <td><?php echo $_language->module[ 'default_language' ]; ?></td>
             </tr>
             <tr>
@@ -659,7 +659,7 @@ if (isset($_POST[ 'submit' ])) {
             </tr>
             <tr>
                 <td align="right"><select name="autoresize" onmouseover="showWMTT('id50')"
-                                          onmouseout="hideWMTT()"/><?php echo $autoresize; ?></select></td>
+                                          onmouseout="hideWMTT()"></select><?php echo $autoresize; ?></select></td>
                 <td><?php echo $_language->module[ 'autoresize' ]; ?></td>
             </tr>
             <tr>

@@ -32,6 +32,28 @@ systeminc('ip');
 
 // -- GLOBAL WEBSPELL FUNCTIONS -- //
 
+function gettemplate($template, $endung = "html", $calledfrom = "root")
+{
+    $templatefolder = "templates";
+    if ($calledfrom == 'root') {
+        return str_replace(
+            "\"",
+            "\\\"",
+            $GLOBALS[ '_language' ]->replace(
+                file_get_contents($templatefolder . "/" . $template . "." . $endung)
+            )
+        );
+    } elseif ($calledfrom == 'admin') {
+        return str_replace(
+            "\"",
+            "\\\"",
+            $GLOBALS[ '_language' ]->replace(
+                file_get_contents("../" . $templatefolder . "/" . $template . "." . $endung)
+            )
+        );
+    }
+}
+
 function makepagelink($link, $page, $pages, $sub = '')
 {
     $page_link = '<span class="pagelink"><img src="images/icons/multipage.gif" width="10" height="12" alt=""> <small>';
@@ -174,7 +196,9 @@ function validate_url($url)
 function validate_email($email)
 {
     return preg_match(
+        // @codingStandardsIgnoreStart
         "/^(?!\.)(\.?[\p{L}0-9!#\$%&'\*\+\/=\?^_`\{\|}~-]+)+@(?!\.)(\.?(?!-)[0-9\p{L}-]+(?<!-))+\.[\p{L}0-9]{2,}$/sui",
+        // @codingStandardsIgnoreEnd
         $email
     );
 }
@@ -418,7 +442,7 @@ if (!isset($_SERVER['REQUEST_URI'])) {
 
 // -- BANNED USERS -- //
 if (date("dh", $lastBanCheck) != date("dh")) {
-    $get = safe_query("SELECT userID, banned FROM " . PREFIX . "user WHERE banned IS NOT NULL");
+    $get = safe_query("SELECT userID, banned FROM `" . PREFIX . "user` WHERE banned IS NOT NULL");
     $removeBan = array();
     while ($ds = mysqli_fetch_assoc($get)) {
         if ($ds['banned'] != "perm") {
@@ -435,10 +459,10 @@ if (date("dh", $lastBanCheck) != date("dh")) {
 }
 
 $banned =
-safe_query(
-    "SELECT userID, banned, ban_reason FROM " . PREFIX . "user WHERE (userID='" . $userID . "' OR ip='" .
-    $GLOBALS['ip'] . "') AND banned IS NOT NULL"
-);
+    safe_query(
+        "SELECT userID, banned, ban_reason FROM " . PREFIX . "user WHERE (userID='" . $userID . "' OR ip='" .
+        $GLOBALS[ 'ip' ] . "') AND banned IS NOT NULL"
+    );
 while ($bq = mysqli_fetch_array($banned)) {
     if ($bq['ban_reason']) {
         $reason = "<br>" . $bq['ban_reason'];
@@ -452,7 +476,7 @@ while ($bq = mysqli_fetch_array($banned)) {
 
 // -- BANNED IPs -- //
 
-safe_query("DELETE FROM " . PREFIX . "banned_ips WHERE deltime < " . time() . "");
+safe_query("DELETE FROM `" . PREFIX . "banned_ips` WHERE deltime < " . time() . "");
 
 // -- WHO IS - WAS ONLINE -- //
 
@@ -460,8 +484,8 @@ $timeout = 5; // 1 second
 $deltime = time() - ($timeout * 60); // IS 1m
 $wasdeltime = time() - (60 * 60 * 24); // WAS 24h
 
-safe_query("DELETE FROM " . PREFIX . "whoisonline WHERE time < '" . $deltime . "'"); // IS online
-safe_query("DELETE FROM " . PREFIX . "whowasonline WHERE time < '" . $wasdeltime . "'"); // WAS online
+safe_query("DELETE FROM " . PREFIX . "whoisonline WHERE time < '" . $deltime . "'");  // IS online
+safe_query("DELETE FROM " . PREFIX . "whowasonline WHERE time < '" . $wasdeltime . "'");  // WAS online
 
 // -- HELP MODE -- //
 
@@ -499,7 +523,7 @@ if (mb_strlen($site)) {
         }
     } else {
         $anz =
-        mysqli_num_rows(safe_query("SELECT ip FROM " . PREFIX . "whoisonline WHERE ip='" . $GLOBALS['ip'] . "'"));
+            mysqli_num_rows(safe_query("SELECT ip FROM " . PREFIX . "whoisonline WHERE ip='" . $GLOBALS[ 'ip' ] . "'"));
         if ($anz) {
             safe_query(
                 "UPDATE " . PREFIX . "whoisonline SET time='" . time() . "', site='$site' WHERE ip='" .
@@ -519,18 +543,18 @@ if (mb_strlen($site)) {
 $time = time();
 $date = date("d.m.Y", $time);
 $deltime = $time - (3600 * 24);
-safe_query("DELETE FROM " . PREFIX . "counter_iplist WHERE del<" . $deltime);
+safe_query("DELETE FROM `" . PREFIX . "counter_iplist` WHERE del<" . $deltime);
 
-if (!mysqli_num_rows(safe_query("SELECT ip FROM " . PREFIX . "counter_iplist WHERE ip='" . $GLOBALS['ip'] . "'"))) {
+if (!mysqli_num_rows(safe_query("SELECT ip FROM " . PREFIX . "counter_iplist WHERE ip='" . $GLOBALS[ 'ip' ] . "'"))) {
     if ($userID) {
-        safe_query("UPDATE " . PREFIX . "user SET ip='" . $GLOBALS['ip'] . "' WHERE userID='" . $userID . "'");
+        safe_query("UPDATE " . PREFIX . "user SET ip='" . $GLOBALS[ 'ip' ] . "' WHERE userID='" . $userID . "'");
     }
-    safe_query("UPDATE " . PREFIX . "counter SET hits=hits+1");
+    safe_query("UPDATE `" . PREFIX . "counter` SET hits=hits+1");
     safe_query(
         "INSERT INTO " . PREFIX . "counter_iplist (dates, del, ip) VALUES ('" . $date . "', '" . $time . "', '" .
-        $GLOBALS['ip'] . "')"
+        $GLOBALS[ 'ip' ] . "')"
     );
-    if (!mysqli_num_rows(safe_query("SELECT dates FROM " . PREFIX . "counter_stats WHERE dates='" . $date . "'"))) {
+    if (!mysqli_num_rows(safe_query("SELECT dates FROM `" . PREFIX . "counter_stats` WHERE dates='" . $date . "'"))) {
         safe_query("INSERT INTO `" . PREFIX . "counter_stats` (`dates`, `count`) VALUES ('" . $date . "', '1')");
     } else {
         safe_query("UPDATE " . PREFIX . "counter_stats SET count=count+1 WHERE dates='" . $date . "'");
@@ -538,10 +562,10 @@ if (!mysqli_num_rows(safe_query("SELECT ip FROM " . PREFIX . "counter_iplist WHE
 }
 
 /* update maxonline if necessary */
-$res = mysqli_fetch_assoc(safe_query("SELECT count(*) as maxuser FROM " . PREFIX . "whoisonline"));
+$res = mysqli_fetch_assoc(safe_query("SELECT count(*) as maxuser FROM `" . PREFIX . "whoisonline`"));
 safe_query(
-    "UPDATE " . PREFIX . "counter SET maxonline = " . $res['maxuser'] . " WHERE maxonline < " .
-    $res['maxuser']
+    "UPDATE " . PREFIX . "counter SET maxonline = " . $res[ 'maxuser' ] . " WHERE maxonline < " .
+    $res[ 'maxuser' ]
 );
 
 // -- SEARCH ENGINE OPTIMIZATION (SEO) -- //

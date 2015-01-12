@@ -562,11 +562,7 @@ function formcheckOnsend(id) {
 
     var valuestring = document.getElementById(id).value;
 
-    if (trim(valuestring) === "") {
-        return false;
-    }
-
-    return true;
+    return trim(valuestring) !== "";
 }
 
 //bbcode checker
@@ -618,7 +614,6 @@ function validbbcode(txt) {
                 result[putincounter] = resulttemp[c];
                 putincounter++;
             }
-            continue;
         }
     }
     if (result) {

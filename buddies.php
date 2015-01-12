@@ -117,7 +117,7 @@ if ($action == "add") {
         redirect('index.php?site=buddies', $_language->module[ 'add_nouserid' ], 3);
     } else {
         safe_query(
-            "UPDATE " . PREFIX . "buddys SET banned='0' WHERE userID='$userID' AND buddy='" . (int)$_GET[ 'id' ]
+            "UPDATE " . PREFIX . "buddys SET banned='0' WHERE userID='$userID' AND buddy='" . (int)$_GET[ 'id' ] . "'"
         );
         header("Location: index.php?site=buddies");
     }
@@ -132,7 +132,7 @@ if ($action == "add") {
         redirect('index.php?site=buddies', $_language->module[ 'add_nouserid' ], 3);
     } else {
         safe_query(
-            "DELETE FROM " . PREFIX . "buddys WHERE userID='$userID' AND buddy='" . (int)$_GET[ 'id' ]
+            "DELETE FROM " . PREFIX . "buddys WHERE userID='$userID' AND buddy='" . (int)$_GET[ 'id' ] . "'"
         );
         header("Location: index.php?site=buddies");
     }
@@ -160,7 +160,7 @@ if ($action == "add") {
             $country = flags($flag);
             $nickname = getnickname($ds[ 'buddy' ]);
             if (isclanmember($ds[ 'buddy' ])) {
-                $member = '<img src="images/icons/member.gif" width="6" height="11" alt="Clanmember">';
+                $member = '<img src="images/icons/member.gif" width="7" height="16" alt="Clanmember">';
             } else {
                 $member = '';
             }
@@ -205,7 +205,7 @@ if ($action == "add") {
             $country = flags($flag);
             $nickname = getnickname($ds[ 'buddy' ]);
             if (isclanmember($ds[ 'buddy' ])) {
-                $member = ' <img src="images/icons/member.gif" width="6" height="11" alt="Clanmember">';
+                $member = ' <img src="images/icons/member.gif" width="7" height="16" alt="Clanmember">';
             } else {
                 $member = '';
             }

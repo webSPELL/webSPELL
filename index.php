@@ -104,14 +104,14 @@ header('X-UA-Compatible: IE=edge,chrome=1');
                     <!-- pic of the moment include -->
                     <strong><?php echo $myclanname . "." . $index_language[ 'pic_of_the_moment' ]; ?></strong><br>
 
-                    <p class="text-center"><?php include("sc_potm.php"); ?></p>
+                    <?php include("sc_potm.php"); ?>
                     <!-- end pic of the moment include -->
                     <hr class="grey">
 
                     <!-- language switch include -->
                     <strong><?php echo $myclanname . "." . $index_language[ 'language_switch' ]; ?></strong><br>
 
-                    <p class="text-center"><?php include("sc_language.php"); ?></p>
+                    <?php include("sc_language.php"); ?>
                     <!-- end language switch include -->
                     <hr class="grey">
 
@@ -142,14 +142,14 @@ header('X-UA-Compatible: IE=edge,chrome=1');
                     <!-- sponsors include -->
                     <strong><?php echo $myclanname . "." . $index_language[ 'sponsors' ]; ?></strong><br>
 
-                    <p class="text-center"><?php include("sc_sponsors.php"); ?></p>
+                    <?php include("sc_sponsors.php"); ?>
                     <!-- end sponsors include -->
                     <hr class="grey">
 
                     <!-- partners include -->
                     <strong><?php echo $myclanname . "." . $index_language[ 'partners' ]; ?></strong><br>
 
-                    <p class="text-center"><?php include("partners.php"); ?></p>
+                    <?php include("partners.php"); ?>
                     <!-- end partners include -->
                 </div>
             <?php
@@ -209,7 +209,7 @@ header('X-UA-Compatible: IE=edge,chrome=1');
                     <!-- squads include -->
                     <strong><?php echo $myclanname . "." . $index_language[ 'squads' ]; ?></strong><br>
 
-                    <p class="text-center"><?php include("sc_squads.php"); ?></p>
+                    <?php include("sc_squads.php"); ?>
                     <!-- end squads include -->
                     <hr class="grey">
                 </div>
@@ -242,7 +242,7 @@ header('X-UA-Compatible: IE=edge,chrome=1');
                     <!-- shoutbox include -->
                     <strong><?php echo $myclanname . "." . $index_language[ 'shoutbox' ]; ?></strong><br>
 
-                    <p class="text-center"><?php include("shoutbox.php"); ?></p>
+                    <?php include("shoutbox.php"); ?>
                     <!-- end shoutbox include -->
                     <hr class="grey">
                 </div>

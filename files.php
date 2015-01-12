@@ -305,7 +305,7 @@ if ($action == "save") {
     if (isfileadmin($userID)) {
         $adminactions .=
             '<div class="col-xs-6 text-right">
-                <a href="admin/admincenter.php?site=filecategorys" class="btn btn-danger">' .
+                <a href="admin/admincenter.php?site=filecategories" class="btn btn-danger">' .
                     $_language->module[ 'new_category' ] . '</a>
             </div></div>';
 
@@ -503,7 +503,7 @@ if ($action == "save") {
                     </a>
                 </div>
                 <div class="col-xs-6 text-right">
-                    <a href="admin/admincenter.php?site=filecategorys" class="btn btn-danger">' .
+                    <a href="admin/admincenter.php?site=filecategories" class="btn btn-danger">' .
                         $_language->module[ 'new_category' ] . '
                     </a>
                 </div>
@@ -703,7 +703,7 @@ if ($action == "save") {
                     </a>
                 </div>
                 <div class="col-xs-6 text-right">
-                    <a href="admin/admincenter.php?site=filecategorys" class="btn btn-danger">' .
+                    <a href="admin/admincenter.php?site=filecategories" class="btn btn-danger">' .
                         $_language->module[ 'new_category' ] . '
                     </a>
                 </div>
@@ -979,7 +979,7 @@ if ($action == "save") {
             '<div class="text-right">
                 <a href="index.php?site=files&amp;action=newfile" class="btn btn-danger">' .
                     $_language->module[ 'new_file' ] . '</a>
-                <a href="admin/admincenter.php?site=filecategorys" class="btn btn-danger">' .
+                <a href="admin/admincenter.php?site=filecategories" class="btn btn-danger">' .
                     $_language->module[ 'new_category' ] . '</a>
             </div><br>';
     }

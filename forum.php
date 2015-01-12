@@ -1115,7 +1115,7 @@ if (isset($_POST[ 'submit' ]) || isset($_POST[ 'movetopic' ]) || isset($_GET[ 'a
             "', writegrps='" . $di[ 'writegrps' ] . "' WHERE topicID='$topicID'"
         );
         safe_query("UPDATE " . PREFIX . "forum_posts SET boardID='$toboard' WHERE topicID='$topicID'");
-        $post_num = mysqli_affected_rows() - 1;
+        $post_num = mysqli_affected_rows($_database) - 1;
         safe_query("UPDATE " . PREFIX . "forum_boards SET topics=topics+1 WHERE boardID='$toboard'");
         safe_query("UPDATE " . PREFIX . "forum_boards SET topics=topics-1 WHERE boardID='" . $ds[ 'boardID' ] . "'");
         safe_query(
