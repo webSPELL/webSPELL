@@ -130,7 +130,7 @@ if ($action == "show") {
                 $email = '';
             } else {
                 $email =
-                    '<a href="mailto:' . mail_protect($dm[ 'email' ]) . '"><span class="glyphicon glyphicon-email"
+                    '<a href="mailto:' . mail_protect($dm[ 'email' ]) . '"><span class="glyphicon glyphicon-envelope"
                     title="' . $_language->module[ 'email' ] . '"></span></a>';
             }
 

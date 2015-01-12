@@ -89,7 +89,7 @@ if (isset($id) && getnickname($id) != '') {
                 $country = flags($flag);
                 $nicknamebuddy = getnickname($db[ 'buddy' ]);
                 $email = "<a href='mailto:" . mail_protect(getemail($db[ 'buddy' ])) .
-                    "'><span class='glyphicon glyphicon-email'></span></a>";
+                    "'><span class='glyphicon glyphicon-envelope'></span></a>";
 
                 if (isignored($userID, $db[ 'buddy' ])) {
                     $buddy =
@@ -549,7 +549,7 @@ if (isset($id) && getnickname($id) != '') {
 
                         if (validate_email($ds[ 'email' ])) {
                             $email = '<a href="mailto:' . mail_protect($ds[ 'email' ]) . '">
-                                <span class="glyphicon glyphicon-email" title="' . $_language->module[ 'email' ] . '">
+                                <span class="glyphicon glyphicon-envelope" title="' . $_language->module[ 'email' ] . '">
                                 </span></a>';
                         } else {
                             $email = '';
@@ -727,7 +727,7 @@ if (isset($id) && getnickname($id) != '') {
             $email = $_language->module[ 'n_a' ];
         } else {
             $email = '<a href="mailto:' . mail_protect(cleartext($ds[ 'email' ])) .
-                '"><span class="glyphicon glyphicon-email" title="' . $_language->module[ 'email' ] . '"></span></a>';
+                '"><span class="glyphicon glyphicon-envelope" title="' . $_language->module[ 'email' ] . '"></span></a>';
         }
         $sem = '/[0-9]{4,11}/si';
         if (preg_match($sem, $ds[ 'icq' ])) {

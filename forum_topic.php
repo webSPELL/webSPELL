@@ -612,7 +612,7 @@ function showtopic($topic, $edit, $addreply, $quoteID, $type)
                 }
                 if ($getemail = getemail($userID) && !getemailhide($userID)) {
                     $email = '<a href="mailto:' . mail_protect($getemail) .
-                        '"><span class="glyphicon glyphicon-email" title="email"></span></a>';
+                        '"><span class="glyphicon glyphicon-envelope" title="email"></span></a>';
                 } else {
                     $email = '';
                 }
