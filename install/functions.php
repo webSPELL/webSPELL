@@ -2102,8 +2102,9 @@ function update420_430()
     mysqli_query($_database, "ALTER TABLE `" . PREFIX . "settings` ADD `time_format` varchar(255) NOT NULL default 'H:i'");
     mysqli_query($_database, "ALTER TABLE `" . PREFIX . "settings` ADD `user_guestbook` int(1) NOT NULL default '1'");
 
-    $title = mysqli_query($_database, "SELECT title FROM `" . PREFIX . "styles`");
-    mysqli_query($_database, "UPDATE `" . PREFIX . "settings` SET title='" . $title . "'");
+    $get = mysqli_query($_database, "SELECT title FROM `" . PREFIX . "styles`");
+    $ds = mysqli_fetch_assoc($get);
+    mysqli_query($_database, "UPDATE `" . PREFIX . "settings` SET title='" . $ds['title'] . "'");
     mysqli_query($_database, "UPDATE `" . PREFIX . "settings` SET spamapihost='https://api.webspell.org/'");
 
     mysqli_query($_database, "ALTER TABLE `" . PREFIX . "user` ADD `date_format` varchar(255) NOT NULL default 'd.m.Y'");
