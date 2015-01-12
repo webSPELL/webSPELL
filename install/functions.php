@@ -2102,7 +2102,8 @@ function update420_430()
     mysqli_query($_database, "ALTER TABLE `" . PREFIX . "settings` ADD `time_format` varchar(255) NOT NULL default 'H:i'");
     mysqli_query($_database, "ALTER TABLE `" . PREFIX . "settings` ADD `user_guestbook` int(1) NOT NULL default '1'");
 
-    mysqli_query($_database, "UPDATE `" . PREFIX . "settings` SET title='webSPELL v4'");
+    $title = mysqli_query($_database, "SELECT title FROM `" . PREFIX . "styles`");
+    mysqli_query($_database, "UPDATE `" . PREFIX . "settings` SET title='" . $title . "'");
     mysqli_query($_database, "UPDATE `" . PREFIX . "settings` SET spamapihost='https://api.webspell.org/'");
 
     mysqli_query($_database, "ALTER TABLE `" . PREFIX . "user` ADD `date_format` varchar(255) NOT NULL default 'd.m.Y'");
@@ -2409,7 +2410,7 @@ function update420_430()
     mysqli_query($_database, "INSERT INTO `" . PREFIX . "modrewrite` (`regex`, `link`, `fields`, `replace_regex`, `replace_result`, `rebuild_regex`, `rebuild_result`) VALUES('whoisonline.html#was','index.php?site=whoisonline#was','a:0:{}','index\\\\.php\\\\?site=whoisonline#was','whoisonline.html#was','whoisonline\\\\.html#was','index.php?site=whoisonline#was')");
     mysqli_query($_database, "INSERT INTO `" . PREFIX . "modrewrite` (`regex`, `link`, `fields`, `replace_regex`, `replace_result`, `rebuild_regex`, `rebuild_result`) VALUES('whoisonline/{sort}/{type}.html','index.php?site=whoisonline&sort={sort}&type={type}','a:2:{s:4:\"sort\";s:6:\"string\";s:4:\"type\";s:6:\"string\";}','index\\\\.php\\\\?site=whoisonline[&|&amp;]*sort=(\\\\w*?)[&|&amp;]*type=(\\\\w*?)','whoisonline/$3/$4.html','whoisonline\\\\/(\\\\w*?)\\\\/(\\\\w*?)\\\\.html','index.php?site=whoisonline&sort=$1&type=$2')");
 
-    mysqli_query($_database, "DROP TABLE `" . PREFIX . "settings`");
+    mysqli_query($_database, "DROP TABLE `" . PREFIX . "styles`");
 
     updateMySQLConfig();
 }
