@@ -786,7 +786,8 @@ function showtopic($topic, $edit, $addreply, $quoteID, $type)
 
         if ($getemail = getemail($dr['poster']) and !getemailhide($dr['poster'])) {
             $email =
-                '<a href="mailto:' . mail_protect($getemail) . '"><img src="images/icons/email.gif" alt="email"></a>';
+                '<a href="mailto:' . mail_protect($getemail) .
+                '"><span class="glyphicon glyphicon-envelope" title="email"></span></a>';
         } else {
             $email = '';
         }
