@@ -610,7 +610,7 @@ function showtopic($topic, $edit, $addreply, $quoteID, $type)
                 } else {
                     $signatur = '';
                 }
-                if ($getemail = getemail($userID) && !getemailhide($userID)) {
+                if ($getemail = getemail($userID) and !getemailhide($userID)) {
                     $email = '<a href="mailto:' . mail_protect($getemail) .
                         '"><span class="glyphicon glyphicon-envelope" title="email"></span></a>';
                 } else {
@@ -784,7 +784,7 @@ function showtopic($topic, $edit, $addreply, $quoteID, $type)
             $signatur = '';
         }
 
-        if ($getemail = getemail($dr['poster']) && !getemailhide($dr['poster'])) {
+        if ($getemail = getemail($dr['poster']) and !getemailhide($dr['poster'])) {
             $email =
                 '<a href="mailto:' . mail_protect($getemail) . '"><img src="images/icons/email.gif" alt="email"></a>';
         } else {
