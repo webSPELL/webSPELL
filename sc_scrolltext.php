@@ -38,16 +38,32 @@ if (mysqli_num_rows($ergebnis)) {
 
     if ($direction == 'right') {
         $css_animation = '
-            @keyframes marquee {
-            0%   { transform: translate(0, 0); }
-            100% { transform: translate(100%, 0); }
-            }';
+@-webkit-keyframes marquee {
+    0%   { -webkit-transform: translate(0, 0); }
+    100% { -webkit-transform: translate(100%, 0); }
+}
+@-moz-keyframes {
+    0%   { -moz-transform: translate(0, 0); }
+    100% { -moz-transform: translate(100%, 0); }
+}
+@keyframes marquee {
+    0%   { transform: translate(0, 0); }
+    100% { transform: translate(100%, 0); }
+}';
     } elseif ($direction == 'left') {
         $css_animation = '
-            @keyframes marquee {
-            0%   { transform: translate(0, 0); }
-            100% { transform: translate(-100%, 0); }
-            }';
+@-webkit-keyframes marquee {
+    0%   { -webkit-transform: translate(0, 0); }
+    100% { -webkit-transform: translate(-100%, 0); }
+}
+@-moz-keyframes {
+    0%   { -moz-transform: translate(0, 0); }
+    100% { -moz-transform: translate(-100%, 0); }
+}
+@keyframes marquee {
+    0%   { transform: translate(0, 0); }
+    100% { transform: translate(-100%, 0); }
+}';
     }
 
     eval ("\$sc_scrolltext = \"" . gettemplate("sc_scrolltext") . "\";");
