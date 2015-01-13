@@ -20,6 +20,37 @@ module.exports = function(grunt) {
             "!languages/**/*.php",
             "!index.php"
         ],
+        releaseFiles = [
+            "admin/**",
+            "demos/**",
+            "downloads/**",
+            "images/**",
+            "install/**",
+            "js/**",
+            "languages/**",
+            "!languages/check_translations.php",
+            "src/**",
+            "templates/**",
+            "tmp/**",
+            "*",
+            "!.gitignore",
+            "!.scrutinizer*",
+            "!.sensiolabs.yml",
+            "!.travis.yml",
+            "!.bowerrc",
+            "!.htmllintrc",
+            "!.htmlhintrc",
+            "!.jshintrc",
+            "!circle.yml",
+            "!Gruntfile.js",
+            "!grunt-log.txt",
+            "!*.zip",
+            "!Ruleset.xml",
+            "!vendor",
+            "!components",
+            "!node_modules",
+            "!tests"
+        ],
         csss = [ "**/*.css" ],
         excludes = [
             "!node_modules/**",
@@ -223,6 +254,20 @@ module.exports = function(grunt) {
                 stdout: true,
                 stderr: true
             }
+        },
+        compress: {
+            main: {
+                options: {
+                    archive: "webspell.zip"
+                },
+                src:releaseFiles
+            },
+            release: {
+                options: {
+                    archive: "webSPELL-<%= pkg.version %>.zip"
+                },
+                src:releaseFiles
+            }
         }
     });
 
@@ -244,6 +289,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks("grunt-htmllint");
     grunt.loadNpmTasks("grunt-casperjs");
     grunt.loadNpmTasks("grunt-newer");
+    grunt.loadNpmTasks("grunt-contrib-compress");
     grunt.loadNpmTasks("grunt-exec");
 
     grunt.registerTask("codecheck", [
@@ -305,10 +351,12 @@ module.exports = function(grunt) {
                 "replace:copyright",
                 "replace:version",
                 "changelog",
-                "bumpCommit:" + releaseLevel
+                "bumpCommit:" + releaseLevel,
+                "compress:release"
             ]);
         }
     });
+
     grunt.registerTask("bumpOnly", function() {
         grunt.config("bump", {
             options: {
