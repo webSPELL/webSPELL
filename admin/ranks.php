@@ -26,6 +26,7 @@
 */
 
 $_language->readModule('ranks');
+$_language->readModule('rank_special',true);
 
 if (!isforumadmin($userID) || mb_substr(basename($_SERVER[ 'REQUEST_URI' ]), 0, 15) != "admincenter.php") {
     die($_language->module[ 'access_denied' ]);
@@ -58,12 +59,14 @@ if (isset($_GET[ 'delete' ])) {
                     `" . PREFIX . "forum_ranks` (
                         `rank`,
                         `postmin`,
-                        `postmax`
+                        `postmax`,
+                        `special`
                     )
                     VALUES (
                         '$name',
                         '$min',
-                        '$maximum'
+                        '$maximum',
+                        '".isset($_POST['special'])."'
                     )"
             );
             $id = mysqli_insert_id($_database);
@@ -97,14 +100,17 @@ if (isset($_GET[ 'delete' ])) {
                 while ($ds = mysqli_fetch_array($ergebnis)) {
                     if ($ds[ 'rank' ] != "Administrator" && $ds[ 'rank' ] != "Moderator") {
                         $id = $ds[ 'rankID' ];
-                        if ($max[ $id ] == "MAX") {
-                            $maximum = 2147483647;
+                        if($ds['special'] != 1) {
+                            if ($max[ $id ] == "MAX") {
+                                $maximum = 2147483647;
+                            } else {
+                                $maximum = $max[ $id ];
+                            }
+                            safe_query("UPDATE " . PREFIX . "forum_ranks SET postmin='$min[$id]' WHERE rankID='$id'");
+                            safe_query("UPDATE " . PREFIX . "forum_ranks SET postmax='$maximum' WHERE rankID='$id'");
                         } else {
-                            $maximum = $max[ $id ];
+                            safe_query("UPDATE " . PREFIX . "forum_ranks SET rank='$rank[$id]' WHERE rankID='$id'");
                         }
-                        safe_query("UPDATE " . PREFIX . "forum_ranks SET rank='$rank[$id]' WHERE rankID='$id'");
-                        safe_query("UPDATE " . PREFIX . "forum_ranks SET postmin='$min[$id]' WHERE rankID='$id'");
-                        safe_query("UPDATE " . PREFIX . "forum_ranks SET postmax='$maximum' WHERE rankID='$id'");
                     }
                 }
             }
@@ -130,7 +136,19 @@ if ($action == "add") {
     echo '<h1>&curren; <a href="admincenter.php?site=ranks" class="white">' . $_language->module[ 'user_ranks' ] .
         '</a> &raquo; ' . $_language->module[ 'add_rank' ] . '</h1>';
 
-    echo '<form method="post" action="admincenter.php?site=ranks" enctype="multipart/form-data">
+    echo '<script type="text/javascript">
+  function HideFields(state){
+  	if(state == true){
+  		document.getElementById(\'max\').style.display = "none";
+  		document.getElementById(\'min\').style.display = "none";
+  	}
+  	else{
+  		document.getElementById(\'max\').style.display = "";
+  		document.getElementById(\'min\').style.display = "";
+  	}
+  }
+  </script>
+  <form method="post" action="admincenter.php?site=ranks" enctype="multipart/form-data">
   <table width="100%" border="0" cellspacing="1" cellpadding="3">
     <tr>
       <td width="15%"><b>' . $_language->module[ 'rank_icon' ] . '</b></td>
@@ -147,6 +165,10 @@ if ($action == "add") {
     <tr>
       <td><b>' . $_language->module[ 'max_posts' ] . '</b></td>
       <td><input type="text" name="max" size="4" /></td>
+    </tr>
+    <tr>
+      <td><b>' . $_language->module[ 'special_rank' ] . '</b></td>
+      <td><input type="checkbox" name="special" onchange="javascript:HideFields(this.checked);" value="1" /></td>
     </tr>
     <tr>
       <td><input type="hidden" name="captcha_hash" value="' . $hash . '" /></td>
@@ -166,6 +188,7 @@ if ($action == "add") {
     <tr>
       <td width="20%" class="title"><b>' . $_language->module[ 'rank_icon' ] . '</b></td>
       <td width="49%" class="title"><b>' . $_language->module[ 'rank_name' ] . '</b></td>
+      <td width="10%" class="title"><b>' . $_language->module[ 'special_rank' ] . '</b></td>
       <td width="10%" class="title"><b>' . $_language->module[ 'min_posts' ] . '</b></td>
       <td width="11%" class="title"><b>' . $_language->module[ 'max_posts' ] . '</b></td>
       <td width="10%" class="title"><b>' . $_language->module[ 'actions' ] . '</b></td>
@@ -186,6 +209,7 @@ if ($action == "add") {
             echo '<tr>
 	        <td class="' . $td . '" align="center"><img src="../images/icons/ranks/' . $ds[ 'pic' ] . '" alt=""></td>
 	        <td class="' . $td . '">' . $ds[ 'rank' ] . '</td>
+	        <td class="' . $td . '" align="center">x</td>
 	        <td class="' . $td . '">&nbsp;</td>
 	        <td class="' . $td . '">&nbsp;</td>
 	        <td class="' . $td . '">&nbsp;</td>
@@ -201,6 +225,7 @@ if ($action == "add") {
 	        <td class="' . $td . '" align="center"><img src="../images/icons/ranks/' . $ds[ 'pic' ] . '" alt=""></td>
 	        <td class="' . $td . '"><input type="text" name="rank[' . $ds[ 'rankID' ] . ']" value="' .
                 getinput($ds[ 'rank' ]) . '" size="58" /></td>
+            <td class="' . $td . '" align="center">' . (($ds[ 'special' ]==1) ? "x" : "") . '</td>
 	        <td class="' . $td . '" align="center"><input type="text" name="min[' . $ds[ 'rankID' ] . ']" value="' .
                 $ds[ 'postmin' ] . '" size="6" dir="rtl" /></td>
 	        <td class="' . $td . '" align="center"><input type="text" name="max[' . $ds[ 'rankID' ] . ']" value="' .
@@ -214,7 +239,7 @@ if ($action == "add") {
         $i++;
     }
     echo '<tr>
-      <td class="td_head" colspan="5" align="right"><input type="hidden" name="captcha_hash" value="' . $hash .
+      <td class="td_head" colspan="6" align="right"><input type="hidden" name="captcha_hash" value="' . $hash .
         '"><input type="submit" name="saveedit" value="' . $_language->module[ 'update' ] . '" /></td>
     </tr>
   </table>
