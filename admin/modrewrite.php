@@ -295,7 +295,7 @@ if ($action == "add") {
         $enable = "";
         $unlink = true;
 
-        if ($written == false) {
+        if ($written === false) {
             $info .= sprintf($_language->module['can_not_write_file'], $file);
         } else {
             $protocol = 'http';
@@ -313,7 +313,7 @@ if ($action == "add") {
             $mutliview_test = $protocol . '://' . $_SERVER["SERVER_NAME"] . $port . dirname($_SERVER["REQUEST_URI"]) .
                 '/ht_test/test/multiview';
             $headers = @get_headers($base_test, 1);
-            if ($headers == false) {
+            if ($headers === false) {
                 $info .= $_language->module['fopen_disabled'];
                 $status = '<div id="result"></div>';
                 $unlink = false;
@@ -376,7 +376,7 @@ if ($action == "add") {
 
     $written = @file_put_contents($folder . '/' . $file, $content);
 
-    if ($written == false) {
+    if ($written === false) {
         $info .= sprintf($_language->module['can_not_write_file'], $file);
         echo $info;
     } else {
@@ -401,7 +401,7 @@ if ($action == "add") {
     $CAPCLASS = new \webspell\Captcha;
     $CAPCLASS->createTransaction();
     $hash = $CAPCLASS->getHash();
-    if ($modRewrite == false) {
+    if ($modRewrite === false) {
         echo '<form method="post" action="admincenter.php?site=modrewrite" enctype="multipart/form-data">
         <table width="100%" border="0" cellspacing="1" cellpadding="3">
         <tr>

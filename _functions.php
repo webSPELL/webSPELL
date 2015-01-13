@@ -383,7 +383,7 @@ if (isset($_COOKIE[ 'ws_auth' ]) && !isset($_SESSION[ 'ws_auth' ])) {
 
 systeminc('login');
 
-if ($loggedin == false) {
+if ($loggedin === false) {
     if (isset($_COOKIE[ 'language' ])) {
         $_language->setLanguage($_COOKIE[ 'language' ]);
     } elseif (isset($_SESSION[ 'language' ])) {
@@ -560,7 +560,7 @@ safe_query(
 );
 
 // -- SEARCH ENGINE OPTIMIZATION (SEO) -- //
-if (stristr($_SERVER[ 'PHP_SELF' ], "/admin/") == false) {
+if (stristr($_SERVER[ 'PHP_SELF' ], "/admin/") === false) {
     systeminc('seo');
     define('PAGETITLE', getPageTitle());
 } else {

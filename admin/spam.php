@@ -252,7 +252,7 @@ if ($action == "user") {
 
                 $active = ($data[ 'activated' ] == '1') ? "<font color='green'>&#10004;</font>" :
                     "<font color='red'>&#10006;</font>";
-                $banned = ($data[ 'banned' ] != null) ? "<font color='red'>&#10004;</font>" :
+                $banned = ($data[ 'banned' ] !== null) ? "<font color='red'>&#10004;</font>" :
                     "<font color='green'>&#10006;</font>";
 
                 if ($data[ 'lastlogin' ] > time() - (60 * 60 * 24 * 10)) {
@@ -293,7 +293,7 @@ if ($action == "user") {
         $get = safe_query("SELECT userID, nickname FROM " . PREFIX . "user WHERE ip='" . $ip . "'");
         while ($ds = mysqli_fetch_assoc($get)) {
             echo "<h3>" . $ds[ 'nickname' ] . "</h3>";
-            if (isclanmember($ds[ 'userID' ]) == false) {
+            if (isclanmember($ds[ 'userID' ]) === false) {
                 deleteSpamUser($ds[ 'userID' ]);
             } else {
                 echo $_language->module[ "cant_delete_team_members" ];
@@ -320,7 +320,7 @@ if ($action == "user") {
         );
         while ($ds = mysqli_fetch_assoc($get)) {
             echo "<h3>" . $ip . "</h3>";
-            if (isclanmember($ds[ 'userID' ]) == false) {
+            if (isclanmember($ds[ 'userID' ]) === false) {
                 safe_query(
                     "UPDATE
                         " . PREFIX . "user

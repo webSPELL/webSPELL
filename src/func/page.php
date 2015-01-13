@@ -45,7 +45,7 @@ function isStaticPage($staticID = null)
         return false;
     }
 
-    if ($staticID != null) {
+    if ($staticID !== null) {
         if ($_GET['staticID'] != $staticID) {
             return false;
         }

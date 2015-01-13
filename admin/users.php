@@ -857,7 +857,7 @@ if ($action == "activate") {
     }
     $page_link = '';
     if ($pages > 1) {
-        if ($status == true) {
+        if ($status === true) {
             $sort = "status";
         }
         $page_link =
@@ -872,7 +872,7 @@ if ($action == "activate") {
         if (!isset($_GET[ 'sort' ])) {
             $_GET[ 'sort' ] = '';
         }
-        if ($status == true) {
+        if ($status === true) {
             $sort = "status";
         } elseif (($_GET[ 'sort' ] == 'nickname') || ($_GET[ 'sort' ] == 'registerdate')) {
             $sort = $_GET[ 'sort' ];

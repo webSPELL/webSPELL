@@ -78,7 +78,7 @@ if (isset($_GET[ 'new_lang' ])) {
     ksort($langs, $sortMode);
 
     $querystring = '';
-    if ($modRewrite == true) {
+    if ($modRewrite === true) {
         $path = rawurlencode(str_replace($GLOBALS[ 'rewriteBase' ], '', $_SERVER[ 'REQUEST_URI' ]));
 
     } else {
