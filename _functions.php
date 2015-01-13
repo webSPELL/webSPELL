@@ -359,7 +359,6 @@ function clearfromtags($text)
 
 function getinput($text)
 {
-    //$text = stripslashes($text);
     $text = htmlspecialchars($text);
 
     return $text;

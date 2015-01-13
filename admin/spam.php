@@ -140,7 +140,6 @@ function deleteSpamUser($spammerID)
         );
     echo mysqli_affected_rows($_database) . " " . $_language->module[ "messages_deleted" ] . "<br />";
 
-    //safe_query("DELETE FROM ".PREFIX."user WHERE userID='".$spammerID."'");
     safe_query(
         "UPDATE " . PREFIX . "user SET banned='perm', ban_reason='Spam',about='' WHERE userID='" . $spammerID . "'"
     );

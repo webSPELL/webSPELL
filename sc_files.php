@@ -25,10 +25,7 @@
 ##########################################################################
 */
 
-//Options:
-$list = 1; //1=top 5 downloads , 2=latest 5 downloads
-
-//dont edit above this line
+$list = 1; // 1=top 5 downloads , 2=latest 5 downloads
 
 if ($list == 1) {
     $list = "downloads";
