@@ -33,8 +33,22 @@ if (mysqli_num_rows($ergebnis)) {
 
     $scrolltext = js_replace($ds[ 'text' ]);
     $direction = $ds[ 'direction' ];
-    $delay = $ds[ 'delay' ];
+    $delay = $ds[ 'delay' ].'s';
     $color = $ds[ 'color' ];
+
+    if ($direction == 'right') {
+        $css_animation = '
+            @keyframes marquee {
+            0%   { transform: translate(0, 0); }
+            100% { transform: translate(100%, 0); }
+            }';
+    } elseif ($direction == 'left') {
+        $css_animation = '
+            @keyframes marquee {
+            0%   { transform: translate(0, 0); }
+            100% { transform: translate(-100%, 0); }
+            }';
+    }
 
     eval ("\$sc_scrolltext = \"" . gettemplate("sc_scrolltext") . "\";");
     echo $sc_scrolltext;

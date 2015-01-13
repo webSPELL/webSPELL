@@ -29,9 +29,9 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  '1_slow'=>'1 (lento)',
-  '2_normal'=>'2 (normale)',
-  '3_fast'=>'3 (veloce)',
+  '1_fast'=>'1 (veloce)',
+  '5_normal'=>'5 (normale)',
+  '10_slow'=>'10 (lento)',
   'access_denied'=>'Accesso negato',
   'color'=>'Colore',
   'delay'=>'Ritardo',
