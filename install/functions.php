@@ -385,6 +385,7 @@ function fullinstall()
   `pic` varchar(255) NOT NULL default '',
   `postmin` int(11) NOT NULL default '0',
   `postmax` int(11) NOT NULL default '0',
+  `special` int(1) NULL DEFAULT '0',
   PRIMARY KEY  (`rankID`)
 ) AUTO_INCREMENT=9 ");
 
@@ -804,7 +805,6 @@ function fullinstall()
   `connection` varchar(255) NOT NULL default '',
   `keyboard` varchar(255) NOT NULL default '',
   `mouse` varchar(255) NOT NULL default '',
-
   `mousepad` varchar(255) NOT NULL default '',
   `newsletter` int(1) NOT NULL default '1',
   `about` text NOT NULL,
@@ -816,6 +816,7 @@ function fullinstall()
   `topics` text NOT NULL,
   `articles` text NOT NULL,
   `demos` text NOT NULL,
+  `special_rank` INT(11) NULL DEFAULT '0',
   PRIMARY KEY  (`userID`)
 ) AUTO_INCREMENT=2 ");
 
@@ -2426,6 +2427,8 @@ function update420_430()
     mysqli_query($_database, "INSERT INTO `" . PREFIX . "modrewrite` (`regex`, `link`, `fields`, `replace_regex`, `replace_result`, `rebuild_regex`, `rebuild_result`) VALUES('whoisonline.html','index.php?site=whoisonline','a:0:{}','index\\\\.php\\\\?site=whoisonline','whoisonline.html','whoisonline\\\\.html','index.php?site=whoisonline')");
     mysqli_query($_database, "INSERT INTO `" . PREFIX . "modrewrite` (`regex`, `link`, `fields`, `replace_regex`, `replace_result`, `rebuild_regex`, `rebuild_result`) VALUES('whoisonline.html#was','index.php?site=whoisonline#was','a:0:{}','index\\\\.php\\\\?site=whoisonline#was','whoisonline.html#was','whoisonline\\\\.html#was','index.php?site=whoisonline#was')");
     mysqli_query($_database, "INSERT INTO `" . PREFIX . "modrewrite` (`regex`, `link`, `fields`, `replace_regex`, `replace_result`, `rebuild_regex`, `rebuild_result`) VALUES('whoisonline/{sort}/{type}.html','index.php?site=whoisonline&sort={sort}&type={type}','a:2:{s:4:\"sort\";s:6:\"string\";s:4:\"type\";s:6:\"string\";}','index\\\\.php\\\\?site=whoisonline[&|&amp;]*sort=(\\\\w*?)[&|&amp;]*type=(\\\\w*?)','whoisonline/$3/$4.html','whoisonline\\\\/(\\\\w*?)\\\\/(\\\\w*?)\\\\.html','index.php?site=whoisonline&sort=$1&type=$2')");
+    mysqli_query($_database, "ALTER TABLE `" . PREFIX . "forum_ranks` ADD `special` INT(1) NULL DEFAULT '0'");
+    mysqli_query($_database, "ALTER TABLE `" . PREFIX . "user` ADD `special_rank` INT(11) NULL DEFAULT '0'");
 
     updateMySQLConfig();
 }

@@ -117,16 +117,45 @@ if (mysqli_num_rows($thread)) {
             }
         } else {
             $ergebnis =
-                safe_query("SELECT * FROM " . PREFIX . "forum_ranks WHERE $posts > postmin AND $posts < postmax");
+                safe_query(
+                    "SELECT
+                      *
+                    FROM
+                      " . PREFIX . "forum_ranks
+                    WHERE
+                      $posts > postmin
+                    AND
+                      $posts < postmax
+                    AND
+                      special='0'"
+                );
             $ds = mysqli_fetch_array($ergebnis);
             $usertype = $ds[ 'rank' ];
             $rang = '<img src="images/icons/ranks/' . $ds[ 'pic' ] . '" alt="">';
         }
 
+        $specialrang = "";
+        $specialtype = "";
+        $getrank = safe_query(
+            "SELECT IF
+              (u.special_rank = 0, 0, CONCAT_WS(\"__\", r.rank, r.pic)) as RANK
+            FROM
+              " . PREFIX . "user u LEFT JOIN " . PREFIX . "forum_ranks r ON u.special_rank = r.rankID
+            WHERE
+              userID='" . $dr[ 'poster' ] . "'"
+        );
+        $rank_data = mysqli_fetch_assoc($getrank);
+
+        if ($rank_data[ 'RANK' ] != '0') {
+            $tmp_rank = explode("__", $rank_data[ 'RANK' ]);
+            $specialrang = " - " . $tmp_rank[0];
+            $specialtype = "<img src='images/icons/ranks/" . $tmp_rank[1] . "' alt = '" . $specialrang . "' />";
+        }
+
         echo '<tr>
         <td valign="top"><i>' . $date . ', ' . $time . ' </i> - <strong>' . $username . '</strong> - ' .
-            $usertype . ' - ' . $posts . ' ' . $_language->module[ 'posts' ] . '<br>' .
-            $message . ' ><i>' . $signatur . '</i>><br>&nbsp;</td>
+            $usertype . $rang . $specialrang . $specialtype . ' - ' . $posts . ' ' . $_language->module[ 'posts' ] .
+            '<br>' . $message . ' ><i>' . $signatur . '</i>><br>&nbsp;</td>
         </tr>';
     }
     echo '</table><br></div></body></html>';
