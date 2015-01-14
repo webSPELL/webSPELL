@@ -108,7 +108,7 @@ if (isset($_POST['newreply']) && !isset($_POST['preview'])) {
         $do_sticky = (isset($_POST['sticky'])) ? ', sticky=1' : ', sticky=0';
     }
 
-    $spamApi = SpamApi::getInstance();
+    $spamApi = \webspell\SpamApi::getInstance();
     $validation = $spamApi->validate($message);
 
     $date = time();
