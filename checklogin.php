@@ -181,27 +181,27 @@ if ($login) {
     header("Location: index.php?site=loginoverview");
 } else {
     ?>
-	<!DOCTYPE html>
-	<html class="checklogin-html">
-	<head>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta charset="utf-8">
-	<meta name="description" content="Clanpage using webSPELL 4 CMS">
-	<meta name="author" content="webspell.org">
-	<meta name="keywords" content="webspell, webspell4, clan, cms">
-	<meta name="generator" content="webSPELL">
-	<!-- Head & Title include -->
-	<title><?php echo PAGETITLE; ?></title>
-	<base href="<?php echo $rewriteBase; ?>">
-	<?php foreach ($components['css'] as $component) {
-	echo '<link href="' . $component . '" rel="stylesheet">';
-	}
-	?>
-	<link href="_stylesheet.css" rel="stylesheet">
-	</head>
-	<body class="checklogin-body">
-	<div class="alert alert-danger text-center" role="alert"><?php echo $error; ?></div>
-	</body>
-	</html>
-	<?php
+<!DOCTYPE html>
+<html class="checklogin-html">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8">
+        <meta name="description" content="Clanpage using webSPELL 4 CMS">
+        <meta name="author" content="webspell.org">
+        <meta name="keywords" content="webspell, webspell4, clan, cms">
+        <meta name="generator" content="webSPELL">
+        <!-- Head & Title include -->
+        <title><?php echo PAGETITLE; ?></title>
+        <base href="<?php echo $rewriteBase; ?>">
+        <?php foreach ($components['css'] as $component) {
+        echo '<link href="' . $component . '" rel="stylesheet">';
+    }
+        ?>
+        <link href="_stylesheet.css" rel="stylesheet">
+    </head>
+    <body class="checklogin-body">
+        <div class="alert alert-danger text-center" role="alert"><?php echo $error; ?></div>
+    </body>
+</html>
+<?php
 }
