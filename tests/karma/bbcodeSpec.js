@@ -21,7 +21,7 @@ describe("bbcode", function() {
         expect(validbbcode("[ALIGN=START]" + sentence + "[/ALIGN]")).toBe(true);
         expect(validbbcode("[ALIGN=END]" + sentence + "[/ALIGN]")).toBe(true);
         expect(validbbcode("[ALIGN=LEFT]" + sentence + "[/ALIGN]")).toBe(true);
-        expect(validbbcode("[ALIGN=RIGHT]" + sentence + "[/RIGHT]")).toBe(true);
+        expect(validbbcode("[ALIGN=RIGHT]" + sentence + "[/ALIGN]")).toBe(true);
         expect(validbbcode("[ALIGN=CENTER]" + sentence + "[/ALIGN]")).toBe(true);
         expect(validbbcode("[ALIGN=JUSTIFY]" + sentence + "[/ALIGN]")).toBe(true);
         expect(validbbcode("[FONT=ARIAL]" + sentence + "[/FONT]")).toBe(true);
@@ -29,5 +29,8 @@ describe("bbcode", function() {
 
     it("should be a invalid BBCode", function() {
         // expect(validbbcode("[FOOBAR]Not Existing[/BARFOO]")).toBe(false);
+        expect(validbbcode("[U][B]" + word + "[/U][/B]")).toBe(false);
+        expect(validbbcode("[U]" + word + "")).toBe(false);
+        expect(validbbcode("" + word + "[/U]")).toBe(false);
     });
 });

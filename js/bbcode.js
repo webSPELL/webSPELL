@@ -616,15 +616,14 @@ function validbbcode(txt) {
             }
         }
     }
-    if (result) {
+    if (result === null) {
         return true;
     }
     arraylength = result.length;
     if (arraylength > 0) {
         starttest = result[0].split("=");
         if (arraylength % 2) {
-            alert(languageArray.bbcode.unevenAmount);
-
+            window.alert(languageArray.bbcode.unevenAmount);
             return false;
         } else {
             if (starttest[0].indexOf("/") === -1) {
