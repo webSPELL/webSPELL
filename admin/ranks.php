@@ -26,7 +26,7 @@
 */
 
 $_language->readModule('ranks');
-$_language->readModule('rank_special',true);
+$_language->readModule('rank_special', true);
 
 if (!isforumadmin($userID) || mb_substr(basename($_SERVER[ 'REQUEST_URI' ]), 0, 15) != "admincenter.php") {
     die($_language->module[ 'access_denied' ]);
@@ -100,7 +100,7 @@ if (isset($_GET[ 'delete' ])) {
                 while ($ds = mysqli_fetch_array($ergebnis)) {
                     if ($ds[ 'rank' ] != "Administrator" && $ds[ 'rank' ] != "Moderator") {
                         $id = $ds[ 'rankID' ];
-                        if($ds['special'] != 1) {
+                        if ($ds[ 'special' ] != 1) {
                             if ($max[ $id ] == "MAX") {
                                 $maximum = 2147483647;
                             } else {

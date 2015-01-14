@@ -26,6 +26,7 @@
 */
 
 $_language->readModule('members');
+$_language->readModule('rank_special', true);
 
 if (!isuseradmin($userID) || mb_substr(basename($_SERVER[ 'REQUEST_URI' ]), 0, 15) != "admincenter.php") {
     die($_language->module[ 'access_denied' ]);
@@ -73,6 +74,7 @@ if (isset($_POST[ 'saveedit' ])) {
         $pollsadmin = isset($_POST[ 'pollsadmin' ]);
         $feedbackadmin = isset($_POST[ 'feedbackadmin' ]);
         $useradmin = isset($_POST[ 'useradmin' ]);
+        $specialrank = $_POST[ 'special_rank' ];
         $cwadmin = isset($_POST[ 'cwadmin' ]);
         $boardadmin = isset($_POST[ 'boardadmin' ]);
         $moderator = isset($_POST[ 'moderator' ]);
@@ -164,7 +166,15 @@ if (isset($_POST[ 'saveedit' ])) {
                 }
             }
 
-            safe_query("UPDATE " . PREFIX . "user SET userdescription='$userdescription' WHERE userID='$id'");
+            safe_query(
+                "UPDATE "
+                . PREFIX . "user
+                SET
+                    userdescription='$userdescription',
+                    special_rank = '$specialrank'
+                WHERE
+                    userID='$id'"
+            );
 
             foreach ($position as $sqmID => $pos) {
                 safe_query("UPDATE " . PREFIX . "squads_members SET position='$pos' WHERE sqmID='$sqmID'");
@@ -421,6 +431,32 @@ onmouseout="hideWMTT()" />';
         $userdes = '';
     }
 
+    $get_rank = mysqli_fetch_assoc(
+        safe_query(
+            "SELECT
+              special_rank
+            FROM
+              " . PREFIX . "user
+            WHERE
+              userID='" . $id . "'"
+        )
+    );
+
+    $ranks = "<option value='0'>" . $_language->module[ 'no_special_rank' ] . "</option>";
+    $get = safe_query("SELECT * FROM " . PREFIX . "forum_ranks WHERE special='1'");
+    while ($rank = mysqli_fetch_assoc($get)) {
+        $ranks .="<option value='" . $rank[ 'rankID' ] . "'>" . $rank[ 'rank' ] . "</option>";
+    }
+    if ($get_rank[ 'special_rank' ]) {
+        $ranks = str_replace(
+            "value='" . $get_rank[ 'special_rank'] . "",
+            "value='" . $get_rank[ 'special_rank' ] . "' selected='selected'",
+            $ranks
+        );
+    } else {
+        $ranks = str_replace("value='0", "value='0' selected='selected'", $ranks);
+    }
+
     echo '<script>
         function chkFormular() {
             if(!validbbcode(document.getElementById(\'message\').value, \'admin\')){
@@ -452,6 +488,10 @@ onmouseout="hideWMTT()" />';
         </tr>
         ' . $squads . '
         ' . $userdes . '
+        <tr>
+          <td width="15%"><b>' . $_language->module[ 'special_rank' ] . '</b></td>
+          <td width="85%"><select name="special_rank">' . $ranks . '</select></td>
+        </tr>
         <tr>
           <td colspan="2"><hr /></td>
         </tr>
