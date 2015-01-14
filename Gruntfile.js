@@ -211,6 +211,11 @@ module.exports = function(grunt) {
         karma: {
             unit: {
                 configFile: "karma.conf.js"
+            },
+            continuous: {
+                configFile: "karma.conf.js",
+                singleRun: true,
+                browsers: ['PhantomJS']
             }
         },
 
@@ -338,7 +343,7 @@ module.exports = function(grunt) {
     grunt.registerTask("js", [
         "jshint",
         "jscs",
-        "karma"
+        "karma:continuous"
     ]);
 
     grunt.registerTask("php", [
