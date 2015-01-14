@@ -68,6 +68,7 @@ module.exports = function(grunt) {
     // Project configuration.
     grunt.initConfig({
         pkg: grunt.file.readJSON("package.json"),
+
         lintspaces: {
             all: {
                 src: [
@@ -86,6 +87,7 @@ module.exports = function(grunt) {
                 }
             }
         },
+
         jshint: {
             options: {
                 jshintrc: ".jshintrc"
@@ -95,6 +97,7 @@ module.exports = function(grunt) {
                 excludes
             ]
         },
+
         jscs: {
             options: {
                 preset: "jquery" // See: https://contribute.jquery.org/style-guide/js/
@@ -104,12 +107,14 @@ module.exports = function(grunt) {
                 excludes
             ]
         },
+
         phplint: {
             good: [
                 phps,
                 excludes
             ]
         },
+
         phpcs: {
             application: {
                 dir: [
@@ -125,6 +130,7 @@ module.exports = function(grunt) {
                 showSniffCodes: true
             }
         },
+
         htmllint: {
             options: {
                 htmllintrc: true,
@@ -132,6 +138,7 @@ module.exports = function(grunt) {
             },
             src: templates
         },
+
         htmlhint: {
             options: {
                 htmlhintrc: ".htmlhintrc", // https://github.com/yaniswang/HTMLHint/wiki/Rules
@@ -141,6 +148,7 @@ module.exports = function(grunt) {
                 src: [ "templates/*.html" ]
             }
         },
+
         bootlint: {
             options: {
                 stoponerror: false,
@@ -155,11 +163,13 @@ module.exports = function(grunt) {
             },
             files: templates
         },
+
         githooks: {
             all: {
                 "pre-commit": "test"
             }
         },
+
         replace: {
             copyright: {
                 src: [
@@ -189,6 +199,7 @@ module.exports = function(grunt) {
 
             }
         },
+
         changelog: {
             release: {
                 options: {
@@ -196,14 +207,13 @@ module.exports = function(grunt) {
                 }
             }
         },
-        //phpcpd: {
-        //    application: {
-        //        dir: "admin"
-        //    },
-        //    options: {
-        //        quiet: true
-        //    }
-        //},
+
+        karma: {
+            unit: {
+                configFile: "karma.conf.js"
+            }
+        },
+
         casperjs: {
             options: {
                 casperjsOptions: [
@@ -216,6 +226,7 @@ module.exports = function(grunt) {
                 "tests/casperjs/login_as_admin.js"
             ]
         },
+
         watch: {
             options: {
                 debounceDelay: 1000
@@ -248,6 +259,7 @@ module.exports = function(grunt) {
                 ]
             }
         },
+
         exec: {
             quickcheck: {
                 command: "sh ./qphpcs.sh",
@@ -255,6 +267,7 @@ module.exports = function(grunt) {
                 stderr: true
             }
         },
+
         compress: {
             main: {
                 options: {
@@ -291,6 +304,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks("grunt-newer");
     grunt.loadNpmTasks("grunt-contrib-compress");
     grunt.loadNpmTasks("grunt-exec");
+    grunt.loadNpmTasks("grunt-karma");
 
     grunt.registerTask("codecheck", [
         "lintspaces",
@@ -298,6 +312,7 @@ module.exports = function(grunt) {
         "php",
         "html"
     ]);
+
     grunt.registerTask("codecheck_newer", [
         "newer:lintspaces",
         "newer:js",
@@ -305,6 +320,7 @@ module.exports = function(grunt) {
         "newer:phpcs",
         "newer:html"
     ]);
+
     grunt.registerTask("codecheck_circle", [
         "jshint",
         "jscs",
@@ -312,29 +328,37 @@ module.exports = function(grunt) {
         "htmllint",
         "bootlint"
     ]);
+
     grunt.registerTask("html", [
         "htmlhint",
         "htmllint",
         "bootlint"
     ]);
+
     grunt.registerTask("js", [
         "jshint",
-        "jscs"
+        "jscs",
+        "karma"
     ]);
+
     grunt.registerTask("php", [
         "phplint",
         "phpcs"
     ]);
+
     grunt.registerTask("git", [
         "grunt-commit-message-verify"
     ]);
+
     grunt.registerTask("test", [
         "codecheck",
         "git"
     ]);
+
     grunt.registerTask("quick", [
         "exec:quickcheck"
     ]);
+
     grunt.registerTask("release", "Creating a new webSPELL Release", function(releaseLevel) {
         if (
             arguments.length === 0 ||
