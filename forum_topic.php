@@ -660,11 +660,11 @@ function showtopic($topic, $edit, $addreply, $quoteID, $type)
                 $specialtype = "";
                 $getrank = safe_query(
                     "SELECT IF
-                      (u.special_rank = 0, 0, CONCAT_WS(\"__\",r.rank, r.pic)) as RANK
+                        (u.special_rank = 0, 0, CONCAT_WS(\"__\",r.rank, r.pic)) as RANK
                     FROM
-                      " . PREFIX . "user u LEFT JOIN " . PREFIX . "forum_ranks r ON u.special_rank = r.rankID
+                        " . PREFIX . "user u LEFT JOIN " . PREFIX . "forum_ranks r ON u.special_rank = r.rankID
                     WHERE
-                      userID = '" . $userID . "'"
+                        userID = '" . $userID . "'"
                 );
                 $rank_data = mysqli_fetch_assoc($getrank);
 
@@ -875,11 +875,11 @@ function showtopic($topic, $edit, $addreply, $quoteID, $type)
         $specialtype = "";
         $getrank = safe_query(
             "SELECT IF
-                      (u.special_rank = 0, 0, CONCAT_WS(\"__\",r.rank, r.pic)) as RANK
+                        (u.special_rank = 0, 0, CONCAT_WS(\"__\",r.rank, r.pic)) as RANK
                     FROM
-                      " . PREFIX . "user u LEFT JOIN " . PREFIX . "forum_ranks r ON u.special_rank = r.rankID
+                        " . PREFIX . "user u LEFT JOIN " . PREFIX . "forum_ranks r ON u.special_rank = r.rankID
                     WHERE
-                      userID = '" . $userID . "'"
+                        userID = '" . $userID . "'"
         );
         $rank_data = mysqli_fetch_assoc($getrank);
 

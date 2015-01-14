@@ -119,15 +119,15 @@ if (mysqli_num_rows($thread)) {
             $ergebnis =
                 safe_query(
                     "SELECT
-                      *
+                        *
                     FROM
-                      " . PREFIX . "forum_ranks
+                        " . PREFIX . "forum_ranks
                     WHERE
-                      $posts > postmin
+                        $posts > postmin
                     AND
-                      $posts < postmax
+                        $posts < postmax
                     AND
-                      special='0'"
+                        special = '0'"
                 );
             $ds = mysqli_fetch_array($ergebnis);
             $usertype = $ds[ 'rank' ];
@@ -138,11 +138,11 @@ if (mysqli_num_rows($thread)) {
         $specialtype = "";
         $getrank = safe_query(
             "SELECT IF
-              (u.special_rank = 0, 0, CONCAT_WS(\"__\", r.rank, r.pic)) as RANK
+                (u.special_rank = 0, 0, CONCAT_WS(\"__\", r.rank, r.pic)) as RANK
             FROM
-              " . PREFIX . "user u LEFT JOIN " . PREFIX . "forum_ranks r ON u.special_rank = r.rankID
+                " . PREFIX . "user u LEFT JOIN " . PREFIX . "forum_ranks r ON u.special_rank = r.rankID
             WHERE
-              userID='" . $dr[ 'poster' ] . "'"
+                userID = '" . $dr[ 'poster' ] . "'"
         );
         $rank_data = mysqli_fetch_assoc($getrank);
 

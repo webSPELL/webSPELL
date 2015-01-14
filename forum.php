@@ -1365,11 +1365,11 @@ if (isset($_POST[ 'submit' ]) || isset($_POST[ 'movetopic' ]) || isset($_GET[ 'a
                 $specialtype = "";
                 $getrank = safe_query(
                     "SELECT IF
-                      (u.special_rank = 0, 0, CONCAT_WS(\"__\",r.rank, r.pic)) as RANK
+                        (u.special_rank = 0, 0, CONCAT_WS(\"__\", r.rank, r.pic)) as RANK
                     FROM
-                      " . PREFIX . "user u LEFT JOIN " . PREFIX . "forum_ranks r ON u.special_rank = r.rankID
+                        " . PREFIX . "user u LEFT JOIN " . PREFIX . "forum_ranks r ON u.special_rank = r.rankID
                     WHERE
-                      userID = '" . $userID . "'"
+                        userID = '" . $userID . "'"
                 );
                 $rank_data = mysqli_fetch_assoc($getrank);
 
