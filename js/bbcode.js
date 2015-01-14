@@ -585,7 +585,7 @@ function validbbcode(txt) {
         closingtags,
         tmpstring;
 
-    if (resulttemp) {
+    if (!resulttemp) {
         resulttemp = [];
     }
 
