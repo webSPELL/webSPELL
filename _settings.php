@@ -115,7 +115,7 @@ if (isset($_GET[ 'site' ])) {
 }
 if ($site != "search") {
     $request = strtolower(urldecode($_SERVER[ 'QUERY_STRING' ]));
-    $protarray = array(
+    $protarray = [
         "union",
         "select",
         "into",
@@ -160,7 +160,7 @@ if ($site != "search") {
         ".history",
         "~nobody",
         "getenv"
-    );
+    ];
     $check = str_replace($protarray, '*', $request);
     if ($request != $check) {
         system_error("Invalid request detected.");
@@ -197,7 +197,7 @@ security_slashes($_GET);
 security_slashes($_REQUEST);
 
 // -- MYSQL QUERY FUNCTION -- //
-$_mysql_querys = array();
+$_mysql_querys = [];
 function safe_query($query = "")
 {
 
@@ -317,16 +317,16 @@ function isignored($userID, $buddy)
 
 $ds = mysqli_fetch_array(safe_query("SELECT * FROM " . PREFIX . "settings"));
 
-$components = array(
-    'css' => array(
+$components = [
+    'css' => [
         'components/bootstrap/dist/css/bootstrap.min.css'
-    ),
-    'js' => array(
+    ],
+    'js' => [
         'components/jquery/dist/jquery.min.js',
         'components/bootstrap/dist/js/bootstrap.min.js',
         'components/webshim/js-webshim/minified/polyfiller.js'
-    )
-);
+    ]
+];
 
 $maxshownnews = $ds[ 'news' ];
 if (empty($maxshownnews)) {
