@@ -51,8 +51,7 @@ foreach ($all_langs as $lang) {
                         if (!isset($ref_keys[$file_name][$key])) {
                             $errors[$file_name][] = 'Unknown key: '.$key;
                         } else {
-                            if ($val == $ref_keys[$file_name][$key] && $checkUntranslated == true) {
-                             //$errors[$file_name][] = 'Not translated key: '.$key;
+                            if ($val == $ref_keys[$file_name][$key] && $checkUntranslated === true) {
                                 $untranslated += 1;
                                 unset($tmp[$key]);
                             } else {

@@ -131,7 +131,7 @@ if (isset($_POST[ 'saveedit' ])) {
                     userID='" . $id . "'"
             );
             //remove from mods
-            if ($moderator == false) {
+            if ($moderator === false) {
                 safe_query("DELETE FROM " . PREFIX . "forum_moderators WHERE userID='" . $id . "'");
             }
 

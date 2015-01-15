@@ -14,14 +14,14 @@ function AddTag(open, close, content) {
         end,
         pos;
 
-    if (typeof document.forms[form].elements[textarea] === "undefined") {
+    if (typeof document.forms[ form ].elements[ textarea ] === "undefined") {
         if (which) {
             textfield = which;
         } else {
-            textfield = document.forms[form].elements["message[0]"];
+            textfield = document.forms[ form ].elements[ "message[0]" ];
         }
     } else {
-        textfield = document.forms[form].elements[textarea];
+        textfield = document.forms[ form ].elements[ textarea ];
     }
     textfield.focus();
     if (typeof document.selection !== "undefined") {
@@ -126,14 +126,14 @@ function AddCodeFromWindow(thecode) {
         end,
         range;
 
-    if (typeof opener.document.forms[form].elements[textarea] === "undefined") {
+    if (typeof opener.document.forms[ form ].elements[ textarea ] === "undefined") {
         if (which) {
             textfield = which;
         } else {
-            textfield = opener.document.forms[form].elements["message[0]"];
+            textfield = opener.document.forms[ form ].elements[ "message[0]" ];
         }
     } else {
-        textfield = opener.document.forms[form].elements[textarea];
+        textfield = opener.document.forms[ form ].elements[ textarea ];
     }
     textfield.focus();
 
@@ -230,13 +230,13 @@ function Toggle(id, multi) {
 
     if (multi === true) {
         elements = document.getElementsByName(spanid1);
-        val = document.getElementsByName(spanid1)[0].style.display;
+        val = document.getElementsByName(spanid1)[ 0 ].style.display;
 
         for (i = 0; i < elements.length; i++) {
             if (val === "none") {
-                elements[i].style.display = "inline";
+                elements[ i ].style.display = "inline";
             } else {
-                elements[i].style.display = "none";
+                elements[ i ].style.display = "none";
             }
         }
     } else {
@@ -244,7 +244,7 @@ function Toggle(id, multi) {
             images = document.getElementById(spanid1).getElementsByTagName("img");
             anz = images.length;
             for (i = 0; i < anz; i++) {
-                elem = images[i];
+                elem = images[ i ];
                 if (typeof elem.onload === "function") {
                     elem.onload();
                 }
@@ -349,7 +349,7 @@ function SelectAll() {
     var x, y;
 
     for (x = 0; x < document.form.elements.length; x++) {
-        y = document.form.elements[x];
+        y = document.form.elements[ x ];
         if (y.name !== "ALL") {
             y.checked = document.form.ALL.checked;
         }
@@ -585,56 +585,55 @@ function validbbcode(txt) {
         closingtags,
         tmpstring;
 
-    if (resulttemp) {
+    if (!resulttemp) {
         resulttemp = [];
     }
 
     for (c = 0; c < resulttemp.length; c++) {
         if (
-            (resulttemp[c] === "[code]") ||
-            (resulttemp[c] === "[CODE]") ||
-            (resulttemp[c] === "[/code]") ||
-            (resulttemp[c] === "[/CODE]")
+            (resulttemp[ c ] === "[code]") ||
+            (resulttemp[ c ] === "[CODE]") ||
+            (resulttemp[ c ] === "[/code]") ||
+            (resulttemp[ c ] === "[/CODE]")
         ) {
-            if ((resulttemp[c] === "[code]") || (resulttemp[c] === "[CODE]")) {
+            if ((resulttemp[ c ] === "[code]") || (resulttemp[ c ] === "[CODE]")) {
                 ocode++;
                 if (ocode === 1) {
-                    result[putincounter] = resulttemp[c];
+                    result[ putincounter ] = resulttemp[ c ];
                     putincounter++;
                 }
             } else {
                 ocode--;
                 if (ocode === 0) {
-                    result[putincounter] = resulttemp[c];
+                    result[ putincounter ] = resulttemp[ c ];
                     putincounter++;
                 }
             }
         } else {
             if (ocode < 1) {
-                result[putincounter] = resulttemp[c];
+                result[ putincounter ] = resulttemp[ c ];
                 putincounter++;
             }
         }
     }
-    if (result) {
+    if (result === null) {
         return true;
     }
     arraylength = result.length;
     if (arraylength > 0) {
-        starttest = result[0].split("=");
+        starttest = result[ 0 ].split("=");
         if (arraylength % 2) {
-            alert(languageArray.bbcode.unevenAmount);
-
+            window.alert(languageArray.bbcode.unevenAmount);
             return false;
         } else {
-            if (starttest[0].indexOf("/") === -1) {
+            if (starttest[ 0 ].indexOf("/") === -1) {
                 openingtagcounter = 0;
                 closingtagcounter = 0;
                 for (i = 0; i < arraylength; i++) {
-                    temp = result[i].split("[");
-                    temp = temp[1].split("]");
-                    temp = temp[0].split("=");
-                    if (temp[0].indexOf("/") === -1) {
+                    temp = result[ i ].split("[");
+                    temp = temp[ 1 ].split("]");
+                    temp = temp[ 0 ].split("=");
+                    if (temp[ 0 ].indexOf("/") === -1) {
                         openingtagcounter++;
                     } else {
                         closingtagcounter++;
@@ -645,14 +644,14 @@ function validbbcode(txt) {
                     closingtags = [];
 
                     for (i = 0; i < arraylength; i++) {
-                        temp = result[i].split("[");
-                        temp = temp[1].split("]");
-                        temp = temp[0].split("=");
-                        if (temp[0].indexOf("/") === -1) {
-                            openingtags.push(temp[0]);
+                        temp = result[ i ].split("[");
+                        temp = temp[ 1 ].split("]");
+                        temp = temp[ 0 ].split("=");
+                        if (temp[ 0 ].indexOf("/") === -1) {
+                            openingtags.push(temp[ 0 ]);
                         } else {
                             tmpstring = openingtags.pop();
-                            if (temp[0].toLowerCase() !== ("/" + tmpstring).toLowerCase()) {
+                            if (temp[ 0 ].toLowerCase() !== ("/" + tmpstring).toLowerCase()) {
                                 window.alert(languageArray.bbcode.wrongNesting);
 
                                 return false;
@@ -678,7 +677,7 @@ function validbbcode(txt) {
 /* jshint ignore:start */
 // jscs:disable
 function MM_confirm(msg, url) { //v1.0
-    if(confirm(msg)) location.replace(url);
+    if (confirm(msg)) location.replace(url);
 }
 // jscs:enable
 /* jshint ignore:end */

@@ -64,7 +64,7 @@ if (!isset($GLOBALS[ '_database' ])) {
 
 // -- GENERAL PROTECTIONS -- //
 
-if (function_exists("globalskiller") == false) {
+if (function_exists("globalskiller") === false) {
     function globalskiller()
     {
         // kills all non-system variables
@@ -93,7 +93,7 @@ if (function_exists("globalskiller") == false) {
     }
 }
 
-if (function_exists("unset_array") == false) {
+if (function_exists("unset_array") === false) {
     function unset_array($array)
     {
         foreach ($array as $key) {

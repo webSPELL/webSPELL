@@ -27,10 +27,8 @@
 
 $_language->readModule('demos');
 
-//Options:
-$list = 2; //1 = top 5 demos , 2 = latest 5 demos
+$list = 2; // 1 = top 5 demos , 2 = latest 5 demos
 
-//dont edit above this line
 if ($list == 1) {
     $list = "rating";
 } else {

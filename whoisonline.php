@@ -112,7 +112,7 @@ while ($ds = mysqli_fetch_array($ergebnis)) {
             $email = '';
         } else {
             $email = '<a href="mailto:' . mail_protect(getemail($ds[ 'userID' ])) . '">
-            <span class="glyphicon glyphicon-email" title="email"></span>
+            <span class="glyphicon glyphicon-envelope" title="email"></span>
         </a>';
         }
 
@@ -275,7 +275,7 @@ while ($ds = mysqli_fetch_array($ergebnis)) {
         $email = '';
     } else {
         $email = '<a href="mailto:' . mail_protect(getemail($ds[ 'userID' ])) . '">
-            <span class="glyphicon glyphicon-email" title="email"></span>
+            <span class="glyphicon glyphicon-envelope" title="email"></span>
         </a>';
     }
 

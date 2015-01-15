@@ -108,7 +108,7 @@ if (isset($_POST['newreply']) && !isset($_POST['preview'])) {
         $do_sticky = (isset($_POST['sticky'])) ? ', sticky=1' : ', sticky=0';
     }
 
-    $spamApi = SpamApi::getInstance();
+    $spamApi = \webspell\SpamApi::getInstance();
     $validation = $spamApi->validate($message);
 
     $date = time();
@@ -610,9 +610,9 @@ function showtopic($topic, $edit, $addreply, $quoteID, $type)
                 } else {
                     $signatur = '';
                 }
-                if ($getemail = getemail($userID) && !getemailhide($userID)) {
-                    $email = '<a href="mailto:' . mail_protect($getemail) .
-                        '"><span class="glyphicon glyphicon-email" title="email"></span></a>';
+                if (getemail($userID) && !getemailhide($userID)) {
+                    $email = '<a href="mailto:' . mail_protect(getemail($userID)) .
+                        '"><span class="glyphicon glyphicon-envelope" title="email"></span></a>';
                 } else {
                     $email = '';
                 }
@@ -784,9 +784,10 @@ function showtopic($topic, $edit, $addreply, $quoteID, $type)
             $signatur = '';
         }
 
-        if ($getemail = getemail($dr['poster']) && !getemailhide($dr['poster'])) {
+        if (getemail($dr['poster']) && !getemailhide($dr['poster'])) {
             $email =
-                '<a href="mailto:' . mail_protect($getemail) . '"><img src="images/icons/email.gif" alt="email"></a>';
+                '<a href="mailto:' . mail_protect(getemail($dr['poster'])) .
+                '"><span class="glyphicon glyphicon-envelope" title="email"></span></a>';
         } else {
             $email = '';
         }

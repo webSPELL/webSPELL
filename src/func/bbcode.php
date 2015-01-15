@@ -102,7 +102,7 @@ function smileys($text, $specialchars = 0, $calledfrom = 'root')
                 }
             }
         }
-        if ($match == false) {
+        if ($match === false) {
             $splits[$i] = replace_smileys($splits[$i], $calledfrom);
         } else {
             $i = $z;

@@ -44,7 +44,6 @@ $language_array = Array(
 	'pic_of_the_moment'=>'pillanatkép',
 	'poll'=>'szavazás',
 	'random_user'=>'véletlenszerű felhasználó',
-	'scrolltext'=>'fényújság',
 	'server'=>'szerverek',
 	'shoutbox'=>'üzenőfal',
 	'sponsors'=>'szponzorok',

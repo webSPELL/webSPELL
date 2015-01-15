@@ -50,7 +50,6 @@ $language_array = Array(
   'pic_of_the_moment'=>'fotoja momentit',
   'poll'=>'sondazh',
   'random_user'=>'përdorues i cfarëdoshëm',
-  'scrolltext'=>'kaloni tekstin',
   'server'=>'serverat',
   'shoutbox'=>'shoutbox',
   'sponsors'=>'sponsorët',
