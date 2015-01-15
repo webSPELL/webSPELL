@@ -68,24 +68,6 @@ module.exports = function(grunt) {
     // Project configuration.
     grunt.initConfig({
         pkg: grunt.file.readJSON("package.json"),
-        lintspaces: {
-            all: {
-                src: [
-                    javascripts,
-                    templates,
-                    phps,
-                    excludes,
-                    "!admin/**"
-                ],
-                options: {
-                    newline: true,
-                    newlineMaximum: 2,
-                    trailingspaces: true,
-                    indentation: "spaces",
-                    spaces: 4
-                }
-            }
-        },
         jshint: {
             options: {
                 jshintrc: ".jshintrc"
@@ -279,7 +261,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks("grunt-phpcs");
     grunt.loadNpmTasks("grunt-phpcpd");
     grunt.loadNpmTasks("grunt-jscs");
-    grunt.loadNpmTasks("grunt-lintspaces");
     grunt.loadNpmTasks("grunt-text-replace");
     grunt.loadNpmTasks("grunt-templated-changelog");
     grunt.loadNpmTasks("grunt-bump");
@@ -293,13 +274,11 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks("grunt-exec");
 
     grunt.registerTask("codecheck", [
-        "lintspaces",
         "js",
         "php",
         "html"
     ]);
     grunt.registerTask("codecheck_newer", [
-        "newer:lintspaces",
         "newer:js",
         "newer:phplint",
         "newer:phpcs",

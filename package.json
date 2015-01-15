@@ -26,7 +26,6 @@
     "grunt-htmlhint": "^0.4.1",
     "grunt-htmllint": "^0.2.4",
     "grunt-jscs": "^1.1.0",
-    "grunt-lintspaces": "^0.6.0",
     "grunt-newer": "^1.1.0",
     "grunt-phpcpd": "^0.1.4",
     "grunt-phpcs": "^0.2.3",
