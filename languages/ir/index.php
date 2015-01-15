@@ -44,7 +44,6 @@ $language_array = Array(
   'pic_of_the_moment'=>'در این لحظه',
   'poll'=>'هر نفر',
   'random_user'=>'کاربر رندم',
-  'scrolltext'=>'فهرست نام ها',
   'server'=>'سرورها',
   'shoutbox'=>'جعبه',
   'sponsors'=>'اسپانسرها',

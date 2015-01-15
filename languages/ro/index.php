@@ -45,7 +45,6 @@ $language_array = Array(
   'pic_of_the_moment'=>'Pictura zilei',
   'poll'=>'Sondaj',
   'random_user'=>'Utilizator aleatoriu',
-  'scrolltext'=>'Parcurgeți textul',
   'server'=>'Server',
   'shoutbox'=>'Shoutbox',
   'sponsors'=>'Sponsori',

@@ -44,7 +44,6 @@ $language_array = Array(
 	'pic_of_the_moment'=>'momentka',
 	'poll'=>'anketa',
 	'random_user'=>'náhodný uživatel',
-	'scrolltext'=>'běžící text',
 	'server'=>'server',
 	'shoutbox'=>'vzkazy',
 	'sponsors'=>'sponzoři',

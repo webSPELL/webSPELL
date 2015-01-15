@@ -45,7 +45,6 @@ $language_array = Array(
   'pic_of_the_moment'=>'მომენტის ფოტო',
   'poll'=>'ხმის მიცემა',
   'random_user'=>'შემთხვევითი მომხმარებელი',
-  'scrolltext'=>'მოძრავი ტექსტი',
   'server'=>'სერვერები',
   'shoutbox'=>'ჩატი',
   'sponsors'=>'სპონსორები',

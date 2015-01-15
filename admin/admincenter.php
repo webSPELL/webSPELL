@@ -210,7 +210,6 @@ if (ispageadmin($userID)) {
 			<li><a href="admincenter.php?site=about"><?php echo $_language->module['about_us']; ?></a></li>
 			<li><a href="admincenter.php?site=imprint"><?php echo $_language->module['imprint']; ?></a></li>
 			<li><a href="admincenter.php?site=bannerrotation"><?php echo $_language->module['bannerrotation']; ?></a></li>
-			<li><a href="admincenter.php?site=scrolltext"><?php echo $_language->module['scrolltext']; ?></a></li>
     <?php echo admincenternav(6); ?>
 		</ul>
     <?php
