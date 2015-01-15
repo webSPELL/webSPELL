@@ -97,7 +97,7 @@ module.exports = function(grunt) {
         },
         jscs: {
             options: {
-                preset: "jquery" // See: https://contribute.jquery.org/style-guide/js/
+                config: ".jscsrc"
             },
             src: [
                 javascripts,
