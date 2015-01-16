@@ -38,7 +38,7 @@
 </script>
 <form action="clanwars.php?action=save" method="post" name="post" onsubmit="return chkFormular();">
     <h1>%new_clanwar%</h1>
-    <table class="table">
+    <table class="table table-striped">
         <tr>
             <th>%date%:</th>
             <td><input name="date" type="date" value="$date" placeholder="yyyy-mm-dd" class="form-control"></td>
@@ -87,7 +87,7 @@
         </tr>
         <tr>
             <td colspan="4">
-                <table class="table" id="maplist">
+                <table class="table table-striped" id="maplist">
                     <tr>
                         <th>%map% %id%:</th>
                         <th>%map%:</th>

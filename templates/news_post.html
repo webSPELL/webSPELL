@@ -188,7 +188,7 @@
 <body>
 <form action="news.php?action=save" method="post" enctype="multipart/form-data" id="post" name="post"
     onsubmit="return chkFormular();">
-    <table class="table">
+    <table class="table table-striped">
         <tr>
             <td class="title text-center">%new_post%</td>
         </tr>
@@ -197,14 +197,14 @@
         </tr>
         <tr>
             <td>
-                <table class="table">
+                <table class="table table-striped">
                     <tr>
                         <td valign="top">$addbbcode</td>
                         <td valign="top">$addflags</td>
                     </tr>
                 </table>
                 <hr>
-                <table class="table">
+                <table class="table table-striped">
                     <tr>
                         <td><strong>%rubric%:</strong> <select name="rubric">$rubrics</select>
                             <input name="button" type="button" onclick="window.open(
@@ -231,7 +231,7 @@
                     </tr>
                     <tr>
                         <td>
-                            <table class="table">
+                            <table class="table table-striped">
                                 <tr>
                                     <td><strong>%options%</strong></td>
                                     <td><strong>%languages%:</strong></td>
@@ -265,7 +265,7 @@
                     /* ]]> */
                 </script>
                 <hr>
-                <table class="table">
+                <table class="table table-striped">
                     <tr>
                         <td valign="top">%link% 1:
                             <input name="link1" type="text" value="$link1">
