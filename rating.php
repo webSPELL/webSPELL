@@ -79,7 +79,7 @@ if (isset($table) && isset($key)) {
             }
         }
         // Only vote, if isn't voted
-        if ($go == true) {
+        if ($go === true) {
             safe_query(
                 "UPDATE
                     " . PREFIX . $table . "

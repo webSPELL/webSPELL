@@ -146,7 +146,7 @@ if ($action == "save" && isset($_POST['post'])) {
         $showerror = generateErrorBoxFromArray($_language->module['problems'], $error);
     }
 }
-if ($show == true) {
+if ($show === true) {
     if ($showonlygamingsquads) {
         $squads = getgamesquads();
     } else {

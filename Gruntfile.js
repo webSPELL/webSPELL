@@ -312,7 +312,10 @@ module.exports = function(grunt) {
     grunt.registerTask("bumpOnly", function() {
         grunt.config("bump", {
             options: {
-                files: [ "package.json" ],
+                files: [
+                    "package.json",
+                    "bower.json"
+                ],
                 createTag: false,
                 commit: false,
                 push: false,

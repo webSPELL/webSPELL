@@ -171,7 +171,7 @@ if ($action == "save" && isset($_POST['post'])) {
 }
 $type = (isset($_GET['type']) && $_GET['type'] == 'ASC') ? "ASC" : "DESC";
 
-if ($show == true) {
+if ($show === true) {
     $squads = getgamesquads();
     $countries = getcountries();
 

@@ -63,7 +63,7 @@ if (basename($_SERVER[ 'SCRIPT_FILENAME' ]) == basename("_rewrite.php")) {
         }
     }
 
-    if ($_site == null) {
+    if ($_site === null) {
         header("HTTP/1.0 404 Not Found");
         $_site = "index.php";
         $_GET[ 'site' ] = "error";

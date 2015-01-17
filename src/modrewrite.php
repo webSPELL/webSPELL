@@ -152,7 +152,7 @@ class ModRewrite
         foreach ($this->cache as $ds) {
             $regex = $ds['replace_regex'];
             $replace = $ds['replace_result'];
-            if ($headers == true) {
+            if ($headers === true) {
                 $content = preg_replace(
                     "/()()Location:\s" . $regex . "/i",
                     'Location: ' . $this->getRewriteBase() . $replace,

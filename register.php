@@ -215,7 +215,7 @@ if (isset($_GET['key'])) {
         }
     }
 } else {
-    if ($show == true) {
+    if ($show === true) {
         if (!$loggedin) {
             $CAPCLASS = new \webspell\Captcha;
             $captcha = $CAPCLASS->createCaptcha();

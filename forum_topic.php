@@ -609,8 +609,8 @@ function showtopic($topic, $edit, $addreply, $quoteID, $type)
                 } else {
                     $signatur = '';
                 }
-                if ($getemail = getemail($userID) and !getemailhide($userID)) {
-                    $email = '<a href="mailto:' . mail_protect($getemail) .
+                if (getemail($userID) && !getemailhide($userID)) {
+                    $email = '<a href="mailto:' . mail_protect(getemail($userID)) .
                         '"><span class="glyphicon glyphicon-envelope" title="email"></span></a>';
                 } else {
                     $email = '';
