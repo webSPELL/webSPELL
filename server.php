@@ -33,7 +33,6 @@ echo $title_server;
 $ergebnis = safe_query("SELECT * FROM " . PREFIX . "servers ORDER BY sort");
 
 if (mysqli_num_rows($ergebnis)) {
-    $i = 1;
     while ($ds = mysqli_fetch_array($ergebnis)) {
         if ($ds[ 'game' ] == "CS") {
             $game = "HL";
@@ -53,19 +52,18 @@ if (mysqli_num_rows($ergebnis)) {
 
         if (!checkenv('disable_functions', 'fsockopen')) {
             if (!fsockopen("udp://" . $ip, $port, $strErrNo, $strErrStr, 30)) {
-                $status = "<i>" . $_language->module[ 'timeout' ] . "</i>";
+                $status = "<em>" . $_language->module[ 'timeout' ] . "</em>";
             } else {
                 $status = "<strong>" . $_language->module[ 'online' ] . "</strong>";
             }
         } else {
-            $status = "<i>" . $_language->module[ 'not_supported' ] . "</i>";
+            $status = "<em>" . $_language->module[ 'not_supported' ] . "</em>";
         }
         $servername = htmloutput($ds[ 'name' ]);
         $info = htmloutput($ds[ 'info' ]);
         eval("\$server = \"" . gettemplate("server") . "\";");
         echo $server;
-        $i++;
     }
 } else {
-    echo $_language->module[ 'no_server' ];
+	echo generateAlert($_language->module[ 'no_server' ], 'alert-info');
 }
