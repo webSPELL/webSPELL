@@ -32,28 +32,6 @@ systeminc('ip');
 
 // -- GLOBAL WEBSPELL FUNCTIONS -- //
 
-function gettemplate($template, $endung = "html", $calledfrom = "root")
-{
-    $templatefolder = "templates";
-    if ($calledfrom == 'root') {
-        return str_replace(
-            "\"",
-            "\\\"",
-            $GLOBALS[ '_language' ]->replace(
-                file_get_contents($templatefolder . "/" . $template . "." . $endung)
-            )
-        );
-    } elseif ($calledfrom == 'admin') {
-        return str_replace(
-            "\"",
-            "\\\"",
-            $GLOBALS[ '_language' ]->replace(
-                file_get_contents("../" . $templatefolder . "/" . $template . "." . $endung)
-            )
-        );
-    }
-}
-
 function makepagelink($link, $page, $pages, $sub = '')
 {
     $page_link = '<span class="pagelink"><img src="images/icons/multipage.gif" width="10" height="12" alt=""> <small>';
