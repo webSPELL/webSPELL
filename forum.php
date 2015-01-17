@@ -1162,8 +1162,9 @@ if (isset($_POST[ 'submit' ]) || isset($_POST[ 'movetopic' ]) || isset($_GET[ 'a
         $data_array = array();
         $data_array['$pagetitle'] = $pagetitle;
         $data_array['$rewriteBase'] = $rewriteBase;
-        $data_array['$_POST'] = $_POST;
         $data_array['$boards'] = $boards;
+        $data_array['$board'] = (int)$_POST['board'];
+        $data_array['$topic'] = (int)$_POST['topicID'];
         $forum_move_topic = $GLOBALS["_template"]->replaceTemplate("forum_move_topic", $data_array);
         echo $forum_move_topic;
     } elseif (isset($_POST[ 'newtopic' ]) && !isset($_POST[ 'preview' ])) {

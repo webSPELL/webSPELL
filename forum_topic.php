@@ -443,9 +443,9 @@ function showtopic($topic, $edit, $addreply, $quoteID, $type)
 
     $kathname = getcategoryname($db['category']);
     $data_array = array();
-    $data_array['$db'] = $db;
     $data_array['$kathname'] = $kathname;
-    $data_array['$dt'] = $dt;
+    $data_array['$category'] = (int)$db['category'];
+    $data_array['$board'] = (int)$dt['boardID'];
     $data_array['$boardname'] = $boardname;
     $data_array['$topicname'] = $topicname;
     $forum_topics_title = $GLOBALS["_template"]->replaceTemplate("forum_topics_title", $data_array);
@@ -506,44 +506,8 @@ function showtopic($topic, $edit, $addreply, $quoteID, $type)
                     $chk_sticky = '';
                 }
 
-                // topic icon list
-                $iconlist = '<ul class="nav nav-pills nav-justified">
-        <li><input type="radio" class="input" name="icon" value="ausrufezeichen.gif">
-        <img src="images/icons/topicicons/ausrufezeichen.gif"></li>
-        <li><input type="radio" class="input" name="icon" value="biggrin.gif">
-        <img src="images/icons/topicicons/biggrin.gif"></li>
-        <li><input type="radio" class="input" name="icon" value="boese.gif">
-        <img src="images/icons/topicicons/boese.gif"></li>
-        <li><input type="radio" class="input" name="icon" value="bored.gif">
-        <img src="images/icons/topicicons/bored.gif"></li>
-        <li><input type="radio" class="input" name="icon" value="cool.gif">
-        <img src="images/icons/topicicons/cool.gif"></li>
-        <li><input type="radio" class="input" name="icon" value="eek.gif">
-        <img src="images/icons/topicicons/eek.gif"></li>
-        <li><input type="radio" class="input" name="icon" value="frage.gif">
-        <img src="images/icons/topicicons/frage.gif"></li>
-        <li><input type="radio" class="input" name="icon" value="frown.gif">
-        <img src="images/icons/topicicons/frown.gif"></li>
-        <li><input type="radio" class="input" name="icon" value="lampe.gif">
-        <img src="images/icons/topicicons/lampe.gif"></li>
-        <li><input type="radio" class="input" name="icon" value="mad.gif">
-        <img src="images/icons/topicicons/mad.gif"></li>
-        <li><input type="radio" class="input" name="icon" value="pfeil.gif">
-        <img src="images/icons/topicicons/pfeil.gif"></li>
-        <li><input type="radio" class="input" name="icon" value="smile.gif">
-        <img src="images/icons/topicicons/smile.gif"></li>
-        <li><input type="radio" class="input" name="icon" value="text.gif">
-        <img src="images/icons/topicicons/text.gif"></li>
-        <li><input type="radio" class="input" name="icon" value="thumb_down.gif">
-        <img src="images/icons/topicicons/thumb_down.gif"></li>
-        <li><input type="radio" class="input" name="icon" value="thumb_up.gif">
-        <img src="images/icons/topicicons/thumb_up.gif"></li>
-        <li><input type="radio" class="input" name="icon" value="wink.gif">
-        <img src="images/icons/topicicons/wink.gif"></li>
-        <li><input type="radio" class="input" name="icon" value="0">
-        ' . $_language->module['no_icon'] . '</li>
-        </ul>';
 
+                $iconlist = $GLOBALS["_template"]->replaceTemplate("forum_newtopic_iconlist", array());
                 if ($dt['icon']) {
                     $iconlist =
                         str_replace(

@@ -68,6 +68,15 @@ class Template
     */
     private function replace($template, $data)
     {
+        if (DEBUG === 'ON') {
+            $result = strtr($template, $data);
+            $error = error_get_last();
+            if(!empty($error)){
+                $debug_stack = debug_backtrace();
+                echo generateErrorBox(print_r(error_get_last(),true).' in Template '.$debug_stack[1]['args'][0]);
+            }
+            return $result;
+        }
         return strtr($template, $data);
     }
 
