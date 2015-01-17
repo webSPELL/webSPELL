@@ -27,5 +27,5 @@
 
 $_language->readModule('navigation');
 
-eval ("\$navigation = \"" . gettemplate("navigation") . "\";");
+$navigation = $GLOBALS["_template"]->replaceTemplate("navigation", array());
 echo $navigation;

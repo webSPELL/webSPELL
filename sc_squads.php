@@ -45,7 +45,11 @@ if (mysqli_num_rows($ergebnis)) {
             $squadicon = '';
         }
         $squadname = getinput($db[ 'name' ]);
-        eval ("\$sc_squads = \"" . gettemplate("sc_squads") . "\";");
+        $data_array = array();
+        $data_array['$squadicon'] = $squadicon;
+        $data_array['$squadID'] = $db['squadID'];
+        $data_array['$squadname'] = $squadname;
+        $sc_squads = $GLOBALS["_template"]->replaceTemplate("sc_squads", $data_array);
         echo $sc_squads;
     }
     echo '</ul>';

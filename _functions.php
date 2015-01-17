@@ -32,36 +32,14 @@ systeminc('ip');
 
 // -- GLOBAL WEBSPELL FUNCTIONS -- //
 
-function gettemplate($template, $endung = "html", $calledfrom = "root")
-{
-    $templatefolder = "templates";
-    if ($calledfrom == 'root') {
-        return str_replace(
-            "\"",
-            "\\\"",
-            $GLOBALS[ '_language' ]->replace(
-                file_get_contents($templatefolder . "/" . $template . "." . $endung)
-            )
-        );
-    } elseif ($calledfrom == 'admin') {
-        return str_replace(
-            "\"",
-            "\\\"",
-            $GLOBALS[ '_language' ]->replace(
-                file_get_contents("../" . $templatefolder . "/" . $template . "." . $endung)
-            )
-        );
-    }
-}
-
 function makepagelink($link, $page, $pages, $sub = '')
 {
     $page_link = '<span class="pagelink"><img src="images/icons/multipage.gif" width="10" height="12" alt=""> <small>';
 
     if ($page != 1) {
         $page_link .=
-            '&nbsp;<a href="' . $link . '&amp;' . $sub . 'page=1">&laquo;</a>&nbsp;<a href="' . $link . '&amp;' . $sub .
-            'page=' . ($page - 1) . '">&lsaquo;</a>';
+        '&nbsp;<a href="' . $link . '&amp;' . $sub . 'page=1">&laquo;</a>&nbsp;<a href="' . $link . '&amp;' . $sub .
+        'page=' . ($page - 1) . '">&lsaquo;</a>';
     }
     if ($page >= 6) {
         $page_link .= '&nbsp;<a href="' . $link . '&amp;' . $sub . 'page=' . ($page - 5) . '">...</a>';
@@ -86,8 +64,8 @@ function makepagelink($link, $page, $pages, $sub = '')
     }
     if ($page != $pages) {
         $page_link .=
-            '&nbsp;<a href="' . $link . '&amp;' . $sub . 'page=' . ($page + 1) . '">&rsaquo;</a>&nbsp;<a href="' .
-            $link . '&amp;' . $sub . 'page=' . $pages . '">&raquo;</a>';
+        '&nbsp;<a href="' . $link . '&amp;' . $sub . 'page=' . ($page + 1) . '">&rsaquo;</a>&nbsp;<a href="' .
+        $link . '&amp;' . $sub . 'page=' . $pages . '">&raquo;</a>';
     }
     $page_link .= '</small></span>';
 
@@ -158,8 +136,13 @@ function percent($sub, $total, $dec)
 function showlock($reason, $time)
 {
     $gettitle = mysqli_fetch_array(safe_query("SELECT title FROM `" . PREFIX . "styles`"));
-    $pagetitle = $gettitle[ 'title' ];
-    eval ("\$lock = \"" . gettemplate("lock") . "\";");
+    $pagetitle = $gettitle['title'];
+    $data_array = array();
+    $data_array['$pagetitle'] = $pagetitle;
+    $data_array['$rewriteBase'] = $rewriteBase;
+    $data_array['$reason'] = $reason;
+    $lock = $GLOBALS["_template"]->replaceTemplate("lock", $data_array);
+
     die($lock);
 }
 
@@ -205,13 +188,13 @@ if (!function_exists('array_combine')) {
         $values = array();
         $result = array();
         foreach ($keyarray as $key) {
-            $keys[ ] = $key;
+            $keys[] = $key;
         }
         foreach ($valuearray as $value) {
-            $values[ ] = $value;
+            $values[] = $value;
         }
         foreach ($keys as $access => $resultkey) {
-            $result[ $resultkey ] = $values[ $access ];
+            $result[$resultkey] = $values[$access];
         }
         return $result;
     }
@@ -242,7 +225,7 @@ function checkforempty($valuearray)
 
     $check = array();
     foreach ($valuearray as $value) {
-        $check[ ] = $_REQUEST[ $value ];
+        $check[] = $_REQUEST[$value];
     }
 
     if (countempty($check) > 0) {
@@ -297,6 +280,14 @@ systeminc('func/language');
 $_language = new \webspell\Language;
 $_language->setLanguage($default_language);
 
+// -- TEMPLATE SYSTEM -- //
+
+systeminc('func/template');
+if (!stristr($_SERVER['SCRIPT_NAME'], '/admin/')) {
+    $_template = new \webspell\Template();
+} else {
+    $_template = new \webspell\Template('../templates/');
+}
 // -- GALLERY -- //
 
 systeminc('func/gallery');
@@ -316,9 +307,9 @@ systeminc('func/tags');
 // -- Mod Rewrite -- //
 
 systeminc('modrewrite');
-$GLOBALS[ '_modRewrite' ] = new \webspell\ModRewrite();
-if (!stristr($_SERVER[ 'SCRIPT_NAME' ], '/admin/') && $modRewrite) {
-    $GLOBALS[ '_modRewrite' ]->enable();
+$GLOBALS['_modRewrite'] = new \webspell\ModRewrite();
+if (!stristr($_SERVER['SCRIPT_NAME'], '/admin/') && $modRewrite) {
+    $GLOBALS['_modRewrite']->enable();
 }
 
 function cleartext($text, $bbcode = true, $calledfrom = 'root')
@@ -376,53 +367,53 @@ function getforminput($text)
 // -- LOGIN -- //
 
 $login_per_cookie = false;
-if (isset($_COOKIE[ 'ws_auth' ]) && !isset($_SESSION[ 'ws_auth' ])) {
+if (isset($_COOKIE['ws_auth']) && !isset($_SESSION['ws_auth'])) {
     $login_per_cookie = true;
-    $_SESSION[ 'ws_auth' ] = $_COOKIE[ 'ws_auth' ];
+    $_SESSION['ws_auth'] = $_COOKIE['ws_auth'];
 }
 
 systeminc('login');
 
 if ($loggedin === false) {
-    if (isset($_COOKIE[ 'language' ])) {
-        $_language->setLanguage($_COOKIE[ 'language' ]);
-    } elseif (isset($_SESSION[ 'language' ])) {
-        $_language->setLanguage($_SESSION[ 'language' ]);
+    if (isset($_COOKIE['language'])) {
+        $_language->setLanguage($_COOKIE['language']);
+    } elseif (isset($_SESSION['language'])) {
+        $_language->setLanguage($_SESSION['language']);
     } elseif ($autoDetectLanguage) {
         $lang = detectUserLanguage();
         if (!empty($lang)) {
             $_language->setLanguage($lang);
-            $_SESSION[ 'language' ] = $lang;
+            $_SESSION['language'] = $lang;
         }
     }
 }
 
 if ($login_per_cookie) {
     $ll = mysqli_fetch_array(safe_query("SELECT lastlogin FROM " . PREFIX . "user WHERE userID='$userID'"));
-    $_SESSION[ 'ws_lastlogin' ] = $ll[ 'lastlogin' ];
+    $_SESSION['ws_lastlogin'] = $ll['lastlogin'];
 }
 
 // -- SITE VARIABLE -- //
 
-if (isset($_GET[ 'site' ])) {
-    $site = $_GET[ 'site' ];
+if (isset($_GET['site'])) {
+    $site = $_GET['site'];
 } else {
     $site = '';
 }
 if ($closed && !isanyadmin($userID)) {
     $dl = mysqli_fetch_array(safe_query("SELECT * FROM `" . PREFIX . "lock` LIMIT 0,1"));
-    $reason = $dl[ 'reason' ];
-    $time = $dl[ 'time' ];
+    $reason = $dl['reason'];
+    $time = $dl['time'];
     showlock($reason, $time);
 }
-if (!isset($_SERVER[ 'HTTP_REFERER' ])) {
-    $_SERVER[ 'HTTP_REFERER' ] = "";
+if (!isset($_SERVER['HTTP_REFERER'])) {
+    $_SERVER['HTTP_REFERER'] = "";
 }
 
-if (!isset($_SERVER[ 'REQUEST_URI' ])) {
-    $_SERVER[ 'REQUEST_URI' ] = $_SERVER[ 'PHP_SELF' ];
-    if (isset($_SERVER[ 'QUERY_STRING' ])) {
-        $_SERVER[ 'REQUEST_URI' ] .= '?' . $_SERVER[ 'QUERY_STRING' ];
+if (!isset($_SERVER['REQUEST_URI'])) {
+    $_SERVER['REQUEST_URI'] = $_SERVER['PHP_SELF'];
+    if (isset($_SERVER['QUERY_STRING'])) {
+        $_SERVER['REQUEST_URI'] .= '?' . $_SERVER['QUERY_STRING'];
     }
 }
 
@@ -431,9 +422,9 @@ if (date("dh", $lastBanCheck) != date("dh")) {
     $get = safe_query("SELECT userID, banned FROM `" . PREFIX . "user` WHERE banned IS NOT NULL");
     $removeBan = array();
     while ($ds = mysqli_fetch_assoc($get)) {
-        if ($ds[ 'banned' ] != "perm") {
-            if ($ds[ 'banned' ] <= time()) {
-                $removeBan[ ] = 'userID="' . $ds[ 'userID' ] . '"';
+        if ($ds['banned'] != "perm") {
+            if ($ds['banned'] <= time()) {
+                $removeBan[] = 'userID="' . $ds['userID'] . '"';
             }
         }
     }
@@ -450,12 +441,12 @@ $banned =
         WHERE (userID='" . $userID . "' OR ip='" . $GLOBALS[ 'ip' ] . "') AND banned IS NOT NULL"
     );
 while ($bq = mysqli_fetch_array($banned)) {
-    if ($bq[ 'ban_reason' ]) {
-        $reason = "<br>" . $bq[ 'ban_reason' ];
+    if ($bq['ban_reason']) {
+        $reason = "<br>" . $bq['ban_reason'];
     } else {
         $reason = '';
     }
-    if ($bq[ 'banned' ]) {
+    if ($bq['banned']) {
         system_error('You have been banished.' . $reason, 0);
     }
 }
@@ -564,7 +555,7 @@ if (stristr($_SERVER[ 'PHP_SELF' ], "/admin/") === false) {
     systeminc('seo');
     define('PAGETITLE', getPageTitle());
 } else {
-    define('PAGETITLE', $GLOBALS[ 'hp_title' ]);
+    define('PAGETITLE', $GLOBALS['hp_title']);
 }
 
 // -- RSS FEEDS -- //

@@ -197,12 +197,12 @@ if (isset($_POST['save'])) {
 
 $_language->readModule('linkus');
 
-eval ("\$title_linkus = \"" . gettemplate("title_linkus") . "\";");
+$title_linkus = $GLOBALS["_template"]->replaceTemplate("title_linkus", array());
 echo $title_linkus;
 
 if ($action == "new") {
     if (ispageadmin($userID)) {
-        eval ("\$linkus_new = \"" . gettemplate("linkus_new") . "\";");
+        $linkus_new = $GLOBALS["_template"]->replaceTemplate("linkus_new", array());
         echo $linkus_new;
     } else {
         redirect(
@@ -226,7 +226,10 @@ if ($action == "new") {
         $name = getinput($ds['name']);
         $banner = '<img src="images/linkus/' . $ds['file'] . '" alt="">';
 
-        eval ("\$linkus_edit = \"" . gettemplate("linkus_edit") . "\";");
+        $data_array = array();
+        $data_array['$name'] = $name;
+        $data_array['$bannerID'] = $bannerID;
+        $linkus_edit = $GLOBALS["_template"]->replaceTemplate("linkus_edit", $data_array);
         echo $linkus_edit;
     } else {
         redirect(
@@ -274,7 +277,12 @@ if ($action == "new") {
                 </div>';
             }
 
-            eval("\$linkus = \"" . gettemplate("linkus") . "\";");
+            $data_array = array();
+            $data_array['$name'] = $name;
+            $data_array['$banner'] = $banner;
+            $data_array['$code'] = $code;
+            $data_array['$adminaction'] = $adminaction;
+            $linkus = $GLOBALS["_template"]->replaceTemplate("linkus", $data_array);
             echo $linkus;
             $i++;
         }

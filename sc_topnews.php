@@ -59,7 +59,11 @@ if ($anz) {
     }
     $content = nl2br(strip_tags($content));
 
-    eval ("\$sc_topnews = \"" . gettemplate("sc_topnews") . "\";");
+    $data_array = array();
+    $data_array['$topnewsID'] = $topnewsID;
+    $data_array['$headline'] = $headline;
+    $data_array['$content'] = $content;
+    $sc_topnews = $GLOBALS["_template"]->replaceTemplate("sc_topnews", $data_array);
     echo $sc_topnews;
 } else {
     echo $_language->module[ 'no_topnews' ];

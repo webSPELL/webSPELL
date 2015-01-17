@@ -69,8 +69,8 @@ if (isset($_POST[ 'submit' ]) != "") {
         <b>' . $_language->module[ 'about' ] . '</b><br><small>' . $_language->module[ 'you_can_use_html' ] .
         '</small><br><br>';
 
-    eval ("\$addbbcode = \"" . gettemplate("addbbcode", "html", "admin") . "\";");
-    eval ("\$addflags = \"" . gettemplate("flags_admin", "html", "admin") . "\";");
+    $addbbcode = $GLOBALS["_template"]->replaceTemplate("addbbcode", array());
+    $addflags = $GLOBALS["_template"]->replaceTemplate("flags_admin", array());
 
     echo '<table width="100%" border="0" cellspacing="0" cellpadding="0">
         <tr>

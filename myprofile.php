@@ -31,7 +31,7 @@ if (!$userID) {
     echo $_language->module['not_logged_in'];
 } else {
     $showerror = '';
-    eval ("\$title_myprofile = \"" . gettemplate("title_myprofile") . "\";");
+    $title_myprofile = $GLOBALS["_template"]->replaceTemplate("title_myprofile", array());
     echo $title_myprofile;
 
     if (isset($_POST['submit'])) {
@@ -293,7 +293,9 @@ if (!$userID) {
         $bg4 = BG_4;
         $border = BORDER;
 
-        eval("\$myprofile_editpwd = \"" . gettemplate("myprofile_editpwd") . "\";");
+        $data_array = array();
+        $data_array['$userID'] = $userID;
+        $myprofile_editpwd = $GLOBALS["_template"]->replaceTemplate("myprofile_editpwd", $data_array);
         echo $myprofile_editpwd;
     } elseif (isset($_POST['savepwd'])) {
         $oldpwd = $_POST['oldpwd'];
@@ -341,7 +343,9 @@ if (!$userID) {
         $bg4 = BG_4;
         $border = BORDER;
 
-        eval("\$myprofile_editmail = \"" . gettemplate("myprofile_editmail") . "\";");
+        $data_array = array();
+        $data_array['$userID'] = $userID;
+        $myprofile_editmail = $GLOBALS["_template"]->replaceTemplate("myprofile_editmail", $data_array);
         echo $myprofile_editmail;
     } elseif (isset($_POST['savemail'])) {
         $activationkey = md5(RandPass(20));
@@ -604,7 +608,49 @@ if (!$userID) {
             $bg3 = BG_3;
             $bg4 = BG_4;
 
-            eval("\$myprofile = \"" . gettemplate("myprofile") . "\";");
+            $data_array = array();
+            $data_array['$showerror'] = $showerror;
+            $data_array['$nickname'] = $nickname;
+            $data_array['$username'] = $username;
+            $data_array['$email'] = $email;
+            $data_array['$viewavatar'] = $viewavatar;
+            $data_array['$viewpic'] = $viewpic;
+            $data_array['$usertext'] = $usertext;
+            $data_array['$firstname'] = $firstname;
+            $data_array['$lastname'] = $lastname;
+            $data_array['$country'] = $country;
+            $data_array['$countries'] = $countries;
+            $data_array['$town'] = $town;
+            $data_array['$birthday'] = $birthday;
+            $data_array['$sex'] = $sex;
+            $data_array['$icq'] = $icq;
+            $data_array['$homepage'] = $homepage;
+            $data_array['$about'] = $about;
+            $data_array['$newsletter'] = $newsletter;
+            $data_array['$langdirs'] = $langdirs;
+            $data_array['$pm_mail'] = $pm_mail;
+            $data_array['$email_hide'] = $email_hide;
+            $data_array['$format_date'] = $format_date;
+            $data_array['$format_time'] = $format_time;
+            $data_array['$user_gbook_select'] = $user_gbook_select;
+            $data_array['$clantag'] = $clantag;
+            $data_array['$clanname'] = $clanname;
+            $data_array['$clanhp'] = $clanhp;
+            $data_array['$clanirc'] = $clanirc;
+            $data_array['$clanhistory'] = $clanhistory;
+            $data_array['$cpu'] = $cpu;
+            $data_array['$mainboard'] = $mainboard;
+            $data_array['$ram'] = $ram;
+            $data_array['$hdd'] = $hdd;
+            $data_array['$monitor'] = $monitor;
+            $data_array['$graphiccard'] = $graphiccard;
+            $data_array['$soundcard'] = $soundcard;
+            $data_array['$connection'] = $connection;
+            $data_array['$keyboard'] = $keyboard;
+            $data_array['$mouse'] = $mouse;
+            $data_array['$mousepad'] = $mousepad;
+            $data_array['$headset'] = $headset;
+            $myprofile = $GLOBALS["_template"]->replaceTemplate("myprofile", $data_array);
             echo $myprofile;
         } else {
             echo $_language->module['not_logged_in'];

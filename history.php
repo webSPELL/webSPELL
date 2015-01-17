@@ -27,7 +27,7 @@
 
 $_language->readModule('history');
 
-eval ("\$title_history = \"" . gettemplate("title_history") . "\";");
+$title_history = $GLOBALS["_template"]->replaceTemplate("title_history", array());
 echo $title_history;
 
 $ergebnis = safe_query("SELECT * FROM " . PREFIX . "history");
@@ -38,7 +38,9 @@ if (mysqli_num_rows($ergebnis)) {
     $history = toggle($history, 1);
 
     $bg1 = BG_1;
-    eval ("\$history = \"" . gettemplate("history") . "\";");
+    $data_array = array();
+    $data_array['$history'] = $history;
+    $history = $GLOBALS["_template"]->replaceTemplate("history", $data_array);
     echo $history;
 } else {
     echo $_language->module[ 'no_history' ];

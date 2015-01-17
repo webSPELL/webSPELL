@@ -56,13 +56,20 @@ if (isset($_GET[ 'tag' ])) {
             $auszug = $entry[ 'content' ];
             $link = $entry[ 'link' ];
             $title = $entry[ 'title' ];
-            eval ("\$search_tags = \"" . gettemplate("search_tags") . "\";");
+            $data_array = array();
+            $data_array['$date'] = $date;
+            $data_array['$link'] = $link;
+            $data_array['$title'] = $title;
+            $data_array['$auszug'] = $auszug;
+            $search_tags = $GLOBALS["_template"]->replaceTemplate("search_tags", $data_array);
             echo $search_tags;
         }
     } else {
         $tag = htmlspecialchars($tag);
         $text = sprintf($_language->module[ 'no_result' ], $tag);
-        eval ("\$search_tags_no_result = \"" . gettemplate("search_tags_no_result") . "\";");
+        $data_array = array();
+        $data_array['$text'] = $text;
+        $search_tags_no_result = $GLOBALS["_template"]->replaceTemplate("search_tags_no_result", $data_array);
         echo $search_tags_no_result;
     }
 } else {

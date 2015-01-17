@@ -29,7 +29,7 @@ if (isset($site)) {
     $_language->readModule('contact');
 }
 
-eval ("\$title_contact = \"" . gettemplate("title_contact") . "\";");
+$title_contact = $GLOBALS["_template"]->replaceTemplate("title_contact", array());
 echo $title_contact;
 
 if (isset($_POST["action"])) {
@@ -129,7 +129,14 @@ if ($loggedin) {
         $text = '';
     }
 
-    eval ("\$contact_loggedin = \"" . gettemplate("contact_loggedin") . "\";");
+    $data_array = array();
+    $data_array['$showerror'] = $showerror;
+    $data_array['$getemail'] = $getemail;
+    $data_array['$name'] = $name;
+    $data_array['$from'] = $from;
+    $data_array['$subject'] = $subject;
+    $data_array['$text'] = $text;
+    $contact_loggedin = $GLOBALS["_template"]->replaceTemplate("contact_loggedin", $data_array);
     echo $contact_loggedin;
 } else {
     $CAPCLASS = new \webspell\Captcha;
@@ -160,6 +167,15 @@ if ($loggedin) {
         $text = '';
     }
 
-    eval ("\$contact_notloggedin = \"" . gettemplate("contact_notloggedin") . "\";");
+    $data_array = array();
+    $data_array['$showerror'] = $showerror;
+    $data_array['$getemail'] = $getemail;
+    $data_array['$name'] = $name;
+    $data_array['$from'] = $from;
+    $data_array['$subject'] = $subject;
+    $data_array['$text'] = $text;
+    $data_array['$captcha'] = $captcha;
+    $data_array['$hash'] = $hash;
+    $contact_notloggedin = $GLOBALS["_template"]->replaceTemplate("contact_notloggedin", $data_array);
     echo $contact_notloggedin;
 }

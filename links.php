@@ -205,7 +205,7 @@ if (isset($_POST[ 'save' ])) {
 
 $_language->readModule('links');
 
-eval ("\$title_links = \"" . gettemplate("title_links") . "\";");
+$title_links = $GLOBALS["_template"]->replaceTemplate("title_links", array());
 echo $title_links;
 
 if ($action == "new") {
@@ -216,7 +216,10 @@ if ($action == "new") {
             $linkcats .= '<option value="' . $dr[ 'linkcatID' ] . '">' . htmlspecialchars($dr[ 'name' ]) . '</option>';
         }
         $bg1 = BG_1;
-        eval ("\$links_new = \"" . gettemplate("links_new") . "\";");
+        $data_array = array();
+        $data_array['$linkcats'] = $linkcats;
+        $data_array['$linkID'] = $linkID;
+        $links_new = $GLOBALS["_template"]->replaceTemplate("links_new", $data_array);
         echo $links_new;
     } else {
         redirect('index.php?site=links', $_language->module[ 'no_access' ]);
@@ -255,7 +258,13 @@ if ($action == "new") {
             );
 
         $bg1 = BG_1;
-        eval ("\$links_edit = \"" . gettemplate("links_edit") . "\";");
+        $data_array = array();
+        $data_array['$linkcats'] = $linkcats;
+        $data_array['$name'] = $name;
+        $data_array['$url'] = $url;
+        $data_array['$info'] = $info;
+        $data_array['$linkID'] = $linkID;
+        $links_edit = $GLOBALS["_template"]->replaceTemplate("links_edit", $data_array);
         echo $links_edit;
     } else {
         redirect('index.php?site=links', $_language->module[ 'no_access' ]);
@@ -274,7 +283,9 @@ if ($action == "new") {
 
     $linkcat = safe_query("SELECT * FROM " . PREFIX . "links WHERE linkcatID='$linkcatID' ORDER BY name");
     if (mysqli_num_rows($linkcat)) {
-        eval ("\$links_details_head = \"" . gettemplate("links_details_head") . "\";");
+        $data_array = array();
+        $data_array['$linkcatname'] = $linkcatname;
+        $links_details_head = $GLOBALS["_template"]->replaceTemplate("links_details_head", $data_array);
         echo $links_details_head;
 
         $i = 1;
@@ -307,12 +318,17 @@ if ($action == "new") {
                 $adminaction = '';
             }
 
-            eval ("\$links_details = \"" . gettemplate("links_details") . "\";");
+            $data_array = array();
+            $data_array['$banner'] = $banner;
+            $data_array['$info'] = $info;
+            $data_array['$link'] = $link;
+            $data_array['$adminaction'] = $adminaction;
+            $links_details = $GLOBALS["_template"]->replaceTemplate("links_details", $data_array);
             echo $links_details;
 
             unset($banner);
         }
-        eval ("\$links_foot = \"" . gettemplate("links_foot") . "\";");
+        $links_foot = $GLOBALS["_template"]->replaceTemplate("links_foot", array());
         echo $links_foot;
     } else {
         echo $_language->module[ 'no_links' ] . '<br><br>[ <a href="index.php?site=links">' .
@@ -329,7 +345,9 @@ if ($action == "new") {
         $anzcats = mysqli_num_rows(safe_query("SELECT linkcatID FROM " . PREFIX . "links_categorys"));
         $bg1 = BG_1;
 
-        eval ("\$links_category = \"" . gettemplate("links_category") . "\";");
+        $data_array = array();
+        $data_array['$anzcats'] = $anzcats;
+        $links_category = $GLOBALS["_template"]->replaceTemplate("links_category", $data_array);
         echo $links_category;
 
         $i = 1;
@@ -355,11 +373,14 @@ if ($action == "new") {
                 '<a href="index.php?site=links&amp;action=show&amp;linkcatID=' . $ds[ 'linkcatID' ] . '"><b>' .
                 $ds[ 'name' ] . '</b></a>';
 
-            eval ("\$links_content = \"" . gettemplate("links_content") . "\";");
+            $data_array = array();
+            $data_array['$linkcatname'] = $linkcatname;
+            $data_array['$anzlinks'] = $anzlinks;
+            $links_content = $GLOBALS["_template"]->replaceTemplate("links_content", $data_array);
             echo $links_content;
             $i++;
         }
-        eval ("\$links_foot = \"" . gettemplate("links_foot") . "\";");
+        $links_foot = $GLOBALS["_template"]->replaceTemplate("links_foot", array());
         echo $links_foot;
     } else {
         if (ispageadmin($userID) || isnewsadmin($userID)) {

@@ -37,10 +37,12 @@ if (isset($_GET[ 'delete' ])) {
         $squadID = $_GET[ 'squadID' ];
         $ergebnis = safe_query("SELECT userID FROM " . PREFIX . "squads_members WHERE squadID='$squadID'");
         while ($ds = mysqli_fetch_array($ergebnis)) {
-            $squads = mysqli_num_rows(safe_query(
-                "SELECT userID FROM " . PREFIX .
-                "squads_members WHERE userID='$ds[userID]'"
-            ));
+            $squads = mysqli_num_rows(
+                safe_query(
+                    "SELECT userID FROM " . PREFIX .
+                    "squads_members WHERE userID='$ds[userID]'"
+                )
+            );
             if ($squads < 2 && !issuperadmin($ds[ 'userID' ])) {
                 safe_query("DELETE FROM " . PREFIX . "user_groups WHERE userID='$ds[userID]'");
             }
@@ -301,8 +303,8 @@ if ($action == "add") {
 
     $_language->readModule('bbcode', true);
 
-    eval ("\$addbbcode = \"" . gettemplate("addbbcode", "html", "admin") . "\";");
-    eval ("\$addflags = \"" . gettemplate("flags_admin", "html", "admin") . "\";");
+    $addbbcode = $GLOBALS["_template"]->replaceTemplate("addbbcode", array());
+    $addflags = $GLOBALS["_template"]->replaceTemplate("flags_admin", array());
 
     echo '<script>
 		<!--
@@ -426,8 +428,8 @@ onsubmit="return chkFormular();">
 
     $_language->readModule('bbcode', true);
 
-    eval ("\$addbbcode = \"" . gettemplate("addbbcode", "html", "admin") . "\";");
-    eval ("\$addflags = \"" . gettemplate("flags_admin", "html", "admin") . "\";");
+    $addbbcode = $GLOBALS["_template"]->replaceTemplate("addbbcode", array());
+    $addflags = $GLOBALS["_template"]->replaceTemplate("flags_admin", array());
 
     echo '<script>
 		<!--

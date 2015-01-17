@@ -55,11 +55,17 @@ if ($loggedin) {
         $l_avatar = $_language->module[ 'n_a' ];
     }
 
-    eval ("\$logged = \"" . gettemplate("logged") . "\";");
+    $data_array = array();
+    $data_array['$username'] = $username;
+    $data_array['$l_avatar'] = $l_avatar;
+    $data_array['$newmessages'] = $newmessages;
+    $data_array['$admin'] = $admin;
+    $data_array['$cashbox'] = $cashbox;
+    $logged = $GLOBALS["_template"]->replaceTemplate("logged", $data_array);
     echo $logged;
 } else {
     //set sessiontest variable (checks if session works correctly)
     $_SESSION[ 'ws_sessiontest' ] = true;
-    eval ("\$loginform = \"" . gettemplate("login") . "\";");
+    $loginform = $GLOBALS["_template"]->replaceTemplate("login", array());
     echo $loginform;
 }

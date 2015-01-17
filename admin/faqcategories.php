@@ -105,8 +105,8 @@ if (isset($_GET[ 'action' ])) {
 
         $_language->readModule('bbcode', true);
 
-        eval ("\$addbbcode = \"" . gettemplate("addbbcode", "html", "admin") . "\";");
-        eval ("\$addflags = \"" . gettemplate("flags_admin", "html", "admin") . "\";");
+        $addbbcode = $GLOBALS["_template"]->replaceTemplate("addbbcode", array());
+        $addflags = $GLOBALS["_template"]->replaceTemplate("flags_admin", array());
 
         echo '<h1>&curren; <a href="admincenter.php?site=faqcategories" class="white">' .
             $_language->module[ 'faq_categories' ] . '</a> &raquo; ' . $_language->module[ 'add_category' ] . '</h1>';
@@ -157,8 +157,8 @@ if (isset($_GET[ 'action' ])) {
 
         $_language->readModule('bbcode', true);
 
-        eval ("\$addbbcode = \"" . gettemplate("addbbcode", "html", "admin") . "\";");
-        eval ("\$addflags = \"" . gettemplate("flags_admin", "html", "admin") . "\";");
+        $addbbcode = $GLOBALS["_template"]->replaceTemplate("addbbcode", array());
+        $addflags = $GLOBALS["_template"]->replaceTemplate("flags_admin", array());
 
         echo '<h1>&curren; <a href="admincenter.php?site=faqcategories" class="white">' .
             $_language->module[ 'faq_categories' ] . '</a> &raquo; ' . $_language->module[ 'edit_category' ] . '</h1>';

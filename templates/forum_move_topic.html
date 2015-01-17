@@ -15,7 +15,7 @@
 </head>
 
 <body>
-<form action="forum.php?board={$_POST['board']}" method="post">
+<form action="forum.php?board=$board" method="post">
     <table class="table">
         <tr>
             <td class="title">%move_topic%</td>
@@ -30,8 +30,8 @@
                 %leave_shadowtopic%
                 <br><br>
                 <input type="hidden" name="admaction" value="movetopic">
-                <input type="hidden" name="topicID" value="{$_POST['topicID']}">
-                <input type="hidden" name="board" value="{$_POST['board']}">
+                <input type="hidden" name="topicID" value="$topicID">
+                <input type="hidden" name="board" value="$board">
                 <input type="submit" name="movetopic" value="%move_topic%"></td>
         </tr>
     </table>

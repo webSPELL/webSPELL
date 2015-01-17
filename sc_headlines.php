@@ -107,7 +107,13 @@ if (mysqli_num_rows($ergebnis)) {
 
         $headlines = clearfromtags($headlines);
 
-        eval ("\$sc_headlines = \"" . gettemplate("sc_headlines") . "\";");
+        $data_array = array();
+        $data_array['$date'] = $date;
+        $data_array['$time'] = $time;
+        $data_array['$news_id'] = $news_id;
+        $data_array['$lang'] = $lang;
+        $data_array['$headlines'] = $headlines;
+        $sc_headlines = $GLOBALS["_template"]->replaceTemplate("sc_headlines", $data_array);
         echo $sc_headlines;
 
         $n++;

@@ -243,9 +243,16 @@ if (isset($_POST[ 'savevisitorcomment' ])) {
                 $message = preg_replace("#\n\[br\]\[br\]\[hr]\*\*(.+)#si", '', $message);
                 $message = preg_replace("#\n\[br\]\[br\]\*\*(.+)#si", '', $message);
 
-                eval ("\$addbbcode = \"" . gettemplate("addbbcode") . "\";");
+                $addbbcode = $GLOBALS["_template"]->replaceTemplate("addbbcode", array());
 
-                eval("\$comments_edit = \"" . gettemplate("comments_edit") . "\";");
+                $data_array = array();
+                $data_array['$addbbcode'] = $addbbcode;
+                $data_array['$message'] = $message;
+                $data_array['$authorID'] = $ds['userID'];
+                $data_array['$id'] = $id;
+                $data_array['$referer'] = $referer;
+                $data_array['$userID'] = $userID;
+                $comments_edit = $GLOBALS["_template"]->replaceTemplate("comments_edit", $data_array);
                 echo $comments_edit;
             } else {
                 redirect($referer, $_language->module[ 'no_database_entry' ], 2);
@@ -361,7 +368,7 @@ if (isset($_POST[ 'savevisitorcomment' ])) {
         }
     }
     if ($gesamt) {
-        eval ("\$title_comments = \"" . gettemplate("title_comments") . "\";");
+        $title_comments = $GLOBALS["_template"]->replaceTemplate("title_comments", array());
         echo $title_comments;
 
         if ($sorttype == "ASC") {
@@ -374,7 +381,9 @@ if (isset($_POST[ 'savevisitorcomment' ])) {
                 $_language->module[ 'sort_asc' ] . '"></span>&nbsp;&nbsp;&nbsp;';
         }
 
-        eval ("\$comments_head = \"" . gettemplate("comments_head") . "\";");
+        $data_array = array();
+        $data_array['$sorter'] = $sorter;
+        $comments_head = $GLOBALS["_template"]->replaceTemplate("comments_head", $data_array);
         echo $comments_head;
 
         while ($ds = mysqli_fetch_array($ergebnis)) {
@@ -410,8 +419,8 @@ if (isset($_POST[ 'savevisitorcomment' ])) {
                     $email = '';
                 }
                 $gethomepage = gethomepage($ds[ 'userID' ]);
-                if ($gethomepage != "" && $gethomepage != "http://" && $gethomepage != "http:///" &&
-                    $gethomepage != "n/a"
+                if ($gethomepage != "" && $gethomepage != "http://" && $gethomepage != "http:///"
+                    && $gethomepage != "n/a"
                 ) {
                     $hp = '<a href="http://' . $gethomepage .
                         '" target="_blank"><img src="images/icons/hp.gif" width="14" height="14" alt="' .
@@ -532,7 +541,14 @@ if (isset($_POST[ 'savevisitorcomment' ])) {
                 }
             }
 
-            eval ("\$comments = \"" . gettemplate("comments") . "\";");
+            $data_array = array();
+            $data_array['$avatar'] = $avatar;
+            $data_array['$content'] = $content;
+            $data_array['$edit'] = $edit;
+            $data_array['$actions'] = $actions;
+            $data_array['$poster'] = $poster;
+            $data_array['$date'] = $date;
+            $comments = $GLOBALS["_template"]->replaceTemplate("comments", $data_array);
             echo $comments;
 
             unset(
@@ -564,14 +580,22 @@ if (isset($_POST[ 'savevisitorcomment' ])) {
             }
         }
 
-        eval ("\$comments_foot = \"" . gettemplate("comments_foot") . "\";");
+        $data_array = array();
+        $data_array['$page_link'] = $page_link;
+        $data_array['$submit'] = $submit;
+        $comments_foot = $GLOBALS["_template"]->replaceTemplate("comments_foot", $data_array);
         echo $comments_foot;
     }
 
     if ($comments_allowed) {
         if ($loggedin) {
-            eval ("\$addbbcode = \"" . gettemplate("addbbcode") . "\";");
-            eval ("\$comments_add_user = \"" . gettemplate("comments_add_user") . "\";");
+            $addbbcode = $GLOBALS["_template"]->replaceTemplate("addbbcode", array());
+            $data_array = array();
+            $data_array['$userID'] = $userID;
+            $data_array['$referer'] = $referer;
+            $data_array['$parentID'] = $parentID;
+            $data_array['$type'] = $type;
+            $comments_add_user = $GLOBALS["_template"]->replaceTemplate("comments_add_user", $data_array);
             echo $comments_add_user;
         } elseif ($comments_allowed == 2) {
             $ip = $GLOBALS[ 'ip' ];
@@ -613,8 +637,19 @@ if (isset($_POST[ 'savevisitorcomment' ])) {
             $hash = $CAPCLASS->getHash();
             $CAPCLASS->clearOldCaptcha();
 
-            eval ("\$addbbcode = \"" . gettemplate("addbbcode") . "\";");
-            eval ("\$comments_add_visitor = \"" . gettemplate("comments_add_visitor") . "\";");
+            $addbbcode = $GLOBALS["_template"]->replaceTemplate("addbbcode", array());
+            $data_array = array();
+            $data_array['$name'] = $name;
+            $data_array['$mail'] = $mail;
+            $data_array['$url'] = $url;
+            $data_array['$message'] = $message;
+            $data_array['$captcha'] = $captcha;
+            $data_array['$hash'] = $hash;
+            $data_array['$referer'] = $referer;
+            $data_array['$parentID'] = $parentID;
+            $data_array['$type'] = $type;
+            $data_array['$ip'] = $ip;
+            $comments_add_visitor = $GLOBALS["_template"]->replaceTemplate("comments_add_visitor", $data_array);
             echo $comments_add_visitor;
         } else {
             echo $_language->module[ 'no_access' ];

@@ -33,14 +33,14 @@
                 %avg_age_clanmember%
             </li>
             <li class="list-group-item">
-                <span class="badge">$get_young[age]</span>
+                <span class="badge">$youngest_age</span>
                 %youngest_user%<br>
-                <a href="index.php?site=profile&amp;id=$get_young[userID]">$get_young[nickname]</a>
+                <a href="index.php?site=profile&amp;id=$youngest_id">$youngest_nickname</a>
             </li>
             <li class="list-group-item">
-                <span class="badge">$get_old[age]</span>
+                <span class="badge">$oldest_age</span>
                 %oldest_user%<br>
-                <a href="index.php?site=profile&amp;id=$get_old[userID]">$get_old[nickname]</a>
+                <a href="index.php?site=profile&amp;id=$oldest_id">$oldest_nickname</a>
             </li>
             <li class="list-group-item"><span class="badge">$us</span> %registered_users%</li>
         </ul>
