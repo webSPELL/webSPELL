@@ -30,7 +30,7 @@ $language_array = Array(
 /* do not edit above this line */
 
 	'author'=>'Autorius',
-	'bbcode'=>'BBKodas yra <b><u>ĮJUNGTAS</u></b>',
+	'bbcode'=>'BBKodas yra <b><span class="underline">ĮJUNGTAS</span></b>',
 	'cancel'=>'atšaukti',
 	'comm'=>'komentaras',
 	'comment'=>'<a href="$url">[1] komentaras</a>, paskutinis pagal $lastposter - $lastdate',
@@ -43,7 +43,7 @@ $language_array = Array(
 	'enter_text'=>'Jūs turite įvesti tekstą',
 	'go'=>'Pirmyn!',
 	'headline'=>'Antraštė',
-	'html'=>'HTML yra <b><u>ĮJUNGTA</u></b>',
+	'html'=>'HTML yra <b><span class="underline">ĮJUNGTA</span></b>',
 	'intern'=>'V.I.P',
 	'languages'=>'Kalbos',
 	'link'=>'Nuoroda',
@@ -69,7 +69,7 @@ $language_array = Array(
 	'select_all'=>'pažymėti visus',
 	'self'=>'_tame pačiame lange',
 	'show_news'=>'rodyti naujienas',
-	'smilies'=>'Šypsenėlės <b><u>ĮJUNGTOS</u></b>',
+	'smilies'=>'Šypsenėlės <b><span class="underline">ĮJUNGTOS</span></b>',
 	'sort'=>'Rykiuoti:',
 	'title_unpublished_news'=>'<h2>NEPAVIEŠINTOS NAUJIENOS:</h2>',
 	'topnews'=>'karščiausios naujienos',

@@ -54,7 +54,7 @@ function makepagelink($link, $page, $pages, $sub = '')
             $i = 1;
         }
         if ($i == $page) {
-            $page_link .= '&nbsp;<strong><u>' . $i . '</u></strong>';
+            $page_link .= '&nbsp;<strong><span class="underline">' . $i . '</span></strong>';
         } else {
             $page_link .= '&nbsp;<a href="' . $link . '&amp;' . $sub . 'page=' . $i . '">' . $i . '</a>';
         }

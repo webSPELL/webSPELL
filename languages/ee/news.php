@@ -31,7 +31,7 @@ $language_array = Array(
 /* do not edit above this line */
 
   'author'=>'Autor',
-  'bbcode'=>'BBCode on <b><u>PEAL</u></b>',
+  'bbcode'=>'BBCode on <b><span class="underline">PEAL</span></b>',
   'cancel'=>'loobu',
   'comm'=>'komm',
   'comment'=>'<a href="$url">[1] kommentaar</a>, uusim: $lastposter - $lastdate',
@@ -44,7 +44,7 @@ $language_array = Array(
   'enter_text'=>'Sa pead sisu sisestama!',
   'go'=>'Mine!',
   'headline'=>'Päis',
-  'html'=>'HTML on <b><u>PEAL</u></b>',
+  'html'=>'HTML on <b><span class="underline">PEAL</span></b>',
   'intern'=>'sise',
   'languages'=>'Keeled',
   'link'=>'Link',
@@ -70,7 +70,7 @@ $language_array = Array(
   'select_all'=>'vali kõik',
   'self'=>'samas aknas',
   'show_news'=>'näita uudiseid',
-  'smilies'=>'Smailid on <b><u>PEAL</u></b>',
+  'smilies'=>'Smailid on <b><span class="underline">PEAL</span></b>',
   'sort'=>'Sorteerimine:',
   'title_unpublished_news'=>'<h2>AVALDAMATA UUDISED:</h2>',
   'topnews'=>'top uudised',

@@ -30,7 +30,7 @@ $language_array = Array(
 /* do not edit above this line */
 
 	'author'=>'Autor',
-	'bbcode'=>'BBCode <b><u>ligado</u></b>',
+	'bbcode'=>'BBCode <b><span class="underline">ligado</span></b>',
 	'cancel'=>'cancelar',
 	'comm'=>'coment',
 	'comment'=>'<a href="$url">1 comentário</a>, último por $lastposter - $lastdate',
@@ -43,7 +43,7 @@ $language_array = Array(
 	'enter_text'=>'Tem de inserir um texto',
 	'go'=>'Ir!',
 	'headline'=>'Título',
-	'html'=>'HTML <b><u>ligado</u></b>',
+	'html'=>'HTML <b><span class="underline">ligado</span></b>',
 	'intern'=>'interno',
 	'languages'=>'Línguas',
 	'link'=>'Link',
@@ -69,7 +69,7 @@ $language_array = Array(
 	'select_all'=>'seleccionar tudo',
 	'self'=>'mesma janela',
 	'show_news'=>'mostrar notícias',
-	'smilies'=>'Smiles estão <b><u>ON</u></b>',
+	'smilies'=>'Smiles estão <b><span class="underline">ON</span></b>',
 	'sort'=>'Ordenar:',
 	'title_unpublished_news'=>'<h2>NOTÍCIAS NÃO PUBLICADAS:</h2>',
 	'topnews'=>'top notícias',

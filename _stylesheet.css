@@ -115,3 +115,7 @@ a.flag.active img, a.flag:hover img {
     overflow: hidden;
     text-align: left;
 }
+
+span.underline {
+    text-decoration: underline;
+}
