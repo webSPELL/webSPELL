@@ -274,7 +274,7 @@ if (isset($_POST['newreply']) && !isset($_POST['preview'])) {
             $icon = '';
         }
         if (isforumadmin($userID) || ismoderator($userID, $board)) {
-            if(isset($_POST['sticky'])){
+            if (isset($_POST['sticky'])) {
                 $do_sticky = 1;
             } else {
                 $do_sticky = 0;
@@ -286,7 +286,8 @@ if (isset($_POST['newreply']) && !isset($_POST['preview'])) {
 
         safe_query("UPDATE " . PREFIX . "forum_posts SET message='" . $message . "' WHERE postID='" . $post . "'");
         safe_query(
-            "UPDATE " . PREFIX . "forum_topics SET topic='" . $topicname . "', icon='" . $icon . "' WHERE topicID='" . $topic . "'"
+            "UPDATE " . PREFIX . "forum_topics SET topic='" . $topicname . "', icon='" . $icon . "' "+
+            "WHERE topicID='" . $topic . "'"
         );
 
         if ($notify == 1) {
