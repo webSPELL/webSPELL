@@ -103,6 +103,7 @@ function forum_stats()
                 `birthday` ASC"
         );
     $n = 0;
+    $birthweek = '';
     while ($db = mysqli_fetch_array($ergebnis)) {
         $n++;
         $years = $db[ 'age' ];
@@ -474,6 +475,12 @@ function boardmain()
             $moderators = $_language->module[ 'moderated_by' ] . ': ' . $moderators;
         }
 
+        $postlink = '';
+        $date = '';
+        $time = '';
+        $poster = '';
+        $member = '';
+
         $q = safe_query(
             "SELECT topicID, lastdate, lastposter, replys FROM " . PREFIX . "forum_topics WHERE boardID='" .
             $db[ 'boardID' ] . "' AND moveID='0' ORDER BY lastdate DESC LIMIT 0," . $maxtopics
@@ -505,7 +512,7 @@ function boardmain()
                     ceil(($lp[ 'replys' ] + 1) / $maxposts);
             }
             if ($userID) {
-                $board_topics[ ] = $ds[ 'topicID' ];
+                $board_topics[ ] = $lp[ 'topicID' ];
             } else {
                 break;
             }
@@ -620,10 +627,9 @@ function showboard($board)
         $page_link = makepagelink("index.php?site=forum&amp;board=$board", $page, $pages);
     }
 
-    if ($page == 1) {
+    if ($page <= 1) {
         $start = 0;
-    }
-    if ($page > 1) {
+    } else {
         $start = $page * $max - $max;
     }
 
@@ -1030,7 +1036,7 @@ if (isset($_POST[ 'submit' ]) || isset($_POST[ 'movetopic' ]) || isset($_GET[ 'a
         $_language->readModule('forum');
 
         $topicID = (int)$_POST[ 'topicID' ];
-        if (isset($_POST[ 'postID' ])) {
+        if (isset($_POST[ 'postID' ]) && is_array($_POST[ 'postID' ])) {
             $postID = $_POST[ 'postID' ];
         } else {
             $postID = array();
@@ -1054,7 +1060,7 @@ if (isset($_POST[ 'submit' ]) || isset($_POST[ 'movetopic' ]) || isset($_GET[ 'a
                 $dl = mysqli_fetch_array($last);
                 safe_query(
                     "UPDATE " . PREFIX . "forum_topics SET lastdate='" . $dl[ 'date' ] . "', lastposter='" .
-                    $dl[ 'poster' ] . "', lastpostID='" . $ds[ 'postID' ] .
+                    $dl[ 'poster' ] . "', lastpostID='" . $dl[ 'postID' ] .
                     "', replys=replys-1 WHERE topicID='$topicID' "
                 );
                 $deleted = false;
@@ -1225,8 +1231,8 @@ if (isset($_POST[ 'submit' ]) || isset($_POST[ 'movetopic' ]) || isset($_GET[ 'a
             $spamApi = \webspell\SpamApi::getInstance();
             $validation = $spamApi->validate($message);
 
+            $date = time();
             if ($validation == \webspell\SpamApi::NOSPAM) {
-                $date = time();
                 safe_query(
                     "INSERT INTO " . PREFIX .
                     "forum_topics ( boardID,
@@ -1419,21 +1425,13 @@ if (isset($_POST[ 'submit' ]) || isset($_POST[ 'movetopic' ]) || isset($_GET[ 'a
 
                 $registered = getregistered($userID);
                 $posts = getuserforumposts($userID);
-                if (isforumadmin($userID) || ismoderator($userID, $board)) {
-                    if (ismoderator($userID, $board)) {
-                        $usertype = $_language->module[ 'moderator' ];
-                        $rang = '<img src="images/icons/ranks/moderator.gif" alt="">';
-                        if (isset($_POST[ 'sticky' ])) {
-                            $_sticky = 'checked="checked"';
-                        }
-                    }
-                    if (isforumadmin($userID)) {
-                        $usertype = "Administrator";
-                        $rang = '<img src="images/icons/ranks/admin.gif" alt="">';
-                        if (isset($_POST[ 'sticky' ])) {
-                            $_sticky = 'checked="checked"';
-                        }
-                    }
+                $_sticky = '';
+                if (isforumadmin($userID)) {
+                    $usertype = "Administrator";
+                    $rang = '<img src="images/icons/ranks/admin.gif" alt="">';
+                } elseif (ismoderator($userID, $board)) {
+                    $usertype = $_language->module[ 'moderator' ];
+                    $rang = '<img src="images/icons/ranks/moderator.gif" alt="">';
                 } else {
                     $ergebnis = safe_query(
                         "SELECT * FROM " . PREFIX .
@@ -1480,10 +1478,10 @@ if (isset($_POST[ 'submit' ]) || isset($_POST[ 'movetopic' ]) || isset($_GET[ 'a
             $addbbcode = $GLOBALS["_template"]->replaceTemplate("addbbcode", array());
 
             if (isforumadmin($userID) || ismoderator($userID, $board)) {
-                if (isset($_sticky)) {
+                if (isset($_POST[ 'sticky' ])) {
                     $chk_sticky =
-                        '<br>' . "\n" . ' <input class="input" type="checkbox" name="sticky" value="1" ' . $_sticky .
-                        '> ' . $_language->module[ 'make_sticky' ];
+                        '<br>' . "\n" . ' <input class="input" type="checkbox" name="sticky" value="1" '.
+                        'checked="checked"> ' . $_language->module[ 'make_sticky' ];
                 } else {
                     $chk_sticky = '<br>' . "\n" . ' <input class="input" type="checkbox" name="sticky" value="1"> ' .
                         $_language->module[ 'make_sticky' ];
