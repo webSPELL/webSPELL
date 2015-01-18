@@ -171,7 +171,7 @@ class SpamApi
             $url->setQueryVariables($data);
             try {
                 return $request->send()->getBody();
-            } catch (Exception $ex) {
+            } catch (\Exception $ex) {
                 $this->logError("No Api-Respone. Code: " . $ex->getCode() . ", Message: " . $ex->getMessage(), $data);
                 return "";
             }
@@ -180,7 +180,7 @@ class SpamApi
             $request->addPostFields($data);
             try {
                 return $request->getBody();
-            } catch (Exception $ex) {
+            } catch (\Exception $ex) {
                 $this->logError("No Api-Respone. Code: " . $ex->getCode() . ", Message: " . $ex->getMessage(), $data);
                 return "";
             }
