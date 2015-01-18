@@ -53,7 +53,7 @@ $language_array = Array(
 	'options'=>'Alternativer',
 	'page'=>'Side',
 	'page_of'=>'Side $page av $pages',
-	'page_select'=>'Distribuere artikkelen til<select name="language_count" onchange="update_textarea(this.options[this.selectedIndex].value)">$selects</select> sider',
+	'page_select'=>'Distribuere artikkelen til<select name="language_count" onchange="updateTextarea(this.options[this.selectedIndex].value)">$selects</select> sider',
 	'pagecount'=>'Antall sider',
 	'perfect'=>'perfekt',
 	'poor'=>'dårlig',

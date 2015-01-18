@@ -59,7 +59,7 @@ $language_array = Array(
   'options'=>'Ρυθμίσεις',
   'page'=>'Σελίδα',
   'page_of'=>'Σελίδα $page από $pages',
-  'page_select'=>'Άρθρο από <select name="language_count" onchange="update_textarea(this.options[this.selectedIndex].value)">$selects</select> Σελίδα(n) Διαλογή',
+  'page_select'=>'Άρθρο από <select name="language_count" onchange="updateTextarea(this.options[this.selectedIndex].value)">$selects</select> Σελίδα(n) Διαλογή',
   'pagecount'=>'Ποσότητασελίδων',
   'perfect'=>'τέλεια',
   'poor'=>'κακός',

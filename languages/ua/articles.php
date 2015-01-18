@@ -59,7 +59,7 @@ $language_array = Array(
   'options'=>'Опціі',
   'page'=>'Сторінка',
   'page_of'=>'Сторінка $page з $pages',
-  'page_select'=>'Розподілити статтю <select name="language_count" onchange="update_textarea(this.options[this.selectedIndex].value)"> $ вибирає </select> сторінки',
+  'page_select'=>'Розподілити статтю <select name="language_count" onchange="updateTextarea(this.options[this.selectedIndex].value)"> $ вибирає </select> сторінки',
   'pagecount'=>'Кількість сторінок',
   'perfect'=>'Чудово',
   'poor'=>'Бідний',

@@ -54,7 +54,7 @@ $language_array = Array(
   'options'=>'الخيارات',
   'page'=>'صفحة',
   'page_of'=>'صفحة $page من $pages',
-  'page_select'=>'تقسيم المقال الى <select name="language_count" onchange="update_textarea(this.options[this.selectedIndex].value)">$selects</select> صفحات',
+  'page_select'=>'تقسيم المقال الى <select name="language_count" onchange="updateTextarea(this.options[this.selectedIndex].value)">$selects</select> صفحات',
   'pagecount'=>'عدد الصفحات',
   'perfect'=>'ممتاز',
   'poor'=>'ضعيف',

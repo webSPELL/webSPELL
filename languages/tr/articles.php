@@ -59,7 +59,7 @@ $language_array = Array(
   'options'=>'Seçenekler',
   'page'=>'Sayfa',
   'page_of'=>'Sayfa $page nın $pages',
-  'page_select'=>'Yazıyı dağıtınız <select name="language_count" onchange="update_textarea(this.options[this.selectedIndex].value)">$selects</select> sayfalar',
+  'page_select'=>'Yazıyı dağıtınız <select name="language_count" onchange="updateTextarea(this.options[this.selectedIndex].value)">$selects</select> sayfalar',
   'pagecount'=>'Sayfa sayısı',
   'perfect'=>'Mükemmel',
   'poor'=>'Kötü',

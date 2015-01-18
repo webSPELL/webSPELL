@@ -54,7 +54,7 @@ $language_array = Array(
   'options'=>'Опции',
   'page'=>'Страница',
   'page_of'=>'Страница $page од вкупно $pages',
-  'page_select'=>'Дистрибуирање на член на страница <select name="language_count" onchange="update_textarea(this.options[this.selectedIndex].value)">$selects</select>',
+  'page_select'=>'Дистрибуирање на член на страница <select name="language_count" onchange="updateTextarea(this.options[this.selectedIndex].value)">$selects</select>',
   'pagecount'=>'Број на страници',
   'perfect'=>'Одлично',
   'poor'=>'Сиромашен',

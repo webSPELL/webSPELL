@@ -54,7 +54,7 @@ $language_array = Array(
   'options'=>'Opţiuni',
   'page'=>'Pagină',
   'page_of'=>'Pagină $page din $pages',
-  'page_select'=>'Distribuiţi articol <select name="language_count" onchange="update_textarea(this.options[this.selectedIndex].value)">$selects</select> pagină',
+  'page_select'=>'Distribuiţi articol <select name="language_count" onchange="updateTextarea(this.options[this.selectedIndex].value)">$selects</select> pagină',
   'pagecount'=>'Toate paginile',
   'perfect'=>'perfect',
   'poor'=>'sărac',

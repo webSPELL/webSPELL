@@ -53,7 +53,7 @@ $language_array = Array(
 	'options'=>'Pasirinkimai',
 	'page'=>'Puslapis',
 	'page_of'=>'Puslapis $page iš $pages',
-	'page_select'=>'Paskirstyti straipsnius į <select name="language_count" onchange="update_textarea(this.options[this.selectedIndex].value)">$selects</select> puslapius',
+	'page_select'=>'Paskirstyti straipsnius į <select name="language_count" onchange="updateTextarea(this.options[this.selectedIndex].value)">$selects</select> puslapius',
 	'pagecount'=>'Puslapių numeris',
 	'perfect'=>'puikus',
 	'poor'=>'blogas',

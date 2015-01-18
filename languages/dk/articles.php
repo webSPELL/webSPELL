@@ -53,7 +53,7 @@ $language_array = Array(
 	'options'=>'Indstillinger',
 	'page'=>'Side',
 	'page_of'=>'Side $page af $pages',
-	'page_select'=>'Fordel artiklen over <select name="language_count" onchange="update_textarea(this.options[this.selectedIndex].value)">$selects</select> sider',
+	'page_select'=>'Fordel artiklen over <select name="language_count" onchange="updateTextarea(this.options[this.selectedIndex].value)">$selects</select> sider',
 	'pagecount'=>'Antal sider',
 	'perfect'=>'Perfekt',
 	'poor'=>'Dårlig',

@@ -54,7 +54,7 @@ $language_array = Array(
   'options'=>'Izvēlne',
   'page'=>'Lapa',
   'page_of'=>'Lapaspuse $page no $pages',
-  'page_select'=>'Izdalīt rakstu pa <select name="language_count" onchange="update_textarea(this.options[this.selectedIndex].value)">$selects</select> lapaspusēm',
+  'page_select'=>'Izdalīt rakstu pa <select name="language_count" onchange="updateTextarea(this.options[this.selectedIndex].value)">$selects</select> lapaspusēm',
   'pagecount'=>'Lapaspušu skaits',
   'perfect'=>'ideāls',
   'poor'=>'slikts',

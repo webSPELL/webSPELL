@@ -53,7 +53,7 @@ $language_array = Array(
 	'options'=>'Opcje',
 	'page'=>'Strona',
 	'page_of'=>'Strona $page z $pages',
-	'page_select'=>'Podziel na <select name="language_count" onchange="update_textarea(this.options[this.selectedIndex].value)">$selects</select> stron',
+	'page_select'=>'Podziel na <select name="language_count" onchange="updateTextarea(this.options[this.selectedIndex].value)">$selects</select> stron',
 	'pagecount'=>'Podział na strony',
 	'perfect'=>'Super!',
 	'poor'=>'Słabe',
