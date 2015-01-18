@@ -83,8 +83,8 @@ class Template
     public function replaceTemplate($template, $data)
     {
         $templateString = $this->loadFile($template);
-        $dataWithLanguage = array_merge($data, $GLOBALS[ '_language' ]->getTranslationTable());
-        return $this->replace($templateString, $dataWithLanguage);
+        $templateTranslated = $this->replaceLanguage($templateString);
+        return $this->replace($templateTranslated, $data);
     }
 
     /**
