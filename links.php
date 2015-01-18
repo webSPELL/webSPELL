@@ -34,7 +34,7 @@ if (isset($_GET[ 'action' ])) {
 if (isset($_POST[ 'save' ])) {
     $_language->readModule('links');
     if (!ispageadmin($userID) || !isnewsadmin($userID)) {
-		echo generateAlert($_language->module[ 'no_access' ], 'alert-danger');
+		die(generateErrorBox($_language->module[ 'no_access' ], false));
     }
 
     safe_query(
@@ -86,22 +86,22 @@ if (isset($_POST[ 'save' ])) {
                 if (unlink($filepath . $banner[ 'name' ] . ".tmp")) {
                     $error = $_language->module[ 'format_incorrect' ];
                     die(
-                        '<div class="alert alert-danger" role="alert">
-                            <strong>' . $error . '</strong><br>
+                        generateAlert(
+                            '<strong>' . $error . '</strong><br>
                             <br>
-                            <a href="index.php?site=links&amp;action=edit&amp;linkID=' . $id .
-                            '" class="alert-link">&laquo; ' . $_language->module[ 'back' ] . '</a>
-                        </div>'
+                            <a href="index.php?site=links&amp;action=edit&amp;linkID=' . $id . '" class="alert-link">&laquo; ' . $_language->module[ 'back' ] . '</a>',
+                            'alert-danger'
+                        )
                     );
                 } else {
                     $error = $_language->module[ 'format_incorrect' ];
                     die(
-                        '<div class="alert alert-danger" role="alert">
-                            <strong>' . $error . '</strong><br>
+                        generateAlert(
+                            '<strong>' . $error . '</strong><br>
                             <br>
-                            <a href="index.php?site=links&amp;action=edit&amp;linkID=' . $id .
-                            '" class="alert-link">&laquo; ' . $_language->module[ 'back' ] . '</a>
-                        </div>'
+                            <a href="index.php?site=links&amp;action=edit&amp;linkID=' . $id . '" class="alert-link">&laquo; ' . $_language->module[ 'back' ] . '</a>',
+                            'alert-danger'
+                        )
                     );
                 }
             }
@@ -109,19 +109,19 @@ if (isset($_POST[ 'save' ])) {
             @unlink($filepath . $banner[ 'name' ] . ".tmp");
             $error = $_language->module[ 'banner_to_big' ];
             die(
-                '<div class="alert alert-danger" role="alert">
-                     <strong>' . $error . '</strong><br>
-                     <br>
-                     <a href="index.php?site=links&amp;action=edit&amp;linkID=' . $id .
-                     '" class="alert-link">&laquo; ' . $_language->module[ 'back' ] . '</a>
-                 </div>'
+                generateAlert(
+                    '<strong>' . $error . '</strong><br>
+                    <br>
+                    <a href="index.php?site=links&amp;action=edit&amp;linkID=' . $id . '" class="alert-link">&laquo; ' . $_language->module[ 'back' ] . '</a>',
+                    'alert-danger'
+                )
             );
         }
     }
 } elseif (isset($_POST[ 'saveedit' ])) {
     $_language->readModule('links');
     if (!ispageadmin($userID) || !isnewsadmin($userID)) {
-		echo generateAlert($_language->module[ 'no_access' ], 'alert-danger');
+		die(generateErrorBox($_language->module[ 'no_access' ], false));
     }
 
     safe_query(
@@ -169,35 +169,35 @@ if (isset($_POST[ 'save' ])) {
                 if (unlink($filepath . $banner[ 'name' ] . ".tmp")) {
                     $error = $_language->module[ 'format_incorrect' ];
                     die(
-                        '<div class="alert alert-danger" role="alert">
-                            <strong>' . $error . '</strong><br>
+                        generateAlert(
+                            '<strong>' . $error . '</strong><br>
                             <br>
-                            <a href="index.php?site=links&amp;action=edit&amp;linkID=' . $id .
-                            '" class="alert-link">&laquo; ' . $_language->module[ 'back' ] . '</a>
-                        </div>'
+                            <a href="index.php?site=links&amp;action=edit&amp;linkID=' . $id . '" class="alert-link">&laquo; ' . $_language->module[ 'back' ] . '</a>',
+                            'alert-danger'
+                        )
                     );
                 } else {
                     $error = $_language->module[ 'format_incorrect' ];
                     die(
-                        '<div class="alert alert-danger" role="alert">
-                            <strong>' . $error . '</strong><br>
+                        generateAlert(
+                            '<strong>' . $error . '</strong><br>
                             <br>
-                            <a href="index.php?site=links&amp;action=edit&amp;linkID=' . $id .
-                            '" class="alert-link">&laquo; ' . $_language->module[ 'back' ] . '</a>
-                        </div>'
+                            <a href="index.php?site=links&amp;action=edit&amp;linkID=' . $id . '" class="alert-link">&laquo; ' . $_language->module[ 'back' ] . '</a>',
+                            'alert-danger'
+                        )
                     );
                 }
             }
         } else {
             @unlink($filepath . $banner[ 'name' ] . ".tmp");
             $error = $_language->module[ 'banner_to_big' ];
-			die(
-                '<div class="alert alert-danger" role="alert">
-                     <strong>' . $error . '</strong><br>
-                     <br>
-                     <a href="index.php?site=links&amp;action=edit&amp;linkID=' . $id .
-                     '" class="alert-link">&laquo; ' . $_language->module[ 'back' ] . '</a>
-                 </div>'
+            die(
+                generateAlert(
+                    '<strong>' . $error . '</strong><br>
+                    <br>
+                    <a href="index.php?site=links&amp;action=edit&amp;linkID=' . $id . '" class="alert-link">&laquo; ' . $_language->module[ 'back' ] . '</a>',
+                    'alert-danger'
+                )
             );
         }
     }
@@ -207,7 +207,7 @@ if (isset($_POST[ 'save' ])) {
     include("_functions.php");
     $_language->readModule('links');
     if (!ispageadmin($userID) || !isnewsadmin($userID)) {
-        echo generateAlert($_language->module[ 'no_access' ], 'alert-danger');
+        die(generateErrorBox($_language->module[ 'no_access' ], false));
     }
     $linkID = $_GET[ 'linkID' ];
     safe_query("DELETE FROM " . PREFIX . "links WHERE linkID='$linkID'");
