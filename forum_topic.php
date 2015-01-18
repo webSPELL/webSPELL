@@ -106,7 +106,7 @@ if (isset($_POST['newreply']) && !isset($_POST['preview'])) {
         die($_language->module['no_access_write']);
     }
     $do_sticky = '';
-    if (isforumadmin($userID) || isanymoderator($userID, $ds['boardID'])) {
+    if (isforumadmin($userID) || ismoderator($userID, $ds['boardID'])) {
         $do_sticky = (isset($_POST['sticky'])) ? ', sticky=1' : ', sticky=0';
     }
 
@@ -217,7 +217,7 @@ if (isset($_POST['newreply']) && !isset($_POST['preview'])) {
     );
     if (($check || isforumadmin($userID) || ismoderator($userID, (int)$_GET['board'])) && mb_strlen(trim($message))
     ) {
-        if (isforumadmin($userID) || isanymoderator($userID, $ds['boardID'])) {
+        if (isforumadmin($userID) || ismoderator($userID, (int)$_GET['board'])) {
             $do_sticky = (isset($_POST['sticky'])) ? 'sticky=1' : 'sticky=0';
             safe_query(
                 "UPDATE " . PREFIX . "forum_topics SET $do_sticky WHERE topicID='" . (int)$_GET['topic'] .
@@ -273,17 +273,20 @@ if (isset($_POST['newreply']) && !isset($_POST['preview'])) {
         } else {
             $icon = '';
         }
-        $do_sticky = (isset($_POST['sticky'])) ? true : false;
-        if ($do_sticky && (isforumadmin($userID) || isanymoderator($userID, $board))) {
-            $do_sticky = true;
-        } else {
-            $do_sticky = false;
+        if (isforumadmin($userID) || ismoderator($userID, $board)) {
+            if(isset($_POST['sticky'])){
+                $do_sticky = 1;
+            } else {
+                $do_sticky = 0;
+            }
+            safe_query(
+                "UPDATE " . PREFIX . "forum_topics SET sticky='" . $do_sticky . "' WHERE topicID='" . $topic . "'"
+            );
         }
 
         safe_query("UPDATE " . PREFIX . "forum_posts SET message='" . $message . "' WHERE postID='" . $post . "'");
         safe_query(
-            "UPDATE " . PREFIX . "forum_topics SET topic='" . $topicname . "', icon='" . $icon . "', sticky='" .
-            $do_sticky . "' WHERE topicID='" . $topic . "'"
+            "UPDATE " . PREFIX . "forum_topics SET topic='" . $topicname . "', icon='" . $icon . "' WHERE topicID='" . $topic . "'"
         );
 
         if ($notify == 1) {
@@ -475,14 +478,16 @@ function showtopic($topic, $edit, $addreply, $quoteID, $type)
                 "' AND postID='" . $id . "' AND poster='" . $userID . "' ORDER BY DATE ASC LIMIT 0,1"
             )
         );
-        if ($anz || isforumadmin($userID) || ismoderator($userID, $dt['boardID'])) {
+
+        $board = $dt['boardID'];
+
+        if ($anz || isforumadmin($userID) || ismoderator($userID, $board)) {
             if (istopicpost($dt['topicID'], $id)) {
                 $bg1 = BG_1;
 
                 // topicmessage
                 $message = getinput($dr['message']);
                 $post = $id;
-                $board = $dt['boardID'];
 
                 // notification check
                 $notifyqry =
