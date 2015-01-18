@@ -473,6 +473,10 @@ if ($action == "new") {
 
         $addbbcode = $GLOBALS["_template"]->replaceTemplate("addbbcode", array());
         $addflags = $GLOBALS["_template"]->replaceTemplate("flags", array());
+
+        $componentsCss = generateComponents($components['css'], 'css');
+        $componentsJs = generateComponents($components['js'], 'js');
+
         $_language->readModule('news');
         $data_array = array();
         $data_array['$rewriteBase'] = $rewriteBase;
@@ -862,14 +866,11 @@ if ($action == "new") {
 
     echo '<h2>' . $_language->module[ 'clan_stats' ] . '</h2>';
 
-    $totalHomeScore = "";
-    $totalOppScore = "";
-    $allWon = "";
-    $allLose = "";
-    $allDraw = "";
-    $totaldrawall = "";
-    $totalwonall = "";
-    $totalloseall = "";
+    $totalHomeScore = 0;
+    $totalOppScore = 0;
+    $totaldrawall = 0;
+    $totalwonall = 0;
+    $totalloseall = 0;
 
     // TOTAL
 
@@ -879,30 +880,13 @@ if ($action == "new") {
 
     while ($cwdata = mysqli_fetch_array($dp)) {
         // total home points
-        $totalhomeqry =
-            safe_query("SELECT `homescore` FROM `" . PREFIX . "clanwars` WHERE `cwID = '" . (int)$cwdata['cwID']."'");
-        while ($theHomeData = mysqli_fetch_array($totalhomeqry)) {
-            $totalHomeScore += array_sum(unserialize($theHomeData[ 'homescore' ]));
-            $theHomeScore = array_sum(unserialize($theHomeData[ 'homescore' ]));
-        }
-        // total opponent points
-        $totaloppqry =
-            safe_query("SELECT `oppscore` FROM `" . PREFIX . "clanwars` WHERE `cwID` = '" . (int)$cwdata['cwID']."'");
-        while ($theOppData = mysqli_fetch_array($totaloppqry)) {
-            $totalOppScore += array_sum(unserialize($theOppData[ 'oppscore' ]));
-            $theOppScore = array_sum(unserialize($theOppData[ 'oppscore' ]));
-        }
+        $unserializeHome = unserialize($cwdata[ 'homescore' ]);
+        $theHomeScore = max(array_sum($unserializeHome), 0);
+        $totalHomeScore += $theHomeScore;
 
-        //
-        if ($allWon == '') {
-            $allWon = 0;
-        }
-        if ($allLose == '') {
-            $allLose = 0;
-        }
-        if ($allDraw == '') {
-            $allDraw = 0;
-        }
+        $unserializeOpp = unserialize($cwdata[ 'oppscore' ]);
+        $theOppScore = max(array_sum($unserializeOpp), 0);
+        $totalOppScore += $theOppScore;
 
         //
         if ($theHomeScore > $theOppScore) {
@@ -915,24 +899,9 @@ if ($action == "new") {
             $totaldrawall++;
         }
     }
+
     $totalhome = $totalHomeScore;
     $totalopp = $totalOppScore;
-
-    if (!$totalwonall) {
-        $totalwonall = 0;
-    }
-    if (!$totalloseall) {
-        $totalloseall = 0;
-    }
-    if (!$totaldrawall) {
-        $totaldrawall = 0;
-    }
-    if (!$totalhome) {
-        $totalhome = 0;
-    }
-    if (!$totalopp) {
-        $totalopp = 0;
-    }
 
     $totalwonperc = percent($totalwonall, $totaltotal, 2);
     if ($totalwonperc) {
@@ -985,11 +954,11 @@ if ($action == "new") {
 
             echo '<h2>' . $squad . ' - ' . $_language->module[ 'stats' ] . '</h2>';
 
-            $totalHomeScoreSQ = "";
-            $totalOppScoreSQ = "";
-            $drawall = "";
-            $wonall = "";
-            $loseall = "";
+            $totalHomeScoreSQ = 0;
+            $totalOppScoreSQ = 0;
+            $drawall = 0;
+            $wonall = 0;
+            $loseall = 0;
 
             // SQUAD STATISTICS
 
@@ -1009,35 +978,12 @@ if ($action == "new") {
                 // SQUAD CLANWAR STATISTICS
 
                 // total squad homescore
-                $sqHomeScoreQry =
-                    mysqli_fetch_array(
-                        safe_query(
-                            "SELECT
-                                homescore
-                            FROM
-                                `" . PREFIX . "clanwars`
-                            WHERE
-                                `cwID` = '" . $squadcwdata[ 'cwID' ] . "' AND
-                                `squad` = '" . $squaddata[ 'squadID' ]."'"
-                        )
-                    );
-                $sqHomeScore = array_sum(unserialize($sqHomeScoreQry[ 'homescore' ]));
-                $totalHomeScoreSQ += array_sum(unserialize($sqHomeScoreQry[ 'homescore' ]));
+                $sqHomeScore = array_sum(unserialize($squadcwdata[ 'homescore' ]));
+                $totalHomeScoreSQ += $sqHomeScore;
+
                 // total squad oppscore
-                $sqOppScoreQry =
-                    mysqli_fetch_array(
-                        safe_query(
-                            "SELECT
-                                oppscore
-                            FROM
-                                `" . PREFIX . "clanwars`
-                            WHERE
-                                `cwID` = '" . (int)$squadcwdata[ 'cwID' ] . "' AND
-                                `squad` = '" . (int)$squaddata[ 'squadID' ]."'"
-                        )
-                    );
-                $sqOppScore = array_sum(unserialize($sqOppScoreQry[ 'oppscore' ]));
-                $totalOppScoreSQ += array_sum(unserialize($sqOppScoreQry[ 'oppscore' ]));
+                $sqOppScore = array_sum(unserialize($squadcwdata[ 'oppscore' ]));
+                $totalOppScoreSQ += $sqOppScore;
 
                 //
                 if ($sqHomeScore > $sqOppScore) {
@@ -1049,24 +995,15 @@ if ($action == "new") {
                 if ($sqHomeScore == $sqOppScore) {
                     $drawall++;
                 }
-                //
-                unset($sqHomeScore);
-                unset($sqOppScore);
             }
 
             // SQUAD STATISTICS - CLANWARS
 
             // total squad clanwars - home points
             $home = $totalHomeScoreSQ;
-            if (empty($home)) {
-                $home = 0;
-            }
             $homeperc = percent($home, $totalhome, 2);
             // total squad clanwars - opponent points
             $opp = $totalOppScoreSQ;
-            if (empty($opp)) {
-                $opp = 0;
-            }
             $oppperc = percent($opp, $totalopp, 2);
             // total squad clanwars won
             $wonperc = percent($wonall, $totaltotal, 2);
@@ -1093,26 +1030,6 @@ if ($action == "new") {
                     '" border="1" alt="' . $_language->module[ 'draw' ] . '">';
             } else {
                 $totaldraw = '0%';
-            }
-
-            // fill empty vars
-            if (empty($totalwon)) {
-                $totalwon = 0;
-            }
-            if (empty($totallost)) {
-                $totallost = 0;
-            }
-            if (empty($totaldraw)) {
-                $totaldraw = 0;
-            }
-            if (empty($wonall)) {
-                $wonall = 0;
-            }
-            if (empty($loseall)) {
-                $loseall = 0;
-            }
-            if (empty($drawall)) {
-                $drawall = 0;
             }
 
             // start output for squad details
@@ -1265,9 +1182,7 @@ if ($action == "new") {
         }
     }
 } elseif ($action == "showonly") {
-    if (isset($_GET[ 'cwID' ])) {
-        $cwID = (int)$_GET[ 'cwID' ];
-    }
+    $id = 0;
     if (isset($_GET[ 'id' ])) {
         if (is_numeric($_GET[ 'id' ]) || (is_gametag($_GET[ 'id' ]))) {
             $id = $_GET[ 'id' ];
@@ -1377,7 +1292,7 @@ if ($action == "new") {
         $admin = '';
     }
     $Statistics =
-        '<a href="index.php?site=clanwars&amp;action=stats" class="btn btn-primary">>' .
+        '<a href="index.php?site=clanwars&amp;action=stats" class="btn btn-primary">' .
             $_language->module[ 'stat' ] . '</a>';
 
     echo '<form name="jump" action=""><div class="row">
@@ -1442,11 +1357,15 @@ if ($action == "new") {
                 '</strong></a>';
             if (file_exists('images/games/' . $ds[ 'game' ] . '.gif')) {
                 $pic = $ds[ 'game' ] . '.gif';
-            }
-            $game =
+                $game =
                 '<a href="index.php?site=clanwars&amp;action=showonly&amp;id=' . $ds[ 'game' ] . '&amp;page=' . $page .
                 '&amp;sort=game&amp;type=' . $type . '&amp;only=game"><img src="images/games/' . $pic .
                 '" alt=""></a>';
+            } else {
+                $game =
+                '<a href="index.php?site=clanwars&amp;action=showonly&amp;id=' . $ds[ 'game' ] . '&amp;page=' . $page .
+                '&amp;sort=game&amp;type=' . $type . '&amp;only=game">'.getgamename($ds[ 'game' ]).'</a>';
+            }
 
             $homescr = array_sum(unserialize($ds[ 'homescore' ]));
             $oppscr = array_sum(unserialize($ds[ 'oppscore' ]));
@@ -1510,6 +1429,8 @@ if ($action == "new") {
                         </span>
                     </div>
                 </div>';
+        } else {
+            $admdel = '';
         }
 
         $data_array = array();
