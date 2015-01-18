@@ -51,6 +51,7 @@ $language_array = Array(
   'linkname'=>'Linkin nimi',
   'linkrubric'=>'Otsikko',
   'links'=>'Linkit',
+  'new_category'=>'Uusi luokka',
   'new_link'=>'Uusi linkki',
   'no_access'=>'ei pääsyä.',
   'no_categories'=>'ei kategorioita saatavilla',

@@ -45,6 +45,7 @@ $language_array = Array(
 	'linkname'=>'Linknév',
 	'linkrubric'=>'Linkrovat',
 	'links'=>'Link',
+	'new_category'=>'új kategória',
 	'new_link'=>'Új link',
 	'no_access'=>'belépés megtagadva.',
 	'no_categories'=>'nincs elérhető kategória',
