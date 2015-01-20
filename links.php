@@ -34,7 +34,7 @@ if (isset($_GET[ 'action' ])) {
 if (isset($_POST[ 'save' ])) {
     $_language->readModule('links');
     if (!ispageadmin($userID) || !isnewsadmin($userID)) {
-		die(generateErrorBox($_language->module[ 'no_access' ], false));
+        die(generateErrorBox($_language->module[ 'no_access' ], false));
     }
 
     safe_query(
@@ -89,7 +89,8 @@ if (isset($_POST[ 'save' ])) {
                         generateAlert(
                             '<strong>' . $error . '</strong><br>
                             <br>
-                            <a href="index.php?site=links&amp;action=edit&amp;linkID=' . $id . '" class="alert-link">&laquo; ' . $_language->module[ 'back' ] . '</a>',
+                            <a href="index.php?site=links&amp;action=edit&amp;linkID=' . $id .
+                            '" class="alert-link">&laquo; ' . $_language->module[ 'back' ] . '</a>',
                             'alert-danger'
                         )
                     );
@@ -99,7 +100,8 @@ if (isset($_POST[ 'save' ])) {
                         generateAlert(
                             '<strong>' . $error . '</strong><br>
                             <br>
-                            <a href="index.php?site=links&amp;action=edit&amp;linkID=' . $id . '" class="alert-link">&laquo; ' . $_language->module[ 'back' ] . '</a>',
+                            <a href="index.php?site=links&amp;action=edit&amp;linkID=' . $id .
+                            '" class="alert-link">&laquo; ' . $_language->module[ 'back' ] . '</a>',
                             'alert-danger'
                         )
                     );
@@ -112,7 +114,8 @@ if (isset($_POST[ 'save' ])) {
                 generateAlert(
                     '<strong>' . $error . '</strong><br>
                     <br>
-                    <a href="index.php?site=links&amp;action=edit&amp;linkID=' . $id . '" class="alert-link">&laquo; ' . $_language->module[ 'back' ] . '</a>',
+                    <a href="index.php?site=links&amp;action=edit&amp;linkID=' . $id . '" class="alert-link">&laquo; ' .
+                    $_language->module[ 'back' ] . '</a>',
                     'alert-danger'
                 )
             );
@@ -121,7 +124,7 @@ if (isset($_POST[ 'save' ])) {
 } elseif (isset($_POST[ 'saveedit' ])) {
     $_language->readModule('links');
     if (!ispageadmin($userID) || !isnewsadmin($userID)) {
-		die(generateErrorBox($_language->module[ 'no_access' ], false));
+        die(generateErrorBox($_language->module[ 'no_access' ], false));
     }
 
     safe_query(
@@ -172,7 +175,8 @@ if (isset($_POST[ 'save' ])) {
                         generateAlert(
                             '<strong>' . $error . '</strong><br>
                             <br>
-                            <a href="index.php?site=links&amp;action=edit&amp;linkID=' . $id . '" class="alert-link">&laquo; ' . $_language->module[ 'back' ] . '</a>',
+                            <a href="index.php?site=links&amp;action=edit&amp;linkID=' . $id .
+                            '" class="alert-link">&laquo; ' . $_language->module[ 'back' ] . '</a>',
                             'alert-danger'
                         )
                     );
@@ -182,7 +186,8 @@ if (isset($_POST[ 'save' ])) {
                         generateAlert(
                             '<strong>' . $error . '</strong><br>
                             <br>
-                            <a href="index.php?site=links&amp;action=edit&amp;linkID=' . $id . '" class="alert-link">&laquo; ' . $_language->module[ 'back' ] . '</a>',
+                            <a href="index.php?site=links&amp;action=edit&amp;linkID=' . $id .
+                            '" class="alert-link">&laquo; ' . $_language->module[ 'back' ] . '</a>',
                             'alert-danger'
                         )
                     );
@@ -195,7 +200,8 @@ if (isset($_POST[ 'save' ])) {
                 generateAlert(
                     '<strong>' . $error . '</strong><br>
                     <br>
-                    <a href="index.php?site=links&amp;action=edit&amp;linkID=' . $id . '" class="alert-link">&laquo; ' . $_language->module[ 'back' ] . '</a>',
+                    <a href="index.php?site=links&amp;action=edit&amp;linkID=' . $id .
+                    '" class="alert-link">&laquo; ' . $_language->module[ 'back' ] . '</a>',
                     'alert-danger'
                 )
             );
@@ -262,7 +268,7 @@ if ($action == "new") {
             $linkcats = '';
             while ($dr = mysqli_fetch_array($newsrubrics)) {
                 if ($ds[ 'linkcatID' ] == $dr[ 'linkcatID' ]) {
-					$linkcatID = $dr[ 'linkcatID' ];
+                    $linkcatID = $dr[ 'linkcatID' ];
                     $linkcats .= '<option value="' . $dr[ 'linkcatID' ] . '" selected>' .
                         htmlspecialchars($dr[ 'name' ]) . '</option>';
                 } else {
@@ -317,7 +323,7 @@ if ($action == "new") {
         echo $links_details_head;
 
         while ($ds = mysqli_fetch_array($linkcat)) {
-			$name = $ds[ 'name' ];
+            $name = $ds[ 'name' ];
             $link = '<a href="' . $ds[ 'url' ] . '" target="_blank">' . $ds[ 'name' ] . '</a>';
             $info = cleartext($ds[ 'info' ]);
             if ($ds[ 'banner' ]) {
@@ -329,8 +335,12 @@ if ($action == "new") {
             if (ispageadmin($userID) || isnewsadmin($userID)) {
                 $adminaction =
                     '<div class="pull-right">
-                        <a role="button" class="btn btn-warning btn-sm" href="index.php?site=links&amp;action=edit&amp;linkID=' . $ds[ 'linkID' ] . '">' . $_language->module[ 'edit' ] . '</a>
-                        <a role="button" class="btn btn-danger btn-sm" href="links.php?action=delete&amp;linkID=' . $ds[ 'linkID' ] . '">' . $_language->module[ 'delete' ] . '</a>
+                        <a role="button" class="btn btn-warning btn-sm"
+                        href="index.php?site=links&amp;action=edit&amp;linkID=' . $ds[ 'linkID' ] . '">' .
+                            $_language->module[ 'edit' ] . '</a>
+                        <a role="button" class="btn btn-danger btn-sm" href="links.php?action=delete&amp;linkID=' .
+                        $ds[ 'linkID' ] . '">' .
+                            $_language->module[ 'delete' ] . '</a>
                     </div>';
             } else {
                 $adminaction = '';
@@ -349,7 +359,11 @@ if ($action == "new") {
         $links_foot = $GLOBALS["_template"]->replaceTemplate("links_foot", array());
         echo $links_foot;
     } else {
-        echo generateAlert($_language->module[ 'no_links' ] . '<br><br>[ <a href="index.php?site=links" class="alert-link">' . $_language->module[ 'go_back' ] . '</a> ]', 'alert-info');
+        echo generateAlert(
+            $_language->module[ 'no_links' ] . '<br><br>[ <a href="index.php?site=links" class="alert-link">' .
+            $_language->module[ 'go_back' ] . '</a> ]',
+            'alert-info'
+        );
     }
 } else {
     $_language->readModule('links');
@@ -395,6 +409,6 @@ if ($action == "new") {
                 '<a href="admin/admincenter.php?site=linkcategories" class="btn btn-primary">' .
                 $_language->module[ 'new_category' ] . '</a><br><br>';
         }
-		echo generateAlert($_language->module[ 'no_categories' ], 'alert-info');
+        echo generateAlert($_language->module[ 'no_categories' ], 'alert-info');
     }
 }

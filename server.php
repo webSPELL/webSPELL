@@ -72,5 +72,5 @@ if (mysqli_num_rows($ergebnis)) {
         echo $server;
     }
 } else {
-	echo generateAlert($_language->module[ 'no_server' ], 'alert-info');
+    echo generateAlert($_language->module[ 'no_server' ], 'alert-info');
 }
