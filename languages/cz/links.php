@@ -45,6 +45,7 @@ $language_array = Array(
 	'linkname'=>'Název odkazu',
 	'linkrubric'=>'Rubriky odkazů',
 	'links'=>'Odkazy',
+	'new_category'=>'nová kategorie',
 	'new_link'=>'Nový odkaz',
 	'no_access'=>'nepovolený přístup.',
 	'no_categories'=>'neexistující kategorie',

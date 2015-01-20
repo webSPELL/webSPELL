@@ -51,6 +51,7 @@ $language_array = Array(
   'linkname'=>'Bağlantı ismi',
   'linkrubric'=>'Bağlantı bölümü',
   'links'=>'Bağlantılar',
+  'new_category'=>'Yeni kategori',
   'new_link'=>'Yeni bağlantı',
   'no_access'=>'erişim yok.',
   'no_categories'=>'kategori yok',

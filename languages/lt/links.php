@@ -45,6 +45,7 @@ $language_array = Array(
 	'linkname'=>'Nuorodos vardas',
 	'linkrubric'=>'Nuorodos rubrika',
 	'links'=>'Nuorodos',
+	'new_category'=>'nauja kategorija',
 	'new_link'=>'Nauja nuoroda',
 	'no_access'=>'Jokia prieiga.',
 	'no_categories'=>'nėra jokių kategorijų',

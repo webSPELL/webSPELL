@@ -46,6 +46,7 @@ $language_array = Array(
   'linkname'=>'ბმულის სახელი',
   'linkrubric'=>'ბმულის გრაფა',
   'links'=>'ბმულები',
+  'new_category'=>'ახალი კატეგორია',
   'new_link'=>'ახალი ბმული',
   'no_access'=>'არ არის მისამართი.',
   'no_categories'=>'არ არის კატეგორიები ხელმისაწვდომი',

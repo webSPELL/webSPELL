@@ -46,6 +46,7 @@ $language_array = Array(
   'linkname'=>'Имя ссылки',
   'linkrubric'=>'Графа ссылки',
   'links'=>'Ссылки',
+  'new_category'=>'Новая категория',
   'new_link'=>'Новая ссылка',
   'no_access'=>'нет доступа.',
   'no_categories'=>'Нет доступных категорий',
