@@ -286,7 +286,7 @@ if (isset($_POST['newreply']) && !isset($_POST['preview'])) {
 
         safe_query("UPDATE " . PREFIX . "forum_posts SET message='" . $message . "' WHERE postID='" . $post . "'");
         safe_query(
-            "UPDATE " . PREFIX . "forum_topics SET topic='" . $topicname . "', icon='" . $icon . "' "+
+            "UPDATE " . PREFIX . "forum_topics SET topic='" . $topicname . "', icon='" . $icon . "' " .
             "WHERE topicID='" . $topic . "'"
         );
 
