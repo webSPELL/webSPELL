@@ -126,7 +126,7 @@ elseif($action=="delete") {
 			else $month.='<option value="'.$i.'">'.date("M", mktime(0,0,0,$i,1,2000)).'</option>';
 		}
 	  	$year = '';
-		for($i=2009; $i<2016; $i++) {
+		for($i=date('Y', strtotime('-1 year')); $i<=date('Y', strtotime('+5 year')); $i++) {
 			if($i==date("Y", time())) $year.='<option value="'.$i.'" selected="selected">'.date("Y", time()).'</option>';
 			else $year.='<option value="'.$i.'">'.$i.'</option>';
 		}
