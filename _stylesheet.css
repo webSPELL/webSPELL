@@ -119,3 +119,9 @@ a.flag.active img, a.flag:hover img {
 span.underline {
     text-decoration: underline;
 }
+
+@media (min-width:768px) {
+    .dropdown:hover .dropdown-menu {
+        display: block;
+    }
+}
