@@ -308,6 +308,17 @@ module.exports = function(grunt) {
         "jshint",
         "jscs",
         "phpcs",
+        "htmlhint",
+        "htmllint",
+        "bootlint"
+    ]);
+
+    grunt.registerTask("codecheck_travis", [
+        "jshint",
+        "jscs",
+        "phplint",
+        "phpcs",
+        "htmlhint",
         "htmllint",
         "bootlint"
     ]);

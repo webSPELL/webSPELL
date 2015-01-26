@@ -11,4 +11,4 @@ before_script:
     - composer self-update
     - composer install --no-interaction
 
-script: grunt codecheck
+script: grunt codecheck_travis
