@@ -132,14 +132,15 @@ module.exports = function(grunt) {
 
         bootlint: {
             options: {
-                stoponerror: false,
+                stoponerror: true,
                 relaxerror: [
-                    "E001",
-                    "E003",
-                    "W001",
-                    "W002",
-                    "W003",
-                    "W005"
+                    "E001", // Document is missing a DOCTYPE declaration
+                    "E003", // .row that were not children of a grid column
+                    "W001", // <head> is missing UTF-8 charset
+                    "W002", // <head> is missing X-UA-Compatible <meta> tag
+                    "W003", // <head> is missing viewport <meta> tag that enables responsiveness
+                    "W005", // Unable to locate jQuery
+                    "W014" // Carousel controls and indicators should use `href` or `data-target`
                 ]
             },
             files: templates
