@@ -77,7 +77,7 @@ if($action=="new") {
 			if($i==date("n", time())) $month.='<option value="'.$i.'" selected="selected">'.date("M", time()).'</option>';
 			else $month.='<option value="'.$i.'">'.date("M", mktime(0,0,0,$i,1,2000)).'</option>';
 		}
-		for($i=2000; $i<2015; $i++) {
+		for($i=2000; $i<=date('Y', strtotime('+1 year')); $i++) {
 			if($i==date("Y", time())) $year.='<option value="'.$i.'" selected="selected">'.date("Y", time()).'</option>';
 			else $year.='<option value="'.$i.'">'.$i.'</option>';
 		}
@@ -396,7 +396,7 @@ elseif($action=="edit") {
 			if($i==date("n", $ds['date'])) $month.='<option value="'.$i.'" selected="selected">'.date("M", $ds['date']).'</option>';
 			else $month.='<option value="'.$i.'">'.date("M", mktime(0,0,0,$i,1,2000)).'</option>';
 		}
-		for($i=2000; $i<2015; $i++) {
+		for($i=2000; $i<=date('Y', strtotime('+1 year')); $i++) {
 			if($i==date("Y", $ds['date'])) $year.='<option selected="selected">'.$i.'</option>';
 			else $year.='<option>'.$i.'</option>';
 		}
