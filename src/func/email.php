@@ -88,11 +88,10 @@ class Email
         $plain = $mail->html2text($message);
         $mail->AltBody = $plain;
 
-        if(!$mail->send()) {
+        if (!$mail->send()) {
             return 'Mailer Error: ' . $mail->ErrorInfo;
         } else {
             return 'Message has been sent';
         }
     }
-
 }
