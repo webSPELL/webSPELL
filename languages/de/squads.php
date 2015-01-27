@@ -45,6 +45,7 @@ $language_array = Array(
 	'messenger'=>'Nachrichtensystem',
 	'no_description'=>'Keine Beschreibung verfügbar',
 	'no_userpic'=>'Kein Benutzerbild verfügbar',
+	'no_entries'=>'Keine Einträge vorhanden',
 	'position'=>'Position',
 	'results'=>'Ergebnisse',
 	'show_details'=>'Details anzeigen',

@@ -205,74 +205,72 @@ if ($action == "show") {
         $getsquad = 'WHERE squadID="' . (int)$_GET[ 'squadID' ] . '"';
     }
 
-    $ergebnis = safe_query("SELECT * FROM " . PREFIX . "squads " . $getsquad . " ORDER BY sort");
+    $ergebnis = safe_query("SELECT * FROM `" . PREFIX . "squads` " . $getsquad . " ORDER BY sort");
 
-    $i = 1;
-    while ($ds = mysqli_fetch_array($ergebnis)) {
-        if ($i % 2) {
-            $bg1 = BG_1;
-            $bg2 = BG_2;
-        } else {
-            $bg1 = BG_3;
-            $bg2 = BG_4;
+    if (mysqli_num_rows($ergebnis)) {
+        $i = 1;
+        while ($ds = mysqli_fetch_array($ergebnis)) {
+            $anzmembers = mysqli_num_rows(
+                safe_query(
+                    "SELECT
+                        sqmID
+                    FROM
+                        " . PREFIX . "squads_members
+                    WHERE
+                        squadID='" . (int)$ds[ 'squadID' ] . "'"
+                )
+            );
+            if ($anzmembers == 1) {
+                $anzmembers = $anzmembers . ' ' . $_language->module[ 'member' ];
+            } else {
+                $anzmembers = $anzmembers . ' ' . $_language->module[ 'members' ];
+            }
+            $name =
+                '<a href="index.php?site=squads&amp;action=show&amp;squadID=' . $ds[ 'squadID' ] . '"><b>' .
+                $ds[ 'name' ] . '</b></a>';
+            if ($ds[ 'icon' ]) {
+                $icon = '<a href="index.php?site=squads&amp;action=show&amp;squadID=' . $ds[ 'squadID' ] .
+                    '"><img src="images/squadicons/' . $ds[ 'icon' ] . '" alt="' . htmlspecialchars($ds[ 'name' ]) .
+                    '"></a>';
+            } else {
+                $icon = '';
+            }
+            $info = htmloutput($ds[ 'info' ]);
+            $details = '<a href="index.php?site=squads&amp;action=show&amp;squadID=' . $ds[ 'squadID' ] . '"><b>' .
+                $_language->module[ 'show_details' ] . '</b></a>';
+            $squadID = $ds[ 'squadID' ];
+            $results = '';
+            $awards = '';
+            $challenge = '';
+
+            if ($ds[ 'gamesquad' ]) {
+                $results = '<a href="index.php?site=clanwars&amp;action=showonly&amp;id=' . $squadID .
+                    '&amp;sort=date&amp;only=squad" class="btn btn-primary">' .
+                    $_language->module[ 'results' ] . '</a>';
+                $awards = '<a href="index.php?site=awards&amp;action=showsquad&amp;squadID=' . $squadID .
+                    '&amp;page=1" class="btn btn-primary">' . $_language->module[ 'awards' ] . '</a>';
+                $challenge =
+                    '<a href="index.php?site=challenge" class="btn btn-primary">' . $_language->module[ 'challenge' ] .
+                    '</a>';
+            }
+
+            $bgcat = BGCAT;
+            $data_array = array();
+            $data_array['$icon'] = $icon;
+            $data_array['$name'] = $name;
+            $data_array['$anzmembers'] = $anzmembers;
+            $data_array['$results'] = $results;
+            $data_array['$awards'] = $awards;
+            $data_array['$challenge'] = $challenge;
+            $data_array['$info'] = $info;
+            $data_array['$details'] = $details;
+            $squads = $GLOBALS["_template"]->replaceTemplate("squads", $data_array);
+            echo $squads;
+
+            $i++;
         }
-
-        $anzmembers = mysqli_num_rows(
-            safe_query(
-                "SELECT
-                    sqmID
-                FROM
-                    " . PREFIX . "squads_members
-                WHERE
-                    squadID='" . (int)$ds[ 'squadID' ] . "'"
-            )
-        );
-        if ($anzmembers == 1) {
-            $anzmembers = $anzmembers . ' ' . $_language->module[ 'member' ];
-        } else {
-            $anzmembers = $anzmembers . ' ' . $_language->module[ 'members' ];
-        }
-        $name =
-            '<a href="index.php?site=squads&amp;action=show&amp;squadID=' . $ds[ 'squadID' ] . '"><b>' . $ds[ 'name' ] .
-            '</b></a>';
-        if ($ds[ 'icon' ]) {
-            $icon = '<a href="index.php?site=squads&amp;action=show&amp;squadID=' . $ds[ 'squadID' ] .
-                '"><img src="images/squadicons/' . $ds[ 'icon' ] . '" alt="' . htmlspecialchars($ds[ 'name' ]) .
-                '"></a>';
-        } else {
-            $icon = '';
-        }
-        $info = htmloutput($ds[ 'info' ]);
-        $details = '<a href="index.php?site=squads&amp;action=show&amp;squadID=' . $ds[ 'squadID' ] . '"><b>' .
-            $_language->module[ 'show_details' ] . '</b></a>';
-        $squadID = $ds[ 'squadID' ];
-        $results = '';
-        $awards = '';
-        $challenge = '';
-
-        if ($ds[ 'gamesquad' ]) {
-            $results = '<a href="index.php?site=clanwars&amp;action=showonly&amp;id=' . $squadID .
-                '&amp;sort=date&amp;only=squad" class="btn btn-primary">' . $_language->module[ 'results' ] . '</a>';
-            $awards = '<a href="index.php?site=awards&amp;action=showsquad&amp;squadID=' . $squadID .
-                '&amp;page=1" class="btn btn-primary">' . $_language->module[ 'awards' ] . '</a>';
-            $challenge =
-                '<a href="index.php?site=challenge" class="btn btn-primary">' . $_language->module[ 'challenge' ] .
-                '</a>';
-        }
-
-        $bgcat = BGCAT;
-        $data_array = array();
-        $data_array['$icon'] = $icon;
-        $data_array['$name'] = $name;
-        $data_array['$anzmembers'] = $anzmembers;
-        $data_array['$results'] = $results;
-        $data_array['$awards'] = $awards;
-        $data_array['$challenge'] = $challenge;
-        $data_array['$info'] = $info;
-        $data_array['$details'] = $details;
-        $squads = $GLOBALS["_template"]->replaceTemplate("squads", $data_array);
-        echo $squads;
-
-        $i++;
+    } else {
+        echo generateAlert($_language->module['no_entries'], 'alert-info');
     }
+
 }
