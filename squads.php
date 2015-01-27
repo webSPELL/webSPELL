@@ -207,7 +207,7 @@ if ($action == "show") {
 
     $ergebnis = safe_query("SELECT * FROM `" . PREFIX . "squads` " . $getsquad . " ORDER BY sort");
 
-    if(mysqli_num_rows($ergebnis)) {
+    if (mysqli_num_rows($ergebnis)) {
         $i = 1;
         while ($ds = mysqli_fetch_array($ergebnis)) {
             $anzmembers = mysqli_num_rows(
@@ -226,8 +226,8 @@ if ($action == "show") {
                 $anzmembers = $anzmembers . ' ' . $_language->module[ 'members' ];
             }
             $name =
-                '<a href="index.php?site=squads&amp;action=show&amp;squadID=' . $ds[ 'squadID' ] . '"><b>' . $ds[ 'name' ] .
-                '</b></a>';
+                '<a href="index.php?site=squads&amp;action=show&amp;squadID=' . $ds[ 'squadID' ] . '"><b>' .
+                $ds[ 'name' ] . '</b></a>';
             if ($ds[ 'icon' ]) {
                 $icon = '<a href="index.php?site=squads&amp;action=show&amp;squadID=' . $ds[ 'squadID' ] .
                     '"><img src="images/squadicons/' . $ds[ 'icon' ] . '" alt="' . htmlspecialchars($ds[ 'name' ]) .
@@ -245,7 +245,8 @@ if ($action == "show") {
 
             if ($ds[ 'gamesquad' ]) {
                 $results = '<a href="index.php?site=clanwars&amp;action=showonly&amp;id=' . $squadID .
-                    '&amp;sort=date&amp;only=squad" class="btn btn-primary">' . $_language->module[ 'results' ] . '</a>';
+                    '&amp;sort=date&amp;only=squad" class="btn btn-primary">' .
+                    $_language->module[ 'results' ] . '</a>';
                 $awards = '<a href="index.php?site=awards&amp;action=showsquad&amp;squadID=' . $squadID .
                     '&amp;page=1" class="btn btn-primary">' . $_language->module[ 'awards' ] . '</a>';
                 $challenge =
@@ -266,7 +267,7 @@ if ($action == "show") {
             $squads = $GLOBALS["_template"]->replaceTemplate("squads", $data_array);
             echo $squads;
 
-        $i++;
+            $i++;
         }
     } else {
         echo generateAlert($_language->module['no_entries'], 'alert-info');
