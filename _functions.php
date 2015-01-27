@@ -561,3 +561,7 @@ if (stristr($_SERVER[ 'PHP_SELF' ], "/admin/") === false) {
 // -- RSS FEEDS -- //
 
 systeminc('func/feeds');
+
+// -- Email -- //
+
+systeminc('func/email');
