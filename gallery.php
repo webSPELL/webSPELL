@@ -727,81 +727,85 @@ if (isset($_POST[ 'saveedit' ])) {
 
     $ergebnis = safe_query("SELECT * FROM " . PREFIX . "gallery_groups ORDER BY sort");
 
-    while ($ds = mysqli_fetch_array($ergebnis)) {
-        $groupID = $ds[ 'groupID' ];
-        $title = $ds[ 'name' ];
-        $gallerys = mysqli_num_rows(
-            safe_query(
+    if(mysql_num_rows($ergebnis)) {
+        while ($ds = mysqli_fetch_array($ergebnis)) {
+            $groupID = $ds[ 'groupID' ];
+            $title = $ds[ 'name' ];
+            $gallerys = mysqli_num_rows(
+                safe_query(
+                    "SELECT
+                        `galleryID`
+                    FROM
+                        `" . PREFIX . "gallery`
+                    WHERE
+                        `groupID` = '" . $ds[ 'groupID' ] . "'"
+                )
+            );
+
+            $data_array = array();
+            $data_array['$groupID'] = $groupID;
+            $data_array['$title'] = $title;
+            $gallery_groups = $GLOBALS["_template"]->replaceTemplate("gallery_content_categorys_head", $data_array);
+            echo $gallery_groups;
+
+            $groups = safe_query(
                 "SELECT
-                    `galleryID`
+                    *
                 FROM
                     `" . PREFIX . "gallery`
                 WHERE
-                    `groupID` = '" . $ds[ 'groupID' ] . "'"
-            )
-        );
+                    groupID = '" . (int)$ds[ 'groupID' ] . "'
+                ORDER BY
+                    galleryID DESC"
+            );
+            $anzgroups = mysqli_num_rows($groups);
+            $i = 0;
+            while ($ds = mysqli_fetch_array($groups)) {
+                $i++;
 
-        $data_array = array();
-        $data_array['$groupID'] = $groupID;
-        $data_array['$title'] = $title;
-        $gallery_groups = $GLOBALS["_template"]->replaceTemplate("gallery_content_categorys_head", $data_array);
-        echo $gallery_groups;
-
-        $groups = safe_query(
-            "SELECT
-                *
-            FROM
-                `" . PREFIX . "gallery`
-            WHERE
-                groupID = '" . (int)$ds[ 'groupID' ] . "'
-            ORDER BY
-                galleryID DESC"
-        );
-        $anzgroups = mysqli_num_rows($groups);
-        $i = 0;
-        while ($ds = mysqli_fetch_array($groups)) {
-            $i++;
-
-            if (isset($ds[ 'date' ])) {
-                $ds[ 'date' ] = date('d.m.Y', $ds[ 'date' ]);
-            }
-            if (isset($ds[ 'galleryID' ])) {
-                $ds[ 'count' ] =
-                    mysqli_num_rows(
-                        safe_query(
-                            "SELECT
-                                `picID`
-                            FROM
-                                `" . PREFIX . "gallery_pictures`
-                            WHERE
-                                `galleryID` = '" . (int)$ds[ 'galleryID' ] . "'"
-                        )
-                    );
-            }
-
-            if (isset($ds[ 'count' ])) {
-                $data_array = array();
-                $data_array['$galleryID'] = $ds['galleryID'];
-                $data_array['$pictureID'] = $galclass->randomPic($ds[ 'galleryID' ]);
-                $data_array['$name'] = $ds['name'];
-                $data_array['$count'] = $ds['count'];
-                $data_array['$date'] = $ds['date'];
-                $gallery_groups = $GLOBALS["_template"]->replaceTemplate("gallery_content_showlist", $data_array);
-                echo $gallery_groups;
-
-                // preventing to break Layout if number of groups is odd
-                if ($anzgroups % 2 != 0 && $i == $anzgroups) {
-                    echo '<div class="col-xs-3"></div>';
+                if (isset($ds[ 'date' ])) {
+                    $ds[ 'date' ] = date('d.m.Y', $ds[ 'date' ]);
                 }
-            } else {
-                echo '<p class="col-xs-6">' . $_language->module[ 'no_gallery_exists' ] . '</p>';
-            }
-        }
+                if (isset($ds[ 'galleryID' ])) {
+                    $ds[ 'count' ] =
+                        mysqli_num_rows(
+                            safe_query(
+                                "SELECT
+                                    `picID`
+                                FROM
+                                    `" . PREFIX . "gallery_pictures`
+                                WHERE
+                                    `galleryID` = '" . (int)$ds[ 'galleryID' ] . "'"
+                            )
+                        );
+                }
 
-        $gallery_content_categorys_foot = $GLOBALS["_template"]->replaceTemplate(
-            "gallery_content_categorys_foot",
-            array()
-        );
-        echo $gallery_content_categorys_foot;
+                if (isset($ds[ 'count' ])) {
+                    $data_array = array();
+                    $data_array['$galleryID'] = $ds['galleryID'];
+                    $data_array['$pictureID'] = $galclass->randomPic($ds[ 'galleryID' ]);
+                    $data_array['$name'] = $ds['name'];
+                    $data_array['$count'] = $ds['count'];
+                    $data_array['$date'] = $ds['date'];
+                    $gallery_groups = $GLOBALS["_template"]->replaceTemplate("gallery_content_showlist", $data_array);
+                    echo $gallery_groups;
+
+                    // preventing to break Layout if number of groups is odd
+                    if ($anzgroups % 2 != 0 && $i == $anzgroups) {
+                        echo '<div class="col-xs-3"></div>';
+                    }
+                } else {
+                    echo '<p class="col-xs-6">' . $_language->module[ 'no_gallery_exists' ] . '</p>';
+                }
+            }
+
+            $gallery_content_categorys_foot = $GLOBALS["_template"]->replaceTemplate(
+                "gallery_content_categorys_foot",
+                array()
+            );
+            echo $gallery_content_categorys_foot;
+        }
+    } else {
+        echo generateAlert($_language->module['no_entries'], 'alert-info');
     }
 }
