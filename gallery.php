@@ -806,6 +806,6 @@ if (isset($_POST[ 'saveedit' ])) {
             echo $gallery_content_categorys_foot;
         }
     } else {
-        echo generateAlert($_language->module['no_entries'], 'alert-info');
+        echo generateAlert($_language->module['no_gallery_exists'], 'alert-info');
     }
 }
