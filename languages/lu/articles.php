@@ -59,7 +59,7 @@ $language_array = Array(
   'options'=>'Optiounen',
   'page'=>'Säit',
   'page_of'=>'Säit $page vun $pages',
-  'page_select'=>'Artikel op <select name="language_count" onchange="update_textarea(this.options[this.selectedIndex].value)">$selects</select> Säit(en) opdeelen',
+  'page_select'=>'Artikel op <select name="language_count" onchange="updateTextarea(this.options[this.selectedIndex].value)">$selects</select> Säit(en) opdeelen',
   'pagecount'=>'Saäitenunzuel',
   'perfect'=>'perfekt',
   'poor'=>'mies',

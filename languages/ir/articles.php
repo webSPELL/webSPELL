@@ -53,7 +53,7 @@ $language_array = Array(
   'options'=>'تنظیمات',
   'page'=>'صفحه',
   'page_of'=>'صفحه $page بعد $pages',
-  'page_select'=>'دسته بندی کردن مقاله <select name="language_count" onchange="update_textarea(this.options[this.selectedIndex].value)">$selects</select> صفحه',
+  'page_select'=>'دسته بندی کردن مقاله <select name="language_count" onchange="updateTextarea(this.options[this.selectedIndex].value)">$selects</select> صفحه',
   'pagecount'=>'تعداد صفحات',
   'perfect'=>'عالی',
   'poor'=>'ضعیف',

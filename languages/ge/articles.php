@@ -54,7 +54,7 @@ $language_array = Array(
   'options'=>'პარამეტრები',
   'page'=>'გვერდი',
   'page_of'=>'გვერდი $გვერდი of $გვერდები',
-  'page_select'=>'გავრცელება სტატიის <select name="language_count" onchange="update_textarea(this.options[this.selectedIndex].value)">$selects</select> გვერდები',
+  'page_select'=>'გავრცელება სტატიის <select name="language_count" onchange="updateTextarea(this.options[this.selectedIndex].value)">$selects</select> გვერდები',
   'pagecount'=>'გვერდების რაოდენობა',
   'perfect'=>'შესანიშნავი',
   'poor'=>'ცუდი',

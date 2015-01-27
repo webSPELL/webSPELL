@@ -53,7 +53,7 @@ $language_array = Array(
 	'options'=>'Možnosti',
 	'page'=>'Strana',
 	'page_of'=>'Strana $page z $pages',
-	'page_select'=>'Publikovať článok na <select name="language_count" onchange="update_textarea(this.options[this.selectedIndex].value)">$selects</select> strán',
+	'page_select'=>'Publikovať článok na <select name="language_count" onchange="updateTextarea(this.options[this.selectedIndex].value)">$selects</select> strán',
 	'pagecount'=>'Počet strán',
 	'perfect'=>'perfektné',
 	'poor'=>'úbohé',

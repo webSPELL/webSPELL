@@ -53,7 +53,7 @@ $language_array = Array(
 	'options'=>'Opzioni',
 	'page'=>'Pagina',
 	'page_of'=>'Pagina $page da $pages',
-	'page_select'=>'Articolo su <select name="language_count" onchange="update_textarea(this.options[this.selectedIndex].value)">$selects</select> Pagina(e) dividere',
+	'page_select'=>'Articolo su <select name="language_count" onchange="updateTextarea(this.options[this.selectedIndex].value)">$selects</select> Pagina(e) dividere',
 	'pagecount'=>'Numero di pagine',
 	'perfect'=>'perfetto',
 	'poor'=>'debole',

@@ -53,7 +53,7 @@ $language_array = Array(
 	'options'=>'Valmöjligheter',
 	'page'=>'Sida',
 	'page_of'=>'Sida $page of $pages',
-	'page_select'=>'dela ut artikel till <select name="language_count" onchange="update_textarea(this.options[this.selectedIndex].value)">$selects</select> pages',
+	'page_select'=>'dela ut artikel till <select name="language_count" onchange="updateTextarea(this.options[this.selectedIndex].value)">$selects</select> pages',
 	'pagecount'=>'Nummer av sidor',
 	'perfect'=>'Perfekt',
 	'poor'=>'dålig',

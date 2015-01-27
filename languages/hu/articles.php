@@ -53,7 +53,7 @@ $language_array = Array(
 	'options'=>'Lehetőségek',
 	'page'=>'Oldal',
 	'page_of'=>'A $pages $page oldala',
-	'page_select'=>'A cikk felosztása <select name="language_count" onchange="update_textarea(this.options[this.selectedIndex].value)">$selects</select> oldalra',
+	'page_select'=>'A cikk felosztása <select name="language_count" onchange="updateTextarea(this.options[this.selectedIndex].value)">$selects</select> oldalra',
 	'pagecount'=>'Oldalak száma',
 	'perfect'=>'tökéletes',
 	'poor'=>'gyenge',

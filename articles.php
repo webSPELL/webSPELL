@@ -44,16 +44,16 @@ if ($action == "save") {
     $message = $_POST[ 'message' ];
     $link1 = $_POST[ 'link1' ];
     $url1 = $_POST[ 'url1' ];
-    $window1 = $_POST[ 'window1' ];
+    $window1 = isset($_POST[ 'window1' ]);
     $link2 = $_POST[ 'link2' ];
     $url2 = $_POST[ 'url2' ];
-    $window2 = $_POST[ 'window2' ];
+    $window2 = isset($_POST[ 'window2' ]);
     $link3 = $_POST[ 'link3' ];
     $url3 = $_POST[ 'url3' ];
-    $window3 = $_POST[ 'window3' ];
+    $window3 = isset($_POST[ 'window3' ]);
     $link4 = $_POST[ 'link4' ];
     $url4 = $_POST[ 'url4' ];
-    $window4 = $_POST[ 'window4' ];
+    $window4 = isset($_POST[ 'window4' ]);
     $comments = $_POST[ 'comments' ];
     $articlesID = $_POST[ 'articlesID' ];
 
@@ -128,15 +128,14 @@ if ($action == "save") {
             }
         }
     }
-    for ($x = $_POST[ 'language_count' ]; $x < 100; $x++) {
-        safe_query(
-            "DELETE FROM
+
+    safe_query(
+        "DELETE FROM
                 `" . PREFIX . "articles_contents`
             WHERE
                 `articlesID` = '" . $articlesID . "' AND
-                `page` = '" . (int)$x."'"
-        );
-    }
+                `page` >= '" . (int)$_POST[ 'language_count' ]."'"
+    );
 
     // delete the entries that are older than 2 hour and contain no text
     safe_query(
@@ -146,7 +145,6 @@ if ($action == "save") {
             `saved` = '0' AND
             " . time() . " - `date` > " . (2 * 60 * 60)
     );
-
     die('<body onload="window.close()"></body>');
 } elseif (isset($_GET[ 'delete' ])) {
     include("_mysql.php");
@@ -186,11 +184,7 @@ if ($action == "save") {
     safe_query("DELETE FROM " . PREFIX . "articles_contents WHERE articlesID='" . (int)$_GET[ 'articlesID' ] . "'");
     safe_query("DELETE FROM " . PREFIX . "comments WHERE parentID='" . (int)$_GET[ 'articlesID' ] . "' AND type='ar'");
 
-    if (isset($close)) {
-        echo '<body onload="window.close()"></body>';
-    } else {
-        header("Location: index.php?site=articles");
-    }
+    header("Location: index.php?site=articles");
 }
 
 function top5()
@@ -325,6 +319,7 @@ if ($action == "new") {
         $data_array['$articlesID'] = $articlesID;
         $data_array['$title'] = $title;
         $data_array['$componentsJs'] = $componentsJs;
+        $data_array['$selects'] = $selects;
         $articles_post = $GLOBALS["_template"]->replaceTemplate("articles_post", $data_array);
         echo $articles_post;
     } else {
@@ -380,7 +375,7 @@ if ($action == "new") {
             if ($i == $pages) {
                 $selected = "selected='selected'";
             } else {
-                $selected = null;
+                $selected = "";
             }
             $selects .= '<option value="' . $i . '" ' . $selected . '>' . $i . '</option>';
         }
@@ -395,47 +390,27 @@ if ($action == "new") {
         $url4 = getinput($ds[ 'url4' ]);
 
         if ($ds[ 'window1' ]) {
-            $window1 = '<input class="input" name="window1" type="radio" value="1" checked="checked"> ' .
-                $_language->module[ 'new_window' ] . ' <input class="input" type="radio" name="window1" value="0"> ' .
-                $_language->module[ 'self' ] . '';
+            $window1 = '<input class="input" name="window1" type="checkbox" value="1" checked="checked">';
         } else {
-            $window1 =
-                '<input class="input" name="window1" type="radio" value="1"> ' . $_language->module[ 'new_window' ] .
-                ' <input class="input" type="radio" name="window1" value="0" checked="checked"> ' .
-                $_language->module[ 'self' ] . '';
+            $window1 = '<input class="input" name="window1" type="checkbox" value="1">';
         }
 
         if ($ds[ 'window2' ]) {
-            $window2 = '<input class="input" name="window2" type="radio" value="1" checked="checked"> ' .
-                $_language->module[ 'new_window' ] . ' <input class="input" type="radio" name="window2" value="0"> ' .
-                $_language->module[ 'self' ] . '';
+            $window2 = '<input class="input" name="window2" type="checkbox" value="1" checked="checked">';
         } else {
-            $window2 =
-                '<input class="input" name="window2" type="radio" value="1"> ' . $_language->module[ 'new_window' ] .
-                ' <input class="input" type="radio" name="window2" value="0" checked="checked"> ' .
-                $_language->module[ 'self' ] . '';
+            $window2 = '<input class="input" name="window2" type="checkbox" value="1">';
         }
 
         if ($ds[ 'window3' ]) {
-            $window3 = '<input class="input" name="window3" type="radio" value="1" checked="checked"> ' .
-                $_language->module[ 'new_window' ] . ' <input class="input" type="radio" name="window3" value="0"> ' .
-                $_language->module[ 'self' ] . '';
+            $window3 = '<input class="input" name="window3" type="checkbox" value="1" checked="checked">';
         } else {
-            $window3 =
-                '<input class="input" name="window3" type="radio" value="1"> ' . $_language->module[ 'new_window' ] .
-                ' <input class="input" type="radio" name="window3" value="0" checked="checked"> ' .
-                $_language->module[ 'self' ] . '';
+            $window3 = '<input class="input" name="window3" type="checkbox" value="1">';
         }
 
         if ($ds[ 'window4' ]) {
-            $window4 = '<input class="input" name="window4" type="radio" value="1" checked="checked"> ' .
-                $_language->module[ 'new_window' ] . ' <input class="input" type="radio" name="window4" value="0"> ' .
-                $_language->module[ 'self' ] . '';
+            $window4 = '<input class="input" name="window4" type="checkbox" value="1" checked="checked">';
         } else {
-            $window4 =
-                '<input class="input" name="window4" type="radio" value="1"> ' . $_language->module[ 'new_window' ] .
-                ' <input class="input" type="radio" name="window4" value="0" checked="checked"> ' .
-                $_language->module[ 'self' ] . '';
+            $window4 = '<input class="input" name="window4" type="checkbox" value="1">';
         }
 
         $tags = \webspell\Tags::getTags('articles', $articlesID);
@@ -483,7 +458,9 @@ if ($action == "new") {
         $data_array['$articlesID'] = $articlesID;
         $data_array['$userID'] = $userID;
         $data_array['$title'] = $title;
+        $data_array['$tags'] = $tags;
         $data_array['$pages'] = $pages;
+        $data_array['$selects'] = $selects;
         $data_array['$componentsJs'] = $componentsJs;
         $articles_edit = $GLOBALS["_template"]->replaceTemplate("articles_edit", $data_array);
         echo $articles_edit;
@@ -663,13 +640,14 @@ if ($action == "new") {
         $bg1 = BG_1;
         $data_array = array();
         $data_array['$title'] = $title;
-        $data_array['$date'] = $date;
+        $data_array['$date'] = $date_time;
         $data_array['$content'] = $content;
         $data_array['$adminaction'] = $adminaction;
         $data_array['$poster'] = $poster;
         $data_array['$related'] = $related;
         $data_array['$ratingpic'] = $ratingpic;
         $data_array['$rateform'] = $rateform;
+        $data_array['$tags'] = $tags;
         $articles = $GLOBALS["_template"]->replaceTemplate("articles", $data_array);
         echo $articles;
 

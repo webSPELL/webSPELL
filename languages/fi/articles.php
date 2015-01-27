@@ -59,7 +59,7 @@ $language_array = Array(
   'options'=>'Asetukset',
   'page'=>'Sivu',
   'page_of'=>'Sivu $page / $pages',
-  'page_select'=>'Jaa artikkeli <select name="language_count" onchange="update_textarea(this.options[this.selectedIndex].value)">$selects</select> sivulle',
+  'page_select'=>'Jaa artikkeli <select name="language_count" onchange="updateTextarea(this.options[this.selectedIndex].value)">$selects</select> sivulle',
   'pagecount'=>'Sivumäärä',
   'perfect'=>'Täydellinen',
   'poor'=>'Huono',

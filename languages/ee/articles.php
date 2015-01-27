@@ -54,7 +54,7 @@ $language_array = Array(
   'options'=>'Sätted',
   'page'=>'Lehekülg',
   'page_of'=>'Lehekülg $page/$pages',
-  'page_select'=>'Jaga artikkel <select name="language_count" onchange="update_textarea(this.options[this.selectedIndex].value)">$selects</select> leheküljeks',
+  'page_select'=>'Jaga artikkel <select name="language_count" onchange="updateTextarea(this.options[this.selectedIndex].value)">$selects</select> leheküljeks',
   'pagecount'=>'Lehekülgede arv',
   'perfect'=>'ideaalne',
   'poor'=>'kehv',

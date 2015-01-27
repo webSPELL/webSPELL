@@ -59,7 +59,7 @@ $language_array = Array(
   'options'=>'Opsione',
   'page'=>'Faqe',
   'page_of'=>'Faqe $page nga $pages',
-  'page_select'=>'Shperndani artikullin <select name="language_count" onchange="update_textarea(this.options[this.selectedIndex].value)">$selects</select> faqe',
+  'page_select'=>'Shperndani artikullin <select name="language_count" onchange="updateTextarea(this.options[this.selectedIndex].value)">$selects</select> faqe',
   'pagecount'=>'Gjithë faqet',
   'perfect'=>'shkëlqyer',
   'poor'=>'dobët',

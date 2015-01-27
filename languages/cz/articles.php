@@ -53,7 +53,7 @@ $language_array = Array(
 	'options'=>'Nastavení',
 	'page'=>'Stránka',
 	'page_of'=>'Stránka $page z $pages',
-	'page_select'=>'Poslat článek na <select name="language_count" onchange="update_textarea(this.options[this.selectedIndex].value)">$selects</select> pages',
+	'page_select'=>'Poslat článek na <select name="language_count" onchange="updateTextarea(this.options[this.selectedIndex].value)">$selects</select> pages',
 	'pagecount'=>'Počet stránek',
 	'perfect'=>'perfektní',
 	'poor'=>'špatné',
