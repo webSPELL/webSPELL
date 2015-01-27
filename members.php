@@ -398,5 +398,7 @@ if ($action == "show") {
         $data_array['$squadlist'] = $squadlist;
         $members_foot = $GLOBALS["_template"]->replaceTemplate("members_foot", $data_array);
         echo $members_foot;
+    } else {
+        echo generateAlert($_language->module['no_entries'], 'alert-info');
     }
 }
