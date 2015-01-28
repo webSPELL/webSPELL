@@ -8,7 +8,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2011 by webspell.org / webspell.info                  #
+#   Copyright 2005-2015 by webspell.org / webspell.info                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -21,6 +21,11 @@
 #   visit webspell.org / webspell.info                                   #
 #                                                                        #
  ########################################################################
+
+### webspell 4.2.4 ( 2015- 01 - 28 ) changeset 68dced0dc64a968c1fa5bfaab330b13a3777da7c
+
+* awards.php, calendar.php, challenge.php, clanwars.php, demos.php
+  - fix(date) make dates usable in the future
  
 ### webspell 4.2.3a ( 2011- 09 - 10 ) changeset 65:bf112d65d66b
 
