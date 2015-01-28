@@ -53,22 +53,22 @@ class Email
 
         if ($smtp === 1) {
             $mail->isSMTP();
+            $mail->Host = $host;
+            if ($auth === 1) {
+                $mail->SMTPAuth = true;
+                $mail->Username = $user;
+                $mail->Password = $password;
+            } else {
+                $mail->SMTPAuth = false;
+            }
+
+            if (extension_loaded('openssl')) {
+                $mail->SMTPSecure = $secure;
+                $mail->Port = $port;
+            }
         } else {
             $mail->isMail();
         }
-
-        $mail->Host = $host;
-
-        if ($auth === 1) {
-            $mail->SMTPAuth = true;
-            $mail->Username = $user;
-            $mail->Password = $password;
-        } else {
-            $mail->SMTPAuth = false;
-        }
-
-        $mail->SMTPSecure = $secure;
-        $mail->Port = $port;
 
         $mail->From = $from;
         $mail->FromName = $module;
@@ -76,17 +76,15 @@ class Email
 
         if ($html === 1) {
             $mail->isHTML(true);
-            $mail->Body = $message;
+            $mail->msgHTML($message);
         } else {
             $mail->isHTML(false);
             $plain = $mail->html2text($message);
             $mail->Body = $plain;
+            $mail->AltBody = $plain;
         }
 
         $mail->Subject = $subject;
-
-        $plain = $mail->html2text($message);
-        $mail->AltBody = $plain;
 
         if (!$mail->send()) {
             return 'Mailer Error: ' . $mail->ErrorInfo;
