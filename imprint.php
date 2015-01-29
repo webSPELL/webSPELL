@@ -27,7 +27,7 @@
 
 $_language->readModule('imprint');
 
-eval ("\$title_imprint = \"" . gettemplate("title_imprint") . "\";");
+$title_imprint = $GLOBALS["_template"]->replaceTemplate("title_imprint", array());
 echo $title_imprint;
 
 $ergebnis =
@@ -115,5 +115,9 @@ if ($imprint_type) {
     </div>';
 }
 
-eval ("\$imprint = \"" . gettemplate("imprint") . "\";");
+$data_array = array();
+$data_array['$headline1'] = $headline1;
+$data_array['$imprint_head'] = $imprint_head;
+$data_array['$headline2'] = $headline2;
+$imprint = $GLOBALS["_template"]->replaceTemplate("imprint", $data_array);
 echo $imprint;

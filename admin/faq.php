@@ -147,8 +147,8 @@ if (isset($_GET[ 'action' ])) {
 
         $_language->readModule('bbcode', true);
 
-        eval ("\$addbbcode = \"" . gettemplate("addbbcode", "html", "admin") . "\";");
-        eval ("\$addflags = \"" . gettemplate("flags_admin", "html", "admin") . "\";");
+        $addbbcode = $GLOBALS["_template"]->replaceTemplate("addbbcode", array());
+        $addflags = $GLOBALS["_template"]->replaceTemplate("flags_admin", array());
 
         echo '<h1>&curren; <a href="admincenter.php?site=faq" class="white">' . $_language->module[ 'faq' ] .
             '</a> &raquo; ' . $_language->module[ 'add_faq' ] . '</h1>';
@@ -234,8 +234,8 @@ if (isset($_GET[ 'action' ])) {
         $_language->readModule('bbcode', true);
 
         $tags = \webspell\Tags::getTags('faq', $faqID);
-        eval ("\$addbbcode = \"" . gettemplate("addbbcode", "html", "admin") . "\";");
-        eval ("\$addflags = \"" . gettemplate("flags_admin", "html", "admin") . "\";");
+        $addbbcode = $GLOBALS["_template"]->replaceTemplate("addbbcode", array());
+        $addflags = $GLOBALS["_template"]->replaceTemplate("flags_admin", array());
 
         echo '<h1>&curren; <a href="admincenter.php?site=faq" class="white">' . $_language->module[ 'faq' ] .
             '</a> &raquo; ' . $_language->module[ 'edit_faq' ] . '</h1>';

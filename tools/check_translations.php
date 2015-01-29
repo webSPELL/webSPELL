@@ -7,9 +7,9 @@ define('BOM', "\xEF\xBB\xBF");
 $baseLanguage = "uk";
 $checkUntranslated = true;
 
-$all_langs = glob("*", GLOB_ONLYDIR);
+$all_langs = glob("../languages/*", GLOB_ONLYDIR);
 if (in_array($baseLanguage, $all_langs)) {
-    unset($all_langs[array_search($baseLanguage, $all_langs)]);
+    unset($all_langs[ array_search($baseLanguage, $all_langs) ]);
 }
 
 $ref_keys = array();
@@ -20,11 +20,12 @@ function checkBom($file)
 {
     return (false !== strpos($file, BOM));
 }
+
 $all_keys = 0;
 foreach ($all_langs as $lang) {
-    echo "Checking ".$lang." ... ";
+    echo "Checking " . $lang . " ... ";
     $errors = array();
-    $files = glob($lang.'/*');
+    $files = glob($lang . '/*');
     $untranslated = 0;
     $version_exists = false;
     foreach ($files as $file) {
@@ -32,51 +33,51 @@ foreach ($all_langs as $lang) {
         $ext = substr($file_name, strrpos($file_name, "."));
         if ($ext == ".php") {
             if (checkBom($file) !== false) {
-                $errors[$file_name][] = 'UTF-8 BOM';
+                $errors[ $file_name ][ ] = 'UTF-8 BOM';
             }
             ob_start();
             include($file);
             $outputted_content = ob_get_length();
             ob_clean();
             if ($outputted_content > 0) {
-                $errors[$file_name] = 'Generates output: '.$outputted_content.' chars';
+                $errors[ $file_name ] = 'Generates output: ' . $outputted_content . ' chars';
             }
             if ($lang == $baseLanguage) {
-                $ref_keys[$file_name] = $language_array;
+                $ref_keys[ $file_name ] = $language_array;
                 $all_keys += count($language_array);
             } else {
-                if (isset($ref_keys[$file_name])) {
-                    $tmp = $ref_keys[$file_name];
+                if (isset($ref_keys[ $file_name ])) {
+                    $tmp = $ref_keys[ $file_name ];
                     foreach ($language_array as $key => $val) {
-                        if (!isset($ref_keys[$file_name][$key])) {
-                            $errors[$file_name][] = 'Unknown key: '.$key;
+                        if (!isset($ref_keys[ $file_name ][ $key ])) {
+                            $errors[ $file_name ][ ] = 'Unknown key: ' . $key;
                         } else {
                             if ($val == $ref_keys[$file_name][$key] && $checkUntranslated === true) {
                                 $untranslated += 1;
-                                unset($tmp[$key]);
+                                unset($tmp[ $key ]);
                             } else {
-                                unset($tmp[$key]);
+                                unset($tmp[ $key ]);
                             }
                         }
                     }
                     foreach ($tmp as $key => $val) {
-                        $errors[$file_name][] = 'Missing key: '.$key;
+                        $errors[ $file_name ][ ] = 'Missing key: ' . $key;
                     }
                 } else {
-                    $errors['unknown_files'][] = $file_name;
+                    $errors[ 'unknown_files' ][ ] = $file_name;
                 }
             }
         } elseif ($file_name == "version.txt") {
             $version_exists = true;
         } else {
-            $errors['unneeded_file'][] = $file_name;
+            $errors[ 'unneeded_file' ][ ] = $file_name;
         }
     }
     if (!$version_exists) {
-        $errors[] = 'version.txt is missing';
+        $errors[ ] = 'version.txt is missing';
     }
     if ($untranslated > 0) {
-        $errors[] = 'Untranslated Keys: '.$untranslated.' - '.round($untranslated / $all_keys*100, 2).'%';
+        $errors[ ] = 'Untranslated Keys: ' . $untranslated . ' - ' . round($untranslated / $all_keys * 100, 2) . '%';
     }
     if (count($errors)) {
         echo "\n";

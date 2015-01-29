@@ -8,6 +8,7 @@ php:
 
 before_script:
     - npm install
+    - composer self-update
     - composer install --no-interaction
 
-script: grunt codecheck
+script: grunt codecheck_travis

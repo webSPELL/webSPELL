@@ -50,7 +50,7 @@ if (
     }
 
     if ($run) {
-        eval ("\$title_search = \"" . gettemplate("title_search") . "\";");
+        $title_search = $GLOBALS["_template"]->replaceTemplate("title_search", array());
         echo $title_search;
 
         $text = str_replace(array('%', '*'), array('\%', '%'), $_REQUEST[ 'text' ]);
@@ -407,7 +407,14 @@ if (
                 $link = $res_link[ $key ];
                 $frequency = $res_occurr[ $key ];
 
-                eval ("\$search_result = \"" . gettemplate("search_result") . "\";");
+                $data_array = array();
+                $data_array['$type'] = $type;
+                $data_array['$title'] = $title;
+                $data_array['$date'] = $date;
+                $data_array['$frequency'] = $frequency;
+                $data_array['$auszug'] = $auszug;
+                $data_array['$link'] = $link;
+                $search_result = $GLOBALS["_template"]->replaceTemplate("search_result", $data_array);
                 echo $search_result;
 
                 $i++;
@@ -430,20 +437,26 @@ if (
         $text = '';
     }
 
-    eval ("\$title_search = \"" . gettemplate("title_search") . "\";");
+    $title_search = $GLOBALS["_template"]->replaceTemplate("title_search", array());
     echo $title_search;
 
     $bg1 = BG_1;
 
     if ($userID) {
-        eval ("\$search_form = \"" . gettemplate("search_form_loggedin") . "\";");
+        $data_array = array();
+        $data_array['$text'] = $text;
+        $search_form = $GLOBALS["_template"]->replaceTemplate("search_form_loggedin", $data_array);
         echo $search_form;
     } else {
         $CAPCLASS = new \webspell\Captcha;
         $captcha = $CAPCLASS->createCaptcha();
         $hash = $CAPCLASS->getHash();
         $CAPCLASS->clearOldCaptcha();
-        eval ("\$search_form = \"" . gettemplate("search_form_notloggedin") . "\";");
+        $data_array = array();
+        $data_array['$text'] = $text;
+        $data_array['$captcha'] = $captcha;
+        $data_array['$hash'] = $hash;
+        $search_form = $GLOBALS["_template"]->replaceTemplate("search_form_notloggedin", $data_array);
         echo $search_form;
     }
 }

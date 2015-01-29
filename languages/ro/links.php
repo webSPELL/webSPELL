@@ -46,6 +46,7 @@ $language_array = Array(
   'linkname'=>'Numele link-ului',
   'linkrubric'=>'Rubrica legăturii',
   'links'=>'Links',
+  'new_category'=>'categorie nouă',
   'new_link'=>'Legătură nouă',
   'no_access'=>'Fără acces',
   'no_categories'=>'Fără categorii',

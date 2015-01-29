@@ -34,6 +34,30 @@ class SpamApi
     const SPAM = 1;
     private static $instance;
 
+    /**
+     * @var string The api-key
+     */
+    private $key;
+    /**
+     * @var string The url of the spam api
+     */
+    private $host;
+    /**
+     * @var bool Is the api enabled
+     */
+    private $enabled;
+    /**
+     * @var bool Block posts if they can not be verified
+     */
+    private $blockOnError;
+    /**
+     * @var int
+     */
+    private $maxPosts;
+
+    /**
+     *
+     */
     private function __construct()
     {
         $get = safe_query(
@@ -57,6 +81,9 @@ class SpamApi
         }
     }
 
+    /**
+     * @return SpamApi Singleton-Constructor
+     */
     final public static function getInstance()
     {
         if (!isset(self::$instance)) {
@@ -74,6 +101,10 @@ class SpamApi
     {
     }
 
+    /**
+     * @param $message the text which needs to be learned
+     * @param $type is it spam (SpamApi::Spam) or ham (SpamApi::NOSPAM)
+     */
     public function learn($message, $type)
     {
         if ($this->enabled && $this->key) {
@@ -90,6 +121,11 @@ class SpamApi
         }
     }
 
+    /**
+     * @param $message the text which is going to be validated
+     *
+     * @return int
+     */
     public function validate($message)
     {
         if ($this->enabled) {
@@ -112,7 +148,7 @@ class SpamApi
                             $ret = self::SPAM;
                         }
                     } else {
-                        $rating = (float)$data["response"];
+                        $rating = (float)$json["response"];
                         if ($rating >= $GLOBALS['spamCheckRating']) {
                             $ret = self::SPAM;
                         }
@@ -129,6 +165,11 @@ class SpamApi
         return self::NOSPAM;
     }
 
+    /**
+     * Write a error message into the log
+     * @param $message
+     * @param $data
+     */
     private function logError($message, $data)
     {
         safe_query(
@@ -171,7 +212,7 @@ class SpamApi
             $url->setQueryVariables($data);
             try {
                 return $request->send()->getBody();
-            } catch (Exception $ex) {
+            } catch (\Exception $ex) {
                 $this->logError("No Api-Respone. Code: " . $ex->getCode() . ", Message: " . $ex->getMessage(), $data);
                 return "";
             }
@@ -180,7 +221,7 @@ class SpamApi
             $request->addPostFields($data);
             try {
                 return $request->getBody();
-            } catch (Exception $ex) {
+            } catch (\Exception $ex) {
                 $this->logError("No Api-Respone. Code: " . $ex->getCode() . ", Message: " . $ex->getMessage(), $data);
                 return "";
             }

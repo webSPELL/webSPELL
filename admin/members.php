@@ -213,8 +213,8 @@ if (isset($_GET[ 'action' ]) && $_GET[ 'action' ] == "edit") {
 
     $_language->readModule('bbcode', true);
 
-    eval ("\$addbbcode = \"" . gettemplate("addbbcode", "html", "admin") . "\";");
-    eval ("\$addflags = \"" . gettemplate("flags_admin", "html", "admin") . "\";");
+    $addbbcode = $GLOBALS["_template"]->replaceTemplate("addbbcode", array());
+    $addflags = $GLOBALS["_template"]->replaceTemplate("flags_admin", array());
 
     $id = $_GET[ 'id' ];
     $squads = '';

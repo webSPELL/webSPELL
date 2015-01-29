@@ -44,7 +44,6 @@ $language_array = Array(
 	'pic_of_the_moment'=>'Bild för tillfället',
 	'poll'=>'Undersökning',
 	'random_user'=>'random användare',
-	'scrolltext'=>'scrolltext',
 	'server'=>'Server',
 	'shoutbox'=>'skriklåda',
 	'sponsors'=>'sponsorer',

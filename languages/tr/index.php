@@ -50,7 +50,6 @@ $language_array = Array(
   'pic_of_the_moment'=>'Anın resmi',
   'poll'=>'Anket',
   'random_user'=>'Rastgele kullanıcı',
-  'scrolltext'=>'Metni kaydır',
   'server'=>'Sunucular',
   'shoutbox'=>'Haber kutusu',
   'sponsors'=>'Sponsorlar',

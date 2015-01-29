@@ -30,7 +30,7 @@ $language_array = Array(
 /* do not edit above this line */
 
 	'author'=>'Forfatter',
-	'bbcode'=>'BBCode er <b><u>TIL</u></b>',
+	'bbcode'=>'BBCode er <b><span class="underline">TIL</span></b>',
 	'cancel'=>'annuller',
 	'comm'=>'comm',
 	'comment'=>'<a href="$url">[1] kommenter</a>, seneste af $lastposter - $lastdate',
@@ -43,7 +43,7 @@ $language_array = Array(
 	'enter_text'=>'Du skal indtaste noget tekst',
 	'go'=>'OK!',
 	'headline'=>'Overskrift',
-	'html'=>'HTML er <b><u>TIL</u></b>',
+	'html'=>'HTML er <b><span class="underline">TIL</span></b>',
 	'intern'=>'internt',
 	'languages'=>'Sprog',
 	'link'=>'Link',
@@ -69,7 +69,7 @@ $language_array = Array(
 	'select_all'=>'vælg alle',
 	'self'=>'samme vindue',
 	'show_news'=>'vis nyheder',
-	'smilies'=>'Smileys er <b><u>TIL</u></b>',
+	'smilies'=>'Smileys er <b><span class="underline">TIL</span></b>',
 	'sort'=>'Sorter:',
 	'title_unpublished_news'=>'<h2>Upublicerede nyheder:</h2>',
 	'topnews'=>'TOP nyheder',

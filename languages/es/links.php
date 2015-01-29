@@ -45,6 +45,7 @@ $language_array = Array(
 	'linkname'=>'Texto enlace',
 	'linkrubric'=>'Sección de enlace',
 	'links'=>'Enlaces',
+	'new_category'=>'nueva categoría',
 	'new_link'=>'Nuevo enlace',
 	'no_access'=>'Sin acceso.',
 	'no_categories'=>'no hay categorías ',

@@ -82,7 +82,9 @@ class Gallery
             $pic['groupID'] = $this->getGroupIdByGallery($pic['galleryID']);
             $pic['name'] = stripslashes(clearfromtags($pic['name']));
 
-            eval ("\$thumb = \"" . gettemplate("gallery_content_showthumb") . "\";");
+            $data_array = array();
+            $data_array['$gallery'] = $gallery;
+            $thumb = $GLOBALS["_template"]->replaceTemplate("gallery_content_showthumb", $data_array);
 
         } else {
             $thumb = '<tr><td colspan="2">' . $_language->module['no_picture'] . '</td></tr>';

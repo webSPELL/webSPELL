@@ -46,6 +46,7 @@ $language_array = Array(
   'linkname'=>'اسم الرابط',
   'linkrubric'=>'رابط الموضوع',
   'links'=>'الروابط',
+  'new_category'=>'تصنيف جديد',
   'new_link'=>'رابط جديد',
   'no_access'=>'لا وصول',
   'no_categories'=>'لا يوجد فئات',

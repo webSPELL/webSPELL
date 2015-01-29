@@ -218,7 +218,7 @@ if (isset($_POST[ 'save' ])) {
     header("Location: index.php?site=demos");
 }
 
-eval ("\$title_demos = \"" . gettemplate("title_demos") . "\";");
+$title_demos = $GLOBALS["_template"]->replaceTemplate("title_demos", array());
 echo $title_demos;
 
 $games = null;
@@ -238,7 +238,9 @@ function top5()
     $ergebnis = safe_query("SELECT * FROM `" . PREFIX . "demos` ORDER BY `rating` DESC LIMIT 0,5");
     $top = 'TOP 5 DEMOS (' . $_language->module[ 'rating' ] . ')';
 
-    eval ("\$top5_head = \"" . gettemplate("top5_head") . "\";");
+    $data_array = array();
+    $data_array['$top'] = $top;
+    $top5_head = $GLOBALS["_template"]->replaceTemplate("top5_head", $data_array);
     echo $top5_head;
 
     $n = 1;
@@ -270,7 +272,9 @@ function top5()
     // POINTS
     $ergebnis = safe_query("SELECT * FROM `" . PREFIX . "demos` ORDER BY `downloads` DESC LIMIT 0,5");
     $top = 'TOP 5 DEMOS (' . $_language->module[ 'downloaded' ] . ')';
-    eval ("\$top5_head = \"" . gettemplate("top5_head") . "\";");
+    $data_array = array();
+    $data_array['$top'] = $top;
+    $top5_head = $GLOBALS["_template"]->replaceTemplate("top5_head", $data_array);
     echo $top5_head;
     $n = 1;
     while ($ds = mysqli_fetch_array($ergebnis)) {
@@ -300,7 +304,10 @@ if (isset($_GET[ 'action' ])) {
 if ($action == "new") {
     if (isfileadmin($userID)) {
         $countries = getcountries();
-        eval ("\$demo_new = \"" . gettemplate("demo_new") . "\";");
+        $data_array = array();
+        $data_array['$games'] = $games;
+        $data_array['$countries'] = $countries;
+        $demo_new = $GLOBALS["_template"]->replaceTemplate("demo_new", $data_array);
         echo $demo_new;
     } else {
         redirect('index.php?site=demos', $_language->module[ 'no_access' ]);
@@ -354,7 +361,25 @@ if ($action == "new") {
         );
 
         $bg1 = BG_1;
-        eval ("\$demo_edit = \"" . gettemplate("demo_edit") . "\";");
+        $data_array = array();
+        $data_array['$date'] = $date;
+        $data_array['$games'] = $games;
+        $data_array['$clanname1'] = $clanname1;
+        $data_array['$clan1'] = $clan1;
+        $data_array['$country1'] = $country1;
+        $data_array['$url1'] = $url1;
+        $data_array['$clanname2'] = $clanname2;
+        $data_array['$clan2'] = $clan2;
+        $data_array['$country2'] = $country2;
+        $data_array['$url2'] = $url2;
+        $data_array['$league'] = $league;
+        $data_array['$leaguehp'] = $leaguehp;
+        $data_array['$maps'] = $maps;
+        $data_array['$player'] = $player;
+        $data_array['$extern'] = $extern;
+        $data_array['$comments'] = $comments;
+        $data_array['$demoID'] = $demoID;
+        $demo_edit = $GLOBALS["_template"]->replaceTemplate("demo_edit", $data_array);
         echo $demo_edit;
     } else {
         redirect('index.php?site=demos', $_language->module[ 'no_access' ]);
@@ -378,7 +403,7 @@ if ($action == "new") {
     $country2 = "[flag]" . $ds[ 'country2' ] . "[/flag]";
     $country2 = flags($country2);
     $clan2 = $country2 . ' <a href="' . $ds[ 'url2' ] . '" target="_blank">' . $ds[ 'clan2' ] . '</a>';
-    $game = '<img src="images/games/' . $ds[ 'game' ] . '.gif" width="13" height="13" alt=""> ' . $ds[ 'game' ];
+    $game = '<img src="images/games/' . $ds[ 'game' ] . '.gif" alt=""> ' . $ds[ 'game' ];
 
     $clicks = $ds[ 'downloads' ];
     $player = $ds[ 'player' ];
@@ -456,7 +481,20 @@ if ($action == "new") {
                 )" value="' . $_language->module[ 'delete' ] . '" class="btn btn-danger">';
     }
 
-    eval ("\$demos_showdemo = \"" . gettemplate("demos_showdemo") . "\";");
+    $data_array = array();
+    $data_array['$date'] = $date;
+    $data_array['$game'] = $game;
+    $data_array['$clan1'] = $clan1;
+    $data_array['$clan2'] = $clan2;
+    $data_array['$league'] = $league;
+    $data_array['$player'] = $player;
+    $data_array['$maps'] = $maps;
+    $data_array['$clicks'] = $clicks;
+    $data_array['$ratingpic'] = $ratingpic;
+    $data_array['$rateform'] = $rateform;
+    $data_array['$download'] = $download;
+    $data_array['$adminaction'] = $adminaction;
+    $demos_showdemo = $GLOBALS["_template"]->replaceTemplate("demos_showdemo", $data_array);
     echo $demos_showdemo;
 
     $comments_allowed = $ds[ 'comments' ];
@@ -475,8 +513,8 @@ if ($action == "new") {
     }
     $sort = "date";
     if (isset($_GET[ 'sort' ])) {
-        if (($_GET[ 'sort' ] == 'date') || ($_GET[ 'sort' ] == 'game') || ($_GET[ 'sort' ] == 'league') ||
-            ($_GET[ 'sort' ] == 'rating') || ($_GET[ 'sort' ] == 'downloads')
+        if (($_GET[ 'sort' ] == 'date') || ($_GET[ 'sort' ] == 'game') || ($_GET[ 'sort' ] == 'league')
+            || ($_GET[ 'sort' ] == 'rating') || ($_GET[ 'sort' ] == 'downloads')
         ) {
             $sort = $_GET[ 'sort' ];
         }
@@ -573,7 +611,13 @@ if ($action == "new") {
             '<a class="titlelink" href="index.php?site=demos&amp;action=showgame&amp;game=' . $game . '&amp;page=' .
             $page . '&amp;sort=downloads&amp;type=' . $type . '">' . $_language->module[ 'download' ] . ':</a>';
 
-        eval ("\$demos_head = \"" . gettemplate("demos_head") . "\";");
+        $data_array = array();
+        $data_array['$headdate'] = $headdate;
+        $data_array['$headgame'] = $headgame;
+        $data_array['$headleague'] = $headleague;
+        $data_array['$headrating'] = $headrating;
+        $data_array['$headclicks'] = $headclicks;
+        $demos_head = $GLOBALS["_template"]->replaceTemplate("demos_head", $data_array);
         echo $demos_head;
         $n = 1;
         while ($ds = mysqli_fetch_array($ergebnis)) {
@@ -592,7 +636,7 @@ if ($action == "new") {
             $country2 = "[flag]" . $ds[ 'country2' ] . "[/flag]";
             $country2 = flags($country2);
             $clan2 = '<a href="' . $ds[ 'url2' ] . '" target="_blank">' . $ds[ 'clantag2' ] . '</a> ' . $country2;
-            $game = '<img src="images/games/' . $ds[ 'game' ] . '.gif" width="13" height="13" alt="">';
+            $game = '<img src="images/games/' . $ds[ 'game' ] . '.gif" alt="">';
             $clicks = $ds[ 'downloads' ];
 
             $ratings = array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
@@ -604,12 +648,21 @@ if ($action == "new") {
                 $ratingpic .= '<img src="images/icons/rating_' . $pic . '.gif" width="4" height="5" alt="">';
             }
 
-            eval ("\$demos_content = \"" . gettemplate("demos_content") . "\";");
+            $data_array = array();
+            $data_array['$date'] = $date;
+            $data_array['$game'] = $game;
+            $data_array['$clan1'] = $clan1;
+            $data_array['$clan2'] = $clan2;
+            $data_array['$league'] = $league;
+            $data_array['$ratingpic'] = $ratingpic;
+            $data_array['$clicks'] = $clicks;
+            $data_array['$demoID'] = $ds['demoID'];
+            $demos_content = $GLOBALS["_template"]->replaceTemplate("demos_content", $data_array);
             echo $demos_content;
             unset($ratingpic);
             $n++;
         }
-        eval ("\$demos_foot = \"" . gettemplate("demos_foot") . "\";");
+        $demos_foot = $GLOBALS["_template"]->replaceTemplate("demos_foot", array());
         echo $demos_foot;
     } else {
         echo $_language->module[ 'no_demos' ];
@@ -622,12 +675,11 @@ if ($action == "new") {
     }
     $sort = "date";
     if (isset($_GET[ 'sort' ])) {
-        if (
-            $_GET[ 'sort' ] == 'date' ||
-            $_GET[ 'sort' ] == 'game' ||
-            $_GET[ 'sort' ] == 'league' ||
-            $_GET[ 'sort' ] == 'rating' ||
-            $_GET[ 'sort' ] == 'downloads'
+        if ($_GET[ 'sort' ] == 'date'
+            || $_GET[ 'sort' ] == 'game'
+            || $_GET[ 'sort' ] == 'league'
+            || $_GET[ 'sort' ] == 'rating'
+            || $_GET[ 'sort' ] == 'downloads'
         ) {
             $sort = $_GET[ 'sort' ];
         }
@@ -705,7 +757,13 @@ if ($action == "new") {
             '<a class="titlelink" href="index.php?site=demos&amp;page=' . $page . '&amp;sort=downloads&amp;type=' .
             $type . '">' . $_language->module[ 'download' ] . ':</a>';
 
-        eval ("\$demos_head = \"" . gettemplate("demos_head") . "\";");
+        $data_array = array();
+        $data_array['$headdate'] = $headdate;
+        $data_array['$headgame'] = $headgame;
+        $data_array['$headleague'] = $headleague;
+        $data_array['$headrating'] = $headrating;
+        $data_array['$headclicks'] = $headclicks;
+        $demos_head = $GLOBALS["_template"]->replaceTemplate("demos_head", $data_array);
         echo $demos_head;
         $n = 1;
         while ($ds = mysqli_fetch_array($ergebnis)) {
@@ -725,7 +783,7 @@ if ($action == "new") {
             $country2 = flags($country2);
             $clan2 = $country2 . ' <a href="' . $ds[ 'url2' ] . '" target="_blank">' . $ds[ 'clantag2' ] . '</a> ';
             $game = '<a href="index.php?site=demos&amp;action=showgame&amp;game=' . $ds[ 'game' ] .
-                '"><img src="images/games/' . $ds[ 'game' ] . '.gif" width="13" height="13" alt=""></a>';
+                '"><img src="images/games/' . $ds[ 'game' ] . '.gif" alt=""></a>';
             $clicks = $ds[ 'downloads' ];
 
             $ratings = array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
@@ -737,12 +795,21 @@ if ($action == "new") {
                 $ratingpic .= '<img src="images/icons/rating_' . $pic . '.gif" width="4" height="5" alt="">';
             }
 
-            eval ("\$demos_content = \"" . gettemplate("demos_content") . "\";");
+            $data_array = array();
+            $data_array['$date'] = $date;
+            $data_array['$game'] = $game;
+            $data_array['$clan1'] = $clan1;
+            $data_array['$clan2'] = $clan2;
+            $data_array['$league'] = $league;
+            $data_array['$ratingpic'] = $ratingpic;
+            $data_array['$clicks'] = $clicks;
+            $data_array['$demoID'] = $ds['demoID'];
+            $demos_content = $GLOBALS["_template"]->replaceTemplate("demos_content", $data_array);
             echo $demos_content;
             unset($ratingpic);
             $n++;
         }
-        eval ("\$demos_foot = \"" . gettemplate("demos_foot") . "\";");
+        $demos_foot = $GLOBALS["_template"]->replaceTemplate("demos_foot", array());
         echo $demos_foot;
     } else {
         echo $_language->module[ 'no_demos' ];

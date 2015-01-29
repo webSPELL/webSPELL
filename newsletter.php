@@ -170,9 +170,13 @@ if ($action == "save") {
         $get_pw = $_language->module['del_key'];
     }
 
-    eval ("\$newsletter_title = \"" . gettemplate("title_newsletter") . "\";");
+    $newsletter_title = $GLOBALS["_template"]->replaceTemplate("title_newsletter", array());
     echo $newsletter_title;
 
-    eval ("\$newsletter = \"" . gettemplate("newsletter") . "\";");
+    $data_array = array();
+    $data_array['$usermail'] = $usermail;
+    $data_array['$get_mail'] = $get_mail;
+    $data_array['$get_pw'] = $get_pw;
+    $newsletter = $GLOBALS["_template"]->replaceTemplate("newsletter", $data_array);
     echo $newsletter;
 }

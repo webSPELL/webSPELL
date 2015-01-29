@@ -56,7 +56,13 @@ if (mysqli_num_rows($ergebnis)) {
             $gameicon = $gameicon . $ds[ 'game' ] . ".gif";
         }
 
-        eval ("\$results = \"" . gettemplate("results") . "\";");
+        $data_array = array();
+        $data_array['$result'] = $result;
+        $data_array['$gameicon'] = $gameicon;
+        $data_array['$game'] = $ds['game'];
+        $data_array['$opptag'] = $ds['opptag'];
+        $data_array['$resultID'] = $resultID;
+        $results = $GLOBALS["_template"]->replaceTemplate("results", $data_array);
         echo $results;
         $n++;
     }

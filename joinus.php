@@ -35,7 +35,7 @@ if (isset($site)) {
     $_language->readModule('joinus');
 }
 
-eval ("\$title_joinus = \"" . gettemplate("title_joinus") . "\";");
+$title_joinus = $GLOBALS["_template"]->replaceTemplate("title_joinus", array());
 echo $title_joinus;
 
 if (isset($_GET['action'])) {
@@ -186,7 +186,18 @@ if ($show === true) {
             $info = '';
         }
 
-        eval ("\$joinus_loggedin = \"" . gettemplate("joinus_loggedin") . "\";");
+        $data_array = array();
+        $data_array['$showerror'] = $showerror;
+        $data_array['$squads'] = $squads;
+        $data_array['$nickname'] = $nickname;
+        $data_array['$name'] = $name;
+        $data_array['$email'] = $email;
+        $data_array['$messenger'] = $messenger;
+        $data_array['$age'] = $age;
+        $data_array['$city'] = $city;
+        $data_array['$clanhistory'] = $clanhistory;
+        $data_array['$info'] = $info;
+        $joinus_loggedin = $GLOBALS["_template"]->replaceTemplate("joinus_loggedin", $data_array);
         echo $joinus_loggedin;
     } else {
         $CAPCLASS = new \webspell\Captcha;
@@ -238,7 +249,13 @@ if ($show === true) {
             $info = '';
         }
 
-        eval ("\$joinus_notloggedin = \"" . gettemplate("joinus_notloggedin") . "\";");
+        $data_array = array();
+        $data_array['$showerror'] = $showerror;
+        $data_array['$squads'] = $squads;
+        $data_array['$info'] = $info;
+        $data_array['$captcha'] = $captcha;
+        $data_array['$hash'] = $hash;
+        $joinus_notloggedin = $GLOBALS["_template"]->replaceTemplate("joinus_notloggedin", $data_array);
         echo $joinus_notloggedin;
     }
 }

@@ -30,7 +30,7 @@ $language_array = Array(
 /* do not edit above this line */
 
 	'author'=>'Autor',
-	'bbcode'=>'BBCode je <b><u>ZAPNUTÝ</u></b>',
+	'bbcode'=>'BBCode je <b><span class="underline">ZAPNUTÝ</span></b>',
 	'cancel'=>'zrušit',
 	'comm'=>'comm',
 	'comment'=>'<a href="$url">[1] komentář</a>, poslední komentoval $lastposter - $lastdate',
@@ -43,7 +43,7 @@ $language_array = Array(
 	'enter_text'=>'Zadej text',
 	'go'=>'Proveř!',
 	'headline'=>'Titulek',
-	'html'=>'HTML je <b><u>ZAPNUTÉ</u></b>',
+	'html'=>'HTML je <b><span class="underline">ZAPNUTÉ</span></b>',
 	'intern'=>'interní',
 	'languages'=>'Jazyky',
 	'link'=>'Odkaz',
@@ -69,7 +69,7 @@ $language_array = Array(
 	'select_all'=>'vybrat vbšechny',
 	'self'=>'stejné okno',
 	'show_news'=>'ukázat novinku',
-	'smilies'=>'Smajlíci jsou <b><u>ZAPNUTI</u></b>',
+	'smilies'=>'Smajlíci jsou <b><span class="underline">ZAPNUTI</span></b>',
 	'sort'=>'Seřadit:',
 	'title_unpublished_news'=>'<h2>NEPUBLIKOVANÉ NOVINKY:</h2>',
 	'topnews'=>'top novinky',

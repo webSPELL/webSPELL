@@ -31,7 +31,7 @@ $language_array = Array(
 /* do not edit above this line */
 
   'author'=>'الكاتب',
-  'bbcode'=>'BBCode هو <b><u>مفعل</u></b>',
+  'bbcode'=>'BBCode هو <b><span class="underline">مفعل</span></b>',
   'cancel'=>'إلغاء',
   'comm'=>'comm',
   'comment'=>'<a href="$url">[1] تعليق</a>, latest by $lastposter - $lastdate',
@@ -44,7 +44,7 @@ $language_array = Array(
   'enter_text'=>'عليك كتابة النص',
   'go'=>'أنطلق!',
   'headline'=>'عنوان رئيسي',
-  'html'=>'HTML هو <b><u>مفعل</u></b>',
+  'html'=>'HTML هو <b><span class="underline">مفعل</span></b>',
   'intern'=>'المتدرب',
   'languages'=>'اللغات',
   'link'=>'رابط',
@@ -70,7 +70,7 @@ $language_array = Array(
   'select_all'=>'تحديد كافة',
   'self'=>'نافذة الذات',
   'show_news'=>'عرض الأخبار',
-  'smilies'=>'الابتسامات <b><u>مفعله</u></b>',
+  'smilies'=>'الابتسامات <b><span class="underline">مفعله</span></b>',
   'sort'=>'الفرز:',
   'title_unpublished_news'=>'<h2>أخبار الغير المنشورة:</h2>',
   'topnews'=>'الاخبار المميزه',

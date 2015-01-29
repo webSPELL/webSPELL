@@ -77,7 +77,12 @@ if (count($results)) {
         $auszug = $entry['content'];
         $link = $entry['link'];
         $title = $entry['title'];
-        eval ("\$search_tags = \"" . gettemplate("search_tags") . "\";");
+        $data_array = array();
+        $data_array['$date'] = $date;
+        $data_array['$link'] = $link;
+        $data_array['$title'] = $title;
+        $data_array['$auszug'] = $auszug;
+        $search_tags = $GLOBALS["_template"]->replaceTemplate("search_tags", $data_array);
         echo $search_tags;
     }
 }

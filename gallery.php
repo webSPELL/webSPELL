@@ -58,10 +58,7 @@ if (isset($_POST[ 'saveedit' ])) {
         )
     );
 
-    if (
-        (isgalleryadmin($userID) || $galclass->isGalleryOwner($ds[ 'galleryID' ], $userID)) &&
-        $_POST[ 'picID' ]
-    ) {
+    if ((isgalleryadmin($userID) || $galclass->isGalleryOwner($ds[ 'galleryID' ], $userID)) && $_POST[ 'picID' ]) {
         safe_query(
             "UPDATE
                 `" . PREFIX . "gallery_pictures`
@@ -115,7 +112,12 @@ if (isset($_POST[ 'saveedit' ])) {
         );
         $name = str_replace('"', '&quot;', getinput($ds[ 'name' ]));
         $comment = getinput($ds[ 'comment' ]);
-        eval ("\$gallery = \"" . gettemplate("gallery_edit") . "\";");
+        $data_array = array();
+        $data_array['$name'] = $name;
+        $data_array['$comment'] = $comment;
+        $data_array['$comments'] = $comments;
+        $data_array['$picID'] = $picID;
+        $gallery = $GLOBALS["_template"]->replaceTemplate("gallery_edit", $data_array);
         echo $gallery;
     } else {
         redirect('index.php?site=gallery', $_language->module[ 'no_pic_set' ]);
@@ -288,7 +290,7 @@ if (isset($_POST[ 'saveedit' ])) {
 
     $galclass = new \webspell\Gallery;
 
-    eval("\$gallery = \"" . gettemplate("title_gallery") . "\";");
+    $gallery = $GLOBALS["_template"]->replaceTemplate("title_gallery", array());
     echo $gallery;
 
     $ergebnis = safe_query("SELECT * FROM `" . PREFIX . "gallery_pictures` WHERE `picID` = '" . $_GET[ 'picID' ] . "'");
@@ -467,7 +469,24 @@ if (isset($_POST[ 'saveedit' ])) {
                 getnickname($galclass->getGalleryOwner($ds[ 'galleryID' ])) . '</a>';
         }
 
-        eval("\$gallery = \"" . gettemplate("gallery_comments") . "\";");
+        $data_array = array();
+        $data_array['$group'] = $group;
+        $data_array['$gallery'] = $gallery;
+        $data_array['$picturename'] = $picturename;
+        $data_array['$backward'] = $backward;
+        $data_array['$forward'] = $forward;
+        $data_array['$picID'] = $picID;
+        $data_array['$width'] = $width;
+        $data_array['$views'] = $views;
+        $data_array['$xsize'] = $xsize;
+        $data_array['$ysize'] = $ysize;
+        $data_array['$filesize'] = $filesize;
+        $data_array['$comment'] = $comment;
+        $data_array['$ratingpic'] = $ratingpic;
+        $data_array['$votes'] = $votes;
+        $data_array['$rateform'] = $rateform;
+        $data_array['$adminaction'] = $adminaction;
+        $gallery = $GLOBALS["_template"]->replaceTemplate("gallery_comments", $data_array);
         echo $gallery;
 
         //comments
@@ -506,7 +525,7 @@ if (isset($_POST[ 'saveedit' ])) {
         $carouselIndicators .= '<li data-target="#my-carousel" data-slide-to="' . $foo . '"></li>';
     }
 
-    eval("\$gallery = \"" . gettemplate("title_gallery") . "\";");
+    $gallery = $GLOBALS["_template"]->replaceTemplate("title_gallery", array());
     echo $gallery;
 
     $pages = ceil($pics / $gallerypictures);
@@ -543,7 +562,15 @@ if (isset($_POST[ 'saveedit' ])) {
     } else {
         $diashow = "";
     }
-    eval("\$gallery = \"" . gettemplate("gallery_gallery_head") . "\";");
+    $data_array = array();
+    $data_array['$group'] = $group;
+    $data_array['$title'] = $title;
+    $data_array['$pics'] = $pics;
+    $data_array['$pages'] = $pages;
+    $data_array['$diashow'] = $diashow;
+    $data_array['$pagelink'] = $pagelink;
+    $data_array['$carouselIndicators'] = $carouselIndicators;
+    $gallery = $GLOBALS["_template"]->replaceTemplate("gallery_gallery_head", $data_array);
     echo $gallery;
     echo '<tr>';
     $i = 1;
@@ -565,9 +592,6 @@ if (isset($_POST[ 'saveedit' ])) {
         $dir = $galclass->getLargeFile($pic[ 'picID' ]);
 
         list($width, $height, $type, $attr) = getimagesize($dir);
-
-        $pic[ 'name' ] = clearfromtags($pic[ 'name' ]);
-        $pic[ 'comment' ] = cleartext($pic[ 'comment' ], false);
         $pic[ 'comments' ] =
             mysqli_num_rows(
                 safe_query(
@@ -582,7 +606,13 @@ if (isset($_POST[ 'saveedit' ])) {
                 )
             );
 
-        eval("\$gallery = \"" . gettemplate("gallery_showlist") . "\";");
+        $data_array = array();
+        $data_array['$firstactive'] = $firstactive;
+        $data_array['$picID'] = $pic['picID'];
+        $data_array['$name'] = clearfromtags($pic[ 'name' ]);
+        $data_array['$comment'] = cleartext($pic[ 'comment' ], false);
+        $data_array['$dir'] = $dir;
+        $gallery = $GLOBALS["_template"]->replaceTemplate("gallery_showlist", $data_array);
         echo $gallery;
 
         if ($pics_per_row > 1) {
@@ -595,14 +625,16 @@ if (isset($_POST[ 'saveedit' ])) {
         $i++;
     }
 
-    eval("\$gallery = \"" . gettemplate("gallery_gallery_foot") . "\";");
+    $data_array = array();
+    $data_array['$pagelink'] = $pagelink;
+    $gallery = $GLOBALS["_template"]->replaceTemplate("gallery_gallery_foot", $data_array);
     echo $gallery;
 } elseif (isset($_GET[ 'groupID' ])) {
     $_language->readModule('gallery');
 
     $galclass = new \webspell\Gallery;
 
-    eval ("\$gallery = \"" . gettemplate("title_gallery") . "\";");
+    $gallery = $GLOBALS["_template"]->replaceTemplate("title_gallery", array());
     echo $gallery;
 
     $galleries =
@@ -630,7 +662,11 @@ if (isset($_POST[ 'saveedit' ])) {
         $group = $_language->module[ 'usergalleries' ];
     }
 
-    eval ("\$gallery = \"" . gettemplate("gallery_group_head") . "\";");
+    $data_array = array();
+    $data_array['$group'] = $group;
+    $data_array['$galleries'] = $galleries;
+    $data_array['$pages'] = $pages;
+    $gallery = $GLOBALS["_template"]->replaceTemplate("gallery_group_head", $data_array);
     echo $gallery;
 
     $ergebnis = safe_query(
@@ -668,87 +704,108 @@ if (isset($_POST[ 'saveedit' ])) {
             $gallery[ 'pic' ] = 'images/nopic.gif';
         }
 
-        eval ("\$gallery = \"" . gettemplate("gallery_showlist_group") . "\";");
+        $data_array = array();
+        $data_array['$galleryID'] = $gallery['galleryID'];
+        $data_array['$pic'] = $gallery[ 'pic' ];
+        $data_array['$name'] = $gallery[ 'name' ];
+        $gallery = $GLOBALS["_template"]->replaceTemplate("gallery_showlist_group", $data_array);
         echo $gallery;
     }
     echo '<td>&nbsp;</td></tr>';
 
-    eval("\$gallery = \"" . gettemplate("gallery_group_foot") . "\";");
+    $data_array = array();
+    $data_array['$pagelink'] = $pagelink;
+    $gallery = $GLOBALS["_template"]->replaceTemplate("gallery_group_foot", $data_array);
     echo $gallery;
 } else {
     $_language->readModule('gallery');
 
     $galclass = new \webspell\Gallery;
 
-    eval("\$gallery = \"" . gettemplate("title_gallery") . "\";");
+    $gallery = $GLOBALS["_template"]->replaceTemplate("title_gallery", array());
     echo $gallery;
 
     $ergebnis = safe_query("SELECT * FROM " . PREFIX . "gallery_groups ORDER BY sort");
 
-    while ($ds = mysqli_fetch_array($ergebnis)) {
-        $groupID = $ds[ 'groupID' ];
-        $title = $ds[ 'name' ];
-        $gallerys = mysqli_num_rows(
-            safe_query(
+    if (mysql_num_rows($ergebnis)) {
+        while ($ds = mysqli_fetch_array($ergebnis)) {
+            $groupID = $ds[ 'groupID' ];
+            $title = $ds[ 'name' ];
+            $gallerys = mysqli_num_rows(
+                safe_query(
+                    "SELECT
+                        `galleryID`
+                    FROM
+                        `" . PREFIX . "gallery`
+                    WHERE
+                        `groupID` = '" . $ds[ 'groupID' ] . "'"
+                )
+            );
+
+            $data_array = array();
+            $data_array['$groupID'] = $groupID;
+            $data_array['$title'] = $title;
+            $gallery_groups = $GLOBALS["_template"]->replaceTemplate("gallery_content_categorys_head", $data_array);
+            echo $gallery_groups;
+
+            $groups = safe_query(
                 "SELECT
-                    `galleryID`
+                    *
                 FROM
                     `" . PREFIX . "gallery`
                 WHERE
-                    `groupID` = '" . $ds[ 'groupID' ] . "'"
-            )
-        );
+                    groupID = '" . (int)$ds[ 'groupID' ] . "'
+                ORDER BY
+                    galleryID DESC"
+            );
+            $anzgroups = mysqli_num_rows($groups);
+            $i = 0;
+            while ($ds = mysqli_fetch_array($groups)) {
+                $i++;
 
-        eval ("\$gallery_groups = \"" . gettemplate("gallery_content_categorys_head") . "\";");
-        echo $gallery_groups;
-
-        $groups = safe_query(
-            "SELECT
-                *
-            FROM
-                `" . PREFIX . "gallery`
-            WHERE
-                groupID = '" . (int)$ds[ 'groupID' ] . "'
-            ORDER BY
-                galleryID DESC"
-        );
-        $anzgroups = mysqli_num_rows($groups);
-        $i = 0;
-        while ($ds = mysqli_fetch_array($groups)) {
-            $i++;
-
-            $ds[ 'picture' ] = $galclass->randomPic($ds[ 'galleryID' ]);
-            if (isset($ds[ 'date' ])) {
-                $ds[ 'date' ] = date('d.m.Y', $ds[ 'date' ]);
-            }
-            if (isset($ds[ 'galleryID' ])) {
-                $ds[ 'count' ] =
-                    mysqli_num_rows(
-                        safe_query(
-                            "SELECT
-                                `picID`
-                            FROM
-                                `" . PREFIX . "gallery_pictures`
-                            WHERE
-                                `galleryID` = '" . (int)$ds[ 'galleryID' ] . "'"
-                        )
-                    );
-            }
-
-            if (isset($ds[ 'count' ])) {
-                eval ("\$gallery_groups = \"" . gettemplate("gallery_content_showlist") . "\";");
-                echo $gallery_groups;
-
-                // preventing to break Layout if number of groups is odd
-                if ($anzgroups % 2 != 0 && $i == $anzgroups) {
-                    echo '<div class="col-xs-3"></div>';
+                if (isset($ds[ 'date' ])) {
+                    $ds[ 'date' ] = date('d.m.Y', $ds[ 'date' ]);
                 }
-            } else {
-                echo '<p class="col-xs-6">' . $_language->module[ 'no_gallery_exists' ] . '</p>';
-            }
-        }
+                if (isset($ds[ 'galleryID' ])) {
+                    $ds[ 'count' ] =
+                        mysqli_num_rows(
+                            safe_query(
+                                "SELECT
+                                    `picID`
+                                FROM
+                                    `" . PREFIX . "gallery_pictures`
+                                WHERE
+                                    `galleryID` = '" . (int)$ds[ 'galleryID' ] . "'"
+                            )
+                        );
+                }
 
-        eval ("\$gallery_content_categorys_foot = \"" . gettemplate("gallery_content_categorys_foot") . "\";");
-        echo $gallery_content_categorys_foot;
+                if (isset($ds[ 'count' ])) {
+                    $data_array = array();
+                    $data_array['$galleryID'] = $ds['galleryID'];
+                    $data_array['$pictureID'] = $galclass->randomPic($ds[ 'galleryID' ]);
+                    $data_array['$name'] = $ds['name'];
+                    $data_array['$count'] = $ds['count'];
+                    $data_array['$date'] = $ds['date'];
+                    $gallery_groups = $GLOBALS["_template"]->replaceTemplate("gallery_content_showlist", $data_array);
+                    echo $gallery_groups;
+
+                    // preventing to break Layout if number of groups is odd
+                    if ($anzgroups % 2 != 0 && $i == $anzgroups) {
+                        echo '<div class="col-xs-3"></div>';
+                    }
+                } else {
+                    echo '<p class="col-xs-6">' . $_language->module[ 'no_gallery_exists' ] . '</p>';
+                }
+            }
+
+            $gallery_content_categorys_foot = $GLOBALS["_template"]->replaceTemplate(
+                "gallery_content_categorys_foot",
+                array()
+            );
+            echo $gallery_content_categorys_foot;
+        }
+    } else {
+        echo generateAlert($_language->module['no_gallery_exists'], 'alert-info');
     }
 }

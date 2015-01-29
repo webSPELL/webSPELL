@@ -36,7 +36,7 @@ $language_array = Array(
 /* do not edit above this line */
 
   'author'=>'Автор',
-  'bbcode'=>'ББкодът е <b><u>Включен</u></b>',
+  'bbcode'=>'ББкодът е <b><span class="underline">Включен</span></b>',
   'cancel'=>'затвори',
   'comm'=>'коментар',
   'comment'=>'<a href="$url">[1] коментар</a>, последен от $lastposter - $lastdate',
@@ -49,7 +49,7 @@ $language_array = Array(
   'enter_text'=>'Трябва да въведете текст',
   'go'=>'Давай!',
   'headline'=>'Заглавие',
-  'html'=>'HTML е <b><u>Включен</u></b>',
+  'html'=>'HTML е <b><span class="underline">Включен</span></b>',
   'intern'=>'интернет',
   'languages'=>'Езици',
   'link'=>'Връзка',
@@ -75,7 +75,7 @@ $language_array = Array(
   'select_all'=>'избери всички',
   'self'=>'самостоятелен прозорец',
   'show_news'=>'покажи новините',
-  'smilies'=>'Емотиконките са <b><u>Включени</u></b>',
+  'smilies'=>'Емотиконките са <b><span class="underline">Включени</span></b>',
   'sort'=>'Вид:',
   'title_unpublished_news'=>'<h2>Непубликувани новини:</h2>',
   'topnews'=>'най- пресни новини',

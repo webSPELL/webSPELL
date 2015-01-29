@@ -41,7 +41,11 @@ while ($row = mysqli_fetch_array($result)) {
         $bg2 = BG_4;
     }
 
-    eval ("\$sc_servers = \"" . gettemplate("sc_servers") . "\";");
+    $data_array = array();
+    $data_array['$servergame'] = $servergame;
+    $data_array['$serverip'] = $serverip;
+    $data_array['$servername'] = $servername;
+    $sc_servers = $GLOBALS["_template"]->replaceTemplate("sc_servers", $data_array);
     echo $sc_servers;
     $n++;
 

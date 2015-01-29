@@ -64,7 +64,6 @@ $language_array = Array(
   'partners'=>'Partnerek',
   'registered_users'=>'Regisztrált tagok',
   'rubrics'=>'Kategóriák',
-  'scrolltext'=>'Fényújság',
   'select_icons'=>'Válassz ikonokat',
   'servers'=>'Szerverek',
   'settings'=>'Beállítások',

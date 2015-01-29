@@ -699,7 +699,7 @@ function replacement($content, $bbcode = true)
         }
         $content = preg_replace("#\[b\](.*?)\[/b\]#si", "<b>\\1</b>", $content);
         $content = preg_replace("#\[i\](.*?)\[/i\]#si", "<i>\\1</i>", $content);
-        $content = preg_replace("#\[u\](.*?)\[/u\]#si", "<u>\\1</u>", $content);
+        $content = preg_replace("#\[u\](.*?)\[/u\]#si", "<span class='underline'>\\1</span>", $content);
         $content = preg_replace("#\[s\](.*?)\[/s\]#si", "<s>\\1</s>", $content);
         $content = preg_replace("#\[list\][\s]{0,}(.*?)\[/list\]#si", "<ul class='list'>\\1</ul>", $content);
         $content = preg_replace("#\[list=1\][\s]{0,}(.*?)\[/list=1\]#si", "<ol class='list_num'>\\1</ol>", $content);

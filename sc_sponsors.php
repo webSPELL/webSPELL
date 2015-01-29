@@ -47,7 +47,10 @@ if (mysqli_num_rows($mainsponsors)) {
         }
         $sponsorID = $da[ 'sponsorID' ];
 
-        eval ("\$sc_sponsors_main = \"" . gettemplate("sc_sponsors_main") . "\";");
+        $data_array = array();
+        $data_array['$sponsorID'] = $sponsorID;
+        $data_array['$sponsor'] = $sponsor;
+        $sc_sponsors_main = $GLOBALS["_template"]->replaceTemplate("sc_sponsors_main", $data_array);
         echo $sc_sponsors_main;
     }
     echo '</ul>';
@@ -74,7 +77,10 @@ if (mysqli_num_rows($sponsors)) {
         }
         $sponsorID = $db[ 'sponsorID' ];
 
-        eval ("\$sc_sponsors = \"" . gettemplate("sc_sponsors") . "\";");
+        $data_array = array();
+        $data_array['$sponsorID'] = $sponsorID;
+        $data_array['$sponsor'] = $sponsor;
+        $sc_sponsors = $GLOBALS["_template"]->replaceTemplate("sc_sponsors", $data_array);
         echo $sc_sponsors;
     }
     echo '</ul>';

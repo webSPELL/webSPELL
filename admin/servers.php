@@ -103,8 +103,8 @@ if ($action == "add") {
 
     $_language->readModule('bbcode', true);
 
-    eval ("\$addbbcode = \"" . gettemplate("addbbcode", "html", "admin") . "\";");
-    eval ("\$addflags = \"" . gettemplate("flags_admin", "html", "admin") . "\";");
+    $addbbcode = $GLOBALS["_template"]->replaceTemplate("addbbcode", array());
+    $addflags = $GLOBALS["_template"]->replaceTemplate("flags_admin", array());
 
     echo '<h1>&curren; <a href="admincenter.php?site=servers" class="white">' . $_language->module[ 'servers' ] .
         '</a> &raquo; ' . $_language->module[ 'add_server' ] . '</h1>';
@@ -161,8 +161,8 @@ if ($action == "add") {
 
     $_language->readModule('bbcode', true);
 
-    eval ("\$addbbcode = \"" . gettemplate("addbbcode", "html", "admin") . "\";");
-    eval ("\$addflags = \"" . gettemplate("flags_admin", "html", "admin") . "\";");
+    $addbbcode = $GLOBALS["_template"]->replaceTemplate("addbbcode", array());
+    $addflags = $GLOBALS["_template"]->replaceTemplate("flags_admin", array());
 
     $serverID = $_GET[ 'serverID' ];
     $ergebnis = safe_query("SELECT * FROM " . PREFIX . "servers WHERE serverID='" . $serverID . "'");
@@ -256,7 +256,7 @@ onsubmit="return chkFormular();">
 
             echo '<tr>
         <td class="' . $td . '"><img src="../images/games/' . $ds[ 'game' ] .
-                '.gif" width="13" height="13" alt=""> <a href="hlsw://' . $ds[ 'ip' ] . '"><b>' . $ds[ 'ip' ] .
+                '.gif" alt=""> <a href="hlsw://' . $ds[ 'ip' ] . '"><b>' . $ds[ 'ip' ] .
                 '</b></a><br /><b>' . getinput($ds[ 'name' ]) . '</b><br />' . cleartext($ds[ 'info' ], true, 'admin') .
                 '</td>
         <td class="' . $td . '" align="center">

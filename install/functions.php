@@ -2112,6 +2112,8 @@ function update420_430()
     `data` text NOT NULL
     )");
 
+    mysqli_query($_database, "DROP TABLE IF EXISTS `" . PREFIX . "scrolltext`");
+
     mysqli_query($_database, "ALTER TABLE `" . PREFIX . "settings` ADD `spam_check` int(1) NOT NULL default '0'");
     mysqli_query($_database, "ALTER TABLE `" . PREFIX . "settings` ADD `detect_language` int(1) NOT NULL default '0'");
     mysqli_query($_database, "ALTER TABLE `" . PREFIX . "settings` ADD `spamapikey` varchar(32) NOT NULL default ''");

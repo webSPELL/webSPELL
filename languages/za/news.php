@@ -36,7 +36,7 @@ $language_array = Array(
 /* do not edit above this line */
 
   'author'=>'Skrywer',
-  'bbcode'=>'BBCode is <b><u>OP</u></b>',
+  'bbcode'=>'BBCode is <b><span class="underline">OP</span></b>',
   'cancel'=>'kanselleer',
   'comm'=>'komm',
   'comment'=>'<a href="$url">[1] kommentaar</a>, nuutste deur $lastposter - $lastdate',
@@ -49,7 +49,7 @@ $language_array = Array(
   'enter_text'=>'Jy moet \'n teks invoer',
   'go'=>'Gaan!',
   'headline'=>'hooflyn',
-  'html'=>'HTML is <b><u>OP</u></b>',
+  'html'=>'HTML is <b><span class="underline">OP</span></b>',
   'intern'=>'interne',
   'languages'=>'Tale',
   'link'=>'Skakel',
@@ -75,7 +75,7 @@ $language_array = Array(
   'select_all'=>'selekteer alles',
   'self'=>'self venster',
   'show_news'=>'Toon nuus',
-  'smilies'=>'Glimlaggies is <b><u>OP</u></b>',
+  'smilies'=>'Glimlaggies is <b><span class="underline">OP</span></b>',
   'sort'=>'Sorteer:',
   'title_unpublished_news'=>'<h2>ONGEPUBLISEERDE NUUS:</h2>',
   'topnews'=>'boonste nuus',

@@ -115,3 +115,13 @@ a.flag.active img, a.flag:hover img {
     overflow: hidden;
     text-align: left;
 }
+
+span.underline {
+    text-decoration: underline;
+}
+
+@media (min-width:768px) {
+    .dropdown:hover .dropdown-menu {
+        display: block;
+    }
+}

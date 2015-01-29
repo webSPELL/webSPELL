@@ -30,7 +30,7 @@ $language_array = Array(
 /* do not edit above this line */
 
 	'author'=>'Författare',
-	'bbcode'=>'BBCode är <b><u>PÅ</u></b>',
+	'bbcode'=>'BBCode är <b><span class="underline">PÅ</span></b>',
 	'cancel'=>'avbryt',
 	'comm'=>'kommentar(er)',
 	'comment'=>'<a href="$url">[1] kommentar</a>, senaste av $lastposter - $lastdate',
@@ -43,7 +43,7 @@ $language_array = Array(
 	'enter_text'=>'Du måste skriva text',
 	'go'=>'Gå!',
 	'headline'=>'Huvudrubrik',
-	'html'=>'HTML är <b><u>PÅ</u></b>',
+	'html'=>'HTML är <b><span class="underline">PÅ</span></b>',
 	'intern'=>'intern',
 	'languages'=>'Språk',
 	'link'=>'Länk',
@@ -69,7 +69,7 @@ $language_array = Array(
 	'select_all'=>'markera alla',
 	'self'=>'själv fönster',
 	'show_news'=>'visa nyhet',
-	'smilies'=>'Smilies är <b><u>PÅ</u></b>',
+	'smilies'=>'Smilies är <b><span class="underline">PÅ</span></b>',
 	'sort'=>'Sort:',
 	'title_unpublished_news'=>'<h2>OPUBLICERADE NYHETER:</h2>',
 	'topnews'=>'top nyheter',
