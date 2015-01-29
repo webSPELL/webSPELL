@@ -160,11 +160,11 @@ if ($action == "add") {
       <td><b>' . $_language->module[ 'rank_name' ] . '</b></td>
       <td><input type="text" name="name" size="60" /></td>
     </tr>
-    <tr id="max">
+    <tr id="min">
       <td><b>' . $_language->module[ 'min_posts' ] . '</b></td>
       <td><input type="text" name="min" size="4" /></td>
     </tr>
-    <tr id="min">
+    <tr id="max">
       <td><b>' . $_language->module[ 'max_posts' ] . '</b></td>
       <td><input type="text" name="max" size="4" /></td>
     </tr>
