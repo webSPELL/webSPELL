@@ -36,8 +36,8 @@ if (isset($_GET[ 'delete' ])) {
     $CAPCLASS = new \webspell\Captcha;
     if ($CAPCLASS->checkCaptcha(0, $_GET[ 'captcha_hash' ])) {
         $rankID = (int)$_GET[ 'rankID' ];
-        safe_query("UPDATE " . PREFIX . "users SET special_rank='0' WHERE special_rank='".$rankID."'");
-        safe_query(" DELETE FROM " . PREFIX . "forum_ranks WHERE rankID='" . $rankID . "' ");
+        safe_query("UPDATE " . PREFIX . "user SET special_rank='0' WHERE special_rank='" . $rankID . "'");
+        safe_query("DELETE FROM " . PREFIX . "forum_ranks WHERE rankID='" . $rankID . "'");
     } else {
         echo $_language->module[ 'transaction_invalid' ];
     }
