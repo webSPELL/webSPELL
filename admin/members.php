@@ -170,10 +170,10 @@ if (isset($_POST[ 'saveedit' ])) {
                 "UPDATE "
                 . PREFIX . "user
                 SET
-                    userdescription='".$userdescription."',
-                    special_rank = '".$specialrank."'
+                    userdescription='" . $userdescription . "',
+                    special_rank = '" . $specialrank . "'
                 WHERE
-                    userID='".$id."'"
+                    userID='" . $id . "'"
             );
 
             foreach ($position as $sqmID => $pos) {
