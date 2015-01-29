@@ -227,13 +227,13 @@ if ($action == "add") {
             $min = '<input type="text" name="min['.$ds['rankID'].']" value="'.$ds['postmin'].'" size="6" dir="rtl" />';
             $max = '<input type="text" name="max['.$ds['rankID'].']" value="'.$max.'" size="6" dir="rtl" />';
 
-            if($ds['special']==1){
+            if ($ds['special']==1) {
                 $get = safe_query("SELECT nickname FROM ".PREFIX."user WHERE special_rank = '".$ds['rankID']."'");
                 $user_list = array();
-                while($user = mysqli_fetch_assoc($get)){
+                while ($user = mysqli_fetch_assoc($get)) {
                     $user_list[] = $user['nickname'];
                 }
-                $user_list = "<br/><small>".$_language->module['used_for'].": ".implode(", ",$user_list)."</small>";
+                $user_list = "<br/><small>".$_language->module['used_for'].": ".implode(", ", $user_list)."</small>";
                 $min = "";
                 $max = "";
             }

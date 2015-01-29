@@ -147,9 +147,9 @@ if (mysqli_num_rows($thread)) {
         $rank_data = mysqli_fetch_assoc($getrank);
 
         if ($rank_data[ 'RANK' ] != '0') {
-            $tmp_rank = explode("__", $rank_data[ 'RANK' ]);
+            $tmp_rank = explode("__", $rank_data[ 'RANK' ], 2);
             $specialrang = " - " . $tmp_rank[0];
-            if(!empty($tmp_rank[1]) && file_exists("images/icons/ranks/" . $tmp_rank[1] )){
+            if (!empty($tmp_rank[1]) && file_exists("images/icons/ranks/" . $tmp_rank[1])) {
                 $specialtype = "<img src='images/icons/ranks/" . $tmp_rank[1] . "' alt = '" . $specialrang . "' />";
             }
         }

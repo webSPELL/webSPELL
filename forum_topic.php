@@ -674,10 +674,11 @@ function showtopic($topic, $edit, $addreply, $quoteID, $type)
                 $rank_data = mysqli_fetch_assoc($getrank);
 
                 if ($rank_data[ 'RANK' ] != '0') {
-                    $tmp_rank = explode("__", $rank_data[ 'RANK' ],2);
+                    $tmp_rank = explode("__", $rank_data[ 'RANK' ], 2);
                     $specialrang = $tmp_rank[0];
-                    if(!empty($tmp_rank[1]) && file_exists("images/icons/ranks/" . $tmp_rank[1] )){
-                        $specialtype = "<img src='images/icons/ranks/" . $tmp_rank[1] . "' alt = '" . $specialrang . "' />";
+                    if (!empty($tmp_rank[1]) && file_exists("images/icons/ranks/" . $tmp_rank[1])) {
+                        $specialtype =
+                            "<img src='images/icons/ranks/" . $tmp_rank[1] . "' alt = '" . $specialrang . "' />";
                     }
                 }
 
@@ -715,6 +716,8 @@ function showtopic($topic, $edit, $addreply, $quoteID, $type)
                 $data_array['$registered'] = $registered;
                 $data_array['$message'] = $message;
                 $data_array['$signatur'] = $signatur;
+                $data_array['$specialrang'] = $specialrang;
+                $data_array['$specialtype'] = $specialtype;
                 $forum_topic_content = $GLOBALS["_template"]->replaceTemplate("forum_topic_content", $data_array);
                 echo $forum_topic_content;
 
@@ -920,9 +923,9 @@ function showtopic($topic, $edit, $addreply, $quoteID, $type)
         $rank_data = mysqli_fetch_assoc($getrank);
 
         if ($rank_data[ 'RANK' ] != '0') {
-            $tmp_rank = explode("__", $rank_data[ 'RANK' ],2);
+            $tmp_rank = explode("__", $rank_data[ 'RANK' ], 2);
             $specialrang = $tmp_rank[0];
-            if(!empty($tmp_rank[1]) && file_exists("images/icons/ranks/" . $tmp_rank[1] )){
+            if (!empty($tmp_rank[1]) && file_exists("images/icons/ranks/" . $tmp_rank[1])) {
                 $specialtype = "<img src='images/icons/ranks/" . $tmp_rank[1] . "' alt = '" . $specialrang . "' />";
             }
         }
@@ -967,6 +970,8 @@ function showtopic($topic, $edit, $addreply, $quoteID, $type)
         $data_array['$registered'] = $registered;
         $data_array['$message'] = $message;
         $data_array['$signatur'] = $signatur;
+        $data_array['$specialrang'] = $specialrang;
+        $data_array['$specialtype'] = $specialtype;
         $forum_topic_content = $GLOBALS["_template"]->replaceTemplate("forum_topic_content", $data_array);
         echo $forum_topic_content;
         unset($actions);

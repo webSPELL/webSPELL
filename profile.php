@@ -993,9 +993,9 @@ if (isset($id) && getnickname($id) != '') {
 
         if ($rank_data[ 'RANK' ] != '0') {
             $specialrank  = '<br/>';
-            $tmp_rank = explode("__", $rank_data[ 'RANK' ]);
+            $tmp_rank = explode("__", $rank_data[ 'RANK' ], 2);
             $specialrank .= $tmp_rank[0];
-            if(!empty($tmp_rank[1]) && file_exists("images/icons/ranks/" . $tmp_rank[1] )){
+            if (!empty($tmp_rank[1]) && file_exists("images/icons/ranks/" . $tmp_rank[1])) {
                 $specialrank .= '<br/>';
                 $specialrank .= "<img src='images/icons/ranks/" . $tmp_rank[1] . "' alt = '' />";
             }
@@ -1121,6 +1121,7 @@ if (isset($id) && getnickname($id) != '') {
         $data_array['$clanwar_comments'] = getusercomments($ds[ 'userID' ], 'cw');
         $data_array['$articles_comments'] = getusercomments($ds[ 'userID' ], 'ar');
         $data_array['$demo_comments'] = getusercomments($ds[ 'userID' ], 'de');
+        $data_array['$specialrank'] = $specialrank;
         $profile = $GLOBALS["_template"]->replaceTemplate("profile", $data_array);
         echo $profile;
     }
