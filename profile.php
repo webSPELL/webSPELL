@@ -975,9 +975,9 @@ if (isset($id) && getnickname($id) != '') {
                         postmax > 0 AND
                         special='0'"
                 );
-            $ds = mysqli_fetch_array($ergebnis);
-            $usertype = $ds[ 'rank' ];
-            $rang = '<img src="images/icons/ranks/' . $ds[ 'pic' ] . '" alt="">';
+            $dt = mysqli_fetch_array($ergebnis);
+            $usertype = $dt[ 'rank' ];
+            $rang = '<img src="images/icons/ranks/' . $dt[ 'pic' ] . '" alt="">';
         }
 
         $specialrank = '';
