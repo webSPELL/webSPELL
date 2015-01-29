@@ -932,11 +932,10 @@ if (isset($id) && getnickname($id) != '') {
             $rang = '<img src="images/icons/ranks/' . $ds[ 'pic' ] . '" alt="">';
         }
 
-        $specialrang = "";
-        $specialtype = "";
+        $specialrank = '';
         $getrank = safe_query(
             "SELECT IF
-                (u.special_rank = 0, 0, CONCAT_WS(\"__\", r.rank, r.pic)) as RANK
+                (u.special_rank = 0, 0, CONCAT_WS('__', r.rank, r.pic)) as RANK
             FROM
                 " . PREFIX . "user u LEFT JOIN " . PREFIX . "forum_ranks r ON u.special_rank = r.rankID
             WHERE
@@ -945,9 +944,13 @@ if (isset($id) && getnickname($id) != '') {
         $rank_data = mysqli_fetch_assoc($getrank);
 
         if ($rank_data[ 'RANK' ] != '0') {
+            $specialrank  = '<br/>';
             $tmp_rank = explode("__", $rank_data[ 'RANK' ]);
-            $specialrang = $tmp_rank[0];
-            $specialtype = "<img src='images/icons/ranks/" . $tmp_rank[1] . "' alt = '" . $specialrang . "' />";
+            $specialrank .= $tmp_rank[0];
+            if(!empty($tmp_rank[1]) && file_exists("images/icons/ranks/" . $tmp_rank[1] )){
+                $specialrank .= '<br/>';
+                $specialrank .= "<img src='images/icons/ranks/" . $tmp_rank[1] . "' alt = '' />";
+            }
         }
 
         $lastvisits = "";

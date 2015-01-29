@@ -138,7 +138,7 @@ if (mysqli_num_rows($thread)) {
         $specialtype = "";
         $getrank = safe_query(
             "SELECT IF
-                (u.special_rank = 0, 0, CONCAT_WS(\"__\", r.rank, r.pic)) as RANK
+                (u.special_rank = 0, 0, CONCAT_WS('__', r.rank, r.pic)) as RANK
             FROM
                 " . PREFIX . "user u LEFT JOIN " . PREFIX . "forum_ranks r ON u.special_rank = r.rankID
             WHERE
@@ -149,7 +149,9 @@ if (mysqli_num_rows($thread)) {
         if ($rank_data[ 'RANK' ] != '0') {
             $tmp_rank = explode("__", $rank_data[ 'RANK' ]);
             $specialrang = " - " . $tmp_rank[0];
-            $specialtype = "<img src='images/icons/ranks/" . $tmp_rank[1] . "' alt = '" . $specialrang . "' />";
+            if(!empty($tmp_rank[1]) && file_exists("images/icons/ranks/" . $tmp_rank[1] )){
+                $specialtype = "<img src='images/icons/ranks/" . $tmp_rank[1] . "' alt = '" . $specialrang . "' />";
+            }
         }
 
         echo '<tr>

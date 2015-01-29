@@ -660,7 +660,7 @@ function showtopic($topic, $edit, $addreply, $quoteID, $type)
                 $specialtype = "";
                 $getrank = safe_query(
                     "SELECT IF
-                        (u.special_rank = 0, 0, CONCAT_WS(\"__\",r.rank, r.pic)) as RANK
+                        (u.special_rank = 0, 0, CONCAT_WS('__',r.rank, r.pic)) as RANK
                     FROM
                         " . PREFIX . "user u LEFT JOIN " . PREFIX . "forum_ranks r ON u.special_rank = r.rankID
                     WHERE
@@ -669,9 +669,11 @@ function showtopic($topic, $edit, $addreply, $quoteID, $type)
                 $rank_data = mysqli_fetch_assoc($getrank);
 
                 if ($rank_data[ 'RANK' ] != '0') {
-                    $tmp_rank = explode("__", $rank_data[ 'RANK' ]);
+                    $tmp_rank = explode("__", $rank_data[ 'RANK' ],2);
                     $specialrang = $tmp_rank[0];
-                    $specialtype = "<img src='images/icons/ranks/" . $tmp_rank[1] . "' alt = '" . $specialrang . "' />";
+                    if(!empty($tmp_rank[1]) && file_exists("images/icons/ranks/" . $tmp_rank[1] )){
+                        $specialtype = "<img src='images/icons/ranks/" . $tmp_rank[1] . "' alt = '" . $specialrang . "' />";
+                    }
                 }
 
                 if (isforumadmin($userID)) {
@@ -875,7 +877,7 @@ function showtopic($topic, $edit, $addreply, $quoteID, $type)
         $specialtype = "";
         $getrank = safe_query(
             "SELECT IF
-                        (u.special_rank = 0, 0, CONCAT_WS(\"__\",r.rank, r.pic)) as RANK
+                        (u.special_rank = 0, 0, CONCAT_WS('__',r.rank, r.pic)) as RANK
                     FROM
                         " . PREFIX . "user u LEFT JOIN " . PREFIX . "forum_ranks r ON u.special_rank = r.rankID
                     WHERE
@@ -884,9 +886,11 @@ function showtopic($topic, $edit, $addreply, $quoteID, $type)
         $rank_data = mysqli_fetch_assoc($getrank);
 
         if ($rank_data[ 'RANK' ] != '0') {
-            $tmp_rank = explode("__", $rank_data[ 'RANK' ]);
+            $tmp_rank = explode("__", $rank_data[ 'RANK' ],2);
             $specialrang = $tmp_rank[0];
-            $specialtype = "<img src='images/icons/ranks/" . $tmp_rank[1] . "' alt = '" . $specialrang . "' />";
+            if(!empty($tmp_rank[1]) && file_exists("images/icons/ranks/" . $tmp_rank[1] )){
+                $specialtype = "<img src='images/icons/ranks/" . $tmp_rank[1] . "' alt = '" . $specialrang . "' />";
+            }
         }
 
         $spam_buttons = "";
