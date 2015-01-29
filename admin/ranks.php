@@ -228,12 +228,13 @@ if ($action == "add") {
             $max = '<input type="text" name="max['.$ds['rankID'].']" value="'.$max.'" size="6" dir="rtl" />';
 
             if ($ds['special']==1) {
-                $get = safe_query("SELECT nickname FROM ".PREFIX."user WHERE special_rank = '".$ds['rankID']."'");
+                $get = safe_query("SELECT nickname, userID FROM ".PREFIX."user WHERE special_rank = '".$ds['rankID']."'");
                 $user_list = array();
                 while ($user = mysqli_fetch_assoc($get)) {
-                    $user_list[] = $user['nickname'];
+                    $user_list[] = '<a href="admincenter.php?site=members&amp;action=edit&amp;id=' .
+                        $user['userID'] . '">' . $user['nickname'] . '</a>';
                 }
-                $user_list = "<br/><small>".$_language->module['used_for'].": ".implode(", ", $user_list)."</small>";
+                $user_list = "<br/><small>" . $_language->module['used_for'] . ": " . implode(", ", $user_list) . "</small>";
                 $min = "";
                 $max = "";
             }
