@@ -918,7 +918,7 @@ function showtopic($topic, $edit, $addreply, $quoteID, $type)
                     FROM
                         " . PREFIX . "user u LEFT JOIN " . PREFIX . "forum_ranks r ON u.special_rank = r.rankID
                     WHERE
-                        userID = '" . $userID . "'"
+                        userID = '" . $dr[ ' poster ' ] . "'"
         );
         $rank_data = mysqli_fetch_assoc($getrank);
 

@@ -987,7 +987,7 @@ if (isset($id) && getnickname($id) != '') {
             FROM
                 " . PREFIX . "user u LEFT JOIN " . PREFIX . "forum_ranks r ON u.special_rank = r.rankID
             WHERE
-                userID='" . $userID . "'"
+                userID='" . $ds[ 'userID' ] . "'"
         );
         $rank_data = mysqli_fetch_assoc($getrank);
 
