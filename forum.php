@@ -1355,6 +1355,7 @@ if (isset($_POST[ 'submit' ]) || isset($_POST[ 'movetopic' ]) || isset($_GET[ 'a
         $data_array['$kathname'] = $kathname;
         $data_array['$boardname'] = $boardname;
         $data_array['$moderators'] = $moderators;
+
         $forum_head = $GLOBALS["_template"]->replaceTemplate("forum_head", $data_array);
         echo $forum_head;
 
@@ -1435,12 +1436,34 @@ if (isset($_POST[ 'submit' ]) || isset($_POST[ 'movetopic' ]) || isset($_GET[ 'a
                 } else {
                     $ergebnis = safe_query(
                         "SELECT * FROM " . PREFIX .
-                        "forum_ranks WHERE $posts >= postmin AND $posts <= postmax"
+                        "forum_ranks WHERE $posts >= postmin AND $posts <= postmax AND special='0'"
                     );
                     $ds = mysqli_fetch_array($ergebnis);
                     $usertype = $ds[ 'rank' ];
                     $rang = '<img src="images/icons/ranks/' . $ds[ 'pic' ] . '" alt="">';
                 }
+
+                $specialrang = "";
+                $specialtype = "";
+                $getrank = safe_query(
+                    "SELECT IF
+                        (u.special_rank = 0, 0, CONCAT_WS('__', r.rank, r.pic)) as RANK
+                    FROM
+                        " . PREFIX . "user u LEFT JOIN " . PREFIX . "forum_ranks r ON u.special_rank = r.rankID
+                    WHERE
+                        userID = '" . $userID . "'"
+                );
+                $rank_data = mysqli_fetch_assoc($getrank);
+
+                if ($rank_data[ 'RANK' ] != '0') {
+                    $tmp_rank = explode("__", $rank_data[ 'RANK' ], 2);
+                    $specialrang = $tmp_rank[ 0 ];
+                    if (!empty($tmp_rank[1]) && file_exists("images/icons/ranks/" . $tmp_rank[1])) {
+                        $specialtype =
+                        "<img src='images/icons/ranks/" . $tmp_rank[ 1 ] . "' alt = '" . $specialrang . "' />";
+                    }
+                }
+
                 $actions = '';
                 $quote = '';
 
@@ -1467,6 +1490,8 @@ if (isset($_POST[ 'submit' ]) || isset($_POST[ 'movetopic' ]) || isset($_GET[ 'a
                 $data_array['$registered'] = $registered;
                 $data_array['$message'] = $message;
                 $data_array['$signatur'] = $signatur;
+                $data_array['$specialrang'] = $specialrang;
+                $data_array['$specialtype'] = $specialtype;
                 $forum_topic_content = $GLOBALS["_template"]->replaceTemplate("forum_topic_content", $data_array);
                 echo $forum_topic_content;
 

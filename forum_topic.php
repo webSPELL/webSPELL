@@ -654,11 +654,32 @@ function showtopic($topic, $edit, $addreply, $quoteID, $type)
                 } else {
                     $ergebnis = safe_query(
                         "SELECT * FROM " . PREFIX .
-                        "forum_ranks WHERE $posts >= postmin AND $posts <= postmax AND postmax >0"
+                        "forum_ranks WHERE $posts >= postmin AND $posts <= postmax AND postmax >0 AND special='0'"
                     );
                     $ds = mysqli_fetch_array($ergebnis);
                     $usertype = $ds['rank'];
                     $rang = '<img src="images/icons/ranks/' . $ds['pic'] . '" alt="">';
+                }
+
+                $specialrang = "";
+                $specialtype = "";
+                $getrank = safe_query(
+                    "SELECT IF
+                        (u.special_rank = 0, 0, CONCAT_WS('__',r.rank, r.pic)) as RANK
+                    FROM
+                        " . PREFIX . "user u LEFT JOIN " . PREFIX . "forum_ranks r ON u.special_rank = r.rankID
+                    WHERE
+                        userID = '" . $userID . "'"
+                );
+                $rank_data = mysqli_fetch_assoc($getrank);
+
+                if ($rank_data[ 'RANK' ] != '0') {
+                    $tmp_rank = explode("__", $rank_data[ 'RANK' ], 2);
+                    $specialrang = $tmp_rank[0];
+                    if (!empty($tmp_rank[1]) && file_exists("images/icons/ranks/" . $tmp_rank[1])) {
+                        $specialtype =
+                            "<img src='images/icons/ranks/" . $tmp_rank[1] . "' alt = '" . $specialrang . "' />";
+                    }
                 }
 
                 if (isforumadmin($userID)) {
@@ -695,6 +716,8 @@ function showtopic($topic, $edit, $addreply, $quoteID, $type)
                 $data_array['$registered'] = $registered;
                 $data_array['$message'] = $message;
                 $data_array['$signatur'] = $signatur;
+                $data_array['$specialrang'] = $specialrang;
+                $data_array['$specialtype'] = $specialtype;
                 $forum_topic_content = $GLOBALS["_template"]->replaceTemplate("forum_topic_content", $data_array);
                 echo $forum_topic_content;
 
@@ -880,11 +903,31 @@ function showtopic($topic, $edit, $addreply, $quoteID, $type)
         } else {
             $ergebnis = safe_query(
                 "SELECT * FROM " . PREFIX .
-                "forum_ranks WHERE $posts >= postmin AND $posts <= postmax AND postmax >0"
+                "forum_ranks WHERE $posts >= postmin AND $posts <= postmax AND postmax >0 AND special='0'"
             );
             $ds = mysqli_fetch_array($ergebnis);
             $usertype = $ds['rank'];
             $rang = '<img src="images/icons/ranks/' . $ds['pic'] . '" alt="">';
+        }
+
+        $specialrang = "";
+        $specialtype = "";
+        $getrank = safe_query(
+            "SELECT IF
+                        (u.special_rank = 0, 0, CONCAT_WS('__',r.rank, r.pic)) as RANK
+                    FROM
+                        " . PREFIX . "user u LEFT JOIN " . PREFIX . "forum_ranks r ON u.special_rank = r.rankID
+                    WHERE
+                        userID = '" . $dr['poster'] . "'"
+        );
+        $rank_data = mysqli_fetch_assoc($getrank);
+
+        if ($rank_data[ 'RANK' ] != '0') {
+            $tmp_rank = explode("__", $rank_data[ 'RANK' ], 2);
+            $specialrang = $tmp_rank[0];
+            if (!empty($tmp_rank[1]) && file_exists("images/icons/ranks/" . $tmp_rank[1])) {
+                $specialtype = "<img src='images/icons/ranks/" . $tmp_rank[1] . "' alt = '" . $specialrang . "' />";
+            }
         }
 
         $spam_buttons = "";
@@ -927,6 +970,8 @@ function showtopic($topic, $edit, $addreply, $quoteID, $type)
         $data_array['$registered'] = $registered;
         $data_array['$message'] = $message;
         $data_array['$signatur'] = $signatur;
+        $data_array['$specialrang'] = $specialrang;
+        $data_array['$specialtype'] = $specialtype;
         $forum_topic_content = $GLOBALS["_template"]->replaceTemplate("forum_topic_content", $data_array);
         echo $forum_topic_content;
         unset($actions);
