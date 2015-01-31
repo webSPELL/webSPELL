@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2009 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -26,28 +26,8 @@
 */
 
 $language_array = Array(
-
-/* do not edit above this line */
-
-	'about'=>'Über',
-	'active'=>'aktiv',
-	'activity'=>'Aktivität',
-	'awards'=>'Auszeichnungen',
-	'back_overview'=>'&raquo; <a href="index.php?site=members"><b>zurück zur Mitgliederübersicht</b></a>',
-	'challenge'=>'Herausfordern',
-	'contact'=>'Kontakt',
-	'go'=>'Los!',
-	'inactive'=>'inaktiv',
-	'member'=>'Mitglied',
-	'members'=>'Mitglieder',
-	'nickname'=>'Nickname',
-	'no_description'=>'keine Beschreibung vorhanden',
-	'no_entries'=>'Keine Einträge vorhanden',
-	'position'=>'Position',
-	'results'=>'Ergebnisse',
-	'show_details'=>'&raquo; <a href="index.php?site=members&amp;action=show&amp;squadID=%squadID%"><b>Details anzeigen</b></a>',
-	'show_only'=>'Zeige nur',
-	'status'=>'Status',
-	'town'=>'Ort'
-);
-?>
+	'used_for'=>'Genutzt für',
+	'special_rank'=>'Spezialrank',
+	'no_special_rank'=>'kein Spezial Rank'
+ );
+ ?>

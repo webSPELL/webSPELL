@@ -220,7 +220,7 @@ class SpamApi
             $request = new \HttpRequest($this->host, \HttpRequest::METH_POST);
             $request->addPostFields($data);
             try {
-                return $request->getBody();
+                return $request->send()->getBody();
             } catch (\Exception $ex) {
                 $this->logError("No Api-Respone. Code: " . $ex->getCode() . ", Message: " . $ex->getMessage(), $data);
                 return "";

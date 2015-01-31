@@ -26,6 +26,7 @@
 */
 
 $_language->readModule('users');
+$_language->readModule('rank_special', true);
 
 if (!isuseradmin($userID) || mb_substr(basename($_SERVER[ 'REQUEST_URI' ]), 0, 15) != "admincenter.php") {
     die($_language->module[ 'access_denied' ]);
@@ -225,7 +226,8 @@ if (isset($_POST[ 'add' ])) {
 									 mouse='" . $_POST[ 'mouse' ] . "',
 	 								 mousepad='" . $_POST[ 'mousepad' ] . "',
 									 homepage='" . $_POST[ 'homepage' ] . "',
-									 about='" . $_POST[ 'about' ] . "' WHERE userID='" . $_POST[ 'id' ] . "' "
+									 about='" . $_POST[ 'about' ] . "',
+									 special_rank = '".$_POST['special_rank']."' WHERE userID='" . $_POST[ 'id' ] . "' "
             );
 
             if (isset($_POST[ 'avatar' ])) {
@@ -551,37 +553,6 @@ if ($action == "activate") {
     $ds = mysqli_fetch_array(safe_query("SELECT * FROM " . PREFIX . "user WHERE userID='$id'"));
 
     if ($ds[ 'userpic' ]) {
-        $viewpic = '<a href="javascript:window.open(\'../images/userpics/' . $ds[ 'userpic' ] .
-            '\',\'userpic\',\'width=250,height=230\')">' . $_language->module[ 'picture' ] . '</a>';
-    } else {
-        $viewpic = $_language->module[ 'picture' ];
-    }
-    if ($ds[ 'avatar' ]) {
-        $viewavatar = '<a href="javascript:window.open(\'../images/avatars/' . $ds[ 'avatar' ] .
-            '\',\'avatar\',\'width=120,height=120\')">' . $_language->module[ 'avatar' ] . '</a>';
-    } else {
-        $viewavatar = $_language->module[ 'avatar' ];
-    }
-    $sex = '<option value="m">' . $_language->module[ 'male' ] . '</option><option value="f">' .
-        $_language->module[ 'female' ] . '</option><option value="u">' . $_language->module[ 'not_available' ] .
-        '</option>';
-    $sex = str_replace('value="' . $ds[ 'sex' ] . '"', 'value="' . $ds[ 'sex' ] . '" selected="selected"', $sex);
-    $countries = getcountries();
-    $countries = str_replace(" selected=\"selected\"", "", $countries);
-    $countries = str_replace(
-        'value="' . $ds[ 'country' ] . '"',
-        'value="' . $ds[ 'country' ] . '" selected="selected"',
-        $countries
-    );
-    $b_day = mb_substr($ds[ 'birthday' ], 8, 2);
-    $b_month = mb_substr($ds[ 'birthday' ], 5, 2);
-    $b_year = mb_substr($ds[ 'birthday' ], 0, 4);
-
-    $CAPCLASS = new \webspell\Captcha;
-    $CAPCLASS->createTransaction();
-    $hash = $CAPCLASS->getHash();
-
-    if ($ds[ 'userpic' ]) {
         $viewpic = '<a href="javascript:void(0);" onclick="window.open(\'../images/userpics/' . $ds[ 'userpic' ] .
             '\',\'userpic\',\'width=250,height=230\')">' . $_language->module[ 'picture' ] . '</a>';
     } else {
@@ -612,6 +583,32 @@ if ($action == "activate") {
     $CAPCLASS->createTransaction();
     $hash = $CAPCLASS->getHash();
 
+    $get_rank = mysqli_fetch_assoc(
+        safe_query(
+            "SELECT
+              special_rank
+            FROM
+              " . PREFIX . "user
+            WHERE
+              userID='" . $id . "'"
+        )
+    );
+
+    $ranks = "<option value='0'>" . $_language->module[ 'no_special_rank' ] . "</option>";
+    $get = safe_query("SELECT * FROM " . PREFIX . "forum_ranks WHERE special='1'");
+    while ($rank = mysqli_fetch_assoc($get)) {
+        $ranks .="<option value='" . $rank[ 'rankID' ] . "'>" . $rank[ 'rank' ] . "</option>";
+    }
+    if ($get_rank[ 'special_rank' ]) {
+        $ranks = str_replace(
+            "value='" . $get_rank[ 'special_rank' ] . "",
+            "value='" . $get_rank[ 'special_rank' ] . "' selected='selected'",
+            $ranks
+        );
+    } else {
+        $ranks = str_replace("value='0", "value='0' selected='selected'", $ranks);
+    }
+
     echo '<form method="post" enctype="multipart/form-data" action="admincenter.php?site=users&amp;page=' .
         $_GET[ 'page' ] . '&amp;type=' . $_GET[ 'type' ] . '&amp;sort=' . $_GET[ 'sort' ] . '">
     <table width="100%" border="0" cellspacing="1" cellpadding="3">
@@ -625,6 +622,10 @@ if ($action == "activate") {
     <tr>
         <td><b>' . $_language->module[ 'nickname' ] . '</b></td>
         <td><input type="text" name="nickname" value="' . $ds[ 'nickname' ] . '" size="60" /></td>
+    </tr>
+    <tr>
+        <td><b>' . $_language->module[ 'special_rank' ] . '</b></td>
+        <td><select name="special_rank">' . $ranks . '</select></td>
     </tr>
     <tr>
         <td><b>' . $_language->module[ 'email' ] . '</b></td>
