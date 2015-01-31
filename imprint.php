@@ -119,5 +119,6 @@ $data_array = array();
 $data_array['$headline1'] = $headline1;
 $data_array['$imprint_head'] = $imprint_head;
 $data_array['$headline2'] = $headline2;
+$data_array['$version'] = $version;
 $imprint = $GLOBALS["_template"]->replaceTemplate("imprint", $data_array);
 echo $imprint;
