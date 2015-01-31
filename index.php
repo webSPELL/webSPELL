@@ -178,7 +178,7 @@ header('X-UA-Compatible: IE=edge,chrome=1');
             </div>
 
             <!-- right column -->
-            <div id="rightcol" class="col-md-3 col-sm-3">
+            <div id="rightcol" class="col-md-3 col-sm-3 col-xs-12">
                 <!-- login include -->
                 <div>
                     <strong><?php echo $myclanname . "." . $index_language[ 'login' ]; ?></strong><br>
