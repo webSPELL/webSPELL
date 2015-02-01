@@ -157,13 +157,10 @@ if ($action == "add") {
                             safe_query(
                                 "INSERT INTO
                                     `" . PREFIX . "countries` (
-                                        `countryID`,
                                         `country`,
                                         `short`,
                                         `fav`
-                                    )
-                                    VALUES (
-                                        '',
+                                    ) VALUES (
                                         '" . $country . "',
                                         '" . $short . "',
                                         '" . $fav . "'
