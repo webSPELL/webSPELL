@@ -115,7 +115,6 @@ if ($action == "add") {
     $CAPCLASS = new \webspell\Captcha;
     if ($CAPCLASS->checkCaptcha(0, $_POST[ 'captcha_hash' ])) {
         if (checkforempty(array('pattern'))) {
-
             $errors = array();
 
             $upload = new \webspell\Upload('rank');
@@ -169,7 +168,6 @@ if ($action == "add") {
     $CAPCLASS = new \webspell\Captcha;
     if ($CAPCLASS->checkCaptcha(0, $_POST[ 'captcha_hash' ])) {
         if (checkforempty(array('pattern'))) {
-
             safe_query(
                 "UPDATE
                     " . PREFIX . "smileys

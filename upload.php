@@ -59,7 +59,6 @@ if (isset($_GET[ 'action' ])) {
 }
 
 if (isset($_POST[ 'submit' ])) {
-
     $screen = new \webspell\Upload('screen');
 
     if ($screen->hasFile()) {

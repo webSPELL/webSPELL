@@ -153,7 +153,6 @@ if ($action == "add") {
                         $imageInformation = getimagesize($upload->getTempFile());
 
                         if (is_array($imageInformation)) {
-
                             safe_query(
                                 "INSERT INTO
                                     `" . PREFIX . "countries` (
@@ -255,7 +254,11 @@ if ($action == "add") {
     $CAPCLASS = new \webspell\Captcha;
     if ($CAPCLASS->checkCaptcha(0, $_GET[ 'captcha_hash' ])) {
         $countryID = (int) $_GET[ "countryID" ];
-        $ds = mysqli_fetch_array(safe_query("SELECT short FROM `" . PREFIX . "countries` WHERE `countryID` = '" . $countryID . "'"));
+        $ds = mysqli_fetch_array(
+            safe_query(
+                "SELECT short FROM `" . PREFIX . "countries` WHERE `countryID` = '" . $countryID . "'"
+            )
+        );
         safe_query("DELETE FROM `" . PREFIX . "countries` WHERE `countryID` = '" . $countryID . "'");
         $file = $ds['short'].".gif";
         if (file_exists($filepath.$file)) {

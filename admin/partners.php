@@ -96,11 +96,8 @@ if (isset($_GET[ 'delete' ])) {
 
         if ($upload->hasFile()) {
             if ($upload->hasError() === false) {
-
                 $mime_types = array('image/jpeg','image/png','image/gif');
-
                 if ($upload->supportedMimeType($mime_types)) {
-
                     $imageInformation =  getimagesize($upload->getTempFile());
 
                     if (is_array($imageInformation)) {
@@ -131,7 +128,8 @@ if (isset($_GET[ 'delete' ])) {
                             if ($upload->saveAs($filepath.$file)) {
                                 @chmod($filepath.$file, $new_chmod);
                                 safe_query(
-                                    "UPDATE " . PREFIX . "partners SET banner='" . $file . "' WHERE partnerID='" . $id . "'"
+                                    "UPDATE " . PREFIX . "partners
+                                    SET banner='" . $file . "' WHERE partnerID='" . $id . "'"
                                 );
                             }
                         } else {
@@ -181,11 +179,8 @@ if (isset($_GET[ 'delete' ])) {
 
         if ($upload->hasFile()) {
             if ($upload->hasError() === false) {
-
                 $mime_types = array('image/jpeg','image/png','image/gif');
-
                 if ($upload->supportedMimeType($mime_types)) {
-
                     $imageInformation =  getimagesize($upload->getTempFile());
 
                     if (is_array($imageInformation)) {
@@ -216,7 +211,8 @@ if (isset($_GET[ 'delete' ])) {
                             if ($upload->saveAs($filepath.$file)) {
                                 @chmod($filepath.$file, $new_chmod);
                                 safe_query(
-                                    "UPDATE " . PREFIX . "partners SET banner='" . $file . "' WHERE partnerID='" . $id . "'"
+                                    "UPDATE " . PREFIX . "partners
+                                    SET banner='" . $file . "' WHERE partnerID='" . $id . "'"
                                 );
                             }
                         } else {

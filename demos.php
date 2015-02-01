@@ -76,7 +76,6 @@ function top5()
     echo $top5_head;
     $n = 1;
     while ($ds = mysqli_fetch_array($ergebnis)) {
-
         $country1 = "[flag]" . $ds[ 'country1' ] . "[/flag]";
         $country1 = flags($country1);
         $country2 = "[flag]" . $ds[ 'country2' ] . "[/flag]";
@@ -106,9 +105,7 @@ $title_demos = $GLOBALS["_template"]->replaceTemplate("title_demos", array());
 echo $title_demos;
 
 if (isset($_POST[ 'save' ])) {
-
     if (isfileadmin($userID)) {
-
         $demo = new \webspell\Upload('demo');
 
         $game = $_POST[ 'game' ];
@@ -155,7 +152,6 @@ if (isset($_POST[ 'save' ])) {
         if (count($error)) {
             echo generateErrorBoxFromArray($_language->module[ 'errors_there' ], $error);
         } else {
-
             safe_query(
                 "INSERT INTO `" . PREFIX . "demos` (
                     `date`,
@@ -206,9 +202,7 @@ if (isset($_POST[ 'save' ])) {
         echo generateErrorBox($_language->module[ 'no_access' ]);
     }
 } elseif (isset($_POST[ 'saveedit' ])) {
-
     if (isfileadmin($userID)) {
-
         $demo = new \webspell\Upload('demo');
 
         $demoID = (int)$_POST[ 'demoID' ];
@@ -256,7 +250,6 @@ if (isset($_POST[ 'save' ])) {
         if (count($error)) {
             echo generateErrorBoxFromArray($_language->module[ 'errors_there' ], $error);
         } else {
-
             if (isset($file)) {
                 $mysql_file = "file='" . $file . "',";
             } else {
@@ -293,9 +286,7 @@ if (isset($_POST[ 'save' ])) {
         echo generateErrorBox($_language->module[ 'no_access' ]);
     }
 } elseif ($action == "delete") {
-
     if (isfileadmin($userID)) {
-
         $demoID = (int)$_GET[ 'demoID' ];
         $filepath = "./demos/";
         $ergebnis = safe_query("SELECT * FROM " . PREFIX . "demos WHERE demoID = '" . $demoID . "'");
@@ -659,7 +650,6 @@ value="' . $_language->module[ 'rate' ] . '" class="btn btn-primary">
         echo $_language->module[ 'no_demos' ];
     }
 } else {
-
     if (isset($_GET[ 'page' ])) {
         $page = (int)$_GET[ 'page' ];
     } else {

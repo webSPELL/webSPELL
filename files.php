@@ -99,7 +99,6 @@ if ($action == "save") {
     if (!isfileadmin($userID)) {
         echo generateErrorBox($_language->module[ 'no_access' ]);
     } else {
-
         $poster = $_POST[ 'poster' ];
         $filecat = $_POST[ 'filecat' ];
         $filename = $_POST[ 'filename' ];
@@ -200,7 +199,6 @@ if ($action == "save") {
     if (!isfileadmin($userID)) {
         echo generateErrorBox($_language->module[ 'no_access' ]);
     } else {
-
         $fileID = $_POST[ 'fileID' ];
         $upfile = $_FILES[ 'upfile' ];
         $filecat = $_POST[ 'filecat' ];
@@ -283,7 +281,6 @@ if ($action == "save") {
     if (!isfileadmin($userID)) {
         echo generateErrorBox($_language->module[ 'no_access' ]);
     } else {
-
         if (isset($_GET[ 'cat' ])) {
             $cat = $_GET[ 'cat' ];
         } else {

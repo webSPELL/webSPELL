@@ -291,17 +291,13 @@ if ($part == "groups") {
         $picture = $_FILES[ 'picture' ];
         $CAPCLASS = new \webspell\Captcha;
         if ($CAPCLASS->checkCaptcha(0, $_POST[ 'captcha_hash' ])) {
-
             $upload = new \webspell\Upload('picture');
             if ($upload->hasFile()) {
                 if ($upload->hasError() === false) {
                     $mime_types = array('image/jpeg', 'image/png', 'image/gif');
-
                     if ($upload->supportedMimeType($mime_types)) {
                         $imageInformation = getimagesize($upload->getTempFile());
-
                         if (is_array($imageInformation)) {
-
                             switch ($imageInformation[2]) {
                                 case 1:
                                     $endung = '.gif';

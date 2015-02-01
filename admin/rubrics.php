@@ -67,7 +67,8 @@ if (isset($_POST[ 'save' ])) {
                             if ($upload->saveAs($filepath . $file, true)) {
                                 @chmod($filepath . $file, $new_chmod);
                                 safe_query(
-                                    "UPDATE " . PREFIX . "news_rubrics SET pic='" . $file . "' WHERE rubricID='" . $id . "'"
+                                    "UPDATE " . PREFIX . "news_rubrics
+                                    SET pic='" . $file . "' WHERE rubricID='" . $id . "'"
                                 );
                             }
                         } else {
@@ -133,7 +134,8 @@ if (isset($_POST[ 'save' ])) {
                             if ($upload->saveAs($filepath . $file, true)) {
                                 @chmod($filepath . $file, $new_chmod);
                                 safe_query(
-                                    "UPDATE " . PREFIX . "news_rubrics SET pic='" . $file . "' WHERE rubricID='" . $id . "'"
+                                    "UPDATE " . PREFIX . "news_rubrics
+                                    SET pic='" . $file . "' WHERE rubricID='" . $id . "'"
                                 );
                             }
                         } else {

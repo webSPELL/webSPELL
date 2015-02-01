@@ -121,7 +121,6 @@ if ($action == "add") {
                         $imageInformation = getimagesize($upload->getTempFile());
 
                         if (is_array($imageInformation)) {
-
                             safe_query(
                                 "INSERT INTO " . PREFIX . "games (
                                     name,
@@ -213,9 +212,13 @@ if ($action == "add") {
 } elseif (isset($_GET[ "delete" ])) {
     $CAPCLASS = new \webspell\Captcha();
     if ($CAPCLASS->checkCaptcha(0, $_GET[ 'captcha_hash' ])) {
-        $ds = mysqli_fetch_array(safe_query("SELECT tag FROM " . PREFIX . "games WHERE gameID='" . $_GET[ "gameID" ] . "'"));
+        $ds = mysqli_fetch_array(
+            safe_query(
+                "SELECT tag FROM " . PREFIX . "games WHERE gameID='" . $_GET[ "gameID" ] . "'"
+            )
+        );
         safe_query("DELETE FROM " . PREFIX . "games WHERE gameID='" . $_GET[ "gameID" ] . "'");
-        if(file_exists($filepath.$ds['tag'].".gif")){
+        if (file_exists($filepath.$ds['tag'].".gif")) {
             unlink($filepath.$ds['tag'].".gif");
         }
         redirect("admincenter.php?site=games", "", 0);

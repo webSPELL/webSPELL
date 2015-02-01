@@ -42,11 +42,8 @@ if (isset($_POST['save'])) {
 
         if ($upload->hasFile()) {
             if ($upload->hasError() === false) {
-
                 $mime_types = array('image/jpeg','image/png','image/gif');
-
                 if ($upload->supportedMimeType($mime_types)) {
-
                     $imageInformation =  getimagesize($upload->getTempFile());
 
                     if (is_array($imageInformation)) {
@@ -106,11 +103,8 @@ if (isset($_POST['save'])) {
         $upload = new \webspell\Upload('banner');
         if ($upload->hasFile()) {
             if ($upload->hasError() === false) {
-
                 $mime_types = array('image/jpeg','image/png','image/gif');
-
                 if ($upload->supportedMimeType($mime_types)) {
-
                     $imageInformation =  getimagesize($upload->getTempFile());
 
                     if (is_array($imageInformation)) {

@@ -95,7 +95,9 @@ if (isset($_GET[ 'delete' ])) {
 
                             if ($upload->saveAs($filepath . $file, true)) {
                                 @chmod($filepath . $file, $new_chmod);
-                                safe_query("UPDATE " . PREFIX . "forum_ranks SET pic='".$file."' WHERE rankID='".$id."'");
+                                safe_query(
+                                    "UPDATE " . PREFIX . "forum_ranks SET pic='".$file."' WHERE rankID='".$id."'"
+                                );
                             }
                         } else {
                             $errors[] = $_language->module['broken_image'];
@@ -136,13 +138,15 @@ if (isset($_GET[ 'delete' ])) {
                         } else {
                             $maximum = $max[ $id ];
                         }
-                        safe_query("UPDATE
-                                        " . PREFIX . "forum_ranks
-                                    SET
-                                        rank='".$rank[$id]."',
-                                        postmin='".$min[$id]."',
-                                        postmax='".$maximum."'
-                                    WHERE rankID='$id'");
+                        safe_query(
+                            "UPDATE
+                                " . PREFIX . "forum_ranks
+                            SET
+                                rank='".$rank[$id]."',
+                                postmin='".$min[$id]."',
+                                postmax='".$maximum."'
+                            WHERE rankID='$id'"
+                        );
                     }
                 }
             }

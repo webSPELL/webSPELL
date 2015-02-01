@@ -36,7 +36,6 @@ if (isset($_POST[ 'save' ])) {
     if (!ispageadmin($userID) || !isnewsadmin($userID)) {
         echo generateAlert($_language->module['no_access'], 'alert-danger');
     } else {
-
         safe_query(
             "INSERT INTO
                 " . PREFIX . "links (
@@ -59,11 +58,8 @@ if (isset($_POST[ 'save' ])) {
 
         if ($upload->hasFile()) {
             if ($upload->hasError() === false) {
-
                 $mime_types = array('image/jpeg','image/png','image/gif');
-
                 if ($upload->supportedMimeType($mime_types)) {
-
                     $imageInformation =  getimagesize($upload->getTempFile());
 
                     if (is_array($imageInformation)) {
@@ -108,7 +104,6 @@ if (isset($_POST[ 'save' ])) {
     if (!ispageadmin($userID) || !isnewsadmin($userID)) {
         echo generateAlert($_language->module['no_access'], 'alert-danger');
     } else {
-
         safe_query(
             "UPDATE
                 " . PREFIX . "links
@@ -127,11 +122,8 @@ if (isset($_POST[ 'save' ])) {
         $upload = new \webspell\Upload('banner');
         if ($upload->hasFile()) {
             if ($upload->hasError() === false) {
-
                 $mime_types = array('image/jpeg','image/png','image/gif');
-
                 if ($upload->supportedMimeType($mime_types)) {
-
                     $imageInformation =  getimagesize($upload->getTempFile());
 
                     if (is_array($imageInformation)) {
