@@ -34,46 +34,55 @@ if (!isnewsadmin($userID) || mb_substr(basename($_SERVER[ 'REQUEST_URI' ]), 0, 1
 if (isset($_POST[ 'save' ])) {
     $CAPCLASS = new \webspell\Captcha;
     if ($CAPCLASS->checkCaptcha(0, $_POST[ 'captcha_hash' ])) {
-        $pic = $_FILES[ 'pic' ];
-        if (checkforempty(['name'])) {
+        if (checkforempty(array('name'))) {
             safe_query("INSERT INTO " . PREFIX . "news_rubrics ( rubric ) values( '" . $_POST[ 'name' ] . "' ) ");
             $id = mysqli_insert_id($_database);
 
             $filepath = "../images/news-rubrics/";
 
-            if ($pic[ 'name' ] != "") {
-                move_uploaded_file($pic[ 'tmp_name' ], $filepath . $pic[ 'name' ] . ".tmp");
-                @chmod($filepath . $pic[ 'name' ] . ".tmp", 0755);
-                $getimg = getimagesize($filepath . $pic[ 'name' ] . ".tmp");
-                $rubricpic = '';
-                if ($getimg[ 2 ] == 1) {
-                    $rubricpic = $id . '.gif';
-                } elseif ($getimg[ 2 ] == 2) {
-                    $rubricpic = $id . '.jpg';
-                } elseif ($getimg[ 2 ] == 3) {
-                    $rubricpic = $id . '.png';
-                }
-                if ($rubricpic != "") {
-                    if (file_exists($filepath . $id . '.gif')) {
-                        unlink($filepath . $id . '.gif');
+            $errors = array();
+
+            $upload = new \webspell\Upload('pic');
+            if ($upload->hasFile()) {
+                if ($upload->hasError() === false) {
+                    $mime_types = array('image/jpeg','image/png','image/gif');
+
+                    if ($upload->supportedMimeType($mime_types)) {
+                        $imageInformation = getimagesize($upload->getTempFile());
+
+                        if (is_array($imageInformation)) {
+                            switch ($imageInformation[ 2 ]) {
+                                case 1:
+                                    $endung = '.gif';
+                                    break;
+                                case 3:
+                                    $endung = '.png';
+                                    break;
+                                default:
+                                    $endung = '.jpg';
+                                    break;
+                            }
+                            $file = $tag . $endung;
+
+                            if ($upload->saveAs($filepath . $file, true)) {
+                                @chmod($filepath . $file, $new_chmod);
+                                safe_query(
+                                    "UPDATE " . PREFIX . "news_rubrics SET pic='" . $file . "' WHERE rubricID='" . $id . "'"
+                                );
+                            }
+                        } else {
+                            $errors[] = $_language->module['broken_image'];
+                        }
+                    } else {
+                        $errors[] = $_language->module['unsupported_image_type'];
                     }
-                    if (file_exists($filepath . $id . '.jpg')) {
-                        unlink($filepath . $id . '.jpg');
-                    }
-                    if (file_exists($filepath . $id . '.png')) {
-                        unlink($filepath . $id . '.png');
-                    }
-                    rename($filepath . $pic[ 'name' ] . ".tmp", $filepath . $rubricpic);
-                    safe_query(
-                        "UPDATE " . PREFIX . "news_rubrics SET pic='" . $rubricpic . "' WHERE rubricID='" . $id . "'"
-                    );
                 } else {
-                    @unlink($filepath . $pic[ 'name' ] . ".tmp");
-                    $error = $_language->module[ 'format_incorrect' ];
-                    die('<b>' . $error .
-                        '</b><br /><br /><a href="admincenter.php?site=rubrics&amp;action=edit&amp;rubricID=' . $id .
-                        '">&laquo; ' . $_language->module[ 'back' ] . '</a>');
+                    $errors[] = $upload->translateError();
                 }
+            }
+            if (count($errors)) {
+                $errors = array_unique($errors);
+                echo generateErrorBoxFromArray($_language->module['errors_there'], $errors);
             }
         } else {
             echo $_language->module[ 'information_incomplete' ];
@@ -84,8 +93,7 @@ if (isset($_POST[ 'save' ])) {
 } elseif (isset($_POST[ 'saveedit' ])) {
     $CAPCLASS = new \webspell\Captcha;
     if ($CAPCLASS->checkCaptcha(0, $_POST[ 'captcha_hash' ])) {
-        $pic = $_FILES[ 'pic' ];
-        if (checkforempty(['name'])) {
+        if (checkforempty(array('name'))) {
             safe_query(
                 "UPDATE
                     `" . PREFIX . "news_rubrics`
@@ -98,37 +106,49 @@ if (isset($_POST[ 'save' ])) {
             $id = $_POST[ 'rubricID' ];
             $filepath = "../images/news-rubrics/";
 
-            if ($pic[ 'name' ] != "") {
-                move_uploaded_file($pic[ 'tmp_name' ], $filepath . $pic[ 'name' ] . ".tmp");
-                @chmod($filepath . $pic[ 'name' ] . ".tmp", 0755);
-                $getimg = getimagesize($filepath . $pic[ 'name' ] . ".tmp");
-                $rubricpic = '';
-                if ($getimg[ 2 ] == 1) {
-                    $rubricpic = $id . '.gif';
-                } elseif ($getimg[ 2 ] == 2) {
-                    $rubricpic = $id . '.jpg';
-                } elseif ($getimg[ 2 ] == 3) {
-                    $rubricpic = $id . '.png';
-                }
-                if ($rubricpic != "") {
-                    if (file_exists($filepath . $id . '.gif')) {
-                        unlink($filepath . $id . '.gif');
-                    } elseif (file_exists($filepath . $id . '.jpg')) {
-                        unlink($filepath . $id . '.jpg');
-                    } elseif (file_exists($filepath . $id . '.png')) {
-                        unlink($filepath . $id . '.png');
+            $errors = array();
+
+            $upload = new \webspell\Upload('pic');
+            if ($upload->hasFile()) {
+                if ($upload->hasError() === false) {
+                    $mime_types = array('image/jpeg','image/png','image/gif');
+
+                    if ($upload->supportedMimeType($mime_types)) {
+                        $imageInformation = getimagesize($upload->getTempFile());
+
+                        if (is_array($imageInformation)) {
+                            switch ($imageInformation[ 2 ]) {
+                                case 1:
+                                    $endung = '.gif';
+                                    break;
+                                case 3:
+                                    $endung = '.png';
+                                    break;
+                                default:
+                                    $endung = '.jpg';
+                                    break;
+                            }
+                            $file = $tag . $endung;
+
+                            if ($upload->saveAs($filepath . $file, true)) {
+                                @chmod($filepath . $file, $new_chmod);
+                                safe_query(
+                                    "UPDATE " . PREFIX . "news_rubrics SET pic='" . $file . "' WHERE rubricID='" . $id . "'"
+                                );
+                            }
+                        } else {
+                            $errors[] = $_language->module['broken_image'];
+                        }
+                    } else {
+                        $errors[] = $_language->module['unsupported_image_type'];
                     }
-                    rename($filepath . $pic[ 'name' ] . ".tmp", $filepath . $rubricpic);
-                    safe_query(
-                        "UPDATE " . PREFIX . "news_rubrics SET pic='" . $rubricpic . "' WHERE rubricID='" . $id . "'"
-                    );
                 } else {
-                    @unlink($filepath . $pic[ 'name' ] . ".tmp");
-                    $error = $_language->module[ 'format_incorrect' ];
-                    die('<b>' . $error .
-                        '</b><br /><br /><a href="admincenter.php?site=rubrics&amp;action=edit&amp;rubricID=' . $id .
-                        '">&laquo; ' . $_language->module[ 'back' ] . '</a>');
+                    $errors[] = $upload->translateError();
                 }
+            }
+            if (count($errors)) {
+                $errors = array_unique($errors);
+                echo generateErrorBoxFromArray($_language->module['errors_there'], $errors);
             }
         } else {
             echo $_language->module[ 'information_incomplete' ];
@@ -139,7 +159,7 @@ if (isset($_POST[ 'save' ])) {
 } elseif (isset($_GET[ 'delete' ])) {
     $CAPCLASS = new \webspell\Captcha;
     if ($CAPCLASS->checkCaptcha(0, $_GET[ 'captcha_hash' ])) {
-        $rubricID = $_GET[ 'rubricID' ];
+        $rubricID = (int)$_GET[ 'rubricID' ];
         $filepath = "../images/news-rubrics/";
         safe_query("DELETE FROM " . PREFIX . "news_rubrics WHERE rubricID='$rubricID'");
         if (file_exists($filepath . $rubricID . '.gif')) {
@@ -192,7 +212,7 @@ if ($action == "add") {
     echo '<h1>&curren; <a href="admincenter.php?site=rubrics" class="white">' . $_language->module[ 'news_rubrics' ] .
         '</a> &raquo; ' . $_language->module[ 'edit_rubric' ] . '</h1>';
 
-    $rubricID = $_GET[ 'rubricID' ];
+    $rubricID = (int)$_GET[ 'rubricID' ];
     $ergebnis = safe_query("SELECT * FROM " . PREFIX . "news_rubrics WHERE rubricID='$rubricID'");
     $ds = mysqli_fetch_array($ergebnis);
 
