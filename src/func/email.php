@@ -28,7 +28,7 @@
 
 namespace webspell;
 
-require '../../components/phpmailer/PHPMailerAutoload.php';
+require 'phpmailer/PHPMailerAutoload.php';
 
 class Email
 {
@@ -47,44 +47,61 @@ class Email
             $secure = $ds['secure'];
 
         }
+
+        if ($smtp === 1) {
+            $pop = POP3::popBeforeSmtp('$host', 110, 30, '$user', '$password', $debug);
+        }
+
         $mail = new PHPMailer;
 
         $mail->SMTPDebug = $debug;
+        $mail->Debugoutput = 'html';
 
         if ($smtp === 1) {
             $mail->isSMTP();
-            $mail->Host = $host;
+            $mail->Host = "$host";
             if ($auth === 1) {
                 $mail->SMTPAuth = true;
-                $mail->Username = $user;
-                $mail->Password = $password;
+                $mail->Username = "$user";
+                $mail->Password = "$password";
             } else {
                 $mail->SMTPAuth = false;
             }
 
             if (extension_loaded('openssl')) {
-                $mail->SMTPSecure = $secure;
-                $mail->Port = $port;
+                switch ($secure) {
+                    case 0:
+                        $mail->SMTPSecure = '';
+                        break;
+                    case 1:
+                        $mail->SMTPSecure = 'tls';
+                        break;
+                    case 2:
+                        $mail->SMTPSecure = 'ssl';
+                        break;
+                }
             }
         } else {
             $mail->isMail();
         }
 
-        $mail->From = $from;
-        $mail->FromName = $module;
-        $mail->addAddress($to);
+        $mail->Port = $port;
+
+        $mail->From = '$from';
+        $mail->FromName = '$module';
+        $mail->addAddress('$to');
 
         if ($html === 1) {
             $mail->isHTML(true);
-            $mail->msgHTML($message);
+            $mail->msgHTML('$message');
         } else {
             $mail->isHTML(false);
-            $plain = $mail->html2text($message);
-            $mail->Body = $plain;
-            $mail->AltBody = $plain;
+            $plain = $mail->html2text('$message');
+            $mail->Body = '$plain';
+            $mail->AltBody = '$plain';
         }
 
-        $mail->Subject = $subject;
+        $mail->Subject = '$subject';
 
         if (!$mail->send()) {
             return 'Mailer Error: ' . $mail->ErrorInfo;

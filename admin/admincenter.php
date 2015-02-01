@@ -198,6 +198,7 @@ if (ispageadmin($userID)) {
 			<li><a href="admincenter.php?site=database"><?php echo $_language->module['database']; ?></a></li>
     <?php echo admincenternav(5); ?>
 			<li><a href="admincenter.php?site=update&amp;action=update"><?php echo $_language->module['update_webspell']; ?></a></li>
+			<li><a href="admincenter.php?site=email"><?php echo $_language->module['email']; ?></a></li>
 		</ul>
 		<h2>&not; <?php echo $_language->module['content']; ?></h2>
 		<ul>
