@@ -61,9 +61,9 @@ if (isset($_POST[ 'submit' ])) {
     if ($CAPCLASS->checkCaptcha(0, $_POST[ 'captcha_hash' ])) {
         $test = \webspell\Email::sendEmail($admin_email, 'Test eMail', $to, $subject, $message);
         var_dump($test);
-        redirect("admincenter.php?site=email", "", 10);
+        redirect("admincenter.php?site=email&amp;action=test", "", 10);
     } else {
-        redirect("admincenter.php?site=email", $_language->module[ 'transaction_invalid' ], 3);
+        redirect("admincenter.php?site=email&amp;action=test", $_language->module[ 'transaction_invalid' ], 3);
     }
 } else {
     $settings = safe_query("SELECT * FROM " . PREFIX . "email");
@@ -111,10 +111,6 @@ if (isset($_POST[ 'submit' ])) {
         $_language->module[ 'debug_4' ] . "</option>";
     $debug =
         str_replace("value='" . $ds[ 'debug' ] . "'", "value='" . $ds[ 'debug' ] . "' selected='selected'", $debug);
-
-    $CAPCLASS = new \webspell\Captcha;
-    $CAPCLASS->createTransaction();
-    $hash = $CAPCLASS->getHash();
 }
 
 
