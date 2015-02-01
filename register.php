@@ -166,15 +166,8 @@ if (isset($_POST['save'])) {
                 array(stripslashes($username), stripslashes($activationlink), $hp_title, $hp_url),
                 $_language->module['mail_text']
             );
-
-            if (
-                mail(
-                    $ToEmail,
-                    $header,
-                    $Message,
-                    "From:" . $admin_email . "\nContent-type: text/plain; charset=utf-8\n"
-                )
-            ) {
+            $sendmail = \webspell\Email::sendEmail($admin_email, 'Register', $ToEmail, $header, $Message);
+            if ($sendmail) {
                 redirect("index.php", $_language->module['register_successful'], 3);
                 $show = false;
             } else {

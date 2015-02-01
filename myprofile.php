@@ -408,13 +408,8 @@ if (!$userID) {
                 $_language->module['mail_text']
             );
 
-            if (mail(
-                $ToEmail,
-                $header,
-                $Message,
-                "From:" . $admin_email . "\nContent-type: text/plain; charset=utf-8\n"
-            )
-            ) {
+            $sendmail = \webspell\Email::sendEmail($admin_email, 'Profile', $ToEmail, $header, $Message);
+            if ($sendmail) {
                 echo $_language->module['mail_changed'];
             } else {
                 echo $_language->module['mail_failed'];

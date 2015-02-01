@@ -59,21 +59,15 @@ if ($action == "save") {
                     )"
             );
 
-            $header = "From:" . $hp_title . "<" . $admin_email . ">\n";
-            $header .= "Reply-To: " . $admin_email . "\n";
-            $header .= "Content-Type: text/html; charset=utf-8\n";
             $vars = array('%delete_key%', '%homepage_url%', '%mail%');
             $repl = array($pass, $hp_url, $email);
-            mail(
-                $email,
-                $hp_title . ": " . $_language->module['newsletter_registration'],
-                str_replace(
-                    $vars,
-                    $repl,
-                    $_language->module['success_mail']
-                ),
-                $header
+            $subject = $hp_title . ": " . $_language->module['newsletter_registration'];
+            $message = str_replace(
+                $vars,
+                $repl,
+                $_language->module['success_mail']
             );
+            \webspell\Email::sendEmail($admin_email, 'Newsletter', $email, $subject, $message);
 
             redirect(
                 'index.php?site=newsletter',
@@ -123,21 +117,15 @@ if ($action == "save") {
         $email = $_POST['email'];
         $pass = $dn['pass'];
 
-        $header = "From:" . $hp_title . "<" . $admin_email . ">\n";
-        $header .= "Reply-To: " . $admin_email . "\n";
-        $header .= "Content-Type: text/html; charset=utf-8\n";
         $vars = array('%delete_key%', '%homepage_url%', '%mail%');
         $repl = array($pass, $hp_url, $email);
-        mail(
-            $email,
-            $hp_title . ": " . $_language->module['deletion_key'],
-            str_replace(
-                $vars,
-                $repl,
-                $_language->module['request_mail']
-            ),
-            $header
+        $subject = $hp_title . ": " . $_language->module['deletion_key'];
+        $message = str_replace(
+            $vars,
+            $repl,
+            $_language->module['request_mail']
         );
+        \webspell\Email::sendEmail($admin_email, 'Newsletter', $email, $subject, $message);
 
         redirect(
             'index.php?site=newsletter',

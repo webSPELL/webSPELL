@@ -79,18 +79,12 @@ if ($action == "send") {
     }
 
     if (!count($fehler) && $run) {
-        $header = "From:$from\n";
-        $header .= "Reply-To: $from\n";
-        $header .= "Content-Type: text/html; charset=utf-8\n";
-        mail(
-            $getemail,
-            stripslashes($subject),
-            stripslashes(
-                'This mail was send over your webSPELL - Website (IP ' . $GLOBALS['ip'] . '): ' . $hp_url .
-                '<br><br><strong>' . getinput($name) . ' writes:</strong><br>' . clearfromtags($text)
-            ),
-            $header
+        $message = stripslashes(
+            'This mail was send over your webSPELL - Website (IP ' . $GLOBALS['ip'] . '): ' . $hp_url .
+            '<br><br><strong>' . getinput($name) . ' writes:</strong><br>' . clearfromtags($text)
         );
+        \webspell\Email::sendEmail($from, 'Contact', $getemail, stripslashes($subject), $message);
+
         redirect('index.php?site=contact', $_language->module['send_successfull'], 3);
         unset($_POST['name']);
         unset($_POST['from']);

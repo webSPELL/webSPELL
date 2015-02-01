@@ -64,14 +64,9 @@ if (isset($_POST[ 'submit' ])) {
             $header = str_replace($vars, $repl, $_language->module[ 'email_subject' ]);
             $Message = str_replace($vars, $repl, $_language->module[ 'email_text' ]);
 
-            if (
-                mail(
-                    $ToEmail,
-                    $header,
-                    $Message,
-                    "From:" . $admin_email . "\nContent-type: text/plain; charset=utf-8\n"
-                )
-            ) {
+            $sendmail = \webspell\Email::sendEmail($admin_email, 'Lost Password', $ToEmail, $header, $Message);
+
+            if ($sendmail) {
                 echo str_replace($vars, $repl, $_language->module[ 'successful' ]);
             } else {
                 echo $_language->module[ 'email_failed' ];

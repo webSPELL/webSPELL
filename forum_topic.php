@@ -171,13 +171,8 @@ if (isset($_POST['newreply']) && !isset($_POST['preview'])) {
                     array(html_entity_decode($poster), $link, $hp_title, 'http://' . $hp_url),
                     $maillanguage->module['notify_mail']
                 );
-                $header = "From:" . $admin_email . "\nContent-type: text/plain; charset=utf-8\n";
-                @mail(
-                    $email['mail'],
-                    $maillanguage->module['new_reply'] . ' (' . $hp_title . ')',
-                    $forum_topic_notify,
-                    $header
-                );
+                $subject = $maillanguage->module['new_reply'] . ' (' . $hp_title . ')';
+                \webspell\Email::sendEmail($admin_email, 'Forum', $email['mail'], $subject, $forum_topic_notify);
             }
         }
 

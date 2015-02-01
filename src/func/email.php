@@ -48,7 +48,7 @@ class Email
 
         }
 
-        if ($smtp === 1) {
+        if ($smtp == 2) {
             $pop = POP3::popBeforeSmtp('$host', 110, 30, '$user', '$password', $debug);
         }
 
@@ -57,10 +57,10 @@ class Email
         $mail->SMTPDebug = $debug;
         $mail->Debugoutput = 'html';
 
-        if ($smtp === 1) {
+        if ($smtp == 1) {
             $mail->isSMTP();
             $mail->Host = "$host";
-            if ($auth === 1) {
+            if ($auth == 1) {
                 $mail->SMTPAuth = true;
                 $mail->Username = "$user";
                 $mail->Password = "$password";
@@ -91,7 +91,7 @@ class Email
         $mail->FromName = '$module';
         $mail->addAddress('$to');
 
-        if ($html === 1) {
+        if ($html == 1) {
             $mail->isHTML(true);
             $mail->msgHTML('$message');
         } else {
@@ -104,9 +104,9 @@ class Email
         $mail->Subject = '$subject';
 
         if (!$mail->send()) {
-            return 'Mailer Error: ' . $mail->ErrorInfo;
+            return array("result"=>"fail","error"=>$mail->ErrorInfo);
         } else {
-            return 'Message has been sent';
+            return array("result"=>"done");
         }
     }
 }
