@@ -45,7 +45,6 @@ class Email
             $html = $ds['html'];
             $smtp = $ds['smtp'];
             $secure = $ds['secure'];
-
         }
 
         if ($smtp == 2) {
@@ -60,6 +59,7 @@ class Email
         if ($smtp == 1) {
             $mail->isSMTP();
             $mail->Host = $host;
+            $mail->Port = $port;
             if ($auth == 1) {
                 $mail->SMTPAuth = true;
                 $mail->Username = $user;
@@ -85,11 +85,10 @@ class Email
             $mail->isMail();
         }
 
-        $mail->Port = $port;
-
-        $mail->From = $from;
-        $mail->FromName = $module;
+        $mail->setFrom($from, $module);
         $mail->addAddress($to);
+        $mail->addReplyTo($to);
+        $mail->CharSet = 'UTF-8';
 
         if ($html == 1) {
             $mail->isHTML(true);
