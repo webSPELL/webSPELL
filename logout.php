@@ -29,7 +29,7 @@ session_name('ws_session');
 session_start();
 
 // unset session variables
-$_SESSION = [];
+$_SESSION = array();
 
 // remove session cookie
 if (isset($_COOKIE[ session_name() ])) {
@@ -40,7 +40,6 @@ session_destroy();
 
 // remove login cookie
 if (isset($_COOKIE[ 'ws_auth' ])) {
-
     $cookieName = "ws_auth";
     $cookieValue = '';
     $cookieExpire = time() - (24 * 60 * 60);

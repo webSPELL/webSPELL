@@ -50,7 +50,10 @@ if (mysqli_num_rows($ergebnis)) {
         } else {
             $text = $name;
         }
-        eval ("\$sc_partners = \"" . gettemplate("sc_partners") . "\";");
+        $data_array = array();
+        $data_array['$partnerID'] = $partnerID;
+        $data_array['$text'] = $text;
+        $sc_partners = $GLOBALS["_template"]->replaceTemplate("sc_partners", $data_array);
         echo $sc_partners;
     }
     echo '</ul>';

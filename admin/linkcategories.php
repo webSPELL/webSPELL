@@ -34,7 +34,7 @@ if (!ispageadmin($userID) || mb_substr(basename($_SERVER[ 'REQUEST_URI' ]), 0, 1
 if (isset($_POST[ 'save' ])) {
     $CAPCLASS = new \webspell\Captcha;
     if ($CAPCLASS->checkCaptcha(0, $_POST[ 'captcha_hash' ])) {
-        if (checkforempty(['name'])) {
+        if (checkforempty(array('name'))) {
             safe_query("INSERT INTO " . PREFIX . "links_categorys ( name ) values( '" . $_POST[ 'name' ] . "' ) ");
         } else {
             echo $_language->module[ 'information_incomplete' ];
@@ -45,7 +45,7 @@ if (isset($_POST[ 'save' ])) {
 } elseif (isset($_POST[ 'saveedit' ])) {
     $CAPCLASS = new \webspell\Captcha;
     if ($CAPCLASS->checkCaptcha(0, $_POST[ 'captcha_hash' ])) {
-        if (checkforempty(['name'])) {
+        if (checkforempty(array('name'))) {
             safe_query(
                 "UPDATE " . PREFIX . "links_categorys SET name='" . $_POST[ 'name' ] . "' WHERE linkcatID='" .
                 $_POST[ 'linkcatID' ] . "'"
@@ -118,7 +118,6 @@ if ($action == "add") {
 	</table>
 	</form>';
 } else {
-
     echo '<h1>&curren; ' . $_language->module[ 'link_categories' ] . '</h1>';
 
     echo

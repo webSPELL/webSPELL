@@ -45,6 +45,7 @@ $language_array = Array(
 	'linkname'=>'Länknman',
 	'linkrubric'=>'Länkrubrik',
 	'links'=>'Länkar',
+	'new_category'=>'ny kategori',
 	'new_link'=>'Ny länk',
 	'no_access'=>'ingen tillgång.',
 	'no_categories'=>'ingen kategori tillgänglig',

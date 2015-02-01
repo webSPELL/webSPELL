@@ -1,5 +1,5 @@
 before_commands:
-    - composer install --dev
+    - composer install
 tools:
     sensiolabs_security_checker:
         enabled: true

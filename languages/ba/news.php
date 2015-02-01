@@ -31,7 +31,7 @@ $language_array = Array(
 /* do not edit above this line */
 
   'author'=>'Autor',
-  'bbcode'=>'BBKod <b><u>uključen</u></b>',
+  'bbcode'=>'BBKod <b><span class="underline">uključen</span></b>',
   'cancel'=>'Odustani',
   'comm'=>'comm',
   'comment'=>'<a href="$url">[1] komentar</a>, posljednji komentarisao $lastposter - $lastdate',
@@ -44,7 +44,7 @@ $language_array = Array(
   'enter_text'=>'Morate unijeti text',
   'go'=>'Idi!',
   'headline'=>'Naslov',
-  'html'=>'HTML is <b><u>uključen</u></b>',
+  'html'=>'HTML is <b><span class="underline">uključen</span></b>',
   'intern'=>'interne',
   'languages'=>'Jezici',
   'link'=>'Link',
@@ -70,7 +70,7 @@ $language_array = Array(
   'select_all'=>'Označi sve',
   'self'=>'istom prozoru',
   'show_news'=>'Prikaži novosti',
-  'smilies'=>'Smajlići <b><u>uključeni</u></b>',
+  'smilies'=>'Smajlići <b><span class="underline">uključeni</span></b>',
   'sort'=>'Razvrstaj:',
   'title_unpublished_news'=>'<h2>NEOBJAVLJENE NOVOSTI:</h2>',
   'topnews'=>'Top novosti',

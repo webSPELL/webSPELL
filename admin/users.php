@@ -198,7 +198,6 @@ if (isset($_POST[ 'add' ])) {
             "' AND userID!=" . $_POST[ 'id' ]
         ))
         ) {
-
             safe_query(
                 "UPDATE " . PREFIX . "user SET nickname='" . $nickname . "',
 									 email='" . $_POST[ 'email' ] . "',
@@ -284,12 +283,12 @@ if (isset($_POST[ 'add' ])) {
             safe_query("DELETE FROM " . PREFIX . "upcoming_announce WHERE userID='$id'");
             safe_query("DELETE FROM " . PREFIX . "user WHERE userID='$id'");
             safe_query("DELETE FROM " . PREFIX . "user_groups WHERE userID='$id'");
-            $userfiles = [
+            $userfiles = array(
                 '../images/avatars/' . $id . '.jpg',
                 '../images/avatars/' . $id . '.gif',
                 '../images/userpics/' . $id . '.jpg',
                 '../images/userpics/' . $id . '.gif'
-            ];
+            );
             foreach ($userfiles as $file) {
                 if (file_exists($file)) {
                     unlink($file);
@@ -365,7 +364,6 @@ if ($action == "activate") {
         echo $_language->module[ 'transaction_invalid' ];
     }
 } elseif ($action == "ban") {
-
     echo '<h1>&curren; <a href="admincenter.php?site=users" class="white">' . $_language->module[ 'users' ] .
         '</a> &raquo; ' . $_language->module[ 'ban_user' ] . '</h1>';
 
@@ -484,7 +482,6 @@ if ($action == "activate") {
             $_language->module[ 'back' ] . '</a>';
     }
 } elseif ($action == "addtoclan") {
-
     echo '<h1>&curren; <a href="admincenter.php?site=users" class="white">' . $_language->module[ 'users' ] .
         '</a> &raquo; ' . $_language->module[ 'add_to_clan' ] . '</h1>';
 
@@ -547,7 +544,6 @@ if ($action == "activate") {
   </table>
   </form>';
 } elseif ($action == "profile") {
-
     echo '<h1>&curren; <a href="admincenter.php?site=users" class="white">' . $_language->module[ 'users' ] .
         '</a> &raquo; ' . $_language->module[ 'edit_profile' ] . '</h1>';
 
@@ -779,7 +775,6 @@ if ($action == "activate") {
     </table>
     </form>';
 } else {
-
     echo '<h1>&curren; ' . $_language->module[ 'users' ] . '</h1>';
 
     if (isset($_GET[ 'search' ])) {
@@ -862,7 +857,7 @@ if ($action == "activate") {
     }
     $page_link = '';
     if ($pages > 1) {
-        if ($status == true) {
+        if ($status === true) {
             $sort = "status";
         }
         $page_link =
@@ -877,7 +872,7 @@ if ($action == "activate") {
         if (!isset($_GET[ 'sort' ])) {
             $_GET[ 'sort' ] = '';
         }
-        if ($status == true) {
+        if ($status === true) {
             $sort = "status";
         } elseif (($_GET[ 'sort' ] == 'nickname') || ($_GET[ 'sort' ] == 'registerdate')) {
             $sort = $_GET[ 'sort' ];

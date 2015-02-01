@@ -58,7 +58,7 @@ if (isset($_GET[ 'delcat' ])) {
     $description = $_POST[ 'message' ];
     $CAPCLASS = new \webspell\Captcha;
     if ($CAPCLASS->checkCaptcha(0, $_POST[ 'captcha_hash' ])) {
-        if (checkforempty(['faqcatname'])) {
+        if (checkforempty(array('faqcatname'))) {
             safe_query(
                 "INSERT INTO
                     " . PREFIX . "faq_categories (
@@ -84,7 +84,7 @@ if (isset($_GET[ 'delcat' ])) {
     $faqcatID = $_POST[ 'faqcatID' ];
     $CAPCLASS = new \webspell\Captcha;
     if ($CAPCLASS->checkCaptcha(0, $_POST[ 'captcha_hash' ])) {
-        if (checkforempty(['faqcatname'])) {
+        if (checkforempty(array('faqcatname'))) {
             safe_query(
                 "UPDATE " . PREFIX .
                 "faq_categories SET faqcatname='$faqcatname', description='$description' WHERE faqcatID='$faqcatID' "
@@ -105,8 +105,8 @@ if (isset($_GET[ 'action' ])) {
 
         $_language->readModule('bbcode', true);
 
-        eval ("\$addbbcode = \"" . gettemplate("addbbcode", "html", "admin") . "\";");
-        eval ("\$addflags = \"" . gettemplate("flags_admin", "html", "admin") . "\";");
+        $addbbcode = $GLOBALS["_template"]->replaceTemplate("addbbcode", array());
+        $addflags = $GLOBALS["_template"]->replaceTemplate("flags_admin", array());
 
         echo '<h1>&curren; <a href="admincenter.php?site=faqcategories" class="white">' .
             $_language->module[ 'faq_categories' ] . '</a> &raquo; ' . $_language->module[ 'add_category' ] . '</h1>';
@@ -146,7 +146,6 @@ if (isset($_GET[ 'action' ])) {
     </table>
     </form>';
     } elseif ($_GET[ 'action' ] == "editcat") {
-
         $faqcatID = $_GET[ 'faqcatID' ];
 
         $ergebnis = safe_query("SELECT * FROM " . PREFIX . "faq_categories WHERE faqcatID='$faqcatID'");
@@ -158,8 +157,8 @@ if (isset($_GET[ 'action' ])) {
 
         $_language->readModule('bbcode', true);
 
-        eval ("\$addbbcode = \"" . gettemplate("addbbcode", "html", "admin") . "\";");
-        eval ("\$addflags = \"" . gettemplate("flags_admin", "html", "admin") . "\";");
+        $addbbcode = $GLOBALS["_template"]->replaceTemplate("addbbcode", array());
+        $addflags = $GLOBALS["_template"]->replaceTemplate("flags_admin", array());
 
         echo '<h1>&curren; <a href="admincenter.php?site=faqcategories" class="white">' .
             $_language->module[ 'faq_categories' ] . '</a> &raquo; ' . $_language->module[ 'edit_category' ] . '</h1>';
@@ -204,7 +203,6 @@ onsubmit="return chkFormular();">
     </form>';
     }
 } else {
-
     echo '<h1>&curren; ' . $_language->module[ 'faq_categories' ] . '</h1>';
 
     echo

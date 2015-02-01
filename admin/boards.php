@@ -292,7 +292,6 @@ if (isset($_GET[ 'action' ])) {
 }
 
 if ($action == "mods") {
-
     echo '<h1>&curren; <a href="admincenter.php?site=boards" class="white">' . $_language->module[ 'boards' ] .
         '</a> &raquo; ' . $_language->module[ 'moderators' ] . '</h1>';
 
@@ -337,7 +336,6 @@ if ($action == "mods") {
 	<input type="submit" name="savemods" value="' . $_language->module[ 'select_moderators' ] . '" />
 	</form>';
 } elseif ($action == "add") {
-
     echo '<h1>&curren; <a href="admincenter.php?site=boards" class="white">' . $_language->module[ 'boards' ] .
         '</a> &raquo; ' . $_language->module[ 'add_board' ] . '</h1>';
 
@@ -408,7 +406,6 @@ if ($action == "mods") {
   </table>
   </form>';
 } elseif ($action == "edit") {
-
     echo '<h1>&curren; <a href="admincenter.php?site=boards" class="white">' . $_language->module[ 'boards' ] .
         '</a> &raquo; ' . $_language->module[ 'edit_board' ] . '</h1>';
 
@@ -429,7 +426,7 @@ if ($action == "mods") {
     }
     $cats .= '</select>';
 
-    $groups = [];
+    $groups = array();
     $sql = safe_query("SELECT * FROM `" . PREFIX . "forum_groups`");
     while ($db = mysqli_fetch_array($sql)) {
         $groups[ $db[ 'fgrID' ] ] = $db[ 'name' ];
@@ -518,7 +515,6 @@ if ($action == "mods") {
   </table>
   </form>';
 } elseif ($action == "addcat") {
-
     echo '<h1>&curren; <a href="admincenter.php?site=boards" class="white">' . $_language->module[ 'boards' ] .
         '</a> &raquo; ' . $_language->module[ 'add_category' ] . '</h1>';
 
@@ -566,7 +562,6 @@ if ($action == "mods") {
   </table>
   </form>';
 } elseif ($action == "editcat") {
-
     echo '<h1>&curren; <a href="admincenter.php?site=boards" class="white">' . $_language->module[ 'boards' ] .
         '</a> &raquo; ' . $_language->module[ 'edit_category' ] . '</h1>';
 
@@ -576,7 +571,7 @@ if ($action == "mods") {
     $ds = mysqli_fetch_array($ergebnis);
 
     $usergrps = explode(";", $ds[ 'readgrps' ]);
-    $sql = safe_query("SELECT * FROM " . PREFIX . "forum_groups");
+    $sql = safe_query("SELECT * FROM `" . PREFIX . "forum_groups`");
     $groups = '<select id="readgrps" name="readgrps[]" multiple="multiple" size="10">';
     if (in_array('user', $usergrps)) {
         $groups .= '<option value="user" selected="selected">' . $_language->module[ 'registered_users' ] . '</option>';
@@ -630,7 +625,6 @@ if ($action == "mods") {
   </table>
   </form>';
 } else {
-
     echo '<h1>&curren; ' . $_language->module[ 'boards' ] . '</h1>';
 
     echo '<a href="admincenter.php?site=boards&amp;action=addcat" class="input">' .
@@ -655,7 +649,6 @@ if ($action == "mods") {
     $CAPCLASS->createTransaction();
     $hash = $CAPCLASS->getHash();
     while ($ds = mysqli_fetch_array($ergebnis)) {
-
         echo '<tr bgcolor="#CCCCCC">
             <td class="td_head">
                 <b>' . getinput($ds[ 'name' ]) . '</b><br><small>' . getinput($ds[ 'info' ]) . '</small>
@@ -729,10 +722,10 @@ if ($action == "mods") {
         }
     }
 
-    $boards = safe_query("SELECT * FROM " . PREFIX . "forum_boards WHERE category='0' ORDER BY sort");
+    $boards = safe_query("SELECT * FROM `" . PREFIX . "forum_boards` WHERE `category`='0' ORDER BY `sort`");
     $tmp = mysqli_fetch_assoc(
         safe_query(
-            "SELECT count(boardID) as cnt FROM " . PREFIX . "forum_boards WHERE category='0'"
+            "SELECT count(boardID) as cnt FROM `" . PREFIX . "forum_boards` WHERE `category` = '0'"
         )
     );
     $anzboards = $tmp[ 'cnt' ];
@@ -740,7 +733,6 @@ if ($action == "mods") {
     $CAPCLASS->createTransaction();
     $hash = $CAPCLASS->getHash();
     while ($db = mysqli_fetch_array($boards)) {
-
         echo '<tr bgcolor="#dcdcdc">
             <td bgcolor="#FFFFFF"><b>' . getinput($db[ 'name' ]) . '</b></td>
             <td bgcolor="#FFFFFF">

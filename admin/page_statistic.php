@@ -33,8 +33,8 @@ if (!isanyadmin($userID) || mb_substr(basename($_SERVER[ 'REQUEST_URI' ]), 0, 15
 
 echo '<h1>&curren; ' . $_language->module[ 'page_stats' ] . '</h1>';
 
-$count_array = [];
-$tables_array = [
+$count_array = array();
+$tables_array = array(
     PREFIX . "articles",
     PREFIX . "banner",
     PREFIX . "awards",
@@ -79,7 +79,7 @@ $tables_array = [
     PREFIX . "static",
     PREFIX . "user",
     PREFIX . "user_gbook"
-];
+);
 $db_size = 0;
 $db_size_op = 0;
 if (!isset($db)) {
@@ -105,7 +105,7 @@ foreach ($tables_array as $table) {
     } else {
         $table_name = ucfirst(str_replace("_", " ", $table_name));
     }
-    $count_array[ ] = [$table_name, $data[ 'Rows' ]];
+    $count_array[ ] = array($table_name, $data[ 'Rows' ]);
 }
 ?>
 
@@ -141,12 +141,13 @@ foreach ($tables_array as $table) {
         <td class="title" colspan="4"><b><?php echo $_language->module[ 'page_stats' ]; ?></b></td>
     </tr>
     <?php
-    for ($i = 0; $i < count($count_array); $i += 1) {
-    if ($i % 4) {
-        $td = 'td1';
-    } else {
-        $td = 'td2';
-    }
+    $counter = count($count_array);
+    for ($i = 0; $i < $counter; $i += 1) {
+        if ($i % 4) {
+            $td = 'td1';
+        } else {
+            $td = 'td2';
+        }
         ?>
         <tr>
             <td width="25%" class="<?php

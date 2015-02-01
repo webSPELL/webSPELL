@@ -60,7 +60,7 @@ class ModRewrite
         fixed in
         https://github.com/php/php-src/commit/3c3ff434329d2f505b00a79bacfdef95ca96f0d2
         */
-
+        // @codingStandardsIgnoreStart
         $fixedHeader = false;
         if (PHP_MAJOR_VERSION == 5) {
             if (PHP_MINOR_VERSION == 4) {
@@ -79,6 +79,7 @@ class ModRewrite
         } else {
             register_shutdown_function(array($this, 'rewriteHeaders'));
         }
+        // @codingStandardsIgnoreEnd
     }
 
     private function buildCache()
@@ -151,7 +152,7 @@ class ModRewrite
         foreach ($this->cache as $ds) {
             $regex = $ds['replace_regex'];
             $replace = $ds['replace_result'];
-            if ($headers == true) {
+            if ($headers === true) {
                 $content = preg_replace(
                     "/()()Location:\s" . $regex . "/i",
                     'Location: ' . $this->getRewriteBase() . $replace,

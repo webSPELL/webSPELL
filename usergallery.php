@@ -28,7 +28,6 @@ $_language->readModule('usergallery');
 $galclass = new \webspell\Gallery;
 
 if ($userID) {
-
     if (isset($_POST[ 'save' ])) {
         if ($_POST[ 'name' ]) {
             safe_query(
@@ -64,9 +63,7 @@ if ($userID) {
 
         if ($upload->hasFile()) {
             if ($upload->hasError() === false) {
-
                 $mime_types = array('image/jpeg','image/png','image/gif');
-
                 if ($upload->supportedMimeType($mime_types)) {
                     if (!empty($_POST[ 'name' ])) {
                         $insertname = $_POST[ 'name' ];
@@ -174,16 +171,14 @@ if ($userID) {
         }
     }
 
-    eval("\$usergallery_title = \"" . gettemplate("title_usergallery") . "\";");
+    $usergallery_title = $GLOBALS["_template"]->replaceTemplate("title_usergallery", array());
     echo $usergallery_title;
 
     if (isset($_GET[ 'action' ])) {
         if ($_GET[ 'action' ] == "add") {
-
-            eval("\$usergallery_add = \"" . gettemplate("usergallery_add") . "\";");
+            $usergallery_add = $GLOBALS["_template"]->replaceTemplate("usergallery_add", array());
             echo $usergallery_add;
         } elseif ($_GET[ 'action' ] == "edit") {
-
             $ergebnis = safe_query(
                 "SELECT
                     *
@@ -197,17 +192,20 @@ if ($userID) {
 
             $name = getinput($ds[ 'name' ]);
             $galleryID = $ds[ 'galleryID' ];
-            eval("\$usergallery_edit = \"" . gettemplate("usergallery_edit") . "\";");
+            $data_array = array();
+            $data_array['$name'] = $name;
+            $data_array['$galleryID'] = $galleryID;
+            $usergallery_edit = $GLOBALS["_template"]->replaceTemplate("usergallery_edit", $data_array);
             echo $usergallery_edit;
         } elseif ($_GET[ 'action' ] == "upload") {
-
             $id = (int)$_GET[ 'galleryID' ];
 
-            eval("\$usergallery_upload = \"" . gettemplate("usergallery_upload") . "\";");
+            $data_array = array();
+            $data_array['$id'] = $id;
+            $usergallery_upload = $GLOBALS["_template"]->replaceTemplate("usergallery_upload", $data_array);
             echo $usergallery_upload;
         }
     } else {
-
         $size = $galclass->getUserSpace($userID);
         $percent = percent($size, $maxusergalleries, 0);
 
@@ -224,11 +222,13 @@ if ($userID) {
         $bghead = BGHEAD;
         $bgcat = BGCAT;
 
-        $vars = ['%spacecolor%', '%used_size%', '%available_size%'];
-        $repl = [$color, round($size / (1024 * 1024), 2), round($maxusergalleries / (1024 * 1024), 2)];
+        $vars = array('%spacecolor%', '%used_size%', '%available_size%');
+        $repl = array($color, round($size / (1024 * 1024), 2), round($maxusergalleries / (1024 * 1024), 2));
         $space_max_in_user = str_replace($vars, $repl, $_language->module[ 'x_of_y_mb_in_use' ]);
 
-        eval("\$usergallery_head = \"" . gettemplate("usergallery_head") . "\";");
+        $data_array = array();
+        $data_array['$space_max_in_user'] = $space_max_in_user;
+        $usergallery_head = $GLOBALS["_template"]->replaceTemplate("usergallery_head", $data_array);
         echo $usergallery_head;
 
         $ergebnis = safe_query("SELECT * FROM " . PREFIX . "gallery WHERE userID='" . (int)$userID."'");
@@ -246,11 +246,14 @@ if ($userID) {
             $name = clearfromtags($ds[ 'name' ]);
             $galleryID = $ds[ 'galleryID' ];
 
-            eval("\$usergallery = \"" . gettemplate("usergallery") . "\";");
+            $data_array = array();
+            $data_array['$galleryID'] = $galleryID;
+            $data_array['$name'] = $name;
+            $usergallery = $GLOBALS["_template"]->replaceTemplate("usergallery", $data_array);
             echo $usergallery;
         }
 
-        eval("\$usergallery_foot = \"" . gettemplate("usergallery_foot") . "\";");
+        $usergallery_foot = $GLOBALS["_template"]->replaceTemplate("usergallery_foot", array());
         echo $usergallery_foot;
     }
 } else {

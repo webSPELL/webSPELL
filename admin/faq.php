@@ -65,7 +65,7 @@ if (isset($_GET[ 'delete' ])) {
     $answer = $_POST[ 'message' ];
     $CAPCLASS = new \webspell\Captcha;
     if ($CAPCLASS->checkCaptcha(0, $_POST[ 'captcha_hash' ])) {
-        if (checkforempty(['question', 'message'])) {
+        if (checkforempty(array('question', 'message'))) {
             if ($faqcat == "") {
                 redirect('admincenter.php?site=faq', $_language->module[ 'no_faq_selected' ], 3);
                 exit;
@@ -102,7 +102,7 @@ if (isset($_GET[ 'delete' ])) {
     $faqID = $_POST[ 'faqID' ];
     $CAPCLASS = new \webspell\Captcha;
     if ($CAPCLASS->checkCaptcha(0, $_POST[ 'captcha_hash' ])) {
-        if (checkforempty(['question', 'message'])) {
+        if (checkforempty(array('question', 'message'))) {
             safe_query(
                 "UPDATE
                     `" . PREFIX . "faq`
@@ -147,8 +147,8 @@ if (isset($_GET[ 'action' ])) {
 
         $_language->readModule('bbcode', true);
 
-        eval ("\$addbbcode = \"" . gettemplate("addbbcode", "html", "admin") . "\";");
-        eval ("\$addflags = \"" . gettemplate("flags_admin", "html", "admin") . "\";");
+        $addbbcode = $GLOBALS["_template"]->replaceTemplate("addbbcode", array());
+        $addflags = $GLOBALS["_template"]->replaceTemplate("flags_admin", array());
 
         echo '<h1>&curren; <a href="admincenter.php?site=faq" class="white">' . $_language->module[ 'faq' ] .
             '</a> &raquo; ' . $_language->module[ 'add_faq' ] . '</h1>';
@@ -208,7 +208,6 @@ if (isset($_GET[ 'action' ])) {
         </table>
         </form>';
     } elseif ($_GET[ 'action' ] == "edit") {
-
         $faqID = $_GET[ 'faqID' ];
 
         $ergebnis = safe_query("SELECT * FROM `" . PREFIX . "faq` WHERE `faqID` = '$faqID'");
@@ -234,9 +233,9 @@ if (isset($_GET[ 'action' ])) {
 
         $_language->readModule('bbcode', true);
 
-    	$tags = \webspell\Tags::getTags('faq', $faqID);
-        eval ("\$addbbcode = \"" . gettemplate("addbbcode", "html", "admin") . "\";");
-        eval ("\$addflags = \"" . gettemplate("flags_admin", "html", "admin") . "\";");
+        $tags = \webspell\Tags::getTags('faq', $faqID);
+        $addbbcode = $GLOBALS["_template"]->replaceTemplate("addbbcode", array());
+        $addflags = $GLOBALS["_template"]->replaceTemplate("flags_admin", array());
 
         echo '<h1>&curren; <a href="admincenter.php?site=faq" class="white">' . $_language->module[ 'faq' ] .
             '</a> &raquo; ' . $_language->module[ 'edit_faq' ] . '</h1>';
@@ -287,7 +286,6 @@ if (isset($_GET[ 'action' ])) {
     </form>';
     }
 } else {
-
     echo '<h1>&curren; ' . $_language->module[ 'faq' ] . '</h1>';
 
     echo '<a href="admincenter.php?site=faq&amp;action=add" class="input">' . $_language->module[ 'new_faq' ] .
@@ -309,7 +307,6 @@ if (isset($_GET[ 'action' ])) {
     $CAPCLASS->createTransaction();
     $hash = $CAPCLASS->getHash();
     while ($ds = mysqli_fetch_array($ergebnis)) {
-
         echo '<tr>
             <td class="td_head" colspan="3">
                 <b>' . $ds[ 'faqcatname' ] . '</b><br>

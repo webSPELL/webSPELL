@@ -77,7 +77,6 @@ if (isset($_POST[ 'save' ])) {
             );
 
             if ($gb_info) {
-
                 $ergebnis = safe_query("SELECT userID FROM " . PREFIX . "user_groups WHERE feedback='1'");
                 while ($ds = mysqli_fetch_array($ergebnis)) {
                     $touser[ ] = $ds[ 'userID' ];
@@ -134,7 +133,6 @@ if (isset($_POST[ 'save' ])) {
 
     header("Location: index.php?site=guestbook");
 } elseif ($action == 'comment' && is_numeric($_GET[ 'guestbookID' ])) {
-
     $_language->readModule('guestbook');
     $_language->readModule('bbcode', true);
     if (!isfeedbackadmin($userID)) {
@@ -145,13 +143,16 @@ if (isset($_POST[ 'save' ])) {
     $bg1 = BG_1;
     $ds = mysqli_fetch_array($ergebnis);
     $admincomment = getinput($ds[ 'admincomment' ]);
-    eval ("\$title_guestbook = \"" . gettemplate("title_guestbook") . "\";");
+    $title_guestbook = $GLOBALS["_template"]->replaceTemplate("title_guestbook", array());
     echo $title_guestbook;
-    eval ("\$addbbcode = \"" . gettemplate("addbbcode") . "\";");
-    eval ("\$guestbook_comment = \"" . gettemplate("guestbook_comment") . "\";");
+    $addbbcode = $GLOBALS["_template"]->replaceTemplate("addbbcode", array());
+    $data_array = array();
+    $data_array['$addbbcode'] = $addbbcode;
+    $data_array['$admincomment'] = $admincomment;
+    $data_array['$guestbookID'] = (int)$_GET[ 'guestbookID' ];
+    $guestbook_comment = $GLOBALS["_template"]->replaceTemplate("guestbook_comment", $data_array);
     echo $guestbook_comment;
 } elseif ($action == 'add') {
-
     $_language->readModule('guestbook');
     $_language->readModule('bbcode', true);
 
@@ -171,7 +172,7 @@ if (isset($_POST[ 'save' ])) {
         }
     }
 
-    eval ("\$addbbcode = \"" . gettemplate("addbbcode") . "\";");
+    $addbbcode = $GLOBALS["_template"]->replaceTemplate("addbbcode", array());
     $bg1 = BG_1;
     if (isset($_GET[ 'error' ])) {
         if ($_GET[ 'error' ] == "captcha") {
@@ -183,7 +184,10 @@ if (isset($_POST[ 'save' ])) {
         $error = null;
     }
     if ($loggedin) {
-        eval ("\$guestbook_loggedin = \"" . gettemplate("guestbook_loggedin") . "\";");
+        $data_array = array();
+        $data_array['$addbbcode'] = $addbbcode;
+        $data_array['$message'] = $message;
+        $guestbook_loggedin = $GLOBALS["_template"]->replaceTemplate("guestbook_loggedin", $data_array);
         echo $guestbook_loggedin;
     } else {
         $CAPCLASS = new \webspell\Captcha;
@@ -191,13 +195,18 @@ if (isset($_POST[ 'save' ])) {
         $hash = $CAPCLASS->getHash();
         $CAPCLASS->clearOldCaptcha();
 
-        eval ("\$guestbook_notloggedin = \"" . gettemplate("guestbook_notloggedin") . "\";");
+        $data_array = array();
+        $data_array['$error'] = $error;
+        $data_array['$addbbcode'] = $addbbcode;
+        $data_array['$message'] = $message;
+        $data_array['$captcha'] = $captcha;
+        $data_array['$hash'] = $hash;
+        $guestbook_notloggedin = $GLOBALS["_template"]->replaceTemplate("guestbook_notloggedin", $data_array);
         echo $guestbook_notloggedin;
     }
 } else {
-
     $_language->readModule('guestbook');
-    eval ("\$title_guestbook = \"" . gettemplate("title_guestbook") . "\";");
+    $title_guestbook = $GLOBALS["_template"]->replaceTemplate("title_guestbook", array());
     echo $title_guestbook;
 
     $gesamt = mysqli_num_rows(safe_query("SELECT gbID FROM " . PREFIX . "guestbook"));
@@ -241,14 +250,17 @@ if (isset($_POST[ 'save' ])) {
     if ($type == "ASC") {
         $sorter =
             '<a href="index.php?site=guestbook&amp;page=' . $page . '&amp;type=DESC">' . $_language->module[ 'sort' ] .
-            ' <span class="icon-sort-down"></span></a>';
+            ' <span class="glyphicon glyphicon-chevron-down"></span></a>';
     } else {
         $sorter =
             '<a href="index.php?site=guestbook&amp;page=' . $page . '&amp;type=ASC">' . $_language->module[ 'sort' ] .
-            ' <span class="icon-sort-up"></span></a>';
+            ' <span class="glyphicon glyphicon-chevron-up"></span></a>';
     }
 
-    eval ("\$guestbook_head = \"" . gettemplate("guestbook_head") . "\";");
+    $data_array = array();
+    $data_array['$sorter'] = $sorter;
+    $data_array['$page_link'] = $page_link;
+    $guestbook_head = $GLOBALS["_template"]->replaceTemplate("guestbook_head", $data_array);
     echo $guestbook_head;
 
     while ($ds = mysqli_fetch_array($ergebnis)) {
@@ -257,7 +269,7 @@ if (isset($_POST[ 'save' ])) {
 
         if (validate_email($ds[ 'email' ])) {
             $email = '<a href="mailto:' . mail_protect($ds[ 'email' ]) .
-                '"><img src="images/icons/email.gif" width="15" height="11" alt="email"></a>';
+                '"><span class="glyphicon glyphicon-envelope" title="email"></span></a>';
         } else {
             $email = '';
         }
@@ -301,7 +313,18 @@ if (isset($_POST[ 'save' ])) {
             $ip = $ds[ 'ip' ];
         }
 
-        eval ("\$guestbook = \"" . gettemplate("guestbook") . "\";");
+        $data_array = array();
+        $data_array['$actions'] = $actions;
+        $data_array['$name'] = $name;
+        $data_array['$date'] = $date;
+        $data_array['$email'] = $email;
+        $data_array['$hp'] = $hp;
+        $data_array['$icq'] = $icq;
+        $data_array['$ip'] = $ip;
+        $data_array['$quote'] = $quote;
+        $data_array['$message'] = $message;
+        $data_array['$admincomment'] = $admincomment;
+        $guestbook = $GLOBALS["_template"]->replaceTemplate("guestbook", $data_array);
         echo $guestbook;
 
         if ($type == "DESC") {
@@ -319,6 +342,9 @@ if (isset($_POST[ 'save' ])) {
         $submit = '';
     }
 
-    eval ("\$guestbook_foot = \"" . gettemplate("guestbook_foot") . "\";");
+    $data_array = array();
+    $data_array['$page_link'] = $page_link;
+    $data_array['$submit'] = $submit;
+    $guestbook_foot = $GLOBALS["_template"]->replaceTemplate("guestbook_foot", $data_array);
     echo $guestbook_foot;
 }

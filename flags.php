@@ -27,7 +27,9 @@
 
 include("_mysql.php");
 include("_settings.php");
-
+include("_functions.php");
+$componentsCss = generateComponents($components['css'], 'css');
+$componentsJs = generateComponents($components['js'], 'js');
 echo '<!DOCTYPE html>
 <html>
 <head>
@@ -37,17 +39,15 @@ echo '<!DOCTYPE html>
     <meta name="copyright" content="Copyright 2005-2014 by webspell.org">
     <meta name="generator" content="webSPELL">
     <title>Flags</title>
-    <link href="_stylesheet.css" rel="stylesheet" type="text/css">
-    <script src="js/bbcode.js"></script>
+    <base href="'.$rewriteBase.'">
+    '.$componentsCss.'
 </head>
-
 <body>
-<table class="table">
+<table class="table table-striped">
     <tr>
-        <td class="title" class="text-center">Flag:</td>
-        <td class="title" class="text-center">Tag:</td>
-    </tr>
-    <tr><td colspan="2"></td></tr>';
+        <th>Flag:</th>
+        <th>Tag:</th>
+    </tr>';
 
 
 $filepath = "./images/flags/";
@@ -67,11 +67,13 @@ if (is_array($files)) {
         $flag = explode(".", $file);
 
         echo '<tr>
-            <td bgcolor="' . BG_1 . '" align="center"><a href="javascript:AddCodeFromWindow(\'[flag]' . $flag[ 0 ] .
+            <td align="center"><a href="javascript:AddCodeFromWindow(\'[flag]' . $flag[ 0 ] .
                 '[/flag]\')"><img src="images/flags/' . $file . '" alt=""></a></td>
-            <td bgcolor="' . BG_2 . '" align="center"><a href="javascript:AddCodeFromWindow(\'[flag]' . $flag[ 0 ] .
+            <td align="center"><a href="javascript:AddCodeFromWindow(\'[flag]' . $flag[ 0 ] .
                 '[/flag]\')">' . $flag[ 0 ] . '</a></td>
         </tr>';
     }
-    echo '</table></body></html>';
 }
+echo $componentsJs;
+echo '<script src="js/bbcode.js"></script>';
+echo '</table></body></html>';

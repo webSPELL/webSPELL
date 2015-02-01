@@ -45,6 +45,7 @@ $language_array = Array(
 	'linkname'=>'Linknaam',
 	'linkrubric'=>'Linkrubriek',
 	'links'=>'Links',
+	'new_category'=>'nieuwe categorie',
 	'new_link'=>'Nieuwe link',
 	'no_access'=>'Toegang geweigerd.',
 	'no_categories'=>'geen categoriën beschikbaar',

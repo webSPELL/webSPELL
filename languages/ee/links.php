@@ -46,6 +46,7 @@ $language_array = Array(
   'linkname'=>'Lingi nimi',
   'linkrubric'=>'Lingi rubriik',
   'links'=>'Lingid',
+  'new_category'=>'uus kategooria',
   'new_link'=>'Uus link',
   'no_access'=>'puudub ligipääs.',
   'no_categories'=>'ühtegi kategooriat pole',

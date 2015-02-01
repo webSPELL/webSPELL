@@ -27,7 +27,7 @@
 
 $_language->readModule('counter');
 
-eval ("\$title_counter_stats = \"" . gettemplate("title_counter_stats") . "\";");
+$title_counter_stats = $GLOBALS["_template"]->replaceTemplate("title_counter_stats", array());
 echo $title_counter_stats;
 
 $time = time();
@@ -79,7 +79,6 @@ if ($month == 0) {
 $monatsstat = '';
 
 for ($i = date("d", time()); $i > 0; $i--) {
-
     if (mb_strlen($i) < 2) {
         $i = "0" . $i;
     }
@@ -211,5 +210,30 @@ $get_old = mysqli_fetch_assoc(
         LIMIT 0,1"
     )
 );
-eval ("\$stats = \"" . gettemplate("counter_stats") . "\";");
+$data_array = array();
+$data_array['$today'] = $today;
+$data_array['$yesterday'] = $yesterday;
+$data_array['$month'] = $month;
+$data_array['$total'] = $total;
+$data_array['$days_online'] = $days_online;
+$data_array['$permonth'] = $permonth;
+$data_array['$perday'] = $perday;
+$data_array['$perhour'] = $perhour;
+$data_array['$maxvisits'] = $maxvisits;
+$data_array['$online'] = $online;
+$data_array['$user_on'] = $user_on;
+$data_array['$guests_on'] = $guests_on;
+$data_array['$maxonline'] = $maxonline;
+$data_array['$online_lasthour'] = $online_lasthour;
+$data_array['$avg_age_user'] = $avg_age_user;
+$data_array['$avg_age_member'] = $avg_age_member;
+$data_array['$youngest_age'] = $get_young['age'];
+$data_array['$youngest_id'] = $get_young['userID'];
+$data_array['$youngest_nickname'] = $get_young['nickname'];
+$data_array['$oldest_age'] = $get_old['age'];
+$data_array['$oldest_id'] = $get_old['userID'];
+$data_array['$oldest_nickname'] = $get_old['nickname'];
+$data_array['$us'] = $us;
+$data_array['$monatsstat'] = $monatsstat;
+$stats = $GLOBALS["_template"]->replaceTemplate("counter_stats", $data_array);
 echo $stats;

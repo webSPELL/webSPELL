@@ -1,4 +1,4 @@
-[ ![Codeship Status for webSPELL/webSPELL-4.2.3](https://codeship.com/projects/655247c0-f3d1-0131-ce29-02087275ebc8/status?branch=dev)](https://codeship.com/projects/27970) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/webSPELL/webSPELL-4.2.3/badges/quality-score.png?b=dev)](https://scrutinizer-ci.com/g/webSPELL/webSPELL-4.2.3/?branch=dev) [![Build Status](https://scrutinizer-ci.com/g/webSPELL/webSPELL-4.2.3/badges/build.png?b=dev)](https://scrutinizer-ci.com/g/webSPELL/webSPELL-4.2.3/build-status/dev)
+[ ![Codeship Status for webSPELL/webSPELL-4.2.3](https://codeship.com/projects/655247c0-f3d1-0131-ce29-02087275ebc8/status?branch=dev)](https://codeship.com/projects/27970) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/webSPELL/webSPELL-4.2.3/badges/quality-score.png?b=dev)](https://scrutinizer-ci.com/g/webSPELL/webSPELL-4.2.3/?branch=dev) [![Build Status](https://scrutinizer-ci.com/g/webSPELL/webSPELL-4.2.3/badges/build.png?b=dev)](https://scrutinizer-ci.com/g/webSPELL/webSPELL-4.2.3/build-status/dev) [![SensioLabsInsight](https://insight.sensiolabs.com/projects/ecedfa24-b238-45fb-9e5e-47850bfb499d/mini.png)](https://insight.sensiolabs.com/projects/ecedfa24-b238-45fb-9e5e-47850bfb499d) [![Build Status](https://snap-ci.com/webSPELL/webSPELL-4.2.3/branch/dev/build_image)](https://snap-ci.com/webSPELL/webSPELL-4.2.3/branch/dev) [![Dependency Status](https://david-dm.org/webspell/webspell-4.2.3.svg)](https://david-dm.org/webspell/webspell-4.2.3) [![devDependency Status](https://david-dm.org/webspell/webspell-4.2.3/dev-status.svg)](https://david-dm.org/webspell/webspell-4.2.3#info=devDependencies)
 
 ```
                        /                        /   /
@@ -8,7 +8,7 @@
                    Free Content / Management System
                                /
 ```
-  Copyright 2005-2011 by webSPELL.org visit webSPELL.org to get webSPELL for free
+  Copyright 2005-2015 by webSPELL.org visit webSPELL.org to get webSPELL for free
   * Script runs under the GNU GENERAL PUBLIC LICENSE
   * It's NOT allowed to remove this copyright-tag
   * http://www.fsf.or/licensing/licenses/gpl.html
@@ -35,8 +35,8 @@ webSPELL is a free Content Management System (CMS), which is available for free 
 
 	1. Requirements
 
-	    * Webspace with PHP and mySQL support (PHP >= 4.3, MySQL >= 4.1)
-	    * WinRAR to extract the downloaded webSPELL release ---> get it here: http://www.win-rar.com
+	    * Webspace with PHP and mySQL support (PHP >= 5.3, MySQL >= 4.1)
+	    * (g)unzip/tar to extract the downloaded webSPELL release
 	    * A FTP program to upload the webSPELL files to your webspace - we recommend SmartFTP
 
 
@@ -103,3 +103,5 @@ webSPELL is a free Content Management System (CMS), which is available for free 
 		Bulletin boards for support and communication between user (problems, modifications, templates, addons, etc.)
 	http://www.webSPELL.org/?site=faq
 		Frequently Asked Questions (FAQ) for webSPELL. Answers and solutions for frequently asked questions and problems
+	http://github.com/webSPELL/webSPELL-4.2.3
+		Official webSPELL Github Repo (code, issues, wiki)

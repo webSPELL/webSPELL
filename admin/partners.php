@@ -323,7 +323,6 @@ if ($action == "add") {
   </table>
   </form>';
 } else {
-
     echo '<h1>&curren; ' . $_language->module[ 'partners' ] . '</h1>';
 
     echo '<a href="admincenter.php?site=partners&amp;action=add" class="input">' .

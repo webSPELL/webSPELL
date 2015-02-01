@@ -27,14 +27,13 @@
 
 $_language->readModule('sponsors');
 
-eval("\$title_sponsors = \"" . gettemplate("title_sponsors") . "\";");
+$title_sponsors = $GLOBALS["_template"]->replaceTemplate("title_sponsors", array());
 echo $title_sponsors;
 
 $ergebnis = safe_query("SELECT * FROM " . PREFIX . "sponsors WHERE displayed = '1' ORDER BY sort");
 if (mysqli_num_rows($ergebnis)) {
     $i = 1;
     while ($ds = mysqli_fetch_array($ergebnis)) {
-
         $url = str_replace('http://', '', $ds['url']);
         $sponsor = '<a href="out.php?sponsorID=' . $ds['sponsorID'] . '" target="_blank">' . $ds['name'] . '</a>';
         $link = '<a href="out.php?sponsorID=' . $ds['sponsorID'] . '" target="_blank">' . $url . '</a>';
@@ -42,7 +41,12 @@ if (mysqli_num_rows($ergebnis)) {
         $banner = '<a href="out.php?sponsorID=' . $ds['sponsorID'] . '" target="_blank"><img src="images/sponsors/' .
             $ds['banner'] . '" alt="' . htmlspecialchars($ds['name']) . '" class="img-responsive"></a>';
 
-        eval ("\$sponsors = \"" . gettemplate("sponsors") . "\";");
+        $data_array = array();
+        $data_array['$sponsor'] = $sponsor;
+        $data_array['$banner'] = $banner;
+        $data_array['$info'] = $info;
+        $data_array['$link'] = $link;
+        $sponsors = $GLOBALS["_template"]->replaceTemplate("sponsors", $data_array);
         echo $sponsors;
         $i++;
     }

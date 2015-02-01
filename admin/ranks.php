@@ -39,7 +39,6 @@ if (isset($_GET[ 'delete' ])) {
         echo $_language->module[ 'transaction_invalid' ];
     }
 } elseif (isset($_POST[ 'save' ])) {
-
     $name = $_POST[ 'name' ];
     $max = $_POST[ 'max' ];
     $min = $_POST[ 'min' ];
@@ -119,14 +118,13 @@ if (isset($_GET[ 'delete' ])) {
         echo $_language->module[ 'transaction_invalid' ];
     }
 } elseif (isset($_POST[ 'saveedit' ])) {
-
     $rank = $_POST[ 'rank' ];
     $min = $_POST[ 'min' ];
     $max = $_POST[ 'max' ];
 
     $CAPCLASS = new \webspell\Captcha;
     if ($CAPCLASS->checkCaptcha(0, $_POST[ 'captcha_hash' ])) {
-        if (checkforempty(['min', 'max'])) {
+        if (checkforempty(array('min', 'max'))) {
             $ergebnis = safe_query("SELECT * FROM " . PREFIX . "forum_ranks ORDER BY rankID");
             $anz = mysqli_num_rows($ergebnis);
             if ($anz) {
@@ -195,7 +193,6 @@ if ($action == "add") {
   </table>
   </form>';
 } else {
-
     echo '<h1>&curren; ' . $_language->module[ 'user_ranks' ] . '</h1>';
 
     echo

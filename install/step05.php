@@ -25,7 +25,7 @@
 ##########################################################################
 */
 
-if($_POST['installtype']=="full" && $_POST['hp_url']) {
+if ($_POST['installtype']=="full" && $_POST['hp_url']) {
 ?>
 
   <tr>
@@ -102,8 +102,9 @@ if($_POST['installtype']=="full" && $_POST['hp_url']) {
    </table>
    <input type="hidden" name="url" value="<?php echo $_POST['hp_url']; ?>">
 
-   <?php
-   } else echo '<tr>
+    <?php
+} else {
+    echo '<tr>
    <td id="step" align="center" colspan="2">
    <span class="steps start">'.$_language->module['step0'].'</span>
    <span class="steps">'.$_language->module['step1'].'</span>
@@ -120,7 +121,8 @@ if($_POST['installtype']=="full" && $_POST['hp_url']) {
   <tr>
    <td id="content" colspan="2">
 	'.$_language->module['finish_next'];
-   ?>
+}
+    ?>
 
    <input type="hidden" name="installtype" value="<?php echo $_POST['installtype']; ?>">
 

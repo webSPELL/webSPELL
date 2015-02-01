@@ -3,21 +3,10 @@ ignore_branches:
 
 global_exclude_dirs:
     - vendor
-    - vendors
-    - test
     - tests
-    - Tests
-    - spec
-    - features
-    - Fixtures
-    - DataFixtures
-    - var
-
-exclude_patterns:
-    - app/check.php
-    - app/SymfonyRequirements.php
-    - web/config.php
-    - web/app_*.php
+    - components
+    - node_modules
+    - codestyles
 
 rules:
     composer.apc_class_loader_should_be_enabled:
@@ -118,108 +107,14 @@ rules:
         enabled: true
         ignore_files: [web/config.php]
     php.use_global_variable_or_function:
-        enabled: true
+        enabled: false
     php.use_php_ereg_function:
         enabled: true
     php.use_php_eval_function:
-        enabled: true
+        enabled: false
     php.use_php_short_open_tag:
         enabled: true
     php.use_php_sleep_function:
-        enabled: true
-    symfony.acme_bundle_found:
-        enabled: true
-    symfony.app.cache_or_log_file_in_repository:
-        enabled: true
-    symfony.app.confidential_parameters_file_present_in_repository:
-        enabled: true
-    symfony.app.first_level_service:
-        enabled: true
-    symfony.app.sensitive_data_found_in_application_configuration:
-        enabled: true
-    symfony.application_not_bootable:
-        enabled: true
-    symfony.bundle_boot_method_should_be_empty:
-        enabled: true
-    symfony.configuration.error_pages_should_be_customised:
-        enabled: true
-    symfony.configuration.yaml_syntax_error:
-        enabled: true
-    symfony.controller.action_method_too_long:
-        enabled: true
-        max_length: 20
-        threshold: 10
-    symfony.controller.get_action_mutates_resource:
-        enabled: true
-    symfony.controller.missing_redirect_after_post:
-        enabled: true
-    symfony.controller.non_action_public_method_in_controller_class:
-        enabled: true
-    symfony.controller.too_many_actions_per_controller:
-        enabled: true
-        max_count: 10
-        threshold: 5
-    symfony.controller.too_many_template_variables:
-        enabled: true
-        max_count: 6
-        threshold: 5
-    symfony.dependency_injection.no_container_as_parameter:
-        enabled: true
-    symfony.dependency_injection.no_entity_manager_as_parameter:
-        enabled: true
-    symfony.dependency_injection.use_dir_file_constant:
-        enabled: true
-    symfony.exceptions_enabled_in_production:
-        enabled: true
-    symfony.form.form_type_not_in_type_form_folder:
-        enabled: true
-    symfony.include_statement_used:
-        enabled: true
-    symfony.inject_request_service:
-        enabled: true
-    symfony.obvious_csrf_key:
-        enabled: true
-    symfony.print_statements:
-        enabled: true
-    symfony.request.session_cookie_default_name:
-        enabled: true
-    symfony.request.use_create_from_globals:
-        enabled: true
-    symfony.routing.action_not_restricted_by_method:
-        enabled: true
-    symfony.routing.route_references_non_existent_action:
-        enabled: true
-    symfony.security.insecure_password_hashing_algorithm:
-        enabled: true
-    symfony.security.throw_access_denied_http_exception:
-        enabled: true
-    symfony.sessions_in_cache_directory:
-        enabled: true
-    symfony.templating.too_many_esi_inclusions:
-        enabled: true
-    symfony.twig_not_bootable:
-        enabled: true
-    symfony.use_php_database_function:
-        enabled: true
-    symfony.use_php_response_function:
-        enabled: true
-    symfony.use_php_session_function:
-        enabled: true
-    symfony.use_super_globals:
-        enabled: true
-    symfony.verbose_logging_in_production:
-        enabled: true
-    symfony.version.end_of_life:
-        enabled: true
-    symfony.version.latest_stable:
-        enabled: true
-    symfony.version.out_of_maintenance:
-        enabled: true
-    symfony.web.contains_php_files:
-        enabled: true
-    symfony.web.web_bundle_folder_present_in_repository:
-        enabled: true
-    symfony.web_config_should_not_be_present:
         enabled: true
     task_fixme_comment:
         enabled: true
@@ -230,25 +125,6 @@ rules:
     third_party.use_deprecated_class:
         enabled: true
     third_party.use_deprecated_service:
-        enabled: true
-    twig.auto_reload_enabled:
-        enabled: true
-    twig.debug_enabled:
-        enabled: true
-    twig.disabled_escaper:
-        enabled: true
-    twig.disabled_strict_variable:
-        enabled: true
-    twig.template_too_complex:
-        enabled: true
-        max_depth: 5
-    twig.template_too_long:
-        enabled: true
-        max_length: 200
-        threshold: 5
-    twig.twig_syntax_error:
-        enabled: true
-    twig.xss_vulnerability:
         enabled: true
     web.apache_config:
         enabled: true

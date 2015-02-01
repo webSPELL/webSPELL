@@ -41,18 +41,15 @@ body {
 }
 
 .list {
-    list-style-type: disc;
-    list-style-position: outside;
+    list-style: disc outside;
 }
 
 .list_num {
-    list-style-type: decimal;
-    list-style-position: outside;
+    list-style: decimal outside;
 }
 
 .list_alpha {
-    list-style-type: lower-latin;
-    list-style-position: outside;
+    list-style: lower-latin outside;
 }
 
 .code {
@@ -117,4 +114,14 @@ a.flag.active img, a.flag:hover img {
     width: 100%;
     overflow: hidden;
     text-align: left;
+}
+
+span.underline {
+    text-decoration: underline;
+}
+
+@media (min-width:768px) {
+    .dropdown:hover .dropdown-menu {
+        display: block;
+    }
 }

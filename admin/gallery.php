@@ -45,11 +45,10 @@ if (isset($_GET[ 'action' ])) {
 }
 
 if ($part == "groups") {
-
     if (isset($_POST[ 'save' ])) {
         $CAPCLASS = new \webspell\Captcha;
         if ($CAPCLASS->checkCaptcha(0, $_POST[ 'captcha_hash' ])) {
-            if (checkforempty(['name'])) {
+            if (checkforempty(array('name'))) {
                 safe_query(
                     "INSERT INTO " . PREFIX . "gallery_groups ( name, sort ) values( '" . $_POST[ 'name' ] . "', '1' ) "
                 );
@@ -62,7 +61,7 @@ if ($part == "groups") {
     } elseif (isset($_POST[ 'saveedit' ])) {
         $CAPCLASS = new \webspell\Captcha;
         if ($CAPCLASS->checkCaptcha(0, $_POST[ 'captcha_hash' ])) {
-            if (checkforempty(['name'])) {
+            if (checkforempty(array('name'))) {
                 safe_query(
                     "UPDATE " . PREFIX . "gallery_groups SET name='" . $_POST[ 'name' ] . "'
                     WHERE groupID='" . $_POST[ 'groupID' ] . "'"
@@ -171,7 +170,8 @@ if ($part == "groups") {
                 $td = 'td2';
             }
             $list = '<select name="sortlist[]">';
-            for ($i = 1; $i <= mysqli_num_rows($ergebnis); $i++) {
+            $counter = mysqli_num_rows($ergebnis);
+            for ($i = 1; $i <= $counter; $i++) {
                 $list .= '<option value="' . $ds[ 'groupID' ] . '-' . $i . '">' . $i . '</option>';
             }
             $list .= '</select>';
@@ -205,7 +205,7 @@ if ($part == "groups") {
     if (isset($_POST[ 'save' ])) {
         $CAPCLASS = new \webspell\Captcha;
         if ($CAPCLASS->checkCaptcha(0, $_POST[ 'captcha_hash' ])) {
-            if (checkforempty(['name'])) {
+            if (checkforempty(array('name'))) {
                 safe_query(
                     "INSERT INTO " . PREFIX . "gallery ( name, date, groupID )
                     values( '" . $_POST[ 'name' ] . "', '" . time() . "', '" . $_POST[ 'group' ] . "' ) "
@@ -220,7 +220,7 @@ if ($part == "groups") {
     } elseif (isset($_POST[ 'saveedit' ])) {
         $CAPCLASS = new \webspell\Captcha;
         if ($CAPCLASS->checkCaptcha(0, $_POST[ 'captcha_hash' ])) {
-            if (checkforempty(['name'])) {
+            if (checkforempty(array('name'))) {
                 if (!isset($_POST[ 'group' ])) {
                     $_POST[ 'group' ] = 0;
                 }
@@ -239,17 +239,17 @@ if ($part == "groups") {
         if (isset($_POST[ 'comment' ])) {
             $comment = $_POST[ 'comment' ];
         } else {
-            $comment = [];
+            $comment = array();
         }
         if (isset($_POST[ 'name' ])) {
             $name = $_POST[ 'name' ];
         } else {
-            $name = [];
+            $name = array();
         }
         if (isset($_POST[ 'pictures' ])) {
             $pictures = $_POST[ 'pictures' ];
         } else {
-            $pictures = [];
+            $pictures = array();
         }
         $i = 0;
         $CAPCLASS = new \webspell\Captcha;
@@ -508,7 +508,7 @@ if ($part == "groups") {
               <table width="100%" border="0" cellspacing="1" cellpadding="3">
                 <tr>
                   <td>';
-            $pics = [];
+            $pics = array();
             $picdir = opendir($dir);
             while (false !== ($file = readdir($picdir))) {
                 if ($file != "." && $file != "..") {

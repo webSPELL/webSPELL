@@ -25,22 +25,28 @@
 ##########################################################################
 */
 
-if($_POST['agree'] == "1") {
-	function getwspath() {
-		$path=$_SERVER['SERVER_NAME'].$_SERVER['PHP_SELF'];
-		return str_replace('/install/index.php','',$path);
-	}
+if ($_POST['agree'] == "1") {
+    function getwspath()
+    {
+        $path=$_SERVER['SERVER_NAME'].$_SERVER['PHP_SELF'];
+        return str_replace('/install/index.php', '', $path);
+    }
 
-	function getwebserver($path) {
-		$path=str_replace('http://','',$path);
-		$server = str_replace(strstr($path,'/'),'',$path);
-		if(mb_substr($server,0,3) == 'www') $server = mb_substr(strstr($server,'.'),1);
-		return $server;
+    function getwebserver($path)
+    {
+        $path=str_replace('http://', '', $path);
+        $server = str_replace(strstr($path, '/'), '', $path);
+        if (mb_substr($server, 0, 3) == 'www') {
+            $server = mb_substr(strstr($server, '.'), 1);
+        }
+        return $server;
 
-	}
-	//version test
-	$versionerror=false;
-	if(phpversion()=='5.2.6') $versionerror=true;
+    }
+    //version test
+    $versionerror=false;
+    if (phpversion()=='5.2.6') {
+        $versionerror=true;
+    }
 ?>
 
   <tr>
@@ -55,27 +61,32 @@ if($_POST['agree'] == "1") {
    </td>
   </tr>
   <tr id="headline">
-   <td colspan="2" id="title"><?php if($versionerror) { echo $_language->module['error']; } else { echo $_language->module['your_site_url']; } ?></td>
+   <td colspan="2" id="title"><?php if ($versionerror) {
+        echo $_language->module['error'];
+} else {
+    echo $_language->module['your_site_url'];
+} ?></td>
   </tr>
   <tr>
    <td id="content" colspan="2">
-   <?php if($versionerror) {
-   	echo '<p style="color: #FF0000; font-weight: bold;">'.$_language->module['php_version'].':</p>
+    <?php if ($versionerror) {
+        echo '<p style="color: #FF0000; font-weight: bold;">'.$_language->module['php_version'].':</p>
 		<p>'.$_language->module['php_info'].'</p><br><br>';
-   } 
-   else {
-		echo $_language->module['enter_url'].':<br><br>
+} else {
+    echo $_language->module['enter_url'].':<br><br>
            http://<input type="text" name="hp_url" value="'.getwspath().'" size="50">
            <a class="tooltip" href="#"><img src="images/tooltip.png" alt="">
            <span>'.$_language->module['tooltip'].'</span></a>
    
            <div align="right"><br><a href="javascript:document.ws_install.submit()"><img src="images/next.jpg" alt=""></a></div>';
-   }
-   ?>
+}
+    ?>
    </td>
   </tr>
 
-<?php } else { ?>
+<?php
+} else {
+?>
 
   <tr>
    <td id="step" align="center" colspan="2">
@@ -93,10 +104,11 @@ if($_POST['agree'] == "1") {
   </tr>
   <tr>
    <td id="content" colspan="2">
-   <?php echo $_language->module['you_have_to_agree'];?>
+    <?php echo $_language->module['you_have_to_agree'];?>
    
    <div align="left"><br><a href="javascript:history.back()"><img src="images/back.jpg" alt=""></a></div>
    </td>
   </tr>
 
-<?php } ?>
+<?php
+} 

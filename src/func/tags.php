@@ -57,7 +57,7 @@ class Tags
             $tags[] = $ds['tag'];
         }
         $tags = array_unique($tags);
-        return ($array == true) ? $tags : implode(", ", $tags);
+        return ($array === true) ? $tags : implode(", ", $tags);
     }
 
     public static function getTagsLinked($relType, $relID)
@@ -79,7 +79,7 @@ class Tags
             }
         }
         $tags = array_unique($tags);
-        return ($array == true) ? $tags : implode(", ", $tags);
+        return ($array === true) ? $tags : implode(", ", $tags);
     }
 
     public static function getTagCloud()

@@ -107,7 +107,6 @@ if (isset($_POST[ 'submit' ])) {
 
     header("Location: upload.php?$tableid=$id");
 } else {
-
     echo '<!DOCTYPE html>
 <html>
 <head>
@@ -135,7 +134,7 @@ if (isset($_POST[ 'submit' ])) {
     $ergebnis = safe_query("SELECT screens FROM " . PREFIX . "$table WHERE $tableid='$id'");
 
     $ds = mysqli_fetch_array($ergebnis);
-    $screens = [];
+    $screens = array();
     if (!empty($ds[ 'screens' ])) {
         $screens = explode("|", $ds[ 'screens' ]);
     }

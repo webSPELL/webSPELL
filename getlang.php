@@ -29,7 +29,7 @@ include("_mysql.php");
 include("_settings.php");
 include("_functions.php");
 
-if (isset($_GET[ 'modul' ])) {
+if (isset($_GET[ 'modul' ]) && is_string($_GET[ 'modul' ])) {
     $modul = strip_tags($_GET[ 'modul' ]);
 } else {
     $modul = null;

@@ -27,7 +27,7 @@
 if (isset($site)) {
     $_language->readModule('latesttopics');
 }
-$usergroups = [];
+$usergroups = array();
 if ($loggedin) {
     $usergroups[ ] = 'user';
     $get = safe_query(
@@ -39,16 +39,18 @@ if ($loggedin) {
             userID='" . $userID . "'"
     );
     $data = mysqli_fetch_row($get);
-    for ($i = 2; $i < count($data); $i++) {
+
+    $counter = count($data);
+    for ($i = 2; $i < $counter; $i++) {
         if ($data[ $i ] == 1) {
             $info = mysqli_fetch_field_direct($get, $i);
             $usergroups[ ] = $info->name;
         }
     }
 }
-$userallowedreadgrps = [];
-$userallowedreadgrps[ 'boardIDs' ] = [];
-$userallowedreadgrps[ 'catIDs' ] = [];
+$userallowedreadgrps = array();
+$userallowedreadgrps[ 'boardIDs' ] = array();
+$userallowedreadgrps[ 'catIDs' ] = array();
 $get = safe_query("SELECT boardID FROM " . PREFIX . "forum_boards WHERE readgrps = ''");
 while ($ds = mysqli_fetch_assoc($get)) {
     $userallowedreadgrps[ 'boardIDs' ][ ] = $ds[ 'boardID' ];
@@ -113,7 +115,7 @@ $ergebnis = safe_query(
 );
 $anz = mysqli_num_rows($ergebnis);
 if ($anz) {
-    eval ("\$latesttopics_head = \"" . gettemplate("latesttopics_head") . "\";");
+    $latesttopics_head = $GLOBALS["_template"]->replaceTemplate("latesttopics_head", array());
     echo $latesttopics_head;
     $n = 1;
     while ($ds = mysqli_fetch_array($ergebnis)) {
@@ -159,11 +161,19 @@ if ($anz) {
 
         $replys_text = ($replys == 1) ? $_language->module[ 'reply' ] : $_language->module[ 'replies' ];
 
-        eval ("\$latesttopics_content = \"" . gettemplate("latesttopics_content") . "\";");
+        $data_array = array();
+        $data_array['$topiclink'] = $topiclink;
+        $data_array['$last_poster'] = $last_poster;
+        $data_array['$board'] = $board;
+        $data_array['$date'] = $date;
+        $data_array['$topictitle_full'] = $topictitle_full;
+        $data_array['$topictitle'] = $topictitle;
+        $data_array['$replys'] = $replys;
+        $latesttopics_content = $GLOBALS["_template"]->replaceTemplate("latesttopics_content", $data_array);
         echo $latesttopics_content;
         $n++;
     }
-    eval ("\$latesttopics_foot = \"" . gettemplate("latesttopics_foot") . "\";");
+    $latesttopics_foot = $GLOBALS["_template"]->replaceTemplate("latesttopics_foot", array());
     echo $latesttopics_foot;
 }
 

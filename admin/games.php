@@ -40,7 +40,6 @@ if (isset($_GET[ 'action' ])) {
 }
 
 if ($action == "add") {
-
     $CAPCLASS = new \webspell\Captcha;
     $CAPCLASS->createTransaction();
     $hash = $CAPCLASS->getHash();
@@ -224,7 +223,6 @@ if ($action == "add") {
         echo $_language->module[ 'transaction_invalid' ];
     }
 } else {
-
     echo '<h1>&curren; <a href="admincenter.php?site=icons" class="white">' . $_language->module[ 'icons' ] .
         '</a> &raquo; ' . $_language->module[ 'games' ] . '</h1>';
 
@@ -244,7 +242,6 @@ if ($action == "add") {
     $ergebnis = safe_query("SELECT * FROM " . PREFIX . "games ORDER BY name");
     $anz = mysqli_num_rows($ergebnis);
     if ($anz) {
-
         $i = 1;
         $CAPCLASS = new \webspell\Captcha;
         $CAPCLASS->createTransaction();

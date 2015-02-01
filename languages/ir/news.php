@@ -30,7 +30,7 @@ $language_array = Array(
 /* do not edit above this line */
 
   'author'=>'نويسنده',
-  'bbcode'=>'BBCode است <b><u>روشن</u></b>',
+  'bbcode'=>'BBCode است <b><span class="underline">روشن</span></b>',
   'cancel'=>'حذف',
   'comm'=>'تفسير',
   'comment'=>'<a href="$url">[1] کامنت</a>, اخرین توسط $lastposter - $lastdate',
@@ -43,7 +43,7 @@ $language_array = Array(
   'enter_text'=>'شما باید متن را وارد کنید',
   'go'=>'!رفتن',
   'headline'=>'تيتر',
-  'html'=>'HTML است <b><u>روشن</u></b>',
+  'html'=>'HTML است <b><span class="underline">روشن</span></b>',
   'intern'=>'دستيار',
   'languages'=>'زبان ها',
   'link'=>'لینک',
@@ -69,7 +69,7 @@ $language_array = Array(
   'select_all'=>'انتخاب همه',
   'self'=>'صفحه شخصی',
   'show_news'=>'نشان دادن اخبار',
-  'smilies'=>'شکلک ها <b><u>روشن</u></b>',
+  'smilies'=>'شکلک ها <b><span class="underline">روشن</span></b>',
   'sort'=>'بر حسب:',
   'title_unpublished_news'=>'<h2>اخبار چاپ نشده:</h2>',
   'topnews'=>'اخبار اصلی',

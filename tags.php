@@ -30,7 +30,7 @@ if (isset($_GET[ 'tag' ])) {
     $tag = $_GET[ 'tag' ];
     $sql = safe_query("SELECT * FROM " . PREFIX . "tags WHERE tag='" . $tag . "'");
     if ($sql->num_rows) {
-        $data = [];
+        $data = array();
         while ($ds = mysqli_fetch_assoc($sql)) {
             $data_check = null;
             if ($ds[ 'rel' ] == "news") {
@@ -47,23 +47,29 @@ if (isset($_GET[ 'tag' ])) {
             }
         }
         echo "<h1>" . $_language->module[ 'search' ] . "</h1>";
-        usort($data, ['Tags', 'sortByDate']);
+        usort($data, array('Tags', 'sortByDate'));
         echo "<p class=\"text-center\"><strong>" . count($data) . "</strong> " . $_language->module[ 'results_found' ] .
             "</p><br><br>";
         foreach ($data as $entry) {
-
             $date = getformatdate($entry[ 'date' ]);
             $type = $entry[ 'type' ];
             $auszug = $entry[ 'content' ];
             $link = $entry[ 'link' ];
             $title = $entry[ 'title' ];
-            eval ("\$search_tags = \"" . gettemplate("search_tags") . "\";");
+            $data_array = array();
+            $data_array['$date'] = $date;
+            $data_array['$link'] = $link;
+            $data_array['$title'] = $title;
+            $data_array['$auszug'] = $auszug;
+            $search_tags = $GLOBALS["_template"]->replaceTemplate("search_tags", $data_array);
             echo $search_tags;
         }
     } else {
         $tag = htmlspecialchars($tag);
         $text = sprintf($_language->module[ 'no_result' ], $tag);
-        eval ("\$search_tags_no_result = \"" . gettemplate("search_tags_no_result") . "\";");
+        $data_array = array();
+        $data_array['$text'] = $text;
+        $search_tags_no_result = $GLOBALS["_template"]->replaceTemplate("search_tags_no_result", $data_array);
         echo $search_tags_no_result;
     }
 } else {
@@ -79,7 +85,9 @@ if (isset($_GET[ 'tag' ])) {
     $tags = \webspell\Tags::getTagCloud();
     usort($tags[ 'tags' ], "tags_top_10");
     $str = '';
-    for ($i = 0; $i < min(10, count($tags[ 'tags' ])); $i++) {
+
+    $counter = min(10, count($tags[ 'tags' ]));
+    for ($i = 0; $i < $counter; $i++) {
         $tag = $tags[ 'tags' ][ $i ];
         $size = \webspell\Tags::GetTagSizeLogarithmic($tag[ 'count' ], $tags[ 'min' ], $tags[ 'max' ], 10, 25, 0);
         $str .= " <a href='index.php?site=tags&amp;tag=" . $tag[ 'name' ] . "' style='font-size:" . $size .

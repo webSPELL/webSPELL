@@ -49,8 +49,8 @@ if ($action == "add") {
 
     $_language->readModule('bbcode', true);
 
-    eval ("\$addbbcode = \"" . gettemplate("addbbcode", "html", "admin") . "\";");
-    eval ("\$addflags = \"" . gettemplate("flags_admin", "html", "admin") . "\";");
+    $addbbcode = $GLOBALS["_template"]->replaceTemplate("addbbcode", array());
+    $addflags = $GLOBALS["_template"]->replaceTemplate("flags_admin", array());
 
     echo '<script>
     <!--
@@ -112,8 +112,7 @@ if ($action == "add") {
     echo '<h1>&curren; <a href="admincenter.php?site=sponsors" class="white">' . $_language->module[ 'sponsors' ] .
     '</a> &raquo; ' . $_language->module[ 'edit_sponsor' ] . '</h1>';
 
-    $ds =
-    mysqli_fetch_array(
+    $ds = mysqli_fetch_array(
         safe_query(
             "SELECT * FROM " . PREFIX . "sponsors WHERE sponsorID='" . $_GET[ "sponsorID" ] ."'"
         )
@@ -147,8 +146,8 @@ if ($action == "add") {
 
     $_language->readModule('bbcode', true);
 
-    eval ("\$addbbcode = \"" . gettemplate("addbbcode", "html", "admin") . "\";");
-    eval ("\$addflags = \"" . gettemplate("flags_admin", "html", "admin") . "\";");
+    $addbbcode = $GLOBALS["_template"]->replaceTemplate("addbbcode", array());
+    $addflags = $GLOBALS["_template"]->replaceTemplate("flags_admin", array());
 
     echo '<script>
     <!--

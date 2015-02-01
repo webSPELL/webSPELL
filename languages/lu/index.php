@@ -50,7 +50,6 @@ $language_array = Array(
   'pic_of_the_moment'=>'Zoufällegt Bild',
   'poll'=>'Ëmfro',
   'random_user'=>'Zoufällegen Benotzer',
-  'scrolltext'=>'Laaftext',
   'server'=>'Server',
   'shoutbox'=>'Shoutbox',
   'sponsors'=>'Sponsoren',

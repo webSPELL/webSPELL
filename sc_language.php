@@ -26,9 +26,7 @@
 */
 
 if (isset($_GET[ 'new_lang' ])) {
-
     if (file_exists('languages/' . $_GET[ 'new_lang' ])) {
-
         include("_mysql.php");
         include("_settings.php");
         include("_functions.php");
@@ -41,20 +39,18 @@ if (isset($_GET[ 'new_lang' ])) {
     }
 
     if (isset($_GET[ 'query' ])) {
-
         $query = rawurldecode($_GET[ 'query' ]);
         header("Location: ./" . $query);
     } else {
         header("Location: index.php");
     }
 } else {
-
     $_language->readModule('sc_language');
 
     $filepath = "languages/";
-    $langs = [];
+    $langs = array();
     // Select all possible languages
-    $mysql_langs = [];
+    $mysql_langs = array();
     $query = safe_query("SELECT lang, language FROM " . PREFIX . "news_languages");
     while ($ds = mysqli_fetch_assoc($query)) {
         $mysql_langs[ $ds[ 'lang' ] ] = $ds[ 'language' ];
@@ -82,7 +78,7 @@ if (isset($_GET[ 'new_lang' ])) {
     ksort($langs, $sortMode);
 
     $querystring = '';
-    if ($modRewrite == true) {
+    if ($modRewrite === true) {
         $path = rawurlencode(str_replace($GLOBALS[ 'rewriteBase' ], '', $_SERVER[ 'REQUEST_URI' ]));
 
     } else {

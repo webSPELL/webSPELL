@@ -30,9 +30,8 @@ $_language->readModule('myprofile');
 if (!$userID) {
     echo $_language->module['not_logged_in'];
 } else {
-
     $showerror = '';
-    eval ("\$title_myprofile = \"" . gettemplate("title_myprofile") . "\";");
+    $title_myprofile = $GLOBALS["_template"]->replaceTemplate("title_myprofile", array());
     echo $title_myprofile;
 
     if (isset($_POST['submit'])) {
@@ -86,7 +85,7 @@ if (!$userID) {
         $user_gbook = $_POST['user_guestbook'];
         $id = $userID;
 
-        $error_array = [];
+        $error_array = array();
 
         if (isset($_POST['userID']) || isset($_GET['userID']) || $userID == "") {
             die($_language->module['not_logged_in']);
@@ -288,17 +287,17 @@ if (!$userID) {
     }
 
     if (isset($_GET['action']) && $_GET['action'] == "editpwd") {
-
         $bg1 = BG_1;
         $bg2 = BG_2;
         $bg3 = BG_3;
         $bg4 = BG_4;
         $border = BORDER;
 
-        eval("\$myprofile_editpwd = \"" . gettemplate("myprofile_editpwd") . "\";");
+        $data_array = array();
+        $data_array['$userID'] = $userID;
+        $myprofile_editpwd = $GLOBALS["_template"]->replaceTemplate("myprofile_editpwd", $data_array);
         echo $myprofile_editpwd;
     } elseif (isset($_POST['savepwd'])) {
-
         $oldpwd = $_POST['oldpwd'];
         $pwd1 = $_POST['pwd1'];
         $pwd2 = $_POST['pwd2'];
@@ -338,17 +337,17 @@ if (!$userID) {
                 <input type="button" onclick="javascript:history.back()" value="' . $_language->module['back'] . '">';
         }
     } elseif (isset($_GET['action']) && $_GET['action'] == "editmail") {
-
         $bg1 = BG_1;
         $bg2 = BG_2;
         $bg3 = BG_3;
         $bg4 = BG_4;
         $border = BORDER;
 
-        eval("\$myprofile_editmail = \"" . gettemplate("myprofile_editmail") . "\";");
+        $data_array = array();
+        $data_array['$userID'] = $userID;
+        $myprofile_editmail = $GLOBALS["_template"]->replaceTemplate("myprofile_editmail", $data_array);
         echo $myprofile_editmail;
     } elseif (isset($_POST['savemail'])) {
-
         $activationkey = md5(RandPass(20));
         $activationlink = 'http://' . $hp_url . '/index.php?site=register&mailkey=' . $activationkey;
         $pwd = $_POST['oldpwd'];
@@ -381,7 +380,6 @@ if (!$userID) {
         }
 
         if (empty($error)) {
-
             safe_query(
                 "UPDATE
                     " . PREFIX . "user
@@ -393,19 +391,20 @@ if (!$userID) {
 
             $ToEmail = $mail1;
             $ToName = $username;
-            $header = str_replace(['%homepage_url%'], [$hp_url], $_language->module['mail_subject']);
+            $header = str_replace(array('%homepage_url%'), array($hp_url), $_language->module['mail_subject']);
             $Message = str_replace(
-                [
+                array(
                     '%username%',
                     '%activationlink%',
                     '%pagetitle%',
                     '%homepage_url%'
-                ],
-                [
+                ),
+                array(
                     $username,
                     $activationlink,
                     $hp_title,
-                    $hp_url],
+                    $hp_url
+                ),
                 $_language->module['mail_text']
             );
 
@@ -500,7 +499,7 @@ if (!$userID) {
                     $_language->module['guestbook'] . ':</label>
 
                     <div class="col-lg-9">
-                        <select name="user_guestbook" class="form-control">' . $user_gbook . '</select>
+                        <select name="user_guestbook" id="pm_mail" class="form-control">' . $user_gbook . '</select>
                     </div>
                 </div>';
             }
@@ -559,12 +558,12 @@ if (!$userID) {
             $langdirs = '';
             $filepath = "./languages/";
 
-            $mysql_langs = [];
+            $mysql_langs = array();
             $query = safe_query("SELECT lang, language FROM " . PREFIX . "news_languages");
             while ($sql_lang = mysqli_fetch_assoc($query)) {
                 $mysql_langs[$sql_lang['lang']] = $sql_lang['language'];
             }
-            $langs = [];
+            $langs = array();
             if ($dh = opendir($filepath)) {
                 while ($file = mb_substr(readdir($dh), 0, 2)) {
                     if ($file != "." && $file != ".." && is_dir($filepath . $file)) {
@@ -609,7 +608,49 @@ if (!$userID) {
             $bg3 = BG_3;
             $bg4 = BG_4;
 
-            eval("\$myprofile = \"" . gettemplate("myprofile") . "\";");
+            $data_array = array();
+            $data_array['$showerror'] = $showerror;
+            $data_array['$nickname'] = $nickname;
+            $data_array['$username'] = $username;
+            $data_array['$email'] = $email;
+            $data_array['$viewavatar'] = $viewavatar;
+            $data_array['$viewpic'] = $viewpic;
+            $data_array['$usertext'] = $usertext;
+            $data_array['$firstname'] = $firstname;
+            $data_array['$lastname'] = $lastname;
+            $data_array['$country'] = $country;
+            $data_array['$countries'] = $countries;
+            $data_array['$town'] = $town;
+            $data_array['$birthday'] = $birthday;
+            $data_array['$sex'] = $sex;
+            $data_array['$icq'] = $icq;
+            $data_array['$homepage'] = $homepage;
+            $data_array['$about'] = $about;
+            $data_array['$newsletter'] = $newsletter;
+            $data_array['$langdirs'] = $langdirs;
+            $data_array['$pm_mail'] = $pm_mail;
+            $data_array['$email_hide'] = $email_hide;
+            $data_array['$format_date'] = $format_date;
+            $data_array['$format_time'] = $format_time;
+            $data_array['$user_gbook_select'] = $user_gbook_select;
+            $data_array['$clantag'] = $clantag;
+            $data_array['$clanname'] = $clanname;
+            $data_array['$clanhp'] = $clanhp;
+            $data_array['$clanirc'] = $clanirc;
+            $data_array['$clanhistory'] = $clanhistory;
+            $data_array['$cpu'] = $cpu;
+            $data_array['$mainboard'] = $mainboard;
+            $data_array['$ram'] = $ram;
+            $data_array['$hdd'] = $hdd;
+            $data_array['$monitor'] = $monitor;
+            $data_array['$graphiccard'] = $graphiccard;
+            $data_array['$soundcard'] = $soundcard;
+            $data_array['$connection'] = $connection;
+            $data_array['$keyboard'] = $keyboard;
+            $data_array['$mouse'] = $mouse;
+            $data_array['$mousepad'] = $mousepad;
+            $data_array['$headset'] = $headset;
+            $myprofile = $GLOBALS["_template"]->replaceTemplate("myprofile", $data_array);
             echo $myprofile;
         } else {
             echo $_language->module['not_logged_in'];

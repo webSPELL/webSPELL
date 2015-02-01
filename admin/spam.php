@@ -24,8 +24,8 @@ function deleteSpamUser($spammerID)
     echo mysqli_affected_rows($_database) . " " . $_language->module[ "comments_deleted" ] . "<br />";
     // Delete Forum Topics (update posts / topics)
     $topics = safe_query("SELECT topicID,boardID FROM " . PREFIX . "forum_topics WHERE userID='" . $spammerID . "'");
-    $topicIDs = [];
-    $boardIDs = [];
+    $topicIDs = array();
+    $boardIDs = array();
     while ($ds = mysqli_fetch_assoc($topics)) {
         $topicIDs[ ] = $ds[ 'topicID' ];
         $boardIDs[ ] = $ds[ 'boardID' ];
@@ -37,7 +37,7 @@ function deleteSpamUser($spammerID)
         safe_query("DELETE FROM " . PREFIX . "forum_posts WHERE topicID IN (" . implode(",", $topicIDs) . ")");
         echo count($topicIDs) . " " . $_language->module[ 'topics_deleted' ] . "<br />";
     }
-    $update_topics = [];
+    $update_topics = array();
     $posts = safe_query("SELECT * FROM " . PREFIX . "forum_posts WHERE poster='" . $spammerID . "'");
     while ($ds = mysqli_fetch_assoc($posts)) {
         $update_topics[ ] = $ds[ 'topicID' ];
@@ -140,7 +140,6 @@ function deleteSpamUser($spammerID)
         );
     echo mysqli_affected_rows($_database) . " " . $_language->module[ "messages_deleted" ] . "<br />";
 
-    //safe_query("DELETE FROM ".PREFIX."user WHERE userID='".$spammerID."'");
     safe_query(
         "UPDATE " . PREFIX . "user SET banned='perm', ban_reason='Spam',about='' WHERE userID='" . $spammerID . "'"
     );
@@ -253,7 +252,7 @@ if ($action == "user") {
 
                 $active = ($data[ 'activated' ] == '1') ? "<font color='green'>&#10004;</font>" :
                     "<font color='red'>&#10006;</font>";
-                $banned = ($data[ 'banned' ] != null) ? "<font color='red'>&#10004;</font>" :
+                $banned = ($data[ 'banned' ] !== null) ? "<font color='red'>&#10004;</font>" :
                     "<font color='green'>&#10006;</font>";
 
                 if ($data[ 'lastlogin' ] > time() - (60 * 60 * 24 * 10)) {
@@ -294,7 +293,7 @@ if ($action == "user") {
         $get = safe_query("SELECT userID, nickname FROM " . PREFIX . "user WHERE ip='" . $ip . "'");
         while ($ds = mysqli_fetch_assoc($get)) {
             echo "<h3>" . $ds[ 'nickname' ] . "</h3>";
-            if (isclanmember($ds[ 'userID' ]) == false) {
+            if (isclanmember($ds[ 'userID' ]) === false) {
                 deleteSpamUser($ds[ 'userID' ]);
             } else {
                 echo $_language->module[ "cant_delete_team_members" ];
@@ -321,7 +320,7 @@ if ($action == "user") {
         );
         while ($ds = mysqli_fetch_assoc($get)) {
             echo "<h3>" . $ip . "</h3>";
-            if (isclanmember($ds[ 'userID' ]) == false) {
+            if (isclanmember($ds[ 'userID' ]) === false) {
                 safe_query(
                     "UPDATE
                         " . PREFIX . "user
@@ -348,7 +347,6 @@ if ($action == "user") {
 
     $get = safe_query("SELECT * FROM " . PREFIX . "api_log ORDER BY `date` DESC");
     if (mysqli_num_rows($get)) {
-
         echo '<input type="button" onclick="MM_confirm(\'' . $_language->module[ "question_delete_all" ] .
             '\', \'admincenter.php?site=spam&amp;action=api_log&amp;del_option=del_all\')" value="' .
             $_language->module[ "delete_all" ] . '" /><br /><br />';
@@ -360,7 +358,6 @@ if ($action == "user") {
 		</tr>';
         $i = 0;
         while ($ds = mysqli_fetch_assoc($get)) {
-
             if ($i % 2) {
                 $td = 'td1';
             } else {

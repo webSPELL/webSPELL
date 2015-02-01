@@ -82,7 +82,7 @@ if (isset($_POST[ 'saveedit' ])) {
         if (isset($_POST[ 'position' ])) {
             $position = $_POST[ 'position' ];
         } else {
-            $position = [];
+            $position = array();
         }
         if (isset($_POST[ 'message' ])) {
             $userdescription = $_POST[ 'message' ];
@@ -92,22 +92,21 @@ if (isset($_POST[ 'saveedit' ])) {
         if (isset($_POST[ 'activity' ])) {
             $activity = $_POST[ 'activity' ];
         } else {
-            $activity = [];
+            $activity = array();
         }
         if (isset($_POST[ 'join' ])) {
             $join = $_POST[ 'join' ];
         } else {
-            $join = [];
+            $join = array();
         }
         if (isset($_POST[ 'war' ])) {
             $war = $_POST[ 'war' ];
         } else {
-            $war = [];
+            $war = array();
         }
         $gallery = isset($_POST[ 'galleryadmin' ]);
 
         if ($userID != $id || issuperadmin($userID)) {
-
             $ergebnis = safe_query("SELECT * FROM " . PREFIX . "user_groups WHERE userID='" . $id . "'");
             if (!mysqli_num_rows($ergebnis)) {
                 safe_query("INSERT INTO " . PREFIX . "user_groups (userID) values ('" . $id . "')");
@@ -132,7 +131,7 @@ if (isset($_POST[ 'saveedit' ])) {
                     userID='" . $id . "'"
             );
             //remove from mods
-            if ($moderator == false) {
+            if ($moderator === false) {
                 safe_query("DELETE FROM " . PREFIX . "forum_moderators WHERE userID='" . $id . "'");
             }
 
@@ -195,7 +194,6 @@ if (isset($_POST[ 'saveedit' ])) {
 }
 
 if (isset($_GET[ 'action' ]) && $_GET[ 'action' ] == "edit") {
-
     echo '<h1>&curren; <a href="admincenter.php?site=members" class="white">' . $_language->module[ 'members' ] .
         '</a> &raquo; ' . $_language->module[ 'edit_member' ] . '</h1>';
 
@@ -205,8 +203,8 @@ if (isset($_GET[ 'action' ]) && $_GET[ 'action' ] == "edit") {
 
     $_language->readModule('bbcode', true);
 
-    eval ("\$addbbcode = \"" . gettemplate("addbbcode", "html", "admin") . "\";");
-    eval ("\$addflags = \"" . gettemplate("flags_admin", "html", "admin") . "\";");
+    $addbbcode = $GLOBALS["_template"]->replaceTemplate("addbbcode", array());
+    $addflags = $GLOBALS["_template"]->replaceTemplate("flags_admin", array());
 
     $id = $_GET[ 'id' ];
     $squads = '';
@@ -393,7 +391,7 @@ onmouseout="hideWMTT()" checked="checked" />';
 onmouseout="hideWMTT()" />';
     }
 
-    $usergrp = [];
+    $usergrp = array();
     $ergebnis = safe_query("SELECT * FROM " . PREFIX . "forum_groups");
     while ($ds = mysqli_fetch_array($ergebnis)) {
         $name = $ds[ 'name' ];
@@ -523,7 +521,6 @@ onmouseout="hideWMTT()" />';
     unset($squads);
     unset($userdes);
 } else {
-
     echo '<h1>&curren; ' . $_language->module[ 'members' ] . '</h1>';
     $CAPCLASS = new \webspell\Captcha;
     $CAPCLASS->createTransaction();
@@ -531,7 +528,6 @@ onmouseout="hideWMTT()" />';
     $squads = safe_query("SELECT * FROM " . PREFIX . "squads ORDER BY sort");
     echo '<form method="post" action="admincenter.php?site=members">';
     while ($ds = mysqli_fetch_array($squads)) {
-
         echo '<table width="100%" border="0" cellspacing="1" cellpadding="3" bgcolor="#DDDDDD">
       <tr>
         <td class="title" colspan="5"><b>' . $ds[ 'name' ] . '</b></td>

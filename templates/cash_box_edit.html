@@ -91,7 +91,7 @@
 
     <div class="form-group">
         <label for="euro">%total_costs%:</label>
-        <input type="text" dir="rtl" name="euro" id="euro" size="8" value="$ds[totalcosts]"
+        <input type="text" dir="rtl" name="euro" id="euro" size="8" value="$totalcosts"
             class="form-control">
     </div>
 
@@ -99,7 +99,7 @@
         <label for="usereuro">%costs_member%:</label>
 
         <div class="input-group">
-            <input type="text" dir="rtl" name="usereuro" id="usereuro" size="8" value="$ds[usercosts]"
+            <input type="text" dir="rtl" name="usereuro" id="usereuro" size="8" value="$usercosts"
                 class="form-control">
             <span class="input-group-btn">
                 <input type="button" name="calculate" value="%calculate%" onclick="berechnen()" class="btn btn-info">

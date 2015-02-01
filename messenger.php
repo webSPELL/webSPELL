@@ -37,7 +37,7 @@ if (isset($_POST['delete'])) {
     if (isset($_POST['messageID'])) {
         $messageID = $_POST['messageID'];
     } else {
-        $messageID = [];
+        $messageID = array();
     }
 
     foreach ($messageID as $id) {
@@ -147,7 +147,6 @@ if (isset($_POST['delete'])) {
     header("Location: index.php?site=messenger&action=outgoing");
     exit();
 } elseif ($userID) {
-
     $_language->readModule('messenger');
 
     if (isset($_REQUEST['action'])) {
@@ -156,11 +155,10 @@ if (isset($_POST['delete'])) {
         $action = "incoming";
     }
 
-    eval ("\$title_messenger = \"" . gettemplate("title_messenger") . "\";");
+    $title_messenger = $GLOBALS["_template"]->replaceTemplate("title_messenger", array());
     echo $title_messenger;
 
     if ($action == "incoming") {
-
         if (isset($_REQUEST['entries'])) {
             $entries = $_REQUEST['entries'];
         }
@@ -246,14 +244,18 @@ if (isset($_POST['delete'])) {
         if ($type == "ASC") {
             $sorter = '<a href="index.php?site=messenger&amp;action=incoming&amp;page=' . $page . '&amp;sort=' . $sort .
                 '&amp;type=DESC&amp;entries=' . $max . '">' . $_language->module['sort'] .
-                '</a> <img src="images/icons/asc.gif" width="9" height="7" alt="">&nbsp;&nbsp;&nbsp;';
+                '</a> <span class="glyphicon glyphicon-chevron-down"></span>&nbsp;&nbsp;&nbsp;';
         } else {
             $sorter = '<a href="index.php?site=messenger&amp;action=incoming&amp;page=' . $page . '&amp;sort=' . $sort .
                 '&amp;type=ASC&amp;entries=' . $max . '">' . $_language->module['sort'] .
-                '</a> <img src="images/icons/desc.gif" width="9" height="7" alt="">&nbsp;&nbsp;&nbsp;';
+                '</a> <span class="glyphicon glyphicon-chevron-up"></span>&nbsp;&nbsp;&nbsp;';
         }
 
-        eval ("\$pm_incoming_head = \"" . gettemplate("pm_incoming_head") . "\";");
+        $data_array = array();
+        $data_array['$sorter'] = $sorter;
+        $data_array['$page_link'] = $page_link;
+        $data_array['$max'] = $max;
+        $pm_incoming_head = $GLOBALS["_template"]->replaceTemplate("pm_incoming_head", $data_array);
         echo $pm_incoming_head;
 
         $anz = mysqli_num_rows($ergebnis);
@@ -293,7 +295,7 @@ if (isset($_POST['delete'])) {
                 $sender = '<a href="index.php?site=profile&amp;id=' . $ds['fromuser'] . '"><b>' .
                     getnickname($ds['fromuser']) . '</b></a>';
                 if (isclanmember($ds['fromuser'])) {
-                    $member = '<img src="images/icons/member.gif" width="6" height="11" alt="Clanmember">';
+                    $member = '<img src="images/icons/member.gif" width="7" height="16" alt="Clanmember">';
                 } else {
                     $member = '';
                 }
@@ -307,7 +309,7 @@ if (isset($_POST['delete'])) {
                 $new = '';
                 $icon = '';
                 if (!$ds['viewed']) {
-                    $icon = '<span class="icon-envelope"></span>';
+                    $icon = '<span class="glyphicon glyphicon-envelope"></span>';
                     $title = '<strong>' . $title . '</strong>';
                     $new = 'class="warning"';
                 }
@@ -316,7 +318,15 @@ if (isset($_POST['delete'])) {
                     '<a href="index.php?site=messenger&amp;action=show&amp;id=' . $ds['messageID'] . '">' . $title .
                     '</a>';
 
-                eval ("\$pm_incoming_content = \"" . gettemplate("pm_incoming_content") . "\";");
+                $data_array = array();
+                $data_array['$messageID'] = $ds['messageID'];
+                $data_array['$icon'] = $icon;
+                $data_array['$title'] = $title;
+                $data_array['$sender'] = $sender;
+                $data_array['$member'] = $member;
+                $data_array['$statuspic'] = $statuspic;
+                $data_array['$date'] = $date;
+                $pm_incoming_content = $GLOBALS["_template"]->replaceTemplate("pm_incoming_content", $data_array);
                 echo $pm_incoming_content;
                 $n++;
             }
@@ -324,10 +334,9 @@ if (isset($_POST['delete'])) {
             echo '<tr>' . $_language->module['no_incoming'] . '</td></tr>';
         }
 
-        eval ("\$pm_incoming_foot = \"" . gettemplate("pm_incoming_foot") . "\";");
+        $pm_incoming_foot = $GLOBALS["_template"]->replaceTemplate("pm_incoming_foot", array());
         echo $pm_incoming_foot;
     } elseif ($action == "outgoing") {
-
         if (isset($_REQUEST['entries'])) {
             $entries = $_REQUEST['entries'];
         }
@@ -404,14 +413,18 @@ if (isset($_POST['delete'])) {
         if ($type == "ASC") {
             $sorter = '<a href="index.php?site=messenger&amp;action=outgoing&amp;page=' . $page . '&amp;sort=' . $sort .
                 '&amp;type=DESC&amp;entries=' . $max . '">' . $_language->module['sort'] .
-                '</a> <img src="images/icons/asc.gif" width="9" height="7" alt="">&nbsp;&nbsp;&nbsp;';
+                '</a> <span class="glyphicon glyphicon-chevron-down"></span>&nbsp;&nbsp;&nbsp;';
         } else {
             $sorter = '<a href="index.php?site=messenger&amp;action=outgoing&amp;page=' . $page . '&amp;sort=' . $sort .
                 '&amp;type=ASC&amp;entries=' . $max . '">' . $_language->module['sort'] .
-                '</a> <img src="images/icons/desc.gif" width="9" height="7" alt="">&nbsp;&nbsp;&nbsp;';
+                '</a> <span class="glyphicon glyphicon-chevron-up"></span>&nbsp;&nbsp;&nbsp;';
         }
 
-        eval ("\$pm_outgoing_head = \"" . gettemplate("pm_outgoing_head") . "\";");
+        $data_array = array();
+        $data_array['$sorter'] = $sorter;
+        $data_array['$page_link'] = $page_link;
+        $data_array['$max'] = $max;
+        $pm_outgoing_head = $GLOBALS["_template"]->replaceTemplate("pm_outgoing_head", $data_array);
         echo $pm_outgoing_head;
 
         $anz = mysqli_num_rows($ergebnis);
@@ -444,7 +457,7 @@ if (isset($_POST['delete'])) {
                     getnickname($ds['touser']) . '</b></a>';
 
                 if (isclanmember($ds['touser'])) {
-                    $member = ' <img src="images/icons/member.gif" width="6" height="11" alt="Clanmember">';
+                    $member = ' <img src="images/icons/member.gif" width="7" height="16" alt="Clanmember">';
                 } else {
                     $member = '';
                 }
@@ -465,7 +478,14 @@ if (isset($_POST['delete'])) {
                     '</a>';
 
                 $icon = '<img src="images/icons/pm_old.gif" width="14" height="12" alt="">';
-                eval ("\$pm_outgoing_content = \"" . gettemplate("pm_outgoing_content") . "\";");
+                $data_array = array();
+                $data_array['$messageID'] = $ds['messageID'];
+                $data_array['$title'] = $title;
+                $data_array['$receptionist'] = $receptionist;
+                $data_array['$member'] = $member;
+                $data_array['$statuspic'] = $statuspic;
+                $data_array['$date'] = $date;
+                $pm_outgoing_content = $GLOBALS["_template"]->replaceTemplate("pm_outgoing_content", $data_array);
                 echo $pm_outgoing_content;
                 $n++;
             }
@@ -473,10 +493,9 @@ if (isset($_POST['delete'])) {
             echo '<tr>' . $_language->module['no_outgoing'] . '</td></tr>';
         }
 
-        eval ("\$pm_outgoing_foot = \"" . gettemplate("pm_outgoing_foot") . "\";");
+        $pm_outgoing_foot = $GLOBALS["_template"]->replaceTemplate("pm_outgoing_foot", array());
         echo $pm_outgoing_foot;
     } elseif ($action == "show") {
-
         $id = (int)$_GET['id'];
         $ds = mysqli_fetch_array(
             safe_query(
@@ -501,7 +520,13 @@ if (isset($_POST['delete'])) {
             $title = clearfromtags($ds['title']);
 
             $bg1 = BG_1;
-            eval ("\$pm_show = \"" . gettemplate("pm_show") . "\";");
+            $data_array = array();
+            $data_array['$title'] = $title;
+            $data_array['$date'] = $date;
+            $data_array['$sender'] = $sender;
+            $data_array['$message'] = $message;
+            $data_array['$id'] = $id;
+            $pm_show = $GLOBALS["_template"]->replaceTemplate("pm_show", $data_array);
             echo $pm_show;
         } else {
             redirect('index.php?site=messenger', '', 0);
@@ -514,11 +539,14 @@ if (isset($_POST['delete'])) {
         $touser = getforminput($touser);
 
         $bg1 = BG_1;
-        eval ("\$addbbcode = \"" . gettemplate("addbbcode") . "\";");
-        eval ("\$pm_new_touser = \"" . gettemplate("pm_new_touser") . "\";");
+        $addbbcode = $GLOBALS["_template"]->replaceTemplate("addbbcode", array());
+        $data_array = array();
+        $data_array['$tousernick'] = $tousernick;
+        $data_array['$addbbcode'] = $addbbcode;
+        $data_array['$touser'] = $touser;
+        $pm_new_touser = $GLOBALS["_template"]->replaceTemplate("pm_new_touser", $data_array);
         echo $pm_new_touser;
     } elseif ($action == "reply") {
-
         $id = $_GET['id'];
         $_language->readModule('bbcode', true);
         $ergebnis = safe_query("SELECT * FROM " . PREFIX . "messenger WHERE messageID='$id'");
@@ -540,14 +568,18 @@ if (isset($_POST['delete'])) {
             $message = '[QUOTE=' . $tousernick . ']' . getinput($ds['message']) . '[/QUOTE]';
 
             $bg1 = BG_1;
-            eval ("\$addbbcode = \"" . gettemplate("addbbcode") . "\";");
-            eval ("\$pm_reply = \"" . gettemplate("pm_reply") . "\";");
+            $addbbcode = $GLOBALS["_template"]->replaceTemplate("addbbcode", array());
+            $data_array = array();
+            $data_array['$title'] = $title;
+            $data_array['$addbbcode'] = $addbbcode;
+            $data_array['$message'] = $message;
+            $data_array['$replytouser'] = $replytouser;
+            $pm_reply = $GLOBALS["_template"]->replaceTemplate("pm_reply", $data_array);
             echo $pm_reply;
         } else {
             redirect('index.php?site=messenger', '', 0);
         }
     } elseif ($action == "newmessage") {
-
         $_language->readModule('bbcode', true);
         $ergebnis = safe_query("SELECT buddy FROM " . PREFIX . "buddys WHERE userID='$userID'");
         $user = '';
@@ -580,8 +612,15 @@ if (isset($_POST['delete'])) {
             $admin = '';
         }
 
-        eval ("\$addbbcode = \"" . gettemplate("addbbcode") . "\";");
-        eval ("\$pm_new = \"" . gettemplate("pm_new") . "\";");
+        $addbbcode = $GLOBALS["_template"]->replaceTemplate("addbbcode", array());
+        $data_array = array();
+        $data_array['$error'] = $error;
+        $data_array['$subject'] = $subject;
+        $data_array['$user'] = $user;
+        $data_array['$addbbcode'] = $addbbcode;
+        $data_array['$message'] = $message;
+        $data_array['$admin'] = $admin;
+        $pm_new = $GLOBALS["_template"]->replaceTemplate("pm_new", $data_array);
         echo $pm_new;
     }
 } else {

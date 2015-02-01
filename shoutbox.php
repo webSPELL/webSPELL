@@ -49,5 +49,9 @@ $_language->readModule('shoutbox');
 
 $refresh = $sbrefresh * 1000;
 
-eval ("\$shoutbox = \"" . gettemplate("shoutbox") . "\";");
+$data_array = array();
+$data_array['$refresh'] = $refresh;
+$data_array['$name_settings'] = $name_settings;
+$data_array['$captcha_form'] = $captcha_form;
+$shoutbox = $GLOBALS["_template"]->replaceTemplate("shoutbox", $data_array);
 echo $shoutbox;

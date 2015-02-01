@@ -286,7 +286,6 @@ function RandPass($length, $type = 0)
     */
     $pass = '';
     for ($i = 0; $i < $length; $i++) {
-
         if ($type == 0) {
             $rand = rand(1, 3);
         } else {

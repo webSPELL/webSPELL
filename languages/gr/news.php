@@ -36,7 +36,7 @@ $language_array = Array(
 /* do not edit above this line */
 
   'author'=>'Συντακτης',
-  'bbcode'=>'BBCode<b><u>ειναι ενεργο</u></b>',
+  'bbcode'=>'BBCode<b><span class="underline">ειναι ενεργο</span></b>',
   'cancel'=>'ακυρωση',
   'comm'=>'comm',
   'comment'=>'<a href="$url">[1] προσφατο σχολιο</a>, απο $lastposter - $lastdate',
@@ -49,7 +49,7 @@ $language_array = Array(
   'enter_text'=>'πρεπει να εισαγετε κειμενο',
   'go'=>'Εμπρος!',
   'headline'=>'Κεφαλιδα',
-  'html'=>'HTML<b><u>ειναι ενεργο</u></b>',
+  'html'=>'HTML<b><span class="underline">ειναι ενεργο</span></b>',
   'intern'=>'intern',
   'languages'=>'Γλωσσες',
   'link'=>'Link',
@@ -75,7 +75,7 @@ $language_array = Array(
   'select_all'=>'επιλογη ολων',
   'self'=>'ιδιο παραθυρο',
   'show_news'=>'εμφανιση νεων',
-  'smilies'=>'Smilies<b><u>ειναι ενεργο</u></b>',
+  'smilies'=>'Smilies<b><span class="underline">ειναι ενεργο</span></b>',
   'sort'=>'Ταξινομηση:',
   'title_unpublished_news'=>'<h2>ΑΔΗΜΟΣΙΕΥΤΑ ΝΕΑ:</h2>',
   'topnews'=>'κορυφαια νεα',

@@ -87,10 +87,10 @@ if (isset($_GET[ 'action' ])) {
         $_POST[ 'users' ] = explode("-", $_GET[ 'users' ]);
     }
     if (!isset($_POST[ 'users' ])) {
-        $_POST[ 'users' ] = [];
+        $_POST[ 'users' ] = array();
     }
     if (is_null($_POST[ 'users' ])) {
-        $_POST[ 'users' ] = [];
+        $_POST[ 'users' ] = array();
     }
     if (isset($_GET[ 'groups' ])) {
         $_POST[ 'groups' ] = explode("-", $_GET[ 'groups' ]);
@@ -98,7 +98,7 @@ if (isset($_GET[ 'action' ])) {
     if (isset($_GET[ 'addfield' ])) {
         $_POST[ 'addfield' ] = $_GET[ 'addfield' ];
     }
-    $users = [];
+    $users = array();
     if (in_array(0, $_POST[ 'users' ])) {
         $query = safe_query("SELECT userID FROM `" . PREFIX . "squads_members`");
         while ($ds = mysqli_fetch_array($query)) {
@@ -165,17 +165,17 @@ if (isset($_GET[ 'action' ])) {
             }
         }
     }
-    $groups = [];
+    $groups = array();
     if (isset($_POST[ 'groups' ])) {
         $grps = $_POST[ 'groups' ];
     } else {
-        $grps = [1];
+        $grps = array(1);
     }
 
     $sql = safe_query("SELECT * FROM " . PREFIX . "forum_groups");
     while ($ds = mysqli_fetch_array($sql)) {
         if (in_array($ds[ 'fgrID' ], $grps)) {
-            $groups[ ] = ['fgrID' => $ds[ 'fgrID' ], 'name' => getinput($ds[ 'name' ])];
+            $groups[ ] = array('fgrID' => $ds[ 'fgrID' ], 'name' => getinput($ds[ 'name' ]));
         }
     }
 
@@ -270,7 +270,6 @@ if (isset($_GET[ 'action' ])) {
     }
     echo '</td></tr></table></form>';
 } else {
-
     $groups = '';
     $ergebnis = safe_query("SELECT * FROM " . PREFIX . "forum_groups");
     $selector = 0;

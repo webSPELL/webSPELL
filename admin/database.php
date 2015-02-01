@@ -26,7 +26,6 @@
 */
 
 if (isset($_POST[ 'upload' ])) {
-
     $_language->readModule('database');
 
     if (!ispageadmin($userID) || mb_substr(basename($_SERVER[ 'REQUEST_URI' ]), 0, 15) != "admincenter.php") {
@@ -70,7 +69,6 @@ if (isset($_GET[ 'back' ])) {
 }
 
 if ($action == "optimize") {
-
     $_language->readModule('database');
 
     echo '<h1>&curren; ' . $_language->module[ 'database' ] . '</h1>';
@@ -158,7 +156,6 @@ if ($action == "optimize") {
                 $final .= $insert_keys;
                 $final .= ") VALUES (";
                 for ($i = 0; $i < $z; $i++) {
-
                     $inhalt[ $i ] = str_replace("'", "`", $inhalt[ $i ]);
                     $inhalt[ $i ] = str_replace("\\", "\\\\", $inhalt[ $i ]);
                     $einschub = "'" . $inhalt[ $i ] . "'";
@@ -199,7 +196,6 @@ if ($action == "optimize") {
         echo $_language->readModule('database') . $_language->module[ 'transaction_invalid' ];
     }
 } else {
-
     $_language->readModule('database');
 
     if (!ispageadmin($userID) || mb_substr(basename($_SERVER[ 'REQUEST_URI' ]), 0, 15) != "admincenter.php") {

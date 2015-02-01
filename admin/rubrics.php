@@ -238,7 +238,6 @@ if ($action == "add") {
   </table>
   </form>';
 } else {
-
     echo '<h1>&curren; ' . $_language->module[ 'news_rubrics' ] . '</h1>';
 
     echo '<a href="admincenter.php?site=rubrics&amp;action=add" class="input">' .

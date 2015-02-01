@@ -46,6 +46,7 @@ $language_array = Array(
   'linkname'=>'Saites nosaukums',
   'linkrubric'=>'Rindkopas saite',
   'links'=>'Saites',
+  'new_category'=>'jauna kategorija',
   'new_link'=>'Jauna saite',
   'no_access'=>'nav pieejas.',
   'no_categories'=>'kategorijas nav pieejamas',

@@ -73,7 +73,7 @@ input, textarea, select, a.input {
 input[type="radio"], input[type="checkbox"],
 input[type="radio"]:focus, input[type="radio"]:active,
 input[type="checkbox"]:focus, input[type="checkbox"]:active {
-    border: 0px;
+    border: 0;
 }
 
 input:active, textarea:active, select:active, a.input:active,
@@ -96,8 +96,7 @@ a.input {
     margin: 0;
     padding: 0 3px;
     color: #4E6C86;
-    background-image: url(images/title.jpg);
-    background-repeat: repeat;
+    background: url(images/title.jpg) repeat;
 }
 
 .td_head {
@@ -152,8 +151,7 @@ a.input {
 #links a {
     display: block;
     height: 92px;
-    background-position: right bottom;
-    background-repeat: no-repeat;
+    background: no-repeat right bottom;
 }
 
 #links ul li:hover a {

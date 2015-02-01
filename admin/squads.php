@@ -336,8 +336,8 @@ if ($action == "add") {
 
     $_language->readModule('bbcode', true);
 
-    eval("\$addbbcode = \"" . gettemplate("addbbcode", "html", "admin") . "\";");
-    eval("\$addflags = \"" . gettemplate("flags_admin", "html", "admin") . "\";");
+    $addbbcode = $GLOBALS["_template"]->replaceTemplate("addbbcode", array());
+    $addflags = $GLOBALS["_template"]->replaceTemplate("flags_admin", array());
 
     echo '<script>
 		<!--
@@ -455,8 +455,8 @@ type="radio" name="gamesquad" value="1" checked="checked" /> ' . $_language->mod
 
     $_language->readModule('bbcode', true);
 
-    eval("\$addbbcode = \"" . gettemplate("addbbcode", "html", "admin") . "\";");
-    eval("\$addflags = \"" . gettemplate("flags_admin", "html", "admin") . "\";");
+    $addbbcode = $GLOBALS["_template"]->replaceTemplate("addbbcode", array());
+    $addflags = $GLOBALS["_template"]->replaceTemplate("flags_admin", array());
 
     echo '<script>
 		<!--
@@ -499,7 +499,7 @@ type="radio" name="gamesquad" value="1" checked="checked" /> ' . $_language->mod
       <td>' . $type . '</td>
     </tr>
   </table>
-  <div id="games" style="display:' . $display . ';">
+  <div id="games" style="display:' . $display . '">
   <table width="100%" border="0" cellspacing="1" cellpadding="3">
     <tr>
       <td width="15%"><b>' . $_language->module['game'] . '</b></td>
@@ -527,10 +527,10 @@ type="radio" name="gamesquad" value="1" checked="checked" /> ' . $_language->mod
   </table>
   </form>';
 } else {
-    echo '<h1>&curren; ' . $_language->module['squads'] . '</h1>';
+    echo '<h1>&curren; ' . $_language->module[ 'squads' ] . '</h1>';
 
-    echo '<a href="admincenter.php?site=squads&amp;action=add" class="input">' . $_language->module['new_squad'] .
-    '</a><br><br>';
+    echo '<a href="admincenter.php?site=squads&amp;action=add" class="input">' .
+        $_language->module[ 'new_squad' ] . '</a><br><br>';
 
     echo '<form method="post" action="admincenter.php?site=squads">
   <table width="100%" border="0" cellspacing="1" cellpadding="3" bgcolor="#DDDDDD">

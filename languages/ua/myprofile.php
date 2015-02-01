@@ -39,7 +39,7 @@ $language_array = Array(
   'activated'=>'активоване',
   'avatar'=>'Аватар:',
   'back'=>'назад',
-  'bbcode'=>'<href="javascript:void(0);" onclick="window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">ВВкод</a> Увімкнено',
+  'bbcode'=>'<a href="javascript:void(0);" onclick="window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">ВВкод</a> Увімкнено',
   'can_not_copy'=>'неможливо скопіювати файл з сервера',
   'change_mail'=>'змінити E-Mail',
   'change_password'=>'змінити парольль',

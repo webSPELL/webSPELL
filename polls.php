@@ -72,7 +72,7 @@ if ($action == "vote") {
                     $anz_user = true;
                 }
             } else {
-                $user_ids = [];
+                $user_ids = array();
             }
         }
 
@@ -81,7 +81,6 @@ if ($action == "vote") {
             $cookie = in_array($pollID, $_COOKIE[ 'poll' ]);
         }
         if (!$cookie && !$anz && !$anz_user && isset($_POST[ 'vote' ])) {
-
             //write cookie
             $index = count($_COOKIE[ 'poll' ]);
             setcookie("poll[" . $index . "]", $pollID, time() + (3600 * 24 * 365));
@@ -271,7 +270,6 @@ if ($action == "vote") {
                 )"
         );
     } else {
-
         safe_query(
             "UPDATE
                 " . PREFIX . "poll
@@ -333,12 +331,12 @@ if ($action == "vote") {
 }
 
 $_language->readModule('polls');
-eval("\$title_polls = \"" . gettemplate("title_polls") . "\";");
+$title_polls = $GLOBALS["_template"]->replaceTemplate("title_polls", array());
 echo $title_polls;
 
 if ($action == "new") {
     if (ispollsadmin($userID)) {
-        eval("\$polls_new = \"" . gettemplate("polls_new") . "\";");
+        $polls_new = $GLOBALS["_template"]->replaceTemplate("polls_new", array());
         echo $polls_new;
     } else {
         redirect('index.php?site=news', $_language->module[ 'no_access' ], 3);
@@ -350,7 +348,6 @@ if ($action == "new") {
         $ds = mysqli_fetch_array($ergebnis);
 
         if (isset($ds[ 'pollID' ])) {
-
             $runtime_date = date("Y-m-d", $ds[ 'laufzeit' ]);
             $runtime_time = date("H:i", $ds[ 'laufzeit' ]);
 
@@ -381,7 +378,24 @@ if ($action == "new") {
                 $intern = '';
             }
             $bg1 = BG_1;
-            eval("\$polls_edit = \"" . gettemplate("polls_edit") . "\";");
+            $data_array = array();
+            $data_array['$polltitle'] = $polltitle;
+            $data_array['$runtime_date'] = $runtime_date;
+            $data_array['$runtime_time'] = $runtime_time;
+            $data_array['$option1'] = $option1;
+            $data_array['$option2'] = $option2;
+            $data_array['$option3'] = $option3;
+            $data_array['$option4'] = $option4;
+            $data_array['$option5'] = $option5;
+            $data_array['$option6'] = $option6;
+            $data_array['$option7'] = $option7;
+            $data_array['$option8'] = $option8;
+            $data_array['$option9'] = $option9;
+            $data_array['$option10'] = $option10;
+            $data_array['$comments'] = $comments;
+            $data_array['$intern'] = $intern;
+            $data_array['$pollID'] = (int)$pollID;
+            $polls_edit = $GLOBALS["_template"]->replaceTemplate("polls_edit", $data_array);
             echo $polls_edit;
         }
     } else {
@@ -450,7 +464,12 @@ if ($action == "new") {
         $dv[ 'o9' ] + $dv[ 'o10' ];
     $n = 1;
 
-    eval("\$polls_head = \"" . gettemplate("polls_head") . "\";");
+    $data_array = array();
+    $data_array['$title'] = $title;
+    $data_array['$isintern'] = $isintern;
+    $data_array['$gesamtstimmen'] = $gesamtstimmen;
+    $data_array['$timeleft'] = $timeleft;
+    $polls_head = $GLOBALS["_template"]->replaceTemplate("polls_head", $data_array);
     echo $polls_head;
     $comments = "";
     foreach ($options as $option) {
@@ -473,7 +492,7 @@ if ($action == "new") {
                 aria-valuenow="' . $picwidth . '"
                 aria-valuemin="0"
                 aria-valuemax="100"
-                style="width: ' . $picwidth . '%;"
+                style="width: ' . $picwidth . '%"
             >
                 ' . $picwidth . ' %
             </div>
@@ -486,19 +505,25 @@ if ($action == "new") {
                 aria-valuenow="0"
                 aria-valuemin="0"
                 aria-valuemax="100"
-                style="width: 0%;"
+                style="width: 0"
             >
                 0 %
             </div>
         </div>';
         }
 
-        eval("\$polls_content = \"" . gettemplate("polls_content") . "\";");
+        $data_array = array();
+        $data_array['$option'] = $option;
+        $data_array['$perc'] = $perc;
+        $polls_content = $GLOBALS["_template"]->replaceTemplate("polls_content", $data_array);
         echo $polls_content;
         $n++;
     }
 
-    eval("\$polls_foot = \"" . gettemplate("polls_foot") . "\";");
+    $data_array = array();
+    $data_array['$comments'] = $comments;
+    $data_array['$adminactions'] = $adminactions;
+    $polls_foot = $GLOBALS["_template"]->replaceTemplate("polls_foot", $data_array);
     echo $polls_foot;
 
     $comments_allowed = $ds[ 'comments' ];
@@ -508,7 +533,6 @@ if ($action == "new") {
 
     include("comments.php");
 } elseif (isset($_GET[ 'vote' ])) {
-
     $pagebg = PAGEBG;
     $border = BORDER;
     $bghead = BGHEAD;
@@ -681,7 +705,12 @@ if ($action == "new") {
                 $dv[ 'o8' ] + $dv[ 'o9' ] + $dv[ 'o10' ];
             $n = 1;
 
-            eval ("\$polls_head = \"" . gettemplate("polls_head") . "\";");
+            $data_array = array();
+            $data_array['$title'] = $title;
+            $data_array['$isintern'] = $isintern;
+            $data_array['$gesamtstimmen'] = $gesamtstimmen;
+            $data_array['$timeleft'] = $timeleft;
+            $polls_head = $GLOBALS["_template"]->replaceTemplate("polls_head", $data_array);
             echo $polls_head;
 
             foreach ($options as $option) {
@@ -710,13 +739,19 @@ if ($action == "new") {
                     </a>';
                 }
 
-                eval ("\$polls_content = \"" . gettemplate("polls_content") . "\";");
+                $data_array = array();
+                $data_array['$option'] = $option;
+                $data_array['$perc'] = $perc;
+                $polls_content = $GLOBALS["_template"]->replaceTemplate("polls_content", $data_array);
                 echo $polls_content;
 
                 $n++;
             }
 
-            eval ("\$polls_foot = \"" . gettemplate("polls_foot") . "\";");
+            $data_array = array();
+            $data_array['$comments'] = $comments;
+            $data_array['$adminactions'] = $adminactions;
+            $polls_foot = $GLOBALS["_template"]->replaceTemplate("polls_foot", $data_array);
             echo $polls_foot;
 
             $i++;

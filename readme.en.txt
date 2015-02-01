@@ -8,7 +8,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -46,29 +46,29 @@ webSPELL is a free Content Management System (CMS), which is available for free 
 	3. Setting the correct file/folder rights
 	4. Do the WebSpell install
 	5. Cleaning up
-	
+
 	1. Requirements
-	
-	    * Webspace with PHP and mySQL support (PHP >= 4.3, MySQL >= 4.1)
-	    * WinRAR to extract the downloaded WebSpell release ---> get it here: http://www.win-rar.com
+
+	    * Webspace with PHP and mySQL support (PHP >= 5.3, MySQL >= 4.1)
+	    * (g)unzip/tar to extract the downloaded WebSpell release
 	    * A FTP program to upload the WebSpell files to your webspace - we recommend SmartFTP
-	
-	
-	
+
+
+
 	2. Upload webSPELL to your webspace
-	
+
 	    * Start your above downloaded FTP programm
 	    * Connect with this FTP program to your webspace FTP server (you will get the access data for this from your webhoster)
 	    * Upload ALL the extracted WebSpell files and folders to your webspace
-	
-	
-	
+
+
+
 	3. Setting the correct file/folder rights
-	
+
 		webSPELL needs special access rights on some files and folders. You are able to set this rights with the FTP
 		program. For doing this make a right click in the FTP program on the desired files or folders, look for
 		Properties/CHMOD (might be named different according to the used ftp program) and click it. There you have to set the permissions for all following files and folders to 777:
-	
+
 	    * demos/
 	    * downloads/
 	    * images/articles-pics
@@ -80,7 +80,7 @@ webSPELL is a free Content Management System (CMS), which is available for free 
 	    * images/gallery/large
 	    * images/gallery/thumb
 	    * images/games
-		  * images/icons/ranks
+	    * images/icons/ranks
 	    * images/links
 	    * images/linkus
 	    * images/news-pics
@@ -93,31 +93,29 @@ webSPELL is a free Content Management System (CMS), which is available for free 
 	    * _mysql.php
 	    * _stylesheet.css
 	    * tmp/
-	
-	
-	
+
+
+
 	4. Do the WebSpell install
-	
+
 	    * Open your webbrowser
 	    * Enter the path to the webspell install folder http://[hostnameofyouwebspace]/install (substitute [hostnameofyouwebspace] with the correct domain name (and maybe additional path name if you uploaded webSPELL to some sub-folder) where you have uploaded webSPELL.
 	    * Follow the installation steps and enter the correct data
-	
-	
-	
+
+
+
 	5. Cleaning up
-	
+
 	    * Reset the access rights of _mysql.php back to 644 with the FTP program
 	    * Delete the complete install/ folder from your webspace with the FTP program
-	
+
 	Now your webSPELL Page is ready.
 
 3. Related links
 
 	http://www.webspell.org/?site=forum
 		Bulletin boards for support and communication between user (problems, modifications, templates, addons, etc.)
-	http://wiki.webspell.org
-		Wiki for webSPELL. Help with using webSPELL system, link lists, etc.
 	http://www.webspell.org/?site=faq
 		Frequently Asked Questions (FAQ) for webSPELL. Answers and solutions for frequently asked questions and problems
-	http://www.webspell.org/?site=irc
-		Access via browser to webSPELL chat (IRC) for live support. Channel: #webspell @ Quakenet
+	http://github.com/webSPELL/webSPELL-4.2.3
+    	Official webSPELL Github Repo (code, issues, wiki)

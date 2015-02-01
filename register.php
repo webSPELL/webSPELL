@@ -27,11 +27,10 @@
 
 $_language->readModule('register');
 
-eval("\$title_register = \"" . gettemplate("title_register") . "\";");
+$title_register = $GLOBALS["_template"]->replaceTemplate("title_register", array());
 echo $title_register;
 $show = true;
 if (isset($_POST['save'])) {
-
     if (!$loggedin) {
         $username = mb_substr(trim($_POST['username']), 0, 30);
         $nickname = htmlspecialchars(mb_substr(trim($_POST['nickname']), 0, 30));
@@ -42,7 +41,7 @@ if (isset($_POST['save'])) {
         $mail = $_POST['mail'];
         $CAPCLASS = new \webspell\Captcha;
 
-        $error = [];
+        $error = array();
 
         // check nickname
         if (!(mb_strlen(trim($nickname)))) {
@@ -158,23 +157,23 @@ if (isset($_POST['save'])) {
             $ToEmail = $mail;
             $ToName = $username;
             $header = str_replace(
-                ['%username%', '%activationlink%', '%pagetitle%', '%homepage_url%'],
-                [stripslashes($username), stripslashes($activationlink), $hp_title, $hp_url],
+                array('%username%', '%activationlink%', '%pagetitle%', '%homepage_url%'),
+                array(stripslashes($username), stripslashes($activationlink), $hp_title, $hp_url),
                 $_language->module['mail_subject']
             );
             $Message = str_replace(
-                ['%username%', '%activationlink%', '%pagetitle%', '%homepage_url%'],
-                [stripslashes($username), stripslashes($activationlink), $hp_title, $hp_url],
+                array('%username%', '%activationlink%', '%pagetitle%', '%homepage_url%'),
+                array(stripslashes($username), stripslashes($activationlink), $hp_title, $hp_url),
                 $_language->module['mail_text']
             );
 
             if (
-            mail(
-                $ToEmail,
-                $header,
-                $Message,
-                "From:" . $admin_email . "\nContent-type: text/plain; charset=utf-8\n"
-            )
+                mail(
+                    $ToEmail,
+                    $header,
+                    $Message,
+                    "From:" . $admin_email . "\nContent-type: text/plain; charset=utf-8\n"
+                )
             ) {
                 redirect("index.php", $_language->module['register_successful'], 3);
                 $show = false;
@@ -192,9 +191,8 @@ if (isset($_POST['save'])) {
     }
 }
 if (isset($_GET['key'])) {
-
     safe_query("UPDATE `" . PREFIX . "user` SET activated='1' WHERE activated='" . $_GET['key'] . "'");
-    if (mysqli_affected_rows()) {
+    if (mysqli_affected_rows($_database)) {
         redirect('index.php?site=login', $_language->module['activation_successful'], 3);
     } else {
         redirect('index.php?site=login', $_language->module['wrong_activationkey'], 3);
@@ -211,14 +209,14 @@ if (isset($_GET['key'])) {
             WHERE
                 email_activate='" . $_GET['mailkey']
         );
-        if (mysqli_affected_rows()) {
+        if (mysqli_affected_rows($_database)) {
             redirect('index.php?site=login', $_language->module['mail_activation_successful'], 3);
         } else {
             redirect('index.php?site=login', $_language->module['wrong_activationkey'], 3);
         }
     }
 } else {
-    if ($show == true) {
+    if ($show === true) {
         if (!$loggedin) {
             $CAPCLASS = new \webspell\Captcha;
             $captcha = $CAPCLASS->createCaptcha();
@@ -254,7 +252,16 @@ if (isset($_GET['key'])) {
                 $mail = '';
             }
 
-            eval("\$register = \"" . gettemplate("register") . "\";");
+            $data_array = array();
+            $data_array['$showerror'] = $showerror;
+            $data_array['$nickname'] = $nickname;
+            $data_array['$username'] = $username;
+            $data_array['$pwd1'] = $pwd1;
+            $data_array['$pwd2'] = $pwd2;
+            $data_array['$mail'] = $mail;
+            $data_array['$captcha'] = $captcha;
+            $data_array['$hash'] = $hash;
+            $register = $GLOBALS["_template"]->replaceTemplate("register", $data_array);
             echo $register;
         } else {
             redirect(

@@ -31,7 +31,6 @@ if (isset($_GET[ 'action' ])) {
     $action = null;
 }
 if ($action == "save") {
-
     $message = trim($_POST[ 'message' ]);
     $name = trim($_POST[ 'name' ]);
     $run = 0;
@@ -86,7 +85,7 @@ if ($action == "save") {
     }
     if (isset($_POST[ 'shoutID' ])) {
         if (!is_array($_POST[ 'shoutID' ])) {
-            $_POST[ 'shoutID' ] = [$_POST[ 'shoutID' ]];
+            $_POST[ 'shoutID' ] = array($_POST[ 'shoutID' ]);
         }
         foreach ($_POST[ 'shoutID' ] as $id) {
             safe_query("DELETE FROM " . PREFIX . "shoutbox WHERE shoutID='".(int)$id."'");
@@ -94,9 +93,8 @@ if ($action == "save") {
     }
     header("Location: index.php?site=shoutbox_content&action=showall");
 } elseif ($action == "showall") {
-
     $_language->readModule('shoutbox');
-    eval ("\$title_shoutbox = \"" . gettemplate("title_shoutbox") . "\";");
+    $title_shoutbox = $GLOBALS["_template"]->replaceTemplate("title_shoutbox", array());
     echo $title_shoutbox;
 
     $tmp = mysqli_fetch_assoc(safe_query("SELECT count(shoutID) as cnt FROM " . PREFIX . "shoutbox ORDER BY date"));
@@ -140,18 +138,20 @@ if ($action == "save") {
 
     if ($type == "ASC") {
         $sorter = '<a href="index.php?site=shoutbox_content&amp;action=showall&amp;page=' . $page . '&amp;type=DESC">' .
-            $_language->module[ 'sort' ] . '</a> <img src="images/icons/asc.gif">';
+            $_language->module[ 'sort' ] . '</a> <span class="glyphicon glyphicon-chevron-down"></span>';
     } else {
         $sorter = '<a href="index.php?site=shoutbox_content&amp;action=showall&amp;page=' . $page . '&amp;type=ASC">' .
-            $_language->module[ 'sort' ] . '</a> <img src="images/icons/desc.gif">';
+            $_language->module[ 'sort' ] . '</a> <span class="glyphicon glyphicon-chevron-up"></span>';
     }
 
-    eval ("\$shoutbox_all_head = \"" . gettemplate("shoutbox_all_head") . "\";");
+    $data_array = array();
+    $data_array['$sorter'] = $sorter;
+    $data_array['$page_link'] = $page_link;
+    $shoutbox_all_head = $GLOBALS["_template"]->replaceTemplate("shoutbox_all_head", $data_array);
     echo $shoutbox_all_head;
 
     $i = 1;
     while ($ds = mysqli_fetch_array($ergebnis)) {
-
         $i % 2 ? $bg1 = BG_1 : $bg1 = BG_2;
         $date = getformatdatetime($ds[ 'date' ]);
         $name = $ds[ 'name' ];
@@ -165,7 +165,14 @@ if ($action == "save") {
             $actions = '';
         }
 
-        eval ("\$shoutbox_all_content = \"" . gettemplate("shoutbox_all_content") . "\";");
+        $data_array = array();
+        $data_array['$actions'] = $actions;
+        $data_array['$n'] = $n;
+        $data_array['$name'] = $name;
+        $data_array['$date'] = $date;
+        $data_array['$ip'] = $ip;
+        $data_array['$message'] = $message;
+        $shoutbox_all_content = $GLOBALS["_template"]->replaceTemplate("shoutbox_all_content", $data_array);
         echo $shoutbox_all_content;
         if ($type == "DESC") {
             $n--;
@@ -174,7 +181,7 @@ if ($action == "save") {
         }
         $i++;
     }
-    eval ("\$shoutbox_all_foot = \"" . gettemplate("shoutbox_all_foot") . "\";");
+    $shoutbox_all_foot = $GLOBALS["_template"]->replaceTemplate("shoutbox_all_foot", array());
     echo $shoutbox_all_foot;
 
     if (isfeedbackadmin($userID)) {
@@ -213,7 +220,11 @@ if ($action == "save") {
         $message = cleartext($ds[ 'message' ], false);
         $message = str_replace("&amp;amp;", "&", $message);
 
-        eval ("\$shoutbox_content = \"" . gettemplate("shoutbox_content") . "\";");
+        $data_array = array();
+        $data_array['$name'] = $name;
+        $data_array['$date'] = $date;
+        $data_array['$message'] = $message;
+        $shoutbox_content = $GLOBALS["_template"]->replaceTemplate("shoutbox_content", $data_array);
         echo $shoutbox_content;
     }
 }

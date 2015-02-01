@@ -45,7 +45,6 @@ $language_array = Array(
   'pic_of_the_moment'=>'صورة الحدث',
   'poll'=>'استفتاء',
   'random_user'=>'عضو عشوائي',
-  'scrolltext'=>'النص المتحرك',
   'server'=>'السيرفرات',
   'shoutbox'=>'صندوق الشات',
   'sponsors'=>'الداعمين',

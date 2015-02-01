@@ -131,7 +131,6 @@ if ($action == "add") {
   </table>
   </form>';
 } elseif (isset($_POST["save"])) {
-    $banner = $_FILES["banner"];
     $bannername = $_POST["bannername"];
     $bannerurl = $_POST["bannerurl"];
     if (isset($_POST["displayed"])) {
@@ -338,7 +337,7 @@ if ($action == "add") {
         echo $_language->module['transaction_invalid'];
     }
 } else {
-    echo '<h1>&curren; ' . $_language->module['bannerrotation'] . '</h1>';
+    echo '<h1>&curren; ' . $_language->module[ 'bannerrotation' ] . '</h1>';
 
     echo
     '<a href="admincenter.php?site=bannerrotation&amp;action=add" class="btn btn-danger">' .

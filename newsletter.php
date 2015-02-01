@@ -34,7 +34,6 @@ if (isset($_GET['action'])) {
 }
 
 if ($action == "save") {
-
     $email = $_POST['email'];
 
     if (!validate_email($email)) {
@@ -63,8 +62,8 @@ if ($action == "save") {
             $header = "From:" . $hp_title . "<" . $admin_email . ">\n";
             $header .= "Reply-To: " . $admin_email . "\n";
             $header .= "Content-Type: text/html; charset=utf-8\n";
-            $vars = ['%delete_key%', '%homepage_url%', '%mail%'];
-            $repl = [$pass, $hp_url, $email];
+            $vars = array('%delete_key%', '%homepage_url%', '%mail%');
+            $repl = array($pass, $hp_url, $email);
             mail(
                 $email,
                 $hp_title . ": " . $_language->module['newsletter_registration'],
@@ -121,15 +120,14 @@ if ($action == "save") {
     $dn = mysqli_fetch_array($ergebnis);
 
     if ($dn['pass'] != "") {
-
         $email = $_POST['email'];
         $pass = $dn['pass'];
 
         $header = "From:" . $hp_title . "<" . $admin_email . ">\n";
         $header .= "Reply-To: " . $admin_email . "\n";
         $header .= "Content-Type: text/html; charset=utf-8\n";
-        $vars = ['%delete_key%', '%homepage_url%', '%mail%'];
-        $repl = [$pass, $hp_url, $email];
+        $vars = array('%delete_key%', '%homepage_url%', '%mail%');
+        $repl = array($pass, $hp_url, $email);
         mail(
             $email,
             $hp_title . ": " . $_language->module['deletion_key'],
@@ -154,7 +152,6 @@ if ($action == "save") {
         );
     }
 } else {
-
     $usermail = getemail($userID);
     if (isset($_GET['mail'])) {
         $get_mail = getforminput($_GET['mail']);
@@ -173,9 +170,13 @@ if ($action == "save") {
         $get_pw = $_language->module['del_key'];
     }
 
-    eval ("\$newsletter_title = \"" . gettemplate("title_newsletter") . "\";");
+    $newsletter_title = $GLOBALS["_template"]->replaceTemplate("title_newsletter", array());
     echo $newsletter_title;
 
-    eval ("\$newsletter = \"" . gettemplate("newsletter") . "\";");
+    $data_array = array();
+    $data_array['$usermail'] = $usermail;
+    $data_array['$get_mail'] = $get_mail;
+    $data_array['$get_pw'] = $get_pw;
+    $newsletter = $GLOBALS["_template"]->replaceTemplate("newsletter", $data_array);
     echo $newsletter;
 }

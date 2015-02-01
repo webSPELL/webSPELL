@@ -37,7 +37,6 @@ if (
         $userID || isset($_REQUEST[ 'captcha' ])
     )
 ) {
-
     $_language->readModule('search');
 
     $run = 0;
@@ -51,11 +50,10 @@ if (
     }
 
     if ($run) {
-
-        eval ("\$title_search = \"" . gettemplate("title_search") . "\";");
+        $title_search = $GLOBALS["_template"]->replaceTemplate("title_search", array());
         echo $title_search;
 
-        $text = str_replace(['%', '*'], ['\%', '%'], $_REQUEST[ 'text' ]);
+        $text = str_replace(array('%', '*'), array('\%', '%'), $_REQUEST[ 'text' ]);
         if (!isset($_REQUEST[ 'r' ]) || $_REQUEST[ 'r' ] < 1 || $_REQUEST[ 'r' ] > 100) {
             $results = 50;
         } else {
@@ -64,10 +62,9 @@ if (
         isset($_REQUEST[ 'page' ]) ? $page = (int)$_REQUEST[ 'page' ] : $page = 1;
         isset($_REQUEST[ 'afterdate' ]) ? $afterdate = $_REQUEST[ 'afterdate' ] : $afterdate = 0;
         isset($_REQUEST[ 'beforedate' ]) ? $beforedate = $_REQUEST[ 'beforedate' ] : $beforedate = 0;
-        $keywords = preg_split("/ ,/si", strtolower(str_replace(['\%', '%'], '', $text)));
+        $keywords = preg_split("/ ,/si", strtolower(str_replace(array('\%', '%'), '', $text)));
 
         if (mb_strlen(str_replace('%', '', $text)) >= $search_min_len) {
-
             if (!$afterdate) {
                 $after = 0;
             } else {
@@ -80,12 +77,12 @@ if (
             }
 
             $i = 0;
-            $res_message = [];
-            $res_title = [];
-            $res_link = [];
-            $res_type = [];
-            $res_date = [];
-            $res_occurr = [];
+            $res_message = array();
+            $res_title = array();
+            $res_link = array();
+            $res_type = array();
+            $res_date = array();
+            $res_occurr = array();
 
             if (isset($_REQUEST[ 'articles' ])) {
                 $ergebnis_articles =
@@ -135,9 +132,9 @@ if (
                             )
                         );
                         $res_message[ $i ] = clearfromtags($query_result[ 'content' ]);
-                        $content = [$query_result[ 'content' ]];
+                        $content = array($query_result[ 'content' ]);
                     } else {
-                        $content = [];
+                        $content = array();
                         while ($qs = mysqli_fetch_array($ergebnis_articles_contents)) {
                             $content[ ] = $qs[ 'content' ];
                         }
@@ -187,9 +184,9 @@ if (
                             )"
                     );
                     if (mysqli_num_rows($ergebnis_faq_contents)) {
-                        $faq_array = [];
+                        $faq_array = array();
                         while ($qs = mysqli_fetch_array($ergebnis_faq_contents)) {
-                            $faq_array[ ] = ['question' => $qs[ 'question' ], 'answer' => $qs[ 'answer' ]];
+                            $faq_array[ ] = array('question' => $qs[ 'question' ], 'answer' => $qs[ 'answer' ]);
                         }
                         $faqID = $ds[ 'faqID' ];
                         $faqcatID = $ds[ 'faqcatID' ];
@@ -209,7 +206,6 @@ if (
                 }
             }
             if (isset($_REQUEST[ 'forum' ])) {
-
                 $ergebnis_forum = safe_query(
                     "SELECT
                         b.readgrps,
@@ -315,13 +311,13 @@ if (
                             )"
                     );
                     if (mysqli_num_rows($ergebnis_news_contents)) {
-                        $message_array = [];
+                        $message_array = array();
                         while ($qs = mysqli_fetch_array($ergebnis_news_contents)) {
-                            $message_array[ ] = [
+                            $message_array[ ] = array(
                                 'lang' => $qs[ 'language' ],
                                 'headline' => $qs[ 'headline' ],
                                 'message' => $qs[ 'content' ]
-                            ];
+                            );
                         }
                         $showlang = select_language($message_array);
 
@@ -386,8 +382,10 @@ if (
 
                 $date = getformatdate($res_date[ $key ]);
                 $type = $res_type[ $key ];
-                if (mb_strlen($res_message[ $key ]) > 200) {
-                    for ($z = 0; $z < mb_strlen($res_message[ $key ]); $z++) {
+                $str_len = mb_strlen($res_message[ $key ]);
+
+                if ($str_len > 200) {
+                    for ($z = 0; $z < $str_len; $z++) {
                         $tmp = mb_substr($res_message[ $key ], $z, 1);
                         if ($z >= 200 && $tmp == " ") {
                             $res_message[ $key ] = mb_substr($res_message[ $key ], 0, $z) . "...";
@@ -409,7 +407,14 @@ if (
                 $link = $res_link[ $key ];
                 $frequency = $res_occurr[ $key ];
 
-                eval ("\$search_result = \"" . gettemplate("search_result") . "\";");
+                $data_array = array();
+                $data_array['$type'] = $type;
+                $data_array['$title'] = $title;
+                $data_array['$date'] = $date;
+                $data_array['$frequency'] = $frequency;
+                $data_array['$auszug'] = $auszug;
+                $data_array['$link'] = $link;
+                $search_result = $GLOBALS["_template"]->replaceTemplate("search_result", $data_array);
                 echo $search_result;
 
                 $i++;
@@ -432,20 +437,26 @@ if (
         $text = '';
     }
 
-    eval ("\$title_search = \"" . gettemplate("title_search") . "\";");
+    $title_search = $GLOBALS["_template"]->replaceTemplate("title_search", array());
     echo $title_search;
 
     $bg1 = BG_1;
 
     if ($userID) {
-        eval ("\$search_form = \"" . gettemplate("search_form_loggedin") . "\";");
+        $data_array = array();
+        $data_array['$text'] = $text;
+        $search_form = $GLOBALS["_template"]->replaceTemplate("search_form_loggedin", $data_array);
         echo $search_form;
     } else {
         $CAPCLASS = new \webspell\Captcha;
         $captcha = $CAPCLASS->createCaptcha();
         $hash = $CAPCLASS->getHash();
         $CAPCLASS->clearOldCaptcha();
-        eval ("\$search_form = \"" . gettemplate("search_form_notloggedin") . "\";");
+        $data_array = array();
+        $data_array['$text'] = $text;
+        $data_array['$captcha'] = $captcha;
+        $data_array['$hash'] = $hash;
+        $search_form = $GLOBALS["_template"]->replaceTemplate("search_form_notloggedin", $data_array);
         echo $search_form;
     }
 }

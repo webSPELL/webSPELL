@@ -43,7 +43,6 @@ foreach ($GLOBALS['_modRewrite']->getTypes() as $typ) {
 }
 
 if ($action == "add") {
-
     $CAPCLASS = new \webspell\Captcha;
     $CAPCLASS->createTransaction();
     $hash = $CAPCLASS->getHash();
@@ -164,7 +163,6 @@ if ($action == "add") {
     $ds = safe_query("SELECT * FROM " . PREFIX . "modrewrite");
     $anz = mysqli_num_rows($ds);
     while ($flags = mysqli_fetch_array($ds)) {
-
         $data = unserialize($flags['fields']);
         $replace = $GLOBALS['_modRewrite']->buildReplace($flags['link'], $flags['regex'], $data);
         security_slashes($replace);
@@ -184,7 +182,7 @@ if ($action == "add") {
 } elseif (isset($_POST['save'])) {
     $CAPCLASS = new \webspell\Captcha;
     if ($CAPCLASS->checkCaptcha(0, $_POST['captcha_hash'])) {
-        $data = [];
+        $data = array();
         foreach ($_POST['keys'] as $key => $val) {
             if (!empty($val)) {
                 $data[$val] = $_POST['values'][$key];
@@ -218,7 +216,7 @@ if ($action == "add") {
 } elseif (isset($_POST["saveedit"])) {
     $CAPCLASS = new \webspell\Captcha;
     if ($CAPCLASS->checkCaptcha(0, $_POST['captcha_hash'])) {
-        $data = [];
+        $data = array();
         foreach ($_POST['keys'] as $key => $val) {
             if (!empty($val)) {
                 $data[$val] = $_POST['values'][$key];
@@ -297,7 +295,7 @@ if ($action == "add") {
         $enable = "";
         $unlink = true;
 
-        if ($written == false) {
+        if ($written === false) {
             $info .= sprintf($_language->module['can_not_write_file'], $file);
         } else {
             $protocol = 'http';
@@ -315,7 +313,7 @@ if ($action == "add") {
             $mutliview_test = $protocol . '://' . $_SERVER["SERVER_NAME"] . $port . dirname($_SERVER["REQUEST_URI"]) .
                 '/ht_test/test/multiview';
             $headers = @get_headers($base_test, 1);
-            if ($headers == false) {
+            if ($headers === false) {
                 $info .= $_language->module['fopen_disabled'];
                 $status = '<div id="result"></div>';
                 $unlink = false;
@@ -378,7 +376,7 @@ if ($action == "add") {
 
     $written = @file_put_contents($folder . '/' . $file, $content);
 
-    if ($written == false) {
+    if ($written === false) {
         $info .= sprintf($_language->module['can_not_write_file'], $file);
         echo $info;
     } else {
@@ -399,12 +397,11 @@ if ($action == "add") {
     safe_query("UPDATE " . PREFIX . "settings SET modRewrite='0'");
     redirect("admincenter.php?site=modrewrite", $_language->module['successful'], 2);
 } else {
-
     echo '<h1>&curren; ' . $_language->module['modrewrite_settings'] . '</h1>';
     $CAPCLASS = new \webspell\Captcha;
     $CAPCLASS->createTransaction();
     $hash = $CAPCLASS->getHash();
-    if ($modRewrite == false) {
+    if ($modRewrite === false) {
         echo '<form method="post" action="admincenter.php?site=modrewrite" enctype="multipart/form-data">
         <table width="100%" border="0" cellspacing="1" cellpadding="3">
         <tr>
@@ -453,7 +450,6 @@ if ($action == "add") {
     $ds = safe_query("SELECT * FROM " . PREFIX . "modrewrite ORDER BY regex");
     $anz = mysqli_num_rows($ds);
     if ($anz) {
-
         $i = 1;
         $CAPCLASS = new \webspell\Captcha;
         $CAPCLASS->createTransaction();

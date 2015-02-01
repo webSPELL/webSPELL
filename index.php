@@ -34,7 +34,7 @@ $_language->readModule('index');
 $index_language = $_language->module;
 // end important data include
 
-$hide1 = ["forum", "forum_topic"];
+$hide1 = array("forum", "forum_topic");
 header('X-UA-Compatible: IE=edge,chrome=1');
 ?>
 <!DOCTYPE html>
@@ -50,9 +50,9 @@ header('X-UA-Compatible: IE=edge,chrome=1');
     <!-- Head & Title include -->
     <title><?php echo PAGETITLE; ?></title>
     <base href="<?php echo $rewriteBase; ?>">
-    <?php foreach($components['css'] as $component) {
+    <?php foreach ($components['css'] as $component) {
         echo '<link href="' . $component . '" rel="stylesheet">';
-    }
+}
     ?>
     <link href="_stylesheet.css" rel="stylesheet">
     <link href="tmp/rss.xml" rel="alternate" type="application/rss+xml" title="<?php
@@ -91,7 +91,8 @@ header('X-UA-Compatible: IE=edge,chrome=1');
         <div class="row">
 
             <?php // show left column
-            if (!in_array($site, $hide1)) { ?>
+            if (!in_array($site, $hide1)) {
+?>
                 <!-- left column -->
                 <div id="leftcol" class="col-lg-3 visible-lg">
                     <!-- poll include -->
@@ -103,14 +104,14 @@ header('X-UA-Compatible: IE=edge,chrome=1');
                     <!-- pic of the moment include -->
                     <strong><?php echo $myclanname . "." . $index_language[ 'pic_of_the_moment' ]; ?></strong><br>
 
-                    <p class="text-center"><?php include("sc_potm.php"); ?></p>
+                    <?php include("sc_potm.php"); ?>
                     <!-- end pic of the moment include -->
                     <hr class="grey">
 
                     <!-- language switch include -->
                     <strong><?php echo $myclanname . "." . $index_language[ 'language_switch' ]; ?></strong><br>
 
-                    <p class="text-center"><?php include("sc_language.php"); ?></p>
+                    <?php include("sc_language.php"); ?>
                     <!-- end language switch include -->
                     <hr class="grey">
 
@@ -141,14 +142,14 @@ header('X-UA-Compatible: IE=edge,chrome=1');
                     <!-- sponsors include -->
                     <strong><?php echo $myclanname . "." . $index_language[ 'sponsors' ]; ?></strong><br>
 
-                    <p class="text-center"><?php include("sc_sponsors.php"); ?></p>
+                    <?php include("sc_sponsors.php"); ?>
                     <!-- end sponsors include -->
                     <hr class="grey">
 
                     <!-- partners include -->
                     <strong><?php echo $myclanname . "." . $index_language[ 'partners' ]; ?></strong><br>
 
-                    <p class="text-center"><?php include("partners.php"); ?></p>
+                    <?php include("partners.php"); ?>
                     <!-- end partners include -->
                 </div>
             <?php
@@ -167,7 +168,7 @@ header('X-UA-Compatible: IE=edge,chrome=1');
                 if (!isset($site)) {
                     $site = "news";
                 }
-                $invalide = ['\\', '/', '/\/', ':', '.'];
+                $invalide = array('\\', '/', '/\/', ':', '.');
                 $site = str_replace($invalide, ' ', $site);
                 if (!file_exists($site . ".php")) {
                     $site = "news";
@@ -208,7 +209,7 @@ header('X-UA-Compatible: IE=edge,chrome=1');
                     <!-- squads include -->
                     <strong><?php echo $myclanname . "." . $index_language[ 'squads' ]; ?></strong><br>
 
-                    <p class="text-center"><?php include("sc_squads.php"); ?></p>
+                    <?php include("sc_squads.php"); ?>
                     <!-- end squads include -->
                     <hr class="grey">
                 </div>
@@ -241,7 +242,7 @@ header('X-UA-Compatible: IE=edge,chrome=1');
                     <!-- shoutbox include -->
                     <strong><?php echo $myclanname . "." . $index_language[ 'shoutbox' ]; ?></strong><br>
 
-                    <p class="text-center"><?php include("shoutbox.php"); ?></p>
+                    <?php include("shoutbox.php"); ?>
                     <!-- end shoutbox include -->
                     <hr class="grey">
                 </div>
@@ -265,7 +266,7 @@ header('X-UA-Compatible: IE=edge,chrome=1');
         </div>
     </div>
 </div>
-<?php foreach($components['js'] as $component) {
+<?php foreach ($components['js'] as $component) {
     echo '<script src="' . $component . '"></script>';
 }
 ?>

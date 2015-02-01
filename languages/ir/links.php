@@ -45,6 +45,7 @@ $language_array = Array(
   'linkname'=>'نام لینک',
   'linkrubric'=>'لینک مرتبط',
   'links'=>'لینک ها',
+  'new_category'=>'گروه جدید',
   'new_link'=>'لینک جدید',
   'no_access'=>'.غیر قابل دسترسی',
   'no_categories'=>'هیچ دسته ای موجود نیست',

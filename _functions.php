@@ -32,36 +32,14 @@ systeminc('ip');
 
 // -- GLOBAL WEBSPELL FUNCTIONS -- //
 
-function gettemplate($template, $endung = "html", $calledfrom = "root")
-{
-    $templatefolder = "templates";
-    if ($calledfrom == 'root') {
-        return str_replace(
-            "\"",
-            "\\\"",
-            $GLOBALS[ '_language' ]->replace(
-                file_get_contents($templatefolder . "/" . $template . "." . $endung)
-            )
-        );
-    } elseif ($calledfrom == 'admin') {
-        return str_replace(
-            "\"",
-            "\\\"",
-            $GLOBALS[ '_language' ]->replace(
-                file_get_contents("../" . $templatefolder . "/" . $template . "." . $endung)
-            )
-        );
-    }
-}
-
 function makepagelink($link, $page, $pages, $sub = '')
 {
     $page_link = '<span class="pagelink"><img src="images/icons/multipage.gif" width="10" height="12" alt=""> <small>';
 
     if ($page != 1) {
         $page_link .=
-            '&nbsp;<a href="' . $link . '&amp;' . $sub . 'page=1">&laquo;</a>&nbsp;<a href="' . $link . '&amp;' . $sub .
-            'page=' . ($page - 1) . '">&lsaquo;</a>';
+        '&nbsp;<a href="' . $link . '&amp;' . $sub . 'page=1">&laquo;</a>&nbsp;<a href="' . $link . '&amp;' . $sub .
+        'page=' . ($page - 1) . '">&lsaquo;</a>';
     }
     if ($page >= 6) {
         $page_link .= '&nbsp;<a href="' . $link . '&amp;' . $sub . 'page=' . ($page - 5) . '">...</a>';
@@ -76,7 +54,7 @@ function makepagelink($link, $page, $pages, $sub = '')
             $i = 1;
         }
         if ($i == $page) {
-            $page_link .= '&nbsp;<strong><u>' . $i . '</u></strong>';
+            $page_link .= '&nbsp;<strong><span class="underline">' . $i . '</span></strong>';
         } else {
             $page_link .= '&nbsp;<a href="' . $link . '&amp;' . $sub . 'page=' . $i . '">' . $i . '</a>';
         }
@@ -86,8 +64,8 @@ function makepagelink($link, $page, $pages, $sub = '')
     }
     if ($page != $pages) {
         $page_link .=
-            '&nbsp;<a href="' . $link . '&amp;' . $sub . 'page=' . ($page + 1) . '">&rsaquo;</a>&nbsp;<a href="' .
-            $link . '&amp;' . $sub . 'page=' . $pages . '">&raquo;</a>';
+        '&nbsp;<a href="' . $link . '&amp;' . $sub . 'page=' . ($page + 1) . '">&rsaquo;</a>&nbsp;<a href="' .
+        $link . '&amp;' . $sub . 'page=' . $pages . '">&raquo;</a>';
     }
     $page_link .= '</small></span>';
 
@@ -137,8 +115,8 @@ function js_replace($string)
 {
     $output = preg_replace("/(\\\)/si", '\\\\\1', $string);
     $output = str_replace(
-        ["\r\n", "\n", "'", "<script>", "</script>", "<noscript>", "</noscript>"],
-        ["\\n", "\\n", "\'", "\\x3Cscript\\x3E", "\\x3C/script\\x3E", "\\x3Cnoscript\\x3E", "\\x3C/noscript\\x3E"],
+        array("\r\n", "\n", "'", "<script>", "</script>", "<noscript>", "</noscript>"),
+        array("\\n", "\\n", "\'", "\\x3Cscript\\x3E", "\\x3C/script\\x3E", "\\x3Cnoscript\\x3E", "\\x3C/noscript\\x3E"),
         $output
     );
     return $output;
@@ -157,9 +135,14 @@ function percent($sub, $total, $dec)
 
 function showlock($reason, $time)
 {
-    $gettitle = mysqli_fetch_array(safe_query("SELECT title FROM " . PREFIX . "styles"));
-    $pagetitle = $gettitle[ 'title' ];
-    eval ("\$lock = \"" . gettemplate("lock") . "\";");
+    $gettitle = mysqli_fetch_array(safe_query("SELECT title FROM `" . PREFIX . "styles`"));
+    $pagetitle = $gettitle['title'];
+    $data_array = array();
+    $data_array['$pagetitle'] = $pagetitle;
+    $data_array['$rewriteBase'] = $rewriteBase;
+    $data_array['$reason'] = $reason;
+    $lock = $GLOBALS["_template"]->replaceTemplate("lock", $data_array);
+
     die($lock);
 }
 
@@ -191,7 +174,9 @@ function validate_url($url)
 function validate_email($email)
 {
     return preg_match(
+        // @codingStandardsIgnoreStart
         "/^(?!\.)(\.?[\p{L}0-9!#\$%&'\*\+\/=\?^_`\{\|}~-]+)+@(?!\.)(\.?(?!-)[0-9\p{L}-]+(?<!-))+\.[\p{L}0-9]{2,}$/sui",
+        // @codingStandardsIgnoreEnd
         $email
     );
 }
@@ -199,17 +184,17 @@ function validate_email($email)
 if (!function_exists('array_combine')) {
     function array_combine($keyarray, $valuearray)
     {
-        $keys = [];
-        $values = [];
-        $result = [];
+        $keys = array();
+        $values = array();
+        $result = array();
         foreach ($keyarray as $key) {
-            $keys[ ] = $key;
+            $keys[] = $key;
         }
         foreach ($valuearray as $value) {
-            $values[ ] = $value;
+            $values[] = $value;
         }
         foreach ($keys as $access => $resultkey) {
-            $result[ $resultkey ] = $values[ $access ];
+            $result[$resultkey] = $values[$access];
         }
         return $result;
     }
@@ -238,9 +223,9 @@ function countempty($checkarray)
 function checkforempty($valuearray)
 {
 
-    $check = [];
+    $check = array();
     foreach ($valuearray as $value) {
-        $check[ ] = $_REQUEST[ $value ];
+        $check[] = $_REQUEST[$value];
     }
 
     if (countempty($check) > 0) {
@@ -295,6 +280,14 @@ systeminc('func/language');
 $_language = new \webspell\Language;
 $_language->setLanguage($default_language);
 
+// -- TEMPLATE SYSTEM -- //
+
+systeminc('func/template');
+if (!stristr($_SERVER['SCRIPT_NAME'], '/admin/')) {
+    $_template = new \webspell\Template();
+} else {
+    $_template = new \webspell\Template('../templates/');
+}
 // -- GALLERY -- //
 
 systeminc('func/gallery');
@@ -318,9 +311,9 @@ systeminc('func/upload');
 // -- Mod Rewrite -- //
 
 systeminc('modrewrite');
-$GLOBALS[ '_modRewrite' ] = new \webspell\ModRewrite();
-if (!stristr($_SERVER[ 'SCRIPT_NAME' ], '/admin/') && $modRewrite) {
-    $GLOBALS[ '_modRewrite' ]->enable();
+$GLOBALS['_modRewrite'] = new \webspell\ModRewrite();
+if (!stristr($_SERVER['SCRIPT_NAME'], '/admin/') && $modRewrite) {
+    $GLOBALS['_modRewrite']->enable();
 }
 
 function cleartext($text, $bbcode = true, $calledfrom = 'root')
@@ -361,7 +354,6 @@ function clearfromtags($text)
 
 function getinput($text)
 {
-    //$text = stripslashes($text);
     $text = htmlspecialchars($text);
 
     return $text;
@@ -369,7 +361,7 @@ function getinput($text)
 
 function getforminput($text)
 {
-    $text = str_replace(['\r', '\n'], ["\r", "\n"], $text);
+    $text = str_replace(array('\r', '\n'), array("\r", "\n"), $text);
     $text = stripslashes($text);
     $text = htmlspecialchars($text);
 
@@ -379,64 +371,64 @@ function getforminput($text)
 // -- LOGIN -- //
 
 $login_per_cookie = false;
-if (isset($_COOKIE[ 'ws_auth' ]) && !isset($_SESSION[ 'ws_auth' ])) {
+if (isset($_COOKIE['ws_auth']) && !isset($_SESSION['ws_auth'])) {
     $login_per_cookie = true;
-    $_SESSION[ 'ws_auth' ] = $_COOKIE[ 'ws_auth' ];
+    $_SESSION['ws_auth'] = $_COOKIE['ws_auth'];
 }
 
 systeminc('login');
 
-if ($loggedin == false) {
-    if (isset($_COOKIE[ 'language' ])) {
-        $_language->setLanguage($_COOKIE[ 'language' ]);
-    } elseif (isset($_SESSION[ 'language' ])) {
-        $_language->setLanguage($_SESSION[ 'language' ]);
+if ($loggedin === false) {
+    if (isset($_COOKIE['language'])) {
+        $_language->setLanguage($_COOKIE['language']);
+    } elseif (isset($_SESSION['language'])) {
+        $_language->setLanguage($_SESSION['language']);
     } elseif ($autoDetectLanguage) {
         $lang = detectUserLanguage();
         if (!empty($lang)) {
             $_language->setLanguage($lang);
-            $_SESSION[ 'language' ] = $lang;
+            $_SESSION['language'] = $lang;
         }
     }
 }
 
 if ($login_per_cookie) {
     $ll = mysqli_fetch_array(safe_query("SELECT lastlogin FROM " . PREFIX . "user WHERE userID='$userID'"));
-    $_SESSION[ 'ws_lastlogin' ] = $ll[ 'lastlogin' ];
+    $_SESSION['ws_lastlogin'] = $ll['lastlogin'];
 }
 
 // -- SITE VARIABLE -- //
 
-if (isset($_GET[ 'site' ])) {
-    $site = $_GET[ 'site' ];
+if (isset($_GET['site'])) {
+    $site = $_GET['site'];
 } else {
     $site = '';
 }
 if ($closed && !isanyadmin($userID)) {
     $dl = mysqli_fetch_array(safe_query("SELECT * FROM `" . PREFIX . "lock` LIMIT 0,1"));
-    $reason = $dl[ 'reason' ];
-    $time = $dl[ 'time' ];
+    $reason = $dl['reason'];
+    $time = $dl['time'];
     showlock($reason, $time);
 }
-if (!isset($_SERVER[ 'HTTP_REFERER' ])) {
-    $_SERVER[ 'HTTP_REFERER' ] = "";
+if (!isset($_SERVER['HTTP_REFERER'])) {
+    $_SERVER['HTTP_REFERER'] = "";
 }
 
-if (!isset($_SERVER[ 'REQUEST_URI' ])) {
-    $_SERVER[ 'REQUEST_URI' ] = $_SERVER[ 'PHP_SELF' ];
-    if (isset($_SERVER[ 'QUERY_STRING' ])) {
-        $_SERVER[ 'REQUEST_URI' ] .= '?' . $_SERVER[ 'QUERY_STRING' ];
+if (!isset($_SERVER['REQUEST_URI'])) {
+    $_SERVER['REQUEST_URI'] = $_SERVER['PHP_SELF'];
+    if (isset($_SERVER['QUERY_STRING'])) {
+        $_SERVER['REQUEST_URI'] .= '?' . $_SERVER['QUERY_STRING'];
     }
 }
 
 // -- BANNED USERS -- //
 if (date("dh", $lastBanCheck) != date("dh")) {
-    $get = safe_query("SELECT userID, banned FROM " . PREFIX . "user WHERE banned IS NOT NULL");
-    $removeBan = [];
+    $get = safe_query("SELECT userID, banned FROM `" . PREFIX . "user` WHERE banned IS NOT NULL");
+    $removeBan = array();
     while ($ds = mysqli_fetch_assoc($get)) {
-        if ($ds[ 'banned' ] != "perm") {
-            if ($ds[ 'banned' ] <= time()) {
-                $removeBan[ ] = 'userID="' . $ds[ 'userID' ] . '"';
+        if ($ds['banned'] != "perm") {
+            if ($ds['banned'] <= time()) {
+                $removeBan[] = 'userID="' . $ds['userID'] . '"';
             }
         }
     }
@@ -449,23 +441,23 @@ if (date("dh", $lastBanCheck) != date("dh")) {
 
 $banned =
     safe_query(
-        "SELECT userID, banned, ban_reason FROM " . PREFIX . "user WHERE (userID='" . $userID . "' OR ip='" .
-        $GLOBALS[ 'ip' ] . "') AND banned IS NOT NULL"
+        "SELECT userID, banned, ban_reason FROM `" . PREFIX . "user`
+        WHERE (userID='" . $userID . "' OR ip='" . $GLOBALS[ 'ip' ] . "') AND banned IS NOT NULL"
     );
 while ($bq = mysqli_fetch_array($banned)) {
-    if ($bq[ 'ban_reason' ]) {
-        $reason = "<br>" . $bq[ 'ban_reason' ];
+    if ($bq['ban_reason']) {
+        $reason = "<br>" . $bq['ban_reason'];
     } else {
         $reason = '';
     }
-    if ($bq[ 'banned' ]) {
+    if ($bq['banned']) {
         system_error('You have been banished.' . $reason, 0);
     }
 }
 
 // -- BANNED IPs -- //
 
-safe_query("DELETE FROM " . PREFIX . "banned_ips WHERE deltime < " . time() . "");
+safe_query("DELETE FROM `" . PREFIX . "banned_ips` WHERE deltime < " . time() . "");
 
 // -- WHO IS - WAS ONLINE -- //
 
@@ -473,8 +465,8 @@ $timeout = 5; // 1 second
 $deltime = time() - ($timeout * 60); // IS 1m
 $wasdeltime = time() - (60 * 60 * 24); // WAS 24h
 
-safe_query("DELETE FROM " . PREFIX . "whoisonline WHERE time < '" . $deltime . "'");  // IS online
-safe_query("DELETE FROM " . PREFIX . "whowasonline WHERE time < '" . $wasdeltime . "'");  // WAS online
+safe_query("DELETE FROM `" . PREFIX . "whoisonline` WHERE time < '" . $deltime . "'");  // IS online
+safe_query("DELETE FROM `" . PREFIX . "whowasonline` WHERE time < '" . $wasdeltime . "'");  // WAS online
 
 // -- HELP MODE -- //
 
@@ -512,7 +504,11 @@ if (mb_strlen($site)) {
         }
     } else {
         $anz =
-            mysqli_num_rows(safe_query("SELECT ip FROM " . PREFIX . "whoisonline WHERE ip='" . $GLOBALS[ 'ip' ] . "'"));
+            mysqli_num_rows(
+                safe_query(
+                    "SELECT ip FROM `" . PREFIX . "whoisonline` WHERE ip='" . $GLOBALS[ 'ip' ] . "'"
+                )
+            );
         if ($anz) {
             safe_query(
                 "UPDATE " . PREFIX . "whoisonline SET time='" . time() . "', site='$site' WHERE ip='" .
@@ -532,18 +528,18 @@ if (mb_strlen($site)) {
 $time = time();
 $date = date("d.m.Y", $time);
 $deltime = $time - (3600 * 24);
-safe_query("DELETE FROM " . PREFIX . "counter_iplist WHERE del<" . $deltime);
+safe_query("DELETE FROM `" . PREFIX . "counter_iplist` WHERE del<" . $deltime);
 
-if (!mysqli_num_rows(safe_query("SELECT ip FROM " . PREFIX . "counter_iplist WHERE ip='" . $GLOBALS[ 'ip' ] . "'"))) {
+if (!mysqli_num_rows(safe_query("SELECT ip FROM `" . PREFIX . "counter_iplist` WHERE ip='" . $GLOBALS[ 'ip' ] . "'"))) {
     if ($userID) {
-        safe_query("UPDATE " . PREFIX . "user SET ip='" . $GLOBALS[ 'ip' ] . "' WHERE userID='" . $userID . "'");
+        safe_query("UPDATE `" . PREFIX . "user` SET ip='" . $GLOBALS[ 'ip' ] . "' WHERE userID='" . $userID . "'");
     }
-    safe_query("UPDATE " . PREFIX . "counter SET hits=hits+1");
+    safe_query("UPDATE `" . PREFIX . "counter` SET hits=hits+1");
     safe_query(
-        "INSERT INTO " . PREFIX . "counter_iplist (dates, del, ip) VALUES ('" . $date . "', '" . $time . "', '" .
+        "INSERT INTO `" . PREFIX . "counter_iplist` (dates, del, ip) VALUES ('" . $date . "', '" . $time . "', '" .
         $GLOBALS[ 'ip' ] . "')"
     );
-    if (!mysqli_num_rows(safe_query("SELECT dates FROM " . PREFIX . "counter_stats WHERE dates='" . $date . "'"))) {
+    if (!mysqli_num_rows(safe_query("SELECT dates FROM `" . PREFIX . "counter_stats` WHERE dates='" . $date . "'"))) {
         safe_query("INSERT INTO `" . PREFIX . "counter_stats` (`dates`, `count`) VALUES ('" . $date . "', '1')");
     } else {
         safe_query("UPDATE " . PREFIX . "counter_stats SET count=count+1 WHERE dates='" . $date . "'");
@@ -551,18 +547,19 @@ if (!mysqli_num_rows(safe_query("SELECT ip FROM " . PREFIX . "counter_iplist WHE
 }
 
 /* update maxonline if necessary */
-$res = mysqli_fetch_assoc(safe_query("SELECT count(*) as maxuser FROM " . PREFIX . "whoisonline"));
+$res = mysqli_fetch_assoc(safe_query("SELECT count(*) as maxuser FROM `" . PREFIX . "whoisonline`"));
 safe_query(
-    "UPDATE " . PREFIX . "counter SET maxonline = " . $res[ 'maxuser' ] . " WHERE maxonline < " .
-    $res[ 'maxuser' ]
+    "UPDATE `" . PREFIX . "counter`
+    SET maxonline = '" . $res[ 'maxuser' ] . "'
+    WHERE maxonline < '" . $res[ 'maxuser' ] . "'"
 );
 
 // -- SEARCH ENGINE OPTIMIZATION (SEO) -- //
-if (stristr($_SERVER[ 'PHP_SELF' ], "/admin/") == false) {
+if (stristr($_SERVER[ 'PHP_SELF' ], "/admin/") === false) {
     systeminc('seo');
     define('PAGETITLE', getPageTitle());
 } else {
-    define('PAGETITLE', $GLOBALS[ 'hp_title' ]);
+    define('PAGETITLE', $GLOBALS['hp_title']);
 }
 
 // -- RSS FEEDS -- //

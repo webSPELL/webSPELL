@@ -197,9 +197,9 @@ function print_calendar($mon, $year)
                 $termin = '';
                 while ($ds = mysqli_fetch_array($ergebnis)) {
                     if ($ds['type'] == "d") {
-                        if (($start_date <= $ds['date'] && $end_date >= $ds['date']) ||
-                            ($start_date >= $ds['date'] && $end_date <= $ds['enddate']) ||
-                            ($start_date <= $ds['enddate'] && $end_date >= $ds['enddate'])
+                        if (($start_date <= $ds['date'] && $end_date >= $ds['date'])
+                            || ($start_date >= $ds['date'] && $end_date <= $ds['enddate'])
+                            || ($start_date <= $ds['enddate'] && $end_date >= $ds['enddate'])
                         ) {
                             $termin .=
                                 '<a href="index.php?site=calendar&amp;tag=' . $t . '&amp;month=' . $mon . '&amp;year=' .
@@ -222,7 +222,8 @@ function print_calendar($mon, $year)
             //If date is today, highlight it
             if (($t == date("j")) && ($mon == date("n")) && ($year == date("Y"))) {
                 echo '<td height="40" valign="top" bgcolor="' . BG_4 . '"><b>' . $t . '</b><br>' . $termin . '</td>';
-            } else { //  If the date is absent ie after 31, print space
+            } else {
+                //  If the date is absent ie after 31, print space
                 if ($t === ' ') {
                     echo '<td height="40" valign="top" style="background-color:' . BG_1 . ';">&nbsp;</td>';
                 } else {
@@ -364,13 +365,25 @@ function print_termine($tag, $month, $year)
                         $players = $_language->module['access_member'];
                     }
 
-                    eval ("\$upcoming_war_details = \"" . gettemplate("upcoming_war_details") . "\";");
+                    $data_array = array();
+                    $data_array['$date'] = $date;
+                    $data_array['$time'] = $time;
+                    $data_array['$squad'] = $squad;
+                    $data_array['$opponent'] = $opponent;
+                    $data_array['$league'] = $league;
+                    $data_array['$maps'] = $maps;
+                    $data_array['$server'] = $server;
+                    $data_array['$warinfo'] = $warinfo;
+                    $data_array['$announce'] = $announce;
+                    $data_array['$players'] = $players;
+                    $data_array['$adminaction'] = $adminaction;
+                    $upcoming_war_details = $GLOBALS["_template"]->replaceTemplate("upcoming_war_details", $data_array);
                     echo $upcoming_war_details;
                 }
             } else {
-                if (($start_date <= $ds['date'] && $end_date >= $ds['date']) ||
-                    ($start_date >= $ds['date'] && $end_date <= $ds['enddate']) ||
-                    ($start_date <= $ds['enddate'] && $end_date >= $ds['enddate'])
+                if (($start_date <= $ds['date'] && $end_date >= $ds['date'])
+                    || ($start_date >= $ds['date'] && $end_date <= $ds['enddate'])
+                    || ($start_date <= $ds['enddate'] && $end_date >= $ds['enddate'])
                 ) {
                     $date = getformatdate($ds['date']);
                     $time = getformattime($ds['date']);
@@ -449,7 +462,22 @@ function print_termine($tag, $month, $year)
                         $adminaction = '';
                     }
 
-                    eval ("\$upcoming_date_details = \"" . gettemplate("upcoming_date_details") . "\";");
+                    $data_array = array();
+                    $data_array['$title'] = $title;
+                    $data_array['$date'] = $date;
+                    $data_array['$time'] = $time;
+                    $data_array['$enddate'] = $enddate;
+                    $data_array['$endtime'] = $endtime;
+                    $data_array['$country'] = $country;
+                    $data_array['$location'] = $location;
+                    $data_array['$dateinfo'] = $dateinfo;
+                    $data_array['$announce'] = $announce;
+                    $data_array['$players'] = $players;
+                    $data_array['$adminaction'] = $adminaction;
+                    $upcoming_date_details = $GLOBALS["_template"]->replaceTemplate(
+                        "upcoming_date_details",
+                        $data_array
+                    );
                     echo $upcoming_date_details;
                 }
             }
@@ -526,7 +554,7 @@ if ($action === "savewar") {
     }
 
     if ($messages) {
-        $replace = [
+        $replace = array(
             '%date%' => getformatdate($date),
             '%opponent_flag%' => $oppcountry,
             '%opp_hp%' => $opphp,
@@ -534,7 +562,7 @@ if ($action === "savewar") {
             '%league_hp%' => $leaguehp,
             '%league%' => $league,
             '%warinfo%' => $warinfo
-        ];
+        );
         $ergebnis = safe_query("SELECT userID FROM " . PREFIX . "squads_members WHERE squadID='$squad'");
         $tmp_lang = new \webspell\Language();
         while ($ds = mysqli_fetch_array($ergebnis)) {
@@ -756,8 +784,7 @@ if ($action === "savewar") {
 } elseif ($action === "addwar") {
     $_language->readModule('calendar');
     if (isclanwaradmin($userID)) {
-
-        eval ("\$title_calendar = \"" . gettemplate("title_calendar") . "\";");
+        $title_calendar = $GLOBALS["_template"]->replaceTemplate("title_calendar", array());
         echo $title_calendar;
 
         echo '<a href="index.php?site=calendar&amp;action=addwar" class="btn btn-danger">' .
@@ -778,7 +805,6 @@ if ($action === "savewar") {
         $countries = getcountries();
 
         if (isset($_GET['chID'])) {
-
             $chID = (int)$_GET['chID'];
             $ergebnis = safe_query("SELECT * FROM " . PREFIX . "challenge WHERE chID='" . $chID . "'");
             $ds = mysqli_fetch_array($ergebnis);
@@ -814,7 +840,18 @@ if ($action === "savewar") {
         }
 
         $bg1 = BG_1;
-        eval ("\$upcoming_war_new = \"" . gettemplate("upcoming_war_new") . "\";");
+        $data_array = array();
+        $data_array['$date'] = $date;
+        $data_array['$squads'] = $squads;
+        $data_array['$opponent'] = $opponent;
+        $data_array['$countries'] = $countries;
+        $data_array['$opphp'] = $opphp;
+        $data_array['$map'] = $map;
+        $data_array['$server'] = $server;
+        $data_array['$info'] = $info;
+        $data_array['$chID'] = $chID;
+        $data_array['$userID'] = $userID;
+        $upcoming_war_new = $GLOBALS["_template"]->replaceTemplate("upcoming_war_new", $data_array);
         echo $upcoming_war_new;
     } else {
         redirect('index.php?site=calendar', $_language->module['no_access']);
@@ -822,8 +859,7 @@ if ($action === "savewar") {
 } elseif ($action === "editwar") {
     $_language->readModule('calendar');
     if (isclanwaradmin($userID)) {
-
-        eval ("\$title_calendar = \"" . gettemplate("title_calendar") . "\";");
+        $title_calendar = $GLOBALS["_template"]->replaceTemplate("title_calendar", array());
         echo $title_calendar;
 
         echo '<a href="index.php?site=calendar&amp;action=addwar" class="btn btn-danger">' .
@@ -860,7 +896,20 @@ if ($action === "savewar") {
             $countries
         );
 
-        eval ("\$upcoming_war_edit = \"" . gettemplate("upcoming_war_edit") . "\";");
+        $data_array = array();
+        $data_array['$date'] = $date;
+        $data_array['$squads'] = $squads;
+        $data_array['$league'] = $league;
+        $data_array['$leaguehp'] = $leaguehp;
+        $data_array['$opponent'] = $opponent;
+        $data_array['$opptag'] = $opptag;
+        $data_array['$countries'] = $countries;
+        $data_array['$opphp'] = $opphp;
+        $data_array['$maps'] = $maps;
+        $data_array['$server'] = $server;
+        $data_array['$warinfo'] = $warinfo;
+        $data_array['$upID'] = $upID;
+        $upcoming_war_edit = $GLOBALS["_template"]->replaceTemplate("upcoming_war_edit", $data_array);
         echo $upcoming_war_edit;
     } else {
         redirect('index.php?site=calendar', $_language->module['no_access']);
@@ -868,8 +917,7 @@ if ($action === "savewar") {
 } elseif ($action === "adddate") {
     $_language->readModule('calendar');
     if (isclanwaradmin($userID)) {
-
-        eval ("\$title_calendar = \"" . gettemplate("title_calendar") . "\";");
+        $title_calendar = $GLOBALS["_template"]->replaceTemplate("title_calendar", array());
         echo $title_calendar;
 
         echo
@@ -886,7 +934,10 @@ if ($action === "savewar") {
         $countries = getcountries();
 
         $bg1 = BG_1;
-        eval ("\$upcoming_date_new = \"" . gettemplate("upcoming_date_new") . "\";");
+        $data_array = array();
+        $data_array['$date'] = $date;
+        $data_array['$countries'] = $countries;
+        $upcoming_date_new = $GLOBALS["_template"]->replaceTemplate("upcoming_date_new", $data_array);
         echo $upcoming_date_new;
     } else {
         redirect('index.php?site=calendar', $_language->module['no_access']);
@@ -894,8 +945,7 @@ if ($action === "savewar") {
 } elseif ($action === "editdate") {
     $_language->readModule('calendar');
     if (isclanwaradmin($userID)) {
-
-        eval ("\$title_calendar = \"" . gettemplate("title_calendar") . "\";");
+        $title_calendar = $GLOBALS["_template"]->replaceTemplate("title_calendar", array());
         echo $title_calendar;
 
         echo
@@ -928,30 +978,39 @@ if ($action === "savewar") {
         $dateinfo = htmlspecialchars($ds['dateinfo']);
 
         $bg1 = BG_1;
-        eval ("\$upcoming_date_edit = \"" . gettemplate("upcoming_date_edit") . "\";");
+        $data_array = array();
+        $data_array['$date_start'] = $date_start;
+        $data_array['$date_end'] = $date_end;
+        $data_array['$short'] = $short;
+        $data_array['$title'] = $title;
+        $data_array['$countries'] = $countries;
+        $data_array['$location'] = $location;
+        $data_array['$locationhp'] = $locationhp;
+        $data_array['$dateinfo'] = $dateinfo;
+        $data_array['$upID'] = $upID;
+        $upcoming_date_edit = $GLOBALS["_template"]->replaceTemplate("upcoming_date_edit", $data_array);
         echo $upcoming_date_edit;
     } else {
         redirect('index.php?site=calendar', $_language->module['no_access']);
     }
 } elseif ($action === "announce" && isclanmember($userID)) {
-
     $_language->readModule('calendar');
 
-    eval ("\$title_calendar = \"" . gettemplate("title_calendar") . "\";");
+    $title_calendar = $GLOBALS["_template"]->replaceTemplate("title_calendar", array());
     echo $title_calendar;
 
     if (isset($_GET['upID'])) {
-
         $upID = (int)$_GET['upID'];
 
-        eval ("\$upcomingannounce = \"" . gettemplate("upcomingannounce") . "\";");
+        $data_array = array();
+        $data_array['$upID'] = $upID;
+        $upcomingannounce = $GLOBALS["_template"]->replaceTemplate("upcomingannounce", $data_array);
         echo $upcomingannounce;
     }
 } else {
-
     $_language->readModule('calendar');
 
-    eval ("\$title_calendar = \"" . gettemplate("title_calendar") . "\";");
+    $title_calendar = $GLOBALS["_template"]->replaceTemplate("title_calendar", array());
     echo $title_calendar;
 
     if (isclanwaradmin($userID)) {

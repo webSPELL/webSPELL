@@ -30,10 +30,10 @@ include("_functions.php");
 $_language->readModule('asearch');
 
 //allowed tables for search
-$allowed_tables = ["user"];
-$allowed_columns = ["nickname"];
-$allowed_identifiers = ["userID"];
-$allowed_searchtemps = ["search_user"];
+$allowed_tables = array("user");
+$allowed_columns = array("nickname");
+$allowed_identifiers = array("userID");
+$allowed_searchtemps = array("search_user");
 
 $table = $_GET[ 'table' ];
 if (!in_array($table, $allowed_tables)) {
@@ -99,7 +99,11 @@ if ($any == 0) {
     while ($row = mysqli_fetch_array($db_results)) {
         $searchresult = stripslashes($row[ $column ]);
         $resultidentifier = $row[ $identifier ];
-        eval ("\$resultemp = \"" . gettemplate($searchtemp) . "\";");
+
+        $data_array = array();
+        $data_array['$searchresult'] = $searchresult;
+        $data_array['$resultidentifier'] = $resultidentifier;
+        $resultemp = $GLOBALS["_template"]->replaceTemplate($searchtemp, $data_array);
         echo $resultemp;
     }
 } else {

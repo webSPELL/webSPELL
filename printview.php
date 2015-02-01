@@ -31,8 +31,7 @@ include("_functions.php");
 $_language->readModule('forum');
 
 ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
@@ -62,7 +61,6 @@ $topic = $_GET[ 'topic' ];
 $thread = safe_query("SELECT * FROM " . PREFIX . "forum_topics WHERE topicID='$topic' ");
 
 if (mysqli_num_rows($thread)) {
-
     $dt = mysqli_fetch_array($thread);
 
     if ($dt[ 'readgrps' ] != "") {
@@ -79,7 +77,9 @@ if (mysqli_num_rows($thread)) {
         }
     }
 
-    $ergebnis = safe_query("SELECT * FROM " . PREFIX . "forum_boards WHERE boardID='".(int)$dt[boardID]."'");
+    $ergebnis = safe_query(
+        "SELECT * FROM `" . PREFIX . "forum_boards` WHERE `boardID` = '" . (int)$dt['boardID'] . "'"
+    );
     $db = mysqli_fetch_array($ergebnis);
     $boardname = $db[ 'name' ];
 

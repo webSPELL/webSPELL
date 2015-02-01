@@ -27,5 +27,5 @@
 
 $_language->readModule('search');
 
-eval ("\$quicksearch = \"" . gettemplate("quicksearch") . "\";");
+$quicksearch = $GLOBALS["_template"]->replaceTemplate("quicksearch", array());
 echo $quicksearch;

@@ -36,7 +36,7 @@ $language_array = Array(
 /* do not edit above this line */
 
   'author'=>'Yazar',
-  'bbcode'=>'BBCode is <b><u>AÇIK</u></b>',
+  'bbcode'=>'BBCode is <b><span class="underline">AÇIK</span></b>',
   'cancel'=>'Çıkış',
   'comm'=>'ilet',
   'comment'=>'<a href="$url">[1] yorum</a>, En son tarafından $lastposter - $lastdate',
@@ -49,7 +49,7 @@ $language_array = Array(
   'enter_text'=>'Bir metin girmek zorundasın!',
   'go'=>'Git!',
   'headline'=>'Başlık',
-  'html'=>'HTML <b><u>AÇIK</u></b>',
+  'html'=>'HTML <b><span class="underline">AÇIK</span></b>',
   'intern'=>'asistan',
   'languages'=>'Diller',
   'link'=>'Bağlantı',
@@ -75,7 +75,7 @@ $language_array = Array(
   'select_all'=>'tümünü seç',
   'self'=>'kendi pencerem',
   'show_news'=>'haberleri göster',
-  'smilies'=>'İfadeler <b><u>AÇIK</u></b>',
+  'smilies'=>'İfadeler <b><span class="underline">AÇIK</span></b>',
   'sort'=>'Sıralama:',
   'title_unpublished_news'=>'<h2>YAYIMLANMAMIŞ HABERLER:</h2>',
   'topnews'=>'en iyi haberler',

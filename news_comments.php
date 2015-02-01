@@ -27,7 +27,7 @@
 
 $_language->readModule('news');
 
-eval ("\$title_news = \"" . gettemplate("title_news") . "\";");
+$title_news = $GLOBALS["_template"]->replaceTemplate("title_news", array());
 echo $title_news;
 
 if (isset($newsID)) {
@@ -71,7 +71,6 @@ if (isset($newsID)) {
             )
         )
     ) {
-
         $date = getformatdate($ds[ 'date' ]);
         $time = getformattime($ds[ 'date' ]);
         $rubrikname = getrubricname($ds[ 'rubric' ]);
@@ -84,7 +83,7 @@ if (isset($newsID)) {
             $rubricpic = '<img src="' . $rubricpic . '" alt="">';
         }
 
-        $message_array = [];
+        $message_array = array();
         $query = safe_query(
             "SELECT
                 n.*,
@@ -99,13 +98,13 @@ if (isset($newsID)) {
                 n.newsID='" . (int)$newsID."'"
         );
         while ($qs = mysqli_fetch_array($query)) {
-            $message_array[ ] = [
+            $message_array[ ] = array(
                 'lang' => $qs[ 'language' ],
                 'headline' => $qs[ 'headline' ],
                 'message' => $qs[ 'content' ],
                 'country' => $qs[ 'country' ],
                 'countryShort' => $qs[ 'countryCode' ]
-            ];
+            );
         }
         if (isset($_GET[ 'lang' ])) {
             $showlang = getlanguageid($_GET[ 'lang' ], $message_array);
@@ -193,7 +192,18 @@ if (isset($newsID)) {
 
         $tags = \webspell\Tags::getTagsLinked('news', $newsID);
 
-        eval ("\$news = \"" . gettemplate("news") . "\";");
+        $data_array = array();
+        $data_array['$newsID'] = $newsID;
+        $data_array['$headline'] = $headline;
+        $data_array['$rubrikname'] = $rubrikname;
+        $data_array['$rubricpic'] = $rubricpic;
+        $data_array['$isintern'] = $isintern;
+        $data_array['$content'] = $content;
+        $data_array['$adminaction'] = $adminaction;
+        $data_array['$poster'] = $poster;
+        $data_array['$date'] = $date;
+        $data_array['$comments'] = $comments;
+        $news = $GLOBALS["_template"]->replaceTemplate("news", $data_array);
         echo $news;
 
         if (isnewsadmin($userID)) {

@@ -20,9 +20,41 @@ module.exports = function(grunt) {
             "!languages/**/*.php",
             "!index.php"
         ],
+        releaseFiles = [
+            "admin/**",
+            "demos/**",
+            "downloads/**",
+            "images/**",
+            "install/**",
+            "js/**",
+            "languages/**",
+            "!languages/check_translations.php",
+            "src/**",
+            "templates/**",
+            "tmp/**",
+            "*",
+            "!.gitignore",
+            "!.scrutinizer*",
+            "!.sensiolabs.yml",
+            "!.travis.yml",
+            "!.bowerrc",
+            "!.htmllintrc",
+            "!.htmlhintrc",
+            "!.jshintrc",
+            "!circle.yml",
+            "!Gruntfile.js",
+            "!grunt-log.txt",
+            "!*.zip",
+            "!Ruleset.xml",
+            "!vendor",
+            "!components",
+            "!node_modules",
+            "!tests"
+        ],
         csss = [ "**/*.css" ],
         excludes = [
             "!node_modules/**",
+            "!codestyles/**",
             "!components/**",
             "!vendor/**",
             "!tmp/**"
@@ -36,24 +68,7 @@ module.exports = function(grunt) {
     // Project configuration.
     grunt.initConfig({
         pkg: grunt.file.readJSON("package.json"),
-        lintspaces: {
-            all: {
-                src: [
-                    javascripts,
-                    templates,
-                    phps,
-                    excludes,
-                    "!admin/**"
-                ],
-                options: {
-                    newline: true,
-                    newlineMaximum: 2,
-                    trailingspaces: true,
-                    indentation: "spaces",
-                    spaces: 4
-                }
-            }
-        },
+
         jshint: {
             options: {
                 jshintrc: ".jshintrc"
@@ -63,21 +78,24 @@ module.exports = function(grunt) {
                 excludes
             ]
         },
+
         jscs: {
             options: {
-                preset: "jquery" // See: https://contribute.jquery.org/style-guide/js/
+                config: ".jscsrc"
             },
             src: [
                 javascripts,
                 excludes
             ]
         },
+
         phplint: {
             good: [
                 phps,
                 excludes
             ]
         },
+
         phpcs: {
             application: {
                 dir: [
@@ -93,6 +111,7 @@ module.exports = function(grunt) {
                 showSniffCodes: true
             }
         },
+
         htmllint: {
             options: {
                 htmllintrc: true,
@@ -100,6 +119,7 @@ module.exports = function(grunt) {
             },
             src: templates
         },
+
         htmlhint: {
             options: {
                 htmlhintrc: ".htmlhintrc", // https://github.com/yaniswang/HTMLHint/wiki/Rules
@@ -109,25 +129,29 @@ module.exports = function(grunt) {
                 src: [ "templates/*.html" ]
             }
         },
+
         bootlint: {
             options: {
-                stoponerror: false,
+                stoponerror: true,
                 relaxerror: [
-                    "E001",
-                    "E003",
-                    "W001",
-                    "W002",
-                    "W003",
-                    "W005"
+                    "E001", // Document is missing a DOCTYPE declaration
+                    "E003", // .row that were not children of a grid column
+                    "W001", // <head> is missing UTF-8 charset
+                    "W002", // <head> is missing X-UA-Compatible <meta> tag
+                    "W003", // <head> is missing viewport <meta> tag that enables responsiveness
+                    "W005", // Unable to locate jQuery
+                    "W014" // Carousel controls and indicators should use `href` or `data-target`
                 ]
             },
             files: templates
         },
+
         githooks: {
             all: {
                 "pre-commit": "test"
             }
         },
+
         replace: {
             copyright: {
                 src: [
@@ -157,6 +181,7 @@ module.exports = function(grunt) {
 
             }
         },
+
         changelog: {
             release: {
                 options: {
@@ -164,14 +189,18 @@ module.exports = function(grunt) {
                 }
             }
         },
-        //phpcpd: {
-        //    application: {
-        //        dir: "admin"
-        //    },
-        //    options: {
-        //        quiet: true
-        //    }
-        //},
+
+        karma: {
+            unit: {
+                configFile: "karma.conf.js"
+            },
+            continuous: {
+                configFile: "karma.conf.js",
+                singleRun: true,
+                browsers: [ "PhantomJS" ]
+            }
+        },
+
         casperjs: {
             options: {
                 casperjsOptions: [
@@ -184,6 +213,7 @@ module.exports = function(grunt) {
                 "tests/casperjs/login_as_admin.js"
             ]
         },
+
         watch: {
             options: {
                 debounceDelay: 1000
@@ -215,6 +245,29 @@ module.exports = function(grunt) {
                     "js"
                 ]
             }
+        },
+
+        exec: {
+            quickcheck: {
+                command: "sh ./qphpcs.sh",
+                stdout: true,
+                stderr: true
+            }
+        },
+
+        compress: {
+            main: {
+                options: {
+                    archive: "webspell.zip"
+                },
+                src:releaseFiles
+            },
+            release: {
+                options: {
+                    archive: "webSPELL-<%= pkg.version %>.zip"
+                },
+                src:releaseFiles
+            }
         }
     });
 
@@ -226,7 +279,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks("grunt-phpcs");
     grunt.loadNpmTasks("grunt-phpcpd");
     grunt.loadNpmTasks("grunt-jscs");
-    grunt.loadNpmTasks("grunt-lintspaces");
     grunt.loadNpmTasks("grunt-text-replace");
     grunt.loadNpmTasks("grunt-templated-changelog");
     grunt.loadNpmTasks("grunt-bump");
@@ -236,50 +288,72 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks("grunt-htmllint");
     grunt.loadNpmTasks("grunt-casperjs");
     grunt.loadNpmTasks("grunt-newer");
+    grunt.loadNpmTasks("grunt-contrib-compress");
+    grunt.loadNpmTasks("grunt-exec");
+    grunt.loadNpmTasks("grunt-karma");
 
     grunt.registerTask("codecheck", [
         "js",
         "php",
         "html"
     ]);
+
     grunt.registerTask("codecheck_newer", [
-        "newer:lintspaces",
         "newer:js",
         "newer:phplint",
         "newer:phpcs",
         "newer:html"
     ]);
+
     grunt.registerTask("codecheck_circle", [
-        "lintspaces",
         "jshint",
         "jscs",
         "phpcs",
-        "htmllint",
-        "bootlint"
-    ]);
-    grunt.registerTask("html", [
-        "lintspaces",
         "htmlhint",
         "htmllint",
         "bootlint"
     ]);
-    grunt.registerTask("js", [
-        "lintspaces",
+
+    grunt.registerTask("codecheck_travis", [
         "jshint",
-        "jscs"
+        "jscs",
+        "phplint",
+        "phpcs",
+        "htmlhint",
+        "htmllint",
+        "bootlint"
     ]);
+
+    grunt.registerTask("html", [
+        "htmlhint",
+        "htmllint",
+        "bootlint"
+    ]);
+
+    grunt.registerTask("js", [
+        "jshint",
+        "jscs",
+        "karma:continuous"
+    ]);
+
     grunt.registerTask("php", [
-        "lintspaces",
         "phplint",
         "phpcs"
     ]);
+
     grunt.registerTask("git", [
         "grunt-commit-message-verify"
     ]);
+
     grunt.registerTask("test", [
         "codecheck",
         "git"
     ]);
+
+    grunt.registerTask("quick", [
+        "exec:quickcheck"
+    ]);
+
     grunt.registerTask("release", "Creating a new webSPELL Release", function(releaseLevel) {
         if (
             arguments.length === 0 ||
@@ -296,14 +370,19 @@ module.exports = function(grunt) {
                 "replace:copyright",
                 "replace:version",
                 "changelog",
-                "bumpCommit:" + releaseLevel
+                "bumpCommit:" + releaseLevel,
+                "compress:release"
             ]);
         }
     });
+
     grunt.registerTask("bumpOnly", function() {
         grunt.config("bump", {
             options: {
-                files: [ "package.json" ],
+                files: [
+                    "package.json",
+                    "bower.json"
+                ],
                 createTag: false,
                 commit: false,
                 push: false,
