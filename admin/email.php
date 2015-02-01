@@ -144,7 +144,6 @@ if ($action == "test") {
   </table>
   </form>';
 } else {
-
     echo '<h1>&curren; ' . $_language->module[ 'email' ] . '</h1>';
 
     echo
@@ -285,4 +284,3 @@ if ($action == "test") {
     </div>
     </form>';
 }
-
