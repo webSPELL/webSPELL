@@ -59,8 +59,9 @@ if (isset($_POST[ 'submit' ])) {
 
     $CAPCLASS = new \webspell\Captcha;
     if ($CAPCLASS->checkCaptcha(0, $_POST[ 'captcha_hash' ])) {
-        \webspell\Email::sendEmail($admin_email, 'Test eMail', $to, $subject, $message);
-        redirect("admincenter.php?site=email", "", 0);
+        $test = \webspell\Email::sendEmail($admin_email, 'Test eMail', $to, $subject, $message);
+        var_dump($test);
+        redirect("admincenter.php?site=email", "", 10);
     } else {
         redirect("admincenter.php?site=email", $_language->module[ 'transaction_invalid' ], 3);
     }
@@ -144,6 +145,10 @@ if ($action == "test") {
   </table>
   </form>';
 } else {
+    $CAPCLASS = new \webspell\Captcha;
+    $CAPCLASS->createTransaction();
+    $hash = $CAPCLASS->getHash();
+
     echo '<h1>&curren; ' . $_language->module[ 'email' ] . '</h1>';
 
     echo

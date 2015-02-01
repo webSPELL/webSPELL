@@ -49,7 +49,7 @@ class Email
         }
 
         if ($smtp == 2) {
-            $pop = POP3::popBeforeSmtp('$host', 110, 30, '$user', '$password', $debug);
+            $pop = POP3::popBeforeSmtp($host, 110, 30, $user, $password, $debug);
         }
 
         $mail = new \PHPMailer;
@@ -59,11 +59,11 @@ class Email
 
         if ($smtp == 1) {
             $mail->isSMTP();
-            $mail->Host = '$host';
+            $mail->Host = $host;
             if ($auth == 1) {
                 $mail->SMTPAuth = true;
-                $mail->Username = "$user";
-                $mail->Password = "$password";
+                $mail->Username = $user;
+                $mail->Password = $password;
             } else {
                 $mail->SMTPAuth = false;
             }
@@ -87,21 +87,21 @@ class Email
 
         $mail->Port = $port;
 
-        $mail->From = '$from';
-        $mail->FromName = '$module';
-        $mail->addAddress('$to');
+        $mail->From = $from;
+        $mail->FromName = $module;
+        $mail->addAddress($to);
 
         if ($html == 1) {
             $mail->isHTML(true);
-            $mail->msgHTML('$message');
+            $mail->msgHTML($message);
         } else {
             $mail->isHTML(false);
-            $plain = $mail->html2text('$message');
-            $mail->Body = '$plain';
-            $mail->AltBody = '$plain';
+            $plain = $mail->html2text($message);
+            $mail->Body = $plain;
+            $mail->AltBody = $plain;
         }
 
-        $mail->Subject = '$subject';
+        $mail->Subject = $subject;
 
         if (!$mail->send()) {
             return array("result"=>"fail","error"=>$mail->ErrorInfo);
