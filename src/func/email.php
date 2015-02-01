@@ -52,14 +52,14 @@ class Email
             $pop = POP3::popBeforeSmtp('$host', 110, 30, '$user', '$password', $debug);
         }
 
-        $mail = new PHPMailer;
+        $mail = new \PHPMailer;
 
         $mail->SMTPDebug = $debug;
         $mail->Debugoutput = 'html';
 
         if ($smtp == 1) {
             $mail->isSMTP();
-            $mail->Host = "$host";
+            $mail->Host = '$host';
             if ($auth == 1) {
                 $mail->SMTPAuth = true;
                 $mail->Username = "$user";
