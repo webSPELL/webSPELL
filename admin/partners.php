@@ -34,8 +34,8 @@ if (!ispageadmin($userID) || mb_substr(basename($_SERVER[ 'REQUEST_URI' ]), 0, 1
 if (isset($_GET[ 'delete' ])) {
     $CAPCLASS = new \webspell\Captcha;
     if ($CAPCLASS->checkCaptcha(0, $_GET[ 'captcha_hash' ])) {
-        $partnerID = $_GET[ 'partnerID' ];
-        safe_query(" DELETE FROM " . PREFIX . "partners WHERE partnerID='$partnerID' ");
+        $partnerID = (int)$_GET[ 'partnerID' ];
+        safe_query("DELETE FROM " . PREFIX . "partners WHERE partnerID='" . $partnerID . "' ");
         $filepath = "../images/partners/";
         if (file_exists($filepath . $partnerID . '.gif')) {
             unlink($filepath . $partnerID . '.gif');
@@ -55,7 +55,7 @@ if (isset($_GET[ 'delete' ])) {
         $sort = $_POST[ 'sort' ];
         foreach ($sort as $sortstring) {
             $sorter = explode("-", $sortstring);
-            safe_query("UPDATE " . PREFIX . "partners SET sort='$sorter[1]' WHERE partnerID='$sorter[0]' ");
+            safe_query("UPDATE " . PREFIX . "partners SET sort='".$sorter[1]."' WHERE partnerID='".$sorter[0]."' ");
         }
     } else {
         echo $_language->module[ 'transaction_invalid' ];
@@ -65,13 +65,9 @@ if (isset($_GET[ 'delete' ])) {
     if ($CAPCLASS->checkCaptcha(0, $_POST[ 'captcha_hash' ])) {
         $name = $_POST[ 'name' ];
         $url = $_POST[ 'url' ];
-        $banner = $_FILES[ 'banner' ];
         if (isset($_POST[ "displayed" ])) {
-            $displayed = $_POST[ 'displayed' ];
+            $displayed = 1;
         } else {
-            $displayed = "";
-        }
-        if (!$displayed) {
             $displayed = 0;
         }
 
@@ -96,50 +92,59 @@ if (isset($_GET[ 'delete' ])) {
 
         $filepath = "../images/partners/";
 
-        if ($banner[ 'name' ] != "") {
-            move_uploaded_file($banner[ 'tmp_name' ], $filepath . $banner[ 'name' ] . ".tmp");
-            @chmod($filepath . $banner[ 'name' ] . ".tmp", 0755);
-            $getimg = getimagesize($filepath . $banner[ 'name' ] . ".tmp");
-            if ($getimg[ 0 ] < 89 && $getimg[ 1 ] < 32) {
-                $pic = '';
-                if ($getimg[ 2 ] == 1) {
-                    $pic = $id . '.gif';
-                } elseif ($getimg[ 2 ] == 2) {
-                    $pic = $id . '.jpg';
-                } elseif ($getimg[ 2 ] == 3) {
-                    $pic = $id . '.png';
-                }
-                if ($pic != "") {
-                    if (file_exists($filepath . $id . '.gif')) {
-                        unlink($filepath . $id . '.gif');
-                    }
-                    if (file_exists($filepath . $id . '.jpg')) {
-                        unlink($filepath . $id . '.jpg');
-                    }
-                    if (file_exists($filepath . $id . '.png')) {
-                        unlink($filepath . $id . '.png');
-                    }
-                    rename($filepath . $banner[ 'name' ] . ".tmp", $filepath . $pic);
-                    safe_query("UPDATE " . PREFIX . "partners SET banner='" . $pic . "' WHERE partnerID='" . $id . "'");
-                } else {
-                    if (unlink($filepath . $banner[ 'name' ] . ".tmp")) {
-                        $error = $_language->module[ 'format_incorrect' ];
-                        die('<b>' . $error .
-                            '</b><br /><br /><a href="admincenter.php?site=partners&amp;action=edit&amp;partnerID=' .
-                            $id . '">&laquo; ' . $_language->module[ 'back' ] . '</a>');
+        $upload = new \webspell\Upload('banner');
+
+        if ($upload->hasFile()) {
+            if ($upload->hasError() === false) {
+
+                $mime_types = array('image/jpeg','image/png','image/gif');
+
+                if ($upload->supportedMimeType($mime_types)) {
+
+                    $imageInformation =  getimagesize($upload->getTempFile());
+
+                    if (is_array($imageInformation)) {
+                        if ($imageInformation[0] < 89 && $imageInformation[1] < 32) {
+                            switch ($imageInformation[ 2 ]) {
+                                case 1:
+                                    $endung = '.gif';
+                                    break;
+                                case 3:
+                                    $endung = '.png';
+                                    break;
+                                default:
+                                    $endung = '.jpg';
+                                    break;
+                            }
+                            $file = $id.$endung;
+
+                            if (file_exists($filepath . $id . '.gif')) {
+                                unlink($filepath . $id . '.gif');
+                            }
+                            if (file_exists($filepath . $id . '.jpg')) {
+                                unlink($filepath . $id . '.jpg');
+                            }
+                            if (file_exists($filepath . $id . '.png')) {
+                                unlink($filepath . $id . '.png');
+                            }
+
+                            if ($upload->saveAs($filepath.$file)) {
+                                @chmod($filepath.$file, $new_chmod);
+                                safe_query(
+                                    "UPDATE " . PREFIX . "partners SET banner='" . $file . "' WHERE partnerID='" . $id . "'"
+                                );
+                            }
+                        } else {
+                            echo generateErrorBox($_language->module[ 'image_too_big' ]);
+                        }
                     } else {
-                        $error = $_language->module[ 'format_incorrect' ];
-                        die('<b>' . $error .
-                            '</b><br /><br /><a href="admincenter.php?site=partners&amp;action=edit&amp;partnerID=' .
-                            $id . '">&laquo; ' . $_language->module[ 'back' ] . '</a>');
+                        echo generateErrorBox($_language->module[ 'broken_image' ]);
                     }
+                } else {
+                    echo generateErrorBox($_language->module[ 'unsupported_image_type' ]);
                 }
             } else {
-                @unlink($filepath . $banner[ 'name' ] . ".tmp");
-                $error = $_language->module[ 'banner_to_big' ];
-                die('<b>' . $error .
-                    '</b><br /><br /><a href="admincenter.php?site=partners&amp;action=edit&amp;partnerID=' . $id .
-                    '">&laquo; ' . $_language->module[ 'back' ] . '</a>');
+                echo generateErrorBox($upload->translateError());
             }
         }
     } else {
@@ -150,76 +155,83 @@ if (isset($_GET[ 'delete' ])) {
     if ($CAPCLASS->checkCaptcha(0, $_POST[ 'captcha_hash' ])) {
         $name = $_POST[ 'name' ];
         $url = $_POST[ 'url' ];
-        $banner = $_FILES[ 'banner' ];
         if (isset($_POST[ "displayed" ])) {
-            $displayed = $_POST[ 'displayed' ];
+            $displayed = 1;
         } else {
-            $displayed = "";
-        }
-        if (!$displayed) {
             $displayed = 0;
         }
-        $partnerID = $_POST[ 'partnerID' ];
+
+        $partnerID = (int)$_POST[ 'partnerID' ];
         $id = $partnerID;
 
-        $filepath = "../images/partners/";
-
-        if ($banner[ 'name' ] != "") {
-            move_uploaded_file($banner[ 'tmp_name' ], $filepath . $banner[ 'name' ] . ".tmp");
-            @chmod($filepath . $banner[ 'name' ] . ".tmp", 0755);
-            $getimg = getimagesize($filepath . $banner[ 'name' ] . ".tmp");
-            if ($getimg[ 0 ] < 89 && $getimg[ 1 ] < 32) {
-                $pic = '';
-                if ($getimg[ 2 ] == 1) {
-                    $pic = $id . '.gif';
-                } elseif ($getimg[ 2 ] == 2) {
-                    $pic = $id . '.jpg';
-                } elseif ($getimg[ 2 ] == 3) {
-                    $pic = $id . '.png';
-                }
-                if ($pic != "") {
-                    if (file_exists($filepath . $id . '.gif')) {
-                        unlink($filepath . $id . '.gif');
-                    }
-                    if (file_exists($filepath . $id . '.jpg')) {
-                        unlink($filepath . $id . '.jpg');
-                    }
-                    if (file_exists($filepath . $id . '.png')) {
-                        unlink($filepath . $id . '.png');
-                    }
-                    rename($filepath . $banner[ 'name' ] . ".tmp", $filepath . $pic);
-                    safe_query("UPDATE " . PREFIX . "partners SET banner='" . $pic . "' WHERE partnerID='" . $id . "'");
-                } else {
-                    if (unlink($filepath . $banner[ 'name' ] . ".tmp")) {
-                        $error = $_language->module[ 'format_incorrect' ];
-                        die('<b>' . $error .
-                            '</b><br /><br /><a href="admincenter.php?site=partners&amp;action=edit&amp;partnerID=' .
-                            $id . '">&laquo; ' . $_language->module[ 'back' ] . '</a>');
-                    } else {
-                        $error = $_language->module[ 'format_incorrect' ];
-                        die('<b>' . $error .
-                            '</b><br /><br /><a href="admincenter.php?site=partners&amp;action=edit&amp;partnerID=' .
-                            $id . '">&laquo; ' . $_language->module[ 'back' ] . '</a>');
-                    }
-                }
-            } else {
-                @unlink($filepath . $banner[ 'name' ] . ".tmp");
-                $error = $_language->module[ 'banner_to_big' ];
-                die('<b>' . $error .
-                    '</b><br /><br /><a href="admincenter.php?site=partners&amp;action=edit&amp;partnerID=' . $id .
-                    '">&laquo; ' . $_language->module[ 'back' ] . '</a>');
-            }
-        }
         safe_query(
             "UPDATE
                 `" . PREFIX . "partners`
             SET
-                `name` = '$name',
-                `url` = '$url',
+                `name` = '" . $name . "',
+                `url` = '" . $url . "',
                 `displayed` = '" . $displayed . "'
             WHERE
-                `partnerID` = '$partnerID'"
+                `partnerID` = '" . $partnerID . "'"
         );
+
+        $filepath = "../images/partners/";
+
+        $upload = new \webspell\Upload('banner');
+
+        if ($upload->hasFile()) {
+            if ($upload->hasError() === false) {
+
+                $mime_types = array('image/jpeg','image/png','image/gif');
+
+                if ($upload->supportedMimeType($mime_types)) {
+
+                    $imageInformation =  getimagesize($upload->getTempFile());
+
+                    if (is_array($imageInformation)) {
+                        if ($imageInformation[0] < 89 && $imageInformation[1] < 32) {
+                            switch ($imageInformation[ 2 ]) {
+                                case 1:
+                                    $endung = '.gif';
+                                    break;
+                                case 3:
+                                    $endung = '.png';
+                                    break;
+                                default:
+                                    $endung = '.jpg';
+                                    break;
+                            }
+                            $file = $id.$endung;
+
+                            if (file_exists($filepath . $id . '.gif')) {
+                                unlink($filepath . $id . '.gif');
+                            }
+                            if (file_exists($filepath . $id . '.jpg')) {
+                                unlink($filepath . $id . '.jpg');
+                            }
+                            if (file_exists($filepath . $id . '.png')) {
+                                unlink($filepath . $id . '.png');
+                            }
+
+                            if ($upload->saveAs($filepath.$file)) {
+                                @chmod($filepath.$file, $new_chmod);
+                                safe_query(
+                                    "UPDATE " . PREFIX . "partners SET banner='" . $file . "' WHERE partnerID='" . $id . "'"
+                                );
+                            }
+                        } else {
+                            echo generateErrorBox($_language->module[ 'image_too_big' ]);
+                        }
+                    } else {
+                        echo generateErrorBox($_language->module[ 'broken_image' ]);
+                    }
+                } else {
+                    echo generateErrorBox($_language->module[ 'unsupported_image_type' ]);
+                }
+            } else {
+                echo generateErrorBox($upload->translateError());
+            }
+        }
     } else {
         echo $_language->module[ 'transaction_invalid' ];
     }
