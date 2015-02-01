@@ -84,7 +84,7 @@ if (isset($_POST[ 'save' ])) {
                             $file = $id.$endung;
 
                             if ($upload->saveAs($filepath.$file)) {
-                                @chmod($file, $new_chmod);
+                                @chmod($filepath.$file, $new_chmod);
                                 safe_query(
                                     "UPDATE " . PREFIX . "links SET banner='" . $file . "' WHERE linkID='" . $id . "'"
                                 );
@@ -151,7 +151,7 @@ if (isset($_POST[ 'save' ])) {
                             $file = $id.$endung;
 
                             if ($upload->saveAs($filepath.$file)) {
-                                @chmod($file, $new_chmod);
+                                @chmod($filepath.$file, $new_chmod);
                                 safe_query(
                                     "UPDATE " . PREFIX . "links SET banner='" . $file . "' WHERE linkID='" . $id . "'"
                                 );
