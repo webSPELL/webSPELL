@@ -18,7 +18,8 @@ module.exports = function(grunt) {
             "!admin/languages/**/*.php",
             "!install/**/*.php",
             "!languages/**/*.php",
-            "!index.php"
+            "!index.php",
+            "!src/func/phpmailer/**/*.php"
         ],
         releaseFiles = [
             "admin/**",
