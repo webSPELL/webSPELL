@@ -80,7 +80,7 @@ if (isset($_POST[ 'submit' ])) {
                 if (isset($sendmail['debug'])) {
                     $fehler = array();
                     $fehler[] = $sendmail[ 'debug' ];
-                    echo generateErrorBoxFromArray($_language->module[ 'email_failed' ], $fehler);
+                    echo generateBoxFromArray($_language->module[ 'successful' ], 'alert-success', $fehler);
                     echo str_replace($vars, $repl, $_language->module[ 'successful' ]);
                 } else {
                     echo str_replace($vars, $repl, $_language->module[ 'successful' ]);
