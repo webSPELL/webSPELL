@@ -140,8 +140,10 @@ hr { margin: 0px; }
         $subject = $hp_title . " Newsletter";
         foreach ($bcc as $mailto) {
             $sendmail = \webspell\Email::sendEmail($admin_email, 'Newsletter', $mailto, $subject, $emailbody);
-            if (!$sendmail) {
-                $succces = false;
+            $checkmail = array_flip($sendmail);
+            if (isset($checkmail["fail"]) )
+            {
+                $success = false;
             }
         }
         if ($success) {
