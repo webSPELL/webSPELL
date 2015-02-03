@@ -47,8 +47,13 @@ class Email
             $secure = $ds['secure'];
         }
 
+        $get = safe_query("SELECT title FROM " . PREFIX . "styles");
+        while ($ds = mysqli_fetch_assoc($get)) {
+            $hptitle = $ds['title'];
+        }
+
         if ($smtp == 2) {
-            $pop = POP3::popBeforeSmtp($host, 110, 30, $user, $password, $debug);
+            $pop = \POP3::popBeforeSmtp($host, 110, 30, $user, $password, $debug);
         }
 
         if ($pop) {
@@ -88,8 +93,9 @@ class Email
                 $mail->isMail();
             }
 
+            $fromtitle = $hptitle . ' - (' . $module . ')';
             $mail->Subject = $subject;
-            $mail->setFrom($from, $module);
+            $mail->setFrom($from, $fromtitle);
             $mail->addAddress($to);
             $mail->addReplyTo($from);
             $mail->CharSet = 'utf-8';
