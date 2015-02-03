@@ -99,9 +99,14 @@ if (isset($_POST[ 'submit' ])) {
         "</option>";
     $smtp = str_replace("value='" . $ds[ 'smtp' ] . "'", "value='" . $ds[ 'smtp' ] . "' selected='selected'", $smtp);
 
-    $secure = "<option value='0'>" . $_language->module[ 'secure_none' ] . "</option><option value='1'>" .
-        $_language->module[ 'secure_tls' ] . "</option><option value='2'>" . $_language->module[ 'secure_ssl' ] .
-        "</option>";
+    if (extension_loaded('openssl')) {
+        $secure = "<option value='0'>" . $_language->module[ 'secure_none' ] . "</option><option value='1'>" .
+            $_language->module[ 'secure_tls' ] . "</option><option value='2'>" . $_language->module[ 'secure_ssl' ] .
+            "</option>";
+    } else {
+        $secure = "<option value='0'>" . $_language->module[ 'secure_none' ] . "</option>";
+    }
+
     $secure =
         str_replace("value='" . $ds[ 'secure' ] . "'", "value='" . $ds[ 'secure' ] . "' selected='selected'", $secure);
 
