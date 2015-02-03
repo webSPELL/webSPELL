@@ -51,61 +51,67 @@ class Email
             $pop = POP3::popBeforeSmtp($host, 110, 30, $user, $password, $debug);
         }
 
-        $mail = new \PHPMailer;
+        if ($pop === true) {
 
-        $mail->SMTPDebug = $debug;
-        $mail->Debugoutput = 'html';
+            $mail = new \PHPMailer;
 
-        if ($smtp == 1) {
-            $mail->isSMTP();
-            $mail->Host = $host;
-            $mail->Port = $port;
-            if ($auth == 1) {
-                $mail->SMTPAuth = true;
-                $mail->Username = $user;
-                $mail->Password = $password;
-            } else {
-                $mail->SMTPAuth = false;
-            }
+            $mail->SMTPDebug = $debug;
+            $mail->Debugoutput = 'html';
 
-            if (extension_loaded('openssl')) {
-                switch ($secure) {
-                    case 0:
-                        $mail->SMTPSecure = '';
-                        break;
-                    case 1:
-                        $mail->SMTPSecure = 'tls';
-                        break;
-                    case 2:
-                        $mail->SMTPSecure = 'ssl';
-                        break;
+            if ($smtp == 1) {
+                $mail->isSMTP();
+                $mail->Host = $host;
+                $mail->Port = $port;
+                if ($auth == 1) {
+                    $mail->SMTPAuth = true;
+                    $mail->Username = $user;
+                    $mail->Password = $password;
+                } else {
+                    $mail->SMTPAuth = false;
                 }
+
+                if (extension_loaded('openssl')) {
+                    switch ($secure) {
+                        case 0:
+                            $mail->SMTPSecure = '';
+                            break;
+                        case 1:
+                            $mail->SMTPSecure = 'tls';
+                            break;
+                        case 2:
+                            $mail->SMTPSecure = 'ssl';
+                            break;
+                    }
+                } else {
+                    $mail->SMTPSecure = '';
+                }
+            } else {
+                $mail->isMail();
+            }
+
+            $mail->Subject = $subject;
+            $mail->setFrom($from, $module);
+            $mail->addAddress($to);
+            $mail->addReplyTo($from);
+            $mail->CharSet = 'utf-8';
+
+            if ($html == 1) {
+                $mail->isHTML(true);
+                $mail->msgHTML($message);
+            } else {
+                $mail->isHTML(false);
+                $plain = $mail->html2text($message);
+                $mail->Body = $plain;
+                $mail->AltBody = $plain;
+            }
+
+            if (!$mail->send()) {
+                return array("result" => "fail", "error" => $mail->ErrorInfo);
+            } else {
+                return array("result" => "done");
             }
         } else {
-            $mail->isMail();
-        }
-
-        $mail->setFrom($from, $module);
-        $mail->addAddress($to);
-        $mail->addReplyTo($to);
-        $mail->CharSet = 'UTF-8';
-
-        if ($html == 1) {
-            $mail->isHTML(true);
-            $mail->msgHTML($message);
-        } else {
-            $mail->isHTML(false);
-            $plain = $mail->html2text($message);
-            $mail->Body = $plain;
-            $mail->AltBody = $plain;
-        }
-
-        $mail->Subject = $subject;
-
-        if (!$mail->send()) {
-            return array("result"=>"fail","error"=>$mail->ErrorInfo);
-        } else {
-            return array("result"=>"done");
+            return array("result" => "fail", "error" => $mail->ErrorInfo);
         }
     }
 }

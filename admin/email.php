@@ -128,7 +128,7 @@ if ($action == "test") {
     echo '<h1>&curren; <a href="admincenter.php?site=email" class="white">' . $_language->module[ 'email' ] .
         '</a> &raquo; ' . $_language->module[ 'test_email' ] . '</h1>';
 
-    echo '<form method="post" action="admincenter.php?site=email" enctype="multipart/form-data">
+    echo '<form method="post" action="admincenter.php?site=email&amp;action=test" enctype="multipart/form-data">
   <table width="100%" border="0" cellspacing="1" cellpadding="3">
     <tr>
       <td width="15%"><b>' . $_language->module[ 'email' ] . '</b></td>
