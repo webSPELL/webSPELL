@@ -58,7 +58,6 @@ if (isset($_POST[ 'submit' ])) {
             );
 
             $ToEmail = $ds[ 'email' ];
-            $ToName = $ds[ 'username' ];
             $vars = array('%pagetitle%', '%username%', '%new_password%', '%homepage_url%');
             $repl = array($hp_title, $ds[ 'username' ], $newpwd, $hp_url);
             $header = str_replace($vars, $repl, $_language->module[ 'email_subject' ]);
@@ -66,10 +65,11 @@ if (isset($_POST[ 'submit' ])) {
 
             $sendmail = \webspell\Email::sendEmail($admin_email, 'Lost Password', $ToEmail, $header, $Message);
 
-            if ($sendmail) {
-                echo str_replace($vars, $repl, $_language->module[ 'successful' ]);
-            } else {
+            $checkmail = array_flip($sendmail);
+            if (isset($checkmail["fail"])) {
                 echo $_language->module[ 'email_failed' ];
+            } else {
+                echo str_replace($vars, $repl, $_language->module[ 'successful' ]);
             }
         } else {
             echo $_language->module[ 'no_user_found' ];

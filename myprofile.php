@@ -390,7 +390,6 @@ if (!$userID) {
             );
 
             $ToEmail = $mail1;
-            $ToName = $username;
             $header = str_replace(array('%homepage_url%'), array($hp_url), $_language->module['mail_subject']);
             $Message = str_replace(
                 array(
@@ -409,10 +408,12 @@ if (!$userID) {
             );
 
             $sendmail = \webspell\Email::sendEmail($admin_email, 'Profile', $ToEmail, $header, $Message);
-            if ($sendmail) {
-                echo $_language->module['mail_changed'];
-            } else {
+
+            $checkmail = array_flip($sendmail);
+            if (isset($checkmail["fail"])) {
                 echo $_language->module['mail_failed'];
+            } else {
+                echo $_language->module['mail_changed'];
             }
         } else {
             echo '<strong>ERROR: ' . $error . '</strong><br><br>

@@ -67,13 +67,22 @@ if ($action == "save") {
                 $repl,
                 $_language->module['success_mail']
             );
-            \webspell\Email::sendEmail($admin_email, 'Newsletter', $email, $subject, $message);
+            $sendmail = \webspell\Email::sendEmail($admin_email, 'Newsletter', $email, $subject, $message);
 
-            redirect(
-                'index.php?site=newsletter',
-                generateAlert($_language->module['thank_you_for_registration'], 'alert-success'),
-                3
+            $checkmail = array_flip($sendmail);
+            if (isset($checkmail["fail"])) {
+                redirect(
+                    'index.php?site=newsletter',
+                    generateErrorBox($sendmail["error"]),
+                    3
             );
+            } else {
+                redirect(
+                    'index.php?site=newsletter',
+                    generateAlert($_language->module['thank_you_for_registration'], 'alert-success'),
+                    3
+                );
+            }
         } else {
             redirect(
                 'index.php?site=newsletter',
@@ -89,7 +98,7 @@ if ($action == "save") {
         $dn = mysqli_fetch_array($ergebnis);
 
         if ($_POST['password'] == $dn['pass']) {
-            safe_query("DELETE FROM " . PREFIX . "newsletter WHERE email='" . $_POST['email']);
+            safe_query("DELETE FROM " . PREFIX . "newsletter WHERE email='" . $_POST['email'] . "'");
             redirect(
                 'index.php?site=newsletter',
                 generateAlert($_language->module['your_mail_adress_deleted'], 'alert-success'),
@@ -125,13 +134,22 @@ if ($action == "save") {
             $repl,
             $_language->module['request_mail']
         );
-        \webspell\Email::sendEmail($admin_email, 'Newsletter', $email, $subject, $message);
+        $sendmail = \webspell\Email::sendEmail($admin_email, 'Newsletter', $email, $subject, $message);
 
-        redirect(
-            'index.php?site=newsletter',
-            generateAlert($_language->module['password_had_been_send'], 'alert-success'),
-            3
-        );
+        $checkmail = array_flip($sendmail);
+        if (isset($checkmail["fail"])) {
+            redirect(
+                'index.php?site=newsletter',
+                generateErrorBox($sendmail["error"]),
+                3
+            );
+        } else {
+            redirect(
+                'index.php?site=newsletter',
+                generateAlert($_language->module['password_had_been_send'], 'alert-success'),
+                3
+            );
+        }
     } else {
         redirect(
             'index.php?site=newsletter',

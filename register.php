@@ -155,7 +155,6 @@ if (isset($_POST['save'])) {
 
             // mail to user
             $ToEmail = $mail;
-            $ToName = $username;
             $header = str_replace(
                 array('%username%', '%activationlink%', '%pagetitle%', '%homepage_url%'),
                 array(stripslashes($username), stripslashes($activationlink), $hp_title, $hp_url),
@@ -167,11 +166,13 @@ if (isset($_POST['save'])) {
                 $_language->module['mail_text']
             );
             $sendmail = \webspell\Email::sendEmail($admin_email, 'Register', $ToEmail, $header, $Message);
-            if ($sendmail) {
-                redirect("index.php", $_language->module['register_successful'], 3);
+
+            $checkmail = array_flip($sendmail);
+            if (isset($checkmail["fail"])) {
+                redirect("index.php", $_language->module['mail_failed'], 3);
                 $show = false;
             } else {
-                redirect("index.php", $_language->module['mail_failed'], 3);
+                redirect("index.php", $_language->module['register_successful'], 3);
                 $show = false;
             }
         }

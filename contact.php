@@ -83,16 +83,20 @@ if ($action == "send") {
             'This mail was send over your webSPELL - Website (IP ' . $GLOBALS['ip'] . '): ' . $hp_url .
             '<br><br><strong>' . getinput($name) . ' writes:</strong><br>' . clearfromtags($text)
         );
-        \webspell\Email::sendEmail($from, 'Contact', $getemail, stripslashes($subject), $message);
+        $sendmail = \webspell\Email::sendEmail($from, 'Contact', $getemail, stripslashes($subject), $message);
 
-        redirect('index.php?site=contact', $_language->module['send_successfull'], 3);
-        unset($_POST['name']);
-        unset($_POST['from']);
-        unset($_POST['text']);
-        unset($_POST['subject']);
+        $checkmail = array_flip($sendmail);
+        if (isset($checkmail["fail"])) {
+            $showerror = generateErrorBox($sendmail["error"]);
+        } else {
+            redirect('index.php?site=contact', $_language->module['send_successfull'], 3);
+            unset($_POST['name']);
+            unset($_POST['from']);
+            unset($_POST['text']);
+            unset($_POST['subject']);
+        }
     } else {
         $showerror = generateErrorBoxFromArray($_language->module['errors_there'], $fehler);
-
     }
 }
 

@@ -172,7 +172,20 @@ if (isset($_POST['newreply']) && !isset($_POST['preview'])) {
                     $maillanguage->module['notify_mail']
                 );
                 $subject = $maillanguage->module['new_reply'] . ' (' . $hp_title . ')';
-                \webspell\Email::sendEmail($admin_email, 'Forum', $email['mail'], $subject, $forum_topic_notify);
+                $sendmail = \webspell\Email::sendEmail(
+                    $admin_email,
+                    'Forum',
+                    $email['mail'],
+                    $subject,
+                    $forum_topic_notify
+                );
+
+                $checkmail = array_flip($sendmail);
+                if (isset($checkmail["fail"])) {
+                    $showerror = generateErrorBox($sendmail["error"]);
+                } else {
+                    $showerror = '';
+                }
             }
         }
 
