@@ -52,7 +52,6 @@ class Email
         }
 
         if ($pop === true) {
-
             $mail = new \PHPMailer;
 
             $mail->SMTPDebug = $debug;
