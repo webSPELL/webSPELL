@@ -85,9 +85,15 @@ if ($action == "send") {
         );
         $sendmail = \webspell\Email::sendEmail($from, 'Contact', $getemail, stripslashes($subject), $message);
 
-        $checkmail = array_flip($sendmail);
-        if (isset($checkmail["fail"])) {
-            $showerror = generateErrorBox($sendmail["error"]);
+        if ($sendmail['result'] == 'fail') {
+            if (isset($sendmail['debug'])) {
+                $fehler[] = $sendmail['error'];
+                $fehler[] = $sendmail['debug'];
+                $showerror = generateErrorBoxFromArray($_language->module['errors_there'], $fehler);
+            } else {
+                $fehler[] = $sendmail['error'];
+                $showerror = generateErrorBoxFromArray($_language->module['errors_there'], $fehler);
+            }
         } else {
             redirect('index.php?site=contact', $_language->module['send_successfull'], 3);
             unset($_POST['name']);

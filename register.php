@@ -167,10 +167,27 @@ if (isset($_POST['save'])) {
             );
             $sendmail = \webspell\Email::sendEmail($admin_email, 'Register', $ToEmail, $header, $Message);
 
-            $checkmail = array_flip($sendmail);
-            if (isset($checkmail["fail"])) {
-                redirect("index.php", $_language->module['mail_failed'], 3);
-                $show = false;
+            if ($sendmail['result'] == 'fail') {
+                if (isset($sendmail['debug'])) {
+                    $fehler = array();
+                    $fehler[ ] = $sendmail[ 'error' ];
+                    $fehler[ ] = $sendmail[ 'debug' ];
+                    redirect(
+                        "index.php",
+                        generateErrorBoxFromArray($_language->module['mail_failed'], $fehler),
+                        3
+                    );
+                    $show = false;
+                } else {
+                    $fehler = array();
+                    $fehler[] = $sendmail['error'];
+                    redirect(
+                        "index.php",
+                        generateErrorBoxFromArray($_language->module['mail_failed'], $fehler),
+                        3
+                    );
+                    $show = false;
+                }
             } else {
                 redirect("index.php", $_language->module['register_successful'], 3);
                 $show = false;

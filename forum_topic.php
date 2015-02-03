@@ -180,8 +180,7 @@ if (isset($_POST['newreply']) && !isset($_POST['preview'])) {
                     $forum_topic_notify
                 );
 
-                $checkmail = array_flip($sendmail);
-                if (isset($checkmail["fail"])) {
+                if ($sendmail['result'] == 'fail') {
                     $showerror = generateErrorBox($sendmail["error"]);
                 } else {
                     $showerror = '';

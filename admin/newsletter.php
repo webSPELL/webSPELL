@@ -140,15 +140,21 @@ hr { margin: 0px; }
         $subject = $hp_title . " Newsletter";
         foreach ($bcc as $mailto) {
             $sendmail = \webspell\Email::sendEmail($admin_email, 'Newsletter', $mailto, $subject, $emailbody);
-            $checkmail = array_flip($sendmail);
-            if (isset($checkmail["fail"])) {
+            if ($sendmail['result'] == 'fail') {
                 $success = false;
             }
         }
         if ($success) {
             echo '<b>' . $receptionists . '</b><br /><br />' . implode(", ", $bcc);
         } else {
-            echo '<b>' . $error_send . '</b>';
+            if (isset($sendmail['debug'])) {
+                echo '<b>' . $error_send . '</b>';
+                echo '<br>' . $sendmail['error'];
+                echo '<br>' . $sendmail['debug'];
+            } else {
+                echo '<b>' . $error_send . '</b>';
+                echo '<br>' . $sendmail['error'];
+            }
         }
         redirect("admincenter.php?site=newsletter", "", 5);
     } else {

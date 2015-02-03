@@ -34,6 +34,7 @@ class Email
 {
     public static function sendEmail($from, $module, $to, $subject, $message, $pop = true)
     {
+        global $showdebug;
         $get = safe_query("SELECT * FROM " . PREFIX . "email");
         while ($ds = mysqli_fetch_assoc($get)) {
             $host = $ds['host'];
@@ -63,7 +64,7 @@ class Email
             //$mail->Debugoutput = 'html';
             $mail->Debugoutput = function($str, $level) {
                 global $showdebug;
-                $showdebug .= "debug level " . $level . " message: " . $str . "\r\n";
+                $showdebug .= $str . '<br>';
             };
 
             if ($smtp == 1) {
@@ -116,13 +117,25 @@ class Email
             }
 
             if (!$mail->send()) {
-                return array("result" => "fail", "error" => $mail->ErrorInfo, "debug" => $showdebug);
+                if ($debug == 0) {
+                    return array("result" => "fail", "error" => $mail->ErrorInfo);
+                } else {
+                    return array("result" => "fail", "error" => $mail->ErrorInfo, "debug" => $showdebug);
+                }
             } else {
-                return array("result" => "done", "debug" => $showdebug);
+                if ($debug == 0) {
+                    return array("result" => "done");
+                } else {
+                    return array("result" => "done", "debug" => $showdebug);
+                }
             }
         } else {
             $mail = new \PHPMailer;
-            return array("result" => "fail", "error" => $mail->ErrorInfo);
+            if ($debug == 0) {
+                return array("result" => "fail", "error" => $mail->ErrorInfo);
+            } else {
+                return array("result" => "fail", "error" => $mail->ErrorInfo, "debug" => $showdebug);
+            }
         }
     }
 }

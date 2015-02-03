@@ -69,8 +69,7 @@ if ($action == "save") {
             );
             $sendmail = \webspell\Email::sendEmail($admin_email, 'Newsletter', $email, $subject, $message);
 
-            $checkmail = array_flip($sendmail);
-            if (isset($checkmail["fail"])) {
+            if ($sendmail['result'] == 'fail') {
                 redirect(
                     'index.php?site=newsletter',
                     generateErrorBox($sendmail["error"]),
@@ -136,13 +135,25 @@ if ($action == "save") {
         );
         $sendmail = \webspell\Email::sendEmail($admin_email, 'Newsletter', $email, $subject, $message);
 
-        $checkmail = array_flip($sendmail);
-        if (isset($checkmail["fail"])) {
-            redirect(
-                'index.php?site=newsletter',
-                generateErrorBox($sendmail["error"]),
-                3
-            );
+        if ($sendmail['result'] == 'fail') {
+            if (isset($sendmail['debug'])) {
+                $fehler = array();
+                $fehler[ ] = $sendmail[ 'error' ];
+                $fehler[ ] = $sendmail[ 'debug' ];
+                redirect(
+                    'index.php?site=newsletter',
+                    generateErrorBoxFromArray($_language->module['errors_there'], $fehler),
+                    3
+                );
+            } else {
+                $fehler = array();
+                $fehler[] = $sendmail['error'];
+                redirect(
+                    'index.php?site=newsletter',
+                    generateErrorBoxFromArray($_language->module['errors_there'], $fehler),
+                    3
+                );
+            }
         } else {
             redirect(
                 'index.php?site=newsletter',

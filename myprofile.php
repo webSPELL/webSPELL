@@ -409,9 +409,17 @@ if (!$userID) {
 
             $sendmail = \webspell\Email::sendEmail($admin_email, 'Profile', $ToEmail, $header, $Message);
 
-            $checkmail = array_flip($sendmail);
-            if (isset($checkmail["fail"])) {
-                echo $_language->module['mail_failed'];
+            if ($sendmail['result'] == 'fail') {
+                if (isset($sendmail['debug'])) {
+                    $fehler = array();
+                    $fehler[] = $sendmail['error'];
+                    $fehler[] = $sendmail['debug'];
+                    generateErrorBoxFromArray($_language->module['mail_failed'], $fehler);
+                } else {
+                    $fehler = array();
+                    $fehler[] = $sendmail['error'];
+                    generateErrorBoxFromArray($_language->module['mail_failed'], $fehler);
+                }
             } else {
                 echo $_language->module['mail_changed'];
             }

@@ -65,9 +65,15 @@ if (isset($_POST[ 'submit' ])) {
 
             $sendmail = \webspell\Email::sendEmail($admin_email, 'Lost Password', $ToEmail, $header, $Message);
 
-            $checkmail = array_flip($sendmail);
-            if (isset($checkmail["fail"])) {
-                echo $_language->module[ 'email_failed' ];
+            if ($sendmail['result'] == 'fail') {
+                if (isset($sendmail['debug'])) {
+                    $fehler = array();
+                    $fehler[ ] = $sendmail[ 'error' ];
+                    $fehler[ ] = $sendmail[ 'debug' ];
+                    generateErrorBoxFromArray($_language->module['email_failed'], $fehler);
+                } else {
+                    generateErrorBoxFromArray($_language->module['email_failed'], $fehler);
+                }
             } else {
                 echo str_replace($vars, $repl, $_language->module[ 'successful' ]);
             }
