@@ -229,7 +229,7 @@ if (isset($_GET['key'])) {
                 email=email_change,
                 email_change=''
             WHERE
-                email_activate='" . $_GET['mailkey']
+                email_activate='" . $_GET['mailkey'] . "'"
         );
         if (mysqli_affected_rows($_database)) {
             redirect('index.php?site=login', $_language->module['mail_activation_successful'], 3);
