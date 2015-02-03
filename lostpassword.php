@@ -68,10 +68,12 @@ if (isset($_POST[ 'submit' ])) {
             if ($sendmail['result'] == 'fail') {
                 if (isset($sendmail['debug'])) {
                     $fehler = array();
-                    $fehler[ ] = $sendmail[ 'error' ];
-                    $fehler[ ] = $sendmail[ 'debug' ];
+                    $fehler[] = $sendmail[ 'error' ];
+                    $fehler[] = $sendmail[ 'debug' ];
                     echo generateErrorBoxFromArray($_language->module['email_failed'], $fehler);
                 } else {
+                    $fehler = array();
+                    $fehler[] = $sendmail[ 'error' ];
                     echo generateErrorBoxFromArray($_language->module['email_failed'], $fehler);
                 }
             } else {

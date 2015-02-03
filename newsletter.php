@@ -138,8 +138,8 @@ if ($action == "save") {
         if ($sendmail['result'] == 'fail') {
             if (isset($sendmail['debug'])) {
                 $fehler = array();
-                $fehler[ ] = $sendmail[ 'error' ];
-                $fehler[ ] = $sendmail[ 'debug' ];
+                $fehler[] = $sendmail[ 'error' ];
+                $fehler[] = $sendmail[ 'debug' ];
                 redirect(
                     'index.php?site=newsletter',
                     generateErrorBoxFromArray($_language->module['errors_there'], $fehler),

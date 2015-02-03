@@ -170,8 +170,8 @@ if (isset($_POST['save'])) {
             if ($sendmail['result'] == 'fail') {
                 if (isset($sendmail['debug'])) {
                     $fehler = array();
-                    $fehler[ ] = $sendmail[ 'error' ];
-                    $fehler[ ] = $sendmail[ 'debug' ];
+                    $fehler[] = $sendmail[ 'error' ];
+                    $fehler[] = $sendmail[ 'debug' ];
                     redirect(
                         "index.php",
                         generateErrorBoxFromArray($_language->module['mail_failed'], $fehler),
