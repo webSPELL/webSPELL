@@ -256,7 +256,7 @@ if (isset($_POST[ 'saveedit' ])) {
             (int)$_GET[ 'galleryID' ] . '&amp;picID=' . $browse[ 'picID' ] . '">';
     }
 
-    echo '</head><body><center>';
+    echo '</head><body class="text-center">';
 
     if ($_GET[ 'action' ] == "diashow") {
         if ($browse[ 'picID' ]) {
@@ -284,7 +284,7 @@ if (isset($_POST[ 'saveedit' ])) {
         echo '</a>';
     }
 
-    echo '</center></body></html>';
+    echo '</body></html>';
 } elseif (isset($_GET[ 'picID' ])) {
     $_language->readModule('gallery');
 

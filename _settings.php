@@ -268,7 +268,7 @@ function system_error($text, $system = 1)
         </tr>
         <tr>
             <td><div style="color:#333333;font-family:Tahoma,Verdana,Arial;font-size:11px;padding:5px;">' .
-                $info . '<br><font color="red">' . $text . '</font><br>&nbsp;</div></td>
+                $info . '<br><span style="color: red">' . $text . '</span><br>&nbsp;</div></td>
         </tr>
         <tr>
             <td>
