@@ -141,8 +141,7 @@ hr { margin: 0px; }
         foreach ($bcc as $mailto) {
             $sendmail = \webspell\Email::sendEmail($admin_email, 'Newsletter', $mailto, $subject, $emailbody);
             $checkmail = array_flip($sendmail);
-            if (isset($checkmail["fail"]) )
-            {
+            if (isset($checkmail["fail"])) {
                 $success = false;
             }
         }
