@@ -139,16 +139,15 @@ if (isset($_GET[ 'delete' ])) {
                     if ($ds[ 'rank' ] != "Administrator" && $ds[ 'rank' ] != "Moderator") {
                         $id = $ds[ 'rankID' ];
                         if ($ds[ 'special' ] != 1) {
-                        	$minimum = $min[$id];
+                            $minimum = $min[$id];
                             if ($max[ $id ] == "MAX") {
                                 $maximum = 2147483647;
                             } else {
                                 $maximum = $max[ $id ];
                             }
-                        }
-                        else{
-                        	$maximum = 0;
-                        	$minimum = 0 ;
+                        } else {
+                            $maximum = 0;
+                            $minimum = 0 ;
                         }
                         safe_query(
                             "UPDATE
