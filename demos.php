@@ -50,7 +50,7 @@ function top5()
         $link =
             '<a href="index.php?site=demos&amp;action=showdemo&amp;demoID=' . $ds[ 'demoID' ] . '">' . $country1 . ' ' .
             $ds[ 'clantag1' ] . ' vs. ' . $ds[ 'clantag2' ] . ' ' . $country2 . '</a>';
-        $ratings = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+        $ratings = array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
         for ($i = 0; $i < $ds[ 'rating' ]; $i++) {
             $ratings[ $i ] = 1;
         }
@@ -400,7 +400,7 @@ if (isset($_POST[ 'save' ])) {
     $player = $ds[ 'player' ];
     $maps = $ds[ 'maps' ];
 
-    $ratings = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+    $ratings = array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
     for ($i = 0; $i < $ds[ 'rating' ]; $i++) {
         $ratings[ $i ] = 1;
     }
@@ -621,7 +621,7 @@ value="' . $_language->module[ 'rate' ] . '" class="btn btn-primary">
             $game = '<img src="images/games/' . $ds[ 'game' ] . '.gif" alt="">';
             $clicks = $ds[ 'downloads' ];
 
-            $ratings = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+            $ratings = array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
             for ($i = 0; $i < $ds[ 'rating' ]; $i++) {
                 $ratings[ $i ] = 1;
             }
@@ -758,7 +758,7 @@ value="' . $_language->module[ 'rate' ] . '" class="btn btn-primary">
                 '"><img src="images/games/' . $ds[ 'game' ] . '.gif" alt=""></a>';
             $clicks = $ds[ 'downloads' ];
 
-            $ratings = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+            $ratings = array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
             for ($i = 0; $i < $ds[ 'rating' ]; $i++) {
                 $ratings[ $i ] = 1;
             }
