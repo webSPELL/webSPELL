@@ -175,7 +175,7 @@ if (isset($_POST['save'])) {
                     redirect(
                         "index.php",
                         generateErrorBoxFromArray($_language->module['mail_failed'], $fehler),
-                        3
+                        10
                     );
                     $show = false;
                 } else {
@@ -184,13 +184,24 @@ if (isset($_POST['save'])) {
                     redirect(
                         "index.php",
                         generateErrorBoxFromArray($_language->module['mail_failed'], $fehler),
-                        3
+                        10
                     );
                     $show = false;
                 }
             } else {
-                redirect("index.php", $_language->module['register_successful'], 3);
-                $show = false;
+                if (isset($sendmail['debug'])) {
+                    $fehler = array();
+                    $fehler[] = $sendmail[ 'debug' ];
+                    redirect(
+                        "index.php",
+                        generateBoxFromArray($_language->module['register_successful'], 'alert-success', $fehler),
+                        10
+                    );
+                    $show = false;
+                } else {
+                    redirect("index.php", $_language->module['register_successful'], 3);
+                    $show = false;
+                }
             }
         }
     } else {

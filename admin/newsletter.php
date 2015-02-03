@@ -146,6 +146,10 @@ hr { margin: 0px; }
         }
         if ($success) {
             echo '<b>' . $receptionists . '</b><br /><br />' . implode(", ", $bcc);
+            if (isset($sendmail['debug'])) {
+                echo '<b> Debug </b>';
+                echo '<br>' . $sendmail['debug'];
+            }
         } else {
             if (isset($sendmail['debug'])) {
                 echo '<b>' . $error_send . '</b>';

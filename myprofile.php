@@ -421,7 +421,13 @@ if (!$userID) {
                     echo generateErrorBoxFromArray($_language->module['mail_failed'], $fehler);
                 }
             } else {
-                echo $_language->module['mail_changed'];
+                if (isset($sendmail['debug'])) {
+                    $fehler = array();
+                    $fehler[] = $sendmail[ 'debug' ];
+                    echo generateBoxFromArray($_language->module['mail_changed'], 'alert-success', $fehler);
+                } else {
+                    echo $_language->module['mail_changed'];
+                }
             }
         } else {
             echo '<strong>ERROR: ' . $error . '</strong><br><br>

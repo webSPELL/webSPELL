@@ -77,7 +77,14 @@ if (isset($_POST[ 'submit' ])) {
                     echo generateErrorBoxFromArray($_language->module['email_failed'], $fehler);
                 }
             } else {
-                echo str_replace($vars, $repl, $_language->module[ 'successful' ]);
+                if (isset($sendmail['debug'])) {
+                    $fehler = array();
+                    $fehler[] = $sendmail[ 'debug' ];
+                    echo generateErrorBoxFromArray($_language->module[ 'email_failed' ], $fehler);
+                    echo str_replace($vars, $repl, $_language->module[ 'successful' ]);
+                } else {
+                    echo str_replace($vars, $repl, $_language->module[ 'successful' ]);
+                }
             }
         } else {
             echo $_language->module[ 'no_user_found' ];

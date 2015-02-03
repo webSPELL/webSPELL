@@ -59,9 +59,27 @@ if (isset($_POST[ 'submit' ])) {
 
     $CAPCLASS = new \webspell\Captcha;
     if ($CAPCLASS->checkCaptcha(0, $_POST[ 'captcha_hash' ])) {
-        $test = \webspell\Email::sendEmail($admin_email, 'Test eMail', $to, $subject, $message);
-        echo $test['debug'];
-        redirect("admincenter.php?site=email&amp;action=test", "", 10);
+        $sendmail = \webspell\Email::sendEmail($admin_email, 'Test eMail', $to, $subject, $message);
+        if ($sendmail['result'] == 'fail') {
+            if (isset($sendmail['debug'])) {
+                echo '<b>' . $_language->module[ 'test_fail' ] . '</b>';
+                echo '<br>' . $sendmail['error'];
+                echo '<br>' . $sendmail['debug'];
+                redirect("admincenter.php?site=email&amp;action=test", $_language->module[ 'test_fail' ], 10);
+            } else {
+                echo '<b>' . $_language->module[ 'test_fail' ] . '</b>';
+                echo '<br>' . $sendmail['error'];
+                redirect("admincenter.php?site=email&amp;action=test", $_language->module[ 'test_fail' ], 10);
+            }
+        } else {
+            if (isset($sendmail['debug'])) {
+                echo '<b> Debug </b>';
+                echo '<br>' . $sendmail['debug'];
+                redirect("admincenter.php?site=email&amp;action=test", $_language->module[ 'test_ok' ], 10);
+            } else {
+                redirect("admincenter.php?site=email&amp;action=test", $_language->module[ 'test_ok' ], 3);
+            }
+        }
     } else {
         redirect("admincenter.php?site=email&amp;action=test", $_language->module[ 'transaction_invalid' ], 3);
     }

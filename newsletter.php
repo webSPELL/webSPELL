@@ -70,17 +70,44 @@ if ($action == "save") {
             $sendmail = \webspell\Email::sendEmail($admin_email, 'Newsletter', $email, $subject, $message);
 
             if ($sendmail['result'] == 'fail') {
-                redirect(
-                    'index.php?site=newsletter',
-                    generateErrorBox($sendmail["error"]),
-                    3
-                );
+                if (isset($sendmail['debug'])) {
+                    $fehler = array();
+                    $fehler[] = $sendmail[ 'error' ];
+                    $fehler[] = $sendmail[ 'debug' ];
+                    redirect(
+                        'index.php?site=newsletter',
+                        generateErrorBoxFromArray($_language->module['errors_there'], $fehler),
+                        10
+                    );
+                } else {
+                    $fehler = array();
+                    $fehler[] = $sendmail[ 'error' ];
+                    redirect(
+                        'index.php?site=newsletter',
+                        generateErrorBoxFromArray($_language->module['errors_there'], $fehler),
+                        10
+                    );
+                }
             } else {
-                redirect(
-                    'index.php?site=newsletter',
-                    generateAlert($_language->module['thank_you_for_registration'], 'alert-success'),
-                    3
-                );
+                if (isset($sendmail['debug'])) {
+                    $fehler = array();
+                    $fehler[] = $sendmail[ 'debug' ];
+                    redirect(
+                        'index.php?site=newsletter',
+                        generateBoxFromArray(
+                            $_language->module['thank_you_for_registration'],
+                            'alert-success',
+                            $fehler
+                        ),
+                        10
+                    );
+                } else {
+                    redirect(
+                        'index.php?site=newsletter',
+                        generateAlert($_language->module['thank_you_for_registration'], 'alert-success'),
+                        3
+                    );
+                }
             }
         } else {
             redirect(
@@ -143,7 +170,7 @@ if ($action == "save") {
                 redirect(
                     'index.php?site=newsletter',
                     generateErrorBoxFromArray($_language->module['errors_there'], $fehler),
-                    3
+                    10
                 );
             } else {
                 $fehler = array();
@@ -151,15 +178,25 @@ if ($action == "save") {
                 redirect(
                     'index.php?site=newsletter',
                     generateErrorBoxFromArray($_language->module['errors_there'], $fehler),
-                    3
+                    10
                 );
             }
         } else {
-            redirect(
-                'index.php?site=newsletter',
-                generateAlert($_language->module['password_had_been_send'], 'alert-success'),
-                3
-            );
+            if (isset($sendmail['debug'])) {
+                $fehler = array();
+                $fehler[] = $sendmail['error'];
+                redirect(
+                    'index.php?site=newsletter',
+                    generateBoxFromArray($_language->module['password_had_been_send'], 'alert-success', $fehler),
+                    10
+                );
+            } else {
+                redirect(
+                    'index.php?site=newsletter',
+                    generateAlert($_language->module['password_had_been_send'], 'alert-success'),
+                    3
+                );
+            }
         }
     } else {
         redirect(

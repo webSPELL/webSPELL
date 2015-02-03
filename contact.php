@@ -95,11 +95,24 @@ if ($action == "send") {
                 $showerror = generateErrorBoxFromArray($_language->module['errors_there'], $fehler);
             }
         } else {
-            redirect('index.php?site=contact', $_language->module['send_successfull'], 3);
-            unset($_POST['name']);
-            unset($_POST['from']);
-            unset($_POST['text']);
-            unset($_POST['subject']);
+            if (isset($sendmail['debug'])) {
+                $fehler[] = $sendmail[ 'debug' ];
+                redirect(
+                    'index.php?site=contact',
+                    generateBoxFromArray($_language->module['send_successfull'], 'alert-success', $fehler),
+                    3
+                );
+                unset($_POST['name']);
+                unset($_POST['from']);
+                unset($_POST['text']);
+                unset($_POST['subject']);
+            } else {
+                redirect('index.php?site=contact', $_language->module['send_successfull'], 3);
+                unset($_POST['name']);
+                unset($_POST['from']);
+                unset($_POST['text']);
+                unset($_POST['subject']);
+            }
         }
     } else {
         $showerror = generateErrorBoxFromArray($_language->module['errors_there'], $fehler);
