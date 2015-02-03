@@ -75,7 +75,7 @@ if ($action == "save") {
                     'index.php?site=newsletter',
                     generateErrorBox($sendmail["error"]),
                     3
-            );
+                );
             } else {
                 redirect(
                     'index.php?site=newsletter',
