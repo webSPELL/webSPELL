@@ -414,11 +414,11 @@ if (!$userID) {
                     $fehler = array();
                     $fehler[] = $sendmail['error'];
                     $fehler[] = $sendmail['debug'];
-                    generateErrorBoxFromArray($_language->module['mail_failed'], $fehler);
+                    echo generateErrorBoxFromArray($_language->module['mail_failed'], $fehler);
                 } else {
                     $fehler = array();
                     $fehler[] = $sendmail['error'];
-                    generateErrorBoxFromArray($_language->module['mail_failed'], $fehler);
+                    echo generateErrorBoxFromArray($_language->module['mail_failed'], $fehler);
                 }
             } else {
                 echo $_language->module['mail_changed'];

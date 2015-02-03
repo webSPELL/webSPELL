@@ -70,9 +70,9 @@ if (isset($_POST[ 'submit' ])) {
                     $fehler = array();
                     $fehler[ ] = $sendmail[ 'error' ];
                     $fehler[ ] = $sendmail[ 'debug' ];
-                    generateErrorBoxFromArray($_language->module['email_failed'], $fehler);
+                    echo generateErrorBoxFromArray($_language->module['email_failed'], $fehler);
                 } else {
-                    generateErrorBoxFromArray($_language->module['email_failed'], $fehler);
+                    echo generateErrorBoxFromArray($_language->module['email_failed'], $fehler);
                 }
             } else {
                 echo str_replace($vars, $repl, $_language->module[ 'successful' ]);
