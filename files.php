@@ -110,17 +110,15 @@ if ($action == "save") {
         $mirror2 = $_POST[ 'mirror3' ];
 
         // MIRRORS
-        if (stristr($mirror1, "http://") || stristr($mirror1, "ftp://")) {
-            if (stristr($mirror2, "http://") || stristr($mirror2, "ftp://")) {
-                $mirrors = $mirror1 . '||' . $mirror2;
-            } else {
-                $mirrors = $mirror1;
-            }
-        } elseif (stristr($mirror2, "http://") || stristr($mirror2, "ftp://")) {
-            $mirrors = $mirror2;
-        } else {
-            $mirrors = '';
+
+        $mirrors = array();
+        if (isFileURL($mirror1)) {
+            $mirrors[] = $mirror1;
         }
+        if (isFileURL($mirror2)) {
+            $mirrors[] = $mirror2;
+        }
+        $mirrors = implode("||", $mirrors);
 
         $error = array();
 
@@ -212,17 +210,14 @@ if ($action == "save") {
         unset($file);
 
         // MIRRORS
-        if (stristr($mirror1, "http://") || stristr($mirror1, "ftp://")) {
-            if (stristr($mirror2, "http://") || stristr($mirror2, "ftp://")) {
-                $mirrors = $mirror1 . '||' . $mirror2;
-            } else {
-                $mirrors = $mirror1;
-            }
-        } elseif (stristr($mirror2, "http://") || stristr($mirror2, "ftp://")) {
-            $mirrors = $mirror2;
-        } else {
-            $mirrors = '';
+        $mirrors = array();
+        if (isFileURL($mirror1)) {
+            $mirrors[] = $mirror1;
         }
+        if (isFileURL($mirror2)) {
+            $mirrors[] = $mirror2;
+        }
+        $mirrors = implode("||", $mirrors);
 
         $error = array();
 
@@ -245,7 +240,7 @@ if ($action == "save") {
                 echo generateErrorBox($upload->translateError());
             }
 
-        } elseif (!empty($fileurl)) {
+        } elseif (isFileURL($fileurl)) {
             $file = $fileurl;
         }
 
@@ -300,7 +295,7 @@ if ($action == "save") {
             $ergebnis = safe_query("SELECT * FROM `" . PREFIX . "files` WHERE `fileID` = '" . $file."'");
             $ds = mysqli_fetch_array($ergebnis);
 
-            if (!stristr($ds[ 'file' ], "http://") && !stristr($ds[ 'file' ], "ftp://")) {
+            if (isFileURL($ds[ 'file' ]) === false) {
                 @unlink('./downloads/' . $ds[ 'file' ]);
             }
 
@@ -470,7 +465,7 @@ if ($action == "save") {
                     break;
             }
             $extern = '';
-            if (stristr($file[ 'file' ], "http://") || stristr($file[ 'file' ], "ftp://")) {
+            if (isFileURL($file[ 'file' ])) {
                 $extern = $file[ 'file' ];
             }
             // FILE-MIRRORS (remember: the primary mirror is still the uploaded or external file!)
@@ -498,6 +493,7 @@ if ($action == "save") {
             $data_array['$mirror2'] = $mirror2;
             $data_array['$mirror3'] = $mirror3;
             $data_array['$fileID'] = $fileID;
+            $data_array['$filesize'] = $filesize;
             $files_edit = $GLOBALS["_template"]->replaceTemplate("files_edit", $data_array);
             echo $files_edit;
         } else {
