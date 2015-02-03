@@ -32,7 +32,7 @@ require 'phpmailer/PHPMailerAutoload.php';
 
 class Email
 {
-    public static function sendEmail($from, $module, $to, $subject, $message)
+    public static function sendEmail($from, $module, $to, $subject, $message, $pop = true)
     {
         $get = safe_query("SELECT * FROM " . PREFIX . "email");
         while ($ds = mysqli_fetch_assoc($get)) {
@@ -51,7 +51,7 @@ class Email
             $pop = POP3::popBeforeSmtp($host, 110, 30, $user, $password, $debug);
         }
 
-        if ($pop === true) {
+        if ($pop) {
             $mail = new \PHPMailer;
 
             $mail->SMTPDebug = $debug;
@@ -110,6 +110,7 @@ class Email
                 return array("result" => "done");
             }
         } else {
+            $mail = new \PHPMailer;
             return array("result" => "fail", "error" => $mail->ErrorInfo);
         }
     }
