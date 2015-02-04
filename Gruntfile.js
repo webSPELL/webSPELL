@@ -148,13 +148,13 @@ module.exports = function(grunt) {
 
         csslint: {
             options: {
-                csslintrc: '.csslintrc'
+                csslintrc: ".csslintrc"
             },
             strict: {
                 options: {
                     import: 2
                 },
-                src: ['_stylesheet.css']
+                src: ["_stylesheet.css"]
             }
         },
 
