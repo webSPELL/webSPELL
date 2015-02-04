@@ -146,6 +146,18 @@ module.exports = function(grunt) {
             files: templates
         },
 
+        csslint: {
+            options: {
+                csslintrc: '.csslintrc'
+            },
+            strict: {
+                options: {
+                    import: 2
+                },
+                src: ['_stylesheet.css']
+            }
+        },
+
         githooks: {
             all: {
                 "pre-commit": "test"
@@ -274,6 +286,8 @@ module.exports = function(grunt) {
     // These plugins provide necessary tasks.
     grunt.loadNpmTasks("grunt-contrib-watch");
     grunt.loadNpmTasks("grunt-contrib-jshint");
+    grunt.loadNpmTasks('grunt-contrib-csslint');
+    grunt.loadNpmTasks("grunt-contrib-compress");
     grunt.loadNpmTasks("grunt-htmlhint");
     grunt.loadNpmTasks("grunt-phplint");
     grunt.loadNpmTasks("grunt-phpcs");
@@ -288,7 +302,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks("grunt-htmllint");
     grunt.loadNpmTasks("grunt-casperjs");
     grunt.loadNpmTasks("grunt-newer");
-    grunt.loadNpmTasks("grunt-contrib-compress");
     grunt.loadNpmTasks("grunt-exec");
     grunt.loadNpmTasks("grunt-karma");
 
