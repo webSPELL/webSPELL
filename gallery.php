@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -228,7 +228,7 @@ if (isset($_POST[ 'saveedit' ])) {
 <meta name="description" content="Clanpage using webSPELL 4 CMS">
 <meta name="author" content="webspell.org">
 <meta name="keywords" content="webspell, webspell4, clan, cms">
-<meta name="copyright" content="Copyright 2005-2014 by webspell.org">
+<meta name="copyright" content="Copyright 2005-2015 by webspell.org">
 <meta name="generator" content="webSPELL">
 <title>' . $_language->module[ 'webs_diashow' ] . ' ' . $ds[ 'name' ] . '</title>
 <link href="_stylesheet.css" rel="stylesheet" type="text/css">';

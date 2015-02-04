@@ -1,14 +1,14 @@
 {
   "name": "webspell",
-  "version": "4.2.3",
+  "version": "4.3.0",
   "description": "webSPELL is a free Content Management System which was especially developed for the needs of esport related communities.",
   "url": "https://webspell.org",
   "repository": {
     "type": "git",
-    "url": "https://github.com/webSPELL/webSPELL-4.2.3.git"
+    "url": "https://github.com/webSPELL/webSPELL.git"
   },
   "bugs": {
-    "url": "https://github.com/webSPELL/webSPELL-4.2.3/issues"
+    "url": "https://github.com/webSPELL/webSPELL/issues"
   },
   "licence": "GPL-3.0",
   "devDependencies": {
