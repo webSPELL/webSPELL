@@ -699,3 +699,55 @@ if (typeof calledfrom === "undefined") {
 } else if (calledfrom === "admin") {
     fetch("../getlang.php?modul=bbcode&mode=array", "none", "execute", "event");
 }
+
+$(document).ready(function()
+    {
+    $("form#login").submit(function(e)
+        {
+        var that = $(this),
+            postData = that.serializeArray(),
+            formURL = that.attr("action");
+        $("body").css("cursor", "progress");
+        $.ajax(
+        {
+            url: formURL,
+            type: "POST",
+            data: postData,
+            success:function(data, textStatus, jqXHR)
+            {
+                $("body").css("cursor", "default");
+                //data: return data from server
+                if (data.state == "success") {
+                    that.prepend('<div class="alert alert-success">'+data.message+'</div>');
+                    window.setTimeout(
+                        function() {
+                            window.location.reload();
+                        },
+                        1000
+                    );
+                } else {
+                    that.prepend('<div class="alert alert-warning">'+data.message+'</div>');
+                    that.trigger("reset");
+                    window.setTimeout(
+                        function() {
+                            that.find("div.alert").remove();
+                        },
+                        3000
+                    );
+                }
+
+            },
+            error: function(jqXHR, textStatus, errorThrown)
+            {
+                $("body").css("cursor", "default");
+            }
+        });
+        e.preventDefault(); //STOP default action
+    });
+
+    if ($("#shoutbox").length) {
+        fetch("shoutbox_content.php", "shoutbox", "replace", "time", window.SHOUTBOX_REFRESH_TIME);
+    }
+
+   }
+);
