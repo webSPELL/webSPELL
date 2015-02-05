@@ -37,8 +37,9 @@ $language_array = Array(
 
 $footer = ');'."\n";
 
-function escape($string){
-    return addcslashes($string,"'");
+function escape($string)
+{
+    return addcslashes($string, "'");
 }
 
 $sortMode = SORT_REGULAR;
@@ -46,7 +47,8 @@ if (defined("SORT_NATURAL")) {
     $sortMode = SORT_NATURAL;
 }
 
-function fixGlobals($string){
+function fixGlobals($string)
+{
     return str_replace("PAGETITLE", "'.PAGETITLE.'", $string);
 }
 
@@ -66,7 +68,7 @@ foreach ($all_langs as $lang) {
             ob_clean();
 
             $rows = array();
-            ksort($language_array,$sortMode);
+            ksort($language_array, $sortMode);
             foreach ($language_array as $lang_key => $lang_val) {
                 $rows[] = "    '".escape($lang_key)."' => '".fixGlobals(escape($lang_val))."'";
             }
