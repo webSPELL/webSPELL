@@ -29,11 +29,13 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-	'invalid_password'=>'Inseriu uma password inválida.<br><br><a href="javascript:history.back()">Volte atrás e tente de novo.</a>',
-	'ip_banned'=>'O seu IP foi banido deste site.<br>%reason%<br><br><a href="javascript:history.back()">Volte atrás</a>',
+	'invalid_password'=>'Inseriu uma password inválida.',
+	'ip_banned'=>'O seu IP foi banido deste site.<br>%reason%',
 	'login_successful'=>'Login efectuado com sucesso!',
-	'no_user'=>'O utilizador <b>%username%</b> não está disponível neste sistema.<br><br><a href="javascript:history.back()">Volte atrás e tente de novo!</a>',
-	'not_activated'=>'A sua conta não está activa.<br><br><a href="javascript:history.back()">Volte atrás</a>',
-	'session_error'=>'Por favor, certifique-se de que os cookies estão activados no seu browser.<br>Se o problema continuar a ocorrer, contacte o webmaster.<br><br><a href="javascript:history.back()">Volte atrás</a>'
+	'no_user'=>'O utilizador <b>%username%</b> não está disponível neste sistema.',
+	'not_activated'=>'A sua conta não está activa.',
+	'session_error'=>'Por favor, certifique-se de que os cookies estão activados no seu browser.<br>Se o problema continuar a ocorrer, contacte o webmaster.',
+  'return'=>'<a href="javascript:history.back()">Volte atrás</a>',
+  'return_reenter' => '<a href="javascript:history.back()">Volte atrás e tente de novo.</a>'
 );
 ?>

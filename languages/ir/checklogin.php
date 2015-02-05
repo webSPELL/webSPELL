@@ -29,11 +29,13 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'invalid_password'=>'.شما شماره پسورد را اشتباه وارد کردید<br><br><a href="javascript:history.back()">.لطفا دوباره وارد کنید</a>',
-  'ip_banned'=>'.شما از این وب سایت بن شده است ip<br>%reason%<br><br><a href="javascript:history.back()">رگردید به صفحه قبل</a>',
+  'invalid_password'=>'.شما شماره پسورد را اشتباه وارد کردید',
+  'ip_banned'=>'.شما از این وب سایت بن شده است ip<br>%reason%',
   'login_successful'=>'!ورود موفقیت امیز',
-  'no_user'=>'کاربر <b>%username%</b> .در سیستم موجود نمی باشد<br><br><a href="javascript:history.back()">!لطفا دوباره وارد کنید</a>',
-  'not_activated'=>'.اکانت شما فعال نشده است<br><br><a href="javascript:history.back()">رگشت</a>',
-  'session_error'=>'.در موتور جستجوی شما فعال باشد cookies لطفا مطما شوید<br>.اگر مشکل بر طرف نشده است لطفا با ادمین تماس حاصل فرمایید<br><br><a href="javascript:history.back()">رگشت</a>'
+  'no_user'=>'کاربر <b>%username%</b> .در سیستم موجود نمی باشد',
+  'not_activated'=>'.اکانت شما فعال نشده است',
+  'session_error'=>'.در موتور جستجوی شما فعال باشد cookies لطفا مطما شوید<br>.اگر مشکل بر طرف نشده است لطفا با ادمین تماس حاصل فرمایید',
+  'return'=>'<a href="javascript:history.back()">پشت</a>',
+  'return_reenter' => '<a href="javascript:history.back()">بازگشت و ورودی تکرار</a>'
 );
 ?>
