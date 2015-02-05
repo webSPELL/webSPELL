@@ -432,9 +432,14 @@ module.exports = function(grunt) {
                     "style or test, and include a scope like (forum), (news) or (buildtools)"
             },
             "check close github issue": {
-                regex: /(((close|resolve)(s|d)?)|fix(es|ed)?) #\d+/ig,
-                explanation: "If closing issue, commit should include github isse no like " +
-                "fix #123, closes #123 or resolves #123"
+                regex: /(?!(((close|resolve)(s|d)?)|fix(es|ed)?) #\d+)/ig,
+                explanation:
+                    "If closing issue, commit should include github issue no like " +
+                    "fix #123, closes #123 or resolves #123"
+            },
+            "check subject format": {
+                regex: /(: \w+)/ig,
+                explanation: "The commit message subject should look like this ': <subject>'"
             }
         },
         skipCheckAfterIndent: false,
