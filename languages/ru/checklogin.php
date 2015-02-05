@@ -30,11 +30,13 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'invalid_password'=>'Неправильный пароль.<br><br><a href="javascript:history.back()">Вернитесь назад и попробуйте снова.</a>',
-  'ip_banned'=>'Ваш IP-адрес был забанен на этом сайте.<br>%reason%<br><br><a href="javascript:history.back()">Вернитесь назад</a>',
+  'invalid_password'=>'Неправильный пароль.',
+  'ip_banned'=>'Ваш IP-адрес был забанен на этом сайте.<br>%reason%',
   'login_successful'=>'Вы успешно зашли!',
-  'no_user'=>'Пользователь <b>%username%</b> недоступен в этой системе.<br><br><a href="javascript:history.back()">Вернитесь назад и попробуйте снова!</a>',
-  'not_activated'=>'Ваш аккаунт не активирован.<br><br><a href="javascript:history.back()">Назад</a>',
-  'session_error'=>'Пожалуйста убедитесь, что cookies включены в вашем интернет-браузере.<br>Если проблема осталась, свяжитесь с вашим интернет провайдером.<br><br><a href="javascript:history.back()">Назад</a>'
+  'no_user'=>'Пользователь <b>%username%</b> недоступен в этой системе.',
+  'not_activated'=>'Ваш аккаунт не активирован.',
+  'session_error'=>'Пожалуйста убедитесь, что cookies включены в вашем интернет-браузере.<br>Если проблема осталась, свяжитесь с вашим интернет провайдером.',
+  'return'=>'<a href="javascript:history.back()">Вернитесь назад</a>',
+  'return_reenter' => '<a href="javascript:history.back()">Вернитесь назад и попробуйте снова.</a>'
 );
 ?>
