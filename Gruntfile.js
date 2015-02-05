@@ -433,8 +433,8 @@ module.exports = function(grunt) {
             },
             "check close github issue": {
                 regex: /(((close|resolve)(s|d)?)|fix(es|ed)?) #\d+/ig,
-                explanation: "If closing issue, commit should include github isse no like fix #123, " +
-                    "closes #123 or resolves #123"
+                explanation: "If closing issue, commit should include github isse no like " +
+                "fix #123, closes #123 or resolves #123"
             }
         },
         skipCheckAfterIndent: false,
