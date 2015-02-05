@@ -200,9 +200,9 @@ if ($ajax === true){
     } else {
         $message = $return->message;
         if ($reenter === true) {
-            $message .= '<br><br/>'.$_language->module[ 'return_reenter' ];
+            $message .= '<br><br>'.$_language->module[ 'return_reenter' ];
         } else {
-            $message .= '<br><br/>'.$_language->module[ 'return' ];
+            $message .= '<br><br>'.$_language->module[ 'return' ];
         }
         ?>
         <!DOCTYPE html>
