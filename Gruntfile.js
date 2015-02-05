@@ -425,18 +425,16 @@ module.exports = function(grunt) {
         maxLineLength: 80,
 
         regexes: {
-            "check start of the commit": {
-                // the commit is either a fix, a feature, a documentation fix, a refactoring,
-                // new release commit, or Work-In-Progress temporary commit
-                regex: /^((refactor|doc) |((fix|feat) #\d+ )|(v?\d+\.\d+\.\d+)|WIP)/,
+            "check type": {
+                regex: /^((refactor|docs|chore|wip|fix|feat|style|test)(\(\w+\)))/,
                 explanation:
-                    "The commit should start with sth like fix #123, feat #123, doc, refactor, " +
-                    "or WIP for test commits"
+                    "The commit should start with sth like fix, feat, docs, refactor, chore " +
+                    "style or test, and include a scope like (forum), (news) or (buildtools)"
             },
-            "is github compliant": {
-                // https://help.github.com/articles/closing-issues-via-commit-messages
-                regex: /(((close|resolve)(s|d)?)|fix(e(s|d))?) #\d+/i,
-                explanation: "The commit should contain sth like fix #123 or close #123 somewhere"
+            "check close github issue": {
+                regex: /(((close|resolve)(s|d)?)|fix(es|ed)?) #\d+/ig,
+                explanation: "If closing issue, commit should include github isse no like fix #123, " +
+                    "closes #123 or resolves #123"
             }
         },
         skipCheckAfterIndent: false,
