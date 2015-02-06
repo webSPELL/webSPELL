@@ -74,7 +74,8 @@ module.exports = function(grunt) {
         type: grunt.file.read("type.txt"),
 
         echo: {
-            inRegex: "<%= scope %>"
+            inscope: "<%= scope %>",
+            intype: "<%= type %>"
         },
 
         jshint: {
@@ -422,7 +423,7 @@ module.exports = function(grunt) {
         });
         return grunt.task.run("bump");
     });
-    grunt.registerMultiTask("echo", "Echo back input", function(){
+    grunt.registerMultiTask("echo", "Echo back input", function() {
         grunt.log.writeln(this.data);
     });
     grunt.config("grunt-commit-message-verify", {
