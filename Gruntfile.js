@@ -439,7 +439,7 @@ module.exports = function(grunt) {
 
         regexes: {
             "check type": {
-                regex: /^(refactor|docs|chore|wip|fix|feat|style|test)\(/i,
+                regex: /^(chore|docs|feat|fix|refactor|style|test|wip)\(/i,
                 explanation:
                     "The commit should start with sth like fix, feat, docs, refactor, chore " +
                     "style or test, and include a scope like (forum), (news) or (buildtools)"

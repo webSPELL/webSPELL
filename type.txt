@@ -1,8 +1,8 @@
-refactor
-docs
 chore
-wip
-fix
+docs
 feat
+fix
+refactor
 style
 test
+wip
