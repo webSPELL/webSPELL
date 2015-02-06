@@ -1,0 +1,235 @@
+{
+    "regex": [
+        {
+            "item": "buildtools"
+        },
+        {
+            "item": "core"
+        },
+        {
+            "item": "about"
+        },
+        {
+            "item": "addons"
+        },
+        {
+            "item": "admincenter"
+        },
+        {
+            "item": "articles"
+        },
+        {
+            "item": "awards"
+        },
+        {
+            "item": "bannerrotation"
+        },
+        {
+            "item": "buddies"
+        },
+        {
+            "item": "calendar"
+        },
+        {
+            "item": "cashbox"
+        },
+        {
+            "item": "challenge"
+        },
+        {
+            "item": "clanwars"
+        },
+        {
+            "item": "code"
+        },
+        {
+            "item": "comments"
+        },
+        {
+            "item": "contact"
+        },
+        {
+            "item": "counter"
+        },
+        {
+            "item": "countries"
+        },
+        {
+            "item": "database"
+        },
+        {
+            "item": "demos"
+        },
+        {
+            "item": "error"
+        },
+        {
+            "item": "faq"
+        },
+        {
+            "item": "files"
+        },
+        {
+            "item": "flags"
+        },
+        {
+            "item": "forum"
+        },
+        {
+            "item": "gallery"
+        },
+        {
+            "item": "games"
+        },
+        {
+            "item": "groups"
+        },
+        {
+            "item": "guestbook"
+        },
+        {
+            "item": "history"
+        },
+        {
+            "item": "install"
+        },
+        {
+            "item": "images"
+        },
+        {
+            "item": "imprint"
+        },
+        {
+            "item": "index"
+        },
+        {
+            "item": "joinus"
+        },
+        {
+            "item": "languages"
+        },
+        {
+            "item": "links"
+        },
+        {
+            "item": "linkus"
+        },
+        {
+            "item": "lock"
+        },
+        {
+            "item": "login"
+        },
+        {
+            "item": "members"
+        },
+        {
+            "item": "messenger"
+        },
+        {
+            "item": "modrewrite"
+        },
+        {
+            "item": "navigation"
+        },
+        {
+            "item": "news"
+        },
+        {
+            "item": "newsletter"
+        },
+        {
+            "item": "out"
+        },
+        {
+            "item": "overview"
+        },
+        {
+            "item": "page_statistic"
+        },
+        {
+            "item": "partners"
+        },
+        {
+            "item": "picture"
+        },
+        {
+            "item": "polls"
+        },
+        {
+            "item": "profile"
+        },
+        {
+            "item": "ranks"
+        },
+        {
+            "item": "rating"
+        },
+        {
+            "item": "register"
+        },
+        {
+            "item": "report"
+        },
+        {
+            "item": "rubrics"
+        },
+        {
+            "item": "search"
+        },
+        {
+            "item": "server"
+        },
+        {
+            "item": "settings"
+        },
+        {
+            "item": "shoutbox"
+        },
+        {
+            "item": "smileys"
+        },
+        {
+            "item": "spam"
+        },
+        {
+            "item": "sponsors"
+        },
+        {
+            "item": "squads"
+        },
+        {
+            "item": "static"
+        },
+        {
+            "item": "styles"
+        },
+        {
+            "item": "stylesheet"
+        },
+        {
+            "item": "tags"
+        },
+        {
+            "item": "templates"
+        },
+        {
+            "item": "update"
+        },
+        {
+            "item": "upload"
+        },
+        {
+            "item": "users"
+        },
+        {
+            "item": "version"
+        },
+        {
+            "item": "visitor_statistic"
+        },
+        {
+            "item": "whoisonline"
+        }
+    ]
+}

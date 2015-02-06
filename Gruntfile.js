@@ -69,6 +69,14 @@ module.exports = function(grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON("package.json"),
 
+        scope: grunt.file.read("scope.txt"),
+
+        type: grunt.file.read("type.txt"),
+
+        echo: {
+            inRegex: "<%= scope %>"
+        },
+
         jshint: {
             options: {
                 jshintrc: ".jshintrc"
@@ -291,6 +299,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks("grunt-contrib-compress");
     grunt.loadNpmTasks("grunt-exec");
     grunt.loadNpmTasks("grunt-karma");
+    grunt.loadNpmTasks("grunt-debug-task");
 
     grunt.registerTask("codecheck", [
         "js",
@@ -413,7 +422,10 @@ module.exports = function(grunt) {
         });
         return grunt.task.run("bump");
     });
-    grunt.config.set("grunt-commit-message-verify", {
+    grunt.registerMultiTask("echo", "Echo back input", function(){
+        grunt.log.writeln(this.data);
+    });
+    grunt.config("grunt-commit-message-verify", {
         minLength: 0,
         maxLength: 3000,
 
@@ -426,10 +438,17 @@ module.exports = function(grunt) {
 
         regexes: {
             "check type": {
-                regex: /^((refactor|docs|chore|wip|fix|feat|style|test)(\(\w+\)))/,
+                regex: /^((<&&&>)(\(\w+\)))/i,
                 explanation:
                     "The commit should start with sth like fix, feat, docs, refactor, chore " +
-                    "style or test, and include a scope like (forum), (news) or (buildtools)"
+                    "style or test, and include a scope like (forum), (news) or (buildtools)",
+                regexfile: "<%= type %>"
+            },
+            "check scope": {
+                regex: /(\(\<&&&>\))/i,
+                explanation:
+                    "The commit should include a scope like (forum), (news) or (buildtools)",
+                regexfile: "<%= scope %>"
             },
             "check close github issue": {
                 regex: /(?!(((close|resolve)(s|d)?)|fix(es|ed)?) #\d+)/ig,
