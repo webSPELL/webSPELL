@@ -438,17 +438,15 @@ module.exports = function(grunt) {
 
         regexes: {
             "check type": {
-                regex: /^((<&&&>)(\(\w+\)))/i,
+                regex: /^(refactor|docs|chore|wip|fix|feat|style|test)\(/i,
                 explanation:
                     "The commit should start with sth like fix, feat, docs, refactor, chore " +
-                    "style or test, and include a scope like (forum), (news) or (buildtools)",
-                regexfile: "<%= type %>"
+                    "style or test, and include a scope like (forum), (news) or (buildtools)"
             },
             "check scope": {
-                regex: /(\(\<&&&>\))/i,
+                regex: /\((about|addons|admincenter|articles|awards|bannerrotation|buddies|buildtools|calendar|cashbox|challenge|clanwars|\bcode\b|\bcodestyle\b|comments|contact|core|counter|countries|database|demos|error|faq|files|flags|forum|gallery|games|groups|guestbook|history|images|imprint|index|install|joinus|languages|links|linkus|lock|login|members|messenger|modrewrite|navigation|\bnews\b|\bnewsletter\b|out|overview|partners|picture|polls|profile|ranks|rating|register|report|rubrics|search|server|settings|shoutbox|smileys|spam|sponsors|squads|static|statistics|\bstyles\b|\bstylesheet\b|tags|templates|update|upload|users|version|whoisonline)\)/i,
                 explanation:
-                    "The commit should include a scope like (forum), (news) or (buildtools)",
-                regexfile: "<%= scope %>"
+                    "The commit should include a scope like (forum), (news) or (buildtools)"
             },
             "check close github issue": {
                 regex: /(?!(((close|resolve)(s|d)?)|fix(es|ed)?) #\d+)/ig,
@@ -457,12 +455,12 @@ module.exports = function(grunt) {
                     "fix #123, closes #123 or resolves #123"
             },
             "check subject format": {
-                regex: /(: \w+)/ig,
+                regex: /(: \w+.*)/ig,
                 explanation: "The commit message subject should look like this ': <subject>'"
             }
         },
         skipCheckAfterIndent: false,
-        forceSecondLineEmpty: false,
+        forceSecondLineEmpty: true,
         messageOnError: "",
         shellCommand: "git log --format=%B --no-merges -n 1"
     });
