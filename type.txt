@@ -1,8 +1,8 @@
-refactor|
-docs|
-chore|
-wip|
-fix|
-feat|
-style|
+refactor
+docs
+chore
+wip
+fix
+feat
+style
 test
