@@ -444,7 +444,9 @@ module.exports = function(grunt) {
                     "style or test, and include a scope like (forum), (news) or (buildtools)"
             },
             "check scope": {
+                /* jscs ignore:start */
                 regex: /\((about|addons|admincenter|articles|awards|bannerrotation|buddies|buildtools|calendar|cashbox|challenge|clanwars|\bcode\b|\bcodestyle\b|comments|contact|core|counter|countries|database|demos|error|faq|files|flags|forum|gallery|games|groups|guestbook|history|images|imprint|index|install|joinus|languages|links|linkus|lock|login|members|messenger|modrewrite|navigation|\bnews\b|\bnewsletter\b|out|overview|partners|picture|polls|profile|ranks|rating|register|report|rubrics|search|server|settings|shoutbox|smileys|spam|sponsors|squads|static|statistics|\bstyles\b|\bstylesheet\b|tags|templates|update|upload|users|version|whoisonline)\)/i,
+                /* jscs ignore:end */
                 explanation:
                     "The commit should include a scope like (forum), (news) or (buildtools)"
             },
