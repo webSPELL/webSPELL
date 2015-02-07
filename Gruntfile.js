@@ -441,20 +441,21 @@ module.exports = function(grunt) {
             "check type": {
                 regex: /^(chore|docs|feat|fix|refactor|style|test|wip)\(/i,
                 explanation:
-                    "The commit should start with sth like fix, feat, docs, refactor, chore " +
-                    "style or test, and include a scope like (forum), (news) or (buildtools)"
+                    "The commit should start with a type like fix, feat, or chore. " +
+                    "See type.txt for a full list."
             },
             "check scope": {
                 /* jscs ignore:start */
                 regex: /\((about|addons|admincenter|articles|awards|bannerrotation|buddies|buildtools|calendar|cashbox|challenge|clanwars|\bcode\b|\bcodestyle\b|comments|contact|core|counter|countries|database|demos|error|faq|files|flags|forum|gallery|games|groups|guestbook|history|images|imprint|index|install|joinus|languages|links|linkus|lock|login|members|messenger|modrewrite|navigation|\bnews\b|\bnewsletter\b|out|overview|partners|picture|polls|profile|ranks|rating|register|report|rubrics|search|server|settings|shoutbox|smileys|spam|sponsors|squads|static|statistics|\bstyles\b|\bstylesheet\b|tags|templates|update|upload|users|version|whoisonline)\)/i,
                 /* jscs ignore:end */
                 explanation:
-                    "The commit should include a scope like (forum), (news) or (buildtools)"
+                    "The commit should include a scope like (forum), (news) or (buildtools). " +
+                    "See scope.txt for a full list."
             },
             "check close github issue": {
                 regex: /(?!(((close|resolve)(s|d)?)|fix(es|ed)?) #\d+)/ig,
                 explanation:
-                    "If closing issue, commit should include github issue no like " +
+                    "If closing an issue, the commit should include github issue no like " +
                     "fix #123, closes #123 or resolves #123"
             },
             "check subject format": {
