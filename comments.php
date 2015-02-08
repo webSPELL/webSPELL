@@ -600,7 +600,6 @@ if (isset($_POST[ 'savevisitorcomment' ])) {
             $comments_add_user = $GLOBALS["_template"]->replaceTemplate("comments_add_user", $data_array);
             echo $comments_add_user;
         } elseif ($comments_allowed == 2) {
-            $ip = $GLOBALS[ 'ip' ];
 
             if (isset($_COOKIE[ 'visitor_info' ])) {
                 $visitor = explode("--||--", $_COOKIE[ 'visitor_info' ]);
@@ -650,7 +649,6 @@ if (isset($_POST[ 'savevisitorcomment' ])) {
             $data_array['$referer'] = $referer;
             $data_array['$parentID'] = $parentID;
             $data_array['$type'] = $type;
-            $data_array['$ip'] = $ip;
             $comments_add_visitor = $GLOBALS["_template"]->replaceTemplate("comments_add_visitor", $data_array);
             echo $comments_add_visitor;
         } else {
