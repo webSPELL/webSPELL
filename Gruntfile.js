@@ -77,9 +77,10 @@ module.exports = function(grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON("package.json"),
 
-        scope: grunt.file.read("scope.txt"),
-
-        type: grunt.file.read("type.txt"),
+        scope: new RegExp("\((" + grunt.file.read("scope.txt").trim()
+            .split("\n").join("|") + ")\)", "i"),
+        type: new RegExp("^(" + grunt.file.read("type.txt").trim()
+            .split("\n").join("|") + ")\\(", "i"),
 
         echo: {
             inscope: "<%= scope %>",
@@ -421,7 +422,7 @@ module.exports = function(grunt) {
         grunt.log.writeln(this.data);
     });
 
-    grunt.config("grunt-commit-message-verify", {
+    grunt.config.set("grunt-commit-message-verify", {
         minLength: 0,
         maxLength: 3000,
 
@@ -434,23 +435,19 @@ module.exports = function(grunt) {
 
         regexes: {
             "check type": {
-                regex: /^(chore|docs|feat|fix|refactor|style|test|wip)\(/i,
+                regex: grunt.config.get("scope"),
                 explanation:
                     "The commit should start with a type like fix, feat, or chore. " +
                     "See type.txt for a full list."
             },
             "check scope": {
-                /* jscs ignore:start */
-                regex: /\((about|addons|admincenter|articles|awards|bannerrotation|buddies|buildtools|calendar|cashbox|challenge|clanwars|\bcode\b|\bcodestyle\b|comments|contact|core|counter|countries|database|demos|error|faq|files|flags|forum|gallery|games|groups|guestbook|history|images|imprint|index|install|joinus|languages|links|linkus|lock|login|members|messenger|modrewrite|navigation|\bnews\b|\bnewsletter\b|out|overview|partners|picture|polls|profile|ranks|rating|register|report|rubrics|search|server|settings|shoutbox|smileys|spam|sponsors|squads|static|statistics|\bstyles\b|\bstylesheet\b|tags|templates|update|upload|users|version|whoisonline)\)/i,
-                /* jscs ignore:end */
+                regex: grunt.config.get("scope"),
                 explanation:
                     "The commit should include a scope like (forum), (news) or (buildtools). " +
                     "See scope.txt for a full list."
             },
             "check close github issue": {
-                /* jscs ignore:start */
                 regex: /((?=(((close|resolve)(s|d)?)|fix(es|ed)?))((((close|resolve)(s|d)?)|fix(es|ed)?) #\d+))/ig,
-                /* jscs ignore:end */
                 explanation:
                     "If closing an issue, the commit should include github issue no like " +
                     "fix #123, closes #123 or resolves #123"
