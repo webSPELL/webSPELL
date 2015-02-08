@@ -88,7 +88,7 @@ module.exports = function(grunt) {
 
         versioncheck: {
             options: {
-                hideUpToDate : true
+                hideUpToDate: true
             }
         },
 
