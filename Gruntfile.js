@@ -86,6 +86,12 @@ module.exports = function(grunt) {
             intype: "<%= type %>"
         },
 
+        versioncheck: {
+            options: {
+                hideUpToDate : true
+            }
+        },
+
         jshint: {
             options: {
                 jshintrc: ".jshintrc"
