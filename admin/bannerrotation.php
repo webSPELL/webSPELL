@@ -144,7 +144,7 @@ if ($action == "add") {
     $CAPCLASS = new \webspell\Captcha;
     if ($CAPCLASS->checkCaptcha(0, $_POST['captcha_hash'])) {
         if ($bannername && $bannerurl) {
-            if(!isWebURLorProtocolRelative($bannerurl)){
+            if (!isWebURLorProtocolRelative($bannerurl)) {
                 $bannerurl = 'http://' . $bannerurl;
             }
 
@@ -234,7 +234,7 @@ if ($action == "add") {
     $CAPCLASS = new \webspell\Captcha;
     if ($CAPCLASS->checkCaptcha(0, $_POST['captcha_hash'])) {
         if ($bannername && $bannerurl) {
-            if(!isWebURLorProtocolRelative($bannerurl)){
+            if (!isWebURLorProtocolRelative($bannerurl)) {
                 $bannerurl = 'http://' . $bannerurl;
             }
             safe_query(
@@ -370,7 +370,7 @@ if ($action == "add") {
                 $displayed = '<font color="red"><b>' . $_language->module['no'] . '</b></font>';
             }
 
-            if(!isWebURLorProtocolRelative($ds['bannerurl'])){
+            if (!isWebURLorProtocolRelative($ds['bannerurl'])) {
                 $ds['bannerurl'] = 'http://' . $ds['bannerurl'];
             }
 

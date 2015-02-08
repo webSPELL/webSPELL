@@ -103,6 +103,7 @@ function isWebURL($url)
      return in_array($urlInfo['scheme'], array('ftp','http','https','mailto','news')) && !empty($urlInfo['path']);
 }
 
-function isWebURLorProtocolRelative($url){
+function isWebURLorProtocolRelative($url)
+{
     return (stripos($url, "http://") === 0 || stripos($url, "https://") === 0 || stripos($url, "//") === 0);
 }
