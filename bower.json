@@ -15,7 +15,7 @@
     "Content Management System"
   ],
   "dependencies": {
-    "bootstrap": "~3.2.0",
+    "bootstrap": "~3.3.2",
     "webshim": "~1.15.5"
   }
 }
