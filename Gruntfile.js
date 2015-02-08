@@ -79,9 +79,9 @@ module.exports = function(grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON("package.json"),
 
-        scope: grunt.file.read("scope.txt").trim().split("\n").join("|"),
+        scopeRegex: "\\b" + grunt.file.read("scope.txt").trim().split("\n").join("\\b|\\b") + "\\b",
 
-        type: grunt.file.read("type.txt").trim().split("\n").join("|"),
+        typeRegex: grunt.file.read("type.txt").trim().split("\n").join("|"),
 
         versioncheck: {
             options: {
@@ -427,13 +427,13 @@ module.exports = function(grunt) {
 
         regexes: {
             "check type": {
-                regex: new RegExp("^(" + grunt.config.get("type") + ")\\(", "i"),
+                regex: new RegExp("^(" + grunt.config.get("typeRegex") + ")\\(", "i"),
                 explanation:
                     "The commit should start with a type like fix, feat, or chore. " +
                     "See type.txt for a full list."
             },
             "check scope": {
-                regex: new RegExp("\((" + grunt.config.get("scope") + ")\)", "i"),
+                regex: new RegExp("\\((" + grunt.config.get("scopeRegex") + ")\\)", "i"),
                 explanation:
                     "The commit should include a scope like (forum), (news) or (buildtools). " +
                     "See scope.txt for a full list."
