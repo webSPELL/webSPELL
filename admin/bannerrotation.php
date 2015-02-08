@@ -23,7 +23,7 @@
 #   visit webspell.org                                                   #
 #                                                                        #
 ##########################################################################
- */
+*/
 
 $_language->readModule('bannerrotation');
 
