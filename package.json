@@ -28,7 +28,6 @@
     "grunt-htmllint": "^0.2.4",
     "grunt-jscs": "^1.5.0",
     "grunt-karma": "^0.10.1",
-    "grunt-modules": "^0.1.0",
     "grunt-newer": "^1.1.0",
     "grunt-phpcpd": "^0.1.4",
     "grunt-phpcs": "^0.2.3",
