@@ -657,8 +657,11 @@ value="' . $_language->module[ 'rate' ] . '" class="btn btn-primary">
     }
     $sort = "date";
     if (isset($_GET[ 'sort' ])) {
-        if ($_GET[ 'sort' ] == 'date' || $_GET[ 'sort' ] == 'game' || $_GET[ 'sort' ] == 'league' ||
-            $_GET[ 'sort' ] == 'rating' || $_GET[ 'sort' ] == 'downloads'
+        if ($_GET[ 'sort' ] == 'date'
+            || $_GET[ 'sort' ] == 'game'
+            || $_GET[ 'sort' ] == 'league'
+            || $_GET[ 'sort' ] == 'rating'
+            || $_GET[ 'sort' ] == 'downloads'
         ) {
             $sort = $_GET[ 'sort' ];
         }
