@@ -45,6 +45,8 @@ module.exports = function(grunt) {
             "!.jshintrc",
             "!circle.yml",
             "!Gruntfile.js",
+            "!scope.txt",
+            "!type.txt",
             "!grunt-log.txt",
             "!*.zip",
             "!Ruleset.xml",
@@ -77,15 +79,9 @@ module.exports = function(grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON("package.json"),
 
-        scope: new RegExp("\((" + grunt.file.read("scope.txt").trim()
-            .split("\n").join("|") + ")\)", "i"),
-        type: new RegExp("^(" + grunt.file.read("type.txt").trim()
-            .split("\n").join("|") + ")\\(", "i"),
+        scope: grunt.file.read("scope.txt").trim().split("\n").join("|"),
 
-        echo: {
-            inscope: "<%= scope %>",
-            intype: "<%= type %>"
-        },
+        type: grunt.file.read("type.txt").trim().split("\n").join("|"),
 
         versioncheck: {
             options: {
@@ -418,10 +414,6 @@ module.exports = function(grunt) {
         return grunt.task.run("bump");
     });
 
-    grunt.registerMultiTask("echo", "Echo back input", function() {
-        grunt.log.writeln(this.data);
-    });
-
     grunt.config.set("grunt-commit-message-verify", {
         minLength: 0,
         maxLength: 3000,
@@ -435,13 +427,13 @@ module.exports = function(grunt) {
 
         regexes: {
             "check type": {
-                regex: grunt.config.get("scope"),
+                regex: new RegExp("^(" + grunt.config.get("type") + ")\\(", "i"),
                 explanation:
                     "The commit should start with a type like fix, feat, or chore. " +
                     "See type.txt for a full list."
             },
             "check scope": {
-                regex: grunt.config.get("scope"),
+                regex: new RegExp("\((" + grunt.config.get("scope") + ")\)", "i"),
                 explanation:
                     "The commit should include a scope like (forum), (news) or (buildtools). " +
                     "See scope.txt for a full list."
