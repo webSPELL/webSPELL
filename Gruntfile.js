@@ -4,6 +4,8 @@
 module.exports = function(grunt) {
     "use strict";
 
+    require("time-grunt")(grunt);
+
     var javascripts = [
             "Gruntfile.js",
             "js/bbcode.js",
@@ -59,6 +61,12 @@ module.exports = function(grunt) {
             "!vendor/**",
             "!tmp/**"
         ];
+
+    require("load-grunt-tasks")(grunt, {
+        pattern: [ "grunt-*" ],
+        config: "package.json",
+        scope: "devDependencies"
+    });
 
     require("logfile-grunt")(grunt, {
         filePath: "./grunt-log.txt",
@@ -280,28 +288,6 @@ module.exports = function(grunt) {
         }
     });
 
-    // These plugins provide necessary tasks.
-    grunt.loadNpmTasks("grunt-contrib-watch");
-    grunt.loadNpmTasks("grunt-contrib-jshint");
-    grunt.loadNpmTasks("grunt-htmlhint");
-    grunt.loadNpmTasks("grunt-phplint");
-    grunt.loadNpmTasks("grunt-phpcs");
-    grunt.loadNpmTasks("grunt-phpcpd");
-    grunt.loadNpmTasks("grunt-jscs");
-    grunt.loadNpmTasks("grunt-text-replace");
-    grunt.loadNpmTasks("grunt-templated-changelog");
-    grunt.loadNpmTasks("grunt-bump");
-    grunt.loadNpmTasks("grunt-githooks");
-    grunt.loadNpmTasks("grunt-commit-message-verify");
-    grunt.loadNpmTasks("grunt-bootlint");
-    grunt.loadNpmTasks("grunt-htmllint");
-    grunt.loadNpmTasks("grunt-casperjs");
-    grunt.loadNpmTasks("grunt-newer");
-    grunt.loadNpmTasks("grunt-contrib-compress");
-    grunt.loadNpmTasks("grunt-exec");
-    grunt.loadNpmTasks("grunt-karma");
-    grunt.loadNpmTasks("grunt-debug-task");
-
     grunt.registerTask("codecheck", [
         "js",
         "php",
@@ -401,6 +387,7 @@ module.exports = function(grunt) {
         });
         return grunt.task.run("bump");
     });
+
     grunt.registerTask("bumpCommit", function() {
         grunt.config("bump", {
             options: {
@@ -423,9 +410,11 @@ module.exports = function(grunt) {
         });
         return grunt.task.run("bump");
     });
+
     grunt.registerMultiTask("echo", "Echo back input", function() {
         grunt.log.writeln(this.data);
     });
+
     grunt.config("grunt-commit-message-verify", {
         minLength: 0,
         maxLength: 3000,
@@ -453,7 +442,9 @@ module.exports = function(grunt) {
                     "See scope.txt for a full list."
             },
             "check close github issue": {
-                regex: /(?!(((close|resolve)(s|d)?)|fix(es|ed)?) #\d+)/ig,
+                /* jscs ignore:start */
+                regex: /((?=(((close|resolve)(s|d)?)|fix(es|ed)?))((((close|resolve)(s|d)?)|fix(es|ed)?) #\d+))/ig,
+                /* jscs ignore:end */
                 explanation:
                     "If closing an issue, the commit should include github issue no like " +
                     "fix #123, closes #123 or resolves #123"

@@ -26,7 +26,7 @@
     "grunt-githooks": "^0.3.1",
     "grunt-htmlhint": "^0.4.1",
     "grunt-htmllint": "^0.2.4",
-    "grunt-jscs": "^1.2.0",
+    "grunt-jscs": "^1.5.0",
     "grunt-karma": "^0.10.1",
     "grunt-modules": "^0.1.0",
     "grunt-newer": "^1.1.0",
@@ -40,7 +40,9 @@
     "karma-chrome-launcher": "^0.1.7",
     "karma-jasmine": "^0.3.5",
     "karma-phantomjs-launcher": "^0.1.4",
-    "logfile-grunt": "^0.1.5"
+    "load-grunt-tasks": "^3.1.0",
+    "logfile-grunt": "^0.1.5",
+    "time-grunt": "^1.0.0"
   },
   "scripts": {
     "test": "grunt codecheck --verbose"
