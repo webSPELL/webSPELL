@@ -46,7 +46,8 @@
     "logfile-grunt": "^0.1.5",
     "time-grunt": "^1.0.0",
     "nightwatch": "^0.5.36",
-    "selenium-webdriver": "^2.44.0"
+    "selenium-webdriver": "^2.44.0",
+    "phantomjs": "^1.9.15"
   },
   "scripts": {
     "test": "grunt codecheck --verbose"
