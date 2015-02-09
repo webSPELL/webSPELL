@@ -52,7 +52,7 @@
                 "path" : ""
             },
             "desiredCapabilities": {
-                "name" : "webspell",
+                "name" : "test-firefox-win7",
                 "browserName": "firefox",
                 "build" : "${CI_BUILD_NUMBER}",
                 "public" : "public",
@@ -62,7 +62,9 @@
                 },
                 "webdriver.remote.quietExceptions": false,
                 "time-zone": "Berlin",
-                "screen-resolution": "1280x1024"
+                "platform" : "Windows 7",
+                "version" : "35.0",
+                "screen-resolution" : "1600x1200"
             },
             "selenium" : {
                 "start_process" : false
