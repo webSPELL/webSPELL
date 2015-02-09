@@ -59,7 +59,10 @@
                 "custom-data": {
                     "branch": "${CI_BRANCH}",
                     "commit": "${CI_COMMIT_ID}"
-                }
+                },
+                "webdriver.remote.quietExceptions": false,
+                "time-zone": "Berlin",
+                "screen-resolution": "1280x1024"
             },
             "selenium" : {
                 "start_process" : false
