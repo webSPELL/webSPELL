@@ -7,7 +7,7 @@ module.exports = {
         browser
             .url("http://www.google.com")
             .waitForElementVisible('body', 1000)
-            .setValue('input[type=text]', 'webspell')
+            .setValue('input[name=q]', 'webspell')
             .waitForElementVisible('button[name=btnG]', 1000)
             .click('button[name=btnG]')
             .pause(1000)
