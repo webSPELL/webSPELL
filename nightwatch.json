@@ -53,7 +53,13 @@
             },
             "desiredCapabilities": {
                 "name" : "webspell",
-                "browserName": "firefox"
+                "browserName": "firefox",
+                "build" : "${CI_BUILD_NUMBER}",
+                "public" : "public",
+                "custom-data": {
+                    "branch": "${CI_BRANCH}",
+                    "commit": "${CI_COMMIT_ID}"
+                }
             },
             "selenium" : {
                 "start_process" : false
