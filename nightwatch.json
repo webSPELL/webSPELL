@@ -184,10 +184,16 @@
             "selenium_port" : 80,
             "silent" : true,
             "desiredCapabilities": {
+                "browser" : "Safari",
+                "browser_version" : "5.1",
+                "os" : "Windows",
+                "os_version" : "7",
+                "resolution" : "1600x1200",
                 "name" : "webspell",
-                "browserName": "firefox",
                 "browserstack.user" : "${BROWSERSTACK_USERNAME}",
-                "browserstack.key" : "${BROWSERSTACK_KEY}"
+                "browserstack.key" : "${BROWSERSTACK_KEY}",
+                "build" : "${CI_BUILD_NUMBER}",
+                "project" : "${CI_BRANCH}"
             }
         },
 
