@@ -68,9 +68,9 @@
     "couch"         : false,    // CouchDB
     "devel"         : true,     // Development/debugging (alert, confirm, etc)
     "dojo"          : false,    // Dojo Toolkit
-    "jasmine"       : false,    // Jasmine
-    "jquery"        : false,    // jQuery
-    "mocha"         : true,     // Mocha
+    "jasmine"       : true,    // Jasmine
+    "jquery"        : true,    // jQuery
+    "mocha"         : false,     // Mocha
     "mootools"      : false,    // MooTools
     "node"          : false,    // Node.js
     "nonstandard"   : false,    // Widely adopted globals (escape, unescape, etc)
@@ -90,8 +90,6 @@
         "ActiveXObject"     : false,
         "calledfrom"        : false,
         "casper"            : false,
-        "ws"                : true,
-        "$"                 : false,
-        "jQuery"            : false
+        "ws"                : true
     }
 }
