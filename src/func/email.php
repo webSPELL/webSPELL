@@ -28,13 +28,12 @@
 
 namespace webspell;
 
-require 'phpmailer/PHPMailerAutoload.php';
-
+require 'vendor/phpmailer/phpmailer/PHPMailerAutoload.php';
 class Email
 {
     public static function sendEmail($from, $module, $to, $subject, $message, $pop = true)
     {
-        global $showdebug;
+        $GLOBALS['mail_debug'] = '';
         $get = safe_query("SELECT * FROM " . PREFIX . "email");
         while ($ds = mysqli_fetch_assoc($get)) {
             $host = $ds['host'];
@@ -57,16 +56,14 @@ class Email
             $pop = \POP3::popBeforeSmtp($host, 110, 30, $user, $password, $debug);
         }
 
+        $mail = new \PHPMailer();
+
+        $mail->SMTPDebug = $debug;
+        $mail->Debugoutput = function($str, $level) {
+            $GLOBALS['mail_debug'] .= $str . '<br>';
+        };
+
         if ($pop) {
-            $mail = new \PHPMailer;
-
-            $mail->SMTPDebug = $debug;
-            //$mail->Debugoutput = 'html';
-            $mail->Debugoutput = function($str, $level) {
-                global $showdebug;
-                $showdebug .= $str . '<br>';
-            };
-
             if ($smtp == 1) {
                 $mail->isSMTP();
                 $mail->Host = $host;
@@ -120,7 +117,7 @@ class Email
                 if ($debug == 0) {
                     return array("result" => "fail", "error" => $mail->ErrorInfo);
                 } else {
-                    return array("result" => "fail", "error" => $mail->ErrorInfo, "debug" => $showdebug);
+                    return array("result" => "fail", "error" => $mail->ErrorInfo, "debug" => $GLOBALS['mail_debug']);
                 }
             } else {
                 if ($debug == 0) {
@@ -130,11 +127,10 @@ class Email
                 }
             }
         } else {
-            $mail = new \PHPMailer;
             if ($debug == 0) {
                 return array("result" => "fail", "error" => $mail->ErrorInfo);
             } else {
-                return array("result" => "fail", "error" => $mail->ErrorInfo, "debug" => $showdebug);
+                return array("result" => "fail", "error" => $mail->ErrorInfo, "debug" => $GLOBALS['mail_debug']);
             }
         }
     }

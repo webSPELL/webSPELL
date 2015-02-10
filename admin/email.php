@@ -31,6 +31,12 @@ if (!ispageadmin($userID) || mb_substr(basename($_SERVER[ 'REQUEST_URI' ]), 0, 1
     die($_language->module[ 'access_denied' ]);
 }
 
+if (isset($_GET[ 'action' ])) {
+    $action = $_GET[ 'action' ];
+} else {
+    $action = '';
+}
+
 if (isset($_POST[ 'submit' ])) {
     $CAPCLASS = new \webspell\Captcha;
     if ($CAPCLASS->checkCaptcha(0, $_POST[ 'captcha_hash' ])) {
@@ -83,7 +89,31 @@ if (isset($_POST[ 'submit' ])) {
     } else {
         redirect("admincenter.php?site=email&amp;action=test", $_language->module[ 'transaction_invalid' ], 3);
     }
+} elseif ($action == "test") {
+    $CAPCLASS = new \webspell\Captcha;
+    $CAPCLASS->createTransaction();
+    $hash = $CAPCLASS->getHash();
+
+    echo '<h1>&curren; <a href="admincenter.php?site=email" class="white">' . $_language->module[ 'email' ] .
+        '</a> &raquo; ' . $_language->module[ 'test_email' ] . '</h1>';
+
+    echo '<form method="post" action="admincenter.php?site=email&amp;action=test" enctype="multipart/form-data">
+  <table width="100%" border="0" cellspacing="1" cellpadding="3">
+    <tr>
+      <td width="15%"><b>' . $_language->module[ 'email' ] . '</b></td>
+      <td width="85%"><input name="email" type="text" size="35" /></td>
+    </tr>
+    <tr>
+      <td><input type="hidden" name="captcha_hash" value="' . $hash . '" /></td>
+      <td><input type="submit" name="send" value="' . $_language->module[ 'send' ] . '" /></td>
+    </tr>
+  </table>
+  </form>';
 } else {
+    $CAPCLASS = new \webspell\Captcha;
+    $CAPCLASS->createTransaction();
+    $hash = $CAPCLASS->getHash();
+
     $settings = safe_query("SELECT * FROM " . PREFIX . "email");
     $ds = mysqli_fetch_array($settings);
 
@@ -134,39 +164,6 @@ if (isset($_POST[ 'submit' ])) {
         $_language->module[ 'debug_4' ] . "</option>";
     $debug =
         str_replace("value='" . $ds[ 'debug' ] . "'", "value='" . $ds[ 'debug' ] . "' selected='selected'", $debug);
-}
-
-
-if (isset($_GET[ 'action' ])) {
-    $action = $_GET[ 'action' ];
-} else {
-    $action = '';
-}
-
-if ($action == "test") {
-    $CAPCLASS = new \webspell\Captcha;
-    $CAPCLASS->createTransaction();
-    $hash = $CAPCLASS->getHash();
-
-    echo '<h1>&curren; <a href="admincenter.php?site=email" class="white">' . $_language->module[ 'email' ] .
-        '</a> &raquo; ' . $_language->module[ 'test_email' ] . '</h1>';
-
-    echo '<form method="post" action="admincenter.php?site=email&amp;action=test" enctype="multipart/form-data">
-  <table width="100%" border="0" cellspacing="1" cellpadding="3">
-    <tr>
-      <td width="15%"><b>' . $_language->module[ 'email' ] . '</b></td>
-      <td width="85%"><input name="email" type="text" size="35" /></td>
-    </tr>
-    <tr>
-      <td><input type="hidden" name="captcha_hash" value="' . $hash . '" /></td>
-      <td><input type="submit" name="send" value="' . $_language->module[ 'send' ] . '" /></td>
-    </tr>
-  </table>
-  </form>';
-} else {
-    $CAPCLASS = new \webspell\Captcha;
-    $CAPCLASS->createTransaction();
-    $hash = $CAPCLASS->getHash();
 
     echo '<h1>&curren; ' . $_language->module[ 'email' ] . '</h1>';
 
