@@ -25,7 +25,7 @@ module.exports = {
 
         var requestPath = '/rest/v1/'+ this.client.options.username +'/jobs/' + this.client.sessionId;
         try {
-            console.log('Updaing saucelabs', requestPath)
+            console.log('Updating saucelabs', requestPath)
             var req = https.request({
                 hostname: 'saucelabs.com',
                 path: requestPath,
