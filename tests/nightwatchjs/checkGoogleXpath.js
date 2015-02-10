@@ -19,7 +19,7 @@ module.exports = {
 
     tearDown : function(callback) {
         var data = JSON.stringify({
-            "passed" : true,
+            "passed" : (this.results.failed == 0) ? true : false,
             "tags" : ["test","google"]
         });
 
