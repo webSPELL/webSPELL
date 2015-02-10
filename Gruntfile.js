@@ -284,6 +284,9 @@ module.exports = function(grunt) {
                 command: "sh ./qphpcs.sh",
                 stdout: true,
                 stderr: true
+            },
+            sortLanguageKeys: {
+                command: "cd tools && php -f sort_translations.php"
             }
         },
 
@@ -387,6 +390,7 @@ module.exports = function(grunt) {
                 "bumpOnly:" + releaseLevel,
                 "replace:copyright",
                 "replace:version",
+                "exec:sortLanguageKeys",
                 "changelog",
                 "bumpCommit:" + releaseLevel,
                 "compress:release"
