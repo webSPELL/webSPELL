@@ -304,7 +304,8 @@ function insideCode($content)
 
 function imgreplace_callback($match)
 {
-    return '<img src="'.fixJavaEvents($match[1].$match[2]).'" border="0" alt="'.fixJavaEvents($match[1].$match[2]).'" />';
+    return '<img src="'.fixJavaEvents($match[1].$match[2]).'" border="0"'.
+            'alt="'.fixJavaEvents($match[1].$match[2]).'" />';
 }
 
 function imgreplace($content)
