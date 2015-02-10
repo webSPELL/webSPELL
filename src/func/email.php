@@ -28,7 +28,7 @@
 
 namespace webspell;
 
-require 'vendor/phpmailer/phpmailer/PHPMailerAutoload.php';
+require 'phpmailer/phpmailer/PHPMailerAutoload.php';
 class Email
 {
     public static function sendEmail($from, $module, $to, $subject, $message, $pop = true)
@@ -123,7 +123,7 @@ class Email
                 if ($debug == 0) {
                     return array("result" => "done");
                 } else {
-                    return array("result" => "done", "debug" => $showdebug);
+                    return array("result" => "done", "debug" => $GLOBALS['mail_debug']);
                 }
             }
         } else {
