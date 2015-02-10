@@ -727,7 +727,7 @@ if (isset($_POST[ 'saveedit' ])) {
 
     $ergebnis = safe_query("SELECT * FROM " . PREFIX . "gallery_groups ORDER BY sort");
 
-    if (mysql_num_rows($ergebnis)) {
+    if (mysqli_num_rows($ergebnis)) {
         while ($ds = mysqli_fetch_array($ergebnis)) {
             $groupID = $ds[ 'groupID' ];
             $title = $ds[ 'name' ];

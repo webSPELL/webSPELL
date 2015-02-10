@@ -166,6 +166,18 @@ module.exports = function(grunt) {
             files: templates
         },
 
+        csslint: {
+            options: {
+                csslintrc: ".csslintrc"
+            },
+            strict: {
+                options: {
+                    import: 2
+                },
+                src: [ "_stylesheet.css" ]
+            }
+        },
+
         githooks: {
             all: {
                 "pre-commit": "test"
@@ -350,6 +362,10 @@ module.exports = function(grunt) {
     grunt.registerTask("php", [
         "phplint",
         "phpcs"
+    ]);
+
+    grunt.registerTask("css", [
+        "csslint"
     ]);
 
     grunt.registerTask("git", [
