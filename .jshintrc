@@ -90,6 +90,8 @@
         "ActiveXObject"     : false,
         "calledfrom"        : false,
         "casper"            : false,
-        "ws"                : true
+        "ws"                : true,
+        "$"                 : false,
+        "jQuery"            : false
     }
 }
