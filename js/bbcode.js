@@ -792,7 +792,7 @@ $(document).ready(function()
                         function() {
                             that.find("div.alert").remove();
                         },
-                        3000
+                        5000
                     );
                 }
 
