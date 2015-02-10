@@ -48,6 +48,7 @@ $language_array = Array(
 	'edit'=>'ändern',
 	'edit_reply'=>'Antwort ändern',
 	'edit_topic'=>'Thema ändern',
+    'errors_there'=>'Es sind Fehler aufgetreten',
 	'forgot_message'=>'Du hast keine Nachricht eingegeben!',
 	'go'=>'Los!',
 	'guest'=>'1 Gast',
@@ -93,7 +94,7 @@ $language_array = Array(
 	'notify'=>'mich über neue Beiträge benachrichtigen',
 	'notify_mail'=>'Neue Antwort von %poster% im Thema
 %topic_link%
-	
+
 %pagetitle% - %hpurl%',
 	'notify_reply'=>'mich über neue Antwort benachrichtigen',
 	'now_online'=>'Jetzt online',

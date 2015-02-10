@@ -181,9 +181,12 @@ if (isset($_POST['newreply']) && !isset($_POST['preview'])) {
                 );
 
                 if ($sendmail['result'] == 'fail') {
-                    $showerror = generateErrorBox($sendmail["error"]);
-                } else {
-                    $showerror = '';
+                    if (isset($sendmail['debug'])) {
+                        $fehler = array();
+                        $fehler[] = $sendmail['error'];
+                        $fehler[] = $sendmail['debug'];
+                        echo generateErrorBoxFromArray($_language->module['errors_there'], $fehler);
+                    }
                 }
             }
         }

@@ -48,6 +48,7 @@ $language_array = Array(
 	'edit'=>'edit',
 	'edit_reply'=>'edit reply',
 	'edit_topic'=>'edit topic',
+    'errors_there'=>'Some errors occured',
 	'forgot_message'=>'You forgot to enter a message!',
 	'go'=>'GO',
 	'guest'=>'1 guest',
@@ -93,7 +94,7 @@ $language_array = Array(
 	'notify'=>'Notify me when a reply is posted',
 	'notify_mail'=>'New reply by %poster% in topic
 %topic_link%
-	
+
 %pagetitle% - %hpurl%',
 	'notify_reply'=>'Notify me when a reply is posted',
 	'now_online'=>'Now online',
