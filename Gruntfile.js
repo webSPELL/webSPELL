@@ -306,7 +306,8 @@ module.exports = function(grunt) {
             codecheck: [
                 "js",
                 "php",
-                "html"
+                "html",
+                "css"
             ],
             codecheckcircle: [
                 "jshint",
@@ -314,7 +315,8 @@ module.exports = function(grunt) {
                 "phpcs",
                 "htmlhint",
                 "htmllint",
-                "bootlint"
+                "bootlint",
+                "css"
             ],
             codechecktravis: [
                 "jshint",
@@ -323,7 +325,8 @@ module.exports = function(grunt) {
                 "phpcs",
                 "htmlhint",
                 "htmllint",
-                "bootlint"
+                "bootlint",
+                "css"
             ]
         }
     });
