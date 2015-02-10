@@ -189,7 +189,7 @@ if (mysqli_num_rows($get) == 0) {
     $return->message = str_replace('%reason%', $data[ 'reason' ], $_language->module[ 'ip_banned' ]);
 }
 
-if ($ajax === true){
+if ($ajax === true) {
     header('Cache-Control: no-cache, must-revalidate');
     header('Expires: Mon, 26 Jul 1997 05:00:00 GMT');
     header('Content-type: application/json');

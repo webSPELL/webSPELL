@@ -762,6 +762,7 @@ function loadLanguageModule(module) {
 
 $(document).ready(function()
     {
+    "use strict";
     $("form#login").submit(function(e)
         {
         var that = $(this),
@@ -777,8 +778,8 @@ $(document).ready(function()
             {
                 $("body").css("cursor", "default");
                 //data: return data from server
-                if (data.state == "success") {
-                    that.prepend('<div class="alert alert-success">'+data.message+'</div>');
+                if (data.state === "success") {
+                    that.prepend("<div class=\"alert alert-success\">" + data.message + "</div>");
                     window.setTimeout(
                         function() {
                             window.location.reload();
@@ -786,7 +787,7 @@ $(document).ready(function()
                         1000
                     );
                 } else {
-                    that.prepend('<div class="alert alert-warning">'+data.message+'</div>');
+                    that.prepend("<div class=\"alert alert-warning\">" + data.message + "</div>");
                     that.trigger("reset");
                     window.setTimeout(
                         function() {
