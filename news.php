@@ -683,28 +683,28 @@ if ($action == "new") {
     }
 
     if ($ds[ 'window1' ]) {
-            $window1 = '<input class="input" name="window1" type="checkbox" value="1" checked="checked">';
-        } else {
-            $window1 = '<input class="input" name="window1" type="checkbox" value="1">';
-        }
+        $window1 = '<input class="input" name="window1" type="checkbox" value="1" checked="checked">';
+    } else {
+        $window1 = '<input class="input" name="window1" type="checkbox" value="1">';
+    }
 
-        if ($ds[ 'window2' ]) {
-            $window2 = '<input class="input" name="window2" type="checkbox" value="1" checked="checked">';
-        } else {
-            $window2 = '<input class="input" name="window2" type="checkbox" value="1">';
-        }
+    if ($ds[ 'window2' ]) {
+        $window2 = '<input class="input" name="window2" type="checkbox" value="1" checked="checked">';
+    } else {
+        $window2 = '<input class="input" name="window2" type="checkbox" value="1">';
+    }
 
-        if ($ds[ 'window3' ]) {
-            $window3 = '<input class="input" name="window3" type="checkbox" value="1" checked="checked">';
-        } else {
-            $window3 = '<input class="input" name="window3" type="checkbox" value="1">';
-        }
+    if ($ds[ 'window3' ]) {
+        $window3 = '<input class="input" name="window3" type="checkbox" value="1" checked="checked">';
+    } else {
+        $window3 = '<input class="input" name="window3" type="checkbox" value="1">';
+    }
 
-        if ($ds[ 'window4' ]) {
-            $window4 = '<input class="input" name="window4" type="checkbox" value="1" checked="checked">';
-        } else {
-            $window4 = '<input class="input" name="window4" type="checkbox" value="1">';
-        }
+    if ($ds[ 'window4' ]) {
+        $window4 = '<input class="input" name="window4" type="checkbox" value="1" checked="checked">';
+    } else {
+        $window4 = '<input class="input" name="window4" type="checkbox" value="1">';
+    }
 
     $tags = \webspell\Tags::getTags('news', $newsID);
 
