@@ -692,10 +692,59 @@ function url(string) {
     return result;
 }
 
-//initialize javascript language array
-languageArray.bbcode = [];
-if (typeof calledfrom === "undefined") {
-    fetch("getlang.php?modul=bbcode&mode=array", "none", "execute", "event");
-} else if (calledfrom === "admin") {
-    fetch("../getlang.php?modul=bbcode&mode=array", "none", "execute", "event");
+function loadTemplate(template) {
+    "use strict";
+    var path = "templates/" + template + ".html"
+
+    if (typeof calledfrom === "admin") {
+        path = "../" + path;
+    }
+
+    return $.ajax({
+        type: "GET",
+        url: path,
+        async: false
+    }).responseText;
 }
+
+function loadLanguageSynchron(module) {
+    var path = "getlang.php?modul=" + module + "&mode=array"
+
+    if (typeof calledfrom === "admin") {
+        path = "../" + path;
+    }
+    window.languageArray[module] = [];
+    eval($.ajax({
+        type: "GET",
+        url: path,
+        async: false
+    }).responseText);
+}
+
+function replaceLangVars(template, vars) {
+    for (key in vars) {
+        template = template.replace(new RegExp("\\%" + key + "\\%", "gm"), vars[key]);
+    }
+    return template;
+}
+
+function escapeRegExp(string) {
+    return string.replace(/([.*+?^=!:${}()|\[\]\/\\])/g, "\\$1");
+}
+
+String.prototype.replaceAll = function(find, replace) {
+  return this.replace(new RegExp(escapeRegExp(find), "g"), replace);
+}
+
+//initialize javascript language array
+languageArray = {};
+function loadLanguageModule(module) {
+    window.languageArray[module] = [];
+    if (typeof calledfrom === "undefined") {
+        fetch("getlang.php?modul=" + module + "&mode=array", "none", "execute", "event");
+    } else if (calledfrom === "admin") {
+        fetch("../getlang.php?modul=" + module + "&mode=array", "none", "execute", "event");
+    }
+}
+
+loadLanguageModule("bbcode");
