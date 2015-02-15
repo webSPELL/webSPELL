@@ -4,6 +4,8 @@
 module.exports = function(grunt) {
     "use strict";
 
+    require("time-grunt")(grunt);
+
     var javascripts = [
             "Gruntfile.js",
             "js/bbcode.js",
@@ -43,6 +45,8 @@ module.exports = function(grunt) {
             "!.jshintrc",
             "!circle.yml",
             "!Gruntfile.js",
+            "!scope.txt",
+            "!type.txt",
             "!grunt-log.txt",
             "!*.zip",
             "!Ruleset.xml",
@@ -60,6 +64,12 @@ module.exports = function(grunt) {
             "!tmp/**"
         ];
 
+    require("load-grunt-tasks")(grunt, {
+        pattern: [ "grunt-*" ],
+        config: "package.json",
+        scope: "devDependencies"
+    });
+
     require("logfile-grunt")(grunt, {
         filePath: "./grunt-log.txt",
         clearLogFile: true
@@ -68,6 +78,16 @@ module.exports = function(grunt) {
     // Project configuration.
     grunt.initConfig({
         pkg: grunt.file.readJSON("package.json"),
+
+        scopeRegex: "\\b" + grunt.file.read("scope.txt").trim().split("\n").join("\\b|\\b") + "\\b",
+
+        typeRegex: grunt.file.read("type.txt").trim().split("\n").join("|"),
+
+        versioncheck: {
+            options: {
+                hideUpToDate: true
+            }
+        },
 
         jshint: {
             options: {
@@ -271,27 +291,6 @@ module.exports = function(grunt) {
         }
     });
 
-    // These plugins provide necessary tasks.
-    grunt.loadNpmTasks("grunt-contrib-watch");
-    grunt.loadNpmTasks("grunt-contrib-jshint");
-    grunt.loadNpmTasks("grunt-htmlhint");
-    grunt.loadNpmTasks("grunt-phplint");
-    grunt.loadNpmTasks("grunt-phpcs");
-    grunt.loadNpmTasks("grunt-phpcpd");
-    grunt.loadNpmTasks("grunt-jscs");
-    grunt.loadNpmTasks("grunt-text-replace");
-    grunt.loadNpmTasks("grunt-templated-changelog");
-    grunt.loadNpmTasks("grunt-bump");
-    grunt.loadNpmTasks("grunt-githooks");
-    grunt.loadNpmTasks("grunt-commit-message-verify");
-    grunt.loadNpmTasks("grunt-bootlint");
-    grunt.loadNpmTasks("grunt-htmllint");
-    grunt.loadNpmTasks("grunt-casperjs");
-    grunt.loadNpmTasks("grunt-newer");
-    grunt.loadNpmTasks("grunt-contrib-compress");
-    grunt.loadNpmTasks("grunt-exec");
-    grunt.loadNpmTasks("grunt-karma");
-
     grunt.registerTask("codecheck", [
         "js",
         "php",
@@ -391,6 +390,7 @@ module.exports = function(grunt) {
         });
         return grunt.task.run("bump");
     });
+
     grunt.registerTask("bumpCommit", function() {
         grunt.config("bump", {
             options: {
@@ -413,6 +413,7 @@ module.exports = function(grunt) {
         });
         return grunt.task.run("bump");
     });
+
     grunt.config.set("grunt-commit-message-verify", {
         minLength: 0,
         maxLength: 3000,
@@ -426,24 +427,32 @@ module.exports = function(grunt) {
 
         regexes: {
             "check type": {
-                regex: /^((refactor|docs|chore|wip|fix|feat|style|test)(\(\w+\)))/,
+                regex: new RegExp("^(" + grunt.config.get("typeRegex") + ")\\(", "i"),
                 explanation:
-                    "The commit should start with sth like fix, feat, docs, refactor, chore " +
-                    "style or test, and include a scope like (forum), (news) or (buildtools)"
+                    "The commit should start with a type like fix, feat, or chore. " +
+                    "See type.txt for a full list."
             },
-            "check close github issue": {
-                regex: /(?!(((close|resolve)(s|d)?)|fix(es|ed)?) #\d+)/ig,
+            "check scope": {
+                regex: new RegExp("\\((" + grunt.config.get("scopeRegex") + ")\\)", "i"),
                 explanation:
-                    "If closing issue, commit should include github issue no like " +
-                    "fix #123, closes #123 or resolves #123"
+                    "The commit should include a scope like (forum), (news) or (buildtools). " +
+                    "See scope.txt for a full list."
             },
+            // commented out for later use
+            //"check close github issue": {
+            //    regex: /((?=(((close|resolve)(s|d)?)|fix(es|ed)?))
+            // ((((close|resolve)(s|d)?)|fix(es|ed)?) #\d+))/ig,
+            //    explanation:
+            //        "If closing an issue, the commit should include github issue no like " +
+            //        "fix #123, closes #123 or resolves #123"
+            //},
             "check subject format": {
-                regex: /(: \w+)/ig,
+                regex: /(: \w+.*)/ig,
                 explanation: "The commit message subject should look like this ': <subject>'"
             }
         },
         skipCheckAfterIndent: false,
-        forceSecondLineEmpty: false,
+        forceSecondLineEmpty: true,
         messageOnError: "",
         shellCommand: "git log --format=%B --no-merges -n 1"
     });

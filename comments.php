@@ -600,7 +600,6 @@ if (isset($_POST[ 'savevisitorcomment' ])) {
             $comments_add_user = $GLOBALS["_template"]->replaceTemplate("comments_add_user", $data_array);
             echo $comments_add_user;
         } elseif ($comments_allowed == 2) {
-
             if (isset($_COOKIE[ 'visitor_info' ])) {
                 $visitor = explode("--||--", $_COOKIE[ 'visitor_info' ]);
                 $name = getforminput(stripslashes($visitor[ 0 ]));
