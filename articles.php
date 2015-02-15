@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -44,16 +44,16 @@ if ($action == "save") {
     $message = $_POST[ 'message' ];
     $link1 = $_POST[ 'link1' ];
     $url1 = $_POST[ 'url1' ];
-    $window1 = $_POST[ 'window1' ];
+    $window1 = isset($_POST[ 'window1' ]);
     $link2 = $_POST[ 'link2' ];
     $url2 = $_POST[ 'url2' ];
-    $window2 = $_POST[ 'window2' ];
+    $window2 = isset($_POST[ 'window2' ]);
     $link3 = $_POST[ 'link3' ];
     $url3 = $_POST[ 'url3' ];
-    $window3 = $_POST[ 'window3' ];
+    $window3 = isset($_POST[ 'window3' ]);
     $link4 = $_POST[ 'link4' ];
     $url4 = $_POST[ 'url4' ];
-    $window4 = $_POST[ 'window4' ];
+    $window4 = isset($_POST[ 'window4' ]);
     $comments = $_POST[ 'comments' ];
     $articlesID = $_POST[ 'articlesID' ];
 
@@ -85,7 +85,7 @@ if ($action == "save") {
     $anzpages =
         mysqli_num_rows(
             safe_query(
-                "SELECT * FROM " . PREFIX . "articles_contents WHERE articlesID='" . (int)$articlesID."'"
+                "SELECT * FROM " . PREFIX . "articles_contents WHERE articlesID='" . (int)$articlesID ."'"
             )
         );
     if ($anzpages > count($message)) {
@@ -98,7 +98,8 @@ if ($action == "save") {
         );
     }
 
-    for ($i = 0; $i <= count($message); $i++) {
+    $counter = count($message);
+    for ($i = 0; $i <= $counter; $i++) {
         if (isset($message[ $i ])) {
             if ($i >= $anzpages) {
                 safe_query(
@@ -127,15 +128,14 @@ if ($action == "save") {
             }
         }
     }
-    for ($x = $_POST[ 'language_count' ]; $x < 100; $x++) {
-        safe_query(
-            "DELETE FROM
+
+    safe_query(
+        "DELETE FROM
                 `" . PREFIX . "articles_contents`
             WHERE
                 `articlesID` = '" . $articlesID . "' AND
-                `page` = '" . (int)$x."'"
-        );
-    }
+                `page` >= '" . (int)$_POST[ 'language_count' ]."'"
+    );
 
     // delete the entries that are older than 2 hour and contain no text
     safe_query(
@@ -145,7 +145,6 @@ if ($action == "save") {
             `saved` = '0' AND
             " . time() . " - `date` > " . (2 * 60 * 60)
     );
-
     die('<body onload="window.close()"></body>');
 } elseif (isset($_GET[ 'delete' ])) {
     include("_mysql.php");
@@ -160,11 +159,11 @@ if ($action == "save") {
     $ds = mysqli_fetch_array(
         safe_query(
             "SELECT
-                  `screens`
-                FROM
-                  `" . PREFIX . "articles`
-                WHERE
-                    `articlesID` = '" . (int)$_GET[ 'articlesID' ]
+                `screens`
+            FROM
+                `" . PREFIX . "articles`
+            WHERE
+                `articlesID` = '" . (int)$_GET[ 'articlesID' ] . "'"
         )
     );
     if ($ds[ 'screens' ]) {
@@ -181,15 +180,11 @@ if ($action == "save") {
 
     \webspell\Tags::removeTags('articles', $_GET[ 'articlesID' ]);
 
-    safe_query("DELETE FROM " . PREFIX . "articles WHERE articlesID='" . (int)$_GET[ 'articlesID' ]);
-    safe_query("DELETE FROM " . PREFIX . "articles_contents WHERE articlesID='" . (int)$_GET[ 'articlesID' ]);
+    safe_query("DELETE FROM " . PREFIX . "articles WHERE articlesID='" . (int)$_GET[ 'articlesID' ] . "'");
+    safe_query("DELETE FROM " . PREFIX . "articles_contents WHERE articlesID='" . (int)$_GET[ 'articlesID' ] . "'");
     safe_query("DELETE FROM " . PREFIX . "comments WHERE parentID='" . (int)$_GET[ 'articlesID' ] . "' AND type='ar'");
 
-    if (isset($close)) {
-        echo '<body onload="window.close()"></body>';
-    } else {
-        header("Location: index.php?site=articles");
-    }
+    header("Location: index.php?site=articles");
 }
 
 function top5()
@@ -203,7 +198,9 @@ function top5()
     $top = $_language->module[ 'top5_rating' ];
     echo '<div class="row">';
 
-    eval ("\$top5_head = \"" . gettemplate("top5_head") . "\";");
+    $data_array = array();
+    $data_array['$top'] = $top;
+    $top5_head = $GLOBALS["_template"]->replaceTemplate("top5_head", $data_array);
     echo $top5_head;
 
     $n = 1;
@@ -221,7 +218,7 @@ function top5()
         $poster =
             '<a href="index.php?site=profile&amp;id=' . $ds[ 'poster' ] . '">' . getnickname($ds[ 'poster' ]) . '</a>';
         $viewed = '(' . $ds[ 'viewed' ] . ')';
-        $ratings = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+        $ratings = array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
         for ($i = 0; $i < $ds[ 'rating' ]; $i++) {
             $ratings[ $i ] = 1;
         }
@@ -242,7 +239,9 @@ function top5()
     $ergebnis = safe_query("SELECT * FROM " . PREFIX . "articles WHERE saved='1' ORDER BY points DESC LIMIT 0,5");
     $top = $_language->module[ 'top5_points' ];
 
-    eval ("\$top5_head = \"" . gettemplate("top5_head") . "\";");
+    $data_array = array();
+    $data_array['$top'] = $top;
+    $top5_head = $GLOBALS["_template"]->replaceTemplate("top5_head", $data_array);
     echo $top5_head;
 
     $n = 1;
@@ -306,17 +305,27 @@ if ($action == "new") {
 
         $pages = 1;
 
-        $bg1 = BG_1;
-        eval ("\$addbbcode = \"" . gettemplate("addbbcode") . "\";");
-        eval ("\$addflags = \"" . gettemplate("flags") . "\";");
+        $componentsCss = generateComponents($components['css'], 'css');
+        $componentsJs = generateComponents($components['js'], 'js');
 
-        eval ("\$articles_post = \"" . gettemplate("articles_post") . "\";");
+        $addbbcode = $GLOBALS["_template"]->replaceTemplate("addbbcode", array());
+        $addflags = $GLOBALS["_template"]->replaceTemplate("flags", array());
+
+        $data_array = array();
+        $data_array['$rewriteBase'] = $rewriteBase;
+        $data_array['$componentsCss'] = $componentsCss;
+        $data_array['$addbbcode'] = $addbbcode;
+        $data_array['$addflags'] = $addflags;
+        $data_array['$articlesID'] = $articlesID;
+        $data_array['$title'] = $title;
+        $data_array['$componentsJs'] = $componentsJs;
+        $data_array['$selects'] = $selects;
+        $articles_post = $GLOBALS["_template"]->replaceTemplate("articles_post", $data_array);
         echo $articles_post;
     } else {
         redirect('index.php?site=articles', $_language->module[ 'no_access' ]);
     }
 } elseif ($action == "edit") {
-
     include("_mysql.php");
     include("_settings.php");
     include("_functions.php");
@@ -333,12 +342,12 @@ if ($action == "new") {
 
     if (isnewsadmin($userID)) {
         $ds = mysqli_fetch_array(
-            safe_query("SELECT * FROM " . PREFIX . "articles WHERE articlesID = '" . (int)$articlesID)
+            safe_query("SELECT * FROM " . PREFIX . "articles WHERE articlesID = '" . (int)$articlesID . "'")
         );
 
         $title = getinput($ds[ 'title' ]);
 
-        $message = [];
+        $message = array();
         $query = safe_query(
             "SELECT
                 `content`
@@ -366,7 +375,7 @@ if ($action == "new") {
             if ($i == $pages) {
                 $selected = "selected='selected'";
             } else {
-                $selected = null;
+                $selected = "";
             }
             $selects .= '<option value="' . $i . '" ' . $selected . '>' . $i . '</option>';
         }
@@ -381,47 +390,27 @@ if ($action == "new") {
         $url4 = getinput($ds[ 'url4' ]);
 
         if ($ds[ 'window1' ]) {
-            $window1 = '<input class="input" name="window1" type="radio" value="1" checked="checked"> ' .
-                $_language->module[ 'new_window' ] . ' <input class="input" type="radio" name="window1" value="0"> ' .
-                $_language->module[ 'self' ] . '';
+            $window1 = '<input class="input" name="window1" type="checkbox" value="1" checked="checked">';
         } else {
-            $window1 =
-                '<input class="input" name="window1" type="radio" value="1"> ' . $_language->module[ 'new_window' ] .
-                ' <input class="input" type="radio" name="window1" value="0" checked="checked"> ' .
-                $_language->module[ 'self' ] . '';
+            $window1 = '<input class="input" name="window1" type="checkbox" value="1">';
         }
 
         if ($ds[ 'window2' ]) {
-            $window2 = '<input class="input" name="window2" type="radio" value="1" checked="checked"> ' .
-                $_language->module[ 'new_window' ] . ' <input class="input" type="radio" name="window2" value="0"> ' .
-                $_language->module[ 'self' ] . '';
+            $window2 = '<input class="input" name="window2" type="checkbox" value="1" checked="checked">';
         } else {
-            $window2 =
-                '<input class="input" name="window2" type="radio" value="1"> ' . $_language->module[ 'new_window' ] .
-                ' <input class="input" type="radio" name="window2" value="0" checked="checked"> ' .
-                $_language->module[ 'self' ] . '';
+            $window2 = '<input class="input" name="window2" type="checkbox" value="1">';
         }
 
         if ($ds[ 'window3' ]) {
-            $window3 = '<input class="input" name="window3" type="radio" value="1" checked="checked"> ' .
-                $_language->module[ 'new_window' ] . ' <input class="input" type="radio" name="window3" value="0"> ' .
-                $_language->module[ 'self' ] . '';
+            $window3 = '<input class="input" name="window3" type="checkbox" value="1" checked="checked">';
         } else {
-            $window3 =
-                '<input class="input" name="window3" type="radio" value="1"> ' . $_language->module[ 'new_window' ] .
-                ' <input class="input" type="radio" name="window3" value="0" checked="checked"> ' .
-                $_language->module[ 'self' ] . '';
+            $window3 = '<input class="input" name="window3" type="checkbox" value="1">';
         }
 
         if ($ds[ 'window4' ]) {
-            $window4 = '<input class="input" name="window4" type="radio" value="1" checked="checked"> ' .
-                $_language->module[ 'new_window' ] . ' <input class="input" type="radio" name="window4" value="0"> ' .
-                $_language->module[ 'self' ] . '';
+            $window4 = '<input class="input" name="window4" type="checkbox" value="1" checked="checked">';
         } else {
-            $window4 =
-                '<input class="input" name="window4" type="radio" value="1"> ' . $_language->module[ 'new_window' ] .
-                ' <input class="input" type="radio" name="window4" value="0" checked="checked"> ' .
-                $_language->module[ 'self' ] . '';
+            $window4 = '<input class="input" name="window4" type="checkbox" value="1">';
         }
 
         $tags = \webspell\Tags::getTags('articles', $articlesID);
@@ -429,24 +418,56 @@ if ($action == "new") {
         $comments = '<option value="0">' . $_language->module[ 'no_comments' ] . '</option><option value="1">' .
             $_language->module[ 'user_comments' ] . '</option><option value="2">' .
             $_language->module[ 'visitor_comments' ] . '</option>';
-        $comments =
-            str_replace(
-                'value="' . $ds[ 'comments' ] . '"',
-                'value="' . $ds[ 'comments' ] . '" selected="selected"',
-                $comments
-            );
+        $comments = str_replace(
+            'value="' . $ds[ 'comments' ] . '"',
+            'value="' . $ds[ 'comments' ] . '" selected="selected"',
+            $comments
+        );
 
-        $bg1 = BG_1;
-        eval ("\$addbbcode = \"" . gettemplate("addbbcode") . "\";");
-        eval ("\$addflags = \"" . gettemplate("flags") . "\";");
+        $componentsCss = '';
+        foreach ($components['css'] as $component) {
+            $componentsCss .= '<link href="' . $component . '" rel="stylesheet">';
+        }
 
-        eval ("\$articles_edit = \"" . gettemplate("articles_edit") . "\";");
+        $componentsJs = '';
+        foreach ($components['js'] as $component) {
+            $componentsJs .= '<script src="' . $component . '"></script>';
+        }
+
+        $addbbcode = $GLOBALS["_template"]->replaceTemplate("addbbcode", array());
+        $addflags = $GLOBALS["_template"]->replaceTemplate("flags", array());
+
+        $data_array = array();
+        $data_array['$rewriteBase'] = $rewriteBase;
+        $data_array['$componentsCss'] = $componentsCss;
+        $data_array['$message_vars'] = $message_vars;
+        $data_array['$addbbcode'] = $addbbcode;
+        $data_array['$addflags'] = $addflags;
+        $data_array['$link1'] = $link1;
+        $data_array['$url1'] = $url1;
+        $data_array['$window1'] = $window1;
+        $data_array['$link2'] = $link2;
+        $data_array['$url2'] = $url2;
+        $data_array['$window2'] = $window2;
+        $data_array['$link3'] = $link3;
+        $data_array['$url3'] = $url3;
+        $data_array['$window3'] = $window3;
+        $data_array['$link4'] = $link4;
+        $data_array['$url4'] = $url4;
+        $data_array['$window4'] = $window4;
+        $data_array['$articlesID'] = $articlesID;
+        $data_array['$userID'] = $userID;
+        $data_array['$title'] = $title;
+        $data_array['$tags'] = $tags;
+        $data_array['$pages'] = $pages;
+        $data_array['$selects'] = $selects;
+        $data_array['$componentsJs'] = $componentsJs;
+        $articles_edit = $GLOBALS["_template"]->replaceTemplate("articles_edit", $data_array);
         echo $articles_edit;
     } else {
         redirect('index.php?site=articles', $_language->module[ 'no_access' ]);
     }
 } elseif ($action == "show") {
-
     $_language->readModule('articles');
 
     $articlesID = (int)$_GET[ 'articlesID' ];
@@ -479,12 +500,11 @@ if ($action == "new") {
     $result = safe_query("SELECT * FROM `" . PREFIX . "articles` WHERE `articlesID` = '" . (int)$articlesID . "'");
 
     if (mysqli_num_rows($result)) {
-
         $ds = mysqli_fetch_array($result);
         $date_time = getformatdatetime($ds[ 'date' ]);
         $title = clearfromtags($ds[ 'title' ]);
 
-        $content = [];
+        $content = array();
         $query = safe_query(
             "SELECT
                 *
@@ -545,7 +565,7 @@ if ($action == "new") {
 
         $comments_allowed = $ds[ 'comments' ];
 
-        $ratings = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+        $ratings = array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
         for ($i = 0; $i < $ds[ 'rating' ]; $i++) {
             $ratings[ $i ] = 1;
         }
@@ -587,29 +607,29 @@ if ($action == "new") {
                 $rateform = $_language->module[ 'already_rated' ];
             } else {
                 $rateform = '<form method="post" action="rating.php">
-				<div class="input-group">
-                <select name="rating" class="form-control">
-                  <option>0 - ' . $_language->module[ 'poor' ] . '</option>
-                  <option>1</option>
-                  <option>2</option>
-                  <option>3</option>
-                  <option>4</option>
-                  <option>5</option>
-                  <option>6</option>
-                  <option>7</option>
-                  <option>8</option>
-                  <option>9</option>
-                  <option>10 - ' . $_language->module[ 'perfect' ] . '</option>
-                </select>
+                <div class="input-group">
+                    <select name="rating" class="form-control">
+                        <option>0 - ' . $_language->module[ 'poor' ] . '</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10 - ' . $_language->module[ 'perfect' ] . '</option>
+                    </select>
 
-                <span class="input-group-btn">
-                  <input type="submit" name="Submit" value="' .
-                    $_language->module[ 'rate' ] . '" class="btn btn-primary">
-                </span>
-            </div>
-            <input type="hidden" name="userID" value="' . $userID . '">
-            <input type="hidden" name="type" value="ar">
-            <input type="hidden" name="id" value="' . $ds[ 'articlesID' ] . '"></form>';
+                    <span class="input-group-btn">
+                        <input type="submit" name="Submit" value="' .
+                        $_language->module[ 'rate' ] . '" class="btn btn-primary">
+                    </span>
+                </div>
+                <input type="hidden" name="userID" value="' . $userID . '">
+                <input type="hidden" name="type" value="ar">
+                <input type="hidden" name="id" value="' . $ds[ 'articlesID' ] . '"></form>';
             }
         } else {
             $rateform = $_language->module[ 'login_for_rate' ];
@@ -618,7 +638,17 @@ if ($action == "new") {
         $tags = \webspell\Tags::getTagsLinked('articles', $articlesID);
 
         $bg1 = BG_1;
-        eval ("\$articles = \"" . gettemplate("articles") . "\";");
+        $data_array = array();
+        $data_array['$title'] = $title;
+        $data_array['$date'] = $date_time;
+        $data_array['$content'] = $content;
+        $data_array['$adminaction'] = $adminaction;
+        $data_array['$poster'] = $poster;
+        $data_array['$related'] = $related;
+        $data_array['$ratingpic'] = $ratingpic;
+        $data_array['$rateform'] = $rateform;
+        $data_array['$tags'] = $tags;
+        $articles = $GLOBALS["_template"]->replaceTemplate("articles", $data_array);
         echo $articles;
 
         unset($related);
@@ -638,7 +668,6 @@ if ($action == "new") {
         echo $_language->module[ 'no_entries' ];
     }
 } else {
-
     $_language->readModule('articles');
 
     if (isset($_GET[ 'page' ])) {
@@ -648,8 +677,8 @@ if ($action == "new") {
     }
     $sort = "date";
     if (isset($_GET[ 'sort' ])) {
-        if (($_GET[ 'sort' ] == 'date') || ($_GET[ 'sort' ] == 'poster') || ($_GET[ 'sort' ] == 'rating') ||
-            ($_GET[ 'sort' ] == 'viewed')
+        if (($_GET[ 'sort' ] == 'date') || ($_GET[ 'sort' ] == 'poster') || ($_GET[ 'sort' ] == 'rating')
+            || ($_GET[ 'sort' ] == 'viewed')
         ) {
             $sort = $_GET[ 'sort' ];
         }
@@ -661,7 +690,7 @@ if ($action == "new") {
         }
     }
 
-    eval ("\$title_articles = \"" . gettemplate("title_articles") . "\";");
+    $title_articles = $GLOBALS["_template"]->replaceTemplate("title_articles", array());
     echo $title_articles;
 
     if (isnewsadmin($userID)) {
@@ -734,18 +763,20 @@ if ($action == "new") {
         if ($type == "ASC") {
             echo '<a href="index.php?site=articles&amp;page=' . $page . '&amp;sort=' . $sort . '&amp;type=DESC">' .
                 $_language->module[ 'sort' ] .
-                '</a> <img src="images/icons/asc.gif" width="9" height="7" alt="">&nbsp;&nbsp;&nbsp;';
+                '</a> <span class="glyphicon glyphicon-chevron-down"></span>&nbsp;&nbsp;&nbsp;';
         } else {
             echo '<a href="index.php?site=articles&amp;page=' . $page . '&amp;sort=' . $sort . '&amp;type=ASC">' .
                 $_language->module[ 'sort' ] .
-                '</a> <img src="images/icons/desc.gif" width="9" height="7" alt="">&nbsp;&nbsp;&nbsp;';
+                '</a> <span class="glyphicon glyphicon-chevron-up"></span>&nbsp;&nbsp;&nbsp;';
         }
 
         if ($pages > 1) {
             echo $page_link;
         }
 
-        eval ("\$articles_head = \"" . gettemplate("articles_head") . "\";");
+        $data_array = array();
+        $data_array['$page'] = $page;
+        $articles_head = $GLOBALS["_template"]->replaceTemplate("articles_head", $data_array);
         echo $articles_head;
 
         $n = 1;
@@ -766,7 +797,7 @@ if ($action == "new") {
                 '</b></a>';
             $viewed = $ds[ 'viewed' ];
 
-            $ratings = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+            $ratings = array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
             for ($i = 0; $i < $ds[ 'rating' ]; $i++) {
                 $ratings[ $i ] = 1;
             }
@@ -775,12 +806,18 @@ if ($action == "new") {
                 $ratingpic .= '<img src="images/icons/rating_' . $pic . '.gif" width="4" height="5" alt="">';
             }
 
-            eval ("\$articles_content = \"" . gettemplate("articles_content") . "\";");
+            $data_array = array();
+            $data_array['$date'] = $date;
+            $data_array['$title'] = $title;
+            $data_array['$poster'] = $poster;
+            $data_array['$ratingpic'] = $ratingpic;
+            $data_array['$viewed'] = $viewed;
+            $articles_content = $GLOBALS["_template"]->replaceTemplate("articles_content", $data_array);
             echo $articles_content;
             unset($ratingpic);
             $n++;
         }
-        eval ("\$articles_foot = \"" . gettemplate("articles_foot") . "\";");
+        $articles_foot = $GLOBALS["_template"]->replaceTemplate("articles_foot", array());
         echo $articles_foot;
         unset($ds);
     } else {

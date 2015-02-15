@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -37,7 +37,7 @@ $language_array = Array(
 
   'add_buddylist'=>'Lisää kaverilistalle',
   'adminoptions'=>'Ylläpitäjän asetukset:',
-  'bbcode'=>'BBCode <b><u>PÄÄLLÄ</u></b>',
+  'bbcode'=>'BBCode <b><span class="underline">PÄÄLLÄ</span></b>',
   'by'=>'by',
   'date'=>'Päivä:',
   'delete'=>'Poista',
@@ -47,7 +47,7 @@ $language_array = Array(
   'execute'=>'Suorita',
   'formation'=>'Muotoile',
   'from'=>'by:',
-  'html'=>'HTML <b><u>POIS</u></b>',
+  'html'=>'HTML <b><span class="underline">POIS</span></b>',
   'ignore'=>'Jätä huomioitta käyttäjä',
   'incoming'=>'Saapuvat',
   'mark_not_viewed'=>'Merkkaa ei katsotuksi',
@@ -74,7 +74,7 @@ $language_array = Array(
   'sendeachmember'=>'Lähetä kaikille klaanin jäsenille',
   'sendeachuser'=>'Lähetä kaikille rekisteröidyille käyttäjille',
   'show'=>'Näytä',
-  'smilies'=>'Hymiöt <b><u>PÄÄLLÄ</u></b>',
+  'smilies'=>'Hymiöt <b><span class="underline">PÄÄLLÄ</span></b>',
   'sort'=>'Järjestä',
   'title'=>'Aihe',
   'your_message'=>'Sinun viestisi:',

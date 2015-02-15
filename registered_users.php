@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -27,7 +27,7 @@
 
 $_language->readModule('registered_users');
 
-eval("\$title_registered_users = \"" . gettemplate("title_registered_users") . "\";");
+$title_registered_users = $GLOBALS["_template"]->replaceTemplate("title_registered_users", array());
 echo $title_registered_users;
 
 function clear($text)
@@ -110,17 +110,21 @@ if ($page == "1") {
 
 $anz = mysqli_num_rows($ergebnis);
 if ($anz) {
-
     if ($type == "ASC") {
         $sorter =
             '<a href="index.php?site=registered_users&amp;page=' . $page . '&amp;sort=' . $sort . '&amp;type=DESC">' .
-            $_language->module[ 'sort' ] . ' <i class="icon-sort-down"></i></a>';
+            $_language->module[ 'sort' ] . ' <span class="glyphicon glyphicon-chevron-down"></span></a>';
     } else {
         $sorter =
             '<a href="index.php?site=registered_users&amp;page=' . $page . '&amp;sort=' . $sort . '&amp;type=ASC">' .
-            $_language->module[ 'sort' ] . ' <i class="icon-sort-up"></i';
+            $_language->module[ 'sort' ] . ' <span class="glyphicon glyphicon-chevron-up"></span></a>';
     }
-    eval ("\$registered_users_head = \"" . gettemplate("registered_users_head") . "\";");
+    $data_array = array();
+    $data_array['$sorter'] = $sorter;
+    $data_array['$page_link'] = $page_link;
+    $data_array['$gesamt'] = $gesamt;
+    $data_array['$page'] = $page;
+    $registered_users_head = $GLOBALS["_template"]->replaceTemplate("registered_users_head", $data_array);
     echo $registered_users_head;
     $n = 1;
     while ($ds = mysqli_fetch_array($ergebnis)) {
@@ -138,7 +142,7 @@ if ($anz) {
             '<a href="index.php?site=profile&amp;id=' . $ds[ 'userID' ] . '"><b>' . strip_tags($ds[ 'nickname' ]) .
             '</b></a>';
         if (isclanmember($ds[ 'userID' ])) {
-            $member = ' <img src="images/icons/member.gif" width="6" height="11" alt="Clanmember">';
+            $member = ' <img src="images/icons/member.gif" width="7" height="16" alt="Clanmember">';
         } else {
             $member = '';
         }
@@ -146,7 +150,7 @@ if ($anz) {
             $email = '';
         } else {
             $email = '<a href="mailto:' . mail_protect($ds[ 'email' ]) .
-                '"><img src="images/icons/email.gif" width="15" height="11" alt="e-mail"></a>';
+                '"><span class="glyphicon glyphicon-envelope" title="email"></span></a>';
         }
 
         if (!validate_url($ds[ 'homepage' ])) {
@@ -186,11 +190,21 @@ if ($anz) {
                 $_language->module[ 'now_on' ];
         }
 
-        eval ("\$registered_users_content = \"" . gettemplate("registered_users_content") . "\";");
+        $data_array = array();
+        $data_array['$country'] = $country;
+        $data_array['$nickname'] = $nickname;
+        $data_array['$member'] = $member;
+        $data_array['$email'] = $email;
+        $data_array['$pm'] = $pm;
+        $data_array['$buddy'] = $buddy;
+        $data_array['$homepage'] = $homepage;
+        $data_array['$login'] = $login;
+        $data_array['$registereddate'] = $registereddate;
+        $registered_users_content = $GLOBALS["_template"]->replaceTemplate("registered_users_content", $data_array);
         echo $registered_users_content;
         $n++;
     }
-    eval ("\$registered_users_foot = \"" . gettemplate("registered_users_foot") . "\";");
+    $registered_users_foot = $GLOBALS["_template"]->replaceTemplate("registered_users_foot", array());
     echo $registered_users_foot;
 } else {
     echo $_language->module[ 'no_users' ];

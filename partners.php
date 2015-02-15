@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -50,7 +50,10 @@ if (mysqli_num_rows($ergebnis)) {
         } else {
             $text = $name;
         }
-        eval ("\$sc_partners = \"" . gettemplate("sc_partners") . "\";");
+        $data_array = array();
+        $data_array['$partnerID'] = $partnerID;
+        $data_array['$text'] = $text;
+        $sc_partners = $GLOBALS["_template"]->replaceTemplate("sc_partners", $data_array);
         echo $sc_partners;
     }
     echo '</ul>';

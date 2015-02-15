@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -27,31 +27,37 @@
 
 $_language->readModule('history');
 
-if(!ispageadmin($userID) OR mb_substr(basename($_SERVER['REQUEST_URI']),0,15) != "admincenter.php") die($_language->module['access_denied']);
-
-echo'<h1>&curren; '.$_language->module['history'].'</h1>';
-
-if(isset($_POST['submit'])) {
-	$history = $_POST['message'];
-	$CAPCLASS = new \webspell\Captcha;
-	if($CAPCLASS->checkCaptcha(0, $_POST['captcha_hash'])) {
-		if(mysqli_num_rows(safe_query("SELECT * FROM ".PREFIX."history")))
-			safe_query("UPDATE ".PREFIX."history SET history='".$history."'");
-		else safe_query("INSERT INTO ".PREFIX."history (history) values( '".$history."') ");
-	} else echo $_language->module['transaction_invalid'];
+if (!ispageadmin($userID) || mb_substr(basename($_SERVER[ 'REQUEST_URI' ]), 0, 15) != "admincenter.php") {
+    die($_language->module[ 'access_denied' ]);
 }
-	$ergebnis=safe_query("SELECT * FROM ".PREFIX."history");
-	$ds=mysqli_fetch_array($ergebnis);
-	$CAPCLASS = new \webspell\Captcha;
-	$CAPCLASS->createTransaction();
-	$hash = $CAPCLASS->getHash();
 
-	$_language->readModule('bbcode', true);
+echo '<h1>&curren; ' . $_language->module[ 'history' ] . '</h1>';
 
-	eval ("\$addbbcode = \"".gettemplate("addbbcode", "html", "admin")."\";");
-  eval ("\$addflags = \"".gettemplate("flags_admin", "html", "admin")."\";");
+if (isset($_POST[ 'submit' ])) {
+    $history = $_POST[ 'message' ];
+    $CAPCLASS = new \webspell\Captcha;
+    if ($CAPCLASS->checkCaptcha(0, $_POST[ 'captcha_hash' ])) {
+        if (mysqli_num_rows(safe_query("SELECT * FROM " . PREFIX . "history"))) {
+            safe_query("UPDATE " . PREFIX . "history SET history='" . $history . "'");
+        } else {
+            safe_query("INSERT INTO " . PREFIX . "history (history) values( '" . $history . "') ");
+        }
+    } else {
+        echo $_language->module[ 'transaction_invalid' ];
+    }
+}
+$ergebnis = safe_query("SELECT * FROM " . PREFIX . "history");
+$ds = mysqli_fetch_array($ergebnis);
+$CAPCLASS = new \webspell\Captcha;
+$CAPCLASS->createTransaction();
+$hash = $CAPCLASS->getHash();
 
-  echo '<script>
+$_language->readModule('bbcode', true);
+
+$addbbcode = $GLOBALS["_template"]->replaceTemplate("addbbcode", array());
+$addflags = $GLOBALS["_template"]->replaceTemplate("flags_admin", array());
+
+echo '<script>
 					<!--
 						function chkFormular() {
 							if(!validbbcode(document.getElementById(\'message\').value, \'admin\')){
@@ -61,17 +67,20 @@ if(isset($_POST['submit'])) {
 					-->
 				</script>';
 
-	echo'<form method="post" id="post" name="post" action="admincenter.php?site=history" onsubmit="return chkFormular();">
-  <b>'.$_language->module['history'].'</b><br /><small>'.$_language->module['you_can_use_html'].'</small><br /><br />';
+echo '<form method="post" id="post" name="post" action="admincenter.php?site=history" onsubmit="return chkFormular();">
+  <b>' . $_language->module[ 'history' ] . '</b><br /><small>' . $_language->module[ 'you_can_use_html' ] .
+    '</small><br /><br />';
 
-	echo '<table width="100%" border="0" cellspacing="0" cellpadding="0">
+echo '<table width="100%" border="0" cellspacing="0" cellpadding="0">
 		      <tr>
-		        <td valign="top">'.$addbbcode.'</td>
-		        <td valign="top">'.$addflags.'</td>
+		        <td valign="top">' . $addbbcode . '</td>
+		        <td valign="top">' . $addflags . '</td>
 		      </tr>
 		    </table>';
 
-	echo '<br /><textarea id="message" rows="30" cols="" name="message" style="width: 100%;">'.getinput($ds['history']).'</textarea>
-  <br /><br /><input type="hidden" name="captcha_hash" value="'.$hash.'" /><input type="submit" name="submit" value="'.$_language->module['update'].'" />
+echo
+    '<br /><textarea id="message" rows="30" cols="" name="message" style="width: 100%;">' . getinput($ds[ 'history' ]) .
+    '</textarea>
+  <br /><br /><input type="hidden" name="captcha_hash" value="' . $hash .
+    '" /><input type="submit" name="submit" value="' . $_language->module[ 'update' ] . '" />
   </form>';
-?>

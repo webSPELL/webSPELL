@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -26,8 +26,8 @@
 */
 
 $action = '';
-if (isset($_GET[ 'action' ])) {
-    $action = $_GET[ 'action' ];
+if (isset($_GET['action'])) {
+    $action = $_GET['action'];
 }
 
 /* define calendar functions */
@@ -36,23 +36,18 @@ function print_calendar($mon, $year)
 {
     global $dates, $first_day, $start_day, $_language;
 
-    $pagebg = PAGEBG;
-    $border = BORDER;
-    $bghead = BGHEAD;
-    $bgcat = BGCAT;
-
     $first_day = mktime(0, 0, 0, $mon, 1, $year);
     $start_day = date("w", $first_day);
     if ($start_day == 0) {
         $start_day = 7;
     }
     $res = getdate($first_day);
-    $month_name = $res[ "month" ];
+    $month_name = $res["month"];
     $no_days_in_month = date("t", $first_day);
 
     //If month's first day does not start with first Sunday, fill table cell with a space
     for ($i = 1; $i <= $start_day; $i++) {
-        $dates[ 1 ][ $i ] = " ";
+        $dates[1][$i] = " ";
     }
 
     $row = 1;
@@ -62,7 +57,7 @@ function print_calendar($mon, $year)
         if ($num > $no_days_in_month) {
             break;
         } else {
-            $dates[ $row ][ $col ] = $num;
+            $dates[$row][$col] = $num;
             if (($col + 1) > 7) {
                 $row++;
                 $col = 1;
@@ -99,59 +94,60 @@ function print_calendar($mon, $year)
     }
 
     echo '<table class="table">
-    <tr>
-      <td align="center"><a class="category" href="index.php?site=calendar&amp;month=01">' .
-        mb_substr($_language->module[ 'jan' ], 0, 3) . '</a></td>
-      <td align="center"><a class="category" href="index.php?site=calendar&amp;month=02">' .
-        mb_substr($_language->module[ 'feb' ], 0, 3) . '</a></td>
-      <td align="center"><a class="category" href="index.php?site=calendar&amp;month=03">' .
-        mb_substr($_language->module[ 'mar' ], 0, 3) . '</a></td>
-      <td align="center"><a class="category" href="index.php?site=calendar&amp;month=04">' .
-        mb_substr($_language->module[ 'apr' ], 0, 3) . '</a></td>
-      <td align="center"><a class="category" href="index.php?site=calendar&amp;month=05">' .
-        mb_substr($_language->module[ 'may' ], 0, 3) . '</a></td>
-      <td align="center"><a class="category" href="index.php?site=calendar&amp;month=06">' .
-        mb_substr($_language->module[ 'jun' ], 0, 3) . '</a></td>
-    </tr>
-    <tr>
-      <td align="center"><a class="category" href="index.php?site=calendar&amp;month=07">' .
-        mb_substr($_language->module[ 'jul' ], 0, 3) . '</a></td>
-      <td align="center"><a class="category" href="index.php?site=calendar&amp;month=08">' .
-        mb_substr($_language->module[ 'aug' ], 0, 3) . '</a></td>
-      <td align="center"><a class="category" href="index.php?site=calendar&amp;month=09">' .
-        mb_substr($_language->module[ 'sep' ], 0, 3) . '</a></td>
-      <td align="center"><a class="category" href="index.php?site=calendar&amp;month=10">' .
-        mb_substr($_language->module[ 'oct' ], 0, 3) . '</a></td>
-      <td align="center"><a class="category" href="index.php?site=calendar&amp;month=11">' .
-        mb_substr($_language->module[ 'nov' ], 0, 3) . '</a></td>
-      <td align="center"><a class="category" href="index.php?site=calendar&amp;month=12">' .
-        mb_substr($_language->module[ 'dec' ], 0, 3) . '</a></td>
-    </tr>
+        <tr>
+            <td align="center"><a class="category" href="index.php?site=calendar&amp;month=01">' .
+                mb_substr($_language->module['jan'], 0, 3) . '</a></td>
+            <td align="center"><a class="category" href="index.php?site=calendar&amp;month=02">' .
+                mb_substr($_language->module['feb'], 0, 3) . '</a></td>
+            <td align="center"><a class="category" href="index.php?site=calendar&amp;month=03">' .
+                mb_substr($_language->module['mar'], 0, 3) . '</a></td>
+            <td align="center"><a class="category" href="index.php?site=calendar&amp;month=04">' .
+                mb_substr($_language->module['apr'], 0, 3) . '</a></td>
+            <td align="center"><a class="category" href="index.php?site=calendar&amp;month=05">' .
+                mb_substr($_language->module['may'], 0, 3) . '</a></td>
+            <td align="center"><a class="category" href="index.php?site=calendar&amp;month=06">' .
+                mb_substr($_language->module['jun'], 0, 3) . '</a></td>
+        </tr>
+        <tr>
+            <td align="center"><a class="category" href="index.php?site=calendar&amp;month=07">' .
+                mb_substr($_language->module['jul'], 0, 3) . '</a></td>
+            <td align="center"><a class="category" href="index.php?site=calendar&amp;month=08">' .
+                mb_substr($_language->module['aug'], 0, 3) . '</a></td>
+            <td align="center"><a class="category" href="index.php?site=calendar&amp;month=09">' .
+                mb_substr($_language->module['sep'], 0, 3) . '</a></td>
+            <td align="center"><a class="category" href="index.php?site=calendar&amp;month=10">' .
+                mb_substr($_language->module['oct'], 0, 3) . '</a></td>
+            <td align="center"><a class="category" href="index.php?site=calendar&amp;month=11">' .
+                mb_substr($_language->module['nov'], 0, 3) . '</a></td>
+            <td align="center"><a class="category" href="index.php?site=calendar&amp;month=12">' .
+                mb_substr($_language->module['dec'], 0, 3) . '</a></td>
+        </tr>
     </table>';
 
     echo '<a name="event"></a><table class="table table-bordered">
     <tr>
-      <td class="title" align="center">&laquo; <a class="titlelink" href="index.php?site=calendar&amp;month=' . $prev .
-        '&amp;year=' . $prev_yr . '">' .
-        mb_substr($_language->module[ strtolower(date('M', mktime(0, 0, 0, $prev, 1, $prev_yr))) ], 0, 3) . '</a></td>
-      <td class="title" align="center" colspan="5">' . $_language->module[ strtolower(date("M", $first_day)) ] . ' ' .
-        $temp_yr . '</td>
-      <td class="title" align="center"><a class="titlelink" href="index.php?site=calendar&amp;month=' . $next .
-        '&amp;year=' . $next_yr . '">' . mb_substr(
-            $_language->module[ strtolower(date('M', mktime(0, 0, 0, $next, 1, $next_yr))) ],
-            0,
-            3
-        )
-        . '</a> &raquo;</td>
+        <th class="text-center">
+            <a class="titlelink" href="index.php?site=calendar&amp;month=' . $prev . '&amp;year=' . $prev_yr .
+            '">&laquo; ' .
+            mb_substr($_language->module[strtolower(date('M', mktime(0, 0, 0, $prev, 1, $prev_yr)))], 0, 3) . '</a>
+        </th>
+        <th class="text-center" colspan="5">' .
+            $_language->module[strtolower(date("M", $first_day))] . ' ' . $temp_yr . '
+        </th>
+        <th class="text-center">
+            <a class="titlelink" href="index.php?site=calendar&amp;month=' . $next . '&amp;year=' . $next_yr . '">' .
+            mb_substr($_language->module[strtolower(date('M', mktime(0, 0, 0, $next, 1, $next_yr)))], 0, 3) .
+            ' &raquo;</a>
+        </th>
     </tr>
     <tr>
-      <td width="14%" align="center">' . $_language->module[ 'mon' ] . '</td>
-      <td width="14%" align="center">' . $_language->module[ 'tue' ] . '</td>
-      <td width="14%" align="center">' . $_language->module[ 'wed' ] . '</td>
-      <td width="14%" align="center">' . $_language->module[ 'thu' ] . '</td>
-      <td width="14%" align="center">' . $_language->module[ 'fri' ] . '</td>
-      <td width="14%" align="center">' . $_language->module[ 'sat' ] . '</td>
-      <td width="16%" align="center">' . $_language->module[ 'sun' ] . '</td>
+        <td width="14%" align="center">' . $_language->module['mon'] . '</td>
+        <td width="14%" align="center">' . $_language->module['tue'] . '</td>
+        <td width="14%" align="center">' . $_language->module['wed'] . '</td>
+        <td width="14%" align="center">' . $_language->module['thu'] . '</td>
+        <td width="14%" align="center">' . $_language->module['fri'] . '</td>
+        <td width="14%" align="center">' . $_language->module['sat'] . '</td>
+        <td width="16%" align="center">' . $_language->module['sun'] . '</td>
     </tr>
     <tr>';
 
@@ -175,14 +171,14 @@ function print_calendar($mon, $year)
     $count = 0;
     for ($row = 1; $row <= $end; $row++) {
         for ($col = 1; $col <= 7; $col++) {
-            if (!isset($dates[ $row ][ $col ])) {
-                $dates[ $row ][ $col ] = " ";
+            if (!isset($dates[$row][$col])) {
+                $dates[$row][$col] = " ";
             }
-            if (!strcmp($dates[ $row ][ $col ], " ")) {
+            if (!strcmp($dates[$row][$col], " ")) {
                 $count++;
             }
 
-            $t = $dates[ $row ][ $col ];
+            $t = $dates[$row][$col];
             if ($t < 10) {
                 $tag = "0$t";
             } else {
@@ -200,21 +196,21 @@ function print_calendar($mon, $year)
             if ($anz) {
                 $termin = '';
                 while ($ds = mysqli_fetch_array($ergebnis)) {
-                    if ($ds[ 'type' ] == "d") {
-                        if (($start_date <= $ds[ 'date' ] && $end_date >= $ds[ 'date' ]) ||
-                            ($start_date >= $ds[ 'date' ] && $end_date <= $ds[ 'enddate' ]) ||
-                            ($start_date <= $ds[ 'enddate' ] && $end_date >= $ds[ 'enddate' ])
+                    if ($ds['type'] == "d") {
+                        if (($start_date <= $ds['date'] && $end_date >= $ds['date'])
+                            || ($start_date >= $ds['date'] && $end_date <= $ds['enddate'])
+                            || ($start_date <= $ds['enddate'] && $end_date >= $ds['enddate'])
                         ) {
                             $termin .=
                                 '<a href="index.php?site=calendar&amp;tag=' . $t . '&amp;month=' . $mon . '&amp;year=' .
-                                $year . '#event">' . clearfromtags($ds[ 'short' ]) . '</a><br>';
+                                $year . '#event">' . clearfromtags($ds['short']) . '</a><br>';
                         }
                     } else {
-                        if ($ds[ 'date' ] >= $start_date && $ds[ 'date' ] <= $end_date) {
-                            $begin = getformattime($ds[ 'date' ]);
+                        if ($ds['date'] >= $start_date && $ds['date'] <= $end_date) {
+                            $begin = getformattime($ds['date']);
                             $termin .=
                                 '<a href="index.php?site=calendar&amp;tag=' . $t . '&amp;month=' . $mon . '&amp;year=' .
-                                $year . '">' . $begin . ' ' . clearfromtags($ds[ 'opptag' ]) . '</a><br>';
+                                $year . '">' . $begin . ' ' . clearfromtags($ds['opptag']) . '</a><br>';
                         }
                     }
                 }
@@ -226,7 +222,8 @@ function print_calendar($mon, $year)
             //If date is today, highlight it
             if (($t == date("j")) && ($mon == date("n")) && ($year == date("Y"))) {
                 echo '<td height="40" valign="top" bgcolor="' . BG_4 . '"><b>' . $t . '</b><br>' . $termin . '</td>';
-            } else { //  If the date is absent ie after 31, print space
+            } else {
+                //  If the date is absent ie after 31, print space
                 if ($t === ' ') {
                     echo '<td height="40" valign="top" style="background-color:' . BG_1 . ';">&nbsp;</td>';
                 } else {
@@ -243,11 +240,13 @@ function print_calendar($mon, $year)
         }
     }
     echo '<tr>
-      <td colspan="7" align="center"><a class="category" href="index.php?site=calendar#event"><b>' .
-        $_language->module[ 'today_events' ] . '</b></a></td>
-    </tr>
-  </table>
-  <br><br>';
+            <td colspan="7" align="center">
+                <a class="category" href="index.php?site=calendar#event">
+                    <strong>' . $_language->module['today_events'] . '</strong>
+                </a>
+            </td>
+        </tr>
+    </table><br><br>';
 }
 
 function print_termine($tag, $month, $year)
@@ -273,63 +272,63 @@ function print_termine($tag, $month, $year)
     $anz = mysqli_num_rows($ergebnis);
     if ($anz) {
         while ($ds = mysqli_fetch_array($ergebnis)) {
-            if ($ds[ 'type' ] == "c") {
-                if ($ds[ 'date' ] >= $start_date && $ds[ 'date' ] <= $end_date) {
-                    $date = getformatdate($ds[ 'date' ]);
-                    $time = getformattime($ds[ 'date' ]);
-                    $squad = getsquadname($ds[ 'squad' ]);
-                    $oppcountry = "[flag]" . $ds[ 'oppcountry' ] . "[/flag]";
+            if ($ds['type'] == "c") {
+                if ($ds['date'] >= $start_date && $ds['date'] <= $end_date) {
+                    $date = getformatdate($ds['date']);
+                    $time = getformattime($ds['date']);
+                    $squad = getsquadname($ds['squad']);
+                    $oppcountry = "[flag]" . $ds['oppcountry'] . "[/flag]";
                     $oppcountry = flags($oppcountry);
-                    $opponent = $oppcountry . ' <a href="' . $ds[ 'opphp' ] . '" target="_blank">' .
-                        clearfromtags($ds[ 'opptag' ]) . ' / ' . clearfromtags($ds[ 'opponent' ]) . '</a>';
-                    $maps = clearfromtags($ds[ 'maps' ]);
-                    $server = clearfromtags($ds[ 'server' ]);
-                    $league = '<a href="' . $ds[ 'leaguehp' ] . '" target="_blank">' . clearfromtags($ds[ 'league' ]) .
+                    $opponent = $oppcountry . ' <a href="' . $ds['opphp'] . '" target="_blank">' .
+                        clearfromtags($ds['opptag']) . ' / ' . clearfromtags($ds['opponent']) . '</a>';
+                    $maps = clearfromtags($ds['maps']);
+                    $server = clearfromtags($ds['server']);
+                    $league = '<a href="' . $ds['leaguehp'] . '" target="_blank">' . clearfromtags($ds['league']) .
                         '</a>';
                     if (isclanmember($userID)) {
-                        $warinfo = cleartext($ds[ 'warinfo' ]);
+                        $warinfo = cleartext($ds['warinfo']);
                     } else {
-                        $warinfo = $_language->module[ 'you_have_to_be_clanmember' ];
+                        $warinfo = $_language->module['you_have_to_be_clanmember'];
                     }
                     $players = "";
                     $announce = "";
                     $adminaction = '';
-                    if (isclanmember($userID) or isanyadmin($userID)) {
+                    if (isclanmember($userID) || isanyadmin($userID)) {
                         $anmeldung =
                             safe_query(
-                                "SELECT * FROM " . PREFIX . "upcoming_announce WHERE upID='" . $ds[ 'upID' ] . "'"
+                                "SELECT * FROM " . PREFIX . "upcoming_announce WHERE upID='" . $ds['upID'] . "'"
                             );
                         if (mysqli_num_rows($anmeldung)) {
                             $i = 1;
                             while ($da = mysqli_fetch_array($anmeldung)) {
-                                if ($da[ 'status' ] == "y") {
+                                if ($da['status'] == "y") {
                                     $fontcolor = $wincolor;
-                                } elseif ($da[ 'status' ] == "n") {
+                                } elseif ($da['status'] == "n") {
                                     $fontcolor = $loosecolor;
                                 } else {
                                     $fontcolor = $drawcolor;
                                 }
 
                                 if ($i > 1) {
-                                    $players .= ', <a href="index.php?site=profile&amp;id=' . $da[ 'userID' ] .
-                                        '"><font color="' . $fontcolor . '">' . getnickname($da[ 'userID' ]) .
+                                    $players .= ', <a href="index.php?site=profile&amp;id=' . $da['userID'] .
+                                        '"><font color="' . $fontcolor . '">' . getnickname($da['userID']) .
                                         '</font></a>';
                                 } else {
-                                    $players .= '<a href="index.php?site=profile&amp;id=' . $da[ 'userID' ] .
-                                        '"><font color="' . $fontcolor . '">' . getnickname($da[ 'userID' ]) .
+                                    $players .= '<a href="index.php?site=profile&amp;id=' . $da['userID'] .
+                                        '"><font color="' . $fontcolor . '">' . getnickname($da['userID']) .
                                         '</font></a>';
                                 }
                                 $i++;
                             }
                         } else {
-                            $players = $_language->module[ 'no_announced' ];
+                            $players = $_language->module['no_announced'];
                         }
 
-                        if (issquadmember($userID, $ds[ 'squad' ]) && $ds[ 'date' ] > time()) {
+                        if (issquadmember($userID, $ds['squad']) && $ds['date'] > time()) {
                             $announce
                                 = '&#8226; <a href="index.php?site=calendar&amp;action=announce&amp;upID=' .
-                                $ds[ 'upID' ] . '">' .
-                                $_language->module[ 'announce_here' ] . '
+                                $ds['upID'] . '">' .
+                                $_language->module['announce_here'] . '
                                 </a>';
                         } else {
                             $announce = "";
@@ -340,97 +339,104 @@ function print_termine($tag, $month, $year)
                                 <input
                                     type="button"
                                     onclick="window.open(
-                                        \'clanwars.php?action=new&amp;upID=' . $ds[ 'upID' ] . '\',
+                                        \'clanwars.php?action=new&amp;upID=' . $ds['upID'] . '\',
                                         \'Clanwars\',
                                         \'toolbar=no,status=no,scrollbars=yes,width=800,height=490\'
                                     )"
-                                    value="' . $_language->module[ 'add_clanwars' ] . '"
+                                    value="' . $_language->module['add_clanwars'] . '"
                                     class="btn btn-danger">
 
-                                <a href="index.php?site=calendar&amp;action=editwar&amp;upID=' . $ds[ 'upID' ] . '"
+                                <a href="index.php?site=calendar&amp;action=editwar&amp;upID=' . $ds['upID'] . '"
                                     class="btn btn-danger">
-                                    ' . $_language->module[ 'edit' ] . '
+                                    ' . $_language->module['edit'] . '
                                 </a>
 
                                 <input type="button" onclick="MM_confirm(
-                                        \'' . $_language->module[ 'really_delete' ] .
+                                        \'' . $_language->module['really_delete'] .
                                 '\',
-                                        \'calendar.php?action=delete&amp;upID=' . $ds[ 'upID' ] . '\'
+                                        \'calendar.php?action=delete&amp;upID=' . $ds['upID'] . '\'
                                     )"
-                                    value="' . $_language->module[ 'delete' ] . '" class="btn btn-danger">
+                                    value="' . $_language->module['delete'] . '" class="btn btn-danger">
                             </div>';
                         } else {
                             $adminaction = '';
                         }
                     } else {
-                        $players = $_language->module[ 'access_member' ];
+                        $players = $_language->module['access_member'];
                     }
 
-                    $bg1 = BG_1;
-                    $bg2 = BG_2;
-                    $bg3 = BG_3;
-                    $bg4 = BG_4;
-
-                    eval ("\$upcoming_war_details = \"" . gettemplate("upcoming_war_details") . "\";");
+                    $data_array = array();
+                    $data_array['$date'] = $date;
+                    $data_array['$time'] = $time;
+                    $data_array['$squad'] = $squad;
+                    $data_array['$opponent'] = $opponent;
+                    $data_array['$league'] = $league;
+                    $data_array['$maps'] = $maps;
+                    $data_array['$server'] = $server;
+                    $data_array['$warinfo'] = $warinfo;
+                    $data_array['$announce'] = $announce;
+                    $data_array['$players'] = $players;
+                    $data_array['$adminaction'] = $adminaction;
+                    $upcoming_war_details = $GLOBALS["_template"]->replaceTemplate("upcoming_war_details", $data_array);
                     echo $upcoming_war_details;
                 }
             } else {
-                if (($start_date <= $ds[ 'date' ] && $end_date >= $ds[ 'date' ]) ||
-                    ($start_date >= $ds[ 'date' ] && $end_date <= $ds[ 'enddate' ]) ||
-                    ($start_date <= $ds[ 'enddate' ] && $end_date >= $ds[ 'enddate' ])
+                if (($start_date <= $ds['date'] && $end_date >= $ds['date'])
+                    || ($start_date >= $ds['date'] && $end_date <= $ds['enddate'])
+                    || ($start_date <= $ds['enddate'] && $end_date >= $ds['enddate'])
                 ) {
-                    $date = getformatdate($ds[ 'date' ]);
-                    $time = getformattime($ds[ 'date' ]);
-                    $enddate = getformatdate($ds[ 'enddate' ]);
-                    $endtime = getformattime($ds[ 'enddate' ]);
-                    $title = clearfromtags($ds[ 'title' ]);
+                    $date = getformatdate($ds['date']);
+                    $time = getformattime($ds['date']);
+                    $enddate = getformatdate($ds['enddate']);
+                    $endtime = getformattime($ds['enddate']);
+                    $title = clearfromtags($ds['title']);
                     $location =
-                        '<a href="' . $ds[ 'locationhp' ] . '" target="_blank">' . clearfromtags($ds[ 'location' ]) .
+                        '<a href="' . $ds['locationhp'] . '" target="_blank">' . clearfromtags($ds['location']) .
                         '</a>';
-                    $dateinfo = cleartext($ds[ 'dateinfo' ]);
-                    $dateinfo = toggle($dateinfo, $ds[ 'upID' ]);
-                    $country = "[flag]" . $ds[ 'country' ] . "[/flag]";
+                    $dateinfo = cleartext($ds['dateinfo']);
+                    $dateinfo = toggle($dateinfo, $ds['upID']);
+                    $country = "[flag]" . $ds['country'] . "[/flag]";
                     $country = flags($country);
                     $players = "";
 
                     if (isclanmember($userID)) {
                         $anmeldung =
                             safe_query(
-                                "SELECT * FROM " . PREFIX . "upcoming_announce WHERE upID='" . (int)$ds[ 'upID' ]
+                                "SELECT * FROM " . PREFIX . "upcoming_announce WHERE upID='" . (int)$ds['upID'] . "'"
                             );
                         if (mysqli_num_rows($anmeldung)) {
                             $i = 1;
                             while ($da = mysqli_fetch_array($anmeldung)) {
-                                if ($da[ 'status' ] == "y") {
+                                if ($da['status'] == "y") {
                                     $fontcolor = $wincolor;
-                                } elseif ($da[ 'status' ] == "n") {
+                                } elseif ($da['status'] == "n") {
                                     $fontcolor = $loosecolor;
                                 } else {
                                     $fontcolor = $drawcolor;
                                 }
 
                                 if ($i > 1) {
-                                    $players .= ', <a href="index.php?site=profile&amp;id=' . $da[ 'userID' ] . '">
+                                    $players .= ', <a href="index.php?site=profile&amp;id=' . $da['userID'] . '">
                                         <span style="color:' . $fontcolor . '">
-                                            ' . getnickname($da[ 'userID' ]) . '
+                                            ' . getnickname($da['userID']) . '
                                         </span>
                                     </a>';
                                 } else {
-                                    $players .= '<a href="index.php?site=profile&amp;id=' . $da[ 'userID' ] . '">
+                                    $players .= '<a href="index.php?site=profile&amp;id=' . $da['userID'] . '">
                                         <span style="color:' . $fontcolor . '">
-                                            ' . getnickname($da[ 'userID' ]) .
+                                            ' . getnickname($da['userID']) .
                                         '</span>
                                     </a>';
                                 }
                                 $i++;
                             }
                         } else {
-                            $players = $_language->module[ 'no_announced' ];
+                            $players = $_language->module['no_announced'];
                         }
 
-                        if (isclanmember($userID) && $ds[ 'date' ] > time()) {
+                        if (isclanmember($userID) && $ds['date'] > time()) {
                             $announce = '&#8226; <a href="index.php?site=calendar&amp;action=announce&amp;upID=' .
-                                $ds[ 'upID' ] . '">' . $_language->module[ 'announce_here' ] . '</a>';
+                                $ds['upID'] . '">' . $_language->module['announce_here'] . '</a>';
                         } else {
                             $announce = '';
                         }
@@ -438,31 +444,46 @@ function print_termine($tag, $month, $year)
                         if (isclanwaradmin($userID)) {
                             $adminaction = '<div align="right">
                                 <a class="btn btn-danger" href="index.php?site=calendar&amp;action=editdate&amp;upID=' .
-                                $ds[ 'upID' ] . '">' .
-                                $_language->module[ 'edit' ] . '
+                                $ds['upID'] . '">' .
+                                $_language->module['edit'] . '
                                 </a>
                                 <input type="button" class="btn btn-danger" onclick="MM_confirm(
-                                        \'' . $_language->module[ 'really_delete' ] . '\',
-                                        \'calendar.php?action=delete&amp;upID=' . $ds[ 'upID' ] . '\'
-                                    )" value="' . $_language->module[ 'delete' ] . '
+                                        \'' . $_language->module['really_delete'] . '\',
+                                        \'calendar.php?action=delete&amp;upID=' . $ds['upID'] . '\'
+                                    )" value="' . $_language->module['delete'] . '
                                 ">
                             </div>';
                         } else {
                             $adminaction = '';
                         }
                     } else {
-                        $players = $_language->module[ 'access_member' ];
+                        $players = $_language->module['access_member'];
                         $announce = '';
                         $adminaction = '';
                     }
 
-                    eval ("\$upcoming_date_details = \"" . gettemplate("upcoming_date_details") . "\";");
+                    $data_array = array();
+                    $data_array['$title'] = $title;
+                    $data_array['$date'] = $date;
+                    $data_array['$time'] = $time;
+                    $data_array['$enddate'] = $enddate;
+                    $data_array['$endtime'] = $endtime;
+                    $data_array['$country'] = $country;
+                    $data_array['$location'] = $location;
+                    $data_array['$dateinfo'] = $dateinfo;
+                    $data_array['$announce'] = $announce;
+                    $data_array['$players'] = $players;
+                    $data_array['$adminaction'] = $adminaction;
+                    $upcoming_date_details = $GLOBALS["_template"]->replaceTemplate(
+                        "upcoming_date_details",
+                        $data_array
+                    );
                     echo $upcoming_date_details;
                 }
             }
         }
     } else {
-        echo $_language->module[ 'no_entries' ];
+        echo $_language->module['no_entries'];
     }
 }
 
@@ -474,32 +495,28 @@ if ($action === "savewar") {
     include("_functions.php");
     $_language->readModule('calendar');
     if (!isclanwaradmin($userID)) {
-        die($_language->module[ 'no_access' ]);
+        die($_language->module['no_access']);
     }
 
-    $hour = (int)$_POST[ 'hour' ];
-    $minute = (int)$_POST[ 'minute' ];
-    $day = (int)$_POST[ 'day' ];
-    $month = (int)$_POST[ 'month' ];
-    $year = (int)$_POST[ 'year' ];
-    $squad = $_POST[ 'squad' ];
-    $opponent = $_POST[ 'opponent' ];
-    $opptag = $_POST[ 'opptag' ];
-    $opphp = $_POST[ 'opphp' ];
-    $oppcountry = $_POST[ 'oppcountry' ];
-    $maps = $_POST[ 'maps' ];
-    $server = $_POST[ 'server' ];
-    $league = $_POST[ 'league' ];
-    $leaguehp = $_POST[ 'leaguehp' ];
-    $warinfo = $_POST[ 'message' ];
-    $chID = $_POST[ 'chID' ];
-    if (isset($_POST[ 'messages' ])) {
+    $date = strtotime($_POST['date']);
+
+    $squad = $_POST['squad'];
+    $opponent = $_POST['opponent'];
+    $opptag = $_POST['opptag'];
+    $opphp = $_POST['opphp'];
+    $oppcountry = $_POST['oppcountry'];
+    $maps = $_POST['maps'];
+    $server = $_POST['server'];
+    $league = $_POST['league'];
+    $leaguehp = $_POST['leaguehp'];
+    $warinfo = $_POST['message'];
+    $chID = $_POST['chID'];
+    if (isset($_POST['messages'])) {
         $messages = true;
     } else {
         $messages = false;
     }
 
-    $date = mktime($hour, $minute, 0, $month, $day, $year);
     safe_query(
         "INSERT INTO
             " . PREFIX . "upcoming (
@@ -532,12 +549,12 @@ if ($action === "savewar") {
             )"
     );
 
-    if (isset($chID) and $chID > 0) {
+    if (isset($chID) && $chID > 0) {
         safe_query("DELETE FROM " . PREFIX . "challenge WHERE chID='" . $chID . "'");
     }
 
     if ($messages) {
-        $replace = [
+        $replace = array(
             '%date%' => getformatdate($date),
             '%opponent_flag%' => $oppcountry,
             '%opp_hp%' => $opphp,
@@ -545,29 +562,34 @@ if ($action === "savewar") {
             '%league_hp%' => $leaguehp,
             '%league%' => $league,
             '%warinfo%' => $warinfo
-        ];
+        );
         $ergebnis = safe_query("SELECT userID FROM " . PREFIX . "squads_members WHERE squadID='$squad'");
         $tmp_lang = new \webspell\Language();
         while ($ds = mysqli_fetch_array($ergebnis)) {
-            $id = $ds[ 'userID' ];
+            $id = $ds['userID'];
             $tmp_lang->setLanguage(getuserlanguage($id));
             $tmp_lang->readModule('calendar');
-            $title = $tmp_lang->module[ 'clanwar_message_title' ];
-            $message = $tmp_lang->module[ 'clanwar_message' ];
+            $title = $tmp_lang->module['clanwar_message_title'];
+            $message = $tmp_lang->module['clanwar_message'];
             $message = str_replace(array_keys($replace), array_values($replace), $message);
             sendmessage($id, $title, $message);
         }
     }
-    header("Location: index.php?site=calendar&tag=$day&month=$month&year=$year");
+    header(
+        "Location: index.php?site=calendar&tag=" .
+        date("j", $date) . "&month=" .
+        date("n", $date) . "&year=" .
+        date("Y", $date)
+    );
 } elseif ($action === "delete") {
     include("_mysql.php");
     include("_settings.php");
     include("_functions.php");
     $_language->readModule('calendar');
     if (!isclanwaradmin($userID)) {
-        die($_language->module[ 'no_access' ]);
+        die($_language->module['no_access']);
     }
-    $upID = $_GET[ 'upID' ];
+    $upID = $_GET['upID'];
 
     safe_query("DELETE FROM " . PREFIX . "upcoming WHERE upID='$upID'");
     safe_query("DELETE FROM " . PREFIX . "upcoming_announce WHERE upID='$upID'");
@@ -578,18 +600,18 @@ if ($action === "savewar") {
     include("_functions.php");
     $_language->readModule('calendar');
     if (!isclanmember($userID)) {
-        die($_language->module[ 'no_access' ]);
+        die($_language->module['no_access']);
     }
 
     $ds = mysqli_fetch_assoc(
         safe_query(
-            "SELECT date FROM " . PREFIX . "upcoming WHERE upID=" . (int)$_POST[ 'upID' ] . " AND date>" . time()
+            "SELECT date FROM " . PREFIX . "upcoming WHERE upID=" . (int)$_POST['upID'] . " AND date>" . time()
         )
     );
-    if (isset($ds[ 'date' ])) {
-        $tag = date('d', $ds[ 'date' ]);
-        $month = date('m', $ds[ 'date' ]);
-        $year = date('y', $ds[ 'date' ]);
+    if (isset($ds['date'])) {
+        $tag = date('d', $ds['date']);
+        $month = date('m', $ds['date']);
+        $year = date('y', $ds['date']);
 
         $ergebnis = safe_query(
             "SELECT
@@ -597,9 +619,9 @@ if ($action === "savewar") {
             FROM
                 " . PREFIX . "upcoming_announce
             WHERE
-                upID='" . (int)$_POST[ 'upID' ] . "'
+                upID='" . (int)$_POST['upID'] . "'
             AND
-                userID='" . (int)$userID
+                userID='" . (int)$userID."'"
         );
 
         if (mysqli_num_rows($ergebnis)) {
@@ -608,9 +630,9 @@ if ($action === "savewar") {
                 "UPDATE
                     " . PREFIX . "upcoming_announce
                 SET
-                    status='" . $_POST[ 'status' ]{0} . "'
+                    status='" . $_POST['status']{0} . "'
                 WHERE
-                    annID='" . $ds[ 'annID' ] . "'"
+                    annID='" . $ds['annID'] . "'"
             );
         } else {
             safe_query(
@@ -621,9 +643,9 @@ if ($action === "savewar") {
                         `status`
                     )
                 values (
-                    '" . (int)$_POST[ 'upID' ] . "',
+                    '" . (int)$_POST['upID'] . "',
                     '$userID',
-                    '" . $_POST[ 'status' ]{0} . "'
+                    '" . $_POST['status']{0} . "'
                 ) "
             );
         }
@@ -637,74 +659,45 @@ if ($action === "savewar") {
     include("_functions.php");
     $_language->readModule('calendar');
     if (!isclanwaradmin($userID)) {
-        die($_language->module[ 'no_access' ]);
+        die($_language->module['no_access']);
     }
 
-    $starttime_date = $_POST[ 'starttime_date' ];
-    $starttime_time = $_POST[ 'starttime_time' ];
+    $date_start = strtotime($_POST['date_start']);
+    $date_end = strtotime($_POST['date_end']);
 
-    $endtime_date = $_POST[ 'endtime_date' ];
-    $endtime_time = $_POST[ 'endtime_time' ];
-
-    $date = mktime($hour, $minute, 0, $month, $day, $year);
-    $enddate = mktime(
-        $_POST[ 'endhour' ],
-        $_POST[ 'endminute' ],
-        0,
-        $_POST[ 'endmonth' ],
-        $_POST[ 'endday' ],
-        $_POST[ 'endyear' ]
-    );
     safe_query(
         "UPDATE
             " . PREFIX . "upcoming
         SET
-            date='$date',
-            enddate='$enddate',
-            short='" . $_POST[ 'short' ] . "',
-            title='" . $_POST[ 'title' ] . "',
-            country='" . $_POST[ 'country' ] . "',
-            location='" . $_POST[ 'location' ] . "',
-            locationhp='" . $_POST[ 'locationhp' ] . "',
-            dateinfo='" . $_POST[ 'message' ] . "'
+            date='$date_start',
+            enddate='$date_end',
+            short='" . $_POST['short'] . "',
+            title='" . $_POST['title'] . "',
+            country='" . $_POST['country'] . "',
+            location='" . $_POST['location'] . "',
+            locationhp='" . $_POST['locationhp'] . "',
+            dateinfo='" . $_POST['message'] . "'
         WHERE
-            upID='" . (int)$_POST[ 'upID' ]
+            upID='" . (int)$_POST['upID']."'"
     );
 
-    header("Location: index.php?site=calendar&tag=$day&month=$month&year=$year");
+    header(
+        "Location: index.php?site=calendar&tag=" .
+        date("j", $date_start) . "&month=" .
+        date("n", $date_start) . "&year=" .
+        date("Y", $date_start)
+    );
 } elseif ($action === "savedate") {
     include("_mysql.php");
     include("_settings.php");
     include("_functions.php");
     $_language->readModule('calendar');
     if (!isclanwaradmin($userID)) {
-        die($_language->module[ 'no_access' ]);
+        die($_language->module['no_access']);
     }
 
-    $date = mktime(
-        (int)$_POST[ 'hour' ],
-        (int)$_POST[ 'minute' ],
-        0,
-        $_POST[ 'month' ],
-        $_POST[ 'day' ],
-        $_POST[ 'year' ]
-    );
-
-    $enddate = mktime(
-        $_POST[ 'endhour' ],
-        $_POST[ 'endminute' ],
-        0,
-        $_POST[ 'endmonth' ],
-        $_POST[ 'endday' ],
-        $_POST[ 'endyear' ]
-    );
-
-    if ($date > $enddate) {
-        $temp = $date;
-        $date = $enddate;
-        $enddate = $temp;
-        unset($temp);
-    }
+    $date_start = strtotime($_POST['date_start']);
+    $date_end = strtotime($_POST['date_end']);
 
     safe_query(
         "INSERT INTO
@@ -720,22 +713,22 @@ if ($action === "savewar") {
                 `dateinfo`
             )
             values (
-                '$date',
+                '$date_start',
                 'd',
-                '" . $enddate . "',
-                '" . $_POST[ 'short' ] . "',
-                '" . $_POST[ 'title' ] . "',
-                '" . $_POST[ 'country' ] . "',
-                '" . $_POST[ 'location' ] . "',
-                '" . $_POST[ 'locationhp' ] . "',
-                '" . $_POST[ 'message' ] . "'
+                '" . $date_end . "',
+                '" . $_POST['short'] . "',
+                '" . $_POST['title'] . "',
+                '" . $_POST['country'] . "',
+                '" . $_POST['location'] . "',
+                '" . $_POST['locationhp'] . "',
+                '" . $_POST['message'] . "'
             )"
     );
     redirect(
-        "index.php?site=calendar
-            &amp;tag=" . $_POST[ 'day' ] . "
-            &amp;month=" . $_POST[ 'month' ] . "
-            &amp;year=" . $_POST[ 'year' ],
+        "index.php?site=calendar&amp;tag=" .
+        date("j", $date_start) . "&amp;month=" .
+        date("n", $date_start) . "&amp;year=" .
+        date("Y", $date_start),
         "",
         0
     );
@@ -745,27 +738,23 @@ if ($action === "savewar") {
     include("_functions.php");
     $_language->readModule('calendar');
     if (!isclanwaradmin($userID)) {
-        die($_language->module[ 'no_access' ]);
+        die($_language->module['no_access']);
     }
 
-    $upID = $_POST[ 'upID' ];
-    $hour = $_POST[ 'hour' ];
-    $minute = $_POST[ 'minute' ];
-    $day = $_POST[ 'day' ];
-    $month = $_POST[ 'month' ];
-    $year = $_POST[ 'year' ];
-    $squad = $_POST[ 'squad' ];
-    $opponent = $_POST[ 'opponent' ];
-    $opptag = $_POST[ 'opptag' ];
-    $opphp = $_POST[ 'opphp' ];
-    $oppcountry = $_POST[ 'oppcountry' ];
-    $maps = $_POST[ 'maps' ];
-    $server = $_POST[ 'server' ];
-    $league = $_POST[ 'league' ];
-    $leaguehp = $_POST[ 'leaguehp' ];
-    $warinfo = $_POST[ 'message' ];
+    $upID = $_POST['upID'];
 
-    $date = mktime($hour, $minute, 0, $month, $day, $year);
+    $date = strtotime($_POST['date']);
+    $squad = $_POST['squad'];
+    $opponent = $_POST['opponent'];
+    $opptag = $_POST['opptag'];
+    $opphp = $_POST['opphp'];
+    $oppcountry = $_POST['oppcountry'];
+    $maps = $_POST['maps'];
+    $server = $_POST['server'];
+    $league = $_POST['league'];
+    $leaguehp = $_POST['leaguehp'];
+    $warinfo = $_POST['message'];
+
     safe_query(
         "UPDATE
             " . PREFIX . "upcoming
@@ -786,106 +775,62 @@ if ($action === "savewar") {
             `upID` = '$upID' "
     );
 
-    header("Location: index.php?site=calendar&tag=$day&month=$month&year=$year");
+    header(
+        "Location: index.php?site=calendar&tag=" .
+        date("j", $date) . "&month=" .
+        date("n", $date) . "&year=" .
+        date("Y", $date)
+    );
 } elseif ($action === "addwar") {
     $_language->readModule('calendar');
     if (isclanwaradmin($userID)) {
-
-        eval ("\$title_calendar = \"" . gettemplate("title_calendar") . "\";");
+        $title_calendar = $GLOBALS["_template"]->replaceTemplate("title_calendar", array());
         echo $title_calendar;
 
         echo '<a href="index.php?site=calendar&amp;action=addwar" class="btn btn-danger">' .
-            $_language->module[ 'add_clanwar' ] . '
+            $_language->module['add_clanwar'] . '
             </a>
             <a href="index.php?site=calendar&amp;action=adddate" class="btn btn-danger">' .
-            $_language->module[ 'add_event' ] . '
+            $_language->module['add_event'] . '
             </a><br><br>';
 
-        $day = '';
-        $month = '';
-        $year = '';
-
-        for ($i = 1; $i < 32; $i++) {
-            if ($i == date("d", time())) {
-                $day .= '<option selected="selected">' . $i . '</option>';
-            } else {
-                $day .= '<option>' . $i . '</option>';
-            }
-        }
-        for ($i = 1; $i < 13; $i++) {
-            if ($i == date("n", time())) {
-                $month .= '<option value="' . $i . '" selected="selected">' . date("M", time()) . '</option>';
-            } else {
-                $month .= '<option value="' . $i . '">' . date("M", mktime(0, 0, 0, $i, 1, 2000)) . '</option>';
-            }
-        }
-        for ($i = 2000; $i < 2016; $i++) {
-            if ($i == date("Y", time())) {
-                $year .= '<option value="' . $i . '" selected="selected">' . date("Y", time()) . '</option>';
-            } else {
-                $year .= '<option value="' . $i . '">' . $i . '</option>';
-            }
-        }
         $squads = getgamesquads();
-        $hours = "20";
-        $minutes = "00";
 
         $opphp = "http://";
 
         $chID = 0;
 
+        $date = date("d.m.Y H:i");
+
         $countries = getcountries();
 
-        if (isset($_GET[ 'chID' ])) {
-
-            $chID = (int)$_GET[ 'chID' ];
+        if (isset($_GET['chID'])) {
+            $chID = (int)$_GET['chID'];
             $ergebnis = safe_query("SELECT * FROM " . PREFIX . "challenge WHERE chID='" . $chID . "'");
             $ds = mysqli_fetch_array($ergebnis);
-            $day = str_replace("<option selected=\"selected\">", "<option>", $day);
-            $day = str_replace(
-                "<option>" . date("d", $ds[ 'cwdate' ]) . "</option>",
-                "<option selected=\"selected\">" . date("d", $ds[ 'cwdate' ]) . "</option>",
-                $day
-            );
-
-            $month = str_replace(" selected=\"selected\"", "", $month);
-            $month = str_replace(
-                ' value="' . date("n", $ds[ 'cwdate' ]) . '"',
-                ' value="' . date("n", $ds[ 'cwdate' ]) . '" selected="selected"',
-                $month
-            );
-
-            $year = str_replace(" selected=\"selected\"", "", $year);
-            $year = str_replace(
-                ' value="' . date("Y", $ds[ 'cwdate' ]) . '"',
-                ' value="' . date("Y", $ds[ 'cwdate' ]) . '" selected="selected"',
-                $year
-            );
-
-            $hours = date("H", $ds[ 'cwdate' ]);
-            $minutes = date("i", $ds[ 'cwdate' ]);
+            $date = date("d.m.Y H:i", $ds['cwdate']);
 
             $squads = str_replace(" selected=\"selected\"", "", $squads);
             $squads = str_replace(
-                '<option value="' . $ds[ 'squadID' ] . '">',
-                '<option value="' . $ds[ 'squadID' ] . '" selected="selected">',
+                '<option value="' . $ds['squadID'] . '">',
+                '<option value="' . $ds['squadID'] . '" selected="selected">',
                 $squads
             );
 
-            $map = $ds[ 'map' ];
-            $server = $ds[ 'server' ];
-            $opponent = $ds[ 'opponent' ];
-            $league = $ds[ 'league' ];
-            $info = $ds[ 'info' ];
+            $map = $ds['map'];
+            $server = $ds['server'];
+            $opponent = $ds['opponent'];
+            $league = $ds['league'];
+            $info = $ds['info'];
 
             $countries = str_replace(" selected=\"selected\"", "", $countries);
             $countries = str_replace(
-                '<option value="' . $ds[ 'oppcountry' ] . '">',
-                '<option value="' . $ds[ 'oppcountry' ] . '" selected="selected">',
+                '<option value="' . $ds['oppcountry'] . '">',
+                '<option value="' . $ds['oppcountry'] . '" selected="selected">',
                 $countries
             );
 
-            $opphp = $ds[ 'opphp' ];
+            $opphp = $ds['opphp'];
         } else {
             $map = '';
             $server = '';
@@ -895,221 +840,203 @@ if ($action === "savewar") {
         }
 
         $bg1 = BG_1;
-        eval ("\$upcoming_war_new = \"" . gettemplate("upcoming_war_new") . "\";");
+        $data_array = array();
+        $data_array['$date'] = $date;
+        $data_array['$squads'] = $squads;
+        $data_array['$opponent'] = $opponent;
+        $data_array['$countries'] = $countries;
+        $data_array['$opphp'] = $opphp;
+        $data_array['$map'] = $map;
+        $data_array['$server'] = $server;
+        $data_array['$info'] = $info;
+        $data_array['$chID'] = $chID;
+        $data_array['$userID'] = $userID;
+        $upcoming_war_new = $GLOBALS["_template"]->replaceTemplate("upcoming_war_new", $data_array);
         echo $upcoming_war_new;
     } else {
-        redirect('index.php?site=calendar', $_language->module[ 'no_access' ]);
+        redirect('index.php?site=calendar', $_language->module['no_access']);
     }
 } elseif ($action === "editwar") {
     $_language->readModule('calendar');
     if (isclanwaradmin($userID)) {
-
-        eval ("\$title_calendar = \"" . gettemplate("title_calendar") . "\";");
+        $title_calendar = $GLOBALS["_template"]->replaceTemplate("title_calendar", array());
         echo $title_calendar;
 
         echo '<a href="index.php?site=calendar&amp;action=addwar" class="btn btn-danger">' .
-            $_language->module[ 'add_clanwar' ] . '
+            $_language->module['add_clanwar'] . '
             </a>
             <a href="index.php?site=calendar&amp;action=adddate" class="btn btn-danger">' .
-            $_language->module[ 'add_event' ] . '
+            $_language->module['add_event'] . '
             </a><br><br>';
 
-        $day = '';
-        $month = '';
-        $year = '';
 
-        $upID = $_GET[ 'upID' ];
+        $upID = $_GET['upID'];
         $ds = mysqli_fetch_array(safe_query("SELECT * FROM " . PREFIX . "upcoming WHERE upID='$upID'"));
-        for ($i = 1; $i < 32; $i++) {
-            if ($i == date("d", $ds[ 'date' ])) {
-                $day .= '<option selected="selected">' . $i . '</option>';
-            } else {
-                $day .= '<option>' . $i . '</option>';
-            }
-        }
-        for ($i = 1; $i < 13; $i++) {
-            if ($i == date("n", $ds[ 'date' ])) {
-                $month .= '<option value="' . $i . '" selected="selected">' . date("M", $ds[ 'date' ]) . '</option>';
-            } else {
-                $month .= '<option value="' . $i . '">' . date("M", mktime(0, 0, 0, $i, 1, 2000)) . '</option>';
-            }
-        }
-        for ($i = 2000; $i < 2016; $i++) {
-            if ($i == date("Y", $ds[ 'date' ])) {
-                $year .= '<option selected="selected">' . $i . '</option>';
-            } else {
-                $year .= '<option>' . $i . '</option>';
-            }
-        }
+
+        $date = date("d.m.Y H:i", $ds['date']);
+
         $squads = getgamesquads();
         $squads = str_replace(
-            'value="' . $ds[ 'squad' ] . '"',
-            'value="' . $ds[ 'squad' ] . '" selected="selected"',
+            'value="' . $ds['squad'] . '"',
+            'value="' . $ds['squad'] . '" selected="selected"',
             $squads
         );
-        $league = htmlspecialchars($ds[ 'league' ]);
-        $leaguehp = htmlspecialchars($ds[ 'leaguehp' ]);
-        $opponent = htmlspecialchars($ds[ 'opponent' ]);
-        $opptag = htmlspecialchars($ds[ 'opptag' ]);
-        $opphp = htmlspecialchars($ds[ 'opphp' ]);
-        $maps = htmlspecialchars($ds[ 'maps' ]);
-        $server = htmlspecialchars($ds[ 'server' ]);
-        $warinfo = htmlspecialchars($ds[ 'warinfo' ]);
+        $league = htmlspecialchars($ds['league']);
+        $leaguehp = htmlspecialchars($ds['leaguehp']);
+        $opponent = htmlspecialchars($ds['opponent']);
+        $opptag = htmlspecialchars($ds['opptag']);
+        $opphp = htmlspecialchars($ds['opphp']);
+        $maps = htmlspecialchars($ds['maps']);
+        $server = htmlspecialchars($ds['server']);
+        $warinfo = htmlspecialchars($ds['warinfo']);
         $countries = getcountries();
         $countries = str_replace(
-            'value="' . $ds[ 'oppcountry' ] . '"',
-            'value="' . $ds[ 'oppcountry' ] . '" selected="selected"',
+            'value="' . $ds['oppcountry'] . '"',
+            'value="' . $ds['oppcountry'] . '" selected="selected"',
             $countries
         );
-        $hour = date("H", $ds[ 'date' ]);
-        $minutes = date("i", $ds[ 'date' ]);
 
-        $bg1 = BG_1;
-        eval ("\$upcoming_war_edit = \"" . gettemplate("upcoming_war_edit") . "\";");
+        $data_array = array();
+        $data_array['$date'] = $date;
+        $data_array['$squads'] = $squads;
+        $data_array['$league'] = $league;
+        $data_array['$leaguehp'] = $leaguehp;
+        $data_array['$opponent'] = $opponent;
+        $data_array['$opptag'] = $opptag;
+        $data_array['$countries'] = $countries;
+        $data_array['$opphp'] = $opphp;
+        $data_array['$maps'] = $maps;
+        $data_array['$server'] = $server;
+        $data_array['$warinfo'] = $warinfo;
+        $data_array['$upID'] = $upID;
+        $upcoming_war_edit = $GLOBALS["_template"]->replaceTemplate("upcoming_war_edit", $data_array);
         echo $upcoming_war_edit;
     } else {
-        redirect('index.php?site=calendar', $_language->module[ 'no_access' ]);
+        redirect('index.php?site=calendar', $_language->module['no_access']);
     }
 } elseif ($action === "adddate") {
     $_language->readModule('calendar');
     if (isclanwaradmin($userID)) {
-
-        eval ("\$title_calendar = \"" . gettemplate("title_calendar") . "\";");
+        $title_calendar = $GLOBALS["_template"]->replaceTemplate("title_calendar", array());
         echo $title_calendar;
 
         echo
             '<a href="index.php?site=calendar&amp;action=addwar" class="btn btn-danger">' .
-            $_language->module[ 'add_clanwar' ] .'
+            $_language->module['add_clanwar'] . '
             </a>
-            <a href="index.php?site=calendar&amp;action=adddate" class="btn btn-danger"> '.
-            $_language->module[ 'add_event' ] .'
+            <a href="index.php?site=calendar&amp;action=adddate" class="btn btn-danger"> ' .
+            $_language->module['add_event'] . '
             </a><br><br>';
 
-        $day = '';
-        $month = '';
-        $year = '';
+        $date = date("d.m.Y H:i");
 
-        for ($i = 1; $i < 32; $i++) {
-            if ($i == date("d", time())) {
-                $day .= '<option selected="selected">' . $i . '</option>';
-            } else {
-                $day .= '<option>' . $i . '</option>';
-            }
-        }
-        for ($i = 1; $i < 13; $i++) {
-            if ($i == date("n", time())) {
-                $month .= '<option value="' . $i . '" selected="selected">' . date("M", time()) . '</option>';
-            } else {
-                $month .= '<option value="' . $i . '">' . date("M", mktime(0, 0, 0, $i, 1, 2000)) . '</option>';
-            }
-        }
-        for ($i = 2000; $i < 2016; $i++) {
-            if ($i == date("Y", time())) {
-                $year .= '<option value="' . $i . '" selected="selected">' . date("Y", time()) . '</option>';
-            } else {
-                $year .= '<option value="' . $i . '">' . $i . '</option>';
-            }
-        }
         $squads = getgamesquads();
         $countries = getcountries();
 
         $bg1 = BG_1;
-        eval ("\$upcoming_date_new = \"" . gettemplate("upcoming_date_new") . "\";");
+        $data_array = array();
+        $data_array['$date'] = $date;
+        $data_array['$countries'] = $countries;
+        $upcoming_date_new = $GLOBALS["_template"]->replaceTemplate("upcoming_date_new", $data_array);
         echo $upcoming_date_new;
     } else {
-        redirect('index.php?site=calendar', $_language->module[ 'no_access' ]);
+        redirect('index.php?site=calendar', $_language->module['no_access']);
     }
 } elseif ($action === "editdate") {
     $_language->readModule('calendar');
     if (isclanwaradmin($userID)) {
-
-        eval ("\$title_calendar = \"" . gettemplate("title_calendar") . "\";");
+        $title_calendar = $GLOBALS["_template"]->replaceTemplate("title_calendar", array());
         echo $title_calendar;
 
         echo
             '<a href="index.php?site=calendar&amp;action=addwar" class="btn btn-danger">' .
-            $_language->module[ 'add_clanwar' ] . '
+            $_language->module['add_clanwar'] . '
             </a>
             <a href="index.php?site=calendar&amp;action=adddate" class="btn btn-danger">' .
-            $_language->module[ 'add_event' ] . '
+            $_language->module['add_event'] . '
             </a><br><br>';
 
-        $upID = $_GET[ 'upID' ];
+        $upID = $_GET['upID'];
         $ds = mysqli_fetch_array(safe_query("SELECT * FROM " . PREFIX . "upcoming WHERE upID='$upID'"));
 
-        $starttime_date = date("Y", $ds[ "date" ]) . '-' . date("m", $ds[ "date" ]) . '-' . date("d", $ds[ "date" ]);
-        $starttime_time = date("H", $ds[ "date" ]) . ':' . date("i", $ds[ "date" ]) . ':00';
-
-        $endtime_date =
-            date("Y", $ds[ "enddate" ]) . '-' . date("m", $ds[ "enddate" ]) . '-' . date("d", $ds[ "enddate" ]);
-        $endtime_time = date("H", $ds[ "enddate" ]) . ':' . date("i", $ds[ "enddate" ]) . ':00';
+        $date_start = date("d.m.Y H:i", $ds['date']);
+        $date_end = date("d.m.Y H:i", $ds['enddate']);
 
         $countries = getcountries();
         $countries = str_replace(' selected="selected"', '', $countries);
         $countries =
             str_replace(
-                'value="' . $ds[ 'country' ] . '"',
-                'value="' . $ds[ 'country' ] . '" selected="selected"',
+                'value="' . $ds['country'] . '"',
+                'value="' . $ds['country'] . '" selected="selected"',
                 $countries
             );
 
-        $short = htmlspecialchars($ds[ 'short' ]);
-        $title = htmlspecialchars($ds[ 'title' ]);
-        $location = htmlspecialchars($ds[ 'location' ]);
-        $locationhp = htmlspecialchars($ds[ 'locationhp' ]);
-        $dateinfo = htmlspecialchars($ds[ 'dateinfo' ]);
+        $short = htmlspecialchars($ds['short']);
+        $title = htmlspecialchars($ds['title']);
+        $location = htmlspecialchars($ds['location']);
+        $locationhp = htmlspecialchars($ds['locationhp']);
+        $dateinfo = htmlspecialchars($ds['dateinfo']);
 
         $bg1 = BG_1;
-        eval ("\$upcoming_date_edit = \"" . gettemplate("upcoming_date_edit") . "\";");
+        $data_array = array();
+        $data_array['$date_start'] = $date_start;
+        $data_array['$date_end'] = $date_end;
+        $data_array['$short'] = $short;
+        $data_array['$title'] = $title;
+        $data_array['$countries'] = $countries;
+        $data_array['$location'] = $location;
+        $data_array['$locationhp'] = $locationhp;
+        $data_array['$dateinfo'] = $dateinfo;
+        $data_array['$upID'] = $upID;
+        $upcoming_date_edit = $GLOBALS["_template"]->replaceTemplate("upcoming_date_edit", $data_array);
         echo $upcoming_date_edit;
     } else {
-        redirect('index.php?site=calendar', $_language->module[ 'no_access' ]);
+        redirect('index.php?site=calendar', $_language->module['no_access']);
     }
 } elseif ($action === "announce" && isclanmember($userID)) {
-
     $_language->readModule('calendar');
 
-    eval ("\$title_calendar = \"" . gettemplate("title_calendar") . "\";");
+    $title_calendar = $GLOBALS["_template"]->replaceTemplate("title_calendar", array());
     echo $title_calendar;
 
-    if (isset($_GET[ 'upID' ])) {
+    if (isset($_GET['upID'])) {
+        $upID = (int)$_GET['upID'];
 
-        $upID = (int)$_GET[ 'upID' ];
-
-        eval ("\$upcomingannounce = \"" . gettemplate("upcomingannounce") . "\";");
+        $data_array = array();
+        $data_array['$upID'] = $upID;
+        $upcomingannounce = $GLOBALS["_template"]->replaceTemplate("upcomingannounce", $data_array);
         echo $upcomingannounce;
     }
 } else {
-
     $_language->readModule('calendar');
 
-    eval ("\$title_calendar = \"" . gettemplate("title_calendar") . "\";");
+    $title_calendar = $GLOBALS["_template"]->replaceTemplate("title_calendar", array());
     echo $title_calendar;
 
     if (isclanwaradmin($userID)) {
         echo
             '<a href="index.php?site=calendar&amp;action=addwar" class="btn btn-danger">' .
-            $_language->module[ 'add_clanwar' ] .'
+            $_language->module['add_clanwar'] . '
             </a>
             <a href="index.php?site=calendar&amp;action=adddate" class="btn btn-danger">' .
-            $_language->module[ 'add_event' ] . '
+            $_language->module['add_event'] . '
             </a><br><br>';
     }
 
-    if (isset($_GET[ 'month' ])) {
-        $month = (int)$_GET[ 'month' ];
+    if (isset($_GET['month'])) {
+        $month = (int)$_GET['month'];
     } else {
         $month = date("m");
     }
 
-    if (isset($_GET[ 'year' ])) {
-        $year = (int)$_GET[ 'year' ];
+    if (isset($_GET['year'])) {
+        $year = (int)$_GET['year'];
     } else {
         $year = date("Y");
     }
 
-    if (isset($_GET[ 'tag' ])) {
-        $tag = (int)$_GET[ 'tag' ];
+    if (isset($_GET['tag'])) {
+        $tag = (int)$_GET['tag'];
     } else {
         $tag = date("d");
     }

@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -36,7 +36,7 @@ $language_array = Array(
 /* do not edit above this line */
 
   'author'=>'Kirjaaja',
-  'bbcode'=>'BBCode on<b><u>PÄÄLLÄ</u></b>',
+  'bbcode'=>'BBCode on<b><span class="underline">PÄÄLLÄ</span></b>',
   'cancel'=>'peruuta',
   'comm'=>'comm',
   'comment'=>'<a href="$url">[1] comment</a>, edelliset $lastposter - $lastdate',
@@ -49,7 +49,7 @@ $language_array = Array(
   'enter_text'=>'Lisää teksti',
   'go'=>'Jatka!',
   'headline'=>'Otsikko',
-  'html'=>'HTML on <b><u>PÄÄLLÄ</u></b>',
+  'html'=>'HTML on <b><span class="underline">PÄÄLLÄ</span></b>',
   'intern'=>'sisäinen',
   'languages'=>'Kielet',
   'link'=>'Linkki',
@@ -75,7 +75,7 @@ $language_array = Array(
   'select_all'=>'Valitse kaikki',
   'self'=>'ikkuna',
   'show_news'=>'Näytä uutiset',
-  'smilies'=>'Hymiöt <b><u>PÄÄLLÄ</u></b>',
+  'smilies'=>'Hymiöt <b><span class="underline">PÄÄLLÄ</span></b>',
   'sort'=>'Lajittele:',
   'title_unpublished_news'=>'<h2>UNPUBLISHED NEWS:</h2>',
   'topnews'=>'Parhaat uutiset',

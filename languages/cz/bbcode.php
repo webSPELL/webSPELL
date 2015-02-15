@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -74,7 +74,7 @@ $language_array = Array(
 	'listguide'=>'zadej \'1\' pro číselný seznam, \'a\' pro písmený seznam or \'\' pro seznam s odrážkami',
 	'listpoint'=>'Vložit odrážku. Nezadávej nic nebo klikni \'Cancel\' pro uzavření seznamu.',
 	'addcode'=>'Zadej pozici',
-	'readMore'=>'čti více',
+	'read_more'=>'čti více',
 	'mc_you_have'=>'Máš',
 	'mc_new_messages'=>'novou zprávu(y). Chceš si je nyní přečíst?',
 	'na'=>'nedostupné',

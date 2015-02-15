@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -34,7 +34,7 @@ $language_array = Array(
   'already_rated'=>'<b>Вы уже оценили статью!</b>',
   'articles'=>'Статьи',
   'author'=>'Автор',
-  'bbcode'=>'&#8226; <a href="javascript:void(0);" onclick="window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBКод</a> <b><u>включено</u></b>',
+  'bbcode'=>'&#8226; <a href="javascript:void(0);" onclick="window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBКод</a> <b><span class="underline">включено</span></b>',
   'cancel'=>'Отменить',
   'date'=>'Дата',
   'delete'=>'Удалить',
@@ -42,7 +42,7 @@ $language_array = Array(
   'edit_article'=>'Редактировать статью',
   'enter_title'=>'Вы должны ввести название!',
   'enter_text'=>'Вы должны ввести текст',
-  'html'=>'&#8226; HTML <b><u>включено</u></b>',
+  'html'=>'&#8226; HTML <b><span class="underline">включено</span></b>',
   'link'=>'Ссылка',
   'links'=>'Ссылки',
   'login_for_rate'=>'<b>Вы должны быть зарегестрированны и зайти за свой аккаунт, чтобы оценить статью!</b>',
@@ -54,7 +54,7 @@ $language_array = Array(
   'options'=>'Опции',
   'page'=>'Страница',
   'page_of'=>'Страница $page из $pages',
-  'page_select'=>'Разбить статью на <select name="language_count" onchange="update_textarea(this.options[this.selectedIndex].value)">$selects</select> страниц',
+  'page_select'=>'Разбить статью на <select name="language_count" onchange="updateTextarea(this.options[this.selectedIndex].value)">$selects</select> страниц',
   'pagecount'=>'Количество страниц',
   'perfect'=>'Отлично',
   'poor'=>'Плохо',
@@ -64,7 +64,7 @@ $language_array = Array(
   'really_delete'=>'вы действительно хотите удалить статью?',
   'save_article'=>'Сохранить статью',
   'self'=>'в том же окне',
-  'smilies'=>'&#8226; <a href="javascript:void(0);" onclick="window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Смайлы</a> <b><u>включено</u></b>',
+  'smilies'=>'&#8226; <a href="javascript:void(0);" onclick="window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Смайлы</a> <b><span class="underline">включено</span></b>',
   'sort'=>'Сортировать:',
   'title'=>'Наслов',
   'top5_points'=>'Топ 5 статей (по очкам)',

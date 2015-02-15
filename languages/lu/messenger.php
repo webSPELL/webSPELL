@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -37,7 +37,7 @@ $language_array = Array(
 
   'add_buddylist'=>'bei d\'Frëndsléscht bäifügen',
   'adminoptions'=>'Admin-Optiounen:',
-  'bbcode'=>'BBCode ass <b><u>UN</u></b>',
+  'bbcode'=>'BBCode ass <b><span class="underline">UN</span></b>',
   'by'=>'vun',
   'date'=>'Datum:',
   'delete'=>'Läschen',
@@ -47,7 +47,7 @@ $language_array = Array(
   'execute'=>'Ausféieren',
   'formation'=>'Formatéierung',
   'from'=>'vun:',
-  'html'=>'HTML ass <b><u>AUS</u></b>',
+  'html'=>'HTML ass <b><span class="underline">AUS</span></b>',
   'ignore'=>'Benotzer ignoréieren',
   'incoming'=>'Postagaang',
   'mark_not_viewed'=>'Als ongelies markéieren',
@@ -74,7 +74,7 @@ $language_array = Array(
   'sendeachmember'=>'All Clanmatglidd schécken',
   'sendeachuser'=>'All Benotzer schécken',
   'show'=>'Weisen',
-  'smilies'=>'Smilies sinn <b><u>UN</u></b>',
+  'smilies'=>'Smilies sinn <b><span class="underline">UN</span></b>',
   'sort'=>'Sortéierung:',
   'title'=>'Betreff',
   'your_message'=>'Deng Noriicht:',

@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -39,7 +39,7 @@ $language_array = Array(
   'already_rated'=>'<b>Αυτό το άρθρο μόλις δημοσιεύτηκε</b>',
   'articles'=>'Άρθρο',
   'author'=>'Συντάκτης',
-  'bbcode'=>'&#8226; <a href="javascript:void(0);" onclick="window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> είναι <b><u>ON</u></b>',
+  'bbcode'=>'&#8226; <a href="javascript:void(0);" onclick="window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> είναι <b><span class="underline">ON</span></b>',
   'cancel'=>'Ακύρωση',
   'date'=>'Ημερομηνία',
   'delete'=>'Διαγραφή',
@@ -47,7 +47,7 @@ $language_array = Array(
   'edit_article'=>'Επεξεργαστείτε το άρθρο',
   'enter_title'=>'Πρέπει να εισάγεις έναν τίτλο!',
   'enter_text'=>'Πρέπει να εισάγεις ένα κείμενο!',
-  'html'=>'&#8226; HTML είναι <b><u>ON</u></b>',
+  'html'=>'&#8226; HTML είναι <b><span class="underline">ON</span></b>',
   'link'=>'Ιστοσελίδα',
   'links'=>'Ιστοσελίδες',
   'login_for_rate'=>'<b>Για να δημοσιεύσεις πρέπει να εγγραφείς και να είσαι συνδεδεμένος!</b>',
@@ -59,7 +59,7 @@ $language_array = Array(
   'options'=>'Ρυθμίσεις',
   'page'=>'Σελίδα',
   'page_of'=>'Σελίδα $page από $pages',
-  'page_select'=>'Άρθρο από <select name="language_count" onchange="update_textarea(this.options[this.selectedIndex].value)">$selects</select> Σελίδα(n) Διαλογή',
+  'page_select'=>'Άρθρο από <select name="language_count" onchange="updateTextarea(this.options[this.selectedIndex].value)">$selects</select> Σελίδα(n) Διαλογή',
   'pagecount'=>'Ποσότητασελίδων',
   'perfect'=>'τέλεια',
   'poor'=>'κακός',
@@ -69,7 +69,7 @@ $language_array = Array(
   'really_delete'=>'Σίγουρα θέλετε να διαγράψετε αυτό το άρθρο?',
   'save_article'=>'Αποθήκευση άρθρου',
   'self'=>'το ίδιο παράθυρο',
-  'smilies'=>'&#8226; <a href="javascript:void(0);" onclick="window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smilies</a> είναι <b><u>ON</u></b>',
+  'smilies'=>'&#8226; <a href="javascript:void(0);" onclick="window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smilies</a> είναι <b><span class="underline">ON</span></b>',
   'sort'=>'Ταξινόμηση:',
   'title'=>'Τίτλος',
   'top5_points'=>'TOP 5 Άρθρα (Πόντοι)',

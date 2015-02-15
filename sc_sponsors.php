@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -29,7 +29,6 @@ $_language->readModule('sponsors');
 $mainsponsors =
     safe_query("SELECT * FROM " . PREFIX . "sponsors WHERE (displayed = '1' AND mainsponsor = '1') ORDER BY sort");
 if (mysqli_num_rows($mainsponsors)) {
-
     if (mysqli_num_rows($mainsponsors) == 1) {
         $main_title = $_language->module[ 'mainsponsor' ];
     } else {
@@ -48,7 +47,10 @@ if (mysqli_num_rows($mainsponsors)) {
         }
         $sponsorID = $da[ 'sponsorID' ];
 
-        eval ("\$sc_sponsors_main = \"" . gettemplate("sc_sponsors_main") . "\";");
+        $data_array = array();
+        $data_array['$sponsorID'] = $sponsorID;
+        $data_array['$sponsor'] = $sponsor;
+        $sc_sponsors_main = $GLOBALS["_template"]->replaceTemplate("sc_sponsors_main", $data_array);
         echo $sc_sponsors_main;
     }
     echo '</ul>';
@@ -57,7 +59,6 @@ if (mysqli_num_rows($mainsponsors)) {
 $sponsors =
     safe_query("SELECT * FROM " . PREFIX . "sponsors WHERE (displayed = '1' AND mainsponsor = '0') ORDER BY sort");
 if (mysqli_num_rows($sponsors)) {
-
     if (mysqli_num_rows($sponsors) == 1) {
         $title = $_language->module[ 'sponsor' ];
     } else {
@@ -76,7 +77,10 @@ if (mysqli_num_rows($sponsors)) {
         }
         $sponsorID = $db[ 'sponsorID' ];
 
-        eval ("\$sc_sponsors = \"" . gettemplate("sc_sponsors") . "\";");
+        $data_array = array();
+        $data_array['$sponsorID'] = $sponsorID;
+        $data_array['$sponsor'] = $sponsor;
+        $sc_sponsors = $GLOBALS["_template"]->replaceTemplate("sc_sponsors", $data_array);
         echo $sc_sponsors;
     }
     echo '</ul>';

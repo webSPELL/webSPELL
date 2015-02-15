@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -27,28 +27,30 @@
 if (isset($site)) {
     $_language->readModule('latesttopics');
 }
-$usergroups = [];
+$usergroups = array();
 if ($loggedin) {
     $usergroups[ ] = 'user';
     $get = safe_query(
         "SELECT
-          *
+            *
         FROM
-          " . PREFIX . "user_forum_groups
+            " . PREFIX . "user_forum_groups
         WHERE
-          userID='" . $userID . "'"
+            userID='" . $userID . "'"
     );
     $data = mysqli_fetch_row($get);
-    for ($i = 2; $i < count($data); $i++) {
+
+    $counter = count($data);
+    for ($i = 2; $i < $counter; $i++) {
         if ($data[ $i ] == 1) {
             $info = mysqli_fetch_field_direct($get, $i);
             $usergroups[ ] = $info->name;
         }
     }
 }
-$userallowedreadgrps = [];
-$userallowedreadgrps[ 'boardIDs' ] = [];
-$userallowedreadgrps[ 'catIDs' ] = [];
+$userallowedreadgrps = array();
+$userallowedreadgrps[ 'boardIDs' ] = array();
+$userallowedreadgrps[ 'catIDs' ] = array();
 $get = safe_query("SELECT boardID FROM " . PREFIX . "forum_boards WHERE readgrps = ''");
 while ($ds = mysqli_fetch_assoc($get)) {
     $userallowedreadgrps[ 'boardIDs' ][ ] = $ds[ 'boardID' ];
@@ -85,35 +87,35 @@ if (empty($userallowedreadgrps[ 'boardIDs' ])) {
 }
 $ergebnis = safe_query(
     "SELECT
-      t.*, u.nickname, b.name
+        t.*, u.nickname, b.name
     FROM
-      " . PREFIX . "forum_topics t
+        " . PREFIX . "forum_topics t
     LEFT JOIN
-      " . PREFIX . "user u
+        " . PREFIX . "user u
     ON
-      u.userID = t.lastposter
+        u.userID = t.lastposter
     LEFT JOIN
-      " . PREFIX . "forum_boards b
+        " . PREFIX . "forum_boards b
     ON
-      b.boardID = t.boardID
+        b.boardID = t.boardID
     WHERE
-      b.category
+        b.category
     IN
-      (" . implode(",", $userallowedreadgrps[ 'catIDs' ]) . ")
+        (" . implode(",", $userallowedreadgrps[ 'catIDs' ]) . ")
     AND
-      t.boardID
+        t.boardID
     IN
-      (" . implode(",", $userallowedreadgrps[ 'boardIDs' ]) . ")
+        (" . implode(",", $userallowedreadgrps[ 'boardIDs' ]) . ")
     AND
-      t.moveID = '0'
+        t.moveID = '0'
     ORDER BY
-      t.lastdate
+        t.lastdate
     DESC
-      LIMIT 0," . $maxlatesttopics
+        LIMIT 0," . $maxlatesttopics
 );
 $anz = mysqli_num_rows($ergebnis);
 if ($anz) {
-    eval ("\$latesttopics_head = \"" . gettemplate("latesttopics_head") . "\";");
+    $latesttopics_head = $GLOBALS["_template"]->replaceTemplate("latesttopics_head", array());
     echo $latesttopics_head;
     $n = 1;
     while ($ds = mysqli_fetch_array($ergebnis)) {
@@ -126,7 +128,7 @@ if ($anz) {
                     break;
                 }
             }
-            if (!$usergrp and !ismoderator($userID, $ds[ 'boardID' ])) {
+            if (!$usergrp && !ismoderator($userID, $ds[ 'boardID' ])) {
                 continue;
             }
         }
@@ -159,11 +161,19 @@ if ($anz) {
 
         $replys_text = ($replys == 1) ? $_language->module[ 'reply' ] : $_language->module[ 'replies' ];
 
-        eval ("\$latesttopics_content = \"" . gettemplate("latesttopics_content") . "\";");
+        $data_array = array();
+        $data_array['$topiclink'] = $topiclink;
+        $data_array['$last_poster'] = $last_poster;
+        $data_array['$board'] = $board;
+        $data_array['$date'] = $date;
+        $data_array['$topictitle_full'] = $topictitle_full;
+        $data_array['$topictitle'] = $topictitle;
+        $data_array['$replys'] = $replys;
+        $latesttopics_content = $GLOBALS["_template"]->replaceTemplate("latesttopics_content", $data_array);
         echo $latesttopics_content;
         $n++;
     }
-    eval ("\$latesttopics_foot = \"" . gettemplate("latesttopics_foot") . "\";");
+    $latesttopics_foot = $GLOBALS["_template"]->replaceTemplate("latesttopics_foot", array());
     echo $latesttopics_foot;
 }
 

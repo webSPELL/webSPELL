@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -91,7 +91,6 @@ function vote($poll)
     $anz = mysqli_num_rows($lastpoll);
     $ds = mysqli_fetch_array($lastpoll);
     if ($anz) {
-
         $anz = mysqli_num_rows(
             safe_query(
                 "SELECT
@@ -116,8 +115,7 @@ function vote($poll)
             $cookie = in_array($ds[ 'pollID' ], $_COOKIE[ 'poll' ]);
         }
 
-        if ($cookie or $anz or $anz_user) {
-
+        if ($cookie || $anz || $anz_user) {
             if ($ds[ 'intern' ] == 1) {
                 $isintern = '(' . $_language->module[ 'intern' ] . ')';
             } else {
@@ -139,7 +137,11 @@ function vote($poll)
                 $dv[ 'o1' ] + $dv[ 'o2' ] + $dv[ 'o3' ] + $dv[ 'o4' ] + $dv[ 'o5' ] + $dv[ 'o6' ] + $dv[ 'o7' ] +
                 $dv[ 'o8' ] + $dv[ 'o9' ] + $dv[ 'o10' ];
 
-            eval("\$poll_voted_head = \"" . gettemplate("poll_voted_head") . "\";");
+            $data_array = array();
+            $data_array['$title'] = $title;
+            $data_array['$isintern'] = $isintern;
+            $data_array['$gesamtstimmen'] = $gesamtstimmen;
+            $poll_voted_head = $GLOBALS["_template"]->replaceTemplate("poll_voted_head", $data_array);
             echo $poll_voted_head;
 
             $n = 1;
@@ -155,7 +157,11 @@ function vote($poll)
                 }
                 $picwidth = $perc;
                 settype($picwidth, "integer");
-                eval("\$poll_voted_content = \"" . gettemplate("poll_voted_content") . "\";");
+                $data_array = array();
+                $data_array['$option'] = $option;
+                $data_array['$picwidth'] = $picwidth;
+                $data_array['$perc'] = $perc;
+                $poll_voted_content = $GLOBALS["_template"]->replaceTemplate("poll_voted_content", $data_array);
                 echo $poll_voted_content;
                 $n++;
             }
@@ -164,12 +170,13 @@ function vote($poll)
             $comments = '<a href="index.php?site=polls&amp;pollID=' . $ds[ 'pollID' ] . '">[' . $anzcomments . '] ' .
                 $_language->module[ 'comments' ] . '</a>';
 
-            eval("\$poll_voted_foot = \"" . gettemplate("poll_voted_foot") . "\";");
+            $data_array = array();
+            $data_array['$comments'] = $comments;
+            $poll_voted_foot = $GLOBALS["_template"]->replaceTemplate("poll_voted_foot", $data_array);
             echo $poll_voted_foot;
 
             unset($options);
         } else {
-
             if ($ds[ 'intern' ] == 1) {
                 $isintern = '(' . $_language->module[ 'intern' ] . ')';
             } else {
@@ -177,8 +184,13 @@ function vote($poll)
             }
             $title = $ds[ 'titel' ];
 
-            eval("\$poll_head = \"" . gettemplate("poll_head") . "\";");
+            $data_array = array();
+            $data_array['$title'] = $title;
+            $data_array['$isintern'] = $isintern;
+            $poll_head = $GLOBALS["_template"]->replaceTemplate("poll_head", $data_array);
             echo $poll_head;
+
+            $options = array();
 
             for ($n = 1; $n <= 10; $n++) {
                 if ($ds[ 'o' . $n ]) {
@@ -188,12 +200,17 @@ function vote($poll)
             $n = 1;
             foreach ($options as $option) {
                 $option = $option;
-                eval("\$poll_content = \"" . gettemplate("poll_content") . "\";");
+                $data_array = array();
+                $data_array['$n'] = $n;
+                $data_array['$option'] = $option;
+                $poll_content = $GLOBALS["_template"]->replaceTemplate("poll_content", $data_array);
                 echo $poll_content;
                 $n++;
             }
             $pollID = $ds[ 'pollID' ];
-            eval("\$poll_foot = \"" . gettemplate("poll_foot") . "\";");
+            $data_array = array();
+            $data_array['$pollID'] = $pollID;
+            $poll_foot = $GLOBALS["_template"]->replaceTemplate("poll_foot", $data_array);
             echo $poll_foot;
         }
     } else {

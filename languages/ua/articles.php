@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -39,7 +39,7 @@ $language_array = Array(
   'already_rated'=>'<b>Ви вже оцініли статтю!</b>',
   'articles'=>'Статті',
   'author'=>'Автор',
-  'bbcode'=>'&#8226; <a href="javascript:void(0);" onclick="window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBКод</a> <b><u>улучана</u></b>',
+  'bbcode'=>'&#8226; <a href="javascript:void(0);" onclick="window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBКод</a> <b><span class="underline">улучана</span></b>',
   'cancel'=>'Скасувати',
   'date'=>'Дата',
   'delete'=>'Выдалити',
@@ -47,7 +47,7 @@ $language_array = Array(
   'edit_article'=>'Редагувати статю',
   'enter_title'=>'Ви повинні авести назву!',
   'enter_text'=>'Ви повинні ввести текст',
-  'html'=>'&#8226; HTML <b><u>включено</u></b>',
+  'html'=>'&#8226; HTML <b><span class="underline">включено</span></b>',
   'link'=>'Посилання',
   'links'=>'Посилання',
   'login_for_rate'=>'<b>Ви повинні зареєструватися або зайти на свій аккаунт що б оцінити статтю!</b>',
@@ -59,7 +59,7 @@ $language_array = Array(
   'options'=>'Опціі',
   'page'=>'Сторінка',
   'page_of'=>'Сторінка $page з $pages',
-  'page_select'=>'Розподілити статтю <select name="language_count" onchange="update_textarea(this.options[this.selectedIndex].value)"> $ вибирає </ виберіть> сторінки',
+  'page_select'=>'Розподілити статтю <select name="language_count" onchange="updateTextarea(this.options[this.selectedIndex].value)"> $ вибирає </select> сторінки',
   'pagecount'=>'Кількість сторінок',
   'perfect'=>'Чудово',
   'poor'=>'Бідний',
@@ -69,7 +69,7 @@ $language_array = Array(
   'really_delete'=>'Ви справді бажаєте видалити статтю?',
   'save_article'=>'Зберігти статтю',
   'self'=>'В тому ж вікні',
-  'smilies'=>'&#8226; <a href="javascript:void(0);" onclick="window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Смайли</a> <b><u>влучно</u></b>',
+  'smilies'=>'&#8226; <a href="javascript:void(0);" onclick="window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Смайли</a> <b><span class="underline">влучно</span></b>',
   'sort'=>'Сортувати',
   'title'=>'Назва',
   'top5_points'=>'Топ 5 статей (по балах)',

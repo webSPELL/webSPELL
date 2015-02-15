@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -30,7 +30,7 @@ $language_array = Array(
 /* do not edit above this line */
 
 	'author'=>'Autor',
-	'bbcode'=>'BBCode je <b><u>ZAPNUTÝ</u></b>',
+	'bbcode'=>'BBCode je <b><span class="underline">ZAPNUTÝ</span></b>',
 	'cancel'=>'zrušiť',
 	'comm'=>'kom.',
 	'comment'=>'<a href="$url">[1] komentár</a>, posledný od $lastposter - $lastdate',
@@ -43,7 +43,7 @@ $language_array = Array(
 	'enter_text'=>'Musíte zadať text',
 	'go'=>'Vykonaj!',
 	'headline'=>'Nadpis',
-	'html'=>'HTML je <b><u>ZAPNUTÉ</u></b>',
+	'html'=>'HTML je <b><span class="underline">ZAPNUTÉ</span></b>',
 	'intern'=>'interná',
 	'languages'=>'Jazyky',
 	'link'=>'Odkaz',
@@ -69,7 +69,7 @@ $language_array = Array(
 	'select_all'=>'označiť všetko',
 	'self'=>'to isté okno',
 	'show_news'=>'ukázať novinky',
-	'smilies'=>'Smajlíci sú <b><u>ZAPNUTÍ</u></b>',
+	'smilies'=>'Smajlíci sú <b><span class="underline">ZAPNUTÍ</span></b>',
 	'sort'=>'Triediť:',
 	'title_unpublished_news'=>'<h2>NEPUBLIKOVANÉ NOVINKY:</h2>',
 	'topnews'=>'top novinka',

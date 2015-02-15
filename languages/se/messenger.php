@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -31,7 +31,7 @@ $language_array = Array(
 
 	'add_buddylist'=>'Lägg till på vänner listan',
 	'adminoptions'=>'Admin options:',
-	'bbcode'=>'BBCode <b><u>ON</u></b>',
+	'bbcode'=>'BBCode <b><span class="underline">ON</span></b>',
 	'by'=>'av',
 	'date'=>'Datum:',
 	'delete'=>'Radera',
@@ -41,7 +41,7 @@ $language_array = Array(
 	'execute'=>'Verkställa',
 	'formation'=>'Formatering',
 	'from'=>'av:',
-	'html'=>'HTML <b><u>AV</u></b>',
+	'html'=>'HTML <b><span class="underline">AV</span></b>',
 	'ignore'=>'Ignorera användare',
 	'incoming'=>'Inkommande',
 	'mark_not_viewed'=>'Markera som inte visad',
@@ -68,7 +68,7 @@ $language_array = Array(
 	'sendeachmember'=>'Skcika till varje clanmedlem',
 	'sendeachuser'=>'Skicka till varje medlem',
 	'show'=>'Visa',
-	'smilies'=>'Smilies <b><u>PÅ</u></b>',
+	'smilies'=>'Smilies <b><span class="underline">PÅ</span></b>',
 	'sort'=>'Sortera:',
 	'title'=>'Ämne',
 	'your_message'=>'Ditt meddelande:',

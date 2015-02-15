@@ -1,5 +1,4 @@
 <?php
-
 /*
 ##########################################################################
 #                                                                        #
@@ -11,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -441,6 +440,7 @@ function update_base_5($_database)
   `pic` varchar(255) NOT NULL default '',
   `postmin` int(11) NOT NULL default '0',
   `postmax` int(11) NOT NULL default '0',
+  `special` int(1) NULL DEFAULT '0',
   PRIMARY KEY  (`rankID`)
 ) AUTO_INCREMENT=9 ");
 
@@ -929,7 +929,6 @@ function update_base_13($_database)
   `connection` varchar(255) NOT NULL default '',
   `keyboard` varchar(255) NOT NULL default '',
   `mouse` varchar(255) NOT NULL default '',
-
   `mousepad` varchar(255) NOT NULL default '',
   `newsletter` int(1) NOT NULL default '1',
   `about` text NOT NULL,
@@ -941,6 +940,7 @@ function update_base_13($_database)
   `topics` text NOT NULL,
   `articles` text NOT NULL,
   `demos` text NOT NULL,
+  `special_rank` INT(11) NULL DEFAULT '0',
   PRIMARY KEY  (`userID`)
 ) AUTO_INCREMENT=2 ");
 
@@ -1398,11 +1398,17 @@ function update_4beta6_4final_2($_database)
             $scoreOpp2 = $olddata['oppscr2'];
 
             // do the convertation
-            if (!empty($scoreHome2)) $scoreHome = $scoreHome1 . '||' . $scoreHome2;
-            else $scoreHome = $scoreHome1;
+            if (!empty($scoreHome2)) {
+                $scoreHome = $scoreHome1 . '||' . $scoreHome2;
+            } else {
+                $scoreHome = $scoreHome1;
+            }
 
-            if (!empty($scoreOpp2)) $scoreOpp = $scoreOpp1 . '||' . $scoreOpp2;
-            else $scoreOpp = $scoreOpp1;
+            if (!empty($scoreOpp2)) {
+                $scoreOpp = $scoreOpp1 . '||' . $scoreOpp2;
+            } else {
+                $scoreOpp = $scoreOpp1;
+            }
 
             // update database, set new structure
             if (mysqli_query($_database, "ALTER TABLE `" . PREFIX . "clanwars` CHANGE `homescr1` `homescore` TEXT NOT NULL")) {
@@ -2175,7 +2181,6 @@ function update_40101_420_7($_database)
     $transaction = new Transaction($_database);
     //Reverter of wrong escapes
     if (get_magic_quotes_gpc()) {
-
         @ini_set("max_execution_time", "300");
         @set_time_limit(300);
 

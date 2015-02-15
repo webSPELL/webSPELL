@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -60,7 +60,11 @@ if (mysqli_num_rows($ergebnis)) {
             $title .= '..';
         }
 
-        eval("\$sc_articles = \"" . gettemplate("sc_articles") . "\";");
+        $data_array = array();
+        $data_array['$date'] = $date;
+        $data_array['$articlesID'] = $articlesID;
+        $data_array['$title'] = $title;
+        $sc_articles = $GLOBALS["_template"]->replaceTemplate("sc_articles", $data_array);
         echo $sc_articles;
         $n++;
     }

@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -80,7 +80,7 @@ $language_array = Array(
   'listguide'=>'Gëff \'1\' fir eng nummeréiert Lescht, \'a\' fir eng alphabetesch Lescht oder \'\' fir eng gepunktet Lescht an',
   'listpoint'=>'Gëff en Leschten-Punkt an. Gëff naicht an oder klick op \'ofbriechen\' fir d\'Lescht ze stoppen.',
   'addcode'=>'Un gewënschter Plaatz afügen',
-  'readMore'=>'Méi liesen',
+  'read_more'=>'Méi liesen',
   'mc_you_have'=>'Du hues',
   'mc_new_messages'=>'néi Noriicht(en). Wëlls du se lo liesen?',
   'na'=>'net verfügbar',

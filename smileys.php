@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -31,15 +31,17 @@ include("_settings.php");
 echo '<!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<meta name="description" content="Clanpage using webSPELL 4 CMS">
-	<meta name="author" content="webspell.org">
-	<meta name="keywords" content="webspell, webspell4, clan, cms">
-	<meta name="copyright" content="Copyright 2005-2014 by webspell.org">
-	<meta name="generator" content="webSPELL">
-	<title>Smilies</title>
-    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
-	<link href="_stylesheet.css" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="description" content="Clanpage using webSPELL 4 CMS">
+    <meta name="author" content="webspell.org">
+    <meta name="copyright" content="Copyright 2005-2015 by webspell.org">
+    <meta name="generator" content="webSPELL">
+    <title>Smilies</title>';
+$componentsCss = generateComponents($components['css'], 'css');
+foreach ($componentsCss as $component) {
+    echo $component;
+}
+    echo '<link href="_stylesheet.css" rel="stylesheet">
     <script src="js/bbcode.js"></script>
 </head>
 
@@ -75,12 +77,12 @@ if (is_array($files)) {
         $smiley = explode(".", $file);
 
         echo '<tr>
-        <td><a href="javascript:AddCodeFromWindow(\':' . $smiley[ 0 ] . ':\')">
-                <img src="images/smileys/' . $file . '" alt="">
-            </a>
-        </td>
-        <td><a href="javascript:AddCodeFromWindow(\':' . $smiley[ 0 ] . ':\')">:' . $smiley[ 0 ] . ':</a></td>
-      </tr>';
+            <td><a href="javascript:AddCodeFromWindow(\':' . $smiley[ 0 ] . ':\')">
+                    <img src="images/smileys/' . $file . '" alt="">
+                </a>
+            </td>
+            <td><a href="javascript:AddCodeFromWindow(\':' . $smiley[ 0 ] . ':\')">:' . $smiley[ 0 ] . ':</a></td>
+        </tr>';
     }
 }
 

@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -34,15 +34,23 @@ if (isset($_GET[ 'action' ])) {
 if (isset($_POST[ 'save' ])) {
     $_language->readModule('links');
     if (!ispageadmin($userID) || !isnewsadmin($userID)) {
-        die($_language->module[ 'no_access' ]);
+        die(generateErrorBox($_language->module[ 'no_access' ], false));
     }
 
     safe_query(
         "INSERT INTO
-          " . PREFIX . "links ( linkcatID, name, url, info )
-        values
-          ( '" . $_POST[ 'cat' ] . "', '" . strip_tags($_POST[ 'name' ]) . "', '" . $_POST[ 'url' ] .
-        "', '" . $_POST[ 'info' ] . "' ) "
+            " . PREFIX . "links (
+                linkcatID,
+                name,
+                url,
+                info
+            )
+        values (
+            '" . $_POST[ 'cat' ] . "',
+            '" . strip_tags($_POST[ 'name' ]) . "',
+            '" . $_POST[ 'url' ] . "',
+            '" . $_POST[ 'info' ] . "'
+        ) "
     );
 
     $id = mysqli_insert_id($_database);
@@ -77,35 +85,58 @@ if (isset($_POST[ 'save' ])) {
             } else {
                 if (unlink($filepath . $banner[ 'name' ] . ".tmp")) {
                     $error = $_language->module[ 'format_incorrect' ];
-                    die('<b>' . $error . '</b><br><br><a href="index.php?site=links&amp;action=edit&amp;linkID=' . $id .
-                        '">&laquo; ' . $_language->module[ 'back' ] . '</a>');
+                    die(
+                        generateAlert(
+                            '<strong>' . $error . '</strong><br>
+                            <br>
+                            <a href="index.php?site=links&amp;action=edit&amp;linkID=' . $id .
+                            '" class="alert-link">&laquo; ' . $_language->module[ 'back' ] . '</a>',
+                            'alert-danger'
+                        )
+                    );
                 } else {
                     $error = $_language->module[ 'format_incorrect' ];
-                    die('<b>' . $error . '</b><br><br><a href="index.php?site=links&amp;action=edit&amp;linkID=' . $id .
-                        '">&laquo; ' . $_language->module[ 'back' ] . '</a>');
+                    die(
+                        generateAlert(
+                            '<strong>' . $error . '</strong><br>
+                            <br>
+                            <a href="index.php?site=links&amp;action=edit&amp;linkID=' . $id .
+                            '" class="alert-link">&laquo; ' . $_language->module[ 'back' ] . '</a>',
+                            'alert-danger'
+                        )
+                    );
                 }
             }
         } else {
             @unlink($filepath . $banner[ 'name' ] . ".tmp");
             $error = $_language->module[ 'banner_to_big' ];
-            die('<b>' . $error . '</b><br><br><a href="index.php?site=links&amp;action=edit&amp;linkID=' . $id .
-                '">&laquo; ' . $_language->module[ 'back' ] . '</a>');
+            die(
+                generateAlert(
+                    '<strong>' . $error . '</strong><br>
+                    <br>
+                    <a href="index.php?site=links&amp;action=edit&amp;linkID=' . $id . '" class="alert-link">&laquo; ' .
+                    $_language->module[ 'back' ] . '</a>',
+                    'alert-danger'
+                )
+            );
         }
     }
 } elseif (isset($_POST[ 'saveedit' ])) {
     $_language->readModule('links');
     if (!ispageadmin($userID) || !isnewsadmin($userID)) {
-        die($_language->module[ 'no_access' ]);
+        die(generateErrorBox($_language->module[ 'no_access' ], false));
     }
 
     safe_query(
         "UPDATE
-          " . PREFIX . "links
+            " . PREFIX . "links
         SET
-          linkcatID='" . $_POST[ 'cat' ] . "', name='" .
-        strip_tags($_POST[ 'name' ]) . "', url='" . $_POST[ 'url' ] . "', info='" . $_POST[ 'info' ] . "'
+            linkcatID='" . $_POST[ 'cat' ] . "',
+            name='" . strip_tags($_POST[ 'name' ]) . "',
+            url='" . $_POST[ 'url' ] . "',
+            info='" . $_POST[ 'info' ] . "'
         WHERE
-          linkID='" . $_POST[ 'linkID' ] . "'"
+            linkID='" . $_POST[ 'linkID' ] . "'"
     );
 
     $filepath = "./images/links/";
@@ -140,19 +171,40 @@ if (isset($_POST[ 'save' ])) {
             } else {
                 if (unlink($filepath . $banner[ 'name' ] . ".tmp")) {
                     $error = $_language->module[ 'format_incorrect' ];
-                    die('<b>' . $error . '</b><br><br><a href="index.php?site=links&amp;action=edit&amp;linkID=' . $id .
-                        '">&laquo; ' . $_language->module[ 'back' ] . '</a>');
+                    die(
+                        generateAlert(
+                            '<strong>' . $error . '</strong><br>
+                            <br>
+                            <a href="index.php?site=links&amp;action=edit&amp;linkID=' . $id .
+                            '" class="alert-link">&laquo; ' . $_language->module[ 'back' ] . '</a>',
+                            'alert-danger'
+                        )
+                    );
                 } else {
                     $error = $_language->module[ 'format_incorrect' ];
-                    die('<b>' . $error . '</b><br><br><a href="index.php?site=links&amp;action=edit&amp;linkID=' . $id .
-                        '">&laquo; ' . $_language->module[ 'back' ] . '</a>');
+                    die(
+                        generateAlert(
+                            '<strong>' . $error . '</strong><br>
+                            <br>
+                            <a href="index.php?site=links&amp;action=edit&amp;linkID=' . $id .
+                            '" class="alert-link">&laquo; ' . $_language->module[ 'back' ] . '</a>',
+                            'alert-danger'
+                        )
+                    );
                 }
             }
         } else {
             @unlink($filepath . $banner[ 'name' ] . ".tmp");
             $error = $_language->module[ 'banner_to_big' ];
-            die('<b>' . $error . '</b><br><br><a href="index.php?site=links&amp;action=edit&amp;linkID=' . $id .
-                '">&laquo; ' . $_language->module[ 'back' ] . '</a>');
+            die(
+                generateAlert(
+                    '<strong>' . $error . '</strong><br>
+                    <br>
+                    <a href="index.php?site=links&amp;action=edit&amp;linkID=' . $id .
+                    '" class="alert-link">&laquo; ' . $_language->module[ 'back' ] . '</a>',
+                    'alert-danger'
+                )
+            );
         }
     }
 } elseif ($action == "delete") {
@@ -161,7 +213,7 @@ if (isset($_POST[ 'save' ])) {
     include("_functions.php");
     $_language->readModule('links');
     if (!ispageadmin($userID) || !isnewsadmin($userID)) {
-        die($_language->module[ 'no_access' ]);
+        die(generateErrorBox($_language->module[ 'no_access' ], false));
     }
     $linkID = $_GET[ 'linkID' ];
     safe_query("DELETE FROM " . PREFIX . "links WHERE linkID='$linkID'");
@@ -180,11 +232,10 @@ if (isset($_POST[ 'save' ])) {
 
 $_language->readModule('links');
 
-eval ("\$title_links = \"" . gettemplate("title_links") . "\";");
+$title_links = $GLOBALS["_template"]->replaceTemplate("title_links", array());
 echo $title_links;
 
 if ($action == "new") {
-
     if (ispageadmin($userID) || isnewsadmin($userID)) {
         $rubrics = safe_query("SELECT * FROM " . PREFIX . "links_categorys ORDER BY name");
         $linkcats = '';
@@ -192,10 +243,16 @@ if ($action == "new") {
             $linkcats .= '<option value="' . $dr[ 'linkcatID' ] . '">' . htmlspecialchars($dr[ 'name' ]) . '</option>';
         }
         $bg1 = BG_1;
-        eval ("\$links_new = \"" . gettemplate("links_new") . "\";");
+        $data_array = array();
+        $data_array['$linkcats'] = $linkcats;
+        $data_array['$linkID'] = $linkID;
+        $links_new = $GLOBALS["_template"]->replaceTemplate("links_new", $data_array);
         echo $links_new;
     } else {
-        redirect('index.php?site=links', $_language->module[ 'no_access' ]);
+        redirect(
+            'index.php?site=links',
+            generateAlert($_language->module[ 'no_access' ], 'alert-danger')
+        );
     }
 } elseif ($action == "edit") {
     $linkID = $_GET[ 'linkID' ];
@@ -211,7 +268,8 @@ if ($action == "new") {
             $linkcats = '';
             while ($dr = mysqli_fetch_array($newsrubrics)) {
                 if ($ds[ 'linkcatID' ] == $dr[ 'linkcatID' ]) {
-                    $linkcats .= '<option value="' . $dr[ 'linkcatID' ] . '" selected="selected">' .
+                    $linkcatID = $dr[ 'linkcatID' ];
+                    $linkcats .= '<option value="' . $dr[ 'linkcatID' ] . '" selected>' .
                         htmlspecialchars($dr[ 'name' ]) . '</option>';
                 } else {
                     $linkcats .= '<option value="' . $dr[ 'linkcatID' ] . '">' . htmlspecialchars($dr[ 'name' ]) .
@@ -222,26 +280,34 @@ if ($action == "new") {
             $linkcats = '<option>' . $_language->module[ 'no_categories' ] . '</option>';
         }
 
-        $linkcats = str_replace(" selected=\"selected\"", "", $linkcats);
+        $linkcats = str_replace(" selected", "", $linkcats);
         $linkcats =
             str_replace(
                 'value="' . $ds[ 'linkcatID' ] . '"',
-                'value="' . $ds[ 'linkcatID' ] . '" selected="selected"',
+                'value="' . $ds[ 'linkcatID' ] . '" selected',
                 $linkcats
             );
 
         $bg1 = BG_1;
-        eval ("\$links_edit = \"" . gettemplate("links_edit") . "\";");
+        $data_array = array();
+        $data_array['$linkcats'] = $linkcats;
+        $data_array['$name'] = $name;
+        $data_array['$url'] = $url;
+        $data_array['$info'] = $info;
+        $data_array['$linkID'] = $linkID;
+        $links_edit = $GLOBALS["_template"]->replaceTemplate("links_edit", $data_array);
         echo $links_edit;
     } else {
-        redirect('index.php?site=links', $_language->module[ 'no_access' ]);
+        redirect(
+            'index.php?site=links',
+            generateAlert($_language->module[ 'no_access' ], 'alert-danger')
+        );
     }
-} elseif ($action == "show" and is_numeric($_GET[ 'linkcatID' ])) {
+} elseif ($action == "show" && is_numeric($_GET[ 'linkcatID' ])) {
     if (ispageadmin($userID) || isnewsadmin($userID)) {
         echo
-            '<input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=links&amp;action=new\');
-            return document.MM_returnValue" value="' .
-            $_language->module[ 'new_link' ] . '" class="btn btn-danger"><br><br>';
+            '<a href="index.php?site=links&amp;action=new" class="btn btn-primary">' .
+            $_language->module[ 'new_link' ] . '</a><br><br>';
     }
 
     $linkcatID = $_GET[ 'linkcatID' ];
@@ -251,104 +317,98 @@ if ($action == "new") {
 
     $linkcat = safe_query("SELECT * FROM " . PREFIX . "links WHERE linkcatID='$linkcatID' ORDER BY name");
     if (mysqli_num_rows($linkcat)) {
-        eval ("\$links_details_head = \"" . gettemplate("links_details_head") . "\";");
+        $data_array = array();
+        $data_array['$linkcatname'] = $linkcatname;
+        $links_details_head = $GLOBALS["_template"]->replaceTemplate("links_details_head", $data_array);
         echo $links_details_head;
 
-        $i = 1;
         while ($ds = mysqli_fetch_array($linkcat)) {
-            if ($i % 2) {
-                $bg1 = BG_1;
-                $bg2 = BG_2;
-            } else {
-                $bg1 = BG_3;
-                $bg2 = BG_4;
-            }
-            $i++;
-
-            $link = '<a href="' . $ds[ 'url' ] . '" target="_blank"><b>' . $ds[ 'name' ] . '</b></a>';
+            $name = $ds[ 'name' ];
+            $link = '<a href="' . $ds[ 'url' ] . '" target="_blank">' . $ds[ 'name' ] . '</a>';
             $info = cleartext($ds[ 'info' ]);
             if ($ds[ 'banner' ]) {
                 $banner = '<a href="' . $ds[ 'url' ] . '" target="_blank"><img src="images/links/' . $ds[ 'banner' ] .
-                    '" alt=""></a>';
+                    '" alt="' . $ds[ 'name' ] . '" class="img-responsive"></a>';
             } else {
                 $banner = '';
             }
             if (ispageadmin($userID) || isnewsadmin($userID)) {
                 $adminaction =
-                    '<input type="button" onclick="MM_goToURL(\'parent\',\'index.php?
-                    site=links&amp;action=edit&amp;linkID=' .
-                    $ds[ 'linkID' ] . '\');return document.MM_returnValue" value="' . $_language->module[ 'edit' ] .
-                    '" class="btn btn-danger">
-				    <input type="button" onclick="MM_confirm(\'' . $_language->module[ 'really_delete' ] .
-                    '\', \'links.php?action=delete&amp;linkID=' . $ds[ 'linkID' ] . '\')" value="' .
-                    $_language->module[ 'delete' ] . '" class="btn btn-danger">';
+                    '<div class="pull-right">
+                        <a role="button" class="btn btn-warning btn-sm"
+                        href="index.php?site=links&amp;action=edit&amp;linkID=' . $ds[ 'linkID' ] . '">' .
+                            $_language->module[ 'edit' ] . '</a>
+                        <a role="button" class="btn btn-danger btn-sm" href="links.php?action=delete&amp;linkID=' .
+                        $ds[ 'linkID' ] . '">' .
+                            $_language->module[ 'delete' ] . '</a>
+                    </div>';
             } else {
                 $adminaction = '';
             }
 
-            eval ("\$links_details = \"" . gettemplate("links_details") . "\";");
+            $data_array = array();
+            $data_array['$banner'] = $banner;
+            $data_array['$info'] = $info;
+            $data_array['$link'] = $link;
+            $data_array['$adminaction'] = $adminaction;
+            $links_details = $GLOBALS["_template"]->replaceTemplate("links_details", $data_array);
             echo $links_details;
 
             unset($banner);
         }
-        eval ("\$links_foot = \"" . gettemplate("links_foot") . "\";");
+        $links_foot = $GLOBALS["_template"]->replaceTemplate("links_foot", array());
         echo $links_foot;
     } else {
-        echo $_language->module[ 'no_links' ] . '<br><br>
-  [ <a href="index.php?site=links">' . $_language->module[ 'go_back' ] . '</a> ]';
+        echo generateAlert(
+            $_language->module[ 'no_links' ] . '<br><br>[ <a href="index.php?site=links" class="alert-link">' .
+            $_language->module[ 'go_back' ] . '</a> ]',
+            'alert-info'
+        );
     }
 } else {
     $_language->readModule('links');
     $cats = safe_query("SELECT * FROM " . PREFIX . "links_categorys ORDER BY name");
     if (mysqli_num_rows($cats)) {
         if (ispageadmin($userID) || isnewsadmin($userID)) {
-            echo
-                '<input type="button" onclick="MM_goToURL(\'parent\',\'index.php?site=links&amp;action=new\');
-                return document.MM_returnValue" value="' .
-                $_language->module[ 'new_link' ] . '"><br><br>';
+            echo '<a href="index.php?site=links&amp;action=new" class="btn btn-primary">' .
+                $_language->module[ 'new_link' ] . '</a><br><br>';
         }
         $anzcats = mysqli_num_rows(safe_query("SELECT linkcatID FROM " . PREFIX . "links_categorys"));
-        $bg1 = BG_1;
 
-        eval ("\$links_category = \"" . gettemplate("links_category") . "\";");
+        $data_array = array();
+        $data_array['$anzcats'] = $anzcats;
+        $links_category = $GLOBALS["_template"]->replaceTemplate("links_category", $data_array);
         echo $links_category;
 
-        $i = 1;
         while ($ds = mysqli_fetch_array($cats)) {
             $anzlinks = mysqli_num_rows(
                 safe_query(
                     "SELECT
-                      linkID
+                        linkID
                     FROM
-                      " . PREFIX . "links
+                        " . PREFIX . "links
                     WHERE
-                      linkcatID='" . $ds[ 'linkcatID' ] . "'"
+                        linkcatID='" . $ds[ 'linkcatID' ] . "'"
                 )
             );
-            if ($i % 2) {
-                $bg1 = BG_1;
-                $bg2 = BG_2;
-            } else {
-                $bg1 = BG_3;
-                $bg2 = BG_4;
-            }
             $linkcatname =
-                '<a href="index.php?site=links&amp;action=show&amp;linkcatID=' . $ds[ 'linkcatID' ] . '"><b>' .
-                $ds[ 'name' ] . '</b></a>';
+                '<a href="index.php?site=links&amp;action=show&amp;linkcatID=' . $ds[ 'linkcatID' ] . '"><strong>' .
+                $ds[ 'name' ] . '</strong></a>';
 
-            eval ("\$links_content = \"" . gettemplate("links_content") . "\";");
+            $data_array = array();
+            $data_array['$linkcatname'] = $linkcatname;
+            $data_array['$anzlinks'] = $anzlinks;
+            $links_content = $GLOBALS["_template"]->replaceTemplate("links_content", $data_array);
             echo $links_content;
-            $i++;
         }
-        eval ("\$links_foot = \"" . gettemplate("links_foot") . "\";");
+        $links_foot = $GLOBALS["_template"]->replaceTemplate("links_foot", array());
         echo $links_foot;
     } else {
         if (ispageadmin($userID) || isnewsadmin($userID)) {
             echo
-                '<input type="button" onclick="MM_goToURL(\'parent\',\'admin/admincenter.php?site=linkcategories\');
-                return document.MM_returnValue" value="' .
-                $_language->module[ 'new_category' ] . '" class="btn btn-danger"><br><br>';
+                '<a href="admin/admincenter.php?site=linkcategories" class="btn btn-primary">' .
+                $_language->module[ 'new_category' ] . '</a><br><br>';
         }
-        echo $_language->module[ 'no_categories' ];
+        echo generateAlert($_language->module[ 'no_categories' ], 'alert-info');
     }
 }

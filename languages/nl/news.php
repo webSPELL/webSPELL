@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -30,7 +30,7 @@ $language_array = Array(
 /* do not edit above this line */
 
 	'author'=>'Auteur',
-	'bbcode'=>'BBCode is <b><u>AAN</u></b>',
+	'bbcode'=>'BBCode is <b><span class="underline">AAN</span></b>',
 	'cancel'=>'annuleren',
 	'comm'=>'reactie',
 	'comment'=>'<a href="$url">[1] reactie</a>, laatst door $lastposter - $lastdate',
@@ -43,7 +43,7 @@ $language_array = Array(
 	'enter_text'=>'Je moet tekst invullen',
 	'go'=>'Ga!',
 	'headline'=>'Titel',
-	'html'=>'HTML is <b><u>AAN</u></b>',
+	'html'=>'HTML is <b><span class="underline">AAN</span></b>',
 	'intern'=>'intern',
 	'languages'=>'Talen',
 	'link'=>'Link',
@@ -69,7 +69,7 @@ $language_array = Array(
 	'select_all'=>'selecteer allen',
 	'self'=>'zelf venster',
 	'show_news'=>'bekijk nieuws',
-	'smilies'=>'Smileys zijn <b><u>AAN</u></b>',
+	'smilies'=>'Smileys zijn <b><span class="underline">AAN</span></b>',
 	'sort'=>'Sorteer:',
 	'title_unpublished_news'=>'<h2>ONGEPUCLICEERD NIEUWS:</h2>',
 	'topnews'=>'top nieuws',

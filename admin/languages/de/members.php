@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -72,7 +72,7 @@ $language_array = Array(
   'tooltip_6'=>'<b>Zugriff:</b><br>- Clanwars<br>- Auszeichnungen<br>- Herausforderungen<br>- Kalender',
   'tooltip_7'=>'<b>Zugriff:</b><br>- Forum Kategorien<br>- Foren<br>- Forumbeiträge bearbeiten &amp; löschen<br>- Benutzergruppen<br>- Gruppen Benutzer<br>- Benutzer Ränge',
   'tooltip_8'=>'<b>Zugriff:</b><br>- Forumbeiträge bearbeiten &amp; löschen<br>(Board-Zuteilung muss vorhanden sein)',
-  'tooltip_9'=>'<b>Zugriff:</b><br>- Über uns<br>- Bannerrotation<br>- Symbole<br>- Datenbank<br>- FAQ Kategorien<br>- FAQ<br>- Werdegang<br>- Impressum<br>- Link Kategorien<br>- Links<br>- Seite sperren<br>- Parnter<br>- Scrolltext<br>- Server<br>- Einstellungen<br>- Statische Seiten<br>- Stile<br>- Update<br>- Uns verlinken<br>- Sponsoren',
+  'tooltip_9'=>'<b>Zugriff:</b><br>- Über uns<br>- Bannerrotation<br>- Symbole<br>- Datenbank<br>- FAQ Kategorien<br>- FAQ<br>- Werdegang<br>- Impressum<br>- Link Kategorien<br>- Links<br>- Seite sperren<br>- Parnter<br>- Server<br>- Einstellungen<br>- Statische Seiten<br>- Stile<br>- Update<br>- Uns verlinken<br>- Sponsoren',
   'tooltip_10'=>'<b>Zugriff:</b><br>- Datei Kategorien<br>- Dateien<br>- Demos',
   'tooltip_11'=>'<b>Zugriff:</b><br>- Clan-Kasse',
   'tooltip_12'=>'<b>Zugriff:</b><br>- Galerie Kategorien<br>- Galerien<br>- Bilder',

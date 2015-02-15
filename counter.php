@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -76,5 +76,15 @@ if ($guests[ 0 ] == 1) {
     $guests_on_text = $_language->module[ 'guests' ];
 }
 
-eval ("\$stats = \"" . gettemplate("stats") . "\";");
+$data_array = array();
+$data_array['$today'] = $today;
+$data_array['$yesterday'] = $yesterday;
+$data_array['$month'] = $month;
+$data_array['$total'] = $total;
+$data_array['$us'] = $us;
+$data_array['$user_on'] = $user_on;
+$data_array['$user_on_text'] = $user_on_text;
+$data_array['$guests_on'] = $guests_on;
+$data_array['$guests_on_text'] = $guests_on_text;
+$stats = $GLOBALS["_template"]->replaceTemplate("stats", $data_array);
 echo $stats;

@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -69,8 +69,8 @@ if (isset($_POST[ 'submit' ]) != "") {
         <b>' . $_language->module[ 'about' ] . '</b><br><small>' . $_language->module[ 'you_can_use_html' ] .
         '</small><br><br>';
 
-    eval ("\$addbbcode = \"" . gettemplate("addbbcode", "html", "admin") . "\";");
-    eval ("\$addflags = \"" . gettemplate("flags_admin", "html", "admin") . "\";");
+    $addbbcode = $GLOBALS["_template"]->replaceTemplate("addbbcode", array());
+    $addflags = $GLOBALS["_template"]->replaceTemplate("flags_admin", array());
 
     echo '<table width="100%" border="0" cellspacing="0" cellpadding="0">
         <tr>

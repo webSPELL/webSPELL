@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -80,7 +80,7 @@ $language_array = Array(
   'listguide'=>'Vpišite \'1\' za oštevilčen seznam, \'a\' za seznam besed ali \'\' za neoštevilčeni seznam',
   'listpoint'=>'Vnesite besedilo, ki bo ustrezala to točko na seznamu. Ne pišite ničesar, ali pa kliknite \'Prekliči\' za izhod iz seznama.',
   'addcode'=>'Dodaj kodo',
-  'readMore'=>'Več',
+  'read_more'=>'Več',
   'mc_you_have'=>'Število novih sporočil',
   'mc_new_messages'=>'Če želite prebrati sedaj?',
   'na'=>'ni dostopa',

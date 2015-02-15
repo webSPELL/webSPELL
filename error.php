@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -46,7 +46,7 @@ if (isset($error_header)) {
 }
 
 $urlparts = preg_split('/[\s.,-\/]+/si', $_GET['url']);
-$results = [];
+$results = array();
 foreach ($urlparts as $tag) {
     $sql = safe_query("SELECT * FROM " . PREFIX . "tags WHERE tag='" . $tag . "'");
     if ($sql->num_rows) {
@@ -69,16 +69,20 @@ foreach ($urlparts as $tag) {
 }
 if (count($results)) {
     echo "<h1>" . $_language->module['alternative_results'] . "</h1>";
-    usort($results, ['Tags', 'sortByDate']);
-    echo "<p class='text-center'><b>" . count($data) . "</b> " . $_language->module['results_found'] . "</p>";
+    usort($results, array('Tags', 'sortByDate'));
+    echo "<p class='text-center'><strong>" . count($data) . "</strong> " . $_language->module['results_found'] . "</p>";
     foreach ($results as $entry) {
-
         $date = getformatdate($entry['date']);
         $type = $entry['type'];
         $auszug = $entry['content'];
         $link = $entry['link'];
         $title = $entry['title'];
-        eval ("\$search_tags = \"" . gettemplate("search_tags") . "\";");
+        $data_array = array();
+        $data_array['$date'] = $date;
+        $data_array['$link'] = $link;
+        $data_array['$title'] = $title;
+        $data_array['$auszug'] = $auszug;
+        $search_tags = $GLOBALS["_template"]->replaceTemplate("search_tags", $data_array);
         echo $search_tags;
     }
 }

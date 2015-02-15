@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -34,7 +34,7 @@ $language_array = Array(
   'already_rated'=>'<b>სტატია უკვე შეფასებულია!</b>',
   'articles'=>'სტატიები',
   'author'=>'ავტორი',
-  'bbcode'=>'&#8226; <a href="javascript:void(0);" onclick="window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">ბბკოდი</a> <b><u>ჩართვა</u></b>',
+  'bbcode'=>'&#8226; <a href="javascript:void(0);" onclick="window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">ბბკოდი</a> <b><span class="underline">ჩართვა</span></b>',
   'cancel'=>'უკან',
   'date'=>'თარიღი',
   'delete'=>'წაშლა',
@@ -42,7 +42,7 @@ $language_array = Array(
   'edit_article'=>'სტატიის შესწორება',
   'enter_title'=>'თქვენ უნდა შეიყვანოთ სათაური! ',
   'enter_text'=>'თქვენ უნდა შეიყვანოთ ტექსტი!',
-  'html'=>'&#8226; HTML <b><u>ჩართვა</u></b>',
+  'html'=>'&#8226; HTML <b><span class="underline">ჩართვა</span></b>',
   'link'=>'ბმული',
   'links'=>'ბმულები',
   'login_for_rate'=>'<b>თქვენ უნდა იყოთ დარეგისტრირებული და ავტორიზირებული რომ შეაფასოთ სტატია!</b>',
@@ -54,7 +54,7 @@ $language_array = Array(
   'options'=>'პარამეტრები',
   'page'=>'გვერდი',
   'page_of'=>'გვერდი $გვერდი of $გვერდები',
-  'page_select'=>'გავრცელება სტატიის <select name="language_count" onchange="update_textarea(this.options[this.selectedIndex].value)">$selects</select> გვერდები',
+  'page_select'=>'გავრცელება სტატიის <select name="language_count" onchange="updateTextarea(this.options[this.selectedIndex].value)">$selects</select> გვერდები',
   'pagecount'=>'გვერდების რაოდენობა',
   'perfect'=>'შესანიშნავი',
   'poor'=>'ცუდი',
@@ -64,7 +64,7 @@ $language_array = Array(
   'really_delete'=>'წავშაკი სტატია?',
   'save_article'=>'სტატიის შენახვა',
   'self'=>'იმავე ფანჯარაში',
-  'smilies'=>'&#8226; <a href="javascript:void(0);" onclick="window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">სმაილები</a> <b><u>ჩართვა</u></b>',
+  'smilies'=>'&#8226; <a href="javascript:void(0);" onclick="window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">სმაილები</a> <b><span class="underline">ჩართვა</span></b>',
   'sort'=>'დაფასოვება:',
   'title'=>'სათაური',
   'top5_points'=>'5 ლიდერი სტატია (ქულების მიხედვით)',

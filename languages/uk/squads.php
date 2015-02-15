@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -45,6 +45,7 @@ $language_array = Array(
 	'messenger'=>'messenger',
 	'no_description'=>'no description available',
 	'no_userpic'=>'no userpic available!',
+	'no_entries'=>'no entries available',
 	'position'=>'Position',
 	'results'=>'results',
 	'show_details'=>'show details',

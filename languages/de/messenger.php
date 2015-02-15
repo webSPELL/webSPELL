@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -31,7 +31,7 @@ $language_array = Array(
 
 	'add_buddylist'=>'zu Freundesliste hinzufügen',
 	'adminoptions'=>'Admin-Optionen:',
-	'bbcode'=>'BBCode ist <b><u>AN</u></b>',
+	'bbcode'=>'BBCode ist <b><span class="underline">AN</span></b>',
 	'by'=>'von',
 	'date'=>'Datum:',
 	'delete'=>'Löschen',
@@ -41,7 +41,7 @@ $language_array = Array(
 	'execute'=>'Ausführen',
 	'formation'=>'Formatierung',
 	'from'=>'von:',
-	'html'=>'HTML ist <b><u>AUS</u></b>',
+	'html'=>'HTML ist <b><span class="underline">AUS</span></b>',
 	'ignore'=>'Benutzer ignorieren',
 	'incoming'=>'Posteingang',
 	'mark_not_viewed'=>'Als ungelesen markieren',
@@ -68,7 +68,7 @@ $language_array = Array(
 	'sendeachmember'=>'Jedem Clanmitglied senden',
 	'sendeachuser'=>'Jedem Benutzer senden',
 	'show'=>'Zeige',
-	'smilies'=>'Smilies sind <b><u>AN</u></b>',
+	'smilies'=>'Smilies sind <b><span class="underline">AN</span></b>',
 	'sort'=>'Sortierung:',
 	'title'=>'Betreff',
 	'your_message'=>'Deine Nachricht:',

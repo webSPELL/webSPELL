@@ -63,7 +63,7 @@ form {
     padding: 0;
 }
 
-input, textarea, select {
+input, textarea, select, a.input {
     border: 1px solid #CCCCCC;
     background-color: #F6F6F6;
     font: normal 11px Verdana;
@@ -73,14 +73,18 @@ input, textarea, select {
 input[type="radio"], input[type="checkbox"],
 input[type="radio"]:focus, input[type="radio"]:active,
 input[type="checkbox"]:focus, input[type="checkbox"]:active {
-    border: 0px;
+    border: 0;
 }
 
-input:active, textarea:active, select:active,
-input:focus, textarea:focus, select:focus {
+input:active, textarea:active, select:active, a.input:active,
+input:focus, textarea:focus, select:focus, a.input:focus {
     border: 1px solid #666666;
     background-color: #EAF7FD;
     color: #666666;
+}
+
+a.input {
+    padding: 2px 6px 3px 6px;
 }
 
 .pad {
@@ -92,8 +96,7 @@ input:focus, textarea:focus, select:focus {
     margin: 0;
     padding: 0 3px;
     color: #4E6C86;
-    background-image: url(images/title.jpg);
-    background-repeat: repeat;
+    background: url(images/title.jpg) repeat;
 }
 
 .td_head {
@@ -148,8 +151,7 @@ input:focus, textarea:focus, select:focus {
 #links a {
     display: block;
     height: 92px;
-    background-position: right bottom;
-    background-repeat: no-repeat;
+    background: no-repeat right bottom;
 }
 
 #links ul li:hover a {

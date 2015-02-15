@@ -1,31 +1,31 @@
 <form method="post" action="index.php?site=usergallery" enctype="multipart/form-data">
 
-	<div class="form-group">
-		<label for="galleryname">%name%</label>
-		<input type="text" name="name" id="galleryname" class="form-control">
-	</div>
+    <div class="form-group">
+        <label for="galleryname">%name%</label>
+        <input type="text" name="name" id="galleryname" class="form-control">
+    </div>
 
-	<div class="form-group">
-		<label for="galleryname">%comment%</label>
-		<input type="text" name="comment" size="50" maxlength="255" class="form-control">
-	</div>
+    <div class="form-group">
+        <label for="galleryname">%comment%</label>
+        <input type="text" name="comment" size="50" maxlength="255" class="form-control">
+    </div>
 
-	<div class="form-group">
-		<label for="gallerycomments">%visitor_comments%</label>
-		<select name="comments" id="gallerycomments" class="form-control">
-			<option value="0">%disable_comments%</option>
-			<option value="1">%enable_user_comments%</option>
-			<option value="2" selected="selected">%enable_visitor_comments%</option>
-		</select>
-	</div>
+    <div class="form-group">
+        <label for="gallerycomments">%visitor_comments%</label>
+        <select name="comments" id="gallerycomments" class="form-control">
+            <option value="0">%disable_comments%</option>
+            <option value="1">%enable_user_comments%</option>
+            <option value="2" selected="selected">%enable_visitor_comments%</option>
+        </select>
+    </div>
 
-	<div class="form-group">
-		<label for="galleryname">%picture%</label>
-		<input name="picture" type="file" class="form-control">
-	</div>
+    <div class="form-group">
+        <label for="galleryname">%picture%</label>
+        <input name="picture" type="file" class="form-control">
+    </div>
 
-	<div class="text-right">
-		<input type="hidden" name="galleryID" value="$id">
-		<input type="submit" name="saveform" value="%add_picture%" class="btn btn-primary">
-	</div>
+    <div class="text-right">
+        <input type="hidden" name="galleryID" value="$id">
+        <input type="submit" name="saveform" value="%add_picture%" class="btn btn-primary">
+    </div>
 </form>

@@ -1,34 +1,41 @@
 <div class="panel panel-default">
-	<div class="panel-heading">
-		<h3 class="panel-title">%new_banner%</h3>
-	</div>
-	<div class="panel-body">
-		<form action="index.php?site=linkus" method="post" enctype="multipart/form-data" role="form" class="form-horizontal">
+    <div class="panel-heading">
+        <h3 class="panel-title">%new_banner%</h3>
+    </div>
+    <div class="panel-body">
+        <form
+            action="index.php?site=linkus"
+            method="post"
+            enctype="multipart/form-data"
+            role="form"
+            class="form-horizontal">
 
-			<!-- Name -->
-			<div class="form-group">
-				<label for="inputName" class="col-xs-12 col-md-3 control-label">%name%:</label>
-				<div class="col-xs-12 col-md-9">
-					<input type="text" name="name" class="form-control" id="inputName">
-				</div>
-			</div>
+            <!-- Name -->
+            <div class="form-group">
+                <label for="input-name" class="col-xs-12 col-md-3 control-label">%name%:</label>
 
-			<!-- Banner -->
-			<div class="form-group">
-				<label for="inputBanner" class="col-xs-12 col-md-3 control-label">%banner%:</label>
-				<div class="col-xs-12 col-md-9">
-					<input type="file" name="banner" id="inputBanner">
-				</div>
-			</div>
+                <div class="col-xs-12 col-md-9">
+                    <input type="text" name="name" class="form-control" id="input-name">
+                </div>
+            </div>
 
-			<!-- Submit button -->
-			<div class="form-group">
-				<div class="col-xs-12 col-md-9 col-xs-offset-12 col-md-offset-3">
-					<a href="index.php?site=linkus" class="btn btn-default btn-sm" role="button">%back%</a>
-					<button type="submit" name="save" class="btn btn-primary btn-sm">%save_banner%</button>
-				</div>
-			</div>
+            <!-- Banner -->
+            <div class="form-group">
+                <label for="input-banner" class="col-xs-12 col-md-3 control-label">%banner%:</label>
 
-		</form>
-	</div>
+                <div class="col-xs-12 col-md-9">
+                    <input type="file" name="banner" id="input-banner">
+                </div>
+            </div>
+
+            <!-- Submit button -->
+            <div class="form-group">
+                <div class="col-xs-12 col-md-9 col-xs-offset-12 col-md-offset-3">
+                    <a href="index.php?site=linkus" class="btn btn-default btn-sm" role="button">%back%</a>
+                    <button type="submit" name="save" class="btn btn-primary btn-sm">%save_banner%</button>
+                </div>
+            </div>
+
+        </form>
+    </div>
 </div>

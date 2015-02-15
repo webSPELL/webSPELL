@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -45,7 +45,6 @@ $language_array = Array(
   'pic_of_the_moment'=>'slika trenutka',
   'poll'=>'anketa',
   'random_user'=>'nasumični korisnik',
-  'scrolltext'=>'scrolltekst',
   'server'=>'serveri',
   'shoutbox'=>'shoutbox',
   'sponsors'=>'sponzori',

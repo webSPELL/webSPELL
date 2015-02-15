@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -74,7 +74,7 @@ $language_array = Array(
 	'listguide'=>'Írj be egy \'1\'-t a számozott listához, egy \'a\' betűt az betűzött listához, vagy egy \'[Alt Gr+Q]\'-t a pontozott listához',
 	'listpoint'=>'Adj meg egy lista elemet. A lista befejezéséhez hagyd üresen a mezőt, vagy klikkelj a \'Cancel\' gombra.',
 	'addcode'=>'Pozícióban illeszd be',
-	'readMore'=>'tovább olvas',
+	'read_more'=>'tovább olvas',
 	'mc_you_have'=>'Van neked',
 	'mc_new_messages'=>'új üzenet(ek). El akarod most olvasni őket?',
 	'na'=>'nem elérhető',

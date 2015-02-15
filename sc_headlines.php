@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -25,7 +25,7 @@
 ##########################################################################
 */
 
-if (isset($rubricID) and $rubricID) {
+if (isset($rubricID) && $rubricID) {
     $only = "AND rubric='" . $rubricID . "'";
 } else {
     $only = '';
@@ -59,7 +59,7 @@ if (mysqli_num_rows($ergebnis)) {
             $bg2 = BG_4;
         }
 
-        $message_array = [];
+        $message_array = array();
         $query =
             safe_query(
                 "SELECT
@@ -72,16 +72,16 @@ if (mysqli_num_rows($ergebnis)) {
                     " . PREFIX . "countries c ON
                     c.short = n.language
                 WHERE
-                    n.newsID='" . (int)$ds[ 'newsID' ]
+                    n.newsID='" . (int)$ds[ 'newsID' ]."'"
             );
         while ($qs = mysqli_fetch_array($query)) {
-            $message_array[ ] = [
+            $message_array[ ] = array(
                 'lang' => $qs[ 'language' ],
                 'headline' => $qs[ 'headline' ],
                 'message' => $qs[ 'content' ],
                 'country' => $qs[ 'country' ],
                 'countryShort' => $qs[ 'countryCode' ]
-            ];
+            );
         }
         $showlang = select_language($message_array);
 
@@ -107,7 +107,13 @@ if (mysqli_num_rows($ergebnis)) {
 
         $headlines = clearfromtags($headlines);
 
-        eval ("\$sc_headlines = \"" . gettemplate("sc_headlines") . "\";");
+        $data_array = array();
+        $data_array['$date'] = $date;
+        $data_array['$time'] = $time;
+        $data_array['$news_id'] = $news_id;
+        $data_array['$lang'] = $lang;
+        $data_array['$headlines'] = $headlines;
+        $sc_headlines = $GLOBALS["_template"]->replaceTemplate("sc_headlines", $data_array);
         echo $sc_headlines;
 
         $n++;

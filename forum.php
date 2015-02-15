@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -61,13 +61,14 @@ function forum_stats()
     // TODAY birthdays
     $ergebnis = safe_query(
         "SELECT
-          nickname, userID, YEAR(CURRENT_DATE()) -YEAR(birthday) 'age'
+            nickname, userID, YEAR(CURRENT_DATE()) -YEAR(birthday) 'age'
         FROM
-          " . PREFIX . "user
+            " . PREFIX . "user
         WHERE
-          DATE_FORMAT(`birthday`, '%m%d') = DATE_FORMAT(NOW(), '%m%d')"
+            DATE_FORMAT(`birthday`, '%m%d') = DATE_FORMAT(NOW(), '%m%d')"
     );
     $n = 0;
+    $birthdays = '';
     while ($db = mysqli_fetch_array($ergebnis)) {
         $n++;
         $years = $db[ 'age' ];
@@ -87,21 +88,22 @@ function forum_stats()
     $ergebnis =
         safe_query(
             "SELECT
-              nickname, userID, DATE_FORMAT(FROM_DAYS(TO_DAYS(NOW()) - TO_DAYS(birthday)), '%y') + 1 AS age
+                nickname, userID, DATE_FORMAT(FROM_DAYS(TO_DAYS(NOW()) - TO_DAYS(birthday)), '%y') + 1 AS age
             FROM
-              " . PREFIX . "user
+                " . PREFIX . "user
             WHERE
-              IF(DAYOFYEAR(NOW())<=358,((DAYOFYEAR(birthday)>DAYOFYEAR(NOW()))
+                IF(DAYOFYEAR(NOW())<=358,((DAYOFYEAR(birthday)>DAYOFYEAR(NOW()))
             AND
-              (DAYOFYEAR(birthday)<=DAYOFYEAR(DATE_ADD(NOW(), INTERVAL 7 DAY)))),(DAYOFYEAR(BIRTHDAY)>DAYOFYEAR(NOW())
+                (DAYOFYEAR(birthday)<=DAYOFYEAR(DATE_ADD(NOW(), INTERVAL 7 DAY)))),(DAYOFYEAR(BIRTHDAY)>DAYOFYEAR(NOW())
             OR
-              DAYOFYEAR(birthday)<=DAYOFYEAR(DATE_ADD(NOW(), INTERVAL 7 DAY))))
+                DAYOFYEAR(birthday)<=DAYOFYEAR(DATE_ADD(NOW(), INTERVAL 7 DAY))))
             AND
-              birthday !='0000-00-00 00:00:00'
+                birthday !='0000-00-00 00:00:00'
             ORDER BY
-              `birthday` ASC"
+                `birthday` ASC"
         );
     $n = 0;
+    $birthweek = '';
     while ($db = mysqli_fetch_array($ergebnis)) {
         $n++;
         $years = $db[ 'age' ];
@@ -136,17 +138,17 @@ function forum_stats()
 
     $ergebnis = safe_query(
         "SELECT
-          w.*, u.nickname
+            w.*, u.nickname
         FROM
-          " . PREFIX . "whoisonline w
+            " . PREFIX . "whoisonline w
         LEFT JOIN
-          " . PREFIX . "user u
+            " . PREFIX . "user u
         ON
-          u.userID = w.userID
+            u.userID = w.userID
         WHERE
-          w.ip=''
+            w.ip=''
         ORDER BY
-          u.nickname"
+            u.nickname"
     );
     $user_names = "";
     if ($user) {
@@ -166,7 +168,8 @@ function forum_stats()
                     '</b></a>';
             } else {
                 $user_names =
-                    '<a href="index.php?site=profile&amp;id=' . $ds[ 'userID' ] . '"><b>' . $nickname . '</b></a>';
+                    '<a href="index.php?site=profile&amp;id=' . $ds[ 'userID' ] . '"><strong>' .
+                    $nickname . '</strong></a>';
             }
             $n++;
         }
@@ -186,8 +189,20 @@ function forum_stats()
     $maxonline = $dm[ 'maxonline' ];
 
     $newestmember =
-        '<a href="index.php?site=profile&amp;id=' . $dn[ 'userID' ] . '"><b>' . $dn[ 'nickname' ] . '</b></a>';
-    eval ("\$forum_stats = \"" . gettemplate("forum_stats") . "\";");
+        '<a href="index.php?site=profile&amp;id=' . $dn[ 'userID' ] . '"><strong>' .
+        $dn[ 'nickname' ] . '</strong></a>';
+    $data_array = array();
+    $data_array['$birthdays'] = $birthdays;
+    $data_array['$birthweek'] = $birthweek;
+    $data_array['$user_on'] = $user_on;
+    $data_array['$guests_on'] = $guests_on;
+    $data_array['$maxonline'] = $maxonline;
+    $data_array['$user_names'] = $user_names;
+    $data_array['$posts'] = $posts;
+    $data_array['$topics'] = $topics;
+    $data_array['$registered'] = $registered;
+    $data_array['$newestmember'] = $newestmember;
+    $forum_stats = $GLOBALS["_template"]->replaceTemplate("forum_stats", $data_array);
     echo $forum_stats;
 }
 
@@ -207,22 +222,20 @@ function boardmain()
     $bghead = BGHEAD;
     $bgcat = BGCAT;
 
-    eval ("\$title_messageboard = \"" . gettemplate("title_messageboard") . "\";");
+    $title_messageboard = $GLOBALS["_template"]->replaceTemplate("title_messageboard", array());
     echo $title_messageboard;
 
     if ($action == "markall") {
         safe_query("UPDATE " . PREFIX . "user SET topics='|' WHERE userID='$userID'");
     }
 
-    eval ("\$forum_main_head = \"" . gettemplate("forum_main_head") . "\";");
+    $forum_main_head = $GLOBALS["_template"]->replaceTemplate("forum_main_head", array());
     echo $forum_main_head;
 
     // KATEGORIEN
     $sql_where = '';
-    if (isset($_GET[ 'cat' ])) {
-        if (is_numeric($_GET[ 'cat' ])) {
-            $sql_where = " WHERE catID='" . $_GET[ 'cat' ] . "'";
-        }
+    if (isset($_GET[ 'cat' ]) && is_numeric($_GET[ 'cat' ])) {
+        $sql_where = " WHERE catID='" . (int)$_GET[ 'cat' ] . "'";
     }
     $kath = safe_query(
         "SELECT catID, name, info, readgrps FROM " . PREFIX . "forum_categories" . $sql_where .
@@ -250,7 +263,10 @@ function boardmain()
                 continue;
             }
         }
-        eval ("\$forum_main_kath = \"" . gettemplate("forum_main_kath") . "\";");
+        $data_array = array();
+        $data_array['$kathname'] = $kathname;
+        $data_array['$info'] = $info;
+        $forum_main_kath = $GLOBALS["_template"]->replaceTemplate("forum_main_kath", $data_array);
         echo $forum_main_kath;
 
         // BOARDS MIT KATEGORIE
@@ -261,7 +277,6 @@ function boardmain()
         $i = 1;
 
         while ($db = mysqli_fetch_array($boards)) {
-
             if ($i % 2) {
                 $bg1 = BG_1;
                 $bg2 = BG_2;
@@ -273,7 +288,7 @@ function boardmain()
             $ismod = ismoderator($userID, $db[ 'boardID' ]);
             $usergrp = 0;
             $writer = 'ro-';
-            if ($db[ 'writegrps' ] != "" and !$ismod) {
+            if ($db[ 'writegrps' ] != "" && !$ismod) {
                 $writegrps = explode(";", $db[ 'writegrps' ]);
                 foreach ($writegrps as $value) {
                     if (isinusergrp($value, $userID)) {
@@ -285,7 +300,7 @@ function boardmain()
             } else {
                 $writer = '';
             }
-            if ($db[ 'readgrps' ] != "" and !$usergrp and !$ismod) {
+            if ($db[ 'readgrps' ] != "" && !$usergrp && !$ismod) {
                 $readgrps = explode(";", $db[ 'readgrps' ]);
                 foreach ($readgrps as $value) {
                     if (isinusergrp($value, $userID)) {
@@ -301,8 +316,8 @@ function boardmain()
             $board = $db[ 'boardID' ];
             $anztopics = $db[ 'topics' ];
             $anzposts = $db[ 'posts' ];
-            $boardname = $db[ 'name' ];
-            $boardname = '<a href="index.php?site=forum&amp;board=' . $board . '"><b>' . $boardname . '</b></a>';
+            $boardname = '<a href="index.php?site=forum&amp;board=' . $board . '"><strong>' .
+                $db[ 'name' ] . '</strong></a>';
 
             if ($db[ 'info' ]) {
                 $boardinfo = $db[ 'info' ];
@@ -326,11 +341,9 @@ function boardmain()
                 $maxtopics
             );
             $n = 1;
-            $board_topics = [];
+            $board_topics = array();
             while ($lp = mysqli_fetch_assoc($q)) {
-
                 if ($n == 1) {
-
                     $date = getformatdate($lp[ 'lastdate' ]);
                     $today = getformatdate(time());
                     $yesterday = getformatdate(time() - 3600 * 24);
@@ -339,8 +352,6 @@ function boardmain()
                         $date = $_language->module[ 'today' ];
                     } elseif ($date == $yesterday && $date < $today) {
                         $date = $_language->module[ 'yesterday' ];
-                    } else {
-                        $date = $date;
                     }
 
                     $time = getformattime($lp[ 'lastdate' ]);
@@ -369,13 +380,11 @@ function boardmain()
             $found = false;
 
             if ($userID) {
-
                 $gv = mysqli_fetch_array(safe_query("SELECT topics FROM " . PREFIX . "user WHERE userID='$userID'"));
                 $array = explode("|", $gv[ 'topics' ]);
 
                 foreach ($array as $split) {
-
-                    if ($split != "" and in_array($split, $board_topics)) {
+                    if ($split != "" && in_array($split, $board_topics)) {
                         $found = true;
                         break;
                     }
@@ -390,7 +399,19 @@ function boardmain()
                     $_language->module[ 'no_new_posts' ] . '">';
             }
 
-            eval ("\$forum_main_board = \"" . gettemplate("forum_main_board") . "\";");
+            $data_array = array();
+            $data_array['$icon'] = $icon;
+            $data_array['$boardname'] = $boardname;
+            $data_array['$boardinfo'] = $boardinfo;
+            $data_array['$moderators'] = $moderators;
+            $data_array['$anztopics'] = $anztopics;
+            $data_array['$anzposts'] = $anzposts;
+            $data_array['$postlink'] = $postlink;
+            $data_array['$date'] = $date;
+            $data_array['$time'] = $time;
+            $data_array['$poster'] = $poster;
+            $data_array['$member'] = $member;
+            $forum_main_board = $GLOBALS["_template"]->replaceTemplate("forum_main_board", $data_array);
             echo $forum_main_board;
 
             $i++;
@@ -401,7 +422,6 @@ function boardmain()
     $boards = safe_query("SELECT * FROM " . PREFIX . "forum_boards WHERE category='0' ORDER BY sort");
     $i = 1;
     while ($db = mysqli_fetch_array($boards)) {
-
         if ($i % 2) {
             $bg1 = BG_1;
             $bg2 = BG_2;
@@ -413,7 +433,7 @@ function boardmain()
         $usergrp = 0;
         $writer = 'ro-';
         $ismod = ismoderator($userID, $db[ 'boardID' ]);
-        if ($db[ 'writegrps' ] != "" and !$ismod) {
+        if ($db[ 'writegrps' ] != "" && !$ismod) {
             $writegrps = explode(";", $db[ 'writegrps' ]);
             foreach ($writegrps as $value) {
                 if (isinusergrp($value, $userID)) {
@@ -425,7 +445,7 @@ function boardmain()
         } else {
             $writer = '';
         }
-        if ($db[ 'readgrps' ] != "" and !$usergrp and !$ismod) {
+        if ($db[ 'readgrps' ] != "" && !$usergrp && !$ismod) {
             $readgrps = explode(";", $db[ 'readgrps' ]);
             foreach ($readgrps as $value) {
                 if (isinusergrp($value, $userID)) {
@@ -443,7 +463,8 @@ function boardmain()
         $anzposts = $db[ 'posts' ];
 
         $boardname = $db[ 'name' ];
-        $boardname = '<a href="index.php?site=forum&amp;board=' . $db[ 'boardID' ] . '"><b>' . $boardname . '</b></a>';
+        $boardname = '<a href="index.php?site=forum&amp;board=' . $db[ 'boardID' ] . '"><strong>' .
+            $boardname . '</strong></a>';
 
         $boardinfo = '';
         if ($db[ 'info' ]) {
@@ -454,16 +475,20 @@ function boardmain()
             $moderators = $_language->module[ 'moderated_by' ] . ': ' . $moderators;
         }
 
+        $postlink = '';
+        $date = '';
+        $time = '';
+        $poster = '';
+        $member = '';
+
         $q = safe_query(
             "SELECT topicID, lastdate, lastposter, replys FROM " . PREFIX . "forum_topics WHERE boardID='" .
             $db[ 'boardID' ] . "' AND moveID='0' ORDER BY lastdate DESC LIMIT 0," . $maxtopics
         );
         $n = 1;
-        $board_topics = [];
+        $board_topics = array();
         while ($lp = mysqli_fetch_assoc($q)) {
-
             if ($n == 1) {
-
                 $date = getformatdate($lp[ 'lastdate' ]);
                 $today = getformatdate(time());
                 $yesterday = getformatdate(time() - 3600 * 24);
@@ -472,8 +497,6 @@ function boardmain()
                     $date = $_language->module[ 'today' ];
                 } elseif ($date == $yesterday && $date < $today) {
                     $date = $_language->module[ 'yesterday' ];
-                } else {
-                    $date = $date;
                 }
 
                 $time = getformattime($lp[ 'lastdate' ]);
@@ -489,7 +512,7 @@ function boardmain()
                     ceil(($lp[ 'replys' ] + 1) / $maxposts);
             }
             if ($userID) {
-                $board_topics[ ] = $ds[ 'topicID' ];
+                $board_topics[ ] = $lp[ 'topicID' ];
             } else {
                 break;
             }
@@ -501,13 +524,11 @@ function boardmain()
         $found = false;
 
         if ($userID) {
-
             $gv = mysqli_fetch_array(safe_query("SELECT topics FROM " . PREFIX . "user WHERE userID='$userID'"));
             $array = explode("|", $gv[ 'topics' ]);
 
             foreach ($array as $split) {
-
-                if ($split != "" and in_array($split, $board_topics)) {
+                if ($split != "" && in_array($split, $board_topics)) {
                     $found = true;
                     break;
                 }
@@ -523,17 +544,29 @@ function boardmain()
                 $_language->module[ 'no_new_posts' ] . '">';
         }
 
-        eval ("\$forum_main_board = \"" . gettemplate("forum_main_board") . "\";");
+        $data_array = array();
+        $data_array['$icon'] = $icon;
+        $data_array['$boardname'] = $boardname;
+        $data_array['$boardinfo'] = $boardinfo;
+        $data_array['$moderators'] = $moderators;
+        $data_array['$anztopics'] = $anztopics;
+        $data_array['$anzposts'] = $anzposts;
+        $data_array['$postlink'] = $postlink;
+        $data_array['$date'] = $date;
+        $data_array['$time'] = $time;
+        $data_array['$poster'] = $poster;
+        $data_array['$member'] = $member;
+        $forum_main_board = $GLOBALS["_template"]->replaceTemplate("forum_main_board", $data_array);
         echo $forum_main_board;
 
         $i++;
     }
 
-    eval ("\$forum_main_foot = \"" . gettemplate("forum_main_foot") . "\";");
+    $forum_main_foot = $GLOBALS["_template"]->replaceTemplate("forum_main_foot", array());
     echo $forum_main_foot;
 
     if ($loggedin) {
-        eval ("\$forum_main_legend = \"" . gettemplate("forum_main_legend") . "\";");
+        $forum_main_legend = $GLOBALS["_template"]->replaceTemplate("forum_main_legend", array());
         echo $forum_main_legend;
     }
 
@@ -557,16 +590,16 @@ function showboard($board)
     $bghead = BGHEAD;
     $bgcat = BGCAT;
 
-    eval ("\$title_messageboard = \"" . gettemplate("title_messageboard") . "\";");
+    $title_messageboard = $GLOBALS["_template"]->replaceTemplate("title_messageboard", array());
     echo $title_messageboard;
 
     $alle = safe_query("SELECT topicID FROM " . PREFIX . "forum_topics WHERE boardID='$board'");
     $gesamt = mysqli_num_rows($alle);
 
-    if ($action == "markall" and $userID) {
+    if ($action == "markall" && $userID) {
         $gv = mysqli_fetch_array(safe_query("SELECT topics FROM " . PREFIX . "user WHERE userID='$userID'"));
 
-        $board_topics = [];
+        $board_topics = array();
         while ($ds = mysqli_fetch_array($alle)) {
             $board_topics[ ] = $ds[ 'topicID' ];
         }
@@ -575,7 +608,7 @@ function showboard($board)
         $new = '|';
 
         foreach ($array as $split) {
-            if ($split != "" and !in_array($split, $board_topics)) {
+            if ($split != "" && !in_array($split, $board_topics)) {
                 $new .= $split . '|';
             }
         }
@@ -594,10 +627,9 @@ function showboard($board)
         $page_link = makepagelink("index.php?site=forum&amp;board=$board", $page, $pages);
     }
 
-    if ($page == 1) {
+    if ($page <= 1) {
         $start = 0;
-    }
-    if ($page > 1) {
+    } else {
         $start = $page * $max - $max;
     }
 
@@ -608,11 +640,11 @@ function showboard($board)
     $writer = 0;
 
     $ismod = false;
-    if (ismoderator($userID, $board) or isforumadmin($userID)) {
+    if (ismoderator($userID, $board) || isforumadmin($userID)) {
         $ismod = true;
     }
 
-    if ($db[ 'writegrps' ] != "" and !$ismod) {
+    if ($db[ 'writegrps' ] != "" && !$ismod) {
         $writegrps = explode(";", $db[ 'writegrps' ]);
         foreach ($writegrps as $value) {
             if (isinusergrp($value, $userID)) {
@@ -624,7 +656,7 @@ function showboard($board)
     } else {
         $writer = 1;
     }
-    if ($db[ 'readgrps' ] != "" and !$usergrp and !$ismod) {
+    if ($db[ 'readgrps' ] != "" && !$usergrp && !$ismod) {
         $readgrps = explode(";", $db[ 'readgrps' ]);
         foreach ($readgrps as $value) {
             if (isinusergrp($value, $userID)) {
@@ -644,14 +676,15 @@ function showboard($board)
         $moderators = '(' . $_language->module[ 'moderated_by' ] . ': ' . $moderators . ')';
     }
 
-    $actions = '<a href="index.php?site=search" class="btn btn-default"><i class="icon-search"></i> Search</a>';
+    $actions = '<a href="index.php?site=search" class="btn btn-default">
+                <span class="glyphicon glyphicon-search"></span> Search</a>';
     if ($loggedin) {
         $mark = '<a href="index.php?site=forum&amp;board=' . $board . '&amp;action=markall">' .
             $_language->module[ 'mark_topics_read' ] . '</a>';
         if ($writer) {
-            $actions .= ' <a href="index.php?site=forum&amp;addtopic=true&amp;board=' . $board .
-                '" class="btn btn-primary"><i class="icon-comment-alt"></i> ' . $_language->module[ 'new_topic' ] .
-                '</a>';
+            $actions .= ' <a href="index.php?site=forum&amp;addtopic=true&amp;board=' .
+                $board . '" class="btn btn-primary"><span class="glyphicon glyphicon-comment"></span> ' .
+                $_language->module[ 'new_topic' ] . '</a>';
         }
     } else {
         $mark = '';
@@ -659,7 +692,12 @@ function showboard($board)
 
     $cat = $db[ 'category' ];
     $kathname = getcategoryname($cat);
-    eval ("\$forum_head = \"" . gettemplate("forum_head") . "\";");
+    $data_array = array();
+    $data_array['$cat'] = $cat;
+    $data_array['$kathname'] = $kathname;
+    $data_array['$boardname'] = $boardname;
+    $data_array['$moderators'] = $moderators;
+    $forum_head = $GLOBALS["_template"]->replaceTemplate("forum_head", $data_array);
     echo $forum_head;
 
     // TOPICS
@@ -673,7 +711,10 @@ function showboard($board)
     $i = 1;
     unset($link);
     if ($anztopics) {
-        eval ("\$forum_topics_head = \"" . gettemplate("forum_topics_head") . "\";");
+        $data_array = array();
+        $data_array['$page_link'] = $page_link;
+        $data_array['$actions'] = $actions;
+        $forum_topics_head = $GLOBALS["_template"]->replaceTemplate("forum_topics_head", $data_array);
         echo $forum_topics_head;
         while ($dt = mysqli_fetch_array($topics)) {
             if ($i % 2) {
@@ -737,11 +778,12 @@ function showboard($board)
             } elseif ($dt[ 'moveID' ]) {
                 $folder = '<img src="images/icons/topicicons/pfeil.gif" alt="' . $_language->module[ 'moved' ] . '">';
             } elseif ($userID) {
-
-                $is_unread = mysqli_num_rows(safe_query(
-                    "SELECT userID FROM " . PREFIX . "user WHERE topics LIKE '%|" .
-                    $dt[ 'topicID' ] . "|%' AND userID='" . $userID . "'"
-                ));
+                $is_unread = mysqli_num_rows(
+                    safe_query(
+                        "SELECT userID FROM " . PREFIX . "user WHERE topics LIKE '%|" .
+                        $dt[ 'topicID' ] . "|%' AND userID='" . $userID . "'"
+                    )
+                );
 
                 if ($is_unread) {
                     if ($dt[ 'replys' ] > 15 || $dt[ 'views' ] > 150) {
@@ -771,7 +813,7 @@ function showboard($board)
             $poster =
                 '<a href="index.php?site=profile&amp;id=' . $dt[ 'userID' ] . '">' . getnickname($dt[ 'userID' ]) .
                 '</a>';
-            if (isset($posterID) and isclanmember($posterID)) {
+            if (isset($posterID) && isclanmember($posterID)) {
                 $member1 = ' <img src="images/icons/member.gif" alt="' . $_language->module[ 'clanmember' ] . '">';
             } else {
                 $member1 = '';
@@ -780,7 +822,8 @@ function showboard($board)
             $replys = '0';
             $views = '0';
 
-            if ($dt[ 'moveID' ]) { // MOVED TOPIC
+            if ($dt[ 'moveID' ]) {
+                // MOVED TOPIC
                 $move = safe_query("SELECT * FROM " . PREFIX . "forum_topics WHERE topicID='" . $dt[ 'moveID' ] . "'");
                 $dm = mysqli_fetch_array($move);
 
@@ -811,7 +854,8 @@ function showboard($board)
                 }
                 $link = '<a href="index.php?site=forum_topic&amp;topic=' . $dt[ 'moveID' ] . '"><b>' .
                     $_language->module[ 'moved' ] . ': ' . $topictitle . '</b></a>';
-            } else {    // NO MOVED TOPIC
+            } else {
+                // NO MOVED TOPIC
                 if ($dt[ 'replys' ]) {
                     $replys = $dt[ 'replys' ];
                 }
@@ -841,7 +885,19 @@ function showboard($board)
                     '</b></a>';
             }
 
-            eval ("\$forum_topics_content = \"" . gettemplate("forum_topics_content") . "\";");
+            $data_array = array();
+            $data_array['$folder'] = $folder;
+            $data_array['$icon'] = $icon;
+            $data_array['$link'] = $link;
+            $data_array['$topicpage_link'] = $topicpage_link;
+            $data_array['$poster'] = $poster;
+            $data_array['$member1'] = $member1;
+            $data_array['$replys'] = $replys;
+            $data_array['$views'] = $views;
+            $data_array['$date'] = $date;
+            $data_array['$lastposter'] = $lastposter;
+            $data_array['$member'] = $member;
+            $forum_topics_content = $GLOBALS["_template"]->replaceTemplate("forum_topics_content", $data_array);
             echo $forum_topics_content;
             $i++;
             unset($topicpage_link);
@@ -852,15 +908,19 @@ function showboard($board)
             unset($time);
             unset($link);
         }
-        eval ("\$forum_topics_foot = \"" . gettemplate("forum_topics_foot") . "\";");
+        $forum_topics_foot = $GLOBALS["_template"]->replaceTemplate("forum_topics_foot", array());
         echo $forum_topics_foot;
     }
 
-    eval ("\$forum_actions = \"" . gettemplate("forum_actions") . "\";");
+    $data_array = array();
+    $data_array['$page_link'] = $page_link;
+    $data_array['$mark'] = $mark;
+    $data_array['$actions'] = $actions;
+    $forum_actions = $GLOBALS["_template"]->replaceTemplate("forum_actions", $data_array);
     echo $forum_actions;
 
     if ($loggedin) {
-        eval ("\$forum_topics_legend = \"" . gettemplate("forum_topics_legend") . "\";");
+        $forum_topics_legend = $GLOBALS["_template"]->replaceTemplate("forum_topics_legend", array());
         echo $forum_topics_legend;
     }
 
@@ -871,11 +931,10 @@ function showboard($board)
     unset($page_link);
 }
 
-if (isset($_POST[ 'submit' ]) || isset($_POST[ 'movetopic' ]) || isset($_GET[ 'addtopic' ]) ||
-    isset($_POST[ 'addtopic' ]) || (isset($_GET[ 'action' ]) and $_GET[ 'action' ] == "admin-action") ||
-    isset($_POST[ 'admaction' ])
+if (isset($_POST[ 'submit' ]) || isset($_POST[ 'movetopic' ]) || isset($_GET[ 'addtopic' ])
+    || isset($_POST[ 'addtopic' ]) || (isset($_GET[ 'action' ]) && $_GET[ 'action' ] == "admin-action")
+    || isset($_POST[ 'admaction' ])
 ) {
-
     if (!isset($_POST[ 'admaction' ])) {
         $_POST[ 'admaction' ] = '';
     }
@@ -889,7 +948,7 @@ if (isset($_POST[ 'submit' ]) || isset($_POST[ 'movetopic' ]) || isset($_GET[ 'a
         $topicID = (int)$_POST[ 'topicID' ];
         $board = (int)$_POST[ 'board' ];
 
-        if (!isforumadmin($userID) and !ismoderator($userID, $board)) {
+        if (!isforumadmin($userID) && !ismoderator($userID, $board)) {
             die($_language->module[ 'no_access' ]);
         }
 
@@ -904,7 +963,7 @@ if (isset($_POST[ 'submit' ]) || isset($_POST[ 'movetopic' ]) || isset($_GET[ 'a
         $topicID = (int)$_POST[ 'topicID' ];
         $board = (int)$_POST[ 'board' ];
 
-        if (!isforumadmin($userID) and !ismoderator($userID, $board)) {
+        if (!isforumadmin($userID) && !ismoderator($userID, $board)) {
             die($_language->module[ 'no_access' ]);
         }
 
@@ -919,15 +978,17 @@ if (isset($_POST[ 'submit' ]) || isset($_POST[ 'movetopic' ]) || isset($_GET[ 'a
         $topicID = (int)$_POST[ 'topicID' ];
         $board = (int)$_POST[ 'board' ];
 
-        if (!isforumadmin($userID) and !ismoderator($userID, $board)) {
+        if (!isforumadmin($userID) && !ismoderator($userID, $board)) {
             die($_language->module[ 'no_access' ]);
         }
 
         $numposts =
-            mysqli_num_rows(safe_query(
-                "SELECT postID FROM " . PREFIX . "forum_posts WHERE topicID='" . $topicID .
-                "'"
-            ));
+            mysqli_num_rows(
+                safe_query(
+                    "SELECT postID FROM " . PREFIX . "forum_posts WHERE topicID='" . $topicID .
+                    "'"
+                )
+            );
         $numposts--;
 
         safe_query(
@@ -947,7 +1008,7 @@ if (isset($_POST[ 'submit' ]) || isset($_POST[ 'movetopic' ]) || isset($_GET[ 'a
         $topicID = (int)$_POST[ 'topicID' ];
         $board = (int)$_POST[ 'board' ];
 
-        if (!isforumadmin($userID) and !ismoderator($userID, $board)) {
+        if (!isforumadmin($userID) && !ismoderator($userID, $board)) {
             die($_language->module[ 'no_access' ]);
         }
 
@@ -962,7 +1023,7 @@ if (isset($_POST[ 'submit' ]) || isset($_POST[ 'movetopic' ]) || isset($_GET[ 'a
         $topicID = (int)$_POST[ 'topicID' ];
         $board = (int)$_POST[ 'board' ];
 
-        if (!isforumadmin($userID) and !ismoderator($userID, $board)) {
+        if (!isforumadmin($userID) && !ismoderator($userID, $board)) {
             die($_language->module[ 'no_access' ]);
         }
 
@@ -975,14 +1036,14 @@ if (isset($_POST[ 'submit' ]) || isset($_POST[ 'movetopic' ]) || isset($_GET[ 'a
         $_language->readModule('forum');
 
         $topicID = (int)$_POST[ 'topicID' ];
-        if (isset($_POST[ 'postID' ])) {
+        if (isset($_POST[ 'postID' ]) && is_array($_POST[ 'postID' ])) {
             $postID = $_POST[ 'postID' ];
         } else {
-            $postID = [];
+            $postID = array();
         }
         $board = (int)$_POST[ 'board' ];
 
-        if (!isforumadmin($userID) and !ismoderator($userID, $board)) {
+        if (!isforumadmin($userID) && !ismoderator($userID, $board)) {
             die($_language->module[ 'no_access' ]);
         }
         $last = safe_query("SELECT * FROM " . PREFIX . "forum_posts WHERE topicID = '$topicID' ");
@@ -999,7 +1060,7 @@ if (isset($_POST[ 'submit' ]) || isset($_POST[ 'movetopic' ]) || isset($_GET[ 'a
                 $dl = mysqli_fetch_array($last);
                 safe_query(
                     "UPDATE " . PREFIX . "forum_topics SET lastdate='" . $dl[ 'date' ] . "', lastposter='" .
-                    $dl[ 'poster' ] . "', lastpostID='" . $ds[ 'postID' ] .
+                    $dl[ 'poster' ] . "', lastpostID='" . $dl[ 'postID' ] .
                     "', replys=replys-1 WHERE topicID='$topicID' "
                 );
                 $deleted = false;
@@ -1024,19 +1085,21 @@ if (isset($_POST[ 'submit' ]) || isset($_POST[ 'movetopic' ]) || isset($_GET[ 'a
         $toboard = (int)$_POST[ 'toboard' ];
         $topicID = (int)$_POST[ 'topicID' ];
 
-        if (!isanyadmin($userID) and !ismoderator($userID, getboardid($topicID))) {
+        if (!isanyadmin($userID) && !ismoderator($userID, getboardid($topicID))) {
             die($_language->module[ 'no_access' ]);
         }
 
-        $di = mysqli_fetch_array(safe_query(
-            "SELECT writegrps, readgrps FROM " . PREFIX .
-            "forum_boards WHERE boardID='$toboard'"
-        ));
+        $di = mysqli_fetch_array(
+            safe_query(
+                "SELECT writegrps, readgrps FROM " . PREFIX .
+                "forum_boards WHERE boardID='$toboard'"
+            )
+        );
 
         $ergebnis = safe_query("SELECT * FROM " . PREFIX . "forum_topics WHERE topicID='$topicID'");
         $ds = mysqli_fetch_array($ergebnis);
 
-        if (isset($_POST[ 'movelink' ]) and $ds[ 'boardID' ] != $toboard) {
+        if (isset($_POST[ 'movelink' ]) && $ds[ 'boardID' ] != $toboard) {
             safe_query(
                 "INSERT INTO " . PREFIX .
                 "forum_topics (boardID, icon, userID, date, topic, lastdate, lastposter, replys, views, closed, moveID)
@@ -1058,7 +1121,7 @@ if (isset($_POST[ 'submit' ]) || isset($_POST[ 'movetopic' ]) || isset($_GET[ 'a
             "', writegrps='" . $di[ 'writegrps' ] . "' WHERE topicID='$topicID'"
         );
         safe_query("UPDATE " . PREFIX . "forum_posts SET boardID='$toboard' WHERE topicID='$topicID'");
-        $post_num = mysqli_affected_rows() - 1;
+        $post_num = mysqli_affected_rows($_database) - 1;
         safe_query("UPDATE " . PREFIX . "forum_boards SET topics=topics+1 WHERE boardID='$toboard'");
         safe_query("UPDATE " . PREFIX . "forum_boards SET topics=topics-1 WHERE boardID='" . $ds[ 'boardID' ] . "'");
         safe_query(
@@ -1076,7 +1139,7 @@ if (isset($_POST[ 'submit' ]) || isset($_POST[ 'movetopic' ]) || isset($_GET[ 'a
         include("_settings.php");
         include('_functions.php');
         $_language->readModule('forum');
-        if (!isanyadmin($userID) and !ismoderator($userID, getboardid($_POST[ 'topicID' ]))) {
+        if (!isanyadmin($userID) && !ismoderator($userID, getboardid($_POST[ 'topicID' ]))) {
             die($_language->module[ 'no_access' ]);
         }
 
@@ -1102,7 +1165,13 @@ if (isset($_POST[ 'submit' ]) || isset($_POST[ 'movetopic' ]) || isset($_GET[ 'a
         $bghead = BGHEAD;
         $bg1 = BG_1;
 
-        eval ("\$forum_move_topic = \"" . gettemplate("forum_move_topic") . "\";");
+        $data_array = array();
+        $data_array['$pagetitle'] = $pagetitle;
+        $data_array['$rewriteBase'] = $rewriteBase;
+        $data_array['$boards'] = $boards;
+        $data_array['$board'] = (int)$_POST['board'];
+        $data_array['$topic'] = (int)$_POST['topicID'];
+        $forum_move_topic = $GLOBALS["_template"]->replaceTemplate("forum_move_topic", $data_array);
         echo $forum_move_topic;
     } elseif (isset($_POST[ 'newtopic' ]) && !isset($_POST[ 'preview' ])) {
         include("_mysql.php");
@@ -1119,9 +1188,7 @@ if (isset($_POST[ 'submit' ]) || isset($_POST[ 'movetopic' ]) || isset($_GET[ 'a
         if (boardexists($board)) {
             if (isset($_POST[ 'icon' ])) {
                 $icon = $_POST[ 'icon' ];
-                if (file_exists("images/icons/topicicons/" . $icon)) {
-                    $icon = $icon;
-                } else {
+                if (!file_exists("images/icons/topicicons/" . $icon)) {
                     $icon = "";
                 }
             } else {
@@ -1135,10 +1202,12 @@ if (isset($_POST[ 'submit' ]) || isset($_POST[ 'movetopic' ]) || isset($_GET[ 'a
             $topic_sticky = (isset($_POST[ 'sticky' ])) ? '1' : '0';
             $notify = (isset($_POST[ 'notify' ])) ? '1' : '0';
 
-            $ds = mysqli_fetch_array(safe_query(
-                "SELECT readgrps, writegrps FROM " . PREFIX .
-                "forum_boards WHERE boardID='$board'"
-            ));
+            $ds = mysqli_fetch_array(
+                safe_query(
+                    "SELECT readgrps, writegrps FROM " . PREFIX .
+                    "forum_boards WHERE boardID='$board'"
+                )
+            );
 
             $writer = 0;
             if ($ds[ 'writegrps' ] != "") {
@@ -1159,11 +1228,11 @@ if (isset($_POST[ 'submit' ]) || isset($_POST[ 'movetopic' ]) || isset($_GET[ 'a
                 die($_language->module[ 'no_access_write' ]);
             }
 
-            $spamApi = SpamApi::getInstance();
+            $spamApi = \webspell\SpamApi::getInstance();
             $validation = $spamApi->validate($message);
 
-            if ($validation == SpamApi::NoSpam) {
-                $date = time();
+            $date = time();
+            if ($validation == \webspell\SpamApi::NOSPAM) {
                 safe_query(
                     "INSERT INTO " . PREFIX .
                     "forum_topics ( boardID,
@@ -1206,10 +1275,12 @@ if (isset($_POST[ 'submit' ]) || isset($_POST[ 'movetopic' ]) || isset($_GET[ 'a
                 );
 
                 // check if there are more than 1000 unread topics => delete oldest one
-                $dv = mysqli_fetch_array(safe_query(
-                    "SELECT topics FROM " . PREFIX . "user WHERE userID='" . $userID .
-                    "'"
-                ));
+                $dv = mysqli_fetch_array(
+                    safe_query(
+                        "SELECT topics FROM " . PREFIX . "user WHERE userID='" . $userID .
+                        "'"
+                    )
+                );
                 $array = explode('|', $dv[ 'topics' ]);
                 if (count($array) >= 1000) {
                     safe_query(
@@ -1249,7 +1320,7 @@ if (isset($_POST[ 'submit' ]) || isset($_POST[ 'movetopic' ]) || isset($_GET[ 'a
         $_language->readModule('forum');
         $_language->readModule('bbcode', true);
 
-        eval ("\$title_messageboard = \"" . gettemplate("title_messageboard") . "\";");
+        $title_messageboard = $GLOBALS["_template"]->replaceTemplate("title_messageboard", array());
         echo $title_messageboard;
 
         $ergebnis = safe_query("SELECT * FROM " . PREFIX . "forum_boards WHERE boardID='$board' ");
@@ -1279,7 +1350,13 @@ if (isset($_POST[ 'submit' ]) || isset($_POST[ 'movetopic' ]) || isset($_GET[ 'a
         $cat = $db[ 'category' ];
         $kathname = getcategoryname($cat);
 
-        eval ("\$forum_head = \"" . gettemplate("forum_head") . "\";");
+        $data_array = array();
+        $data_array['$cat'] = $cat;
+        $data_array['$kathname'] = $kathname;
+        $data_array['$boardname'] = $boardname;
+        $data_array['$moderators'] = $moderators;
+
+        $forum_head = $GLOBALS["_template"]->replaceTemplate("forum_head", $data_array);
         echo $forum_head;
 
         $bg1 = BG_1;
@@ -1288,16 +1365,24 @@ if (isset($_POST[ 'submit' ]) || isset($_POST[ 'movetopic' ]) || isset($_GET[ 'a
 
         if ($loggedin) {
             if (isset($_POST[ 'preview' ])) {
-
                 $bg1 = BG_1;
                 $bg2 = BG_2;
 
                 $time = getformattime(time());
                 $date = "today";
-                $message = cleartext(stripslashes(str_replace(['\r\n', '\n'], ["\n", "\n"], $_POST[ 'message' ])));
+                $message = cleartext(
+                    stripslashes(
+                        str_replace(
+                            array('\r\n', '\n'),
+                            array("\n", "\n"),
+                            $_POST[ 'message' ]
+                        )
+                    )
+                );
                 $message = toggle($message, 'xx');
                 $username =
-                    '<a href="index.php?site=profile&amp;id=' . $userID . '"><b>' . getnickname($userID) . '</b></a>';
+                    '<a href="index.php?site=profile&amp;id=' . $userID . '"><strong>' . getnickname($userID) .
+                    '</strong></a>';
 
                 $board = (int)$_POST[ 'board' ];
                 $topicname = stripslashes($_POST[ 'topicname' ]);
@@ -1320,7 +1405,7 @@ if (isset($_POST[ 'submit' ]) || isset($_POST[ 'movetopic' ]) || isset($_GET[ 'a
                 } else {
                     $signatur = '';
                 }
-                if (getemail($userID) and !getemailhide($userID)) {
+                if (getemail($userID) && !getemailhide($userID)) {
                     $email = '<a href="mailto:' . mail_protect(getemail($userID)) .
                         '"><img src="images/icons/email.gif" alt="email"></a>';
                 } else {
@@ -1341,40 +1426,73 @@ if (isset($_POST[ 'submit' ]) || isset($_POST[ 'movetopic' ]) || isset($_GET[ 'a
 
                 $registered = getregistered($userID);
                 $posts = getuserforumposts($userID);
-                if (isforumadmin($userID) || ismoderator($userID, $board)) {
-                    if (ismoderator($userID, $board)) {
-                        $usertype = $_language->module[ 'moderator' ];
-                        $rang = '<img src="images/icons/ranks/moderator.gif" alt="">';
-                        if (isset($_POST[ 'sticky' ])) {
-                            $_sticky = 'checked="checked"';
-                        }
-                    }
-                    if (isforumadmin($userID)) {
-                        $usertype = "Administrator";
-                        $rang = '<img src="images/icons/ranks/admin.gif" alt="">';
-                        if (isset($_POST[ 'sticky' ])) {
-                            $_sticky = 'checked="checked"';
-                        }
-                    }
+                $_sticky = '';
+                if (isforumadmin($userID)) {
+                    $usertype = "Administrator";
+                    $rang = '<img src="images/icons/ranks/admin.gif" alt="">';
+                } elseif (ismoderator($userID, $board)) {
+                    $usertype = $_language->module[ 'moderator' ];
+                    $rang = '<img src="images/icons/ranks/moderator.gif" alt="">';
                 } else {
                     $ergebnis = safe_query(
                         "SELECT * FROM " . PREFIX .
-                        "forum_ranks WHERE $posts >= postmin AND $posts <= postmax"
+                        "forum_ranks WHERE $posts >= postmin AND $posts <= postmax AND special='0'"
                     );
                     $ds = mysqli_fetch_array($ergebnis);
                     $usertype = $ds[ 'rank' ];
                     $rang = '<img src="images/icons/ranks/' . $ds[ 'pic' ] . '" alt="">';
                 }
+
+                $specialrang = "";
+                $specialtype = "";
+                $getrank = safe_query(
+                    "SELECT IF
+                        (u.special_rank = 0, 0, CONCAT_WS('__', r.rank, r.pic)) as RANK
+                    FROM
+                        " . PREFIX . "user u LEFT JOIN " . PREFIX . "forum_ranks r ON u.special_rank = r.rankID
+                    WHERE
+                        userID = '" . $userID . "'"
+                );
+                $rank_data = mysqli_fetch_assoc($getrank);
+
+                if ($rank_data[ 'RANK' ] != '0') {
+                    $tmp_rank = explode("__", $rank_data[ 'RANK' ], 2);
+                    $specialrang = $tmp_rank[ 0 ];
+                    if (!empty($tmp_rank[1]) && file_exists("images/icons/ranks/" . $tmp_rank[1])) {
+                        $specialtype =
+                        "<img src='images/icons/ranks/" . $tmp_rank[ 1 ] . "' alt = '" . $specialrang . "' />";
+                    }
+                }
+
                 $actions = '';
                 $quote = '';
 
-                echo '<table width="100%" cellspacing="1" cellpadding="2" bgcolor="' . BORDER . '">
-          <tr bgcolor="' . BGHEAD . '">
-            <td colspan="2" class="title" align="center">' . cleartext($topicname) . '</td>
-          </tr>
-          <tr bgcolor="' . PAGEBG . '"><td colspan="2"></td></tr>';
+                echo '<table class="table">
+                <tr>
+                    <td colspan="2" class="title" class="text-center">' . cleartext($topicname) . '</td>
+                </tr>';
 
-                eval ("\$forum_topic_content = \"" . gettemplate("forum_topic_content") . "\";");
+                $data_array = array();
+                $data_array['$statuspic'] = $statuspic;
+                $data_array['$username'] = $username;
+                $data_array['$usertype'] = $usertype;
+                $data_array['$quote'] = $quote;
+                $data_array['$date'] = $date;
+                $data_array['$time'] = $time;
+                $data_array['$pm'] = $pm;
+                $data_array['$buddy'] = $buddy;
+                $data_array['$email'] = $email;
+                $data_array['$hp'] = $hp;
+                $data_array['$actions'] = $actions;
+                $data_array['$avatar'] = $avatar;
+                $data_array['$rang'] = $rang;
+                $data_array['$posts'] = $posts;
+                $data_array['$registered'] = $registered;
+                $data_array['$message'] = $message;
+                $data_array['$signatur'] = $signatur;
+                $data_array['$specialrang'] = $specialrang;
+                $data_array['$specialtype'] = $specialtype;
+                $forum_topic_content = $GLOBALS["_template"]->replaceTemplate("forum_topic_content", $data_array);
                 echo $forum_topic_content;
 
                 echo '</table>';
@@ -1382,13 +1500,13 @@ if (isset($_POST[ 'submit' ]) || isset($_POST[ 'movetopic' ]) || isset($_GET[ 'a
                 $topicname = "";
             }
 
-            eval ("\$addbbcode = \"" . gettemplate("addbbcode") . "\";");
+            $addbbcode = $GLOBALS["_template"]->replaceTemplate("addbbcode", array());
 
             if (isforumadmin($userID) || ismoderator($userID, $board)) {
-                if (isset($_sticky)) {
+                if (isset($_POST[ 'sticky' ])) {
                     $chk_sticky =
-                        '<br>' . "\n" . ' <input class="input" type="checkbox" name="sticky" value="1" ' . $_sticky .
-                        '> ' . $_language->module[ 'make_sticky' ];
+                        '<br>' . "\n" . ' <input class="input" type="checkbox" name="sticky" value="1" '.
+                        'checked="checked"> ' . $_language->module[ 'make_sticky' ];
                 } else {
                     $chk_sticky = '<br>' . "\n" . ' <input class="input" type="checkbox" name="sticky" value="1"> ' .
                         $_language->module[ 'make_sticky' ];
@@ -1407,7 +1525,15 @@ if (isset($_POST[ 'submit' ]) || isset($_POST[ 'movetopic' ]) || isset($_GET[ 'a
             if (isset($_POST[ 'message' ])) {
                 $message = getforminput($_POST[ 'message' ]);
             }
-            eval ("\$forum_newtopic = \"" . gettemplate("forum_newtopic") . "\";");
+            $data_array = array();
+            $data_array['$topicname'] = $topicname;
+            $data_array['$addbbcode'] = $addbbcode;
+            $data_array['$message'] = $message;
+            $data_array['$notify'] = $notify;
+            $data_array['$chk_sticky'] = $chk_sticky;
+            $data_array['$board'] = $board;
+            $data_array['$userID'] = $userID;
+            $forum_newtopic = $GLOBALS["_template"]->replaceTemplate("forum_newtopic", $data_array);
             echo $forum_newtopic;
         } else {
             echo $_language->module[ 'not_logged_msg' ];

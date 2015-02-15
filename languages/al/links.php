@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -51,6 +51,7 @@ $language_array = Array(
   'linkname'=>'Emri link-ut',
   'linkrubric'=>'Rubrika link-ut',
   'links'=>'Link-et',
+  'new_category'=>'kategori e re',
   'new_link'=>'Link i ri',
   'no_access'=>'ndalohet hyrja.',
   'no_categories'=>'nuk ka kategori të vlefshme',

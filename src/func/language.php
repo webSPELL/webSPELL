@@ -11,7 +11,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -43,8 +43,8 @@ class Language
 
         if ($dh = opendir($filepath)) {
             while ($file = mb_substr(readdir($dh), 0, 2)) {
-                if ($file != "." and $file != ".." and is_dir($filepath . $file)) {
-                    $langs[] = $file;
+                if ($file != "." && $file != ".." && is_dir($filepath . $file)) {
+                    $langs[ ] = $file;
                 }
             }
             closedir($dh);
@@ -91,7 +91,7 @@ class Language
             }
 
             foreach ($language_array as $key => $val) {
-                $this->module[$key] = $val;
+                $this->module[ $key ] = $val;
             }
         }
         return true;
@@ -105,5 +105,15 @@ class Language
         }
 
         return $template;
+    }
+
+    public function getTranslationTable()
+    {
+        $map = array();
+        foreach ($this->module as $key => $val) {
+            $newKey = '%' . $key . '%';
+            $map[ $newKey ] = $val;
+        }
+        return $map;
     }
 }

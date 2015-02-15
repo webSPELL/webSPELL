@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -37,7 +37,7 @@ $language_array = Array(
 
   'add_buddylist'=>'Shto tek lista e shokëve',
   'adminoptions'=>'Opsionet e administratorit:',
-  'bbcode'=>'BBCode <b><u>NDEZUR</u></b>',
+  'bbcode'=>'BBCode <b><span class="underline">NDEZUR</span></b>',
   'by'=>'nga',
   'date'=>'Data:',
   'delete'=>'Fshij',
@@ -47,7 +47,7 @@ $language_array = Array(
   'execute'=>'Kryej',
   'formation'=>'Formatim',
   'from'=>'nga:',
-  'html'=>'HTML <b><u>FIKUR</u></b>',
+  'html'=>'HTML <b><span class="underline">FIKUR</span></b>',
   'ignore'=>'Injoro ',
   'incoming'=>'Vijojnë',
   'mark_not_viewed'=>'Shëno si të pa parë',
@@ -74,7 +74,7 @@ $language_array = Array(
   'sendeachmember'=>'Dërgo te sejcili anëtar klani',
   'sendeachuser'=>'Dërgo te çdo përdorues i regjistrur',
   'show'=>'Trego',
-  'smilies'=>'Smilies-të <b><u>NDEZUR</u></b>',
+  'smilies'=>'Smilies-të <b><span class="underline">NDEZUR</span></b>',
   'sort'=>'Grupo:',
   'title'=>'Subjekt',
   'your_message'=>'Mesazhi juaj:',

@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -31,7 +31,7 @@ $language_array = Array(
 /* do not edit above this line */
 
   'author'=>'Autors',
-  'bbcode'=>'BBKods ir <b><u>Ieslēgts</u></b>',
+  'bbcode'=>'BBKods ir <b><span class="underline">Ieslēgts</span></b>',
   'cancel'=>'atcelt',
   'comm'=>'komentēt',
   'comment'=>'<a href="$url">[1] komentārs</a>, pēdējais no $lastposter - $lastdate',
@@ -44,7 +44,7 @@ $language_array = Array(
   'enter_text'=>'Jums jāievada teksts',
   'go'=>'Aiziet!',
   'headline'=>'Virsraksts',
-  'html'=>'HTML ir <b><u>ieslēgts</u></b>',
+  'html'=>'HTML ir <b><span class="underline">ieslēgts</span></b>',
   'intern'=>'iekšējie',
   'languages'=>'Valodas',
   'link'=>'Saite',
@@ -70,7 +70,7 @@ $language_array = Array(
   'select_all'=>'atlasīt visu',
   'self'=>'paša logs',
   'show_news'=>'parādīt ziņas',
-  'smilies'=>'Sejiņas <b><u>iespējotas</u></b>',
+  'smilies'=>'Sejiņas <b><span class="underline">iespējotas</span></b>',
   'sort'=>'Kārtot:',
   'title_unpublished_news'=>'<h2>NEPUBLICĒTAS ZIŅAS:</h2>',
   'topnews'=>'galvenās ziņas',

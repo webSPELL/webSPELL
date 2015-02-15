@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -36,7 +36,7 @@ $language_array = Array(
 /* do not edit above this line */
 
   'author'=>'Автор',
-  'bbcode'=>'BBКод <b><u>Увімкнено</u></b>',
+  'bbcode'=>'BBКод <b><span class="underline">Увімкнено</span></b>',
   'cancel'=>'відміна',
   'comm'=>'комм',
   'comment'=>'<a href="$url">[1] коментар</a>, останнє від $lastposter - $lastdate',
@@ -49,7 +49,7 @@ $language_array = Array(
   'enter_text'=>'Ви повинні ввести текст!',
   'go'=>'Уперед!',
   'headline'=>'Тема',
-  'html'=>'HTML <b><u>Увімкнено</u></b>',
+  'html'=>'HTML <b><span class="underline">Увімкнено</span></b>',
   'intern'=>'Внутрішні',
   'languages'=>'Мови',
   'link'=>'Посилання',
@@ -75,7 +75,7 @@ $language_array = Array(
   'select_all'=>'обрати всі',
   'self'=>'окреме вікно',
   'show_news'=>'показати новини',
-  'smilies'=>'Смайли <b><u>Увімкнено</u></b>',
+  'smilies'=>'Смайли <b><span class="underline">Увімкнено</span></b>',
   'sort'=>'Сортувати:',
   'title_unpublished_news'=>'<h2>НЕОПУБЛІКОВАНІ НОВИНИ:</h2>',
   'topnews'=>'Топ новин',

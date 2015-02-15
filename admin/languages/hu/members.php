@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -72,7 +72,7 @@ $language_array = Array(
   'tooltip_6'=>'<b>Hozzáférés:</b><br>- Warok<br>- Díjak<br>- Kihívások<br>- Naptár',
   'tooltip_7'=>'<b>Hozzáférés:</b><br>- Téma kategóriák<br>- Témák<br>- Topik/Post szerkesztés &amp; törlés<br>- Felhasználói csoportok<br>- Csoportok beállítása<br>- Felhasználói rangok',
   'tooltip_8'=>'<b>Hozzáférés:</b><br>- Topik/Post szerkesztés &amp; törlés<br>(Csak a számára hozzáférhető témákban)',
-  'tooltip_9'=>'<b>Hozzáférés:</b><br>- Rólunk<br>- Mozgó bannerek<br>- Ikonok<br>- Adatbázis<br>- GYIK kategóriák<br>- GYIK<br>- Történet<br>- Impresszum<br>- Link kategóriák<br>- Linkek<br>- Oldal lezárása<br>- Parnterek<br>- Fényújság<br>- Szerverek<br>- Beállítások<br>- Egyéni oldalak<br>- Stílusok<br>- Frissítés<br>- Linkelj ránk<br>- Szponzorok',
+  'tooltip_9'=>'<b>Hozzáférés:</b><br>- Rólunk<br>- Mozgó bannerek<br>- Ikonok<br>- Adatbázis<br>- GYIK kategóriák<br>- GYIK<br>- Történet<br>- Impresszum<br>- Link kategóriák<br>- Linkek<br>- Oldal lezárása<br>- Parnterek<br>- Szerverek<br>- Beállítások<br>- Egyéni oldalak<br>- Stílusok<br>- Frissítés<br>- Linkelj ránk<br>- Szponzorok',
   'tooltip_10'=>'<b>Hozzáférés:</b><br>- Fájl kategóriák<br>- Fájlok<br>- Demók',
   'tooltip_11'=>'<b>Hozzáférés:</b><br>- Pénz-doboz',
   'tooltip_12'=>'<b>Hozzáférés:</b><br>- Galéria kategóriák<br>- Galériák<br>- Képek',

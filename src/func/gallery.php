@@ -11,7 +11,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -82,7 +82,9 @@ class Gallery
             $pic['groupID'] = $this->getGroupIdByGallery($pic['galleryID']);
             $pic['name'] = stripslashes(clearfromtags($pic['name']));
 
-            eval ("\$thumb = \"" . gettemplate("gallery_content_showthumb") . "\";");
+            $data_array = array();
+            $data_array['$gallery'] = $gallery;
+            $thumb = $GLOBALS["_template"]->replaceTemplate("gallery_content_showthumb", $data_array);
 
         } else {
             $thumb = '<tr><td colspan="2">' . $_language->module['no_picture'] . '</td></tr>';
@@ -213,10 +215,11 @@ class Gallery
                 safe_query(
                     "SELECT
                         `galleryID`
-                    FROM `" . PREFIX . "gallery`
-                 WHERE
-                    `userID` = " . (int)$userID . " AND
-                    `galleryID` = " . (int)$galleryID
+                    FROM
+                        `" . PREFIX . "gallery`
+                    WHERE
+                        `userID` = " . (int)$userID . " AND
+                        `galleryID` = " . (int)$galleryID
                 )
             ) > 0
         );
@@ -227,7 +230,7 @@ class Gallery
 
         $ds = mysqli_fetch_array(
             safe_query(
-                "SELECT `userID` FROM `" . PREFIX . "gallery` WHERE `galleryID` = " . (int)$galleryID
+                "SELECT `userID` FROM `" . PREFIX . "gallery` WHERE `galleryID` = " . (int)$galleryID . ""
             )
         );
         return $ds['userID'];

@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -30,7 +30,7 @@ $language_array = Array(
 /* do not edit above this line */
 
 	'author'=>'Autor',
-	'bbcode'=>'BBCode esta <b><u>ON</u></b>',
+	'bbcode'=>'BBCode esta <b><span class="underline">ON</span></b>',
 	'cancel'=>'cancelar',
 	'comm'=>'comen',
 	'comment'=>'<a href="$url">1 comentario</a>, ultimo por $lastposter - $lastdate',
@@ -43,7 +43,7 @@ $language_array = Array(
 	'enter_text'=>'Introduzca un texto!',
 	'go'=>'Ejecutar',
 	'headline'=>'Titulo',
-	'html'=>'HTML esta <b><u>ON</u></b>',
+	'html'=>'HTML esta <b><span class="underline">ON</span></b>',
 	'intern'=>'interno',
 	'languages'=>'Idiomas',
 	'link'=>'Enlace',
@@ -69,7 +69,7 @@ $language_array = Array(
 	'select_all'=>'seleccionar todos',
 	'self'=>'Misma ventana',
 	'show_news'=>'mostrar noticias',
-	'smilies'=>'Emoticonos estan <b><u>ON</u></b>',
+	'smilies'=>'Emoticonos estan <b><span class="underline">ON</span></b>',
 	'sort'=>'Ordenar:',
 	'title_unpublished_news'=>'<h2>NOTICIAS SIN PUBLICAR:</h2>',
 	'topnews'=>'noticias top',

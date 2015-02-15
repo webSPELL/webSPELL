@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -45,6 +45,7 @@ $language_array = Array(
   'linkname'=>'نام لینک',
   'linkrubric'=>'لینک مرتبط',
   'links'=>'لینک ها',
+  'new_category'=>'گروه جدید',
   'new_link'=>'لینک جدید',
   'no_access'=>'.غیر قابل دسترسی',
   'no_categories'=>'هیچ دسته ای موجود نیست',

@@ -1,94 +1,77 @@
-<script>
-	<!--
-	function chkFormular() {
-		if (document.getElementById('short').value === "") {
-			alert("%enter_short%");
-			document.getElementById('short').focus();
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">%editevent%</h3>
+    </div>
+    <div class="panel-body">
+        <form action="calendar.php?action=saveeditdate" method="post" onsubmit="return chkFormular()">
+            <div class="form-group">
+                <label for="date_start" class="col-xs-12 control-label">%start_datetime%</label>
 
-			return false;
-		}
+                <div class="col-xs-12">
+                    <input type="datetime-local" name="date_start" id="date_start" value="$date_start"
+                        class="form-control" required>
+                </div>
 
-		if (document.getElementById('title').value === "") {
-			alert("%enter_title%");
-			document.getElementById('title').focus();
+                <label for="date_end" class="col-xs-12 control-label">%end_datetime%</label>
 
-			return false;
-		}
+                <div class="col-xs-12">
+                    <input type="datetime-local" name="date_end" id="date_end" value="$date_end"
+                        class="form-control" required>
+                </div>
+            </div>
 
-		if (document.getElementById('dateinfo').value === "") {
-			alert("%enter_info%");
-			document.getElementById('dateinfo').focus();
+            <div class="form-group">
+                <label for="short" class="col-xs-12 control-label">
+                    %shorttitle% (
+                    <small>%displayed_in%</small>
+                    )
+                </label>
 
-			return false;
-		}
-		if (!validbbcode(document.getElementById('dateinfo').value)) {
+                <div class="col-xs-12">
+                    <input name="short" id="short" type="text" value="$short" class="form-control" required>
+                </div>
 
-			return false;
-		}
-	}
-	-->
-</script>
-<form action="calendar.php?action=saveeditdate" method="post" onsubmit="return chkFormular()">
-	<h2>%editevent%</h2>
-	<table class="table">
-		<tr>
-			<th align="right">%start_datetime%</th>
-			<td>
+                <label for="title" class="col-xs-12 control-label">%longtitle%</label>
 
-				<div class="form-group">
-					<input type="date" name="starttime_date" value="$starttime_date"
-							class="form-control">
-					<input type="time" name="starttime_time" value="$starttime_time"
-							class="form-control">
-				</div>
-			</td>
-		</tr>
-		<tr>
-			<th align="right">%end_datetime%</th>
-			<td>
-				<div class="form-group">
-					<input type="date" name="endtime_date" value="$endtime_date"
-							class="form-control">
-					<input type="time" name="endtime_time" value="$endtime_time"
-							class="form-control">
-				</div>
-			</td>
-		</tr>
-		<tr>
-			<th align="right">%shorttitle%</th>
-			<td>
-				<input name="short" id="short" type="text" value="$short" class="form-control">
-				<small>%displayed_in%</small>
-			</td>
-		</tr>
-		<tr>
-			<th align="right">%longtitle%</th>
-			<td><input name="title" id="title" type="text" value="$title" class="form-control"></td>
-		</tr>
-		<tr>
-			<th align="right">%location%</th>
-			<td>
-				<div class="form-group">
-					<select name="country" class="form-control">$countries</select>
-					<input name="location" type="text" value="$location" class="form-control">
-				</div>
-			</td>
-		</tr>
-		<tr>
-			<th align="right">%homepage%</th>
-			<td><input name="locationhp" type="text" value="$locationhp" class="form-control"></td>
-		</tr>
-		<tr>
-			<th align="right" valign="top">%information%</th>
-			<td>
-				<textarea name="message" id="dateinfo" cols="45" rows="7" class="form-control">
-					$dateinfo
-				</textarea>
-			</td>
-		</tr>
-		<tr>
-			<th align="right"><input type="hidden" name="upID" value="$ds[upID]"></th>
-			<td><input name="post" type="submit" value="%updateevent%" class="btn btn-danger"></td>
-		</tr>
-	</table>
-</form>
+                <div class="col-xs-12">
+                    <input name="title" id="title" type="text" value="$title" class="form-control" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="country" class="col-xs-12 control-label">%location%</label>
+
+                <div class="col-xs-12">
+                    <select name="country" id="country" class="form-control">$countries</select>
+                </div>
+                <div class="col-xs-12">
+                    <input name="location" type="text" value="$location" class="form-control">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="locationhp" class="col-xs-12 control-label">%homepage%</label>
+
+                <div class="col-xs-12">
+                    <input name="locationhp" id="locationhp" type="text" value="$locationhp" class="form-control">
+                </div>
+
+                <div class="form-group">
+                    <label for="dateinfo" class="col-xs-12 control-label">%information%</label>
+
+                    <div class="col-xs-12">
+                        <textarea
+                            name="message"
+                            id="dateinfo"
+                            cols="45"
+                            rows="7"
+                            class="form-control">$dateinfo</textarea>
+                    </div>
+                </div>
+
+                <input type="hidden" name="upID" value="$upID">
+                <input name="post" type="submit" value="%updateevent%" class="btn btn-danger">
+            </div>
+        </form>
+    </div>
+</div>

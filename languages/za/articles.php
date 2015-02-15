@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -39,7 +39,7 @@ $language_array = Array(
   'already_rated'=>'<b>Artikel alreeds beoordeel!</b>',
   'articles'=>'artikels',
   'author'=>'Skrywer',
-  'bbcode'=>'&#8226; <a href="javascript:void(0);" onclick="window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> <b><u>AAN</u></b>',
+  'bbcode'=>'&#8226; <a href="javascript:void(0);" onclick="window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> <b><span class="underline">AAN</span></b>',
   'cancel'=>'Kanselleer',
   'date'=>'Datum',
   'delete'=>'Verwyder',
@@ -47,7 +47,7 @@ $language_array = Array(
   'edit_article'=>'Verander Artikel',
   'enter_title'=>'Jy moet \'n titel intik!',
   'enter_text'=>'Jy moet teks invoer',
-  'html'=>'&#8226; HTML <b><u>AAN</u></b>',
+  'html'=>'&#8226; HTML <b><span class="underline">AAN</span></b>',
   'link'=>'Skakel',
   'links'=>'Skakels',
   'login_for_rate'=>'<b>Jy moet geregistreerd en ingeteken wees om \'n artikel te beoordeel!</b>',
@@ -59,7 +59,7 @@ $language_array = Array(
   'options'=>'Keuses',
   'page'=>'Bladsy',
   'page_of'=>'Bladsy $page van $pages',
-  'page_select'=>'Versprei artikel oor <select name="language_count" onchange="update_textarea(this.options[this.selectedIndex].value)">$selects</select> bladsye',
+  'page_select'=>'Versprei artikel oor <select name="language_count" onchange="updateTextarea(this.options[this.selectedIndex].value)">$selects</select> bladsye',
   'pagecount'=>'Hoeveelheid bladsye',
   'perfect'=>'perfek',
   'poor'=>'swak',
@@ -69,7 +69,7 @@ $language_array = Array(
   'really_delete'=>'Moet hierdie artikel regtig verwyder word?',
   'save_article'=>'Stoor artikel',
   'self'=>'selfde venster',
-  'smilies'=>'&#8226; <a href="javascript:void(0);" onclick="window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Gesiggies</a> <b><u>AAN</u></b>',
+  'smilies'=>'&#8226; <a href="javascript:void(0);" onclick="window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Gesiggies</a> <b><span class="underline">AAN</span></b>',
   'sort'=>'Sorteer:',
   'title'=>'titel',
   'top5_points'=>'TOP 5 ARTIKELS (Punte)',

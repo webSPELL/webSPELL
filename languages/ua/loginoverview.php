@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -72,6 +72,6 @@ $language_array = Array(
   'x_new_message'=>'Є% new_messages% нові повідомлення.',
   'you_have_to_be_logged_in'=>'Ви повинні увійти щоб ​​подивитися огляд!<br><br>
      &#8226; <a href="index.php?site=register">Реєструватися зараз</a><br>
-     &#8226; <a href="index.php?site=login">Логін</ a>'
+     &#8226; <a href="index.php?site=login">Логін</a>'
 );
 ?>

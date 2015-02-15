@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -31,7 +31,7 @@ $language_array = Array(
 
 	'add_buddylist'=>'Felvétel barátnak',
 	'adminoptions'=>'Admin lehetőségek:',
-	'bbcode'=>'BBCode <b><u>Bekapcsolva</u></b>',
+	'bbcode'=>'BBCode <b><span class="underline">Bekapcsolva</span></b>',
 	'by'=>'by',
 	'date'=>'Dátum:',
 	'delete'=>'Törlés',
@@ -41,7 +41,7 @@ $language_array = Array(
 	'execute'=>'Végrehajt',
 	'formation'=>'Formázás',
 	'from'=>'by:',
-	'html'=>'HTML <b><u>Kikapcsolva</u></b>',
+	'html'=>'HTML <b><span class="underline">Kikapcsolva</span></b>',
 	'ignore'=>'Felhasználó elutasítása',
 	'incoming'=>'Bejövő',
 	'mark_not_viewed'=>'Olvasatlannak jelöl',
@@ -68,7 +68,7 @@ $language_array = Array(
 	'sendeachmember'=>'Küldés minden klántagnak',
 	'sendeachuser'=>'Küldés minden regisztráltnak',
 	'show'=>'Megjelenítés',
-	'smilies'=>'Hangulatjelek <b><u>Bekapcsolva</u></b>',
+	'smilies'=>'Hangulatjelek <b><span class="underline">Bekapcsolva</span></b>',
 	'sort'=>'Rendezés:',
 	'title'=>'Tárgy',
 	'your_message'=>'Az üzeneted:',

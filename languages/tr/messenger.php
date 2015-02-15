@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -37,7 +37,7 @@ $language_array = Array(
 
   'add_buddylist'=>'Arkadaş Listesine Ekle',
   'adminoptions'=>'Yönetici Seçenekleri:',
-  'bbcode'=>'BBCode <b><u>AÇIK</u></b>',
+  'bbcode'=>'BBCode <b><span class="underline">AÇIK</span></b>',
   'by'=>'tarafından',
   'date'=>'Tarih:',
   'delete'=>'Sil',
@@ -47,7 +47,7 @@ $language_array = Array(
   'execute'=>'Yürütme',
   'formation'=>'Biçimlendirme',
   'from'=>'tarafından:',
-  'html'=>'HTML <b><u>KAPALI</u></b>',
+  'html'=>'HTML <b><span class="underline">KAPALI</span></b>',
   'ignore'=>'Reddedilen Kullanıcı',
   'incoming'=>'Gelen',
   'mark_not_viewed'=>'Işareti olarak görülmüyor',
@@ -74,7 +74,7 @@ $language_array = Array(
   'sendeachmember'=>'Her klan üyesine mesaj gönder',
   'sendeachuser'=>'Her kayıtlı kullanıcıya gönder',
   'show'=>'Göster',
-  'smilies'=>'İfadeler <b><u>AÇIK</u></b>',
+  'smilies'=>'İfadeler <b><span class="underline">AÇIK</span></b>',
   'sort'=>'Sıralama:',
   'title'=>'Konu',
   'your_message'=>'Mesajınız:',

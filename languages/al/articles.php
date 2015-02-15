@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -39,7 +39,7 @@ $language_array = Array(
   'already_rated'=>'<b>Artikuj tashmë të vlerësuar!</b>',
   'articles'=>'artikujt',
   'author'=>'Autori',
-  'bbcode'=>'&#8226; <a href="javascript:void(0);" onclick="window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> <b><u>PËR</u></b>',
+  'bbcode'=>'&#8226; <a href="javascript:void(0);" onclick="window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> <b><span class="underline">PËR</span></b>',
   'cancel'=>'Anullo',
   'date'=>'Data',
   'delete'=>'Fshij',
@@ -47,7 +47,7 @@ $language_array = Array(
   'edit_article'=>'Edio artikullin',
   'enter_title'=>'Duhet të vendosni një titull!',
   'enter_text'=>'Duhet të shkruani një tekst',
-  'html'=>'&#8226; HTML <b><u>PËR</u></b>',
+  'html'=>'&#8226; HTML <b><span class="underline">PËR</span></b>',
   'link'=>'Lidhje',
   'links'=>'Lidhjet',
   'login_for_rate'=>'<b>Duhet të jeni i regjistruar që të vlerësoni një artikull!</b>',
@@ -59,7 +59,7 @@ $language_array = Array(
   'options'=>'Opsione',
   'page'=>'Faqe',
   'page_of'=>'Faqe $page nga $pages',
-  'page_select'=>'Shperndani artikullin <select name="language_count" onchange="update_textarea(this.options[this.selectedIndex].value)">$selects</select> faqe',
+  'page_select'=>'Shperndani artikullin <select name="language_count" onchange="updateTextarea(this.options[this.selectedIndex].value)">$selects</select> faqe',
   'pagecount'=>'Gjithë faqet',
   'perfect'=>'shkëlqyer',
   'poor'=>'dobët',
@@ -69,7 +69,7 @@ $language_array = Array(
   'really_delete'=>'vërtet e fshini kete artikull?',
   'save_article'=>'Shpetojeni artikullin',
   'self'=>'dritare e njejte',
-  'smilies'=>'&#8226; <a href="javascript:void(0);" onclick="window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smilies</a> <b><u>PËR</u></b>',
+  'smilies'=>'&#8226; <a href="javascript:void(0);" onclick="window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smilies</a> <b><span class="underline">PËR</span></b>',
   'sort'=>'Grupo:',
   'title'=>'Kryeartikull',
   'top5_points'=>'Topi i 5 artikujve (piket)',

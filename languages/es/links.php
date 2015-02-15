@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -45,6 +45,7 @@ $language_array = Array(
 	'linkname'=>'Texto enlace',
 	'linkrubric'=>'Sección de enlace',
 	'links'=>'Enlaces',
+	'new_category'=>'nueva categoría',
 	'new_link'=>'Nuevo enlace',
 	'no_access'=>'Sin acceso.',
 	'no_categories'=>'no hay categorías ',

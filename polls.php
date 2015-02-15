@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -46,7 +46,7 @@ if ($action == "vote") {
                     `userIDs`,
                     `hosts`
                 FROM
-                  `" . PREFIX . "poll`
+                    `" . PREFIX . "poll`
                 WHERE
                     `pollID` = '" . (int)$pollID."'"
             )
@@ -72,7 +72,7 @@ if ($action == "vote") {
                     $anz_user = true;
                 }
             } else {
-                $user_ids = [];
+                $user_ids = array();
             }
         }
 
@@ -80,8 +80,7 @@ if ($action == "vote") {
         if (isset($_COOKIE[ 'poll' ]) && is_array($_COOKIE[ 'poll' ])) {
             $cookie = in_array($pollID, $_COOKIE[ 'poll' ]);
         }
-        if (!$cookie and !$anz and !$anz_user and isset($_POST[ 'vote' ])) {
-
+        if (!$cookie && !$anz && !$anz_user && isset($_POST[ 'vote' ])) {
             //write cookie
             $index = count($_COOKIE[ 'poll' ]);
             setcookie("poll[" . $index . "]", $pollID, time() + (3600 * 24 * 365));
@@ -271,7 +270,6 @@ if ($action == "vote") {
                 )"
         );
     } else {
-
         safe_query(
             "UPDATE
                 " . PREFIX . "poll
@@ -333,12 +331,12 @@ if ($action == "vote") {
 }
 
 $_language->readModule('polls');
-eval("\$title_polls = \"" . gettemplate("title_polls") . "\";");
+$title_polls = $GLOBALS["_template"]->replaceTemplate("title_polls", array());
 echo $title_polls;
 
 if ($action == "new") {
     if (ispollsadmin($userID)) {
-        eval("\$polls_new = \"" . gettemplate("polls_new") . "\";");
+        $polls_new = $GLOBALS["_template"]->replaceTemplate("polls_new", array());
         echo $polls_new;
     } else {
         redirect('index.php?site=news', $_language->module[ 'no_access' ], 3);
@@ -350,7 +348,6 @@ if ($action == "new") {
         $ds = mysqli_fetch_array($ergebnis);
 
         if (isset($ds[ 'pollID' ])) {
-
             $runtime_date = date("Y-m-d", $ds[ 'laufzeit' ]);
             $runtime_time = date("H:i", $ds[ 'laufzeit' ]);
 
@@ -366,9 +363,10 @@ if ($action == "new") {
             $option9 = getinput($ds[ 'o9' ]);
             $option10 = getinput($ds[ 'o10' ]);
 
-            $comments = '<option value="0">' . $_language->module[ 'disable_comments' ] . '</option>
-                         <option value="1">' . $_language->module[ 'enable_user_comments' ] . '</option>
-                         <option value="2">' . $_language->module[ 'enable_visitor_comments' ] . '</option>';
+            $comments = '
+                <option value="0">' . $_language->module[ 'disable_comments' ] . '</option>
+                <option value="1">' . $_language->module[ 'enable_user_comments' ] . '</option>
+                <option value="2">' . $_language->module[ 'enable_visitor_comments' ] . '</option>';
             $comments = str_replace(
                 'value="' . $ds[ 'comments' ] . '"',
                 'value="' . $ds[ 'comments' ] . '" selected="selected"',
@@ -380,7 +378,24 @@ if ($action == "new") {
                 $intern = '';
             }
             $bg1 = BG_1;
-            eval("\$polls_edit = \"" . gettemplate("polls_edit") . "\";");
+            $data_array = array();
+            $data_array['$polltitle'] = $polltitle;
+            $data_array['$runtime_date'] = $runtime_date;
+            $data_array['$runtime_time'] = $runtime_time;
+            $data_array['$option1'] = $option1;
+            $data_array['$option2'] = $option2;
+            $data_array['$option3'] = $option3;
+            $data_array['$option4'] = $option4;
+            $data_array['$option5'] = $option5;
+            $data_array['$option6'] = $option6;
+            $data_array['$option7'] = $option7;
+            $data_array['$option8'] = $option8;
+            $data_array['$option9'] = $option9;
+            $data_array['$option10'] = $option10;
+            $data_array['$comments'] = $comments;
+            $data_array['$intern'] = $intern;
+            $data_array['$pollID'] = (int)$pollID;
+            $polls_edit = $GLOBALS["_template"]->replaceTemplate("polls_edit", $data_array);
             echo $polls_edit;
         }
     } else {
@@ -425,23 +440,21 @@ if ($action == "new") {
     if (ispollsadmin($userID)) {
         if ($ds[ 'aktiv' ]) {
             $stop = ' <input type="button" onclick="MM_confirm(
-                    \'' . $_language->module[ 'really_stop' ] . '\',
-                    \'polls.php?end=true&amp;pollID=' . $ds[ 'pollID' ] . '\'
-			    )" value="' . $_language->module[ 'stop_poll' ] . '" class="btn btn-danger"> ';
+                \'' . $_language->module[ 'really_stop' ] . '\',
+                \'polls.php?end=true&amp;pollID=' . $ds[ 'pollID' ] . '\'
+            )" value="' . $_language->module[ 'stop_poll' ] . '" class="btn btn-danger"> ';
         } else {
             $stop = ' <input type="button" onclick="MM_confirm(
-                    \'' . $_language->module[ 'really_reopen' ] . '\',
-                    \'polls.php?reopen=true&amp;pollID=' . $ds[ 'pollID' ] . '\'
-			    )" value="' . $_language->module[ 'reopen_poll' ] . '" class="btn btn-danger"> ';
+                \'' . $_language->module[ 'really_reopen' ] . '\',
+                \'polls.php?reopen=true&amp;pollID=' . $ds[ 'pollID' ] . '\'
+            )" value="' . $_language->module[ 'reopen_poll' ] . '" class="btn btn-danger"> ';
         }
-        $edit = ' <input type="button" onclick="MM_goToURL(
-                \'parent\',
-                \'index.php?site=polls&amp;action=edit&amp;pollID=' . $ds[ 'pollID' ] . '\'
-		    );return document.MM_returnValue" value="' . $_language->module[ 'edit' ] . '" class="btn btn-danger"> ';
+        $edit = ' <a href="index.php?site=polls&amp;action=edit&amp;pollID=' . $ds[ 'pollID' ] .
+            '" class="btn btn-danger">' . $_language->module[ 'edit' ] . '</a>';
         $adminactions = $edit . '<input type="button" onclick="MM_confirm(
-		        \'' . $_language->module[ 'really_delete' ] . '\',
-		        \'polls.php?delete=true&amp;pollID=' . $ds[ 'pollID' ] . '\'
-            )" value="' . $_language->module[ 'delete' ] . '" class="btn btn-danger">' . $stop;
+            \'' . $_language->module[ 'really_delete' ] . '\',
+            \'polls.php?delete=true&amp;pollID=' . $ds[ 'pollID' ] . '\'
+        )" value="' . $_language->module[ 'delete' ] . '" class="btn btn-danger">' . $stop;
     }
 
     $votes = safe_query("SELECT * FROM " . PREFIX . "poll_votes WHERE pollID='" . $pollID . "'");
@@ -451,7 +464,12 @@ if ($action == "new") {
         $dv[ 'o9' ] + $dv[ 'o10' ];
     $n = 1;
 
-    eval("\$polls_head = \"" . gettemplate("polls_head") . "\";");
+    $data_array = array();
+    $data_array['$title'] = $title;
+    $data_array['$isintern'] = $isintern;
+    $data_array['$gesamtstimmen'] = $gesamtstimmen;
+    $data_array['$timeleft'] = $timeleft;
+    $polls_head = $GLOBALS["_template"]->replaceTemplate("polls_head", $data_array);
     echo $polls_head;
     $comments = "";
     foreach ($options as $option) {
@@ -474,7 +492,7 @@ if ($action == "new") {
                 aria-valuenow="' . $picwidth . '"
                 aria-valuemin="0"
                 aria-valuemax="100"
-                style="width: ' . $picwidth . '%;"
+                style="width: ' . $picwidth . '%"
             >
                 ' . $picwidth . ' %
             </div>
@@ -487,19 +505,25 @@ if ($action == "new") {
                 aria-valuenow="0"
                 aria-valuemin="0"
                 aria-valuemax="100"
-                style="width: 0%;"
+                style="width: 0"
             >
                 0 %
             </div>
         </div>';
         }
 
-        eval("\$polls_content = \"" . gettemplate("polls_content") . "\";");
+        $data_array = array();
+        $data_array['$option'] = $option;
+        $data_array['$perc'] = $perc;
+        $polls_content = $GLOBALS["_template"]->replaceTemplate("polls_content", $data_array);
         echo $polls_content;
         $n++;
     }
 
-    eval("\$polls_foot = \"" . gettemplate("polls_foot") . "\";");
+    $data_array = array();
+    $data_array['$comments'] = $comments;
+    $data_array['$adminactions'] = $adminactions;
+    $polls_foot = $GLOBALS["_template"]->replaceTemplate("polls_foot", $data_array);
     echo $polls_foot;
 
     $comments_allowed = $ds[ 'comments' ];
@@ -509,7 +533,6 @@ if ($action == "new") {
 
     include("comments.php");
 } elseif (isset($_GET[ 'vote' ])) {
-
     $pagebg = PAGEBG;
     $border = BORDER;
     $bghead = BGHEAD;
@@ -560,16 +583,16 @@ if ($action == "new") {
             $cookie = in_array($ds[ 'pollID' ], $_COOKIE[ 'poll' ]);
         }
 
-        if ($cookie or $anz or $anz_user) {
+        if ($cookie || $anz || $anz_user) {
             redirect('index.php?site=polls&amp;pollID=' . $ds[ 'pollID' ], $_language->module[ 'already_voted' ], 3);
         } else {
             echo '<form method="post" action="polls.php?action=vote">
-			<table cellspacing="2" cellpadding="0">
-				<tr>
-					<td><b>' . $ds[ 'titel' ] . '</b><br><br></td>
-				</tr>
-				<tr>
-					<td>';
+            <table class="table">
+                <tr>
+                    <td><strong>' . $ds[ 'titel' ] . '</strong><br><br></td>
+                </tr>
+                <tr>
+                <td>';
 
             for ($n = 1; $n <= 10; $n++) {
                 if ($ds[ 'o' . $n ]) {
@@ -582,16 +605,16 @@ if ($action == "new") {
                 $n++;
             }
             echo '</td>
-        </tr>
-        <tr>
-          <td><br><input type="hidden" name="pollID" value="' . $ds[ 'pollID' ] . '">
-          <input type="submit" value="vote"></td>
-        </tr>
-        <tr>
-          <td><br>&#8226; <a href="index.php?site=polls">' . $_language->module[ 'show_polls' ] . '</a></td>
-        </tr>
-      </table>
-      </form>';
+            </tr>
+            <tr>
+                <td><br><input type="hidden" name="pollID" value="' . $ds[ 'pollID' ] . '">
+                <input type="submit" value="vote"></td>
+            </tr>
+            <tr>
+                <td><br>&#8226; <a href="index.php?site=polls">' . $_language->module[ 'show_polls' ] . '</a></td>
+            </tr>
+        </table>
+        </form>';
         }
     } else {
         redirect('index.php?site=polls&pollID=' . $ds[ 'pollID' ], $_language->module[ 'poll_ended' ], 3);
@@ -608,13 +631,13 @@ if ($action == "new") {
     $ergebnis =
         safe_query(
             "SELECT
-              *
+                *
             FROM
-              " . PREFIX . "poll
+                " . PREFIX . "poll
             WHERE
-              intern<=" . (int)isclanmember($userID) . "
+                intern<=" . (int)isclanmember($userID) . "
             ORDER BY
-              pollID DESC"
+                pollID DESC"
         );
     $anz = mysqli_num_rows($ergebnis);
     if ($anz) {
@@ -634,7 +657,7 @@ if ($action == "new") {
                 $isintern = '';
             }
 
-            if ($ds[ 'laufzeit' ] < time() or $ds[ 'aktiv' ] == "0") {
+            if ($ds[ 'laufzeit' ] < time() || $ds[ 'aktiv' ] == "0") {
                 $timeleft = $_language->module[ 'poll_ended' ];
                 $active = '';
             } else {
@@ -656,23 +679,23 @@ if ($action == "new") {
             if (ispollsadmin($userID)) {
                 if ($ds[ 'aktiv' ]) {
                     $stop = ' <input type="button" onclick="MM_confirm(
-					        \'' . $_language->module[ 'really_stop' ] . '\',
-					        \'polls.php?end=true&amp;pollID=' . $ds[ 'pollID' ] . '\'
-                        )" value="' . $_language->module[ 'stop_poll' ] . '" class="btn btn-danger"> ';
+                        \'' . $_language->module[ 'really_stop' ] . '\',
+                        \'polls.php?end=true&amp;pollID=' . $ds[ 'pollID' ] . '\'
+                    )" value="' . $_language->module[ 'stop_poll' ] . '" class="btn btn-danger"> ';
                 } else {
                     $stop = ' <input type="button" onclick="MM_confirm(
-					    \'' . $_language->module[ 'really_reopen' ] . '\',
-					    \'polls.php?reopen=true&amp;pollID=' . $ds[ 'pollID' ] . '\'
-					    )" value="' . $_language->module[ 'reopen_poll' ] . '" class="btn btn-danger"> ';
+                    \'' . $_language->module[ 'really_reopen' ] . '\',
+                    \'polls.php?reopen=true&amp;pollID=' . $ds[ 'pollID' ] . '\'
+                    )" value="' . $_language->module[ 'reopen_poll' ] . '" class="btn btn-danger"> ';
                 }
                 $edit = ' <a href="index.php?site=polls&amp;action=edit&amp;pollID=' . $ds[ 'pollID' ] . '"
                         class="btn btn-danger">
-				        ' . $_language->module[ 'edit' ] . '
-				    </a> ';
+                    ' . $_language->module[ 'edit' ] . '
+                </a> ';
                 $adminactions = $edit . '<input type="button" onclick="MM_confirm(
-                        \'' . $_language->module[ 'really_delete' ] . '\',
-                        \'polls.php?delete=true&amp;pollID=' . $ds[ 'pollID' ] . '\'
-				    )" value="' . $_language->module[ 'delete' ] . '" class="btn btn-danger">' . $stop;
+                    \'' . $_language->module[ 'really_delete' ] . '\',
+                    \'polls.php?delete=true&amp;pollID=' . $ds[ 'pollID' ] . '\'
+                )" value="' . $_language->module[ 'delete' ] . '" class="btn btn-danger">' . $stop;
             }
 
             $votes = safe_query("SELECT * FROM " . PREFIX . "poll_votes WHERE pollID='" . $ds[ 'pollID' ] . "'");
@@ -682,7 +705,12 @@ if ($action == "new") {
                 $dv[ 'o8' ] + $dv[ 'o9' ] + $dv[ 'o10' ];
             $n = 1;
 
-            eval ("\$polls_head = \"" . gettemplate("polls_head") . "\";");
+            $data_array = array();
+            $data_array['$title'] = $title;
+            $data_array['$isintern'] = $isintern;
+            $data_array['$gesamtstimmen'] = $gesamtstimmen;
+            $data_array['$timeleft'] = $timeleft;
+            $polls_head = $GLOBALS["_template"]->replaceTemplate("polls_head", $data_array);
             echo $polls_head;
 
             foreach ($options as $option) {
@@ -711,13 +739,19 @@ if ($action == "new") {
                     </a>';
                 }
 
-                eval ("\$polls_content = \"" . gettemplate("polls_content") . "\";");
+                $data_array = array();
+                $data_array['$option'] = $option;
+                $data_array['$perc'] = $perc;
+                $polls_content = $GLOBALS["_template"]->replaceTemplate("polls_content", $data_array);
                 echo $polls_content;
 
                 $n++;
             }
 
-            eval ("\$polls_foot = \"" . gettemplate("polls_foot") . "\";");
+            $data_array = array();
+            $data_array['$comments'] = $comments;
+            $data_array['$adminactions'] = $adminactions;
+            $polls_foot = $GLOBALS["_template"]->replaceTemplate("polls_foot", $data_array);
             echo $polls_foot;
 
             $i++;

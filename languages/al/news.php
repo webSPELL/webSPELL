@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -36,7 +36,7 @@ $language_array = Array(
 /* do not edit above this line */
 
   'author'=>'Autor',
-  'bbcode'=>'BBCode është <b><u>NDEZUR</u></b>',
+  'bbcode'=>'BBCode është <b><span class="underline">NDEZUR</span></b>',
   'cancel'=>'anullo',
   'comm'=>'koment',
   'comment'=>'<a href="$url">[1] comment</a>, të fundit nga $lastposter - $lastdate',
@@ -49,7 +49,7 @@ $language_array = Array(
   'enter_text'=>'Duhet të vendosni një tekst',
   'go'=>'Jepi!',
   'headline'=>'Kryeartikull',
-  'html'=>'HTML është <b><u>NDEZUR</u></b>',
+  'html'=>'HTML është <b><span class="underline">NDEZUR</span></b>',
   'intern'=>'i brendshëm',
   'languages'=>'Gjuhët',
   'link'=>'Link',
@@ -75,7 +75,7 @@ $language_array = Array(
   'select_all'=>'zgjidhi të gjitha',
   'self'=>'dritare vetë',
   'show_news'=>'trego lajmet',
-  'smilies'=>'Smilies janë <b><u>NDEZUR</u></b>',
+  'smilies'=>'Smilies janë <b><span class="underline">NDEZUR</span></b>',
   'sort'=>'Grupo:',
   'title_unpublished_news'=>'<h2>LAJME TE PAPUBLIKUARA:</h2>',
   'topnews'=>'lajmet kryesore:',

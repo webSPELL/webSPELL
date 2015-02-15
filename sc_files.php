@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -25,10 +25,7 @@
 ##########################################################################
 */
 
-//Options:
-$list = 1; //1=top 5 downloads , 2=latest 5 downloads
-
-//dont edit above this line
+$list = 1; // 1=top 5 downloads , 2=latest 5 downloads
 
 if ($list == 1) {
     $list = "downloads";
@@ -69,7 +66,11 @@ if (mysqli_num_rows($ergebnis)) {
             $bg2 = BG_4;
         }
 
-        eval ("\$sc_files = \"" . gettemplate("sc_files") . "\";");
+        $data_array = array();
+        $data_array['$count'] = $count;
+        $data_array['$fileID'] = $fileID;
+        $data_array['$filename'] = $filename;
+        $sc_files = $GLOBALS["_template"]->replaceTemplate("sc_files", $data_array);
         echo $sc_files;
 
         $n++;

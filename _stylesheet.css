@@ -41,18 +41,15 @@ body {
 }
 
 .list {
-    list-style-type: disc;
-    list-style-position: outside;
+    list-style: disc outside;
 }
 
 .list_num {
-    list-style-type: decimal;
-    list-style-position: outside;
+    list-style: decimal outside;
 }
 
 .list_alpha {
-    list-style-type: lower-latin;
-    list-style-position: outside;
+    list-style: lower-latin outside;
 }
 
 .code {
@@ -82,7 +79,7 @@ body {
     white-space: nowrap;
 }
 
-a.flag img {
+.flag img {
     margin: 1px;
     -webkit-filter: grayscale(100%);
     filter: grayscale(100%);
@@ -90,13 +87,42 @@ a.flag img {
     opacity: 0.5;
 }
 
-a.flag.active img, a.flag:hover img {
+.flag.active img,
+.flag:hover img {
     filter: none;
     -webkit-filter: none;
     opacity: 1;
 }
 
-.input-group span.input-group-addon.captcha-img {
+.input-group .input-group-addon.captcha-img {
     padding-top: 4px;
     padding-bottom: 3px;
+}
+
+.ws-win-color {
+    color: #008000;
+}
+
+.ws-draw-color {
+    color: #ffa500;
+}
+
+.ws-lose-color {
+    color: #ff0000;
+}
+
+#shoutbox {
+    width: 100%;
+    overflow: hidden;
+    text-align: left;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+@media (min-width:768px) {
+    .dropdown:hover .dropdown-menu {
+        display: block;
+    }
 }

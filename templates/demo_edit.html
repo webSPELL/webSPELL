@@ -1,152 +1,150 @@
 <form action="demos.php" method="post" enctype="multipart/form-data" class="form-horizontal">
-	<h2>%edit_demo%</h2>
+    <h2>%edit_demo%</h2>
 
-	<div class="form-group">
-		<label for="date" class="col-lg-4 control-label">%date%:</label>
+    <div class="form-group">
+        <label for="date" class="col-lg-4 control-label">%date%:</label>
 
-		<div class="col-lg-8">
-			<input name="date" type="date" value="$date" placeholder="yyyy-mm-dd" class="form-control">
-		</div>
-	</div>
+        <div class="col-lg-8">
+            <input id="date" name="date" type="date" value="$date" placeholder="yyyy-mm-dd" class="form-control">
+        </div>
+    </div>
 
-	<div class="form-group">
-		<label for="game" class="col-lg-4 control-label">%game%:</label>
+    <div class="form-group">
+        <label for="game" class="col-lg-4 control-label">%game%:</label>
 
-		<div class="col-lg-8">
-			<select name="game" class="form-control">$games</select>
-		</div>
-	</div>
+        <div class="col-lg-8">
+            <select id="game" name="game" class="form-control">$games</select>
+        </div>
+    </div>
 
-	<hr>
+    <hr>
 
-	<div class="form-group">
-		<label for="clanname1" class="col-lg-4 control-label">%clan1_name%:</label>
+    <div class="form-group">
+        <label for="clanname1" class="col-lg-4 control-label">%clan1_name%:</label>
 
-		<div class="col-lg-8">
-			<input name="clanname1" type="text" size="35" value="$clanname1" class="form-control">
-		</div>
-	</div>
+        <div class="col-lg-8">
+            <input id="clanname1" name="clanname1" type="text" size="35" value="$clanname1" class="form-control">
+        </div>
+    </div>
 
-	<div class="form-group">
-		<label for="clan1" class="col-lg-4 control-label">%clan1_tag%:</label>
+    <div class="form-group">
+        <label for="clan1" class="col-lg-4 control-label">%clan1_tag%:</label>
 
-		<div class="col-lg-8">
-			<input name="clan1" type="text" size="8" value="$clan1" class="form-control">
-		</div>
-	</div>
+        <div class="col-lg-8">
+            <input id="clan1" name="clan1" type="text" size="8" value="$clan1" class="form-control">
+        </div>
+    </div>
 
-	<div class="form-group">
-		<label for="country1" class="col-lg-4 control-label">%clan1_country%:</label>
+    <div class="form-group">
+        <label for="country1" class="col-lg-4 control-label">%clan1_country%:</label>
 
-		<div class="col-lg-8">
-			<select name="country1" class="form-control">$country1</select>
-		</div>
-	</div>
+        <div class="col-lg-8">
+            <select id="country1" name="country1" class="form-control">$country1</select>
+        </div>
+    </div>
 
-	<div class="form-group">
-		<label for="hp1" class="col-lg-4 control-label">%clan1_homepage%</label>
+    <div class="form-group">
+        <label for="hp1" class="col-lg-4 control-label">%clan1_homepage%</label>
 
-		<div class="col-lg-8">
-			<input name="hp1" type="text" size="35" value="$url1"
-					class="form-control">
-		</div>
-	</div>
+        <div class="col-lg-8">
+            <input id="hp1" name="hp1" type="text" size="35" value="$url1" class="form-control">
+        </div>
+    </div>
 
-	<hr>
+    <hr>
 
-	<div class="form-group">
-		<label for="clanname2" class="col-lg-4 control-label">%clan2_name%:</label>
+    <div class="form-group">
+        <label for="clanname2" class="col-lg-4 control-label">%clan2_name%:</label>
 
-		<div class="col-lg-8">
-			<input name="clanname2" type="text" size="35" value="$clanname2" class="form-control">
-		</div>
-	</div>
+        <div class="col-lg-8">
+            <input id="clanname2" name="clanname2" type="text" size="35" value="$clanname2" class="form-control">
+        </div>
+    </div>
 
-	<div class="form-group">
-		<label for="clan2" class="col-lg-4 control-label">%clan2_tag%:</label>
+    <div class="form-group">
+        <label for="clan2" class="col-lg-4 control-label">%clan2_tag%:</label>
 
-		<div class="col-lg-8">
-			<input name="clan2" type="text" size="8" value="$clan2" class="form-control">
-		</div>
-	</div>
+        <div class="col-lg-8">
+            <input id="clan2" name="clan2" type="text" size="8" value="$clan2" class="form-control">
+        </div>
+    </div>
 
-	<div class="form-group">
-		<label for="country2" class="col-lg-4 control-label">%clan2_country%:</label>
+    <div class="form-group">
+        <label for="country2" class="col-lg-4 control-label">%clan2_country%:</label>
 
-		<div class="col-lg-8">
-			<select name="country2" class="form-control">$country2</select>
-		</div>
-	</div>
+        <div class="col-lg-8">
+            <select id="country2" name="country2" class="form-control">$country2</select>
+        </div>
+    </div>
 
-	<div class="form-group">
-		<label for="hp2" class="col-lg-4 control-label">%clan2_homepage%</label>
+    <div class="form-group">
+        <label for="hp2" class="col-lg-4 control-label">%clan2_homepage%</label>
 
-		<div class="col-lg-8">
-			<input name="hp2" type="text" size="35" value="$url2"
-					class="form-control">
-		</div>
-	</div>
+        <div class="col-lg-8">
+            <input id="hp2" name="hp2" type="text" size="35" value="$url2" class="form-control">
+        </div>
+    </div>
 
-	<hr>
+    <hr>
 
-	<div class="form-group">
-		<label for="league" class="col-lg-4 control-label">%league%:</label>
+    <div class="form-group">
+        <label for="league" class="col-lg-4 control-label">%league%:</label>
 
-		<div class="col-lg-8">
-			<input name="league" type="text" size="35" value="$league" class="form-control">
-		</div>
-	</div>
+        <div class="col-lg-8">
+            <input id="league" name="league" type="text" size="35" value="$league" class="form-control">
+        </div>
+    </div>
 
-	<div class="form-group">
-		<label for="leaguehp" class="col-lg-4 control-label">%league_homepage%</label>
+    <div class="form-group">
+        <label for="leaguehp" class="col-lg-4 control-label">%league_homepage%</label>
 
-		<div class="col-lg-8">
-			<input name="leaguehp" type="text" value="$leaguehp" size="35" class="form-control">
-		</div>
-	</div>
+        <div class="col-lg-8">
+            <input id="leaguehp" name="leaguehp" type="text" value="$leaguehp" size="35" class="form-control">
+        </div>
+    </div>
 
-	<div class="form-group">
-		<label for="maps" class="col-lg-4 control-label">%maps%:</label>
+    <div class="form-group">
+        <label for="maps" class="col-lg-4 control-label">%maps%:</label>
 
-		<div class="col-lg-8">
-			<input name="maps" type="text" size="35" value="$maps" class="form-control">
-		</div>
-	</div>
+        <div class="col-lg-8">
+            <input id="maps" name="maps" type="text" size="35" value="$maps" class="form-control">
+        </div>
+    </div>
 
-	<div class="form-group">
-		<label for="player" class="col-lg-4 control-label">%players%:</label>
+    <div class="form-group">
+        <label for="player" class="col-lg-4 control-label">%players%:</label>
 
-		<div class="col-lg-8">
-			<input name="player" type="text" size="35" value="$player" class="form-control">
-		</div>
-	</div>
+        <div class="col-lg-8">
+            <input id="player" name="player" type="text" size="35" value="$player" class="form-control">
+        </div>
+    </div>
 
-	<div class="form-group">
-		<label for="demo" class="col-lg-4 control-label">%demo_upload%:</label>
+    <div class="form-group">
+        <label for="demo" class="col-lg-4 control-label">%demo_upload%:</label>
 
-		<div class="col-lg-8">
-			<input name="demo" type="file" size="30" class="form-control">
-		</div>
-	</div>
+        <div class="col-lg-8">
+            <input id="demo" name="demo" type="file" size="30" class="form-control">
+        </div>
+    </div>
 
-	<div class="form-group">
-		<label for="link" class="col-lg-4 control-label">%extern_link%:</label>
+    <div class="form-group">
+        <label for="link" class="col-lg-4 control-label">%extern_link%:</label>
 
-		<div class="col-lg-8">
-			<input name="link" type="text" value="$extern" size="35" class="form-control">
-		</div>
-	</div>
+        <div class="col-lg-8">
+            <input id="link" name="link" type="text" value="$extern" size="35" class="form-control">
+        </div>
+    </div>
 
-	<div class="form-group">
-		<div class="col-lg-offset-4 col-lg-8">
-			<select name="comments" class="form-control">$comments</select>
-		</div>
-	</div>
+    <div class="form-group">
+        <div class="col-lg-offset-4 col-lg-8">
+            <select name="comments" class="form-control">$comments</select>
+        </div>
+    </div>
 
-	<div class="form-group">
-		<div class="col-lg-12 text-right">
-			<input name="saveedit" type="submit" value="%update_demo%" class="btn btn-danger">
-		</div>
-	</div>
-	<input type="hidden" name="demoID" value="$demoID">
+    <div class="form-group">
+        <div class="col-lg-12 text-right">
+            <input name="saveedit" type="submit" value="%update_demo%" class="btn btn-danger">
+        </div>
+    </div>
+    <input type="hidden" name="demoID" value="$demoID">
 </form>

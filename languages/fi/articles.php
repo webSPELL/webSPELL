@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -39,7 +39,7 @@ $language_array = Array(
   'already_rated'=>'<b>Artikkeli on jo arvosteltu!</b>',
   'articles'=>'Artikkelit',
   'author'=>'Kirjoittaja',
-  'bbcode'=>'&#8226; <a href="javascript:void(0);" onclick="window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> <b><u>KYLLÄ</u></b>',
+  'bbcode'=>'&#8226; <a href="javascript:void(0);" onclick="window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> <b><span class="underline">KYLLÄ</span></b>',
   'cancel'=>'Peruuta',
   'date'=>'Päivämäärä',
   'delete'=>'Poista',
@@ -47,7 +47,7 @@ $language_array = Array(
   'edit_article'=>'Muokkaa artikkelia',
   'enter_title'=>'Sinun täytyy kirjoittaa otsikko!',
   'enter_text'=>'Sinun täytyy kirjoittaa teksti',
-  'html'=>'&#8226; HTML <b><u>KYLLÄ</u></b>',
+  'html'=>'&#8226; HTML <b><span class="underline">KYLLÄ</span></b>',
   'link'=>'Linkki',
   'links'=>'Linkit',
   'login_for_rate'=>'<b>Sinun täytyy olla rekisteröitynyt ja kirjautunut sisään arvostellaksesi artikkelin!</b>',
@@ -59,7 +59,7 @@ $language_array = Array(
   'options'=>'Asetukset',
   'page'=>'Sivu',
   'page_of'=>'Sivu $page / $pages',
-  'page_select'=>'Jaa artikkeli <select name="language_count" onchange="update_textarea(this.options[this.selectedIndex].value)">$selects</select> sivulle',
+  'page_select'=>'Jaa artikkeli <select name="language_count" onchange="updateTextarea(this.options[this.selectedIndex].value)">$selects</select> sivulle',
   'pagecount'=>'Sivumäärä',
   'perfect'=>'Täydellinen',
   'poor'=>'Huono',
@@ -69,7 +69,7 @@ $language_array = Array(
   'really_delete'=>'Oletko varma että haluat poistaa tämän artikkelin?',
   'save_article'=>'Tallenna artikkeli',
   'self'=>'Sama ikkuna',
-  'smilies'=>'&#8226; <a href="javascript:void(0);" onclick="window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Hymiöt</a> <b><u>KYLLÄ</u></b>',
+  'smilies'=>'&#8226; <a href="javascript:void(0);" onclick="window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Hymiöt</a> <b><span class="underline">KYLLÄ</span></b>',
   'sort'=>'Järjestä:',
   'title'=>'Otsikko',
   'top5_points'=>'5 PARASTA ARTIKKELIA (Pisteissä)',

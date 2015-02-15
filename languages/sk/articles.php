@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -33,7 +33,7 @@ $language_array = Array(
 	'already_rated'=>'<b>Článok už bol hodnotený!</b>',
 	'articles'=>'články',
 	'author'=>'Autor',
-	'bbcode'=>'&#8226; <a href="javascript:void(0);" onclick="window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> <b><u>zapnutý</u></b>',
+	'bbcode'=>'&#8226; <a href="javascript:void(0);" onclick="window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> <b><span class="underline">zapnutý</span></b>',
 	'cancel'=>'Zrušiť',
 	'date'=>'Dátum',
 	'delete'=>'Vymazať',
@@ -41,7 +41,7 @@ $language_array = Array(
 	'edit_article'=>'Upraviť článok',
 	'enter_title'=>'Musíte zadať nadpis!',
 	'enter_text'=>'Musíte zadať text!',
-	'html'=>'&#8226; HTML <b><u>zapnutý</u></b>',
+	'html'=>'&#8226; HTML <b><span class="underline">zapnutý</span></b>',
 	'link'=>'Odkaz',
 	'links'=>'Odkazy',
 	'login_for_rate'=>'<b>Musíte byť registrovaný a prihlásený, aby ste mohli hodnotiť tento článok!</b>',
@@ -53,7 +53,7 @@ $language_array = Array(
 	'options'=>'Možnosti',
 	'page'=>'Strana',
 	'page_of'=>'Strana $page z $pages',
-	'page_select'=>'Publikovať článok na <select name="language_count" onchange="update_textarea(this.options[this.selectedIndex].value)">$selects</select> strán',
+	'page_select'=>'Publikovať článok na <select name="language_count" onchange="updateTextarea(this.options[this.selectedIndex].value)">$selects</select> strán',
 	'pagecount'=>'Počet strán',
 	'perfect'=>'perfektné',
 	'poor'=>'úbohé',
@@ -63,7 +63,7 @@ $language_array = Array(
 	'really_delete'=>'Naozaj chcete vymazať tento článok?',
 	'save_article'=>'Uložiť článok',
   	'self'=>'to isté okno',
-	'smilies'=>'&#8226; <a href="javascript:void(0);" onclick="window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smajlíci</a> <b><u>zapnutí</u></b>',
+	'smilies'=>'&#8226; <a href="javascript:void(0);" onclick="window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smajlíci</a> <b><span class="underline">zapnutí</span></b>',
 	'sort'=>'Triediť:',
 	'title'=>'Nadpis',
 	'top5_points'=>'TOP 5 ČLÁNKOV (Body)',

@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -57,7 +57,7 @@ if (isset($_GET[ 'partnerID' ])) {
             FROM
                 " . PREFIX . "partners
             WHERE
-                `partnerID` = '" . (int)$_GET[ 'partnerID' ]."'"
+                `partnerID` = '" . (int)$_GET[ 'partnerID' ] . "'"
         )
     );
     $target = 'http://' . str_replace('http://', '', $ds[ 'url' ]);
@@ -70,22 +70,17 @@ if (isset($_GET[ 'sponsorID' ])) {
         safe_query(
             "SELECT
                 `url`
-           FROM
+            FROM
                 " . PREFIX . "sponsors
             WHERE
-                `sponsorID` = '" . (int)$_GET[ 'sponsorID' ]."'"
+                `sponsorID` = '" . (int)$_GET[ 'sponsorID' ] . "'"
         )
     );
     $target = 'http://' . str_replace('http://', '', $ds[ 'url' ]);
     $type = "direct";
 }
 
-//output
-if ($type === "frame") {
-    $pagetitle = PAGETITLE;
-
-    eval("\$out_frame = \"" . gettemplate("out_frame") . "\";");
-    echo $out_frame;
-} elseif ($type === "direct") {
+if (isset($target)) {
+    //output
     header("Location: " . $target);
 }

@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -32,7 +32,7 @@ $language_array = Array(
 
   'add_buddylist'=>'მეგობრებში დამატება',
   'adminoptions'=>'ადმინისტრატორის ფუნქციები',
-  'bbcode'=>'BBკოდი <b><u>ჩართვა</u></b>',
+  'bbcode'=>'BBკოდი <b><span class="underline">ჩართვა</span></b>',
   'by'=>'by',
   'date'=>'თარიღი:',
   'delete'=>'წაშლა',
@@ -42,7 +42,7 @@ $language_array = Array(
   'execute'=>'შესრულება',
   'formation'=>'ფორმატირება',
   'from'=>'by:',
-  'html'=>'HTML <b><u>გათიშვა</u></b>',
+  'html'=>'HTML <b><span class="underline">გათიშვა</span></b>',
   'ignore'=>'მომხმარებლის იგნორილება',
   'incoming'=>'შემომსვლელი',
   'mark_not_viewed'=>'მონიშვნა როგორც არ მინახავს',
@@ -69,7 +69,7 @@ $language_array = Array(
   'sendeachmember'=>'ყველა კლანის მონაწილისთვის გაგზავნა',
   'sendeachuser'=>'ყველა დარეგისტრირებული მომხმარებლისთვის გაგზავნა',
   'show'=>'ჩვენება',
-  'smilies'=>'სმაილები <b><u>ჩართვა</u></b>',
+  'smilies'=>'სმაილები <b><span class="underline">ჩართვა</span></b>',
   'sort'=>'დაფასოება:',
   'title'=>'საგანი',
   'your_message'=>'თქვენი შეტყობინება:',

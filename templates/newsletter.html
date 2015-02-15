@@ -1,78 +1,71 @@
 <!-- Register newsletter -->
 <div class="panel panel-default">
-	<div class="panel-heading">
-		<h3 class="panel-title">%register_newsletter%</h3>
-	</div>
-	<div class="panel-body">
-		<form action="index.php?site=newsletter&amp;action=save" method="post"
-				name="newsletter_register" role="form">
+    <div class="panel-heading">
+        <h3 class="panel-title">%register_newsletter%</h3>
+    </div>
+    <div class="panel-body">
+        <form action="index.php?site=newsletter&amp;action=save" method="post" name="newsletter_register" role="form">
 
-			<!-- Email -->
-			<div class="input-group">
-				<input type="email" name="email" class="form-control" placeholder="%mail_adress%"
-						value="$usermail">
-				<span class="input-group-btn">
-					<input type="submit" name="post" class="btn btn-primary" value="%submit%">
-				</span>
-			</div>
+            <!-- Email -->
+            <div class="input-group">
+                <input type="email" name="email" class="form-control" placeholder="%mail_adress%" value="$usermail">
+                <span class="input-group-btn">
+                    <input type="submit" name="post" class="btn btn-primary" value="%submit%">
+                </span>
+            </div>
 
-		</form>
-	</div>
+        </form>
+    </div>
 </div>
 
 <!-- Lost deletion key -->
 <div class="panel panel-default">
-	<div class="panel-heading">
-		<h3 class="panel-title">%lost_deletion_key%</h3>
-	</div>
-	<div class="panel-body">
-		<form action="index.php?site=newsletter&amp;action=forgot" method="post"
-				name="newsletter_forgot" role="form">
+    <div class="panel-heading">
+        <h3 class="panel-title">%lost_deletion_key%</h3>
+    </div>
+    <div class="panel-body">
+        <form action="index.php?site=newsletter&amp;action=forgot" method="post" name="newsletter_forgot" role="form">
 
-			<!-- Email -->
-			<div class="input-group">
-				<input type="email" name="email" class="form-control" placeholder="%mail_adress%"
-						value="$get_mail" onfocus="this.value=''">
-				<span class="input-group-btn">
-					<input type="submit" name="post" class="btn btn-info" value="%send%">
-				</span>
-			</div>
+            <!-- Email -->
+            <div class="input-group">
+                <input type="email" name="email" class="form-control" placeholder="%mail_adress%" value="$get_mail">
+                <span class="input-group-btn">
+                    <input type="submit" name="post" class="btn btn-info" value="%send%">
+                </span>
+            </div>
 
-		</form>
-	</div>
+        </form>
+    </div>
 </div>
 
 <!-- Del from mail list -->
 <div class="panel panel-default">
-	<div class="panel-heading">
-		<h3 class="panel-title">%del_from_mail_list%</h3>
-	</div>
-	<div class="panel-body">
-		<form action="index.php?site=newsletter&amp;action=delete" method="post"
-				name="newsletter_delete" role="form">
-			<div class="row">
+    <div class="panel-heading">
+        <h3 class="panel-title">%del_from_mail_list%</h3>
+    </div>
+    <div class="panel-body">
+        <form action="index.php?site=newsletter&amp;action=delete" method="post" name="newsletter_delete" role="form">
+            <div class="row">
 
-				<!-- Email -->
-				<div class="col-sm-6">
-					<input type="email" name="email" class="form-control"
-							placeholder="%mail_adress%" value="$get_mail" onfocus="this.value=''">
-				</div>
+                <!-- Email -->
+                <div class="col-sm-6">
+                    <input type="email" name="email" class="form-control" placeholder="%mail_adress%" value="$get_mail">
+                </div>
 
-				<!-- Del key -->
-				<div class="col-sm-6">
-					<div class="form-group">
-						<div class="input-group">
-							<input type="text" name="password" class="form-control"
-									placeholder="%del_key%" value="$get_pw" onfocus="this.value=''">
-							<span class="input-group-btn">
-								<input type="submit" name="post" class="btn btn-danger"
-										value="%submit%">
-							</span>
-						</div>
-					</div>
-				</div>
+                <!-- Del key -->
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <div class="input-group">
+                            <input type="text" name="password" class="form-control" placeholder="%del_key%"
+                                value="$get_pw">
+                            <span class="input-group-btn">
+                                <input type="submit" name="post" class="btn btn-danger" value="%submit%">
+                            </span>
+                        </div>
+                    </div>
+                </div>
 
-			</div>
-		</form>
-	</div>
+            </div>
+        </form>
+    </div>
 </div>

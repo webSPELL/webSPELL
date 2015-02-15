@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -200,7 +200,7 @@ function usergroupexists($userID)
 function wantmail($userID)
 {
     return (
-        mysql_num_rows(
+        mysqli_num_rows(
             safe_query(
                 "SELECT
                     userID
@@ -278,7 +278,6 @@ function RandPass($length, $type = 0)
     */
     $pass = '';
     for ($i = 0; $i < $length; $i++) {
-
         if ($type == 0) {
             $rand = rand(1, 3);
         } else {
@@ -304,7 +303,7 @@ function isonline($userID)
     $q = safe_query("SELECT site FROM " . PREFIX . "whoisonline WHERE userID=" . (int)$userID);
     if (mysqli_num_rows($q) > 0) {
         $ds = mysqli_fetch_array($q);
-        return '<b>online</b> @ <a href="index.php?site=' . $ds['site'] . '">' . $ds['site'] . '</a>';
+        return '<strong>online</strong> @ <a href="index.php?site=' . $ds['site'] . '">' . $ds['site'] . '</a>';
     }
 
     return 'offline';

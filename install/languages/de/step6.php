@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -26,20 +26,20 @@
 */
 
 $language_array = Array(
-    'back' => 'zurück',
-    'delete_folder' => 'Bitte lösche das <b>/install</b> Verzeichnis zu Deiner eigenen Sicherheit.',
-    'error' => 'Fehler',
-    'error_database' => 'Keine Verbindung zur Datenbank',
-    'error_mysql' => 'Keine Verbindung zu MySQL!',
-    'install_complete' => 'Installation war erfolgreich!',
-    'install_running' => 'Installation wird ausgeführt!',
-    'finish_install' => 'Installation abschließen',
-    'folder_removed' => 'Das <b>/install</b> Verzeichnis wurde erfolgreich gelöscht',
-    'reset_chmod' => 'Bitte setze den CHMOD der <b>_mysql.php</b> wieder zu 644.',
-    'update_complete' => 'Update war erfoglreich!',
-    'update_running' => 'Update wird ausgeführt!',
-    'verify_data' => 'Bitte überprüfe Deine Daten!',
-    'view_site' => 'Betrachte Deine Seite',
-    'write_failed' => 'Das Beschreiben der Datei war nicht möglich. Bitte vergewissere dich, dass dein Webserver Schreibzugriff auf die _mysql.php hat (CHMOD 777).'
+    'back'=>'zurück',
+    'delete_folder'=>'Bitte lösche das <b>/install</b> Verzeichnis zu Deiner eigenen Sicherheit.',
+    'error'=>'Fehler',
+    'error_database'=>'Keine Verbindung zur Datenbank',
+    'error_mysql'=>'Keine Verbindung zu MySQL!',
+    'install_complete'=>'Installation war erfolgreich!',
+    'install_running'=>'Installation wird ausgeführt!',
+    'finish_install'=>'Installation abschließen',
+    'folder_removed'=>'Das <b>/install</b> Verzeichnis wurde erfolgreich gelöscht',
+    'reset_chmod'=>'Bitte setze den CHMOD der <b>_mysql.php</b> wieder zu 644.',
+    'update_complete'=>'Update war erfoglreich!',
+    'update_running'=>'Update wird ausgeführt!',
+    'verify_data'=>'Bitte überprüfe Deine Daten!',
+    'view_site'=>'Betrachte Deine Seite',
+    'write_failed'=>'Das Beschreiben der Datei war nicht möglich. Bitte vergewissere dich, dass dein Webserver Schreibzugriff auf die _mysql.php hat (CHMOD 777).'
 );
 ?>

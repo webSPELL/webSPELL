@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -67,6 +67,8 @@ $language_array = Array(
 	'really_delete'=>'Really delete?',
 	'no_entries'=>'no entries',
 	'test_support'=>'test support',
-	'rebuild'=>'Rebuild URLs'
+	'rebuild'=>'Rebuild URLs',
+	'add_apache_options'=>'Add the following line to your apache config:<br>Options -MultiViews',
+	'modrewrite_available_but_multiview_enabled'=>'mod_rewrite is available but Apache MultiViews are enabled and prevents mod_rewrite'
 	);
 ?>

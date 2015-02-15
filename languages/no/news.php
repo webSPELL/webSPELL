@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -30,7 +30,7 @@ $language_array = Array(
 /* do not edit above this line */
 
 	'author'=>'Forfatter',
-	'bbcode'=>'BBCode er <b><u>PÅ</u></b>',
+	'bbcode'=>'BBCode er <b><span class="underline">PÅ</span></b>',
 	'cancel'=>'avbryt',
 	'comm'=>'komm',
 	'comment'=>'<a href="$url">1 komentar</a>, siste av $lastposter - $lastdate',
@@ -43,7 +43,7 @@ $language_array = Array(
 	'enter_text'=>'You have to enter a text',
 	'go'=>'Gå!',
 	'headline'=>'Overskrift',
-	'html'=>'HTML er <b><u>PÅ</u></b>',
+	'html'=>'HTML er <b><span class="underline">PÅ</span></b>',
 	'intern'=>'intern',
 	'languages'=>'Språk',
 	'link'=>'Link',
@@ -69,7 +69,7 @@ $language_array = Array(
 	'select_all'=>'velge alle',
 	'self'=>'Samme vindu',
 	'show_news'=>'vis nyheter',
-	'smilies'=>'Smilefjes er <b><u>PÅ</u></b>',
+	'smilies'=>'Smilefjes er <b><span class="underline">PÅ</span></b>',
 	'sort'=>'Sorter:',
 	'title_unpublished_news'=>'<h2>UPUBLISERTE NYHETER:</h2>',
 	'topnews'=>'topp nyhet',

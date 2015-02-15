@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -34,7 +34,7 @@ $language_array = Array(
 	'back_to_form'=>'Back to form',
 	'city'=>'City',
 	'clan_history'=>'Clan History',
-	'email_not_valid'=>'No valid email adress entered!',
+	'email_not_valid'=>'No valid email address entered!',
 	'forgot_age'=>'No age entered!',
 	'forgot_city'=>'No city entered!',
 	'forgot_history'=>'No clan history entered!',
@@ -43,18 +43,18 @@ $language_array = Array(
 	'forgot_realname'=>'You forgot your name!',
 	'icq_msn'=>'ICQ/MSN/etc...',
 	'info'=>'Additional information',
-	'joinus_form'=>'Joinus form',
+	'joinus_form'=>'Join us form',
 	'mail'=>'E-Mail',
 	'messenger'=>'Messenger',
 	'message_title'=>'Join us',
 	'name'=>'Name',
 	'nick'=>'Nickname',
-	'problems'=>'Following problems occured with your entered data',
+	'problems'=>'Following problems occurred with your entered data',
 	'security_code'=>'Security code',
 	'send'=>'Submit',
-	'someone_want_to_join_your_squad'=>'Somebody wants to join your squad:',
+	'someone_want_to_join_your_squad'=>'Someone wants to join your squad:',
 	'squad'=>'Squad',
-	'thanks_you_will_get_mail'=>'Thank you for your apply, we will get in contact with you.',
+	'thanks_you_will_get_mail'=>'Thank you for applying. We will be in touch soon.',
 	'title_join_us'=>'Become a member',
 	'wrong_security_code'=>'The security code was wrong!'
 );

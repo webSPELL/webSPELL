@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -32,7 +32,7 @@ $language_array = Array(
 
   'add_buddylist'=>'اضافة الى قائمة الاصدقاء',
   'adminoptions'=>'اعدادت المسؤل:',
-  'bbcode'=>'BBCode <b><u>ON</u></b>',
+  'bbcode'=>'BBCode <b><span class="underline">ON</span></b>',
   'by'=>'من قبل:',
   'date'=>'التاريخ:',
   'delete'=>'حذف:',
@@ -42,7 +42,7 @@ $language_array = Array(
   'execute'=>'تنفيذ',
   'formation'=>'التنسيق',
   'from'=>'من قبل:',
-  'html'=>'HTML <b><u>OFF</u></b>',
+  'html'=>'HTML <b><span class="underline">OFF</span></b>',
   'ignore'=>'تجاهل المستخدم',
   'incoming'=>'الوارد',
   'mark_not_viewed'=>'تحديد العلامة عدم المشاهدة',
@@ -69,7 +69,7 @@ $language_array = Array(
   'sendeachmember'=>'أرسل إلى كل عضو عشيرة',
   'sendeachuser'=>'ارسل الى كل مستخدم مسجل',
   'show'=>'اظهار',
-  'smilies'=>'الابتسامات <b><u>ON</u></b>',
+  'smilies'=>'الابتسامات <b><span class="underline">ON</span></b>',
   'sort'=>'الفرز:',
   'title'=>'موضوع',
   'your_message'=>'رسالتك:',

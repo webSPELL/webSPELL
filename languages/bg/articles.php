@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -39,7 +39,7 @@ $language_array = Array(
   'already_rated'=>'<b>Статията е оценена!</b>',
   'articles'=>'статия',
   'author'=>'автор',
-  'bbcode'=>'&#8226; <a href="javascript:void(0);" onclick="window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">ББКод</a> <b><u>е включен</u></b>',
+  'bbcode'=>'&#8226; <a href="javascript:void(0);" onclick="window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">ББКод</a> <b><span class="underline">е включен</span></b>',
   'cancel'=>'отказ',
   'date'=>'дата',
   'delete'=>'изтриване',
@@ -47,7 +47,7 @@ $language_array = Array(
   'edit_article'=>'редактирай статията',
   'enter_title'=>'Моля въведете заглавие!',
   'enter_text'=>'МОля въведете текст!',
-  'html'=>'&#8226; HTML <b><u>е включен</u></b>',
+  'html'=>'&#8226; HTML <b><span class="underline">е включен</span></b>',
   'link'=>'линк',
   'links'=>'линкове',
   'login_for_rate'=>'<b>За да оцените тази тема е нужно да се регистрирате и влезнете с акаунта си!</b>rn<b>Трябва да бъдете регистрирани и логнати за да въведете статия!</b>',
@@ -59,7 +59,7 @@ $language_array = Array(
   'options'=>'опции',
   'page'=>'страница',
   'page_of'=>'страница $страница $страници',
-  'page_select'=>'Разпределете статия за <select name="language_count" onchange="update_textarea(this.options[this.selectedIndex].value)">$selects</select> страници',
+  'page_select'=>'Разпределете статия за <select name="language_count" onchange="updateTextarea(this.options[this.selectedIndex].value)">$selects</select> страници',
   'pagecount'=>'брой страници',
   'perfect'=>'перфектно',
   'poor'=>'лош',
@@ -69,7 +69,7 @@ $language_array = Array(
   'really_delete'=>'Наистина искате да изтриете статията?',
   'save_article'=>'запиши статията',
   'self'=>'същия прозорец',
-  'smilies'=>'&#8226; <a href="javascript:void(0);" onclick="window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Усмивки</a> <b><u>е включен</u></b>',
+  'smilies'=>'&#8226; <a href="javascript:void(0);" onclick="window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Усмивки</a> <b><span class="underline">е включен</span></b>',
   'sort'=>'подреди:',
   'title'=>'заглавие',
   'top5_points'=>'ТОП 5 СТАТИИ (точки)',

@@ -1,124 +1,120 @@
 <script>
-	<!--
-	function chkFormular() {
-		if (document.getElementById('usedfor').value === "") {
-			alert("%enter_usage%");
-			document.getElementById('usedfor').focus();
+    <!--
+    function chkFormular() {
+        if (document.getElementById('usedfor').value === "") {
+            alert("%enter_usage%");
+            document.getElementById('usedfor').focus();
 
-			return false;
-		}
+            return false;
+        }
 
-		if (document.getElementById('day').value === "") {
-			alert("%enter_date%");
-			document.getElementById('day').focus();
+        if (document.getElementById('day').value === "") {
+            alert("%enter_date%");
+            document.getElementById('day').focus();
 
-			return false;
-		}
+            return false;
+        }
 
-		if (document.getElementById('month').value === "") {
-			alert("%enter_date%");
-			document.getElementById('month').focus();
+        if (document.getElementById('month').value === "") {
+            alert("%enter_date%");
+            document.getElementById('month').focus();
 
-			return false;
-		}
+            return false;
+        }
 
-		if (document.getElementById('year').value === "") {
-			alert("%enter_date%");
-			document.getElementById('year').focus();
+        if (document.getElementById('year').value === "") {
+            alert("%enter_date%");
+            document.getElementById('year').focus();
 
-			return false;
-		}
+            return false;
+        }
 
-		if (
-				document.getElementById('euro').value === "" ||
-				document.getElementById('euro').value == "0.00"
-		) {
-			alert("%enter_total_costs%");
-			document.getElementById('euro').focus();
+        if (
+                document.getElementById('euro').value === "" ||
+                document.getElementById('euro').value == "0.00"
+        ) {
+            alert("%enter_total_costs%");
+            document.getElementById('euro').focus();
 
-			return false;
-		}
+            return false;
+        }
 
-		if (
-				document.getElementById('usereuro').value == "" ||
-				document.getElementById('usereuro').value == "0.00"
-		) {
-			alert("%enter_costs_member%");
-			document.getElementById('usereuro').focus();
+        if (
+                document.getElementById('usereuro').value == "" ||
+                document.getElementById('usereuro').value == "0.00"
+        ) {
+            alert("%enter_costs_member%");
+            document.getElementById('usereuro').focus();
 
-			return false;
-		}
+            return false;
+        }
 
-	}
+    }
 
-	function berechnen() {
-		var anz = document.getElementById('anz').value,
-				=
-		document.getElementById('euro').value,
-				user = total / anz,
-				rounduser = Math.round(user);
+    function berechnen() {
+        var anz = document.getElementById('anz').value,
+            total = document.getElementById('euro').value,
+            user = total / anz,
+            rounduser = Math.round(user);
 
-		document.getElementById('usereuro').value = rounduser;
-		document.getElementById('calculation').value =
-				rounduser + " EUR  (" + total + "/" + anz + "=" + user + ")";
+        document.getElementById('usereuro').value = rounduser;
+        document.getElementById('calculation').value =
+                rounduser + " EUR  (" + total + "/" + anz + "=" + user + ")";
 
-		document.getElementById('usereuro').focus();
-	}
-	-->
+        document.getElementById('usereuro').focus();
+    }
+    -->
 </script>
 
 <form name="post" method="post" action="cashbox.php" onsubmit="return chkFormular()" role="form">
 
-	<h3>%new_usage%</h3>
+    <h3>%new_usage%</h3>
 
-	<div class="form-group">
-		<label for="squad">%squad%</label>
-		<select name="squad" id="squad" class="form-control">$squads</select>
-	</div>
+    <div class="form-group">
+        <label for="squad">%squad%</label>
+        <select name="squad" id="squad" class="form-control">$squads</select>
+    </div>
 
-	<div class="form-group">
-		<label for="usedfor">%usage%</label>
-		<input name="usedfor" type="text" id="usedfor" value="" size="55" class="form-control">
-	</div>
+    <div class="form-group">
+        <label for="usedfor">%usage%</label>
+        <input name="usedfor" type="text" id="usedfor" value="" size="55" class="form-control">
+    </div>
 
-	<div class="form-group">
-		<label for="info">%info%</label>
-		<textarea name="info" cols="50" rows="7" id="info" class="form-control"></textarea>
-	</div>
+    <div class="form-group">
+        <label for="info">%info%</label>
+        <textarea name="info" cols="50" rows="7" id="info" class="form-control"></textarea>
+    </div>
 
-	<div class="form-group">
-		<label for="konto">%bank_account%</label>
-		<textarea name="konto" cols="50" rows="4" id="konto" class="form-control"></textarea>
-	</div>
+    <div class="form-group">
+        <label for="konto">%bank_account%</label>
+        <textarea name="konto" cols="50" rows="4" id="konto" class="form-control"></textarea>
+    </div>
 
-	<div class="form-group">
-		<label for="date">%pay_until%</label>
+    <div class="form-group">
+        <label for="date">%pay_until%</label>
 
-		<input type="date" name="date" id="date" placeholder="yyyy-mm-dd" class="form-control">
-	</div>
+        <input type="date" name="date" id="date" placeholder="yyyy-mm-dd" class="form-control">
+    </div>
 
-	<div class="form-group">
-		<label for="euro">%total_costs%:</label>
-		<input type="text" dir="rtl" name="euro" id="euro" size="8" value="$euro"
-				class="form-control">
-	</div>
+    <div class="form-group">
+        <label for="euro">%total_costs%:</label>
+        <input type="text" dir="rtl" name="euro" id="euro" size="8" value="$euro" class="form-control">
+    </div>
 
-	<div class="form-group">
-		<label for="usereuro">%costs_member%:</label>
+    <div class="form-group">
+        <label for="usereuro">%costs_member%:</label>
 
-		<div class="input-group">
-			<input type="text" dir="rtl" name="usereuro" id="usereuro" size="8" value="$usereuro"
-					class="form-control">
-			<span class="input-group-btn">
-				<input type="button" name="calculate" value="%calculate%" onclick="berechnen()"
-						class="btn btn-info">
-			</span>
-		</div>
-	</div>
+        <div class="input-group">
+            <input type="text" dir="rtl" name="usereuro" id="usereuro" size="8" value="$usereuro" class="form-control">
+            <span class="input-group-btn">
+                <input type="button" name="calculate" value="%calculate%" onclick="berechnen()" class="btn btn-info">
+            </span>
+        </div>
+    </div>
 
-	<div class="form-group text-right">
-		<input type="hidden" name="anz" id="anz" value="$anz">
-		<input type="submit" name="save" value="%submit%" class="btn btn-primary">
-	</div>
+    <div class="form-group text-right">
+        <input type="hidden" name="anz" id="anz" value="$anz">
+        <input type="submit" name="save" value="%submit%" class="btn btn-primary">
+    </div>
 
 </form>

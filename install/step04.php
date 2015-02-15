@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -26,7 +26,7 @@
 */
 
 if ($_POST['hp_url']) {
-    ?>
+?>
 
     <tr>
         <td id="step" align="center" colspan="2">
@@ -70,4 +70,5 @@ if ($_POST['hp_url']) {
         </td>
     </tr>
 
-<?php } ?>
+<?php
+}

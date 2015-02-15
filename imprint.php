@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -27,37 +27,37 @@
 
 $_language->readModule('imprint');
 
-eval ("\$title_imprint = \"" . gettemplate("title_imprint") . "\";");
+$title_imprint = $GLOBALS["_template"]->replaceTemplate("title_imprint", array());
 echo $title_imprint;
 
 $ergebnis =
     safe_query(
         "SELECT
-          u.firstname, u.lastname, u.nickname, u.userID
+            u.firstname, u.lastname, u.nickname, u.userID
         FROM
-          " . PREFIX . "user_groups as g, " . PREFIX . "user as u
+            " . PREFIX . "user_groups as g, " . PREFIX . "user as u
         WHERE
-          u.userID = g.userID
+            u.userID = g.userID
         AND
-          (g.page='1'
+            (g.page='1'
         OR
-          g.forum='1'
+            g.forum='1'
         OR
-          g.user='1'
+            g.user='1'
         OR
-          g.news='1'
+            g.news='1'
         OR
-          g.clanwars='1'
+            g.clanwars='1'
         OR
-          g.feedback='1'
+            g.feedback='1'
         OR
-          g.super='1'
+            g.super='1'
         OR
-          g.gallery='1'
+            g.gallery='1'
         OR
-          g.cash='1'
+            g.cash='1'
         OR
-          g.files='1')"
+            g.files='1')"
     );
 $administrators = '';
 while ($ds = mysqli_fetch_array($ergebnis)) {
@@ -67,13 +67,13 @@ while ($ds = mysqli_fetch_array($ergebnis)) {
 $ergebnis =
     safe_query(
         "SELECT
-          u.firstname, u.lastname, u.nickname, u.userID
+            u.firstname, u.lastname, u.nickname, u.userID
         FROM
-          " . PREFIX . "user_groups as g, " . PREFIX . "user as u
+            " . PREFIX . "user_groups as g, " . PREFIX . "user as u
         WHERE
-          u.userID = g.userID
+            u.userID = g.userID
         AND
-          g.moderator='1'"
+            g.moderator='1'"
     );
 $moderators = '';
 while ($ds = mysqli_fetch_array($ergebnis)) {
@@ -92,26 +92,33 @@ if ($imprint_type) {
     $imprint_head = htmloutput($ds[ 'imprint' ]);
 } else {
     $imprint_head = '<div class="form-horizontal">
-		<div class="form-group">
-			<label class="col-sm-3 control-label">' . $_language->module[ 'webmaster' ] . '</label>
-			<div class="col-sm-9">
-				<p class="form-control-static"><a href="mailto:' . mail_protect($admin_email) . '">' . $admin_name . '</a></p>
-			</div>
-		</div>
-		<div class="form-group">
-			<label class="col-sm-3 control-label">' . $_language->module[ 'admins' ] . '</label>
-			<div class="col-sm-9">
-				<p class="form-control-static">' . $administrators . '</p>
-			</div>
-		</div>
-		<div class="form-group">
-			<label class="col-sm-3 control-label">' . $_language->module[ 'webmaster' ] . '</label>
-			<div class="col-sm-9">
-				<p class="form-control-static">' . $moderators . '</p>
-			</div>
-		</div>
-	</div>';
+        <div class="form-group">
+            <label class="col-sm-3 control-label">' . $_language->module[ 'webmaster' ] . '</label>
+            <div class="col-sm-9">
+                <p class="form-control-static">
+                    <a href="mailto:' . mail_protect($admin_email) . '">' . $admin_name . '</a>
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">' . $_language->module[ 'admins' ] . '</label>
+            <div class="col-sm-9">
+                <p class="form-control-static">' . $administrators . '</p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">' . $_language->module[ 'webmaster' ] . '</label>
+            <div class="col-sm-9">
+                <p class="form-control-static">' . $moderators . '</p>
+            </div>
+        </div>
+    </div>';
 }
 
-eval ("\$imprint = \"" . gettemplate("imprint") . "\";");
+$data_array = array();
+$data_array['$headline1'] = $headline1;
+$data_array['$imprint_head'] = $imprint_head;
+$data_array['$headline2'] = $headline2;
+$data_array['$version'] = $version;
+$imprint = $GLOBALS["_template"]->replaceTemplate("imprint", $data_array);
 echo $imprint;

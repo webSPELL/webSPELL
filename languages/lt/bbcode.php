@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -74,7 +74,7 @@ $language_array = Array(
 	'listguide'=>'įveskite \'1\' sąrašo numeriui, \'a\' abėcėliniam sąrašui \'\' tikslo sąrašui',
 	'listpoint'=>'Įveskite sąrašo tikslą. Nieko neįrašykite arba spauskite \'Atšaukti\', kad baigti sąrašą.',
 	'addcode'=>'Pridėti kodą',
-	'readMore'=>'skaityti daugiau',
+	'read_more'=>'skaityti daugiau',
 	'mc_you_have'=>'Jūs turite',
 	'mc_new_messages'=>'nauja žinutė(-ės). Ar jūs norite skaityti jas dabar?',
 	'na'=>'negalimas',

@@ -1,12 +1,14 @@
 language: php
 
 php:
+  - 5.3
   - 5.4
   - 5.5
   - 5.6
 
 before_script:
     - npm install
-    - composer install --prefer-source --no-interaction
+    - composer self-update
+    - composer install --no-interaction
 
-script: grunt codecheck
+script: grunt codecheck_travis

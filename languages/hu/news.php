@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -30,7 +30,7 @@ $language_array = Array(
 /* do not edit above this line */
 
 	'author'=>'Szerző',
-	'bbcode'=>'BBCode <b><u>Bekapcsolva</u></b>',
+	'bbcode'=>'BBCode <b><span class="underline">Bekapcsolva</span></b>',
 	'cancel'=>'mégse',
 	'comm'=>'Komm',
 	'comment'=>'<a href="$url">[1] komment</a>, legutolsó $lastposter - $lastdate',
@@ -43,7 +43,7 @@ $language_array = Array(
 	'enter_text'=>'Meg kell adnod a szöveget',
 	'go'=>'Go!',
 	'headline'=>'Fejléc',
-	'html'=>'HTML <b><u>Bekapcsolva</u></b>',
+	'html'=>'HTML <b><span class="underline">Bekapcsolva</span></b>',
 	'intern'=>'bizalmas',
 	'languages'=>'Nyelvek',
 	'link'=>'Link',
@@ -69,7 +69,7 @@ $language_array = Array(
 	'select_all'=>'mindet kijelöl',
 	'self'=>'azonos ablak',
 	'show_news'=>'hírek mutatása',
-	'smilies'=>'Hangulatjelek <b><u>Bekapcsolva</u></b>',
+	'smilies'=>'Hangulatjelek <b><span class="underline">Bekapcsolva</span></b>',
 	'sort'=>'Rendezés:',
 	'title_unpublished_news'=>'<h2>NEM KÖZÖLT HÍREK:</h2>',
 	'topnews'=>'legjobb hírek',

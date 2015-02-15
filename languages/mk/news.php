@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -31,7 +31,7 @@ $language_array = Array(
 /* do not edit above this line */
 
   'author'=>'Автор',
-  'bbcode'=>'ББкод е<b><u>уклучен</u></b>',
+  'bbcode'=>'ББкод е<b><span class="underline">уклучен</span></b>',
   'cancel'=>'Откажи',
   'comm'=>'kom',
   'comment'=>'<a href="$url">[1] коментар</a>, последен коментар $lastposter - $lastdate',
@@ -44,7 +44,7 @@ $language_array = Array(
   'enter_text'=>'Морате да внесите текст',
   'go'=>'Оди!',
   'headline'=>'Наслов',
-  'html'=>'ХТМЛ <b><u>уклучен</u></b>',
+  'html'=>'ХТМЛ <b><span class="underline">уклучен</span></b>',
   'intern'=>'внатре',
   'languages'=>'Јазици',
   'link'=>'Линк',
@@ -70,7 +70,7 @@ $language_array = Array(
   'select_all'=>'Означи се',
   'self'=>'само прозорец',
   'show_news'=>'Прикажи новости',
-  'smilies'=>'Насмевките <b><u>уклучени</u></b>',
+  'smilies'=>'Насмевките <b><span class="underline">уклучени</span></b>',
   'sort'=>'Подреди:',
   'title_unpublished_news'=>'<h2>НЕОБЈАВЕНИ НОВОСТИ:</h2>',
   'topnews'=>'Топ новости',

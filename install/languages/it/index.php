@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -26,12 +26,12 @@
 */
 
 $language_array = Array(
-    'step0' => 'Inizio',
-    'step1' => 'Step1',
-    'step2' => 'Step2',
-    'step3' => 'Step3',
-    'step4' => 'Step4',
-    'step5' => 'Step5',
-    'step6' => 'Step6'
+	'step0'=>'Inizio',
+	'step1'=>'Step1',
+	'step2'=>'Step2',
+	'step3'=>'Step3',
+	'step4'=>'Step4',
+	'step5'=>'Step5',
+	'step6'=>'Step6'
 );
 ?>

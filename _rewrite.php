@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -63,7 +63,7 @@ if (basename($_SERVER[ 'SCRIPT_FILENAME' ]) == basename("_rewrite.php")) {
         }
     }
 
-    if ($_site == null) {
+    if ($_site === null) {
         header("HTTP/1.0 404 Not Found");
         $_site = "index.php";
         $_GET[ 'site' ] = "error";

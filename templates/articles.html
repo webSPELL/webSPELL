@@ -1,23 +1,28 @@
 <article>
-	<div class="row">
-		<div class="col-xs-10">
-			<h3>$title</h3>
-		</div>
-		<small class="col-xs-2">$date</small>
-	</div>
+    <div class="row">
+        <div class="col-xs-12">
+            <h3>$title
+                <p class="pull-right">
+                    <small>$date</small>
+                </p>
+            </h3>
+        </div>
+    </div>
 
-	<p>$content $adminaction</p>
+    <p>$content $adminaction</p>
 
-	<aside>
-		<div class="row">
-			<div class="col-md-8">
-				<p>
-					<i class="icon-user"></i> by $poster
-					| <i class="icon-calendar"></i> $date
-					| <i class="icon-link"></i> $related
-					| %rating% $ratingpic </p>
-			</div>
-			<div class="col-md-4">$rateform</div>
-		</div>
-	</aside>
+    <aside>
+        <div class="row">
+            <div class="col-md-8">
+                <p>
+                    <span class="glyphicon glyphicon-user"></span> by $poster
+                    | <span class="glyphicon glyphicon-calendar"></span> $date
+                    | %rating% $ratingpic
+                    <br> <span class="glyphicon glyphicon-link"></span> $related<br/>
+                    <span class="glyphicon glyphicon-pencil"></span> $tags
+                    </p>
+            </div>
+            <div class="col-md-4">$rateform</div>
+        </div>
+    </aside>
 </article>

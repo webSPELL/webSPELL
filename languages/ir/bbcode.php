@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -74,7 +74,7 @@ $language_array = Array(
   'listguide'=>'درا برایلیست حروف وارد کنید a عدد 1 را برای لیست اعداد و',
   'listpoint'=>'رافشار دهید حذف  لیست ارا را وارد کنی یا چیزی وارد نکنید یا کلید',
   'addcode'=>'وارد این قسمت شوید',
-  'readMore'=>'بیشتر خواندن',
+  'read_more'=>'بیشتر خواندن',
   'mc_you_have'=>'شما باید',
   'mc_new_messages'=>'پیقام جدید : ایا میخاهید هم اکنون بخوانید؟',
   'na'=>'موجود نیست',

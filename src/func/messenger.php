@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -45,7 +45,7 @@ function sendmessage($touser, $title, $message, $from = '0')
 {
 
     global $hp_url, $admin_email, $admin_name, $hp_title;
-    $_language_tmp = new Language;
+    $_language_tmp = new \webspell\Language();
     $systemmail = false;
     if (!$from) {
         $systemmail = true;
@@ -91,8 +91,8 @@ function sendmessage($touser, $title, $message, $from = '0')
                     "SELECT `email`, `language` FROM `" . PREFIX . "user` WHERE `userID` = " . (int)$touser
                 )
             );
-            $_language_tmp->set_language($ds['language']);
-            $_language_tmp->read_module('messenger');
+            $_language_tmp->setLanguage($ds['language']);
+            $_language_tmp->readModule('messenger');
             $mail_body = str_replace("%nickname%", getnickname($touser), $_language_tmp->module['mail_body']);
             $mail_body = str_replace("%hp_url%", $hp_url, $mail_body);
             mail(

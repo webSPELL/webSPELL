@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -31,14 +31,16 @@ header('content-type: text/html; charset=utf-8');
 include("../src/func/language.php");
 include("../src/func/user.php");
 
-$_language = new webspell\Language();
+$_language = new \webspell\Language();
 
 if (!isset($_SESSION['language'])) {
     $_SESSION['language'] = "uk";
 }
 
 if (isset($_GET['lang'])) {
-    if ($_language->setLanguage($_GET['lang'])) $_SESSION['language'] = $_GET['lang'];
+    if ($_language->setLanguage($_GET['lang'])) {
+        $_SESSION['language'] = $_GET['lang'];
+    }
     header("Location: index.php");
     exit();
 }
@@ -46,8 +48,11 @@ if (isset($_GET['lang'])) {
 $_language->setLanguage($_SESSION['language']);
 $_language->readModule('index');
 
-if (isset($_GET['step'])) $_language->readModule('step' . (int)$_GET['step'], true);
-else $_language->readModule('step0', true);
+if (isset($_GET['step'])) {
+    $_language->readModule('step'.(int)$_GET['step'], true);
+} else {
+    $_language->readModule('step0', true);
+}
 
 if (!isset($_GET['step'])) {
     $_GET['step'] = "";

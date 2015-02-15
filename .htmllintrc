@@ -1,0 +1,8 @@
+{
+  "id-class-style": "dash",
+  "attr-name-style": "dash",
+  "attr-req-value": false,
+  "id-no-dup": true,
+  "indent-style": "spaces",
+  "tag-name-lowercase": true
+}

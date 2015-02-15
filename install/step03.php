@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -25,24 +25,24 @@
 ##########################################################################
 */
 $fatal_error = false;
-if (version_compare(PHP_VERSION, '5.2.0', '<')) {
-    $php_version_check = '<b><font color="red">' . $_language->module['no'] . '</font></b>';
+if (version_compare(PHP_VERSION, '5.3.0', '<')) {
+    $php_version_check = '<b><font color="red">'.$_language->module['no'].'</font></b>';
     $fatal_error = true;
 } else {
-    $php_version_check = '<b><font color="green">' . $_language->module['yes'] . '</font></b>';
+    $php_version_check = '<b><font color="green">'.$_language->module['yes'].'</font></b>';
 }
 
 if (function_exists('mysqli_connect')) {
-    $mysql_check = '<b><font color="green">' . $_language->module['available'] . '</font></b>';
+    $mysql_check = '<b><font color="green">'.$_language->module['available'].'</font></b>';
 } else {
-    $mysql_check = '<b><font color="red">' . $_language->module['unavailable'] . '</font></b>';
+    $mysql_check = '<b><font color="red">'.$_language->module['unavailable'].'</font></b>';
     $fatal_error = true;
 }
 
 if (function_exists('mb_substr')) {
-    $mb_check = '<b><font color="green">' . $_language->module['available'] . '</font></b>';
+    $mb_check = '<b><font color="green">'.$_language->module['available'].'</font></b>';
 } else {
-    $mb_check = '<b><font color="red">' . $_language->module['unavailable'] . '</font></b>';
+    $mb_check = '<b><font color="red">'.$_language->module['unavailable'].'</font></b>';
     $fatal_error = true;
 }
 

@@ -1,94 +1,86 @@
 <div class="panel panel-default">
-	<div class="panel-heading">
-		<h3 class="panel-title">%title_contact%</h3>
-	</div>
-	<div class="panel-body">
+    <div class="panel-heading">
+        <h3 class="panel-title">%title_contact%</h3>
+    </div>
+    <div class="panel-body">
 
-		<!-- Description -->
-		<p>%description%</p>
+        <!-- Description -->
+        <p>%description%</p>
 
-		<!-- Error Box -->
-		$showerror
+        <!-- Error Box -->
+        $showerror
 
-		<form action="index.php?site=contact" method="post" role="form" class="form-horizontal">
+        <form action="index.php?site=contact" method="post" role="form" class="form-horizontal">
 
-			<input type="hidden" name="action" value="send">
+            <input type="hidden" name="action" value="send">
 
-			<!-- Receiver -->
-			<div class="form-group">
-				<label for="selectReceiver"
-						class="col-xs-12 col-md-3 control-label">%receiver%:</label>
+            <!-- Receiver -->
+            <div class="form-group">
+                <label for="select-receiver" class="col-xs-12 col-md-3 control-label">%receiver%:</label>
 
-				<div class="col-xs-12 col-md-9">
-					<select name="getemail" id="selectReceiver" class="form-control">
-						$getemail
-					</select>
-				</div>
-			</div>
+                <div class="col-xs-12 col-md-9">
+                    <select name="getemail" id="select-receiver" class="form-control">
+                        $getemail
+                    </select>
+                </div>
+            </div>
 
-			<!-- Name -->
-			<div class="form-group">
-				<label for="inputName" class="col-xs-12 col-md-3 control-label">%name%:</label>
+            <!-- Name -->
+            <div class="form-group">
+                <label for="input-name" class="col-xs-12 col-md-3 control-label">%name%:</label>
 
-				<div class="col-xs-12 col-md-9">
-					<input type="text" name="name" class="form-control" id="inputName"
-							value="$name">
-				</div>
-			</div>
+                <div class="col-xs-12 col-md-9">
+                    <input type="text" name="name" class="form-control" id="input-name" value="$name">
+                </div>
+            </div>
 
-			<!-- Mail -->
-			<div class="form-group">
-				<label for="inputMail" class="col-xs-12 col-md-3 control-label">%mail%:</label>
+            <!-- Mail -->
+            <div class="form-group">
+                <label for="input-mail" class="col-xs-12 col-md-3 control-label">%mail%:</label>
 
-				<div class="col-xs-12 col-md-9">
-					<input type="email" name="from" class="form-control" id="inputMail"
-							value="$from">
-				</div>
-			</div>
+                <div class="col-xs-12 col-md-9">
+                    <input type="email" name="from" class="form-control" id="input-mail" value="$from">
+                </div>
+            </div>
 
-			<!-- Subject -->
-			<div class="form-group">
-				<label for="inputSubject"
-						class="col-xs-12 col-md-3 control-label">%subject%:</label>
+            <!-- Subject -->
+            <div class="form-group">
+                <label for="input-subject" class="col-xs-12 col-md-3 control-label">%subject%:</label>
 
-				<div class="col-xs-12 col-md-9">
-					<input type="text" name="subject" class="form-control" id="inputSubject"
-							value="$subject">
-				</div>
-			</div>
+                <div class="col-xs-12 col-md-9">
+                    <input type="text" name="subject" class="form-control" id="input-subject" value="$subject">
+                </div>
+            </div>
 
-			<!-- Message -->
-			<div class="form-group">
-				<label for="textareaMessage"
-						class="col-xs-12 col-md-3 control-label">%message%:</label>
+            <!-- Message -->
+            <div class="form-group">
+                <label for="textarea-message" class="col-xs-12 col-md-3 control-label">%message%:</label>
 
-				<div class="col-xs-12 col-md-9">
-					<textarea name="text" id="textareaMessage" class="form-control"
-							rows="5">$text</textarea>
-				</div>
-			</div>
+                <div class="col-xs-12 col-md-9">
+                    <textarea name="text" id="textarea-message" class="form-control" rows="5">$text</textarea>
+                </div>
+            </div>
 
-			<!-- Security code -->
-			<div class="form-group">
-				<label for="inputSecurity_code" class="col-xs-12 col-md-3 control-label">%security_code%:</label>
+            <!-- Security code -->
+            <div class="form-group">
+                <label for="input-security-code" class="col-xs-12 col-md-3 control-label">%security_code%:</label>
 
-				<div class="col-xs-12 col-md-9">
-					<div class="input-group">
-						<span class="input-group-addon captcha-img">$captcha</span>
-						<input type="number" name="captcha" class="form-control"
-								id="inputSecurity_code">
-						<input name="captcha_hash" type="hidden" value="$hash">
-					</div>
-				</div>
-			</div>
+                <div class="col-xs-12 col-md-9">
+                    <div class="input-group">
+                        <span class="input-group-addon captcha-img">$captcha</span>
+                        <input type="number" name="captcha" class="form-control" id="input-security-code">
+                        <input name="captcha_hash" type="hidden" value="$hash">
+                    </div>
+                </div>
+            </div>
 
-			<!-- Submit button -->
-			<div class="form-group">
-				<div class="col-xs-12 text-right">
-					<button type="submit" class="btn btn-primary">%send%</button>
-				</div>
-			</div>
+            <!-- Submit button -->
+            <div class="form-group">
+                <div class="col-xs-12 text-right">
+                    <button type="submit" class="btn btn-primary">%send%</button>
+                </div>
+            </div>
 
-		</form>
-	</div>
+        </form>
+    </div>
 </div>

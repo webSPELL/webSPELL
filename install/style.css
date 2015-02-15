@@ -1,5 +1,5 @@
 body {
-    margin: 0px;
+    margin: 0;
     background: #A7A7A7 url(images/bg.gif) repeat-x;
     font: normal 13px Verdana, Arial, Helvetica, sans-serif;
     color: #2e2e2e;
@@ -20,15 +20,15 @@ small {
 }
 
 .steps {
-    margin: 0px 28px 0px 28px;
+    margin: 0 28px 0 28px;
 }
 
 .steps.start {
-    margin-left: 0px;
+    margin-left: 0;
 }
 
 .steps.end {
-    margin-right: 0px;
+    margin-right: 0;
 }
 
 .steps#active {
@@ -38,11 +38,11 @@ small {
 }
 
 img {
-    border: 0px;
+    border: 0;
 }
 
 .padding img {
-    padding: 0px 2px 0px 2px;
+    padding: 0 2px 0 2px;
 }
 
 #head {
@@ -89,8 +89,7 @@ img {
 #links a {
     display: block;
     height: 92px;
-    background-position: right bottom;
-    background-repeat: no-repeat;
+    background: no-repeat right bottom;
 }
 
 #links ul li:hover a {
@@ -137,11 +136,11 @@ a.ws_tooltip:hover span {
 
 form {
     border: none;
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
 }
 
-textarea, input, select, file {
+textarea, input, select {
     border: 1px #bbbbbb solid;
     color: #666666;
     padding: 2px;

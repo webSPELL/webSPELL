@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -29,14 +29,15 @@ $_language->readModule('login');
 
 if ($loggedin) {
     $username =
-        '<a href="index.php?site=profile&amp;id=' . $userID . '"><b>' . strip_tags(getnickname($userID)) . '</b></a>';
+        '<a href="index.php?site=profile&amp;id=' . $userID . '"><strong>' .
+        strip_tags(getnickname($userID)) . '</strong></a>';
     if (isanyadmin($userID)) {
         $admin = '<li class="divider"></li><li><a href="admin/admincenter.php" target="_blank" class="alert-danger">' .
             $_language->module[ 'admin' ] . '</a></li>';
     } else {
         $admin = '';
     }
-    if (isclanmember($userID) or iscashadmin($userID)) {
+    if (isclanmember($userID) || iscashadmin($userID)) {
         $cashbox = '<li><a href="index.php?site=cashbox" class="alert-danger">' . $_language->module[ 'cash-box' ] .
             '</a></li><li class="divider"></li>';
     } else {
@@ -54,11 +55,17 @@ if ($loggedin) {
         $l_avatar = $_language->module[ 'n_a' ];
     }
 
-    eval ("\$logged = \"" . gettemplate("logged") . "\";");
+    $data_array = array();
+    $data_array['$username'] = $username;
+    $data_array['$l_avatar'] = $l_avatar;
+    $data_array['$newmessages'] = $newmessages;
+    $data_array['$admin'] = $admin;
+    $data_array['$cashbox'] = $cashbox;
+    $logged = $GLOBALS["_template"]->replaceTemplate("logged", $data_array);
     echo $logged;
 } else {
     //set sessiontest variable (checks if session works correctly)
     $_SESSION[ 'ws_sessiontest' ] = true;
-    eval ("\$loginform = \"" . gettemplate("login") . "\";");
+    $loginform = $GLOBALS["_template"]->replaceTemplate("login", array());
     echo $loginform;
 }

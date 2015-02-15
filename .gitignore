@@ -1,6 +1,6 @@
 # IDE-metadata
 .idea
-nbproject
+nbproject/
 
 # mysql-data
 _mysql.php

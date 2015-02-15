@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -102,7 +102,7 @@ function smileys($text, $specialchars = 0, $calledfrom = 'root')
                 }
             }
         }
-        if ($match == false) {
+        if ($match === false) {
             $splits[$i] = replace_smileys($splits[$i], $calledfrom);
         } else {
             $i = $z;
@@ -302,6 +302,12 @@ function insideCode($content)
 
 //replace [img]-tags
 
+function imgreplace_callback($match)
+{
+    return '<img src="'.fixJavaEvents($match[1].$match[2]).'" border="0"'.
+            'alt="'.fixJavaEvents($match[1].$match[2]).'" />';
+}
+
 function imgreplace($content)
 {
     global $_language;
@@ -374,16 +380,16 @@ function imgreplace($content)
                 $n = str_replace(' ', '', $n);
                 $content = preg_replace(
                     '#\[img\]' . preg_quote($teil[2], "#") . '\[/img\]#si',
+                    '<div ' .
+                    'id="ws_imagediv_' . $n . '" ' .
+                    'style="display:none;">' .
                     '<img ' .
                     'src="' . fixJavaEvents($teil[2]) . '" ' .
                     'id="ws_image_' . $n . '" ' .
                     'onload="checkSize(\'' . $n . '\', ' . $picsize_l . ', ' . $picsize_h . ')" ' .
                     'alt="' . fixJavaEvents($teil[2]) . '" ' .
                     'style="max-width: ' . ($picsize_l + 1) . 'px; max-height: ' . ($picsize_h + 1) . 'px;" ' .
-                    '/>' .
-                    '<div ' .
-                    'id="ws_imagediv_' . $n . '" ' .
-                    'style="display:none;">' .
+                    '/><br>' .
                     '[url=' . fixJavaEvents($teil[2]) . ']' .
                     '[i]' .
                     '(' . $_language->module['auto_resize'] . ': ' .
@@ -397,9 +403,9 @@ function imgreplace($content)
             }
         }
     } else {
-        $content = preg_replace(
-            "#\[img\](.*?)(png|gif|jpeg|jpg)\[/img\]#sie",
-            "'<img src=\"'.fixJavaEvents('\\1\\2').'\" border=\"0\" alt=\"'.fixJavaEvents('\\1\\2').'\" />'",
+        $content = preg_replace_callback(
+            "#\[img\](.*?)(png|gif|jpeg|jpg)\[/img\]#si",
+            "imgreplace_callback",
             $content
         );
     }
@@ -479,6 +485,15 @@ function urlreplace_callback_1($match)
     return '<a href="' . fixJavaEvents($match[1]) . '" target="_blank">';
 }
 
+function urlreplace_callback_2($match)
+{
+    if (file_exists($match[1])) {
+        return '<a href="' . fixJavaEvents($match[1]) . '" target="_blank">';
+    } else {
+        return "";
+    }
+}
+
 function urlreplace($content)
 {
     $starttags = substr_count(strtolower($content), strtolower('[url'));
@@ -501,6 +516,11 @@ function urlreplace($content)
     $content = preg_replace_callback(
         "#\[url=((http://|https://|ftp://|mailto:|news:|www\.).*?)\]#i",
         "urlreplace_callback_1",
+        $content
+    );
+    $content = preg_replace_callback(
+        "#\[url=(.*?)\]#i",
+        "urlreplace_callback_2",
         $content
     );
     $content = preg_replace(
@@ -685,7 +705,7 @@ function replacement($content, $bbcode = true)
         }
         $content = preg_replace("#\[b\](.*?)\[/b\]#si", "<b>\\1</b>", $content);
         $content = preg_replace("#\[i\](.*?)\[/i\]#si", "<i>\\1</i>", $content);
-        $content = preg_replace("#\[u\](.*?)\[/u\]#si", "<u>\\1</u>", $content);
+        $content = preg_replace("#\[u\](.*?)\[/u\]#si", "<span class='underline'>\\1</span>", $content);
         $content = preg_replace("#\[s\](.*?)\[/s\]#si", "<s>\\1</s>", $content);
         $content = preg_replace("#\[list\][\s]{0,}(.*?)\[/list\]#si", "<ul class='list'>\\1</ul>", $content);
         $content = preg_replace("#\[list=1\][\s]{0,}(.*?)\[/list=1\]#si", "<ol class='list_num'>\\1</ol>", $content);
@@ -724,10 +744,10 @@ function toggle($content, $id)
         </td>
     </tr>
     <tr>
-      <td style="padding-left: 16px;"><div id="ToggleRow_' . $id . '_%d" style="display:none">';
+        <td style="padding-left: 16px;"><div id="ToggleRow_' . $id . '_%d" style="display:none">';
     $replace2 = '</div></td>
     </tr>
-  </table>';
+    </table>';
 
     $n = 0;
     while (($pos = mb_strpos(strtolower($content), "[toggle=")) !== false) {

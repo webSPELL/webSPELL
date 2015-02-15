@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -64,11 +64,23 @@ if (!isset($GLOBALS[ '_database' ])) {
 
 // -- GENERAL PROTECTIONS -- //
 
-if (function_exists("globalskiller") == false) {
+if (function_exists("globalskiller") === false) {
     function globalskiller()
-    {        // kills all non-system variables
-        $global =
-            ['GLOBALS', '_POST', '_GET', '_COOKIE', '_FILES', '_SERVER', '_ENV', '_REQUEST', '_SESSION', '_database'];
+    {
+        // kills all non-system variables
+        $global = array(
+            'GLOBALS',
+            '_POST',
+            '_GET',
+            '_COOKIE',
+            '_FILES',
+            '_SERVER',
+            '_ENV',
+            '_REQUEST',
+            '_SESSION',
+            '_database'
+        );
+
         foreach ($GLOBALS as $key => $val) {
             if (!in_array($key, $global)) {
                 if (is_array($val)) {
@@ -81,7 +93,7 @@ if (function_exists("globalskiller") == false) {
     }
 }
 
-if (function_exists("unset_array") == false) {
+if (function_exists("unset_array") === false) {
     function unset_array($array)
     {
         foreach ($array as $key) {
@@ -103,7 +115,7 @@ if (isset($_GET[ 'site' ])) {
 }
 if ($site != "search") {
     $request = strtolower(urldecode($_SERVER[ 'QUERY_STRING' ]));
-    $protarray = [
+    $protarray = array(
         "union",
         "select",
         "into",
@@ -148,7 +160,7 @@ if ($site != "search") {
         ".history",
         "~nobody",
         "getenv"
-    ];
+    );
     $check = str_replace($protarray, '*', $request);
     if ($request != $check) {
         system_error("Invalid request detected.");
@@ -185,7 +197,7 @@ security_slashes($_GET);
 security_slashes($_REQUEST);
 
 // -- MYSQL QUERY FUNCTION -- //
-$_mysql_querys = [];
+$_mysql_querys = array();
 function safe_query($query = "")
 {
 
@@ -235,41 +247,39 @@ function system_error($text, $system = 1)
     }
     die('<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-  <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta name="description" content="Clanpage using webSPELL 4 CMS">
-    <meta name="author" content="webspell.org">
-    <meta name="keywords" content="webspell, webspell4, clan, cms">
-    <meta name="copyright" content="Copyright 2005-2014 by webspell.org">
-    <meta name="generator" content="webSPELL">
-    <title>webSPELL</title>
-  </head>
-  <body>
-  <center>
-  <table border="0" cellpadding="1" cellspacing="1" bgcolor="#eeeeee">
-    <tr>
-      <td>
-        <a href="http://www.webspell.org" target="_blank">
-            <img src="images/banner.gif" style="border:none;" alt="webSPELL.org" title="webSPELL.org">
-        </a>
-      </td>
-    </tr>
-    <tr bgcolor="#ffffff">
-      <td><div style="color:#333333;font-family:Tahoma,Verdana,Arial;font-size:11px;padding:5px;">' . $info .
-        '<br><font color="red">' . $text . '</font><br>&nbsp;</div></td>
-    </tr>
-    <tr bgcolor="#ffffff">
-      <td>
-        <div style="color:#333333;font-family:Tahoma,Verdana,Arial;font-size:11px;padding:5px;">
-            For support visit <a href="http://webspell.org" target="_blank">webspell.org</a>
-        </div>
-      </td>
-    </tr>
-  </table>
-  </center>
-  </body>
-  </html>');
+    <html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="Clanpage using webSPELL 4 CMS">
+        <meta name="author" content="webspell.org">
+        <meta name="keywords" content="webspell, webspell4, clan, cms">
+        <meta name="copyright" content="Copyright 2005-2015 by webspell.org">
+        <meta name="generator" content="webSPELL">
+        <title>webSPELL</title>
+    </head>
+    <body class="text-center">
+    <table class="table">
+        <tr>
+            <td>
+                <a href="http://www.webspell.org" target="_blank">
+                    <img src="images/banner.gif" style="border:none;" alt="webSPELL.org" title="webSPELL.org">
+                </a>
+            </td>
+        </tr>
+        <tr>
+            <td><div style="color:#333333;font-family:Tahoma,Verdana,Arial;font-size:11px;padding:5px;">' .
+                $info . '<br><span style="color: red">' . $text . '</span><br>&nbsp;</div></td>
+        </tr>
+        <tr>
+            <td>
+                <div style="color:#333333;font-family:Tahoma,Verdana,Arial;font-size:11px;padding:5px;">
+                    For support visit <a href="http://webspell.org" target="_blank">webspell.org</a>
+                </div>
+            </td>
+        </tr>
+        </table>
+    </body>
+    </html>');
 }
 
 // -- SYSTEM FILE INCLUDE -- //
@@ -306,6 +316,17 @@ function isignored($userID, $buddy)
 // -- GLOBAL SETTINGS -- //
 
 $ds = mysqli_fetch_array(safe_query("SELECT * FROM " . PREFIX . "settings"));
+
+$components = array(
+    'css' => array(
+        'components/bootstrap/dist/css/bootstrap.min.css'
+    ),
+    'js' => array(
+        'components/jquery/dist/jquery.min.js',
+        'components/bootstrap/dist/js/bootstrap.min.js',
+        'components/webshim/js-webshim/minified/polyfiller.js'
+    )
+);
 
 $maxshownnews = $ds[ 'news' ];
 if (empty($maxshownnews)) {

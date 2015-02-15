@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -31,7 +31,7 @@ $language_array = Array(
 
 	'add_buddylist'=>'Dodaj do listy przyjaciół',
 	'adminoptions'=>'Opcje admina:',
-	'bbcode'=>'BBCode <b><u>Wł</u></b>',
+	'bbcode'=>'BBCode <b><span class="underline">Wł</span></b>',
 	'by'=>'przez',
 	'date'=>'Data:',
 	'delete'=>'Usuń',
@@ -41,7 +41,7 @@ $language_array = Array(
 	'execute'=>'Wykonaj',
 	'formation'=>'Formatowanie',
 	'from'=>'przez:',
-	'html'=>'HTML <b><u>WYŁĄCZONY</u></b>',
+	'html'=>'HTML <b><span class="underline">WYŁĄCZONY</span></b>',
 	'ignore'=>'Ignoruj',
 	'incoming'=>'Odebrane',
 	'mark_not_viewed'=>'Zaznacz jako nieprzeczytana',
@@ -68,7 +68,7 @@ $language_array = Array(
 	'sendeachmember'=>'Wyślij do każdego klanowicza',
 	'sendeachuser'=>'Wyślij do każdego użytkownika',
 	'show'=>'Pokaż',
-	'smilies'=>'Emotikonki <b><u>Wł</u></b>',
+	'smilies'=>'Emotikonki <b><span class="underline">Wł</span></b>',
 	'sort'=>'Sortuj:',
 	'title'=>'Temat',
 	'your_message'=>'Twoja wiadomość:',

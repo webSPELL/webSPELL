@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -74,7 +74,7 @@ $language_array = Array(
 	'listguide'=>'Wpisz \'1\' dla listy numerycznej, \'a\' dla listy alfabetycznej lub \'\' dla listy punktowej',
 	'listpoint'=>'Wstaw liste punktową. Wstaw nic lub \'Cancel\' żeby zakończyć listę',
 	'addcode'=>'Wstaw na pozycję',
-	'readMore'=>'Czytaj więcej',
+	'read_more'=>'Czytaj więcej',
 	'mc_you_have'=>'Masz',
 	'mc_new_messages'=>'nowych wiadomości. Czy chcesz je teraz przeczytać ?',
 	'na'=>'niedostępne',

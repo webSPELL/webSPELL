@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -37,7 +37,7 @@ $language_array = Array(
 
   'add_buddylist'=>'Додати у друзі',
   'adminoptions'=>'Адмін дії',
-  'bbcode'=>'BBКод <b><u>Увімкнений</u></b>',
+  'bbcode'=>'BBКод <b><span class="underline">Увімкнений</span></b>',
   'by'=>'з',
   'date'=>'Дата:',
   'delete'=>'Видалити',
@@ -47,7 +47,7 @@ $language_array = Array(
   'execute'=>'Виконати',
   'formation'=>'Форматування',
   'from'=>'від:',
-  'html'=>'HTML <b><u>Виключений</u></b>',
+  'html'=>'HTML <b><span class="underline">Виключений</span></b>',
   'ignore'=>'Ігнорувати користувача',
   'incoming'=>'Вхідні',
   'mark_not_viewed'=>'Помітити як непрочитані',
@@ -74,7 +74,7 @@ $language_array = Array(
   'sendeachmember'=>'Послати кожному члену клану',
   'sendeachuser'=>'Послати кожному зареєстрованому користувачу',
   'show'=>'Показати',
-  'smilies'=>'Смайли <b><u>увімкнені</u></b>',
+  'smilies'=>'Смайли <b><span class="underline">увімкнені</span></b>',
   'sort'=>'Сортувати:',
   'title'=>'Тема',
   'your_message'=>'Ваше повідомлення:',

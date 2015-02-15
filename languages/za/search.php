@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -39,21 +39,21 @@ $language_array = Array(
   'and'=>'rnen',
   'article'=>'Artikel',
   'articles'=>'Artikels',
-  'articles_link'=>'<b>skakel na Artikel</ b>',
+  'articles_link'=>'<b>skakel na Artikel</b>',
   'ascending'=>'stygende',
   'before'=>'voor',
   'date_options'=>'Datum',
   'delete_selected'=>'verwyder geselekteerde',
   'descending'=>'dalende',
   'faq'=>'Vrae "FAQ"',
-  'faq_link'=>'<b>skakel na FAQ</ b>',
+  'faq_link'=>'<b>skakel na FAQ</b>',
   'forum'=>'Forum',
-  'forum_link'=>'<b>skakel na die onderwerp</ b>',
+  'forum_link'=>'<b>skakel na die onderwerp</b>',
   'frequency'=>'Frekwensie',
   'keyword'=>'Sleutelwoord',
   'new_search'=>'Nuwe soektog',
   'news'=>'Nuus',
-  'news_link'=>'<b>skakel na nuus</ b>',
+  'news_link'=>'<b>skakel na nuus</b>',
   'options'=>'Opsies',
   'or'=>'of',
   'result_quantity'=>'Resultate per bladsy',

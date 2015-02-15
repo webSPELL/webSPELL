@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -31,7 +31,7 @@ $language_array = Array(
 /* do not edit above this line */
 
   'author'=>'Autor',
-  'bbcode'=>'BBCode <b><u>PE</u></b>',
+  'bbcode'=>'BBCode <b><span class="underline">PE</span></b>',
   'cancel'=>'anulează',
   'comm'=>'comentariu',
   'comment'=>'<a href="$url">[1] comentariu</a>, ultimele de $lastposter - $lastdate',
@@ -44,7 +44,7 @@ $language_array = Array(
   'enter_text'=>'Trebuie să introduci un text',
   'go'=>'Start!',
   'headline'=>'Titlu',
-  'html'=>'HTML <b><u>PE</u></b>',
+  'html'=>'HTML <b><span class="underline">PE</span></b>',
   'intern'=>'intern',
   'languages'=>'Limbă',
   'link'=>'Link',
@@ -70,7 +70,7 @@ $language_array = Array(
   'select_all'=>'selectează tot',
   'self'=>'fereastră sigură',
   'show_news'=>'arată noutăţile',
-  'smilies'=>'Emoticoanele sunt <b><u>PE</u></b>',
+  'smilies'=>'Emoticoanele sunt <b><span class="underline">PE</span></b>',
   'sort'=>'Sortează:',
   'title_unpublished_news'=>'<h2>NOUTĂŢI NEPUBLICAE:</h2>',
   'topnews'=>'noutăţi de top',

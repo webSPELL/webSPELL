@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -45,11 +45,57 @@ function isStaticPage($staticID = null)
         return false;
     }
 
-    if ($staticID != null) {
+    if ($staticID !== null) {
         if ($_GET['staticID'] != $staticID) {
             return false;
         }
     }
 
     return true;
+}
+
+function generateAlert($text, $class = 'alert-warning', $dismissible = false)
+{
+    $classes = 'alert ' . $class;
+    if ($dismissible) {
+        $classes .= ' alert-dismissible';
+    }
+    $return = '<div class="' . $classes . '" role="alert">';
+    if ($dismissible) {
+        $return .= '<button type="button" class="close" data-dismiss="alert">';
+        $return .= '<span aria-hidden="true">&times;</span><span class="sr-only">Close</span>';
+        $return .= '</button>';
+    }
+    $return .= $text;
+    $return .= '</div>';
+    return $return;
+}
+
+function generateErrorBox($message, $dismissible = false)
+{
+    return generateAlert($message, 'alert-danger', $dismissible);
+}
+
+function generateErrorBoxFromArray($intro, $errors, $dismissible = false)
+{
+    $message = '<strong>' . $intro . ':</strong><br/><ul>';
+    foreach ($errors as $error) {
+        $message .= '<li>' . $error . '</li>';
+    }
+    $message .= '</ul>';
+    return generateAlert($message, 'alert-danger', $dismissible);
+}
+
+function generateComponents($components, $type)
+{
+    $return = '';
+    foreach ($components as $component) {
+        if ($type === 'js') {
+            $return .= '<script src="' . $component . '"></script>';
+        } elseif ($type === 'css') {
+            $return .= '<link href="' . $component . '" rel="stylesheet">';
+        }
+    }
+
+    return $return;
 }

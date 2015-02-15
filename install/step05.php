@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -25,7 +25,7 @@
 ##########################################################################
 */
 
-if ($_POST['installtype'] == "full" AND $_POST['hp_url']) {
+if ($_POST['installtype']=="full" && $_POST['hp_url']) {
 ?>
 
 <tr>

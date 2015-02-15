@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -64,7 +64,6 @@ $language_array = Array(
   'partners'=>'Partner',
   'registered_users'=>'Registrierte Benutzer',
   'rubrics'=>'Rubriken/Kategorien',
-  'scrolltext'=>'Lauftext',
   'select_icons'=>'Bitte Symbole auswählen',
   'servers'=>'Server',
   'settings'=>'Einstellungen',

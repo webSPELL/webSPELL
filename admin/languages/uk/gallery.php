@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -56,7 +56,7 @@ $language_array = Array(
   'information_incomplete'=>'Some information is missing.',
   'name'=>'Name',
   'need_group'=>'You have to create at least one gallery group before creating any galleries.',
-  'new_gallery'=>'new \webspell\Gallery',
+  'new_gallery'=>'new Gallery',
   'new_group'=>'new Group',
   'per_form'=>'per Form',
   'per_ftp'=>'per FTP',

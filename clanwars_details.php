@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -28,7 +28,7 @@ if (isset($site)) {
     $_language->readModule('clanwars');
 }
 
-eval ("\$title_clanwars_details = \"" . gettemplate("title_clanwars_details") . "\";");
+$title_clanwars_details = $GLOBALS["_template"]->replaceTemplate("title_clanwars_details", array());
 echo $title_clanwars_details;
 
 echo '<p><a href="index.php?site=clanwars" class="btn btn-primary">' . $_language->module[ 'show_clanwars' ] . '</a>
@@ -43,8 +43,10 @@ $opponent = '<a href="' . getinput($ds[ 'opphp' ]) . '" target="_blank"><b>' . g
 $league = '<a href="' . getinput($ds[ 'leaguehp' ]) . '" target="_blank">' . getinput($ds[ 'league' ]) . '</a>';
 if (file_exists('images/games/' . $ds[ 'game' ] . '.gif')) {
     $game_ico = 'images/games/' . $ds[ 'game' ] . '.gif';
+    $game = '<img src="' . $game_ico . '" alt="">';
+} else {
+    $game = $ds[ 'game' ];
 }
-$game = '<img src="' . $game_ico . '" width="13" height="13" alt="">';
 $maps = "";
 $hometeam = "";
 $screens = "";
@@ -198,17 +200,21 @@ if (is_array($theMaps)) {
             $bgtwo = BG_4;
         }
         if ($scoreHome[ $d ] > $scoreOpp[ $d ]) {
-            $score_1 = '<font color="' . $wincolor . '"><b>' . $scoreHome[ $d ] . '</b></font>';
-            $score_2 = '<font color="' . $wincolor . '"><b>' . $scoreOpp[ $d ] . '</b></font>';
+            $score_1 = '<font color="' . $wincolor . '"><strong>' . $scoreHome[ $d ] . '</strong></font>';
+            $score_2 = '<font color="' . $wincolor . '"><strong>' . $scoreOpp[ $d ] . '</strong></font>';
         } elseif ($scoreHome[ $d ] < $scoreOpp[ $d ]) {
-            $score_1 = '<font color="' . $loosecolor . '"><b>' . $scoreHome[ $d ] . '</b></font>';
-            $score_2 = '<font color="' . $loosecolor . '"><b>' . $scoreOpp[ $d ] . '</b></font>';
+            $score_1 = '<font color="' . $loosecolor . '"><strong>' . $scoreHome[ $d ] . '</strong></font>';
+            $score_2 = '<font color="' . $loosecolor . '"><strong>' . $scoreOpp[ $d ] . '</strong></font>';
         } else {
-            $score_1 = '<font color="' . $drawcolor . '"><b>' . $scoreHome[ $d ] . '</b></font>';
-            $score_2 = '<font color="' . $drawcolor . '"><b>' . $scoreOpp[ $d ] . '</b></font>';
+            $score_1 = '<font color="' . $drawcolor . '"><strong>' . $scoreHome[ $d ] . '</strong></font>';
+            $score_2 = '<font color="' . $drawcolor . '"><strong>' . $scoreOpp[ $d ] . '</strong></font>';
         }
 
-        eval ("\$clanwars_details_results = \"" . gettemplate("clanwars_details_results") . "\";");
+        $data_array = array();
+        $data_array['$map'] = $map;
+        $data_array['$score_1'] = $score_1;
+        $data_array['$score_2'] = $score_2;
+        $clanwars_details_results = $GLOBALS["_template"]->replaceTemplate("clanwars_details_results", $data_array);
         $extendedresults .= $clanwars_details_results;
         unset($score);
         $d++;
@@ -219,7 +225,27 @@ if (is_array($theMaps)) {
 
     // -- clanwar output -- //
 
-eval ("\$clanwars_details = \"" . gettemplate("clanwars_details") . "\";");
+$data_array = array();
+$data_array['$report'] = $report;
+$data_array['$date'] = $date;
+$data_array['$game'] = $game;
+$data_array['$squad'] = $squad;
+$data_array['$opponent'] = $opponent;
+$data_array['$league'] = $league;
+$data_array['$linkpage'] = $linkpage;
+$data_array['$maps'] = $maps;
+$data_array['$extendedresults'] = $extendedresults;
+$data_array['$results_1'] = $results_1;
+$data_array['$results_2'] = $results_2;
+$data_array['$myclantag'] = $myclantag;
+$data_array['$hometeam'] = $hometeam;
+$data_array['$opptag'] = $opptag;
+$data_array['$oppteam'] = $oppteam;
+$data_array['$server'] = $server;
+$data_array['$hltv'] = $hltv;
+$data_array['$screenshots'] = $screenshots;
+$data_array['$adminaction'] = $adminaction;
+$clanwars_details = $GLOBALS["_template"]->replaceTemplate("clanwars_details", $data_array);
 echo $clanwars_details;
 
 $comments_allowed = $ds[ 'comments' ];

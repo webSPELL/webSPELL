@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -91,7 +91,6 @@ if (isset($_POST[ 'save' ])) {
     $rang = $_POST[ 'rang' ];
     $info = $_POST[ 'message' ];
 
-    $date = mktime(0, 0, 0, $month, $day, $year);
     safe_query(
         "UPDATE
             `" . PREFIX . "awards`
@@ -103,7 +102,7 @@ if (isset($_POST[ 'save' ])) {
             `rang` = '$rang',
             `info` = '$info'
         WHERE
-            awardID = '". (int)$awardID
+            awardID = '". (int)$awardID."'"
     );
     header("Location: index.php?site=awards");
 } elseif (isset($_GET[ 'delete' ])) {
@@ -112,11 +111,11 @@ if (isset($_POST[ 'save' ])) {
     }
 
     $awardID = $_GET[ 'awardID' ];
-    safe_query("DELETE FROM `" . PREFIX . "awards` WHERE `awardID` = '" . (int)$awardID);
+    safe_query("DELETE FROM `" . PREFIX . "awards` WHERE `awardID` = '" . (int)$awardID . "'");
     header("Location: index.php?site=awards");
 }
 
-eval ("\$title_awards = \"" . gettemplate("title_awards") . "\";");
+$title_awards = $GLOBALS["_template"]->replaceTemplate("title_awards", array());
 echo $title_awards;
 
 if (isset($_GET[ 'action' ])) {
@@ -156,21 +155,24 @@ if ($action == "new") {
 
         $bg1 = BG_1;
 
-        eval ("\$addbbcode = \"" . gettemplate("addbbcode") . "\";");
-        eval ("\$addflags = \"" . gettemplate("flags") . "\";");
-        eval ("\$awards_new = \"" . gettemplate("awards_new") . "\";");
+        $addbbcode = $GLOBALS["_template"]->replaceTemplate("addbbcode", array());
+        $addflags = $GLOBALS["_template"]->replaceTemplate("flags", array());
+        $data_array = array();
+        $data_array['$squads'] = $squads;
+        $data_array['$addbbcode'] = $addbbcode;
+        $data_array['$addflags'] = $addflags;
+        $awards_new = $GLOBALS["_template"]->replaceTemplate("awards_new", $data_array);
         echo $awards_new;
     } else {
         redirect('index.php?site=awards', $_language->module[ 'no_access' ]);
     }
 } elseif ($action == "edit") {
-
     $awardID = $_GET[ 'awardID' ];
     if (isclanwaradmin($userID) || isnewsadmin($userID)) {
         $_language->readModule('bbcode', true);
         $ds = mysqli_fetch_array(
             safe_query(
-                "SELECT * FROM " . PREFIX . "awards WHERE awardID='" . (int)$awardID
+                "SELECT * FROM " . PREFIX . "awards WHERE awardID='" . (int)$awardID . "'"
             )
         );
         $day = "";
@@ -204,9 +206,19 @@ if ($action == "new") {
         $rang = $ds[ 'rang' ];
         $info = htmlspecialchars($ds[ 'info' ]);
         $bg1 = BG_1;
-        eval ("\$addbbcode = \"" . gettemplate("addbbcode") . "\";");
-        eval ("\$addflags = \"" . gettemplate("flags") . "\";");
-        eval ("\$awards_edit = \"" . gettemplate("awards_edit") . "\";");
+        $addbbcode = $GLOBALS["_template"]->replaceTemplate("addbbcode", array());
+        $addflags = $GLOBALS["_template"]->replaceTemplate("flags", array());
+        $data_array = array();
+        $data_array['$date'] = $date;
+        $data_array['$squads'] = $squads;
+        $data_array['$rang'] = $rang;
+        $data_array['$award'] = $award;
+        $data_array['$homepage'] = $homepage;
+        $data_array['$addbbcode'] = $addbbcode;
+        $data_array['$addflags'] = $addflags;
+        $data_array['$info'] = $info;
+        $data_array['$awardID'] = $awardID;
+        $awards_edit = $GLOBALS["_template"]->replaceTemplate("awards_edit", $data_array);
         echo $awards_edit;
     } else {
         redirect('index.php?site=awards', $_language->module[ 'no_access' ]);
@@ -272,11 +284,11 @@ if ($action == "new") {
         if ($type == "ASC") {
             echo '<a href="index.php?site=awards&amp;action=showsquad&amp;squadID=' . $squadID . '&amp;page=' . $page .
                 '&amp;sort=' . $sort . '&amp;type=DESC">' . $_language->module[ 'sort' ] .
-                ':</a> <img src="images/icons/asc.gif" width="9" height="7" alt="">&nbsp;&nbsp;&nbsp;';
+                ':</a> <span class="glyphicon glyphicon-chevron-down"></span>&nbsp;&nbsp;&nbsp;';
         } else {
             echo '<a href="index.php?site=awards&amp;action=showsquad&amp;squadID=' . $squadID . '&amp;page=' . $page .
                 '&amp;sort=' . $sort . '&amp;type=ASC">' . $_language->module[ 'sort' ] .
-                ':</a> <img src="images/icons/desc.gif" width="9" height="7" alt="">&nbsp;&nbsp;&nbsp;';
+                ':</a> <span class="glyphicon glyphicon-chevron-up"></span>&nbsp;&nbsp;&nbsp;';
         }
 
         echo $page_link;
@@ -285,7 +297,10 @@ if ($action == "new") {
             '&amp;page=' . $page . '&amp;sort=date&amp;type=' . $type . '">' . $_language->module[ 'date' ] . ':</a>';
         $headsquad = $_language->module[ 'squad' ] . ':';
 
-        eval ("\$awards_head = \"" . gettemplate("awards_head") . "\";");
+        $data_array = array();
+        $data_array['$headsquad'] = $headsquad;
+        $data_array['$headdate'] = $headdate;
+        $awards_head = $GLOBALS["_template"]->replaceTemplate("awards_head", $data_array);
         echo $awards_head;
         $n = 1;
         while ($ds = mysqli_fetch_array($ergebnis)) {
@@ -314,13 +329,20 @@ if ($action == "new") {
                 $adminaction = '';
             }
 
-            eval ("\$awards_content = \"" . gettemplate("awards_content") . "\";");
+            $data_array = array();
+            $data_array['$rang'] = $rang;
+            $data_array['$awardID'] = $ds['awardID'];
+            $data_array['$award'] = $award;
+            $data_array['$squad'] = $squad;
+            $data_array['$date'] = $date;
+            $data_array['$adminaction'] = $adminaction;
+            $awards_content = $GLOBALS["_template"]->replaceTemplate("awards_content", $data_array);
             echo $awards_content;
 
             unset($result);
             $n++;
         }
-        eval ("\$awards_foot = \"" . gettemplate("awards_foot") . "\";");
+        $awards_foot = $GLOBALS["_template"]->replaceTemplate("awards_foot", array());
         echo $awards_foot;
     } else {
         echo $_language->module[ 'no_entries' ];
@@ -334,7 +356,7 @@ if ($action == "new") {
             FROM
                 `" . PREFIX . "awards`
             WHERE
-                awardID='" . (int)$awardID
+                awardID='" . (int)$awardID . "'"
         )
     );
 
@@ -379,7 +401,14 @@ if ($action == "new") {
         $adminaction = '';
     }
 
-    eval ("\$awards_info = \"" . gettemplate("awards_info") . "\";");
+    $data_array = array();
+    $data_array['$award'] = $award;
+    $data_array['$rang'] = $rang;
+    $data_array['$date'] = $date;
+    $data_array['$info'] = $info;
+    $data_array['$homepage'] = $homepage;
+    $data_array['$adminaction'] = $adminaction;
+    $awards_info = $GLOBALS["_template"]->replaceTemplate("awards_info", $data_array);
     echo $awards_info;
 } else {
     $page = (isset($_GET[ 'page' ])) ? (int)$_GET[ 'page' ] : 1;
@@ -422,10 +451,10 @@ if ($action == "new") {
     if ($gesamt) {
         if ($type == "ASC") {
             echo '<a href="index.php?site=awards&amp;page=' . $page . '&amp;sort=' . $sort . '&amp;type=DESC">' .
-                $_language->module[ 'sort' ] . ':</a> <i class="icon-sort-down"></i>';
+                $_language->module[ 'sort' ] . ':</a> <span class="glyphicon glyphicon-chevron-down"></span>';
         } else {
             echo '<a href="index.php?site=awards&amp;page=' . $page . '&amp;sort=' . $sort . '&amp;type=ASC">' .
-                $_language->module[ 'sort' ] . ':</a> <i class="icon-sort-up"></i>';
+                $_language->module[ 'sort' ] . ':</a> <span class="glyphicon glyphicon-chevron-up"></span>';
         }
 
         echo $page_link;
@@ -437,7 +466,10 @@ if ($action == "new") {
             '<a class="titlelink" href="index.php?site=awards&amp;page=' . $page . '&amp;sort=squadID&amp;type=' .
             $type . '">' . $_language->module[ 'squad' ] . ':</a>';
 
-        eval ("\$awards_head = \"" . gettemplate("awards_head") . "\";");
+        $data_array = array();
+        $data_array['$headsquad'] = $headsquad;
+        $data_array['$headdate'] = $headdate;
+        $awards_head = $GLOBALS["_template"]->replaceTemplate("awards_head", $data_array);
         echo $awards_head;
 
         $n = 1;
@@ -470,11 +502,18 @@ if ($action == "new") {
                 $adminaction = '';
             }
 
-            eval ("\$awards_content = \"" . gettemplate("awards_content") . "\";");
+            $data_array = array();
+            $data_array['$rang'] = $rang;
+            $data_array['$awardID'] = $ds['awardID'];
+            $data_array['$award'] = $award;
+            $data_array['$squad'] = $squad;
+            $data_array['$date'] = $date;
+            $data_array['$adminaction'] = $adminaction;
+            $awards_content = $GLOBALS["_template"]->replaceTemplate("awards_content", $data_array);
             echo $awards_content;
             $n++;
         }
-        eval ("\$awards_foot = \"" . gettemplate("awards_foot") . "\";");
+        $awards_foot = $GLOBALS["_template"]->replaceTemplate("awards_foot", array());
         echo $awards_foot;
     } else {
         echo $_language->module[ 'no_entries' ];

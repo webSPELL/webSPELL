@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -80,7 +80,7 @@ $language_array = Array(
   'listguide'=>'kirjoita \'1\' jos haluat numeroidun listan, \'a\' jos haluat aakkosellisen listan tai \'\' jos haluat täplikkään listan',
   'listpoint'=>'Kirjoita lista-piste. Älä kirjoita mitään tai klikkaa \'Peruuta\' viimeistelläksesi listan.',
   'addcode'=>'Liitä sijaintiin',
-  'readMore'=>'lue lisää',
+  'read_more'=>'lue lisää',
   'mc_you_have'=>'Sinulle on',
   'mc_new_messages'=>'Uusi(a) viestejä. Haluatko lukea ne nyt?',
   'na'=>'ei saatavilla',

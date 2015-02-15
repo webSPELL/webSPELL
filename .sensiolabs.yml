@@ -1,0 +1,141 @@
+ignore_branches:
+    - master
+
+global_exclude_dirs:
+    - vendor
+    - tests
+    - components
+    - node_modules
+    - codestyles
+
+rules:
+    composer.apc_class_loader_should_be_enabled:
+        enabled: true
+    composer.dependencies_not_installable:
+        enabled: true
+    composer.invalid_file:
+        enabled: true
+    composer.outdated_lock_file:
+        enabled: true
+    composer.security_issue_in_composer:
+        enabled: true
+    composer.unfixed_dependency_version:
+        enabled: true
+    composer.warning:
+        enabled: true
+    doctrine.database_query_contains_string_and_variable_concatenation:
+        enabled: true
+    doctrine.invalid_schema:
+        enabled: true
+    doctrine.use_flush_in_loop:
+        enabled: true
+    git.user_specific_ignored_file:
+        enabled: true
+    html.html_link_contains_javascript:
+        enabled: true
+    invalid_e_o_l:
+        enabled: true
+        eol: unix
+    missing_e_o_l:
+        enabled: true
+    php.absolute_path_present:
+        enabled: true
+        allowed_paths: [/dev, /etc, /proc]
+    php.bad_mutator_method_name_for_boolean_property:
+        enabled: true
+    php.boolean_statement:
+        enabled: true
+    php.class_too_long:
+        enabled: true
+        max_length: 500
+        threshold: 5
+    php.commented_out_code:
+        enabled: true
+    php.contaminant_third_party_component_license:
+        enabled: true
+    php.debug_statements:
+        enabled: true
+    php.duplicated_code:
+        enabled: true
+    php.dynamically_change_configuration:
+        enabled: true
+    php.file_contains_more_than_one_class:
+        enabled: true
+    php.for_loop_uses_test_function:
+        enabled: true
+    php.interface_has_no_interface_suffix:
+        enabled: true
+        interface_name_pattern: /(Interface|Exception|able)$/
+    php.method_too_long:
+        enabled: true
+        max_length: 50
+        threshold: 5
+    php.missing_use_statement:
+        enabled: true
+    php.neglected_tests:
+        enabled: true
+    php.object_parameter_not_type_hinted:
+        enabled: true
+    php.php_magic_methods:
+        enabled: true
+    php.php_syntax_error:
+        enabled: true
+    php.psr1:
+        enabled: true
+    php.silenced_error:
+        enabled: true
+        function_whitelist: [unlink, fopen, fwrite, fclose, rename, chmod, mkdir, rmdir, file_put_contents, move_uploaded_file, chgrp, lchgrp, chown, lchown, touch, symlink, highlight_file, ftp_get, ftp_close, ftp_size, ftp_chdir, ftp_delete, ftp_rmdir, ftp_put, ftp_mkdir, ftp_chmod, ftp_nlist]
+    php.static_method_should_not_use_this:
+        enabled: true
+    php.strict_boolean_comparison_should_be_used:
+        enabled: true
+    php.too_many_files_per_folder_for_performance:
+        enabled: true
+        max_count: 10000
+    php.too_permissive_file_permissions:
+        enabled: true
+        allowed_dirs: [bin, scripts]
+    php.unreachable_code:
+        enabled: true
+    php.unused_local_variable_or_private_member:
+        enabled: true
+    php.unused_use_statement:
+        enabled: true
+    php.use_deprecated_function:
+        enabled: true
+    php.use_exit_function:
+        enabled: true
+        ignore_files: [web/config.php]
+    php.use_global_variable_or_function:
+        enabled: false
+    php.use_php_ereg_function:
+        enabled: true
+    php.use_php_eval_function:
+        enabled: false
+    php.use_php_short_open_tag:
+        enabled: true
+    php.use_php_sleep_function:
+        enabled: true
+    task_fixme_comment:
+        enabled: true
+    task_todo_comment:
+        enabled: true
+    task_xxx_comment:
+        enabled: true
+    third_party.use_deprecated_class:
+        enabled: true
+    third_party.use_deprecated_service:
+        enabled: true
+    web.apache_config:
+        enabled: true
+    web.default_favicon:
+        enabled: true
+    web.missing_favicon:
+        enabled: true
+    web.missing_robots_txt:
+        enabled: true
+    web.non_utf8_encoding:
+        enabled: true
+    xml.syntax_error:
+        enabled: true
+

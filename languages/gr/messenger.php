@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -37,7 +37,7 @@ $language_array = Array(
 
   'add_buddylist'=>'Προσθηκη στου φιλους',
   'adminoptions'=>'Επιλογες διαχειρηστη:',
-  'bbcode'=>'BBCode <b><u>ειναι ενεργο</u></b>',
+  'bbcode'=>'BBCode <b><span class="underline">ειναι ενεργο</span></b>',
   'by'=>'απο',
   'date'=>'Ημερομηνια:',
   'delete'=>'Διαγραφη',
@@ -47,7 +47,7 @@ $language_array = Array(
   'execute'=>'Εκτελεσε',
   'formation'=>'Μορφοποιηση',
   'from'=>'Απο:',
-  'html'=>'HTML <b><u>OFF</u></b>',
+  'html'=>'HTML <b><span class="underline">OFF</span></b>',
   'ignore'=>'Αγνοηση χρηστη',
   'incoming'=>'Εισερχομενα',
   'mark_not_viewed'=>'Σημανση ως μη αναγνωσμενου',
@@ -74,7 +74,7 @@ $language_array = Array(
   'sendeachmember'=>'Αποστολη σε ολα τα μελη της clan',
   'sendeachuser'=>'Αποστολη σε ολους τους εγγεγραμενους χρηστες',
   'show'=>'Εμφανιση',
-  'smilies'=>'Smilies <b><u>ειναι ενεργο</u></b>',
+  'smilies'=>'Smilies <b><span class="underline">ειναι ενεργο</span></b>',
   'sort'=>'Ταξινομηση:',
   'title'=>'Θεμα',
   'your_message'=>'Το μηνυμα σας:',

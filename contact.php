@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -29,56 +29,56 @@ if (isset($site)) {
     $_language->readModule('contact');
 }
 
-eval ("\$title_contact = \"" . gettemplate("title_contact") . "\";");
+$title_contact = $GLOBALS["_template"]->replaceTemplate("title_contact", array());
 echo $title_contact;
 
-if (isset($_POST[ "action" ])) {
-    $action = $_POST[ "action" ];
+if (isset($_POST["action"])) {
+    $action = $_POST["action"];
 } else {
     $action = '';
 }
 
 if ($action == "send") {
-    $getemail = $_POST[ 'getemail' ];
-    $subject = $_POST[ 'subject' ];
-    $text = $_POST[ 'text' ];
+    $getemail = $_POST['getemail'];
+    $subject = $_POST['subject'];
+    $text = $_POST['text'];
     $text = str_replace('\r\n', "\n", $text);
-    $name = $_POST[ 'name' ];
-    $from = $_POST[ 'from' ];
+    $name = $_POST['name'];
+    $from = $_POST['from'];
     $run = 0;
 
-    $fehler = [];
+    $fehler = array();
     if (!(mb_strlen(trim($name)))) {
-        $fehler[ ] = $_language->module[ 'enter_name' ];
+        $fehler[] = $_language->module['enter_name'];
     }
 
     if (!validate_email($from)) {
-        $fehler[ ] = $_language->module[ 'enter_mail' ];
+        $fehler[] = $_language->module['enter_mail'];
     }
     if (!(mb_strlen(trim($subject)))) {
-        $fehler[ ] = $_language->module[ 'enter_subject' ];
+        $fehler[] = $_language->module['enter_subject'];
     }
     if (!(mb_strlen(trim($text)))) {
-        $fehler[ ] = $_language->module[ 'enter_message' ];
+        $fehler[] = $_language->module['enter_message'];
     }
 
     $ergebnis = safe_query("SELECT * FROM " . PREFIX . "contact WHERE email='" . $getemail . "'");
     if (mysqli_num_rows($ergebnis) == 0) {
-        $fehler[ ] = $_language->module[ 'unknown_receiver' ];
+        $fehler[] = $_language->module['unknown_receiver'];
     }
 
     if ($userID) {
         $run = 1;
     } else {
         $CAPCLASS = new \webspell\Captcha;
-        if (!$CAPCLASS->checkCaptcha($_POST[ 'captcha' ], $_POST[ 'captcha_hash' ])) {
-            $fehler[ ] = $_language->module[ 'wrong_securitycode' ];
+        if (!$CAPCLASS->checkCaptcha($_POST['captcha'], $_POST['captcha_hash'])) {
+            $fehler[] = $_language->module['wrong_securitycode'];
         } else {
             $run = 1;
         }
     }
 
-    if (!count($fehler) and $run) {
+    if (!count($fehler) && $run) {
         $header = "From:$from\n";
         $header .= "Reply-To: $from\n";
         $header .= "Content-Type: text/html; charset=utf-8\n";
@@ -86,38 +86,29 @@ if ($action == "send") {
             $getemail,
             stripslashes($subject),
             stripslashes(
-                'This mail was send over your webSPELL - Website (IP ' . $GLOBALS[ 'ip' ] . '): ' . $hp_url .
+                'This mail was send over your webSPELL - Website (IP ' . $GLOBALS['ip'] . '): ' . $hp_url .
                 '<br><br><strong>' . getinput($name) . ' writes:</strong><br>' . clearfromtags($text)
             ),
             $header
         );
-        redirect('index.php?site=contact', $_language->module[ 'send_successfull' ], 3);
-        unset($_POST[ 'name' ]);
-        unset($_POST[ 'from' ]);
-        unset($_POST[ 'text' ]);
-        unset($_POST[ 'subject' ]);
+        redirect('index.php?site=contact', $_language->module['send_successfull'], 3);
+        unset($_POST['name']);
+        unset($_POST['from']);
+        unset($_POST['text']);
+        unset($_POST['subject']);
     } else {
-        $errors = implode('<br>&#8226; ', $fehler);
+        $showerror = generateErrorBoxFromArray($_language->module['errors_there'], $fehler);
 
-        $showerror = '<div class="alert alert-danger alert-dismissible" role="alert">
-            <button type="button" class="close" data-dismiss="alert">
-                <span aria-hidden="true">&times;</span>
-                <span class="sr-only">Close</span>
-            </button>
-            <strong>' . $_language->module[ 'errors_there' ] . ':</strong><br>
-            <br>
-            &#8226; ' . $errors . '
-        </div>';
     }
 }
 
 $getemail = '';
 $ergebnis = safe_query("SELECT * FROM `" . PREFIX . "contact` ORDER BY `sort`");
 while ($ds = mysqli_fetch_array($ergebnis)) {
-    if ($getemail === $ds[ 'email' ]) {
-        $getemail .= '<option value="' . $ds[ 'email' ] . '" selected="selected">' . $ds[ 'name' ] . '</option>';
+    if ($getemail === $ds['email']) {
+        $getemail .= '<option value="' . $ds['email'] . '" selected="selected">' . $ds['name'] . '</option>';
     } else {
-        $getemail .= '<option value="' . $ds[ 'email' ] . '">' . $ds[ 'name' ] . '</option>';
+        $getemail .= '<option value="' . $ds['email'] . '">' . $ds['name'] . '</option>';
     }
 }
 
@@ -127,18 +118,25 @@ if ($loggedin) {
     }
     $name = getinput(stripslashes(getnickname($userID)));
     $from = getinput(getemail($userID));
-    if (isset($_POST[ 'subject' ])) {
-        $subject = getforminput($_POST[ 'subject' ]);
+    if (isset($_POST['subject'])) {
+        $subject = getforminput($_POST['subject']);
     } else {
         $subject = '';
     }
-    if (isset($_POST[ 'text' ])) {
-        $text = getforminput($_POST[ 'text' ]);
+    if (isset($_POST['text'])) {
+        $text = getforminput($_POST['text']);
     } else {
         $text = '';
     }
 
-    eval ("\$contact_loggedin = \"" . gettemplate("contact_loggedin") . "\";");
+    $data_array = array();
+    $data_array['$showerror'] = $showerror;
+    $data_array['$getemail'] = $getemail;
+    $data_array['$name'] = $name;
+    $data_array['$from'] = $from;
+    $data_array['$subject'] = $subject;
+    $data_array['$text'] = $text;
+    $contact_loggedin = $GLOBALS["_template"]->replaceTemplate("contact_loggedin", $data_array);
     echo $contact_loggedin;
 } else {
     $CAPCLASS = new \webspell\Captcha;
@@ -148,27 +146,36 @@ if ($loggedin) {
     if (!isset($showerror)) {
         $showerror = '';
     }
-    if (isset($_POST[ 'name' ])) {
-        $name = getforminput($_POST[ 'name' ]);
+    if (isset($_POST['name'])) {
+        $name = getforminput($_POST['name']);
     } else {
         $name = '';
     }
-    if (isset($_POST[ 'from' ])) {
-        $from = getforminput($_POST[ 'from' ]);
+    if (isset($_POST['from'])) {
+        $from = getforminput($_POST['from']);
     } else {
         $from = '';
     }
-    if (isset($_POST[ 'subject' ])) {
-        $subject = getforminput($_POST[ 'subject' ]);
+    if (isset($_POST['subject'])) {
+        $subject = getforminput($_POST['subject']);
     } else {
         $subject = '';
     }
-    if (isset($_POST[ 'text' ])) {
-        $text = getforminput($_POST[ 'text' ]);
+    if (isset($_POST['text'])) {
+        $text = getforminput($_POST['text']);
     } else {
         $text = '';
     }
 
-    eval ("\$contact_notloggedin = \"" . gettemplate("contact_notloggedin") . "\";");
+    $data_array = array();
+    $data_array['$showerror'] = $showerror;
+    $data_array['$getemail'] = $getemail;
+    $data_array['$name'] = $name;
+    $data_array['$from'] = $from;
+    $data_array['$subject'] = $subject;
+    $data_array['$text'] = $text;
+    $data_array['$captcha'] = $captcha;
+    $data_array['$hash'] = $hash;
+    $contact_notloggedin = $GLOBALS["_template"]->replaceTemplate("contact_notloggedin", $data_array);
     echo $contact_notloggedin;
 }

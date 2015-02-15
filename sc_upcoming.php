@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -51,7 +51,11 @@ while ($ds = mysqli_fetch_array($ergebnis)) {
 
         $opponent = $ds[ 'opponent' ];
 
-        eval ("\$upcomingactions = \"" . gettemplate("upcomingactions") . "\";");
+        $data_array = array();
+        $data_array['$date'] = $date;
+        $data_array['$upurl'] = $upurl;
+        $data_array['$opponent'] = $opponent;
+        $upcomingactions = $GLOBALS["_template"]->replaceTemplate("upcomingactions", $data_array);
         echo $upcomingactions;
     } else {
         $date = getformatdate($ds[ 'date' ]);
@@ -72,7 +76,12 @@ while ($ds = mysqli_fetch_array($ergebnis)) {
 
         $eventtitle = $ds[ 'title' ];
 
-        eval ("\$upcomingevent = \"" . gettemplate("upcomingevent") . "\";");
+        $data_array = array();
+        $data_array['$date'] = $date;
+        $data_array['$country'] = $country;
+        $data_array['$upurl'] = $upurl;
+        $data_array['$eventtitle'] = $eventtitle;
+        $upcomingevent = $GLOBALS["_template"]->replaceTemplate("upcomingevent", $data_array);
         echo $upcomingevent;
     }
     $n++;

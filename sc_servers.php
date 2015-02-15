@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -41,7 +41,11 @@ while ($row = mysqli_fetch_array($result)) {
         $bg2 = BG_4;
     }
 
-    eval ("\$sc_servers = \"" . gettemplate("sc_servers") . "\";");
+    $data_array = array();
+    $data_array['$servergame'] = $servergame;
+    $data_array['$serverip'] = $serverip;
+    $data_array['$servername'] = $servername;
+    $sc_servers = $GLOBALS["_template"]->replaceTemplate("sc_servers", $data_array);
     echo $sc_servers;
     $n++;
 

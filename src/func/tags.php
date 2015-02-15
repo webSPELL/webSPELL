@@ -11,7 +11,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -57,7 +57,7 @@ class Tags
             $tags[] = $ds['tag'];
         }
         $tags = array_unique($tags);
-        return ($array == true) ? $tags : implode(", ", $tags);
+        return ($array === true) ? $tags : implode(", ", $tags);
     }
 
     public static function getTagsLinked($relType, $relID)
@@ -79,7 +79,7 @@ class Tags
             }
         }
         $tags = array_unique($tags);
-        return ($array == true) ? $tags : implode(", ", $tags);
+        return ($array === true) ? $tags : implode(", ", $tags);
     }
 
     public static function getTagCloud()
@@ -137,7 +137,7 @@ class Tags
                 (
                     isnewsadmin($userID) ||
                     (
-                        isnewswriter($userID) and $ds['poster'] == $userID
+                        isnewswriter($userID) && $ds['poster'] == $userID
                     )
                 )
             )

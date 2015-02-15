@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -27,7 +27,7 @@
 
 $_language->readModule('lostpassword');
 
-eval ("\$title_lostpassword = \"" . gettemplate("title_lostpassword") . "\";");
+$title_lostpassword = $GLOBALS["_template"]->replaceTemplate("title_lostpassword", array());
 echo $title_lostpassword;
 
 if (isset($_POST[ 'submit' ])) {
@@ -35,33 +35,32 @@ if (isset($_POST[ 'submit' ])) {
     if ($email != '') {
         $ergebnis = safe_query(
             "SELECT
-              *
+                *
             FROM
-              " . PREFIX . "user
+                " . PREFIX . "user
             WHERE
-              email = '" . $email . "'"
+                email = '" . $email . "'"
         );
         $anz = mysqli_num_rows($ergebnis);
 
         if ($anz) {
-
             $newpwd = RandPass(6);
             $newmd5pwd = generatePasswordHash($newpwd);
 
             $ds = mysqli_fetch_array($ergebnis);
             safe_query(
                 "UPDATE
-                  " . PREFIX . "user
+                    " . PREFIX . "user
                 SET
-                  password='" . $newmd5pwd . "'
+                    password='" . $newmd5pwd . "'
                 WHERE
-                  userID='" . $ds[ 'userID' ] . "'"
+                    userID='" . $ds[ 'userID' ] . "'"
             );
 
             $ToEmail = $ds[ 'email' ];
             $ToName = $ds[ 'username' ];
-            $vars = ['%pagetitle%', '%username%', '%new_password%', '%homepage_url%'];
-            $repl = [$hp_title, $ds[ 'username' ], $newpwd, $hp_url];
+            $vars = array('%pagetitle%', '%username%', '%new_password%', '%homepage_url%');
+            $repl = array($hp_title, $ds[ 'username' ], $newpwd, $hp_url);
             $header = str_replace($vars, $repl, $_language->module[ 'email_subject' ]);
             $Message = str_replace($vars, $repl, $_language->module[ 'email_text' ]);
 
@@ -87,10 +86,10 @@ if (isset($_POST[ 'submit' ])) {
     echo '<form method="post" action="index.php?site=lostpassword" class="form-inline" role="form">
             <div class="form-group">
                 <label class="sr-only" for="email">' . $_language->module[ 'your_email' ] . '</label>
-                <input type="email" name="email" class="form-control" placeholder="' .
+                <input type="email" id="email" name="email" class="form-control" placeholder="' .
         $_language->module[ 'your_email' ] . '" required>
             </div>
             <input type="submit" name="submit"
             value="' . $_language->module[ 'get_password' ] . '" class="btn btn-danger">
-		 </form>';
+        </form>';
 }

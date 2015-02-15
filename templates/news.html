@@ -1,32 +1,30 @@
 <article>
-	<header class="page-header">
-		<h3>
-			<a href="index.php?site=news_comments&amp;newsID=$newsID">$headline</a>
-			<a href="index.php?site=news&amp;show=$rubrikname">
-				<small>$rubrikname</small>
-			</a>
-		</h3>
-	</header>
+    <header class="page-header">
+        <h3>
+            <a href="index.php?site=news_comments&amp;newsID=$newsID">$headline</a>
+            <a href="index.php?site=news&amp;show=$rubrikname">
+                <small>$rubrikname</small>
+            </a>
+        </h3>
+    </header>
 
-	<section>
-		<div>
-			<div class="thumbnail pull-left">$rubricpic</div>
-		</div>
-		<div>
-			<p>
-				<small>$isintern</small>
-				$content<br>$adminaction
-			</p>
-		</div>
-	</section>
+    <section>
+        <div>
+            <div class="thumbnail pull-left">$rubricpic</div>
+        </div>
+        <div>
+            <p>
+                <small>$isintern</small>
+                $content<br>$adminaction
+            </p>
+        </div>
+    </section>
 
-	<footer class="col-lg-12">
-		<p></p>
-
-		<p>
-			<i class="icon-user"></i> by $poster
-			| <i class="icon-calendar"></i> $date
-			| <i class="icon-comment"></i> $comments </p>
-	</footer>
+    <footer>
+        <p>
+            <span class="glyphicon glyphicon-user"></span> by $poster
+            | <span class="glyphicon glyphicon-calendar"></span> $date
+            | <span class="glyphicon glyphicon-comment"></span> $comments </p>
+    </footer>
 </article>
 <hr>

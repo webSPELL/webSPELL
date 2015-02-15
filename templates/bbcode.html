@@ -1,286 +1,286 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<meta name="description" content="Clanpage using webSPELL 4 CMS">
-	<meta name="author" content="webspell.org">
-	<meta name="keywords" content="webspell, webspell4, clan, cms">
-	<meta name="copyright" content="Copyright 2005-2014 by webspell.org">
-	<meta name="generator" content="webSPELL">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="description" content="Clanpage using webSPELL 4 CMS">
+    <meta name="author" content="webspell.org">
+    <meta name="copyright" content="Copyright 2005-2015 by webspell.org">
+    <meta name="generator" content="webSPELL">
 
-	<title>%bbcode_guide%</title>
-	<base href="$rewriteBase">
-	<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
-	<link href="_stylesheet.css" rel="stylesheet">
+    <title>%bbcode_guide%</title>
+    <base href="$rewriteBase">
+    $componentsCss
+    <link href="_stylesheet.css" rel="stylesheet">
 </head>
 
 <body>
-	<div class="container">
-		<a name="Top"></a>
+<div class="container">
+    <a name="Top"></a>
 
-		<div class="page-header"><h1>%bbcode_guide%</h1></div>
+    <div class="page-header"><h1>%bbcode_guide%</h1></div>
 
-		<div class="panel panel-default">
-			<div class="panel-body">
-				<h4>%text_formatting%</h4>
-				<ul class="list-unstyled">
-					<li><a href="#1">%how_to_create_biu%</a></li>
-					<li><a href="#2">%how_to_change_cs%</a></li>
-					<li><a href="#3">%can_combine_formatting%</a></li>
-				</ul>
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <h4>%text_formatting%</h4>
+            <ul class="list-unstyled">
+                <li><a href="#1">%how_to_create_biu%</a></li>
+                <li><a href="#2">%how_to_change_cs%</a></li>
+                <li><a href="#3">%can_combine_formatting%</a></li>
+            </ul>
 
-				<h4>%quoting_outputting_text%</h4>
-				<ul class="list-unstyled">
-					<li><a href="#4">%quoting_replys%</a></li>
-					<li><a href="#5">%outputting_code%</a></li>
-				</ul>
+            <h4>%quoting_outputting_text%</h4>
+            <ul class="list-unstyled">
+                <li><a href="#4">%quoting_replys%</a></li>
+                <li><a href="#5">%outputting_code%</a></li>
+            </ul>
 
-				<h4>%generating_lists%</h4>
-				<ul class="list-unstyled">
-					<li><a href="#6">%creating_unordered_list%</a></li>
-					<li><a href="#7">%creating_ordered_list%</a></li>
-				</ul>
+            <h4>%generating_lists%</h4>
+            <ul class="list-unstyled">
+                <li><a href="#6">%creating_unordered_list%</a></li>
+                <li><a href="#7">%creating_ordered_list%</a></li>
+            </ul>
 
-				<h4>%creating_links%</h4>
-				<ul class="list-unstyled">
-					<li><a href="#8">%linking_another_site%</a></li>
-				</ul>
+            <h4>%creating_links%</h4>
+            <ul class="list-unstyled">
+                <li><a href="#8">%linking_another_site%</a></li>
+            </ul>
 
-				<h4>%showing_images%</h4>
-				<ul class="list-unstyled">
-					<li><a href="#9">%adding_image%</a></li>
-				</ul>
-			</div>
-		</div>
+            <h4>%showing_images%</h4>
+            <ul class="list-unstyled">
+                <li><a href="#9">%adding_image%</a></li>
+            </ul>
+        </div>
+    </div>
 
-		<div class="page-header">
-			<h1>%text_formatting%</h1>
-		</div>
+    <div class="page-header">
+        <h1>%text_formatting%</h1>
+    </div>
 
-		<a name="1"></a>
+    <a name="1"></a>
 
-		<div class="panel panel-default">
-			<div class="panel-heading">
-				<h3 class="panel-title">%how_to_create_biu%</h3>
-			</div>
-			<div class="panel-body">
-				<p>%bb_code_tags_text_syle%</p>
-				<ul>
-					<li>
-						%bold_text%: <b>[b]</b>%hello%<b>[/b]</b><br>
-						%will_become% <b>%hello%</b>
-					</li>
-					<li>
-						%underlined_text%: <b>[u]</b>%good_morning%<b>[/u]</b><br>
-						%becomes% <u>%good_morning%</u>
-					</li>
-					<li>
-						%italic_text%: <b>[i]</b>%great%<b>[/i]</b><br>
-						%would_give% <i>%great%</i>
-					</li>
-				</ul>
-				<a href="#Top">%back_top%</a></td>
-			</div>
-		</div>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">%how_to_create_biu%</h3>
+        </div>
+        <div class="panel-body">
+            <p>%bb_code_tags_text_syle%</p>
+            <ul>
+                <li>
+                    %bold_text%: <strong>[b]</strong>%hello%<strong>[/b]</strong><br>
+                    %will_become% <strong>%hello%</strong>
+                </li>
+                <li>
+                    %underlined_text%: <strong>[u]</strong>%good_morning%<strong>[/u]</strong><br>
+                    %becomes% <span class="underline">%good_morning%</span>
+                </li>
+                <li>
+                    %italic_text%: <strong>[i]</strong>%great%<strong>[/i]</strong><br>
+                    %would_give% <em>%great%</em>
+                </li>
+            </ul>
+            <a href="#Top">%back_top%</a>
+        </div>
+    </div>
 
-		<a name="2"></a>
+    <a name="2"></a>
 
-		<div class="panel panel-default">
-			<div class="panel-heading">
-				<h3 class="panel-title">%how_to_change_cs%</h3>
-			</div>
-			<div class="panel-body">
-				<p>%bb_code_tags_color_size%</p>
-				<ul>
-					<li>
-						<b>[color=red]</b>%hello%<b>[/color]</b><br>
-						%or%<br>
-						<b>[color=#FF0000]</b>%hello%<b>[/color]</b><br>
-						%will_both_output% <span style="color:FF0000">%hello%</span>
-					</li>
-					<li>
-						<b>[size=1]</b>%small%<b>[/size]</b><br>
-						%will_generally_be% <font size="1">%small%</font><br>
-						%or%:<br><br>
-						<b>[size=5]</b>%huge%<b>[/size]</b><br>
-						%will_be% <font size="5">%huge%</font>
-					</li>
-					<li>
-						<b>[font=courier]</b>Courier<b>[/font]</b><br>
-						%will_generally_be% <font face="Courier">Courier</font>
-					</li>
-				</ul>
-				<a href="#Top">%back_top%</a>
-			</div>
-		</div>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">%how_to_change_cs%</h3>
+        </div>
+        <div class="panel-body">
+            <p>%bb_code_tags_color_size%</p>
+            <ul>
+                <li>
+                    <strong>[color=red]</strong>%hello%<strong>[/color]</strong><br>
+                    %or%<br>
+                    <strong>[color=#FF0000]</strong>%hello%<strong>[/color]</strong><br>
+                    <!-- htmllint attr-bans=false -->
+                    %will_both_output% <span style="color:#FF0000">%hello%</span>
+                </li>
+                <li>
+                    <strong>[size=1]</strong>%small%<strong>[/size]</strong><br>
+                    %will_generally_be% <font size="1">%small%</font><br>
+                    %or%:<br><br>
+                    <strong>[size=5]</strong>%huge%<strong>[/size]</strong><br>
+                    %will_be% <font size="5">%huge%</font>
+                </li>
+                <li>
+                    <strong>[font=courier]</strong>Courier<strong>[/font]</strong><br>
+                    %will_generally_be% <font face="Courier">Courier</font>
+                </li>
+            </ul>
+            <a href="#Top">%back_top%</a>
+        </div>
+    </div>
 
-		<a name="3"></a>
+    <a name="3"></a>
 
-		<div class="panel panel-default">
-			<div class="panel-heading">
-				<h3 class="panel-title">%can_combine_formatting%</h3>
-			</div>
-			<div class="panel-body">
-				<p>%yes_can_combine%</p>
-				<b>[size=5][color=red][b]</b>%look_at_me%<b>[/b][/color][/size]</b><br>
-				%this_would_output% <font color="#FF0000" size="5"><b>%look_at_me%</b></font>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">%can_combine_formatting%</h3>
+        </div>
+        <div class="panel-body">
+            <p>%yes_can_combine%</p>
+            <strong>[size=5][color=red][b]</strong>%look_at_me%<strong>[/b][/color][/size]</strong><br>
+            %this_would_output% <font color="#FF0000" size="5"><strong>%look_at_me%</strong></font>
 
-				<p>%close_tags_is_up_to_you%</p>
-				<a href="#Top">%back_top%</a>
-			</div>
-		</div>
+            <p>%close_tags_is_up_to_you%</p>
+            <a href="#Top">%back_top%</a>
+        </div>
+    </div>
 
-		<div class="page-header">
-			<h1>%quoting_outputting_text%</h1>
-		</div>
+    <div class="page-header">
+        <h1>%quoting_outputting_text%</h1>
+    </div>
 
-		<a name="4"></a>
+    <a name="4"></a>
 
-		<div class="panel panel-default">
-			<div class="panel-heading">
-				<h3 class="panel-title">%quoting_outputting_text%</h3>
-			</div>
-			<div class="panel-body">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">%quoting_outputting_text%</h3>
+        </div>
+        <div class="panel-body">
 
-				<b>%quoting_replys%</b>
-				<ul>
-					<li>
-						<b>[quote=%mr_blobby%]</b>%text_of_mr_blobby%<b>[/quote]</b>
-					</li>
-					<li>
-						<b>[quote]</b>%text_of_mr_blobby%<b>[/quote]</b>
-					</li>
-				</ul>
-				<a href="#Top">%back_top%</a>
-			</div>
-		</div>
+            <strong>%quoting_replys%</strong>
+            <ul>
+                <li>
+                    <strong>[quote=%mr_blobby%]</strong>%text_of_mr_blobby%<strong>[/quote]</strong>
+                </li>
+                <li>
+                    <strong>[quote]</strong>%text_of_mr_blobby%<strong>[/quote]</strong>
+                </li>
+            </ul>
+            <a href="#Top">%back_top%</a>
+        </div>
+    </div>
 
-		<a name="5"></a>
+    <a name="5"></a>
 
-		<div class="panel panel-default">
-			<div class="panel-heading">
-				<h3 class="panel-title">%outputting_code%</h3>
-			</div>
-			<div class="panel-body">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">%outputting_code%</h3>
+        </div>
+        <div class="panel-body">
 
-				<p><b>[code]</b>echo "%this_is_some_code%";<b>[/code]</b></p>
+            <p><strong>[code]</strong>echo "%this_is_some_code%";<strong>[/code]</strong></p>
 
-				<p>%all_formating_% <b>[code][/code]</b> %_tags_retained%</p>
-				<a href="#Top">%back_top%</a>
-			</div>
-		</div>
+            <p>%all_formating_% <strong>[code][/code]</strong> %_tags_retained%</p>
+            <a href="#Top">%back_top%</a>
+        </div>
+    </div>
 
-		<div class="page-header">
-			<h1>%generating_lists%</h1>
-		</div>
+    <div class="page-header">
+        <h1>%generating_lists%</h1>
+    </div>
 
-		<a name="6"></a>
+    <a name="6"></a>
 
-		<div class="panel panel-default">
-			<div class="panel-heading">
-				<h3 class="panel-title">%creating_unordered_list%</h3>
-			</div>
-			<div class="panel-body">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">%creating_unordered_list%</h3>
+        </div>
+        <div class="panel-body">
 
-				<b>[list]</b><br>
-				<b>[*]</b>%red%<br>
-				<b>[*]</b>%blue%<br>
-				<b>[*]</b>%yellow%<br>
-				<b>[/list]</b><br><br>
-				%would_generate_list%:
-				<ul>
-					<li>%red%</li>
-					<li>%blue%</li>
-					<li>%yellow%</li>
-				</ul>
-				<a href="#Top">%back_top%</a>
-			</div>
-		</div>
+            <strong>[list]</strong><br>
+            <strong>[*]</strong>%red%<br>
+            <strong>[*]</strong>%blue%<br>
+            <strong>[*]</strong>%yellow%<br>
+            <strong>[/list]</strong><br><br>
+            %would_generate_list%:
+            <ul>
+                <li>%red%</li>
+                <li>%blue%</li>
+                <li>%yellow%</li>
+            </ul>
+            <a href="#Top">%back_top%</a>
+        </div>
+    </div>
 
-		<a name="7"></a>
+    <a name="7"></a>
 
-		<div class="panel panel-default">
-			<div class="panel-heading">
-				<h3 class="panel-title">%creating_ordered_list%</h3>
-			</div>
-			<div class="panel-body">
-				<b>[list=1]</b><br>
-				<b>[*]</b>%red%<br>
-				<b>[*]</b>%blue%<br>
-				<b>[*]</b>%yellow%<br>
-				<b>[/list=1]<br><br>
-					%would_generate_list%:</b>
-				<ol>
-					<li>%red%</li>
-					<li>%blue%</li>
-					<li>%yellow%</li>
-				</ol>
-				<b>[list=a]</b><br>
-				<b>[*]</b>%red%<br>
-				<b>[*]</b>%blue%<br>
-				<b>[*]</b>%yellow%<br>
-				<b>[/list=a]<br><br>
-					%would_generate_list%:</b>
-				<ol type="a">
-					<li>%red%</li>
-					<li>%blue%</li>
-					<li>%yellow%</li>
-				</ol>
-				<a href="#Top">%back_top%</a>
-			</div>
-		</div>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">%creating_ordered_list%</h3>
+        </div>
+        <div class="panel-body">
+            <strong>[list=1]</strong><br>
+            <strong>[*]</strong>%red%<br>
+            <strong>[*]</strong>%blue%<br>
+            <strong>[*]</strong>%yellow%<br>
+            <strong>[/list=1]<br><br>%would_generate_list%:</strong>
+            <ol>
+                <li>%red%</li>
+                <li>%blue%</li>
+                <li>%yellow%</li>
+            </ol>
+            <strong>[list=a]</strong><br>
+            <strong>[*]</strong>%red%<br>
+            <strong>[*]</strong>%blue%<br>
+            <strong>[*]</strong>%yellow%<br>
+            <strong>[/list=a]<br><br>%would_generate_list%:</strong>
+            <ol type="a">
+                <li>%red%</li>
+                <li>%blue%</li>
+                <li>%yellow%</li>
+            </ol>
+            <a href="#Top">%back_top%</a>
+        </div>
+    </div>
 
-		<div class="page-header">
-			<h1>%creating_links%</h1>
-		</div>
+    <div class="page-header">
+        <h1>%creating_links%</h1>
+    </div>
 
-		<a name="8"></a>
+    <a name="8"></a>
 
-		<div class="panel panel-default">
-			<div class="panel-heading">
-				<h3 class="panel-title">%linking_another_site%</h3>
-			</div>
-			<div class="panel-body">
-				<ul>
-					<li>
-						<b>[url=http://www.webspell.at]</b>webSPELL<b>[/url]</b><br>
-						%would_generate_link%<a href="http://www.webspell.at" target="_blank">webSPELL</a>
-					</li>
-					<li>
-						<b>[url]</b>http://www.webspell.org<b>[/url]</b><br>
-						%would_generate_link%<a href="http://www.webspell.org" target="_blank">www.webspell.org</a>
-					</li>
-					<li>
-						<b>[email]</b>no.one@domain.adr<b>[/email]</b><br>
-						%which_will_output% <a href="mailto:no.one@domain.adr">no.one@domain.adr.</a><br>
-						<b>[email=no.one@domain.adr]</b>%email_me%<b>[/email]</b><br>
-						%which_will_output% <a href="mailto:no.one@domain.adr">%email_me%</a>
-					</li>
-				</ul>
-				<a href="#Top">%back_top%</a>
-			</div>
-		</div>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">%linking_another_site%</h3>
+        </div>
+        <div class="panel-body">
+            <ul>
+                <li>
+                    <strong>[url=http://www.webspell.at]</strong>webSPELL<strong>[/url]</strong><br>
+                    %would_generate_link%<a href="http://www.webspell.at" target="_blank">webSPELL</a>
+                </li>
+                <li>
+                    <strong>[url]</strong>http://www.webspell.org<strong>[/url]</strong><br>
+                    %would_generate_link%<a href="http://www.webspell.org" target="_blank">www.webspell.org</a>
+                </li>
+                <li>
+                    <strong>[email]</strong>no.one@domain.adr<strong>[/email]</strong><br>
+                    %which_will_output% <a href="mailto:no.one@domain.adr">no.one@domain.adr.</a><br>
+                    <strong>[email=no.one@domain.adr]</strong>%email_me%<strong>[/email]</strong><br>
+                    %which_will_output% <a href="mailto:no.one@domain.adr">%email_me%</a>
+                </li>
+            </ul>
+            <a href="#Top">%back_top%</a>
+        </div>
+    </div>
 
-		<div class="page-header">
-			<h1>%showing_images%</h1>
-		</div>
+    <div class="page-header">
+        <h1>%showing_images%</h1>
+    </div>
 
-		<a name="9"></a>
+    <a name="9"></a>
 
-		<div class="panel panel-default">
-			<div class="panel-heading">
-				<h3 class="panel-title">%adding_image%</h3>
-			</div>
-			<div class="panel-body">
-				<b>[img]</b>http://www.webspell.org/images/linkus/1.gif<b>[/img]</b><br><br>
-				%as_noted_url_% <b>[url][/url]</b>%_tag_if_wish%<br>
-				<b>[url=http://www.webspell.org/][img]</b>http://www.webspell.org/images/linkus/1.gif<b>[/img][/url]</b><br>
-				%would_generate%:<br>
-				<a href="http://www.webspell.org" target="_blank"><img src="http://www.webspell.org/images/linkus/1.gif" alt=""></a><br><br>
-				<a href="#Top">%back_top%</a>
-			</div>
-		</div>
-	</div>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">%adding_image%</h3>
+        </div>
+        <div class="panel-body">
+            <strong>[img]</strong>http://www.webspell.org/images/linkus/1.gif<strong>[/img]</strong><br><br>
+            %as_noted_url_% <strong>[url][/url]</strong>%_tag_if_wish%<br>
+            <strong>[url=http://www.webspell.org/][img]</strong>http://www.webspell.org/images/linkus/1.gif<strong>[/img][/url]</strong><br>
+            %would_generate%:<br>
+            <a href="http://www.webspell.org" target="_blank">
+                <img src="http://www.webspell.org/images/linkus/1.gif" alt="webSPELL">
+            </a><br><br>
+            <a href="#Top">%back_top%</a>
+        </div>
+    </div>
+</div>
 </body>
 </html>

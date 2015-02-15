@@ -1,74 +1,72 @@
 <script>
-	<!--
-	function chkFormular() {
-		if (document.getElementById('gbname').value === "") {
-			alert('%enter_your_name%');
-			document.getElementById('gbname').focus();
+    <!--
+    function chkFormular() {
+        if (document.getElementById('gbname').value === "") {
+            alert('%enter_your_name%');
+            document.getElementById('gbname').focus();
 
-			return false;
-		}
+            return false;
+        }
 
-		if (document.getElementById('gbmessage').value === "") {
-			alert('%enter_a_message%');
-			document.getElementById('gbmessage').focus();
+        if (document.getElementById('gbmessage').value === "") {
+            alert('%enter_a_message%');
+            document.getElementById('gbmessage').focus();
 
-			return false;
-		}
+            return false;
+        }
 
-		if (document.getElementById('gbcaptcha').value == "") {
-			alert('%error_captcha%');
-			document.getElementById('gbcaptcha').focus();
+        if (document.getElementById('gbcaptcha').value == "") {
+            alert('%error_captcha%');
+            document.getElementById('gbcaptcha').focus();
 
-			return false;
-		}
+            return false;
+        }
 
-		if (!validbbcode(document.getElementById('gbmessage').value)) {
+        if (!validbbcode(document.getElementById('gbmessage').value)) {
 
-			return false;
-		}
-	}
-	-->
+            return false;
+        }
+    }
+    -->
 </script>
 
 <form id="post" name="post" method="post" action="guestbook.php" onsubmit="return chkFormular()">
 
-	$error
+    $error
 
-	<h4>%new_entry%</h4>
+    <h4>%new_entry%</h4>
 
-	<div class="form-group">
-		<input id="gbname" name="gbname" type="text" placeholder="%name%" class="form-control"
-				autofocus>
-	</div>
-	<div class="form-group">
-		<input name="gbemail" type="email" placeholder="%mail%" class="form-control hidden">
-	</div>
-	<div class="form-group">
-		<input name="icq" type="number" placeholder="%icq%" class="form-control hidden">
-	</div>
-	<div class="form-group">
-		<input name="gburl" type="url" value="http://" class="form-control">
-	</div>
+    <div class="form-group">
+        <input id="gbname" name="gbname" type="text" placeholder="%name%" class="form-control" autofocus>
+    </div>
+    <div class="form-group">
+        <input name="gbemail" type="email" placeholder="%mail%" class="form-control hidden">
+    </div>
+    <div class="form-group">
+        <input name="icq" type="number" placeholder="%icq%" class="form-control hidden">
+    </div>
+    <div class="form-group">
+        <input name="gburl" type="url" value="http://" class="form-control">
+    </div>
 
-	<div class="form-group">
-		$addbbcode
-	</div>
-	<div class="form-group">
-		<label for="message">%your_message%:</label>
+    <div class="form-group">
+        $addbbcode
+    </div>
+    <div class="form-group">
+        <label for="gbmessage">%your_message%:</label>
+        <textarea id="gbmessage" name="message" rows="5" class="form-control">$message</textarea>
+        <small class="pull-right"><strong>%options%:</strong> %bbcode% %smilies%</small>
+    </div>
+    <div class="form-group">
+        <input name="save" type="submit" value="%submit%" class="btn btn-primary">
+    </div>
 
-		<textarea id="gbmessage" name="message" rows="5" class="form-control">$message</textarea>
-		<small class="pull-right"><b>%options%:</b> %bbcode% %smilies%</small>
-	</div>
-	<div class="form-group">
-		<input name="save" type="submit" value="%submit%" class="btn btn-primary">
-	</div>
-
-	<div class="form-group">
-		<div class="input-group">
-			<span class="input-group-addon captcha-img">$captcha</span>
-			<input id="gbcaptche" type="number" name="captcha" placeholder="Enter Captcha"
-					autocomplete="off" class="form-control">
-			<input name="captcha_hash" type="hidden" value="$hash">
-		</div>
-	</div>
+    <div class="form-group">
+        <div class="input-group">
+            <span class="input-group-addon captcha-img">$captcha</span>
+            <input id="gbcaptche" type="number" name="captcha" placeholder="Enter Captcha" autocomplete="off"
+                class="form-control">
+            <input name="captcha_hash" type="hidden" value="$hash">
+        </div>
+    </div>
 </form>

@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -33,5 +33,7 @@ if ($loggedin) {
     $usermail = "";
 }
 
-eval ("\$sc_newsletter = \"" . gettemplate("sc_newsletter") . "\";");
+$data_array = array();
+$data_array['$usermail'] = $usermail;
+$sc_newsletter = $GLOBALS["_template"]->replaceTemplate("sc_newsletter", $data_array);
 echo $sc_newsletter;

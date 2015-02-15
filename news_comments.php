@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -27,7 +27,7 @@
 
 $_language->readModule('news');
 
-eval ("\$title_news = \"" . gettemplate("title_news") . "\";");
+$title_news = $GLOBALS["_template"]->replaceTemplate("title_news", array());
 echo $title_news;
 
 if (isset($newsID)) {
@@ -55,8 +55,8 @@ echo $post .
     ' <a href="index.php?site=news&amp;action=archive" class="btn btn-primary">' .
     $_language->module[ 'news_archive' ] . '</a><hr>';
 
-if ($newsID) {
-    $result = safe_query("SELECT * FROM " . PREFIX . "news WHERE `newsID` = '" . (int)$newsID);
+if (isset($newsID)) {
+    $result = safe_query("SELECT * FROM " . PREFIX . "news WHERE `newsID` = '" . (int)$newsID."'");
     $ds = mysqli_fetch_array($result);
 
     if (
@@ -71,7 +71,6 @@ if ($newsID) {
             )
         )
     ) {
-
         $date = getformatdate($ds[ 'date' ]);
         $time = getformattime($ds[ 'date' ]);
         $rubrikname = getrubricname($ds[ 'rubric' ]);
@@ -84,7 +83,7 @@ if ($newsID) {
             $rubricpic = '<img src="' . $rubricpic . '" alt="">';
         }
 
-        $message_array = [];
+        $message_array = array();
         $query = safe_query(
             "SELECT
                 n.*,
@@ -96,16 +95,16 @@ if ($newsID) {
                 " . PREFIX . "countries c ON
                 c.short = n.language
             WHERE
-                n.newsID='" . (int)$newsID
+                n.newsID='" . (int)$newsID."'"
         );
         while ($qs = mysqli_fetch_array($query)) {
-            $message_array[ ] = [
+            $message_array[ ] = array(
                 'lang' => $qs[ 'language' ],
                 'headline' => $qs[ 'headline' ],
                 'message' => $qs[ 'content' ],
                 'country' => $qs[ 'country' ],
                 'countryShort' => $qs[ 'countryCode' ]
-            ];
+            );
         }
         if (isset($_GET[ 'lang' ])) {
             $showlang = getlanguageid($_GET[ 'lang' ], $message_array);
@@ -139,7 +138,7 @@ if ($newsID) {
         $comments = '';
 
         $poster = '<a href="index.php?site=profile&amp;id=' . $ds[ 'poster' ] . '">
-            <b>' . getnickname($ds[ 'poster' ]) . '</b>
+            <strong>' . getnickname($ds[ 'poster' ]) . '</strong>
         </a>';
         $related = '';
         if ($ds[ 'link1' ] && $ds[ 'url1' ] != "http://" && $ds[ 'window1' ]) {
@@ -174,7 +173,7 @@ if ($newsID) {
             $related = "n/a";
         }
 
-        if (isnewsadmin($userID) or (isnewswriter($userID) and $ds[ 'poster' ] == $userID)) {
+        if (isnewsadmin($userID) || (isnewswriter($userID) && $ds[ 'poster' ] == $userID)) {
             $adminaction =
                 '<input type="button" onclick="window.open(
                         \'news.php?action=edit&amp;newsID=' . $ds[ 'newsID' ] . '\',
@@ -193,7 +192,18 @@ if ($newsID) {
 
         $tags = \webspell\Tags::getTagsLinked('news', $newsID);
 
-        eval ("\$news = \"" . gettemplate("news") . "\";");
+        $data_array = array();
+        $data_array['$newsID'] = $newsID;
+        $data_array['$headline'] = $headline;
+        $data_array['$rubrikname'] = $rubrikname;
+        $data_array['$rubricpic'] = $rubricpic;
+        $data_array['$isintern'] = $isintern;
+        $data_array['$content'] = $content;
+        $data_array['$adminaction'] = $adminaction;
+        $data_array['$poster'] = $poster;
+        $data_array['$date'] = $date;
+        $data_array['$comments'] = $comments;
+        $news = $GLOBALS["_template"]->replaceTemplate("news", $data_array);
         echo $news;
 
         if (isnewsadmin($userID)) {

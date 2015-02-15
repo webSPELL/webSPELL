@@ -1,103 +1,103 @@
 <script>
-	<!--
-	function chkFormular() {
-		if (document.getElementById('title').value === "") {
-			alert("%yht_enter_title%");
-			document.getElementById('title').focus();
+    <!--
+    function chkFormular() {
+        if (document.getElementById('title').value === "") {
+            alert("%yht_enter_title%");
+            document.getElementById('title').focus();
 
-			return false;
-		}
+            return false;
+        }
 
-		if (document.getElementById('opt1').value === "") {
-			alert("%yht_enter_2_options%");
-			document.getElementById('opt1').focus();
+        if (document.getElementById('opt1').value === "") {
+            alert("%yht_enter_2_options%");
+            document.getElementById('opt1').focus();
 
-			return false;
-		}
+            return false;
+        }
 
-		if (document.getElementById('opt2').value === "") {
-			alert("%yht_enter_2_options%");
-			document.getElementById('opt2').focus();
+        if (document.getElementById('opt2').value === "") {
+            alert("%yht_enter_2_options%");
+            document.getElementById('opt2').focus();
 
-			return false;
-		}
-	}
-	-->
+            return false;
+        }
+    }
+    -->
 </script>
 
-<form name="post" method="post" action="polls.php" onsubmit="return chkFormular()"
-		class="form-horizontal">
+<form name="post" method="post" action="polls.php" onsubmit="return chkFormular()" class="form-horizontal">
 
-	<h3>%edit_poll%</h3>
+    <h3>%edit_poll%</h3>
 
-	<div class="form-group">
-		<label for="title">%title%:</label>
-		<input name="title" id="title" type="text" class="form-control" value="$polltitle" autofocus>
-	</div>
+    <div class="form-group">
+        <label for="title">%title%:</label>
+        <input name="title" id="title" type="text" class="form-control" value="$polltitle" autofocus>
+    </div>
 
-	<div class="form-group">
-		<label for="laufzeit_hour">%endingtime%:</label>
+    <div class="form-group">
+        <label for="laufzeit-hour">%endingtime%:</label>
 
-		<div class="row">
-			<div class="col-xs-6">
-				<input type="date" placeholder="yyyy-mm-dd" value="$runtime_date" name="runtime_date" class="form-control">
-			</div>
-			<div class="col-xs-6">
-				<input type="time" placeholder="hh:mm" value="$runtime_time" name="runtime_time" class="form-control">
-			</div>
-		</div>
-	</div>
+        <div class="row">
+            <div class="col-xs-6">
+                <input id="laufzeit-hour" type="date" placeholder="yyyy-mm-dd" value="$runtime_date" name="runtime_date"
+                    class="form-control">
+            </div>
+            <div class="col-xs-6">
+                <input type="time" placeholder="hh:mm" value="$runtime_time" name="runtime_time" class="form-control">
+            </div>
+        </div>
+    </div>
 
-	<div class="form-group">
-		<label for="opt1">%option%: 1</label>
-		<input type="text" name="op1" id="opt1" value="$option1" class="form-control">
+    <div class="form-group">
+        <label for="opt1">%option%: 1</label>
+        <input type="text" name="op1" id="opt1" value="$option1" class="form-control">
 
-		<label for="opt2">%option%: 2</label>
-		<input type="text" name="op2" id="opt2" value="$option2" class="form-control">
+        <label for="opt2">%option%: 2</label>
+        <input type="text" name="op2" id="opt2" value="$option2" class="form-control">
 
-		<label for="opt3">%option%: 3</label>
-		<input type="text" name="op3" id="opt3" value="$option3" class="form-control">
+        <label for="opt3">%option%: 3</label>
+        <input type="text" name="op3" id="opt3" value="$option3" class="form-control">
 
-		<label for="opt4">%option%: 4</label>
-		<input type="text" name="op4" id="opt4" value="$option4" class="form-control">
+        <label for="opt4">%option%: 4</label>
+        <input type="text" name="op4" id="opt4" value="$option4" class="form-control">
 
-		<label for="opt5">%option%: 5</label>
-		<input type="text" name="op5" id="opt5" value="$option5" class="form-control">
+        <label for="opt5">%option%: 5</label>
+        <input type="text" name="op5" id="opt5" value="$option5" class="form-control">
 
-		<label for="opt6">%option%: 6</label>
-		<input type="text" name="op6" id="opt6" value="$option6" class="form-control">
+        <label for="opt6">%option%: 6</label>
+        <input type="text" name="op6" id="opt6" value="$option6" class="form-control">
 
-		<label for="opt7">%option%: 7</label>
-		<input type="text" name="op7" id="opt7" value="$option7" class="form-control">
+        <label for="opt7">%option%: 7</label>
+        <input type="text" name="op7" id="opt7" value="$option7" class="form-control">
 
-		<label for="opt8">%option%: 8</label>
-		<input type="text" name="op8" id="opt8" value="$option8" class="form-control">
+        <label for="opt8">%option%: 8</label>
+        <input type="text" name="op8" id="opt8" value="$option8" class="form-control">
 
-		<label for="opt9">%option%: 9</label>
-		<input type="text" name="op9" id="opt9" value="$option9" class="form-control">
+        <label for="opt9">%option%: 9</label>
+        <input type="text" name="op9" id="opt9" value="$option9" class="form-control">
 
-		<label for="op10">%option%: 10</label>
-		<input type="text" name="op10" id="opt10" value="$option10" class="form-control">
-	</div>
+        <label for="opt10">%option%: 10</label>
+        <input type="text" name="op10" id="opt10" value="$option10" class="form-control">
+    </div>
 
-	<div class="form-group">
-		<select name="comments" class="form-control">
-			$comments
-		</select>
-	</div>
+    <div class="form-group">
+        <select name="comments" class="form-control">
+            $comments
+        </select>
+    </div>
 
-	<div class="form-group">
-		<label for="intern">%intern%?</label>
-		<input type="checkbox" name="intern" value="1" $intern>
-	</div>
-	<div class="control-group">
+    <div class="form-group">
+        <label for="intern" form="intern">%intern%?</label>
+        <input id="intern" type="checkbox" name="intern" value="1" $intern>
+    </div>
+    <div class="control-group">
 
-		<div class="controls">
-			<input type="hidden" name="pollID" value="$ds[pollID]">
-			<input name="saveedit" type="submit" value="%update_poll%" class="btn btn-primary">
-			%reset_votes%? <input class="input" type="checkbox" name="reset" value="1">
-		</div>
+        <div class="controls">
+            <input type="hidden" name="pollID" value="$pollID">
+            <input name="saveedit" type="submit" value="%update_poll%" class="btn btn-primary">
+            %reset_votes%? <input type="checkbox" name="reset" value="1">
+        </div>
 
-	</div>
+    </div>
 
 </form>

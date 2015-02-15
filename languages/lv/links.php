@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -46,6 +46,7 @@ $language_array = Array(
   'linkname'=>'Saites nosaukums',
   'linkrubric'=>'Rindkopas saite',
   'links'=>'Saites',
+  'new_category'=>'jauna kategorija',
   'new_link'=>'Jauna saite',
   'no_access'=>'nav pieejas.',
   'no_categories'=>'kategorijas nav pieejamas',

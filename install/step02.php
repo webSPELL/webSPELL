@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -25,26 +25,23 @@
 ##########################################################################
 */
 
-if ($_POST['agree'] == "1") {
-    function getwspath()
-    {
-        $path = $_SERVER['SERVER_NAME'] . $_SERVER['PHP_SELF'];
-        return str_replace('/install/index.php', '', $path);
-    }
+if($_POST['agree'] == "1") {
+	function getwspath() {
+		$path=$_SERVER['SERVER_NAME'].$_SERVER['PHP_SELF'];
+		return str_replace('/install/index.php','',$path);
+	}
 
-    function getwebserver($path)
-    {
-        $path = str_replace('http://', '', $path);
-        $server = str_replace(strstr($path, '/'), '', $path);
-        if (mb_substr($server, 0, 3) == 'www') $server = mb_substr(strstr($server, '.'), 1);
-        return $server;
+	function getwebserver($path) {
+		$path=str_replace('http://','',$path);
+		$server = str_replace(strstr($path,'/'),'',$path);
+		if(mb_substr($server,0,3) == 'www') $server = mb_substr(strstr($server,'.'),1);
+		return $server;
 
-    }
-
-    //version test
-    $versionerror = false;
-    if (phpversion() == '5.2.6') $versionerror = true;
-    ?>
+	}
+	//version test
+	$versionerror=false;
+	if(phpversion()=='5.2.6') $versionerror=true;
+?>
 
     <tr>
         <td id="step" align="center" colspan="2">
@@ -81,7 +78,9 @@ if ($_POST['agree'] == "1") {
         </td>
     </tr>
 
-<?php } else { ?>
+<?php
+} else {
+?>
 
     <tr>
         <td id="step" align="center" colspan="2">
@@ -105,4 +104,5 @@ if ($_POST['agree'] == "1") {
         </td>
     </tr>
 
-<?php } ?>
+<?php
+}

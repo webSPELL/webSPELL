@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -75,7 +75,7 @@ $language_array = Array(
   'listguide'=>'sisesta \'1\' nummerdatud nimekirja jaoks, \'a\' tähestikulise nimekirja jaoks või \'\' punktidega nimekirja jaoks',
   'listpoint'=>'Sisesta nimekirja punkt. Ära sisesta midagi või kliki \'Loobu\', et lõpetada nimekiri.',
   'addcode'=>'Sisesta määratud asukohas',
-  'readMore'=>'loe rohkem',
+  'read_more'=>'loe rohkem',
   'mc_you_have'=>'Sul on',
   'mc_new_messages'=>'uut sõnumit. Tahad sa neid praegu lugeda?',
   'na'=>'pole saadaval',

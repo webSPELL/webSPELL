@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -31,11 +31,10 @@ include("_functions.php");
 $_language->readModule('forum');
 
 ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
     <meta name="robots" content="noindex, nofollow">
     <title><?php echo PAGETITLE; ?></title>
     <style type="text/css">
@@ -62,7 +61,6 @@ $topic = $_GET[ 'topic' ];
 $thread = safe_query("SELECT * FROM " . PREFIX . "forum_topics WHERE topicID='$topic' ");
 
 if (mysqli_num_rows($thread)) {
-
     $dt = mysqli_fetch_array($thread);
 
     if ($dt[ 'readgrps' ] != "") {
@@ -74,30 +72,25 @@ if (mysqli_num_rows($thread)) {
                 break;
             }
         }
-        if (!$usergrp and !ismoderator($userID, $dt[ 'boardID' ])) {
+        if (!$usergrp && !ismoderator($userID, $dt[ 'boardID' ])) {
             die($_language->module[ 'no_access' ]);
         }
     }
 
     $ergebnis = safe_query(
-        "SELECT
-            *
-        FROM
-            " . PREFIX . "forum_boards
-        WHERE
-            boardID='".(int)$dt[boardID]
+        "SELECT * FROM `" . PREFIX . "forum_boards` WHERE `boardID` = '" . (int)$dt['boardID'] . "'"
     );
     $db = mysqli_fetch_array($ergebnis);
     $boardname = $db[ 'name' ];
 
     echo '<div style="width:640px;">
-  <table width="640" cellpadding="2" cellspacing="0" border="0" bgcolor="#CCCCCC">
-    <tr bgcolor="FFFFFF">
-      <td><b>' . $boardname . '</b> &#8226; <b>' . getinput($dt[ 'topic' ]) . '</b></td>
-    </tr>
-  </table><hr size="1"><br>';
+    <table class="table">
+        <tr>
+            <td><strong>' . $boardname . '</strong> &#8226; <strong>' . getinput($dt[ 'topic' ]) . '</strong></td>
+        </tr>
+    </table><hr size="1"><br>';
 
-    echo '<table width="100%" cellpadding="4" cellspacing="1" border="0">';
+    echo '<table class="table">';
 
     $replys = safe_query("SELECT * FROM " . PREFIX . "forum_posts WHERE topicID='$topic' ORDER BY date");
     while ($dr = mysqli_fetch_array($replys)) {
@@ -124,17 +117,48 @@ if (mysqli_num_rows($thread)) {
             }
         } else {
             $ergebnis =
-                safe_query("SELECT * FROM " . PREFIX . "forum_ranks WHERE $posts > postmin AND $posts < postmax");
+                safe_query(
+                    "SELECT
+                        *
+                    FROM
+                        " . PREFIX . "forum_ranks
+                    WHERE
+                        $posts > postmin
+                    AND
+                        $posts < postmax
+                    AND
+                        special = '0'"
+                );
             $ds = mysqli_fetch_array($ergebnis);
             $usertype = $ds[ 'rank' ];
             $rang = '<img src="images/icons/ranks/' . $ds[ 'pic' ] . '" alt="">';
         }
 
-        echo '<tr bgcolor="FFFFFF">
-        <td valign="top"><i>' . $date . ', ' . $time . ' </i> - <b>' . $username . '</b> - ' .
-            $usertype . ' - ' . $posts . ' ' . $_language->module[ 'posts' ] . '
-        <br>' . $message . ' ><i>' . $signatur . '</i>><br>&nbsp;</td>
-      </tr>';
+        $specialrang = "";
+        $specialtype = "";
+        $getrank = safe_query(
+            "SELECT IF
+                (u.special_rank = 0, 0, CONCAT_WS('__', r.rank, r.pic)) as RANK
+            FROM
+                " . PREFIX . "user u LEFT JOIN " . PREFIX . "forum_ranks r ON u.special_rank = r.rankID
+            WHERE
+                userID = '" . $dr[ 'poster' ] . "'"
+        );
+        $rank_data = mysqli_fetch_assoc($getrank);
+
+        if ($rank_data[ 'RANK' ] != '0') {
+            $tmp_rank = explode("__", $rank_data[ 'RANK' ], 2);
+            $specialrang = " - " . $tmp_rank[0];
+            if (!empty($tmp_rank[1]) && file_exists("images/icons/ranks/" . $tmp_rank[1])) {
+                $specialtype = "<img src='images/icons/ranks/" . $tmp_rank[1] . "' alt = '" . $specialrang . "' />";
+            }
+        }
+
+        echo '<tr>
+        <td valign="top"><i>' . $date . ', ' . $time . ' </i> - <strong>' . $username . '</strong> - ' .
+            $usertype . $rang . $specialrang . $specialtype . ' - ' . $posts . ' ' . $_language->module[ 'posts' ] .
+            '<br>' . $message . ' ><i>' . $signatur . '</i>><br>&nbsp;</td>
+        </tr>';
     }
     echo '</table><br></div></body></html>';
 }

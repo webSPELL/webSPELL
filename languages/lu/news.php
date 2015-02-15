@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -36,7 +36,7 @@ $language_array = Array(
 /* do not edit above this line */
 
   'author'=>'Autor',
-  'bbcode'=>'BBCode ass <b><u>UN</u></b>',
+  'bbcode'=>'BBCode ass <b><span class="underline">UN</span></b>',
   'cancel'=>'Ofbriechen',
   'comm'=>'Komm',
   'comment'=>'<a href="$url">[1] Kommentar</a>, leschten vun $lastposter - $lastdate',
@@ -49,7 +49,7 @@ $language_array = Array(
   'enter_text'=>'Du muss en Text aginn!',
   'go'=>'Lass!',
   'headline'=>'Iwwerschrëft',
-  'html'=>'HTML ass <b><u>UN</u></b>',
+  'html'=>'HTML ass <b><span class="underline">UN</span></b>',
   'intern'=>'intern',
   'languages'=>'Sprochen',
   'link'=>'Link',
@@ -75,7 +75,7 @@ $language_array = Array(
   'select_all'=>'all markéieren',
   'self'=>'nämmlecht Fënster',
   'show_news'=>'Weis Neiegkeeten',
-  'smilies'=>'Smilien sinn <b><u>UN</u></b>',
+  'smilies'=>'Smilien sinn <b><span class="underline">UN</span></b>',
   'sort'=>'Sortéierung:',
   'title_unpublished_news'=>'<h2>ONVERËFFENTLECHT NEIEGKEETEN:</h2>',
   'topnews'=>'Top-Neiegkeet',

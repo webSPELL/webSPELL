@@ -1,36 +1,65 @@
-<form action="index.php?site=links" method="post" enctype="multipart/form-data"
-		onsubmit="return formcheckOnsend('linkname');">
-	<h3>%edit_link%</h3>
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">%edit_link%</h3>
+    </div>
+    <div class="panel-body">
+        <form
+            action="index.php?site=links"
+            method="post"
+            enctype="multipart/form-data"
+            onsubmit="return formcheckOnsend('linkname');"
+            role="form"
+            class="form-horizontal">
 
-	<div class="form-group">
-		<label for="links_cat">%linkrubric%</label>
-		<select name="cat" id="links_cat" class="form-control">$linkcats</select>
+            <!-- Cat -->
+            <div class="form-group">
+                <label for="input-cat" class="col-xs-12 col-md-3 control-label">%linkrubric%:</label>
+                <div class="col-xs-12 col-md-9">
+                    <select name="cat" id="input-cat" class="form-control">$linkcats</select>
+                </div>
+            </div>
 
-	</div>
+            <!-- Name -->
+            <div class="form-group">
+                <label for="input-name" class="col-xs-12 col-md-3 control-label">%linkname%:</label>
+                <div class="col-xs-12 col-md-9">
+                    <input type="text" name="name" class="form-control" id="input-name" value="$name">
+                </div>
+            </div>
 
-	<div class="form-group">
-		<label for="links_cat">%linkname%</label>
-		<input name="name" id="links_linkname" type="text" value="$name" size="40"
-				class="form-control">
-	</div>
+            <!-- Url -->
+            <div class="form-group">
+                <label for="input-url" class="col-xs-12 col-md-3 control-label">%homepage%:</label>
+                <div class="col-xs-12 col-md-9">
+                    <input type="url" name="url" class="form-control" id="input-url" value="$url">
+                </div>
+            </div>
 
-	<div class="form-group">
-		<label for="links_cat">%homepage%</label>
-		<input name="url" type="text" value="$url" id="links_url" size="40" class="form-control">
-	</div>
+            <!-- Banner -->
+            <div class="form-group">
+                <label for="input-banner" class="col-xs-12 col-md-3 control-label">%banner%:</label>
+                 <div class="col-xs-12 col-md-9">
+                    <input type="file" name="banner" id="input-banner">
+                </div>
+            </div>
 
-	<div class="form-group">
-		<label for="links_cat">%banner%</label>
-		<input name="banner" type="file" id="links_banner" class="form-control">
-	</div>
+            <!-- Info -->
+            <div class="form-group">
+                <label for="input-info" class="col-xs-12 col-md-3 control-label">%information%:</label>
+                <div class="col-xs-12 col-md-9">
+                    <input type="text" name="info" class="form-control" id="input-info" value="$info">
+                </div>
+            </div>
 
-	<div class="form-group">
-		<label for="links_cat">%information%</label>
-		<input name="info" type="text" value="$info" size="40" id="links_info" class="form-control">
-	</div>
-
-	<div class="form-group">
-		<input type="hidden" name="linkID" value="$linkID">
-		<input name="saveedit" type="submit" value="%update_link%" class="btn btn-danger">
-	</div>
-</form>
+            <!-- Submit button -->
+            <div class="form-group">
+                <div class="col-xs-12 col-md-9 col-xs-offset-12 col-md-offset-3">
+                    <a href="index.php?site=links&amp;action=show&amp;linkcatID=$linkcatID" class="btn btn-default btn-sm" role="button">%back%</a>
+                    <input type="hidden" name="linkID" value="$linkID">
+                    <button type="submit" name="saveedit" class="btn btn-primary btn-sm">%update_link%</button>
+                </div>
+            </div>
+    
+        </form>
+    </div>
+</div>

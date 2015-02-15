@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -29,7 +29,7 @@
 
 $_language->readModule('whoisonline');
 
-eval ("\$title_whoisonline = \"" . gettemplate("title_whoisonline") . "\";");
+$title_whoisonline = $GLOBALS["_template"]->replaceTemplate("title_whoisonline", array());
 echo $title_whoisonline;
 
 $result_guests = safe_query("SELECT * FROM " . PREFIX . "whoisonline WHERE userID=''");
@@ -38,15 +38,15 @@ $result_user = safe_query("SELECT * FROM " . PREFIX . "whoisonline WHERE ip=''")
 $user = mysqli_num_rows($result_user);
 $useronline = $guests + $user;
 if ($user == 1) {
-    $user_on = '<b>1</b> ' . $_language->module[ 'registered_user' ];
+    $user_on = '<strong>1</strong> ' . $_language->module[ 'registered_user' ];
 } else {
-    $user_on = '<b>' . $user . '</b> ' . $_language->module[ 'registered_users' ];
+    $user_on = '<strong>' . $user . '</strong> ' . $_language->module[ 'registered_users' ];
 }
 
 if ($guests == 1) {
-    $guests_on = '<b>1</b> ' . $_language->module[ 'guest' ];
+    $guests_on = '<strong>1</strong> ' . $_language->module[ 'guest' ];
 } else {
-    $guests_on = '<b>' . $guests . '</b> ' . $_language->module[ 'guests' ];
+    $guests_on = '<strong>' . $guests . '</strong> ' . $_language->module[ 'guests' ];
 }
 
 $online = $_language->module[ 'now_online' ] . ' ' . $user_on . ' ' . $_language->module[ 'and' ] . ' ' . $guests_on;
@@ -66,11 +66,11 @@ if (isset($_GET[ 'type' ])) {
 if ($type == "ASC") {
     $sorter =
         '<a href="index.php?site=whoisonline&amp;sort=' . $sort . '&amp;type=DESC">' . $_language->module[ 'sort' ] . '
-        </a> <img src="images/icons/asc.gif" width="9" height="7" alt="">';
+        </a> <span class="glyphicon glyphicon-chevron-down"></span>';
 } else {
     $sorter =
         '<a href="index.php?site=whoisonline&amp;sort=' . $sort . '&amp;type=ASC">' . $_language->module[ 'sort' ] . '
-        </a> <img src="images/icons/desc.gif" width="9" height="7" alt="">';
+        </a> <span class="glyphicon glyphicon-chevron-down"></span>';
 }
 
 $ergebnis = safe_query(
@@ -78,7 +78,7 @@ $ergebnis = safe_query(
         w.*,
         u.nickname
     FROM
-      " . PREFIX . "whoisonline w
+        " . PREFIX . "whoisonline w
     LEFT JOIN
         " . PREFIX . "user u
     ON
@@ -87,7 +87,11 @@ $ergebnis = safe_query(
         $sort $type"
 );
 
-eval ("\$whoisonline_head = \"" . gettemplate("whoisonline_head") . "\";");
+$data_array = array();
+$data_array['$sorter'] = $sorter;
+$data_array['$online'] = $online;
+$data_array['$type'] = $type;
+$whoisonline_head = $GLOBALS["_template"]->replaceTemplate("whoisonline_head", $data_array);
 echo $whoisonline_head;
 
 $n = 1;
@@ -101,9 +105,10 @@ while ($ds = mysqli_fetch_array($ergebnis)) {
     }
     if ($ds[ 'ip' ] == '') {
         $nickname =
-            '<a href="index.php?site=profile&amp;id=' . $ds[ 'userID' ] . '"><b>' . $ds[ 'nickname' ] . '</b></a>';
+            '<a href="index.php?site=profile&amp;id=' . $ds[ 'userID' ] . '"><strong>' . $ds[ 'nickname' ] .
+            '</strong></a>';
         if (isclanmember($ds[ 'userID' ])) {
-            $member = ' <img src="images/icons/member.gif" width="6" height="11" alt="Clanmember">';
+            $member = ' <img src="images/icons/member.gif" width="7" height="16" alt="Clanmember">';
         } else {
             $member = '';
         }
@@ -111,7 +116,7 @@ while ($ds = mysqli_fetch_array($ergebnis)) {
             $email = '';
         } else {
             $email = '<a href="mailto:' . mail_protect(getemail($ds[ 'userID' ])) . '">
-            <img src="images/icons/email.gif" width="15" height="11" alt="e-mail">
+            <span class="glyphicon glyphicon-envelope" title="email"></span>
         </a>';
         }
 
@@ -158,7 +163,7 @@ while ($ds = mysqli_fetch_array($ergebnis)) {
         $buddy = "";
     }
 
-    $array_watching = [
+    $array_watching = array(
         'about',
         'awards',
         'calendar',
@@ -179,8 +184,8 @@ while ($ds = mysqli_fetch_array($ergebnis)) {
         'squads',
         'whoisonline',
         'newsletter'
-    ];
-    $array_reading = ['articles', 'contact', 'faq', 'guestbook', 'history', 'imprint'];
+    );
+    $array_reading = array('articles', 'contact', 'faq', 'guestbook', 'history', 'imprint');
 
     if (in_array($ds[ 'site' ], $array_watching)) {
         $status = $_language->module[ 'is_watching_the' ] . ' <a href="index.php?site=' . $ds[ 'site' ] . '">' .
@@ -214,12 +219,20 @@ while ($ds = mysqli_fetch_array($ergebnis)) {
             '</a>';
     }
 
-    eval ("\$whoisonline_content = \"" . gettemplate("whoisonline_content") . "\";");
+    $data_array = array();
+    $data_array['$country'] = $country;
+    $data_array['$nickname'] = $nickname;
+    $data_array['$member'] = $member;
+    $data_array['$email'] = $email;
+    $data_array['$pm'] = $pm;
+    $data_array['$buddy'] = $buddy;
+    $data_array['$status'] = $status;
+    $whoisonline_content = $GLOBALS["_template"]->replaceTemplate("whoisonline_content", $data_array);
     echo $whoisonline_content;
     $n++;
 }
 
-eval ("\$whoisonline_foot = \"" . gettemplate("whoisonline_foot") . "\";");
+$whoisonline_foot = $GLOBALS["_template"]->replaceTemplate("whoisonline_foot", array());
 echo $whoisonline_foot;
 
 
@@ -228,11 +241,11 @@ echo $whoisonline_foot;
 if ($type == "ASC") {
     $sorter =
         '<a href="index.php?site=whoisonline&amp;sort=' . $sort . '&amp;type=DESC">' . $_language->module[ 'sort' ] .
-        '</a> <img src="images/icons/asc.gif" width="9" height="7" alt="">';
+        '</a> <span class="glyphicon glyphicon-chevron-down"></span>';
 } else {
     $sorter =
         '<a href="index.php?site=whoisonline&amp;sort=' . $sort . '&amp;type=ASC">' . $_language->module[ 'sort' ] .
-        '</a> <img src="images/icons/desc.gif" width="9" height="7" alt="">';
+        '</a> <span class="glyphicon glyphicon-chevron-up"></span>';
 }
 
 $ergebnis = safe_query(
@@ -249,7 +262,10 @@ $ergebnis = safe_query(
         $sort $type"
 );
 
-eval ("\$whowasonline_head = \"" . gettemplate("whowasonline_head") . "\";");
+$data_array = array();
+$data_array['$sorter'] = $sorter;
+$data_array['$type'] = $type;
+$whowasonline_head = $GLOBALS["_template"]->replaceTemplate("whowasonline_head", $data_array);
 echo $whowasonline_head;
 
 $n = 1;
@@ -263,9 +279,10 @@ while ($ds = mysqli_fetch_array($ergebnis)) {
     }
 
     $date = getformatdatetime($ds[ 'time' ]);
-    $nickname = '<a href="index.php?site=profile&amp;id=' . $ds[ 'userID' ] . '"><b>' . $ds[ 'nickname' ] . '</b></a>';
+    $nickname = '<a href="index.php?site=profile&amp;id=' . $ds[ 'userID' ] . '"><strong>' . $ds[ 'nickname' ] .
+        '</strong></a>';
     if (isclanmember($ds[ 'userID' ])) {
-        $member = ' <img src="images/icons/member.gif" width="6" height="11" alt="Clanmember">';
+        $member = ' <img src="images/icons/member.gif" width="7" height="16" alt="Clanmember">';
     } else {
         $member = '';
     }
@@ -273,7 +290,7 @@ while ($ds = mysqli_fetch_array($ergebnis)) {
         $email = '';
     } else {
         $email = '<a href="mailto:' . mail_protect(getemail($ds[ 'userID' ])) . '">
-            <img src="images/icons/email.gif" width="15" height="11" alt="e-mail">
+            <span class="glyphicon glyphicon-envelope" title="email"></span>
         </a>';
     }
 
@@ -311,7 +328,7 @@ while ($ds = mysqli_fetch_array($ergebnis)) {
         }
     }
 
-    $array_watching = [
+    $array_watching = array(
         'about',
         'awards',
         'calendar',
@@ -332,8 +349,8 @@ while ($ds = mysqli_fetch_array($ergebnis)) {
         'squads',
         'whoisonline',
         'newsletter'
-    ];
-    $array_reading = ['articles', 'contact', 'faq', 'guestbook', 'history', 'imprint'];
+    );
+    $array_reading = array('articles', 'contact', 'faq', 'guestbook', 'history', 'imprint');
 
     if (in_array($ds[ 'site' ], $array_watching)) {
         $status = $_language->module[ 'was_watching_the' ] . ' <a href="index.php?site=' . $ds[ 'site' ] . '">' .
@@ -364,10 +381,19 @@ while ($ds = mysqli_fetch_array($ergebnis)) {
             $_language->module[ 'news' ] . '</a>';
     }
 
-    eval ("\$whowasonline_content = \"" . gettemplate("whowasonline_content") . "\";");
+    $data_array = array();
+    $data_array['$country'] = $country;
+    $data_array['$nickname'] = $nickname;
+    $data_array['$member'] = $member;
+    $data_array['$email'] = $email;
+    $data_array['$pm'] = $pm;
+    $data_array['$buddy'] = $buddy;
+    $data_array['$status'] = $status;
+    $data_array['$date'] = $date;
+    $whowasonline_content = $GLOBALS["_template"]->replaceTemplate("whowasonline_content", $data_array);
     echo $whowasonline_content;
     $n++;
 }
 
-eval ("\$whowasonline_foot = \"" . gettemplate("whowasonline_foot") . "\";");
+$whowasonline_foot = $GLOBALS["_template"]->replaceTemplate("whowasonline_foot", array());
 echo $whowasonline_foot;

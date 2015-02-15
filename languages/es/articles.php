@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -33,7 +33,7 @@ $language_array = Array(
 	'already_rated'=>'<b>Articulo ya puntuado!</b>',
 	'articles'=>'articulos',
 	'author'=>'Autor',
-	'bbcode'=>'&#8226; <a href="javascript:void(0);" onclick="window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> <b><u>ON</u></b>',
+	'bbcode'=>'&#8226; <a href="javascript:void(0);" onclick="window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> <b><span class="underline">ON</span></b>',
 	'cancel'=>'Cancelar',
 	'date'=>'Fecha',
 	'delete'=>'Borrar',
@@ -41,7 +41,7 @@ $language_array = Array(
 	'edit_article'=>'Editar articulo',
 	'enter_title'=>'Introduzca un título!',
 	'enter_text'=>'Introduzca un texto!',
-	'html'=>'&#8226; HTML <b><u>ON</u></b>',
+	'html'=>'&#8226; HTML <b><span class="underline">ON</span></b>',
 	'link'=>'Enlace',
 	'links'=>'Enlaces',
 	'login_for_rate'=>'<b>Debes estar identificado y registrado para puntuar este articulo!</b>',
@@ -53,7 +53,7 @@ $language_array = Array(
 	'options'=>'Opciones',
 	'page'=>'Pagina',
 	'page_of'=>'Pagina $page de $pages',
-	'page_select'=>'Distribuir articulo a la pagina <select name="language_count" onchange="update_textarea(this.options[this.selectedIndex].value)">$selects</select>',
+	'page_select'=>'Distribuir articulo a la pagina <select name="language_count" onchange="updateTextarea(this.options[this.selectedIndex].value)">$selects</select>',
 	'pagecount'=>'Numero de paginas',
 	'perfect'=>'perfecto',
 	'poor'=>'pobre',
@@ -63,7 +63,7 @@ $language_array = Array(
 	'really_delete'=>'Realmente desea eliminar este elemento?',
 	'save_article'=>'Guardar articulo',
 	'self'=>'En la misma ventana',
-	'smilies'=>'&#8226; <a href="javascript:void(0);" onclick="window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Emoticonos</a> <b><u>ON</u></b>',
+	'smilies'=>'&#8226; <a href="javascript:void(0);" onclick="window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Emoticonos</a> <b><span class="underline">ON</span></b>',
 	'sort'=>'Ordenar:',
 	'title'=>'Titulo',
 	'top5_points'=>'TOP 5 ARTICULOS (Puntos)',

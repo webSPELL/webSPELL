@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -57,7 +57,7 @@ function parseWebspellURL($parameters = null)
     $_language = $GLOBALS['_language'];
     $_language->readModule('seo');
 
-    if ($parameters == null) {
+    if ($parameters === null) {
         $parameters = $_GET;
     }
 
@@ -286,9 +286,9 @@ function parseWebspellURL($parameters = null)
                         safe_query(
                             "SELECT
                                 name
-                              FROM
+                            FROM
                                 " . PREFIX . "files_categorys
-                              WHERE
+                            WHERE
                                 filecatID=" . (int)$file['filecatID']
                         )
                     );
@@ -452,7 +452,6 @@ function parseWebspellURL($parameters = null)
                     if ($getgroupname['name'] == "") {
                         $getgroupname['name'] = $_language->module['usergallery'];
                     } else {
-
                     }
                     $picID = mysqli_fetch_array(
                         safe_query(
@@ -468,7 +467,6 @@ function parseWebspellURL($parameters = null)
                         $_language->module['gallery'],
                         'index.php?site=gallery'
                     );
-                    $returned_title[] = array($getgroupname['name'], $url);
                     $returned_title[] = array(
                         $getgalleryname['name'],
                         'index.php?site=gallery&amp;groupID=' . $getgalleryname['galleryID']

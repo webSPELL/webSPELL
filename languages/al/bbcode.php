@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -80,7 +80,7 @@ $language_array = Array(
   'listguide'=>'vendos \'1\' për Listen numerike, \'a\' per listën alfabetike ose \'\' per një listë të pikezuar',
   'listpoint'=>'Vendos nje  Listë-Pikë. Mos vendos asgjë ose kliko \'Anullo\' per të mbaruar listën.',
   'addcode'=>'Vendosni një kod',
-  'readMore'=>'lexo me tepër',
+  'read_more'=>'lexo me tepër',
   'mc_you_have'=>'Ju keni',
   'mc_new_messages'=>'mesazh(e) i ri. Dëshironi t\'i lexoni tani? ',
   'na'=>'e pavlefshme',

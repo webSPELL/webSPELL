@@ -15,10 +15,7 @@
     "Content Management System"
   ],
   "dependencies": {
-    "bootstrap": "~3.2.0",
-    "fontawesome": "~4.2.0"
-  },
-  "devDependencies": {
+    "bootstrap": "~3.3.2",
     "webshim": "~1.15.5"
   }
 }

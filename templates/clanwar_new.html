@@ -1,142 +1,136 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<meta name="description" content="Clanpage using webSPELL 4 CMS">
-	<meta name="author" content="webspell.org">
-	<meta name="keywords" content="webspell, webspell4, clan, cms">
-	<meta name="copyright" content="Copyright 2005-2014 by webspell.org">
-	<meta name="generator" content="webSPELL">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="description" content="Clanpage using webSPELL 4 CMS">
+    <meta name="author" content="webspell.org">
+    <meta name="copyright" content="Copyright 2005-2015 by webspell.org">
+    <meta name="generator" content="webSPELL">
 
-	<!-- Head & Title include -->
-	<title>Clanwars</title>
-	<base href="$rewriteBase">
-	<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc2/css/bootstrap.min.css"
-			rel="stylesheet">
-	<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css"
-			rel="stylesheet">
-	<!-- end Head & Title include -->
+    <!-- Head & Title include -->
+    <title>Clanwars</title>
+    <base href="$rewriteBase">
+    $componentsCss
+    <!-- end Head & Title include -->
 </head>
 <body>
 <script>
-	<!--
-	function chkFormular() {
-		if (!validbbcode(document.getElementById('message').value)) {
+    <!--
+    function chkFormular() {
+        if (!validbbcode(document.getElementById('message').value)) {
 
-			return false;
-		}
-		squad_box = document.getElementById("squad");
-		if (squad_box.options.length) {
-			if (squad_box.options[ squad_box.selectedIndex ].value == "") {
+            return false;
+        }
+        squad_box = document.getElementById("squad");
+        if (squad_box.options.length) {
+            if (squad_box.options[squad_box.selectedIndex].value == "") {
 
-				return false;
-			}
-		}
-		else {
+                return false;
+            }
+        }
+        else {
 
-			return false;
-		}
-	}
-	-->
+            return false;
+        }
+    }
+    -->
 </script>
 <form action="clanwars.php?action=save" method="post" name="post" onsubmit="return chkFormular();">
-	<h1>%new_clanwar%</h1>
-	<table class="table">
-		<tr>
-			<th>%date%:</th>
-			<td><input name="date" type="date" value="$date" placeholder="yyyy-mm-dd" class="form-control"></td>
-			<th>%squad% / %game%:</th>
-			<td><select name="squad" id="squad" class="form-control">$squads</select>
-				<select name="game" class="form-control">$games</select></td>
-		</tr>
-		<tr>
-			<th>%league%:</th>
-			<td><input name="league" type="text" value="$league" class="form-control"></td>
-			<th>%homepage%:</th>
-			<td><input name="leaguehp" type="text" value="$leaguehp" class="form-control"></td>
-		</tr>
-		<tr>
-			<th>%league_match_link%:</th>
-			<td><input name="linkpage" type="text" value="$linkpage" class="form-control"></td>
-			<td colspan="2"></td>
-		</tr>
-		<tr>
-			<th>%opponent%:</th>
-			<td><input name="opponent" type="text" value="$opponent" class="form-control"></td>
-			<th>%clantag%:</th>
-			<td><input name="opptag" type="text" value="$opptag" class="form-control"></td>
-		</tr>
-		<tr>
-			<th>%homepage%</th>
-			<td><input name="opphp" type="text" value="$opphp" class="form-control"></td>
-			<th>%country%:</th>
-			<td><select name="oppcountry" class="form-control">$countries</select></td>
-		</tr>
-		<tr>
-			<th>%server%:</th>
-			<td><input name="server" type="text" value="$server" class="form-control"></td>
-			<th>%hltv_server%:</th>
-			<td><input name="hltv" type="text" class="form-control"></td>
-		</tr>
-		<tr>
-			<th valign="top">%home_team%:</th>
-			<td valign="top">
-				<select name="hometeam[]" multiple="multiple" class="form-control">
-					$hometeam
-				</select>
-			</td>
-			<th valign="top">%opponent_team%:</th>
-			<td valign="top"><input name="oppteam" type="text" class="form-control"></td>
-		</tr>
-		<tr>
-			<td colspan="4">
-				<table width="100%" id="maplist">
-					<tr>
-						<th width="15%">%map% %id%:</th>
-						<th width="30%">%map%:</th>
-						<th width="20%">%score_home%:</th>
-						<th width="20%">%score_opponent%:</th>
-						<th><a href="javascript:;" onclick="addRow();" title="add map">
-							<img src="images/icons/expand.gif"></a>
-							<a href="javascript:;" onclick="removeRow();" title="remove map">
-								<img src="images/icons/collapse.gif"></a></th>
-					</tr>
-				</table>
-			</td>
-		</tr>
-		<tr>
-			<th valign="top">Report:</th>
-			<td colspan="3" valign="top"><textarea name="message" id="message" rows="10"
-					class="form-control"></textarea></td>
-		</tr>
-		<tr>
-			<td colspan="4" align="right">
-				<input name="news" type="checkbox" class="input" value="true"
-						class="form-control">%publish_clanwar_news%?
-				<select name="comments" class="form-control">
-					<option value="0">%disable_comments%</option>
-					<option value="1">%user_comments%</option>
-					<option value="2" selected="selected">%visitor_comments%</option>
-				</select>
+    <h1>%new_clanwar%</h1>
+    <table class="table">
+        <tr>
+            <th>%date%:</th>
+            <td><input name="date" type="date" value="$date" placeholder="yyyy-mm-dd" class="form-control"></td>
+            <th>%squad% / %game%:</th>
+            <td><select name="squad" id="squad" class="form-control">$squads</select>
+                <select name="game" class="form-control">$games</select></td>
+        </tr>
+        <tr>
+            <th>%league%:</th>
+            <td><input name="league" type="text" value="$league" class="form-control"></td>
+            <th>%homepage%:</th>
+            <td><input name="leaguehp" type="text" value="$leaguehp" class="form-control"></td>
+        </tr>
+        <tr>
+            <th>%league_match_link%:</th>
+            <td><input name="linkpage" type="text" value="$linkpage" class="form-control"></td>
+            <td colspan="2"></td>
+        </tr>
+        <tr>
+            <th>%opponent%:</th>
+            <td><input name="opponent" type="text" value="$opponent" class="form-control"></td>
+            <th>%clantag%:</th>
+            <td><input name="opptag" type="text" value="$opptag" class="form-control"></td>
+        </tr>
+        <tr>
+            <th>%homepage%</th>
+            <td><input name="opphp" type="text" value="$opphp" class="form-control"></td>
+            <th>%country%:</th>
+            <td><select name="oppcountry" class="form-control">$countries</select></td>
+        </tr>
+        <tr>
+            <th>%server%:</th>
+            <td><input name="server" type="text" value="$server" class="form-control"></td>
+            <th>%hltv_server%:</th>
+            <td><input name="hltv" type="text" class="form-control"></td>
+        </tr>
+        <tr>
+            <th valign="top">%home_team%:</th>
+            <td valign="top">
+                <select name="hometeam[]" multiple="multiple" class="form-control">
+                    $hometeam
+                </select>
+            </td>
+            <th valign="top">%opponent_team%:</th>
+            <td valign="top"><input name="oppteam" type="text" class="form-control"></td>
+        </tr>
+        <tr>
+            <td colspan="4">
+                <table class="table" id="maplist">
+                    <tr>
+                        <th>%map% %id%:</th>
+                        <th>%map%:</th>
+                        <th>%score_home%:</th>
+                        <th>%score_opponent%:</th>
+                        <th><a href="javascript:" onclick="addRow();" title="add map">
+                            <img src="images/icons/expand.gif" alt="expand"></a>
+                            <a href="javascript:" onclick="removeRow();" title="remove map">
+                                <img src="images/icons/collapse.gif" alt="collapse"></a></th>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <th valign="top">Report:</th>
+            <td colspan="3" valign="top">
+                <textarea name="message" id="message" rows="10" class="form-control"></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="4" class="text-right">
+                <input name="news" type="checkbox" value="true">%publish_clanwar_news%?
+                <select name="comments" class="form-control">
+                    <option value="0">%disable_comments%</option>
+                    <option value="1">%user_comments%</option>
+                    <option value="2" selected="selected">%visitor_comments%</option>
+                </select>
 
-				<input name="post" type="submit" value="%save_clanwar%" class="btn btn-danger">
-			</td>
-		</tr>
-	</table>
+                <input name="post" type="submit" value="%save_clanwar%" class="btn btn-danger">
+            </td>
+        </tr>
+    </table>
 </form>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
-<script src="components/webshim/js-webshim/minified/polyfiller.js"></script>
+$componentsJs
 <script>
-webshim.setOptions('basePath', 'components/webshim/js-webshim/minified/shims/');
-//request the features you need:
-webshim.setOptions("forms-ext",
-{
-	replaceUI: "auto",
-	types: "date time datetime-local"
-});
-webshim.polyfill('forms forms-ext');
+    webshim.setOptions('basePath', 'components/webshim/js-webshim/minified/shims/');
+    //request the features you need:
+    webshim.setOptions("forms-ext",
+            {
+                replaceUI: "auto",
+                types: "date time datetime-local"
+            });
+    webshim.polyfill('forms forms-ext');
 </script>
 <script src="js/bbcode.js"></script>
 </body>

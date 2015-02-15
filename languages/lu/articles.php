@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -39,7 +39,7 @@ $language_array = Array(
   'already_rated'=>'<b>Desen Artikel ass schon bewäert ginn</b>',
   'articles'=>'Artikel',
   'author'=>'Autor',
-  'bbcode'=>'&#8226; <a href="javascript:void(0);" onclick="window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> ass <b><u>UN</u></b>',
+  'bbcode'=>'&#8226; <a href="javascript:void(0);" onclick="window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> ass <b><span class="underline">UN</span></b>',
   'cancel'=>'Ofbriechen',
   'date'=>'Datum',
   'delete'=>'Läschen',
@@ -47,7 +47,7 @@ $language_array = Array(
   'edit_article'=>'Artikel beaarbechten',
   'enter_title'=>'Du muss en Titel aginn!',
   'enter_text'=>'Du muss en Text aginn!',
-  'html'=>'&#8226; HTML ass <b><u>UN</u></b>',
+  'html'=>'&#8226; HTML ass <b><span class="underline">UN</span></b>',
   'link'=>'Link',
   'links'=>'Linken',
   'login_for_rate'=>'<b>Fir zu Bewäerten muss du registréier an ugemellt sinn!</b>',
@@ -59,7 +59,7 @@ $language_array = Array(
   'options'=>'Optiounen',
   'page'=>'Säit',
   'page_of'=>'Säit $page vun $pages',
-  'page_select'=>'Artikel op <select name="language_count" onchange="update_textarea(this.options[this.selectedIndex].value)">$selects</select> Säit(en) opdeelen',
+  'page_select'=>'Artikel op <select name="language_count" onchange="updateTextarea(this.options[this.selectedIndex].value)">$selects</select> Säit(en) opdeelen',
   'pagecount'=>'Saäitenunzuel',
   'perfect'=>'perfekt',
   'poor'=>'mies',
@@ -69,7 +69,7 @@ $language_array = Array(
   'really_delete'=>'Dësen Artikel wierklech läschen?',
   'save_article'=>'Artikel späichern',
   'self'=>'déi selwecht Fënster',
-  'smilies'=>'&#8226; <a href="javascript:void(0);" onclick="window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smilies</a> sinn <b><u><UN</u></b>',
+  'smilies'=>'&#8226; <a href="javascript:void(0);" onclick="window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smilies</a> sinn <strong><span class="underline">UN</span></strong>',
   'sort'=>'Sortéieren:',
   'title'=>'Iwwerschrëft',
   'top5_points'=>'TOP 5 ARTIKEL (Punkten)',

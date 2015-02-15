@@ -11,7 +11,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -60,7 +60,7 @@ class ModRewrite
         fixed in
         https://github.com/php/php-src/commit/3c3ff434329d2f505b00a79bacfdef95ca96f0d2
         */
-
+        // @codingStandardsIgnoreStart
         $fixedHeader = false;
         if (PHP_MAJOR_VERSION == 5) {
             if (PHP_MINOR_VERSION == 4) {
@@ -79,6 +79,7 @@ class ModRewrite
         } else {
             register_shutdown_function(array($this, 'rewriteHeaders'));
         }
+        // @codingStandardsIgnoreEnd
     }
 
     private function buildCache()
@@ -108,6 +109,17 @@ class ModRewrite
             self::$rewriteBase = $path;
         }
         return self::$rewriteBase;
+    }
+
+    public function generateHtAccess($basepath, $rewriteFileName = "_rewrite.php")
+    {
+        return '<IfModule mod_rewrite.c>
+    RewriteEngine on
+    RewriteBase ' . $basepath . '
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)$ ' . $rewriteFileName . '?url=$1 [L,QSA]
+</IfModule>';
     }
 
     public function rewriteHeaders()
@@ -140,7 +152,7 @@ class ModRewrite
         foreach ($this->cache as $ds) {
             $regex = $ds['replace_regex'];
             $replace = $ds['replace_result'];
-            if ($headers == true) {
+            if ($headers === true) {
                 $content = preg_replace(
                     "/()()Location:\s" . $regex . "/i",
                     'Location: ' . $this->getRewriteBase() . $replace,

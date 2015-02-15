@@ -1,8 +1,8 @@
 <ul class="breadcrumb" id="picture">
-	<li><a href="index.php?site=gallery">%gallery%</a></li>
-	<li>$group</li>
-	<li>$gallery</li>
-	<li class="active">$picturename</li>
+    <li><a href="index.php?site=gallery">%gallery%</a></li>
+    <li>$group</li>
+    <li>$gallery</li>
+    <li class="active">$picturename</li>
 </ul>
 
 <div>
@@ -10,26 +10,26 @@
 </div>
 
 <ul class="pager">
-	<li class="previous">
-		$backward
-	</li>
-	<li class="next">
-		$forward
-	</li>
+    <li class="previous">
+        $backward
+    </li>
+    <li class="next">
+        $forward
+    </li>
 </ul>
 
 <p class="text-center">
-	<a href="picture.php?id=$picID">
-		<img src="picture.php?id=$picID" $width alt="">
-	</a>
+    <a href="picture.php?id=$picID">
+        <img src="picture.php?id=$picID" alt="Picture $picID" $width>
+    </a>
 </p>
 
 <div class="well">
-	<p>
-		<small>($views %views%, {$xsize}x{$ysize}px, $filesize kByte)</small>
-	</p>
-	<p>$comment</p>
+    <p>
+        <small>($views %views%, $xsizex$ysizepx, $filesize kByte)</small>
+    </p>
+    <p>$comment</p>
 
-	<p>%rating%: $ratingpic ($votes %votes%)<br><br>$rateform
-		$adminaction</p>
+    <p>%rating%: $ratingpic ($votes %votes%)<br><br>$rateform
+        $adminaction</p>
 </div>

@@ -1,208 +1,214 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<meta name="description" content="Clanpage using webSPELL 4 CMS">
-	<meta name="author" content="webspell.org">
-	<meta name="keywords" content="webspell, webspell4, clan, cms">
-	<meta name="copyright" content="Copyright 2005-2014 by webspell.org">
-	<meta name="generator" content="webSPELL">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="description" content="Clanpage using webSPELL 4 CMS">
+    <meta name="author" content="webspell.org">
+    <meta name="copyright" content="Copyright 2005-2015 by webspell.org">
+    <meta name="generator" content="webSPELL">
 
-	<!-- Head & Title include -->
-	<title>%edit_article%</title>
-	<base href="$rewriteBase">
-	<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
-	<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css"
-			rel="stylesheet">
+    <!-- Head & Title include -->
+    <title>%edit_article%</title>
+    <base href="$rewriteBase">
+    $componentsCss
 
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-	<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    <!-- end Head & Title include -->
+    <script>
+        <!--
 
-	<script src="js/bbcode.js"></script>
-	<!-- end Head & Title include -->
-	<script>
-		<!--
+        var message = new Array();
+        $message_vars
 
-		message = new Array();
+        function chkFormular() {
+            var completeMessage;
+            if (document.getElementById("article-title").value == "") {
+                alert("%enter_title%");
+                document.post.title.focus();
+                return false;
+            }
+            if (message[0] == "" || typeof message[0] == undefined) {
+                alert("%enter_text%");
+                return false;
+            }
+            completeMessage = message.join(" ");
+            if (!validbbcode(completeMessage)) {
+                return false;
+            }
 
-		function chkFormular() {
-			if (document.getElementById('article_title').value == "") {
-				alert("%enter_title%");
-				document.post.title.focus();
-				return false;
-			}
-			if (message[ 0 ] == "" || typeof message[ 0 ] == undefined) {
-				alert("%enter_text%");
-				return false;
-			}
-			message_text = '';
-			x = 0;
-			while (true) {
-				if (message[ x ]) {
-					message_text += message[ x ];
-					x++;
-				} else {
-					break;
-				}
-			}
-			if (!validbbcode(message_text)) {
-				return false;
-			}
+        }
 
-		}
+        function updateTextarea(value) {
 
-		function update_textarea(value) {
-			document.getElementById('articles_textarea').innerHTML = '';
-			for (i = 0; i < value; ++i) {
-				if (message[ i ]) {
-					document.getElementById('articles_textarea')
-							.innerHTML += '%page% ' + (i + 1) + '<br>' +
-					'<textarea name="message[' + i + ']" ' +
-					'rows="20" ' +
-					'cols="130" ' +
-					'onfocus="textarea = "message[' + i + ']";" ' +
-					'onblur="message[' + i + ']=this.value;" ' +
-					'onchange="message[' + i + ']=this.value;" ' +
-					'class="form-control">' + message[ i ] + '</textarea><br><br>';
-				}
-				else {
-					document.getElementById('articles_textarea')
-							.innerHTML += '%page% ' + (i + 1) + '<br>' +
-					'<textarea name="message[' + i + ']" ' +
-					'rows="20" ' +
-					'cols="130" ' +
-					'onfocus="textarea = "message[' + i + ']";" ' +
-					'onblur="message[' + i + ']=this.value;" ' +
-					'onchange="message[' + i + ']=this.value;" ' +
-					'class="form-control"></textarea><br><br>';
-				}
-			}
-		}
+            document.getElementById("articles-textarea").innerHTML = "";
+            for (i = 0; i < value; ++i) {
+                if (message[i]) {
+                    fieldValue = message[i]
+                } else {
+                    message[i] = "";
+                    fieldValue = ""
+                }
 
-		$message_vars
+                document.getElementById("articles-textarea")
+                    .innerHTML += '<div class="form-group">' +
+                '<label for="message[' + i + ']">%page% ' + (i + 1) + '</label>' +
+                '<textarea name="message[' + i + ']" ' +
+                'rows="10" ' +
+                'cols="130" ' +
+                'class="form-control"' +
+                'onfocus="textarea = \'message[' + i + ']\';" ' +
+                'onblur="message[' + i + ']=this.value;" ' +
+                'onchange="message[' + i + ']=this.value;">' +
+                fieldValue +
+                '</textarea></div>';
+            }
+        }
 
-		-->
-	</script>
+        -->
+    </script>
 </head>
 <body>
-<form action="articles.php?action=save" method="post" id="post" name="post"
-		onsubmit="return chkFormular()">
-	<div class="container">
-		<h2>%edit_article%</h2>
+<div class="container">
+    <form action="articles.php?action=save" method="post" id="post" name="post" onsubmit="return chkFormular()">
+        <input name="articlesID" type="hidden" value="$articlesID">
 
-		<div class="panel-group" id="accordion">
-			<div class="panel panel-default">
-				<div class="panel-heading">
-					<h4 class="panel-title">
-						<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion"
-								href="#collapseOne">BBCode and Flags</a>
-					</h4>
-				</div>
-				<div id="collapseOne" class="panel-collapse collapse in">
-					<div class="panel-body">
-						$addbbcode
-						$addflags
-					</div>
-				</div>
-			</div>
+        <div class="pull-right">
 
-			<div class="panel panel-default">
-				<div class="panel-heading">
-					<h4 class="panel-title">
-						<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion"
-								href="#collapseTwo">%link%</a>
-					</h4>
-				</div>
-				<div id="collapseTwo" class="panel-collapse collapse">
-					<div class="panel-body">
-						<div class="form-horizontal">
-							<div class="form-group">
-								<div class="col-xs-1">%link% 1:</div>
-								<div class="col-xs-4"><input name="link1" type="text" value="$link1"
-										class="form-control"></div>
-								<div class="col-xs-4"><input name="url1" type="text" value="$url1"
-										class="form-control">
-								</div>
-								<div class="col-xs-3">$window1</div>
-							</div>
+            <input name="save" class="btn btn-success" type="submit" value="%save_article%">
+            <input name="button" class="btn btn-danger" type="button" onclick="window.close()" value="%cancel%">
 
-							<div class="form-group">
-								<div class="col-xs-1">%link% 2:</div>
-								<div class="col-xs-4"><input name="link2" type="text" value="$link2"
-										class="form-control"></div>
-								<div class="col-xs-4"><input name="url2" type="text" value="$url2"
-										class="form-control">
-								</div>
-								<div class="col-xs-3">$window2</div>
-							</div>
+        </div>
+        <h2>%edit_article%</h2>
 
-							<div class="form-group">
-								<div class="col-xs-1">%link% 3:</div>
-								<div class="col-xs-4"><input name="link3" type="text" value="$link3"
-										class="form-control"></div>
-								<div class="col-xs-4"><input name="url3" type="text" value="$url3"
-										class="form-control">
-								</div>
-								<div class="col-xs-3">$window3</div>
-							</div>
+        <div class="panel-group" id="accordion">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion"
+                           href="#collapse-three">%options%</a>
+                    </h4>
+                </div>
+                <div id="collapse-three" class="panel-collapse collapse in">
+                    <div class="panel-body">
+                        <div class="form-group">
+                            <label class="control-label">%pagecount%</label>
 
-							<div class="form-group">
-								<div class="col-xs-1">%link% 4:</div>
-								<div class="col-xs-4"><input name="link4" type="text" value="$link4"
-										class="form-control"></div>
-								<div class="col-xs-4"><input name="url4" type="text" value="$url4"
-										class="form-control">
-								</div>
-								<div class="col-xs-3">$window4</div>
-							</div>
+                            <p class="help-block">%page_select%</p>
+                        </div>
+                        <div class="form-group">
 
-							<input type="hidden" name="articlesID" value="$articlesID">
-							<input type="hidden" name="userID" value="$userID">
-						</div>
-					</div>
-				</div>
-			</div>
+                            <input name="upload" type="button" onclick="window.open(
+                            'upload.php?articlesID=$articlesID',
+                            'Upload',
+                            'scrollbars=yes,width=800,height=600')"
+                                   value="%upload_images%" class="btn btn-danger">
+                        </div>
+                        <div class="form-group">
+                            <select name="comments">
+                                <option value="0">%no_comments%</option>
+                                <option value="1">%user_comments%</option>
+                                <option value="2" selected="selected">%visitor_comments%</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">%tags%</label>
+                            <input type="text" class="form-control" name="tags" value="$tags">
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-			<div class="panel panel-default">
-				<div class="panel-heading">
-					<h4 class="panel-title">
-						<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion"
-								href="#collapseThree">%options%</a>
-					</h4>
-				</div>
-				<div id="collapseThree" class="panel-collapse collapse">
-					<div class="panel-body">
-						<b>%pagecount%</b>
-						%page_select%
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion"
+                           href="#collapse-two">%links%</a>
+                    </h4>
+                </div>
+                <div id="collapse-two" class="panel-collapse collapse">
+                    <table class="table">
+                        <tr>
+                            <td><label class="control-label">%link% 1:</label></td>
+                            <td><input name="link1" type="text" value="$link1" class="form-control"></td>
+                            <td>
+                                <input name="url1" type="text" value="$url1" placeholder="http://" class="form-control">
+                            </td>
+                            <td><label class="control-label">$window1 %new_window%</label></td>
+                        </tr>
 
-						<input name="upload" type="button" onclick="window.open(
-						'upload.php?articlesID=$articlesID',
-						'Upload',
-						'scrollbars=yes,width=800,height=600')" value="%upload_images%"
-								class="btn btn-danger">
-					</div>
-				</div>
-			</div>
-		</div>
+                        <tr>
+                            <td><label class="control-label">%link% 2:</label></td>
+                            <td><input name="link2" type="text" value="$link2" class="form-control"></td>
+                            <td>
+                                <input name="url2" type="text" value="$url2" placeholder="http://" class="form-control">
+                            </td>
+                            <td><label class="control-label">$window2 %new_window%</label></td>
+                        </tr>
 
-		<div>
-			<div><b>%title%</b></div>
-			<input name="title" type="text" size="80" value="$title" id='article_title'
-					class="form-control">
+                        <tr>
+                            <td><label class="control-label">%link% 3:</label></td>
+                            <td><input name="link3" type="text" value="$link3" class="form-control"></td>
+                            <td>
+                                <input name="url3" type="text" value="$url3" placeholder="http://" class="form-control">
+                            </td>
+                            <td><label class="control-label">$window3 %new_window%</label></td>
+                        </tr>
 
-			<p class="text-right">
-				<small><b>%options%:</b> %html% %bbcode% %smilies%</small>
-			</p>
-			<div id="articles_textarea"></div>
+                        <tr>
+                            <td><label class="control-label">%link% 4:</label></td>
+                            <td><input name="link4" type="text" value="$link4" class="form-control"></td>
+                            <td>
+                                <input name="url4" type="text" value="$url4" placeholder="http://" class="form-control">
+                            </td>
+                            <td><label class="control-label">$window4 %new_window%</label></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
 
-			<script>
-				<!--
-				update_textarea($pages);
-				-->
-			</script>
-		</div>
-	</div>
-</form>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion"
+                           href="#collapse-one">BBCode and Flags</a>
+                    </h4>
+                </div>
+                <div id="collapse-one" class="panel-collapse collapse">
+                    $addbbcode
+                    $addflags
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-10">
+                <div class="form-group">
+                    <label for="article-title">%title%</label>
+                    <input name="title" value="$title" type="text" size="80" id="article-title"
+                           class="form-control">
+                </div>
+                <p class="pull-right">
+                    <small><strong>%options%:</strong> %html% %bbcode% %smilies%</small>
+                </p>
+                <div id="articles-textarea"></div>
+
+                <script>
+                    <!--
+                    updateTextarea($pages);
+                    -->
+                </script>
+
+                <div class="pull-right">
+
+                    <input name="save" class="btn btn-success" type="submit" value="%save_article%">
+                    <input name="button" class="btn btn-danger" type="button" onclick="window.close()" value="%cancel%">
+
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+$componentsJs
+<script src="js/bbcode.js"></script>
 </body>
 </html>

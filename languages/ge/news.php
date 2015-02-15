@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -31,7 +31,7 @@ $language_array = Array(
 /* do not edit above this line */
 
   'author'=>'ავტორი',
-  'bbcode'=>'BBკოდი  <b><u>ჩართულია</u></b>',
+  'bbcode'=>'BBკოდი  <b><span class="underline">ჩართულია</span></b>',
   'cancel'=>'უკან',
   'comm'=>'კომ',
   'comment'=>'<a href="$url">[1] კომენტარი</a>, უახლესი მიერ $lastposter - $lastdate',
@@ -44,7 +44,7 @@ $language_array = Array(
   'enter_text'=>'უნდა შეიყვანოთ ტექსტი!',
   'go'=>'წასვლა!',
   'headline'=>'სათაური!',
-  'html'=>'HTML <b><u>ჩართულია</u></b>',
+  'html'=>'HTML <b><span class="underline">ჩართულია</span></b>',
   'intern'=>'შიდა',
   'languages'=>'ენები',
   'link'=>'ბმული',
@@ -70,7 +70,7 @@ $language_array = Array(
   'select_all'=>'ყველას მონიშვნა',
   'self'=>'ფანჯარა',
   'show_news'=>'სიახლის ჩვენება',
-  'smilies'=>'სმაილები <b><u>ჩართულია</u></b>',
+  'smilies'=>'სმაილები <b><span class="underline">ჩართულია</span></b>',
   'sort'=>'დაფასოება:',
   'title_unpublished_news'=>'<h2>გამოუქვეყნებელი სიახლეები:</h2>',
   'topnews'=>'ცნობილი სიახლეები',

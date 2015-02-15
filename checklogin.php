@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -54,16 +54,13 @@ if (mysqli_num_rows($get) == 0) {
         $error = $_language->module[ 'session_error' ];
     } else {
         if ($anz) {
-
             $check = safe_query("SELECT * FROM " . PREFIX . "user WHERE username='" . $ws_user . "' AND activated='1'");
             if (mysqli_num_rows($check)) {
-
                 $ds = mysqli_fetch_array($check);
 
                 // check password
                 $login = 0;
                 if ($ws_pwd == $ds[ 'password' ]) {
-
                     //session
                     $_SESSION[ 'ws_auth' ] = $ds[ 'userID' ] . ":" . $ws_pwd;
                     $_SESSION[ 'ws_lastlogin' ] = $ds[ 'lastlogin' ];
@@ -187,27 +184,24 @@ if ($login) {
     <!DOCTYPE html>
     <html>
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta charset="utf-8">
         <meta name="description" content="Clanpage using webSPELL 4 CMS">
         <meta name="author" content="webspell.org">
         <meta name="keywords" content="webspell, webspell4, clan, cms">
-        <meta name="copyright" content="Copyright 2005-2014 by webspell.org">
+        <meta name="copyright" content="Copyright 2005-2015 by webspell.org">
         <meta name="generator" content="webSPELL">
         <title><?php echo PAGETITLE; ?></title>
         <link href="_stylesheet.css" rel="stylesheet" type="text/css">
     </head>
-    <body bgcolor="<?php echo PAGEBG; ?>">
-    <table width="100%" border="0" cellpadding="0" cellspacing="0">
+    <body>
+    <table class="table">
         <tr>
-            <td height="500" align="center">
-                <table width="350" border="0" cellpadding="10" cellspacing="0"
-                       style="border:1px solid <?php
-                       echo BORDER;
-                       ?>" bgcolor="<?php
-                    echo BG_1;
-                ?>">
+            <td height="500" class="text-center">
+                <table width="350" border="0" cellpadding="10" cellspacing="0" style="border:1px solid <?php
+                    echo BORDER; ?>" bgcolor="<?php
+                        echo BG_1; ?>">
                     <tr>
-                        <td align="center"><?php echo $error; ?></td>
+                        <td class="text-center"><?php echo $error; ?></td>
                     </tr>
                 </table>
             </td>

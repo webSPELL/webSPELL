@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -49,5 +49,9 @@ $_language->readModule('shoutbox');
 
 $refresh = $sbrefresh * 1000;
 
-eval ("\$shoutbox = \"" . gettemplate("shoutbox") . "\";");
+$data_array = array();
+$data_array['$refresh'] = $refresh;
+$data_array['$name_settings'] = $name_settings;
+$data_array['$captcha_form'] = $captcha_form;
+$shoutbox = $GLOBALS["_template"]->replaceTemplate("shoutbox", $data_array);
 echo $shoutbox;

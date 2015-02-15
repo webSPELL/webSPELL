@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -38,8 +38,7 @@ if (isset($_GET[ 'action' ])) {
     $action = '';
 }
 
-if (isset($id) and getnickname($id) != '') {
-
+if (isset($id) && getnickname($id) != '') {
     if (isbanned($id)) {
         $banned =
             '<br><p class="text-center" style="color:red;font-weight:bold;font-size:11px;letter-spacing:1px;">' .
@@ -77,8 +76,11 @@ if (isset($id) and getnickname($id) != '') {
 
     //profil: buddys
     if ($action == "buddies") {
-
-        eval("\$title_profile = \"" . gettemplate("title_profile") . "\";");
+        $data_array = array();
+        $data_array['$id'] = $id;
+        $data_array['$profilelast'] = $profilelast;
+        $data_array['$banned'] = $banned;
+        $title_profile = $GLOBALS["_template"]->replaceTemplate("title_profile", $data_array);
         echo $title_profile;
 
         $buddylist = "";
@@ -91,7 +93,7 @@ if (isset($id) and getnickname($id) != '') {
                 $country = flags($flag);
                 $nicknamebuddy = getnickname($db[ 'buddy' ]);
                 $email = "<a href='mailto:" . mail_protect(getemail($db[ 'buddy' ])) .
-                    "'><img src='images/icons/email.gif' border='0' alt=''></a>";
+                    "'><span class='glyphicon glyphicon-envelope'></span></a>";
 
                 if (isignored($userID, $db[ 'buddy' ])) {
                     $buddy =
@@ -119,32 +121,37 @@ if (isset($id) and getnickname($id) != '') {
                     $statuspic = '<img src="images/icons/online.gif" alt="' . $_language->module[ 'online' ] . '">';
                 }
 
-                $buddylist .= '<tr bgcolor="' . $bgcolor . '">
+                $buddylist .= '<tr>
             <td>
-            <table>
-              <tr>
-                <td>' . $country . ' <a href="index.php?site=profile&amp;id=' . $db[ 'buddy' ] . '"><b>' .
-                    $nicknamebuddy . '</b></a></td>
-                <td align="right">' . $email . '&nbsp;&nbsp;' . $buddy . '&nbsp;&nbsp;' . $statuspic . '</td>
-              </tr>
-            </table>
-            </td>
-          </tr>';
+            <table class="table">
+                <tr>
+                    <td>' . $country . ' <a href="index.php?site=profile&amp;id=' . $db[ 'buddy' ] . '"><b>' .
+                        $nicknamebuddy . '</b></a></td>
+                    <td class="text-right">' . $email . '&nbsp;&nbsp;' . $buddy . '&nbsp;&nbsp;' . $statuspic . '</td>
+                </tr>
+                </table>
+                </td>
+            </tr>';
 
                 $n++;
             }
         } else {
             $buddylist = '<tr>
-        <td colspan="2" bgcolor="' . BG_1 . '">' . $_language->module[ 'no_buddies' ] . '</td>
-      </tr>';
+            <td colspan="2">' . $_language->module[ 'no_buddies' ] . '</td>
+        </tr>';
         }
 
-        eval("\$profile = \"" . gettemplate("profile_buddys") . "\";");
+        $data_array = array();
+        $data_array['$buddylist'] = $buddylist;
+        $profile = $GLOBALS["_template"]->replaceTemplate("profile_buddys", $data_array);
         echo $profile;
     } elseif ($action == "galleries") {
-
         //galleries
-        eval("\$title_profile = \"" . gettemplate("title_profile") . "\";");
+        $data_array = array();
+        $data_array['$id'] = $id;
+        $data_array['$profilelast'] = $profilelast;
+        $data_array['$banned'] = $banned;
+        $title_profile = $GLOBALS["_template"]->replaceTemplate("title_profile", $data_array);
         echo $title_profile;
 
         $galclass = new \webspell\Gallery();
@@ -156,17 +163,17 @@ if (isset($id) and getnickname($id) != '') {
         $galleries = safe_query("SELECT * FROM " . PREFIX . "gallery WHERE userID='" . $id . "'");
 
         echo '<table class="table">
-      <tr>
-        <td colspan="4">
-            ' . $_language->module[ 'galleries' ] . ' ' . $_language->module[ 'by' ] . ' ' . getnickname($id) . '
-        </td>
-      </tr>
-      <tr>
-        <td></td>
-        <td><b>' . $_language->module[ 'date' ] . '</b></td>
-        <td><b>' . $_language->module[ 'name' ] . '</b></td>
-        <td><b>' . $_language->module[ 'pictures' ] . '</b></td>
-      </tr>';
+        <tr>
+            <td colspan="4">
+                ' . $_language->module[ 'galleries' ] . ' ' . $_language->module[ 'by' ] . ' ' . getnickname($id) . '
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><strong>' . $_language->module[ 'date' ] . '</strong></td>
+            <td><strong>' . $_language->module[ 'name' ] . '</strong></td>
+            <td><strong>' . $_language->module[ 'pictures' ] . '</strong></td>
+        </tr>';
 
         if ($usergalleries) {
             if (mysqli_num_rows($galleries)) {
@@ -196,11 +203,6 @@ if (isset($id) and getnickname($id) != '') {
                                 type='ga'"
                         )
                     );
-
-                    $gallery[ 'date' ] = getformatdate($ds[ 'date' ]);
-                    $gallery[ 'title' ] = cleartext($ds[ 'name' ]);
-                    $gallery[ 'picture' ] = $galclass->randomPic($ds[ 'galleryID' ]);
-                    $gallery[ 'galleryID' ] = $ds[ 'galleryID' ];
                     $gallery[ 'count' ] = mysqli_num_rows(
                         safe_query(
                             "SELECT
@@ -208,32 +210,38 @@ if (isset($id) and getnickname($id) != '') {
                             FROM
                                 `" . PREFIX . "gallery_pictures`
                             WHERE
-                                galleryID='" . (int)$ds[ 'galleryID' ]
+                                galleryID='" . (int)$ds[ 'galleryID' ] ."'"
                         )
                     );
 
-                    eval("\$profile = \"" . gettemplate("profile_galleries") . "\";");
+                    $data_array = array();
+                    $data_array['$date'] = getformatdate($ds[ 'date' ]);
+                    $data_array['$picID'] = $galclass->randomPic($ds[ 'galleryID' ]);
+                    $data_array['$galleryID'] = $ds[ 'galleryID' ];
+                    $data_array['$title'] = cleartext($ds[ 'name' ]);
+                    $data_array['$thumbwidth'] = $thumbwidth;
+                    $data_array['$count'] = $gallery[ 'count' ];
+                    $profile = $GLOBALS["_template"]->replaceTemplate("profile_galleries", $data_array);
                     echo $profile;
 
                     $n++;
                 }
             } else {
-                echo '<tr>
-          <td colspan="4">' . $_language->module[ 'no_galleries' ] . '</td>
-        </tr>';
+                echo '<tr><td colspan="4">' . $_language->module[ 'no_galleries' ] . '</td></tr>';
             }
         } else {
-            echo '<tr>
-        <td colspan="4">' . $_language->module[ 'usergalleries_disabled' ] . '</td>
-      </tr>';
+            echo '<tr><td colspan="4">' . $_language->module[ 'usergalleries_disabled' ] . '</td></tr>';
         }
 
         echo '</table>';
     } elseif ($action == "lastposts") {
-
         //profil: last posts
 
-        eval("\$title_profile = \"" . gettemplate("title_profile") . "\";");
+        $data_array = array();
+        $data_array['$id'] = $id;
+        $data_array['$profilelast'] = $profilelast;
+        $data_array['$banned'] = $banned;
+        $title_profile = $GLOBALS["_template"]->replaceTemplate("title_profile", $data_array);
         echo $title_profile;
 
         $topiclist = "";
@@ -260,32 +268,24 @@ if (isset($id) and getnickname($id) != '') {
                             break;
                         }
                     }
-                    if (!$usergrp and !ismoderator($userID, $db[ 'boardID' ])) {
+                    if (!$usergrp && !ismoderator($userID, $db[ 'boardID' ])) {
                         continue;
                     }
                 }
                 $n % 2 ? $bgcolor = BG_1 : $bgcolor = BG_2;
                 $posttime = getformatdatetime($db[ 'date' ]);
 
-                $topiclist .= '<tr bgcolor="' . $bgcolor . '">
-            <td width="50%">
-            <table width="100%" cellpadding="2" cellspacing="0">
-              <tr>
-                <td colspan="3">
-                    <div style="overflow:hidden;">
-                        <a href="index.php?site=forum_topic&amp;topic=' . $db[ 'topicID' ] . '">' .
-                            $posttime . '<br>
-                            <b>' . clearfromtags($db[ 'topic' ]) . '</b>
-                        </a><br>
-                        <i>' . $db[ 'views' ] . ' ' . $_language->module[ 'views' ] . ' - ' .
-                            $db[ 'replys' ] . ' ' . $_language->module[ 'replys' ] . '
-                        </i>
-                    </div>
-                </td>
-              </tr>
-            </table>
-            </td>
-          </tr>';
+                $topiclist .= '<tr><td>
+                        <div style="overflow:hidden;">
+                            <a href="index.php?site=forum_topic&amp;topic=' . $db[ 'topicID' ] . '">' .
+                                $posttime . '<br>
+                                <strong>' . clearfromtags($db[ 'topic' ]) . '</strong>
+                            </a><br>
+                            <i>' . $db[ 'views' ] . ' ' . $_language->module[ 'views' ] . ' - ' .
+                            $db[ 'replys' ] . ' ' . $_language->module[ 'replys' ] . '</i>
+                        </div>
+                    </td>
+                </tr>';
 
                 if ($profilelast == $n) {
                     break;
@@ -293,9 +293,7 @@ if (isset($id) and getnickname($id) != '') {
                 $n++;
             }
         } else {
-            $topiclist = '<tr>
-        <td colspan="2" bgcolor="' . BG_1 . '">' . $_language->module[ 'no_topics' ] . '</td>
-      </tr>';
+            $topiclist = '<tr><td colspan="2">' . $_language->module[ 'no_topics' ] . '</td></tr>';
         }
 
         $postlist = "";
@@ -328,7 +326,7 @@ if (isset($id) and getnickname($id) != '') {
                             break;
                         }
                     }
-                    if (!$usergrp and !ismoderator($userID, $db[ 'boardID' ])) {
+                    if (!$usergrp && !ismoderator($userID, $db[ 'boardID' ])) {
                         continue;
                     }
                 }
@@ -352,29 +350,17 @@ if (isset($id) and getnickname($id) != '') {
                 } else {
                     $message = $db[ 'message' ];
                 }
-                $postlist .= '<tr bgcolor="' . $bgcolor1 . '">
-            <td>
-            <table width="100%" cellpadding="2" cellspacing="0">
-              <tr>
-                <td colspan="3">
-                    <a href="index.php?site=forum_topic&amp;topic=' . $db[ 'topicID' ] . '">' . $posttime .
-                    ' <br><b>' . $db[ 'topic' ] . '</b>
-                    </a>
-                </td>
-              </tr>
-              <tr><td></td></tr>
-              <tr>
-                <td width="1%">&nbsp;</td>
-                <td bgcolor="' . $bgcolor2 . '">
-                    <div style="width: 250px;overflow:hidden;">' .
-                        clearfromtags($message) .
-                    '</div>
-                </td>
-                <td width="1%">&nbsp;</td>
-              </tr>
-            </table>
-            </td>
-          </tr>';
+
+                $postlist .= '<tr><td>
+                        <div style="overflow:hidden;">
+                            <a href="index.php?site=forum_topic&amp;topic=' . $db[ 'topicID' ] . '">' .
+                                $posttime . '<br>
+                                <strong>' . clearfromtags($db[ 'topic' ]) . '</strong>
+                            </a><br>
+                            <i>' . clearfromtags($message) . '</i>
+                        </div>
+                    </td>
+                </tr>';
 
                 if ($profilelast == $n) {
                     break;
@@ -382,19 +368,19 @@ if (isset($id) and getnickname($id) != '') {
                 $n++;
             }
         } else {
-            $postlist = '<tr>
-        <td colspan="2" bgcolor="' . BG_1 . '">' . $_language->module[ 'no_posts' ] . '</td>
-      </tr>';
+            $postlist = '<tr><td colspan="2">' . $_language->module[ 'no_posts' ] . '</td></tr>';
         }
 
-        eval("\$profile = \"" . gettemplate("profile_lastposts") . "\";");
+        $data_array = array();
+        $data_array['$topiclist'] = $topiclist;
+        $data_array['$postlist'] = $postlist;
+        $profile = $GLOBALS["_template"]->replaceTemplate("profile_lastposts", $data_array);
         echo $profile;
     } elseif ($action == "guestbook") {
         if ($user_guestbook == 1) {
             if (getuserguestbookstatus($id) == 1) {
                 //user guestbook
                 if (isset($_POST[ 'save' ])) {
-
                     $date = time();
                     $ip = $GLOBALS[ 'ip' ];
                     $run = 0;
@@ -421,7 +407,6 @@ if (isset($id) and getnickname($id) != '') {
                     }
 
                     if ($run) {
-
                         safe_query(
                             "INSERT INTO
                                 " . PREFIX . "user_gbook (
@@ -456,7 +441,7 @@ if (isset($id) and getnickname($id) != '') {
                     }
                     redirect('index.php?site=profile&amp;id=' . $id . '&amp;action=guestbook', '', 0);
                 } elseif (isset($_GET[ 'delete' ])) {
-                    if (!isanyadmin($userID) and $id != $userID) {
+                    if (!isanyadmin($userID) && $id != $userID) {
                         die($_language->module[ 'no_access' ]);
                     }
 
@@ -465,7 +450,11 @@ if (isset($id) and getnickname($id) != '') {
                     }
                     redirect('index.php?site=profile&amp;id=' . $id . '&amp;action=guestbook', '', 0);
                 } else {
-                    eval("\$title_profile = \"" . gettemplate("title_profile") . "\";");
+                    $data_array = array();
+                    $data_array['$id'] = $id;
+                    $data_array['$profilelast'] = $profilelast;
+                    $data_array['$banned'] = $banned;
+                    $title_profile = $GLOBALS["_template"]->replaceTemplate("title_profile", $data_array);
                     echo $title_profile;
 
                     $bg1 = BG_1;
@@ -553,11 +542,11 @@ if (isset($id) and getnickname($id) != '') {
                     if ($type == "ASC") {
                         $sorter = '<a href="index.php?site=profile&amp;id=' . $id . '&amp;action=guestbook&amp;page=' .
                             $page . '&amp;type=DESC">' . $_language->module[ 'sort' ] .
-                            ' <i class="icon-sort-down"></i></a>';
+                            ' <span class="glyphicon glyphicon-chevron-down"></span></a>';
                     } else {
                         $sorter = '<a href="index.php?site=profile&amp;id=' . $id . '&amp;action=guestbook&amp;page=' .
                             $page . '&amp;type=ASC">' . $_language->module[ 'sort' ] .
-                            ' <i class="icon-sort-up"></i></a>';
+                            ' <span class="glyphicon glyphicon-chevron-up"></span></a>';
                     }
 
                     echo '<div class="row form-group"><div class="col-xs-6">' . $sorter . ' ' . $page_link . '</div>
@@ -576,8 +565,8 @@ if (isset($id) and getnickname($id) != '') {
 
                         if (validate_email($ds[ 'email' ])) {
                             $email = '<a href="mailto:' . mail_protect($ds[ 'email' ]) . '">
-                                <img src="images/icons/email.gif" alt="' . $_language->module[ 'email' ] . '">
-                            </a>';
+                                <span class="glyphicon glyphicon-envelope" title="' . $_language->module[ 'email' ] .
+                                '"></span></a>';
                         } else {
                             $email = '';
                         }
@@ -610,7 +599,7 @@ if (isset($id) and getnickname($id) != '') {
                         $actions = '';
                         $ip = $_language->module[ 'logged' ];
                         $quote = '<a href="javascript:AddCode(\'[quote=' . $name . ']' . $quotemessage .
-                            '[/quote]\')"> <i class="icon-quote-left"></i></a>';
+                            '[/quote]\')"> <span class="no_replace_glyphicon glyphicon-quote-left"></span></a>';
                         if (isfeedbackadmin($userID) || $id == $userID) {
                             $actions =
                                 '<input class="input" type="checkbox" name="gbID[]" value="' . $ds[ 'gbID' ] . '">';
@@ -619,7 +608,17 @@ if (isset($id) and getnickname($id) != '') {
                             }
                         }
 
-                        eval("\$profile_guestbook = \"" . gettemplate("profile_guestbook") . "\";");
+                        $data_array = array();
+                        $data_array['$actions'] = $actions;
+                        $data_array['$name'] = $name;
+                        $data_array['$date'] = $date;
+                        $data_array['$email'] = $email;
+                        $data_array['$hp'] = $hp;
+                        $data_array['$icq'] = $icq;
+                        $data_array['$ip'] = $ip;
+                        $data_array['$quote'] = $quote;
+                        $data_array['$message'] = $message;
+                        $profile_guestbook = $GLOBALS["_template"]->replaceTemplate("profile_guestbook", $data_array);
                         echo $profile_guestbook;
 
                         if ($type == "DESC") {
@@ -634,15 +633,15 @@ if (isset($id) and getnickname($id) != '') {
                             '<input class="input" type="checkbox" name="ALL" value="ALL"
                                 onclick="SelectAll(this.form);"> ' .
                             $_language->module[ 'select_all' ] . '
-                    <input type="submit" value="' . $_language->module[ 'delete_selected' ] . '"
-                      class="btn btn-danger">';
+                    <input type="submit" value="' .
+                        $_language->module[ 'delete_selected' ] . '" class="btn btn-danger">';
                     } else {
                         $submit = '';
                     }
 
-                    echo '<table><tr>
+                    echo '<table class="table"><tr>
                         <td>' . $page_link . '</td>
-                        <td align="right">' . $submit . '</td>
+                        <td class="text-right">' . $submit . '</td>
                         </tr></table></form>';
 
                     echo '<a name="addcomment"></a>';
@@ -657,19 +656,36 @@ if (isset($id) and getnickname($id) != '') {
                         $icq = geticq($userID);
                         $_language->readModule('bbcode', true);
 
-                        eval ("\$addbbcode = \"" . gettemplate("addbbcode") . "\";");
-                        eval("\$profile_guestbook_loggedin = \"" . gettemplate("profile_guestbook_loggedin") . "\";");
+                        $addbbcode = $GLOBALS["_template"]->replaceTemplate("addbbcode", array());
+                        $data_array = array();
+                        $data_array['$id'] = $id;
+                        $data_array['$addbbcode'] = $addbbcode;
+                        $data_array['$name'] = $name;
+                        $data_array['$email'] = $email;
+                        $data_array['$url'] = $url;
+                        $data_array['$icq'] = $icq;
+                        $profile_guestbook_loggedin = $GLOBALS["_template"]->replaceTemplate(
+                            "profile_guestbook_loggedin",
+                            $data_array
+                        );
                         echo $profile_guestbook_loggedin;
                     } else {
                         $CAPCLASS = new \webspell\Captcha;
-                        $captcha = $CAPCLASS->create_captcha();
+                        $captcha = $CAPCLASS->createCaptcha();
                         $hash = $CAPCLASS->getHash();
-                        $CAPCLASS->clear_oldcaptcha();
+                        $CAPCLASS->clearOldCaptcha();
                         $_language->readModule('bbcode', true);
 
-                        eval ("\$addbbcode = \"" . gettemplate("addbbcode") . "\";");
-                        eval("\$profile_guestbook_notloggedin = \"" . gettemplate("profile_guestbook_notloggedin") .
-                            "\";");
+                        $addbbcode = $GLOBALS["_template"]->replaceTemplate("addbbcode", array());
+                        $data_array = array();
+                        $data_array['$id'] = $id;
+                        $data_array['$addbbcode'] = $addbbcode;
+                        $data_array['$captcha'] = $captcha;
+                        $data_array['$hash'] = $hash;
+                        $profile_guestbook_notloggedin = $GLOBALS["_template"]->replaceTemplate(
+                            "profile_guestbook_notloggedin",
+                            $data_array
+                        );
                         echo $profile_guestbook_notloggedin;
                     }
                 }
@@ -680,10 +696,13 @@ if (isset($id) and getnickname($id) != '') {
             redirect('index.php?site=404', '', 0);
         }
     } else {
-
         //profil: home
 
-        eval ("\$title_profile = \"" . gettemplate("title_profile") . "\";");
+        $data_array = array();
+        $data_array['$id'] = $id;
+        $data_array['$profilelast'] = $profilelast;
+        $data_array['$banned'] = $banned;
+        $title_profile = $GLOBALS["_template"]->replaceTemplate("title_profile", $data_array);
         echo $title_profile;
 
         $date = time();
@@ -755,7 +774,8 @@ if (isset($id) and getnickname($id) != '') {
             $email = $_language->module[ 'n_a' ];
         } else {
             $email = '<a href="mailto:' . mail_protect(cleartext($ds[ 'email' ])) .
-                '"><img src="images/icons/email.gif" alt="' . $_language->module[ 'email' ] . '"></a>';
+                '"><span class="glyphicon glyphicon-envelope" title="' . $_language->module[ 'email' ] . '">
+                </span></a>';
         }
         $sem = '/[0-9]{4,11}/si';
         if (preg_match($sem, $ds[ 'icq' ])) {
@@ -916,12 +936,6 @@ if (isset($id) and getnickname($id) != '') {
         $anzforumtopics = getuserforumtopics($ds[ 'userID' ]);
         $anzforumposts = getuserforumposts($ds[ 'userID' ]);
 
-        $comments = [];
-        $comments[ ] = getusercomments($ds[ 'userID' ], 'ne');
-        $comments[ ] = getusercomments($ds[ 'userID' ], 'cw');
-        $comments[ ] = getusercomments($ds[ 'userID' ], 'ar');
-        $comments[ ] = getusercomments($ds[ 'userID' ], 'de');
-
         $pmgot = 0;
         $pmgot = $ds[ 'pmgot' ];
 
@@ -951,11 +965,33 @@ if (isset($id) and getnickname($id) != '') {
                     WHERE
                         " . $posts . " >= postmin AND
                         " . $posts . " <= postmax AND
-                        postmax > 0"
+                        postmax > 0 AND
+                        special='0'"
                 );
-            $ds = mysqli_fetch_array($ergebnis);
-            $usertype = $ds[ 'rank' ];
-            $rang = '<img src="images/icons/ranks/' . $ds[ 'pic' ] . '" alt="">';
+            $dt = mysqli_fetch_array($ergebnis);
+            $usertype = $dt[ 'rank' ];
+            $rang = '<img src="images/icons/ranks/' . $dt[ 'pic' ] . '" alt="">';
+        }
+
+        $specialrank = '';
+        $getrank = safe_query(
+            "SELECT IF
+                (u.special_rank = 0, 0, CONCAT_WS('__', r.rank, r.pic)) as RANK
+            FROM
+                " . PREFIX . "user u LEFT JOIN " . PREFIX . "forum_ranks r ON u.special_rank = r.rankID
+            WHERE
+                userID='" . $ds[ 'userID' ] . "'"
+        );
+        $rank_data = mysqli_fetch_assoc($getrank);
+
+        if ($rank_data[ 'RANK' ] != '0') {
+            $specialrank  = '<br/>';
+            $tmp_rank = explode("__", $rank_data[ 'RANK' ], 2);
+            $specialrank .= $tmp_rank[0];
+            if (!empty($tmp_rank[1]) && file_exists("images/icons/ranks/" . $tmp_rank[1])) {
+                $specialrank .= '<br/>';
+                $specialrank .= "<img src='images/icons/ranks/" . $tmp_rank[1] . "' alt = '' />";
+            }
         }
 
         $lastvisits = "";
@@ -1014,16 +1050,15 @@ if (isset($id) and getnickname($id) != '') {
                 }
 
                 $lastvisits .= '<tr>
-              <td>' . $country . ' <a href="index.php?site=profile&amp;id=' . $dv[ 'visitor' ] . '"><b>' .
+                <td>' . $country . ' <a href="index.php?site=profile&amp;id=' . $dv[ 'visitor' ] . '"><b>' .
                     $nicknamevisitor . '</b></a></td>
-              <td><small>' . $now . $days . $hours . $minutes . ' ' . $statuspic . '</small></td>
+                <td><small>' . $now . $days . $hours . $minutes . ' ' . $statuspic . '</small></td>
             </tr>';
 
                 $n++;
             }
         } else {
-            $lastvisits = '<tr>
-      <td colspan="2">' . $_language->module[ 'no_visits' ] . '</td>
+            $lastvisits = '<tr><td colspan="2">' . $_language->module[ 'no_visits' ] . '</td>
     </tr>';
         }
 
@@ -1032,7 +1067,55 @@ if (isset($id) and getnickname($id) != '') {
         $bg3 = BG_3;
         $bg4 = BG_4;
 
-        eval("\$profile = \"" . gettemplate("profile") . "\";");
+        $data_array = array();
+        $data_array['$userpic'] = $userpic;
+        $data_array['$nickname'] = $nickname;
+        $data_array['$member'] = $member;
+        $data_array['$firstname'] = $firstname;
+        $data_array['$lastname'] = $lastname;
+        $data_array['$sex'] = $sex;
+        $data_array['$birthday'] = $birthday;
+        $data_array['$profilecountry'] = $profilecountry;
+        $data_array['$town'] = $town;
+        $data_array['$status'] = $status;
+        $data_array['$usertype'] = $usertype;
+        $data_array['$rang'] = $rang;
+        $data_array['$registered'] = $registered;
+        $data_array['$lastlogin'] = $lastlogin;
+        $data_array['$email'] = $email;
+        $data_array['$pm'] = $pm;
+        $data_array['$buddy'] = $buddy;
+        $data_array['$icq'] = $icq;
+        $data_array['$homepage'] = $homepage;
+        $data_array['$about'] = $about;
+        $data_array['$clanname'] = $clanname;
+        $data_array['$clantag'] = $clantag;
+        $data_array['$clanhp'] = $clanhp;
+        $data_array['$clanirc'] = $clanirc;
+        $data_array['$clanhistory'] = $clanhistory;
+        $data_array['$cpu'] = $cpu;
+        $data_array['$mainboard'] = $mainboard;
+        $data_array['$ram'] = $ram;
+        $data_array['$monitor'] = $monitor;
+        $data_array['$graphiccard'] = $graphiccard;
+        $data_array['$soundcard'] = $soundcard;
+        $data_array['$connection'] = $connection;
+        $data_array['$keyboard'] = $keyboard;
+        $data_array['$mouse'] = $mouse;
+        $data_array['$mousepad'] = $mousepad;
+        $data_array['$anzvisits'] = $anzvisits;
+        $data_array['$lastvisits'] = $lastvisits;
+        $data_array['$anzforumtopics'] = $anzforumtopics;
+        $data_array['$anznewsposts'] = $anznewsposts;
+        $data_array['$anzforumposts'] = $anzforumposts;
+        $data_array['$pmgot'] = $pmgot;
+        $data_array['$pmsent'] = $pmsent;
+        $data_array['$news_comments'] = getusercomments($ds[ 'userID' ], 'ne');
+        $data_array['$clanwar_comments'] = getusercomments($ds[ 'userID' ], 'cw');
+        $data_array['$articles_comments'] = getusercomments($ds[ 'userID' ], 'ar');
+        $data_array['$demo_comments'] = getusercomments($ds[ 'userID' ], 'de');
+        $data_array['$specialrank'] = $specialrank;
+        $profile = $GLOBALS["_template"]->replaceTemplate("profile", $data_array);
         echo $profile;
     }
 } else {

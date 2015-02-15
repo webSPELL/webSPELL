@@ -1,64 +1,61 @@
 <script>
-	<!--
-	var post_submit = false;
-	function chkFormular() {
-		if (document.getElementById('message').value == "") {
-			alert("%enter_text%");
-			document.getElementById('message').focus();
+    <!--
+    var post_submit = false;
+    function chkFormular() {
+        if (document.getElementById('message').value == "") {
+            alert("%enter_text%");
+            document.getElementById('message').focus();
 
-			return false;
-		}
+            return false;
+        }
 
-		if (!validbbcode(document.getElementById('message').value)) {
+        if (!validbbcode(document.getElementById('message').value)) {
 
-			return false;
-		}
+            return false;
+        }
 
-		if (post_submit) {
+        if (post_submit) {
 
-			return false;
-		}
+            return false;
+        }
 
-		post_submit = true;
-	}
+        post_submit = true;
+    }
 
-	function ChangeFormAction() {
-		if (document.getElementById('preview').checked) {
-			document.post.action = "index.php?site=forum_topic";
-		} else {
-			document.post.action = "forum_topic.php";
-		}
+    function ChangeFormAction() {
+        if (document.getElementById('preview').checked) {
+            document.post.action = "index.php?site=forum_topic";
+        } else {
+            document.post.action = "forum_topic.php";
+        }
 
-	}
-	-->
+    }
+    -->
 </script>
 
 <form action="forum_topic.php" method="post" id="post" name="post" onsubmit="return chkFormular()">
-	<h3>%new_reply%</h3>
+    <h3>%new_reply%</h3>
 
-	<div class="form-group">
-		$addbbcode
-	</div>
+    <div class="form-group">
+        $addbbcode
+    </div>
 
-	<div class="form-group">
-		<textarea name="message" id="message" rows="10" class="form-control"
-				autofocus>$message</textarea>
-		<small><b>%options%:</b> %bbcode_on% | %smilies_on%</small>
-		<div class="pull-right"><input class="input" type="checkbox" name="notify" value="1"
-			$notify> %notify_reply%
-		</div>
-	</div>
+    <div class="form-group">
+        <textarea name="message" id="message" rows="10" class="form-control" autofocus>$message</textarea>
+        <small><strong>%options%:</strong> %bbcode_on% | %smilies_on%</small>
+        <div class="pull-right">
+            <input type="checkbox" name="notify" value="1" $notify> %notify_reply%
+        </div>
+    </div>
 
-	<div class="form-group text-right">
-		<input class="input" type="checkbox" name="preview" id="preview" value="1"
-				onclick="ChangeFormAction()">
-		%preview_post% $chk_sticky
-		<input type="hidden" name="userID" value="$userID">
-		<input type="hidden" name="board" value="$board">
-		<input type="hidden" name="topic" value="$topic">
-		<input type="hidden" name="page" value="$page">
-		<input type="hidden" name="addreply" value="true">
-		<input name="newreply" id="add_post_submit" type="submit" value="%post_new_reply%"
-				class="btn btn-primary">
-	</div>
+    <div class="form-group text-right">
+        <input type="checkbox" name="preview" id="preview" value="1"
+            onclick="ChangeFormAction()">%preview_post% $chk_sticky
+        <input type="hidden" name="userID" value="$userID">
+        <input type="hidden" name="board" value="$board">
+        <input type="hidden" name="topic" value="$topic">
+        <input type="hidden" name="page" value="$page">
+        <input type="hidden" name="addreply" value="true">
+        <input name="newreply" type="submit" value="%post_new_reply%" class="btn btn-primary">
+    </div>
 </form>

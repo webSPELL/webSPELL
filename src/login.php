@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -37,7 +37,7 @@ if (isset($_SESSION['ws_auth'])) {
         $ws_user = $authent[0];
         $ws_pwd = $authent[1];
 
-        if (isset($ws_user) and isset($ws_pwd)) {
+        if (isset($ws_user) && isset($ws_pwd)) {
             $check = safe_query(
                 "SELECT
                     userID, language

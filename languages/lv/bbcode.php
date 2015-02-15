@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -75,7 +75,7 @@ $language_array = Array(
   'listguide'=>'ievadiet \'1\' priekš numurēta saraksta, \'a\' priekš alfabētiska saraksta vai \'\' priekš punktēta saraksta',
   'listpoint'=>'Ievadiet sarakstu-punktu. Ievadiet neko vai nospiediet \'Atcelt", lai pabeigtu sarakstu.',
   'addcode'=>'Ievadiet pozīciju',
-  'readMore'=>'izlasīt vairāk',
+  'read_more'=>'izlasīt vairāk',
   'mc_you_have'=>'Jums ir',
   'mc_new_messages'=>'Jauna(s) ziņa(s). Vēlaties izlasīt tagad?',
   'na'=>'nav pieejams',

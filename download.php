@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -65,7 +65,7 @@ systeminc('func/useraccess');
 if (isset($fileID)) {
     $ergebnis = safe_query("SELECT * FROM " . PREFIX . "files WHERE fileID='$fileID' ");
     $dd = mysqli_fetch_array($ergebnis);
-
+    $allowed = 0;
     switch ($dd[ 'accesslevel' ]) {
         case 0:
             $allowed = 1;
@@ -85,7 +85,6 @@ if (isset($fileID)) {
     }
 
     if ($allowed) {
-
         safe_query("UPDATE " . PREFIX . "files SET downloads=downloads+1 WHERE fileID='$fileID' ");
 
         if (stristr($dd[ 'file' ], 'http://') || stristr($dd[ 'file' ], 'ftp://')) {
@@ -97,7 +96,7 @@ if (isset($fileID)) {
 } elseif (isset($demoID)) {
     $ergebnis = safe_query("SELECT * FROM " . PREFIX . "demos WHERE demoID='" . $demoID . "'");
     $dd = mysqli_fetch_array($ergebnis);
-
+    $allowed = 0;
     switch ($dd[ 'accesslevel' ]) {
         case 0:
             $allowed = 1;
@@ -117,7 +116,6 @@ if (isset($fileID)) {
     }
 
     if ($allowed) {
-
         safe_query("UPDATE " . PREFIX . "demos SET downloads=downloads+1 WHERE demoID='" . $demoID . "'");
 
         if (stristr($dd[ 'file' ], 'http://')) {

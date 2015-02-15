@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -74,7 +74,7 @@ $language_array = Array(
   'listguide'=>'Унесите \'1\' за нумерисану листу, \'a\' за листу словима ор \'\' за ненумерисану листу',
   'listpoint'=>'Унесите текст који ће одговарати овој тачки у листи. Немој уписати ништа или кликни \'Одустани\' да би завршили листу.',
   'addcode'=>'Унеси на позицију',
-  'readMore'=>'Опширније',
+  'read_more'=>'Опширније',
   'mc_you_have'=>'Број нових порука',
   'mc_new_messages'=>'Желите ли их прочитати сада?',
   'na'=>'Није доступно',

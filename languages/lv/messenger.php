@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -32,7 +32,7 @@ $language_array = Array(
 
   'add_buddylist'=>'Pievienot draugu sarakstam',
   'adminoptions'=>'Administratora izvēlne:',
-  'bbcode'=>'BBKods <b><u>Ieslēgts</u></b>',
+  'bbcode'=>'BBKods <b><span class="underline">Ieslēgts</span></b>',
   'by'=>'no',
   'date'=>'Datums:',
   'delete'=>'Izdzēst',
@@ -42,7 +42,7 @@ $language_array = Array(
   'execute'=>'Izpildīt',
   'formation'=>'Noformēšana',
   'from'=>'no:',
-  'html'=>'HTML <b><u>Izslēgts</u></b>',
+  'html'=>'HTML <b><span class="underline">Izslēgts</span></b>',
   'ignore'=>'Ignorēt lietotāju',
   'incoming'=>'Ienākošie',
   'mark_not_viewed'=>'Atzīmēt kā neskatītu',
@@ -69,7 +69,7 @@ $language_array = Array(
   'sendeachmember'=>'Nosūtīt katram klana biedram',
   'sendeachuser'=>'Nosūtīt katram reģistrētam lietotājam',
   'show'=>'Parādīt',
-  'smilies'=>'Sejiņas <b><u>Ieslēgt</u></b>',
+  'smilies'=>'Sejiņas <b><span class="underline">Ieslēgt</span></b>',
   'sort'=>'Kārtot:',
   'title'=>'Virsraksts',
   'your_message'=>'Jūsu ziņa:',

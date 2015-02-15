@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -40,14 +40,13 @@ $ergebnis = safe_query(
 );
 $anz = mysqli_num_rows($ergebnis);
 if ($anz) {
-
     $dn = mysqli_fetch_array($ergebnis);
 
-    $message_array = [];
+    $message_array = array();
     $query = safe_query("SELECT * FROM " . PREFIX . "news_contents WHERE newsID='" . $dn[ 'newsID' ] . "'");
     while ($qs = mysqli_fetch_array($query)) {
         $message_array[ ] =
-            ['lang' => $qs[ 'language' ], 'headline' => $qs[ 'headline' ], 'message' => $qs[ 'content' ]];
+            array('lang' => $qs[ 'language' ], 'headline' => $qs[ 'headline' ], 'message' => $qs[ 'content' ]);
     }
     $showlang = select_language($message_array);
 
@@ -60,7 +59,11 @@ if ($anz) {
     }
     $content = nl2br(strip_tags($content));
 
-    eval ("\$sc_topnews = \"" . gettemplate("sc_topnews") . "\";");
+    $data_array = array();
+    $data_array['$topnewsID'] = $topnewsID;
+    $data_array['$headline'] = $headline;
+    $data_array['$content'] = $content;
+    $sc_topnews = $GLOBALS["_template"]->replaceTemplate("sc_topnews", $data_array);
     echo $sc_topnews;
 } else {
     echo $_language->module[ 'no_topnews' ];

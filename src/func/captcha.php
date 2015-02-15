@@ -11,7 +11,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -60,167 +60,155 @@ class Captcha
         $ds = mysqli_fetch_assoc(
             safe_query(
                 "SELECT
-                    captcha_math,
-                    captcha_bgcol,
-                    captcha_fontcol,
-                    captcha_type,
-                    captcha_noise,
-                    captcha_linenoise
+                captcha_math,
+                captcha_bgcol,
+                captcha_fontcol,
+                captcha_type,
+                captcha_noise,
+                captcha_linenoise
                 FROM
-                    " . PREFIX . "settings"
+                " . PREFIX . "settings"
             )
         );
-        if (mb_strlen($ds['captcha_bgcol']) == 7) {
-            $this->bgcol = $this->hex2rgb($ds['captcha_bgcol']);
+        if (mb_strlen($ds[ 'captcha_bgcol' ]) == 7) {
+            $this->bgcol = $this->hex2rgb($ds[ 'captcha_bgcol' ]);
         }
 
-        if (mb_strlen($ds['captcha_fontcol']) == 7) {
-            $this->fontcol = $this->hex2rgb($ds['captcha_fontcol']);
+        if (mb_strlen($ds[ 'captcha_fontcol' ]) == 7) {
+            $this->fontcol = $this->hex2rgb($ds[ 'captcha_fontcol' ]);
         }
 
-        if ($ds['captcha_math'] == 1) {
+        if ($ds[ 'captcha_math' ] == 1) {
             $this->math = 1;
-        } elseif ($ds['captcha_math'] == 2) {
+        } elseif ($ds[ 'captcha_math' ] == 2) {
             $this->math = rand(0, 1);
         } else {
             $this->math = 0;
         }
 
-        if ($ds['captcha_type'] == 1) {
+        if ($ds[ 'captcha_type' ] == 1) {
             $this->type = 'g';
-        } elseif (function_exists('imagecreatetruecolor') && ($ds['captcha_type'] == 2)) {
+        } elseif (function_exists('imagecreatetruecolor') && ($ds[ 'captcha_type' ] == 2)) {
             $this->type = 'g';
         } else {
             $this->type = 't';
         }
 
-        $this->noise = $ds['captcha_noise'];
-        $this->linenoise = $ds['captcha_linenoise'];
+        $this->noise = $ds[ 'captcha_noise' ];
+        $this->linenoise = $ds[ 'captcha_linenoise' ];
 
         $this->clearOldCaptcha();
+    }
+
+    private function generateCaptchaText()
+    {
+        $captcha_shown = "";
+        $catpcha_result = "";
+        if ($this->math == 1) {
+            $this->length = 6;
+            $first = rand(1, $this->math_max);
+            $catpcha_result = $first;
+            while (mb_strlen($first) < mb_strlen($this->math_max)) {
+                $first = ' ' . $first;
+            }
+            $captcha_shown = (string)$first;
+            if (rand(0, 1)) {
+                $captcha_shown .= "+";
+                $next = rand(1, $this->math_max);
+                $catpcha_result += $next;
+            } else {
+                $captcha_shown .= "-";
+                $next = rand(1, $first - 1);
+                $catpcha_result -= $next;
+            }
+            while (mb_strlen($next) < mb_strlen($this->math_max)) {
+                $next = ' ' . $next;
+            }
+            $captcha_shown .= $next;
+            $captcha_shown .= "=";
+        } else {
+            for ($i = 0; $i < $this->length; $i++) {
+                $int = rand(0, 9);
+                $captcha_shown .= $int;
+            }
+            $catpcha_result = $captcha_shown;
+        }
+        return array('text' => $captcha_shown, 'result' => $catpcha_result);
+    }
+
+    private function createCatpchaImage($text)
+    {
+        global $_language;
+        $_language->readModule('captcha', true);
+        global $new_chmod;
+        $imgziel = imagecreatetruecolor(($this->length * 15) + 10, 25);
+        $bgcolor = imagecolorallocate($imgziel, $this->bgcol[ 'r' ], $this->bgcol[ 'g' ], $this->bgcol[ 'b' ]);
+        $fontcolor = imagecolorallocate($imgziel, $this->fontcol[ 'r' ], $this->fontcol[ 'g' ], $this->fontcol[ 'b' ]);
+        $xziel = imagesx($imgziel); // get image width
+        $yziel = imagesy($imgziel); // get image height
+        imagefilledrectangle($imgziel, 0, 0, $xziel, $yziel, $bgcolor);
+
+        // add line and point noise
+        for ($i = 0; $i < $this->linenoise; $i++) {
+            $color = imagecolorallocate($imgziel, rand(0, 255), rand(0, 255), rand(0, 255));
+            imageline($imgziel, rand(0, $xziel), rand(0, $yziel), rand(0, $xziel), rand(0, $yziel), $color);
+        }
+
+        for ($i = 0; $i < $this->noise; $i++) {
+            imagesetpixel($imgziel, rand(0, $xziel), rand(0, $yziel), $fontcolor);
+        }
+
+        $lenght = mb_strlen($text);
+        for ($i = 0; $i < $lenght; $i++) {
+            $char = mb_substr($text, $i, 1);
+            if ($char == "-" || $char == "+" || $char == "=") {
+                imagesetthickness($imgziel, 2);
+                if ($char == "-") {
+                    imageline($imgziel, $i * 15, 13, $i * 15 + 8, 13, $fontcolor);
+                }
+                if ($char == "+") {
+                    imageline($imgziel, $i * 15, 13, $i * 15 + 9, 13, $fontcolor);
+                    imageline($imgziel, ($i * 15) + 5, 8, ($i * 15) + 5, 18, $fontcolor);
+                }
+                if ($char == "=") {
+                    imageline($imgziel, $i * 15, 11, $i * 15 + 9, 11, $fontcolor);
+                    imageline($imgziel, $i * 15, 15, $i * 15 + 9, 15, $fontcolor);
+                }
+            } else {
+                $font = rand(2, 5);
+                imagestring($imgziel, $font, $i * 15 + 5, 5, $char, $fontcolor);
+            }
+        }
+        imagejpeg($imgziel, 'tmp/' . $this->hash . '.jpg');
+        @chmod('tmp/' . $this->hash . '.jpg', $new_chmod);
+        return '<img src="tmp/' . $this->hash . '.jpg" alt="' . $_language->module[ 'security_code' ] . '" />';
     }
 
     /* create captcha image/string and hash */
     public function createCaptcha()
     {
-        global $_language;
-        $_language->readModule('captcha', true);
-        global $new_chmod;
         $this->hash = md5(time() . rand(0, 10000));
         $captchastring = '';
         $captcha = '';
 
+        $captcha = $this->generateCaptchaText();
+        $captcha_result = $captcha[ 'result' ];
+        $captcha_text = $captcha[ 'text' ];
+
         if ($this->type == 'g') {
-
-            // initial captcha image
-            if ($this->math) {
-                $this->length = 6;
-            }
-            $imgziel = imagecreatetruecolor(($this->length * 15) + 10, 25);
-            $bgcolor = ImageColorAllocate($imgziel, $this->bgcol['r'], $this->bgcol['g'], $this->bgcol['b']);
-            $fontcolor = imagecolorallocate($imgziel, $this->fontcol['r'], $this->fontcol['g'], $this->fontcol['b']);
-            $xziel = imagesx($imgziel); // get image width
-            $yziel = imagesy($imgziel); // get image height
-            ImageFilledRectangle($imgziel, 0, 0, $xziel, $yziel, $bgcolor);
-
-            // add line and point noise
-            for ($i = 0; $i < $this->linenoise; $i++) {
-                imageline(
-                    $imgziel,
-                    rand(0, $xziel),
-                    rand(0, $yziel),
-                    rand(0, $xziel),
-                    rand(0, $yziel),
-                    ImageColorAllocate($imgziel, rand(0, 255), rand(0, 255), rand(0, 255))
-                );
-            }
-
-            for ($i = 0; $i < $this->noise; $i++) {
-                imagesetpixel($imgziel, rand(0, $xziel), rand(0, $yziel), $fontcolor);
-            }
-
-            /* create captcha string */
-
-            // math captcha
-            if ($this->math == 1) {
-                $first = rand(1, $this->math_max);
-                $captchastring = $first;
-                while (mb_strlen($first) < mb_strlen($this->math_max)) {
-                    $first = ' ' . $first;
-                }
-                $captchastring_show = (string)$first;
-                if (rand(0, 1)) {
-                    $captchastring_show .= "+";
-                    $next = rand(1, $this->math_max);
-                    $captchastring += $next;
-                    while (mb_strlen($next) < mb_strlen($this->math_max)) {
-                        $next = ' ' . $next;
-                    }
-                    $captchastring_show .= $next;
-                } else {
-                    $captchastring_show .= "-";
-                    $next = rand(1, $first - 1);
-                    $captchastring -= $next;
-                    while (mb_strlen($next) < mb_strlen($this->math_max)) {
-                        $next = ' ' . $next;
-                    }
-                    $captchastring_show .= $next;
-                }
-                $captchastring_show .= "=";
-                $lenght = mb_strlen($captchastring_show);
-                for ($i = 0; $i < $lenght; $i++) {
-                    $char = mb_substr($captchastring_show, $i, 1);
-                    if ($char == "-" || $char == "+" || $char == "=") {
-                        imagesetthickness($imgziel, 2);
-                        if ($char == "-") {
-                            imageline($imgziel, $i * 15, 13, $i * 15 + 8, 13, $fontcolor);
-                        }
-                        if ($char == "+") {
-                            imageline($imgziel, $i * 15, 13, $i * 15 + 9, 13, $fontcolor);
-                            imageline($imgziel, ($i * 15) + 5, 8, ($i * 15) + 5, 18, $fontcolor);
-                        }
-                        if ($char == "=") {
-                            imageline($imgziel, $i * 15, 11, $i * 15 + 9, 11, $fontcolor);
-                            imageline($imgziel, $i * 15, 15, $i * 15 + 9, 15, $fontcolor);
-                        }
-                    } else {
-                        $font = rand(2, 5);
-                        imagestring($imgziel, $font, $i * 15 + 5, 5, $char, $fontcolor);
-                    }
-                }
-            } else {
-                // numeric captcha
-                for ($i = 0; $i < $this->length; $i++) {
-                    $int = rand(0, 9);
-                    $captchastring .= $int;
-                    imagestring($imgziel, rand(2, 5), $i * 15 + 5, 5, $int, $fontcolor);
-                }
-            }
-
-            imageJPEG($imgziel, 'tmp/' . $this->hash . '.jpg');
-            @chmod('tmp/' . $this->hash . '.jpg', $new_chmod);
-            $captcha = '<img src="tmp/' . $this->hash . '.jpg" alt="' . $_language->module['security_code'] . '" />';
-
-        } elseif ($this->type == 't') {
-            for ($i = 0; $i < $this->length; $i++) {
-                $captcha .= rand(0, 9);
-            }
-            $captchastring = $captcha;
+            $captcha_text = $this->createCatpchaImage($captcha_text);
         }
+
         safe_query(
-            "INSERT INTO
-                `" . PREFIX . "captcha` (
-                    `hash`,
-                    `captcha`,
-                    `deltime`
-                )
-            VALUES (
-                '" . $this->hash . "',
-                '" . $captchastring . "',
-                '" . (time() + ($this->valide_time * 60)) . "'
+            "INSERT INTO `" . PREFIX . "captcha` (
+            `hash`,`captcha`,`deltime`
+            )VALUES (
+            '" . $this->hash . "',
+            '" . $captcha_result . "',
+            '" . (time() + ($this->valide_time * 60)) . "'
             )"
         );
-        return $captcha;
+        return $captcha_text;
     }
 
     /* create transaction hash for formulars */
@@ -229,20 +217,15 @@ class Captcha
 
         $this->hash = md5(time() . rand(0, 10000));
         safe_query(
-            "INSERT INTO
-                `" . PREFIX . "captcha`(
-                    `hash`,
-                    `captcha`,
-                    `deltime`
-                )
-            VALUES (
-                '" . $this->hash . "',
-                '0',
-                '" . (time() + ($this->valide_time * 60)) . "'
+            "INSERT INTO `" . PREFIX . "captcha`(
+            `hash`,`captcha`,`deltime`
+            )VALUES (
+            '" . $this->hash . "',
+            '0',
+            '" . (time() + ($this->valide_time * 60)) . "'
             )"
         );
         return true;
-
     }
 
     /* print created hash */
@@ -250,7 +233,6 @@ class Captcha
     {
 
         return $this->hash;
-
     }
 
     /* check if input fits captcha */
@@ -260,10 +242,8 @@ class Captcha
         if (
             mysqli_num_rows(
                 safe_query(
-                    "SELECT
-                        `hash`
-                    FROM
-                        `" . PREFIX . "captcha`
+                    "SELECT `hash`
+                    FROM `" . PREFIX . "captcha`
                     WHERE
                         `captcha` = '" . $input . "' AND
                         `hash` = '" . $hash . "'"
@@ -271,7 +251,10 @@ class Captcha
             )
         ) {
             safe_query(
-                "DELETE FROM `" . PREFIX . "captcha` WHERE `captcha` = '" . $input . "' AND `hash` = '" . $hash . "'"
+                "DELETE FROM `" . PREFIX . "captcha`
+                WHERE
+                    `captcha` = '" . $input . "' AND
+                    `hash` = '" . $hash . "'"
             );
             $file = 'tmp/' . $hash . '.jpg';
             if (file_exists($file)) {
@@ -281,7 +264,6 @@ class Captcha
         } else {
             return false;
         }
-
     }
 
     /* remove old captcha files */
@@ -290,7 +272,7 @@ class Captcha
         $time = time();
         $ergebnis = safe_query("SELECT `hash` FROM `" . PREFIX . "captcha` WHERE `deltime` < " . $time);
         while ($ds = mysqli_fetch_array($ergebnis)) {
-            $file = 'tmp/' . $ds['hash'] . '.jpg';
+            $file = 'tmp/' . $ds[ 'hash' ] . '.jpg';
             if (file_exists($file)) {
                 unlink($file);
             } elseif (file_exists('../' . $file)) {

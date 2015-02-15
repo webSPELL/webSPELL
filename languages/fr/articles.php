@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -33,7 +33,7 @@ $language_array = Array(
 	'already_rated'=>'<b>Vous avez déjà évalué cet article !</b>',
 	'articles'=>'Articles',
 	'author'=>'Auteur',
-	'bbcode'=>'&#8226; <a href="javascript:void(0);" onclick="window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> <b><u>activé</u></b>',
+	'bbcode'=>'&#8226; <a href="javascript:void(0);" onclick="window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> <b><span class="underline">activé</span></b>',
 	'cancel'=>'Annuler',
 	'date'=>'Date',
 	'delete'=>'Supprimer',
@@ -41,7 +41,7 @@ $language_array = Array(
 	'edit_article'=>'Editer cet article',
 	'enter_title'=>'Vous devez entrer un titre !',
 	'enter_text'=>'Vous devez entrer un message !',
-	'html'=>'&#8226; HTML <b><u>activé</u></b>',
+	'html'=>'&#8226; HTML <b><span class="underline">activé</span></b>',
 	'link'=>'Lien',
 	'links'=>'Liens',
 	'login_for_rate'=>'<b>Vous devez être enregistré et connecté pour noter cet article !</b>',
@@ -53,7 +53,7 @@ $language_array = Array(
 	'options'=>'Options',
 	'page'=>'Page',
 	'page_of'=>'Page $page sur $pages',
-	'page_select'=>'Découper l\'article en <select name="language_count" onchange="update_textarea(this.options[this.selectedIndex].value)">$selects</select> pages',
+	'page_select'=>'Découper l\'article en <select name="language_count" onchange="updateTextarea(this.options[this.selectedIndex].value)">$selects</select> pages',
 	'pagecount'=>'Nombre de pages',
 	'perfect'=>'Parfait',
 	'poor'=>'Nul',
@@ -63,7 +63,7 @@ $language_array = Array(
 	'really_delete'=>'Voulez-vous vraiment supprimer cet article ?',
 	'save_article'=>'Enregistrer',
 	'self'=>'Même fenêtre',
-	'smilies'=>'&#8226; <a href="javascript:void(0);" onclick="window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smileys</a> <b><u>activés</u></b>',
+	'smilies'=>'&#8226; <a href="javascript:void(0);" onclick="window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smileys</a> <b><span class="underline">activés</span></b>',
 	'sort'=>'Ordre:',
 	'title'=>'Titre',
 	'top5_points'=>'TOP 5 ARTICLES (Points)',

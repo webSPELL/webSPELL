@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -31,7 +31,7 @@ $language_array = Array(
 
 	'add_buddylist'=>'Přidat do přátel',
 	'adminoptions'=>'Nastavení administrace:',
-	'bbcode'=>'BBCode <b><u>ZAPNUTÝ</u></b>',
+	'bbcode'=>'BBCode <b><span class="underline">ZAPNUTÝ</span></b>',
 	'by'=>'od',
 	'date'=>'Datum:',
 	'delete'=>'Smazat',
@@ -41,7 +41,7 @@ $language_array = Array(
 	'execute'=>'Prověř',
 	'formation'=>'Formátování',
 	'from'=>'od:',
-	'html'=>'HTML <b><u>VYPNUTÉ</u></b>',
+	'html'=>'HTML <b><span class="underline">VYPNUTÉ</span></b>',
 	'ignore'=>'Ignorovaní uživatelé',
 	'incoming'=>'Příchozí',
 	'mark_not_viewed'=>'Označit jako nepřečtené',
@@ -68,7 +68,7 @@ $language_array = Array(
 	'sendeachmember'=>'Poslat to každému členovi',
 	'sendeachuser'=>'Poslat to každému registrovanému',
 	'show'=>'Ukaž',
-	'smilies'=>'Smajlíci <b><u>ZAPNUTI</u></b>',
+	'smilies'=>'Smajlíci <b><span class="underline">ZAPNUTI</span></b>',
 	'sort'=>'Seřadit:',
 	'title'=>'Předmět',
 	'your_message'=>'Tvoje zpráva:',

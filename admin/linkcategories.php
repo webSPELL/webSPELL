@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -34,7 +34,7 @@ if (!ispageadmin($userID) || mb_substr(basename($_SERVER[ 'REQUEST_URI' ]), 0, 1
 if (isset($_POST[ 'save' ])) {
     $CAPCLASS = new \webspell\Captcha;
     if ($CAPCLASS->checkCaptcha(0, $_POST[ 'captcha_hash' ])) {
-        if (checkforempty(['name'])) {
+        if (checkforempty(array('name'))) {
             safe_query("INSERT INTO " . PREFIX . "links_categorys ( name ) values( '" . $_POST[ 'name' ] . "' ) ");
         } else {
             echo $_language->module[ 'information_incomplete' ];
@@ -45,9 +45,11 @@ if (isset($_POST[ 'save' ])) {
 } elseif (isset($_POST[ 'saveedit' ])) {
     $CAPCLASS = new \webspell\Captcha;
     if ($CAPCLASS->checkCaptcha(0, $_POST[ 'captcha_hash' ])) {
-        if (checkforempty(['name'])) {
-            safe_query("UPDATE " . PREFIX . "links_categorys SET name='" . $_POST[ 'name' ] . "' WHERE linkcatID='" .
-                $_POST[ 'linkcatID' ] . "'");
+        if (checkforempty(array('name'))) {
+            safe_query(
+                "UPDATE " . PREFIX . "links_categorys SET name='" . $_POST[ 'name' ] . "' WHERE linkcatID='" .
+                $_POST[ 'linkcatID' ] . "'"
+            );
         } else {
             echo $_language->module[ 'information_incomplete' ];
         }
@@ -116,12 +118,11 @@ if ($action == "add") {
 	</table>
 	</form>';
 } else {
-
     echo '<h1>&curren; ' . $_language->module[ 'link_categories' ] . '</h1>';
 
     echo
-        '<input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=linkcategories&amp;action=add\');return document.MM_returnValue" value="' .
-        $_language->module[ 'new_category' ] . '" /><br /><br />';
+        '<a href="admincenter.php?site=linkcategories&amp;action=add" class="input">' .
+        $_language->module[ 'new_category' ] . '</a><br><br>';
 
     $ergebnis = safe_query("SELECT * FROM " . PREFIX . "links_categorys ORDER BY name");
 
@@ -144,17 +145,16 @@ if ($action == "add") {
         }
 
         echo '<tr>
-			<td class="' . $td . '">' . getinput($ds[ 'name' ]) . '</td>
-			<td class="' . $td .
-            '" align="center"><input type="button" onclick="MM_goToURL(\'parent\',\'admincenter.php?site=linkcategories&amp;action=edit&amp;linkcatID=' .
-            $ds[ 'linkcatID' ] . '\');return document.MM_returnValue" value="' . $_language->module[ 'edit' ] . '" />
-			<input type="button" onclick="MM_confirm(\'' . $_language->module[ 'really_delete' ] .
+            <td class="' . $td . '">' . getinput($ds[ 'name' ]) . '</td>
+            <td class="' . $td . '" align="center">
+                <a href="admincenter.php?site=linkcategories&amp;action=edit&amp;linkcatID=' . $ds[ 'linkcatID' ] .
+                '" class="input">' . $_language->module[ 'edit' ] . '</a>
+            <input type="button" onclick="MM_confirm(\'' . $_language->module[ 'really_delete' ] .
             '\', \'admincenter.php?site=linkcategories&amp;delete=true&amp;linkcatID=' . $ds[ 'linkcatID' ] .
             '&amp;captcha_hash=' . $hash . '\')" value="' . $_language->module[ 'delete' ] . '" /></td>
-		</tr>';
+        </tr>';
 
         $i++;
     }
     echo '</table>';
 }
-?>

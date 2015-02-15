@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -52,7 +52,7 @@ $language_array = Array(
   'request_mail'=>'<b>Вам потрібен ваш ключ видалення!</b><br><br>Натисніть тут видалити ваш адресу зі списку <a href="http://%homepage_url%/index.php?site=newsletter&mail=%mail%&pass=%delete_key%">здесь</a><br>Ваш пароль для видалення: %delete_key%<br><br>До зустрічі на %homepage_url%',
   'send'=>'надіслати',
   'submit'=>'підтвердити',
-  'success_mail'=>'<b>Дякуємо за реєстрацію!</b><br><br>Натисніть тут видалити ваш адресу зі списку <href="http://%homepage_url%/index.php?site=newsletter&mail=%mail%&pass=%delete_key%">здесь</a><br>Ваш пароль для видалення: %delete_key%<br><br>До зустрічі на %homepage_url%',
+  'success_mail'=>'<b>Дякуємо за реєстрацію!</b><br><br>Натисніть тут видалити ваш адресу зі списку <a href="http://%homepage_url%/index.php?site=newsletter&mail=%mail%&pass=%delete_key%">здесь</a><br>Ваш пароль для видалення: %delete_key%<br><br>До зустрічі на %homepage_url%',
   'thank_you_for_registration'=>'Дякуємо за реєстрацію.',
   'you_are_already_registered'=>'Ви вже зареєстровані.',
   'your_mail_adress'=>'Ваша адреса Е/П',

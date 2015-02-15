@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -40,7 +40,7 @@ if ($userID) {
     }
 }
 
-if ($_POST[ 'mode' ] and $run) {
+if ($_POST[ 'mode' ] && $run) {
     $mode = $_POST[ 'mode' ];
     $type = $_POST[ 'type' ];
     $info = $_POST[ 'description' ];

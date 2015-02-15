@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -51,6 +51,7 @@ $language_array = Array(
   'linkname'=>'Ime povezave',
   'linkrubric'=>'Povezava na rubriko',
   'links'=>'povezave',
+  'new_category'=>'Nova kategorija',
   'new_link'=>'Nova povezava',
   'no_access'=>'ni dostopa.',
   'no_categories'=>'ni kategorij',

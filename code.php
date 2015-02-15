@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -33,5 +33,8 @@ $_language->readModule('code');
 
 $bg1 = BG_1;
 $bg2 = BG_2;
-eval ("\$bbcode = \"" . gettemplate("bbcode") . "\";");
+$data_array = array();
+$data_array['$rewriteBase'] = $rewriteBase;
+$data_array['$componentsCss'] = $componentsCss;
+$bbcode = $GLOBALS["_template"]->replaceTemplate("bbcode", $data_array);
 echo $bbcode;

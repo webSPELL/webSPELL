@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -32,7 +32,7 @@ $language_array = Array(
 
   'add_buddylist'=>'Dodaj na listu prijatelja',
   'adminoptions'=>'Admin opcije:',
-  'bbcode'=>'BBKod <b><u>uključen</u></b>',
+  'bbcode'=>'BBKod <b><span class="underline">uključen</span></b>',
   'by'=>'napisao',
   'date'=>'Datum:',
   'delete'=>'Izbriši',
@@ -42,7 +42,7 @@ $language_array = Array(
   'execute'=>'Izvrši',
   'formation'=>'Formatiranje',
   'from'=>'Napisao:',
-  'html'=>'HTML <b><u>isključen</u></b>',
+  'html'=>'HTML <b><span class="underline">isključen</span></b>',
   'ignore'=>'Ignoriši korisnika',
   'incoming'=>'Dolazeća',
   'mark_not_viewed'=>'Označi kao nepročitano',
@@ -69,7 +69,7 @@ $language_array = Array(
   'sendeachmember'=>'Pošalji svim članovima klana',
   'sendeachuser'=>'Pošalji svim korisnicima',
   'show'=>'Prikaži',
-  'smilies'=>'Smajlići <b><u>uključeni</u></b>',
+  'smilies'=>'Smajlići <b><span class="underline">uključeni</span></b>',
   'sort'=>'Razvrstaj:',
   'title'=>'Naslov',
   'your_message'=>'Vaša poruka:',

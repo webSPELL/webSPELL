@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -27,7 +27,7 @@
 
 $_language->readModule('members');
 
-eval("\$title_members = \"" . gettemplate("title_members") . "\";");
+$title_members = $GLOBALS["_template"]->replaceTemplate("title_members", array());
 echo $title_members;
 
 if (isset($_GET[ 'action' ])) {
@@ -38,25 +38,24 @@ if (isset($_GET[ 'action' ])) {
 
 if ($action == "show") {
     if (isset($_GET[ 'squadID' ])) {
-        $getsquad = 'WHERE squadID="' . $_GET[ 'squadID' ] . '"';
+        $getsquad = 'WHERE squadID="' . (int)$_GET[ 'squadID' ] . '"';
     } else {
         $getsquad = '';
     }
 
     $ergebnis = safe_query("SELECT * FROM " . PREFIX . "squads " . $getsquad . " ORDER BY sort");
     while ($ds = mysqli_fetch_array($ergebnis)) {
-
         $anzmembers = mysqli_num_rows(
             safe_query(
                 "SELECT
-                  sqmID
+                    sqmID
                 FROM
-                  " . PREFIX . "squads_members
+                    " . PREFIX . "squads_members
                 WHERE
-                  squadID='" . $ds[ 'squadID' ] . "'"
+                    squadID='" . $ds[ 'squadID' ] . "'"
             )
         );
-        $name = '<b>' . $ds[ 'name' ] . '</b>';
+        $name = '<strong>' . $ds[ 'name' ] . '</strong>';
         if ($ds[ 'icon' ]) {
             $icon = '<img src="images/squadicons/' . $ds[ 'icon' ] . '" alt="' . htmlspecialchars($ds[ 'name' ]) . '">';
         } else {
@@ -86,13 +85,13 @@ if ($action == "show") {
 
         $member = safe_query(
             "SELECT
-              *
+                *
             FROM
-              " . PREFIX . "squads_members s, " . PREFIX . "user u
+                " . PREFIX . "squads_members s, " . PREFIX . "user u
             WHERE
-              s.squadID='" . $ds[ 'squadID' ] . "'
+                s.squadID='" . $ds[ 'squadID' ] . "'
             AND
-              s.userID = u.userID
+                s.userID = u.userID
             ORDER BY sort"
         );
 
@@ -102,12 +101,19 @@ if ($action == "show") {
             $anzmembers = $anzmembers . ' ' . $_language->module[ 'members' ];
         }
 
-        eval ("\$members_details_head = \"" . gettemplate("members_details_head") . "\";");
+        $data_array = array();
+        $data_array['$icon'] = $icon;
+        $data_array['$name'] = $name;
+        $data_array['$anzmembers'] = $anzmembers;
+        $data_array['$results'] = $results;
+        $data_array['$awards'] = $awards;
+        $data_array['$challenge'] = $challenge;
+        $data_array['$info'] = $info;
+        $members_details_head = $GLOBALS["_template"]->replaceTemplate("members_details_head", $data_array);
         echo $members_details_head;
 
         $i = 1;
         while ($dm = mysqli_fetch_array($member)) {
-
             if ($i % 2) {
                 $bg1 = BG_1;
                 $bg2 = BG_2;
@@ -145,7 +151,7 @@ if ($action == "show") {
                 $email = '';
             } else {
                 $email = '<a href="mailto:' . mail_protect($dm[ 'email' ]) .
-                    '"><img src="images/icons/email.gif" width="15" height="11" alt="email"></a>';
+                    '"><span class="glyphicon glyphicon-envelope" title="email"></span></a>';
             }
             $emaill = $dm[ 'email' ];
 
@@ -185,19 +191,35 @@ if ($action == "show") {
                 $activity = '<font color="' . $loosecolor . '">' . $_language->module[ 'inactive' ] . '</font>';
             }
 
-            eval ("\$members_details_content = \"" . gettemplate("members_details_content") . "\";");
+            $data_array = array();
+            $data_array['$country'] = $country;
+            $data_array['$firstname'] = $firstname;
+            $data_array['$nickname'] = $nickname;
+            $data_array['$lastname'] = $lastname;
+            $data_array['$position'] = $position;
+            $data_array['$activity'] = $activity;
+            $data_array['$statuspic'] = $statuspic;
+            $data_array['$email'] = $email;
+            $data_array['$pm'] = $pm;
+            $data_array['$buddy'] = $buddy;
+            $data_array['$town'] = $town;
+            $data_array['$memberID'] = $dm['userID'];
+            $data_array['$userpic'] = $userpic;
+            $data_array['$nicknamee'] = $nicknamee;
+            $data_array['$userdescription'] = $userdescription;
+            $members_details_content = $GLOBALS["_template"]->replaceTemplate("members_details_content", $data_array);
             echo $members_details_content;
             $i++;
         }
-        eval ("\$members_details_foot = \"" . gettemplate("members_details_foot") . "\";");
+        $members_details_foot = $GLOBALS["_template"]->replaceTemplate("members_details_foot", array());
         echo $members_details_foot;
     }
 } else {
     if (isset($_POST[ 'squadID' ])) {
-        $onesquadonly = 'WHERE squadID="' . $_POST[ 'squadID' ] . '"';
+        $onesquadonly = 'WHERE squadID="' . (int)$_POST[ 'squadID' ] . '"';
         $visible = "block";
     } elseif (isset($_GET[ 'squadID' ])) {
-        $onesquadonly = 'WHERE squadID="' . $_GET[ 'squadID' ] . '"';
+        $onesquadonly = 'WHERE squadID="' . (int)$_GET[ 'squadID' ] . '"';
         $visible = "block";
     } else {
         $visible = "none";
@@ -210,9 +232,9 @@ if ($action == "show") {
             $anzmembers = mysqli_num_rows(
                 safe_query(
                     "SELECT
-                      sqmID
+                        sqmID
                     FROM
-                      " . PREFIX . "squads_members
+                        " . PREFIX . "squads_members
                     WHERE squadID='" . $ds[ 'squadID' ] . "'"
                 )
             );
@@ -253,29 +275,36 @@ if ($action == "show") {
                 $anzmembers = $anzmembers . ' ' . $_language->module[ 'members' ];
             }
 
-            eval ("\$members_head_head = \"" . gettemplate("members_head_head") . "\";");
+            $data_array = array();
+            $data_array['$icon'] = $icon;
+            $data_array['$name'] = $name;
+            $data_array['$anzmembers'] = $anzmembers;
+            $data_array['$results'] = $results;
+            $data_array['$awards'] = $awards;
+            $data_array['$challenge'] = $challenge;
+            $data_array['$info'] = $info;
+            $members_head_head = $GLOBALS["_template"]->replaceTemplate("members_head_head", $data_array);
             echo $members_head_head;
 
             $member =
                 safe_query(
                     "SELECT
-                      *
+                        *
                     FROM
-                      " . PREFIX . "squads_members s, " . PREFIX . "user u
+                        " . PREFIX . "squads_members s, " . PREFIX . "user u
                     WHERE
-                      s.squadID='" . $ds[ 'squadID' ] . "'
+                        s.squadID='" . $ds[ 'squadID' ] . "'
                     AND
-                      s.userID = u.userID
+                        s.userID = u.userID
                     ORDER BY
-                      sort"
+                        sort"
                 );
 
-            eval ("\$members_head = \"" . gettemplate("members_head") . "\";");
+            $members_head = $GLOBALS["_template"]->replaceTemplate("members_head", array());
             echo $members_head;
 
             $i = 1;
             while ($dm = mysqli_fetch_array($member)) {
-
                 if ($i % 2) {
                     $bg1 = BG_1;
                     $bg2 = BG_2;
@@ -294,7 +323,7 @@ if ($action == "show") {
                     $email = '';
                 } else {
                     $email = '<a href="mailto:' . mail_protect($dm[ 'email' ]) .
-                        '"><img src="images/icons/email.gif" width="15" height="11" alt="email"></a>';
+                        '"><span class="glyphicon glyphicon-envelope" title="email"></span></a>';
                 }
                 $emaill = $dm[ 'email' ];
 
@@ -339,11 +368,23 @@ if ($action == "show") {
                     $activity = '<font color="' . $loosecolor . '">' . $_language->module[ 'inactive' ] . '</font>';
                 }
 
-                eval ("\$members_content = \"" . gettemplate("members_content") . "\";");
+                $data_array = array();
+                $data_array['$country'] = $country;
+                $data_array['$profilid'] = $profilid;
+                $data_array['$nickname'] = $nickname;
+                $data_array['$statuspic'] = $statuspic;
+                $data_array['$position'] = $position;
+                $data_array['$email'] = $email;
+                $data_array['$pm'] = $pm;
+                $data_array['$buddy'] = $buddy;
+                $data_array['$activity'] = $activity;
+                $members_content = $GLOBALS["_template"]->replaceTemplate("members_content", $data_array);
                 echo $members_content;
                 $i++;
             }
-            eval ("\$members_content_foot = \"" . gettemplate("members_content_foot") . "\";");
+            $data_array = array();
+            $data_array['$details'] = $details;
+            $members_content_foot = $GLOBALS["_template"]->replaceTemplate("members_content_foot", $data_array);
             echo $members_content_foot;
         }
 
@@ -353,7 +394,11 @@ if ($action == "show") {
             $squadlist .= '<option value="' . $ds[ 'squadID' ] . '">' . $ds[ 'name' ] . '</option>';
         }
 
-        eval ("\$members_foot = \"" . gettemplate("members_foot") . "\";");
+        $data_array = array();
+        $data_array['$squadlist'] = $squadlist;
+        $members_foot = $GLOBALS["_template"]->replaceTemplate("members_foot", $data_array);
         echo $members_foot;
+    } else {
+        echo generateAlert($_language->module['no_entries'], 'alert-info');
     }
 }

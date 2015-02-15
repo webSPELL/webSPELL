@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -80,7 +80,7 @@ $language_array = Array(
   'listguide'=>'Gee \'1\' vir \'n genommerde lys, \'a\' vir \'n alfabetiese lys of \'\' vir \'n skerp Lys',
   'listpoint'=>'Gee \'n lys-Punt. Tik niks of kliek \'Kanselleer\' om die lys te voltooi.',
   'addcode'=>'Voeg by posisie',
-  'readMore'=>'lees meer',
+  'read_more'=>'lees meer',
   'mc_you_have'=>'Jy het',
   'mc_new_messages'=>'Nuwe boodskap(e). Wil jy hulle nou lees?',
   'na'=>'nie beskikbaar',

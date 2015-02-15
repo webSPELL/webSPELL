@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -37,7 +37,7 @@ $language_array = Array(
 
   'add_buddylist'=>'Voeg by vriendelys',
   'adminoptions'=>'Administrasie opsies:',
-  'bbcode'=>'BBCode <b><u>OP</u></b>',
+  'bbcode'=>'BBCode <b><span class="underline">OP</span></b>',
   'by'=>'deur',
   'date'=>'Datum:',
   'delete'=>'Verwyder',
@@ -47,7 +47,7 @@ $language_array = Array(
   'execute'=>'Uitvoer',
   'formation'=>'Formatering',
   'from'=>'deur:',
-  'html'=>'HTML <b><u>AF</u></b>',
+  'html'=>'HTML <b><span class="underline">AF</span></b>',
   'ignore'=>'Ignoreer gebruiker',
   'incoming'=>'Inkomende',
   'mark_not_viewed'=>'Merk as nie gesien',
@@ -74,7 +74,7 @@ $language_array = Array(
   'sendeachmember'=>'Stuur aan elke klan lid',
   'sendeachuser'=>'Stuur aan elke geregistreerde gebruiker',
   'show'=>'Wys',
-  'smilies'=>'Gesiggies <b><u>OP</u></b>',
+  'smilies'=>'Gesiggies <b><span class="underline">OP</span></b>',
   'sort'=>'Sorteer:',
   'title'=>'Onderwerp',
   'your_message'=>'Jou boodskap:',

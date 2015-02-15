@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -75,7 +75,7 @@ $language_array = Array(
   'listguide'=>'قم بادخال (1) للترتيب بالارقام او (a) للترتيب بالاحرف',
   'listpoint'=>'.قم بادخال القائمة . لا تكتب شيئ او اضغط الغاء للانتهاء من القائمة',
   'addcode'=>'ادخل في المكان',
-  'readMore'=>'اقرا المزيد',
+  'read_more'=>'اقرا المزيد',
   'mc_you_have'=>'لديك',
   'mc_new_messages'=>'رسالة جديدة. هل تريد قراتها الان ؟',
   'na'=>'غير متوفر',
