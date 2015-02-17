@@ -275,9 +275,7 @@ if (isset($id) && getnickname($id) != '') {
                 $n % 2 ? $bgcolor = BG_1 : $bgcolor = BG_2;
                 $posttime = getformatdatetime($db[ 'date' ]);
 
-                $topiclist .= '<tr><td width="50%"><table class="table">
-                <tr>
-                    <td colspan="3">
+                $topiclist .= '<tr><td>
                         <div style="overflow:hidden;">
                             <a href="index.php?site=forum_topic&amp;topic=' . $db[ 'topicID' ] . '">' .
                                 $posttime . '<br>
@@ -287,8 +285,7 @@ if (isset($id) && getnickname($id) != '') {
                             $db[ 'replys' ] . ' ' . $_language->module[ 'replys' ] . '</i>
                         </div>
                     </td>
-                </tr>
-                </table></td></tr>';
+                </tr>';
 
                 if ($profilelast == $n) {
                     break;
@@ -353,21 +350,17 @@ if (isset($id) && getnickname($id) != '') {
                 } else {
                     $message = $db[ 'message' ];
                 }
-                $postlist .= '<tr><td><table class="table"><tr>
-                    <td colspan="3">
-                        <a href="index.php?site=forum_topic&amp;topic=' . $db[ 'topicID' ] . '">' . $posttime . ' <br>
-                            <strong>' . $db[ 'topic' ] . '</strong>
-                        </a>
+
+                $postlist .= '<tr><td>
+                        <div style="overflow:hidden;">
+                            <a href="index.php?site=forum_topic&amp;topic=' . $db[ 'topicID' ] . '">' .
+                                $posttime . '<br>
+                                <strong>' . clearfromtags($db[ 'topic' ]) . '</strong>
+                            </a><br>
+                            <i>' . clearfromtags($message) . '</i>
+                        </div>
                     </td>
-                    </tr>
-                        <tr><td></td></tr>
-                    <tr>
-                        <td width="1%">&nbsp;</td>
-                    <td>
-                        <div style="width: 250px;overflow:hidden;">' . clearfromtags($message) . '</div>
-                    </td>
-                    <td width="1%">&nbsp;</td>
-                </tr></table></td></tr>';
+                </tr>';
 
                 if ($profilelast == $n) {
                     break;
