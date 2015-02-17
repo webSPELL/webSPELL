@@ -436,12 +436,12 @@ function updatepage( str, id, action ) {
         document.getElementById( id ).value = trim( str );
     } else if ( action === "return" ) {
         return str;
-    } else if (action === "execute") {
+    } else if ( action === "execute" ) {
         /*jshint -W061 */
-        eval(str);
+        eval( str );
         /*jshint +W061 */
-    } else if (action === "callback") {
-        id(str);
+    } else if ( action === "callback" ) {
+        id( str );
     }
 }
 
@@ -710,69 +710,73 @@ function url( string ) {
     return result;
 }
 
-function loadTemplate(template) {
+function loadTemplate( template ) {
     "use strict";
     var path = "templates/" + template + ".html";
 
-    if (window.calledfrom === "admin") {
+    if ( window.calledfrom === "admin" ) {
         path = "../" + path;
     }
 
-    return $.ajax({
+    return $.ajax( {
         type: "GET",
         url: path,
         async: false
-    }).responseText;
+    } ).responseText;
 }
 
-function loadLanguageSynchron(module) {
+function loadLanguageSynchron( module ) {
     "use strict";
     var path = "getlang.php?modul=" + module + "&mode=array";
-    if (window.calledfrom === "admin") {
+    if ( window.calledfrom === "admin" ) {
         path = "../" + path;
     }
     window.languageArray[module] = [];
     /*jshint -W061 */
-    eval($.ajax({
+    eval( $.ajax( {
         type: "GET",
         url: path,
         async: false
-    }).responseText);
+    } ).responseText );
     /*jshint +W061 */
 }
 
-function replaceLangVars(template, vars) {
+function replaceLangVars( template, vars ) {
     "use strict";
     var key;
-    for (key in vars) {
-        if (vars.hasOwnProperty(key)) {
-            template = template.replace(new RegExp("\\%" + key + "\\%", "gm"), vars[key]);
+    for ( key in vars ) {
+        if ( vars.hasOwnProperty( key ) ) {
+            template = template.replace(
+                new RegExp( "\\%" + key + "\\%", "gm" ), vars[key]
+            );
         }
     }
     return template;
 }
 
-function escapeRegExp(string) {
+function escapeRegExp( string ) {
     "use strict";
-    return string.replace(/([.*+?^=!:${}()|\[\]\/\\])/g, "\\$1");
+    return string.replace(
+        /([.*+?^=!:${}()|\[\]\/\\])/g, "\\$1"
+    );
 }
 
-Object.defineProperty(String.prototype, "replaceAll", {
-    value: function(find, replace) {
+Object.defineProperty( String.prototype, "replaceAll", {
+    value: function( find, replace ) {
         "use strict";
-        return this.replace(new RegExp(escapeRegExp(find), "g"), replace);
+        return this.replace( new RegExp( escapeRegExp( find ), "g" ), replace );
     }
-});
+} );
 
 //initialize javascript language array
 window.languageArray = {};
-function loadLanguageModule(module) {
+function loadLanguageModule( module ) {
     "use strict";
     window.languageArray[module] = [];
-    if (typeof window.calledfrom === "undefined") {
-        fetch("getlang.php?modul=" + module + "&mode=array", "none", "execute", "event");
-    } else if (window.calledfrom === "admin") {
-        fetch("../getlang.php?modul=" + module + "&mode=array", "none", "execute", "event");
+    if ( typeof window.calledfrom === "undefined" ) {
+        fetch( "getlang.php?modul=" + module + "&mode=array", "none", "execute", "event" );
+    } else if ( window.calledfrom === "admin" ) {
+        fetch( "../getlang.php?modul=" + module + "&mode=array", "none", "execute", "event" );
     }
 }
 
@@ -830,4 +834,4 @@ $( document ).ready( function() {
    }
 );
 
-loadLanguageModule("bbcode");
+loadLanguageModule( "bbcode" );
