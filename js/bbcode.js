@@ -435,7 +435,9 @@ function updatepage(str, id, action) {
     } else if (action === "return") {
         return str;
     } else if (action === "execute") {
-        eval(str); // jshint ignore:line
+        /*jshint -W061 */
+        eval(str);
+        /*jshint +W061 */
     } else if (action === "callback") {
         id(str);
     }
@@ -692,10 +694,70 @@ function url(string) {
     return result;
 }
 
-//initialize javascript language array
-languageArray.bbcode = [];
-if (typeof calledfrom === "undefined") {
-    fetch("getlang.php?modul=bbcode&mode=array", "none", "execute", "event");
-} else if (calledfrom === "admin") {
-    fetch("../getlang.php?modul=bbcode&mode=array", "none", "execute", "event");
+function loadTemplate(template) {
+    "use strict";
+    var path = "templates/" + template + ".html";
+
+    if (window.calledfrom === "admin") {
+        path = "../" + path;
+    }
+
+    return $.ajax({
+        type: "GET",
+        url: path,
+        async: false
+    }).responseText;
 }
+
+function loadLanguageSynchron(module) {
+    "use strict";
+    var path = "getlang.php?modul=" + module + "&mode=array";
+    if (window.calledfrom === "admin") {
+        path = "../" + path;
+    }
+    window.languageArray[module] = [];
+    /*jshint -W061 */
+    eval($.ajax({
+        type: "GET",
+        url: path,
+        async: false
+    }).responseText);
+    /*jshint +W061 */
+}
+
+function replaceLangVars(template, vars) {
+    "use strict";
+    var key;
+    for (key in vars) {
+        if (vars.hasOwnProperty(key)) {
+            template = template.replace(new RegExp("\\%" + key + "\\%", "gm"), vars[key]);
+        }
+    }
+    return template;
+}
+
+function escapeRegExp(string) {
+    "use strict";
+    return string.replace(/([.*+?^=!:${}()|\[\]\/\\])/g, "\\$1");
+}
+
+Object.defineProperty(String.prototype, "replaceAll", {
+    value: function(find, replace) {
+        "use strict";
+        return this.replace(new RegExp(escapeRegExp(find), "g"), replace);
+    }
+});
+
+//initialize javascript language array
+window.languageArray = {};
+function loadLanguageModule(module) {
+    "use strict";
+    window.languageArray[module] = [];
+    if (typeof window.calledfrom === "undefined") {
+        fetch("getlang.php?modul=" + module + "&mode=array", "none", "execute", "event");
+    } else if (window.calledfrom === "admin") {
+        fetch("../getlang.php?modul=" + module + "&mode=array", "none", "execute", "event");
+    }
+}
+
+loadLanguageModule("bbcode");
