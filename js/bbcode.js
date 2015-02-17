@@ -760,37 +760,33 @@ function loadLanguageModule(module) {
     }
 }
 
-$(document).ready(function()
-    {
+$(document).ready(function () {
     "use strict";
-    $("form#login").submit(function(e)
-        {
+    $("form[name=login]").submit(function (e) {
         var that = $(this),
             postData = that.serializeArray(),
             formURL = that.attr("action");
         $("body").css("cursor", "progress");
-        $.ajax(
-        {
+        $.ajax({
             url: formURL,
             type: "POST",
             data: postData,
-            success:function(data, textStatus, jqXHR)
-            {
+            success: function (data, textStatus, jqXHR) {
                 $("body").css("cursor", "default");
                 //data: return data from server
                 if (data.state === "success") {
-                    that.prepend("<div class=\"alert alert-success\">" + data.message + "</div>");
+                    that.prepend("<div class='alert alert-success'>" + data.message + "</div>");
                     window.setTimeout(
-                        function() {
+                        function () {
                             window.location.reload();
                         },
                         1000
                     );
                 } else {
-                    that.prepend("<div class=\"alert alert-warning\">" + data.message + "</div>");
+                    that.prepend("<div class='alert alert-warning'>" + data.message + "</div>");
                     that.trigger("reset");
                     window.setTimeout(
-                        function() {
+                        function () {
                             that.find("div.alert").remove();
                         },
                         5000
@@ -798,8 +794,7 @@ $(document).ready(function()
                 }
 
             },
-            error: function(jqXHR, textStatus, errorThrown)
-            {
+            error: function (jqXHR, textStatus, errorThrown) {
                 $("body").css("cursor", "default");
             }
         });
