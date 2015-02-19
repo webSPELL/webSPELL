@@ -829,3 +829,5 @@ $( document ).ready( function() {
                 window.SHOUTBOX_REFRESH_TIME );
     }
 } );
+
+loadLanguageModule( "bbcode" );
