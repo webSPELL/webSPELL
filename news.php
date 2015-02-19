@@ -93,14 +93,11 @@ if ($action == "new") {
     $link2 = '';
     $link3 = '';
     $link4 = '';
-    $window1_new = 'checked="checked"';
-    $window1_self = '';
-    $window2_new = 'checked="checked"';
-    $window2_self = '';
-    $window3_new = 'checked="checked"';
-    $window3_self = '';
-    $window4_new = 'checked="checked"';
-    $window4_self = '';
+    $window1 = '<input class="input" name="window1" type="checkbox" value="1">';
+    $window2 = '<input class="input" name="window2" type="checkbox" value="1">';
+    $window3 = '<input class="input" name="window3" type="checkbox" value="1">';
+    $window4 = '<input class="input" name="window4" type="checkbox" value="1">';
+
     $intern = '<option value="0" selected="selected">' . $_language->module[ 'no' ] . '</option><option value="1">' .
         $_language->module[ 'yes' ] . '</option>';
     $topnews = '<option value="0" selected="selected">' . $_language->module[ 'no' ] . '</option><option value="1">' .
@@ -139,22 +136,23 @@ if ($action == "new") {
     $data_array['$langcount'] = $langcount;
     $data_array['$link1'] = $link1;
     $data_array['$url1'] = $url1;
-    $data_array['$window1_new'] = $window1_new;
-    $data_array['$window1_self'] = $window1_self;
+    $data_array['$window1'] = $window1;
     $data_array['$link2'] = $link2;
     $data_array['$url2'] = $url2;
-    $data_array['$window2_new'] = $window2_new;
-    $data_array['$window2_self'] = $window2_self;
+    $data_array['$window2'] = $window2;
     $data_array['$link3'] = $link3;
     $data_array['$url3'] = $url3;
-    $data_array['$window3_new'] = $window3_new;
-    $data_array['$window3_self'] = $window3_self;
+    $data_array['$window3'] = $window3;
     $data_array['$link4'] = $link4;
     $data_array['$url4'] = $url4;
-    $data_array['$window4_new'] = $window4_new;
-    $data_array['$window4_self'] = $window4_self;
+    $data_array['$window4'] = $window4;
     $data_array['$userID'] = $userID;
     $data_array['$comments'] = $comments;
+    $data_array['$selects'] = $selects;
+    $data_array['$message_vars'] = $message_vars;
+    $data_array['$headline_vars'] = $headline_vars;
+    $data_array['$langs_vars'] = $langs_vars;
+    $data_array['$langs'] = $langs;
     $data_array['$componentsJs'] = $componentsJs;
     $news_post = $GLOBALS["_template"]->replaceTemplate("news_post", $data_array);
     echo $news_post;
@@ -685,32 +683,27 @@ if ($action == "new") {
     }
 
     if ($ds[ 'window1' ]) {
-        $window1_new = 'checked="checked"';
-        $window1_self = '';
+        $window1 = '<input class="input" name="window1" type="checkbox" value="1" checked="checked">';
     } else {
-        $window1_new = '';
-        $window1_self = 'checked="checked"';
+        $window1 = '<input class="input" name="window1" type="checkbox" value="1">';
     }
+
     if ($ds[ 'window2' ]) {
-        $window2_new = 'checked="checked"';
-        $window2_self = '';
+        $window2 = '<input class="input" name="window2" type="checkbox" value="1" checked="checked">';
     } else {
-        $window2_new = '';
-        $window2_self = 'checked="checked"';
+        $window2 = '<input class="input" name="window2" type="checkbox" value="1">';
     }
+
     if ($ds[ 'window3' ]) {
-        $window3_new = 'checked="checked"';
-        $window3_self = '';
+        $window3 = '<input class="input" name="window3" type="checkbox" value="1" checked="checked">';
     } else {
-        $window3_new = '';
-        $window3_self = 'checked="checked"';
+        $window3 = '<input class="input" name="window3" type="checkbox" value="1">';
     }
+
     if ($ds[ 'window4' ]) {
-        $window4_new = 'checked="checked"';
-        $window4_self = '';
+        $window4 = '<input class="input" name="window4" type="checkbox" value="1" checked="checked">';
     } else {
-        $window4_new = '';
-        $window4_self = 'checked="checked"';
+        $window4 = '<input class="input" name="window4" type="checkbox" value="1">';
     }
 
     $tags = \webspell\Tags::getTags('news', $newsID);
@@ -746,22 +739,23 @@ if ($action == "new") {
     $data_array['$langcount'] = $langcount;
     $data_array['$link1'] = $link1;
     $data_array['$url1'] = $url1;
-    $data_array['$window1_new'] = $window1_new;
-    $data_array['$window1_self'] = $window1_self;
+    $data_array['$window1'] = $window1;
     $data_array['$link2'] = $link2;
     $data_array['$url2'] = $url2;
-    $data_array['$window2_new'] = $window2_new;
-    $data_array['$window2_self'] = $window2_self;
+    $data_array['$window2'] = $window2;
     $data_array['$link3'] = $link3;
     $data_array['$url3'] = $url3;
-    $data_array['$window3_new'] = $window3_new;
-    $data_array['$window3_self'] = $window3_self;
+    $data_array['$window3'] = $window3;
     $data_array['$link4'] = $link4;
     $data_array['$url4'] = $url4;
-    $data_array['$window4_new'] = $window4_new;
-    $data_array['$window4_self'] = $window4_self;
+    $data_array['$window4'] = $window4;
     $data_array['$userID'] = $userID;
     $data_array['$comments'] = $comments;
+    $data_array['$selects'] = $selects;
+    $data_array['$message_vars'] = $message_vars;
+    $data_array['$headline_vars'] = $headline_vars;
+    $data_array['$langs_vars'] = $langs_vars;
+    $data_array['$langs'] = $langs;
     $data_array['$componentsJs'] = $componentsJs;
     $news_post = $GLOBALS["_template"]->replaceTemplate("news_post", $data_array);
     echo $news_post;
