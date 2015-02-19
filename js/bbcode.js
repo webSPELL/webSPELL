@@ -822,16 +822,12 @@ $( document ).ready( function() {
     } );
 
     if ( $( "#shoutbox" ).length ) {
-        fetch(
-            "shoutbox_content.php",
-            "shoutbox",
-            "replace",
-            "time",
-            window.SHOUTBOX_REFRESH_TIME
-        );
+        fetch( "shoutbox_content.php",
+                "shoutbox",
+                "replace",
+                "time",
+                window.SHOUTBOX_REFRESH_TIME );
     }
-
-   }
-);
+} );
 
 loadLanguageModule( "bbcode" );
