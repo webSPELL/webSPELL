@@ -340,9 +340,9 @@ module.exports = function( grunt ) {
         }
     } );
 
-    grunt.registerTask("codecheck", [
+    grunt.registerTask( "codecheck", [
         "concurrent:codecheck"
-    ]);
+    ] );
 
     grunt.registerTask( "codecheck_newer", [
         "newer:js",
@@ -351,13 +351,13 @@ module.exports = function( grunt ) {
         "newer:html"
     ] );
 
-    grunt.registerTask("codecheck_circle", [
+    grunt.registerTask( "codecheck_circle", [
         "concurrent:codecheckcircle"
-    ]);
+    ] );
 
-    grunt.registerTask("codecheck_travis", [
+    grunt.registerTask( "codecheck_travis", [
         "concurrent:codechecktravis"
-    ]);
+    ] );
 
     grunt.registerTask( "html", [
         "htmlhint",
