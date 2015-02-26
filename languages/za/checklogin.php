@@ -35,11 +35,13 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'invalid_password'=>'Jy het \'n ongeldige wagwoord ingevoer.<br><br><a href="javascript:history.back()">Gaan terug en probeer weer.</a>',
-  'ip_banned'=>'Jou IP is verban van hierdie webblad.<br>%reason%<br><br><a href="javascript:history.back()">Gaan terug</a>',
+  'invalid_password'=>'Jy het \'n ongeldige wagwoord ingevoer.',
+  'ip_banned'=>'Jou IP is verban van hierdie webblad.<br>%reason%',
   'login_successful'=>'Aanmelding suksesvol!',
-  'no_user'=>'Die gebruiker <b>%username%</b> is nie beskikbaar op hierdie stelsel.<br><br><a href="javascript:history.back()">Gaan terug en probeer weer!</a>',
-  'not_activated'=>'Jou rekening is nie geaktiveer.<br><br><a href="javascript:history.back()">Terug</a>',
-  'session_error'=>'Maak asseblief seker dat die koekies aangeskakel is op jou blaaier.<br>As die probleem steeds voorkom, kontak die webmeester.<br><br><a href="javascript:history.back()">Terug</a>'
+  'no_user'=>'Die gebruiker <b>%username%</b> is nie beskikbaar op hierdie stelsel.',
+  'not_activated'=>'Jou rekening is nie geaktiveer.',
+  'session_error'=>'Maak asseblief seker dat die koekies aangeskakel is op jou blaaier.<br>As die probleem steeds voorkom, kontak die webmeester.',
+  'return'=>'<a href="javascript:history.back()">Gaan terug</a>',
+  'return_reenter' => '<a href="javascript:history.back()">Gaan terug en probeer weer.</a>'
 );
 ?>
