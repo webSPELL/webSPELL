@@ -20,7 +20,7 @@ module.exports = {
     tearDown : function(callback) {
         var data = JSON.stringify({
             "passed" : (this.results.failed == 0) ? true : false,
-            "tags" : ["test","google"]
+            "tags" : ["login"]
         });
 
         var requestPath = '/rest/v1/'+ this.client.options.username +'/jobs/' + this.client.sessionId;
