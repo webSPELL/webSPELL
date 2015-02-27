@@ -1,0 +1,452 @@
+{
+    "src_folders" : ["./tests/nightwatchjs"],
+    "output_folder" : "./tests/reports",
+    "custom_commands_path" : "",
+    "custom_assertions_path" : "",
+    "globals_path" : "",
+    "live_output" : false,
+    "parallel_process_delay" : 10,
+    "disable_colors": false,
+
+    "selenium" : {
+        "start_process" : true,
+        "server_path" : "./tools/selenium-server-standalone-2.44.0.jar",
+        "log_path" : "",
+        "host" : "127.0.0.1",
+        "port" : 4444,
+        "cli_args" : {
+            "webdriver.chrome.driver" : "./tools/chromedriver_linux64",
+            "webdriver.ie.driver" : "",
+            "webdriver.firefox.profile" : "default"
+        }
+    },
+
+    "test_settings" : {
+        "default" : {
+            "launch_url" : "http://saucelabs.webspell.org",
+            "selenium_host" : "127.0.0.1",
+            "selenium_port" : 4444,
+            "silent" : true,
+            "disable_colors": false,
+            "screenshots" : {
+                "enabled" : false,
+                "path" : "./tests/reports"
+            },
+            "desiredCapabilities" : {
+                "browserName" : "firefox",
+                "javascriptEnabled" : true,
+                "acceptSslCerts" : true
+            }
+        },
+
+        "sl_ff_win7" : {
+            "selenium_host" : "ondemand.saucelabs.com",
+            "selenium_port" : 80,
+            "username" : "${SAUCE_USERNAME}",
+            "access_key" : "${SAUCE_ACCESS_KEY}",
+            "use_ssl" : false,
+            "silent" : true,
+            "output" : true,
+            "screenshots" : {
+                "enabled" : false,
+                "path" : ""
+            },
+            "desiredCapabilities": {
+                "name" : "test-firefox-win7",
+                "browserName": "firefox",
+                "build" : "${CI_BUILD_NUMBER}",
+                "public" : "public",
+                "custom-data": {
+                    "branch": "${CI_BRANCH}",
+                    "commit": "${CI_COMMIT_ID}"
+                },
+                "webdriver.remote.quietExceptions": false,
+                "time-zone": "Berlin",
+                "platform" : "Windows 7",
+                "version" : "35.0",
+                "screen-resolution" : "1600x1200"
+            },
+            "selenium" : {
+                "start_process" : false
+            }
+        },
+
+        "sl_chrome_win7" : {
+            "selenium_host" : "ondemand.saucelabs.com",
+            "selenium_port" : 80,
+            "username" : "${SAUCE_USERNAME}",
+            "access_key" : "${SAUCE_ACCESS_KEY}",
+            "use_ssl" : false,
+            "silent" : true,
+            "output" : true,
+            "screenshots" : {
+                "enabled" : false,
+                "path" : ""
+            },
+            "desiredCapabilities": {
+                "name" : "test-chrome-win7",
+                "browserName": "chrome",
+                "build" : "${CI_BUILD_NUMBER}",
+                "public" : "public",
+                "custom-data": {
+                    "branch": "${CI_BRANCH}",
+                    "commit": "${CI_COMMIT_ID}"
+                },
+                "webdriver.remote.quietExceptions": false,
+                "time-zone": "Berlin",
+                "platform" : "Windows 7",
+                "version" : "39.0",
+                "screen-resolution" : "1600x1200"
+            },
+            "selenium" : {
+                "start_process" : false
+            }
+        },
+
+        "sl_safari_win7" : {
+            "selenium_host" : "ondemand.saucelabs.com",
+            "selenium_port" : 80,
+            "username" : "${SAUCE_USERNAME}",
+            "access_key" : "${SAUCE_ACCESS_KEY}",
+            "use_ssl" : false,
+            "silent" : true,
+            "output" : true,
+            "screenshots" : {
+                "enabled" : false,
+                "path" : ""
+            },
+            "desiredCapabilities": {
+                "name" : "test-safari-win7",
+                "browserName": "safari",
+                "build" : "${CI_BUILD_NUMBER}",
+                "public" : "public",
+                "custom-data": {
+                    "branch": "${CI_BRANCH}",
+                    "commit": "${CI_COMMIT_ID}"
+                },
+                "webdriver.remote.quietExceptions": false,
+                "time-zone": "Berlin",
+                "platform" : "Windows 7",
+                "version" : "5.1",
+                "screen-resolution" : "1600x1200"
+            },
+            "selenium" : {
+                "start_process" : false
+            }
+        },
+
+        "sl_ie_win7" : {
+            "selenium_host" : "ondemand.saucelabs.com",
+            "selenium_port" : 80,
+            "username" : "${SAUCE_USERNAME}",
+            "access_key" : "${SAUCE_ACCESS_KEY}",
+            "use_ssl" : false,
+            "silent" : true,
+            "output" : true,
+            "screenshots" : {
+                "enabled" : false,
+                "path" : ""
+            },
+            "desiredCapabilities": {
+                "name" : "test-ie-win7",
+                "browserName": "internet explorer",
+                "build" : "${CI_BUILD_NUMBER}",
+                "public" : "public",
+                "custom-data": {
+                    "branch": "${CI_BRANCH}",
+                    "commit": "${CI_COMMIT_ID}"
+                },
+                "webdriver.remote.quietExceptions": false,
+                "time-zone": "Berlin",
+                "platform" : "Windows 7",
+                "version" : "11.0",
+                "screen-resolution" : "1600x1200"
+            },
+            "selenium" : {
+                "start_process" : false
+            }
+        },
+
+        "sl_ff_mac" : {
+            "selenium_host" : "ondemand.saucelabs.com",
+            "selenium_port" : 80,
+            "username" : "${SAUCE_USERNAME}",
+            "access_key" : "${SAUCE_ACCESS_KEY}",
+            "use_ssl" : false,
+            "silent" : true,
+            "output" : true,
+            "screenshots" : {
+                "enabled" : false,
+                "path" : ""
+            },
+            "desiredCapabilities": {
+                "name" : "test-firefox-win7",
+                "browserName": "firefox",
+                "build" : "${CI_BUILD_NUMBER}",
+                "public" : "public",
+                "custom-data": {
+                    "branch": "${CI_BRANCH}",
+                    "commit": "${CI_COMMIT_ID}"
+                },
+                "webdriver.remote.quietExceptions": false,
+                "time-zone": "Berlin",
+                "platform" : "OS X 10.10",
+                "version" : "35.0",
+                "screen-resolution" : "1024x768"
+            },
+            "selenium" : {
+                "start_process" : false
+            }
+        },
+
+        "sl_chrome_mac" : {
+            "selenium_host" : "ondemand.saucelabs.com",
+            "selenium_port" : 80,
+            "username" : "${SAUCE_USERNAME}",
+            "access_key" : "${SAUCE_ACCESS_KEY}",
+            "use_ssl" : false,
+            "silent" : true,
+            "output" : true,
+            "screenshots" : {
+                "enabled" : false,
+                "path" : ""
+            },
+            "desiredCapabilities": {
+                "name" : "test-chrome-win7",
+                "browserName": "chrome",
+                "build" : "${CI_BUILD_NUMBER}",
+                "public" : "public",
+                "custom-data": {
+                    "branch": "${CI_BRANCH}",
+                    "commit": "${CI_COMMIT_ID}"
+                },
+                "webdriver.remote.quietExceptions": false,
+                "time-zone": "Berlin",
+                "platform" : "OS X 10.10",
+                "version" : "39.0",
+                "screen-resolution" : "1024x768"
+            },
+            "selenium" : {
+                "start_process" : false
+            }
+        },
+
+        "sl_safari_mac" : {
+            "selenium_host" : "ondemand.saucelabs.com",
+            "selenium_port" : 80,
+            "username" : "${SAUCE_USERNAME}",
+            "access_key" : "${SAUCE_ACCESS_KEY}",
+            "use_ssl" : false,
+            "silent" : true,
+            "output" : true,
+            "screenshots" : {
+                "enabled" : false,
+                "path" : ""
+            },
+            "desiredCapabilities": {
+                "name" : "test-safari-win7",
+                "browserName": "safari",
+                "build" : "${CI_BUILD_NUMBER}",
+                "public" : "public",
+                "custom-data": {
+                    "branch": "${CI_BRANCH}",
+                    "commit": "${CI_COMMIT_ID}"
+                },
+                "webdriver.remote.quietExceptions": false,
+                "time-zone": "Berlin",
+                "platform" : "OS X 10.10",
+                "version" : "8.0",
+                "screen-resolution" : "1024x768"
+            },
+            "selenium" : {
+                "start_process" : false
+            }
+        },
+
+        "sl_iphone" : {
+            "selenium_host" : "ondemand.saucelabs.com",
+            "selenium_port" : 80,
+            "username" : "${SAUCE_USERNAME}",
+            "access_key" : "${SAUCE_ACCESS_KEY}",
+            "use_ssl" : false,
+            "silent" : true,
+            "output" : true,
+            "screenshots" : {
+                "enabled" : false,
+                "path" : ""
+            },
+            "desiredCapabilities": {
+                "name" : "test-safari-win7",
+                "browserName": "iphone",
+                "build" : "${CI_BUILD_NUMBER}",
+                "public" : "public",
+                "custom-data": {
+                    "branch": "${CI_BRANCH}",
+                    "commit": "${CI_COMMIT_ID}"
+                },
+                "webdriver.remote.quietExceptions": false,
+                "time-zone": "Berlin",
+                "platform" : "OS X 10.10",
+                "version" : "8.1",
+                "deviceName" : "iPhone Simulator",
+                "device-orientation" : "portrait"
+            },
+            "selenium" : {
+                "start_process" : false
+            }
+        },
+
+        "sl_ipad" : {
+            "selenium_host" : "ondemand.saucelabs.com",
+            "selenium_port" : 80,
+            "username" : "${SAUCE_USERNAME}",
+            "access_key" : "${SAUCE_ACCESS_KEY}",
+            "use_ssl" : false,
+            "silent" : true,
+            "output" : true,
+            "screenshots" : {
+                "enabled" : false,
+                "path" : ""
+            },
+            "desiredCapabilities": {
+                "name" : "test-safari-win7",
+                "browserName": "iphone",
+                "build" : "${CI_BUILD_NUMBER}",
+                "public" : "public",
+                "custom-data": {
+                    "branch": "${CI_BRANCH}",
+                    "commit": "${CI_COMMIT_ID}"
+                },
+                "webdriver.remote.quietExceptions": false,
+                "time-zone": "Berlin",
+                "platform" : "OS X 10.10",
+                "version" : "8.1",
+                "deviceName" : "iPad Simulator",
+                "device-orientation" : "portrait"
+            },
+            "selenium" : {
+                "start_process" : false
+            }
+        },
+
+        "sl_nexus7hd" : {
+            "selenium_host" : "ondemand.saucelabs.com",
+            "selenium_port" : 80,
+            "username" : "${SAUCE_USERNAME}",
+            "access_key" : "${SAUCE_ACCESS_KEY}",
+            "use_ssl" : false,
+            "silent" : true,
+            "output" : true,
+            "screenshots" : {
+                "enabled" : false,
+                "path" : ""
+            },
+            "desiredCapabilities": {
+                "name" : "test-safari-win7",
+                "browserName": "android",
+                "build" : "${CI_BUILD_NUMBER}",
+                "public" : "public",
+                "custom-data": {
+                    "branch": "${CI_BRANCH}",
+                    "commit": "${CI_COMMIT_ID}"
+                },
+                "webdriver.remote.quietExceptions": false,
+                "time-zone": "Berlin",
+                "platform" : "Linux",
+                "version" : "4.4",
+                "deviceName" : "Google Nexus 7 HD Emulator",
+                "device-orientation" : "portrait"
+            },
+            "selenium" : {
+                "start_process" : false
+            }
+        },
+
+        "sl_samsungs4" : {
+            "selenium_host" : "ondemand.saucelabs.com",
+            "selenium_port" : 80,
+            "username" : "${SAUCE_USERNAME}",
+            "access_key" : "${SAUCE_ACCESS_KEY}",
+            "use_ssl" : false,
+            "silent" : true,
+            "output" : true,
+            "screenshots" : {
+                "enabled" : false,
+                "path" : ""
+            },
+            "desiredCapabilities": {
+                "name" : "test-safari-win7",
+                "browserName": "android",
+                "build" : "${CI_BUILD_NUMBER}",
+                "public" : "public",
+                "custom-data": {
+                    "branch": "${CI_BRANCH}",
+                    "commit": "${CI_COMMIT_ID}"
+                },
+                "webdriver.remote.quietExceptions": false,
+                "time-zone": "Berlin",
+                "platform" : "Linux",
+                "version" : "4.4",
+                "deviceName" : "Samsung Galaxy S4 Emulator",
+                "device-orientation" : "portrait"
+            },
+            "selenium" : {
+                "start_process" : false
+            }
+        },
+
+        "phantomjs" : {
+            "desiredCapabilities" : {
+                "browserName" : "phantomjs",
+                "javascriptEnabled" : true,
+                "acceptSslCerts" : true,
+                "phantomjs.binary.path" : "./node_modules/.bin/phantomjs"
+            }
+        },
+
+        "browserstack" : {
+            "selenium" : {
+                "start_process" : false
+            },
+            "selenium_host" : "hub.browserstack.com",
+            "selenium_port" : 80,
+            "silent" : true,
+            "desiredCapabilities": {
+                "browser" : "Safari",
+                "browser_version" : "5.1",
+                "os" : "Windows",
+                "os_version" : "7",
+                "resolution" : "1600x1200",
+                "name" : "webspell",
+                "browserstack.user" : "${BROWSERSTACK_USERNAME}",
+                "browserstack.key" : "${BROWSERSTACK_KEY}",
+                "build" : "${CI_BUILD_NUMBER}",
+                "project" : "${CI_BRANCH}"
+            }
+        },
+
+        "firefox" : {
+            "desiredCapabilities": {
+                "browserName": "firefox",
+                "javascriptEnabled": true,
+                "acceptSslCerts": true
+            }
+        },
+
+        "chrome" : {
+            "desiredCapabilities": {
+                "browserName": "chrome",
+                "javascriptEnabled": true,
+                "acceptSslCerts": true
+            }
+        },
+
+        "safari" : {
+            "desiredCapabilities": {
+                "browserName": "safari",
+                "javascriptEnabled": true,
+                "acceptSslCerts": true
+            }
+        }
+    }
+}

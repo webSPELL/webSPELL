@@ -309,14 +309,39 @@ module.exports = function( grunt ) {
                 },
                 src: releaseFiles
             }
+        },
+
+        concurrent: {
+            codecheck: [
+                "js",
+                "php",
+                "html",
+                "css"
+            ],
+            codecheckcircle: [
+                "jshint",
+                "jscs",
+                "phpcs",
+                "htmlhint",
+                "htmllint",
+                "bootlint",
+                "css"
+            ],
+            codechecktravis: [
+                "jshint",
+                "jscs",
+                "phplint",
+                "phpcs",
+                "htmlhint",
+                "htmllint",
+                "bootlint",
+                "css"
+            ]
         }
     } );
 
     grunt.registerTask( "codecheck", [
-        "js",
-        "php",
-        "html",
-        "css"
+        "concurrent:codecheck"
     ] );
 
     grunt.registerTask( "codecheck_newer", [
@@ -327,24 +352,11 @@ module.exports = function( grunt ) {
     ] );
 
     grunt.registerTask( "codecheck_circle", [
-        "jshint",
-        "jscs",
-        "phpcs",
-        "htmlhint",
-        "htmllint",
-        "bootlint",
-        "csslint"
+        "concurrent:codecheckcircle"
     ] );
 
     grunt.registerTask( "codecheck_travis", [
-        "jshint",
-        "jscs",
-        "phplint",
-        "phpcs",
-        "htmlhint",
-        "htmllint",
-        "bootlint",
-        "csslint"
+        "concurrent:codechecktravis"
     ] );
 
     grunt.registerTask( "html", [
