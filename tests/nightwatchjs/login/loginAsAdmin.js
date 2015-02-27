@@ -16,7 +16,8 @@ module.exports = {
             .assert.containsText('#rightcol', 'welcome back: admin')
             .url("http://saucelabs.webspell.org/admin/admincenter.php")
             .waitForElementVisible('body', 1000)
-            .assert.containsText('#pad', 'Welcome to your webSPELL AdminCenter')
+            .assert.containsText('.pad>h1', 'Welcome to your webSPELL AdminCenter')
+            .pause(2000)
             .end();
     },
 
