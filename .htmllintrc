@@ -4,5 +4,6 @@
   "attr-req-value": false,
   "id-no-dup": true,
   "indent-style": "spaces",
-  "tag-name-lowercase": true
+  "tag-name-lowercase": true,
+  "label-req-for": false
 }

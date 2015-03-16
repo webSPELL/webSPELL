@@ -124,7 +124,7 @@ module.exports = function( grunt ) {
 
         phpcs: {
             application: {
-                dir: [
+                src: [
                     phps,
                     csss,
                     excludes
@@ -162,6 +162,7 @@ module.exports = function( grunt ) {
                 relaxerror: [
                     "E001", // Document is missing a DOCTYPE declaration
                     "E003", // .row that were not children of a grid column
+                    "E041", // `.carousel-inner` must have exactly one `.item.active` child
                     "W001", // <head> is missing UTF-8 charset
                     "W002", // <head> is missing X-UA-Compatible <meta> tag
                     "W003", // <head> is missing viewport <meta> tag that enables responsiveness
