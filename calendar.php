@@ -662,8 +662,8 @@ if ($action === "savewar") {
         die($_language->module['no_access']);
     }
 
-    $date_start = strtotime($_POST['date_start']);
-    $date_end = strtotime($_POST['date_end']);
+    $date_start = strtotime($_POST['date-start']);
+    $date_end = strtotime($_POST['date-end']);
 
     safe_query(
         "UPDATE
@@ -696,8 +696,8 @@ if ($action === "savewar") {
         die($_language->module['no_access']);
     }
 
-    $date_start = strtotime($_POST['date_start']);
-    $date_end = strtotime($_POST['date_end']);
+    $date_start = strtotime($_POST['date-start']);
+    $date_end = strtotime($_POST['date-end']);
 
     safe_query(
         "INSERT INTO

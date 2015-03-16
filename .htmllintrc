@@ -5,5 +5,7 @@
   "id-no-dup": true,
   "indent-style": "spaces",
   "tag-name-lowercase": true,
-  "label-req-for": false
+  "label-req-for": false,
+  "attr-bans": [],
+  "line-end-style": "lf"
 }
