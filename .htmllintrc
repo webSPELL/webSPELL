@@ -1,6 +1,6 @@
 {
-  "id-class-style": "dash",
-  "attr-name-style": "dash",
+  "id-class-style": false,
+  "attr-name-style": false,
   "attr-req-value": false,
   "id-no-dup": true,
   "indent-style": "spaces",
