@@ -1,0 +1,13 @@
+<div class="row">
+    <div class="col-sm-2">
+        <select name="lang[$i]" id="lang-$i" onchange="langs[$i]=this.value; update_language();"></select>
+    </div>
+    <div class="col-sm-10">
+        <input name="headline[$i]" class="form-control" type="text" value="$headline" placeholder="%headline%" onchange="headline[$i]=this.value;">
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-12">
+        <textarea name="message[$i]" rows="20" cols="130" class="form-control" onfocus="which=this;textarea = this.name;" onblur="message[$i]=this.value;" onchange="message[$i]=this.value;">$message</textarea>
+    </div>
+</div>

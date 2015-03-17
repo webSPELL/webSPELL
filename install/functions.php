@@ -667,6 +667,8 @@ function fullinstall()
   `profilelast` int(11) NOT NULL default '0',
   `topnewsID` int(11) NOT NULL default '0',
   `sessionduration` int(3) NOT NULL default '0',
+  `sc_files` int(1) NOT NULL default '0',
+  `sc_demos` int(1) NOT NULL default '0',
   PRIMARY KEY  (`settingID`)
 ) AUTO_INCREMENT=2 ");
 

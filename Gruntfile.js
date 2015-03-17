@@ -1,8 +1,10 @@
 // For the usage of Grunt please refer to
 // http://24ways.org/2013/grunt-is-not-weird-and-hard/
 
-module.exports = function(grunt) {
+module.exports = function( grunt ) {
     "use strict";
+
+    require( "time-grunt" )( grunt );
 
     var javascripts = [
             "Gruntfile.js",
@@ -44,6 +46,8 @@ module.exports = function(grunt) {
             "!.jshintrc",
             "!circle.yml",
             "!Gruntfile.js",
+            "!scope.txt",
+            "!type.txt",
             "!grunt-log.txt",
             "!*.zip",
             "!Ruleset.xml",
@@ -61,14 +65,32 @@ module.exports = function(grunt) {
             "!tmp/**"
         ];
 
-    require("logfile-grunt")(grunt, {
+    require( "load-grunt-tasks" )( grunt, {
+        pattern: [ "grunt-*" ],
+        config: "package.json",
+        scope: "devDependencies"
+    } );
+
+    require( "logfile-grunt" )( grunt, {
         filePath: "./grunt-log.txt",
         clearLogFile: true
-    });
+    } );
 
     // Project configuration.
-    grunt.initConfig({
-        pkg: grunt.file.readJSON("package.json"),
+    grunt.initConfig( {
+        pkg: grunt.file.readJSON( "package.json" ),
+
+        scopeRegex: "\\b" +
+        grunt.file.read( "scope.txt" ).trim().split( "\n" ).join( "\\b|\\b" ) +
+        "\\b",
+
+        typeRegex: grunt.file.read( "type.txt" ).trim().split( "\n" ).join( "|" ),
+
+        versioncheck: {
+            options: {
+                hideUpToDate: true
+            }
+        },
 
         jshint: {
             options: {
@@ -81,13 +103,17 @@ module.exports = function(grunt) {
         },
 
         jscs: {
-            options: {
-                config: ".jscsrc"
-            },
-            src: [
-                javascripts,
-                excludes
-            ]
+            all: {
+                options: {
+                    "config": "node_modules/grunt-jscs/node_modules/jscs/presets/jquery.json"
+                },
+                files: {
+                    src: [
+                        javascripts,
+                        excludes
+                    ]
+                }
+            }
         },
 
         phplint: {
@@ -99,7 +125,7 @@ module.exports = function(grunt) {
 
         phpcs: {
             application: {
-                dir: [
+                src: [
                     phps,
                     csss,
                     excludes
@@ -137,6 +163,7 @@ module.exports = function(grunt) {
                 relaxerror: [
                     "E001", // Document is missing a DOCTYPE declaration
                     "E003", // .row that were not children of a grid column
+                    "E041", // `.carousel-inner` must have exactly one `.item.active` child
                     "W001", // <head> is missing UTF-8 charset
                     "W002", // <head> is missing X-UA-Compatible <meta> tag
                     "W003", // <head> is missing viewport <meta> tag that enables responsiveness
@@ -145,6 +172,18 @@ module.exports = function(grunt) {
                 ]
             },
             files: templates
+        },
+
+        csslint: {
+            options: {
+                csslintrc: ".csslintrc"
+            },
+            strict: {
+                options: {
+                    import: 2
+                },
+                src: [ "_stylesheet.css" ]
+            }
         },
 
         githooks: {
@@ -253,6 +292,9 @@ module.exports = function(grunt) {
                 command: "sh ./qphpcs.sh",
                 stdout: true,
                 stderr: true
+            },
+            sortLanguageKeys: {
+                command: "cd tools && php -f sort_translations.php"
             }
         },
 
@@ -261,101 +303,99 @@ module.exports = function(grunt) {
                 options: {
                     archive: "webspell.zip"
                 },
-                src:releaseFiles
+                src: releaseFiles
             },
             release: {
                 options: {
                     archive: "webSPELL-<%= pkg.version %>.zip"
                 },
-                src:releaseFiles
+                src: releaseFiles
             }
+        },
+
+        concurrent: {
+            codecheck: [
+                "js",
+                "php",
+                "html",
+                "css"
+            ],
+            codecheckcircle: [
+                "jshint",
+                "jscs",
+                "phpcs",
+                "htmlhint",
+                "htmllint",
+                "bootlint",
+                "css"
+            ],
+            codechecktravis: [
+                "jshint",
+                "jscs",
+                "phplint",
+                "phpcs",
+                "htmlhint",
+                "htmllint",
+                "bootlint",
+                "css"
+            ]
         }
-    });
+    } );
 
-    // These plugins provide necessary tasks.
-    grunt.loadNpmTasks("grunt-contrib-watch");
-    grunt.loadNpmTasks("grunt-contrib-jshint");
-    grunt.loadNpmTasks("grunt-htmlhint");
-    grunt.loadNpmTasks("grunt-phplint");
-    grunt.loadNpmTasks("grunt-phpcs");
-    grunt.loadNpmTasks("grunt-phpcpd");
-    grunt.loadNpmTasks("grunt-jscs");
-    grunt.loadNpmTasks("grunt-text-replace");
-    grunt.loadNpmTasks("grunt-templated-changelog");
-    grunt.loadNpmTasks("grunt-bump");
-    grunt.loadNpmTasks("grunt-githooks");
-    grunt.loadNpmTasks("grunt-commit-message-verify");
-    grunt.loadNpmTasks("grunt-bootlint");
-    grunt.loadNpmTasks("grunt-htmllint");
-    grunt.loadNpmTasks("grunt-casperjs");
-    grunt.loadNpmTasks("grunt-newer");
-    grunt.loadNpmTasks("grunt-contrib-compress");
-    grunt.loadNpmTasks("grunt-exec");
-    grunt.loadNpmTasks("grunt-karma");
+    grunt.registerTask( "codecheck", [
+        "concurrent:codecheck"
+    ] );
 
-    grunt.registerTask("codecheck", [
-        "js",
-        "php",
-        "html"
-    ]);
-
-    grunt.registerTask("codecheck_newer", [
+    grunt.registerTask( "codecheck_newer", [
         "newer:js",
         "newer:phplint",
         "newer:phpcs",
         "newer:html"
-    ]);
+    ] );
 
-    grunt.registerTask("codecheck_circle", [
-        "jshint",
-        "jscs",
-        "phpcs",
+    grunt.registerTask( "codecheck_circle", [
+        "concurrent:codecheckcircle"
+    ] );
+
+    grunt.registerTask( "codecheck_travis", [
+        "concurrent:codechecktravis"
+    ] );
+
+    grunt.registerTask( "html", [
         "htmlhint",
         "htmllint",
         "bootlint"
-    ]);
+    ] );
 
-    grunt.registerTask("codecheck_travis", [
-        "jshint",
-        "jscs",
-        "phplint",
-        "phpcs",
-        "htmlhint",
-        "htmllint",
-        "bootlint"
-    ]);
-
-    grunt.registerTask("html", [
-        "htmlhint",
-        "htmllint",
-        "bootlint"
-    ]);
-
-    grunt.registerTask("js", [
+    grunt.registerTask( "js", [
         "jshint",
         "jscs",
         "karma:continuous"
-    ]);
+    ] );
 
-    grunt.registerTask("php", [
+    grunt.registerTask( "php", [
         "phplint",
         "phpcs"
-    ]);
+    ] );
 
-    grunt.registerTask("git", [
+    grunt.registerTask( "css", [
+        "csslint"
+    ] );
+
+    grunt.registerTask( "git", [
         "grunt-commit-message-verify"
-    ]);
+    ] );
 
-    grunt.registerTask("test", [
+    grunt.registerTask( "test", [
         "codecheck",
         "git"
-    ]);
+    ] );
 
-    grunt.registerTask("quick", [
+    grunt.registerTask( "quick", [
         "exec:quickcheck"
-    ]);
+    ] );
 
-    grunt.registerTask("release", "Creating a new webSPELL Release", function(releaseLevel) {
+    grunt.registerTask( "release", "Creating a new webSPELL Release", function( releaseLevel ) {
         if (
             arguments.length === 0 ||
             (
@@ -364,21 +404,22 @@ module.exports = function(grunt) {
             releaseLevel !== "major"
             )
         ) {
-            grunt.log.error("Specify if this is a release:patch, release:minor or release:major");
+            grunt.log.error( "Specify if this is a release:patch, release:minor or release:major" );
         } else {
-            grunt.task.run([
+            grunt.task.run( [
                 "bumpOnly:" + releaseLevel,
+                "exec:sortLanguageKeys",
                 "replace:copyright",
                 "replace:version",
                 "changelog",
                 "bumpCommit:" + releaseLevel,
                 "compress:release"
-            ]);
+            ] );
         }
-    });
+    } );
 
-    grunt.registerTask("bumpOnly", function() {
-        grunt.config("bump", {
+    grunt.registerTask( "bumpOnly", function() {
+        grunt.config( "bump", {
             options: {
                 files: [
                     "package.json",
@@ -389,11 +430,12 @@ module.exports = function(grunt) {
                 push: false,
                 globalReplace: false
             }
-        });
-        return grunt.task.run("bump");
-    });
-    grunt.registerTask("bumpCommit", function() {
-        grunt.config("bump", {
+        } );
+        return grunt.task.run( "bump" );
+    } );
+
+    grunt.registerTask( "bumpCommit", function() {
+        grunt.config( "bump", {
             options: {
                 files: [],
                 updateConfigs: [],
@@ -411,10 +453,11 @@ module.exports = function(grunt) {
                 gitDescribeOptions: "--tags --always --abbrev=1 --dirty=-d",
                 globalReplace: false
             }
-        });
-        return grunt.task.run("bump");
-    });
-    grunt.config.set("grunt-commit-message-verify", {
+        } );
+        return grunt.task.run( "bump" );
+    } );
+
+    grunt.config.set( "grunt-commit-message-verify", {
         minLength: 0,
         maxLength: 3000,
 
@@ -427,25 +470,31 @@ module.exports = function(grunt) {
 
         regexes: {
             "check type": {
-                regex: /^((refactor|docs|chore|wip|fix|feat|style|test)(\(\w+\)))/,
-                explanation:
-                    "The commit should start with sth like fix, feat, docs, refactor, chore " +
-                    "style or test, and include a scope like (forum), (news) or (buildtools)"
+                regex: new RegExp( "^(" + grunt.config.get( "typeRegex" ) + ")\\(", "i" ),
+                explanation: "The commit should start with a type like fix, feat, or chore. " +
+                "See type.txt for a full list."
             },
-            "check close github issue": {
-                regex: /(?!(((close|resolve)(s|d)?)|fix(es|ed)?) #\d+)/ig,
-                explanation:
-                    "If closing issue, commit should include github issue no like " +
-                    "fix #123, closes #123 or resolves #123"
+            "check scope": {
+                regex: new RegExp( "\\((" + grunt.config.get( "scopeRegex" ) + ")\\)", "i" ),
+                explanation: "The commit should include a scope like (forum), (news) or " +
+                "(buildtools). See scope.txt for a full list."
             },
+            // commented out for later use
+            //"check close github issue": {
+            //    regex: /((?=(((close|resolve)(s|d)?)|fix(es|ed)?))
+            // ((((close|resolve)(s|d)?)|fix(es|ed)?) #\d+))/ig,
+            //    explanation:
+            //        "If closing an issue, the commit should include github issue no like " +
+            //        "fix #123, closes #123 or resolves #123"
+            //},
             "check subject format": {
-                regex: /(: \w+)/ig,
+                regex: /(: \w+.*)/ig,
                 explanation: "The commit message subject should look like this ': <subject>'"
             }
         },
         skipCheckAfterIndent: false,
-        forceSecondLineEmpty: false,
+        forceSecondLineEmpty: true,
         messageOnError: "",
         shellCommand: "git log --format=%B --no-merges -n 1"
-    });
+    } );
 };

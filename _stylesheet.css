@@ -79,7 +79,7 @@ body {
     white-space: nowrap;
 }
 
-a.flag img {
+.flag img {
     margin: 1px;
     -webkit-filter: grayscale(100%);
     filter: grayscale(100%);
@@ -87,13 +87,14 @@ a.flag img {
     opacity: 0.5;
 }
 
-a.flag.active img, a.flag:hover img {
+.flag.active img,
+.flag:hover img {
     filter: none;
     -webkit-filter: none;
     opacity: 1;
 }
 
-.input-group span.input-group-addon.captcha-img {
+.input-group .input-group-addon.captcha-img {
     padding-top: 4px;
     padding-bottom: 3px;
 }
@@ -116,7 +117,7 @@ a.flag.active img, a.flag:hover img {
     text-align: left;
 }
 
-span.underline {
+.underline {
     text-decoration: underline;
 }
 

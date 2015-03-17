@@ -98,7 +98,9 @@ if (isset($_POST[ 'submit' ])) {
                 date_format='" . $_POST[ 'date_format' ] . "',
                 time_format='" . $_POST[ 'time_format' ] . "',
                 user_guestbook='" . $_POST[ 'user_guestbook' ] . "',
-                autoresize='" . $_POST[ 'autoresize' ] . "'"
+                autoresize='" . $_POST[ 'autoresize' ] . "',
+                sc_demos='" . intval($_POST[ 'sc_demos' ]) . "',
+                sc_files='" . intval($_POST[ 'sc_files' ]) . "' "
         );
         safe_query("UPDATE " . PREFIX . "styles SET title='" . $_POST[ 'title' ] . "' ");
         redirect("admincenter.php?site=settings", "", 0);
@@ -210,6 +212,24 @@ if (isset($_POST[ 'submit' ])) {
         "value='" . $ds[ 'captcha_type' ] . "' selected='selected'",
         $captcha_type
     );
+
+    $sc_demos = "<option value='1'>" . $_language->module[ 'demos_top' ] . "</option><option value='2'>" .
+        $_language->module[ 'demos_latest' ] . "</option>";
+    $sc_demos = str_replace(
+        "value='" . $ds[ 'sc_demos' ] . "'",
+        "value='" . $ds[ 'sc_demos' ] . "' selected='selected'",
+        $sc_demos
+    );
+
+    $sc_files = "<option value='1'>" . $_language->module[ 'files_top' ] . "</option><option value='2'>" .
+        $_language->module[ 'files_latest' ] . "</option>";
+    $sc_files = str_replace(
+        "value='" . $ds[ 'sc_files' ] . "'",
+        "value='" . $ds[ 'sc_files' ] . "' selected='selected'",
+        $sc_files
+    );
+
+
 
     $format_date = "<option value='d.m.y'>DD.MM.YY</option>
                     <option value='d.m.Y'>DD.MM.YYYY</option>
@@ -328,6 +348,8 @@ if (isset($_POST[ 'submit' ])) {
     <div class="tooltip" id="id58"><?php echo $_language->module[ 'tooltip_58' ]; ?></div>
     <div class="tooltip" id="id59"><?php echo $_language->module[ 'tooltip_59' ]; ?></div>
     <div class="tooltip" id="id60"><?php echo $_language->module[ 'tooltip_60' ]; ?></div>
+    <div class="tooltip" id="id61"><?php echo $_language->module[ 'tooltip_61' ]; ?></div>
+    <div class="tooltip" id="id62"><?php echo $_language->module[ 'tooltip_62' ]; ?></div>
     <table width="100%" border="0" cellspacing="1" cellpadding="3">
         <tr>
             <td width="15%"><b><?php echo $_language->module[ 'page_title' ]; ?></b></td>
@@ -409,7 +431,7 @@ if (isset($_POST[ 'submit' ])) {
             </tr>
             <tr>
                 <td align="right"><select name="captcha_type" onmouseover="showWMTT('id44')"
-                                          onmouseout="hideWMTT()"></select><?php echo $captcha_type; ?></select></td>
+                                          onmouseout="hideWMTT()"><?php echo $captcha_type; ?></select></td>
                 <td><?php echo $_language->module[ 'captcha_type' ]; ?></td>
             </tr>
             <tr>
@@ -582,7 +604,7 @@ if (isset($_POST[ 'submit' ])) {
             </tr>
             <tr>
                 <td align="right"><select name="user_guestbook" onmouseover="showWMTT('id60')"
-                                          onmouseout="hideWMTT()"></select><?php echo $user_gbook; ?></select></td>
+                                          onmouseout="hideWMTT()"><?php echo $user_gbook; ?></select></td>
                 <td><?php echo $_language->module[ 'user_guestbook' ]; ?></td>
             </tr>
             <tr>
@@ -618,7 +640,7 @@ if (isset($_POST[ 'submit' ])) {
             </tr>
             <tr>
                 <td align="right"><select name="language" onmouseover="showWMTT('id40')"
-                                          onmouseout="hideWMTT()"></select><?php echo $langdirs; ?></select></td>
+                                          onmouseout="hideWMTT()"><?php echo $langdirs; ?></select></td>
                 <td><?php echo $_language->module[ 'default_language' ]; ?></td>
             </tr>
             <tr>
@@ -659,7 +681,7 @@ if (isset($_POST[ 'submit' ])) {
             </tr>
             <tr>
                 <td align="right"><select name="autoresize" onmouseover="showWMTT('id50')"
-                                          onmouseout="hideWMTT()"></select><?php echo $autoresize; ?></select></td>
+                                          onmouseout="hideWMTT()"><?php echo $autoresize; ?></select></td>
                 <td><?php echo $_language->module[ 'autoresize' ]; ?></td>
             </tr>
             <tr>
@@ -716,6 +738,20 @@ if (isset($_POST[ 'submit' ])) {
             <tr>
                 <td align="right"><?php echo $spamapiblockerror; ?></td>
                 <td><?php echo $_language->module[ 'spamapiblockerror' ]; ?></td>
+            </tr>
+            <tr>
+                <td width="50%"><b><?php echo $_language->module[ 'sc_modules' ]; ?>:</b></td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td align="right"><select name="sc_demos" onmouseover="showWMTT('id61')"
+                                          onmouseout="hideWMTT()"><?php echo $sc_demos; ?></select></td>
+                <td><?php echo $_language->module[ 'demos' ]; ?></td>
+            </tr>
+            <tr>
+                <td align="right"><select name="sc_files" onmouseover="showWMTT('id62')"
+                                          onmouseout="hideWMTT()"><?php echo $sc_files; ?></select></td>
+                <td><?php echo $_language->module[ 'files' ]; ?></td>
             </tr>
         </table>
     </div>
