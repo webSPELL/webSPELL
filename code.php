@@ -31,8 +31,7 @@ include("_functions.php");
 
 $_language->readModule('code');
 
-$bg1 = BG_1;
-$bg2 = BG_2;
+$componentsCss = generateComponents($components['css'], 'css');
 $data_array = array();
 $data_array['$rewriteBase'] = $rewriteBase;
 $data_array['$componentsCss'] = $componentsCss;
