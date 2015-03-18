@@ -1,7 +1,7 @@
 {
   "name": "webspell",
-  "version": "4.2.3",
-  "homepage": "http://webspell.org",
+  "version": "4.3.0",
+  "homepage": "http://www.webspell.org",
   "authors": [
     "webSPELL e.V. <root@webspell.org>"
   ],
@@ -15,8 +15,20 @@
     "Content Management System"
   ],
   "dependencies": {
-    "bootstrap": "~3.3.2",
+    "PHPMailer": "PHPMailer/PHPMailer#~5.2.9",
+    "bootstrap": "~3.3.4",
     "jquery": ">=2.1.3",
-    "webshim": "~1.15.5"
-  }
+    "webshim": "~1.15.7"
+  },
+  "main": "index.php",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "components",
+    "vendor",
+    "test",
+    "tests"
+  ]
 }
