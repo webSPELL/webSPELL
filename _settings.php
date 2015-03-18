@@ -39,7 +39,7 @@ mb_internal_encoding("UTF-8");
 
 // -- SET INCLUDE-PATH FOR vendors --//
 
-$path = __DIR__.DIRECTORY_SEPARATOR.'vendor';
+$path = __DIR__.DIRECTORY_SEPARATOR.'components';
 set_include_path(get_include_path() . PATH_SEPARATOR .$path);
 
 // -- SET HTTP ENCODING -- //

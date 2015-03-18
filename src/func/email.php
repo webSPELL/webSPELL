@@ -28,7 +28,7 @@
 
 namespace webspell;
 
-require 'phpmailer/phpmailer/PHPMailerAutoload.php';
+require 'PHPMailer/PHPMailerAutoload.php';
 class Email
 {
     public static function sendEmail($from, $module, $to, $subject, $message, $pop = true)
