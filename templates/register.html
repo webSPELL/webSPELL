@@ -1,75 +1,79 @@
-<div class="login">
-    <form method="post" name="post" action="index.php?site=register" class="form-horizontal" role="form">
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">%registration%</h3>
+    </div>
+    <div class="panel-body">
+        <form action="index.php?site=register" method="post" name="post" role="form" class="form-horizontal">
 
-        <!-- Error Box -->
-        $showerror
+            <!-- Error Box -->
+            $showerror
 
-        <!-- Nickname -->
-        <div class="form-group">
-            <label class="col-sm-4 control-label" for="input-email">%nickname%</label>
+            <!-- Nickname -->
+            <div class="form-group">
+                <label for="input-nickname" class="col-xs-12 col-md-3 control-label">%nickname%:</label>
 
-            <div class="col-sm-8">
-                <input type="text" id="input-email" name="nickname" value="$nickname" maxlength="30" size="30"
-                    class="form-control">
-            </div>
-        </div>
-
-        <!-- Username -->
-        <div class="form-group">
-            <label class="col-sm-4 control-label" for="input-username">%username%</label>
-
-            <div class="col-sm-8">
-                <input type="text" id="input-username" name="username" placeholder="%for_login%" value="$username"
-                    size="30" class="form-control">
-            </div>
-        </div>
-
-        <!-- Password -->
-        <div class="form-group">
-            <label class="col-sm-4 control-label" for="input-password">%password%</label>
-
-            <div class="col-sm-8">
-                <input type="password" id="input-password" name="pwd1" value="$pwd1" size="30" class="form-control">
-            </div>
-        </div>
-
-        <!-- Password repeat -->
-        <div class="form-group">
-            <label class="col-sm-4 control-label" for="input-repeat">%repeat%</label>
-
-            <div class="col-sm-8">
-                <input type="password" id="input-repeat" name="pwd2" value="$pwd2" size="30" class="form-control">
-            </div>
-        </div>
-
-        <!-- E-Mail -->
-        <div class="form-group">
-            <label class="col-sm-4 control-label" for="input-mail">%mail%</label>
-
-            <div class="col-sm-8">
-                <input type="email" id="input-mail" name="mail" value="$mail" autocomplete="email" size="30"
-                    class="form-control">
-            </div>
-        </div>
-
-        <!-- Security code -->
-        <div class="form-group">
-            <div class="row">
-                <div class="col-sm-4 control-label"><label class="captcha-img" for="input-security-code">$captcha</label></div>
-                <div class="col-sm-8">
-                    <input type="number" id="input-security-code" name="captcha" maxlength="5" size="5"
-                        placeholder="Enter Captcha" class="form-control">
-                    <input name="captcha_hash" type="hidden" value="$hash">
+                <div class="col-xs-12 col-md-9">
+                    <input type="text" name="nickname" class="form-control" id="input-nickname">
                 </div>
             </div>
-        </div>
 
-        <!-- Register now -->
-        <div class="form-group">
-            <p class="col-sm-12 text-right">
-                <input name="save" type="submit" value="%register_now%" class="btn btn-primary">
-            </p>
-        </div>
+            <!-- Username -->
+            <div class="form-group">
+                <label for="input-username" class="col-xs-12 col-md-3 control-label">%username%:</label>
 
-    </form>
+                <div class="col-xs-12 col-md-9">
+                    <input type="text" name="username" class="form-control" id="input-username">
+                    <p class="help-block">%for_login%</p>
+                </div>
+            </div>
+
+            <!-- Password -->
+            <div class="form-group">
+                <label for="input-password" class="col-xs-12 col-md-3 control-label">%password%:</label>
+
+                <div class="col-xs-12 col-md-9">
+                    <input type="text" name="pwd1" class="form-control" id="input-password" value="$pwd1">
+                </div>
+            </div>
+
+            <!-- Password repeat -->
+            <div class="form-group">
+                <label for="input-repeat" class="col-xs-12 col-md-3 control-label">%password%:</label>
+
+                <div class="col-xs-12 col-md-9">
+                    <input type="password" name="pwd2" class="form-control" id="input-repeat" value="$pwd2">
+                </div>
+            </div>
+
+            <!-- E-Mail -->
+            <div class="form-group">
+                <label for="input-mail" class="col-xs-12 col-md-3 control-label">%mail%:</label>
+
+                <div class="col-xs-12 col-md-9">
+                    <input type="email" name="mail" class="form-control" id="input-mail" value="$mail" autocomplete="email">
+                </div>
+            </div>
+
+            <!-- Security code -->
+            <div class="form-group">
+                <label for="input-security-code" class="col-xs-12 col-md-3 control-label">%security_code%:</label>
+
+                <div class="col-xs-12 col-md-9">
+                    <div class="input-group">
+                        <span class="input-group-addon captcha-img">$captcha</span>
+                        <input type="number" name="captcha" class="form-control" id="input-security-code">
+                        <input name="captcha_hash" type="hidden" value="$hash">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Submit button -->
+            <div class="form-group">
+                <div class="col-xs-12 text-right">
+                    <button type="submit" name="save" class="btn btn-primary">%register_now%</button>
+                </div>
+            </div>
+
+        </form>
+    </div>
 </div>
