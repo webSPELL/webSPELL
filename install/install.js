@@ -1,52 +1,49 @@
-$(function () {
-    if ($('#todo_list').length > 0) {
-        var data = $('#todo_list').text();
-        var todo = jQuery.parseJSON(data);
-        var all_count = todo.length;
-        var job = todo.shift();
-        handleJob(job, 0, all_count, todo);
+$(function() {
+    if ($("#todo_list").length > 0) {
+        var data = $("#todo_list").text(),
+            todo = jQuery.parseJSON(data),
+            job = todo.shift();
+        handleJob(job, 0, todo.length, todo);
     }
 });
-function scroll_down() {
-    var details_text = $('#details_text');
-    details_text.scrollTop(details_text[0].scrollHeight);
+function scrollDown() {
+    var detailsText = $("#details_text");
+    detailsText.scrollTop(detailsText[0].scrollHeight);
 }
-function handleJob(job, done_count, all_count, todo) {
+function handleJob(job, doneCount, allCount, todo) {
     jQuery.ajax({
-        url: 'ajax.php?function=' + job
-    }).done(function (result) {
-        var details_text = $('#details_text');
-        details_text.append(result.message + "<br/>");
-        scroll_down()
-        done_count++;
-        var percentage = Math.ceil((done_count / all_count) * 100);
-        $('#progress_bar').attr('aria-valuenow', percentage);
-        $('#progress_bar').css('width', percentage + '%');
-        $('#progress_bar span').html(percentage + '%');
+        url: "ajax.php?function=" + job
+    }).done(function(result) {
+        var detailsText = $("#details_text"), percentage;
+        detailsText.append(result.message + "<br/>");
+        scrollDown()
+        doneCount++;
+        percentage = Math.ceil((doneCount / allCount) * 100);
+        $("#progress_bar").attr("aria-valuenow", percentage);
+        $("#progress_bar").css("width", percentage + "%");
+        $("#progress_bar span").html(percentage + "%");
         if (result.status == "fail") {
-            install_failed()
-        }
-        else {
-            if (done_count < all_count) {
-            	job = todo.shift();
-                handleJob(job, done_count, all_count, todo);
-            }
-            else {
-                install_successful();
+            installFailedCallback()
+        } else {
+            if (doneCount < allCount) {
+                job = todo.shift();
+                handleJob(job, doneCount, allCount, todo);
+            } else {
+                installSuccessfulCallback();
             }
         }
-    }).fail(function (result) {
-        install_failed()
+    }).fail(function(result) {
+        installFailedCallback()
     });
 }
-function install_failed() {
-    $('#details_text').append('<font color="red">Install failed</font>');
-    $('#progress_bar').addClass('progress-bar-danger');
-    scroll_down();
+function installFailedCallback() {
+    $("#details_text").append("<font color='red'>Install failed</font>");
+    $("#progress_bar").addClass("progress-bar-danger");
+    scrollDown();
 }
-function install_successful() {
-    $('#details_text').append('<font color="green">Install successful</font>');
-    $('#progress_bar').addClass('progress-bar-success');
-    scroll_down();
-    $('#result').css('display', 'block');
+function installSuccessfulCallback() {
+    $("#details_text").append("<font color='green'>Install successful</font>");
+    $("#progress_bar").addClass("progress-bar-success");
+    scrollDown();
+    $("#result").css("display", "block");
 }
