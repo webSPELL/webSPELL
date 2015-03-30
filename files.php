@@ -886,12 +886,6 @@ if ($action == "save") {
         $rateform = '<i>' . $_language->module[ 'rate_have_to_reg_login' ] . '</i>';
     }
 
-    // DISPLAY
-    $bg1 = BG_1;
-    $bg2 = BG_2;
-    $border = BORDER;
-    $pagebg = PAGEBG;
-
     $admintools = '';
     // ADMINTOOLS
     if (isfileadmin($userID)) {
@@ -1076,9 +1070,7 @@ if ($action == "save") {
         );
         $top5 = '<strong>' . $_language->module[ 'top_5_downloads' ] . '</strong><ul class="list-group">';
 
-        $n = 1;
         while ($file = mysqli_fetch_array($top5qry)) {
-            $n % 2 ? $bg = BG_1 : $bg = BG_2;
             $filename = $file[ 'filename' ];
             if (mb_strlen($filename) > 12) {
                 $filename = mb_substr($filename, 0, 12);
@@ -1150,7 +1142,6 @@ if ($action == "save") {
                     );
                 $catFileTotal = mysqli_num_rows($catFileQry);
                 if ($catFileTotal || $subcategories) {
-                    $i++;
                     $traffic = 0;
                     $downloads = 0;
                     $size = 0;
