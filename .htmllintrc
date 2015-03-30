@@ -1,8 +1,11 @@
 {
-  "id-class-style": "dash",
-  "attr-name-style": "dash",
+  "id-class-style": false,
+  "attr-name-style": false,
   "attr-req-value": false,
   "id-no-dup": true,
   "indent-style": "spaces",
-  "tag-name-lowercase": true
+  "tag-name-lowercase": true,
+  "label-req-for": false,
+  "attr-bans": [],
+  "line-end-style": "lf"
 }

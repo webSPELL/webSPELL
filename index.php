@@ -58,8 +58,6 @@ header('X-UA-Compatible: IE=edge,chrome=1');
     <link href="tmp/rss.xml" rel="alternate" type="application/rss+xml" title="<?php
     echo getinput($myclanname);
     ?> - RSS Feed">
-
-    <script src="js/bbcode.js"></script>
     <!-- end Head & Title include -->
 
 </head>

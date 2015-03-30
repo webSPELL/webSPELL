@@ -32,7 +32,7 @@
 
 		<div id="sidebar" class="interface">
 
-			<a class="toc_title" href="../index.html"> Webshim <span class="version">(<span class="ws-version">1.15.5</span>)</span></a>
+			<a class="toc_title" href="../index.html"> Webshim <span class="version">(<span class="ws-version">1.15.7</span>)</span></a>
 			<ul class="toc_section">
 				<li>
 					&raquo; <a href="https://github.com/aFarkas/webshim">GitHub Repository</a>
@@ -199,7 +199,11 @@ webshim.setOptions('forms', {
 		"events": "focusout change", //Note: The 'invalid' and 'updatevalidation' events will be always used
 		
 		//the class of the errorbox, which is normally appended to the fieldWrapper
-		"errorBoxClass": "ws-errorbox", 
+		"errorBoxClass": "ws-errorbox",
+		//the html tag used for error boxes, to adjust to your page structure / semantics
+		"errorBoxWrapper": "div",
+		//the html tag used for messages in error boxes, to adjust to your page structure / semantics
+    	"errorMessageWrapper": "p",
 		
 		//classes to adjust to your CSS/CSS-framework
 		"errorMessageClass": "ws-errormessage",

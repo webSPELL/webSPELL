@@ -35,11 +35,13 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'invalid_password'=>'Εχετε εισαγει λαθος κωδικο.<br><br><a href="javascript:history.back()">Καντε πισω και ξαναπροσπαθηστε.</a>',
-  'ip_banned'=>'Η IP σας αποκλειστηκε απο το site.<br>%reason%<br><br><a href="javascript:history.back()">Καντε πισω</a>',
+  'invalid_password'=>'Εχετε εισαγει λαθος κωδικο.',
+  'ip_banned'=>'Η IP σας αποκλειστηκε απο το site.<br>%reason%',
   'login_successful'=>'Εισοδος επιτυχης!',
-  'no_user'=>'Ο χρηστης <b>%username%</b> δεν ειναι διαθεσιμος σε αυτο το συστημα.<br><br><a href="javascript:history.back()">Καντε πισω και ξαναπροσπαθηστε!</a>',
-  'not_activated'=>'Ο λογαριασμος σας δεν εχει ενεργοποιηθει ακομα.<br><br><a href="javascript:history.back()">Πισω</a>',
-  'session_error'=>'Παρακαλω βεβαιωθείτε οτι τα cookies ειναι ενεργοποιημενα στον browser σας.<br>εαν το προβλημα παραμενει επικοινωνηστε με τον webmaster.<br><br><a href="javascript:history.back()">Πισω</a>'
+  'no_user'=>'Ο χρηστης <b>%username%</b> δεν ειναι διαθεσιμος σε αυτο το συστημα.',
+  'not_activated'=>'Ο λογαριασμος σας δεν εχει ενεργοποιηθει ακομα.',
+  'session_error'=>'Παρακαλω βεβαιωθείτε οτι τα cookies ειναι ενεργοποιημενα στον browser σας.<br>εαν το προβλημα παραμενει επικοινωνηστε με τον webmaster.',
+  'return'=>'<a href="javascript:history.back()">Πισω</a>',
+  'return_reenter' => '<a href="javascript:history.back()">Καντε πισω και ξαναπροσπαθηστε.</a>'
 );
 ?>

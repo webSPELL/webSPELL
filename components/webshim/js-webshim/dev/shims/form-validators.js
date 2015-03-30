@@ -252,8 +252,8 @@ webshims.ready('form-validation', function(){
 (function(){
 	var formCFG = webshims.cfg.forms;
 	var addCustomValidityRule = webshims.addCustomValidityRule;
-	var getId = function(name){
-		return document.getElementById(name) || document.getElementsByName(name);
+	var getId = function(i, name){
+		return document.getElementById(name) || document.getElementsByName(name)[0];
 	};
 
 	addCustomValidityRule('partialPattern', function(elem, val, pattern){

@@ -777,6 +777,12 @@ function update_base_12($_database)
   `users` int(11) NOT NULL default '0',
   `profilelast` int(11) NOT NULL default '0',
   `topnewsID` int(11) NOT NULL default '0',
+<<<<<<< HEAD
+=======
+  `sessionduration` int(3) NOT NULL default '0',
+  `sc_files` int(1) NOT NULL default '0',
+  `sc_demos` int(1) NOT NULL default '0',
+>>>>>>> dev
   PRIMARY KEY  (`settingID`)
 ) AUTO_INCREMENT=2 ");
 
@@ -1467,7 +1473,7 @@ function update_40000_40100($_database)
     $transaction->addQuery("ALTER TABLE `" . PREFIX . "forum_topics` ADD `sticky` INT(1) NOT NULL DEFAULT '0'");
 
     // birthday converter
-    $transaction->addQuery("ALTER TABLE `" . PREFIX . "user` ADD `birthday2` DATETIME NOT NULL AFTER `birthday`");
+    mysqli_query($_database, "ALTER TABLE `" . PREFIX . "user` ADD `birthday2` DATETIME NOT NULL AFTER `birthday`");
     $q = mysqli_query($_database, "SELECT userID, birthday FROM `" . PREFIX . "user`");
     while ($ds = mysqli_fetch_array($q)) {
         $transaction->addQuery("UPDATE `" . PREFIX . "user` SET birthday2='" . date("Y", $ds['birthday']) . "-" . date("m", $ds['birthday']) . "-" . date("d", $ds['birthday']) . "' WHERE userID='" . $ds['userID'] . "'");
