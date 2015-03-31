@@ -259,7 +259,7 @@ if ($action == "add") {
 
         $errors = array();
 
-        $upload = new \webspell\Upload('banner');
+        $upload = new \webspell\HttpUpload('banner');
         if ($upload->hasFile()) {
             if ($upload->hasError() === false) {
                 $mime_types = array('image/jpeg','image/png','image/gif');
@@ -298,7 +298,7 @@ if ($action == "add") {
             }
         }
 
-        $upload = new \webspell\Upload('banner_small');
+        $upload = new \webspell\HttpUpload('banner_small');
         if ($upload->hasFile()) {
             if ($upload->hasError() === false) {
                 $mime_types = array('image/jpeg','image/png','image/gif');
@@ -379,7 +379,7 @@ if ($action == "add") {
 
         $errors = array();
 
-        $upload = new \webspell\Upload('banner');
+        $upload = new \webspell\HttpUpload('banner');
         if ($upload->hasFile()) {
             if ($upload->hasError() === false) {
                 $mime_types = array('image/jpeg','image/png','image/gif');
@@ -418,7 +418,7 @@ if ($action == "add") {
             }
         }
 
-        $upload = new \webspell\Upload('banner_small');
+        $upload = new \webspell\HttpUpload('banner_small');
         if ($upload->hasFile()) {
             if ($upload->hasError() === false) {
                 $mime_types = array('image/jpeg','image/png','image/gif');

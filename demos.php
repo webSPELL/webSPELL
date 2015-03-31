@@ -106,7 +106,7 @@ echo $title_demos;
 
 if (isset($_POST[ 'save' ])) {
     if (isfileadmin($userID)) {
-        $demo = new \webspell\Upload('demo');
+        $demo = new \webspell\HttpUpload('demo');
 
         $game = $_POST[ 'game' ];
         $clanname1 = $_POST[ 'clanname1' ];
@@ -203,7 +203,7 @@ if (isset($_POST[ 'save' ])) {
     }
 } elseif (isset($_POST[ 'saveedit' ])) {
     if (isfileadmin($userID)) {
-        $demo = new \webspell\Upload('demo');
+        $demo = new \webspell\HttpUpload('demo');
 
         $demoID = (int)$_POST[ 'demoID' ];
         $game = $_POST[ 'game' ];

@@ -59,7 +59,7 @@ if ($userID) {
     } elseif (isset($_POST[ 'saveform' ])) {
         $dir = 'images/gallery/';
 
-        $upload = new \webspell\Upload('picture');
+        $upload = new \webspell\HttpUpload('picture');
 
         if ($upload->hasFile()) {
             if ($upload->hasError() === false) {

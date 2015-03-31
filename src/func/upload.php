@@ -27,29 +27,26 @@
 
 namespace webspell;
 
-class Upload
-{
-    private $field;
+abstract class Upload {
 
-    public function __construct($field_name)
-    {
-        $this->field = $field_name;
-    }
+    const UPLOAD_ERR_CANT_READ = 99;
 
-    public function hasFile()
-    {
-        return (isset($_FILES[ $this->field ]) && $_FILES[ $this->field ][ 'error' ] != UPLOAD_ERR_NO_FILE);
-    }
+    protected $error;
 
-    public function hasError()
-    {
-        return $_FILES[ $this->field ][ 'error' ] !== UPLOAD_ERR_OK;
-    }
+    public abstract function hasFile();
+    public abstract function hasError();
+    public abstract function getError();
+    public abstract function getTempFile();
+    public abstract function getFilename();
+    public abstract function getSize();
+    public abstract function saveAs($newFilePath, $override = true);
+    protected abstract function getFallbackMimeType();
 
-    public function getError()
+    public function getExtension()
     {
-        if ($this->hasFile()) {
-            return $_FILES[ $this->field ][ 'error' ];
+        $filename = $this->getFilename();
+        if (stristr($filename, ".") !== false) {
+            return substr($filename, strrpos($filename, ".") + 1);
         } else {
             return null;
         }
@@ -57,7 +54,7 @@ class Upload
 
     public function getMimeType()
     {
-        $filename = $_FILES[ $this->field ][ 'tmp_name' ];
+        $filename = $this->getTempFile();
         if (function_exists("finfo_file")) {
             $handle = finfo_open(FILEINFO_MIME_TYPE);
             $mime = finfo_file($handle, $filename);
@@ -69,8 +66,9 @@ class Upload
         }
 
         if (!isset($mime) || empty($mime)) {
-            $mime = $_FILES[ $this->field ][ 'type' ];
+            $mime = $this->getFallbackMimeType();
         }
+
         return $mime;
     }
 
@@ -93,45 +91,11 @@ class Upload
         return false;
     }
 
-    public function getTempFile()
-    {
-        return $_FILES[ $this->field ][ 'tmp_name' ];
-    }
-
-    public function getFilename()
-    {
-        return basename($_FILES[ $this->field ][ 'name' ]);
-    }
-
-    public function getSize()
-    {
-        return $_FILES[ $this->field ]['size'];
-    }
-
-    public function getExtension()
-    {
-        $filename = $this->getFilename();
-        if (stristr($filename, ".") !== false) {
-            return substr($filename, strrpos($filename, ".") + 1);
-        } else {
-            return null;
-        }
-    }
-
-    public function saveAs($newFilePath, $override = true)
-    {
-        if (!file_exists($newFilePath) || $override) {
-            return move_uploaded_file($_FILES[ $this->field ][ 'tmp_name' ], $newFilePath);
-        } else {
-            return false;
-        }
-    }
-
     public function translateError()
     {
         global $_language;
         $_language->readModule('upload', true);
-        switch ($_FILES[ $this->field ][ 'error' ]) {
+        switch ($this->error) {
             case UPLOAD_ERR_INI_SIZE:
                 $message = $_language->module[ 'file_too_big' ];
                 break;
@@ -153,10 +117,142 @@ class Upload
             case UPLOAD_ERR_EXTENSION:
                 $message = $_language->module[ 'unexpected_error' ];
                 break;
+            case self::UPLOAD_ERR_CANT_READ:
+                $message = $_language->module[ 'cant_copy_file' ];
+                break;
             default:
                 $message = $_language->module[ 'unexpected_error' ];
                 break;
         }
         return $message;
+    }
+}
+
+class HttpUpload extends Upload
+{
+    private $field;
+
+    public function __construct($field_name)
+    {
+        $this->field = $field_name;
+        $this->error = $_FILES[ $this->field ][ 'error' ];
+    }
+
+    public function hasFile()
+    {
+        return (isset($_FILES[ $this->field ]) && $_FILES[ $this->field ][ 'error' ] != UPLOAD_ERR_NO_FILE);
+    }
+
+    public function hasError()
+    {
+        return $_FILES[ $this->field ][ 'error' ] !== UPLOAD_ERR_OK;
+    }
+
+    public function getError()
+    {
+        if ($this->hasFile()) {
+            return $_FILES[ $this->field ][ 'error' ];
+        } else {
+            return null;
+        }
+    }
+
+    public function getTempFile()
+    {
+        return $_FILES[ $this->field ][ 'tmp_name' ];
+    }
+
+    public function getFilename()
+    {
+        return basename($_FILES[ $this->field ][ 'name' ]);
+    }
+
+    public function getSize()
+    {
+        return $_FILES[ $this->field ]['size'];
+    }
+
+    public function saveAs($newFilePath, $override = true)
+    {
+        if (!file_exists($newFilePath) || $override) {
+            return move_uploaded_file($this->getTempFile(), $newFilePath);
+        } else {
+            return false;
+        }
+    }
+
+    protected function getFallbackMimeType()
+    {
+        return $_FILES[ $this->field ][ 'type' ];
+    }
+}
+
+class UrlUpload extends Upload {
+    private $tmpfile;
+    private $file;
+    public function __construct($url)
+    {
+        $this->file = $url;
+        $this->error = UPLOAD_ERR_NO_FILE;
+        $this->download();
+    }
+
+    private function download()
+    {
+        if(empty($this->file) === false){
+            $this->tempfile = tempnam('tmp/','upload_');
+            $this->filename = basename(parse_url($this->file,PHP_URL_PATH));
+            if(copy($this->file, $this->tempfile)){
+                $this->error = UPLOAD_ERR_OK;
+            }
+            else {
+                $this->error = self::UPLOAD_ERR_CANT_READ;
+            }
+        }
+        else{
+            $this->error = UPLOAD_ERR_NO_FILE;
+        }
+    }
+
+    public function hasFile(){
+        return ($this->error != UPLOAD_ERR_NO_FILE);
+    }
+
+    public function hasError(){
+        return ($this->error !== UPLOAD_ERR_OK);
+    }
+
+    public function getError(){
+        if ($this->hasFile()) {
+            return $this->error;
+        } else {
+            return null;
+        }
+    }
+
+    public function getTempFile(){
+        return $this->tempfile;
+    }
+
+    public function getFilename(){
+        return $this->filename;
+    }
+
+    public function getSize(){
+        return filesize($this->getTempFile());
+    }
+
+    protected function getFallbackMimeType(){
+        $headers = get_headers($this->file,1);
+        return (isset($headers['Content-Type'])) ? $headers['Content-Type'] : "application/octet-stream";
+    }
+
+    public function saveAs($newFilePath, $override = true)
+    {
+        if (!file_exists($newFilePath) || $override) {
+            return rename($this->getTempFile(), $newFilePath);
+        } else {
+            return false;
+        }
     }
 }

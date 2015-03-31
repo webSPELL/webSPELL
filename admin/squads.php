@@ -115,7 +115,7 @@ if (isset($_POST['save'])) {
 
             $errors = array();
 
-            $upload = new \webspell\Upload('icon');
+            $upload = new \webspell\HttpUpload('icon');
             if ($upload->hasFile()) {
                 if ($upload->hasError() === false) {
                     $mime_types = array('image/jpeg', 'image/png', 'image/gif');
@@ -154,7 +154,7 @@ if (isset($_POST['save'])) {
                 }
             }
 
-            $upload = new \webspell\Upload('icon_small');
+            $upload = new \webspell\HttpUpload('icon_small');
             if ($upload->hasFile()) {
                 if ($upload->hasError() === false) {
                     $mime_types = array('image/jpeg', 'image/png', 'image/gif');
@@ -221,7 +221,7 @@ if (isset($_POST['saveedit'])) {
 
             $errors = array();
 
-            $upload = new \webspell\Upload('icon');
+            $upload = new \webspell\HttpUpload('icon');
             if ($upload->hasFile()) {
                 if ($upload->hasError() === false) {
                     $mime_types = array('image/jpeg', 'image/png', 'image/gif');
@@ -260,7 +260,7 @@ if (isset($_POST['saveedit'])) {
                 }
             }
 
-            $upload = new \webspell\Upload('icon_small');
+            $upload = new \webspell\HttpUpload('icon_small');
             if ($upload->hasFile()) {
                 if ($upload->hasError() === false) {
                     $mime_types = array('image/jpeg', 'image/png', 'image/gif');
