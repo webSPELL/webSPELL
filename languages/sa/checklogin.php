@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -30,11 +30,13 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'invalid_password'=>'.كلمة المرور غير صحيحة<br><br><a href="javascript:history.back()">.الرجوع والمحاولة من جديد</a>',
-  'ip_banned'=>'.(رقم الاي بي محضور من هذا الموقع (باند<br>%reason%<br><br><a href="javascript:history.back()">الرجوع</a>',
+  'invalid_password'=>'.كلمة المرور غير صحيحة',
+  'ip_banned'=>'.(رقم الاي بي محضور من هذا الموقع (باند<br>%reason%',
   'login_successful'=>'!تم تسجيل الدخول بنجاح',
-  'no_user'=>'المستخدم <b>%username%</b> غير موجود على هذا النظام.<br><br><a href="javascript:history.back()">!الرجوع والمحاولة من جديد</a>',
-  'not_activated'=>'.حسابك غير مفعل<br><br><a href="javascript:history.back()">الرجوع</a>',
-  'session_error'=>'.الرجاع التاكد من تفعيل الكوكيز في المتصفح<br>.اذا استمرت المشكلة الرجاء الاتصال بادارة الموقع<br><br><a href="javascript:history.back()">الرجوع</a>'
+  'no_user'=>'المستخدم <b>%username%</b> غير موجود على هذا النظام.',
+  'not_activated'=>'.حسابك غير مفعل',
+  'session_error'=>'.الرجاع التاكد من تفعيل الكوكيز في المتصفح<br>.اذا استمرت المشكلة الرجاء الاتصال بادارة الموقع',
+  'return'=>'<a href="javascript:history.back()">الرجوع</a>',
+  'return_reenter' => '<a href="javascript:history.back()">.الرجوع والمحاولة من جديد</a>'
 );
 ?>

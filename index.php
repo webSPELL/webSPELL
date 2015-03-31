@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -58,8 +58,6 @@ header('X-UA-Compatible: IE=edge,chrome=1');
     <link href="tmp/rss.xml" rel="alternate" type="application/rss+xml" title="<?php
     echo getinput($myclanname);
     ?> - RSS Feed">
-
-    <script src="js/bbcode.js"></script>
     <!-- end Head & Title include -->
 
 </head>

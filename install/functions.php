@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -667,6 +667,8 @@ function fullinstall()
   `profilelast` int(11) NOT NULL default '0',
   `topnewsID` int(11) NOT NULL default '0',
   `sessionduration` int(3) NOT NULL default '0',
+  `sc_files` int(1) NOT NULL default '0',
+  `sc_demos` int(1) NOT NULL default '0',
   PRIMARY KEY  (`settingID`)
 ) AUTO_INCREMENT=2 ");
 

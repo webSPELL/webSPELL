@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -27,6 +27,7 @@
 
 include("_mysql.php");
 include("_settings.php");
+include("_functions.php");
 
 echo '<!DOCTYPE html>
 <html lang="en">
@@ -34,13 +35,11 @@ echo '<!DOCTYPE html>
     <meta charset="utf-8">
     <meta name="description" content="Clanpage using webSPELL 4 CMS">
     <meta name="author" content="webspell.org">
-    <meta name="copyright" content="Copyright 2005-2014 by webspell.org">
+    <meta name="copyright" content="Copyright 2005-2015 by webspell.org">
     <meta name="generator" content="webSPELL">
     <title>Smilies</title>';
-$componentsCss = generateComponents($components['css'], 'css');
-foreach ($componentsCss as $component) {
-    echo $component;
-}
+    $componentsCss = generateComponents($components['css'], 'css');
+    echo $componentsCss;
     echo '<link href="_stylesheet.css" rel="stylesheet">
     <script src="js/bbcode.js"></script>
 </head>

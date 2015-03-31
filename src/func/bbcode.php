@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -302,6 +302,12 @@ function insideCode($content)
 
 //replace [img]-tags
 
+function imgreplace_callback($match)
+{
+    return '<img src="'.fixJavaEvents($match[1].$match[2]).'" border="0"'.
+            'alt="'.fixJavaEvents($match[1].$match[2]).'" />';
+}
+
 function imgreplace($content)
 {
     global $_language;
@@ -397,9 +403,9 @@ function imgreplace($content)
             }
         }
     } else {
-        $content = preg_replace(
-            "#\[img\](.*?)(png|gif|jpeg|jpg)\[/img\]#sie",
-            "'<img src=\"'.fixJavaEvents('\\1\\2').'\" border=\"0\" alt=\"'.fixJavaEvents('\\1\\2').'\" />'",
+        $content = preg_replace_callback(
+            "#\[img\](.*?)(png|gif|jpeg|jpg)\[/img\]#si",
+            "imgreplace_callback",
             $content
         );
     }

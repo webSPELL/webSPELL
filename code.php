@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -31,8 +31,7 @@ include("_functions.php");
 
 $_language->readModule('code');
 
-$bg1 = BG_1;
-$bg2 = BG_2;
+$componentsCss = generateComponents($components['css'], 'css');
 $data_array = array();
 $data_array['$rewriteBase'] = $rewriteBase;
 $data_array['$componentsCss'] = $componentsCss;

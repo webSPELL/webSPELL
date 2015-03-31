@@ -83,7 +83,12 @@ webshims.register('form-validation', function($, webshims, window, document, und
 		date: 1,
 		month: 1,
 		week: 1,
-		text: 1
+		text: 1,
+		password: 1,
+		search: 1,
+		email: 1,
+		tel: 1,
+		url: 1
 	};
 	//see: http://code.google.com/p/chromium/issues/detail?id=179708 and bug above
 	var noFocusWidgets = {
@@ -643,7 +648,7 @@ webshims.register('form-validation', function($, webshims, window, document, und
 			var errorBox = $('.'+errorBoxClass, fieldWrapper);
 
 			if(!errorBox.length){
-				errorBox = $('<'+errorBoxWrapper+' class="'+ errorBoxClass +'" hidden="hidden" style="display: none;">');
+				errorBox = $('<'+errorBoxWrapper+' class="'+ errorBoxClass +'" hidden="hidden" style="display: none;" />');
 				fieldWrapper.append(errorBox);
 			}
 			if(!errorBox.prop('id')){

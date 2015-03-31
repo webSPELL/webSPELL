@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -29,11 +29,13 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-	'invalid_password'=>'Jūs įrašėte blogą slaptažodį.<br><br><a href="javascript:history.back()">Grįžkite atgal ir pamėginkite iš naujo.</a>',
-	'ip_banned'=>'Jūsų IP buvo užblokuotas šitame tinklalapyje.<br>%reason%<br><br><a href="javascript:history.back()">Grįžti atgal</a>',
+	'invalid_password'=>'Jūs įrašėte blogą slaptažodį.',
+	'ip_banned'=>'Jūsų IP buvo užblokuotas šitame tinklalapyje.<br>%reason%',
 	'login_successful'=>'Prisijungimas sėkmingas!',
-	'no_user'=>'Vartotojas <b>%username%</b> nėra leidžiamas šioje sistemoje.<br><br><a href="javascript:history.back()">Grįžkite atgal ir pamėginkite iš naujo!</a>',
-	'not_activated'=>'Jūsų profilis nėra aktyvuotas.<br><br><a href="javascript:history.back()">Grįžti</a>',
-	'session_error'=>'Prašome įsitikinti ar jūsų naršyklėje yra įjungti sausainukai.<br>Jeigu vistiek atsitiks klaidų, prašome susisiekti su puslapio savininku.<br><br><a href="javascript:history.back()">Grįžti</a>'
+	'no_user'=>'Vartotojas <b>%username%</b> nėra leidžiamas šioje sistemoje.',
+	'not_activated'=>'Jūsų profilis nėra aktyvuotas.',
+	'session_error'=>'Prašome įsitikinti ar jūsų naršyklėje yra įjungti sausainukai.<br>Jeigu vistiek atsitiks klaidų, prašome susisiekti su puslapio savininku.',
+  'return'=>'<a href="javascript:history.back()">Grįžti atgal</a>',
+  'return_reenter' => '<a href="javascript:history.back()">Grįžkite atgal ir pamėginkite iš naujo.</a>'
 );
 ?>

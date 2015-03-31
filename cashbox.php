@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -382,7 +382,7 @@ if (!isclanmember($userID) && !iscashadmin($userID)) {
                 $ergebnis = safe_query("SELECT * FROM " . PREFIX . "user ORDER BY nickname");
                 while ($du = mysqli_fetch_array($ergebnis)) {
                     if ($squadID == 0) {
-                        if (isclanmember($du[ 'userID' ], $squadID)) {
+                        if (isclanmember($du[ 'userID' ])) {
                             $members[ ] = $du[ 'userID' ];
                         }
                     } else {

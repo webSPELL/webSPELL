@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -35,11 +35,13 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'invalid_password'=>'Geçersiz bir şifre girdiniz .<br><br><a href="javascript:history.back()">Geri dönün ve tekrar deneyin.</a>',
-  'ip_banned'=>'IP adresiniz bu site tarafından banlandı.<br>%reason%<br><br><a href="javascript:history.back()">Geri Dönün</a>',
+  'invalid_password'=>'Geçersiz bir şifre girdiniz .',
+  'ip_banned'=>'IP adresiniz bu site tarafından banlandı.<br>%reason%',
   'login_successful'=>'Giriş Başarılı!',
-  'no_user'=>'Kullanıcı <b>%username%</b> bu sistemde mevcut değildir.<br><br><a href="javascript:history.back()">Geri dönün ve tekrar deneyin!</a>',
-  'not_activated'=>'Hesabınız aktif değil.<br><br><a href="javascript:history.back()">Geri</a>',
-  'session_error'=>'Lütfen tarayıcınızda oturum desteği olduğundan emin olun.<br>Sorun devam ederse, yöneticiye başvurun.<br><br><a href="javascript:history.back()">Geri</a>'
+  'no_user'=>'Kullanıcı <b>%username%</b> bu sistemde mevcut değildir.',
+  'not_activated'=>'Hesabınız aktif değil.',
+  'session_error'=>'Lütfen tarayıcınızda oturum desteği olduğundan emin olun.<br>Sorun devam ederse, yöneticiye başvurun.',
+  'return'=>'<a href="javascript:history.back()">Geri Dönün</a>',
+  'return_reenter' => '<a href="javascript:history.back()">Geri dönün ve tekrar deneyin.</a>'
 );
 ?>

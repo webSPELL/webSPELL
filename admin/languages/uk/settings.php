@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -63,12 +63,17 @@ $language_array = Array(
   'deactivated'=>'deactivated',
   'default_language'=>'default language',
   'demos'=>'Demos',
+  'demos_top'=>'Top 5 Demos',
+  'demos_latest'=>'Latest 5 Demos',
   'detect_visitor_language'=>'Detect visitor language',
   'forum'=>'Forum',
   'forum_posts'=>'Forum posts',
   'forum_topics'=>'Forum topics',
   'format_date'=>'Date format',
   'format_time'=>'Time format',
+  'files'=>'Files',
+  'files_top'=>'Top 5 Downloads',
+  'files_latest'=>'Latest 5 Downloads',
   'gallery'=>'Gallery',
   'guestbook'=>'Guestbook',
   'headlines'=>'Headlines',
@@ -105,6 +110,7 @@ $language_array = Array(
   'spamapikey'=>'API Key',
   'spamfilter'=>'Spam Filter',
   'spammaxposts'=>'Max. Posts',
+  'sc_modules'=>'SC Modules',
   'thumb_width'=>'Thumb width',
   'tooltip_1'=>'This is the URL of your page e.g. (yourdomain.com/path/webspell).<br>Without http:// at the beginn and don\'t end with a slash!<br>Should be like',
   'tooltip_2'=>'This is the title of your page, shown as window title',
@@ -166,9 +172,11 @@ $language_array = Array(
   'tooltip_58'=>'Output format of the date',
   'tooltip_59'=>'Output format of time',
   'tooltip_60'=>'Enable user guestbooks on the website?',
+  'tooltip_61'=>'What should the SC Demos Module show?',
+  'tooltip_62'=>'What should the SC Files Module show?',
   'transaction_invalid'=>'Transaction ID invalid',
   'upcoming_actions'=>'upcoming actions',
   'update'=>'update',
-  'user_guestbook'=>'User Guestbooks'  
+  'user_guestbook'=>'User Guestbooks'
 );
 ?>
