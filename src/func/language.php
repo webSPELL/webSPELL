@@ -74,6 +74,7 @@ class Language
 
         $module = str_replace(array('\\', '/', '.'), '', $module);
         if ($admin) {
+            $this->language_path = '../languages/';
             if (file_exists($this->language_path . $this->language . '/admin/' . $module . '.php')) {
                 $module_file = $this->language_path . $this->language . '/admin/' . $module . '.php';
             } elseif (file_exists($this->language_path . $default_language . '/admin/' . $module . '.php')) {

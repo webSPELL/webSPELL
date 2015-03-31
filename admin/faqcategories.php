@@ -103,7 +103,7 @@ if (isset($_GET[ 'action' ])) {
         $CAPCLASS->createTransaction();
         $hash = $CAPCLASS->getHash();
 
-        $_language->readModule('bbcode', true, false);
+        $_language->readModule('bbcode', true, true);
 
         $addbbcode = $GLOBALS["_template"]->replaceTemplate("addbbcode", array());
         $addflags = $GLOBALS["_template"]->replaceTemplate("flags_admin", array());
@@ -155,7 +155,7 @@ if (isset($_GET[ 'action' ])) {
         $CAPCLASS->createTransaction();
         $hash = $CAPCLASS->getHash();
 
-        $_language->readModule('bbcode', true, false);
+        $_language->readModule('bbcode', true, true);
 
         $addbbcode = $GLOBALS["_template"]->replaceTemplate("addbbcode", array());
         $addflags = $GLOBALS["_template"]->replaceTemplate("flags_admin", array());
