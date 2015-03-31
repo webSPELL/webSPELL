@@ -25,7 +25,7 @@
 ##########################################################################
 */
 
-$_language->readModule('faqcategories');
+$_language->readModule('faqcategories', false, true);
 
 if (!ispageadmin($userID) || mb_substr(basename($_SERVER[ 'REQUEST_URI' ]), 0, 15) != "admincenter.php") {
     die($_language->module[ 'access_denied' ]);
@@ -103,7 +103,7 @@ if (isset($_GET[ 'action' ])) {
         $CAPCLASS->createTransaction();
         $hash = $CAPCLASS->getHash();
 
-        $_language->readModule('bbcode', true);
+        $_language->readModule('bbcode', true, false);
 
         $addbbcode = $GLOBALS["_template"]->replaceTemplate("addbbcode", array());
         $addflags = $GLOBALS["_template"]->replaceTemplate("flags_admin", array());
@@ -155,7 +155,7 @@ if (isset($_GET[ 'action' ])) {
         $CAPCLASS->createTransaction();
         $hash = $CAPCLASS->getHash();
 
-        $_language->readModule('bbcode', true);
+        $_language->readModule('bbcode', true, false);
 
         $addbbcode = $GLOBALS["_template"]->replaceTemplate("addbbcode", array());
         $addflags = $GLOBALS["_template"]->replaceTemplate("flags_admin", array());

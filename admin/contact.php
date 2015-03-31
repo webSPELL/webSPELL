@@ -25,7 +25,7 @@
 ##########################################################################
 */
 
-$_language->readModule('contact');
+$_language->readModule('contact', false, true);
 
 if (!isuseradmin($userID) || mb_substr(basename($_SERVER[ 'REQUEST_URI' ]), 0, 15) != "admincenter.php") {
     die($_language->module[ 'access_denied' ]);

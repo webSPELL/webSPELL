@@ -25,8 +25,8 @@
 ##########################################################################
 */
 
-$_language->readModule('ranks');
-$_language->readModule('rank_special', true);
+$_language->readModule('ranks', false, true);
+$_language->readModule('rank_special', true, true);
 
 if (!isforumadmin($userID) || mb_substr(basename($_SERVER[ 'REQUEST_URI' ]), 0, 15) != "admincenter.php") {
     die($_language->module[ 'access_denied' ]);

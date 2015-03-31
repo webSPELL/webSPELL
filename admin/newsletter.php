@@ -25,7 +25,7 @@
 ##########################################################################
 */
 
-$_language->readModule('newsletter');
+$_language->readModule('newsletter', false, true);
 
 if (!isuseradmin($userID) || mb_substr(basename($_SERVER[ 'REQUEST_URI' ]), 0, 15) != "admincenter.php") {
     die($_language->module[ 'access_denied' ]);
@@ -46,7 +46,7 @@ if (isset($_POST[ 'send' ]) || isset($_POST[ 'testen' ])) {
 
         //use page's default language for newsletter
         $_language->setLanguage($default_language);
-        $_language->readModule('newsletter');
+        $_language->readModule('newsletter', false, true);
         $no_htmlmail = $_language->module[ 'no_htmlmail' ];
         $remove = $_language->module[ 'remove' ];
         $profile = $_language->module[ 'profile' ];

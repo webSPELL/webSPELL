@@ -25,7 +25,7 @@
 ##########################################################################
 */
 
-$_language->readModule('faq');
+$_language->readModule('faq', false, true);
 
 if (!ispageadmin($userID) || mb_substr(basename($_SERVER[ 'REQUEST_URI' ]), 0, 15) != "admincenter.php") {
     die($_language->module[ 'access_denied' ]);
@@ -145,7 +145,7 @@ if (isset($_GET[ 'action' ])) {
         $CAPCLASS->createTransaction();
         $hash = $CAPCLASS->getHash();
 
-        $_language->readModule('bbcode', true);
+        $_language->readModule('bbcode', true, true);
 
         $addbbcode = $GLOBALS["_template"]->replaceTemplate("addbbcode", array());
         $addflags = $GLOBALS["_template"]->replaceTemplate("flags_admin", array());
@@ -231,7 +231,7 @@ if (isset($_GET[ 'action' ])) {
         $CAPCLASS->createTransaction();
         $hash = $CAPCLASS->getHash();
 
-        $_language->readModule('bbcode', true);
+        $_language->readModule('bbcode', true, true);
 
         $tags = \webspell\Tags::getTags('faq', $faqID);
         $addbbcode = $GLOBALS["_template"]->replaceTemplate("addbbcode", array());

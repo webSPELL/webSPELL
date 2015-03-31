@@ -67,21 +67,34 @@ class Language
         return $this->language_path;
     }
 
-    public function readModule($module, $add = false)
+    public function readModule($module, $add = false, $admin = false)
     {
 
         global $default_language;
 
         $module = str_replace(array('\\', '/', '.'), '', $module);
-        if (file_exists($this->language_path . $this->language . '/' . $module . '.php')) {
-            $module_file = $this->language_path . $this->language . '/' . $module . '.php';
-        } elseif (file_exists($this->language_path . $default_language . '/' . $module . '.php')) {
-            $module_file = $this->language_path . $default_language . '/' . $module . '.php';
-        } elseif (file_exists($this->language_path . 'uk/' . $module . '.php')) {
-            // UK as worst case
-            $module_file = $this->language_path . 'uk/' . $module . '.php';
+        if ($admin) {
+            if (file_exists($this->language_path . $this->language . '/admin/' . $module . '.php')) {
+                $module_file = $this->language_path . $this->language . '/admin/' . $module . '.php';
+            } elseif (file_exists($this->language_path . $default_language . '/admin/' . $module . '.php')) {
+                $module_file = $this->language_path . $default_language . '/admin/' . $module . '.php';
+            } elseif (file_exists($this->language_path . 'uk/admin/' . $module . '.php')) {
+                // UK as worst case
+                $module_file = $this->language_path . 'uk/admin/' . $module . '.php';
+            } else {
+                return false;
+            }
         } else {
-            return false;
+            if (file_exists($this->language_path . $this->language . '/' . $module . '.php')) {
+                $module_file = $this->language_path . $this->language . '/' . $module . '.php';
+            } elseif (file_exists($this->language_path . $default_language . '/' . $module . '.php')) {
+                $module_file = $this->language_path . $default_language . '/' . $module . '.php';
+            } elseif (file_exists($this->language_path . 'uk/' . $module . '.php')) {
+                // UK as worst case
+                $module_file = $this->language_path . 'uk/' . $module . '.php';
+            } else {
+                return false;
+            }
         }
 
         if (isset($module_file)) {

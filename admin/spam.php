@@ -41,7 +41,7 @@ if (isset($_GET[ 'getnickname' ])) {
 if (!ispageadmin($userID) || mb_substr(basename($_SERVER[ 'REQUEST_URI' ]), 0, 15) != "admincenter.php") {
     die();
 }
-$_language->readModule('spam');
+$_language->readModule('spam', false, true);
 function deleteSpamUser($spammerID)
 {
     global $_language, $_database;
