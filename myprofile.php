@@ -120,13 +120,13 @@ if (!$userID) {
         $filepath = "./images/avatars/";
 
         $upload = new \webspell\HttpUpload('avatar');
-        if(!$upload->hasFile() && $_POST['avatar_url'] != "http://"){
+        if (!$upload->hasFile() && $_POST['avatar_url'] != "http://") {
             $upload = new \webspell\UrlUpload($_POST['avatar_url']);
         }
 
         print_r($upload);
 
-        if($upload->hasFile()){
+        if ($upload->hasFile()) {
             if ($upload->hasError() === false) {
                 $mime_types = array('image/jpeg','image/png','image/gif');
                 if ($upload->supportedMimeType($mime_types)) {
@@ -147,7 +147,14 @@ if (!$userID) {
                             $file = $id.$endung;
                             if ($upload->saveAs($filepath.$file)) {
                                 @chmod($filepath.$file, $new_chmod);
-                                safe_query("UPDATE " . PREFIX . "user SET avatar='" . $file . "' WHERE userID='" . $id . "'");
+                                safe_query(
+                                    "UPDATE "
+                                    . PREFIX . "user
+                                    SET
+                                      avatar='" . $file .
+                                    "' WHERE
+                                      userID='" . $id . "'"
+                                );
                             }
                         } else {
                             $error_array[] = $_language->module[ 'image_too_big' ];
@@ -158,8 +165,7 @@ if (!$userID) {
                 } else {
                     $error_array[] = $_language->module[ 'unsupported_image_type' ];
                 }
-            }
-            else{
+            } else {
                 $error_array[] = $upload->translateError();
             }
         }
@@ -170,11 +176,11 @@ if (!$userID) {
 
 
         $upload = new \webspell\HttpUpload('userpic');
-        if(!$upload->hasFile() && $_POST['userpic_url'] != "http://"){
+        if (!$upload->hasFile() && $_POST['userpic_url'] != "http://") {
             $upload = new \webspell\UrlUpload($_POST['userpic_url']);
         }
 
-        if($upload->hasFile()){
+        if ($upload->hasFile()) {
             if ($upload->hasError() === false) {
                 $mime_types = array('image/jpeg','image/png','image/gif');
                 if ($upload->supportedMimeType($mime_types)) {
@@ -195,7 +201,13 @@ if (!$userID) {
                             $file = $id.$endung;
                             if ($upload->saveAs($filepath.$file)) {
                                 @chmod($filepath.$file, $new_chmod);
-                                safe_query("UPDATE " . PREFIX . "user SET userpic='" . $file . "' WHERE userID='" . $id . "'");
+                                safe_query(
+                                    "UPDATE "
+                                    . PREFIX . "user
+                                    SET
+                                      userpic='" . $file .
+                                    "' WHERE userID='" . $id . "'"
+                                );
                             }
                         } else {
                             $error_array[] = $_language->module[ 'image_too_big' ];
@@ -206,8 +218,7 @@ if (!$userID) {
                 } else {
                     $error_array[] = $_language->module[ 'unsupported_image_type' ];
                 }
-            }
-            else{
+            } else {
                 $error_array[] = $upload->translateError();
             }
         }

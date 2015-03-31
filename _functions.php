@@ -307,6 +307,8 @@ systeminc('func/tags');
 // -- Upload -- //
 
 systeminc('func/upload');
+systeminc('func/httpupload');
+systeminc('func/urlupload');
 
 // -- Mod Rewrite -- //
 

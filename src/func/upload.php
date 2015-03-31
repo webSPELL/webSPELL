@@ -27,20 +27,21 @@
 
 namespace webspell;
 
-abstract class Upload {
+abstract class Upload
+{
 
     const UPLOAD_ERR_CANT_READ = 99;
 
     protected $error;
 
-    public abstract function hasFile();
-    public abstract function hasError();
-    public abstract function getError();
-    public abstract function getTempFile();
-    public abstract function getFilename();
-    public abstract function getSize();
-    public abstract function saveAs($newFilePath, $override = true);
-    protected abstract function getFallbackMimeType();
+    abstract public function hasFile();
+    abstract public function hasError();
+    abstract public function getError();
+    abstract public function getTempFile();
+    abstract public function getFilename();
+    abstract public function getSize();
+    abstract public function saveAs($newFilePath, $override = true);
+    abstract protected function getFallbackMimeType();
 
     public function getExtension()
     {
@@ -125,134 +126,5 @@ abstract class Upload {
                 break;
         }
         return $message;
-    }
-}
-
-class HttpUpload extends Upload
-{
-    private $field;
-
-    public function __construct($field_name)
-    {
-        $this->field = $field_name;
-        $this->error = $_FILES[ $this->field ][ 'error' ];
-    }
-
-    public function hasFile()
-    {
-        return (isset($_FILES[ $this->field ]) && $_FILES[ $this->field ][ 'error' ] != UPLOAD_ERR_NO_FILE);
-    }
-
-    public function hasError()
-    {
-        return $_FILES[ $this->field ][ 'error' ] !== UPLOAD_ERR_OK;
-    }
-
-    public function getError()
-    {
-        if ($this->hasFile()) {
-            return $_FILES[ $this->field ][ 'error' ];
-        } else {
-            return null;
-        }
-    }
-
-    public function getTempFile()
-    {
-        return $_FILES[ $this->field ][ 'tmp_name' ];
-    }
-
-    public function getFilename()
-    {
-        return basename($_FILES[ $this->field ][ 'name' ]);
-    }
-
-    public function getSize()
-    {
-        return $_FILES[ $this->field ]['size'];
-    }
-
-    public function saveAs($newFilePath, $override = true)
-    {
-        if (!file_exists($newFilePath) || $override) {
-            return move_uploaded_file($this->getTempFile(), $newFilePath);
-        } else {
-            return false;
-        }
-    }
-
-    protected function getFallbackMimeType()
-    {
-        return $_FILES[ $this->field ][ 'type' ];
-    }
-}
-
-class UrlUpload extends Upload {
-    private $tmpfile;
-    private $file;
-    public function __construct($url)
-    {
-        $this->file = $url;
-        $this->error = UPLOAD_ERR_NO_FILE;
-        $this->download();
-    }
-
-    private function download()
-    {
-        if(empty($this->file) === false){
-            $this->tempfile = tempnam('tmp/','upload_');
-            $this->filename = basename(parse_url($this->file,PHP_URL_PATH));
-            if(copy($this->file, $this->tempfile)){
-                $this->error = UPLOAD_ERR_OK;
-            }
-            else {
-                $this->error = self::UPLOAD_ERR_CANT_READ;
-            }
-        }
-        else{
-            $this->error = UPLOAD_ERR_NO_FILE;
-        }
-    }
-
-    public function hasFile(){
-        return ($this->error != UPLOAD_ERR_NO_FILE);
-    }
-
-    public function hasError(){
-        return ($this->error !== UPLOAD_ERR_OK);
-    }
-
-    public function getError(){
-        if ($this->hasFile()) {
-            return $this->error;
-        } else {
-            return null;
-        }
-    }
-
-    public function getTempFile(){
-        return $this->tempfile;
-    }
-
-    public function getFilename(){
-        return $this->filename;
-    }
-
-    public function getSize(){
-        return filesize($this->getTempFile());
-    }
-
-    protected function getFallbackMimeType(){
-        $headers = get_headers($this->file,1);
-        return (isset($headers['Content-Type'])) ? $headers['Content-Type'] : "application/octet-stream";
-    }
-
-    public function saveAs($newFilePath, $override = true)
-    {
-        if (!file_exists($newFilePath) || $override) {
-            return rename($this->getTempFile(), $newFilePath);
-        } else {
-            return false;
-        }
     }
 }
