@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -27,9 +27,10 @@
 
 $_language->readModule('demos');
 
-$list = 2; // 1 = top 5 demos , 2 = latest 5 demos
+$getlist = safe_query("SELECT sc_demos FROM " . PREFIX . "settings");
+$ds = mysqli_fetch_array($getlist);
 
-if ($list == 1) {
+if ($ds[ 'sc_demos' ] == 1) {
     $list = "rating";
 } else {
     $list = "date";

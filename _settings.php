@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -253,7 +253,7 @@ function system_error($text, $system = 1)
         <meta name="description" content="Clanpage using webSPELL 4 CMS">
         <meta name="author" content="webspell.org">
         <meta name="keywords" content="webspell, webspell4, clan, cms">
-        <meta name="copyright" content="Copyright 2005-2014 by webspell.org">
+        <meta name="copyright" content="Copyright 2005-2015 by webspell.org">
         <meta name="generator" content="webSPELL">
         <title>webSPELL</title>
     </head>
@@ -268,7 +268,7 @@ function system_error($text, $system = 1)
         </tr>
         <tr>
             <td><div style="color:#333333;font-family:Tahoma,Verdana,Arial;font-size:11px;padding:5px;">' .
-                $info . '<br><font color="red">' . $text . '</font><br>&nbsp;</div></td>
+                $info . '<br><span style="color: red">' . $text . '</span><br>&nbsp;</div></td>
         </tr>
         <tr>
             <td>

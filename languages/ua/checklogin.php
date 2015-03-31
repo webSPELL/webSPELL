@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -35,11 +35,13 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'invalid_password'=>'Неправильний пароль.<br><br><a href="javascript:history.back()">Поверніться назад і спробуйте знову.</a>',
-  'ip_banned'=>'Ваша IP-адресу була забанена на цьому сайті.<br>%reason%<br><br><a href="javascript:history.back()">Поверніться назад</a>',
+  'invalid_password'=>'Неправильний пароль.',
+  'ip_banned'=>'Ваша IP-адресу була забанена на цьому сайті.<br>%reason%',
   'login_successful'=>'Ви успішно зайшли!',
-  'no_user'=>'Користувач <b>%username%</b> недоступний у цій системі.<br><br><a href="javascript:history.back()">Поверніться назад і спробуйте знову!</a>',
-  'not_activated'=>'Ваш аккаунт не активований.<br><br><a href="javascript:history.back()">Назад</a>',
-  'session_error'=>'Будь ласка переконайтеся, що cookies включені у вашому інтернет-браузері.<br> Якщо проблема залишилася, зв\'яжіться з вашим інтернет провайдером.<br> <br> <a Href="javascript:history.back()"> Назад</a>'
+  'no_user'=>'Користувач <b>%username%</b> недоступний у цій системі.',
+  'not_activated'=>'Ваш аккаунт не активований.',
+  'session_error'=>'Будь ласка переконайтеся, що cookies включені у вашому інтернет-браузері.<br> Якщо проблема залишилася, зв\'яжіться з вашим інтернет провайдером.',
+  'return'=>'<a href="javascript:history.back()">Поверніться назад</a>',
+  'return_reenter' => '<a href="javascript:history.back()">Поверніться назад і спробуйте знову.</a>'
 );
 ?>

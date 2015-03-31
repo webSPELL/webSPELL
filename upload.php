@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -112,14 +112,13 @@ if (isset($_POST[ 'submit' ])) {
     <meta charset="utf-8">
     <meta name="description" content="Clanpage using webSPELL 4 CMS">
     <meta name="author" content="webspell.org">
-    <meta name="copyright" content="Copyright 2005-2014 by webspell.org">
+    <meta name="copyright" content="Copyright 2005-2015 by webspell.org">
     <meta name="generator" content="webSPELL">
     <title>' . $_language->module[ 'file_upload' ] . '</title>
     <script src="js/bbcode.js"></script>
     <link href="_stylesheet.css" rel="stylesheet" type="text/css">
 </head>
-<body>
-<center>
+<body class="text-center">
 <h2>' . $_language->module[ 'file_upload' ] . ':</h2>
 <form method="post" action="upload.php?' . $tableid . '=' . $id . '" enctype="multipart/form-data">
 <table class="table">
@@ -167,7 +166,6 @@ if (isset($_POST[ 'submit' ])) {
     </table>
     </form>
     <br><br><input type="button" onclick="javascript:self.close()" value="' . $_language->module[ 'close_window' ] . '">
-    </center>
     </body>
     </html>';
 }

@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -25,9 +25,10 @@
 ##########################################################################
 */
 
-$list = 1; // 1=top 5 downloads , 2=latest 5 downloads
+$getlist = safe_query("SELECT sc_files FROM " . PREFIX . "settings");
+$ds = mysqli_fetch_array($getlist);
 
-if ($list == 1) {
+if ($ds[ 'sc_files' ] == 1) {
     $list = "downloads";
 } else {
     $list = "date";

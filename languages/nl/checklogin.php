@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -29,12 +29,14 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-	'invalid_password'=>'Je hebt een ongeldig wachtwoord ingevoerd.<br><br><a href="javascript:history.back()">Ga terug en probeer opnieuw.</a>',
-	'ip_banned'=>'Je IP is gebanned van deze website.<br>%reason%<br><br><a href="javascript:history.back()">Ga Terug</a>',
+	'invalid_password'=>'Je hebt een ongeldig wachtwoord ingevoerd.',
+	'ip_banned'=>'Je IP is gebanned van deze website.<br>%reason%',
 	'login_successful'=>'Login succesvol!',
-	'no_user'=>'De gebruiker <b>%username%</b> is niet beschikbaar op dit systeem.<br><br><a href="javascript:history.back()">Ga terug en probeer het nog een keer!</a>',
-	'not_activated'=>'Je account is nog niet geactiveerd.<br><br><a href="javascript:history.back()">Terug</a>',
-	'session_error'=>'Zorg dat cookies aan staan in je browser.<br>Als het probleem blijft, neem contact op met de webmaster.<br><br><a href="javascript:history.back()">Terug</a>'
+	'no_user'=>'De gebruiker <b>%username%</b> is niet beschikbaar op dit systeem.',
+	'not_activated'=>'Je account is nog niet geactiveerd.',
+	'session_error'=>'Zorg dat cookies aan staan in je browser.<br>Als het probleem blijft, neem contact op met de webmaster.',
+  'return'=>'<a href="javascript:history.back()">Ga Terug</a>',
+  'return_reenter' => '<a href="javascript:history.back()">Ga terug en probeer opnieuw.</a>'
 
 );
 ?>

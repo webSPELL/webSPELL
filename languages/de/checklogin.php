@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -28,11 +28,13 @@
 $language_array = Array(
 
 /* do not edit above this line */
-	'invalid_password'=>'Du hast ein falsches Passwort eingegeben.<br><br><a href="javascript:history.back()">Zurück und Eingabe wiederholen</a>',
-	'ip_banned'=>'Deine IP wurde von der Seite gebannt.<br>%reason%<br><br><a href="javascript:history.back()">Zurück</a>',
+	'invalid_password'=>'Du hast ein falsches Passwort eingegeben.',
+	'ip_banned'=>'Deine IP wurde von der Seite gebannt.<br>%reason%',
 	'login_successful'=>'Erfolgreich angemeldet',
-	'no_user'=>'Kein Benutzer mit dem Namen <b>%username%</b> im System vorhanden.<br><br><a href="javascript:history.back()">Zurück und Eingabe wiederholen</a>',
-	'not_activated'=>'Dein Account ist nicht aktiviert.<br><br><a href="javascript:history.back()">Zurück</a>',
-	'session_error'=>'Bitte versichere dich, dass dein Browser Cookies akzeptiert.<br>Falls das Problem weiterhin besteht, wende dich an den Webmaster.<br><br><a href="javascript:history.back()">Zurück</a>'
+	'no_user'=>'Kein Benutzer mit dem Namen <b>%username%</b> im System vorhanden.',
+	'not_activated'=>'Dein Account ist nicht aktiviert.',
+	'session_error'=>'Bitte versichere dich, dass dein Browser Cookies akzeptiert.<br>Falls das Problem weiterhin besteht, wende dich an den Webmaster.',
+    'return'=>'<a href="javascript:history.back()">Zurück</a>',
+    'return_reenter' => '<a href="javascript:history.back()">Zurück und Eingabe wiederholen</a>'
 );
 ?>

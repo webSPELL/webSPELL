@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -200,7 +200,6 @@ if ($action == "new") {
         $bg1 = BG_1;
         $data_array = array();
         $data_array['$linkcats'] = $linkcats;
-        $data_array['$linkID'] = $linkID;
         $links_new = $GLOBALS["_template"]->replaceTemplate("links_new", $data_array);
         echo $links_new;
     } else {
@@ -302,6 +301,7 @@ if ($action == "new") {
             }
 
             $data_array = array();
+            $data_array['$name'] = $name;
             $data_array['$banner'] = $banner;
             $data_array['$info'] = $info;
             $data_array['$link'] = $link;
@@ -311,8 +311,6 @@ if ($action == "new") {
 
             unset($banner);
         }
-        $links_foot = $GLOBALS["_template"]->replaceTemplate("links_foot", array());
-        echo $links_foot;
     } else {
         echo generateAlert(
             $_language->module[ 'no_links' ] . '<br><br>[ <a href="index.php?site=links" class="alert-link">' .

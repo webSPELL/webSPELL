@@ -25,6 +25,7 @@
   </XML>
   <codeStyleSettings language="JavaScript">
     <option name="KEEP_BLANK_LINES_IN_CODE" value="1" />
+    <option name="RIGHT_MARGIN" value="100" />
   </codeStyleSettings>
   <codeStyleSettings language="PHP">
     <option name="RIGHT_MARGIN" value="120" />

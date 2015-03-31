@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -30,11 +30,13 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'invalid_password'=>'პაროლი არასწორია.<br><br><a href="javascript:history.back()">უკან დაბრუნება.</a>',
-  'ip_banned'=>'თქვენი IP დაბლოკილია.<br>%reason%<br><br><a href="javascript:history.back()">უკან დაბრუნება</a>',
+  'invalid_password'=>'პაროლი არასწორია.',
+  'ip_banned'=>'თქვენი IP დაბლოკილია.<br>%reason%',
   'login_successful'=>'ავტორიზირება წარმატებით გავლილია!',
-  'no_user'=>'მომხმარებელი <b>%username%</b> არ არის ხელმისაწვდომი ამ სისტემაში.<br><br><a href="javascript:history.back()">უკან დაბრუნება და ხელმეორედ ცდა!</a>',
-  'not_activated'=>'თქვენი ექაუნტი არ არის გააქტიურებული.<br><br><a href="javascript:history.back()">უკან</a>',
-  'session_error'=>'დარწმუნდით რომ cookies ჩართულია თქვენს ბრაუზერში .<br>თუ პრობლემა მეორდება გთხოვთ მიმართოთ ადმინისტრაციას.<br><br><a href="javascript:history.back()">უკან</a>'
+  'no_user'=>'მომხმარებელი <b>%username%</b> არ არის ხელმისაწვდომი ამ სისტემაში.',
+  'not_activated'=>'თქვენი ექაუნტი არ არის გააქტიურებული.',
+  'session_error'=>'დარწმუნდით რომ cookies ჩართულია თქვენს ბრაუზერში .<br>თუ პრობლემა მეორდება გთხოვთ მიმართოთ ადმინისტრაციას.',
+  'return'=>'<a href="javascript:history.back()">უკან დაბრუნება</a>',
+  'return_reenter' => '<a href="javascript:history.back()">უკან და განმეორებითი შეყვანის</a>'
 );
 ?>

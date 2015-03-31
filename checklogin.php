@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -40,6 +40,17 @@ $sleep = 1; //idle status for script if password is wrong?
 
 //settings end
 $_language->readModule('checklogin');
+
+if (!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest') {
+    $ajax = true;
+} else {
+    $ajax = false;
+}
+
+$return = new stdClass();
+$return->state = "failed";
+$return->message = "";
+$reenter = false;
 
 $get = safe_query("SELECT * FROM " . PREFIX . "banned_ips WHERE ip='" . $GLOBALS[ 'ip' ] . "'");
 if (mysqli_num_rows($get) == 0) {
@@ -95,11 +106,11 @@ if (mysqli_num_rows($get) == 0) {
                     safe_query("DELETE FROM " . PREFIX . "whoisonline WHERE ip='" . $GLOBALS[ 'ip' ] . "'");
                     //Delete IP from failed logins
                     safe_query("DELETE FROM " . PREFIX . "failed_login_attempts WHERE ip = '" . $GLOBALS[ 'ip' ] . "'");
-                    $login = 1;
-                    $error = $_language->module[ 'login_successful' ];
+                    $return->state = "success";
+                    $return->message = $_language->module[ 'login_successful' ];
                 } elseif (!($ws_pwd == $ds[ 'password' ])) {
                     if ($sleep) {
-                        sleep(5);
+                        sleep(3);
                     }
                     $get = safe_query(
                         "SELECT
@@ -162,52 +173,66 @@ if (mysqli_num_rows($get) == 0) {
                             );
                         }
                     }
-                    $error = $_language->module[ 'invalid_password' ];
+                    $reenter = true;
+                    $return->message = $_language->module[ 'invalid_password' ];
                 }
             } else {
-                $error = $_language->module[ 'not_activated' ];
+                $return->message = $_language->module[ 'not_activated' ];
             }
         } else {
-            $error = str_replace('%username%', htmlspecialchars($ws_user), $_language->module[ 'no_user' ]);
+            $return->message = str_replace('%username%', htmlspecialchars($ws_user), $_language->module[ 'no_user' ]);
+            $reenter = true;
         }
     }
 } else {
-    $login = 0;
     $data = mysqli_fetch_assoc($get);
-    $error = str_replace('%reason%', $data[ 'reason' ], $_language->module[ 'ip_banned' ]);
+    $return->message = str_replace('%reason%', $data[ 'reason' ], $_language->module[ 'ip_banned' ]);
 }
 
-if ($login) {
-    header("Location: index.php?site=loginoverview");
+if ($ajax === true) {
+    header('Cache-Control: no-cache, must-revalidate');
+    header('Expires: Mon, 26 Jul 1997 05:00:00 GMT');
+    header('Content-type: application/json');
+    echo json_encode($return);
 } else {
-    ?>
-    <!DOCTYPE html>
-    <html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="description" content="Clanpage using webSPELL 4 CMS">
-        <meta name="author" content="webspell.org">
-        <meta name="keywords" content="webspell, webspell4, clan, cms">
-        <meta name="copyright" content="Copyright 2005-2014 by webspell.org">
-        <meta name="generator" content="webSPELL">
-        <title><?php echo PAGETITLE; ?></title>
-        <link href="_stylesheet.css" rel="stylesheet" type="text/css">
-    </head>
-    <body>
-    <table class="table">
-        <tr>
-            <td height="500" class="text-center">
-                <table width="350" border="0" cellpadding="10" cellspacing="0" style="border:1px solid <?php
-                    echo BORDER; ?>" bgcolor="<?php
-                        echo BG_1; ?>">
-                    <tr>
-                        <td class="text-center"><?php echo $error; ?></td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
-    </table>
-    </body>
-    </html>
-    <?php
+    if ($return->state == "success") {
+        header("Location: index.php?site=loginoverview");
+    } else {
+        $message = $return->message;
+        if ($reenter === true) {
+            $message .= '<br><br>'.$_language->module[ 'return_reenter' ];
+        } else {
+            $message .= '<br><br>'.$_language->module[ 'return' ];
+        }
+        ?>
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <meta charset="utf-8">
+            <meta name="description" content="Clanpage using webSPELL 4 CMS">
+            <meta name="author" content="webspell.org">
+            <meta name="keywords" content="webspell, webspell4, clan, cms">
+            <meta name="copyright" content="Copyright 2005-2015 by webspell.org">
+            <meta name="generator" content="webSPELL">
+            <title><?php echo PAGETITLE; ?></title>
+            <link href="_stylesheet.css" rel="stylesheet" type="text/css">
+        </head>
+        <body>
+        <table class="table">
+            <tr>
+                <td height="500" class="text-center">
+                    <table width="350" border="0" cellpadding="10" cellspacing="0" style="border:1px solid <?php
+                        echo BORDER; ?>" bgcolor="<?php
+                            echo BG_1; ?>">
+                        <tr>
+                            <td class="text-center"><?php echo $message; ?></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        </body>
+        </html>
+        <?php
+    }
 }
