@@ -117,7 +117,7 @@ if ($action == "add") {
         if (checkforempty(array('pattern'))) {
             $errors = array();
 
-            $upload = new \webspell\Upload('rank');
+            $upload = new \webspell\HttpUpload('rank');
             if ($upload->hasFile()) {
                 if ($upload->hasError() === false) {
                     $mime_types = array('image/gif');
@@ -180,7 +180,7 @@ if ($action == "add") {
 
             $errors = array();
 
-            $upload = new \webspell\Upload('rank');
+            $upload = new \webspell\HttpUpload('rank');
             if ($upload->hasFile()) {
                 if ($upload->hasError() === false) {
                     $mime_types = array('image/gif');

@@ -122,7 +122,7 @@ if ($action == "save") {
 
         $error = array();
 
-        $upload = new \webspell\Upload('upfile');
+        $upload = new \webspell\HttpUpload('upfile');
 
         $filepath = "./downloads/";
 
@@ -221,7 +221,7 @@ if ($action == "save") {
 
         $error = array();
 
-        $upload = new \webspell\Upload('upfile');
+        $upload = new \webspell\HttpUpload('upfile');
 
         $filepath = "./downloads/";
 

@@ -54,7 +54,7 @@ if (isset($_POST[ 'save' ])) {
 
         $filepath = "./images/links/";
 
-        $upload = new \webspell\Upload('banner');
+        $upload = new \webspell\HttpUpload('banner');
 
         if ($upload->hasFile()) {
             if ($upload->hasError() === false) {
@@ -119,7 +119,7 @@ if (isset($_POST[ 'save' ])) {
         $filepath = "./images/links/";
         $id = $_POST[ 'linkID' ];
 
-        $upload = new \webspell\Upload('banner');
+        $upload = new \webspell\HttpUpload('banner');
         if ($upload->hasFile()) {
             if ($upload->hasError() === false) {
                 $mime_types = array('image/jpeg','image/png','image/gif');

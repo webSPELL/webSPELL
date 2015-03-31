@@ -92,7 +92,7 @@ if (isset($_GET[ 'delete' ])) {
 
         $filepath = "../images/partners/";
 
-        $upload = new \webspell\Upload('banner');
+        $upload = new \webspell\HttpUpload('banner');
 
         if ($upload->hasFile()) {
             if ($upload->hasError() === false) {
@@ -175,7 +175,7 @@ if (isset($_GET[ 'delete' ])) {
 
         $filepath = "../images/partners/";
 
-        $upload = new \webspell\Upload('banner');
+        $upload = new \webspell\HttpUpload('banner');
 
         if ($upload->hasFile()) {
             if ($upload->hasError() === false) {

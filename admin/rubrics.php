@@ -42,7 +42,7 @@ if (isset($_POST[ 'save' ])) {
 
             $errors = array();
 
-            $upload = new \webspell\Upload('pic');
+            $upload = new \webspell\HttpUpload('pic');
             if ($upload->hasFile()) {
                 if ($upload->hasError() === false) {
                     $mime_types = array('image/jpeg','image/png','image/gif');
@@ -109,7 +109,7 @@ if (isset($_POST[ 'save' ])) {
 
             $errors = array();
 
-            $upload = new \webspell\Upload('pic');
+            $upload = new \webspell\HttpUpload('pic');
             if ($upload->hasFile()) {
                 if ($upload->hasError() === false) {
                     $mime_types = array('image/jpeg','image/png','image/gif');

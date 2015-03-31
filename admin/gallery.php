@@ -291,7 +291,7 @@ if ($part == "groups") {
         $picture = $_FILES[ 'picture' ];
         $CAPCLASS = new \webspell\Captcha;
         if ($CAPCLASS->checkCaptcha(0, $_POST[ 'captcha_hash' ])) {
-            $upload = new \webspell\Upload('picture');
+            $upload = new \webspell\HttpUpload('picture');
             if ($upload->hasFile()) {
                 if ($upload->hasError() === false) {
                     $mime_types = array('image/jpeg', 'image/png', 'image/gif');

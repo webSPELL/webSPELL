@@ -76,7 +76,7 @@ if (isset($_GET[ 'delete' ])) {
 
             $errors = array();
 
-            $upload = new \webspell\Upload('rank');
+            $upload = new \webspell\HttpUpload('rank');
             if ($upload->hasFile()) {
                 if ($upload->hasError() === false) {
                     $mime_types = array('image/jpeg','image/png','image/gif');

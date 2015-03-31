@@ -139,7 +139,7 @@ if ($action == "add") {
         $displayed = 0;
     }
 
-    $upload = new \webspell\Upload('banner');
+    $upload = new \webspell\HttpUpload('banner');
 
     $CAPCLASS = new \webspell\Captcha;
     if ($CAPCLASS->checkCaptcha(0, $_POST['captcha_hash'])) {
@@ -250,7 +250,7 @@ if ($action == "add") {
 
             $errors = array();
 
-            $upload = new \webspell\Upload('banner');
+            $upload = new \webspell\HttpUpload('banner');
 
             if ($upload->hasFile()) {
                 if ($upload->hasError() === false) {

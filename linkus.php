@@ -38,7 +38,7 @@ if (isset($_POST['save'])) {
     } else {
         $filepath = "./images/linkus/";
 
-        $upload = new \webspell\Upload('banner');
+        $upload = new \webspell\HttpUpload('banner');
 
         if ($upload->hasFile()) {
             if ($upload->hasError() === false) {
@@ -100,7 +100,7 @@ if (isset($_POST['save'])) {
 
         $filepath = "./images/linkus/";
         $id = $_POST['bannerID'];
-        $upload = new \webspell\Upload('banner');
+        $upload = new \webspell\HttpUpload('banner');
         if ($upload->hasFile()) {
             if ($upload->hasError() === false) {
                 $mime_types = array('image/jpeg','image/png','image/gif');

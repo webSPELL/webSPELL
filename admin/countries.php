@@ -144,7 +144,7 @@ if ($action == "add") {
     if ($CAPCLASS->checkCaptcha(0, $_POST[ 'captcha_hash' ])) {
         if (checkforempty(array('shorthandle','country'))) {
             $errors = array();
-            $upload = new \webspell\Upload('icon');
+            $upload = new \webspell\HttpUpload('icon');
             if ($upload->hasFile()) {
                 if ($upload->hasError() === false) {
                     $mime_types = array('image/gif');
@@ -215,7 +215,7 @@ if ($action == "add") {
 
             $errors = array();
 
-            $upload = new \webspell\Upload('icon');
+            $upload = new \webspell\HttpUpload('icon');
             if ($upload->hasFile()) {
                 if ($upload->hasError() === false) {
                     $mime_types = array('image/gif');
