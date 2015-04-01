@@ -143,7 +143,7 @@ if (!$userID) {
                                     break;
                             }
                             $file = $id.$endung;
-                            if ($upload->saveAs($filepath.$file)) {
+                            if ($upload->saveAs($filepath.$file, true)) {
                                 @chmod($filepath.$file, $new_chmod);
                                 safe_query(
                                     "UPDATE "
@@ -197,7 +197,7 @@ if (!$userID) {
                                     break;
                             }
                             $file = $id.$endung;
-                            if ($upload->saveAs($filepath.$file)) {
+                            if ($upload->saveAs($filepath.$file, true)) {
                                 @chmod($filepath.$file, $new_chmod);
                                 safe_query(
                                     "UPDATE "
