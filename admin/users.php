@@ -160,16 +160,16 @@ if (isset($_POST[ 'add' ])) {
         $birthday = $b_year . '.' . $b_month . '.' . $b_day;
         $nickname = htmlspecialchars(mb_substr(trim($_POST[ 'nickname' ]), 0, 30));
 
-        if(mysqli_num_rows(
+        if (mysqli_num_rows(
             safe_query(
                 "SELECT userID FROM " . PREFIX . "user WHERE nickname='" . $nickname .
                 "' AND userID!=" . $id
             )
-        )){
+        )) {
             $error_array[] = $_language->module[ 'user_exists' ];
         }
 
-        if(count($error_array) > 0){
+        if (count($error_array) > 0) {
             echo generateErrorBoxFromArray($_language->module[ 'error' ], $error_array);
         } else {
             safe_query(
