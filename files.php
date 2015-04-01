@@ -276,36 +276,24 @@ if ($action == "save") {
     if (!isfileadmin($userID)) {
         echo generateErrorBox($_language->module[ 'no_access' ]);
     } else {
-        if (isset($_GET[ 'cat' ])) {
-            $cat = $_GET[ 'cat' ];
-        } else {
-            $cat = '';
-        }
-        if (isset($_GET[ 'ref' ])) {
-            $ref = $_GET[ 'ref' ];
-        } else {
-            $ref = '';
-        }
-        if ($cat) {
-            $ref = '&amp;cat=' . $cat;
-        }
         $file = (int)$_GET[ 'file' ];
 
         if ($file) {
             $ergebnis = safe_query("SELECT * FROM `" . PREFIX . "files` WHERE `fileID` = '" . $file."'");
-            $ds = mysqli_fetch_array($ergebnis);
+            if(mysqli_num_rows($ergebnis)){
+                $ds = mysqli_fetch_array($ergebnis);
 
-            if (isFileURL($ds[ 'file' ]) === false) {
-                @unlink('./downloads/' . $ds[ 'file' ]);
-            }
+                if (isFileURL($ds[ 'file' ]) === false) {
+                    @unlink('./downloads/' . $ds[ 'file' ]);
+                }
 
-            if (safe_query("DELETE FROM `" . PREFIX . "files` WHERE `fileID` = '" . (int)$file."'")) {
-                redirect("index.php?site=files", generateSuccessBox($ref, $_language->module[ 'file_deleted' ]), "3");
+                safe_query("DELETE FROM `" . PREFIX . "files` WHERE `fileID` = '" . (int)$file."'");
+                redirect("index.php?site=files", generateSuccessBox($_language->module[ 'file_deleted' ]), "3");
             } else {
                 redirect("index.php?site=files", generateErrorBox($_language->module[ 'file_not_deleted' ]), "3");
             }
         } else {
-            redirect("index.php", generateErrorBox($_language->module[ 'cant_delete_without_fileID' ]), "3");
+            redirect("index.php?site=files", generateErrorBox($_language->module[ 'cant_delete_without_fileID' ]), "3");
         }
     }
 } elseif ($action == "newfile") {
