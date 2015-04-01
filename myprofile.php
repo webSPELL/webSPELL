@@ -120,11 +120,9 @@ if (!$userID) {
         $filepath = "./images/avatars/";
 
         $upload = new \webspell\HttpUpload('avatar');
-        if (!$upload->hasFile() && $_POST['avatar_url'] != "http://") {
+        if (!$upload->hasFile()) {
             $upload = new \webspell\UrlUpload($_POST['avatar_url']);
         }
-
-        print_r($upload);
 
         if ($upload->hasFile()) {
             if ($upload->hasError() === false) {
@@ -176,7 +174,7 @@ if (!$userID) {
 
 
         $upload = new \webspell\HttpUpload('userpic');
-        if (!$upload->hasFile() && $_POST['userpic_url'] != "http://") {
+        if (!$upload->hasFile()) {
             $upload = new \webspell\UrlUpload($_POST['userpic_url']);
         }
 
