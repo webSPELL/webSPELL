@@ -517,7 +517,7 @@ if (!$userID) {
                     $countries
                 );
             if ($ds[ 'avatar' ]) {
-                $viewavatar = '&#8226; <a href="javascript:void(0);" onclick="window.open(\'images/avatars/' .
+                $viewavatar = '<a href="javascript:void(0);" onclick="window.open(\'images/avatars/' .
                     $ds[ 'avatar' ] . '\',\'avatar\',\'width=120,height=120\')">' . $_language->module[ 'avatar' ] .
                     '</a>';
             } else {
