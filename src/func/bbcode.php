@@ -327,6 +327,7 @@ function imgreplace($content)
             $i++;
             if ($autoresize == 1) {
                 $picinfo = getimagesize($teil[2]);
+                $format = "unknown";
                 switch ($picinfo[2]) {
                     case 1:
                         $format = "gif";

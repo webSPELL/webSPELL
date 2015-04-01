@@ -49,7 +49,7 @@ class Tags
         }
     }
 
-    public static function getTags($relType, $relID, $array = false)
+    public static function getTags($relType, $relID, $asArray = false)
     {
         $tags = array();
         $get = safe_query("SELECT * FROM " . PREFIX . "tags WHERE rel='" . $relType . "' AND ID='" . $relID . "'");
@@ -57,7 +57,7 @@ class Tags
             $tags[] = $ds['tag'];
         }
         $tags = array_unique($tags);
-        return ($array === true) ? $tags : implode(", ", $tags);
+        return ($asArray === true) ? $tags : implode(", ", $tags);
     }
 
     public static function getTagsLinked($relType, $relID)

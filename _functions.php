@@ -139,7 +139,11 @@ function showlock($reason, $time)
     $pagetitle = $gettitle['title'];
     $data_array = array();
     $data_array['$pagetitle'] = $pagetitle;
-    $data_array['$rewriteBase'] = $rewriteBase;
+    if (isset($GLOBALS['_modRewrite']) && $GLOBALS['_modRewrite']->enabled()) {
+        $data_array['$rewriteBase'] = $GLOBALS['_modRewrite']->getRewriteBase();
+    } else {
+        $data_array['$rewriteBase'] = '';
+    }
     $data_array['$reason'] = $reason;
     $lock = $GLOBALS["_template"]->replaceTemplate("lock", $data_array);
 

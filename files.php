@@ -82,6 +82,9 @@ function unit_to_size($num, $unit)
         case 'gb':
             $size = $num * 1024 * 1024 * 1024;
             break;
+        default:
+            $size = $num;
+            break;
     }
     return $size;
 }
