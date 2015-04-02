@@ -143,26 +143,8 @@ if (!isset($_GET[ 'action' ])) {
 }
 
 if ($_GET[ 'action' ] == "add") {
-    function generate_options($filecats = '', $offset = '', $subcatID = 0)
-    {
-        $rubrics = safe_query(
-            "SELECT * FROM " . PREFIX . "files_categorys WHERE subcatID = '" . $subcatID .
-            "' ORDER BY name"
-        );
-        while ($dr = mysqli_fetch_array($rubrics)) {
-            $filecats .= '<option value="' . $dr[ 'filecatID' ] . '">' . $offset . getinput($dr[ 'name' ]) .
-                '</option>';
-            if (mysqli_num_rows(safe_query(
-                "SELECT * FROM " . PREFIX . "files_categorys WHERE subcatID = '" .
-                $dr[ 'filecatID' ] . "'"
-            ))) {
-                $filecats .= generate_options("", $offset . "- ", $dr[ 'filecatID' ]);
-            }
-        }
-        return $filecats;
-    }
 
-    $filecats = generate_options('<option value="0">' . $_language->module[ 'main' ] . '</option>', '- ');
+    $filecats = generateFileCategoryOptions('<option value="0">' . $_language->module[ 'main' ] . '</option>', '- ');
     $CAPCLASS = new \webspell\Captcha;
     $CAPCLASS->createTransaction();
     $hash = $CAPCLASS->getHash();
@@ -191,28 +173,7 @@ if ($_GET[ 'action' ] == "add") {
     $ergebnis = safe_query("SELECT * FROM " . PREFIX . "files_categorys WHERE filecatID='$filecatID'");
     $ds = mysqli_fetch_array($ergebnis);
 
-    function generate_options($filecats = '', $offset = '', $subcatID = 0)
-    {
-
-        global $filecatID;
-        $rubrics = safe_query(
-            "SELECT * FROM " . PREFIX . "files_categorys WHERE subcatID = '" . $subcatID .
-            "' AND (filecatID !='" . $filecatID . "' AND subcatID !='" . $filecatID . "')  ORDER BY name"
-        );
-        while ($dr = mysqli_fetch_array($rubrics)) {
-            $filecats .= '<option value="' . $dr[ 'filecatID' ] . '">' . $offset . getinput($dr[ 'name' ]) .
-                '</option>';
-            if (mysqli_num_rows(safe_query(
-                "SELECT * FROM " . PREFIX . "files_categorys WHERE subcatID = '" .
-                $dr[ 'filecatID' ] . "'"
-            ))) {
-                $filecats .= generate_options("", $offset . "- ", $dr[ 'filecatID' ]);
-            }
-        }
-        return $filecats;
-    }
-
-    $filecats = generate_options('<option value="0">' . $_language->module[ 'main' ] . '</option>', '- ');
+    $filecats = generateFileCategoryOptions('<option value="0">' . $_language->module[ 'main' ] . '</option>', '- ');
 
     $filecats = str_replace(
         'value="' . $ds[ 'subcatID' ] . '"',
