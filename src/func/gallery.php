@@ -232,7 +232,7 @@ class Gallery
 
         $ds = mysqli_fetch_array(
             safe_query(
-                "SELECT `userID` FROM `" . PREFIX . "gallery` WHERE `galleryID` = " . (int)$galleryID . ""
+                "SELECT `userID` FROM `" . PREFIX . "gallery` WHERE `galleryID` = " . (int)$galleryID
             )
         );
         return $ds['userID'];
