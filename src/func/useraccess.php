@@ -436,7 +436,7 @@ function istopicpost($topicID, $postID)
     );
 }
 
-function isinusergrp($usergrp, $userID, $sp = 1)
+function isinusergrp($usergrp, $userID)
 {
     if ($usergrp == 'user' && !empty($userID)) {
         return true;
