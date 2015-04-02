@@ -139,9 +139,7 @@ class ModRewrite
         }
     }
 
-    public function rewriteBody($content,
-        /** @noinspection PhpUnusedParameterInspection (needed by callback)*/
-        $phase)
+    public function rewriteBody($content, $phase)
     {
         return $this->rewrite($content, false);
     }

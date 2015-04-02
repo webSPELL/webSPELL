@@ -143,7 +143,6 @@ if (!isset($_GET[ 'action' ])) {
 }
 
 if ($_GET[ 'action' ] == "add") {
-
     $filecats = generateFileCategoryOptions('<option value="0">' . $_language->module[ 'main' ] . '</option>', '- ');
     $CAPCLASS = new \webspell\Captcha;
     $CAPCLASS->createTransaction();
