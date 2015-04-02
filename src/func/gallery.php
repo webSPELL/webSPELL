@@ -83,7 +83,8 @@ class Gallery
             $pic['name'] = stripslashes(clearfromtags($pic['name']));
 
             $data_array = array();
-            $data_array['$gallery'] = $gallery;
+            $data_array['$galleryID'] = $pic['galleryID'];
+            $data_array['$name'] = $pic['name'];
             $thumb = $GLOBALS["_template"]->replaceTemplate("gallery_content_showthumb", $data_array);
 
         } else {
@@ -103,6 +104,7 @@ class Gallery
         $max_y = $picsize_h;
 
         $ext = getimagesize($image);
+        $stop = false;
         switch (strtolower($ext[2])) {
             case '2':
                 $im = imagecreatefromjpeg($image);
@@ -119,7 +121,7 @@ class Gallery
         }
 
         $result = "";
-        if (!isset($stop)) {
+        if ($stop === false) {
             $x = imagesx($im);
             $y = imagesy($im);
 
