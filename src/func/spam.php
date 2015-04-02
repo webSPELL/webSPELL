@@ -102,8 +102,8 @@ class SpamApi
     }
 
     /**
-     * @param $message the text which needs to be learned
-     * @param $type is it spam (SpamApi::Spam) or ham (SpamApi::NOSPAM)
+     * @param string $message the text which needs to be learned
+     * @param int $type is it spam (SpamApi::Spam) or ham (SpamApi::NOSPAM)
      */
     public function learn($message, $type)
     {
@@ -122,7 +122,7 @@ class SpamApi
     }
 
     /**
-     * @param $message the text which is going to be validated
+     * @param string $message the text which is going to be validated
      *
      * @return int
      */

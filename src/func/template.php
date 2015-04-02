@@ -42,7 +42,7 @@ class Template
     /**
     * returns the content of a template file
     *
-    * @param $template name of the template
+    * @param string $template name of the template
     *
     * @return string content of the template
     * @throws \Exception when the file is not found
