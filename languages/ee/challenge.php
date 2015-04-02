@@ -66,4 +66,4 @@ $language_array = Array(
   'time'=>'aeg',
   'wrong_security_code'=>'Turvakood oli vale.'
 );
-?>
+

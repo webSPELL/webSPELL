@@ -48,4 +48,4 @@ Viel Spass auf unserer Webseite
     &#8226; <a href="index.php?site=login">anmelden</a>',
 	'your_email'=>'Deine E-Mail'
 );
-?>
+

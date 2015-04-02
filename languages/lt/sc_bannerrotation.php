@@ -31,4 +31,4 @@ $language_array = Array(
 
 	'no_banners'=>'jokių reklamų nėra'
 );
-?>
+

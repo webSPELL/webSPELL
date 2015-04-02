@@ -46,4 +46,4 @@ $language_array = Array(
   'status'=>'Cтатус',
   'timeout'=>'времето за връзка изтече'
 );
-?>
+

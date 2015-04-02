@@ -32,4 +32,4 @@ $language_array = Array(
 	'about_title'=>'Om os',
 	'no_about'=>'Der er ingen beskrivelse tilgængelig i øjeblikket.'
 );
-?>
+

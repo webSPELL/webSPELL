@@ -68,4 +68,4 @@ $language_array = Array(
   'wrong_securitycode'=>'Sa sisestasid vale turvakoodi!',
   'no_result'=>'Kandeid ei leitud "%s"'
 );
-?>
+

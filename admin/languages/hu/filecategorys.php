@@ -45,4 +45,4 @@ $language_array = Array(
   'sub_category'=>'Szülő kategória:',
   'transaction_invalid'=>'A művelet azonosítója érvénytelen'
 );
-?>
+

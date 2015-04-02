@@ -88,4 +88,4 @@ $language_array = Array(
   'yellow'=>'Keltainen',
   'yes_can_combine'=>'Tottakai voit, esimerkiksi saadaksesi jonkun huomion:'
 );
-?>
+

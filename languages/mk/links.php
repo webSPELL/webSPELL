@@ -56,4 +56,4 @@ $language_array = Array(
   'title_categories'=>'Категории на линкови',
   'update_link'=>'Надогради го линкот'
 );
-?>
+

@@ -49,4 +49,4 @@ $language_array = Array(
 	'status'=>'Status',
 	'town'=>'Grad'
 );
-?>
+

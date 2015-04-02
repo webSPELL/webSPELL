@@ -44,4 +44,4 @@ $language_array = Array(
   'no_access'=>'Geen toegang!',
   'upload'=>'Oplaai'
 );
-?>
+

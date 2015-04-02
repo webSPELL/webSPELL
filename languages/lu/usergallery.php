@@ -60,4 +60,4 @@ $language_array = Array(
   'visitor_comments'=>'Besicherkommentaren',
   'x_of_y_mb_in_use'=>'<span style="color:%spacecolor%">&nbsp;%used_size%</span> von %available_size% MB sinn beluecht.'
 );
-?>
+

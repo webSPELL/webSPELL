@@ -144,4 +144,4 @@ Dankie vir jou belangstelling
   'you_have_to_username'=>'Jy moet jou gebruikersnaam in voer!',
   'you_have_to_valid_email'=>'Jou e-pos is nie geldig nie!'
 );
-?>
+

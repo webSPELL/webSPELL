@@ -58,4 +58,4 @@ $language_array = Array(
 	'responsible_persons'=>'Verantwortlech Persounen',
 	'webmaster'=>'Webmaster:'
 );
-?>
+

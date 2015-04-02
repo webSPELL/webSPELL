@@ -33,4 +33,4 @@ $language_array = Array(
 	'outgoing'=>'Odlazeće',
 	'owner_responsible'=>'Vlasnik je odgovoran za ove stranice.'
 );
-?>
+

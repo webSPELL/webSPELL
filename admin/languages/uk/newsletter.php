@@ -50,4 +50,4 @@ Your received following Message:',
   'user_registered'=>'registered Users (incl. Clanmembers) ',
   'users'=>'Users'
 );
-?>
+

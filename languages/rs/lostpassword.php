@@ -39,4 +39,4 @@ $language_array = Array(
   'successful'=>'Ваш рачун није пронаћен<br><br>rn    За неколико секунди примит ће те е-маил са Вашим подацима.<br><br>rn    &#8226; <a href="index.php?site=login">Пријави се</a>',
   'your_email'=>'Ваш Е-Маил'
 );
-?>
+

@@ -45,4 +45,4 @@ $language_array = Array(
   'sub_category'=>'Sotto-categoria da',
   'transaction_invalid'=>'ID transazione non è valido'
 );
-?>
+

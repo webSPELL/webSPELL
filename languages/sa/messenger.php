@@ -78,4 +78,4 @@ $language_array = Array(
   'error'=>'خطا',
   'unknown_user'=>'مستخدم مجهول'
 );
-?>
+

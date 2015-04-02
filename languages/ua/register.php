@@ -77,4 +77,4 @@ $language_array = Array(
   'wrong_activationkey'=>'Активаційний ключ невірний!',
   'wrong_securitycode'=>'Код безпеки невірний!'
 );
-?>
+

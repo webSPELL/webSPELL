@@ -39,4 +39,4 @@ $language_array = Array(
   'sponsor'=>'Sponsors',
   'sponsors'=>'Sponsori'
 );
-?>
+

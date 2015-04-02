@@ -75,4 +75,4 @@ $language_array = Array(
 	'tags'=>'balises'
 );
 
-?>
+

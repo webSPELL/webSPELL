@@ -65,4 +65,4 @@ $language_array = Array(
   'squads'=>'ჯგუფები',
   'who_is_online'=>'ვინ არის ონლაინში?'
 );
-?>
+

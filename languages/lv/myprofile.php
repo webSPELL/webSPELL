@@ -139,4 +139,4 @@ Paldies par Jūsu interesi
   'you_have_to_username'=>'Jums jāievada Jūsu lietotājvārds!',
   'you_have_to_valid_email'=>'Jūsu e-pasts nav derīgs!'
 );
-?>
+

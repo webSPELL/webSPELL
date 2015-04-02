@@ -33,4 +33,4 @@ $language_array = Array(
   'history'=>'تاريخ',
   'no_history'=>'.لا توجد معلومات لحد الان'
 );
-?>
+

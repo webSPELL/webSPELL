@@ -33,4 +33,4 @@ $language_array = Array(
   'save'=>'salvesta',
   'no_session'=>'Palun tee kindlaks, et küpsised on lubatud ja proovi keelt uuesti valida.'
 );
-?>
+

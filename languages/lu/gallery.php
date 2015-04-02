@@ -78,4 +78,4 @@ $language_array = Array(
   'you_have_already_rated'=>'Du hues schon bewert.',
   'no_thumb'=>'Keen Thumb fonnt'
 );
-?>
+

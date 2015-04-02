@@ -79,4 +79,4 @@ $language_array = Array(
   'visitor_comments'=>'Включить комментарии посетителей',
   'vs'=>'vs.'
 );
-?>
+

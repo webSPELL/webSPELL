@@ -76,4 +76,4 @@ Hvala Vam na registraciji
   'wrong_activationkey'=>'Vaš aktivacijski ključ je napačen!',
   'wrong_securitycode'=>'Napačna varnostna koda!'
 );
-?>
+

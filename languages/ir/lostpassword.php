@@ -39,4 +39,4 @@ $language_array = Array(
   'successful'=>'کاربر یافت شد<br><br>rn    .ایمیلی حاوی اطلاعات کاربری ارسال شد<br><br>rn    &#8226; <a href="index.php?site=login">ورود</a>',
   'your_email'=>'ایمیل شما'
 );
-?>
+

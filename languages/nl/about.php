@@ -35,4 +35,4 @@ $language_array = Array(
 	'no_about'=>'Er is helaas geen informatie aanwezig.'
 );
 
-?>
+

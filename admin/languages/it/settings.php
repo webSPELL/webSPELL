@@ -171,4 +171,4 @@ $language_array = Array(
   'update'=>'aggiornamento',
   'user_guestbook'=>'Guestbook utenti'
 );
-?>
+

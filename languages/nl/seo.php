@@ -76,4 +76,4 @@ $language_array = Array(
 	'versus'=>'tegen',
 	'whoisonline'=>'Wie is online'
 );
-?>
+

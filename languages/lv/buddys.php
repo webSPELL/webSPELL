@@ -40,4 +40,4 @@ $language_array = Array(
   'your_buddylist'=>'Draugu saraksts',
   'your_ignorelist'=>'Ignorēto saraksts'
 );
-?>
+

@@ -144,4 +144,4 @@ Kiitoksia yhteydenotosta!
   'you_have_to_username'=>'Syötä kutsumanimesi!',
   'you_have_to_valid_email'=>'Sähköpostisi ei ole oikein!'
 );
-?>
+

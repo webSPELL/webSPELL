@@ -68,4 +68,4 @@ $language_array = Array(
 	'yht_enter_endingtime'=>'You have to enter the endingtime!',
 	'yht_enter_title'=>'You have to enter a title!'
 );
-?>
+

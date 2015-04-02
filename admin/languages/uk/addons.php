@@ -70,4 +70,4 @@ $language_array = Array(
   'to_sort'=>'sort',
   'url'=>'Url'
 );
-?>
+

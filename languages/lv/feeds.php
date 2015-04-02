@@ -33,4 +33,4 @@ $language_array = Array(
   'news_feed'=>'Ziņu lenta',
   'latest_news_from'=>'Jaunākās ziņas no'
 );
-?>
+

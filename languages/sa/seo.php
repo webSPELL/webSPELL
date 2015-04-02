@@ -77,4 +77,4 @@ $language_array = Array(
   'versus'=>'ضد',
   'whoisonline'=>'من هو متصل'
 );
-?>
+

@@ -73,4 +73,4 @@ $language_array = Array(
   'wrong_securitycode'=>'Yanlış güvenlik kodu girdiniz!',
   'no_result' =>'"%s" bulunamadı girişleri'
 );
-?>
+

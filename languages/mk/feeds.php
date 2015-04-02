@@ -33,4 +33,4 @@ $language_array = Array(
   'news_feed'=>'Нови услови',
   'latest_news_from'=>'Последни вести од'
 );
-?>
+

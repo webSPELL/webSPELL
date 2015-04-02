@@ -50,4 +50,4 @@ $language_array = Array(
   'smiley_name'=>'Hangulatjel neve',
   'transaction_invalid'=>'A művelet azonosítója érvénytelen'
 );
-?>
+

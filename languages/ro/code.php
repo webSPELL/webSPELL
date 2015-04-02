@@ -83,4 +83,4 @@ $language_array = Array(
   'yellow'=>'Galben',
   'yes_can_combine'=>'Da, desigur, de exemplu să captezi atentia cuiva trebuie să ii scrii:'
 );
-?>
+

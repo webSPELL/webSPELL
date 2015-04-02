@@ -79,4 +79,4 @@ $language_array = Array(
   'visitor_comments'=>'تفعيل تعليقات الزوار',
   'vs'=>'ضد'
 );
-?>
+

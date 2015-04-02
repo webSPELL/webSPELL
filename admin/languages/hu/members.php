@@ -81,4 +81,4 @@ $language_array = Array(
   'user_admin'=>'Felhasználók',
   'yes'=>'Igen'
 );
-?>
+

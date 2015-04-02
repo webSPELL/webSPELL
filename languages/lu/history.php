@@ -38,4 +38,4 @@ $language_array = Array(
   'history'=>'Werdegang',
   'no_history'=>'am moment keng Informatiounen verfügbar'
 );
-?>
+

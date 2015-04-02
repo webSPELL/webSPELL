@@ -45,4 +45,4 @@ $language_array = Array(
   'save_banner'=>'спреми банер',
   'use_following_code'=>'Користите сљедеце код да уметнете банер на вашу страницу.'
 );
-?>
+

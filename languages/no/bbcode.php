@@ -84,4 +84,4 @@ $language_array = Array(
 	'large_picture'=>'Large Picture',
 	'show_original'=>'show original'
 );
-?>
+

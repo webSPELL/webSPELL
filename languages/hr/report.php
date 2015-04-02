@@ -34,4 +34,4 @@ $language_array = Array(
 	'report_recognized'=>'Vaš izvještaj je zaprimljen. Hvala.',
   'wrong_securitycode'=>'Unijeli ste krivi sigurnosni kod!<br><br>[<a href="javascript:back();">Natrag</a>]'
 );
-?>
+

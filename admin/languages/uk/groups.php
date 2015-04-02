@@ -44,4 +44,4 @@ $language_array = Array(
   'really_delete'=>'Really delete this Forum Group?',
   'transaction_invalid'=>'Transaction ID invalid'
 );
-?>
+

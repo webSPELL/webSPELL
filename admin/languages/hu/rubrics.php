@@ -46,4 +46,4 @@ $language_array = Array(
   'rubric_name'=>'Hírkategória neve',
   'transaction_invalid'=>'A művelet azonosítója érvénytelen'
 );
-?>
+

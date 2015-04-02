@@ -104,4 +104,4 @@ $language_array = Array(
 	'enter_title'=>'Nezadali ste žiaden dlhý nadpis!',
 	'enter_info'=>'Nezadali ste žiadnu informáciu!'
 );
-?>
+

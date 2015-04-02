@@ -133,4 +133,4 @@ $language_array = Array(
   'you_have_to_username'=>'Du muss en Benotzernumm aginn!',
   'you_have_to_valid_email'=>'D\'E-Mail Adress ass net korrekt!'
 );
-?>
+

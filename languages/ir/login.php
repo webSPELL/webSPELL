@@ -44,4 +44,4 @@ $language_array = Array(
   'registered_users'=>'کاربران سایت',
   'welcome_back'=>'خوش امدید'
 );
-?>
+

@@ -54,4 +54,4 @@ $language_array = Array(
   'transaction_invalid'=>'Transaction ID invalid',
   'yes'=>'Yes'
 );
-?>
+

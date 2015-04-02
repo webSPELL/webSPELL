@@ -41,4 +41,4 @@ $language_array = Array(
   'unlock_page'=>'Biztosan meg akarod nyitni az oldalt?',
   'you_can_use_html'=>'Használhatsz HTML-Tageket'
 );
-?>
+

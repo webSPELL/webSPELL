@@ -35,4 +35,4 @@ $language_array = Array(
   'reply'=>'Одговори',
   'replies'=>'Одговори'
 );
-?>
+

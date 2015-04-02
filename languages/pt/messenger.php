@@ -77,4 +77,4 @@ $language_array = Array(
 	'error'=>'error',
 	'unknown_user'=>'unknown user'
 );
-?>
+

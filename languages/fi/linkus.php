@@ -51,4 +51,4 @@ $language_array = Array(
   'save_banner'=>'talleta Mainoskuva',
   'use_following_code'=>'Käytä seuraavaa koodia, linkittääksesi kotisivuillesi.'
 );
-?>
+

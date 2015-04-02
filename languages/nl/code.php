@@ -83,4 +83,4 @@ $language_array = Array(
 	'yes_can_combine'=>'Ja, natuurlijk kan dat, om iemands aandacht te krijgen kan je bijvoorbeeld dit schrijven:'
 
 );
-?>
+

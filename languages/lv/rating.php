@@ -33,4 +33,4 @@ $language_array = Array(
   'no_access'=>'nav pieejas!',
   'just_rate_between_0_10'=>'Lūdzu novērtējiet no 0 līdz 10 punktiem!'
 );
-?>
+

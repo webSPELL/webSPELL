@@ -104,4 +104,4 @@ $language_array = Array(
 	'enter_title'=>'Du har ikke indtastet nogen lang titel!',
 	'enter_info'=>'Du har ikke indtastet nogen information!'
 );
-?>
+

@@ -139,4 +139,4 @@ $language_array = Array(
   'you_have_to_username'=>'თქვენ უნდა შეიყვანოთ მომხლარებლის სახელი!',
   'you_have_to_valid_email'=>'თქვენი e-mail არ არის სწორი!'
 );
-?>
+

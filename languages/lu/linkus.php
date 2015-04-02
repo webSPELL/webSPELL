@@ -51,4 +51,4 @@ $language_array = Array(
   'save_banner'=>'Banner späicheren',
   'use_following_code'=>'Benotz folgendene Quellcode fir dësen Banner op denger Websäit bäizefügen.'
 );
-?>
+

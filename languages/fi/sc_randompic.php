@@ -39,4 +39,4 @@ $language_array = Array(
   'registered_since'=>'rekisteröity vuodesta',
   'view_profile'=>'vieraile profiilissa'
 );
-?>
+

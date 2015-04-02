@@ -41,4 +41,4 @@ $language_array = Array(
   'version'=>'Versione',
   'webspell_update'=>'webSPELL aggiornamento'
 );
-?>
+

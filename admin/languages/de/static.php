@@ -49,4 +49,4 @@ $language_array = Array(
   'you_can_use_html'=>'Du kannst HTML-Tags benutzen',
   'tags'=>'Tags'
 );
-?>
+

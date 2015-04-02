@@ -84,4 +84,4 @@ $language_array = Array(
 	'large_picture'=>'Stort Billede',
 	'show_original'=>'vis original'
 );
-?>
+

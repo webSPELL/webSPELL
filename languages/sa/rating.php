@@ -33,4 +33,4 @@ $language_array = Array(
   'no_access'=>'لا يمكن الوصول!',
   'just_rate_between_0_10'=>'!يرجى معدل فقط 0-10 النقاط'
 );
-?>
+

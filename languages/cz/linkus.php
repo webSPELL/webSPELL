@@ -45,4 +45,4 @@ $language_array = Array(
 	'save_banner'=>'uložit banner',
 	'use_following_code'=>'Použíjte tento kód pro vložení banneru na Váš web:'
 );
-?>
+

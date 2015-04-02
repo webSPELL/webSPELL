@@ -33,4 +33,4 @@ $language_array = Array(
 	'no_result'=>'Nieko nerasta',
 	'to_much_results'=>'Rasta per daug atitikmenų, prašome susiaurinti paiešką.'
 );
-?>
+

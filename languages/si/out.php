@@ -39,4 +39,4 @@ $language_array = Array(
   'outgoing'=>'Odhodi',
   'owner_responsible'=>'Lastnik je odgovoren za to stran.'
 );
-?>
+

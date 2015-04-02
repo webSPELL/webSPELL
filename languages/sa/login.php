@@ -45,4 +45,4 @@ $language_array = Array(
   'registered_users'=>'الاعضاء المسجلين',
   'welcome_back'=>'اهلا بك من جديد'
 );
-?>
+

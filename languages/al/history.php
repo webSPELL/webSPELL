@@ -38,4 +38,4 @@ $language_array = Array(
   'history'=>'Histori',
   'no_history'=>'Asnjë informacion i vlefshëm ende.'
 );
-?>
+

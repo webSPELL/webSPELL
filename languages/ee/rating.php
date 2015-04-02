@@ -33,4 +33,4 @@ $language_array = Array(
   'no_access'=>'puudub ligipääs!',
   'just_rate_between_0_10'=>'Hinda 0-10 skaalal!'
 );
-?>
+

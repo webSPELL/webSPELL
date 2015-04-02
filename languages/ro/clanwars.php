@@ -105,4 +105,4 @@ $language_array = Array(
   'won_clanwars'=>'clanwars caștigate',
   'won_points'=>'puncte caștigate'
 );
-?>
+

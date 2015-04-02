@@ -46,4 +46,4 @@ $language_array = Array(
   'registration'=>'yılından bu yana kayıtlı',
   'sort'=>'Sıralama:'
 );
-?>
+

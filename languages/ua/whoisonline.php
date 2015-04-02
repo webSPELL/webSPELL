@@ -96,4 +96,4 @@ $language_array = Array(
   'was_watching_the'=>'дивився',
   'whoisonline'=>'хто в мережі?'
 );
-?>
+

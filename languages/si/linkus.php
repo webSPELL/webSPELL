@@ -51,4 +51,4 @@ $language_array = Array(
   'save_banner'=>'uredi banner',
   'use_following_code'=>'Uporabite naslednje kode'
 );
-?>
+

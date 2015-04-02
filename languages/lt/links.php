@@ -55,4 +55,4 @@ $language_array = Array(
 	'title_categories'=>'Nuorodų kategorijos',
 	'update_link'=>'Atnaujinti nuorodą'
 );
-?>
+

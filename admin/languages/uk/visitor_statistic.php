@@ -60,4 +60,4 @@ $language_array = Array(
   'yyyy'=>'(YYYY)',
   'yyyy_mm'=>'(YYYY.MM)'
 );
-?>
+

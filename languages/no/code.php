@@ -82,4 +82,4 @@ $language_array = Array(
 	'yellow'=>'Yellow',
 	'yes_can_combine'=>'Yes, of course you can, for example to get someones attention you may write:'
 );
-?>
+

@@ -33,4 +33,4 @@ $language_array = Array(
 	'registered_since'=>'registrado desde',
 	'view_profile'=>'visitar perfil'
 );
-?>
+

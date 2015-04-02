@@ -138,4 +138,4 @@ Tak for din interesse
 	'you_have_to_username'=>'Du skal angive et brugernavn!',
 	'you_have_to_valid_email'=>'Din email er ikke gyldig!'
 );
-?>
+

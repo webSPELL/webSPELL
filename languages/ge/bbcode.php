@@ -85,4 +85,4 @@ $language_array = Array(
   'large_picture'=>'დიდი ფოტო',
   'show_original'=>'ორიგინალის ჩვენება'
 );
-?>
+

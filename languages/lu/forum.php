@@ -140,4 +140,4 @@ $language_array = Array(
   'enter_topic'=>'Du muss en Titel fir daat Thema aginn!',
   'enter_text'=>'Keen Text fonnt!'
 );
-?>
+

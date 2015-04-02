@@ -35,4 +35,4 @@ $language_array = Array(
   'update'=>'aktualisieren',
   'you_can_use_html'=>'Du kannst HTML-Tags benutzen'
 );
-?>
+

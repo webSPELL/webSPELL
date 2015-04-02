@@ -32,4 +32,4 @@ $language_array = Array(
 	'no_access'=>'kein Zugriff!',
 	'just_rate_between_0_10'=>'Bitte bewerte nur von 0 bis 10 Punkten!'
 );
-?>
+

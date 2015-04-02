@@ -33,4 +33,4 @@ $language_array = Array(
 	'registered_since'=>'Regisztráció időpontja',
 	'view_profile'=>'profil megtekintése'
 );
-?>
+

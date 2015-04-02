@@ -45,4 +45,4 @@ $language_array = Array(
   'registered_users'=>'Регистрированные пользователи',
   'welcome_back'=>'С возвращением'
 );
-?>
+

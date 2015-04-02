@@ -70,4 +70,4 @@ Thank you for your registration
 	'wrong_activationkey'=>'Your activation key is wrong!',
 	'wrong_securitycode'=>'The security code is wrong!'
 );
-?>
+

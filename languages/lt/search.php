@@ -67,4 +67,4 @@ $language_array = Array(
 	'wrong_securitycode'=>'Jūs įvedėte blogą apsaugos kodą!',
 	'no_result'=>'Nėra įrašų už "%s" rasti'
 );
-?>
+

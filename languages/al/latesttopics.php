@@ -40,4 +40,4 @@ $language_array = Array(
   'reply'=>'Përgjigjja',
   'replies'=>'Përgjigjet'
 );
-?>
+

@@ -55,4 +55,4 @@ $language_array = Array(
 	'title_categories'=>'Kategórie odkazov',
 	'update_link'=>'Upraviť odkaz'
 );
-?>
+

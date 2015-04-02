@@ -73,4 +73,4 @@ $language_array = Array(
   'visitor_comments'=>'Látogatók hozzászólásai',
 	'no_thumb'=>'Nincs mintakép'
 );
-?>
+

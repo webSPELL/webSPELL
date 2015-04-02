@@ -30,4 +30,4 @@ $language_array = Array(
 	'special_rank'=>'Spezialrank',
 	'no_special_rank'=>'kein Spezial Rank'
  );
- ?>
+ 

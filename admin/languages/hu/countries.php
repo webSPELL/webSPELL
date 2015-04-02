@@ -52,4 +52,4 @@ $language_array = Array(
   'shorthandle'=>'Rövid név',
   'transaction_invalid'=>'A művelet azonosítója érvénytelen'
 );
-?>
+

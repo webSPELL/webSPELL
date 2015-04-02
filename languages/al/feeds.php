@@ -38,4 +38,4 @@ $language_array = Array(
   'news_feed'=>'Të reja',
   'latest_news_from'=>'Të rejat nga'
 );
-?>
+

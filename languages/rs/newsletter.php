@@ -52,4 +52,4 @@ $language_array = Array(
   'your_mail_adress'=>'Ваш е-маил',
   'your_mail_adress_deleted'=>'Ваш е-маил је макнут с листе.'
 );
-?>
+

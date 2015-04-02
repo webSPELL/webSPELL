@@ -40,4 +40,4 @@ $language_array = Array(
 	'status'=>'Státusz',
 	'timeout'=>'idotúllépés'
 );
-?>
+

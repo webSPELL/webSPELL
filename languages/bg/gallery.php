@@ -78,4 +78,4 @@ $language_array = Array(
   'you_have_already_rated'=>'Вече сте оценили!',
   'no_thumb'=>'Няма наличен Thumb!'
 );
-?>
+

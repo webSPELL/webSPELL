@@ -56,4 +56,4 @@ $language_array = Array(
   'unknown_receiver'=>'αγνωστος αποδεκτης',
   'wrong_securitycode'=>'Εχετε εισαγει λαθος κωδικο ασφαλειας!'
 );
-?>
+

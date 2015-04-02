@@ -78,4 +78,4 @@ $language_array = Array(
   'you_have_already_rated'=>'Olet jo arvostellut tämän.',
   'no_thumb'=>'Ei Peukkua'
 );
-?>
+

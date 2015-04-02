@@ -52,4 +52,4 @@ $language_array = Array(
 	'responsible_persons'=>'Merito persone',
 	'webmaster'=>'Webmaster:'
 );
-?>
+

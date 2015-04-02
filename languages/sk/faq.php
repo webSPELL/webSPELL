@@ -38,4 +38,4 @@ $language_array = Array(
 	'no_faq'=>'Žiadne otázky nie sú vytvorené.<br><a href="index.php?site=faq">Naspäť</a>',
 	'saved_on'=>'uložené'
 );
-?>
+

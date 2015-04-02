@@ -37,4 +37,4 @@ $language_array = Array(
 
   'random_picture'=>'Випадкове фото'
 );
-?>
+

@@ -138,4 +138,4 @@ Ačiū jums
 	'you_have_to_username'=>'Jūs turite įrašyti vartotojo vardą!',
 	'you_have_to_valid_email'=>'Jūsų E-Pašto adresas blogas!'
 );
-?>
+

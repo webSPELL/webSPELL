@@ -71,4 +71,4 @@ $language_array = Array(
   'time'=>'време',
   'wrong_security_code'=>'Кодът са сигурност не е верен.'
 );
-?>
+

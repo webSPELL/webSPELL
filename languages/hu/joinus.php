@@ -58,4 +58,4 @@ $language_array = Array(
 	'title_join_us'=>'Csatlakozás',
 	'wrong_security_code'=>'Rossz biztonsági kód!'
 );
-?>
+

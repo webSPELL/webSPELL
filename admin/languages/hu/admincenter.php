@@ -84,4 +84,4 @@ $language_array = Array(
   'blocked_content'=>'Blocked Content',
   'modrewrite'=>'Mod-Rewrite'
 );
-?>
+

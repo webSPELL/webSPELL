@@ -74,4 +74,4 @@ $language_array = Array(
   'yht_enter_endingtime'=>'Izberite čas zaključka ankete!',
   'yht_enter_title'=>'Vnesite naslov!'
 );
-?>
+

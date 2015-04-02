@@ -80,4 +80,4 @@ $language_array = Array(
   'visitor_comments'=>'Ota vierailijoiden kommentit käyttöön',
   'tags'=>'Tunnisteet'
 );
-?>
+

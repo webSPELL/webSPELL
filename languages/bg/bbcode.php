@@ -90,4 +90,4 @@ $language_array = Array(
   'large_picture'=>'голяма снимка',
   'show_original'=>'покажи оригинал'
 );
-?>
+

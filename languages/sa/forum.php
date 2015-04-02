@@ -135,4 +135,4 @@ $language_array = Array(
   'enter_topic'=>'!يجب ادخال عوان الموضوع',
   'enter_text'=>'!يجب ادخال النص'
 );
-?>
+

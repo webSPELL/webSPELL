@@ -62,4 +62,4 @@ $language_array = Array(
   'write_right'=>'Schreibrecht',
   'write_right_info_board'=>'Diese Benutzergruppe(n) hat/haben das Recht, im Forum zu schreiben.<br>Wenn keine Benutzergruppe ausgewählt ist, können alle registrieren Benutzer schreiben.<br>Benutze STRG um mehrere auszuwählen oder zu deselektieren.'
 );
-?>
+

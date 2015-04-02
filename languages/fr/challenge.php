@@ -66,4 +66,4 @@ $language_array = Array(
 	'wrong_security_code'=>'Le code de sécurité est faux !'
 );
 
-?>
+

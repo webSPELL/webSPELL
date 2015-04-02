@@ -32,4 +32,4 @@ $language_array = Array(
 	'history'=>'Történet',
 	'no_history'=>'Nincs elérheto információ.'
 );
-?>
+

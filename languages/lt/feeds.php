@@ -32,4 +32,4 @@ $language_array = Array(
 	'news_feed'=>'Žinių Perdavimas',
 	'latest_news_from'=>'Paskutinės naujienos nuo'
 );
-?>
+

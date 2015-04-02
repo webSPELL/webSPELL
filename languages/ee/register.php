@@ -71,4 +71,4 @@ Täname sind registreerumise eest
   'wrong_activationkey'=>'Su aktiveerimisvõti on vale!',
   'wrong_securitycode'=>'Turvakood on vale!'
 );
-?>
+

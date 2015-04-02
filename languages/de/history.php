@@ -32,4 +32,4 @@ $language_array = Array(
 	'history'=>'Werdegang',
 	'no_history'=>'derzeit keine Informationen verfügbar'
 );
-?>
+

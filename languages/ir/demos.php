@@ -78,4 +78,4 @@ $language_array = Array(
   'visitor_comments'=>'فعال کردن کامنت برای مهمان ها',
   'vs'=>'در مقابل'
 );
-?>
+

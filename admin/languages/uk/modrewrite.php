@@ -71,4 +71,4 @@ $language_array = Array(
 	'add_apache_options'=>'Add the following line to your apache config:<br>Options -MultiViews',
 	'modrewrite_available_but_multiview_enabled'=>'mod_rewrite is available but Apache MultiViews are enabled and prevents mod_rewrite'
 	);
-?>
+

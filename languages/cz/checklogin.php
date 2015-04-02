@@ -38,4 +38,4 @@ $language_array = Array(
   'return'=>'<a href="javascript:history.back()">Jít zpět</a>',
   'return_reenter' => '<a href="javascript:history.back()">Zpět a opakujte vstup</a>'
 );
-?>
+

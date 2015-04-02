@@ -88,4 +88,4 @@ $language_array = Array(
   'yellow'=>'Sarı',
   'yes_can_combine'=>'Evet, tabii ki, örneğin birilerinin dikkatini çekmek için şöyle yazabilirsiniz:'
 );
-?>
+

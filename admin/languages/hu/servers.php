@@ -47,4 +47,4 @@ $language_array = Array(
   'transaction_invalid'=>'A művelet azonosítója érvénytelen',
   'to_sort'=>'Rendezés'
 );
-?>
+

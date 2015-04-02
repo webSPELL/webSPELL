@@ -61,4 +61,4 @@ $language_array = Array(
   'title_categories'=>'Категорії посилань',
   'update_link'=>'Оновити ссилку'
 );
-?>
+

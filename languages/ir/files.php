@@ -105,4 +105,4 @@ $language_array = Array(
   'you_have_to_enter_filename'=>'!شما باید نام فایل را وارد کنید',
   'you_have_to_enter_file'=>'!شما باید لینک فایل را وارد کنید'
 );
-?>
+

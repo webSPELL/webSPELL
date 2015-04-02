@@ -39,4 +39,4 @@ $language_array = Array(
   'no_result'=>'Keen Sichergebnis',
   'to_much_results'=>'Ze vill Sichergebnisser, wann ech gelift méi Zeechen aginn.'
 );
-?>
+

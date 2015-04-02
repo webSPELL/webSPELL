@@ -49,4 +49,4 @@ distra pe pagina noastră
     &#8226; <a href="index.php?site=login">logare</a>',
   'your_email'=>'Mail-ul dvs.'
 );
-?>
+

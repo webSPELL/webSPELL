@@ -37,4 +37,4 @@ $language_array = Array(
 
   'no_banners'=>'Ni bannera.'
 );
-?>
+

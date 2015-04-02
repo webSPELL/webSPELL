@@ -59,4 +59,4 @@ $language_array = Array(
 	'wrote'=>'írta',
 	'your_message'=>'Az üzeneted'
 );
-?>
+

@@ -66,4 +66,4 @@ $language_array = Array(
 	'title_comment'=>'Dein Kommentar',
 	'title_editcomment'=>'Kommentar editieren'
 );
-?>
+

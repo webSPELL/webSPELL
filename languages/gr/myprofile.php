@@ -144,4 +144,4 @@ $language_array = Array(
   'you_have_to_username'=>'Πρεπει να εισαγετε ονομα χρηστη!',
   'you_have_to_valid_email'=>'Το e-mail σας δεν ειναι εγκυρο!'
 );
-?>
+

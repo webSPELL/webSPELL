@@ -68,4 +68,4 @@ $language_array = Array(
 	'yht_enter_endingtime'=>'Jūs turite įrašyti pasibaigimo laiką!',
 	'yht_enter_title'=>'Jūs turite įrašyti pavadinimą!'
 );
-?>
+

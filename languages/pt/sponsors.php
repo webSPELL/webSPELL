@@ -38,4 +38,4 @@ $language_array = Array(
 	'sponsor'=>'Patrocinador',
 	'sponsors'=>'Patrocinadores'
 );
-?>
+

@@ -50,4 +50,4 @@ $language_array = Array(
   'squad'=>'განრიგი',
   'update_award'=>'ჯილდოს განახლება'
 );
-?>
+

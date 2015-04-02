@@ -31,4 +31,4 @@ $language_array = Array(
 
   'fight_us'=>'با ما مسابقه دهید'
 );
-?>
+

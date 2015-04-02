@@ -65,4 +65,4 @@ $language_array = Array(
 	'time'=>'Czas',
 	'wrong_security_code'=>'Niepoprawny kod zabezpieczający.'
 );
-?>
+

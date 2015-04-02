@@ -66,4 +66,4 @@ $language_array = Array(
 	'title_comment'=>'Hozzászólás írása',
 	'title_editcomment'=>'Hozzászólás szerkesztése'
 );
-?>
+

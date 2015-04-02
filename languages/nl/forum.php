@@ -134,4 +134,4 @@ $language_array = Array(
 	'enter_topic'=>'Je moet een titel voor het onderwerp invullen!',
 	'enter_text'=>'Je moet wat tekst invullen!'
 );
-?>
+

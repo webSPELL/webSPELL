@@ -61,4 +61,4 @@ $language_array = Array(
   'title_categories'=>'Bağlantı kategorileri',
   'update_link'=>'Bağlantıyı güncelle'
 );
-?>
+

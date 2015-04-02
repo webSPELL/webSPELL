@@ -88,4 +88,4 @@ $language_array = Array(
   'yellow'=>'Rumeno',
   'yes_can_combine'=>'Ja, seveda lahko, na primer, da bi pritegnili pozornost nekoga, lahko napišete:'
 );
-?>
+

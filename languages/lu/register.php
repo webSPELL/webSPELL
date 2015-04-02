@@ -77,4 +77,4 @@ Vill mols merci fir deng Umellung
   'wrong_activationkey'=>'Däin Fräischaltcode ass falsch!',
   'wrong_securitycode'=>'Den Sëcherheetscode ass falsch!'
 );
-?>
+

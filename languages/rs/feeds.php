@@ -32,4 +32,4 @@ $language_array = Array(
   'news_feed'=>'Hови Услови',
   'latest_news_from'=>'Задње вијести са'
 );
-?>
+

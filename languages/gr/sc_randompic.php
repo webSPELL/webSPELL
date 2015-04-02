@@ -39,4 +39,4 @@ $language_array = Array(
   'registered_since'=>'εγγεγραμενος απο',
   'view_profile'=>'επισκεψη προφιλ'
 );
-?>
+

@@ -65,4 +65,4 @@ $language_array = Array(
   'wrote'=>'ja napisal',
   'your_message'=>'Tvoje sporočilo'
 );
-?>
+

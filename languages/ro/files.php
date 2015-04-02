@@ -106,4 +106,4 @@ $language_array = Array(
   'you_have_to_enter_filename'=>'Trebuie sa introduci un nume de fișier!',
   'you_have_to_enter_file'=>'Trebuie sa introduci un fișier / url!'
 );
-?>
+

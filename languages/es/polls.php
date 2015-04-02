@@ -68,4 +68,4 @@ $language_array = Array(
 	'yht_enter_endingtime'=>'Debes insertar el tiempo de finalizacion!',
 	'yht_enter_title'=>'Debes insertar un titulo!'
 );
-?>
+

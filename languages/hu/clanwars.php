@@ -104,4 +104,4 @@ $language_array = Array(
 	'won_clanwars'=>'Győzelem',
 	'won_points'=>'Szerzett pontok'
 );
-?>
+

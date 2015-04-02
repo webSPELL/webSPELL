@@ -40,4 +40,4 @@ $language_array = Array(
   'report_recognized'=>'Jou verslag is erken. Dankie.',
   'wrong_securitycode'=>'Jy het verkeerde sekuriteit kode ingevoer<br><br>[<a href="javascript:back();">back</a>]'
 );
-?>
+

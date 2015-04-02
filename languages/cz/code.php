@@ -82,4 +82,4 @@ $language_array = Array(
 	'yellow'=>'Žlutá',
 	'yes_can_combine'=>'Ano, samozřejmě, pár rad do začátku:'
 );
-?>
+

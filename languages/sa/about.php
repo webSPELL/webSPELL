@@ -33,4 +33,4 @@ $language_array = Array(
   'about_title'=>'من نحن',
   'no_about'=>'.لا توجد تفاصيل حاليا'
 );
-?>
+

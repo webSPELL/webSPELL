@@ -38,4 +38,4 @@ $language_array = Array(
 	'no_faq'=>'Nessune domande.<br><a href="index.php?site=faq">Zurück</a>',
 	'saved_on'=>'registrato il'
 );
-?>
+
