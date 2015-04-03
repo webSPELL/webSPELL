@@ -82,6 +82,9 @@ function unit_to_size($num, $unit)
         case 'gb':
             $size = $num * 1024 * 1024 * 1024;
             break;
+        default:
+            $size = $num;
+            break;
     }
     return $size;
 }
@@ -309,40 +312,7 @@ if ($action == "save") {
                     $_language->module[ 'new_category' ] . '</a>
             </div></div>';
 
-        function generate_options($filecats = '', $offset = '', $subcatID = 0)
-        {
-            $rubrics = safe_query(
-                "SELECT
-                    *
-                FROM
-                    `" . PREFIX . "files_categorys`
-                WHERE
-                    `subcatID` = '" . (int)$subcatID . "'
-                ORDER BY
-                    name"
-            );
-            while ($dr = mysqli_fetch_array($rubrics)) {
-                $filecats .= '<option value="' . $dr[ 'filecatID' ] . '">' .
-                    $offset . htmlspecialchars($dr[ 'name' ]) . '</option>';
-                if (
-                    mysqli_num_rows(
-                        safe_query(
-                            "SELECT
-                                *
-                            FROM
-                                `" . PREFIX . "files_categorys`
-                            WHERE
-                                `subcatID` = '" . (int)$dr[ 'filecatID' ]."'"
-                        )
-                    )
-                ) {
-                    $filecats .= generate_options("", $offset . "- ", $dr[ 'filecatID' ]);
-                }
-            }
-            return $filecats;
-        }
-
-        $filecats = generate_options();
+        $filecats = generateFileCategoryOptions();
 
         $access = '<option value="0">' . $_language->module[ 'all' ] . '</option><option value="1">' .
             $_language->module[ 'registered' ] . '</option><option value="2">' . $_language->module[ 'clanmember' ] .
@@ -373,41 +343,7 @@ if ($action == "save") {
                 '<a href="admin/admincenter.php?site=filecategories" class="btn btn-danger">' .
                     $_language->module[ 'new_category' ] . '</a>';
 
-            function generate_options($filecats = '', $offset = '', $subcatID = 0)
-            {
-                $rubrics = safe_query(
-                    "SELECT
-                        *
-                    FROM
-                        `" . PREFIX . "files_categorys`
-                    WHERE
-                        `subcatID` = '" . (int)$subcatID . "'
-                    ORDER BY
-                        name"
-                );
-                while ($dr = mysqli_fetch_array($rubrics)) {
-                    $filecats .=
-                        '<option value="' . $dr[ 'filecatID' ] . '">' . $offset . htmlspecialchars($dr[ 'name' ]) .
-                        '</option>';
-                    if (
-                        mysqli_num_rows(
-                            safe_query(
-                                "SELECT
-                                    *
-                                FROM
-                                    `" . PREFIX . "files_categorys`
-                                WHERE
-                                    `subcatID` = '" . (int)$dr[ 'filecatID' ]."'"
-                            )
-                        )
-                    ) {
-                        $filecats .= generate_options("", $offset . "- ", $dr[ 'filecatID' ]);
-                    }
-                }
-                return $filecats;
-            }
-
-            $filecats = generate_options();
+            $filecats = generateFileCategoryOptions();
 
             $file = mysqli_fetch_array(
                 safe_query("SELECT * FROM `" . PREFIX . "files` WHERE `fileID` = '" . (int)$fileID."'")

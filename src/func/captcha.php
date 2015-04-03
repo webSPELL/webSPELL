@@ -103,7 +103,6 @@ class Captcha
     private function generateCaptchaText()
     {
         $captcha_shown = "";
-        $catpcha_result = "";
         if ($this->math == 1) {
             $this->length = 6;
             $first = rand(1, $this->math_max);
@@ -188,8 +187,6 @@ class Captcha
     public function createCaptcha()
     {
         $this->hash = md5(time() . rand(0, 10000));
-        $captchastring = '';
-        $captcha = '';
 
         $captcha = $this->generateCaptchaText();
         $captcha_result = $captcha[ 'result' ];
