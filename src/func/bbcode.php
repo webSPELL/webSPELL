@@ -488,7 +488,7 @@ function urlreplace_callback_1($match)
 
 function urlreplace_callback_2($match)
 {
-    if (file_exists($match[1]) || stripos($match[1], 'index.php') === 0 ) {
+    if (file_exists($match[1]) || stripos($match[1], 'index.php') === 0) {
         return '<a href="' . fixJavaEvents($match[1]) . '" target="_blank">';
     } else {
         return "";
