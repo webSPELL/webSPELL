@@ -41,4 +41,4 @@ $language_array = Array(
   'unlock_page'=>'Möchtest du die Seite entriegeln?',
   'you_can_use_html'=>'Du kannst HTML-Tags benutzen'
 );
-?>
+

@@ -56,4 +56,4 @@ $language_array = Array(
 	'unsupported_image_type'=>'Unsupported image type',
 	'broken_image'=>'Broken image'
 );
-?>
+

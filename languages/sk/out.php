@@ -33,4 +33,4 @@ $language_array = Array(
 	'outgoing'=>'Vychádzajúci',
 	'owner_responsible'=>'Majiteľ je zodpovedný za obsah tejto stránky.'
 );
-?>
+

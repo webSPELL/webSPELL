@@ -74,4 +74,4 @@ $language_array = Array(
     &#8226; <a href="index.php?site=register">Rekisteröidy nyt</a><br>
     &#8226; <a href="index.php?site=login">Kirjaudu sisään</a>'
 );
-?>
+

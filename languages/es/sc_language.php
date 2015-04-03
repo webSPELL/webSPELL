@@ -32,4 +32,4 @@ $language_array = Array(
 	'save'=>'guardar',
 	'no_session'=>'Asegure que Cookies están activados en su navegador y trate de cambiarlo de nuevo la lengua.'
 );
-?>
+

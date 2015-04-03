@@ -48,4 +48,4 @@ $language_array = Array(
 	'broken_image'=>'Broken image',
 	'image_too_big'=>'No images larger as 800x600 px allowed'
 );
-?>
+

@@ -75,4 +75,4 @@ $language_array = Array(
   'visitor_comments'=>'Omogući komentare posjetiocima',
   'tags'=>'Tagovi'
 );
-?>
+

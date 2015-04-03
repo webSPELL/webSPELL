@@ -88,4 +88,4 @@ $language_array = Array(
   'yellow'=>'geel',
   'yes_can_combine'=>'Ja, natuurlik kan jy, byvoorbeeld iemand se aandag te kry deur te skryf:'
 );
-?>
+

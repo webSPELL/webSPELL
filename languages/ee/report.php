@@ -35,4 +35,4 @@ $language_array = Array(
   'report_recognized'=>'Su raport aksepteeriti, täname.',
   'wrong_securitycode'=>'Sa sisestasid vale turvakoodi<br><br>[<a href="javascript:back();">tagasi</a>]'
 );
-?>
+

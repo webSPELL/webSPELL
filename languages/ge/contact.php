@@ -51,4 +51,4 @@ $language_array = Array(
   'unknown_receiver'=>'უცნობი მიმღები',
   'wrong_securitycode'=>'თქვენ შეიყვანეთ არასწორი უსაფრთხოების კოდი!'
 );
-?>
+

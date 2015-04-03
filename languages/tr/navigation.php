@@ -70,4 +70,4 @@ $language_array = Array(
   'squads'=>'Takımlar',
   'who_is_online'=>'Kimler Çevrimiçi?'
 );
-?>
+

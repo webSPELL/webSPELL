@@ -54,4 +54,4 @@ $language_array = Array(
 	'town'=>'Település',
 	'userpicture'=>'felhasználói kép'
 );
-?>
+

@@ -104,4 +104,4 @@ $language_array = Array(
 	'won_clanwars'=>'Dobiveni',
 	'won_points'=>'Osvojeni bodovi'
 );
-?>
+

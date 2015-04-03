@@ -71,4 +71,4 @@ Paldies par reģistrāciju
   'wrong_activationkey'=>'Aktivizācijas atslēga ir nepareiza!',
   'wrong_securitycode'=>'Drošības kods ir nepareizs!'
 );
-?>
+

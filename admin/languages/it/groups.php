@@ -44,4 +44,4 @@ $language_array = Array(
   'really_delete'=>'Questo gruppo di utenti di cancellare?',
   'transaction_invalid'=>'ID transazione non valido'
 );
-?>
+

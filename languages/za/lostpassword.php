@@ -54,4 +54,4 @@ om pret te h� op ons bladsy
     &#8226; <a href="index.php?site=login">teken</a>',
   'your_email'=>'Jou e-pos'
 );
-?>
+

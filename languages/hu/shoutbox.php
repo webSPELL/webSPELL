@@ -38,4 +38,4 @@ $language_array = Array(
 	'shoutbox'=>'dumaláda',
 	'sort'=>'Rendezés:'
 );
-?>
+

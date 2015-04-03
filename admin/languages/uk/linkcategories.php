@@ -42,4 +42,4 @@ $language_array = Array(
   'really_delete'=>'Really delete this Category and the Category Links?',
   'transaction_invalid'=>'Transaction ID invalid'
 );
-?>
+

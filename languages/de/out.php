@@ -33,4 +33,4 @@ $language_array = Array(
 	'outgoing'=>'Abgehender Link',
 	'owner_responsible'=>'Der Besitzer ist verantwortlich für diese Webseite.'
 );
-?>
+

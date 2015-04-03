@@ -40,4 +40,4 @@ $language_array = Array(
 	'your_ignorelist'=>'Votre liste d\'ignorés'
 );
 
-?>
+

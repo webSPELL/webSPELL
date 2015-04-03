@@ -62,4 +62,4 @@ $language_array = Array(
   'write_right'=>'Write-Right',
   'write_right_info_board'=>'This/These user group(s) is/are allowed to write in the board.<br>If no user group is selected, all registered users are allowed write in this board.<br>Use CTRL for multi select and unselect.'
 );
-?>
+

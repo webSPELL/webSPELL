@@ -73,4 +73,4 @@ $language_array = Array(
   'you_have_already_rated'=>'Sa oled juba hinnanud.',
   'no_thumb'=>'Pole pisipilti'
 );
-?>
+

@@ -61,4 +61,4 @@ $language_array = Array(
   'title_categories'=>'Skakel kategorieë',
   'update_link'=>'Opdateer skakel'
 );
-?>
+

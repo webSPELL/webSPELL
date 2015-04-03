@@ -66,4 +66,4 @@ $language_array = Array(
   'time'=>'Време',
   'wrong_security_code'=>'Погрешо внесена сигурносна шифра.'
 );
-?>
+

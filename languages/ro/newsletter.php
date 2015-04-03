@@ -53,4 +53,4 @@ $language_array = Array(
   'your_mail_adress'=>'Adresa ta de mail',
   'your_mail_adress_deleted'=>'Adresa ta de mail a fost ştearsă.'
 );
-?>
+

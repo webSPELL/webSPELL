@@ -45,4 +45,4 @@ $language_array = Array(
   'your_buddylist'=>'вашата потребителска листа',
   'your_ignorelist'=>'вашата листа с игнорирани потребители'
 );
-?>
+

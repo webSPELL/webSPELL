@@ -45,4 +45,4 @@ $language_array = Array(
   'registered_users'=>'registreeritud kasutajaid',
   'welcome_back'=>'tere tulemast tagasi'
 );
-?>
+

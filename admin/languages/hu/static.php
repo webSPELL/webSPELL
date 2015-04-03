@@ -48,4 +48,4 @@ $language_array = Array(
   'transaction_invalid'=>'A művelet azonosítója érvénytelen',
   'you_can_use_html'=>'Használhatsz HTML-Tageket'
 );
-?>
+

@@ -54,4 +54,4 @@ $language_array = Array(
   'upcoming_events'=>'Evenimente viitoare',
   'tags'=>'taguri'
 );
-?>
+

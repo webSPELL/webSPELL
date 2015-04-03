@@ -45,4 +45,4 @@ $language_array = Array(
 	'save_banner'=>'banner mentése',
 	'use_following_code'=>'Használd ezt a kódot a banner beillesztéséhez a honlapodon.'
 );
-?>
+

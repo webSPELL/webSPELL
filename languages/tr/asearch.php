@@ -39,4 +39,4 @@ $language_array = Array(
   'no_result'=>'Arama Bulunamadı',
   'to_much_results'=>'Sonuç yok. Lütfen daha fazla karakter girin.'
 );
-?>
+

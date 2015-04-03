@@ -105,4 +105,4 @@ $language_array = Array(
   'enter_title'=>'Neesat norādījis pilno nosaukumu!',
   'enter_info'=>'Neesat norādījis nekādu informāciju!'
 );
-?>
+

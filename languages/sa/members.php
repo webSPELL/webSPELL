@@ -50,4 +50,4 @@ $language_array = Array(
   'status'=>'الاحصائيات',
   'town'=>'المدينة'
 );
-?>
+

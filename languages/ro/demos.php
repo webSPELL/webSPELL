@@ -79,4 +79,4 @@ $language_array = Array(
   'visitor_comments'=>'Permite comentariile vizitatorului',
   'vs'=>'vs.'
 );
-?>
+

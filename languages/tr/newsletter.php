@@ -58,4 +58,4 @@ $language_array = Array(
   'your_mail_adress'=>'Posta adresiniz',
   'your_mail_adress_deleted'=>'Posta adresiniz silindi.'
 );
-?>
+

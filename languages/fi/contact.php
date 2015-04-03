@@ -56,4 +56,4 @@ $language_array = Array(
   'unknown_receiver'=>'Tuntematon vastaanottaja',
   'wrong_securitycode'=>'Väärä turvallisuuskoodi!'
 );
-?>
+

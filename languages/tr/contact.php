@@ -56,4 +56,4 @@ $language_array = Array(
   'unknown_receiver'=>'bilinmeyen alıcı',
   'wrong_securitycode'=>'Yanlış güvenlik kodu girildi!'
 );
-?>
+

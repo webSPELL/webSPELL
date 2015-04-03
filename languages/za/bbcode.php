@@ -90,4 +90,4 @@ $language_array = Array(
   'large_picture'=>'Groot prentjie',
   'show_original'=>'wys oorspronklike'
 );
-?>
+

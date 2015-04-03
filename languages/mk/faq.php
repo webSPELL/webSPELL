@@ -39,4 +39,4 @@ $language_array = Array(
   'no_faq'=>'Нема внесени прашања.<br><a href="index.php?site=faq">Назад на претходната страница</a>',
   'saved_on'=>'Зачувано'
 );
-?>
+

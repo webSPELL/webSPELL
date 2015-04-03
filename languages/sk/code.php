@@ -82,4 +82,4 @@ $language_array = Array(
 	'yellow'=>'Žltý',
 	'yes_can_combine'=>'Áno, samozrejme môžete. Ak chcete niekoho zaujať, mali by ste napísať:'
 );
-?>
+

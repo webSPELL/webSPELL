@@ -48,4 +48,4 @@ kellemes időtöltést a honlapunkon
   &#8226; <a href="index.php?site=login">login</a>',
 	'your_email'=>'E-Mail címed'
 );
-?>
+

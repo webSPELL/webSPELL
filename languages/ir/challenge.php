@@ -65,4 +65,4 @@ $language_array = Array(
   'time'=>'زمان',
   'wrong_security_code'=>'.کد مهرمانه اشتباه است'
 );
-?>
+

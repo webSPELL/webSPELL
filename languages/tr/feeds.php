@@ -38,4 +38,4 @@ $language_array = Array(
   'news_feed'=>'Haber Kaynağı',
   'latest_news_from'=>'Son haberler'
 );
-?>
+

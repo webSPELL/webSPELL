@@ -58,4 +58,4 @@ $language_array = Array(
 	'title_join_us'=>'Zostańczłonkiem klanu',
 	'wrong_security_code'=>'Wprowadzono zły kod bezpieczeństwa!'
 );
-?>
+

@@ -135,4 +135,4 @@ $language_array = Array(
   'enter_topic'=>'Sa pead teemale pealkirja sisestama!',
   'enter_text'=>'Sa pead sisu kirjutama!'
 );
-?>
+

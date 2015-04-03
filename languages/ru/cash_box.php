@@ -63,4 +63,4 @@ $language_array = Array(
   'update'=>'обновить',
   'usage'=>'Наименование'
 );
-?>
+

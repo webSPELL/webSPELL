@@ -78,4 +78,4 @@ $language_array = Array(
 	'visitor_comments'=>'A vendégek is kommentálhatják',
 	'vs'=>'vs.'
 );
-?>
+

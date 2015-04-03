@@ -39,4 +39,4 @@ $language_array = Array(
 	'your_buddylist'=>'Ismerőseid listája',
 	'your_ignorelist'=>'Letiltott tagok listája'
 );
-?>
+

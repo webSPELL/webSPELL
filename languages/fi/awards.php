@@ -55,4 +55,4 @@ $language_array = Array(
   'squad'=>'Ryhmä',
   'update_award'=>'Päivitä palkinto'
 );
-?>
+

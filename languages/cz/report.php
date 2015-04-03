@@ -34,4 +34,4 @@ $language_array = Array(
 	'report_recognized'=>'vaše zpráva byla odeslaná. Dìkujeme.',
   'wrong_securitycode'=>'Bezpečností kód je špatný<br><br>[<a href="javascript:back();">vrátit</a>]'
 );
-?>
+

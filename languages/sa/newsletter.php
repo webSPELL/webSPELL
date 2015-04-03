@@ -53,4 +53,4 @@ $language_array = Array(
   'your_mail_adress'=>'عنوان البريد الإلكتروني الخاص بك',
   'your_mail_adress_deleted'=>'لقد تم حذف عنوان البريد الإلكتروني الخاص بك'
 );
-?>
+

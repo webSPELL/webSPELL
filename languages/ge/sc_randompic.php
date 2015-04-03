@@ -34,4 +34,4 @@ $language_array = Array(
   'registered_since'=>'დარეგისტრირებულია -დან',
   'view_profile'=>'პროფილის მონახულება'
 );
-?>
+

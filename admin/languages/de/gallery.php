@@ -73,4 +73,4 @@ $language_array = Array(
   'visitor_comments'=>'Besucher Kommentare',
 	'no_thumb'=>'Kein Thumb vorhanden'
 );
-?>
+

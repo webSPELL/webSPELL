@@ -105,4 +105,4 @@ $language_array = Array(
 	'you_have_to_enter_filename'=>'Du musst einen Dateinamen eingeben!',
 	'you_have_to_enter_file'=>'Du musst ein File / eine URL eingeben!'
 );
-?>
+

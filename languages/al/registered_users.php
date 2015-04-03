@@ -46,4 +46,4 @@ $language_array = Array(
   'registration'=>'Regjistruar që',
   'sort'=>'Grupo:'
 );
-?>
+

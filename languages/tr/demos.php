@@ -84,4 +84,4 @@ $language_array = Array(
   'visitor_comments'=>'Ziyaretçi yorumlarını etkinleştir',
   'vs'=>'vs.'
 );
-?>
+

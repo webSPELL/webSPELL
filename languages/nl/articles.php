@@ -74,4 +74,4 @@ $language_array = Array(
 	'visitor_comments'=>'Sta bezoekers commentaar toe',
 	'tags'=>'Tags'
 );
-?>
+

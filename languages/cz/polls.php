@@ -68,4 +68,4 @@ $language_array = Array(
 	'yht_enter_endingtime'=>'Zapomněl jsi nastavit čas ukončení!',
 	'yht_enter_title'=>'Zapomněl jsi napsat název ankety!'
 );
-?>
+

@@ -77,4 +77,4 @@ $language_array = Array(
   'wrong_activationkey'=>'Ο κωδικος ενεργοποιησης ειναι λαθος!',
   'wrong_securitycode'=>'Κωδικός ασφαλείας είναι λάθος!'
 );
-?>
+

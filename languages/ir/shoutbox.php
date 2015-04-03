@@ -38,4 +38,4 @@ $language_array = Array(
   'shoutbox'=>'چت باکس',
   'sort'=>'بر حسب:'
 );
-?>
+

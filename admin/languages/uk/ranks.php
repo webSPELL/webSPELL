@@ -45,4 +45,4 @@ $language_array = Array(
   'update'=>'update',
   'user_ranks'=>'User Ranks'
 );
-?>
+

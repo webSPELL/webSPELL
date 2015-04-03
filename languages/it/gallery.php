@@ -72,4 +72,4 @@ $language_array = Array(
 	'you_have_already_rated'=>'Hai già votato.',
 	'no_thumb'=>'Thumb non è disponibile'
 );
-?>
+

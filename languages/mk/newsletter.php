@@ -53,4 +53,4 @@ $language_array = Array(
   'your_mail_adress'=>'Вашиот е-маил',
   'your_mail_adress_deleted'=>'Вашиот е-маил е избришан од листата.'
 );
-?>
+

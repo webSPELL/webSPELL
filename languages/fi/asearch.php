@@ -39,4 +39,4 @@ $language_array = Array(
   'no_result'=>'Ei hakutuloksia',
   'to_much_results'=>'Liian monta osumaa, ole hyvä ja hae pitemmällä hakusanalla.'
 );
-?>
+

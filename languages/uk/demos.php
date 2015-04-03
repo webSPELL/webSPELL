@@ -79,4 +79,4 @@ $language_array = Array(
 	'vs'=>'vs.',
 	'successful'=>'successful'
 );
-?>
+

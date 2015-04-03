@@ -82,4 +82,4 @@ $language_array = Array(
 	'yellow'=>'Sárga',
 	'yes_can_combine'=>'Igen, természetesen megteheted, például, hogy felkeltsd valakinek az érdeklõdését, akinek írsz:'
 );
-?>
+

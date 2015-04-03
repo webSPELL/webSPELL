@@ -171,4 +171,4 @@ $language_array = Array(
   'update'=>'Frissítés',
   'user_guestbook'=>'Felhasználói vendégkönyvek'
 );
-?>
+

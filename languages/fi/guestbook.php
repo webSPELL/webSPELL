@@ -65,4 +65,4 @@ $language_array = Array(
   'wrote'=>'kirjoita',
   'your_message'=>'Sinun viesti'
 );
-?>
+

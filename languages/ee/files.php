@@ -106,4 +106,4 @@ $language_array = Array(
   'you_have_to_enter_filename'=>'Sa pead faili nime sisestama!',
   'you_have_to_enter_file'=>'Sa pead faili / URL\'i sisestama!'
 );
-?>
+

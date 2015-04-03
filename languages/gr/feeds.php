@@ -38,4 +38,4 @@ $language_array = Array(
   'news_feed'=>'Τροφοδοσια ειδησεων',
   'latest_news_from'=>'Τελευταια ειδηση απο '
 );
-?>
+

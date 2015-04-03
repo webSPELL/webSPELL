@@ -110,4 +110,4 @@ $language_array = Array(
   'enter_title'=>'Keen laangen Titel aginn!',
   'enter_info'=>'Kengerlee Informatiounen aginn!'
 );
-?>
+

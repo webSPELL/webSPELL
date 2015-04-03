@@ -49,4 +49,4 @@ $language_array = Array(
 	'squad'=>'Hold',
 	'update_award'=>'Opdater præmie'
 );
-?>
+

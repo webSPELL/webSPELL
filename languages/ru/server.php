@@ -46,4 +46,4 @@ $language_array = Array(
   'status'=>'Статус',
   'timeout'=>'тайм-аут'
 );
-?>
+

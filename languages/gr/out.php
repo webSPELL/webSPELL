@@ -39,4 +39,4 @@ $language_array = Array(
   'outgoing'=>'Εξερχομενο',
   'owner_responsible'=>'Ο ιδιοκτητης δεν ευθυνεται για αυτη τη σελιδα.'
 );
-?>
+

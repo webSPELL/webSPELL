@@ -44,4 +44,4 @@ $language_array = Array(
   'shoutbox'=>'skree boks',
   'sort'=>'Sorteer:'
 );
-?>
+

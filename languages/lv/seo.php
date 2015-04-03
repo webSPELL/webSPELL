@@ -77,4 +77,4 @@ $language_array = Array(
   'versus'=>'pret',
   'whoisonline'=>'Kurš ir tiešsaistē'
 );
-?>
+

@@ -55,4 +55,4 @@ $language_array = Array(
   'squad'=>'взвод',
   'update_award'=>'въведи промените'
 );
-?>
+

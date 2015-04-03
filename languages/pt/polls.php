@@ -68,4 +68,4 @@ $language_array = Array(
 	'yht_enter_endingtime'=>'Tem de inserir uma data para fim da votação!',
 	'yht_enter_title'=>'Tem de inserir um título!'
 );
-?>
+

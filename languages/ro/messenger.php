@@ -78,4 +78,4 @@ $language_array = Array(
   'error'=>'eroare',
   'unknown_user'=>'utilizator necunoscut'
 );
-?>
+

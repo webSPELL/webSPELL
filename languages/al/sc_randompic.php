@@ -39,4 +39,4 @@ $language_array = Array(
   'registered_since'=>'regjistruar që',
   'view_profile'=>'vizito profilin'
 );
-?>
+

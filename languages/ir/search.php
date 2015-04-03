@@ -67,4 +67,4 @@ $language_array = Array(
   'wrong_securitycode'=>'!شما کد اشتباه را وارد کردید',
   'no_result'=>'هیچ نوشته ای پیدا نشد برای "%s"'
 );
-?>
+

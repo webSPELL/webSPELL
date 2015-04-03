@@ -105,4 +105,4 @@ $language_array = Array(
   'enter_title'=>'Nu aţi introdus nici un titlu lung!',
   'enter_info'=>'Nu aţi introdus nici o informaţie!'
 );
-?>
+

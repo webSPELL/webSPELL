@@ -33,4 +33,4 @@ $language_array = Array(
   'history'=>'Istoric',
   'no_history'=>'Nu există istoric.'
 );
-?>
+

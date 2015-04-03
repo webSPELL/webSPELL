@@ -82,4 +82,4 @@ $language_array = Array(
 	'yellow'=>'giallo',
 	'yes_can_combine'=>'Esempio:'
 );
-?>
+

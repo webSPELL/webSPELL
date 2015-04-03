@@ -33,4 +33,4 @@ $language_array = Array(
 	'registered_since'=>'registruotas nuo',
 	'view_profile'=>'aplankyti profilį'
 );
-?>
+

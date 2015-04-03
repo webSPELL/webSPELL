@@ -44,4 +44,4 @@ $language_array = Array(
   'no_faq'=>'Geen vrae beskikbaar.<br><a href="index.php?site=faq">Terug</a>',
   'saved_on'=>'spaar op'
 );
-?>
+

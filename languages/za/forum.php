@@ -140,4 +140,4 @@ $language_array = Array(
   'enter_topic'=>'Jy moet \'n onderwerp titel invoer!',
   'enter_text'=>'Jy moet geskrewe invoer!'
 );
-?>
+

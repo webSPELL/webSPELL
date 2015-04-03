@@ -68,4 +68,4 @@ $language_array = Array(
   'update'=>'updatim',
   'usage'=>'përdorim'
 );
-?>
+

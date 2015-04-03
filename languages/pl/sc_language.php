@@ -32,4 +32,4 @@ $language_array = Array(
 	'save'=>'Zapisz',
 	'no_session'=>'Upewnij się, że Twoja przeglądarka akceptuje ciasteczka i spróbuj ponownie zmienić język.'
 );
-?>
+

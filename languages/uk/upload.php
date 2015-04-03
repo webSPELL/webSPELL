@@ -44,4 +44,4 @@ $language_array = Array(
 	'cant_write_temp_file'=>'Can\'t write temporary file. Please contact the administrator',
 	'unexpected_error'=>'Unexpected error'
 );
-?>
+

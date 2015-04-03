@@ -62,4 +62,4 @@ $language_array = Array(
   'update'=>'به روز کردن',
   'usage'=>'کاربر'
 );
-?>
+

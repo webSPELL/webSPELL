@@ -110,4 +110,4 @@ $language_array = Array(
   'enter_title'=>'Ви не ввели назву!',
   'enter_info'=>'Ви не ввели ніякої інформації!'
 );
-?>
+

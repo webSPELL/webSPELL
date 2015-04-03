@@ -66,4 +66,4 @@ $language_array = Array(
   'time'=>'الوقت',
   'wrong_security_code'=>'.خطا في الرمز الامني'
 );
-?>
+

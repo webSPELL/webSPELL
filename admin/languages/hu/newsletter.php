@@ -50,4 +50,4 @@ Az alábbi üzenetet kaptad:',
   'user_registered'=>'Regisztrált tagok (klántagok is) ',
   'users'=>'Felhasználók'
 );
-?>
+

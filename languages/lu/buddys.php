@@ -45,4 +45,4 @@ $language_array = Array(
   'your_buddylist'=>'Deng Frëndeslescht',
   'your_ignorelist'=>'Deng Ignoréierenlescht'
 );
-?>
+

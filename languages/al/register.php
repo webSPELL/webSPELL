@@ -77,4 +77,4 @@ Faleminderit për regjistrimin tuaj
   'wrong_activationkey'=>'Kodi aktivizimit është i gabuar!',
   'wrong_securitycode'=>'Kodi sigurisë është i gabuar!'
 );
-?>
+

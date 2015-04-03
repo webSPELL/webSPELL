@@ -48,4 +48,4 @@ have fun on our page
     &#8226; <a href="index.php?site=login">login</a>',
 	'your_email'=>'Your E-Mail'
 );
-?>
+

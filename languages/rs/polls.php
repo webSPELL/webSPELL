@@ -68,4 +68,4 @@ $language_array = Array(
   'yht_enter_endingtime'=>'Морате унијети вријеме завршавања анкете!',
   'yht_enter_title'=>'Морате унијети наслов!'
 );
-?>
+

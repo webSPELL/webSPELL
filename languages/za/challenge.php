@@ -71,4 +71,4 @@ $language_array = Array(
   'time'=>'tyd',
   'wrong_security_code'=>'Die sekuriteit\'s kode is verkeerd.'
 );
-?>
+

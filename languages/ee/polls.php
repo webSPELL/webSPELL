@@ -69,4 +69,4 @@ $language_array = Array(
   'yht_enter_endingtime'=>'Sa üead lõppemise aja määrama!',
   'yht_enter_title'=>'Sa pead pealkirja määrama!'
 );
-?>
+

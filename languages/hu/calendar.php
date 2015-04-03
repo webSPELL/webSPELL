@@ -104,4 +104,4 @@ $language_array = Array(
 	'enter_title'=>'Nem adtál meg hosszú címet!',
 	'enter_info'=>'Nem adtál meg információt!'
 );
-?>
+

@@ -45,4 +45,4 @@ $language_array = Array(
 	'save_banner'=>'guardar banner',
 	'use_following_code'=>'Utilize o código seguinte, de modo a inserir o banner na sua página.'
 );
-?>
+

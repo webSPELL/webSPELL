@@ -60,4 +60,4 @@ $language_array = Array(
   'visitor_comments'=>'Besoeker kommentaar',
   'x_of_y_mb_in_use'=>'<span style="color:%spacecolor%">&nbsp;%used_size%</span> van %available_size% MB in gebruik is.'
 );
-?>
+

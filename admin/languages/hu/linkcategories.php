@@ -42,4 +42,4 @@ $language_array = Array(
   'really_delete'=>'Biztosan törölni akarod ezt a kategóriát és a hozzátartozó linkeket?',
   'transaction_invalid'=>'A művelet azonosítója érvénytelen'
 );
-?>
+

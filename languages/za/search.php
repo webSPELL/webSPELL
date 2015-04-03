@@ -73,4 +73,4 @@ $language_array = Array(
   'wrong_securitycode'=>'Jy het verkeerde sekuriteit kode ingevoer!',
   'no_result' =>'Geen inskrywings gevind vir "%s"'
 );
-?>
+

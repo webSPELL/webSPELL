@@ -72,4 +72,4 @@ $language_array = Array(
   'you_have_already_rated'=>'.شما تا کنون نمره داده اید',
   'no_thumb'=>'بدون تامب'
 );
-?>
+

@@ -44,4 +44,4 @@ $language_array = Array(
   'return'=>'<a href="javascript:history.back()">Поверніться назад</a>',
   'return_reenter' => '<a href="javascript:history.back()">Поверніться назад і спробуйте знову.</a>'
 );
-?>
+

@@ -44,4 +44,4 @@ $language_array = Array(
   'no_faq'=>'Ni vnesenih vprašanj.<br><a href="index.php?site=faq">Nazaj na prejšnjo stran</a>',
   'saved_on'=>'Shranjeno'
 );
-?>
+

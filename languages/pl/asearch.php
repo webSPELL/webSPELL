@@ -33,4 +33,4 @@ $language_array = Array(
 	'no_result'=>'Brak wyników spełniających kryteria',
 	'to_much_results'=>'Za dużo pasujących wyników.'
 );
-?>
+

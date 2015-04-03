@@ -84,4 +84,4 @@ $language_array = Array(
 	'large_picture'=>'Nagy Kép',
 	'show_original'=>'Eredeti megtekintése'
 );
-?>
+

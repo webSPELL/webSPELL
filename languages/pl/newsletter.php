@@ -52,4 +52,4 @@ $language_array = Array(
 	'your_mail_adress'=>'Twój adres email',
 	'your_mail_adress_deleted'=>'Twój adres email został usunięty.'
 );
-?>
+

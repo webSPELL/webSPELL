@@ -53,4 +53,4 @@ $language_array = Array(
   'your_mail_adress'=>'Jūsu e-pasta adrese',
   'your_mail_adress_deleted'=>'Jūsu e-pasta adrese ir izdzēsta.'
 );
-?>
+

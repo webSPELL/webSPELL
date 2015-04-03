@@ -32,4 +32,4 @@ $language_array = Array(
   'save'=>'ذخیره',
   'no_session'=>'.غیر فعال است و دوباره سعی کنید cookies لطفا چک کنید'
 );
-?>
+

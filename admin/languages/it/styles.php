@@ -61,4 +61,4 @@ $language_array = Array(
   'update'=>'aggiornamento',
   'win_color'=>'colore vinto'
 );
-?>
+

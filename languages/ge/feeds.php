@@ -33,4 +33,4 @@ $language_array = Array(
   'news_feed'=>'ინფორმაციის ველი',
   'latest_news_from'=>'უახლესი ინფორმაციის ველი'
 );
-?>
+

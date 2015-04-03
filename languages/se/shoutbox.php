@@ -38,4 +38,4 @@ $language_array = Array(
 	'shoutbox'=>'skriklåda',
 	'sort'=>'Sortera:'
 );
-?>
+

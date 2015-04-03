@@ -58,4 +58,4 @@ $language_array = Array(
 	'title_join_us'=>'Ser un miembro',
 	'wrong_security_code'=>'El cógido de seguridad introducido es erroneo!'
 );
-?>
+

@@ -59,4 +59,4 @@ $language_array = Array(
 	'wrote'=>'Ecrire',
 	'your_message'=>'Votre message'
 );
-?>
+

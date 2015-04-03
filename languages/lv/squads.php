@@ -55,4 +55,4 @@ $language_array = Array(
   'town'=>'Pilsēta',
   'userpicture'=>'lietotāja attēls'
 );
-?>
+

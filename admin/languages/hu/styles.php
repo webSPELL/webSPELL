@@ -61,4 +61,4 @@ $language_array = Array(
   'update'=>'Frissítés',
   'win_color'=>'Győzelem betűszín'
 );
-?>
+

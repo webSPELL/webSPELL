@@ -66,4 +66,4 @@ $language_array = Array(
   'time'=>'timp',
   'wrong_security_code'=>'Codul de securitate a fost introdus greşit.'
 );
-?>
+

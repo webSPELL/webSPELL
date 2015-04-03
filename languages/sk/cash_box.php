@@ -62,4 +62,4 @@ $language_array = Array(
 	'update'=>'aktualizuj',
 	'usage'=>'použitie'
 );
-?>
+

@@ -32,4 +32,4 @@ $language_array = Array(
 	'about_title'=>'Wir über uns',
 	'no_about'=>'Derzeit ist keine Beschreibung verfügbar.'
 );
-?>
+

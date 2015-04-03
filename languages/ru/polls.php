@@ -69,4 +69,4 @@ $language_array = Array(
   'yht_enter_endingtime'=>'Вам нужно ввести время окончания!',
   'yht_enter_title'=>'Вам нужно ввести название!'
 );
-?>
+

@@ -67,4 +67,4 @@ $language_array = Array(
 	'wrong_securitycode'=>'Wpisałeś błędny kod zabezpieczający!',
 	'no_result'=>'Nie znaleziono wyników dla "%s" wpisy'
 );
-?>
+

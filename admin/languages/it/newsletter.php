@@ -50,4 +50,4 @@ Lei ha recevuto un questo messaggio:',
   'user_registered'=>'gli utenti registrati (comprese le persone del clan) ',
   'users'=>'utenti'
 );
-?>
+

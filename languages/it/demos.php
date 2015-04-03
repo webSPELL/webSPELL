@@ -78,4 +78,4 @@ $language_array = Array(
 	'visitor_comments'=>'Commenti per tutti i permessi',
 	'vs'=>'vs.'
 );
-?>
+

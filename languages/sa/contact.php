@@ -51,4 +51,4 @@ $language_array = Array(
   'unknown_receiver'=>'استقبال غير معروف',
   'wrong_securitycode'=>'!الرمز الامني خاطئ'
 );
-?>
+

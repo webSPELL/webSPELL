@@ -49,4 +49,4 @@ $language_array = Array(
   'really_delete'=>'Dieses Spiel wirklich löschen?',
   'transaction_invalid'=>'Transaktions ID ungültig'
 );
-?>
+

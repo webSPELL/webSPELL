@@ -82,4 +82,4 @@ $language_array = Array(
   'versus'=>'vastaan',
   'whoisonline'=>'Kuka on online'
 );
-?>
+

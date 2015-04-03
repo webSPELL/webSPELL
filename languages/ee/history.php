@@ -33,4 +33,4 @@ $language_array = Array(
   'history'=>'Ajalugu',
   'no_history'=>'Informatsioon pole veel saadaval.'
 );
-?>
+

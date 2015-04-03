@@ -60,4 +60,4 @@ $language_array = Array(
   'wrote'=>'rakstīt',
   'your_message'=>'Jūsu ziņa'
 );
-?>
+

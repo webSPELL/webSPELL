@@ -55,4 +55,4 @@ $language_array = Array(
   'squad'=>'Ekip',
   'update_award'=>'Ödül güncellemesi'
 );
-?>
+

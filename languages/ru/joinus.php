@@ -59,4 +59,4 @@ $language_array = Array(
   'title_join_us'=>'Стать членом',
   'wrong_security_code'=>'Код безопасности неверный!'
 );
-?>
+

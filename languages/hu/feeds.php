@@ -32,4 +32,4 @@ $language_array = Array(
 	'news_feed'=>'Hírek Feed',
 	'latest_news_from'=>'Legfrissebb hírek'
 );
-?>
+

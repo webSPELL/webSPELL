@@ -80,4 +80,4 @@ $language_array = Array(
   'visitor_comments'=>'Lieser-Kommentaren aktivéieren',
   'tags'=>'tags'
 );
-?>
+

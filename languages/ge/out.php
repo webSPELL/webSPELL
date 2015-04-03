@@ -34,4 +34,4 @@ $language_array = Array(
   'outgoing'=>'გამომავალი',
   'owner_responsible'=>'მფლობელი პასუხისმგებელია ამ გვერდზე.'
 );
-?>
+

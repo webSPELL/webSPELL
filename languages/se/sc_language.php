@@ -32,4 +32,4 @@ $language_array = Array(
 	'save'=>'spara',
 	'no_session'=>'Kontrollera att cookies �r aktiverade och f�rs�k �ndra spr�k igen.'
 );
-?>
+

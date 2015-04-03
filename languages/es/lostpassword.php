@@ -48,4 +48,4 @@ diviertete en nuestra página
 	 &#8226; <a href="index.php?site=login">conectar</a>',
 	'your_email'=>'Tu email'
 );
-?>
+

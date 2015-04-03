@@ -135,4 +135,4 @@ $language_array = Array(
 	'your_message'=>'az üzeneted',
 	'your_name'=>'a neved'
 );
-?>
+

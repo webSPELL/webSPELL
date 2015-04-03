@@ -56,4 +56,4 @@ $language_array = Array(
   'title_categories'=>'Kategorijas saite',
   'update_link'=>'Atjaunot saiti'
 );
-?>
+

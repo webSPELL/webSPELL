@@ -38,4 +38,4 @@ $language_array = Array(
   'news_feed'=>'News Feed',
   'latest_news_from'=>'Zadnje novice z'
 );
-?>
+

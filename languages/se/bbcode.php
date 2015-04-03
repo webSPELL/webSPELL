@@ -84,4 +84,4 @@ $language_array = Array(
 	'large_picture'=>'Stor bild',
 	'show_original'=>'Visa orginal'
 );
-?>
+

@@ -130,4 +130,4 @@ $language_array = Array(
   'you_cant_ban_yourself'=>'Du kannst dich nicht selbst bannen!',
   'error'=>'Fehler'
 );
-?>
+

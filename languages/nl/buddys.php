@@ -38,4 +38,4 @@ $language_array = Array(
 	'your_buddylist'=>'Je vriendenlijst',
 	'your_ignorelist'=>'Je negeer-lijst'
 );
-?>
+

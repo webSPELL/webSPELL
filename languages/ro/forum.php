@@ -135,4 +135,4 @@ $language_array = Array(
   'enter_topic'=>'Introduceţi un subiect!',
   'enter_text'=>'Introduceţi un text!'
 );
-?>
+

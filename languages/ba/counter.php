@@ -61,4 +61,4 @@ $language_array = Array(
   'user_statistic'=>'Statistika korisnika',
   'years'=>'godina'
 );
-?>
+

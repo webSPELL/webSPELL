@@ -71,4 +71,4 @@ $language_array = Array(
   'time'=>'χρονος',
   'wrong_security_code'=>'Ο κωδικος ασφαλειας ειναι λανθασμενος.'
 );
-?>
+

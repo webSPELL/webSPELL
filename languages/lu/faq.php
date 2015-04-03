@@ -44,4 +44,4 @@ $language_array = Array(
   'no_faq'=>'Keng Froen do.<br><a href="index.php?site=faq">Zréck</a>',
   'saved_on'=>'agedroen den'
 );
-?>
+

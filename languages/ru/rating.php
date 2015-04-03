@@ -33,4 +33,4 @@ $language_array = Array(
   'no_access'=>'Нет доступа!',
   'just_rate_between_0_10'=>'Оцените только от 0 до 10 баллов!'
 );
-?>
+

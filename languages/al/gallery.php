@@ -78,4 +78,4 @@ $language_array = Array(
   'you_have_already_rated'=>'Keni votuar tashmë.',
   'no_thumb'=>'Mungon ikona'
 );
-?>
+

@@ -49,4 +49,4 @@ $language_array = Array(
   'really_delete'=>'Really delete this Game?',
   'transaction_invalid'=>'Transaction ID invalid'
 );
-?>
+

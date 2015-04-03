@@ -61,4 +61,4 @@ $language_array = Array(
   'title_categories'=>'κατηγοριες Link',
   'update_link'=>'Ενημερωση link'
 );
-?>
+

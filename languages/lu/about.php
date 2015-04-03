@@ -38,4 +38,4 @@ $language_array = Array(
   'about_title'=>'Mir iwwer eis',
   'no_about'=>'Momentan ass keng Beschreiwung verfügbar.'
 );
-?>
+

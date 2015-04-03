@@ -38,4 +38,4 @@ $language_array = Array(
   'save'=>'Shrani',
   'no_session'=>'Omogočite piškotke in poskušajte ponovno zamenjati jezik.'
 );
-?>
+

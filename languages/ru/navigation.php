@@ -70,4 +70,4 @@ $language_array = Array(
   'squads'=>'Отряды',
   'who_is_online'=>'Кто сейчас онлайн?'
 );
-?>
+

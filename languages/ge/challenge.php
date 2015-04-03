@@ -66,4 +66,4 @@ $language_array = Array(
   'time'=>'დრო',
   'wrong_security_code'=>'უსაფრთხოების კოდი არასწორია.'
 );
-?>
+

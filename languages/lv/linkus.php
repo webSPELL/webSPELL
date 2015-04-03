@@ -46,4 +46,4 @@ $language_array = Array(
   'save_banner'=>'saglabāt reklāmkarogu',
   'use_following_code'=>'Izmantojiet šo kodu, lai ievietotu reklāmkarogu Jūsu mājaslapā.'
 );
-?>
+

@@ -35,4 +35,4 @@ $language_array = Array(
   'report_recognized'=>'تم الاعتراف بالتقرير الخاص بك. شكرا لك.',
   'wrong_securitycode'=>'قمت بإدخال رمز الحماية خطأ<br><br>[<a href="javascript:back();">العوده</a>]'
 );
-?>
+

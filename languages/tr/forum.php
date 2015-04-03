@@ -140,4 +140,4 @@ $language_array = Array(
   'enter_topic'=>'Bir konu başlığı girmek zorundasınız!',
   'enter_text'=>'Bazı metin girmek zorundasınız!'
 );
-?>
+

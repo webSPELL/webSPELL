@@ -68,4 +68,4 @@ $language_array = Array(
 	'yht_enter_endingtime'=>'Írd be a lezárás időpontját!',
 	'yht_enter_title'=>'Írj be címet!'
 );
-?>
+

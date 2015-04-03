@@ -104,4 +104,4 @@ $language_array = Array(
 	'enter_title'=>'Du har inte angett en detaljerad rubrik!',
 	'enter_info'=>'Du har inte skrivit någon information!'
 );
-?>
+

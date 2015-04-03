@@ -71,4 +71,4 @@ $language_array = Array(
   'zend_version'=>'Zend Verzió',
   'na'=>'nincs elérhető információ'
 );
-?>
+

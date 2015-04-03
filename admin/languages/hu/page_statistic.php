@@ -82,4 +82,4 @@ $language_array = Array(
   'user'=>'Regisztrált tagok',
   'user_gbook'=>'Felhasználói vendégkönyvek'
 );
-?>
+

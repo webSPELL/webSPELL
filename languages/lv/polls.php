@@ -69,4 +69,4 @@ $language_array = Array(
   'yht_enter_endingtime'=>'Jāievada beigu laiks!',
   'yht_enter_title'=>'Jāievada virsraksts!'
 );
-?>
+

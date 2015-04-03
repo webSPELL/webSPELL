@@ -72,4 +72,4 @@ $language_array = Array(
 	'you_have_already_rated'=>'You have already rated.',
 	'no_thumb'=>'No Thumb'
 );
-?>
+

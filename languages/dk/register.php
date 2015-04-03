@@ -70,4 +70,4 @@ Tak for registreringen
 	'wrong_activationkey'=>'Din aktiveringsnøgle er forkert!',
 	'wrong_securitycode'=>'Sikkerhedskoden er forkert!'
 );
-?>
+

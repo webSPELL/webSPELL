@@ -67,4 +67,4 @@ $language_array = Array(
   'title_comment'=>'Comentariul tău',
   'title_editcomment'=>'Editează comentariu'
 );
-?>
+

@@ -39,4 +39,4 @@ $language_array = Array(
   'no_faq'=>'არ არის პასუხები ხელმისაწვდომი.<br><a href="index.php?site=faq">უკან</a>',
   'saved_on'=>'შენახულია '
 );
-?>
+

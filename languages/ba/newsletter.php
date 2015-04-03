@@ -53,4 +53,4 @@ $language_array = Array(
   'your_mail_adress'=>'Vaš e-mail',
   'your_mail_adress_deleted'=>'Vaš e-mail je maknut s liste.'
 );
-?>
+

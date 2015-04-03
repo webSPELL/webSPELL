@@ -39,4 +39,4 @@ $language_array = Array(
   'outgoing'=>'Вихідні посилання',
   'owner_responsible'=>'Власник несе відповідальність за цю сторінку.'
 );
-?>
+

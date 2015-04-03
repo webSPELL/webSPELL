@@ -104,4 +104,4 @@ $language_array = Array(
 	'enter_title'=>'Nie wpisałeś pełnej nazwy!',
 	'enter_info'=>'Nie wpisałeś żadnej informacji!'
 );
-?>
+

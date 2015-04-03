@@ -35,4 +35,4 @@ $language_array = Array(
   'report_recognized'=>'თქვენი შენიშვნა მიღებულია. მადლობა',
   'wrong_securitycode'=>'თქვენ შეიყვანეთ არასწორი უსაფრთხოების კოდი<br><br>[<a href="javascript:back();">back</a>]'
 );
-?>
+

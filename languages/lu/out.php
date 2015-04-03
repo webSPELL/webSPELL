@@ -39,4 +39,4 @@ $language_array = Array(
   'outgoing'=>'Ofgoenden Link',
   'owner_responsible'=>'Der Besëtzer ass verantwortlech  fir dës Webseite.'
 );
-?>
+
