@@ -4,7 +4,8 @@ header("Content-Type: text/plain; charset=utf-8");
 
 define('BOM', "\xEF\xBB\xBF");
 
-$baseLanguage = "uk";
+$baseLanguage = "../languages/uk";
+$baseLanguageCode = basename($baseLanguage);
 $checkUntranslated = true;
 
 $all_langs = glob("../languages/*", GLOB_ONLYDIR);
@@ -21,9 +22,14 @@ function checkBom($file)
     return (false !== strpos($file, BOM));
 }
 
+define("PAGETITLE", "'.PAGETITLE.'");
+
+echo "Base Language: ".$baseLanguageCode."\n";
+
 $all_keys = 0;
 foreach ($all_langs as $lang) {
-    echo "Checking " . $lang . " ... ";
+    $langCode = basename($lang);
+    echo "Checking " . $langCode . " ... ";
     $errors = array();
     $files = glob($lang . '/*');
     $untranslated = 0;
@@ -37,12 +43,13 @@ foreach ($all_langs as $lang) {
             }
             ob_start();
             include($file);
+            $content = ob_get_contents();
             $outputted_content = ob_get_length();
             ob_clean();
             if ($outputted_content > 0) {
-                $errors[ $file_name ] = 'Generates output: ' . $outputted_content . ' chars';
+                $errors[ $file_name ] = 'Generates output: ' . $outputted_content . ' chars ('.$content.")";
             }
-            if ($lang == $baseLanguage) {
+            if ($langCode === $baseLanguageCode) {
                 $ref_keys[ $file_name ] = $language_array;
                 $all_keys += count($language_array);
             } else {

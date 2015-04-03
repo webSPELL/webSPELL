@@ -488,7 +488,7 @@ function urlreplace_callback_1($match)
 
 function urlreplace_callback_2($match)
 {
-    if (file_exists($match[1])) {
+    if (file_exists($match[1]) || stripos($match[1], 'index.php') === 0 ) {
         return '<a href="' . fixJavaEvents($match[1]) . '" target="_blank">';
     } else {
         return "";
@@ -548,7 +548,7 @@ function linkreplace($link)
             $link[3] = mb_substr($link[3], 0, mb_strrpos($link[3], "["));
         }
         $check = preg_match(
-            "%(http://|https://|ftp://|mailto:|news:|www\.)([a-zA-Z0-9-\.]{3,50})(\.[a-z]{2,4})%si",
+            "%(http://|https://|ftp://|mailto:|news:|www\.)([a-zA-Z0-9-\.]{3,50})%si",
             $link[0]
         );
         if ($check) {
