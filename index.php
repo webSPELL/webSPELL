@@ -264,6 +264,12 @@ header('X-UA-Compatible: IE=edge,chrome=1');
         </div>
     </div>
 </div>
+
+<footer class="footer">
+    <div class="container">
+        <p class="text-muted">Copyright by <b><?php echo $myclanname ?></b>&nbsp; | &nbsp;CMS powered by <a href="http://www.webspell.org" target="_blank"><b>webSPELL.org</b></a>&nbsp; | &nbsp;<a href="http://validator.w3.org/check?uri=referer" target="_blank">HTML5</a> &amp; <a href="http://jigsaw.w3.org/css-validator/check/referer" target="_blank">CSS 3</a> valid W3C standards&nbsp; | &nbsp;<a href="tmp/rss.xml" target="_blank"><img src="images/icons/rss.png" width="16" height="16" style="vertical-align:bottom;" alt="" /></a> <a href="tmp/rss.xml" target="_blank">RSS Feed</a></p>
+    </div>
+</footer>
 <?php foreach ($components['js'] as $component) {
     echo '<script src="' . $component . '"></script>';
 }
