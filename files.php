@@ -128,9 +128,9 @@ if ($action == "save") {
 
         if ($upload->hasFile()) {
             if ($upload->hasError() === false) {
-                $des_file = $filepath . $upload->getFilename();
+                $des_file = $filepath . $upload->getFileName();
                 if (file_exists($des_file)) {
-                    $des_file = $filepath . time() . "_" . $upload->getFilename();
+                    $des_file = $filepath . time() . "_" . $upload->getFileName();
                 }
                 if ($upload->saveAs($des_file, false)) {
                     @chmod($des_file, $new_chmod);
@@ -227,9 +227,9 @@ if ($action == "save") {
 
         if ($upload->hasFile()) {
             if ($upload->hasError() === false) {
-                $des_file = $filepath . $upload->getFilename();
+                $des_file = $filepath . $upload->getFileName();
                 if (file_exists($des_file)) {
-                    $des_file = $filepath . time() . "_" . $upload->getFilename();
+                    $des_file = $filepath . time() . "_" . $upload->getFileName();
                 }
                 if ($upload->saveAs($des_file)) {
                     @chmod($des_file, $new_chmod);
@@ -280,7 +280,7 @@ if ($action == "save") {
 
         if ($file) {
             $ergebnis = safe_query("SELECT * FROM `" . PREFIX . "files` WHERE `fileID` = '" . $file."'");
-            if(mysqli_num_rows($ergebnis)){
+            if (mysqli_num_rows($ergebnis)) {
                 $ds = mysqli_fetch_array($ergebnis);
 
                 if (isFileURL($ds[ 'file' ]) === false) {

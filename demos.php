@@ -133,7 +133,7 @@ if (isset($_POST[ 'save' ])) {
 
         if ($demo->hasFile()) {
             if ($demo->hasError() === false) {
-                $new_name = $filepath . $demo->getFilename();
+                $new_name = $filepath . $demo->getFileName();
                 if ($demo->saveAs($new_name) === false) {
                     $error[ ] = $_language->module[ 'file_exists' ];
                 } else {
@@ -231,12 +231,12 @@ if (isset($_POST[ 'save' ])) {
 
         if ($demo->hasFile()) {
             if ($demo->hasError() === false) {
-                $new_name = $filepath . $demo->getFilename();
+                $new_name = $filepath . $demo->getFileName();
                 if ($demo->saveAs($new_name) === false) {
                     $error[ ] = $_language->module[ 'file_exists' ];
                 } else {
                     @chmod($new_name, $new_chmod);
-                    $file = $demo->getFilename();
+                    $file = $demo->getFileName();
                 }
             } else {
                 $error[ ] = $demo->translateError();

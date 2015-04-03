@@ -29,8 +29,9 @@ namespace webspell;
 
 class UrlUpload extends Upload
 {
-    private $tmpfile;
+    private $tempFile;
     private $file;
+    private $fileName;
     public function __construct($url)
     {
         $this->file = $url;
@@ -41,9 +42,9 @@ class UrlUpload extends Upload
     private function download()
     {
         if (empty($this->file) === false) {
-            $this->tempfile = tempnam('tmp/', 'upload_');
-            $this->filename = basename(parse_url($this->file, PHP_URL_PATH));
-            if (copy($this->file, $this->tempfile)) {
+            $this->tempFile = tempnam('tmp/', 'upload_');
+            $this->fileName = basename(parse_url($this->file, PHP_URL_PATH));
+            if (copy($this->file, $this->tempFile)) {
                 $this->error = UPLOAD_ERR_OK;
             } else {
                 $this->error = self::UPLOAD_ERR_CANT_READ;
@@ -74,12 +75,12 @@ class UrlUpload extends Upload
 
     public function getTempFile()
     {
-        return $this->tempfile;
+        return $this->tempFile;
     }
 
-    public function getFilename()
+    public function getFileName()
     {
-        return $this->filename;
+        return $this->fileName;
     }
 
     public function getSize()

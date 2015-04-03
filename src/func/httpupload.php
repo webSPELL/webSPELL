@@ -61,7 +61,7 @@ class HttpUpload extends Upload
         return $_FILES[ $this->field ][ 'tmp_name' ];
     }
 
-    public function getFilename()
+    public function getFileName()
     {
         return basename($_FILES[ $this->field ][ 'name' ]);
     }

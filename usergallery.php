@@ -68,7 +68,7 @@ if ($userID) {
                     if (!empty($_POST[ 'name' ])) {
                         $insertname = $_POST[ 'name' ];
                     } else {
-                        $insertname = $upload->getFilename();
+                        $insertname = $upload->getFileName();
                     }
 
                     $typ =  getimagesize($upload->getTempFile());

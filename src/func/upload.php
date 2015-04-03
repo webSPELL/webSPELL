@@ -38,14 +38,14 @@ abstract class Upload
     abstract public function hasError();
     abstract public function getError();
     abstract public function getTempFile();
-    abstract public function getFilename();
+    abstract public function getFileName();
     abstract public function getSize();
     abstract public function saveAs($newFilePath, $override = true);
     abstract protected function getFallbackMimeType();
 
     public function getExtension()
     {
-        $filename = $this->getFilename();
+        $filename = $this->getFileName();
         if (stristr($filename, ".") !== false) {
             return substr($filename, strrpos($filename, ".") + 1);
         } else {
