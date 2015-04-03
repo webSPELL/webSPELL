@@ -262,10 +262,6 @@ systeminc('func/messenger');
 
 systeminc('func/news');
 
-// -- FILES INFORMATION -- //
-
-systeminc('func/files');
-
 // -- GAME INFORMATION -- //
 
 systeminc('func/game');
