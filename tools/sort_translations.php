@@ -33,7 +33,7 @@ $header = '<?php
 
 $language_array = Array(
 
-/* do not edit above this line */'."\n";
+/* do not edit above this line */'."\n\n";
 
 $footer = ');'."\n";
 
