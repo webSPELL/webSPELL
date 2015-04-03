@@ -12,11 +12,21 @@ tools:
     php_sim:
         enabled: true
         filter:
-            excluded_paths: ["tests", "vendor", "node_modules", "components"]
+            excluded_paths:
+                - tests/
+                - vendor/
+                - components/
+                - node_modules/
     php_pdepend:
         enabled: true
     php_analyzer:
         enabled: true
+        filter:
+            excluded_paths:
+                - tests/
+                - vendor/
+                - components/
+                - node_modules/
     php_changetracking:
         enabled: true
     php_mess_detector:
@@ -28,13 +38,21 @@ tools:
             - js
         filter:
             paths: ["Gruntfile.js", "js/bbcode.js"]
-            excluded_paths: ["tests", "vendor", "node_modules", "components"]
+            excluded_paths:
+                - tests/
+                - vendor/
+                - components/
+                - node_modules/
     php_cpd:
         min_lines: 5
         min_tokens: 70
         names:
             - '*.php'
-        excluded_dirs: ["tests", "vendor", "node_modules", "components"]
+        excluded_dirs:
+            - tests/
+            - vendor/
+            - components/
+            - node_modules/
         enabled: false
     php_code_sniffer:
         config:
@@ -44,5 +62,4 @@ tools:
             - php
         enabled: true
         filter:
-            excluded_paths: ["tests", "vendor", "node_modules", "components"]
             paths: ["*.php"]
