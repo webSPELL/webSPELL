@@ -116,11 +116,16 @@ class LoginCookie
         $cookieValue = $user . ":" . base64_encode($key);
         $cookieExpire = $expiration > 0 ? time() + $expiration : 0;
 
+        $success = false;
+
         $stmt = $_database->prepare("INSERT INTO " . PREFIX . "cookies
                 (userID, cookie, expiration) VALUES (?, ?, ?)");
         if (false !== $stmt) {
-            $success = $stmt->bind_param("isi", $user, $hash, $cookieExpire)
-                && $stmt->execute();
+            if ($stmt->bind_param("isi", $user, $hash, $cookieExpire)) {
+                if ($stmt->execute()) {
+                    $success = true;
+                }
+            }
             $stmt->close();
         }
 
@@ -148,8 +153,9 @@ class LoginCookie
             $stmt = $_database->prepare("DELETE FROM " . PREFIX . "cookies
                     WHERE `userID` = ? AND `cookie` = ?");
             if (false !== $stmt) {
-                $stmt->bind_param('is', $user, self::generateHash($key)) &&
-                $stmt->execute();
+                if ($stmt->bind_param('is', $user, self::generateHash($key))) {
+                    $stmt->execute();
+                }
                 $stmt->close();
             }
 
@@ -184,9 +190,11 @@ class LoginCookie
 
             if (false !== $stmt) {
                 $hash = self::generateHash($ws_pwd);
-                $stmt->bind_param('isi', $ws_user, $hash, time())
-                    && $stmt->execute()
-                    && self::checkResult($stmt);
+                if ($stmt->bind_param('isi', $ws_user, $hash, time())) {
+                    if ($stmt->execute()) {
+                        self::checkResult($stmt);
+                    }
+                }
 
                 $stmt->close();
             }
@@ -205,8 +213,9 @@ class LoginCookie
         );
 
         if (false !== $stmt) {
-            $stmt->bind_param('i', time()) &&
-            $stmt->execute();
+            if ($stmt->bind_param('i', time())) {
+                $stmt->execute();
+            }
             $stmt->close();
         }
     }
