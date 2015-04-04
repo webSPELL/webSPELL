@@ -170,7 +170,6 @@ if(!defined("PREFIX")){
             $update_functions[] = "40101_420_7";
             $update_functions[] = "420_430_1";
             $update_functions[] = "420_430_2";
-
         } elseif ($_POST['installtype'] == 'update_beta') {
             $update_functions = array();
             $update_functions[] = "4beta4_4beta5";
@@ -223,7 +222,6 @@ if(!defined("PREFIX")){
             $update_functions[] = "420_430_2";
             $update_functions[] = "passwordhash";
         } elseif ($_POST['installtype'] == 'update_final') {
-
             $update_functions = array();
             $update_functions[] = "40000_40100";
             $update_functions[] = "40100_40101";
@@ -238,7 +236,6 @@ if(!defined("PREFIX")){
             $update_functions[] = "420_430_2";
             $update_functions[] = "passwordhash";
         } elseif ($_POST['installtype'] == 'update_40100') {
-
             $update_functions = array();
             $update_functions[] = "40100_40101";
             $update_functions[] = "40101_420_1";
@@ -251,9 +248,7 @@ if(!defined("PREFIX")){
             $update_functions[] = "420_430_1";
             $update_functions[] = "420_430_2";
             $update_functions[] = "passwordhash";
-
         } elseif ($_POST['installtype'] == 'update_40102') {
-
             $update_functions = array();
             $update_functions[] = "40101_420_1";
             $update_functions[] = "40101_420_2";
@@ -265,9 +260,7 @@ if(!defined("PREFIX")){
             $update_functions[] = "420_430_1";
             $update_functions[] = "420_430_2";
             $update_functions[] = "passwordhash";
-
         } elseif ($_POST['installtype'] == 'update_420') {
-
             $update_functions = array();
             $update_functions[] = "420_430_1";
             $update_functions[] = "420_430_2";
