@@ -2433,6 +2433,16 @@ function update420_430()
     mysqli_query($_database, "INSERT INTO `" . PREFIX . "modrewrite` (`regex`, `link`, `fields`, `replace_regex`, `replace_result`, `rebuild_regex`, `rebuild_result`) VALUES('whoisonline/{sort}/{type}.html','index.php?site=whoisonline&sort={sort}&type={type}','a:2:{s:4:\"sort\";s:6:\"string\";s:4:\"type\";s:6:\"string\";}','index\\\\.php\\\\?site=whoisonline[&|&amp;]*sort=(\\\\w*?)[&|&amp;]*type=(\\\\w*?)','whoisonline/$3/$4.html','whoisonline\\\\/(\\\\w*?)\\\\/(\\\\w*?)\\\\.html','index.php?site=whoisonline&sort=$1&type=$2')");
     mysqli_query($_database, "ALTER TABLE `" . PREFIX . "forum_ranks` ADD `special` INT(1) NULL DEFAULT '0'");
     mysqli_query($_database, "ALTER TABLE `" . PREFIX . "user` ADD `special_rank` INT(11) NULL DEFAULT '0'");
+    
+/* Create cookies table */
+    mysqli_query($_database, "DROP TABLE IF EXISTS `" . PREFIX . "cookies`");
+    mysqli_query($_database, "CREATE TABLE `" . PREFIX . "cookies` (
+  `userID` int(11) NOT NULL,
+  `cookie` binary(64) NOT NULL,
+  `expiration` int(14) NOT NULL,
+  PRIMARY KEY (`userID`, `cookie`),
+  INDEX (`expiration`)
+    )");
 
     updateMySQLConfig();
 }

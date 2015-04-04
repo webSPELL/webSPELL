@@ -366,12 +366,6 @@ function getforminput($text)
 
 // -- LOGIN -- //
 
-$login_per_cookie = false;
-if (isset($_COOKIE['ws_auth']) && !isset($_SESSION['ws_auth'])) {
-    $login_per_cookie = true;
-    $_SESSION['ws_auth'] = $_COOKIE['ws_auth'];
-}
-
 systeminc('login');
 
 if ($loggedin === false) {
@@ -386,11 +380,6 @@ if ($loggedin === false) {
             $_SESSION['language'] = $lang;
         }
     }
-}
-
-if ($login_per_cookie) {
-    $ll = mysqli_fetch_array(safe_query("SELECT lastlogin FROM " . PREFIX . "user WHERE userID='$userID'"));
-    $_SESSION['ws_lastlogin'] = $ll['lastlogin'];
 }
 
 // -- SITE VARIABLE -- //
