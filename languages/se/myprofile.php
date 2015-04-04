@@ -138,4 +138,4 @@ Tackar för dina intressen
 	'you_have_to_username'=>'Du måste skriva ett användarnamn!',
 	'you_have_to_valid_email'=>'Din e-mail är inte giltig!'
 );
-?>
+

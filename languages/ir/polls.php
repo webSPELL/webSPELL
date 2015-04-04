@@ -68,4 +68,4 @@ $language_array = Array(
   'yht_enter_endingtime'=>'!شما باید زمان پایان راانتخاب کنید',
   'yht_enter_title'=>'!شما باید عنوان را انتخاب کنید'
 );
-?>
+

@@ -45,4 +45,4 @@ $language_array = Array(
   'title'=>'Cím',
   'transaction_invalid'=>'A művelet azonosítója érvénytelen'
 );
-?>
+

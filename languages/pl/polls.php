@@ -68,4 +68,4 @@ $language_array = Array(
 	'yht_enter_endingtime'=>'Musisz wpisać datę zakończenia ankiety!',
 	'yht_enter_title'=>'Musisz wpisać tytuł!'
 );
-?>
+

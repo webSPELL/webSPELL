@@ -44,4 +44,4 @@ $language_array = Array(
   'return'=>'<a href="javascript:history.back()">Zréck</a>',
   'return_reenter' => '<a href="javascript:history.back()">Zréck an Angab widderhuelen</a>'
 );
-?>
+

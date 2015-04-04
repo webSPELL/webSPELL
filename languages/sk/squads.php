@@ -54,4 +54,4 @@ $language_array = Array(
 	'town'=>'Mesto',
 	'userpicture'=>'obrázok'
 );
-?>
+

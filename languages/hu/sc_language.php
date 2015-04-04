@@ -32,4 +32,4 @@ $language_array = Array(
 	'save'=>'mentés',
 	'no_session'=>'Győződj meg róla, hogy a cookie-k engedélyezve vannak és próbáld meg újra a nyelvváltást.'
 );
-?>
+

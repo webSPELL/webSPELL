@@ -48,4 +48,4 @@ Bonne visite sur notre site
     &#8226; <a href="index.php?site=login">S\'enregistrer</a>',
 	'your_email'=>'Votre adresse mail'
 );
-?>
+

@@ -49,4 +49,4 @@ $language_array = Array(
     &#8226; <a href="index.php?site=login">دخول</a>',
   'your_email'=>'بريدك الإلكتروني'
 );
-?>
+

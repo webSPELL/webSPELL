@@ -105,4 +105,4 @@ $language_array = Array(
 	'enter_info'=>'Je hebt geen enkele informatie ingevuld!'
 
 );
-?>
+

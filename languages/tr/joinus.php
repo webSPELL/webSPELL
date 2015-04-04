@@ -64,4 +64,4 @@ $language_array = Array(
   'title_join_us'=>'Üye ol',
   'wrong_security_code'=>'Yanlış güvenlik kodu!'
 );
-?>
+

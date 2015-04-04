@@ -67,4 +67,4 @@ $language_array = Array(
   'wrong_securitycode'=>'Унијели сте криви сигурносни код!',
   'no_result'=>'Нема уноса фоунд фор "%s"'
 );
-?>
+

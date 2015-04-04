@@ -67,4 +67,4 @@ $language_array = Array(
 	'wrong_securitycode'=>'Zadali ste chybný bezpečnostný kód!',
 	'no_result'=>'Pre "%s" Žiadne záznamy'
 );
-?>
+

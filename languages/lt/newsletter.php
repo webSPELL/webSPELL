@@ -52,4 +52,4 @@ $language_array = Array(
 	'your_mail_adress'=>'Jūsų E-Pašto adresas',
 	'your_mail_adress_deleted'=>'Jūsų E-Pašto adresas ištrintas.'
 );
-?>
+

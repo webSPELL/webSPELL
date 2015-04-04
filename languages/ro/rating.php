@@ -33,4 +33,4 @@ $language_array = Array(
   'no_access'=>'fără acces!',
   'just_rate_between_0_10'=>'Vă rugăm să evaluați doar 0-10 puncte!'
 );
-?>
+

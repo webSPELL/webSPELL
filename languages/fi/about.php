@@ -38,4 +38,4 @@ $language_array = Array(
   'about_title'=>'Tietoa meistä',
   'no_about'=>'Tällä hetkellä ei selitystä saatavilla.'
 );
-?>
+

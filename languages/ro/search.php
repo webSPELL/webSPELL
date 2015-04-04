@@ -68,4 +68,4 @@ $language_array = Array(
   'wrong_securitycode'=>'Aţi introdus un cod de siguranţă greşit!',
   'no_result'=>'Nu am găsit pentru "%s" intrări'
 );
-?>
+

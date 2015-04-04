@@ -40,4 +40,4 @@ $language_array = Array(
   'report_recognized'=>'Ваша жалоба распознана. Спасибо.',
   'wrong_securitycode'=>'Вы ввели неверный код безопастности<br><br>[<a href="javascript:back();">назад</a>]'
 );
-?>
+

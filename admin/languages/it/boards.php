@@ -62,4 +62,4 @@ $language_array = Array(
   'write_right'=>'Scrivi Diritto',
   'write_right_info_board'=>'Questo gruppo di utenti ha i diretti di vedere e leggere questo forum.<br>Se non è selezionato un gruppo di utenti, tutti vedevono il forum e possono leggere.<br>Usa CTRL per selezionare o deselezionare più.'
 );
-?>
+

@@ -48,4 +48,4 @@ Užite si našu stránku
 	&#8226; <a href="index.php?site=login">prihlásenie</a>',
 	'your_email'=>'Váš E-mail'
 );
-?>
+

@@ -68,4 +68,4 @@ $language_array = Array(
 	'yht_enter_endingtime'=>'Du skal indsætte slutte tiden!',
 	'yht_enter_title'=>'Du skal indtaste en titel!'
 );
-?>
+

@@ -39,4 +39,4 @@ $language_array = Array(
   'shoutbox'=>'Ātrā tērzēšana',
   'sort'=>'Kārtot:'
 );
-?>
+

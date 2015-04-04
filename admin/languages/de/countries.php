@@ -52,4 +52,4 @@ $language_array = Array(
   'shorthandle'=>'Kürzel',
   'transaction_invalid'=>'Transaktions ID ungültig'
 );
-?>
+

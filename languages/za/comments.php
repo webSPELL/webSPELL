@@ -72,4 +72,4 @@ $language_array = Array(
   'title_comment'=>'Jou kommentaar',
   'title_editcomment'=>'Wysig kommentaar'
 );
-?>
+

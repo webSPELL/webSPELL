@@ -70,4 +70,4 @@ $language_array = Array(
   'squads'=>'Joukkueet',
   'who_is_online'=>'Kuka on online?'
 );
-?>
+

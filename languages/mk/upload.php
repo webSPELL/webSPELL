@@ -39,4 +39,4 @@ $language_array = Array(
   'no_access'=>'Нема пристап!',
   'upload'=>'Прикачи'
 );
-?>
+

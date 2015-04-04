@@ -35,4 +35,4 @@ $language_array = Array(
   'report_recognized'=>'Reclamaţia ta a fost recunoscută. Vă mulţumim!',
   'wrong_securitycode'=>'Aţi introdus un cod de siguranţă greşit<br><br>[<a href="javascript:back();">înapoi</a>]'
 );
-?>
+

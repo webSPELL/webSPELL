@@ -33,4 +33,4 @@ $language_array = Array(
   'save'=>'saglabāt',
   'no_session'=>'Lūdzu pārliecinieties vai sīkfaili ir iespējoti un mēģiniet nomainīt valodu vēlreiz.'
 );
-?>
+

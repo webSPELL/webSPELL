@@ -39,4 +39,4 @@ $language_array = Array(
   'no_result'=>'Ni poizvedbe',
   'to_much_results'=>'preveč rezultatov, vnesite več znakov.'
 );
-?>
+

@@ -52,4 +52,4 @@ $language_array = Array(
 	'your_mail_adress'=>'A mail címed',
 	'your_mail_adress_deleted'=>'A mail címed törölve.'
 );
-?>
+

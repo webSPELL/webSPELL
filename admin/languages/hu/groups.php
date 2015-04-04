@@ -44,4 +44,4 @@ $language_array = Array(
   'really_delete'=>'Biztosan törölni akarod ezt a csoportot?',
   'transaction_invalid'=>'A művelet azonosítója érvénytelen'
 );
-?>
+

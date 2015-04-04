@@ -85,4 +85,4 @@ $language_array = Array(
   'large_picture'=>'صورة كبيرة',
   'show_original'=>'عرض الطبيعية'
 );
-?>
+

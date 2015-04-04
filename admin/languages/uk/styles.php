@@ -61,4 +61,4 @@ $language_array = Array(
   'update'=>'update',
   'win_color'=>'Win Fontcolor'
 );
-?>
+

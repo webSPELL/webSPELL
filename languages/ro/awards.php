@@ -50,4 +50,4 @@ $language_array = Array(
   'squad'=>'Echipă',
   'update_award'=>'Actualizează premii'
 );
-?>
+

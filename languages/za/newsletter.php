@@ -58,4 +58,4 @@ $language_array = Array(
   'your_mail_adress'=>'Jou pos adres',
   'your_mail_adress_deleted'=>'Jou e-pos adres is verwyder.'
 );
-?>
+

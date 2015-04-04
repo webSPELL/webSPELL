@@ -64,4 +64,4 @@ $language_array = Array(
   'title_join_us'=>'Word \'n lid',
   'wrong_security_code'=>'Die sekuriteit\'s kode is verkeerd!'
 );
-?>
+

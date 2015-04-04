@@ -34,4 +34,4 @@ $language_array = Array(
   'registered_since'=>'reģistrējies kopš',
   'view_profile'=>'apskatīt profilu'
 );
-?>
+

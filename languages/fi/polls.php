@@ -74,4 +74,4 @@ $language_array = Array(
   'yht_enter_endingtime'=>'Olet valinnut päättymispäivän!',
   'yht_enter_title'=>'Sinun täytyy otsikoida!'
 );
-?>
+

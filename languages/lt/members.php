@@ -49,4 +49,4 @@ $language_array = Array(
 	'status'=>'Padėtis',
 	'town'=>'Miestas'
 );
-?>
+

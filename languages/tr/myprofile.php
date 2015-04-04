@@ -144,4 +144,4 @@ Lütfen e-posta değişikliğini tamamlamak için aşağıdaki linki tıklayarak
   'you_have_to_username'=>'Kullanıcı adı girmek zorundasınız!',
   'you_have_to_valid_email'=>'E-posta geçerli değil!'
 );
-?>
+

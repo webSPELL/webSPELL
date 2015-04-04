@@ -33,4 +33,4 @@ $language_array = Array(
   'outgoing'=>'رفتن',
   'owner_responsible'=>'.مالک مسول این صفحه است'
 );
-?>
+

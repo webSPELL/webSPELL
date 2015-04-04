@@ -32,4 +32,4 @@ $language_array = Array(
 	'news_feed'=>'Noticias Feed',
 	'latest_news_from'=>'Últimas noticias de'
 );
-?>
+

@@ -138,4 +138,4 @@ Thank you for your interest
 	'you_have_to_username'=>'Zapomněl jsi vložit uživatelské jméno!',
 	'you_have_to_valid_email'=>'Tvůj e-mail není validní!'
 );
-?>
+

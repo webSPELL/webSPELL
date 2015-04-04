@@ -104,4 +104,4 @@ $language_array = Array(
   'won_clanwars'=>'مسابقات برده شه',
   'won_points'=>'امتیازات گرفته'
 );
-?>
+

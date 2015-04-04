@@ -70,4 +70,4 @@ Vielen Dank für deine Anmeldung
 	'wrong_activationkey'=>'Dein Freischaltcode ist falsch!',
 	'wrong_securitycode'=>'Der Sicherheitscode ist falsch!'
 );
-?>
+

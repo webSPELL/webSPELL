@@ -34,4 +34,4 @@ $language_array = Array(
 	'report_recognized'=>'Tu reporte ha sido guardado. Gracias.',
 	'wrong_securitycode'=>'El código de seguridad es equivocado.<br><br>[<a href="javascript:back();">Volver</a>]'
 );
-?>
+

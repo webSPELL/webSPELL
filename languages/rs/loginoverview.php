@@ -66,4 +66,4 @@ $language_array = Array(
   'x_new_message'=>'Нових порука: %new_messages%',
   'you_have_to_be_logged_in'=>'Морате бити пријављени да би видјели ову страницу!<br><br>rn    &#8226; <a href="index.php?site=register">Региструј се</a><br>rn    &#8226; <a href="index.php?site=login">Пријави се</a>'
 );
-?>
+

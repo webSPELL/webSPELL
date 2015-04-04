@@ -110,4 +110,4 @@ $language_array = Array(
   'enter_title'=>'Vnesite dolgi naslov naslov!',
   'enter_info'=>'Vnesite informacijo!'
 );
-?>
+

@@ -69,4 +69,4 @@ $language_array = Array(
 	'yht_enter_title'=>'Je moet een titel invoeren!'
 
 );
-?>
+

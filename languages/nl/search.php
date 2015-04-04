@@ -67,4 +67,4 @@ $language_array = Array(
 	'wrong_securitycode'=>'De veiligheids code was verkeerd!',
 	'no_result'=>'Geen data gevonden voor "%s"'
 );
-?>
+

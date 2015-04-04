@@ -104,4 +104,4 @@ $language_array = Array(
 	'enter_title'=>'Niste unijeli dugi naslov!',
 	'enter_info'=>'Niste unijeli nikakvu informaciju!'
 );
-?>
+

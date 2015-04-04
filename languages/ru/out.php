@@ -34,4 +34,4 @@ $language_array = Array(
   'outgoing'=>'Исходящие ссылки',
   'owner_responsible'=>'Владелец несет ответственность за эту страницу.'
 );
-?>
+

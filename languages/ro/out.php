@@ -34,4 +34,4 @@ $language_array = Array(
   'outgoing'=>'De expedierern',
   'owner_responsible'=>'Proprietarul este responsabil pentru această pagină.'
 );
-?>
+

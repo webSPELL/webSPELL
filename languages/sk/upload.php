@@ -38,4 +38,4 @@ $language_array = Array(
 	'no_access'=>'Žiaden prístup!',
 	'upload'=>'Odoslať'
 );
-?>
+

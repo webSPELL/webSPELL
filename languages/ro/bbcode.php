@@ -85,4 +85,4 @@ $language_array = Array(
   'large_picture'=>'Poză mare',
   'show_original'=>'spectacol inedit'
 );
-?>
+

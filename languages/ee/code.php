@@ -83,4 +83,4 @@ $language_array = Array(
   'yellow'=>'Kollane',
   'yes_can_combine'=>'Jah, loomulikult saad. Näiteks, et püüda kellegi tähelepanu, võid kirjutada:'
 );
-?>
+

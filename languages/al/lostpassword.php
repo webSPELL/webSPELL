@@ -54,4 +54,4 @@ të argëtohen në faqen tonë
     &#8226; <a href="index.php?site=login">logim</a>',
   'your_email'=>'E-Mail juaj'
 );
-?>
+

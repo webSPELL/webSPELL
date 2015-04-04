@@ -33,4 +33,4 @@ $language_array = Array(
   'history'=>'Vēsture',
   'no_history'=>'Pagaidām nav pieejama informācija.'
 );
-?>
+

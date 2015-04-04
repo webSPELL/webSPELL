@@ -39,4 +39,4 @@ $language_array = Array(
   'no_faq'=>'Jautājumi nav pieejami.<br><a href="index.php?site=faq">Atpakaļ</a>',
   'saved_on'=>'izmaiņas saglabātas'
 );
-?>
+

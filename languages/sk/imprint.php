@@ -49,4 +49,4 @@ $language_array = Array(
 	'responsible_persons'=>'zodpovedné osoby',
 	'webmaster'=>'Webmaster:'
 );
-?>
+

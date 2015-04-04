@@ -33,4 +33,4 @@ $language_array = Array(
 	'no_result'=>'Žiaden výsledok nebol nájdený',
 	'to_much_results'=>'Existuje veľa možných výsledkov. Prosím zadajte viacej znakov.'
 );
-?>
+

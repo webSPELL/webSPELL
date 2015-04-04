@@ -38,4 +38,4 @@ $language_array = Array(
   'history'=>'Tarih',
   'no_history'=>'Henüz hiçbir bilgi yok.'
 );
-?>
+

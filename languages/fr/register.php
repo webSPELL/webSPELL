@@ -70,4 +70,4 @@ Merci pour votre inscription
 	'wrong_activationkey'=>'Votre clé d\'activation est fausse !',
 	'wrong_securitycode'=>'Le code de sécurité est faux !'
 );
-?>
+

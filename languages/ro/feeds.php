@@ -33,4 +33,4 @@ $language_array = Array(
   'news_feed'=>'Noutăţi',
   'latest_news_from'=>'Ultimele noutăţi'
 );
-?>
+

@@ -38,4 +38,4 @@ $language_array = Array(
   'about_title'=>'Rreth nesh',
   'no_about'=>'Momentalisht asnjë informacion i vlefshëm.'
 );
-?>
+

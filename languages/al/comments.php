@@ -72,4 +72,4 @@ $language_array = Array(
   'title_comment'=>'Komenti juaj',
   'title_editcomment'=>'Edito komentin'
 );
-?>
+

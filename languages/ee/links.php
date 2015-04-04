@@ -56,4 +56,4 @@ $language_array = Array(
   'title_categories'=>'Lingi kategooriad',
   'update_link'=>'Uuenda link'
 );
-?>
+

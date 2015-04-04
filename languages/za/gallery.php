@@ -78,4 +78,4 @@ $language_array = Array(
   'you_have_already_rated'=>'Jy het reeds gegradeer.',
   'no_thumb'=>'Geen duim'
 );
-?>
+

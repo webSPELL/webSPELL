@@ -82,4 +82,4 @@ $language_array = Array(
 	'yellow'=>'Geltona',
 	'yes_can_combine'=>'Taip, žinoma jūs galite, pavyzdžiui gauti kažkieno dėmesį, kurį jūs galite parašyti:'
 );
-?>
+

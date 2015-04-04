@@ -34,4 +34,4 @@ $language_array = Array(
 	'view_profile'=>'bekijk profiel'
 
 );
-?>
+

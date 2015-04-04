@@ -141,4 +141,4 @@ $language_array = Array(
   'your_message'=>'mesajnız',
   'your_name'=>'isminiz'
 );
-?>
+

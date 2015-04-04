@@ -31,4 +31,4 @@ $language_array = Array(
 
 	'random_picture'=>'Nasumicna slika'
 );
-?>
+

@@ -33,4 +33,4 @@ $language_array = Array(
   'news_feed'=>'Uudistevoog',
   'latest_news_from'=>'Viimased uudised'
 );
-?>
+

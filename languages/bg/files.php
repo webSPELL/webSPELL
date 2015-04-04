@@ -111,4 +111,4 @@ $language_array = Array(
   'you_have_to_enter_filename'=>'Моля въвдете името на файла!',
   'you_have_to_enter_file'=>'Моля въведете файл или URL!'
 );
-?>
+

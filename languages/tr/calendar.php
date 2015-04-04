@@ -110,4 +110,4 @@ $language_array = Array(
   'enter_title'=>'Uzun bir başlık girmediniz!',
   'enter_info'=>'Bir bilgi girmediniz!'
 );
-?>
+

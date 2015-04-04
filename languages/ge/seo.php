@@ -77,4 +77,4 @@ $language_array = Array(
   'versus'=>'წინააღმდეგ',
   'whoisonline'=>'ვინ არის ონლაინი'
 );
-?>
+

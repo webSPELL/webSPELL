@@ -39,4 +39,4 @@ $language_array = Array(
   'no_result'=>'Geen resultate gevind',
   'to_much_results'=>'Daar is te veel bruikbare resultate, gee asseblief nog karakters.'
 );
-?>
+

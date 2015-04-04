@@ -44,4 +44,4 @@ $language_array = Array(
   'shoutbox'=>'Чат',
   'sort'=>'Сортувати:'
 );
-?>
+

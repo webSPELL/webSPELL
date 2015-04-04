@@ -84,4 +84,4 @@ $language_array = Array(
   'large_picture'=>'عکس بزرگتر',
   'show_original'=>'نشان دادن اصل'
 );
-?>
+

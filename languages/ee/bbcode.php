@@ -85,4 +85,4 @@ $language_array = Array(
   'large_picture'=>'Suur pilt',
   'show_original'=>'näita originaali'
 );
-?>
+

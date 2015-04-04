@@ -65,4 +65,4 @@ $language_array = Array(
 	'time'=>'Idő',
 	'wrong_security_code'=>'Rossz biztonsági kód.'
 );
-?>
+

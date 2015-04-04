@@ -41,4 +41,4 @@ $language_array = Array(
   'status'=>'الحالة',
   'timeout'=>'انتهاء المهلة'
 );
-?>
+

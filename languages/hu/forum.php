@@ -134,4 +134,4 @@ $language_array = Array(
 	'enter_topic'=>'Meg kell adnod a topik címét!',
 	'enter_text'=>'Meg kell adnod szöveget!'
 );
-?>
+

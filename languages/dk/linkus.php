@@ -45,4 +45,4 @@ $language_array = Array(
 	'save_banner'=>'gem banner',
 	'use_following_code'=>'Brug den følgende kode for at, indsætte banneret på din hjemmeside.'
 );
-?>
+

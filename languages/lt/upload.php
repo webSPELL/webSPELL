@@ -38,4 +38,4 @@ $language_array = Array(
 	'no_access'=>'Jokia prieiga!',
 	'upload'=>'Atsiųsti'
 );
-?>
+

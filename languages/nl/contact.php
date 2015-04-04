@@ -51,4 +51,4 @@ $language_array = Array(
 	'wrong_securitycode'=>'De veiligheids code was verkeerd!'
 
 );
-?>
+

@@ -39,4 +39,4 @@ $language_array = Array(
   'return'=>'<a href="javascript:history.back()">უკან დაბრუნება</a>',
   'return_reenter' => '<a href="javascript:history.back()">უკან და განმეორებითი შეყვანის</a>'
 );
-?>
+

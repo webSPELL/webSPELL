@@ -72,4 +72,4 @@ $language_array = Array(
 	'you_have_already_rated'=>'Už si hodnotil.',
 	'no_thumb'=>'Žiaden náhľad'
 );
-?>
+

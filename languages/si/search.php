@@ -73,4 +73,4 @@ $language_array = Array(
   'wrong_securitycode'=>'Napačna varnostna koda!',
   'no_result'=>'Ni rezultatov za "%s" vpisi'
 );
-?>
+

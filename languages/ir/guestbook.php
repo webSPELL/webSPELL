@@ -59,4 +59,4 @@ $language_array = Array(
   'wrote'=>'نوشته شده',
   'your_message'=>'پیغام شما'
 );
-?>
+

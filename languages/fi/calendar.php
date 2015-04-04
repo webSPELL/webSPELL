@@ -110,4 +110,4 @@ $language_array = Array(
   'enter_title'=>'Et ole antanut pitkää otsikkoa!',
   'enter_info'=>'Et ole antanut tietoja!'
 );
-?>
+

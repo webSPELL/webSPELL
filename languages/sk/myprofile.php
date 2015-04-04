@@ -138,4 +138,4 @@ Pre potrvrdenie zmeny, prosím kliknite na nasledujúci odkaz:
 	'you_have_to_username'=>'Musíte zadať užív. meno!',
 	'you_have_to_valid_email'=>'Váš E-mail je chybý!'
 );
-?>
+

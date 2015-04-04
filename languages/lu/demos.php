@@ -84,4 +84,4 @@ $language_array = Array(
   'visitor_comments'=>'Kommentare fir all erlaben',
   'vs'=>'géint.'
 );
-?>
+

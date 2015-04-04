@@ -80,4 +80,4 @@ $language_array = Array(
   'visitor_comments'=>'Επισκέπτες-σχόλια ενεργοποίησε',
   'tags'=>'tags'
 );
-?>
+

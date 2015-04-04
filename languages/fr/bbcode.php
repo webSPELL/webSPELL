@@ -85,4 +85,4 @@ $language_array = Array(
 	'show_original'=>'Voir l\'originale'
 );
 
-?>
+

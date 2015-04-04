@@ -43,4 +43,4 @@ $language_array = Array(
   'upload'=>'Feltöltés',
   'transaction_invalid'=>'A művelet azonosítója érvénytelen'
 );
-?>
+

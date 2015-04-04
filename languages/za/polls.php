@@ -74,4 +74,4 @@ $language_array = Array(
   'yht_enter_endingtime'=>'Eindtyd moet ingevoer word!',
   'yht_enter_title'=>'Titel moet ingevoer word !'
 );
-?>
+

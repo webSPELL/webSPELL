@@ -58,4 +58,4 @@ $language_array = Array(
   'your_mail_adress'=>'Sinun maili osoitteesi',
   'your_mail_adress_deleted'=>'Maili osoitteesi on poistettu.'
 );
-?>
+

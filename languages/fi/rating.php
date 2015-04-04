@@ -38,4 +38,4 @@ $language_array = Array(
   'no_access'=>'pääsy evätty!',
   'just_rate_between_0_10'=>'Äänestä 0 / 10 Pistettä!'
 );
-?>
+

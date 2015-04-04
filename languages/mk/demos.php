@@ -79,4 +79,4 @@ $language_array = Array(
   'visitor_comments'=>'Овозможи коментари за посетителите',
   'vs'=>'против'
 );
-?>
+

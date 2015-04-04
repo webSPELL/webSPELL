@@ -37,4 +37,4 @@ $language_array = Array(
   'update'=>'aggiornamento',
   'you_can_use_html'=>'È possibile di utilizzare HTML'
 );
-?>
+

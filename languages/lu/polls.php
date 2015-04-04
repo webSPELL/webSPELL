@@ -74,4 +74,4 @@ $language_array = Array(
   'yht_enter_endingtime'=>'Du muss d\'Ofschlosszäit aginn!',
   'yht_enter_title'=>'Du muss en Titel aginn!'
 );
-?>
+

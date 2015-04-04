@@ -75,4 +75,4 @@ $language_array = Array(
   'visitor_comments'=>'დაურეგისტრირებელ მომხმარებელს დაკომენტარების უფლება',
   'tags'=>'tags'
 );
-?>
+

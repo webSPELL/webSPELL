@@ -73,4 +73,4 @@ $language_array = Array(
   'wrong_securitycode'=>'Den Sëcherheetscode ass falsch',
   'no_result' =>'Keng Anträg zou "%s" fonnt'
 );
-?>
+

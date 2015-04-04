@@ -70,4 +70,4 @@ $language_array = Array(
   'wrong_activationkey'=>'Ваш активацијски кеј је погрешан!',
   'wrong_securitycode'=>'Сигурносни код је погрешан!'
 );
-?>
+

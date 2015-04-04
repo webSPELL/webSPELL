@@ -53,4 +53,4 @@ $language_array = Array(
   'your_mail_adress'=>'Ваш адрес э/п',
   'your_mail_adress_deleted'=>'Ваш адрес э/п удален.'
 );
-?>
+

@@ -53,4 +53,4 @@ $language_array = Array(
 	'upcoming_events'=>'próximos eventos',
 	'tags'=>'etiquetas'
 );
-?>
+

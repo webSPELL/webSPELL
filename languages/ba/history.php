@@ -33,4 +33,4 @@ $language_array = Array(
   'history'=>'Historija',
   'no_history'=>'Nema dostupnih informacija.'
 );
-?>
+

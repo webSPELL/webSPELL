@@ -59,4 +59,4 @@ $language_array = Array(
   'title_join_us'=>'Postani član',
   'wrong_security_code'=>'Krivi sigurnosni kod!'
 );
-?>
+

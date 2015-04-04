@@ -74,4 +74,4 @@ $language_array = Array(
   'yht_enter_endingtime'=>'Duhet të vendosni kohën e përfundimit!',
   'yht_enter_title'=>'Duhet të vendosni një titull!'
 );
-?>
+

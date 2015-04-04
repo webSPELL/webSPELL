@@ -45,4 +45,4 @@ $language_array = Array(
   'title'=>'Titel',
   'transaction_invalid'=>'Transaktions ID ungültig'
 );
-?>
+

@@ -80,4 +80,4 @@ $language_array = Array(
   'visitor_comments'=>'Lejoni komentet e vizituesve',
   'tags'=>'tags'
 );
-?>
+

@@ -58,4 +58,4 @@ $language_array = Array(
 	'title_join_us'=>'Demande de recrutement',
 	'wrong_security_code'=>'Le code de sécurité est faux !'
 );
-?>
+

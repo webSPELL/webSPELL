@@ -129,4 +129,4 @@ $language_array = Array(
   'you_cant_ban'=>'Non è possibile vietare questo utente! (Super Admin)',
   'you_cant_ban_yourself'=>'Non è possibile vietare te!'
 );
-?>
+

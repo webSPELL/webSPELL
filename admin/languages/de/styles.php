@@ -61,4 +61,4 @@ $language_array = Array(
   'update'=>'aktualisieren',
   'win_color'=>'Gewonnen Schriftfarbe'
 );
-?>
+

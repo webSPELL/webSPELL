@@ -52,4 +52,4 @@ $language_array = Array(
   'shorthandle'=>'Scorciatoie',
   'transaction_invalid'=>'ID transazione non valido'
 );
-?>
+

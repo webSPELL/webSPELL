@@ -48,4 +48,4 @@ Zapraszamy na stronę
     &#8226; <a href="index.php?site=login">login</a>',
 	'your_email'=>'Twój E-Mail'
 );
-?>
+

@@ -74,4 +74,4 @@ $language_array = Array(
 	'visitor_comments'=>'Activar comentarios de visitante.',
 	'tags'=>'etiquetas'
 );
-?>
+

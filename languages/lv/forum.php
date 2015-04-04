@@ -135,4 +135,4 @@ $language_array = Array(
   'enter_topic'=>'Jums ir jāievada tēmas virsraksts!',
   'enter_text'=>'Jums ir jāievada kaut kāds teksts!'
 );
-?>
+

@@ -52,4 +52,4 @@ $language_array = Array(
 	'your_mail_adress'=>'Din email adress',
 	'your_mail_adress_deleted'=>'Din mail adress har raderats.'
 );
-?>
+

@@ -139,4 +139,4 @@ Täname huvi üles näitamise eest
   'you_have_to_username'=>'Sa pead oma kasutajanime sisestama!',
   'you_have_to_valid_email'=>'Su meiliaadress pole korrektne!'
 );
-?>
+

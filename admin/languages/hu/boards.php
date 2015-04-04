@@ -62,4 +62,4 @@ $language_array = Array(
   'write_right'=>'Írási jogosultság',
   'write_right_info_board'=>'Ez(ek) a felhasználói csoport(ok) írhat(nak) a témában.<br>Ha egyik csoport sem kerül kijelölésre, akkor a témába szabadon írhat minden látogató.<br>Használd a CTRL-t több csoport kijelöléséhez.'
 );
-?>
+

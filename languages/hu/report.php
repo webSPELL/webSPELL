@@ -34,4 +34,4 @@ $language_array = Array(
 	'report_recognized'=>'A jelentésed elfogadva. Köszönjük.',
 	'wrong_securitycode'=>'Hibás biztonsági kód!<br><br>[<a href="javascript:back();">vissza</a>]'
 );
-?>
+

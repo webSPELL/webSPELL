@@ -68,4 +68,4 @@ $language_array = Array(
   'wrong_securitycode'=>'Внесивте погрешна сигурносна шифра!',
   'no_result'=>'Нема записи најде за "%s"'
 );
-?>
+

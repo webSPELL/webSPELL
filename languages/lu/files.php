@@ -111,4 +111,4 @@ $language_array = Array(
   'you_have_to_enter_filename'=>'Du muss en Dateinumm aginn!',
   'you_have_to_enter_file'=>'Du muss eng File / eng URL aginn!'
 );
-?>
+

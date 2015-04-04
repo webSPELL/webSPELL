@@ -46,4 +46,4 @@ $language_array = Array(
   'save_banner'=>'salvează banner',
   'use_following_code'=>'Foloseşte următorul cod, pentru a insera banner-ul in pagina ta. '
 );
-?>
+

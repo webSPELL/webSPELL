@@ -32,4 +32,4 @@ $language_array = Array(
 	'save'=>'išsaugoti',
 	'no_session'=>'Prašome patikrinti ar sausainukai įjungti. Bandykite dar kartą pakeisti kalbą.'
 );
-?>
+

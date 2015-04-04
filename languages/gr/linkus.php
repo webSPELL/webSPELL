@@ -51,4 +51,4 @@ $language_array = Array(
   'save_banner'=>'αποθηκευση banner',
   'use_following_code'=>'Χρησημοποιηστε τον ακολουθο κωδικα για να εισαγετε το banner στη σελιδα σας.'
 );
-?>
+

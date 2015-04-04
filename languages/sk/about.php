@@ -32,4 +32,4 @@ $language_array = Array(
 	'about_title'=>'O nás',
 	'no_about'=>'Momentálne nie je pridaný žiaden záznam.'
 );
-?>
+

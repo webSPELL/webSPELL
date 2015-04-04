@@ -68,4 +68,4 @@ $language_array = Array(
 	'yht_enter_endingtime'=>'Musíte zadať čas ukončenia!',
 	'yht_enter_title'=>'Musíte zadať názov!'
 );
-?>
+

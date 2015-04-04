@@ -32,4 +32,4 @@ $language_array = Array(
 	'save'=>'uložit',
 	'no_session'=>'Ujistěte se, že máte aktivované cookies a zkuste znovu změnit jazyk.'
 );
-?>
+

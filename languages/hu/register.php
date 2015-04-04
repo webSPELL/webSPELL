@@ -70,4 +70,4 @@ Köszönjük a regisztrációd
 	'wrong_activationkey'=>'Az aktivációs kódod hibás!',
 	'wrong_securitycode'=>'Hibás biztonsági kód!'
 );
-?>
+

@@ -105,4 +105,4 @@ $language_array = Array(
   'enter_title'=>'!لم تقم بادخال اسم الفريق',
   'enter_info'=>'!لم تقم بادخال اي معلومات'
 );
-?>
+

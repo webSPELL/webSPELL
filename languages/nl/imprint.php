@@ -50,4 +50,4 @@ $language_array = Array(
 	'webmaster'=>'Webmaster:'
 
 );
-?>
+

@@ -44,4 +44,4 @@ $language_array = Array(
   'no_faq'=>'Няма налични въпроси.<br><a href="index.php?site=faq">Oбратно</a>',
   'saved_on'=>'създаден на'
 );
-?>
+

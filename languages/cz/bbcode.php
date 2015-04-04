@@ -84,4 +84,4 @@ $language_array = Array(
 	'large_picture'=>'Velký obrázek',
 	'show_original'=>'ukázat originál'
 );
-?>
+

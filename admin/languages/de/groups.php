@@ -44,4 +44,4 @@ $language_array = Array(
   'really_delete'=>'Diese Benutzergruppe wirklich löschen?',
   'transaction_invalid'=>'Transaktions ID ungültig'
 );
-?>
+

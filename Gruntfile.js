@@ -61,7 +61,8 @@ module.exports = function( grunt ) {
             "!codestyles/**",
             "!components/**",
             "!vendor/**",
-            "!tmp/**"
+            "!tmp/**",
+            "!tests/**"
         ];
 
     require( "load-grunt-tasks" )( grunt, {
@@ -109,7 +110,8 @@ module.exports = function( grunt ) {
                 files: {
                     src: [
                         javascripts,
-                        excludes
+                        excludes,
+                        "!Gruntfile.js"
                     ]
                 }
             }

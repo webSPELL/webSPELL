@@ -66,4 +66,4 @@ $language_array = Array(
   'question_delete'=>'Really delete ?',
   'delete'=>'delete'
 );
-?>
+

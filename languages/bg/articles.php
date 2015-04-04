@@ -80,4 +80,4 @@ $language_array = Array(
   'visitor_comments'=>'разрешени коментари за посетителя',
   'tags'=>'tags'
 );
-?>
+

@@ -76,4 +76,4 @@ $language_array = Array(
 	'versus'=>'detalės',
 	'whoisonline'=>'Kas prisijungę'
 );
-?>
+

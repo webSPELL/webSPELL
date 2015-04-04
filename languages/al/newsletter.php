@@ -58,4 +58,4 @@ $language_array = Array(
   'your_mail_adress'=>'Adresa juaj e mailit',
   'your_mail_adress_deleted'=>'Adresa juaj e mailit është fshirë.'
 );
-?>
+

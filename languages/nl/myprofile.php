@@ -138,4 +138,4 @@ Bedankt voor je interesse
 	'you_have_to_username'=>'Je moet een gebruikersnaam invullen!',
 	'you_have_to_valid_email'=>'Je e-mail is niet geldig!'
 );
-?>
+

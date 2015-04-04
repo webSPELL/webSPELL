@@ -310,6 +310,7 @@ function addRow( action ) {
     ele2.setAttribute( "size", "3" );
     ele2.className = "form_off";
     cell2.appendChild( ele2 );
+
     // results: opponent
     cell3 = row.insertCell( 3 );
     ele3 = document.createElement( "input" );
@@ -319,6 +320,7 @@ function addRow( action ) {
     ele3.setAttribute( "size", "3" );
     ele3.className = "form_off";
     cell3.appendChild( ele3 );
+
     // create delete-selection for edit-function
     if ( theAction === "edit" ) {
         cell4 = row.insertCell( 4 );
@@ -472,6 +474,7 @@ function eventfetch( url, id, action ) {
 
     postRequest( url, id, action );
 }
+
 //fetch data for timebased events
 function timefetch( url, id, action, milliseconds ) {
     "use strict";
@@ -693,11 +696,14 @@ function validbbcode( txt ) {
 }
 
 /* jshint ignore:start */
+
 // jscs:disable
 function MM_confirm( msg, url ) { //v1.0
     if ( confirm( msg ) ) location.replace( url );
 }
+
 // jscs:enable
+
 /* jshint ignore:end */
 
 //test for valid url
@@ -793,6 +799,7 @@ $( document ).ready( function() {
             data: postData,
             success: function( data, textStatus, jqXHR ) {
                 $( "body" ).css( "cursor", "default" );
+
                 //data: return data from server
                 if ( data.state === "success" ) {
                     that.prepend( "<div class='alert alert-success'>" + data.message + "</div>" );
@@ -818,7 +825,9 @@ $( document ).ready( function() {
                 $( "body" ).css( "cursor", "default" );
             }
         } );
-        e.preventDefault(); //STOP default action
+        e.preventDefault();
+
+        //STOP default action
     } );
 
     if ( $( "#shoutbox" ).length ) {

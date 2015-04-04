@@ -34,4 +34,4 @@ $language_array = Array(
   'no_result'=>'Ei leidnud midagi',
   'to_much_results'=>'Liiga palju tulemusi, palun sisesta rohkem tähti.'
 );
-?>
+

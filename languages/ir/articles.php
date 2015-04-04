@@ -74,4 +74,4 @@ $language_array = Array(
   'visitor_comments'=>'فعال کردن کامنت مهمان',
   'tags'=>'برچسب ها'
 );
-?>
+

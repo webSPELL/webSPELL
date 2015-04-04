@@ -46,4 +46,4 @@ $language_array = Array(
   'rubric_name'=>'Rubric Name',
   'transaction_invalid'=>'Transaction ID invalid'
 );
-?>
+

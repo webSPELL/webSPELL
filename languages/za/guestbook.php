@@ -65,4 +65,4 @@ $language_array = Array(
   'wrote'=>'geskryf',
   'your_message'=>'Jou boodskap'
 );
-?>
+

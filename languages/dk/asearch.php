@@ -33,4 +33,4 @@ $language_array = Array(
 	'no_result'=>'Søgningen gav ingen resultater',
 	'to_much_results'=>'Der er for mange mulige resultater, angiv venligst flere tegn.'
 );
-?>
+

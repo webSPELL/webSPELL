@@ -199,7 +199,6 @@ function vote($poll)
             }
             $n = 1;
             foreach ($options as $option) {
-                $option = $option;
                 $data_array = array();
                 $data_array['$n'] = $n;
                 $data_array['$option'] = $option;

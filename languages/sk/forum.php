@@ -134,4 +134,4 @@ $language_array = Array(
 	'enter_topic'=>'Musíte zadať názov témy!',
 	'enter_text'=>'Musíte zadať nejaký text!'
 );
-?>
+

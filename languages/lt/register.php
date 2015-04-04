@@ -70,4 +70,4 @@ Ačiū už jūsų registravimą
 	'wrong_activationkey'=>'Jūsų aktivacijos kodas blogas!',
 	'wrong_securitycode'=>'Jūsų apsaugos kodas blogas!'
 );
-?>
+

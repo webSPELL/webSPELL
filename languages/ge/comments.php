@@ -67,4 +67,4 @@ $language_array = Array(
   'title_comment'=>'თქვენი კომენტარი',
   'title_editcomment'=>'კომენტარის რედაქტირება'
 );
-?>
+

@@ -35,6 +35,7 @@ class ModRewrite
 
     private $cache = null;
     private static $rewriteBase;
+    private $state = false;
 
     public function __construct()
     {
@@ -49,8 +50,14 @@ class ModRewrite
         return array_keys($this->translation);
     }
 
+    public function enabled()
+    {
+        return $this->state;
+    }
+
     public function enable()
     {
+        $this->state = true;
         $this->buildCache();
         ob_start(array($this, 'rewriteBody'));
 
