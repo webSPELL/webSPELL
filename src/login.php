@@ -81,24 +81,6 @@ class LoginCookie
         }
     }
 
-    private static function checkResult(\mysqli_stmt $stmt)
-    {
-        global $userID, $loggedin, $_language;
-    
-        if ($stmt->bind_result($userID, $language, $lastlogin)
-                && $stmt->fetch()) {
-            $loggedin = true;
-            $_SESSION['ws_user'] = $userID;
-            $_SESSION['ws_lastlogin'] = $lastlogin;
-
-            if (!empty($language) && isset($_language)) {
-                if ($_language->setLanguage($language)) {
-                    $_SESSION['language'] = $language;
-                }
-            }
-        }
-    }
-
     /**
      * Set a cookie that can be used for a persistent login. The login cookie
      * is set to expire after a certain interval.
@@ -115,23 +97,18 @@ class LoginCookie
         $hash = self::generateHash($key);
         $cookieValue = $user . ":" . base64_encode($key);
         $cookieExpire = $expiration > 0 ? time() + $expiration : 0;
+        
+        safe_query(
+            "INSERT INTO " . PREFIX . "cookies 
+                (userID, cookie, expiration) 
+            VALUES (
+                " . (int) $user . ",
+                '" . $_database->escape_string($hash) . "',
+                " . (int) $cookieExpire . "
+            )"
+        );
 
-        $success = false;
-
-        $stmt = $_database->prepare("INSERT INTO " . PREFIX . "cookies
-                (userID, cookie, expiration) VALUES (?, ?, ?)");
-        if (false !== $stmt) {
-            if ($stmt->bind_param("isi", $user, $hash, $cookieExpire)) {
-                if ($stmt->execute()) {
-                    $success = true;
-                }
-            }
-            $stmt->close();
-        }
-
-        if ($success) {
-            self::setCookie($cookieName, $cookieValue, $cookieExpire);
-        }
+        self::setCookie($cookieName, $cookieValue, $cookieExpire);
     }
 
     /**
@@ -149,15 +126,15 @@ class LoginCookie
             $authent = explode(":", $cookie);
             $user = $authent[0];
             $key  = base64_decode($authent[1]);
+            $hash = self::generateHash($key);
 
-            $stmt = $_database->prepare("DELETE FROM " . PREFIX . "cookies
-                    WHERE `userID` = ? AND `cookie` = ?");
-            if (false !== $stmt) {
-                if ($stmt->bind_param('is', $user, self::generateHash($key))) {
-                    $stmt->execute();
-                }
-                $stmt->close();
-            }
+            safe_query(
+                "DELETE FROM
+                    " . PREFIX . "cookies
+                WHERE
+                    userID =  " . (int) $user . " AND
+                    cookie = '" . $_database->escape_string($hash) . "'"
+            );
 
             $cookieValue = '';
             $cookieExpire = time() - (24 * 60 * 60);
@@ -173,30 +150,41 @@ class LoginCookie
      */
     public static function check($cookieName)
     {
-        global $_database, $userID;
+        global $_database, $userID, $loggedin, $language;
     
         $authent = explode(":", $_COOKIE[$cookieName]);
         $ws_user = $authent[0];
         $ws_pwd  = base64_decode($authent[1]);
 
         if (isset($ws_user, $ws_pwd)) {
-            $stmt = $_database->prepare(
+            $hash = self::generateHash($ws_pwd);
+            $result = safe_query(
                 "SELECT u.userID, language, lastlogin
-                FROM  `" . PREFIX . "cookies` c
+                FROM `" . PREFIX . "cookies` c
                 INNER JOIN `" . PREFIX . "user` u
                 ON c.userID = u.userID
-                WHERE c.userID = ? AND c.cookie = ? AND c.expiration > ?"
+                WHERE
+                    c.userID = " . (int) $ws_user . " AND
+                    c.cookie = '" . $_database->escape_string($hash) . "' AND
+                    c.expiration > " . (int) time()
             );
-
-            if (false !== $stmt) {
-                $hash = self::generateHash($ws_pwd);
-                if ($stmt->bind_param('isi', $ws_user, $hash, time())) {
-                    if ($stmt->execute()) {
-                        self::checkResult($stmt);
+            
+            if ($result) {
+                if ($row = $result->fetch_assoc()) {
+                    $loggedin = true;
+                    $userID = $row['userID'];
+                    $_SESSION['ws_user'] = $userID;
+                    $_SESSION['ws_lastlogin'] = $row['lastlogin'];
+                    $language = $row['language'];
+                
+                    if (!empty($language) && isset($_language)) {
+                        if ($_language->setLanguage($language)) {
+                            $_SESSION['language'] = $language;
+                        }
                     }
                 }
 
-                $stmt->close();
+                $result->free();
             }
         }
     }
@@ -206,18 +194,10 @@ class LoginCookie
      */
     public static function purge()
     {
-        global $_database;
-
-        $stmt = $_database->prepare(
-            "DELETE FROM " . PREFIX . "cookies WHERE `expiration` < ?"
+        safe_query(
+            "DELETE FROM " . PREFIX . "cookies 
+            WHERE `expiration` < " . time()
         );
-
-        if (false !== $stmt) {
-            if ($stmt->bind_param('i', time())) {
-                $stmt->execute();
-            }
-            $stmt->close();
-        }
     }
 }
 
