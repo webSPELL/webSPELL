@@ -30,10 +30,10 @@ namespace webspell;
 /**
  * Somewhat secure login cookie (at the very least more secure than the previous
  * implementation).
- * 
- * This implementation generates a random key for each login and stores a 
- * hash of that key in the database. Because the keys are random, the database 
- * entries are hashed and the tokens expire after a certain amount of time, 
+ *
+ * This implementation generates a random key for each login and stores a
+ * hash of that key in the database. Because the keys are random, the database
+ * entries are hashed and the tokens expire after a certain amount of time,
  * forging login cookies becomes rather hard.
  */
 class LoginCookie
@@ -47,7 +47,7 @@ class LoginCookie
      * Generate a cookie key. Optionally, a length in bytes can be specified,
      * which defaults to 64.
      * Note that on some systems, this function will not produce
-     * cryptographically strong keys due to openssl_random_pseudo_bytes not 
+     * cryptographically strong keys due to openssl_random_pseudo_bytes not
      * being available.
      */
     private static function generateKey($length = 64)
