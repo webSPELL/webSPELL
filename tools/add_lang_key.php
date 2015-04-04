@@ -73,8 +73,9 @@ foreach ($all_langs as $lang) {
             ob_clean();
 
             $rows = array();
-            $language_array[$new_key] = $new_val;
-            array_unique($language_array);
+            if(!isset($language_array[$new_key])){
+                $language_array[$new_key] = $new_val;
+            }
             ksort($language_array, $sortMode);
             foreach ($language_array as $lang_key => $lang_val) {
                 $rows[] = "    '".escape($lang_key)."' => '".fixGlobals(escape($lang_val))."'";
