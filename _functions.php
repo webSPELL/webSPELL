@@ -133,7 +133,7 @@ function percent($sub, $total, $dec)
     }
 }
 
-function showlock($reason, $time)
+function showlock($reason)
 {
     $gettitle = mysqli_fetch_array(safe_query("SELECT title FROM `" . PREFIX . "styles`"));
     $pagetitle = $gettitle['title'];
@@ -407,8 +407,7 @@ if (isset($_GET['site'])) {
 if ($closed && !isanyadmin($userID)) {
     $dl = mysqli_fetch_array(safe_query("SELECT * FROM `" . PREFIX . "lock` LIMIT 0,1"));
     $reason = $dl['reason'];
-    $time = $dl['time'];
-    showlock($reason, $time);
+    showlock($reason);
 }
 if (!isset($_SERVER['HTTP_REFERER'])) {
     $_SERVER['HTTP_REFERER'] = "";
