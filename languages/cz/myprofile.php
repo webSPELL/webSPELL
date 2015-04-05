@@ -70,6 +70,7 @@ $language_array = Array(
     'homepage' => 'Domovská stránka',
     'html' => 'HTML je VYPNUTÉ',
     'i-connection' => 'Připojení',
+    'image_too_big' => 'Image is too big',
     'invalid_mail' => 'Zadal jsi nesprávnou emailovou adresu.',
     'invalid_picture-format' => 'špatný formát obrázku (povolené: *:gif, *.jpg nebo *.png)',
     'keyboard' => 'Klávesnice',

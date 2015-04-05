@@ -70,6 +70,7 @@ $language_array = Array(
     'homepage' => 'Κεντρικη σελιδα',
     'html' => 'HTML is OFF',
     'i-connection' => 'I-Connection',
+    'image_too_big' => 'Image is too big',
     'invalid_mail' => 'Δεν εχετε εισαγει εγκυρο e-mail.',
     'invalid_picture-format' => 'μη εγκυρο format εικονας (επιτρεπομενα: *.gif, *.jpg ή *.png)',
     'keyboard' => 'Πληκτρολογιο',

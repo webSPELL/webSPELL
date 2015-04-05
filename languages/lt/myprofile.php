@@ -70,6 +70,7 @@ $language_array = Array(
     'homepage' => 'Namų puslapis',
     'html' => 'HTML yra IŠJUNGTA',
     'i-connection' => 'I-Sujungimas',
+    'image_too_big' => 'Image is too big',
     'invalid_mail' => 'Jūs įvedėte klaidiną e-pašto adresą.',
     'invalid_picture-format' => 'neleistinas nuotraukos formatas (leidžiama: *.gif, *.jpg arba *.png)',
     'keyboard' => 'Klaviatūra',

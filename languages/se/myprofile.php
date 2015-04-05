@@ -70,6 +70,7 @@ $language_array = Array(
     'homepage' => 'Hemsida',
     'html' => 'HTML är AV',
     'i-connection' => 'Internet uppkopling',
+    'image_too_big' => 'Image is too big',
     'invalid_mail' => 'You have entered an invalid mail address.',
     'invalid_picture-format' => 'Ogiltig bild-format (tillåtet: *.gif, *.jpg eller *.png)',
     'keyboard' => 'Tangentbord',

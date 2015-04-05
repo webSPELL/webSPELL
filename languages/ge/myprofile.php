@@ -70,6 +70,7 @@ $language_array = Array(
     'homepage' => 'მთავარი გვერდი',
     'html' => 'HTML გამორთულია',
     'i-connection' => 'ინტერნეთ-შეერთება',
+    'image_too_big' => 'Image is too big',
     'invalid_mail' => 'თქვენ შეიყვანეთ არასწორი Mail',
     'invalid_picture-format' => 'არასწორი ფოტოს ფორმატი(დაშვებულია: *.gif, *.jpg ან *.png)',
     'keyboard' => 'კლავიატურა',

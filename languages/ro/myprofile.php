@@ -70,6 +70,7 @@ $language_array = Array(
     'homepage' => 'Prima pagină',
     'html' => 'HTML DE PE',
     'i-connection' => 'Conexiune la internet',
+    'image_too_big' => 'Image is too big',
     'invalid_mail' => 'Ai introdus o adresă de mail greşită.',
     'invalid_picture-format' => 'formatul imaginii este invalid (permis: *.gif, *.jpg or *.png)',
     'keyboard' => 'Tastatură',

@@ -70,6 +70,7 @@ $language_array = Array(
     'homepage' => 'Domača stran',
     'html' => 'HTML izključen',
     'i-connection' => 'Internet povezava',
+    'image_too_big' => 'Image is too big',
     'invalid_mail' => 'Vnesli ste napačen e-mail naslov.',
     'invalid_picture-format' => 'Neveljavna oblika zapisa (dovoljeno: *.gif, *.jpg ili *.png)',
     'keyboard' => 'Tipkovnica',

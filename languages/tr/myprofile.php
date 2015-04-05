@@ -70,6 +70,7 @@ $language_array = Array(
     'homepage' => 'Anasayfa',
     'html' => 'HTML KAPALI',
     'i-connection' => 'I-Bağlantı',
+    'image_too_big' => 'Image is too big',
     'invalid_mail' => 'Geçersiz bir mail adresi girdiniz.',
     'invalid_picture-format' => 'Geçersiz resim formatı (izin:... * Gif, * jpg veya * png)',
     'keyboard' => 'Klavye',

@@ -80,7 +80,11 @@ if (!$userID) {
         $language = $_POST['language'];
         $date_format = $_POST['date_format'];
         $time_format = $_POST['time_format'];
-        $user_gbook = $_POST['user_guestbook'];
+        if ($user_guestbook) {
+            $user_gbook = $_POST['user_guestbook'];
+        } else {
+            $user_gbook = 1;
+        }
         $id = $userID;
 
         $error_array = array();

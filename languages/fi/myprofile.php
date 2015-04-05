@@ -70,6 +70,7 @@ $language_array = Array(
     'homepage' => 'Kotisivu',
     'html' => 'HTML PAIS',
     'i-connection' => 'I-Connection',
+    'image_too_big' => 'Image is too big',
     'invalid_mail' => 'Olet antanut väärän osoitteen.',
     'invalid_picture-format' => 'Väärä kuvaformaatti (sallittu: *.gif, *.jpg tai *.png)',
     'keyboard' => 'Näppäimistö',

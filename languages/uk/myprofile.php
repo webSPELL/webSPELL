@@ -70,6 +70,7 @@ $language_array = Array(
     'homepage' => 'Homepage',
     'html' => 'HTML is OFF',
     'i-connection' => 'I-Connection',
+    'image_too_big' => 'Image is too big',
     'invalid_mail' => 'You have entered an invalid mail address.',
     'invalid_picture-format' => 'Invalid picture-format (allowed: *.gif, *.jpg or *.png)',
     'keyboard' => 'Keyboard',
@@ -139,6 +140,5 @@ Thank you for your interest
     'you_have_to_firstname' => 'You have to enter your First-Name!',
     'you_have_to_nickname' => 'You have to enter a nickname!',
     'you_have_to_username' => 'You have to enter a username!',
-	'wrong_password'=>'Wrong password',
     'you_have_to_valid_email' => 'Your e-mail is not valid!'
 );
