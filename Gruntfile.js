@@ -45,15 +45,13 @@ module.exports = function( grunt ) {
             "!.jshintrc",
             "!circle.yml",
             "!Gruntfile.js",
-            "!scope.txt",
-            "!type.txt",
             "!grunt-log.txt",
             "!*.zip",
-            "!Ruleset.xml",
             "!vendor",
             "!components",
             "!node_modules",
-            "!tests"
+            "!tests",
+            "!development"
         ],
         csss = [ "**/*.css" ],
         excludes = [
@@ -62,7 +60,8 @@ module.exports = function( grunt ) {
             "!components/**",
             "!vendor/**",
             "!tmp/**",
-            "!tests/**"
+            "!tests/**",
+            '!development/**'
         ];
 
     require( "load-grunt-tasks" )( grunt, {
@@ -81,10 +80,10 @@ module.exports = function( grunt ) {
         pkg: grunt.file.readJSON( "package.json" ),
 
         scopeRegex: "\\b" +
-        grunt.file.read( "scope.txt" ).trim().split( "\n" ).join( "\\b|\\b" ) +
+        grunt.file.read( "development/scope.txt" ).trim().split( "\n" ).join( "\\b|\\b" ) +
         "\\b",
 
-        typeRegex: grunt.file.read( "type.txt" ).trim().split( "\n" ).join( "|" ),
+        typeRegex: grunt.file.read( "development/type.txt" ).trim().split( "\n" ).join( "|" ),
 
         versioncheck: {
             options: {
@@ -134,7 +133,7 @@ module.exports = function( grunt ) {
             },
             options: {
                 bin: "vendor/bin/phpcs",
-                standard: "Ruleset.xml",
+                standard: "development/Ruleset.xml",
                 tabWidth: "4",
                 showSniffCodes: true
             }
@@ -290,12 +289,12 @@ module.exports = function( grunt ) {
 
         exec: {
             quickcheck: {
-                command: "sh ./qphpcs.sh",
+                command: "sh ./development/qphpcs.sh",
                 stdout: true,
                 stderr: true
             },
             sortLanguageKeys: {
-                command: "cd tools && php -f sort_translations.php"
+                command: "cd development/tools && php -f sort_translations.php"
             }
         },
 
@@ -473,12 +472,12 @@ module.exports = function( grunt ) {
             "check type": {
                 regex: new RegExp( "^(" + grunt.config.get( "typeRegex" ) + ")\\(", "i" ),
                 explanation: "The commit should start with a type like fix, feat, or chore. " +
-                "See type.txt for a full list."
+                "See development/type.txt for a full list."
             },
             "check scope": {
                 regex: new RegExp( "\\((" + grunt.config.get( "scopeRegex" ) + ")\\)", "i" ),
                 explanation: "The commit should include a scope like (forum), (news) or " +
-                "(buildtools). See scope.txt for a full list."
+                "(buildtools). See development/scope.txt for a full list."
             },
             // commented out for later use
             //"check close github issue": {

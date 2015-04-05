@@ -3,6 +3,7 @@ addons
 admincenter
 articles
 awards
+bbcode
 bannerrotation
 buddies
 buildtools

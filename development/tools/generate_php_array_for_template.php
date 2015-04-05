@@ -4,7 +4,7 @@ $regex_find_eval_calls =
     '/(?<intend>[ \t]*)eval\s*\("' . preg_quote('\$', "/") . '(?<variable>[\w_]+?)\s*=\s*' . preg_quote('\"', "/") .
     '"\s*.\s*gettemplate\(["\'](?<parameters>[\w_,\'" ]+?)["\']\)\s*.\s*"' . preg_quote('\"', "/") . ';"\);/si';
 
-$folders = array('../', '../admin/', '../src/', '../src/func/');
+$folders = array('../../', '../../admin/', '../../src/', '../../src/func/');
 $count = 0;
 
 function extractVariablesFromTemplate($file)
@@ -27,7 +27,7 @@ function generateNewTemplateClass($variable, $options, $intend)
         $calledfrom = "root";
     }
 
-    $variables_used = extractVariablesFromTemplate('../templates/' . $template_file . "." . $extension);
+    $variables_used = extractVariablesFromTemplate('../../templates/' . $template_file . "." . $extension);
     $replace_code = '';
     $unique_list = array();
     if (count($variables_used)) {
