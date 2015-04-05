@@ -61,7 +61,7 @@ module.exports = function( grunt ) {
             "!vendor/**",
             "!tmp/**",
             "!tests/**",
-            '!development/**'
+            "!development/**"
         ];
 
     require( "load-grunt-tasks" )( grunt, {
