@@ -481,55 +481,25 @@ function cut_middle($str, $max = 50)
     return $str;
 }
 
-function urlreplace_callback_1($match)
+
+function urlreplace_callback($match)
 {
-    return '<a href="' . fixJavaEvents($match[1]) . '" target="_blank">';
+    $parsed = parse_url($match[1]);
+    if (!isset($parsed['host']) && !file_exists($parsed['path'])) {
+        $url = "http://".$match[1];
+    } elseif (!isset($parsed['scheme'])) {
+        $url = "http://".$match[1];
+    } else {
+        $url = $match[1];
+    }
+    return '<a href="'.fixJavaEvents($url).'">'.$match[2].'</a>';
 }
 
-function urlreplace_callback_2($match)
-{
-    if (file_exists($match[1]) || stripos($match[1], 'index.php') === 0) {
-        return '<a href="' . fixJavaEvents($match[1]) . '" target="_blank">';
-    } else {
-        return "";
-    }
-}
 
 function urlreplace($content)
 {
-    $starttags = substr_count(strtolower($content), strtolower('[url'));
-    $endtags = substr_count(strtolower($content), strtolower('[/url]'));
-    $overflow = abs($starttags - $endtags);
-    for ($i = 0; $i < $overflow; $i++) {
-        if ($starttags > $endtags) {
-            $content = $content . '[/url]';
-        } elseif ($endtags > $starttags) {
-            $content = '[url]' . $content;
-        }
-    }
     $content = preg_replace("#\[url\](.*?)\[/url\]#i", "[url=\\1]\\1[/url]", $content);
-    preg_match_all("/\[url=(\[(.*?)\])\]/si", $content, $erg, PREG_SET_ORDER);
-    foreach ($erg as $match) {
-        preg_match("/\[(.*?)\](.*?)\[(.*?)\]/si", $match[1], $new_erg);
-        $match_rep = str_replace($match[1], $new_erg[2], $match[0]);
-        $content = str_replace($match[0], $match_rep, $content);
-    }
-    $content = preg_replace_callback(
-        "#\[url=((http://|https://|ftp://|mailto:|news:|www\.).*?)\]#i",
-        "urlreplace_callback_1",
-        $content
-    );
-    $content = preg_replace_callback(
-        "#\[url=(.*?)\]#i",
-        "urlreplace_callback_2",
-        $content
-    );
-    $content = preg_replace(
-        "#\<a href='www(.*?)' target='_blank'>#i",
-        "<a href='http://www\\1' target='_blank'>",
-        $content
-    );
-    $content = str_ireplace("[/url]", "</a>", $content);
+    $content = preg_replace_callback("#\[url=([^\]]*?)\](.*?)\[/url\]#si", "urlreplace_callback", $content);
     return $content;
 }
 
