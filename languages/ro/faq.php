@@ -39,4 +39,4 @@ $language_array = Array(
   'no_faq'=>'Întrebari nedisponibile.<br><a href="index.php?site=faq">Înapoi</a>',
   'saved_on'=>'salvat în'
 );
-?>
+

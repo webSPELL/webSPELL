@@ -75,4 +75,4 @@ $language_array = Array(
   'visitor_comments'=>'Luba külastajate kommentaarid',
   'tags'=>'tags'
 );
-?>
+

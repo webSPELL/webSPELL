@@ -127,4 +127,4 @@ $language_array = Array(
   'you_have_to_username'=>'!شما باید نام کاربری را وارد کنید',
   'you_have_to_valid_email'=>'!ایمیل شما معتبر نیست'
 );
-?>
+

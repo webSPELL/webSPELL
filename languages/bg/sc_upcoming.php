@@ -37,4 +37,4 @@ $language_array = Array(
 
   'fight_us'=>'Предизвикай ни!'
 );
-?>
+

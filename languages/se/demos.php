@@ -78,4 +78,4 @@ $language_array = Array(
 	'visitor_comments'=>'Tillåt besökar kommentarer',
 	'vs'=>'vs.'
 );
-?>
+

@@ -67,4 +67,4 @@ $language_array = Array(
   'title_comment'=>'Sinu kommentaar',
   'title_editcomment'=>'Muuda kommentaari'
 );
-?>
+

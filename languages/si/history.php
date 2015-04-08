@@ -38,4 +38,4 @@ $language_array = Array(
   'history'=>'Zgodovina',
   'no_history'=>'Ni zgodovine.'
 );
-?>
+

@@ -41,4 +41,4 @@ $language_array = Array(
   'registration'=>'مسجل منذ',
   'sort'=>'الفرز:'
 );
-?>
+

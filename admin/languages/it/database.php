@@ -43,4 +43,4 @@ $language_array = Array(
   'upload'=>'Carica',
   'transaction_invalid'=>'ID transazione non valido'
 );
-?>
+

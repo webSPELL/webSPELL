@@ -38,4 +38,4 @@ $language_array = Array(
   'about_title'=>'Meer oor ons',
   'no_about'=>'Geen beskrywing beskikbaar op die oomblik nie.'
 );
-?>
+

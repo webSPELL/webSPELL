@@ -56,4 +56,4 @@ $language_array = Array(
   'title_categories'=>'სათაურის კატეგორიები',
   'update_link'=>'ბმულის განახლება'
 );
-?>
+

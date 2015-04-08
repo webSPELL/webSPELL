@@ -32,4 +32,4 @@ $language_array = Array(
 
   'fight_us'=>'Cīnies ar mums'
 );
-?>
+

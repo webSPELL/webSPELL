@@ -44,4 +44,4 @@ $language_array = Array(
   'no_faq'=>'Ei kysymyksiä saatavilla<br><a href="index.php?site=faq">Takaisin</a>',
   'saved_on'=>'Tallennettu'
 );
-?>
+

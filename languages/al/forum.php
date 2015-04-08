@@ -140,4 +140,4 @@ $language_array = Array(
   'enter_topic'=>'Duhet të vendosni një titull subjekti!',
   'enter_text'=>'Duhet të shkruani një tekst!'
 );
-?>
+

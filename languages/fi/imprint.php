@@ -55,4 +55,4 @@ $language_array = Array(
 	'responsible_persons'=>'Vastuulliset henkilöt',
 	'webmaster'=>'Webmaster:'
 );
-?>
+

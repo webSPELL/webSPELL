@@ -73,4 +73,4 @@ $language_array = Array(
   'wrong_securitycode'=>'Въвели сте грешен код за сигурност!',
   'no_result' =>'Не са намерени записи за "%s"'
 );
-?>
+

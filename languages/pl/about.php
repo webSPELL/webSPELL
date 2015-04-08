@@ -33,4 +33,4 @@ $language_array = Array(
 	'no_about'=>'Brak opisu.'
 );
 
-?>
+

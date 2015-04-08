@@ -77,4 +77,4 @@ $language_array = Array(
   'versus'=>'contra',
   'whoisonline'=>'Utilizatori online'
 );
-?>
+

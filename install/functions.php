@@ -1267,7 +1267,6 @@ VALUES
 
                 }
             }
-            $run++;
         }
     } else {
         mysqli_query($_database, "ALTER TABLE `" . PREFIX . "clanwars` CHANGE `homescr1` `homescore` TEXT");

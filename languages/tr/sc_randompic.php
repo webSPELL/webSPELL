@@ -39,4 +39,4 @@ $language_array = Array(
   'registered_since'=>'beri kayıtlı',
   'view_profile'=>'profili ziyaret et'
 );
-?>
+

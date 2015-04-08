@@ -129,4 +129,4 @@ $language_array = Array(
   'you_cant_ban'=>'Nem bannolhatod ezt a felhasználót! (Főadmin)',
   'you_cant_ban_yourself'=>'Nem bannolhatod magad!'
 );
-?>
+

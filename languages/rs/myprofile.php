@@ -127,4 +127,4 @@ $language_array = Array(
   'you_have_to_username'=>'Морате унијети корисничко име!',
   'you_have_to_valid_email'=>'Ваш е-маил није важећи!'
 );
-?>
+

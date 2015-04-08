@@ -45,4 +45,4 @@ $language_array = Array(
   'sub_category'=>'Sub-Category of',
   'transaction_invalid'=>'Transaction ID invalid'
 );
-?>
+

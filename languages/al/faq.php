@@ -44,4 +44,4 @@ $language_array = Array(
   'no_faq'=>'Nuk ka pyetje te vlefshme.<br><a href="index.php?site=faq">Prapa</a>',
   'saved_on'=>'shpëtuar në'
 );
-?>
+

@@ -66,4 +66,4 @@ $language_array = Array(
   'title_comment'=>'کامنت شما',
   'title_editcomment'=>'تنظیمات کامنت'
 );
-?>
+

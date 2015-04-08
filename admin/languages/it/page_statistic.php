@@ -82,4 +82,4 @@ $language_array = Array(
   'user'=>'Utente Registrato',
   'user_gbook'=>'Utente guestbook entries'
 );
-?>
+

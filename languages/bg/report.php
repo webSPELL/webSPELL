@@ -40,4 +40,4 @@ $language_array = Array(
   'report_recognized'=>'Вашето оплакване беше разпознато. Благодарим Ви.',
   'wrong_securitycode'=>'Въвели сте грешен код за сигурност<br><br>[<a href="javascript:back();">назад</a>]'
 );
-?>
+

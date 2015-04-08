@@ -38,4 +38,4 @@ $language_array = Array(
 	'no_faq'=>'Nema unesenih pitanja.<br><a href="index.php?site=faq">Natrag na prethodnu stranicu</a>',
 	'saved_on'=>'Spremljeno'
 );
-?>
+

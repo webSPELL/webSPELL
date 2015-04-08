@@ -33,4 +33,4 @@ $language_array = Array(
   'no_access'=>'მიუწვდომელია!',
   'just_rate_between_0_10'=>'გთხოვთ შეაფასოთ 0 დან 10 მდე!'
 );
-?>
+

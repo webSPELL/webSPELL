@@ -38,4 +38,4 @@ $language_array = Array(
   'about_title'=>'Bizim Hakkımızda',
   'no_about'=>'Şuan bir açıklama yok.'
 );
-?>
+

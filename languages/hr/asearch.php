@@ -33,4 +33,4 @@ $language_array = Array(
 	'no_result'=>'Nema rezultata pretrage',
 	'to_much_results'=>'Postoji previše rezultata, molimo unesite više znakova.'
 );
-?>
+

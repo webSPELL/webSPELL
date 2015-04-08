@@ -38,4 +38,4 @@ $language_array = Array(
   'save'=>'shpëto',
   'no_session'=>'Lutemi sigurohuni që cookies janë lejuar dhe përpiquni të ndryshoni gjuhën prapë.'
 );
-?>
+

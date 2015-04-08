@@ -33,4 +33,4 @@ $language_array = Array(
 	'no_result'=>'Nincs találat',
 	'to_much_results'=>'Túl sok egyező találat van, adjon meg több karaktert.'
 );
-?>
+

@@ -64,4 +64,4 @@ $language_array = Array(
   'title_join_us'=>'Tule jäseneksi',
   'wrong_security_code'=>'Turvallisuuskoodi on väärin!'
 );
-?>
+

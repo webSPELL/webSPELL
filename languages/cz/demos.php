@@ -78,4 +78,4 @@ $language_array = Array(
 	'visitor_comments'=>'Povolit komentáře návštěvníků',
 	'vs'=>'vs.'
 );
-?>
+

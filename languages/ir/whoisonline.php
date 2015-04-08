@@ -90,4 +90,4 @@ $language_array = Array(
   'was_watching_the'=>'در حال مشاهده',
   'whoisonline'=>'چه کسی انلاین است؟'
 );
-?>
+

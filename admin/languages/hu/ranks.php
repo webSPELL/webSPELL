@@ -45,4 +45,4 @@ $language_array = Array(
   'update'=>'Frissítés',
   'user_ranks'=>'Felhasználói rangok'
 );
-?>
+

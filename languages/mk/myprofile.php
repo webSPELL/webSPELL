@@ -139,4 +139,4 @@ $language_array = Array(
   'you_have_to_username'=>'Морате да го внесите корисничкото име!',
   'you_have_to_valid_email'=>'Вашата е-пошта не е важечка!'
 );
-?>
+

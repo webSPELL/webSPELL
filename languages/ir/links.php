@@ -55,4 +55,4 @@ $language_array = Array(
   'title_categories'=>'لینک موضوع',
   'update_link'=>'اپلود لینک'
 );
-?>
+

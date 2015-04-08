@@ -34,4 +34,4 @@ $language_array = Array(
   'outgoing'=>'Väljaminev',
   'owner_responsible'=>'Omanik on selle lehe eest vastutav.'
 );
-?>
+

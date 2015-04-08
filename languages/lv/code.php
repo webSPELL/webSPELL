@@ -83,4 +83,4 @@ $language_array = Array(
   'yellow'=>'Dzeltens',
   'yes_can_combine'=>'Jā, protams, Jūs varat, piemēram, lai iegūtu kāda uzmanību, uzrakstīt:'
 );
-?>
+

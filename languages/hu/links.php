@@ -55,4 +55,4 @@ $language_array = Array(
 	'title_categories'=>'Link kategóriák',
 	'update_link'=>'Link frissítése'
 );
-?>
+

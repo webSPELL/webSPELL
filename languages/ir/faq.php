@@ -38,4 +38,4 @@ $language_array = Array(
   'no_faq'=>'.هیچ سوالی موجود نیست<br><a href="index.php?site=faq">برگشت</a>',
   'saved_on'=>'ذخیره کردن'
 );
-?>
+

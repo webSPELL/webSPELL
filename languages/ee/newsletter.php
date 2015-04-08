@@ -53,4 +53,4 @@ $language_array = Array(
   'your_mail_adress'=>'Su meiliaadress',
   'your_mail_adress_deleted'=>'Su meiliaadress on kustutatud.'
 );
-?>
+

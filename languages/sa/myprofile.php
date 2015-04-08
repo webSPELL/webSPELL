@@ -139,4 +139,4 @@ $language_array = Array(
   'you_have_to_username'=>'يجب أن تدخل الاسم المستخدم',
   'you_have_to_valid_email'=>'البريد الإلكتروني الخاص بك غير صالح'
 );
-?>
+

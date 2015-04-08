@@ -64,4 +64,4 @@ $language_array = Array(
   'title_join_us'=>'Matglidd ginn',
   'wrong_security_code'=>'Den Sëcherheetscode war falsch!'
 );
-?>
+

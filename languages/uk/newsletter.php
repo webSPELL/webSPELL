@@ -53,4 +53,4 @@ $language_array = Array(
 	'your_mail_adress'=>'Your mail adress',
 	'your_mail_adress_deleted'=>'Your mail adress has been deleted.'
 );
-?>
+

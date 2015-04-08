@@ -32,4 +32,4 @@ $language_array = Array(
 
   'no_banners'=>'Нема банери'
 );
-?>
+

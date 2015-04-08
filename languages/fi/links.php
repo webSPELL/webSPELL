@@ -61,4 +61,4 @@ $language_array = Array(
   'title_categories'=>'Linkitä kategoriat',
   'update_link'=>'Päivitä linkki'
 );
-?>
+

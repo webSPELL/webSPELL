@@ -66,4 +66,4 @@ $language_array = Array(
   'time'=>'Время',
   'wrong_security_code'=>'Код проверки введен неправильно.'
 );
-?>
+

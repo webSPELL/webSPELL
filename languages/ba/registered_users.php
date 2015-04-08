@@ -41,4 +41,4 @@ $language_array = Array(
   'registration'=>'Registrovan od',
   'sort'=>'Razvrstaj:'
 );
-?>
+

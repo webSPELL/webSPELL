@@ -956,7 +956,7 @@ function showtopic($topic, $edit, $addreply, $quoteID, $type)
             && !$dt['closed']
         ) {
             $actions = ' <a href="index.php?site=forum_topic&amp;topic=' . $topic . '&amp;edit=true&amp;id=' .
-                $dr['postID'] . '&amp;page=' . $page . '"><span class="glyphicon glyphicon-edit"></span></a> ';
+                $dr['postID'] . '"><span class="glyphicon glyphicon-edit"></span></a> ';
         }
         if (isforumadmin($userID) || ismoderator($userID, $dt['boardID'])) {
             $actions .= '<input class="input" type="checkbox" name="postID[]" value="' . $dr['postID'] . '">';

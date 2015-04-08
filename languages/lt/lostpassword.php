@@ -48,4 +48,4 @@ gerai praleiskite laiką mūsų tinklalapyje
     &#8226; <a href="index.php?site=login">prisijungti</a>',
 	'your_email'=>'Jūsų E-Paštas'
 );
-?>
+

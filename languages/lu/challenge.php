@@ -71,4 +71,4 @@ $language_array = Array(
   'time'=>'Auerzait',
   'wrong_security_code'=>'Den Sécherheetscode ass falsch aginn ginn.'
 );
-?>
+

@@ -44,4 +44,4 @@ $language_array = Array(
   'no_faq'=>'Δεν υπαρχουν ερωτησεις.<br><a href="index.php?site=faq">Πισω</a>',
   'saved_on'=>'αποθηκευμενο στις'
 );
-?>
+

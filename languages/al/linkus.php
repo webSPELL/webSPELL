@@ -51,4 +51,4 @@ $language_array = Array(
   'save_banner'=>'shpëto flamurin',
   'use_following_code'=>'Përdorni këtë kod, për te futur flamurin ne faqen tuaj të parë.'
 );
-?>
+

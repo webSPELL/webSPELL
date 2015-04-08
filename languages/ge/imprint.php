@@ -50,4 +50,4 @@ $language_array = Array(
 	'responsible_persons'=>'პასუხისმგებელი პირები',
 	'webmaster'=>'ვებმასტერი:'
 );
-?>
+

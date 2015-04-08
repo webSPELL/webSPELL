@@ -55,4 +55,4 @@ $language_array = Array(
   'visitor_comments'=>'Apmeklētāju komentāri',
   'x_of_y_mb_in_use'=>'<span style="color:%spacecolor%">&nbsp;%used_size%</span> no %available_size% MB tiek izmantoti.'
 );
-?>
+

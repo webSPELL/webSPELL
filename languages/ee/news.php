@@ -85,4 +85,4 @@ $language_array = Array(
   'yes'=>'jah',
   'tags'=>'tags'
 );
-?>
+

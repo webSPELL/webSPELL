@@ -59,4 +59,4 @@ $language_array = Array(
   'upcoming_events'=>'Tulevia tapahtumia',
   'tags'=>'Tunnisteet'
 );
-?>
+

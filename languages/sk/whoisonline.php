@@ -90,4 +90,4 @@ $language_array = Array(
 	'was_watching_the'=>'pozeral',
 	'whoisonline'=>'kto je online?'
 );
-?>
+

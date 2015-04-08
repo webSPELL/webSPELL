@@ -66,4 +66,4 @@ $language_array = Array(
 	'wrong_activationkey'=>'Dein Freischaltcode ist falsch!',
 	'wrong_securitycode'=>'Der Sicherheitscode ist falsch!'
 );
-?>
+

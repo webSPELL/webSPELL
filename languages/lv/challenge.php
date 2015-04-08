@@ -66,4 +66,4 @@ $language_array = Array(
   'time'=>'laiks',
   'wrong_security_code'=>'Drošības kods ir nepareizs.'
 );
-?>
+

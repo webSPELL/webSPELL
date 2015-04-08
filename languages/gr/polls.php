@@ -74,4 +74,4 @@ $language_array = Array(
   'yht_enter_endingtime'=>'Πρεπει να εισαγετε την ωρα ληξης!',
   'yht_enter_title'=>'Πρεπει να εισαγετε τιτλο!'
 );
-?>
+

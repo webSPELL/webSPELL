@@ -38,4 +38,4 @@ $language_array = Array(
   'save'=>'kaydet',
   'no_session'=>'Lütfen çerezlerin etkinleştirilmiş olduğundan emin olun ve tekrar deneyin.'
 );
-?>
+

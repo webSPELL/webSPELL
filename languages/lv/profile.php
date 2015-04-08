@@ -136,4 +136,4 @@ $language_array = Array(
   'your_message'=>'jūsu ziņa',
   'your_name'=>'jūsu vārds'
 );
-?>
+

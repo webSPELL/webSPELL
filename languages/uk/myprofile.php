@@ -140,4 +140,4 @@ Thank you for your interest
 	'you_have_to_valid_email'=>'Your e-mail is not valid!',
 	'wrong_password'=>'Wrong password'
 );
-?>
+

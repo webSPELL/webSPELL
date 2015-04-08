@@ -33,4 +33,4 @@ $language_array = Array(
   'news_feed'=>'Лента новостей',
   'latest_news_from'=>'Последние новости от'
 );
-?>
+

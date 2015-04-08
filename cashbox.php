@@ -335,6 +335,7 @@ if (!isclanmember($userID) && !iscashadmin($userID)) {
 
                 $usage = $ds[ 'usedfor' ];
 
+                $adminaction = '';
                 if (iscashadmin($userID)) {
                     $adminaction =
                         '<a href="index.php?site=cashbox&amp;action=edit&amp;id=' . $id . '" class="btn btn-danger">' .
@@ -453,6 +454,7 @@ if (!isclanmember($userID) && !iscashadmin($userID)) {
                     }
                 }
 
+                $admin = '';
                 if (iscashadmin($userID)) {
                     $admin = '<input type="hidden" name="id" value="' . $id . '">
                     <input type="submit" name="pay" value="' . $_language->module[ 'update' ] . '"

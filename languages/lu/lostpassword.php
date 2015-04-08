@@ -52,4 +52,4 @@ Vill Spaass op eiser Websäit
   'successful'=>'Däin Konto ass fonnt ginn!<br><br>rn    Du wäerts an e pur Sekonnen eng E-Mail mat denger Daten kréien.<br><br>rn    &#8226; <a href="index.php?site=login">umellen</a>',
   'your_email'=>'Deng E-Mail'
 );
-?>
+

@@ -71,4 +71,4 @@ $language_array = Array(
   'wrong_activationkey'=>'مفتاح التنشيط الخاص بك غير صحيح!',
   'wrong_securitycode'=>'رمز الحماية هو الخطأ!'
 );
-?>
+

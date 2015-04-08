@@ -82,4 +82,4 @@ $language_array = Array(
 	'yellow'=>'Gul',
 	'yes_can_combine'=>'Ja, selvfølgelig kan du det, for eksempel, for at få ens opmærksomhed, kunne du skrive:'
 );
-?>
+

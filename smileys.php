@@ -27,6 +27,7 @@
 
 include("_mysql.php");
 include("_settings.php");
+include("_functions.php");
 
 echo '<!DOCTYPE html>
 <html lang="en">
@@ -37,10 +38,8 @@ echo '<!DOCTYPE html>
     <meta name="copyright" content="Copyright 2005-2015 by webspell.org">
     <meta name="generator" content="webSPELL">
     <title>Smilies</title>';
-$componentsCss = generateComponents($components['css'], 'css');
-foreach ($componentsCss as $component) {
-    echo $component;
-}
+    $componentsCss = generateComponents($components['css'], 'css');
+    echo $componentsCss;
     echo '<link href="_stylesheet.css" rel="stylesheet">
     <script src="js/bbcode.js"></script>
 </head>

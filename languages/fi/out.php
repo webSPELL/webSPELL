@@ -39,4 +39,4 @@ $language_array = Array(
   'outgoing'=>'Lähtevä',
   'owner_responsible'=>'Omistaja on vastuussa sivustosta.'
 );
-?>
+

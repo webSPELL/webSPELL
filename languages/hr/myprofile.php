@@ -138,4 +138,4 @@ Hvala vam na Vašem interesu
 	'you_have_to_username'=>'Morate unijeti korisničko ime!',
 	'you_have_to_valid_email'=>'Vaš e-mail nije važeći!'
 );
-?>
+

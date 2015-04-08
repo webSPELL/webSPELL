@@ -139,4 +139,4 @@ Vă mulțumim pentru interesul dumneavoastră
   'you_have_to_username'=>'Trebuie sa introduceţi numele dvs. de utilizator!',
   'you_have_to_valid_email'=>'Adresa dvs. de mail este invalidă!'
 );
-?>
+

@@ -110,4 +110,4 @@ $language_array = Array(
   'enter_title'=>'Nuk keni vendosur asnjë titul të gjatë!',
   'enter_info'=>'Nuk keni vendosur asnjë informacion!'
 );
-?>
+

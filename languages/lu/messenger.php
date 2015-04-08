@@ -83,4 +83,4 @@ $language_array = Array(
   'error'=>'Fehler',
   'unknown_user'=>'Onbekannten Benotzer'
 );
-?>
+

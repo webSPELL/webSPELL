@@ -68,4 +68,4 @@ $language_array = Array(
   'wrong_securitycode'=>'قمت بإدخال رمز الحماية خطأ!',
   'no_result'=>'لا يوجد مقالات تم العثور عليها ل "%s"'
 );
-?>
+

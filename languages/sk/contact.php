@@ -50,4 +50,4 @@ $language_array = Array(
 	'unknown_receiver'=>'unknown receiver',
 	'wrong_securitycode'=>'Zadali ste chybný bezpečnostný kód!'
 );
-?>
+

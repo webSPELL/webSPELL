@@ -56,4 +56,4 @@ $language_array = Array(
 	'update_link'=>'Update link'
 
 );
-?>
+

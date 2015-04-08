@@ -50,4 +50,4 @@ $language_array = Array(
   'registered_users'=>'регистрирани потребители',
   'welcome_back'=>'добре дошли'
 );
-?>
+

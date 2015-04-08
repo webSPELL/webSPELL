@@ -70,4 +70,4 @@ Pre dokončenie aktivácie, prosím kliknite na tento odkaz:
 	'wrong_activationkey'=>'Váš aktivačný klúč je zlý!',
 	'wrong_securitycode'=>'Bezpečnostný kód je chybný!'
 );
-?>
+

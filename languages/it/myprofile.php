@@ -137,4 +137,4 @@ Grazie per il vostro interesse
 	'you_have_to_username'=>'Hai bisogno di un nome utente!',
 	'you_have_to_valid_email'=>'L*indirizzo e-mail non è corretto!'
 );
-?>
+

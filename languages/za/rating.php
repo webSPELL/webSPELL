@@ -38,4 +38,4 @@ $language_array = Array(
   'no_access'=>'geen toegang!',
   'just_rate_between_0_10'=>'Hou koers net 0-10 punte!'
 );
-?>
+

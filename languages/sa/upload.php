@@ -39,4 +39,4 @@ $language_array = Array(
   'no_access'=>'لا وصول',
   'upload'=>'تحديث'
 );
-?>
+

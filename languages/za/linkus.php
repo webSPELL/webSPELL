@@ -51,4 +51,4 @@ $language_array = Array(
   'save_banner'=>'stoor banier',
   'use_following_code'=>'Gebruik die volgende kode, om die banier op u tuisblad te plaas.'
 );
-?>
+

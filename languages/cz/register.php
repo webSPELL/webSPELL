@@ -70,4 +70,4 @@ Děkujeme za tvojí registraci
 	'wrong_activationkey'=>'Aktivační kód je špatný!',
 	'wrong_securitycode'=>'Bezpečnostní kód je špatný!'
 );
-?>
+

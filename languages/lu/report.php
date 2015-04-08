@@ -40,4 +40,4 @@ $language_array = Array(
   'report_recognized'=>'Deng Meldung ass gescheckt ginn - villmols Merci.',
   'wrong_securitycode'=>'Den Sëcherheetscode ass falsch<br><br>[<a href="javascript:back();">zeréck</a>]'
 );
-?>
+

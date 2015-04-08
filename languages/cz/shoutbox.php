@@ -38,4 +38,4 @@ $language_array = Array(
 	'shoutbox'=>'rychlé vzkazy',
 	'sort'=>'Seřadit:'
 );
-?>
+

@@ -39,4 +39,4 @@ $language_array = Array(
   'no_faq'=>'Pole ühtegi küsimust.<br><a href="index.php?site=faq">Tagasi</a>',
   'saved_on'=>'salvestatud'
 );
-?>
+

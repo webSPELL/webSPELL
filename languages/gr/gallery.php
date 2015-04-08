@@ -78,4 +78,4 @@ $language_array = Array(
   'you_have_already_rated'=>'Εχετε ηδη βαθμολογησει.',
   'no_thumb'=>'Χωρις προεπισκοπηση'
 );
-?>
+

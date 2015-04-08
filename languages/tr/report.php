@@ -40,4 +40,4 @@ $language_array = Array(
   'report_recognized'=>'Rapor kabul edildi. Teşekkür ederim.',
   'wrong_securitycode'=>'Yanlış güvenlik kodu girildi. <br><br>[<a href="javascript:back();">geri</a>]'
 );
-?>
+

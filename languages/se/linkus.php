@@ -45,4 +45,4 @@ $language_array = Array(
 	'save_banner'=>'spara banner',
 	'use_following_code'=>'Använd följande kod för att sätta in bannern på hemsidan.'
 );
-?>
+

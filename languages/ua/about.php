@@ -38,4 +38,4 @@ $language_array = Array(
   'about_title'=>'Про нас',
   'no_about'=>'Опис не доступний.'
 );
-?>
+

@@ -54,4 +54,4 @@ hauskaa sivuillemme
     &#8226; <a href="index.php?site=login">Kirjaudu</a>',
   'your_email'=>'Sinun sähköpostisi'
 );
-?>
+

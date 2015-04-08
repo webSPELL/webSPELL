@@ -111,4 +111,4 @@ $language_array = Array(
   'you_have_to_enter_filename'=>'Duhet të vendosni një emër fishieri!',
   'you_have_to_enter_file'=>'Duhet të vendosni nje fishier / url!'
 );
-?>
+

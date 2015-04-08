@@ -88,4 +88,4 @@ $language_array = Array(
   'yellow'=>'E Verdhë',
   'yes_can_combine'=>'Po, sigurisht ju mundeni, psh. të tërhiqni vëmendjen e dikujt, mund t\'i shkruani:'
 );
-?>
+

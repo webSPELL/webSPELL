@@ -54,4 +54,4 @@ $language_array = Array(
     &#8226; <a href="index.php?site=login">εισοδος</a>',
   'your_email'=>'Το E-Mail σας'
 );
-?>
+

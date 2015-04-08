@@ -54,4 +54,4 @@ $language_array = Array(
   'to_sort'=>'sortieren',
   'yes'=>'Ja'
 );
-?>
+

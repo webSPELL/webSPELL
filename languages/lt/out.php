@@ -33,4 +33,4 @@ $language_array = Array(
 	'outgoing'=>'Išeinama',
 	'owner_responsible'=>'Savaninkas atsakingas už šį puslapį.'
 );
-?>
+

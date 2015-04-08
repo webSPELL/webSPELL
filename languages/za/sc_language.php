@@ -38,4 +38,4 @@ $language_array = Array(
   'save'=>'stoor',
   'no_session'=>'Maak asseblief seker koekies is aangeskakel en probeer weer die taal te verander.'
 );
-?>
+

@@ -33,4 +33,4 @@ $language_array = Array(
 	'outgoing'=>'Saída',
 	'owner_responsible'=>'O proprietário é responsável por esta página.'
 );
-?>
+

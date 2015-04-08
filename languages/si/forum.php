@@ -140,4 +140,4 @@ $language_array = Array(
   'enter_topic'=>'Vnesite naslov teme!',
   'enter_text'=>'Vnesite tekst!'
 );
-?>
+

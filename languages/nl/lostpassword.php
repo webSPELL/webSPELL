@@ -49,4 +49,4 @@ nog veel plezier op onze site
 	'your_email'=>'Je E-Mail'
 
 );
-?>
+

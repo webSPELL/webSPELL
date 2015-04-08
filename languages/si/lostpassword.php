@@ -54,4 +54,4 @@ Zabavite se z našimi stranmi,
     &#8226; <a href="index.php?site=login">Prijavi se</a>',
   'your_email'=>'Vaš E-Mail'
 );
-?>
+

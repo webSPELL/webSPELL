@@ -66,4 +66,4 @@ $language_array = Array(
 	'wrong_activationkey'=>'Your activation key is wrong!',
 	'wrong_securitycode'=>'The security code is wrong!'
 );
-?>
+

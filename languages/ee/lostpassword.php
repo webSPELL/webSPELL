@@ -49,4 +49,4 @@ Head ajaviitmist meie lehel
     &#8226; <a href="index.php?site=login">logi sisse</a>',
   'your_email'=>'Su e-mail'
 );
-?>
+

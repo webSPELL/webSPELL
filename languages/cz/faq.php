@@ -38,4 +38,4 @@ $language_array = Array(
 	'no_faq'=>'neexistuje kategorie vytvořte ji.<br><a href="index.php?site=faq">Zpìt</a>',
 	'saved_on'=>'vložil'
 );
-?>
+

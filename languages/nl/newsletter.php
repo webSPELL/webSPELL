@@ -53,4 +53,4 @@ $language_array = Array(
 	'your_mail_adress_deleted'=>'Je mail adres is verwijderd.'
 
 );
-?>
+

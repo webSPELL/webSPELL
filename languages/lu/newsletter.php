@@ -58,4 +58,4 @@ $language_array = Array(
   'your_mail_adress'=>'Deng E-Mail Adress',
   'your_mail_adress_deleted'=>'Deng E-Mail Adress ass aus der Lëscht geläscht ginn.'
 );
-?>
+

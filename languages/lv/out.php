@@ -34,4 +34,4 @@ $language_array = Array(
   'outgoing'=>'Izejošs',
   'owner_responsible'=>'Par šo lapu atbildīgs ir īpašnieks.'
 );
-?>
+

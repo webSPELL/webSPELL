@@ -106,4 +106,4 @@ $language_array = Array(
 	'you_have_to_enter_file'=>'Je moet een bestand / url invullen!'
 
 );
-?>
+

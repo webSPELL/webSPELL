@@ -34,4 +34,4 @@ $language_array = Array(
 	'to_much_results'=>'Er zijn teveel losse zoekresultaten, vul meer tekens in.'
 
 );
-?>
+

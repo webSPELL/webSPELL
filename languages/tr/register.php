@@ -77,4 +77,4 @@ Kaydınız için teşekkür ederiz
   'wrong_activationkey'=>'Yanlış aktivasyon kodu!',
   'wrong_securitycode'=>'Yanlış güvenlik kodu!'
 );
-?>
+

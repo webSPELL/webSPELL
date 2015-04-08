@@ -51,4 +51,4 @@ $language_array = Array(
   'unknown_receiver'=>'nepoznati prijemnik',
   'wrong_securitycode'=>'Unijeli ste krivi sigurnosni kod!'
 );
-?>
+

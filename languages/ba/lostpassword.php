@@ -40,4 +40,4 @@ $language_array = Array(
   'successful'=>'Vaš racun je pronaden<br><br>rn    Za nekoliko sekundi primit cete e-mail sa Vašim podacima.<br><br>rn    &#8226; <a href="index.php?site=login">Prijavi se</a>',
   'your_email'=>'Vaš E-Mail'
 );
-?>
+

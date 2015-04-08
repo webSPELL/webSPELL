@@ -71,4 +71,4 @@ $language_array = Array(
   'time'=>'koha',
   'wrong_security_code'=>'Kodi sigurisë ishte i gabuar.'
 );
-?>
+

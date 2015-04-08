@@ -179,4 +179,4 @@ $language_array = Array(
   'update'=>'aktualisieren',
   'user_guestbook'=>'Benutzer Gästebucher'
 );
-?>
+

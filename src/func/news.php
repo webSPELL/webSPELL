@@ -140,12 +140,9 @@ function getlanguageid($lang, $message_array)
     $i = 0;
     foreach ($message_array as $val) {
         if ($val['lang'] == $lang) {
-            $return = $i;
-            break;
+            return $i;
         }
         $i++;
     }
-    if (isset($return)) {
-        return $return;
-    }
+    return 0;
 }

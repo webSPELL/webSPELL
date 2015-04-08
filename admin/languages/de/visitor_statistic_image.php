@@ -34,4 +34,4 @@ $language_array = Array(
   'min'=>'Minimum',
   'not_logged_in'=>'Du bist nicht angemeldet'
 );
-?>
+

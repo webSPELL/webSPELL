@@ -65,4 +65,4 @@ $language_array = Array(
   'squads'=>'Vadi',
   'who_is_online'=>'Kurš ir tiešsaistē?'
 );
-?>
+

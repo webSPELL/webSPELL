@@ -41,4 +41,4 @@ $language_array = Array(
   'unlock_page'=>'Do you want to unlock the Page?',
   'you_can_use_html'=>'You can use HTML-Tags'
 );
-?>
+

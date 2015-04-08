@@ -38,4 +38,4 @@ $language_array = Array(
 	'no_faq'=>'Nėra jokių klaisymų.<br><a href="index.php?site=faq">Grįžti</a>',
 	'saved_on'=>'išsaugota'
 );
-?>
+

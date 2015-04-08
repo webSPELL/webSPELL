@@ -39,4 +39,4 @@ $language_array = Array(
   'outgoing'=>'Изходящ',
   'owner_responsible'=>'Собственикът е отговорен за тази страница.'
 );
-?>
+

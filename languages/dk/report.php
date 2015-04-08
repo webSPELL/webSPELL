@@ -34,4 +34,4 @@ $language_array = Array(
 	'report_recognized'=>'Din rapport var godkendt. Tak!',
   'wrong_securitycode'=>'Du har indtastet en forkert sikkerhedskode<br><br>[<a href="javascript:back();">tilbage</a>]'
 );
-?>
+

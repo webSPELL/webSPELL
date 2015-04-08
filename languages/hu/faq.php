@@ -38,4 +38,4 @@ $language_array = Array(
 	'no_faq'=>'Nincs elérhető kérdés<br><a href="index.php?site=faq">Vissza</a>',
 	'saved_on'=>'Megtakarítva'
 );
-?>
+

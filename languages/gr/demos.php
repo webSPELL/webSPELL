@@ -84,4 +84,4 @@ $language_array = Array(
   'visitor_comments'=>'Ενεργοποιηση σχολιων επισκεπτων',
   'vs'=>'εναντιων'
 );
-?>
+

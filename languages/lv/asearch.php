@@ -34,4 +34,4 @@ $language_array = Array(
   'no_result'=>'Meklēšana nedod rezultātu',
   'to_much_results'=>'Pārāk daudz rezultātu, lūdzu ievadiet vairāk kritērijus.'
 );
-?>
+

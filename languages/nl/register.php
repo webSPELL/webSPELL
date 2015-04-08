@@ -71,4 +71,4 @@ Bedankt voor je registratie
 	'wrong_securitycode'=>'De veiligheids code is verkeerd!'
 
 );
-?>
+

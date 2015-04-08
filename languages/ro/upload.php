@@ -39,4 +39,4 @@ $language_array = Array(
   'no_access'=>'Nu este permis accesul!',
   'upload'=>'Încarcă'
 );
-?>
+

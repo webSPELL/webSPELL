@@ -35,4 +35,4 @@ $language_array = Array(
   'reply'=>'Atbildēt',
   'replies'=>'Atbildes'
 );
-?>
+

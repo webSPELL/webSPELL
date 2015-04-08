@@ -49,4 +49,4 @@ $language_array = Array(
     &#8226; <a href="index.php?site=login">Пријави се</a>',
   'your_email'=>'Вашиот е-маил'
 );
-?>
+

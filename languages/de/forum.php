@@ -135,4 +135,4 @@ $language_array = Array(
 	'enter_topic'=>'Du musst einen Titel für das Thema eingeben!',
 	'enter_text'=>'Kein Text vorhanden!'
 );
-?>
+

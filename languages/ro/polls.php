@@ -69,4 +69,4 @@ $language_array = Array(
   'yht_enter_endingtime'=>'Trebuie sa introduceţi ora terminării!',
   'yht_enter_title'=>'Trebuie să introduceţi un titlu!'
 );
-?>
+

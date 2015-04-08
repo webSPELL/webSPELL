@@ -33,4 +33,4 @@ $language_array = Array(
   'save'=>'salvează',
   'no_session'=>'Vă rugam asiguraţi-vă că aveţi activate cookies şi incercaţi să schimbaţi limba din nou.'
 );
-?>
+

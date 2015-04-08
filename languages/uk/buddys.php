@@ -39,4 +39,4 @@ $language_array = Array(
 	'your_buddylist'=>'Your friends list',
 	'your_ignorelist'=>'Your ignore list'
 );
-?>
+

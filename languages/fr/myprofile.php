@@ -138,4 +138,4 @@ Merci pour votre intérêt
 	'you_have_to_username'=>'Vous devez entrer un nom d\'utilisateur !',
 	'you_have_to_valid_email'=>'Votre adresse mail n\'est pas valide !'
 );
-?>
+

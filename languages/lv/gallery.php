@@ -73,4 +73,4 @@ $language_array = Array(
   'you_have_already_rated'=>'Jūs jau esat novērtējis.',
   'no_thumb'=>'Bez ikonām'
 );
-?>
+

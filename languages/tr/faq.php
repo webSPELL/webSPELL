@@ -44,4 +44,4 @@ $language_array = Array(
   'no_faq'=>'Soru yok.<br><a href="index.php?site=faq">Geri</a>',
   'saved_on'=>'kaydet'
 );
-?>
+

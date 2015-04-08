@@ -46,4 +46,4 @@ $language_array = Array(
   'save_banner'=>'salvesta loosung',
   'use_following_code'=>'Kasuta järgmist koodi, et loosung oma kodulehele sisestada.'
 );
-?>
+

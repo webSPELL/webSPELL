@@ -39,4 +39,4 @@ $language_array = Array(
   'outgoing'=>'Giden',
   'owner_responsible'=>'Sahibi bu sayfada sorumludur.'
 );
-?>
+

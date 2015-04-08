@@ -64,4 +64,4 @@ $language_array = Array(
 	'squads'=>'Lag',
 	'who_is_online'=>'Vem är online?'
 );
-?>
+

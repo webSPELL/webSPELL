@@ -33,4 +33,4 @@ $language_array = Array(
   'about_title'=>'О нас',
   'no_about'=>'Описание не доступно.'
 );
-?>
+

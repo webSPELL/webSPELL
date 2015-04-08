@@ -74,4 +74,4 @@ $language_array = Array(
   'yht_enter_endingtime'=>'Трябва да въведете крайния срок!',
   'yht_enter_title'=>'Трябва да въведете заглавие!'
 );
-?>
+

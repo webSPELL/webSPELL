@@ -78,4 +78,4 @@ $language_array = Array(
   'you_have_already_rated'=>'Zaten puan verdiniz.',
   'no_thumb'=>'Thumb Yok'
 );
-?>
+

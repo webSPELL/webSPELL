@@ -84,4 +84,4 @@ $language_array = Array(
   'visitor_comments'=>'Lejo komentet e vizituesve',
   'vs'=>'vs.'
 );
-?>
+

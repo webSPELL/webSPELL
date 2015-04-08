@@ -45,4 +45,4 @@ $language_array = Array(
   'your_buddylist'=>'Lista jote e shokëve',
   'your_ignorelist'=>'Lista jote e injorimit'
 );
-?>
+

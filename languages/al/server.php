@@ -46,4 +46,4 @@ $language_array = Array(
   'status'=>'Statut',
   'timeout'=>'koha mbaroi'
 );
-?>
+

@@ -35,4 +35,4 @@ $language_array = Array(
   'update'=>'Frissítés',
   'you_can_use_html'=>'Használhatsz HTML-Tageket'
 );
-?>
+

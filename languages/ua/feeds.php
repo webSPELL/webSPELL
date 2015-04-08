@@ -38,4 +38,4 @@ $language_array = Array(
   'news_feed'=>'Стрічка новин',
   'latest_news_from'=>'Останні новини від'
 );
-?>
+

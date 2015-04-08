@@ -38,4 +38,4 @@ $language_array = Array(
   'no_access'=>'erişim yok!',
   'just_rate_between_0_10'=>'Lütfen sadece 0-10 arasında puan veriniz!'
 );
-?>
+

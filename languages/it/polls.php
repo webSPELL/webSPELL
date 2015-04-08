@@ -68,4 +68,4 @@ $language_array = Array(
 	'yht_enter_endingtime'=>'È necessario specificare l*ora di fine!',
 	'yht_enter_title'=>'Devi inserire un titolo!'
 );
-?>
+

@@ -39,4 +39,4 @@ $language_array = Array(
   'outgoing'=>'Që po dërgohet',
   'owner_responsible'=>'Zotëruesi është përgjegjës për këtë faqe.'
 );
-?>
+

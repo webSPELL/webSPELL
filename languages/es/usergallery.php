@@ -54,4 +54,4 @@ $language_array = Array(
 	'visitor_comments'=>'Comentarios visitantes',
 	'x_of_y_mb_in_use'=>'<span style="color:%spacecolor%">&nbsp;%used_size%</span> de %available_size% MB están en uso.'
 );
-?>
+
