@@ -69,18 +69,18 @@ if (isset($_POST[ 'submit' ])) {
         if ($sendmail['result'] == 'fail') {
             if (isset($sendmail['debug'])) {
                 echo '<b>' . $_language->module[ 'test_fail' ] . '</b>';
-                echo '<br>' . $sendmail['error'];
-                echo '<br>' . $sendmail['debug'];
+                echo '<br>' . $sendmail[ 'error' ];
+                echo '<br>' . $sendmail[ 'debug' ];
                 redirect("admincenter.php?site=email&amp;action=test", $_language->module[ 'test_fail' ], 10);
             } else {
                 echo '<b>' . $_language->module[ 'test_fail' ] . '</b>';
-                echo '<br>' . $sendmail['error'];
+                echo '<br>' . $sendmail[ 'error' ];
                 redirect("admincenter.php?site=email&amp;action=test", $_language->module[ 'test_fail' ], 10);
             }
         } else {
-            if (isset($sendmail['debug'])) {
+            if (isset($sendmail[ 'debug' ])) {
                 echo '<b> Debug </b>';
-                echo '<br>' . $sendmail['debug'];
+                echo '<br>' . $sendmail[ 'debug' ];
                 redirect("admincenter.php?site=email&amp;action=test", $_language->module[ 'test_ok' ], 10);
             } else {
                 redirect("admincenter.php?site=email&amp;action=test", $_language->module[ 'test_ok' ], 3);
@@ -208,7 +208,7 @@ if (isset($_POST[ 'submit' ])) {
                 document.getElementById(\'tr_password\').style.display = "none";
                 document.getElementById(\'tr_auth\').style.display = "none";
                 document.getElementById(\'tr_host\').style.display = "none";
-                document.getElementById(\'tr_html\').style.display = "none";
+                document.getElementById(\'tr_debug\').style.display = "none";
                 document.getElementById(\'tr_port\').style.display = "none";
                 document.getElementById(\'tr_secure\').style.display = "none";
             }
@@ -219,15 +219,15 @@ if (isset($_POST[ 'submit' ])) {
                     document.getElementById(\'tr_password\').style.display = "";
                     document.getElementById(\'tr_auth\').style.display = "";
                     document.getElementById(\'tr_host\').style.display = "";
-                    document.getElementById(\'tr_html\').style.display = "";
                     document.getElementById(\'tr_port\').style.display = "";
                     document.getElementById(\'tr_secure\').style.display = "";
+                    document.getElementById(\'tr_debug\').style.display = "";
                 } else {
                     document.getElementById(\'tr_host\').style.display = "";
                     document.getElementById(\'tr_auth\').style.display = "";
-                    document.getElementById(\'tr_html\').style.display = "";
                     document.getElementById(\'tr_port\').style.display = "";
                     document.getElementById(\'tr_secure\').style.display = "";
+                    document.getElementById(\'tr_debug\').style.display = "";
                 }
             }
         }
@@ -278,7 +278,7 @@ if (isset($_POST[ 'submit' ])) {
                 value="' . getinput($ds[ 'port' ]) . '" size="5"
                 onmouseover="showWMTT(\'id5\')" onmouseout="hideWMTT()"/></td>
         </tr>
-        <tr id="tr_html"' . $show_auth2 . '>
+        <tr id="tr_html">
             <td width="15%"><b>' . $_language->module[ 'html' ] . '</b></td>
             <td width="35%"><input type="checkbox" id="check_html" name="html"
                 onmouseover="showWMTT(\'id7\')"
@@ -290,7 +290,7 @@ if (isset($_POST[ 'submit' ])) {
                 onchange="javascript:SetPort();"
                 onmouseout="hideWMTT()">' . $secure . '</select></td>
         </tr>
-        <tr>
+        <tr id="tr_debug"' . $show_auth2 . '>
             <td width="15%"><b>' . $_language->module[ 'debug' ] . '</b></td>
             <td width="35%"><select id="select_debug" name="debug" onmouseover="showWMTT(\'id9\')"
                 onmouseout="hideWMTT()">' . $debug . '</select></td>

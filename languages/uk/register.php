@@ -43,15 +43,11 @@ $language_array = Array(
 	'mail_inuse'=>'The mail address is already in use.',
 	'mail_subject'=>'Account activation mail for %homepage_url%',
 	'mail_text'=>'Hello %username%!
-
-Your registering at %pagetitle% (%homepage_url%) was successful. Your account data:
-
-Login name: %username%
-
-To finish your registration you have to activate your account by clicking the following link:
-%activationlink%
-
-Thank you for your registration
+<p>Your registration at %pagetitle% (%homepage_url%) was successful. Your account data:</p>
+<p>Login name: %username%</p>
+<p>To finish your registration you have to activate your account by clicking the following link:<br>
+%activationlink%</p>
+<p>Thank you for your registration</p>
 %pagetitle% - %homepage_url%',
 	'nickname'=>'Nickname',
 	'nickname_inuse'=>'Nickname allready in use.',

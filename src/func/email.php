@@ -47,6 +47,10 @@ class Email
             $secure = $ds['secure'];
         }
 
+        if ($smtp == 0) {
+            $debug = 0;
+        }
+
         $get = safe_query("SELECT title FROM " . PREFIX . "styles");
         while ($ds = mysqli_fetch_assoc($get)) {
             $hptitle = $ds['title'];

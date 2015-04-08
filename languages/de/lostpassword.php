@@ -32,13 +32,11 @@ $language_array = Array(
 	'email_failed'=>'Es trat ein Fehler beim Versenden der E-Mail auf, kontaktiere den Webmaster.',
 	'email_subject'=>'Dein Konto für %pagetitle%',
 	'email_text'=>'Dein Konto für %pagetitle%
-ACHTUNG dein Passwort wurde geändert
-
-dein Benutzername: %username%
-dein neues Passwort: %new_password%
-	
-Viel Spass auf unserer Webseite
-	%homepage_url%',
+<p>ACHTUNG dein Passwort wurde geändert</p>
+<p>Dein Benutzername: %username%<br>
+Dein neues Passwort: %new_password%</p>
+<p>Viel Spass auf unserer Webseite</p>
+%homepage_url%',
 	'get_password'=>'Passwort zusenden',
 	'lost_password'=>'Passwort verloren',
 	'no_mail_given'=>'Du hast keine E-Mail Adresse eingegeben.',

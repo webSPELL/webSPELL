@@ -49,7 +49,8 @@ $language_array = Array(
   'send'=>'send',
   'test_email'=>'Test eMail',
   'test_subject'=>'Testing eMail',
-  'test_message'=>'If you see this, eMail sending is configured and working.',
+  'test_message'=>'<h1>Test eMail</h1>
+<p>If you can see this, eMail sending is configured and working.</p>',
   'test_ok'=>'Test was successful',
   'test_fail'=>'Test failed',
   'tooltip_1'=>'Method for sending eMail?',
