@@ -50,4 +50,4 @@ $language_array = Array(
 	'update_award'=>'Update prijs'
 
 );
-?>
+

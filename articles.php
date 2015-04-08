@@ -187,84 +187,6 @@ if ($action == "save") {
     header("Location: index.php?site=articles");
 }
 
-function top5()
-{
-    global $_language;
-
-    $_language->readModule('articles');
-
-    // RATING
-    $ergebnis = safe_query("SELECT * FROM " . PREFIX . "articles WHERE saved='1' ORDER BY rating DESC LIMIT 0,5");
-    $top = $_language->module[ 'top5_rating' ];
-    echo '<div class="row">';
-
-    $data_array = array();
-    $data_array['$top'] = $top;
-    $top5_head = $GLOBALS["_template"]->replaceTemplate("top5_head", $data_array);
-    echo $top5_head;
-
-    $n = 1;
-    while ($ds = mysqli_fetch_array($ergebnis)) {
-        if ($n % 2) {
-            $bg1 = BG_1;
-            $bg2 = BG_2;
-        } else {
-            $bg1 = BG_3;
-            $bg2 = BG_4;
-        }
-
-        $title = '<a href="index.php?site=articles&amp;action=show&amp;articlesID=' . $ds[ 'articlesID' ] . '">' .
-            clearfromtags($ds[ 'title' ]) . '</a>';
-        $poster =
-            '<a href="index.php?site=profile&amp;id=' . $ds[ 'poster' ] . '">' . getnickname($ds[ 'poster' ]) . '</a>';
-        $viewed = '(' . $ds[ 'viewed' ] . ')';
-        $ratings = array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
-        for ($i = 0; $i < $ds[ 'rating' ]; $i++) {
-            $ratings[ $i ] = 1;
-        }
-        $ratingpic = '<img src="images/icons/rating_' . $ratings[ 0 ] . '_start.gif" width="1" height="5" alt="">';
-        foreach ($ratings as $pic) {
-            $ratingpic .= '<img src="images/icons/rating_' . $pic . '.gif" width="4" height="5" alt="">';
-        }
-
-        echo '<li class="list-group-item"><span class="badge">' . $ratingpic . '</span>' . $n . ' ' . $title . '</li>';
-
-        unset($ratingpic);
-        $n++;
-    }
-
-    echo '</ul></div>';
-
-    // POINTS
-    $ergebnis = safe_query("SELECT * FROM " . PREFIX . "articles WHERE saved='1' ORDER BY points DESC LIMIT 0,5");
-    $top = $_language->module[ 'top5_points' ];
-
-    $data_array = array();
-    $data_array['$top'] = $top;
-    $top5_head = $GLOBALS["_template"]->replaceTemplate("top5_head", $data_array);
-    echo $top5_head;
-
-    $n = 1;
-    while ($ds = mysqli_fetch_array($ergebnis)) {
-        if ($n % 2) {
-            $bg1 = BG_1;
-            $bg2 = BG_2;
-        } else {
-            $bg1 = BG_3;
-            $bg2 = BG_4;
-        }
-
-        $title = '<a href="index.php?site=articles&amp;action=show&amp;articlesID=' . $ds[ 'articlesID' ] . '">' .
-            clearfromtags($ds[ 'title' ]) . '</a>';
-        $viewed = '(' . $ds[ 'viewed' ] . ')';
-        echo '<li class="list-group-item"><span class="badge">' . $ds[ 'points' ] . '</span>' . $n . ' ' . $title .
-            '</li>';
-
-        $n++;
-    }
-    echo '</ul></div></div>';
-}
-
 if ($action == "new") {
     include("_mysql.php");
     include("_settings.php");
@@ -759,7 +681,74 @@ if ($action == "new") {
         }
     }
     if ($gesamt) {
-        top5();
+        // RATING
+        $ergebnis_top_5_rating = safe_query(
+            "SELECT * FROM " . PREFIX . "articles WHERE saved='1' ORDER BY rating DESC LIMIT 0,5"
+        );
+        $top = $_language->module[ 'top5_rating' ];
+        echo '<div class="row">';
+
+        $data_array = array();
+        $data_array['$top'] = $top;
+        $top5_head = $GLOBALS["_template"]->replaceTemplate("top5_head", $data_array);
+        echo $top5_head;
+
+        $n = 1;
+
+        $multiTemplateData = array();
+
+        while ($ds = mysqli_fetch_array($ergebnis_top_5_rating)) {
+            $title = '<a href="index.php?site=articles&amp;action=show&amp;articlesID=' . $ds[ 'articlesID' ] . '">' .
+                clearfromtags($ds[ 'title' ]) . '</a>';
+            $poster =
+                '<a href="index.php?site=profile&amp;id=' . $ds[ 'poster' ] . '">' . getnickname($ds[ 'poster' ]) .
+                '</a>';
+            $viewed = '(' . $ds[ 'viewed' ] . ')';
+            $ratings = array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+            for ($i = 0; $i < $ds[ 'rating' ]; $i++) {
+                $ratings[ $i ] = 1;
+            }
+            $ratingpic = '<img src="images/icons/rating_' . $ratings[ 0 ] . '_start.gif" width="1" height="5" alt="">';
+            foreach ($ratings as $pic) {
+                $ratingpic .= '<img src="images/icons/rating_' . $pic . '.gif" width="4" height="5" alt="">';
+            }
+
+            $text = $n . ' ' . $title;
+            $multiTemplateData[] = array('$badge'=>$ratingpic, '$text'=>$text);
+            $n++;
+        }
+
+        echo $GLOBALS["_template"]->replaceMulti('top5_content', $multiTemplateData);
+
+        echo $GLOBALS["_template"]->replaceTemplate("top5_foot");
+
+        // POINTS
+        $ergebnis_top_5_points = safe_query(
+            "SELECT * FROM " . PREFIX . "articles WHERE saved='1' ORDER BY points DESC LIMIT 0,5"
+        );
+        $top = $_language->module[ 'top5_points' ];
+
+        $data_array = array();
+        $data_array['$top'] = $top;
+        $top5_head = $GLOBALS["_template"]->replaceTemplate("top5_head", $data_array);
+        echo $top5_head;
+
+        $n = 1;
+
+        $multiTemplateData = array();
+
+        while ($ds = mysqli_fetch_array($ergebnis_top_5_points)) {
+            $title = '<a href="index.php?site=articles&amp;action=show&amp;articlesID=' . $ds[ 'articlesID' ] . '">' .
+                clearfromtags($ds[ 'title' ]) . '</a>';
+            $text = $n . ' ' . $title;
+            $multiTemplateData[] = array('$badge'=>$ds[ 'points' ], '$text'=>$text);
+            $n++;
+        }
+
+        echo $GLOBALS["_template"]->replaceMulti('top5_content', $multiTemplateData);
+        echo $GLOBALS["_template"]->replaceTemplate("top5_foot");
+        echo '</div>';
+
         if ($type == "ASC") {
             echo '<a href="index.php?site=articles&amp;page=' . $page . '&amp;sort=' . $sort . '&amp;type=DESC">' .
                 $_language->module[ 'sort' ] .

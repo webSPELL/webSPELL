@@ -51,4 +51,4 @@ $language_array = Array(
   'save_banner'=>'sembolü kaydet',
   'use_following_code'=>'Ana sayfanızda afiş eklemek için, aşağıdaki kodu kullanabilirsiniz.'
 );
-?>
+

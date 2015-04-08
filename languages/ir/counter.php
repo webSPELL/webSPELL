@@ -60,4 +60,4 @@ $language_array = Array(
   'user_statistic'=>'جزییات کاربر',
   'years'=>'سال'
 );
-?>
+

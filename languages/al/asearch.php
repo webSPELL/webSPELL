@@ -39,4 +39,4 @@ $language_array = Array(
   'no_result'=>'Asnjë rezultat i gjetur',
   'to_much_results'=>'Shumë rezultate të gjetura, lutemi të vendosni më tepër të dhëna.'
 );
-?>
+

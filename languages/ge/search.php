@@ -68,4 +68,4 @@ $language_array = Array(
   'wrong_securitycode'=>'თქვენ შეიყვანეთ არასოწრი უსაფრთხოების კოდი!',
   'no_result'=>'მასალა არ მოიძებნა "%s"'
 );
-?>
+

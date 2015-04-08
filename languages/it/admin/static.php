@@ -48,4 +48,4 @@ $language_array = Array(
   'transaction_invalid'=>'ID transazione non valido',
   'you_can_use_html'=>'È possibile di utilizzare HTML'
 );
-?>
+

@@ -67,4 +67,4 @@ $language_array = Array(
   'title_comment'=>'Jūsu komentārs',
   'title_editcomment'=>'Rediģēt komentāru'
 );
-?>
+

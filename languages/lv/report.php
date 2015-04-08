@@ -35,4 +35,4 @@ $language_array = Array(
   'report_recognized'=>'Jūsu sūdzība pieņemta. Paldies.',
   'wrong_securitycode'=>'Jūs ievadījāt nepareizu drošības kodu<br><br>[<a href="javascript:back();">atpakaļ</a>]'
 );
-?>
+

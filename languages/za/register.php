@@ -77,4 +77,4 @@ Dankie vir u registrasie
   'wrong_activationkey'=>'Jou aktivering sleutel is verkeerd!',
   'wrong_securitycode'=>'Die sekuriteit\'s kode is verkeerd!'
 );
-?>
+

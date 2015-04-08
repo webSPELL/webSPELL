@@ -68,6 +68,7 @@ $language_array = Array(
   'sort'=>'Sort',
   'transaction_invalid'=>'Transaction ID invalid',
   'to_sort'=>'sort',
-  'url'=>'Url'
+  'url'=>'Url',
+  'no_additional_links_available'=>'no additional links available'
 );
-?>
+

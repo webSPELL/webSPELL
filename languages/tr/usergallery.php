@@ -60,4 +60,4 @@ $language_array = Array(
   'visitor_comments'=>'Ziyaretçi Yorumları',
   'x_of_y_mb_in_use'=>'<span style="color:%spacecolor%">&nbsp;%used_size%</span> arasında %available_size%MB kullanılmaktadır.'
 );
-?>
+

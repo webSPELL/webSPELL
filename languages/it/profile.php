@@ -135,4 +135,4 @@ $language_array = Array(
 	'your_message'=>'Il tuo messaggio',
 	'your_name'=>'Il tuo nome'
 );
-?>
+

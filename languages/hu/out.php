@@ -33,4 +33,4 @@ $language_array = Array(
 	'outgoing'=>'Kimenő',
 	'owner_responsible'=>'A tulajdonos felelős az oldalért.'
 );
-?>
+

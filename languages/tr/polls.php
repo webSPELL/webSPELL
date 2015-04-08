@@ -74,4 +74,4 @@ $language_array = Array(
   'yht_enter_endingtime'=>'Bitiş zamanı girmek zorundasınız!',
   'yht_enter_title'=>'Başlık girmek zorundasınız!'
 );
-?>
+

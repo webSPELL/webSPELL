@@ -406,7 +406,7 @@ onmouseout="hideWMTT()" />';
     while ($ds = mysqli_fetch_array($ergebnis)) {
         $name = $ds[ 'name' ];
         $fgrID = $ds[ 'fgrID' ];
-        if (isinusergrp($fgrID, $id, 0)) {
+        if (isinusergrp($fgrID, $id)) {
             $usergrp[ $fgrID ] = '<input type="checkbox" name="' . $fgrID . '" value="1" checked="checked" />';
         } else {
             $usergrp[ $fgrID ] = '<input type="checkbox" name="' . $fgrID . '" value="1" />';

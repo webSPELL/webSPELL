@@ -59,4 +59,4 @@ $language_array = Array(
   'upcoming_events'=>'Майбутні події',
   'tags'=>'теги'
 );
-?>
+

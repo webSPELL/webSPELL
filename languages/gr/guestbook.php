@@ -65,4 +65,4 @@ $language_array = Array(
   'wrote'=>'εγραψε',
   'your_message'=>'Το μηνυμα σας'
 );
-?>
+

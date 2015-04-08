@@ -38,4 +38,4 @@ $language_array = Array(
   'news_feed'=>'Nochriichtenticker',
   'latest_news_from'=>'Aktuell Neiegkeeten vun'
 );
-?>
+

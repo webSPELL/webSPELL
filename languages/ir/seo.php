@@ -76,4 +76,4 @@ $language_array = Array(
   'versus'=>'برضد',
   'whoisonline'=>'چه کسی انلاین است'
 );
-?>
+

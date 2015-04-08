@@ -73,4 +73,4 @@ $language_array = Array(
   'wrong_securitycode'=>'Vendosët një kod sigurie të gabuar!',
   'no_result' =>'Nuk u gjetën për të hyra "%s"'
 );
-?>
+

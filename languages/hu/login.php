@@ -44,4 +44,4 @@ $language_array = Array(
 	'registered_users'=>'Regisztrált tagok',
 	'welcome_back'=>'Üdvözlünk'
 );
-?>
+

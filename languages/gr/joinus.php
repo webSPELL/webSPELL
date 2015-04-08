@@ -64,4 +64,4 @@ $language_array = Array(
   'title_join_us'=>'Γινετε μελος',
   'wrong_security_code'=>'Ο κωδικος ασφαλειας ειναι λαθος!'
 );
-?>
+

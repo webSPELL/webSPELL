@@ -59,4 +59,4 @@ $language_array = Array(
   'title_join_us'=>'تصبح عضوا',
   'wrong_security_code'=>'رمز الأمان غير صحيح!'
 );
-?>
+

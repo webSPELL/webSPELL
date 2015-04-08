@@ -38,4 +38,4 @@ $language_array = Array(
   'no_access'=>'няма достъп!',
   'just_rate_between_0_10'=>'Моля гласувайте между 1 и 10 точки!'
 );
-?>
+

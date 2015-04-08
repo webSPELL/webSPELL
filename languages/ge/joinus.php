@@ -59,4 +59,4 @@ $language_array = Array(
   'title_join_us'=>'გახდი მონაწილე',
   'wrong_security_code'=>'უსაფრთხოების კოდი არასწორი იყო!'
 );
-?>
+

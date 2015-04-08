@@ -105,4 +105,4 @@ $language_array = Array(
   'enter_title'=>'Sa pole pikka pealkirja sisestanud!',
   'enter_info'=>'Sa pole mingit informatsiooni sisestanud!'
 );
-?>
+

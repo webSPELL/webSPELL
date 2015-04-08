@@ -90,4 +90,4 @@ $language_array = Array(
   'large_picture'=>'Büyük Resim',
   'show_original'=>'orijinalini göster'
 );
-?>
+

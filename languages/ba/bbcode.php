@@ -85,4 +85,4 @@ $language_array = Array(
   'large_picture'=>'velika slika',
   'show_original'=>'Prikaži original'
 );
-?>
+

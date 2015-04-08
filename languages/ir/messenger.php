@@ -77,4 +77,4 @@ $language_array = Array(
   'error'=>'بروز خطا',
   'unknown_user'=>'کاربر ناشناس'
 );
-?>
+

@@ -34,4 +34,4 @@ $language_array = Array(
 	'owner_responsible'=>'De eigenaar is verantwoordelijk voor deze pagina.'
 
 );
-?>
+

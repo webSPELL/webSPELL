@@ -37,4 +37,4 @@ $language_array = Array(
     'return'=>'<a href="javascript:history.back()">Zurück</a>',
     'return_reenter' => '<a href="javascript:history.back()">Zurück und Eingabe wiederholen</a>'
 );
-?>
+

@@ -34,4 +34,4 @@ $language_array = Array(
   'registered_since'=>'регистриран од',
   'view_profile'=>'посети профил'
 );
-?>
+

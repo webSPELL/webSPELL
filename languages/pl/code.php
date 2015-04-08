@@ -82,4 +82,4 @@ $language_array = Array(
 	'yellow'=>'Żółty',
 	'yes_can_combine'=>'Tak, można, np. wtedy kiedy trzeba zwrócić większą uwagę:'
 );
-?>
+

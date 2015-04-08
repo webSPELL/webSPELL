@@ -50,4 +50,4 @@ $language_array = Array(
   'users_from_group'=>'Users from Group',
   'transaction_invalid'=>'Transaction ID invalid'
 );
-?>
+

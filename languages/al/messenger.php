@@ -83,4 +83,4 @@ $language_array = Array(
   'error'=>'gabim',
   'unknown_user'=>'përdorues i panjohur'
 );
-?>
+

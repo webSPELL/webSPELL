@@ -39,4 +39,4 @@ $language_array = Array(
   'registered_since'=>'registréiert seit',
   'view_profile'=>'Profil uweisen'
 );
-?>
+

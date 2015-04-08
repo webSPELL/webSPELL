@@ -90,4 +90,4 @@ $language_array = Array(
   'large_picture'=>'Fotografi e Madhe',
   'show_original'=>'trego origjinalin'
 );
-?>
+

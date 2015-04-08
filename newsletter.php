@@ -59,27 +59,56 @@ if ($action == "save") {
                     )"
             );
 
-            $header = "From:" . $hp_title . "<" . $admin_email . ">\n";
-            $header .= "Reply-To: " . $admin_email . "\n";
-            $header .= "Content-Type: text/html; charset=utf-8\n";
             $vars = array('%delete_key%', '%homepage_url%', '%mail%');
             $repl = array($pass, $hp_url, $email);
-            mail(
-                $email,
-                $hp_title . ": " . $_language->module['newsletter_registration'],
-                str_replace(
-                    $vars,
-                    $repl,
-                    $_language->module['success_mail']
-                ),
-                $header
+            $subject = $hp_title . ": " . $_language->module['newsletter_registration'];
+            $message = str_replace(
+                $vars,
+                $repl,
+                $_language->module['success_mail']
             );
+            $sendmail = \webspell\Email::sendEmail($admin_email, 'Newsletter', $email, $subject, $message);
 
-            redirect(
-                'index.php?site=newsletter',
-                generateAlert($_language->module['thank_you_for_registration'], 'alert-success'),
-                3
-            );
+            if ($sendmail['result'] == 'fail') {
+                if (isset($sendmail['debug'])) {
+                    $fehler = array();
+                    $fehler[] = $sendmail[ 'error' ];
+                    $fehler[] = $sendmail[ 'debug' ];
+                    redirect(
+                        'index.php?site=newsletter',
+                        generateErrorBoxFromArray($_language->module['errors_there'], $fehler),
+                        10
+                    );
+                } else {
+                    $fehler = array();
+                    $fehler[] = $sendmail[ 'error' ];
+                    redirect(
+                        'index.php?site=newsletter',
+                        generateErrorBoxFromArray($_language->module['errors_there'], $fehler),
+                        10
+                    );
+                }
+            } else {
+                if (isset($sendmail['debug'])) {
+                    $fehler = array();
+                    $fehler[] = $sendmail[ 'debug' ];
+                    redirect(
+                        'index.php?site=newsletter',
+                        generateBoxFromArray(
+                            $_language->module['thank_you_for_registration'],
+                            'alert-success',
+                            $fehler
+                        ),
+                        10
+                    );
+                } else {
+                    redirect(
+                        'index.php?site=newsletter',
+                        generateAlert($_language->module['thank_you_for_registration'], 'alert-success'),
+                        3
+                    );
+                }
+            }
         } else {
             redirect(
                 'index.php?site=newsletter',
@@ -95,7 +124,7 @@ if ($action == "save") {
         $dn = mysqli_fetch_array($ergebnis);
 
         if ($_POST['password'] == $dn['pass']) {
-            safe_query("DELETE FROM " . PREFIX . "newsletter WHERE email='" . $_POST['email']);
+            safe_query("DELETE FROM " . PREFIX . "newsletter WHERE email='" . $_POST['email'] . "'");
             redirect(
                 'index.php?site=newsletter',
                 generateAlert($_language->module['your_mail_adress_deleted'], 'alert-success'),
@@ -123,27 +152,52 @@ if ($action == "save") {
         $email = $_POST['email'];
         $pass = $dn['pass'];
 
-        $header = "From:" . $hp_title . "<" . $admin_email . ">\n";
-        $header .= "Reply-To: " . $admin_email . "\n";
-        $header .= "Content-Type: text/html; charset=utf-8\n";
         $vars = array('%delete_key%', '%homepage_url%', '%mail%');
         $repl = array($pass, $hp_url, $email);
-        mail(
-            $email,
-            $hp_title . ": " . $_language->module['deletion_key'],
-            str_replace(
-                $vars,
-                $repl,
-                $_language->module['request_mail']
-            ),
-            $header
+        $subject = $hp_title . ": " . $_language->module['deletion_key'];
+        $message = str_replace(
+            $vars,
+            $repl,
+            $_language->module['request_mail']
         );
+        $sendmail = \webspell\Email::sendEmail($admin_email, 'Newsletter', $email, $subject, $message);
 
-        redirect(
-            'index.php?site=newsletter',
-            generateAlert($_language->module['password_had_been_send'], 'alert-success'),
-            3
-        );
+        if ($sendmail['result'] == 'fail') {
+            if (isset($sendmail['debug'])) {
+                $fehler = array();
+                $fehler[] = $sendmail[ 'error' ];
+                $fehler[] = $sendmail[ 'debug' ];
+                redirect(
+                    'index.php?site=newsletter',
+                    generateErrorBoxFromArray($_language->module['errors_there'], $fehler),
+                    10
+                );
+            } else {
+                $fehler = array();
+                $fehler[] = $sendmail['error'];
+                redirect(
+                    'index.php?site=newsletter',
+                    generateErrorBoxFromArray($_language->module['errors_there'], $fehler),
+                    10
+                );
+            }
+        } else {
+            if (isset($sendmail['debug'])) {
+                $fehler = array();
+                $fehler[] = $sendmail['error'];
+                redirect(
+                    'index.php?site=newsletter',
+                    generateBoxFromArray($_language->module['password_had_been_send'], 'alert-success', $fehler),
+                    10
+                );
+            } else {
+                redirect(
+                    'index.php?site=newsletter',
+                    generateAlert($_language->module['password_had_been_send'], 'alert-success'),
+                    3
+                );
+            }
+        }
     } else {
         redirect(
             'index.php?site=newsletter',

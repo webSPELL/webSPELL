@@ -68,6 +68,7 @@ $language_array = Array(
   'sort'=>'Ordinamento',
   'transaction_invalid'=>'ID transazione non valido',
   'to_sort'=>'assortire',
-  'url'=>'Url'
+  'url'=>'Url',
+  'no_additional_links_available'=>'no additional links available'
 );
-?>
+

@@ -32,4 +32,4 @@ $language_array = Array(
 	'about_title'=>'Magunkról',
 	'no_about'=>'Jelenleg nincs elérhető leírás.'
 );
-?>
+

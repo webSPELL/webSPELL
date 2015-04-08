@@ -58,4 +58,4 @@ $language_array = Array(
   'title_join_us'=>'یکی از اعضای گروه شوید',
   'wrong_security_code'=>'!کد اشتباه وارد شده'
 );
-?>
+

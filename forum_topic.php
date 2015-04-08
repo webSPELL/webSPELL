@@ -171,13 +171,23 @@ if (isset($_POST['newreply']) && !isset($_POST['preview'])) {
                     array(html_entity_decode($poster), $link, $hp_title, 'http://' . $hp_url),
                     $maillanguage->module['notify_mail']
                 );
-                $header = "From:" . $admin_email . "\nContent-type: text/plain; charset=utf-8\n";
-                @mail(
+                $subject = $maillanguage->module['new_reply'] . ' (' . $hp_title . ')';
+                $sendmail = \webspell\Email::sendEmail(
+                    $admin_email,
+                    'Forum',
                     $email['mail'],
-                    $maillanguage->module['new_reply'] . ' (' . $hp_title . ')',
-                    $forum_topic_notify,
-                    $header
+                    $subject,
+                    $forum_topic_notify
                 );
+
+                if ($sendmail['result'] == 'fail') {
+                    if (isset($sendmail['debug'])) {
+                        $fehler = array();
+                        $fehler[] = $sendmail['error'];
+                        $fehler[] = $sendmail['debug'];
+                        echo generateErrorBoxFromArray($_language->module['errors_there'], $fehler);
+                    }
+                }
             }
         }
 

@@ -58,4 +58,4 @@ $language_array = Array(
 	'title_join_us'=>'Staň sa členom',
 	'wrong_security_code'=>'Zadali ste chybný bezpeč. kód!'
 );
-?>
+

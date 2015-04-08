@@ -39,6 +39,7 @@ $language_array = Array(
   'content'=>'Inhalt',
   'countries'=>'Länder',
   'database'=>'Datenbank',
+  'email'=>'eMail',
   'faq'=>'FAQ',
   'faq_categories'=>'FAQ Kategorien',
   'file_categories'=>'Datei Kategorien',
@@ -84,4 +85,4 @@ $language_array = Array(
   'blocked_content'=>'Geblockte Inhalte',
   'modrewrite'=>'Mod-Rewrite'
 );
-?>
+

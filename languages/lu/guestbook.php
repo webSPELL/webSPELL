@@ -65,4 +65,4 @@ $language_array = Array(
   'wrote'=>'huet geschriww',
   'your_message'=>'Deng Noriicht'
 );
-?>
+

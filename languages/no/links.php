@@ -55,4 +55,4 @@ $language_array = Array(
 	'title_categories'=>'Link categories',
 	'update_link'=>'Update link'
 );
-?>
+

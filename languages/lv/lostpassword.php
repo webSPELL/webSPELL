@@ -49,4 +49,4 @@ Gūstiet prieku mūsu mājaslapā!
     &#8226; <a href="index.php?site=login">pieslēgties</a>',
   'your_email'=>'Jūsu e-pasts'
 );
-?>
+

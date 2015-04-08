@@ -74,4 +74,4 @@ $language_array = Array(
 	'visitor_comments'=>'Goście mogą komentować',
 	'tags'=>'tagi'
 );
-?>
+

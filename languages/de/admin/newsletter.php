@@ -50,4 +50,4 @@ Du hast folgende Nachricht erhalten:',
   'user_registered'=>'registrierte Benutzer (inkl. Clanmitglieder) ',
   'users'=>'Benutzer'
 );
-?>
+

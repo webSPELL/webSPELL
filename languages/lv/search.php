@@ -68,4 +68,4 @@ $language_array = Array(
   'wrong_securitycode'=>'Nepareizs drošības kods!',
   'no_result'=>'Nav ierakstu vaicājumam "%s"'
 );
-?>
+

@@ -67,4 +67,4 @@ $language_array = Array(
 	'wrong_securitycode'=>'Du har skrivit in fel säkerhets kod!',
 	'no_result'=>'Inga poster hittades för "%s"'
 );
-?>
+

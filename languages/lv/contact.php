@@ -51,4 +51,4 @@ $language_array = Array(
   'unknown_receiver'=>'nezināms saņēmējs',
   'wrong_securitycode'=>'Ievadīts nepareizs drošības kods!'
 );
-?>
+

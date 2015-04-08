@@ -45,4 +45,4 @@ $language_array = Array(
 	'welcome_back'=>'welkom terug'
 
 );
-?>
+

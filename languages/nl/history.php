@@ -33,4 +33,4 @@ $language_array = Array(
 	'no_history'=>'Er is helaas geen informatie aanwezig.'
 
 );
-?>
+

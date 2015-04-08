@@ -33,4 +33,4 @@ $language_array = Array(
 	'just_rate_between_0_10'=>'Please rate only from 0 to 10 points!'
 
 );
-?>
+

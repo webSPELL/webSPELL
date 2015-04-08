@@ -33,4 +33,4 @@ $language_array = Array(
   'about_title'=>'За нас',
   'no_about'=>'Моментално нема опис.'
 );
-?>
+

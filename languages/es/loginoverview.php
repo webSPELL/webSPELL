@@ -68,4 +68,4 @@ $language_array = Array(
 	 &#8226; <a href="index.php?site=register">registrar</a><br>
 	 &#8226; <a href="index.php?site=login">conectar</a>'
 );
-?>
+

@@ -139,4 +139,4 @@ $language_array = Array(
   'you_have_to_username'=>'Вы должны ввести имя пользователя!',
   'you_have_to_valid_email'=>'Ваш адрес почты неверен!'
 );
-?>
+

@@ -49,4 +49,4 @@ $language_array = Array(
   'squad'=>'گروه',
   'update_award'=>'به روز کردن جوایز'
 );
-?>
+

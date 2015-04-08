@@ -35,4 +35,4 @@ $language_array = Array(
 	'replies'=>'Reacties'
 
 );
-?>
+

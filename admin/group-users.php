@@ -235,7 +235,7 @@ if (isset($_GET[ 'action' ])) {
         }
         echo '<tr><td class="' . $td . '">' . strip_tags(stripslashes(getnickname($users[ $z ]))) . '</td>';
         for ($i = 0; $i < $groups_anz; $i++) {
-            if (isinusergrp($groups[ $i ][ 'fgrID' ], $users[ $z ], 0)) {
+            if (isinusergrp($groups[ $i ][ 'fgrID' ], $users[ $z ])) {
                 $checked = ' checked="checked"';
             } else {
                 $checked = '';

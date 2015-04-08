@@ -91,4 +91,4 @@ $language_array = Array(
 	'whoisonline'=>'wie is online?'
 
 );
-?>
+

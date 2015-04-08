@@ -71,4 +71,4 @@ $language_array = Array(
   'wrong_activationkey'=>'აქტივაციის კოდი არასწორია!',
   'wrong_securitycode'=>'უსაფრთხოების კოდი არასწორია!'
 );
-?>
+

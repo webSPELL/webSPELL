@@ -104,4 +104,4 @@ $language_array = Array(
 	'won_clanwars'=>'vundet kampe',
 	'won_points'=>'vundet point'
 );
-?>
+

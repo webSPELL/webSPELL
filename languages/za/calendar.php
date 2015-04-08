@@ -110,4 +110,4 @@ $language_array = Array(
   'enter_title'=>'Geen lang titel ingevoer nie!',
   'enter_info'=>'Geen inligting ingevoer nie!'
 );
-?>
+

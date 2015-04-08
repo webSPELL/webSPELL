@@ -74,4 +74,4 @@ $language_array = Array(
 	'visitor_comments'=>'Tillat gjester å kommentere',
 	'tags'=>'tags'
 );
-?>
+

@@ -376,39 +376,45 @@ if ($action == "add") {
         $CAPCLASS = new \webspell\Captcha;
         $CAPCLASS->createTransaction();
         $hash = $CAPCLASS->getHash();
-        while ($db = mysqli_fetch_array($links)) {
-            if ($i % 2) {
-                $td = 'td1';
-            } else {
-                $td = 'td2';
-            }
+        if (mysqli_num_rows($links)) {
+            while ($db = mysqli_fetch_array($links)) {
+                if ($i % 2) {
+                    $td = 'td1';
+                } else {
+                    $td = 'td2';
+                }
 
-            $linklist = '<select name="sortlinks[]">';
-            for ($n = 1; $n <= $anzlinks; $n++) {
-                $linklist .= '<option value="' . $db[ 'linkID' ] . '-' . $n . '">' . $n . '</option>';
-            }
-            $linklist .= '</select>';
-            $linklist = str_replace(
-                'value="' . $db[ 'linkID' ] . '-' . $db[ 'sort' ] . '"',
-                'value="' . $db[ 'linkID' ] . '-' . $db[ 'sort' ] . '" selected="selected"',
-                $linklist
-            );
+                $linklist = '<select name="sortlinks[]">';
+                for ($n = 1; $n <= $anzlinks; $n++) {
+                    $linklist .= '<option value="' . $db[ 'linkID' ] . '-' . $n . '">' . $n . '</option>';
+                }
+                $linklist .= '</select>';
+                $linklist = str_replace(
+                    'value="' . $db[ 'linkID' ] . '-' . $db[ 'sort' ] . '"',
+                    'value="' . $db[ 'linkID' ] . '-' . $db[ 'sort' ] . '" selected="selected"',
+                    $linklist
+                );
 
-            echo '<tr>
-                <td class="' . $td . '"><b>' . $db[ 'name' ] . '</b><br><small>' . $db[ 'url' ] . '</small></td>
-                <td class="' . $td . '" align="center"><small><b>' .
-                $_language->module[ 'admin_' . getinput($db[ 'accesslevel' ]) ] . '</b></small></td>
-                <td class="' . $td . '" align="center">
-                    <a href="admincenter.php?site=addons&amp;action=edit&amp;linkID=' . $db[ 'linkID' ] . '">' .
-                        $_language->module[ 'edit' ] .'</a>
-                <input type="button" onclick="MM_confirm(
-                    \'' . $_language->module[ 'really_delete_link' ] . '\',
-                    \'admincenter.php?site=addons&amp;delete=true&amp;linkID=' . $db[ 'linkID' ] .
-                    '&amp;captcha_hash=' . $hash . '\'
-                )" value="' . $_language->module[ 'delete' ] . '"></td>
-                <td class="' . $td . '" align="center">' . $linklist . '</td>
-            </tr>';
-            $i++;
+                echo '<tr>
+                    <td class="' . $td . '"><b>' . $db[ 'name' ] . '</b><br><small>' . $db[ 'url' ] . '</small></td>
+                    <td class="' . $td . '" align="center"><small><b>' .
+                    $_language->module[ 'admin_' . getinput($db[ 'accesslevel' ]) ] . '</b></small></td>
+                    <td class="' . $td . '" align="center">
+                        <a class="input" href="admincenter.php?site=addons&amp;action=edit&amp;linkID=' .
+                            $db[ 'linkID' ] .'">' . $_language->module[ 'edit' ] .'</a>
+                    <input class="input" type="button" onclick="MM_confirm(
+                        \'' . $_language->module[ 'really_delete_link' ] . '\',
+                        \'admincenter.php?site=addons&amp;delete=true&amp;linkID=' . $db[ 'linkID' ] .
+                        '&amp;captcha_hash=' . $hash . '\'
+                    )" value="' . $_language->module[ 'delete' ] . '"></td>
+                    <td class="' . $td . '" align="center">' . $linklist . '</td>
+                </tr>';
+                $i++;
+            }
+        } else {
+            echo '<tr>'.
+                    '<td class="td1" colspan="4">' . $_language->module[ 'no_additional_links_available' ] . '</td>'.
+                 '</tr>';
         }
     }
 

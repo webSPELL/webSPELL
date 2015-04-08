@@ -34,4 +34,4 @@ $language_array = Array(
   'outgoing'=>'الصادره',
   'owner_responsible'=>'المالك هو المسؤول عن هذه الصفحة.'
 );
-?>
+

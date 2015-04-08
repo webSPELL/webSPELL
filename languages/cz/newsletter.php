@@ -52,4 +52,4 @@ $language_array = Array(
 	'your_mail_adress'=>'Tvoje e-mailová adresa',
 	'your_mail_adress_deleted'=>'Tvoje e-mailová adresa byla smazána.'
 );
-?>
+

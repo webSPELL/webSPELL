@@ -71,4 +71,4 @@ $language_array = Array(
   'time'=>'aika',
   'wrong_security_code'=>'Turvakoodi oli väärä.'
 );
-?>
+

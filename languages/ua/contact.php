@@ -56,4 +56,4 @@ $language_array = Array(
   'unknown_receiver'=>'невідомий приймач',
   'wrong_securitycode'=>'Ви ввели код перевірки неправильно!'
 );
-?>
+

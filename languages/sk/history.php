@@ -32,4 +32,4 @@ $language_array = Array(
 	'history'=>'História',
 	'no_history'=>'Momentálne nie je pridaný žiaden záznam.'
 );
-?>
+

@@ -104,4 +104,4 @@ $language_array = Array(
 	'won_clanwars'=>'vunna clanmatcher',
 	'won_points'=>'vunna poäng'
 );
-?>
+

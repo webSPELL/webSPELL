@@ -105,4 +105,4 @@ $language_array = Array(
 	'won_points'=>'gewonnen punten'
 
 );
-?>
+

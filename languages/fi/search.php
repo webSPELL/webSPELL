@@ -73,4 +73,4 @@ $language_array = Array(
   'wrong_securitycode'=>'Väärä turvallisuuskoodi!',
   'no_result'=>'Ei merkintöjä löytynyt "%s"'
 );
-?>
+

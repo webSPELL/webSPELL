@@ -105,4 +105,4 @@ $language_array = Array(
 	'you_have_to_enter_filename'=>'Írj be fájlnevet!',
 	'you_have_to_enter_file'=>'Meg kell adnod egy fájlt / URL-t!'
 );
-?>
+

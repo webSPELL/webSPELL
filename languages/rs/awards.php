@@ -48,4 +48,4 @@ $language_array = Array(
   'squad'=>'Тим',
   'update_award'=>'Сачувај измене'
 );
-?>
+

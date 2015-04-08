@@ -38,4 +38,4 @@ $language_array = Array(
   'save'=>'Späichern',
   'no_session'=>'Fehler beim Ännern vun der Sproche. Wann ech gelift versécher dech, dass däin Browser Cookies akzepétiert an probéier et nach eng Kéier.'
 );
-?>
+

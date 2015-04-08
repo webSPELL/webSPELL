@@ -32,4 +32,4 @@ $language_array = Array(
     'error_404'=>'Error 404',
     'message_404'=>'This pages does not exists.'
 );
-?>
+

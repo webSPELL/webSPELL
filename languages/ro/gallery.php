@@ -73,4 +73,4 @@ $language_array = Array(
   'you_have_already_rated'=>'Ați votat deja.',
   'no_thumb'=>'Lipsă pictogramă'
 );
-?>
+

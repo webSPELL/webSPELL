@@ -67,4 +67,4 @@ $language_array = Array(
 	'wrong_securitycode'=>'Hibás biztonsági kód!',
 	'no_result'=>'Nem található "%s"'
 );
-?>
+

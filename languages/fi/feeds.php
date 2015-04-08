@@ -38,4 +38,4 @@ $language_array = Array(
   'news_feed'=>'Uutiset',
   'latest_news_from'=>'Viimeisimmät uutiset'
 );
-?>
+

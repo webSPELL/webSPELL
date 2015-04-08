@@ -56,4 +56,4 @@ $language_array = Array(
   'unknown_receiver'=>'onbekende ontvanger',
   'wrong_securitycode'=>'Verkeerde sekuriteit kode is ingevoer!'
 );
-?>
+

@@ -73,4 +73,4 @@ $language_array = Array(
   'wrong_securitycode'=>'Вы ввели неверный код проверки!',
   'no_result'=>'Записей не найдено для "%s"'
 );
-?>
+

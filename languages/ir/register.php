@@ -69,4 +69,4 @@ $language_array = Array(
   'wrong_activationkey'=>'!کد فعال سازی اشتباه است',
   'wrong_securitycode'=>'!کد اشتباه است'
 );
-?>
+

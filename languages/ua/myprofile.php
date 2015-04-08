@@ -144,4 +144,4 @@ $language_array = Array(
   'you_have_to_username'=>'Ви повинні ввести ім\'я користувача!',
   'you_have_to_valid_email'=>'Ваша адреса електронної пошти невірна!'
 );
-?>
+

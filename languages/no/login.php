@@ -44,4 +44,4 @@ $language_array = Array(
 	'registered_users'=>'registrerte brukere',
 	'welcome_back'=>'velkommen tilbake'
 );
-?>
+

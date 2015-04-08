@@ -46,4 +46,4 @@ $language_array = Array(
   'save_banner'=>'حذف الافتة',
   'use_following_code'=>'استخدام الاكواد التالية، لإدراج لافتة على صفحتك الرئيسية.'
 );
-?>
+

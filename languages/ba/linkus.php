@@ -46,4 +46,4 @@ $language_array = Array(
   'save_banner'=>'spremi banner',
   'use_following_code'=>'Koristite sljedeci kod da umetnite banner na vašu stranicu.'
 );
-?>
+

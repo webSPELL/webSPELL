@@ -88,4 +88,4 @@ $language_array = Array(
   'yellow'=>'Giel',
   'yes_can_combine'=>'Beispill:'
 );
-?>
+

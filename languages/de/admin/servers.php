@@ -47,4 +47,4 @@ $language_array = Array(
   'transaction_invalid'=>'Transaktions ID ungültig',
   'to_sort'=>'sortieren'
 );
-?>
+

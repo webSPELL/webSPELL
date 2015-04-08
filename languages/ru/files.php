@@ -106,4 +106,4 @@ $language_array = Array(
   'you_have_to_enter_filename'=>'Вы должны ввести имя файла!',
   'you_have_to_enter_file'=>'Вы должны ввести ссылку на файл!'
 );
-?>
+

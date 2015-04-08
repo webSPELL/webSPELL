@@ -33,4 +33,4 @@ $language_array = Array(
   'news_feed'=>'الاخبار',
   'latest_news_from'=>'اخر الاخبار'
 );
-?>
+

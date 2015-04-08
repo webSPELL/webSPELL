@@ -58,4 +58,4 @@ $language_array = Array(
 	'title_join_us'=>'Tapo nariu',
 	'wrong_security_code'=>'Apsaugos kodas blogas!'
 );
-?>
+

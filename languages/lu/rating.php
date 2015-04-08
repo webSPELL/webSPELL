@@ -38,4 +38,4 @@ $language_array = Array(
   'no_access'=>'keen Zougrëff!',
   'just_rate_between_0_10'=>'Wann ech gelift bewäert nëmmen vun 0 bis 10 Punkten!'
 );
-?>
+

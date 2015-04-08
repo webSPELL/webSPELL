@@ -50,4 +50,4 @@ $language_array = Array(
   'users_from_group'=>'Felhasználók',
   'transaction_invalid'=>'A művelet azonosítója érvénytelen'
 );
-?>
+

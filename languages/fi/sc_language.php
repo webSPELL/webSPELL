@@ -38,4 +38,4 @@ $language_array = Array(
   'save'=>'Tallenna',
   'no_session'=>'Tarkista ja hyväksy selaimesi evästeet ja valitse kieli uudelleen.'
 );
-?>
+

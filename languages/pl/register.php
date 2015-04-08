@@ -70,4 +70,4 @@ Dziękujemy za rejestracje.
 	'wrong_activationkey'=>'Zły kod aktywacyjny!',
 	'wrong_securitycode'=>'Zły kod bezpieczeństwa!'
 );
-?>
+

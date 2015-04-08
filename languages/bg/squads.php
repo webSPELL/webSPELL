@@ -60,4 +60,4 @@ $language_array = Array(
   'town'=>'Град',
   'userpicture'=>'потребителска снимка'
 );
-?>
+

@@ -72,4 +72,4 @@ $language_array = Array(
   'you_have_already_rated'=>'Вец сте оцијенили слику.',
   'no_thumb'=>'Нема Тхумб-слике'
 );
-?>
+

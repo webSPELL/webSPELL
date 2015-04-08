@@ -136,4 +136,4 @@ $language_array = Array(
   'your_message'=>'mesajul dumneavoastră',
   'your_name'=>'numele dumneavoastră'
 );
-?>
+

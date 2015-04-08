@@ -53,4 +53,4 @@ $language_array = Array(
 	'upcoming_events'=>'kommende begivenheder',
 	'tags'=>'tags'
 );
-?>
+

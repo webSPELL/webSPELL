@@ -45,4 +45,4 @@ $language_array = Array(
   'your_buddylist'=>'Λίστα φίλων',
   'your_ignorelist'=>'Λίστα αποκλεισμού'
 );
-?>
+

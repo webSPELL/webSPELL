@@ -83,4 +83,4 @@ $language_array = Array(
   'yellow'=>'Žuto',
   'yes_can_combine'=>'Da, naravno da možete, npr. da privučete nečiju pažnju možete napisati:'
 );
-?>
+

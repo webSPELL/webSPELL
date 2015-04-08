@@ -144,4 +144,4 @@ Zahvaljujemo se vam za vaše zanimanje
   'you_have_to_username'=>'Morate vnesti uporabniško ime!',
   'you_have_to_valid_email'=>'Vaš e-mail ni veljavna!'
 );
-?>
+

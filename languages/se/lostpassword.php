@@ -48,4 +48,4 @@ Ha det så kul på våran hemsida
 			 		&#8226; <a href="index.php?site=login">logga in</a>',
 	'your_email'=>'Din email'
 );
-?>
+

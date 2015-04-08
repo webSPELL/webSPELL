@@ -56,4 +56,4 @@ $language_array = Array(
   'unknown_receiver'=>'neznan prejemnik',
   'wrong_securitycode'=>'Napačna varnostna koda!'
 );
-?>
+

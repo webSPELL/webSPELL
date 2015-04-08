@@ -59,4 +59,4 @@ $language_array = Array(
   'title_join_us'=>'Kļūt par biedru',
   'wrong_security_code'=>'Drošības kods ir nepareizs!'
 );
-?>
+

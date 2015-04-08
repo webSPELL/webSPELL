@@ -56,4 +56,4 @@ $language_array = Array(
   'unknown_receiver'=>'непознат получател',
   'wrong_securitycode'=>'Кодът за сигурност е грешен!'
 );
-?>
+

@@ -54,4 +54,4 @@ Yeni Şifreniz: %new_password%
     &#8226; <a href="index.php?site=login">giriş</a>',
   'your_email'=>'E-Postanız'
 );
-?>
+

@@ -32,4 +32,4 @@ $language_array = Array(
 	'save'=>'Lagre',
 	'no_session'=>'Please make sure cookies are enabled and try to change the language again.'
 );
-?>
+

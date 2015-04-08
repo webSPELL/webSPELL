@@ -155,7 +155,6 @@ if (isset($_POST['save'])) {
 
             // mail to user
             $ToEmail = $mail;
-            $ToName = $username;
             $header = str_replace(
                 array('%username%', '%activationlink%', '%pagetitle%', '%homepage_url%'),
                 array(stripslashes($username), stripslashes($activationlink), $hp_title, $hp_url),
@@ -166,20 +165,43 @@ if (isset($_POST['save'])) {
                 array(stripslashes($username), stripslashes($activationlink), $hp_title, $hp_url),
                 $_language->module['mail_text']
             );
+            $sendmail = \webspell\Email::sendEmail($admin_email, 'Register', $ToEmail, $header, $Message);
 
-            if (
-                mail(
-                    $ToEmail,
-                    $header,
-                    $Message,
-                    "From:" . $admin_email . "\nContent-type: text/plain; charset=utf-8\n"
-                )
-            ) {
-                redirect("index.php", $_language->module['register_successful'], 3);
-                $show = false;
+            if ($sendmail['result'] == 'fail') {
+                if (isset($sendmail['debug'])) {
+                    $fehler = array();
+                    $fehler[] = $sendmail[ 'error' ];
+                    $fehler[] = $sendmail[ 'debug' ];
+                    redirect(
+                        "index.php",
+                        generateErrorBoxFromArray($_language->module['mail_failed'], $fehler),
+                        10
+                    );
+                    $show = false;
+                } else {
+                    $fehler = array();
+                    $fehler[] = $sendmail['error'];
+                    redirect(
+                        "index.php",
+                        generateErrorBoxFromArray($_language->module['mail_failed'], $fehler),
+                        10
+                    );
+                    $show = false;
+                }
             } else {
-                redirect("index.php", $_language->module['mail_failed'], 3);
-                $show = false;
+                if (isset($sendmail['debug'])) {
+                    $fehler = array();
+                    $fehler[] = $sendmail[ 'debug' ];
+                    redirect(
+                        "index.php",
+                        generateBoxFromArray($_language->module['register_successful'], 'alert-success', $fehler),
+                        10
+                    );
+                    $show = false;
+                } else {
+                    redirect("index.php", $_language->module['register_successful'], 3);
+                    $show = false;
+                }
             }
         }
     } else {
@@ -207,7 +229,7 @@ if (isset($_GET['key'])) {
                 email=email_change,
                 email_change=''
             WHERE
-                email_activate='" . $_GET['mailkey']
+                email_activate='" . $_GET['mailkey'] . "'"
         );
         if (mysqli_affected_rows($_database)) {
             redirect('index.php?site=login', $_language->module['mail_activation_successful'], 3);

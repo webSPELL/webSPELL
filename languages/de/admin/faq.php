@@ -48,4 +48,4 @@ $language_array = Array(
   'transaction_invalid'=>'Transaktions ID ungültig',
   'tags'=>'Tags'
 );
-?>
+

@@ -74,4 +74,4 @@ $language_array = Array(
 	'visitor_comments'=>'Tillåt kommentarer från besökare',
 	'tags'=>'Taggar'
 );
-?>
+

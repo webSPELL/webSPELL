@@ -72,4 +72,4 @@ $language_array = Array(
 	'you_have_already_rated'=>'Már értékelted.',
 	'no_thumb'=>'Nincs előnézeti kép'
 );
-?>
+

@@ -32,12 +32,10 @@ $language_array = Array(
 	'email_failed'=>'There was a problem while sending mail. Please contact the webmaster.',
 	'email_subject'=>'Your account for %pagetitle%',
 	'email_text'=>'Your Account for %pagetitle%
-ATTENTION your password has been changed
-
-your username: %username%
-your new password: %new_password%
-
-have fun on our page
+<p>ATTENTION your password has been changed</p>
+<p>your username: %username%<br>
+your new password: %new_password%</p>
+<p>have fun on our page</p>
 %homepage_url%',
 	'get_password'=>'get password',
 	'lost_password'=>'lost password',
@@ -48,4 +46,4 @@ have fun on our page
     &#8226; <a href="index.php?site=login">login</a>',
 	'your_email'=>'Your E-Mail'
 );
-?>
+

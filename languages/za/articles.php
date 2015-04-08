@@ -80,4 +80,4 @@ $language_array = Array(
   'visitor_comments'=>'besoeker kommentaar:',
   'tags'=>'tags'
 );
-?>
+

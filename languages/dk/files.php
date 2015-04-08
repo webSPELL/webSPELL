@@ -105,4 +105,4 @@ $language_array = Array(
 	'you_have_to_enter_filename'=>'Du skal indtaste et filnavn!',
 	'you_have_to_enter_file'=>'Du skal indtaste en fil / url!'
 );
-?>
+

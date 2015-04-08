@@ -39,4 +39,4 @@ $language_array = Array(
   'shoutbox'=>'hüüdmiskast',
   'sort'=>'Sorteerimine:'
 );
-?>
+

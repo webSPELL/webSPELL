@@ -144,4 +144,4 @@ Faleminderit për interesin tuaj
   'you_have_to_username'=>'Duhet të vendosni një emër përdoruesi!',
   'you_have_to_valid_email'=>'Maili juaj nuk ëshë i vlefshëm!'
 );
-?>
+

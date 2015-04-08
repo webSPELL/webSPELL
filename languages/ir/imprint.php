@@ -46,4 +46,4 @@ $language_array = Array(
 	'responsible_persons'=>'شخص مسئول',
 	'webmaster'=>'وب مستر:'
 );
-?>
+

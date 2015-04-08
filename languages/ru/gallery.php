@@ -73,4 +73,4 @@ $language_array = Array(
   'you_have_already_rated'=>'Вы уже оценили.',
   'no_thumb'=>'Без иконок'
 );
-?>
+

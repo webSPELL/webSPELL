@@ -42,7 +42,7 @@ class Template
     /**
     * returns the content of a template file
     *
-    * @param $template name of the template
+    * @param string $template name of the template
     *
     * @return string content of the template
     * @throws \Exception when the file is not found
@@ -66,7 +66,7 @@ class Template
     *
     * @return string
     */
-    private function replace($template, $data)
+    private function replace($template, $data = array())
     {
         return strtr($template, $data);
     }
@@ -80,7 +80,7 @@ class Template
     * @return string
     * @throws \Exception
     */
-    public function replaceTemplate($template, $data)
+    public function replaceTemplate($template, $data = array())
     {
         $templateString = $this->loadFile($template);
         $templateTranslated = $this->replaceLanguage($templateString);
@@ -110,7 +110,7 @@ class Template
     * @return string
     * @throws \Exception
     */
-    public function replaceMulti($template, &$datas)
+    public function replaceMulti($template, &$datas = array())
     {
         if (!is_array($datas) || !isset($datas[ 0 ]) || !is_array($datas[ 0 ])) {
             throw new \Exception("No multidimensional data given", 2);

@@ -71,4 +71,4 @@ Vă mulţumim pentru înregistrare
   'wrong_activationkey'=>'Codul de activare este greşit!',
   'wrong_securitycode'=>'Codul de siguranţă este greşit!'
 );
-?>
+

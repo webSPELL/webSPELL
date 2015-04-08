@@ -138,4 +138,4 @@ Köszönjük érdeklődésed
 	'you_have_to_username'=>'Írd be a felhesználóneved!',
 	'you_have_to_valid_email'=>'Az e-mail címed nem érvényes!'
 );
-?>
+

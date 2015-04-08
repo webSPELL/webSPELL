@@ -135,21 +135,30 @@ hr { margin: 0px; }
             $bcc = $emails;
         }
 
-        $header = "From:" . addslashes($admin_name) . " <$admin_email>\n";
-        $header .= "Reply-To:" . addslashes($admin_email) . "\n";
-        $header .= "Content-Type: text/html; charset=utf-8\n";
-
         $success = true;
         $bcc = array_unique($bcc);
+        $subject = $hp_title . " Newsletter";
         foreach ($bcc as $mailto) {
-            if (!mail($mailto, $hp_title . " Newsletter", $emailbody, $header)) {
-                $succces = false;
+            $sendmail = \webspell\Email::sendEmail($admin_email, 'Newsletter', $mailto, $subject, $emailbody);
+            if ($sendmail['result'] == 'fail') {
+                $success = false;
             }
         }
         if ($success) {
             echo '<b>' . $receptionists . '</b><br /><br />' . implode(", ", $bcc);
+            if (isset($sendmail['debug'])) {
+                echo '<b> Debug </b>';
+                echo '<br>' . $sendmail['debug'];
+            }
         } else {
-            echo '<b>' . $error_send . '</b>';
+            if (isset($sendmail['debug'])) {
+                echo '<b>' . $error_send . '</b>';
+                echo '<br>' . $sendmail['error'];
+                echo '<br>' . $sendmail['debug'];
+            } else {
+                echo '<b>' . $error_send . '</b>';
+                echo '<br>' . $sendmail['error'];
+            }
         }
         redirect("admincenter.php?site=newsletter", "", 5);
     } else {

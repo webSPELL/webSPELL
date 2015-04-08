@@ -31,4 +31,4 @@ $language_array = Array(
 
 	'fight_us'=>'Meskite mums iššūkį'
 );
-?>
+

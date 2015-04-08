@@ -34,4 +34,4 @@ $language_array = Array(
 	'reply'=>'Atsakymai',
 	'replies'=>'Atsakymai'
 );
-?>
+

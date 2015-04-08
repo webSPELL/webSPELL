@@ -80,13 +80,10 @@ $language_array = Array(
 	'mail_on_new_pm'=>'Bei neuer PN E-Mail senden?',
 	'mail_subject'=>'E-Mail Aktivierung für %homepage_url%',
 	'mail_text'=>'Hallo %username%!
-
-Du hast deine bei %pagetitle% (http://%homepage_url%) hinterlegte Email-Adresse geändert.
-
-Um die Änderung zu bestätigen bitte folgende Adresse besuchen:
-%activationlink%
-
-Vielen Dank für dein Interesse
+<p>Du hast deine bei %pagetitle% (http://%homepage_url%) hinterlegte Email-Adresse geändert.</p>
+<p>Um die Änderung zu bestätigen bitte folgende Adresse besuchen:</p>
+<p>%activationlink%</p>
+<p>Vielen Dank für dein Interesse</p>
 %pagetitle% - %homepage_url%',
 	'mainboard'=>'Mainboard',
 	'male'=>'männlich',
@@ -137,4 +134,4 @@ Vielen Dank für dein Interesse
 	'you_have_to_username'=>'Du musst einen Benutzernamen angeben!',
 	'you_have_to_valid_email'=>'Die E-Mail Adresse ist nicht korrekt!'
 );
-?>
+

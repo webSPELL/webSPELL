@@ -34,4 +34,4 @@ $language_array = Array(
 	'to_much_results'=>'Il y a trop de résultats, merci d\'affiner votre recherche.'
 );
 
-?>
+

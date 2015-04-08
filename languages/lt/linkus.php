@@ -45,4 +45,4 @@ $language_array = Array(
 	'save_banner'=>'išsaugoti reklamą',
 	'use_following_code'=>'Pasinaudokite šiuo kodu, kad įkelti mūsų reklamą pas save į tinklalapį.'
 );
-?>
+

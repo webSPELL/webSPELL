@@ -46,4 +46,4 @@ $language_array = Array(
 	'use_following_code'=>'Gebruik de volgende code, om de banner op je homepage te laten zien.'
 
 );
-?>
+

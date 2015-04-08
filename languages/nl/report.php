@@ -35,4 +35,4 @@ $language_array = Array(
 	'wrong_securitycode'=>'De veiligheids code was verkeerd!<br><br>[<a href="javascript:back();">terug</a>]'
 
 );
-?>
+

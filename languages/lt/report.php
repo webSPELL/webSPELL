@@ -34,4 +34,4 @@ $language_array = Array(
 	'report_recognized'=>'Jūsų pranešimas buvo atpažintas. Ačiū jums.',
   'wrong_securitycode'=>'Jūs įvedėte blogą apsaugos kodą<br><br>[<a href="javascript:back();">grįžti</a>]'
 );
-?>
+

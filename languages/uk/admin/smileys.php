@@ -50,4 +50,4 @@ $language_array = Array(
   'smiley_name'=>'Smiley Name',
   'transaction_invalid'=>'Transaction ID invalid'
 );
-?>
+

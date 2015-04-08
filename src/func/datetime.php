@@ -41,7 +41,6 @@ function getformatdate($date)
 {
     global $userID, $default_format_date;
 
-    $DateFormat = '';
     if ($userID && !isset($_GET['userID']) && !isset($_POST['userID'])) {
         $DateFormat = date(getuserformatdate($userID), $date);
     } else {
@@ -54,7 +53,6 @@ function getformattime($time)
 {
     global $userID, $default_format_time;
 
-    $timeFormat = '';
     if ($userID && !isset($_GET['userID']) && !isset($_POST['userID'])) {
         $timeFormat = date(getuserformattime($userID), $time);
     } else {
@@ -67,7 +65,6 @@ function getformatdatetime($date_time)
 {
     global $userID, $default_format_date, $default_format_time;
 
-    $datetimeFormat = '';
     if ($userID && !isset($_GET['userID']) && !isset($_POST['userID'])) {
         $datetimeFormat = date((getuserformatdate($userID) . " - " . getuserformattime($userID)), $date_time);
     } else {

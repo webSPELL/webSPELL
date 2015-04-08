@@ -34,4 +34,4 @@ $language_array = Array(
   'outgoing'=>'Појдовни',
   'owner_responsible'=>'Сопственикот е одговорен за оваа страница.'
 );
-?>
+

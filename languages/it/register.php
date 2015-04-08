@@ -70,4 +70,4 @@ Grazie per la vostra applicazione
 	'wrong_activationkey'=>'Il tuo codice di sblocco è sbagliato!',
 	'wrong_securitycode'=>'Il codice di sicurezza è sbagliato!'
 );
-?>
+

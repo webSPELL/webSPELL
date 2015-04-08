@@ -85,4 +85,4 @@ $language_array = Array(
   'large_picture'=>'Liels Attēls',
   'show_original'=>'rādīt oriģinālu'
 );
-?>
+

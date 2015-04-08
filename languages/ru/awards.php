@@ -50,4 +50,4 @@ $language_array = Array(
   'squad'=>'Отряд',
   'update_award'=>'Обновить награду'
 );
-?>
+

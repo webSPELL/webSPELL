@@ -70,4 +70,4 @@ $language_array = Array(
   'squads'=>'Equippen',
   'who_is_online'=>'Wen ass online?'
 );
-?>
+

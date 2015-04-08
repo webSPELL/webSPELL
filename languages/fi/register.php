@@ -76,4 +76,4 @@ Kiitos rekisteröinnistäsi
   'wrong_activationkey'=>'Aktivointikoodi on väärä!',
   'wrong_securitycode'=>'Turvallisuuskoodi on väärä!'
 );
-?>
+

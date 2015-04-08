@@ -37,4 +37,4 @@ $language_array = Array(
 
   'security_code'=>'Код за сигурност'
 );
-?>
+

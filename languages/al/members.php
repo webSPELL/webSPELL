@@ -55,4 +55,4 @@ $language_array = Array(
   'status'=>'Statut',
   'town'=>'Qytet'
 );
-?>
+

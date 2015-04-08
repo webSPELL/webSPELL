@@ -55,4 +55,4 @@ $language_array = Array(
   'squad'=>'Equipe',
   'update_award'=>'Auszeechnung aktualiséieren'
 );
-?>
+

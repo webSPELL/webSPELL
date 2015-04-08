@@ -43,15 +43,11 @@ $language_array = Array(
 	'mail_inuse'=>'Es existiert bereits eine Anmeldung für diese Mailadresse.',
 	'mail_subject'=>'Anmeldebestätigung für %homepage_url%',
 	'mail_text'=>'Hallo %username%!
-
-Deine Anmeldung auf %pagetitle% (%homepage_url%) war erfolgreich. Hier noch einmal deine Zugangsdaten:
-
-Dein Benutzername: %username%
-
-Um deine Registrierung jetzt abzuschließen, aktiviere deinen Account, indem du folgenden Link besuchst:
-%activationlink%
-
-Vielen Dank für deine Anmeldung
+<p>Deine Anmeldung auf %pagetitle% (%homepage_url%) war erfolgreich. Hier noch einmal deine Zugangsdaten:</p>
+<p>Dein Benutzername: %username%</p>
+<p>Um deine Registrierung jetzt abzuschließen, aktiviere deinen Account, indem du folgenden Link besuchst:<br>
+%activationlink%</p>
+<p>Vielen Dank für deine Anmeldung</p>
 %pagetitle% - %homepage_url%',
 	'nickname'=>'Nickname',
 	'nickname_inuse'=>'Der Nickname ist bereits vergeben.',
@@ -70,4 +66,4 @@ Vielen Dank für deine Anmeldung
 	'wrong_activationkey'=>'Dein Freischaltcode ist falsch!',
 	'wrong_securitycode'=>'Der Sicherheitscode ist falsch!'
 );
-?>
+

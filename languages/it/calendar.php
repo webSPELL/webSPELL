@@ -104,4 +104,4 @@ $language_array = Array(
 	'enter_title'=>'Nessun titolo lungo entrato!',
 	'enter_info'=>'Non ci sono informazioni!'
 );
-?>
+

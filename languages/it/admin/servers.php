@@ -47,4 +47,4 @@ $language_array = Array(
   'transaction_invalid'=>'ID transazione non valido',
   'to_sort'=>'assortire'
 );
-?>
+

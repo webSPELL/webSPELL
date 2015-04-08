@@ -55,4 +55,4 @@ $language_array = Array(
 	'x_of_y_mb_in_use'=>'<span style="color:%spacecolor%">&nbsp;%used_size%</span> van %available_size% MB zijn in gebruik.'
 
 );
-?>
+

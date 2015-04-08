@@ -33,4 +33,4 @@ $language_array = Array(
 	'no_result'=>'Kein Suchergebnis',
 	'to_much_results'=>'Zu viele Suchergebnisse, bitte mehr Zeichen eingeben.'
 );
-?>
+

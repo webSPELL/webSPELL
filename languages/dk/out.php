@@ -33,4 +33,4 @@ $language_array = Array(
 	'outgoing'=>'Udgående',
 	'owner_responsible'=>'Ejeren er ansvarlig for hjemmesiden.'
 );
-?>
+

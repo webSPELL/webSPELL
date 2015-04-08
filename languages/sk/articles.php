@@ -74,4 +74,4 @@ $language_array = Array(
 	'visitor_comments'=>'Povololiť komentáre návštevníkov',
 	'tags'=>'tagy'
 );
-?>
+

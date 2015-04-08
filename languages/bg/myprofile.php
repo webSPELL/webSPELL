@@ -144,4 +144,4 @@ $language_array = Array(
   'you_have_to_username'=>'Трябва да въведете потребителско име!',
   'you_have_to_valid_email'=>'Tрябва да въведете валиден E-mail!'
 );
-?>
+

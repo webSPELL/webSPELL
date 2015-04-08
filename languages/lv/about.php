@@ -33,4 +33,4 @@ $language_array = Array(
   'about_title'=>'Par mums',
   'no_about'=>'Pagaidām apraksts nav pieejams!'
 );
-?>
+

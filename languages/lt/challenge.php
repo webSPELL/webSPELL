@@ -65,4 +65,4 @@ $language_array = Array(
 	'time'=>'Laikas',
 	'wrong_security_code'=>'Apsaugos kodas blogas.'
 );
-?>
+

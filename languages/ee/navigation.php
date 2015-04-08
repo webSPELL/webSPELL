@@ -65,4 +65,4 @@ $language_array = Array(
   'squads'=>'Rühmad',
   'who_is_online'=>'Kes on online?'
 );
-?>
+

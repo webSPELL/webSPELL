@@ -49,7 +49,7 @@ class Tags
         }
     }
 
-    public static function getTags($relType, $relID, $array = false)
+    public static function getTags($relType, $relID, $asArray = false)
     {
         $tags = array();
         $get = safe_query("SELECT * FROM " . PREFIX . "tags WHERE rel='" . $relType . "' AND ID='" . $relID . "'");
@@ -57,7 +57,7 @@ class Tags
             $tags[] = $ds['tag'];
         }
         $tags = array_unique($tags);
-        return ($array === true) ? $tags : implode(", ", $tags);
+        return ($asArray === true) ? $tags : implode(", ", $tags);
     }
 
     public static function getTagsLinked($relType, $relID)
@@ -143,8 +143,7 @@ class Tags
             )
         ) {
             if (strlen($ds['content']) > 255) {
-                $string = wordwrap($ds['content'], 255);
-                $string = substr($ds['content'], 0, strpos($ds['content'], "\n")) . '...';
+                $string = substr($ds['content'], 0, strpos(wordwrap($ds['content'], 255), "\n")) . '...';
             } else {
                 $string = $ds['content'];
             }
@@ -191,8 +190,7 @@ class Tags
             );
             $get = mysqli_fetch_assoc($get2);
             if (strlen($get['content']) > 255) {
-                $string = wordwrap($get['content'], 255);
-                $string = substr($get['content'], 0, strpos($get['content'], "\n")) . '...';
+                $string = substr($get['content'], 0, strpos(wordwrap($get['content'], 255), "\n")) . '...';
             } else {
                 $string = $get['content'];
             }

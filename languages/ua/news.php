@@ -90,4 +90,4 @@ $language_array = Array(
   'yes'=>'так',
   'tags'=>'теги'
 );
-?>
+

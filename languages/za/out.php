@@ -39,4 +39,4 @@ $language_array = Array(
   'outgoing'=>'Uitgaande',
   'owner_responsible'=>'Die eienaar is verantwoordelik vir hierdie bladsy.'
 );
-?>
+

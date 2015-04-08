@@ -60,4 +60,4 @@ $language_array = Array(
   'visitor_comments'=>'σχολια επισκεπτων',
   'x_of_y_mb_in_use'=>'<span style="color:%spacecolor%">&nbsp;%used_size%</span> απο %available_size% MB σε χρηση.'
 );
-?>
+

@@ -33,4 +33,4 @@ $language_array = Array(
   'no_access'=>'Пристапот е забранет!',
   'just_rate_between_0_10'=>'Ве молиме дадете го само 0-10 поени!'
 );
-?>
+

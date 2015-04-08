@@ -105,4 +105,4 @@ $language_array = Array(
 	'you_have_to_enter_filename'=>'Musíte zadať názov súboru!',
 	'you_have_to_enter_file'=>'Musíte zadať súbor / url!'
 );
-?>
+
