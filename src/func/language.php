@@ -38,25 +38,17 @@ class Language
     public function setLanguage($to)
     {
 
-        $filepath = "languages/";
         $langs = array();
 
-        if ($dh = opendir($filepath)) {
-            while ($file = mb_substr(readdir($dh), 0, 2)) {
-                if ($file != "." && $file != ".." && is_dir($filepath . $file)) {
-                    $langs[ ] = $file;
-                }
+        foreach (new \DirectoryIterator($this->language_path) as $fileInfo) {
+            if ($fileInfo->isDot() === false && $fileInfo->isDir() === true) {
+                $langs[ ] = $fileInfo->getFilename();
             }
-            closedir($dh);
         }
 
         if (in_array($to, $langs)) {
-            if (is_dir($this->language_path . $to)) {
-                $this->language = $to;
-                return true;
-            } else {
-                return false;
-            }
+            $this->language = $to;
+            return true;
         } else {
             return false;
         }
@@ -72,30 +64,32 @@ class Language
 
         global $default_language;
 
-        $module = str_replace(array('\\', '/', '.'), '', $module);
+
         if ($admin) {
-            $this->language_path = '../languages/';
-            if (file_exists($this->language_path . $this->language . '/admin/' . $module . '.php')) {
-                $module_file = $this->language_path . $this->language . '/admin/' . $module . '.php';
-            } elseif (file_exists($this->language_path . $default_language . '/admin/' . $module . '.php')) {
-                $module_file = $this->language_path . $default_language . '/admin/' . $module . '.php';
-            } elseif (file_exists($this->language_path . 'uk/admin/' . $module . '.php')) {
-                // UK as worst case
-                $module_file = $this->language_path . 'uk/admin/' . $module . '.php';
-            } else {
-                return false;
-            }
+            $langFolder = '../'.$this->language_path;
+            $folderPath = '%s%s/admin/%s.php';
         } else {
-            if (file_exists($this->language_path . $this->language . '/' . $module . '.php')) {
-                $module_file = $this->language_path . $this->language . '/' . $module . '.php';
-            } elseif (file_exists($this->language_path . $default_language . '/' . $module . '.php')) {
-                $module_file = $this->language_path . $default_language . '/' . $module . '.php';
-            } elseif (file_exists($this->language_path . 'uk/' . $module . '.php')) {
-                // UK as worst case
-                $module_file = $this->language_path . 'uk/' . $module . '.php';
-            } else {
-                return false;
+            $langFolder = $this->language_path;
+            $folderPath = '%s%s/%s.php';
+        }
+
+        $languageFallbackTable = array(
+                            $this->language,
+                            $default_language,
+                            'uk');
+
+        $module = str_replace(array('\\', '/', '.'), '', $module);
+
+        foreach ($languageFallbackTable as $folder) {
+            $path = sprintf($folderPath, $langFolder, $folder, $module);
+            if (file_exists($path)) {
+                $module_file = $path;
+                break;
             }
+        }
+
+        if (!isset($module_file)) {
+            return false;
         }
 
         if (isset($module_file)) {
