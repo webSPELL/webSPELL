@@ -2149,7 +2149,6 @@ function update420_430()
       ('', 'serbian', 'rs', 'serbian'),
       ('', 'slovenian', 'si', 'slovenian'),
       ('', 'latvian', 'lv', 'latvian'),
-      ('', 'finnish', 'fi', 'finnish'),
       ('', 'turkish', 'tr', 'turkish'),
       ('', 'albanian', 'al', 'albanian'),
       ('', 'bulgarian', 'bg', 'bulgarian'),
