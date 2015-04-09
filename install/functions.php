@@ -2472,24 +2472,48 @@ VALUES (1, '', '', '', 25, 0, 0, 1, 0, 0)");
 
 function updateLanguages()
 {
+    # update languages in database
+
     global $_database;
-    mysqli_query($_database, "UPDATE `" . PREFIX . "news_language` SET lang = 'af' WHERE lang = 'za'");
-    mysqli_query($_database, "UPDATE `" . PREFIX . "news_language` SET lang = 'sq' WHERE lang = 'al'");
-    mysqli_query($_database, "UPDATE `" . PREFIX . "news_language` SET lang = 'sa' WHERE lang = 'ar'");
-    mysqli_query($_database, "UPDATE `" . PREFIX . "news_language` SET lang = 'ba' WHERE lang = 'bs'");
-    mysqli_query($_database, "UPDATE `" . PREFIX . "news_language` SET lang = 'cz' WHERE lang = 'cs'");
-    mysqli_query($_database, "UPDATE `" . PREFIX . "news_language` SET lang = 'dk' WHERE lang = 'da'");
-    mysqli_query($_database, "UPDATE `" . PREFIX . "news_language` SET lang = 'uk' WHERE lang = 'en'");
-    mysqli_query($_database, "UPDATE `" . PREFIX . "news_language` SET lang = 'ee' WHERE lang = 'et'");
-    mysqli_query($_database, "UPDATE `" . PREFIX . "news_language` SET lang = 'ge' WHERE lang = 'ka'");
-    mysqli_query($_database, "UPDATE `" . PREFIX . "news_language` SET lang = 'gr' WHERE lang = 'el'");
-    mysqli_query($_database, "UPDATE `" . PREFIX . "news_language` SET lang = 'lu' WHERE lang = 'lb'");
-    mysqli_query($_database, "UPDATE `" . PREFIX . "news_language` SET lang = 'ir' WHERE lang = 'fa'");
-    mysqli_query($_database, "UPDATE `" . PREFIX . "news_language` SET language = 'portuguese', alt = 'portuguese' WHERE lang = 'pt'");
-    mysqli_query($_database, "UPDATE `" . PREFIX . "news_language` SET lang = 'rs' WHERE lang = 'sr'");
-    mysqli_query($_database, "UPDATE `" . PREFIX . "news_language` SET lang = 'si' WHERE lang = 'sl'");
-    mysqli_query($_database, "UPDATE `" . PREFIX . "news_language` SET lang = 'se' WHERE lang = 'sv'");
-    mysqli_query($_database, "UPDATE `" . PREFIX . "news_language` SET lang = 'ua' WHERE lang = 'uk'");
+    mysqli_query($_database, "UPDATE `" . PREFIX . "news_languages` SET lang = 'af' WHERE lang = 'za'");
+    mysqli_query($_database, "UPDATE `" . PREFIX . "news_languages` SET lang = 'sq' WHERE lang = 'al'");
+    mysqli_query($_database, "UPDATE `" . PREFIX . "news_languages` SET lang = 'ar' WHERE lang = 'sa'");
+    mysqli_query($_database, "UPDATE `" . PREFIX . "news_languages` SET lang = 'bs' WHERE lang = 'ba'");
+    mysqli_query($_database, "UPDATE `" . PREFIX . "news_languages` SET lang = 'cs' WHERE lang = 'cz'");
+    mysqli_query($_database, "UPDATE `" . PREFIX . "news_languages` SET lang = 'da' WHERE lang = 'dk'");
+    mysqli_query($_database, "UPDATE `" . PREFIX . "news_languages` SET lang = 'en' WHERE lang = 'uk'");
+    mysqli_query($_database, "UPDATE `" . PREFIX . "news_languages` SET lang = 'et' WHERE lang = 'ee'");
+    mysqli_query($_database, "UPDATE `" . PREFIX . "news_languages` SET lang = 'ka' WHERE lang = 'ge'");
+    mysqli_query($_database, "UPDATE `" . PREFIX . "news_languages` SET lang = 'el' WHERE lang = 'gr'");
+    mysqli_query($_database, "UPDATE `" . PREFIX . "news_languages` SET lang = 'lb' WHERE lang = 'lu'");
+    mysqli_query($_database, "UPDATE `" . PREFIX . "news_languages` SET lang = 'fa' WHERE lang = 'ir'");
+    mysqli_query($_database, "UPDATE `" . PREFIX . "news_languages` SET language = 'portuguese', alt = 'portuguese' WHERE lang = 'pt'");
+    mysqli_query($_database, "UPDATE `" . PREFIX . "news_languages` SET lang = 'sr' WHERE lang = 'rs'");
+    mysqli_query($_database, "UPDATE `" . PREFIX . "news_languages` SET lang = 'sl' WHERE lang = 'si'");
+    mysqli_query($_database, "UPDATE `" . PREFIX . "news_languages` SET lang = 'sv' WHERE lang = 'se'");
+    mysqli_query($_database, "UPDATE `" . PREFIX . "news_languages` SET lang = 'uk' WHERE lang = 'ua'");
 
     # move language folders
+
+    rename("../languages/za","../languages/af");
+    rename("../languages/al","../languages/sq");
+    rename("../languages/sa","../languages/ar");
+    rename("../languages/ba","../languages/bs");
+    rename("../languages/cz","../languages/cs");
+    rename("../languages/dk","../languages/da");
+    rename("../languages/uk","../languages/en");
+    rename("../languages/ee","../languages/et");
+    rename("../languages/ge","../languages/ka");
+    rename("../languages/gr","../languages/el");
+    rename("../languages/lu","../languages/lb");
+    rename("../languages/ir","../languages/fa");
+    rename("../languages/rs","../languages/sr");
+    rename("../languages/si","../languages/sl");
+    rename("../languages/se","../languages/sv");
+    rename("../languages/ua","../languages/uk");
+
+    rename("../admin/languages/de","../languages/de/admin");
+    rename("../admin/languages/hu","../languages/hu/admin");
+    rename("../admin/languages/it","../languages/it/admin");
+    rename("../admin/languages/uk","../languages/en/admin");
 }
