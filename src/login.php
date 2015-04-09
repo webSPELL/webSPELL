@@ -63,7 +63,7 @@ class LoginCookie
         return $key;
     }
   
-    private static function setCookie($cookieName, $cookieValue, $expiration)
+    private static function setCookie($cookieName, $cookieValue, $cookieExpire)
     {
         if (version_compare(PHP_VERSION, '5.2.0') >= 0) {
             $cookieInfo = session_get_cookie_params();
