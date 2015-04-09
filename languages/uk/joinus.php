@@ -24,38 +24,44 @@
 #                                                                        #
 ##########################################################################
 */
+/**
+ * Online Language Editor Ukraine language file for webSPELL 4.2.2
+ * @author Stefan Giesecke <webmaster@giesi.com>
+ * @copyright Copyright (c) 2010, Stefan Giesecke
+ * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
+ */
 
 $language_array = Array(
 
 /* do not edit above this line */
 
-	'additional_info'=>'Additional information (e.g. Why you should take me as a member...)',
-	'age'=>'Age',
-	'back_to_form'=>'Back to form',
-	'city'=>'City',
-	'clan_history'=>'Clan History',
-	'email_not_valid'=>'No valid email address entered!',
-	'forgot_age'=>'No age entered!',
-	'forgot_city'=>'No city entered!',
-	'forgot_history'=>'No clan history entered!',
-	'forgot_messenger'=>'No messenger contact (ICQ, AIM etc...) entered!',
-	'forgot_nickname'=>'You forgot your nickname!',
-	'forgot_realname'=>'You forgot your name!',
-	'icq_msn'=>'ICQ/MSN/etc...',
-	'info'=>'Additional information',
-	'joinus_form'=>'Join us form',
-	'mail'=>'E-Mail',
-	'messenger'=>'Messenger',
-	'message_title'=>'Join us',
-	'name'=>'Name',
-	'nick'=>'Nickname',
-	'problems'=>'Following problems occurred with your entered data',
-	'security_code'=>'Security code',
-	'send'=>'Submit',
-	'someone_want_to_join_your_squad'=>'Someone wants to join your squad:',
-	'squad'=>'Squad',
-	'thanks_you_will_get_mail'=>'Thank you for applying. We will be in touch soon.',
-	'title_join_us'=>'Become a member',
-	'wrong_security_code'=>'The security code was wrong!'
+  'additional_info'=>'Додаткова інформація (наприклад. Чому ви повинні прийняти мене в клан...)',
+  'age'=>'Вік',
+  'back_to_form'=>'Повернутися до форми',
+  'city'=>'Місто ',
+  'clan_history'=>'Історія кланів',
+  'email_not_valid'=>'Введено неправильну поштову скриньку!',
+  'forgot_age'=>'Не вказано вік!',
+  'forgot_city'=>'Не вказане місто!',
+  'forgot_history'=>'Не вказана історія кланів!',
+  'forgot_messenger'=>'Не вказаний месенджер (ICQ, AIM і т.д)!',
+  'forgot_nickname'=>'Ви забули свій нік!',
+  'forgot_realname'=>'Ви забули своє ім\'я!',
+  'icq_msn'=>'ICQ / MSN / і т.д...',
+  'info'=>'Додаткова інформація',
+  'joinus_form'=>'Заявка на вступ',
+  'mail'=>'E-Mail',
+  'messenger'=>'Месенджер',
+  'message_title'=>'Приєднається до нас',
+  'name'=>'Ім\'я',
+  'nick'=>'Нік',
+  'problems'=>'Виявлені наступні неполадки при введені данних',
+  'security_code'=>'Код безпеки',
+  'send'=>'Продовжити',
+  'someone_want_to_join_your_squad'=>'Хтось хоче приєднається до вашого загону:',
+  'squad'=>'Загін',
+  'thanks_you_will_get_mail'=>'Дякуємо за ваше розуміння, ми з вами зв\'яжемося.',
+  'title_join_us'=>'Стати членом',
+  'wrong_security_code'=>'Код безпеки невірний!'
 );
 

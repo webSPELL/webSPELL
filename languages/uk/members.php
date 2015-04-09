@@ -24,30 +24,35 @@
 #                                                                        #
 ##########################################################################
 */
+/**
+ * Online Language Editor Ukraine language file for webSPELL 4.2.2
+ * @author Stefan Giesecke <webmaster@giesi.com>
+ * @copyright Copyright (c) 2010, Stefan Giesecke
+ * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
+ */
 
 $language_array = Array(
 
 /* do not edit above this line */
 
-	'about'=>'About',
-	'active'=>'active',
-	'activity'=>'Activity',
-	'awards'=>'Awards',
-	'back_overview'=>'&raquo; <a href="index.php?site=members"><b>back to members overview</b></a>',
-	'challenge'=>'Challenge',
-	'contact'=>'Contact',
-	'go'=>'Go!',
-	'inactive'=>'inactive',
-	'member'=>'Member',
-	'members'=>'members',
-	'nickname'=>'Nickname',
-	'no_description'=>'no description available',
-	'no_entries'=>'no entries available',
-	'position'=>'Position',
-	'results'=>'Results',
-	'show_details'=>'&raquo; <a href="index.php?site=members&amp;action=show&amp;squadID=%squadID%"><b>Show details</b></a>',
-	'show_only'=>'Show only',
-	'status'=>'Status',
-	'town'=>'Town'
+  'about'=>'Про мене ',
+  'active'=>'Активний',
+  'activity'=>'Активність',
+  'awards'=>'Нагороди',
+  'back_overview'=>'&raquo; <a href="index.php?site=members"><b>Повернутися до перегляду членів клану</b></a>',
+  'challenge'=>'Виклик',
+  'contact'=>'Контакт',
+  'go'=>'Вперед!',
+  'inactive'=>'Неактивний',
+  'member'=>'гравець',
+  'members'=>'Гравців',
+  'nickname'=>'Нік',
+  'no_description'=>'Немає доступного опису',
+  'position'=>'Позиція',
+  'results'=>'Результати',
+  'show_details'=>'&raquo; <a href="index.php?site=members&amp;action=show&amp;squadID=%squadID%"><b>Показати деталі</b></a>',
+  'show_only'=>'Тільки для перегляду',
+  'status'=>'Статус',
+  'town'=>'Місто'
 );
 

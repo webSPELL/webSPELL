@@ -24,47 +24,53 @@
 #                                                                        #
 ##########################################################################
 */
+/**
+ * Online Language Editor Ukraine language file for webSPELL 4.2.2
+ * @author Stefan Giesecke <webmaster@giesi.com>
+ * @copyright Copyright (c) 2010, Stefan Giesecke
+ * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
+ */
 
 $language_array = Array(
 
 /* do not edit above this line */
 
-	'after'=>'after',
-	'and'=>'and',
-	'article'=>'Article',
-	'articles'=>'Articles',
-	'articles_link'=>'<b>link to Article</b>',
-	'ascending'=>'ascending',
-	'before'=>'before',
-	'date_options'=>'Date',
-	'delete_selected'=>'delete selected',
-	'descending'=>'descending',
-	'faq'=>'FAQ',
-	'faq_link'=>'<b>link to FAQ</b>',
-	'forum'=>'Forum',
-	'forum_link'=>'<b>link to topic</b>',
-	'frequency'=>'Frequency',
-	'keyword'=>'Keyword',
-	'new_search'=>'New search',
-	'news'=>'News',
-	'news_link'=>'<b>link to news</b>',
-	'options'=>'Options',
-	'or'=>'or',
-	'result_quantity'=>'Results per page',
-	'results_found'=>'results found',
-	'search'=>'search',
-	'search_in'=>'Search in:',
-	'search_location'=>'Searching Location',
-	'search_term'=>'Search term',
-	'search_title'=>'Advanced Search',
-	'security_code'=>'Security Code',
-	'sort_options'=>'Sort',
-	'start_search'=>'Start search',
-	'submit'=>'Submit',
-	'text_contains'=>'Text contains',
-	'title_contains'=>'Title contains',
-	'too_short'=>'Search term is too short. At least %min_chars% characters',
-	'wrong_securitycode'=>'You entered a wrong security code!',
-	'no_result' =>'No entries found for "%s"'
+  'after'=>'після',
+  'and'=>'і',
+  'article'=>'Стаття',
+  'articles'=>'Статті',
+  'articles_link'=>'<b>посилання на статтю</b>',
+  'ascending'=>'по зростанню',
+  'before'=>'до',
+  'date_options'=>'Дата',
+  'delete_selected'=>'Видалити обрані',
+  'descending'=>'по убыванию',
+  'faq'=>'FAQ',
+  'faq_link'=>'<b>посиланняна FAQ</b>',
+  'forum'=>'Форум',
+  'forum_link'=>'<b>посилання на тему</b>',
+  'frequency'=>'Частота',
+  'keyword'=>'Ключове слово',
+  'new_search'=>'Новий пошук',
+  'news'=>'Новини',
+  'news_link'=>'<b>посилання на новини</b>',
+  'options'=>'Опції',
+  'or'=>'або',
+  'result_quantity'=>'Результатів на сторінці',
+  'results_found'=>'знайдено результатів',
+  'search'=>'пошук',
+  'search_in'=>'Шукати в:',
+  'search_location'=>'Місце пошуку',
+  'search_term'=>'Шукати за словом',
+  'search_title'=>'Розширений пошук',
+  'security_code'=>'код перевірки',
+  'sort_options'=>'Сортувати',
+  'start_search'=>'Почати пошук',
+  'submit'=>'Підтвердити',
+  'text_contains'=>'Текст містить',
+  'title_contains'=>'Назва містить',
+  'too_short'=>'Умова пошуку дуже коротка. Не менш %min_chars% символів',
+  'wrong_securitycode'=>'Ви ввели невірний код перевірки!',
+  'no_result' =>'Записів не знайдено для  "%s"'
 );
 

@@ -24,35 +24,41 @@
 #                                                                        #
 ##########################################################################
 */
+/**
+ * Online Language Editor Ukraine language file for webSPELL 4.2.2
+ * @author Stefan Giesecke <webmaster@giesi.com>
+ * @copyright Copyright (c) 2010, Stefan Giesecke
+ * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
+ */
 
 $language_array = Array(
 
 /* do not edit above this line */
 
-	'back'=>'back',
-	'banner'=>'Banner',
-	'banner_to_big'=>'Picture is to big',
-	'categories'=>'Categories',
-	'category'=>'Category',
-	'delete'=>'delete',
-	'edit'=>'edit',
-	'edit_link'=>'Edit link',
-	'format_incorrect'=>'Invalid picture-format (allowed: *.gif, *.jpg or *.png)',
-	'go_back'=>'go back',
-	'homepage'=>'Address',
-	'information'=>'information',
-	'link'=>'Link',
-	'linkname'=>'Linkname',
-	'linkrubric'=>'Linkrubric',
-	'links'=>'Links',
-	'new_category'=>'new category',
-	'new_link'=>'New link',
-	'no_access'=>'no access.',
-	'no_categories'=>'no categories available',
-	'no_links'=>'no links available',
-	'really_delete'=>'really delete this entry?',
-	'save_link'=>'Save link',
-	'title_categories'=>'Link categories',
-	'update_link'=>'Update link'
+  'back'=>'Назад',
+  'banner'=>'Банер',
+  'banner_to_big'=>'Зображення занадто велике',
+  'categories'=>'Категорії',
+  'category'=>'Категорія',
+  'delete'=>'Видалити',
+  'edit'=>'Редагувати',
+  'edit_link'=>'Редагувати посилання',
+  'format_incorrect'=>'Неправильний формат зображення (дозволені: *:gif, *.jpg або *.png)',
+  'go_back'=>'назад',
+  'homepage'=>'Домашня сторінка',
+  'information'=>'Інформація',
+  'link'=>'Посилання',
+  'linkname'=>'ім\'я посилання',
+  'linkrubric'=>'графа посилання',
+  'links'=>'Посилання',
+  'new_category'=>'Нова категорія',
+  'new_link'=>'Нове посилання',
+  'no_access'=>'Немаэ доступу.',
+  'no_categories'=>'Немає доступних категорій',
+  'no_links'=>'Немає доступних посиланнь',
+  'really_delete'=>'Дійсно видалити цей запис?',
+  'save_link'=>'Зберегти посилання',
+  'title_categories'=>'Категорії посилань',
+  'update_link'=>'Оновити ссилку'
 );
 

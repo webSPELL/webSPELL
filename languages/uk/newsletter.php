@@ -24,33 +24,38 @@
 #                                                                        #
 ##########################################################################
 */
+/**
+ * Online Language Editor Ukraine language file for webSPELL 4.2.2
+ * @author Stefan Giesecke <webmaster@giesi.com>
+ * @copyright Copyright (c) 2010, Stefan Giesecke
+ * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
+ */
 
 $language_array = Array(
 
 /* do not edit above this line */
 
-	'del_from_mail_list'=>'Delete from mail list',
-	'del_key'=>'del-key',
-	'delete'=>'delete',
-	'deletion_key'=>'Deletion key',
-	'email_not_valid'=>'Your e-mail is not valid!',
-	'errors_there'=>'Some errors occured',
-	'lost_deletion_key'=>'Lost deletion key?',
-	'mail_adress'=>'mail adress',
-	'mail_pw_didnt_match'=>'The mail/password didnt match.',
-	'mail_not_in_db'=>'The given mail adress does not exist in our database.',
-	'newsletter'=>'newsletter',
-	'newsletter_registration'=>'Newsletter registration',
-	'no_such_mail_adress'=>'There is no such mail adress.',
-	'password_had_been_send'=>'The password had been send.',
-	'register_newsletter'=>'Register for newsletter',
-	'request_mail'=>'<b>You required your deletion key!</b><br><br>To remove your mail adress from the maillist click <a href="http://%homepage_url%/index.php?site=newsletter&mail=%mail%&pass=%delete_key%">here</a><br>Your password to delete yourself: %delete_key%<br><br>See you at %homepage_url%',
-	'send'=>'send',
-	'submit'=>'submit',
-	'success_mail'=>'<b>Thank you for your registration!</b><br><br>To remove your mail adress from the maillist click <a href="http://%homepage_url%/index.php?site=newsletter&mail=%mail%&pass=%delete_key%">here</a><br>Your password to delete yourself: %delete_key%<br><br>See you at %homepage_url%',
-	'thank_you_for_registration'=>'Thank you for your registration.',
-	'you_are_already_registered'=>'You are already registered.',
-	'your_mail_adress'=>'Your mail adress',
-	'your_mail_adress_deleted'=>'Your mail adress has been deleted.'
+  'del_from_mail_list'=>'Видалити зі списку одержувачів',
+  'del_key'=>'ключ видалення',
+  'delete'=>'видалити',
+  'deletion_key'=>'Ключ видалення',
+  'email_not_valid'=>'Ваша поштова скринька недійсна!',
+  'lost_deletion_key'=>'Втратили ключ видалення?',
+  'mail_adress'=>'mail адреса',
+  'mail_pw_didnt_match'=>'Адреса / пароль не збігаються.',
+  'mail_not_in_db'=>'Ця електронна адреса не знайдена у нашій базі даних.',
+  'newsletter'=>'Новини',
+  'newsletter_registration'=>'Підписка на новини',
+  'no_such_mail_adress'=>'Такої адреси Е/П не існує.',
+  'password_had_been_send'=>'Пароль був відправлений.',
+  'register_newsletter'=>'Зареєструйся для новин',
+  'request_mail'=>'<b>Вам потрібен ваш ключ видалення!</b><br><br>Натисніть тут видалити ваш адресу зі списку <a href="http://%homepage_url%/index.php?site=newsletter&mail=%mail%&pass=%delete_key%">здесь</a><br>Ваш пароль для видалення: %delete_key%<br><br>До зустрічі на %homepage_url%',
+  'send'=>'надіслати',
+  'submit'=>'підтвердити',
+  'success_mail'=>'<b>Дякуємо за реєстрацію!</b><br><br>Натисніть тут видалити ваш адресу зі списку <a href="http://%homepage_url%/index.php?site=newsletter&mail=%mail%&pass=%delete_key%">здесь</a><br>Ваш пароль для видалення: %delete_key%<br><br>До зустрічі на %homepage_url%',
+  'thank_you_for_registration'=>'Дякуємо за реєстрацію.',
+  'you_are_already_registered'=>'Ви вже зареєстровані.',
+  'your_mail_adress'=>'Ваша адреса Е/П',
+  'your_mail_adress_deleted'=>'Ваша адреса Е/П видалена.'
 );
 

@@ -24,46 +24,52 @@
 #                                                                        #
 ##########################################################################
 */
+/**
+ * Online Language Editor Ukraine language file for webSPELL 4.2.2
+ * @author Stefan Giesecke <webmaster@giesi.com>
+ * @copyright Copyright (c) 2010, Stefan Giesecke
+ * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
+ */
 
 $language_array = Array(
 
 /* do not edit above this line */
 
-	'access_denied'=>'Access denied',
-	'add_buddy'=>'add to buddy list',
-	'bbcode_on'=>'<a href="javascript:void(0);" onclick="window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> is ON',
-	'by'=>'by',
-	'clanmember_icon'=>' <img src="images/icons/member.gif" width="6" height="11" alt="Clanmember">',
-	'comments'=>'comments',
-	'comments_disabled'=>'<br><br><b>Comments disabled.</b>',
-	'delete_selected'=>'delete selected',
-	'edit_comment'=>'edit comment',
-	'email_link'=>'<a href="mailto:%email%"><img src="images/icons/email.gif" width="15" height="11" alt="email"></a>',
-	'enter_code'=>'Enter security code',
-	'enter_message'=>'Please enter a message!',
-	'enter_name'=>'Please enter your name!',
-	'error_captcha'=>'Wrong security code!',
-	'error_nickname'=>'This nickname is already in use!',
-	'homepage'=>'Homepage',
-	'html_off'=>'HTML is OFF',
-	'ignore_user'=>'ignore user',
-	'ip'=>'IP',
-	'mail'=>'E-Mail',
-	'name'=>'Name',
-	'no_access'=>'<br><br>You have to login!<br><br>&#8226; <a href="index.php?site=register">register now!</a><br>&#8226; <a href="index.php?site=login">login</a>',
-	'no_commentid'=>'No commentID specified - redirecting',
-	'no_database_entry'=>'No database entry matching commentID - redirecting',
-	'options'=>'Options',
-	'post_comment'=>'Post comment',
-	'quote_link'=>'<a href="javascript:AddCode(\'[quote=%nickname%]%message%[/quote]\')"><img src="images/icons/quote.gif" alt="quote"></a>',
-	'readd_buddy'=>'back to buddy-list',
-	'select_all'=>'select all',
-	'send_message'=>'send message',
-	'smilies_on'=>'<a href="javascript:void(0);" onclick="window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smilies</a> are ON',
-	'sort'=>'Sort:',
-	'sort_asc'=>'Sort ascending',
-	'sort_desc'=>'Sort descending',
-	'title_comment'=>'Your comment',
-	'title_editcomment'=>'Edit comment'
+  'access_denied'=>'доступ заборонений',
+  'add_buddy'=>'Додати до списку друзів',
+  'bbcode_on'=>'<a href="javascript:void(0);" onclick="window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBКод</a> включений',
+  'by'=>'з',
+  'clanmember_icon'=>' <img src="images/icons/member.gif" width="6" height="11" alt="Члены клану">',
+  'comments'=>'Коментарі',
+  'comments_disabled'=>'<br><br><b>Коментування заборонено.</b>',
+  'delete_selected'=>'Видалити вибране',
+  'edit_comment'=>'Редагувати коментар',
+  'email_link'=>'<a href="mailto:%email%"><img src="images/icons/email.gif" width="15" height="11" alt="E-Mail"></a>',
+  'enter_code'=>'Введіть код перевіркиrn',
+  'enter_message'=>'Будь ласка, введіть повідомлення!',
+  'enter_name'=>'Будь ласка, введіть своє ім\'я!',
+  'error_captcha'=>'Неправильно введений код перевірки!',
+  'error_nickname'=>'Нік вже використовується!',
+  'homepage'=>'Домашня сторінка',
+  'html_off'=>'HTML вимкнено',
+  'ignore_user'=>'Ігнорувати користувача',
+  'ip'=>'IP',
+  'mail'=>'E-Mail',
+  'name'=>'Нік',
+  'no_access'=>'<br><br>Ви повинні увійти за свій профіль!<br><br>&#8226; <a href="index.php?site=register">Зареєструватися!</a><br>&#8226; <a href="index.php?site=login">Зайти</a>',
+  'no_commentid'=>'Ваш ID не визначений - перенаправлення',
+  'no_database_entry'=>'Запис бази даних не знайдена - перенаправлення',
+  'options'=>'Опції',
+  'post_comment'=>'Прокоментувати',
+  'quote_link'=>'<a href="javascript:AddCode(\'[quote=%nickname%]%message%[/quote]\')"><img src="images/icons/quote.gif" alt="цитата"></a>',
+  'readd_buddy'=>'Назад до списку друзів',
+  'select_all'=>'вибрати все',
+  'send_message'=>'Відправити повідомлення',
+  'smilies_on'=>'<a href="javascript:void(0);" onclick="window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Смайли</a> включені',
+  'sort'=>'Сортувати:',
+  'sort_asc'=>'Сортувати по зростанню',
+  'sort_desc'=>'Сортувати за спаданням',
+  'title_comment'=>'Ваш комментар',
+  'title_editcomment'=>'Редагувати коментар'
 );
 

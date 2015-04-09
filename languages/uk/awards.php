@@ -24,29 +24,35 @@
 #                                                                        #
 ##########################################################################
 */
+/**
+ * Online Language Editor Ukraine language file for webSPELL 4.2.2
+ * @author Stefan Giesecke <webmaster@giesi.com>
+ * @copyright Copyright (c) 2010, Stefan Giesecke
+ * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
+ */
 
 $language_array = Array(
 
 /* do not edit above this line */
 
-	'award'=>'Award',
-	'awards'=>'awards',
-	'date'=>'Date',
-	'delete'=>'delete',
-	'edit'=>'edit',
-	'edit_award'=>'Edit award',
-	'enter_title'=>'You have to enter a title!',
-	'enter_text'=>'You have to enter a text',
-	'event'=>'Event',
-	'homepage'=>'Homepage',
-	'info'=>'Info',
-	'new_award'=>'New award',
-	'no_access'=>'No access!',
-	'no_entries'=>'No award available',
-	'ranking'=>'Ranking',
-	'save_award'=>'Save award',
-	'sort'=>'Sort',
-	'squad'=>'Squad',
-	'update_award'=>'Update award'
+  'award'=>'Нагорода',
+  'awards'=>'Нагороди',
+  'date'=>'Дата',
+  'delete'=>'Видалити',
+  'edit'=>'редагувати',
+  'edit_award'=>'Редагувати нагороду',
+  'enter_title'=>'Ви повинні ввусти назву!',
+  'enter_text'=>'Ви повинні ввести текст',
+  'event'=>'Подія',
+  'homepage'=>'Домашня сторінка',
+  'info'=>'Інформація',
+  'new_award'=>'Нова нагорода',
+  'no_access'=>'Немає доступу!',
+  'no_entries'=>'Нагород немає',
+  'ranking'=>'Ранг',
+  'save_award'=>'Зберегті нагороду',
+  'sort'=>'Сортуваті',
+  'squad'=>'Загін',
+  'update_award'=>'Оновити нагороду'
 );
 
