@@ -70,6 +70,7 @@ if ($_POST['installtype'] == 'update') {
     update420_430();
     updatePasswordHash();
     addSMTPSupport();
+    updateLanguages();
 
 } elseif ($_POST['installtype'] == 'full') {
     $type = '<b>'.$_language->module['install_complete'].'</b>';
@@ -154,6 +155,7 @@ if(!defined("PREFIX")){
     update40101_420();
     update420_430();
     addSMTPSupport();
+    updateLanguages();
 
 } elseif ($_POST['installtype'] == 'update_beta') {
     $type = '<b>'.$_language->module['update_complete'].'</b>';
@@ -176,6 +178,7 @@ if(!defined("PREFIX")){
     update420_430();
     updatePasswordHash();
     addSMTPSupport();
+    updateLanguages();
 
 } elseif ($_POST['installtype'] == 'update_beta5') {
     $type = '<b>'.$_language->module['update_complete'].'</b>';
@@ -197,6 +200,7 @@ if(!defined("PREFIX")){
     update420_430();
     updatePasswordHash();
     addSMTPSupport();
+    updateLanguages();
 
 } elseif ($_POST['installtype'] == 'update_beta6') {
     $type = '<b>'.$_language->module['update_complete'].'</b>';
@@ -217,6 +221,7 @@ if(!defined("PREFIX")){
     update420_430();
     updatePasswordHash();
     addSMTPSupport();
+    updateLanguages();
 
 } elseif ($_POST['installtype'] == 'update_final') {
     $type = '<b>'.$_language->module['update_complete'].'</b>';
@@ -236,6 +241,7 @@ if(!defined("PREFIX")){
     update420_430();
     updatePasswordHash();
     addSMTPSupport();
+    updateLanguages();
 
 } elseif ($_POST['installtype'] == 'update_40100') {
     $type = '<b>'.$_language->module['update_complete'].'</b>';
@@ -254,6 +260,7 @@ if(!defined("PREFIX")){
     update420_430();
     updatePasswordHash();
     addSMTPSupport();
+    updateLanguages();
 
 } elseif ($_POST['installtype'] == 'update_40102') {
     $type = '<b>'.$_language->module['update_complete'].'</b>';
@@ -271,6 +278,7 @@ if(!defined("PREFIX")){
     update420_430();
     updatePasswordHash();
     addSMTPSupport();
+    updateLanguages();
 
 } elseif ($_POST['installtype'] == 'update_420') {
     $type = '<b>'.$_language->module['update_complete'].'</b>';
@@ -287,6 +295,7 @@ if(!defined("PREFIX")){
     update420_430();
     updatePasswordHash();
     addSMTPSupport();
+    updateLanguages();
 
 }
 include("../src/func/filesystem.php");

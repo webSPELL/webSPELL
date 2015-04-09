@@ -2469,3 +2469,27 @@ VALUES (1, '', '', '', 25, 0, 0, 1, 0, 0)");
 
     mysqli_query($_database, "ALTER TABLE " . PREFIX ." ADD UNIQUE KEY emailID (emailID)");
 }
+
+function updateLanguages()
+{
+    global $_database;
+    mysqli_query($_database, "UPDATE `" . PREFIX . "news_language` SET lang = 'af' WHERE lang = 'za'");
+    mysqli_query($_database, "UPDATE `" . PREFIX . "news_language` SET lang = 'sq' WHERE lang = 'al'");
+    mysqli_query($_database, "UPDATE `" . PREFIX . "news_language` SET lang = 'sa' WHERE lang = 'ar'");
+    mysqli_query($_database, "UPDATE `" . PREFIX . "news_language` SET lang = 'ba' WHERE lang = 'bs'");
+    mysqli_query($_database, "UPDATE `" . PREFIX . "news_language` SET lang = 'cz' WHERE lang = 'cs'");
+    mysqli_query($_database, "UPDATE `" . PREFIX . "news_language` SET lang = 'dk' WHERE lang = 'da'");
+    mysqli_query($_database, "UPDATE `" . PREFIX . "news_language` SET lang = 'uk' WHERE lang = 'en'");
+    mysqli_query($_database, "UPDATE `" . PREFIX . "news_language` SET lang = 'ee' WHERE lang = 'et'");
+    mysqli_query($_database, "UPDATE `" . PREFIX . "news_language` SET lang = 'ge' WHERE lang = 'ka'");
+    mysqli_query($_database, "UPDATE `" . PREFIX . "news_language` SET lang = 'gr' WHERE lang = 'el'");
+    mysqli_query($_database, "UPDATE `" . PREFIX . "news_language` SET lang = 'lu' WHERE lang = 'lb'");
+    mysqli_query($_database, "UPDATE `" . PREFIX . "news_language` SET lang = 'ir' WHERE lang = 'fa'");
+    mysqli_query($_database, "UPDATE `" . PREFIX . "news_language` SET language = 'portuguese', alt = 'portuguese' WHERE lang = 'pt'");
+    mysqli_query($_database, "UPDATE `" . PREFIX . "news_language` SET lang = 'rs' WHERE lang = 'sr'");
+    mysqli_query($_database, "UPDATE `" . PREFIX . "news_language` SET lang = 'si' WHERE lang = 'sl'");
+    mysqli_query($_database, "UPDATE `" . PREFIX . "news_language` SET lang = 'se' WHERE lang = 'sv'");
+    mysqli_query($_database, "UPDATE `" . PREFIX . "news_language` SET lang = 'ua' WHERE lang = 'uk'");
+
+    # move language folders
+}
