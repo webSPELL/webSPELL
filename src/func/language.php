@@ -31,7 +31,7 @@ namespace webspell;
 class Language
 {
 
-    public $language = 'uk';
+    public $language = 'en';
     public $module = array();
     private $language_path = 'languages/';
 
@@ -76,7 +76,7 @@ class Language
         $languageFallbackTable = array(
                             $this->language,
                             $default_language,
-                            'uk');
+                            'en');
 
         $module = str_replace(array('\\', '/', '.'), '', $module);
 
