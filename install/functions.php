@@ -2155,7 +2155,8 @@ function update420_430()
       ('', 'greek', 'gr', 'greek'),
       ('', 'ukrainian', 'ua', 'ukrainian'),
       ('', 'luxembourgish', 'lu', 'luxembourgish'),
-      ('', 'afrikaans', 'za', 'afrikaans')");
+      ('', 'afrikaans', 'za', 'afrikaans'),
+      ('', 'acholi', 'ac', 'acholi')");
 
     //edit countries
     mysqli_query($_database, "INSERT INTO `" . PREFIX . "countries` ( `countryID` , `country` , `short` )
