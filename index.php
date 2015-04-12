@@ -41,10 +41,10 @@ header('X-UA-Compatible: IE=edge,chrome=1');
 <html>
 <head>
     <?php
-    if ($_SESSION['language'] == 'ac' or $_COOKIE[ 'language' ] == 'ac') {
+    if ($_SESSION[ 'language' ] == 'ac' or $_COOKIE[ 'language' ] == 'ac') {
         echo '<script type="text/javascript">
             var _jipt = [];
-            _jipt.push(['project', 'webspell - cms']);
+            _jipt.push([\'project\', \'webspell - cms\']);
         </script>
         <script type="text/javascript" src="//cdn.crowdin.com/jipt/jipt.js"></script>';
     }
