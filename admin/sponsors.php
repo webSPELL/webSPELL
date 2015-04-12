@@ -259,6 +259,9 @@ if ($action == "add") {
 
         $errors = array();
 
+        //TODO: should be loaded from root language folder
+        $_language->readModule('formvalidation', true);
+
         $upload = new \webspell\HttpUpload('banner');
         if ($upload->hasFile()) {
             if ($upload->hasError() === false) {
@@ -378,6 +381,9 @@ if ($action == "add") {
         $id = $_POST[ 'sponsorID' ];
 
         $errors = array();
+
+        //TODO: should be loaded from root language folder
+        $_language->readModule('formvalidation', true);
 
         $upload = new \webspell\HttpUpload('banner');
         if ($upload->hasFile()) {

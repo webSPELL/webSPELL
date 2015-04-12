@@ -70,7 +70,6 @@ $language_array = Array(
     'homepage' => 'Koduleht',
     'html' => 'HTML on MAAS',
     'i-connection' => 'internetiühendus',
-    'image_too_big' => 'Image is too big',
     'invalid_mail' => 'Sa sisestasid ebakorrektse meiliaadressi.',
     'invalid_picture-format' => 'Vale pildiformaat (lubatud: *.gif, *.jpg or *.png)',
     'keyboard' => 'Klaviatuur',

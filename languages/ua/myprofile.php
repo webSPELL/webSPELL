@@ -70,7 +70,6 @@ $language_array = Array(
     'homepage' => 'Домашня сторінка',
     'html' => 'HTML вимкнено',
     'i-connection' => 'Інтернет з\'єднання',
-    'image_too_big' => 'Image is too big',
     'invalid_mail' => 'Ви ввели недійсну адресу пошти.',
     'invalid_picture-format' => 'Невірний формат зображення (можливі *.gif, *.jpg або *.png)',
     'keyboard' => 'Клавіатура',

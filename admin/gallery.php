@@ -291,6 +291,9 @@ if ($part == "groups") {
         $picture = $_FILES[ 'picture' ];
         $CAPCLASS = new \webspell\Captcha;
         if ($CAPCLASS->checkCaptcha(0, $_POST[ 'captcha_hash' ])) {
+            //TODO: should be loaded from root language folder
+            $_language->readModule('formvalidation', true);
+
             $upload = new \webspell\HttpUpload('picture');
             if ($upload->hasFile()) {
                 if ($upload->hasError() === false) {

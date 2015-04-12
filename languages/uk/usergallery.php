@@ -52,8 +52,6 @@ $language_array = Array(
 	'user_gallery'=>'User-Gallery',
 	'usergalleries'=>'Usergalleries',
 	'visitor_comments'=>'Visitor comments',
-	'x_of_y_mb_in_use'=>'<span style="color:%spacecolor%">&nbsp;%used_size%</span> of %available_size% MB are in use.',
-	'unsupported_image_type'=>'Unsupported image type',
-	'broken_image'=>'Broken image'
+	'x_of_y_mb_in_use'=>'<span style="color:%spacecolor%">&nbsp;%used_size%</span> of %available_size% MB are in use.'
 );
 

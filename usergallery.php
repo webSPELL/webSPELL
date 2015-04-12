@@ -59,6 +59,8 @@ if ($userID) {
     } elseif (isset($_POST[ 'saveform' ])) {
         $dir = 'images/gallery/';
 
+        $_language->readModule('formvalidation', true);
+
         $upload = new \webspell\HttpUpload('picture');
 
         if ($upload->hasFile()) {

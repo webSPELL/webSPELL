@@ -117,6 +117,9 @@ if ($action == "add") {
         if (checkforempty(array('pattern'))) {
             $errors = array();
 
+            //TODO: should be loaded from root language folder
+            $_language->readModule('formvalidation', true);
+
             $upload = new \webspell\HttpUpload('rank');
             if ($upload->hasFile()) {
                 if ($upload->hasError() === false) {
@@ -179,6 +182,9 @@ if ($action == "add") {
 
 
             $errors = array();
+
+            //TODO: should be loaded from root language folder
+            $_language->readModule('formvalidation', true);
 
             $upload = new \webspell\HttpUpload('rank');
             if ($upload->hasFile()) {

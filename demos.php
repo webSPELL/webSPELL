@@ -106,6 +106,8 @@ echo $title_demos;
 
 if (isset($_POST[ 'save' ])) {
     if (isfileadmin($userID)) {
+        $_language->readModule('formvalidation', true);
+
         $demo = new \webspell\HttpUpload('demo');
 
         $game = $_POST[ 'game' ];
@@ -135,7 +137,7 @@ if (isset($_POST[ 'save' ])) {
             if ($demo->hasError() === false) {
                 $new_name = $filepath . $demo->getFileName();
                 if ($demo->saveAs($new_name) === false) {
-                    $error[ ] = $_language->module[ 'file_exists' ];
+                    $error[ ] = $_language->module[ 'file_already_exists' ];
                 } else {
                     @chmod($new_name, $new_chmod);
                     $file = $demo[ 'name' ];
@@ -203,6 +205,7 @@ if (isset($_POST[ 'save' ])) {
     }
 } elseif (isset($_POST[ 'saveedit' ])) {
     if (isfileadmin($userID)) {
+        $_language->readModule('formvalidation', true);
         $demo = new \webspell\HttpUpload('demo');
 
         $demoID = (int)$_POST[ 'demoID' ];
@@ -233,7 +236,7 @@ if (isset($_POST[ 'save' ])) {
             if ($demo->hasError() === false) {
                 $new_name = $filepath . $demo->getFileName();
                 if ($demo->saveAs($new_name) === false) {
-                    $error[ ] = $_language->module[ 'file_exists' ];
+                    $error[ ] = $_language->module[ 'file_already_exists' ];
                 } else {
                     @chmod($new_name, $new_chmod);
                     $file = $demo->getFileName();

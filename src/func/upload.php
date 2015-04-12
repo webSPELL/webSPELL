@@ -34,6 +34,11 @@ abstract class Upload
 
     protected $error;
 
+    public function __construct()
+    {
+
+    }
+
     abstract public function hasFile();
     abstract public function hasError();
     abstract public function getError();

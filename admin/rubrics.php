@@ -42,6 +42,9 @@ if (isset($_POST[ 'save' ])) {
 
             $errors = array();
 
+            //TODO: should be loaded from root language folder
+            $_language->readModule('formvalidation', true);
+
             $upload = new \webspell\HttpUpload('pic');
             if ($upload->hasFile()) {
                 if ($upload->hasError() === false) {
@@ -108,6 +111,9 @@ if (isset($_POST[ 'save' ])) {
             $filepath = "../images/news-rubrics/";
 
             $errors = array();
+
+            //TODO: should be loaded from root language folder
+            $_language->readModule('formvalidation', true);
 
             $upload = new \webspell\HttpUpload('pic');
             if ($upload->hasFile()) {

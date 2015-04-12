@@ -61,6 +61,9 @@ if (isset($_POST[ 'add' ])) {
         //avatar
         $filepath = "../images/avatars/";
 
+        //TODO: should be loaded from root language folder
+        $_language->readModule('formvalidation', true);
+
         $upload = new \webspell\HttpUpload('avatar');
         if ($upload->hasFile()) {
             if ($upload->hasError() === false) {
@@ -93,7 +96,7 @@ if (isset($_POST[ 'add' ])) {
                                 );
                             }
                         } else {
-                            $error_array[] = $_language->module[ 'image_too_big' ];
+                            $error_array[] = sprintf($_language->module[ 'image_too_big' ], 90, 90);
                         }
                     } else {
                         $error_array[] = $_language->module[ 'broken_image' ];
@@ -108,7 +111,6 @@ if (isset($_POST[ 'add' ])) {
 
         //userpic
         $filepath = "../images/userpics/";
-
 
         $upload = new \webspell\HttpUpload('userpic');
         if ($upload->hasFile()) {
@@ -141,7 +143,7 @@ if (isset($_POST[ 'add' ])) {
                                 );
                             }
                         } else {
-                            $error_array[] = $_language->module[ 'image_too_big' ];
+                            $error_array[] = sprintf($_language->module[ 'image_too_big' ], 230, 210);
                         }
                     } else {
                         $error_array[] = $_language->module[ 'broken_image' ];

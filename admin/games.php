@@ -112,6 +112,10 @@ if ($action == "add") {
     if ($CAPCLASS->checkCaptcha(0, $_POST[ 'captcha_hash' ])) {
         if (checkforempty(array('name','tag'))) {
             $errors = array();
+
+            //TODO: should be loaded from root language folder
+            $_language->readModule('formvalidation', true);
+
             $upload = new \webspell\HttpUpload('icon');
             if ($upload->hasFile()) {
                 if ($upload->hasError() === false) {
@@ -174,6 +178,9 @@ if ($action == "add") {
             );
 
             $errors = array();
+
+            //TODO: should be loaded from root language folder
+            $_language->readModule('formvalidation', true);
 
             $upload = new \webspell\HttpUpload('icon');
             if ($upload->hasFile()) {

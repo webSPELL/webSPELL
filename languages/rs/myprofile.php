@@ -70,7 +70,6 @@ $language_array = Array(
     'homepage' => 'Хомепаге',
     'html' => 'ХТМЛ искључен',
     'i-connection' => 'Интернет веза',
-    'image_too_big' => 'Image is too big',
     'invalid_mail' => 'Унијели сте неисправну е-маил адресу.',
     'invalid_picture-format' => 'Неисправан формат слике (допуштени: *.gif, *.jpg или *.png)',
     'keyboard' => 'Тастатура',

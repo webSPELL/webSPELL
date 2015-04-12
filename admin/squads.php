@@ -115,6 +115,9 @@ if (isset($_POST['save'])) {
 
             $errors = array();
 
+            //TODO: should be loaded from root language folder
+            $_language->readModule('formvalidation', true);
+
             $upload = new \webspell\HttpUpload('icon');
             if ($upload->hasFile()) {
                 if ($upload->hasError() === false) {
@@ -220,6 +223,9 @@ if (isset($_POST['saveedit'])) {
             $id = $_POST['squadID'];
 
             $errors = array();
+
+            //TODO: should be loaded from root language folder
+            $_language->readModule('formvalidation', true);
 
             $upload = new \webspell\HttpUpload('icon');
             if ($upload->hasFile()) {

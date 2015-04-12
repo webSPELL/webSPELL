@@ -70,7 +70,6 @@ $language_array = Array(
     'homepage' => 'Hjemmeside',
     'html' => 'HTML er FRA',
     'i-connection' => 'Internetforbindelse',
-    'image_too_big' => 'Image is too big',
     'invalid_mail' => 'Du har indtastet en ugyldig email adresse.',
     'invalid_picture-format' => 'Ugyldigt billedeformat (tilladte: *.gif, *.jpg eller *.png)',
     'keyboard' => 'Tastatur',

@@ -92,6 +92,9 @@ if (isset($_GET[ 'delete' ])) {
 
         $filepath = "../images/partners/";
 
+        //TODO: should be loaded from root language folder
+        $_language->readModule('formvalidation', true);
+
         $upload = new \webspell\HttpUpload('banner');
 
         if ($upload->hasFile()) {
@@ -133,7 +136,7 @@ if (isset($_GET[ 'delete' ])) {
                                 );
                             }
                         } else {
-                            echo generateErrorBox($_language->module[ 'image_too_big' ]);
+                            echo generateErrorBox(sprintf($_language->module[ 'image_too_big' ], 88, 31));
                         }
                     } else {
                         echo generateErrorBox($_language->module[ 'broken_image' ]);
@@ -175,6 +178,9 @@ if (isset($_GET[ 'delete' ])) {
 
         $filepath = "../images/partners/";
 
+        //TODO: should be loaded from root language folder
+        $_language->readModule('formvalidation', true);
+
         $upload = new \webspell\HttpUpload('banner');
 
         if ($upload->hasFile()) {
@@ -216,7 +222,7 @@ if (isset($_GET[ 'delete' ])) {
                                 );
                             }
                         } else {
-                            echo generateErrorBox($_language->module[ 'image_too_big' ]);
+                            echo generateErrorBox(sprintf($_language->module[ 'image_too_big' ], 88, 31));
                         }
                     } else {
                         echo generateErrorBox($_language->module[ 'broken_image' ]);

@@ -24,41 +24,33 @@
 #                                                                        #
 ##########################################################################
 */
-/**
- * Online Language Editor Turkey language file for webSPELL 4.2.2
- * @author Stefan Giesecke <webmaster@giesi.com>
- * @copyright Copyright (c) 2010, Stefan Giesecke
- * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
- */
 
 $language_array = Array(
 
 /* do not edit above this line */
 
-  'back'=>'geri',
-  'banner'=>'Sembol',
-  'banner_to_big'=>'Resim cok büyük',
-  'categories'=>'Kategoriler',
-  'category'=>'Kategori',
-  'delete'=>'sil',
-  'edit'=>'düzenle',
-  'edit_link'=>'Linki düzenle',
-  'format_incorrect'=>'Geçersiz resim formatı (izin verilir: *.gif, *.jpg veya *.png)',
-  'go_back'=>'geri dön',
-  'homepage'=>'Adres',
-  'information'=>'bilgi',
-  'link'=>'Bağlantı',
-  'linkname'=>'Bağlantı ismi',
-  'linkrubric'=>'Bağlantı bölümü',
-  'links'=>'Bağlantılar',
-  'new_category'=>'Yeni kategori',
-  'new_link'=>'Yeni bağlantı',
-  'no_access'=>'erişim yok.',
-  'no_categories'=>'kategori yok',
-  'no_links'=>'bağlantı yok',
-  'really_delete'=>'gerçekten bu girişi siliyor musunuz?',
-  'save_link'=>'Bağlantıyı kaydet',
-  'title_categories'=>'Bağlantı kategorileri',
-  'update_link'=>'Bağlantıyı güncelle'
+    'back' => 'geri',
+    'banner' => 'Sembol',
+    'categories' => 'Kategoriler',
+    'category' => 'Kategori',
+    'delete' => 'sil',
+    'edit' => 'düzenle',
+    'edit_link' => 'Linki düzenle',
+    'format_incorrect' => 'Geçersiz resim formatı (izin verilir: *.gif, *.jpg veya *.png)',
+    'go_back' => 'geri dön',
+    'homepage' => 'Adres',
+    'information' => 'bilgi',
+    'link' => 'Bağlantı',
+    'linkname' => 'Bağlantı ismi',
+    'linkrubric' => 'Bağlantı bölümü',
+    'links' => 'Bağlantılar',
+    'new_category' => 'Yeni kategori',
+    'new_link' => 'Yeni bağlantı',
+    'no_access' => 'erişim yok.',
+    'no_categories' => 'kategori yok',
+    'no_links' => 'bağlantı yok',
+    'really_delete' => 'gerçekten bu girişi siliyor musunuz?',
+    'save_link' => 'Bağlantıyı kaydet',
+    'title_categories' => 'Bağlantı kategorileri',
+    'update_link' => 'Bağlantıyı güncelle'
 );
-

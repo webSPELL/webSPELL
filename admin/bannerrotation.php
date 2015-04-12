@@ -139,6 +139,9 @@ if ($action == "add") {
         $displayed = 0;
     }
 
+    //TODO: should be loaded from root language folder
+    $_language->readModule('formvalidation', true);
+
     $upload = new \webspell\HttpUpload('banner');
 
     $CAPCLASS = new \webspell\Captcha;
@@ -249,6 +252,8 @@ if ($action == "add") {
             );
 
             $errors = array();
+            //TODO: should be loaded from root language folder
+            $_language->readModule('formvalidation', true);
 
             $upload = new \webspell\HttpUpload('banner');
 

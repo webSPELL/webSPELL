@@ -70,7 +70,6 @@ $language_array = Array(
     'homepage' => 'Faqja e Parë',
     'html' => 'HTML është FIKUR',
     'i-connection' => 'I-Koneksion',
-    'image_too_big' => 'Image is too big',
     'invalid_mail' => 'Vendosët një e-mail të gabuar.',
     'invalid_picture-format' => 'fot-forma e gabuar (lejohet: *.gif, *.jpg ose *.png)',
     'keyboard' => 'Tastierë',

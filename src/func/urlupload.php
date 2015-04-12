@@ -34,6 +34,7 @@ class UrlUpload extends Upload
     private $fileName;
     public function __construct($url)
     {
+        parent::__construct();
         $this->file = $url;
         $this->error = UPLOAD_ERR_NO_FILE;
         $this->download();

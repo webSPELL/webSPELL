@@ -70,7 +70,6 @@ $language_array = Array(
     'homepage' => 'Mājaslapa',
     'html' => 'HTML atslēgts',
     'i-connection' => 'Interneta savienojums',
-    'image_too_big' => 'Image is too big',
     'invalid_mail' => 'Jūs esat ievadījis nederīgu e-pasta adresi.',
     'invalid_picture-format' => 'Nederīgs attēla formāts (atļauti: *.gif, *.jpg or *.png)',
     'keyboard' => 'Klaviatūra',

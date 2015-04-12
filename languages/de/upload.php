@@ -30,7 +30,7 @@ $language_array = Array(
 /* do not edit above this line */
 
 	'add_to_message'=>'Zur Nachricht hinzufügen',
-  'close_window'=>'Fenster schliessen',
+    'close_window'=>'Fenster schliessen',
 	'delete'=>'Löschen',
 	'existing_files'=>'Existierende Dateien',
 	'file_upload'=>'Datei hochladen',

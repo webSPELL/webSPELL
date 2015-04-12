@@ -70,7 +70,6 @@ $language_array = Array(
     'homepage' => 'Tuisblad',
     'html' => 'HTML is AF',
     'i-connection' => 'I-konneksie',
-    'image_too_big' => 'Image is too big',
     'invalid_mail' => 'Jy het \'n ongeldige e-pos adres ingevoer.',
     'invalid_picture-format' => 'Ongeldig prentjie-formaat (toegelaat: *.gif, *.jpg of *.png)',
     'keyboard' => 'Sleutelbord',

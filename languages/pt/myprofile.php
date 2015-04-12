@@ -70,7 +70,6 @@ $language_array = Array(
     'homepage' => 'Website',
     'html' => 'HTML desligado',
     'i-connection' => 'Ligação de Internet',
-    'image_too_big' => 'Image is too big',
     'invalid_mail' => 'Colocou um endereço de email inválido.',
     'invalid_picture-format' => 'Formato da imagem inválido (permitidos: .gif ou .jpg)',
     'keyboard' => 'Teclado',

@@ -38,6 +38,8 @@ if (isset($_POST['save'])) {
     } else {
         $filepath = "./images/linkus/";
 
+        $_language->readModule('formvalidation', true);
+
         $upload = new \webspell\HttpUpload('banner');
 
         if ($upload->hasFile()) {
@@ -71,7 +73,7 @@ if (isset($_POST['save'])) {
                                 );
                             }
                         } else {
-                            echo generateErrorBox($_language->module[ 'image_too_big' ]);
+                            echo generateErrorBox(sprintf($_language->module[ 'image_too_big' ], 800, 600));
                         }
                     } else {
                         echo generateErrorBox($_language->module[ 'broken_image' ]);
@@ -100,6 +102,9 @@ if (isset($_POST['save'])) {
 
         $filepath = "./images/linkus/";
         $id = $_POST['bannerID'];
+
+        $_language->readModule('formvalidation', true);
+
         $upload = new \webspell\HttpUpload('banner');
         if ($upload->hasFile()) {
             if ($upload->hasError() === false) {
@@ -130,7 +135,7 @@ if (isset($_POST['save'])) {
                                 );
                             }
                         } else {
-                            echo generateErrorBox($_language->module[ 'image_too_big' ]);
+                            echo generateErrorBox(sprintf($_language->module[ 'image_too_big' ], 800, 600));
                         }
                     } else {
                         echo generateErrorBox($_language->module[ 'broken_image' ]);

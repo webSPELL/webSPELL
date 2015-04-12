@@ -125,6 +125,8 @@ if ($action == "save") {
 
         $error = array();
 
+        $_language->readModule('formvalidation', true);
+
         $upload = new \webspell\HttpUpload('upfile');
 
         $filepath = "./downloads/";
@@ -223,6 +225,8 @@ if ($action == "save") {
         $mirrors = implode("||", $mirrors);
 
         $error = array();
+
+        $_language->readModule('formvalidation', true);
 
         $upload = new \webspell\HttpUpload('upfile');
 

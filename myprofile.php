@@ -123,6 +123,8 @@ if (!$userID) {
         //avatar
         $filepath = "./images/avatars/";
 
+        $_language->readModule('formvalidation', true);
+
         $upload = new \webspell\HttpUpload('avatar');
         if (!$upload->hasFile()) {
             $upload = new \webspell\UrlUpload($_POST['avatar_url']);
@@ -159,7 +161,7 @@ if (!$userID) {
                                 );
                             }
                         } else {
-                            $error_array[] = $_language->module[ 'image_too_big' ];
+                            $error_array[] = sprintf($_language->module[ 'image_too_big' ], 90, 90);
                         }
                     } else {
                         $error_array[] = $_language->module[ 'broken_image' ];
@@ -175,7 +177,6 @@ if (!$userID) {
 
         //userpic
         $filepath = "./images/userpics/";
-
 
         $upload = new \webspell\HttpUpload('userpic');
         if (!$upload->hasFile()) {
@@ -212,7 +213,7 @@ if (!$userID) {
                                 );
                             }
                         } else {
-                            $error_array[] = $_language->module[ 'image_too_big' ];
+                            $error_array[] = sprintf($_language->module[ 'image_too_big' ], 230, 210);
                         }
                     } else {
                         $error_array[] = $_language->module[ 'broken_image' ];

@@ -70,7 +70,6 @@ $language_array = Array(
     'homepage' => 'Homepage',
     'html' => 'HTML is UIT',
     'i-connection' => 'I-Connection',
-    'image_too_big' => 'Image is too big',
     'invalid_mail' => 'Je hebt een ongeldid email adress ingevuld.',
     'invalid_picture-format' => 'Ongeldig afbeeldings-formaat (toegestaan: *.gif, *.jpg or *.png)',
     'keyboard' => 'Toetsenbord',

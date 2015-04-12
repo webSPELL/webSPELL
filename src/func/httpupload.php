@@ -33,6 +33,7 @@ class HttpUpload extends Upload
 
     public function __construct($field_name)
     {
+        parent::__construct();
         $this->field = $field_name;
         $this->error = $_FILES[ $this->field ][ 'error' ];
     }

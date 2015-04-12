@@ -70,7 +70,6 @@ $language_array = Array(
     'homepage' => 'Honlap',
     'html' => 'HTML Kikapcsolva',
     'i-connection' => 'Internet',
-    'image_too_big' => 'Image is too big',
     'invalid_mail' => 'Rossz E-Mail címet adtál meg.',
     'invalid_picture-format' => 'érvénytelen kép-kiterjesztés (engedélyezett: *.gif, *.jpg vagy *.png)',
     'keyboard' => 'Billentyűzet',

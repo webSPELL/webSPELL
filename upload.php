@@ -59,6 +59,8 @@ if (isset($_GET[ 'action' ])) {
 }
 
 if (isset($_POST[ 'submit' ])) {
+    $_language->readModule('formvalidation', true);
+
     $screen = new \webspell\HttpUpload('screen');
 
     if ($screen->hasFile()) {
