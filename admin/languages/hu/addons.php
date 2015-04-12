@@ -68,6 +68,7 @@ $language_array = Array(
   'sort'=>'Rendezés',
   'transaction_invalid'=>'A művelet azonosítója érvénytelen',
   'to_sort'=>'Rendezés',
-  'url'=>'Url'
+  'url'=>'Url',
+  'no_additional_links_available'=>'no additional links available'
 );
 

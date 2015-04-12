@@ -37,6 +37,11 @@ if (DEBUG === 'ON') {
 
 mb_internal_encoding("UTF-8");
 
+// -- SET INCLUDE-PATH FOR vendors --//
+
+$path = __DIR__.DIRECTORY_SEPARATOR.'components';
+set_include_path(get_include_path() . PATH_SEPARATOR .$path);
+
 // -- SET HTTP ENCODING -- //
 
 header('content-type: text/html; charset=utf-8');

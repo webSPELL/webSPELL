@@ -25,74 +25,6 @@
 ##########################################################################
 */
 
-function top5()
-{
-    global $_language;
-    $_language->readModule('demos');
-
-    echo '<div class="row">';
-
-    // RATING
-    $ergebnis = safe_query("SELECT * FROM `" . PREFIX . "demos` ORDER BY `rating` DESC LIMIT 0,5");
-    $top = 'TOP 5 DEMOS (' . $_language->module[ 'rating' ] . ')';
-
-    $data_array = array();
-    $data_array['$top'] = $top;
-    $top5_head = $GLOBALS["_template"]->replaceTemplate("top5_head", $data_array);
-    echo $top5_head;
-
-    $n = 1;
-    while ($ds = mysqli_fetch_array($ergebnis)) {
-        $country1 = "[flag]" . $ds[ 'country1' ] . "[/flag]";
-        $country1 = flags($country1);
-        $country2 = "[flag]" . $ds[ 'country2' ] . "[/flag]";
-        $country2 = flags($country2);
-        $link =
-            '<a href="index.php?site=demos&amp;action=showdemo&amp;demoID=' . $ds[ 'demoID' ] . '">' . $country1 . ' ' .
-            $ds[ 'clantag1' ] . ' vs. ' . $ds[ 'clantag2' ] . ' ' . $country2 . '</a>';
-        $ratings = array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
-        for ($i = 0; $i < $ds[ 'rating' ]; $i++) {
-            $ratings[ $i ] = 1;
-        }
-        $ratingpic = '<img src="images/icons/rating_' . $ratings[ 0 ] . '_start.gif" width="1" height="5" alt="">';
-        foreach ($ratings as $pic) {
-            $ratingpic .= '<img src="images/icons/rating_' . $pic . '.gif" width="4" height="5" alt="">';
-        }
-
-        echo '<li class="list-group-item"><span class="badge">' . $ratingpic . '</span> ' . $n . '. ' . $link . '</li>';
-
-        unset($ratingpic);
-        $n++;
-    }
-
-    echo '</ul></div>';
-
-    // POINTS
-    $ergebnis = safe_query("SELECT * FROM `" . PREFIX . "demos` ORDER BY `downloads` DESC LIMIT 0,5");
-    $top = 'TOP 5 DEMOS (' . $_language->module[ 'downloaded' ] . ')';
-    $data_array = array();
-    $data_array['$top'] = $top;
-    $top5_head = $GLOBALS["_template"]->replaceTemplate("top5_head", $data_array);
-    echo $top5_head;
-    $n = 1;
-    while ($ds = mysqli_fetch_array($ergebnis)) {
-        $country1 = "[flag]" . $ds[ 'country1' ] . "[/flag]";
-        $country1 = flags($country1);
-        $country2 = "[flag]" . $ds[ 'country2' ] . "[/flag]";
-        $country2 = flags($country2);
-        $link =
-            '<a href="index.php?site=demos&amp;action=showdemo&amp;demoID=' . $ds[ 'demoID' ] . '">' . $country1 . ' ' .
-            $ds[ 'clantag1' ] . ' vs. ' . $ds[ 'clantag2' ] . ' ' . $country2 . '</a>';
-
-        echo '<li class="list-group-item"><span class="badge">' . $ds[ 'downloads' ] . '</span> ' . $n . '. ' . $link .
-            '</li>';
-
-        $n++;
-    }
-    echo '</ul></div>';
-    echo '</div>';
-}
-
 if (isset($_GET[ 'action' ])) {
     $action = $_GET[ 'action' ];
 } else {
@@ -574,8 +506,66 @@ value="' . $_language->module[ 'rate' ] . '" class="btn btn-primary">
             $n = ($gesamt + 1) - $page * $max + $max;
         }
     }
+
     if ($gesamt) {
-        top5();
+        echo '<div class="row">';
+
+        // RATING
+        $ergebnis_top_5_rating = safe_query("SELECT * FROM `" . PREFIX . "demos` ORDER BY `rating` DESC LIMIT 0,5");
+        $top = 'TOP 5 DEMOS (' . $_language->module[ 'rating' ] . ')';
+
+        $data_array = array();
+        $data_array['$top'] = $top;
+        $top5_head = $GLOBALS["_template"]->replaceTemplate("top5_head", $data_array);
+        echo $top5_head;
+
+        while ($ds = mysqli_fetch_array($ergebnis_top_5_rating)) {
+            $country1 = "[flag]" . $ds[ 'country1' ] . "[/flag]";
+            $country1 = flags($country1);
+            $country2 = "[flag]" . $ds[ 'country2' ] . "[/flag]";
+            $country2 = flags($country2);
+            $link =
+                '<a href="index.php?site=demos&amp;action=showdemo&amp;demoID=' . $ds[ 'demoID' ] . '">' . $country1 .
+                ' ' .$ds[ 'clantag1' ] . ' vs. ' . $ds[ 'clantag2' ] . ' ' . $country2 . '</a>';
+            $ratings = array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+            for ($i = 0; $i < $ds[ 'rating' ]; $i++) {
+                $ratings[ $i ] = 1;
+            }
+            $ratingpic = '<img src="images/icons/rating_' . $ratings[ 0 ] . '_start.gif" width="1" height="5" alt="">';
+            foreach ($ratings as $pic) {
+                $ratingpic .= '<img src="images/icons/rating_' . $pic . '.gif" width="4" height="5" alt="">';
+            }
+
+            echo '<li class="list-group-item"><span class="badge">' . $ratingpic . '</span> ' .
+                $n . '. ' . $link . '</li>';
+        }
+
+        echo '</ul></div>';
+
+        // POINTS
+        $ergebnis_top_5_downloads = safe_query(
+            "SELECT * FROM `" . PREFIX . "demos` ORDER BY `downloads` DESC LIMIT 0,5"
+        );
+        $top = 'TOP 5 DEMOS (' . $_language->module[ 'downloaded' ] . ')';
+        $data_array = array();
+        $data_array['$top'] = $top;
+        $top5_head = $GLOBALS["_template"]->replaceTemplate("top5_head", $data_array);
+        echo $top5_head;
+        while ($ds = mysqli_fetch_array($ergebnis_top_5_downloads)) {
+            $country1 = "[flag]" . $ds[ 'country1' ] . "[/flag]";
+            $country1 = flags($country1);
+            $country2 = "[flag]" . $ds[ 'country2' ] . "[/flag]";
+            $country2 = flags($country2);
+            $link =
+                '<a href="index.php?site=demos&amp;action=showdemo&amp;demoID=' . $ds[ 'demoID' ] . '">' .
+                $country1 . ' ' .$ds[ 'clantag1' ] . ' vs. ' . $ds[ 'clantag2' ] . ' ' . $country2 . '</a>';
+
+            echo '<li class="list-group-item"><span class="badge">'.$ds[ 'downloads' ] . '</span> ' .
+                $n . '. ' . $link .'</li>';
+        }
+        echo '</ul></div>';
+        echo '</div>';
+
         if ($type == "ASC") {
             echo '<a href="index.php?site=demos&amp;action=showgame&amp;game=' . $game . '&amp;page=' . $page .
                 '&amp;sort=' . $sort . '&amp;type=DESC">' . $_language->module[ 'sort' ] .
@@ -712,7 +702,69 @@ value="' . $_language->module[ 'rate' ] . '" class="btn btn-primary">
         }
     }
     if ($gesamt) {
-        top5();
+        echo '<div class="row">';
+
+        // RATING
+        $ergebnis_top_5_rating = safe_query("SELECT * FROM `" . PREFIX . "demos` ORDER BY `rating` DESC LIMIT 0,5");
+        $top = 'TOP 5 DEMOS (' . $_language->module[ 'rating' ] . ')';
+
+        $data_array = array();
+        $data_array['$top'] = $top;
+        $top5_head = $GLOBALS["_template"]->replaceTemplate("top5_head", $data_array);
+        echo $top5_head;
+
+        $n = 1;
+        $multiTemplateData = array();
+        while ($ds = mysqli_fetch_array($ergebnis_top_5_rating)) {
+            $country1 = "[flag]" . $ds[ 'country1' ] . "[/flag]";
+            $country1 = flags($country1);
+            $country2 = "[flag]" . $ds[ 'country2' ] . "[/flag]";
+            $country2 = flags($country2);
+            $link =
+                '<a href="index.php?site=demos&amp;action=showdemo&amp;demoID=' . $ds[ 'demoID' ] . '">' .
+                $country1 . ' ' .$ds[ 'clantag1' ] . ' vs. ' . $ds[ 'clantag2' ] . ' ' . $country2 . '</a>';
+            $ratings = array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+            for ($i = 0; $i < $ds[ 'rating' ]; $i++) {
+                $ratings[ $i ] = 1;
+            }
+            $ratingpic = '<img src="images/icons/rating_' . $ratings[ 0 ] . '_start.gif" width="1" height="5" alt="">';
+            foreach ($ratings as $pic) {
+                $ratingpic .= '<img src="images/icons/rating_' . $pic . '.gif" width="4" height="5" alt="">';
+            }
+
+            $multiTemplateData[] = array('$badge'=>$ratingpic, '$text'=>$n . '. ' . $link);
+            $n++;
+        }
+
+        echo $GLOBALS["_template"]->replaceMulti('top5_content', $multiTemplateData);
+        echo $GLOBALS["_template"]->replaceTemplate("top5_foot");
+
+        // POINTS
+        $ergebnis_top_5_downloads = safe_query(
+            "SELECT * FROM `" . PREFIX . "demos` ORDER BY `downloads` DESC LIMIT 0,5"
+        );
+        $top = 'TOP 5 DEMOS (' . $_language->module[ 'downloaded' ] . ')';
+        $data_array = array();
+        $data_array['$top'] = $top;
+        $top5_head = $GLOBALS["_template"]->replaceTemplate("top5_head", $data_array);
+        echo $top5_head;
+        $multiTemplateData = array();
+        while ($ds = mysqli_fetch_array($ergebnis_top_5_downloads)) {
+            $country1 = "[flag]" . $ds[ 'country1' ] . "[/flag]";
+            $country1 = flags($country1);
+            $country2 = "[flag]" . $ds[ 'country2' ] . "[/flag]";
+            $country2 = flags($country2);
+            $link ='<a href="index.php?site=demos&amp;action=showdemo&amp;demoID=' . $ds[ 'demoID' ] . '">'.
+                $country1 . ' ' .$ds[ 'clantag1' ] . ' vs. ' . $ds[ 'clantag2' ] . ' ' . $country2 . '</a>';
+
+            $multiTemplateData[] = array('$badge'=>$ds[ 'downloads' ], '$text'=>$n . '. ' . $link);
+        }
+
+        echo $GLOBALS["_template"]->replaceMulti('top5_content', $multiTemplateData);
+        echo $GLOBALS["_template"]->replaceTemplate("top5_foot");
+
+        echo '</div>';
+
         if ($type == "ASC") {
             echo '<a href="index.php?site=demos&amp;page=' . $page . '&amp;sort=' . $sort . '&amp;type=DESC">' .
                 $_language->module[ 'sort' ] .

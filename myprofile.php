@@ -400,7 +400,6 @@ if (!$userID) {
             );
 
             $ToEmail = $mail1;
-            $ToName = $username;
             $header = str_replace(array('%homepage_url%'), array($hp_url), $_language->module['mail_subject']);
             $Message = str_replace(
                 array(
@@ -418,16 +417,27 @@ if (!$userID) {
                 $_language->module['mail_text']
             );
 
-            if (mail(
-                $ToEmail,
-                $header,
-                $Message,
-                "From:" . $admin_email . "\nContent-type: text/plain; charset=utf-8\n"
-            )
-            ) {
-                echo $_language->module['mail_changed'];
+            $sendmail = \webspell\Email::sendEmail($admin_email, 'Profile', $ToEmail, $header, $Message);
+
+            if ($sendmail['result'] == 'fail') {
+                if (isset($sendmail['debug'])) {
+                    $fehler = array();
+                    $fehler[] = $sendmail['error'];
+                    $fehler[] = $sendmail['debug'];
+                    echo generateErrorBoxFromArray($_language->module['mail_failed'], $fehler);
+                } else {
+                    $fehler = array();
+                    $fehler[] = $sendmail['error'];
+                    echo generateErrorBoxFromArray($_language->module['mail_failed'], $fehler);
+                }
             } else {
-                echo $_language->module['mail_failed'];
+                if (isset($sendmail['debug'])) {
+                    $fehler = array();
+                    $fehler[] = $sendmail[ 'debug' ];
+                    echo generateBoxFromArray($_language->module['mail_changed'], 'alert-success', $fehler);
+                } else {
+                    echo $_language->module['mail_changed'];
+                }
             }
         } else {
             echo '<strong>ERROR: ' . $error . '</strong><br><br>

@@ -222,9 +222,16 @@ if (isset($newsID)) {
             }
         }
 
+
         $comments_allowed = $ds[ 'comments' ];
-        $parentID = $newsID;
-        $type = "ne";
+        if ($ds[ 'cwID' ]) {
+            $parentID = $ds[ 'cwID' ];
+            $type = "cw";
+        } else {
+            $parentID = $newsID;
+            $type = "ne";
+        }
+
         $referer = "index.php?site=news_comments&amp;newsID=$newsID";
 
         include("comments.php");
