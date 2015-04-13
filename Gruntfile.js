@@ -339,7 +339,17 @@ module.exports = function( grunt ) {
                 "bootlint",
                 "css"
             ]
-        }
+        },
+        todo: {
+            options: {
+                usePackage: true
+            },
+            src : [phps,
+                    javascripts,
+                    templates,
+                    csss,
+                    excludes]
+          }
     } );
 
     grunt.registerTask( "codecheck", [
