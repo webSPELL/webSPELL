@@ -344,11 +344,12 @@ module.exports = function( grunt ) {
             options: {
                 usePackage: true
             },
-            src : [phps,
-                    javascripts,
-                    templates,
-                    csss,
-                    excludes]
+            src: [
+                phps,
+                javascripts,
+                csss,
+                excludes
+            ]
           }
     } );
 
