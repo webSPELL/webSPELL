@@ -2736,3 +2736,8 @@ VALUES (1, '', '', '', 25, 0, 0, 1, 0, 0)");
         return array('status' => 'fail', 'message' => 'Failed to add SMTP support');
     }
 }
+
+function removedotINSTALL()
+{
+    unlink('../.INSTALL');
+}
