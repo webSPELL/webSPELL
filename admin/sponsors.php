@@ -344,9 +344,9 @@ if ($action == "add") {
         if (count($errors)) {
             $errors = array_unique($errors);
             echo generateErrorBoxFromArray($_language->module['errors_there'], $errors);
+        } else {
+            redirect("admincenter.php?site=sponsors", "", 0);
         }
-
-        redirect("admincenter.php?site=sponsors", "", 0);
     } else {
         echo $_language->module[ 'transaction_invalid' ];
     }
@@ -467,9 +467,9 @@ if ($action == "add") {
         if (count($errors)) {
             $errors = array_unique($errors);
             echo generateErrorBoxFromArray($_language->module['errors_there'], $errors);
+        } else {
+            redirect("admincenter.php?site=sponsors", "", 0);
         }
-
-        redirect("admincenter.php?site=sponsors", "", 0);
     } else {
         echo $_language->module[ 'transaction_invalid' ];
     }
