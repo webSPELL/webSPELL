@@ -26,292 +26,282 @@
 */
 ?>
 
-  <tr>
-   <td id="step" align="center" colspan="2">
-   <span class="steps start"><?php echo $_language->module['step0']; ?></span>
-   <span class="steps"><?php echo $_language->module['step1']; ?></span>
-   <span class="steps"><?php echo $_language->module['step2']; ?></span>
-   <span class="steps"><?php echo $_language->module['step3']; ?></span>
-   <span class="steps"><?php echo $_language->module['step4']; ?></span>
-   <span class="steps"><?php echo $_language->module['step5']; ?></span>
-   <span class="steps end" id="active"><?php echo $_language->module['step6']; ?></span>
-   </td>
-  </tr>
-  <tr id="headline">
-   <td colspan="2" id="title"><?php echo $_language->module['finish_install']; ?></td>
-  </tr>
-  <tr>
-   <td id="content" colspan="2">
+<tr>
+    <td id="step" align="center" colspan="2">
+        <span class="steps start"><?php echo $_language->module['step0']; ?></span>
+        <span class="steps"><?php echo $_language->module['step1']; ?></span>
+        <span class="steps"><?php echo $_language->module['step2']; ?></span>
+        <span class="steps"><?php echo $_language->module['step3']; ?></span>
+        <span class="steps"><?php echo $_language->module['step4']; ?></span>
+        <span class="steps"><?php echo $_language->module['step5']; ?></span>
+        <span class="steps end" id="active"><?php echo $_language->module['step6']; ?></span>
+    </td>
+</tr>
+<tr id="headline">
+    <td colspan="2" id="title"><?php echo $_language->module['finish_install']; ?></td>
+</tr>
+<tr>
+    <td id="content" colspan="2">
 
-<?php
-include('functions.php');
+        <?php
+        include('functions.php');
+        $errors = array();
 
-$info = '';
+        if ($_POST['installtype'] != "full") {
+            include('../_mysql.php');
+            @$_database = new mysqli($host, $user, $pwd, $db);
 
-if ($_POST['installtype'] == 'update') {
-    $type = '<b>'.$_language->module['update_complete'].'</b>';
+            if (mysqli_connect_error()) {
+                $errors[] = $_language->module['error_mysql'];
+            }
 
-    include('../_mysql.php');
-    $_database = new mysqli($host, $user, $pwd, $db);
+            $type = '<b>' . $_language->module['update_complete'] . '</b>';
+            $in_progress = $_language->module['update_running'];
+        }
 
-    if (mysqli_connect_error()) {
-        die($_language->module['error_mysql']);
-    }
+        if ($_POST['installtype'] == 'update') {
+            $update_functions = array();
+            $update_functions[] = "31_4beta4";
+            $update_functions[] = "4beta4_4beta5";
+            $update_functions[] = "4beta5_4beta6";
+            $update_functions[] = "4beta6_4final_1";
+            $update_functions[] = "4beta6_4final_2";
+            $update_functions[] = "40000_40100";
+            $update_functions[] = "40100_40101";
+            $update_functions[] = "40101_420_1";
+            $update_functions[] = "40101_420_2";
+            $update_functions[] = "40101_420_3";
+            $update_functions[] = "40101_420_4";
+            $update_functions[] = "40101_420_5";
+            $update_functions[] = "40101_420_6";
+            $update_functions[] = "40101_420_7";
+            $update_functions[] = "420_430_1";
+            $update_functions[] = "420_430_2";
+            $update_functions[] = "passwordhash";
+            $update_functions[] = "addSMTPSupport";
+            $update_functions[] = "updateLanguages";
+        } elseif ($_POST['installtype'] == 'full') {
+            $type = '<b>' . $_language->module['install_complete'] . '</b>';
+            $in_progress = $_language->module['install_running'];
 
-    mysqli_query($_database, "SET NAMES 'utf8'");
+            $host = $_POST['host'];
+            $user = $_POST['user'];
+            $pwd = $_POST['pwd'];
+            $db = $_POST['db'];
+            $prefix = $_POST['prefix'];
+            $adminname = $_POST['adminname'];
+            $adminpwd = $_POST['adminpwd'];
+            $adminmail = $_POST['adminmail'];
+            $url = $_POST['url'];
 
-    update31_4beta4();
-    update4beta4_4beta5();
-    update4beta5_4beta6();
-    update4beta6_4final();
-    update40000_40100();
-    update40100_40101();
-    update40101_420();
-    update420_430();
-    updatePasswordHash();
-    addSMTPSupport();
-    updateLanguages();
+            if (!(mb_strlen(trim($host)))) {
+                $errors[] = $_language->module['verify_data'];
+            }
+            if (!(mb_strlen(trim($db)))) {
+                $errors[] = $_language->module['verify_data'];
+            }
+            if (!(mb_strlen(trim($adminname)))) {
+                $errors[] = $_language->module['verify_data'];
+            }
+            if (!(mb_strlen(trim($adminpwd)))) {
+                $errors[] = $_language->module['verify_data'];
+            }
+            if (!(mb_strlen(trim($adminmail)))) {
+                $errors[] = $_language->module['verify_data'];
+            }
+            if (!(mb_strlen(trim($url)))) {
+                $errors[] = $_language->module['verify_data'];
+            }
 
-} elseif ($_POST['installtype'] == 'full') {
-    $type = '<b>'.$_language->module['install_complete'].'</b>';
-    $info = $_language->module['reset_chmod'];
+            @$_database = new mysqli($host, $user, $pwd, $db);
 
-    $host = $_POST['host'];
-    $user = $_POST['user'];
-    $pwd = $_POST['pwd'];
-    $db = $_POST['db'];
-    $prefix = $_POST['prefix'];
-    $adminname = $_POST['adminname'];
-    $adminpwd = $_POST['adminpwd'];
-    $adminmail = $_POST['adminmail'];
-    $url = $_POST['url'];
+            if (mysqli_connect_error()) {
+                $errors[] = $_language->module['error_mysql'];
+            }
 
-    if (!(mb_strlen(trim($host)))) {
-        $error=$_language->module['verify_data'];
-        die("<b>".$_language->module['error']."<br>".$error."</b><br><br><a href='javascript:history.back()'>".$_language->module['back']."</a>");
-    }
-    if (!(mb_strlen(trim($db)))) {
-        $error=$_language->module['verify_data'];
-        die("<b>".$_language->module['error']."<br>".$error."</b><br><br><a href='javascript:history.back()'>".$_language->module['back']."</a>");
-    }
-    if (!(mb_strlen(trim($adminname)))) {
-        $error=$_language->module['verify_data'];
-        die("<b>".$_language->module['error']."<br>".$error."</b><br><br><a href='javascript:history.back()'>".$_language->module['back']."</a>");
-    }
-    if (!(mb_strlen(trim($adminpwd)))) {
-        $error=$_language->module['verify_data'];
-        die("<b>".$_language->module['error']."<br>".$error."</b><br><br><a href='javascript:history.back()'>".$_language->module['back']."</a>");
-    }
-    if (!(mb_strlen(trim($adminmail)))) {
-        $error=$_language->module['verify_data'];
-        die("<b>".$_language->module['error']."<br>".$error."</b><br><br><a href='javascript:history.back()'>".$_language->module['back']."</a>");
-    }
-    if (!(mb_strlen(trim($url)))) {
-        $error=$_language->module['verify_data'];
-        die("<b>".$_language->module['error']."<br>".$error."</b><br><br><a href='javascript:history.back()'>".$_language->module['back']."</a>");
-    }
-
-    $adminpassword=generatePasswordHash($adminpwd);
-
-    //write _mysql.php
-
-    $file = ('../_mysql.php');
-    if ($fp = fopen($file, 'wb')) {
-        $string='<?php
-$host = "'.$host.'";
-$user = "'.$user.'";
-$pwd = "'.$pwd.'";
-$db = "'.$db.'";
-if(!defined("PREFIX")){
-	define("PREFIX", \''.$prefix.'\');
+            $file = ('../_mysql.php');
+            if ($fp = fopen($file, 'wb')) {
+                $string = '<?php
+$host = "' . $host . '";
+$user = "' . $user . '";
+$pwd = "' . $pwd . '";
+$db = "' . $db . '";
+if (!defined("PREFIX")) {
+	define("PREFIX", \'' . $prefix . '\');
 }
 ?>';
 
-        fwrite($fp, $string);
-        fclose($fp);
-    } else {
-        echo $_language->module['write_failed'];
-    }
+                fwrite($fp, $string);
+                fclose($fp);
+            } else {
+                $errors[] = $_language->module['write_failed'];
+            }
 
-    //write sql-tables
+            $_SESSION['adminpassword'] = generatePasswordHash($adminpwd);
+            $_SESSION['adminname'] = $adminname;
+            $_SESSION['adminmail'] = $adminmail;
+            $_SESSION['url'] = $url;
 
-    $_database = new mysqli($host, $user, $pwd, $db);
+            $update_functions = array();
+            $update_functions[] = "base_1";
+            $update_functions[] = "base_2";
+            $update_functions[] = "base_3";
+            $update_functions[] = "base_4";
+            $update_functions[] = "base_5";
+            $update_functions[] = "base_6";
+            $update_functions[] = "base_7";
+            $update_functions[] = "base_8";
+            $update_functions[] = "base_9";
+            $update_functions[] = "base_10";
+            $update_functions[] = "base_11";
+            $update_functions[] = "base_12";
+            $update_functions[] = "base_13";
+            $update_functions[] = "base_14";
+            $update_functions[] = "4beta4_4beta5";
+            $update_functions[] = "4beta5_4beta6";
+            $update_functions[] = "4beta6_4final_1";
+            $update_functions[] = "4beta6_4final_2";
+            $update_functions[] = "40000_40100";
+            $update_functions[] = "40100_40101";
+            $update_functions[] = "40101_420_1";
+            $update_functions[] = "40101_420_2";
+            $update_functions[] = "40101_420_3";
+            $update_functions[] = "40101_420_4";
+            $update_functions[] = "40101_420_5";
+            $update_functions[] = "40101_420_6";
+            $update_functions[] = "40101_420_7";
+            $update_functions[] = "420_430_1";
+            $update_functions[] = "420_430_2";
+            $update_functions[] = "addSMTPSupport";
+            $update_functions[] = "updateLanguages";
+        } elseif ($_POST['installtype'] == 'update_beta') {
+            $update_functions = array();
+            $update_functions[] = "4beta4_4beta5";
+            $update_functions[] = "4beta5_4beta6";
+            $update_functions[] = "4beta6_4final_1";
+            $update_functions[] = "4beta6_4final_2";
+            $update_functions[] = "40000_40100";
+            $update_functions[] = "40100_40101";
+            $update_functions[] = "40101_420_1";
+            $update_functions[] = "40101_420_2";
+            $update_functions[] = "40101_420_3";
+            $update_functions[] = "40101_420_4";
+            $update_functions[] = "40101_420_5";
+            $update_functions[] = "40101_420_6";
+            $update_functions[] = "40101_420_7";
+            $update_functions[] = "420_430_1";
+            $update_functions[] = "420_430_2";
+            $update_functions[] = "passwordhash";
+            $update_functions[] = "addSMTPSupport";
+            $update_functions[] = "updateLanguages";
+        } elseif ($_POST['installtype'] == 'update_beta5') {
+            $update_functions = array();
+            $update_functions[] = "4beta5_4beta6";
+            $update_functions[] = "4beta6_4final_1";
+            $update_functions[] = "4beta6_4final_2";
+            $update_functions[] = "40000_40100";
+            $update_functions[] = "40100_40101";
+            $update_functions[] = "40101_420_1";
+            $update_functions[] = "40101_420_2";
+            $update_functions[] = "40101_420_3";
+            $update_functions[] = "40101_420_4";
+            $update_functions[] = "40101_420_5";
+            $update_functions[] = "40101_420_6";
+            $update_functions[] = "40101_420_7";
+            $update_functions[] = "420_430_1";
+            $update_functions[] = "420_430_2";
+            $update_functions[] = "passwordhash";
+            $update_functions[] = "addSMTPSupport";
+            $update_functions[] = "updateLanguages";
+        } elseif ($_POST['installtype'] == 'update_beta6') {
+            $update_functions = array();
+            $update_functions[] = "4beta6_4final_1";
+            $update_functions[] = "4beta6_4final_2";
+            $update_functions[] = "40000_40100";
+            $update_functions[] = "40100_40101";
+            $update_functions[] = "40101_420_1";
+            $update_functions[] = "40101_420_2";
+            $update_functions[] = "40101_420_3";
+            $update_functions[] = "40101_420_4";
+            $update_functions[] = "40101_420_5";
+            $update_functions[] = "40101_420_6";
+            $update_functions[] = "40101_420_7";
+            $update_functions[] = "420_430_1";
+            $update_functions[] = "420_430_2";
+            $update_functions[] = "passwordhash";
+            $update_functions[] = "addSMTPSupport";
+            $update_functions[] = "updateLanguages";
+        } elseif ($_POST['installtype'] == 'update_final') {
+            $update_functions = array();
+            $update_functions[] = "40000_40100";
+            $update_functions[] = "40100_40101";
+            $update_functions[] = "40101_420_1";
+            $update_functions[] = "40101_420_2";
+            $update_functions[] = "40101_420_3";
+            $update_functions[] = "40101_420_4";
+            $update_functions[] = "40101_420_5";
+            $update_functions[] = "40101_420_6";
+            $update_functions[] = "40101_420_7";
+            $update_functions[] = "420_430_1";
+            $update_functions[] = "420_430_2";
+            $update_functions[] = "passwordhash";
+            $update_functions[] = "addSMTPSupport";
+            $update_functions[] = "updateLanguages";
+        } elseif ($_POST['installtype'] == 'update_40100') {
+            $update_functions = array();
+            $update_functions[] = "40100_40101";
+            $update_functions[] = "40101_420_1";
+            $update_functions[] = "40101_420_2";
+            $update_functions[] = "40101_420_3";
+            $update_functions[] = "40101_420_4";
+            $update_functions[] = "40101_420_5";
+            $update_functions[] = "40101_420_6";
+            $update_functions[] = "40101_420_7";
+            $update_functions[] = "420_430_1";
+            $update_functions[] = "420_430_2";
+            $update_functions[] = "passwordhash";
+            $update_functions[] = "addSMTPSupport";
+            $update_functions[] = "updateLanguages";
+        } elseif ($_POST['installtype'] == 'update_40102') {
+            $update_functions = array();
+            $update_functions[] = "40101_420_1";
+            $update_functions[] = "40101_420_2";
+            $update_functions[] = "40101_420_3";
+            $update_functions[] = "40101_420_4";
+            $update_functions[] = "40101_420_5";
+            $update_functions[] = "40101_420_6";
+            $update_functions[] = "40101_420_7";
+            $update_functions[] = "420_430_1";
+            $update_functions[] = "420_430_2";
+            $update_functions[] = "passwordhash";
+            $update_functions[] = "addSMTPSupport";
+            $update_functions[] = "updateLanguages";
+        } elseif ($_POST['installtype'] == 'update_420') {
+            $update_functions = array();
+            $update_functions[] = "420_430_1";
+            $update_functions[] = "420_430_2";
+            $update_functions[] = "passwordhash";
+            $update_functions[] = "addSMTPSupport";
+            $update_functions[] = "updateLanguages";
+        }
 
-    if (mysqli_connect_error()) {
-        die($_language->module['error_mysql']);
-    }
+        if (count($errors)) {
+            $fehler = implode('<br>&#8226; ', array_unique($errors));
 
-    mysqli_query($_database, "SET NAMES 'utf8'");
+            $text = '<div class="alert alert-danger" role="alert">
+            <strong>' . $_language->module['error'] . ':</strong><br>
+            <br>
+            &#8226; ' . $fehler . '
+        </div>';
+        } else {
+            $text = update_progress($update_functions);
+        }
+        ?>
 
-
-    define("PREFIX", $prefix);
-
-    fullinstall();
-    update4beta4_4beta5();
-    update4beta5_4beta6();
-    update4beta6_4final();
-    update40000_40100();
-    update40100_40101();
-    update40101_420();
-    update420_430();
-    addSMTPSupport();
-    updateLanguages();
-
-} elseif ($_POST['installtype'] == 'update_beta') {
-    $type = '<b>'.$_language->module['update_complete'].'</b>';
-
-    include('../_mysql.php');
-    $_database = new mysqli($host, $user, $pwd, $db);
-
-    if (mysqli_connect_error()) {
-        die($_language->module['error_mysql']);
-    }
-
-    mysqli_query($_database, "SET NAMES 'utf8'");
-
-    update4beta4_4beta5();
-    update4beta5_4beta6();
-    update4beta6_4final();
-    update40000_40100();
-    update40100_40101();
-    update40101_420();
-    update420_430();
-    updatePasswordHash();
-    addSMTPSupport();
-    updateLanguages();
-
-} elseif ($_POST['installtype'] == 'update_beta5') {
-    $type = '<b>'.$_language->module['update_complete'].'</b>';
-
-    include('../_mysql.php');
-    $_database = new mysqli($host, $user, $pwd, $db);
-
-    if (mysqli_connect_error()) {
-        die($_language->module['error_mysql']);
-    }
-
-    mysqli_query($_database, "SET NAMES 'utf8'");
-
-    update4beta5_4beta6();
-    update4beta6_4final();
-    update40000_40100();
-    update40100_40101();
-    update40101_420();
-    update420_430();
-    updatePasswordHash();
-    addSMTPSupport();
-    updateLanguages();
-
-} elseif ($_POST['installtype'] == 'update_beta6') {
-    $type = '<b>'.$_language->module['update_complete'].'</b>';
-
-    include('../_mysql.php');
-    $_database = new mysqli($host, $user, $pwd, $db);
-
-    if (mysqli_connect_error()) {
-        die($_language->module['error_mysql']);
-    }
-
-    mysqli_query($_database, "SET NAMES 'utf8'");
-
-    update4beta6_4final();
-    update40000_40100();
-    update40100_40101();
-    update40101_420();
-    update420_430();
-    updatePasswordHash();
-    addSMTPSupport();
-    updateLanguages();
-
-} elseif ($_POST['installtype'] == 'update_final') {
-    $type = '<b>'.$_language->module['update_complete'].'</b>';
-
-    include('../_mysql.php');
-    $_database = new mysqli($host, $user, $pwd, $db);
-
-    if (mysqli_connect_error()) {
-        die($_language->module['error_mysql']);
-    }
-
-    mysqli_query($_database, "SET NAMES 'utf8'");
-
-    update40000_40100();
-    update40100_40101();
-    update40101_420();
-    update420_430();
-    updatePasswordHash();
-    addSMTPSupport();
-    updateLanguages();
-
-} elseif ($_POST['installtype'] == 'update_40100') {
-    $type = '<b>'.$_language->module['update_complete'].'</b>';
-
-    include('../_mysql.php');
-    $_database = new mysqli($host, $user, $pwd, $db);
-
-    if (mysqli_connect_error()) {
-        die($_language->module['error_mysql']);
-    }
-
-    mysqli_query($_database, "SET NAMES 'utf8'");
-
-    update40100_40101();
-    update40101_420();
-    update420_430();
-    updatePasswordHash();
-    addSMTPSupport();
-    updateLanguages();
-
-} elseif ($_POST['installtype'] == 'update_40102') {
-    $type = '<b>'.$_language->module['update_complete'].'</b>';
-
-    include('../_mysql.php');
-    $_database = new mysqli($host, $user, $pwd, $db);
-
-    if (mysqli_connect_error()) {
-        die($_language->module['error_mysql']);
-    }
-
-    mysqli_query($_database, "SET NAMES 'utf8'");
-
-    update40101_420();
-    update420_430();
-    updatePasswordHash();
-    addSMTPSupport();
-    updateLanguages();
-
-} elseif ($_POST['installtype'] == 'update_420') {
-    $type = '<b>'.$_language->module['update_complete'].'</b>';
-
-    include('../_mysql.php');
-    $_database = new mysqli($host, $user, $pwd, $db);
-
-    if (mysqli_connect_error()) {
-        die($_language->module['error_mysql']);
-    }
-
-    mysqli_query($_database, "SET NAMES 'utf8'");
-
-    update420_430();
-    updatePasswordHash();
-    addSMTPSupport();
-    updateLanguages();
-
-}
-include("../src/func/filesystem.php");
-$remove_install = @rm_recursive("./");
-if ($remove_install) {
-    $delete_info = $_language->module['folder_removed'];
-} else {
-    $delete_info = $_language->module['delete_folder'];
-}
-?>
-
-   <center>
-    <?php echo $type; ?><br><br>
-    <?php echo $delete_info; ?><br><br>
-    <?php echo $info; ?><br><br><br>
-   <a href="../index.php"><b><?php echo $_language->module['view_site']; ?></b></a>
-   </center>
-   </td>
-  </tr>
+        <h2><?php echo $in_progress; ?></h2>
+        <?php echo $text; ?>
+        <div id="result" style="display:none;"><h3><?php echo $type; ?></h3>
+            <center><a href="../index.php"><b><?php echo $_language->module['view_site']; ?></b></a></center>
+        </div>
+    </td>
+</tr>

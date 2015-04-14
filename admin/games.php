@@ -110,27 +110,53 @@ if ($action == "add") {
     $tag = $_POST[ "tag" ];
     $CAPCLASS = new \webspell\Captcha;
     if ($CAPCLASS->checkCaptcha(0, $_POST[ 'captcha_hash' ])) {
-        if ($name && $tag) {
-            $file_ext = strtolower(mb_substr($icon[ 'name' ], strrpos($icon[ 'name' ], ".")));
-            if ($file_ext == ".gif") {
-                safe_query(
-                    "INSERT INTO " . PREFIX . "games (gameID, name, tag) values('', '" . $name . "', '" . $tag .
-                    "')"
-                );
-                if ($icon[ 'name' ] != "") {
-                    move_uploaded_file($icon[ 'tmp_name' ], $filepath . $icon[ 'name' ]);
-                    $file = $tag . $file_ext;
-                    rename($filepath . $icon[ 'name' ], $filepath . $file);
-                    redirect("admincenter.php?site=games", "", 0);
+        if (checkforempty(array('name','tag'))) {
+            $errors = array();
+
+            //TODO: should be loaded from root language folder
+            $_language->readModule('formvalidation', true);
+
+            $upload = new \webspell\HttpUpload('icon');
+            if ($upload->hasFile()) {
+                if ($upload->hasError() === false) {
+                    $mime_types = array('image/gif');
+
+                    if ($upload->supportedMimeType($mime_types)) {
+                        $imageInformation = getimagesize($upload->getTempFile());
+
+                        if (is_array($imageInformation)) {
+                            safe_query(
+                                "INSERT INTO " . PREFIX . "games (
+                                    name,
+                                    tag
+                                ) VALUES (
+                                    '" . $name . "',
+                                    '" . $tag ."'
+                                )"
+                            );
+
+                            $file = $tag . ".gif";
+
+                            if ($upload->saveAs($filepath . $file, true)) {
+                                @chmod($filepath . $file, $new_chmod);
+                            }
+                        } else {
+                            $errors[] = $_language->module['broken_image'];
+                        }
+                    } else {
+                        $errors[] = $_language->module['unsupported_image_type'];
+                    }
+                } else {
+                    $errors[] = $upload->translateError();
                 }
-            } else {
-                echo '<b>' . $_language->module[ 'format_incorrect' ] .
-                    '</b><br /><br /><a href="javascript:history.back()">&laquo; ' . $_language->module[ 'back' ] .
-                    '</a>';
             }
+            if (count($errors)) {
+                $errors = array_unique($errors);
+                echo generateErrorBoxFromArray($_language->module['errors_there'], $errors);
+            }
+
         } else {
-            echo '<b>' . $_language->module[ 'fill_correctly' ] .
-                '</b><br /><br /><a href="javascript:history.back()">&laquo; ' . $_language->module[ 'back' ] . '</a>';
+            echo $_language->module[ 'fill_correctly' ];
         }
     } else {
         echo $_language->module[ 'transaction_invalid' ];
@@ -141,37 +167,51 @@ if ($action == "add") {
     $tag = $_POST[ "tag" ];
     $CAPCLASS = new \webspell\Captcha;
     if ($CAPCLASS->checkCaptcha(0, $_POST[ 'captcha_hash' ])) {
-        if ($name && $tag) {
-            if ($icon[ 'name' ] == "") {
-                if (safe_query(
-                    "UPDATE " . PREFIX . "games SET name='" . $name . "', tag='" . $tag .
-                    "' WHERE gameID='" . $_POST[ "gameID" ] . "'"
-                )) {
-                    redirect("admincenter.php?site=games", "", 0);
-                }
-            } else {
-                $file_ext = strtolower(mb_substr($icon[ 'name' ], strrpos($icon[ 'name' ], ".")));
-                if ($file_ext == ".gif") {
-                    move_uploaded_file($icon[ 'tmp_name' ], $filepath . $icon[ 'name' ]);
-                    @chmod($filepath . $icon[ 'name' ], 0755);
-                    $file = $tag . $file_ext;
-                    rename($filepath . $icon[ 'name' ], $filepath . $file);
+        if (checkforempty(array('name','tag'))) {
+            safe_query(
+                "UPDATE
+                    " . PREFIX . "games
+                SET
+                    name='" . $name . "',
+                    tag='" . $tag ."'
+                WHERE gameID='" . $_POST[ "gameID" ] . "'"
+            );
 
-                    if (safe_query(
-                        "UPDATE " . PREFIX . "games SET name='" . $name . "', tag='" . $tag .
-                        "' WHERE gameID='" . $_POST[ "gameID" ] . "'"
-                    )) {
-                        redirect("admincenter.php?site=games", "", 0);
+            $errors = array();
+
+            //TODO: should be loaded from root language folder
+            $_language->readModule('formvalidation', true);
+
+            $upload = new \webspell\HttpUpload('icon');
+            if ($upload->hasFile()) {
+                if ($upload->hasError() === false) {
+                    $mime_types = array('image/gif');
+
+                    if ($upload->supportedMimeType($mime_types)) {
+                        $imageInformation = getimagesize($upload->getTempFile());
+
+                        if (is_array($imageInformation)) {
+                            $file = $tag . ".gif";
+
+                            if ($upload->saveAs($filepath . $file, true)) {
+                                @chmod($filepath . $file, $new_chmod);
+                            }
+                        } else {
+                            $errors[] = $_language->module['broken_image'];
+                        }
+                    } else {
+                        $errors[] = $_language->module['unsupported_image_type'];
                     }
                 } else {
-                    echo '<b>' . $_language->module[ 'format_incorrect' ] .
-                        '</b><br /><br /><a href="javascript:history.back()">&laquo; ' . $_language->module[ 'back' ] .
-                        '</a>';
+                    $errors[] = $upload->translateError();
                 }
             }
+            if (count($errors)) {
+                $errors = array_unique($errors);
+                echo generateErrorBoxFromArray($_language->module['errors_there'], $errors);
+            }
         } else {
-            echo '<b>' . $_language->module[ 'fill_correctly' ] .
-                '</b><br /><br /><a href="javascript:history.back()">&laquo; ' . $_language->module[ 'back' ] . '</a>';
+            echo $_language->module[ 'fill_correctly' ];
         }
     } else {
         echo $_language->module[ 'transaction_invalid' ];
@@ -179,7 +219,15 @@ if ($action == "add") {
 } elseif (isset($_GET[ "delete" ])) {
     $CAPCLASS = new \webspell\Captcha();
     if ($CAPCLASS->checkCaptcha(0, $_GET[ 'captcha_hash' ])) {
+        $ds = mysqli_fetch_array(
+            safe_query(
+                "SELECT tag FROM " . PREFIX . "games WHERE gameID='" . $_GET[ "gameID" ] . "'"
+            )
+        );
         safe_query("DELETE FROM " . PREFIX . "games WHERE gameID='" . $_GET[ "gameID" ] . "'");
+        if (file_exists($filepath.$ds['tag'].".gif")) {
+            unlink($filepath.$ds['tag'].".gif");
+        }
         redirect("admincenter.php?site=games", "", 0);
     } else {
         echo $_language->module[ 'transaction_invalid' ];

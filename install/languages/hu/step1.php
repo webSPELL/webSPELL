@@ -26,12 +26,12 @@
 */
 
 $language_array = Array(
-	'agree'=>'Elfogadom',
-	'agree_not'=>'Nem fogadom el',
-	'gpl_info'=>'A webSPELL telepítéséhez el kell fogadnod a<br><a href="http://www.gnu.org/licenses/licenses.html" target="_blank">GNU GENERAL PUBLIC LICENCE</a>-t',
-	'licence'=>'Liszensz Megállapodás',
-	'more_info'=>'További liszensz információkat a <a href="http://www.webspell.org/index.php?site=license" target="_blank">webSPELL oldalán</a> találsz',
-	'please_select'=>'Válassz',
-	'version'=>'Verzió'
+    'agree' => 'Elfogadom',
+    'agree_not' => 'Nem fogadom el',
+    'gpl_info' => 'A webSPELL telepítéséhez el kell fogadnod a<br><a href="http://www.gnu.org/licenses/licenses.html" target="_blank">GNU GENERAL PUBLIC LICENCE</a>-t',
+    'licence' => 'Liszensz Megállapodás',
+    'more_info' => 'További liszensz információkat a <a href="http://www.webspell.org/index.php?site=license" target="_blank">webSPELL oldalán</a> találsz',
+    'please_select' => 'Válassz',
+    'version' => 'Verzió'
 );
 ?>

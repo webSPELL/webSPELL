@@ -61,6 +61,7 @@ systeminc('session');
 systeminc('login');
 
 systeminc('func/useraccess');
+systeminc('func/filesystem');
 
 if (isset($fileID)) {
     $ergebnis = safe_query("SELECT * FROM " . PREFIX . "files WHERE fileID='$fileID' ");
@@ -87,7 +88,7 @@ if (isset($fileID)) {
     if ($allowed) {
         safe_query("UPDATE " . PREFIX . "files SET downloads=downloads+1 WHERE fileID='$fileID' ");
 
-        if (stristr($dd[ 'file' ], 'http://') || stristr($dd[ 'file' ], 'ftp://')) {
+        if (isFileURL($dd[ 'file' ])) {
             download($dd[ 'file' ], 1);
         } else {
             download('downloads/' . $dd[ 'file' ]);
@@ -118,7 +119,7 @@ if (isset($fileID)) {
     if ($allowed) {
         safe_query("UPDATE " . PREFIX . "demos SET downloads=downloads+1 WHERE demoID='" . $demoID . "'");
 
-        if (stristr($dd[ 'file' ], 'http://')) {
+        if (isFileURL($dd[ 'file' ])) {
             download($dd[ 'file' ], 1);
         } else {
             download('demos/' . $dd[ 'file' ]);

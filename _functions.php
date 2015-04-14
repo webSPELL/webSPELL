@@ -262,6 +262,9 @@ systeminc('func/messenger');
 
 systeminc('func/news');
 
+// -- FILES INFORMATION -- //
+systeminc('func/files');
+
 // -- GAME INFORMATION -- //
 
 systeminc('func/game');
@@ -307,6 +310,12 @@ systeminc('func/bbcode');
 // -- Tags -- //
 
 systeminc('func/tags');
+
+// -- Upload -- //
+
+systeminc('func/upload');
+systeminc('func/httpupload');
+systeminc('func/urlupload');
 
 // -- Mod Rewrite -- //
 

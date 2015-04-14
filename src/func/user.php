@@ -115,20 +115,28 @@ function geticq($userID)
     return getinput($ds['icq']);
 }
 
-function getcountries()
+function getcountries($selected = null)
 {
     $countries = '';
     $ergebnis = safe_query("SELECT * FROM " . PREFIX . "countries WHERE `fav` = 1 ORDER BY `country`");
     $anz = mysqli_num_rows($ergebnis);
     while ($ds = mysqli_fetch_array($ergebnis)) {
-        $countries .= '<option value="' . $ds['short'] . '">' . $ds['country'] . '</option>';
+        if ($ds['short'] == $selected) {
+            $countries .= '<option value="' . $ds['short'] . '" selected="selected">' . $ds['country'] . '</option>';
+        } else {
+            $countries .= '<option value="' . $ds['short'] . '">' . $ds['country'] . '</option>';
+        }
     }
     if ($anz) {
         $countries .= '<option value="">----------------------------------</option>';
     }
     $result = safe_query("SELECT * FROM " . PREFIX . "countries WHERE `fav`= 0 ORDER BY `country`");
     while ($dv = mysqli_fetch_array($result)) {
-        $countries .= '<option value="' . $dv['short'] . '">' . $dv['country'] . '</option>';
+        if ($dv['short'] == $selected) {
+            $countries .= '<option value="' . $dv['short'] . '" selected="selected">' . $dv['country'] . '</option>';
+        } else {
+            $countries .= '<option value="' . $dv['short'] . '">' . $dv['country'] . '</option>';
+        }
     }
     return $countries;
 }

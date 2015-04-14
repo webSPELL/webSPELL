@@ -24,41 +24,33 @@
 #                                                                        #
 ##########################################################################
 */
-/**
- * Online Language Editor Greece language file for webSPELL 4.2.2
- * @author Stefan Giesecke <webmaster@giesi.com>
- * @copyright Copyright (c) 2010, Stefan Giesecke
- * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
- */
 
 $language_array = Array(
 
 /* do not edit above this line */
 
-  'back'=>'πισω',
-  'banner'=>'Banner',
-  'banner_to_big'=>'Η εικονα ειναι πολυ μεγαλη',
-  'categories'=>'Κατηγοριες',
-  'category'=>'Κατηγορια',
-  'delete'=>'διαγραφη',
-  'edit'=>'επεξεργασια',
-  'edit_link'=>'Επεξεργασια link',
-  'format_incorrect'=>'Λαθος format εικονας (επιτρεπονται: *.gif, *.jpg ή *.png)',
-  'go_back'=>'πηγαινε πισω',
-  'homepage'=>'Διευθυνση',
-  'information'=>'πληροφοριες',
-  'link'=>'Link',
-  'linkname'=>'ονομα Link',
-  'linkrubric'=>'Linkrubric',
-  'links'=>'Links',
-  'new_category'=>'νεα κατηγορια',
-  'new_link'=>'Νεο link',
-  'no_access'=>'Απαγορευεται η προσβαση.',
-  'no_categories'=>'δεν υπαρχουν διαθεσιμες κατηγοριες',
-  'no_links'=>'δεν υπαρχουν διαθεσιμα linκ',
-  'really_delete'=>'διαγραφη καταχορυσης?',
-  'save_link'=>'Αποθηκευση link',
-  'title_categories'=>'κατηγοριες Link',
-  'update_link'=>'Ενημερωση link'
+    'back' => 'πισω',
+    'banner' => 'Banner',
+    'categories' => 'Κατηγοριες',
+    'category' => 'Κατηγορια',
+    'delete' => 'διαγραφη',
+    'edit' => 'επεξεργασια',
+    'edit_link' => 'Επεξεργασια link',
+    'format_incorrect' => 'Λαθος format εικονας (επιτρεπονται: *.gif, *.jpg ή *.png)',
+    'go_back' => 'πηγαινε πισω',
+    'homepage' => 'Διευθυνση',
+    'information' => 'πληροφοριες',
+    'link' => 'Link',
+    'linkname' => 'ονομα Link',
+    'linkrubric' => 'Linkrubric',
+    'links' => 'Links',
+    'new_category' => 'νεα κατηγορια',
+    'new_link' => 'Νεο link',
+    'no_access' => 'Απαγορευεται η προσβαση.',
+    'no_categories' => 'δεν υπαρχουν διαθεσιμες κατηγοριες',
+    'no_links' => 'δεν υπαρχουν διαθεσιμα linκ',
+    'really_delete' => 'διαγραφη καταχορυσης?',
+    'save_link' => 'Αποθηκευση link',
+    'title_categories' => 'κατηγοριες Link',
+    'update_link' => 'Ενημερωση link'
 );
-
