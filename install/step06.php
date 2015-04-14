@@ -293,6 +293,7 @@ if (!defined("PREFIX")) {
         <?php echo $text; ?>
         <div id="result" style="display:none;"><h3><?php echo $type; ?></h3>
             <center><a href="../index.php"><b><?php echo $_language->module['view_site']; ?></b></a></center>
+            <?php unlink('../.INSTALL'); ?>
         </div>
     </td>
 </tr>
