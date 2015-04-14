@@ -24,41 +24,33 @@
 #                                                                        #
 ##########################################################################
 */
-/**
- * Online Language Editor Albania language file for webSPELL 4.2.2
- * @author Stefan Giesecke <webmaster@giesi.com>
- * @copyright Copyright (c) 2010, Stefan Giesecke
- * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
- */
 
 $language_array = Array(
 
 /* do not edit above this line */
 
-  'back'=>'mbrapsht',
-  'banner'=>'Flamur',
-  'banner_to_big'=>'Fotoja është shumë e madhe',
-  'categories'=>'Kategoritë',
-  'category'=>'Kategoria',
-  'delete'=>'fshij',
-  'edit'=>'edito',
-  'edit_link'=>'Edito link-un',
-  'format_incorrect'=>'Foto-format e gabuar (lejohen: *.gif, *.jpg ose *.png)',
-  'go_back'=>'shko mbrapsht',
-  'homepage'=>'Adresa',
-  'information'=>'informacion',
-  'link'=>'Link-u',
-  'linkname'=>'Emri link-ut',
-  'linkrubric'=>'Rubrika link-ut',
-  'links'=>'Link-et',
-  'new_category'=>'kategori e re',
-  'new_link'=>'Link i ri',
-  'no_access'=>'ndalohet hyrja.',
-  'no_categories'=>'nuk ka kategori të vlefshme',
-  'no_links'=>'nuk ka link-e të vlefshme',
-  'really_delete'=>'vërtet e fshin këtë hyrje?',
-  'save_link'=>'Shpëto link-un',
-  'title_categories'=>'Kategoritë e link-eve',
-  'update_link'=>'Updato link-un'
+    'back' => 'mbrapsht',
+    'banner' => 'Flamur',
+    'categories' => 'Kategoritë',
+    'category' => 'Kategoria',
+    'delete' => 'fshij',
+    'edit' => 'edito',
+    'edit_link' => 'Edito link-un',
+    'format_incorrect' => 'Foto-format e gabuar (lejohen: *.gif, *.jpg ose *.png)',
+    'go_back' => 'shko mbrapsht',
+    'homepage' => 'Adresa',
+    'information' => 'informacion',
+    'link' => 'Link-u',
+    'linkname' => 'Emri link-ut',
+    'linkrubric' => 'Rubrika link-ut',
+    'links' => 'Link-et',
+    'new_category' => 'kategori e re',
+    'new_link' => 'Link i ri',
+    'no_access' => 'ndalohet hyrja.',
+    'no_categories' => 'nuk ka kategori të vlefshme',
+    'no_links' => 'nuk ka link-e të vlefshme',
+    'really_delete' => 'vërtet e fshin këtë hyrje?',
+    'save_link' => 'Shpëto link-un',
+    'title_categories' => 'Kategoritë e link-eve',
+    'update_link' => 'Updato link-un'
 );
-

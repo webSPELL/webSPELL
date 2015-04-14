@@ -127,6 +127,7 @@ $language_array = Array(
   'various'=>'Változó',
   'weeks'=>'hét',
   'you_cant_ban'=>'Nem bannolhatod ezt a felhasználót! (Főadmin)',
-  'you_cant_ban_yourself'=>'Nem bannolhatod magad!'
+  'you_cant_ban_yourself'=>'Nem bannolhatod magad!',
+  'error'=>'Error'
 );
 

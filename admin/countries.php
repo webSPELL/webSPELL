@@ -136,43 +136,61 @@ if ($action == "add") {
     $country = $_POST[ "country" ];
     $short = $_POST[ "shorthandle" ];
     if (isset($POST[ "fav" ])) {
-        $fav = (int)$POST[ 'fav' ];
+        $fav = 1;
     } else {
         $fav = 0;
     }
     $CAPCLASS = new \webspell\Captcha;
     if ($CAPCLASS->checkCaptcha(0, $_POST[ 'captcha_hash' ])) {
-        if ($country && $short) {
-            $file_ext = strtolower(mb_substr($icon[ 'name' ], strrpos($icon[ 'name' ], ".")));
-            if ($file_ext == ".gif") {
-                safe_query(
-                    "INSERT INTO
-                        `" . PREFIX . "countries` (
-                            `countryID`,
-                            `country`,
-                            `short`,
-                            `fav`
-                        )
-                        VALUES (
-                            '',
-                            '" . $country . "',
-                            '" . $short . "',
-                            '" . $fav . "'
-                        )"
-                );
-                if ($icon[ 'name' ] != "") {
-                    move_uploaded_file($icon[ 'tmp_name' ], $filepath . $icon[ 'name' ]);
-                    $file = $short . $file_ext;
-                    rename($filepath . $icon[ 'name' ], $filepath . $file);
-                    redirect("admincenter.php?site=countries", "", 0);
+        if (checkforempty(array('shorthandle','country'))) {
+            $errors = array();
+
+            //TODO: should be loaded from root language folder
+            $_language->readModule('formvalidation', true);
+
+            $upload = new \webspell\HttpUpload('icon');
+            if ($upload->hasFile()) {
+                if ($upload->hasError() === false) {
+                    $mime_types = array('image/gif');
+
+                    if ($upload->supportedMimeType($mime_types)) {
+                        $imageInformation = getimagesize($upload->getTempFile());
+
+                        if (is_array($imageInformation)) {
+                            safe_query(
+                                "INSERT INTO
+                                    `" . PREFIX . "countries` (
+                                        `country`,
+                                        `short`,
+                                        `fav`
+                                    ) VALUES (
+                                        '" . $country . "',
+                                        '" . $short . "',
+                                        '" . $fav . "'
+                                    )"
+                            );
+
+                            $file = $short . ".gif";
+
+                            if ($upload->saveAs($filepath . $file, true)) {
+                                @chmod($filepath . $file, $new_chmod);
+                            }
+                        } else {
+                            $errors[] = $_language->module['broken_image'];
+                        }
+                    } else {
+                        $errors[] = $_language->module['unsupported_image_type'];
+                    }
+                } else {
+                    $errors[] = $upload->translateError();
                 }
-            } else {
-                echo '<b>' . $_language->module[ 'format_incorrect' ] . '</b><br><br>
-                <a href="javascript:history.back()">&laquo; ' . $_language->module[ 'back' ] . '</a>';
+            }
+            if (count($errors)) {
+                $errors = array_unique($errors);
+                echo generateErrorBoxFromArray($_language->module['errors_there'], $errors);
             }
         } else {
-            echo '<b>' . $_language->module[ 'fill_correctly' ] . '</b><br><br>
-            <a href="javascript:history.back()">&laquo; ' . $_language->module[ 'back' ] . '</a>';
+            echo $_language->module['information_incomplete'];
         }
     } else {
         echo $_language->module[ 'transaction_invalid' ];
@@ -182,56 +200,59 @@ if ($action == "add") {
     $country = $_POST[ "country" ];
     $short = $_POST[ "shorthandle" ];
     if (isset($POST[ "fav" ])) {
-        $fav = (int)$POST[ 'fav' ];
+        $fav = 1;
     } else {
         $fav = 0;
     }
     $CAPCLASS = new \webspell\Captcha;
     if ($CAPCLASS->checkCaptcha(0, $_POST[ 'captcha_hash' ])) {
-        if ($country && $short) {
-            if ($icon[ 'name' ] == "") {
-                if (
-                    safe_query(
-                        "UPDATE
-                            `" . PREFIX . "countries`
-                        SET
-                            `country` = '" . $country . "',
-                            `short` = '" . $short . "',
-                            `fav` = '" . $fav . "'
-                        WHERE `countryID` = '" . $_POST[ "countryID" ] . "'"
-                    )
-                ) {
-                    redirect("admincenter.php?site=countries", "", 0);
-                }
-            } else {
-                $file_ext = strtolower(mb_substr($icon[ 'name' ], strrpos($icon[ 'name' ], ".")));
-                if ($file_ext == ".gif") {
-                    move_uploaded_file($icon[ 'tmp_name' ], $filepath . $icon[ 'name' ]);
-                    @chmod($filepath . $icon[ 'name' ], 0755);
-                    $file = $short . $file_ext;
-                    rename($filepath . $icon[ 'name' ], $filepath . $file);
+        if (checkforempty(array('shorthandle','country'))) {
+            safe_query(
+                "UPDATE
+                    `" . PREFIX . "countries`
+                SET
+                    `country` = '" . $country . "',
+                    `short` = '" . $short . "',
+                    `fav` = '" . $fav . "'
+                WHERE `countryID` = '" . $_POST[ "countryID" ] . "'"
+            );
 
-                    if (
-                        safe_query(
-                            "UPDATE
-                                " . PREFIX . "countries
-                            SET
-                                `country` = '" . $country . "',
-                                `short` = '" . $short . "'
-                            WHERE
-                                `countryID` = '" . $_POST[ "countryID" ] . "'"
-                        )
-                    ) {
-                        redirect("admincenter.php?site=countries", "", 0);
+            $errors = array();
+
+            //TODO: should be loaded from root language folder
+            $_language->readModule('formvalidation', true);
+
+            $upload = new \webspell\HttpUpload('icon');
+            if ($upload->hasFile()) {
+                if ($upload->hasError() === false) {
+                    $mime_types = array('image/gif');
+
+                    if ($upload->supportedMimeType($mime_types)) {
+                        $imageInformation = getimagesize($upload->getTempFile());
+
+                        if (is_array($imageInformation)) {
+                            $file = $short . ".gif";
+
+                            if ($upload->saveAs($filepath . $file, true)) {
+                                @chmod($filepath . $file, $new_chmod);
+                            }
+                        } else {
+                            $errors[] = $_language->module['broken_image'];
+                        }
+                    } else {
+                        $errors[] = $_language->module['unsupported_image_type'];
                     }
                 } else {
-                    echo '<b>' . $_language->module[ 'format_incorrect' ] . '</b><br><br>
-                    <a href="javascript:history.back()">&laquo; ' . $_language->module[ 'back' ] . '</a>';
+                    $errors[] = $upload->translateError();
                 }
             }
+            if (count($errors)) {
+                $errors = array_unique($errors);
+                echo generateErrorBoxFromArray($_language->module['errors_there'], $errors);
+            }
+
         } else {
-            echo '<b>' . $_language->module[ 'fill_correctly' ] . '</b><br><br>
-            <a href="javascript:history.back()">&laquo; ' . $_language->module[ 'back' ] . '</a>';
+            echo $_language->module['information_incomplete'];
         }
     } else {
         echo $_language->module[ 'transaction_invalid' ];
@@ -239,7 +260,17 @@ if ($action == "add") {
 } elseif (isset($_GET[ "delete" ])) {
     $CAPCLASS = new \webspell\Captcha;
     if ($CAPCLASS->checkCaptcha(0, $_GET[ 'captcha_hash' ])) {
-        safe_query("DELETE FROM `" . PREFIX . "countries` WHERE `countryID` = '" . $_GET[ "countryID" ] . "'");
+        $countryID = (int) $_GET[ "countryID" ];
+        $ds = mysqli_fetch_array(
+            safe_query(
+                "SELECT short FROM `" . PREFIX . "countries` WHERE `countryID` = '" . $countryID . "'"
+            )
+        );
+        safe_query("DELETE FROM `" . PREFIX . "countries` WHERE `countryID` = '" . $countryID . "'");
+        $file = $ds['short'].".gif";
+        if (file_exists($filepath.$file)) {
+            unlink($filepath.$file);
+        }
         redirect("admincenter.php?site=countries", "", 0);
     } else {
         echo $_language->module[ 'transaction_invalid' ];

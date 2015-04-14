@@ -24,41 +24,33 @@
 #                                                                        #
 ##########################################################################
 */
-/**
- * Online Language Editor Ukraine language file for webSPELL 4.2.2
- * @author Stefan Giesecke <webmaster@giesi.com>
- * @copyright Copyright (c) 2010, Stefan Giesecke
- * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
- */
 
 $language_array = Array(
 
 /* do not edit above this line */
 
-  'back'=>'Назад',
-  'banner'=>'Банер',
-  'banner_to_big'=>'Зображення занадто велике',
-  'categories'=>'Категорії',
-  'category'=>'Категорія',
-  'delete'=>'Видалити',
-  'edit'=>'Редагувати',
-  'edit_link'=>'Редагувати посилання',
-  'format_incorrect'=>'Неправильний формат зображення (дозволені: *:gif, *.jpg або *.png)',
-  'go_back'=>'назад',
-  'homepage'=>'Домашня сторінка',
-  'information'=>'Інформація',
-  'link'=>'Посилання',
-  'linkname'=>'ім\'я посилання',
-  'linkrubric'=>'графа посилання',
-  'links'=>'Посилання',
-  'new_category'=>'Нова категорія',
-  'new_link'=>'Нове посилання',
-  'no_access'=>'Немаэ доступу.',
-  'no_categories'=>'Немає доступних категорій',
-  'no_links'=>'Немає доступних посиланнь',
-  'really_delete'=>'Дійсно видалити цей запис?',
-  'save_link'=>'Зберегти посилання',
-  'title_categories'=>'Категорії посилань',
-  'update_link'=>'Оновити ссилку'
+    'back' => 'Назад',
+    'banner' => 'Банер',
+    'categories' => 'Категорії',
+    'category' => 'Категорія',
+    'delete' => 'Видалити',
+    'edit' => 'Редагувати',
+    'edit_link' => 'Редагувати посилання',
+    'format_incorrect' => 'Неправильний формат зображення (дозволені: *:gif, *.jpg або *.png)',
+    'go_back' => 'назад',
+    'homepage' => 'Домашня сторінка',
+    'information' => 'Інформація',
+    'link' => 'Посилання',
+    'linkname' => 'ім\'я посилання',
+    'linkrubric' => 'графа посилання',
+    'links' => 'Посилання',
+    'new_category' => 'Нова категорія',
+    'new_link' => 'Нове посилання',
+    'no_access' => 'Немаэ доступу.',
+    'no_categories' => 'Немає доступних категорій',
+    'no_links' => 'Немає доступних посиланнь',
+    'really_delete' => 'Дійсно видалити цей запис?',
+    'save_link' => 'Зберегти посилання',
+    'title_categories' => 'Категорії посилань',
+    'update_link' => 'Оновити ссилку'
 );
-

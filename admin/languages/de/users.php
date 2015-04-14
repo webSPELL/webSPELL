@@ -127,6 +127,7 @@ $language_array = Array(
   'various'=>'Sonstiges',
   'weeks'=>'Wochen',
   'you_cant_ban'=>'Du kannst diesen Benutzer nicht bannen! (Superadmin)',
-  'you_cant_ban_yourself'=>'Du kannst dich nicht selbst bannen!'
+  'you_cant_ban_yourself'=>'Du kannst dich nicht selbst bannen!',
+  'error'=>'Fehler'
 );
 

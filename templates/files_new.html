@@ -8,23 +8,12 @@
         }
         if (
                 document.getElementById('upfile').value === "" &&
-                document.getElementById('fileurl').value == "http://"
+                document.getElementById('fileurl').value == ""
         ) {
             alert("%you_have_to_enter_file%");
             document.getElementById('upfile').focus();
 
             return false;
-        }
-        if (
-                document.getElementById('fileurl').value !== "http://" &&
-                document.getElementById('upfile').value === ""
-        ) {
-            if (!url(document.getElementById('fileurl').value)) {
-                alert("%you_have_to_enter_file%");
-                document.getElementById('fileurl').focus();
-
-                return false;
-            }
         }
         if (!validbbcode(document.getElementById('info').value)) {
             document.getElementById('info').focus();
@@ -85,7 +74,7 @@
         <label for="fileurl" class="col-lg-4 control-label">%extern-link%:</label>
 
         <div class="col-lg-8">
-            <input type="url" name="fileurl" id="fileurl" size="40" value="http://" class="form-control">
+            <input type="url" name="fileurl" id="fileurl" size="40" placeholder="http://" class="form-control">
         </div>
     </div>
 

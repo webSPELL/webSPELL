@@ -77,12 +77,14 @@ if (!$userID) {
         $newsletter = $_POST['newsletter'];
         $homepage = str_replace('http://', '', $_POST['homepage']);
         $pm_mail = $_POST['pm_mail'];
-        $avatar = $_FILES['avatar'];
-        $userpic = $_FILES['userpic'];
         $language = $_POST['language'];
         $date_format = $_POST['date_format'];
         $time_format = $_POST['time_format'];
-        $user_gbook = $_POST['user_guestbook'];
+        if ($user_guestbook) {
+            $user_gbook = $_POST['user_guestbook'];
+        } else {
+            $user_gbook = 1;
+        }
         $id = $userID;
 
         $error_array = array();
@@ -120,99 +122,107 @@ if (!$userID) {
 
         //avatar
         $filepath = "./images/avatars/";
-        if ($avatar['name'] != "" || ($_POST['avatar_url'] != "" && $_POST['avatar_url'] != "http://")) {
-            if ($avatar['name'] != "") {
-                move_uploaded_file($avatar['tmp_name'], $filepath . $avatar['name'] . ".tmp");
-            } else {
-                $avatar['name'] = strrchr($_POST['avatar_url'], "/");
-                if (!copy($_POST['avatar_url'], $filepath . $avatar['name'] . ".tmp")) {
-                    $error_array['can_not_copy'] = $_language->module['can_not_copy'];
-                }
-            }
-            if (!array_key_exists('can_not_copy', $error_array)) {
-                @chmod($filepath . $avatar['name'] . ".tmp", $new_chmod);
-                $info = getimagesize($filepath . $avatar['name'] . ".tmp");
-                if ($info[0] < 91 && $info[1] < 91) {
-                    $pic = '';
-                    if ($info[2] == 1) {
-                        $pic = $id . '.gif';
-                    } elseif ($info[2] == 2) {
-                        $pic = $id . '.jpg';
-                    } elseif ($info[2] == 3) {
-                        $pic = $id . '.png';
-                    }
-                    if ($pic != "") {
-                        if (file_exists($filepath . $id . '.gif')) {
-                            @unlink($filepath . $id . '.gif');
-                        }
-                        if (file_exists($filepath . $id . '.jpg')) {
-                            @unlink($filepath . $id . '.jpg');
-                        }
-                        if (file_exists($filepath . $id . '.png')) {
-                            @unlink($filepath . $id . '.png');
-                        }
-                        rename($filepath . $avatar['name'] . '.tmp', $filepath . $pic);
-                        safe_query("UPDATE " . PREFIX . "user SET avatar='" . $pic . "' WHERE userID='" . $id . "'");
-                    } else {
-                        if (unlink($filepath . $avatar['name'] . ".tmp")) {
-                            $error_array[] = $_language->module['invalid_picture-format'];
+
+        $_language->readModule('formvalidation', true);
+
+        $upload = new \webspell\HttpUpload('avatar');
+        if (!$upload->hasFile()) {
+            $upload = new \webspell\UrlUpload($_POST['avatar_url']);
+        }
+
+        if ($upload->hasFile()) {
+            if ($upload->hasError() === false) {
+                $mime_types = array('image/jpeg','image/png','image/gif');
+                if ($upload->supportedMimeType($mime_types)) {
+                    $imageInformation =  getimagesize($upload->getTempFile());
+                    if (is_array($imageInformation)) {
+                        if ($imageInformation[0] < 91 && $imageInformation[1] < 91) {
+                            switch ($imageInformation[ 2 ]) {
+                                case 1:
+                                    $endung = '.gif';
+                                    break;
+                                case 3:
+                                    $endung = '.png';
+                                    break;
+                                default:
+                                    $endung = '.jpg';
+                                    break;
+                            }
+                            $file = $id.$endung;
+                            if ($upload->saveAs($filepath.$file, true)) {
+                                @chmod($filepath.$file, $new_chmod);
+                                safe_query(
+                                    "UPDATE "
+                                    . PREFIX . "user
+                                    SET
+                                      avatar='" . $file .
+                                    "' WHERE
+                                      userID='" . $id . "'"
+                                );
+                            }
                         } else {
-                            $error_array[] = $_language->module['upload_failed'];
+                            $error_array[] = sprintf($_language->module[ 'image_too_big' ], 90, 90);
                         }
+                    } else {
+                        $error_array[] = $_language->module[ 'broken_image' ];
                     }
                 } else {
-                    @unlink($filepath . $avatar['name'] . ".tmp");
-                    $error_array[] = $_language->module['picture_too_big_avatar'];
+                    $error_array[] = $_language->module[ 'unsupported_image_type' ];
                 }
+            } else {
+                $error_array[] = $upload->translateError();
             }
         }
 
+
         //userpic
         $filepath = "./images/userpics/";
-        if ($userpic['name'] != "" || ($_POST['userpic_url'] != "" && $_POST['userpic_url'] != "http://")) {
-            if ($userpic['name'] != "") {
-                move_uploaded_file($userpic['tmp_name'], $filepath . $userpic['name'] . ".tmp");
-            } else {
-                $userpic['name'] = strrchr($_POST['userpic_url'], "/");
-                if (!copy($_POST['userpic_url'], $filepath . $userpic['name'] . ".tmp")) {
-                    $error_array['can_not_copy'] = $_language->module['can_not_copy'];
-                }
-            }
-            if (!array_key_exists('can_not_copy', $error_array)) {
-                @chmod($filepath . $userpic['name'] . ".tmp", $new_chmod);
-                $info = getimagesize($filepath . $userpic['name'] . ".tmp");
-                if ($info[0] < 231 && $info[1] < 211) {
-                    $pic = '';
-                    if ($info[2] == 1) {
-                        $pic = $id . '.gif';
-                    } elseif ($info[2] == 2) {
-                        $pic = $id . '.jpg';
-                    } elseif ($info[2] == 3) {
-                        $pic = $id . '.png';
-                    }
-                    if ($pic != "") {
-                        if (file_exists($filepath . $id . '.gif')) {
-                            @unlink($filepath . $id . '.gif');
-                        }
-                        if (file_exists($filepath . $id . '.jpg')) {
-                            @unlink($filepath . $id . '.jpg');
-                        }
-                        if (file_exists($filepath . $id . '.png')) {
-                            @unlink($filepath . $id . '.png');
-                        }
-                        rename($filepath . $userpic['name'] . ".tmp", $filepath . $pic);
-                        safe_query("UPDATE " . PREFIX . "user SET userpic='" . $pic . "' WHERE userID='" . $id . "'");
-                    } else {
-                        if (unlink($filepath . $userpic['name'] . ".tmp")) {
-                            $error_array[] = $_language->module['invalid_picture-format'];
+
+        $upload = new \webspell\HttpUpload('userpic');
+        if (!$upload->hasFile()) {
+            $upload = new \webspell\UrlUpload($_POST['userpic_url']);
+        }
+
+        if ($upload->hasFile()) {
+            if ($upload->hasError() === false) {
+                $mime_types = array('image/jpeg','image/png','image/gif');
+                if ($upload->supportedMimeType($mime_types)) {
+                    $imageInformation =  getimagesize($upload->getTempFile());
+                    if (is_array($imageInformation)) {
+                        if ($imageInformation[0] < 231 && $imageInformation[1] < 211) {
+                            switch ($imageInformation[ 2 ]) {
+                                case 1:
+                                    $endung = '.gif';
+                                    break;
+                                case 3:
+                                    $endung = '.png';
+                                    break;
+                                default:
+                                    $endung = '.jpg';
+                                    break;
+                            }
+                            $file = $id.$endung;
+                            if ($upload->saveAs($filepath.$file, true)) {
+                                @chmod($filepath.$file, $new_chmod);
+                                safe_query(
+                                    "UPDATE "
+                                    . PREFIX . "user
+                                    SET
+                                      userpic='" . $file .
+                                    "' WHERE userID='" . $id . "'"
+                                );
+                            }
                         } else {
-                            $error_array[] = $_language->module['upload_failed'];
+                            $error_array[] = sprintf($_language->module[ 'image_too_big' ], 230, 210);
                         }
+                    } else {
+                        $error_array[] = $_language->module[ 'broken_image' ];
                     }
                 } else {
-                    @unlink($filepath . $userpic['name'] . ".tmp");
-                    $error_array[] = $_language->module['picture_too_big_userpic'];
+                    $error_array[] = $_language->module[ 'unsupported_image_type' ];
                 }
+            } else {
+                $error_array[] = $upload->translateError();
             }
         }
 
@@ -522,7 +532,7 @@ if (!$userID) {
                     $countries
                 );
             if ($ds[ 'avatar' ]) {
-                $viewavatar = '&#8226; <a href="javascript:void(0);" onclick="window.open(\'images/avatars/' .
+                $viewavatar = '<a href="javascript:void(0);" onclick="window.open(\'images/avatars/' .
                     $ds[ 'avatar' ] . '\',\'avatar\',\'width=120,height=120\')">' . $_language->module[ 'avatar' ] .
                     '</a>';
             } else {

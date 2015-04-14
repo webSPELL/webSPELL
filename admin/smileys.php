@@ -110,29 +110,53 @@ if ($action == "add") {
   </table>
   </form>';
 } elseif (isset($_POST[ "save" ])) {
-    $icon = $_FILES[ "icon" ];
     $alt = $_POST[ "alt" ];
     $pattern = $_POST[ "pattern" ];
     $CAPCLASS = new \webspell\Captcha;
     if ($CAPCLASS->checkCaptcha(0, $_POST[ 'captcha_hash' ])) {
-        if ($pattern) {
-            $file_ext = strtolower(mb_substr($icon[ 'name' ], strrpos($icon[ 'name' ], ".")));
-            if ($file_ext == ".gif") {
-                if ($icon[ 'name' ] != "") {
-                    move_uploaded_file($icon[ 'tmp_name' ], $filepath . $icon[ 'name' ]);
-                    @chmod($filepath . $icon[ 'name' ], 0755);
-                    $file = $pattern . $file_ext;
-                    rename($filepath . $icon[ 'name' ], $filepath . $file);
-                    safe_query(
-                        "INSERT INTO " . PREFIX . "smileys (smileyID, name, alt, pattern) values('', '" . $file .
-                        "', '" . $alt . "', '" . $pattern . "')"
-                    );
-                    redirect('admincenter.php?site=smileys', '', 0);
+        if (checkforempty(array('pattern'))) {
+            $errors = array();
+
+            //TODO: should be loaded from root language folder
+            $_language->readModule('formvalidation', true);
+
+            $upload = new \webspell\HttpUpload('rank');
+            if ($upload->hasFile()) {
+                if ($upload->hasError() === false) {
+                    $mime_types = array('image/gif');
+
+                    if ($upload->supportedMimeType($mime_types)) {
+                        $imageInformation = getimagesize($upload->getTempFile());
+                        if (is_array($imageInformation)) {
+                            $file = $pattern . '.gif';
+
+                            if ($upload->saveAs($filepath . $file, true)) {
+                                @chmod($filepath . $file, $new_chmod);
+                                safe_query(
+                                    "INSERT INTO " . PREFIX . "smileys (
+                                        name,
+                                        alt,
+                                        pattern
+                                    ) VALUES (
+                                        '" . $file . "',
+                                        '" . $alt . "',
+                                        '" . $pattern . "'
+                                    )"
+                                );
+                            }
+                        } else {
+                            $errors[] = $_language->module['broken_image'];
+                        }
+                    } else {
+                        $errors[] = $_language->module['unsupported_image_type'];
+                    }
+                } else {
+                    $errors[] = $upload->translateError();
                 }
-            } else {
-                echo '<b>' . $_language->module[ 'format_incorrect' ] .
-                    '</b><br /><br /><a href="javascript:history.back()">&laquo; ' . $_language->module[ 'back' ] .
-                    '</a>';
+            }
+            if (count($errors)) {
+                $errors = array_unique($errors);
+                echo generateErrorBoxFromArray($_language->module['errors_there'], $errors);
             }
         } else {
             echo '<b>' . $_language->module[ 'fill_form' ] .
@@ -142,41 +166,52 @@ if ($action == "add") {
         echo $_language->module[ 'transaction_invalid' ];
     }
 } elseif (isset($_POST[ "saveedit" ])) {
-    $icon = $_FILES[ "icon" ];
     $alt = $_POST[ "alt" ];
     $pattern = $_POST[ 'pattern' ];
     $CAPCLASS = new \webspell\Captcha;
     if ($CAPCLASS->checkCaptcha(0, $_POST[ 'captcha_hash' ])) {
-        if ($pattern) {
-            if ($icon[ 'name' ] == "") {
-                if (safe_query(
-                    "UPDATE " . PREFIX . "smileys SET alt='" . $alt . "', pattern='" . $pattern .
-                    "' WHERE smileyID='" . $_POST[ "smileyID" ] . "'"
-                )) {
-                    redirect('admincenter.php?site=smileys', '', 0);
-                }
-            } else {
-                $file_ext = strtolower(mb_substr($icon[ 'name' ], strrpos($icon[ 'name' ], ".")));
-                if ($file_ext == ".gif") {
-                    move_uploaded_file($icon[ 'tmp_name' ], $filepath . $icon[ 'name' ]);
-                    @chmod($filepath . $icon[ 'name' ], 0755);
-                    $file = $pattern . $file_ext;
-                    if (file_exists($filepath . $file)) {
-                        @unlink($filepath . $file);
-                    }
-                    @rename($filepath . $icon[ 'name' ], $filepath . $file);
+        if (checkforempty(array('pattern'))) {
+            safe_query(
+                "UPDATE
+                    " . PREFIX . "smileys
+                SET
+                    alt='" . $alt . "',
+                    pattern='" . $pattern ."'
+                WHERE smileyID='" . $_POST[ "smileyID" ] . "'"
+            );
 
-                    if (safe_query(
-                        "UPDATE " . PREFIX . "smileys SET name='" . $file . "', alt='" . $alt .
-                        "', pattern='" . $pattern . "' WHERE smileyID='" . $_POST[ "smileyID" ] . "'"
-                    )) {
-                        redirect('admincenter.php?site=smileys', '', 0);
+
+            $errors = array();
+
+            //TODO: should be loaded from root language folder
+            $_language->readModule('formvalidation', true);
+
+            $upload = new \webspell\HttpUpload('rank');
+            if ($upload->hasFile()) {
+                if ($upload->hasError() === false) {
+                    $mime_types = array('image/gif');
+
+                    if ($upload->supportedMimeType($mime_types)) {
+                        $imageInformation = getimagesize($upload->getTempFile());
+                        if (is_array($imageInformation)) {
+                            $file = $pattern . '.gif';
+
+                            if ($upload->saveAs($filepath . $file, true)) {
+                                @chmod($filepath . $file, $new_chmod);
+                            }
+                        } else {
+                            $errors[] = $_language->module['broken_image'];
+                        }
+                    } else {
+                        $errors[] = $_language->module['unsupported_image_type'];
                     }
                 } else {
-                    echo '<b>' . $_language->module[ 'format_incorrect' ] .
-                        '</b><br /><br /><a href="javascript:history.back()">&laquo; ' . $_language->module[ 'back' ] .
-                        '</a>';
+                    $errors[] = $upload->translateError();
                 }
+            }
+            if (count($errors)) {
+                $errors = array_unique($errors);
+                echo generateErrorBoxFromArray($_language->module['errors_there'], $errors);
             }
         } else {
             echo '<b>' . $_language->module[ 'fill_form' ] .

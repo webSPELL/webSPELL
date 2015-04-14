@@ -24,41 +24,33 @@
 #                                                                        #
 ##########################################################################
 */
-/**
- * Online Language Editor South Africa language file for webSPELL 4.2.2
- * @author Stefan Giesecke <webmaster@giesi.com>
- * @copyright Copyright (c) 2010, Stefan Giesecke
- * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
- */
 
 $language_array = Array(
 
 /* do not edit above this line */
 
-  'back'=>'terug',
-  'banner'=>'Banier',
-  'banner_to_big'=>'Prentjie is te groot',
-  'categories'=>'Kategorieë',
-  'category'=>'Kategorie',
-  'delete'=>'verwyder',
-  'edit'=>'wysig',
-  'edit_link'=>'Wysig skakel',
-  'format_incorrect'=>'Ongeldig prentjie-formaat (toelaatbaar: *.gif, *.jpg of *.png)',
-  'go_back'=>'gaan terug',
-  'homepage'=>'Adres',
-  'information'=>'inligting',
-  'link'=>'Skakel',
-  'linkname'=>'Skakel Naam',
-  'linkrubric'=>'Skakel Rubriek',
-  'links'=>'Skakels',
-  'new_category'=>'nuwe kategorie',
-  'new_link'=>'Nuwe skakel',
-  'no_access'=>'geen toegang.',
-  'no_categories'=>'geen kategorieë beskikbaar',
-  'no_links'=>'geen skakels beskikbaar',
-  'really_delete'=>'hierdie item werklik verwyder?',
-  'save_link'=>'Stoor skakel',
-  'title_categories'=>'Skakel kategorieë',
-  'update_link'=>'Opdateer skakel'
+    'back' => 'terug',
+    'banner' => 'Banier',
+    'categories' => 'Kategorieë',
+    'category' => 'Kategorie',
+    'delete' => 'verwyder',
+    'edit' => 'wysig',
+    'edit_link' => 'Wysig skakel',
+    'format_incorrect' => 'Ongeldig prentjie-formaat (toelaatbaar: *.gif, *.jpg of *.png)',
+    'go_back' => 'gaan terug',
+    'homepage' => 'Adres',
+    'information' => 'inligting',
+    'link' => 'Skakel',
+    'linkname' => 'Skakel Naam',
+    'linkrubric' => 'Skakel Rubriek',
+    'links' => 'Skakels',
+    'new_category' => 'nuwe kategorie',
+    'new_link' => 'Nuwe skakel',
+    'no_access' => 'geen toegang.',
+    'no_categories' => 'geen kategorieë beskikbaar',
+    'no_links' => 'geen skakels beskikbaar',
+    'really_delete' => 'hierdie item werklik verwyder?',
+    'save_link' => 'Stoor skakel',
+    'title_categories' => 'Skakel kategorieë',
+    'update_link' => 'Opdateer skakel'
 );
-

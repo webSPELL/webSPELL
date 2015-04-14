@@ -43,7 +43,6 @@ if (isset($_GET[ 'delete' ])) {
     }
 } elseif (isset($_POST[ 'save' ])) {
     $name = $_POST[ 'name' ];
-    $rank = $_FILES[ 'rank' ];
     $max = $_POST[ 'max' ];
     $min = $_POST[ 'min' ];
 
@@ -74,13 +73,54 @@ if (isset($_GET[ 'delete' ])) {
             $id = mysqli_insert_id($_database);
 
             $filepath = "../images/icons/ranks/";
-            if ($rank[ 'name' ] != "") {
-                move_uploaded_file($rank[ 'tmp_name' ], $filepath . $rank[ 'name' ]);
-                @chmod($filepath . $rank[ 'name' ], 0755);
-                $file_ext = strtolower(mb_substr($rank[ 'name' ], strrpos($rank[ 'name' ], ".")));
-                $file = $id . $file_ext;
-                rename($filepath . $rank[ 'name' ], $filepath . $file);
-                safe_query("UPDATE " . PREFIX . "forum_ranks SET pic='$file' WHERE rankID='$id' ");
+
+            $errors = array();
+
+
+            //TODO: should be loaded from root language folder
+            $_language->readModule('formvalidation', true);
+
+            $upload = new \webspell\HttpUpload('rank');
+            if ($upload->hasFile()) {
+                if ($upload->hasError() === false) {
+                    $mime_types = array('image/jpeg','image/png','image/gif');
+
+                    if ($upload->supportedMimeType($mime_types)) {
+                        $imageInformation = getimagesize($upload->getTempFile());
+
+                        if (is_array($imageInformation)) {
+                            switch ($imageInformation[ 2 ]) {
+                                case 1:
+                                    $endung = '.gif';
+                                    break;
+                                case 3:
+                                    $endung = '.png';
+                                    break;
+                                default:
+                                    $endung = '.jpg';
+                                    break;
+                            }
+                            $file = $tag . $endung;
+
+                            if ($upload->saveAs($filepath . $file, true)) {
+                                @chmod($filepath . $file, $new_chmod);
+                                safe_query(
+                                    "UPDATE " . PREFIX . "forum_ranks SET pic='".$file."' WHERE rankID='".$id."'"
+                                );
+                            }
+                        } else {
+                            $errors[] = $_language->module['broken_image'];
+                        }
+                    } else {
+                        $errors[] = $_language->module['unsupported_image_type'];
+                    }
+                } else {
+                    $errors[] = $upload->translateError();
+                }
+            }
+            if (count($errors)) {
+                $errors = array_unique($errors);
+                echo generateErrorBoxFromArray($_language->module['errors_there'], $errors);
             }
         } else {
             echo $_language->module[ 'information_incomplete' ];
@@ -103,16 +143,25 @@ if (isset($_GET[ 'delete' ])) {
                     if ($ds[ 'rank' ] != "Administrator" && $ds[ 'rank' ] != "Moderator") {
                         $id = $ds[ 'rankID' ];
                         if ($ds[ 'special' ] != 1) {
+                            $minimum = $min[$id];
                             if ($max[ $id ] == "MAX") {
                                 $maximum = 2147483647;
                             } else {
                                 $maximum = $max[ $id ];
                             }
-                            safe_query("UPDATE " . PREFIX . "forum_ranks SET postmin='$min[$id]' WHERE rankID='$id'");
-                            safe_query("UPDATE " . PREFIX . "forum_ranks SET postmax='$maximum' WHERE rankID='$id'");
                         } else {
-                            safe_query("UPDATE " . PREFIX . "forum_ranks SET rank='$rank[$id]' WHERE rankID='$id'");
+                            $maximum = 0;
+                            $minimum = 0 ;
                         }
+                        safe_query(
+                            "UPDATE
+                                " . PREFIX . "forum_ranks
+                            SET
+                                rank='".$rank[$id]."',
+                                postmin='".$minimum."',
+                                postmax='".$maximum."'
+                            WHERE rankID='$id'"
+                        );
                     }
                 }
             }

@@ -24,41 +24,33 @@
 #                                                                        #
 ##########################################################################
 */
-/**
- * Online Language Editor Luxemburg language file for webSPELL 4.2.2
- * @author Stefan Giesecke <webmaster@giesi.com>
- * @copyright Copyright (c) 2010, Stefan Giesecke
- * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
- */
 
 $language_array = Array(
 
 /* do not edit above this line */
 
-  'back'=>'zréck',
-  'banner'=>'Banner',
-  'banner_to_big'=>'Bildass ze grouss',
-  'categories'=>'Kategorien',
-  'category'=>'Kategorie',
-  'delete'=>'läschen',
-  'edit'=>'ännern',
-  'edit_link'=>'Link ännern',
-  'format_incorrect'=>'net erlaabtent Bildformat (erlaubt: *.gif, *.jpg oder *.png)',
-  'go_back'=>'zréck',
-  'homepage'=>'Adress',
-  'information'=>'Informatiounen',
-  'link'=>'Link',
-  'linkname'=>'Linknumm',
-  'linkrubric'=>'Linkrubrik',
-  'links'=>'Links',
-  'new_category'=>'nei Kategorie',
-  'new_link'=>'Néien Link erstellen',
-  'no_access'=>'Keng Zugrëffsberechtigung.',
-  'no_categories'=>'keng Kategorien do',
-  'no_links'=>'keng Links do',
-  'really_delete'=>'Dëden Link wierklech läschen?',
-  'save_link'=>'Link späicheren',
-  'title_categories'=>'Link Kategorien',
-  'update_link'=>'Ännerungen späichern'
+    'back' => 'zréck',
+    'banner' => 'Banner',
+    'categories' => 'Kategorien',
+    'category' => 'Kategorie',
+    'delete' => 'läschen',
+    'edit' => 'ännern',
+    'edit_link' => 'Link ännern',
+    'format_incorrect' => 'net erlaabtent Bildformat (erlaubt: *.gif, *.jpg oder *.png)',
+    'go_back' => 'zréck',
+    'homepage' => 'Adress',
+    'information' => 'Informatiounen',
+    'link' => 'Link',
+    'linkname' => 'Linknumm',
+    'linkrubric' => 'Linkrubrik',
+    'links' => 'Links',
+    'new_category' => 'nei Kategorie',
+    'new_link' => 'Néien Link erstellen',
+    'no_access' => 'Keng Zugrëffsberechtigung.',
+    'no_categories' => 'keng Kategorien do',
+    'no_links' => 'keng Links do',
+    'really_delete' => 'Dëden Link wierklech läschen?',
+    'save_link' => 'Link späicheren',
+    'title_categories' => 'Link Kategorien',
+    'update_link' => 'Ännerungen späichern'
 );
-
