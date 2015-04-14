@@ -58,23 +58,33 @@ if (isset($_POST[ 'submit' ])) {
             );
 
             $ToEmail = $ds[ 'email' ];
-            $ToName = $ds[ 'username' ];
             $vars = array('%pagetitle%', '%username%', '%new_password%', '%homepage_url%');
             $repl = array($hp_title, $ds[ 'username' ], $newpwd, $hp_url);
             $header = str_replace($vars, $repl, $_language->module[ 'email_subject' ]);
             $Message = str_replace($vars, $repl, $_language->module[ 'email_text' ]);
 
-            if (
-                mail(
-                    $ToEmail,
-                    $header,
-                    $Message,
-                    "From:" . $admin_email . "\nContent-type: text/plain; charset=utf-8\n"
-                )
-            ) {
-                echo str_replace($vars, $repl, $_language->module[ 'successful' ]);
+            $sendmail = \webspell\Email::sendEmail($admin_email, 'Lost Password', $ToEmail, $header, $Message);
+
+            if ($sendmail['result'] == 'fail') {
+                if (isset($sendmail['debug'])) {
+                    $fehler = array();
+                    $fehler[] = $sendmail[ 'error' ];
+                    $fehler[] = $sendmail[ 'debug' ];
+                    echo generateErrorBoxFromArray($_language->module['email_failed'], $fehler);
+                } else {
+                    $fehler = array();
+                    $fehler[] = $sendmail[ 'error' ];
+                    echo generateErrorBoxFromArray($_language->module['email_failed'], $fehler);
+                }
             } else {
-                echo $_language->module[ 'email_failed' ];
+                if (isset($sendmail['debug'])) {
+                    $fehler = array();
+                    $fehler[] = $sendmail[ 'debug' ];
+                    echo generateBoxFromArray($_language->module[ 'successful' ], 'alert-success', $fehler);
+                    echo str_replace($vars, $repl, $_language->module[ 'successful' ]);
+                } else {
+                    echo str_replace($vars, $repl, $_language->module[ 'successful' ]);
+                }
             }
         } else {
             echo $_language->module[ 'no_user_found' ];

@@ -2708,4 +2708,31 @@ function update_PasswordHash($_database)
     }
 }
 
-?>
+function addSMTPSupport($_database)
+{
+    global $_database;
+    $transaction = new Transaction($_database);
+    $transaction->addQuery("DROP TABLE IF EXISTS `" . PREFIX . "email`");
+    $transaction->addQuery("CREATE TABLE `" . PREFIX . "email` (
+  `emailID` int(1) NOT NULL,
+  `user` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `host` varchar(255) NOT NULL,
+  `port` int(5) NOT NULL,
+  `debug` int(1) NOT NULL,
+  `auth` int(1) NOT NULL,
+  `html` int(1) NOT NULL,
+  `smtp` int(1) NOT NULL,
+  `secure` int(1) NOT NULL
+)");
+
+    $transaction->addQuery($_database, "INSERT INTO " . PREFIX . "email (emailID, user, password, host, port, debug, auth, html, smtp, secure)
+VALUES (1, '', '', '', 25, 0, 0, 1, 0, 0)");
+
+    $transaction->addQuery($_database, "ALTER TABLE " . PREFIX ." ADD UNIQUE KEY emailID (emailID)");
+    if ($transaction->successful()) {
+        return array('status' => 'success', 'message' => 'SMTP support added');
+    } else {
+        return array('status' => 'fail', 'message' => 'Failed to add SMTP support');
+    }
+}

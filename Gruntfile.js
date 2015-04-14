@@ -340,6 +340,15 @@ module.exports = function( grunt ) {
                 "bootlint",
                 "css"
             ]
+        },
+
+        todo: {
+            options: {},
+            src: [
+                phps,
+                csss,
+                excludes
+            ]
         }
     } );
 

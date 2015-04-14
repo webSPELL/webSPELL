@@ -34,6 +34,7 @@ $language_array = Array(
 	'delete'=>'entfernen',
 	'deletion_key'=>'Entfernungscode',
 	'email_not_valid'=>'Deine E-Mail Adresse ist nicht gültig!',
+	'errors_there'=>'Es sind Fehler aufgetreten',
 	'lost_deletion_key'=>'Entfernungscode verloren?',
 	'mail_adress'=>'E-Mail Adresse',
 	'mail_pw_didnt_match'=>'Die E-Mail und das Passwort stimmt nicht überein.',

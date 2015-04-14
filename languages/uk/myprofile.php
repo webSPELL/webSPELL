@@ -79,15 +79,11 @@ $language_array = Array(
 	'mail_not_valid'=>'your repeated email is not valid!',
 	'mail_on_new_pm'=>'Mail on new PM?',
 	'mail_subject'=>'Mail activation mail for %homepage_url%',
-	'mail_text'=>'Hello %username%!
-
-You changed your email at %pagetitle% (%homepage_url%) successfully.
-
-To finish your email change you have to activate your email address by clicking the following link:
-
-%activationlink%
-
-Thank you for your interest
+	'mail_text' => 'Hello %username%!
+<p>You changed your email at %pagetitle% (%homepage_url%) successfully.</p>
+<p>To finish your email change you have to activate your email address by clicking the following link:</p>
+<p>%activationlink%</p>
+<p>Thank you for your interest</p>
 %pagetitle% - %homepage_url%',
 	'mainboard'=>'Mainboard',
 	'male'=>'male',
