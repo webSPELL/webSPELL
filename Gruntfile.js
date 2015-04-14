@@ -20,8 +20,7 @@ module.exports = function( grunt ) {
             "!admin/languages/**/*.php",
             "!install/**/*.php",
             "!languages/**/*.php",
-            "!index.php",
-            "!src/func/phpmailer/**/*.php"
+            "!index.php"
         ],
         releaseFiles = [
             "admin/**",
@@ -340,6 +339,15 @@ module.exports = function( grunt ) {
                 "htmllint",
                 "bootlint",
                 "css"
+            ]
+        },
+
+        todo: {
+            options: {},
+            src: [
+                phps,
+                csss,
+                excludes
             ]
         }
     } );
