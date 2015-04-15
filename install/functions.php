@@ -2708,7 +2708,7 @@ function update_PasswordHash($_database)
     }
 }
 
-function addSMTPSupport($_database)
+function update_addSMTPSupport($_database)
 {
     global $_database;
     $transaction = new Transaction($_database);
@@ -2737,7 +2737,12 @@ VALUES (1, '', '', '', 25, 0, 0, 1, 0, 0)");
     }
 }
 
-function removedotINSTALL()
+function update_removedotINSTALL()
 {
-    unlink('../.INSTALL');
+    if (unlink('../.INSTALL')) {
+        return array('status' => 'success', 'message' => 'Removed .INSTALL');
+    } else {
+        return array('status' => 'fail', 'message' => 'Failed to remove .INSTALL');
+    }
 }
+
