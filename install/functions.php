@@ -2760,6 +2760,7 @@ function update_updateLanguages($_database)
     $transaction->addQuery("UPDATE `" . PREFIX . "news_languages` SET lang = 'sl' WHERE lang = 'si'");
     $transaction->addQuery("UPDATE `" . PREFIX . "news_languages` SET lang = 'sv' WHERE lang = 'se'");
     $transaction->addQuery("UPDATE `" . PREFIX . "news_languages` SET lang = 'uk' WHERE lang = 'ua'");
+    $transaction->addQuery("UPDATE `" . PREFIX . "settings` SET default_language = 'en' WHERE default_language = 'uk'");
     if ($transaction->successful()) {
         return array('status' => 'success', 'message' => 'Updated languages');
     } else {
