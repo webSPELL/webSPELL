@@ -29,7 +29,8 @@ $languages = '';
 if ($handle = opendir('./languages/')) {
     while (false !== ($file = readdir($handle))) {
         if (is_dir('./languages/' . $file) && $file != ".." && $file != "." && $file != ".svn") {
-            $languages .= '<a href="index.php?lang=' . $file . '"><img src="../images/flags/' . $file . '.gif" alt="' . $file . '"></a>';
+            $languages .= '<a href="index.php?lang=' . $file . '"><img src="../images/languages/' . $file . '.gif"
+            alt="' . $file . '"></a>';
         }
     }
     closedir($handle);
