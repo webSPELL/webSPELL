@@ -1113,7 +1113,7 @@ function update_31_4beta4($_database)
     if ($transaction->successful()) {
         return array('status' => 'success', 'message' => 'Updated to webSPELL 4 Beta 4');
     } else {
-        return array('status' => 'fail', 'message' => 'Failed to updated to webSPELL 4 Beta 4<br/>' . $transaction->getError());
+        return array('status' => 'fail', 'message' => 'Failed to update to webSPELL 4 Beta 4<br/>' . $transaction->getError());
     }
 }
 
@@ -1145,7 +1145,7 @@ function update_4beta4_4beta5($_database)
     if ($transaction->successful()) {
         return array('status' => 'success', 'message' => 'Updated to webSPELL 4 Beta 5');
     } else {
-        return array('status' => 'fail', 'message' => 'Failed to updated to webSPELL 4 Beta 5<br/>' . $transaction->getError());
+        return array('status' => 'fail', 'message' => 'Failed to update to webSPELL 4 Beta 5<br/>' . $transaction->getError());
     }
 
 }
@@ -1171,7 +1171,7 @@ PRIMARY KEY ( `imprintID` )
     if ($transaction->successful()) {
         return array('status' => 'success', 'message' => 'Updated to webSPELL 4 Beta 6');
     } else {
-        return array('status' => 'fail', 'message' => 'Failed to updated to webSPELL 4 Beta 6<br/>' . $transaction->getError());
+        return array('status' => 'fail', 'message' => 'Failed to update to webSPELL 4 Beta 6<br/>' . $transaction->getError());
     }
 
 }
@@ -1310,7 +1310,7 @@ VALUES
     if ($transaction->successful()) {
         return array('status' => 'success', 'message' => 'Updated to webSPELL 4 Beta 6 Part 1');
     } else {
-        return array('status' => 'fail', 'message' => 'Failed to updated to webSPELL 4 Beta 6 Part 1<br/>' . $transaction->getError());
+        return array('status' => 'fail', 'message' => 'Failed to update to webSPELL 4 Beta 6 Part 1<br/>' . $transaction->getError());
     }
 
 }
@@ -1431,7 +1431,7 @@ function update_4beta6_4final_2($_database)
     if ($transaction->successful()) {
         return array('status' => 'success', 'message' => 'Updated to webSPELL 4 Beta 6 Part 2');
     } else {
-        return array('status' => 'fail', 'message' => 'Failed to updated to webSPELL 4 Beta 6 Part 2<br/>' . $transaction->getError());
+        return array('status' => 'fail', 'message' => 'Failed to update to webSPELL 4 Beta 6 Part 2<br/>' . $transaction->getError());
     }
 
 }
@@ -1478,7 +1478,7 @@ function update_40000_40100($_database)
     if ($transaction->successful()) {
         return array('status' => 'success', 'message' => 'Updated to webSPELL 4.1');
     } else {
-        return array('status' => 'fail', 'message' => 'Failed to updated to webSPELL 4.1<br/>' . $transaction->getError());
+        return array('status' => 'fail', 'message' => 'Failed to update to webSPELL 4.1<br/>' . $transaction->getError());
     }
 
 }
@@ -1519,7 +1519,7 @@ function update_40100_40101($_database)
     if ($transaction->successful()) {
         return array('status' => 'success', 'message' => 'Updated to webSPELL 4.1.1');
     } else {
-        return array('status' => 'fail', 'message' => 'Failed to updated to webSPELL 4.1.1<br/>' . $transaction->getError());
+        return array('status' => 'fail', 'message' => 'Failed to update to webSPELL 4.1.1<br/>' . $transaction->getError());
     }
 
 }
@@ -1589,7 +1589,7 @@ function update_40101_420_1($_database)
     if ($transaction->successful()) {
         return array('status' => 'success', 'message' => 'Updated to webSPELL 4.2 Part 1');
     } else {
-        return array('status' => 'fail', 'message' => 'Failed to updated to webSPELL 4.2 Part 1<br/>' . $transaction->getError());
+        return array('status' => 'fail', 'message' => 'Failed to update to webSPELL 4.2 Part 1<br/>' . $transaction->getError());
     }
 
 }
@@ -1651,7 +1651,7 @@ function update_40101_420_2($_database)
     if ($transaction->successful()) {
         return array('status' => 'success', 'message' => 'Updated to webSPELL 4.2 Part 2');
     } else {
-        return array('status' => 'fail', 'message' => 'Failed to updated to webSPELL 4.2 Part 2<br/>' . $transaction->getError());
+        return array('status' => 'fail', 'message' => 'Failed to update to webSPELL 4.2 Part 2<br/>' . $transaction->getError());
     }
 
 }
@@ -1684,7 +1684,7 @@ function update_40101_420_3($_database)
     if ($transaction->successful()) {
         return array('status' => 'success', 'message' => 'Updated to webSPELL 4.2 Part 3');
     } else {
-        return array('status' => 'fail', 'message' => 'Failed to updated to webSPELL 4.2 Part 3<br/>' . $transaction->getError());
+        return array('status' => 'fail', 'message' => 'Failed to update to webSPELL 4.2 Part 3<br/>' . $transaction->getError());
     }
 
 }
@@ -1720,7 +1720,7 @@ function update_40101_420_4($_database)
     if ($transaction->successful()) {
         return array('status' => 'success', 'message' => 'Updated to webSPELL 4.2 Part 4');
     } else {
-        return array('status' => 'fail', 'message' => 'Failed to updated to webSPELL 4.2 Part 4<br/>' . $transaction->getError());
+        return array('status' => 'fail', 'message' => 'Failed to update to webSPELL 4.2 Part 4<br/>' . $transaction->getError());
     }
 
 }
@@ -1771,7 +1771,7 @@ function update_40101_420_5($_database)
     if ($transaction->successful()) {
         return array('status' => 'success', 'message' => 'Updated to webSPELL 4.2 Part 5');
     } else {
-        return array('status' => 'fail', 'message' => 'Failed to updated to webSPELL 4.2 Part 5<br/>' . $transaction->getError());
+        return array('status' => 'fail', 'message' => 'Failed to update to webSPELL 4.2 Part 5<br/>' . $transaction->getError());
     }
 
 }
@@ -2171,7 +2171,7 @@ function update_40101_420_6($_database)
     if ($transaction->successful()) {
         return array('status' => 'success', 'message' => 'Updated to webSPELL 4.2 Part 6');
     } else {
-        return array('status' => 'fail', 'message' => 'Failed to updated to webSPELL 4.2 Part 6<br/>' . $transaction->getError());
+        return array('status' => 'fail', 'message' => 'Failed to update to webSPELL 4.2 Part 6<br/>' . $transaction->getError());
     }
 
 }
@@ -2211,7 +2211,7 @@ function update_40101_420_7($_database)
     if ($transaction->successful()) {
         return array('status' => 'success', 'message' => 'Updated to webSPELL 4.2 Part 7');
     } else {
-        return array('status' => 'fail', 'message' => 'Failed to updated to webSPELL 4.2 Part 7<br/>' . $transaction->getError());
+        return array('status' => 'fail', 'message' => 'Failed to update to webSPELL 4.2 Part 7<br/>' . $transaction->getError());
     }
 
 }
@@ -2269,7 +2269,7 @@ function update_40101_420_8($_database)
     if ($transaction->successful()) {
         return array('status' => 'success', 'message' => 'Updated to webSPELL 4.2 Part 8');
     } else {
-        return array('status' => 'fail', 'message' => 'Failed to updated to webSPELL 4.2 Part 8<br/>' . $transaction->getError());
+        return array('status' => 'fail', 'message' => 'Failed to update to webSPELL 4.2 Part 8<br/>' . $transaction->getError());
     }
 
 }
@@ -2298,7 +2298,7 @@ function update_40101_420_9($_database)
     if ($transaction->successful()) {
         return array('status' => 'success', 'message' => 'Updated to webSPELL 4.2 Part 9');
     } else {
-        return array('status' => 'fail', 'message' => 'Failed to updated to webSPELL 4.2 Part 9<br/>' . $transaction->getError());
+        return array('status' => 'fail', 'message' => 'Failed to update to webSPELL 4.2 Part 9<br/>' . $transaction->getError());
     }
 }
 
@@ -2462,7 +2462,7 @@ function update_420_430_1($_database)
     if ($transaction->successful()) {
         return array('status' => 'success', 'message' => 'Updated to webSPELL 4.3 Part 1');
     } else {
-        return array('status' => 'fail', 'message' => 'Failed to updated to webSPELL 4.3 Part 1<br/>' . $transaction->getError());
+        return array('status' => 'fail', 'message' => 'Failed to update to webSPELL 4.3 Part 1<br/>' . $transaction->getError());
     }
 }
 
@@ -2685,7 +2685,7 @@ function update_420_430_2($_database)
     if ($transaction->successful()) {
         return array('status' => 'success', 'message' => 'Updated to webSPELL 4.3 Part 2');
     } else {
-        return array('status' => 'fail', 'message' => 'Failed to updated to webSPELL 4.3 Part 2<br/>' . $transaction->getError());
+        return array('status' => 'fail', 'message' => 'Failed to update to webSPELL 4.3 Part 2<br/>' . $transaction->getError());
     }
 }
 
@@ -2727,9 +2727,9 @@ VALUES (1, '', '', '', 25, 0, 0, 1, 0, 0)");
 
     $transaction->addQuery("ALTER TABLE `" . PREFIX . "email` ADD UNIQUE KEY emailID (emailID)");
     if ($transaction->successful()) {
-        return array('status' => 'success', 'message' => 'SMTP support added');
+        return array('status' => 'success', 'message' => 'Added SMTP support');
     } else {
-        return array('status' => 'fail', 'message' => 'Failed to add SMTP support');
+        return array('status' => 'fail', 'message' => 'Failed to add SMTP support<br/>' . $transaction->getError());
     }
 }
 
@@ -2760,7 +2760,7 @@ function update_updateLanguages($_database)
     if ($transaction->successful()) {
         return array('status' => 'success', 'message' => 'Updated languages');
     } else {
-        return array('status' => 'fail', 'message' => 'Failed to update languages');
+        return array('status' => 'fail', 'message' => 'Failed to update languages<br/>' . $transaction->getError());
     }
 
     # remove obsolete language folders
