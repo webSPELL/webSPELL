@@ -2767,14 +2767,18 @@ function update_updateLanguages($_database)
         return array('status' => 'fail', 'message' => 'Failed to update languages');
     }
 
+    # remove obsolete language folders
+
+    $obsLangs = array("../languages/cz", "../languages/dk", "../languages/il", "../languages/ir", "../languages/se");
+    foreach ($obsLangs as $dir) {
+        recursiveRemoveDirectory($dir);
+    }
+
     # remove admin language folders
 
     $dir = "../admin/languages";
-    $files = array_diff(scandir($dir), array('.','..'));
-    foreach ($files as $file) {
-        (is_dir("$dir/$file")) ? delTree("$dir/$file") : unlink("$dir/$file");
-    }
-    if (rmdir($dir)) {
+    recursiveRemoveDirectory($dir);
+    if (!is_dir($dir)) {
         return array('status' => 'success', 'message' => 'Removed /admin/languages');
     } else {
         return array('status' => 'fail', 'message' => 'Failed to remove /admin/languages');
