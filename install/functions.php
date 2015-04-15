@@ -777,12 +777,9 @@ function update_base_12($_database)
   `users` int(11) NOT NULL default '0',
   `profilelast` int(11) NOT NULL default '0',
   `topnewsID` int(11) NOT NULL default '0',
-<<<<<<< HEAD
-=======
   `sessionduration` int(3) NOT NULL default '0',
   `sc_files` int(1) NOT NULL default '0',
   `sc_demos` int(1) NOT NULL default '0',
->>>>>>> dev
   PRIMARY KEY  (`settingID`)
 ) AUTO_INCREMENT=2 ");
 
@@ -2369,6 +2366,8 @@ function update_420_430_1($_database)
     $transaction->addQuery("ALTER TABLE `" . PREFIX . "settings` ADD `date_format` varchar(255) NOT NULL default 'd.m.Y'");
     $transaction->addQuery("ALTER TABLE `" . PREFIX . "settings` ADD `time_format` varchar(255) NOT NULL default 'H:i'");
     $transaction->addQuery("ALTER TABLE `" . PREFIX . "settings` ADD `user_guestbook` int(1) NOT NULL default '1'");
+    $transaction->addQuery("ALTER TABLE `" . PREFIX . "settings` ADD `sc_files` int(1) NOT NULL default '1'");
+    $transaction->addQuery("ALTER TABLE `" . PREFIX . "settings` ADD `sc_demos` int(1) NOT NULL default '1'");
 
     $transaction->addQuery("UPDATE `" . PREFIX . "settings` SET spamapihost='https://api.webspell.org/'");
 
