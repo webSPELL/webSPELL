@@ -2726,10 +2726,10 @@ function update_addSMTPSupport($_database)
   `secure` int(1) NOT NULL
 )");
 
-    $transaction->addQuery($_database, "INSERT INTO " . PREFIX . "email (emailID, user, password, host, port, debug, auth, html, smtp, secure)
+    $transaction->addQuery("INSERT INTO `" . PREFIX . "email` (emailID, user, password, host, port, debug, auth, html, smtp, secure)
 VALUES (1, '', '', '', 25, 0, 0, 1, 0, 0)");
 
-    $transaction->addQuery($_database, "ALTER TABLE " . PREFIX ." ADD UNIQUE KEY emailID (emailID)");
+    $transaction->addQuery("ALTER TABLE `" . PREFIX . "email` ADD UNIQUE KEY emailID (emailID)");
     if ($transaction->successful()) {
         return array('status' => 'success', 'message' => 'SMTP support added');
     } else {
