@@ -80,6 +80,7 @@
             $update_functions[] = "passwordhash";
             $update_functions[] = "addSMTPSupport";
             $update_functions[] = "updateLanguages";
+            $update_functions[] = "removedotINSTALL";
         } elseif ($_POST['installtype'] == 'full') {
             $type = '<b>' . $_language->module['install_complete'] . '</b>';
             $in_progress = $_language->module['install_running'];
@@ -174,6 +175,7 @@ if (!defined("PREFIX")) {
             $update_functions[] = "420_430_2";
             $update_functions[] = "addSMTPSupport";
             $update_functions[] = "updateLanguages";
+            $update_functions[] = "removedotINSTALL";
         } elseif ($_POST['installtype'] == 'update_beta') {
             $update_functions = array();
             $update_functions[] = "4beta4_4beta5";
@@ -194,6 +196,7 @@ if (!defined("PREFIX")) {
             $update_functions[] = "passwordhash";
             $update_functions[] = "addSMTPSupport";
             $update_functions[] = "updateLanguages";
+            $update_functions[] = "removedotINSTALL";
         } elseif ($_POST['installtype'] == 'update_beta5') {
             $update_functions = array();
             $update_functions[] = "4beta5_4beta6";
@@ -213,6 +216,7 @@ if (!defined("PREFIX")) {
             $update_functions[] = "passwordhash";
             $update_functions[] = "addSMTPSupport";
             $update_functions[] = "updateLanguages";
+            $update_functions[] = "removedotINSTALL";
         } elseif ($_POST['installtype'] == 'update_beta6') {
             $update_functions = array();
             $update_functions[] = "4beta6_4final_1";
@@ -231,6 +235,7 @@ if (!defined("PREFIX")) {
             $update_functions[] = "passwordhash";
             $update_functions[] = "addSMTPSupport";
             $update_functions[] = "updateLanguages";
+            $update_functions[] = "removedotINSTALL";
         } elseif ($_POST['installtype'] == 'update_final') {
             $update_functions = array();
             $update_functions[] = "40000_40100";
@@ -247,6 +252,7 @@ if (!defined("PREFIX")) {
             $update_functions[] = "passwordhash";
             $update_functions[] = "addSMTPSupport";
             $update_functions[] = "updateLanguages";
+            $update_functions[] = "removedotINSTALL";
         } elseif ($_POST['installtype'] == 'update_40100') {
             $update_functions = array();
             $update_functions[] = "40100_40101";
@@ -262,6 +268,7 @@ if (!defined("PREFIX")) {
             $update_functions[] = "passwordhash";
             $update_functions[] = "addSMTPSupport";
             $update_functions[] = "updateLanguages";
+            $update_functions[] = "removedotINSTALL";
         } elseif ($_POST['installtype'] == 'update_40102') {
             $update_functions = array();
             $update_functions[] = "40101_420_1";
@@ -276,6 +283,7 @@ if (!defined("PREFIX")) {
             $update_functions[] = "passwordhash";
             $update_functions[] = "addSMTPSupport";
             $update_functions[] = "updateLanguages";
+            $update_functions[] = "removedotINSTALL";
         } elseif ($_POST['installtype'] == 'update_420') {
             $update_functions = array();
             $update_functions[] = "420_430_1";
@@ -283,6 +291,7 @@ if (!defined("PREFIX")) {
             $update_functions[] = "passwordhash";
             $update_functions[] = "addSMTPSupport";
             $update_functions[] = "updateLanguages";
+            $update_functions[] = "removedotINSTALL";
         }
 
         if (count($errors)) {
