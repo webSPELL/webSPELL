@@ -2737,29 +2737,29 @@ VALUES (1, '', '', '', 25, 0, 0, 1, 0, 0)");
     }
 }
 
-function updateLanguages($_database)
+function update_updateLanguages($_database)
 {
     # update languages in database
 
     global $_database;
     $transaction = new Transaction($_database);
-    $transaction->addQuery($_database, "UPDATE `" . PREFIX . "news_languages` SET lang = 'af' WHERE lang = 'za'");
-    $transaction->addQuery($_database, "UPDATE `" . PREFIX . "news_languages` SET lang = 'sq' WHERE lang = 'al'");
-    $transaction->addQuery($_database, "UPDATE `" . PREFIX . "news_languages` SET lang = 'ar' WHERE lang = 'sa'");
-    $transaction->addQuery($_database, "UPDATE `" . PREFIX . "news_languages` SET lang = 'bs' WHERE lang = 'ba'");
-    $transaction->addQuery($_database, "UPDATE `" . PREFIX . "news_languages` SET lang = 'cs' WHERE lang = 'cz'");
-    $transaction->addQuery($_database, "UPDATE `" . PREFIX . "news_languages` SET lang = 'da' WHERE lang = 'dk'");
-    $transaction->addQuery($_database, "UPDATE `" . PREFIX . "news_languages` SET lang = 'en' WHERE lang = 'uk'");
-    $transaction->addQuery($_database, "UPDATE `" . PREFIX . "news_languages` SET lang = 'et' WHERE lang = 'ee'");
-    $transaction->addQuery($_database, "UPDATE `" . PREFIX . "news_languages` SET lang = 'ka' WHERE lang = 'ge'");
-    $transaction->addQuery($_database, "UPDATE `" . PREFIX . "news_languages` SET lang = 'el' WHERE lang = 'gr'");
-    $transaction->addQuery($_database, "UPDATE `" . PREFIX . "news_languages` SET lang = 'lb' WHERE lang = 'lu'");
-    $transaction->addQuery($_database, "UPDATE `" . PREFIX . "news_languages` SET lang = 'fa' WHERE lang = 'ir'");
-    $transaction->addQuery($_database, "UPDATE `" . PREFIX . "news_languages` SET language = 'portuguese', alt = 'portuguese' WHERE lang = 'pt'");
-    $transaction->addQuery($_database, "UPDATE `" . PREFIX . "news_languages` SET lang = 'sr' WHERE lang = 'rs'");
-    $transaction->addQuery($_database, "UPDATE `" . PREFIX . "news_languages` SET lang = 'sl' WHERE lang = 'si'");
-    $transaction->addQuery($_database, "UPDATE `" . PREFIX . "news_languages` SET lang = 'sv' WHERE lang = 'se'");
-    $transaction->addQuery($_database, "UPDATE `" . PREFIX . "news_languages` SET lang = 'uk' WHERE lang = 'ua'");
+    $transaction->addQuery("UPDATE `" . PREFIX . "news_languages` SET lang = 'af' WHERE lang = 'za'");
+    $transaction->addQuery("UPDATE `" . PREFIX . "news_languages` SET lang = 'sq' WHERE lang = 'al'");
+    $transaction->addQuery("UPDATE `" . PREFIX . "news_languages` SET lang = 'ar' WHERE lang = 'sa'");
+    $transaction->addQuery("UPDATE `" . PREFIX . "news_languages` SET lang = 'bs' WHERE lang = 'ba'");
+    $transaction->addQuery("UPDATE `" . PREFIX . "news_languages` SET lang = 'cs' WHERE lang = 'cz'");
+    $transaction->addQuery("UPDATE `" . PREFIX . "news_languages` SET lang = 'da' WHERE lang = 'dk'");
+    $transaction->addQuery("UPDATE `" . PREFIX . "news_languages` SET lang = 'en' WHERE lang = 'uk'");
+    $transaction->addQuery("UPDATE `" . PREFIX . "news_languages` SET lang = 'et' WHERE lang = 'ee'");
+    $transaction->addQuery("UPDATE `" . PREFIX . "news_languages` SET lang = 'ka' WHERE lang = 'ge'");
+    $transaction->addQuery("UPDATE `" . PREFIX . "news_languages` SET lang = 'el' WHERE lang = 'gr'");
+    $transaction->addQuery("UPDATE `" . PREFIX . "news_languages` SET lang = 'lb' WHERE lang = 'lu'");
+    $transaction->addQuery("UPDATE `" . PREFIX . "news_languages` SET lang = 'fa' WHERE lang = 'ir'");
+    $transaction->addQuery("UPDATE `" . PREFIX . "news_languages` SET language = 'portuguese', alt = 'portuguese' WHERE lang = 'pt'");
+    $transaction->addQuery("UPDATE `" . PREFIX . "news_languages` SET lang = 'sr' WHERE lang = 'rs'");
+    $transaction->addQuery("UPDATE `" . PREFIX . "news_languages` SET lang = 'sl' WHERE lang = 'si'");
+    $transaction->addQuery("UPDATE `" . PREFIX . "news_languages` SET lang = 'sv' WHERE lang = 'se'");
+    $transaction->addQuery("UPDATE `" . PREFIX . "news_languages` SET lang = 'uk' WHERE lang = 'ua'");
     if ($transaction->successful()) {
         return array('status' => 'success', 'message' => 'Updated languages');
     } else {
@@ -2773,7 +2773,11 @@ function updateLanguages($_database)
     foreach ($files as $file) {
         (is_dir("$dir/$file")) ? delTree("$dir/$file") : unlink("$dir/$file");
     }
-    return rmdir($dir);
+    if (rmdir($dir)) {
+        return array('status' => 'success', 'message' => 'Removed /admin/languages');
+    } else {
+        return array('status' => 'fail', 'message' => 'Failed to remove /admin/languages');
+    }
 }
 
 function update_removedotINSTALL()
