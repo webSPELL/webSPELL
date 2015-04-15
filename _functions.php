@@ -465,7 +465,7 @@ while ($bq = mysqli_fetch_array($banned)) {
 
 // -- BANNED IPs -- //
 
-safe_query("DELETE FROM `" . PREFIX . "banned_ips` WHERE deltime < " . time() . "");
+safe_query("DELETE FROM `" . PREFIX . "banned_ips` WHERE deltime < '" . time() . "'");
 
 // -- WHO IS - WAS ONLINE -- //
 
