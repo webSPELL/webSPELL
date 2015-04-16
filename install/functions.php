@@ -84,6 +84,7 @@ function update_clearfolder($_database)
     }
 }
 
+/** fixme */
 function updateMySQLConfig()
 {
     global $_language;
@@ -2766,6 +2767,7 @@ function update_updateLanguages($_database)
 
     # remove obsolete language folders
 
+    /** fixme */
     $obsLangs = array("../languages/cz", "../languages/dk", "../languages/il", "../languages/ir", "../languages/se");
     foreach ($obsLangs as $dir) {
         @rm_recursive($dir);
@@ -2773,6 +2775,7 @@ function update_updateLanguages($_database)
 
     # remove admin language folders
 
+    /** fixme */
     $dir = "../admin/languages";
     $remove_admin = @rm_recursive($dir);
     if ($remove_admin) {
@@ -2782,6 +2785,7 @@ function update_updateLanguages($_database)
     }
 }
 
+/** fixme */
 function update_removedotINSTALL()
 {
     if (unlink('../.INSTALL')) {
