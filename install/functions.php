@@ -2737,6 +2737,7 @@ function update_updateLanguages($_database)
 {
     # update languages in database
 
+    include("../src/func/filesystem.php");
     global $_database;
     $transaction = new Transaction($_database);
     $transaction->addQuery("UPDATE `" . PREFIX . "news_languages` SET lang = 'af' WHERE lang = 'za'");
@@ -2767,14 +2768,14 @@ function update_updateLanguages($_database)
 
     $obsLangs = array("../languages/cz", "../languages/dk", "../languages/il", "../languages/ir", "../languages/se");
     foreach ($obsLangs as $dir) {
-        recursiveRemoveDirectory($dir);
+        @rm_recursive($dir);
     }
 
     # remove admin language folders
 
     $dir = "../admin/languages";
-    recursiveRemoveDirectory($dir);
-    if (!is_dir($dir)) {
+    $remove_admin = @rm_recursive($dir);
+    if ($remove_admin) {
         return array('status' => 'success', 'message' => 'Removed /admin/languages');
     } else {
         return array('status' => 'fail', 'message' => 'Failed to remove /admin/languages');
