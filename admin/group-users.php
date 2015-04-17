@@ -59,16 +59,16 @@ if (isset($_GET[ 'ajax' ])) {
                 "' WHERE userID='" . $user . "'"
             );
         } else {
-            $_language->readModule('group-users');
+            $_language->readModule('group-users', false, true);
             echo $_language->module[ 'access_denied' ];
         }
     } else {
-        $_language->readModule('group-users');
+        $_language->readModule('group-users', false, true);
         echo $_language->module[ 'access_denied' ];
     }
     exit();
 }
-$_language->readModule('group-users');
+$_language->readModule('group-users', false, true);
 
 if (!isforumadmin($userID) || mb_substr(basename($_SERVER[ 'REQUEST_URI' ]), 0, 15) != "admincenter.php") {
     die($_language->module[ 'access_denied' ]);

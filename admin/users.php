@@ -25,8 +25,8 @@
 ##########################################################################
 */
 
-$_language->readModule('users');
-$_language->readModule('rank_special', true);
+$_language->readModule('users', false, true);
+$_language->readModule('rank_special', true, true);
 
 if (!isuseradmin($userID) || mb_substr(basename($_SERVER[ 'REQUEST_URI' ]), 0, 15) != "admincenter.php") {
     die($_language->module[ 'access_denied' ]);

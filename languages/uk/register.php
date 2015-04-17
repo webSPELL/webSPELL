@@ -24,46 +24,57 @@
 #                                                                        #
 ##########################################################################
 */
+/**
+ * Online Language Editor Ukraine language file for webSPELL 4.2.2
+ * @author Stefan Giesecke <webmaster@giesi.com>
+ * @copyright Copyright (c) 2010, Stefan Giesecke
+ * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
+ */
 
 $language_array = Array(
 
 /* do not edit above this line */
 
-	'activation_successful'=>'The activation of your account was successful.<br>You are able to log in now.',
-	'back'=>'back',
-	'enter_nickname'=>'Please enter a nick name.',
-	'enter_password'=>'Please enter a password.',
-	'enter_username'=>'Please enter a username.',
-	'errors_there'=>'Some errors occured',
-	'for_login'=>'only for login',
-	'invalid_mail'=>'You have entered an invalid mail address.',
-	'mail'=>'E-Mail',
-	'mail_activation_successful'=>'The activation of your email address was successfull.',
-	'mail_failed'=>'The activation mail could not be sent, please inform the webmaster about this.',
-	'mail_inuse'=>'The mail address is already in use.',
-	'mail_subject'=>'Account activation mail for %homepage_url%',
-	'mail_text'=>'Hello %username%!
-<p>Your registration at %pagetitle% (%homepage_url%) was successful. Your account data:</p>
-<p>Login name: %username%</p>
-<p>To finish your registration you have to activate your account by clicking the following link:<br>
-%activationlink%</p>
-<p>Thank you for your registration</p>
-%pagetitle% - %homepage_url%',
-	'nickname'=>'Nickname',
-	'nickname_inuse'=>'Nickname allready in use.',
-	'no_register_when_loggedin'=>'You already have an account at %pagename%',
-	'password'=>'Password',
-	'profile_info'=>'Registration information',
-	'register_now'=>'Register now!',
-	'register_successful'=>'Your registration was successful. You will receive an email with an account activation link shortly.',
-	'registration'=>'registration',
-	'repeat'=>'Repeat password',
-	'repeat_invalid'=>'You passwords do not match.',
-	'security_code'=>'Security code',
-	'username'=>'Username',
-	'username_inuse'=>'Username allready in use.',
-	'username_toolong'=>'The username is to long (max. 30 characters).',
-	'wrong_activationkey'=>'Your activation key is wrong!',
-	'wrong_securitycode'=>'The security code is wrong!'
+  'activation_successful'=>'Активація вашого аккаунта пройшла успішно.<br>Тепер ви можете увійти в свій аккаунт.',
+  'back'=>'назад',
+  'enter_nickname'=>'Будь ласка, введіть ваш нікнейм.',
+  'enter_password'=>'Будь ласка, введіть пароль.',
+  'enter_username'=>'Будь ласка, введіть ім\'я користувача.',
+  'errors_there'=>'Сталася(а/ и) помилка(/ и)',
+  'for_login'=>'тільки для входу',
+  'invalid_mail'=>'Ви ввели неправильну/недійсну адресу електронної пошти.',
+  'mail'=>'Адреса електронної пошти',
+  'mail_activation_successful'=>'Активація вашої адреси електронної пошти пройшла успішно.',
+  'mail_failed'=>'Активаційний лист не може бути надіслано, будь ласка, зверніться до вашого провайдера.',
+  'mail_inuse'=>'Введена адреса електронної пошти вже використовується.',
+  'mail_subject'=>'Активаційний лист від %homepage_url%',
+  'mail_text'=>'Привіт %username%!
+
+Ваша реєстрація на сайті %pagetitle% (%homepage_url%) пройшла успішно. Ваші дані:
+
+Логін: %username%
+Пароль: %password%
+
+Щоб закінчити реєстрацію, ви повинні активувати ваш аккаунт, шляхом переходу за цим посиланням:
+%activationlink%
+
+Дякуємо за реєстрацію
+%pagetitle% -% homepage_url%',
+  'nickname'=>'Нікнейм',
+  'nickname_inuse'=>'Нік вже використовується.',
+  'no_register_when_loggedin'=>'У вас вже є аккаунт на %pagename%',
+  'password'=>'Пароль',
+  'profile_info'=>'Інформація про реєстрацію',
+  'register_now'=>'Зареєструватися зараз!',
+  'register_successful'=>'Реєстрація пройшла успішно. Незабаром, ви отримаєте лист, з активаційним посиланням.',
+  'registration'=>'реєстрація',
+  'repeat'=>'Повторіть пароль',
+  'repeat_invalid'=>'Паролі не збігаються.',
+  'security_code'=>'Код безпеки',
+  'username'=>'Ім\'я користувача',
+  'username_inuse'=>'Ім\'я користувача вже використовується.',
+  'username_toolong'=>'Ім\'я користувача занадто довге (Макс. 30 символів).',
+  'wrong_activationkey'=>'Активаційний ключ невірний!',
+  'wrong_securitycode'=>'Код безпеки невірний!'
 );
 

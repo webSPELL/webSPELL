@@ -93,7 +93,7 @@ if (isset($_GET[ 'new_lang' ])) {
 
     foreach ($langs as $lang => $flag) {
         echo '<a href="sc_language.php?new_lang=' . $flag . $querystring . '" title="' . $lang . '" class="flag' .
-            ($_language->language == $flag ? ' active' : '') . '"><img src="images/flags/' . $flag . '.gif" alt="' .
+            ($_language->language == $flag ? ' active' : '') . '"><img src="images/languages/' . $flag . '.gif" alt="' .
             $lang . '"></a>';
     }
 }

@@ -24,33 +24,39 @@
 #                                                                        #
 ##########################################################################
 */
+/**
+ * Online Language Editor Ukraine language file for webSPELL 4.2.2
+ * @author Stefan Giesecke <webmaster@giesi.com>
+ * @copyright Copyright (c) 2010, Stefan Giesecke
+ * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
+ */
 
 $language_array = Array(
 
 /* do not edit above this line */
 
-	'advertisement'=>'advertisement',
-	'articles'=>'articles',
-	'content'=>'content',
-	'demos'=>'demos',
-	'downloads'=>'downloads',
-	'hotest_news'=>'hotest news',
-	'language_switch'=>'language switch',
-	'latest_news'=>'latest news',
-	'login'=>'login',
-	'matches'=>'matches',
-	'newsletter'=>'newsletter',
-	'partners'=>'partners',
-	'pic_of_the_moment'=>'pic of the moment',
-	'poll'=>'poll',
-	'random_user'=>'random user',
-	'server'=>'servers',
-	'shoutbox'=>'shoutbox',
-	'sponsors'=>'sponsors',
-	'squads'=>'squads',
-	'statistics'=>'statistics',
-	'topics'=>'topics',
-	'upcoming_events'=>'upcoming events',
-	'tags'=>'tags'
+  'advertisement'=>'Оголошення',
+  'articles'=>'Статті',
+  'content'=>'Зміст',
+  'demos'=>'Демо',
+  'downloads'=>'Завантаження',
+  'hotest_news'=>'Гарячі новини',
+  'language_switch'=>'Перемкнути мову',
+  'latest_news'=>'Останні новини',
+  'login'=>'Логін',
+  'matches'=>'Матчі',
+  'newsletter'=>'Стрічка новин',
+  'partners'=>'Партнери',
+  'pic_of_the_moment'=>'Зображення моменту',
+  'poll'=>'Голосування',
+  'random_user'=>'Випадковий користувач',
+  'server'=>'Сервера',
+  'shoutbox'=>'Швидкий чат',
+  'sponsors'=>'Спонсори',
+  'squads'=>'Загони',
+  'statistics'=>'Статистика',
+  'topics'=>'Повідомлення',
+  'upcoming_events'=>'Майбутні події',
+  'tags'=>'теги'
 );
 

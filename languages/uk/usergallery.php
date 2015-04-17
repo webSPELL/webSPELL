@@ -24,34 +24,40 @@
 #                                                                        #
 ##########################################################################
 */
+/**
+ * Online Language Editor Ukraine language file for webSPELL 4.2.2
+ * @author Stefan Giesecke <webmaster@giesi.com>
+ * @copyright Copyright (c) 2010, Stefan Giesecke
+ * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
+ */
 
 $language_array = Array(
 
 /* do not edit above this line */
 
-	'actions'=>'Actions',
-	'add_gallery'=>'add Gallery',
-	'add_img'=>'add img',
-	'add_picture'=>'add Picture',
-	'comment'=>'Comment',
-	'delete'=>'delete',
-	'disable_comments'=>'disable comments',
-	'edit'=>'edit',
-	'enable_user_comments'=>'enable user comments',
-	'enable_visitor_comments'=>'enable visitor comments',
-	'gallery_name'=>'Gallery-Name',
-	'group'=>'Group',
-	'name'=>'Name',
-	'new_gallery'=>'new Gallery',
-	'no_galleries'=>'No galleries available.',
-	'no_space_left'=>'There is no space left: canceled.',
-	'picture'=>'Picture',
-	'please_enter_name'=>'Please enter a name!',
-	'really_delete_gallery'=>'Really delete this gallery?',
-	'update'=>'update',
-	'user_gallery'=>'User-Gallery',
-	'usergalleries'=>'Usergalleries',
-	'visitor_comments'=>'Visitor comments',
-	'x_of_y_mb_in_use'=>'<span style="color:%spacecolor%">&nbsp;%used_size%</span> of %available_size% MB are in use.'
+  'actions'=>'Дії',
+  'add_gallery'=>'додати галерею',
+  'add_img'=>'додати зображення',
+  'add_picture'=>'додати картинку',
+  'comment'=>'Коментар',
+  'delete'=>'Видалити',
+  'disable_comments'=>'вимкнути коментарі',
+  'edit'=>'редагувати',
+  'enable_user_comments'=>'увімкнути коментарі користуваів',
+  'enable_visitor_comments'=>'вимкнути коментарі користувачів',
+  'gallery_name'=>'Назва галереї',
+  'group'=>'Група',
+  'name'=>'Назва',
+  'new_gallery'=>'Нова галерея',
+  'no_galleries'=>'Немає галерей.',
+  'no_space_left'=>'Немає місця: скасування.',
+  'picture'=>'Картинка',
+  'please_enter_name'=>'Будь ласка, введіть назву!',
+  'really_delete_gallery'=>'Ви впевнені, що хочете видалити цю галерею?',
+  'update'=>'оновити',
+  'user_gallery'=>'Галерея користувача',
+  'usergalleries'=>'Галереї користувачів',
+  'visitor_comments'=>'Коментарі відвідувачів',
+  'x_of_y_mb_in_use'=>'<span style="color:%spacecolor%">&nbsp;%used_size%</span> з %available_size% МБ використано.'
 );
 

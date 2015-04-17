@@ -24,18 +24,24 @@
 #                                                                        #
 ##########################################################################
 */
+/**
+ * Online Language Editor Ukraine language file for webSPELL 4.2.2
+ * @author Stefan Giesecke <webmaster@giesi.com>
+ * @copyright Copyright (c) 2010, Stefan Giesecke
+ * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
+ */
 
 $language_array = Array(
 
 /* do not edit above this line */
 
-	'invalid_password'=>'You have entered an invalid password.',
-	'ip_banned'=>'Your IP was banned from this site.<br>%reason%',
-	'login_successful'=>'Login successful!',
-	'no_user'=>'The user <b>%username%</b> is not available on this system.',
-	'not_activated'=>'Your account is not activated.',
-	'session_error'=>'Please make sure that cookies are enabled on your browser.<br>If the problem still occurs, contact the webmaster.',
-  'return'=>'<a href="javascript:history.back()">Go back</a>',
-  'return_reenter' => '<a href="javascript:history.back()">Go back and try again.</a>'
+  'invalid_password'=>'Неправильний пароль.',
+  'ip_banned'=>'Ваша IP-адресу була забанена на цьому сайті.<br>%reason%',
+  'login_successful'=>'Ви успішно зайшли!',
+  'no_user'=>'Користувач <b>%username%</b> недоступний у цій системі.',
+  'not_activated'=>'Ваш аккаунт не активований.',
+  'session_error'=>'Будь ласка переконайтеся, що cookies включені у вашому інтернет-браузері.<br> Якщо проблема залишилася, зв\'яжіться з вашим інтернет провайдером.',
+  'return'=>'<a href="javascript:history.back()">Поверніться назад</a>',
+  'return_reenter' => '<a href="javascript:history.back()">Поверніться назад і спробуйте знову.</a>'
 );
 

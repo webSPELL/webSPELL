@@ -24,48 +24,54 @@
 #                                                                        #
 ##########################################################################
 */
+/**
+ * Online Language Editor Ukraine language file for webSPELL 4.2.2
+ * @author Stefan Giesecke <webmaster@giesi.com>
+ * @copyright Copyright (c) 2010, Stefan Giesecke
+ * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
+ */
 
 $language_array = Array(
 
 /* do not edit above this line */
 
-	'against'=>'against',
-	'announce'=>'announce',
-	'announcement'=>'Announcement',
-	'back_last_page'=>'Back to last page',
-	'click'=>'click',
-	'date'=>'Date',
-	'from'=>'From',
-	'info'=>'Info',
-	'last_login'=>'Last login',
-	'location'=>'Location',
-	'messenger'=>'Messenger',
-	'name'=>'Name',
-	'new_in_forum'=>'New Topics / New Posts',
-	'new_posts'=>'New posts',
-	'new_topics'=>'New topics',
-	'no_entries'=>'no entries',
-	'no_events'=>'no events',
-	'no_new_messages'=>'No new messages.',
-	'no_new_posts'=>'no new posts',
-	'no_new_topics'=>'no new topics',
-	'no_players_announced'=>'no players announced',
-	'one_new_message'=>'There is one new message.',
-	'overview'=>'Overview',
-	'registered'=>'Registered',
-	'replys'=>'replys',
-	'squad'=>'Squad',
-	'until'=>'until',
-	'upcoming'=>'Upcoming',
-	'upcoming_clanwars'=>'Upcoming clanwars',
-	'upcoming_events'=>'Upcoming events',
-	'user'=>'User',
-	'userinformations'=>'Userinformation',
-	'usermenu'=>'Usermenu',
-	'views'=>'views',
-	'x_new_message'=>'There are %new_messages% new messages.',
-	'you_have_to_be_logged_in'=>'You have to be logged in to view the login overview!<br><br>
-    &#8226; <a href="index.php?site=register">register now</a><br>
-    &#8226; <a href="index.php?site=login">log in</a>'
+  'against'=>'проти',
+  'announce'=>'Оголошення',
+  'announcement'=>'оголошення',
+  'back_last_page'=>'Повернутися на попередню сторінку',
+  'click'=>'Натиснути',
+  'date'=>'Дата',
+  'from'=>'Звідки',
+  'info'=>'Інформація',
+  'last_login'=>'Последний вход',
+  'location'=>'Місцезнаходження',
+  'messenger'=>'Месенджер',
+  'name'=>'Iм\'я',
+  'new_in_forum'=>'Нові теми / Нові повідомлення',
+  'new_posts'=>'Нові повідомлення',
+  'new_topics'=>'Нові тему',
+  'no_entries'=>'Немає записів',
+  'no_events'=>'Немає подій',
+  'no_new_messages'=>'Немає нових повідомленнь.',
+  'no_new_posts'=>'Немає нових відповідей',
+  'no_new_topics'=>'Немає нових тем',
+  'no_players_announced'=>'Немає оголошених гравців',
+  'one_new_message'=>'У вас нове повідомлення.',
+  'overview'=>'Огляд',
+  'registered'=>'Зареєстрований',
+  'replys'=>'Відповіді',
+  'squad'=>'Загін',
+  'until'=>'До',
+  'upcoming'=>'Майбутні',
+  'upcoming_clanwars'=>'Майбутні кланвари',
+  'upcoming_events'=>'Майбутні події',
+  'user'=>'Користувач',
+  'userinformations'=>'Інормація про користувача',
+  'usermenu'=>'Меню користувача',
+  'views'=>'Перегляди',
+  'x_new_message'=>'Є% new_messages% нові повідомлення.',
+  'you_have_to_be_logged_in'=>'Ви повинні увійти щоб ​​подивитися огляд!<br><br>
+     &#8226; <a href="index.php?site=register">Реєструватися зараз</a><br>
+     &#8226; <a href="index.php?site=login">Логін</a>'
 );
 

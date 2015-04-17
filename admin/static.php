@@ -25,7 +25,7 @@
 ##########################################################################
 */
 
-$_language->readModule('static');
+$_language->readModule('static', false, true);
 
 if (!ispageadmin($userID) || mb_substr(basename($_SERVER[ 'REQUEST_URI' ]), 0, 15) != "admincenter.php") {
     die($_language->module[ 'access_denied' ]);
@@ -76,7 +76,7 @@ if (isset($_GET[ 'action' ]) && $_GET[ 'action' ] == "add") {
     $CAPCLASS = new \webspell\Captcha;
     $CAPCLASS->createTransaction();
     $hash = $CAPCLASS->getHash();
-    $_language->readModule('bbcode', true);
+    $_language->readModule('bbcode', true, true);
 
     echo '<h1>&curren; <a href="admincenter.php?site=static" class="white">' . $_language->module[ 'static_pages' ] .
         '</a> &raquo; ' . $_language->module[ 'add_static_page' ] . '</h1>';
@@ -128,7 +128,7 @@ onsubmit="return chkFormular();">
 <br /><br /><input type="submit" name="save" value="' . $_language->module[ 'add_static_page' ] . '" />
 </form>';
 } elseif (isset($_GET[ 'action' ]) && $_GET[ 'action' ] == "edit") {
-    $_language->readModule('bbcode', true);
+    $_language->readModule('bbcode', true, true);
 
     $staticID = $_GET[ 'staticID' ];
     $ergebnis = safe_query("SELECT * FROM `" . PREFIX . "static` WHERE staticID='" . $staticID . "'");

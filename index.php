@@ -25,10 +25,6 @@
 ##########################################################################
 */
 
-if (file_exists('.INSTALL')) {
-    header('Location: install/index.php');
-}
-
 // important data include
 include("_mysql.php");
 include("_settings.php");
@@ -44,6 +40,18 @@ header('X-UA-Compatible: IE=edge,chrome=1');
 <!DOCTYPE html>
 <html>
 <head>
+    <?php
+    if (
+        (isset($_SESSION[ 'language' ]) && ($_SESSION[ 'language' ] == 'ac')) ||
+        (isset($_COOKIE[ 'language' ]) && ($_COOKIE[ 'language' ] == 'ac'))
+    ) {
+        echo '<script type="text/javascript">
+            var _jipt = [];
+            _jipt.push([\'project\', \'webspell-cms\']);
+        </script>
+        <script type="text/javascript" src="//cdn.crowdin.com/jipt/jipt.js"></script>';
+    }
+    ?>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
     <meta name="description" content="Clanpage using webSPELL 4 CMS">

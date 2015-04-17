@@ -37,7 +37,7 @@ if (isset($_GET['function']) && function_exists('update_' . $_GET['function'])) 
 $_language = new webspell\Language();
 
 if (!isset($_SESSION['language'])) {
-    $_SESSION['language'] = "uk";
+    $_SESSION['language'] = "en";
 }
 $_language->setLanguage($_SESSION['language']);
 $_language->readModule('step6');
