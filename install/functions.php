@@ -2786,13 +2786,3 @@ function update_obsoleteLanguages()
         return array('status' => 'fail', 'message' => 'Failed to remove obsolete languages');
     }
 }
-
-function update_removeInstall()
-{
-    if (unlink('../.INSTALL')) {
-        return array('status' => 'success', 'message' => 'Removed .INSTALL');
-    } else {
-        return array('status' => 'fail', 'message' => 'Failed to remove .INSTALL');
-    }
-}
-

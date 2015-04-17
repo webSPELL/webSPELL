@@ -25,7 +25,7 @@
 ##########################################################################
 */
 
-if (file_exists('.INSTALL')) {
+if (file_exists('install/index.php')) {
     header('Location: install/index.php');
 }
 
