@@ -25,10 +25,6 @@
 ##########################################################################
 */
 
-if (file_exists('install/index.php')) {
-    header('Location: install/index.php');
-}
-
 // important data include
 include("_mysql.php");
 include("_settings.php");
