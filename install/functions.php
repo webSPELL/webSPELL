@@ -2764,10 +2764,12 @@ function update_updateLanguages($_database)
     } else {
         return array('status' => 'fail', 'message' => 'Failed to update languages<br/>' . $transaction->getError());
     }
+}
 
+function update_obsoleteLanguages()
+{
     # remove obsolete language folders
 
-    /** fixme */
     $obsLangs = array("../languages/cz", "../languages/dk", "../languages/il", "../languages/ir", "../languages/se");
     foreach ($obsLangs as $dir) {
         @rm_recursive($dir);
@@ -2775,18 +2777,16 @@ function update_updateLanguages($_database)
 
     # remove admin language folders
 
-    /** fixme */
     $dir = "../admin/languages";
     $remove_admin = @rm_recursive($dir);
     if ($remove_admin) {
-        return array('status' => 'success', 'message' => 'Removed /admin/languages');
+        return array('status' => 'success', 'message' => 'Removed obsolete languages');
     } else {
-        return array('status' => 'fail', 'message' => 'Failed to remove /admin/languages');
+        return array('status' => 'fail', 'message' => 'Failed to remove obsolete languages');
     }
 }
 
-/** fixme */
-function update_removedotINSTALL()
+function update_removeInstall()
 {
     if (unlink('../.INSTALL')) {
         return array('status' => 'success', 'message' => 'Removed .INSTALL');
