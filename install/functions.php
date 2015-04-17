@@ -2738,7 +2738,6 @@ function update_updateLanguages($_database)
 {
     # update languages in database
 
-    include("../src/func/filesystem.php");
     global $_database;
     $transaction = new Transaction($_database);
     $transaction->addQuery("UPDATE `" . PREFIX . "news_languages` SET lang = 'af' WHERE lang = 'za'");
@@ -2769,6 +2768,8 @@ function update_updateLanguages($_database)
 function update_obsoleteLanguages()
 {
     # remove obsolete language folders
+
+    include("../src/func/filesystem.php");
 
     $obsLangs = array("../languages/cz", "../languages/dk", "../languages/il", "../languages/ir", "../languages/se");
     foreach ($obsLangs as $dir) {
