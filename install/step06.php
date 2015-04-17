@@ -176,7 +176,6 @@ if (!defined("PREFIX")) {
             $update_functions[] = "420_430_2";
             $update_functions[] = "addSMTPSupport";
             $update_functions[] = "updateLanguages";
-            $update_functions[] = "obsoleteLanguages";
             $update_functions[] = "clearfolder";
         } elseif ($_POST['installtype'] == 'update_beta') {
             $update_functions = array();
