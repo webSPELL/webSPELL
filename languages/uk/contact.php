@@ -24,30 +24,36 @@
 #                                                                        #
 ##########################################################################
 */
+/**
+ * Online Language Editor Ukraine language file for webSPELL 4.2.2
+ * @author Stefan Giesecke <webmaster@giesi.com>
+ * @copyright Copyright (c) 2010, Stefan Giesecke
+ * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
+ */
 
 $language_array = Array(
 
 /* do not edit above this line */
 
-	'back'=>'back to form',
-	'contact'=>'contact',
-	'description'=>'With this form you are able to submit a message to us',
-	'enter_mail'=>'Please enter a mail adress.',
-	'enter_message'=>'Please enter a message.',
-	'enter_name'=>'Please enter a name.',
-	'enter_subject'=>'Please enter a subject.',
-	'errors_there'=>'Some errors occured',
-	'mail'=>'E-Mail',
-	'message'=>'Message',
-	'name'=>'Name',
-	'receiver'=>'Receiver',
-	'reset'=>'Reset',
-	'security_code'=>'Security Code',
-	'send'=>'Send',
-	'send_successfull'=>'Your message was send successfully.',
-	'subject'=>'Subject',
-	'title_contact'=>'Contact form',
-	'unknown_receiver'=>'unknown receiver',
-	'wrong_securitycode'=>'You entered a wrong security code!'
+  'back'=>'Назад до заповнення сторінки',
+  'contact'=>'Зв\'яжіться з нами',
+  'description'=>'За допомогою цієї сторінки ми зможете відправити нам повідомлення',
+  'enter_mail'=>'Введіть E-mail.',
+  'enter_message'=>'Будь ласка, введіть повідомлення.',
+  'enter_name'=>'Будь ласка, введіть ваш нік.',
+  'enter_subject'=>'Введіть назву.',
+  'errors_there'=>'Сталася(і) помилка(і)',
+  'mail'=>'E-Mail',
+  'message'=>'Повідомлення',
+  'name'=>'Нік',
+  'receiver'=>'Адресат',
+  'reset'=>'Скинути',
+  'security_code'=>'Код перевірки',
+  'send'=>'Надіслати',
+  'send_successfull'=>'Ви успішно відправили повідомлення.',
+  'subject'=>'Тема',
+  'title_contact'=>'Сторінка зв\'язку з адміністрацією',
+  'unknown_receiver'=>'невідомий приймач',
+  'wrong_securitycode'=>'Ви ввели код перевірки неправильно!'
 );
 

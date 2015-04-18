@@ -24,14 +24,20 @@
 #                                                                        #
 ##########################################################################
 */
+/**
+ * Online Language Editor Ukraine language file for webSPELL 4.2.2
+ * @author Stefan Giesecke <webmaster@giesi.com>
+ * @copyright Copyright (c) 2010, Stefan Giesecke
+ * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
+ */
 
 $language_array = Array(
 
 /* do not edit above this line */
 
-	'no_informations'=>'no informations available',
-	'report_message'=>'[b]There is a new %s - Report[/b][br][br]%s-ID: %d[br]Info: %s[br]Referer: [url]index.php?site=files&file=%d[/url]',
-	'report_recognized'=>'Your report was recognized. Thank you.',
-  'wrong_securitycode'=>'You entered a wrong security code<br><br>[<a href="javascript:back();">back</a>]'
+  'no_informations'=>'немає інформації',
+  'report_message'=>'[b]Нова %s - скарга[/b][br][br]%s-Ідентифікаційний номер: %d[br]Інформація: %s[br]Referer: [url] index.php?site=files&file=%d[/url]',
+  'report_recognized'=>'Ваша скарга прийнята. Дякуємо.',
+  'wrong_securitycode'=>'Ви ввели невірний код безпеки<br><br>[<a href="javascript:back();">назад</a>]'
 );
 

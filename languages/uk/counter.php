@@ -24,40 +24,46 @@
 #                                                                        #
 ##########################################################################
 */
+/**
+ * Online Language Editor Ukraine language file for webSPELL 4.2.2
+ * @author Stefan Giesecke <webmaster@giesi.com>
+ * @copyright Copyright (c) 2010, Stefan Giesecke
+ * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
+ */
 
 $language_array = Array(
 
 /* do not edit above this line */
 
-	'daysonline'=>'Days online',
-	'guest'=>'Guest',
-	'guests'=>'Guests',
-	'lasthour'=>'Last hour',
-	'max_day'=>'Maximum per day',
-	'maximum'=>'Maximum',
-	'month'=>'Month',
-	'now'=>'Now',
-	'online'=>'Online',
-	'page_statistics'=>'Page statistics',
-	'registered_users'=>'Registered users',
-	'statistic'=>'Show statistics',
-	'this_month'=>'This month',
-	'today'=>'Today',
-	'total'=>'Total',
-	'total_statistic'=>'Overall statistic',
-	'user'=>'User',
-	'users'=>'Users',
-	'visits'=>'Visitors',
-	'visits_day'=>'Visits per day',
-	'visits_hour'=>'Visits per hour',
-	'visits_month'=>'Visits per month',
-	'visits_total'=>'Total visits',
-	'yesterday'=>'Yesterday',
-	'avg_age'=>'Average age',
-	'avg_age_clanmember'=>'Average age of clanmembers',
-	'youngest_user'=>'youngest user',
-	'oldest_user'=>'Oldest user',
-	'user_statistic'=>'User statistic',
-	'years'=>'years'
+  'daysonline'=>'Днів в мережі',
+  'guest'=>'Гість',
+  'guests'=>'Гості',
+  'lasthour'=>'Останній час',
+  'max_day'=>'Максимально за день',
+  'maximum'=>'Максимально',
+  'month'=>'Місяц',
+  'now'=>'Зараз',
+  'online'=>'У мережі',
+  'page_statistics'=>'Сторінка статистики',
+  'registered_users'=>'зареєстрованих користувачів',
+  'statistic'=>'Показати статистику',
+  'this_month'=>'Цей місяць',
+  'today'=>'Сьогодні',
+  'total'=>'Всього',
+  'total_statistic'=>'Повна статистика',
+  'user'=>'Користувач',
+  'users'=>'Користувачі',
+  'visits'=>'Відвідувачів',
+  'visits_day'=>'Відвідувачів за день',
+  'visits_hour'=>'Відвідувачів за годину',
+  'visits_month'=>'Відвідувачів за місяць',
+  'visits_total'=>'Відвідувань всього',
+  'yesterday'=>'Вчора',
+  'avg_age'=>'Середній вік',
+  'avg_age_clanmember'=>'Середній вік членів клану',
+  'youngest_user'=>'Наймолодший користувач',
+  'oldest_user'=>'Найстаріший користувач',
+  'user_statistic'=>'Статистика користувача',
+  'years'=>'Років'
 );
 

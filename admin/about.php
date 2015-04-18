@@ -25,7 +25,7 @@
 ##########################################################################
 */
 
-$_language->readModule('about');
+$_language->readModule('about', false, true);
 
 if (!ispageadmin($userID) || mb_substr(basename($_SERVER[ 'REQUEST_URI' ]), 0, 15) !== "admincenter.php") {
     die($_language->module[ 'access_denied' ]);
@@ -54,7 +54,7 @@ if (isset($_POST[ 'submit' ]) != "") {
     $CAPCLASS->createTransaction();
     $hash = $CAPCLASS->getHash();
 
-    $_language->readModule('bbcode', true);
+    $_language->readModule('bbcode', true, true);
 
     echo '<script>
         function chkFormular() {

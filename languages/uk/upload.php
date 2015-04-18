@@ -24,18 +24,24 @@
 #                                                                        #
 ##########################################################################
 */
+/**
+ * Online Language Editor Ukraine language file for webSPELL 4.2.2
+ * @author Stefan Giesecke <webmaster@giesi.com>
+ * @copyright Copyright (c) 2010, Stefan Giesecke
+ * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
+ */
 
 $language_array = Array(
 
 /* do not edit above this line */
 
-	'add_to_message'=>'Add to message',
-  	'close_window'=>'close window',
-	'delete'=>'Delete',
-	'existing_files'=>'Existing files',
-	'file_upload'=>'Upload file',
-	'invalid_access'=>'Invalid access!',
-	'no_access'=>'No access!',
-	'upload'=>'Upload'
+  'add_to_message'=>'Додати до повідомлення',
+  'close_window'=>'Закрити вікно',
+  'delete'=>'Видалити',
+  'existing_files'=>'файли',
+  'file_upload'=>'Завантажити файл',
+  'invalid_access'=>'У доступі відмовлено!',
+  'no_access'=>'Немає доступу!',
+  'upload'=>'Завантажити'
 );
 

@@ -25,8 +25,8 @@
 ##########################################################################
 */
 
-$_language->readModule('members');
-$_language->readModule('rank_special', true);
+$_language->readModule('members', false, true);
+$_language->readModule('rank_special', true, true);
 
 if (!isuseradmin($userID) || mb_substr(basename($_SERVER[ 'REQUEST_URI' ]), 0, 15) != "admincenter.php") {
     die($_language->module[ 'access_denied' ]);
@@ -211,7 +211,7 @@ if (isset($_GET[ 'action' ]) && $_GET[ 'action' ] == "edit") {
     $CAPCLASS->createTransaction();
     $hash = $CAPCLASS->getHash();
 
-    $_language->readModule('bbcode', true);
+    $_language->readModule('bbcode', true, true);
 
     $addbbcode = $GLOBALS["_template"]->replaceTemplate("addbbcode", array());
     $addflags = $GLOBALS["_template"]->replaceTemplate("flags_admin", array());

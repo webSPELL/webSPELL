@@ -24,48 +24,54 @@
 #                                                                        #
 ##########################################################################
 */
+/**
+ * Online Language Editor Ukraine language file for webSPELL 4.2.2
+ * @author Stefan Giesecke <webmaster@giesi.com>
+ * @copyright Copyright (c) 2010, Stefan Giesecke
+ * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
+ */
 
 $language_array = Array(
 
 /* do not edit above this line */
 
-	'already_voted'=>'You have already voted.',
-	'comments'=>'comments',
-	'days'=>'days',
-	'delete'=>'delete',
-	'disable_comments'=>'disable comments',
-	'edit'=>'edit',
-	'edit_poll'=>'edit poll',
-	'enable_user_comments'=>'enable user comments',
-	'enable_visitor_comments'=>'enable visitor comments',
-	'endingtime'=>'Ending time',
-	'intern'=>'Intern',
-	'latest_by'=>'latest by',
-	'new_poll'=>'new poll',
-	'no_access'=>'no access!',
-	'no_active_poll'=>'no active poll',
-	'no_entries'=>'no entries!',
-	'on'=>'on',
-	'option'=>'Option',
-	'poll_ended'=>'poll already ended',
-	'polls'=>'polls',
-	'really_delete'=>'really delete this poll?',
-	'really_stop'=>'really stop this poll?',
-	'really_reopen'=>'really reopen this poll?',
-	'reset_votes'=>'reset votes',
-	'reopen_poll'=>'reopen poll',
-	'save_poll'=>'save poll',
-	'show_polls'=>'show polls',
-	'stop_poll'=>'stop poll',
-	'stopped_poll'=>'stopped Poll',
-	'time_left'=>'time left',
-	'title'=>'Title',
-	'update_poll'=>'update poll',
-	'vote'=>'vote',
-	'vote_now'=>'vote now',
-	'votes'=>'votes',
-	'yht_enter_2_options'=>'You have to enter at least 2 options!',
-	'yht_enter_endingtime'=>'You have to enter the endingtime!',
-	'yht_enter_title'=>'You have to enter a title!'
+  'already_voted'=>'Ви вже проголосували.',
+  'comments'=>'Коментарі',
+  'days'=>'Дні',
+  'delete'=>'видалити',
+  'disable_comments'=>'увімкнути коментарі',
+  'edit'=>'редагувати',
+  'edit_poll'=>'редагувати голосування',
+  'enable_user_comments'=>'Увімкнути коментарі користувачів',
+  'enable_visitor_comments'=>'Увімкнути коментарі відвідувачів',
+  'endingtime'=>'Час закінчення',
+  'intern'=>'Внутрішнє',
+  'latest_by'=>'Останній',
+  'new_poll'=>'нове голосування',
+  'no_access'=>'немає доступу!',
+  'no_active_poll'=>'Активного голосування немає',
+  'no_entries'=>'немає даних!',
+  'on'=>'в',
+  'option'=>'Опції',
+  'poll_ended'=>'Голосування вже закінчилось',
+  'polls'=>'Голосування',
+  'really_delete'=>'Ви дійсно хочете видалити це голосування?',
+  'really_stop'=>'Ви дійсно хочете зупинити це голосування?',
+  'really_reopen'=>'Ви дійсно бажаєте відкрити це голосування заново?',
+  'reset_votes'=>'скинути голосування',
+  'reopen_poll'=>'перезапустити голосування',
+  'save_poll'=>'Збережемо голосування',
+  'show_polls'=>'показати голосування',
+  'stop_poll'=>'зупинити голосування',
+  'stopped_poll'=>'зупинене голосування',
+  'time_left'=>'залишилось часу',
+  'title'=>'назва',
+  'update_poll'=>'оновити голосування',
+  'vote'=>'голосувати',
+  'vote_now'=>'голосувати зараз',
+  'votes'=>'проголосувало',
+  'yht_enter_2_options'=>'Вам потрібно ввести як мінімум 2 опції!',
+  'yht_enter_endingtime'=>'Вам потрібно ввести час закінчення!',
+  'yht_enter_title'=>'Вам потрібно ввести назву!'
 );
 

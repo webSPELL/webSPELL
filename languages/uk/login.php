@@ -24,24 +24,30 @@
 #                                                                        #
 ##########################################################################
 */
+/**
+ * Online Language Editor Ukraine language file for webSPELL 4.2.2
+ * @author Stefan Giesecke <webmaster@giesi.com>
+ * @copyright Copyright (c) 2010, Stefan Giesecke
+ * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
+ */
 
 $language_array = Array(
 
 /* do not edit above this line */
 
-	'admin'=>'admin',
-	'buddy_list'=>'buddy list',
-	'cash-box'=>'cash-box',
-	'edit_account'=>'edit account',
-	'galleries'=>'galleries',
-	'login'=>'login',
-	'logout'=>'logout',
-	'lost_password'=>'lost password?',
-	'messenger'=>'messenger',
-	'n_a'=>'n/a',
-	'overview'=>'overview',
-	'register_now'=>'register now',
-	'registered_users'=>'registered users',
-	'welcome_back'=>'welcome back'
+  'admin'=>'Адмін',
+  'buddy_list'=>'Список друзів',
+  'cash-box'=>'Скарбничка',
+  'edit_account'=>'Редагувати профіль',
+  'galleries'=>'Галереї',
+  'login'=>'Логін',
+  'logout'=>'Вийти',
+  'lost_password'=>'Забули пароль?',
+  'messenger'=>'Месенджер',
+  'n_a'=>'n/a',
+  'overview'=>'Огляд',
+  'register_now'=>'Реєструватися зараз',
+  'registered_users'=>'Зареєстровані користувачі',
+  'welcome_back'=>'З поверненням'
 );
 
