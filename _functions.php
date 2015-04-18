@@ -368,17 +368,15 @@ function getforminput($text)
 
 systeminc('login');
 
-if ($loggedin === false) {
-    if (isset($_COOKIE['language'])) {
-        $_language->setLanguage($_COOKIE['language']);
-    } elseif (isset($_SESSION['language'])) {
-        $_language->setLanguage($_SESSION['language']);
-    } elseif ($autoDetectLanguage) {
-        $lang = detectUserLanguage();
-        if (!empty($lang)) {
-            $_language->setLanguage($lang);
-            $_SESSION['language'] = $lang;
-        }
+if (isset($_COOKIE['language'])) {
+    $_language->setLanguage($_COOKIE['language']);
+} elseif (isset($_SESSION['language'])) {
+    $_language->setLanguage($_SESSION['language']);
+} elseif ($autoDetectLanguage) {
+    $lang = detectUserLanguage();
+    if (!empty($lang)) {
+        $_language->setLanguage($lang);
+        $_SESSION['language'] = $lang;
     }
 }
 
