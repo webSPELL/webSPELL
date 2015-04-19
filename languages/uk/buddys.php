@@ -24,19 +24,25 @@
 #                                                                        #
 ##########################################################################
 */
+/**
+ * Online Language Editor Ukraine language file for webSPELL 4.2.2
+ * @author Stefan Giesecke <webmaster@giesi.com>
+ * @copyright Copyright (c) 2010, Stefan Giesecke
+ * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
+ */
 
 $language_array = Array(
 
 /* do not edit above this line */
 
-	'add_notexists'=>'This user does not exist',
-	'add_nouserid'=>'User ID not available',
-	'add_yourself'=>'You can\'t add yourself as a friend and you can\'t ignore yourself!',
-	'buddy_nousers'=>'You have no users in your friends list',
-	'buddys'=>'buddys',
-	'ignore_nousers'=>'You have no users in your ignore list',
-	'not_logged'=>'To manage your friends you have to be registered and logged in.<br><a href="index.php?site=register">Register</a> | <a href="index.php?site=login">Login</a>',
-	'your_buddylist'=>'Your friends list',
-	'your_ignorelist'=>'Your ignore list'
+  'add_notexists'=>'Цього користувача не існує',
+  'add_nouserid'=>'Логін не достпний',
+  'add_yourself'=>'Ви не можете додати себе в друзі і не можете додай себе в ігнор!',
+  'buddy_nousers'=>'У вас немає друзів',
+  'buddys'=>'Друзі',
+  'ignore_nousers'=>'У вас немає користувачів в ігнорі',
+  'not_logged'=>'Щоб керувати списком друзів, ви повинні бути зарєестрованих і зайти за свій профіль.<br><a href="index.php?site=register">Зареєструватися</a> | <a href="index.php?site=login">Войти</a>',
+  'your_buddylist'=>'Ваш список друзів',
+  'your_ignorelist'=>'Ваш список ігнорованих користувачів'
 );
 

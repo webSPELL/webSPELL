@@ -24,13 +24,19 @@
 #                                                                        #
 ##########################################################################
 */
+/**
+ * Online Language Editor Ukraine language file for webSPELL 4.2.2
+ * @author Stefan Giesecke <webmaster@giesi.com>
+ * @copyright Copyright (c) 2010, Stefan Giesecke
+ * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
+ */
 
 $language_array = Array(
 
 /* do not edit above this line */
 
-	'invalid_request'=>'Invalid request',
-	'no_result'=>'No search result',
-	'to_much_results'=>'There are to much fitting results, please enter more characters.'
+  'invalid_request'=>'Помилковий запит',
+  'no_result'=>'Пошук не дав результату',
+  'to_much_results'=>'Забагато результатів, введить назву докладніше'
 );
 

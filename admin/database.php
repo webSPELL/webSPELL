@@ -26,7 +26,7 @@
 */
 
 if (isset($_POST[ 'upload' ])) {
-    $_language->readModule('database');
+    $_language->readModule('database', false, true);
 
     if (!ispageadmin($userID) || mb_substr(basename($_SERVER[ 'REQUEST_URI' ]), 0, 15) != "admincenter.php") {
         die($_language->module[ 'access_denied' ]);
@@ -69,7 +69,7 @@ if (isset($_GET[ 'back' ])) {
 }
 
 if ($action == "optimize") {
-    $_language->readModule('database');
+    $_language->readModule('database', false, true);
 
     echo '<h1>&curren; ' . $_language->module[ 'database' ] . '</h1>';
 
@@ -193,10 +193,10 @@ if ($action == "optimize") {
             echo $final;
         }
     } else {
-        echo $_language->readModule('database') . $_language->module[ 'transaction_invalid' ];
+        echo $_language->readModule('database', false, true) . $_language->module[ 'transaction_invalid' ];
     }
 } else {
-    $_language->readModule('database');
+    $_language->readModule('database', false, true);
 
     if (!ispageadmin($userID) || mb_substr(basename($_SERVER[ 'REQUEST_URI' ]), 0, 15) != "admincenter.php") {
         die($_language->module[ 'access_denied' ]);

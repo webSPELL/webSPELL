@@ -1,3 +1,5 @@
+/* TODO: merge with changes from 'node_modules/nightwatch/lib/index.js' */
+
 /*!
  * Module dependencies.
  */

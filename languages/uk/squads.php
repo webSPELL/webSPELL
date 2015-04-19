@@ -24,35 +24,40 @@
 #                                                                        #
 ##########################################################################
 */
+/**
+ * Online Language Editor Ukraine language file for webSPELL 4.2.2
+ * @author Stefan Giesecke <webmaster@giesi.com>
+ * @copyright Copyright (c) 2010, Stefan Giesecke
+ * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
+ */
 
 $language_array = Array(
 
 /* do not edit above this line */
 
-	'about'=>'about',
-	'active'=>'active',
-	'add_buddy'=>'add to buddylist',
-	'awards'=>'awards',
-	'back_buddy'=>'back to buddy-list',
-	'back_squad_overview'=>'back to squad overview',
-	'challenge'=>'challenge',
-	'contact'=>'Contact',
-	'email'=>'email',
-	'ignore'=>'ignore user',
-	'inactive'=>'inactive',
-	'member'=>'Member',
-	'members'=>'Members',
-	'messenger'=>'messenger',
-	'no_description'=>'no description available',
-	'no_userpic'=>'no userpic available!',
-	'no_entries'=>'no entries available',
-	'position'=>'Position',
-	'results'=>'results',
-	'show_details'=>'show details',
-	'squad_plays'=>'Squad plays',
-	'squads'=>'squads',
-	'status'=>'Status',
-	'town'=>'Town',
-	'userpicture'=>'userpicture'
+  'about'=>'про',
+  'active'=>'активний',
+  'add_buddy'=>'Додати до списку друзів',
+  'awards'=>'нагороди',
+  'back_buddy'=>'повернутися до списку друзів',
+  'back_squad_overview'=>'повернутися до огляду складу',
+  'challenge'=>'битися',
+  'contact'=>'Зв\'язатися',
+  'email'=>'email',
+  'ignore'=>'ігнорувати користувача',
+  'inactive'=>'неактивний',
+  'member'=>'Член',
+  'members'=>'Члени',
+  'messenger'=>'месенджер',
+  'no_description'=>'немає опису',
+  'no_userpic'=>'немає зображення!',
+  'position'=>'позиція',
+  'results'=>'результати',
+  'show_details'=>'показати докладніше',
+  'squad_plays'=>'Граючий склад',
+  'squads'=>'Склади',
+  'status'=>'Статус',
+  'town'=>'Місто',
+  'userpicture'=>'картинка користувача'
 );
 

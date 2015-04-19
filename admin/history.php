@@ -25,7 +25,7 @@
 ##########################################################################
 */
 
-$_language->readModule('history');
+$_language->readModule('history', false, true);
 
 if (!ispageadmin($userID) || mb_substr(basename($_SERVER[ 'REQUEST_URI' ]), 0, 15) != "admincenter.php") {
     die($_language->module[ 'access_denied' ]);
@@ -52,7 +52,7 @@ $CAPCLASS = new \webspell\Captcha;
 $CAPCLASS->createTransaction();
 $hash = $CAPCLASS->getHash();
 
-$_language->readModule('bbcode', true);
+$_language->readModule('bbcode', true, true);
 
 $addbbcode = $GLOBALS["_template"]->replaceTemplate("addbbcode", array());
 $addflags = $GLOBALS["_template"]->replaceTemplate("flags_admin", array());
