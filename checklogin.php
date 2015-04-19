@@ -73,7 +73,7 @@ if (mysqli_num_rows($get) == 0) {
                 $login = 0;
                 if ($ws_pwd == $ds[ 'password' ]) {
                     //session
-                    $_SESSION[ 'ws_auth' ] = $ds[ 'userID' ] . ":" . $ws_pwd;
+                    $_SESSION[ 'ws_user' ] = $ds[ 'userID' ];
                     $_SESSION[ 'ws_lastlogin' ] = $ds[ 'lastlogin' ];
                     $_SESSION[ 'referer' ] = $_SERVER[ 'HTTP_REFERER' ];
                     //remove sessiontest variable
@@ -81,27 +81,8 @@ if (mysqli_num_rows($get) == 0) {
                         unset($_SESSION[ 'ws_sessiontest' ]);
                     }
                     //cookie
-                    $cookieName = "ws_auth";
-                    $cookieValue = $ds[ 'userID' ] . ":" . $ws_pwd;
-                    $cookieExpire = time() + ($sessionduration * 60 * 60);
-                    if (version_compare(PHP_VERSION, '5.2.0') >= 0) {
-                        $cookieInfo = session_get_cookie_params();
-                        setcookie(
-                            $cookieName,
-                            $cookieValue,
-                            $cookieExpire,
-                            $cookieInfo[ 'path' ],
-                            $cookieInfo[ 'domain' ],
-                            $cookieInfo[ 'secure' ],
-                            true
-                        );
-                    } else {
-                        setcookie($cookieName, $cookieValue, $cookieExpire);
-                    }
-                    unset($cookieName);
-                    unset($cookieValue);
-                    unset($cookieExpire);
-                    unset($cookieInfo);
+                    \webspell\LoginCookie::set('ws_auth', $_SESSION[ 'ws_user' ], $sessionduration * 60 * 60);
+                    
                     //Delete visitor with same IP from whoisonline
                     safe_query("DELETE FROM " . PREFIX . "whoisonline WHERE ip='" . $GLOBALS[ 'ip' ] . "'");
                     //Delete IP from failed logins

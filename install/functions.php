@@ -2682,6 +2682,16 @@ function update_420_430_2($_database)
     $transaction->addQuery("INSERT INTO `" . PREFIX . "modrewrite` (`regex`, `link`, `fields`, `replace_regex`, `replace_result`, `rebuild_regex`, `rebuild_result`) VALUES('whoisonline.html','index.php?site=whoisonline','a:0:{}','index\\\\.php\\\\?site=whoisonline','whoisonline.html','whoisonline\\\\.html','index.php?site=whoisonline')");
     $transaction->addQuery("INSERT INTO `" . PREFIX . "modrewrite` (`regex`, `link`, `fields`, `replace_regex`, `replace_result`, `rebuild_regex`, `rebuild_result`) VALUES('whoisonline.html#was','index.php?site=whoisonline#was','a:0:{}','index\\\\.php\\\\?site=whoisonline#was','whoisonline.html#was','whoisonline\\\\.html#was','index.php?site=whoisonline#was')");
     $transaction->addQuery("INSERT INTO `" . PREFIX . "modrewrite` (`regex`, `link`, `fields`, `replace_regex`, `replace_result`, `rebuild_regex`, `rebuild_result`) VALUES('whoisonline/{sort}/{type}.html','index.php?site=whoisonline&sort={sort}&type={type}','a:2:{s:4:\"sort\";s:6:\"string\";s:4:\"type\";s:6:\"string\";}','index\\\\.php\\\\?site=whoisonline[&|&amp;]*sort=(\\\\w*?)[&|&amp;]*type=(\\\\w*?)','whoisonline/$3/$4.html','whoisonline\\\\/(\\\\w*?)\\\\/(\\\\w*?)\\\\.html','index.php?site=whoisonline&sort=$1&type=$2')");
+
+    $transaction->addQuery("DROP TABLE IF EXISTS `" . PREFIX . "cookies`");
+    $transaction->addQuery("CREATE TABLE `" . PREFIX . "cookies` (
+  `userID` int(11) NOT NULL,
+  `cookie` binary(64) NOT NULL,
+  `expiration` int(14) NOT NULL,
+  PRIMARY KEY (`userID`, `cookie`),
+  INDEX (`expiration`)
+    )");
+
     updateMySQLConfig();
     if ($transaction->successful()) {
         return array('status' => 'success', 'message' => 'Updated to webSPELL 4.3 Part 2');
