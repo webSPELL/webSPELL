@@ -73,16 +73,14 @@ if (mysqli_num_rows($get) == 0) {
                 $login = 0;
                 if ($ws_pwd == $ds[ 'password' ]) {
                     //session
-                    $_SESSION[ 'ws_user' ] = $ds[ 'userID' ];
-                    $_SESSION[ 'ws_lastlogin' ] = $ds[ 'lastlogin' ];
                     $_SESSION[ 'referer' ] = $_SERVER[ 'HTTP_REFERER' ];
                     //remove sessiontest variable
                     if (isset($_SESSION[ 'ws_sessiontest' ])) {
                         unset($_SESSION[ 'ws_sessiontest' ]);
                     }
                     //cookie
-                    \webspell\LoginCookie::set('ws_auth', $_SESSION[ 'ws_user' ], $sessionduration * 60 * 60);
-                    
+                    \webspell\LoginCookie::set('ws_auth', $ds[ 'userID' ], $sessionduration * 60 * 60);
+
                     //Delete visitor with same IP from whoisonline
                     safe_query("DELETE FROM " . PREFIX . "whoisonline WHERE ip='" . $GLOBALS[ 'ip' ] . "'");
                     //Delete IP from failed logins

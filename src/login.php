@@ -42,7 +42,7 @@ class LoginCookie
     {
         return hash('sha512', $key, true);
     }
-  
+
     /**
      * Generate a cookie key. Optionally, a length in bytes can be specified,
      * which defaults to 64.
@@ -62,7 +62,7 @@ class LoginCookie
         }
         return $key;
     }
-  
+
     private static function setCookie($cookieName, $cookieValue, $cookieExpire)
     {
         if (version_compare(PHP_VERSION, '5.2.0') >= 0) {
@@ -97,10 +97,10 @@ class LoginCookie
         $hash = self::generateHash($key);
         $cookieValue = $user . ":" . base64_encode($key);
         $cookieExpire = $expiration > 0 ? time() + $expiration : 0;
-        
+
         safe_query(
-            "INSERT INTO " . PREFIX . "cookies 
-                (userID, cookie, expiration) 
+            "INSERT INTO " . PREFIX . "cookies
+                (userID, cookie, expiration)
             VALUES (
                 " . (int) $user . ",
                 '" . $_database->escape_string($hash) . "',
@@ -141,7 +141,7 @@ class LoginCookie
             self::setCookie($cookieName, $cookieValue, $cookieExpire);
         }
     }
- 
+
     /**
      * Check a login cookie. If an entry in the database exists for the cookie,
      * log the user in and set their last login time and language preference.
@@ -150,8 +150,8 @@ class LoginCookie
      */
     public static function check($cookieName)
     {
-        global $_database, $userID, $loggedin, $language;
-    
+        global $_database, $userID, $loggedin, $_language;
+
         $authent = explode(":", $_COOKIE[$cookieName]);
         $ws_user = $authent[0];
         $ws_pwd  = base64_decode($authent[1]);
@@ -168,7 +168,7 @@ class LoginCookie
                     c.cookie = '" . $_database->escape_string($hash) . "' AND
                     c.expiration > " . (int) time()
             );
-            
+
             if ($result) {
                 if ($row = $result->fetch_assoc()) {
                     $loggedin = true;
@@ -176,7 +176,7 @@ class LoginCookie
                     $_SESSION['ws_user'] = $userID;
                     $_SESSION['ws_lastlogin'] = $row['lastlogin'];
                     $language = $row['language'];
-                
+
                     if (!empty($language) && isset($_language)) {
                         if ($_language->setLanguage($language)) {
                             $_SESSION['language'] = $language;
@@ -195,7 +195,7 @@ class LoginCookie
     public static function purge()
     {
         safe_query(
-            "DELETE FROM " . PREFIX . "cookies 
+            "DELETE FROM " . PREFIX . "cookies
             WHERE `expiration` < " . time()
         );
     }
