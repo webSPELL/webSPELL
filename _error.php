@@ -68,7 +68,7 @@ function system_error($text, $system = 1)
     margin-right:-4px;
 }
 </style>
-<!-- end Head & Title include
+<!-- end Head & Title include -->
 </head>
 <body>
 <div class="navbar navbar-inverse navbar-fixed-top">
