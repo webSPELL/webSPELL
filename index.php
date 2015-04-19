@@ -25,6 +25,7 @@
 ##########################################################################
 */
 
+ob_start();
 // important data include
 include("_mysql.php");
 include("_settings.php");
@@ -293,3 +294,4 @@ header('X-UA-Compatible: IE=edge,chrome=1');
 <script src="js/bbcode.js" type="text/javascript"></script>
 </body>
 </html>
+<?php ob_flush(); ?>

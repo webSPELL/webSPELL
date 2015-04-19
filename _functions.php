@@ -441,12 +441,23 @@ $banned =
     );
 while ($bq = mysqli_fetch_array($banned)) {
     if ($bq['ban_reason']) {
-        $reason = "<br>" . $bq['ban_reason'];
+        $reason = "<br>Reason: <mark>" . $bq['ban_reason'] . '</mark>';
     } else {
         $reason = '';
     }
     if ($bq['banned']) {
-        system_error('You have been banished.' . $reason, 0);
+        $_SESSION = array();
+
+        // remove session cookie
+        if (isset($_COOKIE[ session_name() ])) {
+            setcookie(session_name(), '', time() - 42000, '/');
+        }
+
+        session_destroy();
+
+        // remove login cookie
+        webspell\LoginCookie::clear('ws_auth');
+        system_error('<strong>You have been banned.</strong>' . $reason, 0);
     }
 }
 

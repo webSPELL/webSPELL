@@ -25,6 +25,7 @@
 ##########################################################################
 */
 
+ob_start();
 chdir('../');
 include("_mysql.php");
 include("_settings.php");
@@ -263,3 +264,4 @@ if (ispageadmin($userID)) {
 <center><br>Copyright 2005-2015 by <a href="http://www.webspell.org" target="_blank" class="white"><strong>webSPELL.org</strong></a> &amp; <a href="http://www.webspell.at" target="_blank" class="white"><b>webSPELL.at</b></a><br>&nbsp;</center>
 </body>
 </html>
+<?php ob_flush(); ?>

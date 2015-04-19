@@ -25,6 +25,10 @@
 ##########################################################################
 */
 
+// -- SYSTEM ERROR DISPLAY -- //
+
+include('_error.php');
+
 // -- ERROR REPORTING -- //
 define('DEBUG', "ON"); // ON = development-mode | OFF = public mode
 if (DEBUG === 'ON') {
@@ -61,7 +65,7 @@ if (!isset($GLOBALS[ '_database' ])) {
     $_database = @new mysqli($host, $user, $pwd, $db);
 
     if ($_database->connect_error) {
-        system_error('ERROR: Can not connect to MySQL-Server');
+        system_error('Cannot connect to MySQL-Server');
     }
 
     $_database->query("SET NAMES 'utf8'");
@@ -221,10 +225,10 @@ function safe_query($query = "")
         } else {
             $result = $_database->query($query) or
             system_error(
-                'Query failed: ' . '<ul>' .
-                '<li>errorno=' . $_database->errno . '</li>' .
-                '<li>error=' . $_database->error . '</li>' .
-                '<li>query=' . $query . '</li>'.
+                '<strong>Query failed</strong> ' . '<ul>' .
+                '<li>MySQL error no.: <mark>' . $_database->errno . '</mark></li>' .
+                '<li>MySQL error: <mark>' . $_database->error . '</mark></li>' .
+                '<li>SQL: <mark>' . $query . '</mark></li>'.
                 '</ul>'
             );
         }
@@ -234,65 +238,12 @@ function safe_query($query = "")
     }
 }
 
-// -- SYSTEM ERROR DISPLAY -- //
-
-function system_error($text, $system = 1)
-{
-
-    global $_database;
-
-    if ($system) {
-        include('version.php');
-        $info = 'webSPELL Version: ' . $version . '<br>PHP Version: ' . phpversion() . '<br>';
-        if (!mysqli_connect_error()) {
-            $info .= 'MySQL Version: ' . $_database->server_info . '<br>';
-        }
-    } else {
-        $info = '';
-    }
-    die('<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-    <html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="description" content="Clanpage using webSPELL 4 CMS">
-        <meta name="author" content="webspell.org">
-        <meta name="keywords" content="webspell, webspell4, clan, cms">
-        <meta name="copyright" content="Copyright 2005-2015 by webspell.org">
-        <meta name="generator" content="webSPELL">
-        <title>webSPELL</title>
-    </head>
-    <body class="text-center">
-    <table class="table">
-        <tr>
-            <td>
-                <a href="http://www.webspell.org" target="_blank">
-                    <img src="images/banner.gif" style="border:none;" alt="webSPELL.org" title="webSPELL.org">
-                </a>
-            </td>
-        </tr>
-        <tr>
-            <td><div style="color:#333333;font-family:Tahoma,Verdana,Arial;font-size:11px;padding:5px;">' .
-                $info . '<br><span style="color: red">' . $text . '</span><br>&nbsp;</div></td>
-        </tr>
-        <tr>
-            <td>
-                <div style="color:#333333;font-family:Tahoma,Verdana,Arial;font-size:11px;padding:5px;">
-                    For support visit <a href="http://webspell.org" target="_blank">webspell.org</a>
-                </div>
-            </td>
-        </tr>
-        </table>
-    </body>
-    </html>');
-}
-
 // -- SYSTEM FILE INCLUDE -- //
 
 function systeminc($file)
 {
     if (!include('src/' . $file . '.php')) {
-        system_error('Could not get system file for ' . $file);
+        system_error('Could not get system file for <mark>' . $file . '</mark>');
     }
 }
 

@@ -1,8 +1,8 @@
 <?php
-$host = 'localhost';
-$user = 'root';
-$pwd = 'root';
-$db = 'github_webspell4';
+$host = '';
+$user = '';
+$pwd = '';
+$db = '';
 if (!defined("PREFIX")) {
-    define("PREFIX", 'ws_jvf_');
+    define("PREFIX", '');
 }
