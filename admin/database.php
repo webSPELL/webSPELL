@@ -44,12 +44,13 @@ if (isset($_POST[ 'upload' ])) {
                 safe_query("DROP TABLE `" . $table[ 0 ] . "`");
             }
 
-            move_uploaded_file($upload[ 'tmp_name' ], '../tmp/' . $upload[ 'name' ]);
-            $new_query = file('../tmp/' . $upload[ 'name' ]);
+            $tmpFile = tempnam('../tmp/','.database');
+            move_uploaded_file($upload[ 'tmp_name' ], $tmpFile);
+            $new_query = file($tmpFile);
             foreach ($new_query as $query) {
                 @mysqli_query($_database, $query);
             }
-            @unlink('../tmp/' . $upload[ 'name' ]);
+            @unlink($tmpFile);
         }
     } else {
         echo $_language->module[ 'transaction_invalid' ];
