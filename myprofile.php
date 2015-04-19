@@ -337,7 +337,7 @@ if (!$userID) {
             $newmd5pwd = generatePasswordHash(stripslashes($pwd1));
             safe_query("UPDATE " . PREFIX . "user SET password='" . $newmd5pwd . "' WHERE userID='" . $userID . "'");
             //logout
-            unset($_SESSION['ws_auth']);
+            unset($_SESSION['ws_user']);
             unset($_SESSION['ws_lastlogin']);
             session_destroy();
 
