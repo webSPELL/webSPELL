@@ -25,15 +25,78 @@
 ##########################################################################
 */
 
-function system_error($text, $system = 1)
+function getExceptionTraceAsString($exception) {
+    $rtn = "";
+    $count = 0;
+    foreach ($exception->getTrace() as $frame) {
+        $args = "";
+        if (isset($frame['args'])) {
+            $args = array();
+            foreach ($frame['args'] as $arg) {
+                if (is_string($arg)) {
+                    $args[] = "'" . $arg . "'";
+                } elseif (is_array($arg)) {
+                    $args[] = "Array";
+                } elseif (is_null($arg)) {
+                    $args[] = 'NULL';
+                } elseif (is_bool($arg)) {
+                    $args[] = ($arg) ? "true" : "false";
+                } elseif (is_object($arg)) {
+                    $args[] = get_class($arg);
+                } elseif (is_resource($arg)) {
+                    $args[] = get_resource_type($arg);
+                } else {
+                    $args[] = $arg;
+                }
+            }
+            $args = join(", ", $args);
+        }
+        $rtn .= sprintf( "#%s %s(%s): %s(%s)\n",
+            $count,
+            isset($frame['file']) ? $frame['file'] : 'unknown file',
+            isset($frame['line']) ? $frame['line'] : 'unknown line',
+            (isset($frame['class']))  ? $frame['class'].$frame['type'].$frame['function'] : $frame['function'],
+            $args );
+        $count++;
+    }
+    return $rtn;
+}
+
+function generateCallTrace()
+{
+    $e = new Exception();
+    //$trace = explode("\n", str_replace($_SERVER['DOCUMENT_ROOT'], '', $e->getTraceAsString()));
+    $trace = explode("\n", str_replace($_SERVER['DOCUMENT_ROOT'], '', getExceptionTraceAsString($e)));
+    $trace = array_reverse($trace);
+    array_shift($trace);
+    array_pop($trace);
+    array_pop($trace);
+    $length = count($trace);
+    $result = array();
+
+    for ($i = 0; $i < $length; $i++)
+    {
+        $result[] = ($i + 1)  . ')' . substr($trace[$i], strpos($trace[$i], ' '));
+    }
+
+    return "\t" . implode("\n\t", $result);
+}
+
+function system_error($text, $system = 1, $strace = 0)
 {
 
     ob_clean();
     global $_database;
 
+    if ($strace) {
+        $trace = '<pre>' . generateCallTrace() . '</pre>';
+    } else {
+        $trace = '';
+    }
+
     if ($system) {
         include('version.php');
-        $info = 'webSPELL Version: ' . $version . ', PHP Version: ' . phpversion();
+        $info = 'Version: ' . $version . ', PHP Version: ' . phpversion();
         if (!mysqli_connect_error()) {
             $info .= ', MySQL Version: ' . $_database->server_info;
         }
@@ -74,13 +137,9 @@ function system_error($text, $system = 1)
 <div class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
         <div class="navbar-header">
+            <a class="navbar-brand" href="index.php">webSPELL</a>
             <p class="navbar-text">' . $info . '</p>
         </div>
-
-        <div class="navbar-collapse collapse">
-            <?php include("navigation.php"); ?>
-        </div>
-
     </div>
     <!-- container -->
 </div>
@@ -93,8 +152,9 @@ function system_error($text, $system = 1)
                 <div class="alert alert-danger" role="alert"><strong>An error has occured</strong></div>
             </div>
             <div class="alert alert-info" role="alert">
-                ' . $text .'
+                ' . $text . '
             </div>
+                ' . $trace . '
         </div>
     </div>
 </div>

@@ -229,7 +229,7 @@ function safe_query($query = "")
                 '<li>MySQL error no.: <mark>' . $_database->errno . '</mark></li>' .
                 '<li>MySQL error: <mark>' . $_database->error . '</mark></li>' .
                 '<li>SQL: <mark>' . $query . '</mark></li>'.
-                '</ul>'
+                '</ul>', 1, 1
             );
         }
         return $result;
