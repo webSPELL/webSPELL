@@ -41,7 +41,8 @@ if (basename($_SERVER[ 'SCRIPT_FILENAME' ]) == basename("_rewrite.php")) {
         $first = $url_parts[ 0 ];
         $get = mysqli_query(
             $_database,
-            "SELECT * FROM " . PREFIX . "modrewrite WHERE regex LIKE '%" . mysqli_real_escape_string($_database, $first) . "%' ORDER BY LENGTH(regex) ASC"
+            "SELECT * FROM " . PREFIX . "modrewrite WHERE ".
+            "regex LIKE '%" . mysqli_real_escape_string($_database, $first) . "%' ORDER BY LENGTH(regex) ASC"
         );
         while ($ds = mysqli_fetch_assoc($get)) {
             $replace = $ds[ 'rebuild_result' ];

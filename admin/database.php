@@ -44,7 +44,7 @@ if (isset($_POST[ 'upload' ])) {
                 safe_query("DROP TABLE `" . $table[ 0 ] . "`");
             }
 
-            $tmpFile = tempnam('../tmp/','.database');
+            $tmpFile = tempnam('../tmp/', '.database');
             move_uploaded_file($upload[ 'tmp_name' ], $tmpFile);
             $new_query = file($tmpFile);
             foreach ($new_query as $query) {
