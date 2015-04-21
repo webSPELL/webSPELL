@@ -29,6 +29,12 @@
 
 include('_error.php');
 
+// -- PHP FUNCTION CHECK -- //
+
+if (!function_exists('mb_substr')) {
+    system_error('PHP Multibyte String Support is not enabled.', 0);
+}
+
 // -- ERROR REPORTING -- //
 define('DEBUG', "ON"); // ON = development-mode | OFF = public mode
 if (DEBUG === 'ON') {
