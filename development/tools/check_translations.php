@@ -2,27 +2,18 @@
 
 header("Content-Type: text/plain; charset=utf-8");
 
-define('BOM', "\xEF\xBB\xBF");
+include("translation_config.php");
 
-$baseLanguage = "../languages/uk";
-$baseLanguageCode = basename($baseLanguage);
 $checkUntranslated = true;
 
-$all_langs = glob("../languages/*", GLOB_ONLYDIR);
-if (in_array($baseLanguage, $all_langs)) {
-    unset($all_langs[ array_search($baseLanguage, $all_langs) ]);
+$all_langs = glob($languageBaseFolder."*", GLOB_ONLYDIR);
+if (in_array($baseLanguageFolder, $all_langs)) {
+    unset($all_langs[ array_search($baseLanguageFolder, $all_langs) ]);
 }
 
 $ref_keys = array();
 $erros = array();
-$all_langs = array_merge(array($baseLanguage), $all_langs);
-
-function checkBom($file)
-{
-    return (false !== strpos($file, BOM));
-}
-
-define("PAGETITLE", "'.PAGETITLE.'");
+$all_langs = array_merge(array($baseLanguageFolder), $all_langs);
 
 echo "Base Language: ".$baseLanguageCode."\n";
 

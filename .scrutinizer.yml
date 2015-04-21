@@ -56,7 +56,7 @@ tools:
         enabled: false
     php_code_sniffer:
         config:
-            ruleset: Ruleset.xml
+            ruleset: development/Ruleset.xml
             standard: PSR2
         extensions:
             - php

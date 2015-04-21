@@ -10,12 +10,12 @@
 
     "selenium" : {
         "start_process" : true,
-        "server_path" : "./tools/selenium-server-standalone-2.44.0.jar",
+        "server_path" : "./development/tools/selenium-server-standalone-2.44.0.jar",
         "log_path" : "",
         "host" : "127.0.0.1",
         "port" : 4444,
         "cli_args" : {
-            "webdriver.chrome.driver" : "./tools/chromedriver_linux64",
+            "webdriver.chrome.driver" : "./development/tools/chromedriver_linux64",
             "webdriver.ie.driver" : "",
             "webdriver.firefox.profile" : "default"
         }
