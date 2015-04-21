@@ -251,7 +251,11 @@ function safe_query($query = "")
 function systeminc($file)
 {
     if (!include('src/' . $file . '.php')) {
-        system_error('Could not get system file for <mark>' . $file . '</mark>');
+        if (DEBUG == "OFF") {
+            system_error('Could not get system file for <mark>' . $file . '</mark>');
+        } else {
+            system_error('Could not get system file for <mark>' . $file . '</mark>', 1, 1);
+        }
     }
 }
 
