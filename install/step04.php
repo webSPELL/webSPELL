@@ -28,38 +28,47 @@
 if ($_POST['hp_url']) {
 ?>
 
-  <tr>
-   <td id="step" align="center" colspan="2">
-   <span class="steps start"><?php echo $_language->module['step0']; ?></span>
-   <span class="steps"><?php echo $_language->module['step1']; ?></span>
-   <span class="steps"><?php echo $_language->module['step2']; ?></span>
-   <span class="steps"><?php echo $_language->module['step3']; ?></span>
-   <span class="steps" id="active"><?php echo $_language->module['step4']; ?></span>
-   <span class="steps"><?php echo $_language->module['step5']; ?></span>
-   <span class="steps end"><?php echo $_language->module['step6']; ?></span>
-   </td>
-  </tr>
-  <tr id="headline">
-   <td colspan="2" id="title"><?php echo $_language->module['select_install']; ?></td>
-  </tr>
-  <tr>
-   <td id="content" colspan="2">
-   <b><?php echo $_language->module['what_to_do']; ?></b><br>
-   <br><input type="radio" name="installtype" value="update"> <?php echo $_language->module['update_31']; ?>
-   <br><input type="radio" name="installtype" value="update_beta"> <?php echo $_language->module['update_beta4']; ?>
-   <br><input type="radio" name="installtype" value="update_beta5"> <?php echo $_language->module['update_beta5']; ?>
-   <br><input type="radio" name="installtype" value="update_beta6"> <?php echo $_language->module['update_beta6']; ?>
-   <br><input type="radio" name="installtype" value="update_final"> <?php echo $_language->module['update_40']; ?>
-   <br><input type="radio" name="installtype" value="update_40100"> <?php echo $_language->module['update_40100']; ?>
-   <br><input type="radio" name="installtype" value="update_40102"> <?php echo $_language->module['update_40102']; ?>
-   <br><input type="radio" name="installtype" value="update_420"> <?php echo $_language->module['update_420']; ?>
-   <br><input type="radio" name="installtype" value="full" checked="checked"> <?php echo $_language->module['new_install']; ?>
-          
-   <input type="hidden" name="hp_url" value="<?php echo $_POST['hp_url']; ?>">
-   
-   <div align="right"><br><a href="javascript:document.ws_install.submit()"><img src="images/next.jpg" alt=""></a></div>
-   </td>
-  </tr>
+    <tr>
+        <td id="step" align="center" colspan="2">
+            <span class="steps start"><?php echo $_language->module['step0']; ?></span>
+            <span class="steps"><?php echo $_language->module['step1']; ?></span>
+            <span class="steps"><?php echo $_language->module['step2']; ?></span>
+            <span class="steps"><?php echo $_language->module['step3']; ?></span>
+            <span class="steps" id="active"><?php echo $_language->module['step4']; ?></span>
+            <span class="steps"><?php echo $_language->module['step5']; ?></span>
+            <span class="steps end"><?php echo $_language->module['step6']; ?></span>
+        </td>
+    </tr>
+    <tr id="headline">
+        <td colspan="2" id="title"><?php echo $_language->module['select_install']; ?></td>
+    </tr>
+    <tr>
+        <td id="content" colspan="2">
+            <b><?php echo $_language->module['what_to_do']; ?></b><br>
+            <br><input type="radio" name="installtype" value="update"> <?php echo $_language->module['update_31']; ?>
+            <br><input type="radio" name="installtype"
+                       value="update_beta"> <?php echo $_language->module['update_beta4']; ?>
+            <br><input type="radio" name="installtype"
+                       value="update_beta5"> <?php echo $_language->module['update_beta5']; ?>
+            <br><input type="radio" name="installtype"
+                       value="update_beta6"> <?php echo $_language->module['update_beta6']; ?>
+            <br><input type="radio" name="installtype"
+                       value="update_final"> <?php echo $_language->module['update_40']; ?>
+            <br><input type="radio" name="installtype"
+                       value="update_40100"> <?php echo $_language->module['update_40100']; ?>
+            <br><input type="radio" name="installtype"
+                       value="update_40102"> <?php echo $_language->module['update_40102']; ?>
+            <br><input type="radio" name="installtype"
+                       value="update_420"> <?php echo $_language->module['update_420']; ?>
+            <br><input type="radio" name="installtype" value="full"
+                       checked="checked"> <?php echo $_language->module['new_install']; ?>
+
+            <input type="hidden" name="hp_url" value="<?php echo $_POST['hp_url']; ?>">
+
+            <div align="right"><br><a href="javascript:document.ws_install.submit()"><img src="images/next.jpg" alt=""></a>
+            </div>
+        </td>
+    </tr>
 
 <?php
-} 
+}

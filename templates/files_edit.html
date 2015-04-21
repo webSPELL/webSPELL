@@ -7,14 +7,7 @@
 
             return false;
         }
-        if ((document.getElementById('fileurl').value !== "http://")) {
-            if (!url(document.getElementById('fileurl').value)) {
-                alert("%you_have_to_enter_file%");
-                document.getElementById('fileurl').focus();
 
-                return false;
-            }
-        }
         if (!validbbcode(document.getElementById('info').value)) {
             document.getElementById('info').focus();
 
@@ -71,7 +64,7 @@
         <label for="fileurl" class="col-lg-4 control-label">%extern-link%:</label>
 
         <div class="col-lg-8">
-            <input id="fileurl" type="url" name="fileurl" size="40" value="$extern" class="form-control">
+            <input id="fileurl" type="url" placeholder="http://" name="fileurl" size="40" value="$extern" class="form-control">
         </div>
     </div>
 
@@ -79,7 +72,7 @@
         <label for="filesize" class="col-lg-4 control-label">%file-size_e%:</label>
 
         <div class="col-lg-5">
-            <input id="filesize" name="filesize" type="text" maxlength="4" size="4" class="form-control">
+            <input id="filesize" name="filesize" value="$filesize" type="text" maxlength="4" size="4" class="form-control">
         </div>
         <div class="col-lg-3">
             <select name="unit">$unit</select>

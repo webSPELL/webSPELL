@@ -34,177 +34,136 @@ if (isset($_GET[ 'action' ])) {
 if (isset($_POST[ 'save' ])) {
     $_language->readModule('links');
     if (!ispageadmin($userID) || !isnewsadmin($userID)) {
-        die(generateErrorBox($_language->module[ 'no_access' ], false));
-    }
-
-    safe_query(
-        "INSERT INTO
-            " . PREFIX . "links (
-                linkcatID,
-                name,
-                url,
-                info
-            )
-        values (
-            '" . $_POST[ 'cat' ] . "',
-            '" . strip_tags($_POST[ 'name' ]) . "',
-            '" . $_POST[ 'url' ] . "',
-            '" . $_POST[ 'info' ] . "'
-        ) "
-    );
-
-    $id = mysqli_insert_id($_database);
-    $banner = $_FILES[ 'banner' ];
-    $filepath = "./images/links/";
-
-    if ($banner[ 'name' ] != "") {
-        move_uploaded_file($banner[ 'tmp_name' ], $filepath . $banner[ 'name' ] . ".tmp");
-        @chmod($filepath . $banner[ 'name' ] . ".tmp", 0755);
-        $getimg = getimagesize($filepath . $banner[ 'name' ] . ".tmp");
-        if ($getimg[ 0 ] < 801 && $getimg[ 1 ] < 601) {
-            $file = '';
-            if ($getimg[ 2 ] == 1) {
-                $file = $id . '.gif';
-            } elseif ($getimg[ 2 ] == 2) {
-                $file = $id . '.jpg';
-            } elseif ($getimg[ 2 ] == 3) {
-                $file = $id . '.png';
-            }
-            if ($file != "") {
-                if (file_exists($filepath . $id . '.gif')) {
-                    unlink($filepath . $id . '.gif');
-                }
-                if (file_exists($filepath . $id . '.jpg')) {
-                    unlink($filepath . $id . '.jpg');
-                }
-                if (file_exists($filepath . $id . '.png')) {
-                    unlink($filepath . $id . '.png');
-                }
-                rename($filepath . $banner[ 'name' ] . ".tmp", $filepath . $file);
-                safe_query("UPDATE " . PREFIX . "links SET banner='" . $file . "' WHERE linkID='" . $id . "'");
-            } else {
-                if (unlink($filepath . $banner[ 'name' ] . ".tmp")) {
-                    $error = $_language->module[ 'format_incorrect' ];
-                    die(
-                        generateAlert(
-                            '<strong>' . $error . '</strong><br>
-                            <br>
-                            <a href="index.php?site=links&amp;action=edit&amp;linkID=' . $id .
-                            '" class="alert-link">&laquo; ' . $_language->module[ 'back' ] . '</a>',
-                            'alert-danger'
-                        )
-                    );
-                } else {
-                    $error = $_language->module[ 'format_incorrect' ];
-                    die(
-                        generateAlert(
-                            '<strong>' . $error . '</strong><br>
-                            <br>
-                            <a href="index.php?site=links&amp;action=edit&amp;linkID=' . $id .
-                            '" class="alert-link">&laquo; ' . $_language->module[ 'back' ] . '</a>',
-                            'alert-danger'
-                        )
-                    );
-                }
-            }
-        } else {
-            @unlink($filepath . $banner[ 'name' ] . ".tmp");
-            $error = $_language->module[ 'banner_to_big' ];
-            die(
-                generateAlert(
-                    '<strong>' . $error . '</strong><br>
-                    <br>
-                    <a href="index.php?site=links&amp;action=edit&amp;linkID=' . $id . '" class="alert-link">&laquo; ' .
-                    $_language->module[ 'back' ] . '</a>',
-                    'alert-danger'
+        echo generateAlert($_language->module['no_access'], 'alert-danger');
+    } else {
+        safe_query(
+            "INSERT INTO
+                " . PREFIX . "links (
+                    linkcatID,
+                    name,
+                    url,
+                    info
                 )
-            );
+            values (
+                '" . (int)$_POST[ 'cat' ] . "',
+                '" . strip_tags($_POST[ 'name' ]) . "',
+                '" . $_POST[ 'url' ] . "',
+                '" . $_POST[ 'info' ] . "'
+            ) "
+        );
+
+        $filepath = "./images/links/";
+
+        $_language->readModule('formvalidation', true);
+
+        $upload = new \webspell\HttpUpload('banner');
+
+        if ($upload->hasFile()) {
+            if ($upload->hasError() === false) {
+                $mime_types = array('image/jpeg','image/png','image/gif');
+                if ($upload->supportedMimeType($mime_types)) {
+                    $imageInformation =  getimagesize($upload->getTempFile());
+
+                    if (is_array($imageInformation)) {
+                        if ($imageInformation[0] < 801 && $imageInformation[1] < 601) {
+                            switch ($imageInformation[ 2 ]) {
+                                case 1:
+                                    $endung = '.gif';
+                                    break;
+                                case 3:
+                                    $endung = '.png';
+                                    break;
+                                default:
+                                    $endung = '.jpg';
+                                    break;
+                            }
+
+                            $id = mysqli_insert_id($_database);
+                            $file = $id.$endung;
+
+                            if ($upload->saveAs($filepath.$file)) {
+                                @chmod($filepath.$file, $new_chmod);
+                                safe_query(
+                                    "UPDATE " . PREFIX . "links SET banner='" . $file . "' WHERE linkID='" . $id . "'"
+                                );
+                            }
+                        } else {
+                            echo generateErrorBox(sprintf($_language->module[ 'image_too_big' ], 800, 600));
+                        }
+                    } else {
+                        echo generateErrorBox($_language->module[ 'broken_image' ]);
+                    }
+                } else {
+                    echo generateErrorBox($_language->module[ 'unsupported_image_type' ]);
+                }
+            } else {
+                echo generateErrorBox($upload->translateError());
+            }
         }
     }
 } elseif (isset($_POST[ 'saveedit' ])) {
     $_language->readModule('links');
     if (!ispageadmin($userID) || !isnewsadmin($userID)) {
-        die(generateErrorBox($_language->module[ 'no_access' ], false));
-    }
+        echo generateAlert($_language->module['no_access'], 'alert-danger');
+    } else {
+        safe_query(
+            "UPDATE
+                " . PREFIX . "links
+            SET
+                linkcatID='" . $_POST[ 'cat' ] . "',
+                name='" . strip_tags($_POST[ 'name' ]) . "',
+                url='" . $_POST[ 'url' ] . "',
+                info='" . $_POST[ 'info' ] . "'
+            WHERE
+                linkID='" . $_POST[ 'linkID' ] . "'"
+        );
 
-    safe_query(
-        "UPDATE
-            " . PREFIX . "links
-        SET
-            linkcatID='" . $_POST[ 'cat' ] . "',
-            name='" . strip_tags($_POST[ 'name' ]) . "',
-            url='" . $_POST[ 'url' ] . "',
-            info='" . $_POST[ 'info' ] . "'
-        WHERE
-            linkID='" . $_POST[ 'linkID' ] . "'"
-    );
+        $filepath = "./images/links/";
+        $id = $_POST[ 'linkID' ];
 
-    $filepath = "./images/links/";
-    $id = $_POST[ 'linkID' ];
-    $banner = $_FILES[ 'banner' ];
+        $_language->readModule('formvalidation', true);
 
-    if ($banner[ 'name' ] != "") {
-        move_uploaded_file($banner[ 'tmp_name' ], $filepath . $banner[ 'name' ] . ".tmp");
-        @chmod($filepath . $banner[ 'name' ] . ".tmp", 0755);
-        $getimg = getimagesize($filepath . $banner[ 'name' ] . ".tmp");
-        if ($getimg[ 0 ] < 801 && $getimg[ 1 ] < 601) {
-            $file = '';
-            if ($getimg[ 2 ] == 1) {
-                $file = $id . '.gif';
-            } elseif ($getimg[ 2 ] == 2) {
-                $file = $id . '.jpg';
-            } elseif ($getimg[ 2 ] == 3) {
-                $file = $id . '.png';
-            }
-            if ($file != "") {
-                if (file_exists($filepath . $id . '.gif')) {
-                    unlink($filepath . $id . '.gif');
-                }
-                if (file_exists($filepath . $id . '.jpg')) {
-                    unlink($filepath . $id . '.jpg');
-                }
-                if (file_exists($filepath . $id . '.png')) {
-                    unlink($filepath . $id . '.png');
-                }
-                rename($filepath . $banner[ 'name' ] . ".tmp", $filepath . $file);
-                safe_query("UPDATE " . PREFIX . "links SET banner='" . $file . "' WHERE linkID='" . $id . "'");
-            } else {
-                if (unlink($filepath . $banner[ 'name' ] . ".tmp")) {
-                    $error = $_language->module[ 'format_incorrect' ];
-                    die(
-                        generateAlert(
-                            '<strong>' . $error . '</strong><br>
-                            <br>
-                            <a href="index.php?site=links&amp;action=edit&amp;linkID=' . $id .
-                            '" class="alert-link">&laquo; ' . $_language->module[ 'back' ] . '</a>',
-                            'alert-danger'
-                        )
-                    );
+        $upload = new \webspell\HttpUpload('banner');
+        if ($upload->hasFile()) {
+            if ($upload->hasError() === false) {
+                $mime_types = array('image/jpeg','image/png','image/gif');
+                if ($upload->supportedMimeType($mime_types)) {
+                    $imageInformation =  getimagesize($upload->getTempFile());
+
+                    if (is_array($imageInformation)) {
+                        if ($imageInformation[0] < 801 && $imageInformation[1] < 601) {
+                            switch ($imageInformation[ 2 ]) {
+                                case 1:
+                                    $endung = '.gif';
+                                    break;
+                                case 3:
+                                    $endung = '.png';
+                                    break;
+                                default:
+                                    $endung = '.jpg';
+                                    break;
+                            }
+
+                            $file = $id.$endung;
+
+                            if ($upload->saveAs($filepath.$file)) {
+                                @chmod($filepath.$file, $new_chmod);
+                                safe_query(
+                                    "UPDATE " . PREFIX . "links SET banner='" . $file . "' WHERE linkID='" . $id . "'"
+                                );
+                            }
+                        } else {
+                            echo generateErrorBox(sprintf($_language->module[ 'image_too_big' ], 800, 600));
+                        }
+                    } else {
+                        echo generateErrorBox($_language->module[ 'broken_image' ]);
+                    }
                 } else {
-                    $error = $_language->module[ 'format_incorrect' ];
-                    die(
-                        generateAlert(
-                            '<strong>' . $error . '</strong><br>
-                            <br>
-                            <a href="index.php?site=links&amp;action=edit&amp;linkID=' . $id .
-                            '" class="alert-link">&laquo; ' . $_language->module[ 'back' ] . '</a>',
-                            'alert-danger'
-                        )
-                    );
+                    echo generateErrorBox($_language->module[ 'unsupported_image_type' ]);
                 }
+            } else {
+                echo generateErrorBox($upload->translateError());
             }
-        } else {
-            @unlink($filepath . $banner[ 'name' ] . ".tmp");
-            $error = $_language->module[ 'banner_to_big' ];
-            die(
-                generateAlert(
-                    '<strong>' . $error . '</strong><br>
-                    <br>
-                    <a href="index.php?site=links&amp;action=edit&amp;linkID=' . $id .
-                    '" class="alert-link">&laquo; ' . $_language->module[ 'back' ] . '</a>',
-                    'alert-danger'
-                )
-            );
         }
     }
 } elseif ($action == "delete") {

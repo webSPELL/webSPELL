@@ -26,7 +26,7 @@
 */
 
 if (isset($_POST[ 'upload' ])) {
-    $_language->readModule('database');
+    $_language->readModule('database', false, true);
 
     if (!ispageadmin($userID) || mb_substr(basename($_SERVER[ 'REQUEST_URI' ]), 0, 15) != "admincenter.php") {
         die($_language->module[ 'access_denied' ]);
@@ -44,12 +44,13 @@ if (isset($_POST[ 'upload' ])) {
                 safe_query("DROP TABLE `" . $table[ 0 ] . "`");
             }
 
-            move_uploaded_file($upload[ 'tmp_name' ], '../tmp/' . $upload[ 'name' ]);
-            $new_query = file('../tmp/' . $upload[ 'name' ]);
+            $tmpFile = tempnam('../tmp/', '.database');
+            move_uploaded_file($upload[ 'tmp_name' ], $tmpFile);
+            $new_query = file($tmpFile);
             foreach ($new_query as $query) {
                 @mysqli_query($_database, $query);
             }
-            @unlink('../tmp/' . $upload[ 'name' ]);
+            @unlink($tmpFile);
         }
     } else {
         echo $_language->module[ 'transaction_invalid' ];
@@ -69,7 +70,7 @@ if (isset($_GET[ 'back' ])) {
 }
 
 if ($action == "optimize") {
-    $_language->readModule('database');
+    $_language->readModule('database', false, true);
 
     echo '<h1>&curren; ' . $_language->module[ 'database' ] . '</h1>';
 
@@ -193,10 +194,10 @@ if ($action == "optimize") {
             echo $final;
         }
     } else {
-        echo $_language->readModule('database') . $_language->module[ 'transaction_invalid' ];
+        echo $_language->readModule('database', false, true) . $_language->module[ 'transaction_invalid' ];
     }
 } else {
-    $_language->readModule('database');
+    $_language->readModule('database', false, true);
 
     if (!ispageadmin($userID) || mb_substr(basename($_SERVER[ 'REQUEST_URI' ]), 0, 15) != "admincenter.php") {
         die($_language->module[ 'access_denied' ]);

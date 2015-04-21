@@ -24,18 +24,24 @@
 #                                                                        #
 ##########################################################################
 */
+/**
+ * Online Language Editor Ukraine language file for webSPELL 4.2.2
+ * @author Stefan Giesecke <webmaster@giesi.com>
+ * @copyright Copyright (c) 2010, Stefan Giesecke
+ * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
+ */
 
 $language_array = Array(
 
 /* do not edit above this line */
 
-	'all_messages'=>'Show all',
-	'enter_message'=>'You have to enter a message!',
-	'enter_name'=>'You have to enter your name!',
-	'delete_selected'=>'Delete selected',
-	'select_all'=>'Select all',
-	'shout'=>'Shout!',
-	'shoutbox'=>'shoutbox',
-	'sort'=>'Sort:'
+  'all_messages'=>'Показати все',
+  'enter_message'=>'Ви повинні ввести повідомлення!',
+  'enter_name'=>'Ви повинні ввести своє ім\'я!',
+  'delete_selected'=>'Видалити обране',
+  'select_all'=>'вибрати всі',
+  'shout'=>'Крикнути!',
+  'shoutbox'=>'Чат',
+  'sort'=>'Сортувати:'
 );
 

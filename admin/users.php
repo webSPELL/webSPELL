@@ -25,8 +25,8 @@
 ##########################################################################
 */
 
-$_language->readModule('users');
-$_language->readModule('rank_special', true);
+$_language->readModule('users', false, true);
+$_language->readModule('rank_special', true, true);
 
 if (!isuseradmin($userID) || mb_substr(basename($_SERVER[ 'REQUEST_URI' ]), 0, 15) != "admincenter.php") {
     die($_language->module[ 'access_denied' ]);
@@ -54,137 +54,105 @@ if (isset($_POST[ 'add' ])) {
 } elseif (isset($_POST[ 'edit' ])) {
     $CAPCLASS = new \webspell\Captcha;
     if ($CAPCLASS->checkCaptcha(0, $_POST[ 'captcha_hash' ])) {
-        $avatar = $_FILES[ 'avatar' ];
-        $userpic = $_FILES[ 'userpic' ];
         $id = $_POST[ 'id' ];
+
+        $error_array = array();
 
         //avatar
         $filepath = "../images/avatars/";
-        if (isset($_POST[ 'avatar_url' ])) {
-            $avatar_url = $_POST[ 'avatar_url' ];
-        } else {
-            $avatar_url = '';
-        }
 
-        if ($avatar[ 'name' ] != "" || ($avatar_url != "" && $avatar_url != "http://")) {
-            if ($avatar[ 'name' ] != "") {
-                move_uploaded_file($avatar[ 'tmp_name' ], $filepath . $avatar[ 'name' ] . ".tmp");
-            } else {
-                $avatar[ 'name' ] = strrchr($avatar_url, "/");
-                if (!copy($_POST[ 'avatar_url' ], $filepath . $avatar[ 'name' ] . ".tmp")) {
-                    $error = $_language->module[ 'can_not_copy' ];
-                    die('ERROR: ' . $error .
-                        '<br /><br /><input type="button" onclick="javascript:history.back()" value="' .
-                        $_language->module[ 'back' ] . '" />');
-                }
-            }
-            @chmod($filepath . $avatar[ 'name' ] . ".tmp", $new_chmod);
-            $info = getimagesize($filepath . $avatar[ 'name' ] . ".tmp");
-            if ($info[ 0 ] < 91 && $info[ 1 ] < 91) {
-                $pic = '';
-                if ($info[ 2 ] == 1) {
-                    $pic = $id . '.gif';
-                } elseif ($info[ 2 ] == 2) {
-                    $pic = $id . '.jpg';
-                } elseif ($info[ 2 ] == 3) {
-                    $pic = $id . '.png';
-                }
-                if ($pic != "") {
-                    if (file_exists($filepath . $id . '.gif')) {
-                        @unlink($filepath . $id . '.gif');
-                    }
-                    if (file_exists($filepath . $id . '.jpg')) {
-                        @unlink($filepath . $id . '.jpg');
-                    }
-                    if (file_exists($filepath . $id . '.png')) {
-                        @unlink($filepath . $id . '.png');
-                    }
-                    rename($filepath . $avatar[ 'name' ] . '.tmp', $filepath . $pic);
-                    safe_query("UPDATE " . PREFIX . "user SET avatar='" . $pic . "' WHERE userID='" . $id . "'");
-                } else {
-                    if (unlink($filepath . $avatar[ 'name' ] . ".tmp")) {
-                        $error = $_language->module[ 'invalid_format' ];
-                        die('ERROR: ' . $error .
-                            '<br /><br /><input type="button" onclick="javascript:history.back()" value="' .
-                            $_language->module[ 'back' ] . '" />');
+        //TODO: should be loaded from root language folder
+        $_language->readModule('formvalidation', true);
+
+        $upload = new \webspell\HttpUpload('avatar');
+        if ($upload->hasFile()) {
+            if ($upload->hasError() === false) {
+                $mime_types = array('image/jpeg','image/png','image/gif');
+                if ($upload->supportedMimeType($mime_types)) {
+                    $imageInformation =  getimagesize($upload->getTempFile());
+                    if (is_array($imageInformation)) {
+                        if ($imageInformation[0] < 91 && $imageInformation[1] < 91) {
+                            switch ($imageInformation[ 2 ]) {
+                                case 1:
+                                    $endung = '.gif';
+                                    break;
+                                case 3:
+                                    $endung = '.png';
+                                    break;
+                                default:
+                                    $endung = '.jpg';
+                                    break;
+                            }
+                            $file = $id.$endung;
+                            if ($upload->saveAs($filepath.$file, true)) {
+                                @chmod($filepath.$file, $new_chmod);
+                                safe_query(
+                                    "UPDATE "
+                                    . PREFIX . "user
+                                    SET
+                                      avatar='" . $file .
+                                    "' WHERE
+                                      userID='" . $id . "'"
+                                );
+                            }
+                        } else {
+                            $error_array[] = sprintf($_language->module[ 'image_too_big' ], 90, 90);
+                        }
                     } else {
-                        $error = $_language->module[ 'upload_failed' ];
-                        die('ERROR: ' . $error .
-                            '<br /><br /><input type="button" onclick="javascript:history.back()" value="' .
-                            $_language->module[ 'back' ] . '" />');
+                        $error_array[] = $_language->module[ 'broken_image' ];
                     }
+                } else {
+                    $error_array[] = $_language->module[ 'unsupported_image_type' ];
                 }
             } else {
-                @unlink($filepath . $avatar[ 'name' ] . ".tmp");
-                $error = $_language->module[ 'error_avatar' ];
-                die('ERROR: ' . $error .
-                    '<br /><br /><input type="button" onclick="javascript:history.back()" value="' .
-                    $_language->module[ 'back' ] . '" />');
+                $error_array[] = $upload->translateError();
             }
         }
 
         //userpic
         $filepath = "../images/userpics/";
-        if (isset($_POST[ 'userpic_url' ])) {
-            $userpic_url = $_POST[ 'userpic_url' ];
-        } else {
-            $userpic_url = '';
-        }
 
-        if ($userpic[ 'name' ] != "" || ($userpic_url != "" && $userpic_url != "http://")) {
-            if ($userpic[ 'name' ] != "") {
-                move_uploaded_file($userpic[ 'tmp_name' ], $filepath . $userpic[ 'name' ] . ".tmp");
-            } else {
-                $userpic[ 'name' ] = strrchr($userpic_url, "/");
-                if (!copy($_POST[ 'userpic_url' ], $filepath . $userpic[ 'name' ] . ".tmp")) {
-                    $error = $_language->module[ 'can_not_copy' ];
-                    die('ERROR: ' . $error .
-                        '<br /><br /><input type="button" onclick="javascript:history.back()" value="' .
-                        $_language->module[ 'back' ] . '" />');
-                }
-            }
-            @chmod($filepath . $userpic[ 'name' ] . ".tmp", $new_chmod);
-            $info = getimagesize($filepath . $userpic[ 'name' ] . ".tmp");
-            if ($info[ 0 ] < 231 && $info[ 1 ] < 211) {
-                $pic = '';
-                if ($info[ 2 ] == 1) {
-                    $pic = $id . '.gif';
-                } elseif ($info[ 2 ] == 2) {
-                    $pic = $id . '.jpg';
-                } elseif ($info[ 2 ] == 3) {
-                    $pic = $id . '.png';
-                }
-                if ($pic != "") {
-                    if (file_exists($filepath . $id . '.gif')) {
-                        @unlink($filepath . $id . '.gif');
-                    }
-                    if (file_exists($filepath . $id . '.jpg')) {
-                        @unlink($filepath . $id . '.jpg');
-                    }
-                    if (file_exists($filepath . $id . '.png')) {
-                        @unlink($filepath . $id . '.png');
-                    }
-                    rename($filepath . $userpic[ 'name' ] . ".tmp", $filepath . $pic);
-                    safe_query("UPDATE " . PREFIX . "user SET userpic='" . $pic . "' WHERE userID='" . $id . "'");
-                } else {
-                    if (unlink($filepath . $userpic[ 'name' ] . ".tmp")) {
-                        $error = $_language->module[ 'invalid_format' ];
-                        die('ERROR: ' . $error .
-                            '<br /><br /><input type="button" onclick="javascript:history.back()" value="' .
-                            $_language->module[ 'back' ] . '" />');
+        $upload = new \webspell\HttpUpload('userpic');
+        if ($upload->hasFile()) {
+            if ($upload->hasError() === false) {
+                $mime_types = array('image/jpeg','image/png','image/gif');
+                if ($upload->supportedMimeType($mime_types)) {
+                    $imageInformation =  getimagesize($upload->getTempFile());
+                    if (is_array($imageInformation)) {
+                        if ($imageInformation[0] < 231 && $imageInformation[1] < 211) {
+                            switch ($imageInformation[ 2 ]) {
+                                case 1:
+                                    $endung = '.gif';
+                                    break;
+                                case 3:
+                                    $endung = '.png';
+                                    break;
+                                default:
+                                    $endung = '.jpg';
+                                    break;
+                            }
+                            $file = $id.$endung;
+                            if ($upload->saveAs($filepath.$file, true)) {
+                                @chmod($filepath.$file, $new_chmod);
+                                safe_query(
+                                    "UPDATE "
+                                    . PREFIX . "user
+                                    SET
+                                      userpic='" . $file .
+                                    "' WHERE userID='" . $id . "'"
+                                );
+                            }
+                        } else {
+                            $error_array[] = sprintf($_language->module[ 'image_too_big' ], 230, 210);
+                        }
                     } else {
-                        $error = $_language->module[ 'upload_failed' ];
-                        die('ERROR: ' . $error .
-                            '<br /><br /><input type="button" onclick="javascript:history.back()" value="' .
-                            $_language->module[ 'back' ] . '" />');
+                        $error_array[] = $_language->module[ 'broken_image' ];
                     }
+                } else {
+                    $error_array[] = $_language->module[ 'unsupported_image_type' ];
                 }
             } else {
-                @unlink($filepath . $userpic[ 'name' ] . ".tmp");
-                $error = $_language->module[ 'error_picture' ];
-                die('ERROR: ' . $error .
-                    '<br /><br /><input type="button" onclick="javascript:history.back()" value="' .
-                    $_language->module[ 'back' ] . '" />');
+                $error_array[] = $upload->translateError();
             }
         }
 
@@ -194,11 +162,18 @@ if (isset($_POST[ 'add' ])) {
         $birthday = $b_year . '.' . $b_month . '.' . $b_day;
         $nickname = htmlspecialchars(mb_substr(trim($_POST[ 'nickname' ]), 0, 30));
 
-        if (!mysqli_num_rows(safe_query(
-            "SELECT userID FROM " . PREFIX . "user WHERE nickname='" . $nickname .
-            "' AND userID!=" . $_POST[ 'id' ]
-        ))
-        ) {
+        if (mysqli_num_rows(
+            safe_query(
+                "SELECT userID FROM " . PREFIX . "user WHERE nickname='" . $nickname .
+                "' AND userID!=" . $id
+            )
+        )) {
+            $error_array[] = $_language->module[ 'user_exists' ];
+        }
+
+        if (count($error_array) > 0) {
+            echo generateErrorBoxFromArray($_language->module[ 'error' ], $error_array);
+        } else {
             safe_query(
                 "UPDATE " . PREFIX . "user SET nickname='" . $nickname . "',
 									 email='" . $_POST[ 'email' ] . "',
@@ -227,23 +202,21 @@ if (isset($_POST[ 'add' ])) {
 	 								 mousepad='" . $_POST[ 'mousepad' ] . "',
 									 homepage='" . $_POST[ 'homepage' ] . "',
 									 about='" . $_POST[ 'about' ] . "',
-									 special_rank = '".$_POST['special_rank']."' WHERE userID='" . $_POST[ 'id' ] . "' "
+									 special_rank = '".$_POST['special_rank']."' WHERE userID='" . $id . "' "
             );
 
             if (isset($_POST[ 'avatar' ])) {
-                safe_query("UPDATE " . PREFIX . "user SET avatar='' WHERE userID='" . $_POST[ 'id' ] . "'");
-                @unlink('../images/avatars/' . $_POST[ 'id' ] . '.gif');
-                @unlink('../images/avatars/' . $_POST[ 'id' ] . '.jpg');
-                @unlink('../images/avatars/' . $_POST[ 'id' ] . '.png');
+                safe_query("UPDATE " . PREFIX . "user SET avatar='' WHERE userID='" . $id . "'");
+                @unlink('../images/avatars/' . $id . '.gif');
+                @unlink('../images/avatars/' . $id . '.jpg');
+                @unlink('../images/avatars/' . $id . '.png');
             }
             if (isset($_POST[ 'userpic' ])) {
-                safe_query("UPDATE " . PREFIX . "user SET userpic='' WHERE userID='" . $_POST[ 'id' ] . "'");
-                @unlink('../images/userpics/' . $_POST[ 'id' ] . '.gif');
-                @unlink('../images/userpics/' . $_POST[ 'id' ] . '.jpg');
-                @unlink('../images/userpics/' . $_POST[ 'id' ] . '.png');
+                safe_query("UPDATE " . PREFIX . "user SET userpic='' WHERE userID='" . $id . "'");
+                @unlink('../images/userpics/' . $id . '.gif');
+                @unlink('../images/userpics/' . $id . '.jpg');
+                @unlink('../images/userpics/' . $id . '.png');
             }
-        } else {
-            echo $_language->module[ 'user_exists' ];
         }
     } else {
         echo $_language->module[ 'transaction_invalid' ];
@@ -624,12 +597,12 @@ if ($action == "activate") {
         <td><input type="text" name="nickname" value="' . $ds[ 'nickname' ] . '" size="60" /></td>
     </tr>
     <tr>
-        <td><b>' . $_language->module[ 'special_rank' ] . '</b></td>
-        <td><select name="special_rank">' . $ranks . '</select></td>
-    </tr>
-    <tr>
         <td><b>' . $_language->module[ 'email' ] . '</b></td>
         <td><input type="text" name="email" value="' . getinput($ds[ 'email' ]) . '" size="60" /></td>
+    </tr>
+    <tr>
+        <td><b>' . $_language->module[ 'special_rank' ] . '</b></td>
+        <td><select name="special_rank">' . $ranks . '</select></td>
     </tr>
     <tr>
         <td colspan="2"><br /><i><b>' . $_language->module[ 'pictures' ] . '</b></i></td>

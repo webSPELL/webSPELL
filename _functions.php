@@ -262,6 +262,9 @@ systeminc('func/messenger');
 
 systeminc('func/news');
 
+// -- FILES INFORMATION -- //
+systeminc('func/files');
+
 // -- GAME INFORMATION -- //
 
 systeminc('func/game');
@@ -307,6 +310,12 @@ systeminc('func/bbcode');
 // -- Tags -- //
 
 systeminc('func/tags');
+
+// -- Upload -- //
+
+systeminc('func/upload');
+systeminc('func/httpupload');
+systeminc('func/urlupload');
 
 // -- Mod Rewrite -- //
 
@@ -370,31 +379,18 @@ function getforminput($text)
 
 // -- LOGIN -- //
 
-$login_per_cookie = false;
-if (isset($_COOKIE['ws_auth']) && !isset($_SESSION['ws_auth'])) {
-    $login_per_cookie = true;
-    $_SESSION['ws_auth'] = $_COOKIE['ws_auth'];
-}
-
 systeminc('login');
 
-if ($loggedin === false) {
-    if (isset($_COOKIE['language'])) {
-        $_language->setLanguage($_COOKIE['language']);
-    } elseif (isset($_SESSION['language'])) {
-        $_language->setLanguage($_SESSION['language']);
-    } elseif ($autoDetectLanguage) {
-        $lang = detectUserLanguage();
-        if (!empty($lang)) {
-            $_language->setLanguage($lang);
-            $_SESSION['language'] = $lang;
-        }
+if (isset($_COOKIE['language'])) {
+    $_language->setLanguage($_COOKIE['language']);
+} elseif (isset($_SESSION['language'])) {
+    $_language->setLanguage($_SESSION['language']);
+} elseif ($autoDetectLanguage) {
+    $lang = detectUserLanguage();
+    if (!empty($lang)) {
+        $_language->setLanguage($lang);
+        $_SESSION['language'] = $lang;
     }
-}
-
-if ($login_per_cookie) {
-    $ll = mysqli_fetch_array(safe_query("SELECT lastlogin FROM " . PREFIX . "user WHERE userID='$userID'"));
-    $_SESSION['ws_lastlogin'] = $ll['lastlogin'];
 }
 
 // -- SITE VARIABLE -- //
@@ -456,7 +452,7 @@ while ($bq = mysqli_fetch_array($banned)) {
 
 // -- BANNED IPs -- //
 
-safe_query("DELETE FROM `" . PREFIX . "banned_ips` WHERE deltime < " . time() . "");
+safe_query("DELETE FROM `" . PREFIX . "banned_ips` WHERE deltime < '" . time() . "'");
 
 // -- WHO IS - WAS ONLINE -- //
 
@@ -568,3 +564,15 @@ systeminc('func/feeds');
 // -- Email -- //
 
 systeminc('func/email');
+
+function recursiveRemoveDirectory($directory)
+{
+    foreach (glob("{$directory}/*") as $file) {
+        if (is_dir($file)) {
+            recursiveRemoveDirectory($file);
+        } else {
+            unlink($file);
+        }
+    }
+    rmdir($directory);
+}

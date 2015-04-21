@@ -81,31 +81,26 @@
     <hr>
 
     <div class="row">
-        <div class="col-md-6">$viewavatar<br>
-            <input name="delavatar" type="checkbox" value="1">
-            <small>%delete_max_90_90%</small>
-        </div>
 
-        <div class="col-md-6">
-            <div class="form-group">
-                <input name="avatar" type="file">%or%<br>
-                <input name="avatar_url" type="text" value="http://" class="form-control">
-            </div>
+        <label for="avatar" class="col-md-3 control-label">$viewavatar<br>
+        <input name="delavatar" type="checkbox" value="1"> <small>%delete%</small></label>
+
+        <div class="col-md-9">
+                <input name="avatar" type="file"><span class="help-block">%or%</span>
+                <input name="avatar_url" type="text" placeholder="http://" class="form-control">
+                <span class="help-block">max: 90px / 90px</span>
         </div>
     </div>
     <hr>
 
     <div class="row">
-        <div class="col-md-6">$viewpic<br>
-            <input name="deluserpic" type="checkbox" value="1">
-            <small>%delete_max_230_210%</small>
-        </div>
+        <label for="userpic" class="col-md-3 control-label">$viewpic<br>
+        <input name="deluserpic" type="checkbox" value="1"> <small>%delete%</small></label>
 
-        <div class="col-md-6">
-            <div class="form-group">
-                <input name="userpic" type="file">%or%<br>
-                <input name="userpic_url" type="text" value="http://" class="form-control">
-            </div>
+        <div class="col-md-9">
+                <input name="userpic" type="file"><span class="help-block">%or%</span>
+                <input name="userpic_url" type="text" placeholder="http://" class="form-control">
+                <span class="help-block">max: 230px / 210px</span>
         </div>
     </div>
     <hr>

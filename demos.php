@@ -24,208 +24,6 @@
 #                                                                        #
 ##########################################################################
 */
-if (isset($site)) {
-    $_language->readModule('demos');
-}
-
-if (isset($_POST[ 'save' ])) {
-    include("_mysql.php");
-    include("_settings.php");
-    include("_functions.php");
-    $_language->readModule('demos');
-
-    if (!isfileadmin($userID)) {
-        die($_language->module[ 'no_access' ]);
-    }
-
-    if (isset($_FILES[ 'demo' ])) {
-        $demo = $_FILES[ 'demo' ];
-    } else {
-        $demo = null;
-    }
-    $game = $_POST[ 'game' ];
-    $clanname1 = $_POST[ 'clanname1' ];
-    $clanname2 = $_POST[ 'clanname2' ];
-    $clan1 = $_POST[ 'clan1' ];
-    $clan2 = $_POST[ 'clan2' ];
-    $hp1 = $_POST[ 'hp1' ];
-    $hp2 = $_POST[ 'hp2' ];
-    $country1 = $_POST[ 'country1' ];
-    $country2 = $_POST[ 'country2' ];
-    $league = $_POST[ 'league' ];
-    $leaguehp = $_POST[ 'leaguehp' ];
-    $maps = $_POST[ 'maps' ];
-    $player = $_POST[ 'player' ];
-    $comments = $_POST[ 'comments' ];
-    $date = strtotime($_POST[ 'date' ]);
-    $link = $_POST[ 'link' ];
-
-    $filepath = "./demos/";
-    if ($demo[ 'name' ] != "") {
-        $des_file = $filepath . $demo[ 'name' ];
-        if (!file_exists($des_file)) {
-            move_uploaded_file($demo[ 'tmp_name' ], $des_file);
-            @chmod($des_file, 0755);
-            $file = $demo[ 'name' ];
-        } else {
-            die($_language->module[ 'file_exists' ]);
-        }
-    } else {
-        if (stristr($link, "http://")) {
-            $file = $link;
-        }
-    }
-
-    safe_query(
-        "INSERT INTO `" . PREFIX . "demos` (
-            `date`,
-            `game`,
-            `clan1`,
-            `clan2`,
-            `clantag1`,
-            `clantag2`,
-            `url1`,
-            `url2`,
-            `country1`,
-            `country2`,
-            `league`,
-            `leaguehp`,
-            `maps`,
-            `player`,
-            `file`,
-            `downloads`,
-            `comments`
-        )
-        VALUES (
-            '$date',
-            '$game',
-            '$clanname1',
-            '$clanname2',
-            '$clan1',
-            '$clan2',
-            '$hp1',
-            '$hp2',
-            '$country1',
-            '$country2',
-            '$league',
-            '$leaguehp',
-            '$maps',
-            '$player',
-            '$file',
-            '0',
-            '$comments'
-        )"
-    );
-    header("Location: index.php?site=demos");
-} elseif (isset($_POST[ 'saveedit' ])) {
-    include("_mysql.php");
-    include("_settings.php");
-    include("_functions.php");
-    $_language->readModule('demos');
-
-    if (!isfileadmin($userID)) {
-        die($_language->module[ 'no_access' ]);
-    }
-
-    if (isset($_FILES[ 'demo' ])) {
-        $demo = $_FILES[ 'demo' ];
-    } else {
-        $demo = null;
-    }
-    $demoID = $_POST[ 'demoID' ];
-    $game = $_POST[ 'game' ];
-    $clanname1 = $_POST[ 'clanname1' ];
-    $clanname2 = $_POST[ 'clanname2' ];
-    $clan1 = $_POST[ 'clan1' ];
-    $clan2 = $_POST[ 'clan2' ];
-    $hp1 = $_POST[ 'hp1' ];
-    $hp2 = $_POST[ 'hp2' ];
-    $country1 = $_POST[ 'country1' ];
-    $country2 = $_POST[ 'country2' ];
-    $league = $_POST[ 'league' ];
-    $leaguehp = $_POST[ 'leaguehp' ];
-    $maps = $_POST[ 'maps' ];
-    $player = $_POST[ 'player' ];
-    $comments = $_POST[ 'comments' ];
-    $link = $_POST[ 'link' ];
-
-    $filepath = "./demos/";
-    $file = "";
-    if ($demo[ 'name' ] != "") {
-        $des_file = $filepath . $demo[ 'name' ];
-        if (!file_exists($des_file)) {
-            move_uploaded_file($demo[ 'tmp_name' ], $des_file);
-            @chmod($des_file, 0755);
-            $file = $demo[ 'name' ];
-        } else {
-            die($_language->module[ 'file_exists' ]);
-        }
-    } else {
-        if (stristr($link, "http://") && $link != "http://" && $link != "") {
-            $file = $link;
-        }
-    }
-    if ($file != "") {
-        $mysql_file = "file='" . $file . "',";
-    } else {
-        $mysql_file = "";
-    }
-    $date = strtotime($_POST[ 'date' ]);
-
-    safe_query(
-        "UPDATE
-            `" . PREFIX . "demos`
-        SET
-            date='$date',
-            game='$game',
-            clan1='$clanname1',
-            clan2='$clanname2',
-            clantag1='$clan1',
-            clantag2='$clan2',
-            url1='$hp1',
-            url2='$hp2',
-            country1='$country1',
-            country2='$country2',
-            league='$league',
-            leaguehp='$leaguehp',
-            maps='$maps',
-            player='$player',
-            " . $mysql_file . "
-            comments='$comments'
-        WHERE
-            demoID='" . (int)$demoID."'"
-    );
-    header("Location: index.php?site=demos");
-} elseif (isset($_GET[ 'delete' ])) {
-    include("_mysql.php");
-    include("_settings.php");
-    include("_functions.php");
-    $_language->readModule('demos');
-
-    if (!isfileadmin($userID)) {
-        die($_language->module[ 'no_access' ]);
-    }
-
-    $demoID = $_GET[ 'demoID' ];
-    $filepath = "./demos/";
-    $ergebnis = safe_query("SELECT * FROM " . PREFIX . "demos WHERE demoID = '" . (int)$demoID."'");
-    $ds = mysqli_fetch_array($ergebnis);
-    if (file_exists($filepath . $ds[ 'file' ])) {
-        @unlink($filepath . $ds[ 'file' ]);
-    }
-    safe_query("DELETE FROM `" . PREFIX . "demos` WHERE `demoID` = '" . (int)$demoID."'");
-    safe_query("DELETE FROM `" . PREFIX . "comments` WHERE `parentID` = '" . (int)$demoID . "' AND `type` = 'de'");
-    header("Location: index.php?site=demos");
-}
-
-$title_demos = $GLOBALS["_template"]->replaceTemplate("title_demos", array());
-echo $title_demos;
-
-$games = null;
-$gamesa = safe_query("SELECT * FROM `" . PREFIX . "games` ORDER BY `name`");
-while ($ds = mysqli_fetch_array($gamesa)) {
-    $games .= '<option value="' . $ds[ 'tag' ] . '">' . $ds[ 'name' ] . '</option>';
-}
 
 if (isset($_GET[ 'action' ])) {
     $action = $_GET[ 'action' ];
@@ -233,40 +31,235 @@ if (isset($_GET[ 'action' ])) {
     $action = "";
 }
 
-if ($action == "new") {
+$_language->readModule('demos');
+
+$title_demos = $GLOBALS["_template"]->replaceTemplate("title_demos", array());
+echo $title_demos;
+
+if (isset($_POST[ 'save' ])) {
+    if (isfileadmin($userID)) {
+        $_language->readModule('formvalidation', true);
+
+        $demo = new \webspell\HttpUpload('demo');
+
+        $game = $_POST[ 'game' ];
+        $clanname1 = $_POST[ 'clanname1' ];
+        $clanname2 = $_POST[ 'clanname2' ];
+        $clan1 = $_POST[ 'clan1' ];
+        $clan2 = $_POST[ 'clan2' ];
+        $hp1 = $_POST[ 'hp1' ];
+        $hp2 = $_POST[ 'hp2' ];
+        $country1 = $_POST[ 'country1' ];
+        $country2 = $_POST[ 'country2' ];
+        $league = $_POST[ 'league' ];
+        $leaguehp = $_POST[ 'leaguehp' ];
+        $maps = $_POST[ 'maps' ];
+        $player = $_POST[ 'player' ];
+        $comments = $_POST[ 'comments' ];
+        $date = strtotime($_POST[ 'date' ]);
+        $link = $_POST[ 'link' ];
+
+        $filepath = "./demos/";
+
+        $error = array();
+
+        $file = null;
+
+        if ($demo->hasFile()) {
+            if ($demo->hasError() === false) {
+                $new_name = $filepath . $demo->getFileName();
+                if ($demo->saveAs($new_name) === false) {
+                    $error[ ] = $_language->module[ 'file_already_exists' ];
+                } else {
+                    @chmod($new_name, $new_chmod);
+                    $file = $demo[ 'name' ];
+                }
+            } else {
+                $error[ ] = $demo->translateError();
+            }
+        } else {
+            if ($link != "http://") {
+                $file = $link;
+            }
+        }
+
+        if (count($error)) {
+            echo generateErrorBoxFromArray($_language->module[ 'errors_there' ], $error);
+        } else {
+            safe_query(
+                "INSERT INTO `" . PREFIX . "demos` (
+                    `date`,
+                    `game`,
+                    `clan1`,
+                    `clan2`,
+                    `clantag1`,
+                    `clantag2`,
+                    `url1`,
+                    `url2`,
+                    `country1`,
+                    `country2`,
+                    `league`,
+                    `leaguehp`,
+                    `maps`,
+                    `player`,
+                    `file`,
+                    `downloads`,
+                    `comments`
+                )
+                VALUES (
+                    '$date',
+                    '$game',
+                    '$clanname1',
+                    '$clanname2',
+                    '$clan1',
+                    '$clan2',
+                    '$hp1',
+                    '$hp2',
+                    '$country1',
+                    '$country2',
+                    '$league',
+                    '$leaguehp',
+                    '$maps',
+                    '$player',
+                    '$file',
+                    '0',
+                    '$comments'
+                )"
+            );
+
+            $id = mysqli_insert_id($_database);
+            $message = generateAlert($_language->module[ 'successful' ], 'alert-success');
+
+            redirect("index.php?site=demos&action=showdemo&demoID=" . $id, $message);
+        }
+    } else {
+        echo generateErrorBox($_language->module[ 'no_access' ]);
+    }
+} elseif (isset($_POST[ 'saveedit' ])) {
+    if (isfileadmin($userID)) {
+        $_language->readModule('formvalidation', true);
+        $demo = new \webspell\HttpUpload('demo');
+
+        $demoID = (int)$_POST[ 'demoID' ];
+        $game = $_POST[ 'game' ];
+        $clanname1 = $_POST[ 'clanname1' ];
+        $clanname2 = $_POST[ 'clanname2' ];
+        $clan1 = $_POST[ 'clan1' ];
+        $clan2 = $_POST[ 'clan2' ];
+        $hp1 = $_POST[ 'hp1' ];
+        $hp2 = $_POST[ 'hp2' ];
+        $country1 = $_POST[ 'country1' ];
+        $country2 = $_POST[ 'country2' ];
+        $league = $_POST[ 'league' ];
+        $leaguehp = $_POST[ 'leaguehp' ];
+        $maps = $_POST[ 'maps' ];
+        $player = $_POST[ 'player' ];
+        $comments = $_POST[ 'comments' ];
+        $link = $_POST[ 'link' ];
+        $date = strtotime($_POST[ 'date' ]);
+
+        $filepath = "./demos/";
+
+        $error = array();
+
+        $file = null;
+
+        if ($demo->hasFile()) {
+            if ($demo->hasError() === false) {
+                $new_name = $filepath . $demo->getFileName();
+                if ($demo->saveAs($new_name) === false) {
+                    $error[ ] = $_language->module[ 'file_already_exists' ];
+                } else {
+                    @chmod($new_name, $new_chmod);
+                    $file = $demo->getFileName();
+                }
+            } else {
+                $error[ ] = $demo->translateError();
+            }
+        } else {
+            if ($link != "http://") {
+                $file = $link;
+            }
+        }
+
+        if (count($error)) {
+            echo generateErrorBoxFromArray($_language->module[ 'errors_there' ], $error);
+        } else {
+            if (isset($file)) {
+                $mysql_file = "file='" . $file . "',";
+            } else {
+                $mysql_file = "";
+            }
+
+            safe_query(
+                "UPDATE
+                    `" . PREFIX . "demos`
+                SET
+                    date='$date',
+                    game='$game',
+                    clan1='$clanname1',
+                    clan2='$clanname2',
+                    clantag1='$clan1',
+                    clantag2='$clan2',
+                    url1='$hp1',
+                    url2='$hp2',
+                    country1='$country1',
+                    country2='$country2',
+                    league='$league',
+                    leaguehp='$leaguehp',
+                    maps='$maps',
+                    player='$player',
+                    " . $mysql_file . "
+                    comments='$comments'
+                WHERE
+                    demoID='" . $demoID . "'"
+            );
+            $message = generateAlert($_language->module[ 'successful' ], 'alert-success');
+            redirect("index.php?site=demos&action=showdemo&demoID=" . $demoID, $message);
+        }
+    } else {
+        echo generateErrorBox($_language->module[ 'no_access' ]);
+    }
+} elseif ($action == "delete") {
+    if (isfileadmin($userID)) {
+        $demoID = (int)$_GET[ 'demoID' ];
+        $filepath = "./demos/";
+        $ergebnis = safe_query("SELECT * FROM " . PREFIX . "demos WHERE demoID = '" . $demoID . "'");
+        $ds = mysqli_fetch_array($ergebnis);
+        if (file_exists($filepath . $ds[ 'file' ])) {
+            @unlink($filepath . $ds[ 'file' ]);
+        }
+
+        safe_query("DELETE FROM `" . PREFIX . "demos` WHERE `demoID` = '" . $demoID . "'");
+        safe_query("DELETE FROM `" . PREFIX . "comments` WHERE `parentID` = '" . $demoID . "' AND `type` = 'de'");
+
+        $message = generateAlert($_language->module[ 'successful' ], 'alert-success');
+        redirect("index.php?site=demos", $message);
+    } else {
+        echo generateErrorBox($_language->module[ 'no_access' ]);
+    }
+} elseif ($action == "new") {
     if (isfileadmin($userID)) {
         $countries = getcountries();
+        $games = getGamesAsOptionList();
         $data_array = array();
         $data_array['$games'] = $games;
         $data_array['$countries'] = $countries;
         $demo_new = $GLOBALS["_template"]->replaceTemplate("demo_new", $data_array);
         echo $demo_new;
     } else {
-        redirect('index.php?site=demos', $_language->module[ 'no_access' ]);
+        redirect('index.php?site=demos', generateErrorBox($_language->module[ 'no_access' ]));
     }
 } elseif ($action == "edit") {
-    $demoID = $_GET[ 'demoID' ];
+    $demoID = (int)$_GET[ 'demoID' ];
     if (isfileadmin($userID)) {
-        $ds = mysqli_fetch_array(
-            safe_query(
-                "SELECT * FROM `" . PREFIX . "demos` WHERE `demoID` = '" . (int)$demoID."'"
-            )
-        );
+        $ds = mysqli_fetch_array(safe_query("SELECT * FROM `" . PREFIX . "demos` WHERE `demoID` = '" . $demoID ."'"));
         $date = date("Y-m-d", $ds[ 'date' ]);
-        $games = str_replace(' selected="selected"', '', $games);
-        $games =
-            str_replace('value="' . $ds[ 'game' ] . '"', 'value="' . $ds[ 'game' ] . '" selected="selected"', $games);
-        $countries = getcountries();
-        $country1 = str_replace(
-            'value="' . $ds[ 'country1' ] . '"',
-            'value="' . $ds[ 'country1' ] . '" selected="selected"',
-            $countries
-        );
-        $country2 = str_replace(
-            'value="' . $ds[ 'country2' ] . '"',
-            'value="' . $ds[ 'country2' ] . '" selected="selected"',
-            $countries
-        );
+        $games = getGamesAsOptionList($ds[ 'game' ]);
+
+        $country1 = getcountries($ds[ 'country1' ]);
+        $country2 = getcountries($ds[ 'country2' ]);
+
         $clanname1 = htmlspecialchars($ds[ 'clan1' ]);
         $clanname2 = htmlspecialchars($ds[ 'clan2' ]);
         $clan1 = htmlspecialchars($ds[ 'clantag1' ]);
@@ -314,18 +307,18 @@ if ($action == "new") {
         $demo_edit = $GLOBALS["_template"]->replaceTemplate("demo_edit", $data_array);
         echo $demo_edit;
     } else {
-        redirect('index.php?site=demos', $_language->module[ 'no_access' ]);
+        redirect('index.php?site=demos', generateErrorBox($_language->module[ 'no_access' ]));
     }
 } elseif ($action == "showdemo") {
     $demoID = $_GET[ 'demoID' ];
     if (isfileadmin($userID)) {
         echo
-            '<a href="index.php?site=demos&amp;action=new" class="btn btn-danger">' .
-                $_language->module[ 'new_demo' ] . '</a>';
+            '<a href="index.php?site=demos&amp;action=new" class="btn btn-danger">' . $_language->module[ 'new_demo' ] .
+            '</a>';
     }
     echo '<a href="index.php?site=demos" class="btn btn-primary">' . $_language->module[ 'all_demos' ] . '</a><br><br>';
 
-    $result = safe_query("SELECT * FROM `" . PREFIX . "demos` WHERE `demoID` = '" . (int)$demoID."'");
+    $result = safe_query("SELECT * FROM `" . PREFIX . "demos` WHERE `demoID` = '" . (int)$demoID . "'");
     $ds = mysqli_fetch_array($result);
     $date = getformatdate($ds[ 'date' ]);
     $league = '<a href="' . $ds[ 'leaguehp' ] . '" target="_blank">' . $ds[ 'league' ] . '</a>';
@@ -335,7 +328,8 @@ if ($action == "new") {
     $country2 = "[flag]" . $ds[ 'country2' ] . "[/flag]";
     $country2 = flags($country2);
     $clan2 = $country2 . ' <a href="' . $ds[ 'url2' ] . '" target="_blank">' . $ds[ 'clan2' ] . '</a>';
-    $game = '<img src="images/games/' . $ds[ 'game' ] . '.gif" alt=""> ' . $ds[ 'game' ];
+    $game = '<img src="images/games/' . $ds[ 'game' ] . '.gif" alt=""> ' .
+        getgamename($ds[ 'game' ]);
 
     $clicks = $ds[ 'downloads' ];
     $player = $ds[ 'player' ];
@@ -352,7 +346,7 @@ if ($action == "new") {
 
     if ($loggedin) {
         $download = '<a href="download.php?demoID=' . $ds[ 'demoID' ] .
-            '" class="btn btn-lg btn-success"><span class="glyphicon glyphicon-download"></span> ' .
+            '" class="btn btn-lg btn-success"><span class="icon-download icon-large"></span> ' .
             $_language->module[ 'download_now' ] . '</a>';
 
         $getdemos = safe_query("SELECT demos FROM " . PREFIX . "user WHERE userID='$userID'");
@@ -389,8 +383,8 @@ if ($action == "new") {
                             </select>
 
                             <span class="input-group-btn">
-                                <input type="submit" name="Submit" value="' . $_language->module[ 'rate' ] .
-                                '" class="btn btn-primary">
+                                <input type="submit" name="Submit"
+value="' . $_language->module[ 'rate' ] . '" class="btn btn-primary">
                             </span>
                         </div>
                         <input type="hidden" name="userID" value="' . $userID . '">
@@ -404,12 +398,11 @@ if ($action == "new") {
 
     $adminaction = "";
     if (isfileadmin($userID)) {
-        $adminaction =
-            '<a href="index.php?site=demos&amp;action=edit&amp;demoID=' . $ds[ 'demoID' ] .
-                '" class="btn btn-danger">' . $_language->module[ 'edit' ] . '</a>
+        $adminaction = '<a href="index.php?site=demos&amp;action=edit&amp;demoID=' . $ds[ 'demoID' ] .
+            '" class="btn btn-danger">' . $_language->module[ 'edit' ] . '</a>
             <input type="button" onclick="MM_confirm(
                     \'really delete this demo?\',
-                    \'demos.php?delete=true&amp;demoID=' . $ds[ 'demoID' ] . '\'
+                    \'index.php?site=demos&amp;action=delete&amp;demoID=' . $ds[ 'demoID' ] . '\'
                 )" value="' . $_language->module[ 'delete' ] . '" class="btn btn-danger">';
     }
 
@@ -445,8 +438,8 @@ if ($action == "new") {
     }
     $sort = "date";
     if (isset($_GET[ 'sort' ])) {
-        if (($_GET[ 'sort' ] == 'date') || ($_GET[ 'sort' ] == 'game') || ($_GET[ 'sort' ] == 'league')
-            || ($_GET[ 'sort' ] == 'rating') || ($_GET[ 'sort' ] == 'downloads')
+        if (($_GET[ 'sort' ] == 'date') || ($_GET[ 'sort' ] == 'game') || ($_GET[ 'sort' ] == 'league') ||
+            ($_GET[ 'sort' ] == 'rating') || ($_GET[ 'sort' ] == 'downloads')
         ) {
             $sort = $_GET[ 'sort' ];
         }
@@ -461,8 +454,8 @@ if ($action == "new") {
 
     if (isfileadmin($userID)) {
         echo
-            '<a href="index.php?site=demos&amp;action=new" class="btn btn-danger">' .
-            $_language->module[ 'new_demo' ] . '</a><br><br>';
+            '<a href="index.php?site=demos&amp;action=new" class="btn btn-danger">' . $_language->module[ 'new_demo' ] .
+            '</a><br><br>';
     }
 
     $alle = safe_query("SELECT demoID FROM " . PREFIX . "demos WHERE game='$game'");
@@ -473,21 +466,21 @@ if ($action == "new") {
     $pages = ceil($gesamt / $max);
 
     if ($pages > 1) {
-        $page_link =
-            makepagelink(
-                "index.php?site=demos&amp;action=showgame&amp;game=$game&amp;sort=$sort&amp;type=$type",
-                $page,
-                $pages
-            );
+        $page_link = makepagelink(
+            "index.php?site=demos&amp;action=showgame&amp;game=$game&amp;sort=$sort&amp;type=$type",
+            $page,
+            $pages
+        );
     } else {
         $page_link = "";
     }
 
     if ($page == "1") {
-        $ergebnis =
-            safe_query(
-                "SELECT * FROM `" . PREFIX . "demos` WHERE `game` = '$game' ORDER BY $sort $type LIMIT 0, " . (int)$max
-            );
+        $ergebnis = safe_query(
+            "SELECT * FROM `" . PREFIX . "demos`
+            WHERE `game` = '$game'
+            ORDER BY $sort $type LIMIT 0, " .(int)$max
+        );
         if ($type == "DESC") {
             $n = $gesamt;
         } else {
@@ -495,9 +488,8 @@ if ($action == "new") {
         }
     } else {
         $start = $page * $max - $max;
-        $ergebnis =
-            safe_query(
-                "SELECT
+        $ergebnis = safe_query(
+            "SELECT
                     *
                 FROM
                     `" . PREFIX . "demos`
@@ -507,7 +499,7 @@ if ($action == "new") {
                     $sort $type
                 LIMIT
                     $start, " . (int)$max
-            );
+        );
         if ($type == "DESC") {
             $n = ($gesamt) - $page * $max + $max;
         } else {
@@ -577,11 +569,11 @@ if ($action == "new") {
         if ($type == "ASC") {
             echo '<a href="index.php?site=demos&amp;action=showgame&amp;game=' . $game . '&amp;page=' . $page .
                 '&amp;sort=' . $sort . '&amp;type=DESC">' . $_language->module[ 'sort' ] .
-                ':</a> <span class="glyphicon glyphicon-chevron-down"></span>&nbsp;&nbsp;&nbsp;';
+                ':</a> <img src="images/icons/asc.gif" width="9" height="7" alt="">&nbsp;&nbsp;&nbsp;';
         } else {
             echo '<a href="index.php?site=demos&amp;action=showgame&amp;game=' . $game . '&amp;page=' . $page .
                 '&amp;sort=' . $sort . '&amp;type=ASC">' . $_language->module[ 'sort' ] .
-                ':</a> <span class="glyphicon glyphicon-chevron-up"></span>&nbsp;&nbsp;&nbsp;';
+                ':</a> <img src="images/icons/desc.gif" width="9" height="7" alt="">&nbsp;&nbsp;&nbsp;';
         }
 
         echo $page_link;
@@ -611,13 +603,6 @@ if ($action == "new") {
         echo $demos_head;
         $n = 1;
         while ($ds = mysqli_fetch_array($ergebnis)) {
-            if ($n % 2) {
-                $bg1 = BG_1;
-                $bg2 = BG_2;
-            } else {
-                $bg1 = BG_3;
-                $bg2 = BG_4;
-            }
             $date = getformatdate($ds[ 'date' ]);
             $league = '<a href="' . $ds[ 'leaguehp' ] . '" target="_blank">' . $ds[ 'league' ] . '</a>';
             $country1 = "[flag]" . $ds[ 'country1' ] . "[/flag]";
@@ -646,7 +631,7 @@ if ($action == "new") {
             $data_array['$league'] = $league;
             $data_array['$ratingpic'] = $ratingpic;
             $data_array['$clicks'] = $clicks;
-            $data_array['$demoID'] = $ds['demoID'];
+            $data_array['$demoID'] = $demoID;
             $demos_content = $GLOBALS["_template"]->replaceTemplate("demos_content", $data_array);
             echo $demos_content;
             unset($ratingpic);
@@ -684,8 +669,8 @@ if ($action == "new") {
 
     if (isfileadmin($userID)) {
         echo
-            '<a href="index.php?site=demos&amp;action=new" class="btn btn-danger">' .
-                $_language->module[ 'new_demo' ] . '</a><br><br>';
+            '<a href="index.php?site=demos&amp;action=new" class="btn btn-danger">' . $_language->module[ 'new_demo' ] .
+            '</a><br><br>';
     }
     $alle = safe_query("SELECT `demoID` FROM `" . PREFIX . "demos`");
     $gesamt = mysqli_num_rows($alle);
@@ -709,7 +694,7 @@ if ($action == "new") {
         }
     } else {
         $start = $page * $max - $max;
-        $ergebnis = safe_query("SELECT * FROM `" . PREFIX . "demos` ORDER BY $sort $type LIMIT $start, ". (int)$max);
+        $ergebnis = safe_query("SELECT * FROM `" . PREFIX . "demos` ORDER BY $sort $type LIMIT $start, " . (int)$max);
         if ($type == "DESC") {
             $n = ($gesamt) - $page * $max + $max;
         } else {
@@ -783,11 +768,11 @@ if ($action == "new") {
         if ($type == "ASC") {
             echo '<a href="index.php?site=demos&amp;page=' . $page . '&amp;sort=' . $sort . '&amp;type=DESC">' .
                 $_language->module[ 'sort' ] .
-                ':</a> <span class="glyphicon glyphicon-chevron-down"></span>&nbsp;&nbsp;&nbsp;';
+                ':</a> <img src="images/icons/asc.gif" width="9" height="7" alt="">&nbsp;&nbsp;&nbsp;';
         } else {
             echo '<a href="index.php?site=demos&amp;page=' . $page . '&amp;sort=' . $sort . '&amp;type=ASC">' .
                 $_language->module[ 'sort' ] .
-                ':</a> <span class="glyphicon glyphicon-chevron-up"></span>&nbsp;&nbsp;&nbsp;';
+                ':</a> <img src="images/icons/desc.gif" width="9" height="7" alt="">&nbsp;&nbsp;&nbsp;';
         }
 
         echo $page_link;
@@ -819,13 +804,6 @@ if ($action == "new") {
         echo $demos_head;
         $n = 1;
         while ($ds = mysqli_fetch_array($ergebnis)) {
-            if ($n % 2) {
-                $bg1 = BG_1;
-                $bg2 = BG_2;
-            } else {
-                $bg1 = BG_3;
-                $bg2 = BG_4;
-            }
             $date = getformatdate($ds[ 'date' ]);
             $league = '<a href="' . $ds[ 'leaguehp' ] . '" target="_blank">' . $ds[ 'league' ] . '</a>';
             $country1 = "[flag]" . $ds[ 'country1' ] . "[/flag]";
@@ -855,7 +833,7 @@ if ($action == "new") {
             $data_array['$league'] = $league;
             $data_array['$ratingpic'] = $ratingpic;
             $data_array['$clicks'] = $clicks;
-            $data_array['$demoID'] = $ds['demoID'];
+            $data_array['$demoID'] = $demoID;
             $demos_content = $GLOBALS["_template"]->replaceTemplate("demos_content", $data_array);
             echo $demos_content;
             unset($ratingpic);

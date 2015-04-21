@@ -24,26 +24,34 @@
 #                                                                        #
 ##########################################################################
 */
+/**
+ * Online Language Editor Ukraine language file for webSPELL 4.2.2
+ * @author Stefan Giesecke <webmaster@giesi.com>
+ * @copyright Copyright (c) 2010, Stefan Giesecke
+ * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
+ */
 
 $language_array = Array(
 
 /* do not edit above this line */
 
-	'email_failed'=>'There was a problem while sending mail. Please contact the webmaster.',
-	'email_subject'=>'Your account for %pagetitle%',
-	'email_text'=>'Your Account for %pagetitle%
-<p>ATTENTION your password has been changed</p>
-<p>your username: %username%<br>
-your new password: %new_password%</p>
-<p>have fun on our page</p>
-%homepage_url%',
-	'get_password'=>'get password',
-	'lost_password'=>'lost password',
-	'no_mail_given'=>'You have not entered any mail adress.',
-	'no_user_found'=>'no user found!',
-	'successful'=>'Your account has been found<br><br>
-    You will get an e-mail with your account data in a few seconds.<br><br>
-    &#8226; <a href="index.php?site=login">login</a>',
-	'your_email'=>'Your E-Mail'
+  'email_failed'=>'Виникла проблема при відправці повідомлення. Ласка контактуйте з веб адміністратором.',
+  'email_subject'=>'Ваш профіль для %pagetitle%',
+  'email_text'=>'Ваш профіль для %pageTitle%
+УВАГА ваш пароль був змінений!
+
+Ім\'я користувача: %username%
+новий пароль: %new_password%
+
+веселитися на нашій сторінці
+% Homepage_url%',
+  'get_password'=>'Отримати пароль',
+  'lost_password'=>'Забули пароль',
+  'no_mail_given'=>'Ви не ввели ніякої e-mail адреси.',
+  'no_user_found'=>'Користувач не знайден!',
+  'successful'=>'Ваш профіль знайдений<br><br>
+    Ви отримаєте e-mail з даними свого профілю через кілька секунд.<br> <br> 
+    &#8226; <a href="index.php?site=login">Логін</a>',
+  'your_email'=>'Ваш E-Mail'
 );
 
