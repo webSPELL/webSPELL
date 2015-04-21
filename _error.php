@@ -36,13 +36,13 @@ function generateCallTrace()
     array_pop($trace);
     $basepath = realpath(dirname(__FILE__)).DIRECTORY_SEPARATOR;
     $result = array();
-    for($i=0; $i < count($trace); $i++){
+    for ($i=0; $i < count($trace); $i++) {
         $line  = str_replace($basepath, '', $trace[$i]['file']);
         $line .= '('.$trace[$i]['line']."): ";
         $line .= "<b>".$trace[$i]['function']."</b>(";
         $params = array();
-        foreach($trace[$i]['args'] as $param){
-            $params[] = htmlspecialchars(var_export(str_replace($basepath, '', $param),true));
+        foreach ($trace[$i]['args'] as $param) {
+            $params[] = htmlspecialchars(var_export(str_replace($basepath, '', $param), true));
         }
         $line .= implode(", ", $params);
         $line .= ")";
