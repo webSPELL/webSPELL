@@ -114,3 +114,52 @@ function generateComponents($components, $type)
 
     return $return;
 }
+
+function generateFlags($type)
+{
+    $flags = '';
+    $filepath = "./images/flags/";
+    unset($files);
+    if ($dh = opendir($filepath)) {
+        while ($file = readdir($dh)) {
+            if (preg_match("/\.gif/si", $file)) {
+                $files[] = $file;
+            }
+        }
+        closedir($dh);
+    }
+
+    if (is_array($files)) {
+        sort($files);
+        if ($type == 'list') {
+            $flags = '<ul class="list-unstyled">';
+            foreach ($files as $file) {
+                $flag = explode(".", $file);
+                $flags .= '<li><img src="images/flags/' . $file . '" alt="'. $flag[0] . '"></li><br/>';
+            }
+            $flags .= '/<ul>';
+        } elseif ($type =='dropdown') {
+            $flags = '
+<div class="btn-group">
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+    Flags <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" role="menu">';
+            foreach ($files as $file) {
+                $flag = explode(".", $file);
+                $flags .= '<li><a href="#"><img src="images/flags/' . $file . '" alt="'. $flag[0] . '"></a></li>';
+            }
+            $flags .= '  </ul>
+</div>';
+        } elseif ($type =='select') {
+            $flags = '<select class="form-control">';
+            foreach ($files as $file) {
+                $flag = explode(".", $file);
+                $flags .= '<option><img src="images/flags/' . $file . '" alt="'. $flag[0] . '"></option>';
+            }
+            $flags .= '</select>';
+        }
+    }
+
+    return $flags;
+}
