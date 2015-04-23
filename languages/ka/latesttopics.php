@@ -25,14 +25,13 @@
 ##########################################################################
 */
 
-
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'board'=>'ფორუმი',
-  'last_post'=>'ბოლო პოსტი',
-  'reply'=>'პასუხი',
-  'replies'=>'პასუხები'
+    'board' => 'ფორუმი',
+    'last_post' => 'ბოლო პოსტი',
+    'replies' => 'პასუხები',
+    'reply' => 'პასუხი'
 );
 

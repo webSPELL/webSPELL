@@ -24,24 +24,18 @@
 #                                                                        #
 ##########################################################################
 */
-/**
- * Online Language Editor Luxemburg language file for webSPELL 4.2.2
- * @author Stefan Giesecke <webmaster@giesi.com>
- * @copyright Copyright (c) 2010, Stefan Giesecke
- * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
- */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'add_to_message'=>'Bei d\'Noriicht bäizufügen',
-  'close_window'=>'Fënster zoumaachen',
-  'delete'=>'Läschen',
-  'existing_files'=>'Existéierend Dateien',
-  'file_upload'=>'Datei eroplueden',
-  'invalid_access'=>'Ongülteger Zougrëff!',
-  'no_access'=>'Keen Zougrëff!',
-  'upload'=>'Eroplueden'
+    'add_to_message' => 'Bei d\'Noriicht bäizufügen',
+    'close_window' => 'Fënster zoumaachen',
+    'delete' => 'Läschen',
+    'existing_files' => 'Existéierend Dateien',
+    'file_upload' => 'Datei eroplueden',
+    'invalid_access' => 'Ongülteger Zougrëff!',
+    'no_access' => 'Keen Zougrëff!',
+    'upload' => 'Eroplueden'
 );
 

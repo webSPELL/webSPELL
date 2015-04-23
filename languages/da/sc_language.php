@@ -25,11 +25,11 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'save'=>'gem',
-	'no_session'=>'Venligst sikre dig at din browser tillader brug af cookies, og pr�v derefter igen at skifte sprog.'
+    'no_session' => 'Venligst sikre dig at din browser tillader brug af cookies, og pr�v derefter igen at skifte sprog.',
+    'save' => 'gem'
 );
 

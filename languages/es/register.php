@@ -25,24 +25,24 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'activation_successful'=>'La activación de tu cuenta fue satisfactoria.<br>Ahora puedes inicar sesión.',
-	'back'=>'volver',
-	'enter_nickname'=>'Porfavor inserta apodo.',
-	'enter_password'=>'Porfavor inserta contraseña.',
-	'enter_username'=>'Porfavor inserta nombre de usuario.',
-	'errors_there'=>'Algunos errores ocurrieron:',
-	'for_login'=>'solo para conectar',
-	'invalid_mail'=>'Has insertado un e-mail no válido.',
-	'mail'=>'E-Mail',
-	'mail_activation_successful'=>'The activation of your email address was successfull.',
-	'mail_failed'=>'El código de activación no pudo ser enviado, porfavor, informa al webmaster de esto.',
-	'mail_inuse'=>'Este dirección mail ya está en uso.',
-	'mail_subject'=>'Mail de activación de cuenta para %homepage_url%',
-	'mail_text'=>'Hola %username%!
+    'activation_successful' => 'La activación de tu cuenta fue satisfactoria.<br>Ahora puedes inicar sesión.',
+    'back' => 'volver',
+    'enter_nickname' => 'Porfavor inserta apodo.',
+    'enter_password' => 'Porfavor inserta contraseña.',
+    'enter_username' => 'Porfavor inserta nombre de usuario.',
+    'errors_there' => 'Algunos errores ocurrieron:',
+    'for_login' => 'solo para conectar',
+    'invalid_mail' => 'Has insertado un e-mail no válido.',
+    'mail' => 'E-Mail',
+    'mail_activation_successful' => 'The activation of your email address was successfull.',
+    'mail_failed' => 'El código de activación no pudo ser enviado, porfavor, informa al webmaster de esto.',
+    'mail_inuse' => 'Este dirección mail ya está en uso.',
+    'mail_subject' => 'Mail de activación de cuenta para %homepage_url%',
+    'mail_text' => 'Hola %username%!
 
 Tu registro en %pagetitle% (%homepage_url%) fue satisfactorio. Los datos de tu cuenta:
 
@@ -53,21 +53,21 @@ Para finalizar el registro debes de activar la cuenta haciendo clic en el siguie
 
 Gracias por tu registro
 %pagetitle% - %homepage_url%',
-	'nickname'=>'Apodo',
-	'nickname_inuse'=>'Apodo ya en uso.',
-	'no_register_when_loggedin'=>'You allready have an account at %pagename%',
-	'password'=>'Contraseña',
-	'profile_info'=>'Info. Registro',
-	'register_now'=>'Registrar ahora!',
-	'register_successful'=>'Tu registro fue satisfactorio. Recibiras un email el enlace de activación de la cuenta.',
-	'registration'=>'registro',
-	'repeat'=>'Repite contraseña',
-	'repeat_invalid'=>'Las contraseñas no coinciden.',
-	'security_code'=>'Código de seguridad',
-	'username'=>'Nombre usuario',
-	'username_inuse'=>'Nombre usuario ya en uso.',
-	'username_toolong'=>'El nombre de usuario es demasiado largo (max. 30 characters).',
-	'wrong_activationkey'=>'Tu código de activación es incorrecto!',
-	'wrong_securitycode'=>'El código de seguridad es incorrecto!'
+    'nickname' => 'Apodo',
+    'nickname_inuse' => 'Apodo ya en uso.',
+    'no_register_when_loggedin' => 'You allready have an account at %pagename%',
+    'password' => 'Contraseña',
+    'profile_info' => 'Info. Registro',
+    'register_now' => 'Registrar ahora!',
+    'register_successful' => 'Tu registro fue satisfactorio. Recibiras un email el enlace de activación de la cuenta.',
+    'registration' => 'registro',
+    'repeat' => 'Repite contraseña',
+    'repeat_invalid' => 'Las contraseñas no coinciden.',
+    'security_code' => 'Código de seguridad',
+    'username' => 'Nombre usuario',
+    'username_inuse' => 'Nombre usuario ya en uso.',
+    'username_toolong' => 'El nombre de usuario es demasiado largo (max. 30 characters).',
+    'wrong_activationkey' => 'Tu código de activación es incorrecto!',
+    'wrong_securitycode' => 'El código de seguridad es incorrecto!'
 );
 

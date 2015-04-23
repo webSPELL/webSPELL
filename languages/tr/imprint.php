@@ -24,22 +24,16 @@
 #                                                                        #
 ##########################################################################
 */
-/**
- * Online Language Editor Turkey language file for webSPELL 4.2.2
- * @author Stefan Giesecke <webmaster@giesi.com>
- * @copyright Copyright (c) 2010, Stefan Giesecke
- * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
- */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'admins'=>'Yönetici(ler):',
-	'coding'=>'Programlama',
-	'coding_info'=>'Bu site kullanıyor <a href="http://www.webspell.org" target="_blank">webSPELL Ücretsiz İçerik Yönetim Sistemi (version: $version)</a>. Bu PHP4/5 ve MySQL tabanlı ve altında çalışıyor <a href="http://www.fsf.org/licensing/licenses/gpl.html" target="_blank">GNU GENERAL PUBLIC LICENSE</a>.<br>Bu konumda ücretsiz olarak alabilirsiniz: <a href="http://www.webspell.org" target="_blank">www.webSPELL.org</a>',
-	'disclaimer'=>'Feragat',
-	'disclaimer_text'=>'<p><strong>1. İçerik</strong><br>
+    'admins' => 'Yönetici(ler):',
+    'coding' => 'Programlama',
+    'coding_info' => 'Bu site kullanıyor <a href="http://www.webspell.org" target="_blank">webSPELL Ücretsiz İçerik Yönetim Sistemi (version: $version)</a>. Bu PHP4/5 ve MySQL tabanlı ve altında çalışıyor <a href="http://www.fsf.org/licensing/licenses/gpl.html" target="_blank">GNU GENERAL PUBLIC LICENSE</a>.<br>Bu konumda ücretsiz olarak alabilirsiniz: <a href="http://www.webspell.org" target="_blank">www.webSPELL.org</a>',
+    'disclaimer' => 'Feragat',
+    'disclaimer_text' => '<p><strong>1. İçerik</strong><br>
 	Yazar, sunulanbilgileringüncelliği, doğruluğu , bütünlüğü ve kalitesi sorumlu olmamakhakkını saklı tutar . Eksik veya yanlış her türlü bilgi de dahil olmak üzere sağlanan bilgilerinkullanımından kaynaklanan hasar tazminat talepleri, bu nedenle reddedilecektir.<br>
 	Bütün teklifler bağlayıcı ve yükümlülüğü olmaksızın vardır. Tüm teklifler ve bilgiler dahil olmaksayfaları veyatam yayının parçaları ayrı ayrı duyuru olmadan, genişletilebilir, değiştirilebilir veya kısmen veya tamamenyazarı tarafından silinmiş olabilir.</p>
 	<p><strong>2. Göndermeler ve Linkler</strong><br>
@@ -50,9 +44,9 @@ $language_array = Array(
 	Kişisel ya da kurumsal veri (e-posta adresi, isim, adresleri) girişi içinfırsat verilirse, bu verileringirdi gönüllü gerçekleşir. Sunulan tüm hizmetlerinkullanımı ve ödeme izin verilir - ve eğer şimdiye kadar teknik olarak mümkün ve makul - herhangi bir kişisel veri belirtilmeksizin anonim veriler veya rumuzlar şartname altında. Pazarlama amaçlı basılı posta adreslerinin, telefon ve faks numaraları ve e-posta adreslerininkullanımı yasaktır, istenmeyen spam mesajları gönderiyor suçluların Cezalandırılacak.</p>
 	<p><strong>5. Bu reddi Hukuki geçerliliği</strong><br>
 	Bu yasal uyarı sevk edildiinternet yayınının bir parçası olarak görülmelidir. Bu ifadenin veya bölümlerinin yasal ya da doğru değilse, diğer parçalarıniçeriği veya geçerliliği bundan etkilenmeyecektir kalır.</p>',
-	'imprint'=>'Marka',
-	'mods'=>'Moderatör(ler):',
-	'responsible_persons'=>'sorumlu kişi',
-	'webmaster'=>'Webmaster:'
+    'imprint' => 'Marka',
+    'mods' => 'Moderatör(ler):',
+    'responsible_persons' => 'sorumlu kişi',
+    'webmaster' => 'Webmaster:'
 );
 

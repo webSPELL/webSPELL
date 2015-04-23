@@ -25,7 +25,7 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
@@ -47,7 +47,6 @@ $language_array = Array(
     'cpu' => 'Processore',
     'date_of_birth' => 'Data di nascita',
     'deactivated' => 'disattivato',
-    'delete' => 'delete',
     'delete_max_90_90' => 'cancellare (max 90/90)',
     'delete_max_230_210' => 'cancellare (max 230/210)',
     'e-mail' => 'E-Mail',
@@ -138,3 +137,4 @@ Grazie per il vostro interesse
     'you_have_to_username' => 'Hai bisogno di un nome utente!',
     'you_have_to_valid_email' => 'L*indirizzo e-mail non è corretto!'
 );
+

@@ -25,7 +25,7 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
@@ -41,7 +41,6 @@ $language_array = Array(
     'database_cl' => 'دیتابیس',
     'delete_file' => 'حذف فایل',
     'description' => 'شرح',
-    'dl' => 'DL',
     'download_now' => 'دانلود %filename% هم اکنون',
     'download_registered_only' => '!دانلود فقط برای اعضای سایت',
     'download_via_mirror' => 'دانلود از منابع دیگر',
@@ -105,3 +104,4 @@ $language_array = Array(
     'you_have_to_enter_file' => '!شما باید لینک فایل را وارد کنید',
     'you_have_to_enter_filename' => '!شما باید نام فایل را وارد کنید'
 );
+

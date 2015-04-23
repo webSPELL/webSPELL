@@ -25,18 +25,17 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'add_to_message'=>'Voeg toe aan bericht',
-  'close_window'=>'sluit venster',
-	'delete'=>'Verwijder',
-	'existing_files'=>'Bestaande bestanden',
-	'file_upload'=>'Upload bestanden',
-	'invalid_access'=>'Ongeldige toegang!',
-	'no_access'=>'Geen toegang!',
-	'upload'=>'Upload'
-
+    'add_to_message' => 'Voeg toe aan bericht',
+    'close_window' => 'sluit venster',
+    'delete' => 'Verwijder',
+    'existing_files' => 'Bestaande bestanden',
+    'file_upload' => 'Upload bestanden',
+    'invalid_access' => 'Ongeldige toegang!',
+    'no_access' => 'Geen toegang!',
+    'upload' => 'Upload'
 );
 

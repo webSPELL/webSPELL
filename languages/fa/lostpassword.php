@@ -25,18 +25,18 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'email_failed'=>'.مشکل در ارسال میل. لطفا با ادمین تماس بگیرید',
-  'email_subject'=>'اکانت شما برای %pagetitle%',
-  'email_text'=>'اکانت شما برای %pagetitle%rnتوجه پسورد شما عوض شده استrnrnنام کاربری: %username%rnپسورد جدید: %new_password%rnrnبه وبلاگ خوش امدیدrn%homepage_url%',
-  'get_password'=>'پسورد را وارد کنید',
-  'lost_password'=>'پسورد را فراموش کردید',
-  'no_mail_given'=>'.شما ایمیل را وارد نکردید',
-  'no_user_found'=>'!کاربر یافت نشد',
-  'successful'=>'کاربر یافت شد<br><br>rn    .ایمیلی حاوی اطلاعات کاربری ارسال شد<br><br>rn    &#8226; <a href="index.php?site=login">ورود</a>',
-  'your_email'=>'ایمیل شما'
+    'email_failed' => '.مشکل در ارسال میل. لطفا با ادمین تماس بگیرید',
+    'email_subject' => 'اکانت شما برای %pagetitle%',
+    'email_text' => 'اکانت شما برای %pagetitle%rnتوجه پسورد شما عوض شده استrnrnنام کاربری: %username%rnپسورد جدید: %new_password%rnrnبه وبلاگ خوش امدیدrn%homepage_url%',
+    'get_password' => 'پسورد را وارد کنید',
+    'lost_password' => 'پسورد را فراموش کردید',
+    'no_mail_given' => '.شما ایمیل را وارد نکردید',
+    'no_user_found' => '!کاربر یافت نشد',
+    'successful' => 'کاربر یافت شد<br><br>rn    .ایمیلی حاوی اطلاعات کاربری ارسال شد<br><br>rn    &#8226; <a href="index.php?site=login">ورود</a>',
+    'your_email' => 'ایمیل شما'
 );
 

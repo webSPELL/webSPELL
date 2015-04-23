@@ -24,35 +24,29 @@
 #                                                                        #
 ##########################################################################
 */
-/**
- * Online Language Editor Slovenia language file for webSPELL 4.2.2
- * @author Stefan Giesecke <webmaster@giesi.com>
- * @copyright Copyright (c) 2010, Stefan Giesecke
- * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
- */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'award'=>'Nagrada',
-  'awards'=>'Nagrade',
-  'date'=>'Datum',
-  'delete'=>'Izbriši',
-  'edit'=>'Uredi',
-  'edit_award'=>'Uredi nagrado',
-  'enter_title'=>'Vnesite naslov!',
-  'enter_text'=>'Vnesite tekst',
-  'event'=>'Dogodek',
-  'homepage'=>'Domača stan',
-  'info'=>'Info',
-  'new_award'=>'Nova nagrada',
-  'no_access'=>'Nimate pristopa!',
-  'no_entries'=>'Ni vnosov',
-  'ranking'=>'Razvrstitev',
-  'save_award'=>'Shrani nagrado',
-  'sort'=>'Razvrsti',
-  'squad'=>'Ekipa',
-  'update_award'=>'Posodobi nagrade'
+    'award' => 'Nagrada',
+    'awards' => 'Nagrade',
+    'date' => 'Datum',
+    'delete' => 'Izbriši',
+    'edit' => 'Uredi',
+    'edit_award' => 'Uredi nagrado',
+    'enter_text' => 'Vnesite tekst',
+    'enter_title' => 'Vnesite naslov!',
+    'event' => 'Dogodek',
+    'homepage' => 'Domača stan',
+    'info' => 'Info',
+    'new_award' => 'Nova nagrada',
+    'no_access' => 'Nimate pristopa!',
+    'no_entries' => 'Ni vnosov',
+    'ranking' => 'Razvrstitev',
+    'save_award' => 'Shrani nagrado',
+    'sort' => 'Razvrsti',
+    'squad' => 'Ekipa',
+    'update_award' => 'Posodobi nagrade'
 );
 

@@ -25,24 +25,22 @@
 ##########################################################################
 */
 
-
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'admin'=>'administrator',
-  'buddy_list'=>'listă de prieteni',
-  'cash-box'=>'cutia cu bani',
-  'edit_account'=>'editează cont',
-  'galleries'=>'galerii',
-  'login'=>'loghează-te',
-  'logout'=>'ieşire',
-  'lost_password'=>'Ai uitat parola?',
-  'messenger'=>'messenger',
-  'n_a'=>'n/a',
-  'overview'=>'Prezentare generală',
-  'register_now'=>'Inregistrează-te acum',
-  'registered_users'=>'Utilizatiri inregistraţi',
-  'welcome_back'=>'Bine ai revenit'
+    'admin' => 'administrator',
+    'buddy_list' => 'listă de prieteni',
+    'cash-box' => 'cutia cu bani',
+    'edit_account' => 'editează cont',
+    'galleries' => 'galerii',
+    'login' => 'loghează-te',
+    'logout' => 'ieşire',
+    'lost_password' => 'Ai uitat parola?',
+    'messenger' => 'messenger',
+    'overview' => 'Prezentare generală',
+    'register_now' => 'Inregistrează-te acum',
+    'registered_users' => 'Utilizatiri inregistraţi',
+    'welcome_back' => 'Bine ai revenit'
 );
 

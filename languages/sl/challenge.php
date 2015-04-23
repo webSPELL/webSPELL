@@ -24,51 +24,45 @@
 #                                                                        #
 ##########################################################################
 */
-/**
- * Online Language Editor Slovenia language file for webSPELL 4.2.2
- * @author Stefan Giesecke <webmaster@giesi.com>
- * @copyright Copyright (c) 2010, Stefan Giesecke
- * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
- */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'back_to_form'=>'Nazaj na',
-  'challenge'=>'Izziv',
-  'challenge_from'=>'Izziv najden',
-  'challenge_message'=>'[b]Obstaja novi izziv![/b][BR][BR] Prosimo kliknite tukaj: [URL]index.php?site=challenge[/URL]',
-  'challenges'=>'Izzivi',
-  'country'=>'država',
-  'date'=>'datum',
-  'delete_challenge'=>'Izbriši izziv',
-  'email'=>'E-Mail',
-  'enter_clanname'=>'Vnesite ime klana.',
-  'enter_email'=>'Vnesite e-mail.',
-  'enter_league'=>'Vnesite ligo.',
-  'enter_map'=>'Vnesite mapo.',
-  'enter_server'=>'Vnesite server.',
-  'enter_url'=>'Vnesite stran.',
-  'entry_deleted'=>'Vnos izbrisan.',
-  'fight_us'=>'Izzovi nas!',
-  'homepage'=>'Website',
-  'info'=>'več informacij',
-  'insert_in_calendar'=>'Dodaj v kolendar',
-  'league'=>'liga',
-  'map'=>'mapa',
-  'message_title'=>'Fight us',
-  'no_access'=>'Ni dostopa!',
-  'no_entries'=>'Ni vnosa.',
-  'opponent'=>'Nasprotnik',
-  'problems'=>'Problemi',
-  'security_code'=>'varnostna koda',
-  'server'=>'server',
-  'sort'=>'Razvrsti:',
-  'squad'=>'ekipa',
-  'submit_challenge'=>'sprejemi izziv',
-  'thank_you'=>'Hvala za vašo zahtevo!<br>',
-  'time'=>'Čas',
-  'wrong_security_code'=>'Nepravilna varnostna koda.'
+    'back_to_form' => 'Nazaj na',
+    'challenge' => 'Izziv',
+    'challenge_from' => 'Izziv najden',
+    'challenge_message' => '[b]Obstaja novi izziv![/b][BR][BR] Prosimo kliknite tukaj: [URL]index.php?site=challenge[/URL]',
+    'challenges' => 'Izzivi',
+    'country' => 'država',
+    'date' => 'datum',
+    'delete_challenge' => 'Izbriši izziv',
+    'email' => 'E-Mail',
+    'enter_clanname' => 'Vnesite ime klana.',
+    'enter_email' => 'Vnesite e-mail.',
+    'enter_league' => 'Vnesite ligo.',
+    'enter_map' => 'Vnesite mapo.',
+    'enter_server' => 'Vnesite server.',
+    'enter_url' => 'Vnesite stran.',
+    'entry_deleted' => 'Vnos izbrisan.',
+    'fight_us' => 'Izzovi nas!',
+    'homepage' => 'Website',
+    'info' => 'več informacij',
+    'insert_in_calendar' => 'Dodaj v kolendar',
+    'league' => 'liga',
+    'map' => 'mapa',
+    'message_title' => 'Fight us',
+    'no_access' => 'Ni dostopa!',
+    'no_entries' => 'Ni vnosa.',
+    'opponent' => 'Nasprotnik',
+    'problems' => 'Problemi',
+    'security_code' => 'varnostna koda',
+    'server' => 'server',
+    'sort' => 'Razvrsti:',
+    'squad' => 'ekipa',
+    'submit_challenge' => 'sprejemi izziv',
+    'thank_you' => 'Hvala za vašo zahtevo!<br>',
+    'time' => 'Čas',
+    'wrong_security_code' => 'Nepravilna varnostna koda.'
 );
 

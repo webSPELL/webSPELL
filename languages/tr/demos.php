@@ -25,7 +25,7 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
@@ -75,6 +75,6 @@ $language_array = Array(
     'to_rate' => 'Bu demoya oy vermek için üye olmak ve giriş yapmanız gerekmetedir!',
     'update_demo' => 'Güncelleştirme demo',
     'user_comments' => 'Kullanıcı yorumlarını etkinleştir',
-    'visitor_comments' => 'Ziyaretçi yorumlarını etkinleştir',
-    'vs' => 'vs.'
+    'visitor_comments' => 'Ziyaretçi yorumlarını etkinleştir'
 );
+

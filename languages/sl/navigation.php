@@ -24,50 +24,44 @@
 #                                                                        #
 ##########################################################################
 */
-/**
- * Online Language Editor Slovenia language file for webSPELL 4.2.2
- * @author Stefan Giesecke <webmaster@giesi.com>
- * @copyright Copyright (c) 2010, Stefan Giesecke
- * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
- */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'about_us'=>'O nas',
-  'archives'=>'Arhiv',
-  'articles'=>'Članki',
-  'awards'=>'Nagrade',
-  'calendar'=>'Kolendar',
-  'clan'=>'Klan',
-  'community'=>'Skupnost',
-  'contact'=>'Kontakt',
-  'demos'=>'Demos',
-  'downloads'=>'Prenosi',
-  'faq'=>'Pogosta vprašanja',
-  'fight_us'=>'Izziv za boj',
-  'forums'=>'Forum',
-  'gallery'=>'Galerija',
-  'guestbook'=>'Knjiga gostov',
-  'history'=>'Zgodovina',
-  'imprint'=>'Mnenja',
-  'join_us'=>'Postani član',
-  'links'=>'Linki',
-  'links_us'=>'Linkaj nas',
-  'main'=>'Začetna',
-  'matches'=>'Bitke',
-  'media'=>'Mediji',
-  'members'=>'Člani',
-  'miscellaneous'=>'Razno',
-  'news'=>'Novice',
-  'newsletter'=>'Newsletter',
-  'polls'=>'Ankete',
-  'registered_users'=>'Registrirani uporabniki',
-  'search'=>'Iskanje',
-  'servers'=>'Serverji',
-  'sponsors'=>'Sponzorji',
-  'squads'=>'Ekipe',
-  'who_is_online'=>'Kdo je online?'
+    'about_us' => 'O nas',
+    'archives' => 'Arhiv',
+    'articles' => 'Članki',
+    'awards' => 'Nagrade',
+    'calendar' => 'Kolendar',
+    'clan' => 'Klan',
+    'community' => 'Skupnost',
+    'contact' => 'Kontakt',
+    'demos' => 'Demos',
+    'downloads' => 'Prenosi',
+    'faq' => 'Pogosta vprašanja',
+    'fight_us' => 'Izziv za boj',
+    'forums' => 'Forum',
+    'gallery' => 'Galerija',
+    'guestbook' => 'Knjiga gostov',
+    'history' => 'Zgodovina',
+    'imprint' => 'Mnenja',
+    'join_us' => 'Postani član',
+    'links' => 'Linki',
+    'links_us' => 'Linkaj nas',
+    'main' => 'Začetna',
+    'matches' => 'Bitke',
+    'media' => 'Mediji',
+    'members' => 'Člani',
+    'miscellaneous' => 'Razno',
+    'news' => 'Novice',
+    'newsletter' => 'Newsletter',
+    'polls' => 'Ankete',
+    'registered_users' => 'Registrirani uporabniki',
+    'search' => 'Iskanje',
+    'servers' => 'Serverji',
+    'sponsors' => 'Sponzorji',
+    'squads' => 'Ekipe',
+    'who_is_online' => 'Kdo je online?'
 );
 

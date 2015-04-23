@@ -25,7 +25,7 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
@@ -41,7 +41,6 @@ $language_array = Array(
     'database_cl' => 'Veritabanı',
     'delete_file' => 'dosyayı sil',
     'description' => 'Tanım',
-    'dl' => 'DL',
     'download_now' => 'İndir %filename% şimdi',
     'download_registered_only' => 'Sadece kayıtlı kullanıcılar indirir!',
     'download_via_mirror' => 'ayna aracılığıyla indir',
@@ -105,3 +104,4 @@ $language_array = Array(
     'you_have_to_enter_file' => 'Bir dosya / url girmek zorundasınız!',
     'you_have_to_enter_filename' => 'Bir dosya adı girmek zorundasınız!'
 );
+

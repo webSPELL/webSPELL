@@ -25,12 +25,11 @@
 ##########################################################################
 */
 
-
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'save'=>'salvesta',
-  'no_session'=>'Palun tee kindlaks, et küpsised on lubatud ja proovi keelt uuesti valida.'
+    'no_session' => 'Palun tee kindlaks, et küpsised on lubatud ja proovi keelt uuesti valida.',
+    'save' => 'salvesta'
 );
 

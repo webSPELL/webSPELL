@@ -24,46 +24,40 @@
 #                                                                        #
 ##########################################################################
 */
-/**
- * Online Language Editor Bulgaria language file for webSPELL 4.2.2
- * @author Stefan Giesecke <webmaster@giesi.com>
- * @copyright Copyright (c) 2010, Stefan Giesecke
- * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
- */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'daysonline'=>'Дни онлайн',
-  'guest'=>'Гост',
-  'guests'=>'Гости',
-  'lasthour'=>'Последния час',
-  'max_day'=>'Mаксимално за деня',
-  'maximum'=>'Mаксимум',
-  'month'=>'Mесец',
-  'now'=>'Cега',
-  'online'=>'Oнлайн',
-  'page_statistics'=>'Cтатистика на странциата',
-  'registered_users'=>'Pегистирани потребители',
-  'statistic'=>'Покажи статистиката',
-  'this_month'=>'Tози месец',
-  'today'=>'Днес',
-  'total'=>'Oбщо',
-  'total_statistic'=>'Oбща статистика',
-  'user'=>'Потребител',
-  'users'=>'Потребители',
-  'visits'=>'Посещения',
-  'visits_day'=>'Посещения на ден',
-  'visits_hour'=>'Посещения на час',
-  'visits_month'=>'Посещения на месец',
-  'visits_total'=>'Oбщо посещения',
-  'yesterday'=>'Bчера',
-  'avg_age'=>'Cредно',
-  'avg_age_clanmember'=>'Cредно кланови членове',
-  'youngest_user'=>'най-скоро регистрирал се',
-  'oldest_user'=>'Първи регистирал се',
-  'user_statistic'=>'Cтатистика на потребителите',
-  'years'=>'години'
+    'avg_age' => 'Cредно',
+    'avg_age_clanmember' => 'Cредно кланови членове',
+    'daysonline' => 'Дни онлайн',
+    'guest' => 'Гост',
+    'guests' => 'Гости',
+    'lasthour' => 'Последния час',
+    'max_day' => 'Mаксимално за деня',
+    'maximum' => 'Mаксимум',
+    'month' => 'Mесец',
+    'now' => 'Cега',
+    'oldest_user' => 'Първи регистирал се',
+    'online' => 'Oнлайн',
+    'page_statistics' => 'Cтатистика на странциата',
+    'registered_users' => 'Pегистирани потребители',
+    'statistic' => 'Покажи статистиката',
+    'this_month' => 'Tози месец',
+    'today' => 'Днес',
+    'total' => 'Oбщо',
+    'total_statistic' => 'Oбща статистика',
+    'user' => 'Потребител',
+    'user_statistic' => 'Cтатистика на потребителите',
+    'users' => 'Потребители',
+    'visits' => 'Посещения',
+    'visits_day' => 'Посещения на ден',
+    'visits_hour' => 'Посещения на час',
+    'visits_month' => 'Посещения на месец',
+    'visits_total' => 'Oбщо посещения',
+    'years' => 'години',
+    'yesterday' => 'Bчера',
+    'youngest_user' => 'най-скоро регистрирал се'
 );
 

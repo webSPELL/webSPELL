@@ -24,35 +24,29 @@
 #                                                                        #
 ##########################################################################
 */
-/**
- * Online Language Editor South Africa language file for webSPELL 4.2.2
- * @author Stefan Giesecke <webmaster@giesi.com>
- * @copyright Copyright (c) 2010, Stefan Giesecke
- * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
- */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'about'=>'Oor',
-  'active'=>'aktiewe',
-  'activity'=>'Aktiwiteit',
-  'awards'=>'Toekennings',
-  'back_overview'=>'&raquo; <a href="index.php?site=members"><b>terug na lede oorsig</b></a>',
-  'challenge'=>'Uitdaging',
-  'contact'=>'Kontak',
-  'go'=>'Gaan!',
-  'inactive'=>'onaktiewe',
-  'member'=>'Lid',
-  'members'=>'lede',
-  'nickname'=>'Bynaam',
-  'no_description'=>'geen beskrywing beskikbaar',
-  'position'=>'Posisie',
-  'results'=>'Resultate',
-  'show_details'=>'&raquo; <a href="index.php?site=members&amp;action=show&amp;squadID=%squadID%"><b>Wys besonderhede</b></a>',
-  'show_only'=>'Toon slegs',
-  'status'=>'Status',
-  'town'=>'Dorp'
+    'about' => 'Oor',
+    'active' => 'aktiewe',
+    'activity' => 'Aktiwiteit',
+    'awards' => 'Toekennings',
+    'back_overview' => '&raquo; <a href="index.php?site=members"><b>terug na lede oorsig</b></a>',
+    'challenge' => 'Uitdaging',
+    'contact' => 'Kontak',
+    'go' => 'Gaan!',
+    'inactive' => 'onaktiewe',
+    'member' => 'Lid',
+    'members' => 'lede',
+    'nickname' => 'Bynaam',
+    'no_description' => 'geen beskrywing beskikbaar',
+    'position' => 'Posisie',
+    'results' => 'Resultate',
+    'show_details' => '&raquo; <a href="index.php?site=members&amp;action=show&amp;squadID=%squadID%"><b>Wys besonderhede</b></a>',
+    'show_only' => 'Toon slegs',
+    'status' => 'Status',
+    'town' => 'Dorp'
 );
 

@@ -25,12 +25,11 @@
 ##########################################################################
 */
 
-
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'news_feed'=>'Лента новостей',
-  'latest_news_from'=>'Последние новости от'
+    'latest_news_from' => 'Последние новости от',
+    'news_feed' => 'Лента новостей'
 );
 

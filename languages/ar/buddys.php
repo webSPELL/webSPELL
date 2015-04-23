@@ -25,19 +25,18 @@
 ##########################################################################
 */
 
-
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'add_notexists'=>'لايوجد مستخدم بهذا الاسم',
-  'add_nouserid'=>'اسم المستخدم غير متوفر',
-  'add_yourself'=>'!لايمكنك اضافة نفسك كصديق ولا يمكنك تجاهل نفسك',
-  'buddy_nousers'=>'لايوجد احد في قائمة الاصدقاء',
-  'buddys'=>'الاصدقاء',
-  'ignore_nousers'=>'لايوجد احد في قائمة التجاهل',
-  'not_logged'=>'.للتحكم باصدقائك يجب عليك التسجيل وتسجيل الدخول<br><a href="index.php?site=register">التسجيل</a> | <a href="index.php?site=login">تسجيل الدخول</a>',
-  'your_buddylist'=>'قائمة الاصدقاء',
-  'your_ignorelist'=>'قائمة التجاهل'
+    'add_notexists' => 'لايوجد مستخدم بهذا الاسم',
+    'add_nouserid' => 'اسم المستخدم غير متوفر',
+    'add_yourself' => '!لايمكنك اضافة نفسك كصديق ولا يمكنك تجاهل نفسك',
+    'buddy_nousers' => 'لايوجد احد في قائمة الاصدقاء',
+    'buddys' => 'الاصدقاء',
+    'ignore_nousers' => 'لايوجد احد في قائمة التجاهل',
+    'not_logged' => '.للتحكم باصدقائك يجب عليك التسجيل وتسجيل الدخول<br><a href="index.php?site=register">التسجيل</a> | <a href="index.php?site=login">تسجيل الدخول</a>',
+    'your_buddylist' => 'قائمة الاصدقاء',
+    'your_ignorelist' => 'قائمة التجاهل'
 );
 

@@ -24,24 +24,18 @@
 #                                                                        #
 ##########################################################################
 */
-/**
- * Online Language Editor South Africa language file for webSPELL 4.2.2
- * @author Stefan Giesecke <webmaster@giesi.com>
- * @copyright Copyright (c) 2010, Stefan Giesecke
- * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
- */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'add_to_message'=>'Voeg boodskap by',
-  'close_window'=>'sluit venster',
-  'delete'=>'Verwyder',
-  'existing_files'=>'Bestaande lêers',
-  'file_upload'=>'Laai lêer',
-  'invalid_access'=>'Ongeldig toegang!',
-  'no_access'=>'Geen toegang!',
-  'upload'=>'Oplaai'
+    'add_to_message' => 'Voeg boodskap by',
+    'close_window' => 'sluit venster',
+    'delete' => 'Verwyder',
+    'existing_files' => 'Bestaande lêers',
+    'file_upload' => 'Laai lêer',
+    'invalid_access' => 'Ongeldig toegang!',
+    'no_access' => 'Geen toegang!',
+    'upload' => 'Oplaai'
 );
 

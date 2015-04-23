@@ -25,7 +25,7 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
@@ -44,13 +44,10 @@ $language_array = Array(
     'clan-name' => 'Název klanu',
     'clan-tag' => 'tag klanu',
     'country' => 'Národnost',
-    'cpu' => 'CPU',
     'date_of_birth' => 'Datum narození',
     'deactivated' => 'deaktivována',
-    'delete' => 'delete',
     'delete_max_90_90' => 'smazat (max90/90)',
     'delete_max_230_210' => 'smazat (max230/210)',
-    'e-mail' => 'E-mail',
     'edit_mail' => 'editovat E-Mail',
     'edit_password' => 'editovat heslo',
     'equipment-info' => 'Informace o vybavení',
@@ -139,3 +136,4 @@ Thank you for your interest
     'you_have_to_username' => 'Zapomněl jsi vložit uživatelské jméno!',
     'you_have_to_valid_email' => 'Tvůj e-mail není validní!'
 );
+

@@ -25,14 +25,13 @@
 ##########################################################################
 */
 
-
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'no_informations'=>'არ არის ინფორმაცია მისაწვდომი',
-  'report_message'=>'[b]არის ახალი %s - ანგარიში[/b][br][br]%s-ID: %d[br]Info: %s[br]Referer: [url]index.php?site=files&file=%d[/url]',
-  'report_recognized'=>'თქვენი შენიშვნა მიღებულია. მადლობა',
-  'wrong_securitycode'=>'თქვენ შეიყვანეთ არასწორი უსაფრთხოების კოდი<br><br>[<a href="javascript:back();">back</a>]'
+    'no_informations' => 'არ არის ინფორმაცია მისაწვდომი',
+    'report_message' => '[b]არის ახალი %s - ანგარიში[/b][br][br]%s-ID: %d[br]Info: %s[br]Referer: [url]index.php?site=files&file=%d[/url]',
+    'report_recognized' => 'თქვენი შენიშვნა მიღებულია. მადლობა',
+    'wrong_securitycode' => 'თქვენ შეიყვანეთ არასწორი უსაფრთხოების კოდი<br><br>[<a href="javascript:back();">back</a>]'
 );
 

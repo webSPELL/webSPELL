@@ -24,30 +24,23 @@
 #                                                                        #
 ##########################################################################
 */
-/**
- * Online Language Editor Albania language file for webSPELL 4.2.2
- * @author Stefan Giesecke <webmaster@giesi.com>
- * @copyright Copyright (c) 2010, Stefan Giesecke
- * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
- */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'admin'=>'administrator',
-  'buddy_list'=>'lista shokëve',
-  'cash-box'=>'kutia lekëve',
-  'edit_account'=>'edito acount-in',
-  'galleries'=>'galeritë',
-  'login'=>'logim',
-  'logout'=>'dalje nga logimi',
-  'lost_password'=>'humbe pasword-in?',
-  'messenger'=>'mesazher',
-  'n_a'=>'n/a',
-  'overview'=>'prezantim i përgjithshëm',
-  'register_now'=>'regjistrohu tani',
-  'registered_users'=>'përdorues të regjistruar',
-  'welcome_back'=>'mirëseerdhët'
+    'admin' => 'administrator',
+    'buddy_list' => 'lista shokëve',
+    'cash-box' => 'kutia lekëve',
+    'edit_account' => 'edito acount-in',
+    'galleries' => 'galeritë',
+    'login' => 'logim',
+    'logout' => 'dalje nga logimi',
+    'lost_password' => 'humbe pasword-in?',
+    'messenger' => 'mesazher',
+    'overview' => 'prezantim i përgjithshëm',
+    'register_now' => 'regjistrohu tani',
+    'registered_users' => 'përdorues të regjistruar',
+    'welcome_back' => 'mirëseerdhët'
 );
 

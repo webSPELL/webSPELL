@@ -24,19 +24,13 @@
 #                                                                        #
 ##########################################################################
 */
-/**
- * Online Language Editor Greece language file for webSPELL 4.2.2
- * @author Stefan Giesecke <webmaster@giesi.com>
- * @copyright Copyright (c) 2010, Stefan Giesecke
- * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
- */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'no_frame'=>'Αυτο το site χρησημοποιει πλαισια.Ο browser σας δεν υποστηριζει πλαισια!',
-  'outgoing'=>'Εξερχομενο',
-  'owner_responsible'=>'Ο ιδιοκτητης δεν ευθυνεται για αυτη τη σελιδα.'
+    'no_frame' => 'Αυτο το site χρησημοποιει πλαισια.Ο browser σας δεν υποστηριζει πλαισια!',
+    'outgoing' => 'Εξερχομενο',
+    'owner_responsible' => 'Ο ιδιοκτητης δεν ευθυνεται για αυτη τη σελιδα.'
 );
 

@@ -24,18 +24,12 @@
 #                                                                        #
 ##########################################################################
 */
-/**
- * Online Language Editor Finland language file for webSPELL 4.2.2
- * @author Stefan Giesecke <webmaster@giesi.com>
- * @copyright Copyright (c) 2010, Stefan Giesecke
- * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
- */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'no_access'=>'pääsy evätty!',
-  'just_rate_between_0_10'=>'Äänestä 0 / 10 Pistettä!'
+    'just_rate_between_0_10' => 'Äänestä 0 / 10 Pistettä!',
+    'no_access' => 'pääsy evätty!'
 );
 

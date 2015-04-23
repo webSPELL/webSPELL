@@ -25,18 +25,17 @@
 ##########################################################################
 */
 
-
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'admin_button'=>'BUJ Administrācija',
-  'answer'=>'Atbilde',
-  'categories'=>'Kategorija',
-  'faq'=>'BUJ',
-  'faqs'=>'BUJi',
-  'no_categories'=>'vēl nav izveidotas kategorijas',
-  'no_faq'=>'Jautājumi nav pieejami.<br><a href="index.php?site=faq">Atpakaļ</a>',
-  'saved_on'=>'izmaiņas saglabātas'
+    'admin_button' => 'BUJ Administrācija',
+    'answer' => 'Atbilde',
+    'categories' => 'Kategorija',
+    'faq' => 'BUJ',
+    'faqs' => 'BUJi',
+    'no_categories' => 'vēl nav izveidotas kategorijas',
+    'no_faq' => 'Jautājumi nav pieejami.<br><a href="index.php?site=faq">Atpakaļ</a>',
+    'saved_on' => 'izmaiņas saglabātas'
 );
 

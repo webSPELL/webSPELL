@@ -25,11 +25,11 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'history'=>'تاریخچه',
-  'no_history'=>'.هنوز اطلاعاتی موجود نیست'
+    'history' => 'تاریخچه',
+    'no_history' => '.هنوز اطلاعاتی موجود نیست'
 );
 

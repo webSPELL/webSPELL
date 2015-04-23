@@ -25,37 +25,37 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'additional_info'=>'Papildoma informacija (Kodel mes turetume tave paimti į narius...)',
-	'age'=>'Amžius',
-	'back_to_form'=>'Grįžti į formą',
-	'city'=>'Miestas',
-	'clan_history'=>'Klano istorija',
-	'email_not_valid'=>'Įvestas blogas e-pašto adresas!',
-	'forgot_age'=>'Jokio amžiaus neįvesta!',
-	'forgot_city'=>'Neįrašėte miesto!',
-	'forgot_history'=>'Jokio klano istorijos nėra!',
-	'forgot_messenger'=>'Nėra jokių susisiekimo būdų (ICQ, AIM ir t.t...) įvesta!',
-	'forgot_nickname'=>'Jūs pamiršote savo slapyvardį!',
-	'forgot_realname'=>'Jūs pamiršote savo vardą!',
-	'icq_msn'=>'ICQ/MSN/ ir t.t...',
-	'info'=>'Papildoma Informacija',
-	'joinus_form'=>'Prisijungimo forma',
-	'mail'=>'E-Paštas',
-	'messenger'=>'Pranešiklis',
-	'message_title'=>'Join us',
-	'name'=>'Vardas',
-	'nick'=>'Slapyvardis',
-	'problems'=>'Tęsiant atsitiko klaidų, bandat įrašyti jūsų duomenis',
-	'security_code'=>'Apsaugos kodas',
-	'send'=>'Pateikti',
-	'someone_want_to_join_your_squad'=>'Kažkas nori įstoti į jūsų būrį:',
-	'squad'=>'Būrys',
-	'thanks_you_will_get_mail'=>'Ačiū už jūsų užpildytą formą, mes jums parašysime.',
-	'title_join_us'=>'Tapo nariu',
-	'wrong_security_code'=>'Apsaugos kodas blogas!'
+    'additional_info' => 'Papildoma informacija (Kodel mes turetume tave paimti į narius...)',
+    'age' => 'Amžius',
+    'back_to_form' => 'Grįžti į formą',
+    'city' => 'Miestas',
+    'clan_history' => 'Klano istorija',
+    'email_not_valid' => 'Įvestas blogas e-pašto adresas!',
+    'forgot_age' => 'Jokio amžiaus neįvesta!',
+    'forgot_city' => 'Neįrašėte miesto!',
+    'forgot_history' => 'Jokio klano istorijos nėra!',
+    'forgot_messenger' => 'Nėra jokių susisiekimo būdų (ICQ, AIM ir t.t...) įvesta!',
+    'forgot_nickname' => 'Jūs pamiršote savo slapyvardį!',
+    'forgot_realname' => 'Jūs pamiršote savo vardą!',
+    'icq_msn' => 'ICQ/MSN/ ir t.t...',
+    'info' => 'Papildoma Informacija',
+    'joinus_form' => 'Prisijungimo forma',
+    'mail' => 'E-Paštas',
+    'message_title' => 'Join us',
+    'messenger' => 'Pranešiklis',
+    'name' => 'Vardas',
+    'nick' => 'Slapyvardis',
+    'problems' => 'Tęsiant atsitiko klaidų, bandat įrašyti jūsų duomenis',
+    'security_code' => 'Apsaugos kodas',
+    'send' => 'Pateikti',
+    'someone_want_to_join_your_squad' => 'Kažkas nori įstoti į jūsų būrį:',
+    'squad' => 'Būrys',
+    'thanks_you_will_get_mail' => 'Ačiū už jūsų užpildytą formą, mes jums parašysime.',
+    'title_join_us' => 'Tapo nariu',
+    'wrong_security_code' => 'Apsaugos kodas blogas!'
 );
 

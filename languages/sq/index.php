@@ -24,39 +24,33 @@
 #                                                                        #
 ##########################################################################
 */
-/**
- * Online Language Editor Albania language file for webSPELL 4.2.2
- * @author Stefan Giesecke <webmaster@giesi.com>
- * @copyright Copyright (c) 2010, Stefan Giesecke
- * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
- */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'advertisement'=>'reklama',
-  'articles'=>'artikuj',
-  'content'=>'përmbajtje',
-  'demos'=>'demo-t',
-  'downloads'=>'download-e',
-  'hotest_news'=>'lajmet më të nxehta',
-  'language_switch'=>'zgjidh gjuhën',
-  'latest_news'=>'lajmet e reja',
-  'login'=>'logim',
-  'matches'=>'ndeshjet',
-  'newsletter'=>'buletini lajmeve',
-  'partners'=>'partnerët',
-  'pic_of_the_moment'=>'fotoja momentit',
-  'poll'=>'sondazh',
-  'random_user'=>'përdorues i cfarëdoshëm',
-  'server'=>'serverat',
-  'shoutbox'=>'shoutbox',
-  'sponsors'=>'sponsorët',
-  'squads'=>'ekipet',
-  'statistics'=>'statistikat',
-  'topics'=>'subjektet',
-  'upcoming_events'=>'evenimentet e ardhshme',
-  'tags'=>'tags'
+    'advertisement' => 'reklama',
+    'articles' => 'artikuj',
+    'content' => 'përmbajtje',
+    'demos' => 'demo-t',
+    'downloads' => 'download-e',
+    'hotest_news' => 'lajmet më të nxehta',
+    'language_switch' => 'zgjidh gjuhën',
+    'latest_news' => 'lajmet e reja',
+    'login' => 'logim',
+    'matches' => 'ndeshjet',
+    'newsletter' => 'buletini lajmeve',
+    'partners' => 'partnerët',
+    'pic_of_the_moment' => 'fotoja momentit',
+    'poll' => 'sondazh',
+    'random_user' => 'përdorues i cfarëdoshëm',
+    'server' => 'serverat',
+    'shoutbox' => 'shoutbox',
+    'sponsors' => 'sponsorët',
+    'squads' => 'ekipet',
+    'statistics' => 'statistikat',
+    'tags' => 'tags',
+    'topics' => 'subjektet',
+    'upcoming_events' => 'evenimentet e ardhshme'
 );
 

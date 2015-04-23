@@ -25,11 +25,11 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'news_feed'=>'Feed Noviniek',
-	'latest_news_from'=>'Najnovšie novinky od'
+    'latest_news_from' => 'Najnovšie novinky od',
+    'news_feed' => 'Feed Noviniek'
 );
 

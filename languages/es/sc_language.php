@@ -25,11 +25,11 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'save'=>'guardar',
-	'no_session'=>'Asegure que Cookies están activados en su navegador y trate de cambiarlo de nuevo la lengua.'
+    'no_session' => 'Asegure que Cookies están activados en su navegador y trate de cambiarlo de nuevo la lengua.',
+    'save' => 'guardar'
 );
 

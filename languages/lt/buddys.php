@@ -25,18 +25,18 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'add_notexists'=>'Šitas vartotojas neegzistuoja',
-	'add_nouserid'=>'Vartotojo ID nepasiekiamas',
-	'add_yourself'=>'Jūs negalite pridėti savęs kaip draugas, ir jūs negalite ignoruoti savęs!',
-	'buddy_nousers'=>'Jūs neturite jokio vartotojo draugų sąraše',
-	'buddys'=>'draugai',
-	'ignore_nousers'=>'Jūs neturite jokio vartotojo ignoruojamame sąraše',
-	'not_logged'=>'Jūs turite būti užsiregistravę ir prisijungę, kad tvarkyti savo draugų sąrašą.<br><a href="index.php?site=register">Registruotis</a> | <a href="index.php?site=login">Prisijungti</a>',
-	'your_buddylist'=>'Jūsų draugų sąrašas',
-	'your_ignorelist'=>'Jūsų ignoruojamasis sąrašas'
+    'add_notexists' => 'Šitas vartotojas neegzistuoja',
+    'add_nouserid' => 'Vartotojo ID nepasiekiamas',
+    'add_yourself' => 'Jūs negalite pridėti savęs kaip draugas, ir jūs negalite ignoruoti savęs!',
+    'buddy_nousers' => 'Jūs neturite jokio vartotojo draugų sąraše',
+    'buddys' => 'draugai',
+    'ignore_nousers' => 'Jūs neturite jokio vartotojo ignoruojamame sąraše',
+    'not_logged' => 'Jūs turite būti užsiregistravę ir prisijungę, kad tvarkyti savo draugų sąrašą.<br><a href="index.php?site=register">Registruotis</a> | <a href="index.php?site=login">Prisijungti</a>',
+    'your_buddylist' => 'Jūsų draugų sąrašas',
+    'your_ignorelist' => 'Jūsų ignoruojamasis sąrašas'
 );
 

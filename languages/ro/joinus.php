@@ -25,38 +25,37 @@
 ##########################################################################
 */
 
-
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'additional_info'=>'Informaţii aditionale (ex. De ce ar trebui să ma iei ca membru...)',
-  'age'=>'Varsta',
-  'back_to_form'=>'Inapoi la formular',
-  'city'=>'Oraş',
-  'clan_history'=>'Istoric clan',
-  'email_not_valid'=>'Adresă de mail invalidă!',
-  'forgot_age'=>'Nu aţi introdus vârsta!',
-  'forgot_city'=>'Nu aţi introdus oraşul!',
-  'forgot_history'=>'Nu aţi introdus istoric clan!',
-  'forgot_messenger'=>'Nu aţi introdus messenger (ICQ, AIM etc...)!',
-  'forgot_nickname'=>'Aţi uitat porecla!',
-  'forgot_realname'=>'V-aţi uitat numele!',
-  'icq_msn'=>'ICQ/MSN/etc...',
-  'info'=>'Informaţii adiţionale',
-  'joinus_form'=>'Formular de intrare',
-  'mail'=>'Mail',
-  'messenger'=>'Messenger',
-  'message_title'=>'Alătură-te',
-  'name'=>'Nume',
-  'nick'=>'Poreclă',
-  'problems'=>'Probleme apărute in timpul inregistrării cu datele dumneavoastră',
-  'security_code'=>'Cod de siguranţă',
-  'send'=>'Trimite',
-  'someone_want_to_join_your_squad'=>'Cineva doreşte sa intre in echipa dumneavoastră:',
-  'squad'=>'Echipa',
-  'thanks_you_will_get_mail'=>'Vă mulţumim ca aţi aplicat, vă vom contacta.',
-  'title_join_us'=>'Devino membru',
-  'wrong_security_code'=>'Cod de siguranţă greşit!'
+    'additional_info' => 'Informaţii aditionale (ex. De ce ar trebui să ma iei ca membru...)',
+    'age' => 'Varsta',
+    'back_to_form' => 'Inapoi la formular',
+    'city' => 'Oraş',
+    'clan_history' => 'Istoric clan',
+    'email_not_valid' => 'Adresă de mail invalidă!',
+    'forgot_age' => 'Nu aţi introdus vârsta!',
+    'forgot_city' => 'Nu aţi introdus oraşul!',
+    'forgot_history' => 'Nu aţi introdus istoric clan!',
+    'forgot_messenger' => 'Nu aţi introdus messenger (ICQ, AIM etc...)!',
+    'forgot_nickname' => 'Aţi uitat porecla!',
+    'forgot_realname' => 'V-aţi uitat numele!',
+    'icq_msn' => 'ICQ/MSN/etc...',
+    'info' => 'Informaţii adiţionale',
+    'joinus_form' => 'Formular de intrare',
+    'mail' => 'Mail',
+    'message_title' => 'Alătură-te',
+    'messenger' => 'Messenger',
+    'name' => 'Nume',
+    'nick' => 'Poreclă',
+    'problems' => 'Probleme apărute in timpul inregistrării cu datele dumneavoastră',
+    'security_code' => 'Cod de siguranţă',
+    'send' => 'Trimite',
+    'someone_want_to_join_your_squad' => 'Cineva doreşte sa intre in echipa dumneavoastră:',
+    'squad' => 'Echipa',
+    'thanks_you_will_get_mail' => 'Vă mulţumim ca aţi aplicat, vă vom contacta.',
+    'title_join_us' => 'Devino membru',
+    'wrong_security_code' => 'Cod de siguranţă greşit!'
 );
 

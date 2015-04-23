@@ -25,7 +25,7 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
@@ -78,3 +78,4 @@ $language_array = Array(
     'visitor_comments' => 'Luba külastajate kommentaarid',
     'vs' => 'vs'
 );
+

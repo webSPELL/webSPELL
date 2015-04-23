@@ -24,24 +24,18 @@
 #                                                                        #
 ##########################################################################
 */
-/**
- * Online Language Editor Bulgaria language file for webSPELL 4.2.2
- * @author Stefan Giesecke <webmaster@giesi.com>
- * @copyright Copyright (c) 2010, Stefan Giesecke
- * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
- */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'invalid_password'=>'Въвели сте грешна парола.',
-  'ip_banned'=>'IP адресът Ви е блокиран от страницата.<br>%reason%',
-  'login_successful'=>'Вие се логнахте успешно',
-  'no_user'=>'Потребител <b>%username%</b> не е открит в системата.',
-  'not_activated'=>'Акаунтът Ви не е активиран.',
-  'session_error'=>'Трябва да имате активирани Бисквитки (Cookies) за да влезете в сайта.<br>Ако вече сте ги активирали моля обърнете се към системния администратор.',
-  'return'=>'<a href="javascript:history.back()">обратно</a>',
-  'return_reenter' => '<a href="javascript:history.back()">Back и повторете вход</a>'
+    'invalid_password' => 'Въвели сте грешна парола.',
+    'ip_banned' => 'IP адресът Ви е блокиран от страницата.<br>%reason%',
+    'login_successful' => 'Вие се логнахте успешно',
+    'no_user' => 'Потребител <b>%username%</b> не е открит в системата.',
+    'not_activated' => 'Акаунтът Ви не е активиран.',
+    'return' => '<a href="javascript:history.back()">обратно</a>',
+    'return_reenter' => '<a href="javascript:history.back()">Back и повторете вход</a>',
+    'session_error' => 'Трябва да имате активирани Бисквитки (Cookies) за да влезете в сайта.<br>Ако вече сте ги активирали моля обърнете се към системния администратор.'
 );
 

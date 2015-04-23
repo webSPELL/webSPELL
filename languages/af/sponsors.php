@@ -24,24 +24,18 @@
 #                                                                        #
 ##########################################################################
 */
-/**
- * Online Language Editor South Africa language file for webSPELL 4.2.2
- * @author Stefan Giesecke <webmaster@giesi.com>
- * @copyright Copyright (c) 2010, Stefan Giesecke
- * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
- */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'banner'=>'Banier',
-  'homepage'=>'Tuisblad',
-  'information'=>'Informasie',
-  'mainsponsor'=>'Hoofborg',
-  'mainsponsors'=>'Hoofborge',
-  'no_sponsors'=>'geen borge',
-  'sponsor'=>'Borg',
-  'sponsors'=>'borge'
+    'banner' => 'Banier',
+    'homepage' => 'Tuisblad',
+    'information' => 'Informasie',
+    'mainsponsor' => 'Hoofborg',
+    'mainsponsors' => 'Hoofborge',
+    'no_sponsors' => 'geen borge',
+    'sponsor' => 'Borg',
+    'sponsors' => 'borge'
 );
 

@@ -24,22 +24,16 @@
 #                                                                        #
 ##########################################################################
 */
-/**
- * Online Language Editor Greece language file for webSPELL 4.2.2
- * @author Stefan Giesecke <webmaster@giesi.com>
- * @copyright Copyright (c) 2010, Stefan Giesecke
- * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
- */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'admins'=>'Διαχειριστης(ες):',
-	'coding'=>'Προγραμματισμος',
-	'coding_info'=>'Αυτη η ιστοσελιδα χρησημοποιει το  <a href="http://www.webspell.org" target="_blank">webSPELL Free Content Management System (εκδοση: $version)</a>. Βασιζεται σε  PHP4/5 και MySQL και χρησημοποιειται κατω απο την <a href="http://www.fsf.org/licensing/licenses/gpl.html" target="_blank">GNU GENERAL PUBLIC LICENSE</a>.<br>Κατεβαστε το δωρεαν απο εδω:<a href="http://www.webspell.org" target="_blank">www.webSPELL.org</a>',
-	'disclaimer'=>'Αδεια Χρησης',
-	'disclaimer_text'=>'<p><strong>1. Content</strong><br>
+    'admins' => 'Διαχειριστης(ες):',
+    'coding' => 'Προγραμματισμος',
+    'coding_info' => 'Αυτη η ιστοσελιδα χρησημοποιει το  <a href="http://www.webspell.org" target="_blank">webSPELL Free Content Management System (εκδοση: $version)</a>. Βασιζεται σε  PHP4/5 και MySQL και χρησημοποιειται κατω απο την <a href="http://www.fsf.org/licensing/licenses/gpl.html" target="_blank">GNU GENERAL PUBLIC LICENSE</a>.<br>Κατεβαστε το δωρεαν απο εδω:<a href="http://www.webspell.org" target="_blank">www.webSPELL.org</a>',
+    'disclaimer' => 'Αδεια Χρησης',
+    'disclaimer_text' => '<p><strong>1. Content</strong><br>
 	The author reserves the right not to be responsible for the topicality, correctness, completeness or quality of the information provided. Liability claims regarding damage caused by the use of any information provided, including any kind of information which is incomplete or incorrect,will therefore be rejected.<br>
 	All offers are not-binding and without obligation. Parts of the pages or the complete publication including all offers and information might be extended, changed or partly or completely deleted by the author without separate announcement.</p>
 	<p><strong>2. Referrals and links</strong><br>
@@ -50,9 +44,9 @@ $language_array = Array(
 	If the opportunity for the input of personal or business data (email addresses, name, addresses) is given, the input of these data takes place voluntarily. The use and payment of all offered services are permitted - if and so far technically possible and reasonable - without specification of any personal data or under specification of anonymized data or an alias. The use of published postal addresses, telephone or fax numbers and email addresses for marketing purposes is prohibited, offenders sending unwanted spam messages will be punished.</p>
 	<p><strong>5. Legal validity of this disclaimer</strong><br>
 	This disclaimer is to be regarded as part of the internet publication which you were referred from. If sections or individual terms of this statement are not legal or correct, the content or validity of the other parts remain uninfluenced by this fact.</p>',
-	'imprint'=>'Αποτυπωση',
-	'mods'=>'Ελεγκτης(ες):',
-	'responsible_persons'=>'Υπευθηνοι',
-	'webmaster'=>'Webmaster:'
+    'imprint' => 'Αποτυπωση',
+    'mods' => 'Ελεγκτης(ες):',
+    'responsible_persons' => 'Υπευθηνοι',
+    'webmaster' => 'Webmaster:'
 );
 

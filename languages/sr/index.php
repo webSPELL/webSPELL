@@ -25,32 +25,32 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'advertisement'=>'Оглашавање',
-  'articles'=>'Чланци',
-  'content'=>'Садржај',
-  'demos'=>'Демои',
-  'downloads'=>'Преузимања',
-  'hotest_news'=>'Највруће новости',
-  'language_switch'=>'промјена језика',
-  'latest_news'=>'задње новости',
-  'login'=>'пријава',
-  'matches'=>'мечеви',
-  'newsletter'=>'новости',
-  'partners'=>'партнери',
-  'pic_of_the_moment'=>'слика тренутка',
-  'poll'=>'анкета',
-  'random_user'=>'насумични корисник',
-  'server'=>'сервери',
-  'shoutbox'=>'шоутбох',
-  'sponsors'=>'спонзори',
-  'squads'=>'тимови',
-  'statistics'=>'статистика',
-  'topics'=>'теме',
-  'upcoming_events'=>'надолазечи догаћаји',
-  'tags'=>'Ознаке'
+    'advertisement' => 'Оглашавање',
+    'articles' => 'Чланци',
+    'content' => 'Садржај',
+    'demos' => 'Демои',
+    'downloads' => 'Преузимања',
+    'hotest_news' => 'Највруће новости',
+    'language_switch' => 'промјена језика',
+    'latest_news' => 'задње новости',
+    'login' => 'пријава',
+    'matches' => 'мечеви',
+    'newsletter' => 'новости',
+    'partners' => 'партнери',
+    'pic_of_the_moment' => 'слика тренутка',
+    'poll' => 'анкета',
+    'random_user' => 'насумични корисник',
+    'server' => 'сервери',
+    'shoutbox' => 'шоутбох',
+    'sponsors' => 'спонзори',
+    'squads' => 'тимови',
+    'statistics' => 'статистика',
+    'tags' => 'Ознаке',
+    'topics' => 'теме',
+    'upcoming_events' => 'надолазечи догаћаји'
 );
 

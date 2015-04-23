@@ -25,11 +25,10 @@
 ##########################################################################
 */
 
-
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'random_picture'=>'Imagine aleatorie'
+    'random_picture' => 'Imagine aleatorie'
 );
 

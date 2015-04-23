@@ -25,37 +25,36 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'additional_info'=>'Dodatne informacije (npr. Zašto bi me trebali primiti u klan...)',
-	'age'=>'Dob',
-	'back_to_form'=>'Natrag na formu',
-	'city'=>'Grad',
-	'clan_history'=>'Povijest klanova',
-	'email_not_valid'=>'Nije unesena ispravna e-mail adresa!',
-	'forgot_age'=>'Nije unesena dob!',
-	'forgot_city'=>'Nije unesen grad!',
-	'forgot_history'=>'Nije unesena povijest klanova!',
-	'forgot_messenger'=>'Nije unesen messenger kontakt (ICQ, AIM itd...)!',
-	'forgot_nickname'=>'Nije unesen nick!',
-	'forgot_realname'=>'Nije uneseno ime!',
-	'icq_msn'=>'ICQ/MSN/itd...',
-	'info'=>'Dodatne informacije',
-	'joinus_form'=>'Formular za pristup klanu',
-	'mail'=>'E-Mail',
-	'messenger'=>'Messenger',
-	'message_title'=>'Join us',
-	'name'=>'Ime',
-	'nick'=>'Nick',
-	'problems'=>'Sljedeći problemi su se pojavili sa unesenim podacima',
-	'security_code'=>'Sigurnosni kod',
-	'send'=>'Pošalji',
-	'someone_want_to_join_your_squad'=>'Netko se želi pridružiti tvom timu:',
-	'squad'=>'Tim',
-	'thanks_you_will_get_mail'=>'Hvala Vam na aplikaciji za klan, kontaktirat ćemo Vas uskoro.',
-	'title_join_us'=>'Postani član',
-	'wrong_security_code'=>'Krivi sigurnosni kod!'
+    'additional_info' => 'Dodatne informacije (npr. Zašto bi me trebali primiti u klan...)',
+    'age' => 'Dob',
+    'back_to_form' => 'Natrag na formu',
+    'city' => 'Grad',
+    'clan_history' => 'Povijest klanova',
+    'email_not_valid' => 'Nije unesena ispravna e-mail adresa!',
+    'forgot_age' => 'Nije unesena dob!',
+    'forgot_city' => 'Nije unesen grad!',
+    'forgot_history' => 'Nije unesena povijest klanova!',
+    'forgot_messenger' => 'Nije unesen messenger kontakt (ICQ, AIM itd...)!',
+    'forgot_nickname' => 'Nije unesen nick!',
+    'forgot_realname' => 'Nije uneseno ime!',
+    'icq_msn' => 'ICQ/MSN/itd...',
+    'info' => 'Dodatne informacije',
+    'joinus_form' => 'Formular za pristup klanu',
+    'message_title' => 'Join us',
+    'messenger' => 'Messenger',
+    'name' => 'Ime',
+    'nick' => 'Nick',
+    'problems' => 'Sljedeći problemi su se pojavili sa unesenim podacima',
+    'security_code' => 'Sigurnosni kod',
+    'send' => 'Pošalji',
+    'someone_want_to_join_your_squad' => 'Netko se želi pridružiti tvom timu:',
+    'squad' => 'Tim',
+    'thanks_you_will_get_mail' => 'Hvala Vam na aplikaciji za klan, kontaktirat ćemo Vas uskoro.',
+    'title_join_us' => 'Postani član',
+    'wrong_security_code' => 'Krivi sigurnosni kod!'
 );
 

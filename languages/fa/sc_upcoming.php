@@ -25,10 +25,10 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'fight_us'=>'با ما مسابقه دهید'
+    'fight_us' => 'با ما مسابقه دهید'
 );
 

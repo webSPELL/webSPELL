@@ -25,29 +25,29 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'back'=>'grįžti į formą',
-	'contact'=>'susisiekimas',
-	'description'=>'Su šia forma jūs galite nusiųsti žinutę tinklalapio savininkui',
-	'enter_mail'=>'Prašome įrašyti e-pašto adresą.',
-	'enter_message'=>'Prašome įrašyti žinutę.',
-	'enter_name'=>'Prašome įrašyti vardą.',
-	'enter_subject'=>'Prašome įrašyti subjektą.',
-	'errors_there'=>'Atsitiko keleta klaidų',
-	'mail'=>'E-Paštas',
-	'message'=>'Žinutė',
-	'name'=>'Vardas',
-	'receiver'=>'Siuntėjas',
-	'reset'=>'Atstatyti',
-	'security_code'=>'Apsaugos kodas',
-	'send'=>'Siųsti',
-	'send_successfull'=>'Jūsų žinutė buvo sėkmingai išsiųsta.',
-	'subject'=>'Subjektas',
-	'title_contact'=>'Susisiekimo forma',
-	'unknown_receiver'=>'unknown receiver',
-	'wrong_securitycode'=>'Jūs įvedėte blogą apsaugos kodą!'
+    'back' => 'grįžti į formą',
+    'contact' => 'susisiekimas',
+    'description' => 'Su šia forma jūs galite nusiųsti žinutę tinklalapio savininkui',
+    'enter_mail' => 'Prašome įrašyti e-pašto adresą.',
+    'enter_message' => 'Prašome įrašyti žinutę.',
+    'enter_name' => 'Prašome įrašyti vardą.',
+    'enter_subject' => 'Prašome įrašyti subjektą.',
+    'errors_there' => 'Atsitiko keleta klaidų',
+    'mail' => 'E-Paštas',
+    'message' => 'Žinutė',
+    'name' => 'Vardas',
+    'receiver' => 'Siuntėjas',
+    'reset' => 'Atstatyti',
+    'security_code' => 'Apsaugos kodas',
+    'send' => 'Siųsti',
+    'send_successfull' => 'Jūsų žinutė buvo sėkmingai išsiųsta.',
+    'subject' => 'Subjektas',
+    'title_contact' => 'Susisiekimo forma',
+    'unknown_receiver' => 'unknown receiver',
+    'wrong_securitycode' => 'Jūs įvedėte blogą apsaugos kodą!'
 );
 

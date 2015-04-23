@@ -25,17 +25,17 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'all_messages'=>'Vis alle',
-	'enter_message'=>'Du skal indtaste en besked!',
-	'enter_name'=>'Du skal indtaste dit navn!',
-	'delete_selected'=>'Slet valgte',
-	'select_all'=>'Vælg alle',
-	'shout'=>'Tilføj!',
-	'shoutbox'=>'Beskedboks',
-	'sort'=>'Sorter:'
+    'all_messages' => 'Vis alle',
+    'delete_selected' => 'Slet valgte',
+    'enter_message' => 'Du skal indtaste en besked!',
+    'enter_name' => 'Du skal indtaste dit navn!',
+    'select_all' => 'Vælg alle',
+    'shout' => 'Tilføj!',
+    'shoutbox' => 'Beskedboks',
+    'sort' => 'Sorter:'
 );
 

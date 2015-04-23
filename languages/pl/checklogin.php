@@ -25,17 +25,17 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'invalid_password'=>'Wpisałeś niepoprawne hasło.',
-	'ip_banned'=>'Twoje IP zostało zbanowane.<br>%reason%',
-	'login_successful'=>'Zalogowany pomyślnie!',
-	'no_user'=>'Użytkownik o nazwie <b>%username%</b> nie występuje w bazie.',
-	'not_activated'=>'Twoje konto nie zostało aktywowane.',
-	'session_error'=>'Upewnij się, że Twoja przeglądarka akceptuje ciasteczka.<br>Jeśli problem nadal występuje, skontaktuj się z webmasterem.',
-  'return'=>'<a href="javascript:history.back()">Wróć</a>',
-  'return_reenter' => '<a href="javascript:history.back()">Wróć i spróbuj ponownie.</a>'
+    'invalid_password' => 'Wpisałeś niepoprawne hasło.',
+    'ip_banned' => 'Twoje IP zostało zbanowane.<br>%reason%',
+    'login_successful' => 'Zalogowany pomyślnie!',
+    'no_user' => 'Użytkownik o nazwie <b>%username%</b> nie występuje w bazie.',
+    'not_activated' => 'Twoje konto nie zostało aktywowane.',
+    'return' => '<a href="javascript:history.back()">Wróć</a>',
+    'return_reenter' => '<a href="javascript:history.back()">Wróć i spróbuj ponownie.</a>',
+    'session_error' => 'Upewnij się, że Twoja przeglądarka akceptuje ciasteczka.<br>Jeśli problem nadal występuje, skontaktuj się z webmasterem.'
 );
 

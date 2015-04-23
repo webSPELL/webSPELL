@@ -25,18 +25,15 @@
 ##########################################################################
 */
 
-
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'admin_button'=>'FAQ Администрация',
-  'answer'=>'Ответить',
-  'categories'=>'Категории',
-  'faq'=>'FAQ',
-  'faqs'=>'FAQs',
-  'no_categories'=>'Нет созданных категорий',
-  'no_faq'=>'Нет доступных вопросов.<br><a href="index.php?site=faq">Назад</a>',
-  'saved_on'=>'Сохранено в'
+    'admin_button' => 'FAQ Администрация',
+    'answer' => 'Ответить',
+    'categories' => 'Категории',
+    'no_categories' => 'Нет созданных категорий',
+    'no_faq' => 'Нет доступных вопросов.<br><a href="index.php?site=faq">Назад</a>',
+    'saved_on' => 'Сохранено в'
 );
 

@@ -25,23 +25,22 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'admin'=>'administracija',
-	'buddy_list'=>'draugai',
-	'cash-box'=>'pinigų dėžutė',
-	'edit_account'=>'redeguoti profilį',
-	'galleries'=>'gelerijos',
-	'login'=>'prisijungti',
-	'logout'=>'atsijungti',
-	'lost_password'=>'pametei slaptažodį?',
-	'messenger'=>'pranešiklis',
-	'n_a'=>'n/a',
-	'overview'=>'peržiūrėti',
-	'register_now'=>'registruotis dabar',
-	'registered_users'=>'registruoti nariai',
-	'welcome_back'=>'sveiki sugrįžę'
+    'admin' => 'administracija',
+    'buddy_list' => 'draugai',
+    'cash-box' => 'pinigų dėžutė',
+    'edit_account' => 'redeguoti profilį',
+    'galleries' => 'gelerijos',
+    'login' => 'prisijungti',
+    'logout' => 'atsijungti',
+    'lost_password' => 'pametei slaptažodį?',
+    'messenger' => 'pranešiklis',
+    'overview' => 'peržiūrėti',
+    'register_now' => 'registruotis dabar',
+    'registered_users' => 'registruoti nariai',
+    'welcome_back' => 'sveiki sugrįžę'
 );
 

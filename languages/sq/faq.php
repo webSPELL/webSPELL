@@ -24,24 +24,18 @@
 #                                                                        #
 ##########################################################################
 */
-/**
- * Online Language Editor Albania language file for webSPELL 4.2.2
- * @author Stefan Giesecke <webmaster@giesi.com>
- * @copyright Copyright (c) 2010, Stefan Giesecke
- * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
- */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'admin_button'=>'Administrimi i pyetjeve të shpeshta',
-  'answer'=>'Përgjigje',
-  'categories'=>'Kategoritë',
-  'faq'=>'Pyetje të shpeshta',
-  'faqs'=>'Pyetje të shpeshta',
-  'no_categories'=>'nuk janë formuar kategori akoma',
-  'no_faq'=>'Nuk ka pyetje te vlefshme.<br><a href="index.php?site=faq">Prapa</a>',
-  'saved_on'=>'shpëtuar në'
+    'admin_button' => 'Administrimi i pyetjeve të shpeshta',
+    'answer' => 'Përgjigje',
+    'categories' => 'Kategoritë',
+    'faq' => 'Pyetje të shpeshta',
+    'faqs' => 'Pyetje të shpeshta',
+    'no_categories' => 'nuk janë formuar kategori akoma',
+    'no_faq' => 'Nuk ka pyetje te vlefshme.<br><a href="index.php?site=faq">Prapa</a>',
+    'saved_on' => 'shpëtuar në'
 );
 

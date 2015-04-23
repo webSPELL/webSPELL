@@ -25,18 +25,17 @@
 ##########################################################################
 */
 
-
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'all_messages'=>'اظهار الكل',
-  'enter_message'=>'عليك إدخال رسالة!',
-  'enter_name'=>'عليك إدخال اسمك!',
-  'delete_selected'=>'حذف المحدد',
-  'select_all'=>'تحديد الكل',
-  'shout'=>'الصراخ!',
-  'shoutbox'=>'الخط الساخن',
-  'sort'=>'الفرز:'
+    'all_messages' => 'اظهار الكل',
+    'delete_selected' => 'حذف المحدد',
+    'enter_message' => 'عليك إدخال رسالة!',
+    'enter_name' => 'عليك إدخال اسمك!',
+    'select_all' => 'تحديد الكل',
+    'shout' => 'الصراخ!',
+    'shoutbox' => 'الخط الساخن',
+    'sort' => 'الفرز:'
 );
 

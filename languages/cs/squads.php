@@ -25,33 +25,32 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'about'=>'o nás',
-	'active'=>'aktivní',
-	'add_buddy'=>'přidat do přátel',
-	'awards'=>'ocenění',
-	'back_buddy'=>'zpět na seznam přátel',
-	'back_squad_overview'=>'zpět na přehled skupin',
-	'challenge'=>'výzvy',
-	'contact'=>'Kontakt',
-	'email'=>'email',
-	'ignore'=>'ignorovaní uživatelé',
-	'inactive'=>'neaktivní',
-	'member'=>'Člen',
-	'members'=>'Členové',
-	'messenger'=>'zprávy',
-	'no_description'=>'popis neexistuje',
-	'no_userpic'=>'avatar neexistuje!',
-	'position'=>'Pozice',
-	'results'=>'výsledky',
-	'show_details'=>'ukázat detaily',
-	'squad_plays'=>'Ukázat hráče',
-	'squads'=>'skupiny',
-	'status'=>'Status',
-	'town'=>'Město',
-	'userpicture'=>'uživatelský obrázek'
+    'about' => 'o nás',
+    'active' => 'aktivní',
+    'add_buddy' => 'přidat do přátel',
+    'awards' => 'ocenění',
+    'back_buddy' => 'zpět na seznam přátel',
+    'back_squad_overview' => 'zpět na přehled skupin',
+    'challenge' => 'výzvy',
+    'contact' => 'Kontakt',
+    'ignore' => 'ignorovaní uživatelé',
+    'inactive' => 'neaktivní',
+    'member' => 'Člen',
+    'members' => 'Členové',
+    'messenger' => 'zprávy',
+    'no_description' => 'popis neexistuje',
+    'no_userpic' => 'avatar neexistuje!',
+    'position' => 'Pozice',
+    'results' => 'výsledky',
+    'show_details' => 'ukázat detaily',
+    'squad_plays' => 'Ukázat hráče',
+    'squads' => 'skupiny',
+    'status' => 'Status',
+    'town' => 'Město',
+    'userpicture' => 'uživatelský obrázek'
 );
 

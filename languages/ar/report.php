@@ -25,14 +25,13 @@
 ##########################################################################
 */
 
-
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'no_informations'=>'لا تتوفر معلومات',
-  'report_message'=>'[b]هناك تقرير جديد %s - Report[/b][br][br]%s-ID: %d[br]Info: %s[br]Referer: [url]index.php?site=files&file=%d[/url]',
-  'report_recognized'=>'تم الاعتراف بالتقرير الخاص بك. شكرا لك.',
-  'wrong_securitycode'=>'قمت بإدخال رمز الحماية خطأ<br><br>[<a href="javascript:back();">العوده</a>]'
+    'no_informations' => 'لا تتوفر معلومات',
+    'report_message' => '[b]هناك تقرير جديد %s - Report[/b][br][br]%s-ID: %d[br]Info: %s[br]Referer: [url]index.php?site=files&file=%d[/url]',
+    'report_recognized' => 'تم الاعتراف بالتقرير الخاص بك. شكرا لك.',
+    'wrong_securitycode' => 'قمت بإدخال رمز الحماية خطأ<br><br>[<a href="javascript:back();">العوده</a>]'
 );
 

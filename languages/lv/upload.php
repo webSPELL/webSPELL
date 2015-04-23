@@ -25,18 +25,17 @@
 ##########################################################################
 */
 
-
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'add_to_message'=>'Pievienot ziņai',
-  'close_window'=>'aiztaisīt logu',
-  'delete'=>'Izdzēst',
-  'existing_files'=>'Esošās datnes',
-  'file_upload'=>'Augšuplādēt datni',
-  'invalid_access'=>'Nederīga piekļuve!',
-  'no_access'=>'Nav piekļuves!',
-  'upload'=>'Augšuplādēt'
+    'add_to_message' => 'Pievienot ziņai',
+    'close_window' => 'aiztaisīt logu',
+    'delete' => 'Izdzēst',
+    'existing_files' => 'Esošās datnes',
+    'file_upload' => 'Augšuplādēt datni',
+    'invalid_access' => 'Nederīga piekļuve!',
+    'no_access' => 'Nav piekļuves!',
+    'upload' => 'Augšuplādēt'
 );
 

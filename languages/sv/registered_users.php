@@ -25,19 +25,19 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'contact'=>'Kontakt',
-	'country'=>'Land',
-	'homepage'=>'Hemsida',
-	'last_login'=>'Senast inloggad',
-	'nickname'=>'Smeknamn',
-	'no_users'=>'Inga registrerade användare',
-	'now_on'=>'Nu online',
-	'registered_users'=>'registrerade medlemmar',
-	'registration'=>'Registrerad sedan',
-	'sort'=>'Sort:'
+    'contact' => 'Kontakt',
+    'country' => 'Land',
+    'homepage' => 'Hemsida',
+    'last_login' => 'Senast inloggad',
+    'nickname' => 'Smeknamn',
+    'no_users' => 'Inga registrerade användare',
+    'now_on' => 'Nu online',
+    'registered_users' => 'registrerade medlemmar',
+    'registration' => 'Registrerad sedan',
+    'sort' => 'Sort:'
 );
 

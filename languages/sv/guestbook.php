@@ -25,38 +25,36 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'admin_comment'=>'Admin kommentar',
-  'bbcode'=>'<a href="javascript:void(0);" onclick="window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> är PÅ',
-	'by'=>'av',
-	'comment'=>'Kommentera',
-	'delete_selected'=>'Radera markerade',
-	'enter_a_message'=>'Du måste skriva ett meddelande!',
-	'error_captcha'=>'Fel säkerhets kod!',
-	'enter_your_name'=>'Du måste skriva ditt namn!',
-	'guestbook'=>'gästbok',
-	'guestbook_comment'=>'Gästbok kommentar',
-	'homepage'=>'Hemsida',
-	'html'=>'HTML AV',
-	'icq'=>'ICQ',
-	'ip'=>'IP',
-	'mail'=>'Din email adress',
-	'name'=>'Ditt namn',
-	'new_entry'=>'Nytt inlägg',
-	'no_access'=>'Du är inte inloggad.<br><a href="index.php?site=login">Logga in</a> | <a href="index.php?site=register">Registrera</a>',
-	'options'=>'Val',
-	'pmsubject_newentry'=>'Nytt gästboks inlägg',
-	'pmtext_newentry'=>'[b]Någon har lämnat ett nytt inlägg i din gästbok![/b][br][br] [URL=index.php?site=guestbook#%insertid%]Klicka här för att läsa inlägget[/URL] ',
-	'security_code'=>'Sökerhets kod',
-	'select_all'=>'välj alla',
-	'smilies'=>'<a href="javascript:void(0);" onclick="window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smilies</a> PÅ',
-	'sort'=>'Sortera:',
-	'submit'=>'Skicka',
-	'update_comment'=>'Spara kommentar',
-	'wrote'=>'skrev',
-	'your_message'=>'Ditt meddelande'
+    'admin_comment' => 'Admin kommentar',
+    'bbcode' => '<a href="javascript:void(0);" onclick="window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> är PÅ',
+    'by' => 'av',
+    'comment' => 'Kommentera',
+    'delete_selected' => 'Radera markerade',
+    'enter_a_message' => 'Du måste skriva ett meddelande!',
+    'enter_your_name' => 'Du måste skriva ditt namn!',
+    'error_captcha' => 'Fel säkerhets kod!',
+    'guestbook' => 'gästbok',
+    'guestbook_comment' => 'Gästbok kommentar',
+    'homepage' => 'Hemsida',
+    'html' => 'HTML AV',
+    'mail' => 'Din email adress',
+    'name' => 'Ditt namn',
+    'new_entry' => 'Nytt inlägg',
+    'no_access' => 'Du är inte inloggad.<br><a href="index.php?site=login">Logga in</a> | <a href="index.php?site=register">Registrera</a>',
+    'options' => 'Val',
+    'pmsubject_newentry' => 'Nytt gästboks inlägg',
+    'pmtext_newentry' => '[b]Någon har lämnat ett nytt inlägg i din gästbok![/b][br][br] [URL=index.php?site=guestbook#%insertid%]Klicka här för att läsa inlägget[/URL] ',
+    'security_code' => 'Sökerhets kod',
+    'select_all' => 'välj alla',
+    'smilies' => '<a href="javascript:void(0);" onclick="window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smilies</a> PÅ',
+    'sort' => 'Sortera:',
+    'submit' => 'Skicka',
+    'update_comment' => 'Spara kommentar',
+    'wrote' => 'skrev',
+    'your_message' => 'Ditt meddelande'
 );
 

@@ -25,34 +25,33 @@
 ##########################################################################
 */
 
-
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'actions'=>'Akcije',
-  'add_gallery'=>'dodaj galeriju',
-  'add_img'=>'Dodaj img',
-  'add_picture'=>'dodaj sliku',
-  'comment'=>'Komentariši',
-  'delete'=>'Izbriši',
-  'disable_comments'=>'Onemoguci komentare',
-  'edit'=>'Izmjeni',
-  'enable_user_comments'=>'Omoguci komentare korisnicima',
-  'enable_visitor_comments'=>'Svi mogu komentarisati',
-  'gallery_name'=>'Ime galerije',
-  'group'=>'Grupa',
-  'name'=>'Ime',
-  'new_gallery'=>'Nova galerija',
-  'no_galleries'=>'Nema dostupnih galerija.',
-  'no_space_left'=>'Nije vam preostalo prostora.',
-  'picture'=>'Slika',
-  'please_enter_name'=>'Molimo unesite ime!',
-  'really_delete_gallery'=>'Stvarno izbriši galeriju?',
-  'update'=>'Spremi izmjene',
-  'user_gallery'=>'Korisnička galerija',
-  'usergalleries'=>'Galerije korisnika',
-  'visitor_comments'=>'Komentari posjetioca',
-  'x_of_y_mb_in_use'=>'<span style="color:%spacecolor%">&nbsp;%used_size%</span> od %available_size% MB se trenutno koristi.'
+    'actions' => 'Akcije',
+    'add_gallery' => 'dodaj galeriju',
+    'add_img' => 'Dodaj img',
+    'add_picture' => 'dodaj sliku',
+    'comment' => 'Komentariši',
+    'delete' => 'Izbriši',
+    'disable_comments' => 'Onemoguci komentare',
+    'edit' => 'Izmjeni',
+    'enable_user_comments' => 'Omoguci komentare korisnicima',
+    'enable_visitor_comments' => 'Svi mogu komentarisati',
+    'gallery_name' => 'Ime galerije',
+    'group' => 'Grupa',
+    'name' => 'Ime',
+    'new_gallery' => 'Nova galerija',
+    'no_galleries' => 'Nema dostupnih galerija.',
+    'no_space_left' => 'Nije vam preostalo prostora.',
+    'picture' => 'Slika',
+    'please_enter_name' => 'Molimo unesite ime!',
+    'really_delete_gallery' => 'Stvarno izbriši galeriju?',
+    'update' => 'Spremi izmjene',
+    'user_gallery' => 'Korisnička galerija',
+    'usergalleries' => 'Galerije korisnika',
+    'visitor_comments' => 'Komentari posjetioca',
+    'x_of_y_mb_in_use' => '<span style="color:%spacecolor%">&nbsp;%used_size%</span> od %available_size% MB se trenutno koristi.'
 );
 

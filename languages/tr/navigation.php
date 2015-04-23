@@ -24,50 +24,43 @@
 #                                                                        #
 ##########################################################################
 */
-/**
- * Online Language Editor Turkey language file for webSPELL 4.2.2
- * @author Stefan Giesecke <webmaster@giesi.com>
- * @copyright Copyright (c) 2010, Stefan Giesecke
- * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
- */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'about_us'=>'Hakkımızda',
-  'archives'=>'Arşivler',
-  'articles'=>'Makaleler',
-  'awards'=>'Ödüller',
-  'calendar'=>'Takvim',
-  'clan'=>'Klan',
-  'community'=>'Topluluk',
-  'contact'=>'İletişim Formu',
-  'demos'=>'Demolar',
-  'downloads'=>'İndirilenler',
-  'faq'=>'FAQ',
-  'fight_us'=>'Bizimler Savaş',
-  'forums'=>'Forumlar',
-  'gallery'=>'Galeri',
-  'guestbook'=>'Ziyaretçi Defteri',
-  'history'=>'Tarih',
-  'imprint'=>'Marka',
-  'join_us'=>'Bize Katıl',
-  'links'=>'Web Bağlantısı',
-  'links_us'=>'Bize Bağlan',
-  'main'=>'Esas',
-  'matches'=>'Maçlar',
-  'media'=>'Medya',
-  'members'=>'Üyeler',
-  'miscellaneous'=>'Diğer',
-  'news'=>'Haberler',
-  'newsletter'=>'Bülten',
-  'polls'=>'Anketler',
-  'registered_users'=>'Kayıtlı Kullanıcılar',
-  'search'=>'Arama',
-  'servers'=>'Sunucular',
-  'sponsors'=>'Sponsorlar',
-  'squads'=>'Takımlar',
-  'who_is_online'=>'Kimler Çevrimiçi?'
+    'about_us' => 'Hakkımızda',
+    'archives' => 'Arşivler',
+    'articles' => 'Makaleler',
+    'awards' => 'Ödüller',
+    'calendar' => 'Takvim',
+    'clan' => 'Klan',
+    'community' => 'Topluluk',
+    'contact' => 'İletişim Formu',
+    'demos' => 'Demolar',
+    'downloads' => 'İndirilenler',
+    'fight_us' => 'Bizimler Savaş',
+    'forums' => 'Forumlar',
+    'gallery' => 'Galeri',
+    'guestbook' => 'Ziyaretçi Defteri',
+    'history' => 'Tarih',
+    'imprint' => 'Marka',
+    'join_us' => 'Bize Katıl',
+    'links' => 'Web Bağlantısı',
+    'links_us' => 'Bize Bağlan',
+    'main' => 'Esas',
+    'matches' => 'Maçlar',
+    'media' => 'Medya',
+    'members' => 'Üyeler',
+    'miscellaneous' => 'Diğer',
+    'news' => 'Haberler',
+    'newsletter' => 'Bülten',
+    'polls' => 'Anketler',
+    'registered_users' => 'Kayıtlı Kullanıcılar',
+    'search' => 'Arama',
+    'servers' => 'Sunucular',
+    'sponsors' => 'Sponsorlar',
+    'squads' => 'Takımlar',
+    'who_is_online' => 'Kimler Çevrimiçi?'
 );
 

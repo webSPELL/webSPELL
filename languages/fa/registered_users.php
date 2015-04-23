@@ -25,19 +25,19 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'contact'=>'ارتباط',
-  'country'=>'کشور',
-  'homepage'=>'وب سایت',
-  'last_login'=>'اخرین ورود',
-  'nickname'=>'نام مخفف',
-  'no_users'=>'هیچ کاربر ثبت نام شده ای',
-  'now_on'=>'هم اکنون انلاین',
-  'registered_users'=>'کاربران',
-  'registration'=>'ثبت نام شده از',
-  'sort'=>'بر حسب:'
+    'contact' => 'ارتباط',
+    'country' => 'کشور',
+    'homepage' => 'وب سایت',
+    'last_login' => 'اخرین ورود',
+    'nickname' => 'نام مخفف',
+    'no_users' => 'هیچ کاربر ثبت نام شده ای',
+    'now_on' => 'هم اکنون انلاین',
+    'registered_users' => 'کاربران',
+    'registration' => 'ثبت نام شده از',
+    'sort' => 'بر حسب:'
 );
 

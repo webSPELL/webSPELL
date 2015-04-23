@@ -25,39 +25,36 @@
 ##########################################################################
 */
 
-
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'admin_comment'=>'Admin komentar',
-  'bbcode'=>'<a href="javascript:void(0);" onclick="window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBKod</a> uključen',
-  'by'=>'napisao',
-  'comment'=>'Komentariši',
-  'delete_selected'=>'Izbriši označeno',
-  'enter_a_message'=>'Morate unijeti poruku!',
-  'error_captcha'=>'Krivi sigurnosni kod!',
-  'enter_your_name'=>'Morate unijeti ime!',
-  'guestbook'=>'knjiga musafira',
-  'guestbook_comment'=>'Komenatarisi knjige musafira',
-  'homepage'=>'Homepage',
-  'html'=>'HTML isključen',
-  'icq'=>'ICQ',
-  'ip'=>'IP',
-  'mail'=>'Vaš e-mail',
-  'name'=>'Vaše ime',
-  'new_entry'=>'Novi unos',
-  'no_access'=>'Niste prijavljeni.<br><a href="index.php?site=login">Prijavi se</a> | <a href="index.php?site=register">Registruj se</a>',
-  'options'=>'Opcije',
-  'pmsubject_newentry'=>'Novi unos u knjigu musafira',
-  'pmtext_newentry'=>'[b]Neko je ostavio poruku u Vašoj knjizi musafira![/b][br][br] [URL=admin/admincenter.php?site=guestbook]Klikni da pročitaš poruku[/URL] ',
-  'security_code'=>'Sigurnosni kod',
-  'select_all'=>'označi sve',
-  'smilies'=>'<a href="javascript:void(0);" onclick="window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smajlići</a> uključeni',
-  'sort'=>'Razvrstaj:',
-  'submit'=>'Spremi',
-  'update_comment'=>'Spremi komentar',
-  'wrote'=>'je napisao',
-  'your_message'=>'Vaša poruka'
+    'admin_comment' => 'Admin komentar',
+    'bbcode' => '<a href="javascript:void(0);" onclick="window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBKod</a> uključen',
+    'by' => 'napisao',
+    'comment' => 'Komentariši',
+    'delete_selected' => 'Izbriši označeno',
+    'enter_a_message' => 'Morate unijeti poruku!',
+    'enter_your_name' => 'Morate unijeti ime!',
+    'error_captcha' => 'Krivi sigurnosni kod!',
+    'guestbook' => 'knjiga musafira',
+    'guestbook_comment' => 'Komenatarisi knjige musafira',
+    'homepage' => 'Homepage',
+    'html' => 'HTML isključen',
+    'mail' => 'Vaš e-mail',
+    'name' => 'Vaše ime',
+    'new_entry' => 'Novi unos',
+    'no_access' => 'Niste prijavljeni.<br><a href="index.php?site=login">Prijavi se</a> | <a href="index.php?site=register">Registruj se</a>',
+    'options' => 'Opcije',
+    'pmsubject_newentry' => 'Novi unos u knjigu musafira',
+    'pmtext_newentry' => '[b]Neko je ostavio poruku u Vašoj knjizi musafira![/b][br][br] [URL=admin/admincenter.php?site=guestbook]Klikni da pročitaš poruku[/URL] ',
+    'security_code' => 'Sigurnosni kod',
+    'select_all' => 'označi sve',
+    'smilies' => '<a href="javascript:void(0);" onclick="window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smajlići</a> uključeni',
+    'sort' => 'Razvrstaj:',
+    'submit' => 'Spremi',
+    'update_comment' => 'Spremi komentar',
+    'wrote' => 'je napisao',
+    'your_message' => 'Vaša poruka'
 );
 

@@ -24,24 +24,18 @@
 #                                                                        #
 ##########################################################################
 */
-/**
- * Online Language Editor Turkey language file for webSPELL 4.2.2
- * @author Stefan Giesecke <webmaster@giesi.com>
- * @copyright Copyright (c) 2010, Stefan Giesecke
- * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
- */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'all_messages'=>'Hepsini Göster',
-  'enter_message'=>'Bir mesaj girmek zorundasınız!',
-  'enter_name'=>'Bir isim girmek zorundasınız!',
-  'delete_selected'=>'Seçileni sil',
-  'select_all'=>'Tümünü seç',
-  'shout'=>'Haykırın!',
-  'shoutbox'=>'Söylenenler',
-  'sort'=>'Sıralama:'
+    'all_messages' => 'Hepsini Göster',
+    'delete_selected' => 'Seçileni sil',
+    'enter_message' => 'Bir mesaj girmek zorundasınız!',
+    'enter_name' => 'Bir isim girmek zorundasınız!',
+    'select_all' => 'Tümünü seç',
+    'shout' => 'Haykırın!',
+    'shoutbox' => 'Söylenenler',
+    'sort' => 'Sıralama:'
 );
 

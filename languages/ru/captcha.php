@@ -25,11 +25,10 @@
 ##########################################################################
 */
 
-
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'security_code'=>'Код проверки'
+    'security_code' => 'Код проверки'
 );
 

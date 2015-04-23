@@ -25,17 +25,17 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'invalid_password'=>'Votre mot de passe est invalide.',
-	'ip_banned'=>'Votre adresse IP est bannie de ce site.<br>%reason%',
-	'login_successful'=>'Connexion réussie !',
-	'no_user'=>'Le membre <b>%username%</b> n\'a pas été trouvé dans la base de données.',
-	'not_activated'=>'Votre compte n\'est pas activé.',
-	'session_error'=>'Assurez-vous que votre navigateur accepte les cookies.<br>Si le problème persiste, contactez le webmaster.',
-  'return'=>'<a href="javascript:history.back()">Retour</a>',
-  'return_reenter' => '<a href="javascript:history.back()">Retour et répétez entrée</a>'
+    'invalid_password' => 'Votre mot de passe est invalide.',
+    'ip_banned' => 'Votre adresse IP est bannie de ce site.<br>%reason%',
+    'login_successful' => 'Connexion réussie !',
+    'no_user' => 'Le membre <b>%username%</b> n\'a pas été trouvé dans la base de données.',
+    'not_activated' => 'Votre compte n\'est pas activé.',
+    'return' => '<a href="javascript:history.back()">Retour</a>',
+    'return_reenter' => '<a href="javascript:history.back()">Retour et répétez entrée</a>',
+    'session_error' => 'Assurez-vous que votre navigateur accepte les cookies.<br>Si le problème persiste, contactez le webmaster.'
 );
 

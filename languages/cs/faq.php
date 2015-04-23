@@ -25,17 +25,16 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'admin_button'=>'FAQ Administrace',
-	'answer'=>'Odpověď',
-	'categories'=>'Kategorie',
-	'faq'=>'FAQ',
-	'faqs'=>'FAQ',
-	'no_categories'=>'neexistuje kategorie vytvořte ji',
-	'no_faq'=>'neexistuje kategorie vytvořte ji.<br><a href="index.php?site=faq">Zpìt</a>',
-	'saved_on'=>'vložil'
+    'admin_button' => 'FAQ Administrace',
+    'answer' => 'Odpověď',
+    'categories' => 'Kategorie',
+    'faqs' => 'FAQ',
+    'no_categories' => 'neexistuje kategorie vytvořte ji',
+    'no_faq' => 'neexistuje kategorie vytvořte ji.<br><a href="index.php?site=faq">Zpìt</a>',
+    'saved_on' => 'vložil'
 );
 

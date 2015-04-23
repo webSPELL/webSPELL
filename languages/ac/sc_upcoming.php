@@ -25,10 +25,10 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'fight_us'=>'crwdns15631:0crwdne15631:0'
+    'fight_us' => 'crwdns15631:0crwdne15631:0'
 );
 

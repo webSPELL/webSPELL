@@ -25,7 +25,7 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
@@ -92,7 +92,6 @@ $language_array = Array(
     'report_dead_link' => 'Пријави неисправан линк',
     'reset' => 'Ресетирај',
     'size' => 'Беличина',
-    'statistic' => 'Статистика',
     'subcategories' => 'Подкатегорије',
     'successful' => 'Успјешно.',
     'top_5_downloads' => 'ТОП 5 Преузимање',
@@ -105,3 +104,4 @@ $language_array = Array(
     'you_have_to_enter_file' => 'Mорате унијети фокумент линк!',
     'you_have_to_enter_filename' => 'морате унијети име документа!'
 );
+

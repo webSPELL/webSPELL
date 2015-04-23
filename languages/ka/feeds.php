@@ -25,12 +25,11 @@
 ##########################################################################
 */
 
-
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'news_feed'=>'ინფორმაციის ველი',
-  'latest_news_from'=>'უახლესი ინფორმაციის ველი'
+    'latest_news_from' => 'უახლესი ინფორმაციის ველი',
+    'news_feed' => 'ინფორმაციის ველი'
 );
 

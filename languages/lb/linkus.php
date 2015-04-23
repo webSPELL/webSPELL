@@ -24,31 +24,25 @@
 #                                                                        #
 ##########################################################################
 */
-/**
- * Online Language Editor Luxemburg language file for webSPELL 4.2.2
- * @author Stefan Giesecke <webmaster@giesi.com>
- * @copyright Copyright (c) 2010, Stefan Giesecke
- * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
- */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'back'=>'zréck',
-  'banner'=>'Banner',
-  'banner_to_big'=>'Bild ass ze grouss',
-  'delete'=>'läschen',
-  'edit'=>'änderen',
-  'edit_linkus'=>'Banner beaarbechten',
-  'format_incorrect'=>'net erlaabten Bildformat (erlaabt: *.gif, *.jpg oder *.png)',
-  'link_us'=>'Eisen Banner',
-  'name'=>'Numm',
-  'new_banner'=>'neien Banner',
-  'no_access'=>'Keen Zougrëff!',
-  'no_banner'=>'keen Banner do',
-  'really_delete_banner'=>'Dësen Banner wierklech läschen?',
-  'save_banner'=>'Banner späicheren',
-  'use_following_code'=>'Benotz folgendene Quellcode fir dësen Banner op denger Websäit bäizefügen.'
+    'back' => 'zréck',
+    'banner' => 'Banner',
+    'banner_to_big' => 'Bild ass ze grouss',
+    'delete' => 'läschen',
+    'edit' => 'änderen',
+    'edit_linkus' => 'Banner beaarbechten',
+    'format_incorrect' => 'net erlaabten Bildformat (erlaabt: *.gif, *.jpg oder *.png)',
+    'link_us' => 'Eisen Banner',
+    'name' => 'Numm',
+    'new_banner' => 'neien Banner',
+    'no_access' => 'Keen Zougrëff!',
+    'no_banner' => 'keen Banner do',
+    'really_delete_banner' => 'Dësen Banner wierklech läschen?',
+    'save_banner' => 'Banner späicheren',
+    'use_following_code' => 'Benotz folgendene Quellcode fir dësen Banner op denger Websäit bäizefügen.'
 );
 

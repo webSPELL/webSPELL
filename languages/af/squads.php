@@ -24,40 +24,34 @@
 #                                                                        #
 ##########################################################################
 */
-/**
- * Online Language Editor South Africa language file for webSPELL 4.2.2
- * @author Stefan Giesecke <webmaster@giesi.com>
- * @copyright Copyright (c) 2010, Stefan Giesecke
- * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
- */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'about'=>'oor',
-  'active'=>'aktiewe',
-  'add_buddy'=>'voeg by vriendelys',
-  'awards'=>'toekennings',
-  'back_buddy'=>'terug na vriendelys',
-  'back_squad_overview'=>'terug na span oorsig',
-  'challenge'=>'uitdaging',
-  'contact'=>'Kontak',
-  'email'=>'e-pos',
-  'ignore'=>'ignoreer gebruiker',
-  'inactive'=>'onaktiewe',
-  'member'=>'Lid',
-  'members'=>'Lede',
-  'messenger'=>'boodskapper',
-  'no_description'=>'geen beskrywing beskikbaar',
-  'no_userpic'=>'geen gebruiker foto beskikbaar!',
-  'position'=>'Posisie',
-  'results'=>'resultate',
-  'show_details'=>'wys besonderhede',
-  'squad_plays'=>'Span speel',
-  'squads'=>'spanne',
-  'status'=>'Status',
-  'town'=>'Dorp',
-  'userpicture'=>'gebruiker prentjie'
+    'about' => 'oor',
+    'active' => 'aktiewe',
+    'add_buddy' => 'voeg by vriendelys',
+    'awards' => 'toekennings',
+    'back_buddy' => 'terug na vriendelys',
+    'back_squad_overview' => 'terug na span oorsig',
+    'challenge' => 'uitdaging',
+    'contact' => 'Kontak',
+    'email' => 'e-pos',
+    'ignore' => 'ignoreer gebruiker',
+    'inactive' => 'onaktiewe',
+    'member' => 'Lid',
+    'members' => 'Lede',
+    'messenger' => 'boodskapper',
+    'no_description' => 'geen beskrywing beskikbaar',
+    'no_userpic' => 'geen gebruiker foto beskikbaar!',
+    'position' => 'Posisie',
+    'results' => 'resultate',
+    'show_details' => 'wys besonderhede',
+    'squad_plays' => 'Span speel',
+    'squads' => 'spanne',
+    'status' => 'Status',
+    'town' => 'Dorp',
+    'userpicture' => 'gebruiker prentjie'
 );
 

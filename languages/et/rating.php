@@ -25,12 +25,11 @@
 ##########################################################################
 */
 
-
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'no_access'=>'puudub ligipääs!',
-  'just_rate_between_0_10'=>'Hinda 0-10 skaalal!'
+    'just_rate_between_0_10' => 'Hinda 0-10 skaalal!',
+    'no_access' => 'puudub ligipääs!'
 );
 

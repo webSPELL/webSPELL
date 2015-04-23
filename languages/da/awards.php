@@ -25,28 +25,28 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'award'=>'Præmie',
-	'awards'=>'Præmier',
-	'date'=>'Dato',
-	'delete'=>'slet',
-	'edit'=>'rediger',
-	'edit_award'=>'Rediger præmie',
-	'enter_title'=>'Du skal indtaste en titel!',
-	'enter_text'=>'Du skal indtaste en tekst',
-	'event'=>'Begivenhed',
-	'homepage'=>'Hjemmeside',
-	'info'=>'Info',
-	'new_award'=>'Ny præmie',
-	'no_access'=>'Ingen Adgang!',
-	'no_entries'=>'Ingen præmier tilgængelige',
-	'ranking'=>'Rang',
-	'save_award'=>'Gem præmie',
-	'sort'=>'Sorter',
-	'squad'=>'Hold',
-	'update_award'=>'Opdater præmie'
+    'award' => 'Præmie',
+    'awards' => 'Præmier',
+    'date' => 'Dato',
+    'delete' => 'slet',
+    'edit' => 'rediger',
+    'edit_award' => 'Rediger præmie',
+    'enter_text' => 'Du skal indtaste en tekst',
+    'enter_title' => 'Du skal indtaste en titel!',
+    'event' => 'Begivenhed',
+    'homepage' => 'Hjemmeside',
+    'info' => 'Info',
+    'new_award' => 'Ny præmie',
+    'no_access' => 'Ingen Adgang!',
+    'no_entries' => 'Ingen præmier tilgængelige',
+    'ranking' => 'Rang',
+    'save_award' => 'Gem præmie',
+    'sort' => 'Sorter',
+    'squad' => 'Hold',
+    'update_award' => 'Opdater præmie'
 );
 

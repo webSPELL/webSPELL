@@ -25,12 +25,12 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'invalid_request'=>'Ungültiger Aufruf',
-	'no_result'=>'Kein Suchergebnis',
-	'to_much_results'=>'Zu viele Suchergebnisse, bitte mehr Zeichen eingeben.'
+    'invalid_request' => 'Ungültiger Aufruf',
+    'no_result' => 'Kein Suchergebnis',
+    'to_much_results' => 'Zu viele Suchergebnisse, bitte mehr Zeichen eingeben.'
 );
 

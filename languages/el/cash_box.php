@@ -24,48 +24,42 @@
 #                                                                        #
 ##########################################################################
 */
-/**
- * Online Language Editor Greece language file for webSPELL 4.2.2
- * @author Stefan Giesecke <webmaster@giesi.com>
- * @copyright Copyright (c) 2010, Stefan Giesecke
- * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
- */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'add_payment'=>'Προσθηκη πληρωμης',
-  'amount'=>'ποσο',
-  'bank_account'=>'Τραπεζικος λογαριασμος',
-  'calculate'=>'υπολογισμος',
-  'cash_box'=>'ταμείο',
-  'clan'=>'συμμαχια',
-  'clanmembers_only'=>'συμμαχοι μονο',
-  'costs_member'=>'κόστος ανα μελος',
-  'ddmmyyyy'=>'dd.mm.yyy',
-  'delete'=>'διαγραφη',
-  'each_squad'=>'καθε ομάδα',
-  'edit'=>'επεξεργασια',
-  'enter_costs_member'=>'πρεπει να εισαγετε κόστος ανα μελος.',
-  'enter_date'=>'πρεπει να εισαγετε ημερομηνια.',
-  'enter_total_costs'=>'πρεπει να εισαγετε συνολικο κοστος.',
-  'enter_usage'=>'πρεπει να εισαγετε τη χρηση.',
-  'info'=>'πληροφοριες',
-  'invalid_request'=>'Άκυρη αιτηση',
-  'member'=>'μελος',
-  'new_usage'=>'νεα χρηση',
-  'no_entries'=>'δεν υπαρχουν εγγραφες',
-  'not_paid'=>'δεν εχει γινει πληρωμη ακομα',
-  'paid'=>'πληρωμη επιτυχης',
-  'pay_until'=>'πληρωμη μεχρι',
-  'really_delete'=>'ειστε σιγουροι οτι θελετε να διαγραψετε την εγγραφη?',
-  'saved_on'=>'αποθηκευμενο στις',
-  'squad'=>'ομαδα',
-  'submit'=>'αποθηκευση',
-  'total_amount'=>'συνολικο ποσο (clan)',
-  'total_costs'=>'συνολικα εξοδα',
-  'update'=>'ενημερωση',
-  'usage'=>'χρηση'
+    'add_payment' => 'Προσθηκη πληρωμης',
+    'amount' => 'ποσο',
+    'bank_account' => 'Τραπεζικος λογαριασμος',
+    'calculate' => 'υπολογισμος',
+    'cash_box' => 'ταμείο',
+    'clan' => 'συμμαχια',
+    'clanmembers_only' => 'συμμαχοι μονο',
+    'costs_member' => 'κόστος ανα μελος',
+    'ddmmyyyy' => 'dd.mm.yyy',
+    'delete' => 'διαγραφη',
+    'each_squad' => 'καθε ομάδα',
+    'edit' => 'επεξεργασια',
+    'enter_costs_member' => 'πρεπει να εισαγετε κόστος ανα μελος.',
+    'enter_date' => 'πρεπει να εισαγετε ημερομηνια.',
+    'enter_total_costs' => 'πρεπει να εισαγετε συνολικο κοστος.',
+    'enter_usage' => 'πρεπει να εισαγετε τη χρηση.',
+    'info' => 'πληροφοριες',
+    'invalid_request' => 'Άκυρη αιτηση',
+    'member' => 'μελος',
+    'new_usage' => 'νεα χρηση',
+    'no_entries' => 'δεν υπαρχουν εγγραφες',
+    'not_paid' => 'δεν εχει γινει πληρωμη ακομα',
+    'paid' => 'πληρωμη επιτυχης',
+    'pay_until' => 'πληρωμη μεχρι',
+    'really_delete' => 'ειστε σιγουροι οτι θελετε να διαγραψετε την εγγραφη?',
+    'saved_on' => 'αποθηκευμενο στις',
+    'squad' => 'ομαδα',
+    'submit' => 'αποθηκευση',
+    'total_amount' => 'συνολικο ποσο (clan)',
+    'total_costs' => 'συνολικα εξοδα',
+    'update' => 'ενημερωση',
+    'usage' => 'χρηση'
 );
 

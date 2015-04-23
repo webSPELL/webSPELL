@@ -25,23 +25,22 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'admin'=>'Panel admina',
-	'buddy_list'=>'Przyjaciele',
-	'cash-box'=>'Cashbox',
-	'edit_account'=>'Edytuj profil',
-	'galleries'=>'Galeria',
-	'login'=>'Zaloguj',
-	'logout'=>'Wyloguj',
-	'lost_password'=>'Zapomniałeś hasła ?',
-	'messenger'=>'Wiadomości',
-	'n_a'=>'n/a',
-	'overview'=>'Przeglądaj',
-	'register_now'=>'Rejestracja',
-	'registered_users'=>'Zarejestrowani użytkownicy',
-	'welcome_back'=>'Witaj ponownie'
+    'admin' => 'Panel admina',
+    'buddy_list' => 'Przyjaciele',
+    'cash-box' => 'Cashbox',
+    'edit_account' => 'Edytuj profil',
+    'galleries' => 'Galeria',
+    'login' => 'Zaloguj',
+    'logout' => 'Wyloguj',
+    'lost_password' => 'Zapomniałeś hasła ?',
+    'messenger' => 'Wiadomości',
+    'overview' => 'Przeglądaj',
+    'register_now' => 'Rejestracja',
+    'registered_users' => 'Zarejestrowani użytkownicy',
+    'welcome_back' => 'Witaj ponownie'
 );
 

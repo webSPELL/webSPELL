@@ -24,31 +24,25 @@
 #                                                                        #
 ##########################################################################
 */
-/**
- * Online Language Editor Finland language file for webSPELL 4.2.2
- * @author Stefan Giesecke <webmaster@giesi.com>
- * @copyright Copyright (c) 2010, Stefan Giesecke
- * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
- */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'back'=>'takaisin',
-  'banner'=>'Mainoskuva',
-  'banner_to_big'=>'Mainoskuva on liian iso',
-  'delete'=>'poista',
-  'edit'=>'editoi',
-  'edit_linkus'=>'editoi mainoskuvaa',
-  'format_incorrect'=>'Väärä kuvaformaatti (sallittu: *.gif, *.jpg tai *.png)',
-  'link_us'=>'linkitä meidät',
-  'name'=>'Nimi',
-  'new_banner'=>'uusi mainoskuva',
-  'no_access'=>'Ei pääsyä!',
-  'no_banner'=>'ei mainoskuvaa',
-  'really_delete_banner'=>'haluatko varmasti poistaa mainoskuvan?',
-  'save_banner'=>'talleta Mainoskuva',
-  'use_following_code'=>'Käytä seuraavaa koodia, linkittääksesi kotisivuillesi.'
+    'back' => 'takaisin',
+    'banner' => 'Mainoskuva',
+    'banner_to_big' => 'Mainoskuva on liian iso',
+    'delete' => 'poista',
+    'edit' => 'editoi',
+    'edit_linkus' => 'editoi mainoskuvaa',
+    'format_incorrect' => 'Väärä kuvaformaatti (sallittu: *.gif, *.jpg tai *.png)',
+    'link_us' => 'linkitä meidät',
+    'name' => 'Nimi',
+    'new_banner' => 'uusi mainoskuva',
+    'no_access' => 'Ei pääsyä!',
+    'no_banner' => 'ei mainoskuvaa',
+    'really_delete_banner' => 'haluatko varmasti poistaa mainoskuvan?',
+    'save_banner' => 'talleta Mainoskuva',
+    'use_following_code' => 'Käytä seuraavaa koodia, linkittääksesi kotisivuillesi.'
 );
 

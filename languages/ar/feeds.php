@@ -25,12 +25,11 @@
 ##########################################################################
 */
 
-
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'news_feed'=>'الاخبار',
-  'latest_news_from'=>'اخر الاخبار'
+    'latest_news_from' => 'اخر الاخبار',
+    'news_feed' => 'الاخبار'
 );
 

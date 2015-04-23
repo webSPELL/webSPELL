@@ -25,28 +25,26 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'about'=>'О кориснику',
-  'active'=>'активан',
-  'activity'=>'Активност',
-  'awards'=>'Награде',
-  'back_overview'=>'&raquo; <a href="index.php?site=members"><b>натраг на листу чланова</b></a>',
-  'challenge'=>'Изазови нас',
-  'contact'=>'Контакт',
-  'go'=>'Иди!',
-  'inactive'=>'није активан',
-  'member'=>'Члан',
-  'members'=>'Чланови',
-  'nickname'=>'Ник',
-  'no_description'=>'Нема доступног описа',
-  'position'=>'Позиција',
-  'results'=>'Резултати',
-  'show_details'=>'&raquo; <a href="index.php?site=members&amp;action=show&amp;squadID=%squadID%"><b>Прикажи детаље</b></a>',
-  'show_only'=>'Прикажи само',
-  'status'=>'Статус',
-  'town'=>'Град'
+    'about' => 'О кориснику',
+    'active' => 'активан',
+    'activity' => 'Активност',
+    'awards' => 'Награде',
+    'back_overview' => '&raquo; <a href="index.php?site=members"><b>натраг на листу чланова</b></a>',
+    'challenge' => 'Изазови нас',
+    'go' => 'Иди!',
+    'inactive' => 'није активан',
+    'member' => 'Члан',
+    'members' => 'Чланови',
+    'nickname' => 'Ник',
+    'no_description' => 'Нема доступног описа',
+    'position' => 'Позиција',
+    'results' => 'Резултати',
+    'show_details' => '&raquo; <a href="index.php?site=members&amp;action=show&amp;squadID=%squadID%"><b>Прикажи детаље</b></a>',
+    'show_only' => 'Прикажи само',
+    'town' => 'Град'
 );
 

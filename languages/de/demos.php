@@ -25,7 +25,7 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
@@ -75,6 +75,6 @@ $language_array = Array(
     'to_rate' => 'Um diese Demo zu bewerten musst du registriert und angemeldet sein!',
     'update_demo' => 'Demo updaten',
     'user_comments' => 'Kommentare nur für Benutzer erlauben',
-    'visitor_comments' => 'Kommentare für alle erlauben',
-    'vs' => 'vs.'
+    'visitor_comments' => 'Kommentare für alle erlauben'
 );
+

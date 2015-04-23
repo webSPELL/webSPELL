@@ -25,19 +25,18 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'game'=>'Juego',
-  	'information'=>'Información',
-	'ip'=>'IP',
-	'link'=>'Enlace',
-	'no_server'=>'no hay servidores.',
-	'not_supported'=>'No soportado por webserver',
-	'online'=>'encendido',
-	'server'=>'servidor',
-	'status'=>'Estado',
-	'timeout'=>'caido'
+    'game' => 'Juego',
+    'information' => 'Información',
+    'link' => 'Enlace',
+    'no_server' => 'no hay servidores.',
+    'not_supported' => 'No soportado por webserver',
+    'online' => 'encendido',
+    'server' => 'servidor',
+    'status' => 'Estado',
+    'timeout' => 'caido'
 );
 

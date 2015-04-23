@@ -25,15 +25,15 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'admins'=>'Administrador(es):',
-	'coding'=>'Programação',
-	'coding_info'=>'Este website utiliza o script <a href="http://www.webspell.org" target="_blank">webSPELL Free Content Management System (versão: $version)</a>. É baseado em PHP4/5 e MySQL, corre sob a <a href="http://www.fsf.org/licensing/licenses/gpl.html" target="_blank">Licença Pública Geral (GNU GPL)</a>.<br>Faz o download gratuito em: <a href="http://www.webspell.org" target="_blank">www.webSPELL.org</a>',
-	'disclaimer'=>'Aviso Legal',
-	'disclaimer_text'=>'<p><strong>1. Conteúdo</strong><br>
+    'admins' => 'Administrador(es):',
+    'coding' => 'Programação',
+    'coding_info' => 'Este website utiliza o script <a href="http://www.webspell.org" target="_blank">webSPELL Free Content Management System (versão: $version)</a>. É baseado em PHP4/5 e MySQL, corre sob a <a href="http://www.fsf.org/licensing/licenses/gpl.html" target="_blank">Licença Pública Geral (GNU GPL)</a>.<br>Faz o download gratuito em: <a href="http://www.webspell.org" target="_blank">www.webSPELL.org</a>',
+    'disclaimer' => 'Aviso Legal',
+    'disclaimer_text' => '<p><strong>1. Conteúdo</strong><br>
 	O autor não se responsabiliza pela actualidade, correcção, integralidade ou qualidade da informação prestada. Quaisquer reclamações de responsabilidade relativas a danos causados devido à utilização de qualquer informação fornecida, incluindo qualquer tipo de informação incompleta ou incorrecta, serão por isso rejeitadas.<br>
 	Nenhuma das ofertas é vinculativa nem representam obrigações. Partes das páginas ou a publicação integral, incluindo todas as ofertas e informações, poderão ser prolongadas, alteradas ou parcial ou totalmente eliminadas pelo autor, sem aviso prévio.</p>
 	<p><strong>2. Referências e ligações</strong><br>
@@ -44,9 +44,9 @@ $language_array = Array(
 	Se for dada a oportunidade para o fornecimento de dados pessoais ou comerciais (endereço electrónico, nome, moradas), o fornecimento destes dados é realizado voluntariamente. É permitido o uso e pagamento de todos os serviços oferecidos – somente e até ao ponto tecnicamente possível e razoável – sem especificação de qualquer dado pessoal ou sob especificação de dados anónimos ou com alcunha. O uso de endereços postais, telefones, números de fax ou endereços electrónicos publicados, para fins de marketing, é proibido e os ofensores que enviarem spam não desejado serão punidos.</p>
 	<p><strong>5. Validade legal deste aviso</strong><br>
 	Esta publicação deve ser considerada parte da publicação electrónica à qual se refere. Se secções ou termos individuais desta declaração não são legais ou correctas, o conteúdo ou validade das outras partes mantém-se, independentemente desse facto.</p>',
-	'imprint'=>'Impressum',
-	'mods'=>'Moderador(es):',
-	'responsible_persons'=>'Pessoas responsáveis',
-	'webmaster'=>'Webmaster:'
+    'imprint' => 'Impressum',
+    'mods' => 'Moderador(es):',
+    'responsible_persons' => 'Pessoas responsáveis',
+    'webmaster' => 'Webmaster:'
 );
 

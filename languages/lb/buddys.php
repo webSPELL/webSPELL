@@ -24,25 +24,19 @@
 #                                                                        #
 ##########################################################################
 */
-/**
- * Online Language Editor Luxemburg language file for webSPELL 4.2.2
- * @author Stefan Giesecke <webmaster@giesi.com>
- * @copyright Copyright (c) 2010, Stefan Giesecke
- * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
- */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'add_notexists'=>'Dësen Benotzer existéiert net',
-  'add_nouserid'=>'Keng Benotzer-ID fonnt',
-  'add_yourself'=>'Du kanns dech net selwer ignoréieren oder als Frënd hunn :P',
-  'buddy_nousers'=>'Du hues keng Benotzer an denger Frëndslescht',
-  'buddys'=>'Frënn',
-  'ignore_nousers'=>'Du hues keng Benotzer ob der Ignoréierenlescht',
-  'not_logged'=>'Fir den Frënn ze Verwalten muss du registréiert an ugemellt sinn.<br><a href="index.php?site=register">registréieren</a> | <a href="index.php?site=login">umellen</a>',
-  'your_buddylist'=>'Deng Frëndeslescht',
-  'your_ignorelist'=>'Deng Ignoréierenlescht'
+    'add_notexists' => 'Dësen Benotzer existéiert net',
+    'add_nouserid' => 'Keng Benotzer-ID fonnt',
+    'add_yourself' => 'Du kanns dech net selwer ignoréieren oder als Frënd hunn :P',
+    'buddy_nousers' => 'Du hues keng Benotzer an denger Frëndslescht',
+    'buddys' => 'Frënn',
+    'ignore_nousers' => 'Du hues keng Benotzer ob der Ignoréierenlescht',
+    'not_logged' => 'Fir den Frënn ze Verwalten muss du registréiert an ugemellt sinn.<br><a href="index.php?site=register">registréieren</a> | <a href="index.php?site=login">umellen</a>',
+    'your_buddylist' => 'Deng Frëndeslescht',
+    'your_ignorelist' => 'Deng Ignoréierenlescht'
 );
 

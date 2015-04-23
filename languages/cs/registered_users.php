@@ -25,19 +25,19 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'contact'=>'Kontakt',
-	'country'=>'N',
-	'homepage'=>'Domovská stránka',
-	'last_login'=>'Poslední příhlášený',
-	'nickname'=>'Přezdívka',
-	'no_users'=>'neregistrovaný uživatel',
-	'now_on'=>'nyní online',
-	'registered_users'=>'registrovaní uživatelé',
-	'registration'=>'Registrován od',
-	'sort'=>'Seřadit:'
+    'contact' => 'Kontakt',
+    'country' => 'N',
+    'homepage' => 'Domovská stránka',
+    'last_login' => 'Poslední příhlášený',
+    'nickname' => 'Přezdívka',
+    'no_users' => 'neregistrovaný uživatel',
+    'now_on' => 'nyní online',
+    'registered_users' => 'registrovaní uživatelé',
+    'registration' => 'Registrován od',
+    'sort' => 'Seřadit:'
 );
 

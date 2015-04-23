@@ -25,34 +25,32 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'about'=>'about',
-	'active'=>'active',
-	'add_buddy'=>'add to buddylist',
-	'awards'=>'awards',
-	'back_buddy'=>'back to buddy-list',
-	'back_squad_overview'=>'back to squad overview',
-	'challenge'=>'challenge',
-	'contact'=>'Contact',
-	'email'=>'email',
-	'ignore'=>'ignore user',
-	'inactive'=>'inactive',
-	'member'=>'Member',
-	'members'=>'Members',
-	'messenger'=>'messenger',
-	'no_description'=>'no description available',
-	'no_userpic'=>'no userpic available!',
-	'no_entries'=>'no entries available',
-	'position'=>'Position',
-	'results'=>'results',
-	'show_details'=>'show details',
-	'squad_plays'=>'Squad plays',
-	'squads'=>'squads',
-	'status'=>'Status',
-	'town'=>'Town',
-	'userpicture'=>'userpicture'
+    'about' => 'about',
+    'active' => 'active',
+    'add_buddy' => 'add to buddylist',
+    'awards' => 'awards',
+    'back_buddy' => 'back to buddy-list',
+    'back_squad_overview' => 'back to squad overview',
+    'challenge' => 'challenge',
+    'contact' => 'Contact',
+    'ignore' => 'ignore user',
+    'inactive' => 'inactive',
+    'member' => 'Member',
+    'members' => 'Members',
+    'messenger' => 'messenger',
+    'no_description' => 'no description available',
+    'no_userpic' => 'no userpic available!',
+    'position' => 'Position',
+    'results' => 'results',
+    'show_details' => 'show details',
+    'squad_plays' => 'Squad plays',
+    'squads' => 'squads',
+    'status' => 'Status',
+    'town' => 'Town',
+    'userpicture' => 'userpicture'
 );
 

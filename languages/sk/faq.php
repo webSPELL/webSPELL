@@ -25,17 +25,15 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'admin_button'=>'FAQ Administrácia',
-	'answer'=>'Odpoveď',
-	'categories'=>'Kategorie',
-	'faq'=>'FAQ',
-	'faqs'=>'FAQs',
-	'no_categories'=>'žiadne kategórie neboli vytvorené',
-	'no_faq'=>'Žiadne otázky nie sú vytvorené.<br><a href="index.php?site=faq">Naspäť</a>',
-	'saved_on'=>'uložené'
+    'admin_button' => 'FAQ Administrácia',
+    'answer' => 'Odpoveď',
+    'categories' => 'Kategorie',
+    'no_categories' => 'žiadne kategórie neboli vytvorené',
+    'no_faq' => 'Žiadne otázky nie sú vytvorené.<br><a href="index.php?site=faq">Naspäť</a>',
+    'saved_on' => 'uložené'
 );
 

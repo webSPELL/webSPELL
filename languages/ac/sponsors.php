@@ -25,17 +25,17 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'banner'=>'crwdns15733:0crwdne15733:0',
-	'homepage'=>'crwdns15734:0crwdne15734:0',
-	'information'=>'crwdns15735:0crwdne15735:0',
-	'mainsponsor'=>'crwdns15736:0crwdne15736:0',
-	'mainsponsors'=>'crwdns15737:0crwdne15737:0',
-	'no_sponsors'=>'crwdns15738:0crwdne15738:0',
-	'sponsor'=>'crwdns15739:0crwdne15739:0',
-	'sponsors'=>'crwdns15740:0crwdne15740:0'
+    'banner' => 'crwdns15733:0crwdne15733:0',
+    'homepage' => 'crwdns15734:0crwdne15734:0',
+    'information' => 'crwdns15735:0crwdne15735:0',
+    'mainsponsor' => 'crwdns15736:0crwdne15736:0',
+    'mainsponsors' => 'crwdns15737:0crwdne15737:0',
+    'no_sponsors' => 'crwdns15738:0crwdne15738:0',
+    'sponsor' => 'crwdns15739:0crwdne15739:0',
+    'sponsors' => 'crwdns15740:0crwdne15740:0'
 );
 

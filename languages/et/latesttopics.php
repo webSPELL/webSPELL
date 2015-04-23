@@ -25,14 +25,13 @@
 ##########################################################################
 */
 
-
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'board'=>'Foorum',
-  'last_post'=>'Viimane postitaja',
-  'reply'=>'vastus',
-  'replies'=>'vastust'
+    'board' => 'Foorum',
+    'last_post' => 'Viimane postitaja',
+    'replies' => 'vastust',
+    'reply' => 'vastus'
 );
 

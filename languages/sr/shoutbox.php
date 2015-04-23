@@ -25,17 +25,17 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'all_messages'=>'Прикажи све',
-  'enter_message'=>'Морате унијети поруку!',
-  'enter_name'=>'Морате унијети име!',
-  'delete_selected'=>'Избриши одабрано',
-  'select_all'=>'Означи све',
-  'shout'=>'Викни!',
-  'shoutbox'=>'шоутбох',
-  'sort'=>'Разврстај:'
+    'all_messages' => 'Прикажи све',
+    'delete_selected' => 'Избриши одабрано',
+    'enter_message' => 'Морате унијети поруку!',
+    'enter_name' => 'Морате унијети име!',
+    'select_all' => 'Означи све',
+    'shout' => 'Викни!',
+    'shoutbox' => 'шоутбох',
+    'sort' => 'Разврстај:'
 );
 

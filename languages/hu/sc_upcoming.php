@@ -25,10 +25,10 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'fight_us'=>'Hívj ki minket'
+    'fight_us' => 'Hívj ki minket'
 );
 

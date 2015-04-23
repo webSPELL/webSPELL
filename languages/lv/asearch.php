@@ -25,13 +25,12 @@
 ##########################################################################
 */
 
-
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'invalid_request'=>'Nepareizs pieprasījums',
-  'no_result'=>'Meklēšana nedod rezultātu',
-  'to_much_results'=>'Pārāk daudz rezultātu, lūdzu ievadiet vairāk kritērijus.'
+    'invalid_request' => 'Nepareizs pieprasījums',
+    'no_result' => 'Meklēšana nedod rezultātu',
+    'to_much_results' => 'Pārāk daudz rezultātu, lūdzu ievadiet vairāk kritērijus.'
 );
 

@@ -25,19 +25,18 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'game'=>'Igra',
-  'information'=>'Informacije',
-	'ip'=>'IP',
-	'link'=>'Link',
-	'no_server'=>'Nema dostupnih servera.',
-	'not_supported'=>'Server ne podržava ovu opciju',
-	'online'=>'online',
-	'server'=>'server',
-	'status'=>'Status',
-	'timeout'=>'timeout'
+    'game' => 'Igra',
+    'information' => 'Informacije',
+    'link' => 'Link',
+    'no_server' => 'Nema dostupnih servera.',
+    'not_supported' => 'Server ne podržava ovu opciju',
+    'online' => 'online',
+    'server' => 'server',
+    'status' => 'Status',
+    'timeout' => 'timeout'
 );
 

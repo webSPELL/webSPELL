@@ -24,30 +24,23 @@
 #                                                                        #
 ##########################################################################
 */
-/**
- * Online Language Editor South Africa language file for webSPELL 4.2.2
- * @author Stefan Giesecke <webmaster@giesi.com>
- * @copyright Copyright (c) 2010, Stefan Giesecke
- * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
- */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'admin'=>'administrateur',
-  'buddy_list'=>'vriendelys',
-  'cash-box'=>'kontant-boks',
-  'edit_account'=>'wysig rekening',
-  'galleries'=>'galerye',
-  'login'=>'teken in',
-  'logout'=>'teken uit',
-  'lost_password'=>'wagwoord verlore?',
-  'messenger'=>'boodskapper',
-  'n_a'=>'n/a',
-  'overview'=>'oorsig',
-  'register_now'=>'registreer nou',
-  'registered_users'=>'geregistreerde gebruikers',
-  'welcome_back'=>'welkom terug'
+    'admin' => 'administrateur',
+    'buddy_list' => 'vriendelys',
+    'cash-box' => 'kontant-boks',
+    'edit_account' => 'wysig rekening',
+    'galleries' => 'galerye',
+    'login' => 'teken in',
+    'logout' => 'teken uit',
+    'lost_password' => 'wagwoord verlore?',
+    'messenger' => 'boodskapper',
+    'overview' => 'oorsig',
+    'register_now' => 'registreer nou',
+    'registered_users' => 'geregistreerde gebruikers',
+    'welcome_back' => 'welkom terug'
 );
 

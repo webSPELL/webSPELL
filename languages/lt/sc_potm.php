@@ -25,10 +25,10 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'random_picture'=>'Atsitiktinė nuotrauka'
+    'random_picture' => 'Atsitiktinė nuotrauka'
 );
 

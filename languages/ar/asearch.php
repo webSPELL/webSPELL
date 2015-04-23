@@ -25,13 +25,12 @@
 ##########################################################################
 */
 
-
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'invalid_request'=>'طلب خاطئ',
-  'no_result'=>'لا توجد نتائج',
-  'to_much_results'=>'.هنالك الكثير من النتائج الرجاء ادخال حروف اكثر'
+    'invalid_request' => 'طلب خاطئ',
+    'no_result' => 'لا توجد نتائج',
+    'to_much_results' => '.هنالك الكثير من النتائج الرجاء ادخال حروف اكثر'
 );
 

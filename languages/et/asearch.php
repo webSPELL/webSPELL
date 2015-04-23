@@ -25,13 +25,12 @@
 ##########################################################################
 */
 
-
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'invalid_request'=>'Vale päring',
-  'no_result'=>'Ei leidnud midagi',
-  'to_much_results'=>'Liiga palju tulemusi, palun sisesta rohkem tähti.'
+    'invalid_request' => 'Vale päring',
+    'no_result' => 'Ei leidnud midagi',
+    'to_much_results' => 'Liiga palju tulemusi, palun sisesta rohkem tähti.'
 );
 

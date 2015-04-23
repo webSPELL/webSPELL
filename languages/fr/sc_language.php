@@ -25,11 +25,11 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'save'=>'Sauvegarder',
-	'no_session'=>'Svp vérifiez que votre navigateur autorise les cookies et essayer de nouveau de changer le langage.'
+    'no_session' => 'Svp vérifiez que votre navigateur autorise les cookies et essayer de nouveau de changer le langage.',
+    'save' => 'Sauvegarder'
 );
 

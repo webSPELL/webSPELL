@@ -25,33 +25,33 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'actions'=>'Úpravy',
-	'add_gallery'=>'přidat galerii',
-	'add_img'=>'přidat obrázek',
-	'add_picture'=>'přidat obrázek',
-	'comment'=>'Komentář',
-	'delete'=>'smazat',
-	'disable_comments'=>'zakázat komentáře',
-	'edit'=>'upravit',
-	'enable_user_comments'=>'povolit uživatelské komentáře',
-	'enable_visitor_comments'=>'povolit návštìvnické komentáře',
-	'gallery_name'=>'Název galerie',
-	'group'=>'Skupina',
-	'name'=>'Název',
-	'new_gallery'=>'nová galerie',
-	'no_galleries'=>'Galerie neexistuje.',
-	'no_space_left'=>'Nedostatek volného prostoru: zrušeno.',
-	'picture'=>'Obrázek',
-	'please_enter_name'=>'Prosím vlož název!',
-	'really_delete_gallery'=>'Opravdu chcete smazat tuto galerii?',
-	'update'=>'aktualizovat',
-	'user_gallery'=>'Uživatelská galerie',
-	'usergalleries'=>'Uživatelské galerie',
-	'visitor_comments'=>'Komentáře návštěvníků',
-	'x_of_y_mb_in_use'=>'<span style="color:%spacecolor%">&nbsp;%used_size%</span> of %available_size% MB jsou použity.'
+    'actions' => 'Úpravy',
+    'add_gallery' => 'přidat galerii',
+    'add_img' => 'přidat obrázek',
+    'add_picture' => 'přidat obrázek',
+    'comment' => 'Komentář',
+    'delete' => 'smazat',
+    'disable_comments' => 'zakázat komentáře',
+    'edit' => 'upravit',
+    'enable_user_comments' => 'povolit uživatelské komentáře',
+    'enable_visitor_comments' => 'povolit návštìvnické komentáře',
+    'gallery_name' => 'Název galerie',
+    'group' => 'Skupina',
+    'name' => 'Název',
+    'new_gallery' => 'nová galerie',
+    'no_galleries' => 'Galerie neexistuje.',
+    'no_space_left' => 'Nedostatek volného prostoru: zrušeno.',
+    'picture' => 'Obrázek',
+    'please_enter_name' => 'Prosím vlož název!',
+    'really_delete_gallery' => 'Opravdu chcete smazat tuto galerii?',
+    'update' => 'aktualizovat',
+    'user_gallery' => 'Uživatelská galerie',
+    'usergalleries' => 'Uživatelské galerie',
+    'visitor_comments' => 'Komentáře návštěvníků',
+    'x_of_y_mb_in_use' => '<span style="color:%spacecolor%">&nbsp;%used_size%</span> of %available_size% MB jsou použity.'
 );
 

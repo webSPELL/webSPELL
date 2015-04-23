@@ -25,7 +25,7 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
@@ -75,6 +75,6 @@ $language_array = Array(
     'to_rate' => 'Duhet të jeni i regjistruar dhe i loguar për të vlerësuar këtë demo!',
     'update_demo' => 'Updato demo-n',
     'user_comments' => 'Lejo komentet e përdoruesve',
-    'visitor_comments' => 'Lejo komentet e vizituesve',
-    'vs' => 'vs.'
+    'visitor_comments' => 'Lejo komentet e vizituesve'
 );
+

@@ -25,18 +25,18 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'add_notexists'=>'Denne bruger eksisterer ikke',
-	'add_nouserid'=>'Bruger ID ikke tilgængeligt',
-	'add_yourself'=>'Du kan ikke tilføje dig selv, og kan ikke ignorere dig selv!',
-	'buddy_nousers'=>'Du har ingen brugere på din venneliste',
-	'buddys'=>'venner',
-	'ignore_nousers'=>'Du har ingen brugere på din ignorerings liste',
-	'not_logged'=>'For at redigere venner, skal du være registeret og logget ind.<br><a href="index.php?site=register">Registrer/a> | <a href="index.php?site=login">Log ind</a>',
-	'your_buddylist'=>'Din venneliste',
-	'your_ignorelist'=>'Din ignorerings liste'
+    'add_notexists' => 'Denne bruger eksisterer ikke',
+    'add_nouserid' => 'Bruger ID ikke tilgængeligt',
+    'add_yourself' => 'Du kan ikke tilføje dig selv, og kan ikke ignorere dig selv!',
+    'buddy_nousers' => 'Du har ingen brugere på din venneliste',
+    'buddys' => 'venner',
+    'ignore_nousers' => 'Du har ingen brugere på din ignorerings liste',
+    'not_logged' => 'For at redigere venner, skal du være registeret og logget ind.<br><a href="index.php?site=register">Registrer/a> | <a href="index.php?site=login">Log ind</a>',
+    'your_buddylist' => 'Din venneliste',
+    'your_ignorelist' => 'Din ignorerings liste'
 );
 

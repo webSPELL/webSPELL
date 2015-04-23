@@ -25,12 +25,11 @@
 ##########################################################################
 */
 
-
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'no_access'=>'მიუწვდომელია!',
-  'just_rate_between_0_10'=>'გთხოვთ შეაფასოთ 0 დან 10 მდე!'
+    'just_rate_between_0_10' => 'გთხოვთ შეაფასოთ 0 დან 10 მდე!',
+    'no_access' => 'მიუწვდომელია!'
 );
 

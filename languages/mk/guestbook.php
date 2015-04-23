@@ -25,39 +25,36 @@
 ##########################################################################
 */
 
-
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'admin_comment'=>'Коментар на админот',
-  'bbcode'=>'<a href="javascript:void(0);" onclick="window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">ББкод</a> е уклучен',
-  'by'=>'од',
-  'comment'=>'Коментирај',
-  'delete_selected'=>'Избриши го означеното',
-  'enter_a_message'=>'Морате да внесите порака!',
-  'error_captcha'=>'Погрешна сифурносна шифра!',
-  'enter_your_name'=>'Морате да внесите име!',
-  'guestbook'=>'Книга со гости',
-  'guestbook_comment'=>'Коментирај на книгата со гости',
-  'homepage'=>'Главна странa',
-  'html'=>'HTML е исклучен',
-  'icq'=>'ICQ',
-  'ip'=>'IP',
-  'mail'=>'Ваш е-mail',
-  'name'=>'Вашето име',
-  'new_entry'=>'Нов влез',
-  'no_access'=>'Несте пријавени.<br><a href="index.php?site=login">Пријави се</a> | <a href="index.php?site=register">Регистрирај се</a>',
-  'options'=>'Опции',
-  'pmsubject_newentry'=>'Нов влез во книгата со гости',
-  'pmtext_newentry'=>'[b]Некој оставил порака во вашата книга со гости![/b][br][br] [URL=admin/admincenter.php?site=guestbook]Кликни за да ја прочиташ пораката[/URL] ',
-  'security_code'=>'Сигурносна шифра',
-  'select_all'=>'oзначи се',
-  'smilies'=>'<a href="javascript:void(0);" onclick="window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Насмевките</a> уклучени',
-  'sort'=>'Подреди:',
-  'submit'=>'Спреми',
-  'update_comment'=>'Зачувај го коментарот',
-  'wrote'=>'напишал',
-  'your_message'=>'Ваша порака'
+    'admin_comment' => 'Коментар на админот',
+    'bbcode' => '<a href="javascript:void(0);" onclick="window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">ББкод</a> е уклучен',
+    'by' => 'од',
+    'comment' => 'Коментирај',
+    'delete_selected' => 'Избриши го означеното',
+    'enter_a_message' => 'Морате да внесите порака!',
+    'enter_your_name' => 'Морате да внесите име!',
+    'error_captcha' => 'Погрешна сифурносна шифра!',
+    'guestbook' => 'Книга со гости',
+    'guestbook_comment' => 'Коментирај на книгата со гости',
+    'homepage' => 'Главна странa',
+    'html' => 'HTML е исклучен',
+    'mail' => 'Ваш е-mail',
+    'name' => 'Вашето име',
+    'new_entry' => 'Нов влез',
+    'no_access' => 'Несте пријавени.<br><a href="index.php?site=login">Пријави се</a> | <a href="index.php?site=register">Регистрирај се</a>',
+    'options' => 'Опции',
+    'pmsubject_newentry' => 'Нов влез во книгата со гости',
+    'pmtext_newentry' => '[b]Некој оставил порака во вашата книга со гости![/b][br][br] [URL=admin/admincenter.php?site=guestbook]Кликни за да ја прочиташ пораката[/URL] ',
+    'security_code' => 'Сигурносна шифра',
+    'select_all' => 'oзначи се',
+    'smilies' => '<a href="javascript:void(0);" onclick="window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Насмевките</a> уклучени',
+    'sort' => 'Подреди:',
+    'submit' => 'Спреми',
+    'update_comment' => 'Зачувај го коментарот',
+    'wrote' => 'напишал',
+    'your_message' => 'Ваша порака'
 );
 

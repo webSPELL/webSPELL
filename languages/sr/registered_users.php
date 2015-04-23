@@ -25,19 +25,19 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'contact'=>'Контакт',
-  'country'=>'З',
-  'homepage'=>'Страница',
-  'last_login'=>'Задња пријава',
-  'nickname'=>'Ник',
-  'no_users'=>'нема регистрованих корисника',
-  'now_on'=>'тренутно онлине',
-  'registered_users'=>'Регистрованих корисника',
-  'registration'=>'Регистрован од',
-  'sort'=>'Разврстај:'
+    'contact' => 'Контакт',
+    'country' => 'З',
+    'homepage' => 'Страница',
+    'last_login' => 'Задња пријава',
+    'nickname' => 'Ник',
+    'no_users' => 'нема регистрованих корисника',
+    'now_on' => 'тренутно онлине',
+    'registered_users' => 'Регистрованих корисника',
+    'registration' => 'Регистрован од',
+    'sort' => 'Разврстај:'
 );
 

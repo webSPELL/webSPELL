@@ -24,46 +24,40 @@
 #                                                                        #
 ##########################################################################
 */
-/**
- * Online Language Editor Luxemburg language file for webSPELL 4.2.2
- * @author Stefan Giesecke <webmaster@giesi.com>
- * @copyright Copyright (c) 2010, Stefan Giesecke
- * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
- */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'daysonline'=>'Deeg online',
-  'guest'=>'Gaascht',
-  'guests'=>'Gäscht',
-  'lasthour'=>'Lëscht Stonn',
-  'max_day'=>'Daachsrekord',
-  'maximum'=>'Maximum',
-  'month'=>'Mount',
-  'now'=>'Elo',
-  'online'=>'Online',
-  'page_statistics'=>'Säitenstatistik',
-  'registered_users'=>'registréiert Benotzer',
-  'statistic'=>'Weis Statistik',
-  'this_month'=>'Dësen Mount',
-  'today'=>'Haut',
-  'total'=>'Insgesamt',
-  'total_statistic'=>'Gesamtstatistik',
-  'user'=>'Benotzer',
-  'users'=>'Benotzer',
-  'visits'=>'Besicher',
-  'visits_day'=>'Besicher pro Daach',
-  'visits_hour'=>'Besicher pro Stonn',
-  'visits_month'=>'Besicher pro Mount',
-  'visits_total'=>'Besicher insgesamt',
-  'yesterday'=>'Gëschter',
-  'avg_age'=>'Duerchschnëttsalter',
-  'avg_age_clanmember'=>'Duerchschnëttsalter Clanmmatglidder',
-  'youngest_user'=>'Jéngsten Benotzer',
-  'oldest_user'=>'Eelsten Benotzer',
-  'user_statistic'=>'Benotzerstatistik',
-  'years'=>'Joer'
+    'avg_age' => 'Duerchschnëttsalter',
+    'avg_age_clanmember' => 'Duerchschnëttsalter Clanmmatglidder',
+    'daysonline' => 'Deeg online',
+    'guest' => 'Gaascht',
+    'guests' => 'Gäscht',
+    'lasthour' => 'Lëscht Stonn',
+    'max_day' => 'Daachsrekord',
+    'maximum' => 'Maximum',
+    'month' => 'Mount',
+    'now' => 'Elo',
+    'oldest_user' => 'Eelsten Benotzer',
+    'online' => 'Online',
+    'page_statistics' => 'Säitenstatistik',
+    'registered_users' => 'registréiert Benotzer',
+    'statistic' => 'Weis Statistik',
+    'this_month' => 'Dësen Mount',
+    'today' => 'Haut',
+    'total' => 'Insgesamt',
+    'total_statistic' => 'Gesamtstatistik',
+    'user' => 'Benotzer',
+    'user_statistic' => 'Benotzerstatistik',
+    'users' => 'Benotzer',
+    'visits' => 'Besicher',
+    'visits_day' => 'Besicher pro Daach',
+    'visits_hour' => 'Besicher pro Stonn',
+    'visits_month' => 'Besicher pro Mount',
+    'visits_total' => 'Besicher insgesamt',
+    'years' => 'Joer',
+    'yesterday' => 'Gëschter',
+    'youngest_user' => 'Jéngsten Benotzer'
 );
 

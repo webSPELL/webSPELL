@@ -25,20 +25,19 @@
 ##########################################################################
 */
 
-
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'contact'=>'اتصل',
-  'country'=>'البلد',
-  'homepage'=>'الصفحة الرئيسية',
-  'last_login'=>'آخر تسجيل دخول',
-  'nickname'=>'الإسم المستعار',
-  'no_users'=>'لا يوجد أعضاء مسجلين',
-  'now_on'=>'متصل الان',
-  'registered_users'=>'المستخدمين المسجلين',
-  'registration'=>'مسجل منذ',
-  'sort'=>'الفرز:'
+    'contact' => 'اتصل',
+    'country' => 'البلد',
+    'homepage' => 'الصفحة الرئيسية',
+    'last_login' => 'آخر تسجيل دخول',
+    'nickname' => 'الإسم المستعار',
+    'no_users' => 'لا يوجد أعضاء مسجلين',
+    'now_on' => 'متصل الان',
+    'registered_users' => 'المستخدمين المسجلين',
+    'registration' => 'مسجل منذ',
+    'sort' => 'الفرز:'
 );
 

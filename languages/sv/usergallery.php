@@ -25,33 +25,33 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'actions'=>'Aktion',
-	'add_gallery'=>'lägg till Galleri',
-	'add_img'=>'lägg till bild',
-	'add_picture'=>'lägg till Bild',
-	'comment'=>'Kommentera',
-	'delete'=>'radera',
-	'disable_comments'=>'stänga av kommentarer',
-	'edit'=>'redigera',
-	'enable_user_comments'=>'tillåt användar kommentarer',
-	'enable_visitor_comments'=>'tillåt besökar kommentarer',
-	'gallery_name'=>'Galleri-Namn',
-	'group'=>'Grupp',
-	'name'=>'Namn	',
-	'new_gallery'=>'ny galleri',
-	'no_galleries'=>'Inga gallerier tillgängliga.',
-	'no_space_left'=>'Det finns inte mer plats: Avbryten.',
-	'picture'=>'Bild',
-	'please_enter_name'=>'Snäla skriv ett namn!',
-	'really_delete_gallery'=>'Verkligen radera detta galleri?',
-	'update'=>'uppdatera',
-	'user_gallery'=>'Användar-Galleri',
-	'usergalleries'=>'Användargallerier',
-	'visitor_comments'=>'Besökar kommentarer',
-	'x_of_y_mb_in_use'=>'<span style="color:%spacecolor%">&nbsp;%used_size%</span> av %available_size% MB används.'
+    'actions' => 'Aktion',
+    'add_gallery' => 'lägg till Galleri',
+    'add_img' => 'lägg till bild',
+    'add_picture' => 'lägg till Bild',
+    'comment' => 'Kommentera',
+    'delete' => 'radera',
+    'disable_comments' => 'stänga av kommentarer',
+    'edit' => 'redigera',
+    'enable_user_comments' => 'tillåt användar kommentarer',
+    'enable_visitor_comments' => 'tillåt besökar kommentarer',
+    'gallery_name' => 'Galleri-Namn',
+    'group' => 'Grupp',
+    'name' => 'Namn	',
+    'new_gallery' => 'ny galleri',
+    'no_galleries' => 'Inga gallerier tillgängliga.',
+    'no_space_left' => 'Det finns inte mer plats: Avbryten.',
+    'picture' => 'Bild',
+    'please_enter_name' => 'Snäla skriv ett namn!',
+    'really_delete_gallery' => 'Verkligen radera detta galleri?',
+    'update' => 'uppdatera',
+    'user_gallery' => 'Användar-Galleri',
+    'usergalleries' => 'Användargallerier',
+    'visitor_comments' => 'Besökar kommentarer',
+    'x_of_y_mb_in_use' => '<span style="color:%spacecolor%">&nbsp;%used_size%</span> av %available_size% MB används.'
 );
 

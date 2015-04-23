@@ -25,19 +25,18 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'game'=>'Hra',
-	'information'=>'Informácie',
-	'ip'=>'IP',
-	'link'=>'Odkaz',
-	'no_server'=>'žiadne servery.',
-	'not_supported'=>'Nepodporované serverom',
-	'online'=>'online',
-	'server'=>'server',
-	'status'=>'Status',
-	'timeout'=>'timeout'
+    'game' => 'Hra',
+    'information' => 'Informácie',
+    'link' => 'Odkaz',
+    'no_server' => 'žiadne servery.',
+    'not_supported' => 'Nepodporované serverom',
+    'online' => 'online',
+    'server' => 'server',
+    'status' => 'Status',
+    'timeout' => 'timeout'
 );
 

@@ -25,11 +25,11 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'no_access'=>'nepovolený přístup!',
-	'just_rate_between_0_10'=>'Please rate only from 0 to 10 points!'
+    'just_rate_between_0_10' => 'Please rate only from 0 to 10 points!',
+    'no_access' => 'nepovolený přístup!'
 );
 

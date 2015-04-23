@@ -25,18 +25,17 @@
 ##########################################################################
 */
 
-
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'add_to_message'=>'إضافة إلى الرسالة',
-  'close_window'=>'أغلق النافذة',
-  'delete'=>'حذف',
-  'existing_files'=>'الملفات الموجودة',
-  'file_upload'=>'تحديث  الملفات',
-  'invalid_access'=>'الوصول غير صالح',
-  'no_access'=>'لا وصول',
-  'upload'=>'تحديث'
+    'add_to_message' => 'إضافة إلى الرسالة',
+    'close_window' => 'أغلق النافذة',
+    'delete' => 'حذف',
+    'existing_files' => 'الملفات الموجودة',
+    'file_upload' => 'تحديث  الملفات',
+    'invalid_access' => 'الوصول غير صالح',
+    'no_access' => 'لا وصول',
+    'upload' => 'تحديث'
 );
 

@@ -25,18 +25,15 @@
 ##########################################################################
 */
 
-
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'admin_button'=>'FAQ ადმინისტრაცია',
-  'answer'=>'პასუხი',
-  'categories'=>'კატეგორიები',
-  'faq'=>'FAQ',
-  'faqs'=>'FAQs',
-  'no_categories'=>'არ არის კატეგორიები შექმნილი ჯერ',
-  'no_faq'=>'არ არის პასუხები ხელმისაწვდომი.<br><a href="index.php?site=faq">უკან</a>',
-  'saved_on'=>'შენახულია '
+    'admin_button' => 'FAQ ადმინისტრაცია',
+    'answer' => 'პასუხი',
+    'categories' => 'კატეგორიები',
+    'no_categories' => 'არ არის კატეგორიები შექმნილი ჯერ',
+    'no_faq' => 'არ არის პასუხები ხელმისაწვდომი.<br><a href="index.php?site=faq">უკან</a>',
+    'saved_on' => 'შენახულია '
 );
 

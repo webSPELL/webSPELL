@@ -25,18 +25,17 @@
 ##########################################################################
 */
 
-
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'all_messages'=>'Näita kõiki',
-  'enter_message'=>'Sa pead sõnumi kirjutama!',
-  'enter_name'=>'Sa pead nime kirjutama!',
-  'delete_selected'=>'Kustuta valitud',
-  'select_all'=>'Vali kõik',
-  'shout'=>'Hüüa!',
-  'shoutbox'=>'hüüdmiskast',
-  'sort'=>'Sorteerimine:'
+    'all_messages' => 'Näita kõiki',
+    'delete_selected' => 'Kustuta valitud',
+    'enter_message' => 'Sa pead sõnumi kirjutama!',
+    'enter_name' => 'Sa pead nime kirjutama!',
+    'select_all' => 'Vali kõik',
+    'shout' => 'Hüüa!',
+    'shoutbox' => 'hüüdmiskast',
+    'sort' => 'Sorteerimine:'
 );
 

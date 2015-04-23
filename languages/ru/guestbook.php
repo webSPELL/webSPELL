@@ -25,39 +25,35 @@
 ##########################################################################
 */
 
-
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'admin_comment'=>'Комментарии админа',
-  'bbcode'=>'<a href="javascript:void(0);" onclick="window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBКод</a> включить',
-  'by'=>'От',
-  'comment'=>'Комментарий',
-  'delete_selected'=>'Удалить выбранные',
-  'enter_a_message'=>'Вы должны ввести сообщение!',
-  'error_captcha'=>'Неправильный код безопасности!',
-  'enter_your_name'=>'Вы должны ввести свое имя!',
-  'guestbook'=>'Гостевая книга',
-  'guestbook_comment'=>'Комментарии в гостевой книге',
-  'homepage'=>'Домашняя страница',
-  'html'=>'HTML выключен',
-  'icq'=>'ICQ',
-  'ip'=>'IP',
-  'mail'=>'Ваш E-Mail адрес',
-  'name'=>'Ваше имя',
-  'new_entry'=>'Новая запись',
-  'no_access'=>'Вы не вошли в систему.<br><a href="index.php?site=login">Login</a> | <a href="index.php?site=register">Регистрироваться</a>',
-  'options'=>'Настройки',
-  'pmsubject_newentry'=>'Новая запись в гостевой книге',
-  'pmtext_newentry'=>'[b]Кто то оставил вам сообщение в гостевой книге![/b][br][br] [URL=admin/admincenter.php?site=guestbook]Нажмите здесь чтобы прочитать сообщение[/URL] ',
-  'security_code'=>'Код безопасности',
-  'select_all'=>'Выбрать все',
-  'smilies'=>'<a href="javascript:void(0);" onclick="window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Смайлы</a> включить',
-  'sort'=>'Сортировать:',
-  'submit'=>'Продолжить',
-  'update_comment'=>'Сохранить комментарий',
-  'wrote'=>'Написать',
-  'your_message'=>'Ваше сообщение'
+    'admin_comment' => 'Комментарии админа',
+    'bbcode' => '<a href="javascript:void(0);" onclick="window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBКод</a> включить',
+    'comment' => 'Комментарий',
+    'delete_selected' => 'Удалить выбранные',
+    'enter_a_message' => 'Вы должны ввести сообщение!',
+    'enter_your_name' => 'Вы должны ввести свое имя!',
+    'error_captcha' => 'Неправильный код безопасности!',
+    'guestbook' => 'Гостевая книга',
+    'guestbook_comment' => 'Комментарии в гостевой книге',
+    'homepage' => 'Домашняя страница',
+    'html' => 'HTML выключен',
+    'mail' => 'Ваш E-Mail адрес',
+    'name' => 'Ваше имя',
+    'new_entry' => 'Новая запись',
+    'no_access' => 'Вы не вошли в систему.<br><a href="index.php?site=login">Login</a> | <a href="index.php?site=register">Регистрироваться</a>',
+    'options' => 'Настройки',
+    'pmsubject_newentry' => 'Новая запись в гостевой книге',
+    'pmtext_newentry' => '[b]Кто то оставил вам сообщение в гостевой книге![/b][br][br] [URL=admin/admincenter.php?site=guestbook]Нажмите здесь чтобы прочитать сообщение[/URL] ',
+    'security_code' => 'Код безопасности',
+    'select_all' => 'Выбрать все',
+    'smilies' => '<a href="javascript:void(0);" onclick="window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Смайлы</a> включить',
+    'sort' => 'Сортировать:',
+    'submit' => 'Продолжить',
+    'update_comment' => 'Сохранить комментарий',
+    'wrote' => 'Написать',
+    'your_message' => 'Ваше сообщение'
 );
 

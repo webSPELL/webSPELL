@@ -25,29 +25,28 @@
 ##########################################################################
 */
 
-
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'award'=>'Apbalvojums',
-  'awards'=>'apbalvojumi',
-  'date'=>'Datums',
-  'delete'=>'izdzēst',
-  'edit'=>'rediģēt',
-  'edit_award'=>'Rediģēt apbalvojumu',
-  'enter_title'=>'Jums jāievada virsraksts!',
-  'enter_text'=>'Jums jāievada teksts',
-  'event'=>'Notikums',
-  'homepage'=>'Mājas lapa',
-  'info'=>'Informācija',
-  'new_award'=>'Jauns apbalvojums',
-  'no_access'=>'Nav pieejas!',
-  'no_entries'=>'Apbalvojumu nav',
-  'ranking'=>'Sakārtot pēc kārtas',
-  'save_award'=>'Saglabāt apbalvojumu',
-  'sort'=>'Kārtot',
-  'squad'=>'Vads',
-  'update_award'=>'Atjaunot apbalvojumu'
+    'award' => 'Apbalvojums',
+    'awards' => 'apbalvojumi',
+    'date' => 'Datums',
+    'delete' => 'izdzēst',
+    'edit' => 'rediģēt',
+    'edit_award' => 'Rediģēt apbalvojumu',
+    'enter_text' => 'Jums jāievada teksts',
+    'enter_title' => 'Jums jāievada virsraksts!',
+    'event' => 'Notikums',
+    'homepage' => 'Mājas lapa',
+    'info' => 'Informācija',
+    'new_award' => 'Jauns apbalvojums',
+    'no_access' => 'Nav pieejas!',
+    'no_entries' => 'Apbalvojumu nav',
+    'ranking' => 'Sakārtot pēc kārtas',
+    'save_award' => 'Saglabāt apbalvojumu',
+    'sort' => 'Kārtot',
+    'squad' => 'Vads',
+    'update_award' => 'Atjaunot apbalvojumu'
 );
 

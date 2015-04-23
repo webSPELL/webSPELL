@@ -25,10 +25,10 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'security_code'=>'Bezpeènostní kód'
+    'security_code' => 'Bezpeènostní kód'
 );
 

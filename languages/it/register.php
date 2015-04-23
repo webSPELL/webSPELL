@@ -25,24 +25,24 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'activation_successful'=>'La tua richiesta è stata completata con successo.<br>Puoi registrarti ora.',
-	'back'=>'indietro',
-	'enter_nickname'=>'Si prega di inserire un nickname.',
-	'enter_password'=>'Si prega di inserire una password.',
-	'enter_username'=>'Si prega di inserire un nome utente.',
-	'errors_there'=>'Ci sono alcuni errori',
-	'for_login'=>'solo l*applicazione',
-	'invalid_mail'=>'Il dato indirizzo e-mail non è corretto.',
-	'mail'=>'E-Mail',
-	'mail_activation_successful'=>'Il sbloccare il tuo indirizzo e-mail ha avuto esito positivo.',
-	'mail_failed'=>'L*attivazione e-mail non ha potuto essere inviato, si prega di informare il webmaster al riguardo.',
-	'mail_inuse'=>'Esiste già una domanda di questo indirizzo email.',
-	'mail_subject'=>'conferma di registratione da %homepage_url%',
-	'mail_text'=>'Ciao %username%!
+    'activation_successful' => 'La tua richiesta è stata completata con successo.<br>Puoi registrarti ora.',
+    'back' => 'indietro',
+    'enter_nickname' => 'Si prega di inserire un nickname.',
+    'enter_password' => 'Si prega di inserire una password.',
+    'enter_username' => 'Si prega di inserire un nome utente.',
+    'errors_there' => 'Ci sono alcuni errori',
+    'for_login' => 'solo l*applicazione',
+    'invalid_mail' => 'Il dato indirizzo e-mail non è corretto.',
+    'mail' => 'E-Mail',
+    'mail_activation_successful' => 'Il sbloccare il tuo indirizzo e-mail ha avuto esito positivo.',
+    'mail_failed' => 'L*attivazione e-mail non ha potuto essere inviato, si prega di informare il webmaster al riguardo.',
+    'mail_inuse' => 'Esiste già una domanda di questo indirizzo email.',
+    'mail_subject' => 'conferma di registratione da %homepage_url%',
+    'mail_text' => 'Ciao %username%!
 
 La tua notifica alla %pagetitle% (%homepage_url%) ha avuto successo. Qui, ancora una volta i tuoi dati di accesso:
 
@@ -53,21 +53,21 @@ Per completare la registrazione adesso, per attivare il tuo account, visita il s
 
 Grazie per la vostra applicazione
 %pagetitle% - %homepage_url%',
-	'nickname'=>'Nickname',
-	'nickname_inuse'=>'Il soprannome è già presa.',
-	'no_register_when_loggedin'=>'You allready have an account at %pagename%',
-	'password'=>'Password',
-	'profile_info'=>'Applicazione informazioni',
-	'register_now'=>'Registrati ora!',
-	'register_successful'=>'La tua richiesta è stata completata con successo. Sarà in pochi minuti una e-mail con il codice di sblocco in modo da poter attivare il tuo account. Dopo la registrazione è completa.',
-	'registration'=>'Registrazione',
-	'repeat'=>'Ripetere la password',
-	'repeat_invalid'=>'La ripetizione del password non è corretto.',
-	'security_code'=>'Codice di sicurezza',
-	'username'=>'Nome utente',
-	'username_inuse'=>'Il nome utente è già presa.',
-	'username_toolong'=>'Il nome utente è troppo lungo (max. 30 Carattere).',
-	'wrong_activationkey'=>'Il tuo codice di sblocco è sbagliato!',
-	'wrong_securitycode'=>'Il codice di sicurezza è sbagliato!'
+    'nickname' => 'Nickname',
+    'nickname_inuse' => 'Il soprannome è già presa.',
+    'no_register_when_loggedin' => 'You allready have an account at %pagename%',
+    'password' => 'Password',
+    'profile_info' => 'Applicazione informazioni',
+    'register_now' => 'Registrati ora!',
+    'register_successful' => 'La tua richiesta è stata completata con successo. Sarà in pochi minuti una e-mail con il codice di sblocco in modo da poter attivare il tuo account. Dopo la registrazione è completa.',
+    'registration' => 'Registrazione',
+    'repeat' => 'Ripetere la password',
+    'repeat_invalid' => 'La ripetizione del password non è corretto.',
+    'security_code' => 'Codice di sicurezza',
+    'username' => 'Nome utente',
+    'username_inuse' => 'Il nome utente è già presa.',
+    'username_toolong' => 'Il nome utente è troppo lungo (max. 30 Carattere).',
+    'wrong_activationkey' => 'Il tuo codice di sblocco è sbagliato!',
+    'wrong_securitycode' => 'Il codice di sicurezza è sbagliato!'
 );
 

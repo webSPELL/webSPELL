@@ -25,18 +25,17 @@
 ##########################################################################
 */
 
-
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'admin_button'=>'KKK Administratsioon',
-  'answer'=>'Vastus',
-  'categories'=>'Kategooriat',
-  'faq'=>'KKK',
-  'faqs'=>'KKKd',
-  'no_categories'=>'ühtegi kategooriat pole veel loodud',
-  'no_faq'=>'Pole ühtegi küsimust.<br><a href="index.php?site=faq">Tagasi</a>',
-  'saved_on'=>'salvestatud'
+    'admin_button' => 'KKK Administratsioon',
+    'answer' => 'Vastus',
+    'categories' => 'Kategooriat',
+    'faq' => 'KKK',
+    'faqs' => 'KKKd',
+    'no_categories' => 'ühtegi kategooriat pole veel loodud',
+    'no_faq' => 'Pole ühtegi küsimust.<br><a href="index.php?site=faq">Tagasi</a>',
+    'saved_on' => 'salvestatud'
 );
 

@@ -25,7 +25,7 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
@@ -75,6 +75,6 @@ $language_array = Array(
     'to_rate' => 'Morate biti registrirani in prijavljeni oceniti ta demo!',
     'update_demo' => 'Posodobi izmjene',
     'user_comments' => 'Omogoči komentarje uporabnikom',
-    'visitor_comments' => 'Omogoči komentarje obiskovalcem',
-    'vs' => 'vs.'
+    'visitor_comments' => 'Omogoči komentarje obiskovalcem'
 );
+

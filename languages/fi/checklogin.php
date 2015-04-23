@@ -24,24 +24,18 @@
 #                                                                        #
 ##########################################################################
 */
-/**
- * Online Language Editor Finland language file for webSPELL 4.2.2
- * @author Stefan Giesecke <webmaster@giesi.com>
- * @copyright Copyright (c) 2010, Stefan Giesecke
- * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
- */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'invalid_password'=>'Väärä salasana.',
-  'ip_banned'=>'IP-osoitteesi on estetty tällä sivulla.<br>%reason%',
-  'login_successful'=>'Sisäänkirjautuminen onnistui!',
-  'no_user'=>'Käyttäjä <b>%username%</b> ei ole saatavilla tässä systeemissä.',
-  'not_activated'=>'Tilisi ei ole aktivoitu.',
-  'session_error'=>'Varmista että evästeet on käytössä selaimessasi.<br>Jos ongelma on vielä olemassa, ota yhteyttä ylläpitäjään.',
-  'return'=>'<a href="javascript:history.back()">takaisin</a>',
-  'return_reenter' => '<a href="javascript:history.back()">Mene takaisin ja yritä uudelleen.</a>'
+    'invalid_password' => 'Väärä salasana.',
+    'ip_banned' => 'IP-osoitteesi on estetty tällä sivulla.<br>%reason%',
+    'login_successful' => 'Sisäänkirjautuminen onnistui!',
+    'no_user' => 'Käyttäjä <b>%username%</b> ei ole saatavilla tässä systeemissä.',
+    'not_activated' => 'Tilisi ei ole aktivoitu.',
+    'return' => '<a href="javascript:history.back()">takaisin</a>',
+    'return_reenter' => '<a href="javascript:history.back()">Mene takaisin ja yritä uudelleen.</a>',
+    'session_error' => 'Varmista että evästeet on käytössä selaimessasi.<br>Jos ongelma on vielä olemassa, ota yhteyttä ylläpitäjään.'
 );
 

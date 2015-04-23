@@ -25,11 +25,11 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'about_title'=>'Apie mus',
-	'no_about'=>'Dabar jokio aprašymo nėra.'
+    'about_title' => 'Apie mus',
+    'no_about' => 'Dabar jokio aprašymo nėra.'
 );
 

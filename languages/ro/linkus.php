@@ -25,25 +25,24 @@
 ##########################################################################
 */
 
-
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'back'=>'Înapoi',
-  'banner'=>'Banner',
-  'banner_to_big'=>'Imaginea este prea mare',
-  'delete'=>'Şterge',
-  'edit'=>'editează',
-  'edit_linkus'=>'editează banner',
-  'format_incorrect'=>'Format imagine invalid (permis: *.gif, *.jpg or *.png)',
-  'link_us'=>'Link catre noi',
-  'name'=>'Nume',
-  'new_banner'=>'banner nou',
-  'no_access'=>'Fără acces!',
-  'no_banner'=>'nici un link cu banner',
-  'really_delete_banner'=>'sigur vrei să ştergi acest banner?',
-  'save_banner'=>'salvează banner',
-  'use_following_code'=>'Foloseşte următorul cod, pentru a insera banner-ul in pagina ta. '
+    'back' => 'Înapoi',
+    'banner' => 'Banner',
+    'banner_to_big' => 'Imaginea este prea mare',
+    'delete' => 'Şterge',
+    'edit' => 'editează',
+    'edit_linkus' => 'editează banner',
+    'format_incorrect' => 'Format imagine invalid (permis: *.gif, *.jpg or *.png)',
+    'link_us' => 'Link catre noi',
+    'name' => 'Nume',
+    'new_banner' => 'banner nou',
+    'no_access' => 'Fără acces!',
+    'no_banner' => 'nici un link cu banner',
+    'really_delete_banner' => 'sigur vrei să ştergi acest banner?',
+    'save_banner' => 'salvează banner',
+    'use_following_code' => 'Foloseşte următorul cod, pentru a insera banner-ul in pagina ta. '
 );
 

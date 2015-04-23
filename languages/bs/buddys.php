@@ -25,19 +25,18 @@
 ##########################################################################
 */
 
-
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'add_notexists'=>'Ovaj korisnik ne postoji',
-  'add_nouserid'=>'Korisnicki ID nije dostupan',
-  'add_yourself'=>'Ne možete dodati sebe kao prijatelja, niti ignorisati sebe na listi prijatelja!',
-  'buddy_nousers'=>'Nemate korisnika na listi prijatelja',
-  'buddys'=>'Prijatelji',
-  'ignore_nousers'=>'Nemate korisnika na listi ignorisanja prijatelja',
-  'not_logged'=>'Da bi upravljali listom prijatelja, morate biti registrovan i prijavljen korisnik.<br><a href="index.php?site=register">Registruj se</a> | <a href="index.php?site=login">Prijavi se</a>',
-  'your_buddylist'=>'Tvoja lista prijatelja',
-  'your_ignorelist'=>'Tvoja lista ignorisanja'
+    'add_notexists' => 'Ovaj korisnik ne postoji',
+    'add_nouserid' => 'Korisnicki ID nije dostupan',
+    'add_yourself' => 'Ne možete dodati sebe kao prijatelja, niti ignorisati sebe na listi prijatelja!',
+    'buddy_nousers' => 'Nemate korisnika na listi prijatelja',
+    'buddys' => 'Prijatelji',
+    'ignore_nousers' => 'Nemate korisnika na listi ignorisanja prijatelja',
+    'not_logged' => 'Da bi upravljali listom prijatelja, morate biti registrovan i prijavljen korisnik.<br><a href="index.php?site=register">Registruj se</a> | <a href="index.php?site=login">Prijavi se</a>',
+    'your_buddylist' => 'Tvoja lista prijatelja',
+    'your_ignorelist' => 'Tvoja lista ignorisanja'
 );
 

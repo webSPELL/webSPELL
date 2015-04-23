@@ -25,13 +25,12 @@
 ##########################################################################
 */
 
-
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'no_user'=>'Kasutaja pilt pole saadaval',
-  'registered_since'=>'registreeritud alates',
-  'view_profile'=>'külasta profiili'
+    'no_user' => 'Kasutaja pilt pole saadaval',
+    'registered_since' => 'registreeritud alates',
+    'view_profile' => 'külasta profiili'
 );
 

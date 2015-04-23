@@ -25,34 +25,33 @@
 ##########################################################################
 */
 
-
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'actions'=>'تطبيقات',
-  'add_gallery'=>'إضافة معرض',
-  'add_img'=>'إضافة img',
-  'add_picture'=>'إضافة صور',
-  'comment'=>'تعليق',
-  'delete'=>'حذف',
-  'disable_comments'=>'تعطيل التعليقات',
-  'edit'=>'تعديل',
-  'enable_user_comments'=>'تمكين تعليقات المستخدم',
-  'enable_visitor_comments'=>'تمكين تعليقات الزوار',
-  'gallery_name'=>'اسم المعرض',
-  'group'=>'المجموعة',
-  'name'=>'الاسم',
-  'new_gallery'=>'معرض جديد',
-  'no_galleries'=>'لا معارض متاحة.',
-  'no_space_left'=>'لم يعد هناك متسع : إلغاء.',
-  'picture'=>'صورة',
-  'please_enter_name'=>'الرجاء إدخال اسم!',
-  'really_delete_gallery'=>'حذف هذا الألبوم؟',
-  'update'=>'تحديث',
-  'user_gallery'=>'معرض المستخدم',
-  'usergalleries'=>'معارض المستخدمين',
-  'visitor_comments'=>'تعليقات الزوار',
-  'x_of_y_mb_in_use'=>'<span style="color:%spacecolor%">&nbsp;%used_size%</span> of %available_size% MB  استخدمت.'
+    'actions' => 'تطبيقات',
+    'add_gallery' => 'إضافة معرض',
+    'add_img' => 'إضافة img',
+    'add_picture' => 'إضافة صور',
+    'comment' => 'تعليق',
+    'delete' => 'حذف',
+    'disable_comments' => 'تعطيل التعليقات',
+    'edit' => 'تعديل',
+    'enable_user_comments' => 'تمكين تعليقات المستخدم',
+    'enable_visitor_comments' => 'تمكين تعليقات الزوار',
+    'gallery_name' => 'اسم المعرض',
+    'group' => 'المجموعة',
+    'name' => 'الاسم',
+    'new_gallery' => 'معرض جديد',
+    'no_galleries' => 'لا معارض متاحة.',
+    'no_space_left' => 'لم يعد هناك متسع : إلغاء.',
+    'picture' => 'صورة',
+    'please_enter_name' => 'الرجاء إدخال اسم!',
+    'really_delete_gallery' => 'حذف هذا الألبوم؟',
+    'update' => 'تحديث',
+    'user_gallery' => 'معرض المستخدم',
+    'usergalleries' => 'معارض المستخدمين',
+    'visitor_comments' => 'تعليقات الزوار',
+    'x_of_y_mb_in_use' => '<span style="color:%spacecolor%">&nbsp;%used_size%</span> of %available_size% MB  استخدمت.'
 );
 

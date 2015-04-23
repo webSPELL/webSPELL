@@ -25,17 +25,17 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'invalid_password'=>'Du har skrivit in fel lösenord',
-	'ip_banned'=>'Din IP är bannad från denna hemsidan.',
-	'login_successful'=>'Inlogningen lyckad!',
-	'no_user'=>'Användaren <b>%username%</b> är inte tillgänglig.',
-	'not_activated'=>'Ditt konto är inte aktiverat.',
-	'session_error'=>'Kontrollera att du har aktiverat cookies i din webbläsare.<br>Om problemet kvarstår, kontakta webbmastern.',
-  'return'=>'<a href="javascript:history.back()">Gå tillbaka</a>',
-  'return_reenter' => '<a href="javascript:history.back()">Gå tillbaka och försök igen.</a>'
+    'invalid_password' => 'Du har skrivit in fel lösenord',
+    'ip_banned' => 'Din IP är bannad från denna hemsidan.',
+    'login_successful' => 'Inlogningen lyckad!',
+    'no_user' => 'Användaren <b>%username%</b> är inte tillgänglig.',
+    'not_activated' => 'Ditt konto är inte aktiverat.',
+    'return' => '<a href="javascript:history.back()">Gå tillbaka</a>',
+    'return_reenter' => '<a href="javascript:history.back()">Gå tillbaka och försök igen.</a>',
+    'session_error' => 'Kontrollera att du har aktiverat cookies i din webbläsare.<br>Om problemet kvarstår, kontakta webbmastern.'
 );
 

@@ -25,40 +25,39 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'daysonline'=>'Dagen online',
-	'guest'=>'Gast',
-	'guests'=>'Gasten',
-	'lasthour'=>'Afgelopen uur',
-	'max_day'=>'Maximum per dag',
-	'maximum'=>'Maximum',
-	'month'=>'Per maand',
-	'now'=>'Nu',
-	'online'=>'Online',
-	'page_statistics'=>'Pagina statistieken',
-	'registered_users'=>'geregistreerde gebruikers',
-	'statistic'=>'Bekijk statistieken',
-	'this_month'=>'Deze maand',
-	'today'=>'Vandaag',
-	'total'=>'Totaal',
-	'total_statistic'=>'Totale statistieken',
-	'user'=>'gebruiker',
-	'users'=>'gebruikers',
-	'visits'=>'Bezoekers',
-	'visits_day'=>'Bezoekers per Dag',
-	'visits_hour'=>'Bezoekers per uur',
-	'visits_month'=>'Bezoekers per maand',
-	'visits_total'=>'Totaal bezocht',
-	'yesterday'=>'Gisteren',
-	'avg_age'=>'Gemiddelde leeftijd',
-	'avg_age_clanmember'=>'Gemiddelde leeftijd van clanleden',
-	'youngest_user'=>'Jongste gebruiker',
-	'oldest_user'=>'Oudste gebruiker',
-	'user_statistic'=>'Gebruikers statistieken',
-	'years'=>'Jaren'
-
+    'avg_age' => 'Gemiddelde leeftijd',
+    'avg_age_clanmember' => 'Gemiddelde leeftijd van clanleden',
+    'daysonline' => 'Dagen online',
+    'guest' => 'Gast',
+    'guests' => 'Gasten',
+    'lasthour' => 'Afgelopen uur',
+    'max_day' => 'Maximum per dag',
+    'maximum' => 'Maximum',
+    'month' => 'Per maand',
+    'now' => 'Nu',
+    'oldest_user' => 'Oudste gebruiker',
+    'online' => 'Online',
+    'page_statistics' => 'Pagina statistieken',
+    'registered_users' => 'geregistreerde gebruikers',
+    'statistic' => 'Bekijk statistieken',
+    'this_month' => 'Deze maand',
+    'today' => 'Vandaag',
+    'total' => 'Totaal',
+    'total_statistic' => 'Totale statistieken',
+    'user' => 'gebruiker',
+    'user_statistic' => 'Gebruikers statistieken',
+    'users' => 'gebruikers',
+    'visits' => 'Bezoekers',
+    'visits_day' => 'Bezoekers per Dag',
+    'visits_hour' => 'Bezoekers per uur',
+    'visits_month' => 'Bezoekers per maand',
+    'visits_total' => 'Totaal bezocht',
+    'years' => 'Jaren',
+    'yesterday' => 'Gisteren',
+    'youngest_user' => 'Jongste gebruiker'
 );
 

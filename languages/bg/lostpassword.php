@@ -24,20 +24,14 @@
 #                                                                        #
 ##########################################################################
 */
-/**
- * Online Language Editor Bulgaria language file for webSPELL 4.2.2
- * @author Stefan Giesecke <webmaster@giesi.com>
- * @copyright Copyright (c) 2010, Stefan Giesecke
- * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
- */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'email_failed'=>'Възникна проблем при изпращането на e-mail. Моля свържете се с администратора.',
-  'email_subject'=>'Вашият акаунт за %pagetitle%',
-  'email_text'=>'Вашият акаунт за %pagetitle%
+    'email_failed' => 'Възникна проблем при изпращането на e-mail. Моля свържете се с администратора.',
+    'email_subject' => 'Вашият акаунт за %pagetitle%',
+    'email_text' => 'Вашият акаунт за %pagetitle%
 ВНИМАНИЕ! Вашата парола беше сменена
 
 вашето потребителско име: %username%
@@ -45,13 +39,13 @@ $language_array = Array(
 
 да се забавляват на нашата страница
 %homepage_url%',
-  'get_password'=>'получи парола',
-  'lost_password'=>'изгубена парола',
-  'no_mail_given'=>'Не сте въвели e-mail адрес.',
-  'no_user_found'=>'не е намерен потребител!',
-  'successful'=>'Акаунтът Ви беше намерен<br><br>
+    'get_password' => 'получи парола',
+    'lost_password' => 'изгубена парола',
+    'no_mail_given' => 'Не сте въвели e-mail адрес.',
+    'no_user_found' => 'не е намерен потребител!',
+    'successful' => 'Акаунтът Ви беше намерен<br><br>
     Ще получите e-mail с данни за акаунта след няколко секунди.<br><br>
     &#8226; <a href="index.php?site=login">логин</a>',
-  'your_email'=>'Вашият e-mail'
+    'your_email' => 'Вашият e-mail'
 );
 

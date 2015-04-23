@@ -25,18 +25,15 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'admin_button'=>'FAQ Administratie',
-	'answer'=>'Answer',
-	'categories'=>'Categoriën',
-	'faq'=>'FAQ',
-	'faqs'=>'FAQs',
-	'no_categories'=>'nog geen categoriën gemaakt',
-	'no_faq'=>'Geen vragen beschikbaar.<br><a href="index.php?site=faq">Terug</a>',
-	'saved_on'=>'opgeslagen op'
-
+    'admin_button' => 'FAQ Administratie',
+    'answer' => 'Answer',
+    'categories' => 'Categoriën',
+    'no_categories' => 'nog geen categoriën gemaakt',
+    'no_faq' => 'Geen vragen beschikbaar.<br><a href="index.php?site=faq">Terug</a>',
+    'saved_on' => 'opgeslagen op'
 );
 

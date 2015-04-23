@@ -24,39 +24,33 @@
 #                                                                        #
 ##########################################################################
 */
-/**
- * Online Language Editor South Africa language file for webSPELL 4.2.2
- * @author Stefan Giesecke <webmaster@giesi.com>
- * @copyright Copyright (c) 2010, Stefan Giesecke
- * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
- */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'advertisement'=>'advertensie',
-  'articles'=>'artikels',
-  'content'=>'inhoud',
-  'demos'=>'demos',
-  'downloads'=>'afgelaai',
-  'hotest_news'=>'heetste nuus',
-  'language_switch'=>'taal skakelaar',
-  'latest_news'=>'jongste nuus',
-  'login'=>'teken in',
-  'matches'=>'wedstryde',
-  'newsletter'=>'nuusbrief',
-  'partners'=>'vennote',
-  'pic_of_the_moment'=>'foto van die oomblik',
-  'poll'=>'peiling',
-  'random_user'=>'ewekansige gebruiker',
-  'server'=>'bedieners',
-  'shoutbox'=>'gesels boks',
-  'sponsors'=>'borge',
-  'squads'=>'squads',
-  'statistics'=>'statistiek',
-  'topics'=>'onderwerpe',
-  'upcoming_events'=>'opkomende gebeure',
-  'tags'=>'tags'
+    'advertisement' => 'advertensie',
+    'articles' => 'artikels',
+    'content' => 'inhoud',
+    'demos' => 'demos',
+    'downloads' => 'afgelaai',
+    'hotest_news' => 'heetste nuus',
+    'language_switch' => 'taal skakelaar',
+    'latest_news' => 'jongste nuus',
+    'login' => 'teken in',
+    'matches' => 'wedstryde',
+    'newsletter' => 'nuusbrief',
+    'partners' => 'vennote',
+    'pic_of_the_moment' => 'foto van die oomblik',
+    'poll' => 'peiling',
+    'random_user' => 'ewekansige gebruiker',
+    'server' => 'bedieners',
+    'shoutbox' => 'gesels boks',
+    'sponsors' => 'borge',
+    'squads' => 'squads',
+    'statistics' => 'statistiek',
+    'tags' => 'tags',
+    'topics' => 'onderwerpe',
+    'upcoming_events' => 'opkomende gebeure'
 );
 

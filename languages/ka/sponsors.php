@@ -25,18 +25,17 @@
 ##########################################################################
 */
 
-
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'banner'=>'ბანერი',
-  'homepage'=>'მთავარი გვერდი',
-  'information'=>'ინფორმაცია',
-  'mainsponsor'=>'მთავარი სპონსორი',
-  'mainsponsors'=>'მთავარი სპონსორები',
-  'no_sponsors'=>'არ არის სპონსორები',
-  'sponsor'=>'სპონსორი',
-  'sponsors'=>'სპონსორები'
+    'banner' => 'ბანერი',
+    'homepage' => 'მთავარი გვერდი',
+    'information' => 'ინფორმაცია',
+    'mainsponsor' => 'მთავარი სპონსორი',
+    'mainsponsors' => 'მთავარი სპონსორები',
+    'no_sponsors' => 'არ არის სპონსორები',
+    'sponsor' => 'სპონსორი',
+    'sponsors' => 'სპონსორები'
 );
 

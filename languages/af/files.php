@@ -25,7 +25,7 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
@@ -41,7 +41,6 @@ $language_array = Array(
     'database_cl' => 'Database',
     'delete_file' => 'verwyder lêer',
     'description' => 'Beskrywing',
-    'dl' => 'DL',
     'download_now' => 'Aflaai %filename% nou',
     'download_registered_only' => 'Aflaai slegs vir geregistreerde gebruikers!',
     'download_via_mirror' => 'aflaai deur middel van alternatiewe webblad',
@@ -105,3 +104,4 @@ $language_array = Array(
     'you_have_to_enter_file' => 'Jy moet n lêer / url invoer!',
     'you_have_to_enter_filename' => 'Jy moet n lêernaam invoer!'
 );
+

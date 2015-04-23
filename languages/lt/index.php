@@ -25,32 +25,32 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'advertisement'=>'reklama',
-	'articles'=>'straipsniai',
-	'content'=>'turinys',
-	'demos'=>'demo įrašai',
-	'downloads'=>'siuntiniai',
-	'hotest_news'=>'karščiausios naujienos',
-	'language_switch'=>'kalbos keitiklis',
-	'latest_news'=>'paskutinės naujienos',
-	'login'=>'prisijungti',
-	'matches'=>'kovos',
-	'newsletter'=>'naujienlaiškis',
-	'partners'=>'draugai',
-	'pic_of_the_moment'=>'šios akimirkos vaizdas',
-	'poll'=>'apklausa',
-	'random_user'=>'atsitiktinis vartotojas',
-	'server'=>'serveris',
-	'shoutbox'=>'šaukykla',
-	'sponsors'=>'remėjai',
-	'squads'=>'būriai',
-	'statistics'=>'statistika',
-	'topics'=>'temos',
-	'upcoming_events'=>'ateinantys įvykiai',
-	'tags'=>'Žymos'
+    'advertisement' => 'reklama',
+    'articles' => 'straipsniai',
+    'content' => 'turinys',
+    'demos' => 'demo įrašai',
+    'downloads' => 'siuntiniai',
+    'hotest_news' => 'karščiausios naujienos',
+    'language_switch' => 'kalbos keitiklis',
+    'latest_news' => 'paskutinės naujienos',
+    'login' => 'prisijungti',
+    'matches' => 'kovos',
+    'newsletter' => 'naujienlaiškis',
+    'partners' => 'draugai',
+    'pic_of_the_moment' => 'šios akimirkos vaizdas',
+    'poll' => 'apklausa',
+    'random_user' => 'atsitiktinis vartotojas',
+    'server' => 'serveris',
+    'shoutbox' => 'šaukykla',
+    'sponsors' => 'remėjai',
+    'squads' => 'būriai',
+    'statistics' => 'statistika',
+    'tags' => 'Žymos',
+    'topics' => 'temos',
+    'upcoming_events' => 'ateinantys įvykiai'
 );
 

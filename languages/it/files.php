@@ -25,7 +25,7 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
@@ -41,7 +41,6 @@ $language_array = Array(
     'database_cl' => 'Database',
     'delete_file' => 'Data cancellare',
     'description' => 'Descrizione',
-    'dl' => 'DL',
     'download_now' => 'Adesso %filename% scaricare',
     'download_registered_only' => 'Download solo per utenti registrati!',
     'download_via_mirror' => 'A proposito di un altro link per il download',
@@ -105,3 +104,4 @@ $language_array = Array(
     'you_have_to_enter_file' => 'Devi essere un file o un URL!',
     'you_have_to_enter_filename' => 'È necessario inserire un nome per il file!'
 );
+

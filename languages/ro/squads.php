@@ -25,34 +25,33 @@
 ##########################################################################
 */
 
-
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'about'=>'despre',
-  'active'=>'activ',
-  'add_buddy'=>'adaugă prieten',
-  'awards'=>'premii',
-  'back_buddy'=>'înapoi la lista de prieteni',
-  'back_squad_overview'=>'înapoi la vederea de ansamblu a echipei',
-  'challenge'=>'provocare',
-  'contact'=>'Informaţii de contact',
-  'email'=>'mail',
-  'ignore'=>'ignoră',
-  'inactive'=>'inactiv',
-  'member'=>'Membru',
-  'members'=>'Membrii',
-  'messenger'=>'messenger',
-  'no_description'=>'nici o descriere disponibilă',
-  'no_userpic'=>'Utilizatorul nu are nici o fotografie!',
-  'position'=>'Poziţie',
-  'results'=>'rezultate',
-  'show_details'=>'arată detalii',
-  'squad_plays'=>'Squad-ul joaca',
-  'squads'=>'echipe',
-  'status'=>'Status',
-  'town'=>'Oraş',
-  'userpicture'=>'Poza utilizatorului'
+    'about' => 'despre',
+    'active' => 'activ',
+    'add_buddy' => 'adaugă prieten',
+    'awards' => 'premii',
+    'back_buddy' => 'înapoi la lista de prieteni',
+    'back_squad_overview' => 'înapoi la vederea de ansamblu a echipei',
+    'challenge' => 'provocare',
+    'contact' => 'Informaţii de contact',
+    'email' => 'mail',
+    'ignore' => 'ignoră',
+    'inactive' => 'inactiv',
+    'member' => 'Membru',
+    'members' => 'Membrii',
+    'messenger' => 'messenger',
+    'no_description' => 'nici o descriere disponibilă',
+    'no_userpic' => 'Utilizatorul nu are nici o fotografie!',
+    'position' => 'Poziţie',
+    'results' => 'rezultate',
+    'show_details' => 'arată detalii',
+    'squad_plays' => 'Squad-ul joaca',
+    'squads' => 'echipe',
+    'status' => 'Status',
+    'town' => 'Oraş',
+    'userpicture' => 'Poza utilizatorului'
 );
 

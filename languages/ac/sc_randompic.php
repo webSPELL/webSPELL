@@ -25,12 +25,12 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'no_user'=>'crwdns15628:0crwdne15628:0',
-	'registered_since'=>'crwdns15629:0crwdne15629:0',
-	'view_profile'=>'crwdns15630:0crwdne15630:0'
+    'no_user' => 'crwdns15628:0crwdne15628:0',
+    'registered_since' => 'crwdns15629:0crwdne15629:0',
+    'view_profile' => 'crwdns15630:0crwdne15630:0'
 );
 

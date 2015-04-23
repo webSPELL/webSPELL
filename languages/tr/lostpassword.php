@@ -24,20 +24,14 @@
 #                                                                        #
 ##########################################################################
 */
-/**
- * Online Language Editor Turkey language file for webSPELL 4.2.2
- * @author Stefan Giesecke <webmaster@giesi.com>
- * @copyright Copyright (c) 2010, Stefan Giesecke
- * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
- */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'email_failed'=>'E-posta gönderilirken bir sorun oluştu. Yöneticiyle irtibata geçiniz.',
-  'email_subject'=>'Hesap için %pagetitle%',
-  'email_text'=>'Hasabınız İçin %pagetitle%
+    'email_failed' => 'E-posta gönderilirken bir sorun oluştu. Yöneticiyle irtibata geçiniz.',
+    'email_subject' => 'Hesap için %pagetitle%',
+    'email_text' => 'Hasabınız İçin %pagetitle%
 DİKKAT şifreniz değiştirildi
 
 Kullanıcı Adınız: %username%
@@ -45,13 +39,13 @@ Yeni Şifreniz: %new_password%
 
 İyi eğlenceler bizim sayfada
 %homepage_url%',
-  'get_password'=>'Parola al',
-  'lost_password'=>'Şifremi unuttum',
-  'no_mail_given'=>'Herhangi bir e-posta adresi girmediniz.',
-  'no_user_found'=>'kullanıcı bulunamadı!',
-  'successful'=>'Hesabınız bulundu<br><br>
+    'get_password' => 'Parola al',
+    'lost_password' => 'Şifremi unuttum',
+    'no_mail_given' => 'Herhangi bir e-posta adresi girmediniz.',
+    'no_user_found' => 'kullanıcı bulunamadı!',
+    'successful' => 'Hesabınız bulundu<br><br>
     İrkaç saniye içinde hesap verileriyle birlikte bir e-posta alacaksınız.<br><br>
     &#8226; <a href="index.php?site=login">giriş</a>',
-  'your_email'=>'E-Postanız'
+    'your_email' => 'E-Postanız'
 );
 

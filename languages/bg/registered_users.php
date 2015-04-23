@@ -24,26 +24,20 @@
 #                                                                        #
 ##########################################################################
 */
-/**
- * Online Language Editor Bulgaria language file for webSPELL 4.2.2
- * @author Stefan Giesecke <webmaster@giesi.com>
- * @copyright Copyright (c) 2010, Stefan Giesecke
- * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
- */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'contact'=>'Контакт',
-  'country'=>'С',
-  'homepage'=>'Начална страница',
-  'last_login'=>'Последно влизне',
-  'nickname'=>'Никнейм',
-  'no_users'=>'няма регистрирани потребители',
-  'now_on'=>'в момента на линия',
-  'registered_users'=>'регистрирани потребители',
-  'registration'=>'Регистриран от:',
-  'sort'=>'Вид:'
+    'contact' => 'Контакт',
+    'country' => 'С',
+    'homepage' => 'Начална страница',
+    'last_login' => 'Последно влизне',
+    'nickname' => 'Никнейм',
+    'no_users' => 'няма регистрирани потребители',
+    'now_on' => 'в момента на линия',
+    'registered_users' => 'регистрирани потребители',
+    'registration' => 'Регистриран от:',
+    'sort' => 'Вид:'
 );
 

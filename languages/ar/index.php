@@ -25,33 +25,32 @@
 ##########################################################################
 */
 
-
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'advertisement'=>'الاعلانات',
-  'articles'=>'المقالات',
-  'content'=>'المحتوى',
-  'demos'=>'التسجيلات',
-  'downloads'=>'التحميل',
-  'hotest_news'=>'اخبار مختارة',
-  'language_switch'=>'تغيير الغة',
-  'latest_news'=>'اخر الاخبار',
-  'login'=>'الدخول',
-  'matches'=>'المباريات',
-  'newsletter'=>'القائمة البريدية',
-  'partners'=>'الشركاء',
-  'pic_of_the_moment'=>'صورة الحدث',
-  'poll'=>'استفتاء',
-  'random_user'=>'عضو عشوائي',
-  'server'=>'السيرفرات',
-  'shoutbox'=>'صندوق الشات',
-  'sponsors'=>'الداعمين',
-  'squads'=>'الفرق',
-  'statistics'=>'الاحصائيات',
-  'topics'=>'المواضيع',
-  'upcoming_events'=>'الاحداث القادمة',
-  'tags'=>'الكلمات'
+    'advertisement' => 'الاعلانات',
+    'articles' => 'المقالات',
+    'content' => 'المحتوى',
+    'demos' => 'التسجيلات',
+    'downloads' => 'التحميل',
+    'hotest_news' => 'اخبار مختارة',
+    'language_switch' => 'تغيير الغة',
+    'latest_news' => 'اخر الاخبار',
+    'login' => 'الدخول',
+    'matches' => 'المباريات',
+    'newsletter' => 'القائمة البريدية',
+    'partners' => 'الشركاء',
+    'pic_of_the_moment' => 'صورة الحدث',
+    'poll' => 'استفتاء',
+    'random_user' => 'عضو عشوائي',
+    'server' => 'السيرفرات',
+    'shoutbox' => 'صندوق الشات',
+    'sponsors' => 'الداعمين',
+    'squads' => 'الفرق',
+    'statistics' => 'الاحصائيات',
+    'tags' => 'الكلمات',
+    'topics' => 'المواضيع',
+    'upcoming_events' => 'الاحداث القادمة'
 );
 

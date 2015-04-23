@@ -24,24 +24,18 @@
 #                                                                        #
 ##########################################################################
 */
-/**
- * Online Language Editor Russia language file for webSPELL 4.2.2
- * @author Stefan Giesecke <webmaster@giesi.com>
- * @copyright Copyright (c) 2010, Stefan Giesecke
- * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
- */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'add_to_message'=>'Добавить к сообщению',
-  'close_window'=>'закрыть окно',
-  'delete'=>'Удалить',
-  'existing_files'=>'Файлы',
-  'file_upload'=>'Загрузить файл',
-  'invalid_access'=>'Hекорректного доступа!',
-  'no_access'=>'Нет доступа!',
-  'upload'=>'Загрузить'
+    'add_to_message' => 'Добавить к сообщению',
+    'close_window' => 'закрыть окно',
+    'delete' => 'Удалить',
+    'existing_files' => 'Файлы',
+    'file_upload' => 'Загрузить файл',
+    'invalid_access' => 'Hекорректного доступа!',
+    'no_access' => 'Нет доступа!',
+    'upload' => 'Загрузить'
 );
 

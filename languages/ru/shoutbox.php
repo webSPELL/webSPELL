@@ -24,24 +24,17 @@
 #                                                                        #
 ##########################################################################
 */
-/**
- * Online Language Editor Russia language file for webSPELL 4.2.2
- * @author Stefan Giesecke <webmaster@giesi.com>
- * @copyright Copyright (c) 2010, Stefan Giesecke
- * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
- */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'all_messages'=>'Показать всё',
-  'enter_message'=>'Вы должны ввести сообщение!',
-  'enter_name'=>'Вы должны ввести своё имя!',
-  'delete_selected'=>'Удалить выбранное',
-  'select_all'=>'Выбрать всё',
-  'shout'=>'Крикнуть!',
-  'shoutbox'=>'Чат',
-  'sort'=>'Сортировать:'
+    'all_messages' => 'Показать всё',
+    'delete_selected' => 'Удалить выбранное',
+    'enter_message' => 'Вы должны ввести сообщение!',
+    'enter_name' => 'Вы должны ввести своё имя!',
+    'select_all' => 'Выбрать всё',
+    'shout' => 'Крикнуть!',
+    'sort' => 'Сортировать:'
 );
 

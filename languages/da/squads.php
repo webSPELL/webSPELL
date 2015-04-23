@@ -25,33 +25,32 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'about'=>'Om',
-	'active'=>'Aktiv',
-	'add_buddy'=>'Tilføj til venneliste',
-	'awards'=>'præmier',
-	'back_buddy'=>'tilbage til venneliste',
-	'back_squad_overview'=>'tilbage til hold oversigt',
-	'challenge'=>'udfordre',
-	'contact'=>'Kontakt',
-	'email'=>'email',
-	'ignore'=>'ignorer bruger',
-	'inactive'=>'inaktiv',
-	'member'=>'Medlem',
-	'members'=>'Medlemmer',
-	'messenger'=>'beskeder',
-	'no_description'=>'ingen beskrivelse tilgængelig',
-	'no_userpic'=>'Intet brugerbillede tilgængeligt!',
-	'position'=>'Position',
-	'results'=>'resultater',
-	'show_details'=>'vis detaljer',
-	'squad_plays'=>'Hold spiller',
-	'squads'=>'hold',
-	'status'=>'Status',
-	'town'=>'by',
-	'userpicture'=>'brugerbillede'
+    'about' => 'Om',
+    'active' => 'Aktiv',
+    'add_buddy' => 'Tilføj til venneliste',
+    'awards' => 'præmier',
+    'back_buddy' => 'tilbage til venneliste',
+    'back_squad_overview' => 'tilbage til hold oversigt',
+    'challenge' => 'udfordre',
+    'contact' => 'Kontakt',
+    'ignore' => 'ignorer bruger',
+    'inactive' => 'inaktiv',
+    'member' => 'Medlem',
+    'members' => 'Medlemmer',
+    'messenger' => 'beskeder',
+    'no_description' => 'ingen beskrivelse tilgængelig',
+    'no_userpic' => 'Intet brugerbillede tilgængeligt!',
+    'position' => 'Position',
+    'results' => 'resultater',
+    'show_details' => 'vis detaljer',
+    'squad_plays' => 'Hold spiller',
+    'squads' => 'hold',
+    'status' => 'Status',
+    'town' => 'by',
+    'userpicture' => 'brugerbillede'
 );
 

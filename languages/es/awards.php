@@ -25,28 +25,28 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'award'=>'Premio',
-	'awards'=>'premios',
-	'date'=>'Fecha',
-	'delete'=>'borrar',
-	'edit'=>'editar',
-	'edit_award'=>'Editar premio',
-	'enter_title'=>'Introduzca un premio!',
-	'enter_text'=>'Introduzca una información!',
-	'event'=>'Evento',
-	'homepage'=>'Pagina web',
-	'info'=>'Información',
-	'new_award'=>'Nuevo premio',
-	'no_access'=>'Acceso denegado!',
-	'no_entries'=>'No hay premio disponible',
-	'ranking'=>'Puntuacion',
-	'save_award'=>'Guardar premio',
-	'sort'=>'Ordenar',
-	'squad'=>'Escuadron',
-	'update_award'=>'Actualizar premio'
+    'award' => 'Premio',
+    'awards' => 'premios',
+    'date' => 'Fecha',
+    'delete' => 'borrar',
+    'edit' => 'editar',
+    'edit_award' => 'Editar premio',
+    'enter_text' => 'Introduzca una información!',
+    'enter_title' => 'Introduzca un premio!',
+    'event' => 'Evento',
+    'homepage' => 'Pagina web',
+    'info' => 'Información',
+    'new_award' => 'Nuevo premio',
+    'no_access' => 'Acceso denegado!',
+    'no_entries' => 'No hay premio disponible',
+    'ranking' => 'Puntuacion',
+    'save_award' => 'Guardar premio',
+    'sort' => 'Ordenar',
+    'squad' => 'Escuadron',
+    'update_award' => 'Actualizar premio'
 );
 

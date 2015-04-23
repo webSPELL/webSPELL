@@ -25,33 +25,33 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'actions'=>'فعالیت',
-  'add_gallery'=>'اضافه به گالری',
-  'add_img'=>'اضافه عکس',
-  'add_picture'=>'اضافه عکس',
-  'comment'=>'کامنت',
-  'delete'=>'حذف',
-  'disable_comments'=>'کامنت غیرفعال',
-  'edit'=>'ادیت',
-  'enable_user_comments'=>'فعال کردن کامنت کاربر',
-  'enable_visitor_comments'=>'فعال کردن کامنت مهمان',
-  'gallery_name'=>'نام گالری',
-  'group'=>'گروه',
-  'name'=>'نام',
-  'new_gallery'=>'گالری جدید',
-  'no_galleries'=>'.هیچ گالری موجود نیست',
-  'no_space_left'=>'.هیچ فضایی موجود نیست:کنسل',
-  'picture'=>'عکس',
-  'please_enter_name'=>'!لطفا نام را وارد کنید',
-  'really_delete_gallery'=>'ایا میخواهید گالری را حذف کنید؟',
-  'update'=>'به روز کردن',
-  'user_gallery'=>'گالری کاربر',
-  'usergalleries'=>'گالری های کاربر',
-  'visitor_comments'=>'کامنت مهمان',
-  'x_of_y_mb_in_use'=>'<span style="color:%spacecolor%">&nbsp;%used_size%</span> of %available_size% کامنت مهمان.'
+    'actions' => 'فعالیت',
+    'add_gallery' => 'اضافه به گالری',
+    'add_img' => 'اضافه عکس',
+    'add_picture' => 'اضافه عکس',
+    'comment' => 'کامنت',
+    'delete' => 'حذف',
+    'disable_comments' => 'کامنت غیرفعال',
+    'edit' => 'ادیت',
+    'enable_user_comments' => 'فعال کردن کامنت کاربر',
+    'enable_visitor_comments' => 'فعال کردن کامنت مهمان',
+    'gallery_name' => 'نام گالری',
+    'group' => 'گروه',
+    'name' => 'نام',
+    'new_gallery' => 'گالری جدید',
+    'no_galleries' => '.هیچ گالری موجود نیست',
+    'no_space_left' => '.هیچ فضایی موجود نیست:کنسل',
+    'picture' => 'عکس',
+    'please_enter_name' => '!لطفا نام را وارد کنید',
+    'really_delete_gallery' => 'ایا میخواهید گالری را حذف کنید؟',
+    'update' => 'به روز کردن',
+    'user_gallery' => 'گالری کاربر',
+    'usergalleries' => 'گالری های کاربر',
+    'visitor_comments' => 'کامنت مهمان',
+    'x_of_y_mb_in_use' => '<span style="color:%spacecolor%">&nbsp;%used_size%</span> of %available_size% کامنت مهمان.'
 );
 

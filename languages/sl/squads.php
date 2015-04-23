@@ -24,40 +24,34 @@
 #                                                                        #
 ##########################################################################
 */
-/**
- * Online Language Editor Slovenia language file for webSPELL 4.2.2
- * @author Stefan Giesecke <webmaster@giesi.com>
- * @copyright Copyright (c) 2010, Stefan Giesecke
- * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
- */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'about'=>'opis',
-  'active'=>'aktiven',
-  'add_buddy'=>'dodaj na listo prijatelja',
-  'awards'=>'nagrade',
-  'back_buddy'=>'nazaj na listo prijatelja',
-  'back_squad_overview'=>'nazaj na ekipo',
-  'challenge'=>'izazovi nas',
-  'contact'=>'Kontakt',
-  'email'=>'e-mail',
-  'ignore'=>'ignoriraj',
-  'inactive'=>'ni aktiven',
-  'member'=>'Član',
-  'members'=>'Člani',
-  'messenger'=>'sporočila',
-  'no_description'=>'ni opisa',
-  'no_userpic'=>'Slika ni na voljo!',
-  'position'=>'Pozicija',
-  'results'=>'rezultati',
-  'show_details'=>'prikaži detalje',
-  'squad_plays'=>'Ekipa igra',
-  'squads'=>'ekipe',
-  'status'=>'Status',
-  'town'=>'Mesto',
-  'userpicture'=>'slika uporabnika'
+    'about' => 'opis',
+    'active' => 'aktiven',
+    'add_buddy' => 'dodaj na listo prijatelja',
+    'awards' => 'nagrade',
+    'back_buddy' => 'nazaj na listo prijatelja',
+    'back_squad_overview' => 'nazaj na ekipo',
+    'challenge' => 'izazovi nas',
+    'contact' => 'Kontakt',
+    'email' => 'e-mail',
+    'ignore' => 'ignoriraj',
+    'inactive' => 'ni aktiven',
+    'member' => 'Član',
+    'members' => 'Člani',
+    'messenger' => 'sporočila',
+    'no_description' => 'ni opisa',
+    'no_userpic' => 'Slika ni na voljo!',
+    'position' => 'Pozicija',
+    'results' => 'rezultati',
+    'show_details' => 'prikaži detalje',
+    'squad_plays' => 'Ekipa igra',
+    'squads' => 'ekipe',
+    'status' => 'Status',
+    'town' => 'Mesto',
+    'userpicture' => 'slika uporabnika'
 );
 

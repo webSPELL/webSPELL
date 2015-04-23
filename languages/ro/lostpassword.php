@@ -25,14 +25,13 @@
 ##########################################################################
 */
 
-
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'email_failed'=>'A apărut o problemă in trimiterea mail-ului. Te rugăm sa contactezi un administrator.',
-  'email_subject'=>'Contul dvs. pentru  %pagetitle%',
-  'email_text'=>'Contul dvs. pentru %pagetitle%
+    'email_failed' => 'A apărut o problemă in trimiterea mail-ului. Te rugăm sa contactezi un administrator.',
+    'email_subject' => 'Contul dvs. pentru  %pagetitle%',
+    'email_text' => 'Contul dvs. pentru %pagetitle%
 ATENȚIE parola a fost schimbată!
 
 numele dvs. de utilizator: %username%
@@ -40,13 +39,13 @@ noua dumneavoastră parolă: %new_password%
 
 distra pe pagina noastră
 %homepage_url%',
-  'get_password'=>'obține parola',
-  'lost_password'=>'parolă uitată',
-  'no_mail_given'=>'Nu aţi introdus nici o adresă de mail.',
-  'no_user_found'=>'Nu s-a găsit nici un utilizator!',
-  'successful'=>'Contul dvs. a fost găsit<br><br>
+    'get_password' => 'obține parola',
+    'lost_password' => 'parolă uitată',
+    'no_mail_given' => 'Nu aţi introdus nici o adresă de mail.',
+    'no_user_found' => 'Nu s-a găsit nici un utilizator!',
+    'successful' => 'Contul dvs. a fost găsit<br><br>
     Veţi primi un mail cu datele contului dvs. in câteva momente.<br><br>
     &#8226; <a href="index.php?site=login">logare</a>',
-  'your_email'=>'Mail-ul dvs.'
+    'your_email' => 'Mail-ul dvs.'
 );
 

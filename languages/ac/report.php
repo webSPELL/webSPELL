@@ -25,13 +25,13 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'no_informations'=>'crwdns15620:0crwdne15620:0',
-	'report_message'=>'crwdns15621:0[b]crwdnd15621:0%scrwdnd15621:0[/b]crwdnd15621:0[br]crwdnd15621:0[br]crwdnd15621:0%scrwdnd15621:0%dcrwdnd15621:0[br]crwdnd15621:0%scrwdnd15621:0[br]crwdnd15621:0[url]crwdnd15621:0%dcrwdnd15621:0[/url]crwdne15621:0',
-	'report_recognized'=>'crwdns15622:0crwdne15622:0',
-  'wrong_securitycode'=>'crwdns15623:0crwdne15623:0'
+    'no_informations' => 'crwdns15620:0crwdne15620:0',
+    'report_message' => 'crwdns15621:0[b]crwdnd15621:0%scrwdnd15621:0[/b]crwdnd15621:0[br]crwdnd15621:0[br]crwdnd15621:0%scrwdnd15621:0%dcrwdnd15621:0[br]crwdnd15621:0%scrwdnd15621:0[br]crwdnd15621:0[url]crwdnd15621:0%dcrwdnd15621:0[/url]crwdne15621:0',
+    'report_recognized' => 'crwdns15622:0crwdne15622:0',
+    'wrong_securitycode' => 'crwdns15623:0crwdne15623:0'
 );
 

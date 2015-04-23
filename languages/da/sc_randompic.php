@@ -25,12 +25,12 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'no_user'=>'Intet brugerbillede tilgængeligt',
-	'registered_since'=>'Registreret siden',
-	'view_profile'=>'Besøg profil'
+    'no_user' => 'Intet brugerbillede tilgængeligt',
+    'registered_since' => 'Registreret siden',
+    'view_profile' => 'Besøg profil'
 );
 

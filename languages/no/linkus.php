@@ -25,24 +25,24 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'back'=>'back',
-	'banner'=>'Banner',
-	'banner_to_big'=>'Picture is to big',
-	'delete'=>'Slett',
-	'edit'=>'rediger',
-	'edit_linkus'=>'rediger banner',
-	'format_incorrect'=>'Invalid picture-format (allowed: *.gif, *.jpg or *.png)',
-	'link_us'=>'link til oss',
-	'name'=>'Navn',
-	'new_banner'=>'ny banner',
-	'no_access'=>'Ingen tilgang!',
-	'no_banner'=>'ingen banner',
-	'really_delete_banner'=>'er du sikker?',
-	'save_banner'=>'lagre banner',
-	'use_following_code'=>'Bruk følgende kode for å vise banneren på din hjemmeside.'
+    'back' => 'back',
+    'banner' => 'Banner',
+    'banner_to_big' => 'Picture is to big',
+    'delete' => 'Slett',
+    'edit' => 'rediger',
+    'edit_linkus' => 'rediger banner',
+    'format_incorrect' => 'Invalid picture-format (allowed: *.gif, *.jpg or *.png)',
+    'link_us' => 'link til oss',
+    'name' => 'Navn',
+    'new_banner' => 'ny banner',
+    'no_access' => 'Ingen tilgang!',
+    'no_banner' => 'ingen banner',
+    'really_delete_banner' => 'er du sikker?',
+    'save_banner' => 'lagre banner',
+    'use_following_code' => 'Bruk følgende kode for å vise banneren på din hjemmeside.'
 );
 

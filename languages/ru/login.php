@@ -25,24 +25,22 @@
 ##########################################################################
 */
 
-
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'admin'=>'Админ',
-  'buddy_list'=>'Список друзей',
-  'cash-box'=>'Копилка',
-  'edit_account'=>'Редактировать профиль',
-  'galleries'=>'Галлереи',
-  'login'=>'Логин',
-  'logout'=>'Выйти',
-  'lost_password'=>'Забыли пароль?',
-  'messenger'=>'Мессенджер',
-  'n_a'=>'n/a',
-  'overview'=>'Обзор',
-  'register_now'=>'Регистрироваться сейчас',
-  'registered_users'=>'Регистрированные пользователи',
-  'welcome_back'=>'С возвращением'
+    'admin' => 'Админ',
+    'buddy_list' => 'Список друзей',
+    'cash-box' => 'Копилка',
+    'edit_account' => 'Редактировать профиль',
+    'galleries' => 'Галлереи',
+    'login' => 'Логин',
+    'logout' => 'Выйти',
+    'lost_password' => 'Забыли пароль?',
+    'messenger' => 'Мессенджер',
+    'overview' => 'Обзор',
+    'register_now' => 'Регистрироваться сейчас',
+    'registered_users' => 'Регистрированные пользователи',
+    'welcome_back' => 'С возвращением'
 );
 

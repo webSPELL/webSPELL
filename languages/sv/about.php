@@ -25,11 +25,11 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'about_title'=>'Om oss',
-	'no_about'=>'För närvarande inga beskrivning tillgänglig.'
+    'about_title' => 'Om oss',
+    'no_about' => 'För närvarande inga beskrivning tillgänglig.'
 );
 

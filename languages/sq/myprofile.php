@@ -25,7 +25,7 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
@@ -44,13 +44,10 @@ $language_array = Array(
     'clan-name' => 'Klan-Emri',
     'clan-tag' => 'Klan-Tag',
     'country' => 'Shteti',
-    'cpu' => 'CPU',
     'date_of_birth' => 'Datëlindja',
     'deactivated' => 'çaktivizuar',
-    'delete' => 'delete',
     'delete_max_90_90' => 'fshij (max90/90)',
     'delete_max_230_210' => 'fshij (max230/210)',
-    'e-mail' => 'E-mail',
     'edit_mail' => 'edito E-Mail-in',
     'edit_password' => 'edito password-in',
     'equipment-info' => 'Informacion in pajisjeve',
@@ -139,3 +136,4 @@ Faleminderit për interesin tuaj
     'you_have_to_username' => 'Duhet të vendosni një emër përdoruesi!',
     'you_have_to_valid_email' => 'Maili juaj nuk ëshë i vlefshëm!'
 );
+

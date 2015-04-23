@@ -25,18 +25,18 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'add_notexists'=>'Użytkownik nie istnieje!',
-	'add_nouserid'=>'Użytkownik o podanym ID nie występuje',
-	'add_yourself'=>'Nie możesz dodać sam siebie do listy przyjaciół i listy ignorowanych!',
-	'buddy_nousers'=>'Brak przyjaciół na liście ',
-	'buddys'=>'Przyjaciele',
-	'ignore_nousers'=>'Brak osób ignorowanych',
-	'not_logged'=>'By móc zarządzać listami przyjaciól i ignorowanych musisz być zarejestrowany, a następnie zalogowany.<br><a href="index.php?site=register">Rejestracja</a> | <a href="index.php?site=login">Logowanie</a>',
-	'your_buddylist'=>'Lista przyjaciół',
-	'your_ignorelist'=>'Lista ignorowanych'
+    'add_notexists' => 'Użytkownik nie istnieje!',
+    'add_nouserid' => 'Użytkownik o podanym ID nie występuje',
+    'add_yourself' => 'Nie możesz dodać sam siebie do listy przyjaciół i listy ignorowanych!',
+    'buddy_nousers' => 'Brak przyjaciół na liście ',
+    'buddys' => 'Przyjaciele',
+    'ignore_nousers' => 'Brak osób ignorowanych',
+    'not_logged' => 'By móc zarządzać listami przyjaciól i ignorowanych musisz być zarejestrowany, a następnie zalogowany.<br><a href="index.php?site=register">Rejestracja</a> | <a href="index.php?site=login">Logowanie</a>',
+    'your_buddylist' => 'Lista przyjaciół',
+    'your_ignorelist' => 'Lista ignorowanych'
 );
 

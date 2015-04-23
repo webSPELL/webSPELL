@@ -25,28 +25,28 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'about'=>'Om',
-	'active'=>'Aktiv',
-	'activity'=>'Aktivitet',
-	'awards'=>'Præmier',
-	'back_overview'=>'&raquo; <a href="index.php?site=members"><b>tilbage til medlem oversigten</b></a>',
-	'challenge'=>'Udfordre',
-	'contact'=>'Kontakt',
-	'go'=>'Gå!',
-	'inactive'=>'Inaktiv',
-	'member'=>'Medlem',
-	'members'=>'Medlemmer',
-	'nickname'=>'Øgenavn',
-	'no_description'=>'ingen beskrivelse tilgængelig',
-	'position'=>'Position',
-	'results'=>'Resultater',
-	'show_details'=>'&raquo; <a href="index.php?site=members&amp;action=show&amp;squadID=%squadID%"><b>Vis detaljer</b></a>',
-	'show_only'=>'Vis kun',
-	'status'=>'Status',
-	'town'=>'By'
+    'about' => 'Om',
+    'active' => 'Aktiv',
+    'activity' => 'Aktivitet',
+    'awards' => 'Præmier',
+    'back_overview' => '&raquo; <a href="index.php?site=members"><b>tilbage til medlem oversigten</b></a>',
+    'challenge' => 'Udfordre',
+    'contact' => 'Kontakt',
+    'go' => 'Gå!',
+    'inactive' => 'Inaktiv',
+    'member' => 'Medlem',
+    'members' => 'Medlemmer',
+    'nickname' => 'Øgenavn',
+    'no_description' => 'ingen beskrivelse tilgængelig',
+    'position' => 'Position',
+    'results' => 'Resultater',
+    'show_details' => '&raquo; <a href="index.php?site=members&amp;action=show&amp;squadID=%squadID%"><b>Vis detaljer</b></a>',
+    'show_only' => 'Vis kun',
+    'status' => 'Status',
+    'town' => 'By'
 );
 

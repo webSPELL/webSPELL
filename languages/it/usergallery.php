@@ -25,33 +25,33 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'actions'=>'Azioni',
-	'add_gallery'=>'Aggiungi Galleria',
-	'add_img'=>'Aggiungi immagine',
-	'add_picture'=>'Aggiungi immagine',
-	'comment'=>'Commento',
-	'delete'=>'cancellare',
-	'disable_comments'=>'Commenti disabilitare',
-	'edit'=>'modificare',
-	'enable_user_comments'=>'Commenti consentire agli utenti',
-	'enable_visitor_comments'=>'Consentire ai visitatori Commenti',
-	'gallery_name'=>'Galleria nome',
-	'group'=>'Gruppo',
-	'name'=>'Nome',
-	'new_gallery'=>'nuova galleria',
-	'no_galleries'=>'gallerie disponibili.',
-	'no_space_left'=>'Lei non ha ancora abastanza spazio su disco. Annullato.',
-	'picture'=>'Immagine',
-	'please_enter_name'=>'Hai un nome!',
-	'really_delete_gallery'=>'Veramente cancellare questa galleria?',
-	'update'=>'aaggiornamento',
-	'user_gallery'=>'Utente galleria',
-	'usergalleries'=>'Utente galleria',
-	'visitor_comments'=>'Commenti dei visitatori',
-	'x_of_y_mb_in_use'=>'<span style="color:%spacecolor%">&nbsp;%used_size%</span> da %available_size% MB sono occupati.'
+    'actions' => 'Azioni',
+    'add_gallery' => 'Aggiungi Galleria',
+    'add_img' => 'Aggiungi immagine',
+    'add_picture' => 'Aggiungi immagine',
+    'comment' => 'Commento',
+    'delete' => 'cancellare',
+    'disable_comments' => 'Commenti disabilitare',
+    'edit' => 'modificare',
+    'enable_user_comments' => 'Commenti consentire agli utenti',
+    'enable_visitor_comments' => 'Consentire ai visitatori Commenti',
+    'gallery_name' => 'Galleria nome',
+    'group' => 'Gruppo',
+    'name' => 'Nome',
+    'new_gallery' => 'nuova galleria',
+    'no_galleries' => 'gallerie disponibili.',
+    'no_space_left' => 'Lei non ha ancora abastanza spazio su disco. Annullato.',
+    'picture' => 'Immagine',
+    'please_enter_name' => 'Hai un nome!',
+    'really_delete_gallery' => 'Veramente cancellare questa galleria?',
+    'update' => 'aaggiornamento',
+    'user_gallery' => 'Utente galleria',
+    'usergalleries' => 'Utente galleria',
+    'visitor_comments' => 'Commenti dei visitatori',
+    'x_of_y_mb_in_use' => '<span style="color:%spacecolor%">&nbsp;%used_size%</span> da %available_size% MB sono occupati.'
 );
 

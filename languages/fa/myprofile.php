@@ -25,7 +25,7 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
@@ -44,10 +44,8 @@ $language_array = Array(
     'clan-name' => 'نام کلن',
     'clan-tag' => 'تگ کلن',
     'country' => 'کشور',
-    'cpu' => 'CPU',
     'date_of_birth' => 'تاریخ تولد',
     'deactivated' => 'غیر فعال',
-    'delete' => 'delete',
     'delete_max_90_90' => 'حذف (max90/90)',
     'delete_max_230_210' => 'حذف (max230/210)',
     'e-mail' => 'ایمیل',
@@ -128,3 +126,4 @@ $language_array = Array(
     'you_have_to_username' => '!شما باید نام کاربری را وارد کنید',
     'you_have_to_valid_email' => '!ایمیل شما معتبر نیست'
 );
+

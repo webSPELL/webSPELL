@@ -25,17 +25,17 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'banner'=>'بنر',
-  'homepage'=>'صفحه نخست',
-  'information'=>'اطلاعات',
-  'mainsponsor'=>'اسپانسر اصلی',
-  'mainsponsors'=>'اسپانسر اصلی',
-  'no_sponsors'=>'بدون اسپانسر',
-  'sponsor'=>'اسپانسر',
-  'sponsors'=>'اسپانسر ها'
+    'banner' => 'بنر',
+    'homepage' => 'صفحه نخست',
+    'information' => 'اطلاعات',
+    'mainsponsor' => 'اسپانسر اصلی',
+    'mainsponsors' => 'اسپانسر اصلی',
+    'no_sponsors' => 'بدون اسپانسر',
+    'sponsor' => 'اسپانسر',
+    'sponsors' => 'اسپانسر ها'
 );
 

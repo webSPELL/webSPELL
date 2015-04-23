@@ -25,12 +25,12 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'invalid_request'=>'Nieudane zapytanie',
-	'no_result'=>'Brak wyników spełniających kryteria',
-	'to_much_results'=>'Za dużo pasujących wyników.'
+    'invalid_request' => 'Nieudane zapytanie',
+    'no_result' => 'Brak wyników spełniających kryteria',
+    'to_much_results' => 'Za dużo pasujących wyników.'
 );
 

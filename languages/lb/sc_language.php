@@ -24,18 +24,12 @@
 #                                                                        #
 ##########################################################################
 */
-/**
- * Online Language Editor Luxemburg language file for webSPELL 4.2.2
- * @author Stefan Giesecke <webmaster@giesi.com>
- * @copyright Copyright (c) 2010, Stefan Giesecke
- * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
- */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'save'=>'Späichern',
-  'no_session'=>'Fehler beim Ännern vun der Sproche. Wann ech gelift versécher dech, dass däin Browser Cookies akzepétiert an probéier et nach eng Kéier.'
+    'no_session' => 'Fehler beim Ännern vun der Sproche. Wann ech gelift versécher dech, dass däin Browser Cookies akzepétiert an probéier et nach eng Kéier.',
+    'save' => 'Späichern'
 );
 

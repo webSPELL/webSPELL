@@ -24,20 +24,14 @@
 #                                                                        #
 ##########################################################################
 */
-/**
- * Online Language Editor Albania language file for webSPELL 4.2.2
- * @author Stefan Giesecke <webmaster@giesi.com>
- * @copyright Copyright (c) 2010, Stefan Giesecke
- * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
- */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'email_failed'=>'Pati një problem ndërsa dërguat e-mail-in. Lutemi kontaktoni webmaster-in.',
-  'email_subject'=>'Account-i juaj për %pagetitle%',
-  'email_text'=>' Account-i juaj për %pagetitle%
+    'email_failed' => 'Pati një problem ndërsa dërguat e-mail-in. Lutemi kontaktoni webmaster-in.',
+    'email_subject' => 'Account-i juaj për %pagetitle%',
+    'email_text' => ' Account-i juaj për %pagetitle%
 KUJDES password-i juaj është ndryshuar!
 
 emrin e përdoruesit: %username%
@@ -45,13 +39,13 @@ fjalëkalimin tuaj të re: %new_password%
 
 të argëtohen në faqen tonë
 %homepage_url%',
-  'get_password'=>'merrni password',
-  'lost_password'=>'password i humbur',
-  'no_mail_given'=>'Nuk keni vendosur adresë mail.',
-  'no_user_found'=>'nuk u gjet përdorues!',
-  'successful'=>'Account-i juaj u gjet<br><br>
+    'get_password' => 'merrni password',
+    'lost_password' => 'password i humbur',
+    'no_mail_given' => 'Nuk keni vendosur adresë mail.',
+    'no_user_found' => 'nuk u gjet përdorues!',
+    'successful' => 'Account-i juaj u gjet<br><br>
     Do merrni një e-mail me të dhënat e account-it tuaj.<br><br>
     &#8226; <a href="index.php?site=login">logim</a>',
-  'your_email'=>'E-Mail juaj'
+    'your_email' => 'E-Mail juaj'
 );
 

@@ -25,11 +25,11 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'news_feed'=>'Alimentador de Notícias',
-	'latest_news_from'=>'Últimas notícias de'
+    'latest_news_from' => 'Últimas notícias de',
+    'news_feed' => 'Alimentador de Notícias'
 );
 

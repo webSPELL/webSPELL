@@ -25,13 +25,12 @@
 ##########################################################################
 */
 
-
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'no_frame'=>'See sait kasutab raame. Su brauser ei toeta fraame!',
-  'outgoing'=>'Väljaminev',
-  'owner_responsible'=>'Omanik on selle lehe eest vastutav.'
+    'no_frame' => 'See sait kasutab raame. Su brauser ei toeta fraame!',
+    'outgoing' => 'Väljaminev',
+    'owner_responsible' => 'Omanik on selle lehe eest vastutav.'
 );
 

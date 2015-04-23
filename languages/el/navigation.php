@@ -24,50 +24,43 @@
 #                                                                        #
 ##########################################################################
 */
-/**
- * Online Language Editor Greece language file for webSPELL 4.2.2
- * @author Stefan Giesecke <webmaster@giesi.com>
- * @copyright Copyright (c) 2010, Stefan Giesecke
- * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
- */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'about_us'=>'Σχετικά με εμας',
-  'archives'=>'Αρχειο',
-  'articles'=>'Θεματα',
-  'awards'=>'Βραβεια',
-  'calendar'=>'Ημερολογιο',
-  'clan'=>'Clan',
-  'community'=>'Κοινοτητα',
-  'contact'=>'Φορμα επικοινωνιας',
-  'demos'=>'Επιδειξεις',
-  'downloads'=>'Downloads',
-  'faq'=>'FAQ',
-  'fight_us'=>'Αντιμετωπιστε μας',
-  'forums'=>'Forums',
-  'gallery'=>'Συλλογη',
-  'guestbook'=>'Βιβλιο επισκεπτών',
-  'history'=>'Ιστορικο',
-  'imprint'=>'Αποτυπωμα',
-  'join_us'=>'Ελάτε μαζί μας',
-  'links'=>'Weblinks',
-  'links_us'=>'Συνδεθειτε μαζι μας',
-  'main'=>'Κυρια',
-  'matches'=>'Αγωνες',
-  'media'=>'Μεσα',
-  'members'=>'Μελη',
-  'miscellaneous'=>'Διαφορα',
-  'news'=>'Νεα',
-  'newsletter'=>'Newsletter',
-  'polls'=>'Ψηφοφοριες',
-  'registered_users'=>'Εγγεγραμενοι χρηστες',
-  'search'=>'Αναζητηση',
-  'servers'=>'Servers',
-  'sponsors'=>'Χορηγοι',
-  'squads'=>'Ταγματα',
-  'who_is_online'=>'Ποιος ειναι online?'
+    'about_us' => 'Σχετικά με εμας',
+    'archives' => 'Αρχειο',
+    'articles' => 'Θεματα',
+    'awards' => 'Βραβεια',
+    'calendar' => 'Ημερολογιο',
+    'clan' => 'Clan',
+    'community' => 'Κοινοτητα',
+    'contact' => 'Φορμα επικοινωνιας',
+    'demos' => 'Επιδειξεις',
+    'downloads' => 'Downloads',
+    'fight_us' => 'Αντιμετωπιστε μας',
+    'forums' => 'Forums',
+    'gallery' => 'Συλλογη',
+    'guestbook' => 'Βιβλιο επισκεπτών',
+    'history' => 'Ιστορικο',
+    'imprint' => 'Αποτυπωμα',
+    'join_us' => 'Ελάτε μαζί μας',
+    'links' => 'Weblinks',
+    'links_us' => 'Συνδεθειτε μαζι μας',
+    'main' => 'Κυρια',
+    'matches' => 'Αγωνες',
+    'media' => 'Μεσα',
+    'members' => 'Μελη',
+    'miscellaneous' => 'Διαφορα',
+    'news' => 'Νεα',
+    'newsletter' => 'Newsletter',
+    'polls' => 'Ψηφοφοριες',
+    'registered_users' => 'Εγγεγραμενοι χρηστες',
+    'search' => 'Αναζητηση',
+    'servers' => 'Servers',
+    'sponsors' => 'Χορηγοι',
+    'squads' => 'Ταγματα',
+    'who_is_online' => 'Ποιος ειναι online?'
 );
 

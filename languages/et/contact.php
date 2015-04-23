@@ -25,30 +25,29 @@
 ##########################################################################
 */
 
-
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'back'=>'tagasi vormile',
-  'contact'=>'kontakt',
-  'description'=>'Selle vormiga saad sa meile sõnumit edastada',
-  'enter_mail'=>'Palun sisesta meiliaadress.',
-  'enter_message'=>'Palun sisesta sõnum.',
-  'enter_name'=>'Palun sisesta nimi.',
-  'enter_subject'=>'Palun sisesta pealkiri.',
-  'errors_there'=>'Ilmnesid mõned vead',
-  'mail'=>'E-mail',
-  'message'=>'Sõnum',
-  'name'=>'Nimi',
-  'receiver'=>'Saaja',
-  'reset'=>'Lähtesta',
-  'security_code'=>'Turvakood',
-  'send'=>'Saada',
-  'send_successfull'=>'Su sõnum on edukalt saadetud.',
-  'subject'=>'Pealkiri',
-  'title_contact'=>'Kontaktivorm',
-  'unknown_receiver'=>'tundmatu saaja',
-  'wrong_securitycode'=>'Sa sisestasid vale turvakoodi!'
+    'back' => 'tagasi vormile',
+    'contact' => 'kontakt',
+    'description' => 'Selle vormiga saad sa meile sõnumit edastada',
+    'enter_mail' => 'Palun sisesta meiliaadress.',
+    'enter_message' => 'Palun sisesta sõnum.',
+    'enter_name' => 'Palun sisesta nimi.',
+    'enter_subject' => 'Palun sisesta pealkiri.',
+    'errors_there' => 'Ilmnesid mõned vead',
+    'mail' => 'E-mail',
+    'message' => 'Sõnum',
+    'name' => 'Nimi',
+    'receiver' => 'Saaja',
+    'reset' => 'Lähtesta',
+    'security_code' => 'Turvakood',
+    'send' => 'Saada',
+    'send_successfull' => 'Su sõnum on edukalt saadetud.',
+    'subject' => 'Pealkiri',
+    'title_contact' => 'Kontaktivorm',
+    'unknown_receiver' => 'tundmatu saaja',
+    'wrong_securitycode' => 'Sa sisestasid vale turvakoodi!'
 );
 

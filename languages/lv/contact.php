@@ -25,30 +25,29 @@
 ##########################################################################
 */
 
-
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'back'=>'atpakaļ uz sākumu',
-  'contact'=>'sazinieties ar mums',
-  'description'=>'Ar šo formu Jūs varat nosūtīt mums ziņu',
-  'enter_mail'=>'Lūdzu ievadiet pasta adresi.',
-  'enter_message'=>'Lūdzu ievadiet ziņu.',
-  'enter_name'=>'Lūdzu ievadiet vārdu.',
-  'enter_subject'=>'Lūdzu ievadiet tematu.',
-  'errors_there'=>'Kļūme',
-  'mail'=>'E-pasts',
-  'message'=>'Ziņa',
-  'name'=>'Vārds',
-  'receiver'=>'Saņēmējs',
-  'reset'=>'Atiestatīt',
-  'security_code'=>'Drošības kods',
-  'send'=>'Nosūtīt',
-  'send_successfull'=>'Jūsu ziņa nosūtīta veiksmīgi.',
-  'subject'=>'Temats',
-  'title_contact'=>'Kontaktforma',
-  'unknown_receiver'=>'nezināms saņēmējs',
-  'wrong_securitycode'=>'Ievadīts nepareizs drošības kods!'
+    'back' => 'atpakaļ uz sākumu',
+    'contact' => 'sazinieties ar mums',
+    'description' => 'Ar šo formu Jūs varat nosūtīt mums ziņu',
+    'enter_mail' => 'Lūdzu ievadiet pasta adresi.',
+    'enter_message' => 'Lūdzu ievadiet ziņu.',
+    'enter_name' => 'Lūdzu ievadiet vārdu.',
+    'enter_subject' => 'Lūdzu ievadiet tematu.',
+    'errors_there' => 'Kļūme',
+    'mail' => 'E-pasts',
+    'message' => 'Ziņa',
+    'name' => 'Vārds',
+    'receiver' => 'Saņēmējs',
+    'reset' => 'Atiestatīt',
+    'security_code' => 'Drošības kods',
+    'send' => 'Nosūtīt',
+    'send_successfull' => 'Jūsu ziņa nosūtīta veiksmīgi.',
+    'subject' => 'Temats',
+    'title_contact' => 'Kontaktforma',
+    'unknown_receiver' => 'nezināms saņēmējs',
+    'wrong_securitycode' => 'Ievadīts nepareizs drošības kods!'
 );
 

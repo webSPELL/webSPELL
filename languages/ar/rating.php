@@ -25,12 +25,11 @@
 ##########################################################################
 */
 
-
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'no_access'=>'لا يمكن الوصول!',
-  'just_rate_between_0_10'=>'!يرجى معدل فقط 0-10 النقاط'
+    'just_rate_between_0_10' => '!يرجى معدل فقط 0-10 النقاط',
+    'no_access' => 'لا يمكن الوصول!'
 );
 

@@ -25,39 +25,37 @@
 ##########################################################################
 */
 
-
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'admin_comment'=>'تعليقات المدير',
-  'bbcode'=>'<a href="javascript:void(0);" onclick="window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> مسموحة',
-  'by'=>'الكاتب',
-  'comment'=>'تعليق',
-  'delete_selected'=>'حذف المختارات',
-  'enter_a_message'=>'!يجب ادخال الرسالة',
-  'error_captcha'=>'!الروز الامني خاطء',
-  'enter_your_name'=>'!يجب ادخال الاسم',
-  'guestbook'=>'سجل الزوار',
-  'guestbook_comment'=>'تعليقات الزوار',
-  'homepage'=>'الرئيسية',
-  'html'=>'HTML معطلة',
-  'icq'=>'ICQ',
-  'ip'=>'الاي بي',
-  'mail'=>'البريد الالكتروني',
-  'name'=>'الاسم',
-  'new_entry'=>'ادخال جديد',
-  'no_access'=>'.لست مسجل<br><a href="index.php?site=login">الدخول</a> | <a href="index.php?site=register">تسجيل</a>',
-  'options'=>'خيارات',
-  'pmsubject_newentry'=>'ادخال جديد في سجل الزوار',
-  'pmtext_newentry'=>'[b]!رسالة لك في سجل الزوار[/b][br][br] [URL=admin/admincenter.php?site=guestbook]اضغط هنا للسماح بعرض الادخال[/URL] ',
-  'security_code'=>'الرمز الامني',
-  'select_all'=>'اختيار الكل',
-  'smilies'=>'<a href="javascript:void(0);" onclick="window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">الابتسامات</a> مسموحة',
-  'sort'=>'الترتيب:',
-  'submit'=>'ادخال',
-  'update_comment'=>'حفض التعليق',
-  'wrote'=>'كتب',
-  'your_message'=>'الرسالة'
+    'admin_comment' => 'تعليقات المدير',
+    'bbcode' => '<a href="javascript:void(0);" onclick="window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> مسموحة',
+    'by' => 'الكاتب',
+    'comment' => 'تعليق',
+    'delete_selected' => 'حذف المختارات',
+    'enter_a_message' => '!يجب ادخال الرسالة',
+    'enter_your_name' => '!يجب ادخال الاسم',
+    'error_captcha' => '!الروز الامني خاطء',
+    'guestbook' => 'سجل الزوار',
+    'guestbook_comment' => 'تعليقات الزوار',
+    'homepage' => 'الرئيسية',
+    'html' => 'HTML معطلة',
+    'ip' => 'الاي بي',
+    'mail' => 'البريد الالكتروني',
+    'name' => 'الاسم',
+    'new_entry' => 'ادخال جديد',
+    'no_access' => '.لست مسجل<br><a href="index.php?site=login">الدخول</a> | <a href="index.php?site=register">تسجيل</a>',
+    'options' => 'خيارات',
+    'pmsubject_newentry' => 'ادخال جديد في سجل الزوار',
+    'pmtext_newentry' => '[b]!رسالة لك في سجل الزوار[/b][br][br] [URL=admin/admincenter.php?site=guestbook]اضغط هنا للسماح بعرض الادخال[/URL] ',
+    'security_code' => 'الرمز الامني',
+    'select_all' => 'اختيار الكل',
+    'smilies' => '<a href="javascript:void(0);" onclick="window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">الابتسامات</a> مسموحة',
+    'sort' => 'الترتيب:',
+    'submit' => 'ادخال',
+    'update_comment' => 'حفض التعليق',
+    'wrote' => 'كتب',
+    'your_message' => 'الرسالة'
 );
 

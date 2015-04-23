@@ -24,20 +24,14 @@
 #                                                                        #
 ##########################################################################
 */
-/**
- * Online Language Editor Albania language file for webSPELL 4.2.2
- * @author Stefan Giesecke <webmaster@giesi.com>
- * @copyright Copyright (c) 2010, Stefan Giesecke
- * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
- */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'no_informations'=>'asnjë informacion i vlefshëm',
-  'report_message'=>'[b]Ka një të re %s - Raport[/b][br][br]%s-ID: %d[br]Info: %s[br]Referer: [url]index.php?site=files&file=%d[/url]',
-  'report_recognized'=>'Raportimi juaj u njoh. Faleminderit.',
-  'wrong_securitycode'=>'Vendosët një kod sigurie të gabuar<br><br>[<a href="javascript:back();">prapa</a>]'
+    'no_informations' => 'asnjë informacion i vlefshëm',
+    'report_message' => '[b]Ka një të re %s - Raport[/b][br][br]%s-ID: %d[br]Info: %s[br]Referer: [url]index.php?site=files&file=%d[/url]',
+    'report_recognized' => 'Raportimi juaj u njoh. Faleminderit.',
+    'wrong_securitycode' => 'Vendosët një kod sigurie të gabuar<br><br>[<a href="javascript:back();">prapa</a>]'
 );
 

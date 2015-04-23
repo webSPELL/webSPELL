@@ -25,7 +25,7 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
@@ -75,6 +75,6 @@ $language_array = Array(
     'to_rate' => 'Be kell jelentkezned a demó értékeléséhez!',
     'update_demo' => 'Demó frissítése',
     'user_comments' => 'Csak a tagok kommentálhatják',
-    'visitor_comments' => 'A vendégek is kommentálhatják',
-    'vs' => 'vs.'
+    'visitor_comments' => 'A vendégek is kommentálhatják'
 );
+

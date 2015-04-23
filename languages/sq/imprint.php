@@ -24,22 +24,16 @@
 #                                                                        #
 ##########################################################################
 */
-/**
- * Online Language Editor Albania language file for webSPELL 4.2.2
- * @author Stefan Giesecke <webmaster@giesi.com>
- * @copyright Copyright (c) 2010, Stefan Giesecke
- * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
- */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'admins'=>'Administrator(ët):',
-	'coding'=>'Programues',
-	'coding_info'=>'Ky site përdor <a href="http://www.webspell.org" target="_blank">webSPELL Free Content Management System (version: $version)</a>. Kjo bazohet në PHP4/5 and MySQL dhe punon mbi <a href="http://www.fsf.org/licensing/licenses/gpl.html" target="_blank">GNU GENERAL PUBLIC LICENSE</a>.<br>Merreni falas këtu: <a href="http://www.webspell.org" target="_blank">www.webSPELL.org</a>',
-	'disclaimer'=>'Mohues',
-	'disclaimer_text'=>'<p><strong>1. Përmbajtje</strong><br>
+    'admins' => 'Administrator(ët):',
+    'coding' => 'Programues',
+    'coding_info' => 'Ky site përdor <a href="http://www.webspell.org" target="_blank">webSPELL Free Content Management System (version: $version)</a>. Kjo bazohet në PHP4/5 and MySQL dhe punon mbi <a href="http://www.fsf.org/licensing/licenses/gpl.html" target="_blank">GNU GENERAL PUBLIC LICENSE</a>.<br>Merreni falas këtu: <a href="http://www.webspell.org" target="_blank">www.webSPELL.org</a>',
+    'disclaimer' => 'Mohues',
+    'disclaimer_text' => '<p><strong>1. Përmbajtje</strong><br>
 	Autori ka të drejtën të mos jetë i përgjegjshëm për aktualitetin korrektësinë,integritetin ose cilësinë e informacioneve të dhëna. Përgjegjësia për dëmet e shkaktuara nga përdorimi i çdo informacioni të dhënë duke përfshirë çdo lloj informacioni inkomplet ose inkorrekt do të mohohet.<br>
 	Gjithë ofertat nuk janë obliguese dhe pa obligime. Pjesë të faqeve ose publikimi i tërë, duke përfshirë gjithë ofertat dhe informacionet,mund të zgjerohen, modifikohen pjesërisht ose të fshihen nga autori pa lajmërim.</p>
 	<p><strong>2. Referime dhe link-e</strong><br>
@@ -50,9 +44,9 @@ $language_array = Array(
 	Nëse mundësia për futjen e të dhënave me karakter personal (email, emri, adresat) është dhënë, vendosja e këtyre të dhënave është bërë vullnetarisht. Përdorimi dhe pagimi i gjithë shërbimeve të ofruara lejohet -nëse është e mundur teknikisht dhe e arsyeshme  - pa asnjë specifikim i të dhënave me karakter personal konform me anonimatin e të dhënave ose një alias. Përdorimi adresave postare të publikuara,numra telefoni ose faks dhe adresa e-mail-i për qëllime marketingu ndalohet, shkelësit, dergimi mesazheve spam, do të ndëshkohen.</p>
 	<p><strong>5. Vlefshmëria juridike e kësaj marrëveshjeje</strong><br>
 	Ky parashikim i përgjegjësisë duhet parë si pjesë e publikimit internet të cilën e kanë përmendur. Nëse pjesë ose terma të kësaj deklarate nuk janë ligjore ose korrekte përmbajtja ose vlefshmëria e pjesëve të tjera nuk influencohen nga ky fakt.</p>',
-	'imprint'=>'Ngulit',
-	'mods'=>'Moderator(ët):',
-	'responsible_persons'=>'Personat e përgjegjshëm',
-	'webmaster'=>'Webmaster:'
+    'imprint' => 'Ngulit',
+    'mods' => 'Moderator(ët):',
+    'responsible_persons' => 'Personat e përgjegjshëm',
+    'webmaster' => 'Webmaster:'
 );
 

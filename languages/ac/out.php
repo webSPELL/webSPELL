@@ -25,12 +25,12 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'no_frame'=>'crwdns15432:0crwdne15432:0',
-	'outgoing'=>'crwdns15433:0crwdne15433:0',
-	'owner_responsible'=>'crwdns15434:0crwdne15434:0'
+    'no_frame' => 'crwdns15432:0crwdne15432:0',
+    'outgoing' => 'crwdns15433:0crwdne15433:0',
+    'owner_responsible' => 'crwdns15434:0crwdne15434:0'
 );
 

@@ -25,17 +25,17 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'invalid_password'=>'Vložili ste chybné heslo.',
-	'ip_banned'=>'Na vašu IP adresu bol udelený BAN.<br>%reason%',
-	'login_successful'=>'Prihlásenie úspešné!',
-	'no_user'=>'Užívate¾ <b>%username%</b> neexistuje.',
-	'not_activated'=>'Vaše konto nie je aktivované.',
-	'session_error'=>'Prosím preverte či sú vo vašom prehliadači aktivované cookies.<br>Ak problém stále pretrváva, prosím kontaktujte webmastera.',
-  'return'=>'<a href="javascript:history.back()">Naspäť</a>',
-  'return_reenter' => '<a href="javascript:history.back()">Choďte naspäť a skúste to znova.</a>'
+    'invalid_password' => 'Vložili ste chybné heslo.',
+    'ip_banned' => 'Na vašu IP adresu bol udelený BAN.<br>%reason%',
+    'login_successful' => 'Prihlásenie úspešné!',
+    'no_user' => 'Užívate¾ <b>%username%</b> neexistuje.',
+    'not_activated' => 'Vaše konto nie je aktivované.',
+    'return' => '<a href="javascript:history.back()">Naspäť</a>',
+    'return_reenter' => '<a href="javascript:history.back()">Choďte naspäť a skúste to znova.</a>',
+    'session_error' => 'Prosím preverte či sú vo vašom prehliadači aktivované cookies.<br>Ak problém stále pretrváva, prosím kontaktujte webmastera.'
 );
 

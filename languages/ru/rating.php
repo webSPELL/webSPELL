@@ -25,12 +25,11 @@
 ##########################################################################
 */
 
-
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'no_access'=>'Нет доступа!',
-  'just_rate_between_0_10'=>'Оцените только от 0 до 10 баллов!'
+    'just_rate_between_0_10' => 'Оцените только от 0 до 10 баллов!',
+    'no_access' => 'Нет доступа!'
 );
 

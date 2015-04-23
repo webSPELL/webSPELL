@@ -25,17 +25,17 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'add_to_message'=>'crwdns15767:0crwdne15767:0',
-  'close_window'=>'crwdns15768:0crwdne15768:0',
-	'delete'=>'crwdns15769:0crwdne15769:0',
-	'existing_files'=>'crwdns15770:0crwdne15770:0',
-	'file_upload'=>'crwdns15771:0crwdne15771:0',
-	'invalid_access'=>'crwdns15772:0crwdne15772:0',
-	'no_access'=>'crwdns15773:0crwdne15773:0',
-	'upload'=>'crwdns15774:0crwdne15774:0'
+    'add_to_message' => 'crwdns15767:0crwdne15767:0',
+    'close_window' => 'crwdns15768:0crwdne15768:0',
+    'delete' => 'crwdns15769:0crwdne15769:0',
+    'existing_files' => 'crwdns15770:0crwdne15770:0',
+    'file_upload' => 'crwdns15771:0crwdne15771:0',
+    'invalid_access' => 'crwdns15772:0crwdne15772:0',
+    'no_access' => 'crwdns15773:0crwdne15773:0',
+    'upload' => 'crwdns15774:0crwdne15774:0'
 );
 

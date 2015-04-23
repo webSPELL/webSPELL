@@ -25,24 +25,24 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'back'=>'tillbaka',
-	'banner'=>'Banner',
-	'banner_to_big'=>'Bilden är för stor',
-	'delete'=>'radera',
-	'edit'=>'redigera',
-	'edit_linkus'=>'redigera banner',
-	'format_incorrect'=>'Ogiltig bild-format (tillåtet: *.gif, *.jpg eller *.png)',
-	'link_us'=>'länka oss',
-	'name'=>'Namn',
-	'new_banner'=>'ny banner',
-	'no_access'=>'Ingen tillgång!',
-	'no_banner'=>'Ingen länka oss banner',
-	'really_delete_banner'=>'Verkligen radera denna banner?',
-	'save_banner'=>'spara banner',
-	'use_following_code'=>'Använd följande kod för att sätta in bannern på hemsidan.'
+    'back' => 'tillbaka',
+    'banner' => 'Banner',
+    'banner_to_big' => 'Bilden är för stor',
+    'delete' => 'radera',
+    'edit' => 'redigera',
+    'edit_linkus' => 'redigera banner',
+    'format_incorrect' => 'Ogiltig bild-format (tillåtet: *.gif, *.jpg eller *.png)',
+    'link_us' => 'länka oss',
+    'name' => 'Namn',
+    'new_banner' => 'ny banner',
+    'no_access' => 'Ingen tillgång!',
+    'no_banner' => 'Ingen länka oss banner',
+    'really_delete_banner' => 'Verkligen radera denna banner?',
+    'save_banner' => 'spara banner',
+    'use_following_code' => 'Använd följande kod för att sätta in bannern på hemsidan.'
 );
 

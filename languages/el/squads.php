@@ -24,40 +24,33 @@
 #                                                                        #
 ##########################################################################
 */
-/**
- * Online Language Editor Greece language file for webSPELL 4.2.2
- * @author Stefan Giesecke <webmaster@giesi.com>
- * @copyright Copyright (c) 2010, Stefan Giesecke
- * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
- */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'about'=>'σχετικα',
-  'active'=>'ενεργο',
-  'add_buddy'=>'προσθηκη στους φιλους',
-  'awards'=>'βραβεια',
-  'back_buddy'=>'πισω στη λιστα φιλων',
-  'back_squad_overview'=>'πισω στην επισκοπηση ταγματος',
-  'challenge'=>'προκληση',
-  'contact'=>'Επικοινωνια',
-  'email'=>'email',
-  'ignore'=>'αγνοηση χρηστη',
-  'inactive'=>'ανενεργο',
-  'member'=>'Μελος',
-  'members'=>'Μελη',
-  'messenger'=>'messenger',
-  'no_description'=>'δεν υπαρχει διαθεσιμη περιγραφη',
-  'no_userpic'=>'δεν υπαρχει εικονα χρηστη!',
-  'position'=>'Θεση',
-  'results'=>'αποτελεσματα',
-  'show_details'=>'εμφανιση λεπτομεριων',
-  'squad_plays'=>'Παιχνιδια ταγματος',
-  'squads'=>'ταγματα',
-  'status'=>'Κατασταση',
-  'town'=>'Πολη',
-  'userpicture'=>'εικονα χρηστη'
+    'about' => 'σχετικα',
+    'active' => 'ενεργο',
+    'add_buddy' => 'προσθηκη στους φιλους',
+    'awards' => 'βραβεια',
+    'back_buddy' => 'πισω στη λιστα φιλων',
+    'back_squad_overview' => 'πισω στην επισκοπηση ταγματος',
+    'challenge' => 'προκληση',
+    'contact' => 'Επικοινωνια',
+    'ignore' => 'αγνοηση χρηστη',
+    'inactive' => 'ανενεργο',
+    'member' => 'Μελος',
+    'members' => 'Μελη',
+    'messenger' => 'messenger',
+    'no_description' => 'δεν υπαρχει διαθεσιμη περιγραφη',
+    'no_userpic' => 'δεν υπαρχει εικονα χρηστη!',
+    'position' => 'Θεση',
+    'results' => 'αποτελεσματα',
+    'show_details' => 'εμφανιση λεπτομεριων',
+    'squad_plays' => 'Παιχνιδια ταγματος',
+    'squads' => 'ταγματα',
+    'status' => 'Κατασταση',
+    'town' => 'Πολη',
+    'userpicture' => 'εικονα χρηστη'
 );
 

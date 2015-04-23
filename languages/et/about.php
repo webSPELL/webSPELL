@@ -25,12 +25,11 @@
 ##########################################################################
 */
 
-
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'about_title'=>'Meist',
-  'no_about'=>'Hetkel pole kirjeldus saadaval.'
+    'about_title' => 'Meist',
+    'no_about' => 'Hetkel pole kirjeldus saadaval.'
 );
 

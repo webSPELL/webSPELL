@@ -25,33 +25,33 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'actions'=>'Akciók',
-	'add_gallery'=>'Galéria hozzáadása',
-	'add_img'=>'kiskép Hozzáadása',
-	'add_picture'=>'kép Hozzáadása',
-	'comment'=>'Komment',
-	'delete'=>'törlés',
-	'disable_comments'=>'kommentek tiltása',
-	'edit'=>'szerkesztés',
-	'enable_user_comments'=>'csak a tagok kommentálhatják',
-	'enable_visitor_comments'=>'a vendégek is kommentálhatják',
-	'gallery_name'=>'Galéria Neve',
-	'group'=>'Csoport',
-	'name'=>'Név',
-	'new_gallery'=>'új Galéria',
-	'no_galleries'=>'Nincs elérhető galéria.',
-	'no_space_left'=>'Nincs elegendő hely: visszavonva.',
-	'picture'=>'Kép',
-	'please_enter_name'=>'Írj be nevet!',
-	'really_delete_gallery'=>'Biztos törölni akarod a galériát?',
-	'update'=>'frissítés',
-	'user_gallery'=>'Felhasználói Galéria',
-	'usergalleries'=>'Felhasználói galériák',
-	'visitor_comments'=>'Vendég kommentek',
-	'x_of_y_mb_in_use'=>'<span style="color:%spacecolor%">&nbsp;%used_size%</span> használt a %available_size% MB tárhelybol.'
+    'actions' => 'Akciók',
+    'add_gallery' => 'Galéria hozzáadása',
+    'add_img' => 'kiskép Hozzáadása',
+    'add_picture' => 'kép Hozzáadása',
+    'comment' => 'Komment',
+    'delete' => 'törlés',
+    'disable_comments' => 'kommentek tiltása',
+    'edit' => 'szerkesztés',
+    'enable_user_comments' => 'csak a tagok kommentálhatják',
+    'enable_visitor_comments' => 'a vendégek is kommentálhatják',
+    'gallery_name' => 'Galéria Neve',
+    'group' => 'Csoport',
+    'name' => 'Név',
+    'new_gallery' => 'új Galéria',
+    'no_galleries' => 'Nincs elérhető galéria.',
+    'no_space_left' => 'Nincs elegendő hely: visszavonva.',
+    'picture' => 'Kép',
+    'please_enter_name' => 'Írj be nevet!',
+    'really_delete_gallery' => 'Biztos törölni akarod a galériát?',
+    'update' => 'frissítés',
+    'user_gallery' => 'Felhasználói Galéria',
+    'usergalleries' => 'Felhasználói galériák',
+    'visitor_comments' => 'Vendég kommentek',
+    'x_of_y_mb_in_use' => '<span style="color:%spacecolor%">&nbsp;%used_size%</span> használt a %available_size% MB tárhelybol.'
 );
 

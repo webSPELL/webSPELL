@@ -25,24 +25,24 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'activation_successful'=>'Ditt account lyckades aktivera.<br>Du kan nu logga in.',
-	'back'=>'tillbaka',
-	'enter_nickname'=>'Snälla skriv in ett smeknamn',
-	'enter_password'=>'Snälla skriv in ett lösenord',
-	'enter_username'=>'Snälla skriv in ett användarnamn',
-	'errors_there'=>'Några problem uppstod',
-	'for_login'=>'bara för inloggning',
-	'invalid_mail'=>'Du har skrivit in en ogiltig email adress.',
-	'mail'=>'E-Mail',
-	'mail_activation_successful'=>'The activation of your email address was successfull.',
-	'mail_failed'=>'Aktiverings mailet kunde inte skickas, snälla kontakta webbmastern om detta',
-	'mail_inuse'=>'Email adressen används redan.',
-	'mail_subject'=>'Account aktivering för %homepage_url%',
-	'mail_text'=>'Hej %username%!
+    'activation_successful' => 'Ditt account lyckades aktivera.<br>Du kan nu logga in.',
+    'back' => 'tillbaka',
+    'enter_nickname' => 'Snälla skriv in ett smeknamn',
+    'enter_password' => 'Snälla skriv in ett lösenord',
+    'enter_username' => 'Snälla skriv in ett användarnamn',
+    'errors_there' => 'Några problem uppstod',
+    'for_login' => 'bara för inloggning',
+    'invalid_mail' => 'Du har skrivit in en ogiltig email adress.',
+    'mail' => 'E-Mail',
+    'mail_activation_successful' => 'The activation of your email address was successfull.',
+    'mail_failed' => 'Aktiverings mailet kunde inte skickas, snälla kontakta webbmastern om detta',
+    'mail_inuse' => 'Email adressen används redan.',
+    'mail_subject' => 'Account aktivering för %homepage_url%',
+    'mail_text' => 'Hej %username%!
 
 Din registrerning på %pagetitle% (%homepage_url%) var lyckad. Din inloggnigns information::
 
@@ -53,21 +53,21 @@ För att slutgöra registrationen måste du aktivera ditt account genom att klic
 
 Tack för din registrerning
 %pagetitle% - %homepage_url%',
-	'nickname'=>'Smeknamn',
-	'nickname_inuse'=>'Smeknamnet används redan',
-	'no_register_when_loggedin'=>'You allready have an account at %pagename%',
-	'password'=>'Lösenord',
-	'profile_info'=>'Registrations information',
-	'register_now'=>'Registrera nu!',
-	'register_successful'=>'Din registrerning lyckades. Du kommer att få ett email med account aktiverins länk snart.',
-	'registration'=>'registratering',
-	'repeat'=>'Repetera lösenord',
-	'repeat_invalid'=>'Ditt lösenord matchar inte.',
-	'security_code'=>'Säkerhets kod',
-	'username'=>'Användarnamn',
-	'username_inuse'=>'Användarnamnet används redan.',
-	'username_toolong'=>'Användarnamnet är för långt (max. 30 bokstäver).',
-	'wrong_activationkey'=>'Din aktiverings nyckel är fel!',
-	'wrong_securitycode'=>'Säkerhets koden var fel!'
+    'nickname' => 'Smeknamn',
+    'nickname_inuse' => 'Smeknamnet används redan',
+    'no_register_when_loggedin' => 'You allready have an account at %pagename%',
+    'password' => 'Lösenord',
+    'profile_info' => 'Registrations information',
+    'register_now' => 'Registrera nu!',
+    'register_successful' => 'Din registrerning lyckades. Du kommer att få ett email med account aktiverins länk snart.',
+    'registration' => 'registratering',
+    'repeat' => 'Repetera lösenord',
+    'repeat_invalid' => 'Ditt lösenord matchar inte.',
+    'security_code' => 'Säkerhets kod',
+    'username' => 'Användarnamn',
+    'username_inuse' => 'Användarnamnet används redan.',
+    'username_toolong' => 'Användarnamnet är för långt (max. 30 bokstäver).',
+    'wrong_activationkey' => 'Din aktiverings nyckel är fel!',
+    'wrong_securitycode' => 'Säkerhets koden var fel!'
 );
 

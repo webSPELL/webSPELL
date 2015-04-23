@@ -25,17 +25,17 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'invalid_password'=>'You have entered an invalid password.',
-	'ip_banned'=>'Your IP was banned from this site.<br>%reason%',
-	'login_successful'=>'Login successful!',
-	'no_user'=>'The user <b>%username%</b> is not available on this system.',
-	'not_activated'=>'Your account is not activated.',
-	'session_error'=>'Please make sure that cookies are enabled on your browser.<br>If the problem still occurs, contact the webmaster.',
-  'return'=>'<a href="javascript:history.back()">Go back</a>',
-  'return_reenter' => '<a href="javascript:history.back()">Go back and try again.</a>'
+    'invalid_password' => 'You have entered an invalid password.',
+    'ip_banned' => 'Your IP was banned from this site.<br>%reason%',
+    'login_successful' => 'Login successful!',
+    'no_user' => 'The user <b>%username%</b> is not available on this system.',
+    'not_activated' => 'Your account is not activated.',
+    'return' => '<a href="javascript:history.back()">Go back</a>',
+    'return_reenter' => '<a href="javascript:history.back()">Go back and try again.</a>',
+    'session_error' => 'Please make sure that cookies are enabled on your browser.<br>If the problem still occurs, contact the webmaster.'
 );
 

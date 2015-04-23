@@ -24,25 +24,19 @@
 #                                                                        #
 ##########################################################################
 */
-/**
- * Online Language Editor Albania language file for webSPELL 4.2.2
- * @author Stefan Giesecke <webmaster@giesi.com>
- * @copyright Copyright (c) 2010, Stefan Giesecke
- * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
- */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'add_notexists'=>'Ky përdorues nuk egziston',
-  'add_nouserid'=>'Identiteti përdoruesit nuk është i vlefshëm',
-  'add_yourself'=>'Nuk mund ta shtosh veten si shok dhe as ta injorosh!',
-  'buddy_nousers'=>'Nuk keni përdorues ne listën e shokëve',
-  'buddys'=>'shokët',
-  'ignore_nousers'=>'Nuk keni përdorues në listën e injorimit',
-  'not_logged'=>'Për të menaxhuar shokët duhet të jeni i regjistruar dhe loguar.<br><a href="index.php?site=register">Regjistrohem</a> | <a href="index.php?site=login">Identifikohu</a>',
-  'your_buddylist'=>'Lista jote e shokëve',
-  'your_ignorelist'=>'Lista jote e injorimit'
+    'add_notexists' => 'Ky përdorues nuk egziston',
+    'add_nouserid' => 'Identiteti përdoruesit nuk është i vlefshëm',
+    'add_yourself' => 'Nuk mund ta shtosh veten si shok dhe as ta injorosh!',
+    'buddy_nousers' => 'Nuk keni përdorues ne listën e shokëve',
+    'buddys' => 'shokët',
+    'ignore_nousers' => 'Nuk keni përdorues në listën e injorimit',
+    'not_logged' => 'Për të menaxhuar shokët duhet të jeni i regjistruar dhe loguar.<br><a href="index.php?site=register">Regjistrohem</a> | <a href="index.php?site=login">Identifikohu</a>',
+    'your_buddylist' => 'Lista jote e shokëve',
+    'your_ignorelist' => 'Lista jote e injorimit'
 );
 

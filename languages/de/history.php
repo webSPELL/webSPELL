@@ -25,11 +25,11 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'history'=>'Werdegang',
-	'no_history'=>'derzeit keine Informationen verfügbar'
+    'history' => 'Werdegang',
+    'no_history' => 'derzeit keine Informationen verfügbar'
 );
 

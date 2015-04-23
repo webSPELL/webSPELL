@@ -25,34 +25,33 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'actions'=>'Acties',
-	'add_gallery'=>'voeg toe aan Gallerij',
-	'add_img'=>'voeg afbeelding toe',
-	'add_picture'=>'voeg afbeelding toe',
-	'comment'=>'Reactie',
-	'delete'=>'verwijder',
-	'disable_comments'=>'sta commentaar niet toe',
-	'edit'=>'bewerk',
-	'enable_user_comments'=>'sta gebruikers commentaar toe',
-	'enable_visitor_comments'=>'sta bezoekers commentaar toe',
-	'gallery_name'=>'Gallerij Naam',
-	'group'=>'Groep',
-	'name'=>'Naam',
-	'new_gallery'=>'nieuwe Gallerij',
-	'no_galleries'=>'Geen gallerijen beschikbaar.',
-	'no_space_left'=>'Er is geen ruimte over: geannuleerd.',
-	'picture'=>'Afbeelding',
-	'please_enter_name'=>'Geef aub. een naam!',
-	'really_delete_gallery'=>'Deze gallerij echt verwijderen?',
-	'update'=>'update',
-	'user_gallery'=>'Gebruikers-Gallerij',
-	'usergalleries'=>'Gebruikers-Gallerijen',
-	'visitor_comments'=>'Bezoekers reacties',
-	'x_of_y_mb_in_use'=>'<span style="color:%spacecolor%">&nbsp;%used_size%</span> van %available_size% MB zijn in gebruik.'
-
+    'actions' => 'Acties',
+    'add_gallery' => 'voeg toe aan Gallerij',
+    'add_img' => 'voeg afbeelding toe',
+    'add_picture' => 'voeg afbeelding toe',
+    'comment' => 'Reactie',
+    'delete' => 'verwijder',
+    'disable_comments' => 'sta commentaar niet toe',
+    'edit' => 'bewerk',
+    'enable_user_comments' => 'sta gebruikers commentaar toe',
+    'enable_visitor_comments' => 'sta bezoekers commentaar toe',
+    'gallery_name' => 'Gallerij Naam',
+    'group' => 'Groep',
+    'name' => 'Naam',
+    'new_gallery' => 'nieuwe Gallerij',
+    'no_galleries' => 'Geen gallerijen beschikbaar.',
+    'no_space_left' => 'Er is geen ruimte over: geannuleerd.',
+    'picture' => 'Afbeelding',
+    'please_enter_name' => 'Geef aub. een naam!',
+    'really_delete_gallery' => 'Deze gallerij echt verwijderen?',
+    'update' => 'update',
+    'user_gallery' => 'Gebruikers-Gallerij',
+    'usergalleries' => 'Gebruikers-Gallerijen',
+    'visitor_comments' => 'Bezoekers reacties',
+    'x_of_y_mb_in_use' => '<span style="color:%spacecolor%">&nbsp;%used_size%</span> van %available_size% MB zijn in gebruik.'
 );
 

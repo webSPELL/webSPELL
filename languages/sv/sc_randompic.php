@@ -25,12 +25,12 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'no_user'=>'Ingen användarbild är tillgänglig',
-	'registered_since'=>'registrerad sedan',
-	'view_profile'=>'besök profil'
+    'no_user' => 'Ingen användarbild är tillgänglig',
+    'registered_since' => 'registrerad sedan',
+    'view_profile' => 'besök profil'
 );
 

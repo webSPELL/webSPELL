@@ -25,39 +25,36 @@
 ##########################################################################
 */
 
-
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'admin_comment'=>'Admini kommentaar',
-  'bbcode'=>'<a href="javascript:void(0);" onclick="window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> on PEAL',
-  'by'=>'',
-  'comment'=>'Kommentaar',
-  'delete_selected'=>'Kustuta valitud',
-  'enter_a_message'=>'Sa pead sõnumi kirjutama!',
-  'error_captcha'=>'Vale turvakood!',
-  'enter_your_name'=>'Sa pead nime sisestama!',
-  'guestbook'=>'külalisteraamat',
-  'guestbook_comment'=>'Külalisteraamatu kommentaar',
-  'homepage'=>'Koduleht',
-  'html'=>'HTML on MAAS',
-  'icq'=>'ICQ',
-  'ip'=>'IP',
-  'mail'=>'Su meiliaadress',
-  'name'=>'Su nimi',
-  'new_entry'=>'Uus sissekanne',
-  'no_access'=>'Sa pole sisse logitud.<br><a href="index.php?site=login">Logi sisse</a> | <a href="index.php?site=register">Registreeri</a>',
-  'options'=>'Sätted',
-  'pmsubject_newentry'=>'Uus külalisteraamatu sissekanne',
-  'pmtext_newentry'=>'[b]Keegi jättis sulle sõnumi su külalisteraamatusse![/b][br][br] [URL=index.php?site=guestbook#%insertid%]Kliki siia, et sõnumit lugeda[/URL] ',
-  'security_code'=>'Turvakood',
-  'select_all'=>'vali kõik',
-  'smilies'=>'<a href="javascript:void(0);" onclick="window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smailid</a> on PEAL',
-  'sort'=>'Sorteerimine:',
-  'submit'=>'Edasta',
-  'update_comment'=>'Salvesta kommentaar',
-  'wrote'=>'kirjutas',
-  'your_message'=>'Su sõnum'
+    'admin_comment' => 'Admini kommentaar',
+    'bbcode' => '<a href="javascript:void(0);" onclick="window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> on PEAL',
+    'by' => '',
+    'comment' => 'Kommentaar',
+    'delete_selected' => 'Kustuta valitud',
+    'enter_a_message' => 'Sa pead sõnumi kirjutama!',
+    'enter_your_name' => 'Sa pead nime sisestama!',
+    'error_captcha' => 'Vale turvakood!',
+    'guestbook' => 'külalisteraamat',
+    'guestbook_comment' => 'Külalisteraamatu kommentaar',
+    'homepage' => 'Koduleht',
+    'html' => 'HTML on MAAS',
+    'mail' => 'Su meiliaadress',
+    'name' => 'Su nimi',
+    'new_entry' => 'Uus sissekanne',
+    'no_access' => 'Sa pole sisse logitud.<br><a href="index.php?site=login">Logi sisse</a> | <a href="index.php?site=register">Registreeri</a>',
+    'options' => 'Sätted',
+    'pmsubject_newentry' => 'Uus külalisteraamatu sissekanne',
+    'pmtext_newentry' => '[b]Keegi jättis sulle sõnumi su külalisteraamatusse![/b][br][br] [URL=index.php?site=guestbook#%insertid%]Kliki siia, et sõnumit lugeda[/URL] ',
+    'security_code' => 'Turvakood',
+    'select_all' => 'vali kõik',
+    'smilies' => '<a href="javascript:void(0);" onclick="window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smailid</a> on PEAL',
+    'sort' => 'Sorteerimine:',
+    'submit' => 'Edasta',
+    'update_comment' => 'Salvesta kommentaar',
+    'wrote' => 'kirjutas',
+    'your_message' => 'Su sõnum'
 );
 

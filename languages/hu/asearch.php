@@ -25,12 +25,12 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'invalid_request'=>'Érvénytelen kérés',
-	'no_result'=>'Nincs találat',
-	'to_much_results'=>'Túl sok egyező találat van, adjon meg több karaktert.'
+    'invalid_request' => 'Érvénytelen kérés',
+    'no_result' => 'Nincs találat',
+    'to_much_results' => 'Túl sok egyező találat van, adjon meg több karaktert.'
 );
 

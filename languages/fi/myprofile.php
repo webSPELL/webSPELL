@@ -25,7 +25,7 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
@@ -44,13 +44,10 @@ $language_array = Array(
     'clan-name' => 'Klaani Nimi',
     'clan-tag' => 'Klaani Tag',
     'country' => 'Maa',
-    'cpu' => 'CPU',
     'date_of_birth' => 'Syntymäaika',
     'deactivated' => 'deaktivoitu',
-    'delete' => 'delete',
     'delete_max_90_90' => 'Poista (max90/90)',
     'delete_max_230_210' => 'Poista (max230/210)',
-    'e-mail' => 'E-mail',
     'edit_mail' => 'muuta sähköpostia',
     'edit_password' => 'muuta salasana',
     'equipment-info' => 'Tarvike Info',
@@ -139,3 +136,4 @@ Kiitoksia yhteydenotosta!
     'you_have_to_username' => 'Syötä kutsumanimesi!',
     'you_have_to_valid_email' => 'Sähköpostisi ei ole oikein!'
 );
+

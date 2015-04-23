@@ -25,11 +25,11 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'no_access'=>'crwdns15578:0crwdne15578:0',
-	'just_rate_between_0_10'=>'crwdns15579:0crwdne15579:0'
+    'just_rate_between_0_10' => 'crwdns15579:0crwdne15579:0',
+    'no_access' => 'crwdns15578:0crwdne15578:0'
 );
 

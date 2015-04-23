@@ -25,33 +25,30 @@
 ##########################################################################
 */
 
-
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'advertisement'=>'Объявление',
-  'articles'=>'Статьи',
-  'content'=>'Содержание',
-  'demos'=>'Демо',
-  'downloads'=>'Загрузки',
-  'hotest_news'=>'Горячие новости',
-  'language_switch'=>'Переключить язык',
-  'latest_news'=>'Последние новости',
-  'login'=>'Логин',
-  'matches'=>'Матчи',
-  'newsletter'=>'Лента новостей',
-  'partners'=>'Партнеры',
-  'pic_of_the_moment'=>'Картинка момента',
-  'poll'=>'Голосование',
-  'random_user'=>'Случайный пользователь',
-  'server'=>'Серверы',
-  'shoutbox'=>'Быстрый чат',
-  'sponsors'=>'спонсоры',
-  'squads'=>'Отряды',
-  'statistics'=>'Статистика',
-  'topics'=>'Сообщения',
-  'upcoming_events'=>'Предстоящие события',
-  'tags'=>'Метки'
+    'advertisement' => 'Объявление',
+    'articles' => 'Статьи',
+    'content' => 'Содержание',
+    'downloads' => 'Загрузки',
+    'hotest_news' => 'Горячие новости',
+    'language_switch' => 'Переключить язык',
+    'latest_news' => 'Последние новости',
+    'login' => 'Логин',
+    'matches' => 'Матчи',
+    'newsletter' => 'Лента новостей',
+    'partners' => 'Партнеры',
+    'pic_of_the_moment' => 'Картинка момента',
+    'poll' => 'Голосование',
+    'random_user' => 'Случайный пользователь',
+    'server' => 'Серверы',
+    'shoutbox' => 'Быстрый чат',
+    'sponsors' => 'спонсоры',
+    'squads' => 'Отряды',
+    'tags' => 'Метки',
+    'topics' => 'Сообщения',
+    'upcoming_events' => 'Предстоящие события'
 );
 

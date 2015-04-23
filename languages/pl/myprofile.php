@@ -25,7 +25,7 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
@@ -47,10 +47,8 @@ $language_array = Array(
     'cpu' => 'Procesor',
     'date_of_birth' => 'Data urodzenia',
     'deactivated' => 'wyłączona',
-    'delete' => 'delete',
     'delete_max_90_90' => 'usuń(max90/90)',
     'delete_max_230_210' => 'usuń(max230/210)',
-    'e-mail' => 'E-mail',
     'edit_mail' => 'edytuj E-Mail',
     'edit_password' => 'edytuj hasło',
     'equipment-info' => 'Informacje o sprzęcie',
@@ -139,3 +137,4 @@ Thank you for your interest
     'you_have_to_username' => 'Musisz wpisać nazwę użytkownika!',
     'you_have_to_valid_email' => 'Twój e-mail jest niepoprawny!'
 );
+

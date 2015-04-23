@@ -24,24 +24,18 @@
 #                                                                        #
 ##########################################################################
 */
-/**
- * Online Language Editor Slovenia language file for webSPELL 4.2.2
- * @author Stefan Giesecke <webmaster@giesi.com>
- * @copyright Copyright (c) 2010, Stefan Giesecke
- * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
- */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'admin_button'=>'Administracija pogostih vprašanj',
-  'answer'=>'Odgovor',
-  'categories'=>'Kategorije',
-  'faq'=>'Pogosta vprašanja',
-  'faqs'=>'Pogosta vprašanja',
-  'no_categories'=>'Kategorije še niso ustvarjene',
-  'no_faq'=>'Ni vnesenih vprašanj.<br><a href="index.php?site=faq">Nazaj na prejšnjo stran</a>',
-  'saved_on'=>'Shranjeno'
+    'admin_button' => 'Administracija pogostih vprašanj',
+    'answer' => 'Odgovor',
+    'categories' => 'Kategorije',
+    'faq' => 'Pogosta vprašanja',
+    'faqs' => 'Pogosta vprašanja',
+    'no_categories' => 'Kategorije še niso ustvarjene',
+    'no_faq' => 'Ni vnesenih vprašanj.<br><a href="index.php?site=faq">Nazaj na prejšnjo stran</a>',
+    'saved_on' => 'Shranjeno'
 );
 

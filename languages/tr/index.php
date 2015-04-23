@@ -24,39 +24,33 @@
 #                                                                        #
 ##########################################################################
 */
-/**
- * Online Language Editor Turkey language file for webSPELL 4.2.2
- * @author Stefan Giesecke <webmaster@giesi.com>
- * @copyright Copyright (c) 2010, Stefan Giesecke
- * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
- */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'advertisement'=>'Reklam',
-  'articles'=>'Haberler',
-  'content'=>'İçerik',
-  'demos'=>'Demolar',
-  'downloads'=>'İndirilenler',
-  'hotest_news'=>'En sıcak haberler',
-  'language_switch'=>'Dili değiştir',
-  'latest_news'=>'En son haberler',
-  'login'=>'Giriş',
-  'matches'=>'Maçlar',
-  'newsletter'=>'Bülten',
-  'partners'=>'Ortaklar',
-  'pic_of_the_moment'=>'Anın resmi',
-  'poll'=>'Anket',
-  'random_user'=>'Rastgele kullanıcı',
-  'server'=>'Sunucular',
-  'shoutbox'=>'Haber kutusu',
-  'sponsors'=>'Sponsorlar',
-  'squads'=>'Takım',
-  'statistics'=>'İstatistikler',
-  'topics'=>'Konular',
-  'upcoming_events'=>'Yaklaşan etkinlikler',
-  'tags'=>'Etiketler'
+    'advertisement' => 'Reklam',
+    'articles' => 'Haberler',
+    'content' => 'İçerik',
+    'demos' => 'Demolar',
+    'downloads' => 'İndirilenler',
+    'hotest_news' => 'En sıcak haberler',
+    'language_switch' => 'Dili değiştir',
+    'latest_news' => 'En son haberler',
+    'login' => 'Giriş',
+    'matches' => 'Maçlar',
+    'newsletter' => 'Bülten',
+    'partners' => 'Ortaklar',
+    'pic_of_the_moment' => 'Anın resmi',
+    'poll' => 'Anket',
+    'random_user' => 'Rastgele kullanıcı',
+    'server' => 'Sunucular',
+    'shoutbox' => 'Haber kutusu',
+    'sponsors' => 'Sponsorlar',
+    'squads' => 'Takım',
+    'statistics' => 'İstatistikler',
+    'tags' => 'Etiketler',
+    'topics' => 'Konular',
+    'upcoming_events' => 'Yaklaşan etkinlikler'
 );
 

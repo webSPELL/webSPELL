@@ -25,23 +25,22 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'admin'=>'ادمین',
-  'buddy_list'=>'لیست دوستان',
-  'cash-box'=>'صفحه پرداخت',
-  'edit_account'=>'ادیت اکانت',
-  'galleries'=>'گالری',
-  'login'=>'ورود',
-  'logout'=>'خروج',
-  'lost_password'=>'ایا رمز عبور را فراموش کردید؟',
-  'messenger'=>'مسنجر',
-  'n_a'=>'n/a',
-  'overview'=>'مرور کلی',
-  'register_now'=>'ثبت نام کنید',
-  'registered_users'=>'کاربران سایت',
-  'welcome_back'=>'خوش امدید'
+    'admin' => 'ادمین',
+    'buddy_list' => 'لیست دوستان',
+    'cash-box' => 'صفحه پرداخت',
+    'edit_account' => 'ادیت اکانت',
+    'galleries' => 'گالری',
+    'login' => 'ورود',
+    'logout' => 'خروج',
+    'lost_password' => 'ایا رمز عبور را فراموش کردید؟',
+    'messenger' => 'مسنجر',
+    'overview' => 'مرور کلی',
+    'register_now' => 'ثبت نام کنید',
+    'registered_users' => 'کاربران سایت',
+    'welcome_back' => 'خوش امدید'
 );
 

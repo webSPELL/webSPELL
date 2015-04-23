@@ -25,33 +25,32 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'about'=>'опис',
-  'active'=>'активан',
-  'add_buddy'=>'додај на листу пријатеља',
-  'awards'=>'награде',
-  'back_buddy'=>'повратак на листу пријатеља',
-  'back_squad_overview'=>'повратак на преглед тима',
-  'challenge'=>'изазови нас',
-  'contact'=>'Контакт',
-  'email'=>'е-маил',
-  'ignore'=>'игнориши корисника',
-  'inactive'=>'није активан',
-  'member'=>'Члан',
-  'members'=>'Чланови',
-  'messenger'=>'поруке',
-  'no_description'=>'није доступан опис',
-  'no_userpic'=>'није доступна слика корисника!',
-  'position'=>'Позиција',
-  'results'=>'резултати',
-  'show_details'=>'прикажи детаље',
-  'squad_plays'=>'Тим игра',
-  'squads'=>'тимови',
-  'status'=>'Статус',
-  'town'=>'Град',
-  'userpicture'=>'слика корисника'
+    'about' => 'опис',
+    'active' => 'активан',
+    'add_buddy' => 'додај на листу пријатеља',
+    'awards' => 'награде',
+    'back_buddy' => 'повратак на листу пријатеља',
+    'back_squad_overview' => 'повратак на преглед тима',
+    'challenge' => 'изазови нас',
+    'contact' => 'Контакт',
+    'email' => 'е-маил',
+    'ignore' => 'игнориши корисника',
+    'inactive' => 'није активан',
+    'member' => 'Члан',
+    'members' => 'Чланови',
+    'messenger' => 'поруке',
+    'no_description' => 'није доступан опис',
+    'no_userpic' => 'није доступна слика корисника!',
+    'position' => 'Позиција',
+    'results' => 'резултати',
+    'show_details' => 'прикажи детаље',
+    'squad_plays' => 'Тим игра',
+    'squads' => 'тимови',
+    'town' => 'Град',
+    'userpicture' => 'слика корисника'
 );
 

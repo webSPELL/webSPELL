@@ -25,12 +25,11 @@
 ##########################################################################
 */
 
-
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'save'=>'Spremi',
-  'no_session'=>'Molimo uverite se da su cookies-i omoguceni i pokušajte ponovno promjeniti jezik.'
+    'no_session' => 'Molimo uverite se da su cookies-i omoguceni i pokušajte ponovno promjeniti jezik.',
+    'save' => 'Spremi'
 );
 

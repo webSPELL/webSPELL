@@ -25,17 +25,17 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'all_messages'=>'Minden üzenet',
-	'enter_message'=>'Meg kell adnod az üzenetet!',
-	'enter_name'=>'Meg kell adnod a neved!',
-	'delete_selected'=>'Kijelölt törlése',
-	'select_all'=>'Mindet kijelöl',
-	'shout'=>'Küldés',
-	'shoutbox'=>'dumaláda',
-	'sort'=>'Rendezés:'
+    'all_messages' => 'Minden üzenet',
+    'delete_selected' => 'Kijelölt törlése',
+    'enter_message' => 'Meg kell adnod az üzenetet!',
+    'enter_name' => 'Meg kell adnod a neved!',
+    'select_all' => 'Mindet kijelöl',
+    'shout' => 'Küldés',
+    'shoutbox' => 'dumaláda',
+    'sort' => 'Rendezés:'
 );
 

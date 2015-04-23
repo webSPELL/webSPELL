@@ -25,33 +25,32 @@
 ##########################################################################
 */
 
-
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'advertisement'=>'რეკლამა',
-  'articles'=>'სტატიები',
-  'content'=>'შემცველი',
-  'demos'=>'დემოები',
-  'downloads'=>'ჩამოტვირთვების',
-  'hotest_news'=>'ცხელი სიახლეები',
-  'language_switch'=>'ენის შეცვლა',
-  'latest_news'=>'უახლესი სიახლეები',
-  'login'=>'ავტორიზირება',
-  'matches'=>'მატჩები',
-  'newsletter'=>'ახალი ამბების ლენტა',
-  'partners'=>'პარტნიორები',
-  'pic_of_the_moment'=>'მომენტის ფოტო',
-  'poll'=>'ხმის მიცემა',
-  'random_user'=>'შემთხვევითი მომხმარებელი',
-  'server'=>'სერვერები',
-  'shoutbox'=>'ჩატი',
-  'sponsors'=>'სპონსორები',
-  'squads'=>'ჯგუფები',
-  'statistics'=>'სტატისტიკები',
-  'topics'=>'შეტყობინება',
-  'upcoming_events'=>'მომავალი ივენთები',
-  'tags'=>'tags'
+    'advertisement' => 'რეკლამა',
+    'articles' => 'სტატიები',
+    'content' => 'შემცველი',
+    'demos' => 'დემოები',
+    'downloads' => 'ჩამოტვირთვების',
+    'hotest_news' => 'ცხელი სიახლეები',
+    'language_switch' => 'ენის შეცვლა',
+    'latest_news' => 'უახლესი სიახლეები',
+    'login' => 'ავტორიზირება',
+    'matches' => 'მატჩები',
+    'newsletter' => 'ახალი ამბების ლენტა',
+    'partners' => 'პარტნიორები',
+    'pic_of_the_moment' => 'მომენტის ფოტო',
+    'poll' => 'ხმის მიცემა',
+    'random_user' => 'შემთხვევითი მომხმარებელი',
+    'server' => 'სერვერები',
+    'shoutbox' => 'ჩატი',
+    'sponsors' => 'სპონსორები',
+    'squads' => 'ჯგუფები',
+    'statistics' => 'სტატისტიკები',
+    'tags' => 'tags',
+    'topics' => 'შეტყობინება',
+    'upcoming_events' => 'მომავალი ივენთები'
 );
 

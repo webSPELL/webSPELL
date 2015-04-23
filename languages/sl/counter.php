@@ -24,46 +24,40 @@
 #                                                                        #
 ##########################################################################
 */
-/**
- * Online Language Editor Slovenia language file for webSPELL 4.2.2
- * @author Stefan Giesecke <webmaster@giesi.com>
- * @copyright Copyright (c) 2010, Stefan Giesecke
- * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
- */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'daysonline'=>'Dni online',
-  'guest'=>'Gost',
-  'guests'=>'Gosti',
-  'lasthour'=>'Zadnjo uro',
-  'max_day'=>'Maximalno dnevno',
-  'maximum'=>'Maximalno',
-  'month'=>'Mesečno',
-  'now'=>'Zdaj',
-  'online'=>'Online',
-  'page_statistics'=>'Statistika atrani',
-  'registered_users'=>'registriranih uporabnikov',
-  'statistic'=>'Pokaži statistiko',
-  'this_month'=>'Ta mesec',
-  'today'=>'Danes',
-  'total'=>'Skupaj',
-  'total_statistic'=>'Skupna statistika',
-  'user'=>'uporabnik',
-  'users'=>'uporabniki',
-  'visits'=>'Obiskovalci',
-  'visits_day'=>'Obiski dnevno',
-  'visits_hour'=>'Obiski po uri',
-  'visits_month'=>'Obiski mesečno',
-  'visits_total'=>'Skupaj obiskov',
-  'yesterday'=>'Včeraj',
-  'avg_age'=>'Povprečna leta',
-  'avg_age_clanmember'=>'Povprečen čas v klanu',
-  'youngest_user'=>'Najmlajši uporabnik',
-  'oldest_user'=>'Najstarejši uporabnik',
-  'user_statistic'=>'Statistika uporabnikov',
-  'years'=>'leta'
+    'avg_age' => 'Povprečna leta',
+    'avg_age_clanmember' => 'Povprečen čas v klanu',
+    'daysonline' => 'Dni online',
+    'guest' => 'Gost',
+    'guests' => 'Gosti',
+    'lasthour' => 'Zadnjo uro',
+    'max_day' => 'Maximalno dnevno',
+    'maximum' => 'Maximalno',
+    'month' => 'Mesečno',
+    'now' => 'Zdaj',
+    'oldest_user' => 'Najstarejši uporabnik',
+    'online' => 'Online',
+    'page_statistics' => 'Statistika atrani',
+    'registered_users' => 'registriranih uporabnikov',
+    'statistic' => 'Pokaži statistiko',
+    'this_month' => 'Ta mesec',
+    'today' => 'Danes',
+    'total' => 'Skupaj',
+    'total_statistic' => 'Skupna statistika',
+    'user' => 'uporabnik',
+    'user_statistic' => 'Statistika uporabnikov',
+    'users' => 'uporabniki',
+    'visits' => 'Obiskovalci',
+    'visits_day' => 'Obiski dnevno',
+    'visits_hour' => 'Obiski po uri',
+    'visits_month' => 'Obiski mesečno',
+    'visits_total' => 'Skupaj obiskov',
+    'years' => 'leta',
+    'yesterday' => 'Včeraj',
+    'youngest_user' => 'Najmlajši uporabnik'
 );
 

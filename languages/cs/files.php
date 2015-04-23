@@ -25,7 +25,7 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
@@ -41,7 +41,6 @@ $language_array = Array(
     'database_cl' => 'Databáze',
     'delete_file' => 'vymazat soubor',
     'description' => 'Popis',
-    'dl' => 'DL',
     'download_now' => 'Stáhnout %filename% nyní',
     'download_registered_only' => 'Stahovaní jen pro registrované uživatele!',
     'download_via_mirror' => 'download pøes mirror',
@@ -105,3 +104,4 @@ $language_array = Array(
     'you_have_to_enter_file' => 'Zadej adresu souboru!',
     'you_have_to_enter_filename' => 'Zadej název souboru!'
 );
+

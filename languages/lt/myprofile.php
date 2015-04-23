@@ -25,7 +25,7 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
@@ -44,10 +44,8 @@ $language_array = Array(
     'clan-name' => 'Klano Vardas',
     'clan-tag' => 'Klano Užrašas',
     'country' => 'Šalis',
-    'cpu' => 'CPU',
     'date_of_birth' => 'Gimimo metai',
     'deactivated' => 'išjungta',
-    'delete' => 'delete',
     'delete_max_90_90' => 'ištrinti (maks90/90)',
     'delete_max_230_210' => 'ištrinti (maks230/210)',
     'e-mail' => 'E-Paštas',
@@ -139,3 +137,4 @@ Ačiū jums
     'you_have_to_username' => 'Jūs turite įrašyti vartotojo vardą!',
     'you_have_to_valid_email' => 'Jūsų E-Pašto adresas blogas!'
 );
+

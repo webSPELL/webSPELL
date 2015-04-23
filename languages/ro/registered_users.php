@@ -25,20 +25,19 @@
 ##########################################################################
 */
 
-
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'contact'=>'Contact',
-  'country'=>'T',
-  'homepage'=>'Pagină de start',
-  'last_login'=>'Ultima logare',
-  'nickname'=>'Poreclă',
-  'no_users'=>'niciun utilizator înregistrat',
-  'now_on'=>'conectat acum',
-  'registered_users'=>'utilizatori înregistraţi',
-  'registration'=>'Înregistrat din',
-  'sort'=>'Sorteaza:'
+    'contact' => 'Contact',
+    'country' => 'T',
+    'homepage' => 'Pagină de start',
+    'last_login' => 'Ultima logare',
+    'nickname' => 'Poreclă',
+    'no_users' => 'niciun utilizator înregistrat',
+    'now_on' => 'conectat acum',
+    'registered_users' => 'utilizatori înregistraţi',
+    'registration' => 'Înregistrat din',
+    'sort' => 'Sorteaza:'
 );
 

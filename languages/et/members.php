@@ -25,29 +25,28 @@
 ##########################################################################
 */
 
-
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'about'=>'Info',
-  'active'=>'aktiivne',
-  'activity'=>'Aktiivsus',
-  'awards'=>'Auhinnad',
-  'back_overview'=>'&raquo; <a href="index.php?site=members"><b>tagasi liikmete ülevaatesse</b></a>',
-  'challenge'=>'Katsumus',
-  'contact'=>'Kontakt',
-  'go'=>'Mine!',
-  'inactive'=>'inaktiivne',
-  'member'=>'Liige',
-  'members'=>'liikmed',
-  'nickname'=>'Hüüdnimi',
-  'no_description'=>'pole kirjeldust',
-  'position'=>'Asukoht',
-  'results'=>'Tulemused',
-  'show_details'=>'&raquo; <a href="index.php?site=members&amp;action=show&amp;squadID=%squadID%"><b>Näita andmeid</b></a>',
-  'show_only'=>'Näita ainult',
-  'status'=>'Staatus',
-  'town'=>'Linn'
+    'about' => 'Info',
+    'active' => 'aktiivne',
+    'activity' => 'Aktiivsus',
+    'awards' => 'Auhinnad',
+    'back_overview' => '&raquo; <a href="index.php?site=members"><b>tagasi liikmete ülevaatesse</b></a>',
+    'challenge' => 'Katsumus',
+    'contact' => 'Kontakt',
+    'go' => 'Mine!',
+    'inactive' => 'inaktiivne',
+    'member' => 'Liige',
+    'members' => 'liikmed',
+    'nickname' => 'Hüüdnimi',
+    'no_description' => 'pole kirjeldust',
+    'position' => 'Asukoht',
+    'results' => 'Tulemused',
+    'show_details' => '&raquo; <a href="index.php?site=members&amp;action=show&amp;squadID=%squadID%"><b>Näita andmeid</b></a>',
+    'show_only' => 'Näita ainult',
+    'status' => 'Staatus',
+    'town' => 'Linn'
 );
 

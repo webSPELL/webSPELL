@@ -25,19 +25,19 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'contact'=>'Kapcsolat',
-	'country'=>'O',
-	'homepage'=>'Honlap',
-	'last_login'=>'Utolsó bejelentkezés',
-	'nickname'=>'Becenév',
-	'no_users'=>'Nincs regisztrált felhasználó',
-	'now_on'=>'jelenleg online',
-	'registered_users'=>'regisztrált felhasználók',
-	'registration'=>'Regisztráció idopontja',
-	'sort'=>'Rendezés:'
+    'contact' => 'Kapcsolat',
+    'country' => 'O',
+    'homepage' => 'Honlap',
+    'last_login' => 'Utolsó bejelentkezés',
+    'nickname' => 'Becenév',
+    'no_users' => 'Nincs regisztrált felhasználó',
+    'now_on' => 'jelenleg online',
+    'registered_users' => 'regisztrált felhasználók',
+    'registration' => 'Regisztráció idopontja',
+    'sort' => 'Rendezés:'
 );
 

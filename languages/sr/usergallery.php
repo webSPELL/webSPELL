@@ -25,33 +25,32 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'actions'=>'Акције',
-  'add_gallery'=>'додај галерију',
-  'add_img'=>'Додај имг',
-  'add_picture'=>'додај слику',
-  'comment'=>'Коментариши',
-  'delete'=>'Избриши',
-  'disable_comments'=>'Онемогући коментаре',
-  'edit'=>'Измјени',
-  'enable_user_comments'=>'Омогући коментаре корисницима',
-  'enable_visitor_comments'=>'Сви могу коментарисати',
-  'gallery_name'=>'Име галерије',
-  'group'=>'Група',
-  'name'=>'Име',
-  'new_gallery'=>'Нова галерија',
-  'no_galleries'=>'Нема доступни галерија',
-  'no_space_left'=>'Није вам преостало простора.',
-  'picture'=>'Слика',
-  'please_enter_name'=>'Молимо унесите име!',
-  'really_delete_gallery'=>'Cтварно избриши галерију?',
-  'update'=>'Спреми измјене',
-  'user_gallery'=>'Корисничка галерија',
-  'usergalleries'=>'Галерије корисника',
-  'visitor_comments'=>'Коментари посјетиоца',
-  'x_of_y_mb_in_use'=>'<span style="color:%spacecolor%">&nbsp;%used_size%</span> од %available_size% МБ се тренутно користи.'
+    'actions' => 'Акције',
+    'add_gallery' => 'додај галерију',
+    'add_img' => 'Додај имг',
+    'add_picture' => 'додај слику',
+    'comment' => 'Коментариши',
+    'delete' => 'Избриши',
+    'disable_comments' => 'Онемогући коментаре',
+    'edit' => 'Измјени',
+    'enable_user_comments' => 'Омогући коментаре корисницима',
+    'enable_visitor_comments' => 'Сви могу коментарисати',
+    'gallery_name' => 'Име галерије',
+    'name' => 'Име',
+    'new_gallery' => 'Нова галерија',
+    'no_galleries' => 'Нема доступни галерија',
+    'no_space_left' => 'Није вам преостало простора.',
+    'picture' => 'Слика',
+    'please_enter_name' => 'Молимо унесите име!',
+    'really_delete_gallery' => 'Cтварно избриши галерију?',
+    'update' => 'Спреми измјене',
+    'user_gallery' => 'Корисничка галерија',
+    'usergalleries' => 'Галерије корисника',
+    'visitor_comments' => 'Коментари посјетиоца',
+    'x_of_y_mb_in_use' => '<span style="color:%spacecolor%">&nbsp;%used_size%</span> од %available_size% МБ се тренутно користи.'
 );
 

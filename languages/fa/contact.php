@@ -25,29 +25,29 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'back'=>'بازگشت به فروم',
-  'contact'=>'کانتکت ها',
-  'description'=>'به وسیله این فرم شما میتوانید به ما پیغام ارسال کنید',
-  'enter_mail'=>'.لطفا ادرس ایمیل خود را وارد کنید',
-  'enter_message'=>'.لطفا پیغام خود را وارد کنید',
-  'enter_name'=>'.لطفا نام خود را وارد منید',
-  'enter_subject'=>'.لطفا موضوع را وارد کنید',
-  'errors_there'=>'اشتباه رخ داد',
-  'mail'=>'ایمیل',
-  'message'=>'پیغام',
-  'name'=>'نام',
-  'receiver'=>'دريافت كننده',
-  'reset'=>'از نو کردن',
-  'security_code'=>'کد امنیتی',
-  'send'=>'فرستادن',
-  'send_successfull'=>'.پیغام شما با موفقییت فرستاده شد',
-  'subject'=>'موضوع',
-  'title_contact'=>'فرم ارتباط',
-'unknown_receiver'=>'unknown receiver',
-  'wrong_securitycode'=>'!شما کد امنیتی را اشتباه وارد کردید'
+    'back' => 'بازگشت به فروم',
+    'contact' => 'کانتکت ها',
+    'description' => 'به وسیله این فرم شما میتوانید به ما پیغام ارسال کنید',
+    'enter_mail' => '.لطفا ادرس ایمیل خود را وارد کنید',
+    'enter_message' => '.لطفا پیغام خود را وارد کنید',
+    'enter_name' => '.لطفا نام خود را وارد منید',
+    'enter_subject' => '.لطفا موضوع را وارد کنید',
+    'errors_there' => 'اشتباه رخ داد',
+    'mail' => 'ایمیل',
+    'message' => 'پیغام',
+    'name' => 'نام',
+    'receiver' => 'دريافت كننده',
+    'reset' => 'از نو کردن',
+    'security_code' => 'کد امنیتی',
+    'send' => 'فرستادن',
+    'send_successfull' => '.پیغام شما با موفقییت فرستاده شد',
+    'subject' => 'موضوع',
+    'title_contact' => 'فرم ارتباط',
+    'unknown_receiver' => 'unknown receiver',
+    'wrong_securitycode' => '!شما کد امنیتی را اشتباه وارد کردید'
 );
 

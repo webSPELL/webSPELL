@@ -24,20 +24,14 @@
 #                                                                        #
 ##########################################################################
 */
-/**
- * Online Language Editor Russia language file for webSPELL 4.2.2
- * @author Stefan Giesecke <webmaster@giesi.com>
- * @copyright Copyright (c) 2010, Stefan Giesecke
- * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
- */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'no_informations'=>'нет информации',
-  'report_message'=>'[b]Новая %s - жалоба[/b][br][br]%s-Идентификационный номер: %d[br]Информация: %s[br]Referer: [url]index.php?site=files&file=%d[/url]',
-  'report_recognized'=>'Ваша жалоба распознана. Спасибо.',
-  'wrong_securitycode'=>'Вы ввели неверный код безопастности<br><br>[<a href="javascript:back();">назад</a>]'
+    'no_informations' => 'нет информации',
+    'report_message' => '[b]Новая %s - жалоба[/b][br][br]%s-Идентификационный номер: %d[br]Информация: %s[br]Referer: [url]index.php?site=files&file=%d[/url]',
+    'report_recognized' => 'Ваша жалоба распознана. Спасибо.',
+    'wrong_securitycode' => 'Вы ввели неверный код безопастности<br><br>[<a href="javascript:back();">назад</a>]'
 );
 

@@ -25,19 +25,19 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'contact'=>'Kontakt',
-	'country'=>'Land',
-	'homepage'=>'Hjemmeside',
-	'last_login'=>'Sidste log ind',
-	'nickname'=>'Øgenavn',
-	'no_users'=>'igen registerede brugere',
-	'now_on'=>'Online nu',
-	'registered_users'=>'registrerede brugere',
-	'registration'=>'Registreret siden',
-	'sort'=>'Sorter:'
+    'contact' => 'Kontakt',
+    'country' => 'Land',
+    'homepage' => 'Hjemmeside',
+    'last_login' => 'Sidste log ind',
+    'nickname' => 'Øgenavn',
+    'no_users' => 'igen registerede brugere',
+    'now_on' => 'Online nu',
+    'registered_users' => 'registrerede brugere',
+    'registration' => 'Registreret siden',
+    'sort' => 'Sorter:'
 );
 

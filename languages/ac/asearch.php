@@ -25,12 +25,12 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'invalid_request'=>'crwdns14238:0crwdne14238:0',
-	'no_result'=>'crwdns14239:0crwdne14239:0',
-	'to_much_results'=>'crwdns14240:0crwdne14240:0'
+    'invalid_request' => 'crwdns14238:0crwdne14238:0',
+    'no_result' => 'crwdns14239:0crwdne14239:0',
+    'to_much_results' => 'crwdns14240:0crwdne14240:0'
 );
 

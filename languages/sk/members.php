@@ -25,28 +25,28 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'about'=>'Popis',
-	'active'=>'aktívny',
-	'activity'=>'Aktivita',
-	'awards'=>'Ocenenia',
-	'back_overview'=>'&raquo; <a href="index.php?site=members"><b>Naspäť k prehľadu členov</b></a>',
-	'challenge'=>'Výzva',
-	'contact'=>'Kontakt',
-	'go'=>'Go!',
-	'inactive'=>'neaktívny',
-	'member'=>'Člen',
-	'members'=>'členovia',
-	'nickname'=>'Nickname',
-	'no_description'=>'žiaden popis',
-	'position'=>'Pozícia',
-	'results'=>'Výsledky',
-	'show_details'=>'&raquo; <a href="index.php?site=members&action=show&squadID=%squadID%"><b>Ukáž detaily</b></a>',
-	'show_only'=>'Ukázať',
-	'status'=>'Status',
-	'town'=>'Mesto'
+    'about' => 'Popis',
+    'active' => 'aktívny',
+    'activity' => 'Aktivita',
+    'awards' => 'Ocenenia',
+    'back_overview' => '&raquo; <a href="index.php?site=members"><b>Naspäť k prehľadu členov</b></a>',
+    'challenge' => 'Výzva',
+    'contact' => 'Kontakt',
+    'go' => 'Go!',
+    'inactive' => 'neaktívny',
+    'member' => 'Člen',
+    'members' => 'členovia',
+    'nickname' => 'Nickname',
+    'no_description' => 'žiaden popis',
+    'position' => 'Pozícia',
+    'results' => 'Výsledky',
+    'show_details' => '&raquo; <a href="index.php?site=members&action=show&squadID=%squadID%"><b>Ukáž detaily</b></a>',
+    'show_only' => 'Ukázať',
+    'status' => 'Status',
+    'town' => 'Mesto'
 );
 

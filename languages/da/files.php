@@ -25,7 +25,7 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
@@ -41,7 +41,6 @@ $language_array = Array(
     'database_cl' => 'Database',
     'delete_file' => 'Slet fil',
     'description' => 'Beskrivelse',
-    'dl' => 'DL',
     'download_now' => 'Download %filename% nu',
     'download_registered_only' => 'Download, kun for registrerede brugere!',
     'download_via_mirror' => 'download via mirror',
@@ -105,3 +104,4 @@ $language_array = Array(
     'you_have_to_enter_file' => 'Du skal indtaste en fil / url!',
     'you_have_to_enter_filename' => 'Du skal indtaste et filnavn!'
 );
+

@@ -25,7 +25,7 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
@@ -47,10 +47,8 @@ $language_array = Array(
     'cpu' => 'Protsessor',
     'date_of_birth' => 'Sünnikuupäev',
     'deactivated' => 'deaktiveeritud',
-    'delete' => 'delete',
     'delete_max_90_90' => 'kustuta (max90/90)',
     'delete_max_230_210' => 'kustuta (max230/210)',
-    'e-mail' => 'E-mail',
     'edit_mail' => 'muuda e-maili',
     'edit_password' => 'muuda parooli',
     'equipment-info' => 'Varustuse info',
@@ -139,3 +137,4 @@ Täname huvi üles näitamise eest
     'you_have_to_username' => 'Sa pead oma kasutajanime sisestama!',
     'you_have_to_valid_email' => 'Su meiliaadress pole korrektne!'
 );
+

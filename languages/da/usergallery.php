@@ -25,33 +25,33 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'actions'=>'Handlinger',
-	'add_gallery'=>'Tilføj galleri',
-	'add_img'=>'tilføj billede',
-	'add_picture'=>'tilføj billede',
-	'comment'=>'Kommentar',
-	'delete'=>'slet',
-	'disable_comments'=>'Deaktiver kommentarer',
-	'edit'=>'rediger',
-	'enable_user_comments'=>'Slå bruger kommentarer til',
-	'enable_visitor_comments'=>'Slå gæst kommentarer til',
-	'gallery_name'=>'Galleri-Navn',
-	'group'=>'Gruppe',
-	'name'=>'Navn',
-	'new_gallery'=>'nyt Galleri',
-	'no_galleries'=>'Ingen gallerier tilgængelige.',
-	'no_space_left'=>'Der er ikke noget plads tilbage: afbrudt.',
-	'picture'=>'Billede',
-	'please_enter_name'=>'Indtast venligst et navn!',
-	'really_delete_gallery'=>'Vil du virkelig slette dette galleri?',
-	'update'=>'opdater',
-	'user_gallery'=>'Bruger-Galleri',
-	'usergalleries'=>'Bruger gallerier',
-	'visitor_comments'=>'Gæste kommentarer',
-	'x_of_y_mb_in_use'=>'<span style="color:%spacecolor%">&nbsp;%used_size%</span> af %available_size% MB er i brug.'
+    'actions' => 'Handlinger',
+    'add_gallery' => 'Tilføj galleri',
+    'add_img' => 'tilføj billede',
+    'add_picture' => 'tilføj billede',
+    'comment' => 'Kommentar',
+    'delete' => 'slet',
+    'disable_comments' => 'Deaktiver kommentarer',
+    'edit' => 'rediger',
+    'enable_user_comments' => 'Slå bruger kommentarer til',
+    'enable_visitor_comments' => 'Slå gæst kommentarer til',
+    'gallery_name' => 'Galleri-Navn',
+    'group' => 'Gruppe',
+    'name' => 'Navn',
+    'new_gallery' => 'nyt Galleri',
+    'no_galleries' => 'Ingen gallerier tilgængelige.',
+    'no_space_left' => 'Der er ikke noget plads tilbage: afbrudt.',
+    'picture' => 'Billede',
+    'please_enter_name' => 'Indtast venligst et navn!',
+    'really_delete_gallery' => 'Vil du virkelig slette dette galleri?',
+    'update' => 'opdater',
+    'user_gallery' => 'Bruger-Galleri',
+    'usergalleries' => 'Bruger gallerier',
+    'visitor_comments' => 'Gæste kommentarer',
+    'x_of_y_mb_in_use' => '<span style="color:%spacecolor%">&nbsp;%used_size%</span> af %available_size% MB er i brug.'
 );
 

@@ -25,29 +25,28 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'award'=>'Prijs',
-	'awards'=>'Prijzen',
-	'date'=>'Datum',
-	'delete'=>'Verwijder',
-	'edit'=>'Bewerk',
-	'edit_award'=>'Bewerk prijs',
-	'enter_title'=>'Je moet een titel invullen!',
-	'enter_text'=>'Je moet tekst invullen',
-	'event'=>'Evenement',
-	'homepage'=>'Homepage',
-	'info'=>'Info',
-	'new_award'=>'Nieuwe prijs',
-	'no_access'=>'Geen toegang!',
-	'no_entries'=>'Geen prijs beschikbaar',
-	'ranking'=>'Plaats',
-	'save_award'=>'Sla prijs op',
-	'sort'=>'Sorteer',
-	'squad'=>'Team',
-	'update_award'=>'Update prijs'
-
+    'award' => 'Prijs',
+    'awards' => 'Prijzen',
+    'date' => 'Datum',
+    'delete' => 'Verwijder',
+    'edit' => 'Bewerk',
+    'edit_award' => 'Bewerk prijs',
+    'enter_text' => 'Je moet tekst invullen',
+    'enter_title' => 'Je moet een titel invullen!',
+    'event' => 'Evenement',
+    'homepage' => 'Homepage',
+    'info' => 'Info',
+    'new_award' => 'Nieuwe prijs',
+    'no_access' => 'Geen toegang!',
+    'no_entries' => 'Geen prijs beschikbaar',
+    'ranking' => 'Plaats',
+    'save_award' => 'Sla prijs op',
+    'sort' => 'Sorteer',
+    'squad' => 'Team',
+    'update_award' => 'Update prijs'
 );
 

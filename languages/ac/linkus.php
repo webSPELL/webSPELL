@@ -25,24 +25,24 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'back'=>'crwdns15082:0crwdne15082:0',
-	'banner'=>'crwdns15083:0crwdne15083:0',
-	'banner_to_big'=>'crwdns15084:0crwdne15084:0',
-	'delete'=>'crwdns15085:0crwdne15085:0',
-	'edit'=>'crwdns15086:0crwdne15086:0',
-	'edit_linkus'=>'crwdns15087:0crwdne15087:0',
-	'format_incorrect'=>'crwdns15088:0crwdne15088:0',
-	'link_us'=>'crwdns15089:0crwdne15089:0',
-	'name'=>'crwdns15090:0crwdne15090:0',
-	'new_banner'=>'crwdns15091:0crwdne15091:0',
-	'no_access'=>'crwdns15092:0crwdne15092:0',
-	'no_banner'=>'crwdns15093:0crwdne15093:0',
-	'really_delete_banner'=>'crwdns15094:0crwdne15094:0',
-	'save_banner'=>'crwdns15095:0crwdne15095:0',
-	'use_following_code'=>'crwdns15096:0crwdne15096:0'
+    'back' => 'crwdns15082:0crwdne15082:0',
+    'banner' => 'crwdns15083:0crwdne15083:0',
+    'banner_to_big' => 'crwdns15084:0crwdne15084:0',
+    'delete' => 'crwdns15085:0crwdne15085:0',
+    'edit' => 'crwdns15086:0crwdne15086:0',
+    'edit_linkus' => 'crwdns15087:0crwdne15087:0',
+    'format_incorrect' => 'crwdns15088:0crwdne15088:0',
+    'link_us' => 'crwdns15089:0crwdne15089:0',
+    'name' => 'crwdns15090:0crwdne15090:0',
+    'new_banner' => 'crwdns15091:0crwdne15091:0',
+    'no_access' => 'crwdns15092:0crwdne15092:0',
+    'no_banner' => 'crwdns15093:0crwdne15093:0',
+    'really_delete_banner' => 'crwdns15094:0crwdne15094:0',
+    'save_banner' => 'crwdns15095:0crwdne15095:0',
+    'use_following_code' => 'crwdns15096:0crwdne15096:0'
 );
 

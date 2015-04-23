@@ -25,40 +25,39 @@
 ##########################################################################
 */
 
-
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'daysonline'=>'Päevi online',
-  'guest'=>'Külaline',
-  'guests'=>'Külalist',
-  'lasthour'=>'Viimane tund',
-  'max_day'=>'Enim päevas',
-  'maximum'=>'Enim',
-  'month'=>'Kuu',
-  'now'=>'Praegu',
-  'online'=>'Online',
-  'page_statistics'=>'Lehe statistika',
-  'registered_users'=>'Registreeritud kasutajaid',
-  'statistic'=>'Näita statistikat',
-  'this_month'=>'See kuu',
-  'today'=>'Täna',
-  'total'=>'Kokku',
-  'total_statistic'=>'Üldine statistika',
-  'user'=>'Kasutaja',
-  'users'=>'Kasutajat',
-  'visits'=>'Külalist',
-  'visits_day'=>'Külastust päevas',
-  'visits_hour'=>'Külastust tunnis',
-  'visits_month'=>'Külastust kuus',
-  'visits_total'=>'Kokku külastusi',
-  'yesterday'=>'Eile',
-  'avg_age'=>'Keskmine vanus',
-  'avg_age_clanmember'=>'Klanniliikmete keskmine vanus',
-  'youngest_user'=>'Noorim kasutaja',
-  'oldest_user'=>'Vanim kasutaja',
-  'user_statistic'=>'Kasutaja statistika',
-  'years'=>'aastat'
+    'avg_age' => 'Keskmine vanus',
+    'avg_age_clanmember' => 'Klanniliikmete keskmine vanus',
+    'daysonline' => 'Päevi online',
+    'guest' => 'Külaline',
+    'guests' => 'Külalist',
+    'lasthour' => 'Viimane tund',
+    'max_day' => 'Enim päevas',
+    'maximum' => 'Enim',
+    'month' => 'Kuu',
+    'now' => 'Praegu',
+    'oldest_user' => 'Vanim kasutaja',
+    'online' => 'Online',
+    'page_statistics' => 'Lehe statistika',
+    'registered_users' => 'Registreeritud kasutajaid',
+    'statistic' => 'Näita statistikat',
+    'this_month' => 'See kuu',
+    'today' => 'Täna',
+    'total' => 'Kokku',
+    'total_statistic' => 'Üldine statistika',
+    'user' => 'Kasutaja',
+    'user_statistic' => 'Kasutaja statistika',
+    'users' => 'Kasutajat',
+    'visits' => 'Külalist',
+    'visits_day' => 'Külastust päevas',
+    'visits_hour' => 'Külastust tunnis',
+    'visits_month' => 'Külastust kuus',
+    'visits_total' => 'Kokku külastusi',
+    'years' => 'aastat',
+    'yesterday' => 'Eile',
+    'youngest_user' => 'Noorim kasutaja'
 );
 

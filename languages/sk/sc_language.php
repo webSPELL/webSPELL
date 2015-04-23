@@ -25,11 +25,11 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'save'=>'uložiť',
-	'no_session'=>'Prosím uistite sa, že cookies (vo vašom prehliadači) sú povolené a pokúste sa zmeniť jazyk ešte raz.'
+    'no_session' => 'Prosím uistite sa, že cookies (vo vašom prehliadači) sú povolené a pokúste sa zmeniť jazyk ešte raz.',
+    'save' => 'uložiť'
 );
 

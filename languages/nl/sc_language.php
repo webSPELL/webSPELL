@@ -25,13 +25,11 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'save'=>'opslaan',
-	'no_session'=>'Zorg dat cookies aan staan en probeer om de taal opnieuw te veranderen.'
-
+    'no_session' => 'Zorg dat cookies aan staan en probeer om de taal opnieuw te veranderen.',
+    'save' => 'opslaan'
 );
-
 

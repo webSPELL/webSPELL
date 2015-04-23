@@ -24,20 +24,14 @@
 #                                                                        #
 ##########################################################################
 */
-/**
- * Online Language Editor South Africa language file for webSPELL 4.2.2
- * @author Stefan Giesecke <webmaster@giesi.com>
- * @copyright Copyright (c) 2010, Stefan Giesecke
- * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
- */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'email_failed'=>'Daar was \'n probleem tydens die stuur pos. Kontak die webmeester.',
-  'email_subject'=>'Jou rekening vir %pagetitle%',
-  'email_text'=>'Jou rekening vir %pagetitle%
+    'email_failed' => 'Daar was \'n probleem tydens die stuur pos. Kontak die webmeester.',
+    'email_subject' => 'Jou rekening vir %pagetitle%',
+    'email_text' => 'Jou rekening vir %pagetitle%
 AANDAG jou wagwoord is verander!
 
 het jy jou gebruikersnaam: %username%
@@ -45,13 +39,13 @@ jou nuwe wagwoord: %new_password%
 
 om pret te h� op ons bladsy
 %homepage_url%',
-  'get_password'=>'kry wagwoord',
-  'lost_password'=>'verlore wagwoord',
-  'no_mail_given'=>'U het geen epos adress in ingevoer nie.',
-  'no_user_found'=>'Geen gebruiker gevind!',
-  'successful'=>'Jou rekening is gevind<br><br>
+    'get_password' => 'kry wagwoord',
+    'lost_password' => 'verlore wagwoord',
+    'no_mail_given' => 'U het geen epos adress in ingevoer nie.',
+    'no_user_found' => 'Geen gebruiker gevind!',
+    'successful' => 'Jou rekening is gevind<br><br>
     Jy sal \'n e-pos met jou rekening data in \'n paar sekondes ontvang.<br><br>
     &#8226; <a href="index.php?site=login">teken</a>',
-  'your_email'=>'Jou e-pos'
+    'your_email' => 'Jou e-pos'
 );
 

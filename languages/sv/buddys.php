@@ -25,18 +25,18 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'add_notexists'=>'Denna användaren finns inte',
-	'add_nouserid'=>'Användar ID är inte tillängligt',
-	'add_yourself'=>'Du kan inte lägga till dig själv som vän och du kan inte ignorera dig själv!',
-	'buddy_nousers'=>'Du har inga användare i din vänner lista',
-	'buddys'=>'Vänner',
-	'ignore_nousers'=>'Du har inga användare i din ignore lista',
-	'not_logged'=>'För att kunna behandla dina vänner måste du vara registrerad och inloggad.<br><a href="index.php?site=register">Registrera/a> | <a href="index.php?site=login">Logga in</a>',
-	'your_buddylist'=>'Din vänner lista',
-	'your_ignorelist'=>'Din ignore lista'
+    'add_notexists' => 'Denna användaren finns inte',
+    'add_nouserid' => 'Användar ID är inte tillängligt',
+    'add_yourself' => 'Du kan inte lägga till dig själv som vän och du kan inte ignorera dig själv!',
+    'buddy_nousers' => 'Du har inga användare i din vänner lista',
+    'buddys' => 'Vänner',
+    'ignore_nousers' => 'Du har inga användare i din ignore lista',
+    'not_logged' => 'För att kunna behandla dina vänner måste du vara registrerad och inloggad.<br><a href="index.php?site=register">Registrera/a> | <a href="index.php?site=login">Logga in</a>',
+    'your_buddylist' => 'Din vänner lista',
+    'your_ignorelist' => 'Din ignore lista'
 );
 

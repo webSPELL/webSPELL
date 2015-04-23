@@ -25,7 +25,7 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
@@ -41,7 +41,6 @@ $language_array = Array(
     'database_cl' => 'Baza danych',
     'delete_file' => 'usuńplik',
     'description' => 'Opis',
-    'dl' => 'DL',
     'download_now' => 'Ściągnij %filename% teraz',
     'download_registered_only' => 'Download tylko dla zarejestrowanych użytkowników!',
     'download_via_mirror' => 'pobierz przez mirrory',
@@ -105,3 +104,4 @@ $language_array = Array(
     'you_have_to_enter_file' => 'Musisz dodać plik lub url!',
     'you_have_to_enter_filename' => 'Musisz wpisać nazwę pliku!'
 );
+

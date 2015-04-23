@@ -25,40 +25,39 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'daysonline'=>'En ligne aujourd\'hui',
-	'guest'=>'Invité',
-	'guests'=>'Invités',
-	'lasthour'=>'Dernière heure',
-	'max_day'=>'Maximum en un jour',
-	'maximum'=>'Maximum',
-	'month'=>'Mois',
-	'now'=>'Actuellement',
-	'online'=>'En ligne',
-	'page_statistics'=>'Page des statistiques',
-	'registered_users'=>'Membres enregistrés',
-	'statistic'=>'Voir les statistiques',
-	'this_month'=>'Ce mois',
-	'today'=>'Aujourd\'hui',
-	'total'=>'Total',
-	'total_statistic'=>'Statistiques',
-	'user'=>'Membre',
-	'users'=>'Membres',
-	'visits'=>'Visiteurs',
-	'visits_day'=>'Visites par jour',
-	'visits_hour'=>'Visites par heure',
-	'visits_month'=>'Visites par mois',
-	'visits_total'=>'Total des visites',
-	'yesterday'=>'Hier',
-	'avg_age'=>'Moyenne d\'âge',
-	'avg_age_clanmember'=>'Moyenne d\'âge des membres de la team',
-	'youngest_user'=>'Membre le plus jeune',
-	'oldest_user'=>'Membre le plus âgé',
-	'user_statistic'=>'Statistiques des membres',
-	'years'=>'ans'
+    'avg_age' => 'Moyenne d\'âge',
+    'avg_age_clanmember' => 'Moyenne d\'âge des membres de la team',
+    'daysonline' => 'En ligne aujourd\'hui',
+    'guest' => 'Invité',
+    'guests' => 'Invités',
+    'lasthour' => 'Dernière heure',
+    'max_day' => 'Maximum en un jour',
+    'maximum' => 'Maximum',
+    'month' => 'Mois',
+    'now' => 'Actuellement',
+    'oldest_user' => 'Membre le plus âgé',
+    'online' => 'En ligne',
+    'page_statistics' => 'Page des statistiques',
+    'registered_users' => 'Membres enregistrés',
+    'statistic' => 'Voir les statistiques',
+    'this_month' => 'Ce mois',
+    'today' => 'Aujourd\'hui',
+    'total' => 'Total',
+    'total_statistic' => 'Statistiques',
+    'user' => 'Membre',
+    'user_statistic' => 'Statistiques des membres',
+    'users' => 'Membres',
+    'visits' => 'Visiteurs',
+    'visits_day' => 'Visites par jour',
+    'visits_hour' => 'Visites par heure',
+    'visits_month' => 'Visites par mois',
+    'visits_total' => 'Total des visites',
+    'years' => 'ans',
+    'yesterday' => 'Hier',
+    'youngest_user' => 'Membre le plus jeune'
 );
-
 

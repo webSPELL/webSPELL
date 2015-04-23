@@ -25,32 +25,32 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'advertisement'=>'hirdetés',
-	'articles'=>'cikkek',
-	'content'=>'tartalom',
-	'demos'=>'demók',
-	'downloads'=>'letöltések',
-	'hotest_news'=>'friss hírek',
-	'language_switch'=>'nyelv-váltás',
-	'latest_news'=>'legújabb hírek',
-	'login'=>'bejelentkezés',
-	'matches'=>'meccsek',
-	'newsletter'=>'hírlevél',
-	'partners'=>'partnerek',
-	'pic_of_the_moment'=>'pillanatkép',
-	'poll'=>'szavazás',
-	'random_user'=>'véletlenszerű felhasználó',
-	'server'=>'szerverek',
-	'shoutbox'=>'üzenőfal',
-	'sponsors'=>'szponzorok',
-	'squads'=>'squadok',
-	'statistics'=>'statisztikák',
-	'topics'=>'topikok',
-	'upcoming_events'=>'közelgő események',
-	'tags'=>'címkék'
+    'advertisement' => 'hirdetés',
+    'articles' => 'cikkek',
+    'content' => 'tartalom',
+    'demos' => 'demók',
+    'downloads' => 'letöltések',
+    'hotest_news' => 'friss hírek',
+    'language_switch' => 'nyelv-váltás',
+    'latest_news' => 'legújabb hírek',
+    'login' => 'bejelentkezés',
+    'matches' => 'meccsek',
+    'newsletter' => 'hírlevél',
+    'partners' => 'partnerek',
+    'pic_of_the_moment' => 'pillanatkép',
+    'poll' => 'szavazás',
+    'random_user' => 'véletlenszerű felhasználó',
+    'server' => 'szerverek',
+    'shoutbox' => 'üzenőfal',
+    'sponsors' => 'szponzorok',
+    'squads' => 'squadok',
+    'statistics' => 'statisztikák',
+    'tags' => 'címkék',
+    'topics' => 'topikok',
+    'upcoming_events' => 'közelgő események'
 );
 

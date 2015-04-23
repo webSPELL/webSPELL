@@ -25,17 +25,17 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'add_to_message'=>'اضافه کردن به پیغام',
-  'close_window'=>'بستن صفحه',
-  'delete'=>'حذف',
-  'existing_files'=>'فایل موجود',
-  'file_upload'=>'اپلود فایل',
-  'invalid_access'=>'!غیر قابل ورود',
-  'no_access'=>'!وارد نشوید',
-  'upload'=>'اپلود'
+    'add_to_message' => 'اضافه کردن به پیغام',
+    'close_window' => 'بستن صفحه',
+    'delete' => 'حذف',
+    'existing_files' => 'فایل موجود',
+    'file_upload' => 'اپلود فایل',
+    'invalid_access' => '!غیر قابل ورود',
+    'no_access' => '!وارد نشوید',
+    'upload' => 'اپلود'
 );
 

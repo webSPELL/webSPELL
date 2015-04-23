@@ -25,12 +25,12 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'invalid_request'=>'Ogiltig begäran',
-	'no_result'=>'Inga sök resultat',
-	'to_much_results'=>'Det finns för mycket passande resultat, skriv in fler tecken.'
+    'invalid_request' => 'Ogiltig begäran',
+    'no_result' => 'Inga sök resultat',
+    'to_much_results' => 'Det finns för mycket passande resultat, skriv in fler tecken.'
 );
 

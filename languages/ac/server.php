@@ -25,19 +25,19 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'game'=>'crwdns15715:0crwdne15715:0',
-  'information'=>'crwdns15716:0crwdne15716:0',
-	'ip'=>'crwdns15717:0crwdne15717:0',
-	'link'=>'crwdns15718:0crwdne15718:0',
-	'no_server'=>'crwdns15719:0crwdne15719:0',
-	'not_supported'=>'crwdns15720:0crwdne15720:0',
-	'online'=>'crwdns15721:0crwdne15721:0',
-	'server'=>'crwdns15722:0crwdne15722:0',
-	'status'=>'crwdns15723:0crwdne15723:0',
-	'timeout'=>'crwdns15724:0crwdne15724:0'
+    'game' => 'crwdns15715:0crwdne15715:0',
+    'information' => 'crwdns15716:0crwdne15716:0',
+    'ip' => 'crwdns15717:0crwdne15717:0',
+    'link' => 'crwdns15718:0crwdne15718:0',
+    'no_server' => 'crwdns15719:0crwdne15719:0',
+    'not_supported' => 'crwdns15720:0crwdne15720:0',
+    'online' => 'crwdns15721:0crwdne15721:0',
+    'server' => 'crwdns15722:0crwdne15722:0',
+    'status' => 'crwdns15723:0crwdne15723:0',
+    'timeout' => 'crwdns15724:0crwdne15724:0'
 );
 

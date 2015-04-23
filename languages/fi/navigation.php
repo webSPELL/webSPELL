@@ -24,50 +24,43 @@
 #                                                                        #
 ##########################################################################
 */
-/**
- * Online Language Editor Finland language file for webSPELL 4.2.2
- * @author Stefan Giesecke <webmaster@giesi.com>
- * @copyright Copyright (c) 2010, Stefan Giesecke
- * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
- */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'about_us'=>'Tietoa meistä',
-  'archives'=>'Arkistot',
-  'articles'=>'Artikkelit',
-  'awards'=>'Palkinnot',
-  'calendar'=>'Kalenteri',
-  'clan'=>'Klaani',
-  'community'=>'Yhteisö',
-  'contact'=>'Yhteys lomake',
-  'demos'=>'Demot',
-  'downloads'=>'Lataukset',
-  'faq'=>'FAQ',
-  'fight_us'=>'Taistele meitä vastaan',
-  'forums'=>'Foorumit',
-  'gallery'=>'Galleria',
-  'guestbook'=>'Vieraskirja',
-  'history'=>'Historia',
-  'imprint'=>'Jälki',
-  'join_us'=>'Liity meihin',
-  'links'=>'Web-linkit',
-  'links_us'=>'Linkitä meidät',
-  'main'=>'Aula',
-  'matches'=>'Ottelut',
-  'media'=>'Media',
-  'members'=>'Jäsenet',
-  'miscellaneous'=>'Sekalaiset',
-  'news'=>'Uutiset',
-  'newsletter'=>'Uutislehtiset',
-  'polls'=>'Kyselyt',
-  'registered_users'=>'Rekisteröidyt käyttäjät',
-  'search'=>'Etsi',
-  'servers'=>'Serverit',
-  'sponsors'=>'Sponsorit',
-  'squads'=>'Joukkueet',
-  'who_is_online'=>'Kuka on online?'
+    'about_us' => 'Tietoa meistä',
+    'archives' => 'Arkistot',
+    'articles' => 'Artikkelit',
+    'awards' => 'Palkinnot',
+    'calendar' => 'Kalenteri',
+    'clan' => 'Klaani',
+    'community' => 'Yhteisö',
+    'contact' => 'Yhteys lomake',
+    'demos' => 'Demot',
+    'downloads' => 'Lataukset',
+    'fight_us' => 'Taistele meitä vastaan',
+    'forums' => 'Foorumit',
+    'gallery' => 'Galleria',
+    'guestbook' => 'Vieraskirja',
+    'history' => 'Historia',
+    'imprint' => 'Jälki',
+    'join_us' => 'Liity meihin',
+    'links' => 'Web-linkit',
+    'links_us' => 'Linkitä meidät',
+    'main' => 'Aula',
+    'matches' => 'Ottelut',
+    'media' => 'Media',
+    'members' => 'Jäsenet',
+    'miscellaneous' => 'Sekalaiset',
+    'news' => 'Uutiset',
+    'newsletter' => 'Uutislehtiset',
+    'polls' => 'Kyselyt',
+    'registered_users' => 'Rekisteröidyt käyttäjät',
+    'search' => 'Etsi',
+    'servers' => 'Serverit',
+    'sponsors' => 'Sponsorit',
+    'squads' => 'Joukkueet',
+    'who_is_online' => 'Kuka on online?'
 );
 

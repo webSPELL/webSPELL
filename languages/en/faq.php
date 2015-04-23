@@ -25,17 +25,15 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'admin_button'=>'FAQ Administration',
-	'answer'=>'Answer',
-	'categories'=>'Categories',
-	'faq'=>'FAQ',
-	'faqs'=>'FAQs',
-	'no_categories'=>'no categories created yet',
-	'no_faq'=>'No questions available.<br><a href="index.php?site=faq">Back</a>',
-	'saved_on'=>'saved on'
+    'admin_button' => 'FAQ Administration',
+    'answer' => 'Answer',
+    'categories' => 'Categories',
+    'no_categories' => 'no categories created yet',
+    'no_faq' => 'No questions available.<br><a href="index.php?site=faq">Back</a>',
+    'saved_on' => 'saved on'
 );
 

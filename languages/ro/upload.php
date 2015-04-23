@@ -25,18 +25,17 @@
 ##########################################################################
 */
 
-
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'add_to_message'=>'Adaugă la mesaj',
-  'close_window'=>'inchide fereastră',
-  'delete'=>'Şterge',
-  'existing_files'=>'Fisiere existente',
-  'file_upload'=>'Încarcă fisier',
-  'invalid_access'=>'Acces invalid!',
-  'no_access'=>'Nu este permis accesul!',
-  'upload'=>'Încarcă'
+    'add_to_message' => 'Adaugă la mesaj',
+    'close_window' => 'inchide fereastră',
+    'delete' => 'Şterge',
+    'existing_files' => 'Fisiere existente',
+    'file_upload' => 'Încarcă fisier',
+    'invalid_access' => 'Acces invalid!',
+    'no_access' => 'Nu este permis accesul!',
+    'upload' => 'Încarcă'
 );
 

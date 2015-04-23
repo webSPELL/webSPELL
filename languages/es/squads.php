@@ -25,33 +25,32 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'about'=>'sobre',
-	'active'=>'activo',
-	'add_buddy'=>'añadir lista amigos',
-	'awards'=>'premios',
-	'back_buddy'=>'volver a lista amigos',
-	'back_squad_overview'=>'volver a escuadron',
-	'challenge'=>'retar',
-	'contact'=>'Contactar',
-	'email'=>'email',
-	'ignore'=>'ignorar usuario',
-	'inactive'=>'inactivo',
-	'member'=>'Miembro',
-	'members'=>'Miembros',
-	'messenger'=>'messenger',
-	'no_description'=>'no hay descripcion',
-	'no_userpic'=>'no hay imagen!',
-	'position'=>'Posición',
-	'results'=>'resultados',
-	'show_details'=>'mostrar detalles',
-	'squad_plays'=>'Escuadron juega:',
-	'squads'=>'escuadrones',
-	'status'=>'Estado',
-	'town'=>'Pueblo',
-	'userpicture'=>'foto'
+    'about' => 'sobre',
+    'active' => 'activo',
+    'add_buddy' => 'añadir lista amigos',
+    'awards' => 'premios',
+    'back_buddy' => 'volver a lista amigos',
+    'back_squad_overview' => 'volver a escuadron',
+    'challenge' => 'retar',
+    'contact' => 'Contactar',
+    'ignore' => 'ignorar usuario',
+    'inactive' => 'inactivo',
+    'member' => 'Miembro',
+    'members' => 'Miembros',
+    'messenger' => 'messenger',
+    'no_description' => 'no hay descripcion',
+    'no_userpic' => 'no hay imagen!',
+    'position' => 'Posición',
+    'results' => 'resultados',
+    'show_details' => 'mostrar detalles',
+    'squad_plays' => 'Escuadron juega:',
+    'squads' => 'escuadrones',
+    'status' => 'Estado',
+    'town' => 'Pueblo',
+    'userpicture' => 'foto'
 );
 

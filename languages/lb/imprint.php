@@ -24,22 +24,16 @@
 #                                                                        #
 ##########################################################################
 */
-/**
- * Online Language Editor Luxemburg language file for webSPELL 4.2.2
- * @author Stefan Giesecke <webmaster@giesi.com>
- * @copyright Copyright (c) 2010, Stefan Giesecke
- * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
- */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'admins'=>'Administrator(en):',
-	'coding'=>'Programméierung',
-	'coding_info'=>'Des Säit benotzt <a href="http://www.webspell.org" target="_blank">webSPELL Free Content Management System (Version: $version)</a>. Et baséiert op PHP4/5 an MySQL an leeft ënnert der <a href="http://www.fsf.org/licensing/licenses/gpl.html" target="_blank">GNU GENERAL PUBLIC LICENSE</a>.<br>Hei gëtt et dësen Scripte em soss: <a href="http://www.webspell.org" target="_blank">www.webSPELL.org</a>',
-	'disclaimer'=>'Haftungsausschluss',
-	'disclaimer_text'=>'<p><strong>1. Inhalt des Onlineangebotes</strong><br>
+    'admins' => 'Administrator(en):',
+    'coding' => 'Programméierung',
+    'coding_info' => 'Des Säit benotzt <a href="http://www.webspell.org" target="_blank">webSPELL Free Content Management System (Version: $version)</a>. Et baséiert op PHP4/5 an MySQL an leeft ënnert der <a href="http://www.fsf.org/licensing/licenses/gpl.html" target="_blank">GNU GENERAL PUBLIC LICENSE</a>.<br>Hei gëtt et dësen Scripte em soss: <a href="http://www.webspell.org" target="_blank">www.webSPELL.org</a>',
+    'disclaimer' => 'Haftungsausschluss',
+    'disclaimer_text' => '<p><strong>1. Inhalt des Onlineangebotes</strong><br>
 	Der Autor übernimmt keinerlei Gewähr für die Aktualität, Korrektheit, Vollständigkeit oder Qualität der bereitgestellten Informationen. Haftungsansprüche gegen den Autor, welche sich auf Schäden materieller oder ideeller Art beziehen, die durch die Nutzung oder Nichtnutzung der dargebotenen Informationen bzw. durch die Nutzung fehlerhafter und unvollständiger Informationen verursacht wurden, sind grundsätzlich ausgeschlossen, sofern seitens des Autors kein nachweislich vorsätzliches oder grob fahrlässiges Verschulden vorliegt.<br>
 	Alle Angebote sind freibleibend und unverbindlich. Der Autor behält es sich ausdrücklich vor, Teile der Seiten oder das gesamte Angebot ohne gesonderte Ankündigung zu verändern, zu ergänzen, zu löschen oder die Veröffentlichung zeitweise oder endgültig einzustellen.</p>
 	<p><strong>2. Verweise und Links</strong><br>
@@ -53,9 +47,9 @@ $language_array = Array(
 	Sofern innerhalb des Internetangebotes die Möglichkeit zur Eingabe persönlicher oder geschäftlicher Daten (Emailadressen, Namen, Anschriften) besteht, so erfolgt die Preisgabe dieser Daten seitens des Benutzers auf ausdrücklich freiwilliger Basis. Die Inanspruchnahme und Bezahlung aller angebotenen Dienste ist - soweit technisch möglich und zumutbar - auch ohne Angabe solcher Daten bzw. unter Angabe anonymisierter Daten oder eines Pseudonyms gestattet. Die Nutzung der im Rahmen des Impressums oder vergleichbarer Angaben veröffentlichten Kontaktdaten wie Postanschriften, Telefon- und Faxnummern sowie Emailadressen durch Dritte zur übersendung von nicht ausdrücklich angeforderten Informationen ist nicht gestattet. Rechtliche Schritte gegen die Versender von so genannten Spam-Mails bei Verstößen gegen dieses Verbot sind ausdrücklich vorbehalten.</p>
 	<p><strong>5. Rechtswirksamkeit dieses Haftungsausschlusses</strong><br>
 	Dieser Haftungsausschluss ist als Teil des Internetangebotes zu betrachten, von dem aus auf diese Seite verwiesen wurde. Sofern Teile oder einzelne Formulierungen dieses Textes der geltenden Rechtslage nicht, nicht mehr oder nicht vollständig entsprechen sollten, bleiben die übrigen Teile des Dokumentes in ihrem Inhalt und ihrer Gültigkeit davon unberührt.</p>',
-	'imprint'=>'Impressum',
-	'mods'=>'Moderator(en):',
-	'responsible_persons'=>'Verantwortlech Persounen',
-	'webmaster'=>'Webmaster:'
+    'imprint' => 'Impressum',
+    'mods' => 'Moderator(en):',
+    'responsible_persons' => 'Verantwortlech Persounen',
+    'webmaster' => 'Webmaster:'
 );
 

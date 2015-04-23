@@ -25,15 +25,15 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'admins'=>'Administrátor:',
-	'coding'=>'Programovanie:',
-	'coding_info'=>'Táto stránka používa <a href="http://www.webspell.org" target="_blank">webSPELL Free Content Management System (verzia: $version)</a>. Webspell je založený na PHP4/5 a MySQL, využívajúci <a href="http://www.fsf.org/licensing/licenses/gpl.html" target="_blank">GNU GENERAL PUBLIC LICENSE</a>.<br>Webspell si môžete prevziať zadarmo z adresy: <a href="http://www.webspell.org" target="_blank">www.webSPELL.org</a>',
-	'disclaimer'=>'Prehlásenie',
-	'disclaimer_text'=>'<p><strong>1. Obsah</strong><br>
+    'admins' => 'Administrátor:',
+    'coding' => 'Programovanie:',
+    'coding_info' => 'Táto stránka používa <a href="http://www.webspell.org" target="_blank">webSPELL Free Content Management System (verzia: $version)</a>. Webspell je založený na PHP4/5 a MySQL, využívajúci <a href="http://www.fsf.org/licensing/licenses/gpl.html" target="_blank">GNU GENERAL PUBLIC LICENSE</a>.<br>Webspell si môžete prevziať zadarmo z adresy: <a href="http://www.webspell.org" target="_blank">www.webSPELL.org</a>',
+    'disclaimer' => 'Prehlásenie',
+    'disclaimer_text' => '<p><strong>1. Obsah</strong><br>
 	Autor si vyhradzuje právo nebyť zodpovedný za aktuálnosť, správnosť, úplnosť alebo kvalitu poskytovaných informácií. Stažnosti za vzniknuté škody spôsobené používaním poskytnutých informácií (ktoré môžu byť neúplné alebo nesprávne) budú zamietnuté.<br>
 	Všetky údaje sú neviazané a bez záväzkov. Časti stránok alebo kompletná publikácia obsahujúca všetky údaje a informácie môžu byť rozšírené, zmenené, čiastočne alebo úplne vymazané bez akéhokoľvek oznámenia.</p>
 	<p><strong>2. Odkazy</strong><br>
@@ -44,9 +44,9 @@ $language_array = Array(
 	Ak je daná možnosť zadania osobných alebo pracovných informácií (e-mailová adresa, meno, adresa), vstup týchto dát sa uskutočňuje dobrovoľne. Použitie a platby za poskytnuté služby sú prípustné - ak je to technicky možné - bez špecifikácie akýchkoľvek osobných údajov alebo špecifikácie pomocou anonymizovaných údajov alebo aliasov. Použitie publikovaných poštových adries, telefónnych alebo faxových čísel a emailových adries pre marketingové účely je zakázané. Páchateľ ktorý odosiela nevyžiadanú poštu (spam) bude potrestaný.</p>
 	<p><strong>5. Právna platnosť tohto vyhlásenia</strong><br>
 	Toto vyhlásenie je považované za časť internetovej publikácie. Ak časti alebo jednotlivé výrazy tohto prehlásenia nie sú platné alebo správne, správnosť ostatných častí zostáva nedotknutá.</p>',
-	'imprint'=>'Imprint',
-	'mods'=>'Moderátor:',
-	'responsible_persons'=>'zodpovedné osoby',
-	'webmaster'=>'Webmaster:'
+    'imprint' => 'Imprint',
+    'mods' => 'Moderátor:',
+    'responsible_persons' => 'zodpovedné osoby',
+    'webmaster' => 'Webmaster:'
 );
 

@@ -25,7 +25,7 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
@@ -44,13 +44,10 @@ $language_array = Array(
     'clan-name' => 'კლანის-სახელი',
     'clan-tag' => 'კლანის-თეგი',
     'country' => 'აქვეყანა',
-    'cpu' => 'CPU',
     'date_of_birth' => 'დაბადების თარიღი',
     'deactivated' => 'გათიშვამდე',
-    'delete' => 'delete',
     'delete_max_90_90' => 'წაშლა (max90/90)',
     'delete_max_230_210' => 'წაშლა (max230/210)',
-    'e-mail' => 'E-mail',
     'edit_mail' => 'რედაქტირება E-Mail',
     'edit_password' => 'პაროლის რედაქტირება',
     'equipment-info' => 'შემცველობის ინფორმაცია',
@@ -139,3 +136,4 @@ $language_array = Array(
     'you_have_to_username' => 'თქვენ უნდა შეიყვანოთ მომხლარებლის სახელი!',
     'you_have_to_valid_email' => 'თქვენი e-mail არ არის სწორი!'
 );
+

@@ -25,12 +25,12 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'no_frame'=>'!را پشتیبانی نمیکند frame استفاده میکند جستجوگر شما frame این سایت از',
-  'outgoing'=>'رفتن',
-  'owner_responsible'=>'.مالک مسول این صفحه است'
+    'no_frame' => '!را پشتیبانی نمیکند frame استفاده میکند جستجوگر شما frame این سایت از',
+    'outgoing' => 'رفتن',
+    'owner_responsible' => '.مالک مسول این صفحه است'
 );
 

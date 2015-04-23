@@ -25,24 +25,24 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'back'=>'zpět',
-	'banner'=>'Banner',
-	'banner_to_big'=>'Obrázek může mít',
-	'delete'=>'smazat',
-	'edit'=>'upravit',
-	'edit_linkus'=>'upravit banner',
-	'format_incorrect'=>'špatný formát obrázku (povolené: *:gif, *.jpg nebo *.png)',
-	'link_us'=>'link us',
-	'name'=>'Název',
-	'new_banner'=>'nový banner',
-	'no_access'=>'Nemáš přístup!',
-	'no_banner'=>'neexistuje banner',
-	'really_delete_banner'=>'opravdu chceš smazat tento banner?',
-	'save_banner'=>'uložit banner',
-	'use_following_code'=>'Použíjte tento kód pro vložení banneru na Váš web:'
+    'back' => 'zpět',
+    'banner' => 'Banner',
+    'banner_to_big' => 'Obrázek může mít',
+    'delete' => 'smazat',
+    'edit' => 'upravit',
+    'edit_linkus' => 'upravit banner',
+    'format_incorrect' => 'špatný formát obrázku (povolené: *:gif, *.jpg nebo *.png)',
+    'link_us' => 'link us',
+    'name' => 'Název',
+    'new_banner' => 'nový banner',
+    'no_access' => 'Nemáš přístup!',
+    'no_banner' => 'neexistuje banner',
+    'really_delete_banner' => 'opravdu chceš smazat tento banner?',
+    'save_banner' => 'uložit banner',
+    'use_following_code' => 'Použíjte tento kód pro vložení banneru na Váš web:'
 );
 

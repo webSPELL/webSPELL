@@ -25,17 +25,18 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
+
 /* do not edit above this line */
 
-	'add_notexists'=>'Deze gebruiker bestaat niet',
-	'add_nouserid'=>'Gebruikers ID niet beschikbaar',
-	'add_yourself'=>'Je kan jezelf niet toevoegen en niet negeren!',
-	'buddy_nousers'=>'Je hebt geen gebruikers in je vriendenlijst',
-	'buddys'=>'vrienden',
-	'ignore_nousers'=>'Je hebt geen gebruikers in je negeer-lijst',
-	'not_logged'=>'Om je vrienden te managen moet je geregistreerd en ingelogd zijn.<br><a href="index.php?site=register">Registreer</a> | <a href="index.php?site=login">Log in</a>',
-	'your_buddylist'=>'Je vriendenlijst',
-	'your_ignorelist'=>'Je negeer-lijst'
+    'add_notexists' => 'Deze gebruiker bestaat niet',
+    'add_nouserid' => 'Gebruikers ID niet beschikbaar',
+    'add_yourself' => 'Je kan jezelf niet toevoegen en niet negeren!',
+    'buddy_nousers' => 'Je hebt geen gebruikers in je vriendenlijst',
+    'buddys' => 'vrienden',
+    'ignore_nousers' => 'Je hebt geen gebruikers in je negeer-lijst',
+    'not_logged' => 'Om je vrienden te managen moet je geregistreerd en ingelogd zijn.<br><a href="index.php?site=register">Registreer</a> | <a href="index.php?site=login">Log in</a>',
+    'your_buddylist' => 'Je vriendenlijst',
+    'your_ignorelist' => 'Je negeer-lijst'
 );
 

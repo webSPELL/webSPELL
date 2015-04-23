@@ -25,29 +25,28 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'back'=>'Vissza',
-	'contact'=>'kapcsolat',
-	'description'=>'Itt üzenhetsz a klánnak, vagy felveheted a kapcsolatot a webmesterrel',
-	'enter_mail'=>'Írd be az e-mail címet.',
-	'enter_message'=>'Írd be az üzenetet.',
-	'enter_name'=>'Írd be a neved.',
-	'enter_subject'=>'Írd be a témát.',
-	'errors_there'=>'Problémák adódtak',
-	'mail'=>'E-Mail',
-	'message'=>'Üzenet',
-	'name'=>'Név',
-	'receiver'=>'Fogadó',
-	'reset'=>'Alap',
-	'security_code'=>'Biztonsági kód',
-	'send'=>'Küldés',
-	'send_successfull'=>'Az üzenetedet sikeresen elküldted.',
-	'subject'=>'Téma',
-	'title_contact'=>'Kapcsolat Űrlap',
-	'unknown_receiver'=>'unknown receiver',
-	'wrong_securitycode'=>'Hibás biztonsági kód!'
+    'back' => 'Vissza',
+    'contact' => 'kapcsolat',
+    'description' => 'Itt üzenhetsz a klánnak, vagy felveheted a kapcsolatot a webmesterrel',
+    'enter_mail' => 'Írd be az e-mail címet.',
+    'enter_message' => 'Írd be az üzenetet.',
+    'enter_name' => 'Írd be a neved.',
+    'enter_subject' => 'Írd be a témát.',
+    'errors_there' => 'Problémák adódtak',
+    'message' => 'Üzenet',
+    'name' => 'Név',
+    'receiver' => 'Fogadó',
+    'reset' => 'Alap',
+    'security_code' => 'Biztonsági kód',
+    'send' => 'Küldés',
+    'send_successfull' => 'Az üzenetedet sikeresen elküldted.',
+    'subject' => 'Téma',
+    'title_contact' => 'Kapcsolat Űrlap',
+    'unknown_receiver' => 'unknown receiver',
+    'wrong_securitycode' => 'Hibás biztonsági kód!'
 );
 

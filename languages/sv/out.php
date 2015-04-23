@@ -25,12 +25,12 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'no_frame'=>'Denna hemsidan använder ramar. Din webbläsare stöder inte ramar!',
-	'outgoing'=>'Utgående',
-	'owner_responsible'=>'Ägaren är ansvarig för denna hemsidan.'
+    'no_frame' => 'Denna hemsidan använder ramar. Din webbläsare stöder inte ramar!',
+    'outgoing' => 'Utgående',
+    'owner_responsible' => 'Ägaren är ansvarig för denna hemsidan.'
 );
 

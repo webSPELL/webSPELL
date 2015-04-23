@@ -25,24 +25,24 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'activation_successful'=>'.فعال سازی اکانت شما با موفقیت انجام گرفت<br>.شما میتوانید وارد شوید',
-  'back'=>'برگشت',
-  'enter_nickname'=>'.لطفا نام مخفف خود را وارد کنید',
-  'enter_password'=>'.لطفا کلمه عبور را وارد کنید',
-  'enter_username'=>'.لطفا نام کاربری را وارد کنید',
-  'errors_there'=>'مشکلی پیش امد',
-  'for_login'=>'برای ورود',
-  'invalid_mail'=>'.شما ایمیل درست را وارد نکردید',
-  'mail'=>'ایمیل',
-  'mail_activation_successful'=>'.فعال سازی ایمیل شما با موفقیت انجام گرفت',
-  'mail_failed'=>'.ایمیل فعال سازی نمیتواند فرستاده شود لطفا با ادمین تماس بگرید',
-  'mail_inuse'=>'.ایمیل هم اکنون در حا استفاده است',
-  'mail_subject'=>'فعال سازی ایمیل برای %homepage_url%',
-  'mail_text'=>'سلام %username%
+    'activation_successful' => '.فعال سازی اکانت شما با موفقیت انجام گرفت<br>.شما میتوانید وارد شوید',
+    'back' => 'برگشت',
+    'enter_nickname' => '.لطفا نام مخفف خود را وارد کنید',
+    'enter_password' => '.لطفا کلمه عبور را وارد کنید',
+    'enter_username' => '.لطفا نام کاربری را وارد کنید',
+    'errors_there' => 'مشکلی پیش امد',
+    'for_login' => 'برای ورود',
+    'invalid_mail' => '.شما ایمیل درست را وارد نکردید',
+    'mail' => 'ایمیل',
+    'mail_activation_successful' => '.فعال سازی ایمیل شما با موفقیت انجام گرفت',
+    'mail_failed' => '.ایمیل فعال سازی نمیتواند فرستاده شود لطفا با ادمین تماس بگرید',
+    'mail_inuse' => '.ایمیل هم اکنون در حا استفاده است',
+    'mail_subject' => 'فعال سازی ایمیل برای %homepage_url%',
+    'mail_text' => 'سلام %username%
   
   شما عضو شدید در %pagetitle% (%homepage_url%) تاریخ اکانت شما.موفقیت امیز:
   
@@ -52,21 +52,21 @@ $language_array = Array(
   %activationlink%
   با تشکر
   %pagetitle% - %homepage_url%',
-  'nickname'=>'نام مخفف',
-  'nickname_inuse'=>'.این نام هم اکنون در حال استفاده است',
-'no_register_when_loggedin'=>'You allready have an account at %pagename%',
-  'password'=>'کلمه عبور',
-  'profile_info'=>'اطلاعات اکانت',
-  'register_now'=>'!عضو شوید',
-  'register_successful'=>'.عضویت با موفقیت انجام گرفت لطفا ایمیل را فعال سازی کنید',
-  'registration'=>'عضویت',
-  'repeat'=>'کلمه عبور',
-  'repeat_invalid'=>'.پسورد هماهنگ نیست',
-  'security_code'=>'کد',
-  'username'=>'نام کاربر',
-  'username_inuse'=>'.کاربر در حال استفاده است',
-  'username_toolong'=>'.(نام کاربر بلند است (حداکثر 30 حرف',
-  'wrong_activationkey'=>'!کد فعال سازی اشتباه است',
-  'wrong_securitycode'=>'!کد اشتباه است'
+    'nickname' => 'نام مخفف',
+    'nickname_inuse' => '.این نام هم اکنون در حال استفاده است',
+    'no_register_when_loggedin' => 'You allready have an account at %pagename%',
+    'password' => 'کلمه عبور',
+    'profile_info' => 'اطلاعات اکانت',
+    'register_now' => '!عضو شوید',
+    'register_successful' => '.عضویت با موفقیت انجام گرفت لطفا ایمیل را فعال سازی کنید',
+    'registration' => 'عضویت',
+    'repeat' => 'کلمه عبور',
+    'repeat_invalid' => '.پسورد هماهنگ نیست',
+    'security_code' => 'کد',
+    'username' => 'نام کاربر',
+    'username_inuse' => '.کاربر در حال استفاده است',
+    'username_toolong' => '.(نام کاربر بلند است (حداکثر 30 حرف',
+    'wrong_activationkey' => '!کد فعال سازی اشتباه است',
+    'wrong_securitycode' => '!کد اشتباه است'
 );
 
