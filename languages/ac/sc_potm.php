@@ -29,6 +29,6 @@ $language_array = array(
 
 /* do not edit above this line */
 
-    'random_picture' => 'crwdns15627:0crwdne15627:0'
+    'random_picture' => 'crwdns21482:0crwdne21482:0'
 );
 

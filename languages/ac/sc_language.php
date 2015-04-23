@@ -29,7 +29,7 @@ $language_array = array(
 
 /* do not edit above this line */
 
-    'no_session' => 'crwdns15626:0crwdne15626:0',
-    'save' => 'crwdns15625:0crwdne15625:0'
+    'no_session' => 'crwdns21481:0crwdne21481:0',
+    'save' => 'crwdns21480:0crwdne21480:0'
 );
 

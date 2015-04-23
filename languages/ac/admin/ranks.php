@@ -29,20 +29,20 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'crwdns16587:0crwdne16587:0',
-  'add_rank'=>'crwdns16588:0crwdne16588:0',
-  'actions'=>'crwdns16589:0crwdne16589:0',
-  'delete'=>'crwdns16590:0crwdne16590:0',
-  'edit_rank'=>'crwdns16591:0crwdne16591:0',
-  'information_incomplete'=>'crwdns16592:0crwdne16592:0',
-  'max_posts'=>'crwdns16593:0crwdne16593:0',
-  'min_posts'=>'crwdns16594:0crwdne16594:0',
-  'new_rank'=>'crwdns16595:0crwdne16595:0',
-  'rank_icon'=>'crwdns16596:0crwdne16596:0',
-  'rank_name'=>'crwdns16597:0crwdne16597:0',
-  'really_delete'=>'crwdns16598:0crwdne16598:0',
-  'transaction_invalid'=>'crwdns16599:0crwdne16599:0',
-  'update'=>'crwdns16600:0crwdne16600:0',
-  'user_ranks'=>'crwdns16601:0crwdne16601:0'
+  'access_denied'=>'crwdns22442:0crwdne22442:0',
+  'add_rank'=>'crwdns22443:0crwdne22443:0',
+  'actions'=>'crwdns22444:0crwdne22444:0',
+  'delete'=>'crwdns22445:0crwdne22445:0',
+  'edit_rank'=>'crwdns22446:0crwdne22446:0',
+  'information_incomplete'=>'crwdns22447:0crwdne22447:0',
+  'max_posts'=>'crwdns22448:0crwdne22448:0',
+  'min_posts'=>'crwdns22449:0crwdne22449:0',
+  'new_rank'=>'crwdns22450:0crwdne22450:0',
+  'rank_icon'=>'crwdns22451:0crwdne22451:0',
+  'rank_name'=>'crwdns22452:0crwdne22452:0',
+  'really_delete'=>'crwdns22453:0crwdne22453:0',
+  'transaction_invalid'=>'crwdns22454:0crwdne22454:0',
+  'update'=>'crwdns22455:0crwdne22455:0',
+  'user_ranks'=>'crwdns22456:0crwdne22456:0'
 );
 

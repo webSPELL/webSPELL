@@ -29,13 +29,11 @@ $language_array = array(
 
 /* do not edit above this line */
 
-    'admin_button' => 'crwdns14735:0crwdne14735:0',
-    'answer' => 'crwdns14736:0crwdne14736:0',
-    'categories' => 'crwdns14737:0crwdne14737:0',
-    'faq' => 'crwdns14738:0crwdne14738:0',
-    'faqs' => 'crwdns14739:0crwdne14739:0',
-    'no_categories' => 'crwdns14740:0crwdne14740:0',
-    'no_faq' => 'crwdns14741:0crwdne14741:0',
-    'saved_on' => 'crwdns14742:0crwdne14742:0'
+    'admin_button' => 'crwdns20590:0crwdne20590:0',
+    'answer' => 'crwdns20591:0crwdne20591:0',
+    'categories' => 'crwdns20592:0crwdne20592:0',
+    'no_categories' => 'crwdns20595:0crwdne20595:0',
+    'no_faq' => 'crwdns20596:0crwdne20596:0',
+    'saved_on' => 'crwdns20597:0crwdne20597:0'
 );
 

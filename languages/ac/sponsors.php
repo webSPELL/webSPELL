@@ -29,13 +29,13 @@ $language_array = array(
 
 /* do not edit above this line */
 
-    'banner' => 'crwdns15733:0crwdne15733:0',
-    'homepage' => 'crwdns15734:0crwdne15734:0',
-    'information' => 'crwdns15735:0crwdne15735:0',
-    'mainsponsor' => 'crwdns15736:0crwdne15736:0',
-    'mainsponsors' => 'crwdns15737:0crwdne15737:0',
-    'no_sponsors' => 'crwdns15738:0crwdne15738:0',
-    'sponsor' => 'crwdns15739:0crwdne15739:0',
-    'sponsors' => 'crwdns15740:0crwdne15740:0'
+    'banner' => 'crwdns21588:0crwdne21588:0',
+    'homepage' => 'crwdns21589:0crwdne21589:0',
+    'information' => 'crwdns21590:0crwdne21590:0',
+    'mainsponsor' => 'crwdns21591:0crwdne21591:0',
+    'mainsponsors' => 'crwdns21592:0crwdne21592:0',
+    'no_sponsors' => 'crwdns21593:0crwdne21593:0',
+    'sponsor' => 'crwdns21594:0crwdne21594:0',
+    'sponsors' => 'crwdns21595:0crwdne21595:0'
 );
 

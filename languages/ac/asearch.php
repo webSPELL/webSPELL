@@ -29,8 +29,8 @@ $language_array = array(
 
 /* do not edit above this line */
 
-    'invalid_request' => 'crwdns14238:0crwdne14238:0',
-    'no_result' => 'crwdns14239:0crwdne14239:0',
-    'to_much_results' => 'crwdns14240:0crwdne14240:0'
+    'invalid_request' => 'crwdns20093:0crwdne20093:0',
+    'no_result' => 'crwdns20094:0crwdne20094:0',
+    'to_much_results' => 'crwdns20095:0crwdne20095:0'
 );
 

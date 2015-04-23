@@ -29,7 +29,7 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-    'error_404'=>'crwdns14733:0crwdne14733:0',
-    'message_404'=>'crwdns14734:0crwdne14734:0'
+    'error_404'=>'crwdns20588:0crwdne20588:0',
+    'message_404'=>'crwdns20589:0crwdne20589:0'
 );
 

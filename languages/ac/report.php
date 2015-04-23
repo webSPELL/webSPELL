@@ -29,9 +29,9 @@ $language_array = array(
 
 /* do not edit above this line */
 
-    'no_informations' => 'crwdns15620:0crwdne15620:0',
-    'report_message' => 'crwdns15621:0[b]crwdnd15621:0%scrwdnd15621:0[/b]crwdnd15621:0[br]crwdnd15621:0[br]crwdnd15621:0%scrwdnd15621:0%dcrwdnd15621:0[br]crwdnd15621:0%scrwdnd15621:0[br]crwdnd15621:0[url]crwdnd15621:0%dcrwdnd15621:0[/url]crwdne15621:0',
-    'report_recognized' => 'crwdns15622:0crwdne15622:0',
-    'wrong_securitycode' => 'crwdns15623:0crwdne15623:0'
+    'no_informations' => 'crwdns21475:0crwdne21475:0',
+    'report_message' => 'crwdns21476:0[b]crwdnd21476:0%scrwdnd21476:0[/b]crwdnd21476:0[br]crwdnd21476:0[br]crwdnd21476:0%scrwdnd21476:0%dcrwdnd21476:0[br]crwdnd21476:0%scrwdnd21476:0[br]crwdnd21476:0[url]crwdnd21476:0%dcrwdnd21476:0[/url]crwdne21476:0',
+    'report_recognized' => 'crwdns21477:0crwdne21477:0',
+    'wrong_securitycode' => 'crwdns21478:0crwdne21478:0'
 );
 
