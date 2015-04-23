@@ -190,7 +190,6 @@ if ($ajax === true) {
             <meta charset="utf-8">
             <meta name="description" content="Clanpage using webSPELL 4 CMS">
             <meta name="author" content="webspell.org">
-            <meta name="keywords" content="webspell, webspell4, clan, cms">
             <meta name="copyright" content="Copyright 2005-2015 by webspell.org">
             <meta name="generator" content="webSPELL">
             <title><?php echo PAGETITLE; ?></title>
