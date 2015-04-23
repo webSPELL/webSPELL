@@ -59,3 +59,18 @@ function checkBom($file)
 {
     return (false !== strpos($file, "\xEF\xBB\xBF"));
 }
+
+function writeLanguageFile($file, $language_array){
+    global $file_header, $file_footer, $sortMode;
+    $rows = array();
+    ksort($language_array, $sortMode);
+    foreach ($language_array as $lang_key => $lang_val) {
+        $rows[] = "    '".escape($lang_key)."' => '".fixGlobals(escape($lang_val))."'";
+    }
+
+    $new_array = implode(",\n", $rows)."\n";
+
+    $new_content = $file_header.$new_array.$file_footer;
+
+    file_put_contents($file, $new_content);
+}
