@@ -86,7 +86,8 @@ if (isset($_POST[ 'save' ])) {
         if (count($error)) {
             echo generateErrorBoxFromArray($_language->module[ 'errors_there' ], $error);
         } else {
-            safe_query("INSERT INTO `" . PREFIX . "demos` (
+            safe_query(
+                "INSERT INTO `" . PREFIX . "demos` (
                     `date`,
                     `game`,
                     `clan1`,
@@ -123,7 +124,8 @@ if (isset($_POST[ 'save' ])) {
                     '$file',
                     '0',
                     '$comments'
-                )");
+                )"
+            );
 
             $id = mysqli_insert_id($_database);
             $message = generateAlert($_language->module[ 'successful' ], 'alert-success');
@@ -189,7 +191,8 @@ if (isset($_POST[ 'save' ])) {
                 $mysql_file = "";
             }
 
-            safe_query("UPDATE
+            safe_query(
+                "UPDATE
                     `" . PREFIX . "demos`
                 SET
                     date='$date',
@@ -209,7 +212,8 @@ if (isset($_POST[ 'save' ])) {
                     " . $mysql_file . "
                     comments='$comments'
                 WHERE
-                    demoID='" . $demoID . "'");
+                    demoID='" . $demoID . "'"
+            );
             $message = generateAlert($_language->module[ 'successful' ], 'alert-success');
             redirect("index.php?site=demos&action=showdemo&demoID=" . $demoID, $message);
         }
@@ -220,14 +224,20 @@ if (isset($_POST[ 'save' ])) {
     if (isfileadmin($userID)) {
         $demoID = (int)$_GET[ 'demoID' ];
         $filepath = "./demos/";
-        $ergebnis = safe_query("SELECT * FROM " . PREFIX . "demos WHERE demoID = '" . $demoID . "'");
+        $ergebnis = safe_query(
+            "SELECT * FROM " . PREFIX . "demos WHERE demoID = '" . $demoID . "'"
+        );
         $ds = mysqli_fetch_array($ergebnis);
         if (file_exists($filepath . $ds[ 'file' ])) {
             @unlink($filepath . $ds[ 'file' ]);
         }
 
-        safe_query("DELETE FROM `" . PREFIX . "demos` WHERE `demoID` = '" . $demoID . "'");
-        safe_query("DELETE FROM `" . PREFIX . "comments` WHERE `parentID` = '" . $demoID . "' AND `type` = 'de'");
+        safe_query(
+            "DELETE FROM `" . PREFIX . "demos` WHERE `demoID` = '" . $demoID . "'"
+        );
+        safe_query(
+            "DELETE FROM `" . PREFIX . "comments` WHERE `parentID` = '" . $demoID . "' AND `type` = 'de'"
+        );
 
         $message = generateAlert($_language->module[ 'successful' ], 'alert-success');
         redirect("index.php?site=demos", $message);
@@ -249,7 +259,9 @@ if (isset($_POST[ 'save' ])) {
 } elseif ($action == "edit") {
     $demoID = (int)$_GET[ 'demoID' ];
     if (isfileadmin($userID)) {
-        $ds = mysqli_fetch_array(safe_query("SELECT * FROM `" . PREFIX . "demos` WHERE `demoID` = '" . $demoID . "'"));
+        $ds = mysqli_fetch_array(safe_query(
+            "SELECT * FROM `" . PREFIX . "demos` WHERE `demoID` = '" . $demoID . "'"
+        ));
         $date = date("Y-m-d", $ds[ 'date' ]);
         $games = getGamesAsOptionList($ds[ 'game' ]);
 
@@ -312,7 +324,9 @@ if (isset($_POST[ 'save' ])) {
     }
     echo '<a href="index.php?site=demos" class="btn btn-default">' . $_language->module[ 'all_demos' ] . '</a></div>';
 
-    $result = safe_query("SELECT * FROM `" . PREFIX . "demos` WHERE `demoID` = '" . (int)$demoID . "'");
+    $result = safe_query(
+        "SELECT * FROM `" . PREFIX . "demos` WHERE `demoID` = '" . (int)$demoID . "'"
+    );
     $ds = mysqli_fetch_array($result);
     $date = getformatdate($ds[ 'date' ]);
     $league = '<a href="' . $ds[ 'leaguehp' ] . '" target="_blank">' . $ds[ 'league' ] . '</a>';
@@ -342,7 +356,9 @@ if (isset($_POST[ 'save' ])) {
             '" class="btn btn-lg btn-success"><span class="icon-download icon-large"></span> ' .
             $_language->module[ 'download_now' ] . '</a>';
 
-        $getdemos = safe_query("SELECT demos FROM " . PREFIX . "user WHERE userID='$userID'");
+        $getdemos = safe_query(
+            "SELECT demos FROM " . PREFIX . "user WHERE userID='$userID'"
+        );
         $found = false;
         if (mysqli_num_rows($getdemos)) {
             $ga = mysqli_fetch_array($getdemos);
@@ -452,7 +468,9 @@ value="' . $_language->module[ 'rate' ] . '" class="btn btn-primary">
             </div>';
     }
 
-    $alle = safe_query("SELECT demoID FROM " . PREFIX . "demos WHERE game='$game'");
+    $alle = safe_query(
+        "SELECT demoID FROM " . PREFIX . "demos WHERE game='$game'"
+    );
     $gesamt = mysqli_num_rows($alle);
     $pages = 1;
 
@@ -468,9 +486,11 @@ value="' . $_language->module[ 'rate' ] . '" class="btn btn-primary">
     }
 
     if ($page == "1") {
-        $ergebnis = safe_query("SELECT * FROM `" . PREFIX . "demos`
+        $ergebnis = safe_query(
+            "SELECT * FROM `" . PREFIX . "demos`
             WHERE `game` = '$game'
-            ORDER BY $sort $type LIMIT 0, " . (int)$max);
+            ORDER BY $sort $type LIMIT 0, " . (int)$max
+        );
         if ($type == "DESC") {
             $n = $gesamt;
         } else {
@@ -478,7 +498,8 @@ value="' . $_language->module[ 'rate' ] . '" class="btn btn-primary">
         }
     } else {
         $start = $page * $max - $max;
-        $ergebnis = safe_query("SELECT
+        $ergebnis = safe_query(
+            "SELECT
                     *
                 FROM
                     `" . PREFIX . "demos`
@@ -487,7 +508,8 @@ value="' . $_language->module[ 'rate' ] . '" class="btn btn-primary">
                 ORDER BY
                     $sort $type
                 LIMIT
-                    $start, " . (int)$max);
+                    $start, " . (int)$max
+        );
         if ($type == "DESC") {
             $n = ($gesamt) - $page * $max + $max;
         } else {
@@ -499,7 +521,9 @@ value="' . $_language->module[ 'rate' ] . '" class="btn btn-primary">
         echo '<div class="row">';
 
         // RATING
-        $ergebnis_top_5_rating = safe_query("SELECT * FROM `" . PREFIX . "demos` ORDER BY `rating` DESC LIMIT 0,5");
+        $ergebnis_top_5_rating = safe_query(
+            "SELECT * FROM `" . PREFIX . "demos` ORDER BY `rating` DESC LIMIT 0,5"
+        );
         $top = 'TOP 5 DEMOS (' . $_language->module[ 'rating' ] . ')';
 
         $data_array = array();
@@ -532,7 +556,9 @@ value="' . $_language->module[ 'rate' ] . '" class="btn btn-primary">
 
         // POINTS
         $ergebnis_top_5_downloads =
-            safe_query("SELECT * FROM `" . PREFIX . "demos` ORDER BY `downloads` DESC LIMIT 0,5");
+            safe_query(
+                "SELECT * FROM `" . PREFIX . "demos` ORDER BY `downloads` DESC LIMIT 0,5"
+            );
         $top = 'TOP 5 DEMOS (' . $_language->module[ 'downloaded' ] . ')';
         $data_array = array();
         $data_array[ '$top' ] = $top;
@@ -659,7 +685,9 @@ value="' . $_language->module[ 'rate' ] . '" class="btn btn-primary">
             $_language->module[ 'new_demo' ] . '</a>
             </div>';
     }
-    $alle = safe_query("SELECT `demoID` FROM `" . PREFIX . "demos`");
+    $alle = safe_query(
+        "SELECT `demoID` FROM `" . PREFIX . "demos`"
+    );
     $gesamt = mysqli_num_rows($alle);
     $pages = 1;
 
@@ -673,7 +701,9 @@ value="' . $_language->module[ 'rate' ] . '" class="btn btn-primary">
     }
 
     if ($page == "1") {
-        $ergebnis = safe_query("SELECT * FROM `" . PREFIX . "demos` ORDER BY $sort $type LIMIT 0, " . (int)$max);
+        $ergebnis = safe_query(
+            "SELECT * FROM `" . PREFIX . "demos` ORDER BY $sort $type LIMIT 0, " . (int)$max
+        );
         if ($type == "DESC") {
             $n = $gesamt;
         } else {
@@ -681,7 +711,9 @@ value="' . $_language->module[ 'rate' ] . '" class="btn btn-primary">
         }
     } else {
         $start = $page * $max - $max;
-        $ergebnis = safe_query("SELECT * FROM `" . PREFIX . "demos` ORDER BY $sort $type LIMIT $start, " . (int)$max);
+        $ergebnis = safe_query(
+            "SELECT * FROM `" . PREFIX . "demos` ORDER BY $sort $type LIMIT $start, " . (int)$max
+        );
         if ($type == "DESC") {
             $n = ($gesamt) - $page * $max + $max;
         } else {
@@ -692,7 +724,9 @@ value="' . $_language->module[ 'rate' ] . '" class="btn btn-primary">
         echo '<div class="row">';
 
         // RATING
-        $ergebnis_top_5_rating = safe_query("SELECT * FROM `" . PREFIX . "demos` ORDER BY `rating` DESC LIMIT 0,5");
+        $ergebnis_top_5_rating = safe_query(
+            "SELECT * FROM `" . PREFIX . "demos` ORDER BY `rating` DESC LIMIT 0,5"
+        );
         $top = 'TOP 5 DEMOS (' . $_language->module[ 'rating' ] . ')';
 
         $data_array = array();
@@ -728,7 +762,9 @@ value="' . $_language->module[ 'rate' ] . '" class="btn btn-primary">
 
         // POINTS
         $ergebnis_top_5_downloads =
-            safe_query("SELECT * FROM `" . PREFIX . "demos` ORDER BY `downloads` DESC LIMIT 0,5");
+            safe_query(
+                "SELECT * FROM `" . PREFIX . "demos` ORDER BY `downloads` DESC LIMIT 0,5"
+            );
         $top = 'TOP 5 DEMOS (' . $_language->module[ 'downloaded' ] . ')';
         $data_array = array();
         $data_array[ '$top' ] = $top;
