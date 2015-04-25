@@ -413,7 +413,8 @@ value="' . $_language->module[ 'rate' ] . '" class="btn btn-primary">
         $adminaction = '<div class="panel-body text-right">
             <a href="index.php?site=demos&amp;action=edit&amp;demoID=' . $ds[ 'demoID' ] .
             '" class="btn btn-warning btn-sm" role="button">' . $_language->module[ 'edit' ] . '</a>
-            <input type="button" onclick="MM_confirm(\'really delete this demo?\', \'index.php?site=demos&amp;action=delete&amp;demoID=' .
+            <input type="button" onclick="MM_confirm(\'really delete this demo?\',
+            \'index.php?site=demos&amp;action=delete&amp;demoID=' .
             $ds[ 'demoID' ] . '\')" value="' . $_language->module[ 'delete' ] . '" class="btn btn-danger btn-sm">
         </div>';
     }
