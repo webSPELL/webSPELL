@@ -25,13 +25,12 @@
 ##########################################################################
 */
 
-
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'no_user'=>'არ არის მომხმარებლის ფოტო',
-  'registered_since'=>'დარეგისტრირებულია -დან',
-  'view_profile'=>'პროფილის მონახულება'
+    'no_user' => 'არ არის მომხმარებლის ფოტო',
+    'registered_since' => 'დარეგისტრირებულია -დან',
+    'view_profile' => 'პროფილის მონახულება'
 );
 

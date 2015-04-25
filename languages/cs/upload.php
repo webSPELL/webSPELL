@@ -25,17 +25,17 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'add_to_message'=>'Přidat zprávu',
-  'close_window'=>'zavřít okno',
-	'delete'=>'Smazat',
-	'existing_files'=>'Existující soubory',
-	'file_upload'=>'Nahrát soubor',
-	'invalid_access'=>'Neplatný přístup!',
-	'no_access'=>'Nemáš přístup!',
-	'upload'=>'Nahrát'
+    'add_to_message' => 'Přidat zprávu',
+    'close_window' => 'zavřít okno',
+    'delete' => 'Smazat',
+    'existing_files' => 'Existující soubory',
+    'file_upload' => 'Nahrát soubor',
+    'invalid_access' => 'Neplatný přístup!',
+    'no_access' => 'Nemáš přístup!',
+    'upload' => 'Nahrát'
 );
 

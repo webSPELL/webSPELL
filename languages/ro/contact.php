@@ -25,30 +25,28 @@
 ##########################################################################
 */
 
-
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'back'=>'Înapoi la format',
-  'contact'=>'Contact',
-  'description'=>'Cu acest formular esti capabil să ne trimiţi un mesaj',
-  'enter_mail'=>'Vă rugăm introduceţi o adresă de e-mail.',
-  'enter_message'=>'Introduceţi un mesaj.',
-  'enter_name'=>'Introduceţi un nume.',
-  'enter_subject'=>'Introduceţi un subiect.',
-  'errors_there'=>'Unele erori apărute',
-  'mail'=>'E-Mail',
-  'message'=>'Mesaj',
-  'name'=>'Nume',
-  'receiver'=>'Destinatar',
-  'reset'=>'Resetează',
-  'security_code'=>'Cod de securitate',
-  'send'=>'Trimite',
-  'send_successfull'=>'Mesajul tau a fost trimis cu succes.',
-  'subject'=>'Subiect',
-  'title_contact'=>'Formă de contact',
-  'unknown_receiver'=>'receptor necunoscut',
-  'wrong_securitycode'=>'Ai introdus un cod de siguranţă greşit!'
+    'back' => 'Înapoi la format',
+    'contact' => 'Contact',
+    'description' => 'Cu acest formular esti capabil să ne trimiţi un mesaj',
+    'enter_mail' => 'Vă rugăm introduceţi o adresă de e-mail.',
+    'enter_message' => 'Introduceţi un mesaj.',
+    'enter_name' => 'Introduceţi un nume.',
+    'enter_subject' => 'Introduceţi un subiect.',
+    'errors_there' => 'Unele erori apărute',
+    'message' => 'Mesaj',
+    'name' => 'Nume',
+    'receiver' => 'Destinatar',
+    'reset' => 'Resetează',
+    'security_code' => 'Cod de securitate',
+    'send' => 'Trimite',
+    'send_successfull' => 'Mesajul tau a fost trimis cu succes.',
+    'subject' => 'Subiect',
+    'title_contact' => 'Formă de contact',
+    'unknown_receiver' => 'receptor necunoscut',
+    'wrong_securitycode' => 'Ai introdus un cod de siguranţă greşit!'
 );
 

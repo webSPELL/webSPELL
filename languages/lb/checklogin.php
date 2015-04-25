@@ -24,24 +24,18 @@
 #                                                                        #
 ##########################################################################
 */
-/**
- * Online Language Editor Luxemburg language file for webSPELL 4.2.2
- * @author Stefan Giesecke <webmaster@giesi.com>
- * @copyright Copyright (c) 2010, Stefan Giesecke
- * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
- */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'invalid_password'=>'Du hues en falscht Passwuert aginn.',
-  'ip_banned'=>'Deng IP ass vun der Säit gebannt ginn.<br>%reason%',
-  'login_successful'=>'Erfollegräich ugemellt',
-  'no_user'=>'Keen Benotzer matt dem System <b>%username%</b> am System.',
-  'not_activated'=>'Däin Konto ass net aktivéiert.',
-  'session_error'=>'Wann ech gelift versécher dech, dass däin Browser Cookies akzeptéiert.<br>Falls den Problem weiderhin besteet, wend dech un den Webmaster.',
-  'return'=>'<a href="javascript:history.back()">Zréck</a>',
-  'return_reenter' => '<a href="javascript:history.back()">Zréck an Angab widderhuelen</a>'
+    'invalid_password' => 'Du hues en falscht Passwuert aginn.',
+    'ip_banned' => 'Deng IP ass vun der Säit gebannt ginn.<br>%reason%',
+    'login_successful' => 'Erfollegräich ugemellt',
+    'no_user' => 'Keen Benotzer matt dem System <b>%username%</b> am System.',
+    'not_activated' => 'Däin Konto ass net aktivéiert.',
+    'return' => '<a href="javascript:history.back()">Zréck</a>',
+    'return_reenter' => '<a href="javascript:history.back()">Zréck an Angab widderhuelen</a>',
+    'session_error' => 'Wann ech gelift versécher dech, dass däin Browser Cookies akzeptéiert.<br>Falls den Problem weiderhin besteet, wend dech un den Webmaster.'
 );
 

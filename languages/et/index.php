@@ -25,33 +25,32 @@
 ##########################################################################
 */
 
-
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'advertisement'=>'reklaam',
-  'articles'=>'artiklid',
-  'content'=>'sisu',
-  'demos'=>'taasesitused',
-  'downloads'=>'allalaadimised',
-  'hotest_news'=>'kuumimad uudised',
-  'language_switch'=>'keele vahetus',
-  'latest_news'=>'värskeimad uudised',
-  'login'=>'logi sisse',
-  'matches'=>'matšid',
-  'newsletter'=>'uudiskiri',
-  'partners'=>'partnerid',
-  'pic_of_the_moment'=>'hetke pilt',
-  'poll'=>'küsitlus',
-  'random_user'=>'suvaline kasutaja',
-  'server'=>'serverid',
-  'shoutbox'=>'hüüdmiskast',
-  'sponsors'=>'sponsorid',
-  'squads'=>'rühmad',
-  'statistics'=>'statistika',
-  'topics'=>'teemad',
-  'upcoming_events'=>'tulevad üritused',
-  'tags'=>'tags'
+    'advertisement' => 'reklaam',
+    'articles' => 'artiklid',
+    'content' => 'sisu',
+    'demos' => 'taasesitused',
+    'downloads' => 'allalaadimised',
+    'hotest_news' => 'kuumimad uudised',
+    'language_switch' => 'keele vahetus',
+    'latest_news' => 'värskeimad uudised',
+    'login' => 'logi sisse',
+    'matches' => 'matšid',
+    'newsletter' => 'uudiskiri',
+    'partners' => 'partnerid',
+    'pic_of_the_moment' => 'hetke pilt',
+    'poll' => 'küsitlus',
+    'random_user' => 'suvaline kasutaja',
+    'server' => 'serverid',
+    'shoutbox' => 'hüüdmiskast',
+    'sponsors' => 'sponsorid',
+    'squads' => 'rühmad',
+    'statistics' => 'statistika',
+    'tags' => 'tags',
+    'topics' => 'teemad',
+    'upcoming_events' => 'tulevad üritused'
 );
 

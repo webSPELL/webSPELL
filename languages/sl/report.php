@@ -24,20 +24,14 @@
 #                                                                        #
 ##########################################################################
 */
-/**
- * Online Language Editor Slovenia language file for webSPELL 4.2.2
- * @author Stefan Giesecke <webmaster@giesi.com>
- * @copyright Copyright (c) 2010, Stefan Giesecke
- * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
- */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'no_informations'=>'ni informacij',
-  'report_message'=>'[b]Obstaja novo %s - Poročilo[/b][br][br]%s-ID: %d[br]Info: %s[br]Referer: [url]index.php?site=files&file=%d[/url]',
-  'report_recognized'=>'Vaše obvestilo je sprejeto. Hvala.',
-  'wrong_securitycode'=>'Napačna varnostna koda!<br><br>[<a href="javascript:back();">Nazaj</a>]'
+    'no_informations' => 'ni informacij',
+    'report_message' => '[b]Obstaja novo %s - Poročilo[/b][br][br]%s-ID: %d[br]Info: %s[br]Referer: [url]index.php?site=files&file=%d[/url]',
+    'report_recognized' => 'Vaše obvestilo je sprejeto. Hvala.',
+    'wrong_securitycode' => 'Napačna varnostna koda!<br><br>[<a href="javascript:back();">Nazaj</a>]'
 );
 

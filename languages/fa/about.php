@@ -25,11 +25,11 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'about_title'=>'در مورد ما',
-  'no_about'=>'.در حال حاظر توضیحی وجود ندارد'
+    'about_title' => 'در مورد ما',
+    'no_about' => '.در حال حاظر توضیحی وجود ندارد'
 );
 

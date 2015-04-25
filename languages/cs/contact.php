@@ -25,29 +25,28 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'back'=>'vrátit se na formulář',
-	'contact'=>'kontakt',
-	'description'=>'Přes tento formulář odešleš zprávu webmasterovi těchto stránek.',
-	'enter_mail'=>'Prosím zadej svojí e-mailovou adresu.',
-	'enter_message'=>'Prosím napiš nějakou zprávu.',
-	'enter_name'=>'Prosím zadej jméno.',
-	'enter_subject'=>'Prosím zadej předmět.',
-	'errors_there'=>'Vznikla nějaká neznámá chyba',
-	'mail'=>'E-Mail',
-	'message'=>'Zpráva',
-	'name'=>'Jméno',
-	'receiver'=>'Příjemce',
-	'reset'=>'Reset',
-	'security_code'=>'Bezpečnostní kód',
-	'send'=>'Odeslat',
-	'send_successfull'=>'Tvoje zpráva byla úspěšně odeslána.',
-	'subject'=>'Předmět',
-	'title_contact'=>'Kontaktní formulář',
-	'unknown_receiver'=>'unknown receiver',
-	'wrong_securitycode'=>'Bezpečností kód je špatný!'
+    'back' => 'vrátit se na formulář',
+    'contact' => 'kontakt',
+    'description' => 'Přes tento formulář odešleš zprávu webmasterovi těchto stránek.',
+    'enter_mail' => 'Prosím zadej svojí e-mailovou adresu.',
+    'enter_message' => 'Prosím napiš nějakou zprávu.',
+    'enter_name' => 'Prosím zadej jméno.',
+    'enter_subject' => 'Prosím zadej předmět.',
+    'errors_there' => 'Vznikla nějaká neznámá chyba',
+    'message' => 'Zpráva',
+    'name' => 'Jméno',
+    'receiver' => 'Příjemce',
+    'reset' => 'Reset',
+    'security_code' => 'Bezpečnostní kód',
+    'send' => 'Odeslat',
+    'send_successfull' => 'Tvoje zpráva byla úspěšně odeslána.',
+    'subject' => 'Předmět',
+    'title_contact' => 'Kontaktní formulář',
+    'unknown_receiver' => 'unknown receiver',
+    'wrong_securitycode' => 'Bezpečností kód je špatný!'
 );
 

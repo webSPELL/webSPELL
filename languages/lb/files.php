@@ -25,7 +25,7 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
@@ -41,7 +41,6 @@ $language_array = Array(
     'database_cl' => 'Datenbänk',
     'delete_file' => 'Datei läschen',
     'description' => 'Beschreiwung',
-    'dl' => 'DL',
     'download_now' => 'Lo %filename% eroflueen',
     'download_registered_only' => 'Download nëmmen registréierte Benotzer!',
     'download_via_mirror' => 'Iwwer en alternativen Link eroflueden',
@@ -105,3 +104,4 @@ $language_array = Array(
     'you_have_to_enter_file' => 'Du muss eng File / eng URL aginn!',
     'you_have_to_enter_filename' => 'Du muss en Dateinumm aginn!'
 );
+

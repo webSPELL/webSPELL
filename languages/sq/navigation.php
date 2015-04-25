@@ -24,50 +24,44 @@
 #                                                                        #
 ##########################################################################
 */
-/**
- * Online Language Editor Albania language file for webSPELL 4.2.2
- * @author Stefan Giesecke <webmaster@giesi.com>
- * @copyright Copyright (c) 2010, Stefan Giesecke
- * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
- */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'about_us'=>'Rreth nesh',
-  'archives'=>'Arkivat',
-  'articles'=>'Artikujt',
-  'awards'=>'Çmimet',
-  'calendar'=>'Kalendar',
-  'clan'=>'Klan',
-  'community'=>'Komunitet',
-  'contact'=>'Forma kontaktimit',
-  'demos'=>'Demot',
-  'downloads'=>'Download-et',
-  'faq'=>'Pyetje të shpeshta',
-  'fight_us'=>'Lufto me ne',
-  'forums'=>'Forumet',
-  'gallery'=>'Galeri',
-  'guestbook'=>'Libri vizituesve',
-  'history'=>'Histori',
-  'imprint'=>'Ngulit',
-  'join_us'=>'Bashkohu me ne',
-  'links'=>'Weblink-et',
-  'links_us'=>'Dergona Link',
-  'main'=>'Kryesor',
-  'matches'=>'Ndeshjet',
-  'media'=>'Media',
-  'members'=>'Anëtarët',
-  'miscellaneous'=>'Të ndryshme',
-  'news'=>'Lajmet',
-  'newsletter'=>'Buletini lajmeve',
-  'polls'=>'Sondazhe',
-  'registered_users'=>'Përdorues të regjistruar',
-  'search'=>'Kërko',
-  'servers'=>'Serverat',
-  'sponsors'=>'Sponsorët',
-  'squads'=>'Ekipet',
-  'who_is_online'=>'Kush është online?'
+    'about_us' => 'Rreth nesh',
+    'archives' => 'Arkivat',
+    'articles' => 'Artikujt',
+    'awards' => 'Çmimet',
+    'calendar' => 'Kalendar',
+    'clan' => 'Klan',
+    'community' => 'Komunitet',
+    'contact' => 'Forma kontaktimit',
+    'demos' => 'Demot',
+    'downloads' => 'Download-et',
+    'faq' => 'Pyetje të shpeshta',
+    'fight_us' => 'Lufto me ne',
+    'forums' => 'Forumet',
+    'gallery' => 'Galeri',
+    'guestbook' => 'Libri vizituesve',
+    'history' => 'Histori',
+    'imprint' => 'Ngulit',
+    'join_us' => 'Bashkohu me ne',
+    'links' => 'Weblink-et',
+    'links_us' => 'Dergona Link',
+    'main' => 'Kryesor',
+    'matches' => 'Ndeshjet',
+    'media' => 'Media',
+    'members' => 'Anëtarët',
+    'miscellaneous' => 'Të ndryshme',
+    'news' => 'Lajmet',
+    'newsletter' => 'Buletini lajmeve',
+    'polls' => 'Sondazhe',
+    'registered_users' => 'Përdorues të regjistruar',
+    'search' => 'Kërko',
+    'servers' => 'Serverat',
+    'sponsors' => 'Sponsorët',
+    'squads' => 'Ekipet',
+    'who_is_online' => 'Kush është online?'
 );
 

@@ -25,28 +25,28 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'about'=>'Leírás',
-	'active'=>'aktív',
-	'activity'=>'Tevékenység',
-	'awards'=>'Díjak',
-	'back_overview'=>'&raquo; <a href="index.php?site=members"><b>vissza a tagok áttekintéséhez</b></a>',
-	'challenge'=>'Kihívás',
-	'contact'=>'Kapcsolat',
-	'go'=>'OK',
-	'inactive'=>'inaktív',
-	'member'=>'Tag',
-	'members'=>'tagok',
-	'nickname'=>'Nick',
-	'no_description'=>'nincs elérhető leírás',
-	'position'=>'Pozíció',
-	'results'=>'Eredmények',
-	'show_details'=>'&raquo; <a href="index.php?site=members&action=show&squadID=%squadID%"><b>Részletek mutatása</b></a>',
-	'show_only'=>'Csak ezt mutasd',
-	'status'=>'Státusz',
-	'town'=>'Település'
+    'about' => 'Leírás',
+    'active' => 'aktív',
+    'activity' => 'Tevékenység',
+    'awards' => 'Díjak',
+    'back_overview' => '&raquo; <a href="index.php?site=members"><b>vissza a tagok áttekintéséhez</b></a>',
+    'challenge' => 'Kihívás',
+    'contact' => 'Kapcsolat',
+    'go' => 'OK',
+    'inactive' => 'inaktív',
+    'member' => 'Tag',
+    'members' => 'tagok',
+    'nickname' => 'Nick',
+    'no_description' => 'nincs elérhető leírás',
+    'position' => 'Pozíció',
+    'results' => 'Eredmények',
+    'show_details' => '&raquo; <a href="index.php?site=members&action=show&squadID=%squadID%"><b>Részletek mutatása</b></a>',
+    'show_only' => 'Csak ezt mutasd',
+    'status' => 'Státusz',
+    'town' => 'Település'
 );
 

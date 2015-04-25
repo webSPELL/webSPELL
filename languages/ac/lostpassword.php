@@ -25,18 +25,18 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'email_failed'=>'crwdns15147:0crwdne15147:0',
-	'email_subject'=>'crwdns15148:0%pagetitle%crwdne15148:0',
-	'email_text'=>'crwdns15149:0%pagetitle%crwdnd15149:0%username%crwdnd15149:0%new_password%crwdnd15149:0%homepage_url%crwdne15149:0',
-	'get_password'=>'crwdns15150:0crwdne15150:0',
-	'lost_password'=>'crwdns15151:0crwdne15151:0',
-	'no_mail_given'=>'crwdns15152:0crwdne15152:0',
-	'no_user_found'=>'crwdns15153:0crwdne15153:0',
-	'successful'=>'crwdns15154:0crwdne15154:0',
-	'your_email'=>'crwdns15155:0crwdne15155:0'
+    'email_failed' => 'crwdns21002:0crwdne21002:0',
+    'email_subject' => 'crwdns21003:0%pagetitle%crwdne21003:0',
+    'email_text' => 'crwdns21004:0%pagetitle%crwdnd21004:0%username%crwdnd21004:0%new_password%crwdnd21004:0%homepage_url%crwdne21004:0',
+    'get_password' => 'crwdns21005:0crwdne21005:0',
+    'lost_password' => 'crwdns21006:0crwdne21006:0',
+    'no_mail_given' => 'crwdns21007:0crwdne21007:0',
+    'no_user_found' => 'crwdns21008:0crwdne21008:0',
+    'successful' => 'crwdns21009:0crwdne21009:0',
+    'your_email' => 'crwdns21010:0crwdne21010:0'
 );
 

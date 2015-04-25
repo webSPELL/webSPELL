@@ -24,39 +24,33 @@
 #                                                                        #
 ##########################################################################
 */
-/**
- * Online Language Editor Slovenia language file for webSPELL 4.2.2
- * @author Stefan Giesecke <webmaster@giesi.com>
- * @copyright Copyright (c) 2010, Stefan Giesecke
- * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
- */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'advertisement'=>'Oglašavanje',
-  'articles'=>'Članki',
-  'content'=>'Vsebina',
-  'demos'=>'Demoi',
-  'downloads'=>'Download',
-  'hotest_news'=>'Vroče novice',
-  'language_switch'=>'zamenjaj jezik',
-  'latest_news'=>'zadnje novice',
-  'login'=>'prijava',
-  'matches'=>'matchevi',
-  'newsletter'=>'novice',
-  'partners'=>'partnerji',
-  'pic_of_the_moment'=>'slika trenutka',
-  'poll'=>'anketa',
-  'random_user'=>'naključni uporabnik',
-  'server'=>'serverji',
-  'shoutbox'=>'klepet',
-  'sponsors'=>'sponzorji',
-  'squads'=>'ekipe',
-  'statistics'=>'statistika',
-  'topics'=>'teme',
-  'upcoming_events'=>'prihajajoči dogodki',
-  'tags'=>'oznake'
+    'advertisement' => 'Oglašavanje',
+    'articles' => 'Članki',
+    'content' => 'Vsebina',
+    'demos' => 'Demoi',
+    'downloads' => 'Download',
+    'hotest_news' => 'Vroče novice',
+    'language_switch' => 'zamenjaj jezik',
+    'latest_news' => 'zadnje novice',
+    'login' => 'prijava',
+    'matches' => 'matchevi',
+    'newsletter' => 'novice',
+    'partners' => 'partnerji',
+    'pic_of_the_moment' => 'slika trenutka',
+    'poll' => 'anketa',
+    'random_user' => 'naključni uporabnik',
+    'server' => 'serverji',
+    'shoutbox' => 'klepet',
+    'sponsors' => 'sponzorji',
+    'squads' => 'ekipe',
+    'statistics' => 'statistika',
+    'tags' => 'oznake',
+    'topics' => 'teme',
+    'upcoming_events' => 'prihajajoči dogodki'
 );
 

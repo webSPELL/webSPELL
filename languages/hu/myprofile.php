@@ -25,7 +25,7 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
@@ -44,13 +44,10 @@ $language_array = Array(
     'clan-name' => 'Klán-Név',
     'clan-tag' => 'Klán-Prefix',
     'country' => 'Ország',
-    'cpu' => 'CPU',
     'date_of_birth' => 'Születésnap',
     'deactivated' => 'kikapcsolva',
-    'delete' => 'delete',
     'delete_max_90_90' => 'törlés (max90/90)',
     'delete_max_230_210' => 'törlés (max230/210)',
-    'e-mail' => 'E-mail',
     'edit_mail' => 'E-Mail szerkesztése',
     'edit_password' => 'jelszó megváltoztatása',
     'equipment-info' => 'Konfiguráció',
@@ -139,3 +136,4 @@ Köszönjük érdeklődésed
     'you_have_to_username' => 'Írd be a felhesználóneved!',
     'you_have_to_valid_email' => 'Az e-mail címed nem érvényes!'
 );
+

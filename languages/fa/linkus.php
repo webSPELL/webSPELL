@@ -25,24 +25,24 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'back'=>'برگشت',
-  'banner'=>'بنر',
-  'banner_to_big'=>'عکس بزرگ است',
-  'delete'=>'حذف',
-  'edit'=>'ادیت',
-  'edit_linkus'=>'ادیت بنر',
-  'format_incorrect'=>'(*.gif, *.jpg یا *.png) فرمت عکس اشتباه است پ',
-  'link_us'=>'لینک کردن',
-  'name'=>'نام',
-  'new_banner'=>'بنر جدید',
-  'no_access'=>'!غیر قابل دسترسی',
-  'no_banner'=>'هیچ بنری نیست',
-  'really_delete_banner'=>'ایا واقعا میخواهید انتخاب را حذف کنید؟',
-  'save_banner'=>'ذخیره بنر',
-  'use_following_code'=>'.از این کد استفاده کنید اگر میخواهید از این عکس به عنوان بنر استفاده کنید'
+    'back' => 'برگشت',
+    'banner' => 'بنر',
+    'banner_to_big' => 'عکس بزرگ است',
+    'delete' => 'حذف',
+    'edit' => 'ادیت',
+    'edit_linkus' => 'ادیت بنر',
+    'format_incorrect' => '(*.gif, *.jpg یا *.png) فرمت عکس اشتباه است پ',
+    'link_us' => 'لینک کردن',
+    'name' => 'نام',
+    'new_banner' => 'بنر جدید',
+    'no_access' => '!غیر قابل دسترسی',
+    'no_banner' => 'هیچ بنری نیست',
+    'really_delete_banner' => 'ایا واقعا میخواهید انتخاب را حذف کنید؟',
+    'save_banner' => 'ذخیره بنر',
+    'use_following_code' => '.از این کد استفاده کنید اگر میخواهید از این عکس به عنوان بنر استفاده کنید'
 );
 

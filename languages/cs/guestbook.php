@@ -25,38 +25,36 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'admin_comment'=>'Admin comment',
-  'bbcode'=>'<a href="javascript:void(0);" onclick="window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> ZAPNUTÝ',
-	'by'=>'od',
-	'comment'=>'Komentář',
-	'delete_selected'=>'Smazat vybrané',
-	'enter_a_message'=>'Zadej zprávu!',
-	'error_captcha'=>'Špatný bezpečnostní kód!',
-	'enter_your_name'=>'Zadej své jméno!',
-	'guestbook'=>'kniha návštěv',
-	'guestbook_comment'=>'Komentáře z knihy návštěv',
-	'homepage'=>'Domovská stránka',
-	'html'=>'HTML VYPNUTÉ',
-	'icq'=>'ICQ',
-	'ip'=>'IP',
-	'mail'=>'Tvůj e-mail',
-	'name'=>'Tvoje jméno',
-	'new_entry'=>'Nový příspěvek',
-	'no_access'=>'Nejsi přihlášený.<br><a href="index.php?site=login">Přihlásit</a> | <a href="index.php?site=register">Registrovat</a>',
-	'options'=>'Nastavení',
-	'pmsubject_newentry'=>'Nový příspěvek v knize návštěv',
-	'pmtext_newentry'=>'[b]Někdo odeslal zprávu do vaší knihy návštěv![/b][br][br] [URL=index.php?site=guestbook#%insertid%]Kliknutím zde si zprávu přečteš[/URL] ',
-	'security_code'=>'Bezpečnostní kód',
-	'select_all'=>'vybrat všechno',
-	'smilies'=>'<a href="javascript:void(0);" onclick="window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smajlíci</a> ZAPNUTI',
-	'sort'=>'Seřadit:',
-	'submit'=>'Odeslat',
-	'update_comment'=>'Uložit komentář',
-	'wrote'=>'napsal',
-	'your_message'=>'Tvoje zpráva'
+    'admin_comment' => 'Admin comment',
+    'bbcode' => '<a href="javascript:void(0);" onclick="window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> ZAPNUTÝ',
+    'by' => 'od',
+    'comment' => 'Komentář',
+    'delete_selected' => 'Smazat vybrané',
+    'enter_a_message' => 'Zadej zprávu!',
+    'enter_your_name' => 'Zadej své jméno!',
+    'error_captcha' => 'Špatný bezpečnostní kód!',
+    'guestbook' => 'kniha návštěv',
+    'guestbook_comment' => 'Komentáře z knihy návštěv',
+    'homepage' => 'Domovská stránka',
+    'html' => 'HTML VYPNUTÉ',
+    'mail' => 'Tvůj e-mail',
+    'name' => 'Tvoje jméno',
+    'new_entry' => 'Nový příspěvek',
+    'no_access' => 'Nejsi přihlášený.<br><a href="index.php?site=login">Přihlásit</a> | <a href="index.php?site=register">Registrovat</a>',
+    'options' => 'Nastavení',
+    'pmsubject_newentry' => 'Nový příspěvek v knize návštěv',
+    'pmtext_newentry' => '[b]Někdo odeslal zprávu do vaší knihy návštěv![/b][br][br] [URL=index.php?site=guestbook#%insertid%]Kliknutím zde si zprávu přečteš[/URL] ',
+    'security_code' => 'Bezpečnostní kód',
+    'select_all' => 'vybrat všechno',
+    'smilies' => '<a href="javascript:void(0);" onclick="window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smajlíci</a> ZAPNUTI',
+    'sort' => 'Seřadit:',
+    'submit' => 'Odeslat',
+    'update_comment' => 'Uložit komentář',
+    'wrote' => 'napsal',
+    'your_message' => 'Tvoje zpráva'
 );
 

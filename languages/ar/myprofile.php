@@ -25,7 +25,7 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
@@ -47,7 +47,6 @@ $language_array = Array(
     'cpu' => 'المعالج',
     'date_of_birth' => 'تاريخ الميلاد',
     'deactivated' => 'المعطلة',
-    'delete' => 'delete',
     'delete_max_90_90' => 'حذف (max90/90)',
     'delete_max_230_210' => 'حذف (max230/210)',
     'e-mail' => 'العنوان الالكتروني',
@@ -139,3 +138,4 @@ $language_array = Array(
     'you_have_to_username' => 'يجب أن تدخل الاسم المستخدم',
     'you_have_to_valid_email' => 'البريد الإلكتروني الخاص بك غير صالح'
 );
+

@@ -24,24 +24,18 @@
 #                                                                        #
 ##########################################################################
 */
-/**
- * Online Language Editor Luxemburg language file for webSPELL 4.2.2
- * @author Stefan Giesecke <webmaster@giesi.com>
- * @copyright Copyright (c) 2010, Stefan Giesecke
- * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
- */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'admin_button'=>'FAQ Administratioun',
-  'answer'=>'Äntwert',
-  'categories'=>'Kategorien',
-  'faq'=>'Heefeg gestellte Froen',
-  'faqs'=>'Froen',
-  'no_categories'=>'keng Kategorien ugeluecht',
-  'no_faq'=>'Keng Froen do.<br><a href="index.php?site=faq">Zréck</a>',
-  'saved_on'=>'agedroen den'
+    'admin_button' => 'FAQ Administratioun',
+    'answer' => 'Äntwert',
+    'categories' => 'Kategorien',
+    'faq' => 'Heefeg gestellte Froen',
+    'faqs' => 'Froen',
+    'no_categories' => 'keng Kategorien ugeluecht',
+    'no_faq' => 'Keng Froen do.<br><a href="index.php?site=faq">Zréck</a>',
+    'saved_on' => 'agedroen den'
 );
 

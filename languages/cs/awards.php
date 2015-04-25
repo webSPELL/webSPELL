@@ -25,28 +25,28 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'award'=>'Ocenění',
-	'awards'=>'ocenění',
-	'date'=>'Datum',
-	'delete'=>'smazat',
-	'edit'=>'upravit',
-	'edit_award'=>'Upravit ocenění',
-	'enter_title'=>'Zadej nadpis!',
-	'enter_text'=>'Zadej text',
-	'event'=>'Událost',
-	'homepage'=>'Domovská stránka',
-	'info'=>'Info',
-	'new_award'=>'Nové ocenění',
-	'no_access'=>'Nemáš přístup!',
-	'no_entries'=>'Ocenění nenalezeno',
-	'ranking'=>'Umístění',
-	'save_award'=>'Uložit ocenění',
-	'sort'=>'Seřadit',
-	'squad'=>'Skupina',
-	'update_award'=>'Aktualizovat ocenění'
+    'award' => 'Ocenění',
+    'awards' => 'ocenění',
+    'date' => 'Datum',
+    'delete' => 'smazat',
+    'edit' => 'upravit',
+    'edit_award' => 'Upravit ocenění',
+    'enter_text' => 'Zadej text',
+    'enter_title' => 'Zadej nadpis!',
+    'event' => 'Událost',
+    'homepage' => 'Domovská stránka',
+    'info' => 'Info',
+    'new_award' => 'Nové ocenění',
+    'no_access' => 'Nemáš přístup!',
+    'no_entries' => 'Ocenění nenalezeno',
+    'ranking' => 'Umístění',
+    'save_award' => 'Uložit ocenění',
+    'sort' => 'Seřadit',
+    'squad' => 'Skupina',
+    'update_award' => 'Aktualizovat ocenění'
 );
 

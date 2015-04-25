@@ -25,12 +25,12 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'invalid_request'=>'Neispravan upit',
-	'no_result'=>'Nema rezultata pretrage',
-	'to_much_results'=>'Postoji previše rezultata, molimo unesite više znakova.'
+    'invalid_request' => 'Neispravan upit',
+    'no_result' => 'Nema rezultata pretrage',
+    'to_much_results' => 'Postoji previše rezultata, molimo unesite više znakova.'
 );
 

@@ -25,19 +25,18 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'game'=>'Játék',
-  'information'=>'Információ',
-	'ip'=>'IP',
-	'link'=>'Link',
-	'no_server'=>'nincs elérhető szerver.',
-	'not_supported'=>'Nem támogatja a szerver',
-	'online'=>'online',
-	'server'=>'szerver',
-	'status'=>'Státusz',
-	'timeout'=>'idotúllépés'
+    'game' => 'Játék',
+    'information' => 'Információ',
+    'link' => 'Link',
+    'no_server' => 'nincs elérhető szerver.',
+    'not_supported' => 'Nem támogatja a szerver',
+    'online' => 'online',
+    'server' => 'szerver',
+    'status' => 'Státusz',
+    'timeout' => 'idotúllépés'
 );
 

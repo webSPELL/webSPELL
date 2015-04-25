@@ -25,17 +25,17 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'all_messages'=>'Mostrar todo',
-	'enter_message'=>'Introduzca el texto!',
-	'enter_name'=>'Introduzca el nombre!',
-	'delete_selected'=>'Borrar seleccionado(s)',
-	'select_all'=>'Seleccionar todo',
-	'shout'=>'Enviar!',
-	'shoutbox'=>'Charla por internet',
-	'sort'=>'Ordenar:'
+    'all_messages' => 'Mostrar todo',
+    'delete_selected' => 'Borrar seleccionado(s)',
+    'enter_message' => 'Introduzca el texto!',
+    'enter_name' => 'Introduzca el nombre!',
+    'select_all' => 'Seleccionar todo',
+    'shout' => 'Enviar!',
+    'shoutbox' => 'Charla por internet',
+    'sort' => 'Ordenar:'
 );
 

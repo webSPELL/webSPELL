@@ -25,29 +25,29 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'back'=>'назад на контакт образац',
-  'contact'=>'контакт',
-  'description'=>'Преко овог контакт формулара можете нас контактирати',
-  'enter_mail'=>'Молимо упишите e-mail адресу.',
-  'enter_message'=>'Молимо упишите поруку.',
-  'enter_name'=>'Молимо упишите име.',
-  'enter_subject'=>'Молимо упишите наслов.',
-  'errors_there'=>'Постоје одређене грешке',
-  'mail'=>'Е-Mаил',
-  'message'=>'Порука',
-  'name'=>'Име',
-  'receiver'=>'Примаоц',
-  'reset'=>'Ресетуј',
-  'security_code'=>'Cигурносни код',
-  'send'=>'Пошаљи',
-  'send_successfull'=>'Ваша порука је успешно послата.',
-  'subject'=>'Наслов',
-  'title_contact'=>'Контакт образац',
-'unknown_receiver'=>'unknown receiver',
-  'wrong_securitycode'=>'Унели сте погрешан сигурносни код!'
+    'back' => 'назад на контакт образац',
+    'contact' => 'контакт',
+    'description' => 'Преко овог контакт формулара можете нас контактирати',
+    'enter_mail' => 'Молимо упишите e-mail адресу.',
+    'enter_message' => 'Молимо упишите поруку.',
+    'enter_name' => 'Молимо упишите име.',
+    'enter_subject' => 'Молимо упишите наслов.',
+    'errors_there' => 'Постоје одређене грешке',
+    'mail' => 'Е-Mаил',
+    'message' => 'Порука',
+    'name' => 'Име',
+    'receiver' => 'Примаоц',
+    'reset' => 'Ресетуј',
+    'security_code' => 'Cигурносни код',
+    'send' => 'Пошаљи',
+    'send_successfull' => 'Ваша порука је успешно послата.',
+    'subject' => 'Наслов',
+    'title_contact' => 'Контакт образац',
+    'unknown_receiver' => 'unknown receiver',
+    'wrong_securitycode' => 'Унели сте погрешан сигурносни код!'
 );
 

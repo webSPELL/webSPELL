@@ -25,11 +25,11 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'news_feed'=>'crwdns14743:0crwdne14743:0',
-	'latest_news_from'=>'crwdns14744:0crwdne14744:0'
+    'latest_news_from' => 'crwdns20599:0crwdne20599:0',
+    'news_feed' => 'crwdns20598:0crwdne20598:0'
 );
 

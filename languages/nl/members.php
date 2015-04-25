@@ -25,29 +25,28 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'about'=>'Informatie',
-	'active'=>'actief',
-	'activity'=>'Activiteit',
-	'awards'=>'Prijzen',
-	'back_overview'=>'&raquo; <a href="index.php?site=members"><b>terug naar leden overzicht</b></a>',
-	'challenge'=>'Daag uit',
-	'contact'=>'Contact',
-	'go'=>'Ga!',
-	'inactive'=>'inactief',
-	'member'=>'Lid',
-	'members'=>'leden',
-	'nickname'=>'Nickname',
-	'no_description'=>'geen beschrijving beschikbaar',
-	'position'=>'Positie',
-	'results'=>'Resultaten',
-	'show_details'=>'&raquo; <a href="index.php?site=members&action=show&squadID=%squadID%"><b>Bekijk details</b></a>',
-	'show_only'=>'Bekijk alleen',
-	'status'=>'Status',
-	'town'=>'Dorp/Stad'
-
+    'about' => 'Informatie',
+    'active' => 'actief',
+    'activity' => 'Activiteit',
+    'awards' => 'Prijzen',
+    'back_overview' => '&raquo; <a href="index.php?site=members"><b>terug naar leden overzicht</b></a>',
+    'challenge' => 'Daag uit',
+    'contact' => 'Contact',
+    'go' => 'Ga!',
+    'inactive' => 'inactief',
+    'member' => 'Lid',
+    'members' => 'leden',
+    'nickname' => 'Nickname',
+    'no_description' => 'geen beschrijving beschikbaar',
+    'position' => 'Positie',
+    'results' => 'Resultaten',
+    'show_details' => '&raquo; <a href="index.php?site=members&action=show&squadID=%squadID%"><b>Bekijk details</b></a>',
+    'show_only' => 'Bekijk alleen',
+    'status' => 'Status',
+    'town' => 'Dorp/Stad'
 );
 

@@ -25,29 +25,28 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'about'=>'crwdns15156:0crwdne15156:0',
-	'active'=>'crwdns15157:0crwdne15157:0',
-	'activity'=>'crwdns15158:0crwdne15158:0',
-	'awards'=>'crwdns15159:0crwdne15159:0',
-	'back_overview'=>'crwdns15160:0crwdne15160:0',
-	'challenge'=>'crwdns15161:0crwdne15161:0',
-	'contact'=>'crwdns15162:0crwdne15162:0',
-	'go'=>'crwdns15163:0crwdne15163:0',
-	'inactive'=>'crwdns15164:0crwdne15164:0',
-	'member'=>'crwdns15165:0crwdne15165:0',
-	'members'=>'crwdns15166:0crwdne15166:0',
-	'nickname'=>'crwdns15167:0crwdne15167:0',
-	'no_description'=>'crwdns15168:0crwdne15168:0',
-	'no_entries'=>'crwdns15169:0crwdne15169:0',
-	'position'=>'crwdns15170:0crwdne15170:0',
-	'results'=>'crwdns15171:0crwdne15171:0',
-	'show_details'=>'crwdns15172:0%squadID%crwdne15172:0',
-	'show_only'=>'crwdns15173:0crwdne15173:0',
-	'status'=>'crwdns15174:0crwdne15174:0',
-	'town'=>'crwdns15175:0crwdne15175:0'
+    'about' => 'crwdns21011:0crwdne21011:0',
+    'active' => 'crwdns21012:0crwdne21012:0',
+    'activity' => 'crwdns21013:0crwdne21013:0',
+    'awards' => 'crwdns21014:0crwdne21014:0',
+    'back_overview' => 'crwdns21015:0crwdne21015:0',
+    'challenge' => 'crwdns21016:0crwdne21016:0',
+    'contact' => 'crwdns21017:0crwdne21017:0',
+    'go' => 'crwdns21018:0crwdne21018:0',
+    'inactive' => 'crwdns21019:0crwdne21019:0',
+    'member' => 'crwdns21020:0crwdne21020:0',
+    'members' => 'crwdns21021:0crwdne21021:0',
+    'nickname' => 'crwdns21022:0crwdne21022:0',
+    'no_description' => 'crwdns21023:0crwdne21023:0',
+    'position' => 'crwdns21025:0crwdne21025:0',
+    'results' => 'crwdns21026:0crwdne21026:0',
+    'show_details' => 'crwdns21027:0%squadID%crwdne21027:0',
+    'show_only' => 'crwdns21028:0crwdne21028:0',
+    'status' => 'crwdns21029:0crwdne21029:0',
+    'town' => 'crwdns21030:0crwdne21030:0'
 );
 

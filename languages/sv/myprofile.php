@@ -25,7 +25,7 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
@@ -44,13 +44,10 @@ $language_array = Array(
     'clan-name' => 'Clan-Namn',
     'clan-tag' => 'Clan-Tag',
     'country' => 'Land',
-    'cpu' => 'CPU',
     'date_of_birth' => 'Födelsedag',
     'deactivated' => 'avaktiverad',
-    'delete' => 'delete',
     'delete_max_90_90' => 'radera (max90/90)',
     'delete_max_230_210' => 'radera (max230/210)',
-    'e-mail' => 'E-mail',
     'edit_mail' => 'edit E-Mail',
     'edit_password' => 'edit password',
     'equipment-info' => 'Utrustnings-Info',
@@ -139,3 +136,4 @@ Tackar för dina intressen
     'you_have_to_username' => 'Du måste skriva ett användarnamn!',
     'you_have_to_valid_email' => 'Din e-mail är inte giltig!'
 );
+

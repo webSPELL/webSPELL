@@ -25,17 +25,17 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'all_messages'=>'crwdns15725:0crwdne15725:0',
-	'enter_message'=>'crwdns15726:0crwdne15726:0',
-	'enter_name'=>'crwdns15727:0crwdne15727:0',
-	'delete_selected'=>'crwdns15728:0crwdne15728:0',
-	'select_all'=>'crwdns15729:0crwdne15729:0',
-	'shout'=>'crwdns15730:0crwdne15730:0',
-	'shoutbox'=>'crwdns15731:0crwdne15731:0',
-	'sort'=>'crwdns15732:0crwdne15732:0'
+    'all_messages' => 'crwdns21580:0crwdne21580:0',
+    'delete_selected' => 'crwdns21583:0crwdne21583:0',
+    'enter_message' => 'crwdns21581:0crwdne21581:0',
+    'enter_name' => 'crwdns21582:0crwdne21582:0',
+    'select_all' => 'crwdns21584:0crwdne21584:0',
+    'shout' => 'crwdns21585:0crwdne21585:0',
+    'shoutbox' => 'crwdns21586:0crwdne21586:0',
+    'sort' => 'crwdns21587:0crwdne21587:0'
 );
 

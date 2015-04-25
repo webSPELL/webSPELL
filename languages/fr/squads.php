@@ -25,33 +25,33 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'about'=>'À propos de',
-	'active'=>'Actif',
-	'add_buddy'=>'Ajouter à ma liste d\'amis',
-	'awards'=>'Prix',
-	'back_buddy'=>'Retour à ma liste d\'amis',
-	'back_squad_overview'=>'Retour aux sections',
-	'challenge'=>'Défier',
-	'contact'=>'Contact',
-	'email'=>'Email',
-	'ignore'=>'Ignorer',
-	'inactive'=>'Inactif',
-	'member'=>'Membre',
-	'members'=>'Membres',
-	'messenger'=>'Messagerie',
-	'no_description'=>'Aucune description.',
-	'no_userpic'=>'Aucune photo !',
-	'position'=>'Position',
-	'results'=>'Résultats',
-	'show_details'=>'Détails',
-	'squad_plays'=>'La section joue à',
-	'squads'=>'Sections',
-	'status'=>'Statut',
-	'town'=>'Ville',
-	'userpicture'=>'Photo'
+    'about' => 'À propos de',
+    'active' => 'Actif',
+    'add_buddy' => 'Ajouter à ma liste d\'amis',
+    'awards' => 'Prix',
+    'back_buddy' => 'Retour à ma liste d\'amis',
+    'back_squad_overview' => 'Retour aux sections',
+    'challenge' => 'Défier',
+    'contact' => 'Contact',
+    'email' => 'Email',
+    'ignore' => 'Ignorer',
+    'inactive' => 'Inactif',
+    'member' => 'Membre',
+    'members' => 'Membres',
+    'messenger' => 'Messagerie',
+    'no_description' => 'Aucune description.',
+    'no_userpic' => 'Aucune photo !',
+    'position' => 'Position',
+    'results' => 'Résultats',
+    'show_details' => 'Détails',
+    'squad_plays' => 'La section joue à',
+    'squads' => 'Sections',
+    'status' => 'Statut',
+    'town' => 'Ville',
+    'userpicture' => 'Photo'
 );
 

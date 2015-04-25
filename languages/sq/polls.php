@@ -24,54 +24,48 @@
 #                                                                        #
 ##########################################################################
 */
-/**
- * Online Language Editor Albania language file for webSPELL 4.2.2
- * @author Stefan Giesecke <webmaster@giesi.com>
- * @copyright Copyright (c) 2010, Stefan Giesecke
- * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
- */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'already_voted'=>'Keni votuar tashmë.',
-  'comments'=>'komentet',
-  'days'=>'ditët',
-  'delete'=>'fshij',
-  'disable_comments'=>'ç\'aktivizo komentet',
-  'edit'=>'edito',
-  'edit_poll'=>'edito  sondazhin',
-  'enable_user_comments'=>'lejo komentet e përdoruesve',
-  'enable_visitor_comments'=>'lejo komentet e vizituesve',
-  'endingtime'=>'Fundi kohës',
-  'intern'=>'I brendshëm',
-  'latest_by'=>'më i fundit nga',
-  'new_poll'=>'sondazh i ri',
-  'no_access'=>'ndalohet hyrja!',
-  'no_active_poll'=>'nuk ka sondazh aktiv',
-  'no_entries'=>'nuk ka hyrje!',
-  'on'=>'ndezur',
-  'option'=>'Opsion',
-  'poll_ended'=>'sondazh tashmë i mbaruar',
-  'polls'=>'sondazhe',
-  'really_delete'=>'vërtet e fshin këtë sondazh?',
-  'really_stop'=>'vërtet e ndalon këtë sondazh?',
-  'really_reopen'=>'vërtet e rihap këtë sondazh?',
-  'reset_votes'=>'rivendos votat',
-  'reopen_poll'=>'rihap sondazhin',
-  'save_poll'=>'shpëto sondazhin',
-  'show_polls'=>'trego sondazhet',
-  'stop_poll'=>'ndalo sondazhin',
-  'stopped_poll'=>'ndalo sondazhin',
-  'time_left'=>'koha ngelur',
-  'title'=>'Titull',
-  'update_poll'=>'updato sondazhin ',
-  'vote'=>'voto',
-  'vote_now'=>'voto tani',
-  'votes'=>'votat',
-  'yht_enter_2_options'=>'Duhet të vendosni të paktën 2 opsione!',
-  'yht_enter_endingtime'=>'Duhet të vendosni kohën e përfundimit!',
-  'yht_enter_title'=>'Duhet të vendosni një titull!'
+    'already_voted' => 'Keni votuar tashmë.',
+    'comments' => 'komentet',
+    'days' => 'ditët',
+    'delete' => 'fshij',
+    'disable_comments' => 'ç\'aktivizo komentet',
+    'edit' => 'edito',
+    'edit_poll' => 'edito  sondazhin',
+    'enable_user_comments' => 'lejo komentet e përdoruesve',
+    'enable_visitor_comments' => 'lejo komentet e vizituesve',
+    'endingtime' => 'Fundi kohës',
+    'intern' => 'I brendshëm',
+    'latest_by' => 'më i fundit nga',
+    'new_poll' => 'sondazh i ri',
+    'no_access' => 'ndalohet hyrja!',
+    'no_active_poll' => 'nuk ka sondazh aktiv',
+    'no_entries' => 'nuk ka hyrje!',
+    'on' => 'ndezur',
+    'option' => 'Opsion',
+    'poll_ended' => 'sondazh tashmë i mbaruar',
+    'polls' => 'sondazhe',
+    'really_delete' => 'vërtet e fshin këtë sondazh?',
+    'really_reopen' => 'vërtet e rihap këtë sondazh?',
+    'really_stop' => 'vërtet e ndalon këtë sondazh?',
+    'reopen_poll' => 'rihap sondazhin',
+    'reset_votes' => 'rivendos votat',
+    'save_poll' => 'shpëto sondazhin',
+    'show_polls' => 'trego sondazhet',
+    'stop_poll' => 'ndalo sondazhin',
+    'stopped_poll' => 'ndalo sondazhin',
+    'time_left' => 'koha ngelur',
+    'title' => 'Titull',
+    'update_poll' => 'updato sondazhin ',
+    'vote' => 'voto',
+    'vote_now' => 'voto tani',
+    'votes' => 'votat',
+    'yht_enter_2_options' => 'Duhet të vendosni të paktën 2 opsione!',
+    'yht_enter_endingtime' => 'Duhet të vendosni kohën e përfundimit!',
+    'yht_enter_title' => 'Duhet të vendosni një titull!'
 );
 

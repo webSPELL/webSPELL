@@ -25,12 +25,12 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'invalid_request'=>'درخاست باطل',
-  'no_result'=>'جستجو ناموفق',
-  'to_much_results'=>'.کلمه مورد نظر پیدا نشد لطفا اطلاعات بیشتری چاپ کنید'
+    'invalid_request' => 'درخاست باطل',
+    'no_result' => 'جستجو ناموفق',
+    'to_much_results' => '.کلمه مورد نظر پیدا نشد لطفا اطلاعات بیشتری چاپ کنید'
 );
 

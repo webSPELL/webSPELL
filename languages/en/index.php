@@ -25,32 +25,32 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'advertisement'=>'advertisement',
-	'articles'=>'articles',
-	'content'=>'content',
-	'demos'=>'demos',
-	'downloads'=>'downloads',
-	'hotest_news'=>'hotest news',
-	'language_switch'=>'language switch',
-	'latest_news'=>'latest news',
-	'login'=>'login',
-	'matches'=>'matches',
-	'newsletter'=>'newsletter',
-	'partners'=>'partners',
-	'pic_of_the_moment'=>'pic of the moment',
-	'poll'=>'poll',
-	'random_user'=>'random user',
-	'server'=>'servers',
-	'shoutbox'=>'shoutbox',
-	'sponsors'=>'sponsors',
-	'squads'=>'squads',
-	'statistics'=>'statistics',
-	'topics'=>'topics',
-	'upcoming_events'=>'upcoming events',
-	'tags'=>'tags'
+    'advertisement' => 'advertisement',
+    'articles' => 'articles',
+    'content' => 'content',
+    'demos' => 'demos',
+    'downloads' => 'downloads',
+    'hotest_news' => 'hotest news',
+    'language_switch' => 'language switch',
+    'latest_news' => 'latest news',
+    'login' => 'login',
+    'matches' => 'matches',
+    'newsletter' => 'newsletter',
+    'partners' => 'partners',
+    'pic_of_the_moment' => 'pic of the moment',
+    'poll' => 'poll',
+    'random_user' => 'random user',
+    'server' => 'servers',
+    'shoutbox' => 'shoutbox',
+    'sponsors' => 'sponsors',
+    'squads' => 'squads',
+    'statistics' => 'statistics',
+    'tags' => 'tags',
+    'topics' => 'topics',
+    'upcoming_events' => 'upcoming events'
 );
 

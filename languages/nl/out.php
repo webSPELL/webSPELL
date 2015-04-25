@@ -25,13 +25,12 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'no_frame'=>'Deze site gebruikt frames. Je browser ondersteund geen frames!',
-	'outgoing'=>'Uitgaand',
-	'owner_responsible'=>'De eigenaar is verantwoordelijk voor deze pagina.'
-
+    'no_frame' => 'Deze site gebruikt frames. Je browser ondersteund geen frames!',
+    'outgoing' => 'Uitgaand',
+    'owner_responsible' => 'De eigenaar is verantwoordelijk voor deze pagina.'
 );
 

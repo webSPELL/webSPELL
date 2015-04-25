@@ -26,8 +26,8 @@
 */
 
 $language_array = Array(
-	'used_for'=>'crwdns16584:0crwdne16584:0',
-	'special_rank'=>'crwdns16585:0crwdne16585:0',
-	'no_special_rank'=>'crwdns16586:0crwdne16586:0'
+	'used_for'=>'crwdns22439:0crwdne22439:0',
+	'special_rank'=>'crwdns22440:0crwdne22440:0',
+	'no_special_rank'=>'crwdns22441:0crwdne22441:0'
  );
  

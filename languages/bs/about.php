@@ -25,12 +25,11 @@
 ##########################################################################
 */
 
-
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'about_title'=>'O nama',
-  'no_about'=>'Trenutno ne postoji opis.'
+    'about_title' => 'O nama',
+    'no_about' => 'Trenutno ne postoji opis.'
 );
 

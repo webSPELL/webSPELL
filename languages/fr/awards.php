@@ -25,29 +25,28 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
-/* do not editer above this line */
+/* do not edit above this line */
 
-	'award'=>'Prix',
-	'awards'=>'Prix',
-	'date'=>'Date',
-	'delete'=>'Supprimer',
-	'edit'=>'Editer',
-	'edit_award'=>'Editer ce prix',
-	'enter_title'=>'Vous devez entrer un titre !',
-	'enter_text'=>'Vous devez entrer une description !',
-	'event'=>'Evénement',
-	'homepage'=>'Site web',
-	'info'=>'Description',
-	'new_award'=>'Nouveau prix',
-	'no_access'=>'Accès refusé !',
-	'no_entries'=>'Aucun prix.',
-	'ranking'=>'Place',
-	'save_award'=>'Enregistrer',
-	'sort'=>'Ordre',
-	'squad'=>'Section',
-	'update_award'=>'Editer'
+    'award' => 'Prix',
+    'awards' => 'Prix',
+    'date' => 'Date',
+    'delete' => 'Supprimer',
+    'edit' => 'Editer',
+    'edit_award' => 'Editer ce prix',
+    'enter_text' => 'Vous devez entrer une description !',
+    'enter_title' => 'Vous devez entrer un titre !',
+    'event' => 'Evénement',
+    'homepage' => 'Site web',
+    'info' => 'Description',
+    'new_award' => 'Nouveau prix',
+    'no_access' => 'Accès refusé !',
+    'no_entries' => 'Aucun prix.',
+    'ranking' => 'Place',
+    'save_award' => 'Enregistrer',
+    'sort' => 'Ordre',
+    'squad' => 'Section',
+    'update_award' => 'Editer'
 );
-
 

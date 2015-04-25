@@ -25,32 +25,32 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'advertisement'=>'Reklamer',
-	'articles'=>'Artikler',
-	'content'=>'Indhold',
-	'demos'=>'demoer',
-	'downloads'=>'downloads',
-	'hotest_news'=>'Topnyheder',
-	'language_switch'=>'skift sprog',
-	'latest_news'=>'seneste nyheder',
-	'login'=>'log ind',
-	'matches'=>'kampe',
-	'newsletter'=>'Nyhedsbreve',
-	'partners'=>'partnere',
-	'pic_of_the_moment'=>'Øjebliksbillede',
-	'poll'=>'afstemninger',
-	'random_user'=>'Tilfældig bruger',
-	'server'=>'Servere',
-	'shoutbox'=>'beskedboks',
-	'sponsors'=>'sponsorer',
-	'squads'=>'hold',
-	'statistics'=>'statistik',
-	'topics'=>'emner',
-	'upcoming_events'=>'kommende begivenheder',
-	'tags'=>'tags'
+    'advertisement' => 'Reklamer',
+    'articles' => 'Artikler',
+    'content' => 'Indhold',
+    'demos' => 'demoer',
+    'downloads' => 'downloads',
+    'hotest_news' => 'Topnyheder',
+    'language_switch' => 'skift sprog',
+    'latest_news' => 'seneste nyheder',
+    'login' => 'log ind',
+    'matches' => 'kampe',
+    'newsletter' => 'Nyhedsbreve',
+    'partners' => 'partnere',
+    'pic_of_the_moment' => 'Øjebliksbillede',
+    'poll' => 'afstemninger',
+    'random_user' => 'Tilfældig bruger',
+    'server' => 'Servere',
+    'shoutbox' => 'beskedboks',
+    'sponsors' => 'sponsorer',
+    'squads' => 'hold',
+    'statistics' => 'statistik',
+    'tags' => 'tags',
+    'topics' => 'emner',
+    'upcoming_events' => 'kommende begivenheder'
 );
 

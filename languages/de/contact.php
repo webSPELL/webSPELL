@@ -25,29 +25,28 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'back'=>'zurück zum Formular',
-	'contact'=>'Kontakt',
-	'description'=>'Mithilfe dieses Formulars kannst du Kontakt zu uns herstellen.',
-	'enter_mail'=>'Bitte eine Mailadresse angeben',
-	'enter_message'=>'Wie lautet deine Nachricht?',
-	'enter_name'=>'Bitte einen Namen eingeben',
-	'enter_subject'=>'Bitte einen Betreff eingeben',
-	'errors_there'=>'Es sind Fehler aufgetreten',
-	'mail'=>'E-Mail',
-	'message'=>'Nachricht',
-	'name'=>'Name',
-	'receiver'=>'Empfänger',
-	'reset'=>'Zurücksetzen',
-	'security_code'=>'Sicherheitscode',
-	'send'=>'Abschicken',
-	'send_successfull'=>'Deine Nachricht wurde erfolgreich versandt.',
-	'subject'=>'Betreff',
-	'title_contact'=>'Kontaktformular',
-	'unknown_receiver'=>'Unbekannter Empfänger',
-	'wrong_securitycode'=>'Der Sicherheitscode ist falsch'
+    'back' => 'zurück zum Formular',
+    'contact' => 'Kontakt',
+    'description' => 'Mithilfe dieses Formulars kannst du Kontakt zu uns herstellen.',
+    'enter_mail' => 'Bitte eine Mailadresse angeben',
+    'enter_message' => 'Wie lautet deine Nachricht?',
+    'enter_name' => 'Bitte einen Namen eingeben',
+    'enter_subject' => 'Bitte einen Betreff eingeben',
+    'errors_there' => 'Es sind Fehler aufgetreten',
+    'message' => 'Nachricht',
+    'name' => 'Name',
+    'receiver' => 'Empfänger',
+    'reset' => 'Zurücksetzen',
+    'security_code' => 'Sicherheitscode',
+    'send' => 'Abschicken',
+    'send_successfull' => 'Deine Nachricht wurde erfolgreich versandt.',
+    'subject' => 'Betreff',
+    'title_contact' => 'Kontaktformular',
+    'unknown_receiver' => 'Unbekannter Empfänger',
+    'wrong_securitycode' => 'Der Sicherheitscode ist falsch'
 );
 

@@ -25,32 +25,32 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'advertisement'=>'reklama',
-	'articles'=>'artykuły',
-	'content'=>'treść',
-	'demos'=>'dema',
-	'downloads'=>'pliki',
-	'hotest_news'=>'hot news',
-	'language_switch'=>'zmiana języka',
-	'latest_news'=>'ostatnie newsy',
-	'login'=>'logowanie',
-	'matches'=>'mecze',
-	'newsletter'=>'subskrypcja',
-	'partners'=>'partnerzy',
-	'pic_of_the_moment'=>'losowe zdjęcie',
-	'poll'=>'ankieta',
-	'random_user'=>'losowy użytkownik',
-	'server'=>'serwery',
-	'shoutbox'=>'shoutbox',
-	'sponsors'=>'sponsorzy',
-	'squads'=>'drużyny',
-	'statistics'=>'statystyki',
-	'topics'=>'tematy',
-	'upcoming_events'=>'nadchodzące wydarzenia',
-	'tags'=>'tagi'
+    'advertisement' => 'reklama',
+    'articles' => 'artykuły',
+    'content' => 'treść',
+    'demos' => 'dema',
+    'downloads' => 'pliki',
+    'hotest_news' => 'hot news',
+    'language_switch' => 'zmiana języka',
+    'latest_news' => 'ostatnie newsy',
+    'login' => 'logowanie',
+    'matches' => 'mecze',
+    'newsletter' => 'subskrypcja',
+    'partners' => 'partnerzy',
+    'pic_of_the_moment' => 'losowe zdjęcie',
+    'poll' => 'ankieta',
+    'random_user' => 'losowy użytkownik',
+    'server' => 'serwery',
+    'shoutbox' => 'shoutbox',
+    'sponsors' => 'sponsorzy',
+    'squads' => 'drużyny',
+    'statistics' => 'statystyki',
+    'tags' => 'tagi',
+    'topics' => 'tematy',
+    'upcoming_events' => 'nadchodzące wydarzenia'
 );
 

@@ -25,32 +25,31 @@
 ##########################################################################
 */
 
-
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'del_from_mail_list'=>'მაილის სიიდან წაშლა',
-  'del_key'=>'წაშლის ღილაკი',
-  'delete'=>'წაშლა',
-  'deletion_key'=>'წაშლის ღილაკი',
-  'email_not_valid'=>'თქვენი მაილი არასწორია!',
-  'lost_deletion_key'=>'წაშლის გასაღები დაიკარგა?',
-  'mail_adress'=>'მაილის მისამართი',
-  'mail_pw_didnt_match'=>'e-mail/პაროლი არ დაემთხვა.',
-  'mail_not_in_db'=>'მოცემული მაილი არ არის ნაპოვნი მონაცემთა ბაზაში.',
-  'newsletter'=>'სიახლეების ლენტა',
-  'newsletter_registration'=>'სიახლის ლენტის რეგისტრაცია',
-  'no_such_mail_adress'=>'ძალიან ბევრი mail მისამართი.',
-  'password_had_been_send'=>'პაროლი გაიგზავნა.',
-  'register_newsletter'=>'რეგისტრაცია სიახლეების ლენტისათვის.',
-  'request_mail'=>'<b>წაშლის გასაღები დაკარგულია!</b><br><br>ამოიღონ თქვენი ფოსტის გვერდის ლენტა მისამართი დაჭერით <a href="http://%homepage_url%/index.php?site=newsletter&mail=%mail%&pass=%delete_key%">აქ</a><br>თქვენი პაროლი რომ წაშალოთ თქვენი თავი: %delete_key%<br><br>აგრეთვე თქვენ %homepage_url%',
-  'send'=>'გაგზავლა',
-  'submit'=>'დასტური',
-  'success_mail'=>'<b>მადლობა რეგისტრაციისათვის!</b><br><br>ამოიღონ თქვენი ფოსტის გვერდის ლენტა მისამართი დაჭერით <a href="http://%homepage_url%/index.php?site=newsletter&mail=%mail%&pass=%delete_key%">აქ</a><br>თქვენი პაროლი რომ წაშალოთ თქვენი თავი: %delete_key%<br><br>გნახავთ %homepage_url%',
-  'thank_you_for_registration'=>'მადლობა რეგისტრაციისათვის.',
-  'you_are_already_registered'=>'თქვენ დარეგისტრირდით.',
-  'your_mail_adress'=>'თქვენი მაილის მისამართი',
-  'your_mail_adress_deleted'=>'თქვენი მაილის მისამართი წაშლილია.'
+    'del_from_mail_list' => 'მაილის სიიდან წაშლა',
+    'del_key' => 'წაშლის ღილაკი',
+    'delete' => 'წაშლა',
+    'deletion_key' => 'წაშლის ღილაკი',
+    'email_not_valid' => 'თქვენი მაილი არასწორია!',
+    'lost_deletion_key' => 'წაშლის გასაღები დაიკარგა?',
+    'mail_adress' => 'მაილის მისამართი',
+    'mail_not_in_db' => 'მოცემული მაილი არ არის ნაპოვნი მონაცემთა ბაზაში.',
+    'mail_pw_didnt_match' => 'e-mail/პაროლი არ დაემთხვა.',
+    'newsletter' => 'სიახლეების ლენტა',
+    'newsletter_registration' => 'სიახლის ლენტის რეგისტრაცია',
+    'no_such_mail_adress' => 'ძალიან ბევრი mail მისამართი.',
+    'password_had_been_send' => 'პაროლი გაიგზავნა.',
+    'register_newsletter' => 'რეგისტრაცია სიახლეების ლენტისათვის.',
+    'request_mail' => '<b>წაშლის გასაღები დაკარგულია!</b><br><br>ამოიღონ თქვენი ფოსტის გვერდის ლენტა მისამართი დაჭერით <a href="http://%homepage_url%/index.php?site=newsletter&mail=%mail%&pass=%delete_key%">აქ</a><br>თქვენი პაროლი რომ წაშალოთ თქვენი თავი: %delete_key%<br><br>აგრეთვე თქვენ %homepage_url%',
+    'send' => 'გაგზავლა',
+    'submit' => 'დასტური',
+    'success_mail' => '<b>მადლობა რეგისტრაციისათვის!</b><br><br>ამოიღონ თქვენი ფოსტის გვერდის ლენტა მისამართი დაჭერით <a href="http://%homepage_url%/index.php?site=newsletter&mail=%mail%&pass=%delete_key%">აქ</a><br>თქვენი პაროლი რომ წაშალოთ თქვენი თავი: %delete_key%<br><br>გნახავთ %homepage_url%',
+    'thank_you_for_registration' => 'მადლობა რეგისტრაციისათვის.',
+    'you_are_already_registered' => 'თქვენ დარეგისტრირდით.',
+    'your_mail_adress' => 'თქვენი მაილის მისამართი',
+    'your_mail_adress_deleted' => 'თქვენი მაილის მისამართი წაშლილია.'
 );
 

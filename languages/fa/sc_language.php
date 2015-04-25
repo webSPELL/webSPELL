@@ -25,11 +25,11 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'save'=>'ذخیره',
-  'no_session'=>'.غیر فعال است و دوباره سعی کنید cookies لطفا چک کنید'
+    'no_session' => '.غیر فعال است و دوباره سعی کنید cookies لطفا چک کنید',
+    'save' => 'ذخیره'
 );
 

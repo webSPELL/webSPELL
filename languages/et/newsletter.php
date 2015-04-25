@@ -25,32 +25,31 @@
 ##########################################################################
 */
 
-
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'del_from_mail_list'=>'Kustuta mu meililistist',
-  'del_key'=>'Del-võti',
-  'delete'=>'kustuta',
-  'deletion_key'=>'Kustutamise võti',
-  'email_not_valid'=>'Su meiliaadress ei ole korrektne!',
-  'lost_deletion_key'=>'Kaotasid kustutamise võtme?',
-  'mail_adress'=>'meiliaadress',
-  'mail_pw_didnt_match'=>'E-mail/parool ei klappinud',
-  'mail_not_in_db'=>'Antud meiliaadressi ei eksisteeri meie andmebaasis.',
-  'newsletter'=>'uudiskiri',
-  'newsletter_registration'=>'Uudiskirjale registreerimine',
-  'no_such_mail_adress'=>'Sellist meiliaadressi ei ole.',
-  'password_had_been_send'=>'Parool on saadetud.',
-  'register_newsletter'=>'Registreeri uudiskirjale',
-  'request_mail'=>'<b>Sa nõudsid oma kustutusvõtit!</b><br><br>Oma meiliaadressi listist eemaldamiseks kliki <a href="http://%homepage_url%/index.php?site=newsletter&mail=%mail%&pass=%delete_key%">siia</a><br>Su parool kustutamiseks: %delete_key%<br><br>Ootame sind aadressil %homepage_url%',
-  'send'=>'saada',
-  'submit'=>'edasta',
-  'success_mail'=>'<b>Täname, et registreerisid end!</b><br><br>Oma meiliaadressi listist eemaldamiseks kliki <a href="http://%homepage_url%/index.php?site=newsletter&mail=%mail%&pass=%delete_key%">siia</a><br>Su parool kustutamiseks: %delete_key%<br><br>Ootame sind aadressil %homepage_url%',
-  'thank_you_for_registration'=>'Täname, et registreerisid end.',
-  'you_are_already_registered'=>'Sa oled juba registreeritud.',
-  'your_mail_adress'=>'Su meiliaadress',
-  'your_mail_adress_deleted'=>'Su meiliaadress on kustutatud.'
+    'del_from_mail_list' => 'Kustuta mu meililistist',
+    'del_key' => 'Del-võti',
+    'delete' => 'kustuta',
+    'deletion_key' => 'Kustutamise võti',
+    'email_not_valid' => 'Su meiliaadress ei ole korrektne!',
+    'lost_deletion_key' => 'Kaotasid kustutamise võtme?',
+    'mail_adress' => 'meiliaadress',
+    'mail_not_in_db' => 'Antud meiliaadressi ei eksisteeri meie andmebaasis.',
+    'mail_pw_didnt_match' => 'E-mail/parool ei klappinud',
+    'newsletter' => 'uudiskiri',
+    'newsletter_registration' => 'Uudiskirjale registreerimine',
+    'no_such_mail_adress' => 'Sellist meiliaadressi ei ole.',
+    'password_had_been_send' => 'Parool on saadetud.',
+    'register_newsletter' => 'Registreeri uudiskirjale',
+    'request_mail' => '<b>Sa nõudsid oma kustutusvõtit!</b><br><br>Oma meiliaadressi listist eemaldamiseks kliki <a href="http://%homepage_url%/index.php?site=newsletter&mail=%mail%&pass=%delete_key%">siia</a><br>Su parool kustutamiseks: %delete_key%<br><br>Ootame sind aadressil %homepage_url%',
+    'send' => 'saada',
+    'submit' => 'edasta',
+    'success_mail' => '<b>Täname, et registreerisid end!</b><br><br>Oma meiliaadressi listist eemaldamiseks kliki <a href="http://%homepage_url%/index.php?site=newsletter&mail=%mail%&pass=%delete_key%">siia</a><br>Su parool kustutamiseks: %delete_key%<br><br>Ootame sind aadressil %homepage_url%',
+    'thank_you_for_registration' => 'Täname, et registreerisid end.',
+    'you_are_already_registered' => 'Sa oled juba registreeritud.',
+    'your_mail_adress' => 'Su meiliaadress',
+    'your_mail_adress_deleted' => 'Su meiliaadress on kustutatud.'
 );
 

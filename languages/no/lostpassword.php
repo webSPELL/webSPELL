@@ -25,13 +25,13 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'email_failed'=>'There was a problem while sending mail. Please contact the webmaster.',
-	'email_subject'=>'Your account for %pagetitle%',
-	'email_text'=>'Your Account for %pagetitle%
+    'email_failed' => 'There was a problem while sending mail. Please contact the webmaster.',
+    'email_subject' => 'Your account for %pagetitle%',
+    'email_text' => 'Your Account for %pagetitle%
 ATTENTION your password has been changed
 
 your username: %username%
@@ -39,13 +39,13 @@ your new password: %new_password%
 
 have fun on our page
 %homepage_url%',
-	'get_password'=>'get password',
-	'lost_password'=>'lost password',
-	'no_mail_given'=>'You have not entered any mail adress.',
-	'no_user_found'=>'no user found!',
-	'successful'=>'Your account has been found<br><br>
+    'get_password' => 'get password',
+    'lost_password' => 'lost password',
+    'no_mail_given' => 'You have not entered any mail adress.',
+    'no_user_found' => 'no user found!',
+    'successful' => 'Your account has been found<br><br>
     You will get an e-mail with your account data in a few seconds.<br><br>
     &#8226; <a href="index.php?site=login">login</a>',
-	'your_email'=>'Your E-Mail'
+    'your_email' => 'Your E-Mail'
 );
 

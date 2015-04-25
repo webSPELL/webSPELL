@@ -25,12 +25,11 @@
 ##########################################################################
 */
 
-
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'no_access'=>'fără acces!',
-  'just_rate_between_0_10'=>'Vă rugăm să evaluați doar 0-10 puncte!'
+    'just_rate_between_0_10' => 'Vă rugăm să evaluați doar 0-10 puncte!',
+    'no_access' => 'fără acces!'
 );
 

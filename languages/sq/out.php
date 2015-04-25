@@ -24,19 +24,13 @@
 #                                                                        #
 ##########################################################################
 */
-/**
- * Online Language Editor Albania language file for webSPELL 4.2.2
- * @author Stefan Giesecke <webmaster@giesi.com>
- * @copyright Copyright (c) 2010, Stefan Giesecke
- * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
- */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'no_frame'=>'Ky site përdor korniza. Browseri juaj nuk i suporton kornizat!',
-  'outgoing'=>'Që po dërgohet',
-  'owner_responsible'=>'Zotëruesi është përgjegjës për këtë faqe.'
+    'no_frame' => 'Ky site përdor korniza. Browseri juaj nuk i suporton kornizat!',
+    'outgoing' => 'Që po dërgohet',
+    'owner_responsible' => 'Zotëruesi është përgjegjës për këtë faqe.'
 );
 

@@ -25,18 +25,17 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'all_messages'=>'Bekijk alles',
-	'enter_message'=>'Je moet een bericht invullen!',
-	'enter_name'=>'Je moet je naam invullen!',
-	'delete_selected'=>'Verwijder geselecteerden',
-	'select_all'=>'Selecteer alles',
-	'shout'=>'Schreeuw!',
-	'shoutbox'=>'shoutbox',
-	'sort'=>'Sorteer:'
-
+    'all_messages' => 'Bekijk alles',
+    'delete_selected' => 'Verwijder geselecteerden',
+    'enter_message' => 'Je moet een bericht invullen!',
+    'enter_name' => 'Je moet je naam invullen!',
+    'select_all' => 'Selecteer alles',
+    'shout' => 'Schreeuw!',
+    'shoutbox' => 'shoutbox',
+    'sort' => 'Sorteer:'
 );
 

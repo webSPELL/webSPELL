@@ -29,16 +29,16 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'crwdns16328:0crwdne16328:0',
-  'lock'=>'crwdns16329:0crwdne16329:0',
-  'locked_since'=>'crwdns16330:0crwdne16330:0',
-  'pagelock'=>'crwdns16331:0crwdne16331:0',
-  'page_locked'=>'crwdns16332:0crwdne16332:0',
-  'page_unlocked'=>'crwdns16333:0crwdne16333:0',
-  'settings'=>'crwdns16334:0crwdne16334:0',
-  'transaction_invalid'=>'crwdns16335:0crwdne16335:0',
-  'unlock'=>'crwdns16336:0crwdne16336:0',
-  'unlock_page'=>'crwdns16337:0crwdne16337:0',
-  'you_can_use_html'=>'crwdns16338:0crwdne16338:0'
+  'access_denied'=>'crwdns22183:0crwdne22183:0',
+  'lock'=>'crwdns22184:0crwdne22184:0',
+  'locked_since'=>'crwdns22185:0crwdne22185:0',
+  'pagelock'=>'crwdns22186:0crwdne22186:0',
+  'page_locked'=>'crwdns22187:0crwdne22187:0',
+  'page_unlocked'=>'crwdns22188:0crwdne22188:0',
+  'settings'=>'crwdns22189:0crwdne22189:0',
+  'transaction_invalid'=>'crwdns22190:0crwdne22190:0',
+  'unlock'=>'crwdns22191:0crwdne22191:0',
+  'unlock_page'=>'crwdns22192:0crwdne22192:0',
+  'you_can_use_html'=>'crwdns22193:0crwdne22193:0'
 );
 

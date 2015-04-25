@@ -25,12 +25,11 @@
 ##########################################################################
 */
 
-
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'history'=>'Ajalugu',
-  'no_history'=>'Informatsioon pole veel saadaval.'
+    'history' => 'Ajalugu',
+    'no_history' => 'Informatsioon pole veel saadaval.'
 );
 

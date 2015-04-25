@@ -25,32 +25,32 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'advertisement'=>'reklama',
-	'articles'=>'články',
-	'content'=>'obsah',
-	'demos'=>'dema',
-	'downloads'=>'ke stažení',
-	'hotest_news'=>'žhavé novinky',
-	'language_switch'=>'přepínač jazyků',
-	'latest_news'=>'poslední novinky',
-	'login'=>'přihlášení',
-	'matches'=>'zápasy',
-	'newsletter'=>'Newsletter',
-	'partners'=>'partneři',
-	'pic_of_the_moment'=>'momentka',
-	'poll'=>'anketa',
-	'random_user'=>'náhodný uživatel',
-	'server'=>'server',
-	'shoutbox'=>'vzkazy',
-	'sponsors'=>'sponzoři',
-	'squads'=>'skupiny',
-	'statistics'=>'statistiky',
-	'topics'=>'témata',
-	'upcoming_events'=>'nadcházející události',
-	'tags'=>'Tagy'
+    'advertisement' => 'reklama',
+    'articles' => 'články',
+    'content' => 'obsah',
+    'demos' => 'dema',
+    'downloads' => 'ke stažení',
+    'hotest_news' => 'žhavé novinky',
+    'language_switch' => 'přepínač jazyků',
+    'latest_news' => 'poslední novinky',
+    'login' => 'přihlášení',
+    'matches' => 'zápasy',
+    'newsletter' => 'Newsletter',
+    'partners' => 'partneři',
+    'pic_of_the_moment' => 'momentka',
+    'poll' => 'anketa',
+    'random_user' => 'náhodný uživatel',
+    'server' => 'server',
+    'shoutbox' => 'vzkazy',
+    'sponsors' => 'sponzoři',
+    'squads' => 'skupiny',
+    'statistics' => 'statistiky',
+    'tags' => 'Tagy',
+    'topics' => 'témata',
+    'upcoming_events' => 'nadcházející události'
 );
 

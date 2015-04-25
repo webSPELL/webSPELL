@@ -25,11 +25,11 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'save'=>'crwdns15625:0crwdne15625:0',
-	'no_session'=>'crwdns15626:0crwdne15626:0'
+    'no_session' => 'crwdns21481:0crwdne21481:0',
+    'save' => 'crwdns21480:0crwdne21480:0'
 );
 

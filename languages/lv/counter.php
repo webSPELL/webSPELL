@@ -25,40 +25,39 @@
 ##########################################################################
 */
 
-
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'daysonline'=>'Dienas tiešsaistē',
-  'guest'=>'Viesis',
-  'guests'=>'Viesi',
-  'lasthour'=>'Pēdējā stunda',
-  'max_day'=>'Maksimāli pa dienu',
-  'maximum'=>'Maksimums',
-  'month'=>'Mēnesis',
-  'now'=>'Tagad',
-  'online'=>'Tiešsaiste',
-  'page_statistics'=>'Lapas statistika',
-  'registered_users'=>'Reģistrētie lietotāji',
-  'statistic'=>'Parādīt statistiku',
-  'this_month'=>'Šinī mēnesī',
-  'today'=>'Šodien',
-  'total'=>'Kopā',
-  'total_statistic'=>'Kopējā statistika',
-  'user'=>'Lietotājs',
-  'users'=>'Lietotāji',
-  'visits'=>'Apmeklējumi',
-  'visits_day'=>'Apmeklējumi pa dienu',
-  'visits_hour'=>'Apmeklējumi pa stundu',
-  'visits_month'=>'Apmeklējumi mēnesī',
-  'visits_total'=>'Apmeklējumi kopā',
-  'yesterday'=>'Vakardiena',
-  'avg_age'=>'Vidējais vecums',
-  'avg_age_clanmember'=>'Vidējais klana biedru vecums',
-  'youngest_user'=>'jaunākais lietotājs',
-  'oldest_user'=>'Vecākais lietotājs',
-  'user_statistic'=>'Lietotāja statistika',
-  'years'=>'gadi'
+    'avg_age' => 'Vidējais vecums',
+    'avg_age_clanmember' => 'Vidējais klana biedru vecums',
+    'daysonline' => 'Dienas tiešsaistē',
+    'guest' => 'Viesis',
+    'guests' => 'Viesi',
+    'lasthour' => 'Pēdējā stunda',
+    'max_day' => 'Maksimāli pa dienu',
+    'maximum' => 'Maksimums',
+    'month' => 'Mēnesis',
+    'now' => 'Tagad',
+    'oldest_user' => 'Vecākais lietotājs',
+    'online' => 'Tiešsaiste',
+    'page_statistics' => 'Lapas statistika',
+    'registered_users' => 'Reģistrētie lietotāji',
+    'statistic' => 'Parādīt statistiku',
+    'this_month' => 'Šinī mēnesī',
+    'today' => 'Šodien',
+    'total' => 'Kopā',
+    'total_statistic' => 'Kopējā statistika',
+    'user' => 'Lietotājs',
+    'user_statistic' => 'Lietotāja statistika',
+    'users' => 'Lietotāji',
+    'visits' => 'Apmeklējumi',
+    'visits_day' => 'Apmeklējumi pa dienu',
+    'visits_hour' => 'Apmeklējumi pa stundu',
+    'visits_month' => 'Apmeklējumi mēnesī',
+    'visits_total' => 'Apmeklējumi kopā',
+    'years' => 'gadi',
+    'yesterday' => 'Vakardiena',
+    'youngest_user' => 'jaunākais lietotājs'
 );
 

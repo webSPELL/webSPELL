@@ -25,17 +25,17 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'all_messages'=>'Pokaż wszystko',
-	'enter_message'=>'Musisz wpisac tresc wiadomosci!',
-	'enter_name'=>'Musisz wpisac swoj nick!',
-	'delete_selected'=>'Usuń zaznaczone',
-	'select_all'=>'Wybierz wszystkie',
-	'shout'=>'Napisz',
-	'shoutbox'=>'shoutbox',
-	'sort'=>'Sortuj:'
+    'all_messages' => 'Pokaż wszystko',
+    'delete_selected' => 'Usuń zaznaczone',
+    'enter_message' => 'Musisz wpisac tresc wiadomosci!',
+    'enter_name' => 'Musisz wpisac swoj nick!',
+    'select_all' => 'Wybierz wszystkie',
+    'shout' => 'Napisz',
+    'shoutbox' => 'shoutbox',
+    'sort' => 'Sortuj:'
 );
 

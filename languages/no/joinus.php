@@ -25,37 +25,37 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'additional_info'=>'Tilleggsinformasjon (for eksempel: Hvorfor eg burde få joine laget...)',
-	'age'=>'Alder',
-	'back_to_form'=>'Tilbake',
-	'city'=>'By',
-	'clan_history'=>'Klan historie',
-	'email_not_valid'=>'Vennligst skriv din e-post adresse!',
-	'forgot_age'=>'Vennligst skriv alderen din!',
-	'forgot_city'=>'Vennligst skriv hvor du bor',
-	'forgot_history'=>'Vennligst skriv klan historien din!',
-	'forgot_messenger'=>'Vennligst skriv MSN/ICQ/AIM eller lignende!',
-	'forgot_nickname'=>'Vennligst skriv ditt nick!',
-	'forgot_realname'=>'Vennligst skriv ditt navn!',
-	'icq_msn'=>'ICQ/MSN/osv...',
-	'info'=>'Tilleggsinformasjon',
-	'joinus_form'=>'Join oss formen',
-	'mail'=>'E-post',
-	'messenger'=>'Melding',
-	'message_title'=>'Join us',
-	'name'=>'Navn',
-	'nick'=>'Nick',
-	'problems'=>'Følgende problem oppstod',
-	'security_code'=>'Sikkerhetskode',
-	'send'=>'Send',
-	'someone_want_to_join_your_squad'=>'Noen vil joine laget ditt:',
-	'squad'=>'Lag',
-	'thanks_you_will_get_mail'=>'Takk for søknaden, vi vil kontakte deg snarest mulig.',
-	'title_join_us'=>'Bli medlem',
-	'wrong_security_code'=>'Sikkerhetskoden var feil!'
+    'additional_info' => 'Tilleggsinformasjon (for eksempel: Hvorfor eg burde få joine laget...)',
+    'age' => 'Alder',
+    'back_to_form' => 'Tilbake',
+    'city' => 'By',
+    'clan_history' => 'Klan historie',
+    'email_not_valid' => 'Vennligst skriv din e-post adresse!',
+    'forgot_age' => 'Vennligst skriv alderen din!',
+    'forgot_city' => 'Vennligst skriv hvor du bor',
+    'forgot_history' => 'Vennligst skriv klan historien din!',
+    'forgot_messenger' => 'Vennligst skriv MSN/ICQ/AIM eller lignende!',
+    'forgot_nickname' => 'Vennligst skriv ditt nick!',
+    'forgot_realname' => 'Vennligst skriv ditt navn!',
+    'icq_msn' => 'ICQ/MSN/osv...',
+    'info' => 'Tilleggsinformasjon',
+    'joinus_form' => 'Join oss formen',
+    'mail' => 'E-post',
+    'message_title' => 'Join us',
+    'messenger' => 'Melding',
+    'name' => 'Navn',
+    'nick' => 'Nick',
+    'problems' => 'Følgende problem oppstod',
+    'security_code' => 'Sikkerhetskode',
+    'send' => 'Send',
+    'someone_want_to_join_your_squad' => 'Noen vil joine laget ditt:',
+    'squad' => 'Lag',
+    'thanks_you_will_get_mail' => 'Takk for søknaden, vi vil kontakte deg snarest mulig.',
+    'title_join_us' => 'Bli medlem',
+    'wrong_security_code' => 'Sikkerhetskoden var feil!'
 );
 

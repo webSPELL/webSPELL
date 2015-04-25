@@ -25,18 +25,17 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'invalid_password'=>'Je hebt een ongeldig wachtwoord ingevoerd.',
-	'ip_banned'=>'Je IP is gebanned van deze website.<br>%reason%',
-	'login_successful'=>'Login succesvol!',
-	'no_user'=>'De gebruiker <b>%username%</b> is niet beschikbaar op dit systeem.',
-	'not_activated'=>'Je account is nog niet geactiveerd.',
-	'session_error'=>'Zorg dat cookies aan staan in je browser.<br>Als het probleem blijft, neem contact op met de webmaster.',
-  'return'=>'<a href="javascript:history.back()">Ga Terug</a>',
-  'return_reenter' => '<a href="javascript:history.back()">Ga terug en probeer opnieuw.</a>'
-
+    'invalid_password' => 'Je hebt een ongeldig wachtwoord ingevoerd.',
+    'ip_banned' => 'Je IP is gebanned van deze website.<br>%reason%',
+    'login_successful' => 'Login succesvol!',
+    'no_user' => 'De gebruiker <b>%username%</b> is niet beschikbaar op dit systeem.',
+    'not_activated' => 'Je account is nog niet geactiveerd.',
+    'return' => '<a href="javascript:history.back()">Ga Terug</a>',
+    'return_reenter' => '<a href="javascript:history.back()">Ga terug en probeer opnieuw.</a>',
+    'session_error' => 'Zorg dat cookies aan staan in je browser.<br>Als het probleem blijft, neem contact op met de webmaster.'
 );
 

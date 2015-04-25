@@ -25,30 +25,28 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'back'=>'terug naar formulier',
-	'contact'=>'contact',
-	'description'=>'Met dit formulier kan je contact opnemen met de webmaster van deze pagina',
-	'enter_mail'=>'Plaats aub. een mail adres.',
-	'enter_message'=>'Plaats aub. een bericht.',
-	'enter_name'=>'Plaats aub. een naam.',
-	'enter_subject'=>'Plaats aub een onderwerp.',
-	'errors_there'=>'Er zijn wat fouten verschenen',
-	'mail'=>'E-Mail',
-	'message'=>'Bericht',
-	'name'=>'Naam',
-	'receiver'=>'Ontvanger',
-	'reset'=>'Reset',
-	'security_code'=>'Beveiligings code',
-	'send'=>'Verzend',
-	'send_successfull'=>'Je bericht is succesvol verzonden.',
-	'subject'=>'Onderwerp',
-	'title_contact'=>'Contact formulier',
-	'unknown_receiver'=>'unknown receiver',
-	'wrong_securitycode'=>'De veiligheids code was verkeerd!'
-
+    'back' => 'terug naar formulier',
+    'contact' => 'contact',
+    'description' => 'Met dit formulier kan je contact opnemen met de webmaster van deze pagina',
+    'enter_mail' => 'Plaats aub. een mail adres.',
+    'enter_message' => 'Plaats aub. een bericht.',
+    'enter_name' => 'Plaats aub. een naam.',
+    'enter_subject' => 'Plaats aub een onderwerp.',
+    'errors_there' => 'Er zijn wat fouten verschenen',
+    'message' => 'Bericht',
+    'name' => 'Naam',
+    'receiver' => 'Ontvanger',
+    'reset' => 'Reset',
+    'security_code' => 'Beveiligings code',
+    'send' => 'Verzend',
+    'send_successfull' => 'Je bericht is succesvol verzonden.',
+    'subject' => 'Onderwerp',
+    'title_contact' => 'Contact formulier',
+    'unknown_receiver' => 'unknown receiver',
+    'wrong_securitycode' => 'De veiligheids code was verkeerd!'
 );
 

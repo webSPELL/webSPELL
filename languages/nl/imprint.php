@@ -25,15 +25,15 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'admins'=>'Administrator(s):',
-	'coding'=>'Programering',
-	'coding_info'=>'Deze website maakt gebruik van het <a href="http://www.webspell.org" target="_blank">webSPELL Free Content Management System (version: $version)</a>. Het is gebaseerd op PHP4/5 en MySQL en loopt onder de <a href="http://www.fsf.org/licensing/licenses/gpl.html" target="_blank">GNU GENERAL PUBLIC LICENSE</a>.<br>Krijg het gratis op deze locatie: <a href="http://www.webspell.org" target="_blank">www.webSPELL.org</a>',
-	'disclaimer'=>'Disclaimer',
-	'disclaimer_text'=>'<p><strong>1. Inhoud</strong><br>
+    'admins' => 'Administrator(s):',
+    'coding' => 'Programering',
+    'coding_info' => 'Deze website maakt gebruik van het <a href="http://www.webspell.org" target="_blank">webSPELL Free Content Management System (version: $version)</a>. Het is gebaseerd op PHP4/5 en MySQL en loopt onder de <a href="http://www.fsf.org/licensing/licenses/gpl.html" target="_blank">GNU GENERAL PUBLIC LICENSE</a>.<br>Krijg het gratis op deze locatie: <a href="http://www.webspell.org" target="_blank">www.webSPELL.org</a>',
+    'disclaimer' => 'Disclaimer',
+    'disclaimer_text' => '<p><strong>1. Inhoud</strong><br>
 	De schrijver behoud het recht niet verantwoordelijk te zijn voor de onderwerpen, correctheid, compleetheid of kwaliteit van de vergeven informatie. Aansprakelijkheid gezien de schade veroorzaakt door het gebruik van de vergeven informatie, inclusief informatie die niet compleet of incorrect is, zal daarom afgewezen worden.<br>
 	Alle aanbiedingen zijn niet-bindend en zonder verplichting. Delen van de pagina\'s of de complete publicatie inclusief alle aanbiedingen en informatie kunnen verlengt worden, veranderd worden of gedeeltelijk of compleet verwijdert door de auteur zonder afzonderlijke aankondiging.</p>
 	<p><strong>2. Verwijzingen en links</strong><br>
@@ -44,10 +44,9 @@ $language_array = Array(
 	Als er de mogelijkheid is om persoonlijke of bedrijfsgerelateerde data te plaatsen is, zal het plaatsen van deze data vrijwillig zijn. Het gebruik en betaling voor alle aangeboden diensten is verboden - Wanneer technisch mogelijk en redelijk - Zonder specificatie van persoonlijke data of onder specificatie van anonieme data of onder schuilnaam. Het gebruik van gepubliceerde adressen, telefoon of fax nummers en email adressen voor marketing doeleinden is verboden, overtreders die ongewild berichten spammen zullen gestraft worden.</p>
 	<p><strong>5. Legale geldigheid van deze disclaimer</strong><br>
 	Deze disclaimer dient beschouwd te worden als deel van de internet publicatie waarvan u verwezen werd. Wanneer gedeeltes of individuele termen van deze verklaring niet legaal of correct zijn, blijft de inhoud of geldigheid van de overblijvende delen hierdoor niet aangetast.</p>',
-	'imprint'=>'Imprint',
-	'mods'=>'Moderator(s):',
-	'responsible_persons'=>'Verantwoordelijke personen',
-	'webmaster'=>'Webmaster:'
-
+    'imprint' => 'Imprint',
+    'mods' => 'Moderator(s):',
+    'responsible_persons' => 'Verantwoordelijke personen',
+    'webmaster' => 'Webmaster:'
 );
 

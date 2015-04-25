@@ -25,28 +25,28 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'award'=>'Díjak',
-	'awards'=>'díjak',
-	'date'=>'Dátum',
-	'delete'=>'Törlés',
-	'edit'=>'Szerkesztés',
-	'edit_award'=>'Díj szerkesztése',
-	'enter_title'=>'Megg kell adnod a címet!',
-	'enter_text'=>'Meg kell adnod szöveget',
-	'event'=>'Esemény',
-	'homepage'=>'Honlap',
-	'info'=>'Információ',
-	'new_award'=>'Új díj létrehozása',
-	'no_access'=>'Nincs hozzáférhetőség!',
-	'no_entries'=>'Nincs elérhető díj',
-	'ranking'=>'Helyezés',
-	'save_award'=>'Díj mentése',
-	'sort'=>'Rendezés',
-	'squad'=>'Squad',
-	'update_award'=>'Díj frissítése'
+    'award' => 'Díjak',
+    'awards' => 'díjak',
+    'date' => 'Dátum',
+    'delete' => 'Törlés',
+    'edit' => 'Szerkesztés',
+    'edit_award' => 'Díj szerkesztése',
+    'enter_text' => 'Meg kell adnod szöveget',
+    'enter_title' => 'Megg kell adnod a címet!',
+    'event' => 'Esemény',
+    'homepage' => 'Honlap',
+    'info' => 'Információ',
+    'new_award' => 'Új díj létrehozása',
+    'no_access' => 'Nincs hozzáférhetőség!',
+    'no_entries' => 'Nincs elérhető díj',
+    'ranking' => 'Helyezés',
+    'save_award' => 'Díj mentése',
+    'sort' => 'Rendezés',
+    'squad' => 'Squad',
+    'update_award' => 'Díj frissítése'
 );
 

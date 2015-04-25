@@ -25,13 +25,12 @@
 ##########################################################################
 */
 
-
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'no_user'=>'Nici o imagine disponibilă pentru utilizator',
-  'registered_since'=>'înregistrat din',
-  'view_profile'=>'vizitați profilul'
+    'no_user' => 'Nici o imagine disponibilă pentru utilizator',
+    'registered_since' => 'înregistrat din',
+    'view_profile' => 'vizitați profilul'
 );
 

@@ -24,20 +24,14 @@
 #                                                                        #
 ##########################################################################
 */
-/**
- * Online Language Editor Greece language file for webSPELL 4.2.2
- * @author Stefan Giesecke <webmaster@giesi.com>
- * @copyright Copyright (c) 2010, Stefan Giesecke
- * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
- */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'no_informations'=>'δεν υπαρχουν διαθεσιμες πληροφοριες',
-  'report_message'=>'[b]Υπαρχει μια νεα %s - αναφορα [/b][br][br]%s-ID: %d[br]Info: %s[br]Referer: [url]index.php?site=files&file=%d[/url]',
-  'report_recognized'=>'Η αναφορα σας αναγνωρισθηκε. Ευχαριστουμε.',
-  'wrong_securitycode'=>'Εισαγατε λαθος κωδικο ασφαλειας<br><br>[<a href="javascript:back();">πισω</a>]'
+    'no_informations' => 'δεν υπαρχουν διαθεσιμες πληροφοριες',
+    'report_message' => '[b]Υπαρχει μια νεα %s - αναφορα [/b][br][br]%s-ID: %d[br]Info: %s[br]Referer: [url]index.php?site=files&file=%d[/url]',
+    'report_recognized' => 'Η αναφορα σας αναγνωρισθηκε. Ευχαριστουμε.',
+    'wrong_securitycode' => 'Εισαγατε λαθος κωδικο ασφαλειας<br><br>[<a href="javascript:back();">πισω</a>]'
 );
 

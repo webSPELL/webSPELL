@@ -24,30 +24,24 @@
 #                                                                        #
 ##########################################################################
 */
-/**
- * Online Language Editor Luxemburg language file for webSPELL 4.2.2
- * @author Stefan Giesecke <webmaster@giesi.com>
- * @copyright Copyright (c) 2010, Stefan Giesecke
- * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
- */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'admin'=>'Administratioun',
-  'buddy_list'=>'Frëndslëscht',
-  'cash-box'=>'Kees',
-  'edit_account'=>'Konto beaarbechten',
-  'galleries'=>'Galerien',
-  'login'=>'umellen',
-  'logout'=>'ofmellen',
-  'lost_password'=>'Passwuert vergiess?',
-  'messenger'=>'Noriichtensystem',
-  'n_a'=>'keen Avatar',
-  'overview'=>'Iwwersiicht',
-  'register_now'=>'Lo registréieren',
-  'registered_users'=>'registréiert Benotzer',
-  'welcome_back'=>'Häerzlech wëllkomm'
+    'admin' => 'Administratioun',
+    'buddy_list' => 'Frëndslëscht',
+    'cash-box' => 'Kees',
+    'edit_account' => 'Konto beaarbechten',
+    'galleries' => 'Galerien',
+    'login' => 'umellen',
+    'logout' => 'ofmellen',
+    'lost_password' => 'Passwuert vergiess?',
+    'messenger' => 'Noriichtensystem',
+    'n_a' => 'keen Avatar',
+    'overview' => 'Iwwersiicht',
+    'register_now' => 'Lo registréieren',
+    'registered_users' => 'registréiert Benotzer',
+    'welcome_back' => 'Häerzlech wëllkomm'
 );
 

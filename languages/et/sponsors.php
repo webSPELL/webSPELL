@@ -25,18 +25,17 @@
 ##########################################################################
 */
 
-
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'banner'=>'Bänner',
-  'homepage'=>'Koduleht',
-  'information'=>'Informatsioon',
-  'mainsponsor'=>'Peasponsor',
-  'mainsponsors'=>'Peasponsorid',
-  'no_sponsors'=>'pole sponsoreid',
-  'sponsor'=>'Sponsor',
-  'sponsors'=>'sponsorid'
+    'banner' => 'Bänner',
+    'homepage' => 'Koduleht',
+    'information' => 'Informatsioon',
+    'mainsponsor' => 'Peasponsor',
+    'mainsponsors' => 'Peasponsorid',
+    'no_sponsors' => 'pole sponsoreid',
+    'sponsor' => 'Sponsor',
+    'sponsors' => 'sponsorid'
 );
 

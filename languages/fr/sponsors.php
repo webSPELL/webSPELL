@@ -25,17 +25,17 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'banner'=>'Bannière',
-	'homepage'=>'Site internet',
-	'information'=>'Description',
-	'mainsponsor'=>'Sponsor principal',
-	'mainsponsors'=>'Sponsors principaux',
-	'no_sponsors'=>'Aucun sponsor.',
-	'sponsor'=>'Sponsor',
-	'sponsors'=>'Sponsors'
+    'banner' => 'Bannière',
+    'homepage' => 'Site internet',
+    'information' => 'Description',
+    'mainsponsor' => 'Sponsor principal',
+    'mainsponsors' => 'Sponsors principaux',
+    'no_sponsors' => 'Aucun sponsor.',
+    'sponsor' => 'Sponsor',
+    'sponsors' => 'Sponsors'
 );
 

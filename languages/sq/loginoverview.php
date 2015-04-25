@@ -24,53 +24,47 @@
 #                                                                        #
 ##########################################################################
 */
-/**
- * Online Language Editor Albania language file for webSPELL 4.2.2
- * @author Stefan Giesecke <webmaster@giesi.com>
- * @copyright Copyright (c) 2010, Stefan Giesecke
- * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
- */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'against'=>'kundër',
-  'announce'=>'lajmëro',
-  'announcement'=>'Lajmërim',
-  'back_last_page'=>'Mbrapsht në faqen e fundit',
-  'click'=>'kliko',
-  'date'=>'Data',
-  'from'=>'Nga',
-  'info'=>'Informacion',
-  'last_login'=>'Logimi fundit',
-  'location'=>'Vendndodhja',
-  'messenger'=>'Mesazher',
-  'name'=>'Emri',
-  'new_in_forum'=>'Subjekte të reja / Postime të reja',
-  'new_posts'=>'Postime të reja',
-  'new_topics'=>'Subjekte të reja',
-  'no_entries'=>'nuk ka hyrje',
-  'no_events'=>'nuk ka evenimente',
-  'no_new_messages'=>'Nuk ka mesazhe të reja.',
-  'no_new_posts'=>'nuk ka postime të reja',
-  'no_new_topics'=>'nuk ka subjekte të reja',
-  'no_players_announced'=>'nuk ka lojtarë të lajmëruar',
-  'one_new_message'=>'Nuk ka mesazh të ri.',
-  'overview'=>'Shikim i përgjithshëm',
-  'registered'=>'Regjistruar',
-  'replys'=>'përgjigjet',
-  'squad'=>'Ekipi',
-  'until'=>'deri',
-  'upcoming'=>'E ardhshme',
-  'upcoming_clanwars'=>'Klan war-et e ardhshme',
-  'upcoming_events'=>'Evenimentet e ardhshme',
-  'user'=>'Përdorues',
-  'userinformations'=>'Informacion përdorues',
-  'usermenu'=>'menuja përdoruesit',
-  'views'=>'shikime',
-  'x_new_message'=>'Janë %new_messages%mesazhe të reja.',
-  'you_have_to_be_logged_in'=>'Ju duhet të keni hyrë brenda për të parë në pasqyrë login!<br><br>
+    'against' => 'kundër',
+    'announce' => 'lajmëro',
+    'announcement' => 'Lajmërim',
+    'back_last_page' => 'Mbrapsht në faqen e fundit',
+    'click' => 'kliko',
+    'date' => 'Data',
+    'from' => 'Nga',
+    'info' => 'Informacion',
+    'last_login' => 'Logimi fundit',
+    'location' => 'Vendndodhja',
+    'messenger' => 'Mesazher',
+    'name' => 'Emri',
+    'new_in_forum' => 'Subjekte të reja / Postime të reja',
+    'new_posts' => 'Postime të reja',
+    'new_topics' => 'Subjekte të reja',
+    'no_entries' => 'nuk ka hyrje',
+    'no_events' => 'nuk ka evenimente',
+    'no_new_messages' => 'Nuk ka mesazhe të reja.',
+    'no_new_posts' => 'nuk ka postime të reja',
+    'no_new_topics' => 'nuk ka subjekte të reja',
+    'no_players_announced' => 'nuk ka lojtarë të lajmëruar',
+    'one_new_message' => 'Nuk ka mesazh të ri.',
+    'overview' => 'Shikim i përgjithshëm',
+    'registered' => 'Regjistruar',
+    'replys' => 'përgjigjet',
+    'squad' => 'Ekipi',
+    'until' => 'deri',
+    'upcoming' => 'E ardhshme',
+    'upcoming_clanwars' => 'Klan war-et e ardhshme',
+    'upcoming_events' => 'Evenimentet e ardhshme',
+    'user' => 'Përdorues',
+    'userinformations' => 'Informacion përdorues',
+    'usermenu' => 'menuja përdoruesit',
+    'views' => 'shikime',
+    'x_new_message' => 'Janë %new_messages%mesazhe të reja.',
+    'you_have_to_be_logged_in' => 'Ju duhet të keni hyrë brenda për të parë në pasqyrë login!<br><br>
     &#8226; <a href="index.php?site=register">regjistrohu tani</a><br>
     &#8226; <a href="index.php?site=login">logim</a>'
 );

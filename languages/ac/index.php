@@ -25,32 +25,32 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'advertisement'=>'crwdns15002:0crwdne15002:0',
-	'articles'=>'crwdns15003:0crwdne15003:0',
-	'content'=>'crwdns15004:0crwdne15004:0',
-	'demos'=>'crwdns15005:0crwdne15005:0',
-	'downloads'=>'crwdns15006:0crwdne15006:0',
-	'hotest_news'=>'crwdns15007:0crwdne15007:0',
-	'language_switch'=>'crwdns15008:0crwdne15008:0',
-	'latest_news'=>'crwdns15009:0crwdne15009:0',
-	'login'=>'crwdns15010:0crwdne15010:0',
-	'matches'=>'crwdns15011:0crwdne15011:0',
-	'newsletter'=>'crwdns15012:0crwdne15012:0',
-	'partners'=>'crwdns15013:0crwdne15013:0',
-	'pic_of_the_moment'=>'crwdns15014:0crwdne15014:0',
-	'poll'=>'crwdns15015:0crwdne15015:0',
-	'random_user'=>'crwdns15016:0crwdne15016:0',
-	'server'=>'crwdns15017:0crwdne15017:0',
-	'shoutbox'=>'crwdns15018:0crwdne15018:0',
-	'sponsors'=>'crwdns15019:0crwdne15019:0',
-	'squads'=>'crwdns15020:0crwdne15020:0',
-	'statistics'=>'crwdns15021:0crwdne15021:0',
-	'topics'=>'crwdns15022:0crwdne15022:0',
-	'upcoming_events'=>'crwdns15023:0crwdne15023:0',
-	'tags'=>'crwdns15024:0crwdne15024:0'
+    'advertisement' => 'crwdns20857:0crwdne20857:0',
+    'articles' => 'crwdns20858:0crwdne20858:0',
+    'content' => 'crwdns20859:0crwdne20859:0',
+    'demos' => 'crwdns20860:0crwdne20860:0',
+    'downloads' => 'crwdns20861:0crwdne20861:0',
+    'hotest_news' => 'crwdns20862:0crwdne20862:0',
+    'language_switch' => 'crwdns20863:0crwdne20863:0',
+    'latest_news' => 'crwdns20864:0crwdne20864:0',
+    'login' => 'crwdns20865:0crwdne20865:0',
+    'matches' => 'crwdns20866:0crwdne20866:0',
+    'newsletter' => 'crwdns20867:0crwdne20867:0',
+    'partners' => 'crwdns20868:0crwdne20868:0',
+    'pic_of_the_moment' => 'crwdns20869:0crwdne20869:0',
+    'poll' => 'crwdns20870:0crwdne20870:0',
+    'random_user' => 'crwdns20871:0crwdne20871:0',
+    'server' => 'crwdns20872:0crwdne20872:0',
+    'shoutbox' => 'crwdns20873:0crwdne20873:0',
+    'sponsors' => 'crwdns20874:0crwdne20874:0',
+    'squads' => 'crwdns20875:0crwdne20875:0',
+    'statistics' => 'crwdns20876:0crwdne20876:0',
+    'tags' => 'crwdns20879:0crwdne20879:0',
+    'topics' => 'crwdns20877:0crwdne20877:0',
+    'upcoming_events' => 'crwdns20878:0crwdne20878:0'
 );
 

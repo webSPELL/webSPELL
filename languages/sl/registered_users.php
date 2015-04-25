@@ -24,26 +24,20 @@
 #                                                                        #
 ##########################################################################
 */
-/**
- * Online Language Editor Slovenia language file for webSPELL 4.2.2
- * @author Stefan Giesecke <webmaster@giesi.com>
- * @copyright Copyright (c) 2010, Stefan Giesecke
- * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
- */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'contact'=>'Kontakt',
-  'country'=>'D',
-  'homepage'=>'Domača stran',
-  'last_login'=>'Zadnja prijava',
-  'nickname'=>'Nick',
-  'no_users'=>'ni prijavljeni uporabnikov',
-  'now_on'=>'trenutno online',
-  'registered_users'=>'registrirani uporabniki',
-  'registration'=>'Registriran od',
-  'sort'=>'Razvrsti:'
+    'contact' => 'Kontakt',
+    'country' => 'D',
+    'homepage' => 'Domača stran',
+    'last_login' => 'Zadnja prijava',
+    'nickname' => 'Nick',
+    'no_users' => 'ni prijavljeni uporabnikov',
+    'now_on' => 'trenutno online',
+    'registered_users' => 'registrirani uporabniki',
+    'registration' => 'Registriran od',
+    'sort' => 'Razvrsti:'
 );
 

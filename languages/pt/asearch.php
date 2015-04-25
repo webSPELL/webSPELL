@@ -25,12 +25,12 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'invalid_request'=>'Pedido inválido',
-	'no_result'=>'Procura sem resultados',
-	'to_much_results'=>'Existem demasiados resultados, por favor digite mais caracteres.'
+    'invalid_request' => 'Pedido inválido',
+    'no_result' => 'Procura sem resultados',
+    'to_much_results' => 'Existem demasiados resultados, por favor digite mais caracteres.'
 );
 

@@ -25,11 +25,10 @@
 ##########################################################################
 */
 
-
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'fight_us'=>'დაგვიპირისპირდი ჩვენ'
+    'fight_us' => 'დაგვიპირისპირდი ჩვენ'
 );
 

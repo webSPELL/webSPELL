@@ -25,12 +25,12 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'no_frame'=>'Táto stránka používa rámce. Váš prehliadač ich nepodporuje!',
-	'outgoing'=>'Vychádzajúci',
-	'owner_responsible'=>'Majiteľ je zodpovedný za obsah tejto stránky.'
+    'no_frame' => 'Táto stránka používa rámce. Váš prehliadač ich nepodporuje!',
+    'outgoing' => 'Vychádzajúci',
+    'owner_responsible' => 'Majiteľ je zodpovedný za obsah tejto stránky.'
 );
 

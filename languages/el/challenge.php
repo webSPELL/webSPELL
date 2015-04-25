@@ -24,51 +24,45 @@
 #                                                                        #
 ##########################################################################
 */
-/**
- * Online Language Editor Greece language file for webSPELL 4.2.2
- * @author Stefan Giesecke <webmaster@giesi.com>
- * @copyright Copyright (c) 2010, Stefan Giesecke
- * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
- */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'back_to_form'=>'Επιστροφη στη φορμα',
-  'challenge'=>'Προκληση',
-  'challenge_from'=>'Προκληση δημοσιευθηκε στις',
-  'challenge_message'=>'[b]Υπαρχει νεα προκληση![/b][BR][BR] Κάντε click εδω: [URL]index.php?site=challenge[/URL]',
-  'challenges'=>'Προκλησεις',
-  'country'=>'χωρα',
-  'date'=>'ημερομηνια',
-  'delete_challenge'=>'Διαγραφη προκλησης',
-  'email'=>'E-Mail',
-  'enter_clanname'=>'Δεν εχει εισαχθεί ονομα συμμαχιας.',
-  'enter_email'=>'Λανθασμενο E-Mail.',
-  'enter_league'=>'δεν εχει εισαχθει πρωτάθλημα.',
-  'enter_map'=>'δεν εχει εισαχθει χαρτης.',
-  'enter_server'=>'Δεν εχει εισαχθει διευθυνση server.',
-  'enter_url'=>'Λαθος διευθυνση ιστοσελιδας.',
-  'entry_deleted'=>'Διαγραφη καταχορησης.',
-  'fight_us'=>'Πολεμίστε μας!',
-  'homepage'=>'Ιστοσελίδα',
-  'info'=>'περισσοτερες πληροφοριες',
-  'insert_in_calendar'=>'προσθηκη στο ημερολογιο',
-  'league'=>'πρωταθλημα',
-  'map'=>'χαρτης',
-  'message_title'=>'Πολεμίστε μας!',
-  'no_access'=>'Απαγορευεται η προσβαση!',
-  'no_entries'=>'Χωρις εγγραφες!',
-  'opponent'=>'Αντιπαλος',
-  'problems'=>'Προεκυψαν τα ακολουθα προβληματα',
-  'security_code'=>'κωδικος ασφαλειας',
-  'server'=>'server',
-  'sort'=>'ταξινομηση:',
-  'squad'=>'ομαδα',
-  'submit_challenge'=>'καταχωρηση προκλησης',
-  'thank_you'=>'Σας ευχαριστουμε για την αιτηση σας!<br>',
-  'time'=>'χρονος',
-  'wrong_security_code'=>'Ο κωδικος ασφαλειας ειναι λανθασμενος.'
+    'back_to_form' => 'Επιστροφη στη φορμα',
+    'challenge' => 'Προκληση',
+    'challenge_from' => 'Προκληση δημοσιευθηκε στις',
+    'challenge_message' => '[b]Υπαρχει νεα προκληση![/b][BR][BR] Κάντε click εδω: [URL]index.php?site=challenge[/URL]',
+    'challenges' => 'Προκλησεις',
+    'country' => 'χωρα',
+    'date' => 'ημερομηνια',
+    'delete_challenge' => 'Διαγραφη προκλησης',
+    'email' => 'E-Mail',
+    'enter_clanname' => 'Δεν εχει εισαχθεί ονομα συμμαχιας.',
+    'enter_email' => 'Λανθασμενο E-Mail.',
+    'enter_league' => 'δεν εχει εισαχθει πρωτάθλημα.',
+    'enter_map' => 'δεν εχει εισαχθει χαρτης.',
+    'enter_server' => 'Δεν εχει εισαχθει διευθυνση server.',
+    'enter_url' => 'Λαθος διευθυνση ιστοσελιδας.',
+    'entry_deleted' => 'Διαγραφη καταχορησης.',
+    'fight_us' => 'Πολεμίστε μας!',
+    'homepage' => 'Ιστοσελίδα',
+    'info' => 'περισσοτερες πληροφοριες',
+    'insert_in_calendar' => 'προσθηκη στο ημερολογιο',
+    'league' => 'πρωταθλημα',
+    'map' => 'χαρτης',
+    'message_title' => 'Πολεμίστε μας!',
+    'no_access' => 'Απαγορευεται η προσβαση!',
+    'no_entries' => 'Χωρις εγγραφες!',
+    'opponent' => 'Αντιπαλος',
+    'problems' => 'Προεκυψαν τα ακολουθα προβληματα',
+    'security_code' => 'κωδικος ασφαλειας',
+    'server' => 'server',
+    'sort' => 'ταξινομηση:',
+    'squad' => 'ομαδα',
+    'submit_challenge' => 'καταχωρηση προκλησης',
+    'thank_you' => 'Σας ευχαριστουμε για την αιτηση σας!<br>',
+    'time' => 'χρονος',
+    'wrong_security_code' => 'Ο κωδικος ασφαλειας ειναι λανθασμενος.'
 );
 

@@ -24,40 +24,31 @@
 #                                                                        #
 ##########################################################################
 */
-/**
- * Online Language Editor Russia language file for webSPELL 4.2.2
- * @author Stefan Giesecke <webmaster@giesi.com>
- * @copyright Copyright (c) 2010, Stefan Giesecke
- * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
- */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'about'=>'o',
-  'active'=>'aктивный',
-  'add_buddy'=>'Добавить в список друзей',
-  'awards'=>'награды',
-  'back_buddy'=>'вернуться к списку друзей',
-  'back_squad_overview'=>'вернуться к обзору состава',
-  'challenge'=>'cразиться',
-  'contact'=>'Связаться',
-  'email'=>'email',
-  'ignore'=>'игнорировать пользователя',
-  'inactive'=>'неактивный',
-  'member'=>'Член',
-  'members'=>'Члены',
-  'messenger'=>'messenger',
-  'no_description'=>'нет описания',
-  'no_userpic'=>'нет картинки!',
-  'position'=>'Позиция',
-  'results'=>'pезультаты',
-  'show_details'=>'показать подробнее',
-  'squad_plays'=>'Играющий состав',
-  'squads'=>'Составы',
-  'status'=>'Статус',
-  'town'=>'Город',
-  'userpicture'=>'картинка пользователя'
+    'about' => 'o',
+    'active' => 'aктивный',
+    'add_buddy' => 'Добавить в список друзей',
+    'awards' => 'награды',
+    'back_buddy' => 'вернуться к списку друзей',
+    'back_squad_overview' => 'вернуться к обзору состава',
+    'challenge' => 'cразиться',
+    'contact' => 'Связаться',
+    'ignore' => 'игнорировать пользователя',
+    'inactive' => 'неактивный',
+    'members' => 'Члены',
+    'messenger' => 'messenger',
+    'no_description' => 'нет описания',
+    'no_userpic' => 'нет картинки!',
+    'position' => 'Позиция',
+    'results' => 'pезультаты',
+    'show_details' => 'показать подробнее',
+    'squad_plays' => 'Играющий состав',
+    'squads' => 'Составы',
+    'town' => 'Город',
+    'userpicture' => 'картинка пользователя'
 );
 

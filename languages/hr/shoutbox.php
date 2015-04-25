@@ -25,17 +25,17 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'all_messages'=>'Prikaži sve',
-	'enter_message'=>'Morate unijeti poruku!',
-	'enter_name'=>'Morate unijeti ime!',
-	'delete_selected'=>'Izbriši odabrano',
-	'select_all'=>'Oznaci sve',
-	'shout'=>'Vikni!',
-	'shoutbox'=>'shoutbox',
-	'sort'=>'Razvrstaj:'
+    'all_messages' => 'Prikaži sve',
+    'delete_selected' => 'Izbriši odabrano',
+    'enter_message' => 'Morate unijeti poruku!',
+    'enter_name' => 'Morate unijeti ime!',
+    'select_all' => 'Oznaci sve',
+    'shout' => 'Vikni!',
+    'shoutbox' => 'shoutbox',
+    'sort' => 'Razvrstaj:'
 );
 

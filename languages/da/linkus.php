@@ -25,24 +25,24 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'back'=>'tilbage',
-	'banner'=>'Banner',
-	'banner_to_big'=>'Billedet er for stort',
-	'delete'=>'slet',
-	'edit'=>'rediger',
-	'edit_linkus'=>'rediger banner',
-	'format_incorrect'=>'Ugyldig billedeformat (tilladte: *.gif, *.jpg eller *.png)',
-	'link_us'=>'link-os',
-	'name'=>'Navn',
-	'new_banner'=>'nyt banner',
-	'no_access'=>'Ingen Adgang!',
-	'no_banner'=>'Ingen link-os banner',
-	'really_delete_banner'=>'Vil du virkelig slette denne banner?',
-	'save_banner'=>'gem banner',
-	'use_following_code'=>'Brug den følgende kode for at, indsætte banneret på din hjemmeside.'
+    'back' => 'tilbage',
+    'banner' => 'Banner',
+    'banner_to_big' => 'Billedet er for stort',
+    'delete' => 'slet',
+    'edit' => 'rediger',
+    'edit_linkus' => 'rediger banner',
+    'format_incorrect' => 'Ugyldig billedeformat (tilladte: *.gif, *.jpg eller *.png)',
+    'link_us' => 'link-os',
+    'name' => 'Navn',
+    'new_banner' => 'nyt banner',
+    'no_access' => 'Ingen Adgang!',
+    'no_banner' => 'Ingen link-os banner',
+    'really_delete_banner' => 'Vil du virkelig slette denne banner?',
+    'save_banner' => 'gem banner',
+    'use_following_code' => 'Brug den følgende kode for at, indsætte banneret på din hjemmeside.'
 );
 

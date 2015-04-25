@@ -25,13 +25,12 @@
 ##########################################################################
 */
 
-
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'no_frame'=>'Šī vietne lieto rāmjus (frames). Jūsu pārlūks to neatbalsta!',
-  'outgoing'=>'Izejošs',
-  'owner_responsible'=>'Par šo lapu atbildīgs ir īpašnieks.'
+    'no_frame' => 'Šī vietne lieto rāmjus (frames). Jūsu pārlūks to neatbalsta!',
+    'outgoing' => 'Izejošs',
+    'owner_responsible' => 'Par šo lapu atbildīgs ir īpašnieks.'
 );
 

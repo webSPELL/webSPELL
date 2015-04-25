@@ -25,32 +25,32 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'advertisement'=>'advertenties',
-	'articles'=>'artikels',
-	'content'=>'inhoud',
-	'demos'=>'demos',
-	'downloads'=>'downloads',
-	'hotest_news'=>'hot nieuws',
-	'language_switch'=>'talen switch',
-	'latest_news'=>'laatste nieuws',
-	'login'=>'log in',
-	'matches'=>'wedstrijden',
-	'newsletter'=>'nieuwsbrief',
-	'partners'=>'partners',
-	'pic_of_the_moment'=>'afbeelding van het moment',
-	'poll'=>'poll',
-	'random_user'=>'willekeurige gebruiker ',
-	'server'=>'server',
-	'shoutbox'=>'shoutbox',
-	'sponsors'=>'sponsors',
-	'squads'=>'teams',
-	'statistics'=>'statistieken',
-	'topics'=>'onderwerpen',
-	'upcoming_events'=>'volgende evenementen',
-	'tags'=>'Tags'
+    'advertisement' => 'advertenties',
+    'articles' => 'artikels',
+    'content' => 'inhoud',
+    'demos' => 'demos',
+    'downloads' => 'downloads',
+    'hotest_news' => 'hot nieuws',
+    'language_switch' => 'talen switch',
+    'latest_news' => 'laatste nieuws',
+    'login' => 'log in',
+    'matches' => 'wedstrijden',
+    'newsletter' => 'nieuwsbrief',
+    'partners' => 'partners',
+    'pic_of_the_moment' => 'afbeelding van het moment',
+    'poll' => 'poll',
+    'random_user' => 'willekeurige gebruiker ',
+    'server' => 'server',
+    'shoutbox' => 'shoutbox',
+    'sponsors' => 'sponsors',
+    'squads' => 'teams',
+    'statistics' => 'statistieken',
+    'tags' => 'Tags',
+    'topics' => 'onderwerpen',
+    'upcoming_events' => 'volgende evenementen'
 );
 

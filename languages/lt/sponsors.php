@@ -25,17 +25,17 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'banner'=>'Reklama',
-	'homepage'=>'Namų puslapis',
-	'information'=>'Informacija',
-	'mainsponsor'=>'Pagrindinis remėjas',
-	'mainsponsors'=>'Pagrindiniai remėjai',
-	'no_sponsors'=>'Nėra remėjų',
-	'sponsor'=>'Remėjas',
-	'sponsors'=>'remėjai'
+    'banner' => 'Reklama',
+    'homepage' => 'Namų puslapis',
+    'information' => 'Informacija',
+    'mainsponsor' => 'Pagrindinis remėjas',
+    'mainsponsors' => 'Pagrindiniai remėjai',
+    'no_sponsors' => 'Nėra remėjų',
+    'sponsor' => 'Remėjas',
+    'sponsors' => 'remėjai'
 );
 

@@ -25,13 +25,12 @@
 ##########################################################################
 */
 
-
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'no_frame'=>'Ova stranica koristi frame-ove. Vaš browser ih ne podržava!',
-  'outgoing'=>'Odlazeće',
-  'owner_responsible'=>'Vlasnik je odgovoran za ove stranice.'
+    'no_frame' => 'Ova stranica koristi frame-ove. Vaš browser ih ne podržava!',
+    'outgoing' => 'Odlazeće',
+    'owner_responsible' => 'Vlasnik je odgovoran za ove stranice.'
 );
 

@@ -25,38 +25,36 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'admin_comment'=>'Admin kommantar',
-	'bbcode'=>'<a href="javascript:void(0);" onclick="window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> TIL',
-	'by'=>'fra',
-	'comment'=>'Kommentar',
-	'delete_selected'=>'Slet markerede',
-	'enter_a_message'=>'Du skal indtaste en besked!',
-	'error_captcha'=>'Forkert sikkerheds kode!',
-	'enter_your_name'=>'Du skal indtaste dit navn!',
-	'guestbook'=>'gæstebog',
-	'guestbook_comment'=>'Gæstebogs kommentar',
-	'homepage'=>'Hjemmside',
-	'html'=>'HTML FRA',
-	'icq'=>'ICQ',
-	'ip'=>'IP',
-	'mail'=>'Din mail adresse',
-	'name'=>'Dit navn',
-	'new_entry'=>'Nyt indlæg',
-	'no_access'=>'Du er ikke logget ind.<br><a href="index.php?site=login">Log ind</a> | <a href="index.php?site=register">Registrer</a>',
-	'options'=>'indstillinger',
-	'pmsubject_newentry'=>'Nyt gæstebogs indlæg',
-	'pmtext_newentry'=>'[b]Nogen har efterladt dig en besked i din gæstebog![/b][br][br] [URL=index.php?site=guestbook#%insertid%]Klik her for at læse beskeden[/URL] ',
-	'security_code'=>'Sikkerhedskode',
-	'select_all'=>'marker alle',
-	'smilies'=>'<a href="javascript:void(0);" onclick="window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smilies</a> TIL',
-	'sort'=>'Sorter:',
-	'submit'=>'godkend',
-	'update_comment'=>'Gem kommentar',
-	'wrote'=>'skrev',
-	'your_message'=>'din besked'
+    'admin_comment' => 'Admin kommantar',
+    'bbcode' => '<a href="javascript:void(0);" onclick="window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> TIL',
+    'by' => 'fra',
+    'comment' => 'Kommentar',
+    'delete_selected' => 'Slet markerede',
+    'enter_a_message' => 'Du skal indtaste en besked!',
+    'enter_your_name' => 'Du skal indtaste dit navn!',
+    'error_captcha' => 'Forkert sikkerheds kode!',
+    'guestbook' => 'gæstebog',
+    'guestbook_comment' => 'Gæstebogs kommentar',
+    'homepage' => 'Hjemmside',
+    'html' => 'HTML FRA',
+    'mail' => 'Din mail adresse',
+    'name' => 'Dit navn',
+    'new_entry' => 'Nyt indlæg',
+    'no_access' => 'Du er ikke logget ind.<br><a href="index.php?site=login">Log ind</a> | <a href="index.php?site=register">Registrer</a>',
+    'options' => 'indstillinger',
+    'pmsubject_newentry' => 'Nyt gæstebogs indlæg',
+    'pmtext_newentry' => '[b]Nogen har efterladt dig en besked i din gæstebog![/b][br][br] [URL=index.php?site=guestbook#%insertid%]Klik her for at læse beskeden[/URL] ',
+    'security_code' => 'Sikkerhedskode',
+    'select_all' => 'marker alle',
+    'smilies' => '<a href="javascript:void(0);" onclick="window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smilies</a> TIL',
+    'sort' => 'Sorter:',
+    'submit' => 'godkend',
+    'update_comment' => 'Gem kommentar',
+    'wrote' => 'skrev',
+    'your_message' => 'din besked'
 );
 

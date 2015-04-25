@@ -2,27 +2,18 @@
 
 header("Content-Type: text/plain; charset=utf-8");
 
-define('BOM', "\xEF\xBB\xBF");
+include("translation_config.php");
 
-$baseLanguage = "../languages/uk";
-$baseLanguageCode = basename($baseLanguage);
 $checkUntranslated = true;
 
-$all_langs = glob("../languages/*", GLOB_ONLYDIR);
-if (in_array($baseLanguage, $all_langs)) {
-    unset($all_langs[ array_search($baseLanguage, $all_langs) ]);
+$all_langs = glob($languageBaseFolder."*", GLOB_ONLYDIR);
+if (in_array($baseLanguageFolder, $all_langs)) {
+    unset($all_langs[ array_search($baseLanguageFolder, $all_langs) ]);
 }
 
 $ref_keys = array();
 $erros = array();
-$all_langs = array_merge(array($baseLanguage), $all_langs);
-
-function checkBom($file)
-{
-    return (false !== strpos($file, BOM));
-}
-
-define("PAGETITLE", "'.PAGETITLE.'");
+$all_langs = array_merge(array($baseLanguageFolder), $all_langs);
 
 echo "Base Language: ".$baseLanguageCode."\n";
 
@@ -46,9 +37,6 @@ foreach ($all_langs as $lang) {
             $content = ob_get_contents();
             $outputted_content = ob_get_length();
             ob_clean();
-            if ($outputted_content > 0) {
-                $errors[ $file_name ] = 'Generates output: ' . $outputted_content . ' chars ('.$content.")";
-            }
             if ($langCode === $baseLanguageCode) {
                 $ref_keys[ $file_name ] = $language_array;
                 $all_keys += count($language_array);
@@ -57,31 +45,19 @@ foreach ($all_langs as $lang) {
                     $tmp = $ref_keys[ $file_name ];
                     foreach ($language_array as $key => $val) {
                         if (!isset($ref_keys[ $file_name ][ $key ])) {
-                            $errors[ $file_name ][ ] = 'Unknown key: ' . $key;
+                            $errors[ ] = "removing unneeded key ".$key."\n";
+                            unset($language_array[ $key ]);
                         } else {
-                            if ($val == $ref_keys[$file_name][$key] && $checkUntranslated === true) {
-                                $untranslated += 1;
-                                unset($tmp[ $key ]);
-                            } else {
-                                unset($tmp[ $key ]);
+                            if ($val == $ref_keys[$file_name][$key]) {
+                                $errors[ ] = "removing untranslated key ".$key."\n";
+                                unset($language_array[ $key ]);
                             }
                         }
                     }
-                    foreach ($tmp as $key => $val) {
-                        $errors[ $file_name ][ ] = 'Missing key: ' . $key;
-                    }
-                } else {
-                    $errors[ 'unknown_files' ][ ] = $file_name;
+                    writeLanguageFile($file, $language_array);
                 }
             }
-        } elseif ($file_name == "version.txt") {
-            $version_exists = true;
-        } else {
-            $errors[ 'unneeded_file' ][ ] = $file_name;
         }
-    }
-    if (!$version_exists) {
-        $errors[ ] = 'version.txt is missing';
     }
     if ($untranslated > 0) {
         $errors[ ] = 'Untranslated Keys: ' . $untranslated . ' - ' . round($untranslated / $all_keys * 100, 2) . '%';

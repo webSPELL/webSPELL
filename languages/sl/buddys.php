@@ -24,25 +24,19 @@
 #                                                                        #
 ##########################################################################
 */
-/**
- * Online Language Editor Slovenia language file for webSPELL 4.2.2
- * @author Stefan Giesecke <webmaster@giesi.com>
- * @copyright Copyright (c) 2010, Stefan Giesecke
- * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
- */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'add_notexists'=>'Uporabnik ne obstaja',
-  'add_nouserid'=>'Uporabnik ni dostopen',
-  'add_yourself'=>'Sami ne morejo dodati kot prijatelja, in se ne morete prezreti!',
-  'buddy_nousers'=>'Potrebujete uporabnika seznam prijateljev',
-  'buddys'=>'Prijatelji',
-  'ignore_nousers'=>'Ni uporabnikov na ignor listi',
-  'not_logged'=>'Za upravljanje seznama prijateljev, morate biti registrirani in prijavljeni uporabniki.<br><a href="index.php?site=register">Registriraj se</a> | <a href="index.php?site=login">Prijavi se</a>',
-  'your_buddylist'=>'Seznam prijateljev',
-  'your_ignorelist'=>'Seznam ignoriranih oseb'
+    'add_notexists' => 'Uporabnik ne obstaja',
+    'add_nouserid' => 'Uporabnik ni dostopen',
+    'add_yourself' => 'Sami ne morejo dodati kot prijatelja, in se ne morete prezreti!',
+    'buddy_nousers' => 'Potrebujete uporabnika seznam prijateljev',
+    'buddys' => 'Prijatelji',
+    'ignore_nousers' => 'Ni uporabnikov na ignor listi',
+    'not_logged' => 'Za upravljanje seznama prijateljev, morate biti registrirani in prijavljeni uporabniki.<br><a href="index.php?site=register">Registriraj se</a> | <a href="index.php?site=login">Prijavi se</a>',
+    'your_buddylist' => 'Seznam prijateljev',
+    'your_ignorelist' => 'Seznam ignoriranih oseb'
 );
 

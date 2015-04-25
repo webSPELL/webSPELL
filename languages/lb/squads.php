@@ -24,40 +24,34 @@
 #                                                                        #
 ##########################################################################
 */
-/**
- * Online Language Editor Luxemburg language file for webSPELL 4.2.2
- * @author Stefan Giesecke <webmaster@giesi.com>
- * @copyright Copyright (c) 2010, Stefan Giesecke
- * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
- */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'about'=>'Iwwer',
-  'active'=>'aktiv',
-  'add_buddy'=>'op d\'Frëndeslescht bäizufügen',
-  'awards'=>'Auszeechnungen',
-  'back_buddy'=>'erëm op d\'Frëndeslescht ',
-  'back_squad_overview'=>'Zeréck op d\'Teamiwwersiicht',
-  'challenge'=>'Erausfuerdern',
-  'contact'=>'Kontakt',
-  'email'=>'Email',
-  'ignore'=>'Benotzer ignoréieren',
-  'inactive'=>'net aktiv',
-  'member'=>'Matglidd',
-  'members'=>'Matglidder',
-  'messenger'=>'Noriichtensystem',
-  'no_description'=>'Keng Beschreiwung verfügbar',
-  'no_userpic'=>'Keen Benotzerbild verfügbar',
-  'position'=>'Positioun',
-  'results'=>'Ergebnisser',
-  'show_details'=>'Detailer uweisen',
-  'squad_plays'=>'Team spillt',
-  'squads'=>'Teamer',
-  'status'=>'Status',
-  'town'=>'Stad',
-  'userpicture'=>'Benotzerbild'
+    'about' => 'Iwwer',
+    'active' => 'aktiv',
+    'add_buddy' => 'op d\'Frëndeslescht bäizufügen',
+    'awards' => 'Auszeechnungen',
+    'back_buddy' => 'erëm op d\'Frëndeslescht ',
+    'back_squad_overview' => 'Zeréck op d\'Teamiwwersiicht',
+    'challenge' => 'Erausfuerdern',
+    'contact' => 'Kontakt',
+    'email' => 'Email',
+    'ignore' => 'Benotzer ignoréieren',
+    'inactive' => 'net aktiv',
+    'member' => 'Matglidd',
+    'members' => 'Matglidder',
+    'messenger' => 'Noriichtensystem',
+    'no_description' => 'Keng Beschreiwung verfügbar',
+    'no_userpic' => 'Keen Benotzerbild verfügbar',
+    'position' => 'Positioun',
+    'results' => 'Ergebnisser',
+    'show_details' => 'Detailer uweisen',
+    'squad_plays' => 'Team spillt',
+    'squads' => 'Teamer',
+    'status' => 'Status',
+    'town' => 'Stad',
+    'userpicture' => 'Benotzerbild'
 );
 

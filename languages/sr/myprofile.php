@@ -25,13 +25,12 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
     'about_myself' => 'О мени',
     'activated' => 'активиран',
-    'avatar' => 'Аватар:',
     'back' => 'натраг',
     'bbcode' => '<a href="javascript:void(0);" onclick="window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">ББКод</a> укључен',
     'can_not_copy' => 'није могуће копирати документ са сервера',
@@ -47,7 +46,6 @@ $language_array = Array(
     'cpu' => 'Процесор',
     'date_of_birth' => 'Датум роћења',
     'deactivated' => 'деактивиран',
-    'delete' => 'delete',
     'delete_max_90_90' => 'избриши (мах90/90)',
     'delete_max_230_210' => 'избриши (мах230/210)',
     'e-mail' => 'Е-маил',
@@ -128,3 +126,4 @@ $language_array = Array(
     'you_have_to_username' => 'Морате унијети корисничко име!',
     'you_have_to_valid_email' => 'Ваш е-маил није важећи!'
 );
+

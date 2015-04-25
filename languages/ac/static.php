@@ -25,10 +25,10 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'no_access'=>'crwdns15766:0crwdne15766:0',
+    'no_access' => 'crwdns21621:0crwdne21621:0'
 );
 

@@ -25,17 +25,17 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'invalid_password'=>'.شما شماره پسورد را اشتباه وارد کردید',
-  'ip_banned'=>'.شما از این وب سایت بن شده است ip<br>%reason%',
-  'login_successful'=>'!ورود موفقیت امیز',
-  'no_user'=>'کاربر <b>%username%</b> .در سیستم موجود نمی باشد',
-  'not_activated'=>'.اکانت شما فعال نشده است',
-  'session_error'=>'.در موتور جستجوی شما فعال باشد cookies لطفا مطما شوید<br>.اگر مشکل بر طرف نشده است لطفا با ادمین تماس حاصل فرمایید',
-  'return'=>'<a href="javascript:history.back()">پشت</a>',
-  'return_reenter' => '<a href="javascript:history.back()">بازگشت و ورودی تکرار</a>'
+    'invalid_password' => '.شما شماره پسورد را اشتباه وارد کردید',
+    'ip_banned' => '.شما از این وب سایت بن شده است ip<br>%reason%',
+    'login_successful' => '!ورود موفقیت امیز',
+    'no_user' => 'کاربر <b>%username%</b> .در سیستم موجود نمی باشد',
+    'not_activated' => '.اکانت شما فعال نشده است',
+    'return' => '<a href="javascript:history.back()">پشت</a>',
+    'return_reenter' => '<a href="javascript:history.back()">بازگشت و ورودی تکرار</a>',
+    'session_error' => '.در موتور جستجوی شما فعال باشد cookies لطفا مطما شوید<br>.اگر مشکل بر طرف نشده است لطفا با ادمین تماس حاصل فرمایید'
 );
 

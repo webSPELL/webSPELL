@@ -25,12 +25,12 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'no_user'=>'Jokių vartotojų nuotraukų neleidžiamos',
-	'registered_since'=>'registruotas nuo',
-	'view_profile'=>'aplankyti profilį'
+    'no_user' => 'Jokių vartotojų nuotraukų neleidžiamos',
+    'registered_since' => 'registruotas nuo',
+    'view_profile' => 'aplankyti profilį'
 );
 

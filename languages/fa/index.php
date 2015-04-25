@@ -25,32 +25,32 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'advertisement'=>'آگهي',
-  'articles'=>'موضوع',
-  'content'=>'گنجايش',
-  'demos'=>'دمو ها',
-  'downloads'=>'دانلود ها',
-  'hotest_news'=>'اخبار مهم',
-  'language_switch'=>'انتخاب زبان',
-  'latest_news'=>'اخرین اخبار',
-  'login'=>'ورود',
-  'matches'=>'مسابقات',
-  'newsletter'=>'اخبار',
-  'partners'=>'شريك',
-  'pic_of_the_moment'=>'در این لحظه',
-  'poll'=>'هر نفر',
-  'random_user'=>'کاربر رندم',
-  'server'=>'سرورها',
-  'shoutbox'=>'جعبه',
-  'sponsors'=>'اسپانسرها',
-  'squads'=>'گروه ها',
-  'statistics'=>'وضعییت',
-  'topics'=>'تاپیک ها',
-  'upcoming_events'=>'رخداد ها',
-  'tags'=>'برچسب ها'
+    'advertisement' => 'آگهي',
+    'articles' => 'موضوع',
+    'content' => 'گنجايش',
+    'demos' => 'دمو ها',
+    'downloads' => 'دانلود ها',
+    'hotest_news' => 'اخبار مهم',
+    'language_switch' => 'انتخاب زبان',
+    'latest_news' => 'اخرین اخبار',
+    'login' => 'ورود',
+    'matches' => 'مسابقات',
+    'newsletter' => 'اخبار',
+    'partners' => 'شريك',
+    'pic_of_the_moment' => 'در این لحظه',
+    'poll' => 'هر نفر',
+    'random_user' => 'کاربر رندم',
+    'server' => 'سرورها',
+    'shoutbox' => 'جعبه',
+    'sponsors' => 'اسپانسرها',
+    'squads' => 'گروه ها',
+    'statistics' => 'وضعییت',
+    'tags' => 'برچسب ها',
+    'topics' => 'تاپیک ها',
+    'upcoming_events' => 'رخداد ها'
 );
 

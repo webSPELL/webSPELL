@@ -25,7 +25,7 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
@@ -47,10 +47,8 @@ $language_array = Array(
     'cpu' => 'Procesor',
     'date_of_birth' => 'Datum rojstva',
     'deactivated' => 'deaktivira',
-    'delete' => 'delete',
     'delete_max_90_90' => 'izbriši (max90x90)',
     'delete_max_230_210' => 'izbriši (max230x210)',
-    'e-mail' => 'E-mail',
     'edit_mail' => 'Spreminjanje e-mail',
     'edit_password' => 'Spremeni geslo',
     'equipment-info' => 'Info o opremi',
@@ -139,3 +137,4 @@ Zahvaljujemo se vam za vaše zanimanje
     'you_have_to_username' => 'Morate vnesti uporabniško ime!',
     'you_have_to_valid_email' => 'Vaš e-mail ni veljavna!'
 );
+

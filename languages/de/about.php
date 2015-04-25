@@ -25,11 +25,11 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'about_title'=>'Wir über uns',
-	'no_about'=>'Derzeit ist keine Beschreibung verfügbar.'
+    'about_title' => 'Wir über uns',
+    'no_about' => 'Derzeit ist keine Beschreibung verfügbar.'
 );
 

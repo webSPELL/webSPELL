@@ -25,33 +25,32 @@
 ##########################################################################
 */
 
-
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'advertisement'=>'Avertisment',
-  'articles'=>'Articole',
-  'content'=>'Conţnut',
-  'demos'=>'Demonstraţii',
-  'downloads'=>'Descărcări',
-  'hotest_news'=>'Cele mai noi',
-  'language_switch'=>'Selectează limbă',
-  'latest_news'=>'Ultimele noutăţi',
-  'login'=>'Loghează-te',
-  'matches'=>'Meciuri',
-  'newsletter'=>'Buletin de ştiri',
-  'partners'=>'Parteneri',
-  'pic_of_the_moment'=>'Pictura zilei',
-  'poll'=>'Sondaj',
-  'random_user'=>'Utilizator aleatoriu',
-  'server'=>'Server',
-  'shoutbox'=>'Shoutbox',
-  'sponsors'=>'Sponsori',
-  'squads'=>'Echipe',
-  'statistics'=>'Stastici',
-  'topics'=>'Topicuri',
-  'upcoming_events'=>'Evenimente viitoare',
-  'tags'=>'taguri'
+    'advertisement' => 'Avertisment',
+    'articles' => 'Articole',
+    'content' => 'Conţnut',
+    'demos' => 'Demonstraţii',
+    'downloads' => 'Descărcări',
+    'hotest_news' => 'Cele mai noi',
+    'language_switch' => 'Selectează limbă',
+    'latest_news' => 'Ultimele noutăţi',
+    'login' => 'Loghează-te',
+    'matches' => 'Meciuri',
+    'newsletter' => 'Buletin de ştiri',
+    'partners' => 'Parteneri',
+    'pic_of_the_moment' => 'Pictura zilei',
+    'poll' => 'Sondaj',
+    'random_user' => 'Utilizator aleatoriu',
+    'server' => 'Server',
+    'shoutbox' => 'Shoutbox',
+    'sponsors' => 'Sponsori',
+    'squads' => 'Echipe',
+    'statistics' => 'Stastici',
+    'tags' => 'taguri',
+    'topics' => 'Topicuri',
+    'upcoming_events' => 'Evenimente viitoare'
 );
 

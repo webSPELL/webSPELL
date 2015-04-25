@@ -25,12 +25,12 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'no_frame'=>'Šitas tinklalapis naudoja rėmus. Jūsų interneto naršyklė jų nekoduoja!',
-	'outgoing'=>'Išeinama',
-	'owner_responsible'=>'Savaninkas atsakingas už šį puslapį.'
+    'no_frame' => 'Šitas tinklalapis naudoja rėmus. Jūsų interneto naršyklė jų nekoduoja!',
+    'outgoing' => 'Išeinama',
+    'owner_responsible' => 'Savaninkas atsakingas už šį puslapį.'
 );
 

@@ -25,25 +25,25 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'email_failed'=>'Es trat ein Fehler beim Versenden der E-Mail auf, kontaktiere den Webmaster.',
-	'email_subject'=>'Dein Konto für %pagetitle%',
-	'email_text'=>'Dein Konto für %pagetitle%
+    'email_failed' => 'Es trat ein Fehler beim Versenden der E-Mail auf, kontaktiere den Webmaster.',
+    'email_subject' => 'Dein Konto für %pagetitle%',
+    'email_text' => 'Dein Konto für %pagetitle%
 <p>ACHTUNG dein Passwort wurde geändert</p>
 <p>Dein Benutzername: %username%<br>
 Dein neues Passwort: %new_password%</p>
 <p>Viel Spass auf unserer Webseite</p>
 %homepage_url%',
-	'get_password'=>'Passwort zusenden',
-	'lost_password'=>'Passwort verloren',
-	'no_mail_given'=>'Du hast keine E-Mail Adresse eingegeben.',
-	'no_user_found'=>'Benutzer nicht gefunden!',
-	'successful'=>'Dein Konto wurde gefunden!<br><br>
+    'get_password' => 'Passwort zusenden',
+    'lost_password' => 'Passwort verloren',
+    'no_mail_given' => 'Du hast keine E-Mail Adresse eingegeben.',
+    'no_user_found' => 'Benutzer nicht gefunden!',
+    'successful' => 'Dein Konto wurde gefunden!<br><br>
     Du wirst in wenigen Sekunden eine E-Mail mit deinen Daten erhalten.<br><br>
     &#8226; <a href="index.php?site=login">anmelden</a>',
-	'your_email'=>'Deine E-Mail'
+    'your_email' => 'Deine E-Mail'
 );
 

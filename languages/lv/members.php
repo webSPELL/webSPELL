@@ -25,29 +25,28 @@
 ##########################################################################
 */
 
-
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'about'=>'Par',
-  'active'=>'aktīvs',
-  'activity'=>'Aktivitāte',
-  'awards'=>'Apbalvojumi',
-  'back_overview'=>'&raquo; <a href="index.php?site=members"><b>atpakaļ uz biedru pārskatu</b></a>',
-  'challenge'=>'Izaicinājums',
-  'contact'=>'Kontakts',
-  'go'=>'Aiziet!',
-  'inactive'=>'neaktīvs',
-  'member'=>'Biedrs',
-  'members'=>'biedri',
-  'nickname'=>'Segvārds',
-  'no_description'=>'apraksts nav pieejams',
-  'position'=>'Amats',
-  'results'=>'Rezultāti',
-  'show_details'=>'&raquo; <a href="index.php?site=members&amp;action=show&amp;squadID=%squadID%"><b>Parādīt detaļas</b></a>',
-  'show_only'=>'Rādīt tikai',
-  'status'=>'Statuss',
-  'town'=>'Pilsēta'
+    'about' => 'Par',
+    'active' => 'aktīvs',
+    'activity' => 'Aktivitāte',
+    'awards' => 'Apbalvojumi',
+    'back_overview' => '&raquo; <a href="index.php?site=members"><b>atpakaļ uz biedru pārskatu</b></a>',
+    'challenge' => 'Izaicinājums',
+    'contact' => 'Kontakts',
+    'go' => 'Aiziet!',
+    'inactive' => 'neaktīvs',
+    'member' => 'Biedrs',
+    'members' => 'biedri',
+    'nickname' => 'Segvārds',
+    'no_description' => 'apraksts nav pieejams',
+    'position' => 'Amats',
+    'results' => 'Rezultāti',
+    'show_details' => '&raquo; <a href="index.php?site=members&amp;action=show&amp;squadID=%squadID%"><b>Parādīt detaļas</b></a>',
+    'show_only' => 'Rādīt tikai',
+    'status' => 'Statuss',
+    'town' => 'Pilsēta'
 );
 

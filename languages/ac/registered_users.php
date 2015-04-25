@@ -25,19 +25,19 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'contact'=>'crwdns15610:0crwdne15610:0',
-	'country'=>'crwdns15611:0crwdne15611:0',
-	'homepage'=>'crwdns15612:0crwdne15612:0',
-	'last_login'=>'crwdns15613:0crwdne15613:0',
-	'nickname'=>'crwdns15614:0crwdne15614:0',
-	'no_users'=>'crwdns15615:0crwdne15615:0',
-	'now_on'=>'crwdns15616:0crwdne15616:0',
-	'registered_users'=>'crwdns15617:0crwdne15617:0',
-	'registration'=>'crwdns15618:0crwdne15618:0',
-	'sort'=>'crwdns15619:0crwdne15619:0'
+    'contact' => 'crwdns21465:0crwdne21465:0',
+    'country' => 'crwdns21466:0crwdne21466:0',
+    'homepage' => 'crwdns21467:0crwdne21467:0',
+    'last_login' => 'crwdns21468:0crwdne21468:0',
+    'nickname' => 'crwdns21469:0crwdne21469:0',
+    'no_users' => 'crwdns21470:0crwdne21470:0',
+    'now_on' => 'crwdns21471:0crwdne21471:0',
+    'registered_users' => 'crwdns21472:0crwdne21472:0',
+    'registration' => 'crwdns21473:0crwdne21473:0',
+    'sort' => 'crwdns21474:0crwdne21474:0'
 );
 

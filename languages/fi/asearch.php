@@ -24,19 +24,13 @@
 #                                                                        #
 ##########################################################################
 */
-/**
- * Online Language Editor Finland language file for webSPELL 4.2.2
- * @author Stefan Giesecke <webmaster@giesi.com>
- * @copyright Copyright (c) 2010, Stefan Giesecke
- * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
- */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'invalid_request'=>'Virheellinen pyyntö',
-  'no_result'=>'Ei hakutuloksia',
-  'to_much_results'=>'Liian monta osumaa, ole hyvä ja hae pitemmällä hakusanalla.'
+    'invalid_request' => 'Virheellinen pyyntö',
+    'no_result' => 'Ei hakutuloksia',
+    'to_much_results' => 'Liian monta osumaa, ole hyvä ja hae pitemmällä hakusanalla.'
 );
 

@@ -25,11 +25,11 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'save'=>'Zapisz',
-	'no_session'=>'Upewnij się, że Twoja przeglądarka akceptuje ciasteczka i spróbuj ponownie zmienić język.'
+    'no_session' => 'Upewnij się, że Twoja przeglądarka akceptuje ciasteczka i spróbuj ponownie zmienić język.',
+    'save' => 'Zapisz'
 );
 

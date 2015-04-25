@@ -25,18 +25,18 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'add_notexists'=>'crwdns14314:0crwdne14314:0',
-	'add_nouserid'=>'crwdns14315:0crwdne14315:0',
-	'add_yourself'=>'crwdns14316:0crwdne14316:0',
-	'buddy_nousers'=>'crwdns14317:0crwdne14317:0',
-	'buddys'=>'crwdns14318:0crwdne14318:0',
-	'ignore_nousers'=>'crwdns14319:0crwdne14319:0',
-	'not_logged'=>'crwdns14320:0crwdne14320:0',
-	'your_buddylist'=>'crwdns14321:0crwdne14321:0',
-	'your_ignorelist'=>'crwdns14322:0crwdne14322:0'
+    'add_notexists' => 'crwdns20169:0crwdne20169:0',
+    'add_nouserid' => 'crwdns20170:0crwdne20170:0',
+    'add_yourself' => 'crwdns20171:0crwdne20171:0',
+    'buddy_nousers' => 'crwdns20172:0crwdne20172:0',
+    'buddys' => 'crwdns20173:0crwdne20173:0',
+    'ignore_nousers' => 'crwdns20174:0crwdne20174:0',
+    'not_logged' => 'crwdns20175:0crwdne20175:0',
+    'your_buddylist' => 'crwdns20176:0crwdne20176:0',
+    'your_ignorelist' => 'crwdns20177:0crwdne20177:0'
 );
 

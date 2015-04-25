@@ -1,10 +1,10 @@
 <?php
+$languageBaseFolder = "../../languages/";
+$baseLanguageCode = 'uk';
 
-header("Content-Type: text/plain; charset=utf-8");
+$baseLanguageFolder = $languageBaseFolder.$baseLanguageCode;
 
-$all_langs = glob("../languages/*", GLOB_ONLYDIR);
-
-$header = '<?php
+$file_header = '<?php
 /*
 ##########################################################################
 #                                                                        #
@@ -31,54 +31,46 @@ $header = '<?php
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */'."\n\n";
 
-$footer = ');'."\n";
+$file_footer = ');'."\n\n";
 
-function escape($string)
-{
-    return addcslashes($string, "'");
-}
 
 $sortMode = SORT_REGULAR;
 if (defined("SORT_NATURAL")) {
     $sortMode = SORT_NATURAL;
 }
 
+define("PAGETITLE","PAGETITLE");
+
 function fixGlobals($string)
 {
     return str_replace("PAGETITLE", "'.PAGETITLE.'", $string);
 }
 
-//define("PAGETITLE","'.PAGETITLE.'");
+function escape($string)
+{
+    return addcslashes($string, "'");
+}
 
-$all_keys = 0;
-foreach ($all_langs as $lang) {
-    echo "Correcting " . $lang . " ... ";
-    $files = glob($lang . '/*');
-    foreach ($files as $file) {
-        $file_name = basename($file);
-        $ext = substr($file_name, strrpos($file_name, "."));
-        if ($ext == ".php") {
-            ob_start();
-            include($file);
-            $outputted_content = ob_get_length();
-            ob_clean();
+function checkBom($file)
+{
+    return (false !== strpos($file, "\xEF\xBB\xBF"));
+}
 
-            $rows = array();
-            ksort($language_array, $sortMode);
-            foreach ($language_array as $lang_key => $lang_val) {
-                $rows[] = "    '".escape($lang_key)."' => '".fixGlobals(escape($lang_val))."'";
-            }
-
-            $new_array = implode(",\n", $rows)."\n";
-
-            $new_content = $header.$new_array.$footer;
-
-            file_put_contents($file, $new_content);
-        }
+function writeLanguageFile($file, $language_array){
+    global $file_header, $file_footer, $sortMode;
+    $rows = array();
+    ksort($language_array, $sortMode);
+    foreach ($language_array as $lang_key => $lang_val) {
+        $rows[] = "    '".escape($lang_key)."' => '".fixGlobals(escape($lang_val))."'";
     }
-    echo "ok\n";
+
+    $new_array = implode(",\n", $rows)."\n";
+
+    $new_content = $file_header.$new_array.$file_footer;
+
+    file_put_contents($file, $new_content);
 }

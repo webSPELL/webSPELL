@@ -25,32 +25,32 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'advertisement'=>'Reklam',
-	'articles'=>'Artiklar',
-	'content'=>'kontent',
-	'demos'=>'demos',
-	'downloads'=>'Ladda ner',
-	'hotest_news'=>'hetaste nyheterna',
-	'language_switch'=>'Byt språk',
-	'latest_news'=>'senaste nyheten',
-	'login'=>'logga in',
-	'matches'=>'matcher',
-	'newsletter'=>'nyhetsbrev',
-	'partners'=>'partners',
-	'pic_of_the_moment'=>'Bild för tillfället',
-	'poll'=>'Undersökning',
-	'random_user'=>'random användare',
-	'server'=>'Server',
-	'shoutbox'=>'skriklåda',
-	'sponsors'=>'sponsorer',
-	'squads'=>'lag',
-	'statistics'=>'statistik',
-	'topics'=>'Ämne',
-	'upcoming_events'=>'kommande händelser',
-	'tags'=>'Taggar'
+    'advertisement' => 'Reklam',
+    'articles' => 'Artiklar',
+    'content' => 'kontent',
+    'demos' => 'demos',
+    'downloads' => 'Ladda ner',
+    'hotest_news' => 'hetaste nyheterna',
+    'language_switch' => 'Byt språk',
+    'latest_news' => 'senaste nyheten',
+    'login' => 'logga in',
+    'matches' => 'matcher',
+    'newsletter' => 'nyhetsbrev',
+    'partners' => 'partners',
+    'pic_of_the_moment' => 'Bild för tillfället',
+    'poll' => 'Undersökning',
+    'random_user' => 'random användare',
+    'server' => 'Server',
+    'shoutbox' => 'skriklåda',
+    'sponsors' => 'sponsorer',
+    'squads' => 'lag',
+    'statistics' => 'statistik',
+    'tags' => 'Taggar',
+    'topics' => 'Ämne',
+    'upcoming_events' => 'kommande händelser'
 );
 

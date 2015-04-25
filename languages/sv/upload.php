@@ -25,17 +25,17 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'add_to_message'=>'Lägg till på meddelande',
-  'close_window'=>'stäng fönster',
-	'delete'=>'Radera',
-	'existing_files'=>'existerande filer',
-	'file_upload'=>'Ladda upp fil',
-	'invalid_access'=>'Inte giltig tillgång!',
-	'no_access'=>'Ingen tillgång!',
-	'upload'=>'Ladda upp'
+    'add_to_message' => 'Lägg till på meddelande',
+    'close_window' => 'stäng fönster',
+    'delete' => 'Radera',
+    'existing_files' => 'existerande filer',
+    'file_upload' => 'Ladda upp fil',
+    'invalid_access' => 'Inte giltig tillgång!',
+    'no_access' => 'Ingen tillgång!',
+    'upload' => 'Ladda upp'
 );
 

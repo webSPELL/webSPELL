@@ -25,28 +25,28 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'about'=>'درباره',
-  'active'=>'فعال',
-  'activity'=>'فعالیت',
-  'awards'=>'جوایز',
-  'back_overview'=>'&raquo; <a href="index.php?site=members"><b>برگشت به صفحه اعضای سایت</b></a>',
-  'challenge'=>'مبارزات',
-  'contact'=>'تماس',
-  'go'=>'!رفتن',
-  'inactive'=>'غیر فعال',
-  'member'=>'عضو',
-  'members'=>'اعضا',
-  'nickname'=>'نام مخفف',
-  'no_description'=>'هیچ توصیفی وجود ندارد',
-  'position'=>'موقعیت',
-  'results'=>'نتيجه',
-  'show_details'=>'&raquo; <a href="index.php?site=members&amp;action=show&amp;squadID=%squadID%"><b>نشان دادن جزییات بیشتر</b></a>',
-  'show_only'=>'نشان دادن',
-  'status'=>'وضعیت',
-  'town'=>'شهر'
+    'about' => 'درباره',
+    'active' => 'فعال',
+    'activity' => 'فعالیت',
+    'awards' => 'جوایز',
+    'back_overview' => '&raquo; <a href="index.php?site=members"><b>برگشت به صفحه اعضای سایت</b></a>',
+    'challenge' => 'مبارزات',
+    'contact' => 'تماس',
+    'go' => '!رفتن',
+    'inactive' => 'غیر فعال',
+    'member' => 'عضو',
+    'members' => 'اعضا',
+    'nickname' => 'نام مخفف',
+    'no_description' => 'هیچ توصیفی وجود ندارد',
+    'position' => 'موقعیت',
+    'results' => 'نتيجه',
+    'show_details' => '&raquo; <a href="index.php?site=members&amp;action=show&amp;squadID=%squadID%"><b>نشان دادن جزییات بیشتر</b></a>',
+    'show_only' => 'نشان دادن',
+    'status' => 'وضعیت',
+    'town' => 'شهر'
 );
 

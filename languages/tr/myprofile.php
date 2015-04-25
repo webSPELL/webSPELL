@@ -25,7 +25,7 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
@@ -44,10 +44,8 @@ $language_array = Array(
     'clan-name' => 'Klan-İsim',
     'clan-tag' => 'Klan-Etiket',
     'country' => 'Ülke',
-    'cpu' => 'CPU',
     'date_of_birth' => 'Doğum Günü',
     'deactivated' => 'devre dışı',
-    'delete' => 'delete',
     'delete_max_90_90' => 'Sil (max90/90)',
     'delete_max_230_210' => 'Sil (max230/210)',
     'e-mail' => 'E-Posta',
@@ -139,3 +137,4 @@ Lütfen e-posta değişikliğini tamamlamak için aşağıdaki linki tıklayarak
     'you_have_to_username' => 'Kullanıcı adı girmek zorundasınız!',
     'you_have_to_valid_email' => 'E-posta geçerli değil!'
 );
+

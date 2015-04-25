@@ -29,17 +29,17 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'crwdns16316:0crwdne16316:0',
-  'actions'=>'crwdns16317:0crwdne16317:0',
-  'add_category'=>'crwdns16318:0crwdne16318:0',
-  'category_name'=>'crwdns16319:0crwdne16319:0',
-  'delete'=>'crwdns16320:0crwdne16320:0',
-  'edit'=>'crwdns16321:0crwdne16321:0',
-  'edit_category'=>'crwdns16322:0crwdne16322:0',
-  'information_incomplete'=>'crwdns16323:0crwdne16323:0',
-  'link_categories'=>'crwdns16324:0crwdne16324:0',
-  'new_category'=>'crwdns16325:0crwdne16325:0',
-  'really_delete'=>'crwdns16326:0crwdne16326:0',
-  'transaction_invalid'=>'crwdns16327:0crwdne16327:0'
+  'access_denied'=>'crwdns22171:0crwdne22171:0',
+  'actions'=>'crwdns22172:0crwdne22172:0',
+  'add_category'=>'crwdns22173:0crwdne22173:0',
+  'category_name'=>'crwdns22174:0crwdne22174:0',
+  'delete'=>'crwdns22175:0crwdne22175:0',
+  'edit'=>'crwdns22176:0crwdne22176:0',
+  'edit_category'=>'crwdns22177:0crwdne22177:0',
+  'information_incomplete'=>'crwdns22178:0crwdne22178:0',
+  'link_categories'=>'crwdns22179:0crwdne22179:0',
+  'new_category'=>'crwdns22180:0crwdne22180:0',
+  'really_delete'=>'crwdns22181:0crwdne22181:0',
+  'transaction_invalid'=>'crwdns22182:0crwdne22182:0'
 );
 

@@ -25,18 +25,18 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'admins'=>'crwdns14993:0crwdne14993:0',
-	'coding'=>'crwdns14994:0crwdne14994:0',
-	'coding_info'=>'crwdns14995:0crwdne14995:0',
-	'disclaimer'=>'crwdns14996:0crwdne14996:0',
-	'disclaimer_text'=>'crwdns14997:0crwdne14997:0',
-	'imprint'=>'crwdns14998:0crwdne14998:0',
-	'mods'=>'crwdns14999:0crwdne14999:0',
-	'responsible_persons'=>'crwdns15000:0crwdne15000:0',
-	'webmaster'=>'crwdns15001:0crwdne15001:0'
+    'admins' => 'crwdns20848:0crwdne20848:0',
+    'coding' => 'crwdns20849:0crwdne20849:0',
+    'coding_info' => 'crwdns20850:0crwdne20850:0',
+    'disclaimer' => 'crwdns20851:0crwdne20851:0',
+    'disclaimer_text' => 'crwdns20852:0crwdne20852:0',
+    'imprint' => 'crwdns20853:0crwdne20853:0',
+    'mods' => 'crwdns20854:0crwdne20854:0',
+    'responsible_persons' => 'crwdns20855:0crwdne20855:0',
+    'webmaster' => 'crwdns20856:0crwdne20856:0'
 );
 

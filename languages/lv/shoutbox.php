@@ -25,18 +25,17 @@
 ##########################################################################
 */
 
-
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'all_messages'=>'Rādīt visu',
-  'enter_message'=>'Ievadiet ziņu!',
-  'enter_name'=>'Ievadiet vārdu!',
-  'delete_selected'=>'Izdzēst atlasīto',
-  'select_all'=>'Atlasīt visu',
-  'shout'=>'Tērzēt!',
-  'shoutbox'=>'Ātrā tērzēšana',
-  'sort'=>'Kārtot:'
+    'all_messages' => 'Rādīt visu',
+    'delete_selected' => 'Izdzēst atlasīto',
+    'enter_message' => 'Ievadiet ziņu!',
+    'enter_name' => 'Ievadiet vārdu!',
+    'select_all' => 'Atlasīt visu',
+    'shout' => 'Tērzēt!',
+    'shoutbox' => 'Ātrā tērzēšana',
+    'sort' => 'Kārtot:'
 );
 

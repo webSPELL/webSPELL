@@ -25,18 +25,17 @@
 ##########################################################################
 */
 
-
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'add_to_message'=>'Lisa sõnumile',
-  'close_window'=>'sulge aken',
-  'delete'=>'Kustuta',
-  'existing_files'=>'Olemasolevad failid',
-  'file_upload'=>'Lae fail üles',
-  'invalid_access'=>'Väär ligipääs!',
-  'no_access'=>'Puudub ligipääs!',
-  'upload'=>'Üles laadimine'
+    'add_to_message' => 'Lisa sõnumile',
+    'close_window' => 'sulge aken',
+    'delete' => 'Kustuta',
+    'existing_files' => 'Olemasolevad failid',
+    'file_upload' => 'Lae fail üles',
+    'invalid_access' => 'Väär ligipääs!',
+    'no_access' => 'Puudub ligipääs!',
+    'upload' => 'Üles laadimine'
 );
 

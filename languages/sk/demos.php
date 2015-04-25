@@ -25,7 +25,7 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
@@ -75,6 +75,6 @@ $language_array = Array(
     'to_rate' => 'Musíte byť zaregistrovaný a príhlásený, aby ste mohli hodnotiť toto demo!',
     'update_demo' => 'Aktualizuj demo',
     'user_comments' => 'Povoliť komentáre užívateľov',
-    'visitor_comments' => 'Povololiť komentáre návštevníkov',
-    'vs' => 'vs.'
+    'visitor_comments' => 'Povololiť komentáre návštevníkov'
 );
+

@@ -24,58 +24,52 @@
 #                                                                        #
 ##########################################################################
 */
-/**
- * Online Language Editor Albania language file for webSPELL 4.2.2
- * @author Stefan Giesecke <webmaster@giesi.com>
- * @copyright Copyright (c) 2010, Stefan Giesecke
- * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
- */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'back'=>'Mbrapsh',
-  'category'=>'Kategori',
-  'comment'=>'Koment',
-  'comments'=>'Komente',
-  'date'=>'Data',
-  'delete'=>'fshij',
-  'edit'=>'Edito',
-  'edit_picture'=>'edito foton',
-  'galleries'=>'galeritë',
-  'gallery'=>'Galeri',
-  'latest_gallery'=>'Galeri e re',
-  'most_comments'=>'Shumica komenteve',
-  'name'=>'Emri',
-  'next'=>'Tjetri',
-  'no_comments'=>'Ç\'aktivizo komentet',
-  'no_gallery_exists'=>'Nuk ka galeri!',
-  'no_pic_set'=>'Nuk është vendosur foto.',
-  'no_picture'=>'Foto nuk egziston!',
-  'page_s'=>'faqe(t)',
-  'perfect'=>'perfekt',
-  'pg_1_1'=>'faqja 1 of 1',
-  'picture'=>'Foto',
-  'pictures'=>'Fotot',
-  'poor'=>'dobët',
-  'random_picture'=>'Foto e rastësishme',
-  'rate'=>'voto',
-  'rate_have_to_reg_login'=>'Voto: duhet të regjistroheni ose logoheni!',
-  'rate_now'=>'Voto tani!',
-  'rating'=>'Votime',
-  'really_del'=>'vërtet e fshin këtë hyrje?',
-  'reset_views'=>'Rivendos shikimet',
-  'show_galleries'=>'Trego Galeritë',
-  'start_diashow'=>'Fillo Diashow',
-  'update_picture'=>'updato foton',
-  'user_comments'=>'Lejo komentet e përdoruesve',
-  'usergalleries'=>'Galeritë e pvrdoruesve',
-  'views'=>'Shikimet',
-  'visitor_comments'=>'Lejo komentet e vizituesve',
-  'votes'=>'votat',
-  'webs_diashow'=>'webSPELL Diashow:',
-  'you_have_already_rated'=>'Keni votuar tashmë.',
-  'no_thumb'=>'Mungon ikona'
+    'back' => 'Mbrapsh',
+    'category' => 'Kategori',
+    'comment' => 'Koment',
+    'comments' => 'Komente',
+    'date' => 'Data',
+    'delete' => 'fshij',
+    'edit' => 'Edito',
+    'edit_picture' => 'edito foton',
+    'galleries' => 'galeritë',
+    'gallery' => 'Galeri',
+    'latest_gallery' => 'Galeri e re',
+    'most_comments' => 'Shumica komenteve',
+    'name' => 'Emri',
+    'next' => 'Tjetri',
+    'no_comments' => 'Ç\'aktivizo komentet',
+    'no_gallery_exists' => 'Nuk ka galeri!',
+    'no_pic_set' => 'Nuk është vendosur foto.',
+    'no_picture' => 'Foto nuk egziston!',
+    'no_thumb' => 'Mungon ikona',
+    'page_s' => 'faqe(t)',
+    'perfect' => 'perfekt',
+    'pg_1_1' => 'faqja 1 of 1',
+    'picture' => 'Foto',
+    'pictures' => 'Fotot',
+    'poor' => 'dobët',
+    'random_picture' => 'Foto e rastësishme',
+    'rate' => 'voto',
+    'rate_have_to_reg_login' => 'Voto: duhet të regjistroheni ose logoheni!',
+    'rate_now' => 'Voto tani!',
+    'rating' => 'Votime',
+    'really_del' => 'vërtet e fshin këtë hyrje?',
+    'reset_views' => 'Rivendos shikimet',
+    'show_galleries' => 'Trego Galeritë',
+    'start_diashow' => 'Fillo Diashow',
+    'update_picture' => 'updato foton',
+    'user_comments' => 'Lejo komentet e përdoruesve',
+    'usergalleries' => 'Galeritë e pvrdoruesve',
+    'views' => 'Shikimet',
+    'visitor_comments' => 'Lejo komentet e vizituesve',
+    'votes' => 'votat',
+    'webs_diashow' => 'webSPELL Diashow:',
+    'you_have_already_rated' => 'Keni votuar tashmë.'
 );
 

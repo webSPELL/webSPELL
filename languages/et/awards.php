@@ -25,29 +25,28 @@
 ##########################################################################
 */
 
-
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'award'=>'Auhind',
-  'awards'=>'auhinnad',
-  'date'=>'Kuupäev',
-  'delete'=>'kustuta',
-  'edit'=>'muuda',
-  'edit_award'=>'Muuda auhinda',
-  'enter_title'=>'Sa pead tiitli sisestama!',
-  'enter_text'=>'Sa pead sisu sisestama',
-  'event'=>'Sündmus',
-  'homepage'=>'Koduleht',
-  'info'=>'Info',
-  'new_award'=>'Loo uus auhind',
-  'no_access'=>'Puudub ligipääs!',
-  'no_entries'=>'Ühtegi auhinda pole',
-  'ranking'=>'Koht',
-  'save_award'=>'Salvesta auhind',
-  'sort'=>'Sorteerimine',
-  'squad'=>'Rühm',
-  'update_award'=>'Uuenda auhinda'
+    'award' => 'Auhind',
+    'awards' => 'auhinnad',
+    'date' => 'Kuupäev',
+    'delete' => 'kustuta',
+    'edit' => 'muuda',
+    'edit_award' => 'Muuda auhinda',
+    'enter_text' => 'Sa pead sisu sisestama',
+    'enter_title' => 'Sa pead tiitli sisestama!',
+    'event' => 'Sündmus',
+    'homepage' => 'Koduleht',
+    'info' => 'Info',
+    'new_award' => 'Loo uus auhind',
+    'no_access' => 'Puudub ligipääs!',
+    'no_entries' => 'Ühtegi auhinda pole',
+    'ranking' => 'Koht',
+    'save_award' => 'Salvesta auhind',
+    'sort' => 'Sorteerimine',
+    'squad' => 'Rühm',
+    'update_award' => 'Uuenda auhinda'
 );
 

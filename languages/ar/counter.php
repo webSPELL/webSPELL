@@ -25,40 +25,39 @@
 ##########################################################################
 */
 
-
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'daysonline'=>'يوم اونلاين',
-  'guest'=>'ضيف',
-  'guests'=>'ضيوف',
-  'lasthour'=>'الساعة الماضية',
-  'max_day'=>'الاكثر خلال يوم',
-  'maximum'=>'الاكثر',
-  'month'=>'شهر',
-  'now'=>'الان',
-  'online'=>'اونلاين',
-  'page_statistics'=>'احصائيات الصفحة',
-  'registered_users'=>'الاعضاء المسجلون',
-  'statistic'=>'عرض الاحصائيات',
-  'this_month'=>'هذا الشهر',
-  'today'=>'اليوم',
-  'total'=>'المجموع',
-  'total_statistic'=>'الاحصائات العامة',
-  'user'=>'المستخدم',
-  'users'=>'المستخدمون',
-  'visits'=>'الزوار',
-  'visits_day'=>'الزيارات في اليوم',
-  'visits_hour'=>'الزيارات في الساعة',
-  'visits_month'=>'الزيارات في الشهر',
-  'visits_total'=>'مجموع الزيارات',
-  'yesterday'=>'يوم امس',
-  'avg_age'=>'متوسط العمر',
-  'avg_age_clanmember'=>'متوسط عمر الاعضاء',
-  'youngest_user'=>'اصغر الاعضاء',
-  'oldest_user'=>'اكبر الاعضاء',
-  'user_statistic'=>'احصائيات المستخدم',
-  'years'=>'سنين'
+    'avg_age' => 'متوسط العمر',
+    'avg_age_clanmember' => 'متوسط عمر الاعضاء',
+    'daysonline' => 'يوم اونلاين',
+    'guest' => 'ضيف',
+    'guests' => 'ضيوف',
+    'lasthour' => 'الساعة الماضية',
+    'max_day' => 'الاكثر خلال يوم',
+    'maximum' => 'الاكثر',
+    'month' => 'شهر',
+    'now' => 'الان',
+    'oldest_user' => 'اكبر الاعضاء',
+    'online' => 'اونلاين',
+    'page_statistics' => 'احصائيات الصفحة',
+    'registered_users' => 'الاعضاء المسجلون',
+    'statistic' => 'عرض الاحصائيات',
+    'this_month' => 'هذا الشهر',
+    'today' => 'اليوم',
+    'total' => 'المجموع',
+    'total_statistic' => 'الاحصائات العامة',
+    'user' => 'المستخدم',
+    'user_statistic' => 'احصائيات المستخدم',
+    'users' => 'المستخدمون',
+    'visits' => 'الزوار',
+    'visits_day' => 'الزيارات في اليوم',
+    'visits_hour' => 'الزيارات في الساعة',
+    'visits_month' => 'الزيارات في الشهر',
+    'visits_total' => 'مجموع الزيارات',
+    'years' => 'سنين',
+    'yesterday' => 'يوم امس',
+    'youngest_user' => 'اصغر الاعضاء'
 );
 

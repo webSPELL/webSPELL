@@ -24,24 +24,18 @@
 #                                                                        #
 ##########################################################################
 */
-/**
- * Online Language Editor Greece language file for webSPELL 4.2.2
- * @author Stefan Giesecke <webmaster@giesi.com>
- * @copyright Copyright (c) 2010, Stefan Giesecke
- * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
- */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'all_messages'=>'Εμφανισε ολα',
-  'enter_message'=>'Πρεπει να εισαγετε ενα μηνυμα!',
-  'enter_name'=>'Πρεπει να εισαγετε το ονομα σας!',
-  'delete_selected'=>'Διαγραφη επιλεγμενων',
-  'select_all'=>'Επιλογη ολων',
-  'shout'=>'Shout!',
-  'shoutbox'=>'shoutbox',
-  'sort'=>'Ταξινομηση:'
+    'all_messages' => 'Εμφανισε ολα',
+    'delete_selected' => 'Διαγραφη επιλεγμενων',
+    'enter_message' => 'Πρεπει να εισαγετε ενα μηνυμα!',
+    'enter_name' => 'Πρεπει να εισαγετε το ονομα σας!',
+    'select_all' => 'Επιλογη ολων',
+    'shout' => 'Shout!',
+    'shoutbox' => 'shoutbox',
+    'sort' => 'Ταξινομηση:'
 );
 

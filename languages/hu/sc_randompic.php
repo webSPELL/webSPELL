@@ -25,12 +25,12 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'no_user'=>'Nincs elérhető felhasználói kép',
-	'registered_since'=>'Regisztráció időpontja',
-	'view_profile'=>'profil megtekintése'
+    'no_user' => 'Nincs elérhető felhasználói kép',
+    'registered_since' => 'Regisztráció időpontja',
+    'view_profile' => 'profil megtekintése'
 );
 

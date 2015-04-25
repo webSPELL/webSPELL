@@ -25,13 +25,13 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'board'=>'Forum',
-	'last_post'=>'Ultimo Post',
-	'reply'=>'Risposta',
-	'replies'=>'Risposti'
+    'board' => 'Forum',
+    'last_post' => 'Ultimo Post',
+    'replies' => 'Risposti',
+    'reply' => 'Risposta'
 );
 

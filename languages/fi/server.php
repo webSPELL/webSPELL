@@ -24,26 +24,19 @@
 #                                                                        #
 ##########################################################################
 */
-/**
- * Online Language Editor Finland language file for webSPELL 4.2.2
- * @author Stefan Giesecke <webmaster@giesi.com>
- * @copyright Copyright (c) 2010, Stefan Giesecke
- * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
- */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'game'=>'Peli',
-  'information'=>'Lisätiedot',
-  'ip'=>'IP',
-  'link'=>'Linkki',
-  'no_server'=>'ei servereitä saatavilla.',
-  'not_supported'=>'Ei ole webserver tukena',
-  'online'=>'Online',
-  'server'=>'Serveri',
-  'status'=>'Tila',
-  'timeout'=>'Timeout'
+    'game' => 'Peli',
+    'information' => 'Lisätiedot',
+    'link' => 'Linkki',
+    'no_server' => 'ei servereitä saatavilla.',
+    'not_supported' => 'Ei ole webserver tukena',
+    'online' => 'Online',
+    'server' => 'Serveri',
+    'status' => 'Tila',
+    'timeout' => 'Timeout'
 );
 

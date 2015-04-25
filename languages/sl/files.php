@@ -25,7 +25,7 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
@@ -105,3 +105,4 @@ $language_array = Array(
     'you_have_to_enter_file' => 'Vnesite dokument/link!',
     'you_have_to_enter_filename' => 'Vnesite ime dokumenta!'
 );
+

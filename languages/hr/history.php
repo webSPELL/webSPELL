@@ -25,11 +25,11 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'history'=>'Povijest',
-	'no_history'=>'Nema dostupnih informacija.'
+    'history' => 'Povijest',
+    'no_history' => 'Nema dostupnih informacija.'
 );
 

@@ -25,12 +25,12 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'invalid_request'=>'Neplatná žádost',
-	'no_result'=>'Bohužel nebylo nic nalezeno',
-	'to_much_results'=>'Příliš mnoho nálezů, zadejte více specifik.'
+    'invalid_request' => 'Neplatná žádost',
+    'no_result' => 'Bohužel nebylo nic nalezeno',
+    'to_much_results' => 'Příliš mnoho nálezů, zadejte více specifik.'
 );
 

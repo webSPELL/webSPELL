@@ -25,12 +25,12 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'invalid_request'=>'Ugyldig handling',
-	'no_result'=>'Søgningen gav ingen resultater',
-	'to_much_results'=>'Der er for mange mulige resultater, angiv venligst flere tegn.'
+    'invalid_request' => 'Ugyldig handling',
+    'no_result' => 'Søgningen gav ingen resultater',
+    'to_much_results' => 'Der er for mange mulige resultater, angiv venligst flere tegn.'
 );
 

@@ -25,13 +25,13 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'email_failed'=>'Der var et problem da du sendte mailen. Kontakt venligst webmasteren.',
-	'email_subject'=>'Din konto for %pagetitle%',
-	'email_text'=>'Din konto for %pagetitle%
+    'email_failed' => 'Der var et problem da du sendte mailen. Kontakt venligst webmasteren.',
+    'email_subject' => 'Din konto for %pagetitle%',
+    'email_text' => 'Din konto for %pagetitle%
 OPMÆRKSOMHED dit kodeord er blevet ændret!
 
 Dit brugernavn: %username%
@@ -39,13 +39,13 @@ Dit nye kodeord: %new_password%
 
 Hyg dig på hjemmesiden
 %homepage_url%',
-	'get_password'=>'få kodeordet',
-	'lost_password'=>'glemt kodeordet',
-	'no_mail_given'=>'Du har glemt at indtaste en email adresse.',
-	'no_user_found'=>'ingen bruger fundet!',
-	'successful'=>'Din konto er blevet fundet<br><br>
+    'get_password' => 'få kodeordet',
+    'lost_password' => 'glemt kodeordet',
+    'no_mail_given' => 'Du har glemt at indtaste en email adresse.',
+    'no_user_found' => 'ingen bruger fundet!',
+    'successful' => 'Din konto er blevet fundet<br><br>
 					Du vil modtage en e-mail med din konto-data om et par sekunder.<br><br>
 			 		&#8226; <a href="index.php?site=login">log ind</a>',
-	'your_email'=>'Din email'
+    'your_email' => 'Din email'
 );
 

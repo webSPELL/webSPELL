@@ -24,24 +24,18 @@
 #                                                                        #
 ##########################################################################
 */
-/**
- * Online Language Editor Turkey language file for webSPELL 4.2.2
- * @author Stefan Giesecke <webmaster@giesi.com>
- * @copyright Copyright (c) 2010, Stefan Giesecke
- * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
- */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'invalid_password'=>'Geçersiz bir şifre girdiniz .',
-  'ip_banned'=>'IP adresiniz bu site tarafından banlandı.<br>%reason%',
-  'login_successful'=>'Giriş Başarılı!',
-  'no_user'=>'Kullanıcı <b>%username%</b> bu sistemde mevcut değildir.',
-  'not_activated'=>'Hesabınız aktif değil.',
-  'session_error'=>'Lütfen tarayıcınızda oturum desteği olduğundan emin olun.<br>Sorun devam ederse, yöneticiye başvurun.',
-  'return'=>'<a href="javascript:history.back()">Geri Dönün</a>',
-  'return_reenter' => '<a href="javascript:history.back()">Geri dönün ve tekrar deneyin.</a>'
+    'invalid_password' => 'Geçersiz bir şifre girdiniz .',
+    'ip_banned' => 'IP adresiniz bu site tarafından banlandı.<br>%reason%',
+    'login_successful' => 'Giriş Başarılı!',
+    'no_user' => 'Kullanıcı <b>%username%</b> bu sistemde mevcut değildir.',
+    'not_activated' => 'Hesabınız aktif değil.',
+    'return' => '<a href="javascript:history.back()">Geri Dönün</a>',
+    'return_reenter' => '<a href="javascript:history.back()">Geri dönün ve tekrar deneyin.</a>',
+    'session_error' => 'Lütfen tarayıcınızda oturum desteği olduğundan emin olun.<br>Sorun devam ederse, yöneticiye başvurun.'
 );
 

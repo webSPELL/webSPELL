@@ -25,28 +25,28 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'award'=>'Auszeichnung',
-	'awards'=>'Auszeichnungen',
-	'date'=>'Datum',
-	'delete'=>'löschen',
-	'edit'=>'editieren',
-	'edit_award'=>'Auszeichnung editieren',
-	'enter_title'=>'Du musst einen Titel eingeben!',
-	'enter_text'=>'Du musst einen Text eingeben!',
-	'event'=>'Veranstaltung',
-	'homepage'=>'Homepage',
-	'info'=>'Info',
-	'new_award'=>'Neue Auszeichnung',
-	'no_access'=>'Kein Zugriff!',
-	'no_entries'=>'Keine Auszeichnung vorhanden',
-	'ranking'=>'Rang',
-	'save_award'=>'Auszeichnung speichern',
-	'sort'=>'Sortiere',
-	'squad'=>'Team',
-	'update_award'=>'Auszeichnung aktualisieren'
+    'award' => 'Auszeichnung',
+    'awards' => 'Auszeichnungen',
+    'date' => 'Datum',
+    'delete' => 'löschen',
+    'edit' => 'editieren',
+    'edit_award' => 'Auszeichnung editieren',
+    'enter_text' => 'Du musst einen Text eingeben!',
+    'enter_title' => 'Du musst einen Titel eingeben!',
+    'event' => 'Veranstaltung',
+    'homepage' => 'Homepage',
+    'info' => 'Info',
+    'new_award' => 'Neue Auszeichnung',
+    'no_access' => 'Kein Zugriff!',
+    'no_entries' => 'Keine Auszeichnung vorhanden',
+    'ranking' => 'Rang',
+    'save_award' => 'Auszeichnung speichern',
+    'sort' => 'Sortiere',
+    'squad' => 'Team',
+    'update_award' => 'Auszeichnung aktualisieren'
 );
 

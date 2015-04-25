@@ -25,7 +25,7 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
@@ -54,3 +54,4 @@ $language_array = Array(
     'title_categories' => 'Lingi kategooriad',
     'update_link' => 'Uuenda link'
 );
+

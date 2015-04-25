@@ -25,14 +25,13 @@
 ##########################################################################
 */
 
-
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'board'=>'Forums',
-  'last_post'=>'Pēdējais ieraksts',
-  'reply'=>'Atbildēt',
-  'replies'=>'Atbildes'
+    'board' => 'Forums',
+    'last_post' => 'Pēdējais ieraksts',
+    'replies' => 'Atbildes',
+    'reply' => 'Atbildēt'
 );
 

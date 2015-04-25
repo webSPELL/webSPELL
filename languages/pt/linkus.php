@@ -25,24 +25,24 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
-  
-  'back'=>'voltar',
-	'banner'=>'Banner',
-	'banner_to_big'=>'A imgem é demasiado grande',
-	'delete'=>'eliminar',
-	'edit'=>'editar',
-	'edit_linkus'=>'editar banner',
-	'format_incorrect'=>'Formato de imagem inválido (permitido: *.gif, *.jpg or *.png)',
-	'link_us'=>'criar nosso link',
-	'name'=>'Nome',
-	'new_banner'=>'novo banner',
-	'no_access'=>'Acesso negado!',
-	'no_banner'=>'sem banner nosso com link',
-	'really_delete_banner'=>'que mesmo eliminar este banner?',
-	'save_banner'=>'guardar banner',
-	'use_following_code'=>'Utilize o código seguinte, de modo a inserir o banner na sua página.'
+
+    'back' => 'voltar',
+    'banner' => 'Banner',
+    'banner_to_big' => 'A imgem é demasiado grande',
+    'delete' => 'eliminar',
+    'edit' => 'editar',
+    'edit_linkus' => 'editar banner',
+    'format_incorrect' => 'Formato de imagem inválido (permitido: *.gif, *.jpg or *.png)',
+    'link_us' => 'criar nosso link',
+    'name' => 'Nome',
+    'new_banner' => 'novo banner',
+    'no_access' => 'Acesso negado!',
+    'no_banner' => 'sem banner nosso com link',
+    'really_delete_banner' => 'que mesmo eliminar este banner?',
+    'save_banner' => 'guardar banner',
+    'use_following_code' => 'Utilize o código seguinte, de modo a inserir o banner na sua página.'
 );
 

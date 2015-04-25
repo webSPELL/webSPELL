@@ -25,28 +25,28 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'award'=>'Nagrada',
-	'awards'=>'Nagrade',
-	'date'=>'Datum',
-	'delete'=>'Izbriši',
-	'edit'=>'Izmjeni',
-	'edit_award'=>'Izmjeni nagradu',
-	'enter_title'=>'Morate unijeti naslov!',
-	'enter_text'=>'Morate unijeti tekst',
-	'event'=>'Event',
-	'homepage'=>'Stranica',
-	'info'=>'Info',
-	'new_award'=>'Nova nagrada',
-	'no_access'=>'Nemate pristup!',
-	'no_entries'=>'Nema upisanih nagrada',
-	'ranking'=>'Mjesto',
-	'save_award'=>'Spremi nagradu',
-	'sort'=>'Razvrstaj',
-	'squad'=>'Tim',
-	'update_award'=>'Spremi izmjene'
+    'award' => 'Nagrada',
+    'awards' => 'Nagrade',
+    'date' => 'Datum',
+    'delete' => 'Izbriši',
+    'edit' => 'Izmjeni',
+    'edit_award' => 'Izmjeni nagradu',
+    'enter_text' => 'Morate unijeti tekst',
+    'enter_title' => 'Morate unijeti naslov!',
+    'event' => 'Event',
+    'homepage' => 'Stranica',
+    'info' => 'Info',
+    'new_award' => 'Nova nagrada',
+    'no_access' => 'Nemate pristup!',
+    'no_entries' => 'Nema upisanih nagrada',
+    'ranking' => 'Mjesto',
+    'save_award' => 'Spremi nagradu',
+    'sort' => 'Razvrstaj',
+    'squad' => 'Tim',
+    'update_award' => 'Spremi izmjene'
 );
 

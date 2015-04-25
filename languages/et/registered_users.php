@@ -25,20 +25,19 @@
 ##########################################################################
 */
 
-
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'contact'=>'Kontakt',
-  'country'=>'Riik',
-  'homepage'=>'Koduleht',
-  'last_login'=>'Viimane sisselogimine',
-  'nickname'=>'Hüüdnimi',
-  'no_users'=>'pole registreeritud kasutajaid',
-  'now_on'=>'hetkel online',
-  'registered_users'=>'registreeritud kasutajat',
-  'registration'=>'Registreerus',
-  'sort'=>'Sorteerimine:'
+    'contact' => 'Kontakt',
+    'country' => 'Riik',
+    'homepage' => 'Koduleht',
+    'last_login' => 'Viimane sisselogimine',
+    'nickname' => 'Hüüdnimi',
+    'no_users' => 'pole registreeritud kasutajaid',
+    'now_on' => 'hetkel online',
+    'registered_users' => 'registreeritud kasutajat',
+    'registration' => 'Registreerus',
+    'sort' => 'Sorteerimine:'
 );
 

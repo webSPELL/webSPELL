@@ -29,20 +29,20 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'crwdns16193:0crwdne16193:0',
-  'actions'=>'crwdns16194:0crwdne16194:0',
-  'add_category'=>'crwdns16195:0crwdne16195:0',
-  'category'=>'crwdns16196:0crwdne16196:0',
-  'category_name'=>'crwdns16197:0crwdne16197:0',
-  'delete'=>'crwdns16198:0crwdne16198:0',
-  'enter_name'=>'crwdns16199:0crwdne16199:0',
-  'edit'=>'crwdns16200:0crwdne16200:0',
-  'edit_category'=>'crwdns16201:0crwdne16201:0',
-  'file_categories'=>'crwdns16202:0crwdne16202:0',
-  'main'=>'crwdns16203:0crwdne16203:0',
-  'new_category'=>'crwdns16204:0crwdne16204:0',
-  'really_delete'=>'crwdns16205:0crwdne16205:0',
-  'sub_category'=>'crwdns16206:0crwdne16206:0',
-  'transaction_invalid'=>'crwdns16207:0crwdne16207:0'
+  'access_denied'=>'crwdns22048:0crwdne22048:0',
+  'actions'=>'crwdns22049:0crwdne22049:0',
+  'add_category'=>'crwdns22050:0crwdne22050:0',
+  'category'=>'crwdns22051:0crwdne22051:0',
+  'category_name'=>'crwdns22052:0crwdne22052:0',
+  'delete'=>'crwdns22053:0crwdne22053:0',
+  'enter_name'=>'crwdns22054:0crwdne22054:0',
+  'edit'=>'crwdns22055:0crwdne22055:0',
+  'edit_category'=>'crwdns22056:0crwdne22056:0',
+  'file_categories'=>'crwdns22057:0crwdne22057:0',
+  'main'=>'crwdns22058:0crwdne22058:0',
+  'new_category'=>'crwdns22059:0crwdne22059:0',
+  'really_delete'=>'crwdns22060:0crwdne22060:0',
+  'sub_category'=>'crwdns22061:0crwdne22061:0',
+  'transaction_invalid'=>'crwdns22062:0crwdne22062:0'
 );
 

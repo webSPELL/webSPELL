@@ -25,31 +25,31 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'del_from_mail_list'=>'Radera från mail listan',
-	'del_key'=>'radera-knapp',
-	'delete'=>'radera',
-	'deletion_key'=>'Radernings kanapp',
-	'email_not_valid'=>'Din email är inte giltig!',
-	'lost_deletion_key'=>'Tappat radernings knapp?',
-	'mail_adress'=>'mail adress',
-	'mail_pw_didnt_match'=>'Mailet/lösenordet matchade inte',
-	'mail_not_in_db'=>'E-post adressen du angav finns inte i databasen',
-	'newsletter'=>'nyhetsbrev',
-	'newsletter_registration'=>'Nyhetsbrevs registration',
-	'no_such_mail_adress'=>'Det finns ingen sådan email adress.',
-	'password_had_been_send'=>'Lösenordet har skickats.',
-	'register_newsletter'=>'Registrear för nyhetsbrev',
-	'request_mail'=>'<b>Det krävs din radernings knapp!</b><br><br>För att radera din mail från maillistan klicka <a href="http://%homepage_url%/index.php?site=newsletter&mail=%mail%&pass=%delete_key%">här</a><br>Ditt lösenord för att radera själv: %delete_key%<br><br>Ses på %homepage_url%',
-	'send'=>'skicka',
-	'submit'=>'lämna in',
-	'success_mail'=>'<b>Tack för din registration!</b><br><br>För att radera din mail från maillistan klicka <a href="http://%homepage_url%/index.php?site=newsletter&mail=%mail%&pass=%delete_key%">här</a><br>Ditt lösenord för att radera själv: %delete_key%<br><br>Ses på %homepage_url%',
-	'thank_you_for_registration'=>'Tack för din registration.',
-	'you_are_already_registered'=>'Du är redan registrerad.',
-	'your_mail_adress'=>'Din email adress',
-	'your_mail_adress_deleted'=>'Din mail adress har raderats.'
+    'del_from_mail_list' => 'Radera från mail listan',
+    'del_key' => 'radera-knapp',
+    'delete' => 'radera',
+    'deletion_key' => 'Radernings kanapp',
+    'email_not_valid' => 'Din email är inte giltig!',
+    'lost_deletion_key' => 'Tappat radernings knapp?',
+    'mail_adress' => 'mail adress',
+    'mail_not_in_db' => 'E-post adressen du angav finns inte i databasen',
+    'mail_pw_didnt_match' => 'Mailet/lösenordet matchade inte',
+    'newsletter' => 'nyhetsbrev',
+    'newsletter_registration' => 'Nyhetsbrevs registration',
+    'no_such_mail_adress' => 'Det finns ingen sådan email adress.',
+    'password_had_been_send' => 'Lösenordet har skickats.',
+    'register_newsletter' => 'Registrear för nyhetsbrev',
+    'request_mail' => '<b>Det krävs din radernings knapp!</b><br><br>För att radera din mail från maillistan klicka <a href="http://%homepage_url%/index.php?site=newsletter&mail=%mail%&pass=%delete_key%">här</a><br>Ditt lösenord för att radera själv: %delete_key%<br><br>Ses på %homepage_url%',
+    'send' => 'skicka',
+    'submit' => 'lämna in',
+    'success_mail' => '<b>Tack för din registration!</b><br><br>För att radera din mail från maillistan klicka <a href="http://%homepage_url%/index.php?site=newsletter&mail=%mail%&pass=%delete_key%">här</a><br>Ditt lösenord för att radera själv: %delete_key%<br><br>Ses på %homepage_url%',
+    'thank_you_for_registration' => 'Tack för din registration.',
+    'you_are_already_registered' => 'Du är redan registrerad.',
+    'your_mail_adress' => 'Din email adress',
+    'your_mail_adress_deleted' => 'Din mail adress har raderats.'
 );
 

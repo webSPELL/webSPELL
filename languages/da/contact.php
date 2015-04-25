@@ -25,29 +25,28 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'back'=>'tilbage',
-	'contact'=>'kontakt',
-	'description'=>'Med denne formular, er du i stand til at sende en besked til webmasteren af denne side',
-	'enter_mail'=>'Indtast venligst en email adresse.',
-	'enter_message'=>'Indtast venligst en besked.',
-	'enter_name'=>'Indtast venligst et navn.',
-	'enter_subject'=>'Indtast venligst et emne.',
-	'errors_there'=>'Der opstod fejl',
-	'mail'=>'E-Mail',
-	'message'=>'Besked',
-	'name'=>'Navn',
-	'receiver'=>'Modtager',
-	'reset'=>'Nulstil',
-	'security_code'=>'Sikkerhedskode',
-	'send'=>'Send',
-	'send_successfull'=>'Din besked blev sent.',
-	'subject'=>'Emne',
-	'title_contact'=>'Kontaktformular',
-	'unknown_receiver'=>'unknown receiver',
-	'wrong_securitycode'=>'Du har indtastet en forkert sikkerhedskode!'
+    'back' => 'tilbage',
+    'contact' => 'kontakt',
+    'description' => 'Med denne formular, er du i stand til at sende en besked til webmasteren af denne side',
+    'enter_mail' => 'Indtast venligst en email adresse.',
+    'enter_message' => 'Indtast venligst en besked.',
+    'enter_name' => 'Indtast venligst et navn.',
+    'enter_subject' => 'Indtast venligst et emne.',
+    'errors_there' => 'Der opstod fejl',
+    'message' => 'Besked',
+    'name' => 'Navn',
+    'receiver' => 'Modtager',
+    'reset' => 'Nulstil',
+    'security_code' => 'Sikkerhedskode',
+    'send' => 'Send',
+    'send_successfull' => 'Din besked blev sent.',
+    'subject' => 'Emne',
+    'title_contact' => 'Kontaktformular',
+    'unknown_receiver' => 'unknown receiver',
+    'wrong_securitycode' => 'Du har indtastet en forkert sikkerhedskode!'
 );
 

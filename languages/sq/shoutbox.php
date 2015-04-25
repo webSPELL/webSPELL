@@ -24,24 +24,18 @@
 #                                                                        #
 ##########################################################################
 */
-/**
- * Online Language Editor Albania language file for webSPELL 4.2.2
- * @author Stefan Giesecke <webmaster@giesi.com>
- * @copyright Copyright (c) 2010, Stefan Giesecke
- * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
- */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'all_messages'=>'Trego të gjithë mesazhet',
-  'enter_message'=>'Duhet të vendosni një mesazh!',
-  'enter_name'=>'Duhet të vendosni emrin!',
-  'delete_selected'=>'Fshiji të zgjedhurat',
-  'select_all'=>'Zgjidhi të gjitha',
-  'shout'=>'Bërtit!',
-  'shoutbox'=>'shoutbox',
-  'sort'=>'Grupo:'
+    'all_messages' => 'Trego të gjithë mesazhet',
+    'delete_selected' => 'Fshiji të zgjedhurat',
+    'enter_message' => 'Duhet të vendosni një mesazh!',
+    'enter_name' => 'Duhet të vendosni emrin!',
+    'select_all' => 'Zgjidhi të gjitha',
+    'shout' => 'Bërtit!',
+    'shoutbox' => 'shoutbox',
+    'sort' => 'Grupo:'
 );
 

@@ -25,7 +25,7 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
@@ -44,13 +44,10 @@ $language_array = Array(
     'clan-name' => 'Nombre de Clan',
     'clan-tag' => 'Signos de clan',
     'country' => 'País',
-    'cpu' => 'CPU',
     'date_of_birth' => 'Cupleaños',
     'deactivated' => 'desactivado',
-    'delete' => 'delete',
     'delete_max_90_90' => 'borrar (max90/90)',
     'delete_max_230_210' => 'borrar (max230/210)',
-    'e-mail' => 'E-mail',
     'edit_mail' => 'cambian e-mail',
     'edit_password' => 'cambian Contraseña',
     'equipment-info' => 'Info Equipamiento',
@@ -139,3 +136,4 @@ Muchas gracias para su interés
     'you_have_to_username' => 'Tienes que insertar tu nombre de usuario!',
     'you_have_to_valid_email' => 'Tu email no es válido!'
 );
+

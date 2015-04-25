@@ -24,20 +24,14 @@
 #                                                                        #
 ##########################################################################
 */
-/**
- * Online Language Editor Finland language file for webSPELL 4.2.2
- * @author Stefan Giesecke <webmaster@giesi.com>
- * @copyright Copyright (c) 2010, Stefan Giesecke
- * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
- */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'no_informations'=>'ei tietoa saatavilla',
-  'report_message'=>'[b]On uusi %s - Raportti[/b][br][br]%s-ID: %d[br]Tiedot: %s[br]Referer: [url]index.php?site=files&file=%d[/url]',
-  'report_recognized'=>'Raporttisi on huomioitu. Kiitoksia.',
-  'wrong_securitycode'=>'Syötit väärän turvallisuuskoodin<br><br>[<a href="javascript:back();">Takaisin</a>]'
+    'no_informations' => 'ei tietoa saatavilla',
+    'report_message' => '[b]On uusi %s - Raportti[/b][br][br]%s-ID: %d[br]Tiedot: %s[br]Referer: [url]index.php?site=files&file=%d[/url]',
+    'report_recognized' => 'Raporttisi on huomioitu. Kiitoksia.',
+    'wrong_securitycode' => 'Syötit väärän turvallisuuskoodin<br><br>[<a href="javascript:back();">Takaisin</a>]'
 );
 

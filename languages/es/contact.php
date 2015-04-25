@@ -25,29 +25,28 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'back'=>'volver al formulario',
-	'contact'=>'contactar',
-	'description'=>'Con este formulario puedes enviar un mensaje al webmaster de está página',
-	'enter_mail'=>'Porfavor introduce una dirección email.',
-	'enter_message'=>'Porfavor inserta un mensaje.',
-	'enter_name'=>'Porfavor introduce un nombre.',
-	'enter_subject'=>'Porfavor introduce un tema.',
-	'errors_there'=>'Ocurrieron algunos errores',
-	'mail'=>'E-Mail',
-	'message'=>'Mensaje',
-	'name'=>'Nombre',
-	'receiver'=>'Receiver',
-	'reset'=>'Resetear',
-	'security_code'=>'Código de seguridad',
-	'send'=>'Enviar',
-	'send_successfull'=>'Su noticia era expedida.',
-	'subject'=>'Título',
-	'title_contact'=>'Formulario de contacto',
-	'unknown_receiver'=>'unknown receiver',
-	'wrong_securitycode'=>'Insertaste un código de seguridad erroneo!'
+    'back' => 'volver al formulario',
+    'contact' => 'contactar',
+    'description' => 'Con este formulario puedes enviar un mensaje al webmaster de está página',
+    'enter_mail' => 'Porfavor introduce una dirección email.',
+    'enter_message' => 'Porfavor inserta un mensaje.',
+    'enter_name' => 'Porfavor introduce un nombre.',
+    'enter_subject' => 'Porfavor introduce un tema.',
+    'errors_there' => 'Ocurrieron algunos errores',
+    'message' => 'Mensaje',
+    'name' => 'Nombre',
+    'receiver' => 'Receiver',
+    'reset' => 'Resetear',
+    'security_code' => 'Código de seguridad',
+    'send' => 'Enviar',
+    'send_successfull' => 'Su noticia era expedida.',
+    'subject' => 'Título',
+    'title_contact' => 'Formulario de contacto',
+    'unknown_receiver' => 'unknown receiver',
+    'wrong_securitycode' => 'Insertaste un código de seguridad erroneo!'
 );
 

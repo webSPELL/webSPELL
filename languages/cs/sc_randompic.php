@@ -25,12 +25,12 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'no_user'=>'uživatel nenahrál obrázek',
-	'registered_since'=>'registrovaný od',
-	'view_profile'=>'návštěvy profilu'
+    'no_user' => 'uživatel nenahrál obrázek',
+    'registered_since' => 'registrovaný od',
+    'view_profile' => 'návštěvy profilu'
 );
 

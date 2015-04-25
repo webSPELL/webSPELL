@@ -25,12 +25,11 @@
 ##########################################################################
 */
 
-
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'history'=>'تاريخ',
-  'no_history'=>'.لا توجد معلومات لحد الان'
+    'history' => 'تاريخ',
+    'no_history' => '.لا توجد معلومات لحد الان'
 );
 

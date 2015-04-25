@@ -25,7 +25,7 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
@@ -41,7 +41,6 @@ $language_array = Array(
     'database_cl' => 'Databas',
     'delete_file' => 'radera fil',
     'description' => 'Beskrivning',
-    'dl' => 'DL',
     'download_now' => 'Ladda ner %filename% nu',
     'download_registered_only' => 'Nerladdning endast för registrerade användare!',
     'download_via_mirror' => 'Ladda ner via spegel',
@@ -105,3 +104,4 @@ $language_array = Array(
     'you_have_to_enter_file' => 'Du måste ange en fil / URL!',
     'you_have_to_enter_filename' => 'Du måste skriva ett filnamn!'
 );
+

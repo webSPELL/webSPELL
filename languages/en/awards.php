@@ -25,28 +25,28 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'award'=>'Award',
-	'awards'=>'awards',
-	'date'=>'Date',
-	'delete'=>'delete',
-	'edit'=>'edit',
-	'edit_award'=>'Edit award',
-	'enter_title'=>'You have to enter a title!',
-	'enter_text'=>'You have to enter a text',
-	'event'=>'Event',
-	'homepage'=>'Homepage',
-	'info'=>'Info',
-	'new_award'=>'New award',
-	'no_access'=>'No access!',
-	'no_entries'=>'No award available',
-	'ranking'=>'Ranking',
-	'save_award'=>'Save award',
-	'sort'=>'Sort',
-	'squad'=>'Squad',
-	'update_award'=>'Update award'
+    'award' => 'Award',
+    'awards' => 'awards',
+    'date' => 'Date',
+    'delete' => 'delete',
+    'edit' => 'edit',
+    'edit_award' => 'Edit award',
+    'enter_text' => 'You have to enter a text',
+    'enter_title' => 'You have to enter a title!',
+    'event' => 'Event',
+    'homepage' => 'Homepage',
+    'info' => 'Info',
+    'new_award' => 'New award',
+    'no_access' => 'No access!',
+    'no_entries' => 'No award available',
+    'ranking' => 'Ranking',
+    'save_award' => 'Save award',
+    'sort' => 'Sort',
+    'squad' => 'Squad',
+    'update_award' => 'Update award'
 );
 

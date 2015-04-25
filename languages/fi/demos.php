@@ -25,7 +25,7 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
@@ -75,6 +75,6 @@ $language_array = Array(
     'to_rate' => 'Voidaksesi arvostella demon, sinun täytyy olla rekisteröitynyt käyttäjä kirjautuneena sisään!',
     'update_demo' => 'Päivitä demo',
     'user_comments' => 'Käyttäjien kommentteja',
-    'visitor_comments' => 'Vierailijoiden kommmentteja',
-    'vs' => 'vs.'
+    'visitor_comments' => 'Vierailijoiden kommmentteja'
 );
+

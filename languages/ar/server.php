@@ -25,20 +25,18 @@
 ##########################################################################
 */
 
-
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'game'=>'اللعبة',
-  'information'=>'معلومات',
-  'ip'=>'IP',
-  'link'=>'رابط',
-  'no_server'=>'لا يوجد مقلمات متاحه',
-  'not_supported'=>'غير معتمدة من قبل الشبكه',
-  'online'=>'متصل',
-  'server'=>'المقلم',
-  'status'=>'الحالة',
-  'timeout'=>'انتهاء المهلة'
+    'game' => 'اللعبة',
+    'information' => 'معلومات',
+    'link' => 'رابط',
+    'no_server' => 'لا يوجد مقلمات متاحه',
+    'not_supported' => 'غير معتمدة من قبل الشبكه',
+    'online' => 'متصل',
+    'server' => 'المقلم',
+    'status' => 'الحالة',
+    'timeout' => 'انتهاء المهلة'
 );
 

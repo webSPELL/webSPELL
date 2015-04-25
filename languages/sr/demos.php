@@ -25,18 +25,16 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
     'all_demos' => 'Cви демои',
     'allready_rated' => 'Ви сте вец оцијенили овај демо',
-    'clan1' => 'Клан 1',
     'clan1_country' => 'Земља клана 1',
     'clan1_homepage' => 'Сајт клана 1',
     'clan1_name' => 'Пуно име клана 1',
     'clan1_tag' => 'Таг клана 1',
-    'clan2' => 'Клан 2',
     'clan2_country' => 'Земља клана 2',
     'clan2_homepage' => 'Сајт клана 2',
     'clan2_name' => 'Пуно име клана 2',
@@ -78,3 +76,4 @@ $language_array = Array(
     'visitor_comments' => 'Омогуци коментаре посјетителјима',
     'vs' => 'вс.'
 );
+

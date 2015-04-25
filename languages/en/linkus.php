@@ -25,24 +25,24 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'back'=>'back',
-	'banner'=>'Banner',
-	'banner_to_big'=>'Picture is to big',
-	'delete'=>'delete',
-	'edit'=>'edit',
-	'edit_linkus'=>'edit banner',
-	'format_incorrect'=>'Invalid picture-format (allowed: *.gif, *.jpg or *.png)',
-	'link_us'=>'link us',
-	'name'=>'Name',
-	'new_banner'=>'new banner',
-	'no_access'=>'No access!',
-	'no_banner'=>'no link us banner',
-	'really_delete_banner'=>'really delete this banner?',
-	'save_banner'=>'save banner',
-	'use_following_code'=>'Use the following code, to insert the banner on your homepage.'
+    'back' => 'back',
+    'banner' => 'Banner',
+    'banner_to_big' => 'Picture is to big',
+    'delete' => 'delete',
+    'edit' => 'edit',
+    'edit_linkus' => 'edit banner',
+    'format_incorrect' => 'Invalid picture-format (allowed: *.gif, *.jpg or *.png)',
+    'link_us' => 'link us',
+    'name' => 'Name',
+    'new_banner' => 'new banner',
+    'no_access' => 'No access!',
+    'no_banner' => 'no link us banner',
+    'really_delete_banner' => 'really delete this banner?',
+    'save_banner' => 'save banner',
+    'use_following_code' => 'Use the following code, to insert the banner on your homepage.'
 );
 

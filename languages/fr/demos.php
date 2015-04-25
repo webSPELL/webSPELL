@@ -25,7 +25,7 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
@@ -75,6 +75,6 @@ $language_array = Array(
     'to_rate' => 'Vous devez être enregistré et connecté pour noter cette démo !',
     'update_demo' => 'Editer',
     'user_comments' => 'Activer les commentaires pour les membres',
-    'visitor_comments' => 'Activer les commentaires',
-    'vs' => 'vs.'
+    'visitor_comments' => 'Activer les commentaires'
 );
+

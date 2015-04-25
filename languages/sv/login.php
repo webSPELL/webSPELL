@@ -25,23 +25,22 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'admin'=>'admin',
-	'buddy_list'=>'vänner lista',
-	'cash-box'=>'pengar-låda',
-	'edit_account'=>'redigera konto',
-	'galleries'=>'gallerier',
-	'login'=>'logga in',
-	'logout'=>'logga ut',
-	'lost_password'=>'tappat bort lösenordet?',
-	'messenger'=>'messenger',
-	'n_a'=>'n/a',
-	'overview'=>'överblick',
-	'register_now'=>'registrera dig nu',
-	'registered_users'=>'registrerade användare',
-	'welcome_back'=>'Välkomen tillbaka'
+    'admin' => 'admin',
+    'buddy_list' => 'vänner lista',
+    'cash-box' => 'pengar-låda',
+    'edit_account' => 'redigera konto',
+    'galleries' => 'gallerier',
+    'login' => 'logga in',
+    'logout' => 'logga ut',
+    'lost_password' => 'tappat bort lösenordet?',
+    'messenger' => 'messenger',
+    'overview' => 'överblick',
+    'register_now' => 'registrera dig nu',
+    'registered_users' => 'registrerade användare',
+    'welcome_back' => 'Välkomen tillbaka'
 );
 

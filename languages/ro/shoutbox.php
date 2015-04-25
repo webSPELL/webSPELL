@@ -25,18 +25,17 @@
 ##########################################################################
 */
 
-
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'all_messages'=>'Arată toate mesajele',
-  'enter_message'=>'Trebuie să introduci un mesaj!',
-  'enter_name'=>'Trebuie să-ţi introduci numele!',
-  'delete_selected'=>'şterge ce ai selectat',
-  'select_all'=>'Selectează tot',
-  'shout'=>'strigă!',
-  'shoutbox'=>'shoutbox',
-  'sort'=>'Sortează:'
+    'all_messages' => 'Arată toate mesajele',
+    'delete_selected' => 'şterge ce ai selectat',
+    'enter_message' => 'Trebuie să introduci un mesaj!',
+    'enter_name' => 'Trebuie să-ţi introduci numele!',
+    'select_all' => 'Selectează tot',
+    'shout' => 'strigă!',
+    'shoutbox' => 'shoutbox',
+    'sort' => 'Sortează:'
 );
 

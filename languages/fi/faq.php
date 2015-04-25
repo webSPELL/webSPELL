@@ -24,24 +24,16 @@
 #                                                                        #
 ##########################################################################
 */
-/**
- * Online Language Editor Finland language file for webSPELL 4.2.2
- * @author Stefan Giesecke <webmaster@giesi.com>
- * @copyright Copyright (c) 2010, Stefan Giesecke
- * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
- */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'admin_button'=>'FAQ Hallinto',
-  'answer'=>'Vastaukset',
-  'categories'=>'Kategoriat',
-  'faq'=>'FAQ',
-  'faqs'=>'FAQs',
-  'no_categories'=>'ei vielä luotu kategoriaa',
-  'no_faq'=>'Ei kysymyksiä saatavilla<br><a href="index.php?site=faq">Takaisin</a>',
-  'saved_on'=>'Tallennettu'
+    'admin_button' => 'FAQ Hallinto',
+    'answer' => 'Vastaukset',
+    'categories' => 'Kategoriat',
+    'no_categories' => 'ei vielä luotu kategoriaa',
+    'no_faq' => 'Ei kysymyksiä saatavilla<br><a href="index.php?site=faq">Takaisin</a>',
+    'saved_on' => 'Tallennettu'
 );
 

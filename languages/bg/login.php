@@ -24,30 +24,23 @@
 #                                                                        #
 ##########################################################################
 */
-/**
- * Online Language Editor Bulgaria language file for webSPELL 4.2.2
- * @author Stefan Giesecke <webmaster@giesi.com>
- * @copyright Copyright (c) 2010, Stefan Giesecke
- * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
- */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'admin'=>'администратор',
-  'buddy_list'=>'cписък с приятели',
-  'cash-box'=>'каса',
-  'edit_account'=>'редактиране на профила',
-  'galleries'=>'галерии',
-  'login'=>'влизане',
-  'logout'=>'излизане',
-  'lost_password'=>'забравена парола?',
-  'messenger'=>'пратеник',
-  'n_a'=>'n/a',
-  'overview'=>'преглед',
-  'register_now'=>'pегистрирайте се сега',
-  'registered_users'=>'регистрирани потребители',
-  'welcome_back'=>'добре дошли'
+    'admin' => 'администратор',
+    'buddy_list' => 'cписък с приятели',
+    'cash-box' => 'каса',
+    'edit_account' => 'редактиране на профила',
+    'galleries' => 'галерии',
+    'login' => 'влизане',
+    'logout' => 'излизане',
+    'lost_password' => 'забравена парола?',
+    'messenger' => 'пратеник',
+    'overview' => 'преглед',
+    'register_now' => 'pегистрирайте се сега',
+    'registered_users' => 'регистрирани потребители',
+    'welcome_back' => 'добре дошли'
 );
 

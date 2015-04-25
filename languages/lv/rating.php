@@ -25,12 +25,11 @@
 ##########################################################################
 */
 
-
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'no_access'=>'nav pieejas!',
-  'just_rate_between_0_10'=>'Lūdzu novērtējiet no 0 līdz 10 punktiem!'
+    'just_rate_between_0_10' => 'Lūdzu novērtējiet no 0 līdz 10 punktiem!',
+    'no_access' => 'nav pieejas!'
 );
 

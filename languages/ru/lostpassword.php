@@ -25,14 +25,13 @@
 ##########################################################################
 */
 
-
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'email_failed'=>'Возникла проблема при отправке сообщения .Пожалуйста контактируйте с веб администратором.',
-  'email_subject'=>'Ваш профиль для %pagetitle%',
-  'email_text'=>'Ваш профиль для %pagetitle%
+    'email_failed' => 'Возникла проблема при отправке сообщения .Пожалуйста контактируйте с веб администратором.',
+    'email_subject' => 'Ваш профиль для %pagetitle%',
+    'email_text' => 'Ваш профиль для %pagetitle%
 ВНИМАНИЕ ваш пароль был изменен
 
 Имя пользователя: %username%
@@ -40,13 +39,12 @@ $language_array = Array(
 
 влекайтесь на нашей странице
 %homepage_url%',
-  'get_password'=>'Получить пароль',
-  'lost_password'=>'Забыли пароль',
-  'no_mail_given'=>'Вы не ввели никакого mail адреса.',
-  'no_user_found'=>'Пользователь не найден!',
-  'successful'=>'Ваш профиль найден<br><br>
+    'get_password' => 'Получить пароль',
+    'lost_password' => 'Забыли пароль',
+    'no_mail_given' => 'Вы не ввели никакого mail адреса.',
+    'no_user_found' => 'Пользователь не найден!',
+    'successful' => 'Ваш профиль найден<br><br>
     Вы получите e-mail с данными вашего профиля через несколько секунд.<br><br>
-    &#8226; <a href="index.php?site=login">Логин</a>',
-  'your_email'=>'Ваш E-Mail'
+    &#8226; <a href="index.php?site=login">Логин</a>'
 );
 

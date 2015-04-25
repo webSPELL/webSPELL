@@ -25,38 +25,36 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'admin_comment'=>'Komentarz admina',
-	'bbcode'=>'<a href="javascript:void(0);" onclick="window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> jest WŁĄCZONY',
-	'by'=>'przez',
-	'comment'=>'Komentarz',
-	'delete_selected'=>'Usuń zaznaczone',
-	'enter_a_message'=>'Musisz wpisać treść wiadomości!',
-	'error_captcha'=>'Błędny kod zabezpieczający!',
-	'enter_your_name'=>'Musisz wpisać swój nick!',
-	'guestbook'=>'księga gości',
-	'guestbook_comment'=>'Komentarz w księdze gości',
-	'homepage'=>'Strona domowa',
-	'html'=>'HTML WYŁĄCZONY',
-	'icq'=>'ICQ',
-	'ip'=>'IP',
-	'mail'=>'Twój adres email',
-	'name'=>'Twój nick',
-	'new_entry'=>'Nowy wpis',
-	'no_access'=>'Nie jesteś zalogowany.<br><a href="index.php?site=login">Login</a> | <a href="index.php?site=register">Zarejestruj się</a>',
-	'options'=>'Opcje',
-	'pmsubject_newentry'=>'Nowy wpis do księgi gości',
-	'pmtext_newentry'=>'[b]Ktoś zostawił wpis w Twojej księdze gości![/b][br][br] [URL=index.php?site=guestbook#%insertid%]Kliknij tutaj żeby odczytać wiadomość[/URL] ',
-	'security_code'=>'Kod zabezpieczający',
-	'select_all'=>'zaznacz wszystkie',
-	'smilies'=>'<a href="javascript:void(0);" onclick="window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Emotikonki</a>są WŁĄCZONE',
-	'sort'=>'Sortuj:',
-	'submit'=>'Wyślij',
-	'update_comment'=>'Zapisz komentarz',
-	'wrote'=>'napisał',
-	'your_message'=>'Twoja wiadomość'
+    'admin_comment' => 'Komentarz admina',
+    'bbcode' => '<a href="javascript:void(0);" onclick="window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> jest WŁĄCZONY',
+    'by' => 'przez',
+    'comment' => 'Komentarz',
+    'delete_selected' => 'Usuń zaznaczone',
+    'enter_a_message' => 'Musisz wpisać treść wiadomości!',
+    'enter_your_name' => 'Musisz wpisać swój nick!',
+    'error_captcha' => 'Błędny kod zabezpieczający!',
+    'guestbook' => 'księga gości',
+    'guestbook_comment' => 'Komentarz w księdze gości',
+    'homepage' => 'Strona domowa',
+    'html' => 'HTML WYŁĄCZONY',
+    'mail' => 'Twój adres email',
+    'name' => 'Twój nick',
+    'new_entry' => 'Nowy wpis',
+    'no_access' => 'Nie jesteś zalogowany.<br><a href="index.php?site=login">Login</a> | <a href="index.php?site=register">Zarejestruj się</a>',
+    'options' => 'Opcje',
+    'pmsubject_newentry' => 'Nowy wpis do księgi gości',
+    'pmtext_newentry' => '[b]Ktoś zostawił wpis w Twojej księdze gości![/b][br][br] [URL=index.php?site=guestbook#%insertid%]Kliknij tutaj żeby odczytać wiadomość[/URL] ',
+    'security_code' => 'Kod zabezpieczający',
+    'select_all' => 'zaznacz wszystkie',
+    'smilies' => '<a href="javascript:void(0);" onclick="window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Emotikonki</a>są WŁĄCZONE',
+    'sort' => 'Sortuj:',
+    'submit' => 'Wyślij',
+    'update_comment' => 'Zapisz komentarz',
+    'wrote' => 'napisał',
+    'your_message' => 'Twoja wiadomość'
 );
 

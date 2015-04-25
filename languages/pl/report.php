@@ -25,13 +25,13 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'no_informations'=>'brak dostępnych informacji',
-	'report_message'=>'[b]Jest nowy %s - Raport[/b][br][br]%files-ID: %d[br]Informacje: %s[br]Odsyłacz: [url]index.php?site=files&file=%d[/url]',
-	'report_recognized'=>'Twój raport został wysłany.Dziękujemy.',
-  'wrong_securitycode'=>'Wprowadziłeś błędny kod zabezpieczający<br><br>[<a href="javascript:back();">wstecz</a>]'
+    'no_informations' => 'brak dostępnych informacji',
+    'report_message' => '[b]Jest nowy %s - Raport[/b][br][br]%files-ID: %d[br]Informacje: %s[br]Odsyłacz: [url]index.php?site=files&file=%d[/url]',
+    'report_recognized' => 'Twój raport został wysłany.Dziękujemy.',
+    'wrong_securitycode' => 'Wprowadziłeś błędny kod zabezpieczający<br><br>[<a href="javascript:back();">wstecz</a>]'
 );
 

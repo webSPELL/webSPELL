@@ -25,20 +25,18 @@
 ##########################################################################
 */
 
-
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'game'=>'Mäng',
-  'information'=>'Informatsioon',
-  'ip'=>'IP',
-  'link'=>'Link',
-  'no_server'=>'ühtegi serverit pole saadaval.',
-  'not_supported'=>'Ei toetata veebiserveri poolt',
-  'online'=>'online',
-  'server'=>'server',
-  'status'=>'Staatus',
-  'timeout'=>'aegumine'
+    'game' => 'Mäng',
+    'information' => 'Informatsioon',
+    'link' => 'Link',
+    'no_server' => 'ühtegi serverit pole saadaval.',
+    'not_supported' => 'Ei toetata veebiserveri poolt',
+    'online' => 'online',
+    'server' => 'server',
+    'status' => 'Staatus',
+    'timeout' => 'aegumine'
 );
 

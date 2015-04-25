@@ -25,19 +25,18 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'game'=>'Game',
-  'information'=>'Information',
-	'ip'=>'IP',
-	'link'=>'Link',
-	'no_server'=>'no servers available.',
-	'not_supported'=>'Not supported by webserver',
-	'online'=>'online',
-	'server'=>'server',
-	'status'=>'Status',
-	'timeout'=>'timeout'
+    'game' => 'Game',
+    'information' => 'Information',
+    'link' => 'Link',
+    'no_server' => 'no servers available.',
+    'not_supported' => 'Not supported by webserver',
+    'online' => 'online',
+    'server' => 'server',
+    'status' => 'Status',
+    'timeout' => 'timeout'
 );
 

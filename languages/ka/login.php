@@ -25,24 +25,22 @@
 ##########################################################################
 */
 
-
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'admin'=>'ადმინი',
-  'buddy_list'=>'მეგობრების სია',
-  'cash-box'=>'ყულაბა',
-  'edit_account'=>'ექქაუნტის რედაქტირება',
-  'galleries'=>'გალერიები',
-  'login'=>'ავტორიზაცია',
-  'logout'=>'გამოსვლა',
-  'lost_password'=>'დაგავიწყდათ პაროლი?',
-  'messenger'=>'მესენჯერი',
-  'n_a'=>'n/a',
-  'overview'=>'მიმოხილვა',
-  'register_now'=>'დარეგისტრირდი',
-  'registered_users'=>'დარეგისტრირებული მომხმარებლები',
-  'welcome_back'=>'დაბრუნებას გილოცავთ'
+    'admin' => 'ადმინი',
+    'buddy_list' => 'მეგობრების სია',
+    'cash-box' => 'ყულაბა',
+    'edit_account' => 'ექქაუნტის რედაქტირება',
+    'galleries' => 'გალერიები',
+    'login' => 'ავტორიზაცია',
+    'logout' => 'გამოსვლა',
+    'lost_password' => 'დაგავიწყდათ პაროლი?',
+    'messenger' => 'მესენჯერი',
+    'overview' => 'მიმოხილვა',
+    'register_now' => 'დარეგისტრირდი',
+    'registered_users' => 'დარეგისტრირებული მომხმარებლები',
+    'welcome_back' => 'დაბრუნებას გილოცავთ'
 );
 

@@ -25,13 +25,13 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'email_failed'=>'Houve um problema ao enviar o e-mail. Por favor contacte o webmaster.',
-	'email_subject'=>'A sua conta para %pagetitle%',
-	'email_text'=>'A sua conta para %pagetitle%
+    'email_failed' => 'Houve um problema ao enviar o e-mail. Por favor contacte o webmaster.',
+    'email_subject' => 'A sua conta para %pagetitle%',
+    'email_text' => 'A sua conta para %pagetitle%
 ATENÇÃO a sua password foi alterada.
 
 O seu username: %username%
@@ -39,13 +39,13 @@ A sua nova password: %new_password%
 
 Divirta-se na nossa página
 %homepage_url%',
-	'get_password'=>'obter password',
-	'lost_password'=>'password perdida',
-	'no_mail_given'=>'Não colocou nenhum endereço de email.',
-	'no_user_found'=>'Nenhum utilizador encontrado!',
-	'successful'=>'A sua conta foi encontrada<br><br>
+    'get_password' => 'obter password',
+    'lost_password' => 'password perdida',
+    'no_mail_given' => 'Não colocou nenhum endereço de email.',
+    'no_user_found' => 'Nenhum utilizador encontrado!',
+    'successful' => 'A sua conta foi encontrada<br><br>
 					Irá receber um e-mail com os dados da sua conta em breve.<br><br>
 			 		&#8226; <a href="index.php?site=login">login</a>',
-	'your_email'=>'O seu E-Mail'
+    'your_email' => 'O seu E-Mail'
 );
 

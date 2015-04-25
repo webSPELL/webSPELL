@@ -25,28 +25,28 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'award'=>'Apdovanojimas',
-	'awards'=>'apdovanojimai',
-	'date'=>'Data',
-	'delete'=>'ištrinti',
-	'edit'=>'redeguoti',
-	'edit_award'=>'Redeguoti apdovanojimą',
-	'enter_title'=>'Jūs turite įvesti pavadinimą!',
-	'enter_text'=>'Jūs turite įvesti tekstą',
-	'event'=>'Įvykis',
-	'homepage'=>'Namų puslapis',
-	'info'=>'Info',
-	'new_award'=>'Naujas apdovanojimas',
-	'no_access'=>'Jokia prieiga!',
-	'no_entries'=>'Tuščia, nieko nėra.',
-	'ranking'=>'Padėtis',
-	'save_award'=>'Išsaugoti apdovanojimą',
-	'sort'=>'Rykiuoti',
-	'squad'=>'Būrys',
-	'update_award'=>'Atnaujinti apdovanojimą'
+    'award' => 'Apdovanojimas',
+    'awards' => 'apdovanojimai',
+    'date' => 'Data',
+    'delete' => 'ištrinti',
+    'edit' => 'redeguoti',
+    'edit_award' => 'Redeguoti apdovanojimą',
+    'enter_text' => 'Jūs turite įvesti tekstą',
+    'enter_title' => 'Jūs turite įvesti pavadinimą!',
+    'event' => 'Įvykis',
+    'homepage' => 'Namų puslapis',
+    'info' => 'Info',
+    'new_award' => 'Naujas apdovanojimas',
+    'no_access' => 'Jokia prieiga!',
+    'no_entries' => 'Tuščia, nieko nėra.',
+    'ranking' => 'Padėtis',
+    'save_award' => 'Išsaugoti apdovanojimą',
+    'sort' => 'Rykiuoti',
+    'squad' => 'Būrys',
+    'update_award' => 'Atnaujinti apdovanojimą'
 );
 

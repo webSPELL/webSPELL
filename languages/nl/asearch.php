@@ -25,13 +25,12 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'invalid_request'=>'Ongeldige opdracht',
-	'no_result'=>'Geen resultaten gevonden',
-	'to_much_results'=>'Er zijn teveel losse zoekresultaten, vul meer tekens in.'
-
+    'invalid_request' => 'Ongeldige opdracht',
+    'no_result' => 'Geen resultaten gevonden',
+    'to_much_results' => 'Er zijn teveel losse zoekresultaten, vul meer tekens in.'
 );
 

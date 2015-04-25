@@ -25,17 +25,17 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'all_messages'=>'نشان دادن همه',
-  'enter_message'=>'!شما باید پیغام را وارد کنید',
-  'enter_name'=>'!شما باید نام را وارد کنید',
-  'delete_selected'=>'حذف انتخاب',
-  'select_all'=>'انتخاب همه',
-  'shout'=>'!چت',
-  'shoutbox'=>'چت باکس',
-  'sort'=>'بر حسب:'
+    'all_messages' => 'نشان دادن همه',
+    'delete_selected' => 'حذف انتخاب',
+    'enter_message' => '!شما باید پیغام را وارد کنید',
+    'enter_name' => '!شما باید نام را وارد کنید',
+    'select_all' => 'انتخاب همه',
+    'shout' => '!چت',
+    'shoutbox' => 'چت باکس',
+    'sort' => 'بر حسب:'
 );
 

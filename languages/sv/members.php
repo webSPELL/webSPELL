@@ -25,28 +25,28 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'about'=>'Om',
-	'active'=>'aktiv',
-	'activity'=>'Aktivitet',
-	'awards'=>'Priser',
-	'back_overview'=>'&raquo; <a href="index.php?site=members"><b>tillbaka till användar översikt</b></a>',
-	'challenge'=>'Utmana',
-	'contact'=>'Kontakta',
-	'go'=>'Gå!',
-	'inactive'=>'inaktiv',
-	'member'=>'Medlem',
-	'members'=>'medlemmar',
-	'nickname'=>'Smeknamn',
-	'no_description'=>'Ingen beskrivning tillgänglig',
-	'position'=>'Position',
-	'results'=>'Resultat',
-	'show_details'=>'&raquo; <a href="index.php?site=members&amp;action=show&amp;squadID=%squadID%"><b>Visa detaljer</b></a>',
-	'show_only'=>'Visa bara',
-	'status'=>'Status',
-	'town'=>'Stad'
+    'about' => 'Om',
+    'active' => 'aktiv',
+    'activity' => 'Aktivitet',
+    'awards' => 'Priser',
+    'back_overview' => '&raquo; <a href="index.php?site=members"><b>tillbaka till användar översikt</b></a>',
+    'challenge' => 'Utmana',
+    'contact' => 'Kontakta',
+    'go' => 'Gå!',
+    'inactive' => 'inaktiv',
+    'member' => 'Medlem',
+    'members' => 'medlemmar',
+    'nickname' => 'Smeknamn',
+    'no_description' => 'Ingen beskrivning tillgänglig',
+    'position' => 'Position',
+    'results' => 'Resultat',
+    'show_details' => '&raquo; <a href="index.php?site=members&amp;action=show&amp;squadID=%squadID%"><b>Visa detaljer</b></a>',
+    'show_only' => 'Visa bara',
+    'status' => 'Status',
+    'town' => 'Stad'
 );
 

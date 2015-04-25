@@ -25,29 +25,28 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'back'=>'Wróć do formularza',
-	'contact'=>'Kontakt',
-	'description'=>'Możesz się z nami skontaktowac uzupelniając i wysylając ponizszy formularz.',
-	'enter_mail'=>'Please enter a mail adress.',
-	'enter_message'=>'Wpisz treść wiadomości.',
-	'enter_name'=>'Proszę wpisać imię.',
-	'enter_subject'=>'Wpisz temat Wiadomości.',
-	'errors_there'=>'Wystąpiły błędy',
-	'mail'=>'E-Mail',
-	'message'=>'Wiadomość',
-	'name'=>'Imię',
-	'receiver'=>'Odbiorca',
-	'reset'=>'Resetuj',
-	'security_code'=>'Kod zabezpieczający',
-	'send'=>'Wyślij',
-	'send_successfull'=>'Wiadomość wysłana pomyślnie.',
-	'subject'=>'Temat',
-	'title_contact'=>'Formularz kontaktowy',
-	'unknown_receiver'=>'unknown receiver',
-	'wrong_securitycode'=>'Wpisałeś błędny kod zabezpieczający!'
+    'back' => 'Wróć do formularza',
+    'contact' => 'Kontakt',
+    'description' => 'Możesz się z nami skontaktowac uzupelniając i wysylając ponizszy formularz.',
+    'enter_mail' => 'Please enter a mail adress.',
+    'enter_message' => 'Wpisz treść wiadomości.',
+    'enter_name' => 'Proszę wpisać imię.',
+    'enter_subject' => 'Wpisz temat Wiadomości.',
+    'errors_there' => 'Wystąpiły błędy',
+    'message' => 'Wiadomość',
+    'name' => 'Imię',
+    'receiver' => 'Odbiorca',
+    'reset' => 'Resetuj',
+    'security_code' => 'Kod zabezpieczający',
+    'send' => 'Wyślij',
+    'send_successfull' => 'Wiadomość wysłana pomyślnie.',
+    'subject' => 'Temat',
+    'title_contact' => 'Formularz kontaktowy',
+    'unknown_receiver' => 'unknown receiver',
+    'wrong_securitycode' => 'Wpisałeś błędny kod zabezpieczający!'
 );
 

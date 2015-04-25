@@ -24,26 +24,19 @@
 #                                                                        #
 ##########################################################################
 */
-/**
- * Online Language Editor Greece language file for webSPELL 4.2.2
- * @author Stefan Giesecke <webmaster@giesi.com>
- * @copyright Copyright (c) 2010, Stefan Giesecke
- * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
- */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'game'=>'Παιχνιδι',
-  'information'=>'Πληροφοριες',
-  'ip'=>'IP',
-  'link'=>'Link',
-  'no_server'=>'δεν υπαρχουν διαθεσιμοι server.',
-  'not_supported'=>'Δεν υποστηριζεται απο webserver',
-  'online'=>'Ενεργος',
-  'server'=>'server',
-  'status'=>'Κατασταση',
-  'timeout'=>'timeout'
+    'game' => 'Παιχνιδι',
+    'information' => 'Πληροφοριες',
+    'link' => 'Link',
+    'no_server' => 'δεν υπαρχουν διαθεσιμοι server.',
+    'not_supported' => 'Δεν υποστηριζεται απο webserver',
+    'online' => 'Ενεργος',
+    'server' => 'server',
+    'status' => 'Κατασταση',
+    'timeout' => 'timeout'
 );
 

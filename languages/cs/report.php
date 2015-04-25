@@ -25,13 +25,13 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'no_informations'=>'zatím neexistují žádné informace',
-	'report_message'=>'[b]Toto je nové %s - Zpráva[/b][br][br]%s-ID: %d[br]Info: %s[br]Odkaz: [url]index.php?site=files&file=%d[/url]',
-	'report_recognized'=>'vaše zpráva byla odeslaná. Dìkujeme.',
-  'wrong_securitycode'=>'Bezpečností kód je špatný<br><br>[<a href="javascript:back();">vrátit</a>]'
+    'no_informations' => 'zatím neexistují žádné informace',
+    'report_message' => '[b]Toto je nové %s - Zpráva[/b][br][br]%s-ID: %d[br]Info: %s[br]Odkaz: [url]index.php?site=files&file=%d[/url]',
+    'report_recognized' => 'vaše zpráva byla odeslaná. Dìkujeme.',
+    'wrong_securitycode' => 'Bezpečností kód je špatný<br><br>[<a href="javascript:back();">vrátit</a>]'
 );
 

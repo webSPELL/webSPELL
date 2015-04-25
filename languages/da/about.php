@@ -25,11 +25,11 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'about_title'=>'Om os',
-	'no_about'=>'Der er ingen beskrivelse tilgængelig i øjeblikket.'
+    'about_title' => 'Om os',
+    'no_about' => 'Der er ingen beskrivelse tilgængelig i øjeblikket.'
 );
 

@@ -24,46 +24,40 @@
 #                                                                        #
 ##########################################################################
 */
-/**
- * Online Language Editor Albania language file for webSPELL 4.2.2
- * @author Stefan Giesecke <webmaster@giesi.com>
- * @copyright Copyright (c) 2010, Stefan Giesecke
- * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
- */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'daysonline'=>'Ditët online',
-  'guest'=>'I Ftuar',
-  'guests'=>'Të ftuar',
-  'lasthour'=>'Ora fundit',
-  'max_day'=>'Maksimumi në ditë',
-  'maximum'=>'Maksimum',
-  'month'=>'Muaj',
-  'now'=>'Tani',
-  'online'=>'Online',
-  'page_statistics'=>'Statistikat e faqes',
-  'registered_users'=>'Përdorues të regjistruar',
-  'statistic'=>'Trego statistikat',
-  'this_month'=>'Ky muaj',
-  'today'=>'Sot',
-  'total'=>'Totali',
-  'total_statistic'=>'Statistikat e përgjithshme',
-  'user'=>'Përdorues',
-  'users'=>'Përdorues',
-  'visits'=>'Vizitorë',
-  'visits_day'=>'Vizita në ditë',
-  'visits_hour'=>'Vizita për orë',
-  'visits_month'=>'Vizita në muaj',
-  'visits_total'=>'Totali vizitave',
-  'yesterday'=>'Dje',
-  'avg_age'=>'Mosha mesatare',
-  'avg_age_clanmember'=>'Mosha mesatare e anëtarëve të klanit',
-  'youngest_user'=>'Përdoruesi më i ri',
-  'oldest_user'=>'Përdoruesi më i vjetër',
-  'user_statistic'=>'Statistikat e përdoruesit',
-  'years'=>'vitet'
+    'avg_age' => 'Mosha mesatare',
+    'avg_age_clanmember' => 'Mosha mesatare e anëtarëve të klanit',
+    'daysonline' => 'Ditët online',
+    'guest' => 'I Ftuar',
+    'guests' => 'Të ftuar',
+    'lasthour' => 'Ora fundit',
+    'max_day' => 'Maksimumi në ditë',
+    'maximum' => 'Maksimum',
+    'month' => 'Muaj',
+    'now' => 'Tani',
+    'oldest_user' => 'Përdoruesi më i vjetër',
+    'online' => 'Online',
+    'page_statistics' => 'Statistikat e faqes',
+    'registered_users' => 'Përdorues të regjistruar',
+    'statistic' => 'Trego statistikat',
+    'this_month' => 'Ky muaj',
+    'today' => 'Sot',
+    'total' => 'Totali',
+    'total_statistic' => 'Statistikat e përgjithshme',
+    'user' => 'Përdorues',
+    'user_statistic' => 'Statistikat e përdoruesit',
+    'users' => 'Përdorues',
+    'visits' => 'Vizitorë',
+    'visits_day' => 'Vizita në ditë',
+    'visits_hour' => 'Vizita për orë',
+    'visits_month' => 'Vizita në muaj',
+    'visits_total' => 'Totali vizitave',
+    'years' => 'vitet',
+    'yesterday' => 'Dje',
+    'youngest_user' => 'Përdoruesi më i ri'
 );
 

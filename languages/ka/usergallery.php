@@ -25,34 +25,33 @@
 ##########################################################################
 */
 
-
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'actions'=>'აქტივობები',
-  'add_gallery'=>'გალერიაში დამატება',
-  'add_img'=>'ფოტოს დამატება',
-  'add_picture'=>'ფიტოსურათის დამატება',
-  'comment'=>'კომენტარი',
-  'delete'=>'წაშლა',
-  'disable_comments'=>'კომენტარების გათიშვა',
-  'edit'=>'რედაქტურება',
-  'enable_user_comments'=>'მომხმარებლის კომენტარის უფლება',
-  'enable_visitor_comments'=>'სტუმრის კომენტარის უფლება',
-  'gallery_name'=>'გალერიის სახელი',
-  'group'=>'ჯგუფი',
-  'name'=>'სახელი',
-  'new_gallery'=>'ახალი გალერია',
-  'no_galleries'=>'არ არის გალერიები მისაწვდომი.',
-  'no_space_left'=>' სივრცე აღარ დარჩა: გაუქმდა.',
-  'picture'=>'ფოტოსურათი',
-  'please_enter_name'=>'გთხოვთ შეიყვანოთ სახელი!',
-  'really_delete_gallery'=>'წავშალო ეს გალერეა?',
-  'update'=>'განახლება',
-  'user_gallery'=>'მომხმარებლის-გალერეა',
-  'usergalleries'=>'მომხლარებლის გალერიები',
-  'visitor_comments'=>'სტუმრის კომენტარი',
-  'x_of_y_mb_in_use'=>'<span style="color:%spacecolor%">&nbsp;%used_size%</span> სულ %available_size% MB გამოიყენება.'
+    'actions' => 'აქტივობები',
+    'add_gallery' => 'გალერიაში დამატება',
+    'add_img' => 'ფოტოს დამატება',
+    'add_picture' => 'ფიტოსურათის დამატება',
+    'comment' => 'კომენტარი',
+    'delete' => 'წაშლა',
+    'disable_comments' => 'კომენტარების გათიშვა',
+    'edit' => 'რედაქტურება',
+    'enable_user_comments' => 'მომხმარებლის კომენტარის უფლება',
+    'enable_visitor_comments' => 'სტუმრის კომენტარის უფლება',
+    'gallery_name' => 'გალერიის სახელი',
+    'group' => 'ჯგუფი',
+    'name' => 'სახელი',
+    'new_gallery' => 'ახალი გალერია',
+    'no_galleries' => 'არ არის გალერიები მისაწვდომი.',
+    'no_space_left' => ' სივრცე აღარ დარჩა: გაუქმდა.',
+    'picture' => 'ფოტოსურათი',
+    'please_enter_name' => 'გთხოვთ შეიყვანოთ სახელი!',
+    'really_delete_gallery' => 'წავშალო ეს გალერეა?',
+    'update' => 'განახლება',
+    'user_gallery' => 'მომხმარებლის-გალერეა',
+    'usergalleries' => 'მომხლარებლის გალერიები',
+    'visitor_comments' => 'სტუმრის კომენტარი',
+    'x_of_y_mb_in_use' => '<span style="color:%spacecolor%">&nbsp;%used_size%</span> სულ %available_size% MB გამოიყენება.'
 );
 

@@ -25,37 +25,36 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'additional_info'=>'Additional information (e.g. Why you should take me as a member...)',
-	'age'=>'Age',
-	'back_to_form'=>'Back to form',
-	'city'=>'City',
-	'clan_history'=>'Clan History',
-	'email_not_valid'=>'No valid email address entered!',
-	'forgot_age'=>'No age entered!',
-	'forgot_city'=>'No city entered!',
-	'forgot_history'=>'No clan history entered!',
-	'forgot_messenger'=>'No messenger contact (ICQ, AIM etc...) entered!',
-	'forgot_nickname'=>'You forgot your nickname!',
-	'forgot_realname'=>'You forgot your name!',
-	'icq_msn'=>'ICQ/MSN/etc...',
-	'info'=>'Additional information',
-	'joinus_form'=>'Join us form',
-	'mail'=>'E-Mail',
-	'messenger'=>'Messenger',
-	'message_title'=>'Join us',
-	'name'=>'Name',
-	'nick'=>'Nickname',
-	'problems'=>'Following problems occurred with your entered data',
-	'security_code'=>'Security code',
-	'send'=>'Submit',
-	'someone_want_to_join_your_squad'=>'Someone wants to join your squad:',
-	'squad'=>'Squad',
-	'thanks_you_will_get_mail'=>'Thank you for applying. We will be in touch soon.',
-	'title_join_us'=>'Become a member',
-	'wrong_security_code'=>'The security code was wrong!'
+    'additional_info' => 'Additional information (e.g. Why you should take me as a member...)',
+    'age' => 'Age',
+    'back_to_form' => 'Back to form',
+    'city' => 'City',
+    'clan_history' => 'Clan History',
+    'email_not_valid' => 'No valid email address entered!',
+    'forgot_age' => 'No age entered!',
+    'forgot_city' => 'No city entered!',
+    'forgot_history' => 'No clan history entered!',
+    'forgot_messenger' => 'No messenger contact (ICQ, AIM etc...) entered!',
+    'forgot_nickname' => 'You forgot your nickname!',
+    'forgot_realname' => 'You forgot your name!',
+    'icq_msn' => 'ICQ/MSN/etc...',
+    'info' => 'Additional information',
+    'joinus_form' => 'Join us form',
+    'message_title' => 'Join us',
+    'messenger' => 'Messenger',
+    'name' => 'Name',
+    'nick' => 'Nickname',
+    'problems' => 'Following problems occurred with your entered data',
+    'security_code' => 'Security code',
+    'send' => 'Submit',
+    'someone_want_to_join_your_squad' => 'Someone wants to join your squad:',
+    'squad' => 'Squad',
+    'thanks_you_will_get_mail' => 'Thank you for applying. We will be in touch soon.',
+    'title_join_us' => 'Become a member',
+    'wrong_security_code' => 'The security code was wrong!'
 );
 

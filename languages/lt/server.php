@@ -25,19 +25,18 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'game'=>'Žaidimas',
-  'information'=>'Informacija',
-	'ip'=>'IP',
-	'link'=>'Nuoroda',
-	'no_server'=>'jokių serverių nėra.',
-	'not_supported'=>'Nepalaiko tinklalapio serveris',
-	'online'=>'Įjungtas',
-	'server'=>'serveris',
-	'status'=>'Padėtis',
-	'timeout'=>'pertrauka'
+    'game' => 'Žaidimas',
+    'information' => 'Informacija',
+    'link' => 'Nuoroda',
+    'no_server' => 'jokių serverių nėra.',
+    'not_supported' => 'Nepalaiko tinklalapio serveris',
+    'online' => 'Įjungtas',
+    'server' => 'serveris',
+    'status' => 'Padėtis',
+    'timeout' => 'pertrauka'
 );
 

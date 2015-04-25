@@ -25,18 +25,17 @@
 ##########################################################################
 */
 
-
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'add_to_message'=>'შეტყობინებაში დამატება',
-  'close_window'=>'ფანჯრის დახურვა',
-  'delete'=>'წაშლა',
-  'existing_files'=>'არსებული ფაილი',
-  'file_upload'=>'ფაილის ატვირთვა',
-  'invalid_access'=>'არასწორი ხელმისაწვდომობა!',
-  'no_access'=>'არ არის მისაწვდომი!',
-  'upload'=>'ატვირთვა'
+    'add_to_message' => 'შეტყობინებაში დამატება',
+    'close_window' => 'ფანჯრის დახურვა',
+    'delete' => 'წაშლა',
+    'existing_files' => 'არსებული ფაილი',
+    'file_upload' => 'ფაილის ატვირთვა',
+    'invalid_access' => 'არასწორი ხელმისაწვდომობა!',
+    'no_access' => 'არ არის მისაწვდომი!',
+    'upload' => 'ატვირთვა'
 );
 

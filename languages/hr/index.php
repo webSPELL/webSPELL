@@ -25,32 +25,32 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'advertisement'=>'Oglašavanje',
-	'articles'=>'Članci',
-	'content'=>'Sadržaj',
-	'demos'=>'Demoi',
-	'downloads'=>'Preuzimanja',
-	'hotest_news'=>'Najvruće novosti',
-	'language_switch'=>'promjena jezika',
-	'latest_news'=>'zadnje novosti',
-	'login'=>'prijava',
-	'matches'=>'matchevi',
-	'newsletter'=>'newsletter',
-	'partners'=>'partneri',
-	'pic_of_the_moment'=>'slika trenutka',
-	'poll'=>'anketa',
-	'random_user'=>'nasumični korisnik',
-	'server'=>'serveri',
-	'shoutbox'=>'shoutbox',
-	'sponsors'=>'sponzori',
-	'squads'=>'timovi',
-	'statistics'=>'statistika',
-	'topics'=>'teme',
-	'upcoming_events'=>'nadolazeći događaji',
-	'tags'=>'tagovi'
+    'advertisement' => 'Oglašavanje',
+    'articles' => 'Članci',
+    'content' => 'Sadržaj',
+    'demos' => 'Demoi',
+    'downloads' => 'Preuzimanja',
+    'hotest_news' => 'Najvruće novosti',
+    'language_switch' => 'promjena jezika',
+    'latest_news' => 'zadnje novosti',
+    'login' => 'prijava',
+    'matches' => 'matchevi',
+    'newsletter' => 'newsletter',
+    'partners' => 'partneri',
+    'pic_of_the_moment' => 'slika trenutka',
+    'poll' => 'anketa',
+    'random_user' => 'nasumični korisnik',
+    'server' => 'serveri',
+    'shoutbox' => 'shoutbox',
+    'sponsors' => 'sponzori',
+    'squads' => 'timovi',
+    'statistics' => 'statistika',
+    'tags' => 'tagovi',
+    'topics' => 'teme',
+    'upcoming_events' => 'nadolazeći događaji'
 );
 

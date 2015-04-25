@@ -25,10 +25,10 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'security_code'=>'crwdns14397:0crwdne14397:0'
+    'security_code' => 'crwdns20252:0crwdne20252:0'
 );
 

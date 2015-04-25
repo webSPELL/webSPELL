@@ -25,28 +25,28 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'award'=>'Osiągnięcie',
-	'awards'=>'Osiągnięcia',
-	'date'=>'Data',
-	'delete'=>'Usuń',
-	'edit'=>'Edytuj',
-	'edit_award'=>'Edytuj osiągnięcie',
-	'enter_title'=>'Musisz wpisać tytuł!',
-	'enter_text'=>'Musisz wpisać treść',
-	'event'=>'Wydarzenie',
-	'homepage'=>'Strona domowa',
-	'info'=>'Informacje',
-	'new_award'=>'Dodaj Osiągnięcie',
-	'no_access'=>'Brak dostępu!',
-	'no_entries'=>'Brak Osiągnięć',
-	'ranking'=>'Miejsce',
-	'save_award'=>'Zapisz',
-	'sort'=>'Sortuj',
-	'squad'=>'Drużyna',
-	'update_award'=>'Aktualizuj'
+    'award' => 'Osiągnięcie',
+    'awards' => 'Osiągnięcia',
+    'date' => 'Data',
+    'delete' => 'Usuń',
+    'edit' => 'Edytuj',
+    'edit_award' => 'Edytuj osiągnięcie',
+    'enter_text' => 'Musisz wpisać treść',
+    'enter_title' => 'Musisz wpisać tytuł!',
+    'event' => 'Wydarzenie',
+    'homepage' => 'Strona domowa',
+    'info' => 'Informacje',
+    'new_award' => 'Dodaj Osiągnięcie',
+    'no_access' => 'Brak dostępu!',
+    'no_entries' => 'Brak Osiągnięć',
+    'ranking' => 'Miejsce',
+    'save_award' => 'Zapisz',
+    'sort' => 'Sortuj',
+    'squad' => 'Drużyna',
+    'update_award' => 'Aktualizuj'
 );
 

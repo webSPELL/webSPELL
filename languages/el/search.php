@@ -24,53 +24,46 @@
 #                                                                        #
 ##########################################################################
 */
-/**
- * Online Language Editor Greece language file for webSPELL 4.2.2
- * @author Stefan Giesecke <webmaster@giesi.com>
- * @copyright Copyright (c) 2010, Stefan Giesecke
- * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
- */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'after'=>'μετα',
-  'and'=>'και',
-  'article'=>'Αρθρο',
-  'articles'=>'Αρθρα',
-  'articles_link'=>'<b>link για το Αρθρο</b>',
-  'ascending'=>'αυξουσα',
-  'before'=>'πριν',
-  'date_options'=>'Ημερομηνια',
-  'delete_selected'=>'διαγραφη επιλεγμενων',
-  'descending'=>'φθινουσα',
-  'faq'=>'FAQ',
-  'faq_link'=>'<b>link για FAQ</b>',
-  'forum'=>'Forum',
-  'forum_link'=>'<b>link για το θεμα</b>',
-  'frequency'=>'Συχνοτητα',
-  'keyword'=>'Λεξη κλειδι',
-  'new_search'=>'Νεα αναζητηση',
-  'news'=>'Νεα',
-  'news_link'=>'<b>link για τα νεα</b>',
-  'options'=>'Επιλογες',
-  'or'=>'ή',
-  'result_quantity'=>'Αποτελεσματα ανα σελιδα',
-  'results_found'=>'αποτελεσματα που βρεθηκαν',
-  'search'=>'αναζητηση',
-  'search_in'=>'Αναζητηση στο:',
-  'search_location'=>'Τοποθεσια αναζητησης',
-  'search_term'=>'Ορος Αναζητησης',
-  'search_title'=>'Αναζητηση για προχωρημενους',
-  'security_code'=>'Κωδικος Ασφαλειας',
-  'sort_options'=>'Ταξινομηση',
-  'start_search'=>'Εναρξη αναζητησης',
-  'submit'=>'Καταχωρηση',
-  'text_contains'=>'Το κειμενο περιεχει',
-  'title_contains'=>'Ο τιτλος περιχει',
-  'too_short'=>'Ο ορος αναζητησης ειναι πολυ μικρος. χρειαζονται τουλαχιστον  %min_chars% χαρακτηρες',
-  'wrong_securitycode'=>'Εχετε εισαγει λαθος κωδικο ασφαλειας!',
-  'no_result' =>'Δεν βρέθηκαν αποτελέσματα για καταχωρήσεις "%s"'
+    'after' => 'μετα',
+    'and' => 'και',
+    'article' => 'Αρθρο',
+    'articles' => 'Αρθρα',
+    'articles_link' => '<b>link για το Αρθρο</b>',
+    'ascending' => 'αυξουσα',
+    'before' => 'πριν',
+    'date_options' => 'Ημερομηνια',
+    'delete_selected' => 'διαγραφη επιλεγμενων',
+    'descending' => 'φθινουσα',
+    'faq_link' => '<b>link για FAQ</b>',
+    'forum' => 'Forum',
+    'forum_link' => '<b>link για το θεμα</b>',
+    'frequency' => 'Συχνοτητα',
+    'keyword' => 'Λεξη κλειδι',
+    'new_search' => 'Νεα αναζητηση',
+    'news' => 'Νεα',
+    'news_link' => '<b>link για τα νεα</b>',
+    'no_result' => 'Δεν βρέθηκαν αποτελέσματα για καταχωρήσεις "%s"',
+    'options' => 'Επιλογες',
+    'or' => 'ή',
+    'result_quantity' => 'Αποτελεσματα ανα σελιδα',
+    'results_found' => 'αποτελεσματα που βρεθηκαν',
+    'search' => 'αναζητηση',
+    'search_in' => 'Αναζητηση στο:',
+    'search_location' => 'Τοποθεσια αναζητησης',
+    'search_term' => 'Ορος Αναζητησης',
+    'search_title' => 'Αναζητηση για προχωρημενους',
+    'security_code' => 'Κωδικος Ασφαλειας',
+    'sort_options' => 'Ταξινομηση',
+    'start_search' => 'Εναρξη αναζητησης',
+    'submit' => 'Καταχωρηση',
+    'text_contains' => 'Το κειμενο περιεχει',
+    'title_contains' => 'Ο τιτλος περιχει',
+    'too_short' => 'Ο ορος αναζητησης ειναι πολυ μικρος. χρειαζονται τουλαχιστον  %min_chars% χαρακτηρες',
+    'wrong_securitycode' => 'Εχετε εισαγει λαθος κωδικο ασφαλειας!'
 );
 

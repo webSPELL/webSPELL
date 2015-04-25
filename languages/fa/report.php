@@ -25,13 +25,13 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'no_informations'=>'هیچ اطلاعاتی وجود ندارد',
-  'report_message'=>'[b]جدید %s - گزارش[/b][br][br]%s-ID: %d[br]اطلاعات: %s[br]به روز کردن: [url]index.php?site=files&file=%d[/url]',
-  'report_recognized'=>'.گزارش شما تایید شد',
-  'wrong_securitycode'=>'شما کد را اشتباه وارد کردید<br><br>[<a href="javascript:back();">برگشت</a>]'
+    'no_informations' => 'هیچ اطلاعاتی وجود ندارد',
+    'report_message' => '[b]جدید %s - گزارش[/b][br][br]%s-ID: %d[br]اطلاعات: %s[br]به روز کردن: [url]index.php?site=files&file=%d[/url]',
+    'report_recognized' => '.گزارش شما تایید شد',
+    'wrong_securitycode' => 'شما کد را اشتباه وارد کردید<br><br>[<a href="javascript:back();">برگشت</a>]'
 );
 

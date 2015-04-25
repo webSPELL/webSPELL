@@ -24,20 +24,14 @@
 #                                                                        #
 ##########################################################################
 */
-/**
- * Online Language Editor Luxemburg language file for webSPELL 4.2.2
- * @author Stefan Giesecke <webmaster@giesi.com>
- * @copyright Copyright (c) 2010, Stefan Giesecke
- * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
- */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'email_failed'=>'Et ass en Fehler beim Schecken vun der E-Mail opgetratt, kontaktéier den Webmaster.',
-  'email_subject'=>'Däin Konto fir %pagetitle%',
-  'email_text'=>'Däin Konto fir %pagetitle%
+    'email_failed' => 'Et ass en Fehler beim Schecken vun der E-Mail opgetratt, kontaktéier den Webmaster.',
+    'email_subject' => 'Däin Konto fir %pagetitle%',
+    'email_text' => 'Däin Konto fir %pagetitle%
 PASS OP däin Passwuert ass geännert ginn!
 
 däin Benotzernumm: %username%
@@ -45,11 +39,11 @@ däin neit Passwuert: %new_password%
 
 Vill Spaass op eiser Websäit
 %homepage_url%',
-  'get_password'=>'Passwuert zouschécken',
-  'lost_password'=>'Passwuert verluer',
-  'no_mail_given'=>'Du hues keng E-Mail Adress aginn.',
-  'no_user_found'=>'Benotzer net fonnt!',
-  'successful'=>'Däin Konto ass fonnt ginn!<br><br>rn    Du wäerts an e pur Sekonnen eng E-Mail mat denger Daten kréien.<br><br>rn    &#8226; <a href="index.php?site=login">umellen</a>',
-  'your_email'=>'Deng E-Mail'
+    'get_password' => 'Passwuert zouschécken',
+    'lost_password' => 'Passwuert verluer',
+    'no_mail_given' => 'Du hues keng E-Mail Adress aginn.',
+    'no_user_found' => 'Benotzer net fonnt!',
+    'successful' => 'Däin Konto ass fonnt ginn!<br><br>rn    Du wäerts an e pur Sekonnen eng E-Mail mat denger Daten kréien.<br><br>rn    &#8226; <a href="index.php?site=login">umellen</a>',
+    'your_email' => 'Deng E-Mail'
 );
 

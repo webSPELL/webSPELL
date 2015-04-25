@@ -25,7 +25,7 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
@@ -44,10 +44,8 @@ $language_array = Array(
     'clan-name' => 'Klan-Naam',
     'clan-tag' => 'Klan-Tag',
     'country' => 'Land',
-    'cpu' => 'CPU',
     'date_of_birth' => 'Geboortedatum',
     'deactivated' => 'gedeaktiveer',
-    'delete' => 'delete',
     'delete_max_90_90' => 'verwyder (max90/90)',
     'delete_max_230_210' => 'verwyder (max230/210)',
     'e-mail' => 'E-pos',
@@ -139,3 +137,4 @@ Dankie vir jou belangstelling
     'you_have_to_username' => 'Jy moet jou gebruikersnaam in voer!',
     'you_have_to_valid_email' => 'Jou e-pos is nie geldig nie!'
 );
+

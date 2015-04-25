@@ -25,7 +25,7 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
@@ -44,13 +44,10 @@ $language_array = Array(
     'clan-name' => 'Ονομα Clan',
     'clan-tag' => 'Σημα Clan',
     'country' => 'Χωρα',
-    'cpu' => 'CPU',
     'date_of_birth' => 'Ημερομηνια Γεννησης',
     'deactivated' => 'απενεργοποιηθεί',
-    'delete' => 'delete',
     'delete_max_90_90' => 'διαγραφη (max90/90)',
     'delete_max_230_210' => 'διαγραφη  (max230/210)',
-    'e-mail' => 'E-mail',
     'edit_mail' => 'επεξεργασια E-Mail',
     'edit_password' => 'επεξεργασια κωδικου',
     'equipment-info' => 'Εξοπλισμος-Πληροφοριες',
@@ -139,3 +136,4 @@ $language_array = Array(
     'you_have_to_username' => 'Πρεπει να εισαγετε ονομα χρηστη!',
     'you_have_to_valid_email' => 'Το e-mail σας δεν ειναι εγκυρο!'
 );
+

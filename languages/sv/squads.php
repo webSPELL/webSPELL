@@ -25,33 +25,32 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'about'=>'om',
-	'active'=>'aktiv',
-	'add_buddy'=>'lägg till på vänner lista',
-	'awards'=>'Utmärkelser',
-	'back_buddy'=>'tillbaka till vänner listan',
-	'back_squad_overview'=>'tillbaka till översikt',
-	'challenge'=>'utmana',
-	'contact'=>'Kontakta',
-	'email'=>'email',
-	'ignore'=>'ignorera användare',
-	'inactive'=>'inaktiv',
-	'member'=>'Medlem',
-	'members'=>'Medlemmar',
-	'messenger'=>'messenger',
-	'no_description'=>'ingen beskrivning tillgänglig',
-	'no_userpic'=>'Ingen användarbild tillgänglig!',
-	'position'=>'Position',
-	'results'=>'resultat',
-	'show_details'=>'visa detaljer',
-	'squad_plays'=>'Lag matcher',
-	'squads'=>'lag',
-	'status'=>'Status',
-	'town'=>'Stad',
-	'userpicture'=>'Användarbild'
+    'about' => 'om',
+    'active' => 'aktiv',
+    'add_buddy' => 'lägg till på vänner lista',
+    'awards' => 'Utmärkelser',
+    'back_buddy' => 'tillbaka till vänner listan',
+    'back_squad_overview' => 'tillbaka till översikt',
+    'challenge' => 'utmana',
+    'contact' => 'Kontakta',
+    'ignore' => 'ignorera användare',
+    'inactive' => 'inaktiv',
+    'member' => 'Medlem',
+    'members' => 'Medlemmar',
+    'messenger' => 'messenger',
+    'no_description' => 'ingen beskrivning tillgänglig',
+    'no_userpic' => 'Ingen användarbild tillgänglig!',
+    'position' => 'Position',
+    'results' => 'resultat',
+    'show_details' => 'visa detaljer',
+    'squad_plays' => 'Lag matcher',
+    'squads' => 'lag',
+    'status' => 'Status',
+    'town' => 'Stad',
+    'userpicture' => 'Användarbild'
 );
 

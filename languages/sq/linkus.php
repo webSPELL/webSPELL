@@ -24,31 +24,25 @@
 #                                                                        #
 ##########################################################################
 */
-/**
- * Online Language Editor Albania language file for webSPELL 4.2.2
- * @author Stefan Giesecke <webmaster@giesi.com>
- * @copyright Copyright (c) 2010, Stefan Giesecke
- * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
- */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'back'=>'mbrapsht',
-  'banner'=>'Flamur',
-  'banner_to_big'=>'Fotoja shumë e madhe',
-  'delete'=>'fshij',
-  'edit'=>'edito',
-  'edit_linkus'=>'edito flamurin',
-  'format_incorrect'=>'Foto-format e gabuar (lejohet: *.gif, *.jpg ose *.png)',
-  'link_us'=>'na dërgoni link',
-  'name'=>'Emri',
-  'new_banner'=>'flamur i ri',
-  'no_access'=>'Nuk lejohet hyrja!',
-  'no_banner'=>'asnjë link me flamur',
-  'really_delete_banner'=>'vërtet e fshin këtë flamur?',
-  'save_banner'=>'shpëto flamurin',
-  'use_following_code'=>'Përdorni këtë kod, për te futur flamurin ne faqen tuaj të parë.'
+    'back' => 'mbrapsht',
+    'banner' => 'Flamur',
+    'banner_to_big' => 'Fotoja shumë e madhe',
+    'delete' => 'fshij',
+    'edit' => 'edito',
+    'edit_linkus' => 'edito flamurin',
+    'format_incorrect' => 'Foto-format e gabuar (lejohet: *.gif, *.jpg ose *.png)',
+    'link_us' => 'na dërgoni link',
+    'name' => 'Emri',
+    'new_banner' => 'flamur i ri',
+    'no_access' => 'Nuk lejohet hyrja!',
+    'no_banner' => 'asnjë link me flamur',
+    'really_delete_banner' => 'vërtet e fshin këtë flamur?',
+    'save_banner' => 'shpëto flamurin',
+    'use_following_code' => 'Përdorni këtë kod, për te futur flamurin ne faqen tuaj të parë.'
 );
 

@@ -29,21 +29,21 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'crwdns16602:0crwdne16602:0',
-  'actions'=>'crwdns16603:0crwdne16603:0',
-  'add_rubric'=>'crwdns16604:0crwdne16604:0',
-  'back'=>'crwdns16605:0crwdne16605:0',
-  'delete'=>'crwdns16606:0crwdne16606:0',
-  'edit'=>'crwdns16607:0crwdne16607:0',
-  'edit_rubric'=>'crwdns16608:0crwdne16608:0',
-  'format_incorrect'=>'crwdns16609:0crwdne16609:0',
-  'information_incomplete'=>'crwdns16610:0crwdne16610:0',
-  'new_rubric'=>'crwdns16611:0crwdne16611:0',
-  'news_rubrics'=>'crwdns16612:0crwdne16612:0',
-  'picture'=>'crwdns16613:0crwdne16613:0',
-  'picture_upload'=>'crwdns16614:0crwdne16614:0',
-  'really_delete'=>'crwdns16615:0crwdne16615:0',
-  'rubric_name'=>'crwdns16616:0crwdne16616:0',
-  'transaction_invalid'=>'crwdns16617:0crwdne16617:0'
+  'access_denied'=>'crwdns22457:0crwdne22457:0',
+  'actions'=>'crwdns22458:0crwdne22458:0',
+  'add_rubric'=>'crwdns22459:0crwdne22459:0',
+  'back'=>'crwdns22460:0crwdne22460:0',
+  'delete'=>'crwdns22461:0crwdne22461:0',
+  'edit'=>'crwdns22462:0crwdne22462:0',
+  'edit_rubric'=>'crwdns22463:0crwdne22463:0',
+  'format_incorrect'=>'crwdns22464:0crwdne22464:0',
+  'information_incomplete'=>'crwdns22465:0crwdne22465:0',
+  'new_rubric'=>'crwdns22466:0crwdne22466:0',
+  'news_rubrics'=>'crwdns22467:0crwdne22467:0',
+  'picture'=>'crwdns22468:0crwdne22468:0',
+  'picture_upload'=>'crwdns22469:0crwdne22469:0',
+  'really_delete'=>'crwdns22470:0crwdne22470:0',
+  'rubric_name'=>'crwdns22471:0crwdne22471:0',
+  'transaction_invalid'=>'crwdns22472:0crwdne22472:0'
 );
 

@@ -24,30 +24,23 @@
 #                                                                        #
 ##########################################################################
 */
-/**
- * Online Language Editor Turkey language file for webSPELL 4.2.2
- * @author Stefan Giesecke <webmaster@giesi.com>
- * @copyright Copyright (c) 2010, Stefan Giesecke
- * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
- */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'admin'=>'Yönetim',
-  'buddy_list'=>'Arkadas listesi',
-  'cash-box'=>'Kasa',
-  'edit_account'=>'Hesabı düzenle',
-  'galleries'=>'Galeri',
-  'login'=>'Giriş',
-  'logout'=>'Çıkış',
-  'lost_password'=>'Şifreni mi unuttun?',
-  'messenger'=>'Messenger',
-  'n_a'=>'n/a',
-  'overview'=>'Genel bakış',
-  'register_now'=>'Şimdi kaydol',
-  'registered_users'=>'Kayıtlı kullanıcılar',
-  'welcome_back'=>'Tekrar hoşgeldiniz'
+    'admin' => 'Yönetim',
+    'buddy_list' => 'Arkadas listesi',
+    'cash-box' => 'Kasa',
+    'edit_account' => 'Hesabı düzenle',
+    'galleries' => 'Galeri',
+    'login' => 'Giriş',
+    'logout' => 'Çıkış',
+    'lost_password' => 'Şifreni mi unuttun?',
+    'messenger' => 'Messenger',
+    'overview' => 'Genel bakış',
+    'register_now' => 'Şimdi kaydol',
+    'registered_users' => 'Kayıtlı kullanıcılar',
+    'welcome_back' => 'Tekrar hoşgeldiniz'
 );
 

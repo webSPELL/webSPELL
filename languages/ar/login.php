@@ -25,24 +25,23 @@
 ##########################################################################
 */
 
-
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'admin'=>'المسؤل',
-  'buddy_list'=>'قائمة الاصدقاء',
-  'cash-box'=>'صندوق النقود',
-  'edit_account'=>'تعديل الحساب',
-  'galleries'=>'المعارض',
-  'login'=>'دخول',
-  'logout'=>'الخروج',
-  'lost_password'=>'نسيت كلمة السر ؟',
-  'messenger'=>'الماسنجر',
-  'n_a'=>'لا يوجد',
-  'overview'=>'نظرة عامة',
-  'register_now'=>'التسجيل الان',
-  'registered_users'=>'الاعضاء المسجلين',
-  'welcome_back'=>'اهلا بك من جديد'
+    'admin' => 'المسؤل',
+    'buddy_list' => 'قائمة الاصدقاء',
+    'cash-box' => 'صندوق النقود',
+    'edit_account' => 'تعديل الحساب',
+    'galleries' => 'المعارض',
+    'login' => 'دخول',
+    'logout' => 'الخروج',
+    'lost_password' => 'نسيت كلمة السر ؟',
+    'messenger' => 'الماسنجر',
+    'n_a' => 'لا يوجد',
+    'overview' => 'نظرة عامة',
+    'register_now' => 'التسجيل الان',
+    'registered_users' => 'الاعضاء المسجلين',
+    'welcome_back' => 'اهلا بك من جديد'
 );
 

@@ -24,24 +24,18 @@
 #                                                                        #
 ##########################################################################
 */
-/**
- * Online Language Editor Greece language file for webSPELL 4.2.2
- * @author Stefan Giesecke <webmaster@giesi.com>
- * @copyright Copyright (c) 2010, Stefan Giesecke
- * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
- */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'invalid_password'=>'Εχετε εισαγει λαθος κωδικο.',
-  'ip_banned'=>'Η IP σας αποκλειστηκε απο το site.<br>%reason%',
-  'login_successful'=>'Εισοδος επιτυχης!',
-  'no_user'=>'Ο χρηστης <b>%username%</b> δεν ειναι διαθεσιμος σε αυτο το συστημα.',
-  'not_activated'=>'Ο λογαριασμος σας δεν εχει ενεργοποιηθει ακομα.',
-  'session_error'=>'Παρακαλω βεβαιωθείτε οτι τα cookies ειναι ενεργοποιημενα στον browser σας.<br>εαν το προβλημα παραμενει επικοινωνηστε με τον webmaster.',
-  'return'=>'<a href="javascript:history.back()">Πισω</a>',
-  'return_reenter' => '<a href="javascript:history.back()">Καντε πισω και ξαναπροσπαθηστε.</a>'
+    'invalid_password' => 'Εχετε εισαγει λαθος κωδικο.',
+    'ip_banned' => 'Η IP σας αποκλειστηκε απο το site.<br>%reason%',
+    'login_successful' => 'Εισοδος επιτυχης!',
+    'no_user' => 'Ο χρηστης <b>%username%</b> δεν ειναι διαθεσιμος σε αυτο το συστημα.',
+    'not_activated' => 'Ο λογαριασμος σας δεν εχει ενεργοποιηθει ακομα.',
+    'return' => '<a href="javascript:history.back()">Πισω</a>',
+    'return_reenter' => '<a href="javascript:history.back()">Καντε πισω και ξαναπροσπαθηστε.</a>',
+    'session_error' => 'Παρακαλω βεβαιωθείτε οτι τα cookies ειναι ενεργοποιημενα στον browser σας.<br>εαν το προβλημα παραμενει επικοινωνηστε με τον webmaster.'
 );
 

@@ -25,12 +25,10 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-    'back' => 'Назад',
-    'banner' => 'Банер',
     'categories' => 'Категории',
     'category' => 'Категорија',
     'delete' => 'Избриши',
@@ -54,3 +52,4 @@ $language_array = Array(
     'title_categories' => 'Категории на линкови',
     'update_link' => 'Надогради го линкот'
 );
+

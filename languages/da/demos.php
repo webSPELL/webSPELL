@@ -25,7 +25,7 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
@@ -75,6 +75,6 @@ $language_array = Array(
     'to_rate' => 'Du skal være registreret og logget ind for at vurdere en Demo!',
     'update_demo' => 'Opdater demo',
     'user_comments' => 'Slå bruger kommentarer til',
-    'visitor_comments' => 'Slå gæst kommentarer til',
-    'vs' => 'vs.'
+    'visitor_comments' => 'Slå gæst kommentarer til'
 );
+

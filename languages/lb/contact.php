@@ -24,36 +24,29 @@
 #                                                                        #
 ##########################################################################
 */
-/**
- * Online Language Editor Luxemburg language file for webSPELL 4.2.2
- * @author Stefan Giesecke <webmaster@giesi.com>
- * @copyright Copyright (c) 2010, Stefan Giesecke
- * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
- */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'back'=>'zréck bei den Formular',
-  'contact'=>'Kontakt',
-  'description'=>'Mathëllef vun dësen Formular kanns du Kontakt zou eis Hierstellen.',
-  'enter_mail'=>'Wann ech gelift en E-Mailadress aginn',
-  'enter_message'=>'Wei ass den Noriicht?',
-  'enter_name'=>'Wann ech gelift en Numm aginn',
-  'enter_subject'=>'Wann ech gelift en Betreff aginn',
-  'errors_there'=>'Et sinn Fehler opgetratt',
-  'mail'=>'E-Mail',
-  'message'=>'Nochriicht',
-  'name'=>'Numm',
-  'receiver'=>'Empfänger',
-  'reset'=>'Zerécksetzen',
-  'security_code'=>'Sécherheetscode',
-  'send'=>'Ofschécken',
-  'send_successfull'=>'Deng Noriicht ass erfollegräich ofgeschéckt ginn.',
-  'subject'=>'Betreff',
-  'title_contact'=>'Kontaktformular',
-  'unknown_receiver'=>'Onbekannten Empfänger',
-  'wrong_securitycode'=>'Dësen Sécherheetscode ass falsch'
+    'back' => 'zréck bei den Formular',
+    'contact' => 'Kontakt',
+    'description' => 'Mathëllef vun dësen Formular kanns du Kontakt zou eis Hierstellen.',
+    'enter_mail' => 'Wann ech gelift en E-Mailadress aginn',
+    'enter_message' => 'Wei ass den Noriicht?',
+    'enter_name' => 'Wann ech gelift en Numm aginn',
+    'enter_subject' => 'Wann ech gelift en Betreff aginn',
+    'errors_there' => 'Et sinn Fehler opgetratt',
+    'message' => 'Nochriicht',
+    'name' => 'Numm',
+    'receiver' => 'Empfänger',
+    'reset' => 'Zerécksetzen',
+    'security_code' => 'Sécherheetscode',
+    'send' => 'Ofschécken',
+    'send_successfull' => 'Deng Noriicht ass erfollegräich ofgeschéckt ginn.',
+    'subject' => 'Betreff',
+    'title_contact' => 'Kontaktformular',
+    'unknown_receiver' => 'Onbekannten Empfänger',
+    'wrong_securitycode' => 'Dësen Sécherheetscode ass falsch'
 );
 

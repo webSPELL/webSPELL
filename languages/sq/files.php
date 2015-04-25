@@ -25,7 +25,7 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
@@ -41,7 +41,6 @@ $language_array = Array(
     'database_cl' => 'Baza të dhënave',
     'delete_file' => 'fshij fishierin',
     'description' => 'Përshkrimi',
-    'dl' => 'DL',
     'download_now' => 'Download %filename% tani',
     'download_registered_only' => 'Download vetëm për përdorues të regjistruar!',
     'download_via_mirror' => 'download nëpërmjet mirror',
@@ -105,3 +104,4 @@ $language_array = Array(
     'you_have_to_enter_file' => 'Duhet të vendosni nje fishier / url!',
     'you_have_to_enter_filename' => 'Duhet të vendosni një emër fishieri!'
 );
+

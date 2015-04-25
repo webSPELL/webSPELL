@@ -25,17 +25,17 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'add_to_message'=>'Hozzáadás az üzenethez',
-  'close_window'=>'Ablak bezárása',
-	'delete'=>'Törlés',
-	'existing_files'=>'Létező fájlok',
-	'file_upload'=>'Fájl feltöltése',
-	'invalid_access'=>'Érvénytelen hozzáférés!',
-	'no_access'=>'Belépés megtagadva!',
-	'upload'=>'Feltöltés'
+    'add_to_message' => 'Hozzáadás az üzenethez',
+    'close_window' => 'Ablak bezárása',
+    'delete' => 'Törlés',
+    'existing_files' => 'Létező fájlok',
+    'file_upload' => 'Fájl feltöltése',
+    'invalid_access' => 'Érvénytelen hozzáférés!',
+    'no_access' => 'Belépés megtagadva!',
+    'upload' => 'Feltöltés'
 );
 

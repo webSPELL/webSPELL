@@ -25,7 +25,7 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
@@ -75,6 +75,6 @@ $language_array = Array(
     'to_rate' => 'Du måste vara registrerad och inloggad för att kunna rösta på demot!',
     'update_demo' => 'Uppdatera demo',
     'user_comments' => 'Tillåt användar kommentarer',
-    'visitor_comments' => 'Tillåt besökar kommentarer',
-    'vs' => 'vs.'
+    'visitor_comments' => 'Tillåt besökar kommentarer'
 );
+

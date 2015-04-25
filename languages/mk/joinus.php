@@ -25,38 +25,36 @@
 ##########################################################################
 */
 
-
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'additional_info'=>'Додатни информации (нпр. Зошто би требало да ме примите во клан...)',
-  'age'=>'Година',
-  'back_to_form'=>'Назад во форма',
-  'city'=>'Град',
-  'clan_history'=>'Историја на кланот',
-  'email_not_valid'=>'Не е внесена точна е-mail адреса!',
-  'forgot_age'=>'Не е внесена година!',
-  'forgot_city'=>'Не е внесен град!',
-  'forgot_history'=>'Не е внесена историјата на кланот!',
-  'forgot_messenger'=>'Не е внесен messenger контакт (ICQ, AIM итн...)!',
-  'forgot_nickname'=>'Не е внесен nick!',
-  'forgot_realname'=>'Не е внесено вашето име!',
-  'icq_msn'=>'ICQ/MSN/итн...',
-  'info'=>'Додатни информации',
-  'joinus_form'=>'Формулар за пристап во кланот',
-  'mail'=>'E-Mail',
-  'messenger'=>'Messenger',
-  'message_title'=>'Приклучи се',
-  'name'=>'Име',
-  'nick'=>'Nick',
-  'problems'=>'Следните проблеми се појавија од внесените податоци',
-  'security_code'=>'Сигурносна шифра',
-  'send'=>'Испрати',
-  'someone_want_to_join_your_squad'=>'Некој сака да се придружит во твојот тим:',
-  'squad'=>'Тим',
-  'thanks_you_will_get_mail'=>'Ви благодариме на апликацијата за клан, ќе ве контрактираме наскоро.',
-  'title_join_us'=>'Биди член',
-  'wrong_security_code'=>'Погрешна сигурносна шифра!'
+    'additional_info' => 'Додатни информации (нпр. Зошто би требало да ме примите во клан...)',
+    'age' => 'Година',
+    'back_to_form' => 'Назад во форма',
+    'city' => 'Град',
+    'clan_history' => 'Историја на кланот',
+    'email_not_valid' => 'Не е внесена точна е-mail адреса!',
+    'forgot_age' => 'Не е внесена година!',
+    'forgot_city' => 'Не е внесен град!',
+    'forgot_history' => 'Не е внесена историјата на кланот!',
+    'forgot_messenger' => 'Не е внесен messenger контакт (ICQ, AIM итн...)!',
+    'forgot_nickname' => 'Не е внесен nick!',
+    'forgot_realname' => 'Не е внесено вашето име!',
+    'icq_msn' => 'ICQ/MSN/итн...',
+    'info' => 'Додатни информации',
+    'joinus_form' => 'Формулар за пристап во кланот',
+    'message_title' => 'Приклучи се',
+    'messenger' => 'Messenger',
+    'name' => 'Име',
+    'nick' => 'Nick',
+    'problems' => 'Следните проблеми се појавија од внесените податоци',
+    'security_code' => 'Сигурносна шифра',
+    'send' => 'Испрати',
+    'someone_want_to_join_your_squad' => 'Некој сака да се придружит во твојот тим:',
+    'squad' => 'Тим',
+    'thanks_you_will_get_mail' => 'Ви благодариме на апликацијата за клан, ќе ве контрактираме наскоро.',
+    'title_join_us' => 'Биди член',
+    'wrong_security_code' => 'Погрешна сигурносна шифра!'
 );
 

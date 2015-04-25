@@ -29,9 +29,9 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'crwdns17091:0crwdne17091:0',
-  'max'=>'crwdns17092:0crwdne17092:0',
-  'min'=>'crwdns17093:0crwdne17093:0',
-  'not_logged_in'=>'crwdns17094:0crwdne17094:0'
+  'access_denied'=>'crwdns22946:0crwdne22946:0',
+  'max'=>'crwdns22947:0crwdne22947:0',
+  'min'=>'crwdns22948:0crwdne22948:0',
+  'not_logged_in'=>'crwdns22949:0crwdne22949:0'
 );
 

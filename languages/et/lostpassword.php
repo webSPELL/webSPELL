@@ -25,14 +25,13 @@
 ##########################################################################
 */
 
-
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'email_failed'=>'E-maili saatmisel oli probleem. Palun võta veebihalduriga ühendust.',
-  'email_subject'=>'%pagetitle% saidi konto',
-  'email_text'=>'%pagetitle% saidi konto
+    'email_failed' => 'E-maili saatmisel oli probleem. Palun võta veebihalduriga ühendust.',
+    'email_subject' => '%pagetitle% saidi konto',
+    'email_text' => '%pagetitle% saidi konto
 TÄHELEPANU: su parool on muudetud
 
 sinu kasutajanimi: %username%
@@ -40,13 +39,13 @@ su uus parool: %new_password%
 
 Head ajaviitmist meie lehel
 %homepage_url%',
-  'get_password'=>'hangi parool',
-  'lost_password'=>'kaotasin parooli',
-  'no_mail_given'=>'Sa pole ühtegi meiliaadressi sisestanud.',
-  'no_user_found'=>'kasutajat ei leitud!',
-  'successful'=>'Su konto on leitud<br><br>
+    'get_password' => 'hangi parool',
+    'lost_password' => 'kaotasin parooli',
+    'no_mail_given' => 'Sa pole ühtegi meiliaadressi sisestanud.',
+    'no_user_found' => 'kasutajat ei leitud!',
+    'successful' => 'Su konto on leitud<br><br>
     E-mail su konto andmetega saadetakse sulle mõne sekundi pärast.<br><br>
     &#8226; <a href="index.php?site=login">logi sisse</a>',
-  'your_email'=>'Su e-mail'
+    'your_email' => 'Su e-mail'
 );
 

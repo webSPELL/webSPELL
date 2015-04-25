@@ -25,14 +25,13 @@
 ##########################################################################
 */
 
-
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'email_failed'=>'პრობლემებია მაილის გაგზავნისას. გთხოვთ დაუკავშირდეთ ვებმასტერს.',
-  'email_subject'=>'თქვენი ექქაუნტი არის %pagetitle%',
-  'email_text'=>'თქვენი ექქაუნდი არის %pagetitle%
+    'email_failed' => 'პრობლემებია მაილის გაგზავნისას. გთხოვთ დაუკავშირდეთ ვებმასტერს.',
+    'email_subject' => 'თქვენი ექქაუნტი არის %pagetitle%',
+    'email_text' => 'თქვენი ექქაუნდი არის %pagetitle%
 ყურადღება! თქვენი პაროლი შეიცვალა
 
 თქვენი სახელი: %username%
@@ -40,13 +39,13 @@ $language_array = Array(
 
 ღ ჩვენს გვერდზე
 %homepage_url%',
-  'get_password'=>'მიიღე პაროლი',
-  'lost_password'=>'პაროლის დავიწყება',
-  'no_mail_given'=>'თქვენ არ შეგიყვანიათ Mail ი.',
-  'no_user_found'=>'არ არის მომხმარებელი ნაპოვნი!',
-  'successful'=>'თქვენი ექქაუნტი მოიძებნა<br><br>
+    'get_password' => 'მიიღე პაროლი',
+    'lost_password' => 'პაროლის დავიწყება',
+    'no_mail_given' => 'თქვენ არ შეგიყვანიათ Mail ი.',
+    'no_user_found' => 'არ არის მომხმარებელი ნაპოვნი!',
+    'successful' => 'თქვენი ექქაუნტი მოიძებნა<br><br>
     თქვენ მიიღევთ Email ს თქვენი ექქაუნტის მონაცემთა ბაზით.<br><br>
     &#8226; <a href="index.php?site=login">ავტორიზაცია</a>',
-  'your_email'=>'თქვენი E-Mail'
+    'your_email' => 'თქვენი E-Mail'
 );
 

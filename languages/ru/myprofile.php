@@ -25,14 +25,12 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
     'about_myself' => 'О себе',
     'activated' => 'активированный',
-    'avatar' => 'Аватар:',
-    'back' => 'назад',
     'bbcode' => '<a href="javascript:void(0);" onclick="window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">ВВкод</a> Включено',
     'can_not_copy' => 'невозможно скопировать файл с сервера',
     'change_mail' => 'сменить E-Mail',
@@ -40,17 +38,13 @@ $language_array = Array(
     'clan-history' => 'Клан-История',
     'clan-hp' => 'Клан-страница',
     'clan-info' => 'Клан-информация',
-    'clan-irc' => 'Клан-Irc',
     'clan-name' => 'Клан-Имя',
     'clan-tag' => 'Клан-Таг',
     'country' => 'Страна',
-    'cpu' => 'CPU',
     'date_of_birth' => 'Дата рождения',
     'deactivated' => 'дезактивированный',
-    'delete' => 'delete',
     'delete_max_90_90' => 'Удалить (макс90/90)',
     'delete_max_230_210' => 'Удалить (макс230/210)',
-    'e-mail' => 'E-mail',
     'edit_mail' => 'редактировать E-Mail',
     'edit_password' => 'редактировать пароль',
     'equipment-info' => 'Информация о составляющих',
@@ -109,7 +103,6 @@ $language_array = Array(
     'old_pw_not_valid' => 'ваш старый пароль неверный!',
     'options' => 'Настройки',
     'or' => 'или',
-    'password' => 'Пароль',
     'personal-info' => 'Персональные данные',
     'picture_too_big_avatar' => 'Изображение больше чем 90/90пикс',
     'picture_too_big_userpic' => 'Изображение больше чем 230/210пикс',
@@ -123,9 +116,7 @@ $language_array = Array(
     'sexuality' => 'Пол',
     'signature' => 'Подпись',
     'smilies' => '<a href="javascript:void(0);" onclick="window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Смайлы</a> включены',
-    'soundcard' => 'Звук',
     'town' => 'Город',
-    'unknown' => 'недоступно',
     'update_profile' => 'обновить профиль',
     'upload_failed' => 'обновление не удалось',
     'username' => 'Имя пользователя',
@@ -139,3 +130,4 @@ $language_array = Array(
     'you_have_to_username' => 'Вы должны ввести имя пользователя!',
     'you_have_to_valid_email' => 'Ваш адрес почты неверен!'
 );
+

@@ -25,24 +25,24 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'back'=>'Retour',
-	'banner'=>'Bannière',
-	'banner_to_big'=>'L\'image est trop grande !',
-	'delete'=>'Supprimer',
-	'edit'=>'Editer',
-	'edit_linkus'=>'Editer la bannière',
-	'format_incorrect'=>'Format d\'image invalide (autorisés: *.gif, *.jpg ou *.png)',
-	'link_us'=>'Nous recommander',
-	'name'=>'Nom',
-	'new_banner'=>'Nouvelle bannière',
-	'no_access'=>'Accès refusé !',
-	'no_banner'=>'Aucune bannière.',
-	'really_delete_banner'=>'Voulez-vous vraiment supprimer cette bannière ?',
-	'save_banner'=>'Enregistrer',
-	'use_following_code'=>'Utilisez le code suivant, pour insérer la bannière sur votre site.'
+    'back' => 'Retour',
+    'banner' => 'Bannière',
+    'banner_to_big' => 'L\'image est trop grande !',
+    'delete' => 'Supprimer',
+    'edit' => 'Editer',
+    'edit_linkus' => 'Editer la bannière',
+    'format_incorrect' => 'Format d\'image invalide (autorisés: *.gif, *.jpg ou *.png)',
+    'link_us' => 'Nous recommander',
+    'name' => 'Nom',
+    'new_banner' => 'Nouvelle bannière',
+    'no_access' => 'Accès refusé !',
+    'no_banner' => 'Aucune bannière.',
+    'really_delete_banner' => 'Voulez-vous vraiment supprimer cette bannière ?',
+    'save_banner' => 'Enregistrer',
+    'use_following_code' => 'Utilisez le code suivant, pour insérer la bannière sur votre site.'
 );
 

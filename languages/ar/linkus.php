@@ -25,25 +25,24 @@
 ##########################################################################
 */
 
-
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'back'=>'رجوع',
-  'banner'=>'الافتة',
-  'banner_to_big'=>'الافتة كبيره',
-  'delete'=>'حذف',
-  'edit'=>'تعديل',
-  'edit_linkus'=>'تعديل الافتى',
-  'format_incorrect'=>'الصيغة غير صالحة, الصيغ المصرح بها هي: gif, * jpg *.png',
-  'link_us'=>'ربط لنا',
-  'name'=>'الاسم',
-  'new_banner'=>'لافتة جديده',
-  'no_access'=>'لا وصول',
-  'no_banner'=>'لا يوجد رابط لنا للافتة',
-  'really_delete_banner'=>'تريد حذف هذا الاضافة',
-  'save_banner'=>'حذف الافتة',
-  'use_following_code'=>'استخدام الاكواد التالية، لإدراج لافتة على صفحتك الرئيسية.'
+    'back' => 'رجوع',
+    'banner' => 'الافتة',
+    'banner_to_big' => 'الافتة كبيره',
+    'delete' => 'حذف',
+    'edit' => 'تعديل',
+    'edit_linkus' => 'تعديل الافتى',
+    'format_incorrect' => 'الصيغة غير صالحة, الصيغ المصرح بها هي: gif, * jpg *.png',
+    'link_us' => 'ربط لنا',
+    'name' => 'الاسم',
+    'new_banner' => 'لافتة جديده',
+    'no_access' => 'لا وصول',
+    'no_banner' => 'لا يوجد رابط لنا للافتة',
+    'really_delete_banner' => 'تريد حذف هذا الاضافة',
+    'save_banner' => 'حذف الافتة',
+    'use_following_code' => 'استخدام الاكواد التالية، لإدراج لافتة على صفحتك الرئيسية.'
 );
 

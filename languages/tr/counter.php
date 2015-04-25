@@ -24,46 +24,40 @@
 #                                                                        #
 ##########################################################################
 */
-/**
- * Online Language Editor Turkey language file for webSPELL 4.2.2
- * @author Stefan Giesecke <webmaster@giesi.com>
- * @copyright Copyright (c) 2010, Stefan Giesecke
- * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
- */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'daysonline'=>'Çevrimiçi gün',
-  'guest'=>'Konuk',
-  'guests'=>'Konuklar',
-  'lasthour'=>'Son saat',
-  'max_day'=>'Günlük maksimum',
-  'maximum'=>'Maksimum',
-  'month'=>'Ay',
-  'now'=>'Şimdi',
-  'online'=>'Çevrimiçi',
-  'page_statistics'=>'Sayfa İstatistikleri',
-  'registered_users'=>'Kayıtlı kullanıcılar',
-  'statistic'=>'İstatistikleri göster',
-  'this_month'=>'Bu Ay',
-  'today'=>'Bugün',
-  'total'=>'Toplam',
-  'total_statistic'=>'Genel istatistik',
-  'user'=>'Kullanıcı',
-  'users'=>'Kullanıcılar',
-  'visits'=>'Ziyaretçiler',
-  'visits_day'=>'Günlük Ziyaretçiler',
-  'visits_hour'=>'Saat başına Ziyaretler',
-  'visits_month'=>'Aylık Ziyaretçiler',
-  'visits_total'=>'Toplam Ziyaretçiler',
-  'yesterday'=>'Dün',
-  'avg_age'=>'Yaş ortalaması',
-  'avg_age_clanmember'=>'Klan üyeleri yaş ortalaması',
-  'youngest_user'=>'En genç üye',
-  'oldest_user'=>'En yaşlı üye',
-  'user_statistic'=>'Kullanıcı istatistiği',
-  'years'=>'yaş'
+    'avg_age' => 'Yaş ortalaması',
+    'avg_age_clanmember' => 'Klan üyeleri yaş ortalaması',
+    'daysonline' => 'Çevrimiçi gün',
+    'guest' => 'Konuk',
+    'guests' => 'Konuklar',
+    'lasthour' => 'Son saat',
+    'max_day' => 'Günlük maksimum',
+    'maximum' => 'Maksimum',
+    'month' => 'Ay',
+    'now' => 'Şimdi',
+    'oldest_user' => 'En yaşlı üye',
+    'online' => 'Çevrimiçi',
+    'page_statistics' => 'Sayfa İstatistikleri',
+    'registered_users' => 'Kayıtlı kullanıcılar',
+    'statistic' => 'İstatistikleri göster',
+    'this_month' => 'Bu Ay',
+    'today' => 'Bugün',
+    'total' => 'Toplam',
+    'total_statistic' => 'Genel istatistik',
+    'user' => 'Kullanıcı',
+    'user_statistic' => 'Kullanıcı istatistiği',
+    'users' => 'Kullanıcılar',
+    'visits' => 'Ziyaretçiler',
+    'visits_day' => 'Günlük Ziyaretçiler',
+    'visits_hour' => 'Saat başına Ziyaretler',
+    'visits_month' => 'Aylık Ziyaretçiler',
+    'visits_total' => 'Toplam Ziyaretçiler',
+    'years' => 'yaş',
+    'yesterday' => 'Dün',
+    'youngest_user' => 'En genç üye'
 );
 

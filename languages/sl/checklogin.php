@@ -24,24 +24,18 @@
 #                                                                        #
 ##########################################################################
 */
-/**
- * Online Language Editor Slovenia language file for webSPELL 4.2.2
- * @author Stefan Giesecke <webmaster@giesi.com>
- * @copyright Copyright (c) 2010, Stefan Giesecke
- * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
- */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'invalid_password'=>'Nepravilno geslo.',
-  'ip_banned'=>'IP je bennan.<br>%reason%',
-  'login_successful'=>'Prijavite se uspešno!',
-  'no_user'=>'Uporabnik <b>%username%</b> ni dostopen.',
-  'not_activated'=>'Vaš račun ni aktiviran.',
-  'session_error'=>'Omogočite piškotke v vašem brskalniku.<br>Če so problemi, kontaktirajte webmastera.',
-  'return'=>'<a href="javascript:history.back()">Pojdi nazaj</a>',
-  'return_reenter' => '<a href="javascript:history.back()">Vrnite se in poskusite znova.</a>'
+    'invalid_password' => 'Nepravilno geslo.',
+    'ip_banned' => 'IP je bennan.<br>%reason%',
+    'login_successful' => 'Prijavite se uspešno!',
+    'no_user' => 'Uporabnik <b>%username%</b> ni dostopen.',
+    'not_activated' => 'Vaš račun ni aktiviran.',
+    'return' => '<a href="javascript:history.back()">Pojdi nazaj</a>',
+    'return_reenter' => '<a href="javascript:history.back()">Vrnite se in poskusite znova.</a>',
+    'session_error' => 'Omogočite piškotke v vašem brskalniku.<br>Če so problemi, kontaktirajte webmastera.'
 );
 

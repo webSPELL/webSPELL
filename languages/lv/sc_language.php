@@ -25,12 +25,11 @@
 ##########################################################################
 */
 
-
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'save'=>'saglabāt',
-  'no_session'=>'Lūdzu pārliecinieties vai sīkfaili ir iespējoti un mēģiniet nomainīt valodu vēlreiz.'
+    'no_session' => 'Lūdzu pārliecinieties vai sīkfaili ir iespējoti un mēģiniet nomainīt valodu vēlreiz.',
+    'save' => 'saglabāt'
 );
 

@@ -25,24 +25,23 @@
 ##########################################################################
 */
 
-
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'admin'=>'administrators',
-  'buddy_list'=>'draugu saraksts',
-  'cash-box'=>'norēķini',
-  'edit_account'=>'rediģēt kontu',
-  'galleries'=>'galerijas',
-  'login'=>'pieslēgties',
-  'logout'=>'atslēgties',
-  'lost_password'=>'pazaudēji paroli?',
-  'messenger'=>'ziņotājs',
-  'n_a'=>'nav pieejams',
-  'overview'=>'pārskats',
-  'register_now'=>'reģistrējies tagad',
-  'registered_users'=>'reģistrētie lietotāji',
-  'welcome_back'=>'laipni gaidīts atpakaļ'
+    'admin' => 'administrators',
+    'buddy_list' => 'draugu saraksts',
+    'cash-box' => 'norēķini',
+    'edit_account' => 'rediģēt kontu',
+    'galleries' => 'galerijas',
+    'login' => 'pieslēgties',
+    'logout' => 'atslēgties',
+    'lost_password' => 'pazaudēji paroli?',
+    'messenger' => 'ziņotājs',
+    'n_a' => 'nav pieejams',
+    'overview' => 'pārskats',
+    'register_now' => 'reģistrējies tagad',
+    'registered_users' => 'reģistrētie lietotāji',
+    'welcome_back' => 'laipni gaidīts atpakaļ'
 );
 

@@ -25,10 +25,10 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
-/* semmit ne módosíts ezen vonal fölött */
+/* do not edit above this line */
 
-	'security_code'=>'Biztonsági kód'
+    'security_code' => 'Biztonsági kód'
 );
 

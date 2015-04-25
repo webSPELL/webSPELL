@@ -25,16 +25,17 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
-	'invalid_password'=>'Hai nesso un password spagliato.',
-	'ip_banned'=>'Il tuo IP è stato vietato dal sito.<br>%reason%',
-	'login_successful'=>'Connesso',
-	'no_user'=>'Nessun utente con il nome <b>%username%</b> nel nonstro sisteme.',
-	'not_activated'=>'Il tuo account non è attivato.',
-	'session_error'=>'Vi preghiamo di assicurarvi che voi stessi il vostro browser accetta i cookie.<br>Se il problema persiste, si prega di contattare il Webmaster.',
-  'return'=>'<a href="javascript:history.back()">indietro</a>',
-  'return_reenter' => '<a href="javascript:history.back()">Torna in ingresso e ripetere</a>'
+
+    'invalid_password' => 'Hai nesso un password spagliato.',
+    'ip_banned' => 'Il tuo IP è stato vietato dal sito.<br>%reason%',
+    'login_successful' => 'Connesso',
+    'no_user' => 'Nessun utente con il nome <b>%username%</b> nel nonstro sisteme.',
+    'not_activated' => 'Il tuo account non è attivato.',
+    'return' => '<a href="javascript:history.back()">indietro</a>',
+    'return_reenter' => '<a href="javascript:history.back()">Torna in ingresso e ripetere</a>',
+    'session_error' => 'Vi preghiamo di assicurarvi che voi stessi il vostro browser accetta i cookie.<br>Se il problema persiste, si prega di contattare il Webmaster.'
 );
 

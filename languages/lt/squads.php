@@ -25,33 +25,33 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'about'=>'apie',
-	'active'=>'aktyvus',
-	'add_buddy'=>'pridėti į draugų sąrašą',
-	'awards'=>'apdovanojimai',
-	'back_buddy'=>'grįžti į draugų sąrašą',
-	'back_squad_overview'=>'grįžti peržiūrinėti būrį',
-	'challenge'=>'iššūkis',
-	'contact'=>'Susisiekimas',
-	'email'=>'e-paštas',
-	'ignore'=>'ignoruojamasis sąrašas',
-	'inactive'=>'neaktyvus',
-	'member'=>'Narys',
-	'members'=>'Nariai',
-	'messenger'=>'pranešiklis',
-	'no_description'=>'jokios informacijos nėra arba neglimos',
-	'no_userpic'=>'vartotojų nuotraukos neleidžiamos!',
-	'position'=>'Vieta',
-	'results'=>'rezultatai',
-	'show_details'=>'rodyti detalės',
-	'squad_plays'=>'Būrys žais',
-	'squads'=>'būriai',
-	'status'=>'Padėtis',
-	'town'=>'Miestas',
-	'userpicture'=>'vartotojo nuotrauka'
+    'about' => 'apie',
+    'active' => 'aktyvus',
+    'add_buddy' => 'pridėti į draugų sąrašą',
+    'awards' => 'apdovanojimai',
+    'back_buddy' => 'grįžti į draugų sąrašą',
+    'back_squad_overview' => 'grįžti peržiūrinėti būrį',
+    'challenge' => 'iššūkis',
+    'contact' => 'Susisiekimas',
+    'email' => 'e-paštas',
+    'ignore' => 'ignoruojamasis sąrašas',
+    'inactive' => 'neaktyvus',
+    'member' => 'Narys',
+    'members' => 'Nariai',
+    'messenger' => 'pranešiklis',
+    'no_description' => 'jokios informacijos nėra arba neglimos',
+    'no_userpic' => 'vartotojų nuotraukos neleidžiamos!',
+    'position' => 'Vieta',
+    'results' => 'rezultatai',
+    'show_details' => 'rodyti detalės',
+    'squad_plays' => 'Būrys žais',
+    'squads' => 'būriai',
+    'status' => 'Padėtis',
+    'town' => 'Miestas',
+    'userpicture' => 'vartotojo nuotrauka'
 );
 

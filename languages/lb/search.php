@@ -24,53 +24,46 @@
 #                                                                        #
 ##########################################################################
 */
-/**
- * Online Language Editor Luxemburg language file for webSPELL 4.2.2
- * @author Stefan Giesecke <webmaster@giesi.com>
- * @copyright Copyright (c) 2010, Stefan Giesecke
- * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
- */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'after'=>'no dem',
-  'and'=>'ann',
-  'article'=>'Artikel',
-  'articles'=>'Artikelen',
-  'articles_link'=>'<b>Link vum Artikel</b>',
-  'ascending'=>'ofsteigend',
-  'before'=>'firun dem',
-  'date_options'=>'Datum',
-  'delete_selected'=>'Ausgewielten läschen',
-  'descending'=>'opsteigend',
-  'faq'=>'FAQ',
-  'faq_link'=>'<b>Link zur FAQ</b>',
-  'forum'=>'Forenbäiträg',
-  'forum_link'=>'<b>Link zum Topic</b>',
-  'frequency'=>'Heefegkeet',
-  'keyword'=>'Stéchwuert',
-  'new_search'=>'Nei Sich',
-  'news'=>'Neiegkeeten',
-  'news_link'=>'<b>Link zur Neiegkeeten</b>',
-  'options'=>'Optiounen',
-  'or'=>'oder',
-  'result_quantity'=>'Ergebnisser pro Säit',
-  'results_found'=>'Ergebnisser fonnt',
-  'search'=>'Sich',
-  'search_in'=>'Durchsichen:',
-  'search_location'=>'Sichplaatz',
-  'search_term'=>'Sichbegrëff',
-  'search_title'=>'Erweidert Sich',
-  'security_code'=>'Sëcherheetscode',
-  'sort_options'=>'Sortéierung',
-  'start_search'=>'Siche starten',
-  'submit'=>'Ofschlécken',
-  'text_contains'=>'Text enthält',
-  'title_contains'=>'Titel enthält',
-  'too_short'=>'Sichbegrëff ze kurz. Mindestens %min_chars% Zeechen',
-  'wrong_securitycode'=>'Den Sëcherheetscode ass falsch',
-  'no_result' =>'Keng Anträg zou "%s" fonnt'
+    'after' => 'no dem',
+    'and' => 'ann',
+    'article' => 'Artikel',
+    'articles' => 'Artikelen',
+    'articles_link' => '<b>Link vum Artikel</b>',
+    'ascending' => 'ofsteigend',
+    'before' => 'firun dem',
+    'date_options' => 'Datum',
+    'delete_selected' => 'Ausgewielten läschen',
+    'descending' => 'opsteigend',
+    'faq_link' => '<b>Link zur FAQ</b>',
+    'forum' => 'Forenbäiträg',
+    'forum_link' => '<b>Link zum Topic</b>',
+    'frequency' => 'Heefegkeet',
+    'keyword' => 'Stéchwuert',
+    'new_search' => 'Nei Sich',
+    'news' => 'Neiegkeeten',
+    'news_link' => '<b>Link zur Neiegkeeten</b>',
+    'no_result' => 'Keng Anträg zou "%s" fonnt',
+    'options' => 'Optiounen',
+    'or' => 'oder',
+    'result_quantity' => 'Ergebnisser pro Säit',
+    'results_found' => 'Ergebnisser fonnt',
+    'search' => 'Sich',
+    'search_in' => 'Durchsichen:',
+    'search_location' => 'Sichplaatz',
+    'search_term' => 'Sichbegrëff',
+    'search_title' => 'Erweidert Sich',
+    'security_code' => 'Sëcherheetscode',
+    'sort_options' => 'Sortéierung',
+    'start_search' => 'Siche starten',
+    'submit' => 'Ofschlécken',
+    'text_contains' => 'Text enthält',
+    'title_contains' => 'Titel enthält',
+    'too_short' => 'Sichbegrëff ze kurz. Mindestens %min_chars% Zeechen',
+    'wrong_securitycode' => 'Den Sëcherheetscode ass falsch'
 );
 

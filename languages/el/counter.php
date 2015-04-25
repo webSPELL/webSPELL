@@ -24,46 +24,40 @@
 #                                                                        #
 ##########################################################################
 */
-/**
- * Online Language Editor Greece language file for webSPELL 4.2.2
- * @author Stefan Giesecke <webmaster@giesi.com>
- * @copyright Copyright (c) 2010, Stefan Giesecke
- * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
- */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'daysonline'=>'Ημερες online',
-  'guest'=>'Επισκεπτης',
-  'guests'=>'Επισκεπτες',
-  'lasthour'=>'Τελευταια ωρα',
-  'max_day'=>'Μεγιστο ανα ημερα',
-  'maximum'=>'Μεγιστο',
-  'month'=>'Μηνας',
-  'now'=>'Τωρα',
-  'online'=>'Online',
-  'page_statistics'=>'Στατιστικα σελιδας',
-  'registered_users'=>'Εγγεγραμενοι χρηστες',
-  'statistic'=>'Εμφανιση στατιστικων',
-  'this_month'=>'Αυτο το μηνα',
-  'today'=>'Σημερα',
-  'total'=>'Συνολικα',
-  'total_statistic'=>'Συνολικα στατιστικα',
-  'user'=>'Χρηστης',
-  'users'=>'Χρηστες',
-  'visits'=>'Επισκεπτες',
-  'visits_day'=>'Επισκεψεις ανα ημερα',
-  'visits_hour'=>'Επισκεψεις ανα ωρα',
-  'visits_month'=>'Επισκεψεις ανα μηνα',
-  'visits_total'=>'Συνολικες επισκεψεις',
-  'yesterday'=>'Χθες',
-  'avg_age'=>'Μεση ηλικια',
-  'avg_age_clanmember'=>'Μεση ηλικια μελων συμμαχιας',
-  'youngest_user'=>'νεοτερος χρηστης',
-  'oldest_user'=>'Γηραιοτερος χρηστης',
-  'user_statistic'=>'Στατιστικα χρηστη ',
-  'years'=>'Ετη'
+    'avg_age' => 'Μεση ηλικια',
+    'avg_age_clanmember' => 'Μεση ηλικια μελων συμμαχιας',
+    'daysonline' => 'Ημερες online',
+    'guest' => 'Επισκεπτης',
+    'guests' => 'Επισκεπτες',
+    'lasthour' => 'Τελευταια ωρα',
+    'max_day' => 'Μεγιστο ανα ημερα',
+    'maximum' => 'Μεγιστο',
+    'month' => 'Μηνας',
+    'now' => 'Τωρα',
+    'oldest_user' => 'Γηραιοτερος χρηστης',
+    'online' => 'Online',
+    'page_statistics' => 'Στατιστικα σελιδας',
+    'registered_users' => 'Εγγεγραμενοι χρηστες',
+    'statistic' => 'Εμφανιση στατιστικων',
+    'this_month' => 'Αυτο το μηνα',
+    'today' => 'Σημερα',
+    'total' => 'Συνολικα',
+    'total_statistic' => 'Συνολικα στατιστικα',
+    'user' => 'Χρηστης',
+    'user_statistic' => 'Στατιστικα χρηστη ',
+    'users' => 'Χρηστες',
+    'visits' => 'Επισκεπτες',
+    'visits_day' => 'Επισκεψεις ανα ημερα',
+    'visits_hour' => 'Επισκεψεις ανα ωρα',
+    'visits_month' => 'Επισκεψεις ανα μηνα',
+    'visits_total' => 'Συνολικες επισκεψεις',
+    'years' => 'Ετη',
+    'yesterday' => 'Χθες',
+    'youngest_user' => 'νεοτερος χρηστης'
 );
 

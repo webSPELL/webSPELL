@@ -25,11 +25,11 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'save'=>'mentés',
-	'no_session'=>'Győződj meg róla, hogy a cookie-k engedélyezve vannak és próbáld meg újra a nyelvváltást.'
+    'no_session' => 'Győződj meg róla, hogy a cookie-k engedélyezve vannak és próbáld meg újra a nyelvváltást.',
+    'save' => 'mentés'
 );
 

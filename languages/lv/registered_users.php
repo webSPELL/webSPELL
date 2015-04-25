@@ -25,20 +25,19 @@
 ##########################################################################
 */
 
-
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'contact'=>'Kontakts',
-  'country'=>'V',
-  'homepage'=>'Mājaslapa',
-  'last_login'=>'Pēdējā pieslēgšanās',
-  'nickname'=>'Segvārds',
-  'no_users'=>'nav reģistrētu lietotāju',
-  'now_on'=>'tiešsaistē',
-  'registered_users'=>'reģistrēti lietotāji',
-  'registration'=>'Reģistrējies no',
-  'sort'=>'Kārtot:'
+    'contact' => 'Kontakts',
+    'country' => 'V',
+    'homepage' => 'Mājaslapa',
+    'last_login' => 'Pēdējā pieslēgšanās',
+    'nickname' => 'Segvārds',
+    'no_users' => 'nav reģistrētu lietotāju',
+    'now_on' => 'tiešsaistē',
+    'registered_users' => 'reģistrēti lietotāji',
+    'registration' => 'Reģistrējies no',
+    'sort' => 'Kārtot:'
 );
 

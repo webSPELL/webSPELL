@@ -25,33 +25,32 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'about'=>'leírás',
-	'active'=>'aktív',
-	'add_buddy'=>'hozzáadás a barátokhoz',
-	'awards'=>'díjak',
-	'back_buddy'=>'vissza az ismerős-listára',
-	'back_squad_overview'=>'vissza a squadok áttekintéséhez',
-	'challenge'=>'kihívás',
-	'contact'=>'Kapcsolat',
-	'email'=>'email',
-	'ignore'=>'tag tiltása',
-	'inactive'=>'inaktív',
-	'member'=>'Tag',
-	'members'=>'Tag',
-	'messenger'=>'üzenetküldő',
-	'no_description'=>'nincs elérhető leírás',
-	'no_userpic'=>'nincs elérhető felhasználói kép!',
-	'position'=>'Pozíció',
-	'results'=>'eredmények',
-	'show_details'=>'részletek mutatása',
-	'squad_plays'=>'Squad játéka',
-	'squads'=>'squadok',
-	'status'=>'Státusz',
-	'town'=>'Település',
-	'userpicture'=>'felhasználói kép'
+    'about' => 'leírás',
+    'active' => 'aktív',
+    'add_buddy' => 'hozzáadás a barátokhoz',
+    'awards' => 'díjak',
+    'back_buddy' => 'vissza az ismerős-listára',
+    'back_squad_overview' => 'vissza a squadok áttekintéséhez',
+    'challenge' => 'kihívás',
+    'contact' => 'Kapcsolat',
+    'ignore' => 'tag tiltása',
+    'inactive' => 'inaktív',
+    'member' => 'Tag',
+    'members' => 'Tag',
+    'messenger' => 'üzenetküldő',
+    'no_description' => 'nincs elérhető leírás',
+    'no_userpic' => 'nincs elérhető felhasználói kép!',
+    'position' => 'Pozíció',
+    'results' => 'eredmények',
+    'show_details' => 'részletek mutatása',
+    'squad_plays' => 'Squad játéka',
+    'squads' => 'squadok',
+    'status' => 'Státusz',
+    'town' => 'Település',
+    'userpicture' => 'felhasználói kép'
 );
 

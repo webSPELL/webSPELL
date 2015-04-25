@@ -24,26 +24,19 @@
 #                                                                        #
 ##########################################################################
 */
-/**
- * Online Language Editor Albania language file for webSPELL 4.2.2
- * @author Stefan Giesecke <webmaster@giesi.com>
- * @copyright Copyright (c) 2010, Stefan Giesecke
- * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
- */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'game'=>'Loja',
-  'information'=>'Informacion',
-  'ip'=>'IP',
-  'link'=>'Link-u',
-  'no_server'=>'nuk ka servera të disponueshëm.',
-  'not_supported'=>'Nuk suportohet nga webserver-i',
-  'online'=>'online',
-  'server'=>'server',
-  'status'=>'Statut',
-  'timeout'=>'koha mbaroi'
+    'game' => 'Loja',
+    'information' => 'Informacion',
+    'link' => 'Link-u',
+    'no_server' => 'nuk ka servera të disponueshëm.',
+    'not_supported' => 'Nuk suportohet nga webserver-i',
+    'online' => 'online',
+    'server' => 'server',
+    'status' => 'Statut',
+    'timeout' => 'koha mbaroi'
 );
 

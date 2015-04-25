@@ -25,12 +25,12 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'no_user'=>'Не постоји корисничка слика',
-  'registered_since'=>'регистрован од',
-  'view_profile'=>'посјети профил'
+    'no_user' => 'Не постоји корисничка слика',
+    'registered_since' => 'регистрован од',
+    'view_profile' => 'посјети профил'
 );
 

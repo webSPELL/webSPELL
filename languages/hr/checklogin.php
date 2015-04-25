@@ -25,17 +25,17 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'invalid_password'=>'Unijeli ste krivu lozinku.',
-	'ip_banned'=>'Vaš IP je bannan na ovim stranicama.<br>%reason%',
-	'login_successful'=>'Prijava uspješna!',
-	'no_user'=>'Korisnik <b>%username%</b> nije dostupan na ovim stranicama.',
-	'not_activated'=>'Vaš racun nije aktiviran.',
-	'session_error'=>'Molimo uvjerite se da su cookiesi omoguceni u Vašem pregledniku.<br>Ako problem i dalje postoji, kontaktirajte webmastera.',
-  'return'=>'<a href="javascript:history.back()">Idi natrag</a>',
-  'return_reenter' => '<a href="javascript:history.back()">Vratite se i pokušajte ponovno.</a>'
+    'invalid_password' => 'Unijeli ste krivu lozinku.',
+    'ip_banned' => 'Vaš IP je bannan na ovim stranicama.<br>%reason%',
+    'login_successful' => 'Prijava uspješna!',
+    'no_user' => 'Korisnik <b>%username%</b> nije dostupan na ovim stranicama.',
+    'not_activated' => 'Vaš racun nije aktiviran.',
+    'return' => '<a href="javascript:history.back()">Idi natrag</a>',
+    'return_reenter' => '<a href="javascript:history.back()">Vratite se i pokušajte ponovno.</a>',
+    'session_error' => 'Molimo uvjerite se da su cookiesi omoguceni u Vašem pregledniku.<br>Ako problem i dalje postoji, kontaktirajte webmastera.'
 );
 

@@ -25,29 +25,28 @@
 ##########################################################################
 */
 
-
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'about'=>'Despre',
-  'active'=>'activ',
-  'activity'=>'Activtate',
-  'awards'=>'Premii',
-  'back_overview'=>'&raquo; <a href="index.php?site=members"><b>Înapoi la Prezentare membri</b></a>',
-  'challenge'=>'Provocare',
-  'contact'=>'Contact',
-  'go'=>'Porneşte!',
-  'inactive'=>'inactiv',
-  'member'=>'Membru',
-  'members'=>'membri',
-  'nickname'=>'Poreclă',
-  'no_description'=>'nici o descriere disponibilă',
-  'position'=>'Poziţie',
-  'results'=>'Rezultate',
-  'show_details'=>'&raquo; <a href="index.php?site=members&amp;action=show&amp;squadID=%squadID%"><b>Arata detalii</b></a>',
-  'show_only'=>'Arată doar',
-  'status'=>'Status',
-  'town'=>'Oraş'
+    'about' => 'Despre',
+    'active' => 'activ',
+    'activity' => 'Activtate',
+    'awards' => 'Premii',
+    'back_overview' => '&raquo; <a href="index.php?site=members"><b>Înapoi la Prezentare membri</b></a>',
+    'challenge' => 'Provocare',
+    'contact' => 'Contact',
+    'go' => 'Porneşte!',
+    'inactive' => 'inactiv',
+    'member' => 'Membru',
+    'members' => 'membri',
+    'nickname' => 'Poreclă',
+    'no_description' => 'nici o descriere disponibilă',
+    'position' => 'Poziţie',
+    'results' => 'Rezultate',
+    'show_details' => '&raquo; <a href="index.php?site=members&amp;action=show&amp;squadID=%squadID%"><b>Arata detalii</b></a>',
+    'show_only' => 'Arată doar',
+    'status' => 'Status',
+    'town' => 'Oraş'
 );
 

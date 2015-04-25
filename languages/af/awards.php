@@ -24,35 +24,29 @@
 #                                                                        #
 ##########################################################################
 */
-/**
- * Online Language Editor South Africa language file for webSPELL 4.2.2
- * @author Stefan Giesecke <webmaster@giesi.com>
- * @copyright Copyright (c) 2010, Stefan Giesecke
- * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
- */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'award'=>'Toekenning',
-  'awards'=>'Toekennings',
-  'date'=>'Datum',
-  'delete'=>'verwyder',
-  'edit'=>'verander',
-  'edit_award'=>'Verander toekenning',
-  'enter_title'=>'Verskaf \'n titel!',
-  'enter_text'=>'voer teks in:',
-  'event'=>'Byeenkoms',
-  'homepage'=>'Hoofblad',
-  'info'=>'Inligting',
-  'new_award'=>'Nuwe toekenning',
-  'no_access'=>'Geen toegang!',
-  'no_entries'=>'Geen toekenning beskikbaar',
-  'ranking'=>'Rang',
-  'save_award'=>'Stoor toekenning',
-  'sort'=>'Sorteer',
-  'squad'=>'Eenheid',
-  'update_award'=>'Opdateer toekenning'
+    'award' => 'Toekenning',
+    'awards' => 'Toekennings',
+    'date' => 'Datum',
+    'delete' => 'verwyder',
+    'edit' => 'verander',
+    'edit_award' => 'Verander toekenning',
+    'enter_text' => 'voer teks in:',
+    'enter_title' => 'Verskaf \'n titel!',
+    'event' => 'Byeenkoms',
+    'homepage' => 'Hoofblad',
+    'info' => 'Inligting',
+    'new_award' => 'Nuwe toekenning',
+    'no_access' => 'Geen toegang!',
+    'no_entries' => 'Geen toekenning beskikbaar',
+    'ranking' => 'Rang',
+    'save_award' => 'Stoor toekenning',
+    'sort' => 'Sorteer',
+    'squad' => 'Eenheid',
+    'update_award' => 'Opdateer toekenning'
 );
 

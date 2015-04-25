@@ -25,11 +25,11 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'news_feed'=>'Hírek Feed',
-	'latest_news_from'=>'Legfrissebb hírek'
+    'latest_news_from' => 'Legfrissebb hírek',
+    'news_feed' => 'Hírek Feed'
 );
 

@@ -25,12 +25,12 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'no_frame'=>'Tyto stránky jsou tvořeny pomocí rámcù. Tvůj prohlížeč nepodporuje rámce!',
-	'outgoing'=>'Outgoing',
-	'owner_responsible'=>'Majitel je odpovědný za tyto stránky.'
+    'no_frame' => 'Tyto stránky jsou tvořeny pomocí rámcù. Tvůj prohlížeč nepodporuje rámce!',
+    'outgoing' => 'Outgoing',
+    'owner_responsible' => 'Majitel je odpovědný za tyto stránky.'
 );
 

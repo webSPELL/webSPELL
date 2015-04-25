@@ -25,12 +25,12 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'invalid_request'=>'Bloga užklausa',
-	'no_result'=>'Nieko nerasta',
-	'to_much_results'=>'Rasta per daug atitikmenų, prašome susiaurinti paiešką.'
+    'invalid_request' => 'Bloga užklausa',
+    'no_result' => 'Nieko nerasta',
+    'to_much_results' => 'Rasta per daug atitikmenų, prašome susiaurinti paiešką.'
 );
 

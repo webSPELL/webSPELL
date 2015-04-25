@@ -65,3 +65,4 @@ node_modules
 # Composer
 composer.phar
 vendor
+/development/tools/output.log

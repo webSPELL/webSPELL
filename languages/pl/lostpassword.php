@@ -25,13 +25,13 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'email_failed'=>'Wystąpił problem podczas wysyłania emaila. Proszę skontaktować się z webmasterem.',
-	'email_subject'=>'Twoje konto dla %pagetitle%',
-	'email_text'=>'Twoje konto dla %pagetitle%
+    'email_failed' => 'Wystąpił problem podczas wysyłania emaila. Proszę skontaktować się z webmasterem.',
+    'email_subject' => 'Twoje konto dla %pagetitle%',
+    'email_text' => 'Twoje konto dla %pagetitle%
 UWAGA twoje hasło zostało zmienione na:
 
 Login: %username%
@@ -39,13 +39,13 @@ Hasło: %new_password%
 
 Zapraszamy na stronę
 %homepage_url%',
-	'get_password'=>'wyślij',
-	'lost_password'=>'odzyskiwanie hasła',
-	'no_mail_given'=>'Musisz wpisać adres email.',
-	'no_user_found'=>'brak takiego użytkownika!',
-	'successful'=>'Konto zostało znalezione<br><br>
+    'get_password' => 'wyślij',
+    'lost_password' => 'odzyskiwanie hasła',
+    'no_mail_given' => 'Musisz wpisać adres email.',
+    'no_user_found' => 'brak takiego użytkownika!',
+    'successful' => 'Konto zostało znalezione<br><br>
     Dostaniesz email ze szczegółami twojego konta, nowym hasłem za kilka minut.<br><br>
     &#8226; <a href="index.php?site=login">login</a>',
-	'your_email'=>'Twój E-Mail'
+    'your_email' => 'Twój E-Mail'
 );
 

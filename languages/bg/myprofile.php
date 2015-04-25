@@ -25,13 +25,12 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
     'about_myself' => 'За мен',
     'activated' => 'активирана',
-    'avatar' => 'Аватар:',
     'back' => 'Назад',
     'bbcode' => '<a href="javascript:void(0);" onclick="window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">ББкод</a> е Включен',
     'can_not_copy' => 'не може да се копира файлът от сървъра',
@@ -44,13 +43,10 @@ $language_array = Array(
     'clan-name' => 'Име на клана',
     'clan-tag' => 'Clan-Tag',
     'country' => 'Държава',
-    'cpu' => 'CPU',
     'date_of_birth' => 'Дата на раждане',
     'deactivated' => 'деактивира',
-    'delete' => 'delete',
     'delete_max_90_90' => 'изтрий (макс90/90)',
     'delete_max_230_210' => 'изтрий (макс230/210)',
-    'e-mail' => 'E-mail',
     'edit_mail' => 'редактирай E-Mail',
     'edit_password' => 'редактирай парола',
     'equipment-info' => 'Оборудване-Инфо',
@@ -139,3 +135,4 @@ $language_array = Array(
     'you_have_to_username' => 'Трябва да въведете потребителско име!',
     'you_have_to_valid_email' => 'Tрябва да въведете валиден E-mail!'
 );
+

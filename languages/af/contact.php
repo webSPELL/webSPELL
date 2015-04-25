@@ -24,36 +24,30 @@
 #                                                                        #
 ##########################################################################
 */
-/**
- * Online Language Editor South Africa language file for webSPELL 4.2.2
- * @author Stefan Giesecke <webmaster@giesi.com>
- * @copyright Copyright (c) 2010, Stefan Giesecke
- * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
- */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'back'=>'terug na vorm',
-  'contact'=>'Kontak',
-  'description'=>'Met hierdie vorm kan jy \'n boodskap aan ons stuur',
-  'enter_mail'=>'Voer \'n e-pos adres in.',
-  'enter_message'=>'Voer n Boodskap in.',
-  'enter_name'=>'Voer naam in.',
-  'enter_subject'=>'Gee \'n onderwerp.',
-  'errors_there'=>'foute het voorgekom',
-  'mail'=>'E-pos',
-  'message'=>'Boodskap',
-  'name'=>'Naam',
-  'receiver'=>'Ontvanger',
-  'reset'=>'Terugstel',
-  'security_code'=>'Sekuriteits Kode',
-  'send'=>'Stuur',
-  'send_successfull'=>'Die boodskap is suksesvol gestuur.',
-  'subject'=>'Onderwerp',
-  'title_contact'=>'Kontak vorm',
-  'unknown_receiver'=>'onbekende ontvanger',
-  'wrong_securitycode'=>'Verkeerde sekuriteit kode is ingevoer!'
+    'back' => 'terug na vorm',
+    'contact' => 'Kontak',
+    'description' => 'Met hierdie vorm kan jy \'n boodskap aan ons stuur',
+    'enter_mail' => 'Voer \'n e-pos adres in.',
+    'enter_message' => 'Voer n Boodskap in.',
+    'enter_name' => 'Voer naam in.',
+    'enter_subject' => 'Gee \'n onderwerp.',
+    'errors_there' => 'foute het voorgekom',
+    'mail' => 'E-pos',
+    'message' => 'Boodskap',
+    'name' => 'Naam',
+    'receiver' => 'Ontvanger',
+    'reset' => 'Terugstel',
+    'security_code' => 'Sekuriteits Kode',
+    'send' => 'Stuur',
+    'send_successfull' => 'Die boodskap is suksesvol gestuur.',
+    'subject' => 'Onderwerp',
+    'title_contact' => 'Kontak vorm',
+    'unknown_receiver' => 'onbekende ontvanger',
+    'wrong_securitycode' => 'Verkeerde sekuriteit kode is ingevoer!'
 );
 

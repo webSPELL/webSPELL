@@ -25,16 +25,15 @@
 ##########################################################################
 */
 
-
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'admins'=>'Administrators(i):',
-	'coding'=>'Programmēšana',
-	'coding_info'=>'Šī interneta mājas lapa izmanto <a href="http://www.webspell.org" target="_blank">webSPELL Bezmaksas satura menedžēšanas sistēmu (versija: $version)</a>. Tā ir balstīta uz PHP4/5 un MySQL darbojas ar <a href="http://www.fsf.org/licensing/licenses/gpl.html" target="_blank">GNU Vispārējo publisko licenci</a>.<br>Iegūsti to par brīvu šeit: <a href="http://www.webspell.org" target="_blank">www.webSPELL.org</a>',
-	'disclaimer'=>'Atruna',
-	'disclaimer_text'=>'<p><strong>1. Saturs</strong><br>
+    'admins' => 'Administrators(i):',
+    'coding' => 'Programmēšana',
+    'coding_info' => 'Šī interneta mājas lapa izmanto <a href="http://www.webspell.org" target="_blank">webSPELL Bezmaksas satura menedžēšanas sistēmu (versija: $version)</a>. Tā ir balstīta uz PHP4/5 un MySQL darbojas ar <a href="http://www.fsf.org/licensing/licenses/gpl.html" target="_blank">GNU Vispārējo publisko licenci</a>.<br>Iegūsti to par brīvu šeit: <a href="http://www.webspell.org" target="_blank">www.webSPELL.org</a>',
+    'disclaimer' => 'Atruna',
+    'disclaimer_text' => '<p><strong>1. Saturs</strong><br>
 	Autors patur tiesības nenest atbildību par aktualitāti, pareizību, pilnību vai kvalitāti sniegtajai informācijai. Autors neuzņemas atbildību par nodarīto kaitējumu, izmantojot norādīto informāciju, ieskaitot jebkāda veida informāciju, kas ir nepilnīga vai nepareiza.<br>
 	Izteikti piedāvājumi nav saistoši un neuzliek saistības. Bez atsevišķas paziņošanas, lapas daļēji vai pilnīgi publicē, ieskaitot piedāvājumus un informāciju, vai pagarina, maina vai daļēji vai pilnībā svītro.</p>
 	<p><strong>2. Atsauces un siates</strong><br>
@@ -45,9 +44,9 @@ $language_array = Array(
 	Personas vai biznesa datu iesniegšana (epasta adreses, vārds, dzīvesvietas adreses) noris brīvprātīgi. Servisu izmantošana un apmaksa ir atļauta - ja tas ir tehniski iespējami - bez personisko datu norādīšanas vai izmantojot segvārdu vai anonīmus datus. Aizliegts izmantot publicētās dzīvesvietas adreses, tālruņu un faksa numurus, epasta adreses mārketinga nolūkos, surogātpasta ziņojumu sūtītāji tiks sodīti.</p>
 	<p><strong>5. Atrunas likumiskais pamats</strong><br>
   Šī atruna ir uzskatāma par daļu no interneta publikācijas, uz kuru Jums deva atsauci. Ja daļas vai atsevišķi noteikumi par šo paziņojumu nav likumīgi vai pareizi, saturs vai derīgums pārējām daļām paliek neietekmētas ar šo faktu.</p>',
-	'imprint'=>'Dati',
-	'mods'=>'Moderators(i):',
-	'responsible_persons'=>'Atbildīgās personas',
-	'webmaster'=>'Tīmekļa pārzinis:'
+    'imprint' => 'Dati',
+    'mods' => 'Moderators(i):',
+    'responsible_persons' => 'Atbildīgās personas',
+    'webmaster' => 'Tīmekļa pārzinis:'
 );
 

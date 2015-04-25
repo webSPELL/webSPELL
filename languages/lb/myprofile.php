@@ -25,7 +25,7 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
@@ -47,7 +47,6 @@ $language_array = Array(
     'cpu' => 'Prozessor',
     'date_of_birth' => 'Gebuertsdatum',
     'deactivated' => 'deaktivéiert',
-    'delete' => 'delete',
     'delete_max_90_90' => 'löschen (max 90/90)',
     'delete_max_230_210' => 'läschen (max 230/210)',
     'e-mail' => 'E-Mail',
@@ -128,3 +127,4 @@ $language_array = Array(
     'you_have_to_username' => 'Du muss en Benotzernumm aginn!',
     'you_have_to_valid_email' => 'D\'E-Mail Adress ass net korrekt!'
 );
+

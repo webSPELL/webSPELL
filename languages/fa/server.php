@@ -25,19 +25,18 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'game'=>'بازی',
-  'information'=>'اطلاعات',
-  'ip'=>'IP',
-  'link'=>'لینک',
-  'no_server'=>'.هیچ سروری موجود نیست',
-  'not_supported'=>'توسط سرورسایت ساپورت نمیشود',
-  'online'=>'انلاین',
-  'server'=>'سرور',
-  'status'=>'وضعیت',
-  'timeout'=>'وقفه'
+    'game' => 'بازی',
+    'information' => 'اطلاعات',
+    'link' => 'لینک',
+    'no_server' => '.هیچ سروری موجود نیست',
+    'not_supported' => 'توسط سرورسایت ساپورت نمیشود',
+    'online' => 'انلاین',
+    'server' => 'سرور',
+    'status' => 'وضعیت',
+    'timeout' => 'وقفه'
 );
 

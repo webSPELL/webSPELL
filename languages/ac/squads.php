@@ -25,34 +25,32 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'about'=>'crwdns15741:0crwdne15741:0',
-	'active'=>'crwdns15742:0crwdne15742:0',
-	'add_buddy'=>'crwdns15743:0crwdne15743:0',
-	'awards'=>'crwdns15744:0crwdne15744:0',
-	'back_buddy'=>'crwdns15745:0crwdne15745:0',
-	'back_squad_overview'=>'crwdns15746:0crwdne15746:0',
-	'challenge'=>'crwdns15747:0crwdne15747:0',
-	'contact'=>'crwdns15748:0crwdne15748:0',
-	'email'=>'crwdns15749:0crwdne15749:0',
-	'ignore'=>'crwdns15750:0crwdne15750:0',
-	'inactive'=>'crwdns15751:0crwdne15751:0',
-	'member'=>'crwdns15752:0crwdne15752:0',
-	'members'=>'crwdns15753:0crwdne15753:0',
-	'messenger'=>'crwdns15754:0crwdne15754:0',
-	'no_description'=>'crwdns15755:0crwdne15755:0',
-	'no_userpic'=>'crwdns15756:0crwdne15756:0',
-	'no_entries'=>'crwdns15757:0crwdne15757:0',
-	'position'=>'crwdns15758:0crwdne15758:0',
-	'results'=>'crwdns15759:0crwdne15759:0',
-	'show_details'=>'crwdns15760:0crwdne15760:0',
-	'squad_plays'=>'crwdns15761:0crwdne15761:0',
-	'squads'=>'crwdns15762:0crwdne15762:0',
-	'status'=>'crwdns15763:0crwdne15763:0',
-	'town'=>'crwdns15764:0crwdne15764:0',
-	'userpicture'=>'crwdns15765:0crwdne15765:0'
+    'about' => 'crwdns21596:0crwdne21596:0',
+    'active' => 'crwdns21597:0crwdne21597:0',
+    'add_buddy' => 'crwdns21598:0crwdne21598:0',
+    'awards' => 'crwdns21599:0crwdne21599:0',
+    'back_buddy' => 'crwdns21600:0crwdne21600:0',
+    'back_squad_overview' => 'crwdns21601:0crwdne21601:0',
+    'challenge' => 'crwdns21602:0crwdne21602:0',
+    'contact' => 'crwdns21603:0crwdne21603:0',
+    'ignore' => 'crwdns21605:0crwdne21605:0',
+    'inactive' => 'crwdns21606:0crwdne21606:0',
+    'member' => 'crwdns21607:0crwdne21607:0',
+    'members' => 'crwdns21608:0crwdne21608:0',
+    'messenger' => 'crwdns21609:0crwdne21609:0',
+    'no_description' => 'crwdns21610:0crwdne21610:0',
+    'no_userpic' => 'crwdns21611:0crwdne21611:0',
+    'position' => 'crwdns21613:0crwdne21613:0',
+    'results' => 'crwdns21614:0crwdne21614:0',
+    'show_details' => 'crwdns21615:0crwdne21615:0',
+    'squad_plays' => 'crwdns21616:0crwdne21616:0',
+    'squads' => 'crwdns21617:0crwdne21617:0',
+    'status' => 'crwdns21618:0crwdne21618:0',
+    'town' => 'crwdns21619:0crwdne21619:0',
+    'userpicture' => 'crwdns21620:0crwdne21620:0'
 );
 

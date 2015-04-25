@@ -25,33 +25,33 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'about'=>'در مورد',
-  'active'=>'فعالیت',
-  'add_buddy'=>'اضافه به لیست دوستان',
-  'awards'=>'جوایز',
-  'back_buddy'=>'برگشت به لیست دوستان',
-  'back_squad_overview'=>'برگشت به گروه',
-  'challenge'=>'مسابقات',
-  'contact'=>'ارتباط',
-  'email'=>'ایمیل',
-  'ignore'=>'رد درخواست کاربر',
-  'inactive'=>'غیر فعال',
-  'member'=>'عضو گروه',
-  'members'=>'اعضا گروه',
-  'messenger'=>'مسنجر',
-  'no_description'=>'هیچ توصیفی وجود ندارد',
-  'no_userpic'=>'!هیچ عکس کاربری وجود ندارد',
-  'position'=>'موقعیت',
-  'results'=>'نتیجه',
-  'show_details'=>'نشان دادن جزییات',
-  'squad_plays'=>'بازی گروه',
-  'squads'=>'گروه ها',
-  'status'=>'وضعیت',
-  'town'=>'شهر',
-  'userpicture'=>'عکس کاربر'
+    'about' => 'در مورد',
+    'active' => 'فعالیت',
+    'add_buddy' => 'اضافه به لیست دوستان',
+    'awards' => 'جوایز',
+    'back_buddy' => 'برگشت به لیست دوستان',
+    'back_squad_overview' => 'برگشت به گروه',
+    'challenge' => 'مسابقات',
+    'contact' => 'ارتباط',
+    'email' => 'ایمیل',
+    'ignore' => 'رد درخواست کاربر',
+    'inactive' => 'غیر فعال',
+    'member' => 'عضو گروه',
+    'members' => 'اعضا گروه',
+    'messenger' => 'مسنجر',
+    'no_description' => 'هیچ توصیفی وجود ندارد',
+    'no_userpic' => '!هیچ عکس کاربری وجود ندارد',
+    'position' => 'موقعیت',
+    'results' => 'نتیجه',
+    'show_details' => 'نشان دادن جزییات',
+    'squad_plays' => 'بازی گروه',
+    'squads' => 'گروه ها',
+    'status' => 'وضعیت',
+    'town' => 'شهر',
+    'userpicture' => 'عکس کاربر'
 );
 

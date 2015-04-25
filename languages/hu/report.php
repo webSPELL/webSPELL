@@ -25,13 +25,13 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'no_informations'=>'nincs elérhető információ',
-	'report_message'=>'[b]Van egy új %s - Jelentés[/b][br][br]%s-ID: %d[br]Infó: %s[br]Besorolás: [url]index.php?site=files&file=%d[/url]',
-	'report_recognized'=>'A jelentésed elfogadva. Köszönjük.',
-	'wrong_securitycode'=>'Hibás biztonsági kód!<br><br>[<a href="javascript:back();">vissza</a>]'
+    'no_informations' => 'nincs elérhető információ',
+    'report_message' => '[b]Van egy új %s - Jelentés[/b][br][br]%s-ID: %d[br]Infó: %s[br]Besorolás: [url]index.php?site=files&file=%d[/url]',
+    'report_recognized' => 'A jelentésed elfogadva. Köszönjük.',
+    'wrong_securitycode' => 'Hibás biztonsági kód!<br><br>[<a href="javascript:back();">vissza</a>]'
 );
 

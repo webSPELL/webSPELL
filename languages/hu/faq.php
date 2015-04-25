@@ -25,17 +25,16 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'admin_button'=>'FAQ Adminisztráció',
-	'answer'=>'Válasz',
-	'categories'=>'Kategória',
-	'faq'=>'FAQ',
-	'faqs'=>'Kérdés',
-	'no_categories'=>'Nincs létrehozott kategória',
-	'no_faq'=>'Nincs elérhető kérdés<br><a href="index.php?site=faq">Vissza</a>',
-	'saved_on'=>'Megtakarítva'
+    'admin_button' => 'FAQ Adminisztráció',
+    'answer' => 'Válasz',
+    'categories' => 'Kategória',
+    'faqs' => 'Kérdés',
+    'no_categories' => 'Nincs létrehozott kategória',
+    'no_faq' => 'Nincs elérhető kérdés<br><a href="index.php?site=faq">Vissza</a>',
+    'saved_on' => 'Megtakarítva'
 );
 

@@ -25,7 +25,7 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
@@ -41,7 +41,6 @@ $language_array = Array(
     'database_cl' => 'მონაცემთა ბაზა',
     'delete_file' => 'წაშლილი ფაილი',
     'description' => 'აღწერა',
-    'dl' => 'DL',
     'download_now' => 'გადმოტვირთვა %ფაილის სახელი% ახლა',
     'download_registered_only' => 'გადმოწერა მხოლოდ რეგისტრირებული მომხმარებლისათვის!',
     'download_via_mirror' => 'გადმოწერა სარკის მეშვეობით',
@@ -105,3 +104,4 @@ $language_array = Array(
     'you_have_to_enter_file' => 'უნდა შეიყვანოთ ფაილი / url!',
     'you_have_to_enter_filename' => 'უნდა შეიყვანოთ ფაილის სახელი!'
 );
+

@@ -25,24 +25,24 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'back'=>'indietro',
-	'banner'=>'banner',
-	'banner_to_big'=>'L*immagine è troppo grande',
-	'delete'=>'eliminare',
-	'edit'=>'cambiare',
-	'edit_linkus'=>'Modifica Banner',
-	'format_incorrect'=>'formati non sono ammessi (ammessi: *.gif, *.jpg o *.png)',
-	'link_us'=>'Link Us',
-	'name'=>'nome',
-	'new_banner'=>'nuovo banner',
-	'no_access'=>'nessun accesso!',
-	'no_banner'=>'nessun banner disponibile',
-	'really_delete_banner'=>'Questo banner veramente cancellare?',
-	'save_banner'=>'banner salvare',
-	'use_following_code'=>'Utilizza il seguente codice di questo banner sul tuo sito web aggiunto.'
+    'back' => 'indietro',
+    'banner' => 'banner',
+    'banner_to_big' => 'L*immagine è troppo grande',
+    'delete' => 'eliminare',
+    'edit' => 'cambiare',
+    'edit_linkus' => 'Modifica Banner',
+    'format_incorrect' => 'formati non sono ammessi (ammessi: *.gif, *.jpg o *.png)',
+    'link_us' => 'Link Us',
+    'name' => 'nome',
+    'new_banner' => 'nuovo banner',
+    'no_access' => 'nessun accesso!',
+    'no_banner' => 'nessun banner disponibile',
+    'really_delete_banner' => 'Questo banner veramente cancellare?',
+    'save_banner' => 'banner salvare',
+    'use_following_code' => 'Utilizza il seguente codice di questo banner sul tuo sito web aggiunto.'
 );
 

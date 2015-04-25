@@ -25,13 +25,12 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'no_user'=>'Geen gebruikersafbeeldingen beschikbaar',
-	'registered_since'=>'geregistreerd sinds',
-	'view_profile'=>'bekijk profiel'
-
+    'no_user' => 'Geen gebruikersafbeeldingen beschikbaar',
+    'registered_since' => 'geregistreerd sinds',
+    'view_profile' => 'bekijk profiel'
 );
 

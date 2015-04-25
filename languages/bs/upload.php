@@ -25,18 +25,17 @@
 ##########################################################################
 */
 
-
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'add_to_message'=>'Dodaj poruci',
-  'close_window'=>'Zatvori prozor',
-  'delete'=>'Izbriši',
-  'existing_files'=>'Postojeci dokumenti',
-  'file_upload'=>'Uploadaj dokument',
-  'invalid_access'=>'Zabranjen pristup!',
-  'no_access'=>'Nema pristupa!',
-  'upload'=>'Uploadaj'
+    'add_to_message' => 'Dodaj poruci',
+    'close_window' => 'Zatvori prozor',
+    'delete' => 'Izbriši',
+    'existing_files' => 'Postojeci dokumenti',
+    'file_upload' => 'Uploadaj dokument',
+    'invalid_access' => 'Zabranjen pristup!',
+    'no_access' => 'Nema pristupa!',
+    'upload' => 'Uploadaj'
 );
 

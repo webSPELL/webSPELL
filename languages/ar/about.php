@@ -25,12 +25,11 @@
 ##########################################################################
 */
 
-
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'about_title'=>'من نحن',
-  'no_about'=>'.لا توجد تفاصيل حاليا'
+    'about_title' => 'من نحن',
+    'no_about' => '.لا توجد تفاصيل حاليا'
 );
 

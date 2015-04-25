@@ -24,20 +24,14 @@
 #                                                                        #
 ##########################################################################
 */
-/**
- * Online Language Editor Luxemburg language file for webSPELL 4.2.2
- * @author Stefan Giesecke <webmaster@giesi.com>
- * @copyright Copyright (c) 2010, Stefan Giesecke
- * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
- */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'no_informations'=>'keng Informatiounen verfügbar',
-  'report_message'=>'[b]Et gëtt eng nei %s - Meldung[/b][br][br]%s-ID: %d[br]Info: %s[br]Referer: [url]index.php?site=files&file=%d[/url]',
-  'report_recognized'=>'Deng Meldung ass gescheckt ginn - villmols Merci.',
-  'wrong_securitycode'=>'Den Sëcherheetscode ass falsch<br><br>[<a href="javascript:back();">zeréck</a>]'
+    'no_informations' => 'keng Informatiounen verfügbar',
+    'report_message' => '[b]Et gëtt eng nei %s - Meldung[/b][br][br]%s-ID: %d[br]Info: %s[br]Referer: [url]index.php?site=files&file=%d[/url]',
+    'report_recognized' => 'Deng Meldung ass gescheckt ginn - villmols Merci.',
+    'wrong_securitycode' => 'Den Sëcherheetscode ass falsch<br><br>[<a href="javascript:back();">zeréck</a>]'
 );
 

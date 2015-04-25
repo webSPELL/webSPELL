@@ -25,32 +25,32 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'advertisement'=>'aviso',
-	'articles'=>'articulos',
-	'content'=>'contenido',
-	'demos'=>'demos',
-	'downloads'=>'descargas',
-	'hotest_news'=>'noticias populares',
-	'language_switch'=>'selec. idioma',
-	'latest_news'=>'últimas noticias',
-	'login'=>'conectar',
-	'matches'=>'partidos',
-	'newsletter'=>'newsletter',
-	'partners'=>'socios',
-	'pic_of_the_moment'=>'img del momento',
-	'poll'=>'encuesta',
-	'random_user'=>'usuario aleatorio',
-	'server'=>'servidor',
-	'shoutbox'=>'charla por internet',
-	'sponsors'=>'patrocinador',
-	'squads'=>'squads',
-	'statistics'=>'estadísticas',
-	'topics'=>'temas',
-	'upcoming_events'=>'próximos eventos',
-	'tags'=>'etiquetas'
+    'advertisement' => 'aviso',
+    'articles' => 'articulos',
+    'content' => 'contenido',
+    'demos' => 'demos',
+    'downloads' => 'descargas',
+    'hotest_news' => 'noticias populares',
+    'language_switch' => 'selec. idioma',
+    'latest_news' => 'últimas noticias',
+    'login' => 'conectar',
+    'matches' => 'partidos',
+    'newsletter' => 'newsletter',
+    'partners' => 'socios',
+    'pic_of_the_moment' => 'img del momento',
+    'poll' => 'encuesta',
+    'random_user' => 'usuario aleatorio',
+    'server' => 'servidor',
+    'shoutbox' => 'charla por internet',
+    'sponsors' => 'patrocinador',
+    'squads' => 'squads',
+    'statistics' => 'estadísticas',
+    'tags' => 'etiquetas',
+    'topics' => 'temas',
+    'upcoming_events' => 'próximos eventos'
 );
 

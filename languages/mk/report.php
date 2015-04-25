@@ -25,14 +25,13 @@
 ##########################################################################
 */
 
-
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'no_informations'=>'нема достапни информации',
-  'report_message'=>'[b]Постои нов %s - Извештај[/b][br][br]%s-ID: %d[br]Инфо: %s[br]Реферер: [url]index.php?site=files&file=%d[/url]',
-  'report_recognized'=>'Вашиот извештај е признат. Ви благодариме.',
-  'wrong_securitycode'=>'Внесивте погрешна сигурносна шифра<br><br>[<a href="javascript:back();">Назад</a>]'
+    'no_informations' => 'нема достапни информации',
+    'report_message' => '[b]Постои нов %s - Извештај[/b][br][br]%s-ID: %d[br]Инфо: %s[br]Реферер: [url]index.php?site=files&file=%d[/url]',
+    'report_recognized' => 'Вашиот извештај е признат. Ви благодариме.',
+    'wrong_securitycode' => 'Внесивте погрешна сигурносна шифра<br><br>[<a href="javascript:back();">Назад</a>]'
 );
 

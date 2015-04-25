@@ -25,13 +25,13 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'no_informations'=>'Ingen informationer tilgængelige',
-	'report_message'=>'[b]Der er en ny %s - Rapport[/b][br][br]%s-ID: %d[br]Info: %s[br]Henviser: [url]index.php?site=files&file=%d[/url]',
-	'report_recognized'=>'Din rapport var godkendt. Tak!',
-  'wrong_securitycode'=>'Du har indtastet en forkert sikkerhedskode<br><br>[<a href="javascript:back();">tilbage</a>]'
+    'no_informations' => 'Ingen informationer tilgængelige',
+    'report_message' => '[b]Der er en ny %s - Rapport[/b][br][br]%s-ID: %d[br]Info: %s[br]Henviser: [url]index.php?site=files&file=%d[/url]',
+    'report_recognized' => 'Din rapport var godkendt. Tak!',
+    'wrong_securitycode' => 'Du har indtastet en forkert sikkerhedskode<br><br>[<a href="javascript:back();">tilbage</a>]'
 );
 

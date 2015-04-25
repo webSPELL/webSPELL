@@ -25,18 +25,17 @@
 ##########################################################################
 */
 
-
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'invalid_password'=>'Aţi introdus o parolă invalidă.',
-  'ip_banned'=>'Ip-ul tău a fost banat de pe site-ul acesta.<br>%reason%',
-  'login_successful'=>'Te-ai logat cu success!',
-  'no_user'=>'Acest user <b>%username%</b> nu este valabil in sistem.',
-  'not_activated'=>'contul tău nu e activat.',
-  'session_error'=>'Vă rugăm să vă asiguraţi că modulele cookie sunt activate pe browserul dumneavoastră.<br>Dacă problema încă apare, contactaţi un administrator.',
-  'return'=>'<a href="javascript:history.back()">Înapoi</a>',
-  'return_reenter' => '<a href="javascript:history.back()">Dute înapoi şi reincearca.</a>'
+    'invalid_password' => 'Aţi introdus o parolă invalidă.',
+    'ip_banned' => 'Ip-ul tău a fost banat de pe site-ul acesta.<br>%reason%',
+    'login_successful' => 'Te-ai logat cu success!',
+    'no_user' => 'Acest user <b>%username%</b> nu este valabil in sistem.',
+    'not_activated' => 'contul tău nu e activat.',
+    'return' => '<a href="javascript:history.back()">Înapoi</a>',
+    'return_reenter' => '<a href="javascript:history.back()">Dute înapoi şi reincearca.</a>',
+    'session_error' => 'Vă rugăm să vă asiguraţi că modulele cookie sunt activate pe browserul dumneavoastră.<br>Dacă problema încă apare, contactaţi un administrator.'
 );
 

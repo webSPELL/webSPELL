@@ -25,11 +25,12 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'about_title'=>'crwdns14192:0crwdne14192:0',
-	'no_about'=>'crwdns14193:0crwdne14193:0'
+    'about_title' => 'crwdns20047:0crwdne20047:0',
+    'no_about' => 'crwdns20048:0crwdne20048:0'
 );
+
 

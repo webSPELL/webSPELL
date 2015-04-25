@@ -25,39 +25,36 @@
 ##########################################################################
 */
 
-
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'admin_comment'=>'Administratora komentārs',
-  'bbcode'=>'<a href="javascript:void(0);" onclick="window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBKods</a> Ieslēgts',
-  'by'=>'no',
-  'comment'=>'Komentārs',
-  'delete_selected'=>'Izdzēst atlasīto',
-  'enter_a_message'=>'Jāievada ziņa!',
-  'error_captcha'=>'Nepareizs drošības kods!',
-  'enter_your_name'=>'Jāievada savs vārds!',
-  'guestbook'=>'viesu grāmata',
-  'guestbook_comment'=>'Viesu grāmatas komentārs',
-  'homepage'=>'Mājas lapa',
-  'html'=>'HTML atslēgts',
-  'icq'=>'ICQ',
-  'ip'=>'IP',
-  'mail'=>'Jūsu e-pasta adrese',
-  'name'=>'Jūsu vārds',
-  'new_entry'=>'Jauns ieraksts',
-  'no_access'=>'Jūs neesat pieslēdzies.<br><a href="index.php?site=login">Pieslēgties</a> | <a href="index.php?site=register">Reģistrēties</a>',
-  'options'=>'Izvēlne',
-  'pmsubject_newentry'=>'Jauns viesu grāmatas ieraksts',
-  'pmtext_newentry'=>'[b]Kāds atstāja ziņu Jūsu viesu grāmatā![/b][br][br] [URL=index.php?site=guestbook#%insertid%]Nospiest šeit, lai izlasītu ziņu[/URL] ',
-  'security_code'=>'Drošības kods',
-  'select_all'=>'atlasīt visu',
-  'smilies'=>'<a href="javascript:void(0);" onclick="window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Sejiņas</a> Ieslēgts',
-  'sort'=>'Kārtot:',
-  'submit'=>'Iesniegt',
-  'update_comment'=>'Saglabāt komentāru',
-  'wrote'=>'rakstīt',
-  'your_message'=>'Jūsu ziņa'
+    'admin_comment' => 'Administratora komentārs',
+    'bbcode' => '<a href="javascript:void(0);" onclick="window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBKods</a> Ieslēgts',
+    'by' => 'no',
+    'comment' => 'Komentārs',
+    'delete_selected' => 'Izdzēst atlasīto',
+    'enter_a_message' => 'Jāievada ziņa!',
+    'enter_your_name' => 'Jāievada savs vārds!',
+    'error_captcha' => 'Nepareizs drošības kods!',
+    'guestbook' => 'viesu grāmata',
+    'guestbook_comment' => 'Viesu grāmatas komentārs',
+    'homepage' => 'Mājas lapa',
+    'html' => 'HTML atslēgts',
+    'mail' => 'Jūsu e-pasta adrese',
+    'name' => 'Jūsu vārds',
+    'new_entry' => 'Jauns ieraksts',
+    'no_access' => 'Jūs neesat pieslēdzies.<br><a href="index.php?site=login">Pieslēgties</a> | <a href="index.php?site=register">Reģistrēties</a>',
+    'options' => 'Izvēlne',
+    'pmsubject_newentry' => 'Jauns viesu grāmatas ieraksts',
+    'pmtext_newentry' => '[b]Kāds atstāja ziņu Jūsu viesu grāmatā![/b][br][br] [URL=index.php?site=guestbook#%insertid%]Nospiest šeit, lai izlasītu ziņu[/URL] ',
+    'security_code' => 'Drošības kods',
+    'select_all' => 'atlasīt visu',
+    'smilies' => '<a href="javascript:void(0);" onclick="window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Sejiņas</a> Ieslēgts',
+    'sort' => 'Kārtot:',
+    'submit' => 'Iesniegt',
+    'update_comment' => 'Saglabāt komentāru',
+    'wrote' => 'rakstīt',
+    'your_message' => 'Jūsu ziņa'
 );
 

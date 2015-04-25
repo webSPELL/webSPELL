@@ -25,19 +25,18 @@
 ##########################################################################
 */
 
-
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'add_notexists'=>'Sellist kasutajat ei eksisteeri',
-  'add_nouserid'=>'Kasutajatunnus pole saadava',
-  'add_yourself'=>'Iseennast ei saa lisada sõbrana ega ignoreerida!',
-  'buddy_nousers'=>'Su sõbralistis pole kasutajaid',
-  'buddys'=>'sõbrad',
-  'ignore_nousers'=>'Sa pole ühtegi kasutajat ignoreerinud',
-  'not_logged'=>'Sõprade haldamiseks pead sa registeeritud ja sisse logitud olema.<br><a href="index.php?site=register">Registreeri</a> | <a href="index.php?site=login">Logi sisse</a>',
-  'your_buddylist'=>'Su sõbralist',
-  'your_ignorelist'=>'Ignoreeritud kasutajad'
+    'add_notexists' => 'Sellist kasutajat ei eksisteeri',
+    'add_nouserid' => 'Kasutajatunnus pole saadava',
+    'add_yourself' => 'Iseennast ei saa lisada sõbrana ega ignoreerida!',
+    'buddy_nousers' => 'Su sõbralistis pole kasutajaid',
+    'buddys' => 'sõbrad',
+    'ignore_nousers' => 'Sa pole ühtegi kasutajat ignoreerinud',
+    'not_logged' => 'Sõprade haldamiseks pead sa registeeritud ja sisse logitud olema.<br><a href="index.php?site=register">Registreeri</a> | <a href="index.php?site=login">Logi sisse</a>',
+    'your_buddylist' => 'Su sõbralist',
+    'your_ignorelist' => 'Ignoreeritud kasutajad'
 );
 

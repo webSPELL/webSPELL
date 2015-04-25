@@ -24,30 +24,24 @@
 #                                                                        #
 ##########################################################################
 */
-/**
- * Online Language Editor Greece language file for webSPELL 4.2.2
- * @author Stefan Giesecke <webmaster@giesi.com>
- * @copyright Copyright (c) 2010, Stefan Giesecke
- * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
- */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'admin'=>'admin',
-  'buddy_list'=>'λιστα φιλων',
-  'cash-box'=>'cash-box',
-  'edit_account'=>'επεξεργασια λογαριασμου',
-  'galleries'=>'συλλογες',
-  'login'=>'εισοδος',
-  'logout'=>'εξοδος',
-  'lost_password'=>'χασατε τον κωδικο σας?',
-  'messenger'=>'messenger',
-  'n_a'=>'Μ/Δ',
-  'overview'=>'συνοψη',
-  'register_now'=>'εγγραφη τωρα',
-  'registered_users'=>'εγγεγραμενοι χρηστες',
-  'welcome_back'=>'καλως ηλθατε'
+    'admin' => 'admin',
+    'buddy_list' => 'λιστα φιλων',
+    'cash-box' => 'cash-box',
+    'edit_account' => 'επεξεργασια λογαριασμου',
+    'galleries' => 'συλλογες',
+    'login' => 'εισοδος',
+    'logout' => 'εξοδος',
+    'lost_password' => 'χασατε τον κωδικο σας?',
+    'messenger' => 'messenger',
+    'n_a' => 'Μ/Δ',
+    'overview' => 'συνοψη',
+    'register_now' => 'εγγραφη τωρα',
+    'registered_users' => 'εγγεγραμενοι χρηστες',
+    'welcome_back' => 'καλως ηλθατε'
 );
 

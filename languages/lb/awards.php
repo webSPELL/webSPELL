@@ -24,35 +24,29 @@
 #                                                                        #
 ##########################################################################
 */
-/**
- * Online Language Editor Luxemburg language file for webSPELL 4.2.2
- * @author Stefan Giesecke <webmaster@giesi.com>
- * @copyright Copyright (c) 2010, Stefan Giesecke
- * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
- */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'award'=>'Auszeechnung',
-  'awards'=>'Auszeechnungen',
-  'date'=>'Datum',
-  'delete'=>'läschen',
-  'edit'=>'editéieren',
-  'edit_award'=>'Auszeechnung editéieren',
-  'enter_title'=>'Du muss en Text aginn!',
-  'enter_text'=>'Du muss en Text aginn!',
-  'event'=>'Evenement',
-  'homepage'=>'Homepage',
-  'info'=>'Info',
-  'new_award'=>'Nei Auszeechnung',
-  'no_access'=>'Keen Zougrëff!',
-  'no_entries'=>'Keng Auszeechnungen do',
-  'ranking'=>'Rang',
-  'save_award'=>'Auszeechnung späicheren',
-  'sort'=>'Sortéieren',
-  'squad'=>'Equipe',
-  'update_award'=>'Auszeechnung aktualiséieren'
+    'award' => 'Auszeechnung',
+    'awards' => 'Auszeechnungen',
+    'date' => 'Datum',
+    'delete' => 'läschen',
+    'edit' => 'editéieren',
+    'edit_award' => 'Auszeechnung editéieren',
+    'enter_text' => 'Du muss en Text aginn!',
+    'enter_title' => 'Du muss en Text aginn!',
+    'event' => 'Evenement',
+    'homepage' => 'Homepage',
+    'info' => 'Info',
+    'new_award' => 'Nei Auszeechnung',
+    'no_access' => 'Keen Zougrëff!',
+    'no_entries' => 'Keng Auszeechnungen do',
+    'ranking' => 'Rang',
+    'save_award' => 'Auszeechnung späicheren',
+    'sort' => 'Sortéieren',
+    'squad' => 'Equipe',
+    'update_award' => 'Auszeechnung aktualiséieren'
 );
 

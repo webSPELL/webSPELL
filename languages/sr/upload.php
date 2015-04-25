@@ -25,17 +25,17 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'add_to_message'=>'Додај поруци',
-  'close_window'=>'Затвори прозор',
-  'delete'=>'Избриши',
-  'existing_files'=>'Постојећи документи',
-  'file_upload'=>'Уплоадај документ',
-  'invalid_access'=>'Забрањен приступ!',
-  'no_access'=>'Нема приступа!',
-  'upload'=>'Уплоадај'
+    'add_to_message' => 'Додај поруци',
+    'close_window' => 'Затвори прозор',
+    'delete' => 'Избриши',
+    'existing_files' => 'Постојећи документи',
+    'file_upload' => 'Уплоадај документ',
+    'invalid_access' => 'Забрањен приступ!',
+    'no_access' => 'Нема приступа!',
+    'upload' => 'Уплоадај'
 );
 

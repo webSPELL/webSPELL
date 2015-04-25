@@ -25,20 +25,18 @@
 ##########################################################################
 */
 
-
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'game'=>'Spēle',
-  'information'=>'Informācija',
-  'ip'=>'IP',
-  'link'=>'Saite',
-  'no_server'=>'serveri nav pieejami.',
-  'not_supported'=>'Neatbalsta tīmekļa serveris',
-  'online'=>'tiešsaistē',
-  'server'=>'serveris',
-  'status'=>'Statuss',
-  'timeout'=>'Pārtraukums'
+    'game' => 'Spēle',
+    'information' => 'Informācija',
+    'link' => 'Saite',
+    'no_server' => 'serveri nav pieejami.',
+    'not_supported' => 'Neatbalsta tīmekļa serveris',
+    'online' => 'tiešsaistē',
+    'server' => 'serveris',
+    'status' => 'Statuss',
+    'timeout' => 'Pārtraukums'
 );
 

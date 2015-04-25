@@ -25,13 +25,13 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'no_informations'=>'Ingen information är tillgänglig',
-	'report_message'=>'[b]Det finns en ny %s - Raport[/b][br][br]%s-ID: %d[br]Infor,atopm: %s[br]Referens: [url]index.php?site=files&file=%d[/url]',
-	'report_recognized'=>'Din raport var identifierad. Tack så mycket.',
-  'wrong_securitycode'=>'Du har skrivit in fel säkerhets kod<br><br>[<a href="javascript:back();">tillbaka</a>]'
+    'no_informations' => 'Ingen information är tillgänglig',
+    'report_message' => '[b]Det finns en ny %s - Raport[/b][br][br]%s-ID: %d[br]Infor,atopm: %s[br]Referens: [url]index.php?site=files&file=%d[/url]',
+    'report_recognized' => 'Din raport var identifierad. Tack så mycket.',
+    'wrong_securitycode' => 'Du har skrivit in fel säkerhets kod<br><br>[<a href="javascript:back();">tillbaka</a>]'
 );
 

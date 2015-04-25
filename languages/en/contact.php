@@ -25,29 +25,28 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'back'=>'back to form',
-	'contact'=>'contact',
-	'description'=>'With this form you are able to submit a message to us',
-	'enter_mail'=>'Please enter a mail adress.',
-	'enter_message'=>'Please enter a message.',
-	'enter_name'=>'Please enter a name.',
-	'enter_subject'=>'Please enter a subject.',
-	'errors_there'=>'Some errors occured',
-	'mail'=>'E-Mail',
-	'message'=>'Message',
-	'name'=>'Name',
-	'receiver'=>'Receiver',
-	'reset'=>'Reset',
-	'security_code'=>'Security Code',
-	'send'=>'Send',
-	'send_successfull'=>'Your message was send successfully.',
-	'subject'=>'Subject',
-	'title_contact'=>'Contact form',
-	'unknown_receiver'=>'unknown receiver',
-	'wrong_securitycode'=>'You entered a wrong security code!'
+    'back' => 'back to form',
+    'contact' => 'contact',
+    'description' => 'With this form you are able to submit a message to us',
+    'enter_mail' => 'Please enter a mail adress.',
+    'enter_message' => 'Please enter a message.',
+    'enter_name' => 'Please enter a name.',
+    'enter_subject' => 'Please enter a subject.',
+    'errors_there' => 'Some errors occured',
+    'message' => 'Message',
+    'name' => 'Name',
+    'receiver' => 'Receiver',
+    'reset' => 'Reset',
+    'security_code' => 'Security Code',
+    'send' => 'Send',
+    'send_successfull' => 'Your message was send successfully.',
+    'subject' => 'Subject',
+    'title_contact' => 'Contact form',
+    'unknown_receiver' => 'unknown receiver',
+    'wrong_securitycode' => 'You entered a wrong security code!'
 );
 

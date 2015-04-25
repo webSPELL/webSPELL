@@ -25,18 +25,17 @@
 ##########################################################################
 */
 
-
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'invalid_password'=>'პაროლი არასწორია.',
-  'ip_banned'=>'თქვენი IP დაბლოკილია.<br>%reason%',
-  'login_successful'=>'ავტორიზირება წარმატებით გავლილია!',
-  'no_user'=>'მომხმარებელი <b>%username%</b> არ არის ხელმისაწვდომი ამ სისტემაში.',
-  'not_activated'=>'თქვენი ექაუნტი არ არის გააქტიურებული.',
-  'session_error'=>'დარწმუნდით რომ cookies ჩართულია თქვენს ბრაუზერში .<br>თუ პრობლემა მეორდება გთხოვთ მიმართოთ ადმინისტრაციას.',
-  'return'=>'<a href="javascript:history.back()">უკან დაბრუნება</a>',
-  'return_reenter' => '<a href="javascript:history.back()">უკან და განმეორებითი შეყვანის</a>'
+    'invalid_password' => 'პაროლი არასწორია.',
+    'ip_banned' => 'თქვენი IP დაბლოკილია.<br>%reason%',
+    'login_successful' => 'ავტორიზირება წარმატებით გავლილია!',
+    'no_user' => 'მომხმარებელი <b>%username%</b> არ არის ხელმისაწვდომი ამ სისტემაში.',
+    'not_activated' => 'თქვენი ექაუნტი არ არის გააქტიურებული.',
+    'return' => '<a href="javascript:history.back()">უკან დაბრუნება</a>',
+    'return_reenter' => '<a href="javascript:history.back()">უკან და განმეორებითი შეყვანის</a>',
+    'session_error' => 'დარწმუნდით რომ cookies ჩართულია თქვენს ბრაუზერში .<br>თუ პრობლემა მეორდება გთხოვთ მიმართოთ ადმინისტრაციას.'
 );
 

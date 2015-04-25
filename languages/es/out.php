@@ -25,12 +25,12 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'no_frame'=>'Esta web usa frames. Tu navegador no soporta frames!',
-	'outgoing'=>'Saliente',
-	'owner_responsible'=>'El propietario es responsable de esta página.'
+    'no_frame' => 'Esta web usa frames. Tu navegador no soporta frames!',
+    'outgoing' => 'Saliente',
+    'owner_responsible' => 'El propietario es responsable de esta página.'
 );
 

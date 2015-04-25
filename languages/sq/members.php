@@ -24,35 +24,29 @@
 #                                                                        #
 ##########################################################################
 */
-/**
- * Online Language Editor Albania language file for webSPELL 4.2.2
- * @author Stefan Giesecke <webmaster@giesi.com>
- * @copyright Copyright (c) 2010, Stefan Giesecke
- * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
- */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'about'=>'Rreth',
-  'active'=>'aktiv',
-  'activity'=>'Aktivitet',
-  'awards'=>'Çmimet',
-  'back_overview'=>'&raquo; <a href="index.php?site=members"><b>mbrapsht tek Prezantimi anëtarëve</b></a>',
-  'challenge'=>'Sfidë ',
-  'contact'=>'Kontakt',
-  'go'=>'Jepi!',
-  'inactive'=>'inaktiv',
-  'member'=>'Anëtar',
-  'members'=>'anëtarët',
-  'nickname'=>'Pseudonimi',
-  'no_description'=>'nuk ka përshkrim të vlefshëm',
-  'position'=>'Pozicioni',
-  'results'=>'Rezultate',
-  'show_details'=>'&raquo; <a href="index.php?site=members&amp;action=show&amp;squadID=%squadID%"><b>Trego detaje</b></a>',
-  'show_only'=>'Vetëm trego',
-  'status'=>'Statut',
-  'town'=>'Qytet'
+    'about' => 'Rreth',
+    'active' => 'aktiv',
+    'activity' => 'Aktivitet',
+    'awards' => 'Çmimet',
+    'back_overview' => '&raquo; <a href="index.php?site=members"><b>mbrapsht tek Prezantimi anëtarëve</b></a>',
+    'challenge' => 'Sfidë ',
+    'contact' => 'Kontakt',
+    'go' => 'Jepi!',
+    'inactive' => 'inaktiv',
+    'member' => 'Anëtar',
+    'members' => 'anëtarët',
+    'nickname' => 'Pseudonimi',
+    'no_description' => 'nuk ka përshkrim të vlefshëm',
+    'position' => 'Pozicioni',
+    'results' => 'Rezultate',
+    'show_details' => '&raquo; <a href="index.php?site=members&amp;action=show&amp;squadID=%squadID%"><b>Trego detaje</b></a>',
+    'show_only' => 'Vetëm trego',
+    'status' => 'Statut',
+    'town' => 'Qytet'
 );
 

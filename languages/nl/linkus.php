@@ -25,25 +25,24 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'back'=>'terug',
-	'banner'=>'Banner',
-	'banner_to_big'=>'Afbeelding is te groot',
-	'delete'=>'verwijder',
-	'edit'=>'bewerk',
-	'edit_linkus'=>'bewerk banner',
-	'format_incorrect'=>'Ongeldig Afbeeldings-formaat (toegestaan: *.gif, *.jpg or *.png)',
-	'link_us'=>'link ons',
-	'name'=>'Naam',
-	'new_banner'=>'nieuwe banner',
-	'no_access'=>'Toegang geweigerd!',
-	'no_banner'=>'geen link ons banner',
-	'really_delete_banner'=>'deze banner echt verwijderen?',
-	'save_banner'=>'banner opslaan',
-	'use_following_code'=>'Gebruik de volgende code, om de banner op je homepage te laten zien.'
-
+    'back' => 'terug',
+    'banner' => 'Banner',
+    'banner_to_big' => 'Afbeelding is te groot',
+    'delete' => 'verwijder',
+    'edit' => 'bewerk',
+    'edit_linkus' => 'bewerk banner',
+    'format_incorrect' => 'Ongeldig Afbeeldings-formaat (toegestaan: *.gif, *.jpg or *.png)',
+    'link_us' => 'link ons',
+    'name' => 'Naam',
+    'new_banner' => 'nieuwe banner',
+    'no_access' => 'Toegang geweigerd!',
+    'no_banner' => 'geen link ons banner',
+    'really_delete_banner' => 'deze banner echt verwijderen?',
+    'save_banner' => 'banner opslaan',
+    'use_following_code' => 'Gebruik de volgende code, om de banner op je homepage te laten zien.'
 );
 

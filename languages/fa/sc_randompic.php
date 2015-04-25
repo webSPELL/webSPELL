@@ -25,12 +25,12 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'no_user'=>'هیچ عکسی از کاربر موجود نیست',
-  'registered_since'=>'عضو شده از',
-  'view_profile'=>'مشاهده پروفایل'
+    'no_user' => 'هیچ عکسی از کاربر موجود نیست',
+    'registered_since' => 'عضو شده از',
+    'view_profile' => 'مشاهده پروفایل'
 );
 

@@ -24,53 +24,45 @@
 #                                                                        #
 ##########################################################################
 */
-/**
- * Online Language Editor Bulgaria language file for webSPELL 4.2.2
- * @author Stefan Giesecke <webmaster@giesi.com>
- * @copyright Copyright (c) 2010, Stefan Giesecke
- * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
- */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'after'=>'след',
-  'and'=>'и',
-  'article'=>'Заглавие',
-  'articles'=>'Заглавия',
-  'articles_link'=>'<b>линк към заглавието</b>',
-  'ascending'=>'възходящ',
-  'before'=>'преди',
-  'date_options'=>'Дата',
-  'delete_selected'=>'изтрий избраното',
-  'descending'=>'низходящ',
-  'faq'=>'Често задавани въпроси',
-  'faq_link'=>'<b>линк към често задавани въпроси</b>',
-  'forum'=>'Форум',
-  'forum_link'=>'<b>линк към заглавието</b>',
-  'frequency'=>'честота',
-  'keyword'=>'ключова дума',
-  'new_search'=>'ново търсене',
-  'news'=>'новини',
-  'news_link'=>'<b>линк към новините</b>',
-  'options'=>'Oпции',
-  'or'=>'или',
-  'result_quantity'=>'Резултати на страница',
-  'results_found'=>'намерени резултати',
-  'search'=>'търси',
-  'search_in'=>'Търси в:',
-  'search_location'=>'Търси местоположение',
-  'search_term'=>'Търси термин',
-  'search_title'=>'Разширено търсене',
-  'security_code'=>'Код за сигурност',
-  'sort_options'=>'Вид',
-  'start_search'=>'Започни търсене',
-  'submit'=>'Въведи',
-  'text_contains'=>'Текстът съдържа',
-  'title_contains'=>'Заглавието съдържа',
-  'too_short'=>'Терминът за търсене е твърде кратък. Най-малко %min_chars% символа',
-  'wrong_securitycode'=>'Въвели сте грешен код за сигурност!',
-  'no_result' =>'Не са намерени записи за "%s"'
+    'after' => 'след',
+    'and' => 'и',
+    'article' => 'Заглавие',
+    'articles' => 'Заглавия',
+    'articles_link' => '<b>линк към заглавието</b>',
+    'ascending' => 'възходящ',
+    'before' => 'преди',
+    'delete_selected' => 'изтрий избраното',
+    'descending' => 'низходящ',
+    'faq' => 'Често задавани въпроси',
+    'faq_link' => '<b>линк към често задавани въпроси</b>',
+    'forum_link' => '<b>линк към заглавието</b>',
+    'frequency' => 'честота',
+    'keyword' => 'ключова дума',
+    'new_search' => 'ново търсене',
+    'news' => 'новини',
+    'news_link' => '<b>линк към новините</b>',
+    'no_result' => 'Не са намерени записи за "%s"',
+    'options' => 'Oпции',
+    'or' => 'или',
+    'result_quantity' => 'Резултати на страница',
+    'results_found' => 'намерени резултати',
+    'search' => 'търси',
+    'search_in' => 'Търси в:',
+    'search_location' => 'Търси местоположение',
+    'search_term' => 'Търси термин',
+    'search_title' => 'Разширено търсене',
+    'security_code' => 'Код за сигурност',
+    'sort_options' => 'Вид',
+    'start_search' => 'Започни търсене',
+    'submit' => 'Въведи',
+    'text_contains' => 'Текстът съдържа',
+    'title_contains' => 'Заглавието съдържа',
+    'too_short' => 'Терминът за търсене е твърде кратък. Най-малко %min_chars% символа',
+    'wrong_securitycode' => 'Въвели сте грешен код за сигурност!'
 );
 

@@ -25,25 +25,24 @@
 ##########################################################################
 */
 
-
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'back'=>'tagasi',
-  'banner'=>'Loosung',
-  'banner_to_big'=>'Pilt on liiga suur',
-  'delete'=>'kustuta',
-  'edit'=>'muuda',
-  'edit_linkus'=>'muuda pilti',
-  'format_incorrect'=>'Vale pildiformaat (lubatud: *.gif, *.jpg või *.png)',
-  'link_us'=>'lingi meid',
-  'name'=>'Nimi',
-  'new_banner'=>'uus loosung',
-  'no_access'=>'Puudub ligipääs!',
-  'no_banner'=>'puudub "lingi meid" loosung',
-  'really_delete_banner'=>'tõesti kustuta see loosung?',
-  'save_banner'=>'salvesta loosung',
-  'use_following_code'=>'Kasuta järgmist koodi, et loosung oma kodulehele sisestada.'
+    'back' => 'tagasi',
+    'banner' => 'Loosung',
+    'banner_to_big' => 'Pilt on liiga suur',
+    'delete' => 'kustuta',
+    'edit' => 'muuda',
+    'edit_linkus' => 'muuda pilti',
+    'format_incorrect' => 'Vale pildiformaat (lubatud: *.gif, *.jpg või *.png)',
+    'link_us' => 'lingi meid',
+    'name' => 'Nimi',
+    'new_banner' => 'uus loosung',
+    'no_access' => 'Puudub ligipääs!',
+    'no_banner' => 'puudub "lingi meid" loosung',
+    'really_delete_banner' => 'tõesti kustuta see loosung?',
+    'save_banner' => 'salvesta loosung',
+    'use_following_code' => 'Kasuta järgmist koodi, et loosung oma kodulehele sisestada.'
 );
 

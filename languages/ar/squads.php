@@ -25,34 +25,33 @@
 ##########################################################################
 */
 
-
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'about'=>'عن',
-  'active'=>'نشط',
-  'add_buddy'=>'إضافة على قائمة الاصدقاء',
-  'awards'=>'الجوائز',
-  'back_buddy'=>'نسخ إلى قائمة الأصدقاء',
-  'back_squad_overview'=>'العوده الى النظره عن الفرق',
-  'challenge'=>'تحدي',
-  'contact'=>'اتصل',
-  'email'=>'البريد الالكتروني',
-  'ignore'=>'تجاهل المستخدم',
-  'inactive'=>'غير نشط',
-  'member'=>'عضو',
-  'members'=>'الاعضاء',
-  'messenger'=>'الماسنجر',
-  'no_description'=>'لا يوجد وصف متاح',
-  'no_userpic'=>'لا يوجد صوره للاستخدام',
-  'position'=>'موقف',
-  'results'=>'النتائج',
-  'show_details'=>'إظهار التفاصيل',
-  'squad_plays'=>'الفرقه تلعب',
-  'squads'=>'الفرق',
-  'status'=>'الاحصائيات',
-  'town'=>'المدينة',
-  'userpicture'=>'استخدام الصوره'
+    'about' => 'عن',
+    'active' => 'نشط',
+    'add_buddy' => 'إضافة على قائمة الاصدقاء',
+    'awards' => 'الجوائز',
+    'back_buddy' => 'نسخ إلى قائمة الأصدقاء',
+    'back_squad_overview' => 'العوده الى النظره عن الفرق',
+    'challenge' => 'تحدي',
+    'contact' => 'اتصل',
+    'email' => 'البريد الالكتروني',
+    'ignore' => 'تجاهل المستخدم',
+    'inactive' => 'غير نشط',
+    'member' => 'عضو',
+    'members' => 'الاعضاء',
+    'messenger' => 'الماسنجر',
+    'no_description' => 'لا يوجد وصف متاح',
+    'no_userpic' => 'لا يوجد صوره للاستخدام',
+    'position' => 'موقف',
+    'results' => 'النتائج',
+    'show_details' => 'إظهار التفاصيل',
+    'squad_plays' => 'الفرقه تلعب',
+    'squads' => 'الفرق',
+    'status' => 'الاحصائيات',
+    'town' => 'المدينة',
+    'userpicture' => 'استخدام الصوره'
 );
 

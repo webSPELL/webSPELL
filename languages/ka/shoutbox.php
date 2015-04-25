@@ -25,18 +25,17 @@
 ##########################################################################
 */
 
-
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'all_messages'=>'ყველას ჩვენება',
-  'enter_message'=>'უნდა დაწეროთ შეტყობინება!',
-  'enter_name'=>'უნდა შეიყვანოთ სახელი!',
-  'delete_selected'=>'მონიშნულის წაშლა',
-  'select_all'=>'ყველას მონიშვნა',
-  'shout'=>'ყვირილი!',
-  'shoutbox'=>'shoutbox',
-  'sort'=>'დაფასოება:'
+    'all_messages' => 'ყველას ჩვენება',
+    'delete_selected' => 'მონიშნულის წაშლა',
+    'enter_message' => 'უნდა დაწეროთ შეტყობინება!',
+    'enter_name' => 'უნდა შეიყვანოთ სახელი!',
+    'select_all' => 'ყველას მონიშვნა',
+    'shout' => 'ყვირილი!',
+    'shoutbox' => 'shoutbox',
+    'sort' => 'დაფასოება:'
 );
 

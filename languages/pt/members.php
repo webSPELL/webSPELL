@@ -25,28 +25,28 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'about'=>'Sobre',
-	'active'=>'Activo',
-	'activity'=>'Actividade',
-	'awards'=>'Prémios',
-	'back_overview'=>'&raquo; <a href="index.php?site=members"><b>Voltar à páginal geral dos membros</b></a>',
-	'challenge'=>'Desafio',
-	'contact'=>'Contactar',
-	'go'=>'Ir!',
-	'inactive'=>'inactivo',
-	'member'=>'Membro',
-	'members'=>'membros',
-	'nickname'=>'Nickname',
-	'no_description'=>'nenhuma descrição disponível',
-	'position'=>'Posição',
-	'results'=>'Resultados',
-	'show_details'=>'&raquo; <a href="index.php?site=members&action=show&squadID=%squadID%"><b>Mostrar detalhes</b></a>',
-	'show_only'=>'Mostrar apenas',
-	'status'=>'Estado',
-	'town'=>'Cidade'
+    'about' => 'Sobre',
+    'active' => 'Activo',
+    'activity' => 'Actividade',
+    'awards' => 'Prémios',
+    'back_overview' => '&raquo; <a href="index.php?site=members"><b>Voltar à páginal geral dos membros</b></a>',
+    'challenge' => 'Desafio',
+    'contact' => 'Contactar',
+    'go' => 'Ir!',
+    'inactive' => 'inactivo',
+    'member' => 'Membro',
+    'members' => 'membros',
+    'nickname' => 'Nickname',
+    'no_description' => 'nenhuma descrição disponível',
+    'position' => 'Posição',
+    'results' => 'Resultados',
+    'show_details' => '&raquo; <a href="index.php?site=members&action=show&squadID=%squadID%"><b>Mostrar detalhes</b></a>',
+    'show_only' => 'Mostrar apenas',
+    'status' => 'Estado',
+    'town' => 'Cidade'
 );
 

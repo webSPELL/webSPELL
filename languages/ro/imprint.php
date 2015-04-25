@@ -25,16 +25,15 @@
 ##########################################################################
 */
 
-
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'admins'=>'Administratori:',
-	'coding'=>'Programatori',
-	'coding_info'=>'Acest site foloseşte <a href="http://www.webspell.org" target="_blank">webSPELL Free Content Management System (version: $version)</a>. Ea se bazează pe PHP4/5 și MySQL și rulează sub <a href="http://www.fsf.org/licensing/licenses/gpl.html" target="_blank">GNU GENERAL PUBLIC LICENSE</a>.<br>Ia-l gratuit de la această locație: <a href="http://www.webspell.org" target="_blank">www.webSPELL.org</a>',
-	'disclaimer'=>'Act de renunțare',
-	'disclaimer_text'=>'<p><strong>1. Conţinut</strong><br>
+    'admins' => 'Administratori:',
+    'coding' => 'Programatori',
+    'coding_info' => 'Acest site foloseşte <a href="http://www.webspell.org" target="_blank">webSPELL Free Content Management System (version: $version)</a>. Ea se bazează pe PHP4/5 și MySQL și rulează sub <a href="http://www.fsf.org/licensing/licenses/gpl.html" target="_blank">GNU GENERAL PUBLIC LICENSE</a>.<br>Ia-l gratuit de la această locație: <a href="http://www.webspell.org" target="_blank">www.webSPELL.org</a>',
+    'disclaimer' => 'Act de renunțare',
+    'disclaimer_text' => '<p><strong>1. Conţinut</strong><br>
 	Autorul isi rezerva dreptul de a nu fi responsabil pentru actualitatea, corectitudinea, integritatea sau calitatea informațiilor furnizate. Răspunderea pentru pagubele cauzate de utilizarea de orice informații furnizate, inclusiv orice fel de informații care sunt incomplete sau incorecte, prin urmare, va fi respinsă.<br>
 	Toate ofertele nu sunt obligatorii, și fără obligații. Părți ale paginilor sau publicarea completă, inclusiv toate ofertele și informațiile, pot fi extinse, modificate partial sau complet sterse de catre autor fără anunț separat.</p>
 	<p><strong>2. Referinte si link-uri</strong><br>
@@ -45,9 +44,9 @@ $language_array = Array(
 	În cazul în care posibilitatea de introducere a datelor cu caracter personal sau de afaceri (adrese de email, nume, adrese) este dat, de introducere a acestor date are loc voluntar. Utilizarea și plata tuturor serviciilor oferite sunt permise - dacă și așa mai departe tehnic posibil și rezonabil - fără nici o specificație de date cu caracter personal sau în conformitate cu specificațiile de date anonimizate sau un alias. Utilizarea adreselor postale publicate, numere de telefon sau de fax și adrese de e-mail pentru scopuri de marketing este interzisă, infractorii trimiterea de mesaje nedorite de tip spam vor fi pedepsiți.</p>
 	<p><strong>5. Valabilitatea juridică a acestui angajament</strong><br>
 	Această prevedere de răspundere trebuie privită ca parte a publicației internet pe care le-au menționat. Dacă secțiuni sau termeni individuali ai acestei declarații nu sunt legale sau corecte, conținutul sau valabilitatea celorlalte părți nu sunt influențate de acest fapt.</p>',
-	'imprint'=>'Imprimă',
-	'mods'=>'Moderatori:',
-	'responsible_persons'=>'Persoane responsabile',
-	'webmaster'=>'Webmaster:'
+    'imprint' => 'Imprimă',
+    'mods' => 'Moderatori:',
+    'responsible_persons' => 'Persoane responsabile',
+    'webmaster' => 'Webmaster:'
 );
 

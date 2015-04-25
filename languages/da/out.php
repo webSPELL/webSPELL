@@ -25,12 +25,12 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'no_frame'=>'Dette site bruger frames. Din browser understøtter ikke frames!',
-	'outgoing'=>'Udgående',
-	'owner_responsible'=>'Ejeren er ansvarlig for hjemmesiden.'
+    'no_frame' => 'Dette site bruger frames. Din browser understøtter ikke frames!',
+    'outgoing' => 'Udgående',
+    'owner_responsible' => 'Ejeren er ansvarlig for hjemmesiden.'
 );
 

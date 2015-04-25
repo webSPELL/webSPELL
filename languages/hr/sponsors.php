@@ -25,17 +25,17 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'banner'=>'Banner',
-	'homepage'=>'Pocetna',
-	'information'=>'Informacije',
-	'mainsponsor'=>'Glavni sponzor',
-	'mainsponsors'=>'Glavni sponzori',
-	'no_sponsors'=>'nema sponzora',
-	'sponsor'=>'Sponzor',
-	'sponsors'=>'Sponzori'
+    'banner' => 'Banner',
+    'homepage' => 'Pocetna',
+    'information' => 'Informacije',
+    'mainsponsor' => 'Glavni sponzor',
+    'mainsponsors' => 'Glavni sponzori',
+    'no_sponsors' => 'nema sponzora',
+    'sponsor' => 'Sponzor',
+    'sponsors' => 'Sponzori'
 );
 

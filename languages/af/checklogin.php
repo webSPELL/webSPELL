@@ -24,24 +24,18 @@
 #                                                                        #
 ##########################################################################
 */
-/**
- * Online Language Editor South Africa language file for webSPELL 4.2.2
- * @author Stefan Giesecke <webmaster@giesi.com>
- * @copyright Copyright (c) 2010, Stefan Giesecke
- * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
- */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'invalid_password'=>'Jy het \'n ongeldige wagwoord ingevoer.',
-  'ip_banned'=>'Jou IP is verban van hierdie webblad.<br>%reason%',
-  'login_successful'=>'Aanmelding suksesvol!',
-  'no_user'=>'Die gebruiker <b>%username%</b> is nie beskikbaar op hierdie stelsel.',
-  'not_activated'=>'Jou rekening is nie geaktiveer.',
-  'session_error'=>'Maak asseblief seker dat die koekies aangeskakel is op jou blaaier.<br>As die probleem steeds voorkom, kontak die webmeester.',
-  'return'=>'<a href="javascript:history.back()">Gaan terug</a>',
-  'return_reenter' => '<a href="javascript:history.back()">Gaan terug en probeer weer.</a>'
+    'invalid_password' => 'Jy het \'n ongeldige wagwoord ingevoer.',
+    'ip_banned' => 'Jou IP is verban van hierdie webblad.<br>%reason%',
+    'login_successful' => 'Aanmelding suksesvol!',
+    'no_user' => 'Die gebruiker <b>%username%</b> is nie beskikbaar op hierdie stelsel.',
+    'not_activated' => 'Jou rekening is nie geaktiveer.',
+    'return' => '<a href="javascript:history.back()">Gaan terug</a>',
+    'return_reenter' => '<a href="javascript:history.back()">Gaan terug en probeer weer.</a>',
+    'session_error' => 'Maak asseblief seker dat die koekies aangeskakel is op jou blaaier.<br>As die probleem steeds voorkom, kontak die webmeester.'
 );
 

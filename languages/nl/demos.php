@@ -25,7 +25,7 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
@@ -75,6 +75,6 @@ $language_array = Array(
     'to_rate' => 'Je moet geregistreerd en ingelogd zijn om op deze demo te stemmen!',
     'update_demo' => 'Update demo',
     'user_comments' => 'Sta gebruikers commentaar toe',
-    'visitor_comments' => 'Sta bezoekers commentaar toe',
-    'vs' => 'vs.'
+    'visitor_comments' => 'Sta bezoekers commentaar toe'
 );
+

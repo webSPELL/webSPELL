@@ -24,31 +24,25 @@
 #                                                                        #
 ##########################################################################
 */
-/**
- * Online Language Editor Slovenia language file for webSPELL 4.2.2
- * @author Stefan Giesecke <webmaster@giesi.com>
- * @copyright Copyright (c) 2010, Stefan Giesecke
- * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
- */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'back'=>'nazaj',
-  'banner'=>'Banner',
-  'banner_to_big'=>'Slika je prevelika',
-  'delete'=>'Izbriši',
-  'edit'=>'Uredi',
-  'edit_linkus'=>'uredi banner',
-  'format_incorrect'=>'Neveljaven format slike (Veljavni: *.gif, *.jpg ali *.png)',
-  'link_us'=>'Kontakterajte nas',
-  'name'=>'Ime',
-  'new_banner'=>'nova banner',
-  'no_access'=>'Ni dostopa!',
-  'no_banner'=>'ni banner',
-  'really_delete_banner'=>'Izbrisati zastavo?',
-  'save_banner'=>'uredi banner',
-  'use_following_code'=>'Uporabite naslednje kode'
+    'back' => 'nazaj',
+    'banner' => 'Banner',
+    'banner_to_big' => 'Slika je prevelika',
+    'delete' => 'Izbriši',
+    'edit' => 'Uredi',
+    'edit_linkus' => 'uredi banner',
+    'format_incorrect' => 'Neveljaven format slike (Veljavni: *.gif, *.jpg ali *.png)',
+    'link_us' => 'Kontakterajte nas',
+    'name' => 'Ime',
+    'new_banner' => 'nova banner',
+    'no_access' => 'Ni dostopa!',
+    'no_banner' => 'ni banner',
+    'really_delete_banner' => 'Izbrisati zastavo?',
+    'save_banner' => 'uredi banner',
+    'use_following_code' => 'Uporabite naslednje kode'
 );
 

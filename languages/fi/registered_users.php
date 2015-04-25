@@ -24,26 +24,20 @@
 #                                                                        #
 ##########################################################################
 */
-/**
- * Online Language Editor Finland language file for webSPELL 4.2.2
- * @author Stefan Giesecke <webmaster@giesi.com>
- * @copyright Copyright (c) 2010, Stefan Giesecke
- * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
- */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'contact'=>'Yhteystiedot',
-  'country'=>'M',
-  'homepage'=>'Kotisivu',
-  'last_login'=>'Viimeisin kirjautuminen',
-  'nickname'=>'Kutsumanimi',
-  'no_users'=>'ei rekisteröityjä käyttäjiä',
-  'now_on'=>'onlinessa',
-  'registered_users'=>'rekisteröidyt käyttäjät',
-  'registration'=>'Rekisteröitynä',
-  'sort'=>'Lajittele:'
+    'contact' => 'Yhteystiedot',
+    'country' => 'M',
+    'homepage' => 'Kotisivu',
+    'last_login' => 'Viimeisin kirjautuminen',
+    'nickname' => 'Kutsumanimi',
+    'no_users' => 'ei rekisteröityjä käyttäjiä',
+    'now_on' => 'onlinessa',
+    'registered_users' => 'rekisteröidyt käyttäjät',
+    'registration' => 'Rekisteröitynä',
+    'sort' => 'Lajittele:'
 );
 

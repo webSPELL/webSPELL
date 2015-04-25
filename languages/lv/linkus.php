@@ -25,25 +25,24 @@
 ##########################################################################
 */
 
-
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'back'=>'atpakaļ',
-  'banner'=>'Reklāmkarogs',
-  'banner_to_big'=>'Attēls ir pārāk liels',
-  'delete'=>'izdzēst',
-  'edit'=>'rediģēt',
-  'edit_linkus'=>'rediģēt reklāmkarogu',
-  'format_incorrect'=>'Nederīgs attēla formāts (atļauts: *.gif, *.jpg or *.png)',
-  'link_us'=>'saite uz šo mājaslapu',
-  'name'=>'Vārds',
-  'new_banner'=>'jauns reklāmkarogs',
-  'no_access'=>'Nav pieejas!',
-  'no_banner'=>'nav saites uz šo mājaslapu reklāmkaroga',
-  'really_delete_banner'=>'tiešām izdzēst šo reklāmkarogu?',
-  'save_banner'=>'saglabāt reklāmkarogu',
-  'use_following_code'=>'Izmantojiet šo kodu, lai ievietotu reklāmkarogu Jūsu mājaslapā.'
+    'back' => 'atpakaļ',
+    'banner' => 'Reklāmkarogs',
+    'banner_to_big' => 'Attēls ir pārāk liels',
+    'delete' => 'izdzēst',
+    'edit' => 'rediģēt',
+    'edit_linkus' => 'rediģēt reklāmkarogu',
+    'format_incorrect' => 'Nederīgs attēla formāts (atļauts: *.gif, *.jpg or *.png)',
+    'link_us' => 'saite uz šo mājaslapu',
+    'name' => 'Vārds',
+    'new_banner' => 'jauns reklāmkarogs',
+    'no_access' => 'Nav pieejas!',
+    'no_banner' => 'nav saites uz šo mājaslapu reklāmkaroga',
+    'really_delete_banner' => 'tiešām izdzēst šo reklāmkarogu?',
+    'save_banner' => 'saglabāt reklāmkarogu',
+    'use_following_code' => 'Izmantojiet šo kodu, lai ievietotu reklāmkarogu Jūsu mājaslapā.'
 );
 

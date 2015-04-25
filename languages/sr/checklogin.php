@@ -25,17 +25,17 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'invalid_password'=>'Унијели сте криву лозинку.',
-  'ip_banned'=>'Вас ИП је баннан на овим страницама.<br>%reason%',
-  'login_successful'=>'Пријава успијешна!',
-  'no_user'=>'Корисник <b>%username%</b> није доступан на овим страницама.',
-  'not_activated'=>'Ваш рацун није активан.',
-  'session_error'=>'Молимо увјерите се да су коокиеси омогуцени у Вашем прегледнику.<br>Ако проблем и далје постоји,контактирајте Вебмастера.',
-  'return'=>'<a href="javascript:history.back()">Иди натраг</a>',
-  'return_reenter' => '<a href="javascript:history.back()">Вратите се и покушајте поново.</a>'
+    'invalid_password' => 'Унијели сте криву лозинку.',
+    'ip_banned' => 'Вас ИП је баннан на овим страницама.<br>%reason%',
+    'login_successful' => 'Пријава успијешна!',
+    'no_user' => 'Корисник <b>%username%</b> није доступан на овим страницама.',
+    'not_activated' => 'Ваш рацун није активан.',
+    'return' => '<a href="javascript:history.back()">Иди натраг</a>',
+    'return_reenter' => '<a href="javascript:history.back()">Вратите се и покушајте поново.</a>',
+    'session_error' => 'Молимо увјерите се да су коокиеси омогуцени у Вашем прегледнику.<br>Ако проблем и далје постоји,контактирајте Вебмастера.'
 );
 

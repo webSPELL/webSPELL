@@ -25,11 +25,11 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'history'=>'crwdns14991:0crwdne14991:0',
-	'no_history'=>'crwdns14992:0crwdne14992:0'
+    'history' => 'crwdns20846:0crwdne20846:0',
+    'no_history' => 'crwdns20847:0crwdne20847:0'
 );
 

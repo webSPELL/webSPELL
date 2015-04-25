@@ -24,24 +24,18 @@
 #                                                                        #
 ##########################################################################
 */
-/**
- * Online Language Editor Bulgaria language file for webSPELL 4.2.2
- * @author Stefan Giesecke <webmaster@giesi.com>
- * @copyright Copyright (c) 2010, Stefan Giesecke
- * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
- */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'admin_button'=>'Администрация на често задавани въпроси',
-  'answer'=>'Oтговор',
-  'categories'=>'Категории',
-  'faq'=>'Често задавани въпроси',
-  'faqs'=>'Bъпроси',
-  'no_categories'=>'няма създадени категории',
-  'no_faq'=>'Няма налични въпроси.<br><a href="index.php?site=faq">Oбратно</a>',
-  'saved_on'=>'създаден на'
+    'admin_button' => 'Администрация на често задавани въпроси',
+    'answer' => 'Oтговор',
+    'categories' => 'Категории',
+    'faq' => 'Често задавани въпроси',
+    'faqs' => 'Bъпроси',
+    'no_categories' => 'няма създадени категории',
+    'no_faq' => 'Няма налични въпроси.<br><a href="index.php?site=faq">Oбратно</a>',
+    'saved_on' => 'създаден на'
 );
 

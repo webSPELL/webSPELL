@@ -25,17 +25,17 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'all_messages'=>'Rodyti visus',
-	'enter_message'=>'Jūs turite įvesti žinutę!',
-	'enter_name'=>'Jūs turite įvesti vardą!',
-	'delete_selected'=>'Ištrinti pasirinktus',
-	'select_all'=>'Pažymėti visus',
-	'shout'=>'Šaukti!',
-	'shoutbox'=>'šaukykla',
-	'sort'=>'Rykiuoti:'
+    'all_messages' => 'Rodyti visus',
+    'delete_selected' => 'Ištrinti pasirinktus',
+    'enter_message' => 'Jūs turite įvesti žinutę!',
+    'enter_name' => 'Jūs turite įvesti vardą!',
+    'select_all' => 'Pažymėti visus',
+    'shout' => 'Šaukti!',
+    'shoutbox' => 'šaukykla',
+    'sort' => 'Rykiuoti:'
 );
 

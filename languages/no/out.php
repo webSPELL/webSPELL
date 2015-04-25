@@ -25,12 +25,12 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'no_frame'=>'Denne hjemmesiden bruker rammer. Din nettleser støtter ikke rammer!',
-	'outgoing'=>'Utgående',
-	'owner_responsible'=>'Eigeren er ansvarlig for denne hjemmesiden.'
+    'no_frame' => 'Denne hjemmesiden bruker rammer. Din nettleser støtter ikke rammer!',
+    'outgoing' => 'Utgående',
+    'owner_responsible' => 'Eigeren er ansvarlig for denne hjemmesiden.'
 );
 

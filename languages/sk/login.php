@@ -25,23 +25,22 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'admin'=>'admin',
-	'buddy_list'=>'priatelia',
-	'cash-box'=>'cash box',
-	'edit_account'=>'upraviť profil',
-	'galleries'=>'galéria',
-	'login'=>'prihlásiť',
-	'logout'=>'odhlásiť',
-	'lost_password'=>'zabudnuté heslo?',
-	'messenger'=>'správy',
-	'n_a'=>'n/a',
-	'overview'=>'prehľad',
-	'register_now'=>'registrácia',
-	'registered_users'=>'registrovaní užívatelia',
-	'welcome_back'=>'vitaj naspäť'
+    'admin' => 'admin',
+    'buddy_list' => 'priatelia',
+    'cash-box' => 'cash box',
+    'edit_account' => 'upraviť profil',
+    'galleries' => 'galéria',
+    'login' => 'prihlásiť',
+    'logout' => 'odhlásiť',
+    'lost_password' => 'zabudnuté heslo?',
+    'messenger' => 'správy',
+    'overview' => 'prehľad',
+    'register_now' => 'registrácia',
+    'registered_users' => 'registrovaní užívatelia',
+    'welcome_back' => 'vitaj naspäť'
 );
 

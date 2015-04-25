@@ -25,12 +25,11 @@
 ##########################################################################
 */
 
-
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'history'=>'Vēsture',
-  'no_history'=>'Pagaidām nav pieejama informācija.'
+    'history' => 'Vēsture',
+    'no_history' => 'Pagaidām nav pieejama informācija.'
 );
 

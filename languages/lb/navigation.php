@@ -24,50 +24,44 @@
 #                                                                        #
 ##########################################################################
 */
-/**
- * Online Language Editor Luxemburg language file for webSPELL 4.2.2
- * @author Stefan Giesecke <webmaster@giesi.com>
- * @copyright Copyright (c) 2010, Stefan Giesecke
- * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
- */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'about_us'=>'Iwwer eis',
-  'archives'=>'Archiv',
-  'articles'=>'Artikel',
-  'awards'=>'Auszeechnungen',
-  'calendar'=>'Kalenner',
-  'clan'=>'Clan',
-  'community'=>'Gemeinschaft',
-  'contact'=>'Kontakt Formular',
-  'demos'=>'Demoen',
-  'downloads'=>'Dateien',
-  'faq'=>'Heefeg gestallten Froen',
-  'fight_us'=>'Fuerder eis eraus',
-  'forums'=>'Forum',
-  'gallery'=>'Galerie',
-  'guestbook'=>'Gäschtbuch',
-  'history'=>'Werdegang',
-  'imprint'=>'Impressum',
-  'join_us'=>'Matglidd ginn',
-  'links'=>'Linken',
-  'links_us'=>'Verlink eis',
-  'main'=>'Haapt',
-  'matches'=>'Clankricher',
-  'media'=>'Medien',
-  'members'=>'Matglidder',
-  'miscellaneous'=>'Aneres',
-  'news'=>'Neiegkeeten',
-  'newsletter'=>'Newsletter',
-  'polls'=>'Ëmfroen',
-  'registered_users'=>'Registréiert Benotzer',
-  'search'=>'Sich',
-  'servers'=>'Server',
-  'sponsors'=>'Sponseren',
-  'squads'=>'Equippen',
-  'who_is_online'=>'Wen ass online?'
+    'about_us' => 'Iwwer eis',
+    'archives' => 'Archiv',
+    'articles' => 'Artikel',
+    'awards' => 'Auszeechnungen',
+    'calendar' => 'Kalenner',
+    'clan' => 'Clan',
+    'community' => 'Gemeinschaft',
+    'contact' => 'Kontakt Formular',
+    'demos' => 'Demoen',
+    'downloads' => 'Dateien',
+    'faq' => 'Heefeg gestallten Froen',
+    'fight_us' => 'Fuerder eis eraus',
+    'forums' => 'Forum',
+    'gallery' => 'Galerie',
+    'guestbook' => 'Gäschtbuch',
+    'history' => 'Werdegang',
+    'imprint' => 'Impressum',
+    'join_us' => 'Matglidd ginn',
+    'links' => 'Linken',
+    'links_us' => 'Verlink eis',
+    'main' => 'Haapt',
+    'matches' => 'Clankricher',
+    'media' => 'Medien',
+    'members' => 'Matglidder',
+    'miscellaneous' => 'Aneres',
+    'news' => 'Neiegkeeten',
+    'newsletter' => 'Newsletter',
+    'polls' => 'Ëmfroen',
+    'registered_users' => 'Registréiert Benotzer',
+    'search' => 'Sich',
+    'servers' => 'Server',
+    'sponsors' => 'Sponseren',
+    'squads' => 'Equippen',
+    'who_is_online' => 'Wen ass online?'
 );
 

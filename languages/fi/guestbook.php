@@ -24,45 +24,37 @@
 #                                                                        #
 ##########################################################################
 */
-/**
- * Online Language Editor Finland language file for webSPELL 4.2.2
- * @author Stefan Giesecke <webmaster@giesi.com>
- * @copyright Copyright (c) 2010, Stefan Giesecke
- * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
- */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'admin_comment'=>'Ylläpitäjän kommentti',
-  'bbcode'=>'<a href="javascript:void(0);" onclick="window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> PÄÄLLÄ',
-  'by'=>'by',
-  'comment'=>'Kommentti',
-  'delete_selected'=>'Poista valitut',
-  'enter_a_message'=>'Kirjoita viesti!',
-  'error_captcha'=>'Väärä turvallisuuskoodi!',
-  'enter_your_name'=>'Kirjoita nimesi!',
-  'guestbook'=>'vieraskirja',
-  'guestbook_comment'=>'Vieraskirja kommentit',
-  'homepage'=>'Kotisivu',
-  'html'=>'HTML POIS',
-  'icq'=>'ICQ',
-  'ip'=>'IP',
-  'mail'=>'Sähköposti',
-  'name'=>'Nimesi',
-  'new_entry'=>'Uusi aihe',
-  'no_access'=>'Et ole kirjautuneena sisään.<br><a href="index.php?site=login">Käyttäjätunnus</a> | <a href="index.php?site=register">Ilmoittautua</a>',
-  'options'=>'Asetukset',
-  'pmsubject_newentry'=>'Vieraskirjassa uusi aihe',
-  'pmtext_newentry'=>'[b]Joku on jättänyt viestin vieraskirjaan![/b][br][br] [URL=index.php?site=guestbook#%insertid%]Klikkaa nähdäksesi viestin[/URL] ',
-  'security_code'=>'Turvallisuuskoodi',
-  'select_all'=>'valitse kaikki',
-  'smilies'=>'<a href="javascript:void(0);" onclick="window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Hymiöt</a> PÄÄLLÄ',
-  'sort'=>'Lajittele:',
-  'submit'=>'Lähetä',
-  'update_comment'=>'Tallenna kommentti',
-  'wrote'=>'kirjoita',
-  'your_message'=>'Sinun viesti'
+    'admin_comment' => 'Ylläpitäjän kommentti',
+    'bbcode' => '<a href="javascript:void(0);" onclick="window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> PÄÄLLÄ',
+    'by' => 'by',
+    'comment' => 'Kommentti',
+    'delete_selected' => 'Poista valitut',
+    'enter_a_message' => 'Kirjoita viesti!',
+    'enter_your_name' => 'Kirjoita nimesi!',
+    'error_captcha' => 'Väärä turvallisuuskoodi!',
+    'guestbook' => 'vieraskirja',
+    'guestbook_comment' => 'Vieraskirja kommentit',
+    'homepage' => 'Kotisivu',
+    'html' => 'HTML POIS',
+    'mail' => 'Sähköposti',
+    'name' => 'Nimesi',
+    'new_entry' => 'Uusi aihe',
+    'no_access' => 'Et ole kirjautuneena sisään.<br><a href="index.php?site=login">Käyttäjätunnus</a> | <a href="index.php?site=register">Ilmoittautua</a>',
+    'options' => 'Asetukset',
+    'pmsubject_newentry' => 'Vieraskirjassa uusi aihe',
+    'pmtext_newentry' => '[b]Joku on jättänyt viestin vieraskirjaan![/b][br][br] [URL=index.php?site=guestbook#%insertid%]Klikkaa nähdäksesi viestin[/URL] ',
+    'security_code' => 'Turvallisuuskoodi',
+    'select_all' => 'valitse kaikki',
+    'smilies' => '<a href="javascript:void(0);" onclick="window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Hymiöt</a> PÄÄLLÄ',
+    'sort' => 'Lajittele:',
+    'submit' => 'Lähetä',
+    'update_comment' => 'Tallenna kommentti',
+    'wrote' => 'kirjoita',
+    'your_message' => 'Sinun viesti'
 );
 

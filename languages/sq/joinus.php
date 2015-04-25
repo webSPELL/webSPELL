@@ -24,44 +24,37 @@
 #                                                                        #
 ##########################################################################
 */
-/**
- * Online Language Editor Albania language file for webSPELL 4.2.2
- * @author Stefan Giesecke <webmaster@giesi.com>
- * @copyright Copyright (c) 2010, Stefan Giesecke
- * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
- */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'additional_info'=>'Informacion shtesë (p.sh. Pse duhet të më merrni mua si anëtar...)',
-  'age'=>'Mosha',
-  'back_to_form'=>'Mbrapsh te forma',
-  'city'=>'Qyteti',
-  'clan_history'=>'Historia Klanit',
-  'email_not_valid'=>'Nuk keni vendosur adresë e-mail-i të vlefshme!',
-  'forgot_age'=>'Nuk keni vendosur moshën!',
-  'forgot_city'=>'Nuk keni vendosur qytetin!',
-  'forgot_history'=>'Nuk keni vendosur historinë e klanit!',
-  'forgot_messenger'=>'Nuk keni vendosur messenger (ICQ, AIM etc...)!',
-  'forgot_nickname'=>'Harruat pseudonimin!',
-  'forgot_realname'=>'Harruat emrin!',
-  'icq_msn'=>'ICQ/MSN/etj...',
-  'info'=>'Informacion shtesë',
-  'joinus_form'=>'Forma Joinus ',
-  'mail'=>'E-Mail',
-  'messenger'=>'Mesanger',
-  'message_title'=>'Bashkohu',
-  'name'=>'Emri',
-  'nick'=>'Pseudonimi',
-  'problems'=>'Këto probleme ndodhën ndërsa futët të dhënat tuaja',
-  'security_code'=>'Kodi sigurisë',
-  'send'=>'Dërgo',
-  'someone_want_to_join_your_squad'=>'Dikush do të futet në ekipin tuaj:',
-  'squad'=>'Ekip',
-  'thanks_you_will_get_mail'=>'Faleminderit për aplikimin, ne do ju kontaktojmë.',
-  'title_join_us'=>'Behuni anëtar',
-  'wrong_security_code'=>'Kodi sigurisë ishte i gabuar!'
+    'additional_info' => 'Informacion shtesë (p.sh. Pse duhet të më merrni mua si anëtar...)',
+    'age' => 'Mosha',
+    'back_to_form' => 'Mbrapsh te forma',
+    'city' => 'Qyteti',
+    'clan_history' => 'Historia Klanit',
+    'email_not_valid' => 'Nuk keni vendosur adresë e-mail-i të vlefshme!',
+    'forgot_age' => 'Nuk keni vendosur moshën!',
+    'forgot_city' => 'Nuk keni vendosur qytetin!',
+    'forgot_history' => 'Nuk keni vendosur historinë e klanit!',
+    'forgot_messenger' => 'Nuk keni vendosur messenger (ICQ, AIM etc...)!',
+    'forgot_nickname' => 'Harruat pseudonimin!',
+    'forgot_realname' => 'Harruat emrin!',
+    'icq_msn' => 'ICQ/MSN/etj...',
+    'info' => 'Informacion shtesë',
+    'joinus_form' => 'Forma Joinus ',
+    'message_title' => 'Bashkohu',
+    'messenger' => 'Mesanger',
+    'name' => 'Emri',
+    'nick' => 'Pseudonimi',
+    'problems' => 'Këto probleme ndodhën ndërsa futët të dhënat tuaja',
+    'security_code' => 'Kodi sigurisë',
+    'send' => 'Dërgo',
+    'someone_want_to_join_your_squad' => 'Dikush do të futet në ekipin tuaj:',
+    'squad' => 'Ekip',
+    'thanks_you_will_get_mail' => 'Faleminderit për aplikimin, ne do ju kontaktojmë.',
+    'title_join_us' => 'Behuni anëtar',
+    'wrong_security_code' => 'Kodi sigurisë ishte i gabuar!'
 );
 

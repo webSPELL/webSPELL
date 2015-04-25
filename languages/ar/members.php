@@ -25,29 +25,28 @@
 ##########################################################################
 */
 
-
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'about'=>'عن',
-  'active'=>'نشط',
-  'activity'=>'النشاط',
-  'awards'=>'الجوائز',
-  'back_overview'=>'&raquo; <a href="index.php?site=members"><b>العودة الى قائمة الاعضاء</b></a>',
-  'challenge'=>'التحدي',
-  'contact'=>'الاتصال',
-  'go'=>'انطق',
-  'inactive'=>'غير نشط',
-  'member'=>'عضو',
-  'members'=>'الاعضاء',
-  'nickname'=>'الاسم المستعار',
-  'no_description'=>'لا يوجد وصف متاح',
-  'position'=>'موقف',
-  'results'=>'النتائج',
-  'show_details'=>'&raquo; <a href="index.php?site=members&amp;action=show&amp;squadID=%squadID%"><b>اظهار التفاصيل</b></a>',
-  'show_only'=>'اظهار فقط',
-  'status'=>'الاحصائيات',
-  'town'=>'المدينة'
+    'about' => 'عن',
+    'active' => 'نشط',
+    'activity' => 'النشاط',
+    'awards' => 'الجوائز',
+    'back_overview' => '&raquo; <a href="index.php?site=members"><b>العودة الى قائمة الاعضاء</b></a>',
+    'challenge' => 'التحدي',
+    'contact' => 'الاتصال',
+    'go' => 'انطق',
+    'inactive' => 'غير نشط',
+    'member' => 'عضو',
+    'members' => 'الاعضاء',
+    'nickname' => 'الاسم المستعار',
+    'no_description' => 'لا يوجد وصف متاح',
+    'position' => 'موقف',
+    'results' => 'النتائج',
+    'show_details' => '&raquo; <a href="index.php?site=members&amp;action=show&amp;squadID=%squadID%"><b>اظهار التفاصيل</b></a>',
+    'show_only' => 'اظهار فقط',
+    'status' => 'الاحصائيات',
+    'town' => 'المدينة'
 );
 

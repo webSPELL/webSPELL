@@ -24,35 +24,29 @@
 #                                                                        #
 ##########################################################################
 */
-/**
- * Online Language Editor Finland language file for webSPELL 4.2.2
- * @author Stefan Giesecke <webmaster@giesi.com>
- * @copyright Copyright (c) 2010, Stefan Giesecke
- * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
- */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'award'=>'Palkinto',
-  'awards'=>'Palkinnot',
-  'date'=>'Päivämäärä',
-  'delete'=>'poista',
-  'edit'=>'muokkaa',
-  'edit_award'=>'Muokkaa palkintoa',
-  'enter_title'=>'Sinun täytyy kirjoittaa otsikko!',
-  'enter_text'=>'Sinun täytyy kirjoittaa teksti',
-  'event'=>'Tapahtuma',
-  'homepage'=>'Kotisivu',
-  'info'=>'Info',
-  'new_award'=>'Uusi palkinto',
-  'no_access'=>'Pääsy kielletty!',
-  'no_entries'=>'Ei palkintoa',
-  'ranking'=>'Sijoitus',
-  'save_award'=>'Tallenna palkinto',
-  'sort'=>'Järjestä',
-  'squad'=>'Ryhmä',
-  'update_award'=>'Päivitä palkinto'
+    'award' => 'Palkinto',
+    'awards' => 'Palkinnot',
+    'date' => 'Päivämäärä',
+    'delete' => 'poista',
+    'edit' => 'muokkaa',
+    'edit_award' => 'Muokkaa palkintoa',
+    'enter_text' => 'Sinun täytyy kirjoittaa teksti',
+    'enter_title' => 'Sinun täytyy kirjoittaa otsikko!',
+    'event' => 'Tapahtuma',
+    'homepage' => 'Kotisivu',
+    'info' => 'Info',
+    'new_award' => 'Uusi palkinto',
+    'no_access' => 'Pääsy kielletty!',
+    'no_entries' => 'Ei palkintoa',
+    'ranking' => 'Sijoitus',
+    'save_award' => 'Tallenna palkinto',
+    'sort' => 'Järjestä',
+    'squad' => 'Ryhmä',
+    'update_award' => 'Päivitä palkinto'
 );
 

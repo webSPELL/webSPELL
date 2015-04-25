@@ -24,24 +24,18 @@
 #                                                                        #
 ##########################################################################
 */
-/**
- * Online Language Editor Albania language file for webSPELL 4.2.2
- * @author Stefan Giesecke <webmaster@giesi.com>
- * @copyright Copyright (c) 2010, Stefan Giesecke
- * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
- */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'invalid_password'=>'Keni vendosur një kod të gabuar.',
-  'ip_banned'=>'Ip juaj është i bllokuar ne këtë site.<br>%reason%',
-  'login_successful'=>'Logim i suksesshëm!',
-  'no_user'=>'Ky përdorues <b>%username%</b> nuk është i vlefshëm në këtë sistem.',
-  'not_activated'=>'Llogaria juaj nuk është e aktivizuar.',
-  'session_error'=>'Ju lutemi sigurohuni që modulele cookie janë aktivizuar në browserin tuaj.<br>Nëse problemet vazhdojnë,kontaktoni një administrator.',
-  'return'=>'<a href="javascript:history.back()">Mbrapsh</a>',
-  'return_reenter' => '<a href="javascript:history.back()">Kthehu mbrapsh dhe provo sërisht.</a>'
+    'invalid_password' => 'Keni vendosur një kod të gabuar.',
+    'ip_banned' => 'Ip juaj është i bllokuar ne këtë site.<br>%reason%',
+    'login_successful' => 'Logim i suksesshëm!',
+    'no_user' => 'Ky përdorues <b>%username%</b> nuk është i vlefshëm në këtë sistem.',
+    'not_activated' => 'Llogaria juaj nuk është e aktivizuar.',
+    'return' => '<a href="javascript:history.back()">Mbrapsh</a>',
+    'return_reenter' => '<a href="javascript:history.back()">Kthehu mbrapsh dhe provo sërisht.</a>',
+    'session_error' => 'Ju lutemi sigurohuni që modulele cookie janë aktivizuar në browserin tuaj.<br>Nëse problemet vazhdojnë,kontaktoni një administrator.'
 );
 

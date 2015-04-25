@@ -24,62 +24,48 @@
 #                                                                        #
 ##########################################################################
 */
-/**
- * Online Language Editor Russia language file for webSPELL 4.2.2
- * @author Stefan Giesecke <webmaster@giesi.com>
- * @copyright Copyright (c) 2010, Stefan Giesecke
- * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
- */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'about'=>'О нас',
-  'archive'=>'Архив',
-  'articles'=>'Статьи',
-  'awards'=>'Награды',
-  'buddys'=>'Друзья',
-  'calendar'=>'Календарь',
-  'cash_box'=>'Копилка',
-  'challenge'=>'Состязания',
-  'clanwars'=>'Кланвары',
-  'clanwars_details'=>'Кланвар против',
-  'contact'=>'Связаться',
-  'demo'=>'Демо',
-  'demos'=>'Демо',
-  'faq'=>'FAQ',
-  'files'=>'Файлы',
-  'forum'=>'Форум',
-  'gallery'=>'Галерея',
-  'guestbook'=>'Гостевая книга',
-  'history'=>'История',
-  'imprint'=>'Сведения',
-  'joinus'=>'Вступи к нам',
-  'links'=>'Ссылки',
-  'linkus'=>'Ссылка на нас',
-  'login'=>'Логин',
-  'loginoverview'=>'Обзор о логине',
-  'lostpassword'=>'запросить Пароль',
-  'members'=>'Члены',
-  'messenger'=>'Мессенджер',
-  'myprofile'=>'редактировать Профиль',
-  'news'=>'Новости',
-  'newsletter'=>'Лента новостей',
-  'partners'=>'Партнеры',
-  'polls'=>'Голосования',
-  'profile'=>'Профиль',
-  'register'=>'Регистрация',
-  'registered_users'=>'Зарегистриванные Пользователи',
-  'search'=>'Поиск',
-  'server'=>'Серверы',
-  'shoutbox'=>'Чат',
-  'sponsors'=>'Спонсоры',
-  'squads'=>'Отряды',
-  'start'=>'Домашняя страница',
-  'stats'=>'Статистика',
-  'usergallery'=>'Галерея пользователей',
-  'versus'=>'против',
-  'whoisonline'=>'Кто в сети'
+    'about' => 'О нас',
+    'archive' => 'Архив',
+    'articles' => 'Статьи',
+    'awards' => 'Награды',
+    'buddys' => 'Друзья',
+    'calendar' => 'Календарь',
+    'cash_box' => 'Копилка',
+    'challenge' => 'Состязания',
+    'clanwars' => 'Кланвары',
+    'clanwars_details' => 'Кланвар против',
+    'contact' => 'Связаться',
+    'files' => 'Файлы',
+    'guestbook' => 'Гостевая книга',
+    'history' => 'История',
+    'imprint' => 'Сведения',
+    'joinus' => 'Вступи к нам',
+    'links' => 'Ссылки',
+    'linkus' => 'Ссылка на нас',
+    'login' => 'Логин',
+    'loginoverview' => 'Обзор о логине',
+    'lostpassword' => 'запросить Пароль',
+    'members' => 'Члены',
+    'messenger' => 'Мессенджер',
+    'myprofile' => 'редактировать Профиль',
+    'news' => 'Новости',
+    'newsletter' => 'Лента новостей',
+    'partners' => 'Партнеры',
+    'polls' => 'Голосования',
+    'profile' => 'Профиль',
+    'registered_users' => 'Зарегистриванные Пользователи',
+    'search' => 'Поиск',
+    'server' => 'Серверы',
+    'sponsors' => 'Спонсоры',
+    'squads' => 'Отряды',
+    'start' => 'Домашняя страница',
+    'usergallery' => 'Галерея пользователей',
+    'versus' => 'против',
+    'whoisonline' => 'Кто в сети'
 );
 

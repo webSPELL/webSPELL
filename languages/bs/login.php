@@ -25,24 +25,23 @@
 ##########################################################################
 */
 
-
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'admin'=>'admin',
-  'buddy_list'=>'Prijatelji',
-  'cash-box'=>'Blagajna',
-  'edit_account'=>'Izmjeni račun',
-  'galleries'=>'Galerije',
-  'login'=>'Prijava',
-  'logout'=>'Odjava',
-  'lost_password'=>'Izgubljena lozinka?',
-  'messenger'=>'Poruke',
-  'n_a'=>'nije dostupno',
-  'overview'=>'Pregled',
-  'register_now'=>'Registruj se',
-  'registered_users'=>'Registrovani korisnici',
-  'welcome_back'=>'Dobrodošao natrag'
+    'admin' => 'admin',
+    'buddy_list' => 'Prijatelji',
+    'cash-box' => 'Blagajna',
+    'edit_account' => 'Izmjeni račun',
+    'galleries' => 'Galerije',
+    'login' => 'Prijava',
+    'logout' => 'Odjava',
+    'lost_password' => 'Izgubljena lozinka?',
+    'messenger' => 'Poruke',
+    'n_a' => 'nije dostupno',
+    'overview' => 'Pregled',
+    'register_now' => 'Registruj se',
+    'registered_users' => 'Registrovani korisnici',
+    'welcome_back' => 'Dobrodošao natrag'
 );
 

@@ -25,19 +25,19 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'contact'=>'Kontakt',
-	'country'=>'Z',
-	'homepage'=>'Stranica',
-	'last_login'=>'Zadnja prijava',
-	'nickname'=>'Nick',
-	'no_users'=>'nema registriranih korisnika',
-	'now_on'=>'trenutno online',
-	'registered_users'=>'registriranih korisnika',
-	'registration'=>'Registriran od',
-	'sort'=>'Razvrstaj:'
+    'contact' => 'Kontakt',
+    'country' => 'Z',
+    'homepage' => 'Stranica',
+    'last_login' => 'Zadnja prijava',
+    'nickname' => 'Nick',
+    'no_users' => 'nema registriranih korisnika',
+    'now_on' => 'trenutno online',
+    'registered_users' => 'registriranih korisnika',
+    'registration' => 'Registriran od',
+    'sort' => 'Razvrstaj:'
 );
 

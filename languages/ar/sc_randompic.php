@@ -25,13 +25,12 @@
 ##########################################################################
 */
 
-
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'no_user'=>'لانوجد صورة المستخدم',
-  'registered_since'=>'مسجل منذ',
-  'view_profile'=>'زيارة الملف الشخصي'
+    'no_user' => 'لانوجد صورة المستخدم',
+    'registered_since' => 'مسجل منذ',
+    'view_profile' => 'زيارة الملف الشخصي'
 );
 

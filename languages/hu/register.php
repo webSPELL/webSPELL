@@ -25,24 +25,24 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'activation_successful'=>'Felhasználói profilod aktiválása sikeresen befejeződött.<br>Most már bejelentkezhetsz.',
-	'back'=>'back',
-	'enter_nickname'=>'Írj be becenevet.',
-	'enter_password'=>'Írj be jelszót.',
-	'enter_username'=>'Írj be felhasználónevet.',
-	'errors_there'=>'Néhány hiba lépett fel:',
-	'for_login'=>'csak bejelentkezéshez',
-	'invalid_mail'=>'Érvénytelen e-mail címet írtál be.',
-	'mail'=>'E-Mail',
-	'mail_activation_successful'=>'Az e-mail címed aktiválása sikeresen megtörtént.',
-	'mail_failed'=>'Az aktivációs e-mail nem lett elküldve. Vedd fel a kapcsolatot a webmesterrel.',
-	'mail_inuse'=>'A e-mail cím már használatban van.',
-	'mail_subject'=>'Az aktivációs e-mail a %homepage_url% honlapról',
-	'mail_text'=>'Helló %username%!
+    'activation_successful' => 'Felhasználói profilod aktiválása sikeresen befejeződött.<br>Most már bejelentkezhetsz.',
+    'back' => 'back',
+    'enter_nickname' => 'Írj be becenevet.',
+    'enter_password' => 'Írj be jelszót.',
+    'enter_username' => 'Írj be felhasználónevet.',
+    'errors_there' => 'Néhány hiba lépett fel:',
+    'for_login' => 'csak bejelentkezéshez',
+    'invalid_mail' => 'Érvénytelen e-mail címet írtál be.',
+    'mail' => 'E-Mail',
+    'mail_activation_successful' => 'Az e-mail címed aktiválása sikeresen megtörtént.',
+    'mail_failed' => 'Az aktivációs e-mail nem lett elküldve. Vedd fel a kapcsolatot a webmesterrel.',
+    'mail_inuse' => 'A e-mail cím már használatban van.',
+    'mail_subject' => 'Az aktivációs e-mail a %homepage_url% honlapról',
+    'mail_text' => 'Helló %username%!
 
 Sikeresen regisztráltál a(z) %pagetitle% (%homepage_url%) honlapra . A felhasználói adataid:
 
@@ -53,21 +53,21 @@ A regisztráció befejezéséhez kattints az alábbi linkre:
 
 Köszönjük a regisztrációd
 %pagetitle% - %homepage_url%',
-	'nickname'=>'Becenév',
-	'nickname_inuse'=>'A becenév már használatban van.',
-	'no_register_when_loggedin'=>'You allready have an account at %pagename%',
-	'password'=>'Jelszó',
-	'profile_info'=>'Regisztrációs információk',
-	'register_now'=>'Regisztráció most!',
-	'register_successful'=>'A regisztrációd sikeres. Rövidesen kapsz egy e-mailt az aktiváláshoz szükséges linkkel.',
-	'registration'=>'regisztrálás',
-	'repeat'=>'Jelszó megismétlése',
-	'repeat_invalid'=>'A jelszavaid nem egyeznek.',
-	'security_code'=>'Biztonsági kód',
-	'username'=>'Felhasználónév',
-	'username_inuse'=>'A felhasználónév már foglalt.',
-	'username_toolong'=>'A felhasználónév túl hosszú (max. 30 karakter).',
-	'wrong_activationkey'=>'Az aktivációs kódod hibás!',
-	'wrong_securitycode'=>'Hibás biztonsági kód!'
+    'nickname' => 'Becenév',
+    'nickname_inuse' => 'A becenév már használatban van.',
+    'no_register_when_loggedin' => 'You allready have an account at %pagename%',
+    'password' => 'Jelszó',
+    'profile_info' => 'Regisztrációs információk',
+    'register_now' => 'Regisztráció most!',
+    'register_successful' => 'A regisztrációd sikeres. Rövidesen kapsz egy e-mailt az aktiváláshoz szükséges linkkel.',
+    'registration' => 'regisztrálás',
+    'repeat' => 'Jelszó megismétlése',
+    'repeat_invalid' => 'A jelszavaid nem egyeznek.',
+    'security_code' => 'Biztonsági kód',
+    'username' => 'Felhasználónév',
+    'username_inuse' => 'A felhasználónév már foglalt.',
+    'username_toolong' => 'A felhasználónév túl hosszú (max. 30 karakter).',
+    'wrong_activationkey' => 'Az aktivációs kódod hibás!',
+    'wrong_securitycode' => 'Hibás biztonsági kód!'
 );
 
