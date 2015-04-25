@@ -289,7 +289,8 @@ if (isset($_POST[ 'save' ])) {
             $_language->module[ 'visitor_comments' ] . '</option>';
         $comments =
             str_replace(
-                'value="' . $ds[ 'comments' ] . '"', 'value="' . $ds[ 'comments' ] . '" selected="selected"',
+                'value="' . $ds[ 'comments' ] . '"',
+                'value="' . $ds[ 'comments' ] . '" selected="selected"',
                 $comments
             );
 
@@ -482,7 +483,8 @@ value="' . $_language->module[ 'rate' ] . '" class="btn btn-primary">
     if ($pages > 1) {
         $page_link =
             makepagelink(
-                "index.php?site=demos&amp;action=showgame&amp;game=$game&amp;sort=$sort&amp;type=$type", $page,
+                "index.php?site=demos&amp;action=showgame&amp;game=$game&amp;sort=$sort&amp;type=$type",
+                $page,
                 $pages
             );
     } else {
