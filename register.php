@@ -34,9 +34,8 @@ if (isset($_POST['save'])) {
     if (!$loggedin) {
         $username = mb_substr(trim($_POST['username']), 0, 30);
         $nickname = htmlspecialchars(mb_substr(trim($_POST['nickname']), 0, 30));
-        $pwd1 = $_POST['pwd1'];
-        $pwd2 = $_POST['pwd2'];
-        $md5pwd = generatePasswordHash(stripslashes($pwd1));
+        $password = $_POST['password'];
+        $md5pwd = generatePasswordHash(stripslashes($password));
 
         $mail = $_POST['mail'];
         $CAPCLASS = new \webspell\Captcha;
@@ -70,12 +69,8 @@ if (isset($_POST['save'])) {
         }
 
         // check passwort
-        if ($pwd1 == $pwd2) {
-            if (!(mb_strlen(trim($pwd1)))) {
-                $error[] = $_language->module['enter_password'];
-            }
-        } else {
-            $error[] = $_language->module['repeat_invalid'];
+        if (!(mb_strlen(trim($password)))) {
+            $error[] = $_language->module['enter_password'];
         }
 
         // check e-mail
@@ -258,15 +253,10 @@ if (isset($_GET['key'])) {
             } else {
                 $username = '';
             }
-            if (isset($_POST['pwd1'])) {
-                $pwd1 = getforminput($_POST['pwd1']);
+            if (isset($_POST['password'])) {
+                $password = getforminput($_POST['password']);
             } else {
-                $pwd1 = '';
-            }
-            if (isset($_POST['pwd2'])) {
-                $pwd2 = getforminput($_POST['pwd2']);
-            } else {
-                $pwd2 = '';
+                $password = '';
             }
             if (isset($_POST['mail'])) {
                 $mail = getforminput($_POST['mail']);
@@ -278,8 +268,7 @@ if (isset($_GET['key'])) {
             $data_array['$showerror'] = $showerror;
             $data_array['$nickname'] = $nickname;
             $data_array['$username'] = $username;
-            $data_array['$pwd1'] = $pwd1;
-            $data_array['$pwd2'] = $pwd2;
+            $data_array['password'] = $password;
             $data_array['$mail'] = $mail;
             $data_array['$captcha'] = $captcha;
             $data_array['$hash'] = $hash;
