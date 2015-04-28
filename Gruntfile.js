@@ -186,6 +186,22 @@ module.exports = function( grunt ) {
             }
         },
 
+        lintspaces: {
+            all: {
+                src: [
+                    javascripts,
+                    templates,
+                    phps,
+                    csss,
+                    excludes,
+                    '!admin/**'
+                ],
+                options: {
+                    editorconfig: '.editorconfig'
+                }
+            }
+        },
+
         githooks: {
             all: {
                 "pre-commit": "test"
@@ -340,6 +356,7 @@ module.exports = function( grunt ) {
                 "css"
             ]
         },
+
         todo: {
             options: {
                 usePackage: true
