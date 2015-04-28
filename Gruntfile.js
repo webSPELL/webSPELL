@@ -194,14 +194,14 @@ module.exports = function( grunt ) {
                     phps,
                     csss,
                     excludes,
-                    '!admin/**'
+                    "!admin/**"
                 ],
                 options: {
-                    editorconfig: '.editorconfig',
+                    editorconfig: ".editorconfig",
                     ignores: [
-                        'js-comments',
-                        'xml-comments',
-                        'html-comments'
+                        "js-comments",
+                        "xml-comments",
+                        "html-comments"
                     ]
                 }
             }
