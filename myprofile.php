@@ -155,9 +155,9 @@ if (!$userID) {
                                     "UPDATE "
                                     . PREFIX . "user
                                     SET
-                                      avatar='" . $file .
+                                        avatar='" . $file .
                                     "' WHERE
-                                      userID='" . $id . "'"
+                                        userID='" . $id . "'"
                                 );
                             }
                         } else {
@@ -208,7 +208,7 @@ if (!$userID) {
                                     "UPDATE "
                                     . PREFIX . "user
                                     SET
-                                      userpic='" . $file .
+                                        userpic='" . $file .
                                     "' WHERE userID='" . $id . "'"
                                 );
                             }

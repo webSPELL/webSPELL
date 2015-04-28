@@ -186,6 +186,27 @@ module.exports = function( grunt ) {
             }
         },
 
+        lintspaces: {
+            all: {
+                src: [
+                    javascripts,
+                    templates,
+                    phps,
+                    csss,
+                    excludes,
+                    '!admin/**'
+                ],
+                options: {
+                    editorconfig: '.editorconfig',
+                    ignores: [
+                        'js-comments',
+                        'xml-comments',
+                        'html-comments'
+                    ]
+                }
+            }
+        },
+
         githooks: {
             all: {
                 "pre-commit": "test"
@@ -321,6 +342,7 @@ module.exports = function( grunt ) {
                 "css"
             ],
             codecheckcircle: [
+                "lintspaces",
                 "jshint",
                 "jscs",
                 "phpcs",
@@ -330,6 +352,7 @@ module.exports = function( grunt ) {
                 "css"
             ],
             codechecktravis: [
+                "lintspaces",
                 "jshint",
                 "jscs",
                 "phplint",
@@ -350,7 +373,7 @@ module.exports = function( grunt ) {
                 csss,
                 excludes
             ]
-          }
+        }
     } );
 
     grunt.registerTask( "codecheck", [
