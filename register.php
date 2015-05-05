@@ -268,7 +268,7 @@ if (isset($_GET['key'])) {
             $data_array['$showerror'] = $showerror;
             $data_array['$nickname'] = $nickname;
             $data_array['$username'] = $username;
-            $data_array['password'] = $password;
+            $data_array['$password'] = $password;
             $data_array['$mail'] = $mail;
             $data_array['$captcha'] = $captcha;
             $data_array['$hash'] = $hash;
