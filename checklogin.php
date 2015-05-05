@@ -71,7 +71,7 @@ if (mysqli_num_rows($get) == 0) {
 
                 // check password
                 $login = 0;
-                if ($ws_pwd == $ds[ 'password' ]) {
+                if (hash_equals($ws_pwd, $ds[ 'password' ])) {
                     //session
                     $_SESSION[ 'referer' ] = $_SERVER[ 'HTTP_REFERER' ];
                     //remove sessiontest variable
@@ -87,7 +87,7 @@ if (mysqli_num_rows($get) == 0) {
                     safe_query("DELETE FROM " . PREFIX . "failed_login_attempts WHERE ip = '" . $GLOBALS[ 'ip' ] . "'");
                     $return->state = "success";
                     $return->message = $_language->module[ 'login_successful' ];
-                } elseif (!($ws_pwd == $ds[ 'password' ])) {
+                } else {
                     if ($sleep) {
                         sleep(3);
                     }

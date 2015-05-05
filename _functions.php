@@ -204,6 +204,30 @@ if (!function_exists('array_combine')) {
     }
 }
 
+if (!function_exists("hash_equals")) {
+    function hash_equals($known_str, $user_str)
+    {
+        $result = 0;
+
+        if (!is_string($known_str)) {
+            return false;
+        }
+
+        if (!is_string($user_str)) {
+            return false;
+        }
+
+        if (strlen($known_str) != strlen($user_str)) {
+            return false;
+        }
+
+        for ($j = 0; $j < strlen($known_str); $j++) {
+            $result |= ord($known_str[$j]) ^ ord($user_str[$j]);
+        }
+        return $result === 0;
+    }
+}
+
 /* counts empty variables in an array */
 
 function countempty($checkarray)

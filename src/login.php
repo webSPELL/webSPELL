@@ -56,7 +56,7 @@ class LoginCookie
             $key = openssl_random_pseudo_bytes($length);
         } else {
             $key = '';
-            while ($length --> 0) {
+            while ($length-- > 0) {
                 $key .= pack('C', mt_rand(0, 255));
             }
         }
