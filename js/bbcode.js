@@ -790,44 +790,56 @@ $( document ).ready( function() {
     "use strict";
     $( "form[name=login]" ).submit( function( e ) {
         var $this = $( this ),
+            $body = $( "body" ),
             postData = $this.serializeArray(),
-            formURL = $this.attr( "action" );
-        $( "body" ).css( "cursor", "progress" );
+            formURL = $this.attr( "action" ),
+            $loginAlert = $( "#ws-login-alert" );
+
+        $body.css( "cursor", "progress" );
+
         $.ajax( {
             url: formURL,
             type: "POST",
             data: postData,
             success: function( data, textStatus, jqXHR ) {
-                $( "body" ).css( "cursor", "default" );
+                $body.css( "cursor", "default" );
 
                 //data: return data from server
                 if ( data.state === "success" ) {
-                    $this.prepend( "<div class='alert alert-success'>" + data.message + "</div>" );
-                    window.setTimeout(
-                        function() {
-                            window.location.reload();
-                        },
-                        1000
-                    );
+                    $loginAlert
+                        .addClass( "alert-success" )
+                        .removeClass( "hidden" )
+                        .html( data.message );
+
+                    window.location.reload();
                 } else {
-                    $this.prepend( "<div class='alert alert-warning'>" + data.message + "</div>" );
-                    $this.trigger( "reset" );
+                    $loginAlert
+                        .addClass( "alert-warning" )
+                        .removeClass( "hidden" )
+                        .html( data.message );
+
+                    $this
+                        .trigger( "reset" )
+                        .find( "input[name=ws_user]" )
+                        .val( "" )
+                        .focus();
+
                     window.setTimeout(
                         function() {
-                            $this.find( "div.alert" ).remove();
+                            $loginAlert
+                                .addClass( "hidden" )
+                                .removeClass( "alert-warning" );
                         },
                         5000
                     );
                 }
-
             },
             error: function( jqXHR, textStatus, errorThrown ) {
-                $( "body" ).css( "cursor", "default" );
+                $body.css( "cursor", "default" );
             }
         } );
-        e.preventDefault();
 
-        //STOP default action
+        e.preventDefault();
     } );
 
     if ( $( "#shoutbox" ).length ) {
