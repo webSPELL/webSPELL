@@ -789,9 +789,9 @@ function loadLanguageModule( module ) {
 $( document ).ready( function() {
     "use strict";
     $( "form[name=login]" ).submit( function( e ) {
-        var that = $( this ),
-            postData = that.serializeArray(),
-            formURL = that.attr( "action" );
+        var $this = $( this ),
+            postData = $this.serializeArray(),
+            formURL = $this.attr( "action" );
         $( "body" ).css( "cursor", "progress" );
         $.ajax( {
             url: formURL,
@@ -802,7 +802,7 @@ $( document ).ready( function() {
 
                 //data: return data from server
                 if ( data.state === "success" ) {
-                    that.prepend( "<div class='alert alert-success'>" + data.message + "</div>" );
+                    $this.prepend( "<div class='alert alert-success'>" + data.message + "</div>" );
                     window.setTimeout(
                         function() {
                             window.location.reload();
@@ -810,11 +810,11 @@ $( document ).ready( function() {
                         1000
                     );
                 } else {
-                    that.prepend( "<div class='alert alert-warning'>" + data.message + "</div>" );
-                    that.trigger( "reset" );
+                    $this.prepend( "<div class='alert alert-warning'>" + data.message + "</div>" );
+                    $this.trigger( "reset" );
                     window.setTimeout(
                         function() {
-                            that.find( "div.alert" ).remove();
+                            $this.find( "div.alert" ).remove();
                         },
                         5000
                     );
