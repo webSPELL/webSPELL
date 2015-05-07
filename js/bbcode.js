@@ -826,7 +826,8 @@ $( document ).ready( function() {
                         .val( "" )
                         .focus();
 
-                    if ( data.code === "no_user" ) { // username wrong?
+                    // username wrong?
+                    if ( data.code === "no_user" ) {
                         $this
                             .find( "input[name=ws_user]" )
                             .val( "" )
