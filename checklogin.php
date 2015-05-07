@@ -154,18 +154,22 @@ if (mysqli_num_rows($get) == 0) {
                     }
                     $reenter = true;
                     $return->message = $_language->module[ 'invalid_password' ];
+                    $return->code = 'invalid_password';
                 }
             } else {
                 $return->message = $_language->module[ 'not_activated' ];
+                $return->code = 'not_activated';
             }
         } else {
             $return->message = str_replace('%username%', htmlspecialchars($ws_user), $_language->module[ 'no_user' ]);
+            $return->code = 'no_user';
             $reenter = true;
         }
     }
 } else {
     $data = mysqli_fetch_assoc($get);
     $return->message = str_replace('%reason%', $data[ 'reason' ], $_language->module[ 'ip_banned' ]);
+    $return->code = 'ip_banned';
 }
 
 if ($ajax === true) {

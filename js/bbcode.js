@@ -795,6 +795,8 @@ $( document ).ready( function() {
             formURL = $this.attr( "action" ),
             $loginAlert = $( "#ws-login-alert" );
 
+        e.preventDefault();
+
         $body.css( "cursor", "progress" );
 
         $.ajax( {
@@ -818,11 +820,18 @@ $( document ).ready( function() {
                         .removeClass( "hidden" )
                         .html( data.message );
 
+                    // always clear password
                     $this
-                        .trigger( "reset" )
-                        .find( "input[name=ws_user]" )
+                        .find( "input[name=password]" )
                         .val( "" )
                         .focus();
+
+                    if ( data.code === "no_user" ) { // username wrong?
+                        $this
+                            .find( "input[name=ws_user]" )
+                            .val( "" )
+                            .focus();
+                    }
 
                     window.setTimeout(
                         function() {
@@ -838,8 +847,6 @@ $( document ).ready( function() {
                 $body.css( "cursor", "default" );
             }
         } );
-
-        e.preventDefault();
     } );
 
     if ( $( "#shoutbox" ).length ) {
