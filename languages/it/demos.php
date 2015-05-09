@@ -31,6 +31,7 @@ $language_array = array(
 
     'all_demos' => 'Tutte le demo',
     'allready_rated' => 'Hai già votato questa demo',
+    'back' => 'indietro',
     'clan1' => 'Clan 1',
     'clan1_country' => 'Paese Clan 1',
     'clan1_homepage' => 'Homepage Clan 1',

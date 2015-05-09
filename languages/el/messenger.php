@@ -45,7 +45,7 @@ $language_array = array(
     'html' => 'HTML <b><span class="underline">OFF</span></b>',
     'ignore' => 'Αγνοηση χρηστη',
     'incoming' => 'Εισερχομενα',
-    'mail_body' => '<b>Γεια σου %nickname%!</b><br><br>Εχεις ενα νεο μηνυμα στο BVBPOWER (%hp_url%).<br>Κανε click <a href="http://%hp_url%?site=messenger">εδω</a> για να διαβάσετε το PM.<br><br>(C) webSPELL.org',
+    'mail_body' => '<b>Hello %nickname%!</b><br><br>You got a new message at '.PAGETITLE.' (%hp_url%).<br>Click <a href="http://%hp_url%?site=messenger">here</a> to read the PM.<br><br>(C) webSPELL.org',
     'mail_subject' => 'Εχετε νεο προσωπικο μηνυμα',
     'mark_not_viewed' => 'Σημανση ως μη αναγνωσμενου',
     'mark_viewed' => 'Σημανση ως αναγνωσμενο',

@@ -39,6 +39,7 @@ $language_array = array(
     'contact' => 'Φορμα επικοινωνιας',
     'demos' => 'Επιδειξεις',
     'downloads' => 'Downloads',
+    'faq' => 'Συχνές Ερωτήσεις',
     'fight_us' => 'Αντιμετωπιστε μας',
     'forums' => 'Forums',
     'gallery' => 'Συλλογη',

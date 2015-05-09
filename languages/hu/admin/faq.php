@@ -45,6 +45,7 @@ $language_array = Array(
   'really_delete'=>'Biztosan törölni akarod ezt a GYIK-t?',
   'sort'=>'Rendezés',
   'to_sort'=>'Rendezés',
-  'transaction_invalid'=>'A művelet azonosítója érvénytelen'
+  'transaction_invalid'=>'A művelet azonosítója érvénytelen',
+  'tags'=>'Címkék'
 );
 

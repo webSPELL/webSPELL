@@ -59,7 +59,6 @@ $language_array = array(
     'hdd' => 'Disque dur',
     'headset' => 'Casque à écouteurs',
     'homepage' => 'Site web',
-    'hp' => 'Site web',
     'html_off' => 'HTML désactivé',
     'i_connection' => 'Connexion internet',
     'ignore_user' => 'Utilisateur ignoré',

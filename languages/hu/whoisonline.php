@@ -40,7 +40,6 @@ $language_array = array(
     'counter_stats' => 'számlálót',
     'date' => 'Dátum',
     'demos' => 'demókat',
-    'faq' => 'FAQ-t',
     'fightus' => 'kivíhást',
     'files' => 'letöltéseket',
     'forum' => 'fórumot',

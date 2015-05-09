@@ -31,6 +31,7 @@ $language_array = array(
 
     'all_demos' => 'Visi video',
     'allready_rated' => 'Jūs jau esat novērtējis šo video',
+    'back' => 'atpakaļ',
     'clan1' => 'Klans 1',
     'clan1_country' => 'Valsts klans 1',
     'clan1_homepage' => 'Mājaslapa klans 1',

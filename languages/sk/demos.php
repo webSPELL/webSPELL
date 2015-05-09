@@ -31,6 +31,7 @@ $language_array = array(
 
     'all_demos' => 'Všetky demá',
     'allready_rated' => 'Už si hodnotil toto demo',
+    'back' => 'naspäť',
     'clan1' => 'Clan 1',
     'clan1_country' => 'Národnosť clanu 1',
     'clan1_homepage' => 'Stránka clanu 1',
