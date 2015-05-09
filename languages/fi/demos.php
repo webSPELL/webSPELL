@@ -31,6 +31,7 @@ $language_array = array(
 
     'all_demos' => 'Kaikki Demot',
     'allready_rated' => 'Olet jo arvioinut tämän demon',
+    'back' => 'takaisin',
     'clan1' => 'Klaani 1',
     'clan1_country' => 'Maa Klaani 1',
     'clan1_homepage' => 'Kotisivu klaani 1',

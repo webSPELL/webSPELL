@@ -31,6 +31,7 @@ $language_array = array(
 
     'all_demos' => 'Ολες οι επιδειξεις',
     'allready_rated' => 'Εχετε ηδη βαθμολογησει αυτη την επιδειξει',
+    'back' => 'πισω',
     'clan1' => 'Clan 1',
     'clan1_country' => 'Χωρα clan 1',
     'clan1_homepage' => 'Σελιδα clan 1',

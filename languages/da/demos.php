@@ -31,6 +31,7 @@ $language_array = array(
 
     'all_demos' => 'Alle Demoer',
     'allready_rated' => 'Du har allerede vurderet denne demo',
+    'back' => 'tilbage',
     'clan1' => 'Klan 1',
     'clan1_country' => 'Land klan 1',
     'clan1_homepage' => 'Hjemmeside klan 1',

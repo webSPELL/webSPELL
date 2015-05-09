@@ -31,6 +31,7 @@ $language_array = array(
 
     'all_demos' => 'Të gjitha demo-t',
     'allready_rated' => 'E keni vlerësuar tashmë këtë demo',
+    'back' => 'mbrapsht',
     'clan1' => 'Klan 1',
     'clan1_country' => 'Shteti klan 1',
     'clan1_homepage' => 'Faqja e parë klan 1',

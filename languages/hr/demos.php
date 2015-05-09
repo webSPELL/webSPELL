@@ -31,6 +31,7 @@ $language_array = array(
 
     'all_demos' => 'Svi demoi',
     'allready_rated' => 'Vi ste već ocijenili ovaj demo',
+    'back' => 'natrag',
     'clan1' => 'Klan 1',
     'clan1_country' => 'Zemlja klana 1',
     'clan1_homepage' => 'Site klana 1',

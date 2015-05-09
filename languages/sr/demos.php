@@ -31,6 +31,7 @@ $language_array = array(
 
     'all_demos' => 'Cви демои',
     'allready_rated' => 'Ви сте вец оцијенили овај демо',
+    'back' => 'натраг',
     'clan1_country' => 'Земља клана 1',
     'clan1_homepage' => 'Сајт клана 1',
     'clan1_name' => 'Пуно име клана 1',

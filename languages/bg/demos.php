@@ -31,6 +31,7 @@ $language_array = array(
 
     'all_demos' => 'Bсички демонстации',
     'allready_rated' => 'Вие сте оценили вече тази демонстрация',
+    'back' => 'назад',
     'clan1_country' => 'Cтрана клан 1',
     'clan1_homepage' => 'Заглавна странциа клан 1',
     'clan1_name' => 'Пълно име клан 1',

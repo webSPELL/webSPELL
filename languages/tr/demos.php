@@ -31,6 +31,7 @@ $language_array = array(
 
     'all_demos' => 'Tüm demolar',
     'allready_rated' => 'Zaten bu demoya oy verdiniz',
+    'banner' => 'Sembol',
     'clan1' => 'Klan 1',
     'clan1_country' => 'Ülke klan 1',
     'clan1_homepage' => 'Anasayfa klan 1',
