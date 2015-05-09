@@ -31,7 +31,7 @@ $language_array = array(
 
     'all_demos' => 'جميع التسجيلات',
     'allready_rated' => 'لقد قمت بتقييم هذا التسجيل مسبقا',
-    'banner' => 'الافتة',
+    'back' => 'رجوع',
     'clan1' => '1 فريق',
     'clan1_country' => '1 بلد الفريق',
     'clan1_homepage' => '1 صفحة الفريق',
