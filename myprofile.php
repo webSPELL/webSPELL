@@ -288,7 +288,6 @@ if (!$userID) {
     }
 
     if (isset($_GET[ 'action' ]) && $_GET[ 'action' ] == "editpwd") {
-
         $data_array = array();
         $data_array[ '$userID' ] = $userID;
         $myprofile_editpwd = $GLOBALS[ "_template" ]->replaceTemplate("myprofile_editpwd", $data_array);
@@ -335,7 +334,6 @@ if (!$userID) {
                 '</a>', 'alert-danger');
         }
     } elseif (isset($_GET[ 'action' ]) && $_GET[ 'action' ] == "editmail") {
-
         $data_array = array();
         $data_array[ '$userID' ] = $userID;
         $myprofile_editmail = $GLOBALS[ "_template" ]->replaceTemplate("myprofile_editmail", $data_array);
