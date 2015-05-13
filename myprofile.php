@@ -136,7 +136,7 @@ if (!$userID) {
             if ($upload->hasError() === false) {
                 $mime_types = array('image/jpeg','image/png','image/gif');
                 if ($upload->supportedMimeType($mime_types)) {
-                    $imageInformation =  getimagesize($upload->getTempFile());
+                    $imageInformation = getimagesize($upload->getTempFile());
                     if (is_array($imageInformation)) {
                         if ($imageInformation[0] < 91 && $imageInformation[1] < 91) {
                             switch ($imageInformation[ 2 ]) {
@@ -150,17 +150,13 @@ if (!$userID) {
                                     $endung = '.jpg';
                                     break;
                             }
-                            $file = $id.$endung;
-                            if ($upload->saveAs($filepath.$file, true)) {
-                                @chmod($filepath.$file, $new_chmod);
-                                safe_query(
-                                    "UPDATE "
-                                    . PREFIX . "user
+                            $file = $id . $endung;
+                            if ($upload->saveAs($filepath . $file, true)) {
+                                @chmod($filepath . $file, $new_chmod);
+                                safe_query("UPDATE " . PREFIX . "user
                                     SET
-                                        avatar='" . $file .
-                                    "' WHERE
-                                        userID='" . $id . "'"
-                                );
+                                        avatar='" . $file . "' WHERE
+                                        userID='" . $id . "'");
                             }
                         } else {
                             $error_array[] = sprintf($_language->module['image_too_big'], 90, 90);
@@ -188,7 +184,7 @@ if (!$userID) {
             if ($upload->hasError() === false) {
                 $mime_types = array('image/jpeg','image/png','image/gif');
                 if ($upload->supportedMimeType($mime_types)) {
-                    $imageInformation =  getimagesize($upload->getTempFile());
+                    $imageInformation = getimagesize($upload->getTempFile());
                     if (is_array($imageInformation)) {
                         if ($imageInformation[0] < 231 && $imageInformation[1] < 211) {
                             switch ($imageInformation[ 2 ]) {
@@ -202,16 +198,12 @@ if (!$userID) {
                                     $endung = '.jpg';
                                     break;
                             }
-                            $file = $id.$endung;
-                            if ($upload->saveAs($filepath.$file, true)) {
-                                @chmod($filepath.$file, $new_chmod);
-                                safe_query(
-                                    "UPDATE "
-                                    . PREFIX . "user
+                            $file = $id . $endung;
+                            if ($upload->saveAs($filepath . $file, true)) {
+                                @chmod($filepath . $file, $new_chmod);
+                                safe_query("UPDATE " . PREFIX . "user
                                     SET
-                                        userpic='" . $file .
-                                    "' WHERE userID='" . $id . "'"
-                                );
+                                        userpic='" . $file . "' WHERE userID='" . $id . "'");
                             }
                         } else {
                             $error_array[] = sprintf($_language->module['image_too_big'], 230, 210);
