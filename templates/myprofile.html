@@ -172,8 +172,10 @@
                 <label for="input-country" class="col-xs-12 col-md-3 control-label">%country%:</label>
 
                 <div class="col-xs-12 col-md-9">
-                    <div class="input-group">
-                        <span class="input-group-addon">$country</span>
+                    <div class="col-md-1 text-center no-padding">
+                        $country
+                    </div>
+                    <div class="col-md-11 no-padding">
                         <select name="flag" onchange="document.getElementById('county').src='images/flags/' +
                             this.options[this.selectedIndex].value+'.gif'" class="form-control" id="input-country">
                             $countries
