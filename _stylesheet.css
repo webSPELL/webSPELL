@@ -111,11 +111,6 @@ body {
     color: #ff0000;
 }
 
-.no-padding {
-    padding: 0 !important;
-    margin: 0 !important;
-}
-
 #shoutbox {
     width: 100%;
     overflow: hidden;
