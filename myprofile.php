@@ -328,10 +328,12 @@ if (!$userID) {
 
             redirect('index.php?site=login', $_language->module[ 'pw_changed' ], 3);
         } else {
-            echo generateAlert('<strong>ERROR: ' . $error . '</strong><br>
-            <br>
-            <a href="#" onclick="history.back()" class="alert-link">' . $_language->module[ 'back' ] .
-                '</a>', 'alert-danger');
+            echo generateAlert(
+                '<strong>ERROR: ' . $error . '</strong><br>
+                 <br>
+                 <a href="#" onclick="history.back()" class="alert-link">' . $_language->module[ 'back' ] .
+                '</a>', 'alert-danger'
+            );
         }
     } elseif (isset($_GET[ 'action' ]) && $_GET[ 'action' ] == "editmail") {
         $data_array = array();
@@ -415,10 +417,12 @@ if (!$userID) {
                 }
             }
         } else {
-            echo generateAlert('<strong>ERROR: ' . $error . '</strong><br>
-            <br>
-            <a href="#" onclick="history.back()" class="alert-link">' . $_language->module[ 'back' ] .
-                '</a>', 'alert-danger');
+            echo generateAlert(
+                '<strong>ERROR: ' . $error . '</strong><br>
+                <br>
+                <a href="#" onclick="history.back()" class="alert-link">' . $_language->module[ 'back' ] .
+                '</a>', 'alert-danger'
+            );
         }
     } else {
         $ergebnis = safe_query("SELECT * FROM " . PREFIX . "user WHERE userID='" . $userID . "'");
@@ -462,8 +466,10 @@ if (!$userID) {
                 <option value='y/m/d'>YY/MM/DD</option>
                 <option value='Y/m/d'>YYYY/MM/DD</option>";
             $format_date =
-                str_replace("value='" . $ds[ 'date_format' ] . "'", "value='" . $ds[ 'date_format' ] . "' selected",
-                    $format_date);
+                str_replace(
+                    "value='" . $ds[ 'date_format' ] . "'", "value='" . $ds[ 'date_format' ] . "' selected",
+                    $format_date
+                );
 
             $format_time = "<option value='G:i'>H:MM</option>
                 <option value='H:i'>HH:MM</option>
@@ -478,12 +484,16 @@ if (!$userID) {
                 <option value='G:i:s A'>H:MM:SS AM/PM</option>
                 <option value='H:i:s A'>HH:MM:SS AM/PM</option>";
             $format_time =
-                str_replace("value='" . $ds[ 'time_format' ] . "'", "value='" . $ds[ 'time_format' ] . "' selected",
-                    $format_time);
+                str_replace(
+                    "value='" . $ds[ 'time_format' ] . "'", "value='" . $ds[ 'time_format' ] . "' selected",
+                    $format_time
+                );
             $user_gbook = "<option value='0'>" . $_language->module[ 'deactivated' ] . "</option><option value='1'>" .
                 $_language->module[ 'activated' ] . "</option>";
-            $user_gbook = str_replace("value='" . $ds[ 'user_guestbook' ] . "'",
-                "value='" . $ds[ 'user_guestbook' ] . "' selected", $user_gbook);
+            $user_gbook = str_replace(
+                "value='" . $ds[ 'user_guestbook' ] . "'",
+                "value='" . $ds[ 'user_guestbook' ] . "' selected", $user_gbook
+            );
             $user_gbook_select = '';
             if ($user_guestbook) {
                 $user_gbook_select =
@@ -495,7 +505,9 @@ if (!$userID) {
                     </div>
                 </div>';
             }
-            $birthday = date("Y-m-d", strtotime($ds[ 'birthday' ]));
+            $birthday = date(
+                "Y-m-d", strtotime($ds[ 'birthday' ])
+            );
             $countries = getcountries();
             $countries = str_replace('value="' . $ds[ 'country' ] . '"', 'value="' . $ds[ 'country' ] . '" selected',
                 $countries);
