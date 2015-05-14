@@ -332,7 +332,8 @@ if (!$userID) {
                 '<strong>ERROR: ' . $error . '</strong><br>
                  <br>
                  <a href="#" onclick="history.back()" class="alert-link">' . $_language->module[ 'back' ] .
-                '</a>', 'alert-danger'
+                '</a>',
+                'alert-danger'
             );
         }
     } elseif (isset($_GET[ 'action' ]) && $_GET[ 'action' ] == "editmail") {
@@ -421,7 +422,8 @@ if (!$userID) {
                 '<strong>ERROR: ' . $error . '</strong><br>
                 <br>
                 <a href="#" onclick="history.back()" class="alert-link">' . $_language->module[ 'back' ] .
-                '</a>', 'alert-danger'
+                '</a>',
+                'alert-danger'
             );
         }
     } else {
@@ -467,7 +469,8 @@ if (!$userID) {
                 <option value='Y/m/d'>YYYY/MM/DD</option>";
             $format_date =
                 str_replace(
-                    "value='" . $ds[ 'date_format' ] . "'", "value='" . $ds[ 'date_format' ] . "' selected",
+                    "value='" . $ds[ 'date_format' ] . "'",
+                    "value='" . $ds[ 'date_format' ] . "' selected",
                     $format_date
                 );
 
@@ -485,14 +488,16 @@ if (!$userID) {
                 <option value='H:i:s A'>HH:MM:SS AM/PM</option>";
             $format_time =
                 str_replace(
-                    "value='" . $ds[ 'time_format' ] . "'", "value='" . $ds[ 'time_format' ] . "' selected",
+                    "value='" . $ds[ 'time_format' ] . "'",
+                    "value='" . $ds[ 'time_format' ] . "' selected",
                     $format_time
                 );
             $user_gbook = "<option value='0'>" . $_language->module[ 'deactivated' ] . "</option><option value='1'>" .
                 $_language->module[ 'activated' ] . "</option>";
             $user_gbook = str_replace(
                 "value='" . $ds[ 'user_guestbook' ] . "'",
-                "value='" . $ds[ 'user_guestbook' ] . "' selected", $user_gbook
+                "value='" . $ds[ 'user_guestbook' ] . "' selected",
+                $user_gbook
             );
             $user_gbook_select = '';
             if ($user_guestbook) {
@@ -509,8 +514,11 @@ if (!$userID) {
                 "Y-m-d", strtotime($ds[ 'birthday' ])
             );
             $countries = getcountries();
-            $countries = str_replace('value="' . $ds[ 'country' ] . '"', 'value="' . $ds[ 'country' ] . '" selected',
-                $countries);
+            $countries = str_replace(
+                'value="' . $ds[ 'country' ] . '"',
+                'value="' . $ds[ 'country' ] . '" selected',
+                $countries
+            );
             if ($ds[ 'avatar' ]) {
                 $viewavatar = '<a href="javascript:void(0);" onclick="window.open(\'images/avatars/' . $ds[ 'avatar' ] .
                     '\',\'avatar\',\'width=120,height=120\')">' . $_language->module[ 'avatar' ] . '</a>';
