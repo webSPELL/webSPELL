@@ -330,8 +330,8 @@ if (!$userID) {
         } else {
             echo generateAlert(
                 '<strong>ERROR: ' . $error . '</strong><br>
-                 <br>
-                 <a href="#" onclick="history.back()" class="alert-link">' . $_language->module[ 'back' ] .
+                <br>
+                <a href="#" onclick="history.back()" class="alert-link">' . $_language->module[ 'back' ] .
                 '</a>',
                 'alert-danger'
             );
