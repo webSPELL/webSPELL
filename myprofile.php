@@ -330,7 +330,7 @@ if (!$userID) {
         } else {
             echo generateAlert('<strong>ERROR: ' . $error . '</strong><br>
             <br>
-            <a href="#" onclick="javascript:history.back()" class="alert-link">' . $_language->module[ 'back' ] .
+            <a href="#" onclick="history.back()" class="alert-link">' . $_language->module[ 'back' ] .
                 '</a>', 'alert-danger');
         }
     } elseif (isset($_GET[ 'action' ]) && $_GET[ 'action' ] == "editmail") {
@@ -386,11 +386,11 @@ if (!$userID) {
                 '%pagetitle%',
                 '%homepage_url%'
             ), array(
-                    $username,
-                    $activationlink,
-                    $hp_title,
-                    $hp_url
-                ), $_language->module[ 'mail_text' ]);
+                $username,
+                $activationlink,
+                $hp_title,
+                $hp_url
+            ), $_language->module[ 'mail_text' ]);
 
             $sendmail = \webspell\Email::sendEmail($admin_email, 'Profile', $ToEmail, $header, $Message);
 
@@ -417,7 +417,7 @@ if (!$userID) {
         } else {
             echo generateAlert('<strong>ERROR: ' . $error . '</strong><br>
             <br>
-            <a href="#" onclick="javascript:history.back()" class="alert-link">' . $_language->module[ 'back' ] .
+            <a href="#" onclick="history.back()" class="alert-link">' . $_language->module[ 'back' ] .
                 '</a>', 'alert-danger');
         }
     } else {
