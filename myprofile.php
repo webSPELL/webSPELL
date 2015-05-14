@@ -510,16 +510,20 @@ if (!$userID) {
             $user_gbook_select = '';
             if ($user_guestbook) {
                 $user_gbook_select =
-                    '<div class="form-group"><label for="select-user_guestbook" class="col-xs-12 col-md-3 control-label">' .
-                    $_language->module[ 'guestbook' ] . ':</label>
+                    '<div class="form-group">
+                        <label for="select-user_guestbook" class="col-xs-12 col-md-3 control-label">' .
+                        $_language->module[ 'guestbook' ] . ':</label>
 
-                    <div class="col-xs-12 col-md-9">
-                        <select name="user_guestbook" class="form-control" id="select-user_guestbook">' . $user_gbook . '</select>
-                    </div>
-                </div>';
+                        <div class="col-xs-12 col-md-9">
+                            <select name="user_guestbook" class="form-control" id="select-user_guestbook">
+                                ' . $user_gbook . '
+                            </select>
+                        </div>
+                    </div>';
             }
             $birthday = date(
-                "Y-m-d", strtotime($ds[ 'birthday' ])
+                "Y-m-d",
+                strtotime($ds[ 'birthday' ])
             );
             $countries = getcountries();
             $countries = str_replace(
