@@ -31,7 +31,7 @@ namespace webspell;
 class Language
 {
 
-    public $language = 'en';
+    public $language = 'uk';
     public $module = array();
     private $language_path = 'languages/';
 
