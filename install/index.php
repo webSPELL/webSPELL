@@ -34,7 +34,7 @@ include("../src/func/user.php");
 $_language = new \webspell\Language();
 
 if (!isset($_SESSION['language'])) {
-    $_SESSION['language'] = "uk";
+    $_SESSION['language'] = "en";
 }
 
 if (isset($_GET['lang'])) {
