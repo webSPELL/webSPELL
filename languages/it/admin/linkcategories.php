@@ -31,15 +31,15 @@ $language_array = Array(
 
   'access_denied'=>'Accesso negato',
   'actions'=>'Azioni',
-  'add_category'=>'Aggiungi categoria',
-  'category_name'=>'Categoria Nome',
-  'delete'=>'cancellare',
-  'edit'=>'cambiare',
-  'edit_category'=>'Cambiare Categoria',
+  'add_category'=>'aggiungi categoria',
+  'category_name'=>'Nome della categoria',
+  'delete'=>'elimina',
+  'edit'=>'modifica',
+  'edit_category'=>'modifica categoria',
   'information_incomplete'=>'Informazioni incomplete.',
-  'link_categories'=>'Categoria link ',
+  'link_categories'=>'Categoria link',
   'new_category'=>'nuova categoria',
-  'really_delete'=>'Questa categoria inkl. tutti i link veramente cancellare?',
-  'transaction_invalid'=>'ID transazione non valido'
+  'really_delete'=>'Davvero eliminare questa categoria e la categoria link?',
+  'transaction_invalid'=>'ID della transazione non valido'
 );
 

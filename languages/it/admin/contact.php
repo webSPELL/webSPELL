@@ -31,18 +31,18 @@ $language_array = Array(
 
   'access_denied'=>'Accesso negato',
   'actions'=>'Azioni',
-  'add_contact'=>'Aggiungi contatto',
+  'add_contact'=>'aggiungi contatto',
   'contact'=>'Contatti',
   'contact_name'=>'Nome contatto',
-  'delete'=>'cancellare',
-  'edit'=>'cambiare',
-  'edit_contact'=>'Contatto cambiamento',
+  'delete'=>'elimina',
+  'edit'=>'modifica',
+  'edit_contact'=>'modifica contatto',
   'email'=>'E-Mail',
   'information_incomplete'=>'Informazioni incomplete.',
   'new_contact'=>'nuovo contatto',
-  'really_delete'=>'Veramente cancellare questo contatto?',
+  'really_delete'=>'Davvero cancellare questo contatto?',
   'sort'=>'Ordinamento',
   'to_sort'=>'assortire',
-  'transaction_invalid'=>'ID transazione non valido'
+  'transaction_invalid'=>'ID della transazione non valido'
 );
 

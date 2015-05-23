@@ -30,19 +30,19 @@ $language_array = Array(
 /* do not edit above this line */
 
   'access_denied'=>'Accesso negato',
-  'add_rank'=>'Rank Aggiungi',
+  'add_rank'=>'aggiungi rango',
   'actions'=>'Azioni',
-  'delete'=>'cancellare',
-  'edit_rank'=>'Rank cambiare',
+  'delete'=>'elimina',
+  'edit_rank'=>'modifica rango',
   'information_incomplete'=>'Informazioni incomplete.',
-  'max_posts'=>'max. Posts',
-  'min_posts'=>'min. Posts',
-  'new_rank'=>'nuovo Rang',
-  'rank_icon'=>'Rang Symbolo',
-  'rank_name'=>'Rang Nome',
-  'really_delete'=>'Questo rang veramente cancellare?',
-  'transaction_invalid'=>'ID transazione non valido',
-  'update'=>'aggiornamento',
-  'user_ranks'=>'Utente Ranks'
+  'max_posts'=>'max. messaggi',
+  'min_posts'=>'min. messaggi',
+  'new_rank'=>'nuovo rango',
+  'rank_icon'=>'Icona del rango',
+  'rank_name'=>'Nome del rango',
+  'really_delete'=>'Davvero cancellare questo rango?',
+  'transaction_invalid'=>'ID della transazione non valido',
+  'update'=>'aggiorna',
+  'user_ranks'=>'Rango del utente'
 );
 

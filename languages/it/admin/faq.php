@@ -31,20 +31,21 @@ $language_array = Array(
 
   'access_denied'=>'Accesso negato',
   'actions'=>'Azioni',
-  'add_faq'=>'FAQ aggiungere',
-  'answer'=>'rispondere',
+  'add_faq'=>'aggiungere FAQ',
+  'answer'=>'risposta',
   'category'=>'Categoria',
-  'delete'=>'cancellare',
-  'edit'=>'cambiare',
-  'edit_faq'=>'FAQ cambiare',
+  'delete'=>'elimina',
+  'edit'=>'modifica',
+  'edit_faq'=>'modificare FAQ',
   'faq'=>'FAQ',
   'information_incomplete'=>'Informazioni incomplete.',
   'new_faq'=>'nuovo FAQ',
   'no_category_selected'=>'Hai dimenticato di scegliere una categoria',
-  'no_faq_selected'=>'Nessuna categoria selezionata FAQ',
-  'really_delete'=>'Questa FAQ davvero cancellare?',
+  'no_faq_selected'=>'Nessuna categoria FAQ selezionata',
+  'really_delete'=>'Davvero eliminare questa FAQ?',
   'sort'=>'assortire',
   'to_sort'=>'assortire',
-  'transaction_invalid'=>'ID transazione non valido'
+  'transaction_invalid'=>'ID della transazione non valido',
+  'tags'=>'Tags'
 );
 

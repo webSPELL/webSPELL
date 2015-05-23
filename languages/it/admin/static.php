@@ -30,22 +30,23 @@ $language_array = Array(
 /* do not edit above this line */
 
   'access_denied'=>'Accesso negato',
-  'accesslevel'=>'Il diritto di accesso',
+  'accesslevel'=>'Diritto di accesso',
   'actions'=>'Azioni',
-  'add_static_page'=>'Statico pagina aggiungi',
-  'clanmember_only'=>'solo Clanmitglieder',
+  'add_static_page'=>'aggiungi pagina statica',
+  'clanmember_only'=>'Accesso solo per i membri del clan',
   'content'=>'Contenuto',
-  'delete'=>'cancellare',
-  'edit'=>'cambiare',
-  'edit_static_page'=>'Static page modificare',
+  'delete'=>'elimina',
+  'edit'=>'modifica',
+  'edit_static_page'=>'modificare pagina statica',
   'title'=>'Titolo',
   'id'=>'ID',
-  'new_static_page'=>'Nuova pagina statica',
-  'public'=>'pubblico',
-  'really_delete'=>'Questa pagina statica veramente cancellare?',
-  'registered_only'=>'Solo gli utenti registrati',
-  'static_pages'=>'Pagina staticha',
-  'transaction_invalid'=>'ID transazione non valido',
-  'you_can_use_html'=>'È possibile di utilizzare HTML'
+  'new_static_page'=>'nuova pagina statica',
+  'public'=>'Pubblico',
+  'really_delete'=>'Davvero cancellare questa pagina statica?',
+  'registered_only'=>'solo utenti registrati',
+  'static_pages'=>'Pagine statiche',
+  'transaction_invalid'=>'ID della transazione non valido',
+  'you_can_use_html'=>'È possibile di utilizzare HTML',
+  'tags'=>'Tags'
 );
 

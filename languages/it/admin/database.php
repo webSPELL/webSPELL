@@ -33,14 +33,14 @@ $language_array = Array(
   'allowed_commands'=>'<b>Ammessi comandi:</b> inserire, altre tabelle, selezionare',
   'backup_file'=>'File di backup',
   'database'=>'Database',
-  'export'=>'Backup di file di esportazione / download',
+  'export'=>'Export / Download Backup',
   'import_info'=>'Scegli un file di backup da cui si desidera importare dati SQL.<br><br><b>Importante:</b> Fai un backup primo che importi una altra!',
   'optimize'=>'Ottimizza database',
-  'select_option'=>'Si prega di selezionare un*opzione',
-  'submit'=>'Conferma',
+  'select_option'=>'Si prega di selezionare l\'opzione',
+  'submit'=>'Invia',
   'sql_query'=>'SQL Query',
-  'syntax_not_allowed'=>'Sintassi non è consentito!',
+  'syntax_not_allowed'=>'Sintassi non è permesso!',
   'upload'=>'Carica',
-  'transaction_invalid'=>'ID transazione non valido'
+  'transaction_invalid'=>'ID della transazione non valido'
 );
 

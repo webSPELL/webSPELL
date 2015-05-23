@@ -45,7 +45,7 @@ $language_array = array(
     'html' => 'HTML è <b><span class="underline">SPENTO</span></b>',
     'ignore' => 'ignora utente',
     'incoming' => 'posta in arrivo',
-    'mail_body' => '<b>Ciao %nickname%!</b><br><br>Tu hai un nuovo messaggio so '.PAGETITLE.' (%hp_url%) recevuto.<br>Clica <a href="http://%hp_url%?site=messenger">qui</a> per leggere il messaggio.<br><br>(C) webSPELL.org',
+    'mail_body' => '<b>Hello %nickname%!</b><br><br>You got a new message at '.PAGETITLE.' (%hp_url%).<br>Click <a href="http://%hp_url%?site=messenger">here</a> to read the PM.<br><br>(C) webSPELL.org',
     'mail_subject' => 'Tu hai ricevuto un nuovo messaggio',
     'mark_not_viewed' => 'segna come da leggere',
     'mark_viewed' => 'segna come letti',

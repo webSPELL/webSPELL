@@ -25,28 +25,11 @@
 ##########################################################################
 */
 
-$language_array = array(
+$language_array = Array(
 
 /* do not edit above this line */
 
-    'award' => 'Assegno',
-    'awards' => 'assegni',
-    'date' => 'Data',
-    'delete' => 'elimina',
-    'edit' => 'modifica',
-    'edit_award' => 'modifica assegno',
-    'enter_text' => 'È necessario inserire un testo',
-    'enter_title' => 'Devi inserire un titolo!',
-    'event' => 'Evento',
-    'homepage' => 'Home page',
-    'info' => 'Info',
-    'new_award' => 'nuovo assegno',
-    'no_access' => 'Nessun accesso!',
-    'no_entries' => 'Nessun assegno disponibili',
-    'ranking' => 'Rango',
-    'save_award' => 'Salva assegno',
-    'sort' => 'Ordina',
-    'squad' => 'Squadra',
-    'update_award' => 'Aggiora assegno'
+    'error_404'=>'Errore 404',
+    'message_404'=>'Questa pagina non esiste.'
 );
 

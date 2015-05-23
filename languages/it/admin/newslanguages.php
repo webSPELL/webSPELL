@@ -31,18 +31,18 @@ $language_array = Array(
 
   'access_denied'=>'Accesso negato',
   'actions'=>'Azioni',
-  'add_language'=>'Aggiungi lingua',
-  'delete'=>'cancellare',
-  'edit'=>'cambiare',
-  'edit_language'=>'Cambiare lingua',
-  'flag'=>'Contrassegna',
+  'add_language'=>'aggiungi lingua',
+  'delete'=>'elimina',
+  'edit'=>'modifica',
+  'edit_language'=>'modifica lingua',
+  'flag'=>'Bandiere',
   'information_incomplete'=>'Informazioni incomplete.',
   'language'=>'Lingua',
-  'news_languages'=>'Notizie Lingue',
+  'news_languages'=>'Lingue-News',
   'new_language'=>'nuova lingua',
   'preview'=>'Anteprima',
   'really_delete'=>'Veramente cancellare questa lingua?',
   'title'=>'Titolo',
-  'transaction_invalid'=>'ID transazione non valido'
+  'transaction_invalid'=>'ID della transazione non valido'
 );
 

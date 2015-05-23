@@ -29,13 +29,13 @@ $language_array = array(
 
 /* do not edit above this line */
 
-    'invalid_password' => 'Hai nesso un password spagliato.',
-    'ip_banned' => 'Il tuo IP è stato vietato dal sito.<br>%reason%',
-    'login_successful' => 'Connesso',
-    'no_user' => 'Nessun utente con il nome <b>%username%</b> nel nonstro sisteme.',
-    'not_activated' => 'Il tuo account non è attivato.',
+    'invalid_password' => 'È stata inserita una password sbagliata.',
+    'ip_banned' => 'Il tuo IP è stato bloccato per questa pagina.',
+    'login_successful' => 'Accesso effettuato con successo',
+    'no_user' => 'L\'utente <b>%username%</b> non esiste.',
+    'not_activated' => 'Il tuo account non è attivo.',
     'return' => '<a href="javascript:history.back()">indietro</a>',
-    'return_reenter' => '<a href="javascript:history.back()">Torna in ingresso e ripetere</a>',
-    'session_error' => 'Vi preghiamo di assicurarvi che voi stessi il vostro browser accetta i cookie.<br>Se il problema persiste, si prega di contattare il Webmaster.'
+    'return_reenter' => '<a href="javascript:history.back()">Torna indietro e riprova.</a>',
+    'session_error' => 'Assicurati che i cookie siano attivati ​​nel tuo browser.<br>Se il problema persiste, si prega di contattare il webmaster.'
 );
 

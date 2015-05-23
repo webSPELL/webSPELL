@@ -31,12 +31,12 @@ $language_array = Array(
 
   'access_denied'=>'Accesso negato',
   'lock'=>'bloccare',
-  'locked_since'=>'Il sito è bloccato da',
-  'pagelock'=>'bloccare pagina',
+  'locked_since'=>'Il sito è bloccato dal',
+  'pagelock'=>'Blocca pagina',
   'page_locked'=>'<b>pagina bloccata </b><br>Solo gli amministratori hanno accesso al sito.',
-  'page_unlocked'=>'<b>Page sbloccato!</b>',
-  'settings'=>'collocamento',
-  'transaction_invalid'=>'ID transazione non valido',
+  'page_unlocked'=>'<b>Pagina sbloccato!</b>',
+  'settings'=>'Impostazioni',
+  'transaction_invalid'=>'ID della transazione non valido',
   'unlock'=>'sbloccare',
   'unlock_page'=>'Vuoi sbloccare la pagina?',
   'you_can_use_html'=>'È possibile di utilizzare HTML'

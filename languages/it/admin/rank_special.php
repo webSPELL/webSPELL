@@ -25,28 +25,9 @@
 ##########################################################################
 */
 
-$language_array = array(
-
-/* do not edit above this line */
-
-    'award' => 'Assegno',
-    'awards' => 'assegni',
-    'date' => 'Data',
-    'delete' => 'elimina',
-    'edit' => 'modifica',
-    'edit_award' => 'modifica assegno',
-    'enter_text' => 'È necessario inserire un testo',
-    'enter_title' => 'Devi inserire un titolo!',
-    'event' => 'Evento',
-    'homepage' => 'Home page',
-    'info' => 'Info',
-    'new_award' => 'nuovo assegno',
-    'no_access' => 'Nessun accesso!',
-    'no_entries' => 'Nessun assegno disponibili',
-    'ranking' => 'Rango',
-    'save_award' => 'Salva assegno',
-    'sort' => 'Ordina',
-    'squad' => 'Squadra',
-    'update_award' => 'Aggiora assegno'
-);
-
+$language_array = Array(
+	'used_for'=>'Utilizzato per',
+	'special_rank'=>'classifica speciale',
+	'no_special_rank'=>'Nessun classifica speciale'
+ );
+ 
