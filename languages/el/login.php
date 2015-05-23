@@ -38,7 +38,6 @@ $language_array = array(
     'logout' => 'εξοδος',
     'lost_password' => 'χασατε τον κωδικο σας?',
     'messenger' => 'messenger',
-    'n_a' => 'Μ/Δ',
     'overview' => 'συνοψη',
     'register_now' => 'εγγραφη τωρα',
     'registered_users' => 'εγγεγραμενοι χρηστες',

@@ -81,7 +81,6 @@ $language_array = array(
     'monitor' => 'Οθονη',
     'mouse' => 'Ποντικι',
     'mousepad' => 'Mousepad',
-    'n_a' => 'Μ/Δ',
     'name' => 'Ονομα',
     'new_entry' => 'νεα εγγραφη',
     'new_guestbook_entry' => 'Νεα εγγραφη βιβλιου επισκεπτων στο προφιλ σας!',
