@@ -29,16 +29,7 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Hozzáférés megtagadva',
-  'lock'=>'Lezárás',
-  'locked_since'=>'Az oldal lezárásának kezdete:',
-  'pagelock'=>'Oldal lezárása',
-  'page_locked'=>'<b>Az oldal le van zárva!</b><br>Jelenleg csak az adminok léphetnek be.',
-  'page_unlocked'=>'<b>Az oldal újra nyitva!</b>',
-  'settings'=>'Beállítások',
-  'transaction_invalid'=>'A művelet azonosítója érvénytelen',
-  'unlock'=>'Feloldás',
-  'unlock_page'=>'Biztosan meg akarod nyitni az oldalt?',
-  'you_can_use_html'=>'Használhatsz HTML-Tageket'
+    'error_404'=>'Hiba 404',
+    'message_404'=>'Ez oldalak nem létezik.'
 );
 

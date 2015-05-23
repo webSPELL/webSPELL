@@ -50,7 +50,6 @@ $language_array = array(
     'date' => 'Dátum',
     'delete_selected' => 'kijelölt törlése',
     'democomments' => 'Demó kommentek',
-    'email' => 'E-mail',
     'female' => 'nő',
     'forumposts' => 'Fórum üzenetek',
     'forumtopics' => 'Fórum topikok',

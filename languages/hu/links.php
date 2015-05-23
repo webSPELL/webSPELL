@@ -31,6 +31,7 @@ $language_array = array(
 
     'back' => 'vissza',
     'banner' => 'Banner',
+    'banner_to_big' => 'a kép túl nagy',
     'categories' => 'Kategóriák',
     'category' => 'Kategória',
     'delete' => 'törlés',

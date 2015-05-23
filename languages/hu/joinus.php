@@ -44,7 +44,6 @@ $language_array = array(
     'icq_msn' => 'ICQ/MSN/stb...',
     'info' => 'Kiegészítő információ',
     'joinus_form' => 'Csatlakozz hozzánk forma',
-    'mail' => 'E-mail',
     'message_title' => 'Join us',
     'messenger' => 'Messenger',
     'name' => 'Név',

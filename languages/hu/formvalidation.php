@@ -28,17 +28,16 @@
 $language_array = Array(
 
 /* do not edit above this line */
-
-  'access_denied'=>'Hozzáférés megtagadva',
-  'lock'=>'Lezárás',
-  'locked_since'=>'Az oldal lezárásának kezdete:',
-  'pagelock'=>'Oldal lezárása',
-  'page_locked'=>'<b>Az oldal le van zárva!</b><br>Jelenleg csak az adminok léphetnek be.',
-  'page_unlocked'=>'<b>Az oldal újra nyitva!</b>',
-  'settings'=>'Beállítások',
-  'transaction_invalid'=>'A művelet azonosítója érvénytelen',
-  'unlock'=>'Feloldás',
-  'unlock_page'=>'Biztosan meg akarod nyitni az oldalt?',
-  'you_can_use_html'=>'Használhatsz HTML-Tageket'
+    'file_too_big'=>'A fájl túl nagy',
+    'incomplete_upload'=>'Befejezetlen feltöltés',
+    'no_file_uploaded'=>'Nincs fájl feltöltve',
+    'no_temp_folder_available'=>'Ideiglenes mappa nem elérhető. Kerlek fordulj az adminhoz',
+    'cant_write_temp_file'=>'Ideiglenes fájl felulirasa sikertelen. Kérlek fordulj az adminhoz',
+    'unexpected_error'=>'Váratlan hiba',
+    'cant_copy_file'=>'Fájl nem másolható. Kérlek fordulj az adminhoz',
+    'image_too_big'=>'A kép túl nagy (max méret %1$d px & %2$d px)',
+    'broken_image'=>'A képfájl sérült',
+    'unsupported_image_type'=>'Nem támogatott kép típus',
+    'errors_there'=>'Hibák merültek fel',
+    'file_already_exists'=>'Létező fájl'
 );
-
