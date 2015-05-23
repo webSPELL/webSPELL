@@ -44,7 +44,6 @@ $language_array = array(
     'icq_msn' => 'ICQ/MSN/идт...',
     'info' => 'Додатне информације',
     'joinus_form' => 'Формулар за приступ клану',
-    'mail' => 'Е-Маил',
     'message_title' => 'Приступи нам',
     'messenger' => 'Мессенгер',
     'name' => 'Име',
