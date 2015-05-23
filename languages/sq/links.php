@@ -31,6 +31,7 @@ $language_array = array(
 
     'back' => 'mbrapsht',
     'banner' => 'Flamur',
+    'banner_to_big' => 'Fotoja shumë e madhe',
     'categories' => 'Kategoritë',
     'category' => 'Kategoria',
     'delete' => 'fshij',

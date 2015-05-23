@@ -45,7 +45,7 @@ $language_array = array(
     'html' => 'HTML <b><span class="underline">FIKUR</span></b>',
     'ignore' => 'Injoro ',
     'incoming' => 'Vijojnë',
-    'mail_body' => '<b>Përshëndetje %nickname%!</b><br><br>Keni mesazh të ri tek BVBPOWER (%hp_url%).<br>Kliko <a href="http://%hp_url%?site=messenger">këtu</a> të lexosh PM.<br><br>(C) webSPELL.org',
+    'mail_body' => '<b>Hello %nickname%!</b><br><br>You got a new message at '.PAGETITLE.' (%hp_url%).<br>Click <a href="http://%hp_url%?site=messenger">here</a> to read the PM.<br><br>(C) webSPELL.org',
     'mail_subject' => 'Morët PM të re',
     'mark_not_viewed' => 'Shëno si të pa parë',
     'mark_viewed' => 'Shëno si të parë',

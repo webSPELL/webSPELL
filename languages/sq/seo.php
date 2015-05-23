@@ -42,7 +42,6 @@ $language_array = array(
     'contact' => 'Kontakt',
     'demo' => 'Demo',
     'demos' => 'Demo-t',
-    'faq' => 'Pyetje të shpeshta',
     'files' => 'Fishieret',
     'forum' => 'Forum',
     'gallery' => 'Galeri',
