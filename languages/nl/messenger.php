@@ -45,7 +45,7 @@ $language_array = array(
     'html' => 'HTML <b><span class="underline">UIT</span></b>',
     'ignore' => 'Negeer gebruiker',
     'incoming' => 'Postvak IN',
-    'mail_body' => '<b>Hallo %nickname%!</b><br><br>Je hebt een nieuwe bericht op '.PAGETITLE.' (%hp_url%).<br>Klik <a href="http://%hp_url%?site=messenger">hier</a> om het bericht te lezen.<br><br>(C) webSPELL.org',
+    'mail_body' => '<b>Hello %nickname%!</b><br><br>You got a new message at '.PAGETITLE.' (%hp_url%).<br>Click <a href="http://%hp_url%?site=messenger">here</a> to read the PM.<br><br>(C) webSPELL.org',
     'mail_subject' => 'Je hebt een nieuw bericht',
     'mark_not_viewed' => 'Markeer als ongelezen',
     'mark_viewed' => 'Markeer als gelezen',
