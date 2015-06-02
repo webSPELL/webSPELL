@@ -363,6 +363,25 @@ module.exports = function( grunt ) {
                 "css"
             ]
         },
+
+        bump: {
+            options: {
+                files: [ "package.json", "bower.json" ],
+                updateConfigs: [ "pkg" ],
+                commit: false,
+                commitMessage: "Release v%VERSION%",
+                commitFiles: [],
+                createTag: true,
+                tagName: "v%VERSION%",
+                tagMessage: "Version %VERSION%",
+                push: false,
+                gitDescribeOptions: "--tags --always --abbrev=1 --dirty=-d",
+                globalReplace: false,
+                prereleaseName: "alpha",
+                regExp: false
+            }
+        },
+
         todo: {
             options: {
                 usePackage: true
@@ -433,62 +452,30 @@ module.exports = function( grunt ) {
         if (
             arguments.length === 0 ||
             (
+            releaseLevel !== "prerelease" &&
             releaseLevel !== "patch" &&
             releaseLevel !== "minor" &&
             releaseLevel !== "major"
             )
         ) {
-            grunt.log.error( "Specify if this is a release:patch, release:minor or release:major" );
+            grunt.log.error(
+                "Specify if this is a " +
+                "release:prerelease, " +
+                "release:patch, " +
+                "release:minor or " +
+                "release:major"
+            );
         } else {
             grunt.task.run( [
-                "bumpOnly:" + releaseLevel,
+                "bump-only:" + releaseLevel,
                 "exec:sortLanguageKeys",
                 "replace:copyright",
                 "replace:version",
                 "changelog",
-                "bumpCommit:" + releaseLevel,
+                "bump-commit",
                 "compress:release"
             ] );
         }
-    } );
-
-    grunt.registerTask( "bumpOnly", function() {
-        grunt.config( "bump", {
-            options: {
-                files: [
-                    "package.json",
-                    "bower.json"
-                ],
-                createTag: false,
-                commit: false,
-                push: false,
-                globalReplace: false
-            }
-        } );
-        return grunt.task.run( "bump" );
-    } );
-
-    grunt.registerTask( "bumpCommit", function() {
-        grunt.config( "bump", {
-            options: {
-                files: [],
-                updateConfigs: [],
-                commit: true,
-                commitMessage: "Release v<%= pkg.version %>",
-                commitFiles: [
-                    "package.json",
-                    "CHANGES.md"
-                ],
-                createTag: true,
-                tagName: "v<%= pkg.version %>",
-                tagMessage: "Version <%= pkg.version %>",
-                push: false,
-                pushTo: "origin",
-                gitDescribeOptions: "--tags --always --abbrev=1 --dirty=-d",
-                globalReplace: false
-            }
-        } );
-        return grunt.task.run( "bump" );
     } );
 
     grunt.config.set( "grunt-commit-message-verify", {
