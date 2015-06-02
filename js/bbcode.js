@@ -789,45 +789,65 @@ function loadLanguageModule( module ) {
 $( document ).ready( function() {
     "use strict";
     $( "form[name=login]" ).submit( function( e ) {
-        var that = $( this ),
-            postData = that.serializeArray(),
-            formURL = that.attr( "action" );
-        $( "body" ).css( "cursor", "progress" );
+        var $this = $( this ),
+            $body = $( "body" ),
+            postData = $this.serializeArray(),
+            formURL = $this.attr( "action" ),
+            $loginAlert = $( "#ws-login-alert" );
+
+        e.preventDefault();
+
+        $body.css( "cursor", "progress" );
+
         $.ajax( {
             url: formURL,
             type: "POST",
             data: postData,
             success: function( data, textStatus, jqXHR ) {
-                $( "body" ).css( "cursor", "default" );
+                $body.css( "cursor", "default" );
 
                 //data: return data from server
                 if ( data.state === "success" ) {
-                    that.prepend( "<div class='alert alert-success'>" + data.message + "</div>" );
-                    window.setTimeout(
-                        function() {
-                            window.location.reload();
-                        },
-                        1000
-                    );
+                    $loginAlert
+                        .addClass( "alert-success" )
+                        .removeClass( "hidden" )
+                        .html( data.message );
+
+                    window.location.reload();
                 } else {
-                    that.prepend( "<div class='alert alert-warning'>" + data.message + "</div>" );
-                    that.trigger( "reset" );
+                    $loginAlert
+                        .addClass( "alert-warning" )
+                        .removeClass( "hidden" )
+                        .html( data.message );
+
+                    // always clear password
+                    $this
+                        .find( "input[name=password]" )
+                        .val( "" )
+                        .focus();
+
+                    // username wrong?
+                    if ( data.code === "no_user" ) {
+                        $this
+                            .find( "input[name=ws_user]" )
+                            .val( "" )
+                            .focus();
+                    }
+
                     window.setTimeout(
                         function() {
-                            that.find( "div.alert" ).remove();
+                            $loginAlert
+                                .addClass( "hidden" )
+                                .removeClass( "alert-warning" );
                         },
                         5000
                     );
                 }
-
             },
             error: function( jqXHR, textStatus, errorThrown ) {
-                $( "body" ).css( "cursor", "default" );
+                $body.css( "cursor", "default" );
             }
         } );
-        e.preventDefault();
-
-        //STOP default action
     } );
 
     if ( $( "#shoutbox" ).length ) {
