@@ -25,27 +25,27 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Hozzáférés megtagadva',
-  'actions'=>'Lehetőségek',
-  'add_faq'=>'GYIK hozzáadása',
-  'answer'=>'Válasz',
-  'category'=>'Kategória',
-  'delete'=>'Törlés',
-  'edit'=>'Szerkesztés',
-  'edit_faq'=>'GYIK szerkesztése',
-  'faq'=>'GYIK',
-  'information_incomplete'=>'Néhány információ hiányzik.',
-  'new_faq'=>'Új GYIK',
-  'no_category_selected'=>'Elfelejtettél kategóriát választani.',
-  'no_faq_selected'=>'Nincs kiválasztott GYIK kategória',
-  'really_delete'=>'Biztosan törölni akarod ezt a GYIK-t?',
-  'sort'=>'Rendezés',
-  'to_sort'=>'Rendezés',
-  'transaction_invalid'=>'A művelet azonosítója érvénytelen',
-  'tags'=>'Címkék'
+    'access_denied' => 'Hozzáférés megtagadva',
+    'actions' => 'Lehetőségek',
+    'add_faq' => 'GYIK hozzáadása',
+    'answer' => 'Válasz',
+    'category' => 'Kategória',
+    'delete' => 'Törlés',
+    'edit' => 'Szerkesztés',
+    'edit_faq' => 'GYIK szerkesztése',
+    'faq' => 'GYIK',
+    'information_incomplete' => 'Néhány információ hiányzik.',
+    'new_faq' => 'Új GYIK',
+    'no_category_selected' => 'Elfelejtettél kategóriát választani.',
+    'no_faq_selected' => 'Nincs kiválasztott GYIK kategória',
+    'really_delete' => 'Biztosan törölni akarod ezt a GYIK-t?',
+    'sort' => 'Rendezés',
+    'tags' => 'Címkék',
+    'to_sort' => 'Rendezés',
+    'transaction_invalid' => 'A művelet azonosítója érvénytelen'
 );
 

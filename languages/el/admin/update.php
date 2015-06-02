@@ -25,20 +25,20 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Δεν επιτρέπεται η πρόσβαση',
-  'error'=>'δεν ειναι δυνατη η ενημερωση του Server ή το αρχείο δεν είναι διαθέσιμο',
-  'filename'=>'Όνομα Αρχείου',
-  'get_new_version'=>'Αποκτήστε τη νεότερη εκδοση webSPELL εδώ!',
-  'information'=>'Πληροφορίες',
-  'new_functions'=>'Νέες Λειτουργίες για webSPELL διαθέσιμες',
-  'new_updates'=>'Νέες ενημερωμένες Εκδόσεις για webSPELL διαθέσιμες',
-  'new_version'=>'Νέα webSPELL Έκδοση είναι διαθέσιμη',
-  'no_updates'=>'Δεν υπάρχουν διαθέσιμες Ενημερώσεις!',
-  'version'=>'Έκδοση',
-  'webspell_update'=>'Ενημέρωση webSPELL'
+    'access_denied' => 'Δεν επιτρέπεται η πρόσβαση',
+    'error' => 'δεν ειναι δυνατη η ενημερωση του Server ή το αρχείο δεν είναι διαθέσιμο',
+    'filename' => 'Όνομα Αρχείου',
+    'get_new_version' => 'Αποκτήστε τη νεότερη εκδοση webSPELL εδώ!',
+    'information' => 'Πληροφορίες',
+    'new_functions' => 'Νέες Λειτουργίες για webSPELL διαθέσιμες',
+    'new_updates' => 'Νέες ενημερωμένες Εκδόσεις για webSPELL διαθέσιμες',
+    'new_version' => 'Νέα webSPELL Έκδοση είναι διαθέσιμη',
+    'no_updates' => 'Δεν υπάρχουν διαθέσιμες Ενημερώσεις!',
+    'version' => 'Έκδοση',
+    'webspell_update' => 'Ενημέρωση webSPELL'
 );
 

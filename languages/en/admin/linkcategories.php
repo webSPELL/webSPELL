@@ -25,21 +25,21 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
-  'actions'=>'Actions',
-  'add_category'=>'add Category',
-  'category_name'=>'Category Name',
-  'delete'=>'delete',
-  'edit'=>'edit',
-  'edit_category'=>'edit Category',
-  'information_incomplete'=>'Some information is missing.',
-  'link_categories'=>'Link Categories',
-  'new_category'=>'new Category',
-  'really_delete'=>'Really delete this Category and the Category Links?',
-  'transaction_invalid'=>'Transaction ID invalid'
+    'access_denied' => 'Access denied',
+    'actions' => 'Actions',
+    'add_category' => 'add Category',
+    'category_name' => 'Category Name',
+    'delete' => 'delete',
+    'edit' => 'edit',
+    'edit_category' => 'edit Category',
+    'information_incomplete' => 'Some information is missing.',
+    'link_categories' => 'Link Categories',
+    'new_category' => 'new Category',
+    'really_delete' => 'Really delete this Category and the Category Links?',
+    'transaction_invalid' => 'Transaction ID invalid'
 );
 

@@ -25,24 +25,24 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Zugriff verweigert',
-  'actions'=>'Aktionen',
-  'add_contact'=>'Kontakt hinzufügen',
-  'contact'=>'Kontakte',
-  'contact_name'=>'Kontakt Name',
-  'delete'=>'löschen',
-  'edit'=>'ändern',
-  'edit_contact'=>'Kontakt ändern',
-  'email'=>'E-Mail',
-  'information_incomplete'=>'Angaben unvollständig.',
-  'new_contact'=>'neuer Kontakt',
-  'really_delete'=>'Diesen Kontakt wirklich löschen?',
-  'sort'=>'Sortierung',
-  'to_sort'=>'sortieren',
-  'transaction_invalid'=>'Transaktions ID ungültig'
+    'access_denied' => 'Zugriff verweigert',
+    'actions' => 'Aktionen',
+    'add_contact' => 'Kontakt hinzufügen',
+    'contact' => 'Kontakte',
+    'contact_name' => 'Kontakt Name',
+    'delete' => 'löschen',
+    'edit' => 'ändern',
+    'edit_contact' => 'Kontakt ändern',
+    'email' => 'E-Mail',
+    'information_incomplete' => 'Angaben unvollständig.',
+    'new_contact' => 'neuer Kontakt',
+    'really_delete' => 'Diesen Kontakt wirklich löschen?',
+    'sort' => 'Sortierung',
+    'to_sort' => 'sortieren',
+    'transaction_invalid' => 'Transaktions ID ungültig'
 );
 

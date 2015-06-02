@@ -25,33 +25,33 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Accès refusé',
-  'actions'=>'Actions',
-  'add_partner'=>'ajouter partenaire',
-  'back'=>'Retour',
-  'banner'=>'Bannière',
-  'banner_to_big'=>'La bannière est trop grande',
-  'clicks'=>'Clics (par jour)',
-  'current_banner'=>'Bannière actuelle',
-  'delete'=>'Supprimer',
-  'edit'=>'Editer',
-  'edit_partner'=>'Modifier le partenaire',
-  'format_incorrect'=>'Le format de l\'icône était incorrecte. S\'il vous plaît télécharger uniquement une bannière au format * .gif, * .jpg ou * .png.',
-  'homepage_url'=>'Adresse de la page d\'accueil',
-  'is_displayed'=>'Est affiché?',
-  'max_88x31'=>'(Max. 88x31)',
-  'new_partner'=>'nouveau partenaire',
-  'no'=>'Non',
-  'partner_name'=>'Nom du partenaire',
-  'partners'=>'Partenaires',
-  'really_delete'=>'Voulez-vous vraiment supprimer ce partenaire?',
-  'sort'=>'Ordre',
-  'transaction_invalid'=>'Transaction ID invalide',
-  'to_sort'=>'Ordre',
-  'yes'=>'Oui'
+    'access_denied' => 'Accès refusé',
+    'actions' => 'Actions',
+    'add_partner' => 'ajouter partenaire',
+    'back' => 'Retour',
+    'banner' => 'Bannière',
+    'banner_to_big' => 'La bannière est trop grande',
+    'clicks' => 'Clics (par jour)',
+    'current_banner' => 'Bannière actuelle',
+    'delete' => 'Supprimer',
+    'edit' => 'Editer',
+    'edit_partner' => 'Modifier le partenaire',
+    'format_incorrect' => 'Le format de l\'icône était incorrecte. S\'il vous plaît télécharger uniquement une bannière au format * .gif, * .jpg ou * .png.',
+    'homepage_url' => 'Adresse de la page d\'accueil',
+    'is_displayed' => 'Est affiché?',
+    'max_88x31' => '(Max. 88x31)',
+    'new_partner' => 'nouveau partenaire',
+    'no' => 'Non',
+    'partner_name' => 'Nom du partenaire',
+    'partners' => 'Partenaires',
+    'really_delete' => 'Voulez-vous vraiment supprimer ce partenaire?',
+    'sort' => 'Ordre',
+    'to_sort' => 'Ordre',
+    'transaction_invalid' => 'Transaction ID invalide',
+    'yes' => 'Oui'
 );
 

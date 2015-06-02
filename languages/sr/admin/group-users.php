@@ -25,29 +25,29 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Приступ одбијен',
-  'back'=>'назад',
-  'edit_group_users'=>'измените групе корисника',
-  'error_group'=>'Грешка: Група корисника не постоји',
-  'filter'=>'Филтер',
-  'filter_anyadmin'=>'било који Админ филтер',
-  'filter_clanmember'=>'Clanmembers Филтер',
-  'filter_registered'=>'регистрован филтер',
-  'filter_superadmin'=>'Супер Админ филтер',
-  'go'=>'иди',
-  'group_users'=>'Групе Корисника',
-  'groups'=>'Форум Групе Корисника',
-  'or_just'=>'или само',
-  'save'=>'сачувај',
-  'save_and_jump'=>'иди на страницу',
-  'select_all'=>'означи све',
-  'show'=>'прикажи',
-  'user_filter'=>'Кориснички Филтер',
-  'users_from_group'=>'Корисници из групе',
-  'transaction_invalid'=>'ИД трансакције неважећи'
+    'access_denied' => 'Приступ одбијен',
+    'back' => 'назад',
+    'edit_group_users' => 'измените групе корисника',
+    'error_group' => 'Грешка: Група корисника не постоји',
+    'filter' => 'Филтер',
+    'filter_anyadmin' => 'било који Админ филтер',
+    'filter_clanmember' => 'Clanmembers Филтер',
+    'filter_registered' => 'регистрован филтер',
+    'filter_superadmin' => 'Супер Админ филтер',
+    'go' => 'иди',
+    'group_users' => 'Групе Корисника',
+    'groups' => 'Форум Групе Корисника',
+    'or_just' => 'или само',
+    'save' => 'сачувај',
+    'save_and_jump' => 'иди на страницу',
+    'select_all' => 'означи све',
+    'show' => 'прикажи',
+    'transaction_invalid' => 'ИД трансакције неважећи',
+    'user_filter' => 'Кориснички Филтер',
+    'users_from_group' => 'Корисници из групе'
 );
 

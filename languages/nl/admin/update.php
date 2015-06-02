@@ -25,20 +25,20 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Toegang geweigerd',
-  'error'=>'Server update niet geschikt of het Bestand is niet beschikbaar op',
-  'filename'=>'Bestandsnaam',
-  'get_new_version'=>'Verkrijg hier de nieuwste webSPELL Versie!',
-  'information'=>'Informatie',
-  'new_functions'=>'Nieuwe functies voor webSPELL beschikbaar',
-  'new_updates'=>'Nieuwe updates voor webSPELL beschikbaar',
-  'new_version'=>'Nieuwe webSPELL versie beschikbaar',
-  'no_updates'=>'Geen updates beschikbaar!',
-  'version'=>'Versie',
-  'webspell_update'=>'webSPELL Update'
+    'access_denied' => 'Toegang geweigerd',
+    'error' => 'Server update niet geschikt of het Bestand is niet beschikbaar op',
+    'filename' => 'Bestandsnaam',
+    'get_new_version' => 'Verkrijg hier de nieuwste webSPELL Versie!',
+    'information' => 'Informatie',
+    'new_functions' => 'Nieuwe functies voor webSPELL beschikbaar',
+    'new_updates' => 'Nieuwe updates voor webSPELL beschikbaar',
+    'new_version' => 'Nieuwe webSPELL versie beschikbaar',
+    'no_updates' => 'Geen updates beschikbaar!',
+    'version' => 'Versie',
+    'webspell_update' => 'webSPELL Update'
 );
 

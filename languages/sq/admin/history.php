@@ -25,14 +25,14 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Hyrja e Ndaluar',
-  'history'=>'Historia Klanit',
-  'transaction_invalid'=>'ID e tranzaksionit e pavlefshme',
-  'update'=>'përditësim',
-  'you_can_use_html'=>'Ju mund të përdorni HTML-Tags'
+    'access_denied' => 'Hyrja e Ndaluar',
+    'history' => 'Historia Klanit',
+    'transaction_invalid' => 'ID e tranzaksionit e pavlefshme',
+    'update' => 'përditësim',
+    'you_can_use_html' => 'Ju mund të përdorni HTML-Tags'
 );
 

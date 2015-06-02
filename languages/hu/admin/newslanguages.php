@@ -25,24 +25,24 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Hozzáférés megtagadva',
-  'actions'=>'Lehetőségek',
-  'add_language'=>'Nyelv hozzáadása',
-  'delete'=>'Törlés',
-  'edit'=>'Szerkesztés',
-  'edit_language'=>'Nyelv szerkesztése',
-  'flag'=>'Zászlók',
-  'information_incomplete'=>'Néhány információ hiányzik.',
-  'language'=>'Nyelv',
-  'news_languages'=>'Hírek nyelve',
-  'new_language'=>'Új nyelv',
-  'preview'=>'Előnézet',
-  'really_delete'=>'Biztosan törölni akarod ezt a nyelvet?',
-  'title'=>'Cím',
-  'transaction_invalid'=>'A művelet azonosítója érvénytelen'
+    'access_denied' => 'Hozzáférés megtagadva',
+    'actions' => 'Lehetőségek',
+    'add_language' => 'Nyelv hozzáadása',
+    'delete' => 'Törlés',
+    'edit' => 'Szerkesztés',
+    'edit_language' => 'Nyelv szerkesztése',
+    'flag' => 'Zászlók',
+    'information_incomplete' => 'Néhány információ hiányzik.',
+    'language' => 'Nyelv',
+    'new_language' => 'Új nyelv',
+    'news_languages' => 'Hírek nyelve',
+    'preview' => 'Előnézet',
+    'really_delete' => 'Biztosan törölni akarod ezt a nyelvet?',
+    'title' => 'Cím',
+    'transaction_invalid' => 'A művelet azonosítója érvénytelen'
 );
 

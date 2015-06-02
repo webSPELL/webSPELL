@@ -25,28 +25,28 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Hyrja e Ndaluar',
-  'accesslevel'=>'Niveli hyrjes',
-  'actions'=>'Veprimet',
-  'add_static_page'=>'shtoni  Faqe Statike',
-  'clanmember_only'=>'vetëm anëtarët e klanit',
-  'content'=>'Përmbajtja',
-  'delete'=>'fshij',
-  'edit'=>'redakto',
-  'edit_static_page'=>'redakto Faqen Statike',
-  'title'=>'Titull',
-  'id'=>'ID',
-  'new_static_page'=>'Faqe Statike të reja',
-  'public'=>'Publike',
-  'really_delete'=>'Me të vërtetë fshirë këtë Faqe Statike?',
-  'registered_only'=>'vetëm Përdoruesit e regjistruar',
-  'static_pages'=>'Faqet e Statistikave',
-  'transaction_invalid'=>'ID e tranzaksionit e pavlefshme',
-  'you_can_use_html'=>'Ju mund të përdorni HTML-Tags',
-  'tags'=>'Etiketat'
+    'access_denied' => 'Hyrja e Ndaluar',
+    'accesslevel' => 'Niveli hyrjes',
+    'actions' => 'Veprimet',
+    'add_static_page' => 'shtoni  Faqe Statike',
+    'clanmember_only' => 'vetëm anëtarët e klanit',
+    'content' => 'Përmbajtja',
+    'delete' => 'fshij',
+    'edit' => 'redakto',
+    'edit_static_page' => 'redakto Faqen Statike',
+    'id' => 'ID',
+    'new_static_page' => 'Faqe Statike të reja',
+    'public' => 'Publike',
+    'really_delete' => 'Me të vërtetë fshirë këtë Faqe Statike?',
+    'registered_only' => 'vetëm Përdoruesit e regjistruar',
+    'static_pages' => 'Faqet e Statistikave',
+    'tags' => 'Etiketat',
+    'title' => 'Titull',
+    'transaction_invalid' => 'ID e tranzaksionit e pavlefshme',
+    'you_can_use_html' => 'Ju mund të përdorni HTML-Tags'
 );
 

@@ -25,24 +25,24 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'მიუწვდომელია',
-  'actions'=>'ქმედებები',
-  'add_category'=>'კატეგორიის დამატება',
-  'category'=>'კატეგორია',
-  'category_name'=>'კატეგორიის სახელი',
-  'delete'=>'წაშლა',
-  'enter_name'=>'თქვენ უნდა შეიყვანოთ სახელი',
-  'edit'=>'რედაქტირება',
-  'edit_category'=>'კატეგორიის რედაქტირება',
-  'file_categories'=>'ფაილების კატეგორია',
-  'main'=>'მთავარი',
-  'new_category'=>'ახალი კატეგორია',
-  'really_delete'=>'წავშალოთ კატეგორია?',
-  'sub_category'=>'ქვე-კატეგორია',
-  'transaction_invalid'=>'ID არასწორია'
+    'access_denied' => 'მიუწვდომელია',
+    'actions' => 'ქმედებები',
+    'add_category' => 'კატეგორიის დამატება',
+    'category' => 'კატეგორია',
+    'category_name' => 'კატეგორიის სახელი',
+    'delete' => 'წაშლა',
+    'edit' => 'რედაქტირება',
+    'edit_category' => 'კატეგორიის რედაქტირება',
+    'enter_name' => 'თქვენ უნდა შეიყვანოთ სახელი',
+    'file_categories' => 'ფაილების კატეგორია',
+    'main' => 'მთავარი',
+    'new_category' => 'ახალი კატეგორია',
+    'really_delete' => 'წავშალოთ კატეგორია?',
+    'sub_category' => 'ქვე-კატეგორია',
+    'transaction_invalid' => 'ID არასწორია'
 );
 

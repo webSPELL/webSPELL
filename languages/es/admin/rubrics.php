@@ -25,25 +25,25 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Acceso Denegado',
-  'actions'=>'Acciones',
-  'add_rubric'=>'añadir Rúbrica',
-  'back'=>'volver',
-  'delete'=>'borrar',
-  'edit'=>'editar',
-  'edit_rubric'=>'editar Rúbrica',
-  'format_incorrect'=>'El formato del icono es incorrecto. Por favor, sube sólo extensiones en *.gif, *.jpg y *.png.',
-  'information_incomplete'=>'Falta información.',
-  'new_rubric'=>'nueva Rúbrica',
-  'news_rubrics'=>'Noticias Rúbricas',
-  'picture'=>'Imagen',
-  'picture_upload'=>'Subir Imagen',
-  'really_delete'=>'¿Seguro que quieres eliminar esta Rúbrica?',
-  'rubric_name'=>'Nombre de Rúbrica',
-  'transaction_invalid'=>'ID de transacción no válida'
+    'access_denied' => 'Acceso Denegado',
+    'actions' => 'Acciones',
+    'add_rubric' => 'añadir Rúbrica',
+    'back' => 'volver',
+    'delete' => 'borrar',
+    'edit' => 'editar',
+    'edit_rubric' => 'editar Rúbrica',
+    'format_incorrect' => 'El formato del icono es incorrecto. Por favor, sube sólo extensiones en *.gif, *.jpg y *.png.',
+    'information_incomplete' => 'Falta información.',
+    'new_rubric' => 'nueva Rúbrica',
+    'news_rubrics' => 'Noticias Rúbricas',
+    'picture' => 'Imagen',
+    'picture_upload' => 'Subir Imagen',
+    'really_delete' => '¿Seguro que quieres eliminar esta Rúbrica?',
+    'rubric_name' => 'Nombre de Rúbrica',
+    'transaction_invalid' => 'ID de transacción no válida'
 );
 

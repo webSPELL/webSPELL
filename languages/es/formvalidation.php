@@ -25,19 +25,21 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
-    'file_too_big'=>'Archivo demasiado grande',
-    'incomplete_upload'=>'No se pudo completar la subida',
-    'no_file_uploaded'=>'Ningún archivo subido',
-    'no_temp_folder_available'=>'La carpeta temporal no está disponible. Por favor, contacta con el administrador',
-    'cant_write_temp_file'=>'No se puede escribir el archivo temporal. Por favor, contacta con el administrador',
-    'unexpected_error'=>'Error inesperado',
-    'cant_copy_file'=>'No se puede copiar el archivo. Póngase en contacto con el administrador',
-    'image_too_big'=>'La imagen es demasiado grande (tamaño máximo %1$d px y %2$d px)',
-    'broken_image'=>'El archivo de imagen parece estar roto',
-    'unsupported_image_type'=>'Tipo de imagen no soportada',
-    'errors_there'=>'Hay errores',
-    'file_already_exists'=>'el archivo ya existe'
+
+    'broken_image' => 'El archivo de imagen parece estar roto',
+    'cant_copy_file' => 'No se puede copiar el archivo. Póngase en contacto con el administrador',
+    'cant_write_temp_file' => 'No se puede escribir el archivo temporal. Por favor, contacta con el administrador',
+    'errors_there' => 'Hay errores',
+    'file_already_exists' => 'el archivo ya existe',
+    'file_too_big' => 'Archivo demasiado grande',
+    'image_too_big' => 'La imagen es demasiado grande (tamaño máximo %1$d px y %2$d px)',
+    'incomplete_upload' => 'No se pudo completar la subida',
+    'no_file_uploaded' => 'Ningún archivo subido',
+    'no_temp_folder_available' => 'La carpeta temporal no está disponible. Por favor, contacta con el administrador',
+    'unexpected_error' => 'Error inesperado',
+    'unsupported_image_type' => 'Tipo de imagen no soportada'
 );
+

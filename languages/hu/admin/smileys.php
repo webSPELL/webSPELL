@@ -25,29 +25,29 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Hozzáférés megtagadva',
-  'actions'=>'Lehetőségek',
-  'add_smiley'=>'Hangulatjel hozzáadása',
-  'back'=>'Vissza',
-  'delete'=>'Törlés',
-  'edit'=>'Szerkesztés',
-  'edit_smiley'=>'Hangulatjel szerkesztése',
-  'example'=>'(pld.: ":oO:")',
-  'fill_form'=>'Helyesen töltsd ki az űrlapot!',
-  'format_incorrect'=>'A kép formátuma nem megfelelő. A kép kiterjesztése csak *.gif lehet.',
-  'icon'=>'Ikon',
-  'icons'=>'Ikonok',
-  'new_smiley'=>'Új hangulatjel',
-  'no_entries'=>'Nincs bejegyzés',
-  'pattern'=>'Minta',
-  'present_icon'=>'Jelenlegi Ikon',
-  'really_delete'=>'Biztosan törölni akarod ezt a hangulatjelet?',
-  'smilies'=>'Hangulatjelek',
-  'smiley_name'=>'Hangulatjel neve',
-  'transaction_invalid'=>'A művelet azonosítója érvénytelen'
+    'access_denied' => 'Hozzáférés megtagadva',
+    'actions' => 'Lehetőségek',
+    'add_smiley' => 'Hangulatjel hozzáadása',
+    'back' => 'Vissza',
+    'delete' => 'Törlés',
+    'edit' => 'Szerkesztés',
+    'edit_smiley' => 'Hangulatjel szerkesztése',
+    'example' => '(pld.: ":oO:")',
+    'fill_form' => 'Helyesen töltsd ki az űrlapot!',
+    'format_incorrect' => 'A kép formátuma nem megfelelő. A kép kiterjesztése csak *.gif lehet.',
+    'icon' => 'Ikon',
+    'icons' => 'Ikonok',
+    'new_smiley' => 'Új hangulatjel',
+    'no_entries' => 'Nincs bejegyzés',
+    'pattern' => 'Minta',
+    'present_icon' => 'Jelenlegi Ikon',
+    'really_delete' => 'Biztosan törölni akarod ezt a hangulatjelet?',
+    'smiley_name' => 'Hangulatjel neve',
+    'smilies' => 'Hangulatjelek',
+    'transaction_invalid' => 'A művelet azonosítója érvénytelen'
 );
 

@@ -25,27 +25,27 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Zugriff verweigert',
-  'actions'=>'Aktionen',
-  'add_faq'=>'FAQ hinzufügen',
-  'answer'=>'Antwort',
-  'category'=>'Kategorie',
-  'delete'=>'löschen',
-  'edit'=>'ändern',
-  'edit_faq'=>'FAQ ändern',
-  'faq'=>'FAQ',
-  'information_incomplete'=>'Angaben unvollständig.',
-  'new_faq'=>'neue FAQ',
-  'no_category_selected'=>'Du hast vergessen eine Kategorie auszuwählen',
-  'no_faq_selected'=>'Keine FAQ Kategorie ausgewählt',
-  'really_delete'=>'Diese FAQ wirklich löschen?',
-  'sort'=>'Sortierung',
-  'to_sort'=>'sortieren',
-  'transaction_invalid'=>'Transaktions ID ungültig',
-  'tags'=>'Tags'
+    'access_denied' => 'Zugriff verweigert',
+    'actions' => 'Aktionen',
+    'add_faq' => 'FAQ hinzufügen',
+    'answer' => 'Antwort',
+    'category' => 'Kategorie',
+    'delete' => 'löschen',
+    'edit' => 'ändern',
+    'edit_faq' => 'FAQ ändern',
+    'faq' => 'FAQ',
+    'information_incomplete' => 'Angaben unvollständig.',
+    'new_faq' => 'neue FAQ',
+    'no_category_selected' => 'Du hast vergessen eine Kategorie auszuwählen',
+    'no_faq_selected' => 'Keine FAQ Kategorie ausgewählt',
+    'really_delete' => 'Diese FAQ wirklich löschen?',
+    'sort' => 'Sortierung',
+    'tags' => 'Tags',
+    'to_sort' => 'sortieren',
+    'transaction_invalid' => 'Transaktions ID ungültig'
 );
 

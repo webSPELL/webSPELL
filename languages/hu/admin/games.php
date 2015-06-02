@@ -25,28 +25,28 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Hozzáférés megtagadva',
-  'actions'=>'Lehetőségek',
-  'add_game'=>'Játék hozzáadása',
-  'back'=>'Vissza',
-  'delete'=>'Törlés',
-  'edit'=>'Szerkesztés',
-  'edit_game'=>'Játék szerkesztése',
-  'fill_correctly'=>'Helyesen töltsd ki az űrlapot!',
-  'format_incorrect'=>'A kép formátuma nem megfelelő. A banner kiterjesztése csak *.gif lehet.',
-  'game_icon'=>'Játék ikon',
-  'game_name'=>'Játék neve',
-  'game_tag'=>'Játék TAG',
-  'games'=>'Játék',
-  'icons'=>'Ikonok',
-  'new_game'=>'Új játék',
-  'no_entries'=>'Nincs bejegyzés',
-  'present_icon'=>'Jelenlegi ikon',
-  'really_delete'=>'Biztosan törölni akarod ezt a játékot?',
-  'transaction_invalid'=>'A művelet azonosítója érvénytelen'
+    'access_denied' => 'Hozzáférés megtagadva',
+    'actions' => 'Lehetőségek',
+    'add_game' => 'Játék hozzáadása',
+    'back' => 'Vissza',
+    'delete' => 'Törlés',
+    'edit' => 'Szerkesztés',
+    'edit_game' => 'Játék szerkesztése',
+    'fill_correctly' => 'Helyesen töltsd ki az űrlapot!',
+    'format_incorrect' => 'A kép formátuma nem megfelelő. A banner kiterjesztése csak *.gif lehet.',
+    'game_icon' => 'Játék ikon',
+    'game_name' => 'Játék neve',
+    'game_tag' => 'Játék TAG',
+    'games' => 'Játék',
+    'icons' => 'Ikonok',
+    'new_game' => 'Új játék',
+    'no_entries' => 'Nincs bejegyzés',
+    'present_icon' => 'Jelenlegi ikon',
+    'really_delete' => 'Biztosan törölni akarod ezt a játékot?',
+    'transaction_invalid' => 'A művelet azonosítója érvénytelen'
 );
 

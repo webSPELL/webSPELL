@@ -25,37 +25,37 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Приступ одбијен',
-  'actions'=>'Акције',
-  'add_squad'=>'додај одред',
-  'back'=>'назад',
-  'current_icon'=>'Тренутна Икона',
-  'current_icon_small'=>'Тренутна Икона (мала)',
-  'delete'=>'Избриши',
-  'edit'=>'уреди',
-  'edit_squad'=>'уреди одред',
-  'format_incorrect'=>'Формат иконе је нетачан. Молимо поставите само банер у * .гиф, * .јпг и .пнг * формату.',
-  'game'=>'Игра',
-  'gaming_squad'=>'Одред игре',
-  'icon'=>'Икона',
-  'icon_upload'=>'Икона Додај',
-  'icon_upload_info'=>'за sc_squads укључују',
-  'icon_upload_small'=>'Икона Додај мала',
-  'information_incomplete'=>'Неке информације недостају.',
-  'new_squad'=>'нови одред',
-  'no_icon'=>'Икона није доступна',
-  'non_gaming_squad'=>'Одред који не игра',
-  'really_delete'=>'Заиста да уклоните овај одред?',
-  'sort'=>'Разврстај',
-  'squad_info'=>'Одред Инфо',
-  'squad_name'=>'Одред Име',
-  'squad_type'=>'Одред Типа',
-  'squads'=>'Одреди',
-  'transaction_invalid'=>'ИД трансакције неважећи',
-  'to_sort'=>'Разврстај'
+    'access_denied' => 'Приступ одбијен',
+    'actions' => 'Акције',
+    'add_squad' => 'додај одред',
+    'back' => 'назад',
+    'current_icon' => 'Тренутна Икона',
+    'current_icon_small' => 'Тренутна Икона (мала)',
+    'delete' => 'Избриши',
+    'edit' => 'уреди',
+    'edit_squad' => 'уреди одред',
+    'format_incorrect' => 'Формат иконе је нетачан. Молимо поставите само банер у * .гиф, * .јпг и .пнг * формату.',
+    'game' => 'Игра',
+    'gaming_squad' => 'Одред игре',
+    'icon' => 'Икона',
+    'icon_upload' => 'Икона Додај',
+    'icon_upload_info' => 'за sc_squads укључују',
+    'icon_upload_small' => 'Икона Додај мала',
+    'information_incomplete' => 'Неке информације недостају.',
+    'new_squad' => 'нови одред',
+    'no_icon' => 'Икона није доступна',
+    'non_gaming_squad' => 'Одред који не игра',
+    'really_delete' => 'Заиста да уклоните овај одред?',
+    'sort' => 'Разврстај',
+    'squad_info' => 'Одред Инфо',
+    'squad_name' => 'Одред Име',
+    'squad_type' => 'Одред Типа',
+    'squads' => 'Одреди',
+    'to_sort' => 'Разврстај',
+    'transaction_invalid' => 'ИД трансакције неважећи'
 );
 

@@ -25,26 +25,26 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Toegang geweigerd',
-  'add_server'=>'Server toevoegen',
-  'actions'=>'Acties',
-  'delete'=>'verwijderen',
-  'edit'=>'bewerk',
-  'edit_server'=>'Server bewerken',
-  'game'=>'Spel',
-  'info'=>'Info',
-  'ip_port'=>'Server IP: Port',
-  'new_server'=>'nieuwe Server',
-  'no_server'=>'Geen Servers beschikbaar',
-  'really_delete'=>'Deze Server echt verwijderen?',
-  'servers'=>'Servers',
-  'server_name'=>'Server Naam',
-  'sort'=>'Sorteer',
-  'transaction_invalid'=>'Transactie ID ongeldig',
-  'to_sort'=>'sorteer'
+    'access_denied' => 'Toegang geweigerd',
+    'actions' => 'Acties',
+    'add_server' => 'Server toevoegen',
+    'delete' => 'verwijderen',
+    'edit' => 'bewerk',
+    'edit_server' => 'Server bewerken',
+    'game' => 'Spel',
+    'info' => 'Info',
+    'ip_port' => 'Server IP: Port',
+    'new_server' => 'nieuwe Server',
+    'no_server' => 'Geen Servers beschikbaar',
+    'really_delete' => 'Deze Server echt verwijderen?',
+    'server_name' => 'Server Naam',
+    'servers' => 'Servers',
+    'sort' => 'Sorteer',
+    'to_sort' => 'sorteer',
+    'transaction_invalid' => 'Transactie ID ongeldig'
 );
 

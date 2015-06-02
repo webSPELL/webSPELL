@@ -25,28 +25,28 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Hyrja e Ndaluar',
-  'actions'=>'Veprimet',
-  'add_game'=>'shtoni Lojë',
-  'back'=>'mbrapsht',
-  'delete'=>'fshij',
-  'edit'=>'redakto',
-  'edit_game'=>'edito Lojën',
-  'fill_correctly'=>'Lutemi të plotësoni formularin e saktë.',
-  'format_incorrect'=>'Formati i ikonës ishte i gabuar. Ju lutemi ngarkoni vetëm ikona në * .gif format.',
-  'game_icon'=>'Ikona Lojës',
-  'game_name'=>'Emri Lojës',
-  'game_tag'=>'Tag-u Lojës',
-  'games'=>'Lojrat',
-  'icons'=>'Ikonat',
-  'new_game'=>'lojë e re',
-  'no_entries'=>'Nuk ka hyrje',
-  'present_icon'=>'Ikonë e pranishme',
-  'really_delete'=>'Me të vërtetë e fshini këtë Lojë?',
-  'transaction_invalid'=>'ID e tranzaksionit e pavlefshme'
+    'access_denied' => 'Hyrja e Ndaluar',
+    'actions' => 'Veprimet',
+    'add_game' => 'shtoni Lojë',
+    'back' => 'mbrapsht',
+    'delete' => 'fshij',
+    'edit' => 'redakto',
+    'edit_game' => 'edito Lojën',
+    'fill_correctly' => 'Lutemi të plotësoni formularin e saktë.',
+    'format_incorrect' => 'Formati i ikonës ishte i gabuar. Ju lutemi ngarkoni vetëm ikona në * .gif format.',
+    'game_icon' => 'Ikona Lojës',
+    'game_name' => 'Emri Lojës',
+    'game_tag' => 'Tag-u Lojës',
+    'games' => 'Lojrat',
+    'icons' => 'Ikonat',
+    'new_game' => 'lojë e re',
+    'no_entries' => 'Nuk ka hyrje',
+    'present_icon' => 'Ikonë e pranishme',
+    'really_delete' => 'Me të vërtetë e fshini këtë Lojë?',
+    'transaction_invalid' => 'ID e tranzaksionit e pavlefshme'
 );
 

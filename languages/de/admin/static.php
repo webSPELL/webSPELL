@@ -25,28 +25,28 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Zugriff verweigert',
-  'accesslevel'=>'Zugriffsrecht',
-  'actions'=>'Aktionen',
-  'add_static_page'=>'Statische Seite hinzufügen',
-  'clanmember_only'=>'nur Clanmitglieder',
-  'content'=>'Inhalt',
-  'delete'=>'löschen',
-  'edit'=>'ändern',
-  'edit_static_page'=>'Statische Seite ändern',
-  'title'=>'Titel',
-  'id'=>'ID',
-  'new_static_page'=>'neue Statische Seite',
-  'public'=>'öffentlich',
-  'really_delete'=>'Diese Statische Seite wirklich löschen?',
-  'registered_only'=>'nur registrierte Benutzer',
-  'static_pages'=>'Statische Seiten',
-  'transaction_invalid'=>'Transaktions ID ungültig',
-  'you_can_use_html'=>'Du kannst HTML-Tags benutzen',
-  'tags'=>'Tags'
+    'access_denied' => 'Zugriff verweigert',
+    'accesslevel' => 'Zugriffsrecht',
+    'actions' => 'Aktionen',
+    'add_static_page' => 'Statische Seite hinzufügen',
+    'clanmember_only' => 'nur Clanmitglieder',
+    'content' => 'Inhalt',
+    'delete' => 'löschen',
+    'edit' => 'ändern',
+    'edit_static_page' => 'Statische Seite ändern',
+    'id' => 'ID',
+    'new_static_page' => 'neue Statische Seite',
+    'public' => 'öffentlich',
+    'really_delete' => 'Diese Statische Seite wirklich löschen?',
+    'registered_only' => 'nur registrierte Benutzer',
+    'static_pages' => 'Statische Seiten',
+    'tags' => 'Tags',
+    'title' => 'Titel',
+    'transaction_invalid' => 'Transaktions ID ungültig',
+    'you_can_use_html' => 'Du kannst HTML-Tags benutzen'
 );
 

@@ -25,33 +25,33 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
-  'actions'=>'Actions',
-  'add_partner'=>'add partner',
-  'back'=>'back',
-  'banner'=>'Banner',
-  'banner_to_big'=>'Banner is to big',
-  'clicks'=>'Clicks (per Day)',
-  'current_banner'=>'Current Banner',
-  'delete'=>'delete',
-  'edit'=>'edit',
-  'edit_partner'=>'edit Partner',
-  'format_incorrect'=>'The format of the icon was incorrect. Please upload only banner in *.gif, *.jpg and *.png format.',
-  'homepage_url'=>'Homepage URL',
-  'is_displayed'=>'Is displayed?',
-  'max_88x31'=>'(max. 88x31)',
-  'new_partner'=>'new Partner',
-  'no'=>'No',
-  'partner_name'=>'Partner Name',
-  'partners'=>'Partners',
-  'really_delete'=>'Really delete this Partner?',
-  'sort'=>'Sort',
-  'transaction_invalid'=>'Transaction ID invalid',
-  'to_sort'=>'sort',
-  'yes'=>'Yes'
+    'access_denied' => 'Access denied',
+    'actions' => 'Actions',
+    'add_partner' => 'add partner',
+    'back' => 'back',
+    'banner' => 'Banner',
+    'banner_to_big' => 'Banner is to big',
+    'clicks' => 'Clicks (per Day)',
+    'current_banner' => 'Current Banner',
+    'delete' => 'delete',
+    'edit' => 'edit',
+    'edit_partner' => 'edit Partner',
+    'format_incorrect' => 'The format of the icon was incorrect. Please upload only banner in *.gif, *.jpg and *.png format.',
+    'homepage_url' => 'Homepage URL',
+    'is_displayed' => 'Is displayed?',
+    'max_88x31' => '(max. 88x31)',
+    'new_partner' => 'new Partner',
+    'no' => 'No',
+    'partner_name' => 'Partner Name',
+    'partners' => 'Partners',
+    'really_delete' => 'Really delete this Partner?',
+    'sort' => 'Sort',
+    'to_sort' => 'sort',
+    'transaction_invalid' => 'Transaction ID invalid',
+    'yes' => 'Yes'
 );
 

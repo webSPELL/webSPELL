@@ -25,24 +25,24 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'შესვლა აკრძალულია',
-  'actions'=>'ქმედებები',
-  'add_contact'=>'კონტაქტის დამატება',
-  'contact'=>'კონტაქტები',
-  'contact_name'=>'საკონტაქტო სახელი',
-  'delete'=>'წაშლა',
-  'edit'=>'რედაქტირება',
-  'edit_contact'=>'კონტაქტის რედაქტირება',
-  'email'=>'ელ-ფოსტა',
-  'information_incomplete'=>'ზოგიერთი ინფორმაცია დაკარგულია',
-  'new_contact'=>'ახალი კონტაქტი',
-  'really_delete'=>'ნამდვილად წავშალო ეს კონტაქტი ? ',
-  'sort'=>'დაფასოება',
-  'to_sort'=>'დაფასოება',
-  'transaction_invalid'=>'ID არასწორია'
+    'access_denied' => 'შესვლა აკრძალულია',
+    'actions' => 'ქმედებები',
+    'add_contact' => 'კონტაქტის დამატება',
+    'contact' => 'კონტაქტები',
+    'contact_name' => 'საკონტაქტო სახელი',
+    'delete' => 'წაშლა',
+    'edit' => 'რედაქტირება',
+    'edit_contact' => 'კონტაქტის რედაქტირება',
+    'email' => 'ელ-ფოსტა',
+    'information_incomplete' => 'ზოგიერთი ინფორმაცია დაკარგულია',
+    'new_contact' => 'ახალი კონტაქტი',
+    'really_delete' => 'ნამდვილად წავშალო ეს კონტაქტი ? ',
+    'sort' => 'დაფასოება',
+    'to_sort' => 'დაფასოება',
+    'transaction_invalid' => 'ID არასწორია'
 );
 

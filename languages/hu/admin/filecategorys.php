@@ -25,24 +25,24 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Hozzáférés megtagadva',
-  'actions'=>'Lehetőségek',
-  'add_category'=>'Kategória hozzáadása',
-  'category'=>'Kategória',
-  'category_name'=>'Kategória neve',
-  'delete'=>'Törlés',
-  'enter_name'=>'Be kell írnod egy nevet',
-  'edit'=>'Szerkesztés',
-  'edit_category'=>'Kategória szerkesztése',
-  'file_categories'=>'Fájl kategóriák',
-  'main'=>'Fő',
-  'new_category'=>'Új kategória',
-  'really_delete'=>'Biztosan törölni akarod ezt a kategóriát?',
-  'sub_category'=>'Szülő kategória:',
-  'transaction_invalid'=>'A művelet azonosítója érvénytelen'
+    'access_denied' => 'Hozzáférés megtagadva',
+    'actions' => 'Lehetőségek',
+    'add_category' => 'Kategória hozzáadása',
+    'category' => 'Kategória',
+    'category_name' => 'Kategória neve',
+    'delete' => 'Törlés',
+    'edit' => 'Szerkesztés',
+    'edit_category' => 'Kategória szerkesztése',
+    'enter_name' => 'Be kell írnod egy nevet',
+    'file_categories' => 'Fájl kategóriák',
+    'main' => 'Fő',
+    'new_category' => 'Új kategória',
+    'really_delete' => 'Biztosan törölni akarod ezt a kategóriát?',
+    'sub_category' => 'Szülő kategória:',
+    'transaction_invalid' => 'A művelet azonosítója érvénytelen'
 );
 

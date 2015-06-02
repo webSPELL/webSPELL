@@ -25,23 +25,23 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Accès refusé',
-  'actions'=>'Actions',
-  'add_group'=>'Ajouter un groupe',
-  'back'=>'Retour',
-  'delete'=>'Supprimer',
-  'edit'=>'Editer',
-  'edit_group'=>'Modifier le groupe',
-  'error_group'=>'ERREUR: Aucun nom de groupe',
-  'error_groupid'=>'Erreur: fgrID manquant',
-  'group_name'=>'Nom du groupe',
-  'groups'=>'Groupe des utilisateurs du forum',
-  'new_group'=>'nouveau groupe',
-  'really_delete'=>'Vraiment supprimer ce groupe du Forum?',
-  'transaction_invalid'=>'ID de Transaction invalide'
+    'access_denied' => 'Accès refusé',
+    'actions' => 'Actions',
+    'add_group' => 'Ajouter un groupe',
+    'back' => 'Retour',
+    'delete' => 'Supprimer',
+    'edit' => 'Editer',
+    'edit_group' => 'Modifier le groupe',
+    'error_group' => 'ERREUR: Aucun nom de groupe',
+    'error_groupid' => 'Erreur: fgrID manquant',
+    'group_name' => 'Nom du groupe',
+    'groups' => 'Groupe des utilisateurs du forum',
+    'new_group' => 'nouveau groupe',
+    'really_delete' => 'Vraiment supprimer ce groupe du Forum?',
+    'transaction_invalid' => 'ID de Transaction invalide'
 );
 

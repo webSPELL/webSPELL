@@ -25,24 +25,24 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Приступ одбијен',
-  'actions'=>'Акције',
-  'add_contact'=>'Додај контакт',
-  'contact'=>'Контакти',
-  'contact_name'=>'Име Контакта',
-  'delete'=>'Избриши',
-  'edit'=>'уреди',
-  'edit_contact'=>'измените контакт',
-  'email'=>'Е-Маил',
-  'information_incomplete'=>'Неке информације недостају.',
-  'new_contact'=>'Нови Контакт',
-  'really_delete'=>'Заиста обрисати овај контакт?',
-  'sort'=>'Разврстај',
-  'to_sort'=>'Разврстај',
-  'transaction_invalid'=>'ИД трансакције неважећи'
+    'access_denied' => 'Приступ одбијен',
+    'actions' => 'Акције',
+    'add_contact' => 'Додај контакт',
+    'contact' => 'Контакти',
+    'contact_name' => 'Име Контакта',
+    'delete' => 'Избриши',
+    'edit' => 'уреди',
+    'edit_contact' => 'измените контакт',
+    'email' => 'Е-Маил',
+    'information_incomplete' => 'Неке информације недостају.',
+    'new_contact' => 'Нови Контакт',
+    'really_delete' => 'Заиста обрисати овај контакт?',
+    'sort' => 'Разврстај',
+    'to_sort' => 'Разврстај',
+    'transaction_invalid' => 'ИД трансакције неважећи'
 );
 

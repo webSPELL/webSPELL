@@ -25,16 +25,16 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Zugriff verweigert',
-  'automatic'=>'automatisch',
-  'imprint'=>'Impressum',
-  'manual'=>'manuell (das untere Textfeld benutzen)',
-  'transaction_invalid'=>'Transaktions ID ungültig',
-  'update'=>'aktualisieren',
-  'you_can_use_html'=>'Du kannst HTML-Tags benutzen'
+    'access_denied' => 'Zugriff verweigert',
+    'automatic' => 'automatisch',
+    'imprint' => 'Impressum',
+    'manual' => 'manuell (das untere Textfeld benutzen)',
+    'transaction_invalid' => 'Transaktions ID ungültig',
+    'update' => 'aktualisieren',
+    'you_can_use_html' => 'Du kannst HTML-Tags benutzen'
 );
 

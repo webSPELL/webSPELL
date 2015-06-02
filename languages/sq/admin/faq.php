@@ -25,27 +25,27 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Hyrja e Ndaluar',
-  'actions'=>'Veprimet',
-  'add_faq'=>'shtoni FAQ',
-  'answer'=>'Përgjigje',
-  'category'=>'Kategori',
-  'delete'=>'fshij',
-  'edit'=>'redakto',
-  'edit_faq'=>'Ndrysho FAQ',
-  'faq'=>'Pyetje të shpeshta',
-  'information_incomplete'=>'Disa të dhëna mungojnë.',
-  'new_faq'=>'Pyetje të shpeshta të reja',
-  'no_category_selected'=>'Ju harruat të zgjidhni një kategori',
-  'no_faq_selected'=>'Nuk është zgjedhur kategoria e FAQ-ut',
-  'really_delete'=>'Me të vërtetë fshini këtë FAQ?',
-  'sort'=>'Grupo',
-  'to_sort'=>'grupo',
-  'transaction_invalid'=>'ID e tranzaksionit e pavlefshme',
-  'tags'=>'Etiketat'
+    'access_denied' => 'Hyrja e Ndaluar',
+    'actions' => 'Veprimet',
+    'add_faq' => 'shtoni FAQ',
+    'answer' => 'Përgjigje',
+    'category' => 'Kategori',
+    'delete' => 'fshij',
+    'edit' => 'redakto',
+    'edit_faq' => 'Ndrysho FAQ',
+    'faq' => 'Pyetje të shpeshta',
+    'information_incomplete' => 'Disa të dhëna mungojnë.',
+    'new_faq' => 'Pyetje të shpeshta të reja',
+    'no_category_selected' => 'Ju harruat të zgjidhni një kategori',
+    'no_faq_selected' => 'Nuk është zgjedhur kategoria e FAQ-ut',
+    'really_delete' => 'Me të vërtetë fshini këtë FAQ?',
+    'sort' => 'Grupo',
+    'tags' => 'Etiketat',
+    'to_sort' => 'grupo',
+    'transaction_invalid' => 'ID e tranzaksionit e pavlefshme'
 );
 

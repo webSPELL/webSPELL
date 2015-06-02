@@ -25,28 +25,28 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Hozzáférés megtagadva',
-  'accesslevel'=>'Hozzáférhetőség',
-  'actions'=>'Lehetőségek',
-  'add_static_page'=>'Egyéni oldal hozzáadása',
-  'clanmember_only'=>'Csak klántagoknak',
-  'content'=>'Tartalom',
-  'delete'=>'Törlés',
-  'edit'=>'Szerkesztés',
-  'edit_static_page'=>'Egyéni oldal szerkesztése',
-  'title'=>'Cím',
-  'id'=>'Azonosító',
-  'new_static_page'=>'Új oldal létrehozása',
-  'public'=>'Publikus',
-  'really_delete'=>'Biztosan törölni akarod ezt az oldalt?',
-  'registered_only'=>'csak regisztrált felhasználóknak',
-  'static_pages'=>'Egyéni oldalak',
-  'transaction_invalid'=>'A művelet azonosítója érvénytelen',
-  'you_can_use_html'=>'Használhatsz HTML-Tageket',
-  'tags'=>'Címkék'
+    'access_denied' => 'Hozzáférés megtagadva',
+    'accesslevel' => 'Hozzáférhetőség',
+    'actions' => 'Lehetőségek',
+    'add_static_page' => 'Egyéni oldal hozzáadása',
+    'clanmember_only' => 'Csak klántagoknak',
+    'content' => 'Tartalom',
+    'delete' => 'Törlés',
+    'edit' => 'Szerkesztés',
+    'edit_static_page' => 'Egyéni oldal szerkesztése',
+    'id' => 'Azonosító',
+    'new_static_page' => 'Új oldal létrehozása',
+    'public' => 'Publikus',
+    'really_delete' => 'Biztosan törölni akarod ezt az oldalt?',
+    'registered_only' => 'csak regisztrált felhasználóknak',
+    'static_pages' => 'Egyéni oldalak',
+    'tags' => 'Címkék',
+    'title' => 'Cím',
+    'transaction_invalid' => 'A művelet azonosítója érvénytelen',
+    'you_can_use_html' => 'Használhatsz HTML-Tageket'
 );
 

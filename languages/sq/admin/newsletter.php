@@ -25,27 +25,27 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Hyrja e Ndaluar',
-  'error_send'=>'GABIM: Buletini nuk mund të dërgohet (Mailserver në dispozicion?)',
-  'html_mail'=>'HTML-Mail',
-  'newsletter'=>'Buletini lajmeve',
-  'no_htmlmail'=>'Përshëndetje! Sistemi juaj nuk suporton Mails HTML. Ju keni marrë mesazhin e mëposhtëm:',
-  'profile'=>'Profil',
-  'receptionists'=>'Newsletter ishte dërguar!<br><br>Recepsionist(s):',
-  'remove'=>'Ju mund të hiqni veten nga lista e postimeve-në tuajën',
-  'send'=>'dërgoni Buletinin e Lajmeve',
-  'send_to'=>'Dërgoja',
-  'test'=>'provë',
-  'test_newsletter'=>'Provë Newsletter',
-  'title'=>'Titull',
-  'transaction_invalid'=>'ID e tranzaksionit e pavlefshme',
-  'user_clanmembers'=>'Anëtarët e klanit',
-  'user_newsletter'=>'Abonentët e buletinit informativ',
-  'user_registered'=>'Përdoruesit e regjistruar (përfshirë. Anëtarët e Klanit) ',
-  'users'=>'Përdoruesit'
+    'access_denied' => 'Hyrja e Ndaluar',
+    'error_send' => 'GABIM: Buletini nuk mund të dërgohet (Mailserver në dispozicion?)',
+    'html_mail' => 'HTML-Mail',
+    'newsletter' => 'Buletini lajmeve',
+    'no_htmlmail' => 'Përshëndetje! Sistemi juaj nuk suporton Mails HTML. Ju keni marrë mesazhin e mëposhtëm:',
+    'profile' => 'Profil',
+    'receptionists' => 'Newsletter ishte dërguar!<br><br>Recepsionist(s):',
+    'remove' => 'Ju mund të hiqni veten nga lista e postimeve-në tuajën',
+    'send' => 'dërgoni Buletinin e Lajmeve',
+    'send_to' => 'Dërgoja',
+    'test' => 'provë',
+    'test_newsletter' => 'Provë Newsletter',
+    'title' => 'Titull',
+    'transaction_invalid' => 'ID e tranzaksionit e pavlefshme',
+    'user_clanmembers' => 'Anëtarët e klanit',
+    'user_newsletter' => 'Abonentët e buletinit informativ',
+    'user_registered' => 'Përdoruesit e regjistruar (përfshirë. Anëtarët e Klanit) ',
+    'users' => 'Përdoruesit'
 );
 

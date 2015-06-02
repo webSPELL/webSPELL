@@ -25,29 +25,29 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Hyrja e Ndaluar',
-  'actions'=>'Veprimet',
-  'add_smiley'=>'shtoni Smiley',
-  'back'=>'mbrapsht',
-  'delete'=>'fshij',
-  'edit'=>'redakto',
-  'edit_smiley'=>'edito Smiley',
-  'example'=>'(f.e.: ":oO:")',
-  'fill_form'=>'Lutemi të plotësoni formularin e saktë.',
-  'format_incorrect'=>'Formati i ikonës ishte i gabuar. Ju lutemi ngarkoni vetëm ikona në * .gif format.',
-  'icon'=>'Ikonë',
-  'icons'=>'Ikonat',
-  'new_smiley'=>'Smiley i ri',
-  'no_entries'=>'Nuk ka hyrje',
-  'pattern'=>'Model',
-  'present_icon'=>'Ikonë e pranishme',
-  'really_delete'=>'Me të vërtetë fshini këtë Buzëqeshje?',
-  'smilies'=>'Ikona emocionesh',
-  'smiley_name'=>'Emri Smiley',
-  'transaction_invalid'=>'ID e tranzaksionit e pavlefshme'
+    'access_denied' => 'Hyrja e Ndaluar',
+    'actions' => 'Veprimet',
+    'add_smiley' => 'shtoni Smiley',
+    'back' => 'mbrapsht',
+    'delete' => 'fshij',
+    'edit' => 'redakto',
+    'edit_smiley' => 'edito Smiley',
+    'example' => '(f.e.: ":oO:")',
+    'fill_form' => 'Lutemi të plotësoni formularin e saktë.',
+    'format_incorrect' => 'Formati i ikonës ishte i gabuar. Ju lutemi ngarkoni vetëm ikona në * .gif format.',
+    'icon' => 'Ikonë',
+    'icons' => 'Ikonat',
+    'new_smiley' => 'Smiley i ri',
+    'no_entries' => 'Nuk ka hyrje',
+    'pattern' => 'Model',
+    'present_icon' => 'Ikonë e pranishme',
+    'really_delete' => 'Me të vërtetë fshini këtë Buzëqeshje?',
+    'smiley_name' => 'Emri Smiley',
+    'smilies' => 'Ikona emocionesh',
+    'transaction_invalid' => 'ID e tranzaksionit e pavlefshme'
 );
 

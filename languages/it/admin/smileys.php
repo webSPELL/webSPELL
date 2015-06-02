@@ -25,29 +25,29 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Accesso negato',
-  'actions'=>'Azioni',
-  'add_smiley'=>'Aggiungi Smiley',
-  'back'=>'indietro',
-  'delete'=>'elimina',
-  'edit'=>'modifica',
-  'edit_smiley'=>'modifica Smiley',
-  'example'=>'(p.e.: ":oO:")',
-  'fill_form'=>'Si prega di compilare il modulo correttamente.',
-  'format_incorrect'=>'Il formato dell\'icona non è corretto. Si prega di caricare le icone solo in formato *.gif.',
-  'icon'=>'Icona',
-  'icons'=>'Icone',
-  'new_smiley'=>'nuovo Smiley',
-  'no_entries'=>'Nessun voce',
-  'pattern'=>'Pattern',
-  'present_icon'=>'Icona attuale',
-  'really_delete'=>'Davvero eliminare questo Smiley?',
-  'smilies'=>'Smilies',
-  'smiley_name'=>'Nome del Smiley',
-  'transaction_invalid'=>'ID della transazione non valido'
+    'access_denied' => 'Accesso negato',
+    'actions' => 'Azioni',
+    'add_smiley' => 'Aggiungi Smiley',
+    'back' => 'indietro',
+    'delete' => 'elimina',
+    'edit' => 'modifica',
+    'edit_smiley' => 'modifica Smiley',
+    'example' => '(p.e.: ":oO:")',
+    'fill_form' => 'Si prega di compilare il modulo correttamente.',
+    'format_incorrect' => 'Il formato dell\'icona non è corretto. Si prega di caricare le icone solo in formato *.gif.',
+    'icon' => 'Icona',
+    'icons' => 'Icone',
+    'new_smiley' => 'nuovo Smiley',
+    'no_entries' => 'Nessun voce',
+    'pattern' => 'Pattern',
+    'present_icon' => 'Icona attuale',
+    'really_delete' => 'Davvero eliminare questo Smiley?',
+    'smiley_name' => 'Nome del Smiley',
+    'smilies' => 'Smilies',
+    'transaction_invalid' => 'ID della transazione non valido'
 );
 

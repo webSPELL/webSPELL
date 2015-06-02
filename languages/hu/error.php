@@ -25,11 +25,11 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-    'error_404'=>'Hiba 404',
-    'message_404'=>'Ez oldalak nem létezik.'
+    'error_404' => 'Hiba 404',
+    'message_404' => 'Ez oldalak nem létezik.'
 );
 

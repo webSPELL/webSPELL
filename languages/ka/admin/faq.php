@@ -25,27 +25,27 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'მიუწვდომელია',
-  'actions'=>'ქმედებები',
-  'add_faq'=>'დამატება კითხვა-პასუხი',
-  'answer'=>'პასუხი',
-  'category'=>'კატეგორია',
-  'delete'=>'წაშლა',
-  'edit'=>'რედაქტირება',
-  'edit_faq'=>'რედაქტირება FAQ',
-  'faq'=>'კითხვა-პასუხი',
-  'information_incomplete'=>'ზოგიერთი ინფორმაცია დაკარგულია.',
-  'new_faq'=>'ახალი FAQ',
-  'no_category_selected'=>'დაგავიწყდათ კატეგორიის არჩევა',
-  'no_faq_selected'=>'არ არის FAQ კატეგორია არჩეული',
-  'really_delete'=>'წავშალოთ FAQ?',
-  'sort'=>'დაფასოება',
-  'to_sort'=>'დაფასოება',
-  'transaction_invalid'=>'ID არასწორია',
-  'tags'=>'საკვანძო სიტყვები'
+    'access_denied' => 'მიუწვდომელია',
+    'actions' => 'ქმედებები',
+    'add_faq' => 'დამატება კითხვა-პასუხი',
+    'answer' => 'პასუხი',
+    'category' => 'კატეგორია',
+    'delete' => 'წაშლა',
+    'edit' => 'რედაქტირება',
+    'edit_faq' => 'რედაქტირება FAQ',
+    'faq' => 'კითხვა-პასუხი',
+    'information_incomplete' => 'ზოგიერთი ინფორმაცია დაკარგულია.',
+    'new_faq' => 'ახალი FAQ',
+    'no_category_selected' => 'დაგავიწყდათ კატეგორიის არჩევა',
+    'no_faq_selected' => 'არ არის FAQ კატეგორია არჩეული',
+    'really_delete' => 'წავშალოთ FAQ?',
+    'sort' => 'დაფასოება',
+    'tags' => 'საკვანძო სიტყვები',
+    'to_sort' => 'დაფასოება',
+    'transaction_invalid' => 'ID არასწორია'
 );
 

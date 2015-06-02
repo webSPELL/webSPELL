@@ -25,13 +25,13 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Hyrja e Ndaluar',
-  'max'=>'Maksimum',
-  'min'=>'Minimumi',
-  'not_logged_in'=>'Nuk je i regjistruar'
+    'access_denied' => 'Hyrja e Ndaluar',
+    'max' => 'Maksimum',
+    'min' => 'Minimumi',
+    'not_logged_in' => 'Nuk je i regjistruar'
 );
 

@@ -25,27 +25,27 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Accesso negato',
-  'actions'=>'Azioni',
-  'add_faq'=>'aggiungere FAQ',
-  'answer'=>'risposta',
-  'category'=>'Categoria',
-  'delete'=>'elimina',
-  'edit'=>'modifica',
-  'edit_faq'=>'modificare FAQ',
-  'faq'=>'FAQ',
-  'information_incomplete'=>'Informazioni incomplete.',
-  'new_faq'=>'nuovo FAQ',
-  'no_category_selected'=>'Hai dimenticato di scegliere una categoria',
-  'no_faq_selected'=>'Nessuna categoria FAQ selezionata',
-  'really_delete'=>'Davvero eliminare questa FAQ?',
-  'sort'=>'assortire',
-  'to_sort'=>'assortire',
-  'transaction_invalid'=>'ID della transazione non valido',
-  'tags'=>'Tags'
+    'access_denied' => 'Accesso negato',
+    'actions' => 'Azioni',
+    'add_faq' => 'aggiungere FAQ',
+    'answer' => 'risposta',
+    'category' => 'Categoria',
+    'delete' => 'elimina',
+    'edit' => 'modifica',
+    'edit_faq' => 'modificare FAQ',
+    'faq' => 'FAQ',
+    'information_incomplete' => 'Informazioni incomplete.',
+    'new_faq' => 'nuovo FAQ',
+    'no_category_selected' => 'Hai dimenticato di scegliere una categoria',
+    'no_faq_selected' => 'Nessuna categoria FAQ selezionata',
+    'really_delete' => 'Davvero eliminare questa FAQ?',
+    'sort' => 'assortire',
+    'tags' => 'Tags',
+    'to_sort' => 'assortire',
+    'transaction_invalid' => 'ID della transazione non valido'
 );
 

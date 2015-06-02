@@ -25,19 +25,21 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
-    'file_too_big'=>'Datei zu groß',
-    'incomplete_upload'=>'Unvollständiger Upload',
-    'no_file_uploaded'=>'Keine Datei hochgeladen',
-    'no_temp_folder_available'=>'Es stehen keine temporären Ordner zur Verfügung. Bitte wenden Sie sich an den Administrator',
-    'cant_write_temp_file'=>'Temporäre Datei kann nicht geschrieben werden. Bitte wenden Sie sich an den Administrator',
-    'unexpected_error'=>'Unerwarteter Fehler',
-    'cant_copy_file'=>'Datei kann nicht kopiert werden. Bitte wenden Sie sich an den Administrator',
-    'image_too_big'=>'Das Bild ist zu groß (max Größe %1$d px & %2$d px)',
-    'broken_image'=>'Die Bilddatei scheint kaputt zu sein',
-    'unsupported_image_type'=>'Nicht unterstützter Bildtyp',
-    'errors_there'=>'Es gibt Fehler',
-    'file_already_exists'=>'Datei existiert bereits'
+
+    'broken_image' => 'Die Bilddatei scheint kaputt zu sein',
+    'cant_copy_file' => 'Datei kann nicht kopiert werden. Bitte wenden Sie sich an den Administrator',
+    'cant_write_temp_file' => 'Temporäre Datei kann nicht geschrieben werden. Bitte wenden Sie sich an den Administrator',
+    'errors_there' => 'Es gibt Fehler',
+    'file_already_exists' => 'Datei existiert bereits',
+    'file_too_big' => 'Datei zu groß',
+    'image_too_big' => 'Das Bild ist zu groß (max Größe %1$d px & %2$d px)',
+    'incomplete_upload' => 'Unvollständiger Upload',
+    'no_file_uploaded' => 'Keine Datei hochgeladen',
+    'no_temp_folder_available' => 'Es stehen keine temporären Ordner zur Verfügung. Bitte wenden Sie sich an den Administrator',
+    'unexpected_error' => 'Unerwarteter Fehler',
+    'unsupported_image_type' => 'Nicht unterstützter Bildtyp'
 );
+

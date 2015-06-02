@@ -25,22 +25,22 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Accesso negato',
-  'allowed_commands'=>'<b>Ammessi comandi:</b> inserire, altre tabelle, selezionare',
-  'backup_file'=>'File di backup',
-  'database'=>'Database',
-  'export'=>'Export / Download Backup',
-  'import_info'=>'Scegli un file di backup da cui si desidera importare dati SQL.<br><br><b>Importante:</b> Fai un backup primo che importi una altra!',
-  'optimize'=>'Ottimizza database',
-  'select_option'=>'Si prega di selezionare l\'opzione',
-  'submit'=>'Invia',
-  'sql_query'=>'SQL Query',
-  'syntax_not_allowed'=>'Sintassi non è permesso!',
-  'upload'=>'Carica',
-  'transaction_invalid'=>'ID della transazione non valido'
+    'access_denied' => 'Accesso negato',
+    'allowed_commands' => '<b>Ammessi comandi:</b> inserire, altre tabelle, selezionare',
+    'backup_file' => 'File di backup',
+    'database' => 'Database',
+    'export' => 'Export / Download Backup',
+    'import_info' => 'Scegli un file di backup da cui si desidera importare dati SQL.<br><br><b>Importante:</b> Fai un backup primo che importi una altra!',
+    'optimize' => 'Ottimizza database',
+    'select_option' => 'Si prega di selezionare l\'opzione',
+    'sql_query' => 'SQL Query',
+    'submit' => 'Invia',
+    'syntax_not_allowed' => 'Sintassi non è permesso!',
+    'transaction_invalid' => 'ID della transazione non valido',
+    'upload' => 'Carica'
 );
 

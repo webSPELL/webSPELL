@@ -25,14 +25,14 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'about'=>'Rólunk',
-  'access_denied'=>'Hozzáférés megtagadva',
-  'transaction_invalid'=>'A művelet azonosítója érvénytelen',
-  'update'=>'Frissítés',
-  'you_can_use_html'=>'Használhatsz HTML-Tageket'
+    'about' => 'Rólunk',
+    'access_denied' => 'Hozzáférés megtagadva',
+    'transaction_invalid' => 'A művelet azonosítója érvénytelen',
+    'update' => 'Frissítés',
+    'you_can_use_html' => 'Használhatsz HTML-Tageket'
 );
 

@@ -25,20 +25,20 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Hozzáférés megtagadva',
-  'lock'=>'Lezárás',
-  'locked_since'=>'Az oldal lezárásának kezdete:',
-  'pagelock'=>'Oldal lezárása',
-  'page_locked'=>'<b>Az oldal le van zárva!</b><br>Jelenleg csak az adminok léphetnek be.',
-  'page_unlocked'=>'<b>Az oldal újra nyitva!</b>',
-  'settings'=>'Beállítások',
-  'transaction_invalid'=>'A művelet azonosítója érvénytelen',
-  'unlock'=>'Feloldás',
-  'unlock_page'=>'Biztosan meg akarod nyitni az oldalt?',
-  'you_can_use_html'=>'Használhatsz HTML-Tageket'
+    'access_denied' => 'Hozzáférés megtagadva',
+    'lock' => 'Lezárás',
+    'locked_since' => 'Az oldal lezárásának kezdete:',
+    'page_locked' => '<b>Az oldal le van zárva!</b><br>Jelenleg csak az adminok léphetnek be.',
+    'page_unlocked' => '<b>Az oldal újra nyitva!</b>',
+    'pagelock' => 'Oldal lezárása',
+    'settings' => 'Beállítások',
+    'transaction_invalid' => 'A művelet azonosítója érvénytelen',
+    'unlock' => 'Feloldás',
+    'unlock_page' => 'Biztosan meg akarod nyitni az oldalt?',
+    'you_can_use_html' => 'Használhatsz HTML-Tageket'
 );
 

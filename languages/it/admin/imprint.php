@@ -25,16 +25,16 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Accesso negato',
-  'automatic'=>'automatico',
-  'imprint'=>'Colofone',
-  'manual'=>'Manualmente (utilizzare il campo di testo sotto)',
-  'transaction_invalid'=>'ID della transazione non valido',
-  'update'=>'aggiorna',
-  'you_can_use_html'=>'È possibile di utilizzare HTML'
+    'access_denied' => 'Accesso negato',
+    'automatic' => 'automatico',
+    'imprint' => 'Colofone',
+    'manual' => 'Manualmente (utilizzare il campo di testo sotto)',
+    'transaction_invalid' => 'ID della transazione non valido',
+    'update' => 'aggiorna',
+    'you_can_use_html' => 'È possibile di utilizzare HTML'
 );
 

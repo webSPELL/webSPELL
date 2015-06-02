@@ -103,7 +103,7 @@ Merci pour votre intérêt
     &#8226; <a href="index.php?site=register">S\'enregistrer</a><br>
     &#8226; <a href="index.php?site=login">Connexion</a>',
     'old_password' => 'Ancien mot de passe',
-    'old_pw_not_valid' => 'Votre ancien mot de passe n\\`est pas valide !',
+    'old_pw_not_valid' => 'Votre ancien mot de passe n\`est pas valide !',
     'options' => 'Options',
     'or' => 'ou',
     'password' => 'Mot de passe',

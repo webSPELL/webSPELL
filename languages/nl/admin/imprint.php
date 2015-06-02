@@ -25,16 +25,16 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Toegang geweigerd',
-  'automatic'=>'Automatisch',
-  'imprint'=>'Imprint',
-  'manual'=>'Handmatig (gebruik het tekstveld hieronder)',
-  'transaction_invalid'=>'Transactie ID ongeldig',
-  'update'=>'bijwerken',
-  'you_can_use_html'=>'U kunt gebruik maken van HTML-Tags'
+    'access_denied' => 'Toegang geweigerd',
+    'automatic' => 'Automatisch',
+    'imprint' => 'Imprint',
+    'manual' => 'Handmatig (gebruik het tekstveld hieronder)',
+    'transaction_invalid' => 'Transactie ID ongeldig',
+    'update' => 'bijwerken',
+    'you_can_use_html' => 'U kunt gebruik maken van HTML-Tags'
 );
 

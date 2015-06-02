@@ -25,22 +25,22 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Hyrja e Ndaluar',
-  'allowed_commands'=>'<b>Komandat e lejuara:</b> insert, alter table, select',
-  'backup_file'=>'Dokument rezervë',
-  'database'=>'Baza e të dhënave',
-  'export'=>'Exporto / Shkarko Backup-in',
-  'import_info'=>'Zgjidh një skedar për të importuar të dhënat sql nga. <br><br> <b>important:</b> Krijo një backup para se të importoni një tjetër!',
-  'optimize'=>'Optimizo Bazën E Të Dhënave',
-  'select_option'=>'Ju lutem, përzgjidhni Mundësitë',
-  'submit'=>'Paraqit',
-  'sql_query'=>'SQL Pyetësor',
-  'syntax_not_allowed'=>'Sintaksa nuk lejohet!',
-  'upload'=>'Ngarko',
-  'transaction_invalid'=>'ID e tranzaksionit e pavlefshme'
+    'access_denied' => 'Hyrja e Ndaluar',
+    'allowed_commands' => '<b>Komandat e lejuara:</b> insert, alter table, select',
+    'backup_file' => 'Dokument rezervë',
+    'database' => 'Baza e të dhënave',
+    'export' => 'Exporto / Shkarko Backup-in',
+    'import_info' => 'Zgjidh një skedar për të importuar të dhënat sql nga. <br><br> <b>important:</b> Krijo një backup para se të importoni një tjetër!',
+    'optimize' => 'Optimizo Bazën E Të Dhënave',
+    'select_option' => 'Ju lutem, përzgjidhni Mundësitë',
+    'sql_query' => 'SQL Pyetësor',
+    'submit' => 'Paraqit',
+    'syntax_not_allowed' => 'Sintaksa nuk lejohet!',
+    'transaction_invalid' => 'ID e tranzaksionit e pavlefshme',
+    'upload' => 'Ngarko'
 );
 

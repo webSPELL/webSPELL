@@ -25,25 +25,25 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Acceso Denegado',
-  'actions'=>'Acciones',
-  'add_category'=>'agregar Categoría',
-  'category'=>'Categoría',
-  'category_name'=>'Nombre de categoría',
-  'delete'=>'borrar',
-  'description'=>'Descripción',
-  'edit'=>'editar',
-  'edit_category'=>'editar Categoría',
-  'faq_categories'=>'FAQ: Categorías',
-  'information_incomplete'=>'Falta información.',
-  'new_category'=>'nueva Categoría',
-  'really_delete'=>'Realmente quieres eliminar esta categoría y la categoría de FAQs?',
-  'sort'=>'Ordenar',
-  'to_sort'=>'ordenar',
-  'transaction_invalid'=>'ID de transacción no válida'
+    'access_denied' => 'Acceso Denegado',
+    'actions' => 'Acciones',
+    'add_category' => 'agregar Categoría',
+    'category' => 'Categoría',
+    'category_name' => 'Nombre de categoría',
+    'delete' => 'borrar',
+    'description' => 'Descripción',
+    'edit' => 'editar',
+    'edit_category' => 'editar Categoría',
+    'faq_categories' => 'FAQ: Categorías',
+    'information_incomplete' => 'Falta información.',
+    'new_category' => 'nueva Categoría',
+    'really_delete' => 'Realmente quieres eliminar esta categoría y la categoría de FAQs?',
+    'sort' => 'Ordenar',
+    'to_sort' => 'ordenar',
+    'transaction_invalid' => 'ID de transacción no válida'
 );
 

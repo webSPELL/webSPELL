@@ -25,24 +25,24 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Приступ одбијен',
-  'actions'=>'Акције',
-  'add_category'=>'додај категорију',
-  'category'=>'Категорија',
-  'category_name'=>'Име категорије',
-  'delete'=>'Избриши',
-  'enter_name'=>'Морате да унесете име',
-  'edit'=>'уреди',
-  'edit_category'=>'уређивање категорије',
-  'file_categories'=>'Категорије документа',
-  'main'=>'Почетна',
-  'new_category'=>'Нова категорија',
-  'really_delete'=>'Стварно обришите ову категорију?',
-  'sub_category'=>'Под-Категорија од',
-  'transaction_invalid'=>'ИД трансакције неважећи'
+    'access_denied' => 'Приступ одбијен',
+    'actions' => 'Акције',
+    'add_category' => 'додај категорију',
+    'category' => 'Категорија',
+    'category_name' => 'Име категорије',
+    'delete' => 'Избриши',
+    'edit' => 'уреди',
+    'edit_category' => 'уређивање категорије',
+    'enter_name' => 'Морате да унесете име',
+    'file_categories' => 'Категорије документа',
+    'main' => 'Почетна',
+    'new_category' => 'Нова категорија',
+    'really_delete' => 'Стварно обришите ову категорију?',
+    'sub_category' => 'Под-Категорија од',
+    'transaction_invalid' => 'ИД трансакције неважећи'
 );
 

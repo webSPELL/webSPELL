@@ -25,20 +25,20 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Toegang geweigerd',
-  'lock'=>'vergrendelen',
-  'locked_since'=>'De pagina is vergrendeld sinds',
-  'pagelock'=>'Paginavergrendeling',
-  'page_locked'=>'<b>Pagina vergrendeld!</b><br>Alleen Beheerders kunnen momenteel toegang krijgen tot de Pagina.',
-  'page_unlocked'=>'<b>Pagina ontgrendeld!</b>',
-  'settings'=>'Instellingen',
-  'transaction_invalid'=>'Transactie ID ongeldig',
-  'unlock'=>'ontgrendelen',
-  'unlock_page'=>'Wilt u de pagina ontgrendelen?',
-  'you_can_use_html'=>'U kunt gebruik maken van HTML-Tags'
+    'access_denied' => 'Toegang geweigerd',
+    'lock' => 'vergrendelen',
+    'locked_since' => 'De pagina is vergrendeld sinds',
+    'page_locked' => '<b>Pagina vergrendeld!</b><br>Alleen Beheerders kunnen momenteel toegang krijgen tot de Pagina.',
+    'page_unlocked' => '<b>Pagina ontgrendeld!</b>',
+    'pagelock' => 'Paginavergrendeling',
+    'settings' => 'Instellingen',
+    'transaction_invalid' => 'Transactie ID ongeldig',
+    'unlock' => 'ontgrendelen',
+    'unlock_page' => 'Wilt u de pagina ontgrendelen?',
+    'you_can_use_html' => 'U kunt gebruik maken van HTML-Tags'
 );
 

@@ -25,11 +25,11 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-    'error_404'=>'Error 404',
-    'message_404'=>'Deze pagina bestaat niet.'
+    'error_404' => 'Error 404',
+    'message_404' => 'Deze pagina bestaat niet.'
 );
 

@@ -25,14 +25,14 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'about'=>'crwdns21714:0crwdne21714:0',
-  'access_denied'=>'crwdns21715:0crwdne21715:0',
-  'transaction_invalid'=>'crwdns21716:0crwdne21716:0',
-  'update'=>'crwdns21717:0crwdne21717:0',
-  'you_can_use_html'=>'crwdns21718:0crwdne21718:0'
+    'about' => 'crwdns21714:0crwdne21714:0',
+    'access_denied' => 'crwdns21715:0crwdne21715:0',
+    'transaction_invalid' => 'crwdns21716:0crwdne21716:0',
+    'update' => 'crwdns21717:0crwdne21717:0',
+    'you_can_use_html' => 'crwdns21718:0crwdne21718:0'
 );
 

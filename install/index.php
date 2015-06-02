@@ -65,7 +65,7 @@ if (!isset($_GET['step'])) {
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="description" content="Clanpage using webSPELL 4 CMS">
     <meta name="author" content="webspell.org">
-    <meta name="copyright" content="Copyright 2005-2014 by webspell.org">
+    <meta name="copyright" content="Copyright 2005-2015 by webspell.org">
     <meta name="generator" content="webSPELL">
     <title>webSPELL Installation</title>
     <link href="../components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">

@@ -25,29 +25,29 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
-  'actions'=>'Actions',
-  'add_smiley'=>'add Smiley',
-  'back'=>'back',
-  'delete'=>'delete',
-  'edit'=>'edit',
-  'edit_smiley'=>'edit Smiley',
-  'example'=>'(f.e.: ":oO:")',
-  'fill_form'=>'Please fill in the form correctly.',
-  'format_incorrect'=>'The format of the icon was incorrect. Please Upload only icons in *.gif format.',
-  'icon'=>'Icon',
-  'icons'=>'Icons',
-  'new_smiley'=>'new Smiley',
-  'no_entries'=>'No entries',
-  'pattern'=>'Pattern',
-  'present_icon'=>'Present Icon',
-  'really_delete'=>'Really delete this Smiley?',
-  'smilies'=>'Smilies',
-  'smiley_name'=>'Smiley Name',
-  'transaction_invalid'=>'Transaction ID invalid'
+    'access_denied' => 'Access denied',
+    'actions' => 'Actions',
+    'add_smiley' => 'add Smiley',
+    'back' => 'back',
+    'delete' => 'delete',
+    'edit' => 'edit',
+    'edit_smiley' => 'edit Smiley',
+    'example' => '(f.e.: ":oO:")',
+    'fill_form' => 'Please fill in the form correctly.',
+    'format_incorrect' => 'The format of the icon was incorrect. Please Upload only icons in *.gif format.',
+    'icon' => 'Icon',
+    'icons' => 'Icons',
+    'new_smiley' => 'new Smiley',
+    'no_entries' => 'No entries',
+    'pattern' => 'Pattern',
+    'present_icon' => 'Present Icon',
+    'really_delete' => 'Really delete this Smiley?',
+    'smiley_name' => 'Smiley Name',
+    'smilies' => 'Smilies',
+    'transaction_invalid' => 'Transaction ID invalid'
 );
 

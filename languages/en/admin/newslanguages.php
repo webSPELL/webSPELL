@@ -25,24 +25,24 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
-  'actions'=>'Actions',
-  'add_language'=>'add Language',
-  'delete'=>'delete',
-  'edit'=>'edit',
-  'edit_language'=>'edit Language',
-  'flag'=>'Flags',
-  'information_incomplete'=>'Some information is missing.',
-  'language'=>'Language',
-  'news_languages'=>'News-Languages',
-  'new_language'=>'new Language',
-  'preview'=>'Preview',
-  'really_delete'=>'Really delete this Language?',
-  'title'=>'Title',
-  'transaction_invalid'=>'Transaction ID invalid'
+    'access_denied' => 'Access denied',
+    'actions' => 'Actions',
+    'add_language' => 'add Language',
+    'delete' => 'delete',
+    'edit' => 'edit',
+    'edit_language' => 'edit Language',
+    'flag' => 'Flags',
+    'information_incomplete' => 'Some information is missing.',
+    'language' => 'Language',
+    'new_language' => 'new Language',
+    'news_languages' => 'News-Languages',
+    'preview' => 'Preview',
+    'really_delete' => 'Really delete this Language?',
+    'title' => 'Title',
+    'transaction_invalid' => 'Transaction ID invalid'
 );
 

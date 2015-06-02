@@ -25,20 +25,20 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Hyrja e Ndaluar',
-  'error'=>'Serveri nuk Përditëso-compatible ose dokumentit nuk është në dispozicion në',
-  'filename'=>'Emri fishierit',
-  'get_new_version'=>'Të merrni më të reja webSPELL Version këtu!',
-  'information'=>'Informacion',
-  'new_functions'=>'Funksionet e reja për webSPELL në dispozicion',
-  'new_updates'=>'Përditësime të reja për webSPELL në dispozicion',
-  'new_version'=>'webSPELL Version i Ri në dispozicion',
-  'no_updates'=>'S\'ka freskime!',
-  'version'=>'Versioni',
-  'webspell_update'=>'përditësimi webSPELL-it'
+    'access_denied' => 'Hyrja e Ndaluar',
+    'error' => 'Serveri nuk Përditëso-compatible ose dokumentit nuk është në dispozicion në',
+    'filename' => 'Emri fishierit',
+    'get_new_version' => 'Të merrni më të reja webSPELL Version këtu!',
+    'information' => 'Informacion',
+    'new_functions' => 'Funksionet e reja për webSPELL në dispozicion',
+    'new_updates' => 'Përditësime të reja për webSPELL në dispozicion',
+    'new_version' => 'webSPELL Version i Ri në dispozicion',
+    'no_updates' => 'S\'ka freskime!',
+    'version' => 'Versioni',
+    'webspell_update' => 'përditësimi webSPELL-it'
 );
 

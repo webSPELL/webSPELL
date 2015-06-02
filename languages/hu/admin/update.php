@@ -25,20 +25,20 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Hozzáférés megtagadva',
-  'error'=>'A szerver nem kompatibilis a frissítéshez vagy a fájl nem elérhető',
-  'filename'=>'Fájl neve',
-  'get_new_version'=>'Szerezd meg a legfrissebb webSPELL Verziót itt!',
-  'information'=>'Információ',
-  'new_functions'=>'Elérhetőek új funkciók a webSPELL-hez',
-  'new_updates'=>'Elérhetőek új frissítések a webSPELL-hez',
-  'new_version'=>'Elérhető az új webSPELL verzió',
-  'no_updates'=>'Nincs elérhető frissítés!',
-  'version'=>'Verzió',
-  'webspell_update'=>'webSPELL Frissítés'
+    'access_denied' => 'Hozzáférés megtagadva',
+    'error' => 'A szerver nem kompatibilis a frissítéshez vagy a fájl nem elérhető',
+    'filename' => 'Fájl neve',
+    'get_new_version' => 'Szerezd meg a legfrissebb webSPELL Verziót itt!',
+    'information' => 'Információ',
+    'new_functions' => 'Elérhetőek új funkciók a webSPELL-hez',
+    'new_updates' => 'Elérhetőek új frissítések a webSPELL-hez',
+    'new_version' => 'Elérhető az új webSPELL verzió',
+    'no_updates' => 'Nincs elérhető frissítés!',
+    'version' => 'Verzió',
+    'webspell_update' => 'webSPELL Frissítés'
 );
 

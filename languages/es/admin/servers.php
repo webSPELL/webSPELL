@@ -25,26 +25,26 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Acceso Denegado',
-  'add_server'=>'añadir Servidor',
-  'actions'=>'Acciones',
-  'delete'=>'borrar',
-  'edit'=>'editar',
-  'edit_server'=>'editar Servidor',
-  'game'=>'Juego',
-  'info'=>'Info',
-  'ip_port'=>'IP del servidor:Puerto',
-  'new_server'=>'nuevo Servidor',
-  'no_server'=>'No hay servidores disponibles',
-  'really_delete'=>'¿Seguro que quieres eliminar este Servidor?',
-  'servers'=>'Servidores',
-  'server_name'=>'Nombre Del Servidor',
-  'sort'=>'Ordenar',
-  'transaction_invalid'=>'ID de transacción no válida',
-  'to_sort'=>'ordenar'
+    'access_denied' => 'Acceso Denegado',
+    'actions' => 'Acciones',
+    'add_server' => 'añadir Servidor',
+    'delete' => 'borrar',
+    'edit' => 'editar',
+    'edit_server' => 'editar Servidor',
+    'game' => 'Juego',
+    'info' => 'Info',
+    'ip_port' => 'IP del servidor:Puerto',
+    'new_server' => 'nuevo Servidor',
+    'no_server' => 'No hay servidores disponibles',
+    'really_delete' => '¿Seguro que quieres eliminar este Servidor?',
+    'server_name' => 'Nombre Del Servidor',
+    'servers' => 'Servidores',
+    'sort' => 'Ordenar',
+    'to_sort' => 'ordenar',
+    'transaction_invalid' => 'ID de transacción no válida'
 );
 

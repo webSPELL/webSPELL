@@ -25,25 +25,25 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Приступ одбијен',
-  'actions'=>'Акције',
-  'add_rubric'=>'додај категорију',
-  'back'=>'назад',
-  'delete'=>'Избриши',
-  'edit'=>'уреди',
-  'edit_rubric'=>'уреди категорију',
-  'format_incorrect'=>'Формат иконе је нетачан. Молимо поставите само банер у * .гиф, * .јпг и .пнг * формату.',
-  'information_incomplete'=>'Неке информације недостају.',
-  'new_rubric'=>'Нова Рубрика',
-  'news_rubrics'=>'Вести Категорије',
-  'picture'=>'Слика',
-  'picture_upload'=>'Слика Поставити',
-  'really_delete'=>'Заиста обрисати ову рубрику?',
-  'rubric_name'=>'Рубрика Име',
-  'transaction_invalid'=>'ИД трансакције неважећи'
+    'access_denied' => 'Приступ одбијен',
+    'actions' => 'Акције',
+    'add_rubric' => 'додај категорију',
+    'back' => 'назад',
+    'delete' => 'Избриши',
+    'edit' => 'уреди',
+    'edit_rubric' => 'уреди категорију',
+    'format_incorrect' => 'Формат иконе је нетачан. Молимо поставите само банер у * .гиф, * .јпг и .пнг * формату.',
+    'information_incomplete' => 'Неке информације недостају.',
+    'new_rubric' => 'Нова Рубрика',
+    'news_rubrics' => 'Вести Категорије',
+    'picture' => 'Слика',
+    'picture_upload' => 'Слика Поставити',
+    'really_delete' => 'Заиста обрисати ову рубрику?',
+    'rubric_name' => 'Рубрика Име',
+    'transaction_invalid' => 'ИД трансакције неважећи'
 );
 

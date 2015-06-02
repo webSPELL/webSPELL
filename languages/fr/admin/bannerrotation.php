@@ -25,33 +25,33 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Accès refusé',
-  'actions'=>'Actions',
-  'add_banner'=>'ajouter Bannière',
-  'back'=>'Retour',
-  'banner'=>'Bannière',
-  'bannerrotation'=>'Rotation de la bannière',
-  'banner_name'=>'Nom de la bannière',
-  'banner_upload'=>'Upload bannière',
-  'banner_url'=>'Url de la bannière',
-  'clicks'=>'Clics (par jour)',
-  'delete'=>'Supprimer',
-  'edit'=>'Editer',
-  'edit_banner'=>'Editer la bannière',
-  'fill_correctly'=>'Merci de remplir le formulaire correctement.',
-  'format_incorrect'=>'Le format de l\'icône était incorrecte. S\'il vous plaît télécharger uniquement une bannière au format * .gif, * .jpg ou * .png.',
-  'is_displayed'=>'Est affiché?',
-  'new_banner'=>'Nouvelle bannière',
-  'no'=>'Non',
-  'no_upload'=>'Aucune Image téléchargée',
-  'no_entries'=>'Aucune entrée',
-  'present_banner'=>'Bannière actuelle',
-  'really_delete'=>'Voulez-vous vraiment supprimer cette bannière?',
-  'transaction_invalid'=>'Transaction ID invalide',
-  'yes'=>'Oui'
+    'access_denied' => 'Accès refusé',
+    'actions' => 'Actions',
+    'add_banner' => 'ajouter Bannière',
+    'back' => 'Retour',
+    'banner' => 'Bannière',
+    'banner_name' => 'Nom de la bannière',
+    'banner_upload' => 'Upload bannière',
+    'banner_url' => 'Url de la bannière',
+    'bannerrotation' => 'Rotation de la bannière',
+    'clicks' => 'Clics (par jour)',
+    'delete' => 'Supprimer',
+    'edit' => 'Editer',
+    'edit_banner' => 'Editer la bannière',
+    'fill_correctly' => 'Merci de remplir le formulaire correctement.',
+    'format_incorrect' => 'Le format de l\'icône était incorrecte. S\'il vous plaît télécharger uniquement une bannière au format * .gif, * .jpg ou * .png.',
+    'is_displayed' => 'Est affiché?',
+    'new_banner' => 'Nouvelle bannière',
+    'no' => 'Non',
+    'no_entries' => 'Aucune entrée',
+    'no_upload' => 'Aucune Image téléchargée',
+    'present_banner' => 'Bannière actuelle',
+    'really_delete' => 'Voulez-vous vraiment supprimer cette bannière?',
+    'transaction_invalid' => 'Transaction ID invalide',
+    'yes' => 'Oui'
 );
 

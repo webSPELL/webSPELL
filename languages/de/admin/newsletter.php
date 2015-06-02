@@ -25,29 +25,29 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Zugriff verweigert',
-  'error_send'=>'FEHLER: Newsletter konnte nicht versandt werden (Mailserver vorhanden?)',
-  'html_mail'=>'HTML-Nachricht',
-  'newsletter'=>'Newsletter',
-  'no_htmlmail'=>'Hallo!
+    'access_denied' => 'Zugriff verweigert',
+    'error_send' => 'FEHLER: Newsletter konnte nicht versandt werden (Mailserver vorhanden?)',
+    'html_mail' => 'HTML-Nachricht',
+    'newsletter' => 'Newsletter',
+    'no_htmlmail' => 'Hallo!
 Dein System unterstützt keine HTML Mails.
 Du hast folgende Nachricht erhalten:',
-  'profile'=>'Profil',
-  'receptionists'=>'Newsletter versandt!<br><br>Empfänger:',
-  'remove'=>'Du kannst dich in deinem Profil selbst von der Versandliste löschen',
-  'send'=>'Newsletter senden',
-  'send_to'=>'Senden an',
-  'test'=>'testen',
-  'test_newsletter'=>'Newsletter testen',
-  'title'=>'Titel',
-  'transaction_invalid'=>'Transaktions ID ungültig',
-  'user_clanmembers'=>'Clanmitglieder',
-  'user_newsletter'=>'Newsletter Abonnenten',
-  'user_registered'=>'registrierte Benutzer (inkl. Clanmitglieder) ',
-  'users'=>'Benutzer'
+    'profile' => 'Profil',
+    'receptionists' => 'Newsletter versandt!<br><br>Empfänger:',
+    'remove' => 'Du kannst dich in deinem Profil selbst von der Versandliste löschen',
+    'send' => 'Newsletter senden',
+    'send_to' => 'Senden an',
+    'test' => 'testen',
+    'test_newsletter' => 'Newsletter testen',
+    'title' => 'Titel',
+    'transaction_invalid' => 'Transaktions ID ungültig',
+    'user_clanmembers' => 'Clanmitglieder',
+    'user_newsletter' => 'Newsletter Abonnenten',
+    'user_registered' => 'registrierte Benutzer (inkl. Clanmitglieder) ',
+    'users' => 'Benutzer'
 );
 

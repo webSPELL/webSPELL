@@ -25,29 +25,29 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Accès refusé',
-  'back'=>'Retour',
-  'edit_group_users'=>'modifier un Groupe d\'Utilisateurs',
-  'error_group'=>'ERREUR:  Le groupe d\'utilisateur n\'existe pas',
-  'filter'=>'Filtrer',
-  'filter_anyadmin'=>'Filtrer les Admins',
-  'filter_clanmember'=>'Filtrer les membres du clan',
-  'filter_registered'=>'Filtrer les utilisateurs enregistré',
-  'filter_superadmin'=>'Filtrer les Super Admin',
-  'go'=>'Go',
-  'group_users'=>'Les Utilisateurs Du Groupe',
-  'groups'=>'Groupe des utilisateurs du forum',
-  'or_just'=>'ou simplement',
-  'save'=>'Sauvegarder',
-  'save_and_jump'=>'Aller à la page',
-  'select_all'=>'Tout sélectionner',
-  'show'=>'montrer',
-  'user_filter'=>'Filtre Utilisateur',
-  'users_from_group'=>'Utilisateurs du groupe',
-  'transaction_invalid'=>'ID de Transaction invalide'
+    'access_denied' => 'Accès refusé',
+    'back' => 'Retour',
+    'edit_group_users' => 'modifier un Groupe d\'Utilisateurs',
+    'error_group' => 'ERREUR:  Le groupe d\'utilisateur n\'existe pas',
+    'filter' => 'Filtrer',
+    'filter_anyadmin' => 'Filtrer les Admins',
+    'filter_clanmember' => 'Filtrer les membres du clan',
+    'filter_registered' => 'Filtrer les utilisateurs enregistré',
+    'filter_superadmin' => 'Filtrer les Super Admin',
+    'go' => 'Go',
+    'group_users' => 'Les Utilisateurs Du Groupe',
+    'groups' => 'Groupe des utilisateurs du forum',
+    'or_just' => 'ou simplement',
+    'save' => 'Sauvegarder',
+    'save_and_jump' => 'Aller à la page',
+    'select_all' => 'Tout sélectionner',
+    'show' => 'montrer',
+    'transaction_invalid' => 'ID de Transaction invalide',
+    'user_filter' => 'Filtre Utilisateur',
+    'users_from_group' => 'Utilisateurs du groupe'
 );
 

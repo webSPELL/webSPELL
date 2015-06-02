@@ -25,24 +25,24 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Toegang geweigerd',
-  'actions'=>'Acties',
-  'add_category'=>'Categorie toevoegen',
-  'category'=>'Categorie',
-  'category_name'=>'Categorienaam',
-  'delete'=>'verwijderen',
-  'enter_name'=>'U moet een Naam invoeren',
-  'edit'=>'bewerk',
-  'edit_category'=>'bewerk Categorie',
-  'file_categories'=>'Bestand Categorieën',
-  'main'=>'Hoofd',
-  'new_category'=>'nieuwe Categorie',
-  'really_delete'=>'Echt deze categorie verwijderen?',
-  'sub_category'=>'Subcategorie van',
-  'transaction_invalid'=>'Transactie ID ongeldig'
+    'access_denied' => 'Toegang geweigerd',
+    'actions' => 'Acties',
+    'add_category' => 'Categorie toevoegen',
+    'category' => 'Categorie',
+    'category_name' => 'Categorienaam',
+    'delete' => 'verwijderen',
+    'edit' => 'bewerk',
+    'edit_category' => 'bewerk Categorie',
+    'enter_name' => 'U moet een Naam invoeren',
+    'file_categories' => 'Bestand Categorieën',
+    'main' => 'Hoofd',
+    'new_category' => 'nieuwe Categorie',
+    'really_delete' => 'Echt deze categorie verwijderen?',
+    'sub_category' => 'Subcategorie van',
+    'transaction_invalid' => 'Transactie ID ongeldig'
 );
 

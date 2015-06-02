@@ -25,29 +25,29 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Acceso Denegado',
-  'error_send'=>'ERROR: Boletín de noticias no se pudo enviar (Servidor de correo disponible?)',
-  'html_mail'=>'HTML-Mail',
-  'newsletter'=>'Boletín noticias',
-  'no_htmlmail'=>'Hola!
+    'access_denied' => 'Acceso Denegado',
+    'error_send' => 'ERROR: Boletín de noticias no se pudo enviar (Servidor de correo disponible?)',
+    'html_mail' => 'HTML-Mail',
+    'newsletter' => 'Boletín noticias',
+    'no_htmlmail' => 'Hola!
 Su sistema no soporta correos en formato HTML.
 Recibiste el siguiente mensaje:',
-  'profile'=>'Perfil',
-  'receptionists'=>'Boletín de noticias enviador!<br><br> Recepcionista(s):',
-  'remove'=>'Puede darse de baja de la lista de correo a su',
-  'send'=>'enviar Boletín de noticias',
-  'send_to'=>'Enviar a',
-  'test'=>'prueba',
-  'test_newsletter'=>'Prueba De Boletín De Noticias',
-  'title'=>'Titulo',
-  'transaction_invalid'=>'ID de transacción no válida',
-  'user_clanmembers'=>'Miembros del Clan',
-  'user_newsletter'=>'Suscriptor Del Boletín De Noticias',
-  'user_registered'=>'Usuarios registrados (incl. Miembros del Clan) ',
-  'users'=>'Usuarios'
+    'profile' => 'Perfil',
+    'receptionists' => 'Boletín de noticias enviador!<br><br> Recepcionista(s):',
+    'remove' => 'Puede darse de baja de la lista de correo a su',
+    'send' => 'enviar Boletín de noticias',
+    'send_to' => 'Enviar a',
+    'test' => 'prueba',
+    'test_newsletter' => 'Prueba De Boletín De Noticias',
+    'title' => 'Titulo',
+    'transaction_invalid' => 'ID de transacción no válida',
+    'user_clanmembers' => 'Miembros del Clan',
+    'user_newsletter' => 'Suscriptor Del Boletín De Noticias',
+    'user_registered' => 'Usuarios registrados (incl. Miembros del Clan) ',
+    'users' => 'Usuarios'
 );
 

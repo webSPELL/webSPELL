@@ -25,31 +25,31 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Accès refusé',
-  'actions'=>'Actions',
-  'add_country'=>'Ajouter un pays',
-  'back'=>'Retour',
-  'countries'=>'Pays',
-  'country'=>'Pays',
-  'delete'=>'Supprimer',
-  'edit'=>'Editer',
-  'edit_country'=>'Modifier pays',
-  'favorite'=>'Favori',
-  'fill_correctly'=>'Merci de remplir le formulaire correctement.',
-  'format_incorrect'=>'Le format de l\'icône était incorrecte. S\'il vous plaît télécharger uniquement les icônes en format .gif *.',
-  'icon'=>'Icône',
-  'icons'=>'Icônes',
-  'icon_upload'=>'Charger l\'icône',
-  'max_18x12'=>'(Max. 18x12)',
-  'new_country'=>'nouveau pays',
-  'no_entries'=>'Aucune entrée',
-  'present_icon'=>'Icône actuel',
-  'really_delete'=>'Supprimer ce pays ?',
-  'shorthandle'=>'Version courte',
-  'transaction_invalid'=>'Transaction ID invalide'
+    'access_denied' => 'Accès refusé',
+    'actions' => 'Actions',
+    'add_country' => 'Ajouter un pays',
+    'back' => 'Retour',
+    'countries' => 'Pays',
+    'country' => 'Pays',
+    'delete' => 'Supprimer',
+    'edit' => 'Editer',
+    'edit_country' => 'Modifier pays',
+    'favorite' => 'Favori',
+    'fill_correctly' => 'Merci de remplir le formulaire correctement.',
+    'format_incorrect' => 'Le format de l\'icône était incorrecte. S\'il vous plaît télécharger uniquement les icônes en format .gif *.',
+    'icon' => 'Icône',
+    'icon_upload' => 'Charger l\'icône',
+    'icons' => 'Icônes',
+    'max_18x12' => '(Max. 18x12)',
+    'new_country' => 'nouveau pays',
+    'no_entries' => 'Aucune entrée',
+    'present_icon' => 'Icône actuel',
+    'really_delete' => 'Supprimer ce pays ?',
+    'shorthandle' => 'Version courte',
+    'transaction_invalid' => 'Transaction ID invalide'
 );
 

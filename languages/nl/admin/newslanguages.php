@@ -25,24 +25,24 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Toegang geweigerd',
-  'actions'=>'Acties',
-  'add_language'=>'Taal toevoegen',
-  'delete'=>'verwijderen',
-  'edit'=>'bewerk',
-  'edit_language'=>'Taal bewerken',
-  'flag'=>'Vlaggen',
-  'information_incomplete'=>'Sommige informatie ontbreekt.',
-  'language'=>'Taal',
-  'news_languages'=>'Nieuws-Talen',
-  'new_language'=>'Nieuwe Taal',
-  'preview'=>'Voorbeeld',
-  'really_delete'=>'Deze Taal verwijderen?',
-  'title'=>'Titel',
-  'transaction_invalid'=>'Transactie ID ongeldig'
+    'access_denied' => 'Toegang geweigerd',
+    'actions' => 'Acties',
+    'add_language' => 'Taal toevoegen',
+    'delete' => 'verwijderen',
+    'edit' => 'bewerk',
+    'edit_language' => 'Taal bewerken',
+    'flag' => 'Vlaggen',
+    'information_incomplete' => 'Sommige informatie ontbreekt.',
+    'language' => 'Taal',
+    'new_language' => 'Nieuwe Taal',
+    'news_languages' => 'Nieuws-Talen',
+    'preview' => 'Voorbeeld',
+    'really_delete' => 'Deze Taal verwijderen?',
+    'title' => 'Titel',
+    'transaction_invalid' => 'Transactie ID ongeldig'
 );
 

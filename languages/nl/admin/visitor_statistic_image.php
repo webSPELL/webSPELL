@@ -25,13 +25,13 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Toegang geweigerd',
-  'max'=>'Maximaal',
-  'min'=>'Minimum',
-  'not_logged_in'=>'U bent niet ingelogd'
+    'access_denied' => 'Toegang geweigerd',
+    'max' => 'Maximaal',
+    'min' => 'Minimum',
+    'not_logged_in' => 'U bent niet ingelogd'
 );
 

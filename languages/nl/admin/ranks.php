@@ -25,24 +25,24 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Toegang geweigerd',
-  'add_rank'=>'Rang toevoegen',
-  'actions'=>'Acties',
-  'delete'=>'verwijderen',
-  'edit_rank'=>'Rang bewerken',
-  'information_incomplete'=>'Sommige informatie ontbreekt.',
-  'max_posts'=>'max. Berichten',
-  'min_posts'=>'min. Berichten',
-  'new_rank'=>'nieuwe Rang',
-  'rank_icon'=>'Rang Pictogram',
-  'rank_name'=>'Rang Naam',
-  'really_delete'=>'Echt deze Rang verwijderen?',
-  'transaction_invalid'=>'Transactie ID ongeldig',
-  'update'=>'bijwerken',
-  'user_ranks'=>'Gebruiker Rangen'
+    'access_denied' => 'Toegang geweigerd',
+    'actions' => 'Acties',
+    'add_rank' => 'Rang toevoegen',
+    'delete' => 'verwijderen',
+    'edit_rank' => 'Rang bewerken',
+    'information_incomplete' => 'Sommige informatie ontbreekt.',
+    'max_posts' => 'max. Berichten',
+    'min_posts' => 'min. Berichten',
+    'new_rank' => 'nieuwe Rang',
+    'rank_icon' => 'Rang Pictogram',
+    'rank_name' => 'Rang Naam',
+    'really_delete' => 'Echt deze Rang verwijderen?',
+    'transaction_invalid' => 'Transactie ID ongeldig',
+    'update' => 'bijwerken',
+    'user_ranks' => 'Gebruiker Rangen'
 );
 

@@ -25,25 +25,25 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Zugriff verweigert',
-  'actions'=>'Aktionen',
-  'add_category'=>'Kategorie hinzufügen',
-  'category'=>'Kategorie',
-  'category_name'=>'Kategorie Name',
-  'delete'=>'löschen',
-  'description'=>'Beschreibung',
-  'edit'=>'ändern',
-  'edit_category'=>'Kategorie ändern',
-  'faq_categories'=>'FAQ Kategorien',
-  'information_incomplete'=>'Angaben unvollständig.',
-  'new_category'=>'neue Kategorie',
-  'really_delete'=>'Diese Kategorie inkl. aller FAQs wirklich löschen?',
-  'sort'=>'Sortierung',
-  'to_sort'=>'sortieren',
-  'transaction_invalid'=>'Transaktions ID ungültig'
+    'access_denied' => 'Zugriff verweigert',
+    'actions' => 'Aktionen',
+    'add_category' => 'Kategorie hinzufügen',
+    'category' => 'Kategorie',
+    'category_name' => 'Kategorie Name',
+    'delete' => 'löschen',
+    'description' => 'Beschreibung',
+    'edit' => 'ändern',
+    'edit_category' => 'Kategorie ändern',
+    'faq_categories' => 'FAQ Kategorien',
+    'information_incomplete' => 'Angaben unvollständig.',
+    'new_category' => 'neue Kategorie',
+    'really_delete' => 'Diese Kategorie inkl. aller FAQs wirklich löschen?',
+    'sort' => 'Sortierung',
+    'to_sort' => 'sortieren',
+    'transaction_invalid' => 'Transaktions ID ungültig'
 );
 

@@ -25,20 +25,20 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Acceso Denegado',
-  'lock'=>'bloquear',
-  'locked_since'=>'La Página esta bloqueado desde',
-  'pagelock'=>'Bloquear Página',
-  'page_locked'=>'<b>Página bloqueada!</b><br>Sólo los Administradores pueden acceder.',
-  'page_unlocked'=>'<b>Página desbloqueada!</b>',
-  'settings'=>'Ajustes',
-  'transaction_invalid'=>'ID de transacción no válida',
-  'unlock'=>'desbloquear',
-  'unlock_page'=>'¿Quieres desbloquear la página?',
-  'you_can_use_html'=>'Puedes usar etiquetas HTML'
+    'access_denied' => 'Acceso Denegado',
+    'lock' => 'bloquear',
+    'locked_since' => 'La Página esta bloqueado desde',
+    'page_locked' => '<b>Página bloqueada!</b><br>Sólo los Administradores pueden acceder.',
+    'page_unlocked' => '<b>Página desbloqueada!</b>',
+    'pagelock' => 'Bloquear Página',
+    'settings' => 'Ajustes',
+    'transaction_invalid' => 'ID de transacción no válida',
+    'unlock' => 'desbloquear',
+    'unlock_page' => '¿Quieres desbloquear la página?',
+    'you_can_use_html' => 'Puedes usar etiquetas HTML'
 );
 

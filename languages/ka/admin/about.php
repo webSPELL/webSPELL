@@ -25,14 +25,14 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'about'=>'ჩვენს შესახებ',
-  'access_denied'=>'წვდომა აკრძალულია',
-  'transaction_invalid'=>'ID არასწორია',
-  'update'=>'განახლება',
-  'you_can_use_html'=>'თქვენ შეგიძლიათ გამოიყენოთ HTML'
+    'about' => 'ჩვენს შესახებ',
+    'access_denied' => 'წვდომა აკრძალულია',
+    'transaction_invalid' => 'ID არასწორია',
+    'update' => 'განახლება',
+    'you_can_use_html' => 'თქვენ შეგიძლიათ გამოიყენოთ HTML'
 );
 

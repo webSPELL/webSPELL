@@ -25,21 +25,21 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Δεν επιτρέπεται η πρόσβαση',
-  'actions'=>'Ενεργειες',
-  'add_category'=>'προσθήκη Κατηγορίας',
-  'category_name'=>'Όνομα Κατηγορίας',
-  'delete'=>'διαγραφη',
-  'edit'=>'Επεξεργασία',
-  'edit_category'=>'Επεξεργασία Κατηγορίας',
-  'information_incomplete'=>'Λείπουν ορισμένες πληροφορίες.',
-  'link_categories'=>'κατηγοριες Link',
-  'new_category'=>'νεα κατηγορια',
-  'really_delete'=>'Θέλετε πραγματικά να διαγράψετε αυτή την Κατηγορία και την Κατηγορία FAQ;?',
-  'transaction_invalid'=>'Μη έγκυρο ΑΝΑΓΝΩΡΙΣΤΙΚΌ συναλλαγής'
+    'access_denied' => 'Δεν επιτρέπεται η πρόσβαση',
+    'actions' => 'Ενεργειες',
+    'add_category' => 'προσθήκη Κατηγορίας',
+    'category_name' => 'Όνομα Κατηγορίας',
+    'delete' => 'διαγραφη',
+    'edit' => 'Επεξεργασία',
+    'edit_category' => 'Επεξεργασία Κατηγορίας',
+    'information_incomplete' => 'Λείπουν ορισμένες πληροφορίες.',
+    'link_categories' => 'κατηγοριες Link',
+    'new_category' => 'νεα κατηγορια',
+    'really_delete' => 'Θέλετε πραγματικά να διαγράψετε αυτή την Κατηγορία και την Κατηγορία FAQ;?',
+    'transaction_invalid' => 'Μη έγκυρο ΑΝΑΓΝΩΡΙΣΤΙΚΌ συναλλαγής'
 );
 

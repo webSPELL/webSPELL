@@ -25,14 +25,14 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'about'=>'About us',
-  'access_denied'=>'Access denied',
-  'transaction_invalid'=>'Transaction ID invalid',
-  'update'=>'update',
-  'you_can_use_html'=>'You can use HTML-Tags'
+    'about' => 'About us',
+    'access_denied' => 'Access denied',
+    'transaction_invalid' => 'Transaction ID invalid',
+    'update' => 'update',
+    'you_can_use_html' => 'You can use HTML-Tags'
 );
 

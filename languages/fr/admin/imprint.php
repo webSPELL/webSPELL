@@ -25,16 +25,16 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Accès refusé',
-  'automatic'=>'Automatiquement',
-  'imprint'=>'Mentions légales',
-  'manual'=>'Manuellement (utilisation de la zone de texte ci-dessous)',
-  'transaction_invalid'=>'ID de Transaction invalide',
-  'update'=>'mettre à jour',
-  'you_can_use_html'=>'Vous pouvez utiliser les balises HTML'
+    'access_denied' => 'Accès refusé',
+    'automatic' => 'Automatiquement',
+    'imprint' => 'Mentions légales',
+    'manual' => 'Manuellement (utilisation de la zone de texte ci-dessous)',
+    'transaction_invalid' => 'ID de Transaction invalide',
+    'update' => 'mettre à jour',
+    'you_can_use_html' => 'Vous pouvez utiliser les balises HTML'
 );
 

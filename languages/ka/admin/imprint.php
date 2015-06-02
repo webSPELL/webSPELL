@@ -25,16 +25,16 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'მიუწვდომელია',
-  'automatic'=>'ავტომატურად',
-  'imprint'=>'ცნობა',
-  'manual'=>'ხელით (გამოიყენეთ TextField ქვემოთ)',
-  'transaction_invalid'=>'ID არასწორია',
-  'update'=>'განახლება',
-  'you_can_use_html'=>'თქვენ შეგიძლიათ გამოიყენოთ HTML'
+    'access_denied' => 'მიუწვდომელია',
+    'automatic' => 'ავტომატურად',
+    'imprint' => 'ცნობა',
+    'manual' => 'ხელით (გამოიყენეთ TextField ქვემოთ)',
+    'transaction_invalid' => 'ID არასწორია',
+    'update' => 'განახლება',
+    'you_can_use_html' => 'თქვენ შეგიძლიათ გამოიყენოთ HTML'
 );
 

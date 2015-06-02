@@ -25,25 +25,25 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Приступ одбијен',
-  'actions'=>'Акције',
-  'add_category'=>'додај категорију',
-  'category'=>'Категорија',
-  'category_name'=>'Име категорије',
-  'delete'=>'Избриши',
-  'description'=>'Опис',
-  'edit'=>'уреди',
-  'edit_category'=>'уређивање категорије',
-  'faq_categories'=>'Питања и одговори категорије',
-  'information_incomplete'=>'Неке информације недостају.',
-  'new_category'=>'Нова категорија',
-  'really_delete'=>'Заиста да избришете ову категорију и одељак са често постављаним питањима?',
-  'sort'=>'Разврстај',
-  'to_sort'=>'Разврстај',
-  'transaction_invalid'=>'ИД трансакције неважећи'
+    'access_denied' => 'Приступ одбијен',
+    'actions' => 'Акције',
+    'add_category' => 'додај категорију',
+    'category' => 'Категорија',
+    'category_name' => 'Име категорије',
+    'delete' => 'Избриши',
+    'description' => 'Опис',
+    'edit' => 'уреди',
+    'edit_category' => 'уређивање категорије',
+    'faq_categories' => 'Питања и одговори категорије',
+    'information_incomplete' => 'Неке информације недостају.',
+    'new_category' => 'Нова категорија',
+    'really_delete' => 'Заиста да избришете ову категорију и одељак са често постављаним питањима?',
+    'sort' => 'Разврстај',
+    'to_sort' => 'Разврстај',
+    'transaction_invalid' => 'ИД трансакције неважећи'
 );
 

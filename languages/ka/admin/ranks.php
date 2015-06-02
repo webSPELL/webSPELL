@@ -25,24 +25,24 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'მიუწვდომელია',
-  'add_rank'=>'რჩეულებში წოდება',
-  'actions'=>'ქმედებები',
-  'delete'=>'წაშლა',
-  'edit_rank'=>'წოდების რედაქტირება',
-  'information_incomplete'=>'ზოგიერთი ინფორმაცია დაკარგულია.',
-  'max_posts'=>'მაქს. პოსტები',
-  'min_posts'=>'min. პოსტები',
-  'new_rank'=>'ახალი წოდება',
-  'rank_icon'=>'წოდება Icon',
-  'rank_name'=>'წოდება სახელის',
-  'really_delete'=>'წავშალო რანკი ?',
-  'transaction_invalid'=>'ID არასწორია',
-  'update'=>'განახლება',
-  'user_ranks'=>'მომხმარებლის წოდებები'
+    'access_denied' => 'მიუწვდომელია',
+    'actions' => 'ქმედებები',
+    'add_rank' => 'რჩეულებში წოდება',
+    'delete' => 'წაშლა',
+    'edit_rank' => 'წოდების რედაქტირება',
+    'information_incomplete' => 'ზოგიერთი ინფორმაცია დაკარგულია.',
+    'max_posts' => 'მაქს. პოსტები',
+    'min_posts' => 'min. პოსტები',
+    'new_rank' => 'ახალი წოდება',
+    'rank_icon' => 'წოდება Icon',
+    'rank_name' => 'წოდება სახელის',
+    'really_delete' => 'წავშალო რანკი ?',
+    'transaction_invalid' => 'ID არასწორია',
+    'update' => 'განახლება',
+    'user_ranks' => 'მომხმარებლის წოდებები'
 );
 

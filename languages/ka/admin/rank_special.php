@@ -25,9 +25,12 @@
 ##########################################################################
 */
 
-$language_array = Array(
-	'used_for'=>'გამოიყენება',
-	'special_rank'=>'სპეციალური წოდება',
-	'no_special_rank'=>'არა სპეციალური წოდება'
- );
- 
+$language_array = array(
+
+/* do not edit above this line */
+
+    'no_special_rank' => 'არა სპეციალური წოდება',
+    'special_rank' => 'სპეციალური წოდება',
+    'used_for' => 'გამოიყენება'
+);
+

@@ -25,37 +25,37 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Zugriff verweigert',
-  'actions'=>'Aktionen',
-  'add_squad'=>'Team hinzufügen',
-  'back'=>'zurück',
-  'current_icon'=>'Aktuelles Symbol',
-  'current_icon_small'=>'Aktuelles Symbol (klein)',
-  'delete'=>'löschen',
-  'edit'=>'ändern',
-  'edit_squad'=>'Team ändern',
-  'format_incorrect'=>'Das Format des Banner war falsch. Bitte lade nur Banner im *.gif, *.jpg oder *.png Format hoch.',
-  'game'=>'Spiel',
-  'gaming_squad'=>'spielendes Team',
-  'icon'=>'Symbol',
-  'icon_upload'=>'Symbol Upload',
-  'icon_upload_info'=>'für den sc_squads include',
-  'icon_upload_small'=>'Symbol Upload (klein)',
-  'information_incomplete'=>'Angaben unvollständig.',
-  'new_squad'=>'neues Team',
-  'no_icon'=>'Kein Symbol vorhanden',
-  'non_gaming_squad'=>'nicht spielendes Team',
-  'really_delete'=>'Diese Gruppe wirklich löschen?',
-  'sort'=>'Sortierung',
-  'squad_info'=>'Team Info',
-  'squad_name'=>'Team Name',
-  'squad_type'=>'Team Type',
-  'squads'=>'Teams',
-  'transaction_invalid'=>'Transaktions ID ungültig',
-  'to_sort'=>'sortieren'
+    'access_denied' => 'Zugriff verweigert',
+    'actions' => 'Aktionen',
+    'add_squad' => 'Team hinzufügen',
+    'back' => 'zurück',
+    'current_icon' => 'Aktuelles Symbol',
+    'current_icon_small' => 'Aktuelles Symbol (klein)',
+    'delete' => 'löschen',
+    'edit' => 'ändern',
+    'edit_squad' => 'Team ändern',
+    'format_incorrect' => 'Das Format des Banner war falsch. Bitte lade nur Banner im *.gif, *.jpg oder *.png Format hoch.',
+    'game' => 'Spiel',
+    'gaming_squad' => 'spielendes Team',
+    'icon' => 'Symbol',
+    'icon_upload' => 'Symbol Upload',
+    'icon_upload_info' => 'für den sc_squads include',
+    'icon_upload_small' => 'Symbol Upload (klein)',
+    'information_incomplete' => 'Angaben unvollständig.',
+    'new_squad' => 'neues Team',
+    'no_icon' => 'Kein Symbol vorhanden',
+    'non_gaming_squad' => 'nicht spielendes Team',
+    'really_delete' => 'Diese Gruppe wirklich löschen?',
+    'sort' => 'Sortierung',
+    'squad_info' => 'Team Info',
+    'squad_name' => 'Team Name',
+    'squad_type' => 'Team Type',
+    'squads' => 'Teams',
+    'to_sort' => 'sortieren',
+    'transaction_invalid' => 'Transaktions ID ungültig'
 );
 

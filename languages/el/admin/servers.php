@@ -25,26 +25,26 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Δεν επιτρέπεται η πρόσβαση',
-  'add_server'=>'προσθέστε Server',
-  'actions'=>'Ενεργειες',
-  'delete'=>'διαγραφή',
-  'edit'=>'Επεξεργασία',
-  'edit_server'=>'Επεξεργασία Server',
-  'game'=>'Παιχνίδι',
-  'info'=>'Πληροφορίες',
-  'ip_port'=>'Server IP:Port',
-  'new_server'=>'νέο Server',
-  'no_server'=>'Δεν υπάρχουν διαθέσιμα Servers',
-  'really_delete'=>'Θέλετε πραγματικά διαγράψετε αυτό το Server;',
-  'servers'=>'Servers',
-  'server_name'=>'Όνομα Server',
-  'sort'=>'Ταξινομηση',
-  'transaction_invalid'=>'Μη έγκυρο ΑΝΑΓΝΩΡΙΣΤΙΚΌ συναλλαγής',
-  'to_sort'=>'ταξινομηση'
+    'access_denied' => 'Δεν επιτρέπεται η πρόσβαση',
+    'actions' => 'Ενεργειες',
+    'add_server' => 'προσθέστε Server',
+    'delete' => 'διαγραφή',
+    'edit' => 'Επεξεργασία',
+    'edit_server' => 'Επεξεργασία Server',
+    'game' => 'Παιχνίδι',
+    'info' => 'Πληροφορίες',
+    'ip_port' => 'Server IP:Port',
+    'new_server' => 'νέο Server',
+    'no_server' => 'Δεν υπάρχουν διαθέσιμα Servers',
+    'really_delete' => 'Θέλετε πραγματικά διαγράψετε αυτό το Server;',
+    'server_name' => 'Όνομα Server',
+    'servers' => 'Servers',
+    'sort' => 'Ταξινομηση',
+    'to_sort' => 'ταξινομηση',
+    'transaction_invalid' => 'Μη έγκυρο ΑΝΑΓΝΩΡΙΣΤΙΚΌ συναλλαγής'
 );
 

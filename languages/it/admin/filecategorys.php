@@ -25,24 +25,24 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Accesso negato',
-  'actions'=>'Azioni',
-  'add_category'=>'aggiungi categoria',
-  'category'=>'Categoria',
-  'category_name'=>'Nome categoria',
-  'delete'=>'elimina',
-  'enter_name'=>'È necessario di inserire un nome',
-  'edit'=>'modifica',
-  'edit_category'=>'modifica categoria',
-  'file_categories'=>'Categoria file',
-  'main'=>'Principale',
-  'new_category'=>'nuova categoria',
-  'really_delete'=>'Davvero eliminare questa categoria?',
-  'sub_category'=>'Sottocategoria da',
-  'transaction_invalid'=>'ID della transazione non valido'
+    'access_denied' => 'Accesso negato',
+    'actions' => 'Azioni',
+    'add_category' => 'aggiungi categoria',
+    'category' => 'Categoria',
+    'category_name' => 'Nome categoria',
+    'delete' => 'elimina',
+    'edit' => 'modifica',
+    'edit_category' => 'modifica categoria',
+    'enter_name' => 'È necessario di inserire un nome',
+    'file_categories' => 'Categoria file',
+    'main' => 'Principale',
+    'new_category' => 'nuova categoria',
+    'really_delete' => 'Davvero eliminare questa categoria?',
+    'sub_category' => 'Sottocategoria da',
+    'transaction_invalid' => 'ID della transazione non valido'
 );
 

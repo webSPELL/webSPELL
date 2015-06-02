@@ -25,29 +25,29 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
-  'error_send'=>'ERROR: Newsletter could not be send (Mailserver available?)',
-  'html_mail'=>'HTML-Mail',
-  'newsletter'=>'Newsletter',
-  'no_htmlmail'=>'Hello!
+    'access_denied' => 'Access denied',
+    'error_send' => 'ERROR: Newsletter could not be send (Mailserver available?)',
+    'html_mail' => 'HTML-Mail',
+    'newsletter' => 'Newsletter',
+    'no_htmlmail' => 'Hello!
 Your System doesn\'t support HTML Mails.
 Your received following Message:',
-  'profile'=>'Profile',
-  'receptionists'=>'Newsletter was send!<br><br>Receptionist(s):',
-  'remove'=>'You can remove yourself from the mailing-list at your',
-  'send'=>'send Newsletter',
-  'send_to'=>'Send to',
-  'test'=>'test',
-  'test_newsletter'=>'Test Newsletter',
-  'title'=>'Title',
-  'transaction_invalid'=>'Transaction ID invalid',
-  'user_clanmembers'=>'Clanmembers',
-  'user_newsletter'=>'Newsletter Subscriber',
-  'user_registered'=>'registered Users (incl. Clanmembers) ',
-  'users'=>'Users'
+    'profile' => 'Profile',
+    'receptionists' => 'Newsletter was send!<br><br>Receptionist(s):',
+    'remove' => 'You can remove yourself from the mailing-list at your',
+    'send' => 'send Newsletter',
+    'send_to' => 'Send to',
+    'test' => 'test',
+    'test_newsletter' => 'Test Newsletter',
+    'title' => 'Title',
+    'transaction_invalid' => 'Transaction ID invalid',
+    'user_clanmembers' => 'Clanmembers',
+    'user_newsletter' => 'Newsletter Subscriber',
+    'user_registered' => 'registered Users (incl. Clanmembers) ',
+    'users' => 'Users'
 );
 

@@ -25,11 +25,11 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-    'error_404'=>'Errore 404',
-    'message_404'=>'Questa pagina non esiste.'
+    'error_404' => 'Errore 404',
+    'message_404' => 'Questa pagina non esiste.'
 );
 

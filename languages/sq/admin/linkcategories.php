@@ -25,21 +25,21 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Hyrja e Ndaluar',
-  'actions'=>'Veprimet',
-  'add_category'=>'shto Kategorinë',
-  'category_name'=>'Emri Kategorisë',
-  'delete'=>'fshij',
-  'edit'=>'redakto',
-  'edit_category'=>'redakto Kategorinë',
-  'information_incomplete'=>'Disa të dhëna mungojnë.',
-  'link_categories'=>'Kategoritë e lidhjeve',
-  'new_category'=>'Kategori e re',
-  'really_delete'=>'Vërtet  fshini këtë kategori dhe kategorinë e Pyetjeve më të Shpeshta?',
-  'transaction_invalid'=>'ID e tranzaksionit e pavlefshme'
+    'access_denied' => 'Hyrja e Ndaluar',
+    'actions' => 'Veprimet',
+    'add_category' => 'shto Kategorinë',
+    'category_name' => 'Emri Kategorisë',
+    'delete' => 'fshij',
+    'edit' => 'redakto',
+    'edit_category' => 'redakto Kategorinë',
+    'information_incomplete' => 'Disa të dhëna mungojnë.',
+    'link_categories' => 'Kategoritë e lidhjeve',
+    'new_category' => 'Kategori e re',
+    'really_delete' => 'Vërtet  fshini këtë kategori dhe kategorinë e Pyetjeve më të Shpeshta?',
+    'transaction_invalid' => 'ID e tranzaksionit e pavlefshme'
 );
 

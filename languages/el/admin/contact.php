@@ -25,24 +25,24 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Δεν επιτρέπεται η πρόσβαση',
-  'actions'=>'Ενεργειες',
-  'add_contact'=>'προσθήκη Επαφής',
-  'contact'=>'Επαφές',
-  'contact_name'=>'Όνομα Επαφής',
-  'delete'=>'διαγραφή',
-  'edit'=>'Επεξεργασία',
-  'edit_contact'=>'επεξεργασία Επαφής',
-  'email'=>'E-Mail',
-  'information_incomplete'=>'Λείπουν ορισμένες πληροφορίες.',
-  'new_contact'=>'νέα Επαφή',
-  'really_delete'=>'Θέλετε πραγματικά να διαγράψετε αυτή την Επαφή;',
-  'sort'=>'Ταξινομηση',
-  'to_sort'=>'ταξινομηση',
-  'transaction_invalid'=>'Μη έγκυρο ΑΝΑΓΝΩΡΙΣΤΙΚΌ συναλλαγής'
+    'access_denied' => 'Δεν επιτρέπεται η πρόσβαση',
+    'actions' => 'Ενεργειες',
+    'add_contact' => 'προσθήκη Επαφής',
+    'contact' => 'Επαφές',
+    'contact_name' => 'Όνομα Επαφής',
+    'delete' => 'διαγραφή',
+    'edit' => 'Επεξεργασία',
+    'edit_contact' => 'επεξεργασία Επαφής',
+    'email' => 'E-Mail',
+    'information_incomplete' => 'Λείπουν ορισμένες πληροφορίες.',
+    'new_contact' => 'νέα Επαφή',
+    'really_delete' => 'Θέλετε πραγματικά να διαγράψετε αυτή την Επαφή;',
+    'sort' => 'Ταξινομηση',
+    'to_sort' => 'ταξινομηση',
+    'transaction_invalid' => 'Μη έγκυρο ΑΝΑΓΝΩΡΙΣΤΙΚΌ συναλλαγής'
 );
 

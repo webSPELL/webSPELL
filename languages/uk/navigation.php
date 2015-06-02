@@ -24,50 +24,44 @@
 #                                                                        #
 ##########################################################################
 */
-/**
- * Online Language Editor Ukraine language file for webSPELL 4.2.2
- * @author Stefan Giesecke <webmaster@giesi.com>
- * @copyright Copyright (c) 2010, Stefan Giesecke
- * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
- */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'about_us'=>'Про нас',
-  'archives'=>'Архіви',
-  'articles'=>'Статут',
-  'awards'=>'Нагороди',
-  'calendar'=>'календар',
-  'clan'=>'Клан',
-  'community'=>'Спільнота',
-  'contact'=>'Контакт форма',
-  'demos'=>'Демо',
-  'downloads'=>'Завантаження',
-  'faq'=>'FAQ',
-  'fight_us'=>'Битиметься з нами',
-  'forums'=>'Форум',
-  'gallery'=>'Галерея',
-  'guestbook'=>'Гостьова книга',
-  'history'=>'Історія',
-  'imprint'=>'Відомості',
-  'join_us'=>'Приєднатися до нас',
-  'links'=>'Посилання',
-  'links_us'=>'Посилання на нас',
-  'main'=>'Головна',
-  'matches'=>'Матчі',
-  'media'=>'Медіа',
-  'members'=>'Гравців',
-  'miscellaneous'=>'Різне',
-  'news'=>'Новини',
-  'newsletter'=>'Стрічка новин',
-  'polls'=>'Опитування',
-  'registered_users'=>'Зареєстровані користувачі',
-  'search'=>'Пошук',
-  'servers'=>'Сервери',
-  'sponsors'=>'Спонсори',
-  'squads'=>'Загони',
-  'who_is_online'=>'Хто зараз онлайн?'
+    'about_us' => 'Про нас',
+    'archives' => 'Архіви',
+    'articles' => 'Статут',
+    'awards' => 'Нагороди',
+    'calendar' => 'календар',
+    'clan' => 'Клан',
+    'community' => 'Спільнота',
+    'contact' => 'Контакт форма',
+    'demos' => 'Демо',
+    'downloads' => 'Завантаження',
+    'faq' => 'FAQ',
+    'fight_us' => 'Битиметься з нами',
+    'forums' => 'Форум',
+    'gallery' => 'Галерея',
+    'guestbook' => 'Гостьова книга',
+    'history' => 'Історія',
+    'imprint' => 'Відомості',
+    'join_us' => 'Приєднатися до нас',
+    'links' => 'Посилання',
+    'links_us' => 'Посилання на нас',
+    'main' => 'Головна',
+    'matches' => 'Матчі',
+    'media' => 'Медіа',
+    'members' => 'Гравців',
+    'miscellaneous' => 'Різне',
+    'news' => 'Новини',
+    'newsletter' => 'Стрічка новин',
+    'polls' => 'Опитування',
+    'registered_users' => 'Зареєстровані користувачі',
+    'search' => 'Пошук',
+    'servers' => 'Сервери',
+    'sponsors' => 'Спонсори',
+    'squads' => 'Загони',
+    'who_is_online' => 'Хто зараз онлайн?'
 );
 

@@ -25,9 +25,12 @@
 ##########################################################################
 */
 
-$language_array = Array(
-	'used_for'=>'Használt',
-	'special_rank'=>'speciális rang',
-	'no_special_rank'=>'Nincs speciális rang'
- );
- 
+$language_array = array(
+
+/* do not edit above this line */
+
+    'no_special_rank' => 'Nincs speciális rang',
+    'special_rank' => 'speciális rang',
+    'used_for' => 'Használt'
+);
+

@@ -25,22 +25,22 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Zugriff verweigert',
-  'allowed_commands'=>'<b>Erlaubte Befehle:</b> insert, alter table, select',
-  'backup_file'=>'Sicherungsdatei',
-  'database'=>'Datenbank',
-  'export'=>'Sicherungsdatei exportieren/downloaden',
-  'import_info'=>'Wähle eine Sicherungsdatei aus, von welcher du die SQL Daten importieren möchtest.<br><br><b>Wichtig:</b> Erstelle eine Sicherungsdatei bevor du eine andere importierst!',
-  'optimize'=>'Datenbank optimieren',
-  'select_option'=>'Bitte wähle eine Option',
-  'submit'=>'Bestätigen',
-  'sql_query'=>'SQL Abfrage',
-  'syntax_not_allowed'=>'Syntax nicht erlaubt!',
-  'upload'=>'Upload',
-  'transaction_invalid'=>'Transaktions ID ungültig'
+    'access_denied' => 'Zugriff verweigert',
+    'allowed_commands' => '<b>Erlaubte Befehle:</b> insert, alter table, select',
+    'backup_file' => 'Sicherungsdatei',
+    'database' => 'Datenbank',
+    'export' => 'Sicherungsdatei exportieren/downloaden',
+    'import_info' => 'Wähle eine Sicherungsdatei aus, von welcher du die SQL Daten importieren möchtest.<br><br><b>Wichtig:</b> Erstelle eine Sicherungsdatei bevor du eine andere importierst!',
+    'optimize' => 'Datenbank optimieren',
+    'select_option' => 'Bitte wähle eine Option',
+    'sql_query' => 'SQL Abfrage',
+    'submit' => 'Bestätigen',
+    'syntax_not_allowed' => 'Syntax nicht erlaubt!',
+    'transaction_invalid' => 'Transaktions ID ungültig',
+    'upload' => 'Upload'
 );
 

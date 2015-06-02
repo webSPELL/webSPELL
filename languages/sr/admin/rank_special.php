@@ -25,9 +25,12 @@
 ##########################################################################
 */
 
-$language_array = Array(
-	'used_for'=>'Користи се за',
-	'special_rank'=>'посебан ранг',
-	'no_special_rank'=>'без посебног ранга'
- );
- 
+$language_array = array(
+
+/* do not edit above this line */
+
+    'no_special_rank' => 'без посебног ранга',
+    'special_rank' => 'посебан ранг',
+    'used_for' => 'Користи се за'
+);
+

@@ -25,25 +25,25 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'მიუწვდომელია',
-  'actions'=>'ქმედებები',
-  'add_rubric'=>'დამატება რუბრიკა',
-  'back'=>'უკან',
-  'delete'=>'წაშლა',
-  'edit'=>'რედაქტირება',
-  'edit_rubric'=>'რუბრიკის რედაქტირება',
-  'format_incorrect'=>'ფორმატის ხატი არასწორი იყო. გთხოვთ ატვირთეთ მხოლოდ ბანერი *.gif, *.jpg და *.png ფორმატში.',
-  'information_incomplete'=>'ზოგიერთი ინფორმაცია დაკარგულია.',
-  'new_rubric'=>'ახალი რუბრიკა',
-  'news_rubrics'=>'ახალი ამბები რუბრიკები',
-  'picture'=>'სურათი',
-  'picture_upload'=>'სურათის ატვირთვა',
-  'really_delete'=>'წავშალოთ რუბრიკა?',
-  'rubric_name'=>'რუბრიკის სახელი',
-  'transaction_invalid'=>'ID არასწორია'
+    'access_denied' => 'მიუწვდომელია',
+    'actions' => 'ქმედებები',
+    'add_rubric' => 'დამატება რუბრიკა',
+    'back' => 'უკან',
+    'delete' => 'წაშლა',
+    'edit' => 'რედაქტირება',
+    'edit_rubric' => 'რუბრიკის რედაქტირება',
+    'format_incorrect' => 'ფორმატის ხატი არასწორი იყო. გთხოვთ ატვირთეთ მხოლოდ ბანერი *.gif, *.jpg და *.png ფორმატში.',
+    'information_incomplete' => 'ზოგიერთი ინფორმაცია დაკარგულია.',
+    'new_rubric' => 'ახალი რუბრიკა',
+    'news_rubrics' => 'ახალი ამბები რუბრიკები',
+    'picture' => 'სურათი',
+    'picture_upload' => 'სურათის ატვირთვა',
+    'really_delete' => 'წავშალოთ რუბრიკა?',
+    'rubric_name' => 'რუბრიკის სახელი',
+    'transaction_invalid' => 'ID არასწორია'
 );
 

@@ -25,26 +25,26 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Hyrja e Ndaluar',
-  'add_server'=>'shtoni Server',
-  'actions'=>'Veprimet',
-  'delete'=>'fshij',
-  'edit'=>'redakto',
-  'edit_server'=>'Edito Server',
-  'game'=>'Loja',
-  'info'=>'Informacion',
-  'ip_port'=>'Server IP: Port',
-  'new_server'=>'Server i ri',
-  'no_server'=>'nuk ka servera të disponueshëm',
-  'really_delete'=>'Me të vërtetë fshihet ky Server?',
-  'servers'=>'Serverat',
-  'server_name'=>'Emri I Serverit',
-  'sort'=>'Grupo',
-  'transaction_invalid'=>'ID e tranzaksionit e pavlefshme',
-  'to_sort'=>'grupo'
+    'access_denied' => 'Hyrja e Ndaluar',
+    'actions' => 'Veprimet',
+    'add_server' => 'shtoni Server',
+    'delete' => 'fshij',
+    'edit' => 'redakto',
+    'edit_server' => 'Edito Server',
+    'game' => 'Loja',
+    'info' => 'Informacion',
+    'ip_port' => 'Server IP: Port',
+    'new_server' => 'Server i ri',
+    'no_server' => 'nuk ka servera të disponueshëm',
+    'really_delete' => 'Me të vërtetë fshihet ky Server?',
+    'server_name' => 'Emri I Serverit',
+    'servers' => 'Serverat',
+    'sort' => 'Grupo',
+    'to_sort' => 'grupo',
+    'transaction_invalid' => 'ID e tranzaksionit e pavlefshme'
 );
 

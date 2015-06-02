@@ -25,25 +25,25 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Hyrja e Ndaluar',
-  'actions'=>'Veprimet',
-  'add_category'=>'shto Kategorinë',
-  'category'=>'Kategori',
-  'category_name'=>'Emri Kategorisë',
-  'delete'=>'fshij',
-  'description'=>'Përshkrimi',
-  'edit'=>'redakto',
-  'edit_category'=>'redakto Kategorinë',
-  'faq_categories'=>'Kategoritë e Pyetjeve të shpeshta',
-  'information_incomplete'=>'Disa të dhëna mungojnë.',
-  'new_category'=>'Kategori e re',
-  'really_delete'=>'Vërtet  fshini këtë kategori dhe kategorinë e Pyetjeve më të Shpeshta?',
-  'sort'=>'Grupo',
-  'to_sort'=>'grupo',
-  'transaction_invalid'=>'ID e tranzaksionit e pavlefshme'
+    'access_denied' => 'Hyrja e Ndaluar',
+    'actions' => 'Veprimet',
+    'add_category' => 'shto Kategorinë',
+    'category' => 'Kategori',
+    'category_name' => 'Emri Kategorisë',
+    'delete' => 'fshij',
+    'description' => 'Përshkrimi',
+    'edit' => 'redakto',
+    'edit_category' => 'redakto Kategorinë',
+    'faq_categories' => 'Kategoritë e Pyetjeve të shpeshta',
+    'information_incomplete' => 'Disa të dhëna mungojnë.',
+    'new_category' => 'Kategori e re',
+    'really_delete' => 'Vërtet  fshini këtë kategori dhe kategorinë e Pyetjeve më të Shpeshta?',
+    'sort' => 'Grupo',
+    'to_sort' => 'grupo',
+    'transaction_invalid' => 'ID e tranzaksionit e pavlefshme'
 );
 

@@ -25,24 +25,24 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
-  'actions'=>'Actions',
-  'add_contact'=>'add Contact',
-  'contact'=>'Contacts',
-  'contact_name'=>'Contact Name',
-  'delete'=>'delete',
-  'edit'=>'edit',
-  'edit_contact'=>'edit Contact',
-  'email'=>'E-Mail',
-  'information_incomplete'=>'Some information is missing.',
-  'new_contact'=>'new Contact',
-  'really_delete'=>'really delete this Contact?',
-  'sort'=>'Sort',
-  'to_sort'=>'sort',
-  'transaction_invalid'=>'Transaction ID invalid'
+    'access_denied' => 'Access denied',
+    'actions' => 'Actions',
+    'add_contact' => 'add Contact',
+    'contact' => 'Contacts',
+    'contact_name' => 'Contact Name',
+    'delete' => 'delete',
+    'edit' => 'edit',
+    'edit_contact' => 'edit Contact',
+    'email' => 'E-Mail',
+    'information_incomplete' => 'Some information is missing.',
+    'new_contact' => 'new Contact',
+    'really_delete' => 'really delete this Contact?',
+    'sort' => 'Sort',
+    'to_sort' => 'sort',
+    'transaction_invalid' => 'Transaction ID invalid'
 );
 

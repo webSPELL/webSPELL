@@ -25,25 +25,25 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Accesso negato',
-  'actions'=>'Azioni',
-  'add_category'=>'aggiungi categoria',
-  'category'=>'Categoria',
-  'category_name'=>'Nome categoria',
-  'delete'=>'elimina',
-  'description'=>'Descrizione',
-  'edit'=>'modifica',
-  'edit_category'=>'modifica categoria',
-  'faq_categories'=>'Categoria FAQ',
-  'information_incomplete'=>'Informazioni incomplete.',
-  'new_category'=>'nuova categoria',
-  'really_delete'=>'Davvero eliminare questa categoria e le categorie FAQ?',
-  'sort'=>'Assortire',
-  'to_sort'=>'assortire',
-  'transaction_invalid'=>'ID della transazione non valido'
+    'access_denied' => 'Accesso negato',
+    'actions' => 'Azioni',
+    'add_category' => 'aggiungi categoria',
+    'category' => 'Categoria',
+    'category_name' => 'Nome categoria',
+    'delete' => 'elimina',
+    'description' => 'Descrizione',
+    'edit' => 'modifica',
+    'edit_category' => 'modifica categoria',
+    'faq_categories' => 'Categoria FAQ',
+    'information_incomplete' => 'Informazioni incomplete.',
+    'new_category' => 'nuova categoria',
+    'really_delete' => 'Davvero eliminare questa categoria e le categorie FAQ?',
+    'sort' => 'Assortire',
+    'to_sort' => 'assortire',
+    'transaction_invalid' => 'ID della transazione non valido'
 );
 

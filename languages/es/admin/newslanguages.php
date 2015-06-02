@@ -25,24 +25,24 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Acceso Denegado',
-  'actions'=>'Acciones',
-  'add_language'=>'añadir Idioma',
-  'delete'=>'borrar',
-  'edit'=>'editar',
-  'edit_language'=>'editar Idioma',
-  'flag'=>'Banderas',
-  'information_incomplete'=>'Falta información.',
-  'language'=>'Idioma',
-  'news_languages'=>'Noticias-Idiomas',
-  'new_language'=>'nuevo Idioma',
-  'preview'=>'Vista previa',
-  'really_delete'=>'¿Seguro que quieres eliminar este Idioma?',
-  'title'=>'Titulo',
-  'transaction_invalid'=>'ID de transacción no válida'
+    'access_denied' => 'Acceso Denegado',
+    'actions' => 'Acciones',
+    'add_language' => 'añadir Idioma',
+    'delete' => 'borrar',
+    'edit' => 'editar',
+    'edit_language' => 'editar Idioma',
+    'flag' => 'Banderas',
+    'information_incomplete' => 'Falta información.',
+    'language' => 'Idioma',
+    'new_language' => 'nuevo Idioma',
+    'news_languages' => 'Noticias-Idiomas',
+    'preview' => 'Vista previa',
+    'really_delete' => '¿Seguro que quieres eliminar este Idioma?',
+    'title' => 'Titulo',
+    'transaction_invalid' => 'ID de transacción no válida'
 );
 

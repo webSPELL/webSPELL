@@ -25,19 +25,21 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
-    'file_too_big'=>'File troppo grande',
-    'incomplete_upload'=>'Caricamento incompleta',
-    'no_file_uploaded'=>'Nessun file caricato',
-    'no_temp_folder_available'=>'Nessuna cartella temporanea disponibile. Si prega di contattare l\'amministratore',
-    'cant_write_temp_file'=>'Impossibile creare file temporaneo. Si prega di contattare l\'amministratore',
-    'unexpected_error'=>'Errore imprevisto',
-    'cant_copy_file'=>'Impossibile copiare il file. Si prega di contattare l\'amministratore',
-    'image_too_big'=>'L\'immagine è troppo grande (formato max %1$d px e %2$d px)',
-    'broken_image'=>'Il file immagine sembra di essere distrutto',
-    'unsupported_image_type'=>'Tipo di immagine non supportato',
-    'errors_there'=>'Ci sono errori',
-    'file_already_exists'=>'il file esiste già'
+
+    'broken_image' => 'Il file immagine sembra di essere distrutto',
+    'cant_copy_file' => 'Impossibile copiare il file. Si prega di contattare l\'amministratore',
+    'cant_write_temp_file' => 'Impossibile creare file temporaneo. Si prega di contattare l\'amministratore',
+    'errors_there' => 'Ci sono errori',
+    'file_already_exists' => 'il file esiste già',
+    'file_too_big' => 'File troppo grande',
+    'image_too_big' => 'L\'immagine è troppo grande (formato max %1$d px e %2$d px)',
+    'incomplete_upload' => 'Caricamento incompleta',
+    'no_file_uploaded' => 'Nessun file caricato',
+    'no_temp_folder_available' => 'Nessuna cartella temporanea disponibile. Si prega di contattare l\'amministratore',
+    'unexpected_error' => 'Errore imprevisto',
+    'unsupported_image_type' => 'Tipo di immagine non supportato'
 );
+

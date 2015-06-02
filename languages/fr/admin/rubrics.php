@@ -25,25 +25,25 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Accès refusé',
-  'actions'=>'Actions',
-  'add_rubric'=>'ajouter une rubrique',
-  'back'=>'Retour',
-  'delete'=>'Supprimer',
-  'edit'=>'Editer',
-  'edit_rubric'=>'Editer rubrique',
-  'format_incorrect'=>'Le format de l\'icône était incorrecte. S\'il vous plaît télécharger uniquement une bannière au format * .gif, * .jpg ou * .png.',
-  'information_incomplete'=>'Certaines informations sont manquantes.',
-  'new_rubric'=>'nouvelle rubrique',
-  'news_rubrics'=>'Nouvelles rubriques',
-  'picture'=>'Images',
-  'picture_upload'=>'Uploader image',
-  'really_delete'=>'Confirmer suppression rubrique?',
-  'rubric_name'=>'Nom de la rubrique',
-  'transaction_invalid'=>'Transaction ID invalide'
+    'access_denied' => 'Accès refusé',
+    'actions' => 'Actions',
+    'add_rubric' => 'ajouter une rubrique',
+    'back' => 'Retour',
+    'delete' => 'Supprimer',
+    'edit' => 'Editer',
+    'edit_rubric' => 'Editer rubrique',
+    'format_incorrect' => 'Le format de l\'icône était incorrecte. S\'il vous plaît télécharger uniquement une bannière au format * .gif, * .jpg ou * .png.',
+    'information_incomplete' => 'Certaines informations sont manquantes.',
+    'new_rubric' => 'nouvelle rubrique',
+    'news_rubrics' => 'Nouvelles rubriques',
+    'picture' => 'Images',
+    'picture_upload' => 'Uploader image',
+    'really_delete' => 'Confirmer suppression rubrique?',
+    'rubric_name' => 'Nom de la rubrique',
+    'transaction_invalid' => 'Transaction ID invalide'
 );
 

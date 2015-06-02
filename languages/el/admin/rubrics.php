@@ -25,25 +25,25 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Δεν επιτρέπεται η πρόσβαση',
-  'actions'=>'Ενεργειες',
-  'add_rubric'=>'προσθέστε Rubric',
-  'back'=>'πίσω',
-  'delete'=>'διαγραφή',
-  'edit'=>'Επεξεργασία',
-  'edit_rubric'=>'Επεξεργασία Rubric',
-  'format_incorrect'=>'Η μορφή του εικονιδίου ήταν εσφαλμένη. Παρακαλούμε να ανεβάσετε μόνο banner σε μορφη *.gif, *.jpg και  *.png.',
-  'information_incomplete'=>'Λείπουν ορισμένες πληροφορίες.',
-  'new_rubric'=>'νέo Rubric',
-  'news_rubrics'=>'Ειδήσεις Rubrics',
-  'picture'=>'Εικόνα',
-  'picture_upload'=>'Ανέβασμα Φωτογραφίας',
-  'really_delete'=>'Θέλετε πραγματικά να διαγράψετε αυτό το Rubric;',
-  'rubric_name'=>'Όνομα Rubric',
-  'transaction_invalid'=>'Μη έγκυρο ΑΝΑΓΝΩΡΙΣΤΙΚΌ συναλλαγής'
+    'access_denied' => 'Δεν επιτρέπεται η πρόσβαση',
+    'actions' => 'Ενεργειες',
+    'add_rubric' => 'προσθέστε Rubric',
+    'back' => 'πίσω',
+    'delete' => 'διαγραφή',
+    'edit' => 'Επεξεργασία',
+    'edit_rubric' => 'Επεξεργασία Rubric',
+    'format_incorrect' => 'Η μορφή του εικονιδίου ήταν εσφαλμένη. Παρακαλούμε να ανεβάσετε μόνο banner σε μορφη *.gif, *.jpg και  *.png.',
+    'information_incomplete' => 'Λείπουν ορισμένες πληροφορίες.',
+    'new_rubric' => 'νέo Rubric',
+    'news_rubrics' => 'Ειδήσεις Rubrics',
+    'picture' => 'Εικόνα',
+    'picture_upload' => 'Ανέβασμα Φωτογραφίας',
+    'really_delete' => 'Θέλετε πραγματικά να διαγράψετε αυτό το Rubric;',
+    'rubric_name' => 'Όνομα Rubric',
+    'transaction_invalid' => 'Μη έγκυρο ΑΝΑΓΝΩΡΙΣΤΙΚΌ συναλλαγής'
 );
 

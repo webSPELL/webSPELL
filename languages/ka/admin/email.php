@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -25,48 +25,48 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'მიუწვდომელია',
-  'auth'=>'ავტორიზაციის',
-  'debug'=>'Debug დონე',
-  'debug_0'=>'არცერთი',
-  'debug_1'=>'ბრძანებები',
-  'debug_2'=>'ბრძანებები + მონაცემები',
-  'debug_3'=>'ბრძანებები + მონაცემთა + კავშირი სტატუსი',
-  'debug_4'=>'დაბალი დონის მონაცემების გამომავალი',
-  'email'=>'ფოსტა',
-  'host'=>'HOST',
-  'html'=>'HTML?',
-  'password'=>'პაროლი',
-  'port'=>'SMTP პორტი',
-  'secure'=>'უსაფრთხო კავშირი',
-  'secure_none'=>'არცერთი',
-  'secure_tls'=>'TLS',
-  'secure_ssl'=>'SSL',
-  'send'=>'გაუგზავნე',
-  'test_email'=>'ტესტი ფოსტა',
-  'test_subject'=>'ტესტირება ფოსტის',
-  'test_message'=>'<h1> ტესტი ფოსტა </h1><p> თუ ხედავთ ამ, ელ გაგზავნის კონფიგურაცია და მუშაობს. </p>',
-  'test_ok'=>'ტესტი წარმატებული იყო',
-  'test_fail'=>'ტესტი წარუმატებელია',
-  'tooltip_1'=>'მეილის გაგზავნის მეთოდი',
-  'tooltip_2'=>'SMTP იდენტიფიკაცია?',
-  'tooltip_3'=>'SMTP ნიკი',
-  'tooltip_4'=>'SMTP პაროლი',
-  'tooltip_5'=>'SMTP პორტი (default: SMTP = 25, SSL = 465, TLS = 587',
-  'tooltip_6'=>'SMTP host',
-  'tooltip_7'=>'გააგზავნე HTML  ',
-  'tooltip_8'=>'უსაფრთხოების პროტოკოლი SMTP',
-  'tooltip_9'=>'რომელ Debug დონეზე?',
-  'transaction_invalid'=>'ID არასწორია',
-  'type'=>'ემაილის ხერხი',
-  'type_phpmail'=>'PHP mail ()',
-  'type_smtp'=>'SMTP',
-  'type_pop'=>'POP ადრე SMTP',
-  'update'=>'განახლება',
-  'user'=>'მომხმარებლის სახელი'
+    'access_denied' => 'მიუწვდომელია',
+    'auth' => 'ავტორიზაციის',
+    'debug' => 'Debug დონე',
+    'debug_0' => 'არცერთი',
+    'debug_1' => 'ბრძანებები',
+    'debug_2' => 'ბრძანებები + მონაცემები',
+    'debug_3' => 'ბრძანებები + მონაცემთა + კავშირი სტატუსი',
+    'debug_4' => 'დაბალი დონის მონაცემების გამომავალი',
+    'email' => 'ფოსტა',
+    'host' => 'HOST',
+    'html' => 'HTML?',
+    'password' => 'პაროლი',
+    'port' => 'SMTP პორტი',
+    'secure' => 'უსაფრთხო კავშირი',
+    'secure_none' => 'არცერთი',
+    'secure_ssl' => 'SSL',
+    'secure_tls' => 'TLS',
+    'send' => 'გაუგზავნე',
+    'test_email' => 'ტესტი ფოსტა',
+    'test_fail' => 'ტესტი წარუმატებელია',
+    'test_message' => '<h1> ტესტი ფოსტა </h1><p> თუ ხედავთ ამ, ელ გაგზავნის კონფიგურაცია და მუშაობს. </p>',
+    'test_ok' => 'ტესტი წარმატებული იყო',
+    'test_subject' => 'ტესტირება ფოსტის',
+    'tooltip_1' => 'მეილის გაგზავნის მეთოდი',
+    'tooltip_2' => 'SMTP იდენტიფიკაცია?',
+    'tooltip_3' => 'SMTP ნიკი',
+    'tooltip_4' => 'SMTP პაროლი',
+    'tooltip_5' => 'SMTP პორტი (default: SMTP = 25, SSL = 465, TLS = 587',
+    'tooltip_6' => 'SMTP host',
+    'tooltip_7' => 'გააგზავნე HTML  ',
+    'tooltip_8' => 'უსაფრთხოების პროტოკოლი SMTP',
+    'tooltip_9' => 'რომელ Debug დონეზე?',
+    'transaction_invalid' => 'ID არასწორია',
+    'type' => 'ემაილის ხერხი',
+    'type_phpmail' => 'PHP mail ()',
+    'type_pop' => 'POP ადრე SMTP',
+    'type_smtp' => 'SMTP',
+    'update' => 'განახლება',
+    'user' => 'მომხმარებლის სახელი'
 );
-?>
+

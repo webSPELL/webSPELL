@@ -25,25 +25,25 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Zugriff verweigert',
-  'actions'=>'Aktionen',
-  'add_rubric'=>'Rubrik hinzufügen',
-  'back'=>'zurück',
-  'delete'=>'löschen',
-  'edit'=>'ändern',
-  'edit_rubric'=>'Rubrik ändern',
-  'format_incorrect'=>'Das Format des Banners ist falsch. Bitte lade nur Banner im *.gif, *.jpg oder *.png Format hoch.',
-  'information_incomplete'=>'Angaben unvollständig.',
-  'new_rubric'=>'neue Rubrik',
-  'news_rubrics'=>'Neuigkeiten Rubriken',
-  'picture'=>'Bild',
-  'picture_upload'=>'Bild Upload',
-  'really_delete'=>'Diese Rubrik wirklich löschen?',
-  'rubric_name'=>'Rubrik Name',
-  'transaction_invalid'=>'Transaktions ID ungültig'
+    'access_denied' => 'Zugriff verweigert',
+    'actions' => 'Aktionen',
+    'add_rubric' => 'Rubrik hinzufügen',
+    'back' => 'zurück',
+    'delete' => 'löschen',
+    'edit' => 'ändern',
+    'edit_rubric' => 'Rubrik ändern',
+    'format_incorrect' => 'Das Format des Banners ist falsch. Bitte lade nur Banner im *.gif, *.jpg oder *.png Format hoch.',
+    'information_incomplete' => 'Angaben unvollständig.',
+    'new_rubric' => 'neue Rubrik',
+    'news_rubrics' => 'Neuigkeiten Rubriken',
+    'picture' => 'Bild',
+    'picture_upload' => 'Bild Upload',
+    'really_delete' => 'Diese Rubrik wirklich löschen?',
+    'rubric_name' => 'Rubrik Name',
+    'transaction_invalid' => 'Transaktions ID ungültig'
 );
 

@@ -25,29 +25,29 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Hozzáférés megtagadva',
-  'back'=>'Vissza',
-  'edit_group_users'=>'A csoport tagjainak szerkesztése',
-  'error_group'=>'HIBA: Nem létező felhasználói csoport',
-  'filter'=>'Szűrő',
-  'filter_anyadmin'=>'Adminok',
-  'filter_clanmember'=>'Klántagok',
-  'filter_registered'=>'Regisztráltak',
-  'filter_superadmin'=>'Fő Adminok',
-  'go'=>'OK',
-  'group_users'=>'Felhasználók',
-  'groups'=>'Felhasználói csoportok',
-  'or_just'=>'vagy csak',
-  'save'=>'Mentés',
-  'save_and_jump'=>'Mentés és ugrás az oldalra',
-  'select_all'=>'Mindet kijelöl',
-  'show'=>'Megjelenítés',
-  'user_filter'=>'Felhasználó szűrő',
-  'users_from_group'=>'Felhasználók',
-  'transaction_invalid'=>'A művelet azonosítója érvénytelen'
+    'access_denied' => 'Hozzáférés megtagadva',
+    'back' => 'Vissza',
+    'edit_group_users' => 'A csoport tagjainak szerkesztése',
+    'error_group' => 'HIBA: Nem létező felhasználói csoport',
+    'filter' => 'Szűrő',
+    'filter_anyadmin' => 'Adminok',
+    'filter_clanmember' => 'Klántagok',
+    'filter_registered' => 'Regisztráltak',
+    'filter_superadmin' => 'Fő Adminok',
+    'go' => 'OK',
+    'group_users' => 'Felhasználók',
+    'groups' => 'Felhasználói csoportok',
+    'or_just' => 'vagy csak',
+    'save' => 'Mentés',
+    'save_and_jump' => 'Mentés és ugrás az oldalra',
+    'select_all' => 'Mindet kijelöl',
+    'show' => 'Megjelenítés',
+    'transaction_invalid' => 'A művelet azonosítója érvénytelen',
+    'user_filter' => 'Felhasználó szűrő',
+    'users_from_group' => 'Felhasználók'
 );
 

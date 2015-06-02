@@ -29,8 +29,8 @@ $language_array = array(
 
 /* do not edit above this line */
 
-    'add_notexists' => 'Ce membre n\\existe pas',
-    'add_nouserid' => 'Ce membre n\\existe pas',
+    'add_notexists' => 'Ce membre n\existe pas',
+    'add_nouserid' => 'Ce membre n\existe pas',
     'add_yourself' => 'Vous ne pouvez pas ni vous ajouter en tant qu\'ami ni vous ignorer !',
     'buddy_nousers' => 'Vous n\'avez aucun membre dans votre liste d\'amis.',
     'buddys' => 'Amis',

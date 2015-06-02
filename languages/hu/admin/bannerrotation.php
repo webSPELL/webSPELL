@@ -25,33 +25,33 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Hozzáférés megtagadva',
-  'actions'=>'Lehetőségek',
-  'add_banner'=>'Banner hozzáadása',
-  'back'=>'Vissza',
-  'banner'=>'Banner',
-  'bannerrotation'=>'Mozgó bannerek',
-  'banner_name'=>'Banner Név',
-  'banner_upload'=>'Banner Feltöltése',
-  'banner_url'=>'Banner URL',
-  'clicks'=>'Kattintások (naponta)',
-  'delete'=>'Törlés',
-  'edit'=>'Szerkesztés',
-  'edit_banner'=>'Banner szerkesztése',
-  'fill_correctly'=>'Helyesen töltsd ki az űrlapot!',
-  'format_incorrect'=>'A kép formátuma nem megfelelő. A banner kiterjesztése csak *.gif, *.jpg és *.png lehet.',
-  'is_displayed'=>'Megjelenítés?',
-  'new_banner'=>'Új Banner',
-  'no'=>'Nem',
-  'no_upload'=>'Nincs kép feltöltve',
-  'no_entries'=>'Nincs bejegyzés',
-  'present_banner'=>'Jelenlegi Banner',
-  'really_delete'=>'Biztosan törölni akarod ezt a bannert?',
-  'transaction_invalid'=>'A művelet azonosítója érvénytelen',
-  'yes'=>'Igen'
+    'access_denied' => 'Hozzáférés megtagadva',
+    'actions' => 'Lehetőségek',
+    'add_banner' => 'Banner hozzáadása',
+    'back' => 'Vissza',
+    'banner' => 'Banner',
+    'banner_name' => 'Banner Név',
+    'banner_upload' => 'Banner Feltöltése',
+    'banner_url' => 'Banner URL',
+    'bannerrotation' => 'Mozgó bannerek',
+    'clicks' => 'Kattintások (naponta)',
+    'delete' => 'Törlés',
+    'edit' => 'Szerkesztés',
+    'edit_banner' => 'Banner szerkesztése',
+    'fill_correctly' => 'Helyesen töltsd ki az űrlapot!',
+    'format_incorrect' => 'A kép formátuma nem megfelelő. A banner kiterjesztése csak *.gif, *.jpg és *.png lehet.',
+    'is_displayed' => 'Megjelenítés?',
+    'new_banner' => 'Új Banner',
+    'no' => 'Nem',
+    'no_entries' => 'Nincs bejegyzés',
+    'no_upload' => 'Nincs kép feltöltve',
+    'present_banner' => 'Jelenlegi Banner',
+    'really_delete' => 'Biztosan törölni akarod ezt a bannert?',
+    'transaction_invalid' => 'A művelet azonosítója érvénytelen',
+    'yes' => 'Igen'
 );
 

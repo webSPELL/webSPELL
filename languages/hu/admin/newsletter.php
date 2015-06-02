@@ -25,29 +25,29 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Hozzáférés megtagadva',
-  'error_send'=>'EHIBA: A hírlevelet nem sikerült elküldeni (A mailszerver elérhető?)',
-  'html_mail'=>'HTML-Mail',
-  'newsletter'=>'Hírlevél',
-  'no_htmlmail'=>'Hello!
+    'access_denied' => 'Hozzáférés megtagadva',
+    'error_send' => 'EHIBA: A hírlevelet nem sikerült elküldeni (A mailszerver elérhető?)',
+    'html_mail' => 'HTML-Mail',
+    'newsletter' => 'Hírlevél',
+    'no_htmlmail' => 'Hello!
 Rendszered nem támogatja a HTML-Maileket.
 Az alábbi üzenetet kaptad:',
-  'profile'=>'Profil',
-  'receptionists'=>'Hírlevél elküldve!<br><br>Címzett(ek):',
-  'remove'=>'Itt iratkozhatsz le hírlevelünkről:',
-  'send'=>'Hírlevél elküldése',
-  'send_to'=>'Címzett(ek):',
-  'test'=>'Teszt',
-  'test_newsletter'=>'Hírlevél teszt',
-  'title'=>'Cím',
-  'transaction_invalid'=>'A művelet azonosítója érvénytelen',
-  'user_clanmembers'=>'Klántagok',
-  'user_newsletter'=>'Hírlevél előfizetők',
-  'user_registered'=>'Regisztrált tagok (klántagok is) ',
-  'users'=>'Felhasználók'
+    'profile' => 'Profil',
+    'receptionists' => 'Hírlevél elküldve!<br><br>Címzett(ek):',
+    'remove' => 'Itt iratkozhatsz le hírlevelünkről:',
+    'send' => 'Hírlevél elküldése',
+    'send_to' => 'Címzett(ek):',
+    'test' => 'Teszt',
+    'test_newsletter' => 'Hírlevél teszt',
+    'title' => 'Cím',
+    'transaction_invalid' => 'A művelet azonosítója érvénytelen',
+    'user_clanmembers' => 'Klántagok',
+    'user_newsletter' => 'Hírlevél előfizetők',
+    'user_registered' => 'Regisztrált tagok (klántagok is) ',
+    'users' => 'Felhasználók'
 );
 

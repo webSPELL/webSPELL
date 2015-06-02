@@ -25,24 +25,24 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Hyrja e Ndaluar',
-  'actions'=>'Veprimet',
-  'add_contact'=>'Shto kontakt',
-  'contact'=>'Kontaktet',
-  'contact_name'=>'Emri i Kontaktit',
-  'delete'=>'fshij',
-  'edit'=>'redakto',
-  'edit_contact'=>'Ndysho kontaktin',
-  'email'=>'E-Mail',
-  'information_incomplete'=>'Disa të dhëna mungojnë.',
-  'new_contact'=>'Kontakt i ri',
-  'really_delete'=>'Vërtet fshihet ky Kontakt?',
-  'sort'=>'Grupo',
-  'to_sort'=>'grupo',
-  'transaction_invalid'=>'ID e tranzaksionit e pavlefshme'
+    'access_denied' => 'Hyrja e Ndaluar',
+    'actions' => 'Veprimet',
+    'add_contact' => 'Shto kontakt',
+    'contact' => 'Kontaktet',
+    'contact_name' => 'Emri i Kontaktit',
+    'delete' => 'fshij',
+    'edit' => 'redakto',
+    'edit_contact' => 'Ndysho kontaktin',
+    'email' => 'E-Mail',
+    'information_incomplete' => 'Disa të dhëna mungojnë.',
+    'new_contact' => 'Kontakt i ri',
+    'really_delete' => 'Vërtet fshihet ky Kontakt?',
+    'sort' => 'Grupo',
+    'to_sort' => 'grupo',
+    'transaction_invalid' => 'ID e tranzaksionit e pavlefshme'
 );
 

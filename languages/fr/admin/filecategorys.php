@@ -25,24 +25,24 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Accès refusé',
-  'actions'=>'Actions',
-  'add_category'=>'Ajouter une Catégorie',
-  'category'=>'Catégorie',
-  'category_name'=>'Nom de la catégorie',
-  'delete'=>'Supprimer',
-  'enter_name'=>'Vous devez entrer un nom',
-  'edit'=>'Editer',
-  'edit_category'=>'Modifier une Catégorie',
-  'file_categories'=>'Catégories de fichier',
-  'main'=>'Principal',
-  'new_category'=>'Nouvelle Catégorie',
-  'really_delete'=>'Supprimer cette Catégorie?',
-  'sub_category'=>'Sous-catégorie de',
-  'transaction_invalid'=>'ID de Transaction invalide'
+    'access_denied' => 'Accès refusé',
+    'actions' => 'Actions',
+    'add_category' => 'Ajouter une Catégorie',
+    'category' => 'Catégorie',
+    'category_name' => 'Nom de la catégorie',
+    'delete' => 'Supprimer',
+    'edit' => 'Editer',
+    'edit_category' => 'Modifier une Catégorie',
+    'enter_name' => 'Vous devez entrer un nom',
+    'file_categories' => 'Catégories de fichier',
+    'main' => 'Principal',
+    'new_category' => 'Nouvelle Catégorie',
+    'really_delete' => 'Supprimer cette Catégorie?',
+    'sub_category' => 'Sous-catégorie de',
+    'transaction_invalid' => 'ID de Transaction invalide'
 );
 

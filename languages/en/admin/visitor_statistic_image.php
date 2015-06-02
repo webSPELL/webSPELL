@@ -25,13 +25,13 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
-  'max'=>'Maximum',
-  'min'=>'Minimum',
-  'not_logged_in'=>'You are not logged in'
+    'access_denied' => 'Access denied',
+    'max' => 'Maximum',
+    'min' => 'Minimum',
+    'not_logged_in' => 'You are not logged in'
 );
 

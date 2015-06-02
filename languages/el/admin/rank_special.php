@@ -25,9 +25,12 @@
 ##########################################################################
 */
 
-$language_array = Array(
-	'used_for'=>'Χρησιμοποιείται για',
-	'special_rank'=>'ειδική κατάταξη',
-	'no_special_rank'=>'καμία ειδική κατάταξη'
- );
- 
+$language_array = array(
+
+/* do not edit above this line */
+
+    'no_special_rank' => 'καμία ειδική κατάταξη',
+    'special_rank' => 'ειδική κατάταξη',
+    'used_for' => 'Χρησιμοποιείται για'
+);
+

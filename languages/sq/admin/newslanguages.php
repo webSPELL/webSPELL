@@ -25,24 +25,24 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Hyrja e Ndaluar',
-  'actions'=>'Veprimet',
-  'add_language'=>'shtoni Gjuhën',
-  'delete'=>'fshij',
-  'edit'=>'redakto',
-  'edit_language'=>'Ndrysho gjuhën',
-  'flag'=>'Flamujt',
-  'information_incomplete'=>'Disa të dhëna mungojnë.',
-  'language'=>'Gjuha',
-  'news_languages'=>'Lajmet-Gjuhët',
-  'new_language'=>'Gjuhë e re',
-  'preview'=>'Shikim paraprak',
-  'really_delete'=>'Me të vërtetë e fshini këtë Gjuhë?',
-  'title'=>'Titull',
-  'transaction_invalid'=>'ID e tranzaksionit e pavlefshme'
+    'access_denied' => 'Hyrja e Ndaluar',
+    'actions' => 'Veprimet',
+    'add_language' => 'shtoni Gjuhën',
+    'delete' => 'fshij',
+    'edit' => 'redakto',
+    'edit_language' => 'Ndrysho gjuhën',
+    'flag' => 'Flamujt',
+    'information_incomplete' => 'Disa të dhëna mungojnë.',
+    'language' => 'Gjuha',
+    'new_language' => 'Gjuhë e re',
+    'news_languages' => 'Lajmet-Gjuhët',
+    'preview' => 'Shikim paraprak',
+    'really_delete' => 'Me të vërtetë e fshini këtë Gjuhë?',
+    'title' => 'Titull',
+    'transaction_invalid' => 'ID e tranzaksionit e pavlefshme'
 );
 

@@ -25,22 +25,22 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
-  'allowed_commands'=>'<b>Allowed commands:</b> insert, alter table, select',
-  'backup_file'=>'Backup File',
-  'database'=>'Database',
-  'export'=>'Export/Download Backup',
-  'import_info'=>'Select a file where to import sql data from.<br><br><b>Important:</b> Create a backup before import another one!',
-  'optimize'=>'Optimize Database',
-  'select_option'=>'Please select Option',
-  'submit'=>'Submit',
-  'sql_query'=>'SQL Query',
-  'syntax_not_allowed'=>'Syntax not allowed!',
-  'upload'=>'Upload',
-  'transaction_invalid'=>'Transaction ID invalid'
+    'access_denied' => 'Access denied',
+    'allowed_commands' => '<b>Allowed commands:</b> insert, alter table, select',
+    'backup_file' => 'Backup File',
+    'database' => 'Database',
+    'export' => 'Export/Download Backup',
+    'import_info' => 'Select a file where to import sql data from.<br><br><b>Important:</b> Create a backup before import another one!',
+    'optimize' => 'Optimize Database',
+    'select_option' => 'Please select Option',
+    'sql_query' => 'SQL Query',
+    'submit' => 'Submit',
+    'syntax_not_allowed' => 'Syntax not allowed!',
+    'transaction_invalid' => 'Transaction ID invalid',
+    'upload' => 'Upload'
 );
 

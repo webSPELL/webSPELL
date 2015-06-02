@@ -25,16 +25,16 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
-  'automatic'=>'Automatically',
-  'imprint'=>'Imprint',
-  'manual'=>'Manually (use the Textfield below)',
-  'transaction_invalid'=>'Transaction ID invalid',
-  'update'=>'update',
-  'you_can_use_html'=>'You can use HTML-Tags'
+    'access_denied' => 'Access denied',
+    'automatic' => 'Automatically',
+    'imprint' => 'Imprint',
+    'manual' => 'Manually (use the Textfield below)',
+    'transaction_invalid' => 'Transaction ID invalid',
+    'update' => 'update',
+    'you_can_use_html' => 'You can use HTML-Tags'
 );
 

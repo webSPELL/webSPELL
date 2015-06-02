@@ -25,26 +25,26 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Zugriff verweigert',
-  'add_server'=>'Server hinzufügen',
-  'actions'=>'Aktionen',
-  'delete'=>'löschen',
-  'edit'=>'ändern',
-  'edit_server'=>'Server ändern',
-  'game'=>'Spiel',
-  'info'=>'Info',
-  'ip_port'=>'Server IP:Port',
-  'new_server'=>'neuer Server',
-  'no_server'=>'Kein Server vorhanden',
-  'really_delete'=>'Diesen Server wirklich löschen?',
-  'servers'=>'Server',
-  'server_name'=>'Server Name',
-  'sort'=>'Sortierung',
-  'transaction_invalid'=>'Transaktions ID ungültig',
-  'to_sort'=>'sortieren'
+    'access_denied' => 'Zugriff verweigert',
+    'actions' => 'Aktionen',
+    'add_server' => 'Server hinzufügen',
+    'delete' => 'löschen',
+    'edit' => 'ändern',
+    'edit_server' => 'Server ändern',
+    'game' => 'Spiel',
+    'info' => 'Info',
+    'ip_port' => 'Server IP:Port',
+    'new_server' => 'neuer Server',
+    'no_server' => 'Kein Server vorhanden',
+    'really_delete' => 'Diesen Server wirklich löschen?',
+    'server_name' => 'Server Name',
+    'servers' => 'Server',
+    'sort' => 'Sortierung',
+    'to_sort' => 'sortieren',
+    'transaction_invalid' => 'Transaktions ID ungültig'
 );
 

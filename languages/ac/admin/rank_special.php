@@ -25,9 +25,12 @@
 ##########################################################################
 */
 
-$language_array = Array(
-	'used_for'=>'crwdns22439:0crwdne22439:0',
-	'special_rank'=>'crwdns22440:0crwdne22440:0',
-	'no_special_rank'=>'crwdns22441:0crwdne22441:0'
- );
- 
+$language_array = array(
+
+/* do not edit above this line */
+
+    'no_special_rank' => 'crwdns22441:0crwdne22441:0',
+    'special_rank' => 'crwdns22440:0crwdne22440:0',
+    'used_for' => 'crwdns22439:0crwdne22439:0'
+);
+

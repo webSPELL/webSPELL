@@ -25,29 +25,29 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Accesso negato',
-  'error_send'=>'ERRORE: Non è stato possibile inviare la Newsletter (Mailserver a disposizione?)',
-  'html_mail'=>'HTML-Mail',
-  'newsletter'=>'Newsletter',
-  'no_htmlmail'=>'Ciao!
+    'access_denied' => 'Accesso negato',
+    'error_send' => 'ERRORE: Non è stato possibile inviare la Newsletter (Mailserver a disposizione?)',
+    'html_mail' => 'HTML-Mail',
+    'newsletter' => 'Newsletter',
+    'no_htmlmail' => 'Ciao!
 Il tuo sistema non supporta mail HTML.
 Hai ricevuto il seguente messaggio:',
-  'profile'=>'Profilo',
-  'receptionists'=>'Newsletter inviata!<br><br>Ricevitore:',
-  'remove'=>'Se vorrei cancellare la tua iscrizione alla mailing-list, puoi fare semplicemente nel tuo profilo',
-  'send'=>'invia newsletter',
-  'send_to'=>'Invia a',
-  'test'=>'test',
-  'test_newsletter'=>'Newsletter di prova',
-  'title'=>'Titolo',
-  'transaction_invalid'=>'ID della transazione non valido',
-  'user_clanmembers'=>'Membri del clan',
-  'user_newsletter'=>'Abbonati newsletter',
-  'user_registered'=>'utenti registrati (comprese le membri del clan)',
-  'users'=>'Utenti'
+    'profile' => 'Profilo',
+    'receptionists' => 'Newsletter inviata!<br><br>Ricevitore:',
+    'remove' => 'Se vorrei cancellare la tua iscrizione alla mailing-list, puoi fare semplicemente nel tuo profilo',
+    'send' => 'invia newsletter',
+    'send_to' => 'Invia a',
+    'test' => 'test',
+    'test_newsletter' => 'Newsletter di prova',
+    'title' => 'Titolo',
+    'transaction_invalid' => 'ID della transazione non valido',
+    'user_clanmembers' => 'Membri del clan',
+    'user_newsletter' => 'Abbonati newsletter',
+    'user_registered' => 'utenti registrati (comprese le membri del clan)',
+    'users' => 'Utenti'
 );
 

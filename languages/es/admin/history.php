@@ -25,14 +25,14 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Acceso denegado',
-  'history'=>'Historia del Clan',
-  'transaction_invalid'=>'ID de transacción no válida',
-  'update'=>'actualizar',
-  'you_can_use_html'=>'Puedes usar etiquetas HTML'
+    'access_denied' => 'Acceso denegado',
+    'history' => 'Historia del Clan',
+    'transaction_invalid' => 'ID de transacción no válida',
+    'update' => 'actualizar',
+    'you_can_use_html' => 'Puedes usar etiquetas HTML'
 );
 

@@ -25,33 +25,33 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Δεν επιτρέπεται η πρόσβαση',
-  'actions'=>'Ενεργειες',
-  'add_banner'=>'προσθήκη Banner',
-  'back'=>'πίσω',
-  'banner'=>'Banner',
-  'bannerrotation'=>'Περιστροφή Banner',
-  'banner_name'=>' Όνομα Banner',
-  'banner_upload'=>'Ανέβασμα Banner',
-  'banner_url'=>'Banner URL',
-  'clicks'=>'Κλικ (ανά ημέρα)',
-  'delete'=>'διαγραφή',
-  'edit'=>'επεξεργασία',
-  'edit_banner'=>'επεξεργασία Banner',
-  'fill_correctly'=>'Παρακαλώ συμπληρώστε τη φόρμα σωστά.',
-  'format_incorrect'=>'Η μορφή του εικονιδίου ήταν εσφαλμένη. Παρακαλούμε να ανεβάσετε μόνο banner σε μορφη *.gif, *.jpg και  *.png',
-  'is_displayed'=>'Εμφανίζεται;',
-  'new_banner'=>'νέο Banner',
-  'no'=>'Όχι',
-  'no_upload'=>'Δεν υπάρχει εικόνα',
-  'no_entries'=>'χωρις καταχωρησεις',
-  'present_banner'=>'Παρόν Banner',
-  'really_delete'=>'θελετε πραγματικά να διαγράψετε αυτό το Banner;',
-  'transaction_invalid'=>'Μη έγκυρο id συναλλαγής',
-  'yes'=>'Ναι'
+    'access_denied' => 'Δεν επιτρέπεται η πρόσβαση',
+    'actions' => 'Ενεργειες',
+    'add_banner' => 'προσθήκη Banner',
+    'back' => 'πίσω',
+    'banner' => 'Banner',
+    'banner_name' => ' Όνομα Banner',
+    'banner_upload' => 'Ανέβασμα Banner',
+    'banner_url' => 'Banner URL',
+    'bannerrotation' => 'Περιστροφή Banner',
+    'clicks' => 'Κλικ (ανά ημέρα)',
+    'delete' => 'διαγραφή',
+    'edit' => 'επεξεργασία',
+    'edit_banner' => 'επεξεργασία Banner',
+    'fill_correctly' => 'Παρακαλώ συμπληρώστε τη φόρμα σωστά.',
+    'format_incorrect' => 'Η μορφή του εικονιδίου ήταν εσφαλμένη. Παρακαλούμε να ανεβάσετε μόνο banner σε μορφη *.gif, *.jpg και  *.png',
+    'is_displayed' => 'Εμφανίζεται;',
+    'new_banner' => 'νέο Banner',
+    'no' => 'Όχι',
+    'no_entries' => 'χωρις καταχωρησεις',
+    'no_upload' => 'Δεν υπάρχει εικόνα',
+    'present_banner' => 'Παρόν Banner',
+    'really_delete' => 'θελετε πραγματικά να διαγράψετε αυτό το Banner;',
+    'transaction_invalid' => 'Μη έγκυρο id συναλλαγής',
+    'yes' => 'Ναι'
 );
 

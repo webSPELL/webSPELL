@@ -25,23 +25,23 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Toegang geweigerd',
-  'actions'=>'Acties',
-  'add_group'=>'Groep toevoegen',
-  'back'=>'terug',
-  'delete'=>'verwijderen',
-  'edit'=>'bewerk',
-  'edit_group'=>'Groep bewerken',
-  'error_group'=>'FOUT: Geen Groepsnaam',
-  'error_groupid'=>'FOUT: Ontbrekende fgrID',
-  'group_name'=>'Groepsnaam',
-  'groups'=>'Forum Gebruikersgroepen',
-  'new_group'=>'nieuwe Groep',
-  'really_delete'=>'Echt deze Forum Groep verwijderen?',
-  'transaction_invalid'=>'Transactie ID ongeldig'
+    'access_denied' => 'Toegang geweigerd',
+    'actions' => 'Acties',
+    'add_group' => 'Groep toevoegen',
+    'back' => 'terug',
+    'delete' => 'verwijderen',
+    'edit' => 'bewerk',
+    'edit_group' => 'Groep bewerken',
+    'error_group' => 'FOUT: Geen Groepsnaam',
+    'error_groupid' => 'FOUT: Ontbrekende fgrID',
+    'group_name' => 'Groepsnaam',
+    'groups' => 'Forum Gebruikersgroepen',
+    'new_group' => 'nieuwe Groep',
+    'really_delete' => 'Echt deze Forum Groep verwijderen?',
+    'transaction_invalid' => 'Transactie ID ongeldig'
 );
 

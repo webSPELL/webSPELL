@@ -33,4 +33,3 @@ $language_array = array(
     'no_about' => 'Aucune description.'
 );
 
-

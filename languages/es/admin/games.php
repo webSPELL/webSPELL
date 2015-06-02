@@ -25,28 +25,28 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Acceso denegado',
-  'actions'=>'Acciones',
-  'add_game'=>'Añadir juego',
-  'back'=>'volver',
-  'delete'=>'Borrar',
-  'edit'=>'editar',
-  'edit_game'=>'editar Juego',
-  'fill_correctly'=>'Por favor, rellene el formulario correctamente.',
-  'format_incorrect'=>'El formato del icono era incorrecto. Por favor, suba solamente iconos en formato *.gif.',
-  'game_icon'=>'Icono de Juego',
-  'game_name'=>'Nombre del Juego',
-  'game_tag'=>'Tag del Juego',
-  'games'=>'Juegos',
-  'icons'=>'Iconos',
-  'new_game'=>'nuevo juego',
-  'no_entries'=>'No hay entradas',
-  'present_icon'=>'Icono actual',
-  'really_delete'=>'¿Seguro que quieres eliminar este juego?',
-  'transaction_invalid'=>'ID de transacción no válida'
+    'access_denied' => 'Acceso denegado',
+    'actions' => 'Acciones',
+    'add_game' => 'Añadir juego',
+    'back' => 'volver',
+    'delete' => 'Borrar',
+    'edit' => 'editar',
+    'edit_game' => 'editar Juego',
+    'fill_correctly' => 'Por favor, rellene el formulario correctamente.',
+    'format_incorrect' => 'El formato del icono era incorrecto. Por favor, suba solamente iconos en formato *.gif.',
+    'game_icon' => 'Icono de Juego',
+    'game_name' => 'Nombre del Juego',
+    'game_tag' => 'Tag del Juego',
+    'games' => 'Juegos',
+    'icons' => 'Iconos',
+    'new_game' => 'nuevo juego',
+    'no_entries' => 'No hay entradas',
+    'present_icon' => 'Icono actual',
+    'really_delete' => '¿Seguro que quieres eliminar este juego?',
+    'transaction_invalid' => 'ID de transacción no válida'
 );
 

@@ -25,24 +25,24 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Hyrja e Ndaluar',
-  'actions'=>'Veprimet',
-  'add_category'=>'shto Kategorinë',
-  'category'=>'Kategori',
-  'category_name'=>'Emri Kategorisë',
-  'delete'=>'fshij',
-  'enter_name'=>'Ju duhet të shkruani një emër',
-  'edit'=>'redakto',
-  'edit_category'=>'redakto Kategorinë',
-  'file_categories'=>'Kategoritë e fishierëve',
-  'main'=>'Kryesor',
-  'new_category'=>'Kategori e re',
-  'really_delete'=>'Vërtet e fshini këtë Kategori?',
-  'sub_category'=>'Nën-Kategoria e',
-  'transaction_invalid'=>'ID e tranzaksionit e pavlefshme'
+    'access_denied' => 'Hyrja e Ndaluar',
+    'actions' => 'Veprimet',
+    'add_category' => 'shto Kategorinë',
+    'category' => 'Kategori',
+    'category_name' => 'Emri Kategorisë',
+    'delete' => 'fshij',
+    'edit' => 'redakto',
+    'edit_category' => 'redakto Kategorinë',
+    'enter_name' => 'Ju duhet të shkruani një emër',
+    'file_categories' => 'Kategoritë e fishierëve',
+    'main' => 'Kryesor',
+    'new_category' => 'Kategori e re',
+    'really_delete' => 'Vërtet e fshini këtë Kategori?',
+    'sub_category' => 'Nën-Kategoria e',
+    'transaction_invalid' => 'ID e tranzaksionit e pavlefshme'
 );
 

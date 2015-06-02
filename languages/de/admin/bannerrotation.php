@@ -25,33 +25,33 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Zugriff verweigert',
-  'actions'=>'Aktionen',
-  'add_banner'=>'Banner hinzufügen',
-  'back'=>'zurück',
-  'banner'=>'Banner',
-  'bannerrotation'=>'Banner Rotation',
-  'banner_name'=>'Banner Name',
-  'banner_upload'=>'Banner Upload',
-  'banner_url'=>'Banner URL',
-  'clicks'=>'Klicks (pro Tag)',
-  'delete'=>'löschen',
-  'edit'=>'ändern',
-  'edit_banner'=>'Banner ändern',
-  'fill_correctly'=>'Bitte füll das Formular korrekt aus.',
-  'format_incorrect'=>'Das Format des Symbols war falsch. Bitte lade nur Banner im *.gif, *.jpg und *.png Format hoch.',
-  'is_displayed'=>'Wird angezeigt?',
-  'new_banner'=>'neuer Banner',
-  'no'=>'Nein',
-  'no_upload'=>'Kein Bild hochgeladen',
-  'no_entries'=>'Keine Einträge',
-  'present_banner'=>'Aktueller Banner',
-  'really_delete'=>'Diesen Banner wirklich löschen?',
-  'transaction_invalid'=>'Transaktions ID ungültig',
-  'yes'=>'Ja'
+    'access_denied' => 'Zugriff verweigert',
+    'actions' => 'Aktionen',
+    'add_banner' => 'Banner hinzufügen',
+    'back' => 'zurück',
+    'banner' => 'Banner',
+    'banner_name' => 'Banner Name',
+    'banner_upload' => 'Banner Upload',
+    'banner_url' => 'Banner URL',
+    'bannerrotation' => 'Banner Rotation',
+    'clicks' => 'Klicks (pro Tag)',
+    'delete' => 'löschen',
+    'edit' => 'ändern',
+    'edit_banner' => 'Banner ändern',
+    'fill_correctly' => 'Bitte füll das Formular korrekt aus.',
+    'format_incorrect' => 'Das Format des Symbols war falsch. Bitte lade nur Banner im *.gif, *.jpg und *.png Format hoch.',
+    'is_displayed' => 'Wird angezeigt?',
+    'new_banner' => 'neuer Banner',
+    'no' => 'Nein',
+    'no_entries' => 'Keine Einträge',
+    'no_upload' => 'Kein Bild hochgeladen',
+    'present_banner' => 'Aktueller Banner',
+    'really_delete' => 'Diesen Banner wirklich löschen?',
+    'transaction_invalid' => 'Transaktions ID ungültig',
+    'yes' => 'Ja'
 );
 

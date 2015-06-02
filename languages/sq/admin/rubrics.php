@@ -25,25 +25,25 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Hyrja e Ndaluar',
-  'actions'=>'Veprimet',
-  'add_rubric'=>'shto Rubrikë',
-  'back'=>'mbrapsht',
-  'delete'=>'fshij',
-  'edit'=>'redakto',
-  'edit_rubric'=>'edito  Rubrikë',
-  'format_incorrect'=>'Formati i ikonës ishte i gabuar. Ju lutemi ngarkoni vetëm flamurin në * .gif, * jpg dhe * format .png.',
-  'information_incomplete'=>'Disa të dhëna mungojnë.',
-  'new_rubric'=>'Rubrikë e re',
-  'news_rubrics'=>'Rubrikat e Lajmeve',
-  'picture'=>'Foto',
-  'picture_upload'=>'Ngarko Foton',
-  'really_delete'=>'Me të vërtetë fshini kete Rubrike?',
-  'rubric_name'=>'Emri Rubrikës',
-  'transaction_invalid'=>'ID e tranzaksionit e pavlefshme'
+    'access_denied' => 'Hyrja e Ndaluar',
+    'actions' => 'Veprimet',
+    'add_rubric' => 'shto Rubrikë',
+    'back' => 'mbrapsht',
+    'delete' => 'fshij',
+    'edit' => 'redakto',
+    'edit_rubric' => 'edito  Rubrikë',
+    'format_incorrect' => 'Formati i ikonës ishte i gabuar. Ju lutemi ngarkoni vetëm flamurin në * .gif, * jpg dhe * format .png.',
+    'information_incomplete' => 'Disa të dhëna mungojnë.',
+    'new_rubric' => 'Rubrikë e re',
+    'news_rubrics' => 'Rubrikat e Lajmeve',
+    'picture' => 'Foto',
+    'picture_upload' => 'Ngarko Foton',
+    'really_delete' => 'Me të vërtetë fshini kete Rubrike?',
+    'rubric_name' => 'Emri Rubrikës',
+    'transaction_invalid' => 'ID e tranzaksionit e pavlefshme'
 );
 

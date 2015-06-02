@@ -25,24 +25,24 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Приступ одбијен',
-  'add_rank'=>'додајте Рејтинг',
-  'actions'=>'Акције',
-  'delete'=>'Избриши',
-  'edit_rank'=>'уреди ранг',
-  'information_incomplete'=>'Неке информације недостају.',
-  'max_posts'=>'макс. Поруке',
-  'min_posts'=>'мин. Поруке',
-  'new_rank'=>'Нови Ранг',
-  'rank_icon'=>'Ранг Иконе',
-  'rank_name'=>'Име Ранга',
-  'really_delete'=>'Стварно избришите овај ранг?',
-  'transaction_invalid'=>'ИД трансакције неважећи',
-  'update'=>'ажурирање',
-  'user_ranks'=>'Корисничке позиције'
+    'access_denied' => 'Приступ одбијен',
+    'actions' => 'Акције',
+    'add_rank' => 'додајте Рејтинг',
+    'delete' => 'Избриши',
+    'edit_rank' => 'уреди ранг',
+    'information_incomplete' => 'Неке информације недостају.',
+    'max_posts' => 'макс. Поруке',
+    'min_posts' => 'мин. Поруке',
+    'new_rank' => 'Нови Ранг',
+    'rank_icon' => 'Ранг Иконе',
+    'rank_name' => 'Име Ранга',
+    'really_delete' => 'Стварно избришите овај ранг?',
+    'transaction_invalid' => 'ИД трансакције неважећи',
+    'update' => 'ажурирање',
+    'user_ranks' => 'Корисничке позиције'
 );
 

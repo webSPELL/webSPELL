@@ -25,20 +25,20 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Приступ одбијен',
-  'error'=>'Сервер није ажуриран-компатибилан или датотека није доступна на',
-  'filename'=>'Име документа',
-  'get_new_version'=>'Набавите најновију верзију webSPELL овде!',
-  'information'=>'Информације',
-  'new_functions'=>'Нове функције за webSPELL доступне',
-  'new_updates'=>'Ново ажурирање  за webSPELL доступно',
-  'new_version'=>'Нова верзија webSPELL-а је доступна ',
-  'no_updates'=>'Нема доступних ажурирања!',
-  'version'=>'Верзија',
-  'webspell_update'=>'webSPELL ажурирање'
+    'access_denied' => 'Приступ одбијен',
+    'error' => 'Сервер није ажуриран-компатибилан или датотека није доступна на',
+    'filename' => 'Име документа',
+    'get_new_version' => 'Набавите најновију верзију webSPELL овде!',
+    'information' => 'Информације',
+    'new_functions' => 'Нове функције за webSPELL доступне',
+    'new_updates' => 'Ново ажурирање  за webSPELL доступно',
+    'new_version' => 'Нова верзија webSPELL-а је доступна ',
+    'no_updates' => 'Нема доступних ажурирања!',
+    'version' => 'Верзија',
+    'webspell_update' => 'webSPELL ажурирање'
 );
 

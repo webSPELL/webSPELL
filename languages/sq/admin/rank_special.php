@@ -25,9 +25,12 @@
 ##########################################################################
 */
 
-$language_array = Array(
-	'used_for'=>'Përdoret për',
-	'special_rank'=>'gradë speciale',
-	'no_special_rank'=>'nuk ka  ndonjë gradë speciale'
- );
- 
+$language_array = array(
+
+/* do not edit above this line */
+
+    'no_special_rank' => 'nuk ka  ndonjë gradë speciale',
+    'special_rank' => 'gradë speciale',
+    'used_for' => 'Përdoret për'
+);
+

@@ -25,26 +25,26 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
-  'add_server'=>'add Server',
-  'actions'=>'Actions',
-  'delete'=>'delete',
-  'edit'=>'edit',
-  'edit_server'=>'edit Server',
-  'game'=>'Game',
-  'info'=>'Info',
-  'ip_port'=>'Server IP:Port',
-  'new_server'=>'new Server',
-  'no_server'=>'No Servers available',
-  'really_delete'=>'Really delete this Server?',
-  'servers'=>'Servers',
-  'server_name'=>'Server Name',
-  'sort'=>'Sort',
-  'transaction_invalid'=>'Transaction ID invalid',
-  'to_sort'=>'sort'
+    'access_denied' => 'Access denied',
+    'actions' => 'Actions',
+    'add_server' => 'add Server',
+    'delete' => 'delete',
+    'edit' => 'edit',
+    'edit_server' => 'edit Server',
+    'game' => 'Game',
+    'info' => 'Info',
+    'ip_port' => 'Server IP:Port',
+    'new_server' => 'new Server',
+    'no_server' => 'No Servers available',
+    'really_delete' => 'Really delete this Server?',
+    'server_name' => 'Server Name',
+    'servers' => 'Servers',
+    'sort' => 'Sort',
+    'to_sort' => 'sort',
+    'transaction_invalid' => 'Transaction ID invalid'
 );
 

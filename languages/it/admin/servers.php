@@ -25,26 +25,26 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Accesso negato',
-  'add_server'=>'aggiungi server',
-  'actions'=>'Azioni',
-  'delete'=>'elimina',
-  'edit'=>'modifica',
-  'edit_server'=>'modifica server',
-  'game'=>'Gioco',
-  'info'=>'Info',
-  'ip_port'=>'Server IP:Porta',
-  'new_server'=>'nuovo server',
-  'no_server'=>'Nessun server disponibile',
-  'really_delete'=>'Davvero cancellare questo server?',
-  'servers'=>'Server',
-  'server_name'=>'Nome del server',
-  'sort'=>'Assortire',
-  'transaction_invalid'=>'ID della transazione non valido',
-  'to_sort'=>'assortire'
+    'access_denied' => 'Accesso negato',
+    'actions' => 'Azioni',
+    'add_server' => 'aggiungi server',
+    'delete' => 'elimina',
+    'edit' => 'modifica',
+    'edit_server' => 'modifica server',
+    'game' => 'Gioco',
+    'info' => 'Info',
+    'ip_port' => 'Server IP:Porta',
+    'new_server' => 'nuovo server',
+    'no_server' => 'Nessun server disponibile',
+    'really_delete' => 'Davvero cancellare questo server?',
+    'server_name' => 'Nome del server',
+    'servers' => 'Server',
+    'sort' => 'Assortire',
+    'to_sort' => 'assortire',
+    'transaction_invalid' => 'ID della transazione non valido'
 );
 

@@ -25,13 +25,13 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Hozzáférés megtagadva',
-  'max'=>'Maximum',
-  'min'=>'Minimum',
-  'not_logged_in'=>'Nem vagy bejelentkezve'
+    'access_denied' => 'Hozzáférés megtagadva',
+    'max' => 'Maximum',
+    'min' => 'Minimum',
+    'not_logged_in' => 'Nem vagy bejelentkezve'
 );
 

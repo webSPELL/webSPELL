@@ -25,23 +25,23 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Zugriff verweigert',
-  'actions'=>'Aktionen',
-  'add_group'=>'Benutzergruppe hinzufügen',
-  'back'=>'zurück',
-  'delete'=>'löschen',
-  'edit'=>'ändern',
-  'edit_group'=>'Benutzergruppe ändern',
-  'error_group'=>'FEHlER: Kein Benutzergruppename',
-  'error_groupid'=>'FEHLER: Fehlende fgrID',
-  'group_name'=>'Benutzergruppenname',
-  'groups'=>'Forum Benutzergruppen',
-  'new_group'=>'neue Benutzergruppe',
-  'really_delete'=>'Diese Benutzergruppe wirklich löschen?',
-  'transaction_invalid'=>'Transaktions ID ungültig'
+    'access_denied' => 'Zugriff verweigert',
+    'actions' => 'Aktionen',
+    'add_group' => 'Benutzergruppe hinzufügen',
+    'back' => 'zurück',
+    'delete' => 'löschen',
+    'edit' => 'ändern',
+    'edit_group' => 'Benutzergruppe ändern',
+    'error_group' => 'FEHlER: Kein Benutzergruppename',
+    'error_groupid' => 'FEHLER: Fehlende fgrID',
+    'group_name' => 'Benutzergruppenname',
+    'groups' => 'Forum Benutzergruppen',
+    'new_group' => 'neue Benutzergruppe',
+    'really_delete' => 'Diese Benutzergruppe wirklich löschen?',
+    'transaction_invalid' => 'Transaktions ID ungültig'
 );
 

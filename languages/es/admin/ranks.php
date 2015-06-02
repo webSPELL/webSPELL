@@ -25,24 +25,24 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Acceso Denegado',
-  'add_rank'=>'añadir Rango',
-  'actions'=>'Acciones',
-  'delete'=>'borrar',
-  'edit_rank'=>'editar Rango',
-  'information_incomplete'=>'Falta información.',
-  'max_posts'=>'max. Mensajes',
-  'min_posts'=>'min. Mensajes',
-  'new_rank'=>'nuevo Rango',
-  'rank_icon'=>'Icono de Rango',
-  'rank_name'=>'Nombre de Rango',
-  'really_delete'=>'¿Seguro que quieres borrar este Rango?',
-  'transaction_invalid'=>'ID de transacción no válida',
-  'update'=>'actualizar',
-  'user_ranks'=>'Rangos de Usuario'
+    'access_denied' => 'Acceso Denegado',
+    'actions' => 'Acciones',
+    'add_rank' => 'añadir Rango',
+    'delete' => 'borrar',
+    'edit_rank' => 'editar Rango',
+    'information_incomplete' => 'Falta información.',
+    'max_posts' => 'max. Mensajes',
+    'min_posts' => 'min. Mensajes',
+    'new_rank' => 'nuevo Rango',
+    'rank_icon' => 'Icono de Rango',
+    'rank_name' => 'Nombre de Rango',
+    'really_delete' => '¿Seguro que quieres borrar este Rango?',
+    'transaction_invalid' => 'ID de transacción no válida',
+    'update' => 'actualizar',
+    'user_ranks' => 'Rangos de Usuario'
 );
 

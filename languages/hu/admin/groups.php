@@ -25,23 +25,23 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Hozzáférés megtagadva',
-  'actions'=>'Lehetőségek',
-  'add_group'=>'Csoport hozzáadása',
-  'back'=>'Vissza',
-  'delete'=>'Törlés',
-  'edit'=>'Szerkesztés',
-  'edit_group'=>'Csoport szerkesztése',
-  'error_group'=>'HIBA: Nincs csoportnév',
-  'error_groupid'=>'HIBA: Hiányzó azonosító',
-  'group_name'=>'Csoport neve',
-  'groups'=>'Felhasználói csoportok',
-  'new_group'=>'Új csoport',
-  'really_delete'=>'Biztosan törölni akarod ezt a csoportot?',
-  'transaction_invalid'=>'A művelet azonosítója érvénytelen'
+    'access_denied' => 'Hozzáférés megtagadva',
+    'actions' => 'Lehetőségek',
+    'add_group' => 'Csoport hozzáadása',
+    'back' => 'Vissza',
+    'delete' => 'Törlés',
+    'edit' => 'Szerkesztés',
+    'edit_group' => 'Csoport szerkesztése',
+    'error_group' => 'HIBA: Nincs csoportnév',
+    'error_groupid' => 'HIBA: Hiányzó azonosító',
+    'group_name' => 'Csoport neve',
+    'groups' => 'Felhasználói csoportok',
+    'new_group' => 'Új csoport',
+    'really_delete' => 'Biztosan törölni akarod ezt a csoportot?',
+    'transaction_invalid' => 'A művelet azonosítója érvénytelen'
 );
 

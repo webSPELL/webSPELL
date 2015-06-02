@@ -25,9 +25,12 @@
 ##########################################################################
 */
 
-$language_array = Array(
-	'used_for'=>'Genutzt für',
-	'special_rank'=>'Spezialrank',
-	'no_special_rank'=>'kein Spezial Rank'
- );
- 
+$language_array = array(
+
+/* do not edit above this line */
+
+    'no_special_rank' => 'kein Spezial Rank',
+    'special_rank' => 'Spezialrank',
+    'used_for' => 'Genutzt für'
+);
+

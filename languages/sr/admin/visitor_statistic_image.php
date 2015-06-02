@@ -25,13 +25,13 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Приступ одбијен',
-  'max'=>'Максимум',
-  'min'=>'Минимум',
-  'not_logged_in'=>'Нисте пријављени'
+    'access_denied' => 'Приступ одбијен',
+    'max' => 'Максимум',
+    'min' => 'Минимум',
+    'not_logged_in' => 'Нисте пријављени'
 );
 

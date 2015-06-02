@@ -25,29 +25,29 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Acceso denegado',
-  'actions'=>'Acciones',
-  'add_smiley'=>'Añadir emoticono',
-  'back'=>'volver',
-  'delete'=>'Borrar',
-  'edit'=>'editar',
-  'edit_smiley'=>'Editar emoticono',
-  'example'=>'(ej.: ":oO:")',
-  'fill_form'=>'Por favor, rellene el formulario correctamente.',
-  'format_incorrect'=>'El formato del icono era incorrecto. Por favor, suba solamente iconos en formato *.gif.',
-  'icon'=>'Icono',
-  'icons'=>'Iconos',
-  'new_smiley'=>'Nuevo emoticono',
-  'no_entries'=>'No hay datos',
-  'pattern'=>'Patrón',
-  'present_icon'=>'Icono actual',
-  'really_delete'=>'¿Realmente quieres eliminar este emoticono?',
-  'smilies'=>'Emoticonos',
-  'smiley_name'=>'Nombre de emoticono',
-  'transaction_invalid'=>'ID de transacción no válida'
+    'access_denied' => 'Acceso denegado',
+    'actions' => 'Acciones',
+    'add_smiley' => 'Añadir emoticono',
+    'back' => 'volver',
+    'delete' => 'Borrar',
+    'edit' => 'editar',
+    'edit_smiley' => 'Editar emoticono',
+    'example' => '(ej.: ":oO:")',
+    'fill_form' => 'Por favor, rellene el formulario correctamente.',
+    'format_incorrect' => 'El formato del icono era incorrecto. Por favor, suba solamente iconos en formato *.gif.',
+    'icon' => 'Icono',
+    'icons' => 'Iconos',
+    'new_smiley' => 'Nuevo emoticono',
+    'no_entries' => 'No hay datos',
+    'pattern' => 'Patrón',
+    'present_icon' => 'Icono actual',
+    'really_delete' => '¿Realmente quieres eliminar este emoticono?',
+    'smiley_name' => 'Nombre de emoticono',
+    'smilies' => 'Emoticonos',
+    'transaction_invalid' => 'ID de transacción no válida'
 );
 

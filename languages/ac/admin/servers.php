@@ -25,26 +25,26 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'crwdns22473:0crwdne22473:0',
-  'add_server'=>'crwdns22474:0crwdne22474:0',
-  'actions'=>'crwdns22475:0crwdne22475:0',
-  'delete'=>'crwdns22476:0crwdne22476:0',
-  'edit'=>'crwdns22477:0crwdne22477:0',
-  'edit_server'=>'crwdns22478:0crwdne22478:0',
-  'game'=>'crwdns22479:0crwdne22479:0',
-  'info'=>'crwdns22480:0crwdne22480:0',
-  'ip_port'=>'crwdns22481:0crwdne22481:0',
-  'new_server'=>'crwdns22482:0crwdne22482:0',
-  'no_server'=>'crwdns22483:0crwdne22483:0',
-  'really_delete'=>'crwdns22484:0crwdne22484:0',
-  'servers'=>'crwdns22485:0crwdne22485:0',
-  'server_name'=>'crwdns22486:0crwdne22486:0',
-  'sort'=>'crwdns22487:0crwdne22487:0',
-  'transaction_invalid'=>'crwdns22488:0crwdne22488:0',
-  'to_sort'=>'crwdns22489:0crwdne22489:0'
+    'access_denied' => 'crwdns22473:0crwdne22473:0',
+    'actions' => 'crwdns22475:0crwdne22475:0',
+    'add_server' => 'crwdns22474:0crwdne22474:0',
+    'delete' => 'crwdns22476:0crwdne22476:0',
+    'edit' => 'crwdns22477:0crwdne22477:0',
+    'edit_server' => 'crwdns22478:0crwdne22478:0',
+    'game' => 'crwdns22479:0crwdne22479:0',
+    'info' => 'crwdns22480:0crwdne22480:0',
+    'ip_port' => 'crwdns22481:0crwdne22481:0',
+    'new_server' => 'crwdns22482:0crwdne22482:0',
+    'no_server' => 'crwdns22483:0crwdne22483:0',
+    'really_delete' => 'crwdns22484:0crwdne22484:0',
+    'server_name' => 'crwdns22486:0crwdne22486:0',
+    'servers' => 'crwdns22485:0crwdne22485:0',
+    'sort' => 'crwdns22487:0crwdne22487:0',
+    'to_sort' => 'crwdns22489:0crwdne22489:0',
+    'transaction_invalid' => 'crwdns22488:0crwdne22488:0'
 );
 

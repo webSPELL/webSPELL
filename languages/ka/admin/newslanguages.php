@@ -25,24 +25,24 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'მიუწვდომელია',
-  'actions'=>'ქმედებები',
-  'add_language'=>'ენის დამატება',
-  'delete'=>'წაშლა',
-  'edit'=>'რედაქტირება',
-  'edit_language'=>'ენის რედაქტირება',
-  'flag'=>'დროშები',
-  'information_incomplete'=>'ზოგიერთი ინფორმაცია დაკარგულია.',
-  'language'=>'ენა',
-  'news_languages'=>'ახალი ამბები-ენები',
-  'new_language'=>'ახალი ენა',
-  'preview'=>'მიმოხილვა',
-  'really_delete'=>'წავშალოთ ენა?',
-  'title'=>'სათაური',
-  'transaction_invalid'=>'ID არასწორია'
+    'access_denied' => 'მიუწვდომელია',
+    'actions' => 'ქმედებები',
+    'add_language' => 'ენის დამატება',
+    'delete' => 'წაშლა',
+    'edit' => 'რედაქტირება',
+    'edit_language' => 'ენის რედაქტირება',
+    'flag' => 'დროშები',
+    'information_incomplete' => 'ზოგიერთი ინფორმაცია დაკარგულია.',
+    'language' => 'ენა',
+    'new_language' => 'ახალი ენა',
+    'news_languages' => 'ახალი ამბები-ენები',
+    'preview' => 'მიმოხილვა',
+    'really_delete' => 'წავშალოთ ენა?',
+    'title' => 'სათაური',
+    'transaction_invalid' => 'ID არასწორია'
 );
 

@@ -25,24 +25,24 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Приступ одбијен',
-  'actions'=>'Акције',
-  'add_language'=>'додајте Језик',
-  'delete'=>'Избриши',
-  'edit'=>'уреди',
-  'edit_language'=>'промените Језик',
-  'flag'=>'Заставе',
-  'information_incomplete'=>'Неке информације недостају.',
-  'language'=>'Језик',
-  'news_languages'=>'Вести-Језици',
-  'new_language'=>'нови језик',
-  'preview'=>'Преглед',
-  'really_delete'=>'Заиста да уклоните овај језик?',
-  'title'=>'Наслов',
-  'transaction_invalid'=>'ИД трансакције неважећи'
+    'access_denied' => 'Приступ одбијен',
+    'actions' => 'Акције',
+    'add_language' => 'додајте Језик',
+    'delete' => 'Избриши',
+    'edit' => 'уреди',
+    'edit_language' => 'промените Језик',
+    'flag' => 'Заставе',
+    'information_incomplete' => 'Неке информације недостају.',
+    'language' => 'Језик',
+    'new_language' => 'нови језик',
+    'news_languages' => 'Вести-Језици',
+    'preview' => 'Преглед',
+    'really_delete' => 'Заиста да уклоните овај језик?',
+    'title' => 'Наслов',
+    'transaction_invalid' => 'ИД трансакције неважећи'
 );
 

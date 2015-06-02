@@ -25,14 +25,14 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Приступ одбијен',
-  'history'=>'Клан-Историја',
-  'transaction_invalid'=>'ИД трансакције неважећи',
-  'update'=>'ажурирање',
-  'you_can_use_html'=>'Можете користити ХТМЛ тагове'
+    'access_denied' => 'Приступ одбијен',
+    'history' => 'Клан-Историја',
+    'transaction_invalid' => 'ИД трансакције неважећи',
+    'update' => 'ажурирање',
+    'you_can_use_html' => 'Можете користити ХТМЛ тагове'
 );
 

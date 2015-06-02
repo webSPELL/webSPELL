@@ -25,37 +25,37 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'მიუწვდომელია',
-  'actions'=>'ქმედებები',
-  'add_squad'=>'რჩეულში დამატება',
-  'back'=>'უკან',
-  'current_icon'=>'მიმდინარე ხატი',
-  'current_icon_small'=>'აქტუალური ხატულა (პატარა)',
-  'delete'=>'წაშლა',
-  'edit'=>'რედაქტირება',
-  'edit_squad'=>'რედაქტირება Squad',
-  'format_incorrect'=>'ფორმატის ხატი არასწორი იყო. გთხოვთ ატვირთეთ მხოლოდ ბანერი *.gif, *.jpg ან *.png ფორმატში.',
-  'game'=>'თამაში',
-  'gaming_squad'=>'სათამაშო Squad',
-  'icon'=>'Icon',
-  'icon_upload'=>'ხატულის ატვირთვა',
-  'icon_upload_info'=>'sc_squads მოიცავს',
-  'icon_upload_small'=>'Icon ატვირთვა პატარა',
-  'information_incomplete'=>'ზოგიერთი ინფორმაცია დაკარგულია.',
-  'new_squad'=>'ახალი Squad',
-  'no_icon'=>'ხატულა მიუწვდომელია',
-  'non_gaming_squad'=>'არასამთავრობო Squad',
-  'really_delete'=>'წავშალოთ Squad?',
-  'sort'=>'დაფასოება',
-  'squad_info'=>'Squad ინფორმაცია',
-  'squad_name'=>'Squad სახელი',
-  'squad_type'=>'Squad ტიპი',
-  'squads'=>'Squads',
-  'transaction_invalid'=>'ID არასწორია',
-  'to_sort'=>'დაფასოება'
+    'access_denied' => 'მიუწვდომელია',
+    'actions' => 'ქმედებები',
+    'add_squad' => 'რჩეულში დამატება',
+    'back' => 'უკან',
+    'current_icon' => 'მიმდინარე ხატი',
+    'current_icon_small' => 'აქტუალური ხატულა (პატარა)',
+    'delete' => 'წაშლა',
+    'edit' => 'რედაქტირება',
+    'edit_squad' => 'რედაქტირება Squad',
+    'format_incorrect' => 'ფორმატის ხატი არასწორი იყო. გთხოვთ ატვირთეთ მხოლოდ ბანერი *.gif, *.jpg ან *.png ფორმატში.',
+    'game' => 'თამაში',
+    'gaming_squad' => 'სათამაშო Squad',
+    'icon' => 'Icon',
+    'icon_upload' => 'ხატულის ატვირთვა',
+    'icon_upload_info' => 'sc_squads მოიცავს',
+    'icon_upload_small' => 'Icon ატვირთვა პატარა',
+    'information_incomplete' => 'ზოგიერთი ინფორმაცია დაკარგულია.',
+    'new_squad' => 'ახალი Squad',
+    'no_icon' => 'ხატულა მიუწვდომელია',
+    'non_gaming_squad' => 'არასამთავრობო Squad',
+    'really_delete' => 'წავშალოთ Squad?',
+    'sort' => 'დაფასოება',
+    'squad_info' => 'Squad ინფორმაცია',
+    'squad_name' => 'Squad სახელი',
+    'squad_type' => 'Squad ტიპი',
+    'squads' => 'Squads',
+    'to_sort' => 'დაფასოება',
+    'transaction_invalid' => 'ID არასწორია'
 );
 

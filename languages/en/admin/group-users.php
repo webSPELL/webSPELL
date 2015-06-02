@@ -25,29 +25,29 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
-  'back'=>'back',
-  'edit_group_users'=>'edit Group Users',
-  'error_group'=>'ERROR: User Group doesn\'t exist',
-  'filter'=>'Filter',
-  'filter_anyadmin'=>'any Admin Filter',
-  'filter_clanmember'=>'Clanmembers Filter',
-  'filter_registered'=>'registered Filter',
-  'filter_superadmin'=>'Super Admin Filter',
-  'go'=>'go',
-  'group_users'=>'Group Users',
-  'groups'=>'Forum User Groups',
-  'or_just'=>'or just',
-  'save'=>'save',
-  'save_and_jump'=>'jump to Page',
-  'select_all'=>'select all',
-  'show'=>'show',
-  'user_filter'=>'User Filter',
-  'users_from_group'=>'Users from Group',
-  'transaction_invalid'=>'Transaction ID invalid'
+    'access_denied' => 'Access denied',
+    'back' => 'back',
+    'edit_group_users' => 'edit Group Users',
+    'error_group' => 'ERROR: User Group doesn\'t exist',
+    'filter' => 'Filter',
+    'filter_anyadmin' => 'any Admin Filter',
+    'filter_clanmember' => 'Clanmembers Filter',
+    'filter_registered' => 'registered Filter',
+    'filter_superadmin' => 'Super Admin Filter',
+    'go' => 'go',
+    'group_users' => 'Group Users',
+    'groups' => 'Forum User Groups',
+    'or_just' => 'or just',
+    'save' => 'save',
+    'save_and_jump' => 'jump to Page',
+    'select_all' => 'select all',
+    'show' => 'show',
+    'transaction_invalid' => 'Transaction ID invalid',
+    'user_filter' => 'User Filter',
+    'users_from_group' => 'Users from Group'
 );
 

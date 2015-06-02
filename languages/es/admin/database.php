@@ -25,22 +25,22 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Acceso denegado',
-  'allowed_commands'=>'<b>Comandos permitidos:</b> insert, alter table, select',
-  'backup_file'=>'Archivo de copia de seguridad',
-  'database'=>'Base de datos',
-  'export'=>'Exportar / Descargar Copia de seguridad',
-  'import_info'=>'Seleccione un archivo de origen de la importación de datos sql.<br><br><b>Importante:</b> Crear una copia de seguridad antes de importar otra!',
-  'optimize'=>'Optimizar La Base De Datos',
-  'select_option'=>'Por favor, seleccione la opción',
-  'submit'=>'Enviar',
-  'sql_query'=>'Consulta SQL',
-  'syntax_not_allowed'=>'Sintaxis no permitida!',
-  'upload'=>'Subir',
-  'transaction_invalid'=>'ID de transacción no válida'
+    'access_denied' => 'Acceso denegado',
+    'allowed_commands' => '<b>Comandos permitidos:</b> insert, alter table, select',
+    'backup_file' => 'Archivo de copia de seguridad',
+    'database' => 'Base de datos',
+    'export' => 'Exportar / Descargar Copia de seguridad',
+    'import_info' => 'Seleccione un archivo de origen de la importación de datos sql.<br><br><b>Importante:</b> Crear una copia de seguridad antes de importar otra!',
+    'optimize' => 'Optimizar La Base De Datos',
+    'select_option' => 'Por favor, seleccione la opción',
+    'sql_query' => 'Consulta SQL',
+    'submit' => 'Enviar',
+    'syntax_not_allowed' => 'Sintaxis no permitida!',
+    'transaction_invalid' => 'ID de transacción no válida',
+    'upload' => 'Subir'
 );
 

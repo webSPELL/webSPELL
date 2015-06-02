@@ -25,25 +25,25 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Hozzáférés megtagadva',
-  'actions'=>'Lehetőségek',
-  'add_rubric'=>'Hírkategória hozzáadása',
-  'back'=>'Vissza',
-  'delete'=>'Törlés',
-  'edit'=>'Szerkesztés',
-  'edit_rubric'=>'Hírkategória szerkesztése',
-  'format_incorrect'=>'A kép formátuma nem megfelelő. A kép kiterjesztése csak *.gif, *.jpg and *.png lehet.',
-  'information_incomplete'=>'Néhány információ hiányzik.',
-  'new_rubric'=>'Új hírkategória',
-  'news_rubrics'=>'Hírkategóriák',
-  'picture'=>'Kép',
-  'picture_upload'=>'Kép feltöltése',
-  'really_delete'=>'Biztosan törölni akarod ezt a hírkategóriát?',
-  'rubric_name'=>'Hírkategória neve',
-  'transaction_invalid'=>'A művelet azonosítója érvénytelen'
+    'access_denied' => 'Hozzáférés megtagadva',
+    'actions' => 'Lehetőségek',
+    'add_rubric' => 'Hírkategória hozzáadása',
+    'back' => 'Vissza',
+    'delete' => 'Törlés',
+    'edit' => 'Szerkesztés',
+    'edit_rubric' => 'Hírkategória szerkesztése',
+    'format_incorrect' => 'A kép formátuma nem megfelelő. A kép kiterjesztése csak *.gif, *.jpg and *.png lehet.',
+    'information_incomplete' => 'Néhány információ hiányzik.',
+    'new_rubric' => 'Új hírkategória',
+    'news_rubrics' => 'Hírkategóriák',
+    'picture' => 'Kép',
+    'picture_upload' => 'Kép feltöltése',
+    'really_delete' => 'Biztosan törölni akarod ezt a hírkategóriát?',
+    'rubric_name' => 'Hírkategória neve',
+    'transaction_invalid' => 'A művelet azonosítója érvénytelen'
 );
 

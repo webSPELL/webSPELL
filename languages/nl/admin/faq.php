@@ -25,27 +25,27 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Toegang geweigerd',
-  'actions'=>'Acties',
-  'add_faq'=>'FAQ Toevoegen',
-  'answer'=>'Antwoord',
-  'category'=>'Categorie',
-  'delete'=>'verwijderen',
-  'edit'=>'bewerk',
-  'edit_faq'=>'FAQ bewerken',
-  'faq'=>'FAQ',
-  'information_incomplete'=>'Sommige informatie ontbreekt.',
-  'new_faq'=>'Nieuwe FAQ',
-  'no_category_selected'=>'U bent vergeten om een Categorie te selecteren',
-  'no_faq_selected'=>'Geen FAQ Categorie geselecteerd',
-  'really_delete'=>'Deze FAQ verwijderen?',
-  'sort'=>'Sorteer',
-  'to_sort'=>'sorteer',
-  'transaction_invalid'=>'Transactie ID ongeldig',
-  'tags'=>'Tags'
+    'access_denied' => 'Toegang geweigerd',
+    'actions' => 'Acties',
+    'add_faq' => 'FAQ Toevoegen',
+    'answer' => 'Antwoord',
+    'category' => 'Categorie',
+    'delete' => 'verwijderen',
+    'edit' => 'bewerk',
+    'edit_faq' => 'FAQ bewerken',
+    'faq' => 'FAQ',
+    'information_incomplete' => 'Sommige informatie ontbreekt.',
+    'new_faq' => 'Nieuwe FAQ',
+    'no_category_selected' => 'U bent vergeten om een Categorie te selecteren',
+    'no_faq_selected' => 'Geen FAQ Categorie geselecteerd',
+    'really_delete' => 'Deze FAQ verwijderen?',
+    'sort' => 'Sorteer',
+    'tags' => 'Tags',
+    'to_sort' => 'sorteer',
+    'transaction_invalid' => 'Transactie ID ongeldig'
 );
 

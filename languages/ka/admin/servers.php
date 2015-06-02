@@ -25,26 +25,26 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'მიუწვდომელია',
-  'add_server'=>'სერვერის დამატება',
-  'actions'=>'ქმედებები',
-  'delete'=>'წაშლა',
-  'edit'=>'რედაქტირება',
-  'edit_server'=>'სერვერის რედაქტირება',
-  'game'=>'თამაში',
-  'info'=>'ინფორმაცია',
-  'ip_port'=>'Server IP: Port',
-  'new_server'=>'ახალი სერვერი',
-  'no_server'=>'არ რის სერვერები ხელმისაწვდომი',
-  'really_delete'=>'წავშალოთ სერვერი?',
-  'servers'=>'სერვერები',
-  'server_name'=>'სერვერის სახელი',
-  'sort'=>'დაფასოება',
-  'transaction_invalid'=>'ID არასწორია',
-  'to_sort'=>'დაფასოება'
+    'access_denied' => 'მიუწვდომელია',
+    'actions' => 'ქმედებები',
+    'add_server' => 'სერვერის დამატება',
+    'delete' => 'წაშლა',
+    'edit' => 'რედაქტირება',
+    'edit_server' => 'სერვერის რედაქტირება',
+    'game' => 'თამაში',
+    'info' => 'ინფორმაცია',
+    'ip_port' => 'Server IP: Port',
+    'new_server' => 'ახალი სერვერი',
+    'no_server' => 'არ რის სერვერები ხელმისაწვდომი',
+    'really_delete' => 'წავშალოთ სერვერი?',
+    'server_name' => 'სერვერის სახელი',
+    'servers' => 'სერვერები',
+    'sort' => 'დაფასოება',
+    'to_sort' => 'დაფასოება',
+    'transaction_invalid' => 'ID არასწორია'
 );
 

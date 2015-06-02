@@ -25,14 +25,14 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'about'=>'À propos de nous',
-  'access_denied'=>'Accès refusé',
-  'transaction_invalid'=>'ID invalide',
-  'update'=>'Mettre à jour',
-  'you_can_use_html'=>'Vous pouvez utiliser les balises HTML'
+    'about' => 'À propos de nous',
+    'access_denied' => 'Accès refusé',
+    'transaction_invalid' => 'ID invalide',
+    'update' => 'Mettre à jour',
+    'you_can_use_html' => 'Vous pouvez utiliser les balises HTML'
 );
 

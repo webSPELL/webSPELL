@@ -1,0 +1,772 @@
+
+# 5.0.0-alpha.0
+
+- chroe(buildtools): add prerelease to grunt bump task `46439e1`
+- chroe(buildtools): update npm packages `6dc7b84`
+- Merge pull request #242 from webSPELL/webspell-241-clean `aaff25f`
+- Merge pull request #246 from skai92/patch-1 `03c7d2b`
+- chore(languages): add SR translation `4260d20`
+- chore(languages): add SQ translation `218366b`
+- chore(languages): add NL translation `f8549dd`
+- chore(languages): add KA translation `ad695e4`
+- chore(languages): add IT translation `fcede66`
+- chore(languages): add HU translation `a426202`
+- chore(languages): add FR translation `b8e082b`
+- chore(languages): add ES translation `8ff1343`
+- chore(languages): add DE translation `cb94162`
+- chore(languages): add EL translation `fa8916d`
+- fix(visitor_statistic_image): fixex the include paths `e3a9f68`
+- fix(visitor_statistic_image): fix path error with DirectoryIterator `b1fa113`
+- refactor(language): implement iso 639-1 ref #216 `0997eb8`
+- fix(install): change default language to EN `238c9ff`
+- fix(languages): move formvalidation to EN `8b7f1cf`
+- fix cs `67adea4`
+- pass error code to indicate what went wrong in js `a07b869`
+- refactor how error messages are handled `46b5737`
+- rename that to $this as its a jQuery object `fe768bf`
+- Merge pull request #240 from webSPELL/password_compare `82f5cea`
+- add grunt-lintspaces `7958ee4`
+- fix(email): fix some errors and unneeded sql querys `3df4eda`
+- fix(email): load language file `6ae975b`
+- fix(login): be safe against timing attacks, closes #237 `f4513de`
+- wip(register): remove password repeat, make input type password `7c349e5`
+- fix(languages): add missing faq key to EN `a7fa46a`
+- add grunt-lintspaces `ab25a2c`
+- add grunt-lintspaces `4c992a0`
+- Merge pull request #232 from webSPELL/metatag-keywords `815b1f4`
+- remove deprecated meta tag keywords fixes #227 `0d2cb83`
+- remove deprecated meta tag keywords fixes #227" `0b4b5da`
+- Merge pull request #234 from webSPELL/register-password `6fe8152`
+- remove deprecated meta tag keywords fixes #227 `c842b1f`
+- feat(register): remove password repeat, make input type password `8d02182`
+- chore(core): delete test file `e13992e`
+- chore(languages): update pseudo language ac `dafe0d9`
+- chore(buildtools): add Crowdin Badge to README `dfdeb1d`
+- fix(languages): removed unneeded and untranslated language keys and corrected code style `5bef9f2`
+- chore(buildtools): added tool to remove untranslated language keys `5d91e77`
+- remove deprecated meta tag keywords fixes #227 `fb6f55f`
+- Merge pull request #231 from webSPELL/fix-140-systemerror `b42b551`
+- Merge pull request #226 from webSPELL/development-cleanup `24a20fb`
+- wip(buildtools): moved codestyle into development `b8e6b79`
+- Merge branch 'dev' into development-cleanup `4bb4a2f`
+- wip(core): add stacktrace to systeminc `f83fd6d`
+- chore(core): fix cs `84c8a43`
+- wip(style): new style for backtrace without throwing an exception `b1bc842`
+- wip(core): move ob_start to _error, changed bootstrap divs `85a1063`
+- Merge pull request #229 from webSPELL/fix-222-sql `72cb0f0`
+- wip(core): add check for mb_substr support `b51bc82`
+- wip(core): revert to using getTraceAsString for stacktrace `78c15ed`
+- wip(core): add stacktrace for mysql error `ad1414c`
+- fix(chore): fix missing comment tag `2bcacc7`
+- fix(core): create new general system_error `bd6205f`
+- chore(codestyle): fix codestyle `c29fff7`
+- fix(modrewrite): fix sql injection `1427219`
+- fix(gallery): small fix `0d1d53c`
+- fix(database): use a unique temp file to upload new database `0bdae14`
+- Merge branch 'lhelsloot-feat-login-safercookie' into dev `a17e188`
+- fix(language): fix switching language for logged in users `7887cce`
+- Merge branch 'feat-login-safercookie' of https://github.com/lhelsloot/webSPELL into lhelsloot-feat-login-safercookie `0167fe3`
+- chore(buildtools): update npm packages `687ed5a`
+- fix(install): add default utf charset/collate to create table `d0a9aad`
+- feat(login): Safer login cookie `57b2900`
+- Merge pull request #225 from webSPELL/fix-#216-languages `d4f38cc`
+- wip(install): remove install check from index `16142cd`
+- wip(install): set bootstrap/jquery to use components folder `6a4a652`
+- wip(install): remove obsoleteLanguages from full install `e7fb5eb`
+- wip(install): use clearfolder instead of removeInstall `3d6dbde`
+- wip(install): move fs include to correct function `09eebdd`
+- wip(install): move remove obsolete languages to own function `8438dad`
+- wip(install): add fixme comments `1afc016`
+- wip(install): swap recursiveRemoveDirectory to rm_recursive `30b7ad2`
+- chore(install): fix some grammar, add transaction error to result `459752a`
+- Merge branch 'dev' into fix-#216-languages `44e0be4`
+- fix(install): remove duplicate columns `d70ae84`
+- Merge branch 'dev' into fix-#216-languages `694cad9`
+- fix(install): remove duplicate column `876695e`
+- Merge branch 'dev' into fix-#216-languages `052200a`
+- fix(install): removed leftover merge conflict marker `c918005`
+- fix(install): move uk to en folder `fa5f714`
+- chore(core): fix sql query `7c55298`
+- chore(core): fix cs `1e7d038`
+- fix(install): add recursive remove directory function `e19068d`
+- fix(install): set default language to en `d1701fe`
+- fix(install): add missing keys to settings table `68cc418`
+- chore(install): fix addQuery sql `0c8a746`
+- Merge branch 'dev' into fix-#216-languages `94cffcf`
+- chore(install): fix addQuery sql `df649ef`
+- fix(install): fix function names `16a5d1b`
+- fix(install): redirect to install if .INSTALL is present `7e351d1`
+- fix(install): redirect to install if .INSTALL is present `da8f38e`
+- chore(buildtools): remove phpmailer from composer `e862348`
+- wip(install): adapt updateLanguages to new ajax install `2147afb`
+- Merge branch 'dev' into fix-#216-languages `b005466`
+- Merge branch 'dev' into fix-#216-languages `22ff60f`
+- fix(language): fix if statement for ac lang `856f9ab`
+- Merge pull request #209 from webSPELL/install_poc `b0f6564`
+- Merge pull request #190 from webSPELL/upload_unified `66f164b`
+- wip(upload): show available error messages `0637d2e`
+- Merge branch 'dev' into install_poc `1889253`
+- chore(core): revert _mysql.php `6ba21e1`
+- fix(buildtools): correct paths for selenium `ee95b0d`
+- Merge branch 'dev' into development-cleanup `0239b7e`
+- wip(buildtools): added grunt-todo to find some keywords which maybe need some work. should be run before a release `1999df3`
+- feat(buildtools): implement grunt-todo `7cb13c3`
+- Merge branch 'dev' into upload_unified `6b8cc20`
+- wip(upload): added seperate language file for all lang keys related to upload validation `be8471e`
+- wip(language): fix undefined index `7d78144`
+- wip(language): fix escape char `128574b`
+- wip(language): only show in-context live translation with acholi `8715342`
+- wip(language): add acholi pseudo-language for in-context live translation `0f93d7c`
+- wip(language): set default lang to en `9f8f3cc`
+- feat(login): Safer login cookie `1229df6`
+- wip(language): rename local lang folders, add lang index `6934dce`
+- wip(language): rename local lang folders, add lang index `315adee`
+- wip(language): fix language codes, rename lang folders `cefeb0c`
+- wip(language): add language update function to install `edfa60a`
+- chore(language): remove dup lang from install `1d40ecf`
+- Merge remote-tracking branch 'origin/fix-#216-languages' into fix-#216-languages `6909e71`
+- chore(language): merge dev `2f05dd3`
+- Merge branch 'dev' into fix-#216-languages `555833e`
+- Merge pull request #205 from webSPELL/feat-148-phpmailer `e48dfa7`
+- wip(email): fix html email message in lang files `329a542`
+- reset _mysql.php `805812f`
+- Merge branch 'dev' into feat-148-phpmailer `e9de94b`
+- wip(email): debug only for smtp, fix html email message in lang files `9f03c27`
+- fix(myprofile): added missing lang var and fixed php notice `60ea8b7`
+- fix(codestyle): inlined top5 function because it is used just once `c62217a`
+- fix(codestyle): remove useless parameter `5f746f6`
+- fix(codestyle): remove useless parameter `ee6ea39`
+- fix(news): display comments of clanwar when it is a clanwar news `a5bc36e`
+- chore(buildtools): fixed codestyle `e1a32ba`
+- chore(buildtools): removed log file `57c2cc8`
+- wip(buildtools): moved buildtools and some config files into development folder `3fade5c`
+- fix(language): removed some duplicated code `6150ab1`
+- fix(bbcode): shorter url replacement `8c9f5e9`
+- fix(addons): correct layout when there is no additional link available `6641453`
+- feat(login): Safer login cookie `25b3bf6`
+- feat(login): Safer login cookie `b614321`
+- feat(login): Safer login cookie `e56914e`
+- feat(login): Safer login cookie `aa33e40`
+- chore(buildtools): fix codestyle `6d072f3`
+- wip(buildtools): only add new lang key if it does not exist `220b3be`
+- chore(codestyle): fix empty lines `80b7661`
+- Merge branch 'dev' into install_poc `63a6c55`
+- Merge branch 'dev' into upload_unified `6f05184`
+- chore(buildtools): modify scrutinizer config, remove obsolete config files `ce57839`
+- chore(bbcode): fix cs `86508ea`
+- fix(files): add correct include `3f502b1`
+- Merge branch 'dev' into upload_unified `4a1578a`
+- fix(bbcode): fix detection of urls `ae6840e`
+- fix(functions): remove incorrect include `4af7b48`
+- wip(upload): add missing file `9522a15`
+- fix(buildtools): fix paths for language checks `168b08d`
+- Merge branch 'dev' into upload_unified `3060371`
+- Merge branch 'dev' into upload_unified `84f9adc`
+- wip(upload): add private propery `e7193e3`
+- chore(languages): fix scrutinizer errors `2fa8cac`
+- chore(codestyle): small fixes `3559e37`
+- chore(codestyle): small fix `fa7dc74`
+- chore(codestyle): fix parameter type in phpdoc `244cb3f`
+- chore(codestyle): removed unused variables `c19a756`
+- chore(codestyle): removed unused parameter `0c43c34`
+- chore(codestyle): fixed duplication from scrutinizer `e98feb4`
+- chore(codestyle): fixed some bugs from scrutinizer `315dc83`
+- fix(buildtools): modify exclude pattern `5b6e2c2`
+- fix(codestyle): fix some errors from scrutinizer `5d0ea6e`
+- wip(myprofile): updated layout of avatar and userpic upload `8b03e1b`
+- feat(buildtools): tool to add a new language key to a file in every language `7acb964`
+- wip(files): removed useless variables `43335db`
+- chore(codestyle): fix spaces `158859a`
+- wip(upload): added upload class and removed bad error handling `1fb50af`
+- wip(myprofile): replace value of url uploads with placeholder `5ec1712`
+- chore(languages): set correct path for admin language files `375c9fb`
+- chore(languages): centralize language files `8dc5b35`
+- chore(upload): fix cs, move classes to files `3d26e79`
+- Merge remote-tracking branch 'origin/upload_unified' into upload_unified `778c85f`
+- Merge branch 'dev' into upload_unified `3a9fd10`
+- wip(upload): add class to upload files from url instead of http upload `97cedd1`
+- Merge pull request #217 from xxxrenegade/links-module `c308742`
+- Merge branch 'dev' into upload_unified `79374f7`
+- Merge branch 'dev' into upload_unified `4b6e637`
+- Merge pull request #2 from xxxrenegade/dev `5ae1cba`
+- Merge pull request #1 from webSPELL/dev `235beef`
+- chore(buildtools): bump jscs, fix js cs `65ae681`
+- fix(links): add http:// placeholder `653922e`
+- wip(chore): Removed unneeded variables `908ca11`
+- Merge branch 'dev' into install_poc `a77a30a`
+- wip(codestyle): fix js lint `1b1afd4`
+- fix(links): fix links adaptation `ad66ea8`
+- Merge pull request #215 from webSPELL/forum-edit-link `c7af3fa`
+- Merge pull request #214 from xxxrenegade/register-module `1464706`
+- docs(readme): update github repo url `e7366c0`
+- fix(forum): always show latest posts in edit mode `cbe516a`
+- chore(buildtools): add filter to exclude paths for scrutinizer `408cf2c`
+- fix(smilies): add css components to smilies overview `4fa11ed`
+- fix(bbcode): add css components to bbcode overview `cbabaf0`
+- wip(email): change include path to components `ddca6d4`
+- Merge branch 'dev' into feat-148-phpmailer `b229b08`
+- fix(register): fix register adaptation `200cef0`
+- chore(buildtools): update bower.json, update components `a1b5cf6`
+- Merge branch 'dev' into feat-148-phpmailer `7c97f64`
+- fix(register): fix register adaptation `aa31034`
+- chore(buildtools): update grunt-bootlint `6a8c817`
+- Merge pull request #212 from BVBPOWER/patch-2 `8c384c3`
+- chore(buildtools): set id-class/attr-name style to false `b59c2f1`
+- chore(templates): fix some htmllint errors `0c13ddd`
+- chore(buildtools): bump version of devDependencies `ce8546a`
+- chore(buildtools): fix cs `10dd176`
+- feat(buildtools): add script to find duplicate language keys `019af48`
+- wip(install): add sc_* to settings until new ajax install is finished `5ac45ba`
+- Update credits.txt `1b2d224`
+- test(register): add registerUser test `ce80b3d`
+- Merge pull request #203 from webSPELL/nightwatchjs `2ad56c2`
+- test(login): fix admin login test `74efc3b`
+- chore(buildtools): fix tag for nightwatch tests `b565cba`
+- test(login): create user, admin login test --nightwatch `da3b7b8`
+- chore(buildtools): fix cs `f79c6d3`
+- Merge branch 'dev' into nightwatchjs `3a4055c`
+- chore(buildtools): set default selenium url `890d27d`
+- wip(buildtools): removed command reference --nightwatch `06af4a3`
+- wip(buildtools): add jquery to bower dependencies `b0474b3`
+- wip(buildtools): removed command references `39515aa`
+- Merge pull request #206 from webSPELL/fix-#165 `724b1e4`
+- change german wording `73595af`
+- Merge pull request #204 from webSPELL/ajaxLogin `5bb9d5f`
+- style(bbcode): fix after merge of dev `0f43cb5`
+- style(bbcode): wip fix cs after merge from dev `e02c33b`
+- style(bbcode): fix merge conflicts from dev `f065495`
+- style(bbcode): fix cs for jscs `fd6dae3`
+- codestyle(buildtools): change cs `20e149b`
+- codestyle(buildtools): change cs, use preset from node_modules `76695f5`
+- codestyle(buildtools): change cs so be more jquery like `f2851f9`
+- wip(buildtools): add jquery to environment of jshint `053c286`
+- style(login): correct some codestyle bugs `44842a1`
+- fix(buildtools): add jquery to js tests `18cf597`
+- wip(login): increase display time for login errors `0b39417`
+- wip(codestyle): fix html5 `fc9c20c`
+- wip(login): updated language files `5517f7b`
+- wip(login): login via ajax possible had to move some java scripts `9fa407f`
+- codestyle(buildtools): change cs so be more jquery like `2c19785`
+- Merge branch 'dev' into ajaxLogin `c9b54d8`
+- Merge pull request #207 from webSPELL/bootstrap_news `be4a1ef`
+- codestyle(news): fix some errors `8886158`
+- codestyle(news): fix some errors `f2994eb`
+- Merge branch 'dev' into install_poc `1e97934`
+- Merge branch 'dev' into bootstrap_news `cc98f61`
+- wip(news): updates news post template to bootstrap `2700766`
+- feat(admincenter): add sc_demos/files list sorting to settings `9aa4e4c`
+- wip(buildtools): make sort translations run before copyright change `e6142c4`
+- feat(buildtools): add sort_translations to grunt release `99482f3`
+- chore(buildtools): add css to concurrent task `0caa744`
+- Merge branch 'dev' into nightwatchjs `3930f7e`
+- wip(email): output error in forum_topic only if debug is enabled `24c2034`
+- wip(email): set correct include path for vendor folder `f1ab2b7`
+- wip(buildtools): add jquery to environment of jshint `377606e`
+- Merge pull request #195 from webSPELL/webSPELL-194 `08db51c`
+- Merge branch 'dev' into webSPELL-194 `523818c`
+- wip(email): move phpmailer into composer `9c58411`
+- chore(buildtools): fix typo `19b9137`
+- style(bbcode): correct line length `4c43a69`
+- fix(bbcode): remove deprecated preg_replace with /e modifier `b7bdaaa`
+- fix(settings): fix broken selects `3f66d09`
+- style(login): correct some codestyle bugs `155de60`
+- fix(buildtools): add jquery to js tests `6a6ef1a`
+- wip(login): increase display time for login errors `04d618b`
+- chore(buildtools): fix typo `fb9b9d5`
+- chore(buildtools): modify passed result check `939a003`
+- chore(buildtools): implement beatfactor/nightwatch#135 `0390eda`
+- chore(buildtools): add mac/ios/android test `ec56781`
+- chore(buildtools): add xpath check, set profile for firefox `8122b5b`
+- chore(buildtools): fix nightwatch test for safari `870045c`
+- chore(buildtools): setup safari test for browserstack `12df63b`
+- chore(buildtools): add chrome, safari, ie test for saucelabs `f2bce3b`
+- chore(buildtools): fix screen-resolution and platform `a3c3924`
+- chore(buildtools): add more runtime info for saucelab run `a17e5d4`
+- chore(buildtools): add build info for saucelab run `81b54bb`
+- chore(buildtools): nightwatch config cleanup `3eb68a6`
+- chore(buildtools): add saucelabs to nightwatchjs `b77ef9e`
+- chore(buildtools): add grunt-concurrent `45f31b3`
+- refactor(gallery): change mysql to mysqli `552dd2f`
+- wip(buildtools): use linux chrome webdriver `638d99b`
+- wip(buildtools): add nightwatchjs tests with selenium `5e65b5e`
+- wip(buildtools): add nightwatchjs tests with selenium `bbd9bcc`
+- Merge pull request #200 from webSPELL/wip-commit-check `aee2be9`
+- fix(articles): correct formular for new article `74bfd51`
+- Merge branch 'dev' into wip-commit-check `0fac044`
+- Merge branch 'dev' into feat-148-phpmailer `7780509`
+- style(comments): fix cs `4a29b38`
+- style(upload): correct codestyle `d00d534`
+- Merge branch 'dev' into feat-148-phpmailer `a431504`
+- wip(upload): allow http, https and protocol relative urls for banner `0e7e45f`
+- wip(buildtools): comment out regex, remove grunt-modules `14eff6a`
+- style(bannerrotation): remove whitespace `4109cb7`
+- wip(buildtools): correct regex `0ef44ba`
+- fix(profile): correct latest posts layout `5f240b9`
+- fix(comments): remove unused variable and php notice `12f131c`
+- chore(buildtools): clean ups `54bef05`
+- wip(buildtools): use scope and type from text file `53033aa`
+- style(buildtools): fix cs `b484330`
+- chore(buildtools): grunt/bower update/cleanup `4d41563`
+- chore(buildtools): grunt update/cleanup, regex modify `1e2410f`
+- chore(buildtools): add better error message for commit check `fd223cb`
+- wip(buildtools): cleanup `9c97474`
+- wip(buildtools): cleanup `465f196`
+- wip(buildtools): cleanup, version update `0b4ad2b`
+- wip(codestyle): fuck you jscs `b193f8d`
+- wip(buildtools): fix commit message check regexes `4cda603`
+- wip(buildtools): commit message check massacre `4323dbb`
+- wip(codestyle): fix html5 `889db64`
+- wip(codestyle): fix codestyle `107a15c`
+- feat(buildtools): script to sort and format all language files `e827e32`
+- wip(login): updated language files `5d52fb0`
+- wip(login): login via ajax possible had to move some java scripts `063d683`
+- fix(buildtools): fix git commit message checks `9556df9`
+- fix(codestyle): set right margin for js to 100 `1984144`
+- fix cs `8aad000`
+- Revert "fix(buildtools): set maximumLineLenght for jscsrc to 120" `3716828`
+- fix(buildtools): set maximumLineLenght for jscsrc to 120 `27b8ffa`
+- fix(buildtools): modify git commit verify checks `825fdc0`
+- fix function call to isclanmember `c439ed7`
+- fix function call to isclanmember `2cbfa0a`
+- fix cs, add csslint to "test" task and CI Services `ecc74e7`
+- Merge branch 'dev' into webSPELL-194 `a60256a`
+- fix cs `eacb1fe`
+- fix cs `da2f06e`
+- remove font and center tags `de89353`
+- add grunt-csslint `7d6ce73`
+- Merge branch 'dev' into feat-148-phpmailer `e07e6e5`
+- chore(version): bump copyright/version to 2015 `6609e28`
+- fix(buildtools): set copyright in admincenter.php, fix #95 `dca3ca1`
+- wip(email): fix sql query in register `d2d9035`
+- fix(buildtools): fix indent_style in editorconfig `60436e1`
+- fix(buildtools): correct syntax für indent_style `03970c5`
+- wip(email): fix alert box for lostpassword `77ce60e`
+- wip(email): add debug output for successful email send `126e568`
+- wip(codestyle): fix 5.3 support `46f5956`
+- wip(codestyle): fix 5.3 support `77c36dc`
+- wip(codestyle) `fd49907`
+- wip(email): fix missing error array, fix array statements `4a45501`
+- Merge remote-tracking branch 'remotes/origin/dev' into upload_unified `0591660`
+- Merge branch 'dev' into feat-148-phpmailer `609df71`
+- wip(email): add missing echo for generateErrorBoxFromArray `e2c796a`
+- wip(email): modified error and debug output on php files `81b2301`
+- textarea indention #192 `5207578`
+- textarea indention `ce1e72d`
+- wip(upload): added function to check url type of file mirrors `6c79f49`
+- wip(email): add debug to result array `65e0e82`
+- wip(email): only show tls/ssl if openssl extension is loaded `753fc8b`
+- wip(email): added hp title to from name `4912a07`
+- remove font and center tags `53f0bc1`
+- wip(email): modify pop before smtp check `a49c298`
+- wip(email): fix cs `d25803e`
+- wip(email): modify email check send status in php files `a147183`
+- wip(email): fix cs `b7eb3a9`
+- wip(email): modify send result check for admin/newsletter `1e8438c`
+- wip(email): fix cs `8d70f8d`
+- wip(email): add email to install, implement pop before smtp `f5b142d`
+- wip(codestyle) `460dfae`
+- Merge branch 'dev' into upload_unified `948e112`
+- wip(upload): modules updated to new system `a9df578`
+- wip(upload): modules updated to new system `f7c5af6`
+- wip(upload): modules updated to new system `c127cc6`
+- wip(upload): set correct chmod `857b52a`
+- wip(upload): modules updated to new system `ec01aee`
+- wip(email): modify redirect after test email send `d8eeb8b`
+- wip(email): var cleanup, set utf8 for email `5b6e250`
+- wip(email): add temp. var_dump to check class return `b9b8ae3`
+- wip(email): fix cs `c991a33`
+- wip(email): add test email function to admincenter `ecb06a7`
+- wip(email): adapt files to use new email class `c20db80`
+- wip(email): add src/func/phpmailer to grunt exclude `72fe92e`
+- Merge branch 'dev' into feat-148-phpmailer `7545880`
+- wip(email): add email settings to admincenter `5e52444`
+- wip(upload): update gallery to new upload system `d9e45f0`
+- wip(upload): update countries to new upload system `3d5a054`
+- fix bug where site was not usable on narrow view ports `32b41f3`
+- fix version output `0774771`
+- Merge branch 'dev' into feat-148-phpmailer `aff65cd`
+- docs(readme): update badges for ci services `bffbcb5`
+- Merge pull request #171 from webSPELL/forum_ranks `6e94e57`
+- fix codestyle `9d365a3`
+- add link to user where you can change user rank `4460fed`
+- wip(ranks): fix sql typo `3e39fae`
+- fix `9d34fdc`
+- Merge branch 'forum_ranks' of github.com:webSPELL/webSPELL-4.2.3 into forum_ranks `7ec97c0`
+- fix: use correct user in sql statements `57e5a57`
+- wip(ranks): fix sql type, fix codestyle `2fbd891`
+- fix: fixed api call with http request api `8ef7621`
+- added spaces `774f408`
+- wip: correct ids `ba3b10d`
+- wip: codestyle `e71c1dd`
+- Merge branch 'dev' into forum_ranks `6a740d9`
+- fix: reset users special rank when rank is deleted `394f3d6`
+- wip(email): fix codestyle `2963358`
+- Merge pull request #187 from webSPELL/issue159-no-entries `c4d98b0`
+- wip(email): fix codestyle `4614edc`
+- wip(email): add email func with basic phpmailer skeleton `558c614`
+- wip(email): add phpmailer to components folder `f71db70`
+- Merge branch 'articles_fixes' into dev `7985b41`
+- Fix(articles): correct form title `6f5bb62`
+- fix codestyle `3da5f15`
+- added no entries translations for squads and members `f3de332`
+- change translation key for no entries `db5b41b`
+- add alert if no entries are available `0052f41`
+- add alert if no entries are available `19c6566`
+- add alert if no entries are available `5c3ea56`
+- make bootlint break build if errors are present `5922fd6`
+- fix(buildtools): created seperate codecheck for travis-ci `e74dd31`
+- fix #172(template): fix E006 bootlint `b420c4c`
+- bump grunt-bootlint/contrib-jshint to latest stable release `5deb4e9`
+- Merge pull request #183 from webSPELL/issue158 `c607fb8`
+- fix(index): auto collapse navbar on hover `4344c6b`
+- wip removed commented coded `d763add`
+- wip strict boolean comparison `13e84e4`
+- stats for player who have not played a war yet `c549606`
+- wip fixed #158 - remove classes on radio and checkbox `4b841b3`
+- fixe codestyle after merge `616a81b`
+- merged pull request #177 `e7e174d`
+- merged pull request #176 `8fe3afd`
+- Merge pull request #179 from blu3bird23/dev `cdf1963`
+- textarea stylefix: content must not have code indention `e2f229e`
+- bugfix concatenation `a607c66`
+- fix(squads): squadname not displayed `edc3a06`
+- wip reverted _mysql.php `63e7485`
+- updated components `b7ac2cc`
+- fix(forum): fixed some bugs `46dcc31`
+- wip(codestyle) `a87ff8d`
+- fix(forum): fixed moderator access and lose of sticky attribute `73fcbfc`
+- fix(spamapi): fix php errors `42153fc`
+- fix(clanwars): fix erros and optimized statistic generation `22f7fce`
+- fix(comments): fix some scrutinizer errors `100e8f3`
+- remove deprecated html element < u> and replace with span `59cc0f2`
+- updated flags to bootstrap `86359f6`
+- fix some html lint errors `c1eddd4`
+- Fix resolving of exception `8e1361b`
+- Updated articles fixes post/edit layout added inputs for tags fix js errors `4388eae`
+- Split language replacement and php var replacement into two steps because it can be that there are vars inside language strings `610f037`
+- Merge branch 'xxxrenegade-sc_squads-module' into dev `d16a121`
+- Merge branch 'sc_squads-module' of https://github.com/xxxrenegade/webSPELL-4.2.3 into xxxrenegade-sc_squads-module `878cc97`
+- fixed some variable replacements after new template system `5631d34`
+- Merge branch 'template_system_poc' into dev `302e06a`
+- Merge branch 'dev' into template_system_poc `1c0761b`
+- removed debug code `c1566ab`
+- formated template `40a61d8`
+- updated forum templates `5cfe891`
+- remove gettemplate function `6ab8d67`
+- fix(sc_squads): fix bootstrap adaptation `5c8537b`
+- Merge remote-tracking branch 'upstream/karma' into dev `e3bbd13`
+- removed lintspaces tasks `78c2534`
+- wip variouse changes `e479061`
+- removed static width/height from game icons fixes #151 `8529778`
+- removed fixes #139 `a76f62e`
+- added a few more tests, fixed bbcode.js `a8467f7`
+- fixed codestyle `f9fb724`
+- adapted grunt task for continuous integration `c23fcde`
+- added karma with bbcode tests `c4dd549`
+- fixed bug in validbbcode `e464392`
+- fix(buildtools): updated .travis-ci.yml `4b9a6e7`
+- Merge pull request #170 from blu3bird23/dev `323c97c`
+- missing namespace added `efaf9e6`
+- fix(ranks): fixed codestyle `6a10897`
+- feat(ranks): added forum special ranks addon `e8c6749`
+- wip(ranks): adapted admin files, cs fixes `cd2eba1`
+- wip(ranks): adapting forum ranks addon to current dev branch `9ffb53e`
+- Merge remote-tracking branch 'origin/grunt_compress' into dev `54f6125`
+- Merge remote-tracking branch 'origin/casperjs' into dev `4e3cf3d`
+- refactor changed nbproject exclude `69bc996`
+- refactor Boolean should be compared strictly `6d8ea2d`
+- fix #152(forum): fixed logical operators `7b5ac12`
+- refactor removed unnecessary/wrong comments fixes #164 `b73eebd`
+- refactor removed unnecessary/wrong comments `e43f1e5`
+- removed unnecessary/wrong comments `265f12f`
+- removed fontawesome from components folder fixes #129 `b416579`
+- added bower.json to `grunt bump` `19457ae`
+- moved webshim from devDependencies to dependencies `16d37f4`
+- fixed "Save Article" Function - fixes #161 `63e8fdb`
+- reordered devDependencies alphabetically `201ca35`
+- updated devDependencies `14aeac7`
+- fix(buildtools): cleanup of .sensiolabs.yml `77d6444`
+- fix(readme): changed php requirements, added david-dm badges `2553277`
+- Merge branch 'dev' into template_system_poc `dc75329`
+- fixed codestyle `2ae72ba`
+- improved some querys `3feaf30`
+- readd and delete buddy query failed fixed `f712a0a`
+- missing spaces added `d9cc4a0`
+- fix #152(forum): fixed logical operators `5864b12`
+- fix #152(forum): fixed logical operators `78d0122`
+- fix #152(forum): fixed logical operators `1ca1e13`
+- fix(profile): codestyle: line exceeding 120 chars `644ee61`
+- fix #157(files): typo in admincenter link `911d5b3`
+- fix #129(icons): replaced email with envelope glyphicon `a1158a6`
+- readd and delete buddy query failed fixed `d4bb2cf`
+- add(templateSystem): updated all files to use the new template system `d80f023`
+- wip: codestyle `2a83d18`
+- Revert "fix(scrolltext): replace marquee tag with css" `5cc07c6`
+- fix(scrolltext): replace marquee tag with css `954772a`
+- fix: space after coma in function call `315b0eb`
+- wip(codestyle): copy indent when creating new call no new line at the end `25a00a3`
+- wip(codestyle): copy indent when creating new call `49b6c66`
+- wip(codestyle): copy indent when creating new call `36fda37`
+- wip(codestyle): fix file end `1ff6ff8`
+- wip(codestyle): fix codestyle `ed5c4dd`
+- removed lintspaces from php, html, js to speed things up `ea1d96f`
+- wip(buildtools): updated script to match more eval calls do not a variable multiple times into array `d549efb`
+- removed empty lines `a61c23e`
+- wip(buildtools): updated script to match more eval calls `074645d`
+- wip(buildtools): added script to replace all old eval calls with new template system calls `e442585`
+- wip(buildtools): move language check script into tools folder `2d6764e`
+- add(templateSystem): added a new system for loading and replaceing templates without eval :) `ef42db5`
+- Use of undefined constant boardID fixed `fcf6c5b`
+- removed unnecessary semicolon `9bd1288`
+- simplified code `c353fe3`
+- Unit of measure px is redundant `ecfa22e`
+- removed fixes #139 `7a38be5`
+- wip: adapted bannerrotation to new upload system `94183c3`
+- fix: fix chmod of new uploaded files `b7b3ed1`
+- fix(php): added link parameter for mysqli_affected_rows `7601d0a`
+- Merge pull request #143 from webSPELL/variousfixes `adcb655`
+- Merge pull request #135 from xxxrenegade/index `8d7b36c`
+- refactor stuff inspector found, typos, refactor fuck ups, etc. `4a81b69`
+- fix #146 `3ab9256`
+- Put the a tag in h2 tags for correct standards. `33dee9f`
+- Link h2 in title_*.html to main page #106 done `4b91921`
+- refactor removed silly assignments `ceaf24a`
+- adapted size to new flags `9ec7b58`
+- fixed typos `41b0fba`
+- fixed broken html `bab3e87`
+- optimization `40e5ddb`
+- refactor stuff inspector found, typos, refactor fuck ups, etc. `0f458f8`
+- refactor removed silly assignments `517eeeb`
+- adapted size to new flags `b825a82`
+- fixed typos `11e2f02`
+- fixed broken html `2ab5cad`
+- optimization `7bee19a`
+- fix #132(codestyle): removed short arrays to be php 5.3 compatible `98a5a77`
+- Merge remote-tracking branch 'origin/dev' into dev `a51074a`
+- fix #132(codestyle): removed short arrays to be php 5.3 compatible `45a1f88`
+- replaced short array `1e67b99`
+- Merge pull request #134 from webSPELL/ide_settings `7ecdfbb`
+- disabled force short array (5.3 compatible) `341a9c4`
+- changed way codestyle is exported for phpstorm `fc1b2f6`
+- fix #132(codestyle): removed short arrays to be php 5.3 compatible `8a16ee1`
+- fix(functions): removed short array to be php 5.3 compatible `66c65bc`
+- fix(functions): removed short arrays to be php 5.3 compatible `4462039`
+- fix(functions): removed short array to be php 5.3 compatible `fb6ec83`
+- fix(index): removed p tags `7e94565`
+- fix(buildtools): added back php 5.3 check for travis-ci `c137ae2`
+- fix(buildtools): moved back to full config for scrutinizer for pull request checks `20af0ce`
+- fix #129(icons): replaced most static icons with glyphicon `0fc2530`
+- fix(buildtools): extended quickcheck to new files, added lint check `6bd1e87`
+- wip: codestyle `329bd6d`
+- wip: codestyle `3f7afea`
+- fix(buildtools): added phpcs quickcheck for modified php files `c774c52`
+- wip: adapted sponsors to new upload system removed size limitations `5e79bcf`
+- wip: adapted squads to new upload system removed size limitations `30dd4ad`
+- wip: codestyle `b916f4c`
+- wip: codestyle `0b2ad15`
+- wip: adapted file to new upload system added better error messages `f8ad5ae`
+- fix(readme): add snap-ci badge to README.md `b50e32b`
+- Merge pull request #122 from webSPELL/phpcs_2.1.0 `40b7ce9`
+- fix(codestyle): removed whitespace `98e0e8a`
+- fix(merge): resolved merge conflicts no.2 `8b5b39c`
+- fix(merge): resolved merge conflicts `9835a30`
+- fix(icon): added favicon.ico from ws.org `cd9884a`
+- fix(codestyle): added newline to end of file `429fb3d`
+- fix(icons): removed fa from components `72a7ddd`
+- fix(codestyle): fixed 120 char line `3132327`
+- fix(icons): fixed #120, changed fa to bs `e7731a1`
+- wip: fixed indentation `a5b361d`
+- wip: fixed indentation `516c882`
+- wip: adapted links to new upload system added better error messages `94d713c`
+- wip(codestyle): fixed indent `181d4f6`
+- wip: adapted linkus to new upload system added better error messages `7576372`
+- feat: added option to not override old files `f00a7d6`
+- wip(upload): adapted upload.php to new upload system `33a7988`
+- wip(codestyle) `eeb2b62`
+- fix(codestyle): fixed mixed end of lines `99ce8a0`
+- wip: adapted usergallery to new upload system added feedback about error `6d7f2f9`
+- fix(upload): fix call to undefined function when mime_content_type and finfo are not available `9342b24`
+- Revert "fix(codestyle): fixed mixed end of lines" `a3239ee`
+- fix(codestyle): fixed mixed end of lines `8dc944f`
+- changed Logical operators from or to ||" `0a56596`
+- fix(buildtools): modified license value in composer.json `39d7d8a`
+- fix: we only support php >= 5.3 `7c884b7`
+- fix(codestyle): disable phpcs for "header_register_callback" because we have a fallback for older php versions `0611737`
+- Merge pull request #127 from webSPELL/newline `6b84115`
+- fix(codestyle): added newline to end of files `0fea0aa`
+- changed Logical operators from or to || `32c8d3b`
+- added required fields to composer.json `4cd4a50`
+- add SensioLabs badge to README.md `d1133ba`
+- added components to exclude list `f301012`
+- wip(codestyle) `92b5a76`
+- wip(codestyle) `86cfe86`
+- Compress Source as Archive on release `668aac0`
+- Merge pull request #121 from webSPELL/no_function_calls_in_loops `b3191e2`
+- fix(buildtools): added phpcs 2.1.0 to composer.json `a8de0f3`
+- fix(buildtools): phpcs 2.1.0 with cs fixes in php files `4d0a440`
+- wip(codestyle): fix codestyle `decd399`
+- fix(sql): fix some possibly injectable sql statements `39d3ea5`
+- Fixed some statements to be more secure `2e6be38`
+- fix(buildtools): disabled php.use_global_variable_or_function for sensiolabs `4293279`
+- fix(codestyle): remove function calls in loops `c70a713`
+- add(upload): added upload class and adopted demos to it `ca6b37b`
+- fix(buildtools): disabled php.use_php_eval_function for sensiolabs `510f369`
+- inital version of class to handle uploads `db3be3e`
+- fix(printview): fixed broken sql query `c1f1cef`
+- fix(forum): added namespace for spamapi `665c23f`
+- fix(gallery): check for form var 'galleryID' `199c511`
+- fix(gallery): removed double var declaration `20194a9`
+- refactor fixed grunt-lintspaces task - adapted files accordingly `946b071`
+- fuck you codestyle `7727d9c`
+- wip(codestyle): fix missing space `9d7010b`
+- fix: fix declaration of variable for one codepath `0556e0e`
+- Merge remote-tracking branch 'origin/dev' into dev `25a8ff1`
+- feat(buildtools): created config file for sensiolabs `51755fa`
+- fix(codestyle): use isset to determint wheater a variable is available or not `dda3d09`
+- Merge pull request #117 from webSPELL/replace_logic_operators `eb10f88`
+- wip(logical operators): fixed missing operator `4bca92f`
+- wip(codestyle): fix wrong indented line `0dc435d`
+- refactor added missing space between buttons `0131a26`
+- fix(logical operators): replace and/or with &&/|| because of higher precedence `ad83d71`
+- fix(board): get correct number of posts `51fd17b`
+- fix(spamapi): fix namespace of classes `6dd5774`
+- fix #114 added grunt-htmlhint `23fcd2e`
+- wip added casperjs test for login `3e58791`
+- fix(buildtools): enabled sensiolabs_security_checker, disabled php_cpd in favour of php_sim for scrutinizer `4fc4177`
+- fix(joinus): modified success message to be alert-success `e929d44`
+- fix(templates): fixed some typos and grammar for joinus `e577627`
+- fix(templates): fixed pm show view `1618cf3`
+- fix(buildtools): moved grunt-newer to codecheck_newer task for local run `8d944e2`
+- fix(clanwars): fixed codestyle `58ce712`
+- fix: updated translation checking tool `e368333`
+- fix: fix undefined variable `8183efb`
+- fix: use correct variable type (boolean instead of int) `f9e1b68`
+- fix(poll): fix undefined variable `ccdb253`
+- fix(out): fix redirect when no target is set `c7527e7`
+- fix(captcha): fix methodnames `382766d`
+- fix(download): fix undefined variabled `b22c135`
+- fix(clanwars): fix undefined variabled `dc43e53`
+- fix(captcha): fix undefined variables `57fdb4f`
+- fix(awards): fix date and sql query on edit `6b05100`
+- fix(buildtools): added grunt-newer task to speed up overall build time `390a18f`
+- fix(captcha): codestyle `8c3f278`
+- fix(captcha): split captcha generation into multiple functions `a45e59b`
+- fix(buildtools): removed deprecated package `aa122d4`
+- fix(templates): modified img src for gallery pic `dd7f492`
+- fix(seo): removed duplicate code line `122d669`
+- fix(gallery): fixed check for carousel image types `99adc8a`
+- fix(gallery): fixed broken sql queries `55b2a03`
+- fix(composer): added phpunit 4.4.0 `1319f83`
+- refactor mysql to mysqli `5b6287e`
+- fix(gallery): changed mysql to mysqli, fixed gallery class function calls `be18405`
+- fix(gallery): fixed broken sql queries `054fd38`
+- fix(gallery): fixed typo in UK language file `e24b50e`
+- fix(gallery): fixed link for picture form upload `1d96e4d`
+- Merge branch 'dev' into casperjs `55f3807`
+- wip added casperjs test for login `b6f906a`
+- fix(bannerrotation): fixed typo and broken sql queries `5ee5739`
+- fix(static): set correct namespace `3096ca8`
+- fix(links): fixed admin buttons when viewing link details `2fc0cf0`
+- fix(links): fixed typo `0d55c36`
+- fix(squads): fixed broken sql queries `393c51b`
+- fix(faq): fixed codestyle `7ecda99`
+- fix(faq): fixed broken sql queries `bdb4215`
+- fix(bbcode): set jshint ignore for eval() `3245101`
+- fix(bbcode): fixed fetch execute event `d3cc441`
+- fix(faq): fixed broken sql query, set correct namespace `5f6f16e`
+- fix(bbcode): ignore jscs camel case check for read_more `655fd66`
+- fix(bbcode): ignore jshint camel case check for read_more `6c624eb`
+- fix(languages): Language var readMore -> read_more `4c2fb26`
+- fix(bbcode): JS Language var readMore -> read_more `6a43810`
+- fix(modrewrite): use base from formular for test `458dd72`
+- WIP: codestyle `b8df8fc`
+- wip #110 ignoring legacy code from code jshint and jscs `3e68a70`
+- Debugging `81d59ce`
+- wip #110 re-added MM_confirm function `58af866`
+- Merge branch 'dev' of github.com:webSPELL/webSPELL-4.2.3 into dev `1cbd8b6`
+- fix(modrewrite): use correct filename for test `3dcdb14`
+- fix #110 fixed codestyle `d129546`
+- fix #110 switched mm_goToURL to a-Tags `05572ba`
+- Merge branch 'dev' of github.com:webSPELL/webSPELL-4.2.3 into dev `58c729c`
+- fix(modrewrite): fix detection of apache multiviews #92 `d0d985a`
+- fix(codestyle): src/func/bbcode, sc_language `c537701`
+- fix(news): fix urls for javascript and css components on news edit `955ad8a`
+- fix(bbcode): fix url and image replace `21386d2`
+- fix(news): fix sql query `b2ea9cb`
+- fix(news): Fix sql querys and javascript errors `800ec0e`
+- Merge branch 'dev' of github.com:webSPELL/webSPELL-4.2.3 into dev `b0dfb7e`
+- fix(upload): trimmed line to 120 chars `2bcaed5`
+- Fixed urls when language changed for modrewrite and normal mode `a3f6219`
+- Merge remote-tracking branch 'origin/dev' into dev `57cec0f`
+- fix(buddies): fixed broken sql queries `08ed262`
+- Merge pull request #109 from DDaems/dev `6962b9b`
+- fix(awards): fixed broken sql queries `e5833d6`
+- fix(articles): fixed broken sql queries `19e3325`
+- Merge branch 'dev' of github.com:webSPELL/webSPELL-4.2.3 into dev `ac74122`
+- fix(#112): fix calls to language module by adding namespace and rename methods `961d6b7`
+- fix(#112): fix sql querys after codestyle `d98d20f`
+- fix(news): fixed broken sql queries `df3c5aa`
+- fix(news): fixed broken sql queries `2213d6f`
+- fix(challenge): fixed broken sql queries `3f73b07`
+- Fix 404 when selecting a different language when not on the homepage. Also fixes the url=url=url= when multiple times switching languages. (tested with and without mod_rewrite enabled.) `3e9568a`
+- Merge pull request #108 from webSPELL/issue-88-commit-msg-verify `ad2f3e8`
+- fix #88 add commit message standard `40ccea0`
+- fix: fix sql query `7b7cd06`
+- Merge pull request #107 from webSPELL/calendar-bootstrap-adaption `4d4f247`
+- Merge branch 'calendar-bootstrap-adaption' into dev `d82b563`
+- fixed remaining bootlint errors `a90ed2f`
+- fixed admincenter links `101abe7`
+- grunt release - fixed typo and logic error `707cb50`
+- Merge branch 'calendar-bootstrap-adaption' of github.com:webSPELL/webSPELL-4.2.3 into calendar-bootstrap-adaption `0d782ef`
+- fix(webshim): Use native widgets when available `3499091`
+- style #84 changed form into a input group `4f6f816`
+- fix(translations): fix wrong replaced language variable `e33ea30`
+- Merge pull request #105 from webSPELL/grunt-html5-lint `9e4b454`
+- style #104 fixed codestyle `379d447`
+- refactor #104 refactored according to htmllint rules `cb58d38`
+- fix #104 added grunt-htmllint `d6b2cad`
+- reset _mysql.php `0eea71f`
+- added more information to the package.json `7995800`
+- Merge pull request #103 from webSPELL/grunt-bootlint `c6e2932`
+- style: fixed codestyle `c87acfe`
+- fix #102 added bootlint to codecheck task `1b7221e`
+- style: fixed codestyle `33821a9`
+- style #102 fixed codestyle `4d510a8`
+- fix #102 fixed bootlint errors `85aae1f`
+- fix #102 added grunt-bootlint plugin `48256f8`
+- Merge branch 'codetyle-admin-files' into dev `bd87973`
+- Merge pull request #98 from webSPELL/replace-static-components-with-variable `5c906c3`
+- fix #108 added grunt-githooks plugin `dae8265`
+- refactor: removed local mysql information `3e986ef`
+- style: adapted upcoming_*_details.html to bootstrap #84 `dc5a15c`
+- style: fixed code style #84 `1b2bd6c`
+- style: adapted upcoming_war_details.html to bootstrap #84 `905aade`
+- fix:Use Datetime-Local Inputs everywhere `835de29`
+- fix(Grunt): Fix Copyright Replacement `5462041`
+- style: adapted forms to bootstrap #84 `72974f4`
+- style: removed unused variables, added bootstrap classes #84 `dc1a934`
+- refactor: generate components output in a function `a68d82c`
+- style: fixed code style `d2249c3`
+- refactor: put components into array `57142ea`
+- refactor: put components into variables `ed56763`
+- Merge pull request #96 from webSPELL/update-version `7fb6dbe`
+- feat: add functions to generate bootstrap alerts `4131f22`
+- fix: bumpCommit uses the correct Version variable now `753ff0a`
+- split bump task into bumpOnly and bumpCommit `72f9cb8`
+- replace version on release task instead of parsing every time `49b861a`
+- refactor: rename .tooltip css class to .ws_tooltip because of bootstrap `cda2fbe`
+- style: fix codestyle of generated _mysql.php `c51a822`
+- style: added missing spaces `5e50e34`
+- replace version on release task instead of parsing every time `45ab457`
+- refactor(myprofile): only one input per line `d611706`
+- added grunt "bump" task to "release" task `5aba0c4`
+- Fixed install finished screen `4ff9e59`
+- Start the same session for ajax.php as for index.php `35f006f`
+- Updated Codestyle and improved step 6 `3633b0e`
+- Languagefiles updated to codestyle and added new language variable `4988812`
+- added exluded files to phplint file list `ab11f23`
+- fixed typo `829c73d`
+- Proof of Concept for the new mysql install process install is splitted into more functions which each runs as its own mysql transaction and is started from an ajax call with progress bar and debug information `e46ef1f`
+- fixed code style `00dd22f`
+- adapted faq.php to code style `de86c77`
+- adapted boards contact, countries, database.php to code style `272e9db`

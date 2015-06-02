@@ -25,21 +25,21 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Toegang geweigerd',
-  'actions'=>'Acties',
-  'add_category'=>'Categorie toevoegen',
-  'category_name'=>'Categorienaam',
-  'delete'=>'verwijderen',
-  'edit'=>'bewerk',
-  'edit_category'=>'bewerk Categorie',
-  'information_incomplete'=>'Sommige informatie ontbreekt.',
-  'link_categories'=>'Link Categorieën',
-  'new_category'=>'nieuwe Categorie',
-  'really_delete'=>'Deze Categorie en de Categorie Links echt verwijderen?',
-  'transaction_invalid'=>'Transactie ID ongeldig'
+    'access_denied' => 'Toegang geweigerd',
+    'actions' => 'Acties',
+    'add_category' => 'Categorie toevoegen',
+    'category_name' => 'Categorienaam',
+    'delete' => 'verwijderen',
+    'edit' => 'bewerk',
+    'edit_category' => 'bewerk Categorie',
+    'information_incomplete' => 'Sommige informatie ontbreekt.',
+    'link_categories' => 'Link Categorieën',
+    'new_category' => 'nieuwe Categorie',
+    'really_delete' => 'Deze Categorie en de Categorie Links echt verwijderen?',
+    'transaction_invalid' => 'Transactie ID ongeldig'
 );
 

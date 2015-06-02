@@ -25,29 +25,29 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Toegang geweigerd',
-  'back'=>'terug',
-  'edit_group_users'=>'Groep Gebruikers bewerken',
-  'error_group'=>'FOUT: Gebruikersgroep bestaat niet',
-  'filter'=>'Filter',
-  'filter_anyadmin'=>'Filter Admin',
-  'filter_clanmember'=>'Filter Clanleden',
-  'filter_registered'=>'Filter geregistreerden',
-  'filter_superadmin'=>'Filter Super Admin',
-  'go'=>'ga',
-  'group_users'=>'Groep Gebruikers',
-  'groups'=>'Forum Gebruikersgroepen',
-  'or_just'=>'of gewoon',
-  'save'=>'opslaan',
-  'save_and_jump'=>'ga naar Pagina',
-  'select_all'=>'Selecteer alles',
-  'show'=>'tonen',
-  'user_filter'=>'Filter Gebruiker',
-  'users_from_group'=>'Gebruikers uit Groep',
-  'transaction_invalid'=>'Transactie ID ongeldig'
+    'access_denied' => 'Toegang geweigerd',
+    'back' => 'terug',
+    'edit_group_users' => 'Groep Gebruikers bewerken',
+    'error_group' => 'FOUT: Gebruikersgroep bestaat niet',
+    'filter' => 'Filter',
+    'filter_anyadmin' => 'Filter Admin',
+    'filter_clanmember' => 'Filter Clanleden',
+    'filter_registered' => 'Filter geregistreerden',
+    'filter_superadmin' => 'Filter Super Admin',
+    'go' => 'ga',
+    'group_users' => 'Groep Gebruikers',
+    'groups' => 'Forum Gebruikersgroepen',
+    'or_just' => 'of gewoon',
+    'save' => 'opslaan',
+    'save_and_jump' => 'ga naar Pagina',
+    'select_all' => 'Selecteer alles',
+    'show' => 'tonen',
+    'transaction_invalid' => 'Transactie ID ongeldig',
+    'user_filter' => 'Filter Gebruiker',
+    'users_from_group' => 'Gebruikers uit Groep'
 );
 

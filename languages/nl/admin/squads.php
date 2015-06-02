@@ -25,37 +25,37 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Toegang geweigerd',
-  'actions'=>'Acties',
-  'add_squad'=>'Ploeg toevoegen',
-  'back'=>'terug',
-  'current_icon'=>'Huidige Icoon',
-  'current_icon_small'=>'Huidige Icoon (klein)',
-  'delete'=>'verwijderen',
-  'edit'=>'bewerken',
-  'edit_squad'=>'Ploeg bewerken',
-  'format_incorrect'=>'Het formaat van het pictogram was onjuist. Upload alleen de banner in *.gif, *.jpg and *.png formaat.',
-  'game'=>'Spel',
-  'gaming_squad'=>'Gaming team',
-  'icon'=>'Icoon',
-  'icon_upload'=>'Icoon uploaden',
-  'icon_upload_info'=>'voor de sc_squads include',
-  'icon_upload_small'=>'Icoon Upload (klein)',
-  'information_incomplete'=>'Sommige informatie ontbreekt.',
-  'new_squad'=>'nieuwe Team',
-  'no_icon'=>'Geen pictogram beschikbaar',
-  'non_gaming_squad'=>'niet gaming team',
-  'really_delete'=>'Deze team verwijderen?',
-  'sort'=>'Sorteer',
-  'squad_info'=>'Team Info',
-  'squad_name'=>'Team Naam',
-  'squad_type'=>'Team Type',
-  'squads'=>'Teams',
-  'transaction_invalid'=>'Transactie ID ongeldig',
-  'to_sort'=>'sorteer'
+    'access_denied' => 'Toegang geweigerd',
+    'actions' => 'Acties',
+    'add_squad' => 'Ploeg toevoegen',
+    'back' => 'terug',
+    'current_icon' => 'Huidige Icoon',
+    'current_icon_small' => 'Huidige Icoon (klein)',
+    'delete' => 'verwijderen',
+    'edit' => 'bewerken',
+    'edit_squad' => 'Ploeg bewerken',
+    'format_incorrect' => 'Het formaat van het pictogram was onjuist. Upload alleen de banner in *.gif, *.jpg and *.png formaat.',
+    'game' => 'Spel',
+    'gaming_squad' => 'Gaming team',
+    'icon' => 'Icoon',
+    'icon_upload' => 'Icoon uploaden',
+    'icon_upload_info' => 'voor de sc_squads include',
+    'icon_upload_small' => 'Icoon Upload (klein)',
+    'information_incomplete' => 'Sommige informatie ontbreekt.',
+    'new_squad' => 'nieuwe Team',
+    'no_icon' => 'Geen pictogram beschikbaar',
+    'non_gaming_squad' => 'niet gaming team',
+    'really_delete' => 'Deze team verwijderen?',
+    'sort' => 'Sorteer',
+    'squad_info' => 'Team Info',
+    'squad_name' => 'Team Naam',
+    'squad_type' => 'Team Type',
+    'squads' => 'Teams',
+    'to_sort' => 'sorteer',
+    'transaction_invalid' => 'Transactie ID ongeldig'
 );
 

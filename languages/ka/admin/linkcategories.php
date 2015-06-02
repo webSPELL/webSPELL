@@ -25,21 +25,21 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'მიუწვდომელია',
-  'actions'=>'ქმედებები',
-  'add_category'=>'კატეგორიის დამატება',
-  'category_name'=>'კატეგორიის სახელი',
-  'delete'=>'წაშლა',
-  'edit'=>'რედაქტირება',
-  'edit_category'=>'კატეგორიის რედაქტირება',
-  'information_incomplete'=>'ზოგიერთი ინფორმაცია დაკარგულია.',
-  'link_categories'=>'Link კატეგორიები',
-  'new_category'=>'ახალი კატეგორია',
-  'really_delete'=>'წავშალოთ კატეგორია და კატეგორია ხშირად დასმული კითხვები?',
-  'transaction_invalid'=>'ID არასწორია'
+    'access_denied' => 'მიუწვდომელია',
+    'actions' => 'ქმედებები',
+    'add_category' => 'კატეგორიის დამატება',
+    'category_name' => 'კატეგორიის სახელი',
+    'delete' => 'წაშლა',
+    'edit' => 'რედაქტირება',
+    'edit_category' => 'კატეგორიის რედაქტირება',
+    'information_incomplete' => 'ზოგიერთი ინფორმაცია დაკარგულია.',
+    'link_categories' => 'Link კატეგორიები',
+    'new_category' => 'ახალი კატეგორია',
+    'really_delete' => 'წავშალოთ კატეგორია და კატეგორია ხშირად დასმული კითხვები?',
+    'transaction_invalid' => 'ID არასწორია'
 );
 

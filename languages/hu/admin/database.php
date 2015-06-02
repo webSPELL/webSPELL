@@ -25,22 +25,22 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Hozzáférés megtagadva',
-  'allowed_commands'=>'<b>Engedélyezett parancsok:</b> insert, alter table, select',
-  'backup_file'=>'Biztonsági mentés',
-  'database'=>'Adatbázis',
-  'export'=>'Biztosági mentés készítése',
-  'import_info'=>'Válaszd ki az importálandó sql fájlt.<br><br><b>Fontos:</b> Csinálj biztonsági mentést, mielőtt importálsz egy másik adatbázist!',
-  'optimize'=>'Adatbázis optimalizálása',
-  'select_option'=>'Válassz a lehetőségek közül',
-  'submit'=>'Küldés',
-  'sql_query'=>'SQL lekérés',
-  'syntax_not_allowed'=>'Nem engedélyezett szintaxis!',
-  'upload'=>'Feltöltés',
-  'transaction_invalid'=>'A művelet azonosítója érvénytelen'
+    'access_denied' => 'Hozzáférés megtagadva',
+    'allowed_commands' => '<b>Engedélyezett parancsok:</b> insert, alter table, select',
+    'backup_file' => 'Biztonsági mentés',
+    'database' => 'Adatbázis',
+    'export' => 'Biztosági mentés készítése',
+    'import_info' => 'Válaszd ki az importálandó sql fájlt.<br><br><b>Fontos:</b> Csinálj biztonsági mentést, mielőtt importálsz egy másik adatbázist!',
+    'optimize' => 'Adatbázis optimalizálása',
+    'select_option' => 'Válassz a lehetőségek közül',
+    'sql_query' => 'SQL lekérés',
+    'submit' => 'Küldés',
+    'syntax_not_allowed' => 'Nem engedélyezett szintaxis!',
+    'transaction_invalid' => 'A művelet azonosítója érvénytelen',
+    'upload' => 'Feltöltés'
 );
 

@@ -24,20 +24,14 @@
 #                                                                        #
 ##########################################################################
 */
-/**
- * Online Language Editor Ukraine language file for webSPELL 4.2.2
- * @author Stefan Giesecke <webmaster@giesi.com>
- * @copyright Copyright (c) 2010, Stefan Giesecke
- * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
- */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'email_failed'=>'Виникла проблема при відправці повідомлення. Ласка контактуйте з веб адміністратором.',
-  'email_subject'=>'Ваш профіль для %pagetitle%',
-  'email_text'=>'Ваш профіль для %pageTitle%
+    'email_failed' => 'Виникла проблема при відправці повідомлення. Ласка контактуйте з веб адміністратором.',
+    'email_subject' => 'Ваш профіль для %pagetitle%',
+    'email_text' => 'Ваш профіль для %pageTitle%
 УВАГА ваш пароль був змінений!
 
 Ім\'я користувача: %username%
@@ -45,13 +39,13 @@ $language_array = Array(
 
 веселитися на нашій сторінці
 % Homepage_url%',
-  'get_password'=>'Отримати пароль',
-  'lost_password'=>'Забули пароль',
-  'no_mail_given'=>'Ви не ввели ніякої e-mail адреси.',
-  'no_user_found'=>'Користувач не знайден!',
-  'successful'=>'Ваш профіль знайдений<br><br>
+    'get_password' => 'Отримати пароль',
+    'lost_password' => 'Забули пароль',
+    'no_mail_given' => 'Ви не ввели ніякої e-mail адреси.',
+    'no_user_found' => 'Користувач не знайден!',
+    'successful' => 'Ваш профіль знайдений<br><br>
     Ви отримаєте e-mail з даними свого профілю через кілька секунд.<br> <br> 
     &#8226; <a href="index.php?site=login">Логін</a>',
-  'your_email'=>'Ваш E-Mail'
+    'your_email' => 'Ваш E-Mail'
 );
 

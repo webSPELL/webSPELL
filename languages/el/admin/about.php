@@ -25,14 +25,14 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'about'=>'Σχετικά με εμάς',
-  'access_denied'=>'Δεν επιτρέπεται η πρόσβαση',
-  'transaction_invalid'=>'Μη έγκυρο ID συναλλαγής',
-  'update'=>'ενημέρωση',
-  'you_can_use_html'=>'Μπορείτε να χρησιμοποιήσετε HTML-Tags'
+    'about' => 'Σχετικά με εμάς',
+    'access_denied' => 'Δεν επιτρέπεται η πρόσβαση',
+    'transaction_invalid' => 'Μη έγκυρο ID συναλλαγής',
+    'update' => 'ενημέρωση',
+    'you_can_use_html' => 'Μπορείτε να χρησιμοποιήσετε HTML-Tags'
 );
 

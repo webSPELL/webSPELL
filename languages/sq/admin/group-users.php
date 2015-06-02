@@ -25,29 +25,29 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Hyrja e Ndaluar',
-  'back'=>'mbrapsht',
-  'edit_group_users'=>'ndrysho Grupin e Përdoruesve',
-  'error_group'=>'GABIM: Grupi Përdoruesit nuk ekziston',
-  'filter'=>'Filter',
-  'filter_anyadmin'=>'çdo Filter Administratori',
-  'filter_clanmember'=>'Filtri Anëtarëve të Klanit',
-  'filter_registered'=>'Filter i regjistruar',
-  'filter_superadmin'=>'Filtri Mbi Administratorit',
-  'go'=>'fillo',
-  'group_users'=>'Përdoruesit e Grupit',
-  'groups'=>'Forumi Grupeve Të Përdoruesve',
-  'or_just'=>'ose thjesht',
-  'save'=>'ruaj',
-  'save_and_jump'=>'hidhu te Faqja',
-  'select_all'=>'Zgjidhi të gjitha',
-  'show'=>'shfaq',
-  'user_filter'=>'Filtri Përdoruesit',
-  'users_from_group'=>'Përdoruesit nga Grupi',
-  'transaction_invalid'=>'ID e tranzaksionit e pavlefshme'
+    'access_denied' => 'Hyrja e Ndaluar',
+    'back' => 'mbrapsht',
+    'edit_group_users' => 'ndrysho Grupin e Përdoruesve',
+    'error_group' => 'GABIM: Grupi Përdoruesit nuk ekziston',
+    'filter' => 'Filter',
+    'filter_anyadmin' => 'çdo Filter Administratori',
+    'filter_clanmember' => 'Filtri Anëtarëve të Klanit',
+    'filter_registered' => 'Filter i regjistruar',
+    'filter_superadmin' => 'Filtri Mbi Administratorit',
+    'go' => 'fillo',
+    'group_users' => 'Përdoruesit e Grupit',
+    'groups' => 'Forumi Grupeve Të Përdoruesve',
+    'or_just' => 'ose thjesht',
+    'save' => 'ruaj',
+    'save_and_jump' => 'hidhu te Faqja',
+    'select_all' => 'Zgjidhi të gjitha',
+    'show' => 'shfaq',
+    'transaction_invalid' => 'ID e tranzaksionit e pavlefshme',
+    'user_filter' => 'Filtri Përdoruesit',
+    'users_from_group' => 'Përdoruesit nga Grupi'
 );
 

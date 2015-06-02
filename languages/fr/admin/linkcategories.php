@@ -25,21 +25,21 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Accès refusé',
-  'actions'=>'Actions',
-  'add_category'=>'Ajouter une Catégorie',
-  'category_name'=>'Nom de la catégorie',
-  'delete'=>'Supprimer',
-  'edit'=>'Editer',
-  'edit_category'=>'Modifier une Catégorie',
-  'information_incomplete'=>'Certaines informations sont manquantes.',
-  'link_categories'=>'Liens des catégories',
-  'new_category'=>'Nouvelle Catégorie',
-  'really_delete'=>'Voulez-vous vraiment supprimer cette catégorie et la catégorie de la FAQ?',
-  'transaction_invalid'=>'ID de Transaction invalide'
+    'access_denied' => 'Accès refusé',
+    'actions' => 'Actions',
+    'add_category' => 'Ajouter une Catégorie',
+    'category_name' => 'Nom de la catégorie',
+    'delete' => 'Supprimer',
+    'edit' => 'Editer',
+    'edit_category' => 'Modifier une Catégorie',
+    'information_incomplete' => 'Certaines informations sont manquantes.',
+    'link_categories' => 'Liens des catégories',
+    'new_category' => 'Nouvelle Catégorie',
+    'really_delete' => 'Voulez-vous vraiment supprimer cette catégorie et la catégorie de la FAQ?',
+    'transaction_invalid' => 'ID de Transaction invalide'
 );
 

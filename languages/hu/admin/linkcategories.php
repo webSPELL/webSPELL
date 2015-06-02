@@ -25,21 +25,21 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Hozzáférés megtagadva',
-  'actions'=>'Lehetőségek',
-  'add_category'=>'Kategória hozzáadása',
-  'category_name'=>'Kategória neve',
-  'delete'=>'Törlés',
-  'edit'=>'Szerkesztés',
-  'edit_category'=>'Kategória szerkesztése',
-  'information_incomplete'=>'Néhány információ hiányzik.',
-  'link_categories'=>'Link Kategóriák',
-  'new_category'=>'Új kategória',
-  'really_delete'=>'Biztosan törölni akarod ezt a kategóriát és a hozzátartozó linkeket?',
-  'transaction_invalid'=>'A művelet azonosítója érvénytelen'
+    'access_denied' => 'Hozzáférés megtagadva',
+    'actions' => 'Lehetőségek',
+    'add_category' => 'Kategória hozzáadása',
+    'category_name' => 'Kategória neve',
+    'delete' => 'Törlés',
+    'edit' => 'Szerkesztés',
+    'edit_category' => 'Kategória szerkesztése',
+    'information_incomplete' => 'Néhány információ hiányzik.',
+    'link_categories' => 'Link Kategóriák',
+    'new_category' => 'Új kategória',
+    'really_delete' => 'Biztosan törölni akarod ezt a kategóriát és a hozzátartozó linkeket?',
+    'transaction_invalid' => 'A művelet azonosítója érvénytelen'
 );
 

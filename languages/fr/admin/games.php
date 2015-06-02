@@ -25,28 +25,28 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Accès refusé',
-  'actions'=>'Actions',
-  'add_game'=>'Ajouter jeu',
-  'back'=>'Retour',
-  'delete'=>'Supprimer',
-  'edit'=>'Editer',
-  'edit_game'=>'modifier Jeu',
-  'fill_correctly'=>'Merci de remplir le formulaire correctement.',
-  'format_incorrect'=>'Le format de l\'icône était incorrecte. S\'il vous plaît télécharger uniquement les icônes en format .gif.',
-  'game_icon'=>'Icône du jeu',
-  'game_name'=>'Nom du Jeu',
-  'game_tag'=>'Tag du jeu',
-  'games'=>'Jeux',
-  'icons'=>'Icônes',
-  'new_game'=>'nouveau jeu',
-  'no_entries'=>'Aucune entrée',
-  'present_icon'=>'Icône actuel',
-  'really_delete'=>'Supprimer ce jeu ?',
-  'transaction_invalid'=>'Transaction ID invalide'
+    'access_denied' => 'Accès refusé',
+    'actions' => 'Actions',
+    'add_game' => 'Ajouter jeu',
+    'back' => 'Retour',
+    'delete' => 'Supprimer',
+    'edit' => 'Editer',
+    'edit_game' => 'modifier Jeu',
+    'fill_correctly' => 'Merci de remplir le formulaire correctement.',
+    'format_incorrect' => 'Le format de l\'icône était incorrecte. S\'il vous plaît télécharger uniquement les icônes en format .gif.',
+    'game_icon' => 'Icône du jeu',
+    'game_name' => 'Nom du Jeu',
+    'game_tag' => 'Tag du jeu',
+    'games' => 'Jeux',
+    'icons' => 'Icônes',
+    'new_game' => 'nouveau jeu',
+    'no_entries' => 'Aucune entrée',
+    'present_icon' => 'Icône actuel',
+    'really_delete' => 'Supprimer ce jeu ?',
+    'transaction_invalid' => 'Transaction ID invalide'
 );
 

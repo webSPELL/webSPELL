@@ -25,24 +25,24 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Hozzáférés megtagadva',
-  'add_rank'=>'Rang hozzáadása',
-  'actions'=>'Lehetőségek',
-  'delete'=>'Törlés',
-  'edit_rank'=>'Rang szerkesztése',
-  'information_incomplete'=>'Néhány információ hiányzik.',
-  'max_posts'=>'Post max.',
-  'min_posts'=>'Post min.',
-  'new_rank'=>'Új Rang',
-  'rank_icon'=>'Rang Ikon',
-  'rank_name'=>'Rang Neve',
-  'really_delete'=>'Biztosan törölni akarod ezt a rangot?',
-  'transaction_invalid'=>'A művelet azonosítója érvénytelen',
-  'update'=>'Frissítés',
-  'user_ranks'=>'Felhasználói rangok'
+    'access_denied' => 'Hozzáférés megtagadva',
+    'actions' => 'Lehetőségek',
+    'add_rank' => 'Rang hozzáadása',
+    'delete' => 'Törlés',
+    'edit_rank' => 'Rang szerkesztése',
+    'information_incomplete' => 'Néhány információ hiányzik.',
+    'max_posts' => 'Post max.',
+    'min_posts' => 'Post min.',
+    'new_rank' => 'Új Rang',
+    'rank_icon' => 'Rang Ikon',
+    'rank_name' => 'Rang Neve',
+    'really_delete' => 'Biztosan törölni akarod ezt a rangot?',
+    'transaction_invalid' => 'A művelet azonosítója érvénytelen',
+    'update' => 'Frissítés',
+    'user_ranks' => 'Felhasználói rangok'
 );
 

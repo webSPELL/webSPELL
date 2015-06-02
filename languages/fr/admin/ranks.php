@@ -25,24 +25,24 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Accès refusé',
-  'add_rank'=>'ajouter rang',
-  'actions'=>'Actions',
-  'delete'=>'Supprimer',
-  'edit_rank'=>'modifier Rang',
-  'information_incomplete'=>'Certaines informations sont manquantes.',
-  'max_posts'=>'max. Messages',
-  'min_posts'=>'min. Messages',
-  'new_rank'=>'nouveau Rang',
-  'rank_icon'=>'Rang Icône',
-  'rank_name'=>'Nom du Rang',
-  'really_delete'=>'Supprimer ce Rang?',
-  'transaction_invalid'=>'Transaction ID invalide',
-  'update'=>'mettre à jour',
-  'user_ranks'=>'Rangs de l\'utilisateur'
+    'access_denied' => 'Accès refusé',
+    'actions' => 'Actions',
+    'add_rank' => 'ajouter rang',
+    'delete' => 'Supprimer',
+    'edit_rank' => 'modifier Rang',
+    'information_incomplete' => 'Certaines informations sont manquantes.',
+    'max_posts' => 'max. Messages',
+    'min_posts' => 'min. Messages',
+    'new_rank' => 'nouveau Rang',
+    'rank_icon' => 'Rang Icône',
+    'rank_name' => 'Nom du Rang',
+    'really_delete' => 'Supprimer ce Rang?',
+    'transaction_invalid' => 'Transaction ID invalide',
+    'update' => 'mettre à jour',
+    'user_ranks' => 'Rangs de l\'utilisateur'
 );
 

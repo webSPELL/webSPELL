@@ -25,25 +25,25 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Δεν επιτρέπεται η πρόσβαση',
-  'actions'=>'Ενεργειες',
-  'add_category'=>'προσθήκη Κατηγορίας',
-  'category'=>'Κατηγορία',
-  'category_name'=>'Όνομα Κατηγορίας',
-  'delete'=>'διαγραφή',
-  'description'=>'Περιγραφή',
-  'edit'=>'επεξεργασία',
-  'edit_category'=>'Επεξεργασία Κατηγορίας',
-  'faq_categories'=>'Κατηγορίες FAQ',
-  'information_incomplete'=>'Κάποιες πληροφορίες λείπουν.',
-  'new_category'=>'νέα Κατηγορία',
-  'really_delete'=>'Θέλετε πραγματικά να διαγράψετε αυτή την Κατηγορία και την Κατηγορία FAQ;',
-  'sort'=>'Ταξινομηση',
-  'to_sort'=>'ταξινομηση',
-  'transaction_invalid'=>'Μη έγκυρο ΑΝΑΓΝΩΡΙΣΤΙΚΌ συναλλαγής'
+    'access_denied' => 'Δεν επιτρέπεται η πρόσβαση',
+    'actions' => 'Ενεργειες',
+    'add_category' => 'προσθήκη Κατηγορίας',
+    'category' => 'Κατηγορία',
+    'category_name' => 'Όνομα Κατηγορίας',
+    'delete' => 'διαγραφή',
+    'description' => 'Περιγραφή',
+    'edit' => 'επεξεργασία',
+    'edit_category' => 'Επεξεργασία Κατηγορίας',
+    'faq_categories' => 'Κατηγορίες FAQ',
+    'information_incomplete' => 'Κάποιες πληροφορίες λείπουν.',
+    'new_category' => 'νέα Κατηγορία',
+    'really_delete' => 'Θέλετε πραγματικά να διαγράψετε αυτή την Κατηγορία και την Κατηγορία FAQ;',
+    'sort' => 'Ταξινομηση',
+    'to_sort' => 'ταξινομηση',
+    'transaction_invalid' => 'Μη έγκυρο ΑΝΑΓΝΩΡΙΣΤΙΚΌ συναλλαγής'
 );
 

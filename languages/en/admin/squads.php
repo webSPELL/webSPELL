@@ -25,37 +25,37 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Access denied',
-  'actions'=>'Actions',
-  'add_squad'=>'add Squad',
-  'back'=>'back',
-  'current_icon'=>'Current Icon',
-  'current_icon_small'=>'Current Icon (small)',
-  'delete'=>'delete',
-  'edit'=>'edit',
-  'edit_squad'=>'edit Squad',
-  'format_incorrect'=>'The format of the icon was incorrect. Please upload only banner in *.gif, *.jpg or *.png format.',
-  'game'=>'Game',
-  'gaming_squad'=>'gaming Squad',
-  'icon'=>'Icon',
-  'icon_upload'=>'Icon Upload',
-  'icon_upload_info'=>'for the sc_squads include',
-  'icon_upload_small'=>'Icon Upload small',
-  'information_incomplete'=>'Some information is missing.',
-  'new_squad'=>'new Squad',
-  'no_icon'=>'No icon available',
-  'non_gaming_squad'=>'non gaming Squad',
-  'really_delete'=>'Really delete this Squad?',
-  'sort'=>'Sort',
-  'squad_info'=>'Squad Info',
-  'squad_name'=>'Squad Name',
-  'squad_type'=>'Squad Type',
-  'squads'=>'Squads',
-  'transaction_invalid'=>'Transaction ID invalid',
-  'to_sort'=>'sort'
+    'access_denied' => 'Access denied',
+    'actions' => 'Actions',
+    'add_squad' => 'add Squad',
+    'back' => 'back',
+    'current_icon' => 'Current Icon',
+    'current_icon_small' => 'Current Icon (small)',
+    'delete' => 'delete',
+    'edit' => 'edit',
+    'edit_squad' => 'edit Squad',
+    'format_incorrect' => 'The format of the icon was incorrect. Please upload only banner in *.gif, *.jpg or *.png format.',
+    'game' => 'Game',
+    'gaming_squad' => 'gaming Squad',
+    'icon' => 'Icon',
+    'icon_upload' => 'Icon Upload',
+    'icon_upload_info' => 'for the sc_squads include',
+    'icon_upload_small' => 'Icon Upload small',
+    'information_incomplete' => 'Some information is missing.',
+    'new_squad' => 'new Squad',
+    'no_icon' => 'No icon available',
+    'non_gaming_squad' => 'non gaming Squad',
+    'really_delete' => 'Really delete this Squad?',
+    'sort' => 'Sort',
+    'squad_info' => 'Squad Info',
+    'squad_name' => 'Squad Name',
+    'squad_type' => 'Squad Type',
+    'squads' => 'Squads',
+    'to_sort' => 'sort',
+    'transaction_invalid' => 'Transaction ID invalid'
 );
 

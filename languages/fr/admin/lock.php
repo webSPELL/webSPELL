@@ -25,20 +25,20 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Accès refusé',
-  'lock'=>'verrouillé',
-  'locked_since'=>'La page est verrouillé depuis',
-  'pagelock'=>'Page verrouillée ',
-  'page_locked'=>'<b>Page verrouillée!</b> <br> Seuls les administrateurs peuvent accéder à la page maintenant.',
-  'page_unlocked'=>'<b>Page débloqué!</b>',
-  'settings'=>'Paramètres',
-  'transaction_invalid'=>'ID de Transaction invalide',
-  'unlock'=>'déverrouiller',
-  'unlock_page'=>'Voulez-vous déverrouiller la Page?',
-  'you_can_use_html'=>'Vous pouvez utiliser les balises HTML'
+    'access_denied' => 'Accès refusé',
+    'lock' => 'verrouillé',
+    'locked_since' => 'La page est verrouillé depuis',
+    'page_locked' => '<b>Page verrouillée!</b> <br> Seuls les administrateurs peuvent accéder à la page maintenant.',
+    'page_unlocked' => '<b>Page débloqué!</b>',
+    'pagelock' => 'Page verrouillée ',
+    'settings' => 'Paramètres',
+    'transaction_invalid' => 'ID de Transaction invalide',
+    'unlock' => 'déverrouiller',
+    'unlock_page' => 'Voulez-vous déverrouiller la Page?',
+    'you_can_use_html' => 'Vous pouvez utiliser les balises HTML'
 );
 

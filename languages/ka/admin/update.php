@@ -25,20 +25,20 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'მიუწვდომელია',
-  'error'=>'სერვერი არ არის განახლებული . ან ფაილი არ არის მისაწვდომი',
-  'filename'=>'ფაილის სახელი',
-  'get_new_version'=>'მიიღეთ უახლესი webSPELL ვერსია აქ!',
-  'information'=>'ინფორმაცია',
-  'new_functions'=>'ახალი ფუნქციების webSPELL ხელმისაწვდომი',
-  'new_updates'=>'ახალი განახლებები webSPELL ხელმისაწვდომი',
-  'new_version'=>'ახალი webSPELL ვერსია ხელმისაწვდომი',
-  'no_updates'=>'განახლებები არ არის',
-  'version'=>'ვერსია',
-  'webspell_update'=>'webSPELL განახლება'
+    'access_denied' => 'მიუწვდომელია',
+    'error' => 'სერვერი არ არის განახლებული . ან ფაილი არ არის მისაწვდომი',
+    'filename' => 'ფაილის სახელი',
+    'get_new_version' => 'მიიღეთ უახლესი webSPELL ვერსია აქ!',
+    'information' => 'ინფორმაცია',
+    'new_functions' => 'ახალი ფუნქციების webSPELL ხელმისაწვდომი',
+    'new_updates' => 'ახალი განახლებები webSPELL ხელმისაწვდომი',
+    'new_version' => 'ახალი webSPELL ვერსია ხელმისაწვდომი',
+    'no_updates' => 'განახლებები არ არის',
+    'version' => 'ვერსია',
+    'webspell_update' => 'webSPELL განახლება'
 );
 

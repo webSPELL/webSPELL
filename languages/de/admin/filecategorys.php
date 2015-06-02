@@ -25,24 +25,24 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Zugriff verweigert',
-  'actions'=>'Aktionen',
-  'add_category'=>'Kategorie hinzufügen',
-  'category'=>'Kategorie',
-  'category_name'=>'Kategorie Name',
-  'delete'=>'löschen',
-  'enter_name'=>'Du musst einen Namen eingeben',
-  'edit'=>'ändern',
-  'edit_category'=>'Kategorie ändern',
-  'file_categories'=>'Datei Kategorien',
-  'main'=>'Hauptverzeichnis',
-  'new_category'=>'neue Kategorie',
-  'really_delete'=>'Diese Kategorie wirklich löschen?',
-  'sub_category'=>'Sub-Kategorie von',
-  'transaction_invalid'=>'Transaktions ID ungültig'
+    'access_denied' => 'Zugriff verweigert',
+    'actions' => 'Aktionen',
+    'add_category' => 'Kategorie hinzufügen',
+    'category' => 'Kategorie',
+    'category_name' => 'Kategorie Name',
+    'delete' => 'löschen',
+    'edit' => 'ändern',
+    'edit_category' => 'Kategorie ändern',
+    'enter_name' => 'Du musst einen Namen eingeben',
+    'file_categories' => 'Datei Kategorien',
+    'main' => 'Hauptverzeichnis',
+    'new_category' => 'neue Kategorie',
+    'really_delete' => 'Diese Kategorie wirklich löschen?',
+    'sub_category' => 'Sub-Kategorie von',
+    'transaction_invalid' => 'Transaktions ID ungültig'
 );
 

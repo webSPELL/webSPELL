@@ -25,19 +25,21 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
-    'file_too_big'=>'File too big',
-    'incomplete_upload'=>'Incomplete upload',
-    'no_file_uploaded'=>'No file uploaded',
-    'no_temp_folder_available'=>'No temporary folder available. Please contact the administrator',
-    'cant_write_temp_file'=>'Can\'t write temporary file. Please contact the administrator',
-    'unexpected_error'=>'Unexpected error',
-    'cant_copy_file'=>'Can\'t copy file. Please contact the administrator',
-    'image_too_big'=>'The image is too big (max size %1$d px & %2$d px)',
-    'broken_image'=>'The image file seems to be broken',
-    'unsupported_image_type'=>'Unsupported image type',
-    'errors_there'=>'There are errors',
-    'file_already_exists'=>'file already exists'
+
+    'broken_image' => 'The image file seems to be broken',
+    'cant_copy_file' => 'Can\'t copy file. Please contact the administrator',
+    'cant_write_temp_file' => 'Can\'t write temporary file. Please contact the administrator',
+    'errors_there' => 'There are errors',
+    'file_already_exists' => 'file already exists',
+    'file_too_big' => 'File too big',
+    'image_too_big' => 'The image is too big (max size %1$d px & %2$d px)',
+    'incomplete_upload' => 'Incomplete upload',
+    'no_file_uploaded' => 'No file uploaded',
+    'no_temp_folder_available' => 'No temporary folder available. Please contact the administrator',
+    'unexpected_error' => 'Unexpected error',
+    'unsupported_image_type' => 'Unsupported image type'
 );
+

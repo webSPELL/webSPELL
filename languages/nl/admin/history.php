@@ -25,14 +25,14 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Toegang geweigerd',
-  'history'=>'Clan-Geschiedenis',
-  'transaction_invalid'=>'Transactie ID ongeldig',
-  'update'=>'bijwerken',
-  'you_can_use_html'=>'U kunt gebruik maken van HTML-Tags'
+    'access_denied' => 'Toegang geweigerd',
+    'history' => 'Clan-Geschiedenis',
+    'transaction_invalid' => 'Transactie ID ongeldig',
+    'update' => 'bijwerken',
+    'you_can_use_html' => 'U kunt gebruik maken van HTML-Tags'
 );
 

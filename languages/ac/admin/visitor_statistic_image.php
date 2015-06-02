@@ -25,13 +25,13 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'crwdns22946:0crwdne22946:0',
-  'max'=>'crwdns22947:0crwdne22947:0',
-  'min'=>'crwdns22948:0crwdne22948:0',
-  'not_logged_in'=>'crwdns22949:0crwdne22949:0'
+    'access_denied' => 'crwdns22946:0crwdne22946:0',
+    'max' => 'crwdns22947:0crwdne22947:0',
+    'min' => 'crwdns22948:0crwdne22948:0',
+    'not_logged_in' => 'crwdns22949:0crwdne22949:0'
 );
 

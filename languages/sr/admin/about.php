@@ -25,14 +25,14 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'about'=>'О нама',
-  'access_denied'=>'Приступ одбијен',
-  'transaction_invalid'=>'Ид трансакције неважећи',
-  'update'=>'ажурирање',
-  'you_can_use_html'=>'Можете користити ХТМЛ тагове'
+    'about' => 'О нама',
+    'access_denied' => 'Приступ одбијен',
+    'transaction_invalid' => 'Ид трансакције неважећи',
+    'update' => 'ажурирање',
+    'you_can_use_html' => 'Можете користити ХТМЛ тагове'
 );
 

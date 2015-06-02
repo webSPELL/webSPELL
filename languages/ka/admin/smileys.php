@@ -25,29 +25,29 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'მიუწვდომელია',
-  'actions'=>'ქმედებები',
-  'add_smiley'=>'სმაილის დამატება',
-  'back'=>'უკან',
-  'delete'=>'წაშლა',
-  'edit'=>'რედაქტირება',
-  'edit_smiley'=>'სმაილის რედაქტირება',
-  'example'=>'(Fe: ":oO:")',
-  'fill_form'=>'გთხოვთ შეავსოთ ფორმა სწორად.',
-  'format_incorrect'=>'ფორმატის ხატი არასწორი იყო. გთხოვთ ატვირთეთ მხოლოდ ხატები *.gif ფორმატში.',
-  'icon'=>'Icon',
-  'icons'=>'ხატულები',
-  'new_smiley'=>'ახალი სლაილი',
-  'no_entries'=>'არ არის ჩანაწერები',
-  'pattern'=>'ნიმუში',
-  'present_icon'=>'წინამდებარე Icon',
-  'really_delete'=>'წავშალო ეს სმაილი ?',
-  'smilies'=>'სმაილები',
-  'smiley_name'=>'სმაილის სახელი',
-  'transaction_invalid'=>'ID არასწორია'
+    'access_denied' => 'მიუწვდომელია',
+    'actions' => 'ქმედებები',
+    'add_smiley' => 'სმაილის დამატება',
+    'back' => 'უკან',
+    'delete' => 'წაშლა',
+    'edit' => 'რედაქტირება',
+    'edit_smiley' => 'სმაილის რედაქტირება',
+    'example' => '(Fe: ":oO:")',
+    'fill_form' => 'გთხოვთ შეავსოთ ფორმა სწორად.',
+    'format_incorrect' => 'ფორმატის ხატი არასწორი იყო. გთხოვთ ატვირთეთ მხოლოდ ხატები *.gif ფორმატში.',
+    'icon' => 'Icon',
+    'icons' => 'ხატულები',
+    'new_smiley' => 'ახალი სლაილი',
+    'no_entries' => 'არ არის ჩანაწერები',
+    'pattern' => 'ნიმუში',
+    'present_icon' => 'წინამდებარე Icon',
+    'really_delete' => 'წავშალო ეს სმაილი ?',
+    'smiley_name' => 'სმაილის სახელი',
+    'smilies' => 'სმაილები',
+    'transaction_invalid' => 'ID არასწორია'
 );
 

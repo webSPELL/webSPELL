@@ -25,23 +25,23 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'მიუწვდომელია',
-  'actions'=>'ქმედებები',
-  'add_group'=>'ჯგუდის დამატება',
-  'back'=>'უკან',
-  'delete'=>'წაშლა',
-  'edit'=>'რედაქტირება',
-  'edit_group'=>'ჯგუფის რედაქტირება',
-  'error_group'=>'შეცდომა: არა ჯგუფის სახელი',
-  'error_groupid'=>'შეცდომა: დაკარგული fgrID',
-  'group_name'=>'ჯგუფის სახელი',
-  'groups'=>'ფორუმის მომხმარებლის ჯგუფები',
-  'new_group'=>'ახალი ჯგუფი',
-  'really_delete'=>'ნამდვილად წაშლა ამ განყოფილებაში?',
-  'transaction_invalid'=>'ID არასწორია'
+    'access_denied' => 'მიუწვდომელია',
+    'actions' => 'ქმედებები',
+    'add_group' => 'ჯგუდის დამატება',
+    'back' => 'უკან',
+    'delete' => 'წაშლა',
+    'edit' => 'რედაქტირება',
+    'edit_group' => 'ჯგუფის რედაქტირება',
+    'error_group' => 'შეცდომა: არა ჯგუფის სახელი',
+    'error_groupid' => 'შეცდომა: დაკარგული fgrID',
+    'group_name' => 'ჯგუფის სახელი',
+    'groups' => 'ფორუმის მომხმარებლის ჯგუფები',
+    'new_group' => 'ახალი ჯგუფი',
+    'really_delete' => 'ნამდვილად წაშლა ამ განყოფილებაში?',
+    'transaction_invalid' => 'ID არასწორია'
 );
 

@@ -25,29 +25,29 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Δεν επιτρέπεται η πρόσβαση',
-  'actions'=>'Ενεργειες',
-  'add_smiley'=>'προσθήκη Smiley',
-  'back'=>'πίσω',
-  'delete'=>'διαγραφή',
-  'edit'=>'Επεξεργασία',
-  'edit_smiley'=>'επεξεργασία Smiley',
-  'example'=>'(στ.ε.: ":oO:")',
-  'fill_form'=>'Παρακαλούμε συμπληρώστε τη φόρμα σωστά.',
-  'format_incorrect'=>'Η μορφή του εικονιδίου ήταν εσφαλμένη. Παρακαλούμε ανεβάστε μόνο εικόνες σε μορφή * .gif.',
-  'icon'=>'Εικονίδιο',
-  'icons'=>'Εικονίδια',
-  'new_smiley'=>'νέο Smiley',
-  'no_entries'=>'χωρις καταχωρησεις',
-  'pattern'=>'Πρότυπο',
-  'present_icon'=>'παρών Εικονίδιο',
-  'really_delete'=>'Θέλετε πραγματικά να διαγράψετε αυτό το Smiley;',
-  'smilies'=>'Smilies',
-  'smiley_name'=>'Όνομα Smiley',
-  'transaction_invalid'=>'Μη έγκυρο ΑΝΑΓΝΩΡΙΣΤΙΚΌ συναλλαγής'
+    'access_denied' => 'Δεν επιτρέπεται η πρόσβαση',
+    'actions' => 'Ενεργειες',
+    'add_smiley' => 'προσθήκη Smiley',
+    'back' => 'πίσω',
+    'delete' => 'διαγραφή',
+    'edit' => 'Επεξεργασία',
+    'edit_smiley' => 'επεξεργασία Smiley',
+    'example' => '(στ.ε.: ":oO:")',
+    'fill_form' => 'Παρακαλούμε συμπληρώστε τη φόρμα σωστά.',
+    'format_incorrect' => 'Η μορφή του εικονιδίου ήταν εσφαλμένη. Παρακαλούμε ανεβάστε μόνο εικόνες σε μορφή * .gif.',
+    'icon' => 'Εικονίδιο',
+    'icons' => 'Εικονίδια',
+    'new_smiley' => 'νέο Smiley',
+    'no_entries' => 'χωρις καταχωρησεις',
+    'pattern' => 'Πρότυπο',
+    'present_icon' => 'παρών Εικονίδιο',
+    'really_delete' => 'Θέλετε πραγματικά να διαγράψετε αυτό το Smiley;',
+    'smiley_name' => 'Όνομα Smiley',
+    'smilies' => 'Smilies',
+    'transaction_invalid' => 'Μη έγκυρο ΑΝΑΓΝΩΡΙΣΤΙΚΌ συναλλαγής'
 );
 

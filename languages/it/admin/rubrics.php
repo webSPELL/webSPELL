@@ -25,25 +25,25 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Accesso negato',
-  'actions'=>'Azioni',
-  'add_rubric'=>'aggiungi sezione',
-  'back'=>'indietro',
-  'delete'=>'elimina',
-  'edit'=>'modifica',
-  'edit_rubric'=>'modifica sezione',
-  'format_incorrect'=>'Il formato dell\'icona non è corretto. Si prega di caricare solo il banner in formato *.gif, *.jpg e *.png.',
-  'information_incomplete'=>'Informazioni incomplete.',
-  'new_rubric'=>'nuovo sezione',
-  'news_rubrics'=>'Sezione News',
-  'picture'=>'Immagine',
-  'picture_upload'=>'Carica immagine',
-  'really_delete'=>'Davvero cancellare questo sezione?',
-  'rubric_name'=>'Nome della sezione',
-  'transaction_invalid'=>'ID della transazione non valido'
+    'access_denied' => 'Accesso negato',
+    'actions' => 'Azioni',
+    'add_rubric' => 'aggiungi sezione',
+    'back' => 'indietro',
+    'delete' => 'elimina',
+    'edit' => 'modifica',
+    'edit_rubric' => 'modifica sezione',
+    'format_incorrect' => 'Il formato dell\'icona non è corretto. Si prega di caricare solo il banner in formato *.gif, *.jpg e *.png.',
+    'information_incomplete' => 'Informazioni incomplete.',
+    'new_rubric' => 'nuovo sezione',
+    'news_rubrics' => 'Sezione News',
+    'picture' => 'Immagine',
+    'picture_upload' => 'Carica immagine',
+    'really_delete' => 'Davvero cancellare questo sezione?',
+    'rubric_name' => 'Nome della sezione',
+    'transaction_invalid' => 'ID della transazione non valido'
 );
 

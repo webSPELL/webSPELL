@@ -25,11 +25,11 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-    'error_404'=>'crwdns20588:0crwdne20588:0',
-    'message_404'=>'crwdns20589:0crwdne20589:0'
+    'error_404' => 'crwdns20588:0crwdne20588:0',
+    'message_404' => 'crwdns20589:0crwdne20589:0'
 );
 

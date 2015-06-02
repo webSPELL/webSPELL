@@ -25,24 +25,24 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Toegang geweigerd',
-  'actions'=>'Acties',
-  'add_contact'=>'Contact toevoegen',
-  'contact'=>'Contacten',
-  'contact_name'=>'Contact Naam',
-  'delete'=>'verwijderen',
-  'edit'=>'bewerk',
-  'edit_contact'=>'Contact bewerken',
-  'email'=>'E-mail',
-  'information_incomplete'=>'Sommige informatie ontbreekt.',
-  'new_contact'=>'nieuwe Contact',
-  'really_delete'=>'Deze Contact verwijderen?',
-  'sort'=>'Sorteer',
-  'to_sort'=>'sorteer',
-  'transaction_invalid'=>'Transactie ID ongeldig'
+    'access_denied' => 'Toegang geweigerd',
+    'actions' => 'Acties',
+    'add_contact' => 'Contact toevoegen',
+    'contact' => 'Contacten',
+    'contact_name' => 'Contact Naam',
+    'delete' => 'verwijderen',
+    'edit' => 'bewerk',
+    'edit_contact' => 'Contact bewerken',
+    'email' => 'E-mail',
+    'information_incomplete' => 'Sommige informatie ontbreekt.',
+    'new_contact' => 'nieuwe Contact',
+    'really_delete' => 'Deze Contact verwijderen?',
+    'sort' => 'Sorteer',
+    'to_sort' => 'sorteer',
+    'transaction_invalid' => 'Transactie ID ongeldig'
 );
 

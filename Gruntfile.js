@@ -453,6 +453,7 @@ module.exports = function( grunt ) {
             arguments.length === 0 ||
             (
             releaseLevel !== "prerelease" &&
+            releaseLevel !== "premajor" &&
             releaseLevel !== "patch" &&
             releaseLevel !== "minor" &&
             releaseLevel !== "major"
@@ -461,6 +462,7 @@ module.exports = function( grunt ) {
             grunt.log.error(
                 "Specify if this is a " +
                 "release:prerelease, " +
+                "release:premajor, " +
                 "release:patch, " +
                 "release:minor or " +
                 "release:major"

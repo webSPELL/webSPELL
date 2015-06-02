@@ -25,24 +25,24 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Δεν επιτρέπεται η πρόσβαση',
-  'actions'=>'Ενεργειες',
-  'add_language'=>'προσθήκη Γλώσσας',
-  'delete'=>'διαγραφή',
-  'edit'=>'Επεξεργασία',
-  'edit_language'=>'επεξεργασία Γλώσσας',
-  'flag'=>'Σημαίες',
-  'information_incomplete'=>'Λείπουν ορισμένες πληροφορίες.',
-  'language'=>'Γλωσσα',
-  'news_languages'=>'Ειδήσεις-Γλώσσες',
-  'new_language'=>'νέα Γλώσσα',
-  'preview'=>'Προεπισκοπηση',
-  'really_delete'=>'Να διαγραφεί αυτή η γλώσσα;',
-  'title'=>'Τίτλος',
-  'transaction_invalid'=>'Μη έγκυρο ΑΝΑΓΝΩΡΙΣΤΙΚΌ συναλλαγής'
+    'access_denied' => 'Δεν επιτρέπεται η πρόσβαση',
+    'actions' => 'Ενεργειες',
+    'add_language' => 'προσθήκη Γλώσσας',
+    'delete' => 'διαγραφή',
+    'edit' => 'Επεξεργασία',
+    'edit_language' => 'επεξεργασία Γλώσσας',
+    'flag' => 'Σημαίες',
+    'information_incomplete' => 'Λείπουν ορισμένες πληροφορίες.',
+    'language' => 'Γλωσσα',
+    'new_language' => 'νέα Γλώσσα',
+    'news_languages' => 'Ειδήσεις-Γλώσσες',
+    'preview' => 'Προεπισκοπηση',
+    'really_delete' => 'Να διαγραφεί αυτή η γλώσσα;',
+    'title' => 'Τίτλος',
+    'transaction_invalid' => 'Μη έγκυρο ΑΝΑΓΝΩΡΙΣΤΙΚΌ συναλλαγής'
 );
 

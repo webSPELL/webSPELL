@@ -25,16 +25,16 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Hozzáférés megtagadva',
-  'automatic'=>'Automatikus',
-  'imprint'=>'Impresszum',
-  'manual'=>'Egyéni (használd a lenti mezőt)',
-  'transaction_invalid'=>'A művelet azonosítója érvénytelen',
-  'update'=>'Frissítés',
-  'you_can_use_html'=>'Használhatsz HTML-Tageket'
+    'access_denied' => 'Hozzáférés megtagadva',
+    'automatic' => 'Automatikus',
+    'imprint' => 'Impresszum',
+    'manual' => 'Egyéni (használd a lenti mezőt)',
+    'transaction_invalid' => 'A művelet azonosítója érvénytelen',
+    'update' => 'Frissítés',
+    'you_can_use_html' => 'Használhatsz HTML-Tageket'
 );
 

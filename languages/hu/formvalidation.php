@@ -25,19 +25,21 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
-    'file_too_big'=>'A fájl túl nagy',
-    'incomplete_upload'=>'Befejezetlen feltöltés',
-    'no_file_uploaded'=>'Nincs fájl feltöltve',
-    'no_temp_folder_available'=>'Ideiglenes mappa nem elérhető. Kerlek fordulj az adminhoz',
-    'cant_write_temp_file'=>'Ideiglenes fájl felulirasa sikertelen. Kérlek fordulj az adminhoz',
-    'unexpected_error'=>'Váratlan hiba',
-    'cant_copy_file'=>'Fájl nem másolható. Kérlek fordulj az adminhoz',
-    'image_too_big'=>'A kép túl nagy (max méret %1$d px & %2$d px)',
-    'broken_image'=>'A képfájl sérült',
-    'unsupported_image_type'=>'Nem támogatott kép típus',
-    'errors_there'=>'Hibák merültek fel',
-    'file_already_exists'=>'Létező fájl'
+
+    'broken_image' => 'A képfájl sérült',
+    'cant_copy_file' => 'Fájl nem másolható. Kérlek fordulj az adminhoz',
+    'cant_write_temp_file' => 'Ideiglenes fájl felulirasa sikertelen. Kérlek fordulj az adminhoz',
+    'errors_there' => 'Hibák merültek fel',
+    'file_already_exists' => 'Létező fájl',
+    'file_too_big' => 'A fájl túl nagy',
+    'image_too_big' => 'A kép túl nagy (max méret %1$d px & %2$d px)',
+    'incomplete_upload' => 'Befejezetlen feltöltés',
+    'no_file_uploaded' => 'Nincs fájl feltöltve',
+    'no_temp_folder_available' => 'Ideiglenes mappa nem elérhető. Kerlek fordulj az adminhoz',
+    'unexpected_error' => 'Váratlan hiba',
+    'unsupported_image_type' => 'Nem támogatott kép típus'
 );
+

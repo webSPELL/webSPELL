@@ -25,29 +25,29 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Toegang geweigerd',
-  'error_send'=>'FOUT: Nieuwsbrief kon niet verzonden worden (Mailserver beschikbaar?)',
-  'html_mail'=>'HTML-Mail',
-  'newsletter'=>'Nieuwsbrief',
-  'no_htmlmail'=>'Hallo!
+    'access_denied' => 'Toegang geweigerd',
+    'error_send' => 'FOUT: Nieuwsbrief kon niet verzonden worden (Mailserver beschikbaar?)',
+    'html_mail' => 'HTML-Mail',
+    'newsletter' => 'Nieuwsbrief',
+    'no_htmlmail' => 'Hallo!
 Uw Systeem ondersteunt geen HTML Mails.
 U krijgt het volgende bericht:',
-  'profile'=>'Profiel',
-  'receptionists'=>'Nieuwsbrief was verzonden!<br><br>Ontvanger(s):',
-  'remove'=>'U kunt uzelf verwijderen uit de mailing-lijst via uw profiel',
-  'send'=>'Nieuwsbrief verzenden',
-  'send_to'=>'Verzenden naar',
-  'test'=>'test',
-  'test_newsletter'=>'Test Nieuwsbrief',
-  'title'=>'Titel',
-  'transaction_invalid'=>'Transactie ID ongeldig',
-  'user_clanmembers'=>'Clanleden',
-  'user_newsletter'=>'Nieuwsbrief Abonnee',
-  'user_registered'=>'Geregistreerde gebruikers (incl. Clanleden) ',
-  'users'=>'Gebruikers'
+    'profile' => 'Profiel',
+    'receptionists' => 'Nieuwsbrief was verzonden!<br><br>Ontvanger(s):',
+    'remove' => 'U kunt uzelf verwijderen uit de mailing-lijst via uw profiel',
+    'send' => 'Nieuwsbrief verzenden',
+    'send_to' => 'Verzenden naar',
+    'test' => 'test',
+    'test_newsletter' => 'Test Nieuwsbrief',
+    'title' => 'Titel',
+    'transaction_invalid' => 'Transactie ID ongeldig',
+    'user_clanmembers' => 'Clanleden',
+    'user_newsletter' => 'Nieuwsbrief Abonnee',
+    'user_registered' => 'Geregistreerde gebruikers (incl. Clanleden) ',
+    'users' => 'Gebruikers'
 );
 

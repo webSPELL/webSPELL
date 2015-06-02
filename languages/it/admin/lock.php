@@ -25,20 +25,20 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Accesso negato',
-  'lock'=>'bloccare',
-  'locked_since'=>'Il sito è bloccato dal',
-  'pagelock'=>'Blocca pagina',
-  'page_locked'=>'<b>pagina bloccata </b><br>Solo gli amministratori hanno accesso al sito.',
-  'page_unlocked'=>'<b>Pagina sbloccato!</b>',
-  'settings'=>'Impostazioni',
-  'transaction_invalid'=>'ID della transazione non valido',
-  'unlock'=>'sbloccare',
-  'unlock_page'=>'Vuoi sbloccare la pagina?',
-  'you_can_use_html'=>'È possibile di utilizzare HTML'
+    'access_denied' => 'Accesso negato',
+    'lock' => 'bloccare',
+    'locked_since' => 'Il sito è bloccato dal',
+    'page_locked' => '<b>pagina bloccata </b><br>Solo gli amministratori hanno accesso al sito.',
+    'page_unlocked' => '<b>Pagina sbloccato!</b>',
+    'pagelock' => 'Blocca pagina',
+    'settings' => 'Impostazioni',
+    'transaction_invalid' => 'ID della transazione non valido',
+    'unlock' => 'sbloccare',
+    'unlock_page' => 'Vuoi sbloccare la pagina?',
+    'you_can_use_html' => 'È possibile di utilizzare HTML'
 );
 

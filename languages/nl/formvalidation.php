@@ -25,19 +25,21 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
-    'file_too_big'=>'Bestand is te groot',
-    'incomplete_upload'=>'Upload onvolledig',
-    'no_file_uploaded'=>'Geen bestand geüpload',
-    'no_temp_folder_available'=>'Geen tijdelijke map beschikbaar. Neem contact op met de beheerder',
-    'cant_write_temp_file'=>'Kan niet schrijven in het tijdelijk bestand. Neem contact op met de beheerder',
-    'unexpected_error'=>'Onverwachte fout',
-    'cant_copy_file'=>'Kan bestand niet kopiëren. Neem contact op met de beheerder',
-    'image_too_big'=>'Het bestand is te groot (max grootte %1$d px & %2$d px)',
-    'broken_image'=>'Het afbeeldingsbestand lijkt corrupt te zijn',
-    'unsupported_image_type'=>'Niet-ondersteunde afbeeldingstype',
-    'errors_there'=>'Er zijn fouten',
-    'file_already_exists'=>'Dit bestand bestaat al'
+
+    'broken_image' => 'Het afbeeldingsbestand lijkt corrupt te zijn',
+    'cant_copy_file' => 'Kan bestand niet kopiëren. Neem contact op met de beheerder',
+    'cant_write_temp_file' => 'Kan niet schrijven in het tijdelijk bestand. Neem contact op met de beheerder',
+    'errors_there' => 'Er zijn fouten',
+    'file_already_exists' => 'Dit bestand bestaat al',
+    'file_too_big' => 'Bestand is te groot',
+    'image_too_big' => 'Het bestand is te groot (max grootte %1$d px & %2$d px)',
+    'incomplete_upload' => 'Upload onvolledig',
+    'no_file_uploaded' => 'Geen bestand geüpload',
+    'no_temp_folder_available' => 'Geen tijdelijke map beschikbaar. Neem contact op met de beheerder',
+    'unexpected_error' => 'Onverwachte fout',
+    'unsupported_image_type' => 'Niet-ondersteunde afbeeldingstype'
 );
+

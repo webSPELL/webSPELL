@@ -25,20 +25,20 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Hyrja e Ndaluar',
-  'lock'=>'Bllokoj',
-  'locked_since'=>'Faqja është e mbyllur që nga',
-  'pagelock'=>'Kyçi Faqes',
-  'page_locked'=>'<b>Faqe mbyllur!</b> <br> Vetëm Administratorët mund të hyjnë në faqe tani.',
-  'page_unlocked'=>'<b>Faqe hapur!</b>',
-  'settings'=>'Konfigurimet',
-  'transaction_invalid'=>'ID e tranzaksionit e pavlefshme',
-  'unlock'=>'hap',
-  'unlock_page'=>'A doni të zhbllokoni Faqen?',
-  'you_can_use_html'=>'Ju mund të përdorni HTML-Tags'
+    'access_denied' => 'Hyrja e Ndaluar',
+    'lock' => 'Bllokoj',
+    'locked_since' => 'Faqja është e mbyllur që nga',
+    'page_locked' => '<b>Faqe mbyllur!</b> <br> Vetëm Administratorët mund të hyjnë në faqe tani.',
+    'page_unlocked' => '<b>Faqe hapur!</b>',
+    'pagelock' => 'Kyçi Faqes',
+    'settings' => 'Konfigurimet',
+    'transaction_invalid' => 'ID e tranzaksionit e pavlefshme',
+    'unlock' => 'hap',
+    'unlock_page' => 'A doni të zhbllokoni Faqen?',
+    'you_can_use_html' => 'Ju mund të përdorni HTML-Tags'
 );
 

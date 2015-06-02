@@ -25,24 +25,24 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Hyrja e Ndaluar',
-  'add_rank'=>'shtoni Renditjen',
-  'actions'=>'Veprimet',
-  'delete'=>'fshij',
-  'edit_rank'=>'edito Renditjen',
-  'information_incomplete'=>'Disa të dhëna mungojnë.',
-  'max_posts'=>'max. Postimet',
-  'min_posts'=>'min. Postimet',
-  'new_rank'=>'Renditja e re',
-  'rank_icon'=>'Renditja Ikon-ave',
-  'rank_name'=>'Renditja Emri',
-  'really_delete'=>'Vërtet e fshini këtë Lidhje?',
-  'transaction_invalid'=>'ID e tranzaksionit e pavlefshme',
-  'update'=>'përditësim',
-  'user_ranks'=>'Renditja Përdoruesve'
+    'access_denied' => 'Hyrja e Ndaluar',
+    'actions' => 'Veprimet',
+    'add_rank' => 'shtoni Renditjen',
+    'delete' => 'fshij',
+    'edit_rank' => 'edito Renditjen',
+    'information_incomplete' => 'Disa të dhëna mungojnë.',
+    'max_posts' => 'max. Postimet',
+    'min_posts' => 'min. Postimet',
+    'new_rank' => 'Renditja e re',
+    'rank_icon' => 'Renditja Ikon-ave',
+    'rank_name' => 'Renditja Emri',
+    'really_delete' => 'Vërtet e fshini këtë Lidhje?',
+    'transaction_invalid' => 'ID e tranzaksionit e pavlefshme',
+    'update' => 'përditësim',
+    'user_ranks' => 'Renditja Përdoruesve'
 );
 

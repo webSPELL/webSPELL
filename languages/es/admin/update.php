@@ -25,20 +25,20 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Acceso Denegado',
-  'error'=>'El servidor no es compatible-actualizable o el archivo no está disponible en',
-  'filename'=>'Nombre del archivo',
-  'get_new_version'=>'¡Obtén la última versión de webSPELL aquí!',
-  'information'=>'Información',
-  'new_functions'=>'Nuevas funciones para webSPELL disponibles',
-  'new_updates'=>'Nuevas actualizaciones para webSPELL disponibles',
-  'new_version'=>'Nueva versión de webSPELL disponible',
-  'no_updates'=>'¡No hay actualizaciones disponibles!',
-  'version'=>'Versión',
-  'webspell_update'=>'Actualizar webSPELL'
+    'access_denied' => 'Acceso Denegado',
+    'error' => 'El servidor no es compatible-actualizable o el archivo no está disponible en',
+    'filename' => 'Nombre del archivo',
+    'get_new_version' => '¡Obtén la última versión de webSPELL aquí!',
+    'information' => 'Información',
+    'new_functions' => 'Nuevas funciones para webSPELL disponibles',
+    'new_updates' => 'Nuevas actualizaciones para webSPELL disponibles',
+    'new_version' => 'Nueva versión de webSPELL disponible',
+    'no_updates' => '¡No hay actualizaciones disponibles!',
+    'version' => 'Versión',
+    'webspell_update' => 'Actualizar webSPELL'
 );
 

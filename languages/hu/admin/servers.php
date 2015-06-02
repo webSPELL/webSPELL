@@ -25,26 +25,26 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Hozzáférés megtagadva',
-  'add_server'=>'Szerver hozzáadása',
-  'actions'=>'Lehetőségek',
-  'delete'=>'Törlés',
-  'edit'=>'Szerkesztés',
-  'edit_server'=>'Szerver szerkesztése',
-  'game'=>'Játék',
-  'info'=>'Leírás',
-  'ip_port'=>'Szerver IP:Port',
-  'new_server'=>'Új Szerver',
-  'no_server'=>'Nincs elérhető szerver',
-  'really_delete'=>'Biztosan törölni akarod ezt a szervert?',
-  'servers'=>'Szerverek',
-  'server_name'=>'Szerver Neve',
-  'sort'=>'Rendezés',
-  'transaction_invalid'=>'A művelet azonosítója érvénytelen',
-  'to_sort'=>'Rendezés'
+    'access_denied' => 'Hozzáférés megtagadva',
+    'actions' => 'Lehetőségek',
+    'add_server' => 'Szerver hozzáadása',
+    'delete' => 'Törlés',
+    'edit' => 'Szerkesztés',
+    'edit_server' => 'Szerver szerkesztése',
+    'game' => 'Játék',
+    'info' => 'Leírás',
+    'ip_port' => 'Szerver IP:Port',
+    'new_server' => 'Új Szerver',
+    'no_server' => 'Nincs elérhető szerver',
+    'really_delete' => 'Biztosan törölni akarod ezt a szervert?',
+    'server_name' => 'Szerver Neve',
+    'servers' => 'Szerverek',
+    'sort' => 'Rendezés',
+    'to_sort' => 'Rendezés',
+    'transaction_invalid' => 'A művelet azonosítója érvénytelen'
 );
 

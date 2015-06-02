@@ -25,14 +25,14 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Δεν επιτρέπεται η πρόσβαση',
-  'history'=>'Ιστορικο Clan',
-  'transaction_invalid'=>'Μη έγκυρο ΑΝΑΓΝΩΡΙΣΤΙΚΌ συναλλαγής',
-  'update'=>'ενημέρωση',
-  'you_can_use_html'=>'Μπορείτε να χρησιμοποιήσετε HTML-Tags'
+    'access_denied' => 'Δεν επιτρέπεται η πρόσβαση',
+    'history' => 'Ιστορικο Clan',
+    'transaction_invalid' => 'Μη έγκυρο ΑΝΑΓΝΩΡΙΣΤΙΚΌ συναλλαγής',
+    'update' => 'ενημέρωση',
+    'you_can_use_html' => 'Μπορείτε να χρησιμοποιήσετε HTML-Tags'
 );
 

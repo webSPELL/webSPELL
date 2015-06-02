@@ -25,24 +25,24 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Accesso negato',
-  'add_rank'=>'aggiungi rango',
-  'actions'=>'Azioni',
-  'delete'=>'elimina',
-  'edit_rank'=>'modifica rango',
-  'information_incomplete'=>'Informazioni incomplete.',
-  'max_posts'=>'max. messaggi',
-  'min_posts'=>'min. messaggi',
-  'new_rank'=>'nuovo rango',
-  'rank_icon'=>'Icona del rango',
-  'rank_name'=>'Nome del rango',
-  'really_delete'=>'Davvero cancellare questo rango?',
-  'transaction_invalid'=>'ID della transazione non valido',
-  'update'=>'aggiorna',
-  'user_ranks'=>'Rango del utente'
+    'access_denied' => 'Accesso negato',
+    'actions' => 'Azioni',
+    'add_rank' => 'aggiungi rango',
+    'delete' => 'elimina',
+    'edit_rank' => 'modifica rango',
+    'information_incomplete' => 'Informazioni incomplete.',
+    'max_posts' => 'max. messaggi',
+    'min_posts' => 'min. messaggi',
+    'new_rank' => 'nuovo rango',
+    'rank_icon' => 'Icona del rango',
+    'rank_name' => 'Nome del rango',
+    'really_delete' => 'Davvero cancellare questo rango?',
+    'transaction_invalid' => 'ID della transazione non valido',
+    'update' => 'aggiorna',
+    'user_ranks' => 'Rango del utente'
 );
 

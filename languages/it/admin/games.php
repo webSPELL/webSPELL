@@ -25,28 +25,28 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Accesso negato',
-  'actions'=>'Azioni',
-  'add_game'=>'aggiungi gioco',
-  'back'=>'indietro',
-  'delete'=>'elimina',
-  'edit'=>'modifica',
-  'edit_game'=>'modifica gioco',
-  'fill_correctly'=>'Si prega di compilare il modulo correttamente',
-  'format_incorrect'=>'Il formato dell\'icona non è corretto. Si prega di caricare le icone solo in formato *.gif.',
-  'game_icon'=>'Icona gioco',
-  'game_name'=>'Nome del gioco',
-  'game_tag'=>'Scorciatoie gioco',
-  'games'=>'Giochi',
-  'icons'=>'Icone',
-  'new_game'=>'nuovo gioco',
-  'no_entries'=>'Nessun voci',
-  'present_icon'=>'icona attuale',
-  'really_delete'=>'Davvero eliminare questo gioco?',
-  'transaction_invalid'=>'ID della transazione non valido'
+    'access_denied' => 'Accesso negato',
+    'actions' => 'Azioni',
+    'add_game' => 'aggiungi gioco',
+    'back' => 'indietro',
+    'delete' => 'elimina',
+    'edit' => 'modifica',
+    'edit_game' => 'modifica gioco',
+    'fill_correctly' => 'Si prega di compilare il modulo correttamente',
+    'format_incorrect' => 'Il formato dell\'icona non è corretto. Si prega di caricare le icone solo in formato *.gif.',
+    'game_icon' => 'Icona gioco',
+    'game_name' => 'Nome del gioco',
+    'game_tag' => 'Scorciatoie gioco',
+    'games' => 'Giochi',
+    'icons' => 'Icone',
+    'new_game' => 'nuovo gioco',
+    'no_entries' => 'Nessun voci',
+    'present_icon' => 'icona attuale',
+    'really_delete' => 'Davvero eliminare questo gioco?',
+    'transaction_invalid' => 'ID della transazione non valido'
 );
 

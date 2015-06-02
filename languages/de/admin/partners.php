@@ -25,33 +25,33 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Zugriff verweigert',
-  'actions'=>'Aktionen',
-  'add_partner'=>'Partner hinzufügen',
-  'back'=>'zurück',
-  'banner'=>'Banner',
-  'banner_to_big'=>'Banner ist zu groß',
-  'clicks'=>'Klicks (pro Tag)',
-  'current_banner'=>'Aktueller Banner',
-  'delete'=>'löschen',
-  'edit'=>'ändern',
-  'edit_partner'=>'Partner ändern',
-  'format_incorrect'=>'Das Format des Banner war falsch. Bitte lade nur Banner im *.gif, *.jpg oder *.png Format hoch.',
-  'homepage_url'=>'Homepage URL',
-  'is_displayed'=>'Wird angezeigt?',
-  'max_88x31'=>'(max. 88x31)',
-  'new_partner'=>'neuer Partner',
-  'no'=>'Nein',
-  'partner_name'=>'Partner Name',
-  'partners'=>'Partner',
-  'really_delete'=>'Diesen Partner wirklich löschen?',
-  'sort'=>'Sortierung',
-  'transaction_invalid'=>'Transaktions ID ungültig',
-  'to_sort'=>'sortieren',
-  'yes'=>'Ja'
+    'access_denied' => 'Zugriff verweigert',
+    'actions' => 'Aktionen',
+    'add_partner' => 'Partner hinzufügen',
+    'back' => 'zurück',
+    'banner' => 'Banner',
+    'banner_to_big' => 'Banner ist zu groß',
+    'clicks' => 'Klicks (pro Tag)',
+    'current_banner' => 'Aktueller Banner',
+    'delete' => 'löschen',
+    'edit' => 'ändern',
+    'edit_partner' => 'Partner ändern',
+    'format_incorrect' => 'Das Format des Banner war falsch. Bitte lade nur Banner im *.gif, *.jpg oder *.png Format hoch.',
+    'homepage_url' => 'Homepage URL',
+    'is_displayed' => 'Wird angezeigt?',
+    'max_88x31' => '(max. 88x31)',
+    'new_partner' => 'neuer Partner',
+    'no' => 'Nein',
+    'partner_name' => 'Partner Name',
+    'partners' => 'Partner',
+    'really_delete' => 'Diesen Partner wirklich löschen?',
+    'sort' => 'Sortierung',
+    'to_sort' => 'sortieren',
+    'transaction_invalid' => 'Transaktions ID ungültig',
+    'yes' => 'Ja'
 );
 

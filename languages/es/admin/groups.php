@@ -25,23 +25,23 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Acceso Denegado',
-  'actions'=>'Acciones',
-  'add_group'=>'añadir Grupo',
-  'back'=>'volver',
-  'delete'=>'borrar',
-  'edit'=>'editar',
-  'edit_group'=>'editar Grupo',
-  'error_group'=>'ERROR: Sin Nombre de Grupo',
-  'error_groupid'=>'ERROR: Falta fgrID',
-  'group_name'=>'Nombre Del Grupo',
-  'groups'=>'Foro de Grupos de Usuarios',
-  'new_group'=>'nuevo Grupo',
-  'really_delete'=>'¿Seguro que quieres borrar este Foro de Grupo?',
-  'transaction_invalid'=>'ID de transacción no válida'
+    'access_denied' => 'Acceso Denegado',
+    'actions' => 'Acciones',
+    'add_group' => 'añadir Grupo',
+    'back' => 'volver',
+    'delete' => 'borrar',
+    'edit' => 'editar',
+    'edit_group' => 'editar Grupo',
+    'error_group' => 'ERROR: Sin Nombre de Grupo',
+    'error_groupid' => 'ERROR: Falta fgrID',
+    'group_name' => 'Nombre Del Grupo',
+    'groups' => 'Foro de Grupos de Usuarios',
+    'new_group' => 'nuevo Grupo',
+    'really_delete' => '¿Seguro que quieres borrar este Foro de Grupo?',
+    'transaction_invalid' => 'ID de transacción no válida'
 );
 

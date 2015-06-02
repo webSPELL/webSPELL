@@ -25,11 +25,11 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-    'error_404'=>'Gabim 404',
-    'message_404'=>'Kjo faqe nuk ekziston.'
+    'error_404' => 'Gabim 404',
+    'message_404' => 'Kjo faqe nuk ekziston.'
 );
 

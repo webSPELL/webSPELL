@@ -25,20 +25,20 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'მიუწვდომელია',
-  'lock'=>'დაიბლოკოს',
-  'locked_since'=>'გვერდი ist ჩაკეტილები მას შემდეგ, რაც',
-  'pagelock'=>'Pagelock',
-  'page_locked'=>'<b>გვერდი ჩაკეტილი!</b><br>მხოლოდ Admins შეუძლიათ გვერდი არის.',
-  'page_unlocked'=>'<b>გვერდი გახსნილია!</b>',
-  'settings'=>'პარამეტრები',
-  'transaction_invalid'=>'ID არასწორია',
-  'unlock'=>'გახსნა',
-  'unlock_page'=>'გსურთ გახსნათ გვერდი ?',
-  'you_can_use_html'=>'თქვენ შეგიძლიათ გამოიყენოთ HTML'
+    'access_denied' => 'მიუწვდომელია',
+    'lock' => 'დაიბლოკოს',
+    'locked_since' => 'გვერდი ist ჩაკეტილები მას შემდეგ, რაც',
+    'page_locked' => '<b>გვერდი ჩაკეტილი!</b><br>მხოლოდ Admins შეუძლიათ გვერდი არის.',
+    'page_unlocked' => '<b>გვერდი გახსნილია!</b>',
+    'pagelock' => 'Pagelock',
+    'settings' => 'პარამეტრები',
+    'transaction_invalid' => 'ID არასწორია',
+    'unlock' => 'გახსნა',
+    'unlock_page' => 'გსურთ გახსნათ გვერდი ?',
+    'you_can_use_html' => 'თქვენ შეგიძლიათ გამოიყენოთ HTML'
 );
 

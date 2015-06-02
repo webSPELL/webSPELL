@@ -25,29 +25,29 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Zugriff verweigert',
-  'actions'=>'Aktionen',
-  'add_smiley'=>'Smiley hinzufügen',
-  'back'=>'zurück',
-  'delete'=>'löschen',
-  'edit'=>'ändern',
-  'edit_smiley'=>'Smiley ändern',
-  'example'=>'(z.B.: ":oO:")',
-  'fill_form'=>'Bitte das Formular korrekt ausfüllen',
-  'format_incorrect'=>'Das Format des Symbols war falsch. Bitte lade nur Symbole im  *.gif Format hoch',
-  'icon'=>'Symbol',
-  'icons'=>'Symbole',
-  'new_smiley'=>'neuer Smiley',
-  'no_entries'=>'Keine Einträge',
-  'pattern'=>'Kürzel',
-  'present_icon'=>'aktuelles Symbol',
-  'really_delete'=>'Diesen Smiley wirklich löschen?',
-  'smilies'=>'Smilies',
-  'smiley_name'=>'Smiley Name',
-  'transaction_invalid'=>'Transaktions ID ungültig'
+    'access_denied' => 'Zugriff verweigert',
+    'actions' => 'Aktionen',
+    'add_smiley' => 'Smiley hinzufügen',
+    'back' => 'zurück',
+    'delete' => 'löschen',
+    'edit' => 'ändern',
+    'edit_smiley' => 'Smiley ändern',
+    'example' => '(z.B.: ":oO:")',
+    'fill_form' => 'Bitte das Formular korrekt ausfüllen',
+    'format_incorrect' => 'Das Format des Symbols war falsch. Bitte lade nur Symbole im  *.gif Format hoch',
+    'icon' => 'Symbol',
+    'icons' => 'Symbole',
+    'new_smiley' => 'neuer Smiley',
+    'no_entries' => 'Keine Einträge',
+    'pattern' => 'Kürzel',
+    'present_icon' => 'aktuelles Symbol',
+    'really_delete' => 'Diesen Smiley wirklich löschen?',
+    'smiley_name' => 'Smiley Name',
+    'smilies' => 'Smilies',
+    'transaction_invalid' => 'Transaktions ID ungültig'
 );
 

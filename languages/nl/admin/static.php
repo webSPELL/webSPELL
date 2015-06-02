@@ -25,28 +25,28 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Toegang geweigerd',
-  'accesslevel'=>'Toegangslevel',
-  'actions'=>'Acties',
-  'add_static_page'=>'Statische Pagina toevoegen',
-  'clanmember_only'=>'alleen Clanleden',
-  'content'=>'Inhoud',
-  'delete'=>'verwijderen',
-  'edit'=>'bewerk',
-  'edit_static_page'=>'Statische Pagina bewerken',
-  'title'=>'Titel',
-  'id'=>'ID',
-  'new_static_page'=>'nieuwe Statische Pagina',
-  'public'=>'Openbaar',
-  'really_delete'=>'Deze statische pagina echt verwijderen?',
-  'registered_only'=>'alleen geregistreerde Gebruikers',
-  'static_pages'=>'Statische Pagina\'s',
-  'transaction_invalid'=>'Transactie ID ongeldig',
-  'you_can_use_html'=>'U kunt gebruik maken van HTML-Tags',
-  'tags'=>'Tags'
+    'access_denied' => 'Toegang geweigerd',
+    'accesslevel' => 'Toegangslevel',
+    'actions' => 'Acties',
+    'add_static_page' => 'Statische Pagina toevoegen',
+    'clanmember_only' => 'alleen Clanleden',
+    'content' => 'Inhoud',
+    'delete' => 'verwijderen',
+    'edit' => 'bewerk',
+    'edit_static_page' => 'Statische Pagina bewerken',
+    'id' => 'ID',
+    'new_static_page' => 'nieuwe Statische Pagina',
+    'public' => 'Openbaar',
+    'really_delete' => 'Deze statische pagina echt verwijderen?',
+    'registered_only' => 'alleen geregistreerde Gebruikers',
+    'static_pages' => 'Statische Pagina\'s',
+    'tags' => 'Tags',
+    'title' => 'Titel',
+    'transaction_invalid' => 'Transactie ID ongeldig',
+    'you_can_use_html' => 'U kunt gebruik maken van HTML-Tags'
 );
 

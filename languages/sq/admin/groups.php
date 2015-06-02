@@ -25,23 +25,23 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Hyrja e Ndaluar',
-  'actions'=>'Veprimet',
-  'add_group'=>'shto Grup',
-  'back'=>'mbrapsht',
-  'delete'=>'fshij',
-  'edit'=>'redakto',
-  'edit_group'=>'edit Grup',
-  'error_group'=>'GABIM: Asnjë Emër Grupi',
-  'error_groupid'=>'GABIM: Mungon fgrID',
-  'group_name'=>'Emri i Grupit',
-  'groups'=>'Forumi Grupeve Të Përdoruesve',
-  'new_group'=>'Grup i ri',
-  'really_delete'=>'Me të vërtetë fshini këtë Grup Forumi?',
-  'transaction_invalid'=>'ID e tranzaksionit e pavlefshme'
+    'access_denied' => 'Hyrja e Ndaluar',
+    'actions' => 'Veprimet',
+    'add_group' => 'shto Grup',
+    'back' => 'mbrapsht',
+    'delete' => 'fshij',
+    'edit' => 'redakto',
+    'edit_group' => 'edit Grup',
+    'error_group' => 'GABIM: Asnjë Emër Grupi',
+    'error_groupid' => 'GABIM: Mungon fgrID',
+    'group_name' => 'Emri i Grupit',
+    'groups' => 'Forumi Grupeve Të Përdoruesve',
+    'new_group' => 'Grup i ri',
+    'really_delete' => 'Me të vërtetë fshini këtë Grup Forumi?',
+    'transaction_invalid' => 'ID e tranzaksionit e pavlefshme'
 );
 

@@ -10,7 +10,7 @@
 #                                   /                                    #
 #                                                                        #
 #                                                                        #
-#   Copyright 2005-2014 by webspell.org                                  #
+#   Copyright 2005-2015 by webspell.org                                  #
 #                                                                        #
 #   visit webSPELL.org, webspell.info to get webSPELL for free           #
 #   - Script runs under the GNU GENERAL PUBLIC LICENSE                   #
@@ -25,48 +25,48 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'Acceso Denegado',
-  'auth'=>'Identificación',
-  'debug'=>'Nivel de depuración',
-  'debug_0'=>'Ninguno',
-  'debug_1'=>'Comandos',
-  'debug_2'=>'Comandos + Datos',
-  'debug_3'=>'Comandos + Datos + Estado De La Conexión',
-  'debug_4'=>'Salida de datos de bajo nivel',
-  'email'=>'eMail',
-  'host'=>'Host',
-  'html'=>'HTML?',
-  'password'=>'Contraseña',
-  'port'=>'Puerto SMTP',
-  'secure'=>'Conexión segura',
-  'secure_none'=>'Ninguno',
-  'secure_tls'=>'TLS',
-  'secure_ssl'=>'SSL',
-  'send'=>'enviar',
-  'test_email'=>'Correo electrónico de prueba',
-  'test_subject'=>'Probando eMail',
-  'test_message'=>'<h1> Prueba eMail </h1><p> Si puede ver esto, el envío de correo electrónico está configurado y funcionando. </p>',
-  'test_ok'=>'La prueba fue un éxito',
-  'test_fail'=>'Error en la prueba',
-  'tooltip_1'=>'Método para el envío de e-mail?',
-  'tooltip_2'=>'Autenticación SMTP?',
-  'tooltip_3'=>'SMTP Nombre de usuario',
-  'tooltip_4'=>'Contraseña SMTP',
-  'tooltip_5'=>'Puerto SMTP (por defecto: SMTP = 25, SSL = 465, TLS = 587',
-  'tooltip_6'=>'SMTP Host',
-  'tooltip_7'=>'Enviar HTML o texto-Plano',
-  'tooltip_8'=>'Protocolo de seguridad para SMTP',
-  'tooltip_9'=>'Que nivel de Depuración?',
-  'transaction_invalid'=>'ID de transacción no válida',
-  'type'=>'método eMail',
-  'type_phpmail'=>'PHP mail ()',
-  'type_smtp'=>'SMTP',
-  'type_pop'=>'POP antes de SMTP',
-  'update'=>'actualizar',
-  'user'=>'Nombre usuario'
+    'access_denied' => 'Acceso Denegado',
+    'auth' => 'Identificación',
+    'debug' => 'Nivel de depuración',
+    'debug_0' => 'Ninguno',
+    'debug_1' => 'Comandos',
+    'debug_2' => 'Comandos + Datos',
+    'debug_3' => 'Comandos + Datos + Estado De La Conexión',
+    'debug_4' => 'Salida de datos de bajo nivel',
+    'email' => 'eMail',
+    'host' => 'Host',
+    'html' => 'HTML?',
+    'password' => 'Contraseña',
+    'port' => 'Puerto SMTP',
+    'secure' => 'Conexión segura',
+    'secure_none' => 'Ninguno',
+    'secure_ssl' => 'SSL',
+    'secure_tls' => 'TLS',
+    'send' => 'enviar',
+    'test_email' => 'Correo electrónico de prueba',
+    'test_fail' => 'Error en la prueba',
+    'test_message' => '<h1> Prueba eMail </h1><p> Si puede ver esto, el envío de correo electrónico está configurado y funcionando. </p>',
+    'test_ok' => 'La prueba fue un éxito',
+    'test_subject' => 'Probando eMail',
+    'tooltip_1' => 'Método para el envío de e-mail?',
+    'tooltip_2' => 'Autenticación SMTP?',
+    'tooltip_3' => 'SMTP Nombre de usuario',
+    'tooltip_4' => 'Contraseña SMTP',
+    'tooltip_5' => 'Puerto SMTP (por defecto: SMTP = 25, SSL = 465, TLS = 587',
+    'tooltip_6' => 'SMTP Host',
+    'tooltip_7' => 'Enviar HTML o texto-Plano',
+    'tooltip_8' => 'Protocolo de seguridad para SMTP',
+    'tooltip_9' => 'Que nivel de Depuración?',
+    'transaction_invalid' => 'ID de transacción no válida',
+    'type' => 'método eMail',
+    'type_phpmail' => 'PHP mail ()',
+    'type_pop' => 'POP antes de SMTP',
+    'type_smtp' => 'SMTP',
+    'update' => 'actualizar',
+    'user' => 'Nombre usuario'
 );
-?>
+
