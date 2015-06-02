@@ -25,9 +25,11 @@
 ##########################################################################
 */
 
-include("../_mysql.php");
-include("../_settings.php");
-include("../_functions.php");
+chdir('../');
+include("_mysql.php");
+include("_settings.php");
+include("_functions.php");
+chdir('admin');
 
 $_language->readModule('visitor_statistic_image', false, true);
 
