@@ -248,7 +248,9 @@ module.exports = function( grunt ) {
         changelog: {
             release: {
                 options: {
-                    version: "<%= pkg.version %>"
+                    version: "<%= pkg.version %>",
+                    labels: grunt.file.read( "development/type.txt" ).trim().split( "\n" ),
+                    template: 'grouped'
                 }
             }
         },
