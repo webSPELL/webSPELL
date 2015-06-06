@@ -250,7 +250,7 @@ module.exports = function( grunt ) {
                 options: {
                     version: "<%= pkg.version %>",
                     labels: grunt.file.read( "development/type.txt" ).trim().split( "\n" ),
-                    template: 'grouped'
+                    template: "grouped"
                 }
             }
         },
