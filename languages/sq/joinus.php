@@ -44,6 +44,7 @@ $language_array = array(
     'icq_msn' => 'ICQ/MSN/etj...',
     'info' => 'Informacion shtesë',
     'joinus_form' => 'Forma Joinus ',
+    'mail'=>'E-Mail',
     'message_title' => 'Bashkohu',
     'messenger' => 'Mesanger',
     'name' => 'Emri',

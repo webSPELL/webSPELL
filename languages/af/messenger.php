@@ -45,7 +45,7 @@ $language_array = array(
     'html' => 'HTML <b><span class="underline">AF</span></b>',
     'ignore' => 'Ignoreer gebruiker',
     'incoming' => 'Inkomende',
-    'mail_body' => '<b>Hallo %nickname%!</b><br><br>Jy het \'n nuwe boodskap van BVBPOWER (% hp_url%). <br>Klik <a href = "http://% hp_url%?site=messenger">hier</a> om die PM te lees.<br><br>(C)webSPELL.org',
+    'mail_body' => '<b>Hello %nickname%!</b><br><br>You got a new message at '.PAGETITLE.' (%hp_url%).<br>Click <a href="http://%hp_url%?site=messenger">here</a> to read the PM.<br><br>(C) webSPELL.org',
     'mail_subject' => 'Jy het die nuwe PM',
     'mark_not_viewed' => 'Merk as nie gesien',
     'mark_viewed' => 'Merk as gesien',

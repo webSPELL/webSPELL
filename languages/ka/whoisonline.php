@@ -40,6 +40,7 @@ $language_array = array(
     'counter_stats' => 'მთვლელის სტატისტიკები',
     'date' => 'თარიღი',
     'demos' => 'დემოები',
+    'faq'=>'FAQ',
     'fightus' => 'შეგვებრძოლეთ',
     'files' => 'ჩამოწერები',
     'forum' => 'ფორუმელი',

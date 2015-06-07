@@ -31,6 +31,7 @@ $language_array = array(
 
     'game' => 'Oyun',
     'information' => 'Bilgi',
+    'ip'=>'IP',
     'link' => 'Bağlantı',
     'no_server' => 'sunucu yok.',
     'not_supported' => 'Web sunucusu tarafından desteklenmiyor',

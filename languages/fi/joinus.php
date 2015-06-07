@@ -44,6 +44,7 @@ $language_array = array(
     'icq_msn' => 'ICQ/MSN/yms...',
     'info' => 'Yleistä tietoa',
     'joinus_form' => 'Liity meihin kaavake',
+    'mail'=>'E-Mail',
     'message_title' => 'Liity meihin',
     'messenger' => 'Messenger',
     'name' => 'Nimi',

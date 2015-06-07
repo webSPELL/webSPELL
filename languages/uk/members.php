@@ -24,35 +24,30 @@
 #                                                                        #
 ##########################################################################
 */
-/**
- * Online Language Editor Ukraine language file for webSPELL 4.2.2
- * @author Stefan Giesecke <webmaster@giesi.com>
- * @copyright Copyright (c) 2010, Stefan Giesecke
- * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
- */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'about'=>'Про мене ',
-  'active'=>'Активний',
-  'activity'=>'Активність',
-  'awards'=>'Нагороди',
-  'back_overview'=>'&raquo; <a href="index.php?site=members"><b>Повернутися до перегляду членів клану</b></a>',
-  'challenge'=>'Виклик',
-  'contact'=>'Контакт',
-  'go'=>'Вперед!',
-  'inactive'=>'Неактивний',
-  'member'=>'гравець',
-  'members'=>'Гравців',
-  'nickname'=>'Нік',
-  'no_description'=>'Немає доступного опису',
-  'position'=>'Позиція',
-  'results'=>'Результати',
-  'show_details'=>'&raquo; <a href="index.php?site=members&amp;action=show&amp;squadID=%squadID%"><b>Показати деталі</b></a>',
-  'show_only'=>'Тільки для перегляду',
-  'status'=>'Статус',
-  'town'=>'Місто'
+    'about' => 'Про мене ',
+    'active' => 'Активний',
+    'activity' => 'Активність',
+    'awards' => 'Нагороди',
+    'back_overview' => '&raquo; <a href="index.php?site=members"><b>Повернутися до перегляду членів клану</b></a>',
+    'challenge' => 'Виклик',
+    'contact' => 'Контакт',
+    'go' => 'Вперед!',
+    'inactive' => 'Неактивний',
+    'member' => 'гравець',
+    'members' => 'Гравців',
+    'nickname' => 'Нік',
+    'no_description' => 'Немає доступного опису',
+    'no_entries'=>'no entries available',
+    'position' => 'Позиція',
+    'results' => 'Результати',
+    'show_details' => '&raquo; <a href="index.php?site=members&amp;action=show&amp;squadID=%squadID%"><b>Показати деталі</b></a>',
+    'show_only' => 'Тільки для перегляду',
+    'status' => 'Статус',
+    'town' => 'Місто'
 );
 

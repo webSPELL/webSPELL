@@ -31,6 +31,7 @@ $language_array = array(
 
     'back' => 'atpakaļ',
     'banner' => 'Reklāmkarogs',
+    'banner_to_big' => 'Attēls ir pārāk liels',
     'categories' => 'Kategorijas',
     'category' => 'Kategorija',
     'delete' => 'izdzēst',

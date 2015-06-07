@@ -35,6 +35,7 @@ $language_array = array(
     'enter_name' => 'Морате да внесите име!',
     'select_all' => 'Означи се',
     'shout' => 'Покани!',
+    'shoutbox' => 'Чат',
     'sort' => 'Подреди:'
 );
 

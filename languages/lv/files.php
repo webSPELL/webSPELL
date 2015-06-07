@@ -41,7 +41,6 @@ $language_array = array(
     'database_cl' => 'Datu bāze',
     'delete_file' => 'izdzēst datni',
     'description' => 'Apraksts',
-    'dl' => 'Lejuplāde',
     'download_now' => 'Lejuplādēt %filename% tagad',
     'download_registered_only' => 'Lejuplāde tikai reģistrētiem lietotājiem!',
     'download_via_mirror' => 'lejuplādēt izmantojot spoguļvietni',

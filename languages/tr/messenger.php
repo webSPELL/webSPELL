@@ -45,7 +45,7 @@ $language_array = array(
     'html' => 'HTML <b><span class="underline">KAPALI</span></b>',
     'ignore' => 'Reddedilen Kullanıcı',
     'incoming' => 'Gelen',
-    'mail_body' => '<b>Merhaba %nickname%!</b><br><br> BVBPOWER den bir mesajınız var (%hp_url%).<br>Tık <a href="http://%hp_url%?site=messenger">burada</a> kişisel mesajı okuamak icin.<br><br>(C) webSPELL.org',
+    'mail_body' => '<b>Hello %nickname%!</b><br><br>You got a new message at '.PAGETITLE.' (%hp_url%).<br>Click <a href="http://%hp_url%?site=messenger">here</a> to read the PM.<br><br>(C) webSPELL.org',
     'mail_subject' => 'Yeni kişisel mesajınız var',
     'mark_not_viewed' => 'Işareti olarak görülmüyor',
     'mark_viewed' => 'Inceledi olarak işaretle',

@@ -40,6 +40,7 @@ $language_array = array(
     'counter_stats' => 'στατιστικα μετρητη',
     'date' => 'Ημερομηνια',
     'demos' => 'επιδειξεις',
+    'faq'=>'FAQ',
     'fightus' => 'πολεμιστε μας',
     'files' => 'downloads',
     'forum' => 'forums',

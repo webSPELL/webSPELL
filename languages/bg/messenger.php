@@ -33,6 +33,7 @@ $language_array = array(
     'adminoptions' => 'Административни опции:',
     'bbcode' => 'ББКод <b><span class="underline">Включен</span></b>',
     'by' => 'от',
+    'date' => 'Дата:',
     'delete' => 'Изтрий',
     'delete_selected' => 'Изтрий избраното',
     'enter_message' => 'Трябва да въведете съобщение!',
@@ -44,7 +45,7 @@ $language_array = array(
     'html' => 'HTML <b><span class="underline">Изключени</span></b>',
     'ignore' => 'Игнорирай потребител',
     'incoming' => 'Входящ',
-    'mail_body' => '<b>Здравейте %nickname%!</b><br><br>Имате ново съобщение в BVBPOWER (%hp_url%).<br>Кликнете <a href="http://%hp_url%?site=messenger">тук</a> за да прочетете PM.<br><br>(C) webSPELL.org',
+    'mail_body' => '<b>Hello %nickname%!</b><br><br>You got a new message at '.PAGETITLE.' (%hp_url%).<br>Click <a href="http://%hp_url%?site=messenger">here</a> to read the PM.<br><br>(C) webSPELL.org',
     'mail_subject' => 'Имате нов PM',
     'mark_not_viewed' => 'Маркирай като непрегледано ',
     'mark_viewed' => 'Маркирай като прегледано',
@@ -72,6 +73,7 @@ $language_array = array(
     'show' => 'Покажи',
     'smilies' => 'Усмивки <b><span class="underline">Включени</span></b>',
     'sort' => 'Вид:',
+    'title' => 'Тема',
     'unknown_user' => 'неразпознат потребител',
     'your_message' => 'Вашето съобщение:'
 );

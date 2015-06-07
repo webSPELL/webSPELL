@@ -75,7 +75,6 @@ $language_array = array(
     'to_rate' => 'Fir dës Demo ze bewäerten muss du ugemellt an registréiert sinn!',
     'update_demo' => 'Demo updaten',
     'user_comments' => 'Kommentaren nëmmen fir Benotzer erlaben',
-    'visitor_comments' => 'Kommentare fir all erlaben',
-    'vs' => 'géint.'
+    'visitor_comments' => 'Kommentare fir all erlaben'
 );
 

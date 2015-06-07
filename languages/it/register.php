@@ -29,45 +29,41 @@ $language_array = array(
 
 /* do not edit above this line */
 
-    'activation_successful' => 'La tua richiesta è stata completata con successo.<br>Puoi registrarti ora.',
+    'activation_successful' => 'L\'attivazione del tuo account era con successo.<br>Puoi accedere ora.',
     'back' => 'indietro',
     'enter_nickname' => 'Si prega di inserire un nickname.',
     'enter_password' => 'Si prega di inserire una password.',
     'enter_username' => 'Si prega di inserire un nome utente.',
-    'errors_there' => 'Ci sono alcuni errori',
-    'for_login' => 'solo l*applicazione',
-    'invalid_mail' => 'Il dato indirizzo e-mail non è corretto.',
+    'errors_there' => 'Alcuni errori sono verificati',
+    'for_login' => 'solo per il login',
+    'invalid_mail' => 'Hai inserito un indirizzo email non valido.',
     'mail' => 'E-Mail',
-    'mail_activation_successful' => 'Il sbloccare il tuo indirizzo e-mail ha avuto esito positivo.',
-    'mail_failed' => 'L*attivazione e-mail non ha potuto essere inviato, si prega di informare il webmaster al riguardo.',
-    'mail_inuse' => 'Esiste già una domanda di questo indirizzo email.',
-    'mail_subject' => 'conferma di registratione da %homepage_url%',
+    'mail_activation_successful' => 'L\'attivazione del tuo indirizzo e-mail è stata un successo.',
+    'mail_failed' => 'La mail di attivazione non può essere inviato. Si prega di informare il webmaster su questo problema.',
+    'mail_inuse' => 'Questo indirizzo e-mail è già in uso.',
+    'mail_subject' => 'Conferma di registrazione da %homepage_url%',
     'mail_text' => 'Ciao %username%!
-
-La tua notifica alla %pagetitle% (%homepage_url%) ha avuto successo. Qui, ancora una volta i tuoi dati di accesso:
-
-Il tuo nome utente: %username%
-
-Per completare la registrazione adesso, per attivare il tuo account, visita il seguente link da visitare:
-%activationlink%
-
-Grazie per la vostra applicazione
+<p>La registrazione a %pagetitle% (%homepage_url%) è stato positivo. I dati del tuo account:</p>
+<p>Nome utente: %username%</p>
+<p>Per completare la registrazione è necessario attivare il tuo account cliccando sul seguente link:<br>
+%activationlink%</p>
+<p>Grazie per la tua registrazione</p>
 %pagetitle% - %homepage_url%',
     'nickname' => 'Nickname',
-    'nickname_inuse' => 'Il soprannome è già presa.',
-    'no_register_when_loggedin' => 'You allready have an account at %pagename%',
+    'nickname_inuse' => 'Nickname giá in uso.',
+    'no_register_when_loggedin' => 'Hai già un account su %pagename%',
     'password' => 'Password',
-    'profile_info' => 'Applicazione informazioni',
+    'profile_info' => 'Informazioni sulla registrazione',
     'register_now' => 'Registrati ora!',
-    'register_successful' => 'La tua richiesta è stata completata con successo. Sarà in pochi minuti una e-mail con il codice di sblocco in modo da poter attivare il tuo account. Dopo la registrazione è completa.',
-    'registration' => 'Registrazione',
-    'repeat' => 'Ripetere la password',
+    'register_successful' => 'La tua registrazione è stata un successo. A breve riceverai una email con un link di attivazione.',
+    'registration' => 'registrazione',
+    'repeat' => 'Ripeti la password',
     'repeat_invalid' => 'La ripetizione del password non è corretto.',
     'security_code' => 'Codice di sicurezza',
     'username' => 'Nome utente',
-    'username_inuse' => 'Il nome utente è già presa.',
-    'username_toolong' => 'Il nome utente è troppo lungo (max. 30 Carattere).',
-    'wrong_activationkey' => 'Il tuo codice di sblocco è sbagliato!',
+    'username_inuse' => 'Nome utente giá in uso.',
+    'username_toolong' => 'Il nome utente è troppo lungo (massimale 30 caratteri).',
+    'wrong_activationkey' => 'Il tuo codice di attivazione è sbagliato!',
     'wrong_securitycode' => 'Il codice di sicurezza è sbagliato!'
 );
 

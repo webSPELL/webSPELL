@@ -29,10 +29,13 @@ $language_array = array(
 
 /* do not edit above this line */
 
+    'author' => 'Автор',
     'bbcode' => 'BBКод <b><span class="underline">Включено</span></b>',
     'cancel' => 'отмена',
+    'comm' => 'комм',
     'comment' => '<a href="$url">[1] комментарий</a>, последнее от $lastposter - $lastdate',
     'comments' => '<a href="$url">[$anzcomments] комментариев</a>, последнее от $lastposter - $lastdate',
+    'date' => 'Дата',
     'delete' => 'удалить',
     'delete_selected' => 'удалить выбранные',
     'edit' => 'редакт',
@@ -61,6 +64,7 @@ $language_array = array(
     'publish_now' => 'Опубликовать сейчас',
     'publish_selected' => 'Опубликовать выбранные',
     'really_delete' => 'действительно удалить эти новости?',
+    'rubric' => 'Рубрика',
     'save_news' => 'сохранить новости',
     'select_all' => 'выбрать все',
     'self' => 'собственное окно',

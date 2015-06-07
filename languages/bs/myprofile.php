@@ -44,11 +44,12 @@ $language_array = array(
     'clan-name' => 'Ime klana',
     'clan-tag' => 'Tag klana',
     'country' => 'Zemlja',
-    'cpu' => 'Procesor',
+    'cpu'=>'CPU',
     'date_of_birth' => 'Datum rođenja',
     'deactivated' => 'deaktiviran',
     'delete_max_90_90' => 'izbriši (max90x90)',
     'delete_max_230_210' => 'izbriši (max230x210)',
+    'e-mail'=>'E-mail',
     'edit_mail' => 'Izmjeni e-mail',
     'edit_password' => 'Izmjeni lozinku',
     'equipment-info' => 'Info o opremi',
@@ -107,6 +108,7 @@ $language_array = array(
     'repeat_new_email' => 'Ponovi novi e-mail',
     'repeat_new_password' => 'Ponovi novu lozinku',
     'repeated_pw_not_valid' => 'Vaša ponovljena lozinka nije ispravno upisana!',
+    'repeated_mail_not_valid'=>'your repeated e-mail is not equal!',
     'sexuality' => 'Pol',
     'signature' => 'Potpis',
     'smilies' => '<a href="javascript:void(0);" onclick="window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smajlići</a> uključeni',
@@ -124,6 +126,7 @@ $language_array = array(
     'you_have_to_firstname' => 'Morate unijeti Vaše ime!',
     'you_have_to_nickname' => 'Morate unijeti Vaš nik!',
     'you_have_to_username' => 'Morate unijeti korisničko ime!',
-    'you_have_to_valid_email' => 'Vaš e-mail nije važeći!'
+    'you_have_to_valid_email' => 'Vaš e-mail nije važeći!',
+    'wrong_password'=>'Wrong password'
 );
 

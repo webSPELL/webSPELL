@@ -29,27 +29,27 @@ $language_array = array(
 
 /* do not edit above this line */
 
-    'del_from_mail_list' => 'Cancellare dalla lista',
-    'del_key' => 'Distanza Codice',
-    'delete' => 'cancellare',
-    'deletion_key' => 'Distanza Codice',
+    'del_from_mail_list' => 'Elimina dalla mail list',
+    'del_key' => 'elemina codice',
+    'delete' => 'elimina',
+    'deletion_key' => 'Cancellazione key',
     'email_not_valid' => 'Il tuo indirizzo e-mail non è valido!',
-    'lost_deletion_key' => 'Distanza codice?',
+    'lost_deletion_key' => 'Perso l\'eliminazione della chiave?',
     'mail_adress' => 'Indirizzo e-mail',
-    'mail_not_in_db' => 'L*entrata indirizzo e-mail non esiste nel nostro database.',
-    'mail_pw_didnt_match' => 'L*e-mail e la password non corrisponde.',
-    'newsletter' => 'Newsletter',
-    'newsletter_registration' => 'Newsletter Iscriviti',
+    'mail_not_in_db' => 'L\' indirizzo e-mail non esiste nel nostro database.',
+    'mail_pw_didnt_match' => 'La mail/password non corrispondono.',
+    'newsletter' => 'newsletter',
+    'newsletter_registration' => 'Registrazione newsletter',
     'no_such_mail_adress' => 'Questo indirizzo e-mail non è nel database',
-    'password_had_been_send' => 'Il codice è stato inviato via',
-    'register_newsletter' => 'Per la newsletter',
-    'request_mail' => '<b>Hai chiesto la cancellazione del codice.</b><br><br>Per aggiungere il tuo indirizzo e-mail dalla mailing list di rimuovere, fare clic sul seguente link: <a href="http://%homepage_url%/index.php?site=newsletter&mail=%mail%&pass=%delete_key%">E-mail rimuovere</a><br>La password per la rimozione della lista è la seguente: %delete_key%<br><br>Arrivederci a presto %homepage_url%',
-    'send' => 'inviare',
-    'submit' => 'Inoltrare',
-    'success_mail' => '<b>Grazie per la tua registrazione!</b><br><br>Se la tua mail dalla mailing list desidera rimuovere, si prega di utilizzare il seguente link: <a href="http://%homepage_url%/index.php?site=newsletter&mail=%mail%&pass=%delete_key%">E-mail rimuovi</a><br>La password per la rimozione della lista seguente: %delete_key%<br><br>Arrivederci a presto %homepage_url%',
+    'password_had_been_send' => 'La password era stata inviata.',
+    'register_newsletter' => 'Registrati alla newsletter',
+    'request_mail' => '<b>È richiesto il codice di eliminazione!</b><br><br>Per rimuovere il tuo indirizzo mail dalla mailing list clicca <a href="http://%homepage_url%/index.php?site=newsletter&mail=%mail%&pass=%delete_key%">qui</a><br>La password per eliminare te stesso: %delete_key%<br><br>Ci vediamo al %homepage_url%',
+    'send' => 'invia',
+    'submit' => 'invia',
+    'success_mail' => '<b>Grazie per la tua registrazione!</b> <br><br> Per rimuovere il tuo indirizzo mail dalla mailing list clicca <a href="http://%homepage_url%/index.php?site=newsletter&mail=%mail%&pass=%delete_key%">qui</a><br>La password per eliminare te stesso: %delete_key%<br><br> Ci vediamo al %homepage_url%',
     'thank_you_for_registration' => 'Grazie per il tuo abbonamento',
     'you_are_already_registered' => 'Sei già registrato.',
     'your_mail_adress' => 'Il tuo indirizzo e-mail',
-    'your_mail_adress_deleted' => 'Il tuo indirizzo e-mail è stato rimosso dalla lista.'
+    'your_mail_adress_deleted' => 'Il tuo indirizzo e-mail è stato tolto.'
 );
 

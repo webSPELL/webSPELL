@@ -32,6 +32,7 @@ $language_array = array(
     'all_articles' => 'Сите статии',
     'already_rated' => '<b>Статиите веќе отценети!</b>',
     'articles' => 'Cтатии',
+    'author' => 'Автор',
     'bbcode' => '&#8226; <a href="javascript:void(0);" onclick="window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">ББКод</a> <b><span class="underline">е вклучен</span></b>',
     'cancel' => 'Откажи',
     'date' => 'Датум',

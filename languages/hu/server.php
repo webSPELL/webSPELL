@@ -31,6 +31,7 @@ $language_array = array(
 
     'game' => 'Játék',
     'information' => 'Információ',
+    'ip'=>'IP',
     'link' => 'Link',
     'no_server' => 'nincs elérhető szerver.',
     'not_supported' => 'Nem támogatja a szerver',

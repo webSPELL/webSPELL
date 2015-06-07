@@ -38,6 +38,7 @@ $language_array = array(
     'logout' => 'Одјава',
     'lost_password' => 'Изгубљена лозинка?',
     'messenger' => 'Поруке',
+    'n_a'=>'није доступно',
     'overview' => 'Преглед',
     'register_now' => 'Региструј се',
     'registered_users' => 'Регистровани корисници',

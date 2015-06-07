@@ -37,6 +37,7 @@ $language_array = array(
     'enter_name' => 'crwdns20495:0crwdne20495:0',
     'enter_subject' => 'crwdns20496:0crwdne20496:0',
     'errors_there' => 'crwdns20497:0crwdne20497:0',
+    'mail'=>'crwdns22965:0crwdne22965:0',
     'message' => 'crwdns20499:0crwdne20499:0',
     'name' => 'crwdns20500:0crwdne20500:0',
     'receiver' => 'crwdns20501:0crwdne20501:0',

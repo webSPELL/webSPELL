@@ -42,6 +42,7 @@ $language_array = array(
     'members' => 'اعضا',
     'nickname' => 'نام مخفف',
     'no_description' => 'هیچ توصیفی وجود ندارد',
+    'no_entries'=>'no entries available',
     'position' => 'موقعیت',
     'results' => 'نتيجه',
     'show_details' => '&raquo; <a href="index.php?site=members&amp;action=show&amp;squadID=%squadID%"><b>نشان دادن جزییات بیشتر</b></a>',

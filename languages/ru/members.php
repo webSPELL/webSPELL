@@ -35,15 +35,19 @@ $language_array = array(
     'awards' => 'Награды',
     'back_overview' => '&raquo; <a href="index.php?site=members"><b>Вернуться к просмотру членов клана</b></a>',
     'challenge' => 'Вызов',
+    'contact' => 'Контакт',
+    'go' => 'Вперед!',
     'inactive' => 'неактивен',
     'member' => 'Игрок',
     'members' => 'Игроков',
     'nickname' => 'Ник',
     'no_description' => 'Нет доступного описания',
+    'no_entries'=>'no entries available',
     'position' => 'Позиция',
     'results' => 'Результаты',
     'show_details' => '&raquo; <a href="index.php?site=members&amp;action=show&amp;squadID=%squadID%"><b>Показать детали</b></a>',
     'show_only' => 'Только для просмотра',
+    'status' => 'Статус',
     'town' => 'Город'
 );
 

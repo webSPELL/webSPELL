@@ -32,8 +32,6 @@ $language_array = array(
     'admin_button' => 'Administracija pogostih vprašanj',
     'answer' => 'Odgovor',
     'categories' => 'Kategorije',
-    'faq' => 'Pogosta vprašanja',
-    'faqs' => 'Pogosta vprašanja',
     'no_categories' => 'Kategorije še niso ustvarjene',
     'no_faq' => 'Ni vnesenih vprašanj.<br><a href="index.php?site=faq">Nazaj na prejšnjo stran</a>',
     'saved_on' => 'Shranjeno'

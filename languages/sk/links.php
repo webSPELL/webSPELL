@@ -31,6 +31,7 @@ $language_array = array(
 
     'back' => 'naspäť',
     'banner' => 'Banner',
+    'banner_to_big' => 'obrázok je príliž veľký',
     'categories' => 'Kategórie',
     'category' => 'Kategória',
     'delete' => 'vymazať',

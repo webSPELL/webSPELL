@@ -45,7 +45,7 @@ $language_array = array(
     'html' => 'HTML on <b><span class="underline">MAAS</span></b>',
     'ignore' => 'Ignoreeri kasutajat',
     'incoming' => 'Sissetulev',
-    'mail_body' => '<b>Tere %nickname%!</b><br><br>Sulle on webSPELL v4-s uus sõnum (%hp_url%).<br>Kliki <a href="http://%hp_url%?site=messenger">siia</a> sõnumi lugemiseks.<br><br>(C) webSPELL.org',
+    'mail_body' => '<b>Hello %nickname%!</b><br><br>You got a new message at '.PAGETITLE.' (%hp_url%).<br>Click <a href="http://%hp_url%?site=messenger">here</a> to read the PM.<br><br>(C) webSPELL.org',
     'mail_subject' => 'Sulle on uus privaatsõnum',
     'mark_not_viewed' => 'Märgi mitteloetuks',
     'mark_viewed' => 'Märgi loetuks',

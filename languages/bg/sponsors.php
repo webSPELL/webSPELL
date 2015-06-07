@@ -29,11 +29,13 @@ $language_array = array(
 
 /* do not edit above this line */
 
+    'banner' => 'Банер',
     'homepage' => 'Начална страница',
     'information' => 'Информация',
     'mainsponsor' => 'Главен спонсор',
     'mainsponsors' => 'Главни спонсори',
     'no_sponsors' => 'Няма спонсори',
+    'sponsor' => 'Спонсор',
     'sponsors' => 'cпонсори'
 );
 

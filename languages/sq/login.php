@@ -38,6 +38,7 @@ $language_array = array(
     'logout' => 'dalje nga logimi',
     'lost_password' => 'humbe pasword-in?',
     'messenger' => 'mesazher',
+    'n_a'=>'n/a',
     'overview' => 'prezantim i përgjithshëm',
     'register_now' => 'regjistrohu tani',
     'registered_users' => 'përdorues të regjistruar',

@@ -45,7 +45,7 @@ $language_array = array(
     'html' => 'HTML <b><span class="underline">خاموش</span></b>',
     'ignore' => 'رد کردن کاربر',
     'incoming' => 'جدید',
-    'mail_body' => '<b>سلام %nickname%!</b><br><br>شما پیغام جدیدی دارید در  =BBC= (%hp_url%).<br>کلیک <a href="http://%hp_url%?site=messenger">اینجا</a> تا پیغام را بخوانید.<br><br>(C) webSPELL.org',
+    'mail_body' => '<b>Hello %nickname%!</b><br><br>You got a new message at '.PAGETITLE.' (%hp_url%).<br>Click <a href="http://%hp_url%?site=messenger">here</a> to read the PM.<br><br>(C) webSPELL.org',
     'mail_subject' => 'شما پیغام جدیدی دارید',
     'mark_not_viewed' => 'مشاهده نشده',
     'mark_viewed' => 'مشاهده شده',

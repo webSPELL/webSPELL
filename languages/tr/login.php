@@ -38,6 +38,7 @@ $language_array = array(
     'logout' => 'Çıkış',
     'lost_password' => 'Şifreni mi unuttun?',
     'messenger' => 'Messenger',
+    'n_a'=>'n/a',
     'overview' => 'Genel bakış',
     'register_now' => 'Şimdi kaydol',
     'registered_users' => 'Kayıtlı kullanıcılar',

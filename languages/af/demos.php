@@ -75,7 +75,6 @@ $language_array = array(
     'to_rate' => 'Jy moet geregistreerd en aangeteken wees om hierdie demo te kan beoordeel!',
     'update_demo' => 'Opdateer demorn',
     'user_comments' => 'Aktiveer die gebruiker kommentaar',
-    'visitor_comments' => 'Aktiveer besoekers kommentaar',
-    'vs' => 'teen'
+    'visitor_comments' => 'Aktiveer besoekers kommentaar'
 );
 

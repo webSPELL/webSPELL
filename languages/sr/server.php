@@ -31,6 +31,7 @@ $language_array = array(
 
     'game' => 'Игра',
     'information' => 'Информације',
+    'ip'=>'IP адреса',
     'link' => 'Линк',
     'no_server' => 'Нема доступних сервера.',
     'not_supported' => 'Сервер не подржава ову опцију',

@@ -29,13 +29,13 @@ $language_array = array(
 
 /* do not edit above this line */
 
-    'add_to_message' => 'Per aggiungere messaggio',
+    'add_to_message' => 'Aggiungi al messaggio',
     'close_window' => 'Chiudi finestra',
-    'delete' => 'cancellare',
+    'delete' => 'Elimina',
     'existing_files' => 'File esistenti',
-    'file_upload' => 'Carica un file',
-    'invalid_access' => 'Accesso non valido!',
+    'file_upload' => 'Caricare un file',
+    'invalid_access' => 'Accesso negato!',
     'no_access' => 'Nessun accesso!',
-    'upload' => 'Caricare'
+    'upload' => 'Carica'
 );
 

@@ -32,8 +32,6 @@ $language_array = array(
     'admin_button' => 'FAQ Administration',
     'answer' => 'Antwort',
     'categories' => 'Kategorien',
-    'faq' => 'Häufig gestellte Fragen',
-    'faqs' => 'Fragen',
     'no_categories' => 'keine Kategorien angelegt',
     'no_faq' => 'Keine Frage vorhanden.<br><a href="index.php?site=faq">Zurück</a>',
     'saved_on' => 'eingetragen am'

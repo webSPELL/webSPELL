@@ -31,6 +31,7 @@ $language_array = array(
 
     'game' => 'crwdns21570:0crwdne21570:0',
     'information' => 'crwdns21571:0crwdne21571:0',
+    'ip'=>'crwdns22980:0crwdne22980:0',
     'link' => 'crwdns21573:0crwdne21573:0',
     'no_server' => 'crwdns21574:0crwdne21574:0',
     'not_supported' => 'crwdns21575:0crwdne21575:0',

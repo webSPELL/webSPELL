@@ -75,7 +75,6 @@ $language_array = array(
     'to_rate' => 'Selle taasesituse hindamiseks pead sa registreeritud ja sisse logitud olema!',
     'update_demo' => 'Uuenda taasesitust',
     'user_comments' => 'Luba kasutajate kommentaarid',
-    'visitor_comments' => 'Luba külastajate kommentaarid',
-    'vs' => 'vs'
+    'visitor_comments' => 'Luba külastajate kommentaarid'
 );
 

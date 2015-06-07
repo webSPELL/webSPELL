@@ -29,7 +29,7 @@ $language_array = array(
 
 /* do not edit above this line */
 
-    'admins' => 'Administrator(i):',
+    'admins' => 'Administratore/i:',
     'coding' => 'Programmazione',
     'coding_info' => 'Questa pagina usa il <a href="http://www.webspell.org" target="_blank">webSPELL Free Content Management System (Versione: $version)</a>. La base è su PHP4/5 e MySQL e viene eseguito con il <a href="http://www.fsf.org/licensing/licenses/gpl.html" target="_blank">GNU GENERAL PUBLIC LICENSE</a>.<br>Qui si receve il script gratuito: <a href="http://www.webspell.org" target="_blank">www.webSPELL.org</a>',
     'disclaimer' => 'Responsabilità disclaimer',
@@ -47,9 +47,9 @@ $language_array = array(
 	Se, entro il termine Internet offrono la possibilità di immettere dati personali o aziendali (indirizzi e-mail, nomi, indirizzi), la divulgazione di tali dati per l*utente su un espressamente su base volontaria. L*utilizzo e il pagamento di tutti i servizi offerti sono consentiti - se tecnicamente possibile e ragionevole - senza specificazione di tutti i dati personali o la specificazione della dati anonimi o un alias. L*uso nel contesto del impronta o informazioni comparabili indirizzi postali pubblicati, numeri di telefono e fax e indirizzi di posta elettronica a fini di marketing non espressamente richiesto informazioni non è consentito. Misure legali contro i mittenti delle cosiddette spam mail in caso di violazione di tale divieto sono espressamente riservati.</p>
 	<p><strong>5. Validità legale della presente esclusione di responsabilità</strong><br>
 	La presente esclusione di responsabilità è parte di Internet offre, dalla quale questa pagina. Se parti o singole formulazioni di questo testo non siano, non più o non completamente corretto, le parti restanti del documento nel loro contenuto e la validità.</p>',
-    'imprint' => 'Imprint',
+    'imprint' => 'Colofone',
     'mods' => 'Moderatore/i:',
-    'responsible_persons' => 'Merito persone',
+    'responsible_persons' => 'Persone responsabili',
     'webmaster' => 'Webmaster:'
 );
 

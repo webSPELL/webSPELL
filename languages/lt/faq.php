@@ -32,8 +32,6 @@ $language_array = array(
     'admin_button' => 'D.U.K Administracija',
     'answer' => 'Atsakymas',
     'categories' => 'Kategorijos',
-    'faq' => 'D.U.K',
-    'faqs' => 'D.U.K',
     'no_categories' => 'jokių kategorijų nėra sukurta',
     'no_faq' => 'Nėra jokių klaisymų.<br><a href="index.php?site=faq">Grįžti</a>',
     'saved_on' => 'išsaugota'

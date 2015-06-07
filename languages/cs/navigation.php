@@ -39,6 +39,7 @@ $language_array = array(
     'contact' => 'Kontaktní formulář',
     'demos' => 'Dema',
     'downloads' => 'Ke stažení',
+    'faq' => 'Často Kladené Otázky',
     'fight_us' => 'Vyzvěte Nás',
     'forums' => 'Fórum',
     'gallery' => 'Galerie',

@@ -31,12 +31,13 @@ $language_array = array(
 
     'game' => 'Gioco',
     'information' => 'Informazioni',
+    'ip'=>'Indirizzo IP',
     'link' => 'Collegamento',
-    'no_server' => 'Server non disponibile',
-    'not_supported' => 'non supportato dal server',
-    'online' => 'Online',
-    'server' => 'Server',
-    'status' => 'Status',
-    'timeout' => 'Tempo superiore'
+    'no_server' => 'nessun server disponibile.',
+    'not_supported' => 'Non supportata dal webserver',
+    'online' => 'online',
+    'server' => 'server',
+    'status' => 'Stato',
+    'timeout' => 'tempo esaurito in attesa'
 );
 

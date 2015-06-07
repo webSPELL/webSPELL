@@ -30,6 +30,8 @@ $language_array = array(
 /* do not edit above this line */
 
     'back' => 'назад',
+    'banner' => 'Банер',
+    'banner_to_big' => 'Снимката е твърде голяма',
     'categories' => 'Категории',
     'category' => 'Категория',
     'delete' => 'изтриване',

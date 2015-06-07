@@ -45,7 +45,7 @@ $language_array = array(
     'html' => 'HTML <b><span class="underline">izključen</span></b>',
     'ignore' => 'Ignoriraj',
     'incoming' => 'Dohodi',
-    'mail_body' => '<b>Pozdrav %nickname%!</b><br><br>Imaš novo sporočilo na webSPELL v4 (%hp_url%).<br>Klikni <a href="http://%hp_url%?site=messenger">tu</a> da bi ju prebral.<br><br>(C) webSPELL.org',
+    'mail_body' => '<b>Hello %nickname%!</b><br><br>You got a new message at '.PAGETITLE.' (%hp_url%).<br>Click <a href="http://%hp_url%?site=messenger">here</a> to read the PM.<br><br>(C) webSPELL.org',
     'mail_subject' => 'Imate novo sporočilo',
     'mark_not_viewed' => 'Označi kot neprebrano',
     'mark_viewed' => 'Označi kot prebrano',

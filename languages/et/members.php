@@ -42,6 +42,7 @@ $language_array = array(
     'members' => 'liikmed',
     'nickname' => 'Hüüdnimi',
     'no_description' => 'pole kirjeldust',
+    'no_entries'=>'no entries available',
     'position' => 'Asukoht',
     'results' => 'Tulemused',
     'show_details' => '&raquo; <a href="index.php?site=members&amp;action=show&amp;squadID=%squadID%"><b>Näita andmeid</b></a>',

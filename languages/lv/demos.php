@@ -75,7 +75,6 @@ $language_array = array(
     'to_rate' => 'Jums jāreģistrējas un jāpieslēdzas, lai novērtētu šo video!',
     'update_demo' => 'Atjaunot video',
     'user_comments' => 'Iespējot lietotāju komentārus',
-    'visitor_comments' => 'Iespējot apmeklētāju komentārus',
-    'vs' => 'pret'
+    'visitor_comments' => 'Iespējot apmeklētāju komentārus'
 );
 

@@ -44,6 +44,7 @@ $language_array = array(
     'icq_msn' => 'crwdns20892:0crwdne20892:0',
     'info' => 'crwdns20893:0crwdne20893:0',
     'joinus_form' => 'crwdns20894:0crwdne20894:0',
+    'mail'=>'crwdns22968:0crwdne22968:0',
     'message_title' => 'crwdns20897:0crwdne20897:0',
     'messenger' => 'crwdns20896:0crwdne20896:0',
     'name' => 'crwdns20898:0crwdne20898:0',

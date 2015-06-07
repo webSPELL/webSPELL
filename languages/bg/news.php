@@ -29,11 +29,13 @@ $language_array = array(
 
 /* do not edit above this line */
 
+    'author' => 'Автор',
     'bbcode' => 'ББкодът е <b><span class="underline">Включен</span></b>',
     'cancel' => 'затвори',
     'comm' => 'коментар',
     'comment' => '<a href="$url">[1] коментар</a>, последен от $lastposter - $lastdate',
     'comments' => '<a href="$url">[$anzcomments] коментари</a>, последен от $lastposter - $lastdate',
+    'date' => 'Дата',
     'delete' => 'изтрий',
     'delete_selected' => 'изтрий избраното',
     'edit' => 'редактирай',
@@ -48,6 +50,7 @@ $language_array = array(
     'links' => 'Връзки',
     'new_post' => 'Нов пост',
     'new_window' => 'нов прозорец',
+    'news' => 'Новини',
     'news_archive' => 'Архив',
     'no' => 'не',
     'no_access' => 'няма достъп',
@@ -61,6 +64,7 @@ $language_array = array(
     'publish_now' => 'публикувай сега',
     'publish_selected' => 'публикувай избраното',
     'really_delete' => 'наистина ли искате да изтриете тази новина?',
+    'rubric' => 'Рубрика',
     'save_news' => 'запази новините',
     'select_all' => 'избери всички',
     'self' => 'самостоятелен прозорец',

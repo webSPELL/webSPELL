@@ -31,6 +31,7 @@ $language_array = array(
 
     'back' => 'tilbage',
     'banner' => 'Banner',
+    'banner_to_big' => 'Billedet er for stort',
     'categories' => 'Kategorier',
     'category' => 'Kategori',
     'delete' => 'slet',

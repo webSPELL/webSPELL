@@ -38,6 +38,7 @@ $language_array = array(
     'logout' => 'خروج',
     'lost_password' => 'ایا رمز عبور را فراموش کردید؟',
     'messenger' => 'مسنجر',
+    'n_a'=>'n/a',
     'overview' => 'مرور کلی',
     'register_now' => 'ثبت نام کنید',
     'registered_users' => 'کاربران سایت',

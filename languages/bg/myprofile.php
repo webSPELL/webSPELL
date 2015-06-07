@@ -31,6 +31,7 @@ $language_array = array(
 
     'about_myself' => 'За мен',
     'activated' => 'активирана',
+    'avatar' => 'Аватар:',
     'back' => 'Назад',
     'bbcode' => '<a href="javascript:void(0);" onclick="window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">ББкод</a> е Включен',
     'can_not_copy' => 'не може да се копира файлът от сървъра',
@@ -43,10 +44,12 @@ $language_array = array(
     'clan-name' => 'Име на клана',
     'clan-tag' => 'Clan-Tag',
     'country' => 'Държава',
+    'cpu'=>'CPU',
     'date_of_birth' => 'Дата на раждане',
     'deactivated' => 'деактивира',
     'delete_max_90_90' => 'изтрий (макс90/90)',
     'delete_max_230_210' => 'изтрий (макс230/210)',
+    'e-mail'=>'E-mail',
     'edit_mail' => 'редактирай E-Mail',
     'edit_password' => 'редактирай парола',
     'equipment-info' => 'Оборудване-Инфо',
@@ -116,6 +119,7 @@ $language_array = array(
     'repeat_new_email' => 'повтори новия E-mail',
     'repeat_new_password' => 'повтори новата парола',
     'repeated_pw_not_valid' => 'повторената парола е невалидна!',
+    'repeated_mail_not_valid'=>'your repeated e-mail is not equal!',
     'sexuality' => 'Пол',
     'signature' => 'Подпис',
     'smilies' => '<a href="javascript:void(0);" onclick="window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Емотиконките</a> са включени',
@@ -133,6 +137,7 @@ $language_array = array(
     'you_have_to_firstname' => 'Трябва да въведете името си!',
     'you_have_to_nickname' => 'Трябва да въведете потребителско име!',
     'you_have_to_username' => 'Трябва да въведете потребителско име!',
-    'you_have_to_valid_email' => 'Tрябва да въведете валиден E-mail!'
+    'you_have_to_valid_email' => 'Tрябва да въведете валиден E-mail!',
+    'wrong_password'=>'Wrong password'
 );
 

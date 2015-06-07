@@ -31,6 +31,7 @@ $language_array = array(
 
     'back' => 'برگشت',
     'banner' => 'بنر',
+    'banner_to_big' => 'عکس بزرگ است',
     'categories' => 'دسته بندی',
     'category' => 'دسته',
     'delete' => 'حذف',

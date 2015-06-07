@@ -44,10 +44,12 @@ $language_array = array(
     'clan-name' => 'Clan-Namn',
     'clan-tag' => 'Clan-Tag',
     'country' => 'Land',
+    'cpu'=>'CPU',
     'date_of_birth' => 'Födelsedag',
     'deactivated' => 'avaktiverad',
     'delete_max_90_90' => 'radera (max90/90)',
     'delete_max_230_210' => 'radera (max230/210)',
+    'e-mail'=>'E-mail',
     'edit_mail' => 'edit E-Mail',
     'edit_password' => 'edit password',
     'equipment-info' => 'Utrustnings-Info',
@@ -117,6 +119,7 @@ Tackar för dina intressen
     'repeat_new_email' => 'repeat new E-Mail',
     'repeat_new_password' => 'Repertera nytt lösenord',
     'repeated_pw_not_valid' => 'Ditt reperterade är inte giltigt!',
+    'repeated_mail_not_valid'=>'your repeated e-mail is not equal!',
     'sexuality' => 'Kön',
     'signature' => 'Signatur',
     'smilies' => '<a href="javascript:void(0);" onclick="window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smilies</a> är PÅ',
@@ -134,6 +137,7 @@ Tackar för dina intressen
     'you_have_to_firstname' => 'Du måste skriva ditt förnamn!',
     'you_have_to_nickname' => 'Du måste skriva ett smeknamn!',
     'you_have_to_username' => 'Du måste skriva ett användarnamn!',
-    'you_have_to_valid_email' => 'Din e-mail är inte giltig!'
+    'you_have_to_valid_email' => 'Din e-mail är inte giltig!',
+    'wrong_password'=>'Wrong password'
 );
 

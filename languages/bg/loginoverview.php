@@ -34,6 +34,7 @@ $language_array = array(
     'announcement' => 'Обявление',
     'back_last_page' => 'Обратно към последна страница',
     'click' => 'клик',
+    'date' => 'Дата',
     'from' => 'Oт',
     'info' => 'Информация',
     'last_login' => 'Последно влизане',

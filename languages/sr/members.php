@@ -42,6 +42,7 @@ $language_array = array(
     'members' => 'Чланови',
     'nickname' => 'Ник',
     'no_description' => 'Нема доступног описа',
+    'no_entries'=>'Нема доступних уноса',
     'position' => 'Позиција',
     'results' => 'Резултати',
     'show_details' => '&raquo; <a href="index.php?site=members&amp;action=show&amp;squadID=%squadID%"><b>Прикажи детаље</b></a>',

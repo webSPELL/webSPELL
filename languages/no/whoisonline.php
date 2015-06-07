@@ -40,6 +40,7 @@ $language_array = array(
     'counter_stats' => 'statestikk',
     'date' => 'Dato',
     'demos' => 'demoer',
+    'faq'=>'FAQ',
     'fightus' => 'utfordre oss',
     'files' => 'nedlastinger',
     'forum' => 'forum',

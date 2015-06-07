@@ -41,7 +41,6 @@ $language_array = array(
     'database_cl' => 'Andmebaas',
     'delete_file' => 'kustuta fail',
     'description' => 'Kirjeldus',
-    'dl' => 'Lae',
     'download_now' => 'Lae %filename% alla',
     'download_registered_only' => 'Allalaadimine ainult registreeritud kasutajatele!',
     'download_via_mirror' => 'lae peegli kaudu',

@@ -45,6 +45,7 @@ $language_array = array(
 	<p><strong>5. Legal validity of this disclaimer</strong><br>
 	This disclaimer is to be regarded as part of the internet publication which you were referred from. If sections or individual terms of this statement are not legal or correct, the content or validity of the other parts remain uninfluenced by this fact.</p>',
     'imprint' => 'отпечатък',
+    'mods' => 'Модератор(и):',
     'responsible_persons' => 'Отговорни лица',
     'webmaster' => 'Уебмастъра:'
 );

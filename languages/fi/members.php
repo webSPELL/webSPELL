@@ -42,6 +42,7 @@ $language_array = array(
     'members' => 'Jäsenet',
     'nickname' => 'Kutsumanimi',
     'no_description' => 'ei tietoa saatavilla',
+    'no_entries'=>'no entries available',
     'position' => 'Sijoitus',
     'results' => 'Saavutukset',
     'show_details' => '&raquo; <a href="index.php?site=members&amp;action=show&amp;squadID=%squadID%"><b>Näytä lisätiedot</b></a>',

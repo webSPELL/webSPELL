@@ -38,6 +38,7 @@ $language_array = array(
     'logout' => 'გამოსვლა',
     'lost_password' => 'დაგავიწყდათ პაროლი?',
     'messenger' => 'მესენჯერი',
+    'n_a'=>'n/a',
     'overview' => 'მიმოხილვა',
     'register_now' => 'დარეგისტრირდი',
     'registered_users' => 'დარეგისტრირებული მომხმარებლები',

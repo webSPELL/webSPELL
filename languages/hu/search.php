@@ -39,6 +39,7 @@ $language_array = array(
     'date_options' => 'Dátum',
     'delete_selected' => 'kijelölt törlése',
     'descending' => 'csökkenő',
+    'faq'=>'FAQ',
     'faq_link' => '<b>FAQ link</b>',
     'forum' => 'Fórum',
     'forum_link' => '<b>topik link</b>',

@@ -31,6 +31,7 @@ $language_array = array(
 
     'back' => 'atgal',
     'banner' => 'Reklama',
+    'banner_to_big' => 'nuotrauka per didelė',
     'categories' => 'Kategorijos',
     'category' => 'Kategorija',
     'delete' => 'ištrinti',

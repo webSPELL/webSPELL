@@ -45,6 +45,7 @@ $language_array = array(
     'new_gallery' => 'новая галерея',
     'no_galleries' => 'Нет галерей.',
     'no_space_left' => 'Нет места: отмена.',
+    'picture' => 'Картинка',
     'please_enter_name' => 'Пожалуйста введите название!',
     'really_delete_gallery' => 'Вы уверены, что хотите удалить данную галерею?',
     'update' => 'oбновить',

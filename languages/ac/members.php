@@ -42,6 +42,7 @@ $language_array = array(
     'members' => 'crwdns21021:0crwdne21021:0',
     'nickname' => 'crwdns21022:0crwdne21022:0',
     'no_description' => 'crwdns21023:0crwdne21023:0',
+    'no_entries'=>'crwdns22970:0crwdne22970:0',
     'position' => 'crwdns21025:0crwdne21025:0',
     'results' => 'crwdns21026:0crwdne21026:0',
     'show_details' => 'crwdns21027:0%squadID%crwdne21027:0',

@@ -32,6 +32,7 @@ $language_array = array(
     'about_myself' => 'За мене',
     'activated' => 'активира',
     'avatar' => 'Aватар:',
+    'back' => 'назад',
     'bbcode' => '<a href="javascript:void(0);" onclick="window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">ББкод</a> е уклучен',
     'can_not_copy' => 'не е можно да копирате документ од серверот',
     'change_mail' => 'промени ја е-пошта',
@@ -43,12 +44,12 @@ $language_array = array(
     'clan-name' => 'Име на кланот',
     'clan-tag' => 'Таг на кланот',
     'country' => 'Земја',
-    'cpu' => 'Процесор',
+    'cpu'=>'Процесор',
     'date_of_birth' => 'Датум на раѓање',
     'deactivated' => 'деактивирана',
     'delete_max_90_90' => 'избриши (макс90/90)',
     'delete_max_230_210' => 'избриши (макс230/210)',
-    'e-mail' => 'Е-пошта',
+    'e-mail'=>'Е-пошта',
     'edit_mail' => 'Промени ја е-поштата',
     'edit_password' => 'Промени ја лозинката',
     'equipment-info' => 'Информации за опремата',
@@ -118,6 +119,7 @@ $language_array = array(
     'repeat_new_email' => 'Повторно нов е-маил',
     'repeat_new_password' => 'Повторно новата лозинка',
     'repeated_pw_not_valid' => 'Вашата поновена лозинка не е исправно напишана!',
+    'repeated_mail_not_valid'=>'Вашата повторена e-пошта не е еднаква!',
     'sexuality' => 'Пол',
     'signature' => 'Потпис',
     'smilies' => '<a href="javascript:void(0);" onclick="window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Насмевките</a> уклучени',
@@ -135,6 +137,7 @@ $language_array = array(
     'you_have_to_firstname' => 'Морате да го внесите вашето име!',
     'you_have_to_nickname' => 'Морате да го внесите вашиот ник-име!',
     'you_have_to_username' => 'Морате да го внесите корисничкото име!',
-    'you_have_to_valid_email' => 'Вашата е-пошта не е важечка!'
+    'you_have_to_valid_email' => 'Вашата е-пошта не е важечка!',
+    'wrong_password'=>'Погрешна лозинка'
 );
 

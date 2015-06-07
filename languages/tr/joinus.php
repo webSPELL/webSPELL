@@ -44,6 +44,7 @@ $language_array = array(
     'icq_msn' => 'ICQ/MSN/vb...',
     'info' => 'Ek bilgiler',
     'joinus_form' => 'Bize katıl formu',
+    'mail'=>'E-Mail',
     'message_title' => 'Bize katıl',
     'messenger' => 'Messenger',
     'name' => 'İsim',

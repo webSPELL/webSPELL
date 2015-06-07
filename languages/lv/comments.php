@@ -47,7 +47,6 @@ $language_array = array(
     'homepage' => 'Mājaslapa',
     'html_off' => 'HTML ir atslēgts',
     'ignore_user' => 'ignorēt lietotāju',
-    'mail' => 'E-pasts',
     'name' => 'Vārds',
     'no_access' => '<br><br>Jums jāpieslēdzas!<br><br>&#8226; <a href="index.php?site=register">reģistrēties tagad!</a><br>&#8226; <a href="index.php?site=login">pieslēgties</a>',
     'no_commentid' => 'Jūsu ID nav noteikts - novirzu',

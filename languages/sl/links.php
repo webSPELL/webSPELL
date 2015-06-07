@@ -31,6 +31,7 @@ $language_array = array(
 
     'back' => 'Nazaj',
     'banner' => 'Zastava',
+    'banner_to_big' => 'Slika je prevelika',
     'categories' => 'Kategorije',
     'category' => 'Kategorija',
     'delete' => 'Izbriši',

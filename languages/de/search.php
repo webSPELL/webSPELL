@@ -39,6 +39,7 @@ $language_array = array(
     'date_options' => 'Datum',
     'delete_selected' => 'Ausgewählte löschen',
     'descending' => 'absteigend',
+    'faq'=>'FAQ',
     'faq_link' => '<b>Link zur FAQ</b>',
     'forum' => 'Forenbeitrag',
     'forum_link' => '<b>Link zum Topic</b>',

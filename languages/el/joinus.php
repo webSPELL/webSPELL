@@ -44,6 +44,7 @@ $language_array = array(
     'icq_msn' => 'ICQ/MSN/κτλ...',
     'info' => 'Επιπλεον πληροφοριες',
     'joinus_form' => 'Φορμα συμμετοχης',
+    'mail'=>'E-Mail',
     'message_title' => 'Ελατε μαζι μας',
     'messenger' => 'Messenger',
     'name' => 'Ονομα',

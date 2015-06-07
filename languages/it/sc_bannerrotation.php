@@ -29,6 +29,6 @@ $language_array = array(
 
 /* do not edit above this line */
 
-    'no_banners' => 'nessuna pubblicità'
+    'no_banners' => 'nessun banner'
 );
 
