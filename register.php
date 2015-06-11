@@ -106,6 +106,7 @@ if (isset($_POST['save'])) {
         }
 
         if (count($error)) {
+            $_language->readModule('formvalidation', true);
             $showerror = generateErrorBoxFromArray($_language->module['errors_there'], $error);
         } else {
             // insert in db

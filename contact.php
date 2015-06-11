@@ -25,9 +25,8 @@
 ##########################################################################
 */
 
-if (isset($site)) {
-    $_language->readModule('contact');
-}
+$_language->readModule('contact');
+$_language->readModule('formvalidation', true);
 
 $title_contact = $GLOBALS["_template"]->replaceTemplate("title_contact", array());
 echo $title_contact;
