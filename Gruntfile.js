@@ -64,6 +64,12 @@ module.exports = function( grunt ) {
             "!tmp/**",
             "!tests/**",
             "!development/**"
+        ],
+        bsFiles = [
+            "_stylesheet.css",
+            "templates/*.html",
+            "js/*.js"
+
         ];
 
     require( "load-grunt-tasks" )( grunt, {
@@ -366,6 +372,26 @@ module.exports = function( grunt ) {
                 "bootlint",
                 "css"
             ]
+        },
+        browserSync: {
+            wamp: {
+                bsFiles: {
+                    src: [
+                        bsFiles
+                    ]
+                },
+                options: {
+                    proxy: "localhost/webSPELL/"
+                }
+            },
+            mamp: {
+                bsFiles: {
+                    src: bsFiles
+                },
+                options: {
+                    proxy: "localhost:8888/webSPELL/"
+                }
+            }
         },
         todo: {
             options: {
