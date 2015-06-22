@@ -1,6 +1,6 @@
 <?php
 $languageBaseFolder = "../../languages/";
-$baseLanguageCode = 'uk';
+$baseLanguageCode = 'en';
 
 $baseLanguageFolder = $languageBaseFolder.$baseLanguageCode;
 
