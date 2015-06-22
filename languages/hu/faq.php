@@ -29,6 +29,7 @@ $language_array = array(
 
 /* do not edit above this line */
 
+    'faq' => 'Gyakran Ismételt Kérdések',
     'admin_button' => 'FAQ Adminisztráció',
     'answer' => 'Válasz',
     'categories' => 'Kategória',
