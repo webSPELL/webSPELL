@@ -47,8 +47,8 @@ if (!isset($_GET[ 'action' ])) {
         $ownversion = explode(".", $version);
 
         if ($latest[ 0 ] > $ownversion[ 0 ]) {
-            echo '<a href="admincenter.php?site=update&amp;action=update"><font color="red">' .
-                $_language->module[ 'new_version' ] . '!</font></a>';
+            echo '<a href="admincenter.php?site=update&amp;action=update"><span style="color: #ff0000;">' .
+                $_language->module[ 'new_version' ] . '!</span></a>';
         } elseif ($latest[ 0 ] == $ownversion[ 0 ] && $latest[ 1 ] > $ownversion[ 1 ]) {
             echo '<a href="admincenter.php?site=update&amp;action=update">' . $_language->module[ 'new_functions' ] .
                 '&nbsp;' . $version[ 0 ] . '!</a>';
