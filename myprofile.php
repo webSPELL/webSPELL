@@ -153,10 +153,14 @@ if (!$userID) {
                             $file = $id . $endung;
                             if ($upload->saveAs($filepath . $file, true)) {
                                 @chmod($filepath . $file, $new_chmod);
-                                safe_query("UPDATE " . PREFIX . "user
+                                safe_query(
+                                    "UPDATE "
+                                    . PREFIX . "user
                                     SET
-                                        avatar='" . $file . "' WHERE
-                                        userID='" . $id . "'");
+                                        avatar='" . $file .
+                                    "' WHERE
+                                        userID='" . $id . "'"
+                                );
                             }
                         } else {
                             $error_array[] = sprintf($_language->module['image_too_big'], 90, 90);
