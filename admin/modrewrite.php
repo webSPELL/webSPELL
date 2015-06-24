@@ -435,7 +435,8 @@ if ($action == "add") {
     echo '<h1>&curren; ' . $_language->module['modrewrite_rules'] . '</h1>';
 
     echo
-        '<a href="admincenter.php?site=modrewrite&amp;action=add" class="input">' . $_language->module['new_rule'] . '</a> ';
+        '<a href="admincenter.php?site=modrewrite&amp;action=add" class="input">' . $_language->module['new_rule'] .
+        '</a> ';
     echo
         '<a href="admincenter.php?site=modrewrite&amp;action=rebuild" class="input">' .
         $_language->module['rebuild'] . '</a><br><br>';
