@@ -29,6 +29,7 @@ $language_array = array(
 
 /* do not edit above this line */
 
+    'faq' => 'Korduma kippuvad küsimused',
     'admin_button' => 'KKK Administratsioon',
     'answer' => 'Vastus',
     'categories' => 'Kategooriat',

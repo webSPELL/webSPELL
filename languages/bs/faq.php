@@ -29,6 +29,7 @@ $language_array = array(
 
 /* do not edit above this line */
 
+    'faq' => 'Često postavljana pitanja',
     'admin_button' => 'Administracija čestih pitanja',
     'answer' => 'Odgovor',
     'categories' => 'Kategorije',
