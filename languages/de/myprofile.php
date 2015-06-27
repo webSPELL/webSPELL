@@ -49,7 +49,6 @@ $language_array = array(
     'deactivated' => 'deaktiviert',
     'delete_max_90_90' => 'löschen (max 90/90)',
     'delete_max_230_210' => 'löschen (max 230/210)',
-    'e-mail' => 'E-Mail',
     'edit_mail' => 'E-Mail editieren',
     'edit_password' => 'Passwort editieren',
     'equipment-info' => 'Ausrüstungsinformationen',
