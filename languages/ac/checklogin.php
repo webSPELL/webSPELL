@@ -29,13 +29,13 @@ $language_array = array(
 
 /* do not edit above this line */
 
-    'invalid_password' => 'crwdns14465:0crwdne14465:0',
-    'ip_banned' => 'crwdns14466:0%reason%crwdne14466:0',
-    'login_successful' => 'crwdns14467:0crwdne14467:0',
-    'no_user' => 'crwdns14468:0%username%crwdne14468:0',
-    'not_activated' => 'crwdns14469:0crwdne14469:0',
-    'return' => 'crwdns14471:0crwdne14471:0',
-    'return_reenter' => 'crwdns14472:0crwdne14472:0',
-    'session_error' => 'crwdns14470:0crwdne14470:0'
+    'invalid_password' => 'crwdns20320:0crwdne20320:0',
+    'ip_banned' => 'crwdns20321:0%reason%crwdne20321:0',
+    'login_successful' => 'crwdns20322:0crwdne20322:0',
+    'no_user' => 'crwdns20323:0%username%crwdne20323:0',
+    'not_activated' => 'crwdns20324:0crwdne20324:0',
+    'return' => 'crwdns20326:0crwdne20326:0',
+    'return_reenter' => 'crwdns20327:0crwdne20327:0',
+    'session_error' => 'crwdns20325:0crwdne20325:0'
 );
 

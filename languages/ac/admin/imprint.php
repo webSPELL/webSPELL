@@ -29,12 +29,12 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'crwdns16309:0crwdne16309:0',
-  'automatic'=>'crwdns16310:0crwdne16310:0',
-  'imprint'=>'crwdns16311:0crwdne16311:0',
-  'manual'=>'crwdns16312:0crwdne16312:0',
-  'transaction_invalid'=>'crwdns16313:0crwdne16313:0',
-  'update'=>'crwdns16314:0crwdne16314:0',
-  'you_can_use_html'=>'crwdns16315:0crwdne16315:0'
+  'access_denied'=>'crwdns22164:0crwdne22164:0',
+  'automatic'=>'crwdns22165:0crwdne22165:0',
+  'imprint'=>'crwdns22166:0crwdne22166:0',
+  'manual'=>'crwdns22167:0crwdne22167:0',
+  'transaction_invalid'=>'crwdns22168:0crwdne22168:0',
+  'update'=>'crwdns22169:0crwdne22169:0',
+  'you_can_use_html'=>'crwdns22170:0crwdne22170:0'
 );
 

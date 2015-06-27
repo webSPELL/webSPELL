@@ -80,7 +80,6 @@ function system_error($text, $system = 1, $strace = 0)
 <meta charset="utf-8">
 <meta name="description" content="Clanpage using webSPELL 4 CMS">
 <meta name="author" content="webspell.org">
-<meta name="keywords" content="webspell, webspell4, clan, cms">
 <meta name="generator" content="webSPELL">
 
 <!-- Head & Title include -->

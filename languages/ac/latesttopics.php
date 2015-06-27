@@ -29,9 +29,9 @@ $language_array = array(
 
 /* do not edit above this line */
 
-    'board' => 'crwdns15053:0crwdne15053:0',
-    'last_post' => 'crwdns15054:0crwdne15054:0',
-    'replies' => 'crwdns15056:0crwdne15056:0',
-    'reply' => 'crwdns15055:0crwdne15055:0'
+    'board' => 'crwdns20908:0crwdne20908:0',
+    'last_post' => 'crwdns20909:0crwdne20909:0',
+    'replies' => 'crwdns20911:0crwdne20911:0',
+    'reply' => 'crwdns20910:0crwdne20910:0'
 );
 

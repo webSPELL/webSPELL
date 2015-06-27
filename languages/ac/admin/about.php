@@ -29,10 +29,10 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'about'=>'crwdns15859:0crwdne15859:0',
-  'access_denied'=>'crwdns15860:0crwdne15860:0',
-  'transaction_invalid'=>'crwdns15861:0crwdne15861:0',
-  'update'=>'crwdns15862:0crwdne15862:0',
-  'you_can_use_html'=>'crwdns15863:0crwdne15863:0'
+  'about'=>'crwdns21714:0crwdne21714:0',
+  'access_denied'=>'crwdns21715:0crwdne21715:0',
+  'transaction_invalid'=>'crwdns21716:0crwdne21716:0',
+  'update'=>'crwdns21717:0crwdne21717:0',
+  'you_can_use_html'=>'crwdns21718:0crwdne21718:0'
 );
 

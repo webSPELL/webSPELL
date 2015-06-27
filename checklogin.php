@@ -71,7 +71,7 @@ if (mysqli_num_rows($get) == 0) {
 
                 // check password
                 $login = 0;
-                if ($ws_pwd == $ds[ 'password' ]) {
+                if (hash_equals($ws_pwd, $ds[ 'password' ])) {
                     //session
                     $_SESSION[ 'referer' ] = $_SERVER[ 'HTTP_REFERER' ];
                     //remove sessiontest variable
@@ -87,7 +87,7 @@ if (mysqli_num_rows($get) == 0) {
                     safe_query("DELETE FROM " . PREFIX . "failed_login_attempts WHERE ip = '" . $GLOBALS[ 'ip' ] . "'");
                     $return->state = "success";
                     $return->message = $_language->module[ 'login_successful' ];
-                } elseif (!($ws_pwd == $ds[ 'password' ])) {
+                } else {
                     if ($sleep) {
                         sleep(3);
                     }
@@ -190,7 +190,6 @@ if ($ajax === true) {
             <meta charset="utf-8">
             <meta name="description" content="Clanpage using webSPELL 4 CMS">
             <meta name="author" content="webspell.org">
-            <meta name="keywords" content="webspell, webspell4, clan, cms">
             <meta name="copyright" content="Copyright 2005-2015 by webspell.org">
             <meta name="generator" content="webSPELL">
             <title><?php echo PAGETITLE; ?></title>

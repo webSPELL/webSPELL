@@ -29,6 +29,6 @@ $language_array = array(
 
 /* do not edit above this line */
 
-    'no_banners' => 'crwdns15624:0crwdne15624:0'
+    'no_banners' => 'crwdns21479:0crwdne21479:0'
 );
 

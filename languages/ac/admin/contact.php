@@ -29,20 +29,20 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'crwdns16070:0crwdne16070:0',
-  'actions'=>'crwdns16071:0crwdne16071:0',
-  'add_contact'=>'crwdns16072:0crwdne16072:0',
-  'contact'=>'crwdns16073:0crwdne16073:0',
-  'contact_name'=>'crwdns16074:0crwdne16074:0',
-  'delete'=>'crwdns16075:0crwdne16075:0',
-  'edit'=>'crwdns16076:0crwdne16076:0',
-  'edit_contact'=>'crwdns16077:0crwdne16077:0',
-  'email'=>'crwdns16078:0crwdne16078:0',
-  'information_incomplete'=>'crwdns16079:0crwdne16079:0',
-  'new_contact'=>'crwdns16080:0crwdne16080:0',
-  'really_delete'=>'crwdns16081:0crwdne16081:0',
-  'sort'=>'crwdns16082:0crwdne16082:0',
-  'to_sort'=>'crwdns16083:0crwdne16083:0',
-  'transaction_invalid'=>'crwdns16084:0crwdne16084:0'
+  'access_denied'=>'crwdns21925:0crwdne21925:0',
+  'actions'=>'crwdns21926:0crwdne21926:0',
+  'add_contact'=>'crwdns21927:0crwdne21927:0',
+  'contact'=>'crwdns21928:0crwdne21928:0',
+  'contact_name'=>'crwdns21929:0crwdne21929:0',
+  'delete'=>'crwdns21930:0crwdne21930:0',
+  'edit'=>'crwdns21931:0crwdne21931:0',
+  'edit_contact'=>'crwdns21932:0crwdne21932:0',
+  'email'=>'crwdns21933:0crwdne21933:0',
+  'information_incomplete'=>'crwdns21934:0crwdne21934:0',
+  'new_contact'=>'crwdns21935:0crwdne21935:0',
+  'really_delete'=>'crwdns21936:0crwdne21936:0',
+  'sort'=>'crwdns21937:0crwdne21937:0',
+  'to_sort'=>'crwdns21938:0crwdne21938:0',
+  'transaction_invalid'=>'crwdns21939:0crwdne21939:0'
 );
 

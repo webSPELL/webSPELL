@@ -35,7 +35,8 @@ class Email
     {
         $GLOBALS['mail_debug'] = '';
         $get = safe_query("SELECT * FROM " . PREFIX . "email");
-        while ($ds = mysqli_fetch_assoc($get)) {
+        if (mysqli_num_rows($get)) {
+            $ds = mysqli_fetch_assoc($get);
             $host = $ds['host'];
             $user = $ds['user'];
             $password = $ds['password'];
@@ -45,15 +46,13 @@ class Email
             $html = $ds['html'];
             $smtp = $ds['smtp'];
             $secure = $ds['secure'];
+        } else {
+            $smtp = 0;
+            $auth = 0;
         }
 
         if ($smtp == 0) {
             $debug = 0;
-        }
-
-        $get = safe_query("SELECT title FROM " . PREFIX . "styles");
-        while ($ds = mysqli_fetch_assoc($get)) {
-            $hptitle = $ds['title'];
         }
 
         if ($smtp == 2) {
@@ -67,7 +66,7 @@ class Email
             $GLOBALS['mail_debug'] .= $str . '<br>';
         };
 
-        if ($pop) {
+        if (isset($pop)) {
             if ($smtp == 1) {
                 $mail->isSMTP();
                 $mail->Host = $host;
@@ -99,7 +98,7 @@ class Email
                 $mail->isMail();
             }
 
-            $fromtitle = $hptitle . ' - (' . $module . ')';
+            $fromtitle = $GLOBALS['hp_title'] . ' - (' . $module . ')';
             $mail->Subject = $subject;
             $mail->setFrom($from, $fromtitle);
             $mail->addAddress($to);

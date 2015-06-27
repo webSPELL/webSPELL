@@ -29,24 +29,24 @@ $language_array = array(
 
 /* do not edit above this line */
 
-    'award' => 'crwdns14241:0crwdne14241:0',
-    'awards' => 'crwdns14242:0crwdne14242:0',
-    'date' => 'crwdns14243:0crwdne14243:0',
-    'delete' => 'crwdns14244:0crwdne14244:0',
-    'edit' => 'crwdns14245:0crwdne14245:0',
-    'edit_award' => 'crwdns14246:0crwdne14246:0',
-    'enter_text' => 'crwdns14248:0crwdne14248:0',
-    'enter_title' => 'crwdns14247:0crwdne14247:0',
-    'event' => 'crwdns14249:0crwdne14249:0',
-    'homepage' => 'crwdns14250:0crwdne14250:0',
-    'info' => 'crwdns14251:0crwdne14251:0',
-    'new_award' => 'crwdns14252:0crwdne14252:0',
-    'no_access' => 'crwdns14253:0crwdne14253:0',
-    'no_entries' => 'crwdns14254:0crwdne14254:0',
-    'ranking' => 'crwdns14255:0crwdne14255:0',
-    'save_award' => 'crwdns14256:0crwdne14256:0',
-    'sort' => 'crwdns14257:0crwdne14257:0',
-    'squad' => 'crwdns14258:0crwdne14258:0',
-    'update_award' => 'crwdns14259:0crwdne14259:0'
+    'award' => 'crwdns20096:0crwdne20096:0',
+    'awards' => 'crwdns20097:0crwdne20097:0',
+    'date' => 'crwdns20098:0crwdne20098:0',
+    'delete' => 'crwdns20099:0crwdne20099:0',
+    'edit' => 'crwdns20100:0crwdne20100:0',
+    'edit_award' => 'crwdns20101:0crwdne20101:0',
+    'enter_text' => 'crwdns20103:0crwdne20103:0',
+    'enter_title' => 'crwdns20102:0crwdne20102:0',
+    'event' => 'crwdns20104:0crwdne20104:0',
+    'homepage' => 'crwdns20105:0crwdne20105:0',
+    'info' => 'crwdns20106:0crwdne20106:0',
+    'new_award' => 'crwdns20107:0crwdne20107:0',
+    'no_access' => 'crwdns20108:0crwdne20108:0',
+    'no_entries' => 'crwdns20109:0crwdne20109:0',
+    'ranking' => 'crwdns20110:0crwdne20110:0',
+    'save_award' => 'crwdns20111:0crwdne20111:0',
+    'sort' => 'crwdns20112:0crwdne20112:0',
+    'squad' => 'crwdns20113:0crwdne20113:0',
+    'update_award' => 'crwdns20114:0crwdne20114:0'
 );
 

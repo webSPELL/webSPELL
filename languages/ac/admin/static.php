@@ -29,24 +29,24 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'access_denied'=>'crwdns16900:0crwdne16900:0',
-  'accesslevel'=>'crwdns16901:0crwdne16901:0',
-  'actions'=>'crwdns16902:0crwdne16902:0',
-  'add_static_page'=>'crwdns16903:0crwdne16903:0',
-  'clanmember_only'=>'crwdns16904:0crwdne16904:0',
-  'content'=>'crwdns16905:0crwdne16905:0',
-  'delete'=>'crwdns16906:0crwdne16906:0',
-  'edit'=>'crwdns16907:0crwdne16907:0',
-  'edit_static_page'=>'crwdns16908:0crwdne16908:0',
-  'title'=>'crwdns16909:0crwdne16909:0',
-  'id'=>'crwdns16910:0crwdne16910:0',
-  'new_static_page'=>'crwdns16911:0crwdne16911:0',
-  'public'=>'crwdns16912:0crwdne16912:0',
-  'really_delete'=>'crwdns16913:0crwdne16913:0',
-  'registered_only'=>'crwdns16914:0crwdne16914:0',
-  'static_pages'=>'crwdns16915:0crwdne16915:0',
-  'transaction_invalid'=>'crwdns16916:0crwdne16916:0',
-  'you_can_use_html'=>'crwdns16917:0crwdne16917:0',
-  'tags'=>'crwdns16918:0crwdne16918:0'
+  'access_denied'=>'crwdns22755:0crwdne22755:0',
+  'accesslevel'=>'crwdns22756:0crwdne22756:0',
+  'actions'=>'crwdns22757:0crwdne22757:0',
+  'add_static_page'=>'crwdns22758:0crwdne22758:0',
+  'clanmember_only'=>'crwdns22759:0crwdne22759:0',
+  'content'=>'crwdns22760:0crwdne22760:0',
+  'delete'=>'crwdns22761:0crwdne22761:0',
+  'edit'=>'crwdns22762:0crwdne22762:0',
+  'edit_static_page'=>'crwdns22763:0crwdne22763:0',
+  'title'=>'crwdns22764:0crwdne22764:0',
+  'id'=>'crwdns22765:0crwdne22765:0',
+  'new_static_page'=>'crwdns22766:0crwdne22766:0',
+  'public'=>'crwdns22767:0crwdne22767:0',
+  'really_delete'=>'crwdns22768:0crwdne22768:0',
+  'registered_only'=>'crwdns22769:0crwdne22769:0',
+  'static_pages'=>'crwdns22770:0crwdne22770:0',
+  'transaction_invalid'=>'crwdns22771:0crwdne22771:0',
+  'you_can_use_html'=>'crwdns22772:0crwdne22772:0',
+  'tags'=>'crwdns22773:0crwdne22773:0'
 );
 
