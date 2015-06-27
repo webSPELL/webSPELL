@@ -44,12 +44,12 @@ $language_array = array(
     'clan-name' => 'Clanname',
     'clan-tag' => 'Clantag',
     'country' => 'Land',
-    'cpu' => 'Prozessor',
+    'cpu'=>'Prozessor',
     'date_of_birth' => 'Geburtsdatum',
     'deactivated' => 'deaktiviert',
     'delete_max_90_90' => 'löschen (max 90/90)',
     'delete_max_230_210' => 'löschen (max 230/210)',
-    'e-mail' => 'E-Mail',
+    'e-mail'=>'E-Mail',
     'edit_mail' => 'E-Mail editieren',
     'edit_password' => 'Passwort editieren',
     'equipment-info' => 'Ausrüstungsinformationen',
@@ -115,6 +115,7 @@ $language_array = array(
     'repeat_new_email' => 'E-Mail Wiederholung',
     'repeat_new_password' => 'neues Passwort wiederholen',
     'repeated_pw_not_valid' => 'Deine Passwortwiederholung stimmt nicht!',
+    'repeated_mail_not_valid'=>'Ihre wiederholte E-Mail ist nicht gleich!',
     'sexuality' => 'Geschlecht',
     'signature' => 'Signatur',
     'smilies' => '<a href="javascript:void(0);" onclick="window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smilies</a> sind AN',
@@ -132,6 +133,7 @@ $language_array = array(
     'you_have_to_firstname' => 'Du musst deinen Vornamen angeben!',
     'you_have_to_nickname' => 'Du musst einen Nickname angeben!',
     'you_have_to_username' => 'Du musst einen Benutzernamen angeben!',
-    'you_have_to_valid_email' => 'Die E-Mail Adresse ist nicht korrekt!'
+    'you_have_to_valid_email' => 'Die E-Mail Adresse ist nicht korrekt!',
+    'wrong_password'=>'Falsches Passwort'
 );
 

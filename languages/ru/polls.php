@@ -45,6 +45,7 @@ $language_array = array(
     'no_access' => 'нет доступа!',
     'no_active_poll' => 'Активного голосования нет',
     'no_entries' => 'нет данных!',
+    'on' => 'в',
     'option' => 'Опции',
     'poll_ended' => 'Голосование уже закончилось',
     'polls' => 'Голосования',

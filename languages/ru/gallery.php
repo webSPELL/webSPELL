@@ -29,9 +29,11 @@ $language_array = array(
 
 /* do not edit above this line */
 
+    'back' => 'Назад',
     'category' => 'Категория',
     'comment' => 'Комментировать',
     'comments' => 'Комментарии',
+    'date' => 'Дата',
     'delete' => 'Удалить',
     'edit' => 'Редактировать',
     'edit_picture' => 'Редактировать картинку',
@@ -49,6 +51,7 @@ $language_array = array(
     'page_s' => 'Страница',
     'perfect' => 'Превосходно',
     'pg_1_1' => 'Страница 1 из 1',
+    'picture' => 'Картинка',
     'pictures' => 'Картинки',
     'poor' => 'Бедный',
     'random_picture' => 'Случайная картика',

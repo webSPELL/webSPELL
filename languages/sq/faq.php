@@ -32,8 +32,6 @@ $language_array = array(
     'admin_button' => 'Administrimi i pyetjeve të shpeshta',
     'answer' => 'Përgjigje',
     'categories' => 'Kategoritë',
-    'faq' => 'Pyetje të shpeshta',
-    'faqs' => 'Pyetje të shpeshta',
     'no_categories' => 'nuk janë formuar kategori akoma',
     'no_faq' => 'Nuk ka pyetje te vlefshme.<br><a href="index.php?site=faq">Prapa</a>',
     'saved_on' => 'shpëtuar në'

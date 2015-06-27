@@ -29,6 +29,7 @@ $language_array = array(
 
 /* do not edit above this line */
 
+    'author' => 'Автор',
     'bbcode' => 'ББкод е<b><span class="underline">уклучен</span></b>',
     'cancel' => 'Откажи',
     'comm' => 'kom',
@@ -63,6 +64,7 @@ $language_array = array(
     'publish_now' => 'Објеви новости',
     'publish_selected' => 'Објави го означеното',
     'really_delete' => 'навистина избриши ги овие новости?',
+    'rubric' => 'Рубрика',
     'save_news' => 'Зачувај го новостите',
     'select_all' => 'Означи се',
     'self' => 'само прозорец',

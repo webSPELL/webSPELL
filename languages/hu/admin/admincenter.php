@@ -39,6 +39,7 @@ $language_array = Array(
   'content'=>'Tartalom',
   'countries'=>'Országok',
   'database'=>'Adatbázis',
+  'email'=>'E-mail',
   'faq'=>'GYIK',
   'faq_categories'=>'GYIK Kategóriák',
   'file_categories'=>'Fájl Kategóriák',

@@ -35,6 +35,7 @@ $language_array = array(
     'mainsponsor' => 'Главный спонсор',
     'mainsponsors' => 'Главные спонсоры',
     'no_sponsors' => 'Нет спонсоров',
+    'sponsor' => 'Спонсор',
     'sponsors' => 'Спонсоры'
 );
 

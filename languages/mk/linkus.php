@@ -30,6 +30,7 @@ $language_array = array(
 /* do not edit above this line */
 
     'back' => 'назад',
+    'banner' => 'Банер',
     'banner_to_big' => 'Сликата е преголема',
     'delete' => 'Избриши',
     'edit' => 'Промени',

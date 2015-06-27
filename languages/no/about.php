@@ -33,3 +33,4 @@ $language_array = array(
     'no_about' => 'Det er for tiden ingen beskrivelse tilgjengelig.'
 );
 
+

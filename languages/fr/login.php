@@ -38,6 +38,7 @@ $language_array = array(
     'logout' => 'Se déconnecter',
     'lost_password' => 'Mot de passe perdu ?',
     'messenger' => 'Messagerie',
+    'n_a'=>'n/a',
     'overview' => 'Mon compte',
     'register_now' => 'S\'enregistrer',
     'registered_users' => 'Membres enregistrés',

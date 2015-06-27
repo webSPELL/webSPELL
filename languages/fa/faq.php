@@ -32,8 +32,6 @@ $language_array = array(
     'admin_button' => 'مديريت',
     'answer' => 'جواب',
     'categories' => 'دسته بندی',
-    'faq' => 'وابسته',
-    'faqs' => 'وابستگی به',
     'no_categories' => 'هیچ دسته بندی تا کنون ساخته نشده است',
     'no_faq' => '.هیچ سوالی موجود نیست<br><a href="index.php?site=faq">برگشت</a>',
     'saved_on' => 'ذخیره کردن'

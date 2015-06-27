@@ -40,6 +40,7 @@ $language_array = array(
     'counter_stats' => 'Sayaç İstatistikleri',
     'date' => 'Tarih',
     'demos' => 'Demolar',
+    'faq'=>'FAQ',
     'fightus' => 'Bizimle Savaş',
     'files' => 'İndirilenler',
     'forum' => 'Forumlar',

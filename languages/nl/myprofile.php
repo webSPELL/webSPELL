@@ -44,10 +44,12 @@ $language_array = array(
     'clan-name' => 'Clan-Naam',
     'clan-tag' => 'Clan-Tag',
     'country' => 'Land',
+    'cpu'=>'CPU',
     'date_of_birth' => 'Geboortedatum',
     'deactivated' => 'gedeactiveerd',
     'delete_max_90_90' => 'verwijder (max90/90)',
     'delete_max_230_210' => 'verwijder (max230/210)',
+    'e-mail'=>'E-mail',
     'edit_mail' => 'bewerk E-Mail',
     'edit_password' => 'bewerk wachtwoord',
     'equipment-info' => 'Uitrusting-Info',
@@ -117,6 +119,7 @@ Bedankt voor je interesse
     'repeat_new_email' => 'herhaal nieuwe E-Mail',
     'repeat_new_password' => 'herhaal nieuw Wachtwoord',
     'repeated_pw_not_valid' => 'Je herhaalde Wachtwoord is niet geldig!',
+    'repeated_mail_not_valid'=>'uw herhaalde e-mail is niet hetzelfde!',
     'sexuality' => 'Geslacht',
     'signature' => 'Handtekening',
     'smilies' => '<a href="javascript:void(0);" onclick="window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smilies</a> zijn AAN',
@@ -134,6 +137,7 @@ Bedankt voor je interesse
     'you_have_to_firstname' => 'Je moet je voornaam invullen!',
     'you_have_to_nickname' => 'Je moet een bijnaam invullen!',
     'you_have_to_username' => 'Je moet een gebruikersnaam invullen!',
-    'you_have_to_valid_email' => 'Je e-mail is niet geldig!'
+    'you_have_to_valid_email' => 'Je e-mail is niet geldig!',
+    'wrong_password'=>'Verkeerde wachtwoord'
 );
 

@@ -33,3 +33,4 @@ $language_array = array(
     'no_about' => 'No hay ninguna descripcion disponible actualmente.'
 );
 
+

@@ -31,6 +31,7 @@ $language_array = array(
 
     'award' => 'Награда',
     'awards' => 'Награды',
+    'date' => 'Дата',
     'delete' => 'Удалить',
     'edit' => 'редактировать',
     'edit_award' => 'Редактировать награду',
@@ -42,6 +43,7 @@ $language_array = array(
     'new_award' => 'Новая награда',
     'no_access' => 'Нет доступа!',
     'no_entries' => 'Наград нет',
+    'ranking' => 'Ранг',
     'save_award' => 'Сохранить награду',
     'sort' => 'Сортировать',
     'squad' => 'Отряд',

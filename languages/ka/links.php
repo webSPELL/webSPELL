@@ -31,6 +31,7 @@ $language_array = array(
 
     'back' => 'უკან',
     'banner' => 'ბანერი',
+    'banner_to_big' => 'ფოტო არის ძალიან დიდი',
     'categories' => 'კატეგორიები',
     'category' => 'კატეგორია',
     'delete' => 'წაშლა',

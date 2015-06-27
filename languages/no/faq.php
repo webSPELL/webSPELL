@@ -32,7 +32,6 @@ $language_array = array(
     'admin_button' => 'FAQ Administrator',
     'answer' => 'Answer',
     'categories' => 'Kategorier',
-    'faqs' => 'FAQer',
     'no_categories' => 'ingen kategorier lagret',
     'no_faq' => 'Ingen spørsmål tilgjengelige <br><a href="index.php?site=faq">Tilbake</a>',
     'saved_on' => 'saved on'

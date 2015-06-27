@@ -30,7 +30,7 @@ $language_array = array(
 /* do not edit above this line */
 
     'invalid_request' => 'Invito non valido',
-    'no_result' => 'Nessun resultato',
+    'no_result' => 'Nessun risultato di ricerca',
     'to_much_results' => 'Troppi risultati, si prega di inserire più caratteri.'
 );
 

@@ -32,8 +32,6 @@ $language_array = array(
     'admin_button' => 'Администрация на често задавани въпроси',
     'answer' => 'Oтговор',
     'categories' => 'Категории',
-    'faq' => 'Често задавани въпроси',
-    'faqs' => 'Bъпроси',
     'no_categories' => 'няма създадени категории',
     'no_faq' => 'Няма налични въпроси.<br><a href="index.php?site=faq">Oбратно</a>',
     'saved_on' => 'създаден на'

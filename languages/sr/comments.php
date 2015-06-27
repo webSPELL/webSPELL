@@ -47,8 +47,6 @@ $language_array = array(
     'homepage' => 'Поцетна страница',
     'html_off' => 'ХТМЛ искљуцен',
     'ignore_user' => 'игноре усер',
-    'ip' => 'ИП',
-    'mail' => 'Е-Mаил',
     'name' => 'Име',
     'no_access' => '<br><br>Морате се пријавити на страници!<br><br>&#8226; <a href="index.php?site=register">Регистрирај се!</a><br>&#8226; <a href="index.php?site=login">Пријави се</a>',
     'no_commentid' => 'No commentID specified - redirecting',

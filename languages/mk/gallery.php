@@ -29,6 +29,7 @@ $language_array = array(
 
 /* do not edit above this line */
 
+    'back' => 'Назад',
     'category' => 'Категорија',
     'comment' => 'Коментар',
     'comments' => 'Коментари',

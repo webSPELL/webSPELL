@@ -44,10 +44,12 @@ $language_array = array(
     'clan-name' => 'Clan-Name',
     'clan-tag' => 'Clan-Tag',
     'country' => 'Country',
+    'cpu'=>'CPU',
     'date_of_birth' => 'Date of Birth',
     'deactivated' => 'deactivated',
     'delete_max_90_90' => 'delete (max90/90)',
     'delete_max_230_210' => 'delete (max230/210)',
+    'e-mail'=>'E-mail',
     'edit_mail' => 'edit E-Mail',
     'edit_password' => 'edit password',
     'equipment-info' => 'Equipment-Info',
@@ -113,6 +115,7 @@ $language_array = array(
     'repeat_new_email' => 'repeat new E-Mail',
     'repeat_new_password' => 'repeat new Password',
     'repeated_pw_not_valid' => 'your repeated password is not valid!',
+    'repeated_mail_not_valid'=>'your repeated e-mail is not equal!',
     'sexuality' => 'Gender',
     'signature' => 'Signature',
     'smilies' => '<a href="javascript:void(0);" onclick="window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smilies</a> are ON',
@@ -130,6 +133,7 @@ $language_array = array(
     'you_have_to_firstname' => 'You have to enter your First-Name!',
     'you_have_to_nickname' => 'You have to enter a nickname!',
     'you_have_to_username' => 'You have to enter a username!',
-    'you_have_to_valid_email' => 'Your e-mail is not valid!'
+    'you_have_to_valid_email' => 'Your e-mail is not valid!',
+    'wrong_password'=>'Wrong password'
 );
 

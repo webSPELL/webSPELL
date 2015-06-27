@@ -31,6 +31,7 @@ $language_array = array(
 
     'game' => 'თამაში',
     'information' => 'ინფორმაცია',
+    'ip'=>'IP',
     'link' => 'ბმული',
     'no_server' => 'სერვერი არ არის მისაწვდომი.',
     'not_supported' => 'არ არის ნებადართული ვებმასტერის მიერ',

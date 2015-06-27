@@ -44,11 +44,12 @@ $language_array = array(
     'clan-name' => 'Klano Vardas',
     'clan-tag' => 'Klano Užrašas',
     'country' => 'Šalis',
+    'cpu'=>'CPU',
     'date_of_birth' => 'Gimimo metai',
     'deactivated' => 'išjungta',
     'delete_max_90_90' => 'ištrinti (maks90/90)',
     'delete_max_230_210' => 'ištrinti (maks230/210)',
-    'e-mail' => 'E-Paštas',
+    'e-mail'=>'E-mail',
     'edit_mail' => 'redeguoti E-Paštą',
     'edit_password' => 'redeguoti slaptažodį',
     'equipment-info' => 'Įrangos Info',
@@ -118,6 +119,7 @@ Ačiū jums
     'repeat_new_email' => 'pakartoti naują E-paštą',
     'repeat_new_password' => 'pakartoti naują Slaptažodį',
     'repeated_pw_not_valid' => 'jūsų pakartotas slaptažodis blogas!',
+    'repeated_mail_not_valid'=>'your repeated e-mail is not equal!',
     'sexuality' => 'Lytis',
     'signature' => 'Parašas',
     'smilies' => '<a href="javascript:void(0);" onclick="window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Šypsenėles</a> yra ĮJUNGTOS',
@@ -135,6 +137,7 @@ Ačiū jums
     'you_have_to_firstname' => 'Jūs turite įrašyti savo pirmą vardą!',
     'you_have_to_nickname' => 'Jūs turite įrašyti slapyvardį!',
     'you_have_to_username' => 'Jūs turite įrašyti vartotojo vardą!',
-    'you_have_to_valid_email' => 'Jūsų E-Pašto adresas blogas!'
+    'you_have_to_valid_email' => 'Jūsų E-Pašto adresas blogas!',
+    'wrong_password'=>'Wrong password'
 );
 

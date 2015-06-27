@@ -40,6 +40,7 @@ $language_array = array(
     'counter_stats' => 'امار مشاهدات',
     'date' => 'تاریخ',
     'demos' => 'دمو ها',
+    'faq'=>'FAQ',
     'fightus' => 'با ما مسابقه دهید',
     'files' => 'دانلود ها',
     'forum' => 'فروم',

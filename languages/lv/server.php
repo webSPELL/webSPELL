@@ -31,6 +31,7 @@ $language_array = array(
 
     'game' => 'Spēle',
     'information' => 'Informācija',
+    'ip'=>'IP',
     'link' => 'Saite',
     'no_server' => 'serveri nav pieejami.',
     'not_supported' => 'Neatbalsta tīmekļa serveris',

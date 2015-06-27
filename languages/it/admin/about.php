@@ -31,8 +31,8 @@ $language_array = Array(
 
   'about'=>'Chi siamo',
   'access_denied'=>'Accesso negato',
-  'transaction_invalid'=>'ID transazione non valido',
-  'update'=>'aggiornamento',
+  'transaction_invalid'=>'ID della transazione non valido',
+  'update'=>'aggiorna',
   'you_can_use_html'=>'È possibile di utilizzare HTML'
 );
 

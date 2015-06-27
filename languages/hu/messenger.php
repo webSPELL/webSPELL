@@ -45,7 +45,7 @@ $language_array = array(
     'html' => 'HTML <b><span class="underline">Kikapcsolva</span></b>',
     'ignore' => 'Felhasználó elutasítása',
     'incoming' => 'Bejövő',
-    'mail_body' => '<b>Hello %nickname%!</b><br><br>Új privát üzeneted érkezett a '.PAGETITLE.' weboldalon (%hp_url%).<br>Klikkelj <a href="http://%hp_url%?site=messenger">ide</a> a privi elolvasásához.<br><br>(C) webSPELL.org',
+    'mail_body' => '<b>Hello %nickname%!</b><br><br>You got a new message at '.PAGETITLE.' (%hp_url%).<br>Click <a href="http://%hp_url%?site=messenger">here</a> to read the PM.<br><br>(C) webSPELL.org',
     'mail_subject' => 'Új privi',
     'mark_not_viewed' => 'Olvasatlannak jelöl',
     'mark_viewed' => 'Olvasottnak jelöl',

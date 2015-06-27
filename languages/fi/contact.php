@@ -37,6 +37,7 @@ $language_array = array(
     'enter_name' => 'Kirjoita nimi.',
     'enter_subject' => 'Kirjoita aihe.',
     'errors_there' => 'Tapahtui virhe',
+    'mail'=>'E-Mail',
     'message' => 'Viesti',
     'name' => 'Nimi',
     'receiver' => 'Vastaanottaja',

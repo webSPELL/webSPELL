@@ -31,6 +31,7 @@ $language_array = array(
 
     'back' => 'zréck',
     'banner' => 'Banner',
+    'banner_to_big' => 'Bild ass ze grouss',
     'categories' => 'Kategorien',
     'category' => 'Kategorie',
     'delete' => 'läschen',

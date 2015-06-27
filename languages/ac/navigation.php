@@ -39,6 +39,7 @@ $language_array = array(
     'contact' => 'crwdns21183:0crwdne21183:0',
     'demos' => 'crwdns21184:0crwdne21184:0',
     'downloads' => 'crwdns21185:0crwdne21185:0',
+    'faq' => 'crwdns22950:0crwdne22950:0',
     'fight_us' => 'crwdns21187:0crwdne21187:0',
     'forums' => 'crwdns21188:0crwdne21188:0',
     'gallery' => 'crwdns21189:0crwdne21189:0',

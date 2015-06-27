@@ -44,6 +44,7 @@ $language_array = array(
     'icq_msn' => 'ICQ/MSN/etc...',
     'info' => 'Additional information',
     'joinus_form' => 'Join us form',
+    'mail'=>'E-Mail',
     'message_title' => 'Join us',
     'messenger' => 'Messenger',
     'name' => 'Name',

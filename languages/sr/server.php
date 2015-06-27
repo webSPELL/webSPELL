@@ -31,12 +31,13 @@ $language_array = array(
 
     'game' => 'Игра',
     'information' => 'Информације',
-    'ip' => 'ИП',
+    'ip'=>'IP адреса',
     'link' => 'Линк',
     'no_server' => 'Нема доступних сервера.',
     'not_supported' => 'Сервер не подржава ову опцију',
     'online' => 'онлине',
     'server' => 'сервер',
+    'status' => 'Статус',
     'timeout' => 'тимеоут'
 );
 

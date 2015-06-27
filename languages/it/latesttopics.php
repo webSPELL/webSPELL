@@ -29,9 +29,9 @@ $language_array = array(
 
 /* do not edit above this line */
 
-    'board' => 'Forum',
-    'last_post' => 'Ultimo Post',
-    'replies' => 'Risposti',
+    'board' => 'Board',
+    'last_post' => 'Ultimo post',
+    'replies' => 'Risposte',
     'reply' => 'Risposta'
 );
 

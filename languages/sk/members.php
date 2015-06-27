@@ -42,6 +42,7 @@ $language_array = array(
     'members' => 'členovia',
     'nickname' => 'Nickname',
     'no_description' => 'žiaden popis',
+    'no_entries'=>'no entries available',
     'position' => 'Pozícia',
     'results' => 'Výsledky',
     'show_details' => '&raquo; <a href="index.php?site=members&action=show&squadID=%squadID%"><b>Ukáž detaily</b></a>',

@@ -29,6 +29,7 @@ $language_array = array(
 
 /* do not edit above this line */
 
+    'banner' => 'Банер',
     'homepage' => 'Главна страна',
     'information' => 'Информации',
     'mainsponsor' => 'Главен спонзор',

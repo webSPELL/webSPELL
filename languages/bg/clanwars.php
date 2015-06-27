@@ -53,7 +53,6 @@ $language_array = array(
     'hltv_server' => 'HLTV-Сървър',
     'home_team' => 'собствен отбор',
     'homepage' => 'Homepage',
-    'id' => 'ID номер',
     'league' => 'лига',
     'league_match_link' => 'лига съвпадат връзка',
     'lost' => 'загуба',

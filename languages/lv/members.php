@@ -42,6 +42,7 @@ $language_array = array(
     'members' => 'biedri',
     'nickname' => 'Segvārds',
     'no_description' => 'apraksts nav pieejams',
+    'no_entries'=>'no entries available',
     'position' => 'Amats',
     'results' => 'Rezultāti',
     'show_details' => '&raquo; <a href="index.php?site=members&amp;action=show&amp;squadID=%squadID%"><b>Parādīt detaļas</b></a>',

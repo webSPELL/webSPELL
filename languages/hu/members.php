@@ -42,6 +42,7 @@ $language_array = array(
     'members' => 'tagok',
     'nickname' => 'Nick',
     'no_description' => 'nincs elérhető leírás',
+    'no_entries'=>'no entries available',
     'position' => 'Pozíció',
     'results' => 'Eredmények',
     'show_details' => '&raquo; <a href="index.php?site=members&action=show&squadID=%squadID%"><b>Részletek mutatása</b></a>',

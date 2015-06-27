@@ -38,6 +38,7 @@ $language_array = array(
     'logout' => 'Kirjaudu ulos',
     'lost_password' => 'Kadonnut tunnussana?',
     'messenger' => 'Messenger',
+    'n_a'=>'n/a',
     'overview' => 'Yleiskatsaus',
     'register_now' => 'Rekisteröidy nyt',
     'registered_users' => 'Rekisteröidyt käyttäjät',

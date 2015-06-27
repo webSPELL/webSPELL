@@ -431,11 +431,11 @@ $usergalleries = $ds[ 'usergalleries' ];
 $maxusergalleries = $ds[ 'maxusergalleries' ];
 $default_language = $ds[ 'default_language' ];
 if (empty($default_language)) {
-    $default_language = 'uk';
+    $default_language = 'en';
 }
 $rss_default_language = $ds[ 'default_language' ];
 if (empty($rss_default_language)) {
-    $rss_default_language = 'uk';
+    $rss_default_language = 'en';
 }
 $search_min_len = $ds[ 'search_min_len' ];
 if (empty($search_min_len)) {

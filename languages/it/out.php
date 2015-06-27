@@ -30,7 +30,7 @@ $language_array = array(
 /* do not edit above this line */
 
     'no_frame' => 'Questa pagina utilizza i frame. Il tuo browser non supporta i frames!',
-    'outgoing' => 'Link in uscita',
+    'outgoing' => 'Uscente',
     'owner_responsible' => 'Il proprietario è responsabile di questo sito.'
 );
 

@@ -29,24 +29,25 @@ $language_array = array(
 
 /* do not edit above this line */
 
-    'back' => 'Torna al modulo',
-    'contact' => 'Contatto',
-    'description' => 'Tramite questo modulo, è possibile mettersi in contatto con noi.',
-    'enter_mail' => 'si prega di communicare l*indirizzio e-mail',
-    'enter_message' => 'Qual è il tuo messaggio?',
-    'enter_name' => 'Si prega di inserire un nome',
-    'enter_subject' => 'Inserisci un oggetto',
-    'errors_there' => 'Ci sono sucesso errori',
-    'message' => 'messaggio',
-    'name' => 'nome',
-    'receiver' => 'ricevitore',
-    'reset' => 'reset',
-    'security_code' => 'codice di sicurezza',
+    'back' => 'torna al modulo',
+    'contact' => 'contatto',
+    'description' => 'Tramite questo modulo, è possibile inviare un messaggio a noi.',
+    'enter_mail' => 'Si prega di inserire un indirizzo e-mail.',
+    'enter_message' => 'È necessario inserire un messaggio.',
+    'enter_name' => 'È necessario inserire un nume.',
+    'enter_subject' => 'È necessario inserire un oggetto.',
+    'errors_there' => 'Ci sono alcuni errori',
+    'mail'=>'E-Mail',
+    'message' => 'Messaggio',
+    'name' => 'Nome',
+    'receiver' => 'Ricevitore',
+    'reset' => 'Resettare',
+    'security_code' => 'Codice di sicurezza',
     'send' => 'Inviare',
     'send_successfull' => 'Il tuo messaggio è stato inviato con successo.',
-    'subject' => 'soggetto',
-    'title_contact' => 'modulo contatto',
-    'unknown_receiver' => 'unknown receiver',
-    'wrong_securitycode' => 'Il codice di sicurezza è sbagliato'
+    'subject' => 'Soggetto',
+    'title_contact' => 'Modulo di contatto',
+    'unknown_receiver' => 'ricevitore sconosciuto',
+    'wrong_securitycode' => 'Codice di sicurezza è errato'
 );
 

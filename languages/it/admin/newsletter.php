@@ -30,24 +30,24 @@ $language_array = Array(
 /* do not edit above this line */
 
   'access_denied'=>'Accesso negato',
-  'error_send'=>'ERRORE: Newsletter non ha potuto essere inviato (posta esistono?)',
-  'html_mail'=>'Messaggio HTML',
+  'error_send'=>'ERRORE: Non è stato possibile inviare la Newsletter (Mailserver a disposizione?)',
+  'html_mail'=>'HTML-Mail',
   'newsletter'=>'Newsletter',
   'no_htmlmail'=>'Ciao!
-Il sistema non supporta HTML email.
-Lei ha recevuto un questo messaggio:',
+Il tuo sistema non supporta mail HTML.
+Hai ricevuto il seguente messaggio:',
   'profile'=>'Profilo',
   'receptionists'=>'Newsletter inviata!<br><br>Ricevitore:',
-  'remove'=>'è possibile cancellare della lista nel profilo',
-  'send'=>'Newsletter inviare',
+  'remove'=>'Se vorrei cancellare la tua iscrizione alla mailing-list, puoi fare semplicemente nel tuo profilo',
+  'send'=>'invia newsletter',
   'send_to'=>'Invia a',
-  'test'=>'verifica',
+  'test'=>'test',
   'test_newsletter'=>'Newsletter di prova',
   'title'=>'Titolo',
-  'transaction_invalid'=>'ID transazione non valido',
-  'user_clanmembers'=>'personi del clan',
-  'user_newsletter'=>'Iscritti Newsletter',
-  'user_registered'=>'gli utenti registrati (comprese le persone del clan) ',
-  'users'=>'utenti'
+  'transaction_invalid'=>'ID della transazione non valido',
+  'user_clanmembers'=>'Membri del clan',
+  'user_newsletter'=>'Abbonati newsletter',
+  'user_registered'=>'utenti registrati (comprese le membri del clan)',
+  'users'=>'Utenti'
 );
 

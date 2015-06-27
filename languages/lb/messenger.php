@@ -45,7 +45,7 @@ $language_array = array(
     'html' => 'HTML ass <b><span class="underline">AUS</span></b>',
     'ignore' => 'Benotzer ignoréieren',
     'incoming' => 'Postagaang',
-    'mail_body' => '<b>Hallo %nickname%!</b><br><br>Du hues eng nei Noriicht op BVBPOWER (%hp_url%) Kritt.<br>Klick <a href="http://%hp_url%?site=messenger">hei</a> fir d\'Noriicht ze liesen.<br><br>(C) webSPELL.org',
+    'mail_body' => '<b>Hello %nickname%!</b><br><br>You got a new message at '.PAGETITLE.' (%hp_url%).<br>Click <a href="http://%hp_url%?site=messenger">here</a> to read the PM.<br><br>(C) webSPELL.org',
     'mail_subject' => 'Du hues eng nei Noriicht',
     'mark_not_viewed' => 'Als ongelies markéieren',
     'mark_viewed' => 'Als gelies markéieren',

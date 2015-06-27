@@ -38,6 +38,7 @@ $language_array = array(
     'logout' => 'logi välja',
     'lost_password' => 'kaotasid parooli?',
     'messenger' => 'sõnumineerija',
+    'n_a'=>'n/a',
     'overview' => 'ülevaade',
     'register_now' => 'registreeri kohe',
     'registered_users' => 'registreeritud kasutajaid',

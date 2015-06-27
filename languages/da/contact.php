@@ -37,6 +37,7 @@ $language_array = array(
     'enter_name' => 'Indtast venligst et navn.',
     'enter_subject' => 'Indtast venligst et emne.',
     'errors_there' => 'Der opstod fejl',
+    'mail'=>'E-Mail',
     'message' => 'Besked',
     'name' => 'Navn',
     'receiver' => 'Modtager',

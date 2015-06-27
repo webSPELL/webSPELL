@@ -31,6 +31,7 @@ $language_array = array(
 
     'game' => 'Speletjie',
     'information' => 'Informasie',
+    'ip'=>'IP',
     'link' => 'Skakel',
     'no_server' => 'geen bedieners beskikbaar.',
     'not_supported' => 'Word nie ondersteun deur web bediener',

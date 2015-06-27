@@ -64,6 +64,7 @@ $language_array = array(
     'publish_now' => 'Објави новости',
     'publish_selected' => 'Објави означено',
     'really_delete' => 'стварно избриши ове новости?',
+    'rubric' => 'Рубрика',
     'save_news' => 'Спреми новости',
     'select_all' => 'Означи све',
     'self' => 'истом прозору',

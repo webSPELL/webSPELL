@@ -37,6 +37,7 @@ $language_array = array(
     'enter_name' => 'გთხოვთ შეიყვანოთ სახელი.',
     'enter_subject' => 'გთხოვთ შეიყვანოთ სათაური.',
     'errors_there' => 'შეცდომაა აღმოჩენილი',
+    'mail'=>'E-Mail',
     'message' => 'შეტყობინება',
     'name' => 'სახელი',
     'receiver' => 'მიმღები',

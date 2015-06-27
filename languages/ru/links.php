@@ -31,6 +31,7 @@ $language_array = array(
 
     'back' => 'назад',
     'banner' => 'Баннер',
+    'banner_to_big' => 'Картинка слишком большая',
     'categories' => 'Категории',
     'category' => 'Категория',
     'delete' => 'удалить',

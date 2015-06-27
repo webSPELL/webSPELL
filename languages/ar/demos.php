@@ -76,7 +76,6 @@ $language_array = array(
     'to_rate' => '!يجب ان تكون مسجل لتقييم التسجيل',
     'update_demo' => 'تحديث التسجيل',
     'user_comments' => 'تفعيل تعليقات المستخدمين',
-    'visitor_comments' => 'تفعيل تعليقات الزوار',
-    'vs' => 'ضد'
+    'visitor_comments' => 'تفعيل تعليقات الزوار'
 );
 

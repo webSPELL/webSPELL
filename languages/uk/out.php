@@ -24,19 +24,13 @@
 #                                                                        #
 ##########################################################################
 */
-/**
- * Online Language Editor Ukraine language file for webSPELL 4.2.2
- * @author Stefan Giesecke <webmaster@giesi.com>
- * @copyright Copyright (c) 2010, Stefan Giesecke
- * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
- */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'no_frame'=>'Сайт використовує фрейми. Ваш браузер не підтримує фрейми!',
-  'outgoing'=>'Вихідні посилання',
-  'owner_responsible'=>'Власник несе відповідальність за цю сторінку.'
+    'no_frame' => 'Сайт використовує фрейми. Ваш браузер не підтримує фрейми!',
+    'outgoing' => 'Вихідні посилання',
+    'owner_responsible' => 'Власник несе відповідальність за цю сторінку.'
 );
 

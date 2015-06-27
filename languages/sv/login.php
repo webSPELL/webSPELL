@@ -38,6 +38,7 @@ $language_array = array(
     'logout' => 'logga ut',
     'lost_password' => 'tappat bort lösenordet?',
     'messenger' => 'messenger',
+    'n_a'=>'n/a',
     'overview' => 'överblick',
     'register_now' => 'registrera dig nu',
     'registered_users' => 'registrerade användare',

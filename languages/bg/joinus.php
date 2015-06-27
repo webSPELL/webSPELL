@@ -44,6 +44,7 @@ $language_array = array(
     'icq_msn' => 'ICQ/MSN/и т.н...',
     'info' => 'Допълнителна информация',
     'joinus_form' => 'Присъедини се към нас',
+    'mail'=>'E-Mail',
     'message_title' => 'Присъедини се към нас',
     'messenger' => 'Пратеник',
     'name' => 'Име',

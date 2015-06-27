@@ -32,8 +32,6 @@ $language_array = array(
     'admin_button' => 'ادارة الاسئلة الاكثر شيوعا',
     'answer' => 'الاجابة',
     'categories' => 'التصنيفات',
-    'faq' => 'الاسئلة الاكثر شيوعا',
-    'faqs' => 'الاسئلة الاكثر شيوعا',
     'no_categories' => 'لا توجد تصنيفات',
     'no_faq' => '.لا توجد اسئلة<br><a href="index.php?site=faq">الرجوع</a>',
     'saved_on' => 'حفظت بتاريخ'

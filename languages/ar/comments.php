@@ -47,7 +47,6 @@ $language_array = array(
     'homepage' => 'الصفحة الرئيسية',
     'html_off' => 'HTML معطلة',
     'ignore_user' => 'تجاهل المستخدم',
-    'mail' => 'البريد الالكتروني',
     'name' => 'الاسم',
     'no_access' => '<br><br>!يجب تسجيل الدخول<br><br>&#8226; <a href="index.php?site=register">!سجل الان</a><br>&#8226; <a href="index.php?site=login">تسجيل الدخول</a>',
     'no_commentid' => 'لا يوجد رقم للتعليق - إعادة توجيه',

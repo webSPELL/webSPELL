@@ -42,6 +42,7 @@ $language_array = array(
     'members' => 'anëtarët',
     'nickname' => 'Pseudonimi',
     'no_description' => 'nuk ka përshkrim të vlefshëm',
+    'no_entries'=>'nuk ka hyrje të vlefshme',
     'position' => 'Pozicioni',
     'results' => 'Rezultate',
     'show_details' => '&raquo; <a href="index.php?site=members&amp;action=show&amp;squadID=%squadID%"><b>Trego detaje</b></a>',

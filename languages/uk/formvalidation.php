@@ -28,16 +28,16 @@
 $language_array = Array(
 
 /* do not edit above this line */
-    'file_too_big'=>'File too big',
-    'incomplete_upload'=>'Incomplete upload',
-    'no_file_uploaded'=>'No file uploaded',
-    'no_temp_folder_available'=>'No temporary folder available. Please contact the administrator',
-    'cant_write_temp_file'=>'Can\'t write temporary file. Please contact the administrator',
-    'unexpected_error'=>'Unexpected error',
-    'cant_copy_file'=>'Can\'t copy file. Please contact the administrator',
-    'image_too_big'=>'The image is too big (max size %1$d px & %2$d px)',
-    'broken_image'=>'The image file seems to be broken',
-    'unsupported_image_type'=>'Unsupported image type',
-    'errors_there'=>'There are errors',
-    'file_already_exists'=>'file already exists'
+    'file_too_big'=>'Файл занадто великий',
+    'incomplete_upload'=>'Завантажений неповністю',
+    'no_file_uploaded'=>'Файл не завантажений',
+    'no_temp_folder_available'=>'Тимчасова папка не доступна. Будь ласка, зв\'яжіться з адміністратором',
+    'cant_write_temp_file'=>'Не можете створити тимчасовий файл. Будь ласка, зв\'яжіться з адміністратором',
+    'unexpected_error'=>'Непередбачувана помилка',
+    'cant_copy_file'=>'Неможливо скопіювати файл. Будь ласка, зв\'яжіться з адміністратором',
+    'image_too_big'=>'Зображення занадто велике (максимальний розмір %1$d px і %2$d px)',
+    'broken_image'=>'файл зображення можливо пошкоджений',
+    'unsupported_image_type'=>'Непідтримуваний тип зображення',
+    'errors_there'=>'Є помилки',
+    'file_already_exists'=>'Файл вже створений'
 );

@@ -46,6 +46,7 @@ $language_array = Array(
   'registered_only'=>'csak regisztrált felhasználóknak',
   'static_pages'=>'Egyéni oldalak',
   'transaction_invalid'=>'A művelet azonosítója érvénytelen',
-  'you_can_use_html'=>'Használhatsz HTML-Tageket'
+  'you_can_use_html'=>'Használhatsz HTML-Tageket',
+  'tags'=>'Címkék'
 );
 

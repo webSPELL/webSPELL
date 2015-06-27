@@ -31,6 +31,7 @@ $language_array = array(
 
     'game' => 'Peli',
     'information' => 'Lisätiedot',
+    'ip'=>'IP',
     'link' => 'Linkki',
     'no_server' => 'ei servereitä saatavilla.',
     'not_supported' => 'Ei ole webserver tukena',

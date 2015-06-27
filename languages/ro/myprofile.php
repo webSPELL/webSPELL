@@ -44,10 +44,12 @@ $language_array = array(
     'clan-name' => 'Nume-Clan',
     'clan-tag' => 'Tag-Clan',
     'country' => 'Tara',
+    'cpu'=>'CPU',
     'date_of_birth' => 'Data naşterii',
     'deactivated' => 'dezactivat',
     'delete_max_90_90' => 'şterge(max90/90)',
     'delete_max_230_210' => 'şterge (max230/210)',
+    'e-mail'=>'E-mail',
     'edit_mail' => 'editează E-Mail',
     'edit_password' => 'editează parola',
     'equipment-info' => 'Informaţii echipament',
@@ -117,6 +119,7 @@ Vă mulțumim pentru interesul dumneavoastră
     'repeat_new_email' => 'Repetă noul mail',
     'repeat_new_password' => 'Repetă noua parolă',
     'repeated_pw_not_valid' => 'Repetarea parolei nu ese validă!',
+    'repeated_mail_not_valid'=>'your repeated e-mail is not equal!',
     'sexuality' => 'Sex',
     'signature' => 'Semnătură',
     'smilies' => '<a href="javascript:void(0);" onclick="window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smileurile</a> PE',
@@ -134,6 +137,7 @@ Vă mulțumim pentru interesul dumneavoastră
     'you_have_to_firstname' => 'Trebuie sa introduceţi numele dvs.!',
     'you_have_to_nickname' => 'Trebuie sa introduceţi porecla dvs.!',
     'you_have_to_username' => 'Trebuie sa introduceţi numele dvs. de utilizator!',
-    'you_have_to_valid_email' => 'Adresa dvs. de mail este invalidă!'
+    'you_have_to_valid_email' => 'Adresa dvs. de mail este invalidă!',
+    'wrong_password'=>'Wrong password'
 );
 

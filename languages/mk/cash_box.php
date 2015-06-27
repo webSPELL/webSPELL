@@ -34,6 +34,7 @@ $language_array = array(
     'bank_account' => 'Банкарска сметка',
     'calculate' => 'пресметај',
     'cash_box' => 'Благајна',
+    'clan' => 'Клан',
     'clanmembers_only' => 'cамо за членовите на кланот',
     'costs_member' => 'цена по член',
     'ddmmyyyy' => 'дд.мм.гггг',

@@ -40,6 +40,7 @@ $language_array = array(
     'counter_stats' => 'contor statistici',
     'date' => 'data',
     'demos' => 'demo-uri',
+    'faq'=>'FAQ',
     'fightus' => 'provoacă-ne',
     'files' => 'fişiere',
     'forum' => 'forum',

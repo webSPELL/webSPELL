@@ -39,6 +39,7 @@ $language_array = array(
     'contact' => 'Kontakt blankett',
     'demos' => 'Demos',
     'downloads' => 'Nerladdningar',
+    'faq' => 'Vanliga Frågor',
     'fight_us' => 'Utmana oss',
     'forums' => 'Forum',
     'gallery' => 'Galleri',

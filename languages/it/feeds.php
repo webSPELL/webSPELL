@@ -29,7 +29,7 @@ $language_array = array(
 
 /* do not edit above this line */
 
-    'latest_news_from' => 'Ultima Notizia da',
-    'news_feed' => 'News Ticker'
+    'latest_news_from' => 'Ultima news da',
+    'news_feed' => 'News Feed'
 );
 

@@ -44,11 +44,12 @@ $language_array = array(
     'clan-name' => 'Klan-Naam',
     'clan-tag' => 'Klan-Tag',
     'country' => 'Land',
+    'cpu'=>'CPU',
     'date_of_birth' => 'Geboortedatum',
     'deactivated' => 'gedeaktiveer',
     'delete_max_90_90' => 'verwyder (max90/90)',
     'delete_max_230_210' => 'verwyder (max230/210)',
-    'e-mail' => 'E-pos',
+    'e-mail'=>'E-mail',
     'edit_mail' => 'wysig E-Mail',
     'edit_password' => 'wysig wagwoord',
     'equipment-info' => 'Toerusting-Info',
@@ -118,6 +119,7 @@ Dankie vir jou belangstelling
     'repeat_new_email' => 'herhaal nuwe E-Pos',
     'repeat_new_password' => 'herhaal nuwe wagwoord',
     'repeated_pw_not_valid' => 'jou herhaalde wagwoord is nie geldig nie!',
+    'repeated_mail_not_valid'=>'your repeated e-mail is not equal!',
     'sexuality' => 'geslag',
     'signature' => 'handtekening',
     'smilies' => '<a href="javascript:void(0);" onclick="window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smilies</a> is OP',
@@ -135,6 +137,7 @@ Dankie vir jou belangstelling
     'you_have_to_firstname' => 'Jy moet jou eerste-naam in voer!',
     'you_have_to_nickname' => 'Jy moet jou bynaam in voer!',
     'you_have_to_username' => 'Jy moet jou gebruikersnaam in voer!',
-    'you_have_to_valid_email' => 'Jou e-pos is nie geldig nie!'
+    'you_have_to_valid_email' => 'Jou e-pos is nie geldig nie!',
+    'wrong_password'=>'Wrong password'
 );
 

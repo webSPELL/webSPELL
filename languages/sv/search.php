@@ -39,6 +39,7 @@ $language_array = array(
     'date_options' => 'Datum',
     'delete_selected' => 'radera valda',
     'descending' => 'fallande',
+    'faq'=>'FAQ',
     'faq_link' => '<b>länk till FAQ</b>',
     'forum' => 'Forum',
     'forum_link' => '<b>länk till ämne</b>',

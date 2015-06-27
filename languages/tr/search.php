@@ -39,6 +39,7 @@ $language_array = array(
     'date_options' => 'Tarih',
     'delete_selected' => 'seçileni sil',
     'descending' => 'azalan',
+    'faq'=>'FAQ',
     'faq_link' => '<b>bağlan FAQ</b>',
     'forum' => 'Forum',
     'forum_link' => '<b>konuya bağlan</b>',

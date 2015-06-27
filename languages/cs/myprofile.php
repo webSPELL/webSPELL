@@ -44,10 +44,12 @@ $language_array = array(
     'clan-name' => 'Název klanu',
     'clan-tag' => 'tag klanu',
     'country' => 'Národnost',
+    'cpu'=>'CPU',
     'date_of_birth' => 'Datum narození',
     'deactivated' => 'deaktivována',
     'delete_max_90_90' => 'smazat (max90/90)',
     'delete_max_230_210' => 'smazat (max230/210)',
+    'e-mail'=>'E-mail',
     'edit_mail' => 'editovat E-Mail',
     'edit_password' => 'editovat heslo',
     'equipment-info' => 'Informace o vybavení',
@@ -117,6 +119,7 @@ Thank you for your interest
     'repeat_new_email' => 'opakuj nový E-Mail',
     'repeat_new_password' => 'opakovat nové heslo',
     'repeated_pw_not_valid' => 'hesla nejsou shodná!',
+    'repeated_mail_not_valid'=>'your repeated e-mail is not equal!',
     'sexuality' => 'Pohlaví',
     'signature' => 'Podpis',
     'smilies' => '<a href="javascript:void(0);" onclick="window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smajlíci</a> jsou ZAPNUTi',
@@ -134,6 +137,7 @@ Thank you for your interest
     'you_have_to_firstname' => 'Zapomněl jsi vložit jméno!',
     'you_have_to_nickname' => 'Zapomněl jsi vložit přezdívku!',
     'you_have_to_username' => 'Zapomněl jsi vložit uživatelské jméno!',
-    'you_have_to_valid_email' => 'Tvůj e-mail není validní!'
+    'you_have_to_valid_email' => 'Tvůj e-mail není validní!',
+    'wrong_password'=>'Wrong password'
 );
 

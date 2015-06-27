@@ -41,7 +41,6 @@ $language_array = array(
     'database_cl' => 'Baza podatak',
     'delete_file' => 'Izbriši dokument',
     'description' => 'Opis',
-    'dl' => 'Nivo',
     'download_now' => 'Preuzmi %filename%',
     'download_registered_only' => 'Preuzimanje samo za registrirane korisnike!',
     'download_via_mirror' => 'Preuzmi preko alternativnog linka',

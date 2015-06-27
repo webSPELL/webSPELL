@@ -30,21 +30,21 @@ $language_array = Array(
 /* do not edit above this line */
 
   'access_denied'=>'Accesso negato',
-  'add_server'=>'Aggiungi server',
+  'add_server'=>'aggiungi server',
   'actions'=>'Azioni',
-  'delete'=>'cancellare',
-  'edit'=>'cambiare',
-  'edit_server'=>'cambia server ',
+  'delete'=>'elimina',
+  'edit'=>'modifica',
+  'edit_server'=>'modifica server',
   'game'=>'Gioco',
   'info'=>'Info',
-  'ip_port'=>'Server IP:Port',
+  'ip_port'=>'Server IP:Porta',
   'new_server'=>'nuovo server',
   'no_server'=>'Nessun server disponibile',
-  'really_delete'=>'Questo server veramente cancellare?',
+  'really_delete'=>'Davvero cancellare questo server?',
   'servers'=>'Server',
-  'server_name'=>'Server nome',
-  'sort'=>'assortire',
-  'transaction_invalid'=>'ID transazione non valido',
+  'server_name'=>'Nome del server',
+  'sort'=>'Assortire',
+  'transaction_invalid'=>'ID della transazione non valido',
   'to_sort'=>'assortire'
 );
 

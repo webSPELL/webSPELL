@@ -37,6 +37,7 @@ $language_array = array(
     'enter_name' => 'Παρακαλω εισαγετε ονομα.',
     'enter_subject' => 'Παρακαλω εισαγετε θεμα.',
     'errors_there' => 'Προεκυψαν σφαλματα',
+    'mail'=>'E-Mail',
     'message' => 'Μηνυμα',
     'name' => 'Ονομα',
     'receiver' => 'Αποδεκτης',

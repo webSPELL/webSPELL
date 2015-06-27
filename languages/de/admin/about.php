@@ -29,7 +29,7 @@ $language_array = Array(
 
 /* do not edit above this line */
 
-  'about'=>'Wir über uns',
+  'about'=>'Über uns',
   'access_denied'=>'Zugriff verweigert',
   'transaction_invalid'=>'Transaktions ID ungültig',
   'update'=>'aktualisieren',

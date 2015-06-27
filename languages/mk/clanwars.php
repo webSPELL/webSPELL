@@ -29,6 +29,7 @@ $language_array = array(
 
 /* do not edit above this line */
 
+    'clan' => 'Клан',
     'clan_stats' => 'Статистика на кланот',
     'clantag' => 'Таг на кланот',
     'clanwar_against' => 'Војна против кланот',
@@ -52,7 +53,6 @@ $language_array = array(
     'hltv_server' => 'Хлтв Сервер',
     'home_team' => 'Домашен тим',
     'homepage' => 'Главна страна',
-    'id' => 'ИД',
     'league' => 'Лига',
     'league_match_link' => 'Линк на лига натпреварот',
     'lost' => 'Загуби',
@@ -85,6 +85,8 @@ $language_array = array(
     'show_clanwars' => 'Прикажи ги сите натпревари',
     'sort' => 'Подреди',
     'squad' => 'Тим',
+    'stat' => 'Статистика',
+    'stats' => 'Статистика',
     'team' => 'Тим',
     'total' => 'Вкупно',
     'total_clanwars' => 'Вкупно натпревари',

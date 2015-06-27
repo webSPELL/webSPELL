@@ -40,6 +40,7 @@ $language_array = array(
     'counter_stats' => 'crwdns21662:0crwdne21662:0',
     'date' => 'crwdns21663:0crwdne21663:0',
     'demos' => 'crwdns21664:0crwdne21664:0',
+    'faq'=>'crwdns22983:0crwdne22983:0',
     'fightus' => 'crwdns21666:0crwdne21666:0',
     'files' => 'crwdns21667:0crwdne21667:0',
     'forum' => 'crwdns21668:0crwdne21668:0',

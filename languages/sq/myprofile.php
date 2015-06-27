@@ -44,10 +44,12 @@ $language_array = array(
     'clan-name' => 'Klan-Emri',
     'clan-tag' => 'Klan-Tag',
     'country' => 'Shteti',
+    'cpu'=>'CPU',
     'date_of_birth' => 'Datëlindja',
     'deactivated' => 'çaktivizuar',
     'delete_max_90_90' => 'fshij (max90/90)',
     'delete_max_230_210' => 'fshij (max230/210)',
+    'e-mail'=>'E-Mail',
     'edit_mail' => 'edito E-Mail-in',
     'edit_password' => 'edito password-in',
     'equipment-info' => 'Informacion in pajisjeve',
@@ -117,6 +119,7 @@ Faleminderit për interesin tuaj
     'repeat_new_email' => 'Përsërit E-Mailin e ri',
     'repeat_new_password' => 'Përsërit Passwordin e ri',
     'repeated_pw_not_valid' => 'Passwordi i përsëritur nuk është i vlefshëm!',
+    'repeated_mail_not_valid'=>'your repeated e-mail is not equal!',
     'sexuality' => 'Gjinia',
     'signature' => 'Firma',
     'smilies' => '<a href="javascript:void(0);" onclick="window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smilies</a> janë të NDEZURA',
@@ -134,6 +137,7 @@ Faleminderit për interesin tuaj
     'you_have_to_firstname' => 'Duhet të vendosni Emrin tuaj!',
     'you_have_to_nickname' => 'Duhet të vendosni një pseudonim!',
     'you_have_to_username' => 'Duhet të vendosni një emër përdoruesi!',
-    'you_have_to_valid_email' => 'Maili juaj nuk ëshë i vlefshëm!'
+    'you_have_to_valid_email' => 'Maili juaj nuk ëshë i vlefshëm!',
+    'wrong_password'=>'Fjalëkalimi gabuar'
 );
 

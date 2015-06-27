@@ -39,6 +39,7 @@ $language_array = array(
     'date_options' => 'Päivä',
     'delete_selected' => 'poista valitut',
     'descending' => 'laskeva',
+    'faq'=>'FAQ',
     'faq_link' => '<b>linkki  FAQ</b>',
     'forum' => 'Foorumi',
     'forum_link' => '<b>linkki aiheeseen</b>',

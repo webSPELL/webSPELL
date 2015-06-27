@@ -35,16 +35,19 @@ $language_array = array(
     'awards' => 'Награде',
     'back_overview' => '&raquo; <a href="index.php?site=members"><b>натраг на листу чланова</b></a>',
     'challenge' => 'Изазови нас',
+    'contact' => 'Контакт',
     'go' => 'Иди!',
     'inactive' => 'није активан',
     'member' => 'Члан',
     'members' => 'Чланови',
     'nickname' => 'Ник',
     'no_description' => 'Нема доступног описа',
+    'no_entries'=>'Нема доступних уноса',
     'position' => 'Позиција',
     'results' => 'Резултати',
     'show_details' => '&raquo; <a href="index.php?site=members&amp;action=show&amp;squadID=%squadID%"><b>Прикажи детаље</b></a>',
     'show_only' => 'Прикажи само',
+    'status' => 'Статус',
     'town' => 'Град'
 );
 

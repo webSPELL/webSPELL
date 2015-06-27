@@ -24,18 +24,12 @@
 #                                                                        #
 ##########################################################################
 */
-/**
- * Online Language Editor Ukraine language file for webSPELL 4.2.2
- * @author Stefan Giesecke <webmaster@giesi.com>
- * @copyright Copyright (c) 2010, Stefan Giesecke
- * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
- */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'news_feed'=>'Стрічка новин',
-  'latest_news_from'=>'Останні новини від'
+    'latest_news_from' => 'Останні новини від',
+    'news_feed' => 'Стрічка новин'
 );
 

@@ -37,6 +37,7 @@ $language_array = array(
     'enter_name' => 'Wann ech gelift en Numm aginn',
     'enter_subject' => 'Wann ech gelift en Betreff aginn',
     'errors_there' => 'Et sinn Fehler opgetratt',
+    'mail'=>'E-Mail',
     'message' => 'Nochriicht',
     'name' => 'Numm',
     'receiver' => 'Empfänger',

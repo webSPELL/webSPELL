@@ -31,8 +31,13 @@ $language_array = array(
 
     'game' => 'Игра',
     'information' => 'Информация',
+    'ip'=>'IP',
     'link' => 'Ссылка',
     'no_server' => 'нет доступных серверов.',
-    'not_supported' => 'Не поддерживается сервером'
+    'not_supported' => 'Не поддерживается сервером',
+    'online' => 'oнлайн',
+    'server' => 'cервер',
+    'status' => 'Статус',
+    'timeout' => 'тайм-аут'
 );
 

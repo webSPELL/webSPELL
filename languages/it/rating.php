@@ -29,7 +29,7 @@ $language_array = array(
 
 /* do not edit above this line */
 
-    'just_rate_between_0_10' => 'Please rate only from 0 to 10 points!',
-    'no_access' => 'nessun accesso!'
+    'just_rate_between_0_10' => 'Si prega di valutare solo da 0 a 10 punti!',
+    'no_access' => 'Accesso negato!'
 );
 

@@ -38,6 +38,7 @@ $language_array = array(
     'logout' => 'atsijungti',
     'lost_password' => 'pametei slaptažodį?',
     'messenger' => 'pranešiklis',
+    'n_a'=>'n/a',
     'overview' => 'peržiūrėti',
     'register_now' => 'registruotis dabar',
     'registered_users' => 'registruoti nariai',

@@ -39,6 +39,7 @@ $language_array = array(
     'date_options' => 'Datum',
     'delete_selected' => 'verwijder geselecteerden',
     'descending' => 'aflopend',
+    'faq'=>'Veelgestelde vragen',
     'faq_link' => '<b>link naar FAQ</b>',
     'forum' => 'Forum',
     'forum_link' => '<b>link naar onderwerp</b>',

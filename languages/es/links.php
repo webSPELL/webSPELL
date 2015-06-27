@@ -31,6 +31,7 @@ $language_array = array(
 
     'back' => 'volver',
     'banner' => 'Banner',
+    'banner_to_big' => 'La imagen es demasiado grande',
     'categories' => 'Categorías',
     'category' => 'Categoría',
     'delete' => 'borrar',

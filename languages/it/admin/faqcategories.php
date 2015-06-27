@@ -31,19 +31,19 @@ $language_array = Array(
 
   'access_denied'=>'Accesso negato',
   'actions'=>'Azioni',
-  'add_category'=>'Aggiungi categoria',
+  'add_category'=>'aggiungi categoria',
   'category'=>'Categoria',
-  'category_name'=>'Kategorie Name',
-  'delete'=>'cancellare',
+  'category_name'=>'Nome categoria',
+  'delete'=>'elimina',
   'description'=>'Descrizione',
-  'edit'=>'cambiare',
-  'edit_category'=>'Cambiare Categoria',
+  'edit'=>'modifica',
+  'edit_category'=>'modifica categoria',
   'faq_categories'=>'Categoria FAQ',
   'information_incomplete'=>'Informazioni incomplete.',
   'new_category'=>'nuova categoria',
-  'really_delete'=>'Questa categoria comprende tutte le domande frequenti davvero cancellare?',
-  'sort'=>'assortire',
+  'really_delete'=>'Davvero eliminare questa categoria e le categorie FAQ?',
+  'sort'=>'Assortire',
   'to_sort'=>'assortire',
-  'transaction_invalid'=>'ID transazione non valido'
+  'transaction_invalid'=>'ID della transazione non valido'
 );
 
