@@ -28,7 +28,9 @@
 $_language->readModule('myprofile');
 
 if (!$userID) {
-    echo $_language->module['not_logged_in'];
+    $title_myprofile = $GLOBALS["_template"]->replaceTemplate("title_myprofile", array());
+    echo $title_myprofile;
+    echo generateAlert($_language->module['not_logged_in'], 'alert-danger');
 } else {
     $showerror = '';
     $title_myprofile = $GLOBALS["_template"]->replaceTemplate("title_myprofile", array());
@@ -90,7 +92,7 @@ if (!$userID) {
         $error_array = array();
 
         if (isset($_POST['userID']) || isset($_GET['userID']) || $userID == "") {
-            die($_language->module['not_logged_in']);
+            die (generateAlert($_language->module['not_logged_in'], 'alert-danger'));
         }
 
         if (isset($_POST['delavatar'])) {
@@ -134,7 +136,7 @@ if (!$userID) {
             if ($upload->hasError() === false) {
                 $mime_types = array('image/jpeg','image/png','image/gif');
                 if ($upload->supportedMimeType($mime_types)) {
-                    $imageInformation =  getimagesize($upload->getTempFile());
+                    $imageInformation = getimagesize($upload->getTempFile());
                     if (is_array($imageInformation)) {
                         if ($imageInformation[0] < 91 && $imageInformation[1] < 91) {
                             switch ($imageInformation[ 2 ]) {
@@ -148,32 +150,31 @@ if (!$userID) {
                                     $endung = '.jpg';
                                     break;
                             }
-                            $file = $id.$endung;
+                            $file = $id . $endung;
                             if ($upload->saveAs($filepath.$file, true)) {
                                 @chmod($filepath.$file, $new_chmod);
                                 safe_query(
                                     "UPDATE "
                                     . PREFIX . "user
                                     SET
-                                      avatar='" . $file .
+                                        avatar='" . $file .
                                     "' WHERE
-                                      userID='" . $id . "'"
+                                        userID='" . $id . "'"
                                 );
                             }
                         } else {
-                            $error_array[] = sprintf($_language->module[ 'image_too_big' ], 90, 90);
+                            $error_array[] = sprintf($_language->module['image_too_big'], 90, 90);
                         }
                     } else {
-                        $error_array[] = $_language->module[ 'broken_image' ];
+                        $error_array[] = $_language->module['broken_image'];
                     }
                 } else {
-                    $error_array[] = $_language->module[ 'unsupported_image_type' ];
+                    $error_array[] = $_language->module['unsupported_image_type'];
                 }
             } else {
                 $error_array[] = $upload->translateError();
             }
         }
-
 
         //userpic
         $filepath = "./images/userpics/";
@@ -187,7 +188,7 @@ if (!$userID) {
             if ($upload->hasError() === false) {
                 $mime_types = array('image/jpeg','image/png','image/gif');
                 if ($upload->supportedMimeType($mime_types)) {
-                    $imageInformation =  getimagesize($upload->getTempFile());
+                    $imageInformation = getimagesize($upload->getTempFile());
                     if (is_array($imageInformation)) {
                         if ($imageInformation[0] < 231 && $imageInformation[1] < 211) {
                             switch ($imageInformation[ 2 ]) {
@@ -201,25 +202,25 @@ if (!$userID) {
                                     $endung = '.jpg';
                                     break;
                             }
-                            $file = $id.$endung;
+                            $file = $id . $endung;
                             if ($upload->saveAs($filepath.$file, true)) {
                                 @chmod($filepath.$file, $new_chmod);
                                 safe_query(
                                     "UPDATE "
                                     . PREFIX . "user
                                     SET
-                                      userpic='" . $file .
+                                        userpic='" . $file .
                                     "' WHERE userID='" . $id . "'"
                                 );
                             }
                         } else {
-                            $error_array[] = sprintf($_language->module[ 'image_too_big' ], 230, 210);
+                            $error_array[] = sprintf($_language->module['image_too_big'], 230, 210);
                         }
                     } else {
-                        $error_array[] = $_language->module[ 'broken_image' ];
+                        $error_array[] = $_language->module['broken_image'];
                     }
                 } else {
-                    $error_array[] = $_language->module[ 'unsupported_image_type' ];
+                    $error_array[] = $_language->module['unsupported_image_type'];
                 }
             } else {
                 $error_array[] = $upload->translateError();
@@ -249,8 +250,7 @@ if (!$userID) {
         if (count($error_array)) {
             $showerror = generateErrorBoxFromArray($_language->module['errors_there'], $error_array);
         } else {
-            safe_query(
-                "UPDATE `" . PREFIX . "user`
+            safe_query("UPDATE `" . PREFIX . "user`
                     SET
                         nickname='" . $nickname . "',
                         username='" . $usernamenew . "',
@@ -289,20 +289,13 @@ if (!$userID) {
                         language='" . $language . "',
                         user_guestbook='" . $user_gbook . "'
                     WHERE
-                        userID='" . $id . "'"
-            );
+                        userID='" . $id . "'");
 
             redirect("index.php?site=profile&amp;id=$id", $_language->module['profile_updated'], 3);
         }
     }
 
     if (isset($_GET['action']) && $_GET['action'] == "editpwd") {
-        $bg1 = BG_1;
-        $bg2 = BG_2;
-        $bg3 = BG_3;
-        $bg4 = BG_4;
-        $border = BORDER;
-
         $data_array = array();
         $data_array['$userID'] = $userID;
         $myprofile_editpwd = $GLOBALS["_template"]->replaceTemplate("myprofile_editpwd", $data_array);
@@ -343,16 +336,15 @@ if (!$userID) {
 
             redirect('index.php?site=login', $_language->module['pw_changed'], 3);
         } else {
-            echo '<strong>ERROR: ' . $error . '</strong><br><br>
-                <input type="button" onclick="javascript:history.back()" value="' . $_language->module['back'] . '">';
+            echo generateAlert(
+                '<strong>ERROR: ' . $error . '</strong><br>
+                <br>
+                <a href="#" onclick="history.back()" class="alert-link">' . $_language->module['back'] .
+                '</a>',
+                'alert-danger'
+            );
         }
     } elseif (isset($_GET['action']) && $_GET['action'] == "editmail") {
-        $bg1 = BG_1;
-        $bg2 = BG_2;
-        $bg3 = BG_3;
-        $bg4 = BG_4;
-        $border = BORDER;
-
         $data_array = array();
         $data_array['$userID'] = $userID;
         $myprofile_editmail = $GLOBALS["_template"]->replaceTemplate("myprofile_editmail", $data_array);
@@ -390,32 +382,26 @@ if (!$userID) {
         }
 
         if (empty($error)) {
-            safe_query(
-                "UPDATE
+            safe_query("UPDATE
                     " . PREFIX . "user
                 SET
                     email_change = '" . $mail1 . "', email_activate = '" . $activationkey . "'
                 WHERE
-                    userID='" . $userID . "'"
-            );
+                    userID='" . $userID . "'");
 
             $ToEmail = $mail1;
             $header = str_replace(array('%homepage_url%'), array($hp_url), $_language->module['mail_subject']);
-            $Message = str_replace(
-                array(
-                    '%username%',
-                    '%activationlink%',
-                    '%pagetitle%',
-                    '%homepage_url%'
-                ),
-                array(
-                    $username,
-                    $activationlink,
-                    $hp_title,
-                    $hp_url
-                ),
-                $_language->module['mail_text']
-            );
+            $Message = str_replace(array(
+                '%username%',
+                '%activationlink%',
+                '%pagetitle%',
+                '%homepage_url%'
+            ), array(
+                $username,
+                $activationlink,
+                $hp_title,
+                $hp_url
+            ), $_language->module['mail_text']);
 
             $sendmail = \webspell\Email::sendEmail($admin_email, 'Profile', $ToEmail, $header, $Message);
 
@@ -433,15 +419,20 @@ if (!$userID) {
             } else {
                 if (isset($sendmail['debug'])) {
                     $fehler = array();
-                    $fehler[] = $sendmail[ 'debug' ];
+                    $fehler[] = $sendmail['debug'];
                     echo generateBoxFromArray($_language->module['mail_changed'], 'alert-success', $fehler);
                 } else {
-                    echo $_language->module['mail_changed'];
+                    echo generateAlert($_language->module['mail_changed'], 'alert-success');
                 }
             }
         } else {
-            echo '<strong>ERROR: ' . $error . '</strong><br><br>
-            <input type="button" onclick="javascript:history.back()" value="' . $_language->module['back'] . '">';
+            echo generateAlert(
+                '<strong>ERROR: ' . $error . '</strong><br>
+                <br>
+                <a href="#" onclick="history.back()" class="alert-link">' . $_language->module['back'] .
+                '</a>',
+                'alert-danger'
+            );
         }
     } else {
         $ergebnis = safe_query("SELECT * FROM " . PREFIX . "user WHERE userID='" . $userID . "'");
@@ -454,24 +445,25 @@ if (!$userID) {
             $sex = '<option value="m">' . $_language->module['male'] . '</option><option value="f">' .
                 $_language->module['female'] . '</option><option value="u">' . $_language->module['unknown'] .
                 '</option>';
-            $sex =
-                str_replace('value="' . $ds['sex'] . '"', 'value="' . $ds['sex'] . '" selected="selected"', $sex);
+            $sex = str_replace('value="' . $ds['sex'] . '"', 'value="' . $ds['sex'] . '" selected', $sex);
             if ($ds['newsletter'] == "1") {
-                $newsletter = '<option value="1" selected="selected">' . $_language->module['yes'] .
-                    '</option><option value="0">' . $_language->module['no'] . '</option>';
+                $newsletter =
+                    '<option value="1" selected>' . $_language->module['yes'] . '</option><option value="0">' .
+                    $_language->module['no'] . '</option>';
             } else {
-                $newsletter = '<option value="1">' . $_language->module['yes'] .
-                    '</option><option value="0" selected="selected">' . $_language->module['no'] . '</option>';
+                $newsletter =
+                    '<option value="1">' . $_language->module['yes'] . '</option><option value="0" selected>' .
+                    $_language->module['no'] . '</option>';
             }
             if ($ds['mailonpm'] == "1") {
-                $pm_mail = '<option value="1" selected="selected">' . $_language->module['yes'] .
-                    '</option><option value="0">' . $_language->module['no'] . '</option>';
+                $pm_mail = '<option value="1" selected>' . $_language->module['yes'] . '</option><option value="0">' .
+                    $_language->module['no'] . '</option>';
             } else {
-                $pm_mail = '<option value="1">' . $_language->module['yes'] .
-                    '</option><option value="0" selected="selected">' . $_language->module['no'] . '</option>';
+                $pm_mail = '<option value="1">' . $_language->module['yes'] . '</option><option value="0" selected>' .
+                    $_language->module['no'] . '</option>';
             }
             if ($ds['email_hide']) {
-                $email_hide = ' checked="checked"';
+                $email_hide = ' checked';
             } else {
                 $email_hide = '';
             }
@@ -483,11 +475,12 @@ if (!$userID) {
                 <option value='Y-m-d'>YYYY-MM-DD</option>
                 <option value='y/m/d'>YY/MM/DD</option>
                 <option value='Y/m/d'>YYYY/MM/DD</option>";
-            $format_date = str_replace(
-                "value='" . $ds['date_format'] . "'",
-                "value='" . $ds['date_format'] . "' selected='selected'",
-                $format_date
-            );
+            $format_date =
+                str_replace(
+                    "value='" . $ds['date_format'] . "'",
+                    "value='" . $ds['date_format'] . "' selected",
+                    $format_date
+                );
 
             $format_time = "<option value='G:i'>H:MM</option>
                 <option value='H:i'>HH:MM</option>
@@ -501,47 +494,53 @@ if (!$userID) {
                 <option value='H:i:s a'>HH:MM:SS am/pm</option>
                 <option value='G:i:s A'>H:MM:SS AM/PM</option>
                 <option value='H:i:s A'>HH:MM:SS AM/PM</option>";
-            $format_time = str_replace(
-                "value='" . $ds['time_format'] . "'",
-                "value='" . $ds['time_format'] . "' selected='selected'",
-                $format_time
-            );
+            $format_time =
+                str_replace(
+                    "value='" . $ds['time_format'] . "'",
+                    "value='" . $ds['time_format'] . "' selected",
+                    $format_time
+                );
             $user_gbook = "<option value='0'>" . $_language->module['deactivated'] . "</option><option value='1'>" .
                 $_language->module['activated'] . "</option>";
             $user_gbook = str_replace(
                 "value='" . $ds['user_guestbook'] . "'",
-                "value='" . $ds['user_guestbook'] . "' selected='selected'",
+                "value='" . $ds['user_guestbook'] . "' selected",
                 $user_gbook
             );
             $user_gbook_select = '';
             if ($user_guestbook) {
-                $user_gbook_select = '<div class="form-group"><label for="pm_mail" class="col-lg-3 control-label">' .
-                    $_language->module['guestbook'] . ':</label>
+                $user_gbook_select =
+                    '<div class="form-group">
+                        <label for="select-user_guestbook" class="col-xs-12 col-md-3 control-label">' .
+                        $_language->module['guestbook'] . ':</label>
 
-                    <div class="col-lg-9">
-                        <select name="user_guestbook" id="pm_mail" class="form-control">' . $user_gbook . '</select>
-                    </div>
-                </div>';
+                        <div class="col-xs-12 col-md-9">
+                            <select name="user_guestbook" class="form-control" id="select-user_guestbook">
+                                ' . $user_gbook . '
+                            </select>
+                        </div>
+                    </div>';
             }
-            $birthday = date("Y-m-d", strtotime($ds[ 'birthday' ]));
+            $birthday = date(
+                "Y-m-d",
+                strtotime($ds['birthday'])
+            );
             $countries = getcountries();
-            $countries =
-                str_replace(
-                    'value="' . $ds['country'] . '"',
-                    'value="' . $ds['country'] . '" selected="selected"',
-                    $countries
-                );
-            if ($ds[ 'avatar' ]) {
-                $viewavatar = '<a href="javascript:void(0);" onclick="window.open(\'images/avatars/' .
-                    $ds[ 'avatar' ] . '\',\'avatar\',\'width=120,height=120\')">' . $_language->module[ 'avatar' ] .
-                    '</a>';
+            $countries = str_replace(
+                'value="' . $ds['country'] . '"',
+                'value="' . $ds['country'] . '" selected',
+                $countries
+            );
+            if ($ds['avatar']) {
+                $viewavatar = '<a href="javascript:void(0);" onclick="window.open(\'images/avatars/' . $ds['avatar'] .
+                    '\',\'avatar\',\'width=120,height=120\')">' . $_language->module['avatar'] . '</a>';
             } else {
                 $viewavatar = $_language->module['avatar'];
             }
-            if ($ds[ 'userpic' ]) {
-                $viewpic = '&#8226; <a href="javascript:void(0);" onclick="window.open(\'images/userpics/' .
-                    $ds[ 'userpic' ] . '\',\'userpic\',\'width=250,height=230\')">' . $_language->module[ 'userpic' ] .
-                    '</a>';
+            if ($ds['userpic']) {
+                $viewpic =
+                    '&#8226; <a href="javascript:void(0);" onclick="window.open(\'images/userpics/' . $ds['userpic'] .
+                    '\',\'userpic\',\'width=250,height=230\')">' . $_language->module['userpic'] . '</a>';
             } else {
                 $viewpic = $_language->module['userpic'];
             }
@@ -581,18 +580,18 @@ if (!$userID) {
             $mysql_langs = array();
             $query = safe_query("SELECT lang, language FROM " . PREFIX . "news_languages");
             while ($sql_lang = mysqli_fetch_assoc($query)) {
-                $mysql_langs[$sql_lang['lang']] = $sql_lang['language'];
+                $mysql_langs[ $sql_lang['lang'] ] = $sql_lang['language'];
             }
             $langs = array();
             if ($dh = opendir($filepath)) {
                 while ($file = mb_substr(readdir($dh), 0, 2)) {
                     if ($file != "." && $file != ".." && is_dir($filepath . $file)) {
-                        if (isset($mysql_langs[$file])) {
-                            $name = $mysql_langs[$file];
+                        if (isset($mysql_langs[ $file ])) {
+                            $name = $mysql_langs[ $file ];
                             $name = ucfirst($name);
-                            $langs[$name] = $file;
+                            $langs[ $name ] = $file;
                         } else {
-                            $langs[$file] = $file;
+                            $langs[ $file ] = $file;
                         }
                     }
                 }
@@ -605,28 +604,15 @@ if (!$userID) {
 
             if ($ds['language']) {
                 $langdirs =
-                    str_replace(
-                        '"' . $ds['language'] . '"',
-                        '"' . $ds['language'] . '" selected="selected"',
-                        $langdirs
-                    );
+                    str_replace('"' . $ds['language'] . '"', '"' . $ds['language'] . '" selected', $langdirs);
             } else {
                 $langdirs =
-                    str_replace(
-                        '"' . $_language->language . '"',
-                        '"' . $_language->language . '" selected="selected"',
-                        $langdirs
-                    );
+                    str_replace('"' . $_language->language . '"', '"' . $_language->language . '" selected', $langdirs);
             }
 
             $lang_flag = '[flag]' . $ds['language'] . '[/flag]';
             $lang_country = flags($lang_flag);
             $lang_country = str_replace("<img", "<img id='lang_county'", $lang_country);
-
-            $bg1 = BG_1;
-            $bg2 = BG_2;
-            $bg3 = BG_3;
-            $bg4 = BG_4;
 
             $data_array = array();
             $data_array['$showerror'] = $showerror;
@@ -673,7 +659,7 @@ if (!$userID) {
             $myprofile = $GLOBALS["_template"]->replaceTemplate("myprofile", $data_array);
             echo $myprofile;
         } else {
-            echo $_language->module['not_logged_in'];
+            echo generateAlert($_language->module['not_logged_in'], 'alert-danger');
         }
     }
 }
