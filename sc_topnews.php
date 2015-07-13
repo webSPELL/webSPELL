@@ -52,12 +52,13 @@ if ($anz) {
 
     $headline = clearfromtags($message_array[ $showlang ][ 'headline' ]);
     $content = $message_array[ $showlang ][ 'message' ];
+    $content = nl2br(strip_tags($content));
 
     if (mb_strlen($content) > $maxtopnewschars) {
         $content = mb_substr($content, 0, $maxtopnewschars);
         $content .= '...';
     }
-    $content = nl2br(strip_tags($content));
+    $content = htmloutput($content);
 
     $data_array = array();
     $data_array['$topnewsID'] = $topnewsID;
