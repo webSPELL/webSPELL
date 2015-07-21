@@ -198,7 +198,7 @@ header('X-UA-Compatible: IE=edge,chrome=1');
             <!-- right column -->
             <div id="rightcol" class="col-md-3 col-sm-3 hidden-xs">
                 <!-- login include -->
-                <div class="visible-md">
+                <div class="hidden-xs">
                     <h3><?php echo $index_language[ 'login' ]; ?></h3>
                     <?php include("login.php"); ?>
                     <hr class="grey">
