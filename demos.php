@@ -33,7 +33,7 @@ if (isset($_GET['action'])) {
 
 $_language->readModule('demos');
 
-$title_demos = $GLOBALS[ "_template" ]->replaceTemplate("title_demos", array());
+$title_demos = $GLOBALS["_template"]->replaceTemplate("title_demos", array());
 echo $title_demos;
 
 if (isset($_POST['save'])) {
@@ -251,7 +251,7 @@ if (isset($_POST['save'])) {
         $data_array = array();
         $data_array['$games'] = $games;
         $data_array['$countries'] = $countries;
-        $demo_new = $GLOBALS[ "_template" ]->replaceTemplate("demo_new", $data_array);
+        $demo_new = $GLOBALS["_template"]->replaceTemplate("demo_new", $data_array);
         echo $demo_new;
     } else {
         redirect('index.php?site=demos', generateErrorBox($_language->module['no_access']));
@@ -313,7 +313,7 @@ if (isset($_POST['save'])) {
         $data_array['$extern'] = $extern;
         $data_array['$comments'] = $comments;
         $data_array['$demoID'] = $demoID;
-        $demo_edit = $GLOBALS[ "_template" ]->replaceTemplate("demo_edit", $data_array);
+        $demo_edit = $GLOBALS["_template"]->replaceTemplate("demo_edit", $data_array);
         echo $demo_edit;
     } else {
         redirect('index.php?site=demos', generateErrorBox($_language->module['no_access']));
@@ -432,7 +432,7 @@ value="' . $_language->module['rate'] . '" class="btn btn-primary">
     $data_array['$rateform'] = $rateform;
     $data_array['$download'] = $download;
     $data_array['$adminaction'] = $adminaction;
-    $demos_showdemo = $GLOBALS[ "_template" ]->replaceTemplate("demos_showdemo", $data_array);
+    $demos_showdemo = $GLOBALS["_template"]->replaceTemplate("demos_showdemo", $data_array);
     echo $demos_showdemo;
 
     $comments_allowed = $ds['comments'];
@@ -535,7 +535,7 @@ value="' . $_language->module['rate'] . '" class="btn btn-primary">
 
         $data_array = array();
         $data_array['$top'] = $top;
-        $top5_head = $GLOBALS[ "_template" ]->replaceTemplate("top5_head", $data_array);
+        $top5_head = $GLOBALS["_template"]->replaceTemplate("top5_head", $data_array);
         echo $top5_head;
 
         while ($ds = mysqli_fetch_array($ergebnis_top_5_rating)) {
@@ -569,7 +569,7 @@ value="' . $_language->module['rate'] . '" class="btn btn-primary">
         $top = 'TOP 5 DEMOS (' . $_language->module['downloaded'] . ')';
         $data_array = array();
         $data_array['$top'] = $top;
-        $top5_head = $GLOBALS[ "_template" ]->replaceTemplate("top5_head", $data_array);
+        $top5_head = $GLOBALS["_template"]->replaceTemplate("top5_head", $data_array);
         echo $top5_head;
         while ($ds = mysqli_fetch_array($ergebnis_top_5_downloads)) {
             $country1 = "[flag]" . $ds['country1'] . "[/flag]";
@@ -620,7 +620,7 @@ value="' . $_language->module['rate'] . '" class="btn btn-primary">
         $data_array['$headleague'] = $headleague;
         $data_array['$headrating'] = $headrating;
         $data_array['$headclicks'] = $headclicks;
-        $demos_head = $GLOBALS[ "_template" ]->replaceTemplate("demos_head", $data_array);
+        $demos_head = $GLOBALS["_template"]->replaceTemplate("demos_head", $data_array);
         echo $demos_head;
         $n = 1;
         while ($ds = mysqli_fetch_array($ergebnis)) {
@@ -654,12 +654,12 @@ value="' . $_language->module['rate'] . '" class="btn btn-primary">
             $data_array['$ratingpic'] = $ratingpic;
             $data_array['$clicks'] = $clicks;
             $data_array['$demoID'] = $demoID;
-            $demos_content = $GLOBALS[ "_template" ]->replaceTemplate("demos_content", $data_array);
+            $demos_content = $GLOBALS["_template"]->replaceTemplate("demos_content", $data_array);
             echo $demos_content;
             unset($ratingpic);
             $n++;
         }
-        $demos_foot = $GLOBALS[ "_template" ]->replaceTemplate("demos_foot", array());
+        $demos_foot = $GLOBALS["_template"]->replaceTemplate("demos_foot", array());
         echo $demos_foot;
     } else {
         echo $_language->module['no_demos'];
@@ -738,7 +738,7 @@ value="' . $_language->module['rate'] . '" class="btn btn-primary">
 
         $data_array = array();
         $data_array['$top'] = $top;
-        $top5_head = $GLOBALS[ "_template" ]->replaceTemplate("top5_head", $data_array);
+        $top5_head = $GLOBALS["_template"]->replaceTemplate("top5_head", $data_array);
         echo $top5_head;
 
         $n = 1;
@@ -764,8 +764,8 @@ value="' . $_language->module['rate'] . '" class="btn btn-primary">
             $n++;
         }
 
-        echo $GLOBALS[ "_template" ]->replaceMulti('top5_content', $multiTemplateData);
-        echo $GLOBALS[ "_template" ]->replaceTemplate("top5_foot");
+        echo $GLOBALS["_template"]->replaceMulti('top5_content', $multiTemplateData);
+        echo $GLOBALS["_template"]->replaceTemplate("top5_foot");
 
         // POINTS
         $ergebnis_top_5_downloads =
@@ -775,7 +775,7 @@ value="' . $_language->module['rate'] . '" class="btn btn-primary">
         $top = 'TOP 5 DEMOS (' . $_language->module['downloaded'] . ')';
         $data_array = array();
         $data_array['$top'] = $top;
-        $top5_head = $GLOBALS[ "_template" ]->replaceTemplate("top5_head", $data_array);
+        $top5_head = $GLOBALS["_template"]->replaceTemplate("top5_head", $data_array);
         echo $top5_head;
         $multiTemplateData = array();
         while ($ds = mysqli_fetch_array($ergebnis_top_5_downloads)) {
@@ -790,8 +790,8 @@ value="' . $_language->module['rate'] . '" class="btn btn-primary">
             $multiTemplateData[ ] = array('$badge' => $ds['downloads'], '$text' => $n . '. ' . $link);
         }
 
-        echo $GLOBALS[ "_template" ]->replaceMulti('top5_content', $multiTemplateData);
-        echo $GLOBALS[ "_template" ]->replaceTemplate("top5_foot");
+        echo $GLOBALS["_template"]->replaceMulti('top5_content', $multiTemplateData);
+        echo $GLOBALS["_template"]->replaceTemplate("top5_foot");
 
         echo '</div>';
 
@@ -831,7 +831,7 @@ value="' . $_language->module['rate'] . '" class="btn btn-primary">
         $data_array['$headleague'] = $headleague;
         $data_array['$headrating'] = $headrating;
         $data_array['$headclicks'] = $headclicks;
-        $demos_head = $GLOBALS[ "_template" ]->replaceTemplate("demos_head", $data_array);
+        $demos_head = $GLOBALS["_template"]->replaceTemplate("demos_head", $data_array);
         echo $demos_head;
         $n = 1;
         while ($ds = mysqli_fetch_array($ergebnis)) {
@@ -866,12 +866,12 @@ value="' . $_language->module['rate'] . '" class="btn btn-primary">
             $data_array['$ratingpic'] = $ratingpic;
             $data_array['$clicks'] = $clicks;
             $data_array['$demoID'] = $demoID;
-            $demos_content = $GLOBALS[ "_template" ]->replaceTemplate("demos_content", $data_array);
+            $demos_content = $GLOBALS["_template"]->replaceTemplate("demos_content", $data_array);
             echo $demos_content;
             unset($ratingpic);
             $n++;
         }
-        $demos_foot = $GLOBALS[ "_template" ]->replaceTemplate("demos_foot", array());
+        $demos_foot = $GLOBALS["_template"]->replaceTemplate("demos_foot", array());
         echo $demos_foot;
     } else {
         echo generateAlert($_language->module['no_demos'], 'alert-info');
