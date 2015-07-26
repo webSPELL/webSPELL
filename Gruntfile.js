@@ -74,12 +74,21 @@ module.exports = function( grunt ) {
             "!composer.phar",
             "!grunt-log.txt",
             "!*.zip",
+            "!*.sublime-*",
             "!vendor",
             "!components",
             "!node_modules",
             "!tests",
             "!development"
         ],
+        specialReleaseFiles = [
+        	{expand: true, cwd: "components/bootstrap/dist/css/", src: ["bootstrap.min.css"], dest: "components"},
+        	{expand: true, cwd: "components/bootstrap/dist/js/", src: ["bootstrap.min.js"], dest: "components"},
+        	{expand: true, cwd: "components/jquery/dist/", src: ["jquery.min.js"], dest: "components"},
+        	{expand: true, cwd: "components/phpmailer/", src: ["class.*", "LICENSE","PHPMailerAutoload.php"], dest: "components/PHPMailer/"},
+        	{expand: true, cwd: "components/webshim/js-webshim/minified/", src: ["polyfiller.js","shims/form-core.js","shims/form-number-date-ui.js"], dest: "components/webshim/"},
+        	{src: releaseFiles}
+        ],       
         csss = [ "**/*.css" ],
         excludes = [
             "!node_modules/**",
@@ -266,7 +275,6 @@ module.exports = function( grunt ) {
                         to: "$version = \"<%= pkg.version %>\";"
                     }
                 ]
-
             }
         },
 
@@ -353,13 +361,13 @@ module.exports = function( grunt ) {
                 options: {
                     archive: "webspell.zip"
                 },
-                src: releaseFiles
+                files: specialReleaseFiles
             },
             release: {
                 options: {
                     archive: "webSPELL-<%= pkg.version %>.zip"
                 },
-                src: releaseFiles
+                files: specialReleaseFiles
             }
         },
 
