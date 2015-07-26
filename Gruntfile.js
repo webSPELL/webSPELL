@@ -88,7 +88,7 @@ module.exports = function( grunt ) {
         	{expand: true, cwd: "components/phpmailer/", src: ["class.*", "LICENSE","PHPMailerAutoload.php"], dest: "components/PHPMailer/"},
         	{expand: true, cwd: "components/webshim/js-webshim/minified/", src: ["polyfiller.js","shims/form-core.js","shims/form-number-date-ui.js"], dest: "components/webshim/"},
         	{src: releaseFiles}
-        ],       
+        ],
         csss = [ "**/*.css" ],
         excludes = [
             "!node_modules/**",
