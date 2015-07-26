@@ -149,7 +149,7 @@ if ($part == "groups") {
     } else {
         echo '<h1>&curren; <a href="admincenter.php?site=gallery" class="white">' . $_language->module[ 'gallery' ] .
             '</a> &raquo; ' . $_language->module[ 'groups' ] . '</h1>';
-        echo '<a href="admincenter.php?site=gallery&amp;part=groups&amp;action=add">' .
+        echo '<a href="admincenter.php?site=gallery&amp;part=groups&amp;action=add" class="input">' .
             $_language->module[ 'new_group' ] . '</a><br><br>';
         $ergebnis = safe_query("SELECT * FROM " . PREFIX . "gallery_groups ORDER BY sort");
         echo '<form method="post" name="ws_gallery" action="admincenter.php?site=gallery&amp;part=groups">
@@ -597,7 +597,7 @@ if ($part == "groups") {
         echo '<h1>&curren; <a href="admincenter.php?site=gallery" class="white">' . $_language->module[ 'gallery' ] .
             '</a> &raquo; ' . $_language->module[ 'galleries' ] . '</h1>';
         echo
-            '<a href="admincenter.php?site=gallery&amp;part=gallerys&amp;action=add">' .
+            '<a href="admincenter.php?site=gallery&amp;part=gallerys&amp;action=add" class="input">' .
             $_language->module[ 'new_gallery' ] . '</a><br><br>';
         echo '<form method="post" name="ws_gallery" action="admincenter.php?site=gallery&amp;part=gallerys">
         <table width="100%" border="0" cellspacing="1" cellpadding="3" bgcolor="#DDDDDD">
@@ -641,7 +641,7 @@ if ($part == "groups") {
                 </td>
               <td class="' . $td . '" width="20%" align="center">
               <a href="admincenter.php?site=gallery&amp;part=gallerys&amp;action=edit&amp;galleryID=' .
-                    $db[ 'galleryID' ] . '">' . $_language->module[ 'edit' ] . '</a>
+                    $db[ 'galleryID' ] . '" class="input">' . $_language->module[ 'edit' ] . '</a>
           <input type="button" onclick="MM_confirm(\'' . $_language->module[ 'really_delete_gallery' ] .
                     '\', \'admincenter.php?site=gallery&amp;part=gallerys&amp;delete=true&amp;galleryID=' .
                     $db[ 'galleryID' ] . '&amp;captcha_hash=' . $hash . '\')" value="' .

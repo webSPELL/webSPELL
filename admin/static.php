@@ -245,7 +245,7 @@ onsubmit="return chkFormular();">
             <td class="' . $td . '">' . $accesslevel . '</td>
             <td class="' . $td . '" align="center">
             <a href="admincenter.php?site=static&amp;action=edit&amp;staticID=' .
-            $ds[ 'staticID' ] . '">' . $_language->module[ 'edit' ] . '</a>
+            $ds[ 'staticID' ] . '" class="input">' . $_language->module[ 'edit' ] . '</a>
                 <input type="button" onclick="MM_confirm(\'' . $_language->module[ 'really_delete' ] .
             '\', \'admincenter.php?site=static&amp;delete=true&amp;staticID=' . $ds[ 'staticID' ] .
             '&amp;captcha_hash=' . $hash . '\')" value="' . $_language->module[ 'delete' ] . '" /></td>

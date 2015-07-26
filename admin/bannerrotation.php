@@ -341,7 +341,7 @@ if ($action == "add") {
     echo '<h1>&curren; ' . $_language->module[ 'bannerrotation' ] . '</h1>';
 
     echo
-    '<a href="admincenter.php?site=bannerrotation&amp;action=add" class="btn btn-danger">' .
+    '<a href="admincenter.php?site=bannerrotation&amp;action=add" class="input">' .
     $_language->module['new_banner'] . '</a><br><br>';
 
     echo '<form method="post" action="admincenter.php?site=bannerrotation">
@@ -397,7 +397,7 @@ if ($action == "add") {
         <td class="' . $td . '" align="center">' . $displayed . '</td>
         <td class="' . $td . '" align="center">
             <a href="admincenter.php?site=bannerrotation&amp;action=edit&amp;bannerID=' .
-            $ds['bannerID'] . '" class="btn btn-danger">' . $_language->module['edit'] . '</a>
+            $ds['bannerID'] . '" class="input">' . $_language->module['edit'] . '</a>
             <input type="button" onclick="MM_confirm(
                     \'' . $_language->module['really_delete'] . '\',
                     \'admincenter.php?site=bannerrotation&amp;delete=true&amp;bannerID=' . $ds['bannerID'] .

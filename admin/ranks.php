@@ -238,11 +238,11 @@ if ($action == "add") {
   <table width="100%" border="0" cellspacing="1" cellpadding="3" bgcolor="#DDDDDD">
     <tr>
       <td width="20%" class="title"><b>' . $_language->module[ 'rank_icon' ] . '</b></td>
-      <td width="48%" class="title"><b>' . $_language->module[ 'rank_name' ] . '</b></td>
-      <td width="10%" class="title"><b>' . $_language->module[ 'special_rank' ] . '</b></td>
-      <td width="6%" class="title"><b>' . $_language->module[ 'min_posts' ] . '</b></td>
-      <td width="6%" class="title"><b>' . $_language->module[ 'max_posts' ] . '</b></td>
-      <td width="10%" class="title"><b>' . $_language->module[ 'actions' ] . '</b></td>
+      <td width="36%" class="title"><b>' . $_language->module[ 'rank_name' ] . '</b></td>
+      <td width="11%" class="title"><b>' . $_language->module[ 'special_rank' ] . '</b></td>
+      <td width="11%" class="title"><b>' . $_language->module[ 'min_posts' ] . '</b></td>
+      <td width="11%" class="title"><b>' . $_language->module[ 'max_posts' ] . '</b></td>
+      <td width="11%" class="title"><b>' . $_language->module[ 'actions' ] . '</b></td>
     </tr>';
 
     $ergebnis = safe_query("SELECT * FROM " . PREFIX . "forum_ranks ORDER BY postmax");
@@ -300,7 +300,7 @@ if ($action == "add") {
             echo '<tr>
 	        <td class="' . $td . '" align="center"><img src="../images/icons/ranks/' . $ds[ 'pic' ] . '" alt=""></td>
 	        <td class="' . $td . '"><input type="text" name="rank[' . $ds[ 'rankID' ] . ']" value="' .
-                getinput($ds[ 'rank' ]) . '" size="58" />'.$user_list.'</td>
+                getinput($ds[ 'rank' ]) . '" size="30" />'.$user_list.'</td>
             <td class="' . $td . '" align="center">' . (($ds[ 'special' ]==1) ? "x" : "") . '</td>
 	        <td class="' . $td . '" align="center">'.$min.'</td>
 	        <td class="' . $td . '" align="center">'.$max.'</td>
