@@ -287,11 +287,11 @@ $ds = mysqli_fetch_array(safe_query("SELECT * FROM " . PREFIX . "settings"));
 if (is_dir("development")) {
     $components = array(
         'css' => array(
-            'components/bootstrap/dist/css/bootstrap.min.css'
+            'components/bootstrap/dist/css/bootstrap.css'
         ),
         'js' => array(
-            'components/jquery/dist/jquery.min.js',
-            'components/bootstrap/dist/js/bootstrap.min.js',
+            'components/jquery/dist/jquery.js',
+            'components/bootstrap/dist/js/bootstrap.js',
             'components/webshim/js-webshim/minified/polyfiller.js'
         )
     );
