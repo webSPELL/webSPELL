@@ -292,7 +292,7 @@ if (is_dir("development")) {
         'js' => array(
             'components/jquery/dist/jquery.js',
             'components/bootstrap/dist/js/bootstrap.js',
-            'components/webshim/js-webshim/minified/polyfiller.js'
+            'components/webshim/js-webshim/dev/polyfiller.js'
         )
     );
 } else {
