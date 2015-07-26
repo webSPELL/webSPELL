@@ -332,8 +332,11 @@ if ($action == "new") {
 
     <!-- Head & Title include -->
     <title>' . PAGETITLE . '; ?></title>
-    <link href="_stylesheet.css" rel="stylesheet" type="text/css">
-    <script src="js/bbcode.js"></script>
+    <base href="'.$rewriteBase.'">';
+    foreach ($components['css'] as $component) {
+        echo '<link href="' . $component . '" rel="stylesheet">';
+    }
+    echo '<script src="js/bbcode.js"></script>
     <!-- end Head & Title include -->
 </head>
 <body>';
