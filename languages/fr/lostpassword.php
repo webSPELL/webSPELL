@@ -25,13 +25,13 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'email_failed'=>'Il y a eu un problème pendant l\'envoi du mail. Veuillez contacter le webmaster.',
-	'email_subject'=>'Votre compte pour %pagetitle%',
-	'email_text'=>'Votre compte pour %pagetitle%
+    'email_failed' => 'Il y a eu un problème pendant l\'envoi du mail. Veuillez contacter le webmaster.',
+    'email_subject' => 'Votre compte pour %pagetitle%',
+    'email_text' => 'Votre compte pour %pagetitle%
 ATTENTION votre mot de passe a été changé !
 
 Votre pseudo: %username%
@@ -39,13 +39,13 @@ Votre nouveau mot de passe: %new_password%
 
 Bonne visite sur notre site
 %homepage_url%',
-	'get_password'=>'Recevoir le mot de passe',
-	'lost_password'=>'Mot de passe perdu',
-	'no_mail_given'=>'Vous n\'avez pas entré d\'adresse mail !',
-	'no_user_found'=>'Aucun utilisateur trouvé !',
-	'successful'=>'Votre compte a été retrouvé<br><br>
+    'get_password' => 'Recevoir le mot de passe',
+    'lost_password' => 'Mot de passe perdu',
+    'no_mail_given' => 'Vous n\'avez pas entré d\'adresse mail !',
+    'no_user_found' => 'Aucun utilisateur trouvé !',
+    'successful' => 'Votre compte a été retrouvé<br><br>
     Vous allez recevoir un mail avec les données de votre compte dans quelques secondes.<br><br>
     &#8226; <a href="index.php?site=login">S\'enregistrer</a>',
-	'your_email'=>'Votre adresse mail'
+    'your_email' => 'Votre adresse mail'
 );
 

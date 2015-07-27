@@ -24,35 +24,29 @@
 #                                                                        #
 ##########################################################################
 */
-/**
- * Online Language Editor Turkey language file for webSPELL 4.2.2
- * @author Stefan Giesecke <webmaster@giesi.com>
- * @copyright Copyright (c) 2010, Stefan Giesecke
- * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
- */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'about'=>'Hakkında',
-  'active'=>'etkin',
-  'activity'=>'Etkinlik',
-  'awards'=>'Ödüller',
-  'back_overview'=>'&raquo; <a href="index.php?site=members"><b>üyelere genel bakış için geri dön</b></a>',
-  'challenge'=>'Davet',
-  'contact'=>'Temas',
-  'go'=>'Git!',
-  'inactive'=>'pasif',
-  'member'=>'Üye',
-  'members'=>'Üyeler',
-  'nickname'=>'Kullanıcı Adı',
-  'no_description'=>'açıklama yok',
-  'position'=>'Poazisyon',
-  'results'=>'Sonuçlar',
-  'show_details'=>'&raquo; <a href="index.php?site=members&amp;action=show&amp;squadID=%squadID%"><b>Detayları göster</b></a>',
-  'show_only'=>'Sadece göster',
-  'status'=>'Durum',
-  'town'=>'Kent'
+    'about' => 'Hakkında',
+    'active' => 'etkin',
+    'activity' => 'Etkinlik',
+    'awards' => 'Ödüller',
+    'back_overview' => '&raquo; <a href="index.php?site=members"><b>üyelere genel bakış için geri dön</b></a>',
+    'challenge' => 'Davet',
+    'contact' => 'Temas',
+    'go' => 'Git!',
+    'inactive' => 'pasif',
+    'member' => 'Üye',
+    'members' => 'Üyeler',
+    'nickname' => 'Kullanıcı Adı',
+    'no_description' => 'açıklama yok',
+    'position' => 'Poazisyon',
+    'results' => 'Sonuçlar',
+    'show_details' => '&raquo; <a href="index.php?site=members&amp;action=show&amp;squadID=%squadID%"><b>Detayları göster</b></a>',
+    'show_only' => 'Sadece göster',
+    'status' => 'Durum',
+    'town' => 'Kent'
 );
 

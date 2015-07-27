@@ -25,17 +25,17 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'invalid_password'=>'Érvénytelen jelszót adtál meg.',
-	'ip_banned'=>'Az IP-d bannolva van erről az oldalról.<br>%reason%',
-	'login_successful'=>'Sikeres bejelentkezés!',
-	'no_user'=>'A <b>%username%</b> nevű felhasználó nincs a rendszerben.',
-	'not_activated'=>'Nem aktiváltad a felhasználód.',
-	'session_error'=>'Bizonyosodj meg róla, hogy a cookie-k engedélyzve vannak a böngésződben.<br>Ha a probléma továbbra is fennáll, lépj kapcsolatba a webmesterrel.',
-  'return'=>'<a href="javascript:history.back()">Vissza</a>',
-  'return_reenter' => '<a href="javascript:history.back()">Menj vissza és próbáld újra.</a>'
+    'invalid_password' => 'Érvénytelen jelszót adtál meg.',
+    'ip_banned' => 'Az IP-d bannolva van erről az oldalról.<br>%reason%',
+    'login_successful' => 'Sikeres bejelentkezés!',
+    'no_user' => 'A <b>%username%</b> nevű felhasználó nincs a rendszerben.',
+    'not_activated' => 'Nem aktiváltad a felhasználód.',
+    'return' => '<a href="javascript:history.back()">Vissza</a>',
+    'return_reenter' => '<a href="javascript:history.back()">Menj vissza és próbáld újra.</a>',
+    'session_error' => 'Bizonyosodj meg róla, hogy a cookie-k engedélyzve vannak a böngésződben.<br>Ha a probléma továbbra is fennáll, lépj kapcsolatba a webmesterrel.'
 );
 

@@ -24,36 +24,29 @@
 #                                                                        #
 ##########################################################################
 */
-/**
- * Online Language Editor Turkey language file for webSPELL 4.2.2
- * @author Stefan Giesecke <webmaster@giesi.com>
- * @copyright Copyright (c) 2010, Stefan Giesecke
- * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
- */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'back'=>'forma dön',
-  'contact'=>'Bağlantı',
-  'description'=>'Bu form ile bize bir mesaj göndermeniz mümkün',
-  'enter_mail'=>'Bir e-posta adresi girin.',
-  'enter_message'=>'Lütfen bir mesaj girin.',
-  'enter_name'=>'Lütfen bir isim girin.',
-  'enter_subject'=>'Lütfen bir konu girin.',
-  'errors_there'=>'Bazı hatalar oluştu',
-  'mail'=>'E-Mail',
-  'message'=>'Mesaj',
-  'name'=>'İsim',
-  'receiver'=>'Alıcı',
-  'reset'=>'İlk durumuna getir',
-  'security_code'=>'Güvenlik Kodu',
-  'send'=>'Gönder',
-  'send_successfull'=>'Mesajınız başarıyla gönderildi.',
-  'subject'=>'Konu',
-  'title_contact'=>'İletişim formu',
-  'unknown_receiver'=>'bilinmeyen alıcı',
-  'wrong_securitycode'=>'Yanlış güvenlik kodu girildi!'
+    'back' => 'forma dön',
+    'contact' => 'Bağlantı',
+    'description' => 'Bu form ile bize bir mesaj göndermeniz mümkün',
+    'enter_mail' => 'Bir e-posta adresi girin.',
+    'enter_message' => 'Lütfen bir mesaj girin.',
+    'enter_name' => 'Lütfen bir isim girin.',
+    'enter_subject' => 'Lütfen bir konu girin.',
+    'errors_there' => 'Bazı hatalar oluştu',
+    'message' => 'Mesaj',
+    'name' => 'İsim',
+    'receiver' => 'Alıcı',
+    'reset' => 'İlk durumuna getir',
+    'security_code' => 'Güvenlik Kodu',
+    'send' => 'Gönder',
+    'send_successfull' => 'Mesajınız başarıyla gönderildi.',
+    'subject' => 'Konu',
+    'title_contact' => 'İletişim formu',
+    'unknown_receiver' => 'bilinmeyen alıcı',
+    'wrong_securitycode' => 'Yanlış güvenlik kodu girildi!'
 );
 

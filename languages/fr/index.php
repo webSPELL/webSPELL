@@ -25,32 +25,32 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'advertisement'=>'Publicité',
-	'articles'=>'Articles',
-	'content'=>'Contenu',
-	'demos'=>'Dernières démos',
-	'downloads'=>'Derniers téléchargements',
-	'hotest_news'=>'News à l\'affiche',
-	'language_switch'=>'Langue',
-	'latest_news'=>'Dernières news',
-	'login'=>'Connexion',
-	'matches'=>'Matchs',
-	'newsletter'=>'Newsletter',
-	'partners'=>'Partenaires',
-	'pic_of_the_moment'=>'Image du jour',
-	'poll'=>'Sondage',
-	'random_user'=>'Membre au hasard',
-	'server'=>'Serveur',
-	'shoutbox'=>'Tribune libre',
-	'sponsors'=>'Sponsors',
-	'squads'=>'Sections',
-	'statistics'=>'Statistiques',
-	'topics'=>'Derniers sujets',
-	'upcoming_events'=>'À venir',
-	'tags'=>'balises'
+    'advertisement' => 'Publicité',
+    'articles' => 'Articles',
+    'content' => 'Contenu',
+    'demos' => 'Dernières démos',
+    'downloads' => 'Derniers téléchargements',
+    'hotest_news' => 'News à l\'affiche',
+    'language_switch' => 'Langue',
+    'latest_news' => 'Dernières news',
+    'login' => 'Connexion',
+    'matches' => 'Matchs',
+    'newsletter' => 'Newsletter',
+    'partners' => 'Partenaires',
+    'pic_of_the_moment' => 'Image du jour',
+    'poll' => 'Sondage',
+    'random_user' => 'Membre au hasard',
+    'server' => 'Serveur',
+    'shoutbox' => 'Tribune libre',
+    'sponsors' => 'Sponsors',
+    'squads' => 'Sections',
+    'statistics' => 'Statistiques',
+    'tags' => 'balises',
+    'topics' => 'Derniers sujets',
+    'upcoming_events' => 'À venir'
 );
 

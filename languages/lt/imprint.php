@@ -25,15 +25,15 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'admins'=>'Administratoriai:',
-	'coding'=>'Programavimas',
-	'coding_info'=>'Šitas puslapis naudoja <a href="http://www.webspell.org" target="_blank">webSPELL Free Content Management System skriptą (versija: $version)</a>. Jis yra sukurtas naudojant PHP4/5 ir MySQL bei veikia su <a href="http://www.fsf.org/licensing/licenses/gpl.html" target="_blank">GNU Licencija</a>.<br>Galite skriptą nemokamai parsisiūsti iš čia: <a href="http://www.webspell.org" target="_blank">www.webSPELL.org</a>',
-	'disclaimer'=>'Išsižadėjimas',
-	'disclaimer_text'=>'<p><strong>1. Turinys</strong><br>
+    'admins' => 'Administratoriai:',
+    'coding' => 'Programavimas',
+    'coding_info' => 'Šitas puslapis naudoja <a href="http://www.webspell.org" target="_blank">webSPELL Free Content Management System skriptą (versija: $version)</a>. Jis yra sukurtas naudojant PHP4/5 ir MySQL bei veikia su <a href="http://www.fsf.org/licensing/licenses/gpl.html" target="_blank">GNU Licencija</a>.<br>Galite skriptą nemokamai parsisiūsti iš čia: <a href="http://www.webspell.org" target="_blank">www.webSPELL.org</a>',
+    'disclaimer' => 'Išsižadėjimas',
+    'disclaimer_text' => '<p><strong>1. Turinys</strong><br>
 	Autorius turi teisę nebūti atsakingas už aktualumą, už teisingumą, užbaigtumą ar aukštos informacijos aprūpinimu. Atsakomybė reikalauja dėl žalos, padarytos vartojant bet kokią informaciją, jei, apimdamas bet kokią rūšį informacijos, kuri yra neužbaigta ar klaidinga, bus atmesta.<br>
 	Visi pasiūlymai nėra atmetami, bet be įsipareigojimo. Puslapių ar užbaigtos publikacijos dalys, apimdamos visus pasiūlymus ir informaciją galėtų būti išplėstos, pakeistos ar dalinai ar visiškai pašalintos autoriaus be pranešimo.</p>
 	<p><strong>2. Reklamavimas ir nuorodos</strong><br>
@@ -44,9 +44,9 @@ $language_array = Array(
 	Viskas, kas puslapyje yra pateikta (elektoriniai paštų adresai, vardai, namų adresai) viskas yra viešai naudojama ir įrašyta savanoriškai, todel privatumo nėra. Naudojimas ir visų pasiūlytų paslaugų užmokestis yra leistina - jei ir ligi šiol techniškai galima ir protingai - be specifikacijos bet kokių anketos duomenų ar anonimiškų duomenų ar pravardės specifikacija. Naudojimas publikuotų pašto adresų, telefono numerių ar fakso numerių ir elektroninio pašto adresų tikslų rinkodarai yra draudžiamas, pažeidėjai, siunčiantys nepageidaujamas spam žinutes, bus nubausti.</p>
 	<p><strong>5. Teisėtas šio išsižadėjimo galiojimas</strong><br>
 	Šis išsižadėjimas turi būti įvertintas kaip dalis interneto publikacijos, nuo kurios jūs buvote pasiųstas. Jei skyriai ar atskiri šio tvirtinimo terminai nėra teisėti ar teisingi, turinys ar kitų dalių galiojimas lieka nepaveikti prie šio fakto.</p>',
-	'imprint'=>'Įspaudas',
-	'mods'=>'Moderatoriai:',
-	'responsible_persons'=>'Atsakingi žmonės',
-	'webmaster'=>'Tinklalapio savininkas:'
+    'imprint' => 'Įspaudas',
+    'mods' => 'Moderatoriai:',
+    'responsible_persons' => 'Atsakingi žmonės',
+    'webmaster' => 'Tinklalapio savininkas:'
 );
 

@@ -25,28 +25,28 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'award'=>'Ocenenie',
-	'awards'=>'ocenenia',
-	'date'=>'Dátum',
-	'delete'=>'vymazať',
-	'edit'=>'upraviť',
-	'edit_award'=>'Upraviť ocenenie',
-	'enter_title'=>'Musíte zadať nadpis!',
-	'enter_text'=>'Musíte zadať text!',
-	'event'=>'Event',
-	'homepage'=>'Webová stránka',
-	'info'=>'Info',
-	'new_award'=>'Nové ocenenie',
-	'no_access'=>'Prístup bol odmietnutý!',
-	'no_entries'=>'Žiadne ocenenie',
-	'ranking'=>'Hodnotenie',
-	'save_award'=>'Uložiť ocenenie',
-	'sort'=>'Usporiadať',
-	'squad'=>'Squad',
-	'update_award'=>'Aktualizovať ocenenie'
+    'award' => 'Ocenenie',
+    'awards' => 'ocenenia',
+    'date' => 'Dátum',
+    'delete' => 'vymazať',
+    'edit' => 'upraviť',
+    'edit_award' => 'Upraviť ocenenie',
+    'enter_text' => 'Musíte zadať text!',
+    'enter_title' => 'Musíte zadať nadpis!',
+    'event' => 'Event',
+    'homepage' => 'Webová stránka',
+    'info' => 'Info',
+    'new_award' => 'Nové ocenenie',
+    'no_access' => 'Prístup bol odmietnutý!',
+    'no_entries' => 'Žiadne ocenenie',
+    'ranking' => 'Hodnotenie',
+    'save_award' => 'Uložiť ocenenie',
+    'sort' => 'Usporiadať',
+    'squad' => 'Squad',
+    'update_award' => 'Aktualizovať ocenenie'
 );
 

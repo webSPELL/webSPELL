@@ -25,12 +25,12 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'no_user'=>'Nenhuma imagem de utilizador disponível',
-	'registered_since'=>'registado(a) desde',
-	'view_profile'=>'visitar perfil'
+    'no_user' => 'Nenhuma imagem de utilizador disponível',
+    'registered_since' => 'registado(a) desde',
+    'view_profile' => 'visitar perfil'
 );
 

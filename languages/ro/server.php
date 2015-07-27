@@ -25,20 +25,18 @@
 ##########################################################################
 */
 
-
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'game'=>'Joc',
-  'information'=>'Informaţii',
-  'ip'=>'IP',
-  'link'=>'Link',
-  'no_server'=>'nici un server disponibil.',
-  'not_supported'=>'Nu este suportat de catre serverul web',
-  'online'=>'online',
-  'server'=>'server',
-  'status'=>'Status',
-  'timeout'=>'timeout'
+    'game' => 'Joc',
+    'information' => 'Informaţii',
+    'link' => 'Link',
+    'no_server' => 'nici un server disponibil.',
+    'not_supported' => 'Nu este suportat de catre serverul web',
+    'online' => 'online',
+    'server' => 'server',
+    'status' => 'Status',
+    'timeout' => 'timeout'
 );
 

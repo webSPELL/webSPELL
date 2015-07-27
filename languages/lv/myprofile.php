@@ -25,7 +25,7 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
@@ -44,10 +44,8 @@ $language_array = Array(
     'clan-name' => 'Klana nosaukums',
     'clan-tag' => 'Klana etiķete',
     'country' => 'Valsts',
-    'cpu' => 'CPU',
     'date_of_birth' => 'Dzimšanas datums',
     'deactivated' => 'deaktivizēts',
-    'delete' => 'delete',
     'delete_max_90_90' => 'izdzēst (maks.90/90)',
     'delete_max_230_210' => 'izdzēst (maks.230/210)',
     'e-mail' => 'E-pasts',
@@ -139,3 +137,4 @@ Paldies par Jūsu interesi
     'you_have_to_username' => 'Jums jāievada Jūsu lietotājvārds!',
     'you_have_to_valid_email' => 'Jūsu e-pasts nav derīgs!'
 );
+

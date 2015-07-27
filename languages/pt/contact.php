@@ -25,29 +25,28 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'back'=>'voltar ao formulário',
-	'contact'=>'contacto',
-	'description'=>'Com este formulário poderá entrar em contacto connosco.',
-	'enter_mail'=>'Por favor digite um endereço de e-mail.',
-	'enter_message'=>'Por favor digite a sua mensagem.',
-	'enter_name'=>'Por favor digite o seu nome.',
-	'enter_subject'=>'Por favor digite um assunto.',
-	'errors_there'=>'Ocorreram alguns erros',
-	'mail'=>'E-Mail',
-	'message'=>'Mensagem',
-	'name'=>'Nome',
-	'receiver'=>'Destinatário',
-	'reset'=>'Limpar',
-	'security_code'=>'Código de segurança',
-	'send'=>'Enviar',
-	'send_successfull'=>'A sua mensagem foi enviada com sucesso.',
-	'subject'=>'Assunto',
-	'title_contact'=>'Formulário para contacto',
-	'unknown_receiver'=>'unknown receiver',
-	'wrong_securitycode'=>'Digitou um código de segurança errado!'
+    'back' => 'voltar ao formulário',
+    'contact' => 'contacto',
+    'description' => 'Com este formulário poderá entrar em contacto connosco.',
+    'enter_mail' => 'Por favor digite um endereço de e-mail.',
+    'enter_message' => 'Por favor digite a sua mensagem.',
+    'enter_name' => 'Por favor digite o seu nome.',
+    'enter_subject' => 'Por favor digite um assunto.',
+    'errors_there' => 'Ocorreram alguns erros',
+    'message' => 'Mensagem',
+    'name' => 'Nome',
+    'receiver' => 'Destinatário',
+    'reset' => 'Limpar',
+    'security_code' => 'Código de segurança',
+    'send' => 'Enviar',
+    'send_successfull' => 'A sua mensagem foi enviada com sucesso.',
+    'subject' => 'Assunto',
+    'title_contact' => 'Formulário para contacto',
+    'unknown_receiver' => 'unknown receiver',
+    'wrong_securitycode' => 'Digitou um código de segurança errado!'
 );
 

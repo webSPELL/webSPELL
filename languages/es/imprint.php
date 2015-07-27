@@ -25,15 +25,15 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'admins'=>'Administrador(es):',
-	'coding'=>'Programador(es)',
-	'coding_info'=>'Esta página web usa <a href="http://www.webspell.org" target="_blank">webSPELL Free Content Management System manuscrito (version: $version)</a>. Se basa en PHP4 / 5 y MySQL y se ejecuta en el marco del <a href="http://www.fsf.org/licensing/licenses/gpl.html" target="_blank">GNU GENERAL PUBLIC LICENSE</a>.<br>Descarga gratis aquí: <a href="http://www.webspell.org" target="_blank">www.webSPELL.org</a>',
-	'disclaimer'=>'Aviso legal',
-	'disclaimer_text'=>'<p><strong>1. Contenido</strong><br>
+    'admins' => 'Administrador(es):',
+    'coding' => 'Programador(es)',
+    'coding_info' => 'Esta página web usa <a href="http://www.webspell.org" target="_blank">webSPELL Free Content Management System manuscrito (version: $version)</a>. Se basa en PHP4 / 5 y MySQL y se ejecuta en el marco del <a href="http://www.fsf.org/licensing/licenses/gpl.html" target="_blank">GNU GENERAL PUBLIC LICENSE</a>.<br>Descarga gratis aquí: <a href="http://www.webspell.org" target="_blank">www.webSPELL.org</a>',
+    'disclaimer' => 'Aviso legal',
+    'disclaimer_text' => '<p><strong>1. Contenido</strong><br>
 	El autor no toma ninguna garantía para la actualidad, corrección, integridad o calidad de la información preparada. Las pretensiones de responsabilidad contra el autor qué tipo ideal o material se en daños relacionan, que eran causadas por la utilización o no utilización de la información necesaria y respectivamente por la utilización de la información incorrecta e incompleta, están excluidas básicamente, si es que de parte del autor ningún ser culpable como puede comprobarse premeditado o de manera grosera negligente existe.<br>
 	Todas las ofertas son sin compromiso y no obligatorio. El autor se reserva expresamente cambiar partes de los lados o la oferta toda sin anuncio separado, completar, apagar o poner la publicación por momentos o definitivamente.</p>
 	<p><strong>2. Referencias y enlaces</strong><br>
@@ -44,9 +44,9 @@ $language_array = Array(
 	Si es que dentro de la oferta de Internet la posibilidad de la solicitud de datos personales o comerciales (direcciones de correo electrónico, nombres, direcciones) existe, la renuncia de estos datos sucede de parte del usuario en la base expresamente voluntaria. El empleo y pago de todos los servicios ofrecidos está permitido - hasta allí técnicamente posiblemente y razonable - también sin indicación de tales datos y respectivamente bajo la indicación de datos anónimos o un pseudónimo. La utilización en el marco del pie de imprenta o las indicaciones comparables a datos de contacto publicados como direcciones de correo, número de teléfono y números de fax así como direcciones de correo electrónico por terceros a envío de la información no pedida expresamente no está permitida. Pasos legales contra Creador de mails de Spam tan llamados en faltas contra esta prohibición están expresamente reservados.</p>
 	<p><strong>5. Validez jurídica de esta cláusula de exención de responsabilidad</strong><br>
 	Esta cláusula de exención de responsabilidad forma parte de la oferta de Internet, a partir de la cual esta página. Si partes o formulaciones individuales de este texto no son, ya no o no totalmente correcta, las partes restantes del documento en su contenido y validez.</p>',
-	'imprint'=>'Imprint',
-	'mods'=>'Moderador(es):',
-	'responsible_persons'=>'Personas responsables',
-	'webmaster'=>'Maestro de Web:'
+    'imprint' => 'Imprint',
+    'mods' => 'Moderador(es):',
+    'responsible_persons' => 'Personas responsables',
+    'webmaster' => 'Maestro de Web:'
 );
 

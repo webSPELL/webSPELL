@@ -24,31 +24,25 @@
 #                                                                        #
 ##########################################################################
 */
-/**
- * Online Language Editor Finland language file for webSPELL 4.2.2
- * @author Stefan Giesecke <webmaster@giesi.com>
- * @copyright Copyright (c) 2010, Stefan Giesecke
- * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
- */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'activation_successful'=>'Tilisi aktivointi onnistui.<br>Voit kirjautua sisään.',
-  'back'=>'takaisin',
-  'enter_nickname'=>'Kirjoita kutsumanimesi.',
-  'enter_password'=>'Kirjoita salasana.',
-  'enter_username'=>'Kirjoita käyttäjänimi.',
-  'errors_there'=>'Tapahtui virhe',
-  'for_login'=>'ainoastaan kirjautuneille',
-  'invalid_mail'=>'Kirjoitit väärän osoitteen.',
-  'mail'=>'E-Mail',
-  'mail_activation_successful'=>'Sähköpostiaktivointi onnistui.',
-  'mail_failed'=>'Aktivointi mailia ei voitu lähettää, ilmoita webmasterille tästä.',
-  'mail_inuse'=>'Sähköposti on jo käytössä',
-  'mail_subject'=>'Aktivoi tilisi %homepage_url%',
-  'mail_text'=>'Terve! %username%!
+    'activation_successful' => 'Tilisi aktivointi onnistui.<br>Voit kirjautua sisään.',
+    'back' => 'takaisin',
+    'enter_nickname' => 'Kirjoita kutsumanimesi.',
+    'enter_password' => 'Kirjoita salasana.',
+    'enter_username' => 'Kirjoita käyttäjänimi.',
+    'errors_there' => 'Tapahtui virhe',
+    'for_login' => 'ainoastaan kirjautuneille',
+    'invalid_mail' => 'Kirjoitit väärän osoitteen.',
+    'mail' => 'E-Mail',
+    'mail_activation_successful' => 'Sähköpostiaktivointi onnistui.',
+    'mail_failed' => 'Aktivointi mailia ei voitu lähettää, ilmoita webmasterille tästä.',
+    'mail_inuse' => 'Sähköposti on jo käytössä',
+    'mail_subject' => 'Aktivoi tilisi %homepage_url%',
+    'mail_text' => 'Terve! %username%!
 
 Rekisteröintisi %pagetitle% (%homepage_url%) Onnistui Tilisi tiedot:
 
@@ -59,21 +53,21 @@ Hyväksyäksesi rekisteröinnin sinun täytyy klikata vieressä olevaa linkkiä:
 
 Kiitos rekisteröinnistäsi
 %pagetitle% - %homepage_url%',
-  'nickname'=>'Kutsumanimi',
-  'nickname_inuse'=>'Kutsumanimi on jo käytössä.',
-  'no_register_when_loggedin'=>'Sinulla on jo tili olemassa %pagename%',
-  'password'=>'Salasana',
-  'profile_info'=>'Rekisteröinti ilmoitus',
-  'register_now'=>'Rekisteröi nyt!',
-  'register_successful'=>'Rekisteröintisi onnistui. Saat vahvistuksen sähköpostiisi tuotapikaa.',
-  'registration'=>'Rekisteröinti',
-  'repeat'=>'Toista salasana',
-  'repeat_invalid'=>'Salasanasi ei täsmää.',
-  'security_code'=>'Turvallisuus koodi',
-  'username'=>'Käyttäjänimi',
-  'username_inuse'=>'Käyttäjänimi on jo käytössä.',
-  'username_toolong'=>'Käyttäjänimi on liian pitkä (max. 30 merkkiä).',
-  'wrong_activationkey'=>'Aktivointikoodi on väärä!',
-  'wrong_securitycode'=>'Turvallisuuskoodi on väärä!'
+    'nickname' => 'Kutsumanimi',
+    'nickname_inuse' => 'Kutsumanimi on jo käytössä.',
+    'no_register_when_loggedin' => 'Sinulla on jo tili olemassa %pagename%',
+    'password' => 'Salasana',
+    'profile_info' => 'Rekisteröinti ilmoitus',
+    'register_now' => 'Rekisteröi nyt!',
+    'register_successful' => 'Rekisteröintisi onnistui. Saat vahvistuksen sähköpostiisi tuotapikaa.',
+    'registration' => 'Rekisteröinti',
+    'repeat' => 'Toista salasana',
+    'repeat_invalid' => 'Salasanasi ei täsmää.',
+    'security_code' => 'Turvallisuus koodi',
+    'username' => 'Käyttäjänimi',
+    'username_inuse' => 'Käyttäjänimi on jo käytössä.',
+    'username_toolong' => 'Käyttäjänimi on liian pitkä (max. 30 merkkiä).',
+    'wrong_activationkey' => 'Aktivointikoodi on väärä!',
+    'wrong_securitycode' => 'Turvallisuuskoodi on väärä!'
 );
 

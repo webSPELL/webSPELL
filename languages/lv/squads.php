@@ -25,34 +25,33 @@
 ##########################################################################
 */
 
-
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'about'=>'par',
-  'active'=>'aktīvs',
-  'add_buddy'=>'pievienot draugu sarakstam',
-  'awards'=>'apbalvojumi',
-  'back_buddy'=>'atpakaļ uz draugu sarakstu',
-  'back_squad_overview'=>'atpakaļ uz vadu pārlūku',
-  'challenge'=>'izaicināt',
-  'contact'=>'Kontakts',
-  'email'=>'e-pasts',
-  'ignore'=>'ignorēt lietotāju',
-  'inactive'=>'neaktīvs',
-  'member'=>'Biedrs',
-  'members'=>'Biedri',
-  'messenger'=>'ziņotājs',
-  'no_description'=>'apraksts nav pieejams',
-  'no_userpic'=>'lietotāja attēls nav pieejams!',
-  'position'=>'Pozīcija',
-  'results'=>'rezultāti',
-  'show_details'=>'parādīt detaļas',
-  'squad_plays'=>'Vads spēlē',
-  'squads'=>'vadi',
-  'status'=>'Statuss',
-  'town'=>'Pilsēta',
-  'userpicture'=>'lietotāja attēls'
+    'about' => 'par',
+    'active' => 'aktīvs',
+    'add_buddy' => 'pievienot draugu sarakstam',
+    'awards' => 'apbalvojumi',
+    'back_buddy' => 'atpakaļ uz draugu sarakstu',
+    'back_squad_overview' => 'atpakaļ uz vadu pārlūku',
+    'challenge' => 'izaicināt',
+    'contact' => 'Kontakts',
+    'email' => 'e-pasts',
+    'ignore' => 'ignorēt lietotāju',
+    'inactive' => 'neaktīvs',
+    'member' => 'Biedrs',
+    'members' => 'Biedri',
+    'messenger' => 'ziņotājs',
+    'no_description' => 'apraksts nav pieejams',
+    'no_userpic' => 'lietotāja attēls nav pieejams!',
+    'position' => 'Pozīcija',
+    'results' => 'rezultāti',
+    'show_details' => 'parādīt detaļas',
+    'squad_plays' => 'Vads spēlē',
+    'squads' => 'vadi',
+    'status' => 'Statuss',
+    'town' => 'Pilsēta',
+    'userpicture' => 'lietotāja attēls'
 );
 

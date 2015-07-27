@@ -25,12 +25,12 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'no_frame'=>'Ta strona używa dynamicznych ramek. Twoja przeglądarka ich nie obsługuje bądz są zablokowane.!',
-	'outgoing'=>'Wychodzące',
-	'owner_responsible'=>'Właściciel strony jest odpowiedzialny za strone.'
+    'no_frame' => 'Ta strona używa dynamicznych ramek. Twoja przeglądarka ich nie obsługuje bądz są zablokowane.!',
+    'outgoing' => 'Wychodzące',
+    'owner_responsible' => 'Właściciel strony jest odpowiedzialny za strone.'
 );
 

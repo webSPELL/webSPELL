@@ -24,35 +24,29 @@
 #                                                                        #
 ##########################################################################
 */
-/**
- * Online Language Editor Bulgaria language file for webSPELL 4.2.2
- * @author Stefan Giesecke <webmaster@giesi.com>
- * @copyright Copyright (c) 2010, Stefan Giesecke
- * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
- */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'award'=>'награда',
-  'awards'=>'награди',
-  'date'=>'дата',
-  'delete'=>'изтриване',
-  'edit'=>'редакция',
-  'edit_award'=>'редактирай наградата',
-  'enter_title'=>'Моля въведете заглавие!',
-  'enter_text'=>'Моля въведете текст!',
-  'event'=>'събитие',
-  'homepage'=>'заглавна страница',
-  'info'=>'информация',
-  'new_award'=>'нова награда',
-  'no_access'=>'Достъп забранен!',
-  'no_entries'=>'няма награда',
-  'ranking'=>'класация',
-  'save_award'=>'запази наградата',
-  'sort'=>'подреди',
-  'squad'=>'взвод',
-  'update_award'=>'въведи промените'
+    'award' => 'награда',
+    'awards' => 'награди',
+    'date' => 'дата',
+    'delete' => 'изтриване',
+    'edit' => 'редакция',
+    'edit_award' => 'редактирай наградата',
+    'enter_text' => 'Моля въведете текст!',
+    'enter_title' => 'Моля въведете заглавие!',
+    'event' => 'събитие',
+    'homepage' => 'заглавна страница',
+    'info' => 'информация',
+    'new_award' => 'нова награда',
+    'no_access' => 'Достъп забранен!',
+    'no_entries' => 'няма награда',
+    'ranking' => 'класация',
+    'save_award' => 'запази наградата',
+    'sort' => 'подреди',
+    'squad' => 'взвод',
+    'update_award' => 'въведи промените'
 );
 

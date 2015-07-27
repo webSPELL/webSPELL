@@ -25,12 +25,12 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'invalid_request'=>'Chybná požiadavka',
-	'no_result'=>'Žiaden výsledok nebol nájdený',
-	'to_much_results'=>'Existuje veľa možných výsledkov. Prosím zadajte viacej znakov.'
+    'invalid_request' => 'Chybná požiadavka',
+    'no_result' => 'Žiaden výsledok nebol nájdený',
+    'to_much_results' => 'Existuje veľa možných výsledkov. Prosím zadajte viacej znakov.'
 );
 

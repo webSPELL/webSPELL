@@ -25,13 +25,13 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'email_failed'=>'Er was een probleem tijdens het verzenden van de mail. Neem aub. contact op met de webmaster.',
-	'email_subject'=>'Je account voor %pagetitle%',
-	'email_text'=>'Je account voor %pagetitle%
+    'email_failed' => 'Er was een probleem tijdens het verzenden van de mail. Neem aub. contact op met de webmaster.',
+    'email_subject' => 'Je account voor %pagetitle%',
+    'email_text' => 'Je account voor %pagetitle%
 BELANGRIJK je wachtwoord is gewijzigd
 
 je gebruikersnaam: %username%
@@ -39,14 +39,13 @@ je nieuwe wachtwoord: %new_password%
 
 nog veel plezier op onze site
 %homepage_url%',
-	'get_password'=>'haal wachtwoord op',
-	'lost_password'=>'wachtwoord vergeten',
-	'no_mail_given'=>'You have not entered any mail adress.',
-	'no_user_found'=>'geen gebruiker gevonden!',
-	'successful'=>'Je account is gevonden<br><br>
+    'get_password' => 'haal wachtwoord op',
+    'lost_password' => 'wachtwoord vergeten',
+    'no_mail_given' => 'You have not entered any mail adress.',
+    'no_user_found' => 'geen gebruiker gevonden!',
+    'successful' => 'Je account is gevonden<br><br>
 	zal een mailtje krijgen met je accountgegevens in een paar seconden.<br><br>
 	&#8226; <a href="index.php?site=login">log in</a>',
-	'your_email'=>'Je E-Mail'
-
+    'your_email' => 'Je E-Mail'
 );
 

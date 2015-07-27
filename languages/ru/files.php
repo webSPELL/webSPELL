@@ -25,7 +25,7 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
@@ -41,7 +41,6 @@ $language_array = Array(
     'database_cl' => 'Датабаза',
     'delete_file' => 'Удалить файл',
     'description' => 'Назначение',
-    'dl' => 'DL',
     'download_now' => 'Скачать %filename% сейчас',
     'download_registered_only' => 'Скачки только для зарегистрированных пользователей!',
     'download_via_mirror' => 'Скачать с зеркала',
@@ -81,7 +80,6 @@ $language_array = Array(
     'please_login' => 'Пожалуйста войдите',
     'poor' => 'Бедный',
     'rate' => 'Оценить',
-    'rate_have_to_reg_login' => 'Оценить: Вы должны войти или зарегистрироваться!',
     'rate_now' => 'Оценить сейчас!',
     'rating' => 'Оценка',
     'rating_x_of_10' => 'Оценка: %d из 10',
@@ -92,7 +90,6 @@ $language_array = Array(
     'report_dead_link' => 'Сообщить о неверной ссылке',
     'reset' => 'Сбросить',
     'size' => 'Размер',
-    'statistic' => 'Статистика',
     'subcategories' => 'Подкатегории',
     'successful' => 'Успешно.',
     'top_5_downloads' => 'ТOП 5 скачанных',
@@ -105,3 +102,4 @@ $language_array = Array(
     'you_have_to_enter_file' => 'Вы должны ввести ссылку на файл!',
     'you_have_to_enter_filename' => 'Вы должны ввести имя файла!'
 );
+

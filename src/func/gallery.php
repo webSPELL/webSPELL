@@ -104,24 +104,26 @@ class Gallery
         $max_y = $picsize_h;
 
         $ext = getimagesize($image);
-        $stop = false;
-        switch (strtolower($ext[2])) {
-            case '2':
+        $stop = true;
+        switch ($ext[2]) {
+            case IMAGETYPE_JPEG:
                 $im = imagecreatefromjpeg($image);
+                $stop = false;
                 break;
-            case '1':
+            case IMAGETYPE_GIF:
                 $im = imagecreatefromgif($image);
+                $stop = false;
                 break;
-            case '3':
+            case IMAGETYPE_PNG:
                 $im = imagecreatefrompng($image);
+                $stop = false;
                 break;
             default:
-                $stop = true;
                 break;
         }
 
-        $result = "";
         if ($stop === false) {
+            $result = "";
             $x = imagesx($im);
             $y = imagesy($im);
 

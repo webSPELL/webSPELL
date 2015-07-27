@@ -24,53 +24,41 @@
 #                                                                        #
 ##########################################################################
 */
-/**
- * Online Language Editor Russia language file for webSPELL 4.2.2
- * @author Stefan Giesecke <webmaster@giesi.com>
- * @copyright Copyright (c) 2010, Stefan Giesecke
- * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
- */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'after'=>'после',
-  'and'=>'и',
-  'article'=>'Статья',
-  'articles'=>'Статьи',
-  'articles_link'=>'<b>ссылка на статью</b>',
-  'ascending'=>'по возрастанию',
-  'before'=>'до',
-  'date_options'=>'Дата',
-  'delete_selected'=>'удалить выбранное',
-  'descending'=>'по убыванию',
-  'faq'=>'FAQ',
-  'faq_link'=>'<b>ссылка на FAQ</b>',
-  'forum'=>'Форум',
-  'forum_link'=>'<b>ссылка на тему</b>',
-  'frequency'=>'Частота',
-  'keyword'=>'Ключевое слово',
-  'new_search'=>'Новый поиск',
-  'news'=>'Новости',
-  'news_link'=>'<b>ссылка на новости</b>',
-  'options'=>'Опции',
-  'or'=>'или',
-  'result_quantity'=>'Результатов на странице',
-  'results_found'=>'найдено результатов',
-  'search'=>'поиск',
-  'search_in'=>'Искать в:',
-  'search_location'=>'Место поиска',
-  'search_term'=>'Искать по слову',
-  'search_title'=>'Расширенный поиск',
-  'security_code'=>'Код проверки',
-  'sort_options'=>'Сортировать',
-  'start_search'=>'Начать поиск',
-  'submit'=>'Подтвердить',
-  'text_contains'=>'Текст содержит',
-  'title_contains'=>'Название содержит',
-  'too_short'=>'Условие поиска слишком короткое. Не менее %min_chars% символов',
-  'wrong_securitycode'=>'Вы ввели неверный код проверки!',
-  'no_result'=>'Записей не найдено для "%s"'
+    'after' => 'после',
+    'and' => 'и',
+    'article' => 'Статья',
+    'articles' => 'Статьи',
+    'articles_link' => '<b>ссылка на статью</b>',
+    'ascending' => 'по возрастанию',
+    'delete_selected' => 'удалить выбранное',
+    'faq_link' => '<b>ссылка на FAQ</b>',
+    'forum_link' => '<b>ссылка на тему</b>',
+    'keyword' => 'Ключевое слово',
+    'new_search' => 'Новый поиск',
+    'news' => 'Новости',
+    'news_link' => '<b>ссылка на новости</b>',
+    'no_result' => 'Записей не найдено для "%s"',
+    'options' => 'Опции',
+    'or' => 'или',
+    'result_quantity' => 'Результатов на странице',
+    'results_found' => 'найдено результатов',
+    'search' => 'поиск',
+    'search_in' => 'Искать в:',
+    'search_location' => 'Место поиска',
+    'search_term' => 'Искать по слову',
+    'search_title' => 'Расширенный поиск',
+    'security_code' => 'Код проверки',
+    'sort_options' => 'Сортировать',
+    'start_search' => 'Начать поиск',
+    'submit' => 'Подтвердить',
+    'text_contains' => 'Текст содержит',
+    'title_contains' => 'Название содержит',
+    'too_short' => 'Условие поиска слишком короткое. Не менее %min_chars% символов',
+    'wrong_securitycode' => 'Вы ввели неверный код проверки!'
 );
 

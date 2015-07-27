@@ -25,17 +25,16 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'admin_button'=>'FAQ Administrator',
-	'answer'=>'Answer',
-	'categories'=>'Kategorier',
-	'faq'=>'FAQ',
-	'faqs'=>'FAQer',
-	'no_categories'=>'ingen kategorier lagret',
-	'no_faq'=>'Ingen spørsmål tilgjengelige <br><a href="index.php?site=faq">Tilbake</a>',
-	'saved_on'=>'saved on'
+    'admin_button' => 'FAQ Administrator',
+    'answer' => 'Answer',
+    'categories' => 'Kategorier',
+    'faqs' => 'FAQer',
+    'no_categories' => 'ingen kategorier lagret',
+    'no_faq' => 'Ingen spørsmål tilgjengelige <br><a href="index.php?site=faq">Tilbake</a>',
+    'saved_on' => 'saved on'
 );
 

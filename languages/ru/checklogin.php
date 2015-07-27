@@ -25,18 +25,17 @@
 ##########################################################################
 */
 
-
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'invalid_password'=>'Неправильный пароль.',
-  'ip_banned'=>'Ваш IP-адрес был забанен на этом сайте.<br>%reason%',
-  'login_successful'=>'Вы успешно зашли!',
-  'no_user'=>'Пользователь <b>%username%</b> недоступен в этой системе.',
-  'not_activated'=>'Ваш аккаунт не активирован.',
-  'session_error'=>'Пожалуйста убедитесь, что cookies включены в вашем интернет-браузере.<br>Если проблема осталась, свяжитесь с вашим интернет провайдером.',
-  'return'=>'<a href="javascript:history.back()">Вернитесь назад</a>',
-  'return_reenter' => '<a href="javascript:history.back()">Вернитесь назад и попробуйте снова.</a>'
+    'invalid_password' => 'Неправильный пароль.',
+    'ip_banned' => 'Ваш IP-адрес был забанен на этом сайте.<br>%reason%',
+    'login_successful' => 'Вы успешно зашли!',
+    'no_user' => 'Пользователь <b>%username%</b> недоступен в этой системе.',
+    'not_activated' => 'Ваш аккаунт не активирован.',
+    'return' => '<a href="javascript:history.back()">Вернитесь назад</a>',
+    'return_reenter' => '<a href="javascript:history.back()">Вернитесь назад и попробуйте снова.</a>',
+    'session_error' => 'Пожалуйста убедитесь, что cookies включены в вашем интернет-браузере.<br>Если проблема осталась, свяжитесь с вашим интернет провайдером.'
 );
 

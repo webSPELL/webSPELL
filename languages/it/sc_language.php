@@ -25,11 +25,11 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'save'=>'salvare',
-	'no_session'=>'Error a cambiare la lingua. Ti preghiamo di assicurarvi che il tuo browser accetta i cookies e riprovi.'
+    'no_session' => 'Error a cambiare la lingua. Ti preghiamo di assicurarvi che il tuo browser accetta i cookies e riprovi.',
+    'save' => 'salvare'
 );
 

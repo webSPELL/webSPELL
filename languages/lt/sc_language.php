@@ -25,11 +25,11 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'save'=>'išsaugoti',
-	'no_session'=>'Prašome patikrinti ar sausainukai įjungti. Bandykite dar kartą pakeisti kalbą.'
+    'no_session' => 'Prašome patikrinti ar sausainukai įjungti. Bandykite dar kartą pakeisti kalbą.',
+    'save' => 'išsaugoti'
 );
 

@@ -25,19 +25,19 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'contact'=>'Kontakt',
-	'country'=>'Kraj',
-	'homepage'=>'Strona',
-	'last_login'=>'Ostatnio zalogowany',
-	'nickname'=>'Nick',
-	'no_users'=>'nie zarejestrowani ',
-	'now_on'=>'aktualnie online',
-	'registered_users'=>'Zarejestrowani użytkownicy',
-	'registration'=>'Zarejestrowany od',
-	'sort'=>'Sortuj:'
+    'contact' => 'Kontakt',
+    'country' => 'Kraj',
+    'homepage' => 'Strona',
+    'last_login' => 'Ostatnio zalogowany',
+    'nickname' => 'Nick',
+    'no_users' => 'nie zarejestrowani ',
+    'now_on' => 'aktualnie online',
+    'registered_users' => 'Zarejestrowani użytkownicy',
+    'registration' => 'Zarejestrowany od',
+    'sort' => 'Sortuj:'
 );
 

@@ -24,39 +24,33 @@
 #                                                                        #
 ##########################################################################
 */
-/**
- * Online Language Editor Finland language file for webSPELL 4.2.2
- * @author Stefan Giesecke <webmaster@giesi.com>
- * @copyright Copyright (c) 2010, Stefan Giesecke
- * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
- */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'advertisement'=>'Mainostus',
-  'articles'=>'Artikkelit',
-  'content'=>'Sisältö',
-  'demos'=>'Demot',
-  'downloads'=>'Lataukset',
-  'hotest_news'=>'Kuumimmat uutiset',
-  'language_switch'=>'Valitse kieli',
-  'latest_news'=>'Viimeisimmät uutiset',
-  'login'=>'Kirjaudu sisään',
-  'matches'=>'Ottelut',
-  'newsletter'=>'Uutislehti',
-  'partners'=>'Kumppanit',
-  'pic_of_the_moment'=>'Hetken kuva',
-  'poll'=>'Äänestystulos',
-  'random_user'=>'Satunnainen käyttäjä',
-  'server'=>'Serverit',
-  'shoutbox'=>'shoutbox',
-  'sponsors'=>'Sponsorit',
-  'squads'=>'Joukkueet',
-  'statistics'=>'Tilastot',
-  'topics'=>'Aiheet',
-  'upcoming_events'=>'Tulevia tapahtumia',
-  'tags'=>'Tunnisteet'
+    'advertisement' => 'Mainostus',
+    'articles' => 'Artikkelit',
+    'content' => 'Sisältö',
+    'demos' => 'Demot',
+    'downloads' => 'Lataukset',
+    'hotest_news' => 'Kuumimmat uutiset',
+    'language_switch' => 'Valitse kieli',
+    'latest_news' => 'Viimeisimmät uutiset',
+    'login' => 'Kirjaudu sisään',
+    'matches' => 'Ottelut',
+    'newsletter' => 'Uutislehti',
+    'partners' => 'Kumppanit',
+    'pic_of_the_moment' => 'Hetken kuva',
+    'poll' => 'Äänestystulos',
+    'random_user' => 'Satunnainen käyttäjä',
+    'server' => 'Serverit',
+    'shoutbox' => 'shoutbox',
+    'sponsors' => 'Sponsorit',
+    'squads' => 'Joukkueet',
+    'statistics' => 'Tilastot',
+    'tags' => 'Tunnisteet',
+    'topics' => 'Aiheet',
+    'upcoming_events' => 'Tulevia tapahtumia'
 );
 

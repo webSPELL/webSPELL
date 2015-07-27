@@ -25,7 +25,7 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
@@ -75,6 +75,6 @@ $language_array = Array(
     'to_rate' => 'Tem de estar registado e com o login feito para poder votar nesta demo!',
     'update_demo' => 'Actualizar demo',
     'user_comments' => 'Activar comentários de utilizadores',
-    'visitor_comments' => 'Activar comentários de visitantes',
-    'vs' => 'vs.'
+    'visitor_comments' => 'Activar comentários de visitantes'
 );
+

@@ -25,17 +25,17 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'add_to_message'=>'Add to message',
-	'close_window'=>'close window',
-	'delete'=>'Slett',
-	'existing_files'=>'Eksisterende filer',
-	'file_upload'=>'Last opp',
-	'invalid_access'=>'Ingen tilgang!',
-	'no_access'=>'Ingen tilgang!',
-	'upload'=>'Last opp'
+    'add_to_message' => 'Add to message',
+    'close_window' => 'close window',
+    'delete' => 'Slett',
+    'existing_files' => 'Eksisterende filer',
+    'file_upload' => 'Last opp',
+    'invalid_access' => 'Ingen tilgang!',
+    'no_access' => 'Ingen tilgang!',
+    'upload' => 'Last opp'
 );
 

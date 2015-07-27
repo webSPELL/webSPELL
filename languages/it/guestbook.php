@@ -25,38 +25,36 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'admin_comment'=>'Amministratore commento',
-	'bbcode'=>'<a href="javascript:void(0);" onclick="window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> è ACCESO',
-	'by'=>'da',
-	'comment'=>'Commento',
-	'delete_selected'=>'Cancellare contrassegnato',
-	'enter_a_message'=>'Inserisci un messaggio!',
-	'error_captcha'=>'Il codice di sicurezza è sbagliato!',
-	'enter_your_name'=>'Deve essere il tuo nome!',
-	'guestbook'=>'Guestbook',
-	'guestbook_comment'=>'scrivere commento',
-	'homepage'=>'Homepage',
-	'html'=>'HTML è SPENTO',
-	'icq'=>'ICQ',
-	'ip'=>'IP',
-	'mail'=>'La tua E-mail',
-	'name'=>'Tuo nome',
-	'new_entry'=>'Nuovo Entrata',
-	'no_access'=>'non sei collegato.<br><a href="index.php?site=login">Entrare</a> | <a href="index.php?site=register">registrare</a>',
-	'options'=>'opzioni',
-	'pmsubject_newentry'=>'Nuovo guestbook entrata',
-	'pmtext_newentry'=>'[b]Qualcuno ha un nuovo messaggio nel guestbook![/b][br][br] [URL=index.php?site=guestbook#%insertid%]Qui si viene al mesaggio[/URL] ',
-	'security_code'=>'Codice di sicurezza',
-	'select_all'=>'Segna tutti',
-	'smilies'=>'<a href="javascript:void(0);" onclick="window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smilies</a> sono ATTIVATO',
-	'sort'=>'Ordina:',
-	'submit'=>'Inoltrare',
-	'update_comment'=>'Salva commento',
-	'wrote'=>'scritto',
-	'your_message'=>'Il tuo messaggio'
+    'admin_comment' => 'Amministratore commento',
+    'bbcode' => '<a href="javascript:void(0);" onclick="window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> è ACCESO',
+    'by' => 'da',
+    'comment' => 'Commento',
+    'delete_selected' => 'Cancellare contrassegnato',
+    'enter_a_message' => 'Inserisci un messaggio!',
+    'enter_your_name' => 'Deve essere il tuo nome!',
+    'error_captcha' => 'Il codice di sicurezza è sbagliato!',
+    'guestbook' => 'Guestbook',
+    'guestbook_comment' => 'scrivere commento',
+    'homepage' => 'Homepage',
+    'html' => 'HTML è SPENTO',
+    'mail' => 'La tua E-mail',
+    'name' => 'Tuo nome',
+    'new_entry' => 'Nuovo Entrata',
+    'no_access' => 'non sei collegato.<br><a href="index.php?site=login">Entrare</a> | <a href="index.php?site=register">registrare</a>',
+    'options' => 'opzioni',
+    'pmsubject_newentry' => 'Nuovo guestbook entrata',
+    'pmtext_newentry' => '[b]Qualcuno ha un nuovo messaggio nel guestbook![/b][br][br] [URL=index.php?site=guestbook#%insertid%]Qui si viene al mesaggio[/URL] ',
+    'security_code' => 'Codice di sicurezza',
+    'select_all' => 'Segna tutti',
+    'smilies' => '<a href="javascript:void(0);" onclick="window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smilies</a> sono ATTIVATO',
+    'sort' => 'Ordina:',
+    'submit' => 'Inoltrare',
+    'update_comment' => 'Salva commento',
+    'wrote' => 'scritto',
+    'your_message' => 'Il tuo messaggio'
 );
 

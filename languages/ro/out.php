@@ -25,13 +25,12 @@
 ##########################################################################
 */
 
-
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'no_frame'=>'Acest site foloseşte cadre. Browser-ul dvs. nu suportă cadre!',
-  'outgoing'=>'De expedierern',
-  'owner_responsible'=>'Proprietarul este responsabil pentru această pagină.'
+    'no_frame' => 'Acest site foloseşte cadre. Browser-ul dvs. nu suportă cadre!',
+    'outgoing' => 'De expedierern',
+    'owner_responsible' => 'Proprietarul este responsabil pentru această pagină.'
 );
 

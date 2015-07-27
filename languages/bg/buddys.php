@@ -24,25 +24,19 @@
 #                                                                        #
 ##########################################################################
 */
-/**
- * Online Language Editor Bulgaria language file for webSPELL 4.2.2
- * @author Stefan Giesecke <webmaster@giesi.com>
- * @copyright Copyright (c) 2010, Stefan Giesecke
- * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
- */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'add_notexists'=>'Потребителят не съществува!',
-  'add_nouserid'=>'Не е наличен потребителски номер!',
-  'add_yourself'=>'Вие не можете да добавите себе си като приятел и не можежете да се игнорирате!',
-  'buddy_nousers'=>'Нямате потребители във вашата приятелска листа!',
-  'buddys'=>'приятели',
-  'ignore_nousers'=>'Нямате игнорирани потребители.',
-  'not_logged'=>'За да променяте вашите приятели трябва да сте регистрирани и логнати.<br><a href="index.php?site=register">Register</a> | <a href="index.php?site=login">Login</a>',
-  'your_buddylist'=>'вашата потребителска листа',
-  'your_ignorelist'=>'вашата листа с игнорирани потребители'
+    'add_notexists' => 'Потребителят не съществува!',
+    'add_nouserid' => 'Не е наличен потребителски номер!',
+    'add_yourself' => 'Вие не можете да добавите себе си като приятел и не можежете да се игнорирате!',
+    'buddy_nousers' => 'Нямате потребители във вашата приятелска листа!',
+    'buddys' => 'приятели',
+    'ignore_nousers' => 'Нямате игнорирани потребители.',
+    'not_logged' => 'За да променяте вашите приятели трябва да сте регистрирани и логнати.<br><a href="index.php?site=register">Register</a> | <a href="index.php?site=login">Login</a>',
+    'your_buddylist' => 'вашата потребителска листа',
+    'your_ignorelist' => 'вашата листа с игнорирани потребители'
 );
 

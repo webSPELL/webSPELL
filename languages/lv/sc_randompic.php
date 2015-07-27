@@ -25,13 +25,12 @@
 ##########################################################################
 */
 
-
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'no_user'=>'Lietotāja attēls nav pieejams',
-  'registered_since'=>'reģistrējies kopš',
-  'view_profile'=>'apskatīt profilu'
+    'no_user' => 'Lietotāja attēls nav pieejams',
+    'registered_since' => 'reģistrējies kopš',
+    'view_profile' => 'apskatīt profilu'
 );
 

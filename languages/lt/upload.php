@@ -25,17 +25,17 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'add_to_message'=>'Pridėti į žinutę',
-  'close_window'=>'uždaryti langą',
-	'delete'=>'Ištrinti',
-	'existing_files'=>'Esantys failai',
-	'file_upload'=>'Atsiųsti failą',
-	'invalid_access'=>'Neprieinama, neturite teisių!',
-	'no_access'=>'Jokia prieiga!',
-	'upload'=>'Atsiųsti'
+    'add_to_message' => 'Pridėti į žinutę',
+    'close_window' => 'uždaryti langą',
+    'delete' => 'Ištrinti',
+    'existing_files' => 'Esantys failai',
+    'file_upload' => 'Atsiųsti failą',
+    'invalid_access' => 'Neprieinama, neturite teisių!',
+    'no_access' => 'Jokia prieiga!',
+    'upload' => 'Atsiųsti'
 );
 

@@ -25,17 +25,17 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'invalid_password'=>'Du har skrevet feil passord.',
-	'ip_banned'=>'Your IP was banned from this site.<br>%reason%',
-	'login_successful'=>'Pålogging vellykket!',
-	'no_user'=>'Brukeren <b>%username%</b> er ikke tilgjenglig på dette systemet.',
-	'not_activated'=>'Din bruker er ikke aktivert.',
-	'session_error'=>'Please make sure that cookies are enabled on your browser.<br>If the problem still occurs, contact the webmaster.',
-  'return'=>'<a href="javascript:history.back()">Tilbake</a>',
-  'return_reenter' => '<a href="javascript:history.back()">Gå tilbake og prøv igjen!</a>'
+    'invalid_password' => 'Du har skrevet feil passord.',
+    'ip_banned' => 'Your IP was banned from this site.<br>%reason%',
+    'login_successful' => 'Pålogging vellykket!',
+    'no_user' => 'Brukeren <b>%username%</b> er ikke tilgjenglig på dette systemet.',
+    'not_activated' => 'Din bruker er ikke aktivert.',
+    'return' => '<a href="javascript:history.back()">Tilbake</a>',
+    'return_reenter' => '<a href="javascript:history.back()">Gå tilbake og prøv igjen!</a>',
+    'session_error' => 'Please make sure that cookies are enabled on your browser.<br>If the problem still occurs, contact the webmaster.'
 );
 

@@ -25,23 +25,22 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'admin'=>'Admin',
-	'buddy_list'=>'Barátok',
-	'cash-box'=>'Pénz-doboz',
-	'edit_account'=>'Profil szerkesztése',
-	'galleries'=>'Galériák',
-	'login'=>'login',
-	'logout'=>'logout',
-	'lost_password'=>'Elfelejtett pw?',
-	'messenger'=>'Üzenetek',
-	'n_a'=>'n/a',
-	'overview'=>'Áttekintés',
-	'register_now'=>'Regisztráció',
-	'registered_users'=>'Regisztrált tagok',
-	'welcome_back'=>'Üdvözlünk'
+    'admin' => 'Admin',
+    'buddy_list' => 'Barátok',
+    'cash-box' => 'Pénz-doboz',
+    'edit_account' => 'Profil szerkesztése',
+    'galleries' => 'Galériák',
+    'login' => 'login',
+    'logout' => 'logout',
+    'lost_password' => 'Elfelejtett pw?',
+    'messenger' => 'Üzenetek',
+    'overview' => 'Áttekintés',
+    'register_now' => 'Regisztráció',
+    'registered_users' => 'Regisztrált tagok',
+    'welcome_back' => 'Üdvözlünk'
 );
 

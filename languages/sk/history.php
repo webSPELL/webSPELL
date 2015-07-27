@@ -25,11 +25,11 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'history'=>'História',
-	'no_history'=>'Momentálne nie je pridaný žiaden záznam.'
+    'history' => 'História',
+    'no_history' => 'Momentálne nie je pridaný žiaden záznam.'
 );
 

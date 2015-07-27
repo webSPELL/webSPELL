@@ -24,26 +24,20 @@
 #                                                                        #
 ##########################################################################
 */
-/**
- * Online Language Editor Turkey language file for webSPELL 4.2.2
- * @author Stefan Giesecke <webmaster@giesi.com>
- * @copyright Copyright (c) 2010, Stefan Giesecke
- * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
- */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'contact'=>'Temas',
-  'country'=>'Ü',
-  'homepage'=>'Anasayfa',
-  'last_login'=>'Son Giriş',
-  'nickname'=>'Rumuz',
-  'no_users'=>'kayıtlı kullanıcı yok',
-  'now_on'=>'Şimdi Çevrimiçi',
-  'registered_users'=>'Kayıtlı kullanıcılar',
-  'registration'=>'yılından bu yana kayıtlı',
-  'sort'=>'Sıralama:'
+    'contact' => 'Temas',
+    'country' => 'Ü',
+    'homepage' => 'Anasayfa',
+    'last_login' => 'Son Giriş',
+    'nickname' => 'Rumuz',
+    'no_users' => 'kayıtlı kullanıcı yok',
+    'now_on' => 'Şimdi Çevrimiçi',
+    'registered_users' => 'Kayıtlı kullanıcılar',
+    'registration' => 'yılından bu yana kayıtlı',
+    'sort' => 'Sıralama:'
 );
 

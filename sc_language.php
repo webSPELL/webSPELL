@@ -30,11 +30,11 @@ if (isset($_GET[ 'new_lang' ])) {
         include("_mysql.php");
         include("_settings.php");
         include("_functions.php");
+
+        $lang = preg_replace("[^a-z]", "", $_GET[ 'new_lang' ]);
+        $_SESSION[ 'language' ] = $lang;
         if ($userID) {
-            $lang = $_GET[ 'new_lang' ];
             safe_query("UPDATE " . PREFIX . "user SET language='" . $lang . "' WHERE userID='" . $userID . "'");
-        } else {
-            $_SESSION[ 'language' ] = $_GET[ 'new_lang' ];
         }
     }
 
@@ -93,7 +93,7 @@ if (isset($_GET[ 'new_lang' ])) {
 
     foreach ($langs as $lang => $flag) {
         echo '<a href="sc_language.php?new_lang=' . $flag . $querystring . '" title="' . $lang . '" class="flag' .
-            ($_language->language == $flag ? ' active' : '') . '"><img src="images/flags/' . $flag . '.gif" alt="' .
+            ($_language->language == $flag ? ' active' : '') . '"><img src="images/languages/' . $flag . '.gif" alt="' .
             $lang . '"></a>';
     }
 }

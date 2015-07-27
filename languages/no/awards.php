@@ -25,28 +25,28 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'award'=>'Pris',
-	'awards'=>'priser',
-	'date'=>'Dato',
-	'delete'=>'slett',
-	'edit'=>'rediger',
-	'edit_award'=>'Rediger pris',
-	'enter_title'=>'You have to enter a title!',
-	'enter_text'=>'You have to enter a text',
-	'event'=>'Begivenhet',
-	'homepage'=>'Hjemmeside',
-	'info'=>'Info',
-	'new_award'=>'Ny pris',
-	'no_access'=>'Ingen tilgang!',
-	'no_entries'=>'Ingen priser tilgjenglige',
-	'ranking'=>'Rangering ',
-	'save_award'=>'Lagre pris',
-	'sort'=>'Sorter',
-	'squad'=>'Lag',
-	'update_award'=>'Oppdater pris'
+    'award' => 'Pris',
+    'awards' => 'priser',
+    'date' => 'Dato',
+    'delete' => 'slett',
+    'edit' => 'rediger',
+    'edit_award' => 'Rediger pris',
+    'enter_text' => 'You have to enter a text',
+    'enter_title' => 'You have to enter a title!',
+    'event' => 'Begivenhet',
+    'homepage' => 'Hjemmeside',
+    'info' => 'Info',
+    'new_award' => 'Ny pris',
+    'no_access' => 'Ingen tilgang!',
+    'no_entries' => 'Ingen priser tilgjenglige',
+    'ranking' => 'Rangering ',
+    'save_award' => 'Lagre pris',
+    'sort' => 'Sorter',
+    'squad' => 'Lag',
+    'update_award' => 'Oppdater pris'
 );
 

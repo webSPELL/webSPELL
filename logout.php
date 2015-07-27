@@ -25,8 +25,9 @@
 ##########################################################################
 */
 
-session_name('ws_session');
-session_start();
+include("_mysql.php");
+include("_settings.php");
+include("_functions.php");
 
 // unset session variables
 $_SESSION = array();
@@ -39,28 +40,6 @@ if (isset($_COOKIE[ session_name() ])) {
 session_destroy();
 
 // remove login cookie
-if (isset($_COOKIE[ 'ws_auth' ])) {
-    $cookieName = "ws_auth";
-    $cookieValue = '';
-    $cookieExpire = time() - (24 * 60 * 60);
-    if (version_compare(PHP_VERSION, '5.2.0') >= 0) {
-        $cookieInfo = session_get_cookie_params();
-        setcookie(
-            $cookieName,
-            $cookieValue,
-            $cookieExpire,
-            $cookieInfo[ 'path' ],
-            $cookieInfo[ 'domain' ],
-            $cookieInfo[ 'secure' ],
-            true
-        );
-    } else {
-        setcookie($cookieName, $cookieValue, $cookieExpire);
-    }
-    unset($cookieName);
-    unset($cookieValue);
-    unset($cookieExpire);
-    unset($cookieInfo);
-}
+webspell\LoginCookie::clear('ws_auth');
 
 header("Location: index.php");

@@ -25,10 +25,10 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'no_access'=>'Accesso negato',
+    'no_access' => 'Accesso negato'
 );
 

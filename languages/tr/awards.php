@@ -24,35 +24,29 @@
 #                                                                        #
 ##########################################################################
 */
-/**
- * Online Language Editor Turkey language file for webSPELL 4.2.2
- * @author Stefan Giesecke <webmaster@giesi.com>
- * @copyright Copyright (c) 2010, Stefan Giesecke
- * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
- */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'award'=>'Ödül',
-  'awards'=>'Ödüller',
-  'date'=>'Tarih',
-  'delete'=>'Sil',
-  'edit'=>'Düzenle',
-  'edit_award'=>'Ödülü Düzenle',
-  'enter_title'=>'Bir başlık girmek zorundasınız!',
-  'enter_text'=>'Bir yazı girmek zorundasınız',
-  'event'=>'Olay',
-  'homepage'=>'Ana Sayfa',
-  'info'=>'Bilgi',
-  'new_award'=>'Yeni ödül',
-  'no_access'=>'Erişim yok!',
-  'no_entries'=>'Ödül Yok',
-  'ranking'=>'Sıralama',
-  'save_award'=>'Ödülü kaydet',
-  'sort'=>'Tür',
-  'squad'=>'Ekip',
-  'update_award'=>'Ödül güncellemesi'
+    'award' => 'Ödül',
+    'awards' => 'Ödüller',
+    'date' => 'Tarih',
+    'delete' => 'Sil',
+    'edit' => 'Düzenle',
+    'edit_award' => 'Ödülü Düzenle',
+    'enter_text' => 'Bir yazı girmek zorundasınız',
+    'enter_title' => 'Bir başlık girmek zorundasınız!',
+    'event' => 'Olay',
+    'homepage' => 'Ana Sayfa',
+    'info' => 'Bilgi',
+    'new_award' => 'Yeni ödül',
+    'no_access' => 'Erişim yok!',
+    'no_entries' => 'Ödül Yok',
+    'ranking' => 'Sıralama',
+    'save_award' => 'Ödülü kaydet',
+    'sort' => 'Tür',
+    'squad' => 'Ekip',
+    'update_award' => 'Ödül güncellemesi'
 );
 

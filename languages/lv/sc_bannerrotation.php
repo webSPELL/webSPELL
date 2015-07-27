@@ -25,11 +25,10 @@
 ##########################################################################
 */
 
-
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'no_banners'=>'nav reklāmas karogu'
+    'no_banners' => 'nav reklāmas karogu'
 );
 

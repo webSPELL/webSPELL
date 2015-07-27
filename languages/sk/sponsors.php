@@ -25,17 +25,17 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'banner'=>'Banner',
-	'homepage'=>'Stránka',
-	'information'=>'Informácie',
-	'mainsponsor'=>'Hlavný sponzor',
-	'mainsponsors'=>'Hlavní sponzori',
-	'no_sponsors'=>'žiaden sponzor',
-	'sponsor'=>'Sponzor',
-	'sponsors'=>'sponzori'
+    'banner' => 'Banner',
+    'homepage' => 'Stránka',
+    'information' => 'Informácie',
+    'mainsponsor' => 'Hlavný sponzor',
+    'mainsponsors' => 'Hlavní sponzori',
+    'no_sponsors' => 'žiaden sponzor',
+    'sponsor' => 'Sponzor',
+    'sponsors' => 'sponzori'
 );
 

@@ -24,25 +24,19 @@
 #                                                                        #
 ##########################################################################
 */
-/**
- * Online Language Editor Turkey language file for webSPELL 4.2.2
- * @author Stefan Giesecke <webmaster@giesi.com>
- * @copyright Copyright (c) 2010, Stefan Giesecke
- * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
- */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'add_notexists'=>'Böyle bir kullanıcı yok',
-  'add_nouserid'=>'Kullanıcı kimliği mevcut değit',
-  'add_yourself'=>'Kendinizi arkadaş olarak ekleyemez ve reddedemezsiniz!',
-  'buddy_nousers'=>'Arkadaş listenizde bir kullanıcı yok',
-  'buddys'=>'Arkadaşlar',
-  'ignore_nousers'=>'Reddedilenler listesinde kimse yok',
-  'not_logged'=>'Arkadaşlarınızı yönetmek için üye olmanız ya da giriş yapmanız gerekmektedir.<br><a href="index.php?site=register">Kaydetmek</a> | <a href="index.php?site=login">Giriş</a>',
-  'your_buddylist'=>'Arkadaş listeniz',
-  'your_ignorelist'=>'Engellenenler listeniz'
+    'add_notexists' => 'Böyle bir kullanıcı yok',
+    'add_nouserid' => 'Kullanıcı kimliği mevcut değit',
+    'add_yourself' => 'Kendinizi arkadaş olarak ekleyemez ve reddedemezsiniz!',
+    'buddy_nousers' => 'Arkadaş listenizde bir kullanıcı yok',
+    'buddys' => 'Arkadaşlar',
+    'ignore_nousers' => 'Reddedilenler listesinde kimse yok',
+    'not_logged' => 'Arkadaşlarınızı yönetmek için üye olmanız ya da giriş yapmanız gerekmektedir.<br><a href="index.php?site=register">Kaydetmek</a> | <a href="index.php?site=login">Giriş</a>',
+    'your_buddylist' => 'Arkadaş listeniz',
+    'your_ignorelist' => 'Engellenenler listeniz'
 );
 

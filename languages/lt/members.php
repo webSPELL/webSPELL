@@ -25,28 +25,28 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'about'=>'Apie',
-	'active'=>'aktyvus',
-	'activity'=>'Aktyvumas',
-	'awards'=>'Apdovanojimai',
-	'back_overview'=>'&raquo; <a href="index.php?site=members"><b>grįžti į narių apžiūrinėjimą</b></a>',
-	'challenge'=>'Iššūkis',
-	'contact'=>'Susisiekimas',
-	'go'=>'Pirmyn!',
-	'inactive'=>'neaktyvus',
-	'member'=>'Narys',
-	'members'=>'nariai',
-	'nickname'=>'Slapyvardis',
-	'no_description'=>'jokio apibūdinimo nėra',
-	'position'=>'Vieta',
-	'results'=>'Rezultatai',
-	'show_details'=>'&raquo; <a href="index.php?site=members&amp;action=show&amp;squadID=%squadID%"><b>Rodyti detales</b></a>',
-	'show_only'=>'Rodyti tik',
-	'status'=>'Padėtis',
-	'town'=>'Miestas'
+    'about' => 'Apie',
+    'active' => 'aktyvus',
+    'activity' => 'Aktyvumas',
+    'awards' => 'Apdovanojimai',
+    'back_overview' => '&raquo; <a href="index.php?site=members"><b>grįžti į narių apžiūrinėjimą</b></a>',
+    'challenge' => 'Iššūkis',
+    'contact' => 'Susisiekimas',
+    'go' => 'Pirmyn!',
+    'inactive' => 'neaktyvus',
+    'member' => 'Narys',
+    'members' => 'nariai',
+    'nickname' => 'Slapyvardis',
+    'no_description' => 'jokio apibūdinimo nėra',
+    'position' => 'Vieta',
+    'results' => 'Rezultatai',
+    'show_details' => '&raquo; <a href="index.php?site=members&amp;action=show&amp;squadID=%squadID%"><b>Rodyti detales</b></a>',
+    'show_only' => 'Rodyti tik',
+    'status' => 'Padėtis',
+    'town' => 'Miestas'
 );
 

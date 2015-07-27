@@ -25,30 +25,29 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'back'=>'Retour au formulaire',
-	'contact'=>'Contact',
-	'description'=>'Utilisez le formulaire suivant pour nous contacter',
-	'enter_mail'=>'Vous devez entrer une adresse mail valide !',
-	'enter_message'=>'Vous devez entrer un message !',
-	'enter_name'=>'Vous devez entrer un pseudo !',
-	'enter_subject'=>'Vous devez entrer un objet !',
-	'errors_there'=>'Erreurs',
-	'mail'=>'Email',
-	'message'=>'Message',
-	'name'=>'Pseudo / Nom',
-	'receiver'=>'Destinataire',
-	'reset'=>'Effacer',
-	'security_code'=>'Code de sécurité',
-	'send'=>'Envoyer',
-	'send_successfull'=>'Votre message a été envoyé avec succès.',
-	'subject'=>'Objet',
-	'title_contact'=>'Formulaire de contact',
-	'unknown_receiver'=>'unknown receiver',
-	'wrong_securitycode'=>'Le code de sécurité est faux !'
+    'back' => 'Retour au formulaire',
+    'contact' => 'Contact',
+    'description' => 'Utilisez le formulaire suivant pour nous contacter',
+    'enter_mail' => 'Vous devez entrer une adresse mail valide !',
+    'enter_message' => 'Vous devez entrer un message !',
+    'enter_name' => 'Vous devez entrer un pseudo !',
+    'enter_subject' => 'Vous devez entrer un objet !',
+    'errors_there' => 'Erreurs',
+    'mail' => 'Email',
+    'message' => 'Message',
+    'name' => 'Pseudo / Nom',
+    'receiver' => 'Destinataire',
+    'reset' => 'Effacer',
+    'security_code' => 'Code de sécurité',
+    'send' => 'Envoyer',
+    'send_successfull' => 'Votre message a été envoyé avec succès.',
+    'subject' => 'Objet',
+    'title_contact' => 'Formulaire de contact',
+    'unknown_receiver' => 'unknown receiver',
+    'wrong_securitycode' => 'Le code de sécurité est faux !'
 );
-
 

@@ -25,7 +25,7 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
@@ -41,7 +41,6 @@ $language_array = Array(
     'database_cl' => 'Adatbázis',
     'delete_file' => 'fájl törlése',
     'description' => 'Leírás',
-    'dl' => 'DL',
     'download_now' => '%filename% letöltése most',
     'download_registered_only' => 'Csak regisztráltak tölthetnek le!',
     'download_via_mirror' => 'letöltés mirrorral',
@@ -105,3 +104,4 @@ $language_array = Array(
     'you_have_to_enter_file' => 'Meg kell adnod egy fájlt / URL-t!',
     'you_have_to_enter_filename' => 'Írj be fájlnevet!'
 );
+

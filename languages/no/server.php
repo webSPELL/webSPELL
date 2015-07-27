@@ -25,19 +25,18 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'game'=>'Game',
-  'information'=>'Informasjon',
-	'ip'=>'IP',
-	'link'=>'Link',
-	'no_server'=>'ingen servere tilgjenglige.',
-	'not_supported'=>'Ikke støttet av webserveren',
-	'online'=>'online',
-	'server'=>'server',
-	'status'=>'Status',
-	'timeout'=>'tidsavbrudd'
+    'game' => 'Game',
+    'information' => 'Informasjon',
+    'link' => 'Link',
+    'no_server' => 'ingen servere tilgjenglige.',
+    'not_supported' => 'Ikke støttet av webserveren',
+    'online' => 'online',
+    'server' => 'server',
+    'status' => 'Status',
+    'timeout' => 'tidsavbrudd'
 );
 

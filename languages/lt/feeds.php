@@ -25,11 +25,11 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'news_feed'=>'Žinių Perdavimas',
-	'latest_news_from'=>'Paskutinės naujienos nuo'
+    'latest_news_from' => 'Paskutinės naujienos nuo',
+    'news_feed' => 'Žinių Perdavimas'
 );
 

@@ -25,7 +25,7 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
@@ -41,7 +41,6 @@ $language_array = Array(
     'database_cl' => 'Bază de date',
     'delete_file' => 'șterge fișierul',
     'description' => 'Descriere',
-    'dl' => 'DL',
     'download_now' => 'Descarcă %filename% acum',
     'download_registered_only' => 'Descarcă numai pentru userii  înregistrati!',
     'download_via_mirror' => 'descară cu linkul următor',
@@ -105,3 +104,4 @@ $language_array = Array(
     'you_have_to_enter_file' => 'Trebuie sa introduci un fișier / url!',
     'you_have_to_enter_filename' => 'Trebuie sa introduci un nume de fișier!'
 );
+

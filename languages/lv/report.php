@@ -25,14 +25,13 @@
 ##########################################################################
 */
 
-
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'no_informations'=>'informācija nav pieejama',
-  'report_message'=>'[b]Jauna %s - sūdzība[/b][br][br]%s-ID: %d[br]Identifikācijas numurs: %s[br]Referer: [url]index.php?site=files&file=%d[/url]',
-  'report_recognized'=>'Jūsu sūdzība pieņemta. Paldies.',
-  'wrong_securitycode'=>'Jūs ievadījāt nepareizu drošības kodu<br><br>[<a href="javascript:back();">atpakaļ</a>]'
+    'no_informations' => 'informācija nav pieejama',
+    'report_message' => '[b]Jauna %s - sūdzība[/b][br][br]%s-ID: %d[br]Identifikācijas numurs: %s[br]Referer: [url]index.php?site=files&file=%d[/url]',
+    'report_recognized' => 'Jūsu sūdzība pieņemta. Paldies.',
+    'wrong_securitycode' => 'Jūs ievadījāt nepareizu drošības kodu<br><br>[<a href="javascript:back();">atpakaļ</a>]'
 );
 

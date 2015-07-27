@@ -24,50 +24,39 @@
 #                                                                        #
 ##########################################################################
 */
-/**
- * Online Language Editor Russia language file for webSPELL 4.2.2
- * @author Stefan Giesecke <webmaster@giesi.com>
- * @copyright Copyright (c) 2010, Stefan Giesecke
- * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
- */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'about_us'=>'О Hас',
-  'archives'=>'Архивы',
-  'articles'=>'Устав',
-  'awards'=>'Награды',
-  'calendar'=>'Календарь',
-  'clan'=>'Клан',
-  'community'=>'Сообщество',
-  'contact'=>'Контакт форма',
-  'demos'=>'Демо',
-  'downloads'=>'Загрузки',
-  'faq'=>'FAQ',
-  'fight_us'=>'Сразится с нами',
-  'forums'=>'Форум',
-  'gallery'=>'Галлерея',
-  'guestbook'=>'Гостевая книга',
-  'history'=>'История',
-  'imprint'=>'Сведения',
-  'join_us'=>'Присоединиться к нам',
-  'links'=>'Ссылки',
-  'links_us'=>'Ссылка на нас',
-  'main'=>'Главная',
-  'matches'=>'Матчи',
-  'media'=>'Медиа',
-  'members'=>'Игроков',
-  'miscellaneous'=>'Разное',
-  'news'=>'Новости',
-  'newsletter'=>'Лента новостей',
-  'polls'=>'Опросы',
-  'registered_users'=>'Регистрированные пользователи',
-  'search'=>'Поиск',
-  'servers'=>'Серверы',
-  'sponsors'=>'Спонсоры',
-  'squads'=>'Отряды',
-  'who_is_online'=>'Кто сейчас онлайн?'
+    'about_us' => 'О Hас',
+    'archives' => 'Архивы',
+    'articles' => 'Устав',
+    'awards' => 'Награды',
+    'calendar' => 'Календарь',
+    'community' => 'Сообщество',
+    'downloads' => 'Загрузки',
+    'fight_us' => 'Сразится с нами',
+    'gallery' => 'Галлерея',
+    'guestbook' => 'Гостевая книга',
+    'history' => 'История',
+    'imprint' => 'Сведения',
+    'join_us' => 'Присоединиться к нам',
+    'links' => 'Ссылки',
+    'links_us' => 'Ссылка на нас',
+    'main' => 'Главная',
+    'matches' => 'Матчи',
+    'media' => 'Медиа',
+    'members' => 'Игроков',
+    'miscellaneous' => 'Разное',
+    'news' => 'Новости',
+    'newsletter' => 'Лента новостей',
+    'polls' => 'Опросы',
+    'registered_users' => 'Регистрированные пользователи',
+    'search' => 'Поиск',
+    'servers' => 'Серверы',
+    'sponsors' => 'Спонсоры',
+    'squads' => 'Отряды',
+    'who_is_online' => 'Кто сейчас онлайн?'
 );
 

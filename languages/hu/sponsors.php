@@ -25,17 +25,17 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'banner'=>'Banner',
-	'homepage'=>'Honlap',
-	'information'=>'Információ',
-	'mainsponsor'=>'Főszponzor',
-	'mainsponsors'=>'Főszponzorok',
-	'no_sponsors'=>'nincs szponzor',
-	'sponsor'=>'Szponzor',
-	'sponsors'=>'szponzorok'
+    'banner' => 'Banner',
+    'homepage' => 'Honlap',
+    'information' => 'Információ',
+    'mainsponsor' => 'Főszponzor',
+    'mainsponsors' => 'Főszponzorok',
+    'no_sponsors' => 'nincs szponzor',
+    'sponsor' => 'Szponzor',
+    'sponsors' => 'szponzorok'
 );
 

@@ -84,6 +84,7 @@ function update_clearfolder($_database)
     }
 }
 
+/** fixme */
 function updateMySQLConfig()
 {
     global $_language;
@@ -115,7 +116,8 @@ function update_base_1($_database)
     $transaction->addQuery("DROP TABLE IF EXISTS `" . PREFIX . "about`");
     $transaction->addQuery("CREATE TABLE `" . PREFIX . "about` (
   `about` longtext NOT NULL
-)");
+  ) DEFAULT CHARSET=utf8 DEFAULT COLLATE utf8_unicode_ci");
+
     $transaction->addQuery("DROP TABLE IF EXISTS `" . PREFIX . "articles`");
     $transaction->addQuery("CREATE TABLE `" . PREFIX . "articles` (
   `articlesID` int(11) NOT NULL AUTO_INCREMENT,
@@ -143,7 +145,9 @@ function update_base_1($_database)
   `viewed` int(11) NOT NULL default '0',
   `comments` int(1) NOT NULL default '0',
   PRIMARY KEY  (`articlesID`)
-) AUTO_INCREMENT=1 ");
+) AUTO_INCREMENT=1
+  DEFAULT CHARSET=utf8 DEFAULT COLLATE utf8_unicode_ci");
+
     $transaction->addQuery("DROP TABLE IF EXISTS `" . PREFIX . "awards`");
     $transaction->addQuery("CREATE TABLE `" . PREFIX . "awards` (
   `awardID` int(11) NOT NULL AUTO_INCREMENT,
@@ -154,7 +158,8 @@ function update_base_1($_database)
   `rang` int(11) NOT NULL default '0',
   `info` text NOT NULL,
   PRIMARY KEY  (`awardID`)
-) AUTO_INCREMENT=1 ");
+) AUTO_INCREMENT=1
+  DEFAULT CHARSET=utf8 DEFAULT COLLATE utf8_unicode_ci");
     if ($transaction->successful()) {
         return array('status' => 'success', 'message' => 'Created tables starting with "a"');
     } else {
@@ -172,7 +177,8 @@ function update_base_2($_database)
   `url` varchar(255) NOT NULL default '',
   `banner` varchar(255) NOT NULL default '',
   PRIMARY KEY  (`bannerID`)
-) AUTO_INCREMENT=1 ");
+) AUTO_INCREMENT=1
+  DEFAULT CHARSET=utf8 DEFAULT COLLATE utf8_unicode_ci");
 
     $transaction->addQuery("DROP TABLE IF EXISTS `" . PREFIX . "buddys`");
     $transaction->addQuery("CREATE TABLE `" . PREFIX . "buddys` (
@@ -181,7 +187,8 @@ function update_base_2($_database)
   `buddy` int(11) NOT NULL default '0',
   `banned` int(1) NOT NULL default '0',
   PRIMARY KEY  (`buddyID`)
-) AUTO_INCREMENT=1 ");
+) AUTO_INCREMENT=1
+  DEFAULT CHARSET=utf8 DEFAULT COLLATE utf8_unicode_ci");
     if ($transaction->successful()) {
         return array('status' => 'success', 'message' => 'Created tables starting with "b"');
     } else {
@@ -205,7 +212,8 @@ function update_base_3($_database)
   `squad` int(11) NOT NULL default '0',
   `konto` text NOT NULL,
   PRIMARY KEY  (`cashID`)
-) AUTO_INCREMENT=1 ");
+) AUTO_INCREMENT=1
+  DEFAULT CHARSET=utf8 DEFAULT COLLATE utf8_unicode_ci");
 
     $transaction->addQuery("DROP TABLE IF EXISTS `" . PREFIX . "cash_box_payed`");
     $transaction->addQuery("CREATE TABLE `" . PREFIX . "cash_box_payed` (
@@ -216,7 +224,8 @@ function update_base_3($_database)
   `date` int(14) NOT NULL default '0',
   `payed` int(1) NOT NULL default '0',
   PRIMARY KEY  (`payedID`)
-) AUTO_INCREMENT=1 ");
+) AUTO_INCREMENT=1
+  DEFAULT CHARSET=utf8 DEFAULT COLLATE utf8_unicode_ci");
 
     $transaction->addQuery("DROP TABLE IF EXISTS `" . PREFIX . "challenge`");
     $transaction->addQuery("CREATE TABLE `" . PREFIX . "challenge` (
@@ -233,7 +242,8 @@ function update_base_3($_database)
   `email` varchar(255) NOT NULL default '',
   `info` text NOT NULL,
   PRIMARY KEY  (`chID`)
-) AUTO_INCREMENT=1 ");
+) AUTO_INCREMENT=1
+  DEFAULT CHARSET=utf8 DEFAULT COLLATE utf8_unicode_ci");
 
     $transaction->addQuery("DROP TABLE IF EXISTS `" . PREFIX . "clanwars`");
     $transaction->addQuery("CREATE TABLE `" . PREFIX . "clanwars` (
@@ -260,7 +270,8 @@ function update_base_3($_database)
   `comments` int(1) NOT NULL default '0',
   `linkpage` varchar(255) NOT NULL default '',
   PRIMARY KEY  (`cwID`)
-) AUTO_INCREMENT=1 ");
+) AUTO_INCREMENT=1
+  DEFAULT CHARSET=utf8 DEFAULT COLLATE utf8_unicode_ci");
 
     $transaction->addQuery("DROP TABLE IF EXISTS `" . PREFIX . "comments`");
     $transaction->addQuery("CREATE TABLE `" . PREFIX . "comments` (
@@ -275,14 +286,14 @@ function update_base_3($_database)
   `email` varchar(255) NOT NULL default '',
   `ip` varchar(255) NOT NULL default '',
   PRIMARY KEY  (`commentID`)
-) AUTO_INCREMENT=1 ");
-
+) AUTO_INCREMENT=1
+  DEFAULT CHARSET=utf8 DEFAULT COLLATE utf8_unicode_ci");
 
     $transaction->addQuery("DROP TABLE IF EXISTS `" . PREFIX . "counter`");
     $transaction->addQuery("CREATE TABLE `" . PREFIX . "counter` (
   `hits` int(20) NOT NULL default '0',
   `online` int(14) NOT NULL default '0'
-)");
+) DEFAULT CHARSET=utf8 DEFAULT COLLATE utf8_unicode_ci");
 
     $transaction->addQuery("INSERT IGNORE INTO `" . PREFIX . "counter` (`hits`, `online`) VALUES (1, '" . time() . "')");
 
@@ -291,13 +302,13 @@ function update_base_3($_database)
   `dates` varchar(255) NOT NULL default '',
   `del` int(20) NOT NULL default '0',
   `ip` varchar(255) NOT NULL default ''
-)");
+) DEFAULT CHARSET=utf8 DEFAULT COLLATE utf8_unicode_ci");
 
     $transaction->addQuery("DROP TABLE IF EXISTS `" . PREFIX . "counter_stats`");
     $transaction->addQuery("CREATE TABLE `" . PREFIX . "counter_stats` (
   `dates` varchar(255) NOT NULL default '',
   `count` int(20) NOT NULL default '0'
-)");
+) DEFAULT CHARSET=utf8 DEFAULT COLLATE utf8_unicode_ci");
 
     if ($transaction->successful()) {
         return array('status' => 'success', 'message' => 'Created tables starting with "c"');
@@ -334,7 +345,8 @@ function update_base_4($_database)
   `comments` int(1) NOT NULL default '0',
   `accesslevel` int(1) NOT NULL default '0',
   PRIMARY KEY  (`demoID`)
-) AUTO_INCREMENT=1 ");
+) AUTO_INCREMENT=1
+  DEFAULT CHARSET=utf8 DEFAULT COLLATE utf8_unicode_ci");
     if ($transaction->successful()) {
         return array('status' => 'success', 'message' => 'Created tables starting with "d"');
     } else {
@@ -357,14 +369,16 @@ function update_base_5($_database)
   `downloads` int(11) NOT NULL default '0',
   `accesslevel` int(1) NOT NULL default '0',
   PRIMARY KEY  (`fileID`)
-) AUTO_INCREMENT=1 ");
+) AUTO_INCREMENT=1
+  DEFAULT CHARSET=utf8 DEFAULT COLLATE utf8_unicode_ci");
 
     $transaction->addQuery("DROP TABLE IF EXISTS `" . PREFIX . "files_categorys`");
     $transaction->addQuery("CREATE TABLE `" . PREFIX . "files_categorys` (
   `filecatID` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(255) NOT NULL default '',
   PRIMARY KEY  (`filecatID`)
-) AUTO_INCREMENT=1 ");
+) AUTO_INCREMENT=1
+  DEFAULT CHARSET=utf8 DEFAULT COLLATE utf8_unicode_ci");
 
     $transaction->addQuery("DROP TABLE IF EXISTS `" . PREFIX . "forum_announcements`");
     $transaction->addQuery("CREATE TABLE `" . PREFIX . "forum_announcements` (
@@ -376,7 +390,8 @@ function update_base_5($_database)
   `topic` varchar(255) NOT NULL default '',
   `announcement` text NOT NULL,
   PRIMARY KEY  (`announceID`)
-) AUTO_INCREMENT=1 ");
+) AUTO_INCREMENT=1
+  DEFAULT CHARSET=utf8 DEFAULT COLLATE utf8_unicode_ci");
 
     $transaction->addQuery("DROP TABLE IF EXISTS `" . PREFIX . "forum_boards`");
     $transaction->addQuery("CREATE TABLE `" . PREFIX . "forum_boards` (
@@ -387,7 +402,8 @@ function update_base_5($_database)
   `intern` int(1) NOT NULL default '0',
   `sort` int(2) NOT NULL default '0',
   PRIMARY KEY  (`boardID`)
-) AUTO_INCREMENT=3 ");
+) AUTO_INCREMENT=3
+  DEFAULT CHARSET=utf8 DEFAULT COLLATE utf8_unicode_ci");
 
     $transaction->addQuery("INSERT IGNORE INTO `" . PREFIX . "forum_boards` (`boardID`, `category`, `name`, `info`, `intern`, `sort`) VALUES (1, 1, 'Main Board', 'The general public board', 0, 1)");
     $transaction->addQuery("INSERT IGNORE INTO `" . PREFIX . "forum_boards` (`boardID`, `category`, `name`, `info`, `intern`, `sort`) VALUES (2, 2, 'Main Board', 'The general intern board', 1, 1)");
@@ -400,7 +416,8 @@ function update_base_5($_database)
   `info` varchar(255) NOT NULL default '',
   `sort` int(11) NOT NULL default '0',
   PRIMARY KEY  (`catID`)
-) AUTO_INCREMENT=3 ");
+) AUTO_INCREMENT=3
+  DEFAULT CHARSET=utf8 DEFAULT COLLATE utf8_unicode_ci");
 
     $transaction->addQuery("INSERT IGNORE INTO `" . PREFIX . "forum_categories` (`catID`, `intern`, `name`, `info`, `sort`) VALUES (1, 0, 'Public Boards', '', 2)");
     $transaction->addQuery("INSERT IGNORE INTO `" . PREFIX . "forum_categories` (`catID`, `intern`, `name`, `info`, `sort`) VALUES (2, 1, 'Intern Boards', '', 3)");
@@ -411,7 +428,8 @@ function update_base_5($_database)
   `boardID` int(11) NOT NULL default '0',
   `userID` int(11) NOT NULL default '0',
   PRIMARY KEY  (`modID`)
-) AUTO_INCREMENT=1 ");
+) AUTO_INCREMENT=1
+  DEFAULT CHARSET=utf8 DEFAULT COLLATE utf8_unicode_ci");
 
     $transaction->addQuery("DROP TABLE IF EXISTS `" . PREFIX . "forum_notify`");
     $transaction->addQuery("CREATE TABLE `" . PREFIX . "forum_notify` (
@@ -419,7 +437,8 @@ function update_base_5($_database)
   `topicID` int(11) NOT NULL default '0',
   `userID` int(11) NOT NULL default '0',
   PRIMARY KEY  (`notifyID`)
-) AUTO_INCREMENT=1 ");
+) AUTO_INCREMENT=1
+  DEFAULT CHARSET=utf8 DEFAULT COLLATE utf8_unicode_ci");
 
     $transaction->addQuery("DROP TABLE IF EXISTS `" . PREFIX . "forum_posts`");
     $transaction->addQuery("CREATE TABLE `" . PREFIX . "forum_posts` (
@@ -430,8 +449,8 @@ function update_base_5($_database)
   `poster` int(11) NOT NULL default '0',
   `message` text NOT NULL,
   PRIMARY KEY  (`postID`)
-) AUTO_INCREMENT=1 ");
-
+) AUTO_INCREMENT=1
+  DEFAULT CHARSET=utf8 DEFAULT COLLATE utf8_unicode_ci");
 
     $transaction->addQuery("DROP TABLE IF EXISTS `" . PREFIX . "forum_ranks`");
     $transaction->addQuery("CREATE TABLE `" . PREFIX . "forum_ranks` (
@@ -442,7 +461,8 @@ function update_base_5($_database)
   `postmax` int(11) NOT NULL default '0',
   `special` int(1) NULL DEFAULT '0',
   PRIMARY KEY  (`rankID`)
-) AUTO_INCREMENT=9 ");
+) AUTO_INCREMENT=9
+  DEFAULT CHARSET=utf8 DEFAULT COLLATE utf8_unicode_ci");
 
     $transaction->addQuery("INSERT IGNORE INTO `" . PREFIX . "forum_ranks` (`rankID`, `rank`, `pic`, `postmin`, `postmax`) VALUES (1, 'Rank 1', 'rank1.gif', 0, 9)");
     $transaction->addQuery("INSERT IGNORE INTO `" . PREFIX . "forum_ranks` (`rankID`, `rank`, `pic`, `postmin`, `postmax`) VALUES (2, 'Rank 2', 'rank2.gif', 10, 24)");
@@ -469,7 +489,8 @@ function update_base_5($_database)
   `closed` int(1) NOT NULL default '0',
   `moveID` int(11) NOT NULL default '0',
   PRIMARY KEY  (`topicID`)
-) AUTO_INCREMENT=1 ");
+) AUTO_INCREMENT=1
+  DEFAULT CHARSET=utf8 DEFAULT COLLATE utf8_unicode_ci");
 
     if ($transaction->successful()) {
         return array('status' => 'success', 'message' => 'Created tables starting with "f"');
@@ -487,7 +508,8 @@ function update_base_6($_database)
   `tag` varchar(5) NOT NULL default '',
   `name` varchar(20) NOT NULL default '',
   PRIMARY KEY  (`gameID`)
-) PACK_KEYS=0 AUTO_INCREMENT=8 ");
+) PACK_KEYS=0 AUTO_INCREMENT=8
+  DEFAULT CHARSET=utf8 DEFAULT COLLATE utf8_unicode_ci");
 
     $transaction->addQuery("INSERT IGNORE INTO `" . PREFIX . "games` (`gameID`, `tag`, `name`) VALUES (1, 'cs', 'Counter-Strike')");
     $transaction->addQuery("INSERT IGNORE INTO `" . PREFIX . "games` (`gameID`, `tag`, `name`) VALUES (2, 'ut', 'Unreal Tournament')");
@@ -508,7 +530,8 @@ function update_base_6($_database)
   `ip` varchar(255) NOT NULL default '',
   `comment` text NOT NULL,
   PRIMARY KEY  (`gbID`)
-) AUTO_INCREMENT=1 ");
+) AUTO_INCREMENT=1
+  DEFAULT CHARSET=utf8 DEFAULT COLLATE utf8_unicode_ci");
     if ($transaction->successful()) {
         return array('status' => 'success', 'message' => 'Created tables starting with "g"');
     } else {
@@ -522,7 +545,7 @@ function update_base_7($_database)
     $transaction->addQuery("DROP TABLE IF EXISTS `" . PREFIX . "history`");
     $transaction->addQuery("CREATE TABLE `" . PREFIX . "history` (
   `history` text NOT NULL
-)");
+) DEFAULT CHARSET=utf8 DEFAULT COLLATE utf8_unicode_ci");
     if ($transaction->successful()) {
         return array('status' => 'success', 'message' => 'Created tables starting with "h"');
     } else {
@@ -535,7 +558,6 @@ function update_base_8($_database)
     $transaction = new Transaction($_database);
     $transaction->addQuery("DROP TABLE IF EXISTS `" . PREFIX . "links`");
     $transaction->addQuery("CREATE TABLE `" . PREFIX . "links` (
-
   `linkID` int(11) NOT NULL AUTO_INCREMENT,
   `linkcatID` int(11) NOT NULL default '0',
   `name` varchar(255) NOT NULL default '',
@@ -543,7 +565,8 @@ function update_base_8($_database)
   `info` varchar(255) NOT NULL default '',
   `banner` varchar(255) NOT NULL default '',
   PRIMARY KEY  (`linkID`)
-) AUTO_INCREMENT=2 ");
+) AUTO_INCREMENT=2
+  DEFAULT CHARSET=utf8 DEFAULT COLLATE utf8_unicode_ci");
 
     $transaction->addQuery("INSERT IGNORE INTO `" . PREFIX . "links` (`linkID`, `linkcatID`, `name`, `url`, `info`, `banner`) VALUES (1, 1, 'webSPELL.org', 'http://www.webspell.org', 'webspell.org: Webdesign und Webdevelopment', '1.gif')");
 
@@ -552,7 +575,8 @@ function update_base_8($_database)
   `linkcatID` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(255) NOT NULL default '',
   PRIMARY KEY  (`linkcatID`)
-) AUTO_INCREMENT=2 ");
+) AUTO_INCREMENT=2
+  DEFAULT CHARSET=utf8 DEFAULT COLLATE utf8_unicode_ci");
 
     $transaction->addQuery("INSERT IGNORE INTO `" . PREFIX . "links_categorys` (`linkcatID`, `name`) VALUES (1, 'Webdesign')");
 
@@ -562,14 +586,14 @@ function update_base_8($_database)
   `name` varchar(255) NOT NULL default '',
   `file` varchar(255) NOT NULL default '',
   PRIMARY KEY  (`bannerID`)
-) AUTO_INCREMENT=1 ");
+) AUTO_INCREMENT=1
+  DEFAULT CHARSET=utf8 DEFAULT COLLATE utf8_unicode_ci");
     if ($transaction->successful()) {
         return array('status' => 'success', 'message' => 'Created tables starting with "l"');
     } else {
         return array('status' => 'fail', 'message' => 'Failed to create tables starting with "l"<br/>' . $transaction->getError());
     }
 }
-
 
 function update_base_9($_database)
 {
@@ -585,14 +609,14 @@ function update_base_9($_database)
   `message` text NOT NULL,
   `viewed` int(11) NOT NULL default '0',
   PRIMARY KEY  (`messageID`)
-) AUTO_INCREMENT=1 ");
+) AUTO_INCREMENT=1
+  DEFAULT CHARSET=utf8 DEFAULT COLLATE utf8_unicode_ci");
     if ($transaction->successful()) {
         return array('status' => 'success', 'message' => 'Created tables starting with "m"');
     } else {
         return array('status' => 'fail', 'message' => 'Failed to create tables starting with "m"<br/>' . $transaction->getError());
     }
 }
-
 
 function update_base_10($_database)
 {
@@ -627,7 +651,8 @@ function update_base_10($_database)
   `comments` int(1) NOT NULL default '0',
   `cwID` int(11) NOT NULL default '0',
   PRIMARY KEY  (`newsID`)
-) AUTO_INCREMENT=1 ");
+) AUTO_INCREMENT=1
+  DEFAULT CHARSET=utf8 DEFAULT COLLATE utf8_unicode_ci");
 
     $transaction->addQuery("DROP TABLE IF EXISTS `" . PREFIX . "news_languages`");
     $transaction->addQuery("CREATE TABLE `" . PREFIX . "news_languages` (
@@ -636,7 +661,8 @@ function update_base_10($_database)
   `lang` char(2) NOT NULL default '',
   `alt` varchar(255) NOT NULL default '',
   PRIMARY KEY  (`langID`)
-) AUTO_INCREMENT=12 ");
+) AUTO_INCREMENT=12
+  DEFAULT CHARSET=utf8 DEFAULT COLLATE utf8_unicode_ci");
 
     $transaction->addQuery("INSERT IGNORE INTO `" . PREFIX . "news_languages` (`langID`, `language`, `lang`, `alt`) VALUES (1, 'danish', 'dk', 'danish')");
     $transaction->addQuery("INSERT IGNORE INTO `" . PREFIX . "news_languages` (`langID`, `language`, `lang`, `alt`) VALUES (2, 'dutch', 'nl', 'dutch')");
@@ -656,20 +682,20 @@ function update_base_10($_database)
   `rubric` varchar(255) NOT NULL default '',
   `pic` varchar(255) NOT NULL default '',
   PRIMARY KEY  (`rubricID`)
-) AUTO_INCREMENT=1 ");
+) AUTO_INCREMENT=1
+  DEFAULT CHARSET=utf8 DEFAULT COLLATE utf8_unicode_ci");
 
     $transaction->addQuery("DROP TABLE IF EXISTS `" . PREFIX . "newsletter`");
     $transaction->addQuery("CREATE TABLE `" . PREFIX . "newsletter` (
   `email` varchar(255) NOT NULL default '',
   `pass` varchar(255) NOT NULL default ''
-)");
+) DEFAULT CHARSET=utf8 DEFAULT COLLATE utf8_unicode_ci");
     if ($transaction->successful()) {
         return array('status' => 'success', 'message' => 'Created tables starting with "n"');
     } else {
         return array('status' => 'fail', 'message' => 'Failed to create tables starting with "n"<br/>' . $transaction->getError());
     }
 }
-
 
 function update_base_11($_database)
 {
@@ -682,7 +708,8 @@ function update_base_11($_database)
   `banner` varchar(255) NOT NULL default '',
   `sort` int(11) NOT NULL default '0',
   PRIMARY KEY  (`partnerID`)
-) PACK_KEYS=0 AUTO_INCREMENT=2 ");
+) PACK_KEYS=0 AUTO_INCREMENT=2
+  DEFAULT CHARSET=utf8 DEFAULT COLLATE utf8_unicode_ci");
 
     $transaction->addQuery("INSERT IGNORE INTO `" . PREFIX . "partners` (`partnerID`, `name`, `url`, `banner`, `sort`) VALUES (1, 'webSPELL 4', 'http://www.webspell.org', '1.gif', 1)");
 
@@ -704,7 +731,8 @@ function update_base_11($_database)
   `o10` varchar(255) NOT NULL default '',
   `comments` int(1) NOT NULL default '0',
   PRIMARY KEY  (`pollID`)
-) AUTO_INCREMENT=1 ");
+) AUTO_INCREMENT=1
+  DEFAULT CHARSET=utf8 DEFAULT COLLATE utf8_unicode_ci");
 
     $transaction->addQuery("DROP TABLE IF EXISTS `" . PREFIX . "poll_votes`");
     $transaction->addQuery("CREATE TABLE `" . PREFIX . "poll_votes` (
@@ -720,14 +748,13 @@ function update_base_11($_database)
   `o9` int(11) NOT NULL default '0',
   `o10` int(11) NOT NULL default '0',
   PRIMARY KEY  (`pollID`)
-)");
+) DEFAULT CHARSET=utf8 DEFAULT COLLATE utf8_unicode_ci");
     if ($transaction->successful()) {
         return array('status' => 'success', 'message' => 'Created tables starting with "p"');
     } else {
         return array('status' => 'fail', 'message' => 'Failed to create tables starting with "p"<br/>' . $transaction->getError());
     }
 }
-
 
 function update_base_12($_database)
 {
@@ -742,7 +769,8 @@ function update_base_12($_database)
   `game` char(3) NOT NULL default '',
   `info` text NOT NULL,
   PRIMARY KEY  (`serverID`)
-) AUTO_INCREMENT=1 ");
+) AUTO_INCREMENT=1
+  DEFAULT CHARSET=utf8 DEFAULT COLLATE utf8_unicode_ci");
 
     $transaction->addQuery("DROP TABLE IF EXISTS `" . PREFIX . "settings`");
     $transaction->addQuery("CREATE TABLE `" . PREFIX . "settings` (
@@ -777,14 +805,9 @@ function update_base_12($_database)
   `users` int(11) NOT NULL default '0',
   `profilelast` int(11) NOT NULL default '0',
   `topnewsID` int(11) NOT NULL default '0',
-<<<<<<< HEAD
-=======
-  `sessionduration` int(3) NOT NULL default '0',
-  `sc_files` int(1) NOT NULL default '0',
-  `sc_demos` int(1) NOT NULL default '0',
->>>>>>> dev
   PRIMARY KEY  (`settingID`)
-) AUTO_INCREMENT=2 ");
+) AUTO_INCREMENT=2
+  DEFAULT CHARSET=utf8 DEFAULT COLLATE utf8_unicode_ci");
 
     $transaction->addQuery("INSERT IGNORE INTO `" . PREFIX . "settings` (`settingID`, `hpurl`, `clanname`, `clantag`, `adminname`, `adminemail`, `news`, `newsarchiv`, `headlines`, `headlineschars`, `articles`, `latestarticles`, `articleschars`, `clanwars`, `results`, `upcoming`, `shoutbox`, `sball`, `sbrefresh`, `topics`, `posts`, `latesttopics`, `hideboards`, `awards`, `demos`, `guestbook`, `feedback`, `messages`, `users`, `profilelast`, `topnewsID`) VALUES
      (1, '" . $url . "', 'Clanname', 'MyClan', 'Admin-Name', '" . $adminmail . "', 10, 20, 10, 22, 20, 5, 20, 20, 5, 5, 5, 30, 60, 20, 10, 10, 1, 20, 20, 20, 20, 20, 60, 10, 27)");
@@ -797,8 +820,8 @@ function update_base_12($_database)
   `message` varchar(255) NOT NULL default '',
   `ip` varchar(255) NOT NULL default '',
   PRIMARY KEY  (`shoutID`)
-) AUTO_INCREMENT=1 ");
-
+) AUTO_INCREMENT=1
+  DEFAULT CHARSET=utf8 DEFAULT COLLATE utf8_unicode_ci");
 
     $transaction->addQuery("DROP TABLE IF EXISTS `" . PREFIX . "sponsors`");
     $transaction->addQuery("CREATE TABLE `" . PREFIX . "sponsors` (
@@ -808,7 +831,8 @@ function update_base_12($_database)
   `info` text NOT NULL,
   `banner` varchar(255) NOT NULL default '',
   PRIMARY KEY  (`sponsorID`)
-) AUTO_INCREMENT=1 ");
+) AUTO_INCREMENT=1
+  DEFAULT CHARSET=utf8 DEFAULT COLLATE utf8_unicode_ci");
 
     $transaction->addQuery("DROP TABLE IF EXISTS `" . PREFIX . "squads`");
     $transaction->addQuery("CREATE TABLE `" . PREFIX . "squads` (
@@ -819,7 +843,8 @@ function update_base_12($_database)
   `info` varchar(255) NOT NULL default '',
   `sort` int(11) NOT NULL default '0',
   PRIMARY KEY  (`squadID`)
-) AUTO_INCREMENT=1 ");
+) AUTO_INCREMENT=1
+  DEFAULT CHARSET=utf8 DEFAULT COLLATE utf8_unicode_ci");
 
     $transaction->addQuery("DROP TABLE IF EXISTS `" . PREFIX . "squads_members`");
     $transaction->addQuery("CREATE TABLE `" . PREFIX . "squads_members` (
@@ -832,8 +857,8 @@ function update_base_12($_database)
   `joinmember` int(1) NOT NULL default '0',
   `warmember` int(1) NOT NULL default '0',
   PRIMARY KEY  (`sqmID`)
-) AUTO_INCREMENT=1 ");
-
+) AUTO_INCREMENT=1
+  DEFAULT CHARSET=utf8 DEFAULT COLLATE utf8_unicode_ci");
 
     $transaction->addQuery("DROP TABLE IF EXISTS `" . PREFIX . "styles`");
     $transaction->addQuery("CREATE TABLE `" . PREFIX . "styles` (
@@ -851,7 +876,8 @@ function update_base_12($_database)
   `loose` varchar(255) NOT NULL default '',
   `draw` varchar(255) NOT NULL default '',
   PRIMARY KEY  (`styleID`)
-) AUTO_INCREMENT=2 ");
+) AUTO_INCREMENT=2
+  DEFAULT CHARSET=utf8 DEFAULT COLLATE utf8_unicode_ci");
 
     $transaction->addQuery("INSERT IGNORE INTO `" . PREFIX . "styles` (`styleID`, `title`, `bgpage`, `border`, `bghead`, `bgcat`, `bg1`, `bg2`, `bg3`, `bg4`, `win`, `loose`, `draw`) VALUES (1, 'webSPELL v4', '#E6E6E6', '#666666', '#333333', '#FFFFFF', '#FFFFFF', '#F2F2F2', '#F2F2F2', '#D9D9D9', '#00CC00', '#DD0000', '#FF6600')");
 
@@ -891,7 +917,8 @@ function update_base_13($_database)
   `locationhp` varchar(255) NOT NULL default '',
   `dateinfo` text NOT NULL,
   PRIMARY KEY  (`upID`)
-) AUTO_INCREMENT=1 ");
+) AUTO_INCREMENT=1
+  DEFAULT CHARSET=utf8 DEFAULT COLLATE utf8_unicode_ci");
 
     $transaction->addQuery("DROP TABLE IF EXISTS `" . PREFIX . "upcoming_announce`");
     $transaction->addQuery("CREATE TABLE `" . PREFIX . "upcoming_announce` (
@@ -900,7 +927,8 @@ function update_base_13($_database)
   `userID` int(11) NOT NULL default '0',
   `status` char(1) NOT NULL default '',
   PRIMARY KEY  (`annID`)
-) AUTO_INCREMENT=1 ");
+) AUTO_INCREMENT=1
+  DEFAULT CHARSET=utf8 DEFAULT COLLATE utf8_unicode_ci");
 
     $transaction->addQuery("DROP TABLE IF EXISTS `" . PREFIX . "user`");
     $transaction->addQuery("CREATE TABLE `" . PREFIX . "user` (
@@ -948,8 +976,8 @@ function update_base_13($_database)
   `demos` text NOT NULL,
   `special_rank` INT(11) NULL DEFAULT '0',
   PRIMARY KEY  (`userID`)
-) AUTO_INCREMENT=2 ");
-
+) AUTO_INCREMENT=2
+  DEFAULT CHARSET=utf8 DEFAULT COLLATE utf8_unicode_ci");
 
     $transaction->addQuery("INSERT IGNORE INTO `" . PREFIX . "user` (`userID`, `registerdate`, `lastlogin`, `username`, `password`, `nickname`, `email`, `firstname`, `lastname`, `sex`, `country`, `town`, `birthday`, `icq`, `avatar`, `usertext`, `userpic`, `clantag`, `clanname`, `clanhp`, `clanirc`, `clanhistory`, `cpu`, `mainboard`, `ram`, `monitor`, `graphiccard`, `soundcard`, `connection`, `keyboard`, `mouse`, `mousepad`, `newsletter`, `about`, `pmgot`, `pmsent`, `visits`, `banned`, `ip`, `topics`, `articles`, `demos`)
       VALUES (1, '" . time() . "', '" . time() . "', '" . $adminname . "', '" . $adminpassword . "', '" . $adminname . "', '" . $adminmail . "', '', '', 'u', '', '', 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 1, '', 0, 0, 0, '', '', '', '', '')");
@@ -966,7 +994,8 @@ function update_base_13($_database)
   `ip` varchar(255) NOT NULL default '',
   `comment` text NOT NULL,
   PRIMARY KEY  (`gbID`)
-) AUTO_INCREMENT=1 ");
+) AUTO_INCREMENT=1
+  DEFAULT CHARSET=utf8 DEFAULT COLLATE utf8_unicode_ci");
 
     $transaction->addQuery("DROP TABLE IF EXISTS `" . PREFIX . "user_groups`");
     $transaction->addQuery("CREATE TABLE `" . PREFIX . "user_groups` (
@@ -985,7 +1014,8 @@ function update_base_13($_database)
   `files` int(1) NOT NULL default '0',
   `cash` int(1) NOT NULL default '0',
   PRIMARY KEY  (`usgID`)
-) AUTO_INCREMENT=2 ");
+) AUTO_INCREMENT=2
+  DEFAULT CHARSET=utf8 DEFAULT COLLATE utf8_unicode_ci");
 
     $transaction->addQuery("INSERT INTO " . PREFIX . "user_groups (usgID, userID, news, newsletter, polls, forum, moderator, internboards, clanwars, feedback, user, page, files)
 VALUES (1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1)");
@@ -997,7 +1027,8 @@ VALUES (1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1)");
   `visitor` int(11) NOT NULL default '0',
   `date` int(14) NOT NULL default '0',
   PRIMARY KEY  (`visitID`)
-) AUTO_INCREMENT=1 ");
+) AUTO_INCREMENT=1
+  DEFAULT CHARSET=utf8 DEFAULT COLLATE utf8_unicode_ci");
     if ($transaction->successful()) {
         return array('status' => 'success', 'message' => 'Created tables starting with "u"');
     } else {
@@ -1015,8 +1046,7 @@ function update_base_14($_database)
   `userID` int(11) NOT NULL default '0',
   `nickname` varchar(255) NOT NULL default '',
   `site` varchar(255) NOT NULL default ''
-)");
-
+) DEFAULT CHARSET=utf8 DEFAULT COLLATE utf8_unicode_ci");
 
     $transaction->addQuery("DROP TABLE IF EXISTS `" . PREFIX . "whowasonline`");
     $transaction->addQuery("CREATE TABLE `" . PREFIX . "whowasonline` (
@@ -1025,7 +1055,7 @@ function update_base_14($_database)
   `userID` int(11) NOT NULL default '0',
   `nickname` varchar(255) NOT NULL default '',
   `site` varchar(255) NOT NULL default ''
-)");
+) DEFAULT CHARSET=utf8 DEFAULT COLLATE utf8_unicode_ci");
     if ($transaction->successful()) {
         return array('status' => 'success', 'message' => 'Created tables starting with "w"');
     } else {
@@ -1039,7 +1069,7 @@ function update_31_4beta4($_database)
     $transaction->addQuery("DROP TABLE IF EXISTS `" . PREFIX . "about`");
     $transaction->addQuery("CREATE TABLE `" . PREFIX . "about` (
   `about` longtext NOT NULL
- )");
+ ) DEFAULT CHARSET=utf8 DEFAULT COLLATE utf8_unicode_ci");
 
     $transaction->addQuery("ALTER TABLE `" . PREFIX . "awards` ADD `homepage` VARCHAR( 255 ) NOT NULL ,
  ADD `rang` INT DEFAULT '0' NOT NULL ,
@@ -1055,7 +1085,7 @@ function update_31_4beta4($_database)
     $transaction->addQuery("CREATE TABLE `" . PREFIX . "counter_stats` (
   `dates` varchar(255) NOT NULL default '',
   `count` int(20) NOT NULL default '0'
- )");
+ ) DEFAULT CHARSET=utf8 DEFAULT COLLATE utf8_unicode_ci");
 
     $transaction->addQuery("ALTER TABLE `" . PREFIX . "demos` ADD `accesslevel` INT( 1 ) DEFAULT '0' NOT NULL");
     $transaction->addQuery("ALTER TABLE `" . PREFIX . "files` ADD `accesslevel` INT( 1 ) DEFAULT '0' NOT NULL");
@@ -1066,7 +1096,8 @@ function update_31_4beta4($_database)
   `tag` varchar(5) NOT NULL default '',
   `name` varchar(20) NOT NULL default '',
   PRIMARY KEY  (`gameID`)
- ) AUTO_INCREMENT=8 ");
+ ) AUTO_INCREMENT=8
+   DEFAULT CHARSET=utf8 DEFAULT COLLATE utf8_unicode_ci");
 
     $transaction->addQuery("INSERT IGNORE INTO `" . PREFIX . "games` (`gameID`, `tag`, `name`) VALUES (1, 'cs', 'Counter-Strike')");
     $transaction->addQuery("INSERT IGNORE INTO `" . PREFIX . "games` (`gameID`, `tag`, `name`) VALUES (2, 'ut', 'Unreal Tournament')");
@@ -1082,13 +1113,14 @@ function update_31_4beta4($_database)
   `name` varchar(255) NOT NULL default '',
   `file` varchar(255) NOT NULL default '',
   PRIMARY KEY  (`bannerID`)
- ) AUTO_INCREMENT=1 ");
+ ) AUTO_INCREMENT=1
+   DEFAULT CHARSET=utf8 DEFAULT COLLATE utf8_unicode_ci");
 
     $transaction->addQuery("DROP TABLE IF EXISTS `" . PREFIX . "newsletter`");
     $transaction->addQuery("CREATE TABLE `" . PREFIX . "newsletter` (
   `email` varchar(255) NOT NULL default '',
   `pass` varchar(255) NOT NULL default ''
- )");
+ ) DEFAULT CHARSET=utf8 DEFAULT COLLATE utf8_unicode_ci");
 
     $transaction->addQuery("ALTER TABLE `" . PREFIX . "poll` ADD `laufzeit` BIGINT(20) NOT NULL after `aktiv`");
 
@@ -1113,13 +1145,14 @@ function update_31_4beta4($_database)
   `ip` varchar(255) NOT NULL default '',
   `comment` text NOT NULL,
   PRIMARY KEY  (`gbID`)
- ) AUTO_INCREMENT=1 ");
+ ) AUTO_INCREMENT=1
+   DEFAULT CHARSET=utf8 DEFAULT COLLATE utf8_unicode_ci");
 
     $transaction->addQuery("ALTER TABLE `" . PREFIX . "servers` CHANGE `game` `game` CHAR( 3 ) NOT NULL");
     if ($transaction->successful()) {
         return array('status' => 'success', 'message' => 'Updated to webSPELL 4 Beta 4');
     } else {
-        return array('status' => 'fail', 'message' => 'Failed to updated to webSPELL 4 Beta 4<br/>' . $transaction->getError());
+        return array('status' => 'fail', 'message' => 'Failed to update to webSPELL 4 Beta 4<br/>' . $transaction->getError());
     }
 }
 
@@ -1134,7 +1167,7 @@ function update_4beta4_4beta5($_database)
     $transaction->addQuery("CREATE TABLE `" . PREFIX . "lock` (
   `time` INT NOT NULL ,
   `reason` TEXT NOT NULL
- )");
+ ) DEFAULT CHARSET=utf8 DEFAULT COLLATE utf8_unicode_ci");
 
     $transaction->addQuery("ALTER TABLE `" . PREFIX . "news` ADD `intern` INT( 1 ) DEFAULT '0' NOT NULL");
     $transaction->addQuery("ALTER TABLE `" . PREFIX . "guestbook` ADD `admincomment` TEXT NOT NULL");
@@ -1146,12 +1179,12 @@ function update_4beta4_4beta5($_database)
   `name` VARCHAR( 255 ) NOT NULL ,
   `accesslevel` INT( 1 ) NOT NULL ,
   PRIMARY KEY ( `staticID` )
-  );");
+  ) DEFAULT CHARSET=utf8 DEFAULT COLLATE utf8_unicode_ci");
 
     if ($transaction->successful()) {
         return array('status' => 'success', 'message' => 'Updated to webSPELL 4 Beta 5');
     } else {
-        return array('status' => 'fail', 'message' => 'Failed to updated to webSPELL 4 Beta 5<br/>' . $transaction->getError());
+        return array('status' => 'fail', 'message' => 'Failed to update to webSPELL 4 Beta 5<br/>' . $transaction->getError());
     }
 
 }
@@ -1164,10 +1197,10 @@ function update_4beta5_4beta6($_database)
 
     $transaction->addQuery("DROP TABLE IF EXISTS `" . PREFIX . "imprint`");
     $transaction->addQuery("CREATE TABLE `" . PREFIX . "imprint` (
-`imprintID` INT NOT NULL AUTO_INCREMENT ,
-`imprint` TEXT NOT NULL ,
-PRIMARY KEY ( `imprintID` )
-)");
+  `imprintID` INT NOT NULL AUTO_INCREMENT ,
+  `imprint` TEXT NOT NULL ,
+  PRIMARY KEY ( `imprintID` )
+  ) DEFAULT CHARSET=utf8 DEFAULT COLLATE utf8_unicode_ci");
 
     $transaction->addQuery("ALTER TABLE `" . PREFIX . "settings` ADD `imprint` INT( 1 ) DEFAULT '0' NOT NULL");
     $transaction->addQuery("ALTER TABLE `" . PREFIX . "poll` ADD `hosts` TEXT NOT NULL");
@@ -1177,7 +1210,7 @@ PRIMARY KEY ( `imprintID` )
     if ($transaction->successful()) {
         return array('status' => 'success', 'message' => 'Updated to webSPELL 4 Beta 6');
     } else {
-        return array('status' => 'fail', 'message' => 'Failed to updated to webSPELL 4 Beta 6<br/>' . $transaction->getError());
+        return array('status' => 'fail', 'message' => 'Failed to update to webSPELL 4 Beta 6<br/>' . $transaction->getError());
     }
 
 }
@@ -1188,8 +1221,8 @@ function update_4beta6_4final_1($_database)
 
     //files
     $transaction->addQuery("ALTER TABLE `" . PREFIX . "files` ADD `votes` INT NOT NULL ,
-ADD `points` INT NOT NULL ,
-ADD `rating` INT NOT NULL");
+  ADD `points` INT NOT NULL ,
+  ADD `rating` INT NOT NULL");
     $transaction->addQuery("ALTER TABLE `" . PREFIX . "files` ADD `mirrors` TEXT NOT NULL AFTER `file`");
 
     $transaction->addQuery("ALTER TABLE `" . PREFIX . "user` ADD `files` TEXT NOT NULL AFTER `demos`");
@@ -1200,32 +1233,32 @@ ADD `rating` INT NOT NULL");
     //gallery
     $transaction->addQuery("DROP TABLE IF EXISTS `" . PREFIX . "gallery`");
     $transaction->addQuery("CREATE TABLE `" . PREFIX . "gallery` (
-`galleryID` INT NOT NULL AUTO_INCREMENT ,
-`userID` INT NOT NULL ,
-`name` VARCHAR( 255 ) NOT NULL ,
-`date` INT( 14 ) NOT NULL ,
-`groupID` INT NOT NULL ,
-PRIMARY KEY ( `galleryID` )
-)");
+  `galleryID` INT NOT NULL AUTO_INCREMENT ,
+  `userID` INT NOT NULL ,
+  `name` VARCHAR( 255 ) NOT NULL ,
+  `date` INT( 14 ) NOT NULL ,
+  `groupID` INT NOT NULL ,
+  PRIMARY KEY ( `galleryID` )
+  ) DEFAULT CHARSET=utf8 DEFAULT COLLATE utf8_unicode_ci");
 
     $transaction->addQuery("DROP TABLE IF EXISTS `" . PREFIX . "gallery_groups`");
     $transaction->addQuery("CREATE TABLE `" . PREFIX . "gallery_groups` (
-`groupID` INT NOT NULL AUTO_INCREMENT ,
-`name` VARCHAR( 255 ) NOT NULL ,
-`sort` INT NOT NULL ,
-PRIMARY KEY ( `groupID` )
-)");
+  `groupID` INT NOT NULL AUTO_INCREMENT ,
+  `name` VARCHAR( 255 ) NOT NULL ,
+  `sort` INT NOT NULL ,
+  PRIMARY KEY ( `groupID` )
+  ) DEFAULT CHARSET=utf8 DEFAULT COLLATE utf8_unicode_ci");
 
     $transaction->addQuery("DROP TABLE IF EXISTS `" . PREFIX . "gallery_pictures`");
     $transaction->addQuery("CREATE TABLE `" . PREFIX . "gallery_pictures` (
-`picID` INT NOT NULL AUTO_INCREMENT ,
-`galleryID` INT NOT NULL ,
-`name` VARCHAR( 255 ) NOT NULL ,
-`comment` TEXT NOT NULL ,
-`views` INT DEFAULT '0' NOT NULL ,
-`comments` INT( 1 ) DEFAULT '1' NOT NULL ,
-PRIMARY KEY ( `picID` )
-)");
+  `picID` INT NOT NULL AUTO_INCREMENT ,
+  `galleryID` INT NOT NULL ,
+  `name` VARCHAR( 255 ) NOT NULL ,
+  `comment` TEXT NOT NULL ,
+  `views` INT DEFAULT '0' NOT NULL ,
+  `comments` INT( 1 ) DEFAULT '1' NOT NULL ,
+  PRIMARY KEY ( `picID` )
+  ) DEFAULT CHARSET=utf8 DEFAULT COLLATE utf8_unicode_ci");
 
     $transaction->addQuery("ALTER TABLE `" . PREFIX . "settings` ADD `pictures` INT DEFAULT '12' NOT NULL");
     $transaction->addQuery("ALTER TABLE `" . PREFIX . "settings` ADD `publicadmin` INT( 1 ) DEFAULT '1' NOT NULL");
@@ -1236,95 +1269,92 @@ PRIMARY KEY ( `picID` )
     $transaction->addQuery("ALTER TABLE `" . PREFIX . "user` ADD `gallery_pictures` TEXT NOT NULL AFTER `files`");
 
     $transaction->addQuery("ALTER TABLE `" . PREFIX . "gallery_pictures` ADD `votes` INT NOT NULL ,
-ADD `points` INT NOT NULL ,
-ADD `rating` INT NOT NULL");
+  ADD `points` INT NOT NULL ,
+  ADD `rating` INT NOT NULL");
 
     $transaction->addQuery("ALTER TABLE `" . PREFIX . "settings` ADD `maxusergalleries` INT DEFAULT '1048576' NOT NULL");
-
 
     //country-list
     $transaction->addQuery("DROP TABLE IF EXISTS `" . PREFIX . "countries`");
     $transaction->addQuery("CREATE TABLE `" . PREFIX . "countries` (
-`countryID` INT NOT NULL AUTO_INCREMENT ,
-`country` VARCHAR( 255 ) NOT NULL ,
-`short` VARCHAR( 3 ) NOT NULL ,
-PRIMARY KEY ( `countryID` )
-)");
+  `countryID` INT NOT NULL AUTO_INCREMENT ,
+  `country` VARCHAR( 255 ) NOT NULL ,
+  `short` VARCHAR( 3 ) NOT NULL ,
+  PRIMARY KEY ( `countryID` )
+  ) DEFAULT CHARSET=utf8 DEFAULT COLLATE utf8_unicode_ci");
 
     $transaction->addQuery("INSERT INTO `" . PREFIX . "countries` ( `countryID` , `country` , `short` )
-VALUES
-('', 'Argentina', 'ar'),
-('', 'Australia', 'au'),
-('', 'Austria', 'at'),
-('', 'Belgium', 'be'),
-('', 'Bosnia Herzegowina', 'ba'),
-('', 'Brazil', 'br'),
-('', 'Bulgaria', 'bg'),
-('', 'Canada', 'ca'),
-('', 'Chile', 'cl'),
-('', 'China', 'cn'),
-('', 'Colombia', 'co'),
-('', 'Czech Republic', 'cz'),
-('', 'Croatia', 'hr'),
-('', 'Cyprus', 'cy'),
-('', 'Denmark', 'dk'),
-('', 'Estonia', 'ee'),
-('', 'Finland', 'fi'),
-('', 'Faroe Islands', 'fo'),
-('', 'France', 'fr'),
-('', 'Germany', 'de'),
-('', 'Greece', 'gr'),
-('', 'Hungary', 'hu'),
-('', 'Iceland', 'is'),
-('', 'Ireland', 'ie'),
-('', 'Israel', 'il'),
-('', 'Italy', 'it'),
-('', 'Japan', 'jp'),
-('', 'Korea', 'kr'),
-('', 'Latvia', 'lv'),
-('', 'Lithuania', 'lt'),
-('', 'Luxemburg', 'lu'),
-('', 'Malaysia', 'my'),
-('', 'Malta', 'mt'),
-('', 'Netherlands', 'nl'),
-('', 'Mexico', 'mx'),
-('', 'Mongolia', 'mn'),
-('', 'New Zealand', 'nz'),
-('', 'Norway', 'no'),
-('', 'Poland', 'pl'),
-('', 'Portugal', 'pt'),
-('', 'Romania', 'ro'),
-('', 'Russian Federation', 'ru'),
-('', 'Singapore', 'sg'),
-('', 'Slovak Republic', 'sk'),
-('', 'Slovenia', 'si'),
-('', 'Taiwan', 'tw'),
-('', 'South Africa', 'za'),
-('', 'Spain', 'es'),
-('', 'Sweden', 'se'),
-('', 'Syria', 'sy'),
-('', 'Switzerland', 'ch'),
-('', 'Tibet', 'ti'),
-('', 'Tunisia', 'tn'),
-('', 'Turkey', 'tr'),
-('', 'Ukraine', 'ua'),
-('', 'United Kingdom', 'uk'),
-('', 'USA', 'us'),
-('', 'Venezuela', 've'),
-('', 'Yugoslavia', 'rs'),
-('', 'European Union', 'eu')");
+  VALUES
+  ('', 'Argentina', 'ar'),
+  ('', 'Australia', 'au'),
+  ('', 'Austria', 'at'),
+  ('', 'Belgium', 'be'),
+  ('', 'Bosnia Herzegowina', 'ba'),
+  ('', 'Brazil', 'br'),
+  ('', 'Bulgaria', 'bg'),
+  ('', 'Canada', 'ca'),
+  ('', 'Chile', 'cl'),
+  ('', 'China', 'cn'),
+  ('', 'Colombia', 'co'),
+  ('', 'Czech Republic', 'cz'),
+  ('', 'Croatia', 'hr'),
+  ('', 'Cyprus', 'cy'),
+  ('', 'Denmark', 'dk'),
+  ('', 'Estonia', 'ee'),
+  ('', 'Finland', 'fi'),
+  ('', 'Faroe Islands', 'fo'),
+  ('', 'France', 'fr'),
+  ('', 'Germany', 'de'),
+  ('', 'Greece', 'gr'),
+  ('', 'Hungary', 'hu'),
+  ('', 'Iceland', 'is'),
+  ('', 'Ireland', 'ie'),
+  ('', 'Israel', 'il'),
+  ('', 'Italy', 'it'),
+  ('', 'Japan', 'jp'),
+  ('', 'Korea', 'kr'),
+  ('', 'Latvia', 'lv'),
+  ('', 'Lithuania', 'lt'),
+  ('', 'Luxemburg', 'lu'),
+  ('', 'Malaysia', 'my'),
+  ('', 'Malta', 'mt'),
+  ('', 'Netherlands', 'nl'),
+  ('', 'Mexico', 'mx'),
+  ('', 'Mongolia', 'mn'),
+  ('', 'New Zealand', 'nz'),
+  ('', 'Norway', 'no'),
+  ('', 'Poland', 'pl'),
+  ('', 'Portugal', 'pt'),
+  ('', 'Romania', 'ro'),
+  ('', 'Russian Federation', 'ru'),
+  ('', 'Singapore', 'sg'),
+  ('', 'Slovak Republic', 'sk'),
+  ('', 'Slovenia', 'si'),
+  ('', 'Taiwan', 'tw'),
+  ('', 'South Africa', 'za'),
+  ('', 'Spain', 'es'),
+  ('', 'Sweden', 'se'),
+  ('', 'Syria', 'sy'),
+  ('', 'Switzerland', 'ch'),
+  ('', 'Tibet', 'ti'),
+  ('', 'Tunisia', 'tn'),
+  ('', 'Turkey', 'tr'),
+  ('', 'Ukraine', 'ua'),
+  ('', 'United Kingdom', 'uk'),
+  ('', 'USA', 'us'),
+  ('', 'Venezuela', 've'),
+  ('', 'Yugoslavia', 'rs'),
+  ('', 'European Union', 'eu')");
     if ($transaction->successful()) {
         return array('status' => 'success', 'message' => 'Updated to webSPELL 4 Beta 6 Part 1');
     } else {
-        return array('status' => 'fail', 'message' => 'Failed to updated to webSPELL 4 Beta 6 Part 1<br/>' . $transaction->getError());
+        return array('status' => 'fail', 'message' => 'Failed to update to webSPELL 4 Beta 6 Part 1<br/>' . $transaction->getError());
     }
-
 }
 
 function update_4beta6_4final_2($_database)
 {
     $transaction = new Transaction($_database);
-
 
     //smileys
     $transaction->addQuery("DROP TABLE IF EXISTS `" . PREFIX . "smileys`");
@@ -1335,7 +1365,8 @@ function update_4beta6_4final_2($_database)
   `pattern` varchar(255) NOT NULL default '',
   PRIMARY KEY  (`smileyID`),
   UNIQUE KEY `name` (`name`)
-) AUTO_INCREMENT=16");
+) AUTO_INCREMENT=16
+  DEFAULT CHARSET=utf8 DEFAULT COLLATE utf8_unicode_ci");
 
     $transaction->addQuery("INSERT INTO `" . PREFIX . "smileys` VALUES (1, 'biggrin.gif', 'amüsiert', ':D')");
     $transaction->addQuery("INSERT INTO `" . PREFIX . "smileys` VALUES (2, 'confused.gif', 'verwirrt', '?(')");
@@ -1371,7 +1402,7 @@ function update_4beta6_4final_2($_database)
   `text` longtext NOT NULL,
   `delay` int(11) NOT NULL default '100',
   `direction` varchar(255) NOT NULL default ''
-)");
+) DEFAULT CHARSET=utf8 DEFAULT COLLATE utf8_unicode_ci");
 
     //superuser
     $transaction->addQuery("ALTER TABLE `" . PREFIX . "user_groups` ADD `super` INT( 1 ) DEFAULT '0' NOT NULL");
@@ -1387,7 +1418,8 @@ function update_4beta6_4final_2($_database)
   `hits` int(11) default '0',
   `date` int(11) NOT NULL default '0',
   PRIMARY KEY  (`bannerID`),
-  UNIQUE KEY `banner` (`banner`))");
+  UNIQUE KEY `banner` (`banner`)
+  ) DEFAULT CHARSET=utf8 DEFAULT COLLATE utf8_unicode_ci");
 
     $transaction->addQuery("ALTER TABLE `" . PREFIX . "user` CHANGE `connection` `verbindung` VARCHAR( 255 ) NOT NULL DEFAULT ''");
 
@@ -1423,7 +1455,6 @@ function update_4beta6_4final_2($_database)
                     $transaction->addQuery("ALTER TABLE `" . PREFIX . "clanwars` DROP `oppscr2`");
                     // save converted data into the database
                     $transaction->addQuery("UPDATE " . PREFIX . "clanwars SET homescore='" . $scoreHome . "', oppscore='" . $scoreOpp . "', maps='" . $maps . "' WHERE cwID='" . $id . "'");
-
                 }
             }
         }
@@ -1437,9 +1468,8 @@ function update_4beta6_4final_2($_database)
     if ($transaction->successful()) {
         return array('status' => 'success', 'message' => 'Updated to webSPELL 4 Beta 6 Part 2');
     } else {
-        return array('status' => 'fail', 'message' => 'Failed to updated to webSPELL 4 Beta 6 Part 2<br/>' . $transaction->getError());
+        return array('status' => 'fail', 'message' => 'Failed to update to webSPELL 4 Beta 6 Part 2<br/>' . $transaction->getError());
     }
-
 }
 
 function update_40000_40100($_database)
@@ -1449,22 +1479,24 @@ function update_40000_40100($_database)
     // FAQ
     $transaction->addQuery("DROP TABLE IF EXISTS `" . PREFIX . "faq`");
     $transaction->addQuery("CREATE TABLE `" . PREFIX . "faq` (
-  `faqID` int(11) NOT NULL AUTO_INCREMENT,
-  `faqcatID` int(11) NOT NULL default '0',
-  `question` varchar(255) NOT NULL default '',
-  `answer` varchar(255) NOT NULL default '',
-  `sort` int(11) NOT NULL default '0',
+  `faqID` INT(11) NOT NULL AUTO_INCREMENT,
+  `faqcatID` INT(11) NOT NULL DEFAULT '0',
+  `question` VARCHAR(255) NOT NULL DEFAULT '',
+  `answer` VARCHAR(255) NOT NULL DEFAULT '',
+  `sort` INT(11) NOT NULL DEFAULT '0',
   PRIMARY KEY  (`faqID`)
-	) AUTO_INCREMENT=1 ");
+  ) AUTO_INCREMENT=1
+  DEFAULT CHARSET=utf8 DEFAULT COLLATE utf8_unicode_ci");
 
     $transaction->addQuery("DROP TABLE IF EXISTS `" . PREFIX . "faq_categories`");
     $transaction->addQuery("CREATE TABLE `" . PREFIX . "faq_categories` (
-  `faqcatID` int(11) NOT NULL AUTO_INCREMENT,
-  `faqcatname` varchar(255) NOT NULL default '',
+  `faqcatID` INT(11) NOT NULL AUTO_INCREMENT,
+  `faqcatname` VARCHAR(255) NOT NULL DEFAULT '',
   `description` TEXT NOT NULL,
-  `sort` int(11) NOT NULL default '0',
+  `sort` INT(11) NOT NULL DEFAULT '0',
   PRIMARY KEY  (`faqcatID`)
-	) AUTO_INCREMENT=1 ");
+  ) AUTO_INCREMENT=1
+  DEFAULT CHARSET=utf8 DEFAULT COLLATE utf8_unicode_ci");
 
     // Admin Member Beschreibung
     $transaction->addQuery("ALTER TABLE `" . PREFIX . "user` ADD `userdescription` TEXT NOT NULL");
@@ -1484,7 +1516,7 @@ function update_40000_40100($_database)
     if ($transaction->successful()) {
         return array('status' => 'success', 'message' => 'Updated to webSPELL 4.1');
     } else {
-        return array('status' => 'fail', 'message' => 'Failed to updated to webSPELL 4.1<br/>' . $transaction->getError());
+        return array('status' => 'fail', 'message' => 'Failed to update to webSPELL 4.1<br/>' . $transaction->getError());
     }
 
 }
@@ -1507,11 +1539,11 @@ function update_40100_40101($_database)
 
     //add captcha
     $transaction->addQuery("CREATE TABLE `" . PREFIX . "captcha` (
-  `hash` varchar(255) NOT NULL default '',
-  `captcha` int(11) NOT NULL default '0',
-  `deltime` int(11) NOT NULL default '0',
+  `hash` VARCHAR(255) NOT NULL DEFAULT '',
+  `captcha` INT(11) NOT NULL DEFAULT '0',
+  `deltime` INT(11) NOT NULL DEFAULT '0',
   PRIMARY KEY  (`hash`)
-	)");
+  ) DEFAULT CHARSET=utf8 DEFAULT COLLATE utf8_unicode_ci");
 
     //useractivation
     $transaction->addQuery("ALTER TABLE `" . PREFIX . "user` ADD `activated` varchar(255) NOT NULL default '1'");
@@ -1525,9 +1557,8 @@ function update_40100_40101($_database)
     if ($transaction->successful()) {
         return array('status' => 'success', 'message' => 'Updated to webSPELL 4.1.1');
     } else {
-        return array('status' => 'fail', 'message' => 'Failed to updated to webSPELL 4.1.1<br/>' . $transaction->getError());
+        return array('status' => 'fail', 'message' => 'Failed to update to webSPELL 4.1.1<br/>' . $transaction->getError());
     }
-
 }
 
 function update_40101_420_1($_database)
@@ -1540,17 +1571,19 @@ function update_40101_420_1($_database)
     //user groups
     $transaction->addQuery("DROP TABLE IF EXISTS `" . PREFIX . "user_forum_groups`");
     $transaction->addQuery("CREATE TABLE `" . PREFIX . "user_forum_groups` (
-	  `usfgID` int(11) NOT NULL auto_increment,
-	  `userID` int(11) NOT NULL default '0',
-	  PRIMARY KEY  (`usfgID`)
-	) AUTO_INCREMENT=0");
+  `usfgID` int(11) NOT NULL auto_increment,
+  `userID` int(11) NOT NULL default '0',
+  PRIMARY KEY  (`usfgID`)
+  ) AUTO_INCREMENT=0
+  DEFAULT CHARSET=utf8 DEFAULT COLLATE utf8_unicode_ci");
 
     $transaction->addQuery("DROP TABLE IF EXISTS `" . PREFIX . "forum_groups`");
     $transaction->addQuery("CREATE TABLE `" . PREFIX . "forum_groups` (
-	  `fgrID` int(11) NOT NULL auto_increment,
-	  `name` varchar(32) NOT NULL default '0',
-	  PRIMARY KEY  (`fgrID`)
-	) AUTO_INCREMENT=0");
+  `fgrID` int(11) NOT NULL auto_increment,
+  `name` varchar(32) NOT NULL default '0',
+  PRIMARY KEY  (`fgrID`)
+  ) AUTO_INCREMENT=0
+  DEFAULT CHARSET=utf8 DEFAULT COLLATE utf8_unicode_ci");
 
     $transaction->addQuery("ALTER TABLE `" . PREFIX . "static` ADD `content` TEXT NOT NULL ");
     $get = mysqli_query($_database, "SELECT * FROM " . PREFIX . "static");
@@ -1595,7 +1628,7 @@ function update_40101_420_1($_database)
     if ($transaction->successful()) {
         return array('status' => 'success', 'message' => 'Updated to webSPELL 4.2 Part 1');
     } else {
-        return array('status' => 'fail', 'message' => 'Failed to updated to webSPELL 4.2 Part 1<br/>' . $transaction->getError());
+        return array('status' => 'fail', 'message' => 'Failed to update to webSPELL 4.2 Part 1<br/>' . $transaction->getError());
     }
 
 }
@@ -1638,26 +1671,26 @@ function update_40101_420_2($_database)
                    `deltime` int(15) NOT NULL,
                    `reason` varchar(255) NULL,
                    PRIMARY KEY  (`banID`)
-                 )");
+                 ) DEFAULT CHARSET=utf8 DEFAULT COLLATE utf8_unicode_ci");
 
     //add table for wrong logins
     $transaction->addQuery("CREATE TABLE `" . PREFIX . "failed_login_attempts` (
                               `ip` varchar(255) NOT NULL default '',
                               `wrong` int(2) default '0',
                               PRIMARY KEY  (`ip`)
-                            )");
+                            ) DEFAULT CHARSET=utf8 DEFAULT COLLATE utf8_unicode_ci");
 
     //news multilanguage
     $transaction->addQuery("CREATE TABLE `" . PREFIX . "news_contents` (
-	`newsID` INT NOT NULL ,
-	`language` VARCHAR( 2 ) NOT NULL ,
-	`headline` VARCHAR( 255 ) NOT NULL ,
-	`content` TEXT NOT NULL
-	)");
+    `newsID` INT NOT NULL ,
+    `language` VARCHAR( 2 ) NOT NULL ,
+    `headline` VARCHAR( 255 ) NOT NULL ,
+    `content` TEXT NOT NULL
+    ) DEFAULT CHARSET=utf8 DEFAULT COLLATE utf8_unicode_ci");
     if ($transaction->successful()) {
         return array('status' => 'success', 'message' => 'Updated to webSPELL 4.2 Part 2');
     } else {
-        return array('status' => 'fail', 'message' => 'Failed to updated to webSPELL 4.2 Part 2<br/>' . $transaction->getError());
+        return array('status' => 'fail', 'message' => 'Failed to update to webSPELL 4.2 Part 2<br/>' . $transaction->getError());
     }
 
 }
@@ -1690,7 +1723,7 @@ function update_40101_420_3($_database)
     if ($transaction->successful()) {
         return array('status' => 'success', 'message' => 'Updated to webSPELL 4.2 Part 3');
     } else {
-        return array('status' => 'fail', 'message' => 'Failed to updated to webSPELL 4.2 Part 3<br/>' . $transaction->getError());
+        return array('status' => 'fail', 'message' => 'Failed to update to webSPELL 4.2 Part 3<br/>' . $transaction->getError());
     }
 
 }
@@ -1700,10 +1733,10 @@ function update_40101_420_4($_database)
     $transaction = new Transaction($_database);
     //article multipage
     $transaction->addQuery("CREATE TABLE `" . PREFIX . "articles_contents` (
-	  `articlesID` INT( 11 ) NOT NULL ,
-	  `content` TEXT NOT NULL ,
-	  `page` INT( 2 ) NOT NULL
-	)");
+      `articlesID` INT( 11 ) NOT NULL ,
+      `content` TEXT NOT NULL ,
+      `page` INT( 2 ) NOT NULL
+    ) DEFAULT CHARSET=utf8 DEFAULT COLLATE utf8_unicode_ci");
 
     //article converter
     $sql = mysqli_query($_database, "SELECT articlesID, content FROM " . PREFIX . "articles");
@@ -1726,7 +1759,7 @@ function update_40101_420_4($_database)
     if ($transaction->successful()) {
         return array('status' => 'success', 'message' => 'Updated to webSPELL 4.2 Part 4');
     } else {
-        return array('status' => 'fail', 'message' => 'Failed to updated to webSPELL 4.2 Part 4<br/>' . $transaction->getError());
+        return array('status' => 'fail', 'message' => 'Failed to update to webSPELL 4.2 Part 4<br/>' . $transaction->getError());
     }
 
 }
@@ -1777,7 +1810,7 @@ function update_40101_420_5($_database)
     if ($transaction->successful()) {
         return array('status' => 'success', 'message' => 'Updated to webSPELL 4.2 Part 5');
     } else {
-        return array('status' => 'fail', 'message' => 'Failed to updated to webSPELL 4.2 Part 5<br/>' . $transaction->getError());
+        return array('status' => 'fail', 'message' => 'Failed to update to webSPELL 4.2 Part 5<br/>' . $transaction->getError());
     }
 
 }
@@ -2101,12 +2134,13 @@ function update_40101_420_6($_database)
     $adminmail = $getadminmail['adminemail'];
 
     $transaction->addQuery("CREATE TABLE IF NOT EXISTS `" . PREFIX . "contact` (
-	  `contactID` int(11) NOT NULL auto_increment,
-	  `name` varchar(100) NOT NULL,
-	  `email` varchar(200) NOT NULL,
-	  `sort` int(11) NOT NULL default '0',
-	  	PRIMARY KEY ( `contactID` )
-	  ) AUTO_INCREMENT=2 ;");
+      `contactID` int(11) NOT NULL auto_increment,
+      `name` varchar(100) NOT NULL,
+      `email` varchar(200) NOT NULL,
+      `sort` int(11) NOT NULL default '0',
+        PRIMARY KEY ( `contactID` )
+      ) AUTO_INCREMENT=2
+       DEFAULT CHARSET=utf8 DEFAULT COLLATE utf8_unicode_ci");
 
     $transaction->addQuery("INSERT INTO `" . PREFIX . "contact` (`contactID`, `name`, `email`, `sort`) VALUES
 	  (1, 'Administrator', '" . $adminmail . "', 1);");
@@ -2177,7 +2211,7 @@ function update_40101_420_6($_database)
     if ($transaction->successful()) {
         return array('status' => 'success', 'message' => 'Updated to webSPELL 4.2 Part 6');
     } else {
-        return array('status' => 'fail', 'message' => 'Failed to updated to webSPELL 4.2 Part 6<br/>' . $transaction->getError());
+        return array('status' => 'fail', 'message' => 'Failed to update to webSPELL 4.2 Part 6<br/>' . $transaction->getError());
     }
 
 }
@@ -2217,7 +2251,7 @@ function update_40101_420_7($_database)
     if ($transaction->successful()) {
         return array('status' => 'success', 'message' => 'Updated to webSPELL 4.2 Part 7');
     } else {
-        return array('status' => 'fail', 'message' => 'Failed to updated to webSPELL 4.2 Part 7<br/>' . $transaction->getError());
+        return array('status' => 'fail', 'message' => 'Failed to update to webSPELL 4.2 Part 7<br/>' . $transaction->getError());
     }
 
 }
@@ -2275,7 +2309,7 @@ function update_40101_420_8($_database)
     if ($transaction->successful()) {
         return array('status' => 'success', 'message' => 'Updated to webSPELL 4.2 Part 8');
     } else {
-        return array('status' => 'fail', 'message' => 'Failed to updated to webSPELL 4.2 Part 8<br/>' . $transaction->getError());
+        return array('status' => 'fail', 'message' => 'Failed to update to webSPELL 4.2 Part 8<br/>' . $transaction->getError());
     }
 
 }
@@ -2304,7 +2338,7 @@ function update_40101_420_9($_database)
     if ($transaction->successful()) {
         return array('status' => 'success', 'message' => 'Updated to webSPELL 4.2 Part 9');
     } else {
-        return array('status' => 'fail', 'message' => 'Failed to updated to webSPELL 4.2 Part 9<br/>' . $transaction->getError());
+        return array('status' => 'fail', 'message' => 'Failed to update to webSPELL 4.2 Part 9<br/>' . $transaction->getError());
     }
 }
 
@@ -2322,7 +2356,8 @@ function update_420_430_1($_database)
     `message` text NOT NULL,
     `rating` varchar(255) NOT NULL default '',
     PRIMARY KEY (`postID`)
-    ) AUTO_INCREMENT=1 ");
+    ) AUTO_INCREMENT=1
+     DEFAULT CHARSET=utf8 DEFAULT COLLATE utf8_unicode_ci");
 
     $transaction->addQuery("DROP TABLE IF EXISTS `" . PREFIX . "forum_topics_spam`");
     $transaction->addQuery("CREATE TABLE `" . PREFIX . "forum_topics_spam` (
@@ -2336,7 +2371,8 @@ function update_420_430_1($_database)
     `message` text NOT NULL,
     `rating` varchar(255) NOT NULL DEFAULT '',
     PRIMARY KEY (`topicID`)
-    ) AUTO_INCREMENT=1 ");
+    ) AUTO_INCREMENT=1
+     DEFAULT CHARSET=utf8 DEFAULT COLLATE utf8_unicode_ci");
 
     $transaction->addQuery("DROP TABLE IF EXISTS `" . PREFIX . "comments_spam`");
     $transaction->addQuery("CREATE TABLE `" . PREFIX . "comments_spam` (
@@ -2352,13 +2388,14 @@ function update_420_430_1($_database)
     `ip` varchar(255) NOT NULL DEFAULT '',
     `rating` varchar(255) NOT NULL DEFAULT '',
     PRIMARY KEY (`commentID`)
-    ) AUTO_INCREMENT=1 ");
+    ) AUTO_INCREMENT=1
+     DEFAULT CHARSET=utf8 DEFAULT COLLATE utf8_unicode_ci");
 
     $transaction->addQuery("CREATE TABLE `" . PREFIX . "api_log` (
     `date` int(11) NOT NULL,
     `message` varchar(255) NOT NULL,
     `data` text NOT NULL
-    )");
+    ) DEFAULT CHARSET=utf8 DEFAULT COLLATE utf8_unicode_ci");
 
     $transaction->addQuery("ALTER TABLE `" . PREFIX . "settings` ADD `spam_check` int(1) NOT NULL default '0'");
     $transaction->addQuery("ALTER TABLE `" . PREFIX . "settings` ADD `detect_language` int(1) NOT NULL default '0'");
@@ -2369,6 +2406,8 @@ function update_420_430_1($_database)
     $transaction->addQuery("ALTER TABLE `" . PREFIX . "settings` ADD `date_format` varchar(255) NOT NULL default 'd.m.Y'");
     $transaction->addQuery("ALTER TABLE `" . PREFIX . "settings` ADD `time_format` varchar(255) NOT NULL default 'H:i'");
     $transaction->addQuery("ALTER TABLE `" . PREFIX . "settings` ADD `user_guestbook` int(1) NOT NULL default '1'");
+    $transaction->addQuery("ALTER TABLE `" . PREFIX . "settings` ADD `sc_files` int(1) NOT NULL default '1'");
+    $transaction->addQuery("ALTER TABLE `" . PREFIX . "settings` ADD `sc_demos` int(1) NOT NULL default '1'");
 
     $transaction->addQuery("UPDATE `" . PREFIX . "settings` SET spamapihost='https://api.webspell.org/'");
 
@@ -2394,14 +2433,14 @@ function update_420_430_1($_database)
       ('', 'serbian', 'rs', 'serbian'),
       ('', 'slovenian', 'si', 'slovenian'),
       ('', 'latvian', 'lv', 'latvian'),
-      ('', 'finnish', 'fi', 'finnish'),
       ('', 'turkish', 'tr', 'turkish'),
       ('', 'albanian', 'al', 'albanian'),
       ('', 'bulgarian', 'bg', 'bulgarian'),
       ('', 'greek', 'gr', 'greek'),
       ('', 'ukrainian', 'ua', 'ukrainian'),
       ('', 'luxembourgish', 'lu', 'luxembourgish'),
-      ('', 'afrikaans', 'za', 'afrikaans')");
+      ('', 'afrikaans', 'za', 'afrikaans'),
+      ('', 'acholi', 'ac', 'acholi')");
 
     //edit countries
     $transaction->addQuery("INSERT INTO `" . PREFIX . "countries` ( `countryID` , `country` , `short` )
@@ -2466,7 +2505,7 @@ function update_420_430_1($_database)
     if ($transaction->successful()) {
         return array('status' => 'success', 'message' => 'Updated to webSPELL 4.3 Part 1');
     } else {
-        return array('status' => 'fail', 'message' => 'Failed to updated to webSPELL 4.3 Part 1<br/>' . $transaction->getError());
+        return array('status' => 'fail', 'message' => 'Failed to update to webSPELL 4.3 Part 1<br/>' . $transaction->getError());
     }
 }
 
@@ -2478,7 +2517,7 @@ function update_420_430_2($_database)
   `rel` varchar(255) NOT NULL,
   `ID` int(11) NOT NULL,
   `tag` varchar(255) NOT NULL
-)");
+) DEFAULT CHARSET=utf8 DEFAULT COLLATE utf8_unicode_ci");
 
     $transaction->addQuery("DROP TABLE IF EXISTS `" . PREFIX . "addon_categories`");
     $transaction->addQuery("CREATE TABLE `" . PREFIX . "addon_categories` (
@@ -2487,7 +2526,8 @@ function update_420_430_2($_database)
   `default` int(1) NOT NULL DEFAULT '0',
   `sort` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`catID`)
-) AUTO_INCREMENT=9 ");
+) AUTO_INCREMENT=9
+ DEFAULT CHARSET=utf8 DEFAULT COLLATE utf8_unicode_ci");
 
     $transaction->addQuery("INSERT INTO `" . PREFIX . "addon_categories` ( `catID` , `name`, `default`, `sort` ) VALUES ('1', 'main', '1', '1');");
     $transaction->addQuery("INSERT INTO `" . PREFIX . "addon_categories` ( `catID` , `name`, `default`, `sort` ) VALUES ('2', 'user', '1', '2');");
@@ -2507,7 +2547,8 @@ function update_420_430_2($_database)
   `accesslevel` varchar(255) NOT NULL DEFAULT '',
   `sort` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`linkID`)
-) AUTO_INCREMENT=1 ");
+) AUTO_INCREMENT=1
+ DEFAULT CHARSET=utf8 DEFAULT COLLATE utf8_unicode_ci");
 
     $transaction->addQuery("ALTER TABLE `" . PREFIX . "countries` ADD `fav` int(1) NOT NULL default '0'");
     $transaction->addQuery("CREATE TABLE `" . PREFIX . "modrewrite` (
@@ -2520,7 +2561,8 @@ function update_420_430_2($_database)
     `rebuild_regex` text NOT NULL,
     `rebuild_result` text NOT NULL,
     PRIMARY KEY (`ruleID`)
-    ) AUTO_INCREMENT=1 ");
+    ) AUTO_INCREMENT=1
+     DEFAULT CHARSET=utf8 DEFAULT COLLATE utf8_unicode_ci");
 
     $transaction->addQuery("INSERT INTO `" . PREFIX . "modrewrite` (`regex`, `link`, `fields`, `replace_regex`, `replace_result`, `rebuild_regex`, `rebuild_result`) VALUES('about.html','index.php?site=about','a:0:{}','index\\\\.php\\\\?site=about','about.html','about\\\\.html','index.php?site=about')");
     $transaction->addQuery("INSERT INTO `" . PREFIX . "modrewrite` (`regex`, `link`, `fields`, `replace_regex`, `replace_result`, `rebuild_regex`, `rebuild_result`) VALUES('articles.html','index.php?site=articles','a:0:{}','index\\\\.php\\\\?site=articles','articles.html','articles\\\\.html','index.php?site=articles')");
@@ -2685,11 +2727,21 @@ function update_420_430_2($_database)
     $transaction->addQuery("INSERT INTO `" . PREFIX . "modrewrite` (`regex`, `link`, `fields`, `replace_regex`, `replace_result`, `rebuild_regex`, `rebuild_result`) VALUES('whoisonline.html','index.php?site=whoisonline','a:0:{}','index\\\\.php\\\\?site=whoisonline','whoisonline.html','whoisonline\\\\.html','index.php?site=whoisonline')");
     $transaction->addQuery("INSERT INTO `" . PREFIX . "modrewrite` (`regex`, `link`, `fields`, `replace_regex`, `replace_result`, `rebuild_regex`, `rebuild_result`) VALUES('whoisonline.html#was','index.php?site=whoisonline#was','a:0:{}','index\\\\.php\\\\?site=whoisonline#was','whoisonline.html#was','whoisonline\\\\.html#was','index.php?site=whoisonline#was')");
     $transaction->addQuery("INSERT INTO `" . PREFIX . "modrewrite` (`regex`, `link`, `fields`, `replace_regex`, `replace_result`, `rebuild_regex`, `rebuild_result`) VALUES('whoisonline/{sort}/{type}.html','index.php?site=whoisonline&sort={sort}&type={type}','a:2:{s:4:\"sort\";s:6:\"string\";s:4:\"type\";s:6:\"string\";}','index\\\\.php\\\\?site=whoisonline[&|&amp;]*sort=(\\\\w*?)[&|&amp;]*type=(\\\\w*?)','whoisonline/$3/$4.html','whoisonline\\\\/(\\\\w*?)\\\\/(\\\\w*?)\\\\.html','index.php?site=whoisonline&sort=$1&type=$2')");
+
+    $transaction->addQuery("DROP TABLE IF EXISTS `" . PREFIX . "cookies`");
+    $transaction->addQuery("CREATE TABLE `" . PREFIX . "cookies` (
+  `userID` int(11) NOT NULL,
+  `cookie` binary(64) NOT NULL,
+  `expiration` int(14) NOT NULL,
+  PRIMARY KEY (`userID`, `cookie`),
+  INDEX (`expiration`)
+    )");
+
     updateMySQLConfig();
     if ($transaction->successful()) {
         return array('status' => 'success', 'message' => 'Updated to webSPELL 4.3 Part 2');
     } else {
-        return array('status' => 'fail', 'message' => 'Failed to updated to webSPELL 4.3 Part 2<br/>' . $transaction->getError());
+        return array('status' => 'fail', 'message' => 'Failed to update to webSPELL 4.3 Part 2<br/>' . $transaction->getError());
     }
 }
 
@@ -2724,25 +2776,68 @@ function update_addSMTPSupport($_database)
   `html` int(1) NOT NULL,
   `smtp` int(1) NOT NULL,
   `secure` int(1) NOT NULL
-)");
+) DEFAULT CHARSET=utf8 DEFAULT COLLATE utf8_unicode_ci");
 
-    $transaction->addQuery($_database, "INSERT INTO " . PREFIX . "email (emailID, user, password, host, port, debug, auth, html, smtp, secure)
+    $transaction->addQuery("INSERT INTO `" . PREFIX . "email` (emailID, user, password, host, port, debug, auth, html, smtp, secure)
 VALUES (1, '', '', '', 25, 0, 0, 1, 0, 0)");
 
-    $transaction->addQuery($_database, "ALTER TABLE " . PREFIX ." ADD UNIQUE KEY emailID (emailID)");
+    $transaction->addQuery("ALTER TABLE `" . PREFIX . "email` ADD UNIQUE KEY emailID (emailID)");
     if ($transaction->successful()) {
-        return array('status' => 'success', 'message' => 'SMTP support added');
+        return array('status' => 'success', 'message' => 'Added SMTP support');
     } else {
-        return array('status' => 'fail', 'message' => 'Failed to add SMTP support');
+        return array('status' => 'fail', 'message' => 'Failed to add SMTP support<br/>' . $transaction->getError());
     }
 }
 
-function update_removedotINSTALL()
+function update_updateLanguages($_database)
 {
-    if (unlink('../.INSTALL')) {
-        return array('status' => 'success', 'message' => 'Removed .INSTALL');
+    # update languages in database
+
+    global $_database;
+    $transaction = new Transaction($_database);
+    $transaction->addQuery("UPDATE `" . PREFIX . "news_languages` SET lang = 'af' WHERE lang = 'za'");
+    $transaction->addQuery("UPDATE `" . PREFIX . "news_languages` SET lang = 'sq' WHERE lang = 'al'");
+    $transaction->addQuery("UPDATE `" . PREFIX . "news_languages` SET lang = 'ar' WHERE lang = 'sa'");
+    $transaction->addQuery("UPDATE `" . PREFIX . "news_languages` SET lang = 'bs' WHERE lang = 'ba'");
+    $transaction->addQuery("UPDATE `" . PREFIX . "news_languages` SET lang = 'cs' WHERE lang = 'cz'");
+    $transaction->addQuery("UPDATE `" . PREFIX . "news_languages` SET lang = 'da' WHERE lang = 'dk'");
+    $transaction->addQuery("UPDATE `" . PREFIX . "news_languages` SET lang = 'en' WHERE lang = 'uk'");
+    $transaction->addQuery("UPDATE `" . PREFIX . "news_languages` SET lang = 'et' WHERE lang = 'ee'");
+    $transaction->addQuery("UPDATE `" . PREFIX . "news_languages` SET lang = 'ka' WHERE lang = 'ge'");
+    $transaction->addQuery("UPDATE `" . PREFIX . "news_languages` SET lang = 'el' WHERE lang = 'gr'");
+    $transaction->addQuery("UPDATE `" . PREFIX . "news_languages` SET lang = 'lb' WHERE lang = 'lu'");
+    $transaction->addQuery("UPDATE `" . PREFIX . "news_languages` SET lang = 'fa' WHERE lang = 'ir'");
+    $transaction->addQuery("UPDATE `" . PREFIX . "news_languages` SET language = 'portuguese', alt = 'portuguese' WHERE lang = 'pt'");
+    $transaction->addQuery("UPDATE `" . PREFIX . "news_languages` SET lang = 'sr' WHERE lang = 'rs'");
+    $transaction->addQuery("UPDATE `" . PREFIX . "news_languages` SET lang = 'sl' WHERE lang = 'si'");
+    $transaction->addQuery("UPDATE `" . PREFIX . "news_languages` SET lang = 'sv' WHERE lang = 'se'");
+    $transaction->addQuery("UPDATE `" . PREFIX . "news_languages` SET lang = 'uk' WHERE lang = 'ua'");
+    $transaction->addQuery("UPDATE `" . PREFIX . "settings` SET default_language = 'en' WHERE default_language = 'uk'");
+    if ($transaction->successful()) {
+        return array('status' => 'success', 'message' => 'Updated languages');
     } else {
-        return array('status' => 'fail', 'message' => 'Failed to remove .INSTALL');
+        return array('status' => 'fail', 'message' => 'Failed to update languages<br/>' . $transaction->getError());
     }
 }
 
+function update_obsoleteLanguages()
+{
+    # remove obsolete language folders
+
+    include("../src/func/filesystem.php");
+
+    $obsLangs = array("../languages/cz", "../languages/dk", "../languages/il", "../languages/ir", "../languages/se");
+    foreach ($obsLangs as $dir) {
+        @rm_recursive($dir);
+    }
+
+    # remove admin language folders
+
+    $dir = "../admin/languages";
+    $remove_admin = @rm_recursive($dir);
+    if ($remove_admin) {
+        return array('status' => 'success', 'message' => 'Removed obsolete languages');
+    } else {
+        return array('status' => 'fail', 'message' => 'Failed to remove obsolete languages');
+    }
+}

@@ -25,13 +25,12 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
-/* do not editer above this line */
+/* do not edit above this line */
 
-	'invalid_request'=>'Requête invalide',
-	'no_result'=>'Désolé, nous n\'avons trouvé aucun résultat.',
-	'to_much_results'=>'Il y a trop de résultats, merci d\'affiner votre recherche.'
+    'invalid_request' => 'Requête invalide',
+    'no_result' => 'Désolé, nous n\'avons trouvé aucun résultat.',
+    'to_much_results' => 'Il y a trop de résultats, merci d\'affiner votre recherche.'
 );
-
 

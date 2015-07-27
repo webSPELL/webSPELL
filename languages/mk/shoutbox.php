@@ -25,18 +25,16 @@
 ##########################################################################
 */
 
-
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'all_messages'=>'Покажи се',
-  'enter_message'=>'Морате да внесите порака!',
-  'enter_name'=>'Морате да внесите име!',
-  'delete_selected'=>'Избриши го означеното',
-  'select_all'=>'Означи се',
-  'shout'=>'Покани!',
-  'shoutbox'=>'Чат',
-  'sort'=>'Подреди:'
+    'all_messages' => 'Покажи се',
+    'delete_selected' => 'Избриши го означеното',
+    'enter_message' => 'Морате да внесите порака!',
+    'enter_name' => 'Морате да внесите име!',
+    'select_all' => 'Означи се',
+    'shout' => 'Покани!',
+    'sort' => 'Подреди:'
 );
 

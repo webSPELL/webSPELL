@@ -25,17 +25,17 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'all_messages'=>'Ukázať všetko',
-	'enter_message'=>'Musíte zadať správu!',
-	'enter_name'=>'Musíte zadať vaše meno!',
-	'delete_selected'=>'Vymazať označené',
-	'select_all'=>'Označiť všetko',
-	'shout'=>'Odoslať!',
-	'shoutbox'=>'shoutbox',
-	'sort'=>'Triediť:'
+    'all_messages' => 'Ukázať všetko',
+    'delete_selected' => 'Vymazať označené',
+    'enter_message' => 'Musíte zadať správu!',
+    'enter_name' => 'Musíte zadať vaše meno!',
+    'select_all' => 'Označiť všetko',
+    'shout' => 'Odoslať!',
+    'shoutbox' => 'shoutbox',
+    'sort' => 'Triediť:'
 );
 

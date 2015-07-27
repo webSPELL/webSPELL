@@ -25,12 +25,12 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'invalid_request'=>'Invito non valido',
-	'no_result'=>'Nessun resultato',
-	'to_much_results'=>'Troppi risultati, si prega di inserire più caratteri.'
+    'invalid_request' => 'Invito non valido',
+    'no_result' => 'Nessun resultato',
+    'to_much_results' => 'Troppi risultati, si prega di inserire più caratteri.'
 );
 

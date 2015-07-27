@@ -25,7 +25,7 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
@@ -44,13 +44,10 @@ $language_array = Array(
     'clan-name' => 'Clan-Naam',
     'clan-tag' => 'Clan-Tag',
     'country' => 'Land',
-    'cpu' => 'CPU',
     'date_of_birth' => 'Geboortedatum',
     'deactivated' => 'gedeactiveerd',
-    'delete' => 'delete',
     'delete_max_90_90' => 'verwijder (max90/90)',
     'delete_max_230_210' => 'verwijder (max230/210)',
-    'e-mail' => 'E-mail',
     'edit_mail' => 'bewerk E-Mail',
     'edit_password' => 'bewerk wachtwoord',
     'equipment-info' => 'Uitrusting-Info',
@@ -139,3 +136,4 @@ Bedankt voor je interesse
     'you_have_to_username' => 'Je moet een gebruikersnaam invullen!',
     'you_have_to_valid_email' => 'Je e-mail is niet geldig!'
 );
+

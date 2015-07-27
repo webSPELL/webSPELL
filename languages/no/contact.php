@@ -25,29 +25,29 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'back'=>'tilbake',
-	'contact'=>'kontakt oss',
-	'description'=>'Bruk denne formen for å kontakte oss.',
-	'enter_mail'=>'Vennligst skriv din e-post adresse.',
-	'enter_message'=>'Vennligst skriv en melding.',
-	'enter_name'=>'Vennligst skriv et navn.',
-	'enter_subject'=>'Vennligst skriv et emne.',
-	'errors_there'=>'Noen feil oppstod',
-	'mail'=>'E-Post',
-	'message'=>'Melding',
-	'name'=>'Navn',
-	'receiver'=>'Receiver',
-	'reset'=>'Reset',
-	'security_code'=>'Sikkerhetskode',
-	'send'=>'Send',
-	'send_successfull'=>'Your message was send successfully.',
-	'subject'=>'Emne',
-	'title_contact'=>'Kontakt form',
-	'unknown_receiver'=>'unknown receiver',
-	'wrong_securitycode'=>'Du har skreve feil sikkerhetskode!'
+    'back' => 'tilbake',
+    'contact' => 'kontakt oss',
+    'description' => 'Bruk denne formen for å kontakte oss.',
+    'enter_mail' => 'Vennligst skriv din e-post adresse.',
+    'enter_message' => 'Vennligst skriv en melding.',
+    'enter_name' => 'Vennligst skriv et navn.',
+    'enter_subject' => 'Vennligst skriv et emne.',
+    'errors_there' => 'Noen feil oppstod',
+    'mail' => 'E-Post',
+    'message' => 'Melding',
+    'name' => 'Navn',
+    'receiver' => 'Receiver',
+    'reset' => 'Reset',
+    'security_code' => 'Sikkerhetskode',
+    'send' => 'Send',
+    'send_successfull' => 'Your message was send successfully.',
+    'subject' => 'Emne',
+    'title_contact' => 'Kontakt form',
+    'unknown_receiver' => 'unknown receiver',
+    'wrong_securitycode' => 'Du har skreve feil sikkerhetskode!'
 );
 

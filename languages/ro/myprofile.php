@@ -25,7 +25,7 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
@@ -44,13 +44,10 @@ $language_array = Array(
     'clan-name' => 'Nume-Clan',
     'clan-tag' => 'Tag-Clan',
     'country' => 'Tara',
-    'cpu' => 'CPU',
     'date_of_birth' => 'Data naşterii',
     'deactivated' => 'dezactivat',
-    'delete' => 'delete',
     'delete_max_90_90' => 'şterge(max90/90)',
     'delete_max_230_210' => 'şterge (max230/210)',
-    'e-mail' => 'E-mail',
     'edit_mail' => 'editează E-Mail',
     'edit_password' => 'editează parola',
     'equipment-info' => 'Informaţii echipament',
@@ -139,3 +136,4 @@ Vă mulțumim pentru interesul dumneavoastră
     'you_have_to_username' => 'Trebuie sa introduceţi numele dvs. de utilizator!',
     'you_have_to_valid_email' => 'Adresa dvs. de mail este invalidă!'
 );
+

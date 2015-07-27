@@ -25,13 +25,13 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'no_informations'=>'Nessuna informazione disponibile',
-	'report_message'=>'[b]C*è un nuovo %s - annuncio[/b][br][br]%s-ID: %d[br]Info: %s[br]Referer: [url]index.php?site=files&file=%d[/url]',
-	'report_recognized'=>'Il messaggio è stato inviato - la ringraziamo.',
-  'wrong_securitycode'=>'Il codice di sicurezza è sbagliata<br><br>[<a href="javascript:back();">indietro</a>]'
+    'no_informations' => 'Nessuna informazione disponibile',
+    'report_message' => '[b]C*è un nuovo %s - annuncio[/b][br][br]%s-ID: %d[br]Info: %s[br]Referer: [url]index.php?site=files&file=%d[/url]',
+    'report_recognized' => 'Il messaggio è stato inviato - la ringraziamo.',
+    'wrong_securitycode' => 'Il codice di sicurezza è sbagliata<br><br>[<a href="javascript:back();">indietro</a>]'
 );
 

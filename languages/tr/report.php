@@ -24,20 +24,14 @@
 #                                                                        #
 ##########################################################################
 */
-/**
- * Online Language Editor Turkey language file for webSPELL 4.2.2
- * @author Stefan Giesecke <webmaster@giesi.com>
- * @copyright Copyright (c) 2010, Stefan Giesecke
- * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
- */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'no_informations'=>'hiçbir bilgi yok',
-  'report_message'=>'[b]Yeni var %s - Rapor[/b][br][br]%s-ID: %d[br]Bilgi: %s[br]Referans: [url]index.php?site=files&file=%d[/url]',
-  'report_recognized'=>'Rapor kabul edildi. Teşekkür ederim.',
-  'wrong_securitycode'=>'Yanlış güvenlik kodu girildi. <br><br>[<a href="javascript:back();">geri</a>]'
+    'no_informations' => 'hiçbir bilgi yok',
+    'report_message' => '[b]Yeni var %s - Rapor[/b][br][br]%s-ID: %d[br]Bilgi: %s[br]Referans: [url]index.php?site=files&file=%d[/url]',
+    'report_recognized' => 'Rapor kabul edildi. Teşekkür ederim.',
+    'wrong_securitycode' => 'Yanlış güvenlik kodu girildi. <br><br>[<a href="javascript:back();">geri</a>]'
 );
 

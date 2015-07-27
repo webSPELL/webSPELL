@@ -25,12 +25,11 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'history'=>'Geschiedenis',
-	'no_history'=>'Er is helaas geen informatie aanwezig.'
-
+    'history' => 'Geschiedenis',
+    'no_history' => 'Er is helaas geen informatie aanwezig.'
 );
 

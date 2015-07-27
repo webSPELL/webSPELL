@@ -25,33 +25,33 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'actions'=>'Veiksmai',
-	'add_gallery'=>'Pridėti galeriją',
-	'add_img'=>'pridėti vaizdą',
-	'add_picture'=>'pridėti nuotrauką',
-	'comment'=>'Komentaras',
-	'delete'=>'ištrinti',
-	'disable_comments'=>'išjungti komentarus',
-	'edit'=>'redeguoti',
-	'enable_user_comments'=>'įjungti vartotojo komentarus',
-	'enable_visitor_comments'=>'įjungti lankytojo komentarus',
-	'gallery_name'=>'Galerijos vardas',
-	'group'=>'Grupė',
-	'name'=>'Vardas',
-	'new_gallery'=>'Nauja galerija',
-	'no_galleries'=>'Jokių galerijų nėra.',
-	'no_space_left'=>'Čia nebeliko vietos: atšaukta.',
-	'picture'=>'Nuotrauka',
-	'please_enter_name'=>'Prašome įrašyti vardą!',
-	'really_delete_gallery'=>'Tikrai ištrinti galeriją?',
-	'update'=>'atnaujinti',
-	'user_gallery'=>'Vartotojo galerija',
-	'usergalleries'=>'Vartotojų galerijos',
-	'visitor_comments'=>'Lankytojo komentaras',
-	'x_of_y_mb_in_use'=>'<span style="color:%spacecolor%">&nbsp;%used_size%</span> iš %available_size% MB yra naudojami.'
+    'actions' => 'Veiksmai',
+    'add_gallery' => 'Pridėti galeriją',
+    'add_img' => 'pridėti vaizdą',
+    'add_picture' => 'pridėti nuotrauką',
+    'comment' => 'Komentaras',
+    'delete' => 'ištrinti',
+    'disable_comments' => 'išjungti komentarus',
+    'edit' => 'redeguoti',
+    'enable_user_comments' => 'įjungti vartotojo komentarus',
+    'enable_visitor_comments' => 'įjungti lankytojo komentarus',
+    'gallery_name' => 'Galerijos vardas',
+    'group' => 'Grupė',
+    'name' => 'Vardas',
+    'new_gallery' => 'Nauja galerija',
+    'no_galleries' => 'Jokių galerijų nėra.',
+    'no_space_left' => 'Čia nebeliko vietos: atšaukta.',
+    'picture' => 'Nuotrauka',
+    'please_enter_name' => 'Prašome įrašyti vardą!',
+    'really_delete_gallery' => 'Tikrai ištrinti galeriją?',
+    'update' => 'atnaujinti',
+    'user_gallery' => 'Vartotojo galerija',
+    'usergalleries' => 'Vartotojų galerijos',
+    'visitor_comments' => 'Lankytojo komentaras',
+    'x_of_y_mb_in_use' => '<span style="color:%spacecolor%">&nbsp;%used_size%</span> iš %available_size% MB yra naudojami.'
 );
 

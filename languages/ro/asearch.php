@@ -25,13 +25,12 @@
 ##########################################################################
 */
 
-
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'invalid_request'=>'Cerere incorectă',
-  'no_result'=>'Nici un rezultat găsit',
-  'to_much_results'=>'Prea multe rezultate găsite, vă rugăm să introduceţi mai multe caractere.'
+    'invalid_request' => 'Cerere incorectă',
+    'no_result' => 'Nici un rezultat găsit',
+    'to_much_results' => 'Prea multe rezultate găsite, vă rugăm să introduceţi mai multe caractere.'
 );
 

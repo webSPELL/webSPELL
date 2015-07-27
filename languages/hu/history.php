@@ -25,11 +25,11 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'history'=>'Történet',
-	'no_history'=>'Nincs elérheto információ.'
+    'history' => 'Történet',
+    'no_history' => 'Nincs elérheto információ.'
 );
 

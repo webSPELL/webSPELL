@@ -25,11 +25,10 @@
 ##########################################################################
 */
 
-
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'no_access'=>'Pieeja aizliegta'
+    'no_access' => 'Pieeja aizliegta'
 );
 

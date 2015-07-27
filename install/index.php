@@ -60,21 +60,17 @@ if (!isset($_GET['step'])) {
 
 ?>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="description" content="Clanpage using webSPELL 4 CMS">
     <meta name="author" content="webspell.org">
-    <meta name="keywords" content="webspell, webspell4, clan, cms">
     <meta name="copyright" content="Copyright 2005-2014 by webspell.org">
     <meta name="generator" content="webSPELL">
     <title>webSPELL Installation</title>
-    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
-    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
+    <link href="../components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="style.css" rel="stylesheet" type="text/css">
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="../components/jquery/dist/jquery.min.js"></script>
     <script src="install.js"></script>
 </head>
 <body>
@@ -98,6 +94,6 @@ if (!isset($_GET['step'])) {
         <td style="background-image:url(images/4.jpg);" height="25" colspan="2"></td>
     </tr>
 </table>
-<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="../components/bootstrap/dist/js/bootstrap.min.js"></script>
 </body>
 </html>

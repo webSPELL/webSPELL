@@ -25,19 +25,19 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'contact'=>'Susisiekimas',
-	'country'=>'Š',
-	'homepage'=>'Namų puslapis',
-	'last_login'=>'Buvo prisijugę',
-	'nickname'=>'Slapyvardis',
-	'no_users'=>'nėra registruotų vartotojų',
-	'now_on'=>'dabar prisijungę',
-	'registered_users'=>'registruoti vartotojai',
-	'registration'=>'Registruotas nuo',
-	'sort'=>'Rykiuoti:'
+    'contact' => 'Susisiekimas',
+    'country' => 'Š',
+    'homepage' => 'Namų puslapis',
+    'last_login' => 'Buvo prisijugę',
+    'nickname' => 'Slapyvardis',
+    'no_users' => 'nėra registruotų vartotojų',
+    'now_on' => 'dabar prisijungę',
+    'registered_users' => 'registruoti vartotojai',
+    'registration' => 'Registruotas nuo',
+    'sort' => 'Rykiuoti:'
 );
 

@@ -25,10 +25,10 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'no_banners'=>'Aucune bannière.'
+    'no_banners' => 'Aucune bannière.'
 );
 

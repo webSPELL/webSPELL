@@ -25,24 +25,24 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'back'=>'vissza',
-	'banner'=>'Banner',
-	'banner_to_big'=>'a kép túl nagy',
-	'delete'=>'törlés',
-	'edit'=>'szerkesztés',
-	'edit_linkus'=>'banner szerkesztése',
-	'format_incorrect'=>'érvénytelen kép-kiterjesztés (engedélyezett: *.gif, *.jpg vagy *.png)',
-	'link_us'=>'linkelj ránk',
-	'name'=>'Név',
-	'new_banner'=>'új banner',
-	'no_access'=>'Belépés megtagadva!',
-	'no_banner'=>'nincs link us banner',
-	'really_delete_banner'=>'tényleg törölni akarod a bannert?',
-	'save_banner'=>'banner mentése',
-	'use_following_code'=>'Használd ezt a kódot a banner beillesztéséhez a honlapodon.'
+    'back' => 'vissza',
+    'banner' => 'Banner',
+    'banner_to_big' => 'a kép túl nagy',
+    'delete' => 'törlés',
+    'edit' => 'szerkesztés',
+    'edit_linkus' => 'banner szerkesztése',
+    'format_incorrect' => 'érvénytelen kép-kiterjesztés (engedélyezett: *.gif, *.jpg vagy *.png)',
+    'link_us' => 'linkelj ránk',
+    'name' => 'Név',
+    'new_banner' => 'új banner',
+    'no_access' => 'Belépés megtagadva!',
+    'no_banner' => 'nincs link us banner',
+    'really_delete_banner' => 'tényleg törölni akarod a bannert?',
+    'save_banner' => 'banner mentése',
+    'use_following_code' => 'Használd ezt a kódot a banner beillesztéséhez a honlapodon.'
 );
 

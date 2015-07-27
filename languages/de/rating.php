@@ -25,11 +25,11 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'no_access'=>'kein Zugriff!',
-	'just_rate_between_0_10'=>'Bitte bewerte nur von 0 bis 10 Punkten!'
+    'just_rate_between_0_10' => 'Bitte bewerte nur von 0 bis 10 Punkten!',
+    'no_access' => 'kein Zugriff!'
 );
 

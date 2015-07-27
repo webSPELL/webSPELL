@@ -25,7 +25,7 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
@@ -41,7 +41,6 @@ $language_array = Array(
     'database_cl' => 'база данни',
     'delete_file' => 'изтрий файл',
     'description' => 'Oиписание',
-    'dl' => 'DL',
     'download_now' => 'Cвали %filename% сега',
     'download_registered_only' => 'Само регистриани потребители могат да изтеглят файлове!',
     'download_via_mirror' => 'cвали от алтернативен линк',
@@ -105,3 +104,4 @@ $language_array = Array(
     'you_have_to_enter_file' => 'Моля въведете файл или URL!',
     'you_have_to_enter_filename' => 'Моля въвдете името на файла!'
 );
+

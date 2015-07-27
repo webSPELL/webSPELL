@@ -25,34 +25,32 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'about'=>'informatie',
-	'active'=>'actief',
-	'add_buddy'=>'voeg toe aan vriendenlijst',
-	'awards'=>'prijzen',
-	'back_buddy'=>'terug naar vriendenlijst',
-	'back_squad_overview'=>'terug naar team overzicht',
-	'challenge'=>'daag uit',
-	'contact'=>'Contact',
-	'email'=>'email',
-	'ignore'=>'negeer gebruiker',
-	'inactive'=>'inactief',
-	'member'=>'Lid',
-	'members'=>'Leden',
-	'messenger'=>'messenger',
-	'no_description'=>'geen beschrijving beschikbaar',
-	'no_userpic'=>'geen gebruikersafbeeldingen beschikbaar!',
-	'position'=>'Positie',
-	'results'=>'resultaten',
-	'show_details'=>'bekijk details',
-	'squad_plays'=>'Team spelen',
-	'squads'=>'teams',
-	'status'=>'Status',
-	'town'=>'Stad/Dorp',
-	'userpicture'=>'gebruikersafbeelding'
-
+    'about' => 'informatie',
+    'active' => 'actief',
+    'add_buddy' => 'voeg toe aan vriendenlijst',
+    'awards' => 'prijzen',
+    'back_buddy' => 'terug naar vriendenlijst',
+    'back_squad_overview' => 'terug naar team overzicht',
+    'challenge' => 'daag uit',
+    'contact' => 'Contact',
+    'ignore' => 'negeer gebruiker',
+    'inactive' => 'inactief',
+    'member' => 'Lid',
+    'members' => 'Leden',
+    'messenger' => 'messenger',
+    'no_description' => 'geen beschrijving beschikbaar',
+    'no_userpic' => 'geen gebruikersafbeeldingen beschikbaar!',
+    'position' => 'Positie',
+    'results' => 'resultaten',
+    'show_details' => 'bekijk details',
+    'squad_plays' => 'Team spelen',
+    'squads' => 'teams',
+    'status' => 'Status',
+    'town' => 'Stad/Dorp',
+    'userpicture' => 'gebruikersafbeelding'
 );
 

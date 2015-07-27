@@ -24,40 +24,33 @@
 #                                                                        #
 ##########################################################################
 */
-/**
- * Online Language Editor Finland language file for webSPELL 4.2.2
- * @author Stefan Giesecke <webmaster@giesi.com>
- * @copyright Copyright (c) 2010, Stefan Giesecke
- * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
- */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'about'=>'tietoa meistä',
-  'active'=>'aktiivinen',
-  'add_buddy'=>'lisää kaverilistalle',
-  'awards'=>'palkinnot',
-  'back_buddy'=>'takaisin kaverlistalle',
-  'back_squad_overview'=>'takaisin joukkuelistalle',
-  'challenge'=>'haasta',
-  'contact'=>'Yhteystiedot',
-  'email'=>'email',
-  'ignore'=>'vältä käyttäjä',
-  'inactive'=>'poissa',
-  'member'=>'Jäsen',
-  'members'=>'Jäsenet',
-  'messenger'=>'messenger',
-  'no_description'=>'ei tietoja saatavilla',
-  'no_userpic'=>'ei kuvaa saatavilla',
-  'position'=>'Asema',
-  'results'=>'tulokset',
-  'show_details'=>'näytä tiedot',
-  'squad_plays'=>'Joukkue pelaa',
-  'squads'=>'joukkueet',
-  'status'=>'Tila',
-  'town'=>'Kaupunki',
-  'userpicture'=>'käyttäjäkuva'
+    'about' => 'tietoa meistä',
+    'active' => 'aktiivinen',
+    'add_buddy' => 'lisää kaverilistalle',
+    'awards' => 'palkinnot',
+    'back_buddy' => 'takaisin kaverlistalle',
+    'back_squad_overview' => 'takaisin joukkuelistalle',
+    'challenge' => 'haasta',
+    'contact' => 'Yhteystiedot',
+    'ignore' => 'vältä käyttäjä',
+    'inactive' => 'poissa',
+    'member' => 'Jäsen',
+    'members' => 'Jäsenet',
+    'messenger' => 'messenger',
+    'no_description' => 'ei tietoja saatavilla',
+    'no_userpic' => 'ei kuvaa saatavilla',
+    'position' => 'Asema',
+    'results' => 'tulokset',
+    'show_details' => 'näytä tiedot',
+    'squad_plays' => 'Joukkue pelaa',
+    'squads' => 'joukkueet',
+    'status' => 'Tila',
+    'town' => 'Kaupunki',
+    'userpicture' => 'käyttäjäkuva'
 );
 

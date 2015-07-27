@@ -25,7 +25,7 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
@@ -75,6 +75,6 @@ $language_array = Array(
     'to_rate' => 'Trebuie să fii intregistrat şi logat pentru a putea clasifica acest demo!',
     'update_demo' => 'Înnoieşte demo',
     'user_comments' => 'Permite comentariile utilizatorului',
-    'visitor_comments' => 'Permite comentariile vizitatorului',
-    'vs' => 'vs.'
+    'visitor_comments' => 'Permite comentariile vizitatorului'
 );
+

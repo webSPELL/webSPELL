@@ -25,18 +25,17 @@
 ##########################################################################
 */
 
-
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'invalid_password'=>'Ievadīta nederīga parole.',
-  'ip_banned'=>'Piekļuve šai vietnei no Jūsu IP adreses ir aizliegta.<br>%reason%',
-  'login_successful'=>'Veiksmīga piekļuve!',
-  'no_user'=>'Lietotājs <b>%username%</b> šajā sistēmā nav pieejams.',
-  'not_activated'=>'Konts nav aktivizēts',
-  'session_error'=>'Lūdzu pārliecinieties vai sīkfaili ir iespējoti Jūsu interneta pārlūkā.<br>Ja problēma joprojām pastāv, lūdzu sazinieties ar Jūsu interneta pakalpojumu sniedzēju.',
-  'return'=>'<a href="javascript:history.back()">Atgriezties</a>',
-  'return_reenter' => '<a href="javascript:history.back()">Atgriezties un mēģināt atkal.</a>'
+    'invalid_password' => 'Ievadīta nederīga parole.',
+    'ip_banned' => 'Piekļuve šai vietnei no Jūsu IP adreses ir aizliegta.<br>%reason%',
+    'login_successful' => 'Veiksmīga piekļuve!',
+    'no_user' => 'Lietotājs <b>%username%</b> šajā sistēmā nav pieejams.',
+    'not_activated' => 'Konts nav aktivizēts',
+    'return' => '<a href="javascript:history.back()">Atgriezties</a>',
+    'return_reenter' => '<a href="javascript:history.back()">Atgriezties un mēģināt atkal.</a>',
+    'session_error' => 'Lūdzu pārliecinieties vai sīkfaili ir iespējoti Jūsu interneta pārlūkā.<br>Ja problēma joprojām pastāv, lūdzu sazinieties ar Jūsu interneta pakalpojumu sniedzēju.'
 );
 

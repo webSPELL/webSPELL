@@ -25,7 +25,7 @@
 ##########################################################################
 */
 
-$_language->readModule('rubrics');
+$_language->readModule('rubrics', false, true);
 
 if (!isnewsadmin($userID) || mb_substr(basename($_SERVER[ 'REQUEST_URI' ]), 0, 15) != "admincenter.php") {
     die($_language->module[ 'access_denied' ]);

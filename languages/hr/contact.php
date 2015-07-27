@@ -25,29 +25,28 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'back'=>'natrag na kontakt formu',
-	'contact'=>'kontakt',
-	'description'=>'Preko ove kontakt forme možete nas kontaktirati',
-	'enter_mail'=>'Molimo upišite e-mail adresu.',
-	'enter_message'=>'Molimo upišite poruku.',
-	'enter_name'=>'Molimo upišite ime.',
-	'enter_subject'=>'Molimo upišite naslov.',
-	'errors_there'=>'Postoje odredene greške',
-	'mail'=>'E-Mail',
-	'message'=>'Poruka',
-	'name'=>'Ime',
-	'receiver'=>'Primatelj',
-	'reset'=>'Resetiraj',
-	'security_code'=>'Sigurnosni kod',
-	'send'=>'Pošalji',
-	'send_successfull'=>'Vaša poruka je uspješno poslana.',
-	'subject'=>'Naslov',
-	'title_contact'=>'Kontakt forma',
-	'unknown_receiver'=>'unknown receiver',
-	'wrong_securitycode'=>'Unijeli ste krivi sigurnosni kod!'
+    'back' => 'natrag na kontakt formu',
+    'contact' => 'kontakt',
+    'description' => 'Preko ove kontakt forme možete nas kontaktirati',
+    'enter_mail' => 'Molimo upišite e-mail adresu.',
+    'enter_message' => 'Molimo upišite poruku.',
+    'enter_name' => 'Molimo upišite ime.',
+    'enter_subject' => 'Molimo upišite naslov.',
+    'errors_there' => 'Postoje odredene greške',
+    'message' => 'Poruka',
+    'name' => 'Ime',
+    'receiver' => 'Primatelj',
+    'reset' => 'Resetiraj',
+    'security_code' => 'Sigurnosni kod',
+    'send' => 'Pošalji',
+    'send_successfull' => 'Vaša poruka je uspješno poslana.',
+    'subject' => 'Naslov',
+    'title_contact' => 'Kontakt forma',
+    'unknown_receiver' => 'unknown receiver',
+    'wrong_securitycode' => 'Unijeli ste krivi sigurnosni kod!'
 );
 

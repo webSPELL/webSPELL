@@ -24,40 +24,34 @@
 #                                                                        #
 ##########################################################################
 */
-/**
- * Online Language Editor Finland language file for webSPELL 4.2.2
- * @author Stefan Giesecke <webmaster@giesi.com>
- * @copyright Copyright (c) 2010, Stefan Giesecke
- * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
- */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'actions'=>'Toiminnat',
-  'add_gallery'=>'lisää Galleriaan',
-  'add_img'=>'lisää kuva',
-  'add_picture'=>'lisää kuva',
-  'comment'=>'Kommentit',
-  'delete'=>'poista',
-  'disable_comments'=>'estä kommentit',
-  'edit'=>'editoi',
-  'enable_user_comments'=>'mahdollistaa käyttäjien kommentit',
-  'enable_visitor_comments'=>'mahdollistaa vierailijoiden kommentit',
-  'gallery_name'=>'Gallerian nimi',
-  'group'=>'Ryhmä',
-  'name'=>'Nimi',
-  'new_gallery'=>'uusi galleria',
-  'no_galleries'=>'Ei galleriaa saatavilla',
-  'no_space_left'=>'Ei tilaa jäljellä: Peruttu.',
-  'picture'=>'Kuva',
-  'please_enter_name'=>'Kirjoita nimi!',
-  'really_delete_gallery'=>'Haluatko varmasti poistaa gallerian?',
-  'update'=>'päivitä',
-  'user_gallery'=>'Käyttäjän-Galleria',
-  'usergalleries'=>'Käyttäjien galleriat',
-  'visitor_comments'=>'Vierailijoiden kommentit',
-  'x_of_y_mb_in_use'=>'<span style="color:%spacecolor%">&nbsp;%used_size%</span> %available_size% MB käytettynä.'
+    'actions' => 'Toiminnat',
+    'add_gallery' => 'lisää Galleriaan',
+    'add_img' => 'lisää kuva',
+    'add_picture' => 'lisää kuva',
+    'comment' => 'Kommentit',
+    'delete' => 'poista',
+    'disable_comments' => 'estä kommentit',
+    'edit' => 'editoi',
+    'enable_user_comments' => 'mahdollistaa käyttäjien kommentit',
+    'enable_visitor_comments' => 'mahdollistaa vierailijoiden kommentit',
+    'gallery_name' => 'Gallerian nimi',
+    'group' => 'Ryhmä',
+    'name' => 'Nimi',
+    'new_gallery' => 'uusi galleria',
+    'no_galleries' => 'Ei galleriaa saatavilla',
+    'no_space_left' => 'Ei tilaa jäljellä: Peruttu.',
+    'picture' => 'Kuva',
+    'please_enter_name' => 'Kirjoita nimi!',
+    'really_delete_gallery' => 'Haluatko varmasti poistaa gallerian?',
+    'update' => 'päivitä',
+    'user_gallery' => 'Käyttäjän-Galleria',
+    'usergalleries' => 'Käyttäjien galleriat',
+    'visitor_comments' => 'Vierailijoiden kommentit',
+    'x_of_y_mb_in_use' => '<span style="color:%spacecolor%">&nbsp;%used_size%</span> %available_size% MB käytettynä.'
 );
 

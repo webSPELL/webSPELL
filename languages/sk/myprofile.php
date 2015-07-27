@@ -25,7 +25,7 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
@@ -44,10 +44,8 @@ $language_array = Array(
     'clan-name' => 'Názov clanu',
     'clan-tag' => 'Clan-Tag',
     'country' => 'Krajina',
-    'cpu' => 'CPU',
     'date_of_birth' => 'Dátum narodenia',
     'deactivated' => 'deaktivovaná',
-    'delete' => 'delete',
     'delete_max_90_90' => 'vymazať (max90/90)',
     'delete_max_230_210' => 'vymazať (max230/210)',
     'e-mail' => 'e-mail',
@@ -139,3 +137,4 @@ Pre potrvrdenie zmeny, prosím kliknite na nasledujúci odkaz:
     'you_have_to_username' => 'Musíte zadať užív. meno!',
     'you_have_to_valid_email' => 'Váš E-mail je chybý!'
 );
+

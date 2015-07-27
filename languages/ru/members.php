@@ -25,29 +25,25 @@
 ##########################################################################
 */
 
-
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'about'=>'Обо мне',
-  'active'=>'активный',
-  'activity'=>'Активность',
-  'awards'=>'Награды',
-  'back_overview'=>'&raquo; <a href="index.php?site=members"><b>Вернуться к просмотру членов клана</b></a>',
-  'challenge'=>'Вызов',
-  'contact'=>'Контакт',
-  'go'=>'Вперед!',
-  'inactive'=>'неактивен',
-  'member'=>'Игрок',
-  'members'=>'Игроков',
-  'nickname'=>'Ник',
-  'no_description'=>'Нет доступного описания',
-  'position'=>'Позиция',
-  'results'=>'Результаты',
-  'show_details'=>'&raquo; <a href="index.php?site=members&amp;action=show&amp;squadID=%squadID%"><b>Показать детали</b></a>',
-  'show_only'=>'Только для просмотра',
-  'status'=>'Статус',
-  'town'=>'Город'
+    'about' => 'Обо мне',
+    'active' => 'активный',
+    'activity' => 'Активность',
+    'awards' => 'Награды',
+    'back_overview' => '&raquo; <a href="index.php?site=members"><b>Вернуться к просмотру членов клана</b></a>',
+    'challenge' => 'Вызов',
+    'inactive' => 'неактивен',
+    'member' => 'Игрок',
+    'members' => 'Игроков',
+    'nickname' => 'Ник',
+    'no_description' => 'Нет доступного описания',
+    'position' => 'Позиция',
+    'results' => 'Результаты',
+    'show_details' => '&raquo; <a href="index.php?site=members&amp;action=show&amp;squadID=%squadID%"><b>Показать детали</b></a>',
+    'show_only' => 'Только для просмотра',
+    'town' => 'Город'
 );
 

@@ -25,13 +25,13 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'email_failed'=>'Įvyko klaida siunčiant žinutę, prašome pranešti tinklalapio savininkui.',
-	'email_subject'=>'Jūsų profilis %pagetitle% puslapyje',
-	'email_text'=>'Jūsų profilis puslapiui %pagetitle%
+    'email_failed' => 'Įvyko klaida siunčiant žinutę, prašome pranešti tinklalapio savininkui.',
+    'email_subject' => 'Jūsų profilis %pagetitle% puslapyje',
+    'email_text' => 'Jūsų profilis puslapiui %pagetitle%
 SVARBU jūsų slaptažodis pasikeitė arba buvo pakeistas
 
 jūsų slapyvardis: %username%
@@ -39,13 +39,13 @@ jūsų naujas slaptažodis: %new_password%
 
 gerai praleiskite laiką mūsų tinklalapyje
 %homepage_url%',
-	'get_password'=>'gauti slaptažodį',
-	'lost_password'=>'pametei slaptažodį',
-	'no_mail_given'=>'Jūs neįvedėte jokio e-pašto.',
-	'no_user_found'=>'joks vartotojas nesurastas!',
-	'successful'=>'Jūsų profilis buvo rastas<br><br>
+    'get_password' => 'gauti slaptažodį',
+    'lost_password' => 'pametei slaptažodį',
+    'no_mail_given' => 'Jūs neįvedėte jokio e-pašto.',
+    'no_user_found' => 'joks vartotojas nesurastas!',
+    'successful' => 'Jūsų profilis buvo rastas<br><br>
     Jūsų profilio duomenys bus atsiųsti į e-paštą per kelias sekundes.<br><br>
     &#8226; <a href="index.php?site=login">prisijungti</a>',
-	'your_email'=>'Jūsų E-Paštas'
+    'your_email' => 'Jūsų E-Paštas'
 );
 

@@ -204,6 +204,30 @@ if (!function_exists('array_combine')) {
     }
 }
 
+if (!function_exists("hash_equals")) {
+    function hash_equals($known_str, $user_str)
+    {
+        $result = 0;
+
+        if (!is_string($known_str)) {
+            return false;
+        }
+
+        if (!is_string($user_str)) {
+            return false;
+        }
+
+        if (strlen($known_str) != strlen($user_str)) {
+            return false;
+        }
+
+        for ($j = 0; $j < strlen($known_str); $j++) {
+            $result |= ord($known_str[$j]) ^ ord($user_str[$j]);
+        }
+        return $result === 0;
+    }
+}
+
 /* counts empty variables in an array */
 
 function countempty($checkarray)
@@ -379,31 +403,18 @@ function getforminput($text)
 
 // -- LOGIN -- //
 
-$login_per_cookie = false;
-if (isset($_COOKIE['ws_auth']) && !isset($_SESSION['ws_auth'])) {
-    $login_per_cookie = true;
-    $_SESSION['ws_auth'] = $_COOKIE['ws_auth'];
-}
-
 systeminc('login');
 
-if ($loggedin === false) {
-    if (isset($_COOKIE['language'])) {
-        $_language->setLanguage($_COOKIE['language']);
-    } elseif (isset($_SESSION['language'])) {
-        $_language->setLanguage($_SESSION['language']);
-    } elseif ($autoDetectLanguage) {
-        $lang = detectUserLanguage();
-        if (!empty($lang)) {
-            $_language->setLanguage($lang);
-            $_SESSION['language'] = $lang;
-        }
+if (isset($_COOKIE['language'])) {
+    $_language->setLanguage($_COOKIE['language']);
+} elseif (isset($_SESSION['language'])) {
+    $_language->setLanguage($_SESSION['language']);
+} elseif ($autoDetectLanguage) {
+    $lang = detectUserLanguage();
+    if (!empty($lang)) {
+        $_language->setLanguage($lang);
+        $_SESSION['language'] = $lang;
     }
-}
-
-if ($login_per_cookie) {
-    $ll = mysqli_fetch_array(safe_query("SELECT lastlogin FROM " . PREFIX . "user WHERE userID='$userID'"));
-    $_SESSION['ws_lastlogin'] = $ll['lastlogin'];
 }
 
 // -- SITE VARIABLE -- //
@@ -454,18 +465,29 @@ $banned =
     );
 while ($bq = mysqli_fetch_array($banned)) {
     if ($bq['ban_reason']) {
-        $reason = "<br>" . $bq['ban_reason'];
+        $reason = "<br>Reason: <mark>" . $bq['ban_reason'] . '</mark>';
     } else {
         $reason = '';
     }
     if ($bq['banned']) {
-        system_error('You have been banished.' . $reason, 0);
+        $_SESSION = array();
+
+        // remove session cookie
+        if (isset($_COOKIE[ session_name() ])) {
+            setcookie(session_name(), '', time() - 42000, '/');
+        }
+
+        session_destroy();
+
+        // remove login cookie
+        webspell\LoginCookie::clear('ws_auth');
+        system_error('<strong>You have been banned.</strong>' . $reason, 0);
     }
 }
 
 // -- BANNED IPs -- //
 
-safe_query("DELETE FROM `" . PREFIX . "banned_ips` WHERE deltime < " . time() . "");
+safe_query("DELETE FROM `" . PREFIX . "banned_ips` WHERE deltime < '" . time() . "'");
 
 // -- WHO IS - WAS ONLINE -- //
 
@@ -577,3 +599,15 @@ systeminc('func/feeds');
 // -- Email -- //
 
 systeminc('func/email');
+
+function recursiveRemoveDirectory($directory)
+{
+    foreach (glob("{$directory}/*") as $file) {
+        if (is_dir($file)) {
+            recursiveRemoveDirectory($file);
+        } else {
+            unlink($file);
+        }
+    }
+    rmdir($directory);
+}

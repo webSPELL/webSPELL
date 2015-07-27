@@ -25,18 +25,17 @@
 ##########################################################################
 */
 
-
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'banner'=>'Bandieră',
-  'homepage'=>'Pagină de start',
-  'information'=>'Informaţii',
-  'mainsponsor'=>'Sponsor principal',
-  'mainsponsors'=>'Sponsori principali',
-  'no_sponsors'=>'Nici un sponsor',
-  'sponsor'=>'Sponsor',
-  'sponsors'=>'sponsori'
+    'banner' => 'Bandieră',
+    'homepage' => 'Pagină de start',
+    'information' => 'Informaţii',
+    'mainsponsor' => 'Sponsor principal',
+    'mainsponsors' => 'Sponsori principali',
+    'no_sponsors' => 'Nici un sponsor',
+    'sponsor' => 'Sponsor',
+    'sponsors' => 'sponsori'
 );
 

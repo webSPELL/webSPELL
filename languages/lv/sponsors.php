@@ -25,18 +25,17 @@
 ##########################################################################
 */
 
-
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'banner'=>'Reklāmas karogs',
-  'homepage'=>'Mājaslapa',
-  'information'=>'Informācija',
-  'mainsponsor'=>'Galvenais sponsors',
-  'mainsponsors'=>'Galvenie sponsori',
-  'no_sponsors'=>'nav sponsoru',
-  'sponsor'=>'Sponsors',
-  'sponsors'=>'Sponsori'
+    'banner' => 'Reklāmas karogs',
+    'homepage' => 'Mājaslapa',
+    'information' => 'Informācija',
+    'mainsponsor' => 'Galvenais sponsors',
+    'mainsponsors' => 'Galvenie sponsori',
+    'no_sponsors' => 'nav sponsoru',
+    'sponsor' => 'Sponsors',
+    'sponsors' => 'Sponsori'
 );
 

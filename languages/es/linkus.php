@@ -25,24 +25,24 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'back'=>'volver',
-	'banner'=>'Banner',
-	'banner_to_big'=>'Imagen muy grande',
-	'delete'=>'borrar',
-	'edit'=>'editar',
-	'edit_linkus'=>'editar banner',
-	'format_incorrect'=>'Formato de imagen no válido (permitido: *.gif, *.jpg o *.png)',
-	'link_us'=>'enlazanos',
-	'name'=>'Nombre',
-	'new_banner'=>'nuevo banner',
-	'no_access'=>'Sin acceso!',
-	'no_banner'=>'banner prohibido enlazar',
-	'really_delete_banner'=>'Estas seguro de borrar este banner?',
-	'save_banner'=>'guardar banner',
-	'use_following_code'=>'Usar el siguiente código, para insertar el banner en tu web.'
+    'back' => 'volver',
+    'banner' => 'Banner',
+    'banner_to_big' => 'Imagen muy grande',
+    'delete' => 'borrar',
+    'edit' => 'editar',
+    'edit_linkus' => 'editar banner',
+    'format_incorrect' => 'Formato de imagen no válido (permitido: *.gif, *.jpg o *.png)',
+    'link_us' => 'enlazanos',
+    'name' => 'Nombre',
+    'new_banner' => 'nuevo banner',
+    'no_access' => 'Sin acceso!',
+    'no_banner' => 'banner prohibido enlazar',
+    'really_delete_banner' => 'Estas seguro de borrar este banner?',
+    'save_banner' => 'guardar banner',
+    'use_following_code' => 'Usar el siguiente código, para insertar el banner en tu web.'
 );
 

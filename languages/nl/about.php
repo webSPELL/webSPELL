@@ -25,14 +25,11 @@
 ##########################################################################
 */
 
-$language_array = Array(
-
-
+$language_array = array(
 
 /* do not edit above this line */
 
-	'about_title'=>'Over ons',
-	'no_about'=>'Er is helaas geen informatie aanwezig.'
+    'about_title' => 'Over ons',
+    'no_about' => 'Er is helaas geen informatie aanwezig.'
 );
-
 

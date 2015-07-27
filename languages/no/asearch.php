@@ -25,12 +25,12 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'invalid_request'=>'invalid ordre',
-	'no_result'=>'Ingenting funnet',
-	'to_much_results'=>'There are to much fitting results, please enter more characters.'
+    'invalid_request' => 'invalid ordre',
+    'no_result' => 'Ingenting funnet',
+    'to_much_results' => 'There are to much fitting results, please enter more characters.'
 );
 

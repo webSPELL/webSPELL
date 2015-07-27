@@ -25,17 +25,17 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'add_to_message'=>'Adicionar à mensagem',
-	'close_window'=>'fechar a janela',
-	'delete'=>'Eliminar',
-	'existing_files'=>'Ficheiros existentes',
-	'file_upload'=>'Carregar ficheiro',
-	'invalid_access'=>'Acesso inválido!',
-	'no_access'=>'Sem acesso!',
-	'upload'=>'Carregar'
+    'add_to_message' => 'Adicionar à mensagem',
+    'close_window' => 'fechar a janela',
+    'delete' => 'Eliminar',
+    'existing_files' => 'Ficheiros existentes',
+    'file_upload' => 'Carregar ficheiro',
+    'invalid_access' => 'Acesso inválido!',
+    'no_access' => 'Sem acesso!',
+    'upload' => 'Carregar'
 );
 

@@ -25,31 +25,31 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'del_from_mail_list'=>'Izbriši sa newsletter liste',
-	'del_key'=>'Kod za brisanje',
-	'delete'=>'Izbriši',
-	'deletion_key'=>'Kod za brisanje',
-	'email_not_valid'=>'Vaš e-mail nije ispravno upisan!',
-	'lost_deletion_key'=>'Izgubili ste kod za brisanje?',
-	'mail_adress'=>'E-mail adresa',
-	'mail_pw_didnt_match'=>'E-mail/lozinka se ne podudaraju.',
-	'mail_not_in_db'=>'Upisana e-mail adresa ne postoji u našoj bazi.',
-	'newsletter'=>'newsletter',
-	'newsletter_registration'=>'Registracija za newsletter',
-	'no_such_mail_adress'=>'Ne postoji takva e-mail adresa.',
-	'password_had_been_send'=>'Lozinka je poslana.',
-	'register_newsletter'=>'Registriraj se za newsletter',
-	'request_mail'=>'<b>Treba Vam vaš kod za brisanje!</b><br><br>Da bi maknuli Vaš e-mail sa liste mailova za newsletter kliknite <a href="http://%homepage_url%/index.php?site=newsletter&mail=%mail%&pass=%delete_key%">ovdje</a><br>Vaša lozinka za brisanje s liste: %delete_key%<br><br>Vidimo se na %homepage_url%',
-	'send'=>'Pošalji',
-	'submit'=>'Spremi',
-	'success_mail'=>'<b>Hvala Vam na registraciji!</b><br><br>Da bi maknuli Vaš e-mail sa liste mailova za newsletter kliknite <a href="http://%homepage_url%/index.php?site=newsletter&mail=%mail%&pass=%delete_key%">ovdje</a><br>Vaša lozinka za brisanje s liste: %delete_key%<br><br>Vidimo se na %homepage_url%',
-	'thank_you_for_registration'=>'Hvala Vam na registraciji.',
-	'you_are_already_registered'=>'Već ste registrirani.',
-	'your_mail_adress'=>'Vaš e-mail',
-	'your_mail_adress_deleted'=>'Vaš e-mail je maknut s liste.'
+    'del_from_mail_list' => 'Izbriši sa newsletter liste',
+    'del_key' => 'Kod za brisanje',
+    'delete' => 'Izbriši',
+    'deletion_key' => 'Kod za brisanje',
+    'email_not_valid' => 'Vaš e-mail nije ispravno upisan!',
+    'lost_deletion_key' => 'Izgubili ste kod za brisanje?',
+    'mail_adress' => 'E-mail adresa',
+    'mail_not_in_db' => 'Upisana e-mail adresa ne postoji u našoj bazi.',
+    'mail_pw_didnt_match' => 'E-mail/lozinka se ne podudaraju.',
+    'newsletter' => 'newsletter',
+    'newsletter_registration' => 'Registracija za newsletter',
+    'no_such_mail_adress' => 'Ne postoji takva e-mail adresa.',
+    'password_had_been_send' => 'Lozinka je poslana.',
+    'register_newsletter' => 'Registriraj se za newsletter',
+    'request_mail' => '<b>Treba Vam vaš kod za brisanje!</b><br><br>Da bi maknuli Vaš e-mail sa liste mailova za newsletter kliknite <a href="http://%homepage_url%/index.php?site=newsletter&mail=%mail%&pass=%delete_key%">ovdje</a><br>Vaša lozinka za brisanje s liste: %delete_key%<br><br>Vidimo se na %homepage_url%',
+    'send' => 'Pošalji',
+    'submit' => 'Spremi',
+    'success_mail' => '<b>Hvala Vam na registraciji!</b><br><br>Da bi maknuli Vaš e-mail sa liste mailova za newsletter kliknite <a href="http://%homepage_url%/index.php?site=newsletter&mail=%mail%&pass=%delete_key%">ovdje</a><br>Vaša lozinka za brisanje s liste: %delete_key%<br><br>Vidimo se na %homepage_url%',
+    'thank_you_for_registration' => 'Hvala Vam na registraciji.',
+    'you_are_already_registered' => 'Već ste registrirani.',
+    'your_mail_adress' => 'Vaš e-mail',
+    'your_mail_adress_deleted' => 'Vaš e-mail je maknut s liste.'
 );
 

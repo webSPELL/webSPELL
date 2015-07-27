@@ -25,19 +25,18 @@
 ##########################################################################
 */
 
-
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'add_notexists'=>'Šāds lietotājs neeksistē',
-  'add_nouserid'=>'Lietotāja pieslēgšanās informācija nav pieejama',
-  'add_yourself'=>'Nevar pievienot sevi kā draugu un nevar iekļaut sevi ignorējamo sarakstā!',
-  'buddy_nousers'=>'Draugu sarakstā nav lietotāji',
-  'buddys'=>'draugi',
-  'ignore_nousers'=>'Ignorēto sarakstā nav lietotāji',
-  'not_logged'=>'Lai pārvaldītu draugus, jāreģistrējas un jāpieslēdzas.<br><a href="index.php?site=register">Reģistrēties</a> | <a href="index.php?site=login">Pieslēgties</a>',
-  'your_buddylist'=>'Draugu saraksts',
-  'your_ignorelist'=>'Ignorēto saraksts'
+    'add_notexists' => 'Šāds lietotājs neeksistē',
+    'add_nouserid' => 'Lietotāja pieslēgšanās informācija nav pieejama',
+    'add_yourself' => 'Nevar pievienot sevi kā draugu un nevar iekļaut sevi ignorējamo sarakstā!',
+    'buddy_nousers' => 'Draugu sarakstā nav lietotāji',
+    'buddys' => 'draugi',
+    'ignore_nousers' => 'Ignorēto sarakstā nav lietotāji',
+    'not_logged' => 'Lai pārvaldītu draugus, jāreģistrējas un jāpieslēdzas.<br><a href="index.php?site=register">Reģistrēties</a> | <a href="index.php?site=login">Pieslēgties</a>',
+    'your_buddylist' => 'Draugu saraksts',
+    'your_ignorelist' => 'Ignorēto saraksts'
 );
 

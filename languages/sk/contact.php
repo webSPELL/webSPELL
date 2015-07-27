@@ -25,29 +25,28 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'back'=>'naspäť na formulár',
-	'contact'=>'kontakt',
-	'description'=>'Pomocou tohto formuláru môžete odoslať správu webmasterovi',
-	'enter_mail'=>'Prosím zadajte e-mailovú adresu.',
-	'enter_message'=>'Prosím zadajte správu.',
-	'enter_name'=>'Prosím zadajte meno.',
-	'enter_subject'=>'Prosím zadajte predmet.',
-	'errors_there'=>'Vyskytla sa chyba',
-	'mail'=>'E-Mail',
-	'message'=>'Správa',
-	'name'=>'Meno',
-	'receiver'=>'Prijímateľ',
-	'reset'=>'Reset',
-	'security_code'=>'Bezpečnostný kód',
-	'send'=>'Odoslať',
-	'send_successfull'=>'Vaša správa bola odoslaná.',
-	'subject'=>'Predmet',
-	'title_contact'=>'Kontaktný formulár',
-	'unknown_receiver'=>'unknown receiver',
-	'wrong_securitycode'=>'Zadali ste chybný bezpečnostný kód!'
+    'back' => 'naspäť na formulár',
+    'contact' => 'kontakt',
+    'description' => 'Pomocou tohto formuláru môžete odoslať správu webmasterovi',
+    'enter_mail' => 'Prosím zadajte e-mailovú adresu.',
+    'enter_message' => 'Prosím zadajte správu.',
+    'enter_name' => 'Prosím zadajte meno.',
+    'enter_subject' => 'Prosím zadajte predmet.',
+    'errors_there' => 'Vyskytla sa chyba',
+    'message' => 'Správa',
+    'name' => 'Meno',
+    'receiver' => 'Prijímateľ',
+    'reset' => 'Reset',
+    'security_code' => 'Bezpečnostný kód',
+    'send' => 'Odoslať',
+    'send_successfull' => 'Vaša správa bola odoslaná.',
+    'subject' => 'Predmet',
+    'title_contact' => 'Kontaktný formulár',
+    'unknown_receiver' => 'unknown receiver',
+    'wrong_securitycode' => 'Zadali ste chybný bezpečnostný kód!'
 );
 

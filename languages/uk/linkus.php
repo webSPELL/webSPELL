@@ -24,25 +24,31 @@
 #                                                                        #
 ##########################################################################
 */
+/**
+ * Online Language Editor Ukraine language file for webSPELL 4.2.2
+ * @author Stefan Giesecke <webmaster@giesi.com>
+ * @copyright Copyright (c) 2010, Stefan Giesecke
+ * @license http://www.gnu.org/licenses/gpl.html GNU General Public License v3
+ */
 
 $language_array = Array(
 
 /* do not edit above this line */
 
-	'back'=>'back',
-	'banner'=>'Banner',
-	'banner_to_big'=>'Picture is to big',
-	'delete'=>'delete',
-	'edit'=>'edit',
-	'edit_linkus'=>'edit banner',
-	'format_incorrect'=>'Invalid picture-format (allowed: *.gif, *.jpg or *.png)',
-	'link_us'=>'link us',
-	'name'=>'Name',
-	'new_banner'=>'new banner',
-	'no_access'=>'No access!',
-	'no_banner'=>'no link us banner',
-	'really_delete_banner'=>'really delete this banner?',
-	'save_banner'=>'save banner',
-	'use_following_code'=>'Use the following code, to insert the banner on your homepage.'
+  'back'=>'Назад',
+  'banner'=>'Банер',
+  'banner_to_big'=>'Зображення занадто велике',
+  'delete'=>'видалити',
+  'edit'=>'редагувати',
+  'edit_linkus'=>'Редагувати банер',
+  'format_incorrect'=>'Неправильний формат зображення (дозволені: *.gif, *.jpg або *.png)',
+  'link_us'=>'Посилання на нас',
+  'name'=>'Iм\'я',
+  'new_banner'=>'новий банер',
+  'no_access'=>'Немає доступу!',
+  'no_banner'=>'Немає посилання на банер',
+  'really_delete_banner'=>'Дійсно видалити цей банер?',
+  'save_banner'=>'зберегти банер',
+  'use_following_code'=>'Використовуйте вказаний код, щоб розмістити банер на своїй домашній сторінці.'
 );
 

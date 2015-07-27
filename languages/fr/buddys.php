@@ -25,19 +25,18 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
-/* do not editer above this line */
+/* do not edit above this line */
 
-	'add_notexists'=>'Ce membre n\existe pas',
-	'add_nouserid'=>'Ce membre n\existe pas',
-	'add_yourself'=>'Vous ne pouvez pas ni vous ajouter en tant qu\'ami ni vous ignorer !',
-	'buddy_nousers'=>'Vous n\'avez aucun membre dans votre liste d\'amis.',
-	'buddys'=>'Amis',
-	'ignore_nousers'=>'Vous n\'avez aucun membre dans votre liste d\'ignorés.',
-	'not_logged'=>'Vous devez être enregistré et connecté pour gérer vos amis.<br><a href="index.php?site=register">S\'enregistrer</a> | <a href="index.php?site=login">Se connecter</a>',
-	'your_buddylist'=>'Votre liste d\'amis',
-	'your_ignorelist'=>'Votre liste d\'ignorés'
+    'add_notexists' => 'Ce membre n\existe pas',
+    'add_nouserid' => 'Ce membre n\existe pas',
+    'add_yourself' => 'Vous ne pouvez pas ni vous ajouter en tant qu\'ami ni vous ignorer !',
+    'buddy_nousers' => 'Vous n\'avez aucun membre dans votre liste d\'amis.',
+    'buddys' => 'Amis',
+    'ignore_nousers' => 'Vous n\'avez aucun membre dans votre liste d\'ignorés.',
+    'not_logged' => 'Vous devez être enregistré et connecté pour gérer vos amis.<br><a href="index.php?site=register">S\'enregistrer</a> | <a href="index.php?site=login">Se connecter</a>',
+    'your_buddylist' => 'Votre liste d\'amis',
+    'your_ignorelist' => 'Votre liste d\'ignorés'
 );
-
 

@@ -25,12 +25,12 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-	'no_frame'=>'Ez az oldal frameket használ. A böngészod nem támogatja a frameket!',
-	'outgoing'=>'Kimenő',
-	'owner_responsible'=>'A tulajdonos felelős az oldalért.'
+    'no_frame' => 'Ez az oldal frameket használ. A böngészod nem támogatja a frameket!',
+    'outgoing' => 'Kimenő',
+    'owner_responsible' => 'A tulajdonos felelős az oldalért.'
 );
 

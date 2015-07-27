@@ -31,7 +31,7 @@ include("_settings.php");
 include("_functions.php");
 chdir('admin');
 
-$_language->readModule('admincenter');
+$_language->readModule('admincenter', false, true);
 
 if (isset($_GET['site'])) {
     $site = $_GET['site'];
@@ -95,7 +95,6 @@ function addonnav()
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<meta name="description" content="Clanpage using webSPELL 4 CMS" />
 	<meta name="author" content="webspell.org" />
-	<meta name="keywords" content="webspell, webspell4, clan, cms" />
 	<meta name="copyright" content="Copyright 2005-2015 by webspell.org" />
 	<meta name="generator" content="webSPELL" />
 	<title><?php echo $myclanname ?> - webSPELL AdminCenter</title>

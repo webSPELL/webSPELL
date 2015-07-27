@@ -25,7 +25,7 @@
 ##########################################################################
 */
 
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
@@ -92,7 +92,6 @@ $language_array = Array(
     'report_dead_link' => 'Пријави неисправен линк',
     'reset' => 'Ресетирај',
     'size' => 'Големина',
-    'statistic' => 'Статистика',
     'subcategories' => 'Под категории',
     'successful' => 'Успешно.',
     'top_5_downloads' => 'ТOП 5 Данлоадирања',
@@ -105,3 +104,4 @@ $language_array = Array(
     'you_have_to_enter_file' => 'Морате да внесите документ/линк!',
     'you_have_to_enter_filename' => 'Морате да внесите име на документот!'
 );
+

@@ -25,12 +25,11 @@
 ##########################################################################
 */
 
-
-$language_array = Array(
+$language_array = array(
 
 /* do not edit above this line */
 
-  'history'=>'Istoric',
-  'no_history'=>'Nu există istoric.'
+    'history' => 'Istoric',
+    'no_history' => 'Nu există istoric.'
 );
 
