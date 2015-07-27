@@ -50,27 +50,27 @@
 
             <!-- Nickname -->
             <div class="form-group">
-                <label for="input-nickname" class="col-xs-12 col-md-3 control-label">%nickname%:*</label>
+                <label for="input-nickname" class="col-sm-3 control-label">%nickname%:*</label>
 
-                <div class="col-xs-12 col-md-9">
+                <div class="col-sm-9">
                     <input type="text" name="nickname" class="form-control" id="input-nickname" value="$nickname" autocomplete="nickname" maxlength="30">
                 </div>
             </div>
 
             <!-- Nickname -->
             <div class="form-group">
-                <label for="input-usernamenew" class="col-xs-12 col-md-3 control-label">%username%:</label>
+                <label for="input-usernamenew" class="col-sm-3 control-label">%username%:</label>
 
-                <div class="col-xs-12 col-md-9">
+                <div class="col-sm-9">
                     <input type="text" name="usernamenew" class="form-control" id="input-usernamenew" value="$username" autocomplete="nickname">
                 </div>
             </div>
 
             <!-- Password -->
             <div class="form-group">
-                <label for="input-usernamenew" class="col-xs-12 col-md-3 control-label">%password%:</label>
+                <label for="input-usernamenew" class="col-sm-3 control-label">%password%:</label>
 
-                <div class="col-xs-12 col-md-9">
+                <div class="col-sm-9">
                     <p class="form-control-static">
                         ******<br>
                         <a href="index.php?site=myprofile&amp;action=editpwd" class="btn btn-warning btn-xs">%edit_password%</a>
@@ -80,9 +80,9 @@
 
             <!-- Email -->
             <div class="form-group">
-                <label for="input-usernamenew" class="col-xs-12 col-md-3 control-label">%e-mail%:</label>
+                <label for="input-usernamenew" class="col-sm-3 control-label">%e-mail%:</label>
 
-                <div class="col-xs-12 col-md-9">
+                <div class="col-sm-9">
                     <p class="form-control-static">
                         $email<br>
                         <a href="index.php?site=myprofile&amp;action=editmail" class="btn btn-warning btn-xs">%edit_mail%</a>
@@ -95,11 +95,11 @@
             <!-- Avatar -->
             <div class="form-group">
 
-                <label for="input-avatar" class="col-xs-12 col-md-3 control-label">
+                <label for="input-avatar" class="col-sm-3 control-label">
                     $viewavatar
                 </label>
 
-                <div class="col-xs-12 col-md-9">
+                <div class="col-sm-9">
                     <p class="form-control-static">
                         <input type="file" name="avatar" id="input-avatar"><span class="help-block">%or%</span>
                         <input type="text" name="avatar_url" class="form-control" placeholder="http://">
@@ -114,11 +114,11 @@
             <!-- Userpic -->
             <div class="form-group">
 
-                <label for="input-userpic" class="col-xs-12 col-md-3 control-label">
+                <label for="input-userpic" class="col-sm-3 control-label">
                     $viewpic
                 </label>
 
-                <div class="col-xs-12 col-md-9">
+                <div class="col-sm-9">
                     <p class="form-control-static">
                         <input type="file" name="userpic" id="input-userpic"><span class="help-block">%or%</span>
                         <input type="text" name="userpic_url" class="form-control" placeholder="http://">
@@ -132,9 +132,9 @@
 
             <!-- Signature -->
             <div class="form-group">
-                <label for="textarea-usertext" class="col-xs-12 col-md-3 control-label">%signature%:</label>
+                <label for="textarea-usertext" class="col-sm-3 control-label">%signature%:</label>
 
-                <div class="col-xs-12 col-md-9">
+                <div class="col-sm-9">
                     <textarea name="usertext" rows="5" class="form-control" id="textarea-usertext">$usertext</textarea>
                 </div>
             </div>
@@ -151,31 +151,31 @@
 
             <!-- First name -->
             <div class="form-group">
-                <label for="input-firstname" class="col-xs-12 col-md-3 control-label">%first_name%:*</label>
+                <label for="input-firstname" class="col-sm-3 control-label">%first_name%:*</label>
 
-                <div class="col-xs-12 col-md-9">
+                <div class="col-sm-9">
                     <input type="text" name="firstname" class="form-control" id="input-firstname" value="$firstname" autocomplete="given-name">
                 </div>
             </div>
 
             <!-- Last name -->
             <div class="form-group">
-                <label for="input-lastname" class="col-xs-12 col-md-3 control-label">%last_name%:</label>
+                <label for="input-lastname" class="col-sm-3 control-label">%last_name%:</label>
 
-                <div class="col-xs-12 col-md-9">
+                <div class="col-sm-9">
                     <input type="text" name="lastname" class="form-control" id="input-lastname" value="$lastname" autocomplete="family-name">
                 </div>
             </div>
 
             <!-- Country -->
             <div class="form-group">
-                <label for="input-country" class="col-xs-12 col-md-3 control-label">%country%:</label>
-                <div class="col-xs-12 col-md-9">
+                <label for="input-country" class="col-sm-3 control-label">%country%:</label>
+                <div class="col-sm-9">
                     <div class="row">
-                        <div class="col-xs-2 col-md-1">
+                        <div class="col-sm-1">
                             $country
                         </div>
-                        <div class="col-xs-10 col-md-11">
+                        <div class="col-sm-11">
                             <select name="flag" onchange="document.getElementById('county').src='images/flags/' +
                                 this.options[this.selectedIndex].value+'.gif'" class="form-control" id="input-country">
                                 $countries
@@ -187,27 +187,27 @@
 
             <!-- Town -->
             <div class="form-group">
-                <label for="input-town" class="col-xs-12 col-md-3 control-label">%town%:</label>
+                <label for="input-town" class="col-sm-3 control-label">%town%:</label>
 
-                <div class="col-xs-12 col-md-9">
+                <div class="col-sm-9">
                     <input type="text" name="town" class="form-control" id="input-town" value="$town" autocomplete="locality">
                 </div>
             </div>
 
             <!-- Birthday -->
             <div class="form-group">
-                <label for="input-birthday" class="col-xs-12 col-md-3 control-label">%date_of_birth%:*</label>
+                <label for="input-birthday" class="col-sm-3 control-label">%date_of_birth%:*</label>
 
-                <div class="col-xs-12 col-md-9">
+                <div class="col-sm-9">
                     <input type="date" name="birthday" class="form-control" id="input-birthday" placeholder="yyyy-mm-dd" value="$birthday">
                 </div>
             </div>
 
             <!-- Sexuality -->
             <div class="form-group">
-                <label for="input-sex" class="col-xs-12 col-md-3 control-label">%sexuality%:</label>
+                <label for="input-sex" class="col-sm-3 control-label">%sexuality%:</label>
 
-                <div class="col-xs-12 col-md-9">
+                <div class="col-sm-9">
                     <select name="sex" class="form-control" id="input-sex">
                         $sex
                     </select>
@@ -216,27 +216,27 @@
 
             <!-- ICQ -->
             <div class="form-group">
-                <label for="input-icq" class="col-xs-12 col-md-3 control-label">Icq#</label>
+                <label for="input-icq" class="col-sm-3 control-label">Icq#</label>
 
-                <div class="col-xs-12 col-md-9">
+                <div class="col-sm-9">
                     <input type="text" name="icq" class="form-control" id="input-icq" value="$icq">
                 </div>
             </div>
 
             <!-- Homepage -->
             <div class="form-group">
-                <label for="input-homepage" class="col-xs-12 col-md-3 control-label">%homepage%:</label>
+                <label for="input-homepage" class="col-sm-3 control-label">%homepage%:</label>
 
-                <div class="col-xs-12 col-md-9">
+                <div class="col-sm-9">
                     <input type="url" name="homepage" class="form-control" id="input-homepage" value="http://$homepage" autocomplete="url">
                 </div>
             </div>
 
             <!-- Message about -->
             <div class="form-group">
-                <label for="textarea-messageabout" class="col-xs-12 col-md-3 control-label">%about_myself%:</label>
+                <label for="textarea-messageabout" class="col-sm-3 control-label">%about_myself%:</label>
 
-                <div class="col-xs-12 col-md-9">
+                <div class="col-sm-9">
                     <textarea name="messageabout" rows="8" class="form-control" id="textarea-messageabout">$about</textarea>
                 </div>
             </div>
@@ -253,9 +253,9 @@
 
             <!-- Newsletter -->
             <div class="form-group">
-                <label for="select-newsletter" class="col-xs-12 col-md-3 control-label">%newsletter%:</label>
+                <label for="select-newsletter" class="col-sm-3 control-label">%newsletter%:</label>
 
-                <div class="col-xs-12 col-md-9">
+                <div class="col-sm-9">
                     <select name="newsletter" class="form-control" id="select-newsletter">
                         $newsletter
                     </select>
@@ -264,9 +264,9 @@
 
             <!-- Language -->
             <div class="form-group">
-                <label for="select-language" class="col-xs-12 col-md-3 control-label">%language%:</label>
+                <label for="select-language" class="col-sm-3 control-label">%language%:</label>
 
-                <div class="col-xs-12 col-md-9">
+                <div class="col-sm-9">
                     <select name="language" class="form-control" id="select-language">
                         $langdirs
                     </select>
@@ -275,9 +275,9 @@
 
             <!-- Mail on new pm -->
             <div class="form-group">
-                <label for="select-pm_mail" class="col-xs-12 col-md-3 control-label">%mail_on_new_pm%:</label>
+                <label for="select-pm_mail" class="col-sm-3 control-label">%mail_on_new_pm%:</label>
 
-                <div class="col-xs-12 col-md-9">
+                <div class="col-sm-9">
                     <select name="pm_mail" class="form-control" id="select-pm_mail">
                         $pm_mail
                     </select>
@@ -286,18 +286,18 @@
 
             <!-- Hide E-mail -->
             <div class="form-group">
-                <label for="input-mail_hide" class="col-xs-12 col-md-3 control-label">%hide_e-mail%:</label>
+                <label for="input-mail_hide" class="col-sm-3 control-label">%hide_e-mail%:</label>
 
-                <div class="col-xs-12 col-md-9">
+                <div class="col-sm-9">
                     <input type="checkbox" name="mail_hide" id="input-mail_hide" value="1" $email_hide>
                 </div>
             </div>
 
             <!-- Format date -->
             <div class="form-group">
-                <label for="select-date_format" class="col-xs-12 col-md-3 control-label">%format_date%:</label>
+                <label for="select-date_format" class="col-sm-3 control-label">%format_date%:</label>
 
-                <div class="col-xs-12 col-md-9">
+                <div class="col-sm-9">
                     <select name="date_format" class="form-control" id="select-date_format">
                         $format_date
                     </select>
@@ -306,9 +306,9 @@
 
             <!-- Format time -->
             <div class="form-group">
-                <label for="select-time_format" class="col-xs-12 col-md-3 control-label">%format_time%:</label>
+                <label for="select-time_format" class="col-sm-3 control-label">%format_time%:</label>
 
-                <div class="col-xs-12 col-md-9">
+                <div class="col-sm-9">
                     <select name="time_format" class="form-control" id="select-time_format">
                         $format_time
                     </select>
@@ -329,45 +329,45 @@
 
             <!-- Clan tag -->
             <div class="form-group">
-                <label for="input-clantag" class="col-xs-12 col-md-3 control-label">%clan-tag%:</label>
+                <label for="input-clantag" class="col-sm-3 control-label">%clan-tag%:</label>
 
-                <div class="col-xs-12 col-md-9">
+                <div class="col-sm-9">
                     <input type="text" name="clantag" class="form-control" id="input-clantag" value="$clantag">
                 </div>
             </div>
 
             <!-- Clan name -->
             <div class="form-group">
-                <label for="input-clanname" class="col-xs-12 col-md-3 control-label">%clan-name%:</label>
+                <label for="input-clanname" class="col-sm-3 control-label">%clan-name%:</label>
 
-                <div class="col-xs-12 col-md-9">
+                <div class="col-sm-9">
                     <input type="text" name="clanname" class="form-control" id="input-clanname" value="$clanname">
                 </div>
             </div>
 
             <!-- Clan hp -->
             <div class="form-group">
-                <label for="input-clanhp" class="col-xs-12 col-md-3 control-label">%clan-hp%:</label>
+                <label for="input-clanhp" class="col-sm-3 control-label">%clan-hp%:</label>
 
-                <div class="col-xs-12 col-md-9">
+                <div class="col-sm-9">
                     <input type="url" name="clanhp" class="form-control" id="input-clanhp" value="$clanhp">
                 </div>
             </div>
 
             <!-- Clan irc -->
             <div class="form-group">
-                <label for="input-clanirc" class="col-xs-12 col-md-3 control-label">%clan-irc%:</label>
+                <label for="input-clanirc" class="col-sm-3 control-label">%clan-irc%:</label>
 
-                <div class="col-xs-12 col-md-9">
+                <div class="col-sm-9">
                     <input type="text" name="clanirc" class="form-control" id="input-clanirc" value="$clanirc">
                 </div>
             </div>
 
             <!-- Clan history -->
             <div class="form-group">
-                <label for="input-clanhistory" class="col-xs-12 col-md-3 control-label">%clan-history%:</label>
+                <label for="input-clanhistory" class="col-sm-3 control-label">%clan-history%:</label>
 
-                <div class="col-xs-12 col-md-9">
+                <div class="col-sm-9">
                     <input type="text" name="clanhistory" class="form-control" id="input-clanhistory" value="$clanhistory">
                 </div>
             </div>
@@ -384,108 +384,108 @@
 
             <!-- CPU -->
             <div class="form-group">
-                <label for="input-cpu" class="col-xs-12 col-md-3 control-label">%cpu%:</label>
+                <label for="input-cpu" class="col-sm-3 control-label">%cpu%:</label>
 
-                <div class="col-xs-12 col-md-9">
+                <div class="col-sm-9">
                     <input type="text" name="cpu" class="form-control" id="input-cpu" value="$cpu">
                 </div>
             </div>
 
             <!-- Mainboard -->
             <div class="form-group">
-                <label for="input-mainboard" class="col-xs-12 col-md-3 control-label">%mainboard%:</label>
+                <label for="input-mainboard" class="col-sm-3 control-label">%mainboard%:</label>
 
-                <div class="col-xs-12 col-md-9">
+                <div class="col-sm-9">
                     <input type="text" name="mainboard" class="form-control" id="input-mainboard" value="$mainboard">
                 </div>
             </div>
 
             <!-- Ram -->
             <div class="form-group">
-                <label for="input-ram" class="col-xs-12 col-md-3 control-label">%ram%:</label>
+                <label for="input-ram" class="col-sm-3 control-label">%ram%:</label>
 
-                <div class="col-xs-12 col-md-9">
+                <div class="col-sm-9">
                     <input type="text" name="ram" class="form-control" id="input-ram" value="$ram">
                 </div>
             </div>
 
             <!-- HDD -->
             <div class="form-group">
-                <label for="input-hdd" class="col-xs-12 col-md-3 control-label">%hdd%:</label>
+                <label for="input-hdd" class="col-sm-3 control-label">%hdd%:</label>
 
-                <div class="col-xs-12 col-md-9">
+                <div class="col-sm-9">
                     <input type="text" name="hdd" class="form-control" id="input-hdd" value="$hdd">
                 </div>
             </div>
 
             <!-- Monitor -->
             <div class="form-group">
-                <label for="input-monitor" class="col-xs-12 col-md-3 control-label">%monitor%:</label>
+                <label for="input-monitor" class="col-sm-3 control-label">%monitor%:</label>
 
-                <div class="col-xs-12 col-md-9">
+                <div class="col-sm-9">
                     <input type="text" name="monitor" class="form-control" id="input-monitor" value="$monitor">
                 </div>
             </div>
 
             <!-- Graphiccard -->
             <div class="form-group">
-                <label for="input-graphiccard" class="col-xs-12 col-md-3 control-label">%graphiccard%:</label>
+                <label for="input-graphiccard" class="col-sm-3 control-label">%graphiccard%:</label>
 
-                <div class="col-xs-12 col-md-9">
+                <div class="col-sm-9">
                     <input type="text" name="graphiccard" class="form-control" id="input-graphiccard" value="$graphiccard">
                 </div>
             </div>
 
             <!-- Soundcard -->
             <div class="form-group">
-                <label for="input-soundcard" class="col-xs-12 col-md-3 control-label">%soundcard%:</label>
+                <label for="input-soundcard" class="col-sm-3 control-label">%soundcard%:</label>
 
-                <div class="col-xs-12 col-md-9">
+                <div class="col-sm-9">
                     <input type="text" name="soundcard" class="form-control" id="input-soundcard" value="$soundcard">
                 </div>
             </div>
 
             <!-- Connection -->
             <div class="form-group">
-                <label for="input-connection" class="col-xs-12 col-md-3 control-label">%i-connection%:</label>
+                <label for="input-connection" class="col-sm-3 control-label">%i-connection%:</label>
 
-                <div class="col-xs-12 col-md-9">
+                <div class="col-sm-9">
                     <input type="text" name="connection" class="form-control" id="input-connection" value="$connection">
                 </div>
             </div>
 
             <!-- Keyboard -->
             <div class="form-group">
-                <label for="input-keyboard" class="col-xs-12 col-md-3 control-label">%keyboard%:</label>
+                <label for="input-keyboard" class="col-sm-3 control-label">%keyboard%:</label>
 
-                <div class="col-xs-12 col-md-9">
+                <div class="col-sm-9">
                     <input type="text" name="keyboard" class="form-control" id="input-keyboard" value="$keyboard">
                 </div>
             </div>
 
             <!-- Mouse -->
             <div class="form-group">
-                <label for="input-mouse" class="col-xs-12 col-md-3 control-label">%mouse%:</label>
+                <label for="input-mouse" class="col-sm-3 control-label">%mouse%:</label>
 
-                <div class="col-xs-12 col-md-9">
+                <div class="col-sm-9">
                     <input type="text" name="mouse" class="form-control" id="input-mouse" value="$mouse">
                 </div>
             </div>
 
             <!-- Mousepad -->
             <div class="form-group">
-                <label for="input-mousepad" class="col-xs-12 col-md-3 control-label">%mousepad%:</label>
+                <label for="input-mousepad" class="col-sm-3 control-label">%mousepad%:</label>
 
-                <div class="col-xs-12 col-md-9">
+                <div class="col-sm-9">
                     <input type="text" name="mousepad" class="form-control" id="input-mousepad" value="$mousepad">
                 </div>
             </div>
 
             <!-- Headset -->
             <div class="form-group">
-                <label for="input-headset" class="col-xs-12 col-md-3 control-label">%headset%:</label>
+                <label for="input-headset" class="col-sm-3 control-label">%headset%:</label>
 
-                <div class="col-xs-12 col-md-9">
+                <div class="col-sm-9">
                     <input type="text" name="headset" class="form-control" id="input-headset" value="$headset">
                 </div>
             </div>

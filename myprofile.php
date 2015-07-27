@@ -511,10 +511,10 @@ if (!$userID) {
             if ($user_guestbook) {
                 $user_gbook_select =
                     '<div class="form-group">
-                        <label for="select-user_guestbook" class="col-xs-12 col-md-3 control-label">' .
+                        <label for="select-user_guestbook" class="col-sm-3 control-label">' .
                         $_language->module['guestbook'] . ':</label>
 
-                        <div class="col-xs-12 col-md-9">
+                        <div class="col-sm-9">
                             <select name="user_guestbook" class="form-control" id="select-user_guestbook">
                                 ' . $user_gbook . '
                             </select>
