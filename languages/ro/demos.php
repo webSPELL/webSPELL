@@ -31,6 +31,7 @@ $language_array = array(
 
     'all_demos' => 'Toate demo-urile',
     'allready_rated' => 'Ai evaluat deja acest demo',
+    'back' => 'Înapoi',
     'clan1' => 'Clan 1',
     'clan1_country' => 'Clan țară 1',
     'clan1_homepage' => 'Pagina Clan 1',

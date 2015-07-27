@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /*
 ##########################################################################
 #                                                                        #
@@ -31,6 +31,7 @@ $language_array = array(
 
     'all_demos' => 'Tutti i demo',
     'allready_rated' => 'Hai giá votato questo demo',
+    'back' => 'indietro',
     'clan1' => 'Clan 1',
     'clan1_country' => 'Paese clan 1',
     'clan1_homepage' => 'Homepage clan 1',

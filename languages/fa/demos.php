@@ -31,6 +31,7 @@ $language_array = array(
 
     'all_demos' => 'تمام دمو ها',
     'allready_rated' => 'شما تا کنون این دمو را نمره داده اید',
+    'back' => 'برگشت',
     'clan1' => 'کلن 1',
     'clan1_country' => 'کلن کشور 1',
     'clan1_homepage' => 'وب سایت کلن 1',

@@ -31,6 +31,7 @@ $language_array = array(
 
     'all_demos' => 'VISI demo įrašai',
     'allready_rated' => 'Jūs jau įvertinote šį demo įrašą',
+    'back' => 'grįžti',
     'clan1' => '1 Klanas',
     'clan1_country' => '1 Klano šalis',
     'clan1_homepage' => '1 Klano namų puslapis',

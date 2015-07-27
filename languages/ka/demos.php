@@ -31,6 +31,7 @@ $language_array = array(
 
     'all_demos' => 'ყველა დემოები',
     'allready_rated' => 'შენ უვკე შეაფასე ეს დემო',
+    'back' => 'უკან',
     'clan1' => 'კლან 1',
     'clan1_country' => 'კლანის ქვეყანა 1',
     'clan1_homepage' => 'კლანის მთავარი გვერდი 1',

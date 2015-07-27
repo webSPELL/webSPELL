@@ -31,6 +31,7 @@ $language_array = array(
 
     'all_demos' => 'alle demos',
     'allready_rated' => 'Jy het alreeds hierdie demo gegradeer',
+    'back' => 'terug',
     'clan1' => 'Klan 1',
     'clan1_country' => 'Land klan 1',
     'clan1_homepage' => 'Tuisblad klan 1',

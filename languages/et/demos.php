@@ -31,6 +31,7 @@ $language_array = array(
 
     'all_demos' => 'Kõik taasesitused',
     'allready_rated' => 'Sa oled juba hinnanud seda taasesitust',
+    'back' => 'tagasi',
     'clan1' => 'Klann 1',
     'clan1_country' => 'Klann 1\'e riik',
     'clan1_homepage' => 'Klann 1\'e koduleht',

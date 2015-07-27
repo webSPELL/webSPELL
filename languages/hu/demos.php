@@ -31,6 +31,7 @@ $language_array = array(
 
     'all_demos' => 'Minden demó',
     'allready_rated' => 'Már értékelted ezt a demót',
+    'back' => 'vissza',
     'clan1' => '1.Klán',
     'clan1_country' => '1.Ország klán',
     'clan1_homepage' => '1.Honlap klán',
