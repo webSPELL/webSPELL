@@ -40,7 +40,6 @@ $language_array = array(
     'counter_stats' => 'numëruesi statistikave',
     'date' => 'Data',
     'demos' => 'demo-t',
-    'faq' => 'Pyetje të shpeshta',
     'fightus' => 'lufto me ne',
     'files' => 'download-e',
     'forum' => 'forumet',

@@ -39,7 +39,6 @@ $language_array = array(
     'date_options' => 'Data',
     'delete_selected' => 'fshiji të zgjedhurat',
     'descending' => 'zbritje',
-    'faq' => 'Pyetje të shpeshta',
     'faq_link' => '<b>link për tek Pyetje të shpeshta</b>',
     'forum' => 'Forum',
     'forum_link' => '<b>link për tek tema</b>',

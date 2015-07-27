@@ -30,15 +30,15 @@ $language_array = Array(
 /* do not edit above this line */
 
   'access_denied'=>'Accesso negato',
-  'error'=>'Server non è compatibile con l*aggiornamento o il file non esiste su',
+  'error'=>'Server non è compatibile con l\'aggiornamento o il file non esiste su',
   'filename'=>'Nome del file',
-  'get_new_version'=>'Scarica qui l*ultima versione Webspell!',
+  'get_new_version'=>'Scarica qui l\'ultima versione di webSPELL!',
   'information'=>'Informazioni',
-  'new_functions'=>'Nuove funzioni disponibili per Webspell',
-  'new_updates'=>'Nuovi aggiornamenti disponibili per Webspell',
-  'new_version'=>'Nuova versione Webspell',
+  'new_functions'=>'Nuove funzioni disponibili per webSPELL',
+  'new_updates'=>'Nuovi aggiornamenti disponibili per webSPELL',
+  'new_version'=>'Nuova versione per webSPELL',
   'no_updates'=>'Nessun aggiornamento disponibile!',
   'version'=>'Versione',
-  'webspell_update'=>'webSPELL aggiornamento'
+  'webspell_update'=>'aggiornamento webSPELL'
 );
 

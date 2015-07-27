@@ -31,19 +31,19 @@ $language_array = Array(
 
   'access_denied'=>'Accesso negato',
   'actions'=>'Azioni',
-  'add_rubric'=>'Aggiungi denominazione',
+  'add_rubric'=>'aggiungi sezione',
   'back'=>'indietro',
-  'delete'=>'cancellare',
-  'edit'=>'cambiare',
-  'edit_rubric'=>'denominazione cambiare',
-  'format_incorrect'=>'Il formato del banner è sbagliato. Si prega di caricare solo banner in *.gif, *.jpg o *.png formato.',
+  'delete'=>'elimina',
+  'edit'=>'modifica',
+  'edit_rubric'=>'modifica sezione',
+  'format_incorrect'=>'Il formato dell\'icona non è corretto. Si prega di caricare solo il banner in formato *.gif, *.jpg e *.png.',
   'information_incomplete'=>'Informazioni incomplete.',
-  'new_rubric'=>'nuovo denominazione',
-  'news_rubrics'=>'News denominazione',
+  'new_rubric'=>'nuovo sezione',
+  'news_rubrics'=>'Sezione News',
   'picture'=>'Immagine',
   'picture_upload'=>'Carica immagine',
-  'really_delete'=>'Veramente cancellare questo denominazione?',
-  'rubric_name'=>'denominazione nome',
-  'transaction_invalid'=>'ID transazione non valido'
+  'really_delete'=>'Davvero cancellare questo sezione?',
+  'rubric_name'=>'Nome della sezione',
+  'transaction_invalid'=>'ID della transazione non valido'
 );
 

@@ -29,24 +29,24 @@ $language_array = array(
 
 /* do not edit above this line */
 
-    'award' => 'Premi',
-    'awards' => 'Premi',
+    'award' => 'Assegno',
+    'awards' => 'assegni',
     'date' => 'Data',
-    'delete' => 'cancellare',
-    'edit' => 'modificare',
-    'edit_award' => 'Premo modificare',
-    'enter_text' => 'Devi inserire un titolo!',
+    'delete' => 'elimina',
+    'edit' => 'modifica',
+    'edit_award' => 'modifica assegno',
+    'enter_text' => 'È necessario inserire un testo',
     'enter_title' => 'Devi inserire un titolo!',
-    'event' => 'evento',
+    'event' => 'Evento',
     'homepage' => 'Home page',
     'info' => 'Info',
-    'new_award' => 'Nuovo Premio',
+    'new_award' => 'nuovo assegno',
     'no_access' => 'Nessun accesso!',
-    'no_entries' => 'Nessun premio esiste',
-    'ranking' => 'Rank',
-    'save_award' => 'Premio salvare',
+    'no_entries' => 'Nessun assegno disponibili',
+    'ranking' => 'Rango',
+    'save_award' => 'Salva assegno',
     'sort' => 'Ordina',
-    'squad' => 'Team',
-    'update_award' => 'Premio aggiorare'
+    'squad' => 'Squadra',
+    'update_award' => 'Aggiora assegno'
 );
 

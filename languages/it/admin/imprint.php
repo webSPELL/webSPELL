@@ -30,11 +30,11 @@ $language_array = Array(
 /* do not edit above this line */
 
   'access_denied'=>'Accesso negato',
-  'automatic'=>'automaticamente',
-  'imprint'=>'Imprint',
-  'manual'=>'manualmente (in basso a utilizzare il campo per il testo)',
-  'transaction_invalid'=>'ID transazione non valido',
-  'update'=>'aggiornamento',
+  'automatic'=>'automatico',
+  'imprint'=>'Colofone',
+  'manual'=>'Manualmente (utilizzare il campo di testo sotto)',
+  'transaction_invalid'=>'ID della transazione non valido',
+  'update'=>'aggiorna',
   'you_can_use_html'=>'È possibile di utilizzare HTML'
 );
 

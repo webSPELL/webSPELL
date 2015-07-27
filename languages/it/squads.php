@@ -37,7 +37,6 @@ $language_array = array(
     'back_squad_overview' => 'Torna al sommario Team',
     'challenge' => 'Challenge',
     'contact' => 'Contatto',
-    'email' => 'Email',
     'ignore' => 'Ignora utente',
     'inactive' => 'Inattivo',
     'member' => 'Membro',

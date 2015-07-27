@@ -30,9 +30,9 @@ $language_array = Array(
 /* do not edit above this line */
 
   'access_denied'=>'Accesso negato',
-  'history'=>'Storia',
-  'transaction_invalid'=>'ID transazione non valido',
-  'update'=>'aggiornamento',
+  'history'=>'Storia-Clan',
+  'transaction_invalid'=>'ID della transazione non valido',
+  'update'=>'aggiorna',
   'you_can_use_html'=>'È possibile di utilizzare HTML'
 );
 

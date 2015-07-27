@@ -38,7 +38,6 @@ $language_array = array(
     'logout' => 'esci',
     'lost_password' => 'Dimenticato password?',
     'messenger' => 'Messaggi di sistema',
-    'n_a' => 'nessun avatar',
     'overview' => 'Panoramica',
     'register_now' => 'Registrare alloro',
     'registered_users' => 'utente registrato',

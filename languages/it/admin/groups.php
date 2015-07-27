@@ -31,17 +31,17 @@ $language_array = Array(
 
   'access_denied'=>'Accesso negato',
   'actions'=>'Azioni',
-  'add_group'=>'Aggiungi user group',
+  'add_group'=>'aggiungi gruppo',
   'back'=>'indietro',
-  'delete'=>'cancellare',
-  'edit'=>'cambiare',
-  'edit_group'=>'gruppo di utenti cambiare',
-  'error_group'=>'ERRORE: Nessun utente il nome del gruppo',
+  'delete'=>'elimina',
+  'edit'=>'modifica',
+  'edit_group'=>'modifica gruppo',
+  'error_group'=>'ERRORE: Nessun nome del gruppo',
   'error_groupid'=>'ERRORE: Manca fgrID',
-  'group_name'=>'Nome User Group',
-  'groups'=>'Utenti dei gruppi gestire',
-  'new_group'=>'nuovo gruppo di utenti',
-  'really_delete'=>'Questo gruppo di utenti di cancellare?',
-  'transaction_invalid'=>'ID transazione non valido'
+  'group_name'=>'Nome del gruppo',
+  'groups'=>'Gruppi di utenti forum',
+  'new_group'=>'nuovo gruppo',
+  'really_delete'=>'Davvero cancellare questo gruppo di forum?',
+  'transaction_invalid'=>'ID della transazione non valido'
 );
 
