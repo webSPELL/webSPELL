@@ -37,7 +37,6 @@ $language_array = array(
     'back_squad_overview' => 'повратак на преглед тима',
     'challenge' => 'изазови нас',
     'contact' => 'Контакт',
-    'email' => 'е-маил',
     'ignore' => 'игнориши корисника',
     'inactive' => 'није активан',
     'member' => 'Члан',
@@ -50,6 +49,7 @@ $language_array = array(
     'show_details' => 'прикажи детаље',
     'squad_plays' => 'Тим игра',
     'squads' => 'тимови',
+    'status' => 'Статус',
     'town' => 'Град',
     'userpicture' => 'слика корисника'
 );

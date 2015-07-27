@@ -41,7 +41,6 @@ $language_array = array(
     'guestbook_comment' => 'Коментар књиге гостију',
     'homepage' => 'Хомепаге',
     'html' => 'ХТМЛ искључен',
-    'ip' => 'ИП',
     'mail' => 'Ваш е-маил',
     'name' => 'Ваше име',
     'new_entry' => 'Нови унос',

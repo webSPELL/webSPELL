@@ -30,10 +30,9 @@ module.exports = function( grunt ) {
             "install/**",
             "js/**",
             "languages/**",
-            "!languages/check_translations.php",
             "src/**",
             "templates/**",
-            "tmp/**",
+            "tmp/index.php",
             "*",
             "!.gitignore",
             "!.scrutinizer*",
@@ -45,6 +44,9 @@ module.exports = function( grunt ) {
             "!.jshintrc",
             "!circle.yml",
             "!Gruntfile.js",
+            "!karma.conf.js",
+            "!nightwatch.json",
+            "!composer.phar",
             "!grunt-log.txt",
             "!*.zip",
             "!vendor",
@@ -246,7 +248,9 @@ module.exports = function( grunt ) {
         changelog: {
             release: {
                 options: {
-                    version: "<%= pkg.version %>"
+                    version: "<%= pkg.version %>",
+                    labels: grunt.file.read( "development/type.txt" ).trim().split( "\n" ),
+                    template: "grouped"
                 }
             }
         },

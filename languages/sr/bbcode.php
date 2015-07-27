@@ -36,6 +36,7 @@ $language_array = array(
     'burlywood' => 'Светло-смеђа',
     'center' => 'Центар',
     'chocolate' => 'Чоколада',
+    'code' => 'Код',
     'color' => 'БOJA',
     'coral' => 'Корал',
     'crimson' => 'Тамно црвена',
