@@ -29,11 +29,10 @@ $language_array = array(
 
 /* do not edit above this line */
 
+    'faq' => 'FAQ',
     'admin_button' => 'FAQ Administratioun',
     'answer' => 'Äntwert',
     'categories' => 'Kategorien',
-    'faq' => 'Heefeg gestellte Froen',
-    'faqs' => 'Froen',
     'no_categories' => 'keng Kategorien ugeluecht',
     'no_faq' => 'Keng Froen do.<br><a href="index.php?site=faq">Zréck</a>',
     'saved_on' => 'agedroen den'

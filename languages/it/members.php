@@ -29,24 +29,25 @@ $language_array = array(
 
 /* do not edit above this line */
 
-    'about' => 'su',
-    'active' => 'Abilitato',
+    'about' => 'Su',
+    'active' => 'attivo',
     'activity' => 'Attività',
-    'awards' => 'Premi',
-    'back_overview' => '&raquo; <a href="index.php?site=members"><b>torna ai deputati panoramica</b></a>',
-    'challenge' => 'challenge',
-    'contact' => 'contatto',
-    'go' => 'Avanti!',
-    'inactive' => 'Inattivo',
+    'awards' => 'Assegni',
+    'back_overview' => '&raquo; <a href="index.php?site=members"><b>torna alla visione generale</b></a>',
+    'challenge' => 'Sfida',
+    'contact' => 'Contatto',
+    'go' => 'Vai!',
+    'inactive' => 'inattivo',
     'member' => 'Membro',
-    'members' => 'Membri',
+    'members' => 'membri',
     'nickname' => 'Nickname',
     'no_description' => 'nessuna descrizione disponibile',
-    'position' => 'posizione',
-    'results' => 'risultati',
-    'show_details' => '&raquo; <a href="index.php?site=members&amp;action=show&amp;squadID=%squadID%"><b>vedi Details</b></a>',
+    'no_entries'=>'nessuna voce disponibile',
+    'position' => 'Posizione',
+    'results' => 'Risultati',
+    'show_details' => '&raquo; <a href="index.php?site=members&amp;action=show&amp;squadID=%squadID%"><b>Mostra dettagli</b></a>',
     'show_only' => 'Mostra solo',
-    'status' => 'Status',
-    'town' => 'Località'
+    'status' => 'Stato',
+    'town' => 'Città'
 );
 

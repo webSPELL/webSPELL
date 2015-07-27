@@ -31,6 +31,7 @@ $language_array = array(
 
     'game' => 'اللعبة',
     'information' => 'معلومات',
+    'ip'=>'IP',
     'link' => 'رابط',
     'no_server' => 'لا يوجد مقلمات متاحه',
     'not_supported' => 'غير معتمدة من قبل الشبكه',

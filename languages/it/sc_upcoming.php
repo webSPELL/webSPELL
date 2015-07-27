@@ -29,6 +29,6 @@ $language_array = array(
 
 /* do not edit above this line */
 
-    'fight_us' => 'Challenge noi'
+    'fight_us' => 'Sfida noi'
 );
 

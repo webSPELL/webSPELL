@@ -948,7 +948,8 @@ if ($action == "activate") {
                     '" class="input">' . $_language->module[ 'profile' ] . '</a>';
             } else {
                 $actions = '<a href="admincenter.php?site=users&amp;action=activate&amp;id=' .
-                    $ds[ 'userID' ] . '&amp;captcha_hash=' . $hash . '">' . $_language->module[ 'activate' ] . '</a>';
+                    $ds[ 'userID' ] . '&amp;captcha_hash=' . $hash . '" class="input">' .
+                    $_language->module[ 'activate' ] . '</a>';
             }
 
             echo '<tr>

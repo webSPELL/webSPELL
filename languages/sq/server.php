@@ -31,6 +31,7 @@ $language_array = array(
 
     'game' => 'Loja',
     'information' => 'Informacion',
+    'ip'=>'IP',
     'link' => 'Link-u',
     'no_server' => 'nuk ka servera të disponueshëm.',
     'not_supported' => 'Nuk suportohet nga webserver-i',

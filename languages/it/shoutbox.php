@@ -30,12 +30,12 @@ $language_array = array(
 /* do not edit above this line */
 
     'all_messages' => 'Mostra tutto',
-    'delete_selected' => 'selezionati cancellare',
+    'delete_selected' => 'elimina selezionati',
     'enter_message' => 'È necessario inserire un messaggio!',
     'enter_name' => 'È necessario inserire il tuo nome!',
-    'select_all' => 'Seleziona tutti',
-    'shout' => 'Salvare!',
-    'shoutbox' => 'Shoutbox',
-    'sort' => 'Ordinamento:'
+    'select_all' => 'Seleziona tutto',
+    'shout' => 'Salva!',
+    'shoutbox' => 'shoutbox',
+    'sort' => 'Ordina:'
 );
 

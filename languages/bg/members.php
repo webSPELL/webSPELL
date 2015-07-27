@@ -42,10 +42,12 @@ $language_array = array(
     'members' => 'членове',
     'nickname' => 'Потребителско име',
     'no_description' => 'няма налично описание',
+    'no_entries'=>'no entries available',
     'position' => 'Позиция',
     'results' => 'Резултати',
     'show_details' => '&raquo; <a href="index.php?site=members&amp;action=show&amp;squadID=%squadID%"><b>Покажи детайли</b></a>',
     'show_only' => 'Покажи само',
+    'status' => 'Статус',
     'town' => 'Град'
 );
 

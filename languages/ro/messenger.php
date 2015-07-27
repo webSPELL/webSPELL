@@ -45,7 +45,7 @@ $language_array = array(
     'html' => 'HTML <b><span class="underline">DE PE</span></b>',
     'ignore' => 'Ignoră',
     'incoming' => 'Urmează',
-    'mail_body' => '<b>Alo %nickname%!</b><br><br>Ai primit un nou mesaj de la  webSPELL v4 (%hp_url%).<br>Click <a href="http://%hp_url%?site=messenger">aici</a> pentru a citi PM.<br><br>(C) webSPELL.org',
+    'mail_body' => '<b>Hello %nickname%!</b><br><br>You got a new message at '.PAGETITLE.' (%hp_url%).<br>Click <a href="http://%hp_url%?site=messenger">here</a> to read the PM.<br><br>(C) webSPELL.org',
     'mail_subject' => 'Ai primit un nou PM',
     'mark_not_viewed' => 'Marchează ca nevizualizat',
     'mark_viewed' => 'Marchează ca vizualizat',

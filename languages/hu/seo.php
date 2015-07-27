@@ -42,6 +42,7 @@ $language_array = array(
     'contact' => 'Kapcsolat',
     'demo' => 'Demó',
     'demos' => 'Demók',
+    'faq'=>'FAQ',
     'files' => 'Fájlok',
     'forum' => 'Fórum',
     'gallery' => 'Galéria',

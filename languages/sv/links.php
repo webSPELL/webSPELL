@@ -31,6 +31,7 @@ $language_array = array(
 
     'back' => 'tillbaka',
     'banner' => 'Banner',
+    'banner_to_big' => 'Bilden är för stor',
     'categories' => 'Kategorier',
     'category' => 'Kategori',
     'delete' => 'radera',

@@ -44,10 +44,12 @@ $language_array = array(
     'clan-name' => 'Име клана',
     'clan-tag' => 'Таг клана',
     'country' => 'Земља',
+    'cpu'=>'Процесор',
     'date_of_birth' => 'Датум роћења',
     'deactivated' => 'деактивиран',
     'delete_max_90_90' => 'избриши (мах90/90)',
     'delete_max_230_210' => 'избриши (мах230/210)',
+    'e-mail'=>'Е-маил',
     'edit_mail' => 'Измјени е-маил',
     'edit_password' => 'Измјени лозинку',
     'equipment-info' => 'Инфо о опреми',
@@ -106,6 +108,7 @@ $language_array = array(
     'repeat_new_email' => 'Понови нови е-маил',
     'repeat_new_password' => 'Понови нову лозинку',
     'repeated_pw_not_valid' => 'Ваша поновљена лозинка није исправно уписана!',
+    'repeated_mail_not_valid'=>'Ваш поновљен е-маил није исти!',
     'sexuality' => 'Пол',
     'signature' => 'Потпис',
     'smilies' => '<a href="javascript:void(0);" onclick="window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Смајлићи</a> укључени',
@@ -123,6 +126,7 @@ $language_array = array(
     'you_have_to_firstname' => 'Морате унијети Ваше име!',
     'you_have_to_nickname' => 'Морате унијети Ваш ник!',
     'you_have_to_username' => 'Морате унијети корисничко име!',
-    'you_have_to_valid_email' => 'Ваш е-маил није важећи!'
+    'you_have_to_valid_email' => 'Ваш е-маил није важећи!',
+    'wrong_password'=>'Погрешна лозинка'
 );
 

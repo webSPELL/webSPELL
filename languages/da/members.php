@@ -42,6 +42,7 @@ $language_array = array(
     'members' => 'Medlemmer',
     'nickname' => 'Øgenavn',
     'no_description' => 'ingen beskrivelse tilgængelig',
+    'no_entries'=>'no entries available',
     'position' => 'Position',
     'results' => 'Resultater',
     'show_details' => '&raquo; <a href="index.php?site=members&amp;action=show&amp;squadID=%squadID%"><b>Vis detaljer</b></a>',

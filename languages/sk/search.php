@@ -39,6 +39,7 @@ $language_array = array(
     'date_options' => 'Dátum',
     'delete_selected' => 'vymazať označené',
     'descending' => 'zostupne',
+    'faq'=>'FAQ',
     'faq_link' => '<b>Odkaz na FAQ</b>',
     'forum' => 'Fórum',
     'forum_link' => '<b>odkaz na tému</b>',

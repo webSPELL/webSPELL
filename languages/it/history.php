@@ -30,6 +30,6 @@ $language_array = array(
 /* do not edit above this line */
 
     'history' => 'Storia',
-    'no_history' => 'attualmente non dispone di informazioni disponibili'
+    'no_history' => 'Nessuna informazione è ancora disponibile.'
 );
 

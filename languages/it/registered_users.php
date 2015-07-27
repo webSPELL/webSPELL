@@ -30,14 +30,14 @@ $language_array = array(
 /* do not edit above this line */
 
     'contact' => 'Contatto',
-    'country' => 'L',
-    'homepage' => 'web sito',
+    'country' => 'P',
+    'homepage' => 'Homepage',
     'last_login' => 'Ultimo accesso',
     'nickname' => 'Nickname',
     'no_users' => 'Nessun utente registrato',
     'now_on' => 'adesso online',
-    'registered_users' => 'Utente Registrato',
-    'registration' => 'Registrato dal',
-    'sort' => 'Ordinamento:'
+    'registered_users' => 'utenti registrati',
+    'registration' => 'Registrato da',
+    'sort' => 'Ordina:'
 );
 

@@ -47,7 +47,6 @@ $language_array = array(
     'homepage' => 'Tuisblad',
     'html_off' => 'HTML is AF',
     'ignore_user' => 'ignoreer gebruiker ',
-    'mail' => 'E-pos',
     'name' => 'Naam',
     'no_access' => '<br><br>Jy het om aan te meld!<br><br>&#8226; <a href="index.php?site=register">registreer nou!</a><br>&#8226; <a href="index.php?site=login">login</a>',
     'no_commentid' => 'Geen kommentaar ID gespesifiseer - herlei',

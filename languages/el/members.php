@@ -42,6 +42,7 @@ $language_array = array(
     'members' => 'μελη',
     'nickname' => 'Ψευδονυμο',
     'no_description' => 'δεν υπαρχει περιγραφη',
+    'no_entries'=>'no entries available',
     'position' => 'Θεση',
     'results' => 'Αποτελεσματα',
     'show_details' => '&raquo; <a href="index.php?site=members&amp;action=show&amp;squadID=%squadID%"><b>Εμφανιση λεπτομεριων</b></a>',

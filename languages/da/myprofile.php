@@ -44,10 +44,12 @@ $language_array = array(
     'clan-name' => 'Klan-Navn',
     'clan-tag' => 'Klan-Tag',
     'country' => 'Land',
+    'cpu'=>'CPU',
     'date_of_birth' => 'Fødselsdato',
     'deactivated' => 'deaktiveret',
     'delete_max_90_90' => 'Slet (maks90/90)',
     'delete_max_230_210' => 'Slet (maks230/210)',
+    'e-mail'=>'E-mail',
     'edit_mail' => 'rediger email',
     'edit_password' => 'rediger kodeord',
     'equipment-info' => 'Udstyr-Info',
@@ -117,6 +119,7 @@ Tak for din interesse
     'repeat_new_email' => 'gentag den nye E-mail',
     'repeat_new_password' => 'gentag det nye kodeord',
     'repeated_pw_not_valid' => 'Kodeordet du gentog var forkert!',
+    'repeated_mail_not_valid'=>'your repeated e-mail is not equal!',
     'sexuality' => 'Køn',
     'signature' => 'Underskrift',
     'smilies' => '<a href="javascript:void(0);" onclick="window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smilies</a> er TIL',
@@ -134,6 +137,7 @@ Tak for din interesse
     'you_have_to_firstname' => 'Du skal angive dit fornavn!',
     'you_have_to_nickname' => 'Du skal angive et øgenavn!',
     'you_have_to_username' => 'Du skal angive et brugernavn!',
-    'you_have_to_valid_email' => 'Din email er ikke gyldig!'
+    'you_have_to_valid_email' => 'Din email er ikke gyldig!',
+    'wrong_password'=>'Wrong password'
 );
 

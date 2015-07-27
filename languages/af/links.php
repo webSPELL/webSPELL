@@ -31,6 +31,7 @@ $language_array = array(
 
     'back' => 'terug',
     'banner' => 'Banier',
+    'banner_to_big' => 'Prentjie is te groot',
     'categories' => 'Kategorieë',
     'category' => 'Kategorie',
     'delete' => 'verwyder',

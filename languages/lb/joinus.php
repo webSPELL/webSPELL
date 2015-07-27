@@ -44,6 +44,7 @@ $language_array = array(
     'icq_msn' => 'ICQ/MSN/asw...',
     'info' => 'weider Informatiounen',
     'joinus_form' => 'Opnameformular',
+    'mail'=>'E-Mail',
     'message_title' => 'Join us',
     'messenger' => 'Nochriichtensystem',
     'name' => 'Numm',

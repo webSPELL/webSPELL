@@ -29,10 +29,10 @@ $language_array = array(
 
 /* do not edit above this line */
 
+    'faq' => 'Často Kladené Otázky',
     'admin_button' => 'FAQ Administrace',
     'answer' => 'Odpověď',
     'categories' => 'Kategorie',
-    'faqs' => 'FAQ',
     'no_categories' => 'neexistuje kategorie vytvořte ji',
     'no_faq' => 'neexistuje kategorie vytvořte ji.<br><a href="index.php?site=faq">Zpìt</a>',
     'saved_on' => 'vložil'

@@ -44,11 +44,12 @@ $language_array = array(
     'clan-name' => 'Klanni nimi',
     'clan-tag' => 'Klanni tähis',
     'country' => 'Riik',
-    'cpu' => 'Protsessor',
+    'cpu'=>'CPU',
     'date_of_birth' => 'Sünnikuupäev',
     'deactivated' => 'deaktiveeritud',
     'delete_max_90_90' => 'kustuta (max90/90)',
     'delete_max_230_210' => 'kustuta (max230/210)',
+    'e-mail'=>'E-mail',
     'edit_mail' => 'muuda e-maili',
     'edit_password' => 'muuda parooli',
     'equipment-info' => 'Varustuse info',
@@ -118,6 +119,7 @@ Täname huvi üles näitamise eest
     'repeat_new_email' => 'korda uut meiliaadressi',
     'repeat_new_password' => 'korda uut parooli',
     'repeated_pw_not_valid' => 'uued paroolid ei ühti',
+    'repeated_mail_not_valid'=>'your repeated e-mail is not equal!',
     'sexuality' => 'Sugu',
     'signature' => 'Allkiri',
     'smilies' => '<a href="javascript:void(0);" onclick="window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smailid</a> on PEAL',
@@ -135,6 +137,7 @@ Täname huvi üles näitamise eest
     'you_have_to_firstname' => 'Sa pead oma eesnime sisestama!',
     'you_have_to_nickname' => 'Sa pead oma hüüdnime sisestama!',
     'you_have_to_username' => 'Sa pead oma kasutajanime sisestama!',
-    'you_have_to_valid_email' => 'Su meiliaadress pole korrektne!'
+    'you_have_to_valid_email' => 'Su meiliaadress pole korrektne!',
+    'wrong_password'=>'Wrong password'
 );
 

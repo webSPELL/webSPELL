@@ -37,6 +37,7 @@ $language_array = array(
     'enter_name' => 'Introduceţi un nume.',
     'enter_subject' => 'Introduceţi un subiect.',
     'errors_there' => 'Unele erori apărute',
+    'mail'=>'E-Mail',
     'message' => 'Mesaj',
     'name' => 'Nume',
     'receiver' => 'Destinatar',

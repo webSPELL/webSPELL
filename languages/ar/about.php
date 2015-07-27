@@ -33,3 +33,4 @@ $language_array = array(
     'no_about' => '.لا توجد تفاصيل حاليا'
 );
 
+

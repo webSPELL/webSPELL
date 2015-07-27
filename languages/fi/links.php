@@ -31,6 +31,7 @@ $language_array = array(
 
     'back' => 'takaisin',
     'banner' => 'Mainoskuva',
+    'banner_to_big' => 'Mainoskuva on liian iso',
     'categories' => 'Kategoriat',
     'category' => 'Kategoria',
     'delete' => 'poista',

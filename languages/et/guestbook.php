@@ -31,7 +31,7 @@ $language_array = array(
 
     'admin_comment' => 'Admini kommentaar',
     'bbcode' => '<a href="javascript:void(0);" onclick="window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBCode</a> on PEAL',
-    'by' => '',
+    'by' => 'by',
     'comment' => 'Kommentaar',
     'delete_selected' => 'Kustuta valitud',
     'enter_a_message' => 'Sa pead sõnumi kirjutama!',
@@ -41,6 +41,8 @@ $language_array = array(
     'guestbook_comment' => 'Külalisteraamatu kommentaar',
     'homepage' => 'Koduleht',
     'html' => 'HTML on MAAS',
+    'icq'=>'ICQ',
+    'ip'=>'IP',
     'mail' => 'Su meiliaadress',
     'name' => 'Su nimi',
     'new_entry' => 'Uus sissekanne',

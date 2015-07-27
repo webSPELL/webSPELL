@@ -42,6 +42,7 @@ $language_array = array(
     'members' => 'Matglidder',
     'nickname' => 'Nicknumm',
     'no_description' => 'keng Beschreiwung do',
+    'no_entries'=>'no entries available',
     'position' => 'Positioun',
     'results' => 'Ergebnisser',
     'show_details' => '&raquo; <a href="index.php?site=members&amp;action=show&amp;squadID=%squadID%"><b>Detailer uweisen</b></a>',

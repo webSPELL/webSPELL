@@ -45,7 +45,7 @@ $language_array = array(
     'html' => 'HTML <b><span class="underline">FRA</span></b>',
     'ignore' => 'Ignorer bruger',
     'incoming' => 'Indbakke',
-    'mail_body' => '<b>Hej %nickname%!</b><br><br>Du har modtaget en ny besked på '.PAGETITLE.' (%hp_url%).<br>Klik <a href="http://%hp_url%?site=messenger">her</a> for at læse beskeden.<br><br>(C) webSPELL.org',
+    'mail_body' => '<b>Hello %nickname%!</b><br><br>You got a new message at '.PAGETITLE.' (%hp_url%).<br>Click <a href="http://%hp_url%?site=messenger">here</a> to read the PM.<br><br>(C) webSPELL.org',
     'mail_subject' => 'Du har modtaget en ny besked.',
     'mark_not_viewed' => 'Marker som vist',
     'mark_viewed' => 'Marker som vist',

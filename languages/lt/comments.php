@@ -47,7 +47,6 @@ $language_array = array(
     'homepage' => 'Namų puslapis',
     'html_off' => 'HTML yra IŠJUNGTA',
     'ignore_user' => 'ignore user',
-    'mail' => 'E-Paštas',
     'name' => 'Vardas',
     'no_access' => '<br><br>Jūs turite prisijungti!<br><br>&#8226; <a href="index.php?site=register">registruotis dabar!</a><br>&#8226; <a href="index.php?site=login">prisijungti</a>',
     'no_commentid' => 'No commentID specified - redirecting',

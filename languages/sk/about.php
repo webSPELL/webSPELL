@@ -33,3 +33,4 @@ $language_array = array(
     'no_about' => 'Momentálne nie je pridaný žiaden záznam.'
 );
 
+

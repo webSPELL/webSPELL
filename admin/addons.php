@@ -442,8 +442,8 @@ if ($action == "add") {
                 <small><b>' . $_language->module[ 'admin_' . getinput($db[ 'accesslevel' ]) ] . '</b></small>
             </td>
             <td bgcolor="#FFFFFF">
-                <a href="admincenter.php?site=addons&amp;action=edit&amp;linkID=' . $db[ 'linkID' ] . '">' .
-                    $_language->module[ 'edit' ] . '</a>
+                <a class="input" href="admincenter.php?site=addons&amp;action=edit&amp;linkID=' . $db[ 'linkID' ] . '">
+                ' . $_language->module[ 'edit' ] . '</a>
                 <input type="button" onclick="MM_confirm(\'' . $_language->module[ 'really_delete_link' ] .
             '\', \'admincenter.php?site=addons&amp;delete=true&amp;linkID=' . $db[ 'linkID' ] . '&amp;captcha_hash=' .
             $hash . '\')" value="delete"></td>

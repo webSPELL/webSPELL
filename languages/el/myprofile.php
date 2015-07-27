@@ -44,10 +44,12 @@ $language_array = array(
     'clan-name' => 'Ονομα Clan',
     'clan-tag' => 'Σημα Clan',
     'country' => 'Χωρα',
+    'cpu'=>'CPU',
     'date_of_birth' => 'Ημερομηνια Γεννησης',
     'deactivated' => 'απενεργοποιηθεί',
     'delete_max_90_90' => 'διαγραφη (max90/90)',
     'delete_max_230_210' => 'διαγραφη  (max230/210)',
+    'e-mail'=>'E-mail',
     'edit_mail' => 'επεξεργασια E-Mail',
     'edit_password' => 'επεξεργασια κωδικου',
     'equipment-info' => 'Εξοπλισμος-Πληροφοριες',
@@ -117,6 +119,7 @@ $language_array = array(
     'repeat_new_email' => 'επαναληψη νεου E-Mail',
     'repeat_new_password' => 'επαναληψη νεου κωδικου',
     'repeated_pw_not_valid' => 'η επαναληψη νεου κωδικου ειναι λαθος!',
+    'repeated_mail_not_valid'=>'your repeated e-mail is not equal!',
     'sexuality' => 'Φυλο',
     'signature' => 'Υπογραφη',
     'smilies' => '<a href="javascript:void(0);" onclick="window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smilies</a> ειναι ενεργο',
@@ -134,6 +137,7 @@ $language_array = array(
     'you_have_to_firstname' => 'Πρεπει να εισαγετε το Ονομα σας!',
     'you_have_to_nickname' => 'Πρεπει να εισαγετε ψευδονυμο!',
     'you_have_to_username' => 'Πρεπει να εισαγετε ονομα χρηστη!',
-    'you_have_to_valid_email' => 'Το e-mail σας δεν ειναι εγκυρο!'
+    'you_have_to_valid_email' => 'Το e-mail σας δεν ειναι εγκυρο!',
+    'wrong_password'=>'Wrong password'
 );
 

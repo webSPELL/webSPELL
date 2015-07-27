@@ -44,11 +44,12 @@ $language_array = array(
     'clan-name' => 'Nome do Clan',
     'clan-tag' => 'Tag do Clan',
     'country' => 'País',
-    'cpu' => 'Processador',
+    'cpu'=>'CPU',
     'date_of_birth' => 'Data de Nascimento',
     'deactivated' => 'desativado',
     'delete_max_90_90' => 'eliminar (máx 90/90)',
     'delete_max_230_210' => 'eliminar (máx 230/210)',
+    'e-mail'=>'E-mail',
     'edit_mail' => 'editar E-Mail',
     'edit_password' => 'editar password',
     'equipment-info' => 'Info sobre equipamento',
@@ -118,6 +119,7 @@ Obrigado pelo seu interesse
     'repeat_new_email' => 'repetir o novo E-Mail',
     'repeat_new_password' => 'repetir a password nova',
     'repeated_pw_not_valid' => 'a sua password repetida não é válida!',
+    'repeated_mail_not_valid'=>'your repeated e-mail is not equal!',
     'sexuality' => 'Sexo',
     'signature' => 'Assinatura',
     'smilies' => '<a href="javascript:void(0);" onclick="window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smiles</a> ligados',
@@ -135,6 +137,7 @@ Obrigado pelo seu interesse
     'you_have_to_firstname' => 'Tem de inserir o seu primeiro nome!',
     'you_have_to_nickname' => 'Tem de inserir um nickname!',
     'you_have_to_username' => 'Tem de inserir um nome de utilizador!',
-    'you_have_to_valid_email' => 'O seu e-mail não é válido!'
+    'you_have_to_valid_email' => 'O seu e-mail não é válido!',
+    'wrong_password'=>'Wrong password'
 );
 

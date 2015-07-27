@@ -37,6 +37,7 @@ $language_array = array(
     'enter_name' => 'Por favor digite o seu nome.',
     'enter_subject' => 'Por favor digite um assunto.',
     'errors_there' => 'Ocorreram alguns erros',
+    'mail'=>'E-Mail',
     'message' => 'Mensagem',
     'name' => 'Nome',
     'receiver' => 'Destinatário',

@@ -93,8 +93,12 @@ function rm_recursive($filepath)
 
 function isFileURL($url)
 {
-    $urlInfo = parse_url($url);
-    return in_array($urlInfo['scheme'], array('ftp','http','https')) && !empty($urlInfo['path']);
+    if (!empty($url)) {
+        $urlInfo = parse_url($url);
+        return in_array($urlInfo['scheme'], array('ftp','http','https')) && !empty($urlInfo['path']);
+    } else {
+        return false;
+    }
 }
 
 function isWebURL($url)

@@ -47,7 +47,6 @@ $language_array = array(
     'homepage' => 'صفحه نخست',
     'html_off' => 'HTML خاموش است',
     'ignore_user' => 'رد کردن درخواست کاربر',
-    'mail' => 'ایمیل',
     'name' => 'نام',
     'no_access' => '<br><br>!شما باید وارد شوید<br><br>&#8226; <a href="index.php?site=register">!نام نويسي در سایت</a><br>&#8226; <a href="index.php?site=login">ورود</a>',
     'no_commentid' => 'رجوع شود به-پیدا نشد ID هیچ',

@@ -29,11 +29,10 @@ $language_array = array(
 
 /* do not edit above this line */
 
+    'faq' => 'Često Postavljana Pitanja',
     'admin_button' => 'Administracija čestih pitanja',
     'answer' => 'Odgovor',
     'categories' => 'Kategorije',
-    'faq' => 'Česta pitanja',
-    'faqs' => 'Česta pitanja',
     'no_categories' => 'Još nisu stvorene kategorije',
     'no_faq' => 'Nema unesenih pitanja.<br><a href="index.php?site=faq">Natrag na prethodnu stranicu</a>',
     'saved_on' => 'Spremljeno'

@@ -38,6 +38,7 @@ $language_array = array(
     'logout' => 'odhlásiť',
     'lost_password' => 'zabudnuté heslo?',
     'messenger' => 'správy',
+    'n_a'=>'n/a',
     'overview' => 'prehľad',
     'register_now' => 'registrácia',
     'registered_users' => 'registrovaní užívatelia',

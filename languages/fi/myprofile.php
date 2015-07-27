@@ -44,10 +44,12 @@ $language_array = array(
     'clan-name' => 'Klaani Nimi',
     'clan-tag' => 'Klaani Tag',
     'country' => 'Maa',
+    'cpu'=>'CPU',
     'date_of_birth' => 'Syntymäaika',
     'deactivated' => 'deaktivoitu',
     'delete_max_90_90' => 'Poista (max90/90)',
     'delete_max_230_210' => 'Poista (max230/210)',
+    'e-mail'=>'E-mail',
     'edit_mail' => 'muuta sähköpostia',
     'edit_password' => 'muuta salasana',
     'equipment-info' => 'Tarvike Info',
@@ -117,6 +119,7 @@ Kiitoksia yhteydenotosta!
     'repeat_new_email' => 'toista uusi E-Mail',
     'repeat_new_password' => 'toista vanha salasana',
     'repeated_pw_not_valid' => 'toistamasi salasana ei ole oikein!',
+    'repeated_mail_not_valid'=>'your repeated e-mail is not equal!',
     'sexuality' => 'Sukupuoli',
     'signature' => 'Allekirjoitus',
     'smilies' => '<a href="javascript:void(0);" onclick="window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Hymiöt</a> PÄÄLLÄ',
@@ -134,6 +137,7 @@ Kiitoksia yhteydenotosta!
     'you_have_to_firstname' => 'Syötä etunimesi!',
     'you_have_to_nickname' => 'Syötä kutsumanimesi!',
     'you_have_to_username' => 'Syötä kutsumanimesi!',
-    'you_have_to_valid_email' => 'Sähköpostisi ei ole oikein!'
+    'you_have_to_valid_email' => 'Sähköpostisi ei ole oikein!',
+    'wrong_password'=>'Wrong password'
 );
 

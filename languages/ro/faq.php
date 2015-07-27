@@ -29,11 +29,10 @@ $language_array = array(
 
 /* do not edit above this line */
 
+    'faq' => 'Întrebări Frecvente',
     'admin_button' => 'Administrarea Intrebărilor frecvente',
     'answer' => 'Răspunsuri',
     'categories' => 'Categorii',
-    'faq' => 'Întrebări frecvente',
-    'faqs' => 'Întrebări frecvente',
     'no_categories' => 'nu au fost create categorii',
     'no_faq' => 'Întrebari nedisponibile.<br><a href="index.php?site=faq">Înapoi</a>',
     'saved_on' => 'salvat în'

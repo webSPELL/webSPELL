@@ -30,6 +30,7 @@ $language_array = array(
 /* do not edit above this line */
 
     'activation_successful' => 'Активация вашего аккаунта прошла успешно.<br>Теперь вы можете войти в свой аккаунт.',
+    'back' => 'назад',
     'enter_nickname' => 'Пожалуйста введите ваш никнейм.',
     'enter_password' => 'Пожалуйста введите пароль.',
     'enter_username' => 'Пожалуйста введите имя пользователя.',
@@ -55,6 +56,7 @@ $language_array = array(
     'nickname' => 'Никнейм',
     'nickname_inuse' => 'Ник уже используется.',
     'no_register_when_loggedin' => 'У вас уже есть аккаунт на %pagename%',
+    'password' => 'Пароль',
     'profile_info' => 'Информация о регистрации',
     'register_now' => 'Зарегистрироваться сейчас!',
     'register_successful' => 'Регистрация прошла успешно. Вскоре, вы получите письмо, с активационной ссылкой.',

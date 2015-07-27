@@ -39,6 +39,7 @@ $language_array = array(
     'date_options' => 'crwdns21494:0crwdne21494:0',
     'delete_selected' => 'crwdns21495:0crwdne21495:0',
     'descending' => 'crwdns21496:0crwdne21496:0',
+    'faq'=>'crwdns22978:0crwdne22978:0',
     'faq_link' => 'crwdns21498:0crwdne21498:0',
     'forum' => 'crwdns21499:0crwdne21499:0',
     'forum_link' => 'crwdns21500:0crwdne21500:0',

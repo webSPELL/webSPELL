@@ -29,10 +29,10 @@ $language_array = array(
 
 /* do not edit above this line */
 
+    'faq' => 'Często Zadawane Pytania',
     'admin_button' => 'FAQ Administracja',
     'answer' => 'Odpowiedź',
     'categories' => 'Kategoria',
-    'faqs' => 'pytań',
     'no_categories' => 'Brak dostępnych kategorii',
     'no_faq' => 'Brak dostępnych pytań.<br><a href="index.php?site=faq">Wróć</a>',
     'saved_on' => 'zapisana:'

@@ -44,11 +44,12 @@ $language_array = array(
     'clan-name' => 'Klana nosaukums',
     'clan-tag' => 'Klana etiķete',
     'country' => 'Valsts',
+    'cpu'=>'CPU',
     'date_of_birth' => 'Dzimšanas datums',
     'deactivated' => 'deaktivizēts',
     'delete_max_90_90' => 'izdzēst (maks.90/90)',
     'delete_max_230_210' => 'izdzēst (maks.230/210)',
-    'e-mail' => 'E-pasts',
+    'e-mail'=>'E-mail',
     'edit_mail' => 'labot e-pastu',
     'edit_password' => 'labot paroli',
     'equipment-info' => 'Ekipējuma informācija',
@@ -118,6 +119,7 @@ Paldies par Jūsu interesi
     'repeat_new_email' => 'atkārtojiet jauno e-pastu',
     'repeat_new_password' => 'atkārtojiet jauno paroli',
     'repeated_pw_not_valid' => 'Jūsu atkārtotā parole nav derīga!',
+    'repeated_mail_not_valid'=>'your repeated e-mail is not equal!',
     'sexuality' => 'Dzimums',
     'signature' => 'Paraksts',
     'smilies' => '<a href="javascript:void(0);" onclick="window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Sejiņas</a> ir ieslēgtas',
@@ -135,6 +137,7 @@ Paldies par Jūsu interesi
     'you_have_to_firstname' => 'Jums jāievada Jūsu vārds!',
     'you_have_to_nickname' => 'Jums jāievada Jūsu segvārds!',
     'you_have_to_username' => 'Jums jāievada Jūsu lietotājvārds!',
-    'you_have_to_valid_email' => 'Jūsu e-pasts nav derīgs!'
+    'you_have_to_valid_email' => 'Jūsu e-pasts nav derīgs!',
+    'wrong_password'=>'Wrong password'
 );
 

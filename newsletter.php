@@ -26,6 +26,7 @@
 */
 
 $_language->readModule('newsletter');
+$_language->readModule('formvalidation', true);
 
 if (isset($_GET['action'])) {
     $action = $_GET['action'];

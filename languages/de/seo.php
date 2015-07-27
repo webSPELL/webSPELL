@@ -42,6 +42,7 @@ $language_array = array(
     'contact' => 'Kontakt',
     'demo' => 'Demo',
     'demos' => 'Demos',
+    'faq'=>'FAQ',
     'files' => 'Dateien',
     'forum' => 'Forum',
     'gallery' => 'Galerie',

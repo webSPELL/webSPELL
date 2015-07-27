@@ -29,6 +29,7 @@ $language_array = array(
 
 /* do not edit above this line */
 
+    'faq' => 'Vanliga Frågor',
     'admin_button' => 'FAQ Administration',
     'answer' => 'Svar',
     'categories' => 'Kategorier',

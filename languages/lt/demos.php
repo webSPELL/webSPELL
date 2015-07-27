@@ -76,7 +76,6 @@ $language_array = array(
     'to_rate' => 'Jūs turite būti užsiregistravę ir prisijungę, norint įvertinti demo įrašą !',
     'update_demo' => 'Atnaujinti demo įrašą',
     'user_comments' => 'Įjungti vartotojo komentarus',
-    'visitor_comments' => 'Įjungti lankytojo komentarus',
-    'vs' => 'prieš.'
+    'visitor_comments' => 'Įjungti lankytojo komentarus'
 );
 

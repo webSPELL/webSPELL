@@ -40,6 +40,7 @@ $language_array = array(
     'enable_user_comments' => 'Овозможи коментари на корисниците',
     'enable_visitor_comments' => 'Сите можат да коментираат',
     'gallery_name' => 'Име на галеријата',
+    'group' => 'Група',
     'name' => 'Име',
     'new_gallery' => 'Нова галерија',
     'no_galleries' => 'Нема достапни галерии.',

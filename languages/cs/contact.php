@@ -37,6 +37,7 @@ $language_array = array(
     'enter_name' => 'Prosím zadej jméno.',
     'enter_subject' => 'Prosím zadej předmět.',
     'errors_there' => 'Vznikla nějaká neznámá chyba',
+    'mail'=>'E-Mail',
     'message' => 'Zpráva',
     'name' => 'Jméno',
     'receiver' => 'Příjemce',

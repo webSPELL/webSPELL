@@ -38,6 +38,7 @@ $language_array = array(
     'logout' => 'crwdns20958:0crwdne20958:0',
     'lost_password' => 'crwdns20959:0crwdne20959:0',
     'messenger' => 'crwdns20960:0crwdne20960:0',
+    'n_a'=>'crwdns22969:0crwdne22969:0',
     'overview' => 'crwdns20962:0crwdne20962:0',
     'register_now' => 'crwdns20963:0crwdne20963:0',
     'registered_users' => 'crwdns20964:0crwdne20964:0',

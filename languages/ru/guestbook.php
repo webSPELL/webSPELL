@@ -31,6 +31,7 @@ $language_array = array(
 
     'admin_comment' => 'Комментарии админа',
     'bbcode' => '<a href="javascript:void(0);" onclick="window.open(\'code.php\',\'BBCode\',\'scrollbars=yes,width=600,height=500\')">BBКод</a> включить',
+    'by' => 'От',
     'comment' => 'Комментарий',
     'delete_selected' => 'Удалить выбранные',
     'enter_a_message' => 'Вы должны ввести сообщение!',
@@ -40,6 +41,8 @@ $language_array = array(
     'guestbook_comment' => 'Комментарии в гостевой книге',
     'homepage' => 'Домашняя страница',
     'html' => 'HTML выключен',
+    'icq'=>'ICQ',
+    'ip'=>'IP',
     'mail' => 'Ваш E-Mail адрес',
     'name' => 'Ваше имя',
     'new_entry' => 'Новая запись',

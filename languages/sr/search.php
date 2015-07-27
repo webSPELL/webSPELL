@@ -39,6 +39,7 @@ $language_array = array(
     'date_options' => 'Датум',
     'delete_selected' => 'Избриши одабрано',
     'descending' => 'силазно',
+    'faq'=>'Често постављана питања',
     'faq_link' => '<b>Линк на честа питања</b>',
     'forum' => 'Форум',
     'forum_link' => '<b>Линк на тему</b>',

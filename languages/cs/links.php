@@ -31,6 +31,7 @@ $language_array = array(
 
     'back' => 'zpět',
     'banner' => 'Banner',
+    'banner_to_big' => 'Obrázek může mít',
     'categories' => 'Kategorie',
     'category' => 'Kategorie',
     'delete' => 'smazat',

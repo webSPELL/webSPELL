@@ -29,7 +29,7 @@ $language_array = array(
 
 /* do not edit above this line */
 
-    'no_session' => 'Error a cambiare la lingua. Ti preghiamo di assicurarvi che il tuo browser accetta i cookies e riprovi.',
-    'save' => 'salvare'
+    'no_session' => 'Si prega di assicurarsi che i cookie sono abilitati. Riprova a cambiare la lingua.',
+    'save' => 'salva'
 );
 

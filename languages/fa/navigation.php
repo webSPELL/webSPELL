@@ -39,6 +39,7 @@ $language_array = array(
     'contact' => 'فرم ارتباط با ما',
     'demos' => 'دمو ها',
     'downloads' => 'دانلود ها',
+    'faq' => 'سوالات متداول',
     'fight_us' => 'با ما مسابقه بدهید',
     'forums' => 'فروم',
     'gallery' => 'گالری',

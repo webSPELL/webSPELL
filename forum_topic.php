@@ -162,6 +162,7 @@ if (isset($_POST['newreply']) && !isset($_POST['preview'])) {
             $link = "http://" . $hp_url . "/index.php?site=forum_topic&topic=" . $topic;
             $maillanguage = new \webspell\Language();
             $maillanguage->setLanguage($default_language);
+            $_language->readModule('formvalidation', true);
 
             foreach ($emails as $email) {
                 $maillanguage->setLanguage($email['lang']);

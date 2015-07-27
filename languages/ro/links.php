@@ -31,6 +31,7 @@ $language_array = array(
 
     'back' => 'Înapoi',
     'banner' => 'Bandieră',
+    'banner_to_big' => 'Imaginea este prea mare',
     'categories' => 'Categorii',
     'category' => 'Categorie',
     'delete' => 'şterge',

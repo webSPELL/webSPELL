@@ -41,7 +41,6 @@ $language_array = array(
     'database_cl' => 'Duombazė',
     'delete_file' => 'ištrinti failą',
     'description' => 'Apibūdinimas',
-    'dl' => 'ST',
     'download_now' => 'Siųstis failą %filename% dabar',
     'download_registered_only' => 'Siųstis galima tik registruotiems vartotojams!',
     'download_via_mirror' => 'siųstis iš kitos talpyklos',

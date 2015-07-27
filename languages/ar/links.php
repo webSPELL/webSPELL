@@ -31,6 +31,7 @@ $language_array = array(
 
     'back' => 'رجوع',
     'banner' => 'الافتة',
+    'banner_to_big' => 'الافتة كبيره',
     'categories' => 'التصنيفات',
     'category' => 'الفئة',
     'delete' => 'حذف',

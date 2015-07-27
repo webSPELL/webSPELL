@@ -38,6 +38,7 @@ $language_array = array(
     'logout' => 'logout',
     'lost_password' => 'Elfelejtett pw?',
     'messenger' => 'Üzenetek',
+    'n_a'=>'n/a',
     'overview' => 'Áttekintés',
     'register_now' => 'Regisztráció',
     'registered_users' => 'Regisztrált tagok',

@@ -31,6 +31,7 @@ $language_array = array(
 
     'game' => 'Hra',
     'information' => 'Informace',
+    'ip'=>'IP',
     'link' => 'Odkaz',
     'no_server' => 'server nenalezen.',
     'not_supported' => 'Server nepodporuje webový status',

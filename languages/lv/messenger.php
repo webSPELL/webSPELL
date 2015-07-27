@@ -45,7 +45,7 @@ $language_array = array(
     'html' => 'HTML <b><span class="underline">Izslēgts</span></b>',
     'ignore' => 'Ignorēt lietotāju',
     'incoming' => 'Ienākošie',
-    'mail_body' => '<b>Sveiki %nickname%!</b><br><br>Jums ir jauna ziņa webSPELL v4 (%hp_url%).<br>Nospiest <a href="http://%hp_url%?site=messenger">šeit</a> lai izlasītu ziņu.<br><br>(C) webSPELL.org',
+    'mail_body' => '<b>Hello %nickname%!</b><br><br>You got a new message at '.PAGETITLE.' (%hp_url%).<br>Click <a href="http://%hp_url%?site=messenger">here</a> to read the PM.<br><br>(C) webSPELL.org',
     'mail_subject' => 'Jums ir jauna ziņa',
     'mark_not_viewed' => 'Atzīmēt kā neskatītu',
     'mark_viewed' => 'Atzīmēt kā skatītu',

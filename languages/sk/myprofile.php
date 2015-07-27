@@ -44,11 +44,12 @@ $language_array = array(
     'clan-name' => 'Názov clanu',
     'clan-tag' => 'Clan-Tag',
     'country' => 'Krajina',
+    'cpu'=>'CPU',
     'date_of_birth' => 'Dátum narodenia',
     'deactivated' => 'deaktivovaná',
     'delete_max_90_90' => 'vymazať (max90/90)',
     'delete_max_230_210' => 'vymazať (max230/210)',
-    'e-mail' => 'e-mail',
+    'e-mail'=>'E-mail',
     'edit_mail' => 'upraviť e-mail',
     'edit_password' => 'upraviť heslo',
     'equipment-info' => 'Výbava',
@@ -118,6 +119,7 @@ Pre potrvrdenie zmeny, prosím kliknite na nasledujúci odkaz:
     'repeat_new_email' => 'zopakovať nový E-Mail',
     'repeat_new_password' => 'zopakovať nové Heslo',
     'repeated_pw_not_valid' => 'zopakované heslo nie je platné!',
+    'repeated_mail_not_valid'=>'your repeated e-mail is not equal!',
     'sexuality' => 'Pohlavie',
     'signature' => 'Podpis',
     'smilies' => '<a href="javascript:void(0);" onclick="window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smajlíci</a> sú ZAPNUTÍ',
@@ -135,6 +137,7 @@ Pre potrvrdenie zmeny, prosím kliknite na nasledujúci odkaz:
     'you_have_to_firstname' => 'Musíte zadať vaše krstné meno!',
     'you_have_to_nickname' => 'Musíte zadať prezývku!',
     'you_have_to_username' => 'Musíte zadať užív. meno!',
-    'you_have_to_valid_email' => 'Váš E-mail je chybý!'
+    'you_have_to_valid_email' => 'Váš E-mail je chybý!',
+    'wrong_password'=>'Wrong password'
 );
 

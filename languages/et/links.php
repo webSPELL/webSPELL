@@ -31,6 +31,7 @@ $language_array = array(
 
     'back' => 'tagasi',
     'banner' => 'Pilt',
+    'banner_to_big' => 'Pilt on liiga suur',
     'categories' => 'Kategooriad',
     'category' => 'Kategooria',
     'delete' => 'kustuta',

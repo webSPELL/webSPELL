@@ -37,6 +37,7 @@ $language_array = array(
     'enter_name' => 'Molimo upišite ime.',
     'enter_subject' => 'Molimo upišite naslov.',
     'errors_there' => 'Postoje odredene greške',
+    'mail'=>'E-Mail',
     'message' => 'Poruka',
     'name' => 'Ime',
     'receiver' => 'Primatelj',

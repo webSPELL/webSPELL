@@ -44,10 +44,12 @@ $language_array = array(
     'clan-name' => 'Nom',
     'clan-tag' => 'Tag',
     'country' => 'Pays',
+    'cpu'=>'Processeur',
     'date_of_birth' => 'Date de naissance',
     'deactivated' => 'désactivé',
     'delete_max_90_90' => 'Supprimer (max. 90/90)',
     'delete_max_230_210' => 'Supprimer (max. 230/210)',
+    'e-mail'=>'Email',
     'edit_mail' => 'Modifier l\'adresse mail',
     'edit_password' => 'Modifier le mot de passe',
     'equipment-info' => 'Informations sur le matériel',
@@ -117,6 +119,7 @@ Merci pour votre intérêt
     'repeat_new_email' => 'Répéter la nouvelle adresse mail',
     'repeat_new_password' => 'Répéter le nouveau mot de passe',
     'repeated_pw_not_valid' => 'Vos mots de passe sont différents !',
+    'repeated_mail_not_valid'=>'votre e-mail répété n\'est pas le même!',
     'sexuality' => 'Sexe',
     'signature' => 'Signature',
     'smilies' => '<a href="javascript:void(0);" onclick="window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">Smileys</a> activés',
@@ -134,6 +137,7 @@ Merci pour votre intérêt
     'you_have_to_firstname' => 'Vous devez entrer votre prénom !',
     'you_have_to_nickname' => 'Vous devez entrer un pseudo !',
     'you_have_to_username' => 'Vous devez entrer un nom d\'utilisateur !',
-    'you_have_to_valid_email' => 'Votre adresse mail n\'est pas valide !'
+    'you_have_to_valid_email' => 'Votre adresse mail n\'est pas valide !',
+    'wrong_password'=>'Mot de passe incorrect'
 );
 

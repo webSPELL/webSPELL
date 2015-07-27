@@ -45,7 +45,7 @@ $language_array = array(
     'html' => 'HTML <b><span class="underline">OFF</span></b>',
     'ignore' => 'تجاهل المستخدم',
     'incoming' => 'الوارد',
-    'mail_body' => '<b>Hello %nickname%!</b><br><br>webSPELL v4 لقد حصلت على رسالة جديدة في (%hp_url%).<br>Click <a href="http://%hp_url%?site=messenger">here</a> to read the PM.<br><br>(C) webSPELL.org',
+    'mail_body' => '<b>Hello %nickname%!</b><br><br>You got a new message at '.PAGETITLE.' (%hp_url%).<br>Click <a href="http://%hp_url%?site=messenger">here</a> to read the PM.<br><br>(C) webSPELL.org',
     'mail_subject' => 'لقد حصلت على رساله جديده',
     'mark_not_viewed' => 'تحديد العلامة عدم المشاهدة',
     'mark_viewed' => 'تحديد العلامة يمكنك المشاهدة',

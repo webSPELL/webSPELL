@@ -29,6 +29,9 @@ $language_array = array(
 
 /* do not edit above this line */
 
+    'back' => 'Назад',
+    'banner' => 'Банер',
+    'banner_to_big' => 'Сликата е преголема',
     'categories' => 'Категории',
     'category' => 'Категорија',
     'delete' => 'Избриши',

@@ -37,6 +37,7 @@ $language_array = array(
     'enter_name' => 'Lütfen bir isim girin.',
     'enter_subject' => 'Lütfen bir konu girin.',
     'errors_there' => 'Bazı hatalar oluştu',
+    'mail'=>'E-Mail',
     'message' => 'Mesaj',
     'name' => 'İsim',
     'receiver' => 'Alıcı',

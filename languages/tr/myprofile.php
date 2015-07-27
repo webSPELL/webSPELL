@@ -44,11 +44,12 @@ $language_array = array(
     'clan-name' => 'Klan-İsim',
     'clan-tag' => 'Klan-Etiket',
     'country' => 'Ülke',
+    'cpu'=>'CPU',
     'date_of_birth' => 'Doğum Günü',
     'deactivated' => 'devre dışı',
     'delete_max_90_90' => 'Sil (max90/90)',
     'delete_max_230_210' => 'Sil (max230/210)',
-    'e-mail' => 'E-Posta',
+    'e-mail'=>'E-mail',
     'edit_mail' => 'E-Postayı düzenle',
     'edit_password' => 'sişreyi düzenle',
     'equipment-info' => 'Ekipmanlar-Bilgi',
@@ -118,6 +119,7 @@ Lütfen e-posta değişikliğini tamamlamak için aşağıdaki linki tıklayarak
     'repeat_new_email' => 'yeni e-posta tekrarlayın',
     'repeat_new_password' => 'yeni şifre tekrarlayın',
     'repeated_pw_not_valid' => 'tekrarlanan şifre geçerli değil!',
+    'repeated_mail_not_valid'=>'your repeated e-mail is not equal!',
     'sexuality' => 'Cinsiyet',
     'signature' => 'İmza',
     'smilies' => '<a href="javascript:void(0);" onclick="window.open(\'smileys.php\',\'Smileys\',\'scrollbars=yes,width=340,height=500\')">İfadeler</a> AÇIK',
@@ -135,6 +137,7 @@ Lütfen e-posta değişikliğini tamamlamak için aşağıdaki linki tıklayarak
     'you_have_to_firstname' => 'İsim girmek zorundasınız!',
     'you_have_to_nickname' => 'Rumuz girmek zorundasınız!',
     'you_have_to_username' => 'Kullanıcı adı girmek zorundasınız!',
-    'you_have_to_valid_email' => 'E-posta geçerli değil!'
+    'you_have_to_valid_email' => 'E-posta geçerli değil!',
+    'wrong_password'=>'Wrong password'
 );
 

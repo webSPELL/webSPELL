@@ -33,9 +33,9 @@ $language_array = array(
     'homepage' => 'Web sito',
     'information' => 'Informazioni',
     'mainsponsor' => 'Sponsor principale',
-    'mainsponsors' => 'Sponsori principali',
-    'no_sponsors' => 'nessuni sponsori',
+    'mainsponsors' => 'Sponsor principali',
+    'no_sponsors' => 'nessun sponsor',
     'sponsor' => 'Sponsor',
-    'sponsors' => 'Sponsori'
+    'sponsors' => 'sponsor'
 );
 

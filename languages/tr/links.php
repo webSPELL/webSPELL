@@ -31,6 +31,7 @@ $language_array = array(
 
     'back' => 'geri',
     'banner' => 'Sembol',
+    'banner_to_big' => 'Resim cok büyük',
     'categories' => 'Kategoriler',
     'category' => 'Kategori',
     'delete' => 'sil',

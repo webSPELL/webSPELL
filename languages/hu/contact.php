@@ -37,6 +37,7 @@ $language_array = array(
     'enter_name' => 'Írd be a neved.',
     'enter_subject' => 'Írd be a témát.',
     'errors_there' => 'Problémák adódtak',
+    'mail'=>'E-Mail',
     'message' => 'Üzenet',
     'name' => 'Név',
     'receiver' => 'Fogadó',
