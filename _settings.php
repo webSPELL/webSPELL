@@ -284,18 +284,29 @@ function isignored($userID, $buddy)
 // -- GLOBAL SETTINGS -- //
 
 $ds = mysqli_fetch_array(safe_query("SELECT * FROM " . PREFIX . "settings"));
-
-$components = array(
-    'css' => array(
-        'components/bootstrap/dist/css/bootstrap.min.css'
-    ),
-    'js' => array(
-        'components/jquery/dist/jquery.min.js',
-        'components/bootstrap/dist/js/bootstrap.min.js',
-        'components/webshim/js-webshim/minified/polyfiller.js'
-    )
-);
-
+if (is_dir("development")) {
+    $components = array(
+        'css' => array(
+            'components/bootstrap/dist/css/bootstrap.css'
+        ),
+        'js' => array(
+            'components/jquery/dist/jquery.js',
+            'components/bootstrap/dist/js/bootstrap.js',
+            'components/webshim/js-webshim/dev/polyfiller.js'
+        )
+    );
+} else {
+    $components = array(
+        'css' => array(
+            'components/bootstrap.min.css'
+        ),
+        'js' => array(
+            'components/jquery.min.js',
+            'components/bootstrap.min.js',
+            'components/webshim/polyfiller.js'
+        )
+    );
+}
 $maxshownnews = $ds[ 'news' ];
 if (empty($maxshownnews)) {
     $maxshownnews = 10;
