@@ -82,12 +82,39 @@ module.exports = function( grunt ) {
             "!development"
         ],
         specialReleaseFiles = [
-        	{expand: true, cwd: "components/bootstrap/dist/css/", src: ["bootstrap.min.css"], dest: "components"},
-        	{expand: true, cwd: "components/bootstrap/dist/js/", src: ["bootstrap.min.js"], dest: "components"},
-        	{expand: true, cwd: "components/jquery/dist/", src: ["jquery.min.js"], dest: "components"},
-        	{expand: true, cwd: "components/phpmailer/", src: ["class.*", "LICENSE","PHPMailerAutoload.php"], dest: "components/PHPMailer/"},
-        	{expand: true, cwd: "components/webshim/js-webshim/minified/", src: ["polyfiller.js","shims/form-core.js","shims/form-number-date-ui.js"], dest: "components/webshim/"},
-        	{src: releaseFiles}
+            {
+                expand: true,
+                cwd: "components/bootstrap/dist/css/",
+                src: [ "bootstrap.min.css" ],
+                dest: "components"
+            },
+            {
+                expand: true,
+                cwd: "components/bootstrap/dist/js/",
+                src: [ "bootstrap.min.js" ],
+                dest: "components"
+            },
+            {
+                expand: true,
+                cwd: "components/jquery/dist/",
+                src: [ "jquery.min.js" ],
+                dest: "components"
+            },
+            {
+                expand: true,
+                cwd: "components/phpmailer/",
+                src: [ "class.*", "LICENSE", "PHPMailerAutoload.php" ],
+                dest: "components/PHPMailer/"
+            },
+            {
+                expand: true,
+                cwd: "components/webshim/js-webshim/minified/",
+                src: [ "polyfiller.js", "shims/form-core.js", "shims/form-number-date-ui.js" ],
+                dest: "components/webshim/"
+            },
+            {
+                src: releaseFiles
+            }
         ],
         csss = [ "**/*.css" ],
         excludes = [
