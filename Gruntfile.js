@@ -433,6 +433,7 @@ module.exports = function( grunt ) {
                 "css"
             ]
         },
+
         browserSync: {
             wamp: {
                 bsFiles: {
@@ -453,6 +454,7 @@ module.exports = function( grunt ) {
                 }
             }
         },
+
         todo: {
             options: {
                 usePackage: true
@@ -463,7 +465,31 @@ module.exports = function( grunt ) {
                 csss,
                 excludes
             ]
+        },
+
+        bump: {
+            options: {
+                files: [
+                    "package.json",
+                    "bower.json"
+                ],
+                updateConfigs: [
+                    "pkg"
+                ],
+                commit: false,
+                commitMessage: "Release v%VERSION%",
+                commitFiles: releaseFiles,
+                createTag: true,
+                tagName: "v%VERSION%",
+                tagMessage: "Version %VERSION%",
+                push: false,
+                pushTo: "upstream",
+                gitDescribeOptions: "--tags --always --abbrev=1 --dirty=-d",
+                globalReplace: false,
+                regExp: false
+            }
         }
+
     } );
 
     grunt.registerTask( "codecheck", [
@@ -520,65 +546,18 @@ module.exports = function( grunt ) {
     ] );
 
     grunt.registerTask( "release", "Creating a new webSPELL Release", function( releaseLevel ) {
-        if (
-            arguments.length === 0 ||
-            (
-            releaseLevel !== "patch" &&
-            releaseLevel !== "minor" &&
-            releaseLevel !== "major"
-            )
-        ) {
-            grunt.log.error( "Specify if this is a release:patch, release:minor or release:major" );
+        if ( arguments.length === 0 || releaseLevel === "" ) {
+            grunt.log.error( "Specefy the Release Level" );
         } else {
             grunt.task.run( [
-                "bumpOnly:" + releaseLevel,
+                "bump-only:" + releaseLevel,
                 "exec:sortLanguageKeys",
                 "replace:copyright",
                 "replace:version",
                 "changelog",
-                "bumpCommit:" + releaseLevel,
                 "compress:release"
             ] );
         }
-    } );
-
-    grunt.registerTask( "bumpOnly", function() {
-        grunt.config( "bump", {
-            options: {
-                files: [
-                    "package.json",
-                    "bower.json"
-                ],
-                createTag: false,
-                commit: false,
-                push: false,
-                globalReplace: false
-            }
-        } );
-        return grunt.task.run( "bump" );
-    } );
-
-    grunt.registerTask( "bumpCommit", function() {
-        grunt.config( "bump", {
-            options: {
-                files: [],
-                updateConfigs: [],
-                commit: true,
-                commitMessage: "Release v<%= pkg.version %>",
-                commitFiles: [
-                    "package.json",
-                    "CHANGES.md"
-                ],
-                createTag: true,
-                tagName: "v<%= pkg.version %>",
-                tagMessage: "Version <%= pkg.version %>",
-                push: false,
-                pushTo: "origin",
-                gitDescribeOptions: "--tags --always --abbrev=1 --dirty=-d",
-                globalReplace: false
-            }
-        } );
-        return grunt.task.run( "bump" );
     } );
 
     grunt.config.set( "grunt-commit-message-verify", {

@@ -59,8 +59,11 @@ _mysql.php
 /images/userpics/*
 !/images/userpics/nouserpic.gif
 
-# Grunt requires
+# Grunt Plugins
 node_modules
+
+# Bower Packages
+components
 
 # Composer
 composer.phar
