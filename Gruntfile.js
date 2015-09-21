@@ -24,9 +24,34 @@ module.exports = function( grunt ) {
         ],
         releaseFiles = [
             "admin/**",
-            "demos/**",
-            "downloads/**",
-            "images/**",
+            "demos/index.php",
+            "downloads/index.php",
+            "images/*",
+            "images/articles-pics/index.php",
+            "images/avatars/index.php",
+            "images/avatars/noavatar.gif",
+            "images/banner/index.php",
+            "images/bannerrotation/index.php",
+            "images/clanwar-screens/index.php",
+            "images/flags/*",
+            "images/gallery/large/index.php",
+            "images/gallery/thumb/index.php",
+            "images/games/*",
+            "images/flags/*",
+            "images/icons/**",
+            "images/languages/*",
+            "images/links/1.gif",
+            "images/links/index.php",
+            "images/linkus/index.php",
+            "images/news-pics/index.php",
+            "images/news-rubrics/index.php",
+            "images/partners/1.gif",
+            "images/partners/index.php",
+            "images/smileys/*",
+            "images/sponsors/index.php",
+            "images/squadicons/index.php",
+            "images/userpics/nouserpic.gif",
+            "images/userpics/index.php",
             "install/**",
             "js/**",
             "languages/**",
@@ -49,11 +74,47 @@ module.exports = function( grunt ) {
             "!composer.phar",
             "!grunt-log.txt",
             "!*.zip",
+            "!*.sublime-*",
             "!vendor",
             "!components",
             "!node_modules",
             "!tests",
             "!development"
+        ],
+        specialReleaseFiles = [
+            {
+                expand: true,
+                cwd: "components/bootstrap/dist/css/",
+                src: [ "bootstrap.min.css" ],
+                dest: "components"
+            },
+            {
+                expand: true,
+                cwd: "components/bootstrap/dist/js/",
+                src: [ "bootstrap.min.js" ],
+                dest: "components"
+            },
+            {
+                expand: true,
+                cwd: "components/jquery/dist/",
+                src: [ "jquery.min.js" ],
+                dest: "components"
+            },
+            {
+                expand: true,
+                cwd: "components/phpmailer/",
+                src: [ "class.*", "LICENSE", "PHPMailerAutoload.php" ],
+                dest: "components/PHPMailer/"
+            },
+            {
+                expand: true,
+                cwd: "components/webshim/js-webshim/minified/",
+                src: [ "polyfiller.js", "shims/form-core.js", "shims/form-number-date-ui.js" ],
+                dest: "components/webshim/"
+            },
+            {
+                src: releaseFiles
+            }
         ],
         csss = [ "**/*.css" ],
         excludes = [
@@ -247,7 +308,6 @@ module.exports = function( grunt ) {
                         to: "$version = \"<%= pkg.version %>\";"
                     }
                 ]
-
             }
         },
 
@@ -334,13 +394,13 @@ module.exports = function( grunt ) {
                 options: {
                     archive: "webspell.zip"
                 },
-                src: releaseFiles
+                files: specialReleaseFiles
             },
             release: {
                 options: {
                     archive: "webSPELL-<%= pkg.version %>.zip"
                 },
-                src: releaseFiles
+                files: specialReleaseFiles
             }
         },
 
