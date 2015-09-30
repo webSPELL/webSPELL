@@ -65,7 +65,7 @@ if (isset($_POST[ 'save' ])) {
                                     $endung = '.jpg';
                                     break;
                             }
-                            $file = $tag . $endung;
+                            $file = $id . $endung;
 
                             if ($upload->saveAs($filepath . $file, true)) {
                                 @chmod($filepath . $file, $new_chmod);
@@ -135,7 +135,7 @@ if (isset($_POST[ 'save' ])) {
                                     $endung = '.jpg';
                                     break;
                             }
-                            $file = $tag . $endung;
+                            $file = $id . $endung;
 
                             if ($upload->saveAs($filepath . $file, true)) {
                                 @chmod($filepath . $file, $new_chmod);
