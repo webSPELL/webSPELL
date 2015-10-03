@@ -364,20 +364,32 @@ function checkSize( name, xmax, ymax ) {
     "use strict";
 
     var xsize,
-        ysize;
+        ysize,
+        imageElement,
+        parentElement,
+        resized = false;
 
-    xsize = document.getElementById( "ws_image_" + name ).width;
-    ysize = document.getElementById( "ws_image_" + name ).height;
+    parentElement = document.getElementById( "ws_imagediv_" + name );
+    imageElement = document.getElementById( "ws_image_" + name );
+    xsize = imageElement.width;
+    ysize = imageElement.height;
 
     if ( ysize > ymax ) {
-        document.getElementById( "ws_image_" + name ).height = ymax;
-        document.getElementById( "ws_imagediv_" + name ).style.display = "block";
+        imageElement.height = ymax;
+        resized = true;
     }
 
     if ( xsize > xmax ) {
-        document.getElementById( "ws_image_" + name ).width = xmax;
-        document.getElementById( "ws_imagediv_" + name ).style.display = "block";
+        imageElement.width = xmax;
+        resized = true;
     }
+
+    if ( resized === false ) {
+        parentElement.getElementsByTagName("a")[0].style.display = "none";
+    }
+
+    parentElement.style.display = "block";
+
 }
 
 function AddText( addtext ) {
