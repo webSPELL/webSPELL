@@ -485,8 +485,12 @@ function cut_middle($str, $max = 50)
 function urlreplace_callback($match)
 {
     $parsed = parse_url($match[1]);
-    if (!isset($parsed['host']) && !file_exists($parsed['path'])) {
-        $url = "http://".$match[1];
+    if (!isset($parsed['host'])) {
+        if (!file_exists($parsed['path'])) {
+            $url = "http://".$match[1];
+        } else {
+            $url = $match[1];
+        }
     } elseif (!isset($parsed['scheme'])) {
         $url = "http://".$match[1];
     } else {
