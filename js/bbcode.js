@@ -385,7 +385,7 @@ function checkSize( name, xmax, ymax ) {
     }
 
     if ( resized === false ) {
-        parentElement.getElementsByTagName("a")[0].style.display = "none";
+        parentElement.getElementsByTagName( "a" )[0].style.display = "none";
     }
 
     parentElement.style.display = "block";
